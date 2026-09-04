@@ -125,6 +125,42 @@
         "NATO — readiness: neověřeno → NE",
         "provoz — komunikace: sledujeme → bezny"
       ]
+    },
+    {
+      "kdy": "2026-09-04T20:39:10.832Z",
+      "uroven": null,
+      "hybridni": null,
+      "primyStret": null,
+      "pravni": {
+        "stav-ohrozeni": false,
+        "valecny-stav": false,
+        "mobilizace": false,
+        "nouzovy-stav": false,
+        "vycestovani": false,
+        "hranice": false,
+        "schuze-parlamentu": false
+      },
+      "nato": {
+        "clanek-4": false,
+        "clanek-5": false,
+        "readiness": false,
+        "evakuace": false,
+        "vychodni-kridlo": null
+      },
+      "provoz": {
+        "vycestovani": "bezny",
+        "hranice": "bezny",
+        "palivo": "bezny",
+        "elektrina": "bezny",
+        "plyn": "bezny",
+        "banky": "bezny",
+        "komunikace": "bezny",
+        "bezny-zivot": "bezny"
+      },
+      "udalosti": 0,
+      "zmeny": [
+        "NATO — evakuace: neověřeno → NE"
+      ]
     }
   ]
 }
