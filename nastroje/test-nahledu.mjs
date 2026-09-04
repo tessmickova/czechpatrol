@@ -1,0 +1,15 @@
+import { chromium } from "playwright";
+const b = await chromium.launch({ executablePath: "/opt/pw-browsers/chromium-1194/chrome-linux/chrome" });
+const p = await b.newPage({ viewport: { width: 1440, height: 940 } });
+const chyby = [];
+p.on("pageerror", (e) => chyby.push(String(e)));
+await p.goto("http://localhost:4323/", { waitUntil: "networkidle" });
+await p.screenshot({ path: "/tmp/snap/nahled-0.png" });
+await p.click('a[href="/metodika/"]');
+await p.waitForTimeout(300);
+await p.screenshot({ path: "/tmp/snap/nahled-metodika.png" });
+await p.click('a[href="/dnes/"]');
+await p.waitForTimeout(300);
+await p.screenshot({ path: "/tmp/snap/nahled-dnes.png" });
+console.log("chyby:", chyby.length ? chyby : "žádné");
+await b.close();
