@@ -58,9 +58,9 @@ export const KDY_UPOZORNENI = [
  */
 export const KOMUNITA: Record<string, string> = {
   /** Veřejný repozitář s daty i kódem. */
-  github: "",
+  github: "https://github.com/tessmickova/czechpatrol",
   /** Diskuse nad metodikou a hodnocením. */
-  diskuse: "",
+  diskuse: "https://github.com/tessmickova/czechpatrol/issues",
   /** Skupina, kde se dají posílat tipy. */
   skupina: "",
   /** Adresa pro poslání tipu nebo opravy. */

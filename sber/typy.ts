@@ -19,10 +19,19 @@ export interface RegistrZdroj {
   jazyk: string;
   primarni: boolean;
   /**
-   * Klíčová slova, jejichž výskyt znamená POTENCIÁLNÍ signál.
-   * Nález nikdy nic nevyhlašuje — jen zakládá položku do fronty ke kontrole.
+   * Fráze, které říkají, že se něco STALO — „vyhlásil nouzový stav“,
+   * „invoked article 4“. Nález blokuje potvrzení záporu a jde do fronty.
+   *
+   * Musí to být sloveso s předmětem, ne téma. Samotné „mobilizace“ nebo
+   * „article 5“ je trvale v menu i v archivu každého úředního webu, takže
+   * by se zápor nepotvrdil nikdy a web by navždy hlásil „neověřeno“.
    */
   klicova?: string[];
+  /**
+   * Tematická slova. Nález jen založí položku do fronty ke kontrole,
+   * potvrzení záporu neblokuje — jinak by měkký signál umlčel celý web.
+   */
+  sledovana?: string[];
   /** Ke kterým položkám webu se zdroj vztahuje. */
   tyka?: string[];
   /**

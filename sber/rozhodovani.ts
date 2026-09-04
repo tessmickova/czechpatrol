@@ -11,18 +11,30 @@ export interface Stazeno {
 }
 
 export interface Rozhodnuti {
-  /** true = žádný signál a aspoň jeden zdroj se povedl → zápor lze potvrdit. */
+  /** true = žádná fráze o vyhlášení a aspoň jeden zdroj se povedl. */
   ciste: boolean;
   overeno: string[];
   selhalo: string[];
+  /** Vše, co jde ke kontrole — tvrdé i měkké nálezy. */
   nalezy: Nalez[];
 }
 
-/** Klíčová slova, která se ve staženém textu vyskytla. */
+function najdi(text: string, slova: string[] | undefined): string[] {
+  if (!slova?.length) return [];
+  const t = normalizuj(text);
+  return slova.filter((k) => t.includes(normalizuj(k)));
+}
+
+/** Fráze o vyhlášení. Nález blokuje potvrzení záporu. */
 export function shody(s: Stazeno): string[] {
-  if (!s.ok || !s.zdroj.klicova?.length) return [];
-  const text = normalizuj(s.text);
-  return s.zdroj.klicova.filter((k) => text.includes(normalizuj(k)));
+  if (!s.ok) return [];
+  return najdi(s.text, s.zdroj.klicova);
+}
+
+/** Tematická slova. Nález jde jen do fronty, zápor neblokuje. */
+export function mekkeShody(s: Stazeno): string[] {
+  if (!s.ok) return [];
+  return najdi(s.text, s.zdroj.sledovana);
 }
 
 /** Krátký výřez okolo prvního výskytu — aby bylo ve frontě vidět, o co jde. */
@@ -45,19 +57,28 @@ export function rozhodni(klic: string, stazene: Stazeno[]): Rozhodnuti {
   const selhalo: string[] = [];
   const nalezy: Nalez[] = [];
 
+  let tvrdy = false;
+
   for (const s of relevantni) {
     if (!s.ok) {
       selhalo.push(s.zdroj.klic);
       continue;
     }
     overeno.push(s.zdroj.klic);
-    const trefy = shody(s);
+
+    const tvrde = shody(s);
+    const mekke = mekkeShody(s);
+    if (tvrde.length) tvrdy = true;
+
+    const trefy = tvrde.length ? tvrde : mekke;
     if (trefy.length) {
       nalezy.push({
         zdroj: s.zdroj.klic,
         nazev: s.zdroj.nazev,
         polozka: {
-          nadpis: `Signál u položky „${klic}“`,
+          nadpis: tvrde.length
+            ? `Možné vyhlášení u položky „${klic}“`
+            : `Zmínka u položky „${klic}“`,
           odkaz: s.zdroj.odkaz ?? s.zdroj.url,
           publikovano: null,
           shrnuti: vyrez(s, trefy[0]),
@@ -68,5 +89,5 @@ export function rozhodni(klic: string, stazene: Stazeno[]): Rozhodnuti {
     }
   }
 
-  return { ciste: overeno.length > 0 && nalezy.length === 0, overeno, selhalo, nalezy };
+  return { ciste: overeno.length > 0 && !tvrdy, overeno, selhalo, nalezy };
 }
