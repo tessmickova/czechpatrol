@@ -1,45 +1,51 @@
-import fs from "node:fs";
-import path from "node:path";
 import { JE_UKAZKA } from "@/config/web";
 import type {
   CelkovyStav, HybridniTlak, Incident, NatoPolozka, PravniStav,
-  Provoz, RuskoStav, TydenniHodnoceni, Watchlist,
+  Provoz, RuskoStav, TydenniHodnoceni, Uroven, Watchlist,
 } from "./typy";
 
+import ostreIncidenty from "../../data/incidenty.json";
+import ostryStav from "../../data/stav.json";
+import ostryPravni from "../../data/pravni-stav.json";
+import ostreNato from "../../data/nato.json";
+import ostryProvoz from "../../data/provoz.json";
+import ostryHybridni from "../../data/hybridni-tlak.json";
+import ostreTydny from "../../data/tydny.json";
+import ostreRusko from "../../data/rusko.json";
+import ostryWatchlist from "../../data/watchlist.json";
+
+import ukazkoveIncidenty from "../../data/ukazka/incidenty.json";
+import ukazkovyStav from "../../data/ukazka/stav.json";
+import ukazkovyPravni from "../../data/ukazka/pravni-stav.json";
+import ukazkoveNato from "../../data/ukazka/nato.json";
+import ukazkovyProvoz from "../../data/ukazka/provoz.json";
+import ukazkovyHybridni from "../../data/ukazka/hybridni-tlak.json";
+import ukazkoveTydny from "../../data/ukazka/tydny.json";
+import ukazkoveRusko from "../../data/ukazka/rusko.json";
+
 /**
- * Vrstva mezi daty a UI. Dnes čte JSON z repozitáře; až přibude databáze,
- * mění se jen tenhle soubor, ne stránky.
+ * Vrstva mezi daty a UI.
+ *
+ * JSON se importuje staticky, ne přes `fs` — díky tomu běží tenhle modul
+ * i v prohlížeči, takže z týchž komponent jde postavit statický web
+ * i klikací náhled. Až přibude databáze, mění se jen tenhle soubor.
  *
  * Ukázková data se přimíchávají jen v režimu „ukazka“ a každý takový záznam
- * si nese příznak `ukazka`, aby ho šlo v UI viditelně odlišit. Do produkčního
- * buildu se nedostanou.
+ * si nese příznak `ukazka`. Podmínka stojí na proměnné, kterou build nahradí
+ * konstantou, takže se do produkčního balíčku ukázková data vůbec nedostanou.
  */
-
-const KOREN = path.join(process.cwd(), "data");
-
-function nacti<T>(soubor: string, vychozi: T): T {
-  try {
-    return JSON.parse(fs.readFileSync(path.join(KOREN, soubor), "utf-8")) as T;
-  } catch {
-    return vychozi;
-  }
-}
-
-function nactiUkazku<T>(soubor: string, vychozi: T): T {
-  if (!JE_UKAZKA) return vychozi;
-  try {
-    return JSON.parse(fs.readFileSync(path.join(KOREN, "ukazka", soubor), "utf-8")) as T;
-  } catch {
-    return vychozi;
-  }
-}
 
 export type SUkazkou<T> = T & { ukazka?: boolean };
 
+/** Zúžení typu z JSONu: struktura je hlídaná testy nad daty. */
+const jako = <T,>(x: unknown): T => x as T;
+
 export function incidenty(): SUkazkou<Incident>[] {
   // Na produkci se zobrazují jen záznamy, které prošly lidskou kontrolou.
-  const ostre = nacti<Incident[]>("incidenty.json", []).filter((i) => i.lidskyOvereno);
-  const ukazkove = nactiUkazku<Incident[]>("incidenty.json", []).map((i) => ({ ...i, ukazka: true }));
+  const ostre = jako<Incident[]>(ostreIncidenty).filter((i) => i.lidskyOvereno);
+  const ukazkove = JE_UKAZKA
+    ? jako<Incident[]>(ukazkoveIncidenty).map((i) => ({ ...i, ukazka: true }))
+    : [];
   return [...ostre, ...ukazkove].sort((a, b) =>
     (b.datumZjisteni ?? b.datumUdalosti).localeCompare(a.datumZjisteni ?? a.datumUdalosti),
   );
@@ -50,33 +56,28 @@ export function incident(slug: string): SUkazkou<Incident> | undefined {
 }
 
 export function celkovyStav(): SUkazkou<CelkovyStav> {
-  const prazdny: CelkovyStav = {
-    aktualizovano: null, uroven: null, trend: null, trendPopis: "", shrnuti: "",
-    noveSignaly: { celkem: 0, vysoke: 0, stredni: 0, kriticke: 0 },
-  };
-  const u = nactiUkazku<CelkovyStav | null>("stav.json", null);
-  if (u) return { ...u, ukazka: true };
-  return nacti<CelkovyStav>("stav.json", prazdny);
+  if (JE_UKAZKA) return { ...jako<CelkovyStav>(ukazkovyStav), ukazka: true };
+  return jako<CelkovyStav>(ostryStav);
 }
 
 export function pravniStav(): PravniStav {
-  const ostry = nacti<PravniStav>("pravni-stav.json", { overeno: null, polozky: [] });
-  const u = nactiUkazku<PravniStav | null>("pravni-stav.json", null);
-  if (!u) return ostry;
+  const ostry = jako<PravniStav>(ostryPravni);
+  if (!JE_UKAZKA) return ostry;
   // Ukázka doplňuje jen hodnoty, definice a zdroje zůstávají skutečné.
+  const u = jako<PravniStav>(ukazkovyPravni);
   return {
     overeno: u.overeno,
     polozky: ostry.polozky.map((p) => {
-      const nahrada = u.polozky.find((x) => x.klic === p.klic);
-      return nahrada ? { ...p, plati: nahrada.plati, hodnota: nahrada.hodnota, overeno: nahrada.overeno } : p;
+      const n = u.polozky.find((x) => x.klic === p.klic);
+      return n ? { ...p, plati: n.plati, hodnota: n.hodnota, overeno: n.overeno } : p;
     }),
   };
 }
 
 export function nato(): { overeno: string | null; polozky: NatoPolozka[] } {
-  const ostry = nacti<{ overeno: string | null; polozky: NatoPolozka[] }>("nato.json", { overeno: null, polozky: [] });
-  const u = nactiUkazku<{ overeno: string | null; polozky: NatoPolozka[] } | null>("nato.json", null);
-  if (!u) return ostry;
+  const ostry = jako<{ overeno: string | null; polozky: NatoPolozka[] }>(ostreNato);
+  if (!JE_UKAZKA) return ostry;
+  const u = jako<{ overeno: string | null; polozky: NatoPolozka[] }>(ukazkoveNato);
   return {
     overeno: u.overeno,
     polozky: ostry.polozky.map((p) => {
@@ -87,9 +88,9 @@ export function nato(): { overeno: string | null; polozky: NatoPolozka[] } {
 }
 
 export function provoz(): Provoz {
-  const ostry = nacti<Provoz>("provoz.json", { overeno: null, polozky: [] });
-  const u = nactiUkazku<Provoz | null>("provoz.json", null);
-  if (!u) return ostry;
+  const ostry = jako<Provoz>(ostryProvoz);
+  if (!JE_UKAZKA) return ostry;
+  const u = jako<Provoz>(ukazkovyProvoz);
   return {
     overeno: u.overeno,
     polozky: ostry.polozky.map((p) => {
@@ -100,9 +101,9 @@ export function provoz(): Provoz {
 }
 
 export function hybridniTlak(): HybridniTlak {
-  const ostry = nacti<HybridniTlak>("hybridni-tlak.json", { overeno: null, celkem: null, podkategorie: [] });
-  const u = nactiUkazku<HybridniTlak | null>("hybridni-tlak.json", null);
-  if (!u) return ostry;
+  const ostry = jako<HybridniTlak>(ostryHybridni);
+  if (!JE_UKAZKA) return ostry;
+  const u = jako<HybridniTlak>(ukazkovyHybridni);
   return {
     overeno: u.overeno,
     celkem: u.celkem,
@@ -114,18 +115,14 @@ export function hybridniTlak(): HybridniTlak {
 }
 
 export function tydny(): TydenniHodnoceni[] {
-  const ostre = nacti<TydenniHodnoceni[]>("tydny.json", []);
-  const u = nactiUkazku<TydenniHodnoceni[]>("tydny.json", []);
-  return (u.length ? u : ostre).slice().sort((a, b) => a.zacatek.localeCompare(b.zacatek));
+  const zdroj = JE_UKAZKA ? jako<TydenniHodnoceni[]>(ukazkoveTydny) : jako<TydenniHodnoceni[]>(ostreTydny);
+  return zdroj.slice().sort((a, b) => a.zacatek.localeCompare(b.zacatek));
 }
 
 export function rusko(): RuskoStav {
-  const ostry = nacti<RuskoStav>("rusko.json", {
-    overeno: null, casovyTlak: null, dopadNaIndex: "", poznamkaZdravi: "",
-    ukazatele: [], sledujemePo: { nadpis: "", termin: "", body: [] },
-  });
-  const u = nactiUkazku<RuskoStav | null>("rusko.json", null);
-  if (!u) return ostry;
+  const ostry = jako<RuskoStav>(ostreRusko);
+  if (!JE_UKAZKA) return ostry;
+  const u = jako<RuskoStav>(ukazkoveRusko);
   return {
     ...ostry,
     overeno: u.overeno,
@@ -139,7 +136,7 @@ export function rusko(): RuskoStav {
 }
 
 export function watchlist(): Watchlist {
-  return nacti<Watchlist>("watchlist.json", { overeno: null, eskalacni: [], uklidnujici: [] });
+  return jako<Watchlist>(ostryWatchlist);
 }
 
 /** Všechny zdroje použité na webu, bez duplicit — pro stránku /zdroje. */
@@ -168,18 +165,18 @@ export function klidoveBody(): string[] {
   const pr = (k: string) => p.polozky.find((x) => x.klic === k);
   const na = (k: string) => a.polozky.find((x) => x.klic === k);
   const primy = h.podkategorie.find((x) => x.klic === "primy");
-  const zelena = primy?.uroven ? UROVNE_PASMO(primy.uroven) : false;
+  const nizke = primy?.uroven ? jeZelena(primy.uroven) : false;
 
   return [
     pr("mobilizace")?.plati === false && "V ČR nebyla vyhlášena mobilizace.",
     pr("vycestovani")?.plati === false && "Vycestování z ČR není obecně omezeno.",
     pr("stav-ohrozeni")?.plati === false && "Nebyl vyhlášen stav ohrožení státu.",
     na("clanek-5")?.aktivni === false && "Článek 5 NATO nebyl aktivován.",
-    zelena && "Riziko přímého vojenského střetu NATO–Rusko zůstává nízké.",
+    nizke && "Riziko přímého vojenského střetu NATO–Rusko zůstává nízké.",
   ].filter(Boolean) as string[];
 }
 
-function UROVNE_PASMO(u: import("./typy").Uroven): boolean {
-  // Vyhýbáme se kruhovému importu skály do datové vrstvy.
+/** Vyhýbáme se kruhovému importu stupnice do datové vrstvy. */
+function jeZelena(u: Uroven): boolean {
   return u === "G1" || u === "G2" || u === "G3";
 }

@@ -18,6 +18,7 @@ Není to zpravodajský web ani prepper stránka. Je to datový dashboard.
 | Automat nesmí strašit | Sběrač smí sám potvrdit **pouze zápor** — jakýkoli nález jde do fronty ke kontrole |
 | Žádná falešná přesnost | Stupnice je diskrétní; riziko v procentech se nikde neuvádí |
 | Web neradí, jestli odjet | Ukazuje ověřený stav a institucionální spouštěče; rozhodnutí nechává na čtenáři |
+| Náhled nesmí lhát o funkčnosti | Staví se z týchž komponent jako web, takže ukazuje skutečné chování, ne obrázek |
 
 ## Spuštění
 
@@ -31,8 +32,15 @@ Kontrola a sestavení:
 
 ```bash
 npm run typecheck
+npm test
 npm run build     # statický export do out/
+npm run nahled    # klikací náhled do jediného souboru nahled.html
 ```
+
+`npm run nahled` sestaví z týchž komponent samostatnou Reactovou aplikaci
+(esbuild, směrování ve fragmentu adresy) a vloží ji i se styly do jednoho
+HTML. Náhled tedy není přemalovaná kopie webu — je to táž aplikace bez
+serveru, takže v ní fungují filtry, rozbalování i nápovědy.
 
 ## Sběr dat
 
@@ -76,9 +84,13 @@ sber/            hodinový sběrač a registr zdrojů
 src/lib/         datový model, stupnice, formátování, datová vrstva
 src/components/  znovupoužitelné komponenty
 src/app/         stránky
+src/spa/         vstupní bod klikacího náhledu a náhrady za next/*
 src/config/      název webu, odkaz na podporu, režim dat
 nastroje/        pomocné skripty pro náhledy
 ```
+
+Datová vrstva importuje JSON staticky, ne přes `fs` — díky tomu běží stejný
+kód při statickém exportu i v prohlížeči.
 
 Historie dat odpovídá historii gitu: hodinový sběr commituje změny do `data/`,
 takže je zpětně dohledatelné, co web kdy tvrdil a odkud to měl.
