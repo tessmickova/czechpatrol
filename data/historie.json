@@ -86,6 +86,45 @@
         "provoz — komunikace: bez-zdroje → sledujeme",
         "provoz — bezny-zivot: bez-zdroje → bezny"
       ]
+    },
+    {
+      "kdy": "2026-09-04T17:25:42.739Z",
+      "uroven": null,
+      "hybridni": null,
+      "primyStret": null,
+      "pravni": {
+        "stav-ohrozeni": false,
+        "valecny-stav": false,
+        "mobilizace": false,
+        "nouzovy-stav": false,
+        "vycestovani": false,
+        "hranice": false,
+        "schuze-parlamentu": false
+      },
+      "nato": {
+        "clanek-4": false,
+        "clanek-5": false,
+        "readiness": false,
+        "evakuace": null,
+        "vychodni-kridlo": null
+      },
+      "provoz": {
+        "vycestovani": "bezny",
+        "hranice": "bezny",
+        "palivo": "bezny",
+        "elektrina": "bezny",
+        "plyn": "bezny",
+        "banky": "bezny",
+        "komunikace": "bezny",
+        "bezny-zivot": "bezny"
+      },
+      "udalosti": 0,
+      "zmeny": [
+        "NATO — clanek-4: neověřeno → NE",
+        "NATO — clanek-5: neověřeno → NE",
+        "NATO — readiness: neověřeno → NE",
+        "provoz — komunikace: sledujeme → bezny"
+      ]
     }
   ]
 }

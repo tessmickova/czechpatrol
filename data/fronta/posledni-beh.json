@@ -1,5 +1,5 @@
 {
-  "kdy": "2026-09-04T17:19:00.618Z",
+  "kdy": "2026-09-04T17:25:42.739Z",
   "zdroje": [
     {
       "klic": "e-sbirka",
@@ -46,10 +46,9 @@
     },
     {
       "klic": "army",
-      "ok": false,
-      "stav": null,
-      "pocetPolozek": 0,
-      "chyba": "fetch failed"
+      "ok": true,
+      "stav": 200,
+      "pocetPolozek": 0
     },
     {
       "klic": "ceps",
@@ -120,5 +119,5 @@
       "pocetPolozek": 0
     }
   ],
-  "novychVeFronte": 4
+  "novychVeFronte": 1
 }
