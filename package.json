@@ -13,7 +13,8 @@
     "sber:provoz": "tsx sber/index.ts --jen-provoz",
     "test": "vitest run",
     "sber:zdroje": "tsx sber/test-zdroju.ts",
-    "nahled": "NEXT_PUBLIC_REZIM=ukazka next build && NEXT_PUBLIC_REZIM=ukazka node nastroje/nahled-artefakt.mjs"
+    "nahled": "next build && node nastroje/nahled-artefakt.mjs",
+    "nahled:ukazka": "NEXT_PUBLIC_REZIM=ukazka next build && NEXT_PUBLIC_REZIM=ukazka node nastroje/nahled-artefakt.mjs"
   },
   "dependencies": {
     "next": "15.5.4",

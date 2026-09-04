@@ -214,11 +214,9 @@ export function CasovyPosuvnik({ archiv }: { archiv: Archiv }) {
               ))}
             </ul>
 
-            <p className="mt-5 border-t border-white/10 pt-4 text-[11.5px] leading-relaxed text-noc-tlum">
-              Snímek se ukládá jen při změně, ne každou hodinu. Události se objevují
-              k datu, kdy vyšly najevo — dřív o nich nikdo nevěděl. Stav před{" "}
-              <span className="cislice">{datumCas(rozsah.od)}</span> archiv nemá
-              a nedopočítáváme ho.
+            <p className="stitek mt-5 border-t border-white/10 pt-4 !text-noc-tlum">
+              Snímek jen při změně · události k datu zjištění · před{" "}
+              {datumCas(rozsah.od)} archiv nemá
             </p>
           </div>
         </div>

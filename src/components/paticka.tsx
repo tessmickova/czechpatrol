@@ -58,7 +58,10 @@ export function Paticka() {
                   ["/cr/", "Právní stav ČR"],
                   ["/nato/", "NATO"],
                   ["/metodika/", "Metodika"],
+                  ["/tlak/", "Hybridní tlak"],
+                  ["/watchlist/", "Watchlist 72 h"],
                   ["/zdroje/", "Zdroje"],
+                  ["/komunita/", "Komunita"],
                   ["/odber/", "Odběr"],
                 ].map(([href, label]) => (
                   <li key={href}>

@@ -6,30 +6,24 @@ import { Napoveda } from "./zaklad";
 export function BetaPruh() {
   return (
     <div className="neni-tisk border-b border-linka bg-plocha">
-      <div className="mx-auto flex max-w-[1180px] flex-wrap items-center gap-x-4 gap-y-1.5 px-5 py-2 sm:px-8">
+      <div className="mx-auto flex max-w-[1180px] items-center gap-3 px-5 py-2 sm:px-8">
         <Napoveda
           label="Co tento web je"
           popis={
-            <span className="block space-y-1.5">
-              <span className="block">
-                Experimentální nezávislý projekt. Informace jsou automatizovaně
-                a ručně zpracovávány z veřejných zdrojů.
-              </span>
-              <span className="block opacity-80">
-                Nejde o oficiální bezpečnostní varování ani o pokyn k jednání.
-              </span>
+            <span className="block">
+              Nezávislý projekt. Veřejné zdroje zpracovává automatizovaně a s pomocí AI.
+              Není to oficiální bezpečnostní varování.
             </span>
           }
         >
-          <span className="stitek-tmavy inline-flex items-center gap-1.5 rounded-[10px] border border-linka px-1.5 py-[3px] text-tlum">
+          <span className="stitek-tmavy inline-flex items-center gap-1.5 rounded-full border border-linka px-2.5 py-1 text-tlum">
             <span aria-hidden className="h-[5px] w-[5px] rounded-full bg-tlum2" />
-            Beta · AI-assisted analysis
+            Beta · AI-assisted
           </span>
         </Napoveda>
-        <p className="text-[11.5px] text-tlum2">
-          Nezávislý projekt. Není součástí státních orgánů ani NATO.{" "}
-          <Link href="/metodika/" className="odkaz text-tlum">Metodika</Link>
-        </p>
+        <Link href="/metodika/" className="stitek transition-colors hover:text-inkoust">
+          Metodika
+        </Link>
       </div>
     </div>
   );

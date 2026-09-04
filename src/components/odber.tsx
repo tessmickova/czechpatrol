@@ -102,11 +102,7 @@ export function OdberPanel({ kompaktni = false }: { kompaktni?: boolean }) {
               </li>
             ))}
           </ul>
-          <p className="mt-5 border-t border-linka2 pt-4 text-[12px] leading-relaxed text-tlum2">
-            Ne u každé události — od toho je web. Upozornění chodí jen tehdy, když
-            se změní něco, kvůli čemu by člověk mohl jednat jinak. Kanál, který
-            píše pořád, se přestane číst právě ve chvíli, kdy na tom záleží.
-          </p>
+
         </Karta>
       )}
     </div>

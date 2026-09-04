@@ -15,9 +15,9 @@
   --font-mono: var(--font-mono-web), ui-monospace, "SF Mono", "JetBrains Mono", Menlo, monospace;
 
   /* jednotné zaoblení */
-  --r-s: 9px;
-  --r-m: 12px;
-  --r-l: 16px;
+  --r-s: 10px;
+  --r-m: 14px;
+  --r-l: 20px;
 
   /* světlá plocha */
   --color-papir: #f6f7f9;
@@ -41,6 +41,18 @@
   --color-akcent-tmava: #1d51c4;
   --color-akcent-svetla: #6f9dfb;
   --color-jantar: #b8912b;
+
+  /* tónované plochy — karta nemá být vždycky bílá */
+  --color-mycka: #eaf0fc;
+  --color-mycka2: #dbe6fa;
+  --color-list: #e9f4ee;
+  --color-list2: #d5eadf;
+  --color-pisek: #f6f1e4;
+  --color-pisek2: #ece2ca;
+  --color-slunce: #fdf2e3;
+  --color-slunce2: #f6e0c2;
+  --color-slez: #f0eefa;
+  --color-slez2: #e0dcf3;
 }
 
 :root {
@@ -89,17 +101,26 @@ body {
 }
 
 .nadpis {
-  letter-spacing: -0.038em;
-  font-weight: 640;
-  line-height: 1.01;
+  letter-spacing: -0.042em;
+  font-weight: 660;
+  line-height: 0.98;
   text-wrap: balance;
 }
 
 .podnadpis {
-  letter-spacing: -0.022em;
-  font-weight: 620;
-  line-height: 1.12;
+  letter-spacing: -0.028em;
+  font-weight: 640;
+  line-height: 1.08;
   text-wrap: balance;
+}
+
+/* Velké číslo v dlaždici. Nese hlavní sdělení, ne popisek pod ním. */
+.velke-cislo {
+  font-family: var(--font-mono);
+  font-variant-numeric: tabular-nums;
+  letter-spacing: -0.05em;
+  font-weight: 500;
+  line-height: 0.9;
 }
 
 .odkaz {
@@ -110,6 +131,26 @@ body {
 }
 .odkaz:hover {
   text-decoration-color: currentColor;
+}
+
+/* ---------- karty ---------- */
+
+/* Zdvih při najetí. Karta se má tvářit, že se dá otevřít. */
+.zdvih {
+  transition: transform 0.16s ease, box-shadow 0.16s ease, border-color 0.16s ease;
+}
+.zdvih:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 26px -14px rgb(14 19 26 / 0.28);
+}
+
+/* Šrafování do rohu — technický detail, ne dekorace navíc. */
+.srafy {
+  background-image: repeating-linear-gradient(
+    -45deg,
+    color-mix(in srgb, currentColor 12%, transparent) 0 1px,
+    transparent 1px 6px
+  );
 }
 
 /* ---------- sklo ---------- */

@@ -1,281 +1,155 @@
 import Link from "next/link";
-import { CoSeZmenilo, SituacniPanel } from "@/components/hero";
+import { PasCisel, RozcestnikMrizka } from "@/components/dlazdice";
+import { SituacniPanel } from "@/components/hero";
 import { KartaUdalosti } from "@/components/karta-udalosti";
 import { OdberPanel } from "@/components/odber";
-import { CasovaOsa } from "@/components/osa";
-import { CasovyPosuvnik } from "@/components/posuvnik";
+import { Prazdno, Sekce } from "@/components/zaklad";
 import {
-  HybridniPanel, JakCist, NatoPanel, PravniSemafor, ProvozPanel,
-  RuskoPanel, ScenarovaCesta, WatchlistPanel,
-} from "@/components/panely";
-import { GrafTrendu, TabulkaTydnu } from "@/components/trend";
-import { Karta, Prazdno, Sekce } from "@/components/zaklad";
-import { BUY_ME_A_COFFEE_URL } from "@/config/web";
-import {
-  archiv, celkovyStav, dnyBezZmeny, hybridniTlak, incidenty, klidoveBody,
-  nato, pravniStav, provoz, rusko, tydny, watchlist,
+  celkovyStav, dnyBezZmeny, hybridniTlak, incidenty, nato, pravniStav, tydny,
 } from "@/lib/data";
-import { UROVNE } from "@/lib/skala";
 
 export default function Prehled() {
   const stav = celkovyStav();
-  const pravni = pravniStav();
-  const aliance = nato();
-  const hybridni = hybridniTlak();
   const vse = incidenty();
   const tydenni = tydny();
-
-  const hlavni = vse.filter((i) => {
-    const p = UROVNE[i.zavaznost].pasmo;
-    return p === "oranzova" || p === "cervena" || p === "prechod" || i.novy;
-  }).slice(0, 4);
-  const mensi = vse.filter((i) => !hlavni.includes(i)).slice(0, 6);
+  const posledniTyden = tydenni[tydenni.length - 1];
 
   return (
     <>
       <SituacniPanel
         stav={stav}
-        pravni={pravni}
-        nato={aliance}
-        hybridni={hybridni}
-        klidove={klidoveBody()}
+        pravni={pravniStav()}
+        nato={nato()}
+        hybridni={hybridniTlak()}
         dnyBezZmeny={dnyBezZmeny()}
       />
 
       <Sekce
-        cislo="01"
-        ikona="radar"
-        nadpis="Co se změnilo od poslední aktualizace"
-        popis="Jedna událost = jeden signál, i když o ní vyjde víc článků. Nové vyšetřovací zjištění u starší události ale signálem být může."
+        kicker="Poslední aktualizace"
+        nadpis="Co je nového"
         akce={
-          <Link href="/dnes/" className="rounded-[10px] border border-linka bg-plocha px-3 py-2 text-[12.5px] font-medium transition-colors hover:border-inkoust">
-            Shrnutí dne
+          <Link
+            href="/udalosti/"
+            className="rounded-full border border-linka bg-plocha px-4 py-2.5 text-[13px] font-medium transition-colors hover:border-inkoust"
+          >
+            Všechny události
           </Link>
         }
       >
-        <CoSeZmenilo stav={stav} />
+        <PasCisel
+          polozky={[
+            { stitek: "Nové signály", hodnota: stav.noveSignaly.celkem, ikona: "radar", tlumene: stav.noveSignaly.celkem === 0 },
+            { stitek: "Vysoké", hodnota: stav.noveSignaly.vysoke, ikona: "vystraha", tlumene: stav.noveSignaly.vysoke === 0 },
+            { stitek: "Kritické", hodnota: stav.noveSignaly.kriticke, ikona: "terc", tlumene: stav.noveSignaly.kriticke === 0 },
+            {
+              stitek: "Signálů tento týden",
+              hodnota: posledniTyden
+                ? Object.values(posledniTyden.pocty).reduce((a, b) => a + b, 0)
+                : "—",
+              ikona: "graf",
+              tlumene: !posledniTyden,
+            },
+          ]}
+        />
 
-        <div className="mt-8 space-y-4">
-          {hlavni.length ? (
-            hlavni.map((i) => <KartaUdalosti key={i.id} incident={i} />)
+        <div className="mt-4 space-y-3">
+          {vse.length ? (
+            vse.slice(0, 3).map((i) => <KartaUdalosti key={i.id} incident={i} />)
           ) : (
             <Prazdno
-              nadpis="Zatím nejsou zveřejněné žádné události"
-              popis="Zobrazujeme jen záznamy, které prošly kontrolou a mají uvedený zdroj. Dokud takové nejsou, web žádné události netvrdí."
+              nadpis="Zatím žádné zveřejněné události"
+              popis="Zveřejňujeme jen to, co prošlo kontrolou a má uvedený zdroj."
             />
           )}
         </div>
       </Sekce>
 
-      <Sekce
-        cislo="02"
-        ikona="kniha"
-        nadpis="Co je teď důležité vědět"
-        popis="Jak web číst a jak je na tom Aliance."
-      >
-        <div className="grid gap-5 lg:grid-cols-2">
-          <JakCist />
-          <NatoPanel polozky={aliance.polozky} overeno={aliance.overeno} />
-        </div>
+      <Sekce kicker="Rozcestník" nadpis="Kam dál" tmava>
+        <RozcestnikMrizka
+          polozky={[
+            {
+              href: "/dnes/",
+              nazev: "Dnes",
+              popis: "Jedno otevření denně. Úroveň, změna, tři body.",
+              ikona: "hodiny",
+              odznak: "Nejrychlejší",
+              ton: "modra",
+            },
+            {
+              href: "/cr/",
+              nazev: "Česká republika",
+              popis: "Právní stav a dopad na běžný život.",
+              ikona: "vaha",
+              ton: "zelena",
+            },
+            {
+              href: "/tlak/",
+              nazev: "Hybridní tlak",
+              popis: "Sabotáže, kyber, drony — a odděleně vojenské riziko.",
+              ikona: "terc",
+              ton: "pisek",
+            },
+            {
+              href: "/trend/",
+              nazev: "Vývoj v čase",
+              popis: "Posuvník archivem. Co web tvrdil kdy.",
+              ikona: "graf",
+              odznak: "Interaktivní",
+              ton: "slez",
+            },
+            {
+              href: "/watchlist/",
+              nazev: "Watchlist 72 h",
+              popis: "Co hodnocení zvýší a co ho uklidní.",
+              ikona: "oko",
+              ton: "modra",
+            },
+            {
+              href: "/osa/",
+              nazev: "Časová osa",
+              popis: "Chronologie a kumulace signálů.",
+              ikona: "osa",
+              ton: "zelena",
+            },
+            {
+              href: "/nato/",
+              nazev: "NATO",
+              popis: "Článek 4 a 5, pohotovost, východní křídlo.",
+              ikona: "stit",
+              ton: "pisek",
+            },
+            {
+              href: "/metodika/",
+              nazev: "Metodika",
+              popis: "Co počítáme jako signál a co ne.",
+              ikona: "kniha",
+              ton: "slez",
+            },
+            {
+              href: "/komunita/",
+              nazev: "Komunita",
+              popis: "Tipy, opravy, otevřená data.",
+              ikona: "globus",
+              odznak: "Otevřené",
+              ton: "noc",
+            },
+          ]}
+        />
       </Sekce>
 
       <Sekce
-        id="cr"
-        cislo="03"
-        ikona="vaha"
-        nadpis="Česká republika — právní stav"
-        popis="Mimořádné stavy nevznikají zhoršením situace. Každý je samostatný právní krok s vlastním úředním vyhlášením."
+        kicker="Odběr"
+        nadpis="Dáme vědět, když se něco změní"
         akce={
-          <Link href="/cr/" className="rounded-[10px] border border-linka bg-plocha px-3 py-2 text-[12.5px] font-medium transition-colors hover:border-inkoust">
-            Podrobně
-          </Link>
-        }
-      >
-        <PravniSemafor polozky={pravni.polozky} overeno={pravni.overeno} />
-      </Sekce>
-
-      <Sekce
-        cislo="04"
-        ikona="terc"
-        nadpis="Hybridní tlak a přímý vojenský střet"
-        popis="Dvě různé otázky. Sledujeme je odděleně, protože jejich sloučení je nejčastější zdroj zbytečného strachu."
-      >
-        <HybridniPanel tlak={hybridni} />
-      </Sekce>
-
-      <Sekce
-        cislo="05"
-        ikona="stit-ok"
-        nadpis="Co to znamená pro život v ČR"
-        popis="Stav běžných služeb. Kde chybí spolehlivý zdroj, napíšeme to — nedopočítáváme."
-      >
-        <ProvozPanel provoz={provoz()} />
-      </Sekce>
-
-      <Sekce
-        cislo="06"
-        ikona="hodiny"
-        nadpis="Co může změnit hodnocení během příštích 72 hodin"
-        popis="Konkrétní institucionální a právní spouštěče — v obou směrech."
-      >
-        <WatchlistPanel watchlist={watchlist()} />
-      </Sekce>
-
-      <Sekce
-        cislo="07"
-        ikona="zebrik"
-        nadpis="K čemu by se situace mohla posunout"
-        popis="Orientační sled možných institucionálních kroků. Žádný z nich nenásleduje automaticky po předchozím."
-      >
-        <ScenarovaCesta />
-      </Sekce>
-
-      <Sekce
-        cislo="08"
-        ikona="osa"
-        nadpis="Časová osa"
-        popis="Chronologie ověřených událostí. Smyslem je vidět kumulaci, ne přečíst každý detail."
-        akce={
-          <Link href="/osa/" className="rounded-[10px] border border-linka bg-plocha px-3 py-2 text-[12.5px] font-medium transition-colors hover:border-inkoust">
-            Celá osa
-          </Link>
-        }
-      >
-        <CasovaOsa incidenty={vse.slice(0, 12)} />
-      </Sekce>
-
-      <Sekce
-        cislo="09"
-        ikona="hodiny"
-        nadpis="Vývoj v čase"
-        popis="Co web tvrdil v daném okamžiku. Není to rekonstrukce toho, co se doopravdy dělo — události se objevují k datu, kdy vyšly najevo."
-        akce={
-          <Link href="/trend/" className="rounded-[10px] border border-linka bg-plocha px-3 py-2 text-[12.5px] font-medium transition-colors hover:border-inkoust">
-            Celý archiv
-          </Link>
-        }
-      >
-        <CasovyPosuvnik archiv={archiv()} />
-      </Sekce>
-
-      <Sekce
-        cislo="10"
-        ikona="graf"
-        nadpis="Jak se situace vyvíjí"
-        popis="Vývoj po týdnech od začátku měření. Svislá osa je stupnice úrovní, ne procenta."
-        akce={
-          <Link href="/trend/" className="rounded-[10px] border border-linka bg-plocha px-3 py-2 text-[12.5px] font-medium transition-colors hover:border-inkoust">
-            Detail trendu
-          </Link>
-        }
-      >
-        <div className="space-y-5">
-          <GrafTrendu tydny={tydenni} />
-          <TabulkaTydnu tydny={tydenni} />
-        </div>
-      </Sekce>
-
-      <Sekce
-        cislo="11"
-        ikona="globus"
-        nadpis="Rusko: vnitřní tlak režimu"
-        popis="Doplňkový ukazatel. Méně jistý než zbytek webu, proto i menší."
-      >
-        <RuskoPanel stav={rusko()} />
-      </Sekce>
-
-      <Sekce
-        cislo="12"
-        ikona="oko"
-        nadpis="Menší signály"
-        popis="Události, které samy o sobě hodnocení nemění, ale mohou se kumulovat."
-      >
-        {mensi.length ? (
-          <div className="grid gap-4 lg:grid-cols-2">
-            {mensi.map((i) => (
-              <KartaUdalosti key={i.id} incident={i} rozbalitelna={false} />
-            ))}
-          </div>
-        ) : (
-          <Prazdno
-            nadpis="Žádné menší signály k zobrazení"
-            popis="Sem se zapisují drobnější ověřené události, které samy o sobě hodnocení nemění."
-          />
-        )}
-      </Sekce>
-
-      <Sekce
-        cislo="13"
-        ikona="komunikace"
-        nadpis="Nechte si dát vědět"
-        popis="Jen při změně, kvůli které by člověk mohl jednat jinak. Ne u každé události."
-        akce={
-          <Link href="/odber/" className="rounded-[10px] border border-linka bg-plocha px-3 py-2 text-[12.5px] font-medium transition-colors hover:border-inkoust">
-            Podrobně
+          <Link
+            href="/odber/"
+            className="rounded-full border border-linka bg-plocha px-4 py-2.5 text-[13px] font-medium transition-colors hover:border-inkoust"
+          >
+            Všechny kanály
           </Link>
         }
       >
         <OdberPanel kompaktni />
-      </Sekce>
-
-      <Sekce
-        cislo="14"
-        ikona="kniha"
-        nadpis="Metodika"
-        popis="Co započítáváme jako nový signál, co ne, a co je náš baseline."
-      >
-        <div className="grid gap-5 lg:grid-cols-[minmax(0,1.4fr)_minmax(0,1fr)]">
-          <Karta className="p-5 sm:p-6">
-            <p className="max-w-[42rem] text-[13.5px] leading-relaxed text-tlum">
-              Nezapočítáváme další článek o téže věci, komentář politika bez nového faktu,
-              repost ani starou událost publikovanou znovu. Běžné jednotlivé průniky do
-              vzdušného prostoru samy o sobě hodnocení nezvyšují — hledáme{" "}
-              <b className="font-semibold text-inkoust">změnu vzorce</b>: vyšší četnost,
-              více zasažených států, hlubší průnik, škody, oběti, úmyslné cílení, oficiální
-              atribuci nebo změnu reakce NATO.
-            </p>
-            <Link
-              href="/metodika/"
-              className="mt-5 inline-block rounded-[10px] border border-linka px-3 py-2 text-[12.5px] font-medium transition-colors hover:border-inkoust"
-            >
-              Celá metodika
-            </Link>
-          </Karta>
-
-          {BUY_ME_A_COFFEE_URL ? (
-            <Karta className="flex flex-col justify-between p-5 sm:p-6">
-              <div>
-                <h3 className="podnadpis mb-2 text-[16px]">Podpořit projekt</h3>
-                <p className="text-[12.5px] leading-relaxed text-tlum">
-                  Projekt je nezávislý a vzniká jako hobby. Pokud vám přehled pomáhá,
-                  můžete přispět na jeho provoz.
-                </p>
-              </div>
-              <a
-                href={BUY_ME_A_COFFEE_URL}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="mt-5 inline-block rounded-[10px] border border-linka px-3 py-2 text-center text-[12.5px] font-medium transition-colors hover:border-inkoust"
-              >
-                Podpořit projekt
-              </a>
-            </Karta>
-          ) : (
-            <Karta className="p-5 sm:p-6">
-              <h3 className="podnadpis mb-2 text-[16px]">Zdroje</h3>
-              <p className="text-[12.5px] leading-relaxed text-tlum">
-                Každé konkrétní tvrzení na webu má uvedený zdroj. Přednost mají orgány,
-                které věc samy oznámily, teprve po nich agentury a média.
-              </p>
-              <Link
-                href="/zdroje/"
-                className="mt-5 inline-block rounded-[10px] border border-linka px-3 py-2 text-[12.5px] font-medium transition-colors hover:border-inkoust"
-              >
-                Seznam zdrojů
-              </Link>
-            </Karta>
-          )}
-        </div>
       </Sekce>
     </>
   );

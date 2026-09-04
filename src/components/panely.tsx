@@ -71,12 +71,8 @@ export function PravniSemafor({
           <RadekSemaforu key={p.klic} p={p} />
         ))}
       </div>
-      <p className="border-t border-linka py-3.5 text-[11.5px] text-tlum2">
-        {overeno
-          ? `Ověřeno proti úředním zdrojům ${datumCas(overeno)}. `
-          : "Hodnoty zatím nebyly automaticky ověřeny. "}
-        Změnu právního stavu nikdy neurčujeme podle médií, pokud je dohledatelný
-        primární právní dokument.
+      <p className="stitek border-t border-linka py-4">
+        {overeno ? `Ověřeno proti úředním zdrojům ${datumCas(overeno)}` : "Zatím neověřeno automaticky"}
       </p>
     </Karta>
   );
@@ -238,9 +234,7 @@ function KartaProvozu({ p }: { p: ProvozniPolozka }) {
             </li>
           ))}
         </ul>
-        <p className="mt-3 text-[11.5px] leading-relaxed text-tlum2">
-          Seznam je orientační. Nejde o předpověď ani o doporučení, jak jednat.
-        </p>
+
       </details>
     </Karta>
   );
@@ -254,10 +248,7 @@ export function ProvozPanel({ provoz }: { provoz: Provoz }) {
           <KartaProvozu key={p.klic} p={p} />
         ))}
       </ul>
-      <p className="mt-5 max-w-[46rem] text-[12.5px] leading-relaxed text-tlum2">
-        Žádné rady typu „odjet“, předzásobit se nebo vybrat hotovost — takové kroky
-        umí samy způsobit problém, který zatím neexistuje.
-      </p>
+
     </>
   );
 }
@@ -308,10 +299,7 @@ export function WatchlistPanel({ watchlist }: { watchlist: Watchlist }) {
               </li>
             ))}
           </ul>
-          <p className="mt-5 border-t border-linka2 pt-4 text-[12px] leading-relaxed text-tlum2">
-            Uklidňující signály uvádíme stejně důsledně jako zhoršující. Jinak by web
-            byl jednosměrný eskalační stroj.
-          </p>
+
         </Karta>
       </div>
     </div>
@@ -451,46 +439,9 @@ export function RuskoPanel({ stav }: { stav: RuskoStav }) {
           ))}
         </ul>
         {!stav.sledujemePo.termin && (
-          <p className="mt-3 text-[11.5px] text-tlum2">
-            Termín zde uvedeme, až bude doložen primárním zdrojem. Data z druhé ruky
-            nedoplňujeme.
-          </p>
+          <p className="stitek mt-3">Termín doplníme z primárního zdroje</p>
         )}
       </div>
-    </Karta>
-  );
-}
-
-/* ---------------- jak číst tento web ---------------- */
-
-export function JakCist() {
-  const polozky = [
-    { typ: "fakt" as const, text: "Doloženo zdrojem, který je u záznamu uvedený." },
-    { typ: "odhad" as const, text: "Analytická interpretace. Není to fakt ani předpověď." },
-    { typ: "scenar" as const, text: "Možnost, nikoli předpověď. Nemusí nastat." },
-    { typ: "nepotvrzeno" as const, text: "Informace existuje, ale nemáme dost důkazů." },
-  ];
-  return (
-    <Karta className="p-5 sm:p-6">
-      <h3 className="podnadpis mb-1.5 text-[16px]">Jak číst tento web</h3>
-      <p className="mb-5 max-w-[40rem] text-[12.5px] leading-relaxed text-tlum">
-        Tyto čtyři odznaky používáme všude stejně. Podle nich poznáte, co je doložené
-        a co je náš výklad.
-      </p>
-      <dl className="grid gap-4 sm:grid-cols-2">
-        {polozky.map((p) => (
-          <div key={p.typ} className="flex items-start gap-3">
-            <dt className="mt-[1px] shrink-0">
-              <OdznakTypu typ={p.typ} />
-            </dt>
-            <dd className="text-[12.5px] leading-relaxed text-tlum">{p.text}</dd>
-          </div>
-        ))}
-      </dl>
-      <p className="mt-5 border-t border-linka2 pt-4 text-[12px] leading-relaxed text-tlum2">
-        Závažnost a jistota jsou dvě nezávislé osy.{" "}
-        <Link href="/metodika/" className="odkaz">Celá metodika</Link>
-      </p>
     </Karta>
   );
 }

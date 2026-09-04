@@ -53,6 +53,14 @@ nepokrývá, se nedopočítává; napíše se, že ho nemáme.
 
 Odběrový kanál, který nikam nevede, se neukazuje jako dostupný.
 
+## Pravidlo č. 6 — rozhraní je pro čtenáře, ne pro nás
+
+Do UI nepatří poznámky o tom, proč jsme něco udělali. Disclaimer je jeden,
+v patičce. Popisky pod grafy vysvětlují značku na obrazovce (co znamená
+„≥ N“), ne naši filozofii.
+
+Piš jako copywriter: nadpis, jedna věta, konec. Ne odstavce.
+
 ## Konvence
 
 - Kód, komentáře i názvy proměnných **česky**. Komentář vysvětluje *proč*, ne *co*.

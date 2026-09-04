@@ -166,10 +166,8 @@ export function TabulkaTydnu({ tydny }: { tydny: TydenniHodnoceni[] }) {
           </tbody>
         </table>
       </div>
-      <p className="border-t border-linka px-5 py-3.5 text-[11.5px] leading-relaxed text-tlum2">
-        Údaj <span className="cislice font-semibold">≥ N</span> znamená, že monitoring
-        v daném týdnu neběžel celý. Uvádíme doložené minimum, nikoli odhad. Falešnou
-        přesnost nevytváříme.
+      <p className="stitek border-t border-linka px-5 py-4">
+        ≥ N = monitoring v tom týdnu neběžel celý, uvádíme doložené minimum
       </p>
     </Karta>
   );
@@ -323,9 +321,8 @@ export function GrafTrendu({ tydny }: { tydny: TydenniHodnoceni[] }) {
         </svg>
       </div>
 
-      <p className="mt-4 border-t border-linka2 pt-3.5 text-[11.5px] leading-relaxed text-tlum2">
-        Svislá osa je diskrétní stupnice úrovní. Není to pravděpodobnost a nedá se z ní
-        odečíst „riziko v procentech“ — takový model nemáme a nepředstíráme ho.
+      <p className="stitek mt-4 border-t border-linka2 pt-4">
+        Svislá osa je stupnice úrovní, ne procenta
       </p>
     </Karta>
   );

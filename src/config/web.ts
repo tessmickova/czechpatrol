@@ -53,6 +53,21 @@ export const KDY_UPOZORNENI = [
 ] as const;
 
 /**
+ * Komunita. Stejné pravidlo jako u kanálů: prázdná adresa = odkaz se
+ * neukáže jako funkční.
+ */
+export const KOMUNITA: Record<string, string> = {
+  /** Veřejný repozitář s daty i kódem. */
+  github: "",
+  /** Diskuse nad metodikou a hodnocením. */
+  diskuse: "",
+  /** Skupina, kde se dají posílat tipy. */
+  skupina: "",
+  /** Adresa pro poslání tipu nebo opravy. */
+  tipy: "",
+};
+
+/**
  * Režim dat.
  *  - "ostry"  = jen lidsky ověřené záznamy z data/*.json
  *  - "ukazka" = přidají se ukázková data z data/ukazka/*.json, viditelně označená

@@ -35,8 +35,9 @@ Kontrola a sestavení:
 ```bash
 npm run typecheck
 npm test
-npm run build     # statický export do out/
-npm run nahled    # klikací náhled do jediného souboru nahled.html
+npm run build           # statický export do out/
+npm run nahled          # klikací náhled z ostrých dat
+npm run nahled:ukazka   # totéž s ukázkovými daty, jen pro posouzení rozvržení
 ```
 
 `npm run nahled` sestaví z týchž komponent samostatnou Reactovou aplikaci

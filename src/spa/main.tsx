@@ -14,6 +14,9 @@ import Trend from "@/app/trend/page";
 import Metodika from "@/app/metodika/page";
 import Zdroje from "@/app/zdroje/page";
 import Odber from "@/app/odber/page";
+import Tlak from "@/app/tlak/page";
+import WatchlistStranka from "@/app/watchlist/page";
+import Komunita from "@/app/komunita/page";
 import { usePathname } from "./shim-navigation";
 import { spustParallax } from "./parallax";
 
@@ -36,6 +39,9 @@ const CESTY: Record<string, () => React.JSX.Element> = {
   "/metodika/": Metodika,
   "/zdroje/": Zdroje,
   "/odber/": Odber,
+  "/tlak/": Tlak,
+  "/watchlist/": WatchlistStranka,
+  "/komunita/": Komunita,
 };
 
 function Obsah() {

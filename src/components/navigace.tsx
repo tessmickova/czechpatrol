@@ -6,16 +6,24 @@ import { useEffect, useState } from "react";
 import { BUY_ME_A_COFFEE_URL, WEB } from "@/config/web";
 import { Ikona } from "./ikony";
 
+/** Hlavní navigace zůstává krátká. Zbytek rozcestník na přehledu a patička. */
 const ODKAZY = [
   { href: "/", label: "Přehled" },
   { href: "/dnes/", label: "Dnes" },
   { href: "/udalosti/", label: "Události" },
-  { href: "/osa/", label: "Časová osa" },
   { href: "/cr/", label: "ČR" },
+  { href: "/tlak/", label: "Tlak" },
+  { href: "/trend/", label: "Vývoj" },
+];
+
+/** Doplňkové cesty — jen v mobilním menu a v patičce. */
+const DALSI = [
+  { href: "/osa/", label: "Časová osa" },
+  { href: "/watchlist/", label: "Watchlist 72 h" },
   { href: "/nato/", label: "NATO" },
-  { href: "/trend/", label: "Trend" },
   { href: "/metodika/", label: "Metodika" },
-  { href: "/odber/", label: "Odběr" },
+  { href: "/zdroje/", label: "Zdroje" },
+  { href: "/komunita/", label: "Komunita" },
 ];
 
 export function Navigace() {
@@ -65,14 +73,20 @@ export function Navigace() {
             </span>
             <span className="stitek !text-tlum">Live</span>
           </span>
+          <Link
+            href="/odber/"
+            className="hidden rounded-full bg-inkoust px-3.5 py-2 text-[12.5px] font-semibold text-plocha transition-opacity hover:opacity-85 sm:inline-block"
+          >
+            Odebírat
+          </Link>
           {BUY_ME_A_COFFEE_URL && (
             <a
               href={BUY_ME_A_COFFEE_URL}
               target="_blank"
               rel="noopener noreferrer"
-              className="hidden rounded-[10px] bg-akcent px-2.5 py-1.5 text-[12px] font-semibold text-white transition-colors hover:bg-akcent-tmava sm:inline-block"
+              className="hidden rounded-full border border-linka px-3.5 py-2 text-[12.5px] font-medium transition-colors hover:border-inkoust lg:inline-block"
             >
-              Podpořit projekt
+              Podpořit
             </a>
           )}
           <button
@@ -94,18 +108,24 @@ export function Navigace() {
       {otevreno && (
         <div id="mobilni-menu" className="border-t border-linka bg-papir lg:hidden">
           <nav aria-label="Hlavní (mobil)" className="mx-auto max-w-[1180px] px-5 py-3 sm:px-8">
-            {ODKAZY.map((o) => (
+            {[...ODKAZY, ...DALSI].map((o) => (
               <Link
                 key={o.href}
                 href={o.href}
                 aria-current={aktivni(o.href) ? "page" : undefined}
-                className={`block border-b border-linka2 py-3 text-[15px] font-medium last:border-0 ${
+                className={`block border-b border-linka2 py-3.5 text-[16px] font-medium last:border-0 ${
                   aktivni(o.href) ? "text-inkoust" : "text-tlum"
                 }`}
               >
                 {o.label}
               </Link>
             ))}
+            <Link
+              href="/odber/"
+              className="mt-4 block rounded-full bg-inkoust py-3 text-center text-[14px] font-semibold text-plocha"
+            >
+              Odebírat
+            </Link>
             {BUY_ME_A_COFFEE_URL && (
               <a
                 href={BUY_ME_A_COFFEE_URL}

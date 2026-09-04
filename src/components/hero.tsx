@@ -1,135 +1,73 @@
-import type { ReactNode } from "react";
-import { WEB } from "@/config/web";
+import Link from "next/link";
 import { datumCas } from "@/lib/format";
 import { PASMA, UROVNE } from "@/lib/skala";
-import type { CelkovyStav, HybridniTlak, NatoPolozka, PravniStav, Uroven } from "@/lib/typy";
+import type { CelkovyStav, HybridniTlak, NatoPolozka, PravniStav } from "@/lib/typy";
+import { StavoveDlazdice, type Dlazdice, type Ton } from "./dlazdice";
 import { Ikona, type NazevIkony } from "./ikony";
 import { ObloukovyMerak } from "./mericky";
 import { Napoveda, VykladUrovne } from "./zaklad";
 
 const TRENDY = {
-  nahoru: { ikona: "nahoru" as NazevIkony, nazev: "zhoršení", tridy: "text-[#f4a67c]" },
-  dolu: { ikona: "dolu" as NazevIkony, nazev: "uklidnění", tridy: "text-[#7fdcac]" },
-  "beze-zmeny": { ikona: "fajfka" as NazevIkony, nazev: "beze změny", tridy: "text-noc-tlum" },
+  nahoru: { ikona: "nahoru" as NazevIkony, text: "zhoršení za 7 dní", tridy: "text-[#f4a67c]" },
+  dolu: { ikona: "dolu" as NazevIkony, text: "uklidnění za 7 dní", tridy: "text-[#7fdcac]" },
+  "beze-zmeny": { ikona: "fajfka" as NazevIkony, text: "beze změny za 7 dní", tridy: "text-noc-tlum" },
 } as const;
 
-/* ---------------- horní pruh stavů ---------------- */
-
-interface Bunka {
-  klic: string;
-  stitek: string;
-  hodnota: string | null;
-  uroven: Uroven | null;
-  klidne?: boolean;
-  ikona: NazevIkony;
-  napoveda: ReactNode;
-}
-
-function Kontrolka({ b }: { b: Bunka }) {
-  const neznamo = b.hodnota === null;
-  const t = b.uroven ? PASMA[UROVNE[b.uroven].pasmo] : null;
-  const barva = neznamo
-    ? "bg-white/20"
-    : b.klidne
-      ? "bg-[#4fbe86]"
-      : t
-        ? t.teckaNoc
-        : "bg-white/30";
-
-  return (
-    <div className="min-w-[10.5rem] shrink-0 sm:min-w-0 sm:flex-1">
-      <Napoveda popis={b.napoveda} label={`${b.stitek} — co to znamená?`}>
-        <span className="block px-4 py-3.5 sm:px-5">
-          <span className="mb-2.5 flex items-center gap-1.5 text-noc-tlum">
-            <Ikona nazev={b.ikona} velikost={13} tah={1.5} />
-            <span className="stitek !text-noc-tlum">{b.stitek}</span>
-          </span>
-          <span className="flex items-center gap-2">
-            <span aria-hidden className={`h-[7px] w-[7px] shrink-0 rounded-[2px] ${barva}`} />
-            <span
-              className={`text-[13px] font-semibold leading-tight tracking-[-0.015em] ${
-                neznamo ? "text-noc-tlum" : "text-noc-text"
-              }`}
-            >
-              {b.hodnota ?? "neověřeno"}
-            </span>
-          </span>
-        </span>
-      </Napoveda>
-    </div>
-  );
-}
-
-function bunky(
-  uroven: Uroven | null,
+function stavoveDlazdice(
   pravni: PravniStav,
   nato: { polozky: NatoPolozka[] },
   hybridni: HybridniTlak,
-): Bunka[] {
+): Dlazdice[] {
   const pr = (k: string) => pravni.polozky.find((x) => x.klic === k);
   const na = (k: string) => nato.polozky.find((x) => x.klic === k);
   const primy = hybridni.podkategorie.find((x) => x.klic === "primy");
 
-  const vycestovani = pr("vycestovani");
-  const mobilizace = pr("mobilizace");
-  const hranice = pr("hranice");
+  const ton = (plati: boolean | null | undefined): Ton =>
+    plati === null || plati === undefined ? "neznamo" : plati ? "poplach" : "klid";
+
   const cl4 = na("clanek-4");
   const cl5 = na("clanek-5");
-
-  const clHodnota =
-    cl4?.aktivni === null || cl5?.aktivni === null
-      ? null
-      : cl4?.aktivni || cl5?.aktivni
-        ? [cl4?.aktivni && "čl. 4 aktivován", cl5?.aktivni && "čl. 5 aktivován"].filter(Boolean).join(" · ")
-        : "neaktivován";
+  const clNeznamo = cl4?.aktivni == null || cl5?.aktivni == null;
+  const clAktivni = Boolean(cl4?.aktivni || cl5?.aktivni);
 
   return [
-    {
-      klic: "celkem",
-      stitek: "Celková úroveň",
-      ikona: "radar",
-      hodnota: uroven ? UROVNE[uroven].nazev : null,
-      uroven,
-      napoveda: uroven ? (
-        <VykladUrovne uroven={uroven} />
-      ) : (
-        <span className="block">
-          Celkové hodnocení zatím nebylo stanoveno. Web nedopočítává úroveň z neúplných dat.
-        </span>
-      ),
-    },
     {
       klic: "vycestovani",
       stitek: "Vycestování z ČR",
       ikona: "pas",
-      hodnota: vycestovani?.plati === null ? null : vycestovani?.plati ? vycestovani.hodnota : "bez mimořádného omezení",
-      uroven: null,
-      klidne: vycestovani?.plati === false,
+      ton: ton(pr("vycestovani")?.plati),
+      hodnota:
+        pr("vycestovani")?.plati == null
+          ? "Zatím neověřeno"
+          : pr("vycestovani")!.plati
+            ? "Omezeno"
+            : "Bez omezení",
       napoveda: (
         <span className="block space-y-1.5">
-          <span className="block">{vycestovani?.vysvetleni}</span>
-          <span className="block opacity-80">
-            Kontrola na hranici není zákaz vycestování. Obojí sledujeme odděleně.
-          </span>
+          <span className="block">{pr("vycestovani")?.vysvetleni}</span>
+          <span className="block opacity-80">Kontrola na hranici není zákaz vycestování.</span>
         </span>
       ),
     },
     {
       klic: "mobilizace",
-      stitek: "Mobilizace ČR",
+      stitek: "Mobilizace",
       ikona: "vlajka",
-      hodnota: mobilizace?.plati === null ? null : mobilizace?.plati ? mobilizace.hodnota : "ne",
-      uroven: null,
-      klidne: mobilizace?.plati === false,
-      napoveda: <span className="block">{mobilizace?.vysvetleni}</span>,
+      ton: ton(pr("mobilizace")?.plati),
+      hodnota:
+        pr("mobilizace")?.plati == null ? "Zatím neověřeno" : pr("mobilizace")!.plati ? "Vyhlášena" : "Nevyhlášena",
+      napoveda: <span className="block">{pr("mobilizace")?.vysvetleni}</span>,
     },
     {
       klic: "nato",
       stitek: "NATO čl. 4 / 5",
       ikona: "stit",
-      hodnota: clHodnota,
-      uroven: null,
-      klidne: clHodnota === "neaktivován",
+      ton: clNeznamo ? "neznamo" : clAktivni ? "poplach" : "klid",
+      hodnota: clNeznamo
+        ? "Zatím neověřeno"
+        : clAktivni
+          ? [cl4?.aktivni && "čl. 4", cl5?.aktivni && "čl. 5"].filter(Boolean).join(" + ") + " aktivován"
+          : "Neaktivován",
       napoveda: (
         <span className="block space-y-1.5">
           <span className="block">{cl4?.vysvetleni}</span>
@@ -138,29 +76,22 @@ function bunky(
       ),
     },
     {
-      klic: "hranice",
-      stitek: "Hranice",
-      ikona: "hranice",
-      hodnota: hranice?.plati === null ? null : hranice?.plati ? hranice.hodnota : "běžný režim",
-      uroven: null,
-      klidne: hranice?.plati === false,
-      napoveda: <span className="block">{hranice?.vysvetleni}</span>,
-    },
-    {
       klic: "primy",
-      stitek: "Přímý střet",
+      stitek: "Přímý střet NATO–Rusko",
       ikona: "terc",
-      hodnota: primy?.uroven ? UROVNE[primy.uroven].nazev.toLowerCase() : null,
-      uroven: primy?.uroven ?? null,
+      ton: !primy?.uroven
+        ? "neznamo"
+        : UROVNE[primy.uroven].pasmo === "zelena"
+          ? "klid"
+          : UROVNE[primy.uroven].pasmo === "cervena"
+            ? "poplach"
+            : "pozor",
+      hodnota: primy?.uroven ? UROVNE[primy.uroven].nazev : "Zatím nevyhodnoceno",
       napoveda: (
         <span className="block space-y-1.5">
-          <span className="block text-[10px] font-semibold uppercase tracking-[0.09em] opacity-60">
-            Přímý vojenský střet NATO–Rusko
-          </span>
           <span className="block">{primy?.poznamka}</span>
           <span className="block opacity-80">
-            Hybridní tlak a přímé vojenské riziko se nesmí směšovat. Vysoký hybridní tlak
-            sám o sobě neznamená blížící se vojenský útok.
+            Hybridní tlak a přímé vojenské riziko jsou dvě různé věci.
           </span>
         </span>
       ),
@@ -168,187 +99,135 @@ function bunky(
   ];
 }
 
-/* ---------------- celý situační panel ---------------- */
+/**
+ * Stav před prvním během sběru. Čtyři prázdné dlaždice by vypadaly jako
+ * rozbitá stránka; tohle říká rovnou, na čem to je.
+ */
+function PrvniSber() {
+  return (
+    <div className="flex flex-col gap-5 rounded-[20px] border border-[#cddcf7] bg-mycka p-6 sm:flex-row sm:items-center sm:p-7">
+      <span className="grid h-[46px] w-[46px] shrink-0 place-items-center rounded-[16px] border border-white/70 bg-white/70">
+        <Ikona nazev="radar" velikost={22} />
+      </span>
+      <div className="flex-1">
+        <p className="text-[18px] font-semibold tracking-[-0.025em]">Sběr zatím neproběhl</p>
+        <p className="mt-1.5 max-w-[46rem] text-[14px] leading-relaxed text-tlum">
+          Stav mobilizace, vycestování, hranic i článků NATO se ověřuje proti úředním
+          registrům. Dokud první běh neproběhne, web žádnou hodnotu netvrdí.
+        </p>
+      </div>
+      <Link
+        href="/metodika/"
+        className="shrink-0 rounded-full border border-white/80 bg-white/70 px-4 py-2.5 text-[13px] font-medium transition-colors hover:border-inkoust/30"
+      >
+        Jak to ověřujeme
+      </Link>
+    </div>
+  );
+}
 
 export function SituacniPanel({
-  stav, pravni, nato, hybridni, klidove = [], dnyBezZmeny = null,
+  stav, pravni, nato, hybridni, dnyBezZmeny = null,
 }: {
   stav: CelkovyStav;
   pravni: PravniStav;
   nato: { polozky: NatoPolozka[] };
   hybridni: HybridniTlak;
-  klidove?: string[];
   dnyBezZmeny?: { dnu: number; odZacatkuArchivu: boolean } | null;
 }) {
   const d = stav.uroven ? UROVNE[stav.uroven] : null;
-  const t = stav.uroven ? PASMA[stav.uroven ? UROVNE[stav.uroven].pasmo : "zelena"] : null;
+  const t = stav.uroven ? PASMA[UROVNE[stav.uroven].pasmo] : null;
   const trend = stav.trend ? TRENDY[stav.trend] : null;
+  const dlazdice = stavoveDlazdice(pravni, nato, hybridni);
 
   return (
-    <section className="noc relative overflow-hidden">
-      {/* Parallaxové vrstvy. Posouvají se pomaleji než stránka — mřížka nejméně. */}
-      <div aria-hidden className="pointer-events-none absolute inset-0 -z-10 overflow-hidden">
-        <div data-vrstva="0.06" className="vrstva vzor-mrizka absolute inset-x-0 -inset-y-[25%]" />
-        <div data-vrstva="0.16" className="vrstva vzor-zare absolute inset-x-0 -inset-y-[35%]" />
-      </div>
-
-      {/* pruh stavů */}
-      <div className="border-b border-white/10">
-        <div className="mx-auto max-w-[1180px] px-5 pt-4 sm:px-8">
-          <div className="flex items-center gap-2">
-            <span aria-hidden className="relative flex h-[6px] w-[6px]">
-              <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-[#4fbe86] opacity-60" />
-              <span className="relative inline-flex h-[6px] w-[6px] rounded-full bg-[#4fbe86]" />
-            </span>
-            <span className="stitek !text-noc-tlum">
-              {stav.aktualizovano
-                ? `Aktualizováno ${datumCas(stav.aktualizovano)}`
-                : "Zatím bez automatické aktualizace"}
-            </span>
-          </div>
+    <>
+      <section className="noc relative overflow-hidden">
+        <div aria-hidden className="pointer-events-none absolute inset-0 -z-10 overflow-hidden">
+          <div data-vrstva="0.06" className="vrstva vzor-mrizka absolute inset-x-0 -inset-y-[25%]" />
+          <div data-vrstva="0.16" className="vrstva vzor-zare absolute inset-x-0 -inset-y-[35%]" />
         </div>
-        <div className="mx-auto max-w-[1180px] sm:px-8">
-          <div className="pas-scroll flex overflow-x-auto sm:divide-x sm:divide-white/10">
-            {bunky(stav.uroven, pravni, nato, hybridni).map((b) => (
-              <Kontrolka key={b.klic} b={b} />
-            ))}
-          </div>
-        </div>
-      </div>
 
-      {/* hero */}
-      <div className="mx-auto max-w-[1180px] px-5 py-14 sm:px-8 sm:py-20">
-        <div className="grid gap-12 lg:grid-cols-[minmax(0,1.25fr)_minmax(0,1fr)] lg:gap-16">
-          <div>
-            <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-3 py-1.5">
-              <Ikona nazev="radar" velikost={13} tah={1.6} trida="text-akcent-svetla" />
-              <span className="stitek !text-noc-tlum">{WEB.podtitul}</span>
-            </div>
-
-            <h1 className="nadpis max-w-[15ch] text-[42px] text-noc-text sm:text-[58px] lg:text-[66px]">
-              Co se skutečně mění?
-            </h1>
-
-            <p className="mt-6 max-w-[34rem] text-[15.5px] leading-relaxed text-noc-tlum sm:text-[16.5px]">
-              {WEB.popis}
-            </p>
-
-            {klidove.length > 0 && (
-              <div className="mt-10">
-                <div className="mb-4 flex flex-wrap items-center gap-3">
-                  <span className="stitek !text-noc-tlum">Co se zatím nestalo</span>
-                  {dnyBezZmeny !== null && (
-                    <Napoveda
-                      popis={
-                        <span className="block space-y-1.5">
-                          <span className="block">
-                            {dnyBezZmeny.odZacatkuArchivu
-                              ? "Archiv za celou dobu svého běhu nezachytil žádnou změnu právního stavu ČR ani stavu NATO."
-                              : "Tolik dní uplynulo od poslední změny právního stavu ČR nebo stavu NATO."}
-                          </span>
-                          <span className="block opacity-80">
-                            Počítáno z archivu, ne odhadem. Starší období archiv nemá.
-                          </span>
-                        </span>
-                      }
-                    >
-                      <span className="stitek-tmavy inline-flex items-center gap-1.5 rounded-full border border-[#2a5f47] bg-[#0e2a20] px-2.5 py-1 text-[#7fdcac]">
-                        <Ikona nazev="hodiny" velikost={11} tah={1.7} />
-                        {dnyBezZmeny.odZacatkuArchivu ? "za celý archiv beze změny" : `beze změny ${dnyBezZmeny.dnu} dní`}
-                      </span>
-                    </Napoveda>
-                  )}
-                </div>
-                <ul className="grid max-w-[38rem] gap-2.5 sm:grid-cols-2">
-                  {klidove.map((k) => (
-                    <li
-                      key={k}
-                      className="sklo-noc-slabe flex items-start gap-2.5 rounded-[14px] px-3 py-2.5 text-[12.5px] leading-snug text-noc-text"
-                    >
-                      <span className="mt-[1px] text-[#4fbe86]">
-                        <Ikona nazev="stit-ok" velikost={15} tah={1.5} />
-                      </span>
-                      {k}
-                    </li>
-                  ))}
-                </ul>
-                <p className="mt-4 max-w-[32rem] text-[11.5px] leading-relaxed text-noc-tlum/75">
-                  Jen body ověřené proti primárnímu zdroji. Uklidňovat bez podkladu je
-                  stejná chyba jako strašit.
-                </p>
-              </div>
+        <div className="mx-auto max-w-[1180px] px-5 py-16 sm:px-8 sm:py-24">
+          <div className="mb-8 flex flex-wrap items-center gap-x-4 gap-y-2">
+            <span className="flex items-center gap-2">
+              <span aria-hidden className="relative flex h-[7px] w-[7px]">
+                <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-[#4fbe86] opacity-60" />
+                <span className="relative inline-flex h-[7px] w-[7px] rounded-full bg-[#4fbe86]" />
+              </span>
+              <span className="stitek !text-noc-tlum">
+                {stav.aktualizovano ? datumCas(stav.aktualizovano) : "sběr zatím neproběhl"}
+              </span>
+            </span>
+            {dnyBezZmeny && (
+              <Napoveda
+                popis={
+                  <span className="block">
+                    {dnyBezZmeny.odZacatkuArchivu
+                      ? "Archiv za celou dobu běhu nezachytil změnu právního stavu ČR ani stavu NATO."
+                      : "Tolik dní od poslední změny právního stavu ČR nebo stavu NATO."}
+                  </span>
+                }
+              >
+                <span className="stitek-tmavy inline-flex items-center gap-1.5 rounded-full border border-[#2a5f47] bg-[#0e2a20] px-2.5 py-1 text-[#7fdcac]">
+                  <Ikona nazev="hodiny" velikost={11} tah={1.7} />
+                  {dnyBezZmeny.odZacatkuArchivu
+                    ? "za celý archiv beze změny"
+                    : `beze změny ${dnyBezZmeny.dnu} dní`}
+                </span>
+              </Napoveda>
             )}
           </div>
 
-          {/* měřák */}
-          <div className="flex flex-col justify-center">
-            <div className="sklo-noc rounded-[18px] p-6 sm:p-7">
-              <div className="stitek mb-2 !text-noc-tlum">Celková úroveň</div>
+          <div className="grid gap-12 lg:grid-cols-[minmax(0,1.15fr)_minmax(0,0.85fr)] lg:items-center lg:gap-16">
+            <div>
+              <h1 className="nadpis text-[52px] text-noc-text sm:text-[74px] lg:text-[86px]">
+                Co se děje.
+                <br />
+                A co ne.
+              </h1>
+              <p className="mt-7 max-w-[30rem] text-[17px] leading-relaxed text-noc-tlum sm:text-[19px]">
+                Bezpečnostní situace Česka a Evropy. Ověřené události, jasné zdroje,
+                žádné strašení.
+              </p>
+            </div>
 
+            <div className="sklo-noc rounded-[22px] p-6 sm:p-8">
+              <div className="stitek mb-3 !text-noc-tlum">Celková úroveň</div>
               <div className="flex justify-center">
                 {stav.uroven ? (
                   <Napoveda popis={<VykladUrovne uroven={stav.uroven} />}>
-                    <ObloukovyMerak uroven={stav.uroven} naNoci velikost={260} />
+                    <ObloukovyMerak uroven={stav.uroven} naNoci velikost={280} />
                   </Napoveda>
                 ) : (
-                  <ObloukovyMerak uroven={null} naNoci velikost={260} />
+                  <ObloukovyMerak uroven={null} naNoci velikost={280} />
                 )}
               </div>
-
               {trend ? (
-                <p className={`mt-4 flex items-center justify-center gap-2 text-[13px] font-medium ${trend.tridy}`}>
-                  <Ikona nazev={trend.ikona} velikost={14} tah={1.7} />
-                  Trend: {trend.nazev} během posledních 7 dní
+                <p className={`mt-5 flex items-center justify-center gap-2 text-[13.5px] font-medium ${trend.tridy}`}>
+                  <Ikona nazev={trend.ikona} velikost={15} tah={1.7} />
+                  {trend.text}
                 </p>
               ) : (
-                <p className="mt-4 text-center text-[12.5px] text-noc-tlum">
-                  Trend bude k dispozici po prvním úplném týdnu měření.
+                <p className="mt-5 text-center text-[13px] text-noc-tlum">
+                  Trend naskočí po prvním úplném týdnu měření.
                 </p>
               )}
-
-              <p className="mt-5 border-t border-white/10 pt-5 text-[13px] leading-relaxed text-noc-tlum">
-                {stav.shrnuti ||
-                  "Hodnocení zatím nebylo stanoveno. Web nedopočítává úroveň z neúplných dat — dokud nejsou ověřená data, přizná to."}
-              </p>
+              {(stav.shrnuti || !d) && (
+                <p className="mt-6 border-t border-white/10 pt-5 text-[13.5px] leading-relaxed text-noc-tlum">
+                  {stav.shrnuti || "Hodnocení zatím nebylo stanoveno."}
+                </p>
+              )}
             </div>
           </div>
         </div>
-      </div>
-    </section>
-  );
-}
+      </section>
 
-/** Souhrn „co se změnilo od poslední aktualizace“. */
-export function CoSeZmenilo({ stav }: { stav: CelkovyStav }) {
-  const s = stav.noveSignaly;
-  const polozky = [
-    { stitek: "Nových signálů", hodnota: s.celkem, ikona: "radar" as NazevIkony, zvyraznit: true },
-    { stitek: "Vysokých", hodnota: s.vysoke, ikona: "vystraha" as NazevIkony },
-    { stitek: "Středních", hodnota: s.stredni, ikona: "oko" as NazevIkony },
-    { stitek: "Kritických", hodnota: s.kriticke, ikona: "terc" as NazevIkony },
-  ];
-  return (
-    <div className="grid gap-3 sm:grid-cols-4">
-      {polozky.map((p) => (
-        <div
-          key={p.stitek}
-          className={`rounded-[14px] border bg-plocha px-4 py-4 sm:px-5 ${
-            p.zvyraznit ? "border-inkoust/15 shadow-[0_1px_0_rgb(11_21_36/0.04)]" : "border-linka"
-          }`}
-        >
-          <div className="mb-3 flex items-center gap-1.5 text-tlum2">
-            <Ikona nazev={p.ikona} velikost={13} tah={1.5} />
-            <span className="stitek">{p.stitek}</span>
-          </div>
-          <div
-            className={`cislice font-semibold tracking-[-0.035em] ${
-              p.zvyraznit ? "text-[32px]" : "text-[25px]"
-            } ${p.hodnota === 0 ? "text-tlum2" : ""}`}
-          >
-            {p.hodnota}
-          </div>
+      <section className="border-b border-linka bg-papir">
+        <div className="mx-auto max-w-[1180px] px-5 py-8 sm:px-8 sm:py-10">
+          {dlazdice.every((d) => d.ton === "neznamo") ? <PrvniSber /> : <StavoveDlazdice dlazdice={dlazdice} />}
         </div>
-      ))}
-    </div>
+      </section>
+    </>
   );
 }

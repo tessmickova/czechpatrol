@@ -38,9 +38,7 @@ export function GrafSouvislosti({
           </span>
         </div>
       </div>
-      <p className="mb-5 text-[12.5px] leading-relaxed text-tlum2">
-        Vyšetřovaná vazba znamená, že souvislost je předmětem šetření — ne že je prokázaná.
-      </p>
+      <p className="stitek mb-5">Vyšetřovaná vazba není prokázaná souvislost</p>
 
       <div className="overflow-x-auto">
         <svg

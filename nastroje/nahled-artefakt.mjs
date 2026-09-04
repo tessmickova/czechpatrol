@@ -12,7 +12,7 @@ import { build } from "esbuild";
 import fs from "node:fs";
 import path from "node:path";
 
-const rezim = process.env.NEXT_PUBLIC_REZIM ?? "ukazka";
+const rezim = process.env.NEXT_PUBLIC_REZIM ?? "ostry";
 
 const cssAdresar = "out/_next/static/css";
 if (!fs.existsSync(cssAdresar)) {

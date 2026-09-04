@@ -193,28 +193,41 @@ export const VYKLAD_TYPU = TYPY;
 /* ---------- stavební prvky ---------- */
 
 export function Sekce({
-  id, cislo, ikona, nadpis, popis, akce, children, prvni = false,
+  id, kicker, nadpis, popis, akce, children, tmava = false, prvni = false,
 }: {
-  id?: string; cislo?: string; ikona?: NazevIkony; nadpis: string; popis?: ReactNode;
-  akce?: ReactNode; children: ReactNode; prvni?: boolean;
+  id?: string; kicker?: string; nadpis: string; popis?: ReactNode;
+  akce?: ReactNode; children: ReactNode; tmava?: boolean; prvni?: boolean;
 }) {
   return (
-    <section id={id} className={`scroll-mt-[76px] ${prvni ? "" : "border-t border-linka"}`}>
-      <div className="mx-auto max-w-[1180px] px-5 py-12 sm:px-8 sm:py-16">
-        <div className="mb-7 flex flex-col gap-3 sm:mb-9 sm:flex-row sm:items-end sm:justify-between">
-          <div className="max-w-[46rem]">
-            {(cislo || ikona) && (
-              <div className="mb-3 flex items-center gap-2 text-tlum2">
-                {ikona && (
-                  <span className="grid h-[26px] w-[26px] place-items-center rounded-[9px] border border-linka bg-plocha">
-                    <Ikona nazev={ikona} velikost={14} />
-                  </span>
-                )}
-                {cislo && <span className="stitek">{cislo}</span>}
-              </div>
+    <section
+      id={id}
+      className={`scroll-mt-[76px] ${
+        tmava ? "noc relative overflow-hidden" : prvni ? "" : "border-t border-linka"
+      }`}
+    >
+      {tmava && (
+        <div aria-hidden className="pointer-events-none absolute inset-0 -z-10 overflow-hidden">
+          <div data-vrstva="0.05" className="vrstva vzor-mrizka absolute inset-x-0 -inset-y-[35%]" />
+        </div>
+      )}
+      <div className="mx-auto max-w-[1180px] px-5 py-16 sm:px-8 sm:py-20">
+        <div className="mb-9 flex flex-col gap-4 sm:mb-11 sm:flex-row sm:items-end sm:justify-between">
+          <div className="max-w-[42rem]">
+            {kicker && (
+              <div className={`stitek mb-3 ${tmava ? "!text-noc-tlum" : ""}`}>{kicker}</div>
             )}
-            <h2 className="podnadpis text-[22px] sm:text-[27px]">{nadpis}</h2>
-            {popis && <p className="mt-2.5 text-[13.5px] leading-relaxed text-tlum">{popis}</p>}
+            <h2
+              className={`podnadpis text-[30px] sm:text-[38px] ${tmava ? "text-noc-text" : ""}`}
+            >
+              {nadpis}
+            </h2>
+            {popis && (
+              <p
+                className={`mt-3 text-[15px] leading-relaxed ${tmava ? "text-noc-tlum" : "text-tlum"}`}
+              >
+                {popis}
+              </p>
+            )}
           </div>
           {akce && <div className="shrink-0">{akce}</div>}
         </div>
@@ -224,20 +237,50 @@ export function Sekce({
   );
 }
 
+/** Základní karta. Odstín se volí podle role, ne pro ozdobu. */
 export function Karta({
-  children, className = "", jako: Jako = "div",
-}: { children: ReactNode; className?: string; jako?: "div" | "li" | "article" }) {
+  children, className = "", jako: Jako = "div", odstin = "bila", zdvih = false,
+}: {
+  children: ReactNode;
+  className?: string;
+  jako?: "div" | "li" | "article";
+  odstin?: "bila" | "papir" | "modra" | "zelena" | "pisek" | "slez";
+  zdvih?: boolean;
+}) {
+  const odstiny = {
+    bila: "border-linka bg-plocha",
+    papir: "border-linka bg-papir",
+    modra: "border-[#cddcf7] bg-mycka",
+    zelena: "border-[#c9e3d4] bg-list",
+    pisek: "border-[#e3d8bd] bg-pisek",
+    slez: "border-[#dcd7f0] bg-slez",
+  }[odstin];
   return (
-    <Jako className={`rounded-[14px] border border-linka bg-plocha ${className}`}>{children}</Jako>
+    <Jako className={`rounded-[20px] border ${odstiny} ${zdvih ? "zdvih" : ""} ${className}`}>
+      {children}
+    </Jako>
   );
 }
 
-/** Prázdný stav. Web musí umět přiznat, že data nemá. */
-export function Prazdno({ nadpis, popis }: { nadpis: string; popis: string }) {
+/** Prázdný stav. Web musí umět přiznat, že data nemá — a nevypadat u toho rozbitě. */
+export function Prazdno({
+  nadpis, popis, ikona = "radar",
+}: { nadpis: string; popis: string; ikona?: NazevIkony }) {
   return (
-    <div className="rounded-[14px] border border-dashed border-linka bg-plocha/60 px-6 py-10 text-center">
-      <p className="text-[14px] font-medium">{nadpis}</p>
-      <p className="mx-auto mt-2 max-w-[34rem] text-[13px] leading-relaxed text-tlum">{popis}</p>
+    <div className="relative flex flex-col items-center gap-4 overflow-hidden rounded-[20px] border border-[#cddcf7] bg-mycka px-6 py-9 text-center sm:flex-row sm:gap-5 sm:py-7 sm:text-left">
+      <span
+        aria-hidden
+        className="srafy pointer-events-none absolute inset-x-0 top-0 h-[5px] text-[#8fb0e8]"
+      />
+      <span className="grid h-[44px] w-[44px] shrink-0 place-items-center rounded-[15px] border border-white/70 bg-white/70">
+        <Ikona nazev={ikona} velikost={21} />
+      </span>
+      <span className="block">
+        <span className="block text-[16px] font-semibold tracking-[-0.02em]">{nadpis}</span>
+        <span className="mt-1.5 block max-w-[38rem] text-[13.5px] leading-relaxed text-tlum">
+          {popis}
+        </span>
+      </span>
     </div>
   );
 }

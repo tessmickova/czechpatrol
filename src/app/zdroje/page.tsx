@@ -38,10 +38,7 @@ export default function Zdroje() {
                 </li>
               ))}
             </ol>
-            <p className="mt-5 border-t border-linka2 pt-4 text-[12px] leading-relaxed text-tlum2">
-              Právní stav nikdy neurčujeme podle médií, pokud je dohledatelný primární
-              právní dokument.
-            </p>
+
           </Karta>
 
           <Karta className="p-5 sm:p-6">

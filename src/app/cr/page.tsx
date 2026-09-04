@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { HlavickaStranky, Obsah } from "@/components/hlavicka";
-import { PravniSemafor, ProvozPanel, ScenarovaCesta } from "@/components/panely";
+import { PravniSemafor, ProvozPanel } from "@/components/panely";
 import { Sekce } from "@/components/zaklad";
 import { pravniStav, provoz } from "@/lib/data";
 
@@ -23,16 +23,11 @@ export default function Cr() {
         <PravniSemafor polozky={p.polozky} overeno={p.overeno} />
       </Obsah>
       <Sekce
+        kicker="Praktický dopad"
         nadpis="Co to znamená pro běžný život"
         popis="Praktický stav běžných služeb. Kde chybí spolehlivý veřejný zdroj, napíšeme to."
       >
         <ProvozPanel provoz={provoz()} />
-      </Sekce>
-      <Sekce
-        nadpis="K čemu by se situace mohla posunout"
-        popis="Orientační sled možných institucionálních kroků, ne předpověď."
-      >
-        <ScenarovaCesta />
       </Sekce>
     </>
   );
