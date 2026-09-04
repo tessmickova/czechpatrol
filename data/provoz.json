@@ -1,19 +1,19 @@
 {
-  "overeno": null,
+  "overeno": "2026-09-04T17:19:00.618Z",
   "polozky": [
     {
       "klic": "vycestovani",
       "nazev": "Vycestování",
       "ikona": "pas",
-      "stav": "bez-zdroje",
-      "hodnota": "",
+      "stav": "bezny",
+      "hodnota": "bez mimořádného omezení",
       "detail": "Kontrola na hranici není totéž co zákaz vycestování. Kontroly se dají zavést, aniž by se kdokoli nemohl vydat do zahraničí. Rozlišujeme obojí odděleně.",
       "coByZmenilo": [
         "dočasné znovuzavedení kontrol na některých vnitřních hranicích",
         "delší čekací doby na konkrétních přechodech",
         "omezení vstupu vyhlášené sousedním státem, ne ČR"
       ],
-      "overeno": null,
+      "overeno": "2026-09-04T17:19:00.618Z",
       "zdroje": [
         {
           "nazev": "Ministerstvo vnitra ČR",
@@ -37,15 +37,15 @@
       "klic": "hranice",
       "nazev": "Hranice a doprava",
       "ikona": "hranice",
-      "stav": "bez-zdroje",
-      "hodnota": "",
+      "stav": "bezny",
+      "hodnota": "běžný režim",
       "detail": "Sledujeme režim na hraničních přechodech a mimořádná dopravní omezení celostátního rozsahu.",
       "coByZmenilo": [
         "zavedení namátkových kontrol",
         "uzavření jednotlivého přechodu z technických důvodů",
         "omezení nákladní dopravy"
       ],
-      "overeno": null,
+      "overeno": "2026-09-04T17:19:00.618Z",
       "zdroje": [
         {
           "nazev": "Dopravní info (ŘSD)",
@@ -69,15 +69,15 @@
       "klic": "palivo",
       "nazev": "Palivo a čerpací stanice",
       "ikona": "palivo",
-      "stav": "bez-zdroje",
-      "hodnota": "",
+      "stav": "bezny",
+      "hodnota": "běžná dostupnost",
       "detail": "Sledujeme dostupnost pohonných hmot a hlášená omezení provozu čerpacích stanic. Panické nakupování paliva situaci vždy zhorší — nedoporučujeme ho ani při zhoršení stavu.",
       "coByZmenilo": [
         "výpadek na jednotlivých stanicích při technické závadě distribuce",
         "skokový růst cen bez omezení dostupnosti",
         "uvolnění nouzových zásob Správou státních hmotných rezerv"
       ],
-      "overeno": null,
+      "overeno": "2026-09-04T17:19:00.618Z",
       "zdroje": [
         {
           "nazev": "Správa státních hmotných rezerv",
@@ -101,15 +101,15 @@
       "klic": "elektrina",
       "nazev": "Elektřina a energetika",
       "ikona": "elektrina",
-      "stav": "bez-zdroje",
-      "hodnota": "",
+      "stav": "bezny",
+      "hodnota": "bez stavu nouze",
       "detail": "Sledujeme stav přenosové soustavy a vyhlášené stavy nouze v energetice. Vyšetřované útoky na infrastrukturu v jiných zemích samy o sobě neznamenají problém v ČR.",
       "coByZmenilo": [
         "vyhlášení stavu nouze v elektroenergetice",
         "omezení odběru pro velké spotřebitele",
         "rozsáhlejší výpadek přenosové soustavy"
       ],
-      "overeno": null,
+      "overeno": "2026-09-04T17:19:00.618Z",
       "zdroje": [
         {
           "nazev": "ČEPS — provoz přenosové soustavy",
@@ -133,14 +133,14 @@
       "klic": "plyn",
       "nazev": "Plyn",
       "ikona": "plyn",
-      "stav": "bez-zdroje",
-      "hodnota": "",
+      "stav": "bezny",
+      "hodnota": "bez stavu nouze",
       "detail": "Sledujeme stav plynárenské soustavy a naplněnost zásobníků.",
       "coByZmenilo": [
         "vyhlášení stavu nouze v plynárenství",
         "výrazný pokles zásob mimo topnou sezónu"
       ],
-      "overeno": null,
+      "overeno": "2026-09-04T17:19:00.618Z",
       "zdroje": [
         {
           "nazev": "OTE — operátor trhu",
@@ -156,15 +156,15 @@
       "klic": "banky",
       "nazev": "Banky a hotovost",
       "ikona": "banky",
-      "stav": "bez-zdroje",
-      "hodnota": "",
+      "stav": "bezny",
+      "hodnota": "běžný provoz",
       "detail": "Sledujeme dostupnost platebního styku a výběrů hotovosti. Nedáváme finanční doporučení a neupozorňujeme na výběry — to by samo o sobě mohlo problém způsobit.",
       "coByZmenilo": [
         "výpadek platebního systému jedné banky",
         "omezení bezhotovostních plateb při technické poruše",
         "opatření ČNB k platebnímu styku"
       ],
-      "overeno": null,
+      "overeno": "2026-09-04T17:19:00.618Z",
       "zdroje": [
         {
           "nazev": "Česká národní banka",
@@ -180,15 +180,15 @@
       "klic": "komunikace",
       "nazev": "Mobilní síť a internet",
       "ikona": "komunikace",
-      "stav": "bez-zdroje",
-      "hodnota": "",
+      "stav": "sledujeme",
+      "hodnota": "prověřujeme hlášení",
       "detail": "Sledujeme rozsáhlejší výpadky mobilních sítí a pevného připojení a incidenty hlášené NÚKIB.",
       "coByZmenilo": [
         "výpadek jednoho operátora",
         "regionální výpadek datové sítě",
         "vyhlášení stavu kybernetického nebezpečí"
       ],
-      "overeno": null,
+      "overeno": "2026-09-04T17:19:00.618Z",
       "zdroje": [
         {
           "nazev": "Český telekomunikační úřad",
@@ -212,14 +212,14 @@
       "klic": "bezny-zivot",
       "nazev": "Školy a běžný režim",
       "ikona": "skoly",
-      "stav": "bez-zdroje",
-      "hodnota": "",
+      "stav": "bezny",
+      "hodnota": "běžný režim",
       "detail": "Sledujeme celostátní mimořádná opatření, která by zasáhla školy, úřady nebo zaměstnání.",
       "coByZmenilo": [
         "krajské mimořádné opatření",
         "pokyn hejtmana nebo krizového štábu"
       ],
-      "overeno": null,
+      "overeno": "2026-09-04T17:19:00.618Z",
       "zdroje": [
         {
           "nazev": "Vláda ČR",

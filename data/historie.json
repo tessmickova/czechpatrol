@@ -36,6 +36,56 @@
       "zmeny": [
         "začátek archivu"
       ]
+    },
+    {
+      "kdy": "2026-09-04T17:19:00.618Z",
+      "uroven": null,
+      "hybridni": null,
+      "primyStret": null,
+      "pravni": {
+        "stav-ohrozeni": false,
+        "valecny-stav": false,
+        "mobilizace": false,
+        "nouzovy-stav": false,
+        "vycestovani": false,
+        "hranice": false,
+        "schuze-parlamentu": false
+      },
+      "nato": {
+        "clanek-4": null,
+        "clanek-5": null,
+        "readiness": null,
+        "evakuace": null,
+        "vychodni-kridlo": null
+      },
+      "provoz": {
+        "vycestovani": "bezny",
+        "hranice": "bezny",
+        "palivo": "bezny",
+        "elektrina": "bezny",
+        "plyn": "bezny",
+        "banky": "bezny",
+        "komunikace": "sledujeme",
+        "bezny-zivot": "bezny"
+      },
+      "udalosti": 0,
+      "zmeny": [
+        "právní stav — stav-ohrozeni: neověřeno → NE",
+        "právní stav — valecny-stav: neověřeno → NE",
+        "právní stav — mobilizace: neověřeno → NE",
+        "právní stav — nouzovy-stav: neověřeno → NE",
+        "právní stav — vycestovani: neověřeno → NE",
+        "právní stav — hranice: neověřeno → NE",
+        "právní stav — schuze-parlamentu: neověřeno → NE",
+        "provoz — vycestovani: bez-zdroje → bezny",
+        "provoz — hranice: bez-zdroje → bezny",
+        "provoz — palivo: bez-zdroje → bezny",
+        "provoz — elektrina: bez-zdroje → bezny",
+        "provoz — plyn: bez-zdroje → bezny",
+        "provoz — banky: bez-zdroje → bezny",
+        "provoz — komunikace: bez-zdroje → sledujeme",
+        "provoz — bezny-zivot: bez-zdroje → bezny"
+      ]
     }
   ]
 }
