@@ -33,7 +33,7 @@ export default function Dnes() {
       <h1 className="nadpis text-[30px] sm:text-[38px]">{datumSlovy(new Date().toISOString())}</h1>
 
       <div
-        className={`mt-8 rounded-[7px] border p-5 sm:p-6 ${
+        className={`mt-8 rounded-[14px] border p-5 sm:p-6 ${
           t ? `${t.ramecek} ${t.pozadi}` : "border-dashed border-linka bg-plocha"
         }`}
       >
@@ -125,13 +125,13 @@ export default function Dnes() {
         <OdznakUrovne uroven={stav.uroven} cehoSe="celkem" />
         <Link
           href="/"
-          className="rounded border border-linka bg-plocha px-3 py-2 text-[12.5px] font-medium transition-colors hover:border-inkoust"
+          className="rounded-[10px] border border-linka bg-plocha px-3 py-2 text-[12.5px] font-medium transition-colors hover:border-inkoust"
         >
           Celý přehled
         </Link>
         <Link
           href="/metodika/"
-          className="rounded border border-linka bg-plocha px-3 py-2 text-[12.5px] font-medium transition-colors hover:border-inkoust"
+          className="rounded-[10px] border border-linka bg-plocha px-3 py-2 text-[12.5px] font-medium transition-colors hover:border-inkoust"
         >
           Metodika
         </Link>

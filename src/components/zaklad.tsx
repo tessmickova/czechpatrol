@@ -1,5 +1,6 @@
 import type { ReactNode } from "react";
 import { JISTOTY, tokeny, UROVNE } from "@/lib/skala";
+import { Ikona, type NazevIkony } from "./ikony";
 import type { Jistota, Uroven } from "@/lib/typy";
 
 /* ---------- nápověda ---------- */
@@ -39,16 +40,14 @@ export function Otaznik({ popis, vpravo }: { popis: ReactNode; vpravo?: boolean 
 
 /* ---------- úroveň ---------- */
 
-/** Dvojtečka: barevný čtvereček podle pásma. */
-export function Tecka({ uroven, velka = false }: { uroven: Uroven | null; velka?: boolean }) {
+/** Barevný čtvereček podle pásma. Na tmavém podkladu má vlastní odstín. */
+export function Tecka({
+  uroven, velka = false, naNoci = false,
+}: { uroven: Uroven | null; velka?: boolean; naNoci?: boolean }) {
   const t = uroven ? tokeny(uroven) : null;
   const rozmer = velka ? "h-2.5 w-2.5" : "h-[7px] w-[7px]";
-  return (
-    <span
-      aria-hidden
-      className={`inline-block shrink-0 rounded-[2px] ${rozmer} ${t ? t.tecka : "bg-linka"}`}
-    />
-  );
+  const barva = t ? (naNoci ? t.teckaNoc : t.tecka) : naNoci ? "bg-white/20" : "bg-linka";
+  return <span aria-hidden className={`inline-block shrink-0 rounded-[3px] ${rozmer} ${barva}`} />;
 }
 
 /**
@@ -56,12 +55,16 @@ export function Tecka({ uroven, velka = false }: { uroven: Uroven | null; velka?
  * Bez toho by věta „vysoké riziko“ neříkala vůbec nic.
  */
 export function OdznakUrovne({
-  uroven, cehoSe, velikost = "s",
-}: { uroven: Uroven | null; cehoSe?: string; velikost?: "s" | "m" | "l" }) {
+  uroven, cehoSe, velikost = "s", naNoci = false,
+}: { uroven: Uroven | null; cehoSe?: string; velikost?: "s" | "m" | "l"; naNoci?: boolean }) {
   if (!uroven) {
     return (
-      <span className="inline-flex items-center gap-2 rounded border border-dashed border-linka px-2 py-1 text-[11px] font-medium text-tlum2">
-        <Tecka uroven={null} /> Zatím nevyhodnoceno
+      <span
+        className={`inline-flex items-center gap-2 rounded-full border border-dashed px-2.5 py-1 text-[11px] font-medium ${
+          naNoci ? "border-white/20 text-noc-tlum" : "border-linka text-tlum2"
+        }`}
+      >
+        <Tecka uroven={null} naNoci={naNoci} /> Zatím nevyhodnoceno
       </span>
     );
   }
@@ -73,8 +76,12 @@ export function OdznakUrovne({
     l: "px-3 py-2 text-sm gap-2",
   }[velikost];
   return (
-    <span className={`inline-flex items-center rounded border ${t.ramecek} ${t.pozadi} ${t.text} ${rozmery} font-semibold`}>
-      <Tecka uroven={uroven} velka={velikost === "l"} />
+    <span
+      className={`inline-flex items-center rounded-full border font-semibold ${rozmery} ${
+        naNoci ? `${t.ramecekNoc} ${t.pozadiNoc} ${t.textNoc}` : `${t.ramecek} ${t.pozadi} ${t.text}`
+      }`}
+    >
+      <Tecka uroven={uroven} velka={velikost === "l"} naNoci={naNoci} />
       <span className="uppercase tracking-[0.05em]">{d.nazev}</span>
       {cehoSe && <span className="font-normal normal-case tracking-normal opacity-70">· {cehoSe}</span>}
     </span>
@@ -174,7 +181,7 @@ export function OdznakTypu({ typ, vpravo }: { typ: TypObsahu; vpravo?: boolean }
   const t = TYPY[typ];
   return (
     <Napoveda popis={<span className="block">{t.popis}</span>} vpravo={vpravo}>
-      <span className={`stitek-tmavy inline-flex items-center rounded border px-1.5 py-[3px] ${t.tridy}`}>
+      <span className={`stitek-tmavy inline-flex items-center rounded-[10px] border px-1.5 py-[3px] ${t.tridy}`}>
         {t.nazev}
       </span>
     </Napoveda>
@@ -186,9 +193,9 @@ export const VYKLAD_TYPU = TYPY;
 /* ---------- stavební prvky ---------- */
 
 export function Sekce({
-  id, cislo, nadpis, popis, akce, children, prvni = false,
+  id, cislo, ikona, nadpis, popis, akce, children, prvni = false,
 }: {
-  id?: string; cislo?: string; nadpis: string; popis?: ReactNode;
+  id?: string; cislo?: string; ikona?: NazevIkony; nadpis: string; popis?: ReactNode;
   akce?: ReactNode; children: ReactNode; prvni?: boolean;
 }) {
   return (
@@ -196,7 +203,16 @@ export function Sekce({
       <div className="mx-auto max-w-[1180px] px-5 py-12 sm:px-8 sm:py-16">
         <div className="mb-7 flex flex-col gap-3 sm:mb-9 sm:flex-row sm:items-end sm:justify-between">
           <div className="max-w-[46rem]">
-            {cislo && <div className="stitek mb-2.5">{cislo}</div>}
+            {(cislo || ikona) && (
+              <div className="mb-3 flex items-center gap-2 text-tlum2">
+                {ikona && (
+                  <span className="grid h-[26px] w-[26px] place-items-center rounded-[9px] border border-linka bg-plocha">
+                    <Ikona nazev={ikona} velikost={14} />
+                  </span>
+                )}
+                {cislo && <span className="stitek">{cislo}</span>}
+              </div>
+            )}
             <h2 className="podnadpis text-[22px] sm:text-[27px]">{nadpis}</h2>
             {popis && <p className="mt-2.5 text-[13.5px] leading-relaxed text-tlum">{popis}</p>}
           </div>
@@ -212,14 +228,14 @@ export function Karta({
   children, className = "", jako: Jako = "div",
 }: { children: ReactNode; className?: string; jako?: "div" | "li" | "article" }) {
   return (
-    <Jako className={`rounded-[7px] border border-linka bg-plocha ${className}`}>{children}</Jako>
+    <Jako className={`rounded-[14px] border border-linka bg-plocha ${className}`}>{children}</Jako>
   );
 }
 
 /** Prázdný stav. Web musí umět přiznat, že data nemá. */
 export function Prazdno({ nadpis, popis }: { nadpis: string; popis: string }) {
   return (
-    <div className="rounded-[7px] border border-dashed border-linka bg-plocha/60 px-6 py-10 text-center">
+    <div className="rounded-[14px] border border-dashed border-linka bg-plocha/60 px-6 py-10 text-center">
       <p className="text-[14px] font-medium">{nadpis}</p>
       <p className="mx-auto mt-2 max-w-[34rem] text-[13px] leading-relaxed text-tlum">{popis}</p>
     </div>

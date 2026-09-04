@@ -5,6 +5,8 @@ import type {
   HybridniTlak, NatoPolozka, PravniPolozka, Provoz, ProvozniPolozka,
   RuskoStav, Uroven, Watchlist,
 } from "@/lib/typy";
+import { Ikona, type NazevIkony } from "./ikony";
+import { RadarTlaku } from "./mericky";
 import { SeznamZdroju } from "./zdroje";
 import {
   Karta, Napoveda, Neovereno, OdznakTypu, OdznakUrovne, Otaznik, Tecka, VykladUrovne,
@@ -168,36 +170,31 @@ export function HybridniPanel({ tlak }: { tlak: HybridniTlak }) {
         </dl>
       </Karta>
 
-      <Karta className="flex flex-col justify-between p-5 sm:p-6">
+      <div className="noc relative flex flex-col justify-between overflow-hidden rounded-[18px] p-5 sm:p-6">
+        <div aria-hidden className="pointer-events-none absolute inset-0 -z-10 overflow-hidden">
+          <div data-vrstva="0.05" className="vrstva vzor-mrizka absolute inset-x-0 -inset-y-[40%]" />
+        </div>
         <div>
-          <div className="stitek mb-2">Přímý vojenský střet NATO–Rusko</div>
-          <OdznakUrovne uroven={primy?.uroven ?? null} velikost="m" />
-          <p className="mt-4 text-[13px] leading-relaxed text-tlum">
-            Tohle je jiná otázka než hybridní tlak a sledujeme ji odděleně.
+          <div className="stitek mb-4 !text-noc-tlum">Rozložení tlaku</div>
+          <div className="flex justify-center">
+            <RadarTlaku tlak={tlak} velikost={330} />
+          </div>
+        </div>
+        <div className="mt-5 border-t border-white/10 pt-5">
+          <div className="stitek mb-2 !text-noc-tlum">Přímý vojenský střet NATO–Rusko</div>
+          <OdznakUrovne uroven={primy?.uroven ?? null} velikost="m" naNoci />
+          <p className="mt-4 text-[12.5px] leading-relaxed text-noc-tlum">
+            „Evropa má vážný hybridní problém“ a „Rusko zítra vojensky zaútočí na NATO“
+            jsou dvě různá tvrzení. První může být pravda, aniž by z něj druhé jakkoli
+            vyplývalo. Na radaru je to vidět jako jedna osa mezi ostatními.
           </p>
         </div>
-        <p className="mt-5 border-t border-linka2 pt-4 text-[12.5px] leading-relaxed text-tlum2">
-          „Evropa má vážný hybridní problém“ a „Rusko zítra vojensky zaútočí na NATO“
-          jsou dvě různá tvrzení. První může být pravda, aniž by z něj druhé jakkoli
-          vyplývalo. Proto obě čísla nikdy neslučujeme do jednoho.
-        </p>
-      </Karta>
+      </div>
     </div>
   );
 }
 
 /* ---------------- co to znamená pro člověka v ČR ---------------- */
-
-const IKONY: Record<string, string> = {
-  pas: "M4 5h12v10H4z M4 8h12",
-  hranice: "M10 2v16 M4 6h4 M12 10h4",
-  palivo: "M4 17V4h7v13 M4 9h7 M11 7l3 2v6a1.5 1.5 0 0 0 3 0V8l-2-2",
-  elektrina: "M11 2 5 11h4l-1 7 6-9h-4z",
-  plyn: "M10 2s4 4 4 8a4 4 0 0 1-8 0c0-2 1-3 1-3s1 1 1 2 3-3 2-7z",
-  banky: "M3 8 10 3l7 5 M4 8v8 M8 8v8 M12 8v8 M16 8v8 M3 17h14",
-  komunikace: "M10 15v2 M6 12a5.5 5.5 0 0 1 8 0 M3 9a10 10 0 0 1 14 0",
-  skoly: "M10 3 2 7l8 4 8-4z M6 9v4c0 1.5 2 2.5 4 2.5s4-1 4-2.5V9",
-};
 
 const STAVY_PROVOZU: Record<
   ProvozniPolozka["stav"],
@@ -214,10 +211,9 @@ function KartaProvozu({ p }: { p: ProvozniPolozka }) {
   return (
     <Karta jako="li" className="flex flex-col p-4 sm:p-5">
       <div className="mb-3 flex items-center gap-2.5">
-        <svg viewBox="0 0 20 20" className="h-[18px] w-[18px] shrink-0" aria-hidden>
-          <path d={IKONY[p.ikona] ?? ""} fill="none" stroke="currentColor" strokeWidth="1.3"
-            strokeLinecap="round" strokeLinejoin="round" />
-        </svg>
+        <span className="grid h-[30px] w-[30px] shrink-0 place-items-center rounded-[10px] border border-linka bg-papir text-tlum">
+          <Ikona nazev={(p.ikona as NazevIkony) ?? "radar"} velikost={16} />
+        </span>
         <h3 className="text-[13.5px] font-semibold tracking-[-0.01em]">{p.nazev}</h3>
       </div>
 
@@ -327,38 +323,55 @@ export function WatchlistPanel({ watchlist }: { watchlist: Watchlist }) {
 /* ---------------- scénářová cesta ---------------- */
 
 const KROKY = [
-  { nazev: "Zvýšená hybridní aktivita", popis: "Sabotáže, kybernetické incidenty, průzkumné drony." },
-  { nazev: "Silnější ochrana infrastruktury, kontroly, readiness NATO", popis: "Institucionální reakce států a Aliance." },
-  { nazev: "Mimořádná bezpečnostní opatření", popis: "Opatření na úrovni jednotlivých států, například u dopravy nebo energetiky." },
-  { nazev: "Možný stav ohrožení státu", popis: "Vyhlašuje Parlament na návrh vlády. Samostatný ústavní krok s vlastními podmínkami." },
-  { nazev: "Pouze při zásadním dalším vývoji: válečný stav nebo mobilizace", popis: "Každý z těchto kroků má vlastní právní proces a vlastní úřední vyhlášení." },
+  { nazev: "Zvýšená hybridní aktivita", popis: "Sabotáže, kybernetické incidenty, průzkumné drony.", ikona: "radar" as NazevIkony },
+  { nazev: "Silnější ochrana infrastruktury, kontroly, readiness NATO", popis: "Institucionální reakce států a Aliance.", ikona: "stit" as NazevIkony },
+  { nazev: "Mimořádná bezpečnostní opatření", popis: "Opatření na úrovni jednotlivých států, například u dopravy nebo energetiky.", ikona: "vystraha" as NazevIkony },
+  { nazev: "Možný stav ohrožení státu", popis: "Vyhlašuje Parlament na návrh vlády. Samostatný ústavní krok s vlastními podmínkami.", ikona: "vaha" as NazevIkony },
+  { nazev: "Pouze při zásadním dalším vývoji: válečný stav nebo mobilizace", popis: "Každý z těchto kroků má vlastní právní proces a vlastní úřední vyhlášení.", ikona: "dokument" as NazevIkony },
 ];
 
+/**
+ * Žebřík eskalace.
+ *
+ * Příčky jsou stejně vysoko od sebe schválně — nemají naznačovat, že cesta
+ * nahoru je rovnoměrná ani že je pravděpodobná. Mezi každými dvěma příčkami
+ * stojí značka „není automatické“, protože právě to si čtenář domýšlí sám.
+ */
 export function ScenarovaCesta() {
   return (
     <div>
-      <div className="mb-5 flex flex-wrap items-center gap-2.5">
+      <div className="mb-6 flex flex-wrap items-center gap-2.5">
         <OdznakTypu typ="scenar" />
         <p className="text-[12.5px] text-tlum">
           Toto není předpověď. Jde o orientační sled možných institucionálních kroků.
         </p>
       </div>
 
-      <ol className="space-y-0">
+      <ol className="relative">
+        {/* svislice žebříku */}
+        <span
+          aria-hidden
+          className="absolute bottom-8 left-[19px] top-8 w-[2px] rounded-full bg-gradient-to-b from-[#2e8b62]/40 via-[#c9a227]/50 to-[#a32b2b]/45 sm:left-[23px]"
+        />
         {KROKY.map((k, i) => (
           <li key={k.nazev}>
-            <Karta className="flex items-start gap-4 p-4 sm:p-5">
-              <span className="cislice stitek mt-[3px] w-5 shrink-0">{String(i + 1).padStart(2, "0")}</span>
-              <span className="block">
-                <span className="block text-[13.5px] font-semibold leading-snug tracking-[-0.01em]">
-                  {k.nazev}
-                </span>
-                <span className="mt-1.5 block text-[12.5px] leading-relaxed text-tlum">{k.popis}</span>
+            <div className="relative flex items-start gap-4 sm:gap-5">
+              <span className="relative z-10 grid h-[40px] w-[40px] shrink-0 place-items-center rounded-[14px] border border-linka bg-plocha text-tlum sm:h-[48px] sm:w-[48px]">
+                <Ikona nazev={k.ikona} velikost={18} />
               </span>
-            </Karta>
+              <Karta className="flex-1 p-4 sm:p-5">
+                <div className="mb-1.5 flex items-center gap-2.5">
+                  <span className="cislice stitek">{String(i + 1).padStart(2, "0")}</span>
+                  <span aria-hidden className="h-px flex-1 bg-linka2" />
+                </div>
+                <h3 className="text-[13.5px] font-semibold leading-snug tracking-[-0.01em]">
+                  {k.nazev}
+                </h3>
+                <p className="mt-1.5 text-[12.5px] leading-relaxed text-tlum">{k.popis}</p>
+              </Karta>
+            </div>
             {i < KROKY.length - 1 && (
-              <div className="flex items-center gap-3 py-2.5 pl-[26px]">
-                <span aria-hidden className="text-tlum2">↓</span>
+              <div className="flex items-center gap-3 py-2.5 pl-[52px] sm:pl-[68px]">
                 <Napoveda
                   popis={
                     <span className="block">
@@ -367,7 +380,8 @@ export function ScenarovaCesta() {
                     </span>
                   }
                 >
-                  <span className="stitek-tmavy rounded border border-dashed border-linka px-1.5 py-[3px] text-tlum2">
+                  <span className="stitek-tmavy inline-flex items-center gap-1.5 rounded-full border border-dashed border-linka px-2.5 py-1 text-tlum2">
+                    <Ikona nazev="nahoru" velikost={11} tah={1.8} />
                     Není automatické
                   </span>
                 </Napoveda>
@@ -396,7 +410,7 @@ export function RuskoPanel({ stav }: { stav: RuskoStav }) {
         <OdznakTypu typ="odhad" vpravo />
       </div>
 
-      <div className="mb-5 flex flex-wrap items-center gap-4 rounded-[5px] border border-linka bg-papir px-4 py-3">
+      <div className="mb-5 flex flex-wrap items-center gap-4 rounded-[10px] border border-linka bg-papir px-4 py-3">
         <div>
           <div className="stitek mb-2">Časový tlak režimu</div>
           <OdznakUrovne uroven={stav.casovyTlak} />
@@ -421,7 +435,7 @@ export function RuskoPanel({ stav }: { stav: RuskoStav }) {
         ))}
       </dl>
 
-      <div className="rounded-[5px] border border-[#e6ddc9] bg-[#fbf7ee] px-4 py-3">
+      <div className="rounded-[10px] border border-[#e6ddc9] bg-[#fbf7ee] px-4 py-3">
         <p className="text-[12px] leading-relaxed text-[#6d5a2a]">{stav.poznamkaZdravi}</p>
       </div>
 

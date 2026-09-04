@@ -25,7 +25,7 @@ function Prepinac({
       type="button"
       onClick={onClick}
       aria-pressed={aktivni}
-      className={`rounded border px-2.5 py-1.5 text-[12px] font-medium transition-colors ${
+      className={`rounded-[10px] border px-2.5 py-1.5 text-[12px] font-medium transition-colors ${
         aktivni
           ? "border-inkoust bg-inkoust text-white"
           : "border-linka bg-plocha text-tlum hover:border-tlum2 hover:text-inkoust"
@@ -67,7 +67,7 @@ export function SeznamSFiltry({
 
   return (
     <>
-      <div className="mb-7 space-y-4 rounded-[7px] border border-linka bg-plocha p-4 sm:p-5">
+      <div className="mb-7 space-y-4 rounded-[14px] border border-linka bg-plocha p-4 sm:p-5">
         <div>
           <div className="stitek mb-2.5">Oblast</div>
           <div className="flex flex-wrap gap-1.5">

@@ -1,12 +1,11 @@
 import Link from "next/link";
-import { CoSeZmenilo, Hero } from "@/components/hero";
+import { CoSeZmenilo, SituacniPanel } from "@/components/hero";
 import { KartaUdalosti } from "@/components/karta-udalosti";
 import { CasovaOsa } from "@/components/osa";
 import {
   HybridniPanel, JakCist, NatoPanel, PravniSemafor, ProvozPanel,
   RuskoPanel, ScenarovaCesta, WatchlistPanel,
 } from "@/components/panely";
-import { StavPruh } from "@/components/stav-pruh";
 import { GrafTrendu, TabulkaTydnu } from "@/components/trend";
 import { Karta, Prazdno, Sekce } from "@/components/zaklad";
 import { BUY_ME_A_COFFEE_URL } from "@/config/web";
@@ -32,22 +31,21 @@ export default function Prehled() {
 
   return (
     <>
-      <StavPruh
-        aktualizovano={stav.aktualizovano}
-        uroven={stav.uroven}
+      <SituacniPanel
+        stav={stav}
         pravni={pravni}
         nato={aliance}
         hybridni={hybridni}
+        klidove={klidoveBody()}
       />
-
-      <Hero stav={stav} klidove={klidoveBody()} />
 
       <Sekce
         cislo="01"
+        ikona="radar"
         nadpis="Co se změnilo od poslední aktualizace"
         popis="Jedna událost se počítá jednou, i když o ní vyjde víc článků. Nové vyšetřovací zjištění u starší události ale může být samostatným signálem."
         akce={
-          <Link href="/dnes/" className="rounded border border-linka bg-plocha px-3 py-2 text-[12.5px] font-medium transition-colors hover:border-inkoust">
+          <Link href="/dnes/" className="rounded-[10px] border border-linka bg-plocha px-3 py-2 text-[12.5px] font-medium transition-colors hover:border-inkoust">
             Shrnutí dne
           </Link>
         }
@@ -68,6 +66,7 @@ export default function Prehled() {
 
       <Sekce
         cislo="02"
+        ikona="kniha"
         nadpis="Co je teď důležité vědět"
         popis="Nejdřív jak web číst, potom stav Aliance. Obojí patří ke každému číslu na této stránce."
       >
@@ -80,10 +79,11 @@ export default function Prehled() {
       <Sekce
         id="cr"
         cislo="03"
+        ikona="vaha"
         nadpis="Česká republika — právní stav"
         popis="Mimořádné stavy nevznikají tím, že se zhorší situace. Každý z nich je samostatný právní krok s vlastními podmínkami a vlastním úředním vyhlášením."
         akce={
-          <Link href="/cr/" className="rounded border border-linka bg-plocha px-3 py-2 text-[12.5px] font-medium transition-colors hover:border-inkoust">
+          <Link href="/cr/" className="rounded-[10px] border border-linka bg-plocha px-3 py-2 text-[12.5px] font-medium transition-colors hover:border-inkoust">
             Podrobně
           </Link>
         }
@@ -93,6 +93,7 @@ export default function Prehled() {
 
       <Sekce
         cislo="04"
+        ikona="terc"
         nadpis="Hybridní tlak a přímý vojenský střet"
         popis="Dvě různé otázky. Sledujeme je odděleně, protože jejich sloučení je nejčastější zdroj zbytečného strachu."
       >
@@ -101,6 +102,7 @@ export default function Prehled() {
 
       <Sekce
         cislo="05"
+        ikona="stit-ok"
         nadpis="Co to znamená pro život v ČR"
         popis="Praktický stav běžných služeb. Kde nemáme spolehlivý veřejný zdroj, napíšeme to — nedopočítáváme."
       >
@@ -109,6 +111,7 @@ export default function Prehled() {
 
       <Sekce
         cislo="06"
+        ikona="hodiny"
         nadpis="Co může změnit hodnocení během příštích 72 hodin"
         popis="Konkrétní institucionální a právní spouštěče — v obou směrech."
       >
@@ -117,6 +120,7 @@ export default function Prehled() {
 
       <Sekce
         cislo="07"
+        ikona="zebrik"
         nadpis="K čemu by se situace mohla posunout"
         popis="Orientační sled možných institucionálních kroků. Žádný z nich nenásleduje automaticky po předchozím."
       >
@@ -125,10 +129,11 @@ export default function Prehled() {
 
       <Sekce
         cislo="08"
+        ikona="osa"
         nadpis="Časová osa"
         popis="Chronologie ověřených událostí. Smyslem je vidět kumulaci, ne přečíst každý detail."
         akce={
-          <Link href="/osa/" className="rounded border border-linka bg-plocha px-3 py-2 text-[12.5px] font-medium transition-colors hover:border-inkoust">
+          <Link href="/osa/" className="rounded-[10px] border border-linka bg-plocha px-3 py-2 text-[12.5px] font-medium transition-colors hover:border-inkoust">
             Celá osa
           </Link>
         }
@@ -138,10 +143,11 @@ export default function Prehled() {
 
       <Sekce
         cislo="09"
+        ikona="graf"
         nadpis="Jak se situace vyvíjí"
         popis="Vývoj po týdnech od začátku měření. Svislá osa je stupnice úrovní, ne procenta."
         akce={
-          <Link href="/trend/" className="rounded border border-linka bg-plocha px-3 py-2 text-[12.5px] font-medium transition-colors hover:border-inkoust">
+          <Link href="/trend/" className="rounded-[10px] border border-linka bg-plocha px-3 py-2 text-[12.5px] font-medium transition-colors hover:border-inkoust">
             Detail trendu
           </Link>
         }
@@ -154,6 +160,7 @@ export default function Prehled() {
 
       <Sekce
         cislo="10"
+        ikona="globus"
         nadpis="Rusko: vnitřní tlak režimu"
         popis="Doplňkový ukazatel, vizuálně menší než hlavní bezpečnostní status — protože je méně jistý."
       >
@@ -162,6 +169,7 @@ export default function Prehled() {
 
       <Sekce
         cislo="11"
+        ikona="oko"
         nadpis="Menší signály"
         popis="Události, které samy o sobě hodnocení nemění, ale mohou se kumulovat."
       >
@@ -181,6 +189,7 @@ export default function Prehled() {
 
       <Sekce
         cislo="12"
+        ikona="kniha"
         nadpis="Metodika"
         popis="Co započítáváme jako nový signál, co ne, a co je náš baseline."
       >
@@ -196,7 +205,7 @@ export default function Prehled() {
             </p>
             <Link
               href="/metodika/"
-              className="mt-5 inline-block rounded border border-linka px-3 py-2 text-[12.5px] font-medium transition-colors hover:border-inkoust"
+              className="mt-5 inline-block rounded-[10px] border border-linka px-3 py-2 text-[12.5px] font-medium transition-colors hover:border-inkoust"
             >
               Celá metodika
             </Link>
@@ -215,7 +224,7 @@ export default function Prehled() {
                 href={BUY_ME_A_COFFEE_URL}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="mt-5 inline-block rounded border border-linka px-3 py-2 text-center text-[12.5px] font-medium transition-colors hover:border-inkoust"
+                className="mt-5 inline-block rounded-[10px] border border-linka px-3 py-2 text-center text-[12.5px] font-medium transition-colors hover:border-inkoust"
               >
                 Podpořit projekt
               </a>
@@ -229,7 +238,7 @@ export default function Prehled() {
               </p>
               <Link
                 href="/zdroje/"
-                className="mt-5 inline-block rounded border border-linka px-3 py-2 text-[12.5px] font-medium transition-colors hover:border-inkoust"
+                className="mt-5 inline-block rounded-[10px] border border-linka px-3 py-2 text-[12.5px] font-medium transition-colors hover:border-inkoust"
               >
                 Seznam zdrojů
               </Link>

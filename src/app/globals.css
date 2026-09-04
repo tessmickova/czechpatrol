@@ -1,24 +1,46 @@
 @import "tailwindcss";
 
 /*
-  Vizuální systém: černá a velmi světlá šeď jako základ, barva jen tam, kde
-  nese informaci (stav, závažnost, indikátor). Žádné gradienty přes půl
-  stránky, žádné dekorativní obrázky. Čísla mají vždy stejnou šířku,
-  aby tabulky a dashboardy nepoklidaly.
+  Vizuální systém: nezávislý monitorovací nástroj, ne úřední web a ne poplach.
+
+  Chladná bílá plocha, tmavé pásy v barvě břidlice, jeden tlumený modrý akcent.
+  Popisky a čísla sedí v neproporcionálním písmu — dashboard se má číst jako
+  přístroj, ne jako článek. Sklo jen tam, kde se něco překrývá s obsahem pod
+  sebou. Zaoblení je velkorysé a všude stejné.
 */
 
 @theme {
   --font-sans: var(--font-inter), ui-sans-serif, system-ui, -apple-system, "Segoe UI",
     Roboto, "Helvetica Neue", Arial, sans-serif;
-  --font-mono: ui-monospace, "SF Mono", "JetBrains Mono", "Menlo", monospace;
+  --font-mono: var(--font-mono-web), ui-monospace, "SF Mono", "JetBrains Mono", Menlo, monospace;
 
-  --color-papir: #fbfbfa;
+  /* jednotné zaoblení */
+  --r-s: 9px;
+  --r-m: 12px;
+  --r-l: 16px;
+
+  /* světlá plocha */
+  --color-papir: #f6f7f9;
   --color-plocha: #ffffff;
-  --color-inkoust: #0c0c0c;
-  --color-tlum: #6b6b68;
-  --color-tlum2: #93938f;
-  --color-linka: #e6e5e1;
-  --color-linka2: #f0efeb;
+  --color-inkoust: #0e131a;
+  --color-tlum: #5b6675;
+  --color-tlum2: #8a93a1;
+  --color-linka: #e2e5ea;
+  --color-linka2: #eff1f4;
+
+  /* tmavá plocha — břidlice, ne námořní modř */
+  --color-noc: #0b1017;
+  --color-noc2: #121924;
+  --color-noc3: #1a2331;
+  --color-noc-text: #e8ecf2;
+  --color-noc-tlum: #949eae;
+  --color-noc-linka: #232d3c;
+
+  /* jeden akcent, tlumený */
+  --color-akcent: #2f6feb;
+  --color-akcent-tmava: #1d51c4;
+  --color-akcent-svetla: #6f9dfb;
+  --color-jantar: #b8912b;
 }
 
 :root {
@@ -39,55 +61,125 @@ body {
   text-rendering: optimizeLegibility;
 }
 
-/* Čísla ve stejné šířce — dashboard nesmí poskakovat. */
+/* ---------- typografie ---------- */
+
 .cislice {
+  font-family: var(--font-mono);
   font-variant-numeric: tabular-nums;
-  letter-spacing: -0.01em;
+  letter-spacing: -0.02em;
 }
 
-/* Malý technický popisek nad hodnotou. */
 .stitek {
+  font-family: var(--font-mono);
   font-size: 10px;
   line-height: 1;
-  letter-spacing: 0.09em;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
-  font-weight: 560;
+  font-weight: 500;
   color: var(--color-tlum2);
 }
 
 .stitek-tmavy {
+  font-family: var(--font-mono);
   font-size: 10px;
   line-height: 1;
-  letter-spacing: 0.09em;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
-  font-weight: 600;
+  font-weight: 500;
 }
 
-/* Velké nadpisy: sevřené, bez zbytečné dekorace. */
 .nadpis {
-  letter-spacing: -0.035em;
-  font-weight: 620;
-  line-height: 1.02;
+  letter-spacing: -0.038em;
+  font-weight: 640;
+  line-height: 1.01;
+  text-wrap: balance;
 }
 
 .podnadpis {
-  letter-spacing: -0.02em;
-  font-weight: 600;
+  letter-spacing: -0.022em;
+  font-weight: 620;
   line-height: 1.12;
+  text-wrap: balance;
 }
 
-/* Odkaz ve výkladovém textu. */
 .odkaz {
   text-decoration: underline;
   text-underline-offset: 3px;
-  text-decoration-color: var(--color-linka);
+  text-decoration-color: color-mix(in srgb, currentColor 25%, transparent);
   transition: text-decoration-color 0.15s;
 }
 .odkaz:hover {
   text-decoration-color: currentColor;
 }
 
-/* Nápověda dostupná i z klávesnice: focus otevírá stejně jako hover. */
+/* ---------- sklo ---------- */
+
+/* Nad světlým podkladem — lišty, které se překrývají s obsahem. */
+.sklo {
+  /* Dost kryje na to, aby lišta zůstala čitelná i nad tmavým hero. */
+  background: color-mix(in srgb, var(--color-papir) 92%, transparent);
+  backdrop-filter: blur(16px) saturate(1.4);
+  -webkit-backdrop-filter: blur(16px) saturate(1.4);
+}
+
+/* Nad tmavým podkladem — panely v situačním pruhu a v hero. */
+.sklo-noc {
+  background: rgb(255 255 255 / 0.055);
+  backdrop-filter: blur(18px) saturate(1.3);
+  -webkit-backdrop-filter: blur(18px) saturate(1.3);
+  border: 1px solid rgb(255 255 255 / 0.12);
+  box-shadow: inset 0 1px 0 rgb(255 255 255 / 0.08);
+}
+
+.sklo-noc-slabe {
+  background: rgb(255 255 255 / 0.03);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgb(255 255 255 / 0.08);
+}
+
+@supports not (backdrop-filter: blur(1px)) {
+  .sklo { background: var(--color-papir); }
+  .sklo-noc { background: rgb(255 255 255 / 0.09); }
+  .sklo-noc-slabe { background: rgb(255 255 255 / 0.06); }
+}
+
+/* ---------- tmavá sekce ---------- */
+
+.noc {
+  background: var(--color-noc);
+  color: var(--color-noc-text);
+  position: relative;
+  isolation: isolate;
+}
+
+/* Souřadnicová mřížka — odkaz na situační mapu, ne dekorativní gradient. */
+.vzor-mrizka {
+  background-image:
+    linear-gradient(to right, rgb(255 255 255 / 0.045) 1px, transparent 1px),
+    linear-gradient(to bottom, rgb(255 255 255 / 0.045) 1px, transparent 1px);
+  background-size: 56px 56px;
+  mask-image: radial-gradient(ellipse 92% 74% at 50% 34%, #000 32%, transparent 80%);
+  -webkit-mask-image: radial-gradient(ellipse 92% 74% at 50% 34%, #000 32%, transparent 80%);
+}
+
+/* Tlumená záře za hlavním údajem. Jediné místo na webu, kde se svítí. */
+.vzor-zare {
+  background: radial-gradient(
+    ellipse 55% 60% at 72% 38%,
+    color-mix(in srgb, var(--color-akcent) 26%, transparent),
+    transparent 70%
+  );
+  pointer-events: none;
+}
+
+/* Jemná horní linka na tmavém podkladu — odděluje pásy bez plné čáry. */
+.linka-noc {
+  border-top: 1px solid rgb(255 255 255 / 0.09);
+}
+
+/* ---------- nápověda ---------- */
+
 .napoveda-obal {
   position: relative;
   display: inline-flex;
@@ -98,17 +190,21 @@ body {
   top: calc(100% + 8px);
   left: 0;
   width: min(21rem, calc(100vw - 2.5rem));
-  padding: 0.75rem 0.875rem;
-  background: var(--color-inkoust);
-  color: #f4f4f2;
-  border-radius: 6px;
+  padding: 0.8rem 0.9rem;
+  background: color-mix(in srgb, var(--color-noc) 94%, transparent);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgb(255 255 255 / 0.14);
+  color: var(--color-noc-text);
+  border-radius: var(--r-m);
   font-size: 12.5px;
   line-height: 1.5;
   letter-spacing: -0.005em;
-  box-shadow: 0 8px 28px -8px rgb(0 0 0 / 0.35);
+  text-transform: none;
+  box-shadow: 0 16px 40px -14px rgb(7 20 38 / 0.6);
   opacity: 0;
   visibility: hidden;
-  transform: translateY(-2px);
+  transform: translateY(-3px);
   transition: opacity 0.14s, transform 0.14s, visibility 0.14s;
   pointer-events: none;
 }
@@ -123,14 +219,18 @@ body {
   right: 0;
 }
 
-/* Viditelné zaostření pro ovládání klávesnicí. */
+/* ---------- ovládání ---------- */
+
 :where(a, button, summary, [tabindex]):focus-visible {
-  outline: 2px solid var(--color-inkoust);
+  outline: 2px solid var(--color-akcent);
   outline-offset: 2px;
-  border-radius: 3px;
+  border-radius: var(--r-s);
 }
 
-/* Vodorovný posun pruhu stavů na mobilu bez viditelného posuvníku. */
+.noc :where(a, button, summary, [tabindex]):focus-visible {
+  outline-color: var(--color-akcent-svetla);
+}
+
 .pas-scroll {
   scrollbar-width: none;
 }
@@ -146,11 +246,21 @@ details > summary::-webkit-details-marker {
   display: none;
 }
 
+/* ---------- parallax ---------- */
+
+/* Vrstvy se posouvají pomaleji než stránka. Posun řídí --posun z JS. */
+.vrstva {
+  will-change: transform;
+  transform: translate3d(0, var(--posun, 0px), 0);
+}
+
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
+  .vrstva { transform: none !important; }
   * { transition-duration: 0.01ms !important; animation-duration: 0.01ms !important; }
 }
 
 @media print {
   .neni-tisk { display: none !important; }
+  .noc { background: #fff !important; color: #000 !important; }
 }

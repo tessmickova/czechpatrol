@@ -1,6 +1,7 @@
 import { rozsah } from "@/lib/format";
 import { PASMA, tokeny, UROVNE } from "@/lib/skala";
 import type { TydenniHodnoceni, Uroven } from "@/lib/typy";
+import { Jiskra } from "./mericky";
 import { Karta, Napoveda, Prazdno, Tecka } from "./zaklad";
 
 const VYSVETLENI_POCTU = (
@@ -98,6 +99,7 @@ export function TabulkaTydnu({ tydny }: { tydny: TydenniHodnoceni[] }) {
                 ["Přímý střet", ""],
                 ["Signálů", "pocet"],
                 ["Rozložení", ""],
+                ["Vývoj", ""],
                 ["Proti minulému", ""],
               ].map(([nazev, klic]) => (
                 <th key={nazev} className="stitek px-4 py-3 font-medium first:pl-5 last:pr-5">
@@ -151,6 +153,9 @@ export function TabulkaTydnu({ tydny }: { tydny: TydenniHodnoceni[] }) {
                   </td>
                   <td className="px-4 py-3.5">
                     <Rozlozeni t={t} />
+                  </td>
+                  <td className="px-4 py-3.5">
+                    <Jiskra tydny={sestupne.slice(i).reverse()} klic="celkova" />
                   </td>
                   <td className="px-4 py-3.5 pr-5">
                     <ZnackaTrendu nyni={t.celkova} drive={predchozi?.celkova} />
@@ -241,6 +246,22 @@ export function GrafTrendu({ tydny }: { tydny: TydenniHodnoceni[] }) {
             );
           })}
 
+          <defs>
+            <linearGradient id="plocha-celkem" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%" stopColor="#0e131a" stopOpacity="0.14" />
+              <stop offset="100%" stopColor="#0e131a" stopOpacity="0" />
+            </linearGradient>
+          </defs>
+
+          <path
+            fill="url(#plocha-celkem)"
+            d={
+              `M ${x(0)},${NAHORE + V} ` +
+              tydny.map((t, i) => `L ${x(i)},${y(t.celkova)}`).join(" ") +
+              ` L ${x(tydny.length - 1)},${NAHORE + V} Z`
+            }
+          />
+
           {RADY.map((r) => (
             <polyline
               key={r.klic}
@@ -283,6 +304,9 @@ export function GrafTrendu({ tydny }: { tydny: TydenniHodnoceni[] }) {
                   strokeWidth={r.silna ? 2 : 1.4}
                 />
               ))}
+              {i === tydny.length - 1 && (
+                <circle cx={x(i)} cy={y(t.celkova)} r="6" fill="none" stroke="#0e131a" strokeWidth="1" opacity="0.28" />
+              )}
               {(i % 2 === 0 || tydny.length <= 8) && (
                 <text
                   x={x(i)}

@@ -4,6 +4,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import { BUY_ME_A_COFFEE_URL, WEB } from "@/config/web";
+import { Ikona } from "./ikony";
 
 const ODKAZY = [
   { href: "/", label: "Přehled" },
@@ -31,9 +32,12 @@ export function Navigace() {
     href === "/" ? cesta === "/" : cesta.startsWith(href);
 
   return (
-    <header className="neni-tisk sticky top-0 z-50 border-b border-linka bg-papir/90 backdrop-blur-md">
+    <header className="neni-tisk sklo sticky top-0 z-50 border-b border-linka">
       <div className="mx-auto flex h-[52px] max-w-[1180px] items-center gap-6 px-5 sm:px-8">
-        <Link href="/" className="flex shrink-0 items-baseline gap-2">
+        <Link href="/" className="flex shrink-0 items-center gap-2">
+          <span className="grid h-[22px] w-[22px] place-items-center rounded-[10px] bg-inkoust text-plocha">
+            <Ikona nazev="radar" velikost={13} tah={1.6} />
+          </span>
           <span className="text-[15px] font-semibold tracking-[-0.03em]">{WEB.nazev}</span>
           <span className="hidden text-[11px] text-tlum2 sm:inline">{WEB.podtitul}</span>
         </Link>
@@ -44,7 +48,7 @@ export function Navigace() {
               key={o.href}
               href={o.href}
               aria-current={aktivni(o.href) ? "page" : undefined}
-              className={`rounded px-2.5 py-1.5 text-[12.5px] font-medium transition-colors ${
+              className={`rounded-[10px] px-2.5 py-1.5 text-[12.5px] font-medium transition-colors ${
                 aktivni(o.href) ? "bg-linka2 text-inkoust" : "text-tlum hover:text-inkoust"
               }`}
             >
@@ -55,7 +59,10 @@ export function Navigace() {
 
         <div className="ml-auto flex items-center gap-3 lg:ml-0">
           <span className="hidden items-center gap-1.5 sm:flex">
-            <span aria-hidden className="h-[6px] w-[6px] rounded-full bg-[#3f8f5c]" />
+            <span aria-hidden className="relative flex h-[6px] w-[6px]">
+              <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-[#2e8b62] opacity-60" />
+              <span className="relative inline-flex h-[6px] w-[6px] rounded-full bg-[#2e8b62]" />
+            </span>
             <span className="stitek !text-tlum">Live</span>
           </span>
           {BUY_ME_A_COFFEE_URL && (
@@ -63,7 +70,7 @@ export function Navigace() {
               href={BUY_ME_A_COFFEE_URL}
               target="_blank"
               rel="noopener noreferrer"
-              className="hidden rounded border border-linka bg-plocha px-2.5 py-1.5 text-[12px] font-medium transition-colors hover:border-inkoust sm:inline-block"
+              className="hidden rounded-[10px] bg-akcent px-2.5 py-1.5 text-[12px] font-semibold text-white transition-colors hover:bg-akcent-tmava sm:inline-block"
             >
               Podpořit projekt
             </a>
@@ -104,7 +111,7 @@ export function Navigace() {
                 href={BUY_ME_A_COFFEE_URL}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="mt-3 block rounded border border-linka bg-plocha py-2.5 text-center text-[13px] font-medium"
+                className="mt-3 block rounded-[10px] border border-linka bg-plocha py-2.5 text-center text-[13px] font-medium"
               >
                 Podpořit projekt
               </a>

@@ -53,7 +53,7 @@ export function CasovaOsa({ incidenty }: { incidenty: SUkazkou<Incident>[] }) {
                   )}
                   <span className={`stitek-tmavy ${t.text}`}>{UROVNE[i.zavaznost].nazev}</span>
                   {jeZjisteni && (
-                    <span className="stitek-tmavy rounded border border-linka px-1.5 py-[2px] text-tlum2">
+                    <span className="stitek-tmavy rounded-[10px] border border-linka px-1.5 py-[2px] text-tlum2">
                       Nové zjištění
                     </span>
                   )}

@@ -111,7 +111,13 @@ export const UROVNE: Record<Uroven, DefiniceUrovne> = {
   },
 };
 
-/** Vizuální tokeny pásem. Barvy jsou tlumené — dashboard, ne poplach. */
+/**
+ * Vizuální tokeny pásem.
+ *
+ * Každé pásmo má dvě sady: pro světlou plochu a pro námořní modř. Bez toho by
+ * tmavé oranžové na tmavém podkladu zmizelo — a stav, který má být vidět, by
+ * nebyl vidět.
+ */
 export const PASMA: Record<Pasmo, {
   nazev: string;
   tecka: string;
@@ -120,31 +126,47 @@ export const PASMA: Record<Pasmo, {
   pozadi: string;
   pruh: string;
   plna: string;
+  /* na tmavém podkladu */
+  teckaNoc: string;
+  textNoc: string;
+  ramecekNoc: string;
+  pozadiNoc: string;
+  plnaNoc: string;
 }> = {
   zelena: {
     nazev: "Nízká",
-    tecka: "bg-[#3f8f5c]", text: "text-[#2f6f47]", ramecek: "border-[#cfe3d6]",
-    pozadi: "bg-[#f4f9f5]", pruh: "bg-[#3f8f5c]", plna: "#3f8f5c",
+    tecka: "bg-[#2e8b62]", text: "text-[#227050]", ramecek: "border-[#c6e2d4]",
+    pozadi: "bg-[#f2faf6]", pruh: "bg-[#2e8b62]", plna: "#2e8b62",
+    teckaNoc: "bg-[#4fbe86]", textNoc: "text-[#7fdcac]", ramecekNoc: "border-[#2a5f47]",
+    pozadiNoc: "bg-[#0e2a20]", plnaNoc: "#4fbe86",
   },
   zluta: {
     nazev: "Střední",
-    tecka: "bg-[#c9a227]", text: "text-[#8a6d14]", ramecek: "border-[#e8dfbe]",
+    tecka: "bg-[#c9a227]", text: "text-[#856713]", ramecek: "border-[#e8dfbe]",
     pozadi: "bg-[#fbf8ee]", pruh: "bg-[#c9a227]", plna: "#c9a227",
+    teckaNoc: "bg-[#e3c155]", textNoc: "text-[#f0d47e]", ramecekNoc: "border-[#5e5124]",
+    pozadiNoc: "bg-[#2a2410]", plnaNoc: "#e3c155",
   },
   prechod: {
     nazev: "Téměř oranžová",
-    tecka: "bg-[#d98324]", text: "text-[#9c5b12]", ramecek: "border-[#ebd8bd]",
+    tecka: "bg-[#d98324]", text: "text-[#985811]", ramecek: "border-[#ebd8bd]",
     pozadi: "bg-[#fdf7ef]", pruh: "bg-[#d98324]", plna: "#d98324",
+    teckaNoc: "bg-[#f0a055]", textNoc: "text-[#f7bd83]", ramecekNoc: "border-[#6a4522]",
+    pozadiNoc: "bg-[#2e1c0d]", plnaNoc: "#f0a055",
   },
   oranzova: {
     nazev: "Vysoká",
-    tecka: "bg-[#c25e18]", text: "text-[#94450f]", ramecek: "border-[#e8cdb6]",
+    tecka: "bg-[#c25e18]", text: "text-[#93440e]", ramecek: "border-[#e8cdb6]",
     pozadi: "bg-[#fdf4ec]", pruh: "bg-[#c25e18]", plna: "#c25e18",
+    teckaNoc: "bg-[#e8834a]", textNoc: "text-[#f4a67c]", ramecekNoc: "border-[#6d3a1c]",
+    pozadiNoc: "bg-[#2e170a]", plnaNoc: "#e8834a",
   },
   cervena: {
     nazev: "Kritická",
     tecka: "bg-[#a32b2b]", text: "text-[#8a2323]", ramecek: "border-[#e5c2c2]",
     pozadi: "bg-[#fdf2f2]", pruh: "bg-[#a32b2b]", plna: "#a32b2b",
+    teckaNoc: "bg-[#e06767]", textNoc: "text-[#f09595]", ramecekNoc: "border-[#6b2626]",
+    pozadiNoc: "bg-[#2c1010]", plnaNoc: "#e06767",
   },
 };
 

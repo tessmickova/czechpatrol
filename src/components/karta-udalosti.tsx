@@ -35,7 +35,7 @@ export function KartaUdalosti({
 
   return (
     <article
-      className={`relative overflow-hidden rounded-[7px] border ${t.ramecek} ${
+      className={`relative overflow-hidden rounded-[14px] border ${t.ramecek} ${
         zvyraznit ? t.pozadi : "bg-plocha"
       }`}
     >
@@ -55,7 +55,7 @@ export function KartaUdalosti({
             {incident.kategorie[0] && ` · ${KATEGORIE[incident.kategorie[0]].nazev}`}
           </span>
           {incident.novy && (
-            <span className="stitek-tmavy rounded border border-linka bg-linka2 px-1.5 py-[3px] text-tlum">
+            <span className="stitek-tmavy rounded-[10px] border border-linka bg-linka2 px-1.5 py-[3px] text-tlum">
               Nové
             </span>
           )}

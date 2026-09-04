@@ -24,7 +24,7 @@ export function GrafSouvislosti({
   const zkrat = (t: string, n: number) => (t.length > n ? t.slice(0, n - 1) + "…" : t);
 
   return (
-    <div className="rounded-[7px] border border-linka bg-plocha p-5 sm:p-6">
+    <div className="rounded-[14px] border border-linka bg-plocha p-5 sm:p-6">
       <div className="mb-1.5 flex flex-wrap items-center justify-between gap-3">
         <h2 className="podnadpis text-[16px]">Souvislosti</h2>
         <div className="flex flex-wrap items-center gap-4">
@@ -101,7 +101,7 @@ export function GrafSouvislosti({
           <li key={s.incident.id} className="flex flex-wrap items-baseline gap-x-2.5 gap-y-1">
             <span
               aria-hidden
-              className={`stitek-tmavy rounded border px-1.5 py-[3px] ${
+              className={`stitek-tmavy rounded-[10px] border px-1.5 py-[3px] ${
                 s.potvrzena ? "border-inkoust text-inkoust" : "border-dashed border-linka text-tlum2"
               }`}
             >

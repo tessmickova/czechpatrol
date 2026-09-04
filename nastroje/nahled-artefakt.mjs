@@ -53,6 +53,11 @@ const footer = cely(prvni, "footer").replace(/<script[\s\S]*?<\/script>/g, "");
 // Pruhy mezi hlavičkou a obsahem (beta + ukázka) jsou mimo <header> i <main>.
 const meziPruhy = prvni.slice(prvni.indexOf("</header>") + 9, prvni.indexOf("<main")).replace(/<script[\s\S]*?<\/script>/g, "");
 
+// Parallaxový skript je obyčejný vanilla kód bez závislosti na Reactu,
+// takže si ho do náhledu bereme s sebou.
+const parallax =
+  prvni.match(/<script data-parallax[\s\S]*?<\/script>/)?.[0] ?? "";
+
 const sekce = STRANKY.map(([cesta, soubor]) => {
   const html = fs.readFileSync(path.join(OUT, soubor), "utf-8");
   // Zbytky běhového kódu Next.js jsou v náhledu k ničemu — pryč s nimi.
@@ -77,6 +82,8 @@ ${meziPruhy}
 ${sekce}
 </main>
 ${footer}
+
+${parallax}
 
 <script>
 (function () {

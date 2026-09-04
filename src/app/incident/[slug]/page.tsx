@@ -125,7 +125,7 @@ export default async function Detail({ params }: { params: Promise<{ slug: strin
                     <span className="cislice stitek mb-1.5 block">{datumCas(h.kdy)}</span>
                     <span className="block text-[13.5px] leading-relaxed">{h.text}</span>
                     {h.novySignal && (
-                      <span className="stitek-tmavy mt-2 inline-block rounded border border-linka px-1.5 py-[3px] text-tlum">
+                      <span className="stitek-tmavy mt-2 inline-block rounded-[10px] border border-linka px-1.5 py-[3px] text-tlum">
                         Započítáno jako nový signál
                       </span>
                     )}
@@ -151,10 +151,10 @@ function Nenalezeno() {
         Zveřejňujeme pouze záznamy, které prošly kontrolou a mají uvedený zdroj.
       </p>
       <div className="mt-8 flex flex-wrap justify-center gap-2.5">
-        <Link href="/udalosti/" className="rounded border border-linka bg-plocha px-3 py-2 text-[12.5px] font-medium transition-colors hover:border-inkoust">
+        <Link href="/udalosti/" className="rounded-[10px] border border-linka bg-plocha px-3 py-2 text-[12.5px] font-medium transition-colors hover:border-inkoust">
           Všechny události
         </Link>
-        <Link href="/" className="rounded border border-linka bg-plocha px-3 py-2 text-[12.5px] font-medium transition-colors hover:border-inkoust">
+        <Link href="/" className="rounded-[10px] border border-linka bg-plocha px-3 py-2 text-[12.5px] font-medium transition-colors hover:border-inkoust">
           Přehled
         </Link>
       </div>

@@ -3,7 +3,7 @@ const b = await chromium.launch({ executablePath: "/opt/pw-browsers/chromium-119
 const stranka = process.argv[2] || "/";
 const predpona = process.argv[3] || "rez";
 const p = await b.newPage({ viewport: { width: 1440, height: 940 }, deviceScaleFactor: 1 });
-await p.goto("http://localhost:4322" + stranka, { waitUntil: "networkidle" });
+await p.goto("http://localhost:4332" + stranka, { waitUntil: "networkidle" });
 const h = await p.evaluate(() => document.body.scrollHeight);
 let i = 0;
 for (let y = 0; y < h - 60; y += 900) {
