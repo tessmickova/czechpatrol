@@ -127,13 +127,15 @@ function PrvniSber() {
 }
 
 export function SituacniPanel({
-  stav, pravni, nato, hybridni, dnyBezZmeny = null,
+  stav, pravni, nato, hybridni, dnyBezZmeny = null, overeno = null,
 }: {
   stav: CelkovyStav;
   pravni: PravniStav;
   nato: { polozky: NatoPolozka[] };
   hybridni: HybridniTlak;
   dnyBezZmeny?: { dnu: number; odZacatkuArchivu: boolean } | null;
+  /** Čas posledního ověření proti zdrojům. */
+  overeno?: string | null;
 }) {
   const d = stav.uroven ? UROVNE[stav.uroven] : null;
   const t = stav.uroven ? PASMA[UROVNE[stav.uroven].pasmo] : null;
@@ -156,7 +158,7 @@ export function SituacniPanel({
                 <span className="relative inline-flex h-[7px] w-[7px] rounded-full bg-[#4fbe86]" />
               </span>
               <span className="stitek !text-noc-tlum">
-                {stav.aktualizovano ? datumCas(stav.aktualizovano) : "sběr zatím neproběhl"}
+                {overeno ? `ověřeno ${datumCas(overeno)}` : "sběr zatím neproběhl"}
               </span>
             </span>
             {dnyBezZmeny && (

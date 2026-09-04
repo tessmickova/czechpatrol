@@ -5,7 +5,8 @@ import { KartaUdalosti } from "@/components/karta-udalosti";
 import { OdberPanel } from "@/components/odber";
 import { Prazdno, Sekce } from "@/components/zaklad";
 import {
-  celkovyStav, dnyBezZmeny, hybridniTlak, incidenty, nato, pravniStav, tydny,
+  celkovyStav, dnyBezZmeny, hybridniTlak, incidenty, nato, posledniOvereni,
+  pravniStav, tydny,
 } from "@/lib/data";
 
 export default function Prehled() {
@@ -22,6 +23,7 @@ export default function Prehled() {
         nato={nato()}
         hybridni={hybridniTlak()}
         dnyBezZmeny={dnyBezZmeny()}
+        overeno={posledniOvereni()}
       />
 
       <Sekce

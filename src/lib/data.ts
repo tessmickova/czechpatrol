@@ -144,6 +144,19 @@ export function archiv(): Archiv {
 }
 
 /**
+ * Kdy naposledy proběhlo ověření proti zdrojům.
+ *
+ * Není to totéž co `stav.aktualizovano` — celkovou úroveň stanovuje člověk,
+ * kdežto tohle je čas posledního běhu sběru. Hlavička má ukazovat tenhle.
+ */
+export function posledniOvereni(): string | null {
+  const casy = [pravniStav().overeno, nato().overeno, provoz().overeno].filter(
+    (x): x is string => Boolean(x),
+  );
+  return casy.length ? casy.sort().at(-1)! : null;
+}
+
+/**
  * Jak dlouho se nezměnil právní stav ČR ani stav NATO.
  *
  * Klid je taky informace — bez něj by web ukazoval jen to, co se pokazilo.
@@ -163,6 +176,8 @@ export function dnyBezZmeny(): { dnu: number; odZacatkuArchivu: boolean } | null
     0,
     Math.floor((new Date(posledni.kdy).getTime() - new Date(od).getTime()) / 86_400_000),
   );
+  // Pod jeden celý den nemá smysl o „dnech beze změny“ mluvit.
+  if (dnu < 1) return null;
   return { dnu, odZacatkuArchivu: !zmena };
 }
 

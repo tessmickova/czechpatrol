@@ -135,7 +135,7 @@ export const ZDROJE: RegistrZdroj[] = [
     primarni: true,
     klicova: ["opustte zemi", "okamzite opustte", "evakuace obcanu cr"],
     sledovana: ["nedoporucuje cestovat", "evakuace"],
-    tyka: ["vycestovani"],
+    tyka: ["vycestovani", "evakuace"],
     overenaAdresa: false,
   },
 
