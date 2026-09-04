@@ -45,6 +45,14 @@ ukazují.
 Upozornění „AI-assisted / pracovní verze“ **není omluvenka** pro nepodložené
 tvrzení.
 
+## Pravidlo č. 5 — archiv nesmí mystifikovat
+
+Snímek se zapisuje jen při změně. Nikdy nehlas změnu, kterou čtenář nemůže
+vidět („Střední → Střední“) — popiš, co se opravdu stalo. Období, které archiv
+nepokrývá, se nedopočítává; napíše se, že ho nemáme.
+
+Odběrový kanál, který nikam nevede, se neukazuje jako dostupný.
+
 ## Konvence
 
 - Kód, komentáře i názvy proměnných **česky**. Komentář vysvětluje *proč*, ne *co*.

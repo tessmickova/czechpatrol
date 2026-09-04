@@ -1,0 +1,11 @@
+import { chromium } from "playwright";
+const b = await chromium.launch({ executablePath: "/opt/pw-browsers/chromium-1194/chrome-linux/chrome" });
+const p = await b.newPage({ viewport: { width: 1440, height: 940 } });
+await p.goto("http://localhost:4360/", { waitUntil: "networkidle" });
+await p.screenshot({ path: "/tmp/snap/f-hero.png" });
+await p.evaluate(() => location.hash = "#/odber/"); await p.waitForTimeout(400);
+await p.screenshot({ path: "/tmp/snap/f-odber.png" });
+await p.evaluate(() => location.hash = "#/trend/"); await p.waitForTimeout(400);
+await p.evaluate(() => scrollTo(0, 380)); await p.waitForTimeout(300);
+await p.screenshot({ path: "/tmp/snap/f-posuvnik.png" });
+await b.close(); console.log("ok");

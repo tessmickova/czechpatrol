@@ -84,6 +84,7 @@ export default function Metodika() {
   return (
     <>
       <HlavickaStranky
+        ikona="kniha"
         stitek="Metodika"
         nadpis="Podle čeho web hodnotí"
         popis="Upozornění, že web je experimentální a používá AI, není omluvenka pro nepodložené tvrzení. Proto je metodika popsaná takhle konkrétně."

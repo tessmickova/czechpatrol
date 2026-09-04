@@ -17,28 +17,23 @@ export function Paticka() {
             </h2>
             <div className="max-w-[42rem] space-y-3 text-[13px] leading-relaxed text-noc-tlum">
               <p>
-                Tento web je nezávislý hobby a experimentální analytický projekt. Používá
-                automatizované zpracování a umělou inteligenci pro vyhledávání, třídění,
-                sumarizaci a analytické hodnocení veřejně dostupných informací.
+                Nezávislý hobby projekt. Veřejně dostupné informace zpracovává
+                automatizovaně a s pomocí AI.
               </p>
               <p>
                 <b className="font-semibold text-noc-text">
-                  Není součástí vlády ČR, Armády ČR, NATO, EU, policie ani bezpečnostních
-                  či zpravodajských služeb.
+                  Není součástí vlády ČR, Armády ČR, NATO, EU ani bezpečnostních složek.
                 </b>{" "}
-                Hodnocení rizika je analytická interpretace dostupných informací — není to
-                oficiální bezpečnostní stupeň, předpověď války ani pokyn k jednání.
+                Hodnocení je analytická interpretace — ne oficiální stupeň, ne předpověď,
+                ne pokyn k jednání.
               </p>
               <p>
-                Automatizované zpracování může obsahovat chybu. Před důležitým rozhodnutím
-                vždy ověřte aktuální informace u příslušných úřadů a primárních zdrojů.
-                V krizové situaci se řiďte pokyny státních orgánů a integrovaného
-                záchranného systému.
+                Automat se může splést. Před důležitým rozhodnutím ověřte stav u úřadů
+                a primárních zdrojů; v krizi se řiďte pokyny státních orgánů a IZS.
               </p>
               <p className="text-noc-tlum/70">
-                Web záměrně nedává doporučení typu „odjet / neodjet“. Ukazuje ověřený stav,
-                právní a institucionální spouštěče a to, co se zatím nestalo. Rozhodnutí
-                zůstává na čtenáři.
+                Web nedává doporučení „odjet / neodjet“. Ukazuje ověřený stav, spouštěče
+                a to, co se zatím nestalo. Rozhodnutí zůstává na čtenáři.
               </p>
             </div>
             <div className="mt-6 flex flex-wrap items-center gap-2.5">
@@ -64,6 +59,7 @@ export function Paticka() {
                   ["/nato/", "NATO"],
                   ["/metodika/", "Metodika"],
                   ["/zdroje/", "Zdroje"],
+                  ["/odber/", "Odběr"],
                 ].map(([href, label]) => (
                   <li key={href}>
                     <Link href={href} className="text-noc-tlum transition-colors hover:text-noc-text">

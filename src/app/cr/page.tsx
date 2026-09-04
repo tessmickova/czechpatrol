@@ -14,6 +14,7 @@ export default function Cr() {
   return (
     <>
       <HlavickaStranky
+        ikona="vaha"
         stitek="Česká republika"
         nadpis="Právní stav a praktický dopad"
         popis="Mimořádné stavy nevznikají tím, že se zhorší situace. Každý z nich je samostatný právní krok s vlastními podmínkami, vlastním schvalovacím procesem a vlastním úředním vyhlášením."

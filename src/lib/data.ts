@@ -1,6 +1,6 @@
 import { JE_UKAZKA } from "@/config/web";
 import type {
-  CelkovyStav, HybridniTlak, Incident, NatoPolozka, PravniStav,
+  Archiv, CelkovyStav, HybridniTlak, Incident, NatoPolozka, PravniStav,
   Provoz, RuskoStav, TydenniHodnoceni, Uroven, Watchlist,
 } from "./typy";
 
@@ -13,6 +13,7 @@ import ostryHybridni from "../../data/hybridni-tlak.json";
 import ostreTydny from "../../data/tydny.json";
 import ostreRusko from "../../data/rusko.json";
 import ostryWatchlist from "../../data/watchlist.json";
+import ostryArchiv from "../../data/historie.json";
 
 import ukazkoveIncidenty from "../../data/ukazka/incidenty.json";
 import ukazkovyStav from "../../data/ukazka/stav.json";
@@ -22,6 +23,7 @@ import ukazkovyProvoz from "../../data/ukazka/provoz.json";
 import ukazkovyHybridni from "../../data/ukazka/hybridni-tlak.json";
 import ukazkoveTydny from "../../data/ukazka/tydny.json";
 import ukazkoveRusko from "../../data/ukazka/rusko.json";
+import ukazkovyArchiv from "../../data/ukazka/historie.json";
 
 /**
  * Vrstva mezi daty a UI.
@@ -133,6 +135,35 @@ export function rusko(): RuskoStav {
       return n ? { ...p, uroven: n.uroven } : p;
     }),
   };
+}
+
+/** Archiv stavů v čase. Podklad pro časový posuvník. */
+export function archiv(): Archiv {
+  const a = JE_UKAZKA ? jako<Archiv>(ukazkovyArchiv) : jako<Archiv>(ostryArchiv);
+  return { ...a, snimky: a.snimky.slice().sort((x, y) => x.kdy.localeCompare(y.kdy)) };
+}
+
+/**
+ * Jak dlouho se nezměnil právní stav ČR ani stav NATO.
+ *
+ * Klid je taky informace — bez něj by web ukazoval jen to, co se pokazilo.
+ * Rozlišujeme ale dvě různé věci: „od poslední změny“ a „od začátku archivu“.
+ * Když archiv žádnou změnu nezachytil, nesmíme tvrdit, že žádná nenastala —
+ * jen že o žádné nevíme.
+ */
+export function dnyBezZmeny(): { dnu: number; odZacatkuArchivu: boolean } | null {
+  const s = archiv().snimky;
+  if (s.length < 2) return null;
+  const posledni = s[s.length - 1];
+  const zmena = [...s]
+    .reverse()
+    .find((x) => x.zmeny.some((z) => z.startsWith("právní") || z.startsWith("NATO")));
+  const od = zmena ? zmena.kdy : s[0].kdy;
+  const dnu = Math.max(
+    0,
+    Math.floor((new Date(posledni.kdy).getTime() - new Date(od).getTime()) / 86_400_000),
+  );
+  return { dnu, odZacatkuArchivu: !zmena };
 }
 
 export function watchlist(): Watchlist {

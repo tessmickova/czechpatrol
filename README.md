@@ -19,6 +19,8 @@ Není to zpravodajský web ani prepper stránka. Je to datový dashboard.
 | Žádná falešná přesnost | Stupnice je diskrétní; riziko v procentech se nikde neuvádí |
 | Web neradí, jestli odjet | Ukazuje ověřený stav a institucionální spouštěče; rozhodnutí nechává na čtenáři |
 | Náhled nesmí lhát o funkčnosti | Staví se z týchž komponent jako web, takže ukazuje skutečné chování, ne obrázek |
+| Archiv zapisuje jen změny | Řada shodných hodinových záznamů by budila dojem, že se pořád něco děje |
+| Odběr, který nikam nevede, se nenabízí | Nenastavený kanál je označený jako připravovaný, ne jako funkční |
 
 ## Spuštění
 
@@ -41,6 +43,32 @@ npm run nahled    # klikací náhled do jediného souboru nahled.html
 (esbuild, směrování ve fragmentu adresy) a vloží ji i se styly do jednoho
 HTML. Náhled tedy není přemalovaná kopie webu — je to táž aplikace bez
 serveru, takže v ní fungují filtry, rozbalování i nápovědy.
+
+## Archiv v čase
+
+Sběrač po každém běhu porovná stav s posledním snímkem v `data/historie.json`
+a zapíše nový záznam **jen když se něco změnilo**. Časový posuvník na
+`/trend` z toho skládá pohled na to, co web tvrdil v daném okamžiku.
+
+Dvě věci, které archiv nedělá:
+
+- **nerekonstruuje minulost** — období před začátkem archivu prostě nemá
+  a nedopočítává ho,
+- **nehlásí změnu, kterou čtenář nemůže vidět** — vnitřní stupnice je jemnější
+  než ta zobrazená, takže posun uvnitř pásma se popíše jako
+  „posun v rámci úrovně Střední“, ne jako „Střední → Střední“.
+
+Události se na posuvníku objevují k datu, kdy vyšly najevo, ne k datu, kdy se
+staly. Dřív o nich totiž nikdo nevěděl.
+
+## Odběr
+
+`/feed.xml` se generuje při buildu a funguje na statickém hostingu. Ostatní
+kanály se nastavují v `KANALY` v `src/config/web.ts`; dokud je adresa prázdná,
+web kanál ukazuje jako připravovaný, ne jako dostupný.
+
+Upozornění nemá chodit u každé události — od toho je web. Seznam situací,
+které upozornění spouštějí, je v `KDY_UPOZORNENI`.
 
 ## Sběr dat
 

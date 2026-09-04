@@ -1,7 +1,9 @@
 import Link from "next/link";
 import { CoSeZmenilo, SituacniPanel } from "@/components/hero";
 import { KartaUdalosti } from "@/components/karta-udalosti";
+import { OdberPanel } from "@/components/odber";
 import { CasovaOsa } from "@/components/osa";
+import { CasovyPosuvnik } from "@/components/posuvnik";
 import {
   HybridniPanel, JakCist, NatoPanel, PravniSemafor, ProvozPanel,
   RuskoPanel, ScenarovaCesta, WatchlistPanel,
@@ -10,8 +12,8 @@ import { GrafTrendu, TabulkaTydnu } from "@/components/trend";
 import { Karta, Prazdno, Sekce } from "@/components/zaklad";
 import { BUY_ME_A_COFFEE_URL } from "@/config/web";
 import {
-  celkovyStav, hybridniTlak, incidenty, klidoveBody, nato, pravniStav,
-  provoz, rusko, tydny, watchlist,
+  archiv, celkovyStav, dnyBezZmeny, hybridniTlak, incidenty, klidoveBody,
+  nato, pravniStav, provoz, rusko, tydny, watchlist,
 } from "@/lib/data";
 import { UROVNE } from "@/lib/skala";
 
@@ -37,13 +39,14 @@ export default function Prehled() {
         nato={aliance}
         hybridni={hybridni}
         klidove={klidoveBody()}
+        dnyBezZmeny={dnyBezZmeny()}
       />
 
       <Sekce
         cislo="01"
         ikona="radar"
         nadpis="Co se změnilo od poslední aktualizace"
-        popis="Jedna událost se počítá jednou, i když o ní vyjde víc článků. Nové vyšetřovací zjištění u starší události ale může být samostatným signálem."
+        popis="Jedna událost = jeden signál, i když o ní vyjde víc článků. Nové vyšetřovací zjištění u starší události ale signálem být může."
         akce={
           <Link href="/dnes/" className="rounded-[10px] border border-linka bg-plocha px-3 py-2 text-[12.5px] font-medium transition-colors hover:border-inkoust">
             Shrnutí dne
@@ -68,7 +71,7 @@ export default function Prehled() {
         cislo="02"
         ikona="kniha"
         nadpis="Co je teď důležité vědět"
-        popis="Nejdřív jak web číst, potom stav Aliance. Obojí patří ke každému číslu na této stránce."
+        popis="Jak web číst a jak je na tom Aliance."
       >
         <div className="grid gap-5 lg:grid-cols-2">
           <JakCist />
@@ -81,7 +84,7 @@ export default function Prehled() {
         cislo="03"
         ikona="vaha"
         nadpis="Česká republika — právní stav"
-        popis="Mimořádné stavy nevznikají tím, že se zhorší situace. Každý z nich je samostatný právní krok s vlastními podmínkami a vlastním úředním vyhlášením."
+        popis="Mimořádné stavy nevznikají zhoršením situace. Každý je samostatný právní krok s vlastním úředním vyhlášením."
         akce={
           <Link href="/cr/" className="rounded-[10px] border border-linka bg-plocha px-3 py-2 text-[12.5px] font-medium transition-colors hover:border-inkoust">
             Podrobně
@@ -104,7 +107,7 @@ export default function Prehled() {
         cislo="05"
         ikona="stit-ok"
         nadpis="Co to znamená pro život v ČR"
-        popis="Praktický stav běžných služeb. Kde nemáme spolehlivý veřejný zdroj, napíšeme to — nedopočítáváme."
+        popis="Stav běžných služeb. Kde chybí spolehlivý zdroj, napíšeme to — nedopočítáváme."
       >
         <ProvozPanel provoz={provoz()} />
       </Sekce>
@@ -143,6 +146,20 @@ export default function Prehled() {
 
       <Sekce
         cislo="09"
+        ikona="hodiny"
+        nadpis="Vývoj v čase"
+        popis="Co web tvrdil v daném okamžiku. Není to rekonstrukce toho, co se doopravdy dělo — události se objevují k datu, kdy vyšly najevo."
+        akce={
+          <Link href="/trend/" className="rounded-[10px] border border-linka bg-plocha px-3 py-2 text-[12.5px] font-medium transition-colors hover:border-inkoust">
+            Celý archiv
+          </Link>
+        }
+      >
+        <CasovyPosuvnik archiv={archiv()} />
+      </Sekce>
+
+      <Sekce
+        cislo="10"
         ikona="graf"
         nadpis="Jak se situace vyvíjí"
         popis="Vývoj po týdnech od začátku měření. Svislá osa je stupnice úrovní, ne procenta."
@@ -159,16 +176,16 @@ export default function Prehled() {
       </Sekce>
 
       <Sekce
-        cislo="10"
+        cislo="11"
         ikona="globus"
         nadpis="Rusko: vnitřní tlak režimu"
-        popis="Doplňkový ukazatel, vizuálně menší než hlavní bezpečnostní status — protože je méně jistý."
+        popis="Doplňkový ukazatel. Méně jistý než zbytek webu, proto i menší."
       >
         <RuskoPanel stav={rusko()} />
       </Sekce>
 
       <Sekce
-        cislo="11"
+        cislo="12"
         ikona="oko"
         nadpis="Menší signály"
         popis="Události, které samy o sobě hodnocení nemění, ale mohou se kumulovat."
@@ -188,7 +205,21 @@ export default function Prehled() {
       </Sekce>
 
       <Sekce
-        cislo="12"
+        cislo="13"
+        ikona="komunikace"
+        nadpis="Nechte si dát vědět"
+        popis="Jen při změně, kvůli které by člověk mohl jednat jinak. Ne u každé události."
+        akce={
+          <Link href="/odber/" className="rounded-[10px] border border-linka bg-plocha px-3 py-2 text-[12.5px] font-medium transition-colors hover:border-inkoust">
+            Podrobně
+          </Link>
+        }
+      >
+        <OdberPanel kompaktni />
+      </Sekce>
+
+      <Sekce
+        cislo="14"
         ikona="kniha"
         nadpis="Metodika"
         popis="Co započítáváme jako nový signál, co ne, a co je náš baseline."

@@ -184,9 +184,8 @@ export function HybridniPanel({ tlak }: { tlak: HybridniTlak }) {
           <div className="stitek mb-2 !text-noc-tlum">Přímý vojenský střet NATO–Rusko</div>
           <OdznakUrovne uroven={primy?.uroven ?? null} velikost="m" naNoci />
           <p className="mt-4 text-[12.5px] leading-relaxed text-noc-tlum">
-            „Evropa má vážný hybridní problém“ a „Rusko zítra vojensky zaútočí na NATO“
-            jsou dvě různá tvrzení. První může být pravda, aniž by z něj druhé jakkoli
-            vyplývalo. Na radaru je to vidět jako jedna osa mezi ostatními.
+            „Evropa má hybridní problém“ a „Rusko zaútočí na NATO“ jsou dvě různá
+            tvrzení. První může být pravda, aniž by z něj druhé plynulo.
           </p>
         </div>
       </div>
@@ -255,10 +254,9 @@ export function ProvozPanel({ provoz }: { provoz: Provoz }) {
           <KartaProvozu key={p.klic} p={p} />
         ))}
       </ul>
-      <p className="mt-5 max-w-[52rem] text-[12.5px] leading-relaxed text-tlum2">
-        Web nedává doporučení typu „odjet / neodjet“ ani finanční rady. Nedoporučuje
-        předzásobení ani mimořádné výběry — takové kroky dokážou samy o sobě způsobit
-        problém, který zatím neexistuje. Ukazuje ověřený stav a to, co by ho změnilo.
+      <p className="mt-5 max-w-[46rem] text-[12.5px] leading-relaxed text-tlum2">
+        Žádné rady typu „odjet“, předzásobit se nebo vybrat hotovost — takové kroky
+        umí samy způsobit problém, který zatím neexistuje.
       </p>
     </>
   );
@@ -311,8 +309,8 @@ export function WatchlistPanel({ watchlist }: { watchlist: Watchlist }) {
             ))}
           </ul>
           <p className="mt-5 border-t border-linka2 pt-4 text-[12px] leading-relaxed text-tlum2">
-            Uklidňující signály uvádíme stejně důsledně jako zhoršující. Bez nich by
-            web fungoval jako jednosměrný eskalační stroj a přestal by odpovídat realitě.
+            Uklidňující signály uvádíme stejně důsledně jako zhoršující. Jinak by web
+            byl jednosměrný eskalační stroj.
           </p>
         </Karta>
       </div>

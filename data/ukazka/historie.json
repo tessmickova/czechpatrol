@@ -1,0 +1,338 @@
+{
+  "zacatek": "2026-06-29T06:00:00Z",
+  "snimky": [
+    {
+      "kdy": "2026-06-29T06:00:00Z",
+      "uroven": "G3",
+      "hybridni": "Y1",
+      "primyStret": "G1",
+      "pravni": {
+        "stav-ohrozeni": false,
+        "valecny-stav": false,
+        "mobilizace": false,
+        "nouzovy-stav": false,
+        "vycestovani": false,
+        "hranice": false,
+        "schuze-parlamentu": false
+      },
+      "nato": {
+        "clanek-4": false,
+        "clanek-5": false,
+        "readiness": false,
+        "evakuace": false,
+        "vychodni-kridlo": true
+      },
+      "provoz": {
+        "vycestovani": "bezny",
+        "hranice": "bezny",
+        "palivo": "bezny",
+        "elektrina": "bezny",
+        "plyn": "bezny",
+        "banky": "bezny",
+        "komunikace": "sledujeme",
+        "bezny-zivot": "bezny"
+      },
+      "udalosti": 0,
+      "zmeny": [
+        "začátek archivu"
+      ],
+      "ukazka": true
+    },
+    {
+      "kdy": "2026-07-06T06:00:00Z",
+      "uroven": "Y1",
+      "hybridni": "Y1",
+      "primyStret": "G1",
+      "pravni": {
+        "stav-ohrozeni": false,
+        "valecny-stav": false,
+        "mobilizace": false,
+        "nouzovy-stav": false,
+        "vycestovani": false,
+        "hranice": false,
+        "schuze-parlamentu": false
+      },
+      "nato": {
+        "clanek-4": false,
+        "clanek-5": false,
+        "readiness": false,
+        "evakuace": false,
+        "vychodni-kridlo": true
+      },
+      "provoz": {
+        "vycestovani": "bezny",
+        "hranice": "bezny",
+        "palivo": "bezny",
+        "elektrina": "bezny",
+        "plyn": "bezny",
+        "banky": "bezny",
+        "komunikace": "sledujeme",
+        "bezny-zivot": "bezny"
+      },
+      "udalosti": 0,
+      "zmeny": [
+        "celková úroveň: Zvýšená pozornost → Střední"
+      ],
+      "ukazka": true
+    },
+    {
+      "kdy": "2026-07-13T06:00:00Z",
+      "uroven": "Y1",
+      "hybridni": "Y2",
+      "primyStret": "G1",
+      "pravni": {
+        "stav-ohrozeni": false,
+        "valecny-stav": false,
+        "mobilizace": false,
+        "nouzovy-stav": false,
+        "vycestovani": false,
+        "hranice": false,
+        "schuze-parlamentu": false
+      },
+      "nato": {
+        "clanek-4": false,
+        "clanek-5": false,
+        "readiness": false,
+        "evakuace": false,
+        "vychodni-kridlo": true
+      },
+      "provoz": {
+        "vycestovani": "bezny",
+        "hranice": "bezny",
+        "palivo": "bezny",
+        "elektrina": "bezny",
+        "plyn": "bezny",
+        "banky": "bezny",
+        "komunikace": "sledujeme",
+        "bezny-zivot": "bezny"
+      },
+      "udalosti": 0,
+      "zmeny": [
+        "hybridní tlak: posun v rámci úrovně Střední"
+      ],
+      "ukazka": true
+    },
+    {
+      "kdy": "2026-07-20T06:00:00Z",
+      "uroven": "Y2",
+      "hybridni": "Y2",
+      "primyStret": "G1",
+      "pravni": {
+        "stav-ohrozeni": false,
+        "valecny-stav": false,
+        "mobilizace": false,
+        "nouzovy-stav": false,
+        "vycestovani": false,
+        "hranice": false,
+        "schuze-parlamentu": false
+      },
+      "nato": {
+        "clanek-4": false,
+        "clanek-5": false,
+        "readiness": false,
+        "evakuace": false,
+        "vychodni-kridlo": true
+      },
+      "provoz": {
+        "vycestovani": "bezny",
+        "hranice": "bezny",
+        "palivo": "bezny",
+        "elektrina": "bezny",
+        "plyn": "bezny",
+        "banky": "bezny",
+        "komunikace": "sledujeme",
+        "bezny-zivot": "bezny"
+      },
+      "udalosti": 0,
+      "zmeny": [
+        "celková úroveň: posun v rámci úrovně Střední"
+      ],
+      "ukazka": true
+    },
+    {
+      "kdy": "2026-08-03T06:00:00Z",
+      "uroven": "Y2",
+      "hybridni": "Y3",
+      "primyStret": "G2",
+      "pravni": {
+        "stav-ohrozeni": false,
+        "valecny-stav": false,
+        "mobilizace": false,
+        "nouzovy-stav": false,
+        "vycestovani": false,
+        "hranice": false,
+        "schuze-parlamentu": false
+      },
+      "nato": {
+        "clanek-4": false,
+        "clanek-5": false,
+        "readiness": false,
+        "evakuace": false,
+        "vychodni-kridlo": true
+      },
+      "provoz": {
+        "vycestovani": "bezny",
+        "hranice": "bezny",
+        "palivo": "bezny",
+        "elektrina": "bezny",
+        "plyn": "bezny",
+        "banky": "bezny",
+        "komunikace": "sledujeme",
+        "bezny-zivot": "bezny"
+      },
+      "udalosti": 0,
+      "zmeny": [
+        "hybridní tlak: Střední → Vyšší"
+      ],
+      "ukazka": true
+    },
+    {
+      "kdy": "2026-08-10T06:00:00Z",
+      "uroven": "Y3",
+      "hybridni": "Y3",
+      "primyStret": "G2",
+      "pravni": {
+        "stav-ohrozeni": false,
+        "valecny-stav": false,
+        "mobilizace": false,
+        "nouzovy-stav": false,
+        "vycestovani": false,
+        "hranice": false,
+        "schuze-parlamentu": false
+      },
+      "nato": {
+        "clanek-4": false,
+        "clanek-5": false,
+        "readiness": false,
+        "evakuace": false,
+        "vychodni-kridlo": true
+      },
+      "provoz": {
+        "vycestovani": "bezny",
+        "hranice": "bezny",
+        "palivo": "bezny",
+        "elektrina": "bezny",
+        "plyn": "bezny",
+        "banky": "bezny",
+        "komunikace": "sledujeme",
+        "bezny-zivot": "bezny"
+      },
+      "udalosti": 0,
+      "zmeny": [
+        "celková úroveň: Střední → Vyšší"
+      ],
+      "ukazka": true
+    },
+    {
+      "kdy": "2026-08-17T06:00:00Z",
+      "uroven": "Y3",
+      "hybridni": "O1",
+      "primyStret": "G2",
+      "pravni": {
+        "stav-ohrozeni": false,
+        "valecny-stav": false,
+        "mobilizace": false,
+        "nouzovy-stav": false,
+        "vycestovani": false,
+        "hranice": false,
+        "schuze-parlamentu": false
+      },
+      "nato": {
+        "clanek-4": false,
+        "clanek-5": false,
+        "readiness": false,
+        "evakuace": false,
+        "vychodni-kridlo": true
+      },
+      "provoz": {
+        "vycestovani": "bezny",
+        "hranice": "bezny",
+        "palivo": "bezny",
+        "elektrina": "bezny",
+        "plyn": "bezny",
+        "banky": "bezny",
+        "komunikace": "sledujeme",
+        "bezny-zivot": "bezny"
+      },
+      "udalosti": 0,
+      "zmeny": [
+        "hybridní tlak: Vyšší → Oranžová"
+      ],
+      "ukazka": true
+    },
+    {
+      "kdy": "2026-08-24T06:00:00Z",
+      "uroven": "YO",
+      "hybridni": "O1",
+      "primyStret": "G2",
+      "pravni": {
+        "stav-ohrozeni": false,
+        "valecny-stav": false,
+        "mobilizace": false,
+        "nouzovy-stav": false,
+        "vycestovani": false,
+        "hranice": false,
+        "schuze-parlamentu": false
+      },
+      "nato": {
+        "clanek-4": false,
+        "clanek-5": false,
+        "readiness": false,
+        "evakuace": false,
+        "vychodni-kridlo": true
+      },
+      "provoz": {
+        "vycestovani": "bezny",
+        "hranice": "bezny",
+        "palivo": "bezny",
+        "elektrina": "bezny",
+        "plyn": "bezny",
+        "banky": "bezny",
+        "komunikace": "sledujeme",
+        "bezny-zivot": "bezny"
+      },
+      "udalosti": 0,
+      "zmeny": [
+        "celková úroveň: Vyšší → Téměř oranžová"
+      ],
+      "ukazka": true
+    },
+    {
+      "kdy": "2026-09-04T13:00:00Z",
+      "uroven": "YO",
+      "hybridni": "O1",
+      "primyStret": "G2",
+      "pravni": {
+        "stav-ohrozeni": false,
+        "valecny-stav": false,
+        "mobilizace": false,
+        "nouzovy-stav": false,
+        "vycestovani": false,
+        "hranice": false,
+        "schuze-parlamentu": false
+      },
+      "nato": {
+        "clanek-4": false,
+        "clanek-5": false,
+        "readiness": false,
+        "evakuace": false,
+        "vychodni-kridlo": true
+      },
+      "provoz": {
+        "vycestovani": "bezny",
+        "hranice": "bezny",
+        "palivo": "bezny",
+        "elektrina": "bezny",
+        "plyn": "bezny",
+        "banky": "bezny",
+        "komunikace": "sledujeme",
+        "bezny-zivot": "bezny"
+      },
+      "udalosti": 4,
+      "zmeny": [
+        "zveřejněné události: 0 → 4"
+      ],
+      "ukazka": true
+    }
+  ]
+}

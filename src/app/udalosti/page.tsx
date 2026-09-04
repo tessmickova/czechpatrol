@@ -12,6 +12,7 @@ export default function Udalosti() {
   return (
     <>
       <HlavickaStranky
+        ikona="oko"
         stitek="Události"
         nadpis="Ověřené události se zdrojem"
         popis="Každý záznam má datum události i datum zjištění. Jedna událost se počítá jednou, i když o ní vyjde více článků."

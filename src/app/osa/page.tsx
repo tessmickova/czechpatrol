@@ -12,6 +12,7 @@ export default function Osa() {
   return (
     <>
       <HlavickaStranky
+        ikona="osa"
         stitek="Časová osa"
         nadpis="Chronologie a kumulace"
         popis="Osa ukazuje, jak na sebe události navazují. Záznam označený „nové zjištění“ není nový útok — je to nový vyšetřovací posun u starší věci."

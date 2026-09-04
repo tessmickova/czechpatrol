@@ -15,6 +15,7 @@ export default function Nato() {
   return (
     <>
       <HlavickaStranky
+        ikona="stit"
         stitek="NATO"
         nadpis="Stav Aliance"
         popis="Článek 4 je nástroj konzultací, ne obrany. Jeho aktivace automaticky nevede k článku 5 — to jsou dva různé mechanismy s různými důsledky."

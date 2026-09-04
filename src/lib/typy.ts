@@ -236,3 +236,48 @@ export interface CelkovyStav {
   /** Kolik nových signálů přibylo od poslední aktualizace. */
   noveSignaly: { celkem: number; vysoke: number; stredni: number; kriticke: number };
 }
+
+/* ---------------- archiv v čase ---------------- */
+
+/**
+ * Snímek stavu k danému okamžiku.
+ *
+ * Archiv se nezapisuje každou hodinu, ale jen když se něco změnilo. Řada
+ * shodných záznamů by budila dojem, že se pořád něco děje — a přitom by
+ * znamenala pravý opak.
+ */
+export interface Snimek {
+  kdy: string;
+  uroven: Uroven | null;
+  hybridni: Uroven | null;
+  primyStret: Uroven | null;
+  /** klíč právní položky → platí / neplatí / neověřeno */
+  pravni: Record<string, boolean | null>;
+  /** klíč položky NATO → aktivní / neaktivní / neověřeno */
+  nato: Record<string, boolean | null>;
+  provoz: Record<string, StavProvozu>;
+  /** Kolik událostí bylo v tu chvíli zveřejněno. */
+  udalosti: number;
+  /** Co se oproti předchozímu snímku změnilo, lidsky. */
+  zmeny: string[];
+  /** Ukázkový záznam — nikdy se nemíchá s ostrým archivem. */
+  ukazka?: boolean;
+}
+
+export interface Archiv {
+  /** Odkdy archiv vede záznamy. Starší stav nedopočítáváme. */
+  zacatek: string | null;
+  snimky: Snimek[];
+}
+
+/* ---------------- odběr ---------------- */
+
+export type DruhKanalu = "rss" | "telegram" | "whatsapp" | "signal" | "bluesky" | "email";
+
+export interface Kanal {
+  druh: DruhKanalu;
+  nazev: string;
+  popis: string;
+  url: string;
+  ikona: string;
+}

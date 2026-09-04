@@ -15,7 +15,7 @@ const ODKAZY = [
   { href: "/nato/", label: "NATO" },
   { href: "/trend/", label: "Trend" },
   { href: "/metodika/", label: "Metodika" },
-  { href: "/zdroje/", label: "Zdroje" },
+  { href: "/odber/", label: "Odběr" },
 ];
 
 export function Navigace() {

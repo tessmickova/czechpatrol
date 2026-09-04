@@ -1,0 +1,41 @@
+{
+  "zacatek": "2026-09-04T14:17:22.884Z",
+  "snimky": [
+    {
+      "kdy": "2026-09-04T14:17:22.884Z",
+      "uroven": null,
+      "hybridni": null,
+      "primyStret": null,
+      "pravni": {
+        "stav-ohrozeni": null,
+        "valecny-stav": null,
+        "mobilizace": null,
+        "nouzovy-stav": null,
+        "vycestovani": null,
+        "hranice": null,
+        "schuze-parlamentu": null
+      },
+      "nato": {
+        "clanek-4": null,
+        "clanek-5": null,
+        "readiness": null,
+        "evakuace": null,
+        "vychodni-kridlo": null
+      },
+      "provoz": {
+        "vycestovani": "bez-zdroje",
+        "hranice": "bez-zdroje",
+        "palivo": "bez-zdroje",
+        "elektrina": "bez-zdroje",
+        "plyn": "bez-zdroje",
+        "banky": "bez-zdroje",
+        "komunikace": "bez-zdroje",
+        "bezny-zivot": "bez-zdroje"
+      },
+      "udalosti": 0,
+      "zmeny": [
+        "začátek archivu"
+      ]
+    }
+  ]
+}

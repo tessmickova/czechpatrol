@@ -21,6 +21,7 @@ export default function Zdroje() {
   return (
     <>
       <HlavickaStranky
+        ikona="dokument"
         stitek="Zdroje"
         nadpis="Odkud informace pocházejí"
         popis="Každé konkrétní tvrzení na webu má uvedený zdroj. Sociální sítě označujeme jako neověřené a samy o sobě nikdy nezvyšují stupeň hrozby."

@@ -171,13 +171,14 @@ function bunky(
 /* ---------------- celý situační panel ---------------- */
 
 export function SituacniPanel({
-  stav, pravni, nato, hybridni, klidove = [],
+  stav, pravni, nato, hybridni, klidove = [], dnyBezZmeny = null,
 }: {
   stav: CelkovyStav;
   pravni: PravniStav;
   nato: { polozky: NatoPolozka[] };
   hybridni: HybridniTlak;
   klidove?: string[];
+  dnyBezZmeny?: { dnu: number; odZacatkuArchivu: boolean } | null;
 }) {
   const d = stav.uroven ? UROVNE[stav.uroven] : null;
   const t = stav.uroven ? PASMA[stav.uroven ? UROVNE[stav.uroven].pasmo : "zelena"] : null;
@@ -234,7 +235,30 @@ export function SituacniPanel({
 
             {klidove.length > 0 && (
               <div className="mt-10">
-                <div className="stitek mb-4 !text-noc-tlum">Co se zatím nestalo</div>
+                <div className="mb-4 flex flex-wrap items-center gap-3">
+                  <span className="stitek !text-noc-tlum">Co se zatím nestalo</span>
+                  {dnyBezZmeny !== null && (
+                    <Napoveda
+                      popis={
+                        <span className="block space-y-1.5">
+                          <span className="block">
+                            {dnyBezZmeny.odZacatkuArchivu
+                              ? "Archiv za celou dobu svého běhu nezachytil žádnou změnu právního stavu ČR ani stavu NATO."
+                              : "Tolik dní uplynulo od poslední změny právního stavu ČR nebo stavu NATO."}
+                          </span>
+                          <span className="block opacity-80">
+                            Počítáno z archivu, ne odhadem. Starší období archiv nemá.
+                          </span>
+                        </span>
+                      }
+                    >
+                      <span className="stitek-tmavy inline-flex items-center gap-1.5 rounded-full border border-[#2a5f47] bg-[#0e2a20] px-2.5 py-1 text-[#7fdcac]">
+                        <Ikona nazev="hodiny" velikost={11} tah={1.7} />
+                        {dnyBezZmeny.odZacatkuArchivu ? "za celý archiv beze změny" : `beze změny ${dnyBezZmeny.dnu} dní`}
+                      </span>
+                    </Napoveda>
+                  )}
+                </div>
                 <ul className="grid max-w-[38rem] gap-2.5 sm:grid-cols-2">
                   {klidove.map((k) => (
                     <li
@@ -248,9 +272,9 @@ export function SituacniPanel({
                     </li>
                   ))}
                 </ul>
-                <p className="mt-4 max-w-[34rem] text-[11.5px] leading-relaxed text-noc-tlum/75">
-                  Uvádíme jen body ověřené proti primárnímu zdroji. Neověřenou položku sem
-                  nepíšeme — uklidňovat bez podkladu je stejná chyba jako strašit.
+                <p className="mt-4 max-w-[32rem] text-[11.5px] leading-relaxed text-noc-tlum/75">
+                  Jen body ověřené proti primárnímu zdroji. Uklidňovat bez podkladu je
+                  stejná chyba jako strašit.
                 </p>
               </div>
             )}
