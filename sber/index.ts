@@ -1,8 +1,9 @@
 import fs from "node:fs";
 import path from "node:path";
-import { ctiHtml, ctiRss, normalizuj, stahni } from "./nacti";
+import { ctiHtml, ctiRss, stahni } from "./nacti";
+import { rozhodni, type Stazeno } from "./rozhodovani";
 import { ZDROJE } from "./zdroje";
-import type { Nalez, RegistrZdroj, VysledekZdroje } from "./typy";
+import type { Nalez, VysledekZdroje } from "./typy";
 
 /**
  * Hodinový sběr.
@@ -29,15 +30,6 @@ function zapisJson(soubor: string, data: unknown) {
   fs.writeFileSync(path.join(KOREN, soubor), JSON.stringify(data, null, 2) + "\n", "utf-8");
 }
 
-interface Stazeno {
-  zdroj: RegistrZdroj;
-  ok: boolean;
-  text: string;
-  polozky: { nadpis: string; odkaz: string; publikovano: string | null; shrnuti: string }[];
-  chyba?: string;
-  stav: number | null;
-}
-
 async function stahniVse(): Promise<Stazeno[]> {
   return Promise.all(
     ZDROJE.map(async (z): Promise<Stazeno> => {
@@ -56,70 +48,6 @@ async function stahniVse(): Promise<Stazeno[]> {
       }
     }),
   );
-}
-
-/** Vrátí klíčová slova, která se ve staženém textu vyskytla. */
-function shody(s: Stazeno): string[] {
-  if (!s.ok || !s.zdroj.klicova?.length) return [];
-  const text = normalizuj(s.text);
-  return s.zdroj.klicova.filter((k) => text.includes(normalizuj(k)));
-}
-
-/** Krátký výřez okolo prvního výskytu — aby bylo ve frontě vidět, o co jde. */
-function vyrez(s: Stazeno, klic: string): string {
-  const text = s.text;
-  const i = normalizuj(text).indexOf(normalizuj(klic));
-  if (i < 0) return "";
-  return text.slice(Math.max(0, i - 120), i + 180).trim();
-}
-
-interface Rozhodnuti {
-  /** true = žádný signál, lze potvrdit zápor. */
-  ciste: boolean;
-  /** Zdroje, které se k položce vztahují a podařilo se je stáhnout. */
-  overeno: string[];
-  /** Zdroje, které selhaly — bez nich zápor nepotvrzujeme. */
-  selhalo: string[];
-  nalezy: Nalez[];
-}
-
-function rozhodni(klic: string, stazene: Stazeno[]): Rozhodnuti {
-  const relevantni = stazene.filter((s) => s.zdroj.tyka?.includes(klic));
-  const overeno: string[] = [];
-  const selhalo: string[] = [];
-  const nalezy: Nalez[] = [];
-
-  for (const s of relevantni) {
-    if (!s.ok) {
-      selhalo.push(s.zdroj.klic);
-      continue;
-    }
-    overeno.push(s.zdroj.klic);
-    const trefy = shody(s);
-    if (trefy.length) {
-      nalezy.push({
-        zdroj: s.zdroj.klic,
-        nazev: s.zdroj.nazev,
-        polozka: {
-          nadpis: `Signál u položky „${klic}“`,
-          odkaz: s.zdroj.odkaz ?? s.zdroj.url,
-          publikovano: null,
-          shrnuti: vyrez(s, trefy[0]),
-        },
-        shody: trefy,
-        tyka: [klic],
-      });
-    }
-  }
-
-  return {
-    // Zápor potvrzujeme jen tehdy, když se povedlo stáhnout aspoň jeden
-    // relevantní zdroj a ani jeden nehlásil signál.
-    ciste: overeno.length > 0 && nalezy.length === 0,
-    overeno,
-    selhalo,
-    nalezy,
-  };
 }
 
 async function main() {
