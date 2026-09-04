@@ -1,0 +1,25 @@
+{
+  "overeno": null,
+  "eskalacni": [
+    { "cislo": "01", "nazev": "Potvrzení státního řízení série sabotáží", "dopad": "vyznamny", "smer": "nahoru",
+      "popis": "Oficiální atribuce, která by z jednotlivých incidentů udělala řízenou kampaň. Rozhoduje závěr vyšetřovatelů, ne mediální tvrzení." },
+    { "cislo": "02", "nazev": "Aktivace článku 4 NATO", "dopad": "vyznamny", "smer": "nahoru",
+      "popis": "Žádost člena o společné konzultace. Je to nástroj porady — automaticky nevede k článku 5." },
+    { "cislo": "03", "nazev": "Evakuace diplomatického nebo vojenského personálu", "dopad": "vysoky", "smer": "nahoru",
+      "popis": "Odchod rodin personálu bývá jedním z prvních viditelných institucionálních signálů." },
+    { "cislo": "04", "nazev": "České mimořádné právní kroky", "dopad": "velmi-vysoky", "smer": "nahoru",
+      "popis": "Návrh vlády na stav ohrožení státu, svolání mimořádné schůze Parlamentu k obraně, změny branné legislativy." },
+    { "cislo": "05", "nazev": "Výrazný nový přesun ruských sil proti NATO", "dopad": "velmi-vysoky", "smer": "nahoru",
+      "popis": "Doložený přesun většího rozsahu k hranicím Aliance. Rutinní cvičení a rotace sem nepatří." },
+    { "cislo": "06", "nazev": "Uzavírání hranic z bezpečnostních důvodů", "dopad": "vysoky", "smer": "nahoru",
+      "popis": "Sledujeme odděleně od dočasného znovuzavedení kontrol, které je běžnějším a mnohem mírnějším opatřením." }
+  ],
+  "uklidnujici": [
+    "vyšetřování prokáže domácího pachatele bez státního řízení",
+    "pokles počtu incidentů oproti předchozím týdnům",
+    "diplomatická jednání s doloženým výsledkem",
+    "absence mobilizačních kroků v době, kdy byly očekávány",
+    "snížení vojenské aktivity u hranic Aliance",
+    "obnovení běžného režimu tam, kde byla zavedena mimořádná opatření"
+  ]
+}

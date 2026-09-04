@@ -1,0 +1,243 @@
+{
+  "overeno": null,
+  "polozky": [
+    {
+      "klic": "vycestovani",
+      "nazev": "Vycestování",
+      "ikona": "pas",
+      "stav": "bez-zdroje",
+      "hodnota": "",
+      "detail": "Kontrola na hranici není totéž co zákaz vycestování. Kontroly se dají zavést, aniž by se kdokoli nemohl vydat do zahraničí. Rozlišujeme obojí odděleně.",
+      "coByZmenilo": [
+        "dočasné znovuzavedení kontrol na některých vnitřních hranicích",
+        "delší čekací doby na konkrétních přechodech",
+        "omezení vstupu vyhlášené sousedním státem, ne ČR"
+      ],
+      "overeno": null,
+      "zdroje": [
+        {
+          "nazev": "Ministerstvo vnitra ČR",
+          "url": "https://www.mvcr.cz/",
+          "typ": "primary",
+          "publikovano": "",
+          "primarni": true,
+          "jazyk": "cs"
+        },
+        {
+          "nazev": "Ministerstvo zahraničních věcí — cestování",
+          "url": "https://mzv.gov.cz/jnp/cz/cestujeme/index.html",
+          "typ": "primary",
+          "publikovano": "",
+          "primarni": true,
+          "jazyk": "cs"
+        }
+      ]
+    },
+    {
+      "klic": "hranice",
+      "nazev": "Hranice a doprava",
+      "ikona": "hranice",
+      "stav": "bez-zdroje",
+      "hodnota": "",
+      "detail": "Sledujeme režim na hraničních přechodech a mimořádná dopravní omezení celostátního rozsahu.",
+      "coByZmenilo": [
+        "zavedení namátkových kontrol",
+        "uzavření jednotlivého přechodu z technických důvodů",
+        "omezení nákladní dopravy"
+      ],
+      "overeno": null,
+      "zdroje": [
+        {
+          "nazev": "Dopravní info (ŘSD)",
+          "url": "https://www.dopravniinfo.cz/",
+          "typ": "primary",
+          "publikovano": "",
+          "primarni": true,
+          "jazyk": "cs"
+        },
+        {
+          "nazev": "Policie ČR",
+          "url": "https://www.policie.cz/",
+          "typ": "primary",
+          "publikovano": "",
+          "primarni": true,
+          "jazyk": "cs"
+        }
+      ]
+    },
+    {
+      "klic": "palivo",
+      "nazev": "Palivo a čerpací stanice",
+      "ikona": "palivo",
+      "stav": "bez-zdroje",
+      "hodnota": "",
+      "detail": "Sledujeme dostupnost pohonných hmot a hlášená omezení provozu čerpacích stanic. Panické nakupování paliva situaci vždy zhorší — nedoporučujeme ho ani při zhoršení stavu.",
+      "coByZmenilo": [
+        "výpadek na jednotlivých stanicích při technické závadě distribuce",
+        "skokový růst cen bez omezení dostupnosti",
+        "uvolnění nouzových zásob Správou státních hmotných rezerv"
+      ],
+      "overeno": null,
+      "zdroje": [
+        {
+          "nazev": "Správa státních hmotných rezerv",
+          "url": "https://www.sshr.gov.cz/",
+          "typ": "primary",
+          "publikovano": "",
+          "primarni": true,
+          "jazyk": "cs"
+        },
+        {
+          "nazev": "Ministerstvo průmyslu a obchodu",
+          "url": "https://mpo.gov.cz/",
+          "typ": "primary",
+          "publikovano": "",
+          "primarni": true,
+          "jazyk": "cs"
+        }
+      ]
+    },
+    {
+      "klic": "elektrina",
+      "nazev": "Elektřina a energetika",
+      "ikona": "elektrina",
+      "stav": "bez-zdroje",
+      "hodnota": "",
+      "detail": "Sledujeme stav přenosové soustavy a vyhlášené stavy nouze v energetice. Vyšetřované útoky na infrastrukturu v jiných zemích samy o sobě neznamenají problém v ČR.",
+      "coByZmenilo": [
+        "vyhlášení stavu nouze v elektroenergetice",
+        "omezení odběru pro velké spotřebitele",
+        "rozsáhlejší výpadek přenosové soustavy"
+      ],
+      "overeno": null,
+      "zdroje": [
+        {
+          "nazev": "ČEPS — provoz přenosové soustavy",
+          "url": "https://www.ceps.cz/",
+          "typ": "primary",
+          "publikovano": "",
+          "primarni": true,
+          "jazyk": "cs"
+        },
+        {
+          "nazev": "Energetický regulační úřad",
+          "url": "https://www.eru.gov.cz/",
+          "typ": "primary",
+          "publikovano": "",
+          "primarni": true,
+          "jazyk": "cs"
+        }
+      ]
+    },
+    {
+      "klic": "plyn",
+      "nazev": "Plyn",
+      "ikona": "plyn",
+      "stav": "bez-zdroje",
+      "hodnota": "",
+      "detail": "Sledujeme stav plynárenské soustavy a naplněnost zásobníků.",
+      "coByZmenilo": [
+        "vyhlášení stavu nouze v plynárenství",
+        "výrazný pokles zásob mimo topnou sezónu"
+      ],
+      "overeno": null,
+      "zdroje": [
+        {
+          "nazev": "OTE — operátor trhu",
+          "url": "https://www.ote-cr.cz/",
+          "typ": "primary",
+          "publikovano": "",
+          "primarni": true,
+          "jazyk": "cs"
+        }
+      ]
+    },
+    {
+      "klic": "banky",
+      "nazev": "Banky a hotovost",
+      "ikona": "banky",
+      "stav": "bez-zdroje",
+      "hodnota": "",
+      "detail": "Sledujeme dostupnost platebního styku a výběrů hotovosti. Nedáváme finanční doporučení a neupozorňujeme na výběry — to by samo o sobě mohlo problém způsobit.",
+      "coByZmenilo": [
+        "výpadek platebního systému jedné banky",
+        "omezení bezhotovostních plateb při technické poruše",
+        "opatření ČNB k platebnímu styku"
+      ],
+      "overeno": null,
+      "zdroje": [
+        {
+          "nazev": "Česká národní banka",
+          "url": "https://www.cnb.cz/",
+          "typ": "primary",
+          "publikovano": "",
+          "primarni": true,
+          "jazyk": "cs"
+        }
+      ]
+    },
+    {
+      "klic": "komunikace",
+      "nazev": "Mobilní síť a internet",
+      "ikona": "komunikace",
+      "stav": "bez-zdroje",
+      "hodnota": "",
+      "detail": "Sledujeme rozsáhlejší výpadky mobilních sítí a pevného připojení a incidenty hlášené NÚKIB.",
+      "coByZmenilo": [
+        "výpadek jednoho operátora",
+        "regionální výpadek datové sítě",
+        "vyhlášení stavu kybernetického nebezpečí"
+      ],
+      "overeno": null,
+      "zdroje": [
+        {
+          "nazev": "Český telekomunikační úřad",
+          "url": "https://ctu.gov.cz/",
+          "typ": "primary",
+          "publikovano": "",
+          "primarni": true,
+          "jazyk": "cs"
+        },
+        {
+          "nazev": "NÚKIB",
+          "url": "https://nukib.gov.cz/",
+          "typ": "primary",
+          "publikovano": "",
+          "primarni": true,
+          "jazyk": "cs"
+        }
+      ]
+    },
+    {
+      "klic": "bezny-zivot",
+      "nazev": "Školy a běžný režim",
+      "ikona": "skoly",
+      "stav": "bez-zdroje",
+      "hodnota": "",
+      "detail": "Sledujeme celostátní mimořádná opatření, která by zasáhla školy, úřady nebo zaměstnání.",
+      "coByZmenilo": [
+        "krajské mimořádné opatření",
+        "pokyn hejtmana nebo krizového štábu"
+      ],
+      "overeno": null,
+      "zdroje": [
+        {
+          "nazev": "Vláda ČR",
+          "url": "https://vlada.gov.cz/",
+          "typ": "primary",
+          "publikovano": "",
+          "primarni": true,
+          "jazyk": "cs"
+        },
+        {
+          "nazev": "HZS ČR — Hasičský záchranný sbor",
+          "url": "https://www.hzscr.cz/",
+          "typ": "primary",
+          "publikovano": "",
+          "primarni": true,
+          "jazyk": "cs"
+        }
+      ]
+    }
+  ]
+}

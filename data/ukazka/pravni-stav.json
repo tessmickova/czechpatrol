@@ -1,0 +1,12 @@
+{
+  "overeno": "2026-09-04T13:00:00Z",
+  "polozky": [
+    { "klic": "stav-ohrozeni", "plati": false, "hodnota": "NE", "overeno": "2026-09-04T13:00:00Z" },
+    { "klic": "valecny-stav", "plati": false, "hodnota": "NE", "overeno": "2026-09-04T13:00:00Z" },
+    { "klic": "mobilizace", "plati": false, "hodnota": "NE", "overeno": "2026-09-04T13:00:00Z" },
+    { "klic": "nouzovy-stav", "plati": false, "hodnota": "NE", "overeno": "2026-09-04T13:00:00Z" },
+    { "klic": "vycestovani", "plati": false, "hodnota": "NE", "overeno": "2026-09-04T13:00:00Z" },
+    { "klic": "hranice", "plati": false, "hodnota": "NE", "overeno": "2026-09-04T13:00:00Z" },
+    { "klic": "schuze-parlamentu", "plati": false, "hodnota": "NE", "overeno": "2026-09-04T13:00:00Z" }
+  ]
+}

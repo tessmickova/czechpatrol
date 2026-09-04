@@ -1,0 +1,47 @@
+name: Hodinový sběr dat
+
+on:
+  schedule:
+    # Každou hodinu v 7. minutě — mimo špičku, kdy plánovač GitHubu nabírá zpoždění.
+    - cron: "7 * * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: sber
+  cancel-in-progress: false
+
+jobs:
+  sber:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: npm
+
+      - run: npm ci
+
+      - name: Sběr z veřejných zdrojů
+        run: npm run sber
+
+      - name: Nahrát změny dat
+        run: |
+          if [ -z "$(git status --porcelain data/)" ]; then
+            echo "Data se nezměnila, není co commitnout."
+            exit 0
+          fi
+          git config user.name "sber"
+          git config user.email "sber@users.noreply.github.com"
+          git add data/
+          git commit -m "Sběr dat $(date -u +'%Y-%m-%d %H:%M UTC')"
+          for i in 1 2 3 4; do
+            git push && break
+            echo "Push selhal, opakuji za $((2**i)) s"
+            sleep $((2**i))
+            git pull --rebase
+          done

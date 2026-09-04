@@ -1,0 +1,16 @@
+{
+  "overeno": "2026-09-04T13:00:00Z",
+  "casovyTlak": "Y2",
+  "dopadNaIndex": "Ukázka. Momentálně nemění celkové hodnocení.",
+  "ukazatele": [
+    { "nazev": "Ekonomický tlak", "uroven": "Y2" },
+    { "nazev": "Fiskální tlak", "uroven": "Y2" },
+    { "nazev": "Vojenské výsledky", "uroven": "Y1" },
+    { "nazev": "Personální čistky", "uroven": "Y1" },
+    { "nazev": "Boj elit", "uroven": "G3" },
+    { "nazev": "Mobilizační přípravy", "uroven": "Y1" },
+    { "nazev": "Veřejná aktivita Putina", "uroven": "G2" },
+    { "nazev": "Informace o nástupnictví", "uroven": "G1" }
+  ],
+  "sledujemePo": { "termin": "", "body": [] }
+}

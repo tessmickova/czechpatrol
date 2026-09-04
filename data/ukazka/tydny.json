@@ -1,0 +1,152 @@
+[
+  {
+    "zacatek": "2026-06-29T00:00:00Z",
+    "konec": "2026-07-05T23:59:59Z",
+    "celkova": "G3",
+    "hybridni": "Y1",
+    "primyStret": "G1",
+    "pocty": {
+      "zelena": 3,
+      "zluta": 2,
+      "oranzova": 0,
+      "cervena": 0
+    },
+    "uplnost": "castecne",
+    "shrnuti": "Ukázkové hodnocení. Slouží k posouzení vzhledu tabulky a grafu."
+  },
+  {
+    "zacatek": "2026-07-06T00:00:00Z",
+    "konec": "2026-07-12T23:59:59Z",
+    "celkova": "Y1",
+    "hybridni": "Y1",
+    "primyStret": "G1",
+    "pocty": {
+      "zelena": 2,
+      "zluta": 4,
+      "oranzova": 0,
+      "cervena": 0
+    },
+    "uplnost": "castecne",
+    "shrnuti": "Ukázkové týdenní hodnocení."
+  },
+  {
+    "zacatek": "2026-07-13T00:00:00Z",
+    "konec": "2026-07-19T23:59:59Z",
+    "celkova": "Y1",
+    "hybridni": "Y2",
+    "primyStret": "G1",
+    "pocty": {
+      "zelena": 2,
+      "zluta": 5,
+      "oranzova": 1,
+      "cervena": 0
+    },
+    "uplnost": "castecne",
+    "shrnuti": "Ukázkové týdenní hodnocení."
+  },
+  {
+    "zacatek": "2026-07-20T00:00:00Z",
+    "konec": "2026-07-26T23:59:59Z",
+    "celkova": "Y2",
+    "hybridni": "Y2",
+    "primyStret": "G1",
+    "pocty": {
+      "zelena": 1,
+      "zluta": 6,
+      "oranzova": 1,
+      "cervena": 0
+    },
+    "uplnost": "castecne",
+    "shrnuti": "Ukázkové týdenní hodnocení."
+  },
+  {
+    "zacatek": "2026-07-27T00:00:00Z",
+    "konec": "2026-08-02T23:59:59Z",
+    "celkova": "Y2",
+    "hybridni": "Y2",
+    "primyStret": "G2",
+    "pocty": {
+      "zelena": 2,
+      "zluta": 6,
+      "oranzova": 2,
+      "cervena": 0
+    },
+    "uplnost": "uplne",
+    "shrnuti": "Ukázkové týdenní hodnocení."
+  },
+  {
+    "zacatek": "2026-08-03T00:00:00Z",
+    "konec": "2026-08-09T23:59:59Z",
+    "celkova": "Y2",
+    "hybridni": "Y3",
+    "primyStret": "G2",
+    "pocty": {
+      "zelena": 1,
+      "zluta": 7,
+      "oranzova": 2,
+      "cervena": 0
+    },
+    "uplnost": "uplne",
+    "shrnuti": "Ukázkové týdenní hodnocení."
+  },
+  {
+    "zacatek": "2026-08-10T00:00:00Z",
+    "konec": "2026-08-16T23:59:59Z",
+    "celkova": "Y3",
+    "hybridni": "Y3",
+    "primyStret": "G2",
+    "pocty": {
+      "zelena": 2,
+      "zluta": 7,
+      "oranzova": 3,
+      "cervena": 0
+    },
+    "uplnost": "uplne",
+    "shrnuti": "Ukázkové týdenní hodnocení."
+  },
+  {
+    "zacatek": "2026-08-17T00:00:00Z",
+    "konec": "2026-08-23T23:59:59Z",
+    "celkova": "Y3",
+    "hybridni": "O1",
+    "primyStret": "G2",
+    "pocty": {
+      "zelena": 1,
+      "zluta": 8,
+      "oranzova": 4,
+      "cervena": 0
+    },
+    "uplnost": "uplne",
+    "shrnuti": "Ukázkové týdenní hodnocení."
+  },
+  {
+    "zacatek": "2026-08-24T00:00:00Z",
+    "konec": "2026-08-30T23:59:59Z",
+    "celkova": "YO",
+    "hybridni": "O1",
+    "primyStret": "G2",
+    "pocty": {
+      "zelena": 2,
+      "zluta": 7,
+      "oranzova": 5,
+      "cervena": 0
+    },
+    "uplnost": "uplne",
+    "shrnuti": "Ukázkové týdenní hodnocení."
+  },
+  {
+    "zacatek": "2026-08-31T00:00:00Z",
+    "konec": "2026-09-06T23:59:59Z",
+    "celkova": "YO",
+    "hybridni": "O1",
+    "primyStret": "G2",
+    "pocty": {
+      "zelena": 1,
+      "zluta": 8,
+      "oranzova": 6,
+      "cervena": 0
+    },
+    "uplnost": "uplne",
+    "shrnuti": "Ukázkové hodnocení posledního týdne."
+  }
+]

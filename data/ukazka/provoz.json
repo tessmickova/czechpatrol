@@ -1,0 +1,13 @@
+{
+  "overeno": "2026-09-04T13:00:00Z",
+  "polozky": [
+    { "klic": "vycestovani", "stav": "bezny", "hodnota": "bez mimořádného omezení", "overeno": "2026-09-04T13:00:00Z" },
+    { "klic": "hranice", "stav": "bezny", "hodnota": "běžný režim", "overeno": "2026-09-04T13:00:00Z" },
+    { "klic": "palivo", "stav": "bezny", "hodnota": "běžná dostupnost", "overeno": "2026-09-04T13:00:00Z" },
+    { "klic": "elektrina", "stav": "bezny", "hodnota": "bez stavu nouze", "overeno": "2026-09-04T13:00:00Z" },
+    { "klic": "plyn", "stav": "bezny", "hodnota": "bez stavu nouze", "overeno": "2026-09-04T13:00:00Z" },
+    { "klic": "banky", "stav": "bezny", "hodnota": "běžný provoz", "overeno": "2026-09-04T13:00:00Z" },
+    { "klic": "komunikace", "stav": "sledujeme", "hodnota": "bez celostátního výpadku", "overeno": "2026-09-04T13:00:00Z" },
+    { "klic": "bezny-zivot", "stav": "bezny", "hodnota": "běžný režim", "overeno": "2026-09-04T13:00:00Z" }
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "overeno": "2026-09-04T13:00:00Z",
+  "polozky": [
+    { "klic": "clanek-4", "aktivni": false, "hodnota": "neaktivován", "overeno": "2026-09-04T13:00:00Z" },
+    { "klic": "clanek-5", "aktivni": false, "hodnota": "neaktivován", "overeno": "2026-09-04T13:00:00Z" },
+    { "klic": "readiness", "aktivni": false, "hodnota": "bez veřejně oznámené změny", "overeno": "2026-09-04T13:00:00Z" },
+    { "klic": "evakuace", "aktivni": false, "hodnota": "žádná relevantní", "overeno": "2026-09-04T13:00:00Z" },
+    { "klic": "vychodni-kridlo", "aktivni": true, "hodnota": "dlouhodobě posílená přítomnost", "overeno": "2026-09-04T13:00:00Z" }
+  ]
+}

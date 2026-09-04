@@ -1,0 +1,139 @@
+{
+  "kdy": "2026-09-04T12:16:56.015Z",
+  "zdroje": [
+    {
+      "klic": "e-sbirka",
+      "ok": false,
+      "stav": 403,
+      "pocetPolozek": 0,
+      "chyba": "HTTP 403"
+    },
+    {
+      "klic": "vlada",
+      "ok": false,
+      "stav": 403,
+      "pocetPolozek": 0,
+      "chyba": "HTTP 403"
+    },
+    {
+      "klic": "psp",
+      "ok": false,
+      "stav": 403,
+      "pocetPolozek": 0,
+      "chyba": "HTTP 403"
+    },
+    {
+      "klic": "hrad",
+      "ok": false,
+      "stav": 403,
+      "pocetPolozek": 0,
+      "chyba": "HTTP 403"
+    },
+    {
+      "klic": "mvcr",
+      "ok": false,
+      "stav": 403,
+      "pocetPolozek": 0,
+      "chyba": "HTTP 403"
+    },
+    {
+      "klic": "mzv",
+      "ok": false,
+      "stav": 403,
+      "pocetPolozek": 0,
+      "chyba": "HTTP 403"
+    },
+    {
+      "klic": "nato",
+      "ok": false,
+      "stav": 403,
+      "pocetPolozek": 0,
+      "chyba": "HTTP 403"
+    },
+    {
+      "klic": "army",
+      "ok": false,
+      "stav": null,
+      "pocetPolozek": 0,
+      "chyba": "fetch failed"
+    },
+    {
+      "klic": "ceps",
+      "ok": false,
+      "stav": 403,
+      "pocetPolozek": 0,
+      "chyba": "HTTP 403"
+    },
+    {
+      "klic": "eru",
+      "ok": false,
+      "stav": 403,
+      "pocetPolozek": 0,
+      "chyba": "HTTP 403"
+    },
+    {
+      "klic": "ote",
+      "ok": false,
+      "stav": 403,
+      "pocetPolozek": 0,
+      "chyba": "HTTP 403"
+    },
+    {
+      "klic": "sshr",
+      "ok": false,
+      "stav": 403,
+      "pocetPolozek": 0,
+      "chyba": "HTTP 403"
+    },
+    {
+      "klic": "mpo",
+      "ok": false,
+      "stav": 403,
+      "pocetPolozek": 0,
+      "chyba": "HTTP 403"
+    },
+    {
+      "klic": "cnb",
+      "ok": false,
+      "stav": 403,
+      "pocetPolozek": 0,
+      "chyba": "HTTP 403"
+    },
+    {
+      "klic": "ctu",
+      "ok": false,
+      "stav": 403,
+      "pocetPolozek": 0,
+      "chyba": "HTTP 403"
+    },
+    {
+      "klic": "nukib",
+      "ok": false,
+      "stav": 403,
+      "pocetPolozek": 0,
+      "chyba": "HTTP 403"
+    },
+    {
+      "klic": "hzs",
+      "ok": false,
+      "stav": 403,
+      "pocetPolozek": 0,
+      "chyba": "HTTP 403"
+    },
+    {
+      "klic": "dopravni-info",
+      "ok": false,
+      "stav": 403,
+      "pocetPolozek": 0,
+      "chyba": "HTTP 403"
+    },
+    {
+      "klic": "policie",
+      "ok": false,
+      "stav": 403,
+      "pocetPolozek": 0,
+      "chyba": "HTTP 403"
+    }
+  ],
+  "novychVeFronte": 0
+}

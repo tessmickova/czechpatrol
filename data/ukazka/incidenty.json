@@ -1,0 +1,169 @@
+[
+  {
+    "id": "u1",
+    "slug": "ukazka-rozvodna-sever",
+    "titulek": "Pokus o narušení rozvodny — ukázkový záznam",
+    "kratkyTitulek": "Pokus o narušení rozvodny",
+    "zeme": "Severní republika",
+    "kodZeme": "XA",
+    "region": "Ukázkový kraj",
+    "kategorie": ["sabotaz", "infrastruktura"],
+    "datumUdalosti": "2026-09-01T21:40:00Z",
+    "datumZjisteni": "2026-09-03T08:15:00Z",
+    "aktualizovano": "2026-09-03T11:30:00Z",
+    "zavaznost": "O1",
+    "jistota": "vysoka",
+    "stav": "probiha",
+    "atribuce": "vysetrovana",
+    "fakta": [
+      "Toto je ukázkový záznam sloužící k posouzení vzhledu. Nepopisuje skutečnou událost.",
+      "Struktura ukazuje, jak vypadá doložený fakt s uvedeným zdrojem.",
+      "Údaje o čase, místě a rozsahu by zde byly převzaty z primárního zdroje."
+    ],
+    "neznameho": [
+      "Kdo je pachatel a zda jednal na cizí pokyn.",
+      "Zda incident souvisí s dalšími případy ve stejném období."
+    ],
+    "vyznam": "Ukázka analytického výkladu. Zde by stálo, jak událost zapadá do většího vzorce a proč ji sledujeme. Text je označen jako odhad, nikoli jako fakt.",
+    "eskalacniSpousteče": [
+      "potvrzení zahraničního státního řízení",
+      "opakování podobného incidentu v jiné zemi během několika dní"
+    ],
+    "deeskalacniSignaly": [
+      "prokázání domácího pachatele bez státního řízení"
+    ],
+    "zdroje": [
+      { "nazev": "Ukázkový úřad — tisková zpráva", "url": "https://example.invalid/uredni-zprava", "typ": "primary", "publikovano": "2026-09-03T08:15:00Z", "primarni": true, "jazyk": "cs" },
+      { "nazev": "Ukázková agentura", "url": "https://example.invalid/agentura", "typ": "wire", "publikovano": "2026-09-03T09:44:00Z", "primarni": false, "jazyk": "en" },
+      { "nazev": "Ukázkové regionální médium", "url": "https://example.invalid/region", "typ": "local", "publikovano": "2026-09-03T10:02:00Z", "primarni": false, "jazyk": "cs" }
+    ],
+    "souvisejici": [
+      { "incidentId": "u2", "potvrzena": false, "popis": "shodný způsob provedení, souvislost se prověřuje" },
+      { "incidentId": "u3", "potvrzena": true, "popis": "spojeno stejným vyšetřovacím spisem" }
+    ],
+    "historie": [
+      { "kdy": "2026-09-03T08:15:00Z", "text": "Úřad potvrdil, že k incidentu došlo, a zahájil šetření.", "novySignal": true },
+      { "kdy": "2026-09-03T11:30:00Z", "text": "Doplněn rozsah škody. Nejde o nový incident, jen o upřesnění téhož záznamu.", "novySignal": false }
+    ],
+    "novy": true,
+    "zapocitanoTyden": "2026-08-31",
+    "aiZpracovano": true,
+    "lidskyOvereno": true
+  },
+  {
+    "id": "u2",
+    "slug": "ukazka-kabel-pristav",
+    "titulek": "Poškození kabelu u přístavu — ukázkový záznam",
+    "kratkyTitulek": "Poškození kabelu u přístavu",
+    "zeme": "Přímořská republika",
+    "kodZeme": "XB",
+    "kategorie": ["infrastruktura", "vysetrovani"],
+    "datumUdalosti": "2026-08-27T04:10:00Z",
+    "datumZjisteni": "2026-09-02T14:00:00Z",
+    "aktualizovano": "2026-09-02T14:00:00Z",
+    "zavaznost": "Y2",
+    "jistota": "stredni",
+    "stav": "probiha",
+    "atribuce": "neznama",
+    "fakta": [
+      "Ukázkový záznam. Ukazuje případ, kdy je datum události výrazně starší než datum zjištění.",
+      "Rozdíl mezi oběma daty je na kartě i na časové ose vidět zvlášť."
+    ],
+    "neznameho": [
+      "Zda šlo o úmyslné poškození, nebo o technickou závadu.",
+      "Kdo poškození způsobil."
+    ],
+    "vyznam": "Ukázka výkladu u méně jistého záznamu. Nižší jistota informace se projeví v odznaku jistoty, ne v závažnosti.",
+    "eskalacniSpousteče": ["závěr vyšetřování o úmyslném poškození"],
+    "deeskalacniSignaly": ["potvrzení technické příčiny"],
+    "zdroje": [
+      { "nazev": "Ukázková agentura", "url": "https://example.invalid/agentura-2", "typ": "wire", "publikovano": "2026-09-02T14:00:00Z", "primarni": false, "jazyk": "en" },
+      { "nazev": "Ukázkové médium", "url": "https://example.invalid/medium", "typ": "media", "publikovano": "2026-09-02T15:20:00Z", "primarni": false, "jazyk": "cs" }
+    ],
+    "souvisejici": [
+      { "incidentId": "u1", "potvrzena": false, "popis": "prověřovaná podobnost" }
+    ],
+    "historie": [
+      { "kdy": "2026-09-02T14:00:00Z", "text": "Případ zveřejněn, dříve nebyl znám.", "novySignal": true }
+    ],
+    "novy": true,
+    "zapocitanoTyden": "2026-08-31",
+    "aiZpracovano": true,
+    "lidskyOvereno": true
+  },
+  {
+    "id": "u3",
+    "slug": "ukazka-atribuce",
+    "titulek": "Nové vyšetřovací zjištění u staršího případu — ukázkový záznam",
+    "kratkyTitulek": "Nové vyšetřovací zjištění",
+    "zeme": "Severní republika",
+    "kodZeme": "XA",
+    "kategorie": ["vysetrovani", "hybridni"],
+    "datumUdalosti": "2026-07-14T00:00:00Z",
+    "datumZjisteni": "2026-09-04T07:05:00Z",
+    "aktualizovano": "2026-09-04T07:05:00Z",
+    "zavaznost": "YO",
+    "jistota": "potvrzeno",
+    "stav": "obvineni",
+    "atribuce": "oficialni",
+    "fakta": [
+      "Ukázkový záznam. Ukazuje případ, kdy nový signál nevzniká novým útokem, ale novým zjištěním u staré události.",
+      "Datum události je z července, datum zjištění ze září."
+    ],
+    "neznameho": [
+      "Zda se závěr vztahuje i na další případy ze stejného období."
+    ],
+    "vyznam": "Ukázka výkladu u atribučního posunu. Právě takové zjištění se do týdenního počtu započítává jako nový signál, i když samotná událost je starší.",
+    "eskalacniSpousteče": ["rozšíření závěru na další případy"],
+    "deeskalacniSignaly": ["omezení závěru na jediného domácího pachatele"],
+    "zdroje": [
+      { "nazev": "Ukázkový vyšetřovací orgán", "url": "https://example.invalid/vysetrovani", "typ": "primary", "publikovano": "2026-09-04T07:05:00Z", "primarni": true, "jazyk": "cs" },
+      { "nazev": "Ukázková agentura", "url": "https://example.invalid/agentura-3", "typ": "wire", "publikovano": "2026-09-04T08:30:00Z", "primarni": false, "jazyk": "en" }
+    ],
+    "souvisejici": [
+      { "incidentId": "u1", "potvrzena": true, "popis": "stejný vyšetřovací spis" }
+    ],
+    "historie": [
+      { "kdy": "2026-07-14T00:00:00Z", "text": "Původní událost zaznamenána.", "novySignal": true },
+      { "kdy": "2026-09-04T07:05:00Z", "text": "Zveřejněn nový vyšetřovací závěr. Započítáno jako samostatný signál.", "novySignal": true }
+    ],
+    "novy": true,
+    "zapocitanoTyden": "2026-08-31",
+    "aiZpracovano": true,
+    "lidskyOvereno": true
+  },
+  {
+    "id": "u4",
+    "slug": "ukazka-dron",
+    "titulek": "Nezvyklá aktivita bezpilotního prostředku — ukázkový záznam",
+    "kratkyTitulek": "Aktivita bezpilotního prostředku",
+    "zeme": "Západní republika",
+    "kodZeme": "XC",
+    "kategorie": ["drony"],
+    "datumUdalosti": "2026-09-02T22:15:00Z",
+    "aktualizovano": "2026-09-03T06:00:00Z",
+    "zavaznost": "G3",
+    "jistota": "stredni",
+    "stav": "probiha",
+    "atribuce": "neznama",
+    "fakta": [
+      "Ukázkový záznam nižší závažnosti.",
+      "Ukazuje, jak vypadá signál, který sám o sobě celkové hodnocení nemění."
+    ],
+    "neznameho": ["Původ a účel prostředku."],
+    "vyznam": "Ukázka baseline. Jednotlivá aktivita tohoto druhu se děje opakovaně a sama o sobě hodnocení nezvyšuje. Zvyšuje ho až změna vzorce — vyšší četnost, více zemí, hlubší průnik.",
+    "eskalacniSpousteče": ["opakování ve více zemích během krátké doby"],
+    "deeskalacniSignaly": ["zjištění civilního původu"],
+    "zdroje": [
+      { "nazev": "Ukázkový úřad", "url": "https://example.invalid/urad-2", "typ": "primary", "publikovano": "2026-09-03T06:00:00Z", "primarni": true, "jazyk": "cs" }
+    ],
+    "souvisejici": [],
+    "historie": [
+      { "kdy": "2026-09-03T06:00:00Z", "text": "Incident zaznamenán.", "novySignal": true }
+    ],
+    "novy": false,
+    "zapocitanoTyden": "2026-08-31",
+    "aiZpracovano": true,
+    "lidskyOvereno": true
+  }
+]
