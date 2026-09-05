@@ -9,7 +9,7 @@ export const WEB = {
   popis:
     "Ověřené bezpečnostní události z Česka a Evropy, jejich kontext a možné další kroky — bez zbytečného strašení.",
   /** Doplnit po nasazení na doménu. Používá se pro OpenGraph, sitemap a kanál. */
-  url: "https://example.invalid",
+  url: "https://czechpatrol.pages.dev",
   jazyk: "cs",
 } as const;
 

@@ -1,0 +1,61 @@
+name: Nasazení
+
+on:
+  push:
+    branches: [main]
+  # Commit ze sběru dat je udělaný výchozím tokenem, a ten další workflow
+  # nespouští. Bez tohohle by se hodinová data na web nikdy nedostala.
+  workflow_run:
+    workflows: ["Hodinový sběr dat"]
+    types: [completed]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: nasazeni
+  cancel-in-progress: true
+
+jobs:
+  nasadit:
+    runs-on: ubuntu-latest
+    # Po sběru nasazujeme jen tehdy, když sběr dopadl dobře.
+    if: github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success'
+    env:
+      CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+      CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: npm
+
+      - run: npm ci
+
+      # Do produkce nepustíme build, který neprošel testy.
+      - name: Testy
+        run: npm test
+
+      - name: Sestavení
+        run: npm run build
+
+      - name: Založit projekt Pages, pokud ještě není
+        run: |
+          if npx --yes wrangler@3 pages project list | grep -q '^czechpatrol\|[[:space:]]czechpatrol[[:space:]]'; then
+            echo "Projekt už existuje."
+          else
+            npx --yes wrangler@3 pages project create czechpatrol --production-branch=main
+          fi
+
+      - name: Nasazení na Cloudflare Pages
+        uses: cloudflare/wrangler-action@v3
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          wranglerVersion: "3.114.1"
+          command: pages deploy out --project-name=czechpatrol --branch=main
