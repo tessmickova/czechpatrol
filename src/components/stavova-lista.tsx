@@ -117,32 +117,30 @@ export function kostkyProvozu(polozky: ProvozniPolozka[]): Kostka[] {
   }));
 }
 
-function Kosticka({ k, otevreno, onToggle }: { k: Kostka; otevreno: boolean; onToggle: () => void }) {
+function Kosticka({ k, otevreno, onToggle, duplikat = false }: { k: Kostka; otevreno: boolean; onToggle: () => void; duplikat?: boolean }) {
   const t = TON[k.ton];
   return (
     <button
       type="button"
       onClick={onToggle}
-      aria-expanded={otevreno}
-      aria-controls={`kostka-${k.klic}`}
-      className={`group flex min-w-[112px] shrink-0 items-center gap-2 rounded-[10px] border px-2.5 py-1.5 text-left transition-colors hover:border-akcent/60 ${
+      tabIndex={duplikat ? -1 : 0}
+      aria-hidden={duplikat || undefined}
+      aria-expanded={duplikat ? undefined : otevreno}
+      aria-controls={duplikat ? undefined : `kostka-${k.klic}`}
+      className={`group flex shrink-0 items-center gap-1.5 rounded-[8px] border px-2 py-1 text-left transition-colors hover:border-akcent/60 ${
         otevreno ? "border-akcent/70 bg-akcent/10" : t.ramecek
       }`}
     >
-      <span aria-hidden className={`h-[7px] w-[7px] shrink-0 rounded-[2px] ${t.tecka}`} />
-      <span className="min-w-0">
-        <span className="stitek block truncate !text-[9.5px] !text-tlum">{k.kratce}</span>
-        <span className={`flex items-center gap-1 text-[12.5px] font-bold uppercase leading-tight tracking-[0.02em] ${t.text}`}>
-          {k.hodnota}
-        </span>
-      </span>
+      <span aria-hidden className={`h-[6px] w-[6px] shrink-0 rounded-[2px] ${t.tecka}`} />
+      <span className="stitek whitespace-nowrap !text-[9px] !text-tlum">{k.kratce}</span>
+      <span className={`whitespace-nowrap text-[11.5px] font-bold uppercase leading-none tracking-[0.02em] ${t.text}`}>{k.hodnota}</span>
       <span
         aria-hidden
-        className={`ml-auto grid h-[18px] w-[18px] shrink-0 place-items-center rounded-full border transition-colors ${
+        className={`grid h-[14px] w-[14px] shrink-0 place-items-center rounded-full border transition-colors ${
           otevreno ? "border-akcent bg-akcent text-noc" : "border-akcent/50 text-akcent group-hover:bg-akcent/20"
         }`}
       >
-        <Ikona nazev="info" velikost={11} tah={2.2} />
+        <Ikona nazev="info" velikost={9} tah={2.4} />
       </span>
     </button>
   );
@@ -196,29 +194,64 @@ function Detail({ k, onClose }: { k: Kostka; onClose: () => void }) {
   );
 }
 
-function Skupina({
-  nazev, ikona, kostky, otevrena, setOtevrena, barva,
-}: { nazev: string; ikona: NazevIkony; kostky: Kostka[]; otevrena: string | null; setOtevrena: (k: string | null) => void; barva: string }) {
-  const aktivni = kostky.find((k) => k.klic === otevrena) ?? null;
-  return (
-    <div>
-      <div className="flex items-center gap-2">
-        <span className={`stitek flex shrink-0 items-center gap-1.5 ${barva}`}>
-          <Ikona nazev={ikona} velikost={12} /> {nazev}
+interface Skupina {
+  nazev: string;
+  ikona: NazevIkony;
+  barva: string;
+  kostky: Kostka[];
+}
+
+/**
+ * Jedna nekonečná lišta. Obsah je v proudu dvakrát, aby smyčka neměla
+ * viditelný šev; druhá kopie je pro čtečky a klávesnici neviditelná.
+ * Pohyb se zastaví při najetí, při zaostření, po otevření detailu
+ * a tlačítkem — a vůbec neběží, když má člověk zapnuté omezení animací.
+ */
+function Pas({
+  skupiny, otevrena, setOtevrena,
+}: { skupiny: Skupina[]; otevrena: string | null; setOtevrena: (k: string | null) => void }) {
+  const [pauza, setPauza] = useState(false);
+  const pocet = skupiny.reduce((n, s) => n + s.kostky.length, 0);
+  const proud = (duplikat: boolean) =>
+    skupiny.map((s) => (
+      <span key={`${s.nazev}-${duplikat ? "b" : "a"}`} className="flex shrink-0 items-center gap-1.5">
+        <span className={`stitek ml-3 flex shrink-0 items-center gap-1 !text-[9.5px] ${s.barva}`} aria-hidden={duplikat || undefined}>
+          <Ikona nazev={s.ikona} velikost={11} /> {s.nazev}
         </span>
-        <div className="pas-scroll -my-1 flex flex-1 gap-1.5 overflow-x-auto py-1">
-          {kostky.map((k) =>
-            k.placene ? (
-              <PlacenaVrstva key={k.klic} co="Doprava" kompaktni>
-                <Kosticka k={k} otevreno={otevrena === k.klic} onToggle={() => setOtevrena(otevrena === k.klic ? null : k.klic)} />
-              </PlacenaVrstva>
-            ) : (
-              <Kosticka key={k.klic} k={k} otevreno={otevrena === k.klic} onToggle={() => setOtevrena(otevrena === k.klic ? null : k.klic)} />
-            ),
-          )}
+        {s.kostky.map((k) =>
+          k.placene ? (
+            <PlacenaVrstva key={k.klic} co="Doprava" kompaktni>
+              <Kosticka k={k} duplikat={duplikat} otevreno={otevrena === k.klic} onToggle={() => setOtevrena(otevrena === k.klic ? null : k.klic)} />
+            </PlacenaVrstva>
+          ) : (
+            <Kosticka key={k.klic} k={k} duplikat={duplikat} otevreno={otevrena === k.klic} onToggle={() => setOtevrena(otevrena === k.klic ? null : k.klic)} />
+          ),
+        )}
+      </span>
+    ));
+
+  return (
+    <div className={`pas-obal relative flex items-center gap-2 ${pauza || otevrena ? "pas-pauza" : ""}`}>
+      <div className="pas-okno relative min-w-0 flex-1 overflow-hidden">
+        <div className="pas-bezi flex w-max items-center gap-1.5 pr-3" style={{ "--pas-trvani": `${Math.max(30, pocet * 3.2)}s` } as React.CSSProperties}>
+          {proud(false)}
+          {proud(true)}
         </div>
       </div>
-      {aktivni && <Detail k={aktivni} onClose={() => setOtevrena(null)} />}
+      <button
+        type="button"
+        onClick={() => setPauza((x) => !x)}
+        aria-pressed={pauza}
+        title={pauza ? "Spustit posun" : "Zastavit posun"}
+        className="grid h-6 w-6 shrink-0 place-items-center rounded-full border border-linka text-tlum2 transition-colors hover:border-akcent hover:text-inkoust"
+      >
+        <span className="sr-only">{pauza ? "Spustit posun lišty" : "Zastavit posun lišty"}</span>
+        {pauza ? (
+          <svg width="9" height="9" viewBox="0 0 10 10" aria-hidden><path d="M2 1l7 4-7 4z" fill="currentColor" /></svg>
+        ) : (
+          <svg width="9" height="9" viewBox="0 0 10 10" aria-hidden><path d="M2 1h2v8H2zM6 1h2v8H6z" fill="currentColor" /></svg>
+        )}
+      </button>
     </div>
   );
 }
@@ -236,23 +269,25 @@ export function StavovaLista({
     return () => window.removeEventListener("keydown", klavesa);
   }, [otevrena]);
 
+  const skupiny: Skupina[] = [
+    { nazev: "ČR", ikona: "vaha", barva: "!text-akcent", kostky: kostkyPravni(pravni) },
+    { nazev: "NATO", ikona: "stit", barva: "!text-[#b28cff]", kostky: kostkyNato(nato) },
+    { nazev: "Život", ikona: "stit-ok", barva: "!text-[#8ff0c0]", kostky: kostkyProvozu(provoz) },
+  ];
+  const aktivni = skupiny.flatMap((s) => s.kostky).find((k) => k.klic === otevrena) ?? null;
+
   return (
     <div ref={obal} className="neni-tisk border-b border-linka bg-papir/80">
-      <div className="mx-auto max-w-[1320px] px-4 py-2.5 sm:px-6">
-        <p className="mb-2 flex flex-wrap items-center gap-x-3 gap-y-1 text-[12.5px] text-tlum">
-          <span className="stitek-tmavy inline-flex items-center gap-1.5 rounded-full border border-linka px-2 py-[3px] text-tlum">
-            <span aria-hidden className="h-[5px] w-[5px] rounded-full bg-tlum2" /> Beta · AI-assisted
+      <div className="mx-auto max-w-[1320px] px-4 py-1.5 sm:px-6">
+        <p className="mb-1 flex flex-wrap items-center gap-x-2 gap-y-0.5 text-[11px] leading-tight text-tlum2">
+          <span className="stitek-tmavy inline-flex items-center gap-1 rounded-full border border-linka px-1.5 py-[2px] !text-[8.5px] text-tlum2">
+            <span aria-hidden className="h-[4px] w-[4px] rounded-full bg-tlum2" /> Beta · AI
           </span>
-          <span>
-            <b className="font-semibold text-inkoust">Hobby projekt.</b> Není součástí vlády ČR, Armády ČR, NATO, EU ani bezpečnostních složek.
-          </span>
-          <Link href="/metodika/" className="stitek ml-auto hover:text-inkoust">Metodika</Link>
+          <span><b className="font-semibold text-tlum">Hobby projekt.</b> Není součástí vlády ČR, Armády ČR, NATO, EU ani bezpečnostních složek.</span>
+          <Link href="/metodika/" className="stitek ml-auto !text-[9px] hover:text-inkoust">Metodika</Link>
         </p>
-        <div className="space-y-2">
-          <Skupina nazev="ČR" ikona="vaha" barva="!text-akcent" kostky={kostkyPravni(pravni)} otevrena={otevrena} setOtevrena={setOtevrena} />
-          <Skupina nazev="NATO" ikona="stit" barva="!text-[#b28cff]" kostky={kostkyNato(nato)} otevrena={otevrena} setOtevrena={setOtevrena} />
-          <Skupina nazev="Život" ikona="stit-ok" barva="!text-[#8ff0c0]" kostky={kostkyProvozu(provoz)} otevrena={otevrena} setOtevrena={setOtevrena} />
-        </div>
+        <Pas skupiny={skupiny} otevrena={otevrena} setOtevrena={setOtevrena} />
+        {aktivni && <Detail k={aktivni} onClose={() => setOtevrena(null)} />}
       </div>
     </div>
   );

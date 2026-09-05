@@ -307,6 +307,25 @@ details > summary::-webkit-details-marker { display: none; }
 
 input[type="range"] { accent-color: var(--color-akcent); }
 
+/* ---------- rolující lišta ---------- */
+
+@keyframes pas-jizda {
+  to { transform: translateX(-50%); }
+}
+.pas-bezi {
+  animation: pas-jizda var(--pas-trvani, 60s) linear infinite;
+}
+.pas-obal:hover .pas-bezi,
+.pas-obal:focus-within .pas-bezi,
+.pas-pauza .pas-bezi {
+  animation-play-state: paused;
+}
+/* Okraje se ztrácejí do pozadí — je vidět, že proud pokračuje. */
+.pas-okno {
+  mask-image: linear-gradient(90deg, transparent, #000 24px, #000 calc(100% - 24px), transparent);
+  -webkit-mask-image: linear-gradient(90deg, transparent, #000 24px, #000 calc(100% - 24px), transparent);
+}
+
 /* ---------- parallax ---------- */
 
 .vrstva {
@@ -318,6 +337,9 @@ input[type="range"] { accent-color: var(--color-akcent); }
   html { scroll-behavior: auto; }
   .vrstva { transform: none !important; }
   .sken::after { animation: none; }
+  /* Bez pohybu: lišta stojí a dá se posouvat prstem nebo kolečkem. */
+  .pas-bezi { animation: none; }
+  .pas-okno { overflow-x: auto; mask-image: none; -webkit-mask-image: none; }
   * { transition-duration: 0.01ms !important; animation-duration: 0.01ms !important; }
 }
 
