@@ -7,13 +7,16 @@ import { BUY_ME_A_COFFEE_URL, WEB } from "@/config/web";
 import { Ikona } from "./ikony";
 
 /** Hlavní navigace zůstává krátká. Zbytek rozcestník na přehledu a patička. */
+/**
+ * Web je jedna stránka. Navigace proto skáče na sekce dashboardu,
+ * ne na samostatné adresy.
+ */
 const ODKAZY = [
   { href: "/", label: "Přehled" },
+  { href: "/#cr", label: "ČR" },
+  { href: "/#udalosti", label: "Události" },
+  { href: "/#vyvoj", label: "Vývoj" },
   { href: "/dnes/", label: "Dnes" },
-  { href: "/udalosti/", label: "Události" },
-  { href: "/cr/", label: "ČR" },
-  { href: "/tlak/", label: "Tlak" },
-  { href: "/trend/", label: "Vývoj" },
 ];
 
 /** Doplňkové cesty — jen v mobilním menu a v patičce. */
@@ -38,7 +41,7 @@ export function Navigace() {
   }, [otevreno]);
 
   const aktivni = (href: string) =>
-    href === "/" ? cesta === "/" : cesta.startsWith(href);
+    href.includes("#") ? false : href === "/" ? cesta === "/" : cesta.startsWith(href);
 
   return (
     <header className="neni-tisk sklo sticky top-0 z-50 border-b border-linka">

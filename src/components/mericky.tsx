@@ -17,8 +17,11 @@ function bod(cx: number, cy: number, r: number, uhel: number) {
  * plné nalevo.
  */
 export function ObloukovyMerak({
-  uroven, naNoci = false, velikost = 260, popisek,
-}: { uroven: Uroven | null; naNoci?: boolean; velikost?: number; popisek?: string }) {
+  uroven, naNoci = false, velikost = 260, popisek, skrytPopisek = false,
+}: {
+  uroven: Uroven | null; naNoci?: boolean; velikost?: number;
+  popisek?: string; skrytPopisek?: boolean;
+}) {
   const cx = velikost / 2;
   const cy = velikost / 2;
   const r = velikost / 2 - 16;
@@ -41,9 +44,9 @@ export function ObloukovyMerak({
 
   return (
     <svg
-      viewBox={`0 0 ${velikost} ${cy + 62}`}
+      viewBox={`0 0 ${velikost} ${cy + (skrytPopisek ? 24 : 62)}`}
       width={velikost}
-      height={cy + 62}
+      height={cy + (skrytPopisek ? 24 : 62)}
       role="img"
       aria-label={uroven ? `Celková úroveň: ${UROVNE[uroven].nazev}` : "Celková úroveň zatím nestanovena"}
       className="max-w-full"
@@ -66,7 +69,8 @@ export function ObloukovyMerak({
       <text x={cx + r + 6} y={cy + 17} textAnchor="end" fontSize="9"
         fill={naNoci ? "#949eae" : "#8a93a1"} letterSpacing="0.9">KRITICKÁ</text>
 
-      {/* Hodnota patří dovnitř přístroje, ne pod něj. */}
+      {/* Hodnota patří dovnitř přístroje — pokud ji nenese okolí. */}
+      {!skrytPopisek && (
       <text
         x={cx}
         y={cy + 50}
@@ -86,6 +90,7 @@ export function ObloukovyMerak({
       >
         {popisek ?? (uroven ? UROVNE[uroven].nazev : "Zatím nestanoveno")}
       </text>
+      )}
     </svg>
   );
 }

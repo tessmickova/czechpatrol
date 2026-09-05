@@ -17,17 +17,18 @@ const BARVY: Record<string, { pruh: string; text: string }> = {
  * vyšetřovací posun rozhoupal oběma směry.
  */
 export function PuvodcePanel({
-  skupiny,
+  skupiny, bezHlavicky = false,
 }: {
   skupiny: { klic: string; nazev: string; pocet: number }[];
+  bezHlavicky?: boolean;
 }) {
   const celkem = skupiny.reduce((a, b) => a + b.pocet, 0);
   if (!celkem) return null;
 
   return (
-    <Karta className="p-5 sm:p-6">
+    <Karta className="border-0 bg-transparent p-0">
       <div className="mb-5 flex flex-wrap items-baseline justify-between gap-3">
-        <h3 className="podnadpis text-[17px]">Co se ví o původci</h3>
+        {!bezHlavicky && <h3 className="podnadpis text-[17px]">Co se ví o původci</h3>}
         <span className="stitek">{celkem} záznamů</span>
       </div>
 

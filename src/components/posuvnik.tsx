@@ -186,13 +186,12 @@ export function CasovyPosuvnik({ archiv }: { archiv: Archiv }) {
         </div>
 
         {/* křivka s běžcem */}
+        <div className="stitek mb-2 flex items-center gap-2 !text-noc-tlum">
+          <span>Svislá osa</span>
+          <span aria-hidden className="h-px w-6 bg-white/15" />
+          <span>Nízká → Kritická</span>
+        </div>
         <div className="relative mb-3">
-          <span aria-hidden className="stitek pointer-events-none absolute right-0 top-0 !text-[9px] !text-noc-tlum/60">
-            Kritická
-          </span>
-          <span aria-hidden className="stitek pointer-events-none absolute bottom-0 right-0 !text-[9px] !text-noc-tlum/60">
-            Nízká
-          </span>
           <svg
             viewBox={`0 0 ${SIRKA} ${VYSKA}`}
             preserveAspectRatio="none"

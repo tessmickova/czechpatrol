@@ -80,15 +80,24 @@ export function PravniSemafor({
 
 /* ---------------- NATO ---------------- */
 
-export function NatoPanel({ polozky, overeno }: { polozky: NatoPolozka[]; overeno: string | null }) {
+export function NatoPanel({
+  polozky, overeno, bezHlavicky = false,
+}: { polozky: NatoPolozka[]; overeno: string | null; bezHlavicky?: boolean }) {
   return (
     <Karta className="p-5 sm:p-6">
-      <div className="mb-4 flex items-baseline justify-between gap-4">
-        <h3 className="podnadpis text-[16px]">NATO</h3>
-        <span className="cislice text-[11.5px] text-tlum2">
+      {!bezHlavicky && (
+        <div className="mb-4 flex items-baseline justify-between gap-4">
+          <h3 className="podnadpis text-[16px]">NATO</h3>
+          <span className="cislice text-[11.5px] text-tlum2">
+            {overeno ? `ověřeno ${datum(overeno)}` : "neověřeno"}
+          </span>
+        </div>
+      )}
+      {bezHlavicky && (
+        <p className="stitek mb-4">
           {overeno ? `ověřeno ${datum(overeno)}` : "neověřeno"}
-        </span>
-      </div>
+        </p>
+      )}
       <dl className="divide-y divide-linka2">
         {polozky.map((p) => (
           <div key={p.klic} className="flex items-start justify-between gap-4 py-3">
@@ -382,17 +391,20 @@ export function ScenarovaCesta() {
 
 /* ---------------- Rusko: vnitřní tlak režimu ---------------- */
 
-export function RuskoPanel({ stav }: { stav: RuskoStav }) {
+export function RuskoPanel({
+  stav, bezHlavicky = false,
+}: { stav: RuskoStav; bezHlavicky?: boolean }) {
   return (
     <Karta className="p-5 sm:p-6">
       <div className="mb-5 flex flex-wrap items-start justify-between gap-3">
-        <div>
-          <h3 className="podnadpis text-[16px]">Rusko: vnitřní tlak režimu</h3>
-          <p className="mt-1.5 max-w-[34rem] text-[12.5px] leading-relaxed text-tlum">
-            Doplňkový ukazatel. Sám o sobě nemění celkové hodnocení — sledujeme ho
-            proto, že jeho změny se často promítnou do chování navenek.
-          </p>
-        </div>
+        {!bezHlavicky && (
+          <div>
+            <h3 className="podnadpis text-[16px]">Rusko: vnitřní tlak režimu</h3>
+            <p className="mt-1.5 max-w-[34rem] text-[12.5px] leading-relaxed text-tlum">
+              Doplňkový ukazatel. Sám o sobě nemění celkové hodnocení.
+            </p>
+          </div>
+        )}
         <OdznakTypu typ="odhad" vpravo />
       </div>
 
