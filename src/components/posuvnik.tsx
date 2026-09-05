@@ -72,29 +72,51 @@ export function CasovyPosuvnik({ archiv }: { archiv: Archiv }) {
     return out;
   }, [snimky]);
 
-  const [i, setI] = useState(Math.max(0, dny.length - 1));
+  /**
+   * Pozice je desetinná, ne index dne.
+   *
+   * Přehrávání pohání requestAnimationFrame, takže běžec jede spojitě
+   * a nezávisle na snímkové frekvenci. Krokování intervalem se pralo
+   * s přechodem v CSS a viditelně sekalo.
+   */
+  const [pozice, setPozice] = useState(0);
   const [prehrava, setPrehrava] = useState(false);
-  const casovac = useRef<number | null>(null);
+  const snimek = useRef(0);
 
   useEffect(() => {
-    setI(Math.max(0, dny.length - 1));
+    setPozice(Math.max(0, dny.length - 1));
   }, [dny.length]);
 
   useEffect(() => {
-    if (!prehrava || !dny.length) return;
-    casovac.current = window.setInterval(() => {
-      setI((x) => {
-        if (x >= dny.length - 1) {
+    if (!prehrava || dny.length < 2) return;
+    if (matchMedia("(prefers-reduced-motion: reduce)").matches) {
+      setPozice(dny.length - 1);
+      setPrehrava(false);
+      return;
+    }
+
+    const DNU_ZA_VTERINU = 4.5;
+    let posledni = performance.now();
+
+    const krok = (ted: number) => {
+      const dt = Math.min(ted - posledni, 100) / 1000;
+      posledni = ted;
+      setPozice((x) => {
+        const nova = x + dt * DNU_ZA_VTERINU;
+        if (nova >= dny.length - 1) {
           setPrehrava(false);
-          return x;
+          return dny.length - 1;
         }
-        return x + 1;
+        return nova;
       });
-    }, 90);
-    return () => {
-      if (casovac.current) clearInterval(casovac.current);
+      snimek.current = requestAnimationFrame(krok);
     };
+
+    snimek.current = requestAnimationFrame(krok);
+    return () => cancelAnimationFrame(snimek.current);
   }, [prehrava, dny.length]);
+
+  const i = Math.round(pozice);
 
   if (dny.length < 2) {
     return (
@@ -108,14 +130,14 @@ export function CasovyPosuvnik({ archiv }: { archiv: Archiv }) {
 
   const aktualni = dny[Math.min(i, dny.length - 1)];
   const s = aktualni.snimek;
-  const posledni = i === dny.length - 1;
+  const posledni = i >= dny.length - 1;
   const t = s.uroven ? PASMA[UROVNE[s.uroven].pasmo] : null;
 
   /* --- křivka úrovně přes celý archiv --- */
-  const SIRKA = 1000, VYSKA = 96;
+  const SIRKA = 1000, VYSKA = 96, OKRAJ = 10;
   const x = (n: number) => (n / (dny.length - 1)) * SIRKA;
   const y = (d: (typeof dny)[number]) =>
-    VYSKA - 6 - ((d.snimek.uroven ? UROVNE[d.snimek.uroven].poradi - 1 : 0) / 12) * (VYSKA - 14);
+    VYSKA - OKRAJ - ((d.snimek.uroven ? UROVNE[d.snimek.uroven].poradi - 1 : 0) / 12) * (VYSKA - 2 * OKRAJ);
 
   // Schodovitá křivka: hodnota drží, dokud ji nový snímek nezmění.
   const cesta = dny
@@ -141,7 +163,7 @@ export function CasovyPosuvnik({ archiv }: { archiv: Archiv }) {
             <button
               type="button"
               onClick={() => {
-                if (posledni && !prehrava) setI(0);
+                if (posledni && !prehrava) setPozice(0);
                 setPrehrava((x) => !x);
               }}
               className="sklo-noc-slabe flex items-center gap-2 rounded-full px-3.5 py-2 text-[12.5px] font-medium text-noc-text transition-colors hover:bg-white/10"
@@ -153,7 +175,7 @@ export function CasovyPosuvnik({ archiv }: { archiv: Archiv }) {
               type="button"
               onClick={() => {
                 setPrehrava(false);
-                setI(dny.length - 1);
+                setPozice(dny.length - 1);
               }}
               disabled={posledni}
               className="sklo-noc-slabe rounded-full px-3.5 py-2 text-[12.5px] font-medium text-noc-text transition-colors hover:bg-white/10 disabled:opacity-40"
@@ -165,10 +187,16 @@ export function CasovyPosuvnik({ archiv }: { archiv: Archiv }) {
 
         {/* křivka s běžcem */}
         <div className="relative mb-3">
+          <span aria-hidden className="stitek pointer-events-none absolute right-0 top-0 !text-[9px] !text-noc-tlum/60">
+            Kritická
+          </span>
+          <span aria-hidden className="stitek pointer-events-none absolute bottom-0 right-0 !text-[9px] !text-noc-tlum/60">
+            Nízká
+          </span>
           <svg
             viewBox={`0 0 ${SIRKA} ${VYSKA}`}
             preserveAspectRatio="none"
-            className="h-[96px] w-full"
+            className="h-[104px] w-full"
             role="img"
             aria-label="Vývoj celkové úrovně v čase"
           >
@@ -178,9 +206,19 @@ export function CasovyPosuvnik({ archiv }: { archiv: Archiv }) {
                 <stop offset="100%" stopColor="#6f9dfb" stopOpacity="0" />
               </linearGradient>
               <clipPath id="do-bezce">
-                <rect x="0" y="0" width={x(i)} height={VYSKA} />
+                <rect x="0" y="0" width={Math.max(0, x(pozice))} height={VYSKA} />
               </clipPath>
             </defs>
+
+            {/*
+              Osa drží celou stupnici, i když se data pohybují dole. Zkrácená
+              osa by z drobného posunu udělala strmý skok — u hodnocení rizika
+              je to ta nejběžnější lež v grafu.
+            */}
+            <line x1="0" y1={OKRAJ} x2={SIRKA} y2={OKRAJ} stroke="rgba(255,255,255,0.09)"
+              strokeWidth="1" vectorEffect="non-scaling-stroke" />
+            <line x1="0" y1={VYSKA - OKRAJ} x2={SIRKA} y2={VYSKA - OKRAJ}
+              stroke="rgba(255,255,255,0.09)" strokeWidth="1" vectorEffect="non-scaling-stroke" />
 
             <path d={plocha} fill="url(#plocha-archiv)" opacity="0.35" />
             <path d={cesta} fill="none" stroke="#6f9dfb" strokeWidth="2" opacity="0.28"
@@ -199,14 +237,18 @@ export function CasovyPosuvnik({ archiv }: { archiv: Archiv }) {
             )}
           </svg>
 
-          {/* Běžec se posouvá plynule a sedí na křivce, ne uprostřed plochy. */}
+          {/*
+            Vodorovný posun řídí rAF, proto tu není přechod — dvě animace
+            najednou by se praly. Svislý skok je vzácný (jen při změně
+            úrovně), tam přechod naopak pomáhá.
+          */}
           <span
             aria-hidden
-            className="pointer-events-none absolute inset-y-0 w-px bg-white/30 transition-[left] duration-100 ease-out"
-            style={{ left: `${(i / (dny.length - 1)) * 100}%` }}
+            className="pointer-events-none absolute inset-y-0 w-px bg-white/30"
+            style={{ left: `${(pozice / (dny.length - 1)) * 100}%` }}
           >
             <span
-              className={`absolute -left-[6px] h-[13px] w-[13px] -translate-y-1/2 rounded-full border-2 border-noc shadow-[0_0_0_3px_rgba(111,157,251,0.25)] transition-[top] duration-100 ease-out ${
+              className={`absolute -left-[6px] h-[13px] w-[13px] -translate-y-1/2 rounded-full border-2 border-noc shadow-[0_0_0_3px_rgba(111,157,251,0.25)] transition-[top] duration-300 ease-out ${
                 t ? t.teckaNoc : "bg-white/40"
               }`}
               style={{ top: `${(y(aktualni) / VYSKA) * 100}%` }}
@@ -222,7 +264,7 @@ export function CasovyPosuvnik({ archiv }: { archiv: Archiv }) {
           value={i}
           onChange={(e) => {
             setPrehrava(false);
-            setI(Number(e.target.value));
+            setPozice(Number(e.target.value));
           }}
           aria-label="Posun v čase"
           aria-valuetext={datum(new Date(aktualni.den).toISOString())}
