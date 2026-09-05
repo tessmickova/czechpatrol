@@ -4,14 +4,13 @@ import { Ikona } from "@/components/ikony";
 import { OdberPanel } from "@/components/odber";
 import { Mrizka, Panel } from "@/components/panel";
 import { WatchlistPanel } from "@/components/panely";
-import { CasovyPosuvnik } from "@/components/posuvnik";
 import { KdoZaTimStoji } from "@/components/puvodce";
 import { GrafMesicu, GrafTrendu, TabulkaTydnu } from "@/components/trend";
 import { Zaznamy } from "@/components/zaznamy";
 import { SeznamZdroju } from "@/components/zdroje";
 import { DopadPoZemich } from "@/components/zeme";
 import {
-  archiv, celkovyStav, hybridniTlak, incidenty, mesice, nato, nepotvrzene,
+  celkovyStav, hybridniTlak, incidenty, mesice, nato, nepotvrzene,
   posledniOvereni, pravniStav, tlakCr, tydny, urovenObcanu, watchlist,
 } from "@/lib/data";
 
@@ -50,6 +49,7 @@ export default function Prehled() {
           nadpis="Ověřené, nepotvrzené i vyvrácené záznamy od roku 2014"
           popis="Jedna osa, deset nejnovějších. U každého řádku zvlášť, jak je potvrzená informace, pachatel a zdroj."
           akce={<Link href="/udalosti/" className={odkaz}>Samostatně</Link>}
+          holy
         >
           <Zaznamy incidenty={vse} neprosle={nepotvrzene()} />
         </Panel>
@@ -61,6 +61,7 @@ export default function Prehled() {
           nadpis="Kde se to děje a kolik"
           popis={`Letošní záznamy (${rok}). Česko je vždy první — i když tam nic není. Činy a prohlášení se počítají zvlášť.`}
           sirka="dve-tretiny"
+          holy
         >
           <DopadPoZemich />
         </Panel>
@@ -71,30 +72,21 @@ export default function Prehled() {
           nadpis="Kdo za tím stojí"
           popis={`Letos (${rok}). Jen činy. Jeden případ = jeden čin, i když má víc záznamů.`}
           sirka="tretina"
+          holy
         >
           <KdoZaTimStoji />
         </Panel>
 
-        <Panel kod="Letos po týdnech" ikona="graf" nadpis="Vývoj po týdnech" popis="Od začátku roku. Bez dat = bez dat." sirka="dve-tretiny">
+        <Panel kod="Letos po týdnech" ikona="graf" nadpis="Vývoj po týdnech" popis="Od začátku roku. Bez dat = bez dat." sirka="dve-tretiny" holy>
           <GrafTrendu tydny={tydenni} />
         </Panel>
 
-        <Panel kod="Od roku 2010" ikona="graf" nadpis="Vývoj po měsících" popis="Sloupce = hodnocení (od 7/2026). Tečky = počet záznamů v měsíci." sirka="tretina">
+        <Panel kod="Od roku 2010" ikona="graf" nadpis="Vývoj po měsících" popis="Sloupce = hodnocení (od 7/2026). Tečky = počet záznamů v měsíci." sirka="tretina" holy>
           <GrafMesicu mesice={mesice().mesice} />
         </Panel>
 
-        <Panel kod="Týdny" ikona="osa" nadpis="Týdenní přehled" popis="Vykřičník = zvýšený počet signálů. Tři jsou maximum.">
+        <Panel kod="Týdny" ikona="osa" nadpis="Týdenní přehled" popis="Vykřičník = zvýšený počet signálů. Tři jsou maximum." holy>
           <TabulkaTydnu tydny={tydenni} />
-        </Panel>
-
-        <Panel
-          id="vyvoj"
-          kod="Vývoj v čase"
-          ikona="hodiny"
-          nadpis="Jak se situace vyvíjela"
-          popis="Přehrajte si den po dni, co web tvrdil. Ukazují se jen dny, kdy se něco změnilo."
-        >
-          <CasovyPosuvnik archiv={archiv()} />
         </Panel>
 
         <Panel id="odber" kod="Odběr" ikona="zvonek" nadpis="Dáme vědět, když se něco změní" sirka="dve-tretiny">

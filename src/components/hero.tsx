@@ -69,7 +69,7 @@ export function SituacniPanel({
                 </div>
               </div>
 
-              <div className="grid grid-cols-3 gap-2">
+              <div className="grid grid-cols-3 divide-x divide-linka2 border-y border-linka2">
                 <Merak nadpis="Česko" popis="ze záznamů CZ" uroven={tlakCr.celkem} />
                 <Merak nadpis="NATO a Evropa" popis="hybridní tlak" uroven={hybridni.celkem} />
                 <Merak nadpis="Občané ČR" popis={obcane.uroven === "G1" ? "bez omezení" : "omezení platí"} uroven={obcane.uroven} vlastniNazev={obcane.uroven === "G1" ? "Bez omezení" : undefined} napoveda={`${obcane.popis}${obcane.neovereno ? ` · ${obcane.neovereno} položek zatím neověřeno` : ""}`} />
@@ -89,8 +89,8 @@ export function SituacniPanel({
 
             {/* pravá: poslední záznamy + čísla + tlačítka */}
             <div className="flex flex-col gap-3">
-              <div className="sklo-noc-slabe rounded-[14px] p-3.5">
-                <div className="mb-2 flex items-center justify-between">
+              <div>
+                <div className="mb-2 flex items-center justify-between border-b border-linka2 pb-2">
                   <span className="stitek !text-noc-tlum">Poslední záznamy</span>
                   <Link href="#udalosti" className="stitek !text-akcent hover:!text-akcent-svetla">všechny</Link>
                 </div>
@@ -146,7 +146,7 @@ function Merak({
 }: { nadpis: string; popis: string; uroven: Uroven | null; vlastniNazev?: string; napoveda?: string }) {
   const t = uroven ? PASMA[UROVNE[uroven].pasmo] : null;
   const obsah = (
-    <span className="sklo-noc-slabe flex flex-col items-center rounded-[14px] px-2 py-2.5 text-center">
+    <span className="flex flex-col items-center px-2 py-3 text-center">
       <span className="stitek !text-[9.5px] !text-noc-text">{nadpis}</span>
       <ObloukovyMerak uroven={uroven} naNoci velikost={104} skrytPopisek />
       <span className={`-mt-1 text-[12.5px] font-bold uppercase leading-tight tracking-[0.03em] ${t ? t.textNoc : "text-noc-tlum"}`}>

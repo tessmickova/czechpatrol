@@ -72,10 +72,10 @@ function Tlacitko({ aktivni, onClick, children, title }: { aktivni: boolean; onC
       onClick={onClick}
       aria-pressed={aktivni}
       title={title}
-      className={`inline-flex items-center gap-1.5 rounded-[10px] border px-2.5 py-1.5 text-[13px] font-semibold transition-colors ${
+      className={`inline-flex items-center gap-1.5 rounded-full px-2.5 py-1 text-[12.5px] font-semibold transition-colors ${
         aktivni
-          ? "border-akcent bg-akcent/20 text-akcent-svetla shadow-[0_0_14px_-4px_rgb(56_232_255/0.7)]"
-          : "border-linka text-tlum hover:border-akcent/50 hover:text-inkoust"
+          ? "bg-akcent/20 text-akcent-svetla"
+          : "text-tlum hover:bg-linka2 hover:text-inkoust"
       }`}
     >
       {children}
@@ -177,9 +177,9 @@ export function Zaznamy({ incidenty, neprosle }: { incidenty: SUkazkou<Incident>
 
   return (
     <>
-      <div className="mb-5 space-y-3 rounded-[14px] border border-linka bg-noc/40 p-3.5 sm:p-4">
-        <div className="flex flex-wrap items-center gap-1.5">
-          <span className="stitek mr-1 w-[70px]">Země</span>
+      <div className="mb-4 space-y-1.5 border-b border-linka2 pb-4">
+        <div className="flex flex-wrap items-center gap-1">
+          <span className="stitek mr-1 w-[62px] shrink-0">Země</span>
           <Tlacitko aktivni={zeme === null} onClick={() => setZeme(null)}>Vše</Tlacitko>
           {dostupneZeme.map(([kod, z]) => (
             <Tlacitko key={kod} aktivni={zeme === kod} onClick={() => setZeme(zeme === kod ? null : kod)} title={z.zeme}>
@@ -187,32 +187,32 @@ export function Zaznamy({ incidenty, neprosle }: { incidenty: SUkazkou<Incident>
             </Tlacitko>
           ))}
         </div>
-        <div className="flex flex-wrap items-center gap-1.5">
-          <span className="stitek mr-1 w-[70px]">Oblast</span>
+        <div className="flex flex-wrap items-center gap-1">
+          <span className="stitek mr-1 w-[62px] shrink-0">Oblast</span>
           <Tlacitko aktivni={kategorie === null} onClick={() => setKategorie(null)}>Vše</Tlacitko>
           {dostupneKategorie.map((k) => (
             <Tlacitko key={k} aktivni={kategorie === k} onClick={() => setKategorie(kategorie === k ? null : k)}>{KATEGORIE[k].nazev}</Tlacitko>
           ))}
         </div>
-        <div className="flex flex-wrap items-center gap-x-5 gap-y-2">
-          <div className="flex flex-wrap items-center gap-1.5">
-            <span className="stitek mr-1 w-[70px]">Závažnost</span>
+        <div className="flex flex-wrap items-center gap-x-4 gap-y-1">
+          <div className="flex flex-wrap items-center gap-1">
+            <span className="stitek mr-1 w-[62px] shrink-0">Závažnost</span>
             {ZAVAZNOSTI.map((z) => (
               <Tlacitko key={z.klic} aktivni={zavaznost.includes(z.klic)} onClick={() => prepniZavaznost(z.klic)}>
                 <span aria-hidden className={`h-[7px] w-[7px] rounded-[2px] ${PASMA[z.pasma[0]].pruh}`} /> {z.nazev}
               </Tlacitko>
             ))}
           </div>
-          <div className="flex flex-wrap items-center gap-1.5">
+          <div className="flex flex-wrap items-center gap-1">
             <span className="stitek mr-1">Období</span>
             {OKNA.map((o) => (
               <Tlacitko key={o.klic} aktivni={okno === o.klic} onClick={() => setOkno(o.klic)}>{o.nazev}</Tlacitko>
             ))}
           </div>
         </div>
-        <div className="flex flex-wrap items-center gap-x-5 gap-y-2">
-          <div className="flex flex-wrap items-center gap-1.5">
-            <span className="stitek mr-1 w-[70px]">Ověření</span>
+        <div className="flex flex-wrap items-center gap-x-4 gap-y-1">
+          <div className="flex flex-wrap items-center gap-1">
+            <span className="stitek mr-1 w-[62px] shrink-0">Ověření</span>
             <Tlacitko aktivni={potvrzeni === "vse"} onClick={() => setPotvrzeni("vse")}>Vše</Tlacitko>
             <Tlacitko aktivni={potvrzeni === "potvrzene"} onClick={() => setPotvrzeni("potvrzene")}><Ikona nazev="fajfka" velikost={12} tah={2.2} /> Jen potvrzené</Tlacitko>
             <Tlacitko aktivni={potvrzeni === "neprosle"} onClick={() => setPotvrzeni("neprosle")}><Ikona nazev="krizek" velikost={12} tah={2.2} /> Nepotvrzené a vyvrácené</Tlacitko>
@@ -295,7 +295,7 @@ function RadekOsy({ r }: { r: Radek }) {
   return (
     <div className="relative">
       <details className="group">
-        <summary className="grid grid-cols-[auto_1fr] items-start gap-x-3 py-2 sm:grid-cols-[72px_13px_minmax(0,1fr)_auto] sm:gap-x-3.5">
+        <summary className="grid grid-cols-[auto_1fr] items-start gap-x-3 border-b border-linka2 py-2.5 transition-colors hover:bg-linka2/40 sm:grid-cols-[72px_13px_minmax(0,1fr)_auto] sm:gap-x-3.5">
           <span className="cislice hidden pt-[3px] text-right text-[12.5px] font-medium text-tlum sm:block">
             {datum(r.kdy).replace(/ \d{4}$/, "")}
           </span>
@@ -333,7 +333,7 @@ function RadekOsy({ r }: { r: Radek }) {
             </span>
           </span>
         </summary>
-        <div className="mb-3 ml-[25px] rounded-[14px] border border-linka bg-noc/40 p-4 sm:ml-[102px] sm:p-5">
+        <div className="mb-4 ml-[25px] border-l-2 border-akcent/30 pl-4 sm:ml-[102px] sm:pl-5">
           {r.incident ? (
             <>
               <ObsahUdalosti incident={r.incident} />

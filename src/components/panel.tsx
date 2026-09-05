@@ -10,7 +10,7 @@ import { Ikona, type NazevIkony } from "./ikony";
  */
 export function Panel({
   kod, nadpis, popis, ikona, akce, children, sirka = "plna", tmavy = false, id,
-  vnorena = false,
+  vnorena = false, holy = false,
 }: {
   kod: string;
   nadpis: string;
@@ -22,6 +22,8 @@ export function Panel({
   sirka?: "plna" | "dve-tretiny" | "tretina" | "pul";
   tmavy?: boolean;
   id?: string;
+  /** Bez rámu a pozadí. Sekci drží nadpis, vlasová linka a odsazení. */
+  holy?: boolean;
   /** Obsah si nese vlastní kartu — panel pak nepřidává druhý rám ani odsazení. */
   vnorena?: boolean;
 }) {
@@ -35,9 +37,9 @@ export function Panel({
   return (
     <section
       id={id}
-      className={`${rozpeti} sklo scroll-mt-[70px] overflow-hidden rounded-[18px] ${
-        tmavy ? "noc relative" : ""
-      }`}
+      className={`${rozpeti} scroll-mt-[70px] ${
+        holy ? "" : "sklo overflow-hidden rounded-[18px]"
+      } ${tmavy ? "noc relative" : ""}`}
     >
       {tmavy && (
         <div aria-hidden className="pointer-events-none absolute inset-0 -z-10 overflow-hidden">
@@ -46,7 +48,9 @@ export function Panel({
       )}
 
       <header
-        className="flex flex-wrap items-start justify-between gap-3 border-b border-linka2 px-5 py-4 sm:px-6"
+        className={`flex flex-wrap items-start justify-between gap-3 ${
+          holy ? "border-b border-linka2 pb-3.5" : "border-b border-linka2 px-5 py-4 sm:px-6"
+        }`}
       >
         <div className="min-w-0">
           <div className={`mb-2 flex items-center gap-2 ${tmavy ? "text-noc-tlum" : "text-tlum2"}`}>
@@ -69,9 +73,7 @@ export function Panel({
 
       <div
         className={
-          vnorena
-            ? "[&>*]:rounded-none [&>*]:border-x-0 [&>*]:border-t-0"
-            : "p-5 sm:p-6"
+          holy ? "pt-5" : vnorena ? "[&>*]:rounded-none [&>*]:border-x-0 [&>*]:border-t-0" : "p-5 sm:p-6"
         }
       >
         {children}
@@ -83,7 +85,7 @@ export function Panel({
 /** Mřížka dashboardu. */
 export function Mrizka({ children }: { children: ReactNode }) {
   return (
-    <div className="mx-auto grid max-w-[1320px] grid-cols-1 items-start gap-4 px-4 py-4 sm:px-6 lg:grid-cols-12">
+    <div className="mx-auto grid max-w-[1320px] grid-cols-1 items-start gap-x-6 gap-y-9 px-4 py-6 sm:px-6 sm:py-8 lg:grid-cols-12">
       {children}
     </div>
   );

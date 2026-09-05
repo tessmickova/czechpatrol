@@ -37,7 +37,9 @@ export function DopadPoZemich() {
         return (
           <article
             key={z.kodZeme}
-            className={`sklo relative flex flex-col rounded-[16px] p-4 ${cr ? "sklo-akcent" : ""}`}
+            className={`relative flex flex-col rounded-[14px] border p-4 transition-colors ${
+              cr ? "border-akcent/40 bg-akcent/5" : "border-linka2 hover:border-linka"
+            }`}
           >
             <span aria-hidden className={`absolute inset-x-4 top-0 h-[3px] rounded-b-full ${t ? t.pruh : "bg-linka"}`} />
             <div className="flex items-center gap-2.5">
