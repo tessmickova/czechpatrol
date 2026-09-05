@@ -156,3 +156,9 @@ export const KRAJE = [
   "Liberecký", "Královéhradecký", "Pardubický", "Vysočina", "Jihomoravský", "Olomoucký",
   "Zlínský", "Moravskoslezský",
 ] as const;
+
+/**
+ * Kam chodí hlášení „chybí tu událost“. S API se ukládají do správy;
+ * bez API se otevře e-mail na tuhle adresu. Prázdné = jen GitHub.
+ */
+export const TIPY_MAIL = "";

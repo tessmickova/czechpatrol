@@ -20,6 +20,18 @@ interface UcetSprava {
   nazev: string | null;
 }
 
+interface Tip {
+  id: string;
+  vytvoreno: string;
+  popis: string;
+  odkaz: string | null;
+  jmeno: string | null;
+  email: string | null;
+  telefon: string | null;
+  stav: "novy" | "prijato" | "zamitnuto";
+  poznamka: string | null;
+}
+
 interface Audit {
   id: number;
   kdy: string;
@@ -39,6 +51,7 @@ export function SpravaKlient() {
   const [ucty, setUcty] = useState<UcetSprava[]>([]);
   const [zpravy, setZpravy] = useState<ZpravaIzs[]>([]);
   const [audit, setAudit] = useState<Audit[]>([]);
+  const [tipy, setTipy] = useState<Tip[]>([]);
   const [hledat, setHledat] = useState("");
   const [bootstrap, setBootstrap] = useState("");
   const [hlaska, setHlaska] = useState<{ typ: "ok" | "chyba"; text: string } | null>(null);
@@ -47,14 +60,16 @@ export function SpravaKlient() {
 
   const nacti = useCallback(async () => {
     try {
-      const [u, z, a] = await Promise.all([
+      const [u, z, a, tp] = await Promise.all([
         api<{ ucty: UcetSprava[] }>("/sprava/ucty"),
         api<{ zpravy: ZpravaIzs[] }>("/izs/zpravy"),
         api<{ audit: Audit[] }>("/sprava/audit"),
+        api<{ tipy: Tip[] }>("/sprava/tipy"),
       ]);
       setUcty(u.ucty);
       setZpravy(z.zpravy);
       setAudit(a.audit);
+      setTipy(tp.tipy);
     } catch (e) {
       setHlaska({ typ: "chyba", text: e instanceof Error ? e.message : "Nepovedlo se načíst." });
     }
@@ -137,6 +152,40 @@ export function SpravaKlient() {
           <ul className="space-y-3">
             {zpravy.map((z) => (
               <PolozkaZpravy key={z.id} z={z} akce={<AkceSchvaleni z={z} po={nacti} />} />
+            ))}
+          </ul>
+        )}
+      </Karta>
+
+      <Karta odstin={tipy.some((x) => x.stav === "novy") ? "modra" : "bila"} className="p-6">
+        <div className="mb-3">
+          <div className="stitek mb-1">Hlášení od čtenářů</div>
+          <h2 className="podnadpis text-[20px]">{tipy.filter((x) => x.stav === "novy").length} nových</h2>
+        </div>
+        {tipy.length === 0 ? (
+          <p className="text-[14px] text-tlum">Zatím žádné.</p>
+        ) : (
+          <ul className="space-y-3">
+            {tipy.map((x) => (
+              <li key={x.id} className="rounded-[14px] border border-linka p-4">
+                <div className="mb-2 flex flex-wrap items-center justify-between gap-2">
+                  <span className={`stitek-tmavy rounded-full border px-2 py-1 ${x.stav === "novy" ? "border-akcent/40 bg-akcent/10 text-akcent-svetla" : x.stav === "prijato" ? "border-[#4fdd9a]/40 bg-[#4fdd9a]/10 text-[#8ff0c0]" : "border-linka text-tlum2"}`}>
+                    {x.stav === "novy" ? "Nové" : x.stav === "prijato" ? "Přijato" : "Zamítnuto"}
+                  </span>
+                  <span className="stitek">{datumCas(x.vytvoreno)}</span>
+                </div>
+                <p className="whitespace-pre-wrap text-[14.5px] leading-relaxed text-inkoust">{x.popis}</p>
+                {x.odkaz && <a href={x.odkaz} target="_blank" rel="noopener noreferrer" className="mt-2 block break-all text-[13px] text-akcent underline underline-offset-4">{x.odkaz}</a>}
+                {(x.jmeno || x.email || x.telefon) && (
+                  <p className="mt-2 text-[13px] text-tlum">Kontakt: {[x.jmeno, x.email, x.telefon].filter(Boolean).join(" · ")}</p>
+                )}
+                {x.stav === "novy" && (
+                  <div className="mt-3 flex gap-2">
+                    <button type="button" onClick={() => api(`/sprava/tipy/${x.id}`, { method: "PUT", telo: { stav: "prijato" } }).then(nacti)} className={TLACITKO_AKCENT}>Přijmout</button>
+                    <button type="button" onClick={() => api(`/sprava/tipy/${x.id}`, { method: "PUT", telo: { stav: "zamitnuto" } }).then(nacti)} className={TLACITKO_TICHE}>Zamítnout</button>
+                  </div>
+                )}
+              </li>
             ))}
           </ul>
         )}

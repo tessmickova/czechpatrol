@@ -25,7 +25,7 @@ export function Navigace() {
     href.includes("#") ? false : href === "/" ? cesta === "/" : cesta.startsWith(href);
 
   return (
-    <header className="neni-tisk sklo sticky top-0 z-50 border-b border-linka">
+    <header className="neni-tisk sklo-rozmaz sticky top-0 z-50 border-b border-linka">
       <div className="mx-auto flex h-[52px] max-w-[1180px] items-center gap-6 px-5 sm:px-8">
         <Link href="/" className="flex shrink-0 items-center gap-2">
           <span className="grid h-[26px] w-[26px] place-items-center rounded-[10px] border border-akcent/50 bg-akcent/15 text-akcent shadow-[0_0_14px_rgb(56_232_255/0.45)]">

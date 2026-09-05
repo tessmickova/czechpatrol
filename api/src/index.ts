@@ -4,6 +4,7 @@ import * as izs from "./izs";
 import * as ja from "./ja";
 import { ChybaHttp, json, povolenyPuvod, sCors } from "./pomocne";
 import * as sprava from "./sprava";
+import * as tipy from "./tipy";
 import { synchronizuj, uklid } from "./synchronizace";
 import { nastavWebhook, webhook } from "./telegram";
 import type { Env } from "./typy";
@@ -56,6 +57,10 @@ const CESTY: [string, RegExp, Obsluha][] = [
     if (u.role !== "admin") throw new ChybaHttp(403, "Jen pro správce.");
     return json(await synchronizuj(env));
   }],
+
+  ["POST", /^\/tipy$/, (req, env) => tipy.prijmi(env, req)],
+  ["GET", /^\/sprava\/tipy$/, async (req, env) => tipy.seznam(env, await vyzadujPrihlaseni(env, req))],
+  ["PUT", /^\/sprava\/tipy\/([\w-]+)$/, async (req, env, _u, id) => tipy.vyrid(env, req, await vyzadujPrihlaseni(env, req), id)],
 
   ["POST", /^\/telegram\/webhook$/, (req, env) => webhook(env, req)],
 ];

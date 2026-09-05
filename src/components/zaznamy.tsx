@@ -13,6 +13,7 @@ import { SeznamZdroju } from "./zdroje";
 import { OdznakUkazky } from "./pruhy";
 import { Prazdno } from "./zaklad";
 import { sklon, Vlajka } from "./zeme";
+import { Nahlaseni } from "./nahlaseni";
 
 /*
   Záznamy jako jedna filtrovatelná osa.
@@ -134,6 +135,7 @@ export function Zaznamy({ incidenty, neprosle }: { incidenty: SUkazkou<Incident>
   const [okno, setOkno] = useState<(typeof OKNA)[number]["klic"]>("vse");
   const [jenUredni, setJenUredni] = useState(false);
   const [potvrzeni, setPotvrzeni] = useState<"vse" | "potvrzene" | "neprosle">("vse");
+  const [limit, setLimit] = useState(10);
 
   const dostupneZeme = useMemo(() => {
     const m = new Map<string, { zeme: string; pocet: number }>();
@@ -169,7 +171,8 @@ export function Zaznamy({ incidenty, neprosle }: { incidenty: SUkazkou<Incident>
   }, [radky, zeme, kategorie, zavaznost, okno, jenUredni, potvrzeni]);
 
   const prepniZavaznost = (k: string) => setZavaznost((x) => (x.includes(k) ? x.filter((y) => y !== k) : [...x, k]));
-  const smazFiltry = () => { setZeme(null); setKategorie(null); setZavaznost([]); setOkno("vse"); setJenUredni(false); setPotvrzeni("vse"); };
+  const smazFiltry = () => { setZeme(null); setKategorie(null); setZavaznost([]); setOkno("vse"); setJenUredni(false); setPotvrzeni("vse"); setLimit(10); };
+  const zobrazene = vysledek.slice(0, limit);
   const aktivnichFiltru = [zeme, kategorie, zavaznost.length, okno !== "vse", jenUredni, potvrzeni !== "vse"].filter(Boolean).length;
 
   return (
@@ -233,9 +236,9 @@ export function Zaznamy({ incidenty, neprosle }: { incidenty: SUkazkou<Incident>
       {vysledek.length ? (
         <ol className="relative">
           <span aria-hidden className="absolute bottom-4 left-[6px] top-4 w-px bg-linka sm:left-[88px]" />
-          {vysledek.map((r, i) => {
+          {zobrazene.map((r, i) => {
             const rok = r.kdy.slice(0, 4);
-            const novyRok = i === 0 || vysledek[i - 1].kdy.slice(0, 4) !== rok;
+            const novyRok = i === 0 || zobrazene[i - 1].kdy.slice(0, 4) !== rok;
             return (
               <li key={r.id} className="contents">
                 {novyRok && (
@@ -254,18 +257,32 @@ export function Zaznamy({ incidenty, neprosle }: { incidenty: SUkazkou<Incident>
       ) : (
         <Prazdno nadpis="Zatím nejsou zveřejněné žádné události" popis="Zobrazujeme jen záznamy, které prošly kontrolou a mají uvedený zdroj." />
       )}
+
+      {vysledek.length > limit && (
+        <div className="mt-4 flex justify-center">
+          <button
+            type="button"
+            onClick={() => setLimit((l) => l + 10)}
+            className="inline-flex items-center gap-2 rounded-full border border-akcent/60 bg-akcent/10 px-5 py-2.5 text-[13px] font-bold uppercase tracking-[0.05em] text-akcent-svetla transition-colors hover:bg-akcent/20"
+          >
+            <Ikona nazev="dolu" velikost={13} tah={2.2} />
+            Zobrazit dalších {Math.min(10, vysledek.length - limit)} · zbývá {vysledek.length - limit}
+          </button>
+        </div>
+      )}
+
+      <Nahlaseni />
     </>
   );
 }
 
-const JISTOTA_IKONA: Record<string, NazevIkony> = { potvrzeno: "stit-ok", vysoka: "fajfka", stredni: "oko", nizka: "vykricnik" };
 
 function Stitek({ ikona, nadpis, hodnota, tridy }: { ikona: NazevIkony; nadpis: string; hodnota: string; tridy: string }) {
   return (
-    <span className={`inline-flex items-center gap-1.5 rounded-[8px] border px-2 py-1 ${tridy}`}>
-      <Ikona nazev={ikona} velikost={11} tah={2.2} />
-      <span className="stitek !text-[9px] !text-current opacity-70">{nadpis}</span>
-      <span className="text-[12px] font-bold uppercase tracking-[0.03em]">{hodnota}</span>
+    <span className={`inline-flex items-center gap-1 rounded-[7px] border px-1.5 py-[3px] ${tridy}`}>
+      <Ikona nazev={ikona} velikost={10} tah={2.4} />
+      <span className="stitek !text-[8px] !text-current opacity-70">{nadpis}</span>
+      <span className="text-[11px] font-bold uppercase leading-none tracking-[0.03em]">{hodnota}</span>
     </span>
   );
 }
@@ -273,72 +290,56 @@ function Stitek({ ikona, nadpis, hodnota, tridy }: { ikona: NazevIkony; nadpis: 
 function RadekOsy({ r }: { r: Radek }) {
   const t = r.zavaznost ? tokeny(r.zavaznost) : null;
   const neproslo = r.druh !== "zaznam";
+  const potvrzenaInfo = r.jistota === "potvrzeno" || r.jistota === "vysoka";
+  const potvrzenPachatel = r.atribuce === "oficialni" || r.atribuce === "domaci";
   return (
     <div className="relative">
       <details className="group">
-        <summary className="flex items-start gap-3 py-3 sm:gap-4">
-          <span className="cislice hidden w-[72px] shrink-0 pt-[3px] text-right text-[12.5px] font-medium text-tlum sm:block">
+        <summary className="grid grid-cols-[auto_1fr] items-start gap-x-3 py-2 sm:grid-cols-[72px_13px_minmax(0,1fr)_auto] sm:gap-x-3.5">
+          <span className="cislice hidden pt-[3px] text-right text-[12.5px] font-medium text-tlum sm:block">
             {datum(r.kdy).replace(/ \d{4}$/, "")}
           </span>
-          <span
-            aria-hidden
-            className={`relative z-10 mt-[6px] h-[13px] w-[13px] shrink-0 rounded-[3px] border-2 border-papir ${
-              neproslo ? "bg-tlum2" : t!.pruh
-            }`}
-          />
-          <span className="min-w-0 flex-1">
-            <span className="mb-1 flex flex-wrap items-center gap-x-2.5 gap-y-1">
+          <span aria-hidden className={`relative z-10 mt-[6px] h-[13px] w-[13px] shrink-0 rounded-[3px] border-2 border-papir ${neproslo ? "bg-tlum2" : t!.pruh}`} />
+          <span className="min-w-0">
+            <span className="flex flex-wrap items-center gap-x-2 gap-y-0.5">
               <span className="cislice stitek sm:hidden">{datum(r.kdy)}</span>
               <Vlajka kod={r.kodZeme} />
               <span className="stitek">{r.zeme}</span>
-              {r.kategorie[0] && KATEGORIE[r.kategorie[0]].nazev !== r.zeme && KATEGORIE[r.kategorie[0]].nazev !== "ČR" && <span className="stitek !text-tlum2">{KATEGORIE[r.kategorie[0]].nazev}</span>}
               {neproslo ? (
-                <span className="stitek-tmavy rounded-full border border-[#4fdd9a]/40 bg-[#4fdd9a]/10 px-2 py-[3px] text-[#8ff0c0]">
-                  {r.druh === "vyvraceno" ? "Vyvráceno" : "Nepotvrzeno"}
-                </span>
+                <span className="stitek-tmavy rounded-full border border-[#4fdd9a]/40 bg-[#4fdd9a]/10 px-2 py-[2px] text-[#8ff0c0]">{r.druh === "vyvraceno" ? "Vyvráceno" : "Nepotvrzeno"}</span>
               ) : (
                 <span className={`stitek-tmavy ${t!.text}`}>{UROVNE[r.zavaznost!].nazev}</span>
               )}
-              {r.jeZjisteni && <span className="stitek-tmavy rounded-[8px] border border-linka px-1.5 py-[2px] text-tlum2">událost {datum(r.datumUdalosti)}</span>}
+              {r.jeZjisteni && <span className="stitek !text-tlum2">událost {datum(r.datumUdalosti)}</span>}
+              {r.incident?.historicky && <span className="stitek !text-tlum2">· doplněno zpětně</span>}
               {r.incident?.ukazka && <OdznakUkazky />}
-              {r.incident?.historicky && <span className="stitek-tmavy rounded-[8px] border border-linka px-1.5 py-[2px] text-tlum2">doplněno zpětně</span>}
             </span>
-            <span className="block text-[15.5px] font-semibold leading-snug text-inkoust group-open:text-akcent-svetla">
-              {r.titulek}
-            </span>
-            {!neproslo && (
-              <span className="mt-2 flex flex-wrap gap-1.5">
-                <Stitek
-                  ikona={JISTOTA_IKONA[r.jistota!]}
-                  nadpis="informace"
-                  hodnota={JISTOTY[r.jistota!].nazev}
-                  tridy={r.jistota === "potvrzeno" || r.jistota === "vysoka" ? "border-[#4fdd9a]/40 bg-[#4fdd9a]/10 text-[#8ff0c0]" : "border-jantar/40 bg-jantar/10 text-jantar"}
-                />
-                {r.puvodce && (
-                  <Stitek
-                    ikona={r.atribuce === "oficialni" || r.atribuce === "domaci" ? "fajfka" : "lupa"}
-                    nadpis="pachatel"
-                    hodnota={`${PUVODCE_NAZVY[r.puvodce]} · ${r.atribuce === "oficialni" ? "potvrzen" : r.atribuce === "domaci" ? "prokázán" : r.atribuce === "vysetrovana" ? "vyšetřuje se" : "nepotvrzen"}`}
-                    tridy={r.atribuce === "oficialni" || r.atribuce === "domaci" ? "border-[#4fdd9a]/40 bg-[#4fdd9a]/10 text-[#8ff0c0]" : "border-linka text-tlum"}
-                  />
-                )}
-                {!r.puvodce && r.atribuce && r.atribuce !== "neznama" && (
-                  <Stitek ikona="oko" nadpis="atribuce" hodnota={ATRIBUCE[r.atribuce].nazev} tridy="border-linka text-tlum" />
-                )}
-                {r.uredni && <Stitek ikona="stit-ok" nadpis="zdroj" hodnota="úřední" tridy="border-akcent/40 bg-akcent/10 text-akcent-svetla" />}
-              </span>
-            )}
+            <span className="block text-[15px] font-semibold leading-snug text-inkoust group-open:text-akcent-svetla">{r.titulek}</span>
           </span>
-          <span aria-hidden className="mt-1 grid h-7 w-7 shrink-0 place-items-center rounded-full border border-akcent/50 text-akcent transition-transform group-open:rotate-45 group-open:bg-akcent group-open:text-noc">
-            <Ikona nazev="plus" velikost={13} tah={2.2} />
+          <span className="col-span-2 mt-1 flex flex-wrap items-center gap-1.5 sm:col-span-1 sm:mt-[3px] sm:w-[430px] sm:justify-end">
+            {!neproslo && (
+              <>
+                <Stitek ikona={potvrzenaInfo ? "fajfka" : "oko"} nadpis="info" hodnota={JISTOTY[r.jistota!].nazev} tridy={potvrzenaInfo ? "border-[#4fdd9a]/40 bg-[#4fdd9a]/10 text-[#8ff0c0]" : "border-jantar/40 bg-jantar/10 text-jantar"} />
+                {r.puvodce ? (
+                  <Stitek ikona={potvrzenPachatel ? "fajfka" : "lupa"} nadpis="pachatel" hodnota={`${PUVODCE_NAZVY[r.puvodce]}${potvrzenPachatel ? "" : " ?"}`} tridy={potvrzenPachatel ? "border-[#4fdd9a]/40 bg-[#4fdd9a]/10 text-[#8ff0c0]" : "border-linka text-tlum"} />
+                ) : (
+                  <Stitek ikona="minus" nadpis="pachatel" hodnota="—" tridy="border-linka text-tlum2" />
+                )}
+                <Stitek ikona={r.uredni ? "stit-ok" : "dokument"} nadpis="zdroj" hodnota={r.uredni ? "úřední" : "média"} tridy={r.uredni ? "border-akcent/40 bg-akcent/10 text-akcent-svetla" : "border-linka text-tlum"} />
+              </>
+            )}
+            <span aria-hidden className="grid h-6 w-6 shrink-0 place-items-center rounded-full border border-akcent/50 text-akcent transition-transform group-open:rotate-45 group-open:bg-akcent group-open:text-noc">
+              <Ikona nazev="plus" velikost={12} tah={2.2} />
+            </span>
           </span>
         </summary>
-        <div className="mb-3 ml-[25px] rounded-[14px] border border-linka bg-noc/40 p-4 sm:ml-[106px] sm:p-5">
+        <div className="mb-3 ml-[25px] rounded-[14px] border border-linka bg-noc/40 p-4 sm:ml-[102px] sm:p-5">
           {r.incident ? (
             <>
               <ObsahUdalosti incident={r.incident} />
               <div className="mt-4 flex flex-wrap items-center gap-3 border-t border-linka2 pt-3 text-[13px] text-tlum">
                 {r.stav && <span>{STAVY[r.stav]}</span>}
+                {r.atribuce && <span>· atribuce: {ATRIBUCE[r.atribuce].nazev.toLowerCase()}</span>}
                 <Link href={`/incident/${r.slug}/`} className="ml-auto inline-flex items-center gap-1 font-semibold text-akcent hover:text-akcent-svetla">
                   Samostatná stránka <Ikona nazev="nahoru" velikost={12} tah={2} trida="rotate-90" />
                 </Link>

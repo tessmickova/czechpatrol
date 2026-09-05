@@ -11,22 +11,23 @@ import { Zaznamy } from "@/components/zaznamy";
 import { SeznamZdroju } from "@/components/zdroje";
 import { DopadPoZemich } from "@/components/zeme";
 import {
-  archiv, celkovyStav, dnyBezZmeny, hybridniTlak, incidenty, mesice, nato, nepotvrzene,
-  posledniOvereni, pravniStav, tlakCr, tydny, watchlist,
+  archiv, celkovyStav, hybridniTlak, incidenty, mesice, nato, nepotvrzene,
+  posledniOvereni, pravniStav, tlakCr, tydny, urovenObcanu, watchlist,
 } from "@/lib/data";
 
 const odkaz =
   "rounded-full border border-linka px-3 py-1.5 text-[12px] font-semibold uppercase tracking-[0.04em] transition-colors hover:border-akcent";
 
 /**
- * Hlavní stránka je jedna konzole. Co platí a neplatí, je v liště pod menu;
- * tady je úroveň, co ji může změnit, dopad po zemích, kdo za činy stojí,
- * vývoj v čase a záznamy. Nic není dvakrát.
+ * Pořadí: hero → záznamy → kde a kdo → vývoj po týdnech → týdenní přehled
+ * → vývoj v čase s posuvníkem → odběr a zdroje. Co platí a neplatí je
+ * v liště pod menu; spouštěče eskalace jsou v hero pod tlačítkem.
  */
 export default function Prehled() {
   const stav = celkovyStav();
   const vse = incidenty();
   const tydenni = tydny();
+  const rok = new Date().getUTCFullYear();
 
   return (
     <>
@@ -34,40 +35,56 @@ export default function Prehled() {
         stav={stav}
         hybridni={hybridniTlak()}
         tlakCr={tlakCr()}
-        dnyBezZmeny={dnyBezZmeny()}
+        obcane={urovenObcanu()}
+        posledni={vse.filter((i) => !i.historicky).slice(0, 4)}
         overeno={posledniOvereni()}
         pocetZaznamu={vse.length}
+        watchlist={<WatchlistPanel watchlist={watchlist()} kompaktni />}
       />
 
       <Mrizka>
         <Panel
-          kod="Sledujeme"
-          ikona="terc"
-          nadpis="Co může hodnocení změnit"
-          popis="Konkrétní kroky institucí — nahoru i dolů. Nic z toho nenastává automaticky."
+          id="udalosti"
+          kod="Záznamy"
+          ikona="oko"
+          nadpis="Ověřené, nepotvrzené i vyvrácené záznamy od roku 2014"
+          popis="Jedna osa, deset nejnovějších. U každého řádku zvlášť, jak je potvrzená informace, pachatel a zdroj."
+          akce={<Link href="/udalosti/" className={odkaz}>Samostatně</Link>}
         >
-          <WatchlistPanel watchlist={watchlist()} kompaktni />
+          <Zaznamy incidenty={vse} neprosle={nepotvrzene()} />
         </Panel>
 
         <Panel
           id="zeme"
-          kod="Dopad po zemích"
+          kod="Kde"
           ikona="mapa"
           nadpis="Kde se to děje a kolik"
-          popis={`Letošní záznamy (${new Date().getUTCFullYear()}). Česko je vždy první — i když tam nic není. Starší roky jsou na ose níže.`}
+          popis={`Letošní záznamy (${rok}). Česko je vždy první — i když tam nic není. Činy a prohlášení se počítají zvlášť.`}
           sirka="dve-tretiny"
         >
           <DopadPoZemich />
         </Panel>
 
         <Panel
-          kod="Původce"
+          kod="Kdo"
           ikona="lupa"
           nadpis="Kdo za tím stojí"
-          popis="Letos. Rusko, Ukrajina, jiný stát, domácí pachatel, neznámý — jen činy, jen potvrzené počty."
+          popis={`Letos (${rok}). Jen činy. Jeden případ = jeden čin, i když má víc záznamů.`}
           sirka="tretina"
         >
           <KdoZaTimStoji />
+        </Panel>
+
+        <Panel kod="Letos po týdnech" ikona="graf" nadpis="Vývoj po týdnech" popis="Od začátku roku. Bez dat = bez dat." sirka="dve-tretiny">
+          <GrafTrendu tydny={tydenni} />
+        </Panel>
+
+        <Panel kod="Od roku 2010" ikona="graf" nadpis="Vývoj po měsících" popis="Sloupce = hodnocení (od 7/2026). Tečky = počet záznamů v měsíci." sirka="tretina">
+          <GrafMesicu mesice={mesice().mesice} />
+        </Panel>
+
+        <Panel kod="Týdny" ikona="osa" nadpis="Týdenní přehled" popis="Vykřičník = zvýšený počet signálů. Tři jsou maximum.">
+          <TabulkaTydnu tydny={tydenni} />
         </Panel>
 
         <Panel
@@ -78,29 +95,6 @@ export default function Prehled() {
           popis="Přehrajte si den po dni, co web tvrdil. Ukazují se jen dny, kdy se něco změnilo."
         >
           <CasovyPosuvnik archiv={archiv()} />
-        </Panel>
-
-        <Panel kod="Letos po týdnech" ikona="graf" nadpis="Vývoj po týdnech" popis="Od začátku roku. Bez dat = bez dat." sirka="dve-tretiny">
-          <GrafTrendu tydny={tydenni} />
-        </Panel>
-
-        <Panel kod="Od roku 2010" ikona="graf" nadpis="Vývoj po měsících" popis="Sloupce = hodnocení (od 7/2026). Tečky = počet záznamů v měsíci. Bez dat je bez dat." sirka="tretina">
-          <GrafMesicu mesice={mesice().mesice} />
-        </Panel>
-
-        <Panel kod="Týdny" ikona="osa" nadpis="Týdenní přehled" popis="Vykřičník = zvýšený počet signálů. Tři jsou maximum.">
-          <TabulkaTydnu tydny={tydenni} />
-        </Panel>
-
-        <Panel
-          id="udalosti"
-          kod="Záznamy"
-          ikona="oko"
-          nadpis="Záznamy od roku 2014: ověřené, nepotvrzené i vyvrácené"
-          popis="Jedna osa. U každého řádku zvlášť, jak je potvrzená informace a jak pachatel. Roky 2010–2013 nemají v tomto rámci žádný záznam."
-          akce={<Link href="/udalosti/" className={odkaz}>Samostatně</Link>}
-        >
-          <Zaznamy incidenty={vse} neprosle={nepotvrzene()} />
         </Panel>
 
         <Panel id="odber" kod="Odběr" ikona="zvonek" nadpis="Dáme vědět, když se něco změní" sirka="dve-tretiny">

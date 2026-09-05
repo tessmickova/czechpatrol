@@ -1,10 +1,14 @@
 import Link from "next/link";
-import { datumCas } from "@/lib/format";
-import { PASMA, UROVNE } from "@/lib/skala";
-import type { CelkovyStav, HybridniTlak } from "@/lib/typy";
+import type { ReactNode } from "react";
+import { datum, datumCas } from "@/lib/format";
+import type { SUkazkou } from "@/lib/data";
+import { PASMA, tokeny, UROVNE } from "@/lib/skala";
+import type { CelkovyStav, HybridniTlak, Incident, Uroven } from "@/lib/typy";
 import { Ikona, type NazevIkony } from "./ikony";
-import { ObloukovyMerak, RadarTlaku } from "./mericky";
+import { ObloukovyMerak } from "./mericky";
+import { Rozbalovac } from "./rozbalovac";
 import { Napoveda, VykladUrovne } from "./zaklad";
+import { Vlajka } from "./zeme";
 
 const TRENDY = {
   nahoru: { ikona: "nahoru" as NazevIkony, text: "zhoršení za 7 dní", tridy: "text-[#ffa877]" },
@@ -13,19 +17,21 @@ const TRENDY = {
 } as const;
 
 /**
- * Hero jako přístrojová deska: úroveň, trend, aktuální signál, čísla
- * a dva radary — Evropa a ČR zvlášť. Nic tu není dvakrát: co platí
- * a neplatí, je v liště nahoře.
+ * Hero: celková úroveň, tři dílčí měřáky (Česko, NATO a Evropa, dopad na
+ * občany), poslední záznamy a dvě tlačítka. Důvod zhoršení a spouštěče
+ * eskalace jsou rozbalovací — čtou se, když je někdo chce, ne pořád.
  */
 export function SituacniPanel({
-  stav, hybridni, tlakCr, dnyBezZmeny = null, overeno = null, pocetZaznamu,
+  stav, hybridni, tlakCr, obcane, posledni, overeno = null, pocetZaznamu, watchlist,
 }: {
   stav: CelkovyStav;
   hybridni: HybridniTlak;
   tlakCr: HybridniTlak;
-  dnyBezZmeny?: { dnu: number; odZacatkuArchivu: boolean } | null;
+  obcane: { uroven: Uroven; popis: string; neovereno: number };
+  posledni: SUkazkou<Incident>[];
   overeno?: string | null;
   pocetZaznamu: number;
+  watchlist: ReactNode;
 }) {
   const d = stav.uroven ? UROVNE[stav.uroven] : null;
   const t = stav.uroven ? PASMA[UROVNE[stav.uroven].pasmo] : null;
@@ -41,76 +47,92 @@ export function SituacniPanel({
       </div>
 
       <div className="mx-auto max-w-[1320px] px-4 pt-4 sm:px-6">
-        <div className="sklo sklo-akcent sken relative grid gap-5 overflow-hidden rounded-[22px] px-5 py-5 sm:px-6 lg:grid-cols-[minmax(0,1.15fr)_minmax(0,1fr)] lg:gap-8">
-          {/* levá polovina: úroveň + signál + čísla */}
-          <div className="grid gap-4">
-            <div className="flex items-center gap-4">
-              <Napoveda popis={stav.uroven ? <VykladUrovne uroven={stav.uroven} /> : <span className="block">Hodnocení zatím nebylo stanoveno.</span>}>
-                <span className="block"><ObloukovyMerak uroven={stav.uroven} naNoci velikost={150} skrytPopisek /></span>
-              </Napoveda>
-              <div className="min-w-0">
-                <div className="stitek mb-1.5 !text-noc-tlum">Celková úroveň · Evropa a ČR</div>
-                <p className={`nadpis svit-silny text-[32px] sm:text-[40px] ${t ? t.textNoc : "text-noc-tlum"}`}>
-                  {d ? d.nazev : "Nestanoveno"}
-                </p>
-                <div className="mt-2 flex flex-wrap items-center gap-x-4 gap-y-1">
-                  {trend && (
-                    <span className={`flex items-center gap-1.5 text-[14px] font-semibold ${trend.tridy}`}>
-                      <Ikona nazev={trend.ikona} velikost={14} tah={1.9} /> {trend.text}
-                    </span>
-                  )}
-                  <span className="stitek !text-noc-tlum">{overeno ? `ověřeno ${datumCas(overeno)}` : "sběr zatím neproběhl"}</span>
+        <div className="sklo sklo-akcent sken relative overflow-hidden rounded-[22px] px-5 py-5 sm:px-6">
+          <div className="grid gap-5 lg:grid-cols-[minmax(0,1.1fr)_minmax(0,1fr)] lg:gap-8">
+            {/* levá: celková úroveň + tři měřáky */}
+            <div className="grid gap-4">
+              <div className="flex items-center gap-4">
+                <Napoveda popis={stav.uroven ? <VykladUrovne uroven={stav.uroven} /> : <span className="block">Hodnocení zatím nebylo stanoveno.</span>}>
+                  <span className="block"><ObloukovyMerak uroven={stav.uroven} naNoci velikost={150} skrytPopisek /></span>
+                </Napoveda>
+                <div className="min-w-0">
+                  <div className="stitek mb-1.5 !text-noc-tlum">Celková úroveň</div>
+                  <p className={`nadpis svit-silny text-[32px] sm:text-[40px] ${t ? t.textNoc : "text-noc-tlum"}`}>{d ? d.nazev : "Nestanoveno"}</p>
+                  <div className="mt-2 flex flex-wrap items-center gap-x-4 gap-y-1">
+                    {trend && (
+                      <span className={`flex items-center gap-1.5 text-[14px] font-semibold ${trend.tridy}`}>
+                        <Ikona nazev={trend.ikona} velikost={14} tah={1.9} /> {trend.text}
+                      </span>
+                    )}
+                    <span className="stitek !text-noc-tlum">{overeno ? `ověřeno ${datumCas(overeno)}` : "sběr zatím neproběhl"}</span>
+                  </div>
                 </div>
               </div>
-            </div>
 
-            {stav.shrnuti && (
-              <div className={`flex gap-3 rounded-[14px] border p-3.5 ${zhorseni ? "border-[#ff8a4c]/50 bg-[#ff8a4c]/10" : "border-akcent/40 bg-akcent/8"}`}>
-                <span className={`mt-[1px] shrink-0 ${zhorseni ? "text-[#ffa877]" : "text-akcent"}`}>
-                  <Ikona nazev={zhorseni ? "vystraha" : "info"} velikost={18} tah={1.9} />
-                </span>
-                <div>
-                  <div className={`stitek mb-1 ${zhorseni ? "!text-[#ffa877]" : "!text-akcent"}`}>{zhorseni ? "Proč se hodnocení zhoršilo" : "Aktuální signál"}</div>
-                  <p className="text-[14.5px] leading-relaxed text-noc-text">{stav.shrnuti}</p>
-                </div>
+              <div className="grid grid-cols-3 gap-2">
+                <Merak nadpis="Česko" popis="ze záznamů CZ" uroven={tlakCr.celkem} />
+                <Merak nadpis="NATO a Evropa" popis="hybridní tlak" uroven={hybridni.celkem} />
+                <Merak nadpis="Občané ČR" popis={obcane.uroven === "G1" ? "bez omezení" : "omezení platí"} uroven={obcane.uroven} vlastniNazev={obcane.uroven === "G1" ? "Bez omezení" : undefined} napoveda={`${obcane.popis}${obcane.neovereno ? ` · ${obcane.neovereno} položek zatím neověřeno` : ""}`} />
               </div>
-            )}
 
-            <div className="flex flex-wrap items-center gap-x-6 gap-y-2">
-              {[
-                { s: "nové signály", h: s.celkem },
-                { s: "vysoké", h: s.vysoke },
-                { s: "vážné", h: s.kriticke },
-                { s: "záznamů celkem", h: pocetZaznamu },
-              ].map((x) => (
-                <span key={x.s} className="flex items-baseline gap-1.5">
-                  <span className="velke-cislo svit text-[26px] text-akcent-svetla">{x.h}</span>
-                  <span className="stitek !text-noc-tlum">{x.s}</span>
-                </span>
-              ))}
-              {dnyBezZmeny && (
-                <span className="stitek-tmavy inline-flex items-center gap-1.5 rounded-full border border-[#4fdd9a]/35 bg-[#4fdd9a]/10 px-2.5 py-1 text-[#8ff0c0]">
-                  <Ikona nazev="hodiny" velikost={11} tah={1.7} />
-                  {dnyBezZmeny.odZacatkuArchivu ? "právo ČR beze změny celý archiv" : `právo ČR beze změny ${dnyBezZmeny.dnu} dní`}
-                </span>
+              {stav.shrnuti && (
+                <details className={`group rounded-[14px] border ${zhorseni ? "border-[#ff8a4c]/50 bg-[#ff8a4c]/10" : "border-akcent/40 bg-akcent/8"}`}>
+                  <summary className={`flex items-center gap-2 px-3.5 py-2.5 text-[13px] font-bold uppercase tracking-[0.04em] ${zhorseni ? "text-[#ffa877]" : "text-akcent"}`}>
+                    <Ikona nazev={zhorseni ? "vystraha" : "info"} velikost={15} tah={2} />
+                    {zhorseni ? "Proč se hodnocení zhoršilo" : "Aktuální signál"}
+                    <Ikona nazev="dolu" velikost={13} tah={2.2} trida="ml-auto transition-transform group-open:rotate-180" />
+                  </summary>
+                  <p className="px-3.5 pb-3.5 text-[14.5px] leading-relaxed text-noc-text">{stav.shrnuti}</p>
+                </details>
               )}
             </div>
-          </div>
 
-          {/* pravá polovina: dva radary */}
-          <div className="grid gap-3 sm:grid-cols-2">
-            <Radar nadpis="Evropa" popis="hybridní tlak podle hodnocení" tlak={hybridni} />
-            <Radar nadpis="Česko" popis="jen ze záznamů s kódem CZ" tlak={tlakCr} />
-            <div className="sm:col-span-2 flex flex-wrap items-center justify-between gap-2">
-              <span className="stitek !text-noc-tlum">
-                {(() => {
-                  const primy = hybridni.podkategorie.find((p) => p.klic === "primy");
-                  return primy?.uroven ? `přímé vojenské riziko: ${UROVNE[primy.uroven].nazev.toLowerCase()}` : "přímé vojenské riziko: nevyhodnoceno";
-                })()}
-              </span>
-              <Link href="#zeme" className="inline-flex items-center gap-1.5 rounded-full border border-akcent/60 bg-akcent/15 px-3.5 py-1.5 text-[12.5px] font-bold uppercase tracking-[0.05em] text-akcent-svetla hover:bg-akcent/25">
-                <Ikona nazev="mapa" velikost={13} tah={2} /> Dopad po zemích
-              </Link>
+            {/* pravá: poslední záznamy + čísla + tlačítka */}
+            <div className="flex flex-col gap-3">
+              <div className="sklo-noc-slabe rounded-[14px] p-3.5">
+                <div className="mb-2 flex items-center justify-between">
+                  <span className="stitek !text-noc-tlum">Poslední záznamy</span>
+                  <Link href="#udalosti" className="stitek !text-akcent hover:!text-akcent-svetla">všechny</Link>
+                </div>
+                <ol className="divide-y divide-white/8">
+                  {posledni.map((i) => {
+                    const tk = tokeny(i.zavaznost);
+                    return (
+                      <li key={i.id}>
+                        <Link href={`/incident/${i.slug}/`} className="flex items-center gap-2.5 py-1.5 text-[13px] hover:text-akcent-svetla">
+                          <span className="cislice w-[42px] shrink-0 text-[12px] text-noc-tlum">{datum(i.datumZjisteni ?? i.datumUdalosti).replace(/ \d{4}$/, "")}</span>
+                          <span aria-hidden className={`h-[7px] w-[7px] shrink-0 rounded-[2px] ${tk.tecka}`} />
+                          <Vlajka kod={i.kodZeme} />
+                          <span className="min-w-0 flex-1 truncate font-semibold text-noc-text">{i.kratkyTitulek || i.titulek}</span>
+                        </Link>
+                      </li>
+                    );
+                  })}
+                </ol>
+              </div>
+
+              <div className="flex flex-wrap items-center gap-x-5 gap-y-1">
+                {[
+                  { s: "nové signály", h: s.celkem },
+                  { s: "vysoké", h: s.vysoke },
+                  { s: "vážné", h: s.kriticke },
+                  { s: "záznamů", h: pocetZaznamu },
+                ].map((x) => (
+                  <span key={x.s} className="flex items-baseline gap-1.5">
+                    <span className="velke-cislo svit text-[24px] text-akcent-svetla">{x.h}</span>
+                    <span className="stitek !text-noc-tlum">{x.s}</span>
+                  </span>
+                ))}
+              </div>
+
+              <div className="mt-auto flex flex-wrap items-center gap-2">
+                <Rozbalovac tlacitko="Co vyeskaluje situaci" ikona="terc" akcent>
+                  {watchlist}
+                </Rozbalovac>
+                <Link href="#zeme" className="inline-flex items-center gap-1.5 rounded-full border border-akcent/60 bg-akcent/15 px-3.5 py-1.5 text-[12.5px] font-bold uppercase tracking-[0.05em] text-akcent-svetla hover:bg-akcent/25">
+                  <Ikona nazev="mapa" velikost={13} tah={2} /> Dopad po zemích
+                </Link>
+              </div>
             </div>
           </div>
         </div>
@@ -119,18 +141,19 @@ export function SituacniPanel({
   );
 }
 
-function Radar({ nadpis, popis, tlak }: { nadpis: string; popis: string; tlak: HybridniTlak }) {
-  const t = tlak.celkem ? PASMA[UROVNE[tlak.celkem].pasmo] : null;
-  return (
-    <div className="sklo-noc-slabe rounded-[14px] p-3">
-      <div className="flex items-baseline justify-between gap-2">
-        <span className="text-[14px] font-bold uppercase tracking-[0.04em] text-noc-text">{nadpis}</span>
-        <span className={`stitek-tmavy ${t ? t.textNoc : "text-noc-tlum"}`}>{tlak.celkem ? UROVNE[tlak.celkem].nazev : "bez záznamu"}</span>
-      </div>
-      <div className="stitek mb-1 !text-noc-tlum">{popis}</div>
-      <div className="mx-auto max-w-[230px]">
-        <RadarTlaku tlak={tlak} velikost={240} okraj={62} />
-      </div>
-    </div>
+function Merak({
+  nadpis, popis, uroven, vlastniNazev, napoveda,
+}: { nadpis: string; popis: string; uroven: Uroven | null; vlastniNazev?: string; napoveda?: string }) {
+  const t = uroven ? PASMA[UROVNE[uroven].pasmo] : null;
+  const obsah = (
+    <span className="sklo-noc-slabe flex flex-col items-center rounded-[14px] px-2 py-2.5 text-center">
+      <span className="stitek !text-[9.5px] !text-noc-text">{nadpis}</span>
+      <ObloukovyMerak uroven={uroven} naNoci velikost={104} skrytPopisek />
+      <span className={`-mt-1 text-[12.5px] font-bold uppercase leading-tight tracking-[0.03em] ${t ? t.textNoc : "text-noc-tlum"}`}>
+        {vlastniNazev ?? (uroven ? UROVNE[uroven].nazev : "bez záznamu")}
+      </span>
+      <span className="stitek mt-1 !text-[8.5px] !text-noc-tlum">{popis}</span>
+    </span>
   );
+  return napoveda ? <Napoveda popis={<span className="block">{napoveda}</span>}>{obsah}</Napoveda> : obsah;
 }

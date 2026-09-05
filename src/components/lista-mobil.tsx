@@ -18,7 +18,7 @@ export function ListaMobil() {
   return (
     <nav
       aria-label="Rychlá navigace"
-      className="neni-tisk sklo fixed inset-x-0 bottom-0 z-[60] border-t border-linka !bg-papir/90 pb-[env(safe-area-inset-bottom)] lg:hidden"
+      className="neni-tisk sklo-rozmaz fixed inset-x-0 bottom-0 z-[60] border-t border-linka pb-[env(safe-area-inset-bottom)] lg:hidden"
     >
       <ul className="grid grid-cols-5">
         {POLOZKY.map((p) => {

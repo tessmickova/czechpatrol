@@ -41,6 +41,7 @@ export async function uklid(env: Env): Promise<void> {
     env.DB.prepare("DELETE FROM zpravy WHERE vytvoreno < ? AND id NOT IN (SELECT zprava_id FROM fronta)").bind(pred(90)),
     env.DB.prepare("DELETE FROM zpravy_izs WHERE vytvoreno < ?").bind(pred(365)),
     env.DB.prepare("DELETE FROM audit WHERE kdy < ?").bind(pred(365)),
+    env.DB.prepare("DELETE FROM tipy WHERE vytvoreno < ?").bind(pred(365)),
     env.DB.prepare("DELETE FROM ucty WHERE COALESCE(posledni_prihlaseni, vytvoreno) < ? AND role != 'admin'").bind(pred(730)),
   ]);
 }

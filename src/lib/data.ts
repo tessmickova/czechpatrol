@@ -201,13 +201,17 @@ export function zemeDopad(odRoku = new Date().getUTCFullYear()) {
     const serazene = [...z.zaznamy].sort((a, b) => UROVNE[b.zavaznost].poradi - UROVNE[a.zavaznost].poradi);
     const kategorie = new Set<Kategorie>();
     for (const i of z.zaznamy) for (const k of i.kategorie) kategorie.add(k);
+    const ciny = z.zaznamy.filter((i) => i.puvodce);
     return {
       kodZeme: z.kodZeme,
       zeme: z.kodZeme === "CZ" ? "Česko" : z.zeme,
       pocet: z.zaznamy.length,
       nejvyssi: serazene[0]?.zavaznost ?? null,
-      potvrzenych: z.zaznamy.filter((i) => i.atribuce === "oficialni" || i.atribuce === "domaci").length,
-      cinu: z.zaznamy.filter((i) => i.puvodce).length,
+      /** Činy s potvrzeným pachatelem — počítá se jen mezi činy, ne mezi prohlášeními. */
+      potvrzenych: ciny.filter((i) => i.atribuce === "oficialni" || i.atribuce === "domaci").length,
+      cinu: ciny.length,
+      /** Prohlášení, varování, reakce států — záznamy bez původce. */
+      prohlaseni: z.zaznamy.length - ciny.length,
       kategorie: PORADI_KATEGORII.filter((k) => kategorie.has(k)),
       posledni: z.zaznamy.map((i) => i.datumZjisteni ?? i.datumUdalosti).sort().at(-1) ?? null,
       nejzavaznejsi: serazene[0] ?? null,
@@ -249,6 +253,24 @@ export function tlakCr(): HybridniTlak {
       poznamka: o.kat ? "Podle zveřejněných záznamů s kódem CZ." : "Přímé vojenské riziko se pro ČR samostatně nehodnotí.",
     })),
   };
+}
+
+/**
+ * Dopad na občany ČR: jediná úroveň odvozená z toho, co dnes platí.
+ * Mimořádný právní stav = vážná; narušená služba = vysoká; sledovaná = střední;
+ * nic z toho = nízká. Neověřené položky do výsledku nevstupují, ale hlásí se.
+ */
+export function urovenObcanu(): { uroven: Uroven; popis: string; neovereno: number } {
+  const pr = pravniStav().polozky;
+  const pv = provoz().polozky;
+  const neovereno = pr.filter((p) => p.plati === null).length + pv.filter((p) => p.stav === "bez-zdroje").length;
+  const plati = pr.filter((p) => p.plati === true);
+  if (plati.length) return { uroven: "R1", popis: `platí: ${plati.map((p) => p.nazev.toLowerCase()).join(", ")}`, neovereno };
+  const narusene = pv.filter((p) => p.stav === "narusen");
+  if (narusene.length) return { uroven: "O1", popis: `narušeno: ${narusene.map((p) => p.nazev.toLowerCase()).join(", ")}`, neovereno };
+  const sledovane = pv.filter((p) => p.stav === "sledujeme");
+  if (sledovane.length) return { uroven: "Y1", popis: `sledujeme: ${sledovane.map((p) => p.nazev.toLowerCase()).join(", ")}`, neovereno };
+  return { uroven: "G1", popis: "bez omezení, bez mobilizace, bez mimořádných nařízení", neovereno };
 }
 
 /** Měsíční řada od roku 2013. Měsíce bez doloženého záznamu jsou prázdné. */

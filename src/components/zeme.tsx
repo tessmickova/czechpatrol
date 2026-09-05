@@ -63,16 +63,27 @@ export function DopadPoZemich() {
             </div>
             {z.pocet > 0 && (
               <>
-                <div className="mt-3 flex flex-wrap gap-1">
-                  {z.kategorie.slice(0, 4).map((k) => (
+                {/* Z čeho se počet skládá: činy s potvrzeným pachatelem, činy bez něj, prohlášení a reakce. */}
+                <div aria-hidden className="mt-3 flex h-[6px] overflow-hidden rounded-full bg-linka2">
+                  {z.potvrzenych > 0 && <span className="bg-[#ff8a4c]" style={{ width: `${(z.potvrzenych / z.pocet) * 100}%` }} />}
+                  {z.cinu - z.potvrzenych > 0 && <span className="bg-[#ffd166]" style={{ width: `${((z.cinu - z.potvrzenych) / z.pocet) * 100}%` }} />}
+                  {z.prohlaseni > 0 && <span className="bg-tlum2" style={{ width: `${(z.prohlaseni / z.pocet) * 100}%` }} />}
+                </div>
+                <ul className="mt-2 space-y-1 text-[12.5px] text-tlum">
+                  <li className="flex items-center gap-2"><span aria-hidden className="h-[6px] w-[6px] rounded-[2px] bg-[#ff8a4c]" /><span className="cislice text-inkoust">{z.potvrzenych}</span> {sklon(z.potvrzenych, "čin", "činy", "činů")} s potvrzeným pachatelem</li>
+                  <li className="flex items-center gap-2"><span aria-hidden className="h-[6px] w-[6px] rounded-[2px] bg-[#ffd166]" /><span className="cislice text-inkoust">{z.cinu - z.potvrzenych}</span> {sklon(z.cinu - z.potvrzenych, "čin", "činy", "činů")} bez potvrzení</li>
+                  <li className="flex items-center gap-2"><span aria-hidden className="h-[6px] w-[6px] rounded-[2px] bg-tlum2" /><span className="cislice text-inkoust">{z.prohlaseni}</span> {sklon(z.prohlaseni, "prohlášení nebo reakce", "prohlášení nebo reakce", "prohlášení a reakcí")}</li>
+                </ul>
+                <div className="mt-2.5 flex flex-wrap gap-1">
+                  {z.kategorie.slice(0, 3).map((k) => (
                     <span key={k} className="stitek-tmavy rounded-[6px] border border-linka px-1.5 py-[3px] text-tlum">{KATEGORIE[k].nazev}</span>
                   ))}
                 </div>
-                <p className="mt-3 flex items-center gap-1.5 text-[13px] text-tlum">
-                  <Ikona nazev="hodiny" velikost={12} />
-                  {z.posledni ? `poslední ${datum(z.posledni)}` : ""}
-                  <span className="ml-auto">{z.cinu} {sklon(z.cinu, "čin", "činy", "činů")} · {z.potvrzenych} potvrz.</span>
-                </p>
+                {z.posledni && (
+                  <p className="mt-2.5 flex items-center gap-1.5 text-[12.5px] text-tlum2">
+                    <Ikona nazev="hodiny" velikost={12} /> poslední {datum(z.posledni)}
+                  </p>
+                )}
               </>
             )}
             {cr && z.pocet === 0 && (
