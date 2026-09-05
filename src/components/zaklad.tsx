@@ -71,9 +71,9 @@ export function OdznakUrovne({
   const d = UROVNE[uroven];
   const t = tokeny(uroven);
   const rozmery = {
-    s: "px-2 py-1 text-[11px] gap-1.5",
-    m: "px-2.5 py-1.5 text-[12.5px] gap-2",
-    l: "px-3 py-2 text-sm gap-2",
+    s: "px-2 py-1 text-[12px] gap-1.5",
+    m: "px-2.5 py-1.5 text-[13.5px] gap-2",
+    l: "px-3 py-2 text-[15px] gap-2",
   }[velikost];
   return (
     <span
@@ -82,7 +82,7 @@ export function OdznakUrovne({
       }`}
     >
       <Tecka uroven={uroven} velka={velikost === "l"} naNoci={naNoci} />
-      <span className="uppercase tracking-[0.05em]">{d.nazev}</span>
+      <span className="svit uppercase tracking-[0.05em]">{d.nazev}</span>
       {cehoSe && <span className="font-normal normal-case tracking-normal opacity-70">· {cehoSe}</span>}
     </span>
   );
@@ -134,12 +134,12 @@ export function OdznakJistoty({ jistota }: { jistota: Jistota }) {
         </span>
       }
     >
-      <span className="inline-flex items-center gap-1.5 text-[11px] font-medium text-tlum">
+      <span className="inline-flex items-center gap-1.5 text-[12.5px] font-medium text-tlum">
         <span aria-hidden className="flex gap-[3px]">
           {[1, 2, 3, 4].map((i) => (
             <span
               key={i}
-              className={`h-[7px] w-[7px] rounded-full ${i <= j.body ? "bg-inkoust" : "bg-linka"}`}
+              className={`h-[7px] w-[7px] rounded-full ${i <= j.body ? "bg-akcent shadow-[0_0_6px_rgb(56_232_255/0.7)]" : "bg-linka"}`}
             />
           ))}
         </span>
@@ -157,22 +157,22 @@ const TYPY: Record<TypObsahu, { nazev: string; popis: string; tridy: string }> =
   fakt: {
     nazev: "Fakt",
     popis: "Doloženo zdrojem uvedeným u záznamu.",
-    tridy: "border-linka bg-plocha text-inkoust",
+    tridy: "border-akcent/40 bg-akcent/10 text-akcent-svetla",
   },
   odhad: {
     nazev: "Odhad",
     popis: "Analytická interpretace dostupných informací. Není to fakt ani předpověď.",
-    tridy: "border-[#d8d5ea] bg-[#f7f6fc] text-[#4a4472]",
+    tridy: "border-[#b28cff]/40 bg-[#b28cff]/10 text-[#d3bcff]",
   },
   scenar: {
     nazev: "Scénář",
     popis: "Možnost, nikoli předpověď. Nemusí nastat a nemusí následovat v uvedeném pořadí.",
-    tridy: "border-[#d5e0e8] bg-[#f4f8fb] text-[#3c5a6b]",
+    tridy: "border-tlum/40 bg-tlum/10 text-tlum",
   },
   nepotvrzeno: {
     nazev: "Nepotvrzeno",
     popis: "Informace existuje, ale nemáme dost důkazů. Nezvyšuje sama o sobě hodnocení.",
-    tridy: "border-[#e6ddc9] bg-[#fbf7ee] text-[#7a6428]",
+    tridy: "border-jantar/40 bg-jantar/10 text-jantar",
   },
 };
 
@@ -217,13 +217,13 @@ export function Sekce({
               <div className={`stitek mb-3 ${tmava ? "!text-noc-tlum" : ""}`}>{kicker}</div>
             )}
             <h2
-              className={`podnadpis text-[30px] sm:text-[38px] ${tmava ? "text-noc-text" : ""}`}
+              className={`podnadpis svit text-[32px] sm:text-[42px] ${tmava ? "text-noc-text" : ""}`}
             >
               {nadpis}
             </h2>
             {popis && (
               <p
-                className={`mt-3 text-[15px] leading-relaxed ${tmava ? "text-noc-tlum" : "text-tlum"}`}
+                className={`mt-3 text-[17px] leading-relaxed ${tmava ? "text-noc-tlum" : "text-tlum"}`}
               >
                 {popis}
               </p>
@@ -248,15 +248,15 @@ export function Karta({
   zdvih?: boolean;
 }) {
   const odstiny = {
-    bila: "border-linka bg-plocha",
-    papir: "border-linka bg-papir",
-    modra: "border-[#cddcf7] bg-mycka",
-    zelena: "border-[#c9e3d4] bg-list",
-    pisek: "border-[#e3d8bd] bg-pisek",
-    slez: "border-[#dcd7f0] bg-slez",
+    bila: "sklo",
+    papir: "sklo-noc-slabe",
+    modra: "sklo border-akcent/30 bg-mycka",
+    zelena: "sklo border-[#4fdd9a]/30 bg-list",
+    pisek: "sklo border-jantar/30 bg-pisek",
+    slez: "sklo border-[#b28cff]/30 bg-slez",
   }[odstin];
   return (
-    <Jako className={`rounded-[20px] border ${odstiny} ${zdvih ? "zdvih" : ""} ${className}`}>
+    <Jako className={`rounded-[20px] ${odstiny} ${zdvih ? "zdvih" : ""} ${className}`}>
       {children}
     </Jako>
   );
@@ -267,17 +267,17 @@ export function Prazdno({
   nadpis, popis, ikona = "radar",
 }: { nadpis: string; popis: string; ikona?: NazevIkony }) {
   return (
-    <div className="relative flex flex-col items-center gap-4 overflow-hidden rounded-[20px] border border-[#cddcf7] bg-mycka px-6 py-9 text-center sm:flex-row sm:gap-5 sm:py-7 sm:text-left">
+    <div className="relative flex flex-col items-center gap-4 overflow-hidden sklo rounded-[20px] border-akcent/30 bg-mycka px-6 py-9 text-center sm:flex-row sm:gap-5 sm:py-7 sm:text-left">
       <span
         aria-hidden
-        className="srafy pointer-events-none absolute inset-x-0 top-0 h-[5px] text-[#8fb0e8]"
+        className="srafy pointer-events-none absolute inset-x-0 top-0 h-[5px] text-[#38e8ff]"
       />
-      <span className="grid h-[44px] w-[44px] shrink-0 place-items-center rounded-[15px] border border-white/70 bg-white/70">
+      <span className="grid h-[44px] w-[44px] shrink-0 place-items-center rounded-[15px] border border-akcent/40 bg-akcent/10 text-akcent">
         <Ikona nazev={ikona} velikost={21} />
       </span>
       <span className="block">
-        <span className="block text-[16px] font-semibold tracking-[-0.02em]">{nadpis}</span>
-        <span className="mt-1.5 block max-w-[38rem] text-[13.5px] leading-relaxed text-tlum">
+        <span className="block text-[18px] font-bold uppercase tracking-[0.02em]">{nadpis}</span>
+        <span className="mt-1.5 block max-w-[38rem] text-[15px] leading-relaxed text-tlum">
           {popis}
         </span>
       </span>
@@ -288,7 +288,7 @@ export function Prazdno({
 /** Hodnota, kterou sběrač zatím neověřil. Nikdy ji nedopočítáváme. */
 export function Neovereno({ kratke = false }: { kratke?: boolean }) {
   return (
-    <span className="inline-flex items-center gap-1.5 text-[12px] font-medium text-tlum2">
+    <span className="inline-flex items-center gap-1.5 text-[13px] font-medium text-tlum2">
       <span aria-hidden className="inline-block h-[7px] w-[7px] rounded-[2px] border border-linka" />
       {kratke ? "neověřeno" : "Zatím neověřeno"}
     </span>

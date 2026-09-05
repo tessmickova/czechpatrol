@@ -164,7 +164,7 @@ export function ObsahUdalosti({ incident }: { incident: Incident }) {
           <ul className="space-y-2.5">
             {incident.eskalacniSpousteče.map((f, i) => (
               <li key={i} className="flex gap-3 text-[14px] leading-relaxed text-tlum">
-                <span className="mt-[2px] shrink-0 text-[#c25e18]">
+                <span className="mt-[2px] shrink-0 text-[#e8834a]">
                   <Ikona nazev="nahoru" velikost={13} tah={2} />
                 </span>
                 {f}
@@ -172,7 +172,7 @@ export function ObsahUdalosti({ incident }: { incident: Incident }) {
             ))}
             {incident.deeskalacniSignaly.map((f, i) => (
               <li key={`d${i}`} className="flex gap-3 text-[14px] leading-relaxed text-tlum">
-                <span className="mt-[2px] shrink-0 text-[#2e8b62]">
+                <span className="mt-[2px] shrink-0 text-[#4fbe86]">
                   <Ikona nazev="dolu" velikost={13} tah={2} />
                 </span>
                 {f}

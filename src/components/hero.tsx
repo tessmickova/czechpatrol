@@ -6,8 +6,8 @@ import { ObloukovyMerak } from "./mericky";
 import { Napoveda, VykladUrovne } from "./zaklad";
 
 const TRENDY = {
-  nahoru: { ikona: "nahoru" as NazevIkony, text: "zhoršení / 7 dní", tridy: "text-[#f4a67c]" },
-  dolu: { ikona: "dolu" as NazevIkony, text: "uklidnění / 7 dní", tridy: "text-[#7fdcac]" },
+  nahoru: { ikona: "nahoru" as NazevIkony, text: "zhoršení / 7 dní", tridy: "text-[#ffa877]" },
+  dolu: { ikona: "dolu" as NazevIkony, text: "uklidnění / 7 dní", tridy: "text-[#8ff0c0]" },
   "beze-zmeny": { ikona: "fajfka" as NazevIkony, text: "beze změny / 7 dní", tridy: "text-noc-tlum" },
 } as const;
 
@@ -21,9 +21,9 @@ interface Kontrolka {
 }
 
 const TON = {
-  klid: "bg-[#4fbe86]",
-  pozor: "bg-[#e3c155]",
-  poplach: "bg-[#e8834a]",
+  klid: "bg-[#4fdd9a] shadow-[0_0_8px_rgb(79_221_154/0.8)]",
+  pozor: "bg-[#ffd166] shadow-[0_0_8px_rgb(255_209_102/0.8)]",
+  poplach: "bg-[#ff5c6c] shadow-[0_0_8px_rgb(255_92_108/0.8)]",
   neznamo: "bg-white/20",
 };
 
@@ -66,7 +66,7 @@ function kontrolky(
       napoveda: <span className="block">{pr("hranice")?.vysvetleni}</span>,
     },
     {
-      klic: "primy", stitek: "Přímý střet NATO–Rusko", ikona: "terc",
+      klic: "primy", stitek: "Přímý střet", ikona: "terc",
       ton: !primy?.uroven ? "neznamo"
         : UROVNE[primy.uroven].pasmo === "zelena" ? "klid"
         : UROVNE[primy.uroven].pasmo === "cervena" ? "poplach" : "pozor",
@@ -105,8 +105,8 @@ export function SituacniPanel({
         <div data-vrstva="0.12" className="vrstva vzor-zare absolute inset-x-0 -inset-y-[60%]" />
       </div>
 
-      <div className="mx-auto max-w-[1320px] px-4 py-6 sm:px-6 sm:py-8">
-        <div className="grid gap-6 lg:grid-cols-[minmax(0,auto)_minmax(0,1fr)] lg:items-center lg:gap-10">
+      <div className="mx-auto max-w-[1320px] px-4 pt-4 sm:px-6 sm:pt-6">
+        <div className="sklo sklo-akcent sken relative grid gap-6 overflow-hidden rounded-[22px] px-5 py-6 sm:px-7 sm:py-7 lg:grid-cols-[minmax(0,auto)_minmax(0,1fr)] lg:items-center lg:gap-10">
           {/* úroveň */}
           <div className="flex items-center gap-5">
             <Napoveda
@@ -115,18 +115,18 @@ export function SituacniPanel({
               }
             >
               <span className="block">
-                <ObloukovyMerak uroven={stav.uroven} naNoci velikost={168} skrytPopisek />
+                <ObloukovyMerak uroven={stav.uroven} naNoci velikost={184} skrytPopisek />
               </span>
             </Napoveda>
 
             <div className="min-w-0">
               <div className="stitek mb-2 !text-noc-tlum">Celková úroveň</div>
-              <p className={`nadpis text-[30px] sm:text-[34px] ${t ? t.textNoc : "text-noc-tlum"}`}>
+              <p className={`nadpis svit-silny text-[36px] sm:text-[44px] ${t ? t.textNoc : "text-noc-tlum"}`}>
                 {d ? d.nazev : "Nestanoveno"}
               </p>
               {trend && (
-                <p className={`mt-2 flex items-center gap-1.5 text-[12.5px] font-medium ${trend.tridy}`}>
-                  <Ikona nazev={trend.ikona} velikost={13} tah={1.8} />
+                <p className={`mt-2.5 flex items-center gap-1.5 text-[15px] font-semibold ${trend.tridy}`}>
+                  <Ikona nazev={trend.ikona} velikost={15} tah={1.8} />
                   {trend.text}
                 </p>
               )}
@@ -138,18 +138,18 @@ export function SituacniPanel({
 
           {/* kontrolky a čísla */}
           <div className="grid gap-4">
-            <ul className="grid grid-cols-2 gap-2.5 sm:grid-cols-3 lg:grid-cols-5">
+            <ul className="grid grid-cols-2 gap-2.5 sm:grid-cols-3 xl:grid-cols-5">
               {kontrolky(pravni, nato, hybridni).map((k) => (
-                <li key={k.klic} className="sklo-noc-slabe rounded-[14px] px-3.5 py-3">
+                <li key={k.klic} className="sklo-noc-slabe rounded-[14px] px-3.5 py-3.5">
                   <Napoveda popis={k.napoveda} label={`${k.stitek} — co to znamená?`}>
                     <span className="block">
                       <span className="mb-2 flex items-center gap-1.5 text-noc-tlum">
-                        <Ikona nazev={k.ikona} velikost={12} />
-                        <span className="stitek !text-[9px] !text-noc-tlum">{k.stitek}</span>
+                        <Ikona nazev={k.ikona} velikost={13} />
+                        <span className="stitek !text-[10px] !text-noc-tlum">{k.stitek}</span>
                       </span>
                       <span className="flex items-center gap-1.5">
                         <span aria-hidden className={`h-[6px] w-[6px] shrink-0 rounded-[2px] ${TON[k.ton]}`} />
-                        <span className="text-[12.5px] font-semibold leading-tight text-noc-text">
+                        <span className="min-w-0 break-words text-[13.5px] font-bold uppercase leading-tight tracking-[0.02em] text-noc-text">
                           {k.hodnota}
                         </span>
                       </span>
@@ -159,19 +159,19 @@ export function SituacniPanel({
               ))}
             </ul>
 
-            <div className="flex flex-wrap items-center gap-x-6 gap-y-3 rounded-[14px] border border-white/10 px-4 py-3">
+            <div className="sklo-noc-slabe flex flex-wrap items-center gap-x-7 gap-y-3 rounded-[14px] px-4 py-3">
               {[
                 { s: "Nové signály", h: s.celkem },
                 { s: "Vysoké", h: s.vysoke },
                 { s: "Kritické", h: s.kriticke },
               ].map((x) => (
                 <span key={x.s} className="flex items-baseline gap-2">
-                  <span className="cislice text-[22px] font-semibold text-noc-text">{x.h}</span>
+                  <span className="velke-cislo svit text-[30px] text-akcent-svetla">{x.h}</span>
                   <span className="stitek !text-noc-tlum">{x.s}</span>
                 </span>
               ))}
               {dnyBezZmeny && (
-                <span className="stitek-tmavy ml-auto inline-flex items-center gap-1.5 rounded-full border border-[#2a5f47] bg-[#0e2a20] px-2.5 py-1 text-[#7fdcac]">
+                <span className="stitek-tmavy ml-auto inline-flex items-center gap-1.5 rounded-full border border-[#4fdd9a]/35 bg-[#4fdd9a]/10 px-2.5 py-1.5 text-[#8ff0c0]">
                   <Ikona nazev="hodiny" velikost={11} tah={1.7} />
                   {dnyBezZmeny.odZacatkuArchivu
                     ? "za celý archiv beze změny"
@@ -181,7 +181,7 @@ export function SituacniPanel({
             </div>
 
             {stav.shrnuti && (
-              <p className="max-w-[70ch] text-[13.5px] leading-relaxed text-noc-tlum">{stav.shrnuti}</p>
+              <p className="max-w-[72ch] text-[15.5px] leading-relaxed text-noc-tlum">{stav.shrnuti}</p>
             )}
           </div>
         </div>

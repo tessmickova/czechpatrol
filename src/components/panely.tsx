@@ -23,7 +23,7 @@ function RadekSemaforu({ p }: { p: PravniPolozka }) {
         <span
           aria-hidden
           className={`h-[9px] w-[9px] shrink-0 rounded-[2px] ${
-            neznamo ? "border border-linka" : p.plati ? "bg-[#c25e18]" : "bg-[#3f8f5c]"
+            neznamo ? "border border-linka" : p.plati ? "bg-[#e8834a]" : "bg-[#4fbe86]"
           }`}
         />
         <span className="flex-1 text-[14px] font-medium tracking-[-0.01em]">{p.nazev}</span>
@@ -31,7 +31,7 @@ function RadekSemaforu({ p }: { p: PravniPolozka }) {
           <Neovereno kratke />
         ) : (
           <span
-            className={`cislice text-[14px] font-semibold ${p.plati ? "text-[#94450f]" : "text-[#2f6f47]"}`}
+            className={`cislice text-[14px] font-semibold ${p.plati ? "text-[#f4a67c]" : "text-[#7fdcac]"}`}
           >
             {hodnota}
           </span>
@@ -113,7 +113,7 @@ export function NatoPanel({
                   <span
                     aria-hidden
                     className={`h-[7px] w-[7px] rounded-full ${
-                      p.aktivni ? "bg-[#c25e18]" : "border border-linka bg-transparent"
+                      p.aktivni ? "bg-[#e8834a]" : "border border-linka bg-transparent"
                     }`}
                   />
                   {p.hodnota || (p.aktivni ? "aktivní" : "neaktivní")}
@@ -204,9 +204,9 @@ const STAVY_PROVOZU: Record<
   ProvozniPolozka["stav"],
   { nazev: string; tecka: string; text: string }
 > = {
-  bezny: { nazev: "Běžný režim", tecka: "bg-[#3f8f5c]", text: "text-[#2f6f47]" },
-  sledujeme: { nazev: "Sledujeme", tecka: "bg-[#c9a227]", text: "text-[#8a6d14]" },
-  narusen: { nazev: "Narušeno", tecka: "bg-[#c25e18]", text: "text-[#94450f]" },
+  bezny: { nazev: "Běžný režim", tecka: "bg-[#4fbe86]", text: "text-[#7fdcac]" },
+  sledujeme: { nazev: "Sledujeme", tecka: "bg-[#e3c155]", text: "text-[#f0d47e]" },
+  narusen: { nazev: "Narušeno", tecka: "bg-[#e8834a]", text: "text-[#f4a67c]" },
   "bez-zdroje": { nazev: "Neověřeno", tecka: "border border-linka", text: "text-tlum2" },
 };
 
@@ -270,25 +270,25 @@ const DOPADY: Record<string, string> = {
   "velmi-vysoky": "velmi vysoký",
 };
 
-export function WatchlistPanel({ watchlist }: { watchlist: Watchlist }) {
+export function WatchlistPanel({ watchlist, kompaktni = false }: { watchlist: Watchlist; kompaktni?: boolean }) {
   return (
-    <div className="grid gap-5 lg:grid-cols-[minmax(0,1.55fr)_minmax(0,1fr)]">
+    <div className={`grid gap-5 ${kompaktni ? "" : "lg:grid-cols-[minmax(0,1.55fr)_minmax(0,1fr)]"}`}>
       <div>
         <div className="mb-4 flex items-center gap-2">
           <OdznakTypu typ="scenar" />
           <span className="stitek">Co by hodnocení zvýšilo</span>
         </div>
-        <ul className="grid gap-3 sm:grid-cols-2">
+        <ul className={`grid gap-3 ${kompaktni ? "" : "sm:grid-cols-2"}`}>
           {watchlist.eskalacni.map((p) => (
             <Karta jako="li" key={p.cislo} className="p-4">
               <div className="mb-2.5 flex items-baseline justify-between gap-3">
                 <span className="cislice stitek">{p.cislo}</span>
-                <span className="stitek-tmavy text-[#94450f]">↑ {DOPADY[p.dopad]}</span>
+                <span className="stitek-tmavy text-[#f4a67c]">↑ {DOPADY[p.dopad]}</span>
               </div>
-              <h3 className="mb-2 text-[13.5px] font-semibold leading-snug tracking-[-0.01em]">
+              <h3 className="mb-2 text-[15px] font-bold leading-snug">
                 {p.nazev}
               </h3>
-              <p className="text-[12px] leading-relaxed text-tlum">{p.popis}</p>
+              <p className="text-[13.5px] leading-relaxed text-tlum">{p.popis}</p>
             </Karta>
           ))}
         </ul>
@@ -302,8 +302,8 @@ export function WatchlistPanel({ watchlist }: { watchlist: Watchlist }) {
         <Karta className="p-5">
           <ul className="space-y-3">
             {watchlist.uklidnujici.map((u, i) => (
-              <li key={i} className="flex gap-2.5 text-[13px] leading-relaxed text-tlum">
-                <span aria-hidden className="mt-[1px] shrink-0 text-[#3f8f5c]">↓</span>
+              <li key={i} className="flex gap-2.5 text-[14px] leading-relaxed text-tlum">
+                <span aria-hidden className="mt-[1px] shrink-0 text-[#4fbe86]">↓</span>
                 {u}
               </li>
             ))}
@@ -346,7 +346,7 @@ export function ScenarovaCesta() {
         {/* svislice žebříku */}
         <span
           aria-hidden
-          className="absolute bottom-8 left-[19px] top-8 w-[2px] rounded-full bg-gradient-to-b from-[#2e8b62]/40 via-[#c9a227]/50 to-[#a32b2b]/45 sm:left-[23px]"
+          className="absolute bottom-8 left-[19px] top-8 w-[2px] rounded-full bg-gradient-to-b from-[#4fbe86]/40 via-[#e3c155]/50 to-[#e06767]/45 sm:left-[23px]"
         />
         {KROKY.map((k, i) => (
           <li key={k.nazev}>
@@ -433,8 +433,8 @@ export function RuskoPanel({
         ))}
       </dl>
 
-      <div className="rounded-[10px] border border-[#e6ddc9] bg-[#fbf7ee] px-4 py-3">
-        <p className="text-[12px] leading-relaxed text-[#6d5a2a]">{stav.poznamkaZdravi}</p>
+      <div className="rounded-[10px] border border-[#5e5124] bg-[#2a2410] px-4 py-3">
+        <p className="text-[12px] leading-relaxed text-[#f0d47e]">{stav.poznamkaZdravi}</p>
       </div>
 
       <div className="mt-5 border-t border-linka2 pt-4">

@@ -12,8 +12,8 @@ export const metadata: Metadata = {
 };
 
 const TRENDY = {
-  nahoru: { znak: "↑", text: "mírné zhoršení oproti včerejšku", tridy: "text-[#94450f]" },
-  dolu: { znak: "↓", text: "uklidnění oproti včerejšku", tridy: "text-[#2f6f47]" },
+  nahoru: { znak: "↑", text: "mírné zhoršení oproti včerejšku", tridy: "text-[#f4a67c]" },
+  dolu: { znak: "↓", text: "uklidnění oproti včerejšku", tridy: "text-[#7fdcac]" },
   "beze-zmeny": { znak: "→", text: "beze změny oproti včerejšku", tridy: "text-tlum" },
 } as const;
 
@@ -89,7 +89,7 @@ export default function Dnes() {
             <ul className="space-y-3">
               {bezeZmeny.map((b, i) => (
                 <li key={i} className="flex gap-3 text-[13.5px] leading-relaxed">
-                  <span aria-hidden className="mt-[6px] h-[7px] w-[7px] shrink-0 rounded-[2px] bg-[#3f8f5c]" />
+                  <span aria-hidden className="mt-[6px] h-[7px] w-[7px] shrink-0 rounded-[2px] bg-[#4fbe86]" />
                   {b}
                 </li>
               ))}

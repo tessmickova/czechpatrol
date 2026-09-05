@@ -33,12 +33,12 @@ export function BetaPruh() {
 export function UkazkaPruh() {
   if (!JE_UKAZKA) return null;
   return (
-    <div className="border-b border-[#e6ddc9] bg-[#fbf7ee]">
+    <div className="border-b border-[#5e5124] bg-[#2a2410]">
       <div className="mx-auto flex max-w-[1180px] items-start gap-2.5 px-5 py-2.5 sm:px-8">
-        <span className="stitek-tmavy mt-[1px] shrink-0 rounded-[10px] border border-[#ddd0ae] bg-[#f5eeda] px-1.5 py-[3px] text-[#7a6428]">
+        <span className="stitek-tmavy mt-[1px] shrink-0 rounded-[10px] border border-[#5e5124] bg-[#2a2410] px-1.5 py-[3px] text-[#f0d47e]">
           Ukázka
         </span>
-        <p className="text-[12px] leading-relaxed text-[#6d5a2a]">
+        <p className="text-[12px] leading-relaxed text-[#f0d47e]">
           Zobrazený obsah je <b className="font-semibold">smyšlený ukázkový materiál</b> sloužící
           k posouzení vzhledu a rozvržení. Nejde o skutečné bezpečnostní události.
           Produkční verze zobrazuje pouze ověřené záznamy s uvedenými zdroji.
@@ -51,7 +51,7 @@ export function UkazkaPruh() {
 /** Odznak u jednotlivého ukázkového záznamu. */
 export function OdznakUkazky() {
   return (
-    <span className="stitek-tmavy shrink-0 rounded-[10px] border border-[#ddd0ae] bg-[#f5eeda] px-1.5 py-[3px] text-[#7a6428]">
+    <span className="stitek-tmavy shrink-0 rounded-[10px] border border-[#5e5124] bg-[#2a2410] px-1.5 py-[3px] text-[#f0d47e]">
       Ukázka
     </span>
   );

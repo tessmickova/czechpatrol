@@ -35,8 +35,8 @@ export function Panel({
   return (
     <section
       id={id}
-      className={`${rozpeti} scroll-mt-[70px] overflow-hidden rounded-[18px] border ${
-        tmavy ? "noc relative border-white/10" : "border-linka bg-plocha"
+      className={`${rozpeti} sklo scroll-mt-[70px] overflow-hidden rounded-[18px] ${
+        tmavy ? "noc relative" : ""
       }`}
     >
       {tmavy && (
@@ -46,24 +46,20 @@ export function Panel({
       )}
 
       <header
-        className={`flex flex-wrap items-start justify-between gap-3 border-b px-5 py-4 sm:px-6 ${
-          tmavy ? "border-white/10" : "border-linka2"
-        }`}
+        className="flex flex-wrap items-start justify-between gap-3 border-b border-linka2 px-5 py-4 sm:px-6"
       >
         <div className="min-w-0">
           <div className={`mb-2 flex items-center gap-2 ${tmavy ? "text-noc-tlum" : "text-tlum2"}`}>
-            {ikona && <Ikona nazev={ikona} velikost={13} />}
+            {ikona && <span className="text-akcent svit"><Ikona nazev={ikona} velikost={14} /></span>}
             <span className={`stitek ${tmavy ? "!text-noc-tlum" : ""}`}>{kod}</span>
           </div>
           <h2
-            className={`text-[16px] font-semibold tracking-[-0.02em] sm:text-[17px] ${
-              tmavy ? "text-noc-text" : ""
-            }`}
+            className={`podnadpis text-[19px] sm:text-[21px] ${tmavy ? "text-noc-text" : ""}`}
           >
             {nadpis}
           </h2>
           {popis && (
-            <p className={`mt-1 max-w-[52ch] text-[12.5px] leading-snug ${tmavy ? "text-noc-tlum" : "text-tlum"}`}>
+            <p className={`mt-1.5 max-w-[56ch] text-[14.5px] leading-snug ${tmavy ? "text-noc-tlum" : "text-tlum"}`}>
               {popis}
             </p>
           )}

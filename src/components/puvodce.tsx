@@ -2,10 +2,10 @@ import { Ikona } from "./ikony";
 import { Karta } from "./zaklad";
 
 const BARVY: Record<string, { pruh: string; text: string }> = {
-  oficialni: { pruh: "bg-[#c25e18]", text: "text-[#93440e]" },
-  vysetrovana: { pruh: "bg-[#c9a227]", text: "text-[#856713]" },
-  nepotvrzena: { pruh: "bg-[#8a93a1]", text: "text-tlum" },
-  domaci: { pruh: "bg-[#2e8b62]", text: "text-[#227050]" },
+  oficialni: { pruh: "bg-[#e8834a]", text: "text-[#f4a67c]" },
+  vysetrovana: { pruh: "bg-[#e3c155]", text: "text-[#f0d47e]" },
+  nepotvrzena: { pruh: "bg-[#64789a]", text: "text-tlum" },
+  domaci: { pruh: "bg-[#4fbe86]", text: "text-[#7fdcac]" },
   neznama: { pruh: "bg-linka", text: "text-tlum2" },
 };
 

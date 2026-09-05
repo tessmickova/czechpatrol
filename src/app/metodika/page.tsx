@@ -104,7 +104,7 @@ export default function Metodika() {
         <div className="grid gap-5 lg:grid-cols-2">
           <Karta className="p-5 sm:p-6">
             <h3 className="podnadpis mb-4 text-[15px]">Započítáváme</h3>
-            <Seznam polozky={ZAPOCITAVAME} znak="+" barva="text-[#2f6f47]" />
+            <Seznam polozky={ZAPOCITAVAME} znak="+" barva="text-[#7fdcac]" />
           </Karta>
           <Karta className="p-5 sm:p-6">
             <h3 className="podnadpis mb-4 text-[15px]">Nezapočítáváme jako nový incident</h3>
@@ -228,7 +228,7 @@ export default function Metodika() {
           </Karta>
           <Karta className="p-5 sm:p-6">
             <h3 className="podnadpis mb-4 text-[15px]">Dáváme přednost</h3>
-            <Seznam polozky={PREFEROVANE} znak="✓" barva="text-[#2f6f47]" />
+            <Seznam polozky={PREFEROVANE} znak="✓" barva="text-[#7fdcac]" />
           </Karta>
         </div>
       </Sekce>

@@ -4,6 +4,7 @@ import { ctiHtml, ctiRss, stahni } from "./nacti";
 import { rozhodni, type Stazeno } from "./rozhodovani";
 import { ZDROJE } from "./zdroje";
 import type { Nalez, VysledekZdroje } from "./typy";
+import { lidskaZmena } from "../src/lib/archiv-text";
 
 /**
  * Hodinový sběr.
@@ -260,11 +261,11 @@ function zapisSnimek() {
   if (stary.primyStret !== novy.primyStret)
     zmeny.push(zmenaUrovne("přímý střet", stary.primyStret, novy.primyStret));
   for (const [k, v] of Object.entries(novy.pravni))
-    if (stary.pravni[k] !== v) zmeny.push(`právní stav — ${k}: ${anoNe(stary.pravni[k] ?? null)} → ${anoNe(v)}`);
+    if (stary.pravni[k] !== v) zmeny.push(lidskaZmena(`právní stav — ${k}: ${anoNe(stary.pravni[k] ?? null)} → ${anoNe(v)}`));
   for (const [k, v] of Object.entries(novy.nato))
-    if (stary.nato[k] !== v) zmeny.push(`NATO — ${k}: ${anoNe(stary.nato[k] ?? null)} → ${anoNe(v)}`);
+    if (stary.nato[k] !== v) zmeny.push(lidskaZmena(`NATO — ${k}: ${anoNe(stary.nato[k] ?? null)} → ${anoNe(v)}`));
   for (const [k, v] of Object.entries(novy.provoz))
-    if (stary.provoz[k] !== v) zmeny.push(`provoz — ${k}: ${stary.provoz[k] ?? "?"} → ${v}`);
+    if (stary.provoz[k] !== v) zmeny.push(lidskaZmena(`provoz — ${k}: ${stary.provoz[k] ?? "?"} → ${v}`));
   if (stary.udalosti !== novy.udalosti)
     zmeny.push(`zveřejněné události: ${stary.udalosti} → ${novy.udalosti}`);
 

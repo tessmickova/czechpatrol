@@ -95,7 +95,7 @@ export function OdberPanel({ kompaktni = false }: { kompaktni?: boolean }) {
           <ul className="space-y-2.5">
             {KDY_UPOZORNENI.map((k) => (
               <li key={k} className="flex gap-2.5 text-[12.5px] leading-relaxed text-tlum">
-                <span aria-hidden className="mt-[1px] text-[#2e8b62]">
+                <span aria-hidden className="mt-[1px] text-[#4fbe86]">
                   <Ikona nazev="fajfka" velikost={13} tah={1.8} />
                 </span>
                 {k}

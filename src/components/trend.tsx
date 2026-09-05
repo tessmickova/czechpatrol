@@ -68,7 +68,7 @@ function ZnackaTrendu({ nyni, drive }: { nyni: Uroven; drive?: Uroven }) {
   const r = UROVNE[nyni].poradi - UROVNE[drive].poradi;
   if (r === 0) return <span className="text-[12.5px] text-tlum">→ beze změny</span>;
   return (
-    <span className={`text-[12.5px] font-medium ${r > 0 ? "text-[#94450f]" : "text-[#2f6f47]"}`}>
+    <span className={`text-[12.5px] font-medium ${r > 0 ? "text-[#f4a67c]" : "text-[#7fdcac]"}`}>
       {r > 0 ? "↑" : "↓"} {r > 0 ? "zhoršení" : "zlepšení"}
     </span>
   );
@@ -178,9 +178,9 @@ export function TabulkaTydnu({ tydny }: { tydny: TydenniHodnoceni[] }) {
 /* ---------------- graf ---------------- */
 
 const RADY = [
-  { klic: "celkova" as const, nazev: "Celková úroveň", barva: "#0c0c0c", silna: true },
-  { klic: "hybridni" as const, nazev: "Hybridní tlak", barva: "#c25e18", silna: false },
-  { klic: "primyStret" as const, nazev: "Přímý střet", barva: "#3f8f5c", silna: false },
+  { klic: "celkova" as const, nazev: "Celková úroveň", barva: "#e8f1ff", silna: true },
+  { klic: "hybridni" as const, nazev: "Hybridní tlak", barva: "#e8834a", silna: false },
+  { klic: "primyStret" as const, nazev: "Přímý střet", barva: "#4fbe86", silna: false },
 ];
 
 /**
@@ -198,7 +198,7 @@ export function GrafTrendu({ tydny }: { tydny: TydenniHodnoceni[] }) {
   }
 
   // Pevná souřadnicová soustava, kterou viewBox roztáhne na šířku karty.
-  const SIRKA = 1000, V = 200, LEVO = 92, PRAVO = 20, NAHORE = 14, DOLE = 40;
+  const SIRKA = 1000, V = 200, LEVO = 160, PRAVO = 24, NAHORE = 14, DOLE = 40;
   const sirka = SIRKA;
   const S = (SIRKA - LEVO - PRAVO) / Math.max(1, tydny.length - 1);
   const x = (i: number) => LEVO + i * S;
@@ -238,8 +238,8 @@ export function GrafTrendu({ tydny }: { tydny: TydenniHodnoceni[] }) {
             const yy = NAHORE + V - ((p.poradi - 1) / 12) * V;
             return (
               <g key={p.poradi}>
-                <line x1={LEVO - 8} x2={sirka - PRAVO} y1={yy} y2={yy} stroke="#f0efeb" strokeWidth="1" />
-                <text x={LEVO - 14} y={yy + 3.5} textAnchor="end" fontSize="10" fill="#93938f">
+                <line x1={LEVO - 8} x2={sirka - PRAVO} y1={yy} y2={yy} stroke="#12203a" strokeWidth="1" />
+                <text x={LEVO - 14} y={yy + 4.5} textAnchor="end" fontSize="13" fontFamily="var(--font-mono)" fill="#9db1cc">
                   {p.text}
                 </text>
               </g>
@@ -248,8 +248,8 @@ export function GrafTrendu({ tydny }: { tydny: TydenniHodnoceni[] }) {
 
           <defs>
             <linearGradient id="plocha-celkem" x1="0" y1="0" x2="0" y2="1">
-              <stop offset="0%" stopColor="#0e131a" stopOpacity="0.14" />
-              <stop offset="100%" stopColor="#0e131a" stopOpacity="0" />
+              <stop offset="0%" stopColor="#e8f1ff" stopOpacity="0.14" />
+              <stop offset="100%" stopColor="#e8f1ff" stopOpacity="0" />
             </linearGradient>
           </defs>
 
@@ -305,15 +305,16 @@ export function GrafTrendu({ tydny }: { tydny: TydenniHodnoceni[] }) {
                 />
               ))}
               {i === tydny.length - 1 && (
-                <circle cx={x(i)} cy={y(t.celkova)} r="6" fill="none" stroke="#0e131a" strokeWidth="1" opacity="0.28" />
+                <circle cx={x(i)} cy={y(t.celkova)} r="6" fill="none" stroke="#e8f1ff" strokeWidth="1" opacity="0.28" />
               )}
               {(i % 2 === 0 || tydny.length <= 8) && (
                 <text
                   x={x(i)}
                   y={NAHORE + V + 20}
                   textAnchor="middle"
-                  fontSize="9.5"
-                  fill="#93938f"
+                  fontSize="13"
+                  fontFamily="var(--font-mono)"
+                  fill="#9db1cc"
                 >
                   {rozsah(t.zacatek, t.konec).split(" – ")[0]}
                 </text>

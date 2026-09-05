@@ -39,8 +39,8 @@ export function ObloukovyMerak({
   });
 
   const t = uroven ? PASMA[UROVNE[uroven].pasmo] : null;
-  const barvaAktivni = t ? (naNoci ? t.plnaNoc : t.plna) : "#8695aa";
-  const barvaPrazdna = naNoci ? "rgba(255,255,255,0.12)" : "#e3e8f0";
+  const barvaAktivni = t ? (naNoci ? t.plnaNoc : t.plna) : "#64789a";
+  const barvaPrazdna = naNoci ? "rgba(255,255,255,0.12)" : "#1a2a44";
 
   return (
     <svg
@@ -60,14 +60,15 @@ export function ObloukovyMerak({
           strokeLinecap="butt"
           stroke={s.i < aktivni ? barvaAktivni : barvaPrazdna}
           opacity={s.i < aktivni ? (0.55 + (0.45 * (s.i + 1)) / Math.max(1, aktivni)) : 1}
+          style={s.i < aktivni ? { filter: `drop-shadow(0 0 4px ${barvaAktivni})` } : undefined}
         />
       ))}
 
       {/* Krajní popisky rozsahu — bez nich by měřák neříkal, čeho je to škála. */}
-      <text x={cx - r - 6} y={cy + 17} textAnchor="start" fontSize="9"
-        fill={naNoci ? "#949eae" : "#8a93a1"} letterSpacing="0.9">NÍZKÁ</text>
-      <text x={cx + r + 6} y={cy + 17} textAnchor="end" fontSize="9"
-        fill={naNoci ? "#949eae" : "#8a93a1"} letterSpacing="0.9">KRITICKÁ</text>
+      <text x={cx - r - 6} y={cy + 17} textAnchor="start" fontSize="10" fontFamily="var(--font-mono)"
+        fill={naNoci ? "#64789a" : "#64789a"} letterSpacing="0.9">NÍZKÁ</text>
+      <text x={cx + r + 6} y={cy + 17} textAnchor="end" fontSize="10" fontFamily="var(--font-mono)"
+        fill={naNoci ? "#64789a" : "#64789a"} letterSpacing="0.9">KRITICKÁ</text>
 
       {/* Hodnota patří dovnitř přístroje — pokud ji nenese okolí. */}
       {!skrytPopisek && (
@@ -75,17 +76,18 @@ export function ObloukovyMerak({
         x={cx}
         y={cy + 50}
         textAnchor="middle"
-        fontSize="27"
-        fontWeight="600"
-        letterSpacing="-0.9"
+        fontSize={Math.min(27, (velikost * 1.55) / Math.max(8, (popisek ?? (uroven ? UROVNE[uroven].nazev : "Zatím nestanoveno")).length))}
+        fontWeight="700"
+        letterSpacing="0.3"
+        style={{ textTransform: "uppercase" }}
         fill={
           uroven
             ? naNoci
               ? PASMA[UROVNE[uroven].pasmo].plnaNoc
               : PASMA[UROVNE[uroven].pasmo].plna
             : naNoci
-              ? "#949eae"
-              : "#8a93a1"
+              ? "#64789a"
+              : "#64789a"
         }
       >
         {popisek ?? (uroven ? UROVNE[uroven].nazev : "Zatím nestanoveno")}
@@ -157,10 +159,10 @@ export function RadarTlaku({ tlak, velikost = 300 }: { tlak: HybridniTlak; velik
 
       {maUdaje && (
         <>
-          <polygon points={body.join(" ")} fill="rgba(29,99,216,0.28)" stroke="#6aa2ff" strokeWidth="1.6" />
+          <polygon points={body.join(" ")} fill="rgba(56,232,255,0.16)" stroke="#38e8ff" strokeWidth="1.6" style={{ filter: "drop-shadow(0 0 6px rgba(56,232,255,0.6))" }} />
           {osy.map((o, i) => {
             const [x, y] = bodOsy(i, Math.max(podily[i], 0.02));
-            const barva = o.uroven ? PASMA[UROVNE[o.uroven].pasmo].plnaNoc : "#9db0c9";
+            const barva = o.uroven ? PASMA[UROVNE[o.uroven].pasmo].plnaNoc : "#9db1cc";
             return <circle key={i} cx={x} cy={y} r="3.4" fill={barva} stroke="#071426" strokeWidth="1.4" />;
           })}
         </>
@@ -174,9 +176,10 @@ export function RadarTlaku({ tlak, velikost = 300 }: { tlak: HybridniTlak; velik
             x={x}
             y={y + 3.5}
             textAnchor={Math.abs(x - cx) < 8 ? "middle" : x > cx ? "start" : "end"}
-            fontSize="10"
-            fill="#9db0c9"
-            letterSpacing="0.4"
+            fontSize="11"
+            fill="#9db1cc"
+            fontFamily="var(--font-mono)"
+            letterSpacing="0.6"
           >
             {POPISKY[o.klic] ?? o.nazev}
           </text>

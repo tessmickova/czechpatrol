@@ -59,3 +59,23 @@ describe("odběrové kanály", () => {
     }
   });
 });
+
+import { lidskaZmena } from "../src/lib/archiv-text";
+
+describe("lidský popis změn", () => {
+  it("překládá klíče provozu i stavů na věty pro čtenáře", () => {
+    expect(lidskaZmena("provoz — palivo: bez-zdroje → bezny")).toBe(
+      "Palivo a čerpací stanice: bez ověřeného zdroje → běžný provoz",
+    );
+    expect(lidskaZmena("právní stav — valecny-stav: neověřeno → NE")).toBe("Válečný stav: neověřeno → NE");
+    expect(lidskaZmena("NATO — clanek-4: neověřeno → NE")).toBe("NATO čl. 4 (konzultace): neověřeno → NE");
+  });
+  it("věty, které už jsou lidské, nechá být", () => {
+    expect(lidskaZmena("celková úroveň: Střední → Vyšší")).toBe("Celková úroveň: Střední → Vyšší");
+    expect(lidskaZmena("začátek archivu")).toBe("Začátek archivu");
+  });
+  it("v archivu nezůstává žádný surový klíč", () => {
+    const a = JSON.parse(fs.readFileSync("data/historie.json", "utf8")) as { snimky: { zmeny: string[] }[] };
+    for (const s of a.snimky) for (const z of s.zmeny) expect(lidskaZmena(z)).not.toMatch(/bez-zdroje|bezny\b| — [a-z0-9-]+:/);
+  });
+});

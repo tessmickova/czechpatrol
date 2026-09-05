@@ -1,14 +1,16 @@
 import type { Metadata, Viewport } from "next";
-import { Inter, JetBrains_Mono } from "next/font/google";
+import { Chakra_Petch, JetBrains_Mono } from "next/font/google";
 import { Navigace } from "@/components/navigace";
 import { Paticka } from "@/components/paticka";
 import { BetaPruh, UkazkaPruh } from "@/components/pruhy";
 import { WEB } from "@/config/web";
 import "./globals.css";
 
-const inter = Inter({
+// Jediné písmo pro všechno psané. Tučné řezy nesou nadpisy, střední text.
+const chakra = Chakra_Petch({
   subsets: ["latin", "latin-ext"],
-  variable: "--font-inter",
+  weight: ["400", "500", "600", "700"],
+  variable: "--font-chakra",
   display: "swap",
 });
 
@@ -41,14 +43,14 @@ export const metadata: Metadata = {
 };
 
 export const viewport: Viewport = {
-  themeColor: "#0b1017",
+  themeColor: "#060a13",
   width: "device-width",
   initialScale: 1,
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="cs" className={`${inter.variable} ${mono.variable}`}>
+    <html lang="cs" className={`${chakra.variable} ${mono.variable}`}>
       <body className="min-h-dvh">
         <a
           href="#obsah"

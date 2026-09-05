@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useMemo, useRef, useState } from "react";
+import { lidskaZmena } from "@/lib/archiv-text";
 import { datum, datumCas, pocet } from "@/lib/format";
 import { PASMA, UROVNE } from "@/lib/skala";
 import type { Archiv, Snimek } from "@/lib/typy";
@@ -26,12 +27,12 @@ const NATO_POPIS: Record<string, string> = {
 function Radek({ nazev, plati }: { nazev: string; plati: boolean | null }) {
   return (
     <div className="flex items-center justify-between gap-3 border-b border-white/8 py-2 last:border-0">
-      <span className="text-[12.5px] text-noc-tlum">{nazev}</span>
+      <span className="text-[14px] text-noc-tlum">{nazev}</span>
       <span className="flex items-center gap-2">
         <span
           aria-hidden
           className={`h-[7px] w-[7px] rounded-[3px] ${
-            plati === null ? "bg-white/20" : plati ? "bg-[#e8834a]" : "bg-[#4fbe86]"
+            plati === null ? "bg-white/20" : plati ? "bg-[#ff5c6c] shadow-[0_0_6px_rgb(255_92_108/0.8)]" : "bg-[#4fdd9a] shadow-[0_0_6px_rgb(79_221_154/0.8)]"
           }`}
         />
         <span className="cislice text-[12px] font-medium text-noc-text">
@@ -201,8 +202,8 @@ export function CasovyPosuvnik({ archiv }: { archiv: Archiv }) {
           >
             <defs>
               <linearGradient id="plocha-archiv" x1="0" y1="0" x2="0" y2="1">
-                <stop offset="0%" stopColor="#6f9dfb" stopOpacity="0.3" />
-                <stop offset="100%" stopColor="#6f9dfb" stopOpacity="0" />
+                <stop offset="0%" stopColor="#38e8ff" stopOpacity="0.3" />
+                <stop offset="100%" stopColor="#38e8ff" stopOpacity="0" />
               </linearGradient>
               <clipPath id="do-bezce">
                 <rect x="0" y="0" width={Math.max(0, x(pozice))} height={VYSKA} />
@@ -220,17 +221,17 @@ export function CasovyPosuvnik({ archiv }: { archiv: Archiv }) {
               stroke="rgba(255,255,255,0.09)" strokeWidth="1" vectorEffect="non-scaling-stroke" />
 
             <path d={plocha} fill="url(#plocha-archiv)" opacity="0.35" />
-            <path d={cesta} fill="none" stroke="#6f9dfb" strokeWidth="2" opacity="0.28"
+            <path d={cesta} fill="none" stroke="#38e8ff" strokeWidth="2" opacity="0.28"
               vectorEffect="non-scaling-stroke" />
             <g clipPath="url(#do-bezce)">
               <path d={plocha} fill="url(#plocha-archiv)" />
-              <path d={cesta} fill="none" stroke="#6f9dfb" strokeWidth="2.5"
+              <path d={cesta} fill="none" stroke="#38e8ff" strokeWidth="2.5"
                 vectorEffect="non-scaling-stroke" />
             </g>
 
             {dny.map((d, n) =>
               d.jeZmena ? (
-                <circle key={n} cx={x(n)} cy={y(d)} r="4" fill="#0b1017" stroke="#6f9dfb"
+                <circle key={n} cx={x(n)} cy={y(d)} r="4" fill="#060a13" stroke="#38e8ff"
                   strokeWidth="2" vectorEffect="non-scaling-stroke" />
               ) : null,
             )}
@@ -267,7 +268,7 @@ export function CasovyPosuvnik({ archiv }: { archiv: Archiv }) {
           }}
           aria-label="Posun v čase"
           aria-valuetext={datum(new Date(aktualni.den).toISOString())}
-          className="w-full accent-[#6f9dfb]"
+          className="w-full accent-[#38e8ff]"
         />
         <div className="cislice mb-7 mt-1 flex justify-between text-[10.5px] text-noc-tlum">
           <span>{datum(dny[0].den ? new Date(dny[0].den).toISOString() : "")}</span>
@@ -305,12 +306,12 @@ export function CasovyPosuvnik({ archiv }: { archiv: Archiv }) {
               {s.zmeny.map((z, n) => (
                 <li
                   key={n}
-                  className="sklo-noc-slabe flex items-start gap-2.5 rounded-[10px] px-3 py-2.5 text-[12.5px] leading-snug text-noc-text"
+                  className="sklo-noc-slabe flex items-start gap-2.5 rounded-[10px] px-3 py-2.5 text-[14px] leading-snug text-noc-text"
                 >
                   <span className={`mt-[1px] ${t ? t.textNoc : "text-noc-tlum"}`}>
                     <Ikona nazev="radar" velikost={13} tah={1.6} />
                   </span>
-                  {z}
+                  {lidskaZmena(z)}
                 </li>
               ))}
             </ul>

@@ -50,12 +50,13 @@ const vysledek = await build({
 
 const js = vysledek.outputFiles[0].text;
 
-const stranka = `<title>Bezpečnostní přehled ČR</title>
+const stranka = `<meta charset="utf-8">
+<title>CzechPatrol</title>
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
 ${css}
 /* Písma dodává v náhledu Google Fonts, ne balíček z buildu. */
-:root { --font-inter: "Inter"; --font-mono-web: "JetBrains Mono"; }
+:root { --font-chakra: "Chakra Petch"; --font-mono-web: "JetBrains Mono"; }
 </style>
 
 <div id="app"></div>

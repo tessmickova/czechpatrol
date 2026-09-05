@@ -12,8 +12,8 @@ export const metadata: Metadata = {
 };
 
 const STAVY = {
-  vyvraceno: { nazev: "Vyvráceno", tridy: "border-[#c9e3d4] bg-list", odznak: "border-[#a8d1bd] bg-list2 text-[#227050]" },
-  nepotvrzeno: { nazev: "Nepotvrzeno", tridy: "border-[#e3d8bd] bg-pisek", odznak: "border-[#d2c19b] bg-pisek2 text-[#7a6428]" },
+  vyvraceno: { nazev: "Vyvráceno", tridy: "border-[#2a5f47] bg-list", odznak: "border-[#2a5f47] bg-list2 text-[#7fdcac]" },
+  nepotvrzeno: { nazev: "Nepotvrzeno", tridy: "border-[#5e5124] bg-pisek", odznak: "border-[#5e5124] bg-pisek2 text-[#f0d47e]" },
 } as const;
 
 export default function Nepotvrzeno() {
@@ -57,7 +57,7 @@ export default function Nepotvrzeno() {
 
                       <div>
                         <div className="mb-2 flex items-center gap-2">
-                          <span className="text-[#227050]">
+                          <span className="text-[#7fdcac]">
                             <Ikona nazev="fajfka" velikost={14} tah={1.9} />
                           </span>
                           <span className="stitek">Co ukázalo ověření</span>

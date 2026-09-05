@@ -56,10 +56,10 @@ export const TYPY_ZDROJU: Record<TypZdroje, { znacka: string; popis: string; tri
   },
   analysis: {
     znacka: "ANALYSIS", popis: "Analytický zdroj — think tank, výzkumné pracoviště.",
-    tridy: "border-[#d8d5ea] bg-[#f7f6fc] text-[#4a4472]",
+    tridy: "border-[#2b2a4a] bg-[#141428] text-[#9db1cc]",
   },
   social: {
     znacka: "NEOVĚŘENÝ", popis: "Sociální síť. Nízká důvěryhodnost — sám o sobě nikdy nezvyšuje stupeň hrozby.",
-    tridy: "border-[#e6ddc9] bg-[#fbf7ee] text-[#7a6428]",
+    tridy: "border-[#5e5124] bg-[#2a2410] text-[#f0d47e]",
   },
 };

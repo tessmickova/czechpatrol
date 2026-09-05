@@ -122,7 +122,7 @@ export default function Prehled() {
           popis="Konkrétní kroky institucí, v obou směrech."
           sirka="tretina"
         >
-          <WatchlistPanel watchlist={watchlist()} />
+          <WatchlistPanel watchlist={watchlist()} kompaktni />
         </Panel>
 
         <Panel kod="Týdny" ikona="graf" nadpis="Týdenní přehled" popis="Počty signálů a rozložení závažnosti." vnorena>
@@ -195,7 +195,7 @@ export default function Prehled() {
                     {n.kodZeme}
                   </span>
                   <span className="cislice stitek">{datum(n.datum)}</span>
-                  <span className="stitek-tmavy ml-auto rounded-full border border-[#c9e3d4] bg-list px-2.5 py-1 text-[#227050]">
+                  <span className="stitek-tmavy ml-auto rounded-full border border-[#2a5f47] bg-list px-2.5 py-1 text-[#7fdcac]">
                     {n.stav === "vyvraceno" ? "Vyvráceno" : "Nepotvrzeno"}
                   </span>
                 </div>
