@@ -35,7 +35,7 @@ V GitHubu (Settings → Secrets and variables → Actions):
 
 | Kde | Název | K čemu |
 |---|---|---|
-| secret | `CLOUDFLARE_API_TOKEN`, `CLOUDFLARE_ACCOUNT_ID` | už existují pro web; token musí mít i Workers a D1 |
+| secret | `CLOUDFLARE_API_TOKEN`, `CLOUDFLARE_ACCOUNT_ID` | už existují pro web; tokenu je nutné **přidat práva** Account · D1 · Edit a Account · Workers Scripts · Edit (Cloudflare → My Profile → API Tokens → Edit) |
 | variable | `API_URL` | adresa workeru, např. `https://czechpatrol-api.<účet>.workers.dev` — web ji dostane při buildu, bez ní účty nenabízí |
 | secret | `ADMIN_BOOTSTRAP_KOD` | jednorázový kód pro prvního správce (dlouhý náhodný řetězec) |
 | secret | `TELEGRAM_BOT_TOKEN` | od @BotFather |

@@ -42,13 +42,21 @@ jobs:
       - name: Databáze D1
         run: |
           set -e
-          ID=$(npx wrangler d1 list --json | node -e 'let s="";process.stdin.on("data",d=>s+=d).on("end",()=>{const v=JSON.parse(s).find(x=>x.name==="czechpatrol");console.log(v?v.uuid:"")})')
+          NAJDI='let s="";process.stdin.on("data",d=>s+=d).on("end",()=>{const v=JSON.parse(s).find(x=>x.name==="czechpatrol");console.log(v?v.uuid:"")})'
+          if ! npx wrangler d1 list --json > d1.json 2> d1.err; then
+            echo "::error::Cloudflare token nemá práva k D1 a Workers. V Cloudflare → My Profile → API Tokens tokenu přidejte: Account · D1 · Edit, Account · Workers Scripts · Edit (Pages zůstává). Pak workflow spusťte znovu."
+            cat d1.err
+            exit 1
+          fi
+          ID=$(node -e "$NAJDI" < d1.json)
           if [ -z "$ID" ]; then
             echo "Zakládám databázi czechpatrol"
             npx wrangler d1 create czechpatrol >/dev/null
-            ID=$(npx wrangler d1 list --json | node -e 'let s="";process.stdin.on("data",d=>s+=d).on("end",()=>{const v=JSON.parse(s).find(x=>x.name==="czechpatrol");console.log(v?v.uuid:"")})')
+            npx wrangler d1 list --json > d1.json
+            ID=$(node -e "$NAJDI" < d1.json)
           fi
-          [ -n "$ID" ] || { echo "Databázi se nepodařilo zjistit"; exit 1; }
+          [ -n "$ID" ] || { echo "::error::Databázi se nepodařilo zjistit"; exit 1; }
+          rm -f d1.json d1.err
           sed -i "s/__D1_ID__/$ID/" wrangler.toml
           npx wrangler d1 migrations apply czechpatrol --remote
 
