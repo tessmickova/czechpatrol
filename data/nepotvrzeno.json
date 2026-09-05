@@ -29,5 +29,33 @@
         "jazyk": "en"
       }
     ]
+  },
+  {
+    "id": "n-ricin-2020",
+    "nazev": "Praha 2020: údajný ruský agent s ricinem proti pražským politikům",
+    "zeme": "Česko",
+    "kodZeme": "CZ",
+    "datum": "2020-04-26T00:00:00Z",
+    "stav": "vyvraceno",
+    "puvodne": "Týdeník Respekt 26. dubna 2020 s odvoláním na bezpečnostní zdroje napsal, že do Prahy přicestoval pracovník ruské ambasády s ricinem k otravě primátora a dvou starostů.",
+    "overeni": "Premiér 5. června 2020 oznámil, že informaci BIS podstrčil zaměstnanec ruské ambasády kvůli vnitřnímu sporu; jed nikdy neexistoval. ČR vyhostila dva pracovníky ambasády. Záznam se nepočítá jako hrozba, ale jako doložený případ dezinformace.",
+    "zdroje": [
+      {
+        "nazev": "RFE/RL — Czech government orders out two Russian embassy staff over ricin plot hoax",
+        "url": "https://www.rferl.org/a/czech-republic-expels-two-staff-members-from-russian-embassy/30654670.html",
+        "typ": "media",
+        "publikovano": "2020-06-05T00:00:00Z",
+        "primarni": false,
+        "jazyk": "en"
+      },
+      {
+        "nazev": "Al Jazeera — Czech Republic expels two Russian diplomats over poison plot hoax",
+        "url": "https://www.aljazeera.com/news/2020/6/5/czech-republic-expels-two-russian-diplomats-over-poison-plot-hoax",
+        "typ": "media",
+        "publikovano": "2020-06-05T00:00:00Z",
+        "primarni": false,
+        "jazyk": "en"
+      }
+    ]
   }
 ]

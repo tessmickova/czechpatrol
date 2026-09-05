@@ -161,8 +161,9 @@ export function nepotvrzene(): Nepotvrzene[] {
  * a reakce států původce nemají. „Potvrzeno“ znamená oficiální závěr nebo
  * prokázaný domácí pachatel. Do celkové úrovně tenhle rozpad nevstupuje.
  */
-export function puvodce() {
-  const vse = incidenty().filter((i) => i.puvodce);
+export function puvodce(odRoku = new Date().getUTCFullYear()) {
+  const letos = incidenty().filter((i) => new Date(i.datumZjisteni ?? i.datumUdalosti).getUTCFullYear() >= odRoku);
+  const vse = letos.filter((i) => i.puvodce);
   const skupiny: { klic: Puvodce; nazev: string }[] = [
     { klic: "rusko", nazev: "Rusko" },
     { klic: "ukrajina", nazev: "Ukrajina" },
@@ -172,7 +173,8 @@ export function puvodce() {
   ];
   return {
     celkem: vse.length,
-    bezPuvodce: incidenty().length - vse.length,
+    bezPuvodce: letos.length - vse.length,
+    odRoku,
     skupiny: skupiny.map((s) => {
       const z = vse.filter((i) => i.puvodce === s.klic);
       return {
@@ -186,9 +188,10 @@ export function puvodce() {
 }
 
 /** Dopad po zemích: kolik záznamů, nejvyšší závažnost, oblasti. ČR vždy první. */
-export function zemeDopad() {
+export function zemeDopad(odRoku = new Date().getUTCFullYear()) {
   const mapa = new Map<string, { kodZeme: string; zeme: string; zaznamy: Incident[] }>();
   for (const i of incidenty()) {
+    if (new Date(i.datumZjisteni ?? i.datumUdalosti).getUTCFullYear() < odRoku) continue;
     const z = mapa.get(i.kodZeme) ?? { kodZeme: i.kodZeme, zeme: i.zeme, zaznamy: [] };
     z.zaznamy.push(i);
     mapa.set(i.kodZeme, z);
@@ -249,15 +252,22 @@ export function tlakCr(): HybridniTlak {
 }
 
 /** Měsíční řada od roku 2013. Měsíce bez doloženého záznamu jsou prázdné. */
-export function mesice(): { zacatek: string; mesice: { mesic: string; uroven: Uroven | null }[] } {
+export function mesice(): { zacatek: string; mesice: { mesic: string; uroven: Uroven | null; zaznamu: number; nejvyssi: Uroven | null }[] } {
   const d = jako<{ zacatek: string; mesice: { mesic: string; uroven: Uroven }[] }>(mesiceData);
   const mapa = new Map(d.mesice.map((m) => [m.mesic, m.uroven]));
+  const pocty = new Map<string, Incident[]>();
+  for (const i of incidenty()) {
+    const k = (i.datumZjisteni ?? i.datumUdalosti).slice(0, 7);
+    pocty.set(k, [...(pocty.get(k) ?? []), i]);
+  }
   const [ry, rm] = d.zacatek.split("-").map(Number);
   const konec = new Date();
-  const vse: { mesic: string; uroven: Uroven | null }[] = [];
+  const vse: { mesic: string; uroven: Uroven | null; zaznamu: number; nejvyssi: Uroven | null }[] = [];
   for (let y = ry, m = rm; y < konec.getUTCFullYear() || (y === konec.getUTCFullYear() && m <= konec.getUTCMonth() + 1); ) {
     const klic = `${y}-${String(m).padStart(2, "0")}`;
-    vse.push({ mesic: klic, uroven: mapa.get(klic) ?? null });
+    const z = pocty.get(klic) ?? [];
+    const nejvyssi = z.reduce<Uroven | null>((max, i) => (!max || UROVNE[i.zavaznost].poradi > UROVNE[max].poradi ? i.zavaznost : max), null);
+    vse.push({ mesic: klic, uroven: mapa.get(klic) ?? null, zaznamu: z.length, nejvyssi });
     m++;
     if (m > 12) { m = 1; y++; }
   }

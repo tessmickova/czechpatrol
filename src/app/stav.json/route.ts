@@ -29,8 +29,10 @@ export function GET() {
     pravni: Object.fromEntries(pravniStav().polozky.map((p) => [p.klic, p.plati])),
     nato: Object.fromEntries(nato().polozky.map((p) => [p.klic, p.aktivni])),
     provoz: Object.fromEntries(provoz().polozky.map((p) => [p.klic, p.stav])),
+    // Jen čerstvé záznamy: doplněná historie nesmí vypadat jako nové události.
     udalosti: incidenty()
       .filter((i) => i.slug !== "nenalezeno")
+      .filter((i) => Date.now() - new Date(i.datumZjisteni ?? i.datumUdalosti).getTime() < 120 * 86_400_000)
       .slice(0, 60)
       .map((i) => ({
         slug: i.slug,

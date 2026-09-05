@@ -233,7 +233,21 @@ export function Zaznamy({ incidenty, neprosle }: { incidenty: SUkazkou<Incident>
       {vysledek.length ? (
         <ol className="relative">
           <span aria-hidden className="absolute bottom-4 left-[6px] top-4 w-px bg-linka sm:left-[88px]" />
-          {vysledek.map((r) => <RadekOsy key={r.id} r={r} />)}
+          {vysledek.map((r, i) => {
+            const rok = r.kdy.slice(0, 4);
+            const novyRok = i === 0 || vysledek[i - 1].kdy.slice(0, 4) !== rok;
+            return (
+              <li key={r.id} className="contents">
+                {novyRok && (
+                  <div className="relative z-10 my-2 flex items-center gap-3 sm:pl-[64px]">
+                    <span className="velke-cislo svit rounded-[8px] border border-akcent/40 bg-papir px-2.5 py-1 text-[16px] text-akcent-svetla">{rok}</span>
+                    <span className="stitek">{vysledek.filter((x) => x.kdy.slice(0, 4) === rok).length} {sklon(vysledek.filter((x) => x.kdy.slice(0, 4) === rok).length, "záznam", "záznamy", "záznamů")}</span>
+                  </div>
+                )}
+                <RadekOsy r={r} />
+              </li>
+            );
+          })}
         </ol>
       ) : radky.length ? (
         <Prazdno nadpis="Nic neodpovídá zvolenému filtru" popis="Zkuste rozšířit období nebo zrušit omezení." />
@@ -260,7 +274,7 @@ function RadekOsy({ r }: { r: Radek }) {
   const t = r.zavaznost ? tokeny(r.zavaznost) : null;
   const neproslo = r.druh !== "zaznam";
   return (
-    <li className="relative">
+    <div className="relative">
       <details className="group">
         <summary className="flex items-start gap-3 py-3 sm:gap-4">
           <span className="cislice hidden w-[72px] shrink-0 pt-[3px] text-right text-[12.5px] font-medium text-tlum sm:block">
@@ -287,6 +301,7 @@ function RadekOsy({ r }: { r: Radek }) {
               )}
               {r.jeZjisteni && <span className="stitek-tmavy rounded-[8px] border border-linka px-1.5 py-[2px] text-tlum2">událost {datum(r.datumUdalosti)}</span>}
               {r.incident?.ukazka && <OdznakUkazky />}
+              {r.incident?.historicky && <span className="stitek-tmavy rounded-[8px] border border-linka px-1.5 py-[2px] text-tlum2">doplněno zpětně</span>}
             </span>
             <span className="block text-[15.5px] font-semibold leading-snug text-inkoust group-open:text-akcent-svetla">
               {r.titulek}
@@ -345,6 +360,6 @@ function RadekOsy({ r }: { r: Radek }) {
           ) : null}
         </div>
       </details>
-    </li>
+    </div>
   );
 }

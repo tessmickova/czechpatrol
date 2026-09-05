@@ -1,6 +1,6 @@
 {
-  "poznamka": "Nejvyšší týdenní úroveň v měsíci. Měsíce bez hodnoty nemají doložený záznam — nedopočítávají se. Doplnění let 2013–2026 vyžaduje ozdrojované záznamy.",
-  "zacatek": "2013-01",
+  "poznamka": "Nejvyšší týdenní úroveň v měsíci (jen od července 2026, kdy hodnocení začalo). Tečky = počet záznamů zjištěných v měsíci. Roky 2010–2013 nemají v tomto rámci žádný záznam.",
+  "zacatek": "2010-01",
   "mesice": [
     {
       "mesic": "2026-07",

@@ -1786,5 +1786,1811 @@
         "jazyk": "en"
       }
     ]
+  },
+  {
+    "id": "h01",
+    "slug": "krym-anexe-2014",
+    "titulek": "Rusko anektovalo Krym; Valné shromáždění OSN označilo referendum za neplatné",
+    "kratkyTitulek": "Anexe Krymu",
+    "zeme": "Ukrajina",
+    "kodZeme": "UA",
+    "kategorie": [
+      "rusko",
+      "diplomacie"
+    ],
+    "datumUdalosti": "2014-03-18T00:00:00Z",
+    "datumZjisteni": "2014-03-27T00:00:00Z",
+    "aktualizovano": "2014-03-27T00:00:00Z",
+    "zavaznost": "O1",
+    "jistota": "potvrzeno",
+    "stav": "bez-vysetrovani",
+    "atribuce": "oficialni",
+    "fakta": [
+      "Rusko 18. března 2014 podepsalo smlouvu o připojení Krymu po referendu konaném pod přítomností ruských vojsk.",
+      "Valné shromáždění OSN 27. března 2014 přijalo rezoluci 68/262 o územní celistvosti Ukrajiny 100 hlasy pro, 11 proti, 58 se zdrželo."
+    ],
+    "neznameho": [
+      "Rezoluce OSN není právně závazná; Rusko anexi dál označuje za legitimní."
+    ],
+    "vyznam": "Začátek období, které web sleduje: první změna hranic v Evropě silou od druhé světové války. Od tohoto bodu se datuje hybridní tlak, kterým se web zabývá. Roky 2010–2013 nemají v tomto rámci žádný srovnatelný záznam.",
+    "eskalacniSpousteče": [],
+    "deeskalacniSignaly": [],
+    "zdroje": [
+      {
+        "nazev": "Rezoluce Valného shromáždění OSN 68/262 (plné znění)",
+        "url": "https://www.securitycouncilreport.org/atf/cf/%7B65BFCF9B-6D27-4E9C-8CD3-CF6E4FF96FF9%7D/a_res_68_262.pdf",
+        "typ": "primary",
+        "publikovano": "2014-04-01T00:00:00Z",
+        "primarni": true,
+        "jazyk": "en"
+      },
+      {
+        "nazev": "Library of Congress — UN resolution declares Crimea referendum invalid",
+        "url": "https://www.loc.gov/item/global-legal-monitor/2014-04-02/united-nations-resolution-declares-crimea-referendum-invalid/",
+        "typ": "analysis",
+        "publikovano": "2014-04-02T00:00:00Z",
+        "primarni": false,
+        "jazyk": "en"
+      }
+    ],
+    "souvisejici": [],
+    "historie": [
+      {
+        "kdy": "2014-03-18T00:00:00Z",
+        "text": "Událost.",
+        "novySignal": true
+      },
+      {
+        "kdy": "2014-03-27T00:00:00Z",
+        "text": "Rezoluce OSN 68/262.",
+        "novySignal": true
+      }
+    ],
+    "novy": false,
+    "zapocitanoTyden": "2014-03-24",
+    "aiZpracovano": true,
+    "lidskyOvereno": true,
+    "archivniZaznam": true,
+    "historicky": true,
+    "puvodce": "rusko"
+  },
+  {
+    "id": "h02",
+    "slug": "mh17-2014",
+    "titulek": "Sestřelení letu MH17; nizozemský soud uložil tři doživotní tresty",
+    "kratkyTitulek": "Let MH17",
+    "zeme": "Ukrajina",
+    "kodZeme": "UA",
+    "kategorie": [
+      "rusko",
+      "vysetrovani"
+    ],
+    "datumUdalosti": "2014-07-17T00:00:00Z",
+    "datumZjisteni": "2022-11-17T00:00:00Z",
+    "aktualizovano": "2022-11-17T00:00:00Z",
+    "zavaznost": "O1",
+    "jistota": "potvrzeno",
+    "stav": "uzavreno",
+    "atribuce": "oficialni",
+    "fakta": [
+      "Let MH17 byl 17. července 2014 sestřelen nad východní Ukrajinou; zahynulo 298 lidí.",
+      "Okresní soud v Haagu 17. listopadu 2022 odsoudil Igora Girkina, Sergeje Dubinského a Leonida Charčenka k doživotí v nepřítomnosti; Oleg Pulatov byl zproštěn.",
+      "Soud konstatoval, že Rusko mělo v té době nad silami tzv. DLR celkovou kontrolu."
+    ],
+    "neznameho": [
+      "Odsouzení jsou v Rusku; tresty nebudou vykonány."
+    ],
+    "vyznam": "Soudně doložený případ, kdy ruské řízení ozbrojených skupin vedlo k masové ztrátě civilních životů v Evropě. Ukazuje, jak dlouho trvá cesta od události k pravomocnému závěru: osm let.",
+    "eskalacniSpousteče": [],
+    "deeskalacniSignaly": [],
+    "zdroje": [
+      {
+        "nazev": "Okresní soud v Haagu — shrnutí rozsudku 17. 11. 2022",
+        "url": "https://www.courtmh17.com/en/summaries-and-news/news/summary-of-the-day-in-court-17-november-2022-judgment.htm",
+        "typ": "primary",
+        "publikovano": "2022-11-17T00:00:00Z",
+        "primarni": true,
+        "jazyk": "en"
+      },
+      {
+        "nazev": "Nizozemské státní zastupitelství — stíhání a proces MH17",
+        "url": "https://www.prosecutionservice.nl/topics/m/mh17-plane-crash/prosecution-and-trial",
+        "typ": "primary",
+        "publikovano": "2022-11-17T00:00:00Z",
+        "primarni": true,
+        "jazyk": "en"
+      }
+    ],
+    "souvisejici": [],
+    "historie": [
+      {
+        "kdy": "2014-07-17T00:00:00Z",
+        "text": "Událost.",
+        "novySignal": true
+      },
+      {
+        "kdy": "2022-11-17T00:00:00Z",
+        "text": "Rozsudek Okresního soudu v Haagu.",
+        "novySignal": true
+      }
+    ],
+    "novy": false,
+    "zapocitanoTyden": "2022-11-14",
+    "aiZpracovano": true,
+    "lidskyOvereno": true,
+    "archivniZaznam": true,
+    "historicky": true,
+    "puvodce": "rusko"
+  },
+  {
+    "id": "h03",
+    "slug": "vrbetice-2014",
+    "titulek": "Vrbětice: výbuchy muničních skladů, dva mrtví; podle policie dílo ruské GRU",
+    "kratkyTitulek": "Vrbětice 2014",
+    "zeme": "Česko",
+    "kodZeme": "CZ",
+    "kategorie": [
+      "cr",
+      "sabotaz",
+      "vysetrovani"
+    ],
+    "datumUdalosti": "2014-10-16T00:00:00Z",
+    "datumZjisteni": "2021-04-17T00:00:00Z",
+    "aktualizovano": "2021-04-17T00:00:00Z",
+    "zavaznost": "O1",
+    "jistota": "potvrzeno",
+    "stav": "uzavreno",
+    "atribuce": "oficialni",
+    "fakta": [
+      "Sklad č. 16 explodoval 16. října 2014 (58 tun munice), sklad č. 12 pak 3. prosince 2014. Při prvním výbuchu zahynuli dva zaměstnanci.",
+      "Vláda 17. dubna 2021 oznámila důvodné podezření, že za výbuchy stojí příslušníci ruské vojenské rozvědky GRU, a vyhostila 18 pracovníků ruského velvyslanectví.",
+      "Policie v dubnu 2024 uzavřela vyšetřování se závěrem, že výbuchy provedli příslušníci GRU; případ odložila, protože Rusko odmítlo spolupráci."
+    ],
+    "neznameho": [
+      "Soudní stíhání pachatelů není možné bez ruské součinnosti."
+    ],
+    "vyznam": "Nejzávažnější doložený hybridní čin na území ČR. Datum události a datum zjištění dělí šest a půl roku — proto web obě data uvádí zvlášť.",
+    "eskalacniSpousteče": [],
+    "deeskalacniSignaly": [],
+    "zdroje": [
+      {
+        "nazev": "Vláda ČR — vyjádření k okolnostem vyhoštění 18 zaměstnanců ruské ambasády",
+        "url": "https://vlada.gov.cz/cz/media-centrum/aktualne/vyjadreni-k-okolnostem-vyhosteni-18-zamestnancu-ruske-ambasady-187806/",
+        "typ": "primary",
+        "publikovano": "2021-04-19T00:00:00Z",
+        "primarni": true,
+        "jazyk": "cs"
+      },
+      {
+        "nazev": "iROZHLAS — milníky kauzy Vrbětice",
+        "url": "https://www.irozhlas.cz/zpravy-domov/vrbetice-vybuch-vysetrovani-agenti-municni-sklad-kauza-rusko-casova-osa_2404291107_ako",
+        "typ": "media",
+        "publikovano": "2024-04-29T00:00:00Z",
+        "primarni": false,
+        "jazyk": "cs"
+      },
+      {
+        "nazev": "ČT24 — první výbuch otřásl Vrběticemi před deseti lety",
+        "url": "https://ct24.ceskatelevize.cz/clanek/domaci/prvni-vybuch-otrasl-vrbeticemi-pred-deseti-lety-354015",
+        "typ": "media",
+        "publikovano": "2024-10-16T00:00:00Z",
+        "primarni": false,
+        "jazyk": "cs"
+      }
+    ],
+    "souvisejici": [],
+    "historie": [
+      {
+        "kdy": "2014-10-16T00:00:00Z",
+        "text": "Událost.",
+        "novySignal": true
+      },
+      {
+        "kdy": "2021-04-17T00:00:00Z",
+        "text": "Vláda oznámila podezření na GRU a vyhostila 18 pracovníků ruské ambasády.",
+        "novySignal": true
+      }
+    ],
+    "novy": false,
+    "zapocitanoTyden": "2021-04-12",
+    "aiZpracovano": true,
+    "lidskyOvereno": true,
+    "archivniZaznam": true,
+    "historicky": true,
+    "puvodce": "rusko"
+  },
+  {
+    "id": "h04",
+    "slug": "bundestag-hack-2015",
+    "titulek": "Kybernetický útok na Bundestag; EU o pět let později sankcionovala GRU",
+    "kratkyTitulek": "Bundestag 2015",
+    "zeme": "Německo",
+    "kodZeme": "DE",
+    "kategorie": [
+      "kyber"
+    ],
+    "datumUdalosti": "2015-05-01T00:00:00Z",
+    "datumZjisteni": "2020-10-22T00:00:00Z",
+    "aktualizovano": "2020-10-22T00:00:00Z",
+    "zavaznost": "Y3",
+    "jistota": "vysoka",
+    "stav": "uzavreno",
+    "atribuce": "oficialni",
+    "fakta": [
+      "V dubnu a květnu 2015 útok ochromil IT infrastrukturu Bundestagu; byla odcizena data včetně e-mailů poslanců.",
+      "Německo vydalo v květnu 2020 zatykač na důstojníka GRU Dmitrije Badina; EU 22. října 2020 uvalila sankce na Badina, šéfa GRU Igora Kostjukova a jednotku 26165 (APT28)."
+    ],
+    "neznameho": [
+      "Přesný rozsah odcizených dat nebyl zveřejněn."
+    ],
+    "vyznam": "První případ, kdy EU použila kybernetické sankce proti konkrétním ruským důstojníkům. Ukazuje, že atribuce může přijít roky po útoku.",
+    "eskalacniSpousteče": [],
+    "deeskalacniSignaly": [],
+    "zdroje": [
+      {
+        "nazev": "The Moscow Times — EU, UK slap sanctions on Russian spies for hacking German parliament",
+        "url": "https://www.themoscowtimes.com/2020/10/22/eu-uk-slap-sanctions-on-russian-spies-for-hacking-german-parliament-a71832",
+        "typ": "media",
+        "publikovano": "2020-10-22T00:00:00Z",
+        "primarni": false,
+        "jazyk": "en"
+      },
+      {
+        "nazev": "CyberScoop — EU slaps sanctions on GRU leader, Fancy Bear over Bundestag attack",
+        "url": "https://cyberscoop.com/eu-gru-fancy-bear-bundestag-russia/",
+        "typ": "media",
+        "publikovano": "2020-10-22T00:00:00Z",
+        "primarni": false,
+        "jazyk": "en"
+      }
+    ],
+    "souvisejici": [],
+    "historie": [
+      {
+        "kdy": "2015-05-01T00:00:00Z",
+        "text": "Událost.",
+        "novySignal": true
+      },
+      {
+        "kdy": "2020-10-22T00:00:00Z",
+        "text": "Sankce EU proti GRU.",
+        "novySignal": true
+      }
+    ],
+    "novy": false,
+    "zapocitanoTyden": "2020-10-19",
+    "aiZpracovano": true,
+    "lidskyOvereno": true,
+    "archivniZaznam": true,
+    "historicky": true,
+    "puvodce": "rusko"
+  },
+  {
+    "id": "h05",
+    "slug": "notpetya-2017",
+    "titulek": "NotPetya: destruktivní kyberútok z Ukrajiny se rozšířil do Evropy; připsán ruské armádě",
+    "kratkyTitulek": "NotPetya",
+    "zeme": "Ukrajina",
+    "kodZeme": "UA",
+    "kategorie": [
+      "kyber",
+      "infrastruktura"
+    ],
+    "datumUdalosti": "2017-06-27T00:00:00Z",
+    "datumZjisteni": "2018-02-15T00:00:00Z",
+    "aktualizovano": "2018-02-15T00:00:00Z",
+    "zavaznost": "O1",
+    "jistota": "potvrzeno",
+    "stav": "bez-vysetrovani",
+    "atribuce": "oficialni",
+    "fakta": [
+      "Malware NotPetya 27. června 2017 vyřadil systémy na Ukrajině a poté v evropských i světových firmách.",
+      "Spojené království, USA a další státy 15. února 2018 oficiálně připsaly útok ruské armádě (jednotka GRU 74455)."
+    ],
+    "neznameho": [
+      "Celková škoda se odhaduje, přesná čísla nejsou oficiálně stanovena."
+    ],
+    "vyznam": "První koordinovaná státní atribuce kyberútoku více zeměmi. Vzor pro pozdější evropské atribuce.",
+    "eskalacniSpousteče": [],
+    "deeskalacniSignaly": [],
+    "zdroje": [
+      {
+        "nazev": "Australská vláda — Australia attributes NotPetya malware to Russia",
+        "url": "https://www.dfat.gov.au/sites/default/files/australia-attributes-notpetya-malware-to-russia.pdf",
+        "typ": "primary",
+        "publikovano": "2018-02-16T00:00:00Z",
+        "primarni": true,
+        "jazyk": "en"
+      },
+      {
+        "nazev": "CyberScoop — U.S. and U.K. blame Russia for NotPetya",
+        "url": "https://cyberscoop.com/uk-government-blames-russian-military-infamous-notpetya-cyberattacks/",
+        "typ": "media",
+        "publikovano": "2018-02-15T00:00:00Z",
+        "primarni": false,
+        "jazyk": "en"
+      }
+    ],
+    "souvisejici": [],
+    "historie": [
+      {
+        "kdy": "2017-06-27T00:00:00Z",
+        "text": "Událost.",
+        "novySignal": true
+      },
+      {
+        "kdy": "2018-02-15T00:00:00Z",
+        "text": "Státní atribuce Rusku.",
+        "novySignal": true
+      }
+    ],
+    "novy": false,
+    "zapocitanoTyden": "2018-02-12",
+    "aiZpracovano": true,
+    "lidskyOvereno": true,
+    "archivniZaznam": true,
+    "historicky": true,
+    "puvodce": "rusko"
+  },
+  {
+    "id": "h06",
+    "slug": "salisbury-2018",
+    "titulek": "Salisbury: otrava novičokem; Británie obvinila dva důstojníky GRU",
+    "kratkyTitulek": "Salisbury",
+    "zeme": "Spojené království",
+    "kodZeme": "GB",
+    "kategorie": [
+      "sabotaz",
+      "zpravodajske",
+      "vysetrovani"
+    ],
+    "datumUdalosti": "2018-03-04T00:00:00Z",
+    "datumZjisteni": "2018-09-05T00:00:00Z",
+    "aktualizovano": "2018-09-05T00:00:00Z",
+    "zavaznost": "O1",
+    "jistota": "potvrzeno",
+    "stav": "obvineni",
+    "atribuce": "oficialni",
+    "fakta": [
+      "Sergej Skripal a jeho dcera byli 4. března 2018 otráveni nervovou látkou novičok.",
+      "Britská premiérka 5. září 2018 oznámila obvinění dvou mužů cestujících jako Petrov a Bošírov; podle britského hodnocení jde o důstojníky GRU. Spojenci hodnocení podpořili 6. září."
+    ],
+    "neznameho": [
+      "Obvinění se nacházejí v Rusku; proces neproběhl."
+    ],
+    "vyznam": "Použití chemické zbraně na území členského státu NATO. Vedlo k největší koordinované vlně vyhoštění ruských diplomatů, včetně ČR.",
+    "eskalacniSpousteče": [],
+    "deeskalacniSignaly": [],
+    "zdroje": [
+      {
+        "nazev": "Sněmovna Spojeného království — The Salisbury incident (briefing)",
+        "url": "https://commonslibrary.parliament.uk/research-briefings/cdp-2018-0204/",
+        "typ": "primary",
+        "publikovano": "2018-09-05T00:00:00Z",
+        "primarni": true,
+        "jazyk": "en"
+      },
+      {
+        "nazev": "TIME — Russian nationals named in Salisbury Novichok attack",
+        "url": "https://time.com/5387213/skripal-petrov-boshirov-salisbury-russia/",
+        "typ": "media",
+        "publikovano": "2018-09-05T00:00:00Z",
+        "primarni": false,
+        "jazyk": "en"
+      }
+    ],
+    "souvisejici": [],
+    "historie": [
+      {
+        "kdy": "2018-03-04T00:00:00Z",
+        "text": "Událost.",
+        "novySignal": true
+      },
+      {
+        "kdy": "2018-09-05T00:00:00Z",
+        "text": "Obvinění dvou důstojníků GRU.",
+        "novySignal": true
+      }
+    ],
+    "novy": false,
+    "zapocitanoTyden": "2018-09-03",
+    "aiZpracovano": true,
+    "lidskyOvereno": true,
+    "archivniZaznam": true,
+    "historicky": true,
+    "puvodce": "rusko"
+  },
+  {
+    "id": "h07",
+    "slug": "cr-vyhosteni-salisbury-2018",
+    "titulek": "ČR vyhostila tři ruské diplomaty v reakci na Salisbury",
+    "kratkyTitulek": "ČR: vyhoštění 2018",
+    "zeme": "Česko",
+    "kodZeme": "CZ",
+    "kategorie": [
+      "cr",
+      "diplomacie"
+    ],
+    "datumUdalosti": "2018-03-26T00:00:00Z",
+    "datumZjisteni": "2018-03-26T00:00:00Z",
+    "aktualizovano": "2018-03-26T00:00:00Z",
+    "zavaznost": "Y3",
+    "jistota": "potvrzeno",
+    "stav": "bez-vysetrovani",
+    "atribuce": "oficialni",
+    "fakta": [
+      "Ministerstvo zahraničí 26. března 2018 prohlásilo tři členy ruského diplomatického sboru za personae non gratae.",
+      "Krok byl reakcí na útok v Salisbury a na ruské tvrzení, že novičok mohl pocházet z ČR."
+    ],
+    "neznameho": [],
+    "vyznam": "První česká institucionální reakce na ruskou hybridní operaci v jiném státě NATO.",
+    "eskalacniSpousteče": [],
+    "deeskalacniSignaly": [],
+    "zdroje": [
+      {
+        "nazev": "Velvyslanectví ČR ve Washingtonu — Czech Republic expels Russian diplomats",
+        "url": "https://mzv.gov.cz/washington/en/czech_us_relations/czech_republic_expels_russian_diplomats.html",
+        "typ": "primary",
+        "publikovano": "2018-03-26T00:00:00Z",
+        "primarni": true,
+        "jazyk": "en"
+      },
+      {
+        "nazev": "Radio Prague International — Czech Republic expels three Russian diplomats",
+        "url": "https://english.radio.cz/czech-republic-expels-three-russian-diplomats-8165215",
+        "typ": "media",
+        "publikovano": "2018-03-26T00:00:00Z",
+        "primarni": false,
+        "jazyk": "en"
+      }
+    ],
+    "souvisejici": [],
+    "historie": [
+      {
+        "kdy": "2018-03-26T00:00:00Z",
+        "text": "Událost.",
+        "novySignal": true
+      }
+    ],
+    "novy": false,
+    "zapocitanoTyden": "2018-03-26",
+    "aiZpracovano": true,
+    "lidskyOvereno": true,
+    "archivniZaznam": true,
+    "historicky": true
+  },
+  {
+    "id": "h08",
+    "slug": "opcw-gru-2018",
+    "titulek": "Nizozemsko zmařilo operaci GRU proti OPCW v Haagu",
+    "kratkyTitulek": "OPCW 2018",
+    "zeme": "Nizozemsko",
+    "kodZeme": "NL",
+    "kategorie": [
+      "kyber",
+      "zpravodajske"
+    ],
+    "datumUdalosti": "2018-04-13T00:00:00Z",
+    "datumZjisteni": "2018-10-04T00:00:00Z",
+    "aktualizovano": "2018-10-04T00:00:00Z",
+    "zavaznost": "Y3",
+    "jistota": "potvrzeno",
+    "stav": "uzavreno",
+    "atribuce": "oficialni",
+    "fakta": [
+      "Čtyři důstojníci GRU se v dubnu 2018 pokusili proniknout do wi-fi sítě Organizace pro zákaz chemických zbraní; nizozemská vojenská rozvědka je zadržela a vyhostila.",
+      "Nizozemské ministerstvo obrany operaci zveřejnilo 4. října 2018 včetně jmen a zajištěné techniky."
+    ],
+    "neznameho": [],
+    "vyznam": "Přímo přistižená operace proti mezinárodní organizaci na území NATO. Jeden z mála případů s úplným veřejným důkazním řetězcem.",
+    "eskalacniSpousteče": [],
+    "deeskalacniSignaly": [],
+    "zdroje": [
+      {
+        "nazev": "TheJournal.ie — Netherlands expels 'Russian agents' after foiling cyber attack on chemical weapons watchdog",
+        "url": "https://www.thejournal.ie/netherlands-russia-cyber-attack-4268282-Oct2018/",
+        "typ": "media",
+        "publikovano": "2018-10-04T00:00:00Z",
+        "primarni": false,
+        "jazyk": "en"
+      },
+      {
+        "nazev": "NATO — Statement by the Secretary General on Russian cyber attacks",
+        "url": "https://www.nato.int/cps/en/natohq/news_158911.htm",
+        "typ": "primary",
+        "publikovano": "2018-10-04T00:00:00Z",
+        "primarni": true,
+        "jazyk": "en"
+      }
+    ],
+    "souvisejici": [],
+    "historie": [
+      {
+        "kdy": "2018-04-13T00:00:00Z",
+        "text": "Událost.",
+        "novySignal": true
+      },
+      {
+        "kdy": "2018-10-04T00:00:00Z",
+        "text": "Zveřejnění operace nizozemským ministerstvem obrany.",
+        "novySignal": true
+      }
+    ],
+    "novy": false,
+    "zapocitanoTyden": "2018-10-01",
+    "aiZpracovano": true,
+    "lidskyOvereno": true,
+    "archivniZaznam": true,
+    "historicky": true,
+    "puvodce": "rusko"
+  },
+  {
+    "id": "h09",
+    "slug": "tiergarten-2019",
+    "titulek": "Berlín: vražda v Tiergartenu; soud ji označil za objednanou ruským státem",
+    "kratkyTitulek": "Tiergarten",
+    "zeme": "Německo",
+    "kodZeme": "DE",
+    "kategorie": [
+      "zpravodajske",
+      "vysetrovani"
+    ],
+    "datumUdalosti": "2019-08-23T00:00:00Z",
+    "datumZjisteni": "2021-12-15T00:00:00Z",
+    "aktualizovano": "2021-12-15T00:00:00Z",
+    "zavaznost": "O1",
+    "jistota": "potvrzeno",
+    "stav": "uzavreno",
+    "atribuce": "oficialni",
+    "fakta": [
+      "Tornike Changošvili byl 23. srpna 2019 zastřelen v berlínském parku Kleiner Tiergarten.",
+      "Vrchní zemský soud v Berlíně 15. prosince 2021 odsoudil Vadima Krasikova na doživotí a konstatoval, že vraždu objednaly ruské státní orgány. Německo vyhostilo dva ruské diplomaty."
+    ],
+    "neznameho": [],
+    "vyznam": "Soudně potvrzená státní vražda na území NATO. Ukazuje, že soudní závěr může být jednoznačný i bez ruské spolupráce.",
+    "eskalacniSpousteče": [],
+    "deeskalacniSignaly": [],
+    "zdroje": [
+      {
+        "nazev": "CNN — Germany expels two Russian diplomats after murder conviction",
+        "url": "https://www.cnn.com/2021/12/15/europe/vadim-krasikov-murder-conviction-germany-intl/index.html",
+        "typ": "media",
+        "publikovano": "2021-12-15T00:00:00Z",
+        "primarni": false,
+        "jazyk": "en"
+      },
+      {
+        "nazev": "Al Jazeera — Russian convicted of 'state-contracted killing' in Berlin park",
+        "url": "https://www.aljazeera.com/news/2021/12/15/german-court-convicts-russian-of-2019-state-contracted-killing",
+        "typ": "media",
+        "publikovano": "2021-12-15T00:00:00Z",
+        "primarni": false,
+        "jazyk": "en"
+      }
+    ],
+    "souvisejici": [],
+    "historie": [
+      {
+        "kdy": "2019-08-23T00:00:00Z",
+        "text": "Událost.",
+        "novySignal": true
+      },
+      {
+        "kdy": "2021-12-15T00:00:00Z",
+        "text": "Rozsudek berlínského soudu.",
+        "novySignal": true
+      }
+    ],
+    "novy": false,
+    "zapocitanoTyden": "2021-12-13",
+    "aiZpracovano": true,
+    "lidskyOvereno": true,
+    "archivniZaznam": true,
+    "historicky": true,
+    "puvodce": "rusko"
+  },
+  {
+    "id": "h10",
+    "slug": "cr-vrbetice-reakce-2021",
+    "titulek": "ČR vyhostila 18 pracovníků ruské ambasády kvůli Vrběticím",
+    "kratkyTitulek": "ČR: Vrbětice 2021",
+    "zeme": "Česko",
+    "kodZeme": "CZ",
+    "kategorie": [
+      "cr",
+      "diplomacie",
+      "vysetrovani"
+    ],
+    "datumUdalosti": "2021-04-17T00:00:00Z",
+    "datumZjisteni": "2021-04-17T00:00:00Z",
+    "aktualizovano": "2021-04-17T00:00:00Z",
+    "zavaznost": "O1",
+    "jistota": "potvrzeno",
+    "stav": "bez-vysetrovani",
+    "atribuce": "oficialni",
+    "fakta": [
+      "Vláda 17. dubna 2021 oznámila, že tajné služby mají důvodné podezření na zapojení GRU do výbuchů ve Vrběticích, a vyhostila 18 pracovníků ruské ambasády identifikovaných jako důstojníci GRU a SVR.",
+      "Rusko v odvetě vyhostilo 20 zaměstnanců české ambasády v Moskvě."
+    ],
+    "neznameho": [],
+    "vyznam": "Nejsilnější česká diplomatická reakce na ruskou operaci od roku 1989. Následovalo snížení stavu obou ambasád.",
+    "eskalacniSpousteče": [],
+    "deeskalacniSignaly": [],
+    "zdroje": [
+      {
+        "nazev": "Vláda ČR — vyjádření k okolnostem vyhoštění 18 zaměstnanců ruské ambasády",
+        "url": "https://vlada.gov.cz/cz/media-centrum/aktualne/vyjadreni-k-okolnostem-vyhosteni-18-zamestnancu-ruske-ambasady-187806/",
+        "typ": "primary",
+        "publikovano": "2021-04-19T00:00:00Z",
+        "primarni": true,
+        "jazyk": "cs"
+      },
+      {
+        "nazev": "iROZHLAS — ruský vládní speciál odletěl s vyhoštěnými diplomaty",
+        "url": "https://www.irozhlas.cz/zpravy-domov/special-rusko-diplomate-vyhosteni-vrbetice_2104191501_kro",
+        "typ": "media",
+        "publikovano": "2021-04-19T00:00:00Z",
+        "primarni": false,
+        "jazyk": "cs"
+      }
+    ],
+    "souvisejici": [],
+    "historie": [
+      {
+        "kdy": "2021-04-17T00:00:00Z",
+        "text": "Událost.",
+        "novySignal": true
+      }
+    ],
+    "novy": false,
+    "zapocitanoTyden": "2021-04-12",
+    "aiZpracovano": true,
+    "lidskyOvereno": true,
+    "archivniZaznam": true,
+    "historicky": true
+  },
+  {
+    "id": "h11",
+    "slug": "invaze-ukrajina-2022",
+    "titulek": "Rusko zahájilo plnou invazi na Ukrajinu; Valné shromáždění OSN ji odsoudilo 141 hlasy",
+    "kratkyTitulek": "Invaze na Ukrajinu",
+    "zeme": "Ukrajina",
+    "kodZeme": "UA",
+    "kategorie": [
+      "rusko",
+      "nato"
+    ],
+    "datumUdalosti": "2022-02-24T00:00:00Z",
+    "datumZjisteni": "2022-03-02T00:00:00Z",
+    "aktualizovano": "2022-03-02T00:00:00Z",
+    "zavaznost": "O2",
+    "jistota": "potvrzeno",
+    "stav": "bez-vysetrovani",
+    "atribuce": "oficialni",
+    "fakta": [
+      "Ruské síly 24. února 2022 zahájily plnou invazi na Ukrajinu.",
+      "Valné shromáždění OSN 2. března 2022 přijalo rezoluci ES-11/1 „Agrese proti Ukrajině“ 141 hlasy pro, 5 proti, 35 se zdrželo."
+    ],
+    "neznameho": [],
+    "vyznam": "Největší válka v Evropě od roku 1945, na hranici NATO. Od tohoto dne se odvíjí většina institucionálních kroků, které web sleduje.",
+    "eskalacniSpousteče": [],
+    "deeskalacniSignaly": [],
+    "zdroje": [
+      {
+        "nazev": "OSN — General Assembly overwhelmingly adopts resolution demanding Russian Federation immediately end illegal use of force in Ukraine",
+        "url": "https://press.un.org/en/2022/ga12407.doc.htm",
+        "typ": "primary",
+        "publikovano": "2022-03-02T00:00:00Z",
+        "primarni": true,
+        "jazyk": "en"
+      },
+      {
+        "nazev": "Digitální knihovna OSN — rezoluce ES-11/1",
+        "url": "https://digitallibrary.un.org/record/3965290",
+        "typ": "primary",
+        "publikovano": "2022-03-02T00:00:00Z",
+        "primarni": true,
+        "jazyk": "en"
+      }
+    ],
+    "souvisejici": [],
+    "historie": [
+      {
+        "kdy": "2022-02-24T00:00:00Z",
+        "text": "Událost.",
+        "novySignal": true
+      },
+      {
+        "kdy": "2022-03-02T00:00:00Z",
+        "text": "Rezoluce Valného shromáždění OSN ES-11/1.",
+        "novySignal": true
+      }
+    ],
+    "novy": false,
+    "zapocitanoTyden": "2022-02-28",
+    "aiZpracovano": true,
+    "lidskyOvereno": true,
+    "archivniZaznam": true,
+    "historicky": true,
+    "puvodce": "rusko"
+  },
+  {
+    "id": "h12",
+    "slug": "nato-clanek-4-2022",
+    "titulek": "Osm států včetně ČR požádalo o konzultace podle článku 4 NATO",
+    "kratkyTitulek": "Článek 4: 2022",
+    "zeme": "Evropa",
+    "kodZeme": "EU",
+    "kategorie": [
+      "nato",
+      "cr"
+    ],
+    "datumUdalosti": "2022-02-24T00:00:00Z",
+    "datumZjisteni": "2022-02-24T00:00:00Z",
+    "aktualizovano": "2022-02-24T00:00:00Z",
+    "zavaznost": "O2",
+    "jistota": "potvrzeno",
+    "stav": "bez-vysetrovani",
+    "atribuce": "oficialni",
+    "fakta": [
+      "Bulharsko, Česko, Estonsko, Litva, Lotyšsko, Polsko, Rumunsko a Slovensko požádaly 24. února 2022 o konzultace podle článku 4 Severoatlantické smlouvy.",
+      "Článek 4 je konzultační mechanismus; nevede automaticky k článku 5."
+    ],
+    "neznameho": [],
+    "vyznam": "Jediný případ, kdy o článek 4 požádala i Česká republika. Přesně ten krok, který má web v liště nahoře jako kostičku.",
+    "eskalacniSpousteče": [],
+    "deeskalacniSignaly": [],
+    "zdroje": [
+      {
+        "nazev": "NATO — The consultation process and Article 4",
+        "url": "https://www.nato.int/cps/en/natohq/topics_49187.htm",
+        "typ": "primary",
+        "publikovano": "2022-02-24T00:00:00Z",
+        "primarni": true,
+        "jazyk": "en"
+      },
+      {
+        "nazev": "Lawfare — Three things to know about NATO's role in responding to the Ukraine crisis",
+        "url": "https://www.lawfaremedia.org/article/three-things-know-about-natos-role-responding-ukraine-crisis",
+        "typ": "analysis",
+        "publikovano": "2022-02-25T00:00:00Z",
+        "primarni": false,
+        "jazyk": "en"
+      }
+    ],
+    "souvisejici": [],
+    "historie": [
+      {
+        "kdy": "2022-02-24T00:00:00Z",
+        "text": "Událost.",
+        "novySignal": true
+      }
+    ],
+    "novy": false,
+    "zapocitanoTyden": "2022-02-21",
+    "aiZpracovano": true,
+    "lidskyOvereno": true,
+    "archivniZaznam": true,
+    "historicky": true
+  },
+  {
+    "id": "h13",
+    "slug": "cr-nouzovy-stav-2022",
+    "titulek": "ČR vyhlásila nouzový stav kvůli uprchlické vlně; trval do 31. května 2022",
+    "kratkyTitulek": "ČR: nouzový stav 2022",
+    "zeme": "Česko",
+    "kodZeme": "CZ",
+    "kategorie": [
+      "cr",
+      "pravo"
+    ],
+    "datumUdalosti": "2022-03-04T00:00:00Z",
+    "datumZjisteni": "2022-03-29T00:00:00Z",
+    "aktualizovano": "2022-03-29T00:00:00Z",
+    "zavaznost": "O1",
+    "jistota": "potvrzeno",
+    "stav": "bez-vysetrovani",
+    "atribuce": "oficialni",
+    "fakta": [
+      "Vláda vyhlásila nouzový stav na 30 dní od 4. března 2022 kvůli zvládání příchodu uprchlíků z Ukrajiny.",
+      "Sněmovna 29. března 2022 schválila prodloužení do 31. května 2022. Vláda zdůraznila, že režim neomezuje občany ČR."
+    ],
+    "neznameho": [],
+    "vyznam": "Jediný mimořádný právní stav v ČR spojený s válkou na Ukrajině. Nebyl vyhlášen kvůli vojenskému ohrožení, ale kvůli zvládání migrace — rozdíl, na kterém stojí lišta nahoře.",
+    "eskalacniSpousteče": [],
+    "deeskalacniSignaly": [],
+    "zdroje": [
+      {
+        "nazev": "iROZHLAS — nouzový stav bude trvat do 31. května, sněmovna schválila prodloužení",
+        "url": "https://www.irozhlas.cz/zpravy-domov/nouzovy-stav-prodlouzeni-dva-mesice-snemovna_2203291935_til",
+        "typ": "media",
+        "publikovano": "2022-03-29T00:00:00Z",
+        "primarni": false,
+        "jazyk": "cs"
+      },
+      {
+        "nazev": "Aktuálně.cz — proč vláda nouzový stav vyhlásila a dotkne se občanů?",
+        "url": "https://zpravy.aktualne.cz/domaci/nouzovy-stav/r~c293eb529baf11ecabca0cc47ab5f122/",
+        "typ": "media",
+        "publikovano": "2022-03-04T00:00:00Z",
+        "primarni": false,
+        "jazyk": "cs"
+      }
+    ],
+    "souvisejici": [],
+    "historie": [
+      {
+        "kdy": "2022-03-04T00:00:00Z",
+        "text": "Událost.",
+        "novySignal": true
+      },
+      {
+        "kdy": "2022-03-29T00:00:00Z",
+        "text": "Sněmovna schválila prodloužení do 31. května.",
+        "novySignal": true
+      }
+    ],
+    "novy": false,
+    "zapocitanoTyden": "2022-03-28",
+    "aiZpracovano": true,
+    "lidskyOvereno": true,
+    "archivniZaznam": true,
+    "historicky": true
+  },
+  {
+    "id": "h14",
+    "slug": "nord-stream-2022",
+    "titulek": "Nord Stream: výbuchy na plynovodech; německé vyšetřování vede k ukrajinské skupině",
+    "kratkyTitulek": "Nord Stream",
+    "zeme": "Německo (Baltské moře)",
+    "kodZeme": "DE",
+    "kategorie": [
+      "sabotaz",
+      "infrastruktura",
+      "vysetrovani"
+    ],
+    "datumUdalosti": "2022-09-26T00:00:00Z",
+    "datumZjisteni": "2025-08-21T00:00:00Z",
+    "aktualizovano": "2025-08-21T00:00:00Z",
+    "zavaznost": "O1",
+    "jistota": "vysoka",
+    "stav": "obvineni",
+    "atribuce": "vysetrovana",
+    "fakta": [
+      "Výbuchy 26. září 2022 poškodily plynovody Nord Stream 1 a 2 u dánského ostrova Bornholm.",
+      "Německý spolkový státní zástupce 21. srpna 2025 oznámil zatčení ukrajinského občana v Itálii na evropský zatykač; je považován za jednoho z koordinátorů. Podezřelý vinu popírá.",
+      "Druhý ukrajinský občan byl zatčen v Chorvatsku v srpnu 2026."
+    ],
+    "neznameho": [
+      "Kdo operaci zadal a zda šlo o státní řízení, soud zatím nerozhodl."
+    ],
+    "vyznam": "Jediný velký sabotážní čin v Evropě, u kterého vyšetřování míří na Ukrajinu, ne na Rusko. Web ho vede přesně tak — bez domýšlení v obou směrech.",
+    "eskalacniSpousteče": [],
+    "deeskalacniSignaly": [],
+    "zdroje": [
+      {
+        "nazev": "CBS News — Ukrainian man arrested in Italy over 2022 Nord Stream sabotage, German prosecutors say",
+        "url": "https://www.cbsnews.com/news/nord-stream-gas-pipeline-sabotage-ukrainian-arrest-germany-announces",
+        "typ": "media",
+        "publikovano": "2025-08-21T00:00:00Z",
+        "primarni": false,
+        "jazyk": "en"
+      },
+      {
+        "nazev": "Al Jazeera — Second Ukrainian national arrested over 2022 Nord Stream pipeline blast",
+        "url": "https://www.aljazeera.com/news/2026/8/19/second-ukrainian-national-arrested-over-2022-nord-stream-pipeline-blast",
+        "typ": "media",
+        "publikovano": "2026-08-19T00:00:00Z",
+        "primarni": false,
+        "jazyk": "en"
+      }
+    ],
+    "souvisejici": [],
+    "historie": [
+      {
+        "kdy": "2022-09-26T00:00:00Z",
+        "text": "Událost.",
+        "novySignal": true
+      },
+      {
+        "kdy": "2025-08-21T00:00:00Z",
+        "text": "Zatčení podezřelého koordinátora v Itálii.",
+        "novySignal": true
+      }
+    ],
+    "novy": false,
+    "zapocitanoTyden": "2025-08-18",
+    "aiZpracovano": true,
+    "lidskyOvereno": true,
+    "archivniZaznam": true,
+    "historicky": true,
+    "puvodce": "ukrajina"
+  },
+  {
+    "id": "h15",
+    "slug": "przewodow-2022",
+    "titulek": "Przewodów: dopad rakety v Polsku, dva mrtví; podle Polska i NATO šlo o ukrajinskou protivzdušnou obranu",
+    "kratkyTitulek": "Przewodów",
+    "zeme": "Polsko",
+    "kodZeme": "PL",
+    "kategorie": [
+      "nato",
+      "infrastruktura"
+    ],
+    "datumUdalosti": "2022-11-15T00:00:00Z",
+    "datumZjisteni": "2022-11-16T00:00:00Z",
+    "aktualizovano": "2022-11-16T00:00:00Z",
+    "zavaznost": "O2",
+    "jistota": "potvrzeno",
+    "stav": "uzavreno",
+    "atribuce": "oficialni",
+    "fakta": [
+      "Raketa 15. listopadu 2022 dopadla do polské obce Przewodów; zahynuli dva lidé.",
+      "Prezident Duda a generální tajemník NATO 16. listopadu uvedli, že s největší pravděpodobností šlo o střelu ukrajinské protivzdušné obrany při odrážení ruského útoku, ne o úmyslný útok na Polsko. NATO dodalo, že konečnou odpovědnost nese Rusko."
+    ],
+    "neznameho": [],
+    "vyznam": "Jediný smrtící dopad na území NATO od začátku invaze. Ukazuje, jak se článek 4 zvažoval a nakonec nespustil.",
+    "eskalacniSpousteče": [],
+    "deeskalacniSignaly": [],
+    "zdroje": [
+      {
+        "nazev": "CNN — Poland, NATO say 'no indication' missile in Poland was deliberate attack",
+        "url": "https://www.cnn.com/2022/11/16/europe/poland-missile-russia-ukraine-investigation-wednesday-intl-hnk",
+        "typ": "media",
+        "publikovano": "2022-11-16T00:00:00Z",
+        "primarni": false,
+        "jazyk": "en"
+      },
+      {
+        "nazev": "Axios — Poland, NATO say deadly explosion likely caused by Ukraine air defense",
+        "url": "https://www.axios.com/2022/11/16/poland-president-ukraine-russia-missile",
+        "typ": "media",
+        "publikovano": "2022-11-16T00:00:00Z",
+        "primarni": false,
+        "jazyk": "en"
+      }
+    ],
+    "souvisejici": [],
+    "historie": [
+      {
+        "kdy": "2022-11-15T00:00:00Z",
+        "text": "Událost.",
+        "novySignal": true
+      },
+      {
+        "kdy": "2022-11-16T00:00:00Z",
+        "text": "Závěr Polska a NATO.",
+        "novySignal": true
+      }
+    ],
+    "novy": false,
+    "zapocitanoTyden": "2022-11-14",
+    "aiZpracovano": true,
+    "lidskyOvereno": true,
+    "archivniZaznam": true,
+    "historicky": true,
+    "puvodce": "ukrajina"
+  },
+  {
+    "id": "h16",
+    "slug": "balticconnector-2023",
+    "titulek": "Balticconnector: plynovod mezi Finskem a Estonskem poškodila kotva čínské lodi",
+    "kratkyTitulek": "Balticconnector",
+    "zeme": "Finsko",
+    "kodZeme": "FI",
+    "kategorie": [
+      "infrastruktura",
+      "vysetrovani"
+    ],
+    "datumUdalosti": "2023-10-08T00:00:00Z",
+    "datumZjisteni": "2023-10-25T00:00:00Z",
+    "aktualizovano": "2023-10-25T00:00:00Z",
+    "zavaznost": "Y3",
+    "jistota": "vysoka",
+    "stav": "probiha",
+    "atribuce": "vysetrovana",
+    "fakta": [
+      "Plynovod Balticconnector byl 8. října 2023 poškozen; finská policie 20. října označila za hlavního podezřelého loď Newnew Polar Bear registrovanou v Hongkongu a 24. října vyzvedla její kotvu.",
+      "Čína později uvedla, že šlo o nehodu při bouři."
+    ],
+    "neznameho": [
+      "Úmysl nebyl prokázán."
+    ],
+    "vyznam": "První z řady poškození podmořské infrastruktury v Baltu. Původce je zjištěný, úmysl ne — obojí web vede zvlášť.",
+    "eskalacniSpousteče": [],
+    "deeskalacniSignaly": [],
+    "zdroje": [
+      {
+        "nazev": "Al Jazeera — Finland says Chinese vessel's broken anchor caused Balticconnector damage",
+        "url": "https://www.aljazeera.com/news/2023/10/25/finland-pipeline-damage-cause",
+        "typ": "media",
+        "publikovano": "2023-10-25T00:00:00Z",
+        "primarni": false,
+        "jazyk": "en"
+      },
+      {
+        "nazev": "ERR — China admits container ship Newnew Polar Bear damaged undersea gas pipeline",
+        "url": "https://news.err.ee/1609422658/china-admits-container-ship-newnew-polar-bear-damaged-undersea-gas-pipeline",
+        "typ": "media",
+        "publikovano": "2024-08-12T00:00:00Z",
+        "primarni": false,
+        "jazyk": "en"
+      }
+    ],
+    "souvisejici": [],
+    "historie": [
+      {
+        "kdy": "2023-10-08T00:00:00Z",
+        "text": "Událost.",
+        "novySignal": true
+      },
+      {
+        "kdy": "2023-10-25T00:00:00Z",
+        "text": "Finská policie identifikovala kotvu lodi.",
+        "novySignal": true
+      }
+    ],
+    "novy": false,
+    "zapocitanoTyden": "2023-10-23",
+    "aiZpracovano": true,
+    "lidskyOvereno": true,
+    "archivniZaznam": true,
+    "historicky": true,
+    "puvodce": "jiny-stat"
+  },
+  {
+    "id": "h17",
+    "slug": "voice-of-europe-2024",
+    "titulek": "ČR sankcionovala Medvedčuka a web Voice of Europe za proruskou vlivovou operaci",
+    "kratkyTitulek": "Voice of Europe",
+    "zeme": "Česko",
+    "kodZeme": "CZ",
+    "kategorie": [
+      "cr",
+      "hybridni",
+      "diplomacie"
+    ],
+    "datumUdalosti": "2024-03-27T00:00:00Z",
+    "datumZjisteni": "2024-03-27T00:00:00Z",
+    "aktualizovano": "2024-03-27T00:00:00Z",
+    "zavaznost": "Y3",
+    "jistota": "potvrzeno",
+    "stav": "bez-vysetrovani",
+    "atribuce": "oficialni",
+    "fakta": [
+      "Vláda 27. března 2024 zařadila na sankční seznam Viktora Medvedčuka a web voiceofeurope.com za vedení proruské vlivové operace před volbami do Evropského parlamentu.",
+      "Na český návrh EU později zařadila Voice of Europe na svůj sankční seznam."
+    ],
+    "neznameho": [
+      "Konkrétní příjemci plateb v jednotlivých zemích jsou předmětem národních vyšetřování."
+    ],
+    "vyznam": "Vlivová operace odhalená českými službami, s dopadem na celou EU. Hybridní tlak nemusí být fyzický.",
+    "eskalacniSpousteče": [],
+    "deeskalacniSignaly": [],
+    "zdroje": [
+      {
+        "nazev": "MZV ČR — EU puts Voice of Europe and two other entities on sanctions list as a result of Czech proposal",
+        "url": "https://mzv.gov.cz/jnp/en/issues_and_press/press_releases/eu_puts_voice_of_europe_and_two_other.html",
+        "typ": "primary",
+        "publikovano": "2024-05-17T00:00:00Z",
+        "primarni": true,
+        "jazyk": "en"
+      },
+      {
+        "nazev": "RFE/RL — Czech Republic sanctions prominent pro-Kremlin Ukrainians",
+        "url": "https://www.rferl.org/a/czech-sanctions-medvedchuk-marchevskiy/32881026.html",
+        "typ": "media",
+        "publikovano": "2024-03-27T00:00:00Z",
+        "primarni": false,
+        "jazyk": "en"
+      }
+    ],
+    "souvisejici": [],
+    "historie": [
+      {
+        "kdy": "2024-03-27T00:00:00Z",
+        "text": "Událost.",
+        "novySignal": true
+      }
+    ],
+    "novy": false,
+    "zapocitanoTyden": "2024-03-25",
+    "aiZpracovano": true,
+    "lidskyOvereno": true,
+    "archivniZaznam": true,
+    "historicky": true,
+    "puvodce": "rusko"
+  },
+  {
+    "id": "h18",
+    "slug": "vilnius-ikea-2024",
+    "titulek": "Vilnius: žhářský útok na sklad IKEA; prokuratura ho připsala ruské vojenské rozvědce",
+    "kratkyTitulek": "IKEA Vilnius",
+    "zeme": "Litva",
+    "kodZeme": "LT",
+    "kategorie": [
+      "sabotaz"
+    ],
+    "datumUdalosti": "2024-05-09T00:00:00Z",
+    "datumZjisteni": "2025-03-17T00:00:00Z",
+    "aktualizovano": "2025-03-17T00:00:00Z",
+    "zavaznost": "O1",
+    "jistota": "potvrzeno",
+    "stav": "obvineni",
+    "atribuce": "oficialni",
+    "fakta": [
+      "Požár vypukl v noci 9. května 2024 ve skladu IKEA ve Vilniusu; nikdo nebyl zraněn.",
+      "Litevská generální prokuratura 17. března 2025 uvedla, že organizátoři jsou v Rusku a jsou napojeni na vojenskou rozvědku; čin označila za terorismus. Zadrženi byli dva ukrajinští občané najatí jako vykonavatelé."
+    ],
+    "neznameho": [],
+    "vyznam": "Vzor, který se později opakoval: najatí vykonavatelé, zadání z Ruska přes prostředníky.",
+    "eskalacniSpousteče": [],
+    "deeskalacniSignaly": [],
+    "zdroje": [
+      {
+        "nazev": "The Defense Post — Lithuania says Russian military intelligence behind IKEA store arson",
+        "url": "https://thedefensepost.com/2025/03/18/lithuania-russian-arson/",
+        "typ": "media",
+        "publikovano": "2025-03-18T00:00:00Z",
+        "primarni": false,
+        "jazyk": "en"
+      },
+      {
+        "nazev": "South China Morning Post — Lithuania blames Russian military intelligence for Ikea store arson",
+        "url": "https://www.scmp.com/news/world/europe/article/3302737/lithuania-blames-russian-military-intelligence-ikea-store-arson",
+        "typ": "media",
+        "publikovano": "2025-03-17T00:00:00Z",
+        "primarni": false,
+        "jazyk": "en"
+      }
+    ],
+    "souvisejici": [],
+    "historie": [
+      {
+        "kdy": "2024-05-09T00:00:00Z",
+        "text": "Událost.",
+        "novySignal": true
+      },
+      {
+        "kdy": "2025-03-17T00:00:00Z",
+        "text": "Atribuce litevské prokuratury.",
+        "novySignal": true
+      }
+    ],
+    "novy": false,
+    "zapocitanoTyden": "2025-03-17",
+    "aiZpracovano": true,
+    "lidskyOvereno": true,
+    "archivniZaznam": true,
+    "historicky": true,
+    "puvodce": "rusko"
+  },
+  {
+    "id": "h19",
+    "slug": "marywilska-2024",
+    "titulek": "Varšava: požár nákupního centra Marywilska 44; Polsko ho připsalo ruským službám",
+    "kratkyTitulek": "Marywilska 44",
+    "zeme": "Polsko",
+    "kodZeme": "PL",
+    "kategorie": [
+      "sabotaz"
+    ],
+    "datumUdalosti": "2024-05-12T00:00:00Z",
+    "datumZjisteni": "2025-05-11T00:00:00Z",
+    "aktualizovano": "2025-05-11T00:00:00Z",
+    "zavaznost": "O1",
+    "jistota": "potvrzeno",
+    "stav": "obvineni",
+    "atribuce": "oficialni",
+    "fakta": [
+      "Požár 12. května 2024 zničil nákupní centrum s asi 1 400 obchody.",
+      "Premiér Tusk 11. května 2025 oznámil, že šlo o žhářství na objednávku ruských služeb koordinované osobou v Rusku; část pachatelů je ve vazbě. Polsko uzavřelo ruský konzulát v Krakově."
+    ],
+    "neznameho": [],
+    "vyznam": "Největší doložený sabotážní čin v EU podle škody. Atribuce přišla přesně po roce.",
+    "eskalacniSpousteče": [],
+    "deeskalacniSignaly": [],
+    "zdroje": [
+      {
+        "nazev": "CNN — Poland blames Russian intelligence for arson attack on Warsaw shopping center",
+        "url": "https://www.cnn.com/2025/05/11/europe/poland-blames-russian-intelligence-fire-shopping-center-latam-intl",
+        "typ": "media",
+        "publikovano": "2025-05-11T00:00:00Z",
+        "primarni": false,
+        "jazyk": "en"
+      },
+      {
+        "nazev": "Al Jazeera — Diplomatic spat ignites as Poland accuses Russia of sabotage",
+        "url": "https://www.aljazeera.com/news/2025/5/12/diplomatic-spat-ignites-as-poland-accuses-russia-of-sabotage",
+        "typ": "media",
+        "publikovano": "2025-05-12T00:00:00Z",
+        "primarni": false,
+        "jazyk": "en"
+      }
+    ],
+    "souvisejici": [],
+    "historie": [
+      {
+        "kdy": "2024-05-12T00:00:00Z",
+        "text": "Událost.",
+        "novySignal": true
+      },
+      {
+        "kdy": "2025-05-11T00:00:00Z",
+        "text": "Oficiální atribuce polské vlády.",
+        "novySignal": true
+      }
+    ],
+    "novy": false,
+    "zapocitanoTyden": "2025-05-05",
+    "aiZpracovano": true,
+    "lidskyOvereno": true,
+    "archivniZaznam": true,
+    "historicky": true,
+    "puvodce": "rusko"
+  },
+  {
+    "id": "h20",
+    "slug": "praha-klicov-2024",
+    "titulek": "Praha-Klíčov: zapálení tří autobusů; pachatel odsouzen za teroristický útok, podle vlády část ruské hybridní války",
+    "kratkyTitulek": "Autobusy Klíčov",
+    "zeme": "Česko",
+    "kodZeme": "CZ",
+    "kategorie": [
+      "cr",
+      "sabotaz",
+      "vysetrovani"
+    ],
+    "datumUdalosti": "2024-06-05T00:00:00Z",
+    "datumZjisteni": "2025-06-09T00:00:00Z",
+    "aktualizovano": "2025-06-09T00:00:00Z",
+    "zavaznost": "O1",
+    "jistota": "potvrzeno",
+    "stav": "uzavreno",
+    "atribuce": "vysetrovana",
+    "fakta": [
+      "V noci na 5. června 2024 zapálil šestadvacetiletý kolumbijský občan tři autobusy v depu dopravního podniku na Klíčově.",
+      "Městský soud v Praze ho 9. června 2025 odsoudil za teroristický útok k osmi letům vězení; pokyny dostával přes Telegram za slíbenou odměnu. Plánoval další útok.",
+      "Premiér Fiala útok označil za pravděpodobnou součást ruské hybridní války; soud státní zadání neurčoval."
+    ],
+    "neznameho": [
+      "Kdo pachatele přes Telegram řídil, nebylo soudně určeno."
+    ],
+    "vyznam": "Jediný soudně uzavřený sabotážní čin na území ČR v posledních letech. Vykonavatel je odsouzený, zadavatel oficiálně ne — proto je v rozpadu původců „neznámý“.",
+    "eskalacniSpousteče": [],
+    "deeskalacniSignaly": [],
+    "zdroje": [
+      {
+        "nazev": "Euronews — Czech court sentences Colombian to eight years for Russia-linked arson attack",
+        "url": "https://www.euronews.com/2025/06/09/czech-court-sentences-colombian-to-eight-years-in-prison-for-russia-linked-arson-attack",
+        "typ": "media",
+        "publikovano": "2025-06-09T00:00:00Z",
+        "primarni": false,
+        "jazyk": "en"
+      },
+      {
+        "nazev": "iROZHLAS — Kolumbijec podezřelý ze žhářského útoku zůstává ve vazbě",
+        "url": "https://www.irozhlas.cz/zpravy-domov/kolumbijec-zharsky-utok-praha-cesko-klizov-autobusy-garaze_2408070500_ako",
+        "typ": "media",
+        "publikovano": "2024-08-07T00:00:00Z",
+        "primarni": false,
+        "jazyk": "cs"
+      }
+    ],
+    "souvisejici": [],
+    "historie": [
+      {
+        "kdy": "2024-06-05T00:00:00Z",
+        "text": "Událost.",
+        "novySignal": true
+      },
+      {
+        "kdy": "2025-06-09T00:00:00Z",
+        "text": "Rozsudek Městského soudu v Praze.",
+        "novySignal": true
+      }
+    ],
+    "novy": false,
+    "zapocitanoTyden": "2025-06-09",
+    "aiZpracovano": true,
+    "lidskyOvereno": true,
+    "archivniZaznam": true,
+    "historicky": true,
+    "puvodce": "neznamy"
+  },
+  {
+    "id": "h21",
+    "slug": "dhl-balicky-2024",
+    "titulek": "Lipsko: zápalný balíček vzplál v uzlu DHL; podle Litvy test ruského plánu proti nákladním letům",
+    "kratkyTitulek": "Balíčky DHL",
+    "zeme": "Německo",
+    "kodZeme": "DE",
+    "kategorie": [
+      "sabotaz",
+      "infrastruktura"
+    ],
+    "datumUdalosti": "2024-07-20T00:00:00Z",
+    "datumZjisteni": "2025-09-17T00:00:00Z",
+    "aktualizovano": "2025-09-17T00:00:00Z",
+    "zavaznost": "O1",
+    "jistota": "potvrzeno",
+    "stav": "obvineni",
+    "atribuce": "oficialni",
+    "fakta": [
+      "Čtyři balíčky s podomácku vyrobenými zápalnými náložemi byly 19. července 2024 odeslány z Vilniusu; jeden 20. července vzplál na letišti Lipsko/Halle krátce před naložením do letadla DHL.",
+      "Litevské úřady 17. září 2025 uvedly, že akci organizovali ruští občané napojení na vojenskou rozvědku; Polsko obvinilo čtyři osoby ze sabotáže pro cizí rozvědku."
+    ],
+    "neznameho": [],
+    "vyznam": "Stejné letiště jako útok dronem v srpnu 2026. Ukazuje, proč se Leipzig/Halle sleduje jako opakovaný cíl.",
+    "eskalacniSpousteče": [],
+    "deeskalacniSignaly": [],
+    "zdroje": [
+      {
+        "nazev": "CNN — 2024 parcel blasts in Europe organized by Russians with intelligence ties, Lithuania says",
+        "url": "https://edition.cnn.com/2025/09/17/europe/russia-dhl-bombs-lithuania-latam-intl",
+        "typ": "media",
+        "publikovano": "2025-09-17T00:00:00Z",
+        "primarni": false,
+        "jazyk": "en"
+      },
+      {
+        "nazev": "RFE/RL — Parcels that exploded in Europe reportedly part of Russian plot",
+        "url": "https://www.rferl.org/a/parcels-exploded-russian-plot/33189080.html",
+        "typ": "media",
+        "publikovano": "2024-11-05T00:00:00Z",
+        "primarni": false,
+        "jazyk": "en"
+      }
+    ],
+    "souvisejici": [],
+    "historie": [
+      {
+        "kdy": "2024-07-20T00:00:00Z",
+        "text": "Událost.",
+        "novySignal": true
+      },
+      {
+        "kdy": "2025-09-17T00:00:00Z",
+        "text": "Atribuce litevských úřadů.",
+        "novySignal": true
+      }
+    ],
+    "novy": false,
+    "zapocitanoTyden": "2025-09-15",
+    "aiZpracovano": true,
+    "lidskyOvereno": true,
+    "archivniZaznam": true,
+    "historicky": true,
+    "puvodce": "rusko"
+  },
+  {
+    "id": "h22",
+    "slug": "yi-peng-3-2024",
+    "titulek": "Baltské moře: přerušení kabelů C-Lion1 a BCS; podezření na čínskou loď Yi Peng 3",
+    "kratkyTitulek": "Kabely v Baltu 2024",
+    "zeme": "Švédsko",
+    "kodZeme": "SE",
+    "kategorie": [
+      "infrastruktura",
+      "vysetrovani"
+    ],
+    "datumUdalosti": "2024-11-17T00:00:00Z",
+    "datumZjisteni": "2024-11-29T00:00:00Z",
+    "aktualizovano": "2024-11-29T00:00:00Z",
+    "zavaznost": "Y3",
+    "jistota": "vysoka",
+    "stav": "probiha",
+    "atribuce": "nepotvrzena",
+    "fakta": [
+      "Kabel BCS East-West (Švédsko–Litva) byl přerušen 17. listopadu 2024, kabel C-Lion1 (Finsko–Německo) 18. listopadu.",
+      "Vyšetřovatelé pracují s verzí, že čínská loď Yi Peng 3 vlekla kotvu po dně; Švédsko požádalo Čínu o spolupráci."
+    ],
+    "neznameho": [
+      "Úmysl ani zadavatel nebyli určeni."
+    ],
+    "vyznam": "Druhý případ s čínskou lodí v Baltu. Web ho vede jako „jiný stát, nepotvrzeno“ — ne jako ruský útok.",
+    "eskalacniSpousteče": [],
+    "deeskalacniSignaly": [],
+    "zdroje": [
+      {
+        "nazev": "CNN — Sweden asks China to cooperate in Baltic Sea cable investigation",
+        "url": "https://www.cnn.com/2024/11/29/europe/sweden-china-baltic-sea-cable-intl",
+        "typ": "media",
+        "publikovano": "2024-11-29T00:00:00Z",
+        "primarni": false,
+        "jazyk": "en"
+      },
+      {
+        "nazev": "CNN — Swedish police board ship in Baltic severed cable probe",
+        "url": "https://www.cnn.com/2024/12/19/europe/sweden-chinese-ship-baltic-cables-intl/index.html",
+        "typ": "media",
+        "publikovano": "2024-12-19T00:00:00Z",
+        "primarni": false,
+        "jazyk": "en"
+      }
+    ],
+    "souvisejici": [],
+    "historie": [
+      {
+        "kdy": "2024-11-17T00:00:00Z",
+        "text": "Událost.",
+        "novySignal": true
+      },
+      {
+        "kdy": "2024-11-29T00:00:00Z",
+        "text": "Švédsko požádalo Čínu o spolupráci.",
+        "novySignal": true
+      }
+    ],
+    "novy": false,
+    "zapocitanoTyden": "2024-11-25",
+    "aiZpracovano": true,
+    "lidskyOvereno": true,
+    "archivniZaznam": true,
+    "historicky": true,
+    "puvodce": "jiny-stat"
+  },
+  {
+    "id": "h23",
+    "slug": "estlink2-2024",
+    "titulek": "Estlink 2: přerušení kabelu mezi Finskem a Estonskem; Finsko zadrželo tanker Eagle S",
+    "kratkyTitulek": "Estlink 2",
+    "zeme": "Finsko",
+    "kodZeme": "FI",
+    "kategorie": [
+      "infrastruktura",
+      "vysetrovani"
+    ],
+    "datumUdalosti": "2024-12-25T00:00:00Z",
+    "datumZjisteni": "2025-08-11T00:00:00Z",
+    "aktualizovano": "2025-08-11T00:00:00Z",
+    "zavaznost": "O1",
+    "jistota": "potvrzeno",
+    "stav": "obvineni",
+    "atribuce": "vysetrovana",
+    "fakta": [
+      "Kabel Estlink 2 a čtyři telekomunikační kabely byly poškozeny 25. prosince 2024; Finsko 26. prosince zadrželo tanker Eagle S spojovaný s ruskou stínovou flotilou.",
+      "Podle obžaloby loď vlekla jedenáctitunovou kotvu téměř 90 km po dně. Finsko v srpnu 2025 obvinilo důstojníky lodi."
+    ],
+    "neznameho": [
+      "Zda šlo o záměr a kdo ho zadal, soud nerozhodl."
+    ],
+    "vyznam": "Bezprostřední důvod pro spuštění mise NATO Baltic Sentry. Pachatel je obviněný, státní zadání není prokázáno.",
+    "eskalacniSpousteče": [],
+    "deeskalacniSignaly": [],
+    "zdroje": [
+      {
+        "nazev": "Finská vláda — Estlink 2 electricity transmission cable damaged in the Baltic Sea on 25 Dec 2024",
+        "url": "https://valtioneuvosto.fi/en/-/44957406/estlink-2-electricity-transmission-cable-damaged-in-the-baltic-sea-on-25-dec-2024",
+        "typ": "primary",
+        "publikovano": "2024-12-26T00:00:00Z",
+        "primarni": true,
+        "jazyk": "en"
+      },
+      {
+        "nazev": "Euronews — Finland charges officers of Russia-linked Eagle S ship that damaged undersea cables",
+        "url": "https://www.euronews.com/2025/08/11/finland-charges-officers-of-russia-linked-eagle-s-ship-that-damaged-undersea-cables",
+        "typ": "media",
+        "publikovano": "2025-08-11T00:00:00Z",
+        "primarni": false,
+        "jazyk": "en"
+      }
+    ],
+    "souvisejici": [],
+    "historie": [
+      {
+        "kdy": "2024-12-25T00:00:00Z",
+        "text": "Událost.",
+        "novySignal": true
+      },
+      {
+        "kdy": "2025-08-11T00:00:00Z",
+        "text": "Obvinění důstojníků lodi.",
+        "novySignal": true
+      }
+    ],
+    "novy": false,
+    "zapocitanoTyden": "2025-08-11",
+    "aiZpracovano": true,
+    "lidskyOvereno": true,
+    "archivniZaznam": true,
+    "historicky": true,
+    "puvodce": "neznamy"
+  },
+  {
+    "id": "h24",
+    "slug": "baltic-sentry-2025",
+    "titulek": "NATO spustilo misi Baltic Sentry na ochranu podmořské infrastruktury",
+    "kratkyTitulek": "Baltic Sentry",
+    "zeme": "Evropa",
+    "kodZeme": "EU",
+    "kategorie": [
+      "nato",
+      "infrastruktura"
+    ],
+    "datumUdalosti": "2025-01-14T00:00:00Z",
+    "datumZjisteni": "2025-01-14T00:00:00Z",
+    "aktualizovano": "2025-01-14T00:00:00Z",
+    "zavaznost": "Y3",
+    "jistota": "potvrzeno",
+    "stav": "bez-vysetrovani",
+    "atribuce": "oficialni",
+    "fakta": [
+      "Na summitu států Baltského moře 14. ledna 2025 NATO oznámilo misi Baltic Sentry s fregatami, hlídkovými letouny a námořními drony."
+    ],
+    "neznameho": [],
+    "vyznam": "Institucionální reakce na sérii poškození kabelů. Přesně typ kroku, který web sleduje jako indikátor.",
+    "eskalacniSpousteče": [],
+    "deeskalacniSignaly": [],
+    "zdroje": [
+      {
+        "nazev": "SHAPE — Baltic Sentry",
+        "url": "https://shape.nato.int/operations/operations-and-missions/baltic-sentry",
+        "typ": "primary",
+        "publikovano": "2025-01-14T00:00:00Z",
+        "primarni": true,
+        "jazyk": "en"
+      },
+      {
+        "nazev": "Defense News — NATO launches Baltic patrol mission",
+        "url": "https://www.defensenews.com/global/europe/2025/01/14/nato-launches-baltic-patrol-mission-eyes-standard-for-detaining-ships/",
+        "typ": "media",
+        "publikovano": "2025-01-14T00:00:00Z",
+        "primarni": false,
+        "jazyk": "en"
+      }
+    ],
+    "souvisejici": [],
+    "historie": [
+      {
+        "kdy": "2025-01-14T00:00:00Z",
+        "text": "Událost.",
+        "novySignal": true
+      }
+    ],
+    "novy": false,
+    "zapocitanoTyden": "2025-01-13",
+    "aiZpracovano": true,
+    "lidskyOvereno": true,
+    "archivniZaznam": true,
+    "historicky": true
+  },
+  {
+    "id": "h25",
+    "slug": "cr-apt31-2025",
+    "titulek": "ČR oficiálně připsala kyberútok na ministerstvo zahraničí čínské skupině APT31",
+    "kratkyTitulek": "APT31 vs. MZV",
+    "zeme": "Česko",
+    "kodZeme": "CZ",
+    "kategorie": [
+      "cr",
+      "kyber"
+    ],
+    "datumUdalosti": "2025-05-28T00:00:00Z",
+    "datumZjisteni": "2025-05-28T00:00:00Z",
+    "aktualizovano": "2025-05-28T00:00:00Z",
+    "zavaznost": "Y3",
+    "jistota": "potvrzeno",
+    "stav": "uzavreno",
+    "atribuce": "oficialni",
+    "fakta": [
+      "Vláda 28. května 2025 oznámila národní atribuci kampaně skupiny APT31 spojené s čínským ministerstvem státní bezpečnosti; od roku 2022 útočila na neutajovanou síť MZV.",
+      "Atribuci provedl NÚKIB spolu se všemi třemi zpravodajskými službami; EU a spojenci NATO útok odsoudili."
+    ],
+    "neznameho": [],
+    "vyznam": "Jediná česká oficiální atribuce jinému státu než Rusku. Do rozpadu původců vstupuje jako „jiný stát“.",
+    "eskalacniSpousteče": [],
+    "deeskalacniSignaly": [],
+    "zdroje": [
+      {
+        "nazev": "NÚKIB — The Czech Government has publicly attributed cyberattacks to China: actor APT31",
+        "url": "https://nukib.gov.cz/en/infoservis-en/news/2263-the-czech-government-has-publicly-attributed-cyberattacks-to-china-actor-apt31-linked-to-the-chinese-ministry-of-state-security-has-targeted-the-infrastructure-of-the-czech-ministry-of-foreign-affairs/",
+        "typ": "primary",
+        "publikovano": "2025-05-28T00:00:00Z",
+        "primarni": true,
+        "jazyk": "en"
+      },
+      {
+        "nazev": "Bloomberg — Czechs blame China for cyberattack against Foreign Ministry",
+        "url": "https://www.bloomberg.com/news/articles/2025-05-28/czechs-say-china-behind-recent-cyber-attack-on-foreign-ministry",
+        "typ": "media",
+        "publikovano": "2025-05-28T00:00:00Z",
+        "primarni": false,
+        "jazyk": "en"
+      }
+    ],
+    "souvisejici": [],
+    "historie": [
+      {
+        "kdy": "2025-05-28T00:00:00Z",
+        "text": "Událost.",
+        "novySignal": true
+      }
+    ],
+    "novy": false,
+    "zapocitanoTyden": "2025-05-26",
+    "aiZpracovano": true,
+    "lidskyOvereno": true,
+    "archivniZaznam": true,
+    "historicky": true,
+    "puvodce": "jiny-stat"
+  },
+  {
+    "id": "h26",
+    "slug": "polsko-drony-clanek-4-2025",
+    "titulek": "Polsko sestřelilo ruské drony nad svým územím a požádalo o článek 4",
+    "kratkyTitulek": "Polsko: drony a čl. 4",
+    "zeme": "Polsko",
+    "kodZeme": "PL",
+    "kategorie": [
+      "nato",
+      "drony"
+    ],
+    "datumUdalosti": "2025-09-10T00:00:00Z",
+    "datumZjisteni": "2025-09-10T00:00:00Z",
+    "aktualizovano": "2025-09-10T00:00:00Z",
+    "zavaznost": "O2",
+    "jistota": "potvrzeno",
+    "stav": "bez-vysetrovani",
+    "atribuce": "oficialni",
+    "fakta": [
+      "V noci na 10. září 2025 vniklo do polského vzdušného prostoru podle premiéra Tuska 19 ruských dronů; polské a nizozemské stíhačky část sestřelily.",
+      "Polsko požádalo o konzultace podle článku 4; spojenci je téhož dne vedli. Šlo o první známé použití zbraní členským státem NATO od začátku války."
+    ],
+    "neznameho": [],
+    "vyznam": "První ostrý zásah NATO proti ruským prostředkům nad vlastním územím. Článek 4 spuštěn, článek 5 ne.",
+    "eskalacniSpousteče": [],
+    "deeskalacniSignaly": [],
+    "zdroje": [
+      {
+        "nazev": "NATO — Statement, 10 September 2025 (transcript)",
+        "url": "https://www.nato.int/en/news-and-events/events/transcripts/2025/09/10/statement",
+        "typ": "primary",
+        "publikovano": "2025-09-10T00:00:00Z",
+        "primarni": true,
+        "jazyk": "en"
+      },
+      {
+        "nazev": "The Washington Post — NATO allies held Article 4 consultations after Russian drone incursion",
+        "url": "https://www.washingtonpost.com/world/2025/09/10/nato-poland-russia-ukraine-drones-article4/15a658fc-8e46-11f0-8260-0712daa5c125_story.html",
+        "typ": "media",
+        "publikovano": "2025-09-10T00:00:00Z",
+        "primarni": false,
+        "jazyk": "en"
+      }
+    ],
+    "souvisejici": [],
+    "historie": [
+      {
+        "kdy": "2025-09-10T00:00:00Z",
+        "text": "Událost.",
+        "novySignal": true
+      }
+    ],
+    "novy": false,
+    "zapocitanoTyden": "2025-09-08",
+    "aiZpracovano": true,
+    "lidskyOvereno": true,
+    "archivniZaznam": true,
+    "historicky": true,
+    "puvodce": "rusko"
+  },
+  {
+    "id": "h27",
+    "slug": "eastern-sentry-2025",
+    "titulek": "NATO spustilo Eastern Sentry k posílení východního křídla",
+    "kratkyTitulek": "Eastern Sentry",
+    "zeme": "Evropa",
+    "kodZeme": "EU",
+    "kategorie": [
+      "nato",
+      "drony"
+    ],
+    "datumUdalosti": "2025-09-12T00:00:00Z",
+    "datumZjisteni": "2025-09-12T00:00:00Z",
+    "aktualizovano": "2025-09-12T00:00:00Z",
+    "zavaznost": "Y3",
+    "jistota": "potvrzeno",
+    "stav": "bez-vysetrovani",
+    "atribuce": "oficialni",
+    "fakta": [
+      "Generální tajemník Rutte 12. září 2025 oznámil aktivitu Eastern Sentry jako reakci na narušení polského vzdušného prostoru; zapojily se Dánsko, Francie, Británie a Německo."
+    ],
+    "neznameho": [],
+    "vyznam": "Institucionální reakce Aliance dva dny po incidentu. Sledujeme jako indikátor readiness, ne jako eskalaci.",
+    "eskalacniSpousteče": [],
+    "deeskalacniSignaly": [],
+    "zdroje": [
+      {
+        "nazev": "NATO — NATO launches \"Eastern Sentry\" to bolster posture along eastern flank",
+        "url": "https://www.nato.int/cps/en/natohq/news_237601.htm",
+        "typ": "primary",
+        "publikovano": "2025-09-12T00:00:00Z",
+        "primarni": true,
+        "jazyk": "en"
+      },
+      {
+        "nazev": "France 24 — NATO bulks up defence on eastern flank after Russian drone incursion in Poland",
+        "url": "https://www.france24.com/en/europe/20250912-nato-launches-eastern-sentry-defence-mission-after-russian-drone-incursion-in-poland",
+        "typ": "media",
+        "publikovano": "2025-09-12T00:00:00Z",
+        "primarni": false,
+        "jazyk": "en"
+      }
+    ],
+    "souvisejici": [],
+    "historie": [
+      {
+        "kdy": "2025-09-12T00:00:00Z",
+        "text": "Událost.",
+        "novySignal": true
+      }
+    ],
+    "novy": false,
+    "zapocitanoTyden": "2025-09-08",
+    "aiZpracovano": true,
+    "lidskyOvereno": true,
+    "archivniZaznam": true,
+    "historicky": true
+  },
+  {
+    "id": "h28",
+    "slug": "estonsko-mig31-clanek-4-2025",
+    "titulek": "Estonsko: tři ruské MiG-31 dvanáct minut v estonském vzdušném prostoru; žádost o článek 4",
+    "kratkyTitulek": "Estonsko: MiG-31",
+    "zeme": "Estonsko",
+    "kodZeme": "EE",
+    "kategorie": [
+      "nato",
+      "drony"
+    ],
+    "datumUdalosti": "2025-09-19T00:00:00Z",
+    "datumZjisteni": "2025-09-19T00:00:00Z",
+    "aktualizovano": "2025-09-19T00:00:00Z",
+    "zavaznost": "O2",
+    "jistota": "potvrzeno",
+    "stav": "bez-vysetrovani",
+    "atribuce": "oficialni",
+    "fakta": [
+      "Tři ruské MiG-31 vnikly 19. září 2025 do estonského vzdušného prostoru u ostrova Vaindloo a setrvaly tam téměř 12 minut bez letového plánu a s vypnutými odpovídači; spojenecké letouny je vyprovodily.",
+      "Estonská vláda požádala o konzultace podle článku 4."
+    ],
+    "neznameho": [],
+    "vyznam": "Druhá žádost o článek 4 během deseti dnů. Vzorec, ne ojedinělá událost.",
+    "eskalacniSpousteče": [],
+    "deeskalacniSignaly": [],
+    "zdroje": [
+      {
+        "nazev": "RFE/RL — Estonia seeks to invoke NATO Article 4",
+        "url": "https://www.rferl.org/a/eu-russia-sanctions-19th-package-lng-ukraine-war-leyen/33534943.html",
+        "typ": "media",
+        "publikovano": "2025-09-19T00:00:00Z",
+        "primarni": false,
+        "jazyk": "en"
+      },
+      {
+        "nazev": "Estonian World — Estonia's PM: rules of engagement set for shooting down Russian jets",
+        "url": "https://estonianworld.com/security/estonias-pm-rules-of-engagement-set-for-shooting-down-russian-jets/",
+        "typ": "media",
+        "publikovano": "2025-09-20T00:00:00Z",
+        "primarni": false,
+        "jazyk": "en"
+      }
+    ],
+    "souvisejici": [],
+    "historie": [
+      {
+        "kdy": "2025-09-19T00:00:00Z",
+        "text": "Událost.",
+        "novySignal": true
+      }
+    ],
+    "novy": false,
+    "zapocitanoTyden": "2025-09-15",
+    "aiZpracovano": true,
+    "lidskyOvereno": true,
+    "archivniZaznam": true,
+    "historicky": true,
+    "puvodce": "rusko"
   }
 ]

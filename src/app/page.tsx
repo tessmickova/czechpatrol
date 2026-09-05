@@ -54,7 +54,7 @@ export default function Prehled() {
           kod="Dopad po zemích"
           ikona="mapa"
           nadpis="Kde se to děje a kolik"
-          popis="Podle zveřejněných záznamů. Česko je vždy první — i když tam nic není."
+          popis={`Letošní záznamy (${new Date().getUTCFullYear()}). Česko je vždy první — i když tam nic není. Starší roky jsou na ose níže.`}
           sirka="dve-tretiny"
         >
           <DopadPoZemich />
@@ -64,7 +64,7 @@ export default function Prehled() {
           kod="Původce"
           ikona="lupa"
           nadpis="Kdo za tím stojí"
-          popis="Rusko, Ukrajina, jiný stát, domácí pachatel, neznámý. Jen činy, jen potvrzené počty."
+          popis="Letos. Rusko, Ukrajina, jiný stát, domácí pachatel, neznámý — jen činy, jen potvrzené počty."
           sirka="tretina"
         >
           <KdoZaTimStoji />
@@ -84,7 +84,7 @@ export default function Prehled() {
           <GrafTrendu tydny={tydenni} />
         </Panel>
 
-        <Panel kod="Od roku 2013" ikona="graf" nadpis="Vývoj po měsících" popis="Dlouhá řada. Plní se jen z ozdrojovaných záznamů." sirka="tretina">
+        <Panel kod="Od roku 2010" ikona="graf" nadpis="Vývoj po měsících" popis="Sloupce = hodnocení (od 7/2026). Tečky = počet záznamů v měsíci. Bez dat je bez dat." sirka="tretina">
           <GrafMesicu mesice={mesice().mesice} />
         </Panel>
 
@@ -96,8 +96,8 @@ export default function Prehled() {
           id="udalosti"
           kod="Záznamy"
           ikona="oko"
-          nadpis="Ověřené záznamy, nepotvrzené i vyvrácené"
-          popis="Jedna osa. U každého řádku zvlášť, jak je potvrzená informace a jak pachatel."
+          nadpis="Záznamy od roku 2014: ověřené, nepotvrzené i vyvrácené"
+          popis="Jedna osa. U každého řádku zvlášť, jak je potvrzená informace a jak pachatel. Roky 2010–2013 nemají v tomto rámci žádný záznam."
           akce={<Link href="/udalosti/" className={odkaz}>Samostatně</Link>}
         >
           <Zaznamy incidenty={vse} neprosle={nepotvrzene()} />

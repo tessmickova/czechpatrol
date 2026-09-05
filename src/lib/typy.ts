@@ -98,6 +98,8 @@ export interface Incident {
    * `atribuce` (oficialni / domaci = potvrzeno).
    */
   puvodce?: Puvodce | null;
+  /** Doplněno zpětně jako historický milník (2014–2025), ne z běžného monitoringu. */
+  historicky?: boolean;
   /** Co doloženě víme. Každá položka musí být krytá zdrojem. */
   fakta: string[];
   /** Co potvrzeno nebylo. Stejně důležité jako fakta. */
