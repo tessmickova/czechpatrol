@@ -78,3 +78,81 @@ export const REZIM: "ostry" | "ukazka" =
   process.env.NEXT_PUBLIC_REZIM === "ukazka" ? "ukazka" : "ostry";
 
 export const JE_UKAZKA = REZIM === "ukazka";
+
+/**
+ * Adresa API (účty, upozornění, IZS). Prázdná adresa = účty vypnuté;
+ * web pak ukáže, že se připravují, a nic nepředstírá.
+ */
+export const API_URL = (process.env.NEXT_PUBLIC_API_URL ?? "").replace(/\/$/, "");
+export const UCTY_ZAPNUTE = API_URL !== "";
+
+/**
+ * Co je jen pro podporovatele.
+ *
+ * Přepínač je tu na přání. Doporučení projektu je ale jiné: informace, které
+ * se dotýkají bezpečí (hranice, doprava), nechávat volně a placenou vrstvu
+ * stavět na pohodlí — upozorněních, archivu, exportu. Zapnutí je jedna
+ * hodnota; rozhodnutí zůstává na provozovateli.
+ *
+ * Pozn.: web je statický, takže omezení platí v prohlížeči. Kdo by chtěl
+ * data doopravdy schovat, musel by je přesunout do API.
+ */
+export const PLACENE = {
+  hraniceADoprava: false,
+} as const;
+
+/** Odkazy pro praktického pomocníka — jen úřední zdroje, žádné vlastní rady. */
+export const POMOCNIK = [
+  {
+    nazev: "Portál občana",
+    popis: "Úřední oznámení státu, doklady, datová schránka.",
+    url: "https://obcan.portal.gov.cz/",
+  },
+  {
+    nazev: "DROZD — registrace před cestou",
+    popis: "Dobrovolná registrace u MZV pro cesty do zahraničí. Stát vás pak umí kontaktovat.",
+    url: "https://drozd.mzv.cz/",
+  },
+  {
+    nazev: "Hasičský záchranný sbor ČR",
+    popis: "Ochrana obyvatelstva, varování, co dělat při mimořádné události.",
+    url: "https://www.hzscr.cz/",
+  },
+  {
+    nazev: "Ministerstvo vnitra",
+    popis: "Bezpečnostní informace státu, hranice, občanské průkazy.",
+    url: "https://www.mvcr.cz/",
+  },
+  {
+    nazev: "NÚKIB",
+    popis: "Kybernetická bezpečnost, aktuální varování a doporučení.",
+    url: "https://nukib.gov.cz/",
+  },
+] as const;
+
+/** Tísňová čísla. Jediné „doporučení“, které web dává. */
+export const TISNOVA = [
+  { cislo: "112", popis: "jednotné evropské číslo tísňového volání" },
+  { cislo: "150", popis: "hasiči" },
+  { cislo: "155", popis: "záchranná služba" },
+  { cislo: "158", popis: "policie" },
+] as const;
+
+/**
+ * Provozovatel — správce osobních údajů. Dokud je prázdné, stránky
+ * o soukromí a podmínkách to řeknou na rovinu; nic se nevymýšlí.
+ */
+export const PROVOZOVATEL = {
+  nazev: "",
+  kontakt: "",
+} as const;
+
+/** Kam se hlásí složka IZS, která chce roli partnera. Prázdné = zatím nepřijímáme. */
+export const IZS_KONTAKT = "";
+
+/** Kraje pro cílení zpráv partnera IZS. */
+export const KRAJE = [
+  "Hlavní město Praha", "Středočeský", "Jihočeský", "Plzeňský", "Karlovarský", "Ústecký",
+  "Liberecký", "Královéhradecký", "Pardubický", "Vysočina", "Jihomoravský", "Olomoucký",
+  "Zlínský", "Moravskoslezský",
+] as const;

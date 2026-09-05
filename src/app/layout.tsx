@@ -1,6 +1,9 @@
 import type { Metadata, Viewport } from "next";
 import { Chakra_Petch, JetBrains_Mono } from "next/font/google";
+import { ListaMobil } from "@/components/lista-mobil";
 import { Navigace } from "@/components/navigace";
+import { PostranniPanel } from "@/components/postranni-panel";
+import { RegistraceSW } from "@/components/pwa";
 import { Paticka } from "@/components/paticka";
 import { BetaPruh, UkazkaPruh } from "@/components/pruhy";
 import { WEB } from "@/config/web";
@@ -31,6 +34,12 @@ export const metadata: Metadata = {
   },
   description: WEB.popis,
   applicationName: WEB.nazev,
+  manifest: "/manifest.webmanifest",
+  icons: {
+    icon: [{ url: "/ikona-192.png", sizes: "192x192", type: "image/png" }, { url: "/ikona.svg", type: "image/svg+xml" }],
+    apple: "/apple-touch-icon.png",
+  },
+  appleWebApp: { capable: true, statusBarStyle: "black-translucent", title: WEB.nazev },
   openGraph: {
     type: "website",
     locale: "cs_CZ",
@@ -46,6 +55,7 @@ export const viewport: Viewport = {
   themeColor: "#060a13",
   width: "device-width",
   initialScale: 1,
+  viewportFit: "cover",
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
@@ -61,8 +71,11 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <Navigace />
         <BetaPruh />
         <UkazkaPruh />
-        <main id="obsah">{children}</main>
+        <main id="obsah" className="pb-[calc(72px+env(safe-area-inset-bottom))] lg:pb-0">{children}</main>
         <Paticka />
+        <PostranniPanel />
+        <ListaMobil />
+        <RegistraceSW />
         {/*
           Parallax bez Reactu: obyčejný skript posouvá prvky s data-vrstva.
           Nepotřebuje hydrataci, takže funguje i ve statickém náhledu, a při

@@ -1,0 +1,72 @@
+/*
+  Service worker CzechPatrol.
+
+  Zásada: data nikdy ze staré mezipaměti, když je síť. Stránky se berou
+  nejdřív ze sítě a kopie se uloží jen pro případ výpadku; hashované soubory
+  buildu (_next/static) se naopak berou z mezipaměti rovnou, protože se
+  s každou změnou přejmenují.
+*/
+const VERZE = "cp-v1";
+const SKORAPKA = ["/", "/offline/", "/manifest.webmanifest", "/ikona-192.png"];
+
+self.addEventListener("install", (u) => {
+  u.waitUntil(
+    caches.open(VERZE).then((c) => c.addAll(SKORAPKA)).then(() => self.skipWaiting()),
+  );
+});
+
+self.addEventListener("activate", (u) => {
+  u.waitUntil(
+    caches
+      .keys()
+      .then((klice) => Promise.all(klice.filter((k) => k !== VERZE).map((k) => caches.delete(k))))
+      .then(() => self.clients.claim()),
+  );
+});
+
+self.addEventListener("fetch", (u) => {
+  const { request } = u;
+  if (request.method !== "GET") return;
+  const url = new URL(request.url);
+  if (url.origin !== self.location.origin) return;
+
+  if (url.pathname.startsWith("/_next/static/")) {
+    u.respondWith(
+      caches.match(request).then(
+        (hit) =>
+          hit ||
+          fetch(request).then((odpoved) => {
+            const kopie = odpoved.clone();
+            caches.open(VERZE).then((c) => c.put(request, kopie));
+            return odpoved;
+          }),
+      ),
+    );
+    return;
+  }
+
+  if (request.mode === "navigate" || request.headers.get("accept")?.includes("text/html")) {
+    u.respondWith(
+      fetch(request)
+        .then((odpoved) => {
+          const kopie = odpoved.clone();
+          caches.open(VERZE).then((c) => c.put(request, kopie));
+          return odpoved;
+        })
+        .catch(() => caches.match(request).then((hit) => hit || caches.match("/offline/"))),
+    );
+    return;
+  }
+
+  u.respondWith(
+    fetch(request)
+      .then((odpoved) => {
+        if (odpoved.ok) {
+          const kopie = odpoved.clone();
+          caches.open(VERZE).then((c) => c.put(request, kopie));
+        }
+        return odpoved;
+      })
+      .catch(() => caches.match(request)),
+  );
+});

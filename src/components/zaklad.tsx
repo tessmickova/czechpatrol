@@ -239,10 +239,11 @@ export function Sekce({
 
 /** Základní karta. Odstín se volí podle role, ne pro ozdobu. */
 export function Karta({
-  children, className = "", jako: Jako = "div", odstin = "bila", zdvih = false,
+  children, className = "", jako: Jako = "div", odstin = "bila", zdvih = false, id,
 }: {
   children: ReactNode;
   className?: string;
+  id?: string;
   jako?: "div" | "li" | "article";
   odstin?: "bila" | "papir" | "modra" | "zelena" | "pisek" | "slez";
   zdvih?: boolean;
@@ -256,7 +257,7 @@ export function Karta({
     slez: "sklo border-[#b28cff]/30 bg-slez",
   }[odstin];
   return (
-    <Jako className={`rounded-[20px] ${odstiny} ${zdvih ? "zdvih" : ""} ${className}`}>
+    <Jako id={id} className={`rounded-[20px] ${odstiny} ${zdvih ? "zdvih" : ""} ${className}`}>
       {children}
     </Jako>
   );

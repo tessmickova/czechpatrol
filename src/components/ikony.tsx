@@ -10,7 +10,8 @@ export type NazevIkony =
   | "pas" | "hranice" | "palivo" | "elektrina" | "plyn" | "banky" | "komunikace" | "skoly"
   | "dron" | "kabel" | "kyber" | "vystraha" | "oko" | "rozvodna" | "terc"
   | "osa" | "graf" | "kniha" | "zebrik" | "hodiny"
-  | "nahoru" | "dolu" | "fajfka" | "krizek";
+  | "nahoru" | "dolu" | "fajfka" | "krizek"
+  | "uzivatel" | "zvonek" | "kava" | "telefon" | "sirena" | "zamek" | "srdce" | "menu" | "instalace" | "odeslat";
 
 const TVARY: Record<NazevIkony, string> = {
   radar:
@@ -53,6 +54,16 @@ const TVARY: Record<NazevIkony, string> = {
   dolu: "M12 4.5V19 M6 13l6 6 6-6",
   fajfka: "M4.5 12.5 9.5 17.5 19.5 6.5",
   krizek: "M6 6l12 12 M18 6 6 18",
+  uzivatel: "M12 12.5a4.2 4.2 0 1 0 0-8.4 4.2 4.2 0 0 0 0 8.4 M4.5 21c.6-3.9 3.7-6 7.5-6s6.9 2.1 7.5 6",
+  zvonek: "M6 16.5V11a6 6 0 0 1 12 0v5.5l1.5 2h-15z M10 20.5a2 2 0 0 0 4 0",
+  kava: "M4.5 8.5h12v6a5 5 0 0 1-5 5h-2a5 5 0 0 1-5-5z M16.5 10h1.5a2.5 2.5 0 0 1 0 5h-1.5 M8 3.5v2 M11 3.5v2 M14 3.5v2",
+  telefon: "M8 2.5h8a1.5 1.5 0 0 1 1.5 1.5v16A1.5 1.5 0 0 1 16 21.5H8A1.5 1.5 0 0 1 6.5 20V4A1.5 1.5 0 0 1 8 2.5z M10.5 18.5h3",
+  sirena: "M6.5 17V11a5.5 5.5 0 0 1 11 0v6 M4 17h16v3.5H4z M12 2.5v2 M4.5 5.5 6 7 M19.5 5.5 18 7",
+  zamek: "M6.5 10.5h11v10h-11z M8.5 10.5V7.5a3.5 3.5 0 0 1 7 0v3 M12 14.5v2.5",
+  srdce: "M12 20.5S3.5 15.4 3.5 9.3A4.3 4.3 0 0 1 12 7a4.3 4.3 0 0 1 8.5 2.3c0 6.1-8.5 11.2-8.5 11.2z",
+  menu: "M4 7h16 M4 12h16 M4 17h16",
+  instalace: "M12 3.5v11 M7.5 10l4.5 4.5 4.5-4.5 M4.5 17.5v3h15v-3",
+  odeslat: "M3.5 11.5 20.5 3.5l-4 17-5-6.5z M11.5 14 20.5 3.5",
 };
 
 export function Ikona({

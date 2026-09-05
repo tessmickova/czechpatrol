@@ -41,8 +41,12 @@ jobs:
       - name: Testy
         run: npm test
 
+      # Adresa API je proměnná repozitáře (Settings → Variables → API_URL).
+      # Dokud není nastavená, web účty nenabízí a říká, že se připravují.
       - name: Sestavení
         run: npm run build
+        env:
+          NEXT_PUBLIC_API_URL: ${{ vars.API_URL }}
 
       - name: Založit projekt Pages, pokud ještě není
         run: |

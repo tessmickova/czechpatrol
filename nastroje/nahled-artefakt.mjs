@@ -44,6 +44,7 @@ const vysledek = await build({
   },
   define: {
     "process.env.NEXT_PUBLIC_REZIM": JSON.stringify(rezim),
+    "process.env.NEXT_PUBLIC_API_URL": JSON.stringify(process.env.NEXT_PUBLIC_API_URL ?? ""),
     "process.env.NODE_ENV": '"production"',
   },
 });

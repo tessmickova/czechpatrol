@@ -1,6 +1,8 @@
 import { StrictMode, useEffect } from "react";
 import { createRoot } from "react-dom/client";
+import { ListaMobil } from "@/components/lista-mobil";
 import { Navigace } from "@/components/navigace";
+import { PostranniPanel } from "@/components/postranni-panel";
 import { Paticka } from "@/components/paticka";
 import { BetaPruh, UkazkaPruh } from "@/components/pruhy";
 import { DetailIncidentu } from "@/components/detail-incidentu";
@@ -18,6 +20,12 @@ import Tlak from "@/app/tlak/page";
 import WatchlistStranka from "@/app/watchlist/page";
 import Komunita from "@/app/komunita/page";
 import Nepotvrzeno from "@/app/nepotvrzeno/page";
+import Ucet from "@/app/ucet/page";
+import Izs from "@/app/izs/page";
+import Sprava from "@/app/sprava/page";
+import Soukromi from "@/app/soukromi/page";
+import Podminky from "@/app/podminky/page";
+import Offline from "@/app/offline/page";
 import { usePathname } from "./shim-navigation";
 import { spustParallax } from "./parallax";
 
@@ -44,6 +52,12 @@ const CESTY: Record<string, () => React.JSX.Element> = {
   "/watchlist/": WatchlistStranka,
   "/komunita/": Komunita,
   "/nepotvrzeno/": Nepotvrzeno,
+  "/ucet/": Ucet,
+  "/izs/": Izs,
+  "/sprava/": Sprava,
+  "/soukromi/": Soukromi,
+  "/podminky/": Podminky,
+  "/offline/": Offline,
 };
 
 function Obsah() {
@@ -73,10 +87,12 @@ function Aplikace() {
       <Navigace />
       <BetaPruh />
       <UkazkaPruh />
-      <main id="obsah">
+      <main id="obsah" className="pb-[calc(72px+env(safe-area-inset-bottom))] lg:pb-0">
         <Obsah />
       </main>
       <Paticka />
+      <PostranniPanel />
+      <ListaMobil />
     </>
   );
 }

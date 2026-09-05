@@ -2,11 +2,10 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useEffect, useState } from "react";
 import { BUY_ME_A_COFFEE_URL, WEB } from "@/config/web";
 import { Ikona } from "./ikony";
+import { otevriPanel } from "./postranni-panel";
 
-/** Hlavní navigace zůstává krátká. Zbytek rozcestník na přehledu a patička. */
 /**
  * Web je jedna stránka. Navigace proto skáče na sekce dashboardu,
  * ne na samostatné adresy.
@@ -19,26 +18,8 @@ const ODKAZY = [
   { href: "/dnes/", label: "Dnes" },
 ];
 
-/** Doplňkové cesty — jen v mobilním menu a v patičce. */
-const DALSI = [
-  { href: "/osa/", label: "Časová osa" },
-  { href: "/watchlist/", label: "Watchlist 72 h" },
-  { href: "/nepotvrzeno/", label: "Nepotvrzeno" },
-  { href: "/nato/", label: "NATO" },
-  { href: "/metodika/", label: "Metodika" },
-  { href: "/zdroje/", label: "Zdroje" },
-  { href: "/komunita/", label: "Komunita" },
-];
-
 export function Navigace() {
   const cesta = usePathname();
-  const [otevreno, setOtevreno] = useState(false);
-
-  useEffect(() => setOtevreno(false), [cesta]);
-  useEffect(() => {
-    document.body.style.overflow = otevreno ? "hidden" : "";
-    return () => { document.body.style.overflow = ""; };
-  }, [otevreno]);
 
   const aktivni = (href: string) =>
     href.includes("#") ? false : href === "/" ? cesta === "/" : cesta.startsWith(href);
@@ -95,54 +76,15 @@ export function Navigace() {
           )}
           <button
             type="button"
-            onClick={() => setOtevreno((x) => !x)}
-            aria-expanded={otevreno}
-            aria-controls="mobilni-menu"
-            className="lg:hidden"
+            onClick={otevriPanel}
+            className="grid h-9 w-9 place-items-center rounded-full border border-linka text-tlum transition-colors hover:border-akcent hover:text-inkoust"
           >
-            <span className="sr-only">Menu</span>
-            <span aria-hidden className="flex h-6 w-6 flex-col items-center justify-center gap-[5px]">
-              <span className={`h-[1.5px] w-[17px] bg-inkoust transition-transform ${otevreno ? "translate-y-[3.25px] rotate-45" : ""}`} />
-              <span className={`h-[1.5px] w-[17px] bg-inkoust transition-transform ${otevreno ? "-translate-y-[3.25px] -rotate-45" : ""}`} />
-            </span>
+            <span className="sr-only">Účet a nástroje</span>
+            <Ikona nazev="uzivatel" velikost={17} />
           </button>
         </div>
       </div>
 
-      {otevreno && (
-        <div id="mobilni-menu" className="sklo border-t border-linka lg:hidden">
-          <nav aria-label="Hlavní (mobil)" className="mx-auto max-w-[1180px] px-5 py-3 sm:px-8">
-            {[...ODKAZY, ...DALSI].map((o) => (
-              <Link
-                key={o.href}
-                href={o.href}
-                aria-current={aktivni(o.href) ? "page" : undefined}
-                className={`block border-b border-linka2 py-3.5 text-[16px] font-medium last:border-0 ${
-                  aktivni(o.href) ? "text-inkoust" : "text-tlum"
-                }`}
-              >
-                {o.label}
-              </Link>
-            ))}
-            <Link
-              href="/odber/"
-              className="mt-4 block rounded-full border border-akcent/60 bg-akcent/15 py-3 text-center text-[15px] font-bold uppercase tracking-[0.05em] text-akcent-svetla"
-            >
-              Odebírat
-            </Link>
-            {BUY_ME_A_COFFEE_URL && (
-              <a
-                href={BUY_ME_A_COFFEE_URL}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="mt-3 block rounded-[10px] border border-linka bg-plocha py-2.5 text-center text-[13px] font-medium"
-              >
-                Podpořit projekt
-              </a>
-            )}
-          </nav>
-        </div>
-      )}
     </header>
   );
 }
