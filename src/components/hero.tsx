@@ -3,6 +3,7 @@ import { PASMA, UROVNE } from "@/lib/skala";
 import type { CelkovyStav, HybridniTlak, NatoPolozka, PravniStav } from "@/lib/typy";
 import { Ikona, type NazevIkony } from "./ikony";
 import { ObloukovyMerak } from "./mericky";
+import { PlacenaVrstva } from "./placena-vrstva";
 import { Napoveda, VykladUrovne } from "./zaklad";
 
 const TRENDY = {
@@ -76,6 +77,25 @@ function kontrolky(
   ];
 }
 
+function KontrolkaPolozka({ k }: { k: Kontrolka }) {
+  return (
+    <Napoveda popis={k.napoveda} label={`${k.stitek} — co to znamená?`}>
+      <span className="block">
+        <span className="mb-2 flex items-center gap-1.5 text-noc-tlum">
+          <Ikona nazev={k.ikona} velikost={13} />
+          <span className="stitek !text-[10px] !text-noc-tlum">{k.stitek}</span>
+        </span>
+        <span className="flex items-center gap-1.5">
+          <span aria-hidden className={`h-[6px] w-[6px] shrink-0 rounded-[2px] ${TON[k.ton]}`} />
+          <span className="min-w-0 break-words text-[13.5px] font-bold uppercase leading-tight tracking-[0.02em] text-noc-text">
+            {k.hodnota}
+          </span>
+        </span>
+      </span>
+    </Napoveda>
+  );
+}
+
 /**
  * Příkazový pruh.
  *
@@ -140,21 +160,16 @@ export function SituacniPanel({
           <div className="grid gap-4">
             <ul className="grid grid-cols-2 gap-2.5 sm:grid-cols-3 xl:grid-cols-5">
               {kontrolky(pravni, nato, hybridni).map((k) => (
-                <li key={k.klic} className="sklo-noc-slabe rounded-[14px] px-3.5 py-3.5">
-                  <Napoveda popis={k.napoveda} label={`${k.stitek} — co to znamená?`}>
-                    <span className="block">
-                      <span className="mb-2 flex items-center gap-1.5 text-noc-tlum">
-                        <Ikona nazev={k.ikona} velikost={13} />
-                        <span className="stitek !text-[10px] !text-noc-tlum">{k.stitek}</span>
+                <li key={k.klic} className={k.klic === "hranice" ? "" : "sklo-noc-slabe rounded-[14px] px-3.5 py-3.5"}>
+                  {k.klic === "hranice" ? (
+                    <PlacenaVrstva co="Hranice" kompaktni>
+                      <span className="sklo-noc-slabe block rounded-[14px] px-3.5 py-3.5">
+                        <KontrolkaPolozka k={k} />
                       </span>
-                      <span className="flex items-center gap-1.5">
-                        <span aria-hidden className={`h-[6px] w-[6px] shrink-0 rounded-[2px] ${TON[k.ton]}`} />
-                        <span className="min-w-0 break-words text-[13.5px] font-bold uppercase leading-tight tracking-[0.02em] text-noc-text">
-                          {k.hodnota}
-                        </span>
-                      </span>
-                    </span>
-                  </Napoveda>
+                    </PlacenaVrstva>
+                  ) : (
+                    <KontrolkaPolozka k={k} />
+                  )}
                 </li>
               ))}
             </ul>

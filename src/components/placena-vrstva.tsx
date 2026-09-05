@@ -14,11 +14,23 @@ import { Ikona } from "./ikony";
  * Omezení běží v prohlížeči (web je statický); kdo ho chce mít tvrdé,
  * musí data přesunout do API.
  */
-export function PlacenaVrstva({ children, co = "Tahle část" }: { children: ReactNode; co?: string }) {
+export function PlacenaVrstva({
+  children, co = "Tahle část", kompaktni = false,
+}: { children: ReactNode; co?: string; kompaktni?: boolean }) {
   const { ucet, nacita } = useUcet();
   if (!PLACENE.hraniceADoprava) return <>{children}</>;
   if (UCTY_ZAPNUTE && nacita) return <>{children}</>;
   if (maRoli(ucet, "podporovatel")) return <>{children}</>;
+  if (kompaktni) {
+    return (
+      <Link href="/ucet/" className="sklo-noc-slabe flex h-full flex-col justify-between rounded-[14px] px-3.5 py-3.5 text-left transition-colors hover:border-jantar/50">
+        <span className="stitek flex items-center gap-1.5 !text-noc-tlum">
+          <Ikona nazev="zamek" velikost={12} /> {co}
+        </span>
+        <span className="mt-2 text-[12.5px] font-bold uppercase leading-tight tracking-[0.02em] text-jantar">pro podporovatele</span>
+      </Link>
+    );
+  }
   return (
     <div className="relative">
       <div aria-hidden className="pointer-events-none select-none blur-[6px] opacity-40">{children}</div>
