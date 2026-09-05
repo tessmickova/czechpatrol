@@ -1,18 +1,19 @@
 "use client";
 
 import { useEffect, useMemo, useRef, useState } from "react";
-import { datumCas, pocet } from "@/lib/format";
+import { datum, datumCas, pocet } from "@/lib/format";
 import { PASMA, UROVNE } from "@/lib/skala";
 import type { Archiv, Snimek } from "@/lib/typy";
 import { Ikona } from "./ikony";
 import { ObloukovyMerak } from "./mericky";
 import { Prazdno } from "./zaklad";
 
+const DEN = 86_400_000;
+
 const PRAVNI_POPIS: Record<string, string> = {
   "stav-ohrozeni": "Stav ohrožení státu",
   "valecny-stav": "Válečný stav",
   mobilizace: "Mobilizace",
-  "nouzovy-stav": "Nouzový stav",
   vycestovani: "Omezení vycestování",
   hranice: "Uzavření hranic",
 };
@@ -44,64 +45,96 @@ function Radek({ nazev, plati }: { nazev: string; plati: boolean | null }) {
 /**
  * Časový posuvník.
  *
- * Ukazuje, co web tvrdil v daném okamžiku — ne rekonstrukci toho, co se
- * „doopravdy dělo“. Události se objevují k datu, kdy vyšly najevo, protože
- * dřív o nich nikdo nevěděl. Období před začátkem archivu nedopočítáváme.
+ * Osa jde po dnech, ne po snímcích. Stav se totiž nemění každý den — mezi
+ * dvěma snímky platí ten starší, dokud ho něco nepřepíše. Proto se hodnota
+ * přenáší dopředu; prázdné dny by tvrdily, že se stav ztratil.
  */
 export function CasovyPosuvnik({ archiv }: { archiv: Archiv }) {
   const snimky = archiv.snimky;
-  const [i, setI] = useState(Math.max(0, snimky.length - 1));
+
+  /** Pro každý den v rozsahu archivu ten poslední snímek, který k němu platí. */
+  const dny = useMemo(() => {
+    if (snimky.length < 2) return [];
+    const od = new Date(snimky[0].kdy).setUTCHours(0, 0, 0, 0);
+    const doKdy = new Date(snimky[snimky.length - 1].kdy).setUTCHours(0, 0, 0, 0);
+    const out: { den: number; snimek: Snimek; jeZmena: boolean }[] = [];
+    let i = 0;
+    let posledni = snimky[0];
+    for (let t = od; t <= doKdy; t += DEN) {
+      let zmena = false;
+      while (i < snimky.length && new Date(snimky[i].kdy).getTime() <= t + DEN - 1) {
+        posledni = snimky[i];
+        zmena = true;
+        i++;
+      }
+      out.push({ den: t, snimek: posledni, jeZmena: zmena });
+    }
+    return out;
+  }, [snimky]);
+
+  const [i, setI] = useState(Math.max(0, dny.length - 1));
   const [prehrava, setPrehrava] = useState(false);
   const casovac = useRef<number | null>(null);
 
   useEffect(() => {
-    if (!prehrava) return;
+    setI(Math.max(0, dny.length - 1));
+  }, [dny.length]);
+
+  useEffect(() => {
+    if (!prehrava || !dny.length) return;
     casovac.current = window.setInterval(() => {
       setI((x) => {
-        if (x >= snimky.length - 1) {
+        if (x >= dny.length - 1) {
           setPrehrava(false);
           return x;
         }
         return x + 1;
       });
-    }, 900);
+    }, 90);
     return () => {
       if (casovac.current) clearInterval(casovac.current);
     };
-  }, [prehrava, snimky.length]);
+  }, [prehrava, dny.length]);
 
-  const s: Snimek | undefined = snimky[i];
-  const posledni = i === snimky.length - 1;
-
-  const rozsah = useMemo(() => {
-    if (!snimky.length) return null;
-    return { od: snimky[0].kdy, do: snimky[snimky.length - 1].kdy };
-  }, [snimky]);
-
-  if (!snimky.length || !s || !rozsah) {
+  if (dny.length < 2) {
     return (
       <Prazdno
         nadpis="Archiv se zatím plní"
-        popis="Snímek se ukládá jen tehdy, když se něco změní. Posuvník se objeví, jakmile budou v archivu aspoň dva stavy."
+        popis="Posuvník se objeví, jakmile bude v archivu aspoň druhý stav."
+        ikona="hodiny"
       />
     );
   }
 
+  const aktualni = dny[Math.min(i, dny.length - 1)];
+  const s = aktualni.snimek;
+  const posledni = i === dny.length - 1;
   const t = s.uroven ? PASMA[UROVNE[s.uroven].pasmo] : null;
 
+  /* --- křivka úrovně přes celý archiv --- */
+  const SIRKA = 1000, VYSKA = 96;
+  const x = (n: number) => (n / (dny.length - 1)) * SIRKA;
+  const y = (d: (typeof dny)[number]) =>
+    VYSKA - 6 - ((d.snimek.uroven ? UROVNE[d.snimek.uroven].poradi - 1 : 0) / 12) * (VYSKA - 14);
+
+  // Schodovitá křivka: hodnota drží, dokud ji nový snímek nezmění.
+  const cesta = dny
+    .map((d, n) => (n === 0 ? `M ${x(0)} ${y(d)}` : `L ${x(n)} ${y(dny[n - 1])} L ${x(n)} ${y(d)}`))
+    .join(" ");
+  const plocha = `${cesta} L ${x(dny.length - 1)} ${VYSKA} L 0 ${VYSKA} Z`;
+
   return (
-    <div className="noc relative overflow-hidden rounded-[18px]">
+    <div className="noc relative overflow-hidden rounded-[20px]">
       <div aria-hidden className="pointer-events-none absolute inset-0 -z-10 overflow-hidden">
         <div data-vrstva="0.04" className="vrstva vzor-mrizka absolute inset-x-0 -inset-y-[45%]" />
       </div>
 
       <div className="p-5 sm:p-7">
-        {/* ovládání */}
         <div className="mb-6 flex flex-wrap items-end justify-between gap-4">
           <div>
-            <div className="stitek mb-2 !text-noc-tlum">Stav k okamžiku</div>
-            <p className="cislice text-[19px] font-semibold tracking-[-0.02em] text-noc-text sm:text-[22px]">
-              {datumCas(s.kdy)}
+            <div className="stitek mb-2 !text-noc-tlum">Stav k datu</div>
+            <p className="cislice text-[21px] font-semibold tracking-[-0.02em] text-noc-text sm:text-[25px]">
+              {datum(new Date(aktualni.den).toISOString())}
             </p>
           </div>
           <div className="flex items-center gap-2">
@@ -120,7 +153,7 @@ export function CasovyPosuvnik({ archiv }: { archiv: Archiv }) {
               type="button"
               onClick={() => {
                 setPrehrava(false);
-                setI(snimky.length - 1);
+                setI(dny.length - 1);
               }}
               disabled={posledni}
               className="sklo-noc-slabe rounded-full px-3.5 py-2 text-[12.5px] font-medium text-noc-text transition-colors hover:bg-white/10 disabled:opacity-40"
@@ -130,50 +163,77 @@ export function CasovyPosuvnik({ archiv }: { archiv: Archiv }) {
           </div>
         </div>
 
-        {/* dráha */}
-        <div className="mb-7">
-          <input
-            type="range"
-            min={0}
-            max={snimky.length - 1}
-            step={1}
-            value={i}
-            onChange={(e) => {
-              setPrehrava(false);
-              setI(Number(e.target.value));
-            }}
-            aria-label="Posun v čase"
-            aria-valuetext={datumCas(s.kdy)}
-            className="w-full accent-[#6f9dfb]"
-          />
-          <div aria-hidden className="mt-2 flex justify-between">
-            {snimky.map((x, n) => {
-              const tt = x.uroven ? PASMA[UROVNE[x.uroven].pasmo] : null;
-              return (
-                <button
-                  key={x.kdy}
-                  type="button"
-                  tabIndex={-1}
-                  onClick={() => {
-                    setPrehrava(false);
-                    setI(n);
-                  }}
-                  title={datumCas(x.kdy)}
-                  className={`h-[18px] w-[6px] rounded-full transition-opacity ${
-                    tt ? tt.teckaNoc : "bg-white/20"
-                  } ${n === i ? "opacity-100" : "opacity-35 hover:opacity-70"}`}
-                />
-              );
-            })}
-          </div>
-          <div className="cislice mt-2 flex justify-between text-[10.5px] text-noc-tlum">
-            <span>{datumCas(rozsah.od)}</span>
-            <span>{datumCas(rozsah.do)}</span>
-          </div>
+        {/* křivka s běžcem */}
+        <div className="relative mb-3">
+          <svg
+            viewBox={`0 0 ${SIRKA} ${VYSKA}`}
+            preserveAspectRatio="none"
+            className="h-[96px] w-full"
+            role="img"
+            aria-label="Vývoj celkové úrovně v čase"
+          >
+            <defs>
+              <linearGradient id="plocha-archiv" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0%" stopColor="#6f9dfb" stopOpacity="0.3" />
+                <stop offset="100%" stopColor="#6f9dfb" stopOpacity="0" />
+              </linearGradient>
+              <clipPath id="do-bezce">
+                <rect x="0" y="0" width={x(i)} height={VYSKA} />
+              </clipPath>
+            </defs>
+
+            <path d={plocha} fill="url(#plocha-archiv)" opacity="0.35" />
+            <path d={cesta} fill="none" stroke="#6f9dfb" strokeWidth="2" opacity="0.28"
+              vectorEffect="non-scaling-stroke" />
+            <g clipPath="url(#do-bezce)">
+              <path d={plocha} fill="url(#plocha-archiv)" />
+              <path d={cesta} fill="none" stroke="#6f9dfb" strokeWidth="2.5"
+                vectorEffect="non-scaling-stroke" />
+            </g>
+
+            {dny.map((d, n) =>
+              d.jeZmena ? (
+                <circle key={n} cx={x(n)} cy={y(d)} r="4" fill="#0b1017" stroke="#6f9dfb"
+                  strokeWidth="2" vectorEffect="non-scaling-stroke" />
+              ) : null,
+            )}
+          </svg>
+
+          {/* Běžec se posouvá plynule a sedí na křivce, ne uprostřed plochy. */}
+          <span
+            aria-hidden
+            className="pointer-events-none absolute inset-y-0 w-px bg-white/30 transition-[left] duration-100 ease-out"
+            style={{ left: `${(i / (dny.length - 1)) * 100}%` }}
+          >
+            <span
+              className={`absolute -left-[6px] h-[13px] w-[13px] -translate-y-1/2 rounded-full border-2 border-noc shadow-[0_0_0_3px_rgba(111,157,251,0.25)] transition-[top] duration-100 ease-out ${
+                t ? t.teckaNoc : "bg-white/40"
+              }`}
+              style={{ top: `${(y(aktualni) / VYSKA) * 100}%` }}
+            />
+          </span>
+        </div>
+
+        <input
+          type="range"
+          min={0}
+          max={dny.length - 1}
+          step={1}
+          value={i}
+          onChange={(e) => {
+            setPrehrava(false);
+            setI(Number(e.target.value));
+          }}
+          aria-label="Posun v čase"
+          aria-valuetext={datum(new Date(aktualni.den).toISOString())}
+          className="w-full accent-[#6f9dfb]"
+        />
+        <div className="cislice mb-7 mt-1 flex justify-between text-[10.5px] text-noc-tlum">
+          <span>{datum(dny[0].den ? new Date(dny[0].den).toISOString() : "")}</span>
+          <span>{datum(new Date(dny[dny.length - 1].den).toISOString())}</span>
         </div>
 
         <div className="grid gap-6 lg:grid-cols-[minmax(0,auto)_minmax(0,1fr)_minmax(0,1fr)]">
-          {/* měřák */}
           <div className="flex flex-col items-center">
             <ObloukovyMerak uroven={s.uroven} naNoci velikost={210} />
             <p className="cislice mt-1 text-[12px] text-noc-tlum">
@@ -181,7 +241,6 @@ export function CasovyPosuvnik({ archiv }: { archiv: Archiv }) {
             </p>
           </div>
 
-          {/* stav ČR a NATO */}
           <div>
             <div className="stitek mb-2 !text-noc-tlum">Právní stav ČR</div>
             <div className="mb-5">
@@ -197,9 +256,10 @@ export function CasovyPosuvnik({ archiv }: { archiv: Archiv }) {
             </div>
           </div>
 
-          {/* co se změnilo */}
           <div>
-            <div className="stitek mb-3 !text-noc-tlum">Co se v tomto kroku změnilo</div>
+            <div className="stitek mb-3 !text-noc-tlum">
+              {aktualni.jeZmena ? "Co se tento den změnilo" : "Poslední změna"}
+            </div>
             <ul className="space-y-2">
               {s.zmeny.map((z, n) => (
                 <li
@@ -214,9 +274,14 @@ export function CasovyPosuvnik({ archiv }: { archiv: Archiv }) {
               ))}
             </ul>
 
+            {!aktualni.jeZmena && (
+              <p className="stitek mt-3 !text-noc-tlum">
+                z {datumCas(s.kdy)} — od té doby beze změny
+              </p>
+            )}
+
             <p className="stitek mt-5 border-t border-white/10 pt-4 !text-noc-tlum">
-              Snímek jen při změně · události k datu zjištění · před{" "}
-              {datumCas(rozsah.od)} archiv nemá
+              Stav platí, dokud ho nepřepíše nový snímek · události k datu zjištění
             </p>
           </div>
         </div>
