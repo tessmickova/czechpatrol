@@ -1,0 +1,33 @@
+[
+  {
+    "id": "n1",
+    "nazev": "Ganderkesee: podezření na sabotáž u rozvodny",
+    "zeme": "Německo",
+    "kodZeme": "DE",
+    "datum": "2026-09-04T00:00:00Z",
+    "stav": "vyvraceno",
+    "puvodne": "Rozsáhlý policejní zásah u rozvodny vzbudil podezření, protože přišel uprostřed série incidentů proti energetické infrastruktuře.",
+    "overeni": "Kontrola nenašla sabotážní zařízení, žádnou škodu ani stopy vloupání. Policie útok i sabotáž vyloučila. Záznam se nepočítá mezi sabotážní incidenty.",
+    "zdroje": []
+  },
+  {
+    "id": "n2",
+    "nazev": "Vasknarva a Narva: hlášené práce na ruském břehu",
+    "zeme": "Estonsko",
+    "kodZeme": "EE",
+    "datum": "2026-09-02T00:00:00Z",
+    "stav": "nepotvrzeno",
+    "puvodne": "Na sociálních sítích se objevila videa údajného zpevňování ruského břehu Narvy naproti Estonsku.",
+    "overeni": "Obyvatel Vasknarvy potvrdil, že z ruské strany několik dní slyšel hluk, ale neměl vizuální potvrzení. Estonská policejní a pohraniční správa doporučila k videím opatrnost. Vojenský účel nebyl potvrzen, záznam se nevede jako doložená ruská fortifikace.",
+    "zdroje": [
+      {
+        "nazev": "ERR — PPA vyzývá k opatrnosti k videím",
+        "url": "https://news.err.ee/1610125063/estonia-s-ppa-urges-caution-over-video-claiming-russian-riverbank-work",
+        "typ": "media",
+        "publikovano": "2026-09-03T00:00:00Z",
+        "primarni": false,
+        "jazyk": "en"
+      }
+    ]
+  }
+]

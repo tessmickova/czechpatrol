@@ -60,6 +60,7 @@ export function Paticka() {
                   ["/metodika/", "Metodika"],
                   ["/tlak/", "Hybridní tlak"],
                   ["/watchlist/", "Watchlist 72 h"],
+                  ["/nepotvrzeno/", "Nepotvrzeno"],
                   ["/zdroje/", "Zdroje"],
                   ["/komunita/", "Komunita"],
                   ["/odber/", "Odběr"],

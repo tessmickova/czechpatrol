@@ -106,3 +106,17 @@ describe("registr zdrojů", () => {
     }
   });
 });
+
+describe("pokrytí sledovaných položek", () => {
+  it("každou položku pokrývá aspoň jeden zdroj, který neblokuje automaty", () => {
+    // Zdroj vracející 403 nesmí být jediný, kdo položku kryje — jinak by se
+    // její zápor nedal potvrdit nikdy a web by u ní hlásil „neověřeno“.
+    const dostupne = ZDROJE.filter((z) => !z.ocekavaneBlokovani);
+    const kryte = new Set(dostupne.flatMap((z) => z.tyka ?? []));
+    for (const z of ZDROJE) {
+      for (const k of z.tyka ?? []) {
+        expect(kryte.has(k), `položku „${k}“ kryje jen zdroj blokující automaty`).toBe(true);
+      }
+    }
+  });
+});

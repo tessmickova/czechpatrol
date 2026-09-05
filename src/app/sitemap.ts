@@ -5,7 +5,7 @@ import { incidenty } from "@/lib/data";
 export const dynamic = "force-static";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const stranky = ["", "/dnes", "/udalosti", "/osa", "/trend", "/cr", "/nato", "/metodika", "/zdroje", "/odber", "/tlak", "/watchlist", "/komunita"];
+  const stranky = ["", "/dnes", "/udalosti", "/osa", "/trend", "/cr", "/nato", "/metodika", "/zdroje", "/odber", "/tlak", "/watchlist", "/komunita", "/nepotvrzeno"];
   return [
     ...stranky.map((s) => ({
       url: `${WEB.url}${s}/`,

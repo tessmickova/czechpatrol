@@ -286,3 +286,27 @@ export interface Kanal {
   url: string;
   ikona: string;
 }
+
+/* ---------------- nepotvrzené a vyřazené ---------------- */
+
+/**
+ * Záznam, který se při ověřování nepotvrdil nebo byl vyvrácen.
+ *
+ * Vede se odděleně a do žádného počtu ani hodnocení nevstupuje. Je tu proto,
+ * že bez něj by web ukazoval jen to, co vyšlo — a čtenář by neměl jak poznat,
+ * kolik věcí neprošlo.
+ */
+export interface Nepotvrzene {
+  id: string;
+  nazev: string;
+  zeme: string;
+  kodZeme: string;
+  datum: string;
+  /** „vyvraceno“ = ověřením padlo. „nepotvrzeno“ = chybí doložení. */
+  stav: "vyvraceno" | "nepotvrzeno";
+  /** Co se původně zdálo. */
+  puvodne: string;
+  /** Co ověření ukázalo. */
+  overeni: string;
+  zdroje: Zdroj[];
+}

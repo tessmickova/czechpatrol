@@ -20,6 +20,7 @@ const ODKAZY = [
 const DALSI = [
   { href: "/osa/", label: "Časová osa" },
   { href: "/watchlist/", label: "Watchlist 72 h" },
+  { href: "/nepotvrzeno/", label: "Nepotvrzeno" },
   { href: "/nato/", label: "NATO" },
   { href: "/metodika/", label: "Metodika" },
   { href: "/zdroje/", label: "Zdroje" },

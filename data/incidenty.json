@@ -80,12 +80,20 @@
     "deeskalacniSignaly": [],
     "zdroje": [
       {
-        "nazev": "Vlastní monitoring — archiv 5. 9. 2026",
-        "url": "",
-        "typ": "analysis",
-        "publikovano": "2026-09-05T00:00:00Z",
+        "nazev": "Anadolu Agency — Lithuania warns Russia may target critical infrastructure",
+        "url": "https://www.aa.com.tr/en/europe/lithuania-warns-russia-may-target-critical-infrastructure-to-test-nato-unity/3998784",
+        "typ": "media",
+        "publikovano": "2026-07-15T00:00:00Z",
         "primarni": false,
-        "jazyk": "cs"
+        "jazyk": "en"
+      },
+      {
+        "nazev": "The Guardian — živý přenos 15. 7. 2026",
+        "url": "https://www.theguardian.com/world/live/2026/jul/15/ursula-von-der-leyen-ukraine-russia-volodymyr-zelenskyy-vladimir-putin-europe-live-news",
+        "typ": "media",
+        "publikovano": "2026-07-15T00:00:00Z",
+        "primarni": false,
+        "jazyk": "en"
       }
     ],
     "souvisejici": [],
@@ -99,8 +107,7 @@
     "novy": false,
     "zapocitanoTyden": "2026-07-13",
     "aiZpracovano": true,
-    "lidskyOvereno": true,
-    "archivniZaznam": true
+    "lidskyOvereno": true
   },
   {
     "id": "a03",
@@ -171,9 +178,9 @@
     "stav": "probiha",
     "atribuce": "oficialni",
     "fakta": [
-      "Na letišti Leipzig/Halle došlo k pokusu o útok pomocí dronu s výbušným materiálem.",
-      "Německo 1. září oficiálně oznámilo, že bezpečnostní zjištění a informace evropských partnerů ukazují na ruské zapojení.",
-      "Německo následně uzavřelo ruský konzulát v Bonnu a přijalo kroky proti Russian House v Berlíně."
+      "Na letišti Leipzig/Halle byl nalezen dron nesoucí výbušninu poblíž ukrajinského letadla.",
+      "Německá vláda 1. září oficiálně oznámila, že její bezpečnostní poznatky a informace evropských partnerů jasně ukazují na ruské zapojení.",
+      "Ministr vnitra Dobrindt poukázal na konfiguraci dronu, výbušninu a zapalovací techniku známou z jiných ruských hybridních operací."
     ],
     "neznameho": [
       "Pravomocné soudní prokázání řetězce velení."
@@ -183,12 +190,36 @@
     "deeskalacniSignaly": [],
     "zdroje": [
       {
-        "nazev": "Vlastní monitoring — archiv 5. 9. 2026",
-        "url": "",
-        "typ": "analysis",
-        "publikovano": "2026-09-05T00:00:00Z",
+        "nazev": "Tagesschau — mimořádná zpráva o atribuci",
+        "url": "https://www.tagesschau.de/eilmeldung/bundesregierung-drohne-flughafen-leipzig-halle-russland-100.html",
+        "typ": "media",
+        "publikovano": "2026-09-01T00:00:00Z",
         "primarni": false,
-        "jazyk": "cs"
+        "jazyk": "de"
+      },
+      {
+        "nazev": "AP",
+        "url": "https://apnews.com/article/fa3deebe59f81baadc821c743fb26814",
+        "typ": "wire",
+        "publikovano": "2026-09-01T00:00:00Z",
+        "primarni": false,
+        "jazyk": "en"
+      },
+      {
+        "nazev": "Tagesschau — záznam tiskové konference Dobrindta a Wadephula",
+        "url": "https://www.tagesschau.de/video/video-1641002.html",
+        "typ": "media",
+        "publikovano": "2026-09-01T00:00:00Z",
+        "primarni": false,
+        "jazyk": "de"
+      },
+      {
+        "nazev": "DIE ZEIT / dpa — Wadephul k reakci",
+        "url": "https://www.zeit.de/news/2026-09/01/wadephul-keine-ueberreaktion-als-antwort-auf-drohnen-vorfall",
+        "typ": "media",
+        "publikovano": "2026-09-01T00:00:00Z",
+        "primarni": false,
+        "jazyk": "de"
       }
     ],
     "souvisejici": [
@@ -223,8 +254,7 @@
     "novy": false,
     "zapocitanoTyden": "2026-08-31",
     "aiZpracovano": true,
-    "lidskyOvereno": true,
-    "archivniZaznam": true
+    "lidskyOvereno": true
   },
   {
     "id": "a05",
@@ -246,9 +276,8 @@
     "stav": "probiha",
     "atribuce": "vysetrovana",
     "fakta": [
-      "V noci na 9. srpna byly u strategického plynového zařízení pozorovány drony; dva maskovaní lidé napadli pracovníka ostrahy a uprchli.",
-      "Dřívější incident 1. července: osoba na střeše pořizovala záznamy.",
-      "Německá protiteroristická prokuratura vyšetřuje oba případy pro podezření na agenturní jednání za účelem sabotáže."
+      "V noci na 9. srpna byly nad areálem pozorovány drony; pracovník ostrahy narazil při kontrole na dva maskované lidi a byl napaden.",
+      "Generalstaatsanwaltschaft Celle převzala tento a ještě jeden starší případ z 1. července pro počáteční podezření na „Agententätigkeit zu Sabotagezwecken“."
     ],
     "neznameho": [
       "Kdo za incidenty stojí.",
@@ -259,12 +288,20 @@
     "deeskalacniSignaly": [],
     "zdroje": [
       {
-        "nazev": "Vlastní monitoring — archiv 5. 9. 2026",
-        "url": "",
-        "typ": "analysis",
-        "publikovano": "2026-09-05T00:00:00Z",
+        "nazev": "Tagesschau / NDR",
+        "url": "https://www.tagesschau.de/inland/regional/niedersachsen/erdgas-anlage-betroffen-sabotageversuche-auch-in-niedersachsen%2Csabotage-124.html",
+        "typ": "media",
+        "publikovano": "2026-09-04T00:00:00Z",
         "primarni": false,
-        "jazyk": "cs"
+        "jazyk": "de"
+      },
+      {
+        "nazev": "DIE ZEIT / dpa",
+        "url": "https://www.zeit.de/news/2026-09/04/drohnen-ueber-gas-anlage-ermittlungen-wegen-sabotageverdacht",
+        "typ": "media",
+        "publikovano": "2026-09-04T00:00:00Z",
+        "primarni": false,
+        "jazyk": "de"
       }
     ],
     "souvisejici": [],
@@ -283,8 +320,7 @@
     "novy": false,
     "zapocitanoTyden": "2026-08-31",
     "aiZpracovano": true,
-    "lidskyOvereno": true,
-    "archivniZaznam": true
+    "lidskyOvereno": true
   },
   {
     "id": "a06",
@@ -420,12 +456,20 @@
     "deeskalacniSignaly": [],
     "zdroje": [
       {
-        "nazev": "Vlastní monitoring — archiv 5. 9. 2026",
-        "url": "",
-        "typ": "analysis",
-        "publikovano": "2026-09-05T00:00:00Z",
+        "nazev": "Reuters",
+        "url": "https://www.reuters.com/world/europe/putin-will-draft-300000-new-troops-after-september-elections-zelenskiy-says-2026-08-23/",
+        "typ": "wire",
+        "publikovano": "2026-08-23T00:00:00Z",
         "primarni": false,
-        "jazyk": "cs"
+        "jazyk": "en"
+      },
+      {
+        "nazev": "Prezident Ukrajiny — briefing HUR a SZRU",
+        "url": "https://www.president.gov.ua/en/news/pidgotovka-novoyi-hvili-mobilizaciyi-v-rosiyi-brif-vid-gur-m-106137",
+        "typ": "primary",
+        "publikovano": "2026-08-27T00:00:00Z",
+        "primarni": true,
+        "jazyk": "en"
       }
     ],
     "souvisejici": [],
@@ -439,8 +483,7 @@
     "novy": false,
     "zapocitanoTyden": "2026-08-17",
     "aiZpracovano": true,
-    "lidskyOvereno": true,
-    "archivniZaznam": true
+    "lidskyOvereno": true
   },
   {
     "id": "a09",
@@ -520,12 +563,12 @@
     "deeskalacniSignaly": [],
     "zdroje": [
       {
-        "nazev": "Vlastní monitoring — archiv 5. 9. 2026",
-        "url": "",
-        "typ": "analysis",
-        "publikovano": "2026-09-05T00:00:00Z",
+        "nazev": "Anadolu Agency — shrnutí zveřejněné zprávy BIS",
+        "url": "https://www.aa.com.tr/en/europe/czech-intelligence-says-country-still-faces-risk-from-one-time-agents-directed-by-russia/4039370",
+        "typ": "media",
+        "publikovano": "2026-08-27T00:00:00Z",
         "primarni": false,
-        "jazyk": "cs"
+        "jazyk": "en"
       }
     ],
     "souvisejici": [],
@@ -539,8 +582,7 @@
     "novy": false,
     "zapocitanoTyden": "2026-08-24",
     "aiZpracovano": true,
-    "lidskyOvereno": true,
-    "archivniZaznam": true
+    "lidskyOvereno": true
   },
   {
     "id": "a11",
@@ -568,12 +610,20 @@
     "deeskalacniSignaly": [],
     "zdroje": [
       {
-        "nazev": "Vlastní monitoring — archiv 5. 9. 2026",
-        "url": "",
-        "typ": "analysis",
-        "publikovano": "2026-09-05T00:00:00Z",
+        "nazev": "Reuters (přes ThePrint)",
+        "url": "https://theprint.in/world/baltic-sea-nations-plan-drone-defence-task-force-germany-says/3027486/",
+        "typ": "media",
+        "publikovano": "2026-08-28T00:00:00Z",
         "primarni": false,
-        "jazyk": "cs"
+        "jazyk": "en"
+      },
+      {
+        "nazev": "Anadolu Agency",
+        "url": "https://www.aa.com.tr/en/europe/germany-plans-rapid-response-task-force-to-counter-hybrid-threats-in-baltic-sea/4040175",
+        "typ": "media",
+        "publikovano": "2026-08-28T00:00:00Z",
+        "primarni": false,
+        "jazyk": "en"
       }
     ],
     "souvisejici": [],
@@ -587,14 +637,13 @@
     "novy": false,
     "zapocitanoTyden": "2026-08-24",
     "aiZpracovano": true,
-    "lidskyOvereno": true,
-    "archivniZaznam": true
+    "lidskyOvereno": true
   },
   {
     "id": "a12",
     "slug": "svedske-nasazeni-finsko",
-    "titulek": "Švédsko vysílá Gripeny a válečnou loď do Finska",
-    "kratkyTitulek": "Švédské nasazení do Finska",
+    "titulek": "Švédsko a Finsko prohlubují spolupráci při ochraně proti dronům",
+    "kratkyTitulek": "Švédsko a Finsko: spolupráce",
     "zeme": "Švédsko",
     "kodZeme": "SE",
     "kategorie": [
@@ -607,7 +656,8 @@
     "stav": "bez-vysetrovani",
     "atribuce": "neznama",
     "fakta": [
-      "Švédsko oznámilo vyslání Gripenů a válečné lodě do Finska do konce roku 2026, s možností dalších protidronových prostředků."
+      "Švédsko a Finsko oznámily prohloubení spolupráce při ochraně finské územní integrity a při detekci a potírání dronů.",
+      "Švédské ozbrojené síly oznámily podporu prostředky ve vzduchu i na moři."
     ],
     "neznameho": [],
     "vyznam": "Posílení obrany v regionu, ne krizový skok. Zaznamenáváme jako institucionální reakci.",
@@ -615,12 +665,20 @@
     "deeskalacniSignaly": [],
     "zdroje": [
       {
-        "nazev": "Vlastní monitoring — archiv 5. 9. 2026",
-        "url": "",
-        "typ": "analysis",
-        "publikovano": "2026-09-05T00:00:00Z",
-        "primarni": false,
-        "jazyk": "cs"
+        "nazev": "Švédská vláda — tisková zpráva",
+        "url": "https://www.government.se/press-releases/2026/08/sweden-and-finland-are-deepening-cooperation-on-territorial-surveillance-and-protection-of-territorial-integrity/",
+        "typ": "primary",
+        "publikovano": "2026-08-28T00:00:00Z",
+        "primarni": true,
+        "jazyk": "en"
+      },
+      {
+        "nazev": "Švédské ozbrojené síly",
+        "url": "https://www.mynewsdesk.com/forsvarsmakten/pressreleases/sweden-supports-finland-in-territorial-surveillance-3463274",
+        "typ": "primary",
+        "publikovano": "2026-08-28T00:00:00Z",
+        "primarni": true,
+        "jazyk": "en"
       }
     ],
     "souvisejici": [],
@@ -634,8 +692,7 @@
     "novy": false,
     "zapocitanoTyden": "2026-08-24",
     "aiZpracovano": true,
-    "lidskyOvereno": true,
-    "archivniZaznam": true
+    "lidskyOvereno": true
   },
   {
     "id": "a13",
@@ -707,9 +764,8 @@
     "stav": "probiha",
     "atribuce": "vysetrovana",
     "fakta": [
-      "Krátce po půlnoci vypukl požár v zařízení WB Electronics vyrábějícím komponenty pro drony používané Polskem a Ukrajinou.",
-      "Případ převzala polská národní prokuratura v režimu podezření zahrnujícího možnou činnost cizí rozvědky a trestný čin teroristického charakteru.",
-      "Ministr vnitra uvedl, že důkazy s velmi vysokou pravděpodobností ukazují na úmyslný čin."
+      "Požár zasáhl závod WB Electronics ve Skarżysku-Kamienne, který vyrábí komponenty pro drony.",
+      "Prokuratura zahájila vyšetřování mimo jiné pro podezření na účast na činnosti cizí zpravodajské služby proti Polsku a pro teroristický trestný čin spočívající v úmyslném založení požáru zařízením s hořlavým materiálem."
     ],
     "neznameho": [
       "Konečná forenzní atribuce konkrétní službě. Politické hodnocení není totéž."
@@ -719,12 +775,12 @@
     "deeskalacniSignaly": [],
     "zdroje": [
       {
-        "nazev": "Vlastní monitoring — archiv 5. 9. 2026",
-        "url": "",
-        "typ": "analysis",
-        "publikovano": "2026-09-05T00:00:00Z",
+        "nazev": "Al Jazeera — s citací prokuratury",
+        "url": "https://www.aljazeera.com/news/2026/8/31/poland-opens-terror-probe-into-fire-at-drone-factory",
+        "typ": "media",
+        "publikovano": "2026-08-31T00:00:00Z",
         "primarni": false,
-        "jazyk": "cs"
+        "jazyk": "en"
       }
     ],
     "souvisejici": [],
@@ -743,8 +799,7 @@
     "novy": false,
     "zapocitanoTyden": "2026-08-31",
     "aiZpracovano": true,
-    "lidskyOvereno": true,
-    "archivniZaznam": true
+    "lidskyOvereno": true
   },
   {
     "id": "a15",
@@ -778,12 +833,28 @@
     "deeskalacniSignaly": [],
     "zdroje": [
       {
-        "nazev": "Vlastní monitoring — archiv 5. 9. 2026",
-        "url": "",
-        "typ": "analysis",
-        "publikovano": "2026-09-05T00:00:00Z",
+        "nazev": "Polizei Brandenburg — mediální informace",
+        "url": "https://polizei.brandenburg.de/pressemeldung/medieninformation-bzgl-des-anschlags-in-/5711842",
+        "typ": "primary",
+        "publikovano": "2026-09-03T00:00:00Z",
+        "primarni": true,
+        "jazyk": "en"
+      },
+      {
+        "nazev": "AP",
+        "url": "https://apnews.com/article/ef9c21908f232651d056d7462330e2b7",
+        "typ": "wire",
+        "publikovano": "2026-09-03T00:00:00Z",
         "primarni": false,
-        "jazyk": "cs"
+        "jazyk": "en"
+      },
+      {
+        "nazev": "Tagesschau / RBB",
+        "url": "https://www.tagesschau.de/inland/regional/brandenburg/rbb-umspannwerk-turnow-preilack-ermittler-suchen-taeter-nach-sabotage-am-stromnetz-100.html",
+        "typ": "media",
+        "publikovano": "2026-09-03T00:00:00Z",
+        "primarni": false,
+        "jazyk": "de"
       }
     ],
     "souvisejici": [
@@ -808,8 +879,7 @@
     "novy": false,
     "zapocitanoTyden": "2026-08-31",
     "aiZpracovano": true,
-    "lidskyOvereno": true,
-    "archivniZaznam": true
+    "lidskyOvereno": true
   },
   {
     "id": "a16",
@@ -842,12 +912,28 @@
     "deeskalacniSignaly": [],
     "zdroje": [
       {
-        "nazev": "Vlastní monitoring — archiv 5. 9. 2026",
-        "url": "",
-        "typ": "analysis",
-        "publikovano": "2026-09-05T00:00:00Z",
+        "nazev": "Reuters",
+        "url": "https://www.reuters.com/world/europe/german-power-grid-under-fresh-sabotage-attack-police-say-2026-09-02/",
+        "typ": "wire",
+        "publikovano": "2026-09-02T00:00:00Z",
         "primarni": false,
-        "jazyk": "cs"
+        "jazyk": "en"
+      },
+      {
+        "nazev": "AP",
+        "url": "https://apnews.com/article/ef9c21908f232651d056d7462330e2b7",
+        "typ": "wire",
+        "publikovano": "2026-09-03T00:00:00Z",
+        "primarni": false,
+        "jazyk": "en"
+      },
+      {
+        "nazev": "Reuters — následný vyšetřovací vývoj",
+        "url": "https://www.reuters.com/world/german-police-investigate-new-grid-sabotage-attempt-bild-reports-2026-09-04/",
+        "typ": "wire",
+        "publikovano": "2026-09-04T00:00:00Z",
+        "primarni": false,
+        "jazyk": "en"
       }
     ],
     "souvisejici": [
@@ -872,8 +958,7 @@
     "novy": false,
     "zapocitanoTyden": "2026-08-31",
     "aiZpracovano": true,
-    "lidskyOvereno": true,
-    "archivniZaznam": true
+    "lidskyOvereno": true
   },
   {
     "id": "a17",
@@ -1116,12 +1201,28 @@
     "deeskalacniSignaly": [],
     "zdroje": [
       {
-        "nazev": "Vlastní monitoring — archiv 5. 9. 2026",
-        "url": "",
-        "typ": "analysis",
-        "publikovano": "2026-09-05T00:00:00Z",
+        "nazev": "Reuters",
+        "url": "https://www.reuters.com/world/russia-recruits-danes-sabotage-planning-denmark-says-2026-09-03/",
+        "typ": "wire",
+        "publikovano": "2026-09-03T00:00:00Z",
         "primarni": false,
-        "jazyk": "cs"
+        "jazyk": "en"
+      },
+      {
+        "nazev": "Ritzau / NI",
+        "url": "https://ni.dk/ni-news/id/b0f0a52f-ed84-42d8-9c5b-bf627dd19407/PET--Rusland-forbereder-sabotage-mod-forsvarsindustri",
+        "typ": "media",
+        "publikovano": "2026-09-02T00:00:00Z",
+        "primarni": false,
+        "jazyk": "da"
+      },
+      {
+        "nazev": "Tagesschau",
+        "url": "https://www.tagesschau.de/ausland/europa/daenemark-nachrichtendienst-sabotage-warnung-100.html",
+        "typ": "media",
+        "publikovano": "2026-09-03T00:00:00Z",
+        "primarni": false,
+        "jazyk": "de"
       }
     ],
     "souvisejici": [],
@@ -1140,14 +1241,13 @@
     "novy": false,
     "zapocitanoTyden": "2026-08-31",
     "aiZpracovano": true,
-    "lidskyOvereno": true,
-    "archivniZaznam": true
+    "lidskyOvereno": true
   },
   {
     "id": "a22",
     "slug": "cr-podpora-atribuce",
-    "titulek": "České služby podporují německou atribuci Leipzig/Halle",
-    "kratkyTitulek": "ČR podporuje atribuci",
+    "titulek": "ČR: diplomatická reakce na německou atribuci Leipzig/Halle",
+    "kratkyTitulek": "ČR: diplomatická reakce",
     "zeme": "Česko",
     "kodZeme": "CZ",
     "kategorie": [
@@ -1157,25 +1257,42 @@
     ],
     "datumUdalosti": "2026-09-03T00:00:00Z",
     "aktualizovano": "2026-09-03T00:00:00Z",
-    "zavaznost": "O1",
+    "zavaznost": "Y3",
     "jistota": "potvrzeno",
     "stav": "bez-vysetrovani",
     "atribuce": "oficialni",
     "fakta": [
-      "Ministr zahraničí Petr Macinka si předvolal ruského velvyslance.",
-      "Uvedl, že české stanovisko nevychází pouze z německých informací, ale i z poznatků dvou českých zpravodajských služeb.",
-      "ČR oznámila reciproční opatření týkající se ruského diplomatického a technického personálu."
+      "Ministr zahraničí Petr Macinka si předvolal ruskou velvyslankyni a odmítl ruské vysvětlení německé atribuce.",
+      "ČR oznámila reciproční opatření vůči ruskému diplomatickému a technickému personálu."
     ],
-    "neznameho": [],
-    "vyznam": "České služby mají vlastní poznatky podporující atribuci fyzické operace na území NATO Rusku. To je pro český kontext nejzávažnější položka archivu.",
+    "neznameho": [
+      "Jaké konkrétní poznatky české služby k případu mají."
+    ],
+    "vyznam": "Nejzávažnější česká položka archivu. Stát se veřejně postavil za německý závěr a přijal konkrétní diplomatické kroky.",
     "eskalacniSpousteče": [],
     "deeskalacniSignaly": [],
     "zdroje": [
       {
-        "nazev": "Vlastní monitoring — archiv 5. 9. 2026",
-        "url": "",
-        "typ": "analysis",
-        "publikovano": "2026-09-05T00:00:00Z",
+        "nazev": "České noviny / ČTK",
+        "url": "https://www.ceskenoviny.cz/zpravy/2869629",
+        "typ": "media",
+        "publikovano": "2026-09-03T00:00:00Z",
+        "primarni": false,
+        "jazyk": "cs"
+      },
+      {
+        "nazev": "ČT24",
+        "url": "https://ct24.ceskatelevize.cz/clanek/domaci/macinka-cesko-chysta-reciprocni-opatreni-pro-ruske-diplomaty-377231",
+        "typ": "media",
+        "publikovano": "2026-09-03T00:00:00Z",
+        "primarni": false,
+        "jazyk": "cs"
+      },
+      {
+        "nazev": "České noviny / ČTK — předchozí vyjádření",
+        "url": "https://www.ceskenoviny.cz/index_view.php?id=2868841",
+        "typ": "media",
+        "publikovano": "2026-09-02T00:00:00Z",
         "primarni": false,
         "jazyk": "cs"
       }
@@ -1197,13 +1314,12 @@
     "novy": false,
     "zapocitanoTyden": "2026-08-31",
     "aiZpracovano": true,
-    "lidskyOvereno": true,
-    "archivniZaznam": true
+    "lidskyOvereno": true
   },
   {
     "id": "a23",
     "slug": "mnichov-rohde-schwarz",
-    "titulek": "Mnichov: zápalné prostředky vrženy před centrálu Rohde & Schwarz",
+    "titulek": "Mnichov: zápalný útok u objektů Rohde & Schwarz a Helsing",
     "kratkyTitulek": "Mnichov: Rohde & Schwarz",
     "zeme": "Německo",
     "kodZeme": "DE",
@@ -1217,8 +1333,9 @@
     "stav": "obvineni",
     "atribuce": "vysetrovana",
     "fakta": [
-      "Před centrálou Rohde & Schwarz byly z jedoucího automobilu vrženy zápalné prostředky; jeden se vznítil, další byly zneškodněny.",
-      "Bavorský LKA převzal případ, zadrženi byli dva bulharští občané."
+      "V noci byly z jedoucího auta vrženy zápalné prostředky u objektů Rohde & Schwarz a Helsing.",
+      "Dva prostředky se podle vyšetřování vznítily, třetí nikoli.",
+      "Zadrženi byli 38letý muž a 28letá žena, podle německých médií bulharští občané."
     ],
     "neznameho": [
       "Kdo útok objednal.",
@@ -1229,12 +1346,12 @@
     "deeskalacniSignaly": [],
     "zdroje": [
       {
-        "nazev": "Vlastní monitoring — archiv 5. 9. 2026",
-        "url": "",
-        "typ": "analysis",
-        "publikovano": "2026-09-05T00:00:00Z",
+        "nazev": "Euronews",
+        "url": "https://www.euronews.com/my-europe/2026/09/03/two-arrested-after-attack-on-defence-companies-in-munich",
+        "typ": "media",
+        "publikovano": "2026-09-03T00:00:00Z",
         "primarni": false,
-        "jazyk": "cs"
+        "jazyk": "en"
       }
     ],
     "souvisejici": [],
@@ -1248,8 +1365,7 @@
     "novy": false,
     "zapocitanoTyden": "2026-08-31",
     "aiZpracovano": true,
-    "lidskyOvereno": true,
-    "archivniZaznam": true
+    "lidskyOvereno": true
   },
   {
     "id": "a24",
@@ -1268,7 +1384,7 @@
     "stav": "bez-vysetrovani",
     "atribuce": "oficialni",
     "fakta": [
-      "Rusko oznámilo uzavření Goethe-Institutů v Moskvě, Petrohradu a Jekatěrinburgu v reakci na německé kroky po atribuci Leipzig/Halle."
+      "Sergej Lavrov oznámil uzavření německých Goethe-Institutů v Moskvě, Petrohradu a Jekatěrinburgu v reakci na německá opatření po atribuci Leipzig/Halle."
     ],
     "neznameho": [],
     "vyznam": "Diplomatická odveta, ne vojenská eskalace. Zaznamenáváme jako součást institucionální reakce.",
@@ -1276,12 +1392,20 @@
     "deeskalacniSignaly": [],
     "zdroje": [
       {
-        "nazev": "Vlastní monitoring — archiv 5. 9. 2026",
-        "url": "",
-        "typ": "analysis",
-        "publikovano": "2026-09-05T00:00:00Z",
+        "nazev": "Tagesschau",
+        "url": "https://www.tagesschau.de/ausland/goethe-institut-russland-schliessung-100.html",
+        "typ": "media",
+        "publikovano": "2026-09-03T00:00:00Z",
         "primarni": false,
-        "jazyk": "cs"
+        "jazyk": "de"
+      },
+      {
+        "nazev": "Deutsche Welle",
+        "url": "https://amp.dw.com/en/russia-to-close-branches-of-germanys-goethe-institut/a-78815269",
+        "typ": "media",
+        "publikovano": "2026-09-03T00:00:00Z",
+        "primarni": false,
+        "jazyk": "de"
       }
     ],
     "souvisejici": [],
@@ -1295,8 +1419,7 @@
     "novy": false,
     "zapocitanoTyden": "2026-08-31",
     "aiZpracovano": true,
-    "lidskyOvereno": true,
-    "archivniZaznam": true
+    "lidskyOvereno": true
   },
   {
     "id": "a25",
@@ -1358,7 +1481,7 @@
   {
     "id": "a26",
     "slug": "estonsko-prechody",
-    "titulek": "Estonsko na neurčito omezuje otevírací dobu východních přechodů",
+    "titulek": "Estonsko: přechody Narva, Koidula a Luhamaa zůstávají v nočním režimu uzavřené",
     "kratkyTitulek": "Estonsko: režim přechodů",
     "zeme": "Estonsko",
     "kodZeme": "EE",
@@ -1372,20 +1495,37 @@
     "stav": "bez-vysetrovani",
     "atribuce": "oficialni",
     "fakta": [
-      "Estonsko ponechalo na neurčito režim 07:00–19:00 na silničních přechodech Narva, Koidula a Luhamaa a podobná omezení na železničních přechodech."
+      "Od 1. září zůstaly přechody Luhamaa, Koidula a Narva-1 otevřené pouze 07:00–19:00.",
+      "Nešlo o náhlé krizové uzavření — jde o pokračování dříve zavedeného bezpečnostního režimu."
     ],
     "neznameho": [],
-    "vyznam": "Opatření na hranici jednoho členského státu. Neznamená plošné uzavírání hranic NATO ani omezení vycestování z ČR.",
+    "vyznam": "Pohraniční opatření jednoho členského státu, které trvá delší dobu. Neznamená plošné uzavírání hranic NATO ani omezení vycestování z ČR.",
     "eskalacniSpousteče": [],
     "deeskalacniSignaly": [],
     "zdroje": [
       {
-        "nazev": "Vlastní monitoring — archiv 5. 9. 2026",
-        "url": "",
-        "typ": "analysis",
-        "publikovano": "2026-09-05T00:00:00Z",
-        "primarni": false,
-        "jazyk": "cs"
+        "nazev": "Estonská krizová informační služba kriis.ee",
+        "url": "https://www.kriis.ee/en/travelling-crossing-state-border/travelling-abroad-estonia/travelling-abroad-estonia-russia",
+        "typ": "primary",
+        "publikovano": "2026-09-01T00:00:00Z",
+        "primarni": true,
+        "jazyk": "en"
+      },
+      {
+        "nazev": "Estonská vláda — dřívější prodloužení režimu",
+        "url": "https://www.valitsus.ee/en/news/border-crossing-points-remain-closed-night-during-summer",
+        "typ": "primary",
+        "publikovano": "2026-09-01T00:00:00Z",
+        "primarni": true,
+        "jazyk": "en"
+      },
+      {
+        "nazev": "Estonian Tax and Customs Board",
+        "url": "https://emta.ee/en/news/border-crossing-points-will-remain-closed-night-during-summer-well",
+        "typ": "primary",
+        "publikovano": "2026-09-01T00:00:00Z",
+        "primarni": true,
+        "jazyk": "en"
       }
     ],
     "souvisejici": [],
@@ -1399,8 +1539,7 @@
     "novy": false,
     "zapocitanoTyden": "2026-08-31",
     "aiZpracovano": true,
-    "lidskyOvereno": true,
-    "archivniZaznam": true
+    "lidskyOvereno": true
   },
   {
     "id": "a27",
@@ -1433,12 +1572,20 @@
     "deeskalacniSignaly": [],
     "zdroje": [
       {
-        "nazev": "Vlastní monitoring — archiv 5. 9. 2026",
-        "url": "",
-        "typ": "analysis",
-        "publikovano": "2026-09-05T00:00:00Z",
+        "nazev": "Tagesschau",
+        "url": "https://www.tagesschau.de/inland/regional/nordrheinwestfalen/dormagen-sabotage-versuch-100.html",
+        "typ": "media",
+        "publikovano": "2026-09-04T00:00:00Z",
         "primarni": false,
-        "jazyk": "cs"
+        "jazyk": "de"
+      },
+      {
+        "nazev": "Reuters",
+        "url": "https://www.reuters.com/world/german-police-investigate-new-grid-sabotage-attempt-bild-reports-2026-09-04/",
+        "typ": "wire",
+        "publikovano": "2026-09-04T00:00:00Z",
+        "primarni": false,
+        "jazyk": "en"
       }
     ],
     "souvisejici": [
@@ -1463,8 +1610,7 @@
     "novy": false,
     "zapocitanoTyden": "2026-08-31",
     "aiZpracovano": true,
-    "lidskyOvereno": true,
-    "archivniZaznam": true
+    "lidskyOvereno": true
   },
   {
     "id": "a28",
@@ -1496,10 +1642,10 @@
     "deeskalacniSignaly": [],
     "zdroje": [
       {
-        "nazev": "Vlastní monitoring — archiv 5. 9. 2026",
-        "url": "",
-        "typ": "analysis",
-        "publikovano": "2026-09-05T00:00:00Z",
+        "nazev": "České noviny / ČTK",
+        "url": "https://www.ceskenoviny.cz/zpravy/metnar-cesko-prijalo-opatreni-v-navaznosti-na-incidenty-v-nemecku/2869944",
+        "typ": "media",
+        "publikovano": "2026-09-04T00:00:00Z",
         "primarni": false,
         "jazyk": "cs"
       }
@@ -1515,7 +1661,119 @@
     "novy": false,
     "zapocitanoTyden": "2026-08-31",
     "aiZpracovano": true,
+    "lidskyOvereno": true
+  },
+  {
+    "eskalacniSpousteče": [],
+    "deeskalacniSignaly": [],
+    "souvisejici": [],
+    "novy": false,
+    "aiZpracovano": true,
     "lidskyOvereno": true,
-    "archivniZaznam": true
+    "aktualizovano": "2026-08-31T00:00:00Z",
+    "zapocitanoTyden": "2026-08-31",
+    "historie": [
+      {
+        "kdy": "2026-08-31T00:00:00Z",
+        "text": "Událost zaznamenána v monitoringu.",
+        "novySignal": true
+      }
+    ],
+    "id": "a29",
+    "slug": "siluanov-g20",
+    "titulek": "Siluanov se osobně účastní jednání G20 v USA",
+    "kratkyTitulek": "Siluanov na G20",
+    "zeme": "Rusko",
+    "kodZeme": "RU",
+    "kategorie": [
+      "diplomacie",
+      "rusko"
+    ],
+    "datumUdalosti": "2026-08-31T00:00:00Z",
+    "zavaznost": "G3",
+    "jistota": "potvrzeno",
+    "stav": "bez-vysetrovani",
+    "atribuce": "oficialni",
+    "fakta": [
+      "Ruský ministr financí Anton Siluanov se osobně účastnil jednání ministrů financí G20 v Asheville a setkal se s americkým ministrem financí Scottem Bessentem.",
+      "Šlo o první takovou osobní účast ruského ministra od začátku plné invaze."
+    ],
+    "neznameho": [],
+    "vyznam": "Ukazuje pokračující diplomatické kanály mezi USA a Ruskem. Samo o sobě to není deeskalace ani eskalace.",
+    "zdroje": [
+      {
+        "nazev": "Reuters",
+        "url": "https://www.reuters.com/world/china/g20-host-us-pushes-growth-agenda-allay-debt-market-concerns-2026-08-31/",
+        "typ": "wire",
+        "publikovano": "2026-08-31T00:00:00Z",
+        "primarni": false,
+        "jazyk": "en"
+      },
+      {
+        "nazev": "Interfax",
+        "url": "https://interfax.com/newsroom/top-stories/118922/",
+        "typ": "media",
+        "publikovano": "2026-08-31T00:00:00Z",
+        "primarni": false,
+        "jazyk": "en"
+      },
+      {
+        "nazev": "ANSA",
+        "url": "https://www.ansa.it/sito/notizie/economia/aziende/2026/08/31/ad-asheville-il-g20-finanze-bessent-incontra-siluanov.-lue-protesta-per-la-presenza_aad4d6c5-8175-48d8-9dd2-d4b4420f7fbb.html",
+        "typ": "media",
+        "publikovano": "2026-08-31T00:00:00Z",
+        "primarni": false,
+        "jazyk": "it"
+      }
+    ]
+  },
+  {
+    "eskalacniSpousteče": [],
+    "deeskalacniSignaly": [],
+    "souvisejici": [],
+    "novy": false,
+    "aiZpracovano": true,
+    "lidskyOvereno": true,
+    "aktualizovano": "2026-09-02T00:00:00Z",
+    "zapocitanoTyden": "2026-08-31",
+    "historie": [
+      {
+        "kdy": "2026-09-02T00:00:00Z",
+        "text": "Událost zaznamenána v monitoringu.",
+        "novySignal": true
+      }
+    ],
+    "id": "a30",
+    "slug": "putin-britske-cile",
+    "titulek": "Putin nevyloučil zásah proti britským vojenským cílům",
+    "kratkyTitulek": "Putin k britským cílům",
+    "zeme": "Rusko",
+    "kodZeme": "RU",
+    "kategorie": [
+      "rusko",
+      "diplomacie"
+    ],
+    "datumUdalosti": "2026-09-02T00:00:00Z",
+    "zavaznost": "Y1",
+    "jistota": "potvrzeno",
+    "stav": "bez-vysetrovani",
+    "atribuce": "oficialni",
+    "fakta": [
+      "Na dotaz, zda by Rusko mohlo zasáhnout vojenská zařízení na území Británie, Putin odpověděl: „To je tajemství. Vojenské tajemství.“"
+    ],
+    "neznameho": [
+      "Zda za výrokem stojí jakékoli operační rozhodnutí."
+    ],
+    "vyznam": "Eskalační rétorika bez doprovodného vojenského kroku. Sama o sobě hodnocení nezvyšuje.",
+    "zdroje": [
+      {
+        "nazev": "BBC",
+        "url": "https://www.bbc.co.uk/news/articles/c62j50n131mo",
+        "typ": "media",
+        "publikovano": "2026-09-02T00:00:00Z",
+        "primarni": false,
+        "jazyk": "en"
+      }
+    ]
   }
 ]

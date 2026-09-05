@@ -64,8 +64,13 @@ async function main() {
     pocetPolozek: s.polozky.length,
     chyba: s.chyba,
   }));
-  const nedostupne = vysledky.filter((v) => !v.ok);
-  console.log(`[sber] zdrojů ${vysledky.length}, nedostupných ${nedostupne.length}`);
+  const blokujici = new Set(ZDROJE.filter((z) => z.ocekavaneBlokovani).map((z) => z.klic));
+  const nedostupne = vysledky.filter((v) => !v.ok && !blokujici.has(v.klic));
+  const ocekavane = vysledky.filter((v) => !v.ok && blokujici.has(v.klic));
+  console.log(
+    `[sber] zdrojů ${vysledky.length}, nedostupných ${nedostupne.length}` +
+      (ocekavane.length ? `, blokujících automaty ${ocekavane.length} (očekávané)` : ""),
+  );
 
   const doFronty: Nalez[] = [];
 

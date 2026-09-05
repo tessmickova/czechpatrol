@@ -17,6 +17,7 @@ import Odber from "@/app/odber/page";
 import Tlak from "@/app/tlak/page";
 import WatchlistStranka from "@/app/watchlist/page";
 import Komunita from "@/app/komunita/page";
+import Nepotvrzeno from "@/app/nepotvrzeno/page";
 import { usePathname } from "./shim-navigation";
 import { spustParallax } from "./parallax";
 
@@ -42,6 +43,7 @@ const CESTY: Record<string, () => React.JSX.Element> = {
   "/tlak/": Tlak,
   "/watchlist/": WatchlistStranka,
   "/komunita/": Komunita,
+  "/nepotvrzeno/": Nepotvrzeno,
 };
 
 function Obsah() {

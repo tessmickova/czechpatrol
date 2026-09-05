@@ -2,7 +2,8 @@ import type { Metadata } from "next";
 import { HlavickaStranky, Obsah } from "@/components/hlavicka";
 import { HybridniPanel, RuskoPanel } from "@/components/panely";
 import { Sekce } from "@/components/zaklad";
-import { hybridniTlak, rusko } from "@/lib/data";
+import { PuvodcePanel } from "@/components/puvodce";
+import { hybridniTlak, puvodce, rusko } from "@/lib/data";
 
 export const metadata: Metadata = {
   title: "Hybridní tlak",
@@ -22,6 +23,16 @@ export default function Tlak() {
       <Obsah>
         <HybridniPanel tlak={hybridniTlak()} />
       </Obsah>
+      <Sekce
+        kicker="Původ"
+        nadpis="Kolik případů má prokázaného původce"
+        popis="Část incidentů, které zpočátku vypadaly jako jedna série, dostala domácí vysvětlení. Proto to sledujeme zvlášť."
+      >
+        <div className="grid gap-5 lg:grid-cols-[minmax(0,1fr)_minmax(0,1fr)]">
+          <PuvodcePanel skupiny={puvodce()} />
+        </div>
+      </Sekce>
+
       <Sekce
         kicker="Doplňkový ukazatel"
         nadpis="Rusko: vnitřní tlak režimu"

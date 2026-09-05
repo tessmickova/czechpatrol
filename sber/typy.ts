@@ -35,6 +35,12 @@ export interface RegistrZdroj {
   /** Ke kterým položkám webu se zdroj vztahuje. */
   tyka?: string[];
   /**
+   * Zdroj vrací 403 na automatizované dotazy. Necháváme ho v registru, aby
+   * bylo vidět, že s ním počítáme, ale hlášení o něm nekřičí jako o poruše.
+   * Položka, kterou pokrývá, musí být krytá ještě jiným, dostupným zdrojem.
+   */
+  ocekavaneBlokovani?: boolean;
+  /**
    * Ověřeno živým stažením. Nové zdroje sem přidávejte s false;
    * `npm run sber:zdroje` napíše, které adresy skutečně odpovídají.
    */

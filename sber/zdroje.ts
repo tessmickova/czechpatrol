@@ -110,6 +110,7 @@ export const ZDROJE: RegistrZdroj[] = [
     klicova: ["narizuje mobilizaci", "naridil mobilizaci", "vyhlasil valecny stav"],
     sledovana: ["mobilizace"],
     tyka: ["mobilizace"],
+    ocekavaneBlokovani: true,
     overenaAdresa: false,
   },
   {
@@ -226,6 +227,7 @@ export const ZDROJE: RegistrZdroj[] = [
     klicova: ["uvolneni nouzovych zasob", "regulace prodeje pohonnych", "vyhlasil stav nouze"],
     sledovana: ["nouzove zasoby"],
     tyka: ["palivo"],
+    ocekavaneBlokovani: true,
     overenaAdresa: false,
   },
   {
@@ -297,9 +299,10 @@ export const ZDROJE: RegistrZdroj[] = [
   },
   {
     klic: "dopravni-info",
-    nazev: "Dopravní info (ŘSD)",
+    nazev: "Dopravní info (NDIC)",
     druh: "provoz",
-    url: "https://www.dopravniinfo.cz/",
+    // Web se přestěhoval z dopravniinfo.cz na gov.cz; stará adresa už neodpovídá.
+    url: "https://dopravniinfo.gov.cz/",
     format: "html",
     jazyk: "cs",
     primarni: true,

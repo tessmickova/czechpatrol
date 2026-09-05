@@ -128,6 +128,14 @@ export default function Prehled() {
               ton: "slez",
             },
             {
+              href: "/nepotvrzeno/",
+              nazev: "Nepotvrzeno",
+              popis: "Co jsme prověřili a nepotvrdilo se.",
+              ikona: "oko",
+              odznak: "Poctivě",
+              ton: "pisek",
+            },
+            {
               href: "/komunita/",
               nazev: "Komunita",
               popis: "Tipy, opravy, otevřená data.",

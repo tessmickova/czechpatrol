@@ -1,7 +1,7 @@
 import { JE_UKAZKA } from "@/config/web";
 import type {
   Archiv, CelkovyStav, HybridniTlak, Incident, NatoPolozka, PravniStav,
-  Provoz, RuskoStav, TydenniHodnoceni, Uroven, Watchlist,
+  Nepotvrzene, Provoz, RuskoStav, TydenniHodnoceni, Uroven, Watchlist,
 } from "./typy";
 
 import ostreIncidenty from "../../data/incidenty.json";
@@ -14,6 +14,7 @@ import ostreTydny from "../../data/tydny.json";
 import ostreRusko from "../../data/rusko.json";
 import ostryWatchlist from "../../data/watchlist.json";
 import ostryArchiv from "../../data/historie.json";
+import ostreNepotvrzene from "../../data/nepotvrzeno.json";
 
 import ukazkoveIncidenty from "../../data/ukazka/incidenty.json";
 import ukazkovyStav from "../../data/ukazka/stav.json";
@@ -135,6 +136,34 @@ export function rusko(): RuskoStav {
       return n ? { ...p, uroven: n.uroven } : p;
     }),
   };
+}
+
+/**
+ * Záznamy, které ověřením neprošly. Do žádného počtu ani hodnocení nevstupují.
+ */
+export function nepotvrzene(): Nepotvrzene[] {
+  return jako<Nepotvrzene[]>(ostreNepotvrzene);
+}
+
+/**
+ * Rozložení incidentů podle toho, co se ví o původci.
+ *
+ * Samostatný ukazatel. Do celkové úrovně nevstupuje — ta stojí na závažnosti
+ * a kumulaci, ne na tom, kolik případů má potvrzené státní řízení.
+ */
+export function puvodce() {
+  const vse = incidenty();
+  const skupiny = [
+    { klic: "oficialni", nazev: "Oficiální státní atribuce" },
+    { klic: "vysetrovana", nazev: "Vyšetřuje se" },
+    { klic: "nepotvrzena", nazev: "Tvrzení bez potvrzení" },
+    { klic: "domaci", nazev: "Domácí pachatel" },
+    { klic: "neznama", nazev: "Pachatel neznámý" },
+  ] as const;
+  return skupiny.map((s) => ({
+    ...s,
+    pocet: vse.filter((i) => i.atribuce === s.klic).length,
+  }));
 }
 
 /** Archiv stavů v čase. Podklad pro časový posuvník. */
