@@ -17,6 +17,7 @@ interface UcetSprava {
   whatsapp: boolean;
   passkeys: number;
   poznamka: string | null;
+  nazev: string | null;
 }
 
 interface Audit {
@@ -101,10 +102,16 @@ export function SpravaKlient() {
   }
 
   const zmenRoli = async (id: string, role: Role) => {
-    const poznamka = role === "izs" ? prompt("Poznámka k ověření (např. složka a datum ověření):") ?? "" : "";
-    if (role === "izs" && !poznamka.trim()) return;
+    let nazev = "";
+    let poznamka = "";
+    if (role === "izs") {
+      nazev = prompt("Název složky, jak se objeví ve zprávách (např. HZS Kraje Vysočina):") ?? "";
+      if (!nazev.trim()) return;
+      poznamka = prompt("Jak byla složka ověřena (adresa, datum):") ?? "";
+      if (!poznamka.trim()) return;
+    }
     try {
-      await api(`/sprava/ucty/${id}/role`, { method: "PUT", telo: { role, poznamka } });
+      await api(`/sprava/ucty/${id}/role`, { method: "PUT", telo: { role, poznamka, nazev } });
       nacti();
     } catch (e) {
       setHlaska({ typ: "chyba", text: e instanceof Error ? e.message : "Nepovedlo se." });
@@ -147,7 +154,7 @@ export function SpravaKlient() {
           <table className="w-full text-[14px]">
             <thead>
               <tr className="text-left">
-                {["Účet", "Role", "Založen", "Přihlášen", "Kanály", "Passkey", "Poznámka"].map((h) => (
+                {["Účet", "Role", "Založen", "Přihlášen", "Kanály", "Passkey", "Složka / poznámka"].map((h) => (
                   <th key={h} className="stitek border-b border-linka pb-2 pr-4 font-medium">{h}</th>
                 ))}
               </tr>
@@ -170,7 +177,7 @@ export function SpravaKlient() {
                   <td className="py-2.5 pr-4 text-tlum">{u.posledniPrihlaseni ? datumCas(u.posledniPrihlaseni) : "—"}</td>
                   <td className="py-2.5 pr-4 text-tlum">{[u.telegram && "Telegram", u.whatsapp && "WhatsApp"].filter(Boolean).join(", ") || "—"}</td>
                   <td className="cislice py-2.5 pr-4 text-tlum">{u.passkeys}</td>
-                  <td className="py-2.5 pr-4 text-tlum">{u.poznamka ?? ""}</td>
+                  <td className="py-2.5 pr-4 text-tlum">{[u.nazev, u.poznamka].filter(Boolean).join(" · ")}</td>
                 </tr>
               ))}
             </tbody>

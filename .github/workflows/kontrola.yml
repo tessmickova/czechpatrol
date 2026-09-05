@@ -23,3 +23,7 @@ jobs:
         run: npm run build
       - name: Sestavení klikacího náhledu
         run: npm run nahled
+      - name: API — závislosti
+        run: npm ci --prefix api
+      - name: API — testy a typy
+        run: npm run test:api && npm run typecheck:api

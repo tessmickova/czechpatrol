@@ -6,6 +6,7 @@ import type {
   RuskoStav, Uroven, Watchlist,
 } from "@/lib/typy";
 import { Ikona, type NazevIkony } from "./ikony";
+import { PlacenaVrstva } from "./placena-vrstva";
 import { RadarTlaku } from "./mericky";
 import { SeznamZdroju } from "./zdroje";
 import {
@@ -253,9 +254,15 @@ export function ProvozPanel({ provoz }: { provoz: Provoz }) {
   return (
     <>
       <ul className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-        {provoz.polozky.map((p) => (
-          <KartaProvozu key={p.klic} p={p} />
-        ))}
+        {provoz.polozky.map((p) =>
+          p.klic === "hranice" ? (
+            <PlacenaVrstva key={p.klic} co="Hranice a doprava">
+              <KartaProvozu p={p} />
+            </PlacenaVrstva>
+          ) : (
+            <KartaProvozu key={p.klic} p={p} />
+          ),
+        )}
       </ul>
 
     </>

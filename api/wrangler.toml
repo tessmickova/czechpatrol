@@ -1,0 +1,34 @@
+# API CzechPatrol — účty, upozornění, partner IZS.
+#
+# Běží odděleně od webu: web je statický na Pages, tohle je Worker s D1.
+# Web s ním mluví jen přes HTTPS s tokenem; nic jiného mezi nimi není.
+name = "czechpatrol-api"
+main = "src/index.ts"
+compatibility_date = "2025-09-01"
+compatibility_flags = ["nodejs_compat"]
+
+[observability]
+enabled = true
+
+[vars]
+# Odkud smí web volat API (CORS) a pro který doménový název platí passkeye.
+PUVOD_WEBU = "https://czechpatrol.pages.dev"
+RP_ID = "czechpatrol.pages.dev"
+NAZEV_WEBU = "CzechPatrol"
+# Odkud API čte stav webu (generuje se při buildu webu).
+STAV_URL = "https://czechpatrol.pages.dev/stav.json"
+
+# Tajemství se nastavují přes `wrangler secret put`, nikdy sem:
+#   TELEGRAM_BOT_TOKEN, TELEGRAM_WEBHOOK_SECRET, ADMIN_BOOTSTRAP_KOD,
+#   WHATSAPP_TOKEN, WHATSAPP_PHONE_ID
+
+[[d1_databases]]
+binding = "DB"
+database_name = "czechpatrol"
+# Doplní workflow nasazení podle skutečné databáze v účtu.
+database_id = "__D1_ID__"
+migrations_dir = "migrace"
+
+[triggers]
+# Každých 10 minut: přečíst stav webu, poslat, co je splatné.
+crons = ["*/10 * * * *"]

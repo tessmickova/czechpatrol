@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { useEffect, useState } from "react";
-import { UCTY_ZAPNUTE, WEB } from "@/config/web";
+import { KRAJE, UCTY_ZAPNUTE, WEB } from "@/config/web";
 import { KATEGORIE, PORADI_KATEGORII } from "@/lib/kategorie";
 import { obnovit, podporujePasskey, pridatPasskey, prihlasit, registrovat } from "@/lib/passkey";
 import { api, odhlasit, ROLE, ulozToken, useUcet, VYCHOZI_UPOZORNENI, type Frekvence, type MinZavaznost, type NastaveniUpozorneni } from "@/lib/ucet";
@@ -170,6 +170,7 @@ function Nastaveni({
   const [telegram, setTelegram] = useState<{ odkaz: string; kod: string } | null>(null);
   const [whatsapp, setWhatsapp] = useState("");
   const [mazu, setMazu] = useState(false);
+  const [novyKod, setNovyKod] = useState<string | null>(null);
 
   useEffect(() => setN(ucet.upozorneni ?? VYCHOZI_UPOZORNENI), [ucet]);
 
@@ -255,10 +256,32 @@ function Nastaveni({
             <button type="button" onClick={() => pridatPasskey().then(obnov).catch((e) => setHlaska({ typ: "chyba", text: e.message }))} className={TLACITKO_TICHE}>
               <Ikona nazev="zamek" velikost={15} tah={1.9} /> Přidat passkey (další zařízení)
             </button>
+            <button
+              type="button"
+              onClick={async () => {
+                if (!confirm("Starý obnovovací kód přestane platit. Pokračovat?")) return;
+                try {
+                  const v = await api<{ obnovovaciKod: string }>("/ja/obnova", { method: "POST" });
+                  setNovyKod(v.obnovovaciKod);
+                } catch (e) {
+                  setHlaska({ typ: "chyba", text: e instanceof Error ? e.message : "Nepovedlo se." });
+                }
+              }}
+              className={TLACITKO_TICHE}
+            >
+              Nový obnovovací kód
+            </button>
             <button type="button" onClick={() => odhlasit()} className={TLACITKO_TICHE}>
               Odhlásit z tohoto zařízení
             </button>
           </div>
+          {novyKod && (
+            <div className="mt-4 rounded-[14px] border border-jantar/40 bg-jantar/10 p-4">
+              <div className="stitek mb-2 !text-jantar">Nový kód — uvidíte ho jen teď</div>
+              <div className="velke-cislo select-all break-all text-[22px] tracking-[0.08em] text-jantar">{novyKod}</div>
+              <button type="button" onClick={() => setNovyKod(null)} className="mt-3 text-[13px] text-tlum underline underline-offset-4 hover:text-inkoust">Mám uloženo, skrýt</button>
+            </div>
+          )}
         </Karta>
 
         <Karta className="p-6">
@@ -380,6 +403,16 @@ function Nastaveni({
               nazev="Zprávy partnerů IZS"
               popis="Schválené zprávy ověřených záchranných složek. Označené vždy jako zpráva partnera."
             />
+            {n.zpravyIzs && (
+              <div className="rounded-[14px] border border-linka p-4">
+                <Popisek pro="kraj">Můj kraj (pro krajské zprávy partnerů)</Popisek>
+                <select id="kraj" value={n.kraj ?? ""} onChange={(e) => setN({ ...n, kraj: e.target.value || null })} className={POLE}>
+                  <option value="">Jen celostátní zprávy</option>
+                  {KRAJE.map((k) => <option key={k} value={k}>{k}</option>)}
+                </select>
+                <p className="mt-2 text-[13px] text-tlum2">Kraj se ukládá jen k nastavení. Není z něj vidět, kde bydlíte.</p>
+              </div>
+            )}
           </div>
           <div>
             <Popisek>Oblasti (prázdné = všechny)</Popisek>

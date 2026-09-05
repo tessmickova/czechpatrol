@@ -1,0 +1,90 @@
+name: Nasazení API
+
+on:
+  push:
+    branches: [main]
+    paths: ["api/**", ".github/workflows/nasazeni-api.yml"]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: nasazeni-api
+  cancel-in-progress: true
+
+jobs:
+  nasadit:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: api
+    env:
+      CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+      CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: npm
+          cache-dependency-path: api/package-lock.json
+
+      - run: npm ci
+
+      - name: Testy a typy
+        run: npm test && npm run typecheck
+
+      # Databázi založí jen jednou; pak už jen zjistí její identifikátor
+      # a doplní ho do wrangler.toml. Identifikátor není tajemství, ale liší se
+      # účet od účtu, proto v repozitáři není.
+      - name: Databáze D1
+        run: |
+          set -e
+          ID=$(npx wrangler d1 list --json | node -e 'let s="";process.stdin.on("data",d=>s+=d).on("end",()=>{const v=JSON.parse(s).find(x=>x.name==="czechpatrol");console.log(v?v.uuid:"")})')
+          if [ -z "$ID" ]; then
+            echo "Zakládám databázi czechpatrol"
+            npx wrangler d1 create czechpatrol >/dev/null
+            ID=$(npx wrangler d1 list --json | node -e 'let s="";process.stdin.on("data",d=>s+=d).on("end",()=>{const v=JSON.parse(s).find(x=>x.name==="czechpatrol");console.log(v?v.uuid:"")})')
+          fi
+          [ -n "$ID" ] || { echo "Databázi se nepodařilo zjistit"; exit 1; }
+          sed -i "s/__D1_ID__/$ID/" wrangler.toml
+          npx wrangler d1 migrations apply czechpatrol --remote
+
+      - name: Nasazení workeru
+        run: npx wrangler deploy
+
+      # Tajemství se přenášejí jen ta, která jsou v GitHubu nastavená.
+      # Prázdné se přeskočí — worker pak daný kanál nenabízí.
+      - name: Tajemství
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_WEBHOOK_SECRET: ${{ secrets.TELEGRAM_WEBHOOK_SECRET }}
+          TELEGRAM_BOT_JMENO: ${{ vars.TELEGRAM_BOT_JMENO }}
+          ADMIN_BOOTSTRAP_KOD: ${{ secrets.ADMIN_BOOTSTRAP_KOD }}
+          WHATSAPP_TOKEN: ${{ secrets.WHATSAPP_TOKEN }}
+          WHATSAPP_PHONE_ID: ${{ secrets.WHATSAPP_PHONE_ID }}
+        run: |
+          for N in TELEGRAM_BOT_TOKEN TELEGRAM_WEBHOOK_SECRET TELEGRAM_BOT_JMENO ADMIN_BOOTSTRAP_KOD WHATSAPP_TOKEN WHATSAPP_PHONE_ID; do
+            V="${!N}"
+            if [ -n "$V" ]; then
+              printf '%s' "$V" | npx wrangler secret put "$N" >/dev/null && echo "nastaveno: $N"
+            else
+              echo "přeskočeno (prázdné): $N"
+            fi
+          done
+
+      # Telegram musí vědět, kam posílat zprávy botovi.
+      - name: Webhook Telegramu
+        if: ${{ env.TELEGRAM_BOT_TOKEN != '' && env.TELEGRAM_WEBHOOK_SECRET != '' }}
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_WEBHOOK_SECRET: ${{ secrets.TELEGRAM_WEBHOOK_SECRET }}
+          API_URL: ${{ vars.API_URL }}
+        run: |
+          [ -n "$API_URL" ] || { echo "Chybí proměnná API_URL, webhook nenastaven."; exit 0; }
+          curl -sS -X POST "https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/setWebhook" \
+            -H 'Content-Type: application/json' \
+            -d "{\"url\":\"${API_URL%/}/telegram/webhook\",\"secret_token\":\"${TELEGRAM_WEBHOOK_SECRET}\",\"allowed_updates\":[\"message\"]}" \
+            | grep -q '"ok":true' && echo "Webhook nastaven." || echo "Webhook se nepodařilo nastavit."

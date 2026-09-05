@@ -1,0 +1,46 @@
+import { rozesli } from "./rozeslani";
+import { rozdilStavu } from "./upozorneni";
+import type { Env, StavWebu } from "./typy";
+
+/**
+ * Přečte stav webu a z rozdílu proti minulému udělá zprávy.
+ * Web je jediný zdroj pravdy; API si nic nedomýšlí.
+ */
+export async function synchronizuj(env: Env): Promise<{ zprav: number; zasazeni: number }> {
+  const r = await fetch(env.STAV_URL, { headers: { Accept: "application/json" }, cf: { cacheTtl: 0 } } as RequestInit);
+  if (!r.ok) throw new Error(`stav webu: HTTP ${r.status}`);
+  const novy = (await r.json()) as StavWebu;
+  if (novy.verze !== 1 || !Array.isArray(novy.udalosti)) throw new Error("stav webu: neznámý tvar");
+
+  const ulozeny = await env.DB.prepare("SELECT hodnota FROM stav WHERE klic = 'web'").first<{ hodnota: string }>();
+  const stary = ulozeny ? (JSON.parse(ulozeny.hodnota) as StavWebu) : null;
+
+  // Stejný build webu = nic nového; šetří to databázi.
+  if (stary && stary.generovano === novy.generovano) return { zprav: 0, zasazeni: 0 };
+
+  const zpravy = rozdilStavu(stary, novy);
+  let zasazeni = 0;
+  for (const z of zpravy) zasazeni += await rozesli(env, z);
+
+  await env.DB.prepare("INSERT OR REPLACE INTO stav (klic, hodnota, aktualizovano) VALUES ('web', ?, ?)")
+    .bind(JSON.stringify(novy), new Date().toISOString())
+    .run();
+  return { zprav: zpravy.length, zasazeni };
+}
+
+/** Úklid podle zásad soukromí — nic se nedrží déle, než je slíbeno. */
+export async function uklid(env: Env): Promise<void> {
+  const nyni = new Date();
+  const pred = (dni: number) => new Date(nyni.getTime() - dni * 86_400_000).toISOString();
+  await env.DB.batch([
+    env.DB.prepare("DELETE FROM vyzvy WHERE expirace < ?").bind(nyni.toISOString()),
+    env.DB.prepare("DELETE FROM propojeni WHERE expirace < ?").bind(nyni.toISOString()),
+    env.DB.prepare("DELETE FROM limity WHERE okno_do < ?").bind(pred(1)),
+    env.DB.prepare("DELETE FROM relace WHERE expirace < ?").bind(nyni.toISOString()),
+    env.DB.prepare("DELETE FROM fronta WHERE odeslano IS NOT NULL AND odeslano < ?").bind(pred(30)),
+    env.DB.prepare("DELETE FROM zpravy WHERE vytvoreno < ? AND id NOT IN (SELECT zprava_id FROM fronta)").bind(pred(90)),
+    env.DB.prepare("DELETE FROM zpravy_izs WHERE vytvoreno < ?").bind(pred(365)),
+    env.DB.prepare("DELETE FROM audit WHERE kdy < ?").bind(pred(365)),
+    env.DB.prepare("DELETE FROM ucty WHERE COALESCE(posledni_prihlaseni, vytvoreno) < ? AND role != 'admin'").bind(pred(730)),
+  ]);
+}

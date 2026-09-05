@@ -30,6 +30,8 @@ export interface NastaveniUpozorneni {
   ticho: { od: string; do: string } | null;
   oblasti: string[];
   zpravyIzs: boolean;
+  /** Kraj pro zprávy partnerů IZS. null = jen celostátní. */
+  kraj: string | null;
 }
 
 export interface Ucet {
@@ -39,6 +41,8 @@ export interface Ucet {
   telegram: boolean;
   whatsapp: boolean;
   upozorneni: NastaveniUpozorneni;
+  /** Jen u partnerů IZS: název složky, který se objeví ve zprávách. */
+  nazev: string | null;
   /** Kolik passkey je k účtu přihlášených — kvůli varování před ztrátou přístupu. */
   passkeys: number;
 }
@@ -55,6 +59,7 @@ export const VYCHOZI_UPOZORNENI: NastaveniUpozorneni = {
   ticho: null,
   oblasti: [],
   zpravyIzs: true,
+  kraj: null,
 };
 
 const KLIC_TOKENU = "czechpatrol.token";

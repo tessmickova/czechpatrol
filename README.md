@@ -142,3 +142,41 @@ Statický export (`out/`) jde nasadit kamkoli. Postup pro Cloudflare Pages:
 
 Hodinový sběr běží v GitHub Actions a commituje data; nasazení se tím spustí
 samo.
+
+## Účty, upozornění a partner IZS
+
+Web zůstává statický. Účty a doručování běží v odděleném Cloudflare Workeru
+s D1 (`api/`), viz [api/README.md](api/README.md).
+
+- **Účet bez identity** — passkey, náhodný identifikátor, obnovovací kód.
+  Bez jména, e-mailu i telefonu; smazání jedním tlačítkem.
+- **Upozornění** na Telegram (a WhatsApp, až bude schválený): frekvence,
+  závažnost, tiché hodiny, oblasti, kraj. „Hned, cokoli důležitého“ nemá strop.
+- **Partner IZS** — ověřená složka navrhne zprávu, správce ji schválí, teprve
+  pak odejde čtenářům v dané oblasti. Vždy označená jako zpráva partnera.
+- **Role** čtenář → podporovatel → partner IZS → správce; přiděluje správce,
+  každý zásah je v auditu. Nikdo si roli nemění sám.
+- **Zdroj pravdy je web:** při buildu vydá `/stav.json`, API ho každých
+  10 minut porovná s minulým a z rozdílu udělá zprávy. Nic víc netvrdí.
+
+Bez proměnné `API_URL` v GitHubu se web sestaví bez účtů a všude říká, že se
+připravují. Adresa API se přidá jednou, ve `Settings → Variables`.
+
+## Aplikace do mobilu
+
+Web je PWA: manifest, ikony, service worker. Stránky se berou ze sítě a kopie
+zůstane jen pro čtení bez signálu; hashované soubory buildu z mezipaměti.
+Na mobilu je spodní lišta a postranní panel místo menu.
+
+## Placená vrstva
+
+`PLACENE.hraniceADoprava` v `src/config/web.ts` zakryje část „Hranice
+a doprava“ všem bez role podporovatele. Výchozí je vypnuto a doporučení
+projektu je nechat bezpečnostní informace volně — viz
+[docs/PRAVNI-KONTROLA.md](docs/PRAVNI-KONTROLA.md), část 5.
+
+## Právo
+
+`docs/PRAVNI-KONTROLA.md` — GDPR, ePrivacy, AI Act, § 357 TZ, krizový zákon,
+spotřebitelské právo. Stránky `/soukromi/` a `/podminky/` říkají totéž
+čtenáři. Správce údajů (`PROVOZOVATEL`) se musí doplnit před spuštěním účtů.

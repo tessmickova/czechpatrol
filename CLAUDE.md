@@ -61,6 +61,18 @@ v patičce. Popisky pod grafy vysvětlují značku na obrazovce (co znamená
 
 Piš jako copywriter: nadpis, jedna věta, konec. Ne odstavce.
 
+## Pravidlo č. 7 — účty vědí co nejméně a role dává jen člověk
+
+Účet nemá jméno, e-mail ani telefon a nikdy je mít nebude. Každý nový údaj
+o uživateli je otázka pro `docs/PRAVNI-KONTROLA.md` a `/soukromi/`, ne
+rozhodnutí v kódu. Roli (podporovatel, partner IZS, správce) přiděluje jen
+správce, nikdy automat ani uživatel sám; zprávy partnerů IZS odcházejí až po
+schválení člověkem a vždy s označením „zpráva partnera“. Doby uchování
+v `api/src/synchronizace.ts` a na `/soukromi/` musí být totožné.
+
+API (`api/`) je oddělené od webu a nikdy netvrdí nic, co web nezveřejnil:
+jediný vstup je `/stav.json` z buildu webu.
+
 ## Konvence
 
 - Kód, komentáře i názvy proměnných **česky**. Komentář vysvětluje *proč*, ne *co*.
