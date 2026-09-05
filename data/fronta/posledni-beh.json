@@ -1,26 +1,23 @@
 {
-  "kdy": "2026-09-05T08:52:58.659Z",
+  "kdy": "2026-09-05T08:53:48.391Z",
   "zdroje": [
     {
       "klic": "e-sbirka",
-      "ok": false,
-      "stav": 403,
-      "pocetPolozek": 0,
-      "chyba": "HTTP 403"
+      "ok": true,
+      "stav": 200,
+      "pocetPolozek": 0
     },
     {
       "klic": "vlada",
-      "ok": false,
-      "stav": 403,
-      "pocetPolozek": 0,
-      "chyba": "HTTP 403"
+      "ok": true,
+      "stav": 200,
+      "pocetPolozek": 0
     },
     {
       "klic": "psp",
-      "ok": false,
-      "stav": 403,
-      "pocetPolozek": 0,
-      "chyba": "HTTP 403"
+      "ok": true,
+      "stav": 200,
+      "pocetPolozek": 0
     },
     {
       "klic": "hrad",
@@ -31,52 +28,45 @@
     },
     {
       "klic": "mvcr",
-      "ok": false,
-      "stav": 403,
-      "pocetPolozek": 0,
-      "chyba": "HTTP 403"
+      "ok": true,
+      "stav": 200,
+      "pocetPolozek": 0
     },
     {
       "klic": "mzv",
-      "ok": false,
-      "stav": 403,
-      "pocetPolozek": 0,
-      "chyba": "HTTP 403"
+      "ok": true,
+      "stav": 200,
+      "pocetPolozek": 0
     },
     {
       "klic": "nato",
-      "ok": false,
-      "stav": 403,
-      "pocetPolozek": 0,
-      "chyba": "HTTP 403"
+      "ok": true,
+      "stav": 200,
+      "pocetPolozek": 0
     },
     {
       "klic": "army",
-      "ok": false,
-      "stav": 403,
-      "pocetPolozek": 0,
-      "chyba": "HTTP 403"
+      "ok": true,
+      "stav": 200,
+      "pocetPolozek": 0
     },
     {
       "klic": "ceps",
-      "ok": false,
-      "stav": 403,
-      "pocetPolozek": 0,
-      "chyba": "HTTP 403"
+      "ok": true,
+      "stav": 200,
+      "pocetPolozek": 0
     },
     {
       "klic": "eru",
-      "ok": false,
-      "stav": 403,
-      "pocetPolozek": 0,
-      "chyba": "HTTP 403"
+      "ok": true,
+      "stav": 200,
+      "pocetPolozek": 0
     },
     {
       "klic": "ote",
-      "ok": false,
-      "stav": 403,
-      "pocetPolozek": 0,
-      "chyba": "HTTP 403"
+      "ok": true,
+      "stav": 200,
+      "pocetPolozek": 0
     },
     {
       "klic": "sshr",
@@ -87,52 +77,46 @@
     },
     {
       "klic": "mpo",
-      "ok": false,
-      "stav": 403,
-      "pocetPolozek": 0,
-      "chyba": "HTTP 403"
+      "ok": true,
+      "stav": 200,
+      "pocetPolozek": 0
     },
     {
       "klic": "cnb",
-      "ok": false,
-      "stav": 403,
-      "pocetPolozek": 0,
-      "chyba": "HTTP 403"
+      "ok": true,
+      "stav": 200,
+      "pocetPolozek": 0
     },
     {
       "klic": "ctu",
-      "ok": false,
-      "stav": 403,
-      "pocetPolozek": 0,
-      "chyba": "HTTP 403"
+      "ok": true,
+      "stav": 200,
+      "pocetPolozek": 0
     },
     {
       "klic": "nukib",
-      "ok": false,
-      "stav": 403,
-      "pocetPolozek": 0,
-      "chyba": "HTTP 403"
+      "ok": true,
+      "stav": 200,
+      "pocetPolozek": 0
     },
     {
       "klic": "hzs",
-      "ok": false,
-      "stav": 403,
-      "pocetPolozek": 0,
-      "chyba": "HTTP 403"
+      "ok": true,
+      "stav": 200,
+      "pocetPolozek": 0
     },
     {
       "klic": "dopravni-info",
       "ok": false,
-      "stav": 403,
+      "stav": null,
       "pocetPolozek": 0,
-      "chyba": "HTTP 403"
+      "chyba": "fetch failed"
     },
     {
       "klic": "policie",
-      "ok": false,
-      "stav": 403,
-      "pocetPolozek": 0,
-      "chyba": "HTTP 403"
+      "ok": true,
+      "stav": 200,
+      "pocetPolozek": 0
     }
   ],
   "novychVeFronte": 0

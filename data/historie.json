@@ -568,6 +568,49 @@
         "provoz — komunikace: bezny → bez-zdroje",
         "provoz — bezny-zivot: bezny → bez-zdroje"
       ]
+    },
+    {
+      "kdy": "2026-09-05T08:53:48.391Z",
+      "uroven": "YO",
+      "hybridni": "O1",
+      "primyStret": "G2",
+      "pravni": {
+        "stav-ohrozeni": false,
+        "valecny-stav": false,
+        "mobilizace": false,
+        "nouzovy-stav": false,
+        "vycestovani": false,
+        "hranice": false,
+        "schuze-parlamentu": false
+      },
+      "nato": {
+        "clanek-4": false,
+        "clanek-5": false,
+        "readiness": false,
+        "evakuace": false,
+        "vychodni-kridlo": null
+      },
+      "provoz": {
+        "vycestovani": "bezny",
+        "hranice": "bezny",
+        "palivo": "bezny",
+        "elektrina": "bezny",
+        "plyn": "bezny",
+        "banky": "bezny",
+        "komunikace": "bezny",
+        "bezny-zivot": "bezny"
+      },
+      "udalosti": 30,
+      "zmeny": [
+        "provoz — vycestovani: bez-zdroje → bezny",
+        "provoz — hranice: bez-zdroje → bezny",
+        "provoz — palivo: bez-zdroje → bezny",
+        "provoz — elektrina: bez-zdroje → bezny",
+        "provoz — plyn: bez-zdroje → bezny",
+        "provoz — banky: bez-zdroje → bezny",
+        "provoz — komunikace: bez-zdroje → bezny",
+        "provoz — bezny-zivot: bez-zdroje → bezny"
+      ]
     }
   ]
 }
