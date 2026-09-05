@@ -47,8 +47,20 @@ export const NAZVY_NATO: Record<string, string> = {
 // stránka někde načetla v jiném kódování než UTF-8.
 const KLIC = /^(provoz|pr\u00e1vn\u00ed stav|NATO) \u2014 ([a-z0-9-]+): (.+) \u2192 (.+)$/u;
 
+/** Starší zápisy používají dřívější názvy úrovní; čtenář má vidět jedny. */
+const STARE_NAZVY: [RegExp, string][] = [
+  [/Zvýšená pozornost/g, "Nízká"],
+  [/Téměř oranžová/g, "Větší střední"],
+  [/Téměř červená/g, "Vysoká"],
+  // Bez \b — hranice slov v JS neumí diakritiku.
+  [/Vyšší/g, "Větší střední"],
+  [/Oranžová/g, "Vysoká"],
+  [/Kritická/g, "Vážná"],
+];
+
 /** Přeloží surový zápis změny na větu pro čtenáře. Neznámý tvar vrací beze změny. */
-export function lidskaZmena(z: string): string {
+export function lidskaZmena(puvodni: string): string {
+  const z = STARE_NAZVY.reduce((s, [r, n]) => s.replace(r, n), puvodni);
   const m = z.match(KLIC);
   if (!m) return z.charAt(0).toUpperCase() + z.slice(1);
   const [, oblast, klic, od, do_] = m;

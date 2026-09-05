@@ -4,7 +4,8 @@ import { ListaMobil } from "@/components/lista-mobil";
 import { Navigace } from "@/components/navigace";
 import { PostranniPanel } from "@/components/postranni-panel";
 import { Paticka } from "@/components/paticka";
-import { BetaPruh, UkazkaPruh } from "@/components/pruhy";
+import { UkazkaPruh } from "@/components/pruhy";
+import { StavovaListaData } from "@/components/stavova-lista-data";
 import { DetailIncidentu } from "@/components/detail-incidentu";
 import Prehled from "@/app/page";
 import Dnes from "@/app/dnes/page";
@@ -85,7 +86,7 @@ function Aplikace() {
         Přeskočit na obsah
       </a>
       <Navigace />
-      <BetaPruh />
+      <StavovaListaData />
       <UkazkaPruh />
       <main id="obsah" className="pb-[calc(72px+env(safe-area-inset-bottom))] lg:pb-0">
         <Obsah />

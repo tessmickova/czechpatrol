@@ -1,8 +1,10 @@
 import { JE_UKAZKA } from "@/config/web";
 import type {
-  Archiv, CelkovyStav, HybridniTlak, Incident, NatoPolozka, PravniStav,
-  Nepotvrzene, Provoz, RuskoStav, TydenniHodnoceni, Uroven, Watchlist,
+  Archiv, CelkovyStav, HybridniTlak, Incident, Kategorie, NatoPolozka, PravniStav,
+  Nepotvrzene, Provoz, Puvodce, RuskoStav, TydenniHodnoceni, Uroven, Watchlist,
 } from "./typy";
+import { PORADI_KATEGORII } from "./kategorie";
+import { UROVNE } from "./skala";
 
 import ostreIncidenty from "../../data/incidenty.json";
 import ostryStav from "../../data/stav.json";
@@ -15,6 +17,7 @@ import ostreRusko from "../../data/rusko.json";
 import ostryWatchlist from "../../data/watchlist.json";
 import ostryArchiv from "../../data/historie.json";
 import ostreNepotvrzene from "../../data/nepotvrzeno.json";
+import mesiceData from "../../data/mesice.json";
 
 import ukazkoveIncidenty from "../../data/ukazka/incidenty.json";
 import ukazkovyStav from "../../data/ukazka/stav.json";
@@ -151,19 +154,114 @@ export function nepotvrzene(): Nepotvrzene[] {
  * Samostatný ukazatel. Do celkové úrovně nevstupuje — ta stojí na závažnosti
  * a kumulaci, ne na tom, kolik případů má potvrzené státní řízení.
  */
+/**
+ * Kdo za činy stojí — rozpad podle původce.
+ *
+ * Počítají se jen fyzické incidenty s polem `puvodce`; prohlášení, varování
+ * a reakce států původce nemají. „Potvrzeno“ znamená oficiální závěr nebo
+ * prokázaný domácí pachatel. Do celkové úrovně tenhle rozpad nevstupuje.
+ */
 export function puvodce() {
-  const vse = incidenty();
-  const skupiny = [
-    { klic: "oficialni", nazev: "Oficiální státní atribuce" },
-    { klic: "vysetrovana", nazev: "Vyšetřuje se" },
-    { klic: "nepotvrzena", nazev: "Tvrzení bez potvrzení" },
+  const vse = incidenty().filter((i) => i.puvodce);
+  const skupiny: { klic: Puvodce; nazev: string }[] = [
+    { klic: "rusko", nazev: "Rusko" },
+    { klic: "ukrajina", nazev: "Ukrajina" },
+    { klic: "jiny-stat", nazev: "Jiný stát" },
     { klic: "domaci", nazev: "Domácí pachatel" },
-    { klic: "neznama", nazev: "Pachatel neznámý" },
-  ] as const;
-  return skupiny.map((s) => ({
-    ...s,
-    pocet: vse.filter((i) => i.atribuce === s.klic).length,
-  }));
+    { klic: "neznamy", nazev: "Neznámý" },
+  ];
+  return {
+    celkem: vse.length,
+    bezPuvodce: incidenty().length - vse.length,
+    skupiny: skupiny.map((s) => {
+      const z = vse.filter((i) => i.puvodce === s.klic);
+      return {
+        ...s,
+        pocet: z.length,
+        potvrzeno: z.filter((i) => i.atribuce === "oficialni" || i.atribuce === "domaci").length,
+        vysetruje: z.filter((i) => i.atribuce === "vysetrovana").length,
+      };
+    }),
+  };
+}
+
+/** Dopad po zemích: kolik záznamů, nejvyšší závažnost, oblasti. ČR vždy první. */
+export function zemeDopad() {
+  const mapa = new Map<string, { kodZeme: string; zeme: string; zaznamy: Incident[] }>();
+  for (const i of incidenty()) {
+    const z = mapa.get(i.kodZeme) ?? { kodZeme: i.kodZeme, zeme: i.zeme, zaznamy: [] };
+    z.zaznamy.push(i);
+    mapa.set(i.kodZeme, z);
+  }
+  if (!mapa.has("CZ")) mapa.set("CZ", { kodZeme: "CZ", zeme: "Česko", zaznamy: [] });
+  const radky = [...mapa.values()].map((z) => {
+    const serazene = [...z.zaznamy].sort((a, b) => UROVNE[b.zavaznost].poradi - UROVNE[a.zavaznost].poradi);
+    const kategorie = new Set<Kategorie>();
+    for (const i of z.zaznamy) for (const k of i.kategorie) kategorie.add(k);
+    return {
+      kodZeme: z.kodZeme,
+      zeme: z.kodZeme === "CZ" ? "Česko" : z.zeme,
+      pocet: z.zaznamy.length,
+      nejvyssi: serazene[0]?.zavaznost ?? null,
+      potvrzenych: z.zaznamy.filter((i) => i.atribuce === "oficialni" || i.atribuce === "domaci").length,
+      cinu: z.zaznamy.filter((i) => i.puvodce).length,
+      kategorie: PORADI_KATEGORII.filter((k) => kategorie.has(k)),
+      posledni: z.zaznamy.map((i) => i.datumZjisteni ?? i.datumUdalosti).sort().at(-1) ?? null,
+      nejzavaznejsi: serazene[0] ?? null,
+    };
+  });
+  return radky.sort((a, b) => {
+    if (a.kodZeme === "CZ") return -1;
+    if (b.kodZeme === "CZ") return 1;
+    return b.pocet - a.pocet || (UROVNE[b.nejvyssi ?? "G1"].poradi - UROVNE[a.nejvyssi ?? "G1"].poradi);
+  });
+}
+
+/**
+ * Radar pro ČR odvozený jen ze zveřejněných záznamů s kódem CZ.
+ * Osa bez záznamu je null — web nic nedopočítává.
+ */
+export function tlakCr(): HybridniTlak {
+  const cz = incidenty().filter((i) => i.kodZeme === "CZ");
+  const max = (f: (i: Incident) => boolean): Uroven | null => {
+    const z = cz.filter(f);
+    if (!z.length) return null;
+    return z.reduce((m, i) => (UROVNE[i.zavaznost].poradi > UROVNE[m].poradi ? i.zavaznost : m), z[0].zavaznost);
+  };
+  const osy: { klic: string; nazev: string; kat: Kategorie | null }[] = [
+    { klic: "sabotaze", nazev: "Sabotáže", kat: "sabotaz" },
+    { klic: "atribuce", nazev: "Vyšetřovací a atribuční posuny", kat: "vysetrovani" },
+    { klic: "kyber", nazev: "Kybernetické operace", kat: "kyber" },
+    { klic: "drony", nazev: "Drony a vzdušný prostor", kat: "drony" },
+    { klic: "infrastruktura", nazev: "Kritická infrastruktura", kat: "infrastruktura" },
+    { klic: "primy", nazev: "Přímé vojenské riziko", kat: null },
+  ];
+  return {
+    overeno: null,
+    celkem: max(() => true),
+    podkategorie: osy.map((o) => ({
+      klic: o.klic,
+      nazev: o.nazev,
+      uroven: o.kat ? max((i) => i.kategorie.includes(o.kat!)) : null,
+      poznamka: o.kat ? "Podle zveřejněných záznamů s kódem CZ." : "Přímé vojenské riziko se pro ČR samostatně nehodnotí.",
+    })),
+  };
+}
+
+/** Měsíční řada od roku 2013. Měsíce bez doloženého záznamu jsou prázdné. */
+export function mesice(): { zacatek: string; mesice: { mesic: string; uroven: Uroven | null }[] } {
+  const d = jako<{ zacatek: string; mesice: { mesic: string; uroven: Uroven }[] }>(mesiceData);
+  const mapa = new Map(d.mesice.map((m) => [m.mesic, m.uroven]));
+  const [ry, rm] = d.zacatek.split("-").map(Number);
+  const konec = new Date();
+  const vse: { mesic: string; uroven: Uroven | null }[] = [];
+  for (let y = ry, m = rm; y < konec.getUTCFullYear() || (y === konec.getUTCFullYear() && m <= konec.getUTCMonth() + 1); ) {
+    const klic = `${y}-${String(m).padStart(2, "0")}`;
+    vse.push({ mesic: klic, uroven: mapa.get(klic) ?? null });
+    m++;
+    if (m > 12) { m = 1; y++; }
+  }
+  return { zacatek: d.zacatek, mesice: vse };
 }
 
 /** Archiv stavů v čase. Podklad pro časový posuvník. */

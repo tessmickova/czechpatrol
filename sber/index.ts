@@ -182,10 +182,10 @@ async function main() {
 }
 
 const NAZVY_UROVNI: Record<string, string> = {
-  G1: "Nízká", G2: "Nízká", G3: "Zvýšená pozornost",
-  Y1: "Střední", Y2: "Střední", Y3: "Vyšší", YO: "Téměř oranžová",
-  O1: "Oranžová", O2: "Vysoká", O3: "Téměř červená",
-  R1: "Kritická", R2: "Kritická", R3: "Kritická",
+  G1: "Nízká", G2: "Nízká", G3: "Nízká",
+  Y1: "Menší střední", Y2: "Střední", Y3: "Větší střední", YO: "Větší střední",
+  O1: "Vysoká", O2: "Vysoká", O3: "Vysoká",
+  R1: "Vážná", R2: "Vážná", R3: "Vážná",
 };
 
 const uroven = (u: string | null) => (u ? (NAZVY_UROVNI[u] ?? u) : "neurčeno");

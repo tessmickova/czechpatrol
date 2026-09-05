@@ -27,6 +27,8 @@ export type Atribuce =
   | "oficialni"          // oficiální státní atribuce
   | "domaci";            // prokázán domácí pachatel bez státního řízení
 
+export type Puvodce = "rusko" | "ukrajina" | "jiny-stat" | "domaci" | "neznamy";
+
 export type StavVysetrovani =
   | "probiha"
   | "uzavreno"
@@ -90,6 +92,12 @@ export interface Incident {
   jistota: Jistota;
   stav: StavVysetrovani;
   atribuce: Atribuce;
+  /**
+   * Kdo za činem stojí podle dostupných zjištění. Jen u fyzických incidentů;
+   * prohlášení, varování a reakce států původce nemají. Potvrzení říká
+   * `atribuce` (oficialni / domaci = potvrzeno).
+   */
+  puvodce?: Puvodce | null;
   /** Co doloženě víme. Každá položka musí být krytá zdrojem. */
   fakta: string[];
   /** Co potvrzeno nebylo. Stejně důležité jako fakta. */

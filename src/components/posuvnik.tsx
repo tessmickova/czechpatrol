@@ -11,6 +11,32 @@ import { Prazdno } from "./zaklad";
 
 const DEN = 86_400_000;
 
+const PORADI_NAZVU = ["Nízká", "Menší střední", "Střední", "Větší střední", "Vysoká", "Vážná"];
+
+/**
+ * Druh změny podle textu: zhoršení, zlepšení, nový záznam, nebo jen ověření.
+ * Barva jde vždy s ikonou a slovem — samotná barva nic neříká.
+ */
+function druhZmeny(z: string): { slovo: string; ikona: "nahoru" | "dolu" | "plus" | "fajfka" | "radar"; tridy: string } {
+  const veta = lidskaZmena(z);
+  const ZHORSENI = "border-[#ff8a4c]/50 bg-[#ff8a4c]/10 text-[#ffa877]";
+  const ZLEPSENI = "border-[#4fdd9a]/40 bg-[#4fdd9a]/10 text-[#8ff0c0]";
+  const NOVE = "border-akcent/40 bg-akcent/10 text-akcent-svetla";
+  const OVERENI = "border-white/10 text-noc-tlum";
+  if (/^Zveřejněné události/.test(veta)) return { slovo: "nové", ikona: "plus", tridy: NOVE };
+  if (/^Začátek archivu/.test(veta)) return { slovo: "start", ikona: "radar", tridy: OVERENI };
+  if (/neověřeno → /.test(veta) || / → neověřeno$/.test(veta) || /bez ověřeného zdroje/.test(veta)) return { slovo: "ověření", ikona: "fajfka", tridy: OVERENI };
+  if (/→ (ANO|narušeno)$/.test(veta)) return { slovo: "zhoršení", ikona: "nahoru", tridy: ZHORSENI };
+  if (/→ (NE|běžný provoz)$/.test(veta)) return { slovo: "zlepšení", ikona: "dolu", tridy: ZLEPSENI };
+  const m = veta.match(/: (.+) → (.+)$/);
+  if (m) {
+    const a = PORADI_NAZVU.indexOf(m[1]), b = PORADI_NAZVU.indexOf(m[2]);
+    if (a >= 0 && b >= 0) return b > a ? { slovo: "zhoršení", ikona: "nahoru", tridy: ZHORSENI } : { slovo: "zlepšení", ikona: "dolu", tridy: ZLEPSENI };
+  }
+  if (/posun v rámci úrovně/.test(veta)) return { slovo: "posun", ikona: "radar", tridy: OVERENI };
+  return { slovo: "změna", ikona: "radar", tridy: OVERENI };
+}
+
 const PRAVNI_POPIS: Record<string, string> = {
   "stav-ohrozeni": "Stav ohrožení státu",
   "valecny-stav": "Válečný stav",
@@ -190,7 +216,7 @@ export function CasovyPosuvnik({ archiv }: { archiv: Archiv }) {
         <div className="stitek mb-2 flex items-center gap-2 !text-noc-tlum">
           <span>Svislá osa</span>
           <span aria-hidden className="h-px w-6 bg-white/15" />
-          <span>Nízká → Kritická</span>
+          <span>Nízká → Vážná</span>
         </div>
         <div className="relative mb-3">
           <svg
@@ -300,25 +326,36 @@ export function CasovyPosuvnik({ archiv }: { archiv: Archiv }) {
 
           <div>
             <div className="stitek mb-3 !text-noc-tlum">
-              {aktualni.jeZmena ? "Co se tento den změnilo" : "Poslední změna"}
+              {aktualni.jeZmena ? "Co se ten den změnilo" : "Beze změny"}
             </div>
-            <ul className="space-y-2">
-              {s.zmeny.map((z, n) => (
-                <li
-                  key={n}
-                  className="sklo-noc-slabe flex items-start gap-2.5 rounded-[10px] px-3 py-2.5 text-[14px] leading-snug text-noc-text"
-                >
-                  <span className={`mt-[1px] ${t ? t.textNoc : "text-noc-tlum"}`}>
-                    <Ikona nazev="radar" velikost={13} tah={1.6} />
-                  </span>
-                  {lidskaZmena(z)}
-                </li>
-              ))}
-            </ul>
-
-            {!aktualni.jeZmena && (
-              <p className="stitek mt-3 !text-noc-tlum">
-                z {datumCas(s.kdy)} — od té doby beze změny
+            {aktualni.jeZmena && s.zmeny.some((z) => druhZmeny(z).slovo !== "ověření") ? (
+              <ul className="space-y-2">
+                {s.zmeny.map((z, n) => {
+                  const k = druhZmeny(z);
+                  if (k.slovo === "ověření") return null;
+                  return (
+                    <li
+                      key={n}
+                      className={`flex items-start gap-2.5 rounded-[10px] border px-3 py-2.5 text-[14px] leading-snug ${k.tridy}`}
+                    >
+                      <span className="mt-[1px] shrink-0"><Ikona nazev={k.ikona} velikost={13} tah={2} /></span>
+                      <span>
+                        <span className="stitek mr-2 !text-[9px] !text-current opacity-70">{k.slovo}</span>
+                        {lidskaZmena(z)}
+                      </span>
+                    </li>
+                  );
+                })}
+              </ul>
+            ) : (
+              <p className="flex items-center gap-2 rounded-[10px] border border-[#4fdd9a]/30 bg-[#4fdd9a]/8 px-3 py-2.5 text-[14px] text-[#8ff0c0]">
+                <Ikona nazev="fajfka" velikost={13} tah={2} />
+                {aktualni.jeZmena ? "Jen ověření bez změny stavu." : "Tento den beze změny."} Platí stav z {datumCas(s.kdy)}.
+              </p>
+            )}
+            {aktualni.jeZmena && s.zmeny.some((z) => druhZmeny(z).slovo === "ověření") && s.zmeny.some((z) => druhZmeny(z).slovo !== "ověření") && (
+              <p className="stitek mt-2 !text-noc-tlum">
+                + {s.zmeny.filter((z) => druhZmeny(z).slovo === "ověření").length} ověření bez změny stavu
               </p>
             )}
 

@@ -13,15 +13,15 @@ import { Karta } from "./zaklad";
 
 const FREKVENCE: { hodnota: Frekvence; nazev: string; popis: string }[] = [
   { hodnota: "ihned", nazev: "Hned, cokoli důležitého", popis: "Bez čekání a bez omezení počtu. Když se něco změní, víte to první." },
-  { hodnota: "denne", nazev: "Denní souhrn", popis: "Jedna zpráva večer. Kritické změny přijdou i tak hned." },
-  { hodnota: "tydne", nazev: "Týdenní souhrn", popis: "Jedna zpráva v neděli. Kritické změny přijdou i tak hned." },
-  { hodnota: "jen-kriticke", nazev: "Jen kritické", popis: "Změna právního stavu ČR, článek 4 nebo 5 NATO, kritická úroveň." },
+  { hodnota: "denne", nazev: "Denní souhrn", popis: "Jedna zpráva večer. Vážné změny přijdou i tak hned." },
+  { hodnota: "tydne", nazev: "Týdenní souhrn", popis: "Jedna zpráva v neděli. Vážné změny přijdou i tak hned." },
+  { hodnota: "jen-kriticke", nazev: "Jen vážné", popis: "Změna právního stavu ČR, článek 4 nebo 5 NATO, vážná úroveň." },
 ];
 
 const ZAVAZNOSTI: { hodnota: MinZavaznost; nazev: string; popis: string }[] = [
   { hodnota: "stredni", nazev: "Od střední", popis: "Víc zpráv, včetně signálů, které se teprve skládají." },
   { hodnota: "vysoka", nazev: "Od vysoké", popis: "Doporučené. Věci, kvůli kterým by člověk mohl jednat jinak." },
-  { hodnota: "kriticka", nazev: "Jen kritické", popis: "Minimum zpráv. Jen to, co mění pravidla běžného života." },
+  { hodnota: "kriticka", nazev: "Jen vážné", popis: "Minimum zpráv. Jen to, co mění pravidla běžného života." },
 ];
 
 /** Stránka účtu — jediné místo, kde čtenář něco nastavuje. */
@@ -394,7 +394,7 @@ function Nastaveni({
                   <Popisek pro="do">do</Popisek>
                   <input id="do" type="time" value={n.ticho.do} onChange={(e) => setN({ ...n, ticho: { ...n.ticho!, do: e.target.value } })} className={`${POLE} cislice`} />
                 </div>
-                <p className="col-span-2 text-[13px] text-tlum2">Kritické změny tiché hodiny nerespektují. Ostatní počkají do rána.</p>
+                <p className="col-span-2 text-[13px] text-tlum2">Vážné změny tiché hodiny nerespektují. Ostatní počkají do rána.</p>
               </div>
             )}
             <Prepinac

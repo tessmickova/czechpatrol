@@ -68,7 +68,7 @@ export function ObloukovyMerak({
       <text x={cx - r - 6} y={cy + 17} textAnchor="start" fontSize="10" fontFamily="var(--font-mono)"
         fill={naNoci ? "#64789a" : "#64789a"} letterSpacing="0.9">NÍZKÁ</text>
       <text x={cx + r + 6} y={cy + 17} textAnchor="end" fontSize="10" fontFamily="var(--font-mono)"
-        fill={naNoci ? "#64789a" : "#64789a"} letterSpacing="0.9">KRITICKÁ</text>
+        fill={naNoci ? "#64789a" : "#64789a"} letterSpacing="0.9">VÁŽNÁ</text>
 
       {/* Hodnota patří dovnitř přístroje — pokud ji nenese okolí. */}
       {!skrytPopisek && (
@@ -105,7 +105,7 @@ const POPISKY: Record<string, string> = {
   kyber: "Kyber",
   drony: "Drony",
   infrastruktura: "Infra.",
-  primy: "Přímý střet",
+  primy: "Střet",
 };
 
 /**
@@ -115,13 +115,13 @@ const POPISKY: Record<string, string> = {
  * že hybridní tlak může být vysoký, zatímco přímé riziko zůstává nízké.
  * To je celý smysl grafu.
  */
-export function RadarTlaku({ tlak, velikost = 300 }: { tlak: HybridniTlak; velikost?: number }) {
+export function RadarTlaku({ tlak, velikost = 300, okraj = 72 }: { tlak: HybridniTlak; velikost?: number; okraj?: number }) {
   const osy = tlak.podkategorie;
   if (osy.length < 3) return null;
 
   const cx = velikost / 2;
   const cy = velikost / 2;
-  const r = velikost / 2 - 72;
+  const r = velikost / 2 - okraj;
   const n = osy.length;
 
   const uhel = (i: number) => (i * 2 * Math.PI) / n - Math.PI / 2;

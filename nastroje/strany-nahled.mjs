@@ -13,7 +13,7 @@ await p.route(/fonts\.(googleapis|gstatic)\.com/, (route) => {
 const chyby = []; p.on("pageerror", (e) => chyby.push(String(e)));
 const cesty = (process.env.CESTY ?? "/ucet/,/izs/,/soukromi/,/sprava/").split(",");
 for (const c of cesty) {
-  await p.goto(`http://localhost:4410/#${c}`, { waitUntil: "networkidle" });
+  await p.goto(`http://localhost:${process.env.PORT ?? 4410}/#${c}`, { waitUntil: "networkidle" });
   await p.waitForTimeout(500);
   await p.evaluate(() => { document.documentElement.style.scrollBehavior = "auto"; scrollTo(0, 0); });
   const nazev = c.replace(/\//g, "") || "prehled";
@@ -21,7 +21,7 @@ for (const c of cesty) {
   if (process.env.CELE) await p.screenshot({ path: `/tmp/snap/s-${nazev}-cele.png`, fullPage: true });
 }
 // panel
-await p.goto("http://localhost:4410/#/", { waitUntil: "networkidle" });
+await p.goto(`http://localhost:${process.env.PORT ?? 4410}/#/`, { waitUntil: "networkidle" });
 await p.waitForTimeout(300);
 await p.evaluate(() => window.dispatchEvent(new CustomEvent("czechpatrol:panel")));
 await p.waitForTimeout(500);

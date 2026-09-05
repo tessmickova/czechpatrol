@@ -40,26 +40,26 @@ export const STAVY: Record<StavVysetrovani, string> = {
 export const TYPY_ZDROJU: Record<TypZdroje, { znacka: string; popis: string; tridy: string }> = {
   primary: {
     znacka: "PRIMARY", popis: "Orgán, který věc sám oznámil — policie, vláda, NATO, EU.",
-    tridy: "border-inkoust bg-inkoust text-white",
+    tridy: "border-akcent/50 bg-akcent/15 text-akcent-svetla",
   },
   wire: {
     znacka: "WIRE", popis: "Mezinárodní agentura — Reuters, AP, AFP.",
-    tridy: "border-linka bg-plocha text-inkoust",
+    tridy: "border-linka bg-noc/60 text-inkoust",
   },
   media: {
     znacka: "MEDIA", popis: "Zpravodajské médium.",
-    tridy: "border-linka bg-plocha text-tlum",
+    tridy: "border-linka bg-noc/60 text-tlum",
   },
   local: {
     znacka: "LOCAL", popis: "Regionální nebo místní médium.",
-    tridy: "border-linka bg-plocha text-tlum",
+    tridy: "border-linka bg-noc/60 text-tlum",
   },
   analysis: {
     znacka: "ANALYSIS", popis: "Analytický zdroj — think tank, výzkumné pracoviště.",
-    tridy: "border-[#2b2a4a] bg-[#141428] text-[#9db1cc]",
+    tridy: "border-[#b28cff]/40 bg-[#b28cff]/10 text-[#d3bcff]",
   },
   social: {
     znacka: "NEOVĚŘENÝ", popis: "Sociální síť. Nízká důvěryhodnost — sám o sobě nikdy nezvyšuje stupeň hrozby.",
-    tridy: "border-[#5e5124] bg-[#2a2410] text-[#f0d47e]",
+    tridy: "border-jantar/40 bg-jantar/10 text-jantar",
   },
 };

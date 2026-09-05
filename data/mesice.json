@@ -1,0 +1,16 @@
+{
+  "poznamka": "Nejvyšší týdenní úroveň v měsíci. Měsíce bez hodnoty nemají doložený záznam — nedopočítávají se. Doplnění let 2013–2026 vyžaduje ozdrojované záznamy.",
+  "zacatek": "2013-01",
+  "mesice": [
+    {
+      "mesic": "2026-07",
+      "uroven": "Y1",
+      "zdroj": "data/tydny.json"
+    },
+    {
+      "mesic": "2026-08",
+      "uroven": "YO",
+      "zdroj": "data/tydny.json"
+    }
+  ]
+}

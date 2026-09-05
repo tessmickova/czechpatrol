@@ -1,70 +1,106 @@
-import { Ikona } from "./ikony";
-import { Karta } from "./zaklad";
+import { puvodce } from "@/lib/data";
+import { Ikona, type NazevIkony } from "./ikony";
+import { Napoveda } from "./zaklad";
 
-const BARVY: Record<string, { pruh: string; text: string }> = {
-  oficialni: { pruh: "bg-[#e8834a]", text: "text-[#f4a67c]" },
-  vysetrovana: { pruh: "bg-[#e3c155]", text: "text-[#f0d47e]" },
-  nepotvrzena: { pruh: "bg-[#64789a]", text: "text-tlum" },
-  domaci: { pruh: "bg-[#4fbe86]", text: "text-[#7fdcac]" },
-  neznama: { pruh: "bg-linka", text: "text-tlum2" },
+/*
+  Kdo za tím stojí.
+
+  Lidi zajímá jednoduchá otázka: kolik z toho bylo Rusko, kolik Ukrajina,
+  kolik někdo jiný — a kolik se vůbec neví. Tady je to napsané v číslech
+  a s tím, co je potvrzené. Do celkové úrovně tenhle rozpad nevstupuje.
+*/
+
+const BARVY: Record<string, { pruh: string; text: string; ikona: NazevIkony }> = {
+  rusko: { pruh: "bg-[#ff8a4c]", text: "text-[#ffa877]", ikona: "vlajka" },
+  ukrajina: { pruh: "bg-[#ffd166]", text: "text-[#ffe08a]", ikona: "vlajka" },
+  "jiny-stat": { pruh: "bg-[#b28cff]", text: "text-[#d3bcff]", ikona: "globus" },
+  domaci: { pruh: "bg-[#4fdd9a]", text: "text-[#8ff0c0]", ikona: "uzivatel" },
+  neznamy: { pruh: "bg-[#64789a]", text: "text-tlum", ikona: "lupa" },
 };
 
-/**
- * Co se ví o původci.
- *
- * Samostatný ukazatel vedle celkové úrovně. Ta stojí na závažnosti a kumulaci,
- * ne na počtu případů s potvrzeným státním řízením — jinak by ji jeden
- * vyšetřovací posun rozhoupal oběma směry.
- */
-export function PuvodcePanel({
-  skupiny, bezHlavicky = false,
-}: {
-  skupiny: { klic: string; nazev: string; pocet: number }[];
-  bezHlavicky?: boolean;
-}) {
-  const celkem = skupiny.reduce((a, b) => a + b.pocet, 0);
-  if (!celkem) return null;
+export function KdoZaTimStoji() {
+  const p = puvodce();
+  const potvrzenoRusko = p.skupiny.find((s) => s.klic === "rusko")?.potvrzeno ?? 0;
+  const neznamych = p.skupiny.find((s) => s.klic === "neznamy")?.pocet ?? 0;
+  const domacich = p.skupiny.find((s) => s.klic === "domaci")?.pocet ?? 0;
 
   return (
-    <Karta className="border-0 bg-transparent p-0">
-      <div className="mb-5 flex flex-wrap items-baseline justify-between gap-3">
-        {!bezHlavicky && <h3 className="podnadpis text-[17px]">Co se ví o původci</h3>}
-        <span className="stitek">{celkem} záznamů</span>
-      </div>
+    <div className="grid gap-4">
+      <div>
+        <div className="mb-3 flex items-baseline justify-between gap-3">
+          <span className="stitek">{p.celkem} fyzických incidentů</span>
+          <Napoveda
+            vpravo
+            popis={
+              <span className="block">
+                Počítají se jen činy — sabotáže, útoky, průniky. Prohlášení politiků, varování služeb a reakce
+                států ({p.bezPuvodce} záznamů) původce nemají, proto tu nejsou.
+              </span>
+            }
+          >
+            <span className="stitek flex items-center gap-1 !text-akcent"><Ikona nazev="info" velikost={13} /> co se počítá</span>
+          </Napoveda>
+        </div>
 
-      <div aria-hidden className="mb-5 flex h-[10px] gap-[2px] overflow-hidden rounded-full">
-        {skupiny
-          .filter((s) => s.pocet > 0)
-          .map((s) => (
-            <span
-              key={s.klic}
-              className={BARVY[s.klic].pruh}
-              style={{ width: `${(s.pocet / celkem) * 100}%` }}
-            />
-          ))}
-      </div>
-
-      <dl className="space-y-3">
-        {skupiny.map((s) => (
-          <div key={s.klic} className="flex items-center justify-between gap-4">
-            <dt className="flex items-center gap-2.5 text-[13.5px]">
-              <span aria-hidden className={`h-[9px] w-[9px] shrink-0 rounded-[3px] ${BARVY[s.klic].pruh}`} />
-              {s.nazev}
-            </dt>
-            <dd className={`cislice text-[14px] font-semibold ${s.pocet ? BARVY[s.klic].text : "text-tlum2"}`}>
-              {s.pocet}
-            </dd>
+        {p.celkem > 0 && (
+          <div aria-hidden className="mb-4 flex h-[10px] overflow-hidden rounded-full bg-linka2">
+            {p.skupiny.filter((s) => s.pocet).map((s) => (
+              <span key={s.klic} className={BARVY[s.klic].pruh} style={{ width: `${(s.pocet / p.celkem) * 100}%` }} />
+            ))}
           </div>
-        ))}
-      </dl>
+        )}
 
-      <p className="mt-5 flex items-start gap-2.5 border-t border-linka2 pt-4 text-[12.5px] leading-relaxed text-tlum">
-        <span className="mt-[1px] shrink-0 text-tlum2">
-          <Ikona nazev="vaha" velikost={14} />
-        </span>
-        Do celkové úrovně tenhle rozpad nevstupuje. Ta stojí na závažnosti a kumulaci
-        signálů, ne na tom, kolika případům se prokázalo státní řízení.
-      </p>
-    </Karta>
+        <ul className="divide-y divide-linka2">
+          {p.skupiny.map((s) => (
+            <li key={s.klic} className="flex items-center gap-3 py-2.5">
+              <span aria-hidden className={`h-[9px] w-[9px] shrink-0 rounded-[3px] ${BARVY[s.klic].pruh}`} />
+              <span className={`flex items-center gap-1.5 text-[15px] font-semibold ${s.pocet ? "text-inkoust" : "text-tlum2"}`}>
+                <Ikona nazev={BARVY[s.klic].ikona} velikost={14} />
+                {s.nazev}
+              </span>
+              <span className="ml-auto flex items-baseline gap-3">
+                {s.pocet > 0 && s.klic !== "neznamy" && (
+                  <span className="stitek !text-tlum2">
+                    {s.potvrzeno === s.pocet ? "vše potvrzeno" : s.potvrzeno ? `${s.potvrzeno} potvrzeno` : s.vysetruje ? "vyšetřuje se" : "nepotvrzeno"}
+                  </span>
+                )}
+                <span className={`velke-cislo text-[24px] ${s.pocet ? BARVY[s.klic].text : "text-tlum2"}`}>{s.pocet}</span>
+              </span>
+            </li>
+          ))}
+        </ul>
+      </div>
+
+      <div className="sklo-noc-slabe rounded-[16px] p-4">
+        <div className="stitek mb-2">Co z toho plyne</div>
+        <ul className="space-y-2.5 text-[14.5px] leading-relaxed text-tlum">
+          <li className="flex gap-2.5">
+            <span className="mt-[3px] shrink-0 text-[#ffa877]"><Ikona nazev="fajfka" velikost={14} tah={2} /></span>
+            <span>
+              <b className="font-semibold text-inkoust">Rusku je oficiálně připsán {potvrzenoRusko === 1 ? "jeden případ" : `${potvrzenoRusko} případů`}</b>
+              {potvrzenoRusko ? " (Leipzig/Halle, německá atribuce podpořená EU, NATO i ČR)." : "."} Ostatní jsou domněnky nebo otevřené vyšetřování.
+            </span>
+          </li>
+          <li className="flex gap-2.5">
+            <span className="mt-[3px] shrink-0 text-[#8ff0c0]"><Ikona nazev="fajfka" velikost={14} tah={2} /></span>
+            <span>
+              <b className="font-semibold text-inkoust">{domacich} případy dostaly domácí vysvětlení</b> bez státního řízení. Proto se celá série nevykládá jednou příčinou.
+            </span>
+          </li>
+          <li className="flex gap-2.5">
+            <span className="mt-[3px] shrink-0 text-tlum"><Ikona nazev="lupa" velikost={14} tah={2} /></span>
+            <span>
+              <b className="font-semibold text-inkoust">U {neznamych} případů se pachatel neví.</b> Ukrajině není připsán žádný. Když se to změní, změní se i tahle čísla.
+            </span>
+          </li>
+          <li className="flex gap-2.5">
+            <span className="mt-[3px] shrink-0 text-akcent"><Ikona nazev="info" velikost={14} tah={2} /></span>
+            <span>
+              Pro eskalaci je rozhodující jen potvrzené státní řízení celé série. Jednotlivá atribuce úroveň zvýšila, sama o sobě válku neznamená.
+            </span>
+          </li>
+        </ul>
+      </div>
+    </div>
   );
 }

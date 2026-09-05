@@ -5,7 +5,8 @@ import { Navigace } from "@/components/navigace";
 import { PostranniPanel } from "@/components/postranni-panel";
 import { RegistraceSW } from "@/components/pwa";
 import { Paticka } from "@/components/paticka";
-import { BetaPruh, UkazkaPruh } from "@/components/pruhy";
+import { UkazkaPruh } from "@/components/pruhy";
+import { StavovaListaData } from "@/components/stavova-lista-data";
 import { WEB } from "@/config/web";
 import "./globals.css";
 
@@ -69,7 +70,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           Přeskočit na obsah
         </a>
         <Navigace />
-        <BetaPruh />
+        <StavovaListaData />
         <UkazkaPruh />
         <main id="obsah" className="pb-[calc(72px+env(safe-area-inset-bottom))] lg:pb-0">{children}</main>
         <Paticka />

@@ -278,14 +278,57 @@ const DOPADY: Record<string, string> = {
 };
 
 export function WatchlistPanel({ watchlist, kompaktni = false }: { watchlist: Watchlist; kompaktni?: boolean }) {
+  if (kompaktni) {
+    return (
+      <div className="grid gap-3 lg:grid-cols-[minmax(0,1.6fr)_minmax(0,1fr)]">
+        <div>
+          <div className="stitek mb-2 flex items-center gap-1.5 !text-[#ffa877]"><Ikona nazev="nahoru" velikost={12} tah={2.2} /> Co by hodnocení zvýšilo</div>
+          <ul className="grid gap-1.5 sm:grid-cols-2">
+            {watchlist.eskalacni.map((p) => (
+              <li key={p.cislo}>
+                <details className="group rounded-[10px] border border-linka">
+                  <summary className="flex items-center gap-2.5 px-3 py-2 text-[13.5px] font-semibold text-inkoust">
+                    <span className="cislice stitek !text-tlum2">{p.cislo}</span>
+                    <span className="min-w-0 flex-1 leading-snug">{p.nazev}</span>
+                    <span className="stitek-tmavy shrink-0 text-[#ffa877]">{DOPADY[p.dopad]}</span>
+                    <span aria-hidden className="grid h-5 w-5 shrink-0 place-items-center rounded-full border border-akcent/50 text-akcent group-open:bg-akcent group-open:text-noc"><Ikona nazev="info" velikost={10} tah={2.2} /></span>
+                  </summary>
+                  <p className="px-3 pb-3 text-[13px] leading-relaxed text-tlum">{p.popis}</p>
+                </details>
+              </li>
+            ))}
+          </ul>
+        </div>
+        <div>
+          <div className="stitek mb-2 flex items-center gap-1.5 !text-[#8ff0c0]"><Ikona nazev="dolu" velikost={12} tah={2.2} /> Co by ho uklidnilo</div>
+          <ul className="space-y-1.5">
+            {watchlist.uklidnujici.map((u, i) => (
+              <li key={i} className="flex gap-2 text-[13.5px] leading-snug text-tlum">
+                <span aria-hidden className="mt-[7px] h-[5px] w-[5px] shrink-0 rounded-full bg-[#4fdd9a]" />
+                {u}
+              </li>
+            ))}
+          </ul>
+          <details className="group mt-3 rounded-[10px] border border-linka">
+            <summary className="flex items-center gap-2 px-3 py-2 text-[13px] font-semibold text-inkoust">
+              <Ikona nazev="zebrik" velikost={13} />
+              Kam až by se to mohlo posunout
+              <span aria-hidden className="ml-auto grid h-5 w-5 place-items-center rounded-full border border-akcent/50 text-akcent group-open:bg-akcent group-open:text-noc"><Ikona nazev="info" velikost={10} tah={2.2} /></span>
+            </summary>
+            <div className="px-3 pb-3"><ScenarovaCesta kompaktni /></div>
+          </details>
+        </div>
+      </div>
+    );
+  }
   return (
-    <div className={`grid gap-5 ${kompaktni ? "" : "lg:grid-cols-[minmax(0,1.55fr)_minmax(0,1fr)]"}`}>
+    <div className="grid gap-5 lg:grid-cols-[minmax(0,1.55fr)_minmax(0,1fr)]">
       <div>
         <div className="mb-4 flex items-center gap-2">
           <OdznakTypu typ="scenar" />
           <span className="stitek">Co by hodnocení zvýšilo</span>
         </div>
-        <ul className={`grid gap-3 ${kompaktni ? "" : "sm:grid-cols-2"}`}>
+        <ul className="grid gap-3 sm:grid-cols-2">
           {watchlist.eskalacni.map((p) => (
             <Karta jako="li" key={p.cislo} className="p-4">
               <div className="mb-2.5 flex items-baseline justify-between gap-3">
@@ -339,7 +382,23 @@ const KROKY = [
  * nahoru je rovnoměrná ani že je pravděpodobná. Mezi každými dvěma příčkami
  * stojí značka „není automatické“, protože právě to si čtenář domýšlí sám.
  */
-export function ScenarovaCesta() {
+export function ScenarovaCesta({ kompaktni = false }: { kompaktni?: boolean }) {
+  if (kompaktni) {
+    return (
+      <ol className="space-y-1.5">
+        {KROKY.map((k, i) => (
+          <li key={k.nazev} className="flex gap-2.5 text-[13px] leading-snug">
+            <span className="cislice stitek mt-[2px] w-4 shrink-0 !text-tlum2">{i + 1}</span>
+            <span>
+              <span className="font-semibold text-inkoust">{k.nazev}</span>
+              {i < KROKY.length - 1 && <span className="stitek ml-2 !text-[9px] !text-jantar">není automatické</span>}
+            </span>
+          </li>
+        ))}
+        <li className="stitek pt-1 !text-tlum2">Orientační sled, ne předpověď.</li>
+      </ol>
+    );
+  }
   return (
     <div>
       <div className="mb-6 flex flex-wrap items-center gap-2.5">

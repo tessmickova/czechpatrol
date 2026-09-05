@@ -13,7 +13,7 @@ await p.route(/fonts\.(googleapis|gstatic)\.com/, (route) => {
   } catch { route.abort(); }
 });
 const chyby = []; p.on("pageerror", (e) => chyby.push(String(e)));
-await p.goto("http://localhost:4410/", { waitUntil: "networkidle" });
+await p.goto(`http://localhost:${process.env.PORT ?? 4410}/`, { waitUntil: "networkidle" });
 await p.waitForTimeout(600);
 await p.evaluate(() => { document.documentElement.style.scrollBehavior = "auto"; });
 const predpona = process.env.PREDPONA ?? "d";

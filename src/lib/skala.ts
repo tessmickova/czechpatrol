@@ -17,6 +17,11 @@ export interface DefiniceUrovne {
   posunVys: string;
 }
 
+/*
+  Názvosloví je jedna řada: Nízká → Menší střední → Střední → Větší střední
+  → Vysoká → Vážná. Barva se z názvu odvozuje, nikdy naopak — „oranžová“
+  není úroveň, jen její barva.
+*/
 export const UROVNE: Record<Uroven, DefiniceUrovne> = {
   G1: {
     kod: "G1", pasmo: "zelena", nazev: "Nízká", poradi: 1,
@@ -33,14 +38,14 @@ export const UROVNE: Record<Uroven, DefiniceUrovne> = {
     posunVys: "Nárůst četnosti nebo první oficiální atribuce.",
   },
   G3: {
-    kod: "G3", pasmo: "zelena", nazev: "Zvýšená pozornost", poradi: 3,
+    kod: "G3", pasmo: "zelena", nazev: "Nízká", poradi: 3,
     znamena: "Stále klidný stav, ale objevují se signály, které sledujeme podrobněji.",
     zpusobuje: "Jednotlivé incidenty proti infrastruktuře bez známého původce.",
     neznamena: "Neznamená mimořádnou situaci ani žádné omezení běžného života.",
     posunVys: "Incidenty ve více zemích během krátké doby.",
   },
   Y1: {
-    kod: "Y1", pasmo: "zluta", nazev: "Střední", poradi: 4,
+    kod: "Y1", pasmo: "zluta", nazev: "Menší střední", poradi: 4,
     znamena: "Zvýšená pozornost. Incidenty tvoří rozpoznatelný vzor.",
     zpusobuje: "Několik incidentů proti infrastruktuře v různých zemích.",
     neznamena: "Neznamená ohrožení běžného života v ČR ani vojenské riziko.",
@@ -54,21 +59,21 @@ export const UROVNE: Record<Uroven, DefiniceUrovne> = {
     posunVys: "Oficiální atribuce státu nebo zásah do kritické infrastruktury.",
   },
   Y3: {
-    kod: "Y3", pasmo: "zluta", nazev: "Vyšší", poradi: 6,
+    kod: "Y3", pasmo: "zluta", nazev: "Větší střední", poradi: 6,
     znamena: "Hybridní tlak je zřetelný a dlouhodobý.",
     zpusobuje: "Vzorec incidentů napříč Evropou, opakované vyšetřovací závěry.",
     neznamena: "Neznamená mobilizaci, omezení vycestování ani vojenský konflikt.",
     posunVys: "Oficiální atribuce státního řízení série útoků.",
   },
   YO: {
-    kod: "YO", pasmo: "prechod", nazev: "Téměř oranžová", poradi: 7,
+    kod: "YO", pasmo: "prechod", nazev: "Větší střední", poradi: 7,
     znamena: "Na horní hranici žluté. Další podobná událost pásmo posune.",
     zpusobuje: "Kumulace hybridních incidentů spolu s institucionální reakcí států.",
     neznamena: "Neznamená bezprostřední vojenské riziko ani mimořádná opatření v ČR.",
     posunVys: "Oficiální atribuce, škoda na kritické infrastruktuře, svolání čl. 4.",
   },
   O1: {
-    kod: "O1", pasmo: "oranzova", nazev: "Oranžová", poradi: 8,
+    kod: "O1", pasmo: "oranzova", nazev: "Vysoká", poradi: 8,
     znamena: "Vážný hybridní tlak s doloženým státním podílem nebo velkou škodou.",
     zpusobuje: "Oficiální atribuce, výpadek infrastruktury, zásadní vyšetřovací průlom.",
     neznamena: "Ani oranžová sama o sobě neznamená válku ani mobilizaci.",
@@ -82,28 +87,28 @@ export const UROVNE: Record<Uroven, DefiniceUrovne> = {
     posunVys: "Vojenský incident mezi NATO a Ruskem s oběťmi nebo škodou.",
   },
   O3: {
-    kod: "O3", pasmo: "oranzova", nazev: "Téměř červená", poradi: 10,
+    kod: "O3", pasmo: "oranzova", nazev: "Vysoká", poradi: 10,
     znamena: "Na hranici mezi hybridním tlakem a přímým střetem.",
     zpusobuje: "Ozbrojený incident, evakuace personálu, mimořádné právní kroky států.",
     neznamena: "Neznamená, že k eskalaci nutně dojde — stabilizace je stále možná.",
     posunVys: "Ozbrojený střet mezi silami NATO a Ruska.",
   },
   R1: {
-    kod: "R1", pasmo: "cervena", nazev: "Kritická", poradi: 11,
+    kod: "R1", pasmo: "cervena", nazev: "Vážná", poradi: 11,
     znamena: "Probíhá ozbrojený incident s přímou účastí NATO nebo ČR.",
     zpusobuje: "Přímý vojenský střet, aktivace čl. 5, útok na území členského státu.",
     neznamena: "—",
     posunVys: "Rozšíření střetu na více států.",
   },
   R2: {
-    kod: "R2", pasmo: "cervena", nazev: "Kritická", poradi: 12,
+    kod: "R2", pasmo: "cervena", nazev: "Vážná", poradi: 12,
     znamena: "Rozsáhlý ozbrojený konflikt s účastí NATO.",
     zpusobuje: "Vojenské operace většího rozsahu.",
     neznamena: "—",
     posunVys: "—",
   },
   R3: {
-    kod: "R3", pasmo: "cervena", nazev: "Kritická", poradi: 13,
+    kod: "R3", pasmo: "cervena", nazev: "Vážná", poradi: 13,
     znamena: "Nejzávažnější možný stav.",
     zpusobuje: "Konflikt zasahující území ČR.",
     neznamena: "—",
@@ -148,7 +153,7 @@ export const PASMA: Record<Pasmo, {
     pozadiNoc: "bg-[#ffd166]/10", plnaNoc: "#ffd166",
   },
   prechod: {
-    nazev: "Téměř oranžová",
+    nazev: "Větší střední",
     tecka: "bg-[#ffab4d]", text: "text-[#ffc07a]", ramecek: "border-[#ffab4d]/35",
     pozadi: "bg-[#ffab4d]/10", pruh: "bg-[#ffab4d]", plna: "#ffab4d",
     teckaNoc: "bg-[#ffab4d]", textNoc: "text-[#ffc07a]", ramecekNoc: "border-[#ffab4d]/35",
@@ -162,7 +167,7 @@ export const PASMA: Record<Pasmo, {
     pozadiNoc: "bg-[#ff8a4c]/10", plnaNoc: "#ff8a4c",
   },
   cervena: {
-    nazev: "Kritická",
+    nazev: "Vážná",
     tecka: "bg-[#ff5c6c]", text: "text-[#ff8c98]", ramecek: "border-[#ff5c6c]/35",
     pozadi: "bg-[#ff5c6c]/10", pruh: "bg-[#ff5c6c]", plna: "#ff5c6c",
     teckaNoc: "bg-[#ff5c6c]", textNoc: "text-[#ff8c98]", ramecekNoc: "border-[#ff5c6c]/35",
