@@ -1,1 +1,152 @@
-[]
+[
+  {
+    "zacatek": "2026-07-01T00:00:00Z",
+    "konec": "2026-07-05T23:59:59Z",
+    "celkova": "Y1",
+    "hybridni": "Y1",
+    "primyStret": "G2",
+    "pocty": {
+      "zelena": 0,
+      "zluta": 1,
+      "oranzova": 0,
+      "cervena": 0
+    },
+    "uplnost": "castecne",
+    "shrnuti": ""
+  },
+  {
+    "zacatek": "2026-07-06T00:00:00Z",
+    "konec": "2026-07-12T23:59:59Z",
+    "celkova": "Y1",
+    "hybridni": "Y1",
+    "primyStret": "G2",
+    "pocty": {
+      "zelena": 0,
+      "zluta": 0,
+      "oranzova": 0,
+      "cervena": 0
+    },
+    "uplnost": "castecne",
+    "shrnuti": ""
+  },
+  {
+    "zacatek": "2026-07-13T00:00:00Z",
+    "konec": "2026-07-19T23:59:59Z",
+    "celkova": "Y1",
+    "hybridni": "Y3",
+    "primyStret": "G2",
+    "pocty": {
+      "zelena": 0,
+      "zluta": 1,
+      "oranzova": 0,
+      "cervena": 0
+    },
+    "uplnost": "castecne",
+    "shrnuti": ""
+  },
+  {
+    "zacatek": "2026-07-20T00:00:00Z",
+    "konec": "2026-07-26T23:59:59Z",
+    "celkova": "Y1",
+    "hybridni": "Y3",
+    "primyStret": "G2",
+    "pocty": {
+      "zelena": 0,
+      "zluta": 1,
+      "oranzova": 0,
+      "cervena": 0
+    },
+    "uplnost": "castecne",
+    "shrnuti": ""
+  },
+  {
+    "zacatek": "2026-07-27T00:00:00Z",
+    "konec": "2026-08-02T23:59:59Z",
+    "celkova": "Y1",
+    "hybridni": "O1",
+    "primyStret": "G2",
+    "pocty": {
+      "zelena": 0,
+      "zluta": 0,
+      "oranzova": 0,
+      "cervena": 0
+    },
+    "uplnost": "castecne",
+    "shrnuti": ""
+  },
+  {
+    "zacatek": "2026-08-03T00:00:00Z",
+    "konec": "2026-08-09T23:59:59Z",
+    "celkova": "Y1",
+    "hybridni": "O1",
+    "primyStret": "G2",
+    "pocty": {
+      "zelena": 0,
+      "zluta": 2,
+      "oranzova": 0,
+      "cervena": 0
+    },
+    "uplnost": "castecne",
+    "shrnuti": ""
+  },
+  {
+    "zacatek": "2026-08-10T00:00:00Z",
+    "konec": "2026-08-16T23:59:59Z",
+    "celkova": "Y1",
+    "hybridni": "O1",
+    "primyStret": "G2",
+    "pocty": {
+      "zelena": 1,
+      "zluta": 0,
+      "oranzova": 0,
+      "cervena": 0
+    },
+    "uplnost": "castecne",
+    "shrnuti": ""
+  },
+  {
+    "zacatek": "2026-08-17T00:00:00Z",
+    "konec": "2026-08-23T23:59:59Z",
+    "celkova": "Y1",
+    "hybridni": "O1",
+    "primyStret": "G2",
+    "pocty": {
+      "zelena": 0,
+      "zluta": 2,
+      "oranzova": 0,
+      "cervena": 0
+    },
+    "uplnost": "castecne",
+    "shrnuti": ""
+  },
+  {
+    "zacatek": "2026-08-24T00:00:00Z",
+    "konec": "2026-08-30T23:59:59Z",
+    "celkova": "YO",
+    "hybridni": "O1",
+    "primyStret": "G2",
+    "pocty": {
+      "zelena": 1,
+      "zluta": 5,
+      "oranzova": 1,
+      "cervena": 0
+    },
+    "uplnost": "castecne",
+    "shrnuti": ""
+  },
+  {
+    "zacatek": "2026-08-31T00:00:00Z",
+    "konec": "2026-09-06T23:59:59Z",
+    "celkova": "YO",
+    "hybridni": "O1",
+    "primyStret": "G2",
+    "pocty": {
+      "zelena": 0,
+      "zluta": 6,
+      "oranzova": 11,
+      "cervena": 0
+    },
+    "uplnost": "castecne",
+    "shrnuti": ""
+  }
+]

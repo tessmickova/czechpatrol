@@ -1,8 +1,13 @@
 {
-  "aktualizovano": null,
-  "uroven": null,
-  "trend": null,
+  "aktualizovano": "2026-09-05T00:00:00Z",
+  "uroven": "YO",
+  "trend": "nahoru",
   "trendPopis": "",
-  "shrnuti": "",
-  "noveSignaly": { "celkem": 0, "vysoke": 0, "stredni": 0, "kriticke": 0 }
+  "shrnuti": "Hodnocení je zvýšené kvůli kumulaci hybridních, sabotážních a atribučních signálů v Evropě — především oficiální německé atribuci útoku na Leipzig/Halle Rusku, kterou podpořily i české služby. Nejde o důkaz bezprostředního vojenského útoku na NATO.",
+  "noveSignaly": {
+    "celkem": 5,
+    "vysoke": 4,
+    "stredni": 1,
+    "kriticke": 0
+  }
 }

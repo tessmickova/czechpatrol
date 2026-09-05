@@ -134,7 +134,9 @@ export function TabulkaTydnu({ tydny }: { tydny: TydenniHodnoceni[] }) {
                     </td>
                   ))}
                   <td className="px-4 py-3.5">
-                    {t.uplnost === "castecne" ? (
+                    {t.uplnost === "castecne" && c === 0 ? (
+                      <span className="stitek">neúplná data</span>
+                    ) : t.uplnost === "castecne" ? (
                       <Napoveda
                         popis={
                           <span className="block">

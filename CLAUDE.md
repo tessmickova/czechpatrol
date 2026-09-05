@@ -2,7 +2,7 @@
 
 ## Pravidlo č. 0 — ověř, že zadání patří sem
 
-**Tenhle repozitář je jen bezpečnostní přehled „Kontext“.** Když se zadání týká
+**Tenhle repozitář je jen bezpečnostní přehled CzechPatrol.** Když se zadání týká
 jiného webu, jiné domény nebo jiného projektu, zeptej se, jestli to nemá být
 řešeno jinde, a teprve po potvrzení pokračuj.
 

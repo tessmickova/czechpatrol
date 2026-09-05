@@ -42,7 +42,7 @@ export function OdberPanel({ kompaktni = false }: { kompaktni?: boolean }) {
   return (
     <div className="grid gap-5 lg:grid-cols-[minmax(0,1.3fr)_minmax(0,1fr)]">
       <div>
-        <ul className="grid gap-3 sm:grid-cols-2">
+        <ul className="grid auto-rows-fr gap-3 sm:grid-cols-2">
           {kanaly.map((k) => {
             const obsah = (
               <>
@@ -68,18 +68,18 @@ export function OdberPanel({ kompaktni = false }: { kompaktni?: boolean }) {
             );
 
             return (
-              <li key={k.klic}>
+              <li key={k.klic} className="h-full">
                 {k.dostupny ? (
                   <a
                     href={k.url}
                     target={k.klic === "rss" ? undefined : "_blank"}
                     rel="noopener noreferrer"
-                    className="flex items-start gap-3 rounded-[14px] border border-linka bg-plocha p-4 transition-colors hover:border-inkoust/30"
+                    className="zdvih flex h-full items-start gap-3 rounded-[14px] border border-linka bg-plocha p-4"
                   >
                     {obsah}
                   </a>
                 ) : (
-                  <div className="flex items-start gap-3 rounded-[14px] border border-dashed border-linka bg-plocha/50 p-4">
+                  <div className="flex h-full items-start gap-3 rounded-[14px] border border-dashed border-linka bg-plocha/50 p-4">
                     {obsah}
                   </div>
                 )}

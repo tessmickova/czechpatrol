@@ -53,6 +53,21 @@ export function KartaUdalosti({
           {incident.novy && (
             <span className="stitek-tmavy rounded-full bg-inkoust px-2 py-1 text-plocha">Nové</span>
           )}
+          {incident.archivniZaznam && (
+            <Napoveda
+              vpravo
+              popis={
+                <span className="block">
+                  Záznam z dřívějšího monitoringu. Odkaz na primární zdroj u něj zatím
+                  není doplněný.
+                </span>
+              }
+            >
+              <span className="stitek-tmavy rounded-full border border-current/30 px-2 py-1 opacity-70">
+                Archiv
+              </span>
+            </Napoveda>
+          )}
           {incident.ukazka && <OdznakUkazky />}
           <Napoveda popis={<VykladUrovne uroven={incident.zavaznost} />} vpravo>
             <span

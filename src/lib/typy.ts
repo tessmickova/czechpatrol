@@ -111,6 +111,11 @@ export interface Incident {
   aiZpracovano: boolean;
   /** Prošlo lidskou kontrolou. Bez toho se na produkci nezobrazuje. */
   lidskyOvereno: boolean;
+  /**
+   * Záznam přenesený z dřívějšího monitoringu. Odkaz na primární zdroj u něj
+   * zatím není doplněný — web to musí přiznat, ne to zamlčet.
+   */
+  archivniZaznam?: boolean;
 }
 
 export interface SouvisejiciVazba {

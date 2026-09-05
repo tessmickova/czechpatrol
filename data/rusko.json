@@ -1,28 +1,62 @@
 {
-  "overeno": null,
-  "casovyTlak": null,
-  "dopadNaIndex": "",
+  "overeno": "2026-09-05T00:00:00Z",
+  "casovyTlak": "Y1",
+  "dopadNaIndex": "Celkové hodnocení sám o sobě nemění.",
   "poznamkaZdravi": "Zdravotní časový tlak: NEPROKÁZANÝ. Tvrzení o zdravotním stavu se objevují opakovaně a bez doložení. Nepřebíráme je ze sociálních sítí ani z anonymních kanálů.",
   "ukazatele": [
-    { "nazev": "Ekonomický tlak", "uroven": null, "poznamka": "Vývoj rozpočtu, kurzu a příjmů ze surovin." },
-    { "nazev": "Fiskální tlak", "uroven": null, "poznamka": "Deficit, čerpání rezervních fondů." },
-    { "nazev": "Vojenské výsledky", "uroven": null, "poznamka": "Postup na frontě vůči vynaloženým ztrátám." },
-    { "nazev": "Personální čistky", "uroven": null, "poznamka": "Odvolání ve vedení armády a bezpečnostních složek." },
-    { "nazev": "Boj elit", "uroven": null, "poznamka": "Veřejně viditelné spory mocenských skupin." },
-    { "nazev": "Mobilizační přípravy", "uroven": null, "poznamka": "Administrativní kroky, nábor, změny branné legislativy." },
-    { "nazev": "Veřejná aktivita Putina", "uroven": null, "poznamka": "Četnost a charakter veřejných vystoupení." },
-    { "nazev": "Informace o nástupnictví", "uroven": null, "poznamka": "Pouze doložené informace. Spekulace nezahrnujeme." }
+    {
+      "nazev": "Ekonomický tlak",
+      "uroven": null,
+      "poznamka": "Vývoj rozpočtu, kurzu a příjmů ze surovin."
+    },
+    {
+      "nazev": "Fiskální tlak",
+      "uroven": null,
+      "poznamka": "Deficit, čerpání rezervních fondů."
+    },
+    {
+      "nazev": "Vojenské výsledky",
+      "uroven": null,
+      "poznamka": "Postup na frontě vůči vynaloženým ztrátám."
+    },
+    {
+      "nazev": "Personální čistky",
+      "uroven": null,
+      "poznamka": "Odvolání ve vedení armády a bezpečnostních složek."
+    },
+    {
+      "nazev": "Boj elit",
+      "uroven": null,
+      "poznamka": "Veřejně viditelné spory mocenských skupin."
+    },
+    {
+      "nazev": "Mobilizační přípravy",
+      "uroven": null,
+      "poznamka": "Administrativní kroky, nábor, změny branné legislativy."
+    },
+    {
+      "nazev": "Veřejná aktivita Putina",
+      "uroven": null,
+      "poznamka": "Četnost a charakter veřejných vystoupení."
+    },
+    {
+      "nazev": "Informace o nástupnictví",
+      "uroven": null,
+      "poznamka": "Pouze doložené informace. Spekulace nezahrnujeme."
+    }
   ],
   "sledujemePo": {
     "nadpis": "Co budeme sledovat po ruských volbách",
-    "termin": "",
+    "termin": "18.–20. 9. 2026",
     "body": [
-      "mimořádný nábor do ozbrojených sil",
-      "administrativní mobilizační přípravy",
-      "výrazné rozšíření raketové kampaně",
-      "energetickou kampaň proti Ukrajině",
-      "další militarizaci ekonomiky",
-      "kvalitativní nárůst hybridních akcí v Evropě"
+      "mobilizační vyhlášky",
+      "regionální náborové kvóty",
+      "změny odvodového systému",
+      "omezení odjezdu určitých skupin z Ruska",
+      "rozsáhlejší vojenskou logistiku",
+      "výraznou raketovou nebo dronovou kampaň",
+      "útoky na ukrajinskou energetiku",
+      "zvýšení hybridních operací v Evropě"
     ]
   }
 }

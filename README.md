@@ -1,4 +1,4 @@
-# Kontext — bezpečnostní přehled ČR
+# CzechPatrol — bezpečnostní přehled ČR
 
 Nezávislý experimentální analytický web, který sleduje bezpečnostní situaci
 relevantní pro Českou republiku a Evropu, řadí ověřené události chronologicky

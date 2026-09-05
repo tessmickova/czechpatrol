@@ -1,12 +1,42 @@
 {
-  "overeno": null,
-  "celkem": null,
+  "overeno": "2026-09-05T00:00:00Z",
+  "celkem": "O1",
   "podkategorie": [
-    { "klic": "sabotaze", "nazev": "Sabotáže", "uroven": null, "poznamka": "Fyzické útoky a pokusy o útok proti infrastruktuře v Evropě." },
-    { "klic": "atribuce", "nazev": "Vyšetřovací a atribuční posuny", "uroven": null, "poznamka": "Nové oficiální závěry o původcích starších incidentů." },
-    { "klic": "kyber", "nazev": "Kybernetické operace", "uroven": null, "poznamka": "Incidenty s dopadem na provoz institucí nebo infrastruktury." },
-    { "klic": "drony", "nazev": "Drony a vzdušný prostor", "uroven": null, "poznamka": "Průniky a průzkumná činnost nad citlivými objekty." },
-    { "klic": "infrastruktura", "nazev": "Kritická infrastruktura", "uroven": null, "poznamka": "Energetika, doprava, vodní hospodářství, telekomunikace." },
-    { "klic": "primy", "nazev": "Přímé vojenské riziko", "uroven": null, "poznamka": "Riziko ozbrojeného střetu mezi NATO a Ruskem. Sledováno odděleně od hybridního tlaku — obojí se nesmí směšovat." }
+    {
+      "klic": "sabotaze",
+      "nazev": "Sabotáže",
+      "uroven": "O1",
+      "poznamka": "Fyzické útoky a pokusy o útok proti infrastruktuře v Evropě."
+    },
+    {
+      "klic": "atribuce",
+      "nazev": "Vyšetřovací a atribuční posuny",
+      "uroven": "O1",
+      "poznamka": "Nové oficiální závěry o původcích starších incidentů."
+    },
+    {
+      "klic": "kyber",
+      "nazev": "Kybernetické operace",
+      "uroven": "Y1",
+      "poznamka": "Incidenty s dopadem na provoz institucí nebo infrastruktury."
+    },
+    {
+      "klic": "drony",
+      "nazev": "Drony a vzdušný prostor",
+      "uroven": "Y1",
+      "poznamka": "Průniky a průzkumná činnost nad citlivými objekty."
+    },
+    {
+      "klic": "infrastruktura",
+      "nazev": "Kritická infrastruktura",
+      "uroven": "O1",
+      "poznamka": "Energetika, doprava, vodní hospodářství, telekomunikace."
+    },
+    {
+      "klic": "primy",
+      "nazev": "Přímé vojenské riziko",
+      "uroven": "G2",
+      "poznamka": "Riziko ozbrojeného střetu mezi NATO a Ruskem. Sledováno odděleně od hybridního tlaku — obojí se nesmí směšovat."
+    }
   ]
 }

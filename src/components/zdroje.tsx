@@ -29,14 +29,21 @@ export function SeznamZdroju({ zdroje, husty = false }: { zdroje: Zdroj[]; husty
         <li key={z.url + i} className="flex flex-wrap items-baseline gap-x-2.5 gap-y-1">
           <span className="cislice w-4 shrink-0 text-[11px] text-tlum2">{i + 1}</span>
           <ZnackaZdroje zdroj={z} />
-          <a
-            href={z.url}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="odkaz text-[13px] font-medium"
-          >
-            {z.nazev}
-          </a>
+          {z.url ? (
+            <a
+              href={z.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="odkaz text-[13px] font-medium"
+            >
+              {z.nazev}
+            </a>
+          ) : (
+            <span className="text-[13px] font-medium">
+              {z.nazev}
+              <span className="stitek ml-2">odkaz k doplnění</span>
+            </span>
+          )}
           {z.publikovano && (
             <span className="cislice text-[11.5px] text-tlum2">{datumCas(z.publikovano)}</span>
           )}

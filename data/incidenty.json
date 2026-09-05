@@ -1,1 +1,1521 @@
-[]
+[
+  {
+    "id": "a01",
+    "slug": "shadow-fleet-drony",
+    "titulek": "Analýza: ruská „shadow fleet“ jako platforma pro dronové operace",
+    "kratkyTitulek": "Analýza shadow fleet",
+    "zeme": "Evropa",
+    "kodZeme": "EU",
+    "kategorie": [
+      "hybridni",
+      "zpravodajske"
+    ],
+    "datumUdalosti": "2026-07-02T00:00:00Z",
+    "aktualizovano": "2026-07-02T00:00:00Z",
+    "zavaznost": "Y1",
+    "jistota": "stredni",
+    "stav": "bez-vysetrovani",
+    "atribuce": "nepotvrzena",
+    "fakta": [
+      "Analýza IISS citovaná ISW hodnotila, že Rusko pravděpodobně využívalo plavidla tzv. shadow fleet jako platformy pro vypouštění nebo obnovu dronů při incidentech nad státy NATO.",
+      "Pracovala s incidenty od srpna 2024 do února 2026 a hodnotila možnou roli GRU."
+    ],
+    "neznameho": [
+      "Zda šlo o systematickou operaci, nebo o jednotlivé případy.",
+      "Nešlo o nové červencové incidenty — analyzovány byly starší události."
+    ],
+    "vyznam": "Naznačuje možný systematický způsob provádění hybridních průzkumných operací proti NATO. Jde o analytické hodnocení, ne o nový fyzický útok.",
+    "eskalacniSpousteče": [],
+    "deeskalacniSignaly": [],
+    "zdroje": [
+      {
+        "nazev": "Vlastní monitoring — archiv 5. 9. 2026",
+        "url": "",
+        "typ": "analysis",
+        "publikovano": "2026-09-05T00:00:00Z",
+        "primarni": false,
+        "jazyk": "cs"
+      }
+    ],
+    "souvisejici": [],
+    "historie": [
+      {
+        "kdy": "2026-07-02T00:00:00Z",
+        "text": "Událost zaznamenána v monitoringu.",
+        "novySignal": true
+      }
+    ],
+    "novy": false,
+    "zapocitanoTyden": "2026-06-29",
+    "aiZpracovano": true,
+    "lidskyOvereno": true,
+    "archivniZaznam": true
+  },
+  {
+    "id": "a02",
+    "slug": "litevske-varovani",
+    "titulek": "Litevské zpravodajské varování před útoky na kritickou infrastrukturu",
+    "kratkyTitulek": "Litevské varování",
+    "zeme": "Litva",
+    "kodZeme": "LT",
+    "kategorie": [
+      "zpravodajske",
+      "infrastruktura"
+    ],
+    "datumUdalosti": "2026-07-15T00:00:00Z",
+    "aktualizovano": "2026-07-15T00:00:00Z",
+    "zavaznost": "Y1",
+    "jistota": "stredni",
+    "stav": "bez-vysetrovani",
+    "atribuce": "nepotvrzena",
+    "fakta": [
+      "Prezident Gitanas Nausėda uvedl, že zpravodajské hodnocení připouští možné ruské útoky proti kritické infrastruktuře v Pobaltí nebo Polsku."
+    ],
+    "neznameho": [
+      "Konkrétní cíle ani načasování.",
+      "Kontext ukazoval spíše na omezené operace než na rozsáhlou invazi."
+    ],
+    "vyznam": "Časné varování před typem operací, které se později v létě staly významnou součástí evropského bezpečnostního obrazu.",
+    "eskalacniSpousteče": [],
+    "deeskalacniSignaly": [],
+    "zdroje": [
+      {
+        "nazev": "Vlastní monitoring — archiv 5. 9. 2026",
+        "url": "",
+        "typ": "analysis",
+        "publikovano": "2026-09-05T00:00:00Z",
+        "primarni": false,
+        "jazyk": "cs"
+      }
+    ],
+    "souvisejici": [],
+    "historie": [
+      {
+        "kdy": "2026-07-15T00:00:00Z",
+        "text": "Událost zaznamenána v monitoringu.",
+        "novySignal": true
+      }
+    ],
+    "novy": false,
+    "zapocitanoTyden": "2026-07-13",
+    "aiZpracovano": true,
+    "lidskyOvereno": true,
+    "archivniZaznam": true
+  },
+  {
+    "id": "a03",
+    "slug": "polsko-ukorisene-drony",
+    "titulek": "Polsko varuje před využitím ukořistěných ukrajinských dronů",
+    "kratkyTitulek": "Varování Polska k dronům",
+    "zeme": "Polsko",
+    "kodZeme": "PL",
+    "kategorie": [
+      "drony",
+      "zpravodajske"
+    ],
+    "datumUdalosti": "2026-07-21T00:00:00Z",
+    "aktualizovano": "2026-07-21T00:00:00Z",
+    "zavaznost": "Y1",
+    "jistota": "stredni",
+    "stav": "bez-vysetrovani",
+    "atribuce": "nepotvrzena",
+    "fakta": [
+      "Ministr obrany Władysław Kosiniak-Kamysz upozornil, že Rusko získalo množství ukrajinských dronů a může je použít proti Polsku, Pobaltí nebo dalším státům NATO."
+    ],
+    "neznameho": [
+      "Zda k takovému použití došlo."
+    ],
+    "vyznam": "Popisuje konkrétní mechanismus možné provokace nebo operace pod falešnou vlajkou.",
+    "eskalacniSpousteče": [],
+    "deeskalacniSignaly": [],
+    "zdroje": [
+      {
+        "nazev": "Vlastní monitoring — archiv 5. 9. 2026",
+        "url": "",
+        "typ": "analysis",
+        "publikovano": "2026-09-05T00:00:00Z",
+        "primarni": false,
+        "jazyk": "cs"
+      }
+    ],
+    "souvisejici": [],
+    "historie": [
+      {
+        "kdy": "2026-07-21T00:00:00Z",
+        "text": "Událost zaznamenána v monitoringu.",
+        "novySignal": true
+      }
+    ],
+    "novy": false,
+    "zapocitanoTyden": "2026-07-20",
+    "aiZpracovano": true,
+    "lidskyOvereno": true,
+    "archivniZaznam": true
+  },
+  {
+    "id": "a04",
+    "slug": "leipzig-halle-utok",
+    "titulek": "Leipzig/Halle: pokus o útok výbušným dronem",
+    "kratkyTitulek": "Leipzig/Halle: pokus o útok",
+    "zeme": "Německo",
+    "kodZeme": "DE",
+    "kategorie": [
+      "sabotaz",
+      "infrastruktura"
+    ],
+    "datumUdalosti": "2026-08-04T00:00:00Z",
+    "datumZjisteni": "2026-09-01T00:00:00Z",
+    "aktualizovano": "2026-09-01T00:00:00Z",
+    "zavaznost": "O1",
+    "jistota": "potvrzeno",
+    "stav": "probiha",
+    "atribuce": "oficialni",
+    "fakta": [
+      "Na letišti Leipzig/Halle došlo k pokusu o útok pomocí dronu s výbušným materiálem.",
+      "Německo 1. září oficiálně oznámilo, že bezpečnostní zjištění a informace evropských partnerů ukazují na ruské zapojení.",
+      "Německo následně uzavřelo ruský konzulát v Bonnu a přijalo kroky proti Russian House v Berlíně."
+    ],
+    "neznameho": [
+      "Pravomocné soudní prokázání řetězce velení."
+    ],
+    "vyznam": "Nejsilnější dosud veřejně zachycený případ: fyzická operace na území NATO, kterou významný členský stát oficiálně připsal Rusku. Atribuci politicky přijaly NATO i EU a podpořily ji poznatky českých služeb.",
+    "eskalacniSpousteče": [],
+    "deeskalacniSignaly": [],
+    "zdroje": [
+      {
+        "nazev": "Vlastní monitoring — archiv 5. 9. 2026",
+        "url": "",
+        "typ": "analysis",
+        "publikovano": "2026-09-05T00:00:00Z",
+        "primarni": false,
+        "jazyk": "cs"
+      }
+    ],
+    "souvisejici": [
+      {
+        "incidentId": "a19",
+        "potvrzena": true,
+        "popis": "navazující zjištění nebo reakce"
+      },
+      {
+        "incidentId": "a18",
+        "potvrzena": true,
+        "popis": "navazující zjištění nebo reakce"
+      },
+      {
+        "incidentId": "a22",
+        "potvrzena": true,
+        "popis": "navazující zjištění nebo reakce"
+      }
+    ],
+    "historie": [
+      {
+        "kdy": "2026-08-04T00:00:00Z",
+        "text": "Událost zaznamenána v monitoringu.",
+        "novySignal": true
+      },
+      {
+        "kdy": "2026-09-01T00:00:00Z",
+        "text": "Nové vyšetřovací nebo atribuční zjištění.",
+        "novySignal": true
+      }
+    ],
+    "novy": false,
+    "zapocitanoTyden": "2026-08-31",
+    "aiZpracovano": true,
+    "lidskyOvereno": true,
+    "archivniZaznam": true
+  },
+  {
+    "id": "a05",
+    "slug": "grossenkneten",
+    "titulek": "Großenkneten: incidenty u zařízení na zpracování zemního plynu",
+    "kratkyTitulek": "Großenkneten: plynové zařízení",
+    "zeme": "Německo",
+    "kodZeme": "DE",
+    "kategorie": [
+      "sabotaz",
+      "infrastruktura",
+      "vysetrovani"
+    ],
+    "datumUdalosti": "2026-08-09T00:00:00Z",
+    "datumZjisteni": "2026-09-04T00:00:00Z",
+    "aktualizovano": "2026-09-04T00:00:00Z",
+    "zavaznost": "O1",
+    "jistota": "vysoka",
+    "stav": "probiha",
+    "atribuce": "vysetrovana",
+    "fakta": [
+      "V noci na 9. srpna byly u strategického plynového zařízení pozorovány drony; dva maskovaní lidé napadli pracovníka ostrahy a uprchli.",
+      "Dřívější incident 1. července: osoba na střeše pořizovala záznamy.",
+      "Německá protiteroristická prokuratura vyšetřuje oba případy pro podezření na agenturní jednání za účelem sabotáže."
+    ],
+    "neznameho": [
+      "Kdo za incidenty stojí.",
+      "Zda spolu oba incidenty souvisejí."
+    ],
+    "vyznam": "Zapojení protiteroristické prokuratury znamená, že se pracuje s verzí cizí agenturní činnosti, ne s běžnou kriminalitou.",
+    "eskalacniSpousteče": [],
+    "deeskalacniSignaly": [],
+    "zdroje": [
+      {
+        "nazev": "Vlastní monitoring — archiv 5. 9. 2026",
+        "url": "",
+        "typ": "analysis",
+        "publikovano": "2026-09-05T00:00:00Z",
+        "primarni": false,
+        "jazyk": "cs"
+      }
+    ],
+    "souvisejici": [],
+    "historie": [
+      {
+        "kdy": "2026-08-09T00:00:00Z",
+        "text": "Událost zaznamenána v monitoringu.",
+        "novySignal": true
+      },
+      {
+        "kdy": "2026-09-04T00:00:00Z",
+        "text": "Nové vyšetřovací nebo atribuční zjištění.",
+        "novySignal": true
+      }
+    ],
+    "novy": false,
+    "zapocitanoTyden": "2026-08-31",
+    "aiZpracovano": true,
+    "lidskyOvereno": true,
+    "archivniZaznam": true
+  },
+  {
+    "id": "a06",
+    "slug": "nato-vzdusne-incidenty",
+    "titulek": "NATO řeší narušení vzdušného prostoru Polska a Rumunska",
+    "kratkyTitulek": "Vzdušné incidenty PL/RO",
+    "zeme": "Polsko",
+    "kodZeme": "PL",
+    "kategorie": [
+      "drony",
+      "nato"
+    ],
+    "datumUdalosti": "2026-08-12T00:00:00Z",
+    "aktualizovano": "2026-08-12T00:00:00Z",
+    "zavaznost": "G3",
+    "jistota": "vysoka",
+    "stav": "bez-vysetrovani",
+    "atribuce": "neznama",
+    "fakta": [
+      "NATO diskutovalo nedávná narušení vzdušného prostoru Polska a Rumunska."
+    ],
+    "neznameho": [
+      "Zda šlo o úmyslné cílení."
+    ],
+    "vyznam": "Opakované průniky patří k dlouhodobému pozadí. Hodnocení zvyšuje až změna vzorce — vyšší četnost, hloubka, více států, zbraně, oběti nebo mimořádná reakce NATO.",
+    "eskalacniSpousteče": [],
+    "deeskalacniSignaly": [],
+    "zdroje": [
+      {
+        "nazev": "Vlastní monitoring — archiv 5. 9. 2026",
+        "url": "",
+        "typ": "analysis",
+        "publikovano": "2026-09-05T00:00:00Z",
+        "primarni": false,
+        "jazyk": "cs"
+      }
+    ],
+    "souvisejici": [],
+    "historie": [
+      {
+        "kdy": "2026-08-12T00:00:00Z",
+        "text": "Událost zaznamenána v monitoringu.",
+        "novySignal": true
+      }
+    ],
+    "novy": false,
+    "zapocitanoTyden": "2026-08-10",
+    "aiZpracovano": true,
+    "lidskyOvereno": true,
+    "archivniZaznam": true
+  },
+  {
+    "id": "a07",
+    "slug": "haniska-skyeton",
+    "titulek": "Haniska u Prešova: pokus o žhářský útok na výrobce dronů Skyeton",
+    "kratkyTitulek": "Haniska: žhářský útok",
+    "zeme": "Slovensko",
+    "kodZeme": "SK",
+    "kategorie": [
+      "sabotaz"
+    ],
+    "datumUdalosti": "2026-08-22T00:00:00Z",
+    "datumZjisteni": "2026-08-28T00:00:00Z",
+    "aktualizovano": "2026-08-28T00:00:00Z",
+    "zavaznost": "O1",
+    "jistota": "vysoka",
+    "stav": "obvineni",
+    "atribuce": "vysetrovana",
+    "fakta": [
+      "Cílem byl výrobce dronů Skyeton v Hanisce u Prešova.",
+      "Slovenská policie 28. srpna zadržela čtvrtého podezřelého."
+    ],
+    "neznameho": [
+      "Kdo útok objednal — policie v zachyceném stavu neměla důkaz, že šlo o Rusko."
+    ],
+    "vyznam": "Fyzický útok proti společnosti v obranném a dronovém sektoru, ve stejném období jako obdobné případy v Polsku.",
+    "eskalacniSpousteče": [],
+    "deeskalacniSignaly": [],
+    "zdroje": [
+      {
+        "nazev": "Vlastní monitoring — archiv 5. 9. 2026",
+        "url": "",
+        "typ": "analysis",
+        "publikovano": "2026-09-05T00:00:00Z",
+        "primarni": false,
+        "jazyk": "cs"
+      }
+    ],
+    "souvisejici": [],
+    "historie": [
+      {
+        "kdy": "2026-08-22T00:00:00Z",
+        "text": "Událost zaznamenána v monitoringu.",
+        "novySignal": true
+      },
+      {
+        "kdy": "2026-08-28T00:00:00Z",
+        "text": "Nové vyšetřovací nebo atribuční zjištění.",
+        "novySignal": true
+      }
+    ],
+    "novy": false,
+    "zapocitanoTyden": "2026-08-24",
+    "aiZpracovano": true,
+    "lidskyOvereno": true,
+    "archivniZaznam": true
+  },
+  {
+    "id": "a08",
+    "slug": "ukrajinske-tvrzeni-nabor",
+    "titulek": "Ukrajinské tvrzení o možném povolebním náboru v Rusku",
+    "kratkyTitulek": "Tvrzení o povolebním náboru",
+    "zeme": "Ukrajina",
+    "kodZeme": "UA",
+    "kategorie": [
+      "rusko",
+      "zpravodajske"
+    ],
+    "datumUdalosti": "2026-08-23T00:00:00Z",
+    "aktualizovano": "2026-08-23T00:00:00Z",
+    "zavaznost": "Y1",
+    "jistota": "nizka",
+    "stav": "bez-vysetrovani",
+    "atribuce": "nepotvrzena",
+    "fakta": [
+      "Prezident Volodymyr Zelenskyj uvedl, že Ukrajina očekává po ruských parlamentních volbách 18.–20. září krok k náboru přibližně 300 000 dalších lidí."
+    ],
+    "neznameho": [
+      "Zda takové rozhodnutí v Rusku padlo. Jde o ukrajinské hodnocení, ne o potvrzený ruský plán."
+    ],
+    "vyznam": "Sledujeme jako možný ukazatel po ruských volbách. Samo tvrzení hodnocení nezvyšuje.",
+    "eskalacniSpousteče": [],
+    "deeskalacniSignaly": [],
+    "zdroje": [
+      {
+        "nazev": "Vlastní monitoring — archiv 5. 9. 2026",
+        "url": "",
+        "typ": "analysis",
+        "publikovano": "2026-09-05T00:00:00Z",
+        "primarni": false,
+        "jazyk": "cs"
+      }
+    ],
+    "souvisejici": [],
+    "historie": [
+      {
+        "kdy": "2026-08-23T00:00:00Z",
+        "text": "Událost zaznamenána v monitoringu.",
+        "novySignal": true
+      }
+    ],
+    "novy": false,
+    "zapocitanoTyden": "2026-08-17",
+    "aiZpracovano": true,
+    "lidskyOvereno": true,
+    "archivniZaznam": true
+  },
+  {
+    "id": "a09",
+    "slug": "eu-sluzby-bez-priprav",
+    "titulek": "Evropské služby nevidí bezprostřední přípravu útoku na NATO",
+    "kratkyTitulek": "Služby: bez příprav útoku",
+    "zeme": "Evropa",
+    "kodZeme": "EU",
+    "kategorie": [
+      "zpravodajske",
+      "nato"
+    ],
+    "datumUdalosti": "2026-08-27T00:00:00Z",
+    "aktualizovano": "2026-08-27T00:00:00Z",
+    "zavaznost": "G2",
+    "jistota": "vysoka",
+    "stav": "bez-vysetrovani",
+    "atribuce": "neznama",
+    "fakta": [
+      "Seniorní představitel EU uvedl, že evropské zpravodajské služby nevidí známky přípravy bezprostředního ruského vojenského útoku na evropské členy NATO.",
+      "Očekávalo se pokračování hybridních akcí."
+    ],
+    "neznameho": [],
+    "vyznam": "Uklidňující kontext. Odděluje rostoucí hybridní aktivitu od bezprostředního konvenčního útoku — to jsou dvě různé věci.",
+    "eskalacniSpousteče": [],
+    "deeskalacniSignaly": [],
+    "zdroje": [
+      {
+        "nazev": "Vlastní monitoring — archiv 5. 9. 2026",
+        "url": "",
+        "typ": "analysis",
+        "publikovano": "2026-09-05T00:00:00Z",
+        "primarni": false,
+        "jazyk": "cs"
+      }
+    ],
+    "souvisejici": [],
+    "historie": [
+      {
+        "kdy": "2026-08-27T00:00:00Z",
+        "text": "Událost zaznamenána v monitoringu.",
+        "novySignal": true
+      }
+    ],
+    "novy": false,
+    "zapocitanoTyden": "2026-08-24",
+    "aiZpracovano": true,
+    "lidskyOvereno": true,
+    "archivniZaznam": true
+  },
+  {
+    "id": "a10",
+    "slug": "bis-vyrocni-zprava",
+    "titulek": "Výroční zpráva BIS k ruské hybridní aktivitě",
+    "kratkyTitulek": "Výroční zpráva BIS",
+    "zeme": "Česko",
+    "kodZeme": "CZ",
+    "kategorie": [
+      "cr",
+      "zpravodajske"
+    ],
+    "datumUdalosti": "2026-08-27T00:00:00Z",
+    "aktualizovano": "2026-08-27T00:00:00Z",
+    "zavaznost": "Y1",
+    "jistota": "potvrzeno",
+    "stav": "bez-vysetrovani",
+    "atribuce": "oficialni",
+    "fakta": [
+      "BIS popsala Rusko jako pokračující zdroj hybridní aktivity vůči EU a ČR.",
+      "Upozornila na obnovený růst sabotážních a podvratných operací v druhé polovině roku 2025, včetně modelu „disposable agents“."
+    ],
+    "neznameho": [
+      "Zpráva hodnotila převážně události roku 2025, nešlo o nové útoky."
+    ],
+    "vyznam": "České zpravodajské hodnocení potvrzuje dlouhodobý trend, o kterém web mluví. Není to nová událost.",
+    "eskalacniSpousteče": [],
+    "deeskalacniSignaly": [],
+    "zdroje": [
+      {
+        "nazev": "Vlastní monitoring — archiv 5. 9. 2026",
+        "url": "",
+        "typ": "analysis",
+        "publikovano": "2026-09-05T00:00:00Z",
+        "primarni": false,
+        "jazyk": "cs"
+      }
+    ],
+    "souvisejici": [],
+    "historie": [
+      {
+        "kdy": "2026-08-27T00:00:00Z",
+        "text": "Událost zaznamenána v monitoringu.",
+        "novySignal": true
+      }
+    ],
+    "novy": false,
+    "zapocitanoTyden": "2026-08-24",
+    "aiZpracovano": true,
+    "lidskyOvereno": true,
+    "archivniZaznam": true
+  },
+  {
+    "id": "a11",
+    "slug": "baltska-protidronova",
+    "titulek": "Státy Baltského moře zakládají společnou protidronovou jednotku",
+    "kratkyTitulek": "Protidronová task force",
+    "zeme": "Německo",
+    "kodZeme": "DE",
+    "kategorie": [
+      "nato",
+      "drony"
+    ],
+    "datumUdalosti": "2026-08-28T00:00:00Z",
+    "aktualizovano": "2026-08-28T00:00:00Z",
+    "zavaznost": "Y1",
+    "jistota": "vysoka",
+    "stav": "bez-vysetrovani",
+    "atribuce": "neznama",
+    "fakta": [
+      "Německý ministr vnitra Alexander Dobrindt oznámil plán států Baltského moře na společnou protidronovou task force."
+    ],
+    "neznameho": [],
+    "vyznam": "Preventivní obranná reakce, ne důkaz bezprostředního útoku. Sledujeme institucionální kroky států.",
+    "eskalacniSpousteče": [],
+    "deeskalacniSignaly": [],
+    "zdroje": [
+      {
+        "nazev": "Vlastní monitoring — archiv 5. 9. 2026",
+        "url": "",
+        "typ": "analysis",
+        "publikovano": "2026-09-05T00:00:00Z",
+        "primarni": false,
+        "jazyk": "cs"
+      }
+    ],
+    "souvisejici": [],
+    "historie": [
+      {
+        "kdy": "2026-08-28T00:00:00Z",
+        "text": "Událost zaznamenána v monitoringu.",
+        "novySignal": true
+      }
+    ],
+    "novy": false,
+    "zapocitanoTyden": "2026-08-24",
+    "aiZpracovano": true,
+    "lidskyOvereno": true,
+    "archivniZaznam": true
+  },
+  {
+    "id": "a12",
+    "slug": "svedske-nasazeni-finsko",
+    "titulek": "Švédsko vysílá Gripeny a válečnou loď do Finska",
+    "kratkyTitulek": "Švédské nasazení do Finska",
+    "zeme": "Švédsko",
+    "kodZeme": "SE",
+    "kategorie": [
+      "nato"
+    ],
+    "datumUdalosti": "2026-08-28T00:00:00Z",
+    "aktualizovano": "2026-08-28T00:00:00Z",
+    "zavaznost": "Y1",
+    "jistota": "vysoka",
+    "stav": "bez-vysetrovani",
+    "atribuce": "neznama",
+    "fakta": [
+      "Švédsko oznámilo vyslání Gripenů a válečné lodě do Finska do konce roku 2026, s možností dalších protidronových prostředků."
+    ],
+    "neznameho": [],
+    "vyznam": "Posílení obrany v regionu, ne krizový skok. Zaznamenáváme jako institucionální reakci.",
+    "eskalacniSpousteče": [],
+    "deeskalacniSignaly": [],
+    "zdroje": [
+      {
+        "nazev": "Vlastní monitoring — archiv 5. 9. 2026",
+        "url": "",
+        "typ": "analysis",
+        "publikovano": "2026-09-05T00:00:00Z",
+        "primarni": false,
+        "jazyk": "cs"
+      }
+    ],
+    "souvisejici": [],
+    "historie": [
+      {
+        "kdy": "2026-08-28T00:00:00Z",
+        "text": "Událost zaznamenána v monitoringu.",
+        "novySignal": true
+      }
+    ],
+    "novy": false,
+    "zapocitanoTyden": "2026-08-24",
+    "aiZpracovano": true,
+    "lidskyOvereno": true,
+    "archivniZaznam": true
+  },
+  {
+    "id": "a13",
+    "slug": "tusk-kriticke-mesice",
+    "titulek": "Tusk: příštích sedm až osm měsíců může být kritických",
+    "kratkyTitulek": "Tusk: kritické měsíce",
+    "zeme": "Polsko",
+    "kodZeme": "PL",
+    "kategorie": [
+      "diplomacie",
+      "rusko"
+    ],
+    "datumUdalosti": "2026-08-28T00:00:00Z",
+    "aktualizovano": "2026-08-28T00:00:00Z",
+    "zavaznost": "Y1",
+    "jistota": "stredni",
+    "stav": "bez-vysetrovani",
+    "atribuce": "nepotvrzena",
+    "fakta": [
+      "Premiér Donald Tusk uvedl, že existují signály vážných ruských příprav na další eskalaci.",
+      "Zmínil odhad ruského cíle mobilizovat přibližně 600 000 vojáků."
+    ],
+    "neznameho": [
+      "Nešlo o potvrzení, že taková mobilizace začala."
+    ],
+    "vyznam": "Politicko-zpravodajské varování. Odhad počtu je tvrzení, ne doložený stav.",
+    "eskalacniSpousteče": [],
+    "deeskalacniSignaly": [],
+    "zdroje": [
+      {
+        "nazev": "Vlastní monitoring — archiv 5. 9. 2026",
+        "url": "",
+        "typ": "analysis",
+        "publikovano": "2026-09-05T00:00:00Z",
+        "primarni": false,
+        "jazyk": "cs"
+      }
+    ],
+    "souvisejici": [],
+    "historie": [
+      {
+        "kdy": "2026-08-28T00:00:00Z",
+        "text": "Událost zaznamenána v monitoringu.",
+        "novySignal": true
+      }
+    ],
+    "novy": false,
+    "zapocitanoTyden": "2026-08-24",
+    "aiZpracovano": true,
+    "lidskyOvereno": true,
+    "archivniZaznam": true
+  },
+  {
+    "id": "a14",
+    "slug": "wb-electronics",
+    "titulek": "WB Electronics ve Skarżysku-Kamienne: požár ve výrobě komponent pro drony",
+    "kratkyTitulek": "WB Electronics: požár",
+    "zeme": "Polsko",
+    "kodZeme": "PL",
+    "kategorie": [
+      "sabotaz",
+      "vysetrovani"
+    ],
+    "datumUdalosti": "2026-08-31T00:00:00Z",
+    "datumZjisteni": "2026-09-01T00:00:00Z",
+    "aktualizovano": "2026-09-01T00:00:00Z",
+    "zavaznost": "O1",
+    "jistota": "vysoka",
+    "stav": "probiha",
+    "atribuce": "vysetrovana",
+    "fakta": [
+      "Krátce po půlnoci vypukl požár v zařízení WB Electronics vyrábějícím komponenty pro drony používané Polskem a Ukrajinou.",
+      "Případ převzala polská národní prokuratura v režimu podezření zahrnujícího možnou činnost cizí rozvědky a trestný čin teroristického charakteru.",
+      "Ministr vnitra uvedl, že důkazy s velmi vysokou pravděpodobností ukazují na úmyslný čin."
+    ],
+    "neznameho": [
+      "Konečná forenzní atribuce konkrétní službě. Politické hodnocení není totéž."
+    ],
+    "vyznam": "Druhý útok proti dronovému průmyslu v regionu během deseti dnů. Vzorec je zřetelnější než jednotlivý případ.",
+    "eskalacniSpousteče": [],
+    "deeskalacniSignaly": [],
+    "zdroje": [
+      {
+        "nazev": "Vlastní monitoring — archiv 5. 9. 2026",
+        "url": "",
+        "typ": "analysis",
+        "publikovano": "2026-09-05T00:00:00Z",
+        "primarni": false,
+        "jazyk": "cs"
+      }
+    ],
+    "souvisejici": [],
+    "historie": [
+      {
+        "kdy": "2026-08-31T00:00:00Z",
+        "text": "Událost zaznamenána v monitoringu.",
+        "novySignal": true
+      },
+      {
+        "kdy": "2026-09-01T00:00:00Z",
+        "text": "Nové vyšetřovací nebo atribuční zjištění.",
+        "novySignal": true
+      }
+    ],
+    "novy": false,
+    "zapocitanoTyden": "2026-08-31",
+    "aiZpracovano": true,
+    "lidskyOvereno": true,
+    "archivniZaznam": true
+  },
+  {
+    "id": "a15",
+    "slug": "turnow-preilack",
+    "titulek": "Turnow-Preilack: poškození vedení a nálezy zápalných zařízení u energetického uzlu",
+    "kratkyTitulek": "Turnow-Preilack: energetika",
+    "zeme": "Německo",
+    "kodZeme": "DE",
+    "kategorie": [
+      "sabotaz",
+      "infrastruktura"
+    ],
+    "datumUdalosti": "2026-09-01T00:00:00Z",
+    "datumZjisteni": "2026-09-03T00:00:00Z",
+    "aktualizovano": "2026-09-03T00:00:00Z",
+    "zavaznost": "O1",
+    "jistota": "vysoka",
+    "stav": "probiha",
+    "atribuce": "vysetrovana",
+    "fakta": [
+      "U 380kV energetického uzlu v Braniborsku byla zjištěna poškození vedení a několik improvizovaných výbušných nebo zápalných zařízení, z nichž část neexplodovala.",
+      "Došlo ke krátkému přerušení bez zásadního dopadu na obyvatelstvo.",
+      "3. září policie potvrdila existenci přihlašovacího dopisu; jeho autenticita tehdy nebyla potvrzena."
+    ],
+    "neznameho": [
+      "Kdo za útokem stojí.",
+      "Zda jde o koordinaci s dalšími útoky na energetiku — braniborský ministr vnitra uvedl, že indicií přibývá."
+    ],
+    "vyznam": "Fyzická sabotáž proti kritické infrastruktuře. Geopolitická atribuce potvrzená není.",
+    "eskalacniSpousteče": [],
+    "deeskalacniSignaly": [],
+    "zdroje": [
+      {
+        "nazev": "Vlastní monitoring — archiv 5. 9. 2026",
+        "url": "",
+        "typ": "analysis",
+        "publikovano": "2026-09-05T00:00:00Z",
+        "primarni": false,
+        "jazyk": "cs"
+      }
+    ],
+    "souvisejici": [
+      {
+        "incidentId": "a27",
+        "potvrzena": false,
+        "popis": "možná souvislost se sérií se prověřuje"
+      }
+    ],
+    "historie": [
+      {
+        "kdy": "2026-09-01T00:00:00Z",
+        "text": "Událost zaznamenána v monitoringu.",
+        "novySignal": true
+      },
+      {
+        "kdy": "2026-09-03T00:00:00Z",
+        "text": "Nové vyšetřovací nebo atribuční zjištění.",
+        "novySignal": true
+      }
+    ],
+    "novy": false,
+    "zapocitanoTyden": "2026-08-31",
+    "aiZpracovano": true,
+    "lidskyOvereno": true,
+    "archivniZaznam": true
+  },
+  {
+    "id": "a16",
+    "slug": "bergheim-rheidt",
+    "titulek": "Bergheim-Rheidt: úmyslný zkrat u rozvodny vyřadil bloky o výkonu 4,2 GW",
+    "kratkyTitulek": "Bergheim: zkrat u rozvodny",
+    "zeme": "Německo",
+    "kodZeme": "DE",
+    "kategorie": [
+      "sabotaz",
+      "infrastruktura"
+    ],
+    "datumUdalosti": "2026-09-01T00:00:00Z",
+    "datumZjisteni": "2026-09-04T00:00:00Z",
+    "aktualizovano": "2026-09-04T00:00:00Z",
+    "zavaznost": "O1",
+    "jistota": "vysoka",
+    "stav": "probiha",
+    "atribuce": "domaci",
+    "fakta": [
+      "Vyšetřovatelé vyloučili technickou závadu a začali pracovat s úmyslným zásahem; vodivé předměty byly umístěny tak, aby způsobily zkrat.",
+      "Vyřazeno bylo pět lignitových bloků o instalovaném výkonu přibližně 4,2 GW, z toho kolem 3 GW bylo v okamžiku incidentu ve výrobě.",
+      "Pozdější vývoj ukázal na konkrétního domácího podezřelého a motiv klimatického extremismu."
+    ],
+    "neznameho": [
+      "Zda spolu jednotlivé německé energetické incidenty souvisejí."
+    ],
+    "vyznam": "Případ, který zpočátku vypadal jako součást ruské série, dostal domácí extremistické vysvětlení. Snižuje pravděpodobnost státního řízení u této části incidentů.",
+    "eskalacniSpousteče": [],
+    "deeskalacniSignaly": [],
+    "zdroje": [
+      {
+        "nazev": "Vlastní monitoring — archiv 5. 9. 2026",
+        "url": "",
+        "typ": "analysis",
+        "publikovano": "2026-09-05T00:00:00Z",
+        "primarni": false,
+        "jazyk": "cs"
+      }
+    ],
+    "souvisejici": [
+      {
+        "incidentId": "a27",
+        "potvrzena": true,
+        "popis": "stejný podezřelý a přihlašovací dopisy"
+      }
+    ],
+    "historie": [
+      {
+        "kdy": "2026-09-01T00:00:00Z",
+        "text": "Událost zaznamenána v monitoringu.",
+        "novySignal": true
+      },
+      {
+        "kdy": "2026-09-04T00:00:00Z",
+        "text": "Nové vyšetřovací nebo atribuční zjištění.",
+        "novySignal": true
+      }
+    ],
+    "novy": false,
+    "zapocitanoTyden": "2026-08-31",
+    "aiZpracovano": true,
+    "lidskyOvereno": true,
+    "archivniZaznam": true
+  },
+  {
+    "id": "a17",
+    "slug": "medvedev-retorika",
+    "titulek": "Medveděvova výhrůžná rétorika po německé atribuci",
+    "kratkyTitulek": "Medveděv: výhrůžná rétorika",
+    "zeme": "Rusko",
+    "kodZeme": "RU",
+    "kategorie": [
+      "rusko",
+      "diplomacie"
+    ],
+    "datumUdalosti": "2026-09-02T00:00:00Z",
+    "aktualizovano": "2026-09-02T00:00:00Z",
+    "zavaznost": "Y1",
+    "jistota": "vysoka",
+    "stav": "bez-vysetrovani",
+    "atribuce": "oficialni",
+    "fakta": [
+      "Dmitrij Medveděv veřejně hovořil o tom, že Německo si zaslouží „přímý úder“ na zařízení vyrábějící vojenský materiál pro Ukrajinu, a zmínil cíle v Berlíně."
+    ],
+    "neznameho": [
+      "Zda formulace odráží operační rozhodnutí. Bez přijetí Putinem nebo ministerstvem obrany a bez doprovodných vojenských kroků to důkaz není."
+    ],
+    "vyznam": "Závažná rétorika. Medveděv ale používá extrémní formulace opakovaně, takže sama o sobě hodnocení nezvyšuje.",
+    "eskalacniSpousteče": [],
+    "deeskalacniSignaly": [],
+    "zdroje": [
+      {
+        "nazev": "Vlastní monitoring — archiv 5. 9. 2026",
+        "url": "",
+        "typ": "analysis",
+        "publikovano": "2026-09-05T00:00:00Z",
+        "primarni": false,
+        "jazyk": "cs"
+      }
+    ],
+    "souvisejici": [],
+    "historie": [
+      {
+        "kdy": "2026-09-02T00:00:00Z",
+        "text": "Událost zaznamenána v monitoringu.",
+        "novySignal": true
+      }
+    ],
+    "novy": false,
+    "zapocitanoTyden": "2026-08-31",
+    "aiZpracovano": true,
+    "lidskyOvereno": true,
+    "archivniZaznam": true
+  },
+  {
+    "id": "a18",
+    "slug": "eu-reakce-leipzig",
+    "titulek": "EU označuje Leipzig/Halle za ruský hybridní útok",
+    "kratkyTitulek": "EU: reakce na Leipzig",
+    "zeme": "Evropa",
+    "kodZeme": "EU",
+    "kategorie": [
+      "diplomacie",
+      "nato"
+    ],
+    "datumUdalosti": "2026-09-02T00:00:00Z",
+    "aktualizovano": "2026-09-02T00:00:00Z",
+    "zavaznost": "O1",
+    "jistota": "potvrzeno",
+    "stav": "bez-vysetrovani",
+    "atribuce": "oficialni",
+    "fakta": [
+      "Kaja Kallas uvedla, že Leipzig/Halle nese znaky státem podporovaného terorismu.",
+      "Ursula von der Leyen popsala incident jako novou eskalaci přímo přičitatelnou Rusku.",
+      "Generální tajemník NATO Mark Rutte veřejně přijal německé hodnocení."
+    ],
+    "neznameho": [],
+    "vyznam": "Posun od národního německého vyšetřování k evropskému politickému hodnocení. Byl to jeden z hlavních důvodů zvýšení celkové úrovně.",
+    "eskalacniSpousteče": [],
+    "deeskalacniSignaly": [],
+    "zdroje": [
+      {
+        "nazev": "Vlastní monitoring — archiv 5. 9. 2026",
+        "url": "",
+        "typ": "analysis",
+        "publikovano": "2026-09-05T00:00:00Z",
+        "primarni": false,
+        "jazyk": "cs"
+      }
+    ],
+    "souvisejici": [
+      {
+        "incidentId": "a04",
+        "potvrzena": true,
+        "popis": "navazuje na atribuci Leipzig/Halle"
+      }
+    ],
+    "historie": [
+      {
+        "kdy": "2026-09-02T00:00:00Z",
+        "text": "Událost zaznamenána v monitoringu.",
+        "novySignal": true
+      }
+    ],
+    "novy": false,
+    "zapocitanoTyden": "2026-08-31",
+    "aiZpracovano": true,
+    "lidskyOvereno": true,
+    "archivniZaznam": true
+  },
+  {
+    "id": "a19",
+    "slug": "leipzig-podezreli",
+    "titulek": "Leipzig/Halle: identifikováni dva konkrétní podezřelí",
+    "kratkyTitulek": "Leipzig: dva podezřelí",
+    "zeme": "Německo",
+    "kodZeme": "DE",
+    "kategorie": [
+      "vysetrovani"
+    ],
+    "datumUdalosti": "2026-09-02T00:00:00Z",
+    "aktualizovano": "2026-09-02T00:00:00Z",
+    "zavaznost": "O1",
+    "jistota": "vysoka",
+    "stav": "probiha",
+    "atribuce": "vysetrovana",
+    "fakta": [
+      "Německá média a následně Reuters informovaly o dvou podezřelých: muži ruského původu s lotyšským občanstvím a muži narozeném v Bělorusku s ruským pasem.",
+      "Vyšetřování rekonstruovalo jejich pohyb a možné logistické role."
+    ],
+    "neznameho": [
+      "Pravomocné soudní prokázání řetězce velení. Mediálně popsané vazby nejsou totéž."
+    ],
+    "vyznam": "Vyšetřovací průlom u nejzávažnějšího případu v celé sérii.",
+    "eskalacniSpousteče": [],
+    "deeskalacniSignaly": [],
+    "zdroje": [
+      {
+        "nazev": "Vlastní monitoring — archiv 5. 9. 2026",
+        "url": "",
+        "typ": "analysis",
+        "publikovano": "2026-09-05T00:00:00Z",
+        "primarni": false,
+        "jazyk": "cs"
+      }
+    ],
+    "souvisejici": [
+      {
+        "incidentId": "a04",
+        "potvrzena": true,
+        "popis": "navazuje na atribuci Leipzig/Halle"
+      }
+    ],
+    "historie": [
+      {
+        "kdy": "2026-09-02T00:00:00Z",
+        "text": "Událost zaznamenána v monitoringu.",
+        "novySignal": true
+      }
+    ],
+    "novy": false,
+    "zapocitanoTyden": "2026-08-31",
+    "aiZpracovano": true,
+    "lidskyOvereno": true,
+    "archivniZaznam": true
+  },
+  {
+    "id": "a20",
+    "slug": "svedska-bezpecnostni-rada",
+    "titulek": "Švédsko svolalo mimořádné jednání Národní bezpečnostní rady",
+    "kratkyTitulek": "Švédská bezpečnostní rada",
+    "zeme": "Švédsko",
+    "kodZeme": "SE",
+    "kategorie": [
+      "diplomacie",
+      "nato"
+    ],
+    "datumUdalosti": "2026-09-02T00:00:00Z",
+    "aktualizovano": "2026-09-02T00:00:00Z",
+    "zavaznost": "Y3",
+    "jistota": "vysoka",
+    "stav": "bez-vysetrovani",
+    "atribuce": "neznama",
+    "fakta": [
+      "Švédsko svolalo mimořádné jednání National Security Council kvůli německé atribuci Leipzig/Halle.",
+      "Švédské ministerstvo zahraničí předvolalo ruského velvyslance."
+    ],
+    "neznameho": [],
+    "vyznam": "Institucionální reakce členského státu. Přesně ten typ kroku, který sledujeme jako indikátor.",
+    "eskalacniSpousteče": [],
+    "deeskalacniSignaly": [],
+    "zdroje": [
+      {
+        "nazev": "Vlastní monitoring — archiv 5. 9. 2026",
+        "url": "",
+        "typ": "analysis",
+        "publikovano": "2026-09-05T00:00:00Z",
+        "primarni": false,
+        "jazyk": "cs"
+      }
+    ],
+    "souvisejici": [],
+    "historie": [
+      {
+        "kdy": "2026-09-02T00:00:00Z",
+        "text": "Událost zaznamenána v monitoringu.",
+        "novySignal": true
+      }
+    ],
+    "novy": false,
+    "zapocitanoTyden": "2026-08-31",
+    "aiZpracovano": true,
+    "lidskyOvereno": true,
+    "archivniZaznam": true
+  },
+  {
+    "id": "a21",
+    "slug": "pet-varovani-dansko",
+    "titulek": "Dánská PET varuje před konkrétní přípravou ruských sabotáží",
+    "kratkyTitulek": "PET: varování před sabotážemi",
+    "zeme": "Dánsko",
+    "kodZeme": "DK",
+    "kategorie": [
+      "zpravodajske",
+      "sabotaz"
+    ],
+    "datumUdalosti": "2026-09-02T00:00:00Z",
+    "datumZjisteni": "2026-09-03T00:00:00Z",
+    "aktualizovano": "2026-09-03T00:00:00Z",
+    "zavaznost": "O1",
+    "jistota": "potvrzeno",
+    "stav": "bez-vysetrovani",
+    "atribuce": "oficialni",
+    "fakta": [
+      "Dánská bezpečnostní služba PET uvedla, že Rusko aktivně připravuje sabotáže proti cílům dánského obranného průmyslu.",
+      "Podle PET se snaží verbovat běžné obyvatele přes sociální sítě či herní platformy, například k fotografování firem a infrastruktury."
+    ],
+    "neznameho": [
+      "Konkrétní cíle a načasování."
+    ],
+    "vyznam": "Nejde o obecné tvrzení o hybridní hrozbě, ale o oficiální informaci o konkrétní přípravné aktivitě v členském státě NATO.",
+    "eskalacniSpousteče": [],
+    "deeskalacniSignaly": [],
+    "zdroje": [
+      {
+        "nazev": "Vlastní monitoring — archiv 5. 9. 2026",
+        "url": "",
+        "typ": "analysis",
+        "publikovano": "2026-09-05T00:00:00Z",
+        "primarni": false,
+        "jazyk": "cs"
+      }
+    ],
+    "souvisejici": [],
+    "historie": [
+      {
+        "kdy": "2026-09-02T00:00:00Z",
+        "text": "Událost zaznamenána v monitoringu.",
+        "novySignal": true
+      },
+      {
+        "kdy": "2026-09-03T00:00:00Z",
+        "text": "Nové vyšetřovací nebo atribuční zjištění.",
+        "novySignal": true
+      }
+    ],
+    "novy": false,
+    "zapocitanoTyden": "2026-08-31",
+    "aiZpracovano": true,
+    "lidskyOvereno": true,
+    "archivniZaznam": true
+  },
+  {
+    "id": "a22",
+    "slug": "cr-podpora-atribuce",
+    "titulek": "České služby podporují německou atribuci Leipzig/Halle",
+    "kratkyTitulek": "ČR podporuje atribuci",
+    "zeme": "Česko",
+    "kodZeme": "CZ",
+    "kategorie": [
+      "cr",
+      "zpravodajske",
+      "diplomacie"
+    ],
+    "datumUdalosti": "2026-09-03T00:00:00Z",
+    "aktualizovano": "2026-09-03T00:00:00Z",
+    "zavaznost": "O1",
+    "jistota": "potvrzeno",
+    "stav": "bez-vysetrovani",
+    "atribuce": "oficialni",
+    "fakta": [
+      "Ministr zahraničí Petr Macinka si předvolal ruského velvyslance.",
+      "Uvedl, že české stanovisko nevychází pouze z německých informací, ale i z poznatků dvou českých zpravodajských služeb.",
+      "ČR oznámila reciproční opatření týkající se ruského diplomatického a technického personálu."
+    ],
+    "neznameho": [],
+    "vyznam": "České služby mají vlastní poznatky podporující atribuci fyzické operace na území NATO Rusku. To je pro český kontext nejzávažnější položka archivu.",
+    "eskalacniSpousteče": [],
+    "deeskalacniSignaly": [],
+    "zdroje": [
+      {
+        "nazev": "Vlastní monitoring — archiv 5. 9. 2026",
+        "url": "",
+        "typ": "analysis",
+        "publikovano": "2026-09-05T00:00:00Z",
+        "primarni": false,
+        "jazyk": "cs"
+      }
+    ],
+    "souvisejici": [
+      {
+        "incidentId": "a04",
+        "potvrzena": true,
+        "popis": "navazuje na atribuci Leipzig/Halle"
+      }
+    ],
+    "historie": [
+      {
+        "kdy": "2026-09-03T00:00:00Z",
+        "text": "Událost zaznamenána v monitoringu.",
+        "novySignal": true
+      }
+    ],
+    "novy": false,
+    "zapocitanoTyden": "2026-08-31",
+    "aiZpracovano": true,
+    "lidskyOvereno": true,
+    "archivniZaznam": true
+  },
+  {
+    "id": "a23",
+    "slug": "mnichov-rohde-schwarz",
+    "titulek": "Mnichov: zápalné prostředky vrženy před centrálu Rohde & Schwarz",
+    "kratkyTitulek": "Mnichov: Rohde & Schwarz",
+    "zeme": "Německo",
+    "kodZeme": "DE",
+    "kategorie": [
+      "sabotaz"
+    ],
+    "datumUdalosti": "2026-09-03T00:00:00Z",
+    "aktualizovano": "2026-09-03T00:00:00Z",
+    "zavaznost": "Y3",
+    "jistota": "vysoka",
+    "stav": "obvineni",
+    "atribuce": "vysetrovana",
+    "fakta": [
+      "Před centrálou Rohde & Schwarz byly z jedoucího automobilu vrženy zápalné prostředky; jeden se vznítil, další byly zneškodněny.",
+      "Bavorský LKA převzal případ, zadrženi byli dva bulharští občané."
+    ],
+    "neznameho": [
+      "Kdo útok objednal.",
+      "Zda existuje vazba na Leipzig nebo další případy."
+    ],
+    "vyznam": "Útok proti společnosti spojené s bezpečnostním sektorem. Atribuce ani souvislost s ostatními případy potvrzené nejsou.",
+    "eskalacniSpousteče": [],
+    "deeskalacniSignaly": [],
+    "zdroje": [
+      {
+        "nazev": "Vlastní monitoring — archiv 5. 9. 2026",
+        "url": "",
+        "typ": "analysis",
+        "publikovano": "2026-09-05T00:00:00Z",
+        "primarni": false,
+        "jazyk": "cs"
+      }
+    ],
+    "souvisejici": [],
+    "historie": [
+      {
+        "kdy": "2026-09-03T00:00:00Z",
+        "text": "Událost zaznamenána v monitoringu.",
+        "novySignal": true
+      }
+    ],
+    "novy": false,
+    "zapocitanoTyden": "2026-08-31",
+    "aiZpracovano": true,
+    "lidskyOvereno": true,
+    "archivniZaznam": true
+  },
+  {
+    "id": "a24",
+    "slug": "rusko-goethe-instituty",
+    "titulek": "Rusko uzavírá Goethe-Instituty jako odvetu za německé kroky",
+    "kratkyTitulek": "Odveta: Goethe-Instituty",
+    "zeme": "Rusko",
+    "kodZeme": "RU",
+    "kategorie": [
+      "diplomacie"
+    ],
+    "datumUdalosti": "2026-09-03T00:00:00Z",
+    "aktualizovano": "2026-09-03T00:00:00Z",
+    "zavaznost": "Y1",
+    "jistota": "potvrzeno",
+    "stav": "bez-vysetrovani",
+    "atribuce": "oficialni",
+    "fakta": [
+      "Rusko oznámilo uzavření Goethe-Institutů v Moskvě, Petrohradu a Jekatěrinburgu v reakci na německé kroky po atribuci Leipzig/Halle."
+    ],
+    "neznameho": [],
+    "vyznam": "Diplomatická odveta, ne vojenská eskalace. Zaznamenáváme jako součást institucionální reakce.",
+    "eskalacniSpousteče": [],
+    "deeskalacniSignaly": [],
+    "zdroje": [
+      {
+        "nazev": "Vlastní monitoring — archiv 5. 9. 2026",
+        "url": "",
+        "typ": "analysis",
+        "publikovano": "2026-09-05T00:00:00Z",
+        "primarni": false,
+        "jazyk": "cs"
+      }
+    ],
+    "souvisejici": [],
+    "historie": [
+      {
+        "kdy": "2026-09-03T00:00:00Z",
+        "text": "Událost zaznamenána v monitoringu.",
+        "novySignal": true
+      }
+    ],
+    "novy": false,
+    "zapocitanoTyden": "2026-08-31",
+    "aiZpracovano": true,
+    "lidskyOvereno": true,
+    "archivniZaznam": true
+  },
+  {
+    "id": "a25",
+    "slug": "porvoo-dron",
+    "titulek": "Porvoo: nalezený dron identifikován jako Geoscan 701 ruské výroby",
+    "kratkyTitulek": "Porvoo: nález dronu",
+    "zeme": "Finsko",
+    "kodZeme": "FI",
+    "kategorie": [
+      "drony",
+      "vysetrovani"
+    ],
+    "datumUdalosti": "2026-09-01T00:00:00Z",
+    "datumZjisteni": "2026-09-04T00:00:00Z",
+    "aktualizovano": "2026-09-04T00:00:00Z",
+    "zavaznost": "Y1",
+    "jistota": "vysoka",
+    "stav": "probiha",
+    "atribuce": "nepotvrzena",
+    "fakta": [
+      "Finské orgány identifikovaly nalezený dron jako Geoscan 701 ruské výroby a zahájily vyšetřování možného narušení územní integrity.",
+      "Nebyly hlášeny výbušniny; jde o platformu využitelnou pro mapování a průzkum."
+    ],
+    "neznameho": [
+      "Kdo dron provozoval. Typ zařízení ani jeho ruská výroba nedokazují, že šlo o ruský stát."
+    ],
+    "vyznam": "Ukazuje rozdíl mezi původem techniky a odpovědností za její použití. Tyhle dvě věci se běžně zaměňují.",
+    "eskalacniSpousteče": [],
+    "deeskalacniSignaly": [],
+    "zdroje": [
+      {
+        "nazev": "Vlastní monitoring — archiv 5. 9. 2026",
+        "url": "",
+        "typ": "analysis",
+        "publikovano": "2026-09-05T00:00:00Z",
+        "primarni": false,
+        "jazyk": "cs"
+      }
+    ],
+    "souvisejici": [],
+    "historie": [
+      {
+        "kdy": "2026-09-01T00:00:00Z",
+        "text": "Událost zaznamenána v monitoringu.",
+        "novySignal": true
+      },
+      {
+        "kdy": "2026-09-04T00:00:00Z",
+        "text": "Nové vyšetřovací nebo atribuční zjištění.",
+        "novySignal": true
+      }
+    ],
+    "novy": false,
+    "zapocitanoTyden": "2026-08-31",
+    "aiZpracovano": true,
+    "lidskyOvereno": true,
+    "archivniZaznam": true
+  },
+  {
+    "id": "a26",
+    "slug": "estonsko-prechody",
+    "titulek": "Estonsko na neurčito omezuje otevírací dobu východních přechodů",
+    "kratkyTitulek": "Estonsko: režim přechodů",
+    "zeme": "Estonsko",
+    "kodZeme": "EE",
+    "kategorie": [
+      "hranice"
+    ],
+    "datumUdalosti": "2026-09-01T00:00:00Z",
+    "aktualizovano": "2026-09-01T00:00:00Z",
+    "zavaznost": "Y1",
+    "jistota": "potvrzeno",
+    "stav": "bez-vysetrovani",
+    "atribuce": "oficialni",
+    "fakta": [
+      "Estonsko ponechalo na neurčito režim 07:00–19:00 na silničních přechodech Narva, Koidula a Luhamaa a podobná omezení na železničních přechodech."
+    ],
+    "neznameho": [],
+    "vyznam": "Opatření na hranici jednoho členského státu. Neznamená plošné uzavírání hranic NATO ani omezení vycestování z ČR.",
+    "eskalacniSpousteče": [],
+    "deeskalacniSignaly": [],
+    "zdroje": [
+      {
+        "nazev": "Vlastní monitoring — archiv 5. 9. 2026",
+        "url": "",
+        "typ": "analysis",
+        "publikovano": "2026-09-05T00:00:00Z",
+        "primarni": false,
+        "jazyk": "cs"
+      }
+    ],
+    "souvisejici": [],
+    "historie": [
+      {
+        "kdy": "2026-09-01T00:00:00Z",
+        "text": "Událost zaznamenána v monitoringu.",
+        "novySignal": true
+      }
+    ],
+    "novy": false,
+    "zapocitanoTyden": "2026-08-31",
+    "aiZpracovano": true,
+    "lidskyOvereno": true,
+    "archivniZaznam": true
+  },
+  {
+    "id": "a27",
+    "slug": "dormagen-gohr",
+    "titulek": "Dormagen-Gohr: nález zařízení u rozvodny, stopa vede ke klimatickému extremismu",
+    "kratkyTitulek": "Dormagen-Gohr: nález u rozvodny",
+    "zeme": "Německo",
+    "kodZeme": "DE",
+    "kategorie": [
+      "sabotaz",
+      "infrastruktura",
+      "vysetrovani"
+    ],
+    "datumUdalosti": "2026-09-04T00:00:00Z",
+    "aktualizovano": "2026-09-04T00:00:00Z",
+    "zavaznost": "O1",
+    "jistota": "vysoka",
+    "stav": "probiha",
+    "atribuce": "domaci",
+    "fakta": [
+      "U rozvodny Dormagen-Gohr byla nalezena zařízení připomínající odpalovací mechanismy; k výpadku elektřiny nedošlo.",
+      "Vyšetřování spojilo přihlašovací dopisy s konkrétním 48letým mužem z Gevelsbergu, u kterého byly nalezeny předměty považované za možné výbušniny.",
+      "Ministr vnitra Alexander Dobrindt uvedl, že dosavadní důkazy směřují ke klimatickému extremismu."
+    ],
+    "neznameho": [
+      "Zda tímto vysvětlením lze pokrýt i další energetické incidenty v Německu."
+    ],
+    "vyznam": "Snižuje pravděpodobnost, že Bergheim a Dormagen jsou součástí ruské státní operace. Ukazuje, proč se nesmí celá série vykládat jednou příčinou.",
+    "eskalacniSpousteče": [],
+    "deeskalacniSignaly": [],
+    "zdroje": [
+      {
+        "nazev": "Vlastní monitoring — archiv 5. 9. 2026",
+        "url": "",
+        "typ": "analysis",
+        "publikovano": "2026-09-05T00:00:00Z",
+        "primarni": false,
+        "jazyk": "cs"
+      }
+    ],
+    "souvisejici": [
+      {
+        "incidentId": "a16",
+        "potvrzena": true,
+        "popis": "stejný podezřelý a přihlašovací dopisy"
+      },
+      {
+        "incidentId": "a15",
+        "potvrzena": false,
+        "popis": "možná souvislost se sérií se prověřuje"
+      }
+    ],
+    "historie": [
+      {
+        "kdy": "2026-09-04T00:00:00Z",
+        "text": "Událost zaznamenána v monitoringu.",
+        "novySignal": true
+      }
+    ],
+    "novy": false,
+    "zapocitanoTyden": "2026-08-31",
+    "aiZpracovano": true,
+    "lidskyOvereno": true,
+    "archivniZaznam": true
+  },
+  {
+    "id": "a28",
+    "slug": "cr-preventivni-opatreni",
+    "titulek": "ČR přijala preventivní bezpečnostní opatření k ochraně infrastruktury",
+    "kratkyTitulek": "ČR: preventivní opatření",
+    "zeme": "Česko",
+    "kodZeme": "CZ",
+    "kategorie": [
+      "cr",
+      "infrastruktura"
+    ],
+    "datumUdalosti": "2026-09-04T00:00:00Z",
+    "aktualizovano": "2026-09-04T00:00:00Z",
+    "zavaznost": "O1",
+    "jistota": "potvrzeno",
+    "stav": "bez-vysetrovani",
+    "atribuce": "oficialni",
+    "fakta": [
+      "Ministr vnitra Lubomír Metnar potvrdil, že české bezpečnostní a zpravodajské složky jsou v kontaktu s evropskými partnery a stát přijal konkrétní bezpečnostní opatření.",
+      "Zvýšená pozornost se týká mimo jiné dopravních a energetických objektů; ČEZ potvrzoval zvýšenou ochranu energetické infrastruktury.",
+      "Ministr současně uvedl, že bezpečnostní situace v ČR zůstává stabilní a stupeň ohrožení terorismem zůstává B."
+    ],
+    "neznameho": [
+      "Podrobnosti opatření nebyly z bezpečnostních důvodů zveřejněny."
+    ],
+    "vyznam": "První konkrétní preventivní reakce ČR v této sérii. Není to krizový právní režim, mobilizace ani omezení pohybu obyvatel.",
+    "eskalacniSpousteče": [],
+    "deeskalacniSignaly": [],
+    "zdroje": [
+      {
+        "nazev": "Vlastní monitoring — archiv 5. 9. 2026",
+        "url": "",
+        "typ": "analysis",
+        "publikovano": "2026-09-05T00:00:00Z",
+        "primarni": false,
+        "jazyk": "cs"
+      }
+    ],
+    "souvisejici": [],
+    "historie": [
+      {
+        "kdy": "2026-09-04T00:00:00Z",
+        "text": "Událost zaznamenána v monitoringu.",
+        "novySignal": true
+      }
+    ],
+    "novy": false,
+    "zapocitanoTyden": "2026-08-31",
+    "aiZpracovano": true,
+    "lidskyOvereno": true,
+    "archivniZaznam": true
+  }
+]

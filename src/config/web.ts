@@ -4,7 +4,7 @@
 
 export const WEB = {
   /** Název záměrně nestojí na slově „válka“ — působilo by to poplašně. */
-  nazev: "Kontext",
+  nazev: "CzechPatrol",
   podtitul: "Bezpečnostní přehled ČR",
   popis:
     "Ověřené bezpečnostní události z Česka a Evropy, jejich kontext a možné další kroky — bez zbytečného strašení.",
