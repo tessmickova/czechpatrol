@@ -301,8 +301,13 @@ export const ZDROJE: RegistrZdroj[] = [
     klic: "dopravni-info",
     nazev: "Dopravní info (NDIC)",
     druh: "provoz",
-    // Web se přestěhoval z dopravniinfo.cz na gov.cz; stará adresa už neodpovídá.
+    // Web se stěhoval a jednotlivé adresy odpadají. Zkoušíme je po řadě.
     url: "https://dopravniinfo.gov.cz/",
+    zalozniUrl: [
+      "https://www.dopravniinfo.gov.cz/",
+      "https://portal.dopravniinfo.cz/",
+      "https://registr.dopravniinfo.cz/cs/sources/cz-ndic_d2-common/",
+    ],
     format: "html",
     jazyk: "cs",
     primarni: true,

@@ -14,6 +14,11 @@ export interface RegistrZdroj {
   /** Adresa ke stažení — RSS, JSON nebo HTML. */
   url: string;
   /** Odkaz pro čtenáře, pokud se liší od strojové adresy. */
+  /**
+   * Náhradní adresy. Zkoušejí se v pořadí, když hlavní neodpoví — weby úřadů
+   * se stěhují a jedna mrtvá adresa nemá umlčet celou položku.
+   */
+  zalozniUrl?: string[];
   odkaz?: string;
   format: "rss" | "html" | "json";
   jazyk: string;

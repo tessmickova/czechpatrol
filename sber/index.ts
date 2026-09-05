@@ -33,19 +33,26 @@ function zapisJson(soubor: string, data: unknown) {
 async function stahniVse(): Promise<Stazeno[]> {
   return Promise.all(
     ZDROJE.map(async (z): Promise<Stazeno> => {
-      try {
-        const { stav, telo } = await stahni(z.url);
-        if (stav >= 400) {
-          return { zdroj: z, ok: false, text: "", polozky: [], stav, chyba: `HTTP ${stav}` };
+      const adresy = [z.url, ...(z.zalozniUrl ?? [])];
+      let posledni: { stav: number | null; chyba: string } = { stav: null, chyba: "nezkoušeno" };
+      for (const adresa of adresy) {
+        try {
+          const { stav, telo } = await stahni(adresa, adresa === z.url ? 3 : 1);
+          if (stav >= 400) {
+            posledni = { stav, chyba: `HTTP ${stav}` };
+            continue;
+          }
+          if (adresa !== z.url) console.log(`[sber] ${z.klic}: zabrala náhradní adresa ${adresa}`);
+          if (z.format === "rss") {
+            const polozky = ctiRss(telo);
+            return { zdroj: z, ok: true, stav, polozky, text: polozky.map((p) => `${p.nadpis} ${p.shrnuti}`).join(" ") };
+          }
+          return { zdroj: z, ok: true, stav, polozky: [], text: ctiHtml(telo) };
+        } catch (e) {
+          posledni = { stav: null, chyba: String(e instanceof Error ? e.message : e) };
         }
-        if (z.format === "rss") {
-          const polozky = ctiRss(telo);
-          return { zdroj: z, ok: true, stav, polozky, text: polozky.map((p) => `${p.nadpis} ${p.shrnuti}`).join(" ") };
-        }
-        return { zdroj: z, ok: true, stav, polozky: [], text: ctiHtml(telo) };
-      } catch (e) {
-        return { zdroj: z, ok: false, text: "", polozky: [], stav: null, chyba: String(e instanceof Error ? e.message : e) };
       }
+      return { zdroj: z, ok: false, text: "", polozky: [], stav: posledni.stav, chyba: posledni.chyba };
     }),
   );
 }

@@ -525,6 +525,49 @@
         "NATO — vychodni-kridlo: ANO → neověřeno",
         "zveřejněné události: 28 → 30"
       ]
+    },
+    {
+      "kdy": "2026-09-05T08:52:58.659Z",
+      "uroven": "YO",
+      "hybridni": "O1",
+      "primyStret": "G2",
+      "pravni": {
+        "stav-ohrozeni": false,
+        "valecny-stav": false,
+        "mobilizace": false,
+        "nouzovy-stav": false,
+        "vycestovani": false,
+        "hranice": false,
+        "schuze-parlamentu": false
+      },
+      "nato": {
+        "clanek-4": false,
+        "clanek-5": false,
+        "readiness": false,
+        "evakuace": false,
+        "vychodni-kridlo": null
+      },
+      "provoz": {
+        "vycestovani": "bez-zdroje",
+        "hranice": "bez-zdroje",
+        "palivo": "bez-zdroje",
+        "elektrina": "bez-zdroje",
+        "plyn": "bez-zdroje",
+        "banky": "bez-zdroje",
+        "komunikace": "bez-zdroje",
+        "bezny-zivot": "bez-zdroje"
+      },
+      "udalosti": 30,
+      "zmeny": [
+        "provoz — vycestovani: bezny → bez-zdroje",
+        "provoz — hranice: bezny → bez-zdroje",
+        "provoz — palivo: bezny → bez-zdroje",
+        "provoz — elektrina: bezny → bez-zdroje",
+        "provoz — plyn: bezny → bez-zdroje",
+        "provoz — banky: bezny → bez-zdroje",
+        "provoz — komunikace: bezny → bez-zdroje",
+        "provoz — bezny-zivot: bezny → bez-zdroje"
+      ]
     }
   ]
 }
