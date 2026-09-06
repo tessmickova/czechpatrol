@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { HlavickaStranky } from "@/components/nadpisy";
 import Link from "next/link";
 import { BUY_ME_A_COFFEE_URL, KOMUNITA } from "@/config/web";
 import naklady from "../../../docs/naklady.json";
@@ -17,14 +18,15 @@ export default function Podporit() {
   const polozky = naklady.polozky as { nazev: string; mesicneKc: number; poznamka: string }[];
   const celkem = polozky.reduce((s, x) => s + x.mesicneKc, 0);
   return (
-    <div className="mx-auto max-w-[760px] px-4 py-8 sm:px-6 sm:py-10">
-      <h1 className="text-[28px] font-bold leading-tight sm:text-[34px]">Podpořit projekt</h1>
-      <p className="mt-2 text-[16px] leading-relaxed text-tlum">
-        Všechno, co se týká bezpečí — události, opatření, zdroje — je a zůstane zdarma. Podpora je dobrovolná a platí se z ní provoz, ne inzerce.
-      </p>
+    <div className="mx-auto max-w-[820px] px-5 py-12 sm:px-8 sm:py-16">
+      <HlavickaStranky
+        stitek="Podpora"
+        nadpis="Web zdarma. Provoz ne."
+        uvod="Všechno, co se týká bezpečí, tedy události, opatření i zdroje, je a zůstane zdarma. Podpora je dobrovolná a platí se z ní provoz, ne inzerce."
+      />
 
-      <section className="mt-8 border-t border-linka pt-6">
-        <h2 className="text-[18px] font-bold">Co provoz stojí</h2>
+      <section className="nalet mt-16 border-t border-linka pt-12 sm:mt-20">
+        <h2 className="titul-mensi">Co provoz stojí</h2>
         <p className="mt-1 text-[13.5px] text-tlum">Odhad podle ceníků služeb k {naklady.aktualizovano}. Skutečné faktury se doplní, až budou.</p>
         <table className="mt-3 w-full text-left text-[14px]">
           <tbody>
@@ -40,8 +42,8 @@ export default function Podporit() {
         <p className="mt-2 text-[12.5px] text-tlum2">Lidská práce (ověřování, hodnocení, opravy) v tabulce není — dělá se zdarma. Vstupy jsou v souboru docs/naklady.json.</p>
       </section>
 
-      <section className="mt-8 border-t border-linka pt-6">
-        <h2 className="text-[18px] font-bold">Jak podpořit</h2>
+      <section className="nalet mt-14 border-t border-linka pt-10">
+        <h2 className="titul-mensi">Jak podpořit</h2>
         {BUY_ME_A_COFFEE_URL ? (
           <a href={BUY_ME_A_COFFEE_URL} target="_blank" rel="noopener noreferrer" className="mt-3 inline-flex min-h-[44px] items-center rounded-[16px] border border-akcent/60 bg-akcent/15 px-5 text-[14px] font-bold text-akcent-svetla hover:bg-akcent/25">
             Jednorázově přispět
@@ -54,8 +56,8 @@ export default function Podporit() {
         )}
       </section>
 
-      <section className="mt-8 border-t border-linka pt-6">
-        <h2 className="text-[18px] font-bold">Co uvažujeme do budoucna</h2>
+      <section className="nalet mt-14 border-t border-linka pt-10">
+        <h2 className="titul-mensi">Co uvažujeme do budoucna</h2>
         <p className="mt-1 text-[13.5px] text-tlum">Záměr, ne nabídka. Nic z toho se teď nedá koupit.</p>
         <ul className="mt-3 space-y-2 text-[14.5px] leading-relaxed text-tlum">
           <li><b className="font-semibold text-inkoust">Plus</b> — pohodlí navíc: upozornění na míru, export, archiv. Pracovní hypotéza ceny {naklady.plus.mesicneKc} Kč měsíčně nebo {naklady.plus.rocneKc} Kč ročně; ověří se až s prvními zájemci. Bezpečnostní informace tam nikdy nebudou zamčené.</li>

@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { HlavickaStranky } from "@/components/nadpisy";
 import { UdalostiKlient } from "@/components/udalosti-klient";
 import { incidenty, kandidati, nepotvrzene } from "@/lib/data";
 
@@ -9,14 +10,13 @@ export const metadata: Metadata = {
 
 export default function Udalosti() {
   return (
-    <div className="mx-auto max-w-[1200px] px-4 py-8 sm:px-6 sm:py-10">
-      <div className="mb-6 max-w-[64ch]">
-        <h1 className="text-[28px] font-bold leading-tight sm:text-[34px]">Události</h1>
-        <p className="mt-2 text-[15px] leading-relaxed text-tlum">
-          Případy, jejich aktualizace, oficiální opatření a prohlášení — vždy se zdrojem. Jedna událost se počítá jednou,
-          i když o ní vyjde více článků. Co se nepotvrdilo nebo bylo vyvráceno, je tu také, ale do počtů nevstupuje.
-        </p>
-      </div>
+    <div className="mx-auto max-w-[1200px] px-5 py-12 sm:px-8 sm:py-16">
+      <HlavickaStranky
+        stitek="Události"
+        nadpis="Co se stalo a odkud to víme"
+        uvod="Případy, jejich pokračování, úřední opatření a prohlášení. U každého záznamu je zdroj. Jedna událost se počítá jednou, i když o ní vyjde deset článků."
+      />
+      <div className="mt-12 sm:mt-16" />
       <UdalostiKlient zaznamy={incidenty()} neprosle={nepotvrzene()} kandidati={kandidati()} />
     </div>
   );

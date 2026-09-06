@@ -3,6 +3,7 @@ import Link from "next/link";
 import { Ikona } from "@/components/ikony";
 import { OdznakTypu } from "@/components/zaklad";
 import { Vlajka } from "@/components/zeme";
+import { HlavickaStranky, NadpisSekce } from "@/components/nadpisy";
 import { datumPraha } from "@/lib/cas";
 import { svet } from "@/lib/data";
 import { TYPY_ZDROJU } from "@/lib/kategorie";
@@ -120,11 +121,10 @@ function Aktor({ a, stupne }: { a: SvetAktor; stupne: string[] }) {
 export default function Svet() {
   const s = svet();
   return (
-    <div className="mx-auto max-w-[1200px] px-4 py-8 sm:px-6 sm:py-10">
-      <div className="max-w-[70ch]">
-        <h1 className="text-[28px] font-bold leading-tight sm:text-[34px]">Svět: cíle mocností a jak blízko k nim jsou</h1>
-        <p className="mt-2 text-[15.5px] leading-relaxed text-tlum">{s.uvod}</p>
-        <p className="mt-3 flex flex-wrap items-center gap-x-3 gap-y-1 text-[12.5px] text-tlum2">
+    <div className="mx-auto max-w-[1200px] px-5 py-12 sm:px-8 sm:py-16">
+      <div>
+        <HlavickaStranky stitek="Svět" nadpis="Kdo čeho chce dosáhnout a jak blízko je" uvod={s.uvod} />
+        <p className="mt-6 flex flex-wrap items-center gap-x-3 gap-y-1 text-[12.5px] text-tlum2">
           <span>Hodnocení projektu k {datumPraha(s.aktualizovano)}, verze {s.verze}</span>
           <span aria-hidden>·</span>
           <span className="inline-flex items-center gap-1.5"><OdznakTypu typ="fakt" /> doloženo zdrojem</span>
@@ -136,7 +136,7 @@ export default function Svet() {
       </div>
 
       {/* rychlý přehled */}
-      <section aria-label="Přehled aktérů" className="mt-6">
+      <section aria-label="Přehled aktérů" className="nalet mt-12 sm:mt-16">
         <ul className="grid gap-1.5 sm:grid-cols-2 lg:grid-cols-4">
           {s.aktori.map((a) => (
             <li key={a.klic}>
@@ -156,18 +156,26 @@ export default function Svet() {
       </section>
 
       {/* mapa cílů */}
-      <section aria-labelledby="mapa" className="mt-8">
-        <h2 id="mapa" className="text-[20px] font-bold">Mapa cílů</h2>
-        <p className="mt-1 mb-4 text-[14px] text-tlum">U každého aktéra tři vrstvy: co deklaruje, co dělá, jak blízko je. Čísla v hranatých závorkách vedou na zdroje.</p>
-        <div className="grid gap-4 lg:grid-cols-2">
+      <section aria-labelledby="mapa" className="nalet mt-16 border-t border-linka pt-12 sm:mt-24 sm:pt-16">
+        <NadpisSekce
+          id="mapa"
+          stitek="Aktéři"
+          nadpis="Mapa cílů"
+          popis="U každého tři vrstvy: co říká nahlas, co doopravdy dělá a jak blízko je. Čísla v hranatých závorkách vedou na zdroje."
+        />
+        <div className="grid gap-5 lg:grid-cols-2">
           {s.aktori.map((a) => <Aktor key={a.klic} a={a} stupne={s.stupne} />)}
         </div>
       </section>
 
       {/* střet */}
-      <section aria-labelledby="stret" className="mt-10">
-        <h2 id="stret" className="text-[20px] font-bold">Kde se cíle střetávají</h2>
-        <p className="mt-1 mb-4 text-[14px] text-tlum">Stejné otázky, různé odpovědi. Zkrácené postoje podle deklarací výše; pomlčka = aktér se k otázce nevyjadřuje nebo v ní nehraje roli.</p>
+      <section aria-labelledby="stret" className="nalet mt-16 border-t border-linka pt-12 sm:mt-24 sm:pt-16">
+        <NadpisSekce
+          id="stret"
+          stitek="Rozpory"
+          nadpis="Kde se cíle střetávají"
+          popis="Stejné otázky, různé odpovědi. Postoje jsou zkrácené podle deklarací výše; pomlčka znamená, že se k tomu aktér nevyjadřuje nebo v tom nehraje roli."
+        />
         <div className="overflow-x-auto rounded-[18px] border border-linka">
           <table className="w-full min-w-[980px] border-collapse text-left text-[13px]">
             <thead>
@@ -196,9 +204,13 @@ export default function Svet() {
       </section>
 
       {/* co sledovat */}
-      <section aria-labelledby="sledovat" className="mt-10">
-        <h2 id="sledovat" className="text-[20px] font-bold">Co sledovat</h2>
-        <p className="mt-1 mb-3 text-[14px] text-tlum">Signály, které by obrázek posunuly. Šipka říká, kterým směrem by posunula hodnocení pro Evropu.</p>
+      <section aria-labelledby="sledovat" className="nalet mt-16 border-t border-linka pt-12 sm:mt-24 sm:pt-16">
+        <NadpisSekce
+          id="sledovat"
+          stitek="Na co se dívat"
+          nadpis="Co by obrázek změnilo"
+          popis="Signály, které by hodnocení posunuly. Šipka říká kterým směrem."
+        />
         <ul className="divide-y divide-linka2 border-y border-linka2">
           {s.sledovat.map((x) => (
             <li key={x.text} className="flex items-start gap-3 py-2.5 text-[14px] leading-relaxed text-inkoust">

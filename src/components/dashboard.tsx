@@ -5,6 +5,7 @@ import type { CelkovyStav, Kandidat, NatoPolozka, Nepotvrzene, PravniPolozka, Pr
 import { PASMA, UROVNE } from "@/lib/skala";
 import { Ikona, type NazevIkony } from "./ikony";
 import { HeroDashboard } from "./hero-dashboard";
+import { NadpisSekce } from "./nadpisy";
 import { PasZemi } from "./pas-zemi";
 import { Pocitadla } from "./pocitadla";
 import { Partneri, Sledovat } from "./sledovat";
@@ -180,13 +181,20 @@ export function Dashboard({
   return (
     <>
     <PasZemi vse={vse} />
-    <div className="mx-auto max-w-[1280px] px-3 py-3 sm:px-5 sm:py-4">
+    <div className="mx-auto max-w-[1280px] px-4 py-5 sm:px-6 sm:py-7">
       <HeroDashboard stav={stav} cr={cr} hybridni={hybridni} obcane={obcane} overeno={overeno} pocetZaznamu={vse.length} pocet90={dni90.length} />
 
       {/* 2 — mřížka stavů + poslední události */}
-      <div className="mt-3 grid gap-3 lg:grid-cols-[minmax(0,1.35fr)_minmax(0,1fr)]">
+      <div className="nalet mt-14 sm:mt-20">
+        <NadpisSekce
+          stitek="Co právě platí"
+          nadpis="Úřední stav v Česku"
+          popis="Dvacet věcí, na které se lidé ptají jako první. Zelená znamená, že opatření neplatí — ověřeno v úřední sbírce, ne odhadnuto."
+        />
+      </div>
+      <div className="grid gap-4 lg:grid-cols-[minmax(0,1.35fr)_minmax(0,1fr)]">
         <section aria-label="Oficiální stavy" id="opatreni" className="scroll-mt-[84px]">
-          <ul className="grid grid-cols-2 gap-1.5 sm:grid-cols-3 xl:grid-cols-4">
+          <ul className="grid grid-cols-2 gap-2.5 sm:grid-cols-3 xl:grid-cols-4">
             {pravni.map((p) => <Dlazdice key={p.klic} d={dlazdicePravni(p)} />)}
             {natoPolozky.map((p) => <Dlazdice key={p.klic} d={dlazdiceNato(p)} />)}
             {provozPolozky.map((p) => <Dlazdice key={p.klic} d={dlazdiceProvoz(p)} />)}
@@ -217,7 +225,14 @@ export function Dashboard({
       </div>
 
       {/* 3 — čísla, kde, kdo */}
-      <div className="mt-3 grid gap-3 md:grid-cols-3">
+      <div className="nalet mt-14 border-t border-linka pt-12 sm:mt-20 sm:pt-14">
+        <NadpisSekce
+          stitek="Čísla"
+          nadpis="Kolik toho je, kde a kdo za tím stojí"
+          popis="Počítají se jen případy, tedy skutečné události. Pokračování případu, opatření ani prohlášení číslo nezvyšují."
+        />
+      </div>
+      <div className="grid gap-8 md:grid-cols-3">
         <section aria-label="Posledních 90 dnů">
           <div className="mb-1.5 flex items-center justify-between"><span className="stitek">Posledních 90 dnů · případy</span><Link href="/udalosti/?obdobi=30d" className="text-[12px] text-akcent hover:text-akcent-svetla">detail →</Link></div>
           <div className="grid grid-cols-2 gap-1.5">
@@ -255,21 +270,32 @@ export function Dashboard({
       </div>
 
       {/* 4 — započítávání a úplný seznam */}
-      <div className="mt-3"><Pocitadla vse={vse} neprosle={neprosle} kandidati={kandidati} /></div>
-      <section id="zaznamy" aria-label="Všechny záznamy" className="mt-3 scroll-mt-[84px] rounded-[18px] border border-linka2 bg-plocha p-3 sm:p-4">
-        <div className="mb-2 flex flex-wrap items-center justify-between gap-2">
-          <span className="stitek">Všechny záznamy od roku 2014 · případy, aktualizace, opatření, reakce i to, co neprošlo</span>
-          <Link href="/udalosti/" className="text-[12px] text-akcent hover:text-akcent-svetla">samostatná stránka →</Link>
-        </div>
+      <div className="nalet mt-14 border-t border-linka pt-12 sm:mt-20 sm:pt-14">
+        <NadpisSekce
+          stitek="Archiv"
+          nadpis="Všechny záznamy od roku 2014"
+          popis="Případy, jejich pokračování, úřední opatření, prohlášení a také to, co neprošlo ověřením. Filtry si můžete uložit v adrese."
+          akce={<Link href="/udalosti/" className="text-[13px] font-semibold text-akcent hover:text-akcent-svetla">samostatná stránka →</Link>}
+        />
+      </div>
+      <div className="mb-5"><Pocitadla vse={vse} neprosle={neprosle} kandidati={kandidati} /></div>
+      <section id="zaznamy" aria-label="Všechny záznamy" className="scroll-mt-[84px] rounded-[22px] border border-linka2 bg-plocha p-4 sm:p-6">
         <UdalostiKlient zaznamy={vse} neprosle={neprosle} kandidati={kandidati} />
       </section>
 
       {/* 5 — sledovat a partneři */}
-      <div className="mt-4"><Sledovat /></div>
-      <div className="mt-4"><Partneri /></div>
+      <div className="nalet mt-14 border-t border-linka pt-12 sm:mt-20 sm:pt-14">
+        <NadpisSekce
+          stitek="Odběr"
+          nadpis="Jak se to dozvíte, aniž byste sem chodili"
+          popis="Kanály, čtečka nebo vlastní přehled ve vašem zařízení. Nic z toho po vás nechce jméno ani e-mail."
+        />
+        <Sledovat />
+      </div>
+      <div className="mt-12 sm:mt-16"><Partneri /></div>
 
       {/* 6 — sbalené: proč, co by změnilo, odběr */}
-      <div className="mt-3 grid gap-2 md:grid-cols-3">
+      <div className="mt-14 grid gap-3 border-t border-linka pt-12 sm:mt-20 sm:pt-14 md:grid-cols-3">
         <details className="group rounded-[16px] border border-linka2 bg-plocha">
           <summary className="flex min-h-[40px] cursor-pointer items-center justify-between px-3 text-[13px] font-semibold text-inkoust">Proč je hodnocení {d ? d.nazev.toLowerCase() : "takové"}<Ikona nazev="dolu" velikost={12} tah={2} trida="text-tlum2 transition-transform group-open:rotate-180" /></summary>
           <p className="border-t border-linka2 px-3 py-2.5 text-[13px] leading-relaxed text-tlum">{stav.shrnuti || "Bez zdůvodnění."} <Link href="/metodika/" className="odkaz">Metodika</Link></p>
@@ -288,7 +314,7 @@ export function Dashboard({
           </span>
         </div>
       </div>
-      <p className="mt-3 text-[11.5px] text-tlum2">Není to úřední zdroj ani varovný systém. V nouzi 112. Najeďte na dlaždici pro vysvětlení; každé číslo vede na svůj seznam.</p>
+      <p className="mt-8 text-[12px] text-tlum2">Není to úřední zdroj ani varovný systém. V nouzi 112. Najeďte na dlaždici pro vysvětlení; každé číslo vede na svůj seznam.</p>
     </div>
     </>
   );

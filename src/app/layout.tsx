@@ -6,6 +6,7 @@ import { PostranniPanel } from "@/components/postranni-panel";
 import { RegistraceSW } from "@/components/pwa";
 import { Paticka } from "@/components/paticka";
 import { UkazkaPruh } from "@/components/pruhy";
+import { Znacka } from "@/components/znacka";
 import { WEB } from "@/config/web";
 import "./globals.css";
 
@@ -64,6 +65,16 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="cs" className={`${archivo.variable} ${mono.variable}`}>
       <body className="min-h-dvh">
+        {/*
+          Pozadí, které se hýbe pomaleji než obsah. Je to jen ozdoba: leží pod
+          vším, nedá se na ně kliknout a čtečka ho nevidí. Bez podpory
+          scroll-driven animací zůstane stát, což ničemu nevadí.
+        */}
+        <div aria-hidden className="paralax-vrstva">
+          <div className="paralax-znacka">
+            <Znacka velikost={620} tmave />
+          </div>
+        </div>
         <a
           href="#obsah"
           className="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-[100] focus:rounded focus:bg-inkoust focus:px-3 focus:py-2 focus:text-[13px] focus:text-white"

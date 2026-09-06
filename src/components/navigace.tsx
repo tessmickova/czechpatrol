@@ -23,7 +23,7 @@ export function Navigace() {
   return (
     // Hlavička je skleněná pilulka, ne pruh přes celou šířku — tak ji má značka.
     <header className="neni-tisk sticky top-0 z-50 px-3 pt-3 sm:px-4">
-      <div className="sklo mx-auto flex min-h-[56px] max-w-[1200px] flex-wrap items-center gap-x-4 gap-y-2 rounded-full px-3 py-2 sm:px-4">
+      <div className="sklo-hlavicka mx-auto flex min-h-[56px] max-w-[1200px] flex-wrap items-center gap-x-4 gap-y-2 rounded-full px-3 py-2 sm:px-4">
         <Link href="/" className="mr-auto flex shrink-0 items-center" aria-label={`${WEB.nazev} — přehled`}>
           <Logo velikost={34} pismo={19} tmave />
         </Link>

@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { HlavickaStranky, NadpisSekce } from "@/components/nadpisy";
 import { GrafMesicuPripadu } from "@/components/graf-mesicu-pripadu";
 import { GrafTrendu, TabulkaTydnu } from "@/components/trend";
 import { sklon, Vlajka } from "@/components/zeme";
@@ -42,19 +43,20 @@ export default function Vyvoj() {
   const prvniPlny = rada.find((m) => m.uplne)?.mesic;
 
   return (
-    <div className="mx-auto max-w-[1200px] px-4 py-8 sm:px-6 sm:py-10">
-      <div className="mb-8 max-w-[64ch]">
-        <h1 className="text-[28px] font-bold leading-tight sm:text-[34px]">Vývoj v čase</h1>
-        <p className="mt-2 text-[15px] leading-relaxed text-tlum">
-          Dvě různé věci zvlášť: <b className="font-semibold text-inkoust">kolik</b> případů jsme zjistili a <b className="font-semibold text-inkoust">jak závažná</b> je situace podle hodnocení projektu. Víc záznamů neznamená horší situaci — často jen lepší sledování.
-        </p>
-      </div>
+    <div className="mx-auto max-w-[1200px] px-5 py-12 sm:px-8 sm:py-16">
+      <HlavickaStranky
+        stitek="Vývoj"
+        nadpis="Jak se situace mění v čase"
+        uvod={<>Dvě různé věci zvlášť: <b className="font-semibold text-akcent">kolik</b> případů jsme zjistili a <b className="font-semibold text-akcent">jak závažná</b> je situace. Víc záznamů neznamená horší situaci — často jen lepší sledování.</>}
+      />
 
-      <section aria-labelledby="objem" className="border-t border-linka pt-8">
-        <h2 id="objem" className="text-[20px] font-bold">Objem: jedinečné případy po měsících</h2>
-        <p className="mt-1 mb-4 text-[14px] text-tlum">
-          Podle data zjištění. Aktualizace, opatření a reakce se nepočítají. Plný monitoring běží od {prvniPlny ? prvniPlny.split("-").reverse().join("/") : "—"}; starší záznamy jsou doplněné zpětně, proto jsou ty měsíce šrafované.
-        </p>
+      <section aria-labelledby="objem" className="nalet mt-16 border-t border-linka pt-12 sm:mt-24 sm:pt-16">
+        <NadpisSekce
+          id="objem"
+          stitek="Kolik toho je"
+          nadpis="Případy po měsících"
+          popis={<>Počítá se den, kdy věc vyšla najevo. Aktualizace, opatření a prohlášení se nepočítají. Plný monitoring běží od {prvniPlny ? prvniPlny.split("-").reverse().join("/") : "—"}; starší záznamy jsme doplnili zpětně, proto jsou ty měsíce šrafované.</>}
+        />
         <GrafMesicuPripadu rada={rada} hodnoceni={hodnoceni} />
         <details className="mt-3">
           <summary className="min-h-[36px] cursor-pointer text-[13.5px] font-semibold text-tlum hover:text-inkoust">Stejná data jako tabulka po letech</summary>
@@ -74,11 +76,13 @@ export default function Vyvoj() {
         </details>
       </section>
 
-      <section aria-labelledby="zavaznost" className="mt-10 border-t border-linka pt-8">
-        <h2 id="zavaznost" className="text-[20px] font-bold">Závažnost: hodnocení po týdnech</h2>
-        <p className="mt-1 mb-4 text-[14px] text-tlum">
-          Hodnocení projektu podle <Link href="/metodika/" className="odkaz">metodiky</Link>, letos po týdnech. Svislá osa je stupnice úrovní, ne počet. Týdny bez hodnocení zůstávají prázdné.
-        </p>
+      <section aria-labelledby="zavaznost" className="nalet mt-16 border-t border-linka pt-12 sm:mt-24 sm:pt-16">
+        <NadpisSekce
+          id="zavaznost"
+          stitek="Jak je to vážné"
+          nadpis="Hodnocení po týdnech"
+          popis={<>Hodnocení projektu podle <Link href="/metodika/" className="odkaz">metodiky</Link>, letos týden po týdnu. Svislá osa je stupnice úrovní, ne počet. Týdny bez hodnocení zůstávají prázdné.</>}
+        />
         <GrafTrendu tydny={tydenni} />
         <details className="mt-3">
           <summary className="min-h-[36px] cursor-pointer text-[13.5px] font-semibold text-tlum hover:text-inkoust">Týdenní přehled jako tabulka</summary>
@@ -86,9 +90,13 @@ export default function Vyvoj() {
         </details>
       </section>
 
-      <section aria-labelledby="zmeny" className="mt-10 border-t border-linka pt-8">
-        <h2 id="zmeny" className="text-[20px] font-bold">Významné změny stavu</h2>
-        <p className="mt-1 mb-4 text-[14px] text-tlum">Z archivu snímků: kdy se změnilo hodnocení, právní stav nebo stav NATO. Archiv se zapisuje jen při změně.</p>
+      <section aria-labelledby="zmeny" className="nalet mt-16 border-t border-linka pt-12 sm:mt-24 sm:pt-16">
+        <NadpisSekce
+          id="zmeny"
+          stitek="Co se úředně změnilo"
+          nadpis="Významné změny stavu"
+          popis="Z archivu: kdy se změnilo hodnocení, právní stav nebo stav NATO. Zapisujeme jen skutečnou změnu, ne každý den znovu."
+        />
         {zmenyArchivu.length ? (
           <ol className="divide-y divide-linka2 border-y border-linka2">
             {zmenyArchivu.map((s) => (
@@ -104,11 +112,13 @@ export default function Vyvoj() {
         ) : <p className="text-[14px] text-tlum">Archiv zatím nezachytil žádnou změnu.</p>}
       </section>
 
-      <section aria-labelledby="kde" className="mt-10 border-t border-linka pt-8">
-        <h2 id="kde" className="text-[20px] font-bold">Kde a kdo — {rok}</h2>
-        <p className="mt-1 mb-4 text-[14px] text-tlum">
-          {p.pripady} {sklon(p.pripady, "případ", "případy", "případů")}, {p.aktualizace} {sklon(p.aktualizace, "aktualizace", "aktualizace", "aktualizací")}, {p.opatreni} opatření, {p.reakce} {sklon(p.reakce, "reakce", "reakce", "reakcí")}. Česko je vždy první, i když tam nic není.
-        </p>
+      <section aria-labelledby="kde" className="nalet mt-16 border-t border-linka pt-12 sm:mt-24 sm:pt-16">
+        <NadpisSekce
+          id="kde"
+          stitek={`Rok ${rok}`}
+          nadpis="Kde se to dělo a kdo za tím stojí"
+          popis={<>{p.pripady} {sklon(p.pripady, "případ", "případy", "případů")}, {p.aktualizace} {sklon(p.aktualizace, "aktualizace", "aktualizace", "aktualizací")}, {p.opatreni} opatření a {p.reakce} {sklon(p.reakce, "reakce", "reakce", "reakcí")}. Česko uvádíme vždy první, i když v něm nic není.</>}
+        />
         <div className="grid gap-8 md:grid-cols-[minmax(0,1.4fr)_minmax(0,1fr)]">
           <div className="overflow-x-auto">
             <table className="w-full min-w-[520px] text-left text-[13.5px]">

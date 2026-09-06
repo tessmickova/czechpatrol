@@ -1,6 +1,7 @@
 import type { ReactNode } from "react";
 import { JISTOTY, tokeny, UROVNE } from "@/lib/skala";
 import { Ikona, type NazevIkony } from "./ikony";
+import { Znacka } from "./znacka";
 import type { Jistota, Uroven } from "@/lib/typy";
 
 /* ---------- nápověda ---------- */
@@ -201,7 +202,7 @@ export function Sekce({
   return (
     <section
       id={id}
-      className={`scroll-mt-[84px] ${
+      className={`nalet scroll-mt-[84px] ${
         tmava ? "noc relative overflow-hidden" : prvni ? "" : "border-t border-linka"
       }`}
     >
@@ -210,24 +211,17 @@ export function Sekce({
           <div className="vrstva vzor-mrizka absolute inset-x-0 -inset-y-[35%]" />
         </div>
       )}
-      <div className="mx-auto max-w-[1180px] px-5 py-16 sm:px-8 sm:py-20">
-        <div className="mb-9 flex flex-col gap-4 sm:mb-11 sm:flex-row sm:items-end sm:justify-between">
-          <div className="max-w-[42rem]">
+      <div className="mx-auto max-w-[1180px] px-5 py-20 sm:px-8 sm:py-28">
+        <div className="mb-10 flex flex-col gap-5 sm:mb-14 sm:flex-row sm:items-end sm:justify-between sm:gap-8">
+          <div className="max-w-[46rem]">
             {kicker && (
-              <div className={`stitek mb-3 ${tmava ? "!text-noc-tlum" : ""}`}>{kicker}</div>
+              <div className="mb-3.5 flex items-center gap-2">
+                <Znacka velikost={28} tmave />
+                <span className="stitek-znacky">{kicker}</span>
+              </div>
             )}
-            <h2
-              className={`podnadpis text-[32px] sm:text-[42px] ${tmava ? "text-noc-text" : ""}`}
-            >
-              {nadpis}
-            </h2>
-            {popis && (
-              <p
-                className={`mt-3 text-[17px] leading-relaxed ${tmava ? "text-noc-tlum" : "text-tlum"}`}
-              >
-                {popis}
-              </p>
-            )}
+            <h2 className={`titul-sekce ${tmava ? "text-noc-text" : ""}`}>{nadpis}</h2>
+            {popis && <p className="uvodni-veta mt-4">{popis}</p>}
           </div>
           {akce && <div className="shrink-0">{akce}</div>}
         </div>

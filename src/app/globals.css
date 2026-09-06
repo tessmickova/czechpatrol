@@ -112,6 +112,51 @@ body {
   line-height: 1.1;
   text-wrap: balance;
 }
+
+/*
+  Tři velikosti nadpisů a jedna vodicí věta. Víc jich není potřeba: čtenář
+  má z velikosti poznat, co je stránka, co sekce a co odstavec — ne to luštit.
+*/
+.titul-strany {
+  font-size: clamp(36px, 6vw, 62px);
+  font-weight: 700;
+  letter-spacing: -0.042em;
+  line-height: 1.02;
+  text-wrap: balance;
+}
+.titul-sekce {
+  font-size: clamp(27px, 3.6vw, 42px);
+  font-weight: 700;
+  letter-spacing: -0.035em;
+  line-height: 1.06;
+  text-wrap: balance;
+}
+.titul-mensi {
+  font-size: clamp(20px, 2.2vw, 26px);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1.15;
+  text-wrap: balance;
+}
+/* Vodicí věta pod nadpisem: větší než běžný text, v barvě textu, ne šedá. */
+.uvodni-veta {
+  font-size: clamp(17px, 1.35vw, 20px);
+  line-height: 1.55;
+  color: var(--color-inkoust);
+  opacity: 0.88;
+  max-width: 44ch;
+  text-wrap: pretty;
+}
+/* Štítek nad nadpisem nese barvu značky — je to část identity, ne popisek. */
+.stitek-znacky {
+  font-family: var(--font-mono);
+  font-size: 11.5px;
+  font-weight: 600;
+  line-height: 1;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--color-akcent);
+}
 .podnadpis {
   font-weight: 700;
   letter-spacing: 0;
@@ -156,6 +201,19 @@ body {
 
 @supports not (backdrop-filter: blur(1px)) {
   .sklo, .sklo-noc { background: #1a1a17; }
+}
+
+/* Hlavička je sklo, ale pod ní se rolují dlaždice s textem — musí být hustá.
+   Slabší sklo by z ní udělalo nečitelnou kaši. */
+.sklo-hlavicka {
+  background: rgb(18 18 14 / 0.86);
+  backdrop-filter: blur(22px) saturate(150%);
+  -webkit-backdrop-filter: blur(22px) saturate(150%);
+  border: 1px solid rgb(255 255 255 / 0.14);
+  box-shadow: 0 14px 34px rgb(0 0 0 / 0.5);
+}
+@supports not (backdrop-filter: blur(1px)) {
+  .sklo-hlavicka { background: #12120e; }
 }
 
 /* Navigace a překryvný panel: sklo, pod kterým se hýbe obsah.
@@ -238,6 +296,63 @@ html, body { overflow-x: clip; }
 .pas-beh { display: flex; width: max-content; animation: pas-beh 55s linear infinite; }
 .pas-obal:hover .pas-beh, .pas-obal:focus-within .pas-beh { animation-play-state: paused; }
 @media (prefers-reduced-motion: reduce) { .pas-beh { animation: none; } }
+
+/* ---------- pohyb: parallax a nálet ---------- */
+
+/*
+  Pohyb je vázaný na rolování, ne na časovač, a jede na kompozitoru.
+  Prohlížeč, který scroll-driven animace neumí, prostě ukáže výsledný stav —
+  nic se neschová. Při „prefers-reduced-motion“ se nespouští vůbec.
+*/
+.paralax-vrstva {
+  position: fixed;
+  inset: -20% 0 -20%;
+  z-index: -1;
+  pointer-events: none;
+  background:
+    radial-gradient(760px 520px at 14% 12%, rgb(193 39 45 / 0.18) 0%, rgb(193 39 45 / 0) 62%),
+    radial-gradient(680px 480px at 88% 68%, rgb(90 110 150 / 0.16) 0%, rgb(90 110 150 / 0) 60%);
+}
+.paralax-znacka {
+  position: absolute;
+  right: -8vw;
+  top: 22vh;
+  width: min(52vw, 620px);
+  opacity: 0.05;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  @supports (animation-timeline: scroll()) {
+    .paralax-vrstva {
+      animation: paralax-posun linear both;
+      animation-timeline: scroll(root);
+    }
+    @keyframes paralax-posun {
+      from { transform: translate3d(0, 0, 0); }
+      to { transform: translate3d(0, -14%, 0); }
+    }
+    .paralax-znacka {
+      animation: paralax-otoc linear both;
+      animation-timeline: scroll(root);
+    }
+    @keyframes paralax-otoc {
+      from { transform: rotate(0deg) translate3d(0, 0, 0); }
+      to { transform: rotate(38deg) translate3d(0, -8%, 0); }
+    }
+  }
+  @supports (animation-timeline: view()) {
+    /* Sekce naletí zespodu, jakmile se dostane do pohledu. Jednou, decentně. */
+    .nalet {
+      animation: nalet linear both;
+      animation-timeline: view();
+      animation-range: entry 0% entry 46%;
+    }
+    @keyframes nalet {
+      from { opacity: 0; transform: translate3d(0, 26px, 0); }
+      to { opacity: 1; transform: none; }
+    }
+  }
+}
 
 /* ---------- ovládání ---------- */
 

@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { HlavickaStranky } from "@/components/nadpisy";
 import Link from "next/link";
 import { KOMUNITA, METODIKA_REVIDOVANA, PROVOZOVATEL, UCTY_ZAPNUTE, WEB } from "@/config/web";
 import { datumPraha } from "@/lib/cas";
@@ -12,9 +13,9 @@ export const metadata: Metadata = {
 
 function Odstavec({ nadpis, children }: { nadpis: string; children: React.ReactNode }) {
   return (
-    <section className="border-t border-linka pt-6">
-      <h2 className="text-[18px] font-bold">{nadpis}</h2>
-      <div className="mt-2 space-y-2.5 text-[15px] leading-relaxed text-tlum">{children}</div>
+    <section className="nalet border-t border-linka pt-10">
+      <h2 className="titul-mensi">{nadpis}</h2>
+      <div className="mt-4 space-y-3.5 text-[16px] leading-relaxed text-tlum">{children}</div>
     </section>
   );
 }
@@ -23,13 +24,13 @@ export default function OProjektu() {
   const p = pocty(incidenty(), "všechny zveřejněné záznamy");
   const n = nepotvrzene().length;
   return (
-    <div className="mx-auto max-w-[760px] px-4 py-8 sm:px-6 sm:py-10">
-      <h1 className="text-[28px] font-bold leading-tight sm:text-[34px]">O projektu</h1>
-      <p className="mt-2 text-[16px] leading-relaxed text-tlum">
-        {WEB.nazev} je nezávislý, nekomerční přehled bezpečnostních událostí a oficiálních opatření, které se mohou dotknout lidí v Česku.
-        Není to úřední zdroj, varovný systém ani předpověď.
-      </p>
-      <div className="mt-8 space-y-6">
+    <div className="mx-auto max-w-[820px] px-5 py-12 sm:px-8 sm:py-16">
+      <HlavickaStranky
+        stitek="O projektu"
+        nadpis="Kdo to píše a podle čeho"
+        uvod={<>{WEB.nazev} je nezávislý a nekomerční přehled bezpečnostních událostí a úředních opatření, která se mohou dotknout lidí v Česku. Není to úřední zdroj, varovný systém ani předpověď.</>}
+      />
+      <div className="mt-16 space-y-12 sm:mt-20">
         <Odstavec nadpis="Co web dělá">
           <p>Sbírá veřejně dostupné informace o sabotážích, průnicích do vzdušného prostoru, kybernetických operacích a oficiálních reakcích států. Každý záznam má zdroj, datum události i datum, kdy vyšla najevo, a zvlášť uvedenou závažnost a jistotu.</p>
           <p>Dnes je zveřejněno {p.pripady} případů, {p.aktualizace} aktualizací, {p.opatreni} opatření a {p.reakce} prohlášení nebo reakcí; {n} záznamů ověřením neprošlo a je vedeno odděleně.</p>

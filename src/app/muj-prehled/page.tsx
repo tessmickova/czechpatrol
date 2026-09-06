@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { HlavickaStranky } from "@/components/nadpisy";
 import { MujPrehledKlient } from "@/components/muj-prehled-klient";
 import { incidenty } from "@/lib/data";
 
@@ -9,11 +10,13 @@ export const metadata: Metadata = {
 
 export default function MujPrehled() {
   return (
-    <div className="mx-auto max-w-[1200px] px-4 py-8 sm:px-6 sm:py-10">
-      <div className="mb-6 max-w-[64ch]">
-        <h1 className="text-[28px] font-bold leading-tight sm:text-[34px]">Můj přehled</h1>
-        <p className="mt-2 text-[15px] leading-relaxed text-tlum">Vyberte, co chcete vidět jako první. Bez účtu, bez polohy.</p>
-      </div>
+    <div className="mx-auto max-w-[1200px] px-5 py-12 sm:px-8 sm:py-16">
+      <HlavickaStranky
+        stitek="Můj přehled"
+        nadpis="Vyberte si, co chcete vidět první"
+        uvod="Uloží se to jen ve vašem zařízení. Bez účtu, bez polohy, bez e-mailu."
+      />
+      <div className="mt-12 sm:mt-16" />
       <MujPrehledKlient zaznamy={incidenty()} />
     </div>
   );

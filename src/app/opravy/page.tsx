@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { HlavickaStranky } from "@/components/nadpisy";
 import Link from "next/link";
 import { datumPraha } from "@/lib/cas";
 import { incident, opravy } from "@/lib/data";
@@ -19,20 +20,20 @@ const DRUHY: Record<string, string> = {
 export default function Opravy() {
   const seznam = opravy();
   return (
-    <div className="mx-auto max-w-[860px] px-4 py-8 sm:px-6 sm:py-10">
-      <h1 className="text-[28px] font-bold leading-tight sm:text-[34px]">Opravy a historie</h1>
-      <p className="mt-2 max-w-[64ch] text-[15px] leading-relaxed text-tlum">
-        Každá oprava zveřejněného údaje je tu zapsaná: co bylo špatně, proč a co platí teď. U jednotlivých událostí je táž informace
-        v části „Historie aktualizací a oprav“. Úplná historie změn dat je v <a href={KOMUNITA.github} target="_blank" rel="noopener noreferrer" className="odkaz">repozitáři</a>.
-      </p>
-      <h2 className="mt-8 text-[18px] font-bold">Jak opravy děláme</h2>
+    <div className="mx-auto max-w-[900px] px-5 py-12 sm:px-8 sm:py-16">
+      <HlavickaStranky
+        stitek="Opravy"
+        nadpis="Co jsme napsali špatně"
+        uvod={<>Každá oprava zveřejněného údaje je tady: co bylo špatně, proč a co platí teď. U jednotlivých událostí najdete totéž v části Historie. Úplná historie změn dat je v <a href={KOMUNITA.github} target="_blank" rel="noopener noreferrer" className="odkaz">repozitáři</a>.</>}
+      />
+      <h2 className="titul-mensi mt-16 sm:mt-20">Jak opravy děláme</h2>
       <ol className="mt-2 list-decimal space-y-1.5 pl-5 text-[14.5px] leading-relaxed text-tlum">
         <li>Chybu ověříme proti zdroji. Podnět od čtenáře sám o sobě opravou není.</li>
         <li>Opravený záznam dostane novou položku v historii, původní znění zůstává dohledatelné v repozitáři.</li>
         <li>Oprava, která mění počty nebo hodnocení, se zapíše i sem, s datem zveřejnění.</li>
         <li>Změna metodiky je verzovaná. Starší hodnocení se nepřepisují zpětně; mění se jen názvy, pokud to metodika říká.</li>
       </ol>
-      <h2 className="mt-8 text-[18px] font-bold">Seznam oprav</h2>
+      <h2 className="titul-mensi mt-14">Seznam oprav</h2>
       {seznam.length ? (
         <ol className="mt-3 divide-y divide-linka2 border-y border-linka2">
           {seznam.map((o) => {

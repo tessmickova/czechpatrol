@@ -43,6 +43,34 @@ Archivo nese nadpisy, tlačítka i běžný text. IBM Plex Mono nese popisky, č
 časy a navigaci. Obě stahuje `next/font` při sestavení a servírují se z naší
 domény, takže návštěvník nechodí na server třetí strany.
 
+## Nadpisy a prostor
+
+Tři velikosti nadpisů a jedna vodicí věta, definované v `globals.css`
+a používané přes komponenty v `src/components/nadpisy.tsx`:
+
+| Třída | Velikost | Kde |
+|---|---|---|
+| `.titul-strany` | clamp 36–62 px | jeden nadpis nahoře na stránce (`HlavickaStranky`) |
+| `.titul-sekce` | clamp 27–42 px | nadpis sekce (`NadpisSekce`) |
+| `.titul-mensi` | clamp 20–26 px | blok uvnitř sekce (`NadpisBloku`) |
+| `.uvodni-veta` | clamp 17–20 px | vodicí věta pod nadpisem, barva textu, ne šedá |
+| `.stitek-znacky` | 11,5 px mono | štítek nad nadpisem, **v barvě značky** |
+
+Nad každým nadpisem stojí značka a štítek v červené. Značka se tím opakuje
+po celém webu, ne jen v hlavičce, a stránka se pozná i podle výřezu.
+
+Prostor: sekce od sebe dělí 56–80 px a vlasová linka, uvnitř sekce je mezi
+nadpisem a obsahem 32–40 px. Mřížky mají mezery 10–16 px místo dřívějších 6.
+Cílem je, aby na jedné obrazovce nebylo víc než jedno sdělení.
+
+## Pohyb
+
+Pozadí se posouvá pomaleji než obsah a velká značka v něm se pomalu otáčí;
+sekce naletí zespodu, jakmile se dostanou do pohledu. Vše je vázané
+na rolování, ne na časovač, a jede na kompozitoru (`animation-timeline`).
+Prohlížeč bez podpory ukáže rovnou výsledný stav, takže se nic neschová.
+Při nastavení „omezit pohyb“ se nespustí nic.
+
 ## Plochy a zaoblení
 
 - Sklo (`.sklo`): `rgb(255 255 255 / 0.06)`, rozostření 20 px, obrys
