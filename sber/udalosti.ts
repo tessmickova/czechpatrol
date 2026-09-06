@@ -1,3 +1,4 @@
+import { createHash } from "node:crypto";
 import fs from "node:fs";
 import path from "node:path";
 import { ctiRss, normalizuj, stahni } from "./nacti";
@@ -88,7 +89,21 @@ const nyni = () => new Date().toISOString();
 
 function ctiKandidaty(): Kandidat[] {
   if (!fs.existsSync(SOUBOR)) return [];
-  try { return JSON.parse(fs.readFileSync(SOUBOR, "utf-8")) as Kandidat[]; } catch { return []; }
+  try {
+    const stare = JSON.parse(fs.readFileSync(SOUBOR, "utf-8")) as Kandidat[];
+    // Id se odvozuje z adresy; starší zápisy se přepočítají a duplicitní adresy se nechají jen jednou.
+    const podleAdresy = new Map<string, Kandidat>();
+    for (const k of stare) if (!podleAdresy.has(k.zdroj.url)) podleAdresy.set(k.zdroj.url, { ...k, id: kandidatId(k.zdroj.url) });
+    return [...podleAdresy.values()];
+  } catch { return []; }
+}
+
+/**
+ * Id kandidáta z adresy. Otisk (hash) místo začátku adresy: odkazy z Google
+ * News začínají stejně a zkrácený začátek dával všem stejné id.
+ */
+export function kandidatId(url: string): string {
+  return `k-${createHash("sha256").update(url).digest("hex").slice(0, 16)}`;
 }
 
 /** Otisk titulku: prvních osm slov bez diakritiky — stejná zpráva z více redakcí se nezapíše dvakrát. */
@@ -231,7 +246,7 @@ export async function sbirejUdalosti(): Promise<{ novych: number; celkem: number
       if (otisky.has(o) || zname.otisky.has(o)) continue;
       const zeme = odhadniZemi(text);
       const { kategorie, shody } = odhadniTemata(text);
-      const id = `k-${Buffer.from(p.odkaz).toString("base64url").slice(0, 16)}`;
+      const id = kandidatId(p.odkaz);
       nove.push({
         id,
         zachyceno: nyni(),

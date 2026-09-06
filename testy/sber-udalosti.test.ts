@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { odhadniTemata, odhadniZemi, otisk, relevantni } from "../sber/udalosti";
+import { kandidatId, odhadniTemata, odhadniZemi, otisk, relevantni } from "../sber/udalosti";
 
 describe("automatický sběr událostí — pravidla", () => {
   it("pozná zemi události, i když je zmíněné Rusko jako původce", () => {
@@ -18,6 +18,13 @@ describe("automatický sběr událostí — pravidla", () => {
     expect(relevantni("Football club buys new drone for training videos")).toBe(false);
     expect(relevantni("New smartphone with better camera")).toBe(false);
     expect(relevantni("Drone show lights up the night sky at festival")).toBe(false);
+  });
+  it("id kandidáta je jedinečné i pro adresy se stejným začátkem", () => {
+    const a = kandidatId("https://news.google.com/rss/articles/CBMiAAAA?oc=5");
+    const b = kandidatId("https://news.google.com/rss/articles/CBMiBBBB?oc=5");
+    expect(a).not.toBe(b);
+    expect(a).toBe(kandidatId("https://news.google.com/rss/articles/CBMiAAAA?oc=5"));
+    expect(a).toMatch(/^k-[0-9a-f]{16}$/);
   });
   it("otisk titulku srovná stejnou zprávu z různých redakcí", () => {
     expect(otisk("Copenhagen Airport closed as police investigate drone activity — Bloomberg")).toBe(otisk("Copenhagen airport closed as police investigate drone activity!"));
