@@ -5296,5 +5296,941 @@
     "lidskyOvereno": true,
     "archivniZaznam": false,
     "druh": "reakce"
+  },
+  {
+    "id": "h45",
+    "slug": "druzba-unecha-2025",
+    "titulek": "Ukrajinské drony třikrát za devět dní zasáhly čerpací stanice ropovodu Družba v Rusku; dodávky do Maďarska a na Slovensko stály",
+    "kratkyTitulek": "Údery na Družbu v Rusku",
+    "zeme": "Rusko",
+    "kodZeme": "RU",
+    "kategorie": [
+      "infrastruktura",
+      "rusko",
+      "diplomacie"
+    ],
+    "datumUdalosti": "2025-08-21T00:00:00Z",
+    "datumZjisteni": "2025-08-22T00:00:00Z",
+    "aktualizovano": "2026-09-06T00:00:00Z",
+    "zavaznost": "Y3",
+    "jistota": "potvrzeno",
+    "stav": "bez-vysetrovani",
+    "atribuce": "oficialni",
+    "fakta": [
+      "Ukrajinské drony zasáhly 12. srpna 2025 čerpací stanici Uněča v Brjanské oblasti, 18. srpna stanici Nikolskoje v Tambovské oblasti a 21. srpna znovu Uněču; velitel ukrajinských sil bezpilotních systémů Robert Brovdi útok potvrdil a zveřejnil záběry.",
+      "Maďarský ministr zahraničí Szijjártó 22. srpna oznámil, že dodávky ropy Družbou se znovu zastavily; Maďarsko a Slovensko žádaly Ukrajinu, aby útoky ukončila. Dodávky se obnovily 20. srpna a znovu po druhém úderu."
+    ],
+    "neznameho": [
+      "Rozsah škod na stanicích a doba jejich plné obnovy."
+    ],
+    "vyznam": "Ukrajinský vojenský úder na ruském území s přímým dopadem na dodávky ropy dvěma členům EU a NATO. Původce je Ukrajina, která se k útoku přihlásila; jde o válečný cíl, ne o skrytou sabotáž.",
+    "eskalacniSpousteče": [],
+    "deeskalacniSignaly": [],
+    "zdroje": [
+      {
+        "nazev": "The Moscow Times — Hungary and Slovakia Demand Ukraine Stop Attacks on Russia's Druzhba Pipeline",
+        "url": "https://www.themoscowtimes.com/2025/08/22/hungary-and-slovakia-demand-ukraine-stop-attacks-on-russias-druzhba-pipeline-a90321",
+        "typ": "media",
+        "publikovano": "2025-08-22T00:00:00Z",
+        "primarni": false,
+        "jazyk": "en"
+      },
+      {
+        "nazev": "Meduza — Russian oil flow to Hungary halted again after Ukrainian drone strike on Druzhba pipeline",
+        "url": "https://meduza.io/en/news/2025/08/22/russian-oil-flow-to-hungary-halted-again-after-ukrainian-drone-strike-on-druzhba-pipeline",
+        "typ": "media",
+        "publikovano": "2025-08-22T00:00:00Z",
+        "primarni": false,
+        "jazyk": "en"
+      },
+      {
+        "nazev": "The Moscow Times — Russian Oil Flows to Hungary and Slovakia Resume After Ukrainian Pipeline Strike",
+        "url": "https://www.themoscowtimes.com/2025/08/20/russian-oil-flows-to-hungary-and-slovakia-resume-after-ukrainian-pipeline-strike-a90290",
+        "typ": "media",
+        "publikovano": "2025-08-20T00:00:00Z",
+        "primarni": false,
+        "jazyk": "en"
+      },
+      {
+        "nazev": "Euromaidan Press — Ukraine drones turned Russia's Druzhba oil lifeline into fire, second hit in Bryansk's Unecha this month",
+        "url": "https://euromaidanpress.com/2025/08/22/ukraine-drones-turned-russias-druzhba-oil-lifeline-into-fire-second-hit-in-bryansks-unecha-this-month-video/",
+        "typ": "media",
+        "publikovano": "2025-08-22T00:00:00Z",
+        "primarni": false,
+        "jazyk": "en"
+      }
+    ],
+    "souvisejici": [],
+    "historie": [
+      {
+        "kdy": "2025-08-12T00:00:00Z",
+        "text": "První úder na Uněču.",
+        "novySignal": true
+      },
+      {
+        "kdy": "2025-08-18T00:00:00Z",
+        "text": "Úder na Nikolskoje, dodávky do Maďarska přerušeny.",
+        "novySignal": true
+      },
+      {
+        "kdy": "2025-08-21T00:00:00Z",
+        "text": "Druhý úder na Uněču, dodávky znovu zastaveny.",
+        "novySignal": true
+      }
+    ],
+    "novy": false,
+    "zapocitanoTyden": "2025-08-22",
+    "aiZpracovano": true,
+    "lidskyOvereno": true,
+    "archivniZaznam": false,
+    "druh": "pripad",
+    "historicky": true,
+    "puvodce": "ukrajina"
+  },
+  {
+    "id": "h46",
+    "slug": "qendil-stredomori-2025",
+    "titulek": "Ukrajina poprvé zasáhla tanker ruské stínové flotily ve Středomoří, asi 1 500 km od svých hranic",
+    "kratkyTitulek": "Tanker QENDIL ve Středomoří",
+    "zeme": "Středomoří (mezinárodní vody)",
+    "kodZeme": "XZ",
+    "kategorie": [
+      "hybridni",
+      "infrastruktura",
+      "rusko"
+    ],
+    "datumUdalosti": "2025-12-19T00:00:00Z",
+    "datumZjisteni": "2025-12-19T00:00:00Z",
+    "aktualizovano": "2026-09-06T00:00:00Z",
+    "zavaznost": "Y2",
+    "jistota": "vysoka",
+    "stav": "bez-vysetrovani",
+    "atribuce": "oficialni",
+    "fakta": [
+      "19. prosince 2025 zasáhla ukrajinská SBU podle vlastního prohlášení drony tanker QENDIL spojovaný s ruskou stínovou flotilou v neutrálních vodách Středomoří; tanker byl v tu chvíli prázdný. Byl to první ukrajinský útok na tanker mimo Černé moře.",
+      "Podle zveřejněného videa shodily munici krátkodosahové drony, což naznačuje start z blízkého plavidla."
+    ],
+    "neznameho": [
+      "Odkud přesně drony startovaly a zda byl útok koordinován s některým státem regionu."
+    ],
+    "vyznam": "Rozšíření ukrajinské kampaně proti stínové flotile z Černého moře do Středomoří. Pro Evropu riziko pro plavbu a životní prostředí v jejích vodách; původce se přihlásil.",
+    "eskalacniSpousteče": [],
+    "deeskalacniSignaly": [],
+    "zdroje": [
+      {
+        "nazev": "NBC News — Ukraine strikes Russian 'shadow fleet' tanker in Mediterranean",
+        "url": "https://www.nbcnews.com/world/russia/ukraine-strikes-russian-shadow-fleet-tanker-mediterranean-rcna250101",
+        "typ": "media",
+        "publikovano": "2025-12-19T00:00:00Z",
+        "primarni": false,
+        "jazyk": "en"
+      },
+      {
+        "nazev": "The Moscow Times — Kyiv Claims Drone Strike Against Russian 'Shadow Fleet' Tanker in Mediterranean",
+        "url": "https://www.themoscowtimes.com/2025/12/19/kyiv-claims-drone-strike-against-russian-shadow-fleet-tanker-in-mediterranean-a91489",
+        "typ": "media",
+        "publikovano": "2025-12-19T00:00:00Z",
+        "primarni": false,
+        "jazyk": "en"
+      },
+      {
+        "nazev": "The War Zone — Ukraine Strikes Russia-Linked Tanker In The Mediterranean With 'Bomber Drone'",
+        "url": "https://www.twz.com/news-features/ukraine-strikes-russia-linked-tanker-in-the-mediterranean-with-bomber-drone",
+        "typ": "analysis",
+        "publikovano": "2025-12-19T00:00:00Z",
+        "primarni": false,
+        "jazyk": "en"
+      }
+    ],
+    "souvisejici": [],
+    "historie": [
+      {
+        "kdy": "2025-12-19T00:00:00Z",
+        "text": "Útok a přihlášení SBU.",
+        "novySignal": true
+      }
+    ],
+    "novy": false,
+    "zapocitanoTyden": "2025-12-19",
+    "aiZpracovano": true,
+    "lidskyOvereno": true,
+    "archivniZaznam": false,
+    "druh": "pripad",
+    "historicky": true,
+    "puvodce": "ukrajina"
+  },
+  {
+    "id": "i-2026-01-27-druzba-brody",
+    "slug": "druzba-brody-2026",
+    "titulek": "Družba: úder na čerpací stanici Brody zastavil na tři měsíce ruskou ropu do Maďarska a na Slovensko; Kyjev viní ruský dron, Budapešť a Bratislava Kyjev",
+    "kratkyTitulek": "Družba: zastavení dodávek 2026",
+    "zeme": "Ukrajina",
+    "kodZeme": "UA",
+    "kategorie": [
+      "infrastruktura",
+      "diplomacie",
+      "rusko"
+    ],
+    "datumUdalosti": "2026-01-27T00:00:00Z",
+    "datumZjisteni": "2026-01-27T00:00:00Z",
+    "aktualizovano": "2026-09-06T00:00:00Z",
+    "zavaznost": "Y3",
+    "jistota": "vysoka",
+    "stav": "bez-vysetrovani",
+    "atribuce": "nepotvrzena",
+    "fakta": [
+      "27. ledna 2026 byla poškozena čerpací stanice Brody na západní Ukrajině; podle Ukrajiny šlo o zásah ruským dronem Šáhid, který zapálil skladovací nádrž (hašení trvalo deset dní) a zničil kabely, transformátory a systém detekce úniků. Dodávky ruské ropy jižní větví Družby do Maďarska a na Slovensko se zastavily.",
+      "Maďarsko a Slovensko tvrdily, že Ukrajina tranzit zdržuje záměrně; 18. února Maďarsko oznámilo zastavení dodávek nafty na Ukrajinu, premiér Fico žádal inspektory EU. Obě země uvolnily strategické rezervy ropy. Dodávky se obnovily 22.–23. dubna 2026; obnovení odblokovalo půjčku EU pro Ukrajinu."
+    ],
+    "neznameho": [
+      "Nezávislé potvrzení příčiny poškození; zda a jak dlouho byla oprava odkládána z politických důvodů, jak tvrdily Budapešť a Bratislava."
+    ],
+    "vyznam": "Tři měsíce bez ruské ropy pro dva členy EU a otevřený spor uvnitř Unie. Původ poškození je podle Ukrajiny ruský, není nezávisle potvrzen; roli Ukrajiny v délce výpadku zpochybňují dotčené státy. Obojí uvádíme.",
+    "eskalacniSpousteče": [],
+    "deeskalacniSignaly": [],
+    "zdroje": [
+      {
+        "nazev": "The Moscow Times — Oil Supplies to Hungary and Slovakia Halted After Damage to Druzhba Pipeline",
+        "url": "https://www.themoscowtimes.com/2026/02/16/oil-supplies-to-hungary-and-slovakia-halted-after-damage-to-druzhba-pipeline-a91964",
+        "typ": "media",
+        "publikovano": "2026-02-16T00:00:00Z",
+        "primarni": false,
+        "jazyk": "en"
+      },
+      {
+        "nazev": "Euromaidan Press — Hungary and Slovakia demand Ukraine fix pipeline Russia bombed, or no diesel",
+        "url": "https://euromaidanpress.com/2026/02/19/hungary-slovakia-demand-ukraine-fix-pipeline-russia-bombed/",
+        "typ": "media",
+        "publikovano": "2026-02-19T00:00:00Z",
+        "primarni": false,
+        "jazyk": "en"
+      },
+      {
+        "nazev": "CNN — Druzhba pipeline restarts Russian oil flows to Europe, unblocking EU loan for Kyiv",
+        "url": "https://www.cnn.com/2026/04/22/europe/druzhba-ukraine-pipeline-restarts-intl",
+        "typ": "media",
+        "publikovano": "2026-04-22T00:00:00Z",
+        "primarni": false,
+        "jazyk": "en"
+      },
+      {
+        "nazev": "Institute of Central Europe — Hungary and Slovakia in the Face of a Disruption to Crude Oil Supplies via the Druzhba Pipeline",
+        "url": "https://ies.lublin.pl/en/comments/hungary-and-slovakia-in-the-face-of-a-disruption-to-crude-oil-supplies-via-the-druzhba-pipeline/",
+        "typ": "analysis",
+        "publikovano": "2026-03T00:00:00Z",
+        "primarni": false,
+        "jazyk": "en"
+      },
+      {
+        "nazev": "Al Jazeera — Ukraine targets Druzhba pipeline to sever Russian oil, influence in EU",
+        "url": "https://www.aljazeera.com/news/2026/4/29/ukraine-targets-druzhba-pipeline-to-sever-russian-oil-influence-in-eu",
+        "typ": "media",
+        "publikovano": "2026-04-29T00:00:00Z",
+        "primarni": false,
+        "jazyk": "en"
+      }
+    ],
+    "souvisejici": [],
+    "historie": [
+      {
+        "kdy": "2026-01-27T00:00:00Z",
+        "text": "Poškození stanice Brody, zastavení dodávek.",
+        "novySignal": true
+      },
+      {
+        "kdy": "2026-02-18T00:00:00Z",
+        "text": "Maďarsko zastavilo dodávky nafty na Ukrajinu, Slovensko žádá inspektory EU.",
+        "novySignal": true
+      },
+      {
+        "kdy": "2026-04-22T00:00:00Z",
+        "text": "Obnovení dodávek, odblokování půjčky EU.",
+        "novySignal": true
+      }
+    ],
+    "novy": true,
+    "zapocitanoTyden": "2026-01-27",
+    "aiZpracovano": true,
+    "lidskyOvereno": true,
+    "archivniZaznam": false,
+    "druh": "pripad",
+    "puvodce": "rusko"
+  },
+  {
+    "id": "i-2026-03-03-arctic-metagaz",
+    "slug": "arctic-metagaz-2026",
+    "titulek": "Středomoří: sankcionovaný ruský LNG tanker Arctic Metagaz po výbuších hoří a bez posádky driftuje mezi Itálií a Maltou; Moskva viní ukrajinské námořní drony",
+    "kratkyTitulek": "LNG tanker u Malty",
+    "zeme": "Středomoří (mezi Itálií a Maltou)",
+    "kodZeme": "XZ",
+    "kategorie": [
+      "infrastruktura",
+      "hybridni",
+      "rusko"
+    ],
+    "datumUdalosti": "2026-03-03T00:00:00Z",
+    "datumZjisteni": "2026-03-04T00:00:00Z",
+    "aktualizovano": "2026-09-06T00:00:00Z",
+    "zavaznost": "Y3",
+    "jistota": "vysoka",
+    "stav": "bez-vysetrovani",
+    "atribuce": "nepotvrzena",
+    "fakta": [
+      "3. března 2026 došlo k sérii výbuchů na 277 m dlouhém ruském LNG tankeru Arctic Metagaz, považovaném za část stínové flotily; loď s nákladem zkapalněného plynu se naklonila, hořela a týden driftovala bez posádky mezi Itálií a Maltou. Všech 30 členů posádky bylo zachráněno.",
+      "Ruské ministerstvo dopravy uvedlo, že loď napadly ukrajinské námořní drony vypuštěné od libyjského pobřeží; Putin útok označil za teroristický. Kyjev se k útoku nepřihlásil. Itálie řešila, kdo loď odtáhne."
+    ],
+    "neznameho": [
+      "Ukrajina odpovědnost nepotvrdila; nezávislé vyšetřování v době zprávy neproběhlo.",
+      "Riziko úniku LNG a rozsah škod."
+    ],
+    "vyznam": "Poškozený plynový tanker bez posádky u břehů dvou členů EU je bezpečnostní i ekologické riziko bez ohledu na to, kdo útok vedl. Původce je podle ruského tvrzení Ukrajina, nepotvrzeno.",
+    "eskalacniSpousteče": [],
+    "deeskalacniSignaly": [],
+    "zdroje": [
+      {
+        "nazev": "gCaptain — Moscow Alleges Ukrainian Drone Boat Attack On LNG Carrier Arctic Metagaz",
+        "url": "https://gcaptain.com/moscow-alleges-ukrainian-drone-boat-attack-on-lng-carrier-arctic-metagaz/",
+        "typ": "media",
+        "publikovano": "2026-03-04T00:00:00Z",
+        "primarni": false,
+        "jazyk": "en"
+      },
+      {
+        "nazev": "The Moscow Times — Ukraine Behind 'Terrorist' Attack on Russian LNG Tanker, Putin Says",
+        "url": "https://www.themoscowtimes.com/2026/03/04/ukraine-behind-terrorist-attack-on-russian-lng-tanker-putin-says-a92113",
+        "typ": "media",
+        "publikovano": "2026-03-04T00:00:00Z",
+        "primarni": false,
+        "jazyk": "en"
+      },
+      {
+        "nazev": "gCaptain — Italy Weighs Options as Damaged Russian LNG Tanker Drifts in the Mediterranean",
+        "url": "https://gcaptain.com/italy-weighs-options-as-damaged-russian-lng-tanker-drifts-in-the-mediterranean/",
+        "typ": "media",
+        "publikovano": "2026-03T00:00:00Z",
+        "primarni": false,
+        "jazyk": "en"
+      },
+      {
+        "nazev": "The Insider — Russian LNG carrier Arctic Metagaz remains adrift in Mediterranean after being attacked by Ukrainian sea drone",
+        "url": "https://theins.press/en/news/290268",
+        "typ": "media",
+        "publikovano": "2026-03T00:00:00Z",
+        "primarni": false,
+        "jazyk": "en"
+      }
+    ],
+    "souvisejici": [],
+    "historie": [
+      {
+        "kdy": "2026-03-03T00:00:00Z",
+        "text": "Výbuchy a požár na lodi.",
+        "novySignal": true
+      },
+      {
+        "kdy": "2026-03-04T00:00:00Z",
+        "text": "Ruské obvinění Ukrajiny.",
+        "novySignal": true
+      }
+    ],
+    "novy": true,
+    "zapocitanoTyden": "2026-03-04",
+    "aiZpracovano": true,
+    "lidskyOvereno": true,
+    "archivniZaznam": false,
+    "druh": "pripad",
+    "puvodce": "ukrajina"
+  },
+  {
+    "id": "i-2026-03-23-varena",
+    "slug": "litva-varena-dron-2026",
+    "titulek": "Litva: u jezera Lavysas ve Varėnském okrese se zřítil a vybuchl ukrajinský dron, který se odchýlil při útoku na ruský Primorsk",
+    "kratkyTitulek": "Ukrajinský dron v Litvě",
+    "zeme": "Litva",
+    "kodZeme": "LT",
+    "kategorie": [
+      "drony",
+      "nato"
+    ],
+    "datumUdalosti": "2026-03-23T00:00:00Z",
+    "datumZjisteni": "2026-03-23T00:00:00Z",
+    "aktualizovano": "2026-09-06T00:00:00Z",
+    "zavaznost": "Y2",
+    "jistota": "vysoka",
+    "stav": "probiha",
+    "atribuce": "oficialni",
+    "fakta": [
+      "V noci na 23. března 2026 slyšeli obyvatelé u jezera Lavysas hlasité bzučení a výbuch; podle litevské vlády šlo o ukrajinský vojenský dron, který se pravděpodobně odchýlil od kurzu při útoku na ruský ropný terminál Primorsk, nejspíš kvůli ruskému rušení. Nikdo nebyl zraněn.",
+      "Litva postup koordinovala s Ukrajinou; podle OSW šlo o první z řady incidentů, po němž 25. března vstoupily dva ukrajinské drony do vzdušného prostoru Lotyšska a Estonska."
+    ],
+    "neznameho": [
+      "Přesný důvod odchýlení; zda šlo o rušení, nebo o chybu navigace."
+    ],
+    "vyznam": "První doložený případ ukrajinského vojenského dronu na území NATO v roce 2026. Není to útok na Litvu; je to vedlejší účinek ukrajinské kampaně proti ruským přístavům a ruského rušení.",
+    "eskalacniSpousteče": [],
+    "deeskalacniSignaly": [],
+    "zdroje": [
+      {
+        "nazev": "LRT — Drone crashed in Lithuania, believed to be Ukrainian military aircraft",
+        "url": "https://www.lrt.lt/en/news-in-english/19/2931146/drone-crashed-in-lithuania-believed-to-be-ukrainian-military-aircraft",
+        "typ": "media",
+        "publikovano": "2026-03-23T00:00:00Z",
+        "primarni": false,
+        "jazyk": "en"
+      },
+      {
+        "nazev": "LRT — Lithuania coordinating with Ukraine after drone crash near Varėna, minister says",
+        "url": "https://www.lrt.lt/en/news-in-english/19/2878122/lithuania-coordinating-with-ukraine-after-drone-crash-near-varena-minister-says",
+        "typ": "media",
+        "publikovano": "2026-03-24T00:00:00Z",
+        "primarni": false,
+        "jazyk": "en"
+      },
+      {
+        "nazev": "OSW — The Baltic states respond to incidents involving Ukrainian drones",
+        "url": "https://www.osw.waw.pl/en/publikacje/analyses/2026-03-25/baltic-states-respond-to-incidents-involving-ukrainian-drones",
+        "typ": "analysis",
+        "publikovano": "2026-03-25T00:00:00Z",
+        "primarni": false,
+        "jazyk": "en"
+      }
+    ],
+    "souvisejici": [],
+    "historie": [
+      {
+        "kdy": "2026-03-23T00:00:00Z",
+        "text": "Pád a výbuch dronu.",
+        "novySignal": true
+      },
+      {
+        "kdy": "2026-03-25T00:00:00Z",
+        "text": "Další ukrajinské drony nad Lotyšskem a Estonskem (OSW).",
+        "novySignal": true
+      }
+    ],
+    "novy": true,
+    "zapocitanoTyden": "2026-03-23",
+    "aiZpracovano": true,
+    "lidskyOvereno": true,
+    "archivniZaznam": false,
+    "druh": "pripad",
+    "puvodce": "ukrajina"
+  },
+  {
+    "id": "i-2026-03-29-finsko",
+    "slug": "finsko-liutyi-2026",
+    "titulek": "Finsko: dva drony se zřítily na jihovýchodě země, jeden identifikován jako ukrajinský AN-196 Ljutyj s nevybuchlou hlavicí",
+    "kratkyTitulek": "Ukrajinský dron ve Finsku",
+    "zeme": "Finsko",
+    "kodZeme": "FI",
+    "kategorie": [
+      "drony",
+      "nato"
+    ],
+    "datumUdalosti": "2026-03-29T00:00:00Z",
+    "datumZjisteni": "2026-03-29T00:00:00Z",
+    "aktualizovano": "2026-09-06T00:00:00Z",
+    "zavaznost": "Y2",
+    "jistota": "potvrzeno",
+    "stav": "probiha",
+    "atribuce": "oficialni",
+    "fakta": [
+      "29. března 2026 se v jihovýchodním Finsku zřítily dva drony; finské letectvo potvrdilo, že nejméně jeden byl ukrajinský dálkový útočný dron AN-196 Ljutyj. Dron nalezený severně od Kouvoly nesl nevybuchlou hlavici, kterou úřady řízeně odpálily.",
+      "Ministerstvo obrany mluvilo o podezření na narušení územní celistvosti; premiér Orpo řekl, že pravděpodobně jde o ukrajinské drony odchýlené ruským rušením při útoku na ruský přístav Primorsk."
+    ],
+    "neznameho": [
+      "Původ druhého dronu; zda Ukrajina upraví trasy útoků."
+    ],
+    "vyznam": "Ozbrojený dron spojence spadl na území členského státu NATO. Původce je Ukrajina, úmysl proti Finsku nikdo netvrdí; riziko pro obyvatele bylo reálné.",
+    "eskalacniSpousteče": [],
+    "deeskalacniSignaly": [],
+    "zdroje": [
+      {
+        "nazev": "Euronews — Two unidentified drones crash in southeastern Finland in suspected territorial violation",
+        "url": "https://www.euronews.com/2026/03/29/two-unidentified-drones-crash-in-southeastern-finland-in-suspected-territorial-violation",
+        "typ": "media",
+        "publikovano": "2026-03-29T00:00:00Z",
+        "primarni": false,
+        "jazyk": "en"
+      },
+      {
+        "nazev": "AeroTime — One of two drones crashed in Finland identified as Ukrainian",
+        "url": "https://www.aerotime.aero/articles/drones-crash-finland-ukrainian-an196-kouvola",
+        "typ": "media",
+        "publikovano": "2026-03-30T00:00:00Z",
+        "primarni": false,
+        "jazyk": "en"
+      },
+      {
+        "nazev": "The Kyiv Independent — Ukrainian drone crashes in Finland, Kyiv blames Russian electronic warfare",
+        "url": "https://kyivindependent.com/downed-ukrainian-drone-identified-in-finland/",
+        "typ": "media",
+        "publikovano": "2026-03-30T00:00:00Z",
+        "primarni": false,
+        "jazyk": "en"
+      },
+      {
+        "nazev": "Bloomberg — Finland Investigates Drones That Crashed in Its Airspace",
+        "url": "https://www.bloomberg.com/news/articles/2026-03-29/finland-investigates-drones-that-crashed-in-its-airspace-sunday",
+        "typ": "media",
+        "publikovano": "2026-03-29T00:00:00Z",
+        "primarni": false,
+        "jazyk": "en"
+      }
+    ],
+    "souvisejici": [],
+    "historie": [
+      {
+        "kdy": "2026-03-29T00:00:00Z",
+        "text": "Pád dronů, identifikace AN-196.",
+        "novySignal": true
+      }
+    ],
+    "novy": true,
+    "zapocitanoTyden": "2026-03-29",
+    "aiZpracovano": true,
+    "lidskyOvereno": true,
+    "archivniZaznam": false,
+    "druh": "pripad",
+    "puvodce": "ukrajina"
+  },
+  {
+    "id": "i-2026-05-07-rezekne",
+    "slug": "lotyssko-rezekne-2026",
+    "titulek": "Lotyšsko: dva drony z Ruska, jeden zasáhl sklad paliva v Rēzekne; podle lotyšských a estonských služeb zbloudilý ukrajinský dron; padl ministr obrany i premiérka",
+    "kratkyTitulek": "Zbloudilý dron v Rēzekne",
+    "zeme": "Lotyšsko",
+    "kodZeme": "LV",
+    "kategorie": [
+      "drony",
+      "infrastruktura",
+      "nato"
+    ],
+    "datumUdalosti": "2026-05-07T00:00:00Z",
+    "datumZjisteni": "2026-05-07T00:00:00Z",
+    "aktualizovano": "2026-09-06T00:00:00Z",
+    "zavaznost": "Y3",
+    "jistota": "potvrzeno",
+    "stav": "probiha",
+    "atribuce": "oficialni",
+    "fakta": [
+      "7. května 2026 vstoupily do Lotyšska z ruského vzdušného prostoru dva drony; jeden zasáhl (prázdný) sklad paliva v Rēzekne asi 40 km od ruské hranice a způsobil požár. Nikdo nebyl zraněn; podle lotyšské armády šlo nejspíš o dva zásahy.",
+      "Lotyšské a estonské zpravodajské služby dospěly k závěru, že šlo o ukrajinský dálkový dron směřující na ruskou infrastrukturu, který ruské rušení a podvržení GPS vychýlily přes hranici; Lotyšsko později uvažovalo i o roli autonomní navigace dronu.",
+      "Ministr obrany Sprūds po výzvě premiérky 11. května rezignoval; 15. května rezignovala i premiérka Siliņa. Podle Defense News jde o první vládu NATO, která padla kvůli dronu."
+    ],
+    "neznameho": [
+      "Konečná technická zpráva o řízení dronu; zda Ukrajina po incidentu změnila plánování útoků."
+    ],
+    "vyznam": "Nejvážnější z incidentů se zbloudilými ukrajinskými drony: škoda na infrastruktuře členského státu NATO a pád vlády. Původce je Ukrajina, hlavní příčina odchýlení ruské rušení; obojí je součástí hodnocení.",
+    "eskalacniSpousteče": [],
+    "deeskalacniSignaly": [],
+    "zdroje": [
+      {
+        "nazev": "Euronews — Two drones from Russia crash in Latvia with one causing oil depot fire, army says",
+        "url": "https://www.euronews.com/my-europe/2026/05/07/two-drones-from-russia-crash-in-latvia-with-one-causing-oil-depot-fire-army-says",
+        "typ": "media",
+        "publikovano": "2026-05-07T00:00:00Z",
+        "primarni": false,
+        "jazyk": "en"
+      },
+      {
+        "nazev": "LSM — It appears there were actually two drone strikes at Latvian fuel depot",
+        "url": "https://eng.lsm.lv/article/society/defence/08.05.2026-it-appears-there-were-actually-two-drone-strikes-at-latvian-fuel-depot.a646323/",
+        "typ": "media",
+        "publikovano": "2026-05-08T00:00:00Z",
+        "primarni": false,
+        "jazyk": "en"
+      },
+      {
+        "nazev": "Defense News — Ukrainian drone strike on empty Baltic fuel depot prompts top-level resignation, in Latvia",
+        "url": "https://www.defensenews.com/global/europe/2026/05/11/ukrainian-drone-strike-on-empty-baltic-fuel-depot-prompts-top-level-resignation-in-latvia/",
+        "typ": "media",
+        "publikovano": "2026-05-11T00:00:00Z",
+        "primarni": false,
+        "jazyk": "en"
+      },
+      {
+        "nazev": "Ukrajinska Pravda — Latvia suggests AI component may have caused stray Ukrainian drones to hit oil depot",
+        "url": "https://www.pravda.com.ua/eng/news/2026/05/22/8035922/",
+        "typ": "media",
+        "publikovano": "2026-05-22T00:00:00Z",
+        "primarni": false,
+        "jazyk": "en"
+      }
+    ],
+    "souvisejici": [],
+    "historie": [
+      {
+        "kdy": "2026-05-07T00:00:00Z",
+        "text": "Zásah skladu paliva.",
+        "novySignal": true
+      },
+      {
+        "kdy": "2026-05-11T00:00:00Z",
+        "text": "Rezignace ministra obrany.",
+        "novySignal": true
+      },
+      {
+        "kdy": "2026-05-15T00:00:00Z",
+        "text": "Rezignace premiérky.",
+        "novySignal": true
+      }
+    ],
+    "novy": true,
+    "zapocitanoTyden": "2026-05-07",
+    "aiZpracovano": true,
+    "lidskyOvereno": true,
+    "archivniZaznam": false,
+    "druh": "pripad",
+    "puvodce": "ukrajina"
+  },
+  {
+    "id": "i-2026-06-08-lotyssko-sestrel",
+    "slug": "lotyssko-sestreleni-cerven-2026",
+    "titulek": "Lotyšsko: francouzské stíhačky NATO sestřelily cizí dron, který vstoupil do vzdušného prostoru kvůli ruskému rušení; původ neuveden",
+    "kratkyTitulek": "Sestřel dronu nad Lotyšskem (červen)",
+    "zeme": "Lotyšsko",
+    "kodZeme": "LV",
+    "kategorie": [
+      "drony",
+      "nato"
+    ],
+    "datumUdalosti": "2026-06-08T00:00:00Z",
+    "datumZjisteni": "2026-06-08T00:00:00Z",
+    "aktualizovano": "2026-09-06T00:00:00Z",
+    "zavaznost": "Y2",
+    "jistota": "vysoka",
+    "stav": "probiha",
+    "atribuce": "vysetrovana",
+    "fakta": [
+      "8. června 2026 sestřelila francouzská letadla mise Baltic Air Policing nad východním Lotyšskem cizí bezpilotní letoun, který podle lotyšské armády vstoupil do vzdušného prostoru v důsledku ruského elektronického boje. Původ dronu armáda neuvedla."
+    ],
+    "neznameho": [
+      "Zda šlo o ukrajinský dron odchýlený rušením, jak naznačuje dosavadní vzorec, nebo o ruský."
+    ],
+    "vyznam": "První sestřel dronu letadly NATO nad Lotyšskem. Aliance reaguje aktivně; původce zůstává oficiálně neurčený, proto ho nepřipisujeme.",
+    "eskalacniSpousteče": [],
+    "deeskalacniSignaly": [],
+    "zdroje": [
+      {
+        "nazev": "LSM — Drone shot down by NATO jets in eastern Latvia",
+        "url": "https://eng.lsm.lv/article/society/defence/08.06.2026-drone-shot-down-by-nato-jets-in-eastern-latvia.a650536/",
+        "typ": "media",
+        "publikovano": "2026-06-08T00:00:00Z",
+        "primarni": false,
+        "jazyk": "en"
+      },
+      {
+        "nazev": "Al Jazeera — NATO jets shoot down drone over Latvia, extending Ukraine spillover fears",
+        "url": "https://www.aljazeera.com/news/2026/6/8/nato-jets-shoot-down-drone-over-latvia-extending-ukraine-spillover-fears",
+        "typ": "media",
+        "publikovano": "2026-06-08T00:00:00Z",
+        "primarni": false,
+        "jazyk": "en"
+      }
+    ],
+    "souvisejici": [],
+    "historie": [
+      {
+        "kdy": "2026-06-08T00:00:00Z",
+        "text": "Sestřel.",
+        "novySignal": true
+      }
+    ],
+    "novy": true,
+    "zapocitanoTyden": "2026-06-08",
+    "aiZpracovano": true,
+    "lidskyOvereno": true,
+    "archivniZaznam": false,
+    "druh": "pripad",
+    "puvodce": "neznamy"
+  },
+  {
+    "id": "i-2026-07-30-tarnawa",
+    "slug": "polsko-kh101-tarnawa-2026",
+    "titulek": "Polsko: ruská střela Kh-101 s výbušninou dopadla u obce Tarnawa-Kolonia v Lublinském vojvodství; kráter 10 m, bez zraněných",
+    "kratkyTitulek": "Ruská střela v Polsku",
+    "zeme": "Polsko",
+    "kodZeme": "PL",
+    "kategorie": [
+      "drony",
+      "nato",
+      "rusko"
+    ],
+    "datumUdalosti": "2026-07-30T00:00:00Z",
+    "datumZjisteni": "2026-07-30T00:00:00Z",
+    "aktualizovano": "2026-09-06T00:00:00Z",
+    "zavaznost": "O1",
+    "jistota": "potvrzeno",
+    "stav": "probiha",
+    "atribuce": "oficialni",
+    "fakta": [
+      "Ráno 30. července 2026 vstoupila do polského vzdušného prostoru střela z ruského nočního útoku na Ukrajinu (nejméně 8 mrtvých civilistů na Ukrajině) a dopadla v neobydlené oblasti u obce Tarnawa-Kolonia; kráter měl asi 10 m v průměru a 5 m hloubky. Polsko bylo připraveno střelu sestřelit, kdyby letěla dál.",
+      "Generální tajemník NATO Rutte a premiér Tusk uvedli, že šlo o ruskou střelu Kh-101; podle polských úřadů nesla „významné množství“ výbušniny."
+    ],
+    "neznameho": [
+      "Zda šlo o chybu navádění, nebo o důsledek ukrajinské protivzdušné obrany; ruské vyjádření."
+    ],
+    "vyznam": "Ozbrojená ruská střela vybuchla na území NATO. Původce je Rusko; úmysl proti Polsku prokázán nebyl. Spolu s vlnou zbloudilých dronů obou stran ukazuje, že válka se přelévá na území Aliance.",
+    "eskalacniSpousteče": [],
+    "deeskalacniSignaly": [],
+    "zdroje": [
+      {
+        "nazev": "Al Jazeera — NATO jets scramble as Russian missile detonates in Poland",
+        "url": "https://www.aljazeera.com/news/2026/7/30/nato-jets-scramble-as-russian-missile-detonates-in-poland",
+        "typ": "media",
+        "publikovano": "2026-07-30T00:00:00Z",
+        "primarni": false,
+        "jazyk": "en"
+      },
+      {
+        "nazev": "Stars and Stripes — Russia missile lands in Poland as NATO scrambles in response",
+        "url": "https://www.stripes.com/theaters/europe/2026-07-30/poland-airspace-russia-missile-22406297.html",
+        "typ": "media",
+        "publikovano": "2026-07-30T00:00:00Z",
+        "primarni": false,
+        "jazyk": "en"
+      },
+      {
+        "nazev": "Notes from Poland — Russian missile that crashed in Poland carried 'significant amount' of explosive material",
+        "url": "https://notesfrompoland.com/2026/07/31/russian-missile-that-crashed-in-poland-carried-significant-amount-of-explosive-material/",
+        "typ": "media",
+        "publikovano": "2026-07-31T00:00:00Z",
+        "primarni": false,
+        "jazyk": "en"
+      }
+    ],
+    "souvisejici": [],
+    "historie": [
+      {
+        "kdy": "2026-07-30T00:00:00Z",
+        "text": "Dopad střely, potvrzení NATO a Polska.",
+        "novySignal": true
+      }
+    ],
+    "novy": true,
+    "zapocitanoTyden": "2026-07-30",
+    "aiZpracovano": true,
+    "lidskyOvereno": true,
+    "archivniZaznam": false,
+    "druh": "pripad",
+    "puvodce": "rusko"
+  },
+  {
+    "id": "i-2026-08-08-bulharsko",
+    "slug": "bulharsko-dron-plynovod-2026",
+    "titulek": "Bulharsko: dron vybuchl u Transbalkánského plynovodu nedaleko rumunské hranice; typ podle ministerstva obrany užívá ukrajinská armáda, Kyjev cílení popírá",
+    "kratkyTitulek": "Dron u plynovodu v Bulharsku",
+    "zeme": "Bulharsko",
+    "kodZeme": "BG",
+    "kategorie": [
+      "drony",
+      "infrastruktura",
+      "nato"
+    ],
+    "datumUdalosti": "2026-08-08T00:00:00Z",
+    "datumZjisteni": "2026-08-08T00:00:00Z",
+    "aktualizovano": "2026-09-06T00:00:00Z",
+    "zavaznost": "Y3",
+    "jistota": "vysoka",
+    "stav": "probiha",
+    "atribuce": "nepotvrzena",
+    "fakta": [
+      "8. srpna 2026 vybuchl podle premiéra Radeva dron u rumunské hranice poblíž Transbalkánského plynovodu, který spojuje Turecko s Ukrajinou. Bulharské ministerstvo obrany uvedlo, že jde o typ „široce používaný ukrajinskou armádou“.",
+      "Ukrajina popřela, že by na Bulharsko cílila, a přislíbila vyšetření."
+    ],
+    "neznameho": [
+      "Původ a trasa dronu; výsledek ukrajinského a bulharského šetření."
+    ],
+    "vyznam": "Další z incidentů, kde se válka přelévá na území NATO, tentokrát u energetické infrastruktury. Původce zatím jen podle typu dronu, proto nepotvrzený.",
+    "eskalacniSpousteče": [],
+    "deeskalacniSignaly": [],
+    "zdroje": [
+      {
+        "nazev": "Euronews — Ukraine denies targeting Bulgaria as drone explodes near pipeline, Kyiv promises inquiry",
+        "url": "https://www.euronews.com/my-europe/2026/08/09/ukraine-denies-targeting-bulgaria-as-drone-explodes-near-pipeline-kyiv-promises-inquiry",
+        "typ": "media",
+        "publikovano": "2026-08-09T00:00:00Z",
+        "primarni": false,
+        "jazyk": "en"
+      },
+      {
+        "nazev": "CBS News — Ukraine denies targeting Bulgaria after drone explodes near gas pipeline",
+        "url": "https://www.cbsnews.com/news/ukraine-bulgaria-drone-russia-explosion-gas/",
+        "typ": "media",
+        "publikovano": "2026-08-09T00:00:00Z",
+        "primarni": false,
+        "jazyk": "en"
+      },
+      {
+        "nazev": "Al Jazeera — Drones spotted in Bulgaria and Germany raise concerns about Russian escalation",
+        "url": "https://www.aljazeera.com/news/2026/8/8/drones-spotted-in-bulgaria-and-germany-raise-concerns-of-russian-escalation",
+        "typ": "media",
+        "publikovano": "2026-08-08T00:00:00Z",
+        "primarni": false,
+        "jazyk": "en"
+      }
+    ],
+    "souvisejici": [],
+    "historie": [
+      {
+        "kdy": "2026-08-08T00:00:00Z",
+        "text": "Výbuch dronu u plynovodu.",
+        "novySignal": true
+      },
+      {
+        "kdy": "2026-08-09T00:00:00Z",
+        "text": "Ukrajina cílení popřela.",
+        "novySignal": true
+      }
+    ],
+    "novy": true,
+    "zapocitanoTyden": "2026-08-08",
+    "aiZpracovano": true,
+    "lidskyOvereno": true,
+    "archivniZaznam": false,
+    "druh": "pripad",
+    "puvodce": "ukrajina"
+  },
+  {
+    "id": "i-2026-08-14-lotyssko-sestrel",
+    "slug": "lotyssko-sestreleni-srpen-2026",
+    "titulek": "Lotyšsko: italské Eurofightery NATO sestřelily zbloudilý dron nad východním Lotyšskem, druhý sestřel za dva měsíce; ve stejnou dobu vzlet v Rumunsku",
+    "kratkyTitulek": "Sestřel dronu nad Lotyšskem (srpen)",
+    "zeme": "Lotyšsko",
+    "kodZeme": "LV",
+    "kategorie": [
+      "drony",
+      "nato"
+    ],
+    "datumUdalosti": "2026-08-14T00:00:00Z",
+    "datumZjisteni": "2026-08-14T00:00:00Z",
+    "aktualizovano": "2026-09-06T00:00:00Z",
+    "zavaznost": "Y2",
+    "jistota": "vysoka",
+    "stav": "probiha",
+    "atribuce": "vysetrovana",
+    "fakta": [
+      "Ráno 14. srpna 2026 vzlétly ze Šiauliai dva italské Eurofightery Baltic Air Policing a jeden nad neobydlenou oblastí sestřelil dron, který vstoupil do lotyšského vzdušného prostoru; podle lotyšské armády ho z kurzu vychýlilo ruské rušení. Ve stejnou dobu vzlétly stíhačky i v Rumunsku kvůli dronům."
+    ],
+    "neznameho": [
+      "Původ dronu armáda neuvedla."
+    ],
+    "vyznam": "Druhý sestřel za dva měsíce: Aliance na zbloudilé drony reaguje rutinně. Původce neurčen.",
+    "eskalacniSpousteče": [],
+    "deeskalacniSignaly": [],
+    "zdroje": [
+      {
+        "nazev": "Euronews — NATO Baltic Air Policing jets shoot down drone over Latvia",
+        "url": "https://www.euronews.com/my-europe/2026/08/14/nato-baltic-air-policing-jets-shoot-down-drone-over-latvia",
+        "typ": "media",
+        "publikovano": "2026-08-14T00:00:00Z",
+        "primarni": false,
+        "jazyk": "en"
+      },
+      {
+        "nazev": "ABC News (Austrálie) — NATO fighter jet shoots down a drone over Latvia",
+        "url": "https://www.abc.net.au/news/2026-08-14/nato-jets-shoot-down-drone-in-latvian-airspace/107040788",
+        "typ": "media",
+        "publikovano": "2026-08-14T00:00:00Z",
+        "primarni": false,
+        "jazyk": "en"
+      },
+      {
+        "nazev": "Bloomberg — NATO Jets Shoot Down Stray Drone in Latvia as Incidents Grow",
+        "url": "https://www.bloomberg.com/news/articles/2026-08-14/nato-jets-shot-down-drone-that-entered-latvian-airspace",
+        "typ": "media",
+        "publikovano": "2026-08-14T00:00:00Z",
+        "primarni": false,
+        "jazyk": "en"
+      }
+    ],
+    "souvisejici": [],
+    "historie": [
+      {
+        "kdy": "2026-08-14T00:00:00Z",
+        "text": "Sestřel.",
+        "novySignal": true
+      }
+    ],
+    "novy": true,
+    "zapocitanoTyden": "2026-08-14",
+    "aiZpracovano": true,
+    "lidskyOvereno": true,
+    "archivniZaznam": false,
+    "druh": "pripad",
+    "puvodce": "neznamy"
+  },
+  {
+    "id": "i-2026-07-01-nord-stream-obzaloba",
+    "slug": "nord-stream-obzaloba-2026",
+    "titulek": "Nord Stream: německá prokuratura obžalovala Ukrajince Serhije Kuzněcova z vedení sedmičlenné skupiny; proces v Hamburku od 14. října 2026",
+    "kratkyTitulek": "Obžaloba za Nord Stream",
+    "zeme": "Německo",
+    "kodZeme": "DE",
+    "kategorie": [
+      "sabotaz",
+      "infrastruktura",
+      "vysetrovani"
+    ],
+    "datumUdalosti": "2026-07-01T00:00:00Z",
+    "datumZjisteni": "2026-07-01T00:00:00Z",
+    "aktualizovano": "2026-09-06T00:00:00Z",
+    "zavaznost": "O1",
+    "jistota": "potvrzeno",
+    "stav": "obvineni",
+    "atribuce": "vysetrovana",
+    "fakta": [
+      "1. července 2026 podalo Spolkové státní zastupitelství obžalobu na Serhije Kuzněcova: podle ní vedl sedmičlennou skupinu, která v září 2022 s padělanými doklady pronajala v Rostocku jachtu a umístila nálože na potrubí u Bornholmu. Obžaloba zní na útok na civilní energetickou infrastrukturu, způsobení výbuchu a zničení staveb.",
+      "Kuzněcov byl zadržen v Itálii v létě 2025 a na podzim vydán do Německa; hamburský soud naplánoval 16 jednacích dnů od 14. října do 17. prosince 2026 a další na začátek roku 2027."
+    ],
+    "neznameho": [
+      "Zda operaci zadal ukrajinský stát; obžaloba míří na jednotlivce.",
+      "Výsledek procesu."
+    ],
+    "vyznam": "Posun od zatčení k obžalobě a soudu. Nemění původce záznamu (Ukrajina, státní řízení neprokázáno); potvrzuje, že vyšetřování jde touto cestou.",
+    "eskalacniSpousteče": [],
+    "deeskalacniSignaly": [],
+    "zdroje": [
+      {
+        "nazev": "Al Jazeera — German prosecutors charge Ukrainian suspect over Nord Stream explosions",
+        "url": "https://www.aljazeera.com/news/2026/7/2/german-prosecutors-charge-ukrainian-suspect-over-nord-stream-explosions",
+        "typ": "media",
+        "publikovano": "2026-07-02T00:00:00Z",
+        "primarni": false,
+        "jazyk": "en"
+      },
+      {
+        "nazev": "Euronews — Man charged with sabotage of Nord Stream gas pipeline in German court",
+        "url": "https://www.euronews.com/my-europe/2026/07/01/man-charged-with-sabotage-of-nord-stream-gas-pipeline-in-german-court",
+        "typ": "media",
+        "publikovano": "2026-07-01T00:00:00Z",
+        "primarni": false,
+        "jazyk": "en"
+      },
+      {
+        "nazev": "NV — Trial of Ukrainian charged in Nord Stream sabotage set for Oct. 26",
+        "url": "https://english.nv.ua/nation/trial-of-ukrainian-charged-in-nord-stream-sabotage-set-for-oct-26-50627010.html",
+        "typ": "media",
+        "publikovano": "2026-08T00:00:00Z",
+        "primarni": false,
+        "jazyk": "en"
+      }
+    ],
+    "souvisejici": [],
+    "historie": [
+      {
+        "kdy": "2026-07-01T00:00:00Z",
+        "text": "Podání obžaloby.",
+        "novySignal": true
+      }
+    ],
+    "novy": true,
+    "zapocitanoTyden": "2026-07-01",
+    "aiZpracovano": true,
+    "lidskyOvereno": true,
+    "archivniZaznam": false,
+    "druh": "aktualizace",
+    "navazujeNa": "nord-stream-2022"
   }
 ]

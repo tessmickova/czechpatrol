@@ -186,6 +186,26 @@ export default function Metodika() {
       </Sekce>
 
       <Sekce
+        nadpis="Původce se určuje stejně pro všechny"
+        popis="Rusko, Ukrajina, jiný stát, domácí pachatel, neznámý. Rozhoduje zjištění dotčeného státu, ne to, na čí straně kdo stojí."
+      >
+        <Karta className="p-5 sm:p-6">
+          <div className="max-w-[46rem] space-y-3 text-[13.5px] leading-relaxed text-tlum">
+            <p>
+              Zbloudilý ukrajinský dron, který spadne v Lotyšsku, má původce Ukrajinu — i když ho z kurzu vychýlilo ruské rušení a
+              nikdo netvrdí úmysl. Ruská střela, která dopadne v Polsku, má původce Rusko. Útok Ukrajiny na ropovod v Rusku, který
+              zastaví dodávky do Maďarska, je záznam s původcem Ukrajina.
+            </p>
+            <p>
+              „Potvrzeno“ znamená oficiální závěr dotčeného státu nebo přihlášení původce. Odhad podle typu dronu je „nepotvrzená“
+              atribuce; když stát původ neuvede, je původce „neznámý“ a nic si nedomýšlíme. Přehled Kdo za tím stojí počítá všechny
+              strany stejným metrem.
+            </p>
+          </div>
+        </Karta>
+      </Sekce>
+
+      <Sekce
         nadpis="Závažnost a jistota jsou dvě různé věci"
         popis="Nejčastější zdroj zkreslení. Proto je nikdy neslučujeme."
       >
