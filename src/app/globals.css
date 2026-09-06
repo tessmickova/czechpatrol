@@ -206,6 +206,13 @@ html, body { overflow-x: clip; }
   }
 }
 
+/* ---------- běžící pás zemí ---------- */
+
+@keyframes pas-beh { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+.pas-beh { display: flex; width: max-content; animation: pas-beh 55s linear infinite; }
+.pas-obal:hover .pas-beh, .pas-obal:focus-within .pas-beh { animation-play-state: paused; }
+@media (prefers-reduced-motion: reduce) { .pas-beh { animation: none; } }
+
 /* ---------- ovládání ---------- */
 
 :where(a, button, summary, [tabindex], input, select, textarea):focus-visible {

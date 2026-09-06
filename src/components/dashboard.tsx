@@ -1,11 +1,15 @@
 import Link from "next/link";
 import { druh, kdyZjisteno, pachatelPotvrzen, podlePuvodce, podleZemi, posledniZmeny, pripady, uredniZdroj, vyber, type Zaznam } from "@/lib/agregace";
 import { cerstvost, datumCasPraha, datumPraha, stariSlovy } from "@/lib/cas";
-import type { CelkovyStav, NatoPolozka, PravniPolozka, ProvozniPolozka, TydenniHodnoceni, Watchlist } from "@/lib/typy";
+import type { CelkovyStav, NatoPolozka, Nepotvrzene, PravniPolozka, ProvozniPolozka, TydenniHodnoceni, Uroven, Watchlist } from "@/lib/typy";
 import { PASMA, UROVNE } from "@/lib/skala";
 import { Ikona, type NazevIkony } from "./ikony";
-import { Jiskra } from "./mericky";
-import { Napoveda, VykladUrovne } from "./zaklad";
+import { HeroDashboard } from "./hero-dashboard";
+import { PasZemi } from "./pas-zemi";
+import { Pocitadla } from "./pocitadla";
+import { Partneri, Sledovat } from "./sledovat";
+import { UdalostiKlient } from "./udalosti-klient";
+import { Napoveda } from "./zaklad";
 import { sklon, Vlajka } from "./zeme";
 
 /*
@@ -134,10 +138,11 @@ function Pruh({ nazev, n, max, barva, odkaz }: { nazev: React.ReactNode; n: numb
 }
 
 export function Dashboard({
-  stav, pravni, natoPolozky, provozPolozky, overeno, vse, tydny, watchlist,
+  stav, pravni, natoPolozky, provozPolozky, overeno, vse, neprosle, tydny, watchlist, cr, hybridni, obcane,
 }: {
   stav: CelkovyStav; pravni: PravniPolozka[]; natoPolozky: NatoPolozka[]; provozPolozky: ProvozniPolozka[];
-  overeno: string | null; vse: Zaznam[]; tydny: TydenniHodnoceni[]; watchlist: Watchlist;
+  overeno: string | null; vse: Zaznam[]; neprosle: Nepotvrzene[]; tydny: TydenniHodnoceni[]; watchlist: Watchlist;
+  cr: Uroven | null; hybridni: Uroven | null; obcane: { uroven: Uroven; popis: string; neovereno: number };
 }) {
   const platiCr = pravni.filter((p) => p.plati === true);
   const neovereneCr = pravni.filter((p) => p.plati === null).length;
@@ -171,41 +176,12 @@ export function Dashboard({
   const natoHodnota = natoAktivni.length ? natoAktivni.map((p) => KRATCE_NATO[p.klic] ?? p.nazev).join(", ") : cl4?.aktivni === null && cl5?.aktivni === null ? "Neověřeno" : "Bez aktivace";
   const natoTon: Ton = natoAktivni.length ? "plati" : cl4?.aktivni === null && cl5?.aktivni === null ? "nevime" : "klid";
 
+  void tydny;
   return (
-    <div className="mx-auto max-w-[1280px] px-3 py-4 sm:px-5 sm:py-5">
-      {/* hlavička: jeden řádek */}
-      <div className="mb-3 flex flex-wrap items-center justify-between gap-x-4 gap-y-1">
-        <h1 className="text-[20px] font-bold leading-none sm:text-[22px]">Bezpečnostní přehled ČR</h1>
-        <span className={`flex items-center gap-1.5 text-[12.5px] ${stariCelkem === "cerstve" ? "text-tlum" : "text-[#e6b877]"}`}>
-          <Ikona nazev={stariCelkem === "cerstve" ? "fajfka" : "vystraha"} velikost={13} tah={2} />
-          {overeno ? `ověřeno ${datumCasPraha(overeno)}` : "ověření zatím neproběhlo"}
-          {stariCelkem !== "cerstve" && stariCelkem !== "nezname" && <span>· poslední známý stav</span>}
-        </span>
-      </div>
-
-      {/* 1 — tři velké stavy */}
-      <div className="grid gap-2.5 sm:grid-cols-3">
-        <Hlavni nadpis="Česko · občané" hodnota={crHodnota} ton={crTon} popis={crPopis} overeno={pravni.map((p) => p.overeno).filter(Boolean).sort().at(-1) ?? null}
-          napoveda={<span className="block">Úřední stav podle sbírek a oznámení. Změnu vyhlašuje vláda nebo Parlament, ne tento web.</span>} />
-        <Hlavni nadpis="NATO" hodnota={natoHodnota} ton={natoTon} popis={`Čl. 4 ${cl4?.aktivni ? "aktivní" : cl4?.aktivni === null ? "neověřen" : "ne"} · čl. 5 ${cl5?.aktivni ? "aktivní" : cl5?.aktivni === null ? "neověřen" : "ne"} · východní křídlo ${natoPolozky.find((p) => p.klic === "vychodni-kridlo")?.aktivni ? "posíleno" : "bez změny"}`}
-          overeno={natoPolozky.map((p) => p.overeno).filter(Boolean).sort().at(-1) ?? null}
-          napoveda={<span className="block">Oficiálně oznámené kroky Aliance. Článek 4 je porada, ne obrana; článek 5 je kolektivní obrana.</span>} />
-        <Napoveda cele popis={stav.uroven ? <VykladUrovne uroven={stav.uroven} /> : <span className="block">Hodnocení zatím nebylo stanoveno.</span>}>
-          <span className={`flex min-h-[112px] w-full flex-col justify-between rounded-[12px] border p-4 text-left ${pasmo ? `${pasmo.ramecek} ${pasmo.pozadi}` : "border-linka bg-plocha"}`}>
-            <span className="flex items-center justify-between gap-2">
-              <span className="stitek">Hodnocení projektu · Evropa</span>
-              <Stari overeno={stav.aktualizovano} />
-            </span>
-            <span className="mt-2 flex items-end justify-between gap-3">
-              <span className={`text-[26px] font-bold leading-none sm:text-[30px] ${pasmo ? pasmo.text : "text-tlum"}`}>{d ? d.nazev : "Nestanoveno"}</span>
-              <Jiskra tydny={tydny} klic="celkova" sirka={90} vyska={26} />
-            </span>
-            <span className="mt-2 text-[12.5px] leading-snug text-tlum">
-              {stav.trend === "nahoru" ? "↑ zhoršení za 7 dní" : stav.trend === "dolu" ? "↓ zlepšení za 7 dní" : "beze změny"} · ne úřední stupeň
-            </span>
-          </span>
-        </Napoveda>
-      </div>
+    <>
+    <PasZemi vse={vse} />
+    <div className="mx-auto max-w-[1280px] px-3 py-3 sm:px-5 sm:py-4">
+      <HeroDashboard stav={stav} cr={cr} hybridni={hybridni} obcane={obcane} overeno={overeno} pocetZaznamu={vse.length} pocet90={dni90.length} />
 
       {/* 2 — mřížka stavů + poslední události */}
       <div className="mt-3 grid gap-3 lg:grid-cols-[minmax(0,1.35fr)_minmax(0,1fr)]">
@@ -278,7 +254,21 @@ export function Dashboard({
         </section>
       </div>
 
-      {/* 4 — sbalené: proč, co by změnilo, odběr */}
+      {/* 4 — započítávání a úplný seznam */}
+      <div className="mt-3"><Pocitadla vse={vse} neprosle={neprosle} /></div>
+      <section id="zaznamy" aria-label="Všechny záznamy" className="mt-3 scroll-mt-[64px] rounded-[12px] border border-linka2 bg-plocha p-3 sm:p-4">
+        <div className="mb-2 flex flex-wrap items-center justify-between gap-2">
+          <span className="stitek">Všechny záznamy od roku 2014 · případy, aktualizace, opatření, reakce i to, co neprošlo</span>
+          <Link href="/udalosti/" className="text-[12px] text-akcent hover:text-akcent-svetla">samostatná stránka →</Link>
+        </div>
+        <UdalostiKlient zaznamy={vse} neprosle={neprosle} />
+      </section>
+
+      {/* 5 — sledovat a partneři */}
+      <div className="mt-4"><Sledovat /></div>
+      <div className="mt-4"><Partneri /></div>
+
+      {/* 6 — sbalené: proč, co by změnilo, odběr */}
       <div className="mt-3 grid gap-2 md:grid-cols-3">
         <details className="group rounded-[10px] border border-linka2 bg-plocha">
           <summary className="flex min-h-[40px] cursor-pointer items-center justify-between px-3 text-[13px] font-semibold text-inkoust">Proč je hodnocení {d ? d.nazev.toLowerCase() : "takové"}<Ikona nazev="dolu" velikost={12} tah={2} trida="text-tlum2 transition-transform group-open:rotate-180" /></summary>
@@ -300,5 +290,6 @@ export function Dashboard({
       </div>
       <p className="mt-3 text-[11.5px] text-tlum2">Není to úřední zdroj ani varovný systém. V nouzi 112. Najeďte na dlaždici pro vysvětlení; každé číslo vede na svůj seznam.</p>
     </div>
+    </>
   );
 }

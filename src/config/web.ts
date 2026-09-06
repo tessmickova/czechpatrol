@@ -163,3 +163,9 @@ export const KRAJE = [
  * bez API se otevře e-mail na tuhle adresu. Prázdné = jen GitHub.
  */
 export const TIPY_MAIL = "";
+
+/**
+ * Partneři sekce „Ve spolupráci s“. Tři místa. Dokud je pole prázdné,
+ * ukazují se tři volné rámečky — žádné vymyšlené logo ani název.
+ */
+export const PARTNERI: { nazev: string; url: string; popis: string }[] = [];
