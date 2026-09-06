@@ -1,6 +1,6 @@
 // @ts-nocheck — skript je prostý ES modul bez typů; test hlídá chování, typy hlídá běh.
 import { describe, expect, it } from "vitest";
-import { klicovaVeta, legendaTecek, pruhTecek, sestavSouhrn, sestavTest, sestavZmenuStavu, sestavZpravu, vyberNove, vyberZmenyStavu, zahlavi } from "../nastroje/rozhlas.mjs";
+import { klicovaVeta, legendaTecek, pocetZdroju, pruhTecek, rozdelZpravu, sestavSouhrn, sestavTest, sestavZdroje, sestavZmenuStavu, sestavZpravu, vyberNove, vyberZmenyStavu, zahlavi } from "../nastroje/rozhlas.mjs";
 import { UROVNE, zDeseti } from "../src/lib/skala";
 import type { Uroven } from "../src/lib/typy";
 
@@ -150,5 +150,68 @@ describe("rozhlas", () => {
     ], { ted });
     expect(bezPripadu.kusy[0]).toContain("2 nové záznamy\n");
     expect(bezPripadu.kusy[0]).not.toContain("z 10");
+  });
+
+  const zdroj = (n: Record<string, unknown>) => ({
+    nazev: "Zdroj", url: "https://priklad.cz/a", typ: "media", publikovano: "2026-09-04T00:00:00Z",
+    primarni: false, jazyk: "cs", ...n,
+  });
+
+  it("zpráva vypisuje všechna fakta i všechno, co nevíme — nic se neuřízne", () => {
+    const z = sestavZpravu(zaznam({
+      fakta: ["První fakt.", "Druhý fakt.", "Třetí fakt."],
+      neznameho: ["Nevíme kdo.", "Nevíme proč."],
+      vyznam: "Hodnocení projektu k případu.",
+      stav: "probiha",
+    }));
+    for (const t of ["První fakt.", "Druhý fakt.", "Třetí fakt.", "Nevíme kdo.", "Nevíme proč."]) {
+      expect(z).toContain(`• ${t}`);
+    }
+    expect(z).toContain("Proč to sledujeme — hodnocení projektu, ne fakt\nHodnocení projektu k případu.");
+    expect(z).toContain("Stav: vyšetřování pokračuje");
+  });
+
+  it("vypíše všechny zdroje po skupinách a řekne, kolik z nich je od úřadů", () => {
+    const i = zaznam({ zdroje: [
+      zdroj({ nazev: "Tagesschau", typ: "media", jazyk: "de", url: "https://ts.de/a" }),
+      zdroj({ nazev: "Policie ČR", typ: "primary", primarni: true, url: "https://policie.cz/b" }),
+      zdroj({ nazev: "Reuters", typ: "wire", jazyk: "en", url: "https://reuters.com/c" }),
+      zdroj({ nazev: "Bez odkazu", typ: "media", url: "" }),
+    ] });
+    expect(pocetZdroju(i)).toMatchObject({ celkem: 3, uredni: 1 });
+    const radky = sestavZdroje(i);
+    expect(radky[0]).toBe("Zdroje (3): úřady 1 · agentury 1 · média 1");
+    // Úřady první, pak agentury, pak noviny — od nejsilnějšího dokladu.
+    expect(radky.join("\n")).toContain('Úřady a primární zdroje\n• <a href="https://policie.cz/b">Policie ČR</a> · 4. 9. 2026');
+    expect(radky.join("\n")).toContain('Agentury\n• <a href="https://reuters.com/c">Reuters</a> · 4. 9. 2026 · en');
+    expect(radky.join("\n")).toContain("Noviny a zpravodajství");
+    expect(radky.join("\n")).not.toContain("Bez odkazu");
+    expect(sestavZpravu(i)).toContain("Zdroje (3): úřady 1");
+  });
+
+  it("bez úředního zdroje to zpráva přizná, ale mluví jen o svých odkazech", () => {
+    const bezUradu = sestavZdroje(zaznam({ zdroje: [zdroj({ nazev: "Deník" })] })).join("\n");
+    expect(bezUradu).toContain("Zdroje (1): úřady 0 · média 1");
+    expect(bezUradu).toContain("Přímý odkaz na úřední oznámení zatím nemáme");
+    const sUradem = sestavZdroje(zaznam({ zdroje: [zdroj({ nazev: "Vláda", typ: "primary" })] })).join("\n");
+    expect(sUradem).not.toContain("zatím nemáme");
+    expect(sestavZdroje(zaznam({ zdroje: [] }))[0]).toContain("zatím žádný odkaz");
+  });
+
+  it("v souhrnu je u položky počet zdrojů, ale výpis ne — souhrn je přehled", () => {
+    const i = zaznam({ zdroje: [zdroj({ typ: "primary" }), zdroj({})] });
+    const kratka = sestavZpravu(i, { souhrn: true });
+    expect(kratka).toContain("Zdroje: 2 (úřady 1)");
+    expect(kratka).not.toContain("Úřady a primární zdroje");
+  });
+
+  it("dlouhá zpráva se rozdělí mezi odstavci a díly se očíslují", () => {
+    const kratka = "první\n\ndruhý";
+    expect(rozdelZpravu(kratka)).toEqual([kratka]);
+    const dlouha = ["a".repeat(300), "b".repeat(300), "c".repeat(300)].join("\n\n");
+    const dily = rozdelZpravu(dlouha, { limit: 400 });
+    expect(dily).toHaveLength(3);
+    expect(dily[1].startsWith("↳ pokračování 2/3")).toBe(true);
+    for (const d of dily) expect(d.length).toBeLessThanOrEqual(4096);
   });
 });

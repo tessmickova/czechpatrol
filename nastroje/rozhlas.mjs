@@ -51,6 +51,24 @@ const POPIS_TECKY = {
 };
 const PORADI_TECEK = ["🔴", "🟠", "🟡", "🟢", "📋", "🔁", "💬"];
 const DRUH_SLOVA = { pripad: "Případ", aktualizace: "Aktualizace případu", opatreni: "Oficiální opatření", reakce: "Prohlášení nebo reakce" };
+/** Stavy vyšetřování — táž slova jako STAVY v src/lib/kategorie.ts. */
+const STAVY = {
+  probiha: "Vyšetřování pokračuje", uzavreno: "Vyšetřování uzavřeno", obvineni: "Podáno obvinění",
+  "bez-vysetrovani": "Bez vyšetřování", neuvedeno: "Neuvedeno",
+};
+/**
+ * Zdroje se v kanálu vypisují všechny a po skupinách, aby bylo vidět,
+ * kdo o věci mluví: jestli ji oznámil úřad, nebo ji zatím nesou jen noviny.
+ * Pořadí je od nejsilnějšího důkazu k nejslabšímu.
+ */
+const SKUPINY_ZDROJU = [
+  { typ: "primary", nadpis: "Úřady a primární zdroje", slovo: "úřady" },
+  { typ: "wire", nadpis: "Agentury", slovo: "agentury" },
+  { typ: "media", nadpis: "Noviny a zpravodajství", slovo: "média" },
+  { typ: "local", nadpis: "Místní média", slovo: "místní" },
+  { typ: "analysis", nadpis: "Analýzy", slovo: "analýzy" },
+  { typ: "social", nadpis: "Sociální sítě — samy o sobě nic nedokládají", slovo: "sítě" },
+];
 
 export const druh = (i) => i.druh ?? (i.puvodce ? "pripad" : "reakce");
 export const kdyZjisteno = (i) => i.datumZjisteni ?? i.datumUdalosti;
@@ -155,45 +173,115 @@ export function klicovaVeta(i) {
   return `${misto} ${nic}`;
 }
 
+/** Souhrn pokrytí: kolik zdrojů a kdo z nich je úřad. Přesně to, co čtenář chce vědět. */
+export function pocetZdroju(i) {
+  const zdroje = (i.zdroje ?? []).filter((z) => z.url);
+  const pocty = {};
+  for (const z of zdroje) pocty[z.typ] = (pocty[z.typ] ?? 0) + 1;
+  return { celkem: zdroje.length, pocty, uredni: pocty.primary ?? 0 };
+}
+
 /**
- * Jedna zpráva k záznamu. Nahoře puntík a krátký titulek, hned pod ním tučně
- * to nejpodstatnější pro čtenáře, pak co se stalo, co zatím nevíme, hodnocení
- * a odkaz na celý záznam se zdroji. V souhrnu se posílá zkrácená podoba.
+ * Výpis všech zdrojů po skupinách. Úřady první — a když žádný není, napíše se to
+ * natvrdo, protože „stojí to jen na novinách“ je pro čtenáře podstatná informace.
+ */
+export function sestavZdroje(i) {
+  const zdroje = (i.zdroje ?? []).filter((z) => z.url && /^https?:\/\//.test(z.url));
+  const { celkem, pocty, uredni } = pocetZdroju(i);
+  if (!celkem) return ["Zdroje: zatím žádný odkaz — záznam je označený jako nedoložený."];
+  const prehled = SKUPINY_ZDROJU.filter((sk) => sk.typ === "primary" || pocty[sk.typ])
+    .map((sk) => `${sk.slovo} ${pocty[sk.typ] ?? 0}`)
+    .join(" · ");
+  const radky = [`Zdroje (${celkem}): ${prehled}`];
+  // Věta mluví o našem seznamu odkazů, ne o světě: úřad mohl věc oznámit,
+  // jen na to zatím nemáme přímý odkaz. Zaměnit to by byla nepravda.
+  if (!uredni) radky.push("Přímý odkaz na úřední oznámení zatím nemáme — zdroje jsou zprostředkované.");
+  for (const sk of SKUPINY_ZDROJU) {
+    const skupina = zdroje.filter((z) => z.typ === sk.typ);
+    if (!skupina.length) continue;
+    radky.push("", sk.nadpis);
+    for (const z of skupina) {
+      const kdy = z.publikovano ? ` · ${datumCz(z.publikovano)}` : "";
+      const jazyk = z.jazyk && z.jazyk !== "cs" ? ` · ${z.jazyk}` : "";
+      radky.push(`• <a href="${esc(z.url)}">${esc(zkrat(z.nazev, 120))}</a>${kdy}${jazyk}`);
+    }
+  }
+  return radky;
+}
+
+/**
+ * Jedna zpráva k záznamu. Píše se celá, ne v náznacích: záhlaví se závažností,
+ * krátký titulek, tučně to nejpodstatnější, všechna fakta, co zatím nevíme,
+ * hodnocení projektu, stav vyšetřování a výpis všech zdrojů po skupinách.
+ * Kdo chce jen přehled, přečte první čtyři řádky; kdo chce doklady, čte dál.
+ *
+ * V souhrnu se posílá zkrácená podoba — tam jde o výčet, ne o čtení.
  */
 export function sestavZpravu(i, { aktualizace = false, souhrn = false } = {}) {
   const d = druh(i);
   const kde = i.kodZeme === "CZ" ? "Česko" : i.zeme;
   const odkaz = `${WEB}/incident/${i.slug}/`;
-  const udaje = [`Jistota: ${JISTOTY[i.jistota] ?? i.jistota}`];
-  if (d === "pripad") {
-    const potvrzen = i.atribuce === "oficialni" || i.atribuce === "domaci";
-    udaje.push(`Pachatel: ${PUVODCI[i.puvodce ?? "neznamy"]}${i.puvodce && i.puvodce !== "neznamy" && !potvrzen ? " (nepotvrzeno)" : ""}`);
-  }
   const radky = [
     zahlavi(i),
     `<b>${esc(zkrat(i.kratkyTitulek || i.titulek, 90))}</b>`,
     // Druh se opakuje jen u případů — u ostatních ho už nese záhlaví.
     `${esc(kde)} · ${d === "pripad" ? `${DRUHY[d]} · ` : ""}${datumCz(kdyZjisteno(i))}${aktualizace ? " · nové zjištění" : ""}`,
   ];
+  const jistota = `Jistota: ${JISTOTY[i.jistota] ?? i.jistota}`;
+  const potvrzen = i.atribuce === "oficialni" || i.atribuce === "domaci";
+  const pachatel = d === "pripad"
+    ? `Pachatel: ${PUVODCI[i.puvodce ?? "neznamy"]}${i.puvodce && i.puvodce !== "neznamy" && !potvrzen ? " (nepotvrzeno)" : ""}`
+    : null;
+
   if (souhrn) {
-    radky.push(esc(zkrat(i.titulek, 200)), udaje.join(" · "), odkaz);
+    const { celkem, uredni } = pocetZdroju(i);
+    radky.push(
+      esc(zkrat(i.titulek, 200)),
+      [jistota, pachatel, celkem ? `Zdroje: ${celkem} (úřady ${uredni})` : null].filter(Boolean).join(" · "),
+      odkaz,
+    );
     return radky.join("\n");
   }
+
+  radky.push("", `<b>${esc(klicovaVeta(i))}</b>`);
+
   const nove = aktualizace && i.historie?.length ? i.historie[i.historie.length - 1].text : null;
-  radky.push("", `<b>${esc(klicovaVeta(i))}</b>`, "");
-  radky.push(nove ? "Co je nového" : "Co se stalo");
-  if (nove) {
-    // U aktualizace je nové zjištění první; hned pod ním připomeneme, o jaký případ jde.
-    radky.push(`• ${esc(zkrat(nove, 320))}`);
-    radky.push(`• Případ: ${esc(zkrat(i.titulek, 200))}`);
-  } else {
-    radky.push(`• ${esc(zkrat(i.titulek, 260))}`);
-    if (i.fakta?.[0]) radky.push(`• ${esc(zkrat(i.fakta[0], 300))}`);
+  if (nove) radky.push("", "Co je nového", `• ${esc(zkrat(nove, 600))}`);
+
+  radky.push("", "Co se stalo", `• ${esc(zkrat(i.titulek, 400))}`);
+  for (const f of i.fakta ?? []) radky.push(`• ${esc(zkrat(f, 600))}`);
+
+  if (i.neznameho?.length) {
+    radky.push("", "Co zatím nevíme");
+    for (const n of i.neznameho) radky.push(`• ${esc(zkrat(n, 400))}`);
   }
-  if (i.neznameho?.[0]) radky.push("", "Co zatím nevíme", `• ${esc(zkrat(i.neznameho[0], 200))}`);
-  radky.push("", udaje.join(" · "), "", "Celý záznam a zdroje:", odkaz);
+
+  if (i.vyznam) radky.push("", "Proč to sledujeme — hodnocení projektu, ne fakt", esc(zkrat(i.vyznam, 600)));
+
+  const stav = STAVY[i.stav];
+  radky.push("", [jistota, pachatel, stav && stav !== "Neuvedeno" ? `Stav: ${stav.toLowerCase()}` : null].filter(Boolean).join(" · "));
+
+  radky.push("", ...sestavZdroje(i));
+
+  radky.push("", `Celý záznam: ${odkaz}`);
   if (d === "opatreni" || seTykaCr(i)) radky.push(`Co v Česku právě platí: ${WEB}/#opatreni`);
   return radky.join("\n");
+}
+
+/**
+ * Rozdělí dlouhou zprávu na díly, které Telegram unese (limit 4096 znaků).
+ * Dělí se jen mezi odstavci, aby se nerozpadlo formátování.
+ */
+export function rozdelZpravu(text, { limit = 3800 } = {}) {
+  if (text.length <= limit) return [text];
+  const kusy = [];
+  let akt = "";
+  for (const odstavec of text.split("\n\n")) {
+    const dalsi = akt ? `${akt}\n\n${odstavec}` : odstavec;
+    if (dalsi.length > limit && akt) { kusy.push(akt); akt = odstavec; } else akt = dalsi;
+  }
+  if (akt) kusy.push(akt);
+  return kusy.map((k, n) => (n === 0 ? k : `↳ pokračování ${n + 1}/${kusy.length}\n\n${k}`));
 }
 
 /** Nejzásadnější věta celého souhrnu: platí dnes v Česku něco nového, nebo ne. */
@@ -378,9 +466,15 @@ async function main() {
     if (ok) { for (const { i } of davka) stav.zaznamy[i.id] = { kdy: new Date(ted).toISOString(), historie: i.historie?.length ?? 0 }; odeslano += kusy.length; } else selhalo++;
   } else {
     for (const { i, aktualizace } of davka) {
-      const v = await posli(sestavZpravu(i, { aktualizace }));
-      if (v.ok) { stav.zaznamy[i.id] = { kdy: new Date(ted).toISOString(), historie: i.historie?.length ?? 0 }; odeslano++; }
-      else { selhalo++; console.log(`[rozhlas] ${v.chyba}`); }
+      const dily = rozdelZpravu(sestavZpravu(i, { aktualizace }));
+      let ok = true;
+      for (const [n, dil] of dily.entries()) {
+        // Náhled webu jen u prvního dílu, ať se karta neopakuje.
+        const v = await posli(dil, { nahled: n === 0 });
+        if (!v.ok) { ok = false; console.log(`[rozhlas] ${v.chyba}`); }
+      }
+      if (ok) { stav.zaznamy[i.id] = { kdy: new Date(ted).toISOString(), historie: i.historie?.length ?? 0 }; odeslano += dily.length; }
+      else selhalo++;
     }
   }
 
