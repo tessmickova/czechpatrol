@@ -55,4 +55,12 @@ Převzetí kandidáta do záznamů: `node nastroje/prijmi-kandidata.mjs <id>` vy
 
 `nastroje/rozhlas.mjs` posílá krátké zprávy o nových ověřených záznamech do Telegram kanálu @czechpatrol (bot CzechPatrolBot, správce kanálu). Workflow `.github/workflows/rozhlas.yml`: po každém pushi, který mění `data/incidenty.json` nebo `data/historie.json`, odejdou **okamžité** zprávy (případy se závažností Vysoká a výš, opatření, změny právního stavu a NATO z archivu); denně v 17:00 UTC odejde **souhrn** ostatních nových záznamů. Každý záznam jednou; nová položka v historii případu = jedna zpráva „nové zjištění“. Nejvýš 8 zpráv na běh, zbytek příště. Při prvním běhu se starší záznamy jen označí za oznámené, aby kanál nezaplavil archiv. Stav: `data/fronta/rozhlaseno.json`. Automaticky zachycení kandidáti se neposílají nikdy.
 
+### Podoba zprávy
+
+Každá zpráva začíná **pruhem puntíků** — tolik puntíků, kolik je čeho uvnitř. U jedné zprávy je puntík jeden, u souhrnu jeden za každý záznam. Řadí se od nejzávažnějšího: 🔴 vážné · 🟠 vysoká závažnost · 🟡 střední · 🟢 nízká · 📋 opatření · 🔁 aktualizace · 💬 reakce. Když je jednoho druhu víc než šest, napíše se místo řady počet (`🟡×9`). Souhrn má pod nadpisem legendu s počty.
+
+Hned pod záhlavím stojí **tučně jedna věta** — to nejpodstatnější pro čtenáře v Česku: jestli z toho něco oficiálně plyne, nebo ne. Skládá ji `klicovaVeta()` jen z toho, co v záznamu je (druh, země, vztah k ČR). **Nic se nedomýšlí a nikomu se neradí, jestli někam jet nebo nejet** — na to data nestačí a projekt to nedělá ani na webu. U souhrnu je tučná věta jedna za celou zprávu: platí-li dnes v Česku něco nového, řekne co; jinak řekne, že nic.
+
+Dál má zpráva pevné pořadí: krátký titulek s puntíkem, řádek země · druh · datum, tučná věta, oddíl **Co se stalo** (u aktualizace **Co je nového**), oddíl **Co zatím nevíme**, řádek Závažnost · Jistota · Pachatel a nakonec odkaz na celý záznam se zdroji. U opatření a záznamů týkajících se ČR přibývá odkaz na přehled opatření. V souhrnu jsou položky zkrácené na titulek, hodnocení a odkaz, seřazené podle naléhavosti (opatření nahoru, při shodě české dřív).
+
 Přístupy: secret `TELEGRAM_BOT_TOKEN`, volitelně variable `TELEGRAM_KANAL` (výchozí @czechpatrol). Bez tokenu skript skončí bez chyby a nic neposílá. Test: workflow Rozhlas ručně s volbou „Poslat testovací zprávu“. Náhled bez odeslání: `node nastroje/rozhlas.mjs --okamzite --nacisto`.
