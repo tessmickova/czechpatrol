@@ -4,7 +4,7 @@ import { HlavickaStranky, Obsah } from "@/components/hlavicka";
 import { Karta, OdznakTypu, Sekce } from "@/components/zaklad";
 import { METODIKA_REVIDOVANA, METODIKA_VERZE } from "@/config/web";
 import { datum } from "@/lib/format";
-import { PASMA, UROVNE } from "@/lib/skala";
+import { PASMA, UROVNE, zDeseti } from "@/lib/skala";
 import type { Uroven } from "@/lib/typy";
 
 export const metadata: Metadata = {
@@ -151,7 +151,7 @@ export default function Metodika() {
             <table className="w-full min-w-[640px] border-collapse text-left">
               <thead>
                 <tr className="border-b border-linka">
-                  {["Úroveň", "Znamená", "Neznamená"].map((h) => (
+                  {["Úroveň", "Číslo", "Znamená", "Neznamená"].map((h) => (
                     <th key={h} className="stitek px-4 py-3 font-medium first:pl-5 last:pr-5">{h}</th>
                   ))}
                 </tr>
@@ -168,6 +168,7 @@ export default function Metodika() {
                           {d.nazev}
                         </span>
                       </td>
+                      <td className="cislice whitespace-nowrap px-4 py-3.5 text-[12.5px] text-tlum">{zDeseti(u)} z 10</td>
                       <td className="px-4 py-3.5 text-[12.5px] leading-relaxed text-tlum">{d.znamena}</td>
                       <td className="px-4 py-3.5 pr-5 text-[12.5px] leading-relaxed text-tlum2">
                         {d.neznamena === "—" ? "" : d.neznamena}
@@ -179,7 +180,11 @@ export default function Metodika() {
             </table>
           </div>
           <p className="border-t border-linka px-5 py-3.5 text-[11.5px] leading-relaxed text-tlum2">
-            Neuvádíme pravděpodobnost v procentech. Věta „riziko války 63 %“ by
+            Číslo „z 10“ je jen jinak zapsaná táž úroveň — pořadí na stupnici, aby se
+            hodnocení vešlo i do krátké zprávy. Stupnice má třináct stupňů a deset čísel,
+            takže sousední stupně se stejným názvem sdílí jedno číslo; liší se tím, co
+            znamenají. Není to pravděpodobnost.
+            Neuvádíme pravděpodobnost v procentech: věta „riziko války 63 %“ by
             předstírala model, který nemáme — a čtenář by z ní vyvodil víc, než data unesou.
           </p>
         </Karta>

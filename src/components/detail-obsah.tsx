@@ -3,7 +3,7 @@ import { aktualizaceK, dolozeno, druh, jistotaZobrazena, pripadK, uredniZdroj } 
 import { datumCasPraha, datumPraha } from "@/lib/cas";
 import { incidenty, opravyK } from "@/lib/data";
 import { ATRIBUCE, KATEGORIE, STAVY } from "@/lib/kategorie";
-import { JISTOTY, UROVNE } from "@/lib/skala";
+import { JISTOTY, UROVNE, zDeseti } from "@/lib/skala";
 import type { Incident } from "@/lib/typy";
 import { Ikona } from "./ikony";
 import { SeznamZdroju } from "./zdroje";
@@ -87,6 +87,7 @@ export function HlavickaDetailu({ i, velka = false }: { i: Incident; velka?: boo
             <Napoveda popis={<VykladUrovne uroven={i.zavaznost} />}>
               <span className="font-medium text-inkoust underline decoration-dotted underline-offset-4">{d.nazev}</span>
             </Napoveda>
+            <span className="cislice ml-1.5 text-[12.5px] text-tlum2">{zDeseti(i.zavaznost)} z 10</span>
           </dd>
         </div>
         <div>

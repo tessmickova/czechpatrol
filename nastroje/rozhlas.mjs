@@ -32,6 +32,8 @@ const NAZVY_UROVNI = {
   G1: "Nízká", G2: "Nízká", G3: "Nízká", Y1: "Mírně zvýšená", Y2: "Střední", Y3: "Zvýšená", YO: "Zvýšená",
   O1: "Vysoká", O2: "Vysoká", O3: "Vysoká", R1: "Vážná", R2: "Vážná", R3: "Vážná",
 };
+/** Úroveň jako číslo 1–10. Táž tabulka jako `zDeseti()` v src/lib/skala.ts — hlídá test. */
+const Z_DESETI = { G1: 1, G2: 2, G3: 3, Y1: 4, Y2: 5, Y3: 6, YO: 6, O1: 7, O2: 8, O3: 8, R1: 9, R2: 9, R3: 10 };
 const JISTOTY = { nizka: "nízká", stredni: "střední", vysoka: "vysoká", potvrzeno: "potvrzeno" };
 const PUVODCI = { rusko: "Rusko", ukrajina: "Ukrajina", "jiny-stat": "jiný stát", domaci: "domácí", neznamy: "neznámý" };
 const DRUHY = { pripad: "případ", aktualizace: "aktualizace", opatreni: "opatření", reakce: "reakce" };
@@ -48,6 +50,7 @@ const POPIS_TECKY = {
   "📋": "opatření", "🔁": "aktualizace", "💬": "reakce",
 };
 const PORADI_TECEK = ["🔴", "🟠", "🟡", "🟢", "📋", "🔁", "💬"];
+const DRUH_SLOVA = { pripad: "Případ", aktualizace: "Aktualizace případu", opatreni: "Oficiální opatření", reakce: "Prohlášení nebo reakce" };
 
 export const druh = (i) => i.druh ?? (i.puvodce ? "pripad" : "reakce");
 export const kdyZjisteno = (i) => i.datumZjisteni ?? i.datumUdalosti;
@@ -61,6 +64,20 @@ export function tecka(i) {
   if (d === "aktualizace") return "🔁";
   const u = i.zavaznost;
   return u.startsWith("R") ? "🔴" : u.startsWith("O") || u === "YO" ? "🟠" : u.startsWith("Y") ? "🟡" : "🟢";
+}
+
+/**
+ * Záhlaví zprávy: barevný puntík a hned za ním závažnost číslem, aby čtenář
+ * z prvního řádku věděl, o jak vážnou věc jde. Číslo je jen jinak zapsaná
+ * úroveň z webu, ne pravděpodobnost. Záznamy bez závažnosti (opatření,
+ * prohlášení, aktualizace) mají místo čísla slovo, čím jsou.
+ */
+export function zahlavi(i) {
+  const d = druh(i);
+  if (d !== "pripad") return `${tecka(i)} ${DRUH_SLOVA[d]}`;
+  const cislo = Z_DESETI[i.zavaznost];
+  const nazev = NAZVY_UROVNI[i.zavaznost] ?? i.zavaznost;
+  return `${tecka(i)} Závažnost: ${cislo ?? "?"} z 10 · ${nazev.toLowerCase()}`;
 }
 
 export function datumCz(iso) {
@@ -147,16 +164,16 @@ export function sestavZpravu(i, { aktualizace = false, souhrn = false } = {}) {
   const d = druh(i);
   const kde = i.kodZeme === "CZ" ? "Česko" : i.zeme;
   const odkaz = `${WEB}/incident/${i.slug}/`;
-  const udaje = [];
-  if (d === "pripad") udaje.push(`Závažnost: ${NAZVY_UROVNI[i.zavaznost] ?? i.zavaznost}`);
-  udaje.push(`Jistota: ${JISTOTY[i.jistota] ?? i.jistota}`);
+  const udaje = [`Jistota: ${JISTOTY[i.jistota] ?? i.jistota}`];
   if (d === "pripad") {
     const potvrzen = i.atribuce === "oficialni" || i.atribuce === "domaci";
     udaje.push(`Pachatel: ${PUVODCI[i.puvodce ?? "neznamy"]}${i.puvodce && i.puvodce !== "neznamy" && !potvrzen ? " (nepotvrzeno)" : ""}`);
   }
   const radky = [
-    `${tecka(i)} <b>${esc(zkrat(i.kratkyTitulek || i.titulek, 90))}</b>`,
-    `${esc(kde)} · ${DRUHY[d]}${aktualizace ? " · nové zjištění" : ""} · ${datumCz(kdyZjisteno(i))}`,
+    zahlavi(i),
+    `<b>${esc(zkrat(i.kratkyTitulek || i.titulek, 90))}</b>`,
+    // Druh se opakuje jen u případů — u ostatních ho už nese záhlaví.
+    `${esc(kde)} · ${d === "pripad" ? `${DRUHY[d]} · ` : ""}${datumCz(kdyZjisteno(i))}${aktualizace ? " · nové zjištění" : ""}`,
   ];
   if (souhrn) {
     radky.push(esc(zkrat(i.titulek, 200)), udaje.join(" · "), odkaz);
@@ -200,11 +217,14 @@ export function sestavSouhrn(polozky, { ted = Date.now(), limit = 3500 } = {}) {
   const zaznamy = razene.map((p) => p.i);
   const pocet = zaznamy.length;
   const slovo = pocet === 1 ? "nový záznam" : pocet < 5 ? "nové záznamy" : "nových záznamů";
+  const cisla = zaznamy.filter((i) => druh(i) === "pripad").map((i) => Z_DESETI[i.zavaznost]).filter(Boolean);
+  const nejvyssi = cisla.length ? ` · nejvýše ${Math.max(...cisla)} z 10` : "";
   const kusy = [];
   let akt = [
     pruhTecek(zaznamy),
     `<b>CzechPatrol · souhrn ${datumCz(new Date(ted).toISOString())}</b>`,
-    `${pocet} ${slovo} · <i>${legendaTecek(zaznamy)}</i>`,
+    `${pocet} ${slovo}${nejvyssi}`,
+    `<i>${legendaTecek(zaznamy)}</i>`,
     "",
     `<b>${esc(klicovaVetaSouhrnu(zaznamy))}</b>`,
   ].join("\n");
@@ -219,8 +239,7 @@ export function sestavSouhrn(polozky, { ted = Date.now(), limit = 3500 } = {}) {
 /** Zpráva o změně oficiálního stavu z archivu snímků. To nejzávažnější, co kanál posílá. */
 export function sestavZmenuStavu(snimek, zmeny) {
   return [
-    `📋`,
-    `<b>Změna oficiálního stavu</b>`,
+    `📋 Změna oficiálního stavu`,
     `podle úředních zdrojů · ${datumCz(snimek.kdy)}`,
     "",
     `<b>Mění se to, co oficiálně platí. Co je v platnosti právě teď, je v přehledu opatření.</b>`,
@@ -241,7 +260,7 @@ export function sestavTest(ukazka) {
     "",
     `<b>Kanál je propojený. Odsud budou chodit zprávy o ověřených záznamech, každá s odkazem na zdroje.</b>`,
     "",
-    "Nahoře v každé zprávě je pruh puntíků: tolik puntíků, kolik je čeho uvnitř.",
+    "Každá zpráva začíná barevným puntíkem a závažností číslem od 1 do 10. Číslo je jen jinak zapsaná táž úroveň jako na webu, ne pravděpodobnost. V souhrnu je nahoře tolik puntíků, kolik je čeho uvnitř.",
     `<i>${PORADI_TECEK.map((t) => `${t} ${POPIS_TECKY[t]}`).join(" · ")}</i>`,
   ];
   if (ukazka) radky.push("", "Ukázka formátu:", "", sestavZpravu(ukazka));

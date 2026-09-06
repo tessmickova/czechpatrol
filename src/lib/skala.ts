@@ -175,6 +175,22 @@ export const PASMA: Record<Pasmo, {
   },
 };
 
+/**
+ * Úroveň vyjádřená číslem 1–10.
+ *
+ * Je to táž úroveň, jen jinak zapsaná — pro krátká sdělení, kde není místo na
+ * vysvětlení (kanály, odznaky). Ne pravděpodobnost a ne procento: nic
+ * nepředpovídá, jen říká, kde na stupnici věc stojí. Třináct stupňů se do
+ * deseti čísel vejde tak, že sousední stupně se stejným názvem sdílí číslo.
+ */
+const Z_DESETI: Record<Uroven, number> = {
+  G1: 1, G2: 2, G3: 3, Y1: 4, Y2: 5, Y3: 6, YO: 6, O1: 7, O2: 8, O3: 8, R1: 9, R2: 9, R3: 10,
+};
+
+export function zDeseti(u: Uroven): number {
+  return Z_DESETI[u];
+}
+
 export function definice(u: Uroven): DefiniceUrovne {
   return UROVNE[u];
 }

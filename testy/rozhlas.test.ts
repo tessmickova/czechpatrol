@@ -1,6 +1,8 @@
 // @ts-nocheck — skript je prostý ES modul bez typů; test hlídá chování, typy hlídá běh.
 import { describe, expect, it } from "vitest";
-import { klicovaVeta, legendaTecek, pruhTecek, sestavSouhrn, sestavTest, sestavZmenuStavu, sestavZpravu, vyberNove, vyberZmenyStavu } from "../nastroje/rozhlas.mjs";
+import { klicovaVeta, legendaTecek, pruhTecek, sestavSouhrn, sestavTest, sestavZmenuStavu, sestavZpravu, vyberNove, vyberZmenyStavu, zahlavi } from "../nastroje/rozhlas.mjs";
+import { UROVNE, zDeseti } from "../src/lib/skala";
+import type { Uroven } from "../src/lib/typy";
 
 const zaznam = (n: Record<string, unknown>) => ({
   id: "x", slug: "x", titulek: "Titulek <b>", zeme: "Německo", kodZeme: "DE", datumUdalosti: "2026-09-01T00:00:00Z",
@@ -12,8 +14,7 @@ const zaznam = (n: Record<string, unknown>) => ({
 describe("rozhlas", () => {
   it("zpráva má titulek, závažnost i jistotu zvlášť, odkaz na celý záznam a únik HTML", () => {
     const z = sestavZpravu(zaznam({}));
-    expect(z).toContain("🟠 <b>Titulek &lt;b&gt;</b>");
-    expect(z).toContain("Závažnost: Vysoká");
+    expect(z).toContain("🟠 Závažnost: 7 z 10 · vysoká\n<b>Titulek &lt;b&gt;</b>");
     expect(z).toContain("Jistota: vysoká");
     expect(z).toContain("Pachatel: neznámý");
     expect(z).toContain("https://czechpatrol.pages.dev/incident/x/");
@@ -92,8 +93,9 @@ describe("rozhlas", () => {
   it("zpráva je členěná: puntík a krátký titulek, co se stalo, co nevíme, hodnocení, odkaz", () => {
     const z = sestavZpravu(zaznam({ kratkyTitulek: "Krátce", neznameho: ["Nevíme kdo."] }));
     const radky = z.split("\n");
-    expect(radky[0]).toBe("🟠 <b>Krátce</b>");
-    expect(radky[1]).toBe("Německo · případ · 4. 9. 2026");
+    expect(radky[0]).toBe("🟠 Závažnost: 7 z 10 · vysoká");
+    expect(radky[1]).toBe("<b>Krátce</b>");
+    expect(radky[2]).toBe("Německo · případ · 4. 9. 2026");
     expect(z).toContain("Co se stalo\n• Titulek &lt;b&gt;");
     expect(z).toContain("Co zatím nevíme\n• Nevíme kdo.");
     expect(z.trimEnd().endsWith("https://czechpatrol.pages.dev/incident/x/")).toBe(true);
@@ -108,7 +110,8 @@ describe("rozhlas", () => {
     expect(razene.map((x: { i: { id: string } }) => x.i.id)).toEqual(["b", "c", "a"]);
     // Pruh je barevná škála (nejzávažnější vlevo), pořadí položek pod ním je podle naléhavosti pro čtenáře.
     expect(kusy[0].startsWith("🔴🟡📋\n<b>CzechPatrol · souhrn 6. 9. 2026</b>")).toBe(true);
-    expect(kusy[0]).toContain("3 nové záznamy · <i>🔴 1× vážné · 🟡 1× střední závažnost · 📋 1× opatření</i>");
+    expect(kusy[0]).toContain("3 nové záznamy · nejvýše 9 z 10");
+    expect(kusy[0]).toContain("<i>🔴 1× vážné · 🟡 1× střední závažnost · 📋 1× opatření</i>");
     expect(kusy[0]).toContain("<b>Platí v Česku: opatření.");
   });
   it("dlouhý souhrn se rozdělí, každý kus zůstane pod limitem Telegramu", () => {
@@ -116,5 +119,36 @@ describe("rozhlas", () => {
     const { kusy } = sestavSouhrn(polozky, { ted: Date.now(), limit: 900 });
     expect(kusy.length).toBeGreaterThan(1);
     for (const k of kusy) expect(k.length).toBeLessThanOrEqual(4096);
+  });
+
+  it("zpráva začíná puntíkem a závažností číslem; číslo je totéž co na webu", () => {
+    expect(zahlavi(zaznam({ zavaznost: "R3" }))).toBe("🔴 Závažnost: 10 z 10 · vážná");
+    expect(zahlavi(zaznam({ zavaznost: "G1" }))).toBe("🟢 Závažnost: 1 z 10 · nízká");
+    expect(zahlavi(zaznam({ druh: "opatreni", puvodce: undefined }))).toBe("📋 Oficiální opatření");
+    expect(zahlavi(zaznam({ druh: "reakce", puvodce: undefined }))).toBe("💬 Prohlášení nebo reakce");
+    // Tabulka v rozhlas.mjs se nesmí rozejít se stupnicí webu.
+    const kody = Object.keys(UROVNE) as Uroven[];
+    for (const kod of kody) {
+      expect(zahlavi(zaznam({ zavaznost: kod }))).toContain(`Závažnost: ${zDeseti(kod)} z 10`);
+    }
+    // Číslo s rostoucí úrovní nikdy neklesá a drží se v rozsahu 1–10.
+    const cisla = [...kody].sort((a, b) => UROVNE[a].poradi - UROVNE[b].poradi).map((k) => zDeseti(k));
+    expect(cisla).toEqual([...cisla].sort((a, b) => a - b));
+    expect(Math.min(...cisla)).toBe(1);
+    expect(Math.max(...cisla)).toBe(10);
+  });
+  it("souhrn hlásí nejvyšší závažnost číslem, jen když obsahuje případ", () => {
+    const ted = new Date("2026-09-06T17:00:00Z").getTime();
+    const sPripadem = sestavSouhrn([
+      { i: zaznam({ id: "a", slug: "a", zavaznost: "R1" }), aktualizace: false },
+      { i: zaznam({ id: "b", slug: "b", zavaznost: "Y2" }), aktualizace: false },
+    ], { ted });
+    expect(sPripadem.kusy[0]).toContain("2 nové záznamy · nejvýše 9 z 10");
+    const bezPripadu = sestavSouhrn([
+      { i: zaznam({ id: "c", slug: "c", druh: "opatreni", puvodce: undefined }), aktualizace: false },
+      { i: zaznam({ id: "d", slug: "d", druh: "reakce", puvodce: undefined }), aktualizace: false },
+    ], { ted });
+    expect(bezPripadu.kusy[0]).toContain("2 nové záznamy\n");
+    expect(bezPripadu.kusy[0]).not.toContain("z 10");
   });
 });
