@@ -1,78 +1,61 @@
-import { KANALY, KDY_UPOZORNENI, WEB } from "@/config/web";
+import Link from "next/link";
+import { KANALY, KDY_UPOZORNENI, UCTY_ZAPNUTE, WEB } from "@/config/web";
 import { Ikona } from "./ikony";
-import { ZnackaKanalu, type Znacka } from "./znacky";
-
-interface Definice {
-  klic: Znacka;
-  nazev: string;
-  popis: string;
-  vzdy?: boolean;
-}
-
-const DEFINICE: Definice[] = [
-  { klic: "rss", nazev: "RSS", popis: "Bez účtu, bez adresy. Funguje v každé čtečce.", vzdy: true },
-  { klic: "telegram", nazev: "Telegram", popis: "Kanál jen pro čtení." },
-  { klic: "whatsapp", nazev: "WhatsApp", popis: "Kanál jen pro čtení." },
-  { klic: "signal", nazev: "Signal", popis: "Šifrovaně." },
-  { klic: "bluesky", nazev: "Bluesky", popis: "Krátká shrnutí." },
-  { klic: "email", nazev: "E-mail", popis: "Souhrn do schránky." },
-];
 
 /**
- * Odběr. Jiné pozadí než zbytek stránky — je to jediná výzva k akci na webu.
- * Kanál, který nikam nevede, se ukazuje jako připravovaný, ne jako funkční.
+ * Odběr: jen to, co skutečně funguje.
+ *
+ * RSS se generuje při každém sestavení a funguje vždy. Týdenní souhrn
+ * a upozornění na změny jdou přes účet, jen když běží API. Kanály, které
+ * nemají adresu, se neukazují vůbec — ani jako „připravujeme“.
  */
 export function OdberPanel({ kompaktni = false }: { kompaktni?: boolean }) {
-  const kanaly = DEFINICE.map((d) => ({
-    ...d,
-    url: d.vzdy ? `${WEB.url}/feed.xml` : (KANALY[d.klic] ?? ""),
-    dostupny: d.vzdy || Boolean(KANALY[d.klic]),
-  }));
-
+  const dalsi = Object.entries(KANALY).filter(([k, url]) => k !== "email" && url);
   return (
-    <div className="relative overflow-hidden rounded-[18px] border border-akcent/30 bg-[radial-gradient(ellipse_at_top_left,rgb(56_232_255/0.16),transparent_55%),radial-gradient(ellipse_at_bottom_right,rgb(178_140_255/0.16),transparent_55%)] p-5 sm:p-6">
-      <div aria-hidden className="vzor-mrizka pointer-events-none absolute inset-0 opacity-60" />
-      <div className="relative grid gap-5 lg:grid-cols-[minmax(0,1.4fr)_minmax(0,1fr)]">
-        <div>
-          <ul className="grid grid-cols-2 gap-2.5 sm:grid-cols-3">
-            {kanaly.map((k) => {
-              const obsah = (
-                <>
-                  <ZnackaKanalu znacka={k.klic} velikost={30} tlumena={!k.dostupny} />
-                  <span className="mt-2 block text-[14px] font-bold uppercase tracking-[0.03em]">{k.nazev}</span>
-                  <span className="mt-0.5 block text-[12px] leading-snug text-tlum">{k.popis}</span>
-                  {!k.dostupny && <span className="stitek-tmavy mt-2 inline-block rounded-full border border-dashed border-linka px-2 py-[3px] text-tlum2">připravujeme</span>}
-                </>
-              );
-              return (
-                <li key={k.klic}>
-                  {k.dostupny ? (
-                    <a href={k.url} target={k.klic === "rss" ? undefined : "_blank"} rel="noopener noreferrer" className="zdvih sklo block h-full rounded-[14px] p-3.5">
-                      {obsah}
-                    </a>
-                  ) : (
-                    <div className="block h-full rounded-[14px] border border-dashed border-linka p-3.5 opacity-80">{obsah}</div>
-                  )}
-                </li>
-              );
-            })}
+    <div className={`grid gap-6 ${kompaktni ? "" : "lg:grid-cols-[minmax(0,1.3fr)_minmax(0,1fr)]"}`}>
+      <ul className="space-y-3">
+        <li className="flex gap-3">
+          <span className="mt-0.5 grid h-9 w-9 shrink-0 place-items-center rounded-[8px] bg-akcent/15 text-akcent"><Ikona nazev="rss" velikost={16} tah={2} /></span>
+          <span>
+            <a href={`${WEB.url}/feed.xml`} className="text-[15px] font-semibold text-inkoust underline decoration-linka underline-offset-4 hover:decoration-inkoust">RSS kanál</a>
+            <span className="block text-[13.5px] leading-snug text-tlum">Bez účtu a bez adresy. Každý zveřejněný záznam, nic navíc. Funguje v každé čtečce.</span>
+          </span>
+        </li>
+        <li className="flex gap-3">
+          <span className="mt-0.5 grid h-9 w-9 shrink-0 place-items-center rounded-[8px] bg-akcent/15 text-akcent"><Ikona nazev="zvonek" velikost={16} tah={2} /></span>
+          <span>
+            {UCTY_ZAPNUTE ? (
+              <Link href="/ucet/" className="text-[15px] font-semibold text-inkoust underline decoration-linka underline-offset-4 hover:decoration-inkoust">Týdenní souhrn a upozornění na změny</Link>
+            ) : (
+              <span className="text-[15px] font-semibold text-tlum">Týdenní souhrn a upozornění na změny</span>
+            )}
+            <span className="block text-[13.5px] leading-snug text-tlum">
+              {UCTY_ZAPNUTE
+                ? "Výchozí je jeden souhrn týdně. Okamžité upozornění chodí jen při změně, kvůli které by člověk mohl jednat jinak."
+                : "Zatím není spuštěné — chybí běžící účetní služba. Neslibujeme termín."}
+            </span>
+          </span>
+        </li>
+        {dalsi.map(([k, url]) => (
+          <li key={k} className="flex gap-3">
+            <span className="mt-0.5 grid h-9 w-9 shrink-0 place-items-center rounded-[8px] bg-akcent/15 text-akcent"><Ikona nazev="komunikace" velikost={16} tah={2} /></span>
+            <a href={url} target="_blank" rel="noopener noreferrer" className="text-[15px] font-semibold text-inkoust underline decoration-linka underline-offset-4 hover:decoration-inkoust">{k}</a>
+          </li>
+        ))}
+      </ul>
+      {!kompaktni && (
+        <div className="rounded-[12px] border border-linka2 bg-plocha p-4">
+          <div className="stitek mb-2">Kdy přijde okamžité upozornění</div>
+          <ul className="space-y-1.5">
+            {KDY_UPOZORNENI.map((k) => (
+              <li key={k} className="flex gap-2 text-[13.5px] leading-snug text-tlum">
+                <span aria-hidden className="mt-[3px] shrink-0 text-[#8fd6ae]"><Ikona nazev="fajfka" velikost={12} tah={2} /></span>{k}
+              </li>
+            ))}
           </ul>
+          <p className="mt-3 text-[12.5px] text-tlum2">Stejná změna se nikdy nepošle dvakrát. Odhlášení je jedním kliknutím v účtu.</p>
         </div>
-        {!kompaktni && (
-          <div className="sklo-noc-slabe rounded-[14px] p-4">
-            <div className="stitek mb-2 !text-akcent">Kdy přijde upozornění</div>
-            <ul className="space-y-2">
-              {KDY_UPOZORNENI.map((k) => (
-                <li key={k} className="flex gap-2 text-[13.5px] leading-snug text-tlum">
-                  <span aria-hidden className="mt-[2px] shrink-0 text-[#8ff0c0]"><Ikona nazev="fajfka" velikost={13} tah={2} /></span>
-                  {k}
-                </li>
-              ))}
-            </ul>
-            <p className="stitek mt-3 !text-tlum2">Ne u každé události. Jen když by člověk mohl jednat jinak.</p>
-          </div>
-        )}
-      </div>
+      )}
     </div>
   );
 }

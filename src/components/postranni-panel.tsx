@@ -16,14 +16,12 @@ export function otevriPanel() {
 
 /** Stránky mimo hlavní navigaci. Na mobilu jediné místo, kde jsou. */
 export const DALSI_STRANKY = [
-  { href: "/dnes/", label: "Dnes" },
-  { href: "/osa/", label: "Časová osa" },
-  { href: "/watchlist/", label: "Watchlist 72 h" },
-  { href: "/nepotvrzeno/", label: "Nepotvrzeno" },
-  { href: "/nato/", label: "NATO" },
   { href: "/metodika/", label: "Metodika" },
   { href: "/zdroje/", label: "Zdroje" },
-  { href: "/komunita/", label: "Komunita" },
+  { href: "/opravy/", label: "Opravy a historie" },
+  { href: "/o-projektu/", label: "O projektu" },
+  { href: "/podporit/", label: "Podpořit" },
+  { href: "/odber/", label: "Odběr a RSS" },
   { href: "/soukromi/", label: "Soukromí" },
   { href: "/podminky/", label: "Podmínky" },
 ];
@@ -34,7 +32,7 @@ function Oddil({
   return (
     <section className={`sklo rounded-[16px] p-4 ${akcent ? "sklo-akcent" : ""}`}>
       <h3 className="mb-3 flex items-center gap-2">
-        <span className="text-akcent svit"><Ikona nazev={ikona} velikost={15} /></span>
+        <span className="text-akcent"><Ikona nazev={ikona} velikost={15} /></span>
         <span className="stitek !text-tlum">{nadpis}</span>
       </h3>
       {children}
@@ -44,7 +42,7 @@ function Oddil({
 
 const TLACITKO =
   "inline-flex w-full items-center justify-center gap-2 rounded-full border px-4 py-2.5 text-[14px] font-bold uppercase tracking-[0.05em] transition-all";
-const TLACITKO_AKCENT = `${TLACITKO} border-akcent/60 bg-akcent/15 text-akcent-svetla shadow-[0_0_18px_-4px_rgb(56_232_255/0.6)] hover:bg-akcent/25`;
+const TLACITKO_AKCENT = `${TLACITKO} border-akcent/60 bg-akcent/15 text-akcent-svetla  hover:bg-akcent/25`;
 const TLACITKO_TICHE = `${TLACITKO} border-linka text-inkoust hover:border-akcent/60`;
 
 /**
@@ -127,7 +125,7 @@ export function PostranniPanel() {
             ) : ucet ? (
               <div className="space-y-3">
                 <div className="flex items-center justify-between gap-3">
-                  <span className="text-[15px] font-bold uppercase tracking-[0.03em] text-akcent-svetla svit">
+                  <span className="text-[15px] font-bold uppercase tracking-[0.03em] text-akcent-svetla">
                     {ROLE[ucet.role].nazev}
                   </span>
                   <span className="cislice text-[12px] text-tlum2">#{ucet.id.slice(0, 8)}</span>
@@ -168,7 +166,7 @@ export function PostranniPanel() {
           <Oddil ikona="hodiny" nadpis="Klid v číslech">
             <div className="grid grid-cols-2 gap-3">
               <div className="rounded-[12px] border border-linka2 p-3">
-                <div className="velke-cislo svit text-[30px] text-akcent-svetla">
+                <div className="velke-cislo text-[30px] text-akcent-svetla">
                   {klid ? klid.dnu : "—"}
                 </div>
                 <div className="stitek mt-2 !text-tlum2">
@@ -176,7 +174,7 @@ export function PostranniPanel() {
                 </div>
               </div>
               <div className="rounded-[12px] border border-linka2 p-3">
-                <div className={`text-[15px] font-bold uppercase tracking-[0.03em] ${platiNeco ? "text-[#ff8c98]" : "text-[#8ff0c0]"} svit`}>
+                <div className={`text-[15px] font-bold uppercase tracking-[0.03em] ${platiNeco ? "text-[#e68a8a]" : "text-[#8fd6ae]"}`}>
                   {platiNeco ? "Mimořádný stav" : "Bez omezení"}
                 </div>
                 <div className="stitek mt-2 !text-tlum2">

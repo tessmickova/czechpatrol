@@ -86,7 +86,7 @@ function Prihlaseni({ po }: { po: () => void }) {
           Účet nemá e-mail ani telefon, takže není kam poslat „zapomenuté heslo“. Tenhle kód je
           jediná cesta k účtu z nového zařízení. Neuvidíte ho podruhé.
         </p>
-        <div className="velke-cislo svit mt-5 select-all break-all rounded-[14px] border border-jantar/40 bg-noc/60 px-5 py-4 text-[26px] tracking-[0.08em] text-jantar">
+        <div className="velke-cislo mt-5 select-all break-all rounded-[14px] border border-jantar/40 bg-noc/60 px-5 py-4 text-[26px] tracking-[0.08em] text-jantar">
           {novyKod}
         </div>
         <button
@@ -232,7 +232,7 @@ function Nastaveni({
       <div className="space-y-4">
         <Karta odstin="modra" className="p-6">
           <div className="stitek mb-2 !text-akcent">Účet</div>
-          <div className="podnadpis svit text-[24px] text-akcent-svetla">{ROLE[ucet.role].nazev}</div>
+          <div className="podnadpis text-[24px] text-akcent-svetla">{ROLE[ucet.role].nazev}</div>
           <p className="mt-2 text-[14px] text-tlum">{ROLE[ucet.role].popis}</p>
           <dl className="mt-5 grid grid-cols-2 gap-3 text-[14px]">
             <div>
@@ -291,7 +291,7 @@ function Nastaveni({
               <div className="flex items-center justify-between gap-3">
                 <span className="text-[15px] font-bold">Telegram</span>
                 {ucet.telegram ? (
-                  <span className="stitek-tmavy rounded-full border border-[#4fdd9a]/40 bg-[#4fdd9a]/10 px-2 py-1 text-[#8ff0c0]">propojeno</span>
+                  <span className="stitek-tmavy rounded-full border border-[#5cbf8a]/40 bg-[#5cbf8a]/10 px-2 py-1 text-[#8fd6ae]">propojeno</span>
                 ) : !dostupne.telegram ? (
                   <span className="stitek-tmavy rounded-full border border-linka px-2 py-1 text-tlum2">připravujeme</span>
                 ) : null}
@@ -322,7 +322,7 @@ function Nastaveni({
               <div className="flex items-center justify-between gap-3">
                 <span className="text-[15px] font-bold">WhatsApp</span>
                 {ucet.whatsapp ? (
-                  <span className="stitek-tmavy rounded-full border border-[#4fdd9a]/40 bg-[#4fdd9a]/10 px-2 py-1 text-[#8ff0c0]">propojeno</span>
+                  <span className="stitek-tmavy rounded-full border border-[#5cbf8a]/40 bg-[#5cbf8a]/10 px-2 py-1 text-[#8fd6ae]">propojeno</span>
                 ) : !dostupne.whatsapp ? (
                   <span className="stitek-tmavy rounded-full border border-linka px-2 py-1 text-tlum2">připravujeme</span>
                 ) : null}
@@ -347,8 +347,8 @@ function Nastaveni({
           </div>
         </Karta>
 
-        <Karta className="border-[#ff5c6c]/30 p-6">
-          <div className="stitek mb-2 !text-[#ff8c98]">Smazání</div>
+        <Karta className="border-[#d95c5c]/30 p-6">
+          <div className="stitek mb-2 !text-[#e68a8a]">Smazání</div>
           <p className="text-[14px] leading-relaxed text-tlum">
             Smaže účet, passkeye, propojené kanály i nastavení. Hned a bez zálohy.
           </p>

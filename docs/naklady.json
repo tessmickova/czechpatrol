@@ -1,0 +1,17 @@
+{
+  "_poznamka": "Provozní náklady jako editovatelné vstupy. Ceny jsou odhady podle veřejných ceníků, ne faktury. Upravit tady, nikde jinde.",
+  "aktualizovano": "2026-09-06",
+  "mena": "Kč",
+  "polozky": [
+    { "nazev": "Hosting statického webu (Cloudflare Pages)", "mesicneKc": 0, "poznamka": "bezplatný tarif" },
+    { "nazev": "API, databáze a fronta (Cloudflare Workers, D1)", "mesicneKc": 0, "poznamka": "bezplatný tarif do limitu; placený tarif cca 125 Kč/měs. při překročení" },
+    { "nazev": "Doména", "mesicneKc": 0, "poznamka": "zatím na pages.dev; vlastní doména cca 30 Kč/měs." },
+    { "nazev": "Sběr dat (GitHub Actions, každou hodinu)", "mesicneKc": 0, "poznamka": "v limitu bezplatných minut veřejného repozitáře" },
+    { "nazev": "Odesílání e-mailů", "mesicneKc": 0, "poznamka": "zatím nespuštěno; při spuštění cca 0–250 Kč/měs. podle objemu" }
+  ],
+  "plus": { "mesicneKc": 79, "rocneKc": 790, "poznamka": "pracovní hypotéza, neověřená" },
+  "scenare": {
+    "_poznamka": "Pro nástroj nastroje/naklady.mjs: kolik podporovatelů pokryje daný měsíční náklad.",
+    "prumernyPrispevekKc": 100
+  }
+}

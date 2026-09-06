@@ -6,7 +6,6 @@ import { PostranniPanel } from "@/components/postranni-panel";
 import { RegistraceSW } from "@/components/pwa";
 import { Paticka } from "@/components/paticka";
 import { UkazkaPruh } from "@/components/pruhy";
-import { StavovaListaData } from "@/components/stavova-lista-data";
 import { WEB } from "@/config/web";
 import "./globals.css";
 
@@ -53,7 +52,7 @@ export const metadata: Metadata = {
 };
 
 export const viewport: Viewport = {
-  themeColor: "#060a13",
+  themeColor: "#10141b",
   width: "device-width",
   initialScale: 1,
   viewportFit: "cover",
@@ -70,44 +69,12 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           Přeskočit na obsah
         </a>
         <Navigace />
-        <StavovaListaData />
         <UkazkaPruh />
-        <main id="obsah" className="pb-[calc(72px+env(safe-area-inset-bottom))] lg:pb-0">{children}</main>
+        <main id="obsah" className="pb-[calc(60px+env(safe-area-inset-bottom))] md:pb-0">{children}</main>
         <Paticka />
         <PostranniPanel />
         <ListaMobil />
         <RegistraceSW />
-        {/*
-          Parallax bez Reactu: obyčejný skript posouvá prvky s data-vrstva.
-          Nepotřebuje hydrataci, takže funguje i ve statickém náhledu, a při
-          zapnutém omezení pohybu se vůbec nespustí.
-        */}
-        <script
-          data-parallax=""
-          dangerouslySetInnerHTML={{
-            __html: `(function(){
-  if (window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
-  var prvky = [].slice.call(document.querySelectorAll("[data-vrstva]"));
-  if (!prvky.length) return;
-  var ceka = 0;
-  function uprav(){
-    ceka = 0;
-    var stred = window.innerHeight / 2;
-    for (var i = 0; i < prvky.length; i++) {
-      var el = prvky[i];
-      var r = el.getBoundingClientRect();
-      var odchylka = r.top + r.height / 2 - stred;
-      var rychlost = parseFloat(el.getAttribute("data-vrstva")) || 0;
-      el.style.setProperty("--posun", (-odchylka * rychlost).toFixed(1) + "px");
-    }
-  }
-  function naplanuj(){ if (!ceka) ceka = requestAnimationFrame(uprav); }
-  uprav();
-  addEventListener("scroll", naplanuj, { passive: true });
-  addEventListener("resize", naplanuj);
-})();`,
-          }}
-        />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{

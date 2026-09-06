@@ -43,7 +43,7 @@ export function Panel({
     >
       {tmavy && (
         <div aria-hidden className="pointer-events-none absolute inset-0 -z-10 overflow-hidden">
-          <div data-vrstva="0.04" className="vrstva vzor-mrizka absolute inset-x-0 -inset-y-[60%]" />
+          <div className="vrstva vzor-mrizka absolute inset-x-0 -inset-y-[60%]" />
         </div>
       )}
 
@@ -54,7 +54,7 @@ export function Panel({
       >
         <div className="min-w-0">
           <div className={`mb-2 flex items-center gap-2 ${tmavy ? "text-noc-tlum" : "text-tlum2"}`}>
-            {ikona && <span className="text-akcent svit"><Ikona nazev={ikona} velikost={14} /></span>}
+            {ikona && <span className="text-akcent"><Ikona nazev={ikona} velikost={14} /></span>}
             <span className={`stitek ${tmavy ? "!text-noc-tlum" : ""}`}>{kod}</span>
           </div>
           <h2

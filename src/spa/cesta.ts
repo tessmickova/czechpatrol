@@ -2,14 +2,24 @@
  * Minimalistické směrování pro klikací náhled.
  *
  * Náhled je jedna stránka bez serveru, takže cestu drží fragment adresy.
- * Skutečný web tenhle modul nepoužívá — tam směruje Next.
+ * Část za otazníkem je dotaz (filtry, otevřený detail) — stejně jako
+ * na ostrém webu, jen uvnitř fragmentu. Skutečný web tenhle modul nepoužívá.
  */
 
 const posluchaci = new Set<() => void>();
 
-export function cesta(): string {
+function cely(): string {
   const h = typeof location === "undefined" ? "" : decodeURIComponent(location.hash.slice(1));
   return h || "/";
+}
+
+export function cesta(): string {
+  return cely().split("?")[0] || "/";
+}
+
+export function dotaz(): string {
+  const i = cely().indexOf("?");
+  return i === -1 ? "" : cely().slice(i + 1);
 }
 
 export function jdi(kam: string) {
@@ -22,8 +32,12 @@ export function sleduj(f: () => void): () => void {
 }
 
 if (typeof window !== "undefined") {
+  let posledniCesta = cesta();
   addEventListener("hashchange", () => {
     for (const f of posluchaci) f();
-    scrollTo(0, 0);
+    // Změna jen dotazu (filtr, detail) nesmí odrolovat nahoru.
+    const nyni = cesta();
+    if (nyni !== posledniCesta) scrollTo(0, 0);
+    posledniCesta = nyni;
   });
 }

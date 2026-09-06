@@ -1,5 +1,5 @@
 import { TYPY_ZDROJU } from "@/lib/kategorie";
-import { datumCas } from "@/lib/format";
+import { datum } from "@/lib/format";
 import type { Zdroj } from "@/lib/typy";
 import { Napoveda } from "./zaklad";
 
@@ -45,7 +45,7 @@ export function SeznamZdroju({ zdroje, husty = false }: { zdroje: Zdroj[]; husty
             </span>
           )}
           {z.publikovano && (
-            <span className="cislice text-[11.5px] text-tlum2">{datumCas(z.publikovano)}</span>
+            <span className="cislice text-[11.5px] text-tlum2">{datum(z.publikovano)}</span>
           )}
           {z.jazyk !== "cs" && (
             <span className="stitek !text-tlum2">{z.jazyk}</span>

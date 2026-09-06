@@ -1,6 +1,9 @@
 import { describe, expect, it } from "vitest";
 import { dalsiSouhrn, konecTicha, naplanuj, rozdilStavu, textZpravy, vTichu, zPrahy } from "../src/upozorneni";
-import { VYCHOZI_NASTAVENI, type NovaZprava, type StavWebu } from "../src/typy";
+import { VYCHOZI_NASTAVENI as VYCHOZI, type NovaZprava, type StavWebu } from "../src/typy";
+
+/** Výchozí je týdenní souhrn; okamžité doručení se v testech plánování volí výslovně. */
+const VYCHOZI_NASTAVENI = { ...VYCHOZI, frekvence: "ihned" as const };
 
 const zaklad: StavWebu = {
   verze: 1, web: "https://czechpatrol.pages.dev", generovano: "2026-09-05T10:00:00Z", overeno: null,
@@ -48,7 +51,11 @@ const zprava = (z: Partial<NovaZprava> = {}): NovaZprava => ({
 
 describe("plánování", () => {
   const poledne = new Date("2026-09-05T10:00:00Z"); // 12:00 v Praze (léto)
-  it("výchozí nastavení: vysoká hned, střední ne", () => {
+  it("skutečné výchozí nastavení je týdenní souhrn — nic nejde hned", () => {
+    expect(VYCHOZI.frekvence).toBe("tydne");
+    expect(naplanuj(zprava(), VYCHOZI, poledne)?.toISOString()).not.toBe(poledne.toISOString());
+  });
+  it("okamžité doručení: vysoká hned, střední ne", () => {
     expect(naplanuj(zprava(), VYCHOZI_NASTAVENI, poledne)).toEqual(poledne);
     expect(naplanuj(zprava({ zavaznost: "stredni" }), VYCHOZI_NASTAVENI, poledne)).toBeNull();
   });

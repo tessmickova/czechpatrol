@@ -1,34 +1,29 @@
-import { StrictMode, useEffect } from "react";
+import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import { ListaMobil } from "@/components/lista-mobil";
 import { Navigace } from "@/components/navigace";
 import { PostranniPanel } from "@/components/postranni-panel";
 import { Paticka } from "@/components/paticka";
 import { UkazkaPruh } from "@/components/pruhy";
-import { StavovaListaData } from "@/components/stavova-lista-data";
 import { DetailIncidentu } from "@/components/detail-incidentu";
 import Prehled from "@/app/page";
-import Dnes from "@/app/dnes/page";
 import Udalosti from "@/app/udalosti/page";
-import Osa from "@/app/osa/page";
-import Cr from "@/app/cr/page";
-import Nato from "@/app/nato/page";
-import Trend from "@/app/trend/page";
+import Vyvoj from "@/app/vyvoj/page";
+import MujPrehled from "@/app/muj-prehled/page";
+import OProjektu from "@/app/o-projektu/page";
+import Opravy from "@/app/opravy/page";
+import Podporit from "@/app/podporit/page";
 import Metodika from "@/app/metodika/page";
 import Zdroje from "@/app/zdroje/page";
 import Odber from "@/app/odber/page";
-import Tlak from "@/app/tlak/page";
-import WatchlistStranka from "@/app/watchlist/page";
-import Komunita from "@/app/komunita/page";
-import Nepotvrzeno from "@/app/nepotvrzeno/page";
 import Ucet from "@/app/ucet/page";
 import Izs from "@/app/izs/page";
 import Sprava from "@/app/sprava/page";
 import Soukromi from "@/app/soukromi/page";
 import Podminky from "@/app/podminky/page";
 import Offline from "@/app/offline/page";
+import { Presmerovani } from "@/components/presmerovani";
 import { usePathname } from "./shim-navigation";
-import { spustParallax } from "./parallax";
 
 /**
  * Vstupní bod klikacího náhledu.
@@ -40,19 +35,15 @@ import { spustParallax } from "./parallax";
 
 const CESTY: Record<string, () => React.JSX.Element> = {
   "/": Prehled,
-  "/dnes/": Dnes,
   "/udalosti/": Udalosti,
-  "/osa/": Osa,
-  "/cr/": Cr,
-  "/nato/": Nato,
-  "/trend/": Trend,
+  "/vyvoj/": Vyvoj,
+  "/muj-prehled/": MujPrehled,
+  "/o-projektu/": OProjektu,
+  "/opravy/": Opravy,
+  "/podporit/": Podporit,
   "/metodika/": Metodika,
   "/zdroje/": Zdroje,
   "/odber/": Odber,
-  "/tlak/": Tlak,
-  "/watchlist/": WatchlistStranka,
-  "/komunita/": Komunita,
-  "/nepotvrzeno/": Nepotvrzeno,
   "/ucet/": Ucet,
   "/izs/": Izs,
   "/sprava/": Sprava,
@@ -61,13 +52,16 @@ const CESTY: Record<string, () => React.JSX.Element> = {
   "/offline/": Offline,
 };
 
+/** Přestěhované adresy — stejné jako v public/_redirects. */
+const PRESUNUTE: Record<string, string> = {
+  "/dnes/": "/", "/trend/": "/vyvoj/", "/tlak/": "/vyvoj/", "/watchlist/": "/vyvoj/", "/osa/": "/udalosti/",
+  "/cr/": "/#opatreni", "/nato/": "/#opatreni", "/nepotvrzeno/": "/udalosti/?overeni=neprosle", "/komunita/": "/o-projektu/",
+};
+
 function Obsah() {
   const cesta = usePathname();
-
-  useEffect(() => {
-    // Vrstvy se po přepnutí stránky přepočítají, jinak by zůstaly posunuté.
-    spustParallax();
-  }, [cesta]);
+  const normalni = cesta.replace(/\/?$/, "/");
+  if (PRESUNUTE[normalni]) return <Presmerovani kam={PRESUNUTE[normalni]} co="Stránka se přestěhovala" />;
 
   const detail = cesta.match(/^\/incident\/([^/]+)\/?$/);
   if (detail) return <DetailIncidentu slug={detail[1]} />;
@@ -86,9 +80,8 @@ function Aplikace() {
         Přeskočit na obsah
       </a>
       <Navigace />
-      <StavovaListaData />
       <UkazkaPruh />
-      <main id="obsah" className="pb-[calc(72px+env(safe-area-inset-bottom))] lg:pb-0">
+      <main id="obsah" className="pb-[calc(60px+env(safe-area-inset-bottom))] md:pb-0">
         <Obsah />
       </main>
       <Paticka />

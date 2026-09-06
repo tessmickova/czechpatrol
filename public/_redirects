@@ -1,0 +1,19 @@
+# Přestěhované stránky. 301 = trvale; vyhledávače si přepíší adresu.
+/dnes/           /                          301
+/dnes            /                          301
+/trend/          /vyvoj/                    301
+/trend           /vyvoj/                    301
+/tlak/           /vyvoj/                    301
+/tlak            /vyvoj/                    301
+/watchlist/      /vyvoj/                    301
+/watchlist       /vyvoj/                    301
+/osa/            /udalosti/                 301
+/osa             /udalosti/                 301
+/cr/             /#opatreni                 301
+/cr              /#opatreni                 301
+/nato/           /#opatreni                 301
+/nato            /#opatreni                 301
+/nepotvrzeno/    /udalosti/?overeni=neprosle 301
+/nepotvrzeno     /udalosti/?overeni=neprosle 301
+/komunita/       /o-projektu/               301
+/komunita        /o-projektu/               301

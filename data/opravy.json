@@ -1,0 +1,66 @@
+[
+  {
+    "id": "o-2026-09-06-leipzig-dvakrat",
+    "datum": "2026-09-06",
+    "tykaSe": "leipzig-halle-utok",
+    "druh": "oprava-dat",
+    "co": "Obvinění podezřelých k útoku na Leipzig/Halle bylo vedeno jako samostatný případ, takže se Rusku počítaly dva potvrzené případy místo jednoho.",
+    "proc": "Následné zjištění k témuž útoku je aktualizace, ne nová událost. Záznam je teď veden jako aktualizace navázaná na původní případ; do počtu případů se nepočítá."
+  },
+  {
+    "id": "o-2026-09-06-porvoo",
+    "datum": "2026-09-06",
+    "tykaSe": "porvoo-dron",
+    "druh": "oprava-dat",
+    "co": "Záznam o dronu u Porvoo měl vysokou jistotu bez dohledatelného odkazu a popisoval událost nepřesně.",
+    "proc": "Podle finských zdrojů šlo o civilní dron Geoscan 701, o jehož ztrátě Rusko Finsko samo informovalo. Text přepsán, atribuce vedena jako nepotvrzená, závažnost snížena, zdroje doplněny."
+  },
+  {
+    "id": "o-2026-09-06-ganderkesee",
+    "datum": "2026-09-06",
+    "tykaSe": "nepotvrzeno/n1",
+    "druh": "oprava-dat",
+    "co": "Nepotvrzený záznam Ganderkesee neměl žádný zdroj a v poznámce stálo interní „na produkci se nezobrazuje“.",
+    "proc": "Doplněny regionální zdroje (buten un binnen, Delmenews) a text přepsán tak, aby popisoval, co se ověřilo a co ne."
+  },
+  {
+    "id": "o-2026-09-06-nato-vzdusne",
+    "datum": "2026-09-06",
+    "tykaSe": "nato-vzdusne-incidenty",
+    "druh": "oprava-dat",
+    "co": "Souhrnný záznam o narušeních vzdušného prostoru NATO měl neurčenou atribuci, ačkoli Aliance původce pojmenovala.",
+    "proc": "Podle prohlášení Severoatlantické rady z 12. 8. 2026 je původce uveden jako Rusko s oficiální atribucí."
+  },
+  {
+    "id": "o-2026-09-06-vrbetice-reakce",
+    "datum": "2026-09-06",
+    "tykaSe": "vrbetice-2014",
+    "druh": "oprava-dat",
+    "co": "Reakce ČR z roku 2021 k Vrběticím byla vedena jako samostatný záznam bez vazby na původní výbuch.",
+    "proc": "Je to aktualizace případu z roku 2014 (oficiální atribuce a vyhoštění diplomatů), teď navázaná na původní záznam."
+  },
+  {
+    "id": "o-2026-09-06-archiv-zdroje",
+    "datum": "2026-09-06",
+    "tykaSe": "historicke-zaznamy",
+    "druh": "doplneni-zdroju",
+    "co": "Jedenáct starších záznamů (2014–2025) neslo jen poznámku „archivní záznam“ bez odkazu na zdroj.",
+    "proc": "Doplněny dohledatelné odkazy (Yle, Defense News, TIME, Al Jazeera, NPR, Kyiv Independent, nato.int a další). Kde odkaz chybí i nadále, záznam nesmí být zobrazen jako „potvrzený“."
+  },
+  {
+    "id": "o-2026-09-06-nazvy-urovni",
+    "datum": "2026-09-06",
+    "tykaSe": "metodika",
+    "druh": "metodika",
+    "co": "Názvy úrovní „Menší střední“ a „Větší střední“ byly nesrozumitelné.",
+    "proc": "Metodika v2 mění jen názvy: Nízká → Mírně zvýšená → Střední → Zvýšená → Vysoká → Vážná. Hodnocení ani prahy se nemění; starší texty v archivu se převádějí automaticky."
+  },
+  {
+    "id": "o-2026-09-06-pocty",
+    "datum": "2026-09-06",
+    "tykaSe": "metodika",
+    "druh": "metodika",
+    "co": "Web na různých místech uváděl různé celkové počty (58 vs. 61 záznamů), protože každá část počítala jinak.",
+    "proc": "Všechny počty jdou z jednoho modulu a u každého čísla je napsáno, z jaké množiny je (případy, aktualizace, opatření, reakce). Do počtu případů vstupují jen skutečné události."
+  }
+]

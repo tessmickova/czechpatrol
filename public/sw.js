@@ -6,7 +6,9 @@
   buildu (_next/static) se naopak berou z mezipaměti rovnou, protože se
   s každou změnou přejmenují.
 */
-const VERZE = "cp-v1";
+// Změna verze = nová mezipaměť. Stará se smaže při aktivaci a stránka
+// dostane zprávu, ať nabídne obnovení — nikdy nepřepínáme obsah potichu.
+const VERZE = "cp-v2";
 const SKORAPKA = ["/", "/offline/", "/manifest.webmanifest", "/ikona-192.png"];
 
 self.addEventListener("install", (u) => {
@@ -20,8 +22,14 @@ self.addEventListener("activate", (u) => {
     caches
       .keys()
       .then((klice) => Promise.all(klice.filter((k) => k !== VERZE).map((k) => caches.delete(k))))
-      .then(() => self.clients.claim()),
+      .then(() => self.clients.claim())
+      .then(() => self.clients.matchAll({ type: "window" }))
+      .then((okna) => { for (const o of okna) o.postMessage({ typ: "nova-verze", verze: VERZE }); }),
   );
+});
+
+self.addEventListener("message", (u) => {
+  if (u.data && u.data.typ === "aktivuj") self.skipWaiting();
 });
 
 self.addEventListener("fetch", (u) => {

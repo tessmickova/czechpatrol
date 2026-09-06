@@ -1,16 +1,14 @@
 import Link from "next/link";
 import { GrafSouvislosti } from "@/components/graf-souvislosti";
-import { ObsahUdalosti } from "@/components/karta-udalosti";
+import { DetailObsah, HlavickaDetailu } from "@/components/detail-obsah";
+import { UlozitUdalost } from "@/components/muj-prehled-klient";
 import { OdznakUkazky } from "@/components/pruhy";
-import { Karta, OdznakJistoty, OdznakUrovne, Otaznik } from "@/components/zaklad";
 import { incident, incidenty } from "@/lib/data";
-import { datum, datumCas } from "@/lib/format";
-import { ATRIBUCE, KATEGORIE, STAVY } from "@/lib/kategorie";
-import { tokeny } from "@/lib/skala";
 
 /**
- * Detail události. Synchronní schválně: stejnou komponentu vykresluje
- * statický build i klikací náhled běžící v prohlížeči.
+ * Samostatná stránka události. Stejný obsah jako panel na stránce
+ * Události — jen s vlastní adresou, kterou jde sdílet. Synchronní schválně:
+ * stejnou komponentu vykresluje statický build i klikací náhled.
  */
 export function DetailIncidentu({ slug }: { slug: string }) {
   const i = incident(slug);
@@ -24,95 +22,16 @@ export function DetailIncidentu({ slug }: { slug: string }) {
     })
     .filter((x): x is NonNullable<typeof x> => x !== null);
 
-  const t = tokeny(i.zavaznost);
-
   return (
-    <article>
-      <div className={`border-b border-linka ${t.pozadi}`}>
-        <div className="mx-auto max-w-[860px] px-5 py-11 sm:px-8 sm:py-14">
-          <Link href="/udalosti/" className="stitek mb-6 inline-block hover:text-inkoust">
-            ← Události
-          </Link>
-
-          <div className="mb-4 flex flex-wrap items-center gap-2.5">
-            <OdznakUrovne uroven={i.zavaznost} />
-            <span className="stitek">{i.zeme}</span>
-            {i.kategorie.map((k) => (
-              <span key={k} className="stitek !text-tlum2">{KATEGORIE[k].nazev}</span>
-            ))}
-            {i.ukazka && <OdznakUkazky />}
-          </div>
-
-          <h1 className="nadpis max-w-[26ch] text-[28px] sm:text-[38px]">{i.titulek}</h1>
-
-          <dl className="mt-8 grid grid-cols-2 gap-x-5 gap-y-5 border-t border-linka/70 pt-6 sm:grid-cols-4">
-            <div>
-              <dt className="stitek mb-2">Datum události</dt>
-              <dd className="cislice text-[13.5px] font-medium">{datum(i.datumUdalosti)}</dd>
-            </div>
-            <div>
-              <dt className="stitek mb-2 flex items-center gap-1.5">
-                Nové zjištění
-                <Otaznik popis={<span className="block">Kdy věc vyšla najevo nebo kdy přišlo nové vyšetřovací zjištění. Není totožné s datem, kdy se událost stala.</span>} />
-              </dt>
-              <dd className="cislice text-[13.5px] font-medium">
-                {i.datumZjisteni ? datum(i.datumZjisteni) : "—"}
-              </dd>
-            </div>
-            <div>
-              <dt className="stitek mb-2">Stav</dt>
-              <dd className="text-[13.5px] font-medium">{STAVY[i.stav]}</dd>
-            </div>
-            <div>
-              <dt className="stitek mb-2 flex items-center gap-1.5">
-                Atribuce
-                <Otaznik vpravo popis={<span className="block">{ATRIBUCE[i.atribuce].popis}</span>} />
-              </dt>
-              <dd className="text-[13.5px] font-medium">{ATRIBUCE[i.atribuce].nazev}</dd>
-            </div>
-          </dl>
-
-          <div className="mt-6 border-t border-linka/70 pt-5">
-            <div className="stitek mb-2.5">Jistota informace</div>
-            <OdznakJistoty jistota={i.jistota} />
-          </div>
-        </div>
+    <article className="mx-auto max-w-[860px] px-4 py-8 sm:px-6 sm:py-10">
+      <div className="mb-5 flex flex-wrap items-center justify-between gap-3">
+        <Link href="/udalosti/" className="inline-flex min-h-[36px] items-center gap-1 text-[13.5px] font-semibold text-tlum hover:text-inkoust">← Události</Link>
+        <UlozitUdalost slug={i.slug} />
       </div>
-
-      <div className="mx-auto max-w-[860px] space-y-8 px-5 py-11 sm:px-8 sm:py-14">
-        <Karta className="p-5 sm:p-6">
-          <ObsahUdalosti incident={i} />
-        </Karta>
-
-        {souvisejici.length > 0 && <GrafSouvislosti stred={i} souvisejici={souvisejici} />}
-
-        {i.historie.length > 0 && (
-          <Karta className="p-5 sm:p-6">
-            <h2 className="podnadpis mb-1.5 text-[16px]">Historie aktualizací</h2>
-            <p className="mb-5 text-[12.5px] leading-relaxed text-tlum2">
-              Aktualizace záznamu neznamená nový útok. Tady je vidět, co přesně a kdy
-              přibylo.
-            </p>
-            <ol className="relative space-y-0">
-              <span aria-hidden className="absolute bottom-3 left-[4px] top-3 w-px bg-linka" />
-              {i.historie.map((h, n) => (
-                <li key={n} className="relative flex gap-4 py-3">
-                  <span aria-hidden className="relative z-10 mt-[6px] h-[9px] w-[9px] shrink-0 rounded-[2px] border-2 border-plocha bg-tlum2" />
-                  <span className="block">
-                    <span className="cislice stitek mb-1.5 block">{datumCas(h.kdy)}</span>
-                    <span className="block text-[13.5px] leading-relaxed">{h.text}</span>
-                    {h.novySignal && (
-                      <span className="stitek-tmavy mt-2 inline-block rounded-[10px] border border-linka px-1.5 py-[3px] text-tlum">
-                        Započítáno jako nový signál
-                      </span>
-                    )}
-                  </span>
-                </li>
-              ))}
-            </ol>
-          </Karta>
-        )}
-      </div>
+      {i.ukazka && <div className="mb-3"><OdznakUkazky /></div>}
+      <HlavickaDetailu i={i} velka />
+      <div className="mt-8"><DetailObsah i={i} /></div>
+      {souvisejici.length > 0 && <div className="mt-10 overflow-x-auto"><GrafSouvislosti stred={i} souvisejici={souvisejici} /></div>}
     </article>
   );
 }
@@ -122,18 +41,14 @@ function Nenalezeno() {
   return (
     <div className="mx-auto max-w-[640px] px-5 py-20 text-center sm:px-8">
       <div className="stitek mb-4">Událost</div>
-      <h1 className="nadpis text-[28px] sm:text-[34px]">Tato událost tu není</h1>
+      <h1 className="text-[28px] font-bold sm:text-[34px]">Tato událost tu není</h1>
       <p className="mx-auto mt-4 max-w-[34rem] text-[14px] leading-relaxed text-tlum">
         Buď adresa neodpovídá žádnému záznamu, nebo zatím není zveřejněná žádná událost.
         Zveřejňujeme pouze záznamy, které prošly kontrolou a mají uvedený zdroj.
       </p>
       <div className="mt-8 flex flex-wrap justify-center gap-2.5">
-        <Link href="/udalosti/" className="rounded-[10px] border border-linka bg-plocha px-3 py-2 text-[12.5px] font-medium transition-colors hover:border-inkoust">
-          Všechny události
-        </Link>
-        <Link href="/" className="rounded-[10px] border border-linka bg-plocha px-3 py-2 text-[12.5px] font-medium transition-colors hover:border-inkoust">
-          Přehled
-        </Link>
+        <Link href="/udalosti/" className="rounded-[10px] border border-linka bg-plocha px-3 py-2 text-[13px] font-medium transition-colors hover:border-inkoust">Všechny události</Link>
+        <Link href="/" className="rounded-[10px] border border-linka bg-plocha px-3 py-2 text-[13px] font-medium transition-colors hover:border-inkoust">Přehled</Link>
       </div>
     </div>
   );

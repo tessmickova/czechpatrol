@@ -1,61 +1,59 @@
 @import "tailwindcss";
 
 /*
-  Vizuální systém: situační konzole z filmu o blízké budoucnosti.
+  Vizuální systém CzechPatrol.
 
-  Hluboká tmavá plocha, skleněné panely, jeden neonový akcent a světla,
-  která nesou informaci — stav, závažnost, indikátor. Písma jsou dvě:
-  Chakra Petch pro všechno psané (nadpisy tučně, text středně),
-  JetBrains Mono pro data, popisky a kapitálky.
+  Klidný tmavý pracovní panel: jedna rodina písma pro text, mono jen pro
+  čísla a metadata, střídmé zaoblení, žádné dekorativní záře. Barva nikdy
+  nenese informaci sama — vždy ji doprovází slovo nebo ikona.
 */
 
 @theme {
-  --font-sans: var(--font-chakra), "Chakra Petch", "Exo 2", ui-sans-serif, system-ui, sans-serif;
+  --font-sans: var(--font-chakra), "Chakra Petch", ui-sans-serif, system-ui, sans-serif;
   --font-mono: var(--font-mono-web), "JetBrains Mono", ui-monospace, Menlo, monospace;
 
-  --r-s: 10px;
-  --r-m: 14px;
-  --r-l: 20px;
+  --r-s: 8px;
+  --r-m: 10px;
+  --r-l: 14px;
 
-  /* plocha */
-  --color-papir: #060a13;
-  --color-plocha: #0b1220;
-  --color-inkoust: #e8f1ff;
-  --color-tlum: #9db1cc;
-  --color-tlum2: #64789a;
-  --color-linka: rgb(120 170 255 / 0.16);
-  --color-linka2: rgb(120 170 255 / 0.08);
+  /* plochy */
+  --color-papir: #10141b;
+  --color-plocha: #181f29;
+  --color-plocha2: #202a36;
+  --color-inkoust: #f2f5f8;
+  --color-tlum: #acb7c5;
+  --color-tlum2: #7f8ea0;
+  --color-linka: rgb(172 183 197 / 0.18);
+  --color-linka2: rgb(172 183 197 / 0.1);
 
-  /* tmavší pásy — pro pruhy a patičku */
-  --color-noc: #03060d;
-  --color-noc2: #0b1220;
-  --color-noc3: #12203a;
-  --color-noc-text: #e8f1ff;
-  --color-noc-tlum: #9db1cc;
-  --color-noc-linka: rgb(120 170 255 / 0.16);
+  /* kvůli starším komponentám: noc = nejtmavší plocha */
+  --color-noc: #0b0e13;
+  --color-noc2: #10141b;
+  --color-noc3: #202a36;
+  --color-noc-text: #f2f5f8;
+  --color-noc-tlum: #acb7c5;
+  --color-noc-linka: rgb(172 183 197 / 0.18);
 
-  /* neonový akcent */
-  --color-akcent: #38e8ff;
-  --color-akcent-tmava: #17b6cc;
-  --color-akcent-svetla: #8ff4ff;
-  --color-jantar: #ffc857;
+  /* akcent */
+  --color-akcent: #75b9cc;
+  --color-akcent-tmava: #4f95a8;
+  --color-akcent-svetla: #a3d3e0;
+  --color-jantar: #d9b24c;
 
-  /* tónované plochy — sklo s barevným nádechem */
-  --color-mycka: rgb(56 232 255 / 0.07);
-  --color-mycka2: rgb(56 232 255 / 0.14);
-  --color-list: rgb(79 222 160 / 0.08);
-  --color-list2: rgb(79 222 160 / 0.16);
-  --color-pisek: rgb(255 200 87 / 0.08);
-  --color-pisek2: rgb(255 200 87 / 0.16);
-  --color-slunce: rgb(255 200 87 / 0.08);
-  --color-slunce2: rgb(255 200 87 / 0.16);
-  --color-slez: rgb(178 140 255 / 0.09);
-  --color-slez2: rgb(178 140 255 / 0.18);
+  /* tónované plochy */
+  --color-mycka: rgb(117 185 204 / 0.08);
+  --color-mycka2: rgb(117 185 204 / 0.16);
+  --color-list: rgb(92 191 138 / 0.1);
+  --color-list2: rgb(92 191 138 / 0.18);
+  --color-pisek: rgb(217 178 76 / 0.1);
+  --color-pisek2: rgb(217 178 76 / 0.18);
+  --color-slunce: rgb(217 178 76 / 0.1);
+  --color-slunce2: rgb(217 178 76 / 0.18);
+  --color-slez: rgb(164 148 214 / 0.1);
+  --color-slez2: rgb(164 148 214 / 0.18);
 }
 
-:root {
-  color-scheme: dark;
-}
+:root { color-scheme: dark; }
 
 html {
   -webkit-text-size-adjust: 100%;
@@ -63,13 +61,11 @@ html {
 }
 
 body {
-  background:
-    radial-gradient(ellipse 70% 50% at 20% -10%, rgb(56 232 255 / 0.10), transparent 60%),
-    radial-gradient(ellipse 60% 40% at 90% 10%, rgb(178 140 255 / 0.08), transparent 60%),
-    var(--color-papir);
+  background: var(--color-papir);
   color: var(--color-inkoust);
   font-family: var(--font-sans);
   font-size: 16px;
+  line-height: 1.5;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
 }
@@ -79,198 +75,108 @@ body {
 .cislice {
   font-family: var(--font-mono);
   font-variant-numeric: tabular-nums;
-  letter-spacing: -0.01em;
 }
 
-/* Kapitálky — popisky, kódy sekcí. Jediné místo, kde se používá mono s odsazením. */
+/* Popisky, kódy sekcí. Mono s prostrkáním, jediná kapitálková věc na webu. */
 .stitek {
   font-family: var(--font-mono);
-  font-size: 11px;
-  line-height: 1;
-  letter-spacing: 0.12em;
+  font-size: 12px;
+  line-height: 1.2;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
   font-weight: 500;
   color: var(--color-tlum2);
 }
-
 .stitek-tmavy {
   font-family: var(--font-mono);
-  font-size: 11px;
-  line-height: 1;
-  letter-spacing: 0.12em;
+  font-size: 12px;
+  line-height: 1.2;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
   font-weight: 500;
 }
 
 .nadpis {
   font-weight: 700;
-  letter-spacing: 0.01em;
-  line-height: 1;
-  text-transform: uppercase;
+  letter-spacing: -0.01em;
+  line-height: 1.1;
   text-wrap: balance;
 }
-
 .podnadpis {
   font-weight: 700;
-  letter-spacing: 0.02em;
-  line-height: 1.1;
-  text-transform: uppercase;
+  letter-spacing: 0;
+  line-height: 1.2;
   text-wrap: balance;
 }
-
 .velke-cislo {
   font-family: var(--font-mono);
   font-variant-numeric: tabular-nums;
-  letter-spacing: -0.04em;
+  letter-spacing: -0.02em;
   font-weight: 500;
-  line-height: 0.9;
+  line-height: 1;
 }
 
-/* Světlo textu. Jemné — má naznačit, že svítí, ne rozmazat čitelnost. */
-.svit {
-  text-shadow: 0 0 12px color-mix(in srgb, currentColor 55%, transparent);
-}
-.svit-silny {
-  text-shadow:
-    0 0 6px color-mix(in srgb, currentColor 70%, transparent),
-    0 0 22px color-mix(in srgb, currentColor 35%, transparent);
-}
+/* Bez záře: tyhle třídy zůstávají kvůli starším místům, ale nic nedělají. */
+.svit, .svit-silny { text-shadow: none; }
 
 .odkaz {
   text-decoration: underline;
   text-underline-offset: 3px;
-  text-decoration-color: color-mix(in srgb, currentColor 30%, transparent);
+  text-decoration-color: color-mix(in srgb, currentColor 35%, transparent);
   transition: text-decoration-color 0.15s;
 }
-.odkaz:hover {
-  text-decoration-color: currentColor;
+.odkaz:hover { text-decoration-color: currentColor; }
+
+/* ---------- plochy ---------- */
+
+/* Obsahová plocha: dostatečně neprůhledná, bez rozostření. */
+.sklo, .sklo-noc {
+  background: var(--color-plocha);
+  border: 1px solid var(--color-linka);
 }
-
-/* ---------- sklo ---------- */
-
-/*
-  Základní skleněný panel. Bez rozostření pozadí — desítky panelů
-  s backdrop-filter dělají z rolování trhanou animaci. Sklo dělá barva
-  a hrana; rozostření má jen hlavička a postranní panel (.sklo-rozmaz).
-*/
-.sklo,
-.sklo-noc {
-  background: rgb(13 19 32 / 0.72);
-  border: 1px solid rgb(120 170 255 / 0.16);
-  box-shadow:
-    inset 0 1px 0 rgb(255 255 255 / 0.06),
-    0 20px 50px -30px rgb(0 0 0 / 0.8);
-}
-
 .sklo-noc-slabe {
-  background: rgb(255 255 255 / 0.025);
-  border: 1px solid rgb(120 170 255 / 0.12);
+  background: var(--color-plocha);
+  border: 1px solid var(--color-linka2);
 }
+.sklo-akcent { border-color: rgb(117 185 204 / 0.35); }
 
-/* Rozostření jen tam, kde se pod prvkem opravdu něco hýbe. */
+/* Rozostření jen v navigaci a překryvném panelu, kde se pod ním hýbe obsah. */
 .sklo-rozmaz {
-  background: rgb(6 10 19 / 0.7);
-  backdrop-filter: blur(14px) saturate(1.3);
-  -webkit-backdrop-filter: blur(14px) saturate(1.3);
+  background: rgb(16 20 27 / 0.82);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
 }
-
-/* Svítící hrana — jen u toho, co má být vidět ze všeho nejdřív. */
-.sklo-akcent {
-  border-color: rgb(56 232 255 / 0.35);
-  box-shadow:
-    inset 0 1px 0 rgb(255 255 255 / 0.08),
-    0 0 0 1px rgb(56 232 255 / 0.10),
-    0 0 40px -12px rgb(56 232 255 / 0.45);
-}
-
 @supports not (backdrop-filter: blur(1px)) {
-  .sklo-rozmaz { background: rgb(6 10 19 / 0.94); }
+  .sklo-rozmaz { background: rgb(16 20 27 / 0.97); }
 }
 
-/* ---------- pozadí ---------- */
+.noc { background: transparent; color: var(--color-noc-text); position: relative; }
+.vzor-mrizka, .vzor-zare { background: none; }
+.sken::after { content: none; }
+.linka-noc { border-top: 1px solid var(--color-linka); }
 
-.noc {
-  background: transparent;
-  color: var(--color-noc-text);
-  position: relative;
-  isolation: isolate;
-}
-
-/* Souřadnicová mřížka — odkaz na situační mapu. */
-.vzor-mrizka {
-  background-image:
-    linear-gradient(to right, rgb(120 170 255 / 0.05) 1px, transparent 1px),
-    linear-gradient(to bottom, rgb(120 170 255 / 0.05) 1px, transparent 1px);
-  background-size: 56px 56px;
-  mask-image: radial-gradient(ellipse 92% 74% at 50% 34%, #000 32%, transparent 80%);
-  -webkit-mask-image: radial-gradient(ellipse 92% 74% at 50% 34%, #000 32%, transparent 80%);
-}
-
-.vzor-zare {
-  background: radial-gradient(
-    ellipse 55% 60% at 72% 38%,
-    rgb(56 232 255 / 0.18),
-    transparent 70%
-  );
-  pointer-events: none;
-}
-
-/* Skenovací linka — jede pomalu přes příkazový pruh. */
-@keyframes sken {
-  from { transform: translateY(-100%); }
-  to { transform: translateY(100vh); }
-}
-.sken::after {
-  content: "";
-  position: absolute;
-  inset-inline: 0;
-  top: 0;
-  height: 2px;
-  background: linear-gradient(90deg, transparent, rgb(56 232 255 / 0.35), transparent);
-  animation: sken 9s linear infinite;
-  pointer-events: none;
-}
-
-.linka-noc {
-  border-top: 1px solid rgb(120 170 255 / 0.12);
-}
-
-/* ---------- karty ---------- */
-
-.zdvih {
-  transition: transform 0.16s ease, box-shadow 0.16s ease, border-color 0.16s ease;
-}
-.zdvih:hover {
-  transform: translateY(-2px);
-  border-color: rgb(56 232 255 / 0.4);
-  box-shadow: 0 0 34px -10px rgb(56 232 255 / 0.35);
-}
+.zdvih { transition: border-color 0.15s ease, background-color 0.15s ease; }
+.zdvih:hover { border-color: rgb(117 185 204 / 0.5); }
 
 .srafy {
-  background-image: repeating-linear-gradient(
-    -45deg,
-    color-mix(in srgb, currentColor 18%, transparent) 0 1px,
-    transparent 1px 6px
-  );
+  background-image: repeating-linear-gradient(-45deg, color-mix(in srgb, currentColor 22%, transparent) 0 1px, transparent 1px 6px);
 }
 
 /* ---------- nápověda ---------- */
 
-.napoveda-obal {
-  position: relative;
-  display: inline-flex;
-}
+/* Skryté nápovědy nesmí roztahovat stránku do šířky; clip nezakládá rolování a nerozbíjí sticky. */
+html, body { overflow-x: clip; }
+
+.napoveda-obal { position: relative; display: inline-flex; }
 .napoveda {
   position: absolute;
   z-index: 60;
-  top: calc(100% + 8px);
+  top: calc(100% + 6px);
   left: 0;
   width: min(22rem, calc(100vw - 2.5rem));
-  padding: 0.85rem 1rem;
-  background: rgb(6 10 19 / 0.96);
-  backdrop-filter: blur(14px);
-  -webkit-backdrop-filter: blur(14px);
-  border: 1px solid rgb(56 232 255 / 0.3);
+  padding: 0.75rem 0.9rem;
+  background: var(--color-plocha2);
+  border: 1px solid var(--color-linka);
   color: var(--color-inkoust);
   border-radius: var(--r-m);
   font-size: 14px;
@@ -278,27 +184,20 @@ body {
   text-transform: none;
   letter-spacing: 0;
   font-family: var(--font-sans);
-  box-shadow: 0 0 40px -10px rgb(56 232 255 / 0.4), 0 20px 50px -20px rgb(0 0 0 / 0.9);
+  box-shadow: 0 16px 40px -16px rgb(0 0 0 / 0.7);
   opacity: 0;
   visibility: hidden;
   transform: translateY(-3px);
-  transition: opacity 0.14s, transform 0.14s, visibility 0.14s;
+  transition: opacity 0.12s, transform 0.12s, visibility 0.12s;
   pointer-events: none;
 }
 .napoveda-obal:hover > .napoveda,
-.napoveda-obal:focus-within > .napoveda {
-  opacity: 1;
-  visibility: visible;
-  transform: translateY(0);
-}
-.napoveda-obal:has(> .napoveda-vpravo) > .napoveda-vpravo {
-  left: auto;
-  right: 0;
-}
+.napoveda-obal:focus-within > .napoveda { opacity: 1; visibility: visible; transform: translateY(0); }
+.napoveda-obal:has(> .napoveda-vpravo) > .napoveda-vpravo { left: auto; right: 0; }
 
 /* ---------- ovládání ---------- */
 
-:where(a, button, summary, [tabindex]):focus-visible {
+:where(a, button, summary, [tabindex], input, select, textarea):focus-visible {
   outline: 2px solid var(--color-akcent);
   outline-offset: 2px;
   border-radius: var(--r-s);
@@ -306,45 +205,15 @@ body {
 
 .pas-scroll { scrollbar-width: none; }
 .pas-scroll::-webkit-scrollbar { display: none; }
-
 details > summary { list-style: none; cursor: pointer; }
 details > summary::-webkit-details-marker { display: none; }
-
 input[type="range"] { accent-color: var(--color-akcent); }
 
-/* ---------- rolující lišta ---------- */
-
-@keyframes pas-jizda {
-  to { transform: translateX(-50%); }
-}
-.pas-bezi {
-  animation: pas-jizda var(--pas-trvani, 60s) linear infinite;
-}
-.pas-obal:hover .pas-bezi,
-.pas-obal:focus-within .pas-bezi,
-.pas-pauza .pas-bezi {
-  animation-play-state: paused;
-}
-/* Okraje se ztrácejí do pozadí — je vidět, že proud pokračuje. */
-.pas-okno {
-  mask-image: linear-gradient(90deg, transparent, #000 24px, #000 calc(100% - 24px), transparent);
-  -webkit-mask-image: linear-gradient(90deg, transparent, #000 24px, #000 calc(100% - 24px), transparent);
-}
-
-/* ---------- parallax ---------- */
-
-.vrstva {
-  will-change: transform;
-  transform: translate3d(0, var(--posun, 0px), 0);
-}
+/* Parallax vypnutý: vrstvy stojí. */
+.vrstva { transform: none; }
 
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
-  .vrstva { transform: none !important; }
-  .sken::after { animation: none; }
-  /* Bez pohybu: lišta stojí a dá se posouvat prstem nebo kolečkem. */
-  .pas-bezi { animation: none; }
-  .pas-okno { overflow-x: auto; mask-image: none; -webkit-mask-image: none; }
   * { transition-duration: 0.01ms !important; animation-duration: 0.01ms !important; }
 }
 

@@ -21,20 +21,27 @@
       "Pracovala s incidenty od srpna 2024 do února 2026 a hodnotila možnou roli GRU."
     ],
     "neznameho": [
-      "Zda šlo o systematickou operaci, nebo o jednotlivé případy.",
-      "Nešlo o nové červencové incidenty — analyzovány byly starší události."
+      "Zpráva IISS nepředkládá přímé důkazy; kritici (Dronewatch) ji označují za hypotézu bez doložení."
     ],
     "vyznam": "Naznačuje možný systematický způsob provádění hybridních průzkumných operací proti NATO. Jde o analytické hodnocení, ne o nový fyzický útok.",
     "eskalacniSpousteče": [],
     "deeskalacniSignaly": [],
     "zdroje": [
       {
-        "nazev": "Vlastní monitoring — archiv 5. 9. 2026",
-        "url": "",
-        "typ": "analysis",
-        "publikovano": "2026-09-05T00:00:00Z",
+        "nazev": "TVP World — Russia 'likely' used shadow fleet to launch drone campaign on Europe (IISS)",
+        "url": "https://tvpworld.com/94155547/iiss-russia-used-shadow-fleet-in-drone-campaign-on-europe",
+        "typ": "media",
+        "publikovano": "2026-07-16T00:00:00Z",
         "primarni": false,
-        "jazyk": "cs"
+        "jazyk": "en"
+      },
+      {
+        "nazev": "Dronewatch Europe — New report revives 'Russian shadow fleet drone' theory, but fails to provide evidence",
+        "url": "https://www.dronewatch.eu/new-iiss-report-revives-russian-shadow-fleet-drone-theory-but-fails-to-provide-evidence/",
+        "typ": "analysis",
+        "publikovano": "2026-07-17T00:00:00Z",
+        "primarni": false,
+        "jazyk": "en"
       }
     ],
     "souvisejici": [],
@@ -49,7 +56,8 @@
     "zapocitanoTyden": "2026-06-29",
     "aiZpracovano": true,
     "lidskyOvereno": true,
-    "archivniZaznam": true
+    "archivniZaznam": true,
+    "druh": "reakce"
   },
   {
     "id": "a02",
@@ -107,7 +115,8 @@
     "novy": false,
     "zapocitanoTyden": "2026-07-13",
     "aiZpracovano": true,
-    "lidskyOvereno": true
+    "lidskyOvereno": true,
+    "druh": "reakce"
   },
   {
     "id": "a03",
@@ -137,12 +146,20 @@
     "deeskalacniSignaly": [],
     "zdroje": [
       {
-        "nazev": "Vlastní monitoring — archiv 5. 9. 2026",
-        "url": "",
-        "typ": "analysis",
-        "publikovano": "2026-09-05T00:00:00Z",
+        "nazev": "Defense News — Russia may use captured Ukrainian drones against Poland and Baltics, Warsaw warns",
+        "url": "https://www.defensenews.com/global/europe/2026/07/21/russia-may-use-captured-ukrainian-drones-against-poland-and-baltics-warsaw-warns/",
+        "typ": "media",
+        "publikovano": "2026-07-21T00:00:00Z",
         "primarni": false,
-        "jazyk": "cs"
+        "jazyk": "en"
+      },
+      {
+        "nazev": "Interfax-Ukraine — Poland defense ministry says Russia may use captured Ukrainian drones for provocations",
+        "url": "https://en.interfax.com.ua/news/general/1186861.html",
+        "typ": "wire",
+        "publikovano": "2026-07-20T00:00:00Z",
+        "primarni": false,
+        "jazyk": "en"
       }
     ],
     "souvisejici": [],
@@ -157,7 +174,8 @@
     "zapocitanoTyden": "2026-07-20",
     "aiZpracovano": true,
     "lidskyOvereno": true,
-    "archivniZaznam": true
+    "archivniZaznam": true,
+    "druh": "reakce"
   },
   {
     "id": "a04",
@@ -255,7 +273,8 @@
     "zapocitanoTyden": "2026-08-31",
     "aiZpracovano": true,
     "lidskyOvereno": true,
-    "puvodce": "rusko"
+    "puvodce": "rusko",
+    "druh": "pripad"
   },
   {
     "id": "a05",
@@ -322,7 +341,8 @@
     "zapocitanoTyden": "2026-08-31",
     "aiZpracovano": true,
     "lidskyOvereno": true,
-    "puvodce": "neznamy"
+    "puvodce": "neznamy",
+    "druh": "pripad"
   },
   {
     "id": "a06",
@@ -338,26 +358,35 @@
     "datumUdalosti": "2026-08-12T00:00:00Z",
     "aktualizovano": "2026-08-12T00:00:00Z",
     "zavaznost": "G3",
-    "jistota": "vysoka",
+    "jistota": "potvrzeno",
     "stav": "bez-vysetrovani",
-    "atribuce": "neznama",
+    "atribuce": "oficialni",
     "fakta": [
-      "NATO diskutovalo nedávná narušení vzdušného prostoru Polska a Rumunska."
+      "Severoatlantická rada 12. srpna 2026 projednala narušení vzdušného prostoru Polska a Rumunska a nedávné dronové incidenty; 29. července dopadla řízená střela na polské území asi 50 km od Lublinu.",
+      "Spojenci uvedli, že plnou odpovědnost za narušení nese Rusko, a označili je za nebezpečná a nepřijatelná."
     ],
     "neznameho": [
       "Zda šlo o úmyslné cílení."
     ],
-    "vyznam": "Opakované průniky patří k dlouhodobému pozadí. Hodnocení zvyšuje až změna vzorce — vyšší četnost, hloubka, více států, zbraně, oběti nebo mimořádná reakce NATO.",
+    "vyznam": "Opakované průniky patří k dlouhodobému pozadí, tentokrát s oficiálním připsáním odpovědnosti Rusku spojenci. Hodnocení zvyšuje až změna vzorce — vyšší četnost, hloubka, zbraně, oběti nebo mimořádná reakce NATO.",
     "eskalacniSpousteče": [],
     "deeskalacniSignaly": [],
     "zdroje": [
       {
-        "nazev": "Vlastní monitoring — archiv 5. 9. 2026",
-        "url": "",
-        "typ": "analysis",
-        "publikovano": "2026-09-05T00:00:00Z",
+        "nazev": "NATO — NATO Allies condemn recent airspace violations and incidents",
+        "url": "https://www.nato.int/en/news-and-events/articles/news/2026/08/12/nato-allies-condemn-recent-airspace-violations-and-incidents",
+        "typ": "primary",
+        "publikovano": "2026-08-12T00:00:00Z",
+        "primarni": true,
+        "jazyk": "en"
+      },
+      {
+        "nazev": "Euronews — NATO stands with Poland and Romania amid Russian airspace violations",
+        "url": "https://www.euronews.com/my-europe/2026/08/12/nato-stands-with-poland-and-romania-amid-russian-airspace-violations",
+        "typ": "media",
+        "publikovano": "2026-08-12T00:00:00Z",
         "primarni": false,
-        "jazyk": "cs"
+        "jazyk": "en"
       }
     ],
     "souvisejici": [],
@@ -373,7 +402,8 @@
     "aiZpracovano": true,
     "lidskyOvereno": true,
     "archivniZaznam": true,
-    "puvodce": "neznamy"
+    "puvodce": "rusko",
+    "druh": "pripad"
   },
   {
     "id": "a07",
@@ -385,7 +415,7 @@
     "kategorie": [
       "sabotaz"
     ],
-    "datumUdalosti": "2026-08-22T00:00:00Z",
+    "datumUdalosti": "2026-08-25T00:00:00Z",
     "datumZjisteni": "2026-08-28T00:00:00Z",
     "aktualizovano": "2026-08-28T00:00:00Z",
     "zavaznost": "O1",
@@ -393,23 +423,32 @@
     "stav": "obvineni",
     "atribuce": "vysetrovana",
     "fakta": [
-      "Cílem byl výrobce dronů Skyeton v Hanisce u Prešova.",
-      "Slovenská policie 28. srpna zadržela čtvrtého podezřelého."
+      "Slovenská policie 25. srpna 2026 zadržela dva lotyšské občany a jednoho Ukrajince kvůli plánovanému žhářskému útoku na továrnu ukrajinské firmy Skyeton v Hanisce u Prešova.",
+      "Zajištěna byla zápalná směs (benzin a polystyren), nářadí, telefony a ručně kreslený plán areálu; jeden podezřelý byl zadržen v Hamburku.",
+      "Prokuratura uvedla, že podezřelí jednali na cizí objednávku, zadavatele ale neoznačila. Firma Skyeton věří, že za pokusem stojí Rusko."
     ],
     "neznameho": [
-      "Kdo útok objednal — policie v zachyceném stavu neměla důkaz, že šlo o Rusko."
+      "Kdo útok objednal. Státní zadání není úředně potvrzeno."
     ],
     "vyznam": "Fyzický útok proti společnosti v obranném a dronovém sektoru, ve stejném období jako obdobné případy v Polsku.",
     "eskalacniSpousteče": [],
     "deeskalacniSignaly": [],
     "zdroje": [
       {
-        "nazev": "Vlastní monitoring — archiv 5. 9. 2026",
-        "url": "",
-        "typ": "analysis",
-        "publikovano": "2026-09-05T00:00:00Z",
+        "nazev": "U.S. News / Reuters — Arson plot targeted Ukraine-founded drone maker, Slovak prosecutor says",
+        "url": "https://www.usnews.com/news/world/articles/2026-08-27/suspects-planned-arson-attack-on-drone-maker-skyeton-slovak-prosecution-says",
+        "typ": "wire",
+        "publikovano": "2026-08-27T00:00:00Z",
         "primarni": false,
-        "jazyk": "cs"
+        "jazyk": "en"
+      },
+      {
+        "nazev": "Kyiv Independent — Slovak police thwart arson plot targeting Ukrainian drone maker Skyeton",
+        "url": "https://kyivindependent.com/slovak-police-thwart-arson-plot-targeting-ukrainian-drone-factory-media-reports/",
+        "typ": "media",
+        "publikovano": "2026-08-27T00:00:00Z",
+        "primarni": false,
+        "jazyk": "en"
       }
     ],
     "souvisejici": [],
@@ -430,7 +469,8 @@
     "aiZpracovano": true,
     "lidskyOvereno": true,
     "archivniZaznam": true,
-    "puvodce": "neznamy"
+    "puvodce": "neznamy",
+    "druh": "pripad"
   },
   {
     "id": "a08",
@@ -487,7 +527,8 @@
     "novy": false,
     "zapocitanoTyden": "2026-08-17",
     "aiZpracovano": true,
-    "lidskyOvereno": true
+    "lidskyOvereno": true,
+    "druh": "reakce"
   },
   {
     "id": "a09",
@@ -516,12 +557,20 @@
     "deeskalacniSignaly": [],
     "zdroje": [
       {
-        "nazev": "Vlastní monitoring — archiv 5. 9. 2026",
-        "url": "",
-        "typ": "analysis",
-        "publikovano": "2026-09-05T00:00:00Z",
+        "nazev": "Euromaidan Press — Russia's shadow war on Europe is widening; NATO still sees no attack coming",
+        "url": "https://euromaidanpress.com/2026/08/31/russias-shadow-war-on-europe-is-widening-nato-still-sees-no-attack-coming/",
+        "typ": "media",
+        "publikovano": "2026-08-31T00:00:00Z",
         "primarni": false,
-        "jazyk": "cs"
+        "jazyk": "en"
+      },
+      {
+        "nazev": "Foreign Policy — Is Europe ready for a new era of Russian dirty tricks?",
+        "url": "https://foreignpolicy.com/2026/08/26/russia-ukraine-war-putin-europe-attacks-drones-sabotage-nato-hybrid-gray-zone-warfare/",
+        "typ": "analysis",
+        "publikovano": "2026-08-26T00:00:00Z",
+        "primarni": false,
+        "jazyk": "en"
       }
     ],
     "souvisejici": [],
@@ -536,7 +585,8 @@
     "zapocitanoTyden": "2026-08-24",
     "aiZpracovano": true,
     "lidskyOvereno": true,
-    "archivniZaznam": true
+    "archivniZaznam": true,
+    "druh": "reakce"
   },
   {
     "id": "a10",
@@ -586,7 +636,8 @@
     "novy": false,
     "zapocitanoTyden": "2026-08-24",
     "aiZpracovano": true,
-    "lidskyOvereno": true
+    "lidskyOvereno": true,
+    "druh": "reakce"
   },
   {
     "id": "a11",
@@ -641,7 +692,8 @@
     "novy": false,
     "zapocitanoTyden": "2026-08-24",
     "aiZpracovano": true,
-    "lidskyOvereno": true
+    "lidskyOvereno": true,
+    "druh": "opatreni"
   },
   {
     "id": "a12",
@@ -696,7 +748,8 @@
     "novy": false,
     "zapocitanoTyden": "2026-08-24",
     "aiZpracovano": true,
-    "lidskyOvereno": true
+    "lidskyOvereno": true,
+    "druh": "opatreni"
   },
   {
     "id": "a13",
@@ -727,12 +780,20 @@
     "deeskalacniSignaly": [],
     "zdroje": [
       {
-        "nazev": "Vlastní monitoring — archiv 5. 9. 2026",
-        "url": "",
-        "typ": "analysis",
-        "publikovano": "2026-09-05T00:00:00Z",
+        "nazev": "Ukrajinska Pravda — Polish PM Tusk warns Russia is preparing for escalation, next 7–8 months could be critical",
+        "url": "https://www.pravda.com.ua/eng/news/2026/08/29/8050905/",
+        "typ": "media",
+        "publikovano": "2026-08-29T00:00:00Z",
         "primarni": false,
-        "jazyk": "cs"
+        "jazyk": "en"
+      },
+      {
+        "nazev": "The New Voice of Ukraine — Tusk warns Russia is preparing escalation",
+        "url": "https://english.nv.ua/nation/tusk-warns-russia-is-preparing-escalation-next-seven-to-eight-months-critical-50636796.html",
+        "typ": "media",
+        "publikovano": "2026-08-29T00:00:00Z",
+        "primarni": false,
+        "jazyk": "en"
       }
     ],
     "souvisejici": [],
@@ -747,7 +808,8 @@
     "zapocitanoTyden": "2026-08-24",
     "aiZpracovano": true,
     "lidskyOvereno": true,
-    "archivniZaznam": true
+    "archivniZaznam": true,
+    "druh": "reakce"
   },
   {
     "id": "a14",
@@ -804,7 +866,8 @@
     "zapocitanoTyden": "2026-08-31",
     "aiZpracovano": true,
     "lidskyOvereno": true,
-    "puvodce": "neznamy"
+    "puvodce": "neznamy",
+    "druh": "pripad"
   },
   {
     "id": "a15",
@@ -885,7 +948,8 @@
     "zapocitanoTyden": "2026-08-31",
     "aiZpracovano": true,
     "lidskyOvereno": true,
-    "puvodce": "neznamy"
+    "puvodce": "neznamy",
+    "druh": "pripad"
   },
   {
     "id": "a16",
@@ -965,7 +1029,8 @@
     "zapocitanoTyden": "2026-08-31",
     "aiZpracovano": true,
     "lidskyOvereno": true,
-    "puvodce": "domaci"
+    "puvodce": "domaci",
+    "druh": "pripad"
   },
   {
     "id": "a17",
@@ -995,12 +1060,20 @@
     "deeskalacniSignaly": [],
     "zdroje": [
       {
-        "nazev": "Vlastní monitoring — archiv 5. 9. 2026",
-        "url": "",
-        "typ": "analysis",
-        "publikovano": "2026-09-05T00:00:00Z",
+        "nazev": "Kyiv Post — Medvedev threatens 'direct strike' on German military factories, hints at attacks on Berlin",
+        "url": "https://www.kyivpost.com/post/83573",
+        "typ": "media",
+        "publikovano": "2026-09-02T00:00:00Z",
         "primarni": false,
-        "jazyk": "cs"
+        "jazyk": "en"
+      },
+      {
+        "nazev": "Newsquawk — Medvedev: Germany deserves a direct strike (RIA)",
+        "url": "https://www.newsquawk.com/headlines/russias-deputy-security-council-chairman-medvedev-says-germany-deserves-a-direct-strike-on-military-equipment-production-for-kyiv-ria-reports",
+        "typ": "media",
+        "publikovano": "2026-09-02T00:00:00Z",
+        "primarni": false,
+        "jazyk": "en"
       }
     ],
     "souvisejici": [],
@@ -1015,7 +1088,8 @@
     "zapocitanoTyden": "2026-08-31",
     "aiZpracovano": true,
     "lidskyOvereno": true,
-    "archivniZaznam": true
+    "archivniZaznam": true,
+    "druh": "reakce"
   },
   {
     "id": "a18",
@@ -1045,12 +1119,20 @@
     "deeskalacniSignaly": [],
     "zdroje": [
       {
-        "nazev": "Vlastní monitoring — archiv 5. 9. 2026",
-        "url": "",
-        "typ": "analysis",
-        "publikovano": "2026-09-05T00:00:00Z",
+        "nazev": "TIME — E.U. chief says alleged Russian drone plot had 'hallmarks of state-sponsored terrorism'",
+        "url": "https://time.com/article/2026/09/02/germany-russia-alleged-drone-attack-airport-european-retaliation/",
+        "typ": "media",
+        "publikovano": "2026-09-02T00:00:00Z",
         "primarni": false,
-        "jazyk": "cs"
+        "jazyk": "en"
+      },
+      {
+        "nazev": "The Jerusalem Post — Kallas blames Leipzig attack on state-sponsored Russian terrorism",
+        "url": "https://www.jpost.com/international/article-907341",
+        "typ": "media",
+        "publikovano": "2026-09-02T00:00:00Z",
+        "primarni": false,
+        "jazyk": "en"
       }
     ],
     "souvisejici": [
@@ -1071,7 +1153,8 @@
     "zapocitanoTyden": "2026-08-31",
     "aiZpracovano": true,
     "lidskyOvereno": true,
-    "archivniZaznam": true
+    "archivniZaznam": true,
+    "druh": "reakce"
   },
   {
     "id": "a19",
@@ -1101,12 +1184,20 @@
     "deeskalacniSignaly": [],
     "zdroje": [
       {
-        "nazev": "Vlastní monitoring — archiv 5. 9. 2026",
-        "url": "",
-        "typ": "analysis",
-        "publikovano": "2026-09-05T00:00:00Z",
+        "nazev": "Yle — Two suspects in Leipzig attack plot identified as trail also leads to Finland",
+        "url": "https://yle.fi/a/74-20244275",
+        "typ": "media",
+        "publikovano": "2026-09-02T00:00:00Z",
         "primarni": false,
-        "jazyk": "cs"
+        "jazyk": "en"
+      },
+      {
+        "nazev": "Defense News — German government blames Russia for Leipzig airport drone attack",
+        "url": "https://www.defensenews.com/global/europe/2026/09/02/german-government-blames-russia-for-leipzig-airport-drone-attack-with-explosives/",
+        "typ": "media",
+        "publikovano": "2026-09-02T00:00:00Z",
+        "primarni": false,
+        "jazyk": "en"
       }
     ],
     "souvisejici": [
@@ -1127,7 +1218,9 @@
     "zapocitanoTyden": "2026-08-31",
     "aiZpracovano": true,
     "lidskyOvereno": true,
-    "archivniZaznam": true
+    "archivniZaznam": true,
+    "druh": "aktualizace",
+    "navazujeNa": "leipzig-halle-utok"
   },
   {
     "id": "a20",
@@ -1156,12 +1249,20 @@
     "deeskalacniSignaly": [],
     "zdroje": [
       {
-        "nazev": "Vlastní monitoring — archiv 5. 9. 2026",
-        "url": "",
-        "typ": "analysis",
-        "publikovano": "2026-09-05T00:00:00Z",
+        "nazev": "Al Jazeera — What to know about Germany's drone attack accusations against Russia",
+        "url": "https://www.aljazeera.com/news/2026/9/2/what-to-know-about-germanys-drone-attack-accusations-against-russia",
+        "typ": "media",
+        "publikovano": "2026-09-02T00:00:00Z",
         "primarni": false,
-        "jazyk": "cs"
+        "jazyk": "en"
+      },
+      {
+        "nazev": "NPR — Germany blames Russia for last month's attempted drone attack at Leipzig airport",
+        "url": "https://www.npr.org/2026/09/02/g-s1-141502/germany-russia-attempted-drone-attack",
+        "typ": "media",
+        "publikovano": "2026-09-02T00:00:00Z",
+        "primarni": false,
+        "jazyk": "en"
       }
     ],
     "souvisejici": [],
@@ -1176,7 +1277,8 @@
     "zapocitanoTyden": "2026-08-31",
     "aiZpracovano": true,
     "lidskyOvereno": true,
-    "archivniZaznam": true
+    "archivniZaznam": true,
+    "druh": "reakce"
   },
   {
     "id": "a21",
@@ -1248,7 +1350,8 @@
     "novy": false,
     "zapocitanoTyden": "2026-08-31",
     "aiZpracovano": true,
-    "lidskyOvereno": true
+    "lidskyOvereno": true,
+    "druh": "reakce"
   },
   {
     "id": "a22",
@@ -1321,7 +1424,8 @@
     "novy": false,
     "zapocitanoTyden": "2026-08-31",
     "aiZpracovano": true,
-    "lidskyOvereno": true
+    "lidskyOvereno": true,
+    "druh": "reakce"
   },
   {
     "id": "a23",
@@ -1373,7 +1477,8 @@
     "zapocitanoTyden": "2026-08-31",
     "aiZpracovano": true,
     "lidskyOvereno": true,
-    "puvodce": "neznamy"
+    "puvodce": "neznamy",
+    "druh": "pripad"
   },
   {
     "id": "a24",
@@ -1427,7 +1532,8 @@
     "novy": false,
     "zapocitanoTyden": "2026-08-31",
     "aiZpracovano": true,
-    "lidskyOvereno": true
+    "lidskyOvereno": true,
+    "druh": "reakce"
   },
   {
     "id": "a25",
@@ -1443,28 +1549,37 @@
     "datumUdalosti": "2026-09-01T00:00:00Z",
     "datumZjisteni": "2026-09-04T00:00:00Z",
     "aktualizovano": "2026-09-04T00:00:00Z",
-    "zavaznost": "Y1",
+    "zavaznost": "G3",
     "jistota": "vysoka",
     "stav": "probiha",
     "atribuce": "nepotvrzena",
     "fakta": [
-      "Finské orgány identifikovaly nalezený dron jako Geoscan 701 ruské výroby a zahájily vyšetřování možného narušení územní integrity.",
-      "Nebyly hlášeny výbušniny; jde o platformu využitelnou pro mapování a průzkum."
+      "Dron pro mapování a průzkum byl 1. září 2026 nalezen na pobřeží u Porvoo; pohraniční stráž 4. září potvrdila, že jde o ruský Geoscan 701 bez výbušnin.",
+      "Ministr obrany Häkkänen uvedl, že ruské civilní řízení letového provozu Finsko předem informovalo o ztrátě mapovacího dronu.",
+      "Pohraniční stráž zahájila vyšetřování možného narušení územní celistvosti; použití dronu ruským státem nepotvrdila."
     ],
     "neznameho": [
-      "Kdo dron provozoval. Typ zařízení ani jeho ruská výroba nedokazují, že šlo o ruský stát."
+      "Kdo dron provozoval a proč skončil ve finských vodách."
     ],
-    "vyznam": "Ukazuje rozdíl mezi původem techniky a odpovědností za její použití. Tyhle dvě věci se běžně zaměňují.",
+    "vyznam": "Ukazuje rozdíl mezi původem techniky a odpovědností za její použití. Předchozí ruské varování o ztraceném civilním dronu nasvědčuje nehodě, ne operaci — vyšetřování ale běží.",
     "eskalacniSpousteče": [],
     "deeskalacniSignaly": [],
     "zdroje": [
       {
-        "nazev": "Vlastní monitoring — archiv 5. 9. 2026",
-        "url": "",
-        "typ": "analysis",
-        "publikovano": "2026-09-05T00:00:00Z",
+        "nazev": "Yle — Border Guard: surveying drone found along Finnish coast is Russian-made",
+        "url": "https://yle.fi/a/74-20244534",
+        "typ": "media",
+        "publikovano": "2026-09-04T00:00:00Z",
         "primarni": false,
-        "jazyk": "cs"
+        "jazyk": "en"
+      },
+      {
+        "nazev": "Helsinki Times — Häkkänen: Russia warned Finland of missing drone before Porvoo discovery",
+        "url": "https://www.helsinkitimes.fi/finland/finland-news/domestic/29231-haekkaenen-russia-warned-finland-of-missing-drone-before-porvoo-discovery.html",
+        "typ": "media",
+        "publikovano": "2026-09-04T00:00:00Z",
+        "primarni": false,
+        "jazyk": "en"
       }
     ],
     "souvisejici": [],
@@ -1485,7 +1600,8 @@
     "aiZpracovano": true,
     "lidskyOvereno": true,
     "archivniZaznam": true,
-    "puvodce": "neznamy"
+    "puvodce": "neznamy",
+    "druh": "pripad"
   },
   {
     "id": "a26",
@@ -1548,7 +1664,8 @@
     "novy": false,
     "zapocitanoTyden": "2026-08-31",
     "aiZpracovano": true,
-    "lidskyOvereno": true
+    "lidskyOvereno": true,
+    "druh": "opatreni"
   },
   {
     "id": "a27",
@@ -1620,7 +1737,8 @@
     "zapocitanoTyden": "2026-08-31",
     "aiZpracovano": true,
     "lidskyOvereno": true,
-    "puvodce": "domaci"
+    "puvodce": "domaci",
+    "druh": "pripad"
   },
   {
     "id": "a28",
@@ -1671,7 +1789,8 @@
     "novy": false,
     "zapocitanoTyden": "2026-08-31",
     "aiZpracovano": true,
-    "lidskyOvereno": true
+    "lidskyOvereno": true,
+    "druh": "opatreni"
   },
   {
     "eskalacniSpousteče": [],
@@ -1735,7 +1854,8 @@
         "primarni": false,
         "jazyk": "it"
       }
-    ]
+    ],
+    "druh": "reakce"
   },
   {
     "eskalacniSpousteče": [],
@@ -1784,7 +1904,8 @@
         "primarni": false,
         "jazyk": "en"
       }
-    ]
+    ],
+    "druh": "reakce"
   },
   {
     "id": "h01",
@@ -1818,9 +1939,9 @@
       {
         "nazev": "Rezoluce Valného shromáždění OSN 68/262 (plné znění)",
         "url": "https://www.securitycouncilreport.org/atf/cf/%7B65BFCF9B-6D27-4E9C-8CD3-CF6E4FF96FF9%7D/a_res_68_262.pdf",
-        "typ": "primary",
+        "typ": "analysis",
         "publikovano": "2014-04-01T00:00:00Z",
-        "primarni": true,
+        "primarni": false,
         "jazyk": "en"
       },
       {
@@ -1851,7 +1972,8 @@
     "lidskyOvereno": true,
     "archivniZaznam": true,
     "historicky": true,
-    "puvodce": "rusko"
+    "puvodce": "rusko",
+    "druh": "pripad"
   },
   {
     "id": "h02",
@@ -1919,7 +2041,8 @@
     "lidskyOvereno": true,
     "archivniZaznam": true,
     "historicky": true,
-    "puvodce": "rusko"
+    "puvodce": "rusko",
+    "druh": "pripad"
   },
   {
     "id": "h03",
@@ -1996,7 +2119,8 @@
     "lidskyOvereno": true,
     "archivniZaznam": true,
     "historicky": true,
-    "puvodce": "rusko"
+    "puvodce": "rusko",
+    "druh": "pripad"
   },
   {
     "id": "h04",
@@ -2062,7 +2186,8 @@
     "lidskyOvereno": true,
     "archivniZaznam": true,
     "historicky": true,
-    "puvodce": "rusko"
+    "puvodce": "rusko",
+    "druh": "pripad"
   },
   {
     "id": "h05",
@@ -2129,7 +2254,8 @@
     "lidskyOvereno": true,
     "archivniZaznam": true,
     "historicky": true,
-    "puvodce": "rusko"
+    "puvodce": "rusko",
+    "druh": "pripad"
   },
   {
     "id": "h06",
@@ -2197,7 +2323,8 @@
     "lidskyOvereno": true,
     "archivniZaznam": true,
     "historicky": true,
-    "puvodce": "rusko"
+    "puvodce": "rusko",
+    "druh": "pripad"
   },
   {
     "id": "h07",
@@ -2256,7 +2383,8 @@
     "aiZpracovano": true,
     "lidskyOvereno": true,
     "archivniZaznam": true,
-    "historicky": true
+    "historicky": true,
+    "druh": "reakce"
   },
   {
     "id": "h08",
@@ -2321,7 +2449,8 @@
     "lidskyOvereno": true,
     "archivniZaznam": true,
     "historicky": true,
-    "puvodce": "rusko"
+    "puvodce": "rusko",
+    "druh": "pripad"
   },
   {
     "id": "h09",
@@ -2386,7 +2515,8 @@
     "lidskyOvereno": true,
     "archivniZaznam": true,
     "historicky": true,
-    "puvodce": "rusko"
+    "puvodce": "rusko",
+    "druh": "pripad"
   },
   {
     "id": "h10",
@@ -2446,7 +2576,9 @@
     "aiZpracovano": true,
     "lidskyOvereno": true,
     "archivniZaznam": true,
-    "historicky": true
+    "historicky": true,
+    "druh": "aktualizace",
+    "navazujeNa": "vrbetice-2014"
   },
   {
     "id": "h11",
@@ -2511,7 +2643,8 @@
     "lidskyOvereno": true,
     "archivniZaznam": true,
     "historicky": true,
-    "puvodce": "rusko"
+    "puvodce": "rusko",
+    "druh": "pripad"
   },
   {
     "id": "h12",
@@ -2570,7 +2703,8 @@
     "aiZpracovano": true,
     "lidskyOvereno": true,
     "archivniZaznam": true,
-    "historicky": true
+    "historicky": true,
+    "druh": "opatreni"
   },
   {
     "id": "h13",
@@ -2634,7 +2768,8 @@
     "aiZpracovano": true,
     "lidskyOvereno": true,
     "archivniZaznam": true,
-    "historicky": true
+    "historicky": true,
+    "druh": "opatreni"
   },
   {
     "id": "h14",
@@ -2703,7 +2838,8 @@
     "lidskyOvereno": true,
     "archivniZaznam": true,
     "historicky": true,
-    "puvodce": "ukrajina"
+    "puvodce": "ukrajina",
+    "druh": "pripad"
   },
   {
     "id": "h15",
@@ -2768,7 +2904,8 @@
     "lidskyOvereno": true,
     "archivniZaznam": true,
     "historicky": true,
-    "puvodce": "ukrajina"
+    "puvodce": "ukrajina",
+    "druh": "pripad"
   },
   {
     "id": "h16",
@@ -2835,7 +2972,8 @@
     "lidskyOvereno": true,
     "archivniZaznam": true,
     "historicky": true,
-    "puvodce": "jiny-stat"
+    "puvodce": "jiny-stat",
+    "druh": "pripad"
   },
   {
     "id": "h17",
@@ -2898,7 +3036,8 @@
     "lidskyOvereno": true,
     "archivniZaznam": true,
     "historicky": true,
-    "puvodce": "rusko"
+    "puvodce": "rusko",
+    "druh": "pripad"
   },
   {
     "id": "h18",
@@ -2962,7 +3101,8 @@
     "lidskyOvereno": true,
     "archivniZaznam": true,
     "historicky": true,
-    "puvodce": "rusko"
+    "puvodce": "rusko",
+    "druh": "pripad"
   },
   {
     "id": "h19",
@@ -3026,7 +3166,8 @@
     "lidskyOvereno": true,
     "archivniZaznam": true,
     "historicky": true,
-    "puvodce": "rusko"
+    "puvodce": "rusko",
+    "druh": "pripad"
   },
   {
     "id": "h20",
@@ -3095,7 +3236,8 @@
     "lidskyOvereno": true,
     "archivniZaznam": true,
     "historicky": true,
-    "puvodce": "neznamy"
+    "puvodce": "neznamy",
+    "druh": "pripad"
   },
   {
     "id": "h21",
@@ -3160,7 +3302,8 @@
     "lidskyOvereno": true,
     "archivniZaznam": true,
     "historicky": true,
-    "puvodce": "rusko"
+    "puvodce": "rusko",
+    "druh": "pripad"
   },
   {
     "id": "h22",
@@ -3227,7 +3370,8 @@
     "lidskyOvereno": true,
     "archivniZaznam": true,
     "historicky": true,
-    "puvodce": "jiny-stat"
+    "puvodce": "jiny-stat",
+    "druh": "pripad"
   },
   {
     "id": "h23",
@@ -3294,7 +3438,8 @@
     "lidskyOvereno": true,
     "archivniZaznam": true,
     "historicky": true,
-    "puvodce": "neznamy"
+    "puvodce": "neznamy",
+    "druh": "pripad"
   },
   {
     "id": "h24",
@@ -3352,7 +3497,8 @@
     "aiZpracovano": true,
     "lidskyOvereno": true,
     "archivniZaznam": true,
-    "historicky": true
+    "historicky": true,
+    "druh": "opatreni"
   },
   {
     "id": "h25",
@@ -3412,7 +3558,8 @@
     "lidskyOvereno": true,
     "archivniZaznam": true,
     "historicky": true,
-    "puvodce": "jiny-stat"
+    "puvodce": "jiny-stat",
+    "druh": "pripad"
   },
   {
     "id": "h26",
@@ -3472,7 +3619,8 @@
     "lidskyOvereno": true,
     "archivniZaznam": true,
     "historicky": true,
-    "puvodce": "rusko"
+    "puvodce": "rusko",
+    "druh": "pripad"
   },
   {
     "id": "h27",
@@ -3530,7 +3678,8 @@
     "aiZpracovano": true,
     "lidskyOvereno": true,
     "archivniZaznam": true,
-    "historicky": true
+    "historicky": true,
+    "druh": "opatreni"
   },
   {
     "id": "h28",
@@ -3590,6 +3739,7 @@
     "lidskyOvereno": true,
     "archivniZaznam": true,
     "historicky": true,
-    "puvodce": "rusko"
+    "puvodce": "rusko",
+    "druh": "pripad"
   }
 ]

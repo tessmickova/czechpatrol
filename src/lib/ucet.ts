@@ -54,7 +54,7 @@ export interface DostupneKanaly {
 }
 
 export const VYCHOZI_UPOZORNENI: NastaveniUpozorneni = {
-  frekvence: "ihned",
+  frekvence: "tydne",
   minZavaznost: "vysoka",
   ticho: null,
   oblasti: [],

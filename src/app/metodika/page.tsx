@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { HlavickaStranky, Obsah } from "@/components/hlavicka";
 import { Karta, OdznakTypu, Sekce } from "@/components/zaklad";
-import { METODIKA_REVIDOVANA } from "@/config/web";
+import { METODIKA_REVIDOVANA, METODIKA_VERZE } from "@/config/web";
 import { datum } from "@/lib/format";
 import { PASMA, UROVNE } from "@/lib/skala";
 import type { Uroven } from "@/lib/typy";
@@ -91,10 +92,10 @@ export default function Metodika() {
         doplnek={
           <div className="flex flex-wrap items-center gap-2.5">
             <span className="stitek-tmavy rounded-[10px] border border-linka px-2 py-1 text-tlum">
-              Pracovní verze
+              Verze {METODIKA_VERZE}
             </span>
             <span className="text-[12px] text-tlum2">
-              Naposledy revidováno {datum(METODIKA_REVIDOVANA)}
+              Revidováno {datum(METODIKA_REVIDOVANA)} · verze 2 mění jen názvy úrovní (Nízká → Mírně zvýšená → Střední → Zvýšená → Vysoká → Vážná), prahy a hodnocení zůstávají · <Link href="/opravy/" className="odkaz">historie změn</Link>
             </span>
           </div>
         }

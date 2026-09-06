@@ -1,0 +1,53 @@
+# Datový model
+
+Jediný zdroj pravdy jsou soubory v `data/`. Web je statický export; každá změna dat je commit, takže historie dat = historie gitu.
+
+## Entity a jejich časy
+
+| Entita | Soubor | Co to je | Časy |
+|---|---|---|---|
+| **Záznam** (`Incident`) | `data/incidenty.json` | jedna položka na časové ose | `datumUdalosti` (kdy se to stalo), `datumZjisteni` (kdy vyšlo najevo), `aktualizovano` (kdy jsme záznam naposledy změnili) |
+| **Zdroj** (`Zdroj`) | uvnitř záznamu | odkaz, typ (`primary`, `wire`, `media`, `local`, `analysis`, `social`) | `publikovano` |
+| **Tvrzení** | `fakta[]`, `neznameho[]` | doložené skutečnosti vs. co zůstává nejasné | — (kryté zdroji záznamu) |
+| **Hodnocení projektu** | `data/stav.json`, `data/tydny.json`, `data/mesice.json` | analytická interpretace podle metodiky, stanovuje člověk | `aktualizovano` (kdy stanoveno) |
+| **Oficiální opatření** | `data/pravni-stav.json`, `data/nato.json`, `data/provoz.json` | úřední stav (platí / neplatí / neověřeno) | `overeno` (kdy sběrač naposledy ověřil proti zdroji) |
+| **Neprošlé** (`Nepotvrzene`) | `data/nepotvrzeno.json` | co ověřením neprošlo (`vyvraceno` / `nepotvrzeno`) | `datum` |
+| **Oprava** (`Oprava`) | `data/opravy.json` | veřejný zápis opravy | `datum` (zveřejnění opravy) |
+| **Snímek** (`Snimek`) | `data/historie.json` | stav webu v čase, zapisuje se jen při změně | `kdy` |
+
+### Druh záznamu (`druh`)
+
+- `pripad` — reálná událost (útok, průnik, operace). Má `puvodce`. **Jen případy se počítají.**
+- `aktualizace` — nové zjištění k existujícímu případu; `navazujeNa` = slug případu. Nepočítá se.
+- `opatreni` — oficiální krok státu nebo aliance. Bez původce.
+- `reakce` — prohlášení, varování, analýza. Bez původce.
+
+Chybí-li `druh`, platí: má původce → případ, jinak reakce (zpětná kompatibilita; nové záznamy mají `druh` vždy).
+
+### Dvě nezávislé osy
+
+- **Závažnost** (`zavaznost`, G1–R3) — jak vážný je dopad, pokud se věc potvrdí.
+- **Jistota** (`jistota`) — jak dobře je věc doložená. Bez odkazu na zdroj se zobrazuje nejvýš `stredni` (`jistotaZobrazena`).
+
+Pachatel je „potvrzený“ jen při `atribuce: oficialni` nebo `domaci`.
+
+### Čas
+
+- Vše ISO 8601. Datum bez známého času je zapsané jako `T00:00:00Z` a **zobrazuje se jen jako den** (`maCas` v `src/lib/cas.ts`), nikdy s vymyšleným 00:00.
+- Zobrazení v Europe/Prague včetně letního času (`datumPraha`, `datumCasPraha`).
+- Čerstvost ověření: ≤ 24 h čerstvé, ≤ 72 h starší, jinak zastaralé; `null` = neověřeno (nikdy nevypadá jako čerstvé).
+
+## Agregace
+
+Všechny počty jdou z `src/lib/agregace.ts`; komponenty nepočítají samy. Každá funkce říká, z jaké množiny počítá (`pocty(vse, "rok 2026")`). Kontrola konzistence (součet po zemích = celkem) běží v `nastroje/kontrola-dat.mjs` a v testech `testy/agregace.test.ts`.
+
+## Verzování metodiky
+
+`METODIKA_VERZE` a `METODIKA_REVIDOVANA` v `src/config/web.ts`. Změna verze se zapisuje do `data/opravy.json` s `druh: "metodika"`. Verze 2 (2026‑09‑06) mění jen názvy úrovní; prahy a stará hodnocení zůstávají, starší texty se převádějí `src/lib/archiv-text.ts`.
+
+## Redakční tok
+
+1. Sběrač (`sber/`) běží každou hodinu, ověřuje oficiální opatření a ukládá kandidáty. **Nic nezveřejňuje.**
+2. Člověk doplní záznam do `data/incidenty.json` se zdroji a nastaví `lidskyOvereno: true`. Bez toho se záznam nezobrazí.
+3. `npm run kontrola:data` musí projít bez chyby (běží i v CI a před nasazením).
+4. Oprava zveřejněného údaje = položka v `data/opravy.json` + položka v `historie[]` záznamu.

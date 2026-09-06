@@ -14,7 +14,7 @@ export function HlavickaStranky({
   return (
     <div className="noc relative overflow-hidden">
       <div aria-hidden className="pointer-events-none absolute inset-0 -z-10 overflow-hidden">
-        <div data-vrstva="0.05" className="vrstva vzor-mrizka absolute inset-x-0 -inset-y-[60%]" />
+        <div className="vrstva vzor-mrizka absolute inset-x-0 -inset-y-[60%]" />
       </div>
       <div className="mx-auto max-w-[1180px] px-5 py-12 sm:px-8 sm:py-16">
         <div className="mb-5 inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-3 py-1.5">

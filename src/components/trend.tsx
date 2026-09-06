@@ -29,7 +29,7 @@ export function Vykricniky({ n }: { n: number }) {
   const k = n >= 20 ? 3 : n >= 10 ? 2 : n >= 5 ? 1 : 0;
   if (!k) return null;
   return (
-    <span aria-label={`${k === 3 ? "velmi vysoký" : k === 2 ? "vysoký" : "zvýšený"} počet signálů`} className="inline-flex items-center gap-[1px] text-[#ff5c6c]">
+    <span aria-label={`${k === 3 ? "velmi vysoký" : k === 2 ? "vysoký" : "zvýšený"} počet signálů`} className="inline-flex items-center gap-[1px] text-[#d95c5c]">
       {Array.from({ length: k }, (_, i) => <Ikona key={i} nazev="vykricnik" velikost={13} tah={2.6} />)}
     </span>
   );
@@ -58,7 +58,7 @@ function ZnackaTrendu({ nyni, drive }: { nyni: Uroven; drive?: Uroven }) {
   const r = UROVNE[nyni].poradi - UROVNE[drive].poradi;
   if (r === 0) return <span className="flex items-center gap-1 text-[12.5px] text-tlum"><Ikona nazev="minus" velikost={11} tah={2} /> stejně</span>;
   return (
-    <span className={`flex items-center gap-1 text-[12.5px] font-semibold ${r > 0 ? "text-[#ffa877]" : "text-[#8ff0c0]"}`}>
+    <span className={`flex items-center gap-1 text-[12.5px] font-semibold ${r > 0 ? "text-[#e69b6e]" : "text-[#8fd6ae]"}`}>
       <Ikona nazev={r > 0 ? "nahoru" : "dolu"} velikost={11} tah={2.2} /> {r > 0 ? "zhoršení" : "zlepšení"}
     </span>
   );
@@ -122,9 +122,9 @@ export function TabulkaTydnu({ tydny }: { tydny: TydenniHodnoceni[] }) {
 /* ---------------- graf po týdnech od začátku roku ---------------- */
 
 const RADY: { klic: "celkova" | "hybridni" | "primyStret"; nazev: string; barva: string; silna: boolean }[] = [
-  { klic: "celkova", nazev: "Celková úroveň", barva: "#e8f1ff", silna: true },
-  { klic: "hybridni", nazev: "Hybridní tlak", barva: "#ff8a4c", silna: false },
-  { klic: "primyStret", nazev: "Přímý střet", barva: "#4fdd9a", silna: false },
+  { klic: "celkova", nazev: "Celková úroveň", barva: "#f2f5f8", silna: true },
+  { klic: "hybridni", nazev: "Hybridní tlak", barva: "#d9773f", silna: false },
+  { klic: "primyStret", nazev: "Přímý střet", barva: "#5cbf8a", silna: false },
 ];
 
 function tydenniSloty(tydny: TydenniHodnoceni[]) {
@@ -183,25 +183,25 @@ export function GrafTrendu({ tydny }: { tydny: TydenniHodnoceni[] }) {
         <svg viewBox={`0 0 ${SIRKA} ${NAHORE + V + DOLE}`} role="img" aria-label="Vývoj hodnocení po týdnech od začátku roku" className="h-[230px] w-full min-w-[560px]">
           <defs>
             <pattern id="srafy-bez-dat" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(-45)">
-              <line x1="0" y1="0" x2="0" y2="8" stroke="#64789a" strokeWidth="1" strokeOpacity="0.35" />
+              <line x1="0" y1="0" x2="0" y2="8" stroke="#7f8ea0" strokeWidth="1" strokeOpacity="0.35" />
             </pattern>
             <linearGradient id="plocha-celkem" x1="0" y1="0" x2="0" y2="1">
-              <stop offset="0%" stopColor="#e8f1ff" stopOpacity="0.14" />
-              <stop offset="100%" stopColor="#e8f1ff" stopOpacity="0" />
+              <stop offset="0%" stopColor="#f2f5f8" stopOpacity="0.14" />
+              <stop offset="100%" stopColor="#f2f5f8" stopOpacity="0" />
             </linearGradient>
           </defs>
           {prvniSData > 0 && (
             <>
               <rect x={x(0)} y={NAHORE} width={x(prvniSData) - x(0)} height={V} fill="url(#srafy-bez-dat)" />
-              <text x={(x(0) + x(prvniSData)) / 2} y={NAHORE + V / 2} textAnchor="middle" fontSize="13" fontFamily="var(--font-mono)" fill="#64789a">bez doložených dat</text>
+              <text x={(x(0) + x(prvniSData)) / 2} y={NAHORE + V / 2} textAnchor="middle" fontSize="13" fontFamily="var(--font-mono)" fill="#7f8ea0">bez doložených dat</text>
             </>
           )}
           {popisky.map((p) => {
             const yy = NAHORE + V - ((p.poradi - 1) / 12) * V;
             return (
               <g key={p.poradi}>
-                <line x1={LEVO - 8} x2={SIRKA - PRAVO} y1={yy} y2={yy} stroke="#12203a" strokeWidth="1" />
-                <text x={LEVO - 14} y={yy + 4.5} textAnchor="end" fontSize="13" fontFamily="var(--font-mono)" fill="#9db1cc">{p.text}</text>
+                <line x1={LEVO - 8} x2={SIRKA - PRAVO} y1={yy} y2={yy} stroke="#202a36" strokeWidth="1" />
+                <text x={LEVO - 14} y={yy + 4.5} textAnchor="end" fontSize="13" fontFamily="var(--font-mono)" fill="#acb7c5">{p.text}</text>
               </g>
             );
           })}
@@ -214,7 +214,7 @@ export function GrafTrendu({ tydny }: { tydny: TydenniHodnoceni[] }) {
             return (
               <g key={s.od}>
                 {prvniVMesici && (
-                  <text x={x(i)} y={NAHORE + V + 20} textAnchor="middle" fontSize="12" fontFamily="var(--font-mono)" fill="#9db1cc">{mesice[d.getUTCMonth()]}</text>
+                  <text x={x(i)} y={NAHORE + V + 20} textAnchor="middle" fontSize="12" fontFamily="var(--font-mono)" fill="#acb7c5">{mesice[d.getUTCMonth()]}</text>
                 )}
                 {s.tyden && (
                   <>
@@ -222,7 +222,7 @@ export function GrafTrendu({ tydny }: { tydny: TydenniHodnoceni[] }) {
                       <title>{`${rozsah(s.tyden.zacatek, s.tyden.konec)} — celkem: ${UROVNE[s.tyden.celkova].nazev}, hybridní: ${UROVNE[s.tyden.hybridni].nazev}, přímý střet: ${UROVNE[s.tyden.primyStret].nazev}, signálů: ${celkem(s.tyden)}`}</title>
                     </rect>
                     {RADY.map((r) => (
-                      <circle key={r.klic} cx={x(i)} cy={y(s.tyden![r.klic])} r={r.silna ? 3 : 2.2} fill="#060a13" stroke={r.barva} strokeWidth={r.silna ? 2 : 1.4} />
+                      <circle key={r.klic} cx={x(i)} cy={y(s.tyden![r.klic])} r={r.silna ? 3 : 2.2} fill="#10141b" stroke={r.barva} strokeWidth={r.silna ? 2 : 1.4} />
                     ))}
                   </>
                 )}
@@ -249,14 +249,14 @@ export function GrafMesicu({ mesice }: { mesice: { mesic: string; uroven: Uroven
         <svg viewBox={`0 0 ${SIRKA} ${NAHORE + V + DOLE}`} role="img" aria-label="Měsíční úroveň od roku 2013" className="h-[124px] w-full min-w-[560px]">
           <defs>
             <pattern id="srafy-mesice" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(-45)">
-              <line x1="0" y1="0" x2="0" y2="6" stroke="#64789a" strokeWidth="1" strokeOpacity="0.3" />
+              <line x1="0" y1="0" x2="0" y2="6" stroke="#7f8ea0" strokeWidth="1" strokeOpacity="0.3" />
             </pattern>
           </defs>
           {mesice.map((m, i) => {
             const [y, mm] = m.mesic.split("-").map(Number);
             const x0 = LEVO + i * S;
             const tecka = m.zaznamu > 0 && (
-              <circle cx={x0 + S / 2} cy={NAHORE + V - 6 - Math.min(4, m.zaznamu) * 6} r={Math.min(4.5, 2 + m.zaznamu * 0.6)} fill={m.nejvyssi ? tokeny(m.nejvyssi).plna : "#9db1cc"} stroke="#060a13" strokeWidth="1">
+              <circle cx={x0 + S / 2} cy={NAHORE + V - 6 - Math.min(4, m.zaznamu) * 6} r={Math.min(4.5, 2 + m.zaznamu * 0.6)} fill={m.nejvyssi ? tokeny(m.nejvyssi).plna : "#acb7c5"} stroke="#10141b" strokeWidth="1">
                 <title>{`${mm}/${y}: ${m.zaznamu} ${m.zaznamu === 1 ? "záznam" : m.zaznamu < 5 ? "záznamy" : "záznamů"}${m.nejvyssi ? `, nejvyšší ${UROVNE[m.nejvyssi].nazev}` : ""}`}</title>
               </circle>
             );
@@ -265,7 +265,7 @@ export function GrafMesicu({ mesice }: { mesice: { mesic: string; uroven: Uroven
                 <g key={m.mesic}>
                   <rect x={x0} y={NAHORE} width={S} height={V} fill="url(#srafy-mesice)" />
                   {tecka}
-                  {mm === 1 && (y % 2 === 0) && <text x={x0 + 2} y={NAHORE + V + 18} fontSize="11" fontFamily="var(--font-mono)" fill="#64789a">{y}</text>}
+                  {mm === 1 && (y % 2 === 0) && <text x={x0 + 2} y={NAHORE + V + 18} fontSize="11" fontFamily="var(--font-mono)" fill="#7f8ea0">{y}</text>}
                 </g>
               );
             }
@@ -276,7 +276,7 @@ export function GrafMesicu({ mesice }: { mesice: { mesic: string; uroven: Uroven
                   <title>{`${mm}/${y}: ${UROVNE[m.uroven].nazev}`}</title>
                 </rect>
                 {tecka}
-                {mm === 1 && (y % 2 === 0) && <text x={x0 + 2} y={NAHORE + V + 18} fontSize="11" fontFamily="var(--font-mono)" fill="#9db1cc">{y}</text>}
+                {mm === 1 && (y % 2 === 0) && <text x={x0 + 2} y={NAHORE + V + 18} fontSize="11" fontFamily="var(--font-mono)" fill="#acb7c5">{y}</text>}
               </g>
             );
           })}

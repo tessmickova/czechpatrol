@@ -103,6 +103,18 @@ které adresy skutečně odpovídají, a teprve pak se příznak přepne.
 > nemělo přístup k českým úředním webům. První běh v GitHub Actions vypíše,
 > které je potřeba opravit.
 
+## Stránky
+
+Hlavní navigace má čtyři cíle: **Přehled** (`/`), **Události** (`/udalosti/`,
+filtry v adrese `?zeme=&tema=&obdobi=&overeni=`, detail v postranním panelu
+`?u=slug` nebo na `/incident/<slug>/`), **Vývoj** (`/vyvoj/`) a **Můj přehled**
+(`/muj-prehled/`, předvolby jen v zařízení). Vedlejší: metodika, zdroje,
+opravy (`/opravy/`, z `data/opravy.json`), o projektu, podpořit, odběr.
+Staré adresy (`/dnes`, `/trend`, `/osa`, `/cr`, `/nato`, `/tlak`, `/watchlist`,
+`/nepotvrzeno`, `/komunita`) přesměrovává `public/_redirects`.
+
+Podrobněji: `docs/DATOVY-MODEL.md`, `docs/PROVOZ.md`, `docs/DALSI-ETAPA.md`.
+
 ## Struktura
 
 ```
@@ -115,7 +127,8 @@ src/components/  znovupoužitelné komponenty
 src/app/         stránky
 src/spa/         vstupní bod klikacího náhledu a náhrady za next/*
 src/config/      název webu, odkaz na podporu, režim dat
-nastroje/        pomocné skripty pro náhledy
+nastroje/        pomocné skripty: náhled, snímky, kontrola dat, náklady
+docs/            datový model, provoz, další etapa, právní kontrola
 ```
 
 Datová vrstva importuje JSON staticky, ne přes `fs` — díky tomu běží stejný
@@ -130,7 +143,8 @@ Vše na jednom místě v `src/config/web.ts`:
 
 - `WEB.nazev`, `WEB.podtitul`, `WEB.url` — identita webu a doména
 - `BUY_ME_A_COFFEE_URL` — dokud je prázdné, tlačítko se nikde nezobrazí
-- `METODIKA_REVIDOVANA` — datum poslední revize metodiky
+- `METODIKA_VERZE`, `METODIKA_REVIDOVANA` — verze a datum revize metodiky
+- `NEXT_PUBLIC_MERENI_URL` (env) — bez ní je měření vypnuté; slovník událostí je v `src/lib/mereni.ts`
 
 ## Nasazení
 

@@ -10,11 +10,11 @@ const BARVY: Record<Znacka, string> = {
   whatsapp: "#25d366",
   signal: "#3a76f0",
   bluesky: "#0085ff",
-  email: "#8ff4ff",
+  email: "#a3d3e0",
 };
 
 export function ZnackaKanalu({ znacka, velikost = 28, tlumena = false }: { znacka: Znacka; velikost?: number; tlumena?: boolean }) {
-  const b = tlumena ? "#64789a" : BARVY[znacka];
+  const b = tlumena ? "#7f8ea0" : BARVY[znacka];
   const spolecne = { width: velikost, height: velikost, viewBox: "0 0 24 24", "aria-hidden": true as const };
   switch (znacka) {
     case "telegram":

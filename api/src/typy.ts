@@ -30,7 +30,7 @@ export interface Nastaveni {
 }
 
 export const VYCHOZI_NASTAVENI: Nastaveni = {
-  frekvence: "ihned",
+  frekvence: "tydne",
   minZavaznost: "vysoka",
   ticho: null,
   oblasti: [],

@@ -18,8 +18,9 @@ export const WEB = {
  */
 export const BUY_ME_A_COFFEE_URL = "";
 
-/** Datum poslední revize metodiky. */
-export const METODIKA_REVIDOVANA = "2026-09-04";
+/** Verze a datum poslední revize metodiky. Změna verze = zápis do /opravy/. */
+export const METODIKA_VERZE = "2";
+export const METODIKA_REVIDOVANA = "2026-09-06";
 
 /**
  * Odběrové kanály.

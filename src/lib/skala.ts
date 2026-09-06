@@ -18,8 +18,8 @@ export interface DefiniceUrovne {
 }
 
 /*
-  Názvosloví je jedna řada: Nízká → Menší střední → Střední → Větší střední
-  → Vysoká → Vážná. Barva se z názvu odvozuje, nikdy naopak — „oranžová“
+  Názvosloví je jedna řada: Nízká → Mírně zvýšená → Střední → Zvýšená
+  → Vysoká → Vážná (metodika v2, jen názvy; hodnocení se nemění). Barva se z názvu odvozuje, nikdy naopak — „oranžová“
   není úroveň, jen její barva.
 */
 export const UROVNE: Record<Uroven, DefiniceUrovne> = {
@@ -45,7 +45,7 @@ export const UROVNE: Record<Uroven, DefiniceUrovne> = {
     posunVys: "Incidenty ve více zemích během krátké doby.",
   },
   Y1: {
-    kod: "Y1", pasmo: "zluta", nazev: "Menší střední", poradi: 4,
+    kod: "Y1", pasmo: "zluta", nazev: "Mírně zvýšená", poradi: 4,
     znamena: "Zvýšená pozornost. Incidenty tvoří rozpoznatelný vzor.",
     zpusobuje: "Několik incidentů proti infrastruktuře v různých zemích.",
     neznamena: "Neznamená ohrožení běžného života v ČR ani vojenské riziko.",
@@ -59,15 +59,15 @@ export const UROVNE: Record<Uroven, DefiniceUrovne> = {
     posunVys: "Oficiální atribuce státu nebo zásah do kritické infrastruktury.",
   },
   Y3: {
-    kod: "Y3", pasmo: "zluta", nazev: "Větší střední", poradi: 6,
+    kod: "Y3", pasmo: "zluta", nazev: "Zvýšená", poradi: 6,
     znamena: "Hybridní tlak je zřetelný a dlouhodobý.",
     zpusobuje: "Vzorec incidentů napříč Evropou, opakované vyšetřovací závěry.",
     neznamena: "Neznamená mobilizaci, omezení vycestování ani vojenský konflikt.",
     posunVys: "Oficiální atribuce státního řízení série útoků.",
   },
   YO: {
-    kod: "YO", pasmo: "prechod", nazev: "Větší střední", poradi: 7,
-    znamena: "Na horní hranici žluté. Další podobná událost pásmo posune.",
+    kod: "YO", pasmo: "prechod", nazev: "Zvýšená", poradi: 7,
+    znamena: "Na horní hranici střední úrovně. Další podobná událost by byla důvodem k přehodnocení — ne automatickým posunem.",
     zpusobuje: "Kumulace hybridních incidentů spolu s institucionální reakcí států.",
     neznamena: "Neznamená bezprostřední vojenské riziko ani mimořádná opatření v ČR.",
     posunVys: "Oficiální atribuce, škoda na kritické infrastruktuře, svolání čl. 4.",
@@ -131,7 +131,7 @@ export const PASMA: Record<Pasmo, {
   pozadi: string;
   pruh: string;
   plna: string;
-  /* na tmavém podkladu */
+  /* na tmavém podkladu — dnes totéž, ponecháno kvůli rozhraní */
   teckaNoc: string;
   textNoc: string;
   ramecekNoc: string;
@@ -140,38 +140,38 @@ export const PASMA: Record<Pasmo, {
 }> = {
   zelena: {
     nazev: "Nízká",
-    tecka: "bg-[#4fdd9a]", text: "text-[#8ff0c0]", ramecek: "border-[#4fdd9a]/35",
-    pozadi: "bg-[#4fdd9a]/10", pruh: "bg-[#4fdd9a]", plna: "#4fdd9a",
-    teckaNoc: "bg-[#4fdd9a]", textNoc: "text-[#8ff0c0]", ramecekNoc: "border-[#4fdd9a]/35",
-    pozadiNoc: "bg-[#4fdd9a]/10", plnaNoc: "#4fdd9a",
+    tecka: "bg-[#5cbf8a]", text: "text-[#8fd6ae]", ramecek: "border-[#5cbf8a]/35",
+    pozadi: "bg-[#5cbf8a]/10", pruh: "bg-[#5cbf8a]", plna: "#5cbf8a",
+    teckaNoc: "bg-[#5cbf8a]", textNoc: "text-[#8fd6ae]", ramecekNoc: "border-[#5cbf8a]/35",
+    pozadiNoc: "bg-[#5cbf8a]/10", plnaNoc: "#5cbf8a",
   },
   zluta: {
     nazev: "Střední",
-    tecka: "bg-[#ffd166]", text: "text-[#ffe08a]", ramecek: "border-[#ffd166]/35",
-    pozadi: "bg-[#ffd166]/10", pruh: "bg-[#ffd166]", plna: "#ffd166",
-    teckaNoc: "bg-[#ffd166]", textNoc: "text-[#ffe08a]", ramecekNoc: "border-[#ffd166]/35",
-    pozadiNoc: "bg-[#ffd166]/10", plnaNoc: "#ffd166",
+    tecka: "bg-[#d9b24c]", text: "text-[#e6c977]", ramecek: "border-[#d9b24c]/35",
+    pozadi: "bg-[#d9b24c]/10", pruh: "bg-[#d9b24c]", plna: "#d9b24c",
+    teckaNoc: "bg-[#d9b24c]", textNoc: "text-[#e6c977]", ramecekNoc: "border-[#d9b24c]/35",
+    pozadiNoc: "bg-[#d9b24c]/10", plnaNoc: "#d9b24c",
   },
   prechod: {
-    nazev: "Větší střední",
-    tecka: "bg-[#ffab4d]", text: "text-[#ffc07a]", ramecek: "border-[#ffab4d]/35",
-    pozadi: "bg-[#ffab4d]/10", pruh: "bg-[#ffab4d]", plna: "#ffab4d",
-    teckaNoc: "bg-[#ffab4d]", textNoc: "text-[#ffc07a]", ramecekNoc: "border-[#ffab4d]/35",
-    pozadiNoc: "bg-[#ffab4d]/10", plnaNoc: "#ffab4d",
+    nazev: "Zvýšená",
+    tecka: "bg-[#d99a4c]", text: "text-[#e6b877]", ramecek: "border-[#d99a4c]/35",
+    pozadi: "bg-[#d99a4c]/10", pruh: "bg-[#d99a4c]", plna: "#d99a4c",
+    teckaNoc: "bg-[#d99a4c]", textNoc: "text-[#e6b877]", ramecekNoc: "border-[#d99a4c]/35",
+    pozadiNoc: "bg-[#d99a4c]/10", plnaNoc: "#d99a4c",
   },
   oranzova: {
     nazev: "Vysoká",
-    tecka: "bg-[#ff8a4c]", text: "text-[#ffa877]", ramecek: "border-[#ff8a4c]/35",
-    pozadi: "bg-[#ff8a4c]/10", pruh: "bg-[#ff8a4c]", plna: "#ff8a4c",
-    teckaNoc: "bg-[#ff8a4c]", textNoc: "text-[#ffa877]", ramecekNoc: "border-[#ff8a4c]/35",
-    pozadiNoc: "bg-[#ff8a4c]/10", plnaNoc: "#ff8a4c",
+    tecka: "bg-[#d9773f]", text: "text-[#e69b6e]", ramecek: "border-[#d9773f]/35",
+    pozadi: "bg-[#d9773f]/10", pruh: "bg-[#d9773f]", plna: "#d9773f",
+    teckaNoc: "bg-[#d9773f]", textNoc: "text-[#e69b6e]", ramecekNoc: "border-[#d9773f]/35",
+    pozadiNoc: "bg-[#d9773f]/10", plnaNoc: "#d9773f",
   },
   cervena: {
     nazev: "Vážná",
-    tecka: "bg-[#ff5c6c]", text: "text-[#ff8c98]", ramecek: "border-[#ff5c6c]/35",
-    pozadi: "bg-[#ff5c6c]/10", pruh: "bg-[#ff5c6c]", plna: "#ff5c6c",
-    teckaNoc: "bg-[#ff5c6c]", textNoc: "text-[#ff8c98]", ramecekNoc: "border-[#ff5c6c]/35",
-    pozadiNoc: "bg-[#ff5c6c]/10", plnaNoc: "#ff5c6c",
+    tecka: "bg-[#d95c5c]", text: "text-[#e68a8a]", ramecek: "border-[#d95c5c]/35",
+    pozadi: "bg-[#d95c5c]/10", pruh: "bg-[#d95c5c]", plna: "#d95c5c",
+    teckaNoc: "bg-[#d95c5c]", textNoc: "text-[#e68a8a]", ramecekNoc: "border-[#d95c5c]/35",
+    pozadiNoc: "bg-[#d95c5c]/10", plnaNoc: "#d95c5c",
   },
 };
 

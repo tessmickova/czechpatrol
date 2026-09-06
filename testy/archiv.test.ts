@@ -71,8 +71,8 @@ describe("lidský popis změn", () => {
     expect(lidskaZmena("NATO — clanek-4: neověřeno → NE")).toBe("NATO čl. 4 (konzultace): neověřeno → NE");
   });
   it("věty, které už jsou lidské, nechá být", () => {
-    expect(lidskaZmena("celková úroveň: Střední → Vyšší")).toBe("Celková úroveň: Střední → Větší střední");
-    expect(lidskaZmena("celková úroveň: Střední → Téměř oranžová")).toBe("Celková úroveň: Střední → Větší střední");
+    expect(lidskaZmena("celková úroveň: Střední → Vyšší")).toBe("Celková úroveň: Střední → Zvýšená");
+    expect(lidskaZmena("celková úroveň: Střední → Téměř oranžová")).toBe("Celková úroveň: Střední → Zvýšená");
     expect(lidskaZmena("začátek archivu")).toBe("Začátek archivu");
   });
   it("v archivu nezůstává žádný surový klíč", () => {

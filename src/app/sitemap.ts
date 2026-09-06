@@ -5,12 +5,12 @@ import { incidenty } from "@/lib/data";
 export const dynamic = "force-static";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const stranky = ["", "/dnes", "/udalosti", "/osa", "/trend", "/cr", "/nato", "/metodika", "/zdroje", "/odber", "/tlak", "/watchlist", "/komunita", "/nepotvrzeno", "/izs", "/soukromi", "/podminky"];
+  const stranky = ["", "/udalosti", "/vyvoj", "/muj-prehled", "/metodika", "/zdroje", "/opravy", "/o-projektu", "/podporit", "/odber", "/izs", "/soukromi", "/podminky"];
   return [
     ...stranky.map((s) => ({
       url: `${WEB.url}${s}/`,
       lastModified: new Date(),
-      changeFrequency: (s === "" || s === "/dnes" ? "hourly" : "daily") as "hourly" | "daily",
+      changeFrequency: (s === "" ? "hourly" : "daily") as "hourly" | "daily",
       priority: s === "" ? 1 : 0.7,
     })),
     ...incidenty().filter((i) => i.slug !== "nenalezeno").map((i) => ({

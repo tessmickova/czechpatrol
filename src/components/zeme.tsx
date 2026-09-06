@@ -59,7 +59,7 @@ export function DopadPoZemich() {
                     <span className="stitek">nejvyšší závažnost</span>
                   </>
                 ) : (
-                  <span className="stitek !text-[#8ff0c0]">žádný zveřejněný záznam</span>
+                  <span className="stitek !text-[#8fd6ae]">žádný zveřejněný záznam</span>
                 )}
               </span>
             </div>
@@ -67,13 +67,13 @@ export function DopadPoZemich() {
               <>
                 {/* Z čeho se počet skládá: činy s potvrzeným pachatelem, činy bez něj, prohlášení a reakce. */}
                 <div aria-hidden className="mt-3 flex h-[6px] overflow-hidden rounded-full bg-linka2">
-                  {z.potvrzenych > 0 && <span className="bg-[#ff8a4c]" style={{ width: `${(z.potvrzenych / z.pocet) * 100}%` }} />}
-                  {z.cinu - z.potvrzenych > 0 && <span className="bg-[#ffd166]" style={{ width: `${((z.cinu - z.potvrzenych) / z.pocet) * 100}%` }} />}
+                  {z.potvrzenych > 0 && <span className="bg-[#d9773f]" style={{ width: `${(z.potvrzenych / z.pocet) * 100}%` }} />}
+                  {z.cinu - z.potvrzenych > 0 && <span className="bg-[#d9b24c]" style={{ width: `${((z.cinu - z.potvrzenych) / z.pocet) * 100}%` }} />}
                   {z.prohlaseni > 0 && <span className="bg-tlum2" style={{ width: `${(z.prohlaseni / z.pocet) * 100}%` }} />}
                 </div>
                 <ul className="mt-2 space-y-1 text-[12.5px] text-tlum">
-                  <li className="flex items-center gap-2"><span aria-hidden className="h-[6px] w-[6px] rounded-[2px] bg-[#ff8a4c]" /><span className="cislice text-inkoust">{z.potvrzenych}</span> {sklon(z.potvrzenych, "čin", "činy", "činů")} s potvrzeným pachatelem</li>
-                  <li className="flex items-center gap-2"><span aria-hidden className="h-[6px] w-[6px] rounded-[2px] bg-[#ffd166]" /><span className="cislice text-inkoust">{z.cinu - z.potvrzenych}</span> {sklon(z.cinu - z.potvrzenych, "čin", "činy", "činů")} bez potvrzení</li>
+                  <li className="flex items-center gap-2"><span aria-hidden className="h-[6px] w-[6px] rounded-[2px] bg-[#d9773f]" /><span className="cislice text-inkoust">{z.potvrzenych}</span> {sklon(z.potvrzenych, "čin", "činy", "činů")} s potvrzeným pachatelem</li>
+                  <li className="flex items-center gap-2"><span aria-hidden className="h-[6px] w-[6px] rounded-[2px] bg-[#d9b24c]" /><span className="cislice text-inkoust">{z.cinu - z.potvrzenych}</span> {sklon(z.cinu - z.potvrzenych, "čin", "činy", "činů")} bez potvrzení</li>
                   <li className="flex items-center gap-2"><span aria-hidden className="h-[6px] w-[6px] rounded-[2px] bg-tlum2" /><span className="cislice text-inkoust">{z.prohlaseni}</span> {sklon(z.prohlaseni, "prohlášení nebo reakce", "prohlášení nebo reakce", "prohlášení a reakcí")}</li>
                 </ul>
                 <div className="mt-2.5 flex flex-wrap gap-1">

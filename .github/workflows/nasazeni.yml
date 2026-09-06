@@ -37,7 +37,9 @@ jobs:
 
       - run: npm ci
 
-      # Do produkce nepustíme build, který neprošel testy.
+      # Do produkce nepustíme data s rozporem ani build, který neprošel testy.
+      - name: Kontrola dat
+        run: npm run kontrola:data
       - name: Testy
         run: npm test
 

@@ -6,6 +6,9 @@ import type { Env, NovaZprava } from "./typy";
 /**
  * Uloží zprávu a naplánuje ji každému čtenáři s kanálem podle jeho nastavení.
  * Vrací, kolika lidem se zpráva vůbec týká.
+ *
+ * Idempotentní: zpráva má pevné id a fronta má jedinečný index
+ * (zprava_id, ucet_id, druh), takže opakované volání nic nezdvojí.
  */
 export async function rozesli(env: Env, z: NovaZprava, id = crypto.randomUUID()): Promise<number> {
   const nyni = new Date();
@@ -24,7 +27,7 @@ export async function rozesli(env: Env, z: NovaZprava, id = crypto.randomUUID())
     if (!kdy) continue;
     zasazeni.add(r.id);
     davka.push(
-      env.DB.prepare("INSERT INTO fronta (zprava_id, ucet_id, druh, naplanovano) VALUES (?, ?, ?, ?)").bind(id, r.id, r.druh, kdy.toISOString()),
+      env.DB.prepare("INSERT OR IGNORE INTO fronta (zprava_id, ucet_id, druh, naplanovano) VALUES (?, ?, ?, ?)").bind(id, r.id, r.druh, kdy.toISOString()),
     );
   }
   for (let i = 0; i < davka.length; i += 50) await env.DB.batch(davka.slice(i, i + 50));

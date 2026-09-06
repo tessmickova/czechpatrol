@@ -6,9 +6,26 @@
     "kodZeme": "DE",
     "datum": "2026-09-04T00:00:00Z",
     "stav": "vyvraceno",
-    "puvodne": "Rozsáhlý policejní zásah u rozvodny vzbudil podezření, protože přišel uprostřed série incidentů proti energetické infrastruktuře.",
-    "overeni": "Kontrola nenašla sabotážní zařízení, žádnou škodu ani stopy vloupání. Policie útok i sabotáž vyloučila. Záznam se nepočítá mezi sabotážní incidenty.",
-    "zdroje": []
+    "puvodne": "Rozsáhlý policejní zásah u rozvodny ve 3 hodiny ráno 4. září 2026 přišel uprostřed série incidentů proti energetické infrastruktuře (Braniborsko, Bergheim, Dormagen).",
+    "overeni": "Zásah spustila otevřená rozvodná skříň, kterou našla hlídka. Kontrola areálu s policejním vrtulníkem, hasiči a psy nenašla škodu ani cizí osoby. Policie sabotáž vyloučila; záznam se nepočítá mezi incidenty.",
+    "zdroje": [
+      {
+        "nazev": "buten un binnen — Offener Schaltschrank löste Einsatz an Umspannwerk in Ganderkesee aus",
+        "url": "https://www.butenunbinnen.de/nachrichten/ganderkesee-oldenburg-umspannwerk-polzei-einsatz-100.html",
+        "typ": "media",
+        "publikovano": "2026-09-04T00:00:00Z",
+        "primarni": false,
+        "jazyk": "de"
+      },
+      {
+        "nazev": "Delmenews — Polizei umstellt Umspannwerk in Ganderkesee",
+        "url": "https://delmenews.de/polizei-umstellt-umspannwerk-in-ganderkesee/",
+        "typ": "local",
+        "publikovano": "2026-09-04T00:00:00Z",
+        "primarni": false,
+        "jazyk": "de"
+      }
+    ]
   },
   {
     "id": "n2",

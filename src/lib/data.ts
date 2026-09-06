@@ -1,6 +1,6 @@
 import { JE_UKAZKA } from "@/config/web";
 import type {
-  Archiv, CelkovyStav, HybridniTlak, Incident, Kategorie, NatoPolozka, PravniStav,
+  Archiv, CelkovyStav, HybridniTlak, Incident, Kategorie, NatoPolozka, Oprava, PravniStav,
   Nepotvrzene, Provoz, Puvodce, RuskoStav, TydenniHodnoceni, Uroven, Watchlist,
 } from "./typy";
 import { PORADI_KATEGORII } from "./kategorie";
@@ -18,6 +18,7 @@ import ostryWatchlist from "../../data/watchlist.json";
 import ostryArchiv from "../../data/historie.json";
 import ostreNepotvrzene from "../../data/nepotvrzeno.json";
 import mesiceData from "../../data/mesice.json";
+import ostreOpravy from "../../data/opravy.json";
 
 import ukazkoveIncidenty from "../../data/ukazka/incidenty.json";
 import ukazkovyStav from "../../data/ukazka/stav.json";
@@ -338,6 +339,16 @@ export function dnyBezZmeny(): { dnu: number; odZacatkuArchivu: boolean } | null
   // Pod jeden celý den nemá smysl o „dnech beze změny“ mluvit.
   if (dnu < 1) return null;
   return { dnu, odZacatkuArchivu: !zmena };
+}
+
+/** Veřejné opravy, nejnovější první. */
+export function opravy(): Oprava[] {
+  return jako<Oprava[]>(ostreOpravy).slice().sort((a, b) => b.datum.localeCompare(a.datum));
+}
+
+/** Opravy k jednomu záznamu. */
+export function opravyK(slug: string): Oprava[] {
+  return opravy().filter((o) => o.tykaSe === slug);
 }
 
 export function watchlist(): Watchlist {

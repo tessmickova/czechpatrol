@@ -29,18 +29,19 @@ export function GrafSouvislosti({
         <h2 className="podnadpis text-[16px]">Souvislosti</h2>
         <div className="flex flex-wrap items-center gap-4">
           <span className="flex items-center gap-2 text-[11.5px] text-tlum">
-            <svg width="22" height="2" aria-hidden><line x1="0" y1="1" x2="22" y2="1" stroke="#e8f1ff" strokeWidth="1.6" /></svg>
+            <svg width="22" height="2" aria-hidden><line x1="0" y1="1" x2="22" y2="1" stroke="#f2f5f8" strokeWidth="1.6" /></svg>
             potvrzená
           </span>
           <span className="flex items-center gap-2 text-[11.5px] text-tlum">
-            <svg width="22" height="2" aria-hidden><line x1="0" y1="1" x2="22" y2="1" stroke="#64789a" strokeWidth="1.6" strokeDasharray="3 3" /></svg>
+            <svg width="22" height="2" aria-hidden><line x1="0" y1="1" x2="22" y2="1" stroke="#7f8ea0" strokeWidth="1.6" strokeDasharray="3 3" /></svg>
             vyšetřovaná
           </span>
         </div>
       </div>
       <p className="stitek mb-5">Vyšetřovaná vazba není prokázaná souvislost</p>
 
-      <div className="overflow-x-auto">
+      {/* Na úzkém displeji stačí seznam pod grafem; kresba by se nevešla. */}
+      <div className="hidden overflow-x-auto sm:block">
         <svg
           viewBox={`0 0 1000 ${vyska}`}
           role="img"
@@ -55,7 +56,7 @@ export function GrafSouvislosti({
                 key={`c${s.incident.id}`}
                 d={`M ${STRED_X + STRED_S} ${stredY} C ${STRED_X + STRED_S + 70} ${stredY}, ${CIL_X - 70} ${y}, ${CIL_X} ${y}`}
                 fill="none"
-                stroke={s.potvrzena ? "#e8f1ff" : "#64789a"}
+                stroke={s.potvrzena ? "#f2f5f8" : "#7f8ea0"}
                 strokeWidth="1.6"
                 strokeDasharray={s.potvrzena ? undefined : "3 3"}
               />
@@ -64,13 +65,13 @@ export function GrafSouvislosti({
 
           <g>
             <rect x={STRED_X} y={stredY - VYSKA_BOXU / 2} width={STRED_S} height={VYSKA_BOXU} rx="5"
-              fill="#0b1220" stroke="#1a2a44" />
+              fill="#181f29" stroke="#202a36" />
             <rect x={STRED_X} y={stredY - VYSKA_BOXU / 2} width="3" height={VYSKA_BOXU}
               fill={tokeny(stred.zavaznost).plna} />
-            <text x={STRED_X + 14} y={stredY - 6} fontSize="11.5" fill="#64789a" letterSpacing="0.9">
+            <text x={STRED_X + 14} y={stredY - 6} fontSize="11.5" fill="#7f8ea0" letterSpacing="0.9">
               TATO UDÁLOST
             </text>
-            <text x={STRED_X + 14} y={stredY + 13} fontSize="15" fill="#e8f1ff" fontWeight="600">
+            <text x={STRED_X + 14} y={stredY + 13} fontSize="15" fill="#f2f5f8" fontWeight="600">
               {zkrat(stred.kratkyTitulek || stred.titulek, 30)}
             </text>
           </g>
@@ -80,12 +81,12 @@ export function GrafSouvislosti({
             const t = tokeny(s.incident.zavaznost);
             return (
               <g key={s.incident.id}>
-                <rect x={CIL_X} y={y} width={CIL_S} height={VYSKA_BOXU} rx="5" fill="#fff" stroke="#1a2a44" />
+                <rect x={CIL_X} y={y} width={CIL_S} height={VYSKA_BOXU} rx="5" fill="#fff" stroke="#202a36" />
                 <rect x={CIL_X} y={y} width="3" height={VYSKA_BOXU} fill={t.plna} />
-                <text x={CIL_X + 14} y={y + 21} fontSize="11.5" fill="#64789a" letterSpacing="0.9">
+                <text x={CIL_X + 14} y={y + 21} fontSize="11.5" fill="#7f8ea0" letterSpacing="0.9">
                   {s.potvrzena ? "POTVRZENÁ SOUVISLOST" : "VYŠETŘOVANÁ SOUVISLOST"}
                 </text>
-                <text x={CIL_X + 14} y={y + 40} fontSize="15" fill="#e8f1ff" fontWeight="600">
+                <text x={CIL_X + 14} y={y + 40} fontSize="15" fill="#f2f5f8" fontWeight="600">
                   {zkrat(s.incident.kratkyTitulek || s.incident.titulek, 62)}
                 </text>
               </g>

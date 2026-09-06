@@ -50,10 +50,12 @@ const KLIC = /^(provoz|pr\u00e1vn\u00ed stav|NATO) \u2014 ([a-z0-9-]+): (.+) \u2
 /** Starší zápisy používají dřívější názvy úrovní; čtenář má vidět jedny. */
 const STARE_NAZVY: [RegExp, string][] = [
   [/Zvýšená pozornost/g, "Nízká"],
-  [/Téměř oranžová/g, "Větší střední"],
+  [/Téměř oranžová/g, "Zvýšená"],
   [/Téměř červená/g, "Vysoká"],
   // Bez \b — hranice slov v JS neumí diakritiku.
-  [/Vyšší/g, "Větší střední"],
+  [/Vyšší/g, "Zvýšená"],
+  [/Menší střední/g, "Mírně zvýšená"],
+  [/Větší střední/g, "Zvýšená"],
   [/Oranžová/g, "Vysoká"],
   [/Kritická/g, "Vážná"],
 ];

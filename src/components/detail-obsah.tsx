@@ -1,0 +1,207 @@
+import Link from "next/link";
+import { aktualizaceK, dolozeno, druh, jistotaZobrazena, pripadK, uredniZdroj } from "@/lib/agregace";
+import { datumCasPraha, datumPraha } from "@/lib/cas";
+import { incidenty, opravyK } from "@/lib/data";
+import { ATRIBUCE, KATEGORIE, STAVY } from "@/lib/kategorie";
+import { JISTOTY, UROVNE } from "@/lib/skala";
+import type { Incident } from "@/lib/typy";
+import { Ikona } from "./ikony";
+import { SeznamZdroju } from "./zdroje";
+import { Napoveda, VykladUrovne } from "./zaklad";
+import { Vlajka } from "./zeme";
+
+/*
+  Obsah detailu události. Stejná struktura všude — v postranním panelu
+  i na samostatné stránce:
+
+    Co se stalo · Co je nového · Dopad na občany · Co zůstává nejasné
+    · Zdroje · Historie aktualizací a oprav
+
+  Každý blok říká, co je fakt a co je hodnocení projektu. Nic se
+  nedopočítává: kde údaj chybí, je to napsané.
+*/
+
+const DRUH_SLOVA: Record<string, string> = {
+  pripad: "Případ",
+  aktualizace: "Aktualizace případu",
+  opatreni: "Oficiální opatření",
+  reakce: "Prohlášení nebo reakce",
+};
+
+function Blok({ nadpis, popis, children }: { nadpis: string; popis?: string; children: React.ReactNode }) {
+  return (
+    <section>
+      <h3 className="text-[15px] font-bold text-inkoust">{nadpis}</h3>
+      {popis && <p className="mt-0.5 text-[12.5px] text-tlum2">{popis}</p>}
+      <div className="mt-2.5">{children}</div>
+    </section>
+  );
+}
+
+function Seznam({ polozky, tlumene = false }: { polozky: string[]; tlumene?: boolean }) {
+  if (!polozky.length) return <p className="text-[14px] text-tlum2">Nic dalšího neuvádíme.</p>;
+  return (
+    <ul className="space-y-2">
+      {polozky.map((f, i) => (
+        <li key={i} className={`flex gap-2.5 text-[14.5px] leading-relaxed ${tlumene ? "text-tlum" : "text-inkoust"}`}>
+          <span aria-hidden className={`mt-[9px] h-[4px] w-[4px] shrink-0 rounded-full ${tlumene ? "bg-tlum2" : "bg-akcent"}`} />
+          <span>{f}</span>
+        </li>
+      ))}
+    </ul>
+  );
+}
+
+/** Hlavička detailu: druh, země, závažnost, data. */
+export function HlavickaDetailu({ i, velka = false }: { i: Incident; velka?: boolean }) {
+  const d = UROVNE[i.zavaznost];
+  const dr = druh(i);
+  const rodic = pripadK(i, incidenty());
+  const jistota = jistotaZobrazena(i);
+  return (
+    <header>
+      <div className="flex flex-wrap items-center gap-x-2.5 gap-y-1 text-[12.5px] text-tlum">
+        <span className="font-semibold uppercase tracking-[0.05em] text-tlum">{DRUH_SLOVA[dr]}</span>
+        <span aria-hidden>·</span>
+        <span className="inline-flex items-center gap-1.5"><Vlajka kod={i.kodZeme} /> {i.kodZeme === "CZ" ? "Česko" : i.zeme}{i.region ? `, ${i.region}` : ""}</span>
+        {i.historicky && <><span aria-hidden>·</span><span>doplněno zpětně</span></>}
+      </div>
+      <h2 className={`mt-2 font-bold leading-tight text-inkoust ${velka ? "text-[26px] sm:text-[32px]" : "text-[20px]"}`}>{i.titulek}</h2>
+      {rodic && (
+        <p className="mt-2 text-[13.5px] text-tlum">
+          Navazuje na případ <Link href={`/incident/${rodic.slug}/`} className="odkaz">{rodic.kratkyTitulek || rodic.titulek}</Link>.
+        </p>
+      )}
+      <dl className="mt-4 grid grid-cols-2 gap-x-4 gap-y-3 border-y border-linka2 py-3 text-[13.5px] sm:grid-cols-4">
+        <div>
+          <dt className="stitek">Kdy se to stalo</dt>
+          <dd className="mt-0.5 font-medium text-inkoust">{datumPraha(i.datumUdalosti)}</dd>
+        </div>
+        <div>
+          <dt className="stitek">Kdy se to zjistilo</dt>
+          <dd className="mt-0.5 font-medium text-inkoust">{i.datumZjisteni ? datumPraha(i.datumZjisteni) : "stejný den"}</dd>
+        </div>
+        <div>
+          <dt className="stitek">Závažnost</dt>
+          <dd className="mt-0.5">
+            <Napoveda popis={<VykladUrovne uroven={i.zavaznost} />}>
+              <span className="font-medium text-inkoust underline decoration-dotted underline-offset-4">{d.nazev}</span>
+            </Napoveda>
+          </dd>
+        </div>
+        <div>
+          <dt className="stitek">Jistota informace</dt>
+          <dd className="mt-0.5 font-medium text-inkoust">
+            {JISTOTY[jistota].nazev}
+            {jistota !== i.jistota && <span className="block text-[12px] font-normal text-tlum2">bez odkazu na zdroj nejvýš střední</span>}
+          </dd>
+        </div>
+      </dl>
+    </header>
+  );
+}
+
+export function DetailObsah({ i }: { i: Incident }) {
+  const vse = incidenty();
+  const aktualizace = aktualizaceK(i.slug, vse);
+  const opravy = opravyK(i.slug);
+  const historie = [
+    ...i.historie.map((h) => ({ kdy: h.kdy, text: h.text, druh: "aktualizace" as const })),
+    ...opravy.map((o) => ({ kdy: o.datum, text: `Oprava: ${o.co} ${o.proc}`, druh: "oprava" as const })),
+  ].sort((a, b) => b.kdy.localeCompare(a.kdy));
+  const potvrzenPachatel = i.atribuce === "oficialni" || i.atribuce === "domaci";
+  const cr = i.kodZeme === "CZ";
+
+  return (
+    <div className="space-y-7">
+      <Blok nadpis="Co se stalo" popis="Jen doložené skutečnosti. Každá je krytá zdrojem níže.">
+        <Seznam polozky={i.fakta} />
+        <p className="mt-3 text-[13px] text-tlum">
+          Stav: {STAVY[i.stav]} · Pachatel: {ATRIBUCE[i.atribuce].nazev.toLowerCase()}
+          {i.puvodce && potvrzenPachatel ? "" : i.puvodce ? " (nepotvrzeno)" : ""}
+          {" · "}Oblasti: {i.kategorie.map((k) => KATEGORIE[k].nazev).join(", ")}
+        </p>
+      </Blok>
+
+      <Blok nadpis="Co je nového" popis="Nová zjištění k témuž případu. Aktualizace není nový útok.">
+        {aktualizace.length ? (
+          <ol className="space-y-2.5">
+            {aktualizace.map((a) => (
+              <li key={a.id} className="flex flex-col gap-0.5 text-[14.5px] leading-relaxed sm:flex-row sm:gap-3">
+                <span className="cislice shrink-0 text-[13px] text-tlum sm:w-[92px]">{datumPraha(a.datumZjisteni ?? a.datumUdalosti)}</span>
+                <Link href={`/incident/${a.slug}/`} className="odkaz">{a.titulek}</Link>
+              </li>
+            ))}
+          </ol>
+        ) : (
+          <p className="text-[14px] text-tlum2">Žádná navazující aktualizace zatím není zveřejněná.</p>
+        )}
+      </Blok>
+
+      <Blok nadpis="Dopad na občany ČR" popis="Co z toho plyne pro běžný život v Česku.">
+        <p className="text-[14.5px] leading-relaxed text-tlum">
+          {druh(i) === "opatreni" && cr
+            ? "Jde o oficiální opatření v ČR. Co přesně platí, je uvedeno v seznamu opatření na přehledu."
+            : "Tento záznam sám o sobě nezakládá žádné oficiální opatření v ČR. Co v Česku platí, se řídí úředními vyhláškami — aktuální stav je na přehledu."}
+          {" "}
+          <Link href="/#opatreni" className="odkaz">Oficiální opatření</Link>
+        </p>
+        {i.vyznam && (
+          <div className="mt-3 rounded-[10px] border border-linka2 bg-plocha p-3.5">
+            <div className="stitek mb-1">Hodnocení projektu — proč to sledujeme</div>
+            <p className="text-[14px] leading-relaxed text-tlum">{i.vyznam}</p>
+          </div>
+        )}
+      </Blok>
+
+      <Blok nadpis="Co zůstává nejasné" popis="Stejně důležité jako fakta. Sem patří i tvrzení bez potvrzení.">
+        <Seznam polozky={i.neznameho} tlumene />
+        {(i.eskalacniSpousteče.length > 0 || i.deeskalacniSignaly.length > 0) && (
+          <details className="mt-3 group">
+            <summary className="flex min-h-[44px] cursor-pointer items-center gap-2 text-[13.5px] font-semibold text-tlum hover:text-inkoust">
+              <Ikona nazev="dolu" velikost={13} tah={2} trida="transition-transform group-open:rotate-180" />
+              Co by hodnocení tohoto záznamu změnilo
+            </summary>
+            <ul className="mt-2 space-y-2 pl-1">
+              {i.eskalacniSpousteče.map((f, n) => (
+                <li key={`e${n}`} className="flex gap-2.5 text-[14px] leading-relaxed text-tlum">
+                  <span className="mt-[3px] shrink-0 text-[#e69b6e]"><Ikona nazev="nahoru" velikost={12} tah={2} /></span>{f}
+                </li>
+              ))}
+              {i.deeskalacniSignaly.map((f, n) => (
+                <li key={`d${n}`} className="flex gap-2.5 text-[14px] leading-relaxed text-tlum">
+                  <span className="mt-[3px] shrink-0 text-[#8fd6ae]"><Ikona nazev="dolu" velikost={12} tah={2} /></span>{f}
+                </li>
+              ))}
+            </ul>
+          </details>
+        )}
+      </Blok>
+
+      <Blok
+        nadpis="Zdroje"
+        popis={uredniZdroj(i) ? "Obsahuje úřední zdroj — orgán, který věc sám oznámil." : dolozeno(i) ? "Bez úředního zdroje. Média a agentury." : "Bez dohledatelného odkazu — proto nejvýš střední jistota."}
+      >
+        {i.zdroje.length ? <SeznamZdroju zdroje={i.zdroje} /> : <p className="text-[14px] text-tlum2">Zdroj chybí. Záznam se zobrazuje jen jako archivní.</p>}
+      </Blok>
+
+      <Blok nadpis="Historie aktualizací a oprav" popis="Co a kdy se v tomto záznamu změnilo. Opravy se nikdy nedělají potichu.">
+        {historie.length ? (
+          <ol className="space-y-2.5">
+            {historie.map((h, n) => (
+              <li key={n} className="flex flex-col gap-0.5 text-[14px] leading-relaxed sm:flex-row sm:gap-3">
+                <span className="cislice shrink-0 text-[13px] text-tlum sm:w-[130px]">{datumCasPraha(h.kdy)}</span>
+                <span className={h.druh === "oprava" ? "text-[#e6c977]" : "text-tlum"}>{h.text}</span>
+              </li>
+            ))}
+          </ol>
+        ) : (
+          <p className="text-[14px] text-tlum2">Beze změn od zveřejnění.</p>
+        )}
+        <p className="mt-3 text-[12.5px] text-tlum2">
+          Zveřejněno {datumCasPraha(i.aktualizovano)} · <Link href="/opravy/" className="odkaz">všechny opravy</Link>
+        </p>
+      </Blok>
+    </div>
+  );
+}

@@ -183,7 +183,7 @@ async function main() {
 
 const NAZVY_UROVNI: Record<string, string> = {
   G1: "Nízká", G2: "Nízká", G3: "Nízká",
-  Y1: "Menší střední", Y2: "Střední", Y3: "Větší střední", YO: "Větší střední",
+  Y1: "Mírně zvýšená", Y2: "Střední", Y3: "Zvýšená", YO: "Zvýšená",
   O1: "Vysoká", O2: "Vysoká", O3: "Vysoká",
   R1: "Vážná", R2: "Vážná", R3: "Vážná",
 };

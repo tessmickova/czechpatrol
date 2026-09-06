@@ -18,7 +18,7 @@ describe("role", () => {
 describe("ověření nastavení", () => {
   it("cizí hodnoty zahodí a doplní výchozí", () => {
     const n = overNastaveni({ frekvence: "kazdou-vterinu", minZavaznost: "kriticka", ticho: { od: "25:00", do: "07:00" }, oblasti: ["kyber", "DROP TABLE"], zpravyIzs: "ano", kraj: 42 });
-    expect(n.frekvence).toBe("ihned");
+    expect(n.frekvence).toBe("tydne");
     expect(n.minZavaznost).toBe("kriticka");
     expect(n.ticho).toBeNull();
     expect(n.oblasti).toEqual(["kyber"]);

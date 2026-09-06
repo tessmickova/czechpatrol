@@ -29,6 +29,8 @@ export type Atribuce =
 
 export type Puvodce = "rusko" | "ukrajina" | "jiny-stat" | "domaci" | "neznamy";
 
+export type DruhZaznamu = "pripad" | "aktualizace" | "opatreni" | "reakce";
+
 export type StavVysetrovani =
   | "probiha"
   | "uzavreno"
@@ -100,6 +102,15 @@ export interface Incident {
   puvodce?: Puvodce | null;
   /** Doplněno zpětně jako historický milník (2014–2025), ne z běžného monitoringu. */
   historicky?: boolean;
+  /**
+   * Druh záznamu. „pripad“ = reálná událost (útok, průnik, operace);
+   * „aktualizace“ = nové zjištění k existujícímu případu (navazujeNa);
+   * „opatreni“ = oficiální krok státu nebo aliance; „reakce“ = prohlášení,
+   * varování, analýza. Do počtu případů vstupují jen případy.
+   */
+  druh?: DruhZaznamu;
+  /** Slug případu, ke kterému aktualizace patří. */
+  navazujeNa?: string;
   /** Co doloženě víme. Každá položka musí být krytá zdrojem. */
   fakta: string[];
   /** Co potvrzeno nebylo. Stejně důležité jako fakta. */
@@ -319,4 +330,21 @@ export interface Nepotvrzene {
   /** Co ověření ukázalo. */
   overeni: string;
   zdroje: Zdroj[];
+}
+
+/* ---------------- opravy ---------------- */
+
+/**
+ * Veřejný záznam opravy. Oprava se nikdy nedělá potichu: co bylo špatně,
+ * proč, a od kdy platí nová verze. Vazba na záznam je přes slug.
+ */
+export interface Oprava {
+  id: string;
+  /** Datum zveřejnění opravy (kalendářní den). */
+  datum: string;
+  /** Slug záznamu, „nepotvrzeno/<id>“, nebo „metodika“ / „historicke-zaznamy“. */
+  tykaSe: string;
+  druh: "oprava-dat" | "doplneni-zdroju" | "metodika" | "oprava-textu";
+  co: string;
+  proc: string;
 }
