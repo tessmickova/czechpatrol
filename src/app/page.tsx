@@ -1,6 +1,6 @@
 import { BannerStari } from "@/components/cerstvost";
 import { Dashboard } from "@/components/dashboard";
-import { celkovyStav, hybridniTlak, incidenty, nato, nepotvrzene, posledniOvereni, pravniStav, provoz, tlakCr, tydny, urovenObcanu, watchlist } from "@/lib/data";
+import { celkovyStav, hybridniTlak, incidenty, kandidati, nato, nepotvrzene, posledniOvereni, pravniStav, provoz, tlakCr, tydny, urovenObcanu, watchlist } from "@/lib/data";
 
 /**
  * Úvodní strana = dashboard. Vše na jedné obrazovce, bez odstavců:
@@ -19,6 +19,7 @@ export default function Prehled() {
         overeno={posledniOvereni()}
         vse={incidenty()}
         neprosle={nepotvrzene()}
+        kandidati={kandidati()}
         tydny={tydny()}
         watchlist={watchlist()}
         cr={tlakCr().celkem}

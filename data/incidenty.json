@@ -3741,5 +3741,1060 @@
     "historicky": true,
     "puvodce": "rusko",
     "druh": "pripad"
+  },
+  {
+    "id": "h29",
+    "slug": "kohver-2014",
+    "titulek": "Estonsko: FSB unesla důstojníka bezpečnostní služby Estona Kohvera na estonském území",
+    "kratkyTitulek": "Únos Estona Kohvera",
+    "zeme": "Estonsko",
+    "kodZeme": "EE",
+    "kategorie": [
+      "zpravodajske",
+      "hranice",
+      "nato"
+    ],
+    "datumUdalosti": "2014-09-05T00:00:00Z",
+    "datumZjisteni": "2014-09-05T00:00:00Z",
+    "aktualizovano": "2026-09-06T00:00:00Z",
+    "zavaznost": "O1",
+    "jistota": "potvrzeno",
+    "stav": "uzavreno",
+    "atribuce": "oficialni",
+    "fakta": [
+      "5. září 2014 zadrželi příslušníci ruské FSB na estonském území u přechodu Luhamaa důstojníka estonské Vnitřní bezpečnostní služby Estona Kohvera a odvezli ho do Ruska.",
+      "Estonští i ruští pohraničníci v protokolu potvrdili, že k narušení hranice došlo na estonské straně. Ruský soud v Pskově Kohvera 19. srpna 2015 odsoudil k 15 letům za špionáž."
+    ],
+    "neznameho": [
+      "Ruská strana tvrdila, že Kohver byl zadržen na ruském území; protokol o hranici to nepotvrzuje."
+    ],
+    "vyznam": "První doložený případ, kdy ruská služba silou odvedla představitele státu NATO z jeho vlastního území. Měřítko pro pozdější hybridní incidenty v Pobaltí.",
+    "eskalacniSpousteče": [],
+    "deeskalacniSignaly": [],
+    "zdroje": [
+      {
+        "nazev": "ICDS — The Abduction of Eston Kohver: Consequences and Significance",
+        "url": "https://icds.ee/en/the-abduction-of-eston-kohver-consequences-and-significance/",
+        "typ": "analysis",
+        "publikovano": "2014-09-12T00:00:00Z",
+        "primarni": false,
+        "jazyk": "en"
+      },
+      {
+        "nazev": "Estonian World — Protocols confirm Estonian border violation from Russia",
+        "url": "https://estonianworld.com/security/protocols-confirm-estonian-border-violation-russia/",
+        "typ": "media",
+        "publikovano": "2014-09-09T00:00:00Z",
+        "primarni": false,
+        "jazyk": "en"
+      },
+      {
+        "nazev": "VOA — Russia Sentences Estonia 'Spy' to 15 Years in Prison",
+        "url": "https://www.voanews.com/a/russia-sentences-estonian-to-15-years-for-spying/2923605.html",
+        "typ": "media",
+        "publikovano": "2015-08-19T00:00:00Z",
+        "primarni": false,
+        "jazyk": "en"
+      }
+    ],
+    "souvisejici": [],
+    "historie": [
+      {
+        "kdy": "2014-09-05T00:00:00Z",
+        "text": "Únos na estonském území.",
+        "novySignal": true
+      },
+      {
+        "kdy": "2015-08-19T00:00:00Z",
+        "text": "Odsouzení v Rusku k 15 letům.",
+        "novySignal": true
+      }
+    ],
+    "novy": false,
+    "zapocitanoTyden": "2014-09-05",
+    "aiZpracovano": true,
+    "lidskyOvereno": true,
+    "archivniZaznam": false,
+    "historicky": true,
+    "druh": "pripad",
+    "puvodce": "rusko"
+  },
+  {
+    "id": "h30",
+    "slug": "gebrev-otrava-2015",
+    "titulek": "Bulharsko: pokus o otravu zbrojaře Emiliana Gebreva, obviněni tři důstojníci GRU",
+    "kratkyTitulek": "Otrava Gebreva",
+    "zeme": "Bulharsko",
+    "kodZeme": "BG",
+    "kategorie": [
+      "zpravodajske",
+      "hybridni",
+      "vysetrovani"
+    ],
+    "datumUdalosti": "2015-04-28T00:00:00Z",
+    "datumZjisteni": "2020-01-23T00:00:00Z",
+    "aktualizovano": "2026-09-06T00:00:00Z",
+    "zavaznost": "O1",
+    "jistota": "potvrzeno",
+    "stav": "obvineni",
+    "atribuce": "oficialni",
+    "fakta": [
+      "28. dubna 2015 byl v Sofii otráven organofosfátem zbrojař Emilian Gebrev, jeho syn a manažer firmy EMCO; všichni přežili.",
+      "Bulharské státní zastupitelství 23. ledna 2020 obvinilo v nepřítomnosti tři Rusy z jednotky GRU 29155 a vydalo na ně evropské zatykače."
+    ],
+    "neznameho": [
+      "Konkrétní použitá látka nebyla veřejně určena."
+    ],
+    "vyznam": "Případ ukázal, že jednotka GRU 29155 působila v členské zemi EU a NATO už v roce 2015 — tři roky před Salisbury.",
+    "eskalacniSpousteče": [],
+    "deeskalacniSignaly": [],
+    "zdroje": [
+      {
+        "nazev": "RFE/RL — Bulgaria Charges Three Russians In Absentia Over Attempted Murders In 2015",
+        "url": "https://www.rferl.org/a/bulgaria-charges-three-russians-gebrev-poisoning-in-absentia/30393608.html",
+        "typ": "wire",
+        "publikovano": "2020-01-23T00:00:00Z",
+        "primarni": false,
+        "jazyk": "en"
+      },
+      {
+        "nazev": "Bellingcat — The Dreadful Eight: GRU's Unit 29155 and the 2015 Poisoning of Emilian Gebrev",
+        "url": "https://www.bellingcat.com/news/uk-and-europe/2019/11/23/the-dreadful-eight-grus-unit-29155-and-the-2015-poisoning-of-emilian-gebrev/",
+        "typ": "analysis",
+        "publikovano": "2019-11-23T00:00:00Z",
+        "primarni": false,
+        "jazyk": "en"
+      }
+    ],
+    "souvisejici": [],
+    "historie": [
+      {
+        "kdy": "2015-04-28T00:00:00Z",
+        "text": "Otrava v Sofii.",
+        "novySignal": true
+      },
+      {
+        "kdy": "2020-01-23T00:00:00Z",
+        "text": "Obvinění tří důstojníků GRU v nepřítomnosti.",
+        "novySignal": true
+      }
+    ],
+    "novy": false,
+    "zapocitanoTyden": "2020-01-23",
+    "aiZpracovano": true,
+    "lidskyOvereno": true,
+    "archivniZaznam": false,
+    "historicky": true,
+    "druh": "pripad",
+    "puvodce": "rusko"
+  },
+  {
+    "id": "h31",
+    "slug": "ukrajina-elektrarny-2015",
+    "titulek": "Ukrajina: kybernetický útok vypnul 30 rozvoden, bez proudu asi 230 000 lidí",
+    "kratkyTitulek": "Kyberútok na síť 2015",
+    "zeme": "Ukrajina",
+    "kodZeme": "UA",
+    "kategorie": [
+      "kyber",
+      "infrastruktura",
+      "rusko"
+    ],
+    "datumUdalosti": "2015-12-23T00:00:00Z",
+    "datumZjisteni": "2015-12-23T00:00:00Z",
+    "aktualizovano": "2026-09-06T00:00:00Z",
+    "zavaznost": "O1",
+    "jistota": "vysoka",
+    "stav": "neuvedeno",
+    "atribuce": "nepotvrzena",
+    "fakta": [
+      "23. prosince 2015 útočníci pomocí malwaru BlackEnergy 3 na dálku vypnuli 30 rozvoden distributora Prykarpattjaoblenergo; bez elektřiny bylo 1 až 6 hodin asi 230 000 odběratelů. Menší zásah postihl další dvě distribuční firmy.",
+      "Jde o první veřejně potvrzený úspěšný kybernetický útok na energetickou síť."
+    ],
+    "neznameho": [
+      "Atribuce skupině Sandworm spojované s GRU pochází z výzkumných analýz; v uvedených zdrojích chybí soudní nebo oficiální státní závěr."
+    ],
+    "vyznam": "Ukázka, že kybernetický útok umí vypnout proud v celém regionu. Referenční případ pro hodnocení rizika pro infrastrukturu v Evropě.",
+    "eskalacniSpousteče": [],
+    "deeskalacniSignaly": [],
+    "zdroje": [
+      {
+        "nazev": "SANS / E-ISAC — Analysis of the Cyber Attack on the Ukrainian Power Grid",
+        "url": "https://nsarchive.gwu.edu/sites/default/files/documents/3891751/SANS-and-Electricity-Information-Sharing-and.pdf",
+        "typ": "analysis",
+        "publikovano": "2016-03-18T00:00:00Z",
+        "primarni": false,
+        "jazyk": "en"
+      },
+      {
+        "nazev": "The Conversation — Cyberattack on Ukraine grid: here's how it worked",
+        "url": "https://theconversation.com/cyberattack-on-ukraine-grid-heres-how-it-worked-and-perhaps-why-it-was-done-52802",
+        "typ": "analysis",
+        "publikovano": "2016-01-13T00:00:00Z",
+        "primarni": false,
+        "jazyk": "en"
+      }
+    ],
+    "souvisejici": [],
+    "historie": [
+      {
+        "kdy": "2015-12-23T00:00:00Z",
+        "text": "Výpadek proudu po kybernetickém útoku.",
+        "novySignal": true
+      }
+    ],
+    "novy": false,
+    "zapocitanoTyden": "2015-12-23",
+    "aiZpracovano": true,
+    "lidskyOvereno": true,
+    "archivniZaznam": false,
+    "historicky": true,
+    "druh": "pripad",
+    "puvodce": "rusko"
+  },
+  {
+    "id": "h32",
+    "slug": "cerna-hora-puc-2016",
+    "titulek": "Černá Hora: soud potvrdil pokus o převrat v den voleb řízený důstojníky GRU",
+    "kratkyTitulek": "Pokus o převrat v Černé Hoře",
+    "zeme": "Černá Hora",
+    "kodZeme": "ME",
+    "kategorie": [
+      "zpravodajske",
+      "hybridni",
+      "diplomacie"
+    ],
+    "datumUdalosti": "2016-10-16T00:00:00Z",
+    "datumZjisteni": "2019-05-09T00:00:00Z",
+    "aktualizovano": "2026-09-06T00:00:00Z",
+    "zavaznost": "O2",
+    "jistota": "potvrzeno",
+    "stav": "uzavreno",
+    "atribuce": "oficialni",
+    "fakta": [
+      "Skupina plánovala 16. října 2016, v den parlamentních voleb, obsadit parlament a zavraždit premiéra Djukanoviće, aby zabránila vstupu země do NATO; policie ji zastavila.",
+      "Vrchní soud 9. května 2019 odsoudil 14 obžalovaných; dva důstojníci GRU Eduard Šišmakov a Vladimir Popov dostali v nepřítomnosti 15 a 12 let."
+    ],
+    "neznameho": [
+      "Rusko účast odmítá; odvolací řízení v pozdějších letech verdikty částečně měnilo."
+    ],
+    "vyznam": "Jediný soudně potvrzený pokus o násilnou změnu vlády v evropské zemi řízený ruskou vojenskou rozvědkou.",
+    "eskalacniSpousteče": [],
+    "deeskalacniSignaly": [],
+    "zdroje": [
+      {
+        "nazev": "RFE/RL — Montenegrin Court Convicts All 14 Defendants Of Plotting Pro-Russia Coup",
+        "url": "https://www.rferl.org/a/montenegro-court-convicts-14-on-terrorism-charges-/29930212.html",
+        "typ": "wire",
+        "publikovano": "2019-05-09T00:00:00Z",
+        "primarni": false,
+        "jazyk": "en"
+      },
+      {
+        "nazev": "Al Jazeera — Russian spies found guilty of Montenegro coup attempt",
+        "url": "https://www.aljazeera.com/news/2019/5/9/russian-spies-found-guilty-of-montenegro-coup-attempt",
+        "typ": "media",
+        "publikovano": "2019-05-09T00:00:00Z",
+        "primarni": false,
+        "jazyk": "en"
+      }
+    ],
+    "souvisejici": [],
+    "historie": [
+      {
+        "kdy": "2016-10-16T00:00:00Z",
+        "text": "Zmařený pokus o převrat.",
+        "novySignal": true
+      },
+      {
+        "kdy": "2019-05-09T00:00:00Z",
+        "text": "Odsouzení 14 obžalovaných včetně dvou důstojníků GRU.",
+        "novySignal": true
+      }
+    ],
+    "novy": false,
+    "zapocitanoTyden": "2019-05-09",
+    "aiZpracovano": true,
+    "lidskyOvereno": true,
+    "archivniZaznam": false,
+    "historicky": true,
+    "druh": "pripad",
+    "puvodce": "rusko"
+  },
+  {
+    "id": "h33",
+    "slug": "cr-mzv-hack-2017",
+    "titulek": "ČR: dlouhodobý průnik do e-mailů Ministerstva zahraničí, BIS připsala útoky ruským službám",
+    "kratkyTitulek": "Průnik do e-mailů MZV",
+    "zeme": "Česko",
+    "kodZeme": "CZ",
+    "kategorie": [
+      "cr",
+      "kyber",
+      "zpravodajske"
+    ],
+    "datumUdalosti": "2017-01-31T00:00:00Z",
+    "datumZjisteni": "2018-12-03T00:00:00Z",
+    "aktualizovano": "2026-09-06T00:00:00Z",
+    "zavaznost": "Y3",
+    "jistota": "potvrzeno",
+    "stav": "uzavreno",
+    "atribuce": "oficialni",
+    "fakta": [
+      "31. ledna 2017 ministr zahraničí Lubomír Zaorálek oznámil, že do e-mailového systému ministerstva pronikl cizí stát; zasaženy byly desítky schránek.",
+      "Podle výroční zprávy BIS za rok 2017 (zveřejněné 3. prosince 2018) byl systém kompromitován nejméně od začátku roku 2016 a stály za tím kampaně Turla (FSB) a APT28/Sofacy (GRU)."
+    ],
+    "neznameho": [
+      "Rozsah odcizených dat ministerstvo nezveřejnilo."
+    ],
+    "vyznam": "První oficiální česká atribuce kybernetického útoku ruským službám. Zpráva BIS je úřední zdroj, nikoli mediální tvrzení.",
+    "eskalacniSpousteče": [],
+    "deeskalacniSignaly": [],
+    "zdroje": [
+      {
+        "nazev": "The Washington Post — Foreign state seen behind hack into Czech Foreign Ministry email",
+        "url": "https://www.washingtonpost.com/world/foreign-state-seen-behind-hack-into-czech-foreign-ministry-email/2017/01/31/09b6b812-e7f5-11e6-80c2-30e57e57e05d_story.html",
+        "typ": "media",
+        "publikovano": "2017-01-31T00:00:00Z",
+        "primarni": false,
+        "jazyk": "en"
+      },
+      {
+        "nazev": "The Register — Prague says its foreign ministry was hacked for more than a year",
+        "url": "https://www.theregister.com/security/2018/12/03/czech-yourself-russia-prague-says-its-foreign-ministry-was-hacked-for-more-than-a-year/853775",
+        "typ": "media",
+        "publikovano": "2018-12-03T00:00:00Z",
+        "primarni": false,
+        "jazyk": "en"
+      }
+    ],
+    "souvisejici": [],
+    "historie": [
+      {
+        "kdy": "2017-01-31T00:00:00Z",
+        "text": "Ministerstvo oznámilo průnik.",
+        "novySignal": true
+      },
+      {
+        "kdy": "2018-12-03T00:00:00Z",
+        "text": "BIS připsala útoky Turla a APT28.",
+        "novySignal": true
+      }
+    ],
+    "novy": false,
+    "zapocitanoTyden": "2018-12-03",
+    "aiZpracovano": true,
+    "lidskyOvereno": true,
+    "archivniZaznam": false,
+    "historicky": true,
+    "druh": "pripad",
+    "puvodce": "rusko"
+  },
+  {
+    "id": "h34",
+    "slug": "polsko-belorusko-hranice-2021",
+    "titulek": "Polsko: Bělorusko organizovaně tlačilo tisíce migrantů na hranici EU, Polsko nasadilo armádu",
+    "kratkyTitulek": "Krize na polsko-běloruské hranici",
+    "zeme": "Polsko",
+    "kodZeme": "PL",
+    "kategorie": [
+      "hranice",
+      "hybridni",
+      "nato"
+    ],
+    "datumUdalosti": "2021-11-08T00:00:00Z",
+    "datumZjisteni": "2021-11-08T00:00:00Z",
+    "aktualizovano": "2026-09-06T00:00:00Z",
+    "zavaznost": "O2",
+    "jistota": "potvrzeno",
+    "stav": "bez-vysetrovani",
+    "atribuce": "oficialni",
+    "fakta": [
+      "8. listopadu 2021 se k přechodu Kuźnica/Bruzgi přesunuly tisíce migrantů; Polsko nasadilo asi 4 500 pohraničníků a 9 500 vojáků a hlásilo přes tisíc pokusů o přechod během dvou dnů.",
+      "EU, USA a Británie označily postup Běloruska za hybridní útok jako odvetu za sankce; běloruské složky migranty k hranici doprovázely a bránily jim v návratu."
+    ],
+    "neznameho": [
+      "Míra přímé ruské účasti na organizaci nebyla oficiálně doložena."
+    ],
+    "vyznam": "Ukázka instrumentalizované migrace jako hybridního nástroje proti hranici NATO a EU; předloha pro pozdější uzavření finské hranice.",
+    "eskalacniSpousteče": [],
+    "deeskalacniSignaly": [],
+    "zdroje": [
+      {
+        "nazev": "Congressional Research Service — Belarus-Poland Border Crisis",
+        "url": "https://www.congress.gov/crs_external_products/IF/HTML/IF11983.html",
+        "typ": "primary",
+        "publikovano": "2021-11-18T00:00:00Z",
+        "primarni": true,
+        "jazyk": "en"
+      },
+      {
+        "nazev": "The Conversation — Trouble on the Belarus-Poland border",
+        "url": "https://theconversation.com/trouble-on-the-belarus-poland-border-what-you-need-to-know-about-the-migrant-crisis-manufactured-by-belarus-leader-172108",
+        "typ": "analysis",
+        "publikovano": "2021-11-16T00:00:00Z",
+        "primarni": false,
+        "jazyk": "en"
+      },
+      {
+        "nazev": "CBC — Polish forces use water cannons in clash with migrants at Belarus border",
+        "url": "https://www.cbc.ca/lite/story/1.6250409",
+        "typ": "media",
+        "publikovano": "2021-11-16T00:00:00Z",
+        "primarni": false,
+        "jazyk": "en"
+      }
+    ],
+    "souvisejici": [],
+    "historie": [
+      {
+        "kdy": "2021-11-08T00:00:00Z",
+        "text": "Tisíce migrantů u přechodu Kuźnica, nasazení armády.",
+        "novySignal": true
+      }
+    ],
+    "novy": false,
+    "zapocitanoTyden": "2021-11-08",
+    "aiZpracovano": true,
+    "lidskyOvereno": true,
+    "archivniZaznam": false,
+    "historicky": true,
+    "druh": "pripad",
+    "puvodce": "jiny-stat"
+  },
+  {
+    "id": "h35",
+    "slug": "nemecko-zeleznice-2022",
+    "titulek": "Německo: přerušené kabely u Herne a v Berlíně zastavily vlaky na severu na tři hodiny",
+    "kratkyTitulek": "Sabotáž na železnici",
+    "zeme": "Německo",
+    "kodZeme": "DE",
+    "kategorie": [
+      "sabotaz",
+      "infrastruktura"
+    ],
+    "datumUdalosti": "2022-10-08T00:00:00Z",
+    "datumZjisteni": "2022-10-13T00:00:00Z",
+    "aktualizovano": "2026-09-06T00:00:00Z",
+    "zavaznost": "O1",
+    "jistota": "potvrzeno",
+    "stav": "probiha",
+    "atribuce": "vysetrovana",
+    "fakta": [
+      "8. října 2022 byly na dvou místech vzdálených asi 540 km (Herne a Berlín-Karow) přerušeny záložní optické kabely komunikačního systému Deutsche Bahn; provoz v Dolním Sasku, Brémách, Hamburku a Šlesvicku-Holštýnsku stál asi tři hodiny.",
+      "13. října převzalo vyšetřování Spolkové státní zastupitelství a Spolkový kriminální úřad."
+    ],
+    "neznameho": [
+      "Pachatel ani motiv nebyly veřejně určeny."
+    ],
+    "vyznam": "Cílený zásah na redundantní infrastrukturu na dvou místech naráz — vzorec, který se později opakoval u dalších sabotáží v Německu.",
+    "eskalacniSpousteče": [],
+    "deeskalacniSignaly": [],
+    "zdroje": [
+      {
+        "nazev": "The Local — Germany probes rail 'sabotage' amid Russia tensions",
+        "url": "https://www.thelocal.de/20221009/germany-probes-rail-sabotage-amid-russia-tensions",
+        "typ": "media",
+        "publikovano": "2022-10-09T00:00:00Z",
+        "primarni": false,
+        "jazyk": "en"
+      },
+      {
+        "nazev": "US News / AP — Federal Prosecutors Take Over German Rail Sabotage Probe",
+        "url": "https://www.usnews.com/news/business/articles/2022-10-13/federal-prosecutors-take-over-german-rail-sabotage-probe",
+        "typ": "wire",
+        "publikovano": "2022-10-13T00:00:00Z",
+        "primarni": false,
+        "jazyk": "en"
+      }
+    ],
+    "souvisejici": [],
+    "historie": [
+      {
+        "kdy": "2022-10-08T00:00:00Z",
+        "text": "Přerušení kabelů a zastavení provozu.",
+        "novySignal": true
+      },
+      {
+        "kdy": "2022-10-13T00:00:00Z",
+        "text": "Vyšetřování převzalo Spolkové státní zastupitelství.",
+        "novySignal": true
+      }
+    ],
+    "novy": false,
+    "zapocitanoTyden": "2022-10-13",
+    "aiZpracovano": true,
+    "lidskyOvereno": true,
+    "archivniZaznam": false,
+    "historicky": true,
+    "druh": "pripad",
+    "puvodce": "neznamy"
+  },
+  {
+    "id": "h36",
+    "slug": "finsko-hranice-2023",
+    "titulek": "Finsko uzavřelo celou pozemní hranici s Ruskem kvůli organizovanému přílivu žadatelů o azyl",
+    "kratkyTitulek": "Uzavření finské hranice",
+    "zeme": "Finsko",
+    "kodZeme": "FI",
+    "kategorie": [
+      "hranice",
+      "hybridni",
+      "pravo"
+    ],
+    "datumUdalosti": "2023-11-28T00:00:00Z",
+    "datumZjisteni": "2023-11-28T00:00:00Z",
+    "aktualizovano": "2026-09-06T00:00:00Z",
+    "zavaznost": "Y3",
+    "jistota": "potvrzeno",
+    "stav": "bez-vysetrovani",
+    "atribuce": "oficialni",
+    "fakta": [
+      "Finská vláda 28. listopadu 2023 rozhodla uzavřít od půlnoci 30. listopadu celou 1 340 km dlouhou hranici s Ruskem i pro žadatele o azyl; první čtyři přechody zavřela už 18. listopadu.",
+      "Podle finské pohraniční stráže přišlo v listopadu z Ruska přes 900 žadatelů o azyl proti průměru pod deset měsíčně v lednu až září."
+    ],
+    "neznameho": [
+      "Rozsah přímé ruské koordinace přílivu vláda popsala, ale soudně nedoložila."
+    ],
+    "vyznam": "Oficiální opatření členského státu NATO jako reakce na instrumentalizovanou migraci. Do počtu případů nevstupuje; je to krok státu.",
+    "eskalacniSpousteče": [],
+    "deeskalacniSignaly": [],
+    "zdroje": [
+      {
+        "nazev": "Finská vláda — Finland's eastern border to remain closed until further notice",
+        "url": "https://valtioneuvosto.fi/en/-/1410869/finland-s-eastern-border-to-remain-closed-until-further-notice-1",
+        "typ": "primary",
+        "publikovano": "2024-01-11T00:00:00Z",
+        "primarni": true,
+        "jazyk": "en"
+      },
+      {
+        "nazev": "Library of Congress — Finland: Government Closes Entire Land Border with Russia",
+        "url": "https://www.loc.gov/item/global-legal-monitor/2023-11-28/finland-government-closes-entire-land-border-with-russia/",
+        "typ": "primary",
+        "publikovano": "2023-11-28T00:00:00Z",
+        "primarni": true,
+        "jazyk": "en"
+      },
+      {
+        "nazev": "Finská pohraniční stráž — Restrictions at the border crossing points on the eastern border",
+        "url": "https://raja.fi/en/restrictions-at-the-border-crossing-points-on-the-eastern-border-of-finland",
+        "typ": "primary",
+        "publikovano": "2023-11-30T00:00:00Z",
+        "primarni": true,
+        "jazyk": "en"
+      }
+    ],
+    "souvisejici": [],
+    "historie": [
+      {
+        "kdy": "2023-11-28T00:00:00Z",
+        "text": "Rozhodnutí vlády o uzavření celé hranice.",
+        "novySignal": true
+      }
+    ],
+    "novy": false,
+    "zapocitanoTyden": "2023-11-28",
+    "aiZpracovano": true,
+    "lidskyOvereno": true,
+    "archivniZaznam": false,
+    "historicky": true,
+    "druh": "opatreni"
+  },
+  {
+    "id": "h37",
+    "slug": "leyton-zharstvi-2024",
+    "titulek": "Londýn: žhářský útok na sklad s pomocí pro Ukrajinu objednaný Wagnerovou skupinou, pachatelé odsouzeni",
+    "kratkyTitulek": "Žhářství v Leytonu",
+    "zeme": "Spojené království",
+    "kodZeme": "GB",
+    "kategorie": [
+      "sabotaz",
+      "hybridni",
+      "vysetrovani"
+    ],
+    "datumUdalosti": "2024-03-20T00:00:00Z",
+    "datumZjisteni": "2025-07-08T00:00:00Z",
+    "aktualizovano": "2026-09-06T00:00:00Z",
+    "zavaznost": "O1",
+    "jistota": "potvrzeno",
+    "stav": "uzavreno",
+    "atribuce": "oficialni",
+    "fakta": [
+      "20. března 2024 zapálili Nii Mensah a Jakeem Rose průmyslovou halu v Leytonu, odkud se posílala humanitární pomoc a zařízení Starlink na Ukrajinu; škoda asi 1 milion liber.",
+      "Organizátor Dylan Earl a Jake Reeves se přiznali k žhářství a k trestným činům podle National Security Act 2023; útok byl podle soudu objednán Wagnerovou skupinou. Tři další muže porota Old Bailey 8. července 2025 uznala vinnými."
+    ],
+    "neznameho": [
+      "Konkrétní řídicí osoby na ruské straně nebyly veřejně jmenovány."
+    ],
+    "vyznam": "První odsouzení podle britského zákona o národní bezpečnosti za sabotáž na objednávku ruské struktury; doložený model najímání místních pachatelů přes internet.",
+    "eskalacniSpousteče": [],
+    "deeskalacniSignaly": [],
+    "zdroje": [
+      {
+        "nazev": "Counter Terrorism Policing — Men who organised Russia-backed arson at London warehouse jailed",
+        "url": "https://www.counterterrorism.police.uk/news/men-who-organised-russia-backed-arson-at-london-warehouse-jailed/",
+        "typ": "primary",
+        "publikovano": "2025-10-17T00:00:00Z",
+        "primarni": true,
+        "jazyk": "en"
+      },
+      {
+        "nazev": "Crown Prosecution Service — How the CPS used new National Security Act legislation",
+        "url": "https://www.cps.gov.uk/cps/news/updated-sentence-how-cps-used-new-national-security-act-legislation-prosecute-plot",
+        "typ": "primary",
+        "publikovano": "2025-07-08T00:00:00Z",
+        "primarni": true,
+        "jazyk": "en"
+      },
+      {
+        "nazev": "Al Jazeera — UK court convicts 3 men of arson in attack linked to Russia's Wagner Group",
+        "url": "https://www.aljazeera.com/amp/news/2025/7/9/uk-court-convicts-3-men-of-arson-in-attack-linked-to-russias-wagner-group",
+        "typ": "media",
+        "publikovano": "2025-07-09T00:00:00Z",
+        "primarni": false,
+        "jazyk": "en"
+      }
+    ],
+    "souvisejici": [],
+    "historie": [
+      {
+        "kdy": "2024-03-20T00:00:00Z",
+        "text": "Žhářský útok.",
+        "novySignal": true
+      },
+      {
+        "kdy": "2025-07-08T00:00:00Z",
+        "text": "Porota uznala vinnými tři pachatele; organizátoři se přiznali dříve.",
+        "novySignal": true
+      }
+    ],
+    "novy": false,
+    "zapocitanoTyden": "2025-07-08",
+    "aiZpracovano": true,
+    "lidskyOvereno": true,
+    "archivniZaznam": false,
+    "historicky": true,
+    "druh": "pripad",
+    "puvodce": "rusko"
+  },
+  {
+    "id": "h38",
+    "slug": "bayreuth-zatceni-2024",
+    "titulek": "Německo: zatčení dvou německo-ruských občanů za vytipovávání amerických základen k sabotáži",
+    "kratkyTitulek": "Zatčení v Bayreuthu",
+    "zeme": "Německo",
+    "kodZeme": "DE",
+    "kategorie": [
+      "zpravodajske",
+      "sabotaz",
+      "nato"
+    ],
+    "datumUdalosti": "2024-04-17T00:00:00Z",
+    "datumZjisteni": "2024-04-18T00:00:00Z",
+    "aktualizovano": "2026-09-06T00:00:00Z",
+    "zavaznost": "Y3",
+    "jistota": "vysoka",
+    "stav": "obvineni",
+    "atribuce": "vysetrovana",
+    "fakta": [
+      "17. dubna 2024 zadržela policie v Bayreuthu Dietera S. a Alexandra J.; podle Spolkového státního zastupitelství vytipovávali cíle včetně americké základny Grafenwöhr a probírali s ruským kontaktem výbušné a žhářské útoky na vojenskou a průmyslovou infrastrukturu.",
+      "Cílem mělo být podkopat německou vojenskou podporu Ukrajině; obžaloba byla podána v prosinci 2024."
+    ],
+    "neznameho": [
+      "Soudní rozhodnutí o vině v uvedených zdrojích není."
+    ],
+    "vyznam": "Zmařená příprava sabotáže proti infrastruktuře NATO v Německu; jeden z prvních případů, kde vyšetřovatelé popsali přímé řízení ruskou službou.",
+    "eskalacniSpousteče": [],
+    "deeskalacniSignaly": [],
+    "zdroje": [
+      {
+        "nazev": "Stars and Stripes — Dual German-Russian citizens arrested for plotting attacks on US forces in Bavaria",
+        "url": "https://www.stripes.com/theaters/europe/2024-04-18/spies-terrorism-russia-ukraine-13586970.html",
+        "typ": "media",
+        "publikovano": "2024-04-18T00:00:00Z",
+        "primarni": false,
+        "jazyk": "en"
+      },
+      {
+        "nazev": "Al Jazeera — Germany arrests two dual nationals over alleged Russian sabotage plot",
+        "url": "https://www.aljazeera.com/news/2024/4/18/germany-arrests-two-dual-nationals-over-alleged-russian-sabotage-plot",
+        "typ": "media",
+        "publikovano": "2024-04-18T00:00:00Z",
+        "primarni": false,
+        "jazyk": "en"
+      },
+      {
+        "nazev": "Stars and Stripes — Trio charged in Germany for pro-Russia plot targeting US bases in Bavaria",
+        "url": "https://www.stripes.com/branches/army/2024-12-31/dual-nationals-charged-spying-russia-16331452.html",
+        "typ": "media",
+        "publikovano": "2024-12-31T00:00:00Z",
+        "primarni": false,
+        "jazyk": "en"
+      }
+    ],
+    "souvisejici": [],
+    "historie": [
+      {
+        "kdy": "2024-04-17T00:00:00Z",
+        "text": "Zatčení.",
+        "novySignal": true
+      },
+      {
+        "kdy": "2024-12-31T00:00:00Z",
+        "text": "Podání obžaloby.",
+        "novySignal": true
+      }
+    ],
+    "novy": false,
+    "zapocitanoTyden": "2024-04-18",
+    "aiZpracovano": true,
+    "lidskyOvereno": true,
+    "archivniZaznam": false,
+    "historicky": true,
+    "druh": "pripad",
+    "puvodce": "rusko"
+  },
+  {
+    "id": "h39",
+    "slug": "tartu-gps-ruseni-2024",
+    "titulek": "Estonsko: Finnair na měsíc zastavil lety do Tartu kvůli rušení GPS, ministr zahraničí mluví o hybridním útoku",
+    "kratkyTitulek": "Rušení GPS u Tartu",
+    "zeme": "Estonsko",
+    "kodZeme": "EE",
+    "kategorie": [
+      "infrastruktura",
+      "hybridni"
+    ],
+    "datumUdalosti": "2024-04-29T00:00:00Z",
+    "datumZjisteni": "2024-04-29T00:00:00Z",
+    "aktualizovano": "2026-09-06T00:00:00Z",
+    "zavaznost": "Y3",
+    "jistota": "vysoka",
+    "stav": "bez-vysetrovani",
+    "atribuce": "nepotvrzena",
+    "fakta": [
+      "Finnair, jediná zahraniční aerolinka létající do Tartu, přerušil od 29. dubna do 31. května 2024 denní spoj poté, co se dva lety musely kvůli rušení družicové navigace vrátit do Helsinek.",
+      "Estonský ministr zahraničí Margus Tsahkna označil rušení za hybridní útok Ruska; letiště zavádělo navigaci nezávislou na GNSS."
+    ],
+    "neznameho": [
+      "Formální atribuce s důkazy nebyla zveřejněna; rušení v regionu se od roku 2022 přičítá Rusku."
+    ],
+    "vyznam": "Rušení navigace jako trvalý hybridní tlak s přímým dopadem na civilní dopravu členské země NATO.",
+    "eskalacniSpousteče": [],
+    "deeskalacniSignaly": [],
+    "zdroje": [
+      {
+        "nazev": "ERR — Finnair suspends flights to Tartu for 1 month to seek GPS jamming solution",
+        "url": "https://news.err.ee/1609328058/finnair-suspends-flights-to-tartu-for-1-month-to-seek-gps-jamming-solution",
+        "typ": "media",
+        "publikovano": "2024-04-29T00:00:00Z",
+        "primarni": false,
+        "jazyk": "en"
+      },
+      {
+        "nazev": "GPS World — Finnair cancels flights amid increased GNSS jamming",
+        "url": "https://www.gpsworld.com/finnair-cancels-flights-amid-increased-gnss-jamming/",
+        "typ": "media",
+        "publikovano": "2024-04-30T00:00:00Z",
+        "primarni": false,
+        "jazyk": "en"
+      }
+    ],
+    "souvisejici": [],
+    "historie": [
+      {
+        "kdy": "2024-04-29T00:00:00Z",
+        "text": "Přerušení spoje Helsinky–Tartu.",
+        "novySignal": true
+      }
+    ],
+    "novy": false,
+    "zapocitanoTyden": "2024-04-29",
+    "aiZpracovano": true,
+    "lidskyOvereno": true,
+    "archivniZaznam": false,
+    "historicky": true,
+    "druh": "pripad",
+    "puvodce": "rusko"
+  },
+  {
+    "id": "h40",
+    "slug": "rumunsko-dron-2025",
+    "titulek": "Rumunsko: ruský dron narušil na 50 minut vzdušný prostor NATO u Tulcey, vzlétly F-16",
+    "kratkyTitulek": "Ruský dron nad Rumunskem",
+    "zeme": "Rumunsko",
+    "kodZeme": "RO",
+    "kategorie": [
+      "drony",
+      "nato",
+      "rusko"
+    ],
+    "datumUdalosti": "2025-09-13T00:00:00Z",
+    "datumZjisteni": "2025-09-13T00:00:00Z",
+    "aktualizovano": "2026-09-06T00:00:00Z",
+    "zavaznost": "O1",
+    "jistota": "potvrzeno",
+    "stav": "bez-vysetrovani",
+    "atribuce": "oficialni",
+    "fakta": [
+      "13. září 2025 během ruského útoku na ukrajinské dunajské přístavy vstoupil ruský dron do rumunského vzdušného prostoru; radar ho zachytil v 18:23 a dvě F-16 z Fetești ho sledovaly, dokud nezmizel asi 20 km od Chilia Veche.",
+      "Podle rumunského ministerstva zahraničí dron narušil vzdušný prostor asi 50 minut; obyvatelé severu okresu Tulcea dostali varování RO-Alert."
+    ],
+    "neznameho": [
+      "Zda dron dopadl na rumunské území, nebylo v době zprávy potvrzeno."
+    ],
+    "vyznam": "Třetí den po polském incidentu další narušení vzdušného prostoru NATO ruským dronem; potvrzuje vzorec, ne ojedinělost.",
+    "eskalacniSpousteče": [],
+    "deeskalacniSignaly": [],
+    "zdroje": [
+      {
+        "nazev": "CNBC — Drone breaches Romanian airspace during Russian attack on neighboring Ukraine",
+        "url": "https://www.cnbc.com/amp/2025/09/14/drone-breaches-romanian-airspace-during-russian-attack-on-ukraine.html",
+        "typ": "media",
+        "publikovano": "2025-09-14T00:00:00Z",
+        "primarni": false,
+        "jazyk": "en"
+      },
+      {
+        "nazev": "AeroTime — F-16s scrambled as Russian drone violates Romanian airspace",
+        "url": "https://www.aerotime.aero/articles/nato-f16-romania-russian-drone",
+        "typ": "media",
+        "publikovano": "2025-09-14T00:00:00Z",
+        "primarni": false,
+        "jazyk": "en"
+      },
+      {
+        "nazev": "The Kyiv Independent — Romania scrambles F-16s as Russian drone crosses Danube border",
+        "url": "https://kyivindependent.com/romania-scrambles-f-16s-as-russian-drone-crosses-ukraines-danube-river-border/",
+        "typ": "media",
+        "publikovano": "2025-09-13T00:00:00Z",
+        "primarni": false,
+        "jazyk": "en"
+      }
+    ],
+    "souvisejici": [],
+    "historie": [
+      {
+        "kdy": "2025-09-13T00:00:00Z",
+        "text": "Narušení vzdušného prostoru, vzlet F-16.",
+        "novySignal": true
+      }
+    ],
+    "novy": false,
+    "zapocitanoTyden": "2025-09-13",
+    "aiZpracovano": true,
+    "lidskyOvereno": true,
+    "archivniZaznam": false,
+    "historicky": true,
+    "druh": "pripad",
+    "puvodce": "rusko"
+  },
+  {
+    "id": "h41",
+    "slug": "kodan-letiste-drony-2025",
+    "titulek": "Dánsko: velké neznámé drony zavřely letiště Kodaň na čtyři hodiny; premiérka mluví o útoku na infrastrukturu",
+    "kratkyTitulek": "Drony nad Kodaní",
+    "zeme": "Dánsko",
+    "kodZeme": "DK",
+    "kategorie": [
+      "drony",
+      "infrastruktura",
+      "hybridni"
+    ],
+    "datumUdalosti": "2025-09-22T00:00:00Z",
+    "datumZjisteni": "2025-09-23T00:00:00Z",
+    "aktualizovano": "2026-09-06T00:00:00Z",
+    "zavaznost": "O1",
+    "jistota": "vysoka",
+    "stav": "probiha",
+    "atribuce": "vysetrovana",
+    "fakta": [
+      "Večer 22. září 2025 bylo kvůli dvěma až třem velkým neidentifikovaným dronům na téměř čtyři hodiny uzavřeno letiště Kodaň; asi 15 letů bylo odkloněno.",
+      "Premiérka Mette Frederiksenová označila událost za vážný útok na dánskou kritickou infrastrukturu; Rusko bylo podle úřadů podezřelé, původce nebyl určen. Dánsko následně dočasně zakázalo civilní lety dronů."
+    ],
+    "neznameho": [
+      "Provozovatel dronů nebyl zjištěn."
+    ],
+    "vyznam": "Začátek série uzavírek evropských letišť kvůli dronům na podzim 2025; dopad na civilní provoz bez potvrzeného pachatele.",
+    "eskalacniSpousteče": [],
+    "deeskalacniSignaly": [],
+    "zdroje": [
+      {
+        "nazev": "Al Jazeera — Denmark reports 'hybrid attack' as drones shutter major airport",
+        "url": "https://www.aljazeera.com/news/2025/9/25/denmark-shuts-second-airport-in-a-week-more-unidentified-drones-spotted",
+        "typ": "media",
+        "publikovano": "2025-09-25T00:00:00Z",
+        "primarni": false,
+        "jazyk": "en"
+      },
+      {
+        "nazev": "CNN — Travel disruption for thousands after mystery drones closed two of Scandinavia's busiest airports",
+        "url": "https://www.cnn.com/2025/09/22/europe/copenhagen-oslo-airport-closed-drones-int-latam",
+        "typ": "media",
+        "publikovano": "2025-09-22T00:00:00Z",
+        "primarni": false,
+        "jazyk": "en"
+      },
+      {
+        "nazev": "Euronews — Flights halted after drone sightings at Copenhagen airport",
+        "url": "https://www.euronews.com/2025/09/22/flights-halted-after-drone-sightings-at-copenhagen-airport",
+        "typ": "media",
+        "publikovano": "2025-09-22T00:00:00Z",
+        "primarni": false,
+        "jazyk": "en"
+      }
+    ],
+    "souvisejici": [],
+    "historie": [
+      {
+        "kdy": "2025-09-22T00:00:00Z",
+        "text": "Uzavření letiště.",
+        "novySignal": true
+      },
+      {
+        "kdy": "2025-09-28T00:00:00Z",
+        "text": "Dočasný zákaz civilních letů dronů v Dánsku.",
+        "novySignal": true
+      }
+    ],
+    "novy": false,
+    "zapocitanoTyden": "2025-09-23",
+    "aiZpracovano": true,
+    "lidskyOvereno": true,
+    "archivniZaznam": false,
+    "historicky": true,
+    "druh": "pripad",
+    "puvodce": "neznamy"
+  },
+  {
+    "id": "h42",
+    "slug": "oslo-letiste-drony-2025",
+    "titulek": "Norsko: letiště Oslo-Gardermoen zavřeno kvůli dronům ve stejnou noc jako Kodaň",
+    "kratkyTitulek": "Drony nad Oslem",
+    "zeme": "Norsko",
+    "kodZeme": "NO",
+    "kategorie": [
+      "drony",
+      "infrastruktura"
+    ],
+    "datumUdalosti": "2025-09-22T00:00:00Z",
+    "datumZjisteni": "2025-09-23T00:00:00Z",
+    "aktualizovano": "2026-09-06T00:00:00Z",
+    "zavaznost": "Y3",
+    "jistota": "vysoka",
+    "stav": "probiha",
+    "atribuce": "neznama",
+    "fakta": [
+      "V noci z 22. na 23. září 2025 uzavřelo letiště Oslo-Gardermoen po opakovaném zpozorování dronů vzdušný prostor zhruba na čtyři hodiny; přílety byly odkloněny, provoz se obnovil kolem třetí hodiny ráno."
+    ],
+    "neznameho": [
+      "Původ dronů nebyl zjištěn."
+    ],
+    "vyznam": "Souběh s Kodaní ve stejnou noc naznačuje koordinaci, ta ale nebyla prokázána.",
+    "eskalacniSpousteče": [],
+    "deeskalacniSignaly": [],
+    "zdroje": [
+      {
+        "nazev": "CNN — Travel disruption for thousands after mystery drones closed two of Scandinavia's busiest airports",
+        "url": "https://www.cnn.com/2025/09/22/europe/copenhagen-oslo-airport-closed-drones-int-latam",
+        "typ": "media",
+        "publikovano": "2025-09-22T00:00:00Z",
+        "primarni": false,
+        "jazyk": "en"
+      },
+      {
+        "nazev": "The Jerusalem Post — Oslo airport shuts runway after Gardermoen drone sighting",
+        "url": "https://www.jpost.com/travel/article-882984",
+        "typ": "media",
+        "publikovano": "2025-09-23T00:00:00Z",
+        "primarni": false,
+        "jazyk": "en"
+      }
+    ],
+    "souvisejici": [],
+    "historie": [
+      {
+        "kdy": "2025-09-22T00:00:00Z",
+        "text": "Uzavření vzdušného prostoru letiště.",
+        "novySignal": true
+      }
+    ],
+    "novy": false,
+    "zapocitanoTyden": "2025-09-23",
+    "aiZpracovano": true,
+    "lidskyOvereno": true,
+    "archivniZaznam": false,
+    "historicky": true,
+    "druh": "pripad",
+    "puvodce": "neznamy"
+  },
+  {
+    "id": "h43",
+    "slug": "mnichov-letiste-drony-2025",
+    "titulek": "Německo: letiště Mnichov dvakrát za dva dny zastavilo provoz kvůli dronům, tisíce cestujících",
+    "kratkyTitulek": "Drony nad Mnichovem",
+    "zeme": "Německo",
+    "kodZeme": "DE",
+    "kategorie": [
+      "drony",
+      "infrastruktura"
+    ],
+    "datumUdalosti": "2025-10-02T00:00:00Z",
+    "datumZjisteni": "2025-10-04T00:00:00Z",
+    "aktualizovano": "2026-09-06T00:00:00Z",
+    "zavaznost": "O1",
+    "jistota": "vysoka",
+    "stav": "probiha",
+    "atribuce": "neznama",
+    "fakta": [
+      "Večer 2. října 2025 řízení letového provozu DFS po hlášení dronů omezilo a poté zastavilo provoz letiště Mnichov; 17 letů bylo zrušeno, 15 odkloněno, dotčeno asi 3 000 cestujících.",
+      "3. října se uzavírka opakovala; postiženo bylo asi 6 500 cestujících, 23 letů odkloněno a 58 zrušeno nebo zpožděno."
+    ],
+    "neznameho": [
+      "Úřady nebyly schopny určit, kdo drony provozoval."
+    ],
+    "vyznam": "Opakované zásahy do provozu jednoho z největších letišť v Evropě během dvou dnů; dopad na běžný život bez potvrzeného pachatele.",
+    "eskalacniSpousteče": [],
+    "deeskalacniSignaly": [],
+    "zdroje": [
+      {
+        "nazev": "CNN — Germany's Munich Airport closes twice in two days over 'unconfirmed drone sightings'",
+        "url": "https://www.cnn.com/2025/10/02/europe/munich-airport-closed-drone-sighting-intl-hnk",
+        "typ": "media",
+        "publikovano": "2025-10-03T00:00:00Z",
+        "primarni": false,
+        "jazyk": "en"
+      },
+      {
+        "nazev": "Al Jazeera — Munich airport resumes operations after more drone sightings halted flights",
+        "url": "https://www.aljazeera.com/news/2025/10/4/munich-airport-resumes-operations-after-more-drone-sightings-halted-flights",
+        "typ": "media",
+        "publikovano": "2025-10-04T00:00:00Z",
+        "primarni": false,
+        "jazyk": "en"
+      }
+    ],
+    "souvisejici": [],
+    "historie": [
+      {
+        "kdy": "2025-10-02T00:00:00Z",
+        "text": "První uzavírka.",
+        "novySignal": true
+      },
+      {
+        "kdy": "2025-10-03T00:00:00Z",
+        "text": "Druhá uzavírka.",
+        "novySignal": true
+      }
+    ],
+    "novy": false,
+    "zapocitanoTyden": "2025-10-04",
+    "aiZpracovano": true,
+    "lidskyOvereno": true,
+    "archivniZaznam": false,
+    "historicky": true,
+    "druh": "pripad",
+    "puvodce": "neznamy"
   }
 ]

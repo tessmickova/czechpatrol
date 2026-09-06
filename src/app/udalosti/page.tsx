@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { UdalostiKlient } from "@/components/udalosti-klient";
-import { incidenty, nepotvrzene } from "@/lib/data";
+import { incidenty, kandidati, nepotvrzene } from "@/lib/data";
 
 export const metadata: Metadata = {
   title: "Události",
@@ -17,7 +17,7 @@ export default function Udalosti() {
           i když o ní vyjde více článků. Co se nepotvrdilo nebo bylo vyvráceno, je tu také, ale do počtů nevstupuje.
         </p>
       </div>
-      <UdalostiKlient zaznamy={incidenty()} neprosle={nepotvrzene()} />
+      <UdalostiKlient zaznamy={incidenty()} neprosle={nepotvrzene()} kandidati={kandidati()} />
     </div>
   );
 }

@@ -74,5 +74,33 @@
         "jazyk": "en"
       }
     ]
+  },
+  {
+    "id": "n-vezhen-2025",
+    "nazev": "Lotyšsko: podezření na sabotáž kabelu lodí Vezhen se nepotvrdilo",
+    "zeme": "Lotyšsko",
+    "kodZeme": "LV",
+    "datum": "2025-01-26T00:00:00Z",
+    "stav": "vyvraceno",
+    "puvodne": "Po poškození optického kabelu mezi Lotyšskem a Švédskem 26. ledna 2025 zadrželo Švédsko loď Vezhen pod maltskou vlajkou a zahájilo vyšetřování pro těžkou sabotáž.",
+    "overeni": "Švédské státní zastupitelství 3. února 2025 uvedlo, že loď kabel poškodila, ale podle expertiz, zajištěného vybavení a výpovědí s jistotou nešlo o sabotáž: kombinace špatného počasí, vadného vybavení a špatného vedení lodi. Loď byla propuštěna.",
+    "zdroje": [
+      {
+        "nazev": "LSM — Sweden arrests ship suspected of damaging Latvian underwater cable",
+        "url": "https://eng.lsm.lv/article/society/defense/27.01.2025-sweden-arrests-ship-suspected-of-damaging-latvian-underwater-cable.a585249/",
+        "typ": "media",
+        "publikovano": "2025-01-27T00:00:00Z",
+        "primarni": false,
+        "jazyk": "en"
+      },
+      {
+        "nazev": "Euronews — Sweden releases Bulgarian ship after ruling out sabotage in Baltic Sea cable rupture",
+        "url": "https://www.euronews.com/2025/02/03/sweden-releases-bulgarian-ship-after-ruling-out-sabotage-in-baltic-sea-cable-rupture",
+        "typ": "media",
+        "publikovano": "2025-02-03T00:00:00Z",
+        "primarni": false,
+        "jazyk": "en"
+      }
+    ]
   }
 ]

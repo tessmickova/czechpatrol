@@ -5,6 +5,7 @@ import { rozhodni, type Stazeno } from "./rozhodovani";
 import { ZDROJE } from "./zdroje";
 import type { Nalez, VysledekZdroje } from "./typy";
 import { lidskaZmena } from "../src/lib/archiv-text";
+import { sbirejUdalosti } from "./udalosti";
 
 /**
  * Hodinový sběr.
@@ -150,6 +151,16 @@ async function main() {
   if (potvrzenoProvoz > 0) provoz.overeno = TED;
   zapisJson("provoz.json", provoz);
 
+  /* ---------- automatický sběr událostí ---------- */
+  if (!jenProvoz) {
+    try {
+      const u = await sbirejUdalosti();
+      console.log(`[sber] události: nových kandidátů ${u.novych}, ve frontě ${u.celkem}` + (u.nedostupne.length ? `, nedostupné: ${u.nedostupne.join("; ")}` : ""));
+    } catch (e) {
+      console.log(`[sber] sběr událostí selhal, ostatní pokračuje: ${e instanceof Error ? e.message : e}`);
+    }
+  }
+
   /* ---------- archiv v čase ---------- */
   zapisSnimek();
 
@@ -178,7 +189,7 @@ async function main() {
     console.log("[sber] nedostupné zdroje:");
     for (const n of nedostupne) console.log(`  - ${n.klic}: ${n.chyba ?? "neznámá chyba"}`);
   }
-  console.log("[sber] hotovo. Automat nic nezveřejnil — publikuje se až po lidské kontrole.");
+  console.log("[sber] hotovo. Kandidáti jsou na webu označení jako neověření; do počtů vstupují až po lidské kontrole.");
 }
 
 const NAZVY_UROVNI: Record<string, string> = {

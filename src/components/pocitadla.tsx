@@ -1,6 +1,6 @@
 import { druh, kdyZjisteno, type Zaznam } from "@/lib/agregace";
 import { datumCasPraha, datumPraha } from "@/lib/cas";
-import type { Nepotvrzene } from "@/lib/typy";
+import type { Kandidat, Nepotvrzene } from "@/lib/typy";
 import { sklon } from "./zeme";
 
 /*
@@ -14,7 +14,7 @@ function denPraha(iso: string) {
   return new Intl.DateTimeFormat("en-CA", { timeZone: "Europe/Prague", year: "numeric", month: "2-digit", day: "2-digit" }).format(new Date(iso));
 }
 
-export function Pocitadla({ vse, neprosle, ted = Date.now() }: { vse: Zaznam[]; neprosle: Nepotvrzene[]; ted?: number }) {
+export function Pocitadla({ vse, neprosle, kandidati = [], ted = Date.now() }: { vse: Zaznam[]; neprosle: Nepotvrzene[]; kandidati?: Kandidat[]; ted?: number }) {
   const dnes = denPraha(new Date(ted).toISOString());
   const p = vse.filter((i) => druh(i) === "pripad");
   const rok = dnes.slice(0, 4);
@@ -27,6 +27,7 @@ export function Pocitadla({ vse, neprosle, ted = Date.now() }: { vse: Zaznam[]; 
   ];
   const posledniPridan = vse.map((i) => i.aktualizovano).sort().at(-1) ?? null;
   const zbytek = vse.length - p.length;
+  const automaticky24 = kandidati.filter((k) => ted - new Date(k.zachyceno).getTime() <= 86_400_000).length;
   return (
     <section aria-label="Započítávání" className="rounded-[12px] border border-linka2 bg-plocha px-3 py-2.5">
       <div className="flex flex-wrap items-center gap-x-4 gap-y-1">
@@ -39,6 +40,7 @@ export function Pocitadla({ vse, neprosle, ted = Date.now() }: { vse: Zaznam[]; 
         ))}
         <span className="ml-auto text-[11.5px] text-tlum2">
           + {zbytek} {sklon(zbytek, "aktualizace, opatření nebo reakce", "aktualizace, opatření a reakce", "aktualizací, opatření a reakcí")} · {neprosle.length} neprošlo ověřením
+          · <span className="text-akcent">{kandidati.length} automaticky zachycených čeká na ověření{automaticky24 ? ` (${automaticky24} za 24 h)` : ""}</span>
           {posledniPridan && <> · poslední zápis {datumCasPraha(posledniPridan)}</>} · přepočet po každém sběru, stav k {datumPraha(new Date(ted).toISOString())}
         </span>
       </div>

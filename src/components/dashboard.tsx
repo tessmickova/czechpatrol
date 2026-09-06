@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { druh, kdyZjisteno, pachatelPotvrzen, podlePuvodce, podleZemi, posledniZmeny, pripady, uredniZdroj, vyber, type Zaznam } from "@/lib/agregace";
 import { cerstvost, datumCasPraha, datumPraha, stariSlovy } from "@/lib/cas";
-import type { CelkovyStav, NatoPolozka, Nepotvrzene, PravniPolozka, ProvozniPolozka, TydenniHodnoceni, Uroven, Watchlist } from "@/lib/typy";
+import type { CelkovyStav, Kandidat, NatoPolozka, Nepotvrzene, PravniPolozka, ProvozniPolozka, TydenniHodnoceni, Uroven, Watchlist } from "@/lib/typy";
 import { PASMA, UROVNE } from "@/lib/skala";
 import { Ikona, type NazevIkony } from "./ikony";
 import { HeroDashboard } from "./hero-dashboard";
@@ -138,10 +138,10 @@ function Pruh({ nazev, n, max, barva, odkaz }: { nazev: React.ReactNode; n: numb
 }
 
 export function Dashboard({
-  stav, pravni, natoPolozky, provozPolozky, overeno, vse, neprosle, tydny, watchlist, cr, hybridni, obcane,
+  stav, pravni, natoPolozky, provozPolozky, overeno, vse, neprosle, kandidati, tydny, watchlist, cr, hybridni, obcane,
 }: {
   stav: CelkovyStav; pravni: PravniPolozka[]; natoPolozky: NatoPolozka[]; provozPolozky: ProvozniPolozka[];
-  overeno: string | null; vse: Zaznam[]; neprosle: Nepotvrzene[]; tydny: TydenniHodnoceni[]; watchlist: Watchlist;
+  overeno: string | null; vse: Zaznam[]; neprosle: Nepotvrzene[]; kandidati: Kandidat[]; tydny: TydenniHodnoceni[]; watchlist: Watchlist;
   cr: Uroven | null; hybridni: Uroven | null; obcane: { uroven: Uroven; popis: string; neovereno: number };
 }) {
   const platiCr = pravni.filter((p) => p.plati === true);
@@ -255,13 +255,13 @@ export function Dashboard({
       </div>
 
       {/* 4 — započítávání a úplný seznam */}
-      <div className="mt-3"><Pocitadla vse={vse} neprosle={neprosle} /></div>
+      <div className="mt-3"><Pocitadla vse={vse} neprosle={neprosle} kandidati={kandidati} /></div>
       <section id="zaznamy" aria-label="Všechny záznamy" className="mt-3 scroll-mt-[64px] rounded-[12px] border border-linka2 bg-plocha p-3 sm:p-4">
         <div className="mb-2 flex flex-wrap items-center justify-between gap-2">
           <span className="stitek">Všechny záznamy od roku 2014 · případy, aktualizace, opatření, reakce i to, co neprošlo</span>
           <Link href="/udalosti/" className="text-[12px] text-akcent hover:text-akcent-svetla">samostatná stránka →</Link>
         </div>
-        <UdalostiKlient zaznamy={vse} neprosle={neprosle} />
+        <UdalostiKlient zaznamy={vse} neprosle={neprosle} kandidati={kandidati} />
       </section>
 
       {/* 5 — sledovat a partneři */}

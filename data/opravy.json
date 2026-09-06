@@ -62,5 +62,13 @@
     "druh": "metodika",
     "co": "Web na různých místech uváděl různé celkové počty (58 vs. 61 záznamů), protože každá část počítala jinak.",
     "proc": "Všechny počty jdou z jednoho modulu a u každého čísla je napsáno, z jaké množiny je (případy, aktualizace, opatření, reakce). Do počtu případů vstupují jen skutečné události."
+  },
+  {
+    "id": "o-2026-09-06-doplneni-2014-2025",
+    "datum": "2026-09-06",
+    "tykaSe": "historicke-zaznamy",
+    "druh": "doplneni-zdroju",
+    "co": "Osa 2014–2025 měla mezery: chyběly mimo jiné únos Estona Kohvera, otrava Gebreva, kyberútok na ukrajinskou síť 2015, pokus o převrat v Černé Hoře, průnik do e-mailů MZV, sabotáž německé železnice 2022, krize na polsko-běloruské hranici, uzavření finské hranice, žhářství v Leytonu, zatčení v Bayreuthu, rušení GPS u Tartu a podzimní dronové uzavírky letišť 2025.",
+    "proc": "Doplněno 15 záznamů se zdroji a jeden vyvrácený případ (loď Vezhen). Každý má datum události i datum zjištění, závažnost a jistotu podle metodiky; kde chybí soudní nebo úřední závěr, je atribuce vedena jako nepotvrzená nebo vyšetřovaná."
   }
 ]

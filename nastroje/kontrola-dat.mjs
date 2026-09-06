@@ -23,6 +23,7 @@ const opravy = cti("opravy.json");
 const pravni = cti("pravni-stav.json");
 const nato = cti("nato.json");
 const provoz = cti("provoz.json");
+const kandidati = fs.existsSync(path.join(koren, "data", "kandidati.json")) ? cti("kandidati.json") : [];
 
 const chyby = [];
 const varovani = [];
@@ -64,6 +65,18 @@ for (const o of opravy) {
   if (!platneDatum(o.datum)) chyby.push(`oprava ${o.id}: neplatné datum`);
 }
 
+// 2b. kandidáti: adresa, datum, žádná shoda s už zveřejněným záznamem
+const adresyZaznamu = new Set(incidenty.flatMap((i) => (i.zdroje ?? []).map((z) => z.url)));
+const idKandidatu = new Set();
+for (const k of kandidati) {
+  if (idKandidatu.has(k.id)) chyby.push(`kandidát ${k.id}: duplicitní id`);
+  idKandidatu.add(k.id);
+  if (!/^https?:\/\//.test(k.zdroj?.url ?? "")) chyby.push(`kandidát ${k.id}: neplatná adresa zdroje`);
+  if (!platneDatum(k.zachyceno)) chyby.push(`kandidát ${k.id}: neplatné datum zachycení`);
+  if (adresyZaznamu.has(k.zdroj?.url)) varovani.push(`kandidát ${k.id}: stejná adresa jako zveřejněný záznam — sběr ho příště odloží`);
+  if (k.stav !== "ceka") chyby.push(`kandidát ${k.id}: neznámý stav ${k.stav}`);
+}
+
 // 3. konzistence agregací: součet po zemích = celkem případů
 const pripady = incidenty.filter((i) => i.lidskyOvereno && druh(i) === "pripad");
 const poZemich = new Map();
@@ -82,7 +95,7 @@ for (const [nazev, sada] of [["právní stav", pravni], ["NATO", nato], ["provoz
 }
 
 // výstup
-const shrnuti = `záznamů ${incidenty.length} (případů ${pripady.length}, aktualizací ${incidenty.filter((i) => druh(i) === "aktualizace").length}, opatření ${incidenty.filter((i) => druh(i) === "opatreni").length}, reakcí ${incidenty.filter((i) => druh(i) === "reakce").length}), neprošlých ${nepotvrzene.length}, oprav ${opravy.length}`;
+const shrnuti = `záznamů ${incidenty.length} (případů ${pripady.length}, aktualizací ${incidenty.filter((i) => druh(i) === "aktualizace").length}, opatření ${incidenty.filter((i) => druh(i) === "opatreni").length}, reakcí ${incidenty.filter((i) => druh(i) === "reakce").length}), neprošlých ${nepotvrzene.length}, oprav ${opravy.length}, kandidátů ${kandidati.length}`;
 console.log(`Kontrola dat: ${shrnuti}`);
 for (const v of varovani) console.log(`  varování: ${v}`);
 for (const c of chyby) console.log(`  CHYBA: ${c}`);

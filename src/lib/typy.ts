@@ -348,3 +348,28 @@ export interface Oprava {
   co: string;
   proc: string;
 }
+
+/* ---------- automaticky zachycení kandidáti ---------- */
+
+/**
+ * Zpráva zachycená hodinovým sběrem. Ukazuje se hned, výslovně jako
+ * neověřená; do počtů, hodnocení ani RSS nevstupuje. Člověk ji buď
+ * převezme do záznamů, nebo ji sběr po třech týdnech sám odloží.
+ */
+export interface Kandidat {
+  id: string;
+  zachyceno: string;
+  publikovano: string | null;
+  zdroj: { nazev: string; url: string; typ: TypZdroje; primarni: boolean };
+  titulek: string;
+  titulekPuvodni: string;
+  shrnuti: string;
+  kodZeme: string | null;
+  zeme: string | null;
+  kategorie: string[];
+  druhOdhad: "pripad" | "opatreni" | "reakce" | "neurceno";
+  /** „pravidla“ = jen klíčová slova; „model“ = přečteno a přeloženo jazykovým modelem. */
+  klasifikace: "pravidla" | "model";
+  shody: string[];
+  stav: "ceka";
+}

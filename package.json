@@ -21,9 +21,11 @@
     "nahled:ukazka": "NEXT_PUBLIC_REZIM=ukazka next build && NEXT_PUBLIC_REZIM=ukazka node nastroje/nahled-artefakt.mjs"
   },
   "dependencies": {
+    "@anthropic-ai/sdk": "^0.124.0",
     "next": "15.5.4",
     "react": "19.1.1",
-    "react-dom": "19.1.1"
+    "react-dom": "19.1.1",
+    "zod": "^4.5.4"
   },
   "devDependencies": {
     "@tailwindcss/postcss": "4.1.13",
@@ -31,6 +33,7 @@
     "@types/react": "19.1.13",
     "@types/react-dom": "19.1.9",
     "esbuild": "^0.25.9",
+    "playwright": "^1.63.0",
     "tailwindcss": "4.1.13",
     "tsx": "4.20.5",
     "typescript": "5.9.2",

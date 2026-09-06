@@ -7,7 +7,7 @@ import { datumPraha } from "@/lib/cas";
 import { KATEGORIE, PORADI_KATEGORII } from "@/lib/kategorie";
 import { zaznamejUdalost } from "@/lib/mereni";
 import { JISTOTY, PASMA, tokeny, UROVNE } from "@/lib/skala";
-import type { DruhZaznamu, Kategorie, Nepotvrzene, Pasmo } from "@/lib/typy";
+import type { DruhZaznamu, Kandidat, Kategorie, Nepotvrzene, Pasmo } from "@/lib/typy";
 import { ctiDotaz, sledujDotaz, zapisDotaz } from "@/lib/url-stav";
 import { DetailObsah, HlavickaDetailu } from "./detail-obsah";
 import { Ikona } from "./ikony";
@@ -38,6 +38,7 @@ const OVERENI = [
   { klic: "uredni", nazev: "Jen s úředním zdrojem" },
   { klic: "potvrzeny-pachatel", nazev: "Jen s potvrzeným pachatelem" },
   { klic: "neprosle", nazev: "Nepotvrzené a vyvrácené" },
+  { klic: "automaticke", nazev: "Automaticky zachycené" },
 ] as const;
 type Overeni = (typeof OVERENI)[number]["klic"];
 
@@ -147,9 +148,10 @@ function Cip({ aktivni, onClick, children, title }: { aktivni: boolean; onClick:
 
 type Radek =
   | { typ: "zaznam"; kdy: string; z: Zaznam }
-  | { typ: "neproslo"; kdy: string; n: Nepotvrzene };
+  | { typ: "neproslo"; kdy: string; n: Nepotvrzene }
+  | { typ: "kandidat"; kdy: string; k: Kandidat };
 
-export function UdalostiKlient({ zaznamy, neprosle }: { zaznamy: Zaznam[]; neprosle: Nepotvrzene[] }) {
+export function UdalostiKlient({ zaznamy, neprosle, kandidati = [] }: { zaznamy: Zaznam[]; neprosle: Nepotvrzene[]; kandidati?: Kandidat[] }) {
   const [f, zmen] = useFiltrVAdrese();
   const siroky = useSiroky();
   const [pokrocile, setPokrocile] = useState(false);
@@ -177,7 +179,7 @@ export function UdalostiKlient({ zaznamy, neprosle }: { zaznamy: Zaznam[]; nepro
       if (f.obdobi === "letos" && new Date(kdy).getUTCFullYear() !== rok) return false;
       return true;
     };
-    const a: Radek[] = f.overeni === "neprosle" ? [] : zaznamy
+    const a: Radek[] = f.overeni === "neprosle" || f.overeni === "automaticke" ? [] : zaznamy
       .filter((z) => {
         if (f.zeme && z.kodZeme !== f.zeme) return false;
         if (f.tema && !z.kategorie.includes(f.tema)) return false;
@@ -195,8 +197,11 @@ export function UdalostiKlient({ zaznamy, neprosle }: { zaznamy: Zaznam[]; nepro
     const b: Radek[] = f.overeni === "vse" || f.overeni === "neprosle" ? neprosle
       .filter((n) => (!f.zeme || n.kodZeme === f.zeme) && !f.tema && !f.druhy.length && !f.zavaznost.length && vObdobi(n.datum))
       .map((n) => ({ typ: "neproslo", kdy: n.datum, n })) : [];
-    return [...a, ...b].sort((x, y) => y.kdy.localeCompare(x.kdy));
-  }, [zaznamy, neprosle, f]);
+    const c: Radek[] = f.overeni === "vse" || f.overeni === "automaticke" ? kandidati
+      .filter((k) => (!f.zeme || k.kodZeme === f.zeme) && (!f.tema || k.kategorie.includes(f.tema)) && !f.druhy.length && !f.zavaznost.length && vObdobi(k.publikovano ?? k.zachyceno))
+      .map((k) => ({ typ: "kandidat", kdy: k.publikovano ?? k.zachyceno, k })) : [];
+    return [...a, ...b, ...c].sort((x, y) => y.kdy.localeCompare(x.kdy));
+  }, [zaznamy, neprosle, kandidati, f]);
 
   useEffect(() => { setLimit(10); }, [f.zeme, f.tema, f.obdobi, f.overeni, f.druhy, f.zavaznost]);
 
@@ -226,6 +231,7 @@ export function UdalostiKlient({ zaznamy, neprosle }: { zaznamy: Zaznam[]; nepro
 
   const zobrazene = vysledek.slice(0, limit);
   const pripadu = vysledek.filter((r) => r.typ === "zaznam" && druh(r.z) === "pripad").length;
+  const automatickych = vysledek.filter((r) => r.typ === "kandidat").length;
 
   return (
     <div className={`grid gap-8 ${siroky && otevreny ? "lg:grid-cols-[minmax(0,1fr)_minmax(380px,44%)]" : ""}`}>
@@ -305,7 +311,7 @@ export function UdalostiKlient({ zaznamy, neprosle }: { zaznamy: Zaznam[]; nepro
         <p aria-live="polite" className="mt-3 mb-2 text-[13px] text-tlum">
           {vysledek.length === 0
             ? "Žádný záznam neodpovídá filtru."
-            : `${vysledek.length} ${sklon(vysledek.length, "záznam", "záznamy", "záznamů")} · z toho ${pripadu} ${sklon(pripadu, "případ", "případy", "případů")} · řazeno podle data zjištění`}
+            : `${vysledek.length} ${sklon(vysledek.length, "záznam", "záznamy", "záznamů")} · z toho ${pripadu} ${sklon(pripadu, "případ", "případy", "případů")}${automatickych ? ` · ${automatickych} automaticky zachycených čeká na ověření` : ""} · řazeno podle data zjištění`}
         </p>
 
         {vysledek.length ? (
@@ -314,7 +320,7 @@ export function UdalostiKlient({ zaznamy, neprosle }: { zaznamy: Zaznam[]; nepro
               const rok = r.kdy.slice(0, 4);
               const novyRok = i === 0 || zobrazene[i - 1].kdy.slice(0, 4) !== rok;
               return (
-                <li key={r.typ === "zaznam" ? r.z.id : `n-${r.n.id}`} className="contents">
+                <li key={r.typ === "zaznam" ? r.z.id : r.typ === "neproslo" ? `n-${r.n.id}` : r.k.id} className="contents">
                   {novyRok && (
                     <div className="mt-3 mb-1 flex items-center gap-3">
                       <span className="cislice text-[15px] font-bold text-inkoust">{rok}</span>
@@ -323,7 +329,7 @@ export function UdalostiKlient({ zaznamy, neprosle }: { zaznamy: Zaznam[]; nepro
                   )}
                   {r.typ === "zaznam"
                     ? <RadekZaznamu z={r.z} otevreny={otevreny?.slug === r.z.slug} onOtevri={() => (siroky ? otevri(r.z.slug) : undefined)} siroky={siroky} />
-                    : <RadekNeprosle n={r.n} />}
+                    : r.typ === "neproslo" ? <RadekNeprosle n={r.n} /> : <RadekKandidata k={r.k} />}
                 </li>
               );
             })}
@@ -421,6 +427,35 @@ function RadekNeprosle({ n }: { n: Nepotvrzene }) {
         <div><div className="stitek mb-1">Co ověření ukázalo</div><p className="text-inkoust">{n.overeni}</p></div>
         <p className="text-[12.5px] text-tlum2">Do žádného počtu ani hodnocení nevstupuje.</p>
         <SeznamZdroju zdroje={n.zdroje} husty />
+      </div>
+    </details>
+  );
+}
+
+/** Automaticky zachycená zpráva. Vypadá jinak než záznam: čárkovaně, bez závažnosti, s odkazem na zdroj. */
+function RadekKandidata({ k }: { k: Kandidat }) {
+  return (
+    <details className="group border-b border-dashed border-linka">
+      <summary className="flex cursor-pointer items-start gap-3 py-2.5 hover:bg-plocha">
+        <span className="cislice w-[64px] shrink-0 pt-[3px] text-[12.5px] text-tlum">{datumPraha(k.publikovano ?? k.zachyceno).replace(/ \d{4}$/, "")}</span>
+        <span aria-hidden className="mt-[7px] h-[10px] w-[10px] shrink-0 rounded-[2px] border border-dashed border-akcent" />
+        <span className="min-w-0 flex-1">
+          <span className="flex flex-wrap items-center gap-x-2 text-[12px] text-tlum">
+            {k.kodZeme ? <><Vlajka kod={k.kodZeme} /> <span>{k.kodZeme === "CZ" ? "Česko" : k.zeme}</span></> : <span>země neurčena</span>}
+            <span aria-hidden>·</span>
+            <span className="font-semibold text-akcent">automaticky zachyceno · čeká na ověření</span>
+            {k.klasifikace === "model" && <span className="text-tlum2">· přeloženo modelem</span>}
+          </span>
+          <span className="block text-[15px] font-semibold leading-snug text-inkoust">{k.titulek}</span>
+          <span className="mt-0.5 block text-[12px] text-tlum2">zdroj: {k.zdroj.nazev}{k.zdroj.primarni ? " (úřední)" : ""}{k.kategorie.length ? ` · ${k.kategorie.map((x) => KATEGORIE[x as Kategorie]?.nazev ?? x).join(", ")}` : ""}</span>
+        </span>
+        <Ikona nazev="dolu" velikost={13} tah={2} trida="mt-2 shrink-0 text-tlum2 transition-transform group-open:rotate-180" />
+      </summary>
+      <div className="space-y-2 pb-4 pl-[88px] text-[14px] leading-relaxed">
+        {k.shrnuti && <p className="text-tlum">{k.shrnuti}</p>}
+        {k.titulek !== k.titulekPuvodni && <p className="text-[12.5px] text-tlum2">Původní titulek: {k.titulekPuvodni}</p>}
+        <p><a href={k.zdroj.url} target="_blank" rel="noopener noreferrer" className="odkaz break-all">{k.zdroj.url}</a></p>
+        <p className="text-[12.5px] text-tlum2">Zachyceno {datumPraha(k.zachyceno)} hodinovým sběrem. Není to ověřený záznam: závažnost ani jistota nejsou stanovené a do počtů nevstupuje. Po lidské kontrole se buď stane záznamem, nebo po třech týdnech zmizí.</p>
       </div>
     </details>
   );

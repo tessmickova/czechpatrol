@@ -1,6 +1,6 @@
 import { JE_UKAZKA } from "@/config/web";
 import type {
-  Archiv, CelkovyStav, HybridniTlak, Incident, Kategorie, NatoPolozka, Oprava, PravniStav,
+  Archiv, CelkovyStav, HybridniTlak, Incident, Kandidat, Kategorie, NatoPolozka, Oprava, PravniStav,
   Nepotvrzene, Provoz, Puvodce, RuskoStav, TydenniHodnoceni, Uroven, Watchlist,
 } from "./typy";
 import { PORADI_KATEGORII } from "./kategorie";
@@ -19,6 +19,7 @@ import ostryArchiv from "../../data/historie.json";
 import ostreNepotvrzene from "../../data/nepotvrzeno.json";
 import mesiceData from "../../data/mesice.json";
 import ostreOpravy from "../../data/opravy.json";
+import ostriKandidati from "../../data/kandidati.json";
 
 import ukazkoveIncidenty from "../../data/ukazka/incidenty.json";
 import ukazkovyStav from "../../data/ukazka/stav.json";
@@ -339,6 +340,14 @@ export function dnyBezZmeny(): { dnu: number; odZacatkuArchivu: boolean } | null
   // Pod jeden celý den nemá smysl o „dnech beze změny“ mluvit.
   if (dnu < 1) return null;
   return { dnu, odZacatkuArchivu: !zmena };
+}
+
+/**
+ * Automaticky zachycené zprávy čekající na ověření. Nejnovější první.
+ * Nikdy se nemíchají do incidentů — jsou to kandidáti, ne záznamy.
+ */
+export function kandidati(): Kandidat[] {
+  return jako<Kandidat[]>(ostriKandidati).slice().sort((a, b) => (b.publikovano ?? b.zachyceno).localeCompare(a.publikovano ?? a.zachyceno));
 }
 
 /** Veřejné opravy, nejnovější první. */
