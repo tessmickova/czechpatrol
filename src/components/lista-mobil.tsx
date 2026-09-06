@@ -17,7 +17,7 @@ export function ListaMobil() {
   const cesta = usePathname();
   return (
     <nav aria-label="Hlavní (mobil)" // Spodní lišta je plná, ne skleněná — text pod ní by prosvítal a mátl.
-      className="neni-tisk fixed inset-x-0 bottom-0 z-[60] border-t border-linka bg-plocha pb-[env(safe-area-inset-bottom)] shadow-[0_-8px_24px_rgb(20_20_15/0.08)] md:hidden">
+      className="neni-tisk fixed inset-x-0 bottom-0 z-[60] border-t border-linka bg-plocha pb-[env(safe-area-inset-bottom)] shadow-[0_-8px_24px_rgb(0_0_0/0.5)] md:hidden">
       <ul className="grid grid-cols-5">
         {POLOZKY.map((p) => {
           const aktivni = p.href === "/" ? cesta === "/" : cesta.startsWith(p.href);

@@ -291,7 +291,7 @@ function Nastaveni({
               <div className="flex items-center justify-between gap-3">
                 <span className="text-[15px] font-bold">Telegram</span>
                 {ucet.telegram ? (
-                  <span className="stitek-tmavy rounded-full border border-[#2e7d53]/40 bg-[#2e7d53]/10 px-2 py-1 text-[#256b45]">propojeno</span>
+                  <span className="stitek-tmavy rounded-full border border-[#5cbf8a]/40 bg-[#5cbf8a]/10 px-2 py-1 text-[#8fd6ae]">propojeno</span>
                 ) : !dostupne.telegram ? (
                   <span className="stitek-tmavy rounded-full border border-linka px-2 py-1 text-tlum2">připravujeme</span>
                 ) : null}
@@ -322,7 +322,7 @@ function Nastaveni({
               <div className="flex items-center justify-between gap-3">
                 <span className="text-[15px] font-bold">WhatsApp</span>
                 {ucet.whatsapp ? (
-                  <span className="stitek-tmavy rounded-full border border-[#2e7d53]/40 bg-[#2e7d53]/10 px-2 py-1 text-[#256b45]">propojeno</span>
+                  <span className="stitek-tmavy rounded-full border border-[#5cbf8a]/40 bg-[#5cbf8a]/10 px-2 py-1 text-[#8fd6ae]">propojeno</span>
                 ) : !dostupne.whatsapp ? (
                   <span className="stitek-tmavy rounded-full border border-linka px-2 py-1 text-tlum2">připravujeme</span>
                 ) : null}
@@ -347,8 +347,8 @@ function Nastaveni({
           </div>
         </Karta>
 
-        <Karta className="border-[#c1272d]/30 p-6">
-          <div className="stitek mb-2 !text-[#a01c22]">Smazání</div>
+        <Karta className="border-[#e8484f]/30 p-6">
+          <div className="stitek mb-2 !text-[#f2848a]">Smazání</div>
           <p className="text-[14px] leading-relaxed text-tlum">
             Smaže účet, passkeye, propojené kanály i nastavení. Hned a bez zálohy.
           </p>

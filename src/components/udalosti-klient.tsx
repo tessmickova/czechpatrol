@@ -366,7 +366,7 @@ export function UdalostiKlient({ zaznamy, neprosle, kandidati = [] }: { zaznamy:
 }
 
 function Znacka({ hodnota, dobra }: { hodnota: string; dobra: boolean | null }) {
-  const tridy = dobra === true ? "text-[#256b45]" : dobra === false ? "text-jantar" : "text-tlum2";
+  const tridy = dobra === true ? "text-[#8fd6ae]" : dobra === false ? "text-jantar" : "text-tlum2";
   return <span className={`text-[12px] font-semibold ${tridy}`}>{hodnota}</span>;
 }
 
@@ -416,7 +416,7 @@ function RadekNeprosle({ n }: { n: Nepotvrzene }) {
         <span className="min-w-0 flex-1">
           <span className="flex flex-wrap items-center gap-x-2 text-[12px] text-tlum">
             <Vlajka kod={n.kodZeme} /> <span>{n.kodZeme === "CZ" ? "Česko" : n.zeme}</span> <span aria-hidden>·</span>
-            <span className="font-semibold text-[#256b45]">{n.stav === "vyvraceno" ? "vyvráceno" : "nepotvrzeno"}</span>
+            <span className="font-semibold text-[#8fd6ae]">{n.stav === "vyvraceno" ? "vyvráceno" : "nepotvrzeno"}</span>
           </span>
           <span className="block text-[15px] font-semibold leading-snug text-tlum">{n.nazev}</span>
         </span>

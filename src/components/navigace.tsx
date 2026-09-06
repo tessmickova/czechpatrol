@@ -25,7 +25,7 @@ export function Navigace() {
     <header className="neni-tisk sticky top-0 z-50 px-3 pt-3 sm:px-4">
       <div className="sklo mx-auto flex min-h-[56px] max-w-[1200px] flex-wrap items-center gap-x-4 gap-y-2 rounded-full px-3 py-2 sm:px-4">
         <Link href="/" className="mr-auto flex shrink-0 items-center" aria-label={`${WEB.nazev} — přehled`}>
-          <Logo velikost={34} pismo={19} />
+          <Logo velikost={34} pismo={19} tmave />
         </Link>
 
         <nav aria-label="Hlavní" className="hidden items-center gap-1 md:flex">
@@ -35,7 +35,7 @@ export function Navigace() {
               href={o.href}
               aria-current={aktivni(o.href) ? "page" : undefined}
               className={`rounded-full px-3.5 py-2 text-[13px] font-semibold uppercase tracking-[0.06em] transition-colors ${
-                aktivni(o.href) ? "bg-[rgb(255_255_255/0.85)] text-inkoust shadow-[0_2px_8px_rgb(20_20_15/0.06)]" : "text-tlum hover:bg-[rgb(255_255_255/0.6)] hover:text-inkoust"
+                aktivni(o.href) ? "bg-[rgb(255_255_255/0.12)] text-inkoust" : "text-tlum hover:bg-[rgb(255_255_255/0.07)] hover:text-inkoust"
               }`}
               style={{ fontFamily: "var(--font-mono)" }}
             >
@@ -47,7 +47,8 @@ export function Navigace() {
         <div className="flex items-center gap-2">
           <Link
             href="/podporit/"
-            className="hidden rounded-full bg-noc px-5 py-2.5 text-[12px] font-semibold uppercase tracking-[0.06em] text-noc-text transition-colors hover:bg-akcent md:inline-block"
+            // Jediná plná plocha v hlavičce: na tmavém podkladu papír, po najetí červená.
+            className="hidden rounded-full bg-inkoust px-5 py-2.5 text-[12px] font-semibold uppercase tracking-[0.06em] text-papir transition-colors hover:bg-akcent hover:text-papir md:inline-block"
             style={{ fontFamily: "var(--font-mono)" }}
           >
             Podpořit
@@ -55,7 +56,7 @@ export function Navigace() {
           <button
             type="button"
             onClick={otevriPanel}
-            className="grid h-11 w-11 place-items-center rounded-full text-tlum transition-colors hover:bg-[rgb(255_255_255/0.7)] hover:text-inkoust"
+            className="grid h-11 w-11 place-items-center rounded-full text-tlum transition-colors hover:bg-[rgb(255_255_255/0.08)] hover:text-inkoust"
           >
             <span className="sr-only">Menu</span>
             <Ikona nazev="menu" velikost={20} tah={1.8} />

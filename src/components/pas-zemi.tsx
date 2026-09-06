@@ -43,7 +43,7 @@ export function PasZemi({ vse, ted = Date.now() }: { vse: Zaznam[]; ted?: number
         <span className="font-semibold text-inkoust">{z.nazev}</span>
         <span className={`cislice text-[14px] font-bold ${t ? t.text : "text-tlum2"}`}>{z.pocet}</span>
         {z.vykricniky > 0 && (
-          <span aria-label={`${z.vykricniky === 3 ? "velmi vysoká" : z.vykricniky === 2 ? "vysoká" : "zvýšená"} aktivita`} className="flex gap-[1px] text-[#c1272d]">
+          <span aria-label={`${z.vykricniky === 3 ? "velmi vysoká" : z.vykricniky === 2 ? "vysoká" : "zvýšená"} aktivita`} className="flex gap-[1px] text-[#e8484f]">
             {Array.from({ length: z.vykricniky }, (_, i) => <Ikona key={i} nazev="vykricnik" velikost={12} tah={2.6} />)}
           </span>
         )}

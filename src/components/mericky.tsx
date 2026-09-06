@@ -39,9 +39,9 @@ export function ObloukovyMerak({
   });
 
   const t = uroven ? PASMA[UROVNE[uroven].pasmo] : null;
-  const barvaAktivni = t ? (naNoci ? t.plnaNoc : t.plna) : "#6f6c64";
-  // Prázdný díl oblouku na světlém papíru: patrný, ale nesmí soupeřit s barvou úrovně.
-  const barvaPrazdna = "rgba(20,20,15,0.1)";
+  const barvaAktivni = t ? (naNoci ? t.plnaNoc : t.plna) : "#9d9a92";
+  // Prázdný díl oblouku na tmavém podkladu: patrný, ale nesmí soupeřit s barvou úrovně.
+  const barvaPrazdna = "rgba(255,255,255,0.14)";
 
   return (
     <svg
@@ -67,9 +67,9 @@ export function ObloukovyMerak({
 
       {/* Krajní popisky rozsahu — bez nich by měřák neříkal, čeho je to škála. */}
       <text x={cx - r - 6} y={cy + 17} textAnchor="start" fontSize="10" fontFamily="var(--font-mono)"
-        fill="#6f6c64" letterSpacing="0.9">NÍZKÁ</text>
+        fill="#9d9a92" letterSpacing="0.9">NÍZKÁ</text>
       <text x={cx + r + 6} y={cy + 17} textAnchor="end" fontSize="10" fontFamily="var(--font-mono)"
-        fill="#6f6c64" letterSpacing="0.9">VÁŽNÁ</text>
+        fill="#9d9a92" letterSpacing="0.9">VÁŽNÁ</text>
 
       {/* Hodnota patří dovnitř přístroje — pokud ji nenese okolí. */}
       {!skrytPopisek && (
@@ -87,8 +87,8 @@ export function ObloukovyMerak({
               ? PASMA[UROVNE[uroven].pasmo].plnaNoc
               : PASMA[UROVNE[uroven].pasmo].plna
             : naNoci
-              ? "#6f6c64"
-              : "#6f6c64"
+              ? "#9d9a92"
+              : "#9d9a92"
         }
       >
         {popisek ?? (uroven ? UROVNE[uroven].nazev : "Zatím nestanoveno")}
@@ -149,22 +149,22 @@ export function RadarTlaku({ tlak, velikost = 300, okraj = 72 }: { tlak: Hybridn
           key={p}
           points={osy.map((_, i) => bodOsy(i, p).map((x) => x.toFixed(1)).join(",")).join(" ")}
           fill="none"
-          stroke="rgba(20,20,15,0.1)"
+          stroke="rgba(255,255,255,0.12)"
           strokeWidth="1"
         />
       ))}
       {osy.map((_, i) => {
         const [x, y] = bodOsy(i, 1);
-        return <line key={i} x1={cx} y1={cy} x2={x} y2={y} stroke="rgba(20,20,15,0.1)" strokeWidth="1" />;
+        return <line key={i} x1={cx} y1={cy} x2={x} y2={y} stroke="rgba(255,255,255,0.12)" strokeWidth="1" />;
       })}
 
       {maUdaje && (
         <>
-          <polygon points={body.join(" ")} fill="rgba(193,39,45,0.12)" stroke="#c1272d" strokeWidth="1.6" />
+          <polygon points={body.join(" ")} fill="rgba(232,72,79,0.16)" stroke="#e8484f" strokeWidth="1.6" />
           {osy.map((o, i) => {
             const [x, y] = bodOsy(i, Math.max(podily[i], 0.02));
-            const barva = o.uroven ? PASMA[UROVNE[o.uroven].pasmo].plnaNoc : "#6f6c64";
-            return <circle key={i} cx={x} cy={y} r="3.4" fill={barva} stroke="#fffefb" strokeWidth="1.4" />;
+            const barva = o.uroven ? PASMA[UROVNE[o.uroven].pasmo].plnaNoc : "#9d9a92";
+            return <circle key={i} cx={x} cy={y} r="3.4" fill={barva} stroke="#0d0d0a" strokeWidth="1.4" />;
           })}
         </>
       )}
@@ -178,7 +178,7 @@ export function RadarTlaku({ tlak, velikost = 300, okraj = 72 }: { tlak: Hybridn
             y={y + 3.5}
             textAnchor={Math.abs(x - cx) < 8 ? "middle" : x > cx ? "start" : "end"}
             fontSize="11"
-            fill="#6f6c64"
+            fill="#9d9a92"
             fontFamily="var(--font-mono)"
             letterSpacing="0.6"
           >

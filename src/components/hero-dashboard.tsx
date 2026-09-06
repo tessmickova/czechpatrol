@@ -48,8 +48,8 @@ export function HeroDashboard({
             <div className="stitek">Celková míra nebezpečí · Evropa</div>
             <p className={`text-[34px] font-bold leading-none sm:text-[40px] ${t ? t.text : "text-tlum"}`}>{d ? d.nazev : "Nestanoveno"}</p>
             <p className="mt-1.5 flex flex-wrap items-center gap-x-3 text-[12.5px] text-tlum">
-              {stav.trend === "nahoru" && <span className="flex items-center gap-1 font-semibold text-[#a8401a]"><Ikona nazev="nahoru" velikost={12} tah={2.2} /> zhoršení za 7 dní</span>}
-              {stav.trend === "dolu" && <span className="flex items-center gap-1 font-semibold text-[#256b45]"><Ikona nazev="dolu" velikost={12} tah={2.2} /> zlepšení za 7 dní</span>}
+              {stav.trend === "nahoru" && <span className="flex items-center gap-1 font-semibold text-[#f0996e]"><Ikona nazev="nahoru" velikost={12} tah={2.2} /> zhoršení za 7 dní</span>}
+              {stav.trend === "dolu" && <span className="flex items-center gap-1 font-semibold text-[#8fd6ae]"><Ikona nazev="dolu" velikost={12} tah={2.2} /> zlepšení za 7 dní</span>}
               {stav.trend === "beze-zmeny" && <span>beze změny 7 dní</span>}
               <span>{overeno ? `ověřeno ${datumCasPraha(overeno)}` : "ověření neproběhlo"}</span>
             </p>

@@ -41,7 +41,7 @@ export default function SoukromiStranka() {
       <Obsah>
         <div className="grid gap-4 md:grid-cols-3">
           <Karta odstin="zelena" className="p-5">
-            <div className="stitek mb-2 !text-[#256b45]">Čtení webu</div>
+            <div className="stitek mb-2 !text-[#8fd6ae]">Čtení webu</div>
             <p className="text-[15px] leading-relaxed text-tlum">Žádné sledovací cookies, žádná analytika třetích stran, žádný účet. Nic se neukládá k vám.</p>
           </Karta>
           <Karta odstin="modra" className="p-5">

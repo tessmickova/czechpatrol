@@ -25,9 +25,9 @@ import { sklon, Vlajka } from "./zeme";
 type Ton = "klid" | "pozor" | "plati" | "nevime";
 
 const TON: Record<Ton, { dlazdice: string; tecka: string; slovo: string }> = {
-  klid: { dlazdice: "border-linka2 bg-plocha", tecka: "bg-[#2e7d53]", slovo: "text-[#256b45]" },
-  pozor: { dlazdice: "border-[#b8860b]/40 bg-[#b8860b]/10", tecka: "bg-[#b8860b]", slovo: "text-[#8a6d0b]" },
-  plati: { dlazdice: "border-[#c1272d]/50 bg-[#c1272d]/12", tecka: "bg-[#c1272d]", slovo: "text-[#a01c22]" },
+  klid: { dlazdice: "border-linka2 bg-plocha", tecka: "bg-[#5cbf8a]", slovo: "text-[#8fd6ae]" },
+  pozor: { dlazdice: "border-[#d9b24c]/40 bg-[#d9b24c]/10", tecka: "bg-[#d9b24c]", slovo: "text-[#e6c977]" },
+  plati: { dlazdice: "border-[#e8484f]/50 bg-[#e8484f]/12", tecka: "bg-[#e8484f]", slovo: "text-[#f2848a]" },
   nevime: { dlazdice: "border-dashed border-linka bg-transparent", tecka: "bg-tlum2", slovo: "text-tlum2" },
 };
 
@@ -71,7 +71,7 @@ function dlazdiceProvoz(p: ProvozniPolozka): Dlazdice {
 
 function Stari({ overeno }: { overeno: string | null }) {
   const c = cerstvost(overeno);
-  const barva = c === "cerstve" ? "text-tlum2" : c === "nezname" ? "text-tlum2" : "text-[#a3541a]";
+  const barva = c === "cerstve" ? "text-tlum2" : c === "nezname" ? "text-tlum2" : "text-[#eaa96b]";
   return <span className={`cislice text-[10.5px] ${barva}`} title={overeno ? datumCasPraha(overeno) : "nikdy neověřeno"}>{overeno ? stariSlovy(overeno) : "neověřeno"}</span>;
 }
 
@@ -244,7 +244,7 @@ export function Dashboard({
                 <span className="w-[118px] shrink-0 truncate text-[12.5px] text-inkoust">{s.nazev}</span>
                 <span className="h-[8px] flex-1 overflow-hidden rounded-[2px] bg-linka2">
                   <span className="block h-full bg-tlum2/70" style={{ width: `${(s.pocet / maxPuv) * 100}%` }}>
-                    <span className="block h-full bg-[#d1521f]" style={{ width: `${s.pocet ? (s.potvrzeno / s.pocet) * 100 : 0}%` }} />
+                    <span className="block h-full bg-[#e8763f]" style={{ width: `${s.pocet ? (s.potvrzeno / s.pocet) * 100 : 0}%` }} />
                   </span>
                 </span>
                 <span className="cislice w-12 shrink-0 text-right text-[13px] text-inkoust"><b className="font-bold">{s.potvrzeno}</b><span className="text-tlum2"> / {s.pocet}</span></span>

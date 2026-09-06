@@ -14,7 +14,7 @@ const BARVY: Record<Znacka, string> = {
 };
 
 export function ZnackaKanalu({ znacka, velikost = 28, tlumena = false }: { znacka: Znacka; velikost?: number; tlumena?: boolean }) {
-  const b = tlumena ? "#6f6c64" : BARVY[znacka];
+  const b = tlumena ? "#9d9a92" : BARVY[znacka];
   const spolecne = { width: velikost, height: velikost, viewBox: "0 0 24 24", "aria-hidden": true as const };
   switch (znacka) {
     case "telegram":
