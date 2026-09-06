@@ -94,8 +94,9 @@ export function PostranniPanel() {
         aria-modal="true"
         aria-label="Váš CzechPatrol"
         className={`fixed inset-y-0 right-0 z-[80] flex w-full max-w-[420px] flex-col border-l border-linka bg-papir shadow-[-30px_0_80px_-30px_rgb(0_0_0/0.9)] transition-transform duration-300 ${
-          otevreno ? "translate-x-0" : "translate-x-full"
+          otevreno ? "translate-x-0" : "invisible translate-x-full"
         }`}
+        aria-hidden={!otevreno}
       >
         <div className="flex items-center justify-between border-b border-linka px-5 py-4">
           <div>

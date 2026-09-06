@@ -194,6 +194,17 @@ html, body { overflow-x: clip; }
 .napoveda-obal:hover > .napoveda,
 .napoveda-obal:focus-within > .napoveda { opacity: 1; visibility: visible; transform: translateY(0); }
 .napoveda-obal:has(> .napoveda-vpravo) > .napoveda-vpravo { left: auto; right: 0; }
+/* Skrytá nápověda nesmí zabírat místo v rozvržení — jinak roztahuje stránku vpravo. */
+.napoveda { display: none; }
+.napoveda-obal:hover > .napoveda,
+.napoveda-obal:focus-within > .napoveda { display: block; }
+/* Na úzkém displeji se nápověda ukotví ke spodnímu okraji, aby se vždy vešla. */
+@media (max-width: 640px) {
+  .napoveda, .napoveda-obal:has(> .napoveda-vpravo) > .napoveda-vpravo {
+    position: fixed; top: auto; left: 0.75rem; right: 0.75rem; width: auto;
+    bottom: calc(64px + env(safe-area-inset-bottom));
+  }
+}
 
 /* ---------- ovládání ---------- */
 

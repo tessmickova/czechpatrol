@@ -10,11 +10,11 @@ import type { Jistota, Uroven } from "@/lib/typy";
  * dá dostat tabulátorem a obsah se otevře přes :focus-within.
  */
 export function Napoveda({
-  children, popis, vpravo = false, label = "Co to znamená?",
-}: { children: ReactNode; popis: ReactNode; vpravo?: boolean; label?: string }) {
+  children, popis, vpravo = false, label = "Co to znamená?", cele = false,
+}: { children: ReactNode; popis: ReactNode; vpravo?: boolean; label?: string; /** Spouštěč vyplní celou šířku (dlaždice). */ cele?: boolean }) {
   return (
-    <span className="napoveda-obal">
-      <button type="button" className="text-left" aria-label={label}>
+    <span className={`napoveda-obal ${cele ? "w-full" : ""}`}>
+      <button type="button" className={`text-left ${cele ? "w-full" : ""}`} aria-label={label}>
         {children}
       </button>
       <span role="tooltip" className={`napoveda ${vpravo ? "napoveda-vpravo" : ""}`}>
