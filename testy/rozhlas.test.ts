@@ -63,7 +63,7 @@ describe("rozhlas", () => {
     const v = vyberZmenyStavu(archiv, { zaznamy: {}, snimky: {}, prvniBeh: "x" });
     expect(v).toHaveLength(1);
     expect(v[0].zmeny).toHaveLength(2);
-    expect(sestavZmenuStavu(v[0].snimek, v[0].zmeny)).toContain("Změna oficiálního stavu");
+    expect(sestavZmenuStavu(v[0].snimek, v[0].zmeny)).toContain("Změna úředního stavu");
   });
 
   it("pruh puntíků: tolik puntíků, kolik je čeho ve zprávě, od nejnaléhavějšího", () => {
@@ -81,14 +81,14 @@ describe("rozhlas", () => {
     const doma = zaznam({ kodZeme: "CZ", zeme: "Česko" });
     const opatreniDoma = zaznam({ kodZeme: "CZ", zeme: "Česko", druh: "opatreni", puvodce: undefined, kratkyTitulek: "ČR: zákaz vstupu" });
     const venku = zaznam({ kodZeme: "PL", zeme: "Polsko" });
-    expect(klicovaVeta(venku)).toBe("Stalo se v Polsku, ne v Česku. Žádné nové oficiální opatření pro Česko z toho neplyne.");
-    expect(klicovaVeta(doma)).toContain("Týká se přímo Česka.");
-    expect(klicovaVeta(opatreniDoma)).toBe("Platí v Česku: zákaz vstupu. Co přesně a od kdy, je v přehledu opatření.");
+    expect(klicovaVeta(venku)).toBe("Událost nastala v Polsku, nikoli v České republice. Pro Českou republiku z toho neplyne žádné nové úřední opatření.");
+    expect(klicovaVeta(doma)).toContain("Záznam se týká území České republiky.");
+    expect(klicovaVeta(opatreniDoma)).toBe("V České republice bylo přijato úřední opatření: zákaz vstupu. Rozsah a platnost uvádí přehled opatření.");
     for (const z of [doma, opatreniDoma, venku]) {
       expect(sestavZpravu(z)).toContain(`<b>${klicovaVeta(z)}</b>`);
     }
-    expect(sestavZmenuStavu({ kdy: "2026-09-06T00:00:00Z" }, ["NATO — clanek-4: NE → ANO"])).toContain("<b>Mění se to, co oficiálně platí.");
-    expect(sestavTest(venku)).toContain("<b>Kanál je propojený.");
+    expect(sestavZmenuStavu({ kdy: "2026-09-06T00:00:00Z" }, ["NATO — clanek-4: NE → ANO"])).toContain("<b>Mění se rozsah toho, co úředně platí.");
+    expect(sestavTest(venku)).toContain("<b>Kanál je funkční.");
   });
   it("zpráva je členěná: puntík a krátký titulek, co se stalo, co nevíme, hodnocení, odkaz", () => {
     const z = sestavZpravu(zaznam({ kratkyTitulek: "Krátce", neznameho: ["Nevíme kdo."] }));
@@ -97,8 +97,10 @@ describe("rozhlas", () => {
     expect(radky[1]).toBe("<b>Krátce</b>");
     expect(radky[2]).toBe("Německo · případ · 4. 9. 2026");
     expect(z).toContain("Co se stalo\n• Titulek &lt;b&gt;");
-    expect(z).toContain("Co zatím nevíme\n• Nevíme kdo.");
-    expect(z.trimEnd().endsWith("https://czechpatrol.pages.dev/incident/x/")).toBe(true);
+    expect(z).toContain("Co nebylo potvrzeno\n• Nevíme kdo.");
+    // Patička dělá ze zprávy citovatelný dokument.
+    expect(z).toContain("Úplný záznam a zdroje: https://czechpatrol.pages.dev/incident/x/");
+    expect(z.trimEnd().endsWith("CzechPatrol · záznam x · aktualizováno 4. 9. 2026")).toBe(true);
   });
   it("souhrn: pruh a legenda nahoře, nejdřív opatření a české záznamy", () => {
     const polozky = [
@@ -109,10 +111,10 @@ describe("rozhlas", () => {
     const { kusy, razene } = sestavSouhrn(polozky, { ted: new Date("2026-09-06T17:00:00Z").getTime() });
     expect(razene.map((x: { i: { id: string } }) => x.i.id)).toEqual(["b", "c", "a"]);
     // Pruh je barevná škála (nejzávažnější vlevo), pořadí položek pod ním je podle naléhavosti pro čtenáře.
-    expect(kusy[0].startsWith("🔴🟡📋\n<b>CzechPatrol · souhrn 6. 9. 2026</b>")).toBe(true);
+    expect(kusy[0].startsWith("🔴🟡📋\n<b>CzechPatrol · denní přehled 6. 9. 2026</b>")).toBe(true);
     expect(kusy[0]).toContain("3 nové záznamy · nejvýše 9 z 10");
     expect(kusy[0]).toContain("<i>🔴 1× vážné · 🟡 1× střední závažnost · 📋 1× opatření</i>");
-    expect(kusy[0]).toContain("<b>Platí v Česku: opatření.");
+    expect(kusy[0]).toContain("<b>V České republice bylo přijato úřední opatření: opatření.");
   });
   it("dlouhý souhrn se rozdělí, každý kus zůstane pod limitem Telegramu", () => {
     const polozky = Array.from({ length: 8 }, (_, n) => ({ i: zaznam({ id: `i${n}`, slug: `i${n}` }), aktualizace: false }));
@@ -167,7 +169,7 @@ describe("rozhlas", () => {
     for (const t of ["První fakt.", "Druhý fakt.", "Třetí fakt.", "Nevíme kdo.", "Nevíme proč."]) {
       expect(z).toContain(`• ${t}`);
     }
-    expect(z).toContain("Proč to sledujeme — hodnocení projektu, ne fakt\nHodnocení projektu k případu.");
+    expect(z).toContain("Hodnocení CzechPatrol (nejde o zjištěný fakt)\nHodnocení projektu k případu.");
     expect(z).toContain("Stav: vyšetřování pokračuje");
   });
 
@@ -192,10 +194,10 @@ describe("rozhlas", () => {
   it("bez úředního zdroje to zpráva přizná, ale mluví jen o svých odkazech", () => {
     const bezUradu = sestavZdroje(zaznam({ zdroje: [zdroj({ nazev: "Deník" })] })).join("\n");
     expect(bezUradu).toContain("Zdroje (1): úřady 0 · média 1");
-    expect(bezUradu).toContain("Přímý odkaz na úřední oznámení zatím nemáme");
+    expect(bezUradu).toContain("Mezi zdroji není přímý odkaz na úřední oznámení");
     const sUradem = sestavZdroje(zaznam({ zdroje: [zdroj({ nazev: "Vláda", typ: "primary" })] })).join("\n");
-    expect(sUradem).not.toContain("zatím nemáme");
-    expect(sestavZdroje(zaznam({ zdroje: [] }))[0]).toContain("zatím žádný odkaz");
+    expect(sUradem).not.toContain("není přímý odkaz");
+    expect(sestavZdroje(zaznam({ zdroje: [] }))[0]).toContain("žádný odkaz");
   });
 
   it("v souhrnu je u položky počet zdrojů, ale výpis ne — souhrn je přehled", () => {

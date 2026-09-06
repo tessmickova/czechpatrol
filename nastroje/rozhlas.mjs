@@ -157,19 +157,19 @@ export function vaha(i) {
 export function klicovaVeta(i) {
   const d = druh(i);
   const nato = i.kodZeme === "EU";
-  const nic = "Žádné nové oficiální opatření pro Česko z toho neplyne.";
+  // „z toho“ sedí za všechny předchozí věty (událost, záznam, opatření) — jiné zájmeno by některou z nich rozbilo.
+  const nic = "Pro Českou republiku z toho neplyne žádné nové úřední opatření.";
   if (d === "opatreni" && seTykaCr(i)) {
-    // Název už začíná „ČR:“ — ve větě „Platí v Česku“ by se to opakovalo.
     const nazev = zkrat(String(i.kratkyTitulek || i.titulek).replace(/^(ČR|Česko|Česká republika)\s*[:–-]\s*/i, ""), 90);
-    return `Platí v Česku: ${nazev}. Co přesně a od kdy, je v přehledu opatření.`;
+    return `V České republice bylo přijato úřední opatření: ${nazev}. Rozsah a platnost uvádí přehled opatření.`;
   }
   const kde = nato ? "v rámci NATO" : V_ZEMI[i.kodZeme];
-  if (d === "opatreni") return `Opatření platí ${kde ?? `mimo Česko (${i.zeme})`}, ne v Česku. ${nic}`;
-  if (seTykaCr(i)) return `Týká se přímo Česka. ${nic}`;
-  if (nato) return `Týká se NATO jako celku. ${nic}`;
+  if (d === "opatreni") return `Opatření platí ${kde ?? `mimo Českou republiku (${i.zeme})`}, nikoli v České republice. ${nic}`;
+  if (seTykaCr(i)) return `Záznam se týká území České republiky. ${nic}`;
+  if (nato) return `Záznam se týká NATO jako celku. ${nic}`;
   const misto = kde
-    ? `${d === "reakce" ? "Týká se dění" : "Stalo se"} ${kde}, ne v Česku.`
-    : `Stalo se mimo Česko (${i.zeme}).`;
+    ? `${d === "reakce" ? "Jde o vyjádření k dění" : "Událost nastala"} ${kde}, nikoli v České republice.`
+    : `Událost nastala mimo Českou republiku (${i.zeme}).`;
   return `${misto} ${nic}`;
 }
 
@@ -188,14 +188,14 @@ export function pocetZdroju(i) {
 export function sestavZdroje(i) {
   const zdroje = (i.zdroje ?? []).filter((z) => z.url && /^https?:\/\//.test(z.url));
   const { celkem, pocty, uredni } = pocetZdroju(i);
-  if (!celkem) return ["Zdroje: zatím žádný odkaz — záznam je označený jako nedoložený."];
+  if (!celkem) return ["Zdroje: žádný odkaz. Záznam je vedený jako nedoložený."];
   const prehled = SKUPINY_ZDROJU.filter((sk) => sk.typ === "primary" || pocty[sk.typ])
     .map((sk) => `${sk.slovo} ${pocty[sk.typ] ?? 0}`)
     .join(" · ");
   const radky = [`Zdroje (${celkem}): ${prehled}`];
-  // Věta mluví o našem seznamu odkazů, ne o světě: úřad mohl věc oznámit,
-  // jen na to zatím nemáme přímý odkaz. Zaměnit to by byla nepravda.
-  if (!uredni) radky.push("Přímý odkaz na úřední oznámení zatím nemáme — zdroje jsou zprostředkované.");
+  // Věta mluví o seznamu odkazů, ne o světě: úřad mohl věc oznámit, jen k tomu
+  // není přímý odkaz. Zaměnit obojí by byla nepravda.
+  if (!uredni) radky.push("Mezi zdroji není přímý odkaz na úřední oznámení; údaje pocházejí ze zprostředkovaných zdrojů.");
   for (const sk of SKUPINY_ZDROJU) {
     const skupina = zdroje.filter((z) => z.typ === sk.typ);
     if (!skupina.length) continue;
@@ -252,19 +252,21 @@ export function sestavZpravu(i, { aktualizace = false, souhrn = false } = {}) {
   for (const f of i.fakta ?? []) radky.push(`• ${esc(zkrat(f, 600))}`);
 
   if (i.neznameho?.length) {
-    radky.push("", "Co zatím nevíme");
+    radky.push("", "Co nebylo potvrzeno");
     for (const n of i.neznameho) radky.push(`• ${esc(zkrat(n, 400))}`);
   }
 
-  if (i.vyznam) radky.push("", "Proč to sledujeme — hodnocení projektu, ne fakt", esc(zkrat(i.vyznam, 600)));
+  if (i.vyznam) radky.push("", "Hodnocení CzechPatrol (nejde o zjištěný fakt)", esc(zkrat(i.vyznam, 600)));
 
   const stav = STAVY[i.stav];
   radky.push("", [jistota, pachatel, stav && stav !== "Neuvedeno" ? `Stav: ${stav.toLowerCase()}` : null].filter(Boolean).join(" · "));
 
   radky.push("", ...sestavZdroje(i));
 
-  radky.push("", `Celý záznam: ${odkaz}`);
-  if (d === "opatreni" || seTykaCr(i)) radky.push(`Co v Česku právě platí: ${WEB}/#opatreni`);
+  radky.push("", `Úplný záznam a zdroje: ${odkaz}`);
+  if (d === "opatreni" || seTykaCr(i)) radky.push(`Úřední opatření platná v ČR: ${WEB}/#opatreni`);
+  // Patička dělá ze zprávy citovatelný dokument: kdo ji vydal a pod jakým číslem.
+  radky.push(`CzechPatrol · záznam ${esc(i.slug)} · aktualizováno ${datumCz(i.aktualizovano ?? kdyZjisteno(i))}`);
   return radky.join("\n");
 }
 
@@ -291,9 +293,9 @@ export function klicovaVetaSouhrnu(zaznamy) {
   const ceske = zaznamy.find((i) => seTykaCr(i));
   if (ceske) {
     const nazev = zkrat(String(ceske.kratkyTitulek || ceske.titulek).replace(/^(ČR|Česko|Česká republika)\s*[:–-]\s*/i, ""), 90);
-    return `Přímo Česka se týká: ${nazev}. Žádné nové oficiální opatření z toho pro Česko neplyne.`;
+    return `Území České republiky se týká záznam: ${nazev}. Nové úřední opatření z něj neplyne.`;
   }
-  return "Žádný z dnešních záznamů nezakládá v Česku nové oficiální opatření. Co u nás platí, je v přehledu opatření.";
+  return "Žádný ze záznamů tohoto přehledu nezakládá v České republice nové úřední opatření.";
 }
 
 /**
@@ -310,7 +312,7 @@ export function sestavSouhrn(polozky, { ted = Date.now(), limit = 3500 } = {}) {
   const kusy = [];
   let akt = [
     pruhTecek(zaznamy),
-    `<b>CzechPatrol · souhrn ${datumCz(new Date(ted).toISOString())}</b>`,
+    `<b>CzechPatrol · denní přehled ${datumCz(new Date(ted).toISOString())}</b>`,
     `${pocet} ${slovo}${nejvyssi}`,
     `<i>${legendaTecek(zaznamy)}</i>`,
     "",
@@ -320,6 +322,7 @@ export function sestavSouhrn(polozky, { ted = Date.now(), limit = 3500 } = {}) {
     const z = sestavZpravu(p.i, { aktualizace: p.aktualizace, souhrn: true });
     if ((akt + "\n\n" + z).length > limit) { kusy.push(akt); akt = z; } else akt += "\n\n" + z;
   }
+  akt += `\n\nPřehled vydává CzechPatrol · ${WEB}/`;
   kusy.push(akt);
   return { kusy, razene };
 }
@@ -327,28 +330,28 @@ export function sestavSouhrn(polozky, { ted = Date.now(), limit = 3500 } = {}) {
 /** Zpráva o změně oficiálního stavu z archivu snímků. To nejzávažnější, co kanál posílá. */
 export function sestavZmenuStavu(snimek, zmeny) {
   return [
-    `📋 Změna oficiálního stavu`,
+    `📋 Změna úředního stavu`,
     `podle úředních zdrojů · ${datumCz(snimek.kdy)}`,
     "",
-    `<b>Mění se to, co oficiálně platí. Co je v platnosti právě teď, je v přehledu opatření.</b>`,
+    `<b>Mění se rozsah toho, co úředně platí. Aktuální stav uvádí přehled opatření.</b>`,
     "",
     "Co se změnilo",
     ...zmeny.map((z) => `• ${esc(z)}`),
     "",
-    "Co platí teď:",
-    `${WEB}/#opatreni`,
+    `Úřední opatření platná v ČR: ${WEB}/#opatreni`,
+    `CzechPatrol · stav k ${datumCz(snimek.kdy)}`,
   ].join("\n");
 }
 
 /** Testovací zpráva. S ukázkou skutečného formátu, aby bylo vidět, jak zprávy vypadají. */
 export function sestavTest(ukazka) {
   const radky = [
-    `🧪`,
-    `<b>Testovací zpráva CzechPatrol</b>`,
+    `🧪 Zkušební zpráva`,
+    `<b>CzechPatrol · ověření kanálu</b>`,
     "",
-    `<b>Kanál je propojený. Odsud budou chodit zprávy o ověřených záznamech, každá s odkazem na zdroje.</b>`,
+    `<b>Kanál je funkční. Zprávy o ověřených záznamech vycházejí odsud; každá uvádí zdroje a odkaz na úplný záznam.</b>`,
     "",
-    "Každá zpráva začíná barevným puntíkem a závažností číslem od 1 do 10. Číslo je jen jinak zapsaná táž úroveň jako na webu, ne pravděpodobnost. V souhrnu je nahoře tolik puntíků, kolik je čeho uvnitř.",
+    "Zpráva začíná barevným puntíkem a závažností číslem od 1 do 10. Číslo je jinak zapsaná táž úroveň jako na webu, nikoli pravděpodobnost.",
     `<i>${PORADI_TECEK.map((t) => `${t} ${POPIS_TECKY[t]}`).join(" · ")}</i>`,
   ];
   if (ukazka) radky.push("", "Ukázka formátu:", "", sestavZpravu(ukazka));
