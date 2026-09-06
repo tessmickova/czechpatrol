@@ -1,7 +1,7 @@
 import { JE_UKAZKA } from "@/config/web";
 import type {
   Archiv, CelkovyStav, HybridniTlak, Incident, Kandidat, Kategorie, NatoPolozka, Oprava, PravniStav,
-  Nepotvrzene, Provoz, Puvodce, RuskoStav, TydenniHodnoceni, Uroven, Watchlist,
+  Nepotvrzene, Provoz, Puvodce, RuskoStav, Svet, TydenniHodnoceni, Uroven, Watchlist,
 } from "./typy";
 import { PORADI_KATEGORII } from "./kategorie";
 import { UROVNE } from "./skala";
@@ -20,6 +20,7 @@ import ostreNepotvrzene from "../../data/nepotvrzeno.json";
 import mesiceData from "../../data/mesice.json";
 import ostreOpravy from "../../data/opravy.json";
 import ostriKandidati from "../../data/kandidati.json";
+import ostrySvet from "../../data/svet.json";
 
 import ukazkoveIncidenty from "../../data/ukazka/incidenty.json";
 import ukazkovyStav from "../../data/ukazka/stav.json";
@@ -348,6 +349,11 @@ export function dnyBezZmeny(): { dnu: number; odZacatkuArchivu: boolean } | null
  */
 export function kandidati(): Kandidat[] {
   return jako<Kandidat[]>(ostriKandidati).slice().sort((a, b) => (b.publikovano ?? b.zachyceno).localeCompare(a.publikovano ?? a.zachyceno));
+}
+
+/** Cíle mocností a míra jejich naplnění — analytická stránka, verzovaná a datovaná. */
+export function svet(): Svet {
+  return jako<Svet>(ostrySvet);
 }
 
 /** Veřejné opravy, nejnovější první. */

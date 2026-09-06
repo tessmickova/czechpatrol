@@ -24,6 +24,7 @@ const pravni = cti("pravni-stav.json");
 const nato = cti("nato.json");
 const provoz = cti("provoz.json");
 const kandidati = fs.existsSync(path.join(koren, "data", "kandidati.json")) ? cti("kandidati.json") : [];
+const svet = fs.existsSync(path.join(koren, "data", "svet.json")) ? cti("svet.json") : null;
 
 const chyby = [];
 const varovani = [];
@@ -75,6 +76,23 @@ for (const k of kandidati) {
   if (!platneDatum(k.zachyceno)) chyby.push(`kandidát ${k.id}: neplatné datum zachycení`);
   if (adresyZaznamu.has(k.zdroj?.url)) varovani.push(`kandidát ${k.id}: stejná adresa jako zveřejněný záznam — sběr ho příště odloží`);
   if (k.stav !== "ceka") chyby.push(`kandidát ${k.id}: neznámý stav ${k.stav}`);
+}
+
+// 2c. svět: každé tvrzení odkazuje na existující zdroj, postoje mají správnou délku
+if (svet) {
+  if (!platneDatum(svet.aktualizovano)) chyby.push("svet: neplatné datum aktualizace");
+  for (const a of svet.aktori) {
+    const n = a.zdroje.length;
+    for (const z of a.zdroje) if (!/^https?:\/\//.test(z.url)) chyby.push(`svet/${a.klic}: neplatná adresa zdroje „${z.nazev}“`);
+    for (const t of [...a.deklarovane, ...a.postup]) {
+      if (!t.zdroje.length) chyby.push(`svet/${a.klic}: tvrzení bez zdroje: ${t.text.slice(0, 50)}`);
+      for (const i of t.zdroje) if (i < 0 || i >= n) chyby.push(`svet/${a.klic}: odkaz na neexistující zdroj [${i + 1}]`);
+    }
+    if (a.priblizeni.stupen < 0 || a.priblizeni.stupen >= svet.stupne.length) chyby.push(`svet/${a.klic}: stupeň mimo stupnici`);
+    if ((svet.stret.postoje[a.klic] ?? []).length !== svet.stret.otazky.length) chyby.push(`svet/${a.klic}: počet postojů neodpovídá počtu otázek`);
+  }
+  const hSvet = (Date.now() - new Date(svet.aktualizovano).getTime()) / 3_600_000;
+  if (hSvet > 14 * 24) varovani.push(`svet: hodnocení staré ${Math.round(hSvet / 24)} dní`);
 }
 
 // 3. konzistence agregací: součet po zemích = celkem případů

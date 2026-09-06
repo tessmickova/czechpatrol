@@ -11,6 +11,7 @@ export const HLAVNI = [
   { href: "/", label: "Přehled" },
   { href: "/udalosti/", label: "Události" },
   { href: "/vyvoj/", label: "Vývoj" },
+  { href: "/svet/", label: "Svět" },
   { href: "/muj-prehled/", label: "Můj přehled" },
 ];
 
@@ -52,7 +53,7 @@ export function Navigace() {
             onClick={otevriPanel}
             className="grid h-11 w-11 place-items-center rounded-[8px] text-tlum transition-colors hover:bg-plocha hover:text-inkoust"
           >
-            <span className="sr-only">Účet a další stránky</span>
+            <span className="sr-only">Menu</span>
             <Ikona nazev="menu" velikost={20} tah={1.8} />
           </button>
         </div>

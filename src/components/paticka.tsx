@@ -5,7 +5,7 @@ import { datum } from "@/lib/format";
 const SLOUPCE: { nadpis: string; odkazy: [string, string][] }[] = [
   {
     nadpis: "Obsah",
-    odkazy: [["/", "Přehled"], ["/udalosti/", "Události"], ["/vyvoj/", "Vývoj"], ["/muj-prehled/", "Můj přehled"], ["/odber/", "Odběr a RSS"]],
+    odkazy: [["/", "Přehled"], ["/udalosti/", "Události"], ["/vyvoj/", "Vývoj"], ["/svet/", "Svět"], ["/muj-prehled/", "Můj přehled"], ["/odber/", "Odběr a RSS"]],
   },
   {
     nadpis: "Důvěryhodnost",

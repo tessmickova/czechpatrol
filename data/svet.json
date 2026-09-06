@@ -1,0 +1,260 @@
+{
+  "aktualizovano": "2026-09-06",
+  "verze": 1,
+  "uvod": "Kdo chce co, co pro to dělá a jak daleko od toho je. Deklarované cíle jsou fakta s odkazem na zdroj. Míra přiblížení je hodnocení projektu podle dostupných zpráv — odhad, ne předpověď.",
+  "stupne": ["daleko", "málo", "částečně", "blízko", "dosaženo"],
+  "aktori": [
+    {
+      "klic": "rusko",
+      "nazev": "Rusko",
+      "kod": "RU",
+      "role": "Vede válku proti Ukrajině a kampaň sabotáží a nátlaku v Evropě.",
+      "deklarovane": [
+        { "text": "Ukrajina mimo NATO, neutrální a bez západních vojáků na svém území.", "zdroje": [0] },
+        { "text": "Stažení ukrajinských sil z celé Doněcké, Luhanské, Chersonské a Záporožské oblasti; podmínka z června 2024, kterou Kreml opakuje i v roce 2026.", "zdroje": [0, 1] },
+        { "text": "Demilitarizace Ukrajiny a zrušení západních sankcí.", "zdroje": [0] },
+        { "text": "Před trvalým příměřím stažení z Doněcké a Luhanské oblasti — zopakováno 5. září 2026 po jednání s americkými vyslanci.", "zdroje": [2] },
+        { "text": "Podle zdrojů blízkých Kremlu se podmínky v roce 2026 zpřísnily: celý Donbas a ponechání obsazených částí Sumské a Charkovské oblasti.", "zdroje": [3], "odhad": true }
+      ],
+      "postup": [
+        { "text": "Jarně-letní ofenziva 2026 nedosáhla průlomu; v srpnu 2026 Rusko obsadilo nebo upevnilo asi 90 km² území, tedy kolem 3 km² denně.", "zdroje": [4] },
+        { "text": "Posily ze Severní Koreje: podle ukrajinské rozvědky dalších asi 8 500 vojáků včetně 400 operátorů dronů (srpen 2026).", "zdroje": [5] },
+        { "text": "Ekonomika: odhad růstu HDP pro rok 2026 snížen na 0,4 %, příjmy z ropy a plynu klesly o více než čtvrtinu, deficit prvního čtvrtletí překročil celoroční plán.", "zdroje": [6, 7] },
+        { "text": "Stínová válka v Evropě: nejméně 151 doložených operací od února 2022 do března 2026; útoků mezi lety 2023 a 2024 téměř trojnásobně přibylo; 144 podezřelých pozorování dronů 2024–2026, pravděpodobně i ze stínové flotily.", "zdroje": [8, 9] }
+      ],
+      "priblizeni": {
+        "stupen": 1,
+        "odhad": "K územním cílům daleko: Rusko nedrží celý Donbas a jih drží jen zčásti, postup je pomalý a drahý. K neutralitě Ukrajiny částečně — Kyjev připouští vzdát se NATO, ale výměnou za záruky typu článku 5, což je opak ruského cíle. Sankce nepadly. Kampaň v Evropě zatím nevedla k poklesu podpory Ukrajiny, jen k protiopatřením."
+      },
+      "coByZmenilo": [
+        "Průlom fronty nebo dobytí Donbasu do konce roku 2026, o kterém je podle zdrojů Kreml přesvědčen.",
+        "Dohoda USA–Rusko bez Kyjeva a Evropy.",
+        "Opačně: vyčerpání rozpočtu, ztráta severokorejských posil, jednotná evropská reakce na sabotáže."
+      ],
+      "zdroje": [
+        { "nazev": "Kyiv Post — Putin Demands Full Donbas Capture, Rejects Compromise on War", "url": "https://www.kyivpost.com/post/83867", "typ": "media", "publikovano": "2026" },
+        { "nazev": "Malay Mail / AFP — Putin demands more Ukrainian land to end war, Kyiv rejects ultimatum (14. 6. 2024)", "url": "https://www.malaymail.com/news/world/2024/06/14/putin-demands-more-ukrainian-land-to-end-war-kyiv-rejects-ultimatum/139833", "typ": "wire", "publikovano": "2024-06-14" },
+        { "nazev": "Rappler / Reuters — Kremlin says Ukraine talks with US envoys were useful; no sign of breakthrough (5. 9. 2026)", "url": "https://www.rappler.com/world/europe/russia-ukraine-us-peace-talks-september-5-2026/", "typ": "wire", "publikovano": "2026-09-05" },
+        { "nazev": "The Soufan Center — Maximalist Demands Stall Path to Peace for Russia and Ukraine (10. 2. 2026)", "url": "https://thesoufancenter.org/intelbrief-2026-february-10/", "typ": "analysis", "publikovano": "2026-02-10" },
+        { "nazev": "Critical Threats / ISW — Russian Offensive Campaign Assessment, September 1, 2026", "url": "https://www.criticalthreats.org/analysis/russian-offensive-campaign-assessment-september-1-2026", "typ": "analysis", "publikovano": "2026-09-01" },
+        { "nazev": "CNN — North Korea boosts support for Russia to include drone operators, Ukraine says (21. 8. 2026)", "url": "https://www.cnn.com/2026/08/21/europe/russia-north-korea-ukraine-drones-intl", "typ": "media", "publikovano": "2026-08-21" },
+        { "nazev": "The Moscow Times — Russia Cuts 2026 Growth Forecast as Oil Revenues and Wartime Pressures Weigh on Economy (12. 5. 2026)", "url": "https://www.themoscowtimes.com/2026/05/12/russia-cuts-2026-growth-forecast-as-oil-revenues-and-wartime-pressures-weigh-on-economy-a92733", "typ": "media", "publikovano": "2026-05-12" },
+        { "nazev": "KSE Institute — Sanctions and the Russian Economy: 2026 Mid-Year Assessment", "url": "https://kse.ua/about-the-school/news/sanctions-and-the-russian-economy-2026-mid-year-assessment-by-kse-institute/", "typ": "analysis", "publikovano": "2026" },
+        { "nazev": "CSIS — Russia's Shadow War Against the West", "url": "https://www.csis.org/analysis/russias-shadow-war-against-west", "typ": "analysis", "publikovano": "2025" },
+        { "nazev": "ABC News / AP — Russia waged a drone campaign in Europe and likely launched drones from shadow ships, IISS report says", "url": "https://abcnews.com/International/wireStory/russia-waged-drone-campaign-europe-launched-drones-shadow-134400766", "typ": "wire", "publikovano": "2026" }
+      ]
+    },
+    {
+      "klic": "ukrajina",
+      "nazev": "Ukrajina",
+      "kod": "UA",
+      "role": "Brání se invazi; jedná o zárukách, ne o území.",
+      "deklarovane": [
+        { "text": "Zachování suverenity a nezávislosti; územní ústupky v Donbasu odmítá jako kapitulaci.", "zdroje": [0, 1] },
+        { "text": "Právně závazné bezpečnostní záruky od USA (nabídka na 15 let, Kyjev chce až 50) a od evropských zemí, „jako článek 5“.", "zdroje": [2, 3] },
+        { "text": "Ochota vzdát se členství v NATO výměnou za pevné záruky.", "zdroje": [4] },
+        { "text": "Členství v EU do roku 2027 jako ekonomická záruka.", "zdroje": [2] }
+      ],
+      "postup": [
+        { "text": "Dokument o bezpečnostní dohodě s USA je podle Zelenského od ledna 2026 „stoprocentně hotový“ a čeká na podpis.", "zdroje": [2] },
+        { "text": "Od 29. ledna 2026 ukrajinské síly osvobodily přes 745 km² v oleksandrivském směru a vyčistily přes 300 km² od ruských infiltrací.", "zdroje": [5] },
+        { "text": "Jednání s americkými vyslanci pokračují; 5.–6. září 2026 pauza úderů na hlavní města.", "zdroje": [1] }
+      ],
+      "priblizeni": {
+        "stupen": 2,
+        "odhad": "Stát se udržel a fronta se nehroutí — to je základní cíl a je plněn. Záruky jsou vyjednané, ale nepodepsané; vstup do EU do 2027 je ambice, ne stav. Území ztracené od roku 2014 zpět není a v jednáních není na stole."
+      },
+      "coByZmenilo": [
+        "Podpis americké a evropské záruky s jasným mechanismem.",
+        "Pokles západní vojenské a finanční podpory.",
+        "Průlom kterékoli strany na frontě."
+      ],
+      "zdroje": [
+        { "nazev": "Kyiv Post — Putin Demands Full Donbas Capture, Rejects Compromise on War", "url": "https://www.kyivpost.com/post/83867", "typ": "media", "publikovano": "2026" },
+        { "nazev": "Rappler / Reuters — Kremlin says Ukraine talks with US envoys were useful; no sign of breakthrough (5. 9. 2026)", "url": "https://www.rappler.com/world/europe/russia-ukraine-us-peace-talks-september-5-2026/", "typ": "wire", "publikovano": "2026-09-05" },
+        { "nazev": "Al Jazeera — Ukraine's Zelenskyy says US security agreement '100% ready' to be signed (26. 1. 2026)", "url": "https://www.aljazeera.com/news/2026/1/26/ukraines-zelenskyy-says-us-security-agreement-100-ready-to-be-signed", "typ": "media", "publikovano": "2026-01-26" },
+        { "nazev": "News On Air — US offers Ukraine security guarantees lasting 15 years under proposed peace plan (29. 12. 2025)", "url": "https://www.newsonair.gov.in/us-offers-ukraine-security-guarantees-lasting-15-years-under-proposed-peace-plan-to-end-war-with-russia", "typ": "media", "publikovano": "2025-12-29" },
+        { "nazev": "GlobalSecurity / PressTV — Ukraine's Zelensky signals willingness to drop NATO bid in exchange for security guarantees (14. 12. 2025)", "url": "https://www.globalsecurity.org/wmd/library/news/ukraine/2025/12/ukraine-251214-presstv01.htm", "typ": "media", "publikovano": "2025-12-14" },
+        { "nazev": "Critical Threats / ISW — Russian Offensive Campaign Assessment, September 1, 2026", "url": "https://www.criticalthreats.org/analysis/russian-offensive-campaign-assessment-september-1-2026", "typ": "analysis", "publikovano": "2026-09-01" }
+      ]
+    },
+    {
+      "klic": "usa",
+      "nazev": "Spojené státy",
+      "kod": "US",
+      "role": "Zprostředkovatel jednání; tlačí na Evropu, aby nesla víc.",
+      "deklarovane": [
+        { "text": "Ukončit válku vyjednáváním: vyslanci Witkoff a Kushner absolvovali od začátku zprostředkování šest kol jednání s Putinem, poslední 5. září 2026.", "zdroje": [0] },
+        { "text": "Nabídnout Ukrajině bezpečnostní záruky na 15 let v rámci mírového plánu.", "zdroje": [1] },
+        { "text": "Spojenci v NATO mají dávat 5 % HDP na obranu a bezpečnost do roku 2035; USA na tom trvají jako na podmínce.", "zdroje": [2] },
+        { "text": "Nulová tolerance k hybridním akcím proti členům Aliance; kritická infrastruktura pod dohledem států — velvyslanec Whitaker, 5. září 2026.", "zdroje": [3] }
+      ],
+      "postup": [
+        { "text": "Šest kol jednání bez průlomu; dosaženo jen krátkodobé pauzy úderů na Kyjev a Moskvu (5.–8. září 2026).", "zdroje": [0] },
+        { "text": "Cíl 5 % byl schválen na summitu v Haagu 2025 a v Ankaře 2026 spojenci předkládali plány, jak ho dosáhnout; příspěvky Ukrajině se do něj počítají.", "zdroje": [2, 4] }
+      ],
+      "priblizeni": {
+        "stupen": 2,
+        "odhad": "Přesun břemene na Evropu se daří — závazek 5 % je politicky přijatý a plánovaný. Ukončení války se nedaří: obě strany trvají na neslučitelných podmínkách a pauza úderů je jediný hmatatelný výsledek. Odstrašení hybridních akcí zatím slova, ne mechanismus."
+      },
+      "coByZmenilo": [
+        "Podpis rámcové dohody o příměří, nebo naopak ukončení zprostředkování.",
+        "Změna americké podpory Ukrajině v Kongresu nebo rozpočtu.",
+        "Krize v Pacifiku, která by odvedla pozornost a prostředky."
+      ],
+      "zdroje": [
+        { "nazev": "Rappler / Reuters — Kremlin says Ukraine talks with US envoys were useful; no sign of breakthrough (5. 9. 2026)", "url": "https://www.rappler.com/world/europe/russia-ukraine-us-peace-talks-september-5-2026/", "typ": "wire", "publikovano": "2026-09-05" },
+        { "nazev": "News On Air — US offers Ukraine security guarantees lasting 15 years under proposed peace plan (29. 12. 2025)", "url": "https://www.newsonair.gov.in/us-offers-ukraine-security-guarantees-lasting-15-years-under-proposed-peace-plan-to-end-war-with-russia", "typ": "media", "publikovano": "2025-12-29" },
+        { "nazev": "Congressional Research Service — NATO: Issues for the July 2026 Ankara Summit", "url": "https://www.congress.gov/crs-product/R49018", "typ": "primary", "publikovano": "2026" },
+        { "nazev": "GV Wire / Reuters — NATO will not tolerate hybrid actions against members, US envoy says (5. 9. 2026)", "url": "https://gvwire.com/2026/09/05/nato-will-not-tolerate-hybrid-actions-against-members-us-envoy-says/", "typ": "wire", "publikovano": "2026-09-05" },
+        { "nazev": "NATO — Secretary General previews the Ankara Summit, highlights progress on defence spending (6. 7. 2026)", "url": "https://www.nato.int/en/news-and-events/articles/news/2026/07/06/nato-secretary-general-previews-the-ankara-summit-highlights-progress-on-defence-spending", "typ": "primary", "publikovano": "2026-07-06" }
+      ]
+    },
+    {
+      "klic": "nato",
+      "nazev": "NATO",
+      "kod": null,
+      "role": "Odstrašení a obrana členů; podpora Ukrajiny bez přímé účasti ve válce.",
+      "deklarovane": [
+        { "text": "Výdaje 5 % HDP do roku 2035: 3,5 % na jádro obrany a 1,5 % na související bezpečnost; příspěvky na obranu Ukrajiny se započítávají.", "zdroje": [0, 1] },
+        { "text": "Posílení obranného průmyslu a produkce; v Ankaře 2026 spojenci předkládali konkrétní plány, jak cíle dosáhnout.", "zdroje": [0] },
+        { "text": "Ochrana kritické infrastruktury a východního křídla — mise Baltic Sentry a Eastern Sentry.", "zdroje": [2] }
+      ],
+      "postup": [
+        { "text": "V roce 2025 měli všichni 32 spojenci splnit nejméně 2 % HDP; tři země už dávaly 3,5 % na jádro obrany.", "zdroje": [1] },
+        { "text": "Podle CSIS Západ dosud nevytvořil účinnou strategii proti ruské kampani sabotáží, i když útoků přibývá.", "zdroje": [3], "odhad": true }
+      ],
+      "priblizeni": {
+        "stupen": 3,
+        "odhad": "U výdajů blízko: politický závazek platí a trajektorie jde nahoru. U odstrašení hybridní kampaně jen částečně — incidenty pokračují a reakce jsou národní, ne alianční. Článek 5 zůstává neaktivován, což je zároveň cíl i výsledek."
+      },
+      "coByZmenilo": [
+        "Země, které by z cíle 5 % vycouvaly.",
+        "Incident s oběťmi na území členského státu s oficiální atribucí.",
+        "Společný alianční mechanismus reakce na sabotáže."
+      ],
+      "zdroje": [
+        { "nazev": "NATO — Secretary General previews the Ankara Summit, highlights progress on defence spending (6. 7. 2026)", "url": "https://www.nato.int/en/news-and-events/articles/news/2026/07/06/nato-secretary-general-previews-the-ankara-summit-highlights-progress-on-defence-spending", "typ": "primary", "publikovano": "2026-07-06" },
+        { "nazev": "CSIS — What Does NATO Defense Spending Look Like Heading into the Ankara Summit?", "url": "https://www.csis.org/analysis/what-does-nato-defense-spending-look-heading-ankara-summit", "typ": "analysis", "publikovano": "2026" },
+        { "nazev": "Congressional Research Service — NATO: Issues for the July 2026 Ankara Summit", "url": "https://www.congress.gov/crs-product/R49018", "typ": "primary", "publikovano": "2026" },
+        { "nazev": "CSIS — Russia's Shadow War Against the West", "url": "https://www.csis.org/analysis/russias-shadow-war-against-west", "typ": "analysis", "publikovano": "2025" }
+      ]
+    },
+    {
+      "klic": "eu",
+      "nazev": "Evropská unie",
+      "kod": "EU",
+      "role": "Financuje zbrojení a podporu Ukrajiny; sankce vůči Rusku.",
+      "deklarovane": [
+        { "text": "Připravenost k obraně do roku 2030 (Readiness 2030): uvolnit až 800 miliard eur na obranu.", "zdroje": [0, 1] },
+        { "text": "Nástroj SAFE: 150 miliard eur zvýhodněných půjček na protivzdušnou obranu, drony, kybernetickou bezpečnost; nákupy společně a evropsky.", "zdroje": [2] },
+        { "text": "Prioritní kapacity: drony a protidronové systémy, včasné varování, protivzdušná obrana, přesné údery na velkou vzdálenost.", "zdroje": [3] }
+      ],
+      "postup": [
+        { "text": "Leden 2026: schválena první vlna SAFE pro osm států, asi 38 miliard eur; Česko má nárok až na 2,06 miliardy eur, Francie na 15,09 miliardy.", "zdroje": [4] },
+        { "text": "Rok po vyhlášení je plán podle analýzy BNP Paribas „na dobré cestě“; podle Centre for European Reform naráží na omezení kapacit a rozpočtů.", "zdroje": [4, 5], "odhad": true }
+      ],
+      "priblizeni": {
+        "stupen": 2,
+        "odhad": "Peníze jsou schválené a začínají téct, kapacity ještě ne — výroba a dodávky mají zpoždění za rozhodnutími. Cíl roku 2030 je reálný pro část priorit, ne pro všechny."
+      },
+      "coByZmenilo": [
+        "Skutečné dodávky protidronových a protivzdušných systémů, ne jen smlouvy.",
+        "Rozpad shody na sankcích nebo na financování Ukrajiny."
+      ],
+      "zdroje": [
+        { "nazev": "Evropská komise — Future of European defence", "url": "https://commission.europa.eu/topics/defence/future-european-defence_en", "typ": "primary", "publikovano": "2026" },
+        { "nazev": "Evropský parlament — ReArm Europe Plan / Readiness 2030 (briefing)", "url": "https://www.europarl.europa.eu/RegData/etudes/BRIE/2025/769566/EPRS_BRI(2025)769566_EN.pdf", "typ": "primary", "publikovano": "2025" },
+        { "nazev": "Rada EU — What is Security Action for Europe (SAFE)?", "url": "https://www.consilium.europa.eu/en/policies/safe/", "typ": "primary", "publikovano": "2026" },
+        { "nazev": "Rada EU — Timeline: European defence readiness", "url": "https://www.consilium.europa.eu/en/policies/european-defence-readiness/timeline-european-defence-readiness/", "typ": "primary", "publikovano": "2026" },
+        { "nazev": "BNP Paribas Economic Research — Readiness 2030: one year after its announcement, the European rearmament plan is on track", "url": "https://economic-research.bnpparibas.com/html/en-US/Readiness-2030-year-announcement-European-rearmament-plan-track-3/2/2026,53248", "typ": "analysis", "publikovano": "2026-03" },
+        { "nazev": "Centre for European Reform — The EU's Defence Readiness 2030 Roadmap: Ambition and constraints", "url": "https://www.cer.eu/insights/eu-defence-readiness-2030-roadmap-ambition-and-constraints", "typ": "analysis", "publikovano": "2026" }
+      ]
+    },
+    {
+      "klic": "cina",
+      "nazev": "Čína",
+      "kod": "CN",
+      "role": "Navenek neutrální; nechce ruskou porážku; priorita je Tchaj-wan.",
+      "deklarovane": [
+        { "text": "Připojení Tchaj-wanu jako strategická nutnost a hlavní priorita; postupné oslabování tchajwanské suverenity a posilování přítomnosti v okolních vodách.", "zdroje": [0, 1] },
+        { "text": "Veřejně neutralita a nabídka zprostředkování; podle americké komise USCC ale ministr zahraničí Wang Ji řekl, že Čína nechce, aby Rusko válku prohrálo.", "zdroje": [0] },
+        { "text": "Oddělit ve světě téma Ukrajiny od Tchaj-wanu: Ukrajina jako suverénní stát, Tchaj-wan ne.", "zdroje": [2] }
+      ],
+      "postup": [
+        { "text": "Podle USCC hledala čínská armáda ruský výcvik a poslala důstojníky na Ukrajinu čerpat taktické poučení z války.", "zdroje": [0] },
+        { "text": "Sílu proti Tchaj-wanu Čína nepoužila; podle Foreign Affairs hlavně proto, že úspěch operace není jistý.", "zdroje": [1], "odhad": true }
+      ],
+      "priblizeni": {
+        "stupen": 2,
+        "odhad": "Cíl „Rusko neprohrává a USA jsou zaměstnané v Evropě“ je plněn. Tchaj-wan zůstává mimo dosah bez války, kterou si Peking zatím nedovolí. Role zprostředkovatele je deklarovaná, ne skutečná."
+      },
+      "coByZmenilo": [
+        "Přímá vojenská pomoc Rusku doložená Západem.",
+        "Blokáda nebo cvičení kolem Tchaj-wanu, které přejdou v trvalý tlak.",
+        "Dohoda USA–Čína o obchodu, která by Peking odvedla od Moskvy."
+      ],
+      "zdroje": [
+        { "nazev": "U.S.-China Economic and Security Review Commission — China's Position on Russia's Invasion of Ukraine", "url": "https://www.uscc.gov/research/chinas-position-russias-invasion-ukraine", "typ": "primary", "publikovano": "2025" },
+        { "nazev": "Foreign Affairs — A Perfect Storm for Taiwan in 2026?", "url": "https://www.foreignaffairs.com/china/perfect-storm-taiwan-2026", "typ": "analysis", "publikovano": "2026" },
+        { "nazev": "Asia Society Policy Institute — China's Strategy in the Ukraine War and the Shaping of a Post-Conflict Order", "url": "https://asiasociety.org/policy-institute/chinas-strategy-ukraine-war-and-shaping-post-conflict-order", "typ": "analysis", "publikovano": "2025" }
+      ]
+    },
+    {
+      "klic": "kldr-iran",
+      "nazev": "Severní Korea a Írán",
+      "kod": "KP",
+      "role": "Dodavatelé vojáků, munice a dronové techniky pro Rusko výměnou za technologie.",
+      "deklarovane": [
+        { "text": "Severní Korea: smlouva o vzájemné obraně s Ruskem z roku 2024; vojáci a operátoři dronů výměnou za zkušenosti z moderní války a ruské technologie protivzdušné obrany.", "zdroje": [0, 1] },
+        { "text": "Írán: dronové konstrukce, které Rusko licenčně vyrábí v Alabuze.", "zdroje": [1] }
+      ],
+      "postup": [
+        { "text": "Srpen 2026: podle ukrajinské rozvědky dalších asi 8 500 severokorejských vojáků včetně 400 operátorů dronů; Moskva může usilovat až o 50 000 dalších.", "zdroje": [0, 1] },
+        { "text": "Severní Korea dodává i balistické rakety a podle zpráv poslala tisíce dělníků do ruské dronové výroby.", "zdroje": [1] }
+      ],
+      "priblizeni": {
+        "stupen": 3,
+        "odhad": "Cíle obou režimů — technologie, tvrdá měna a bojové zkušenosti — se naplňují už teď, bez ohledu na výsledek války. Proto mají zájem na jejím pokračování."
+      },
+      "coByZmenilo": [
+        "Příměří, které by ukončilo poptávku Ruska po vojácích a dronech.",
+        "Sankční tlak, který by zdražil transfer technologií."
+      ],
+      "zdroje": [
+        { "nazev": "CNN — North Korea boosts support for Russia to include drone operators, Ukraine says (21. 8. 2026)", "url": "https://www.cnn.com/2026/08/21/europe/russia-north-korea-ukraine-drones-intl", "typ": "media", "publikovano": "2026-08-21" },
+        { "nazev": "Kyiv Post — North Korea Sends 400 Drone Operators to Russia; Moscow May Seek Up to 50,000 More Troops, Ukraine Says", "url": "https://www.kyivpost.com/post/82851", "typ": "media", "publikovano": "2026-08" }
+      ]
+    }
+  ],
+  "stret": {
+    "otazky": [
+      "Území: Donbas a jih Ukrajiny",
+      "Ukrajina a NATO",
+      "Bezpečnostní záruky",
+      "Sankce vůči Rusku",
+      "Příměří teď",
+      "Zbrojení Evropy",
+      "Hybridní kampaň v Evropě",
+      "Tchaj-wan"
+    ],
+    "postoje": {
+      "rusko": ["celý Donbas a čtyři oblasti", "nikdy, neutralita", "žádné západní vojáky", "zrušit", "až po stažení z Donbasu", "hrozba, záminka", "vede ji, popírá", "podporuje Peking"],
+      "ukrajina": ["žádné ústupky", "ochota vzdát se za záruky", "závazné, typu čl. 5", "zachovat, zpřísnit", "ano, bez podmínek", "podporuje", "oběť, varuje Evropu", "—"],
+      "usa": ["tlak na kompromis", "ne členství, záruky", "nabídka 15 let", "páka v jednání", "prosazuje", "5 % HDP do 2035", "nulová tolerance", "odstrašení Číny"],
+      "nato": ["nejedná", "otevřené dveře formálně", "bilaterální, ne alianční", "—", "podporuje", "5 % do 2035", "posílit ochranu infrastruktury", "—"],
+      "eu": ["nejedná", "členství v EU do 2027 cíl Kyjeva", "evropská složka záruk", "zachovat", "podporuje", "800 mld. €, SAFE", "cíl sabotáží", "—"],
+      "cina": ["nepodporuje, nebrání", "neutralita, proti rozšiřování", "—", "proti sankcím", "nabízí zprostředkování", "kritizuje", "—", "hlavní priorita"],
+      "kldr-iran": ["—", "—", "—", "obcházejí", "proti", "—", "dodávají drony", "—"]
+    }
+  },
+  "sledovat": [
+    { "text": "Výsledek návštěvy vyslanců v Kyjevě 6. září 2026 a zda pauza úderů vydrží po jejich odjezdu.", "smer": "obojí" },
+    { "text": "Zda Rusko do konce roku 2026 dobude celý Donbas, jak podle zdrojů předpokládá Kreml; tempo postupu je nyní asi 3 km² denně.", "smer": "nahoru" },
+    { "text": "Podpis americké bezpečnostní dohody s Ukrajinou a její evropské složky.", "smer": "dolu" },
+    { "text": "Ruský rozpočet: příjmy z ropy a plynu, deficit a růst v druhém pololetí 2026.", "smer": "dolu" },
+    { "text": "Další severokorejské kontingenty a rozsah dodávek raket.", "smer": "nahoru" },
+    { "text": "Stínová válka v Evropě: další uzavírky letišť a útoky na energetiku versus protiopatření států (např. německý plán z 6. září 2026).", "smer": "obojí" },
+    { "text": "Cvičení čínské armády kolem Tchaj-wanu a americká reakce.", "smer": "nahoru" }
+  ]
+}

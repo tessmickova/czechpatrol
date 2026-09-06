@@ -373,3 +373,30 @@ export interface Kandidat {
   shody: string[];
   stav: "ceka";
 }
+
+/* ---------- svět: cíle mocností ---------- */
+
+export interface SvetZdroj { nazev: string; url: string; typ: TypZdroje; publikovano: string }
+export interface SvetTvrzeni { text: string; zdroje: number[]; odhad?: boolean }
+export interface SvetAktor {
+  klic: string;
+  nazev: string;
+  /** Kód země pro vlajku; null = seskupení bez vlajky (NATO). */
+  kod: string | null;
+  role: string;
+  deklarovane: SvetTvrzeni[];
+  postup: SvetTvrzeni[];
+  /** Hodnocení projektu: stupeň 0–4 na stupnici `stupne`. */
+  priblizeni: { stupen: number; odhad: string };
+  coByZmenilo: string[];
+  zdroje: SvetZdroj[];
+}
+export interface Svet {
+  aktualizovano: string;
+  verze: number;
+  uvod: string;
+  stupne: string[];
+  aktori: SvetAktor[];
+  stret: { otazky: string[]; postoje: Record<string, string[]> };
+  sledovat: { text: string; smer: "nahoru" | "dolu" | "obojí" }[];
+}

@@ -4796,5 +4796,505 @@
     "historicky": true,
     "druh": "pripad",
     "puvodce": "neznamy"
+  },
+  {
+    "id": "i-2026-09-05-jednani-moskva",
+    "slug": "jednani-moskva-witkoff-2026",
+    "titulek": "Moskva: šesté kolo jednání amerických vyslanců s Putinem, pauza úderů na Kyjev a Moskvu na tři dny",
+    "kratkyTitulek": "Jednání v Moskvě, pauza úderů",
+    "zeme": "Rusko",
+    "kodZeme": "RU",
+    "kategorie": [
+      "diplomacie",
+      "rusko"
+    ],
+    "datumUdalosti": "2026-09-05T00:00:00Z",
+    "datumZjisteni": "2026-09-05T00:00:00Z",
+    "aktualizovano": "2026-09-06T00:00:00Z",
+    "zavaznost": "Y2",
+    "jistota": "vysoka",
+    "stav": "bez-vysetrovani",
+    "atribuce": "oficialni",
+    "fakta": [
+      "5. září 2026 jednali američtí vyslanci Steve Witkoff a Jared Kushner v Moskvě přes tři hodiny s Vladimirem Putinem; šlo o šesté takové setkání od začátku zprostředkovaných jednání. Průlom oznámen nebyl.",
+      "Putin nařídil na tři dny zastavit údery na Kyjev po dobu, kdy delegace pokračuje do Kyjeva; podle agenturních zpráv se obě strany dohodly na pauze úderů na hlavní města.",
+      "Mluvčí Kremlu Peskov zopakoval, že Rusko trvá na stažení ukrajinských sil z Doněcké a Luhanské oblasti před trvalým příměřím; Kyjev to odmítá."
+    ],
+    "neznameho": [
+      "Některé zprávy mluví o širším třídenním příměří na frontě; potvrzen je jen závazek k pauze úderů na hlavní města.",
+      "Zda a jak dlouho pauza vydrží."
+    ],
+    "vyznam": "Krátkodobý deeskalační signál: diplomatický kanál funguje a obě strany byly ochotné omezit údery. Nemění ale základní rozpor o území, a proto sám o sobě hodnocení nesnižuje.",
+    "eskalacniSpousteče": [],
+    "deeskalacniSignaly": [
+      "Prodloužení pauzy úderů nad rámec návštěvy vyslanců.",
+      "Dohoda o trvalém příměří bez podmínky stažení z Donbasu."
+    ],
+    "zdroje": [
+      {
+        "nazev": "ABC News (Austrálie) — Russia to halt strikes on Ukraine's Kyiv during US diplomatic talks",
+        "url": "https://www.abc.net.au/news/2026-09-05/russia-to-halt-strikes-on-kyiv-during-us-diplomatic-talks/107120486",
+        "typ": "media",
+        "publikovano": "2026-09-05T00:00:00Z",
+        "primarni": false,
+        "jazyk": "en"
+      },
+      {
+        "nazev": "Rappler / Reuters — Kremlin says Ukraine talks with US envoys were useful; no sign of breakthrough",
+        "url": "https://www.rappler.com/world/europe/russia-ukraine-us-peace-talks-september-5-2026/",
+        "typ": "wire",
+        "publikovano": "2026-09-05T00:00:00Z",
+        "primarni": false,
+        "jazyk": "en"
+      },
+      {
+        "nazev": "The Washington Times — Putin and Zelenskyy agree to pause strikes on Kyiv and Moscow during talks with U.S. envoys",
+        "url": "https://www.washingtontimes.com/news/2026/sep/5/zelenskyy-putin-agree-pause-strikes-kyiv-moscow-talks-us-envoys/",
+        "typ": "media",
+        "publikovano": "2026-09-05T00:00:00Z",
+        "primarni": false,
+        "jazyk": "en"
+      }
+    ],
+    "souvisejici": [],
+    "historie": [
+      {
+        "kdy": "2026-09-05T00:00:00Z",
+        "text": "Jednání v Moskvě a pauza úderů na hlavní města.",
+        "novySignal": true
+      }
+    ],
+    "novy": true,
+    "zapocitanoTyden": "2026-09-05",
+    "aiZpracovano": true,
+    "lidskyOvereno": true,
+    "archivniZaznam": false,
+    "druh": "reakce"
+  },
+  {
+    "id": "i-2026-09-05-whitaker",
+    "slug": "whitaker-hybridni-nato-2026",
+    "titulek": "Velvyslanec USA při NATO Whitaker: Aliance nebude tolerovat hybridní akce, Leipzig/Halle je „zvlášť znepokojivý“",
+    "kratkyTitulek": "Whitaker k hybridním útokům",
+    "zeme": "NATO",
+    "kodZeme": "EU",
+    "kategorie": [
+      "nato",
+      "hybridni",
+      "diplomacie"
+    ],
+    "datumUdalosti": "2026-09-05T00:00:00Z",
+    "datumZjisteni": "2026-09-05T00:00:00Z",
+    "aktualizovano": "2026-09-06T00:00:00Z",
+    "zavaznost": "Y2",
+    "jistota": "vysoka",
+    "stav": "bez-vysetrovani",
+    "atribuce": "oficialni",
+    "fakta": [
+      "5. září 2026 prohlásil americký velvyslanec při NATO Matthew Whitaker, že členové Aliance nemají tolerovat úmyslné hybridní akce a USA budou stát při zemích, které jim čelí.",
+      "Pokus o útok dronem na letiště Leipzig/Halle, který Berlín připsal Rusku, označil za znepokojivější než případy zbloudilých ruských dronů; kritická infrastruktura včetně energetiky má být podle něj pod dohledem národních úřadů."
+    ],
+    "neznameho": [
+      "Jde o vyjádření velvyslance, ne o rozhodnutí Severoatlantické rady ani o nové opatření."
+    ],
+    "vyznam": "Politicko-bezpečnostní signál USA směrem k Alianci: Leipzig/Halle je vnímán jako úmyslná akce státu, ne nehoda. Do hodnocení vstupuje jako potvrzení atribuce, ne jako nová událost.",
+    "eskalacniSpousteče": [],
+    "deeskalacniSignaly": [],
+    "zdroje": [
+      {
+        "nazev": "The Jerusalem Post / Reuters — NATO will not tolerate hybrid actions against members, US envoy says",
+        "url": "http://www.jpost.com/international/article-907642",
+        "typ": "wire",
+        "publikovano": "2026-09-05T00:00:00Z",
+        "primarni": false,
+        "jazyk": "en"
+      },
+      {
+        "nazev": "GV Wire / Reuters — NATO will not tolerate hybrid actions against members, US envoy says",
+        "url": "https://gvwire.com/2026/09/05/nato-will-not-tolerate-hybrid-actions-against-members-us-envoy-says/",
+        "typ": "wire",
+        "publikovano": "2026-09-05T00:00:00Z",
+        "primarni": false,
+        "jazyk": "en"
+      }
+    ],
+    "souvisejici": [],
+    "historie": [
+      {
+        "kdy": "2026-09-05T00:00:00Z",
+        "text": "Prohlášení velvyslance USA při NATO.",
+        "novySignal": true
+      }
+    ],
+    "novy": true,
+    "zapocitanoTyden": "2026-09-05",
+    "aiZpracovano": true,
+    "lidskyOvereno": true,
+    "archivniZaznam": false,
+    "druh": "reakce"
+  },
+  {
+    "id": "i-2026-09-06-dobrindt",
+    "slug": "nemecko-dobrindt-stit-2026",
+    "titulek": "Německo: ministr vnitra Dobrindt ohlásil mobilní protidronové jednotky pro devět měst a národní „Cyberdome“",
+    "kratkyTitulek": "Dobrindt: štít proti hybridním útokům",
+    "zeme": "Německo",
+    "kodZeme": "DE",
+    "kategorie": [
+      "drony",
+      "kyber",
+      "infrastruktura",
+      "pravo"
+    ],
+    "datumUdalosti": "2026-09-06T00:00:00Z",
+    "datumZjisteni": "2026-09-06T00:00:00Z",
+    "aktualizovano": "2026-09-06T00:00:00Z",
+    "zavaznost": "Y1",
+    "jistota": "vysoka",
+    "stav": "bez-vysetrovani",
+    "atribuce": "oficialni",
+    "fakta": [
+      "6. září 2026 oznámil spolkový ministr vnitra Alexander Dobrindt plán ochranného štítu proti dronům, kybernetickým útokům a sabotážím; zdůvodnil ho rostoucí hybridní hrozbou z Ruska.",
+      "Mobilní jednotky protidronové obrany mají vzniknout na devíti místech: Frankfurt nad Mohanem, Mnichov, Hamburk, Berlín, Stuttgart, Düsseldorf, Lipsko, Hannover a Kolín. Provozovatelé kritické infrastruktury mají dostat zákonné oprávnění drony aktivně odvracet. Národní kybernetický štít „Cyberdome“ má být sítí senzorů proti pokusům o hackerské útoky."
+    ],
+    "neznameho": [
+      "Příslušnost, náklady a harmonogram nejsou jasné; jde o oznámený záměr, ne o přijatý zákon."
+    ],
+    "vyznam": "Institucionální obranný signál, ne krizové opatření ani příprava obyvatel na válku. Ukazuje, že stát bere sabotážní sérii vážně; na běžný život v Německu ani v ČR zatím nemá dopad.",
+    "eskalacniSpousteče": [],
+    "deeskalacniSignaly": [],
+    "zdroje": [
+      {
+        "nazev": "aero.de — Dobrindt verstärkt Drohnen- und Cyberabwehr",
+        "url": "https://www.aero.de/news-53558/Dobrindt-verstaerkt-Drohnen--und-Cyberabwehr.html",
+        "typ": "media",
+        "publikovano": "2026-09-06T00:00:00Z",
+        "primarni": false,
+        "jazyk": "de"
+      },
+      {
+        "nazev": "Presse.Online — Dobrindt plant Schutzschirm gegen Sabotage",
+        "url": "https://presse.online/2026/09/06/dobrindt-plant-schutzschirm-gegen-sabotage/",
+        "typ": "media",
+        "publikovano": "2026-09-06T00:00:00Z",
+        "primarni": false,
+        "jazyk": "de"
+      },
+      {
+        "nazev": "audimax — Dobrindt plant Cyberdome zum Schutz vor hybriden Cyberangriffen",
+        "url": "https://audimax.de/politik/dobrindt-kundigt-cyberdome-zur-verteidigung-gegen-wachsende-hybride-bedrohungen-an/",
+        "typ": "media",
+        "publikovano": "2026-09-06T00:00:00Z",
+        "primarni": false,
+        "jazyk": "de"
+      },
+      {
+        "nazev": "Kyiv Post — Germany Boosts Defenses Against Russian Drones and Sabotage",
+        "url": "https://www.kyivpost.com/post/83875",
+        "typ": "media",
+        "publikovano": "2026-09-06T00:00:00Z",
+        "primarni": false,
+        "jazyk": "en"
+      }
+    ],
+    "souvisejici": [],
+    "historie": [
+      {
+        "kdy": "2026-09-06T00:00:00Z",
+        "text": "Oznámení plánu ministrem vnitra.",
+        "novySignal": true
+      }
+    ],
+    "novy": true,
+    "zapocitanoTyden": "2026-09-06",
+    "aiZpracovano": true,
+    "lidskyOvereno": true,
+    "archivniZaznam": false,
+    "druh": "opatreni"
+  },
+  {
+    "id": "i-2026-09-06-lavrov",
+    "slug": "lavrov-lipsko-skutecna-valka-2026",
+    "titulek": "Lavrov: obvinění Moskvy z útoku na letiště Lipsko je „vcelku začátek skutečné války“",
+    "kratkyTitulek": "Lavrov k Lipsku",
+    "zeme": "Rusko",
+    "kodZeme": "RU",
+    "kategorie": [
+      "rusko",
+      "diplomacie",
+      "hybridni"
+    ],
+    "datumUdalosti": "2026-09-06T00:00:00Z",
+    "datumZjisteni": "2026-09-06T00:00:00Z",
+    "aktualizovano": "2026-09-06T00:00:00Z",
+    "zavaznost": "Y3",
+    "jistota": "vysoka",
+    "stav": "bez-vysetrovani",
+    "atribuce": "oficialni",
+    "fakta": [
+      "6. září 2026 řekl ruský ministr zahraničí Sergej Lavrov podle agentury TASS, že západní obvinění Moskvy z účasti na dronovém incidentu na letišti Lipsko jsou „vcelku začátek skutečné války“.",
+      "Výroky kancléře Merze o Německu jako vedoucí vojenské mocnosti Evropy označil za faktické vyhlášení války. Německo 1. září uzavřelo, že za pokusem o dronový útok stojí Rusko, a nařídilo protiopatření včetně uzavření konzulátu; Rusko obvinění odmítá jako vykonstruovaná."
+    ],
+    "neznameho": [
+      "Zda výrok předznamenává konkrétní ruský krok, nebo jde o rétoriku pro domácí publikum."
+    ],
+    "vyznam": "Rétorická eskalace na nejvyšší diplomatické úrovni. Sama o sobě hodnocení nemění: rozhodující by byl čin, ne slovo. Sledujeme, zda po ní nepřijde nové opatření Ruska proti Německu.",
+    "eskalacniSpousteče": [
+      "Konkrétní ruské protiopatření proti Německu nad rámec vyhoštění diplomatů."
+    ],
+    "deeskalacniSignaly": [],
+    "zdroje": [
+      {
+        "nazev": "The Moscow Times — Russia's Lavrov Calls Accusations of Moscow's Involvement in Leipzig Drone Incident 'Start of Real War'",
+        "url": "https://www.themoscowtimes.com/2026/09/06/russias-lavrov-calls-accusations-of-moscows-involvement-in-leipzig-drone-incident-start-of-real-war-a93646",
+        "typ": "media",
+        "publikovano": "2026-09-06T00:00:00Z",
+        "primarni": false,
+        "jazyk": "en"
+      },
+      {
+        "nazev": "The Business Standard / Reuters — Russia's Lavrov calls accusations of Moscow's involvement in Leipzig drone incident 'start of real war', TASS reports",
+        "url": "https://www.tbsnews.net/worldbiz/europe/russias-lavrov-calls-accusations-moscows-involvement-leipzig-drone-incident-start",
+        "typ": "wire",
+        "publikovano": "2026-09-06T00:00:00Z",
+        "primarni": false,
+        "jazyk": "en"
+      }
+    ],
+    "souvisejici": [
+      {
+        "incidentId": "a04",
+        "potvrzena": true,
+        "popis": "Reakce na německou atribuci útoku"
+      }
+    ],
+    "historie": [
+      {
+        "kdy": "2026-09-06T00:00:00Z",
+        "text": "Výrok podle TASS.",
+        "novySignal": true
+      }
+    ],
+    "novy": true,
+    "zapocitanoTyden": "2026-09-06",
+    "aiZpracovano": true,
+    "lidskyOvereno": true,
+    "archivniZaznam": false,
+    "druh": "reakce"
+  },
+  {
+    "id": "i-2026-09-06-kyjev",
+    "slug": "witkoff-kushner-kyjev-2026",
+    "titulek": "Kyjev: američtí vyslanci jednali se Zelenským den po Moskvě; pauza úderů na hlavní města drží, širší příměří není",
+    "kratkyTitulek": "Vyslanci USA v Kyjevě",
+    "zeme": "Ukrajina",
+    "kodZeme": "UA",
+    "kategorie": [
+      "diplomacie",
+      "rusko"
+    ],
+    "datumUdalosti": "2026-09-06T00:00:00Z",
+    "datumZjisteni": "2026-09-06T00:00:00Z",
+    "aktualizovano": "2026-09-06T00:00:00Z",
+    "zavaznost": "Y2",
+    "jistota": "vysoka",
+    "stav": "bez-vysetrovani",
+    "atribuce": "oficialni",
+    "fakta": [
+      "6. září 2026 se Steve Witkoff a Jared Kushner sešli v Kyjevě s Volodymyrem Zelenským, den po jednání s Putinem v Moskvě; šlo o jejich první oficiální návštěvu Ukrajiny v rámci obnovené snahy o ukončení války.",
+      "Rusko i Ukrajina se dohodly, že po dobu návštěv nebudou útočit na hlavní města druhé strany; širší příměří neplatí. Zelenskyj před jednáním řekl, že ukrajinské návrhy jsou připravené a že Ukrajina potřebuje bezpečnostní záruky a „důstojný poválečný mír“."
+    ],
+    "neznameho": [
+      "Obsah amerického návrhu a reakce Kyjeva na ruskou podmínku stažení z Donbasu nebyly v době zprávy zveřejněny."
+    ],
+    "vyznam": "Druhá část téže mise jako 5. září v Moskvě. Deeskalační signál trvá, dokud drží pauza úderů; obsahový průlom zatím žádný.",
+    "eskalacniSpousteče": [],
+    "deeskalacniSignaly": [
+      "Pauza úderů, která přetrvá po odjezdu vyslanců.",
+      "Zveřejnění společného rámce jednání."
+    ],
+    "zdroje": [
+      {
+        "nazev": "NPR — U.S. envoys Witkoff and Kushner land for talks in Kyiv after meeting Putin in Moscow",
+        "url": "https://www.npr.org/2026/09/06/nx-s1-5959657/us-envoys-witkoff-kushner-talks-in-kyiv-putin-moscow",
+        "typ": "media",
+        "publikovano": "2026-09-06T00:00:00Z",
+        "primarni": false,
+        "jazyk": "en"
+      },
+      {
+        "nazev": "CNN — Witkoff and Kushner arrive in Kyiv for second leg of US diplomacy push",
+        "url": "https://www.cnn.com/2026/09/06/europe/witkoff-kushner-visit-kyiv-intl",
+        "typ": "media",
+        "publikovano": "2026-09-06T00:00:00Z",
+        "primarni": false,
+        "jazyk": "en"
+      },
+      {
+        "nazev": "The Kyiv Independent — Trump envoys to make their Kyiv visit on Sept. 6, Zelensky confirms",
+        "url": "https://kyivindependent.com/trump-envoys-witkoff-kushner-to-visit-kyiv-moscow-sept-5-6-source-says/",
+        "typ": "media",
+        "publikovano": "2026-09-05T00:00:00Z",
+        "primarni": false,
+        "jazyk": "en"
+      }
+    ],
+    "souvisejici": [
+      {
+        "incidentId": "i-2026-09-05-jednani-moskva",
+        "potvrzena": true,
+        "popis": "První část téže mise"
+      }
+    ],
+    "historie": [
+      {
+        "kdy": "2026-09-06T00:00:00Z",
+        "text": "Jednání v Kyjevě.",
+        "novySignal": true
+      }
+    ],
+    "novy": true,
+    "zapocitanoTyden": "2026-09-06",
+    "aiZpracovano": true,
+    "lidskyOvereno": true,
+    "archivniZaznam": false,
+    "druh": "reakce"
+  },
+  {
+    "id": "i-2026-09-06-babis",
+    "slug": "cr-babis-kyberutoky-brs-2026",
+    "titulek": "ČR: Babiš po mimořádné Bezpečnostní radě státu — Česko je „pravděpodobně“ cílem ruských kybernetických útoků; omezení pohybu ruských diplomatů jen se spojenci",
+    "kratkyTitulek": "Babiš: kyberútoky a BRS",
+    "zeme": "Česko",
+    "kodZeme": "CZ",
+    "kategorie": [
+      "cr",
+      "kyber",
+      "zpravodajske",
+      "diplomacie"
+    ],
+    "datumUdalosti": "2026-09-06T00:00:00Z",
+    "datumZjisteni": "2026-09-06T00:00:00Z",
+    "aktualizovano": "2026-09-06T00:00:00Z",
+    "zavaznost": "Y2",
+    "jistota": "vysoka",
+    "stav": "bez-vysetrovani",
+    "atribuce": "oficialni",
+    "fakta": [
+      "6. září 2026 premiér Andrej Babiš potvrdil, že Česko je z hlediska kybernetických útoků „pravděpodobně“ cílem Ruska; podle něj se situací v Německu zabývalo mimořádné zasedání Bezpečnostní rady státu, které řešilo koordinaci tajných služeb a kybernetické útoky.",
+      "K případnému omezení pohybu ruských diplomatů premiér uvedl, že Česko chce postupovat společně se spojenci. Incidenty v Německu odmítl spojovat s tamními volbami."
+    ],
+    "neznameho": [
+      "Jaká konkrétní opatření Bezpečnostní rada přijala, zveřejněno nebylo.",
+      "Zda a kdy dojde k omezení pohybu ruských diplomatů."
+    ],
+    "vyznam": "První oficiální česká reakce na německou sérii na úrovni premiéra a Bezpečnostní rady státu. Pro běžný život v ČR z toho zatím neplyne žádné omezení; jde o koordinaci služeb, ne o mimořádné opatření.",
+    "eskalacniSpousteče": [
+      "Rozhodnutí o omezení pohybu ruských diplomatů v ČR.",
+      "Oficiální atribuce konkrétního kybernetického útoku na české instituce."
+    ],
+    "deeskalacniSignaly": [],
+    "zdroje": [
+      {
+        "nazev": "iROZHLAS — Je Česko cílem ruských kybernetických útoků? ‚Pravděpodobně ano,‘ potvrdil Babiš",
+        "url": "https://www.irozhlas.cz/zpravy-domov/je-cesko-cilem-ruskych-kybernetickych-utoku-pravdepodobne-ano-potvrdil-babis_2609061141_kvr",
+        "typ": "media",
+        "publikovano": "2026-09-06T00:00:00Z",
+        "primarni": false,
+        "jazyk": "cs"
+      },
+      {
+        "nazev": "ČeskéNoviny.cz / ČTK — Babiš: Při omezení pohybu ruských diplomatů chceme postupovat se spojenci",
+        "url": "https://www.ceskenoviny.cz/zpravy/babis-pri-omezeni-pohybu-ruskych-diplomatu-chceme-postupovat-se-spojenci/2870759",
+        "typ": "wire",
+        "publikovano": "2026-09-06T00:00:00Z",
+        "primarni": false,
+        "jazyk": "cs"
+      },
+      {
+        "nazev": "CNN Prima NEWS — Rusko je hrozba, tvrdí Babiš. V Česku hrozí podle něj kybernetické útoky",
+        "url": "https://cnn.iprima.cz/rusko-je-hrozba-rika-babis-v-cesku-hrozi-podle-nej-kyberneticke-utoky-521058",
+        "typ": "media",
+        "publikovano": "2026-09-06T00:00:00Z",
+        "primarni": false,
+        "jazyk": "cs"
+      }
+    ],
+    "souvisejici": [],
+    "historie": [
+      {
+        "kdy": "2026-09-06T00:00:00Z",
+        "text": "Vyjádření premiéra po mimořádné Bezpečnostní radě státu.",
+        "novySignal": true
+      }
+    ],
+    "novy": true,
+    "zapocitanoTyden": "2026-09-06",
+    "aiZpracovano": true,
+    "lidskyOvereno": true,
+    "archivniZaznam": false,
+    "druh": "reakce"
+  },
+  {
+    "id": "i-2026-09-06-viza",
+    "slug": "nemecko-viza-rusum-2026",
+    "titulek": "Německo vyzvalo EU omezit turistická víza pro Rusy „na naprosté minimum“ po sabotážích",
+    "kratkyTitulek": "Německo: méně víz pro Rusy",
+    "zeme": "Německo",
+    "kodZeme": "DE",
+    "kategorie": [
+      "diplomacie",
+      "hranice",
+      "hybridni"
+    ],
+    "datumUdalosti": "2026-09-06T00:00:00Z",
+    "datumZjisteni": "2026-09-06T00:00:00Z",
+    "aktualizovano": "2026-09-06T00:00:00Z",
+    "zavaznost": "Y2",
+    "jistota": "stredni",
+    "stav": "bez-vysetrovani",
+    "atribuce": "oficialni",
+    "fakta": [
+      "Německé ministerstvo zahraničí podle zpráv vyzvalo evropské partnery, aby po sabotážích připisovaných Moskvě omezily vydávání turistických víz ruským občanům „na naprosté minimum“; podle mluvčího je počet víz pro dovolené Rusů v EU příliš vysoký a volný pohyb se zneužívá ke špionáži a sabotážím.",
+      "Podnětem je vyšetřování běloruského občana s ruským pasem podezřelého z pokusu o útok na letiště Lipsko, který podle úřadů vstoupil do Schengenu na turistické vízum vydané italským velvyslanectvím v Minsku."
+    ],
+    "neznameho": [
+      "Přesné znění výzvy a postoj ostatních členských států; dohledali jsme zatím jen zprostředkované zdroje, ne prohlášení ministerstva."
+    ],
+    "vyznam": "Politický krok proti volnému pohybu, ne uzavření hranic. Pro české občany bez dopadu; pro hodnocení signál, že státy hledají odpověď mimo vojenskou oblast.",
+    "eskalacniSpousteče": [],
+    "deeskalacniSignaly": [],
+    "zdroje": [
+      {
+        "nazev": "inkl / The Guardian — Germany urges EU to cut Russians' holiday visas after sabotage attacks",
+        "url": "https://www.inkl.com/news/germany-urges-eu-to-cut-russians-holiday-visas-after-sabotage-attacks",
+        "typ": "media",
+        "publikovano": "2026-09-06T00:00:00Z",
+        "primarni": false,
+        "jazyk": "en"
+      },
+      {
+        "nazev": "Kyiv Post — Germany Boosts Defenses Against Russian Drones and Sabotage",
+        "url": "https://www.kyivpost.com/post/83875",
+        "typ": "media",
+        "publikovano": "2026-09-06T00:00:00Z",
+        "primarni": false,
+        "jazyk": "en"
+      }
+    ],
+    "souvisejici": [],
+    "historie": [
+      {
+        "kdy": "2026-09-06T00:00:00Z",
+        "text": "Výzva německého ministerstva zahraničí podle médií.",
+        "novySignal": true
+      }
+    ],
+    "novy": true,
+    "zapocitanoTyden": "2026-09-06",
+    "aiZpracovano": true,
+    "lidskyOvereno": true,
+    "archivniZaznam": false,
+    "druh": "reakce"
   }
 ]
