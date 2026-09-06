@@ -2,6 +2,11 @@
 
 **Vygenerováno:** 6. 9. 2026, Europe/Prague
 
+> **Nad tímhle zadáním stojí Pravidlo č. 0 v `CLAUDE.md`:** právo ČR a EU,
+> žádná poplašná zpráva, a v bezpečnostních tématech jen to, co je doložené
+> citací se zdrojem a řešené úředně. Když je cokoli níže v rozporu s ním,
+> platí pravidlo a bod se neprovede.
+
 Toto NENÍ instrukce k bezhlavé kompletní aktualizaci webu. Je to výzkumný audit: níže jsou věci, které jsem při aktuálním monitoringu našel jako nové, chybějící, potenciálně zastaralé nebo hodné kontroly.
 
 Tvůj úkol:

@@ -113,7 +113,10 @@ opravy (`/opravy/`, z `data/opravy.json`), o projektu, podpořit, odběr.
 Staré adresy (`/dnes`, `/trend`, `/osa`, `/cr`, `/nato`, `/tlak`, `/watchlist`,
 `/nepotvrzeno`, `/komunita`) přesměrovává `public/_redirects`.
 
-Podrobněji: `docs/DATOVY-MODEL.md`, `docs/PROVOZ.md`, `docs/ZNACKA.md`, `docs/DALSI-ETAPA.md`.
+Nad vším stojí Pravidlo č. 0 v `CLAUDE.md`: právo ČR a EU, žádná poplašná zpráva,
+a v bezpečnostních tématech jen to, co je doložené citací se zdrojem a řešené úředně.
+
+Podrobněji: `docs/PRAVNI-KONTROLA.md`, `docs/DATOVY-MODEL.md`, `docs/PROVOZ.md`, `docs/ZNACKA.md`, `docs/DALSI-ETAPA.md`.
 
 ## Struktura
 
