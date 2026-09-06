@@ -112,27 +112,29 @@
     "stav": "ceka"
   },
   {
-    "id": "k-e5b5e990bc8fe269",
-    "zachyceno": "2026-09-06T13:59:15.561Z",
-    "publikovano": "2026-09-06T09:41:00.000Z",
+    "id": "k-6f8de6aca5c7d1fb",
+    "zachyceno": "2026-09-06T16:55:44.196Z",
+    "publikovano": "2026-09-06T09:08:02.000Z",
     "zdroj": {
-      "nazev": "iROZHLAS — zprávy",
-      "url": "https://www.irozhlas.cz/zpravy-domov/je-cesko-cilem-ruskych-kybernetickych-utoku-pravdepodobne-ano-potvrdil-babis_2609061141_kvr",
+      "nazev": "ČT24 — hlavní zprávy",
+      "url": "https://ct24.ceskatelevize.cz/clanek/svet/indonesie-kvuli-erupci-anak-krakatoa-zastavila-provoz-na-sesti-letistich-377306",
       "typ": "media",
       "primarni": false
     },
-    "titulek": "Babiš: Česko je patrně cílem ruských kybernetických útoků. V koordinaci tajných služeb jsou rezervy",
-    "titulekPuvodni": "Babiš: Česko je patrně cílem ruských kybernetických útoků. V koordinaci tajných služeb jsou rezervy",
-    "shrnuti": "Česko chce v otázce omezení pohybu ruských diplomatů postupovat společně se spojenci. Pokud se opatření dostane na jednání Evropské rady, Česko ho podpoří, řekl v neděli premiér Andrej Babiš (ANO) v pořadu Partie na CNN Prima News. Rusko označil za hrozbu a agresora. Česko je podle něj pravděpodobně",
-    "kodZeme": "CZ",
-    "zeme": "Česko",
+    "titulek": "Indonésie kvůli erupci Anak Krakatoa zastavila provoz na osmi letištích",
+    "titulekPuvodni": "Indonésie kvůli erupci Anak Krakatoa zastavila provoz na osmi letištích",
+    "shrnuti": "Indonéské úřady kvůli erupci sopky Anak Krakatoa zastavily provoz na osmi letištích, včetně dvou mezinárodních letišť v Jakartě, informovala agentura AP. Erupce sopky, která se nachází zhruba 150 kilometrů od metropole Jakarty, začala v pátek pozdě večer, v noci na neděli pak sopka na 30 sekund vybu",
+    "kodZeme": null,
+    "zeme": null,
     "kategorie": [
+      "sabotaz",
       "zpravodajske"
     ],
     "druhOdhad": "neurceno",
     "klasifikace": "pravidla",
     "shody": [
-      "bis "
+      "vybuch",
+      "agent"
     ],
     "stav": "ceka"
   },
@@ -746,6 +748,32 @@
       "dron",
       "drony",
       "fsb"
+    ],
+    "stav": "ceka"
+  },
+  {
+    "id": "k-5e3f46d757546f02",
+    "zachyceno": "2026-09-06T16:55:44.199Z",
+    "publikovano": "2026-09-03T20:33:15.000Z",
+    "zdroj": {
+      "nazev": "Google News — sabotage Europe",
+      "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxPZUFlNjVwR3h5YnlMZDMybUpvMkJoZ1E5UzR5WkhSZDM1VmltYmpGTGlhblNYcXpGM0VRbVB3MFh4ajY3czFLcTRVcGxfNW9sVkVaU3cxXzdRQ2NKVnhLUHppeFY5QU4zZXlJZFdjaS1HdktzRlZra0o1NXIyd29iSTFPVG9RX3JpOEctRjhaZmdzd0d0NlFKS2V6M2ZqQ2la?oc=5",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Germany probes suspected arson at defence firm as European sabotage concerns mount - reuters.com",
+    "titulekPuvodni": "Germany probes suspected arson at defence firm as European sabotage concerns mount - reuters.com",
+    "shrnuti": "<a href=\"https://news.google.com/rss/articles/CBMioAFBVV95cUxPZUFlNjVwR3h5YnlMZDMybUpvMkJoZ1E5UzR5WkhSZDM1VmltYmpGTGlhblNYcXpGM0VRbVB3MFh4ajY3czFLcTRVcGxfNW9sVkVaU3cxXzdRQ2NKVnhLUHppeFY5QU4zZXlJZFdjaS1HdktzRlZra0o1NXIyd29iSTFPVG9RX3JpOEctRjhaZmdzd0d0NlFKS2V6M2ZqQ2la?oc=5\" target=\"_blank\">Germany pro",
+    "kodZeme": "DE",
+    "zeme": "Německo",
+    "kategorie": [
+      "sabotaz"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "shody": [
+      "sabotage",
+      "arson"
     ],
     "stav": "ceka"
   },
