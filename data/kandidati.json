@@ -1,5 +1,55 @@
 [
   {
+    "id": "k-002a90c79831b6d6",
+    "zachyceno": "2026-09-06T19:00:55.155Z",
+    "publikovano": "2026-09-06T18:23:23.000Z",
+    "zdroj": {
+      "nazev": "ČT24 — hlavní zprávy",
+      "url": "https://ct24.ceskatelevize.cz/clanek/domaci/vlada-do-konce-zari-rozhodne-o-rustu-duchodu-i-podobe-rozpoctu-377310",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Vláda do konce září rozhodne o růstu důchodů i podobě rozpočtu",
+    "titulekPuvodni": "Vláda do konce září rozhodne o růstu důchodů i podobě rozpočtu",
+    "shrnuti": "Vláda do konce září rozhodne, jestli průměrný důchod od ledna vzroste víc než o zatím plánovaných 300 korun měsíčně, řekl ČT premiér Andrej Babiš (ANO). Ministryně financí Alena Schillerová (ANO) přitom zatím v návrhu státního rozpočtu na příští rok – který už předpokládá nečekaně vysoký schodek 389",
+    "kodZeme": null,
+    "zeme": null,
+    "kategorie": [
+      "zpravodajske"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "shody": [
+      "bis "
+    ],
+    "stav": "ceka"
+  },
+  {
+    "id": "k-b9e6fe3e19c625b8",
+    "zachyceno": "2026-09-06T19:00:55.154Z",
+    "publikovano": "2026-09-06T17:35:00.000Z",
+    "zdroj": {
+      "nazev": "iROZHLAS — zprávy",
+      "url": "https://www.irozhlas.cz/zpravy-svet/online-uzemni-otazku-lze-vyresit-pouze-pri-jednani-prezidentu-trva-zelenskyj-na_2609061935_lar",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "ONLINE: Územní otázku lze vyřešit pouze při jednání prezidentů, trvá Zelenskyj na setkání s Putinem",
+    "titulekPuvodni": "ONLINE: Územní otázku lze vyřešit pouze při jednání prezidentů, trvá Zelenskyj na setkání s Putinem",
+    "shrnuti": "Územní otázku mezi Ukrajinou a Ruskem lze vyřešit pouze při jednání prezidentů obou zemí, řekl v neděli podle agentury AFP ukrajinský prezident Volodymyr Zelenskyj po setkání s americkými vyjednavači Stevem Witkoffem a Jaredem Kushnerem v Kyjevě. Přes pozitivní dojem z nedělních rozhovorů vyjádřil p",
+    "kodZeme": "UA",
+    "zeme": "Ukrajina",
+    "kategorie": [
+      "zpravodajske"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "shody": [
+      "agent"
+    ],
+    "stav": "ceka"
+  },
+  {
     "id": "k-89c9fba617bfd64b",
     "zachyceno": "2026-09-06T13:59:15.562Z",
     "publikovano": "2026-09-06T11:21:38.000Z",
@@ -54,6 +104,31 @@
       "dron",
       "agent",
       "hybridni"
+    ],
+    "stav": "ceka"
+  },
+  {
+    "id": "k-50e9a50bdb11dd40",
+    "zachyceno": "2026-09-06T19:00:55.155Z",
+    "publikovano": "2026-09-06T11:09:07.000Z",
+    "zdroj": {
+      "nazev": "ČT24 — hlavní zprávy",
+      "url": "https://ct24.ceskatelevize.cz/clanek/svet/witkoff-a-kushner-jsou-v-kyjeve-na-prvni-navsteve-budou-jednat-se-zelenskym-377307",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Územní otázku lze vyřešit pouze při jednání prezidentů, řekl Zelenskyj",
+    "titulekPuvodni": "Územní otázku lze vyřešit pouze při jednání prezidentů, řekl Zelenskyj",
+    "shrnuti": "Územní otázku mezi Ukrajinou a Ruskem lze vyřešit pouze při jednání prezidentů obou zemí, řekl podle agentury AFP ukrajinský prezident Volodymyr Zelenskyj po setkání s americkými vyjednavači Stevem Witkoffem a Jaredem Kushnerem v Kyjevě. Přes pozitivní dojem z rozhovorů vyjádřil přesvědčení, že válk",
+    "kodZeme": "UA",
+    "zeme": "Ukrajina",
+    "kategorie": [
+      "zpravodajske"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "shody": [
+      "agent"
     ],
     "stav": "ceka"
   },
