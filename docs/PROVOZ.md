@@ -50,3 +50,9 @@
 Hodinový sběr (`sber/udalosti.ts`) čte RSS kanály úřadů, redakcí a vyhledávací kanály Google News (`sber/zdroje-udalosti.ts`), vybírá zprávy podle klíčových slov, odhadne zemi a oblast a zapisuje je do `data/kandidati.json`. Web je ukáže hned jako **„automaticky zachyceno · čeká na ověření“** — čárkovaně, bez závažnosti; do počtů, hodnocení ani RSS nevstupují. Duplicitní adresa nebo stejný titulek se nezapíše dvakrát; po třech týdnech kandidát sám odchází. Se secretem `ANTHROPIC_API_KEY` model vyřadí nerelevantní zprávy a doplní český titulek a shrnutí (označeno „přeloženo modelem“); bez klíče běží jen pravidla.
 
 Převzetí kandidáta do záznamů: `node nastroje/prijmi-kandidata.mjs <id>` vypíše kostru; člověk doplní fakta, závažnost a jistotu, nastaví `lidskyOvereno: true` a vloží do `data/incidenty.json`. Sběr pak kandidáta sám odloží (stejná adresa zdroje).
+
+## Rozhlas do kanálů
+
+`nastroje/rozhlas.mjs` posílá krátké zprávy o nových ověřených záznamech do Telegram kanálu @czechpatrol (bot CzechPatrolBot, správce kanálu). Workflow `.github/workflows/rozhlas.yml`: po každém pushi, který mění `data/incidenty.json` nebo `data/historie.json`, odejdou **okamžité** zprávy (případy se závažností Vysoká a výš, opatření, změny právního stavu a NATO z archivu); denně v 17:00 UTC odejde **souhrn** ostatních nových záznamů. Každý záznam jednou; nová položka v historii případu = jedna zpráva „nové zjištění“. Nejvýš 8 zpráv na běh, zbytek příště. Při prvním běhu se starší záznamy jen označí za oznámené, aby kanál nezaplavil archiv. Stav: `data/fronta/rozhlaseno.json`. Automaticky zachycení kandidáti se neposílají nikdy.
+
+Přístupy: secret `TELEGRAM_BOT_TOKEN`, volitelně variable `TELEGRAM_KANAL` (výchozí @czechpatrol). Bez tokenu skript skončí bez chyby a nic neposílá. Test: workflow Rozhlas ručně s volbou „Poslat testovací zprávu“. Náhled bez odeslání: `node nastroje/rozhlas.mjs --okamzite --nacisto`.

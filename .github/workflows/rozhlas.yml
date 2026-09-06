@@ -1,0 +1,64 @@
+name: Rozhlas do kanálů
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "data/incidenty.json"
+      - "data/historie.json"
+  schedule:
+    # Denní souhrn v 17:00 UTC = 19:00 letního / 18:00 zimního času.
+    - cron: "0 17 * * *"
+  workflow_dispatch:
+    inputs:
+      test:
+        description: "Poslat testovací zprávu"
+        type: boolean
+        default: false
+
+permissions:
+  contents: write
+
+concurrency:
+  group: rozhlas
+  cancel-in-progress: false
+
+jobs:
+  rozhlas:
+    runs-on: ubuntu-latest
+    env:
+      TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+      TELEGRAM_KANAL: ${{ vars.TELEGRAM_KANAL || '@czechpatrol' }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+
+      - name: Testovací zpráva
+        if: github.event_name == 'workflow_dispatch' && inputs.test
+        run: node nastroje/rozhlas.mjs --test
+
+      - name: Okamžité zprávy (vážné případy, opatření, změny oficiálních stavů)
+        if: github.event_name != 'schedule'
+        run: node nastroje/rozhlas.mjs --okamzite
+
+      - name: Denní souhrn
+        if: github.event_name == 'schedule'
+        run: node nastroje/rozhlas.mjs --souhrn
+
+      - name: Uložit stav odeslaného
+        run: |
+          if [ -z "$(git status --porcelain data/fronta/rozhlaseno.json)" ]; then
+            echo "Stav se nezměnil."
+            exit 0
+          fi
+          git config user.name "rozhlas"
+          git config user.email "rozhlas@users.noreply.github.com"
+          git add data/fronta/rozhlaseno.json
+          git commit -m "Rozhlas: stav odeslaných zpráv $(date -u +'%Y-%m-%d %H:%M UTC')"
+          for i in 1 2 3 4; do
+            git push && break
+            echo "Push selhal, opakuji za $((2**i)) s"
+            sleep $((2**i))
+            git pull --rebase
+          done

@@ -32,7 +32,7 @@ export const METODIKA_REVIDOVANA = "2026-09-06";
  * Kanál `rss` se generuje při buildu a je funkční vždy.
  */
 export const KANALY: Record<string, string> = {
-  telegram: "",
+  telegram: "https://t.me/czechpatrol",
   whatsapp: "",
   signal: "",
   bluesky: "",
