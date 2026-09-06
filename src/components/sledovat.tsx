@@ -16,11 +16,11 @@ const KANALY_DEF: { klic: Znacka; nazev: string; popis: string }[] = [
   { klic: "bluesky", nazev: "Bluesky", popis: "krátká shrnutí" },
 ];
 
-const KARTA = "flex min-h-[64px] items-center gap-3 rounded-[10px] border px-3 py-2 text-left transition-colors";
+const KARTA = "flex min-h-[64px] items-center gap-3 rounded-[16px] border px-3 py-2 text-left transition-colors";
 
 export function Sledovat() {
   return (
-    <section id="sledovat" aria-label="Sledujte nás" className="scroll-mt-[64px]">
+    <section id="sledovat" aria-label="Sledujte nás" className="scroll-mt-[84px]">
       <div className="mb-1.5 flex items-center justify-between"><span className="stitek">Sledujte změny · nemusíte sem chodit</span><Link href="/odber/" className="text-[12px] text-akcent hover:text-akcent-svetla">jak fungují upozornění →</Link></div>
       <ul className="grid grid-cols-2 gap-1.5 sm:grid-cols-3 lg:grid-cols-6">
         <li><a href={`${WEB.url}/feed.xml`} className={`${KARTA} border-akcent/50 bg-akcent/10 hover:bg-akcent/20`}><ZnackaKanalu znacka="rss" velikost={26} /><span><span className="block text-[13.5px] font-bold text-inkoust">RSS</span><span className="block text-[11.5px] text-tlum">každá čtečka</span></span></a></li>
@@ -47,16 +47,16 @@ export function Sledovat() {
       <div className="mt-2 grid gap-1.5 sm:grid-cols-3">
         {KOMUNITA.diskuse && (
           <a href={KOMUNITA.diskuse} target="_blank" rel="noopener noreferrer" className={`${KARTA} border-linka hover:border-akcent`}>
-            <span className="grid h-9 w-9 shrink-0 place-items-center rounded-[8px] bg-plocha2 text-akcent"><Ikona nazev="uzivatel" velikost={16} tah={2} /></span>
+            <span className="grid h-9 w-9 shrink-0 place-items-center rounded-[12px] bg-plocha2 text-akcent"><Ikona nazev="uzivatel" velikost={16} tah={2} /></span>
             <span><span className="block text-[13.5px] font-bold text-inkoust">Diskuse a tipy</span><span className="block text-[11.5px] text-tlum">veřejně na GitHubu, chybí tu událost?</span></span>
           </a>
         )}
         <Link href="/muj-prehled/" className={`${KARTA} border-linka hover:border-akcent`}>
-          <span className="grid h-9 w-9 shrink-0 place-items-center rounded-[8px] bg-plocha2 text-akcent"><Ikona nazev="terc" velikost={16} tah={2} /></span>
+          <span className="grid h-9 w-9 shrink-0 place-items-center rounded-[12px] bg-plocha2 text-akcent"><Ikona nazev="terc" velikost={16} tah={2} /></span>
           <span><span className="block text-[13.5px] font-bold text-inkoust">Můj přehled</span><span className="block text-[11.5px] text-tlum">jen země a témata, která sledujete</span></span>
         </Link>
         <Link href="/podporit/" className={`${KARTA} border-linka hover:border-akcent`}>
-          <span className="grid h-9 w-9 shrink-0 place-items-center rounded-[8px] bg-plocha2 text-akcent"><Ikona nazev="srdce" velikost={16} tah={2} /></span>
+          <span className="grid h-9 w-9 shrink-0 place-items-center rounded-[12px] bg-plocha2 text-akcent"><Ikona nazev="srdce" velikost={16} tah={2} /></span>
           <span><span className="block text-[13.5px] font-bold text-inkoust">Podpořit provoz</span><span className="block text-[11.5px] text-tlum">bez inzerce, náklady veřejně</span></span>
         </Link>
       </div>

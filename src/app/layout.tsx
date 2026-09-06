@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from "next";
-import { Chakra_Petch, JetBrains_Mono } from "next/font/google";
+import { Archivo, IBM_Plex_Mono } from "next/font/google";
 import { ListaMobil } from "@/components/lista-mobil";
 import { Navigace } from "@/components/navigace";
 import { PostranniPanel } from "@/components/postranni-panel";
@@ -9,20 +9,22 @@ import { UkazkaPruh } from "@/components/pruhy";
 import { WEB } from "@/config/web";
 import "./globals.css";
 
-// Jediné písmo pro všechno psané. Tučné řezy nesou nadpisy, střední text.
-const chakra = Chakra_Petch({
+// Písmo značky. Archivo nese nadpisy, tlačítka i běžný text.
+// next/font stahuje písmo při sestavení a servíruje z naší domény —
+// návštěvník tím nechodí na server třetí strany.
+const archivo = Archivo({
   subsets: ["latin", "latin-ext"],
   weight: ["400", "500", "600", "700"],
   variable: "--font-chakra",
   display: "swap",
 });
 
-// Neproporcionální písmo nesou popisky a čísla — dashboard se má číst
+// Neproporcionální písmo nesou popisky, čísla a časy — přehled se má číst
 // jako přístroj, ne jako článek.
-const mono = JetBrains_Mono({
+const mono = IBM_Plex_Mono({
   subsets: ["latin", "latin-ext"],
   variable: "--font-mono-web",
-  weight: ["400", "500"],
+  weight: ["400", "500", "600", "700"],
   display: "swap",
 });
 
@@ -52,7 +54,7 @@ export const metadata: Metadata = {
 };
 
 export const viewport: Viewport = {
-  themeColor: "#10141b",
+  themeColor: "#fffefb",
   width: "device-width",
   initialScale: 1,
   viewportFit: "cover",
@@ -60,7 +62,7 @@ export const viewport: Viewport = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="cs" className={`${chakra.variable} ${mono.variable}`}>
+    <html lang="cs" className={`${archivo.variable} ${mono.variable}`}>
       <body className="min-h-dvh">
         <a
           href="#obsah"

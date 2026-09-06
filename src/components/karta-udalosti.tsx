@@ -41,7 +41,7 @@ export function KartaUdalosti({
 
       {/* strojová hlavička */}
       <div className={`flex flex-wrap items-center gap-x-3 gap-y-2 border-b ${t.ramecek} px-5 py-2.5 pl-6`}>
-        <span className="stitek-tmavy rounded-[6px] border border-current/25 px-1.5 py-1 opacity-80">
+        <span className="stitek-tmavy rounded-[10px] border border-current/25 px-1.5 py-1 opacity-80">
           {incident.kodZeme}
         </span>
         <span className="stitek">{incident.zeme}</span>

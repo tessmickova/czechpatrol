@@ -77,7 +77,7 @@ function Aplikace() {
     <>
       <a
         href="#obsah"
-        className="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-[100] focus:rounded-[10px] focus:bg-inkoust focus:px-3 focus:py-2 focus:text-[13px] focus:text-white"
+        className="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-[100] focus:rounded-[16px] focus:bg-inkoust focus:px-3 focus:py-2 focus:text-[13px] focus:text-white"
       >
         Přeskočit na obsah
       </a>

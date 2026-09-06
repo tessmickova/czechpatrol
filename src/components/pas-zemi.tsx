@@ -37,13 +37,13 @@ export function PasZemi({ vse, ted = Date.now() }: { vse: Zaznam[]; ted?: number
         key={`${z.kod}${sufix}`}
         href={`/udalosti/?zeme=${z.kod}`}
         title={`${z.nazev}: ${z.pocet} ${sklon(z.pocet, "případ", "případy", "případů")} za 90 dnů${z.nej ? `, nejvyšší závažnost ${UROVNE[z.nej].nazev}` : ""}`}
-        className={`mx-1 inline-flex h-[34px] shrink-0 items-center gap-2 rounded-[8px] border px-2.5 text-[12.5px] hover:bg-plocha2 ${t ? `${t.ramecek} ${t.pozadi}` : "border-linka2 bg-plocha"}`}
+        className={`mx-1 inline-flex h-[34px] shrink-0 items-center gap-2 rounded-[12px] border px-2.5 text-[12.5px] hover:bg-plocha2 ${t ? `${t.ramecek} ${t.pozadi}` : "border-linka2 bg-plocha"}`}
       >
         <Vlajka kod={z.kod} />
         <span className="font-semibold text-inkoust">{z.nazev}</span>
         <span className={`cislice text-[14px] font-bold ${t ? t.text : "text-tlum2"}`}>{z.pocet}</span>
         {z.vykricniky > 0 && (
-          <span aria-label={`${z.vykricniky === 3 ? "velmi vysoká" : z.vykricniky === 2 ? "vysoká" : "zvýšená"} aktivita`} className="flex gap-[1px] text-[#d95c5c]">
+          <span aria-label={`${z.vykricniky === 3 ? "velmi vysoká" : z.vykricniky === 2 ? "vysoká" : "zvýšená"} aktivita`} className="flex gap-[1px] text-[#c1272d]">
             {Array.from({ length: z.vykricniky }, (_, i) => <Ikona key={i} nazev="vykricnik" velikost={12} tah={2.6} />)}
           </span>
         )}

@@ -35,7 +35,7 @@ export function UkazkaPruh() {
   return (
     <div className="border-b border-[#5e5124] bg-[#2a2410]">
       <div className="mx-auto flex max-w-[1180px] items-start gap-2.5 px-5 py-2.5 sm:px-8">
-        <span className="stitek-tmavy mt-[1px] shrink-0 rounded-[10px] border border-[#5e5124] bg-[#2a2410] px-1.5 py-[3px] text-[#f0d47e]">
+        <span className="stitek-tmavy mt-[1px] shrink-0 rounded-[16px] border border-[#5e5124] bg-[#2a2410] px-1.5 py-[3px] text-[#f0d47e]">
           Ukázka
         </span>
         <p className="text-[12px] leading-relaxed text-[#f0d47e]">
@@ -51,7 +51,7 @@ export function UkazkaPruh() {
 /** Odznak u jednotlivého ukázkového záznamu. */
 export function OdznakUkazky() {
   return (
-    <span className="stitek-tmavy shrink-0 rounded-[10px] border border-[#5e5124] bg-[#2a2410] px-1.5 py-[3px] text-[#f0d47e]">
+    <span className="stitek-tmavy shrink-0 rounded-[16px] border border-[#5e5124] bg-[#2a2410] px-1.5 py-[3px] text-[#f0d47e]">
       Ukázka
     </span>
   );

@@ -23,7 +23,7 @@ export function PlacenaVrstva({
   if (maRoli(ucet, "podporovatel")) return <>{children}</>;
   if (kompaktni) {
     return (
-      <Link href="/ucet/" className="sklo-noc-slabe flex h-full flex-col justify-between rounded-[14px] px-3.5 py-3.5 text-left transition-colors hover:border-jantar/50">
+      <Link href="/ucet/" className="sklo-noc-slabe flex h-full flex-col justify-between rounded-[22px] px-3.5 py-3.5 text-left transition-colors hover:border-jantar/50">
         <span className="stitek flex items-center gap-1.5 !text-noc-tlum">
           <Ikona nazev="zamek" velikost={12} /> {co}
         </span>
@@ -36,7 +36,7 @@ export function PlacenaVrstva({
       <div aria-hidden className="pointer-events-none select-none blur-[6px] opacity-40">{children}</div>
       <div className="absolute inset-0 grid place-items-center p-4">
         <div className="sklo sklo-akcent max-w-[28rem] rounded-[16px] p-5 text-center">
-          <span className="mx-auto grid h-10 w-10 place-items-center rounded-[12px] border border-jantar/50 bg-jantar/15 text-jantar">
+          <span className="mx-auto grid h-10 w-10 place-items-center rounded-[18px] border border-jantar/50 bg-jantar/15 text-jantar">
             <Ikona nazev="zamek" velikost={18} />
           </span>
           <p className="mt-3 text-[16px] font-bold uppercase tracking-[0.03em]">{co} je pro podporovatele</p>

@@ -42,7 +42,7 @@ function Tvrzeni({ polozky, aktor, tlumene = false }: { polozky: SvetTvrzeni[]; 
     <ul className="space-y-1.5">
       {polozky.map((t, i) => (
         <li key={i} className={`flex gap-2.5 text-[14px] leading-relaxed ${tlumene ? "text-tlum" : "text-inkoust"}`}>
-          <span aria-hidden className={`mt-[9px] h-[4px] w-[4px] shrink-0 rounded-full ${t.odhad ? "bg-[#c4b8e6]" : "bg-akcent"}`} />
+          <span aria-hidden className={`mt-[9px] h-[4px] w-[4px] shrink-0 rounded-full ${t.odhad ? "bg-[#4a3d73]" : "bg-akcent"}`} />
           <span>
             {t.text}
             {t.odhad && <span className="ml-1.5 align-middle"><OdznakTypu typ="odhad" /></span>}
@@ -55,7 +55,7 @@ function Tvrzeni({ polozky, aktor, tlumene = false }: { polozky: SvetTvrzeni[]; 
 }
 
 function Priblizeni({ stupen, stupne }: { stupen: number; stupne: string[] }) {
-  const barvy = ["bg-tlum2", "bg-[#d9b24c]", "bg-[#d99a4c]", "bg-[#d9773f]", "bg-[#d95c5c]"];
+  const barvy = ["bg-tlum2", "bg-[#b8860b]", "bg-[#c96a1e]", "bg-[#d1521f]", "bg-[#c1272d]"];
   return (
     <div className="flex items-center gap-3">
       <span aria-hidden className="flex gap-[3px]">
@@ -69,9 +69,9 @@ function Priblizeni({ stupen, stupne }: { stupen: number; stupne: string[] }) {
 
 function Aktor({ a, stupne }: { a: SvetAktor; stupne: string[] }) {
   return (
-    <article id={a.klic} className="scroll-mt-[72px] rounded-[14px] border border-linka bg-plocha p-5">
+    <article id={a.klic} className="scroll-mt-[72px] rounded-[22px] border border-linka bg-plocha p-5">
       <header className="flex items-start gap-3">
-        <span className="grid h-10 w-10 shrink-0 place-items-center rounded-[10px] bg-plocha2">
+        <span className="grid h-10 w-10 shrink-0 place-items-center rounded-[16px] bg-plocha2">
           {a.kod ? <Vlajka kod={a.kod} velka /> : <Ikona nazev="globus" velikost={20} tah={1.8} trida="text-akcent" />}
         </span>
         <span className="min-w-0">
@@ -88,7 +88,7 @@ function Aktor({ a, stupne }: { a: SvetAktor; stupne: string[] }) {
         <div className="mb-1.5 flex items-center gap-2"><OdznakTypu typ="fakt" /><span className="stitek">Co pro to dělá</span></div>
         <Tvrzeni polozky={a.postup} aktor={a} tlumene />
       </div>
-      <div className="mt-4 rounded-[10px] border border-[#a494d6]/30 bg-[#a494d6]/8 p-3.5">
+      <div className="mt-4 rounded-[16px] border border-[#5d4c8c]/30 bg-[#5d4c8c]/8 p-3.5">
         <div className="mb-2 flex items-center gap-2"><OdznakTypu typ="odhad" /><span className="stitek">Jak blízko k cílům je</span></div>
         <Priblizeni stupen={a.priblizeni.stupen} stupne={stupne} />
         <p className="mt-2 text-[14px] leading-relaxed text-tlum">{a.priblizeni.odhad}</p>
@@ -107,7 +107,7 @@ function Aktor({ a, stupne }: { a: SvetAktor; stupne: string[] }) {
           {a.zdroje.map((z, i) => (
             <li key={z.url} className="flex gap-2 text-[13px] leading-snug">
               <span className="cislice shrink-0 text-tlum2">[{i + 1}]</span>
-              <span className={`stitek-tmavy shrink-0 rounded-[6px] border px-1.5 py-[2px] ${TYPY_ZDROJU[z.typ].tridy}`}>{TYPY_ZDROJU[z.typ].znacka}</span>
+              <span className={`stitek-tmavy shrink-0 rounded-[10px] border px-1.5 py-[2px] ${TYPY_ZDROJU[z.typ].tridy}`}>{TYPY_ZDROJU[z.typ].znacka}</span>
               <a href={z.url} target="_blank" rel="noopener noreferrer" className="odkaz min-w-0 break-words text-tlum">{z.nazev}</a>
             </li>
           ))}
@@ -140,14 +140,14 @@ export default function Svet() {
         <ul className="grid gap-1.5 sm:grid-cols-2 lg:grid-cols-4">
           {s.aktori.map((a) => (
             <li key={a.klic}>
-              <a href={`#${a.klic}`} className="flex min-h-[56px] items-center gap-3 rounded-[10px] border border-linka2 bg-plocha px-3 py-2 hover:border-akcent">
+              <a href={`#${a.klic}`} className="flex min-h-[56px] items-center gap-3 rounded-[16px] border border-linka2 bg-plocha px-3 py-2 hover:border-akcent">
                 <span className="shrink-0">{a.kod ? <Vlajka kod={a.kod} /> : <Ikona nazev="globus" velikost={16} tah={1.8} trida="text-akcent" />}</span>
                 <span className="min-w-0 flex-1">
                   <span className="block truncate text-[14px] font-semibold text-inkoust">{a.nazev}</span>
                   <span className="block text-[11.5px] text-tlum2">k cílům: {s.stupne[a.priblizeni.stupen]}</span>
                 </span>
                 <span aria-hidden className="flex gap-[2px]">
-                  {s.stupne.map((_, i) => <span key={i} className={`h-[8px] w-[7px] rounded-[1px] ${i <= a.priblizeni.stupen ? "bg-[#c4b8e6]" : "bg-linka2"}`} />)}
+                  {s.stupne.map((_, i) => <span key={i} className={`h-[8px] w-[7px] rounded-[1px] ${i <= a.priblizeni.stupen ? "bg-[#4a3d73]" : "bg-linka2"}`} />)}
                 </span>
               </a>
             </li>
@@ -168,7 +168,7 @@ export default function Svet() {
       <section aria-labelledby="stret" className="mt-10">
         <h2 id="stret" className="text-[20px] font-bold">Kde se cíle střetávají</h2>
         <p className="mt-1 mb-4 text-[14px] text-tlum">Stejné otázky, různé odpovědi. Zkrácené postoje podle deklarací výše; pomlčka = aktér se k otázce nevyjadřuje nebo v ní nehraje roli.</p>
-        <div className="overflow-x-auto rounded-[12px] border border-linka">
+        <div className="overflow-x-auto rounded-[18px] border border-linka">
           <table className="w-full min-w-[980px] border-collapse text-left text-[13px]">
             <thead>
               <tr className="border-b border-linka bg-plocha">
@@ -202,7 +202,7 @@ export default function Svet() {
         <ul className="divide-y divide-linka2 border-y border-linka2">
           {s.sledovat.map((x) => (
             <li key={x.text} className="flex items-start gap-3 py-2.5 text-[14px] leading-relaxed text-inkoust">
-              <span className={`mt-[3px] shrink-0 ${x.smer === "nahoru" ? "text-[#e69b6e]" : x.smer === "dolu" ? "text-[#8fd6ae]" : "text-tlum2"}`}>
+              <span className={`mt-[3px] shrink-0 ${x.smer === "nahoru" ? "text-[#a8401a]" : x.smer === "dolu" ? "text-[#256b45]" : "text-tlum2"}`}>
                 <Ikona nazev={x.smer === "nahoru" ? "nahoru" : x.smer === "dolu" ? "dolu" : "minus"} velikost={13} tah={2.2} />
               </span>
               {x.text}

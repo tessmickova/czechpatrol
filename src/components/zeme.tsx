@@ -39,7 +39,7 @@ export function DopadPoZemich() {
         return (
           <article
             key={z.kodZeme}
-            className={`relative flex flex-col rounded-[14px] border p-4 transition-colors ${
+            className={`relative flex flex-col rounded-[22px] border p-4 transition-colors ${
               cr ? "border-akcent/40 bg-akcent/5" : "border-linka2 hover:border-linka"
             }`}
           >
@@ -61,7 +61,7 @@ export function DopadPoZemich() {
                     <span className="stitek">nejvyšší závažnost</span>
                   </>
                 ) : (
-                  <span className="stitek !text-[#8fd6ae]">žádný zveřejněný záznam</span>
+                  <span className="stitek !text-[#256b45]">žádný zveřejněný záznam</span>
                 )}
               </span>
             </div>
@@ -69,18 +69,18 @@ export function DopadPoZemich() {
               <>
                 {/* Z čeho se počet skládá: činy s potvrzeným pachatelem, činy bez něj, prohlášení a reakce. */}
                 <div aria-hidden className="mt-3 flex h-[6px] overflow-hidden rounded-full bg-linka2">
-                  {z.potvrzenych > 0 && <span className="bg-[#d9773f]" style={{ width: `${(z.potvrzenych / z.pocet) * 100}%` }} />}
-                  {z.cinu - z.potvrzenych > 0 && <span className="bg-[#d9b24c]" style={{ width: `${((z.cinu - z.potvrzenych) / z.pocet) * 100}%` }} />}
+                  {z.potvrzenych > 0 && <span className="bg-[#d1521f]" style={{ width: `${(z.potvrzenych / z.pocet) * 100}%` }} />}
+                  {z.cinu - z.potvrzenych > 0 && <span className="bg-[#b8860b]" style={{ width: `${((z.cinu - z.potvrzenych) / z.pocet) * 100}%` }} />}
                   {z.prohlaseni > 0 && <span className="bg-tlum2" style={{ width: `${(z.prohlaseni / z.pocet) * 100}%` }} />}
                 </div>
                 <ul className="mt-2 space-y-1 text-[12.5px] text-tlum">
-                  <li className="flex items-center gap-2"><span aria-hidden className="h-[6px] w-[6px] rounded-[2px] bg-[#d9773f]" /><span className="cislice text-inkoust">{z.potvrzenych}</span> {sklon(z.potvrzenych, "čin", "činy", "činů")} s potvrzeným pachatelem</li>
-                  <li className="flex items-center gap-2"><span aria-hidden className="h-[6px] w-[6px] rounded-[2px] bg-[#d9b24c]" /><span className="cislice text-inkoust">{z.cinu - z.potvrzenych}</span> {sklon(z.cinu - z.potvrzenych, "čin", "činy", "činů")} bez potvrzení</li>
+                  <li className="flex items-center gap-2"><span aria-hidden className="h-[6px] w-[6px] rounded-[2px] bg-[#d1521f]" /><span className="cislice text-inkoust">{z.potvrzenych}</span> {sklon(z.potvrzenych, "čin", "činy", "činů")} s potvrzeným pachatelem</li>
+                  <li className="flex items-center gap-2"><span aria-hidden className="h-[6px] w-[6px] rounded-[2px] bg-[#b8860b]" /><span className="cislice text-inkoust">{z.cinu - z.potvrzenych}</span> {sklon(z.cinu - z.potvrzenych, "čin", "činy", "činů")} bez potvrzení</li>
                   <li className="flex items-center gap-2"><span aria-hidden className="h-[6px] w-[6px] rounded-[2px] bg-tlum2" /><span className="cislice text-inkoust">{z.prohlaseni}</span> {sklon(z.prohlaseni, "prohlášení nebo reakce", "prohlášení nebo reakce", "prohlášení a reakcí")}</li>
                 </ul>
                 <div className="mt-2.5 flex flex-wrap gap-1">
                   {z.kategorie.slice(0, 3).map((k) => (
-                    <span key={k} className="stitek-tmavy rounded-[6px] border border-linka px-1.5 py-[3px] text-tlum">{KATEGORIE[k].nazev}</span>
+                    <span key={k} className="stitek-tmavy rounded-[10px] border border-linka px-1.5 py-[3px] text-tlum">{KATEGORIE[k].nazev}</span>
                   ))}
                 </div>
                 {z.posledni && (

@@ -37,7 +37,7 @@ export function Panel({
   return (
     <section
       id={id}
-      className={`${rozpeti} scroll-mt-[70px] ${
+      className={`${rozpeti} scroll-mt-[84px] ${
         holy ? "" : "sklo overflow-hidden rounded-[18px]"
       } ${tmavy ? "noc relative" : ""}`}
     >

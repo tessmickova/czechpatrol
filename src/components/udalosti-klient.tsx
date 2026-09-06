@@ -137,7 +137,7 @@ function Cip({ aktivni, onClick, children, title }: { aktivni: boolean; onClick:
       onClick={onClick}
       aria-pressed={aktivni}
       title={title}
-      className={`inline-flex min-h-[36px] items-center gap-1.5 rounded-[8px] px-2.5 text-[13px] font-semibold transition-colors ${
+      className={`inline-flex min-h-[36px] items-center gap-1.5 rounded-[12px] px-2.5 text-[13px] font-semibold transition-colors ${
         aktivni ? "bg-akcent/20 text-akcent-svetla" : "text-tlum hover:bg-plocha2 hover:text-inkoust"
       }`}
     >
@@ -298,7 +298,7 @@ export function UdalostiKlient({ zaznamy, neprosle, kandidati = [] }: { zaznamy:
         {aktivni.length > 0 && (
           <div className="mt-3 flex flex-wrap items-center gap-1.5" aria-label="Aktivní filtry">
             {aktivni.map((a) => (
-              <button key={a.text} type="button" onClick={a.zrus} className="inline-flex min-h-[32px] items-center gap-1 rounded-[8px] border border-linka px-2 text-[12.5px] text-inkoust hover:border-akcent">
+              <button key={a.text} type="button" onClick={a.zrus} className="inline-flex min-h-[32px] items-center gap-1 rounded-[12px] border border-linka px-2 text-[12.5px] text-inkoust hover:border-akcent">
                 {a.text} <Ikona nazev="krizek" velikost={10} tah={2.4} /><span className="sr-only">zrušit filtr</span>
               </button>
             ))}
@@ -340,7 +340,7 @@ export function UdalostiKlient({ zaznamy, neprosle, kandidati = [] }: { zaznamy:
 
         {vysledek.length > limit && (
           <div className="mt-4 flex justify-center">
-            <button type="button" onClick={() => setLimit((l) => l + 10)} className="inline-flex min-h-[44px] items-center gap-2 rounded-[10px] border border-linka px-5 text-[14px] font-semibold text-inkoust hover:border-akcent">
+            <button type="button" onClick={() => setLimit((l) => l + 10)} className="inline-flex min-h-[44px] items-center gap-2 rounded-[16px] border border-linka px-5 text-[14px] font-semibold text-inkoust hover:border-akcent">
               Zobrazit dalších {Math.min(10, vysledek.length - limit)} · zbývá {vysledek.length - limit}
             </button>
           </div>
@@ -350,10 +350,10 @@ export function UdalostiKlient({ zaznamy, neprosle, kandidati = [] }: { zaznamy:
       </div>
 
       {siroky && otevreny && (
-        <aside aria-label="Detail události" className="lg:sticky lg:top-[72px] lg:max-h-[calc(100dvh-88px)] lg:overflow-y-auto rounded-[14px] border border-linka bg-plocha p-5">
+        <aside aria-label="Detail události" className="lg:sticky lg:top-[88px] lg:max-h-[calc(100dvh-104px)] lg:overflow-y-auto rounded-[22px] border border-linka bg-plocha p-5">
           <div className="mb-3 flex items-center justify-between gap-3">
             <Link href={`/incident/${otevreny.slug}/`} className="text-[13px] font-semibold text-akcent hover:text-akcent-svetla">Samostatná stránka</Link>
-            <button type="button" onClick={zavri} className="grid h-11 w-11 place-items-center rounded-[8px] text-tlum hover:bg-plocha2 hover:text-inkoust" aria-label="Zavřít detail">
+            <button type="button" onClick={zavri} className="grid h-11 w-11 place-items-center rounded-[12px] text-tlum hover:bg-plocha2 hover:text-inkoust" aria-label="Zavřít detail">
               <Ikona nazev="krizek" velikost={16} tah={2} />
             </button>
           </div>
@@ -366,7 +366,7 @@ export function UdalostiKlient({ zaznamy, neprosle, kandidati = [] }: { zaznamy:
 }
 
 function Znacka({ hodnota, dobra }: { hodnota: string; dobra: boolean | null }) {
-  const tridy = dobra === true ? "text-[#8fd6ae]" : dobra === false ? "text-jantar" : "text-tlum2";
+  const tridy = dobra === true ? "text-[#256b45]" : dobra === false ? "text-jantar" : "text-tlum2";
   return <span className={`text-[12px] font-semibold ${tridy}`}>{hodnota}</span>;
 }
 
@@ -416,7 +416,7 @@ function RadekNeprosle({ n }: { n: Nepotvrzene }) {
         <span className="min-w-0 flex-1">
           <span className="flex flex-wrap items-center gap-x-2 text-[12px] text-tlum">
             <Vlajka kod={n.kodZeme} /> <span>{n.kodZeme === "CZ" ? "Česko" : n.zeme}</span> <span aria-hidden>·</span>
-            <span className="font-semibold text-[#8fd6ae]">{n.stav === "vyvraceno" ? "vyvráceno" : "nepotvrzeno"}</span>
+            <span className="font-semibold text-[#256b45]">{n.stav === "vyvraceno" ? "vyvráceno" : "nepotvrzeno"}</span>
           </span>
           <span className="block text-[15px] font-semibold leading-snug text-tlum">{n.nazev}</span>
         </span>

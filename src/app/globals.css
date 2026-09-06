@@ -1,59 +1,64 @@
 @import "tailwindcss";
 
 /*
-  Vizuální systém CzechPatrol.
+  Vizuální systém CzechPatrol (značka v2).
 
-  Klidný tmavý pracovní panel: jedna rodina písma pro text, mono jen pro
-  čísla a metadata, střídmé zaoblení, žádné dekorativní záře. Barva nikdy
-  nenese informaci sama — vždy ji doprovází slovo nebo ikona.
+  Světlý papír se skleněnými plochami, jedna červená jako jediný akcent,
+  Archivo na text a IBM Plex Mono na čísla, popisky a časy. Zaoblení je
+  velké, stíny měkké. Barva nikdy nenese informaci sama — vždy ji
+  doprovází slovo nebo ikona.
+
+  Názvy proměnných zůstávají z dřívějška (papir, plocha, inkoust, tlum),
+  aby se převlek udál na jednom místě a komponenty se nemusely přepisovat.
 */
 
 @theme {
-  --font-sans: var(--font-chakra), "Chakra Petch", ui-sans-serif, system-ui, sans-serif;
-  --font-mono: var(--font-mono-web), "JetBrains Mono", ui-monospace, Menlo, monospace;
+  --font-sans: var(--font-chakra), Archivo, ui-sans-serif, system-ui, sans-serif;
+  --font-mono: var(--font-mono-web), "IBM Plex Mono", ui-monospace, Menlo, monospace;
 
-  --r-s: 8px;
-  --r-m: 10px;
-  --r-l: 14px;
+  /* zaoblení podle brandbooku: pilulky 999, velké karty 26, střední 22, řádky 14 */
+  --r-s: 14px;
+  --r-m: 18px;
+  --r-l: 26px;
 
   /* plochy */
-  --color-papir: #10141b;
-  --color-plocha: #181f29;
-  --color-plocha2: #202a36;
-  --color-inkoust: #f2f5f8;
-  --color-tlum: #acb7c5;
-  --color-tlum2: #7f8ea0;
-  --color-linka: rgb(172 183 197 / 0.18);
-  --color-linka2: rgb(172 183 197 / 0.1);
+  --color-papir: #eeecea;
+  --color-plocha: #fffefb;
+  --color-plocha2: #f4f3f1;
+  --color-inkoust: #14140f;
+  --color-tlum: #3d3b35;
+  --color-tlum2: #6f6c64;
+  --color-linka: rgb(20 20 15 / 0.12);
+  --color-linka2: rgb(20 20 15 / 0.07);
 
-  /* kvůli starším komponentám: noc = nejtmavší plocha */
-  --color-noc: #0b0e13;
-  --color-noc2: #10141b;
-  --color-noc3: #202a36;
-  --color-noc-text: #f2f5f8;
-  --color-noc-tlum: #acb7c5;
-  --color-noc-linka: rgb(172 183 197 / 0.18);
+  /* tmavé plochy: patička, pás, tmavé odznaky */
+  --color-noc: #14140f;
+  --color-noc2: #0d0d0a;
+  --color-noc3: rgb(255 255 255 / 0.08);
+  --color-noc-text: #fffefb;
+  --color-noc-tlum: #c9c6bd;
+  --color-noc-linka: rgb(255 255 255 / 0.13);
 
-  /* akcent */
-  --color-akcent: #75b9cc;
-  --color-akcent-tmava: #4f95a8;
-  --color-akcent-svetla: #a3d3e0;
-  --color-jantar: #d9b24c;
+  /* akcent — Patrol Red */
+  --color-akcent: #c1272d;
+  --color-akcent-tmava: #8e1b20;
+  --color-akcent-svetla: #e8484f;
+  --color-jantar: #8a6d0b;
 
   /* tónované plochy */
-  --color-mycka: rgb(117 185 204 / 0.08);
-  --color-mycka2: rgb(117 185 204 / 0.16);
-  --color-list: rgb(92 191 138 / 0.1);
-  --color-list2: rgb(92 191 138 / 0.18);
-  --color-pisek: rgb(217 178 76 / 0.1);
-  --color-pisek2: rgb(217 178 76 / 0.18);
-  --color-slunce: rgb(217 178 76 / 0.1);
-  --color-slunce2: rgb(217 178 76 / 0.18);
-  --color-slez: rgb(164 148 214 / 0.1);
-  --color-slez2: rgb(164 148 214 / 0.18);
+  --color-mycka: rgb(193 39 45 / 0.07);
+  --color-mycka2: rgb(193 39 45 / 0.14);
+  --color-list: rgb(46 125 83 / 0.09);
+  --color-list2: rgb(46 125 83 / 0.16);
+  --color-pisek: rgb(138 109 11 / 0.09);
+  --color-pisek2: rgb(138 109 11 / 0.16);
+  --color-slunce: rgb(138 109 11 / 0.09);
+  --color-slunce2: rgb(138 109 11 / 0.16);
+  --color-slez: rgb(93 76 140 / 0.09);
+  --color-slez2: rgb(93 76 140 / 0.16);
 }
 
-:root { color-scheme: dark; }
+:root { color-scheme: light; }
 
 html {
   -webkit-text-size-adjust: 100%;
@@ -61,7 +66,12 @@ html {
 }
 
 body {
-  background: var(--color-papir);
+  /* Dvě měkké záře v rozích: teplá vlevo, chladná vpravo. Papír pod nimi. */
+  background:
+    radial-gradient(1100px 620px at 12% -8%, #fbe3e2 0%, rgba(251, 227, 226, 0) 62%),
+    radial-gradient(900px 560px at 92% 8%, #e4e8ef 0%, rgba(228, 232, 239, 0) 60%),
+    var(--color-papir);
+  background-attachment: fixed;
   color: var(--color-inkoust);
   font-family: var(--font-sans);
   font-size: 16px;
@@ -129,34 +139,50 @@ body {
 
 /* ---------- plochy ---------- */
 
-/* Obsahová plocha: dostatečně neprůhledná, bez rozostření. */
+/* Skleněná plocha podle brandbooku. Nikdy ne pod drobným textem — jen jako deska. */
 .sklo, .sklo-noc {
-  background: var(--color-plocha);
-  border: 1px solid var(--color-linka);
+  background: rgb(255 254 251 / 0.72);
+  backdrop-filter: blur(20px) saturate(140%);
+  -webkit-backdrop-filter: blur(20px) saturate(140%);
+  border: 1px solid rgb(255 255 255 / 0.75);
+  box-shadow: 0 16px 40px rgb(20 20 15 / 0.08);
 }
+/* Vnořená karta zůstává plná — sklo na skle by rozmazalo text. */
 .sklo-noc-slabe {
   background: var(--color-plocha);
   border: 1px solid var(--color-linka2);
 }
-.sklo-akcent { border-color: rgb(117 185 204 / 0.35); }
+.sklo-akcent { border-color: rgb(193 39 45 / 0.35); }
 
-/* Rozostření jen v navigaci a překryvném panelu, kde se pod ním hýbe obsah. */
+@supports not (backdrop-filter: blur(1px)) {
+  .sklo, .sklo-noc { background: rgb(255 254 251 / 0.95); }
+}
+
+/* Navigace a překryvný panel: sklo, pod kterým se hýbe obsah.
+   Spodní lišta na mobilu musí být hustší — text pod ní by jinak prosvítal. */
 .sklo-rozmaz {
-  background: rgb(16 20 27 / 0.82);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
+  background: rgb(255 254 251 / 0.93);
+  backdrop-filter: blur(18px) saturate(140%);
+  -webkit-backdrop-filter: blur(18px) saturate(140%);
 }
 @supports not (backdrop-filter: blur(1px)) {
-  .sklo-rozmaz { background: rgb(16 20 27 / 0.97); }
+  .sklo-rozmaz { background: rgb(255 254 251 / 0.97); }
 }
 
-.noc { background: transparent; color: var(--color-noc-text); position: relative; }
+/* Tmavá deska: patička a pás živých událostí. */
+.noc {
+  background: rgb(20 20 15 / 0.88);
+  color: var(--color-noc-text);
+  position: relative;
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+}
 .vzor-mrizka, .vzor-zare { background: none; }
 .sken::after { content: none; }
 .linka-noc { border-top: 1px solid var(--color-linka); }
 
 .zdvih { transition: border-color 0.15s ease, background-color 0.15s ease; }
-.zdvih:hover { border-color: rgb(117 185 204 / 0.5); }
+.zdvih:hover { border-color: rgb(193 39 45 / 0.45); }
 
 .srafy {
   background-image: repeating-linear-gradient(-45deg, color-mix(in srgb, currentColor 22%, transparent) 0 1px, transparent 1px 6px);
@@ -184,7 +210,7 @@ html, body { overflow-x: clip; }
   text-transform: none;
   letter-spacing: 0;
   font-family: var(--font-sans);
-  box-shadow: 0 16px 40px -16px rgb(0 0 0 / 0.7);
+  box-shadow: 0 16px 40px rgb(20 20 15 / 0.18);
   opacity: 0;
   visibility: hidden;
   transform: translateY(-3px);

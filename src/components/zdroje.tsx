@@ -7,7 +7,7 @@ export function ZnackaZdroje({ zdroj }: { zdroj: Zdroj }) {
   const t = TYPY_ZDROJU[zdroj.typ];
   return (
     <Napoveda popis={<span className="block">{t.popis}</span>}>
-      <span className={`stitek-tmavy inline-flex items-center rounded-[10px] border px-1.5 py-[3px] ${t.tridy}`}>
+      <span className={`stitek-tmavy inline-flex items-center rounded-[16px] border px-1.5 py-[3px] ${t.tridy}`}>
         {t.znacka}
       </span>
     </Napoveda>

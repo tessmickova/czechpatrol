@@ -91,7 +91,7 @@ export default function Metodika() {
         popis="Upozornění, že web je experimentální a používá AI, není omluvenka pro nepodložené tvrzení. Proto je metodika popsaná takhle konkrétně."
         doplnek={
           <div className="flex flex-wrap items-center gap-2.5">
-            <span className="stitek-tmavy rounded-[10px] border border-linka px-2 py-1 text-tlum">
+            <span className="stitek-tmavy rounded-[16px] border border-linka px-2 py-1 text-tlum">
               Verze {METODIKA_VERZE}
             </span>
             <span className="text-[12px] text-tlum2">
@@ -133,7 +133,7 @@ export default function Metodika() {
             {ZMENA_VZORCE.map((z) => (
               <li
                 key={z}
-                className="rounded-[10px] border border-linka bg-papir px-2.5 py-1.5 text-[12.5px] text-tlum"
+                className="rounded-[16px] border border-linka bg-papir px-2.5 py-1.5 text-[12.5px] text-tlum"
               >
                 {z}
               </li>

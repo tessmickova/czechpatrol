@@ -148,7 +148,7 @@ export function DetailObsah({ i }: { i: Incident }) {
           <Link href="/#opatreni" className="odkaz">Oficiální opatření</Link>
         </p>
         {i.vyznam && (
-          <div className="mt-3 rounded-[10px] border border-linka2 bg-plocha p-3.5">
+          <div className="mt-3 rounded-[16px] border border-linka2 bg-plocha p-3.5">
             <div className="stitek mb-1">Hodnocení projektu — proč to sledujeme</div>
             <p className="text-[14px] leading-relaxed text-tlum">{i.vyznam}</p>
           </div>
@@ -166,12 +166,12 @@ export function DetailObsah({ i }: { i: Incident }) {
             <ul className="mt-2 space-y-2 pl-1">
               {i.eskalacniSpousteče.map((f, n) => (
                 <li key={`e${n}`} className="flex gap-2.5 text-[14px] leading-relaxed text-tlum">
-                  <span className="mt-[3px] shrink-0 text-[#e69b6e]"><Ikona nazev="nahoru" velikost={12} tah={2} /></span>{f}
+                  <span className="mt-[3px] shrink-0 text-[#a8401a]"><Ikona nazev="nahoru" velikost={12} tah={2} /></span>{f}
                 </li>
               ))}
               {i.deeskalacniSignaly.map((f, n) => (
                 <li key={`d${n}`} className="flex gap-2.5 text-[14px] leading-relaxed text-tlum">
-                  <span className="mt-[3px] shrink-0 text-[#8fd6ae]"><Ikona nazev="dolu" velikost={12} tah={2} /></span>{f}
+                  <span className="mt-[3px] shrink-0 text-[#256b45]"><Ikona nazev="dolu" velikost={12} tah={2} /></span>{f}
                 </li>
               ))}
             </ul>
@@ -192,7 +192,7 @@ export function DetailObsah({ i }: { i: Incident }) {
             {historie.map((h, n) => (
               <li key={n} className="flex flex-col gap-0.5 text-[14px] leading-relaxed sm:flex-row sm:gap-3">
                 <span className="cislice shrink-0 text-[13px] text-tlum sm:w-[130px]">{datumCasPraha(h.kdy)}</span>
-                <span className={h.druh === "oprava" ? "text-[#e6c977]" : "text-tlum"}>{h.text}</span>
+                <span className={h.druh === "oprava" ? "text-[#8a6d0b]" : "text-tlum"}>{h.text}</span>
               </li>
             ))}
           </ol>

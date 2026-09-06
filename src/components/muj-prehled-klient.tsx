@@ -83,12 +83,12 @@ export function MujPrehledKlient({ zaznamy }: { zaznamy: Zaznam[] }) {
   const ulozene = p.ulozene.map((s) => zaznamy.find((z) => z.slug === s)).filter((z): z is Zaznam => Boolean(z));
 
   const prepni = <T extends string>(pole: T[], h: T) => (pole.includes(h) ? pole.filter((x) => x !== h) : [...pole, h]);
-  const cip = (aktivni: boolean) => `inline-flex min-h-[40px] items-center gap-1.5 rounded-[8px] border px-3 text-[13.5px] font-semibold transition-colors ${aktivni ? "border-akcent/60 bg-akcent/15 text-akcent-svetla" : "border-linka text-tlum hover:border-akcent/50 hover:text-inkoust"}`;
+  const cip = (aktivni: boolean) => `inline-flex min-h-[40px] items-center gap-1.5 rounded-[12px] border px-3 text-[13.5px] font-semibold transition-colors ${aktivni ? "border-akcent/60 bg-akcent/15 text-akcent-svetla" : "border-linka text-tlum hover:border-akcent/50 hover:text-inkoust"}`;
 
   return (
     <div className="grid gap-10 lg:grid-cols-[minmax(0,1fr)_360px]">
       <div className="min-w-0 space-y-8">
-        <p role="status" className="inline-flex items-center gap-2 rounded-[8px] border border-linka bg-plocha px-3 py-2 text-[13px] text-tlum">
+        <p role="status" className="inline-flex items-center gap-2 rounded-[12px] border border-linka bg-plocha px-3 py-2 text-[13px] text-tlum">
           <Ikona nazev="zamek" velikost={13} tah={2} />
           {ulozisteFunguje ? "Uloženo v tomto zařízení. Nikam se neposílá, poloha se nezjišťuje." : "Úložiště prohlížeče není dostupné — výběr platí jen do zavření stránky."}
         </p>
@@ -146,7 +146,7 @@ export function MujPrehledKlient({ zaznamy }: { zaznamy: Zaznam[] }) {
       </div>
 
       <aside className="space-y-6">
-        <section aria-labelledby="mp-ulozene" className="rounded-[14px] border border-linka bg-plocha p-5">
+        <section aria-labelledby="mp-ulozene" className="rounded-[22px] border border-linka bg-plocha p-5">
           <h2 id="mp-ulozene" className="text-[16px] font-bold">Uložené události</h2>
           <p className="mt-1 text-[13px] text-tlum">Uložit jde tlačítkem na stránce události.</p>
           {ulozene.length ? (
@@ -154,7 +154,7 @@ export function MujPrehledKlient({ zaznamy }: { zaznamy: Zaznam[] }) {
               {ulozene.map((z) => (
                 <li key={z.slug} className="flex items-start gap-2">
                   <Link href={`/incident/${z.slug}/`} className="min-w-0 flex-1 text-[14px] font-semibold text-inkoust hover:text-akcent-svetla">{z.kratkyTitulek || z.titulek}</Link>
-                  <button type="button" onClick={() => uloz({ ...p, ulozene: p.ulozene.filter((s) => s !== z.slug) })} className="grid h-9 w-9 shrink-0 place-items-center rounded-[8px] text-tlum2 hover:bg-plocha2 hover:text-inkoust" aria-label={`Odebrat ${z.kratkyTitulek || z.titulek}`}>
+                  <button type="button" onClick={() => uloz({ ...p, ulozene: p.ulozene.filter((s) => s !== z.slug) })} className="grid h-9 w-9 shrink-0 place-items-center rounded-[12px] text-tlum2 hover:bg-plocha2 hover:text-inkoust" aria-label={`Odebrat ${z.kratkyTitulek || z.titulek}`}>
                     <Ikona nazev="krizek" velikost={12} tah={2.4} />
                   </button>
                 </li>
@@ -162,7 +162,7 @@ export function MujPrehledKlient({ zaznamy }: { zaznamy: Zaznam[] }) {
             </ul>
           ) : <p className="mt-3 text-[14px] text-tlum2">Zatím žádná.</p>}
         </section>
-        <section className="rounded-[14px] border border-linka bg-plocha p-5">
+        <section className="rounded-[22px] border border-linka bg-plocha p-5">
           <h2 className="text-[16px] font-bold">Odběr bez účtu</h2>
           <p className="mt-1 text-[13.5px] leading-relaxed text-tlum">RSS kanál obsahuje všechny zveřejněné záznamy. Filtrovaný odběr podle tohoto výběru zatím není — neslibujeme ho.</p>
           <Link href="/odber/" className="mt-2 inline-flex min-h-[36px] items-center gap-1 text-[13.5px] font-semibold text-akcent hover:text-akcent-svetla">Odběr a RSS</Link>
@@ -190,7 +190,7 @@ export function UlozitUdalost({ slug }: { slug: string }) {
   };
   if (!nacteno) return null;
   return (
-    <button type="button" onClick={prepni} aria-pressed={ulozeno} className="inline-flex min-h-[40px] items-center gap-1.5 rounded-[8px] border border-linka px-3 text-[13.5px] font-semibold text-tlum hover:border-akcent hover:text-inkoust">
+    <button type="button" onClick={prepni} aria-pressed={ulozeno} className="inline-flex min-h-[40px] items-center gap-1.5 rounded-[12px] border border-linka px-3 text-[13.5px] font-semibold text-tlum hover:border-akcent hover:text-inkoust">
       <Ikona nazev={ulozeno ? "fajfka" : "plus"} velikost={12} tah={2.4} /> {ulozeno ? "Uloženo v Mém přehledu" : "Uložit do Mého přehledu"}
     </button>
   );

@@ -25,9 +25,9 @@ import { sklon, Vlajka } from "./zeme";
 type Ton = "klid" | "pozor" | "plati" | "nevime";
 
 const TON: Record<Ton, { dlazdice: string; tecka: string; slovo: string }> = {
-  klid: { dlazdice: "border-linka2 bg-plocha", tecka: "bg-[#5cbf8a]", slovo: "text-[#8fd6ae]" },
-  pozor: { dlazdice: "border-[#d9b24c]/40 bg-[#d9b24c]/10", tecka: "bg-[#d9b24c]", slovo: "text-[#e6c977]" },
-  plati: { dlazdice: "border-[#d95c5c]/50 bg-[#d95c5c]/12", tecka: "bg-[#d95c5c]", slovo: "text-[#e68a8a]" },
+  klid: { dlazdice: "border-linka2 bg-plocha", tecka: "bg-[#2e7d53]", slovo: "text-[#256b45]" },
+  pozor: { dlazdice: "border-[#b8860b]/40 bg-[#b8860b]/10", tecka: "bg-[#b8860b]", slovo: "text-[#8a6d0b]" },
+  plati: { dlazdice: "border-[#c1272d]/50 bg-[#c1272d]/12", tecka: "bg-[#c1272d]", slovo: "text-[#a01c22]" },
   nevime: { dlazdice: "border-dashed border-linka bg-transparent", tecka: "bg-tlum2", slovo: "text-tlum2" },
 };
 
@@ -71,7 +71,7 @@ function dlazdiceProvoz(p: ProvozniPolozka): Dlazdice {
 
 function Stari({ overeno }: { overeno: string | null }) {
   const c = cerstvost(overeno);
-  const barva = c === "cerstve" ? "text-tlum2" : c === "nezname" ? "text-tlum2" : "text-[#e6b877]";
+  const barva = c === "cerstve" ? "text-tlum2" : c === "nezname" ? "text-tlum2" : "text-[#a3541a]";
   return <span className={`cislice text-[10.5px] ${barva}`} title={overeno ? datumCasPraha(overeno) : "nikdy neověřeno"}>{overeno ? stariSlovy(overeno) : "neověřeno"}</span>;
 }
 
@@ -80,7 +80,7 @@ function Dlazdice({ d }: { d: Dlazdice }) {
   return (
     <li>
       <Napoveda cele popis={<span className="block"><b className="font-semibold">{d.nazev}</b> — {d.stav}. {d.vysvetleni}</span>}>
-        <span className={`flex min-h-[64px] w-full flex-col justify-between rounded-[10px] border px-2.5 py-2 text-left ${t.dlazdice}`}>
+        <span className={`flex min-h-[64px] w-full flex-col justify-between rounded-[16px] border px-2.5 py-2 text-left ${t.dlazdice}`}>
           <span className="flex items-center gap-1.5 text-[12px] leading-tight text-tlum">
             <Ikona nazev={d.ikona} velikost={13} tah={1.9} trida="shrink-0" />
             <span className="truncate">{d.nazev}</span>
@@ -102,7 +102,7 @@ function Hlavni({ nadpis, hodnota, ton, popis, overeno, napoveda, jiskra }: { na
   const t = ton === "uroven" ? null : TON[ton];
   return (
     <Napoveda cele popis={napoveda}>
-      <span className={`flex min-h-[112px] w-full flex-col justify-between rounded-[12px] border p-4 text-left ${t ? t.dlazdice : "border-linka bg-plocha"}`}>
+      <span className={`flex min-h-[112px] w-full flex-col justify-between rounded-[18px] border p-4 text-left ${t ? t.dlazdice : "border-linka bg-plocha"}`}>
         <span className="flex items-center justify-between gap-2">
           <span className="stitek">{nadpis}</span>
           <Stari overeno={overeno} />
@@ -119,7 +119,7 @@ function Hlavni({ nadpis, hodnota, ton, popis, overeno, napoveda, jiskra }: { na
 
 function Cislo({ n, slovo }: { n: number; slovo: string }) {
   return (
-    <span className="flex flex-col rounded-[10px] border border-linka2 bg-plocha px-3 py-2">
+    <span className="flex flex-col rounded-[16px] border border-linka2 bg-plocha px-3 py-2">
       <span className="cislice text-[24px] font-bold leading-none text-inkoust">{n}</span>
       <span className="mt-1 text-[11.5px] leading-tight text-tlum">{slovo}</span>
     </span>
@@ -185,7 +185,7 @@ export function Dashboard({
 
       {/* 2 — mřížka stavů + poslední události */}
       <div className="mt-3 grid gap-3 lg:grid-cols-[minmax(0,1.35fr)_minmax(0,1fr)]">
-        <section aria-label="Oficiální stavy" id="opatreni" className="scroll-mt-[64px]">
+        <section aria-label="Oficiální stavy" id="opatreni" className="scroll-mt-[84px]">
           <ul className="grid grid-cols-2 gap-1.5 sm:grid-cols-3 xl:grid-cols-4">
             {pravni.map((p) => <Dlazdice key={p.klic} d={dlazdicePravni(p)} />)}
             {natoPolozky.map((p) => <Dlazdice key={p.klic} d={dlazdiceNato(p)} />)}
@@ -193,7 +193,7 @@ export function Dashboard({
           </ul>
         </section>
 
-        <section aria-label="Poslední události" className="rounded-[12px] border border-linka2 bg-plocha">
+        <section aria-label="Poslední události" className="rounded-[18px] border border-linka2 bg-plocha">
           <div className="flex items-center justify-between border-b border-linka2 px-3 py-2">
             <span className="stitek">Poslední události</span>
             <Link href="/udalosti/" className="text-[12.5px] font-semibold text-akcent hover:text-akcent-svetla">všechny →</Link>
@@ -232,7 +232,7 @@ export function Dashboard({
           <div className="mb-1.5 flex items-center justify-between"><span className="stitek">Kde · případy {rok}</span><Link href="/vyvoj/" className="text-[12px] text-akcent hover:text-akcent-svetla">vývoj →</Link></div>
           <ul className="space-y-0.5">
             {zeme.map((z) => (
-              <li key={z.kodZeme}><Pruh nazev={<><Vlajka kod={z.kodZeme} /> {z.zeme}</>} n={z.pripady} max={maxZeme} barva={z.kodZeme === "CZ" ? "bg-akcent" : "bg-tlum"} odkaz={`/udalosti/?zeme=${z.kodZeme}&obdobi=letos`} /></li>
+              <li key={z.kodZeme}><Pruh nazev={<><Vlajka kod={z.kodZeme} /> {z.zeme}</>} n={z.pripady} max={maxZeme} barva={z.kodZeme === "CZ" ? "bg-akcent" : "bg-tlum2/70"} odkaz={`/udalosti/?zeme=${z.kodZeme}&obdobi=letos`} /></li>
             ))}
           </ul>
         </section>
@@ -243,8 +243,8 @@ export function Dashboard({
               <li key={s.klic} className="flex min-h-[28px] items-center gap-2">
                 <span className="w-[118px] shrink-0 truncate text-[12.5px] text-inkoust">{s.nazev}</span>
                 <span className="h-[8px] flex-1 overflow-hidden rounded-[2px] bg-linka2">
-                  <span className="block h-full bg-tlum" style={{ width: `${(s.pocet / maxPuv) * 100}%` }}>
-                    <span className="block h-full bg-[#d9773f]" style={{ width: `${s.pocet ? (s.potvrzeno / s.pocet) * 100 : 0}%` }} />
+                  <span className="block h-full bg-tlum2/70" style={{ width: `${(s.pocet / maxPuv) * 100}%` }}>
+                    <span className="block h-full bg-[#d1521f]" style={{ width: `${s.pocet ? (s.potvrzeno / s.pocet) * 100 : 0}%` }} />
                   </span>
                 </span>
                 <span className="cislice w-12 shrink-0 text-right text-[13px] text-inkoust"><b className="font-bold">{s.potvrzeno}</b><span className="text-tlum2"> / {s.pocet}</span></span>
@@ -256,7 +256,7 @@ export function Dashboard({
 
       {/* 4 — započítávání a úplný seznam */}
       <div className="mt-3"><Pocitadla vse={vse} neprosle={neprosle} kandidati={kandidati} /></div>
-      <section id="zaznamy" aria-label="Všechny záznamy" className="mt-3 scroll-mt-[64px] rounded-[12px] border border-linka2 bg-plocha p-3 sm:p-4">
+      <section id="zaznamy" aria-label="Všechny záznamy" className="mt-3 scroll-mt-[84px] rounded-[18px] border border-linka2 bg-plocha p-3 sm:p-4">
         <div className="mb-2 flex flex-wrap items-center justify-between gap-2">
           <span className="stitek">Všechny záznamy od roku 2014 · případy, aktualizace, opatření, reakce i to, co neprošlo</span>
           <Link href="/udalosti/" className="text-[12px] text-akcent hover:text-akcent-svetla">samostatná stránka →</Link>
@@ -270,17 +270,17 @@ export function Dashboard({
 
       {/* 6 — sbalené: proč, co by změnilo, odběr */}
       <div className="mt-3 grid gap-2 md:grid-cols-3">
-        <details className="group rounded-[10px] border border-linka2 bg-plocha">
+        <details className="group rounded-[16px] border border-linka2 bg-plocha">
           <summary className="flex min-h-[40px] cursor-pointer items-center justify-between px-3 text-[13px] font-semibold text-inkoust">Proč je hodnocení {d ? d.nazev.toLowerCase() : "takové"}<Ikona nazev="dolu" velikost={12} tah={2} trida="text-tlum2 transition-transform group-open:rotate-180" /></summary>
           <p className="border-t border-linka2 px-3 py-2.5 text-[13px] leading-relaxed text-tlum">{stav.shrnuti || "Bez zdůvodnění."} <Link href="/metodika/" className="odkaz">Metodika</Link></p>
         </details>
-        <details className="group rounded-[10px] border border-linka2 bg-plocha">
+        <details className="group rounded-[16px] border border-linka2 bg-plocha">
           <summary className="flex min-h-[40px] cursor-pointer items-center justify-between px-3 text-[13px] font-semibold text-inkoust">Co by hodnocení zhoršilo<Ikona nazev="dolu" velikost={12} tah={2} trida="text-tlum2 transition-transform group-open:rotate-180" /></summary>
           <ol className="space-y-1 border-t border-linka2 px-3 py-2.5 text-[13px] leading-snug text-tlum">
             {watchlist.eskalacni.map((e) => <li key={e.cislo} className="flex gap-2"><span className="cislice text-tlum2">{e.cislo}</span>{e.nazev}</li>)}
           </ol>
         </details>
-        <div className="flex min-h-[40px] items-center justify-between gap-3 rounded-[10px] border border-linka2 bg-plocha px-3 text-[13px]">
+        <div className="flex min-h-[40px] items-center justify-between gap-3 rounded-[16px] border border-linka2 bg-plocha px-3 text-[13px]">
           <span className="text-tlum">Změny bez sledování webu</span>
           <span className="flex items-center gap-3">
             <a href="/feed.xml" className="inline-flex items-center gap-1 font-semibold text-akcent hover:text-akcent-svetla"><Ikona nazev="rss" velikost={13} tah={2} /> RSS</a>

@@ -119,9 +119,9 @@ export const UROVNE: Record<Uroven, DefiniceUrovne> = {
 /**
  * Vizuální tokeny pásem.
  *
- * Celá konzole stojí na tmavé ploše, takže obě sady (světlá i noční) ukazují
- * na stejné, svítivé odstíny. Sada „Noc“ zůstává kvůli komponentám, které ji
- * dostávají explicitně — a kvůli tomu, aby světlý tisk mohl dostat vlastní.
+ * Celý přehled stojí na světlém papíru, takže obě sady (světlá i noční)
+ * ukazují na stejné, dostatečně tmavé odstíny — barva musí projít i na bílé.
+ * Sada „Noc“ zůstává kvůli komponentám, které ji dostávají explicitně.
  */
 export const PASMA: Record<Pasmo, {
   nazev: string;
@@ -140,38 +140,38 @@ export const PASMA: Record<Pasmo, {
 }> = {
   zelena: {
     nazev: "Nízká",
-    tecka: "bg-[#5cbf8a]", text: "text-[#8fd6ae]", ramecek: "border-[#5cbf8a]/35",
-    pozadi: "bg-[#5cbf8a]/10", pruh: "bg-[#5cbf8a]", plna: "#5cbf8a",
-    teckaNoc: "bg-[#5cbf8a]", textNoc: "text-[#8fd6ae]", ramecekNoc: "border-[#5cbf8a]/35",
-    pozadiNoc: "bg-[#5cbf8a]/10", plnaNoc: "#5cbf8a",
+    tecka: "bg-[#2e7d53]", text: "text-[#256b45]", ramecek: "border-[#2e7d53]/30",
+    pozadi: "bg-[#2e7d53]/10", pruh: "bg-[#2e7d53]", plna: "#2e7d53",
+    teckaNoc: "bg-[#2e7d53]", textNoc: "text-[#256b45]", ramecekNoc: "border-[#2e7d53]/30",
+    pozadiNoc: "bg-[#2e7d53]/10", plnaNoc: "#2e7d53",
   },
   zluta: {
     nazev: "Střední",
-    tecka: "bg-[#d9b24c]", text: "text-[#e6c977]", ramecek: "border-[#d9b24c]/35",
-    pozadi: "bg-[#d9b24c]/10", pruh: "bg-[#d9b24c]", plna: "#d9b24c",
-    teckaNoc: "bg-[#d9b24c]", textNoc: "text-[#e6c977]", ramecekNoc: "border-[#d9b24c]/35",
-    pozadiNoc: "bg-[#d9b24c]/10", plnaNoc: "#d9b24c",
+    tecka: "bg-[#b8860b]", text: "text-[#8a6d0b]", ramecek: "border-[#b8860b]/30",
+    pozadi: "bg-[#b8860b]/10", pruh: "bg-[#b8860b]", plna: "#b8860b",
+    teckaNoc: "bg-[#b8860b]", textNoc: "text-[#8a6d0b]", ramecekNoc: "border-[#b8860b]/30",
+    pozadiNoc: "bg-[#b8860b]/10", plnaNoc: "#b8860b",
   },
   prechod: {
     nazev: "Zvýšená",
-    tecka: "bg-[#d99a4c]", text: "text-[#e6b877]", ramecek: "border-[#d99a4c]/35",
-    pozadi: "bg-[#d99a4c]/10", pruh: "bg-[#d99a4c]", plna: "#d99a4c",
-    teckaNoc: "bg-[#d99a4c]", textNoc: "text-[#e6b877]", ramecekNoc: "border-[#d99a4c]/35",
-    pozadiNoc: "bg-[#d99a4c]/10", plnaNoc: "#d99a4c",
+    tecka: "bg-[#c96a1e]", text: "text-[#a3541a]", ramecek: "border-[#c96a1e]/30",
+    pozadi: "bg-[#c96a1e]/10", pruh: "bg-[#c96a1e]", plna: "#c96a1e",
+    teckaNoc: "bg-[#c96a1e]", textNoc: "text-[#a3541a]", ramecekNoc: "border-[#c96a1e]/30",
+    pozadiNoc: "bg-[#c96a1e]/10", plnaNoc: "#c96a1e",
   },
   oranzova: {
     nazev: "Vysoká",
-    tecka: "bg-[#d9773f]", text: "text-[#e69b6e]", ramecek: "border-[#d9773f]/35",
-    pozadi: "bg-[#d9773f]/10", pruh: "bg-[#d9773f]", plna: "#d9773f",
-    teckaNoc: "bg-[#d9773f]", textNoc: "text-[#e69b6e]", ramecekNoc: "border-[#d9773f]/35",
-    pozadiNoc: "bg-[#d9773f]/10", plnaNoc: "#d9773f",
+    tecka: "bg-[#d1521f]", text: "text-[#a8401a]", ramecek: "border-[#d1521f]/30",
+    pozadi: "bg-[#d1521f]/10", pruh: "bg-[#d1521f]", plna: "#d1521f",
+    teckaNoc: "bg-[#d1521f]", textNoc: "text-[#a8401a]", ramecekNoc: "border-[#d1521f]/30",
+    pozadiNoc: "bg-[#d1521f]/10", plnaNoc: "#d1521f",
   },
   cervena: {
     nazev: "Vážná",
-    tecka: "bg-[#d95c5c]", text: "text-[#e68a8a]", ramecek: "border-[#d95c5c]/35",
-    pozadi: "bg-[#d95c5c]/10", pruh: "bg-[#d95c5c]", plna: "#d95c5c",
-    teckaNoc: "bg-[#d95c5c]", textNoc: "text-[#e68a8a]", ramecekNoc: "border-[#d95c5c]/35",
-    pozadiNoc: "bg-[#d95c5c]/10", plnaNoc: "#d95c5c",
+    tecka: "bg-[#c1272d]", text: "text-[#a01c22]", ramecek: "border-[#c1272d]/35",
+    pozadi: "bg-[#c1272d]/10", pruh: "bg-[#c1272d]", plna: "#c1272d",
+    teckaNoc: "bg-[#c1272d]", textNoc: "text-[#a01c22]", ramecekNoc: "border-[#c1272d]/35",
+    pozadiNoc: "bg-[#c1272d]/10", plnaNoc: "#c1272d",
   },
 };
 

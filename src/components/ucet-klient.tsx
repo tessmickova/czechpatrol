@@ -86,7 +86,7 @@ function Prihlaseni({ po }: { po: () => void }) {
           Účet nemá e-mail ani telefon, takže není kam poslat „zapomenuté heslo“. Tenhle kód je
           jediná cesta k účtu z nového zařízení. Neuvidíte ho podruhé.
         </p>
-        <div className="velke-cislo mt-5 select-all break-all rounded-[14px] border border-jantar/40 bg-noc/60 px-5 py-4 text-[26px] tracking-[0.08em] text-jantar">
+        <div className="velke-cislo mt-5 select-all break-all rounded-[22px] border border-jantar/40 bg-noc/60 px-5 py-4 text-[26px] tracking-[0.08em] text-jantar">
           {novyKod}
         </div>
         <button
@@ -276,7 +276,7 @@ function Nastaveni({
             </button>
           </div>
           {novyKod && (
-            <div className="mt-4 rounded-[14px] border border-jantar/40 bg-jantar/10 p-4">
+            <div className="mt-4 rounded-[22px] border border-jantar/40 bg-jantar/10 p-4">
               <div className="stitek mb-2 !text-jantar">Nový kód — uvidíte ho jen teď</div>
               <div className="velke-cislo select-all break-all text-[22px] tracking-[0.08em] text-jantar">{novyKod}</div>
               <button type="button" onClick={() => setNovyKod(null)} className="mt-3 text-[13px] text-tlum underline underline-offset-4 hover:text-inkoust">Mám uloženo, skrýt</button>
@@ -287,11 +287,11 @@ function Nastaveni({
         <Karta className="p-6">
           <div className="stitek mb-3">Kanály</div>
           <div className="space-y-4">
-            <div className="rounded-[14px] border border-linka p-4">
+            <div className="rounded-[22px] border border-linka p-4">
               <div className="flex items-center justify-between gap-3">
                 <span className="text-[15px] font-bold">Telegram</span>
                 {ucet.telegram ? (
-                  <span className="stitek-tmavy rounded-full border border-[#5cbf8a]/40 bg-[#5cbf8a]/10 px-2 py-1 text-[#8fd6ae]">propojeno</span>
+                  <span className="stitek-tmavy rounded-full border border-[#2e7d53]/40 bg-[#2e7d53]/10 px-2 py-1 text-[#256b45]">propojeno</span>
                 ) : !dostupne.telegram ? (
                   <span className="stitek-tmavy rounded-full border border-linka px-2 py-1 text-tlum2">připravujeme</span>
                 ) : null}
@@ -318,11 +318,11 @@ function Nastaveni({
               )}
             </div>
 
-            <div className="rounded-[14px] border border-linka p-4">
+            <div className="rounded-[22px] border border-linka p-4">
               <div className="flex items-center justify-between gap-3">
                 <span className="text-[15px] font-bold">WhatsApp</span>
                 {ucet.whatsapp ? (
-                  <span className="stitek-tmavy rounded-full border border-[#5cbf8a]/40 bg-[#5cbf8a]/10 px-2 py-1 text-[#8fd6ae]">propojeno</span>
+                  <span className="stitek-tmavy rounded-full border border-[#2e7d53]/40 bg-[#2e7d53]/10 px-2 py-1 text-[#256b45]">propojeno</span>
                 ) : !dostupne.whatsapp ? (
                   <span className="stitek-tmavy rounded-full border border-linka px-2 py-1 text-tlum2">připravujeme</span>
                 ) : null}
@@ -347,8 +347,8 @@ function Nastaveni({
           </div>
         </Karta>
 
-        <Karta className="border-[#d95c5c]/30 p-6">
-          <div className="stitek mb-2 !text-[#e68a8a]">Smazání</div>
+        <Karta className="border-[#c1272d]/30 p-6">
+          <div className="stitek mb-2 !text-[#a01c22]">Smazání</div>
           <p className="text-[14px] leading-relaxed text-tlum">
             Smaže účet, passkeye, propojené kanály i nastavení. Hned a bez zálohy.
           </p>
@@ -385,7 +385,7 @@ function Nastaveni({
               popis="Všechno důležité přijde kdykoli, i v noci. Vypnutím nastavíte klid."
             />
             {n.ticho && (
-              <div className="grid grid-cols-2 gap-3 rounded-[14px] border border-linka p-4">
+              <div className="grid grid-cols-2 gap-3 rounded-[22px] border border-linka p-4">
                 <div>
                   <Popisek pro="od">Ticho od</Popisek>
                   <input id="od" type="time" value={n.ticho.od} onChange={(e) => setN({ ...n, ticho: { ...n.ticho!, od: e.target.value } })} className={`${POLE} cislice`} />
@@ -404,7 +404,7 @@ function Nastaveni({
               popis="Schválené zprávy ověřených záchranných složek. Označené vždy jako zpráva partnera."
             />
             {n.zpravyIzs && (
-              <div className="rounded-[14px] border border-linka p-4">
+              <div className="rounded-[22px] border border-linka p-4">
                 <Popisek pro="kraj">Můj kraj (pro krajské zprávy partnerů)</Popisek>
                 <select id="kraj" value={n.kraj ?? ""} onChange={(e) => setN({ ...n, kraj: e.target.value || null })} className={POLE}>
                   <option value="">Jen celostátní zprávy</option>

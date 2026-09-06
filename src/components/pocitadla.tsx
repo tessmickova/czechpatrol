@@ -29,7 +29,7 @@ export function Pocitadla({ vse, neprosle, kandidati = [], ted = Date.now() }: {
   const zbytek = vse.length - p.length;
   const automaticky24 = kandidati.filter((k) => ted - new Date(k.zachyceno).getTime() <= 86_400_000).length;
   return (
-    <section aria-label="Započítávání" className="rounded-[12px] border border-linka2 bg-plocha px-3 py-2.5">
+    <section aria-label="Započítávání" className="rounded-[18px] border border-linka2 bg-plocha px-3 py-2.5">
       <div className="flex flex-wrap items-center gap-x-4 gap-y-1">
         <span className="stitek">Započítané případy</span>
         {okna.map((o) => (

@@ -113,7 +113,7 @@ opravy (`/opravy/`, z `data/opravy.json`), o projektu, podpořit, odběr.
 Staré adresy (`/dnes`, `/trend`, `/osa`, `/cr`, `/nato`, `/tlak`, `/watchlist`,
 `/nepotvrzeno`, `/komunita`) přesměrovává `public/_redirects`.
 
-Podrobněji: `docs/DATOVY-MODEL.md`, `docs/PROVOZ.md`, `docs/DALSI-ETAPA.md`.
+Podrobněji: `docs/DATOVY-MODEL.md`, `docs/PROVOZ.md`, `docs/ZNACKA.md`, `docs/DALSI-ETAPA.md`.
 
 ## Struktura
 
@@ -128,7 +128,7 @@ src/app/         stránky
 src/spa/         vstupní bod klikacího náhledu a náhrady za next/*
 src/config/      název webu, odkaz na podporu, režim dat
 nastroje/        pomocné skripty: náhled, snímky, kontrola dat, náklady
-docs/            datový model, provoz, další etapa, právní kontrola
+docs/            datový model, provoz, značka, další etapa, právní kontrola
 ```
 
 Datová vrstva importuje JSON staticky, ne přes `fs` — díky tomu běží stejný

@@ -167,9 +167,9 @@ export function SpravaKlient() {
         ) : (
           <ul className="space-y-3">
             {tipy.map((x) => (
-              <li key={x.id} className="rounded-[14px] border border-linka p-4">
+              <li key={x.id} className="rounded-[22px] border border-linka p-4">
                 <div className="mb-2 flex flex-wrap items-center justify-between gap-2">
-                  <span className={`stitek-tmavy rounded-full border px-2 py-1 ${x.stav === "novy" ? "border-akcent/40 bg-akcent/10 text-akcent-svetla" : x.stav === "prijato" ? "border-[#5cbf8a]/40 bg-[#5cbf8a]/10 text-[#8fd6ae]" : "border-linka text-tlum2"}`}>
+                  <span className={`stitek-tmavy rounded-full border px-2 py-1 ${x.stav === "novy" ? "border-akcent/40 bg-akcent/10 text-akcent-svetla" : x.stav === "prijato" ? "border-[#2e7d53]/40 bg-[#2e7d53]/10 text-[#256b45]" : "border-linka text-tlum2"}`}>
                     {x.stav === "novy" ? "Nové" : x.stav === "prijato" ? "Přijato" : "Zamítnuto"}
                   </span>
                   <span className="stitek">{datumCas(x.vytvoreno)}</span>
@@ -217,7 +217,7 @@ export function SpravaKlient() {
                       value={u.role}
                       disabled={u.id === ucet.id}
                       onChange={(e) => zmenRoli(u.id, e.target.value as Role)}
-                      className="rounded-[8px] border border-linka bg-noc/60 px-2 py-1 text-[13.5px] text-inkoust disabled:opacity-60"
+                      className="rounded-[12px] border border-linka bg-noc/60 px-2 py-1 text-[13.5px] text-inkoust disabled:opacity-60"
                     >
                       {(Object.keys(ROLE) as Role[]).map((r) => <option key={r} value={r}>{ROLE[r].nazev}</option>)}
                     </select>

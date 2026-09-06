@@ -21,7 +21,7 @@ export function Presmerovani({ kam, co }: { kam: string; co: string }) {
       <p className="stitek mb-3">Stránka se přestěhovala</p>
       <h1 className="text-[24px] font-bold">{co}</h1>
       <p className="mt-3 text-[14.5px] text-tlum">Přesměrujeme vás. Pokud se nic neděje, pokračujte odkazem.</p>
-      <Link href={kam} className="mt-6 inline-flex min-h-[44px] items-center rounded-[10px] border border-linka px-4 text-[14px] font-semibold text-inkoust hover:border-akcent">Pokračovat</Link>
+      <Link href={kam} className="mt-6 inline-flex min-h-[44px] items-center rounded-[16px] border border-linka px-4 text-[14px] font-semibold text-inkoust hover:border-akcent">Pokračovat</Link>
     </div>
   );
 }

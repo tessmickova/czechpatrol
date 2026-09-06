@@ -8,10 +8,10 @@ export const TLACITKO =
   "inline-flex items-center justify-center gap-2 rounded-full border px-4 py-2.5 text-[14px] font-bold uppercase tracking-[0.05em] transition-all disabled:cursor-not-allowed disabled:opacity-50";
 export const TLACITKO_AKCENT = `${TLACITKO} border-akcent/60 bg-akcent/15 text-akcent-svetla  hover:bg-akcent/25`;
 export const TLACITKO_TICHE = `${TLACITKO} border-linka text-inkoust hover:border-akcent/60`;
-export const TLACITKO_VAROVNE = `${TLACITKO} border-[#d95c5c]/50 text-[#e68a8a] hover:bg-[#d95c5c]/10`;
+export const TLACITKO_VAROVNE = `${TLACITKO} border-[#c1272d]/50 text-[#a01c22] hover:bg-[#c1272d]/10`;
 
 export const POLE =
-  "w-full rounded-[12px] border border-linka bg-noc/60 px-3.5 py-2.5 text-[15px] text-inkoust placeholder:text-tlum2 focus:border-akcent focus:outline-none";
+  "w-full rounded-[18px] border border-linka bg-noc/60 px-3.5 py-2.5 text-[15px] text-inkoust placeholder:text-tlum2 focus:border-akcent focus:outline-none";
 
 export function Popisek({ children, pro }: { children: ReactNode; pro?: string }) {
   return (
@@ -23,12 +23,12 @@ export function Popisek({ children, pro }: { children: ReactNode; pro?: string }
 
 export function Hlaska({ typ, children }: { typ: "chyba" | "ok" | "info"; children: ReactNode }) {
   const tridy = {
-    chyba: "border-[#d95c5c]/40 bg-[#d95c5c]/10 text-[#e68a8a]",
-    ok: "border-[#5cbf8a]/40 bg-[#5cbf8a]/10 text-[#8fd6ae]",
+    chyba: "border-[#c1272d]/40 bg-[#c1272d]/10 text-[#a01c22]",
+    ok: "border-[#2e7d53]/40 bg-[#2e7d53]/10 text-[#256b45]",
     info: "border-akcent/40 bg-akcent/10 text-akcent-svetla",
   }[typ];
   return (
-    <div role={typ === "chyba" ? "alert" : "status"} className={`rounded-[12px] border px-4 py-3 text-[14px] leading-relaxed ${tridy}`}>
+    <div role={typ === "chyba" ? "alert" : "status"} className={`rounded-[18px] border px-4 py-3 text-[14px] leading-relaxed ${tridy}`}>
       {children}
     </div>
   );
@@ -54,7 +54,7 @@ export function Volby<T extends string>({
             role="radio"
             aria-checked={aktivni}
             onClick={() => onChange(m.hodnota)}
-            className={`rounded-[14px] border p-3.5 text-left transition-colors ${
+            className={`rounded-[22px] border p-3.5 text-left transition-colors ${
               aktivni ? "border-akcent/60 bg-akcent/10" : "border-linka hover:border-akcent/40"
             }`}
           >
@@ -78,7 +78,7 @@ export function Prepinac({
       role="switch"
       aria-checked={zapnuto}
       onClick={() => onChange(!zapnuto)}
-      className="flex w-full items-center justify-between gap-4 rounded-[14px] border border-linka p-3.5 text-left transition-colors hover:border-akcent/40"
+      className="flex w-full items-center justify-between gap-4 rounded-[22px] border border-linka p-3.5 text-left transition-colors hover:border-akcent/40"
     >
       <span>
         <span className="block text-[15px] font-semibold text-inkoust">{nazev}</span>

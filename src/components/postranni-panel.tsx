@@ -85,11 +85,11 @@ export function PostranniPanel() {
         {/* hlavička */}
         <div className="flex h-[56px] shrink-0 items-center justify-between border-b border-linka pl-4 pr-2">
           <span className="flex items-center gap-2.5">
-            <span className="grid h-[28px] w-[28px] place-items-center rounded-[8px] bg-akcent/15 text-akcent"><Ikona nazev="radar" velikost={16} tah={1.8} /></span>
+            <span className="grid h-[28px] w-[28px] place-items-center rounded-[12px] bg-akcent/15 text-akcent"><Ikona nazev="radar" velikost={16} tah={1.8} /></span>
             <span className="text-[16px] font-bold">{WEB.nazev}</span>
             <span className="text-[13px] text-tlum2">menu</span>
           </span>
-          <button ref={zavrit} type="button" onClick={zavri} className="grid h-11 w-11 place-items-center rounded-[8px] text-tlum transition-colors hover:bg-plocha hover:text-inkoust">
+          <button ref={zavrit} type="button" onClick={zavri} className="grid h-11 w-11 place-items-center rounded-[12px] text-tlum transition-colors hover:bg-plocha hover:text-inkoust">
             <span className="sr-only">Zavřít menu</span>
             <Ikona nazev="krizek" velikost={18} tah={2} />
           </button>
@@ -102,7 +102,7 @@ export function PostranniPanel() {
               {HLAVNI_STRANKY.map((o) => (
                 <li key={o.href}>
                   <Link href={o.href} onClick={zavri} className={RADEK}>
-                    <span className="grid h-9 w-9 shrink-0 place-items-center rounded-[8px] bg-plocha2 text-akcent"><Ikona nazev={o.ikona} velikost={17} tah={1.8} /></span>
+                    <span className="grid h-9 w-9 shrink-0 place-items-center rounded-[12px] bg-plocha2 text-akcent"><Ikona nazev={o.ikona} velikost={17} tah={1.8} /></span>
                     <span className="min-w-0 flex-1">
                       <span className="block font-semibold">{o.label}</span>
                       <span className="block text-[12.5px] text-tlum">{o.popis}</span>
@@ -125,7 +125,7 @@ export function PostranniPanel() {
               <ul>
                 <li>
                   <Link href="/ucet/" onClick={zavri} className={RADEK}>
-                    <span className="grid h-9 w-9 shrink-0 place-items-center rounded-[8px] bg-plocha2 text-akcent"><Ikona nazev="uzivatel" velikost={17} tah={1.8} /></span>
+                    <span className="grid h-9 w-9 shrink-0 place-items-center rounded-[12px] bg-plocha2 text-akcent"><Ikona nazev="uzivatel" velikost={17} tah={1.8} /></span>
                     <span className="min-w-0 flex-1">
                       <span className="block font-semibold">{ROLE[ucet.role].nazev}</span>
                       <span className="block text-[12.5px] text-tlum">upozornění a nastavení · #{ucet.id.slice(0, 8)}</span>
@@ -145,7 +145,7 @@ export function PostranniPanel() {
               </ul>
             ) : (
               <Link href="/ucet/" onClick={zavri} className={RADEK}>
-                <span className="grid h-9 w-9 shrink-0 place-items-center rounded-[8px] bg-plocha2 text-akcent"><Ikona nazev="zamek" velikost={17} tah={1.8} /></span>
+                <span className="grid h-9 w-9 shrink-0 place-items-center rounded-[12px] bg-plocha2 text-akcent"><Ikona nazev="zamek" velikost={17} tah={1.8} /></span>
                 <span className="min-w-0 flex-1">
                   <span className="block font-semibold">Přihlásit nebo založit účet</span>
                   <span className="block text-[12.5px] text-tlum">bez jména a e-mailu, passkey v zařízení</span>
@@ -204,7 +204,7 @@ export function PostranniPanel() {
           <div className="stitek mb-1.5">V nouzi volejte</div>
           <div className="grid grid-cols-4 gap-2">
             {TISNOVA.map((t) => (
-              <a key={t.cislo} href={`tel:${t.cislo}`} title={t.popis} className="rounded-[8px] border border-linka py-1.5 text-center hover:border-akcent">
+              <a key={t.cislo} href={`tel:${t.cislo}`} title={t.popis} className="rounded-[12px] border border-linka py-1.5 text-center hover:border-akcent">
                 <span className="cislice block text-[18px] font-bold text-inkoust">{t.cislo}</span>
                 <span className="block text-[10.5px] text-tlum2">{t.popis.split(" ")[0]}</span>
               </a>

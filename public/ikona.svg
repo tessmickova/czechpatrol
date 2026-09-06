@@ -1,24 +1,25 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="CzechPatrol">
+  <!-- Radarové stínítko podle brandbooku: plocha Patrol Red, kresba papírová. -->
   <defs>
-    <radialGradient id="z" cx="50%" cy="40%" r="70%">
-      <stop offset="0" stop-color="#12203a"/>
-      <stop offset="1" stop-color="#060a13"/>
+    <radialGradient id="paprsek" cx="50%" cy="50%" r="50%">
+      <stop offset="0" stop-color="#fffefb" stop-opacity="0.55"/>
+      <stop offset="1" stop-color="#fffefb" stop-opacity="0"/>
     </radialGradient>
-    <linearGradient id="s" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#38e8ff" stop-opacity="0.9"/>
-      <stop offset="1" stop-color="#38e8ff" stop-opacity="0.05"/>
-    </linearGradient>
+    <clipPath id="vyrez"><circle cx="256" cy="256" r="256"/></clipPath>
   </defs>
-  <rect width="512" height="512" rx="112" fill="url(#z)"/>
-  <g fill="none" stroke="#38e8ff" stroke-opacity="0.35" stroke-width="6">
-    <circle cx="256" cy="256" r="176"/>
-    <circle cx="256" cy="256" r="118"/>
-    <circle cx="256" cy="256" r="60"/>
-    <path d="M80 256H432M256 80V432"/>
+  <circle cx="256" cy="256" r="256" fill="#c1272d"/>
+  <g clip-path="url(#vyrez)">
+    <path d="M256 256 L256 0 A256 256 0 0 1 477.7 128 Z" fill="url(#paprsek)"/>
+    <g fill="none" stroke="#fffefb" stroke-width="11.6">
+      <circle cx="256" cy="256" r="215.3" stroke-opacity="0.4"/>
+      <circle cx="256" cy="256" r="165.9" stroke-opacity="0.34"/>
+      <circle cx="256" cy="256" r="116.4" stroke-opacity="0.3"/>
+      <circle cx="256" cy="256" r="66.8" stroke-opacity="0.26"/>
+    </g>
+    <g stroke="#fffefb" stroke-opacity="0.3" stroke-width="11.6">
+      <line x1="35.7" y1="256" x2="476.3" y2="256"/>
+      <line x1="256" y1="35.7" x2="256" y2="476.3"/>
+    </g>
   </g>
-  <path d="M256 256L256 80A176 176 0 0 1 408 168Z" fill="url(#s)"/>
-  <path d="M256 256L256 80" stroke="#38e8ff" stroke-width="10" stroke-linecap="round"/>
-  <circle cx="256" cy="256" r="18" fill="#38e8ff"/>
-  <circle cx="330" cy="332" r="16" fill="#ffab4d"/>
-  <circle cx="330" cy="332" r="30" fill="none" stroke="#ffab4d" stroke-opacity="0.5" stroke-width="6"/>
+  <circle cx="256" cy="256" r="29.1" fill="#fffefb"/>
 </svg>

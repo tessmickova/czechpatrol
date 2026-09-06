@@ -14,7 +14,7 @@ export function HodnoceniProjektu({ stav }: { stav: CelkovyStav }) {
   const d = stav.uroven ? UROVNE[stav.uroven] : null;
   const t = stav.uroven ? PASMA[UROVNE[stav.uroven].pasmo] : null;
   return (
-    <section aria-labelledby="hodnoceni" className="rounded-[14px] border border-linka bg-plocha p-5">
+    <section aria-labelledby="hodnoceni" className="rounded-[22px] border border-linka bg-plocha p-5">
       <div className="mb-2 flex items-center justify-between gap-2">
         <h2 id="hodnoceni" className="stitek">Hodnocení projektu</h2>
         <Napoveda vpravo popis={<span className="block">Analytické hodnocení podle metodiky CzechPatrol. Není to oficiální stupeň ohrožení ani předpověď. Stanovuje ho člověk, ne automat.</span>}>

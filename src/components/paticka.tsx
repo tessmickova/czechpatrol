@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { KOMUNITA, METODIKA_REVIDOVANA, WEB } from "@/config/web";
 import { datum } from "@/lib/format";
+import { Logo } from "./znacka";
 
 const SLOUPCE: { nadpis: string; odkazy: [string, string][] }[] = [
   {
@@ -19,16 +20,17 @@ const SLOUPCE: { nadpis: string; odkazy: [string, string][] }[] = [
 
 export function Paticka() {
   return (
-    <footer className="border-t border-linka">
-      <div className="mx-auto max-w-[1200px] px-4 py-12 sm:px-6">
+    // Patička stojí na tmavé desce — jediné velké tmavé místo na stránce.
+    <footer className="neni-tisk px-3 pb-6 sm:px-4">
+      <div className="noc mx-auto max-w-[1200px] rounded-[26px] px-6 py-10 sm:px-8">
         <div className="grid gap-10 md:grid-cols-[minmax(0,1.4fr)_repeat(3,minmax(0,1fr))]">
           <div>
-            <div className="text-[17px] font-bold">{WEB.nazev}</div>
-            <p className="mt-2 max-w-[38ch] text-[14px] leading-relaxed text-tlum">
+            <Logo velikost={32} pismo={17} tmave />
+            <p className="mt-3 max-w-[38ch] text-[14px] leading-relaxed text-noc-tlum">
               Nezávislý přehled bezpečnostních událostí a změn, které mohou mít dopad na lidi v Česku.
               Není to úřední zdroj ani varovný systém. V nouzi volejte 112.
             </p>
-            <p className="mt-3 text-[13px] text-tlum2">
+            <p className="mt-3 text-[13px] text-noc-tlum/80">
               Metodika revidována {datum(METODIKA_REVIDOVANA)}
               {KOMUNITA.github && (
                 <>
@@ -40,10 +42,10 @@ export function Paticka() {
           </div>
           {SLOUPCE.map((s) => (
             <nav key={s.nadpis} aria-label={s.nadpis}>
-              <div className="stitek mb-3">{s.nadpis}</div>
+              <div className="stitek-tmavy mb-3 text-noc-tlum/70">{s.nadpis}</div>
               <ul className="space-y-2 text-[14px]">
                 {s.odkazy.map(([href, label]) => (
-                  <li key={href}><Link href={href} className="text-tlum transition-colors hover:text-inkoust">{label}</Link></li>
+                  <li key={href}><Link href={href} className="text-noc-tlum transition-colors hover:text-noc-text">{label}</Link></li>
                 ))}
               </ul>
             </nav>

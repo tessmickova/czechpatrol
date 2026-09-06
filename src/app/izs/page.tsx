@@ -36,7 +36,7 @@ export default function IzsStranka() {
           {KROKY.map((k, i) => (
             <Karta key={k.nadpis} odstin="modra" className="p-5">
               <div className="mb-3 flex items-center justify-between">
-                <span className="grid h-10 w-10 place-items-center rounded-[12px] border border-akcent/40 bg-akcent/10 text-akcent">
+                <span className="grid h-10 w-10 place-items-center rounded-[18px] border border-akcent/40 bg-akcent/10 text-akcent">
                   <Ikona nazev={k.ikona} velikost={18} />
                 </span>
                 <span className="cislice stitek">0{i + 1}</span>

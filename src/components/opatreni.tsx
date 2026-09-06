@@ -15,9 +15,9 @@ import { SeznamZdroju } from "./zdroje";
 type Stav = "plati" | "neplati" | "sledujeme" | "narusen" | "neovereno";
 
 const VZHLED: Record<Stav, { slovo: string; tridy: string; ikona: NazevIkony }> = {
-  plati: { slovo: "platí", tridy: "border-[#d95c5c]/40 bg-[#d95c5c]/10 text-[#e68a8a]", ikona: "vystraha" },
-  narusen: { slovo: "narušeno", tridy: "border-[#d9773f]/40 bg-[#d9773f]/10 text-[#e69b6e]", ikona: "vystraha" },
-  sledujeme: { slovo: "sledujeme", tridy: "border-[#d9b24c]/40 bg-[#d9b24c]/10 text-[#e6c977]", ikona: "oko" },
+  plati: { slovo: "platí", tridy: "border-[#c1272d]/40 bg-[#c1272d]/10 text-[#a01c22]", ikona: "vystraha" },
+  narusen: { slovo: "narušeno", tridy: "border-[#d1521f]/40 bg-[#d1521f]/10 text-[#a8401a]", ikona: "vystraha" },
+  sledujeme: { slovo: "sledujeme", tridy: "border-[#b8860b]/40 bg-[#b8860b]/10 text-[#8a6d0b]", ikona: "oko" },
   neplati: { slovo: "není vyhlášeno", tridy: "border-linka text-tlum", ikona: "fajfka" },
   neovereno: { slovo: "neověřeno", tridy: "border-dashed border-linka text-tlum2", ikona: "info" },
 };
@@ -55,7 +55,7 @@ function Radek({
           </span>
           <span className="ml-auto flex shrink-0 items-center gap-3">
             {odznak && (
-              <span className={`inline-flex items-center gap-1.5 rounded-[8px] border px-2 py-1 text-[12.5px] font-semibold ${v.tridy}`}>
+              <span className={`inline-flex items-center gap-1.5 rounded-[12px] border px-2 py-1 text-[12.5px] font-semibold ${v.tridy}`}>
                 <Ikona nazev={v.ikona} velikost={12} tah={2.2} /> {v.slovo}
               </span>
             )}

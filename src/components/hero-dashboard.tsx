@@ -38,7 +38,7 @@ export function HeroDashboard({
   const d = stav.uroven ? UROVNE[stav.uroven] : null;
   const t = stav.uroven ? PASMA[UROVNE[stav.uroven].pasmo] : null;
   return (
-    <section aria-label="Míra nebezpečí" className="rounded-[14px] border border-linka bg-plocha">
+    <section aria-label="Míra nebezpečí" className="sklo rounded-[30px]">
       <div className="grid gap-2 p-3 sm:p-4 lg:grid-cols-[minmax(0,1.05fr)_minmax(0,1.4fr)]">
         <div className="flex items-center gap-4 border-b border-linka2 pb-3 lg:border-b-0 lg:border-r lg:pb-0 lg:pr-4">
           <Napoveda popis={stav.uroven ? <VykladUrovne uroven={stav.uroven} /> : <span className="block">Hodnocení zatím nebylo stanoveno.</span>}>
@@ -48,8 +48,8 @@ export function HeroDashboard({
             <div className="stitek">Celková míra nebezpečí · Evropa</div>
             <p className={`text-[34px] font-bold leading-none sm:text-[40px] ${t ? t.text : "text-tlum"}`}>{d ? d.nazev : "Nestanoveno"}</p>
             <p className="mt-1.5 flex flex-wrap items-center gap-x-3 text-[12.5px] text-tlum">
-              {stav.trend === "nahoru" && <span className="flex items-center gap-1 font-semibold text-[#e69b6e]"><Ikona nazev="nahoru" velikost={12} tah={2.2} /> zhoršení za 7 dní</span>}
-              {stav.trend === "dolu" && <span className="flex items-center gap-1 font-semibold text-[#8fd6ae]"><Ikona nazev="dolu" velikost={12} tah={2.2} /> zlepšení za 7 dní</span>}
+              {stav.trend === "nahoru" && <span className="flex items-center gap-1 font-semibold text-[#a8401a]"><Ikona nazev="nahoru" velikost={12} tah={2.2} /> zhoršení za 7 dní</span>}
+              {stav.trend === "dolu" && <span className="flex items-center gap-1 font-semibold text-[#256b45]"><Ikona nazev="dolu" velikost={12} tah={2.2} /> zlepšení za 7 dní</span>}
               {stav.trend === "beze-zmeny" && <span>beze změny 7 dní</span>}
               <span>{overeno ? `ověřeno ${datumCasPraha(overeno)}` : "ověření neproběhlo"}</span>
             </p>
@@ -58,8 +58,8 @@ export function HeroDashboard({
               <span><b className="cislice text-[16px] font-bold text-inkoust">{pocetZaznamu}</b> záznamů celkem</span>
             </p>
             <p className="mt-2 flex flex-wrap gap-2">
-              <Link href="#zaznamy" className="inline-flex min-h-[36px] items-center gap-1.5 rounded-[8px] border border-akcent/60 bg-akcent/15 px-3 text-[12.5px] font-bold text-akcent-svetla hover:bg-akcent/25"><Ikona nazev="osa" velikost={13} tah={2} /> Všechny záznamy</Link>
-              <Link href="#sledovat" className="inline-flex min-h-[36px] items-center gap-1.5 rounded-[8px] border border-linka px-3 text-[12.5px] font-bold text-inkoust hover:border-akcent"><Ikona nazev="zvonek" velikost={13} tah={2} /> Sledovat změny</Link>
+              <Link href="#zaznamy" className="inline-flex min-h-[36px] items-center gap-1.5 rounded-[12px] border border-akcent/60 bg-akcent/15 px-3 text-[12.5px] font-bold text-akcent-svetla hover:bg-akcent/25"><Ikona nazev="osa" velikost={13} tah={2} /> Všechny záznamy</Link>
+              <Link href="#sledovat" className="inline-flex min-h-[36px] items-center gap-1.5 rounded-[12px] border border-linka px-3 text-[12.5px] font-bold text-inkoust hover:border-akcent"><Ikona nazev="zvonek" velikost={13} tah={2} /> Sledovat změny</Link>
             </p>
           </div>
         </div>

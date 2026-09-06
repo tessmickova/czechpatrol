@@ -15,14 +15,14 @@ export function OdberPanel({ kompaktni = false }: { kompaktni?: boolean }) {
     <div className={`grid gap-6 ${kompaktni ? "" : "lg:grid-cols-[minmax(0,1.3fr)_minmax(0,1fr)]"}`}>
       <ul className="space-y-3">
         <li className="flex gap-3">
-          <span className="mt-0.5 grid h-9 w-9 shrink-0 place-items-center rounded-[8px] bg-akcent/15 text-akcent"><Ikona nazev="rss" velikost={16} tah={2} /></span>
+          <span className="mt-0.5 grid h-9 w-9 shrink-0 place-items-center rounded-[12px] bg-akcent/15 text-akcent"><Ikona nazev="rss" velikost={16} tah={2} /></span>
           <span>
             <a href={`${WEB.url}/feed.xml`} className="text-[15px] font-semibold text-inkoust underline decoration-linka underline-offset-4 hover:decoration-inkoust">RSS kanál</a>
             <span className="block text-[13.5px] leading-snug text-tlum">Bez účtu a bez adresy. Každý zveřejněný záznam, nic navíc. Funguje v každé čtečce.</span>
           </span>
         </li>
         <li className="flex gap-3">
-          <span className="mt-0.5 grid h-9 w-9 shrink-0 place-items-center rounded-[8px] bg-akcent/15 text-akcent"><Ikona nazev="zvonek" velikost={16} tah={2} /></span>
+          <span className="mt-0.5 grid h-9 w-9 shrink-0 place-items-center rounded-[12px] bg-akcent/15 text-akcent"><Ikona nazev="zvonek" velikost={16} tah={2} /></span>
           <span>
             {UCTY_ZAPNUTE ? (
               <Link href="/ucet/" className="text-[15px] font-semibold text-inkoust underline decoration-linka underline-offset-4 hover:decoration-inkoust">Týdenní souhrn a upozornění na změny</Link>
@@ -38,18 +38,18 @@ export function OdberPanel({ kompaktni = false }: { kompaktni?: boolean }) {
         </li>
         {dalsi.map(([k, url]) => (
           <li key={k} className="flex gap-3">
-            <span className="mt-0.5 grid h-9 w-9 shrink-0 place-items-center rounded-[8px] bg-akcent/15 text-akcent"><Ikona nazev="komunikace" velikost={16} tah={2} /></span>
+            <span className="mt-0.5 grid h-9 w-9 shrink-0 place-items-center rounded-[12px] bg-akcent/15 text-akcent"><Ikona nazev="komunikace" velikost={16} tah={2} /></span>
             <a href={url} target="_blank" rel="noopener noreferrer" className="text-[15px] font-semibold text-inkoust underline decoration-linka underline-offset-4 hover:decoration-inkoust">{k}</a>
           </li>
         ))}
       </ul>
       {!kompaktni && (
-        <div className="rounded-[12px] border border-linka2 bg-plocha p-4">
+        <div className="rounded-[18px] border border-linka2 bg-plocha p-4">
           <div className="stitek mb-2">Kdy přijde okamžité upozornění</div>
           <ul className="space-y-1.5">
             {KDY_UPOZORNENI.map((k) => (
               <li key={k} className="flex gap-2 text-[13.5px] leading-snug text-tlum">
-                <span aria-hidden className="mt-[3px] shrink-0 text-[#8fd6ae]"><Ikona nazev="fajfka" velikost={12} tah={2} /></span>{k}
+                <span aria-hidden className="mt-[3px] shrink-0 text-[#256b45]"><Ikona nazev="fajfka" velikost={12} tah={2} /></span>{k}
               </li>
             ))}
           </ul>

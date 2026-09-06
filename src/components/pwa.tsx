@@ -38,13 +38,13 @@ export function RegistraceSW() {
   if (!novaVerze && !offline) return null;
   return (
     <div className="fixed inset-x-0 bottom-[calc(60px+env(safe-area-inset-bottom))] z-[70] px-3 md:bottom-4">
-      <div role="status" className="mx-auto flex max-w-[560px] flex-wrap items-center justify-between gap-3 rounded-[12px] border border-linka bg-plocha2 px-4 py-3 text-[14px] text-inkoust shadow-[0_8px_24px_rgba(0,0,0,0.35)]">
+      <div role="status" className="mx-auto flex max-w-[560px] flex-wrap items-center justify-between gap-3 rounded-[18px] border border-linka bg-plocha2 px-4 py-3 text-[14px] text-inkoust shadow-[0_8px_24px_rgba(0,0,0,0.35)]">
         {offline ? (
-          <span className="flex items-center gap-2"><Ikona nazev="vystraha" velikost={15} tah={2} trida="text-[#e6b877]" /> Bez připojení. Zobrazený stav je poslední načtený, ne aktuální.</span>
+          <span className="flex items-center gap-2"><Ikona nazev="vystraha" velikost={15} tah={2} trida="text-[#a3541a]" /> Bez připojení. Zobrazený stav je poslední načtený, ne aktuální.</span>
         ) : (
           <>
             <span className="flex items-center gap-2"><Ikona nazev="info" velikost={15} tah={2} trida="text-akcent" /> Je k dispozici nová verze webu.</span>
-            <button type="button" onClick={() => location.reload()} className="min-h-[36px] rounded-[8px] border border-akcent/60 bg-akcent/15 px-3 text-[13px] font-bold text-akcent-svetla hover:bg-akcent/25">Obnovit</button>
+            <button type="button" onClick={() => location.reload()} className="min-h-[36px] rounded-[12px] border border-akcent/60 bg-akcent/15 px-3 text-[13px] font-bold text-akcent-svetla hover:bg-akcent/25">Obnovit</button>
           </>
         )}
       </div>
@@ -88,7 +88,7 @@ export function TlacitkoInstalace({ cele = false }: { cele?: boolean }) {
   if (nainstalovano) {
     return (
       <p className="flex items-center gap-2 text-[14px] text-tlum">
-        <span className="text-[#8fd6ae]"><Ikona nazev="fajfka" velikost={14} tah={2} /></span>
+        <span className="text-[#256b45]"><Ikona nazev="fajfka" velikost={14} tah={2} /></span>
         Běží jako aplikace.
       </p>
     );
