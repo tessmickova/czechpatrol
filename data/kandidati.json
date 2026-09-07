@@ -1,5 +1,30 @@
 [
   {
+    "id": "k-74af3ae247ae5439",
+    "zachyceno": "2026-09-07T10:06:21.723Z",
+    "publikovano": "2026-09-07T08:41:00.000Z",
+    "zdroj": {
+      "nazev": "iROZHLAS — zprávy",
+      "url": "https://www.irozhlas.cz/zpravy-svet/nemecka-policie-vysetruje-pozar-elektricke-stanice-v-berline-u-dalsi-rozvodny_2609071041_ntu",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Německá policie vyšetřuje požár elektrické stanice v Berlíně. U další rozvodny odhalila prostřižený plot",
+    "titulekPuvodni": "Německá policie vyšetřuje požár elektrické stanice v Berlíně. U další rozvodny odhalila prostřižený plot",
+    "shrnuti": "Německá policie vyšetřuje noční požár elektrické stanice v centru Berlína, na západě Německa odhalila u rozvodny prostřižený plot. S odvoláním na své zdroje o tom v pondělí informoval bulvární list Bild. Německo minulý týden zaznamenalo několik útoků na rozvodny elektřiny, které úřady vyšetřují jako",
+    "kodZeme": "DE",
+    "zeme": "Německo",
+    "kategorie": [
+      "sabotaz"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "shody": [
+      "sabotaz"
+    ],
+    "stav": "ceka"
+  },
+  {
     "id": "k-89c9fba617bfd64b",
     "zachyceno": "2026-09-06T13:59:15.562Z",
     "publikovano": "2026-09-06T11:21:38.000Z",
@@ -60,6 +85,31 @@
       "dron",
       "hybridni",
       "rusk"
+    ],
+    "stav": "ceka"
+  },
+  {
+    "id": "k-a045f0a5cd8a11c6",
+    "zachyceno": "2026-09-07T10:06:21.752Z",
+    "publikovano": "2026-09-06T11:14:00.000Z",
+    "zdroj": {
+      "nazev": "Google News — sabotáž",
+      "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxOQTRYZHlzLXB1aVdZZTVOTHFOejRqSndYNzBFdUJIT3ZIOGg3SmNGV2kzZ1lrMEctWlp3VlJsbmlkQ2FHa1dMeUFZczAwbFlGOU9MOHpEcU9jZ2kydy01TXJlUXpMVzlERkZGNTVLazZuWHRKdlUyTWR2WnZLMG5iSVE5dm5TLTZjX3c0YkRPMDdoRFNoNnNjMFU5M214TGVDVnc?oc=5",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Je to začátek války, komentoval Lavrov německá obvinění z útoku v Lipsku - Newstream",
+    "titulekPuvodni": "Je to začátek války, komentoval Lavrov německá obvinění z útoku v Lipsku - Newstream",
+    "shrnuti": "<a href=\"https://news.google.com/rss/articles/CBMiogFBVV95cUxOQTRYZHlzLXB1aVdZZTVOTHFOejRqSndYNzBFdUJIT3ZIOGg3SmNGV2kzZ1lrMEctWlp3VlJsbmlkQ2FHa1dMeUFZczAwbFlGOU9MOHpEcU9jZ2kydy01TXJlUXpMVzlERkZGNTVLazZuWHRKdlUyTWR2WnZLMG5iSVE5dm5TLTZjX3c0YkRPMDdoRFNoNnNjMFU5M214TGVDVnc?oc=5\" target=\"_blank\">Je to za",
+    "kodZeme": "DE",
+    "zeme": "Německo",
+    "kategorie": [
+      "zpravodajske"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "shody": [
+      "obvin"
     ],
     "stav": "ceka"
   },
@@ -144,6 +194,31 @@
     "shody": [
       "sabotage",
       "nato"
+    ],
+    "stav": "ceka"
+  },
+  {
+    "id": "k-a2d2352dedfb9df3",
+    "zachyceno": "2026-09-07T10:06:21.695Z",
+    "publikovano": "2026-09-05T07:20:17.000Z",
+    "zdroj": {
+      "nazev": "BBC News — Europe",
+      "url": "https://www.bbc.co.uk/news/articles/c7v4npv1m22o?at_medium=RSS&at_campaign=rss",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Tate brothers officially indicted with trafficking and sex crimes in Romania",
+    "titulekPuvodni": "Tate brothers officially indicted with trafficking and sex crimes in Romania",
+    "shrnuti": "Andrew and Tristan Tate are currently in a Miami jail fighting extradition to the UK over separate charges and deny all the allegations.",
+    "kodZeme": "GB",
+    "zeme": "Spojené království",
+    "kategorie": [
+      "zpravodajske"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "shody": [
+      "indicted"
     ],
     "stav": "ceka"
   },
@@ -1301,6 +1376,36 @@
     "stav": "ceka"
   },
   {
+    "id": "k-5ebf57ed57d3ec30",
+    "zachyceno": "2026-09-07T10:06:21.740Z",
+    "publikovano": "2026-09-02T04:23:17.000Z",
+    "zdroj": {
+      "nazev": "Google News — sabotage Europe",
+      "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxPakFNUE0yV1ZxMjAyalhrejhwSzEyMXl3SGtjcENTVlRNQ2RoZ2VyeWU0bzBwMWNfcmw4WW9PMTRmYVBmNnMxT3FicWVaOU9TSTZNVmtRa3ZyYkw5RlE4OF9aMWw3bVZTS1lnT19rYkp0NnlFcHpjWmhnNGY1T0U1LThkTXlmSXBqNGFkZ0VCU25wREVPVWJ6Y2w0amFBZ9IBowFBVV95cUxQSnROWDl2dmc1eEUzd21oSnp3dThKdWo2QWJKOGZmTXpFZmZRaTF5OG05UGtXeWkwVkZMYm5KbHBvS3E3ZEMyejJlQ2FKNm1xMlBxYkgtbldVdkZoZVVnd2VhTG9jZFlrWnZSd2lrX3lBRG5qOGlhcGdnR2VnSllGbkctbzFpNUVDWDNTdHR0WTh6YnBPZThaWXZZbzRnbnVpQ0V3?oc=5",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Germany accuses Russia of failed drone attack on Leipzig airport in August - Al Jazeera",
+    "titulekPuvodni": "Germany accuses Russia of failed drone attack on Leipzig airport in August - Al Jazeera",
+    "shrnuti": "<a href=\"https://news.google.com/rss/articles/CBMingFBVV95cUxPakFNUE0yV1ZxMjAyalhrejhwSzEyMXl3SGtjcENTVlRNQ2RoZ2VyeWU0bzBwMWNfcmw4WW9PMTRmYVBmNnMxT3FicWVaOU9TSTZNVmtRa3ZyYkw5RlE4OF9aMWw3bVZTS1lnT19rYkp0NnlFcHpjWmhnNGY1T0U1LThkTXlmSXBqNGFkZ0VCU25wREVPVWJ6Y2w0amFBZ9IBowFBVV95cUxQSnROWDl2dmc1eEUzd21oSn",
+    "kodZeme": "DE",
+    "zeme": "Německo",
+    "kategorie": [
+      "hybridni",
+      "drony",
+      "rusko"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "shody": [
+      "attack on",
+      "dron",
+      "drone",
+      "russia"
+    ],
+    "stav": "ceka"
+  },
+  {
     "id": "k-32cc680dde2fb69d",
     "zachyceno": "2026-09-06T13:59:15.579Z",
     "publikovano": "2026-09-01T18:20:46.000Z",
@@ -1436,6 +1541,33 @@
       "sabotage",
       "cyber",
       "nato",
+      "russia"
+    ],
+    "stav": "ceka"
+  },
+  {
+    "id": "k-6b973c2cc0058d4e",
+    "zachyceno": "2026-09-07T10:06:21.737Z",
+    "publikovano": "2026-08-29T07:00:00.000Z",
+    "zdroj": {
+      "nazev": "Google News — sabotage Europe",
+      "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxNaEtQRHhaRGN0SEJtaXNMMFJGNEFGWXFzb3BTXzhhZVZCQl9mdmpPTDZkUkNLVUFZc0t3TzBrbjdpYjFPRUdOMHQ1MDJiV3B1MXZwa1JSdUNoTWpJSERvdURnTkFRY0JEUGxFN2RoRzBUclowbW1qRjF1UnlUUnRLZjNTUVdGOHkya29wRTRCQmh5dHNMMkRYZkZaQ0UxZjRoeXVPamo1cENfZw?oc=5",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Russia Is Bombarding Europe With a New Wave of ‘Gray Zone’ Attacks - WSJ",
+    "titulekPuvodni": "Russia Is Bombarding Europe With a New Wave of ‘Gray Zone’ Attacks - WSJ",
+    "shrnuti": "<a href=\"https://news.google.com/rss/articles/CBMiqgFBVV95cUxNaEtQRHhaRGN0SEJtaXNMMFJGNEFGWXFzb3BTXzhhZVZCQl9mdmpPTDZkUkNLVUFZc0t3TzBrbjdpYjFPRUdOMHQ1MDJiV3B1MXZwa1JSdUNoTWpJSERvdURnTkFRY0JEUGxFN2RoRzBUclowbW1qRjF1UnlUUnRLZjNTUVdGOHkya29wRTRCQmh5dHNMMkRYZkZaQ0UxZjRoeXVPamo1cENfZw?oc=5\" target=\"_blan",
+    "kodZeme": "RU",
+    "zeme": "Rusko",
+    "kategorie": [
+      "sabotaz",
+      "rusko"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "shody": [
+      "bomb",
       "russia"
     ],
     "stav": "ceka"
@@ -1804,6 +1936,38 @@
     "stav": "ceka"
   },
   {
+    "id": "k-563f3c6ce5bbb8df",
+    "zachyceno": "2026-09-07T10:06:21.747Z",
+    "publikovano": "2026-08-19T18:00:00.000Z",
+    "zdroj": {
+      "nazev": "Google News — sabotage Europe",
+      "url": "https://news.google.com/rss/articles/CBMi2gFBVV95cUxPOXluVlpmWjJCalNJVC1xSXZPbG82dE93RkZRMGhkUG5tbUdRcWg1TWcxTDc1WFFzc0lEdGwwcl9oLW9XVDJqLXpabm5kMHNjU1pQQU1FNjRYVUU0NFFkR0t6V0tqNEFZLVJqTGd0ejA0dVZLVV9zeWlZZ2MyQVhOa0E3eEYxOVdJUFpweFZFMDdYcDVqR21qUU5rZDZIOG5ZNGhTcDRGSURrR0RySUROUmNWQ2RwdEVBS1N0bC0yWUVKU1hxVktkT0QwaUotaDhZYTUtV2gyRXRJUQ?oc=5",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Cyberattacks, acts of sabotage, and provocations: How Russia Might Test NATO’s Resilience, and How Europe Is Prepared to Respond - shelter.in.ua",
+    "titulekPuvodni": "Cyberattacks, acts of sabotage, and provocations: How Russia Might Test NATO’s Resilience, and How Europe Is Prepared to Respond - shelter.in.ua",
+    "shrnuti": "<a href=\"https://news.google.com/rss/articles/CBMi2gFBVV95cUxPOXluVlpmWjJCalNJVC1xSXZPbG82dE93RkZRMGhkUG5tbUdRcWg1TWcxTDc1WFFzc0lEdGwwcl9oLW9XVDJqLXpabm5kMHNjU1pQQU1FNjRYVUU0NFFkR0t6V0tqNEFZLVJqTGd0ejA0dVZLVV9zeWlZZ2MyQVhOa0E3eEYxOVdJUFpweFZFMDdYcDVqR21qUU5rZDZIOG5ZNGhTcDRGSURrR0RySUROUmNWQ2RwdEVBS1",
+    "kodZeme": "RU",
+    "zeme": "Rusko",
+    "kategorie": [
+      "sabotaz",
+      "kyber",
+      "nato",
+      "rusko"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "shody": [
+      "sabotage",
+      "cyberattack",
+      "cyber",
+      "nato",
+      "russia"
+    ],
+    "stav": "ceka"
+  },
+  {
     "id": "k-26b6e832a642e5f6",
     "zachyceno": "2026-09-06T13:59:15.574Z",
     "publikovano": "2026-08-18T07:00:00.000Z",
@@ -1909,34 +2073,6 @@
     "shody": [
       "arson",
       "attack on",
-      "russia"
-    ],
-    "stav": "ceka"
-  },
-  {
-    "id": "k-f5cdbac442b86d8d",
-    "zachyceno": "2026-09-06T13:59:15.574Z",
-    "publikovano": "2026-08-17T07:00:00.000Z",
-    "zdroj": {
-      "nazev": "Google News — sabotage Europe",
-      "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxOMDFZanZQcGJUX05QRXFZUzBwSlR2UGdQRUdaSHR1LWZrX190cnJ4cnk5SlhLbXl0Y3BoSktTV012cnZMSDA3SUwzRWNqVEd1Q0kxZ19uNzZXSnpSX3FYVGJwQnV4SkdmS2dnVWpVM3RJT3NqU0dYcllUZm5LS1ktZl8tMUJWckd4eGNKTU4wSFY5a1FxUVVDelhZYnVWSnc?oc=5",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Decoding Colleferro explosion: Why Russian sabotage cannot be ruled out - Decode39",
-    "titulekPuvodni": "Decoding Colleferro explosion: Why Russian sabotage cannot be ruled out - Decode39",
-    "shrnuti": "<a href=\"https://news.google.com/rss/articles/CBMinwFBVV95cUxOMDFZanZQcGJUX05QRXFZUzBwSlR2UGdQRUdaSHR1LWZrX190cnJ4cnk5SlhLbXl0Y3BoSktTV012cnZMSDA3SUwzRWNqVEd1Q0kxZ19uNzZXSnpSX3FYVGJwQnV4SkdmS2dnVWpVM3RJT3NqU0dYcllUZm5LS1ktZl8tMUJWckd4eGNKTU4wSFY5a1FxUVVDelhZYnVWSnc?oc=5\" target=\"_blank\">Decoding Col",
-    "kodZeme": "RU",
-    "zeme": "Rusko",
-    "kategorie": [
-      "sabotaz",
-      "rusko"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "shody": [
-      "sabotage",
-      "explosion",
       "russia"
     ],
     "stav": "ceka"
