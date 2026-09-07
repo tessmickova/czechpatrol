@@ -40,21 +40,96 @@ const SOUBOR = path.join(KOREN, "kandidati.json");
 const DNI_ZPET = 21;
 const MAX_KANDIDATU = 200;
 
-/** Témata: aspoň jedna shoda je nutná. Slova bez diakritiky, hledá se v normalizovaném textu. */
-const TEMATA: { kategorie: string; slova: string[] }[] = [
-  { kategorie: "sabotaz", slova: ["sabotage", "sabotaz", "sabotaze", "sabotazi", "arson", "zharstvi", "zapalny", "incendiary", "explosion at", "vybuch", "zhar"] },
-  { kategorie: "drony", slova: ["drone", "drones", "dron", "drony", "dronu", "airspace", "vzdusny prostor", "vzdusneho prostoru", "vzdusnem prostoru", "uav"] },
-  { kategorie: "kyber", slova: ["cyberattack", "cyber attack", "cyber-attack", "hackers", "ddos", "kyberneticky utok", "kybernetickeho utoku", "kyberutok", "nukib", "ransomware"] },
-  { kategorie: "infrastruktura", slova: ["undersea cable", "subsea cable", "pipeline", "power grid", "substation", "rozvodna", "podmorsky kabel", "kabel", "plynovod", "elektrarna", "railway sabotage", "zeleznic"] },
-  { kategorie: "zpravodajske", slova: ["espionage", "spy ", "spies", "gru ", "fsb", "spionaz", "spion", "zpravodajsk", "agent", "bis ", "bezpecnostni informacni sluzba"] },
-  { kategorie: "hybridni", slova: ["hybrid attack", "hybrid warfare", "hybridni", "russia-linked", "russian-linked", "kremlin-linked", "ruska stopa", "rusko za"] },
-  { kategorie: "nato", slova: ["article 4", "article 5", "clanek 4", "clanku 4", "clanek 5", "nato scrambled", "nato jets", "eastern flank", "vychodni kridlo"] },
-  { kategorie: "hranice", slova: ["border closure", "closes border", "uzavreni hranic", "zavrela hranici", "border crossing", "hranicni prechod"] },
-  { kategorie: "pravo", slova: ["state of emergency", "mobilization", "mobilisation", "mobilizace", "nouzovy stav", "stav ohrozeni"] },
+/*
+  Co sem patří a co ne.
+
+  Web není zpravodajství. Sbírá jen skutky, které mění bezpečnostní situaci,
+  a úřední rozhodnutí, která ji mění formálně — nebo doložený a konkrétní krok
+  k nim. Prohlášení, sliby, plány, jednání vlády o cenách nebo důchodech sem
+  nepatří, i když v nich zazní slovo „bezpečnost“.
+
+  Proto je podmínka dvojí: zpráva musí obsahovat SKUTEK (seznam `AKTY`)
+  a musí mít místo (zemi nebo alianci). Ostatní slova (`KONTEXT`) samy o sobě
+  nestačí, jen zprávě přidají oblast.
+*/
+
+/** Skutky a úřední rozhodnutí. Bez aspoň jednoho z nich se zpráva nezachytí. */
+const AKTY: { kategorie: string; slova: string[] }[] = [
+  { kategorie: "sabotaz", slova: [
+    "sabotage", "sabotaz", "arson", "incendiary device", "zhar", "zharstvi", "zapalna lahev",
+    "explosion", "vybuch", "vybusnina", "naloz", "bomb", "poskozeni kabelu", "preruseny kabel",
+    "prestrizeny", "vykolejeni", "derailment",
+  ] },
+  { kategorie: "drony", slova: [
+    "airspace violation", "violated airspace", "narusil vzdusny prostor", "naruseni vzdusneho prostoru",
+    "sestrel", "shot down", "dopad dronu", "drone crash", "drone incursion",
+    "uzavreni letiste", "airport closed", "pozastavila provoz letiste", "grounded flights",
+  ] },
+  { kategorie: "kyber", slova: [
+    "cyberattack", "cyber attack", "kyberneticky utok", "kyberutok", "ransomware", "ddos utok", "ddos attack",
+    "hacknut", "hacked", "data breach", "unik dat", "vyrazen z provozu",
+  ] },
+  { kategorie: "infrastruktura", slova: [
+    "poskozen plynovod", "damaged pipeline", "vypadek proudu", "power outage", "blackout",
+    "poskozena rozvodna", "utok na rozvodnu", "prerusena dodavka", "zastavena dodavka",
+    "undersea cable damage", "subsea cable cut", "cable damaged", "poskozeny podmorsky kabel",
+  ] },
+  { kategorie: "zpravodajske", slova: [
+    // Kmeny bez koncovky, aby čeština fungovala: „obvin“ najde obviněn i obvinilo.
+    "zadrz", "zatc", "obvin", "obzalov", "odsoud", "arrested", "charged with", "indicted",
+    "vyhost", "expelled diplomat", "odhalena sit", "spy network", "spionazni sit",
+  ] },
+  { kategorie: "pravo", slova: [
+    "state of emergency", "vyhlasil nouzovy stav", "vyhlasila nouzovy stav", "nouzovy stav byl vyhlasen",
+    "stav ohrozeni statu", "valecny stav", "vyjimecny stav", "martial law", "stanne pravo",
+    "mobilizace vyhlasena", "vyhlasil mobilizaci", "castecna mobilizace", "mobilisation ordered",
+    "branna povinnost", "odvody",
+  ] },
+  { kategorie: "nato", slova: [
+    "article 4", "article 5", "clanek 4", "clanku 4", "clanek 5", "clanku 5",
+    "aktivovala clanek", "invoked article", "nato scrambled", "vzlétly stihacky", "vzletly stihacky",
+    "rozmisteni sil", "deployment of troops", "posili vychodni kridlo", "reinforce eastern flank",
+  ] },
+  { kategorie: "hranice", slova: [
+    "uzavreni hranic", "uzavrela hranice", "closed the border", "border closure",
+    "obnovila hranicni kontroly", "reintroduced border checks", "evakuace obyvatel", "evacuation ordered",
+  ] },
+  { kategorie: "hybridni", slova: [
+    "utok na", "attack on", "strela dopadla", "missile struck", "raketa dopadla", "ostrelovani",
+  ] },
 ];
 
-/** Slova, která bez dalšího kontextu značí, že zpráva sem nepatří (sport, kultura, reklama). */
-const VYLOUCIT = ["football", "fotbal", "hokej", "hockey", "film", "concert", "koncert", "recipe", "recept", "horoscope", "horoskop", "celebrity", "game review", "smartphone", "sale ", "sleva"];
+/** Slova, která zprávě jen přidají oblast. Samy o sobě nikdy nestačí. */
+const KONTEXT: { kategorie: string; slova: string[] }[] = [
+  { kategorie: "drony", slova: ["dron", "drone", "uav", "vzdusny prostor", "airspace"] },
+  { kategorie: "kyber", slova: ["nukib", "kybernetick", "cyber"] },
+  { kategorie: "infrastruktura", slova: [
+    "plynovod", "pipeline", "rozvodna", "substation", "power grid", "podmorsky kabel",
+    "undersea cable", "subsea cable", "zeleznic", "railway", "elektrarna", "power plant",
+    "kriticka infrastruktura", "critical infrastructure",
+  ] },
+  { kategorie: "zpravodajske", slova: ["spionaz", "espionage", "gru", "fsb", "bezpecnostni informacni sluzba", "kontrarozvedka"] },
+  { kategorie: "hybridni", slova: ["hybridni", "hybrid warfare", "ruska stopa", "russia-linked", "kremlin-linked"] },
+  { kategorie: "nato", slova: ["nato", "aliance", "vychodni kridlo", "eastern flank"] },
+  { kategorie: "rusko", slova: ["rusk", "russia", "kreml", "kremlin"] },
+];
+
+/**
+ * Témata, která do bezpečnostního přehledu nepatří, i kdyby v textu skutek zazněl.
+ * Domácí politika a ekonomika jsou plné slov jako „útok“ nebo „krize“.
+ */
+const VYLOUCIT = [
+  // sport, kultura, spotřeba
+  "fotbal", "football", "hokej", "hockey", "liga", "zapas", "gol", "film", "koncert", "concert",
+  "recept", "recipe", "horoskop", "celebrity", "smartphone", "sleva", "sale",
+  // domácí politika a ekonomika
+  "ceny pohonnych hmot", "pohonnych hmot", "benzin", "nafta zdrazila", "duchod", "duchodu", "duchodova reforma",
+  "rozpocet", "rozpoctu", "dane", "dani", "inflace", "mzdy", "platy", "dotace",
+  "koalice", "opozice", "snemovna", "volby", "volebni", "kampan", "ministr financi",
+  "skolstvi", "zdravotnictvi", "pojistovna", "hypoteky", "akcie", "burza", "kurz koruny",
+  // předpovědi počasí a nehody bez bezpečnostního rozměru
+  "pocasi", "predpoved pocasi", "dopravni nehoda", "srazka aut",
+];
 
 const ZEME: { kod: string; nazev: string; slova: string[] }[] = [
   { kod: "CZ", nazev: "Česko", slova: ["czech", "cesko", "ceska republika", "ceske", " cr ", "policie cr", "praha", "praze", "prague", "brno", "brne", "ostrav"] },
@@ -120,25 +195,46 @@ export function odhadniZemi(text: string): { kod: string; nazev: string } | null
   return v ? { kod: v.kod, nazev: v.nazev } : null;
 }
 
-export function odhadniTemata(text: string): { kategorie: string[]; shody: string[] } {
+/**
+ * Hledá slovo od začátku slova, ne kdekoli uvnitř. Bez toho se „bis“
+ * (Bezpečnostní informační služba) trefilo doprostřed jména „Babiš“ a web
+ * si od vlády o důchodech udělal zpravodajskou zprávu. Koncovka je povolená,
+ * aby čeština fungovala: „sabotaz“ najde i „sabotáže“ a „sabotáží“.
+ */
+export function obsahujeSlovo(text: string, slovo: string): boolean {
+  const vzor = slovo.trim().replace(/[.*+?^${}()|[\]\\]/g, "\\$&").replace(/\s+/g, "\\s+");
+  return new RegExp(`(^|[^a-z0-9])${vzor}[a-z]*([^a-z0-9]|$)`).test(text);
+}
+
+export function odhadniTemata(text: string): { kategorie: string[]; shody: string[]; akty: string[] } {
   const t = normalizuj(text);
   const kategorie: string[] = [];
   const shody: string[] = [];
-  for (const tema of TEMATA) {
-    const s = tema.slova.filter((w) => t.includes(w));
-    if (s.length) { kategorie.push(tema.kategorie); shody.push(...s); }
+  const akty: string[] = [];
+  for (const skupina of AKTY) {
+    const s = skupina.slova.filter((w) => obsahujeSlovo(t, w));
+    if (s.length) { kategorie.push(skupina.kategorie); shody.push(...s); akty.push(...s); }
   }
-  return { kategorie, shody: [...new Set(shody)] };
+  for (const skupina of KONTEXT) {
+    const s = skupina.slova.filter((w) => obsahujeSlovo(t, w));
+    if (s.length) { kategorie.push(skupina.kategorie); shody.push(...s); }
+  }
+  return { kategorie: [...new Set(kategorie)], shody: [...new Set(shody)], akty: [...new Set(akty)] };
 }
 
+/**
+ * Zpráva se zachytí, jen když jde o skutek nebo úřední rozhodnutí a je jasné,
+ * kde se to stalo. Prohlášení, sliby a plány jsou pro tenhle web šum, i když
+ * mluví o bezpečnosti — do záznamů je smí zapsat jen člověk, a to jen tehdy,
+ * když se vážou ke konkrétní věci.
+ */
 export function relevantni(text: string): boolean {
   const t = normalizuj(text);
-  if (VYLOUCIT.some((w) => t.includes(w))) return false;
-  const { kategorie } = odhadniTemata(text);
-  // Samotné „drony“ nebo „kyber“ jsou i v běžných zprávách; chceme aspoň dvě témata,
-  // nebo jedno tvrdé (sabotáž, NATO, hranice, právo, hybridní).
-  const tvrde = ["sabotaz", "nato", "hranice", "pravo", "hybridni", "zpravodajske"];
-  return kategorie.length >= 2 || kategorie.some((k) => tvrde.includes(k));
+  if (VYLOUCIT.some((w) => obsahujeSlovo(t, w))) return false;
+  const { akty, kategorie } = odhadniTemata(text);
+  if (!akty.length) return false;
+  // Skutek bez místa je půlka informace. Alianční kontext místo nahradí.
+  return Boolean(odhadniZemi(text)) || kategorie.includes("nato");
 }
 
 async function stahniZdroj(z: ZdrojUdalosti) {

@@ -30,8 +30,10 @@ const ZAPOCITAVAME = [
 ];
 
 const NEZAPOCITAVAME = [
+  "prohlášení, sliby a plány politiků",
+  "jednání vlády o cenách, rozpočtu nebo důchodech",
   "další článek o téže věci",
-  "komentář politika bez nového faktu",
+  "komentář bez nového faktu",
   "repost a přejatou zprávu",
   "starou událost publikovanou znovu",
   "běžný incident odpovídající dlouhodobému baseline",
@@ -110,10 +112,16 @@ export default function Metodika() {
           <Karta className="p-5 sm:p-6">
             <h3 className="podnadpis mb-4 text-[15px]">Nezapočítáváme jako nový incident</h3>
             <Seznam polozky={NEZAPOCITAVAME} znak="−" barva="text-tlum2" />
-            <p className="mt-5 border-t border-linka2 pt-4 text-[12.5px] leading-relaxed text-tlum2">
-              Nové oficiální vyšetřovací zjištění nebo atribuce staršího incidentu ale
-              novým analytickým signálem být může. Rozhoduje, jestli přibyl fakt — ne
-              jestli přibyl článek.
+            <p className="mt-5 border-t border-linka2 pt-4 text-[13px] leading-relaxed text-tlum">
+              Nejsme zpravodajský web. Zajímá nás skutek, který mění bezpečnostní
+              situaci, a úřední rozhodnutí, které mění, co platí — ne to, co kdo
+              slíbil nebo se chystá projednat. Prohlášení zapisujeme jen tehdy,
+              když se váže ke konkrétnímu skutku, a vedeme ho odděleně jako reakci.
+            </p>
+            <p className="mt-3 text-[12.5px] leading-relaxed text-tlum2">
+              Nové úřední vyšetřovací zjištění nebo atribuce staršího případu ale
+              novým signálem být může. Rozhoduje, jestli přibyl fakt — ne jestli
+              přibyl článek.
             </p>
           </Karta>
         </div>

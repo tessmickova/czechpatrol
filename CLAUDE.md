@@ -51,13 +51,37 @@ je řešeno úředně a oficiálně**:
 zdroje. Píšeme jen to, co už někdo oficiálně řekl nebo vydal — a říkáme,
 kdo to byl.**
 
-## Pravidlo č. 1 — ověř, že zadání patří sem
+## Pravidlo č. 1 — nejsme zpravodajství
+
+**Na web patří jen to, co mění bezpečnostní situaci, nebo doložený a konkrétní
+krok k tomu.** Ne prohlášení, sliby, plány ani jednání o cenách a rozpočtu.
+
+Patří sem:
+
+- **skutek** — sabotáž, žhářství, výbuch, poškození kabelu, plynovodu, rozvodny
+  nebo železnice, narušení vzdušného prostoru, sestřelený nebo spadlý dron,
+  kybernetický útok s následkem, zadržení, obvinění nebo odsouzení za takový čin,
+  vyhoštění diplomata;
+- **úřední rozhodnutí, které mění, co platí** — nouzový stav, stav ohrožení
+  státu, válečný stav, stanné právo, mobilizace, uzavření hranic nebo letiště,
+  evakuace, aktivace článku 4 nebo 5, rozmístění sil.
+
+Nepatří sem: „vláda se bude zabývat“, „ministr jednal“, „politik varoval“,
+„zvažuje se“. Prohlášení se zapisuje jen tehdy, když se váže ke konkrétnímu
+skutku nebo rozhodnutí výše — a i pak je to `reakce`, ne případ.
+
+Sběrač tohle vynucuje sám (`sber/udalosti.ts`, funkce `relevantni`): bez skutku
+a bez místa zprávu nezachytí. Klíčová slova se hledají **od začátku slova** —
+kmen `bis` se kdysi trefil doprostřed jména „Babiš“ a udělal ze jednání
+o důchodech zpravodajskou zprávu.
+
+## Pravidlo č. 2 — ověř, že zadání patří sem
 
 **Tenhle repozitář je jen bezpečnostní přehled CzechPatrol.** Když se zadání týká
 jiného webu, jiné domény nebo jiného projektu, zeptej se, jestli to nemá být
 řešeno jinde, a teprve po potvrzení pokračuj.
 
-## Pravidlo č. 2 — nevymýšlet
+## Pravidlo č. 3 — nevymýšlet
 
 Nikdy nevymýšlej události, čísla, citace ani zdroje. Chybějící údaj je otevřená
 otázka, ne prostor pro odhad. `null` je platná hodnota a UI ji umí zobrazit
@@ -66,7 +90,7 @@ jako „zatím neověřeno“.
 Zástupné texty se nenahrazují smyšlenými údaji. Ukázková data patří výhradně do
 `data/ukazka/` a musí být viditelně označená.
 
-## Pravidlo č. 3 — automat smí potvrdit jen zápor
+## Pravidlo č. 4 — automat smí potvrdit jen zápor
 
 Sběrač nikdy nic nezveřejňuje. Když najde signál, hodnotu **nemění** — založí
 položku do `data/fronta/` ke kontrole. Tohle pravidlo se nesmí obejít ani
@@ -76,7 +100,7 @@ nestalo.
 Když se relevantní zdroj nepodaří stáhnout, zápor se nepotvrzuje a datum
 ověření se nezapisuje.
 
-## Pravidlo č. 4 — zdrojový kód patří na GitHub
+## Pravidlo č. 5 — zdrojový kód patří na GitHub
 
 Každá dokončená změna se commitne a hned nahraje.
 
@@ -86,7 +110,7 @@ git commit -m "co se změnilo a proč"
 git push -u origin main   # při selhání sítě opakovat: 2 s, 4 s, 8 s, 16 s
 ```
 
-## Pravidlo č. 5 — redakční zásady jsou součást produktu
+## Pravidlo č. 6 — redakční zásady jsou součást produktu
 
 Nepoužívej titulky typu „Válka je za dveřmi“ nebo „Mobilizace přichází“.
 Budoucí scénář se nikdy nepíše jako jistota. Ke každému zhoršujícímu údaji
@@ -96,7 +120,7 @@ ukazují.
 Upozornění „AI-assisted / pracovní verze“ **není omluvenka** pro nepodložené
 tvrzení.
 
-## Pravidlo č. 6 — archiv nesmí mystifikovat
+## Pravidlo č. 7 — archiv nesmí mystifikovat
 
 Snímek se zapisuje jen při změně. Nikdy nehlas změnu, kterou čtenář nemůže
 vidět („Střední → Střední“) — popiš, co se opravdu stalo. Období, které archiv
@@ -104,7 +128,7 @@ nepokrývá, se nedopočítává; napíše se, že ho nemáme.
 
 Odběrový kanál, který nikam nevede, se neukazuje jako dostupný.
 
-## Pravidlo č. 7 — rozhraní je pro čtenáře, ne pro nás
+## Pravidlo č. 8 — rozhraní je pro čtenáře, ne pro nás
 
 Do UI nepatří poznámky o tom, proč jsme něco udělali. Disclaimer je jeden,
 v patičce. Popisky pod grafy vysvětlují značku na obrazovce (co znamená
@@ -112,7 +136,7 @@ v patičce. Popisky pod grafy vysvětlují značku na obrazovce (co znamená
 
 Piš jako copywriter: nadpis, jedna věta, konec. Ne odstavce.
 
-## Pravidlo č. 8 — účty vědí co nejméně a role dává jen člověk
+## Pravidlo č. 9 — účty vědí co nejméně a role dává jen člověk
 
 Účet nemá jméno, e-mail ani telefon a nikdy je mít nebude. Každý nový údaj
 o uživateli je otázka pro `docs/PRAVNI-KONTROLA.md` a `/soukromi/`, ne
