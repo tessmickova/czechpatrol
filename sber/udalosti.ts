@@ -91,12 +91,45 @@ const AKTY: { kategorie: string; slova: string[] }[] = [
     "rozmisteni sil", "deployment of troops", "posili vychodni kridlo", "reinforce eastern flank",
   ] },
   { kategorie: "hranice", slova: [
+    // Kontroly na hranicích a vojáci u nich jsou pro čtenáře v Česku to nejviditelnější,
+    // co stát dělá. Seznam proto pokrývá i české tvary a cvičení — zachytit se to musí,
+    // roztřídit na skutečné zavedení a na nácvik umí až ověření.
     "uzavreni hranic", "uzavrela hranice", "closed the border", "border closure",
-    "obnovila hranicni kontroly", "reintroduced border checks", "evakuace obyvatel", "evacuation ordered",
+    "hranicni kontroly", "kontroly na hranici", "kontroly na hranicich", "kontrol na hranicich",
+    "znovuzavedeni kontrol", "znovuzavedeni hranicnich kontrol", "obnovi kontroly", "obnovila kontroly",
+    "zavede kontroly", "zavedla kontroly", "namatkove kontroly", "ostraha hranic", "ochrana hranic",
+    "border checks", "border controls", "checks at the border",
+    "cviceni na hranici", "cviceni na statni hranici", "cviceni ke znovuzavedeni", "hranicni cviceni",
+    "evakuace obyvatel", "evacuation ordered",
+  ] },
+  { kategorie: "vojsko", slova: [
+    "nasazeni vojaku", "nasadi vojaky", "nasadila vojaky", "vojaci na hranicich", "armada na hranicich",
+    "aktivni zaloha", "povolani zalohy", "troops deployed", "deploy troops", "soldiers deployed",
+    "military deployment", "mimoradna pohotovost",
   ] },
   { kategorie: "hybridni", slova: [
     "utok na", "attack on", "strela dopadla", "missile struck", "raketa dopadla", "ostrelovani",
   ] },
+];
+
+/**
+ * Dvojice slov, které samy o sobě nic neznamenají, ale spolu ano.
+ *
+ * Čeština si slova přehazuje: „policie chystá na hranici se Slovenskem cvičení“
+ * neobsahuje souvislou frázi „cvičení na hranici“, a hledání celých frází to
+ * proto minulo. Stačí, když se v textu potkají slova z obou sloupců.
+ */
+const AKTY_KOMBINACE: { kategorie: string; a: string[]; b: string[] }[] = [
+  {
+    kategorie: "hranice",
+    a: ["hranic", "border", "prechod"],
+    b: ["kontrol", "cviceni", "uzavr", "vojak", "vojaci", "armad", "celnic", "zaloh", "checks", "closed", "exercise", "troops", "soldiers"],
+  },
+  {
+    kategorie: "vojsko",
+    a: ["vojak", "vojaci", "armad", "zaloh", "troops", "soldiers"],
+    b: ["nasazen", "nasadi", "povolan", "hlidk", "deployed", "deploy", "mobiliz"],
+  },
 ];
 
 /** Slova, která zprávě jen přidají oblast. Samy o sobě nikdy nestačí. */
@@ -111,6 +144,8 @@ const KONTEXT: { kategorie: string; slova: string[] }[] = [
   { kategorie: "zpravodajske", slova: ["spionaz", "espionage", "gru", "fsb", "bezpecnostni informacni sluzba", "kontrarozvedka"] },
   { kategorie: "hybridni", slova: ["hybridni", "hybrid warfare", "ruska stopa", "russia-linked", "kremlin-linked"] },
   { kategorie: "nato", slova: ["nato", "aliance", "vychodni kridlo", "eastern flank"] },
+  { kategorie: "hranice", slova: ["hranice", "hranicni prechod", "schengen", "border"] },
+  { kategorie: "vojsko", slova: ["armada", "vojak", "vojaci", "policie", "celnici"] },
   { kategorie: "rusko", slova: ["rusk", "russia", "kreml", "kremlin"] },
 ];
 
@@ -214,6 +249,11 @@ export function odhadniTemata(text: string): { kategorie: string[]; shody: strin
   for (const skupina of AKTY) {
     const s = skupina.slova.filter((w) => obsahujeSlovo(t, w));
     if (s.length) { kategorie.push(skupina.kategorie); shody.push(...s); akty.push(...s); }
+  }
+  for (const k of AKTY_KOMBINACE) {
+    const prvni = k.a.find((w) => obsahujeSlovo(t, w));
+    const druhy = k.b.find((w) => obsahujeSlovo(t, w));
+    if (prvni && druhy) { kategorie.push(k.kategorie); shody.push(`${prvni}+${druhy}`); akty.push(`${prvni}+${druhy}`); }
   }
   for (const skupina of KONTEXT) {
     const s = skupina.slova.filter((w) => obsahujeSlovo(t, w));

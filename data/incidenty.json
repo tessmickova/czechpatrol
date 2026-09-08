@@ -6469,5 +6469,73 @@
     "zapocitanoTyden": "2026-09-08",
     "aiZpracovano": true,
     "lidskyOvereno": true
+  },
+  {
+    "id": "i-2026-09-08-hranice-cviceni",
+    "slug": "cr-cviceni-hranice-slovensko-2026",
+    "titulek": "Česko: policie s armádou a celníky nacvičí 9. září znovuzavedení kontrol na hranici se Slovenskem; kontroly se nezavádějí",
+    "kratkyTitulek": "Cvičení kontrol na hranici se SK",
+    "zeme": "Česko",
+    "kodZeme": "CZ",
+    "kategorie": [
+      "hranice",
+      "cr"
+    ],
+    "datumUdalosti": "2026-09-08T00:00:00Z",
+    "datumZjisteni": "2026-09-08T00:00:00Z",
+    "aktualizovano": "2026-09-08T21:00:00Z",
+    "zavaznost": "G3",
+    "jistota": "potvrzeno",
+    "stav": "bez-vysetrovani",
+    "atribuce": "neznama",
+    "puvodce": null,
+    "druh": "opatreni",
+    "fakta": [
+      "Policie ČR oznámila cvičení ke znovuzavedení kontrol na státní hranici se Slovenskem. Začíná ve středu 9. září 2026 v 7:00 a končí ve čtvrtek ve stejnou hodinu.",
+      "Jde o nácvik operačních plánů, ne o skutečné zavedení hraničních kontrol. Hraniční režim se nemění a Schengen zůstává v platnosti.",
+      "Cvičení pokrývá celou hranici se Slovenskem v délce 251 kilometrů, na které je 27 bývalých hraničních přechodů — 17 silničních, 7 železničních a 3 říční.",
+      "Zapojí se přes 600 policistů pod vedením Ředitelství služby cizinecké policie, převážně z krajských ředitelství sousedících se Slovenskem, dále 50 vojáků aktivní zálohy a 60 celníků.",
+      "U 17 bývalých silničních přechodů budou namátkové kontroly vozidel a posádek vjíždějících na české území. Podle policie lze čekat drobné zdržení, ne zásadní dopravní komplikace."
+    ],
+    "neznameho": [
+      "Zda a kdy by ke skutečnému znovuzavedení kontrol došlo — cvičení samo o sobě nic takového neohlašuje."
+    ],
+    "vyznam": "Pro čtenáře je podstatné hlavně to, co se NEDĚJE: hranice se nezavírá a kontroly se nezavádějí. Vojáci a policisté u přechodů budou 9. září vidět, a bez vysvětlení to vypadá jako mimořádná situace.",
+    "eskalacniSpousteče": [
+      "Rozhodnutí vlády kontroly skutečně znovu zavést."
+    ],
+    "deeskalacniSignaly": [
+      "Cvičení proběhne a režim na hranici zůstane beze změny."
+    ],
+    "zdroje": [
+      {
+        "nazev": "Policie ČR — Cvičení na státní hranici se Slovenskem",
+        "url": "https://www.policie.cz/clanek/cviceni-na-statni-hranici-se-slovenskem.aspx",
+        "typ": "primary",
+        "publikovano": "2026-09-08T00:00:00Z",
+        "primarni": true,
+        "jazyk": "cs"
+      },
+      {
+        "nazev": "CNN Prima News — Hraniční přechody se Slovenskem ožijí, cvičení potrvá 24 hodin",
+        "url": "https://cnn.iprima.cz/na-slovensko-jedine-pres-hranicni-kontrolu-policie-chysta-jednodenni-proverku-521228",
+        "typ": "media",
+        "publikovano": "2026-09-08T00:00:00Z",
+        "primarni": false,
+        "jazyk": "cs"
+      }
+    ],
+    "souvisejici": [],
+    "historie": [
+      {
+        "kdy": "2026-09-08T00:00:00Z",
+        "text": "Policie oznámila 24hodinové cvičení na hranici se Slovenskem.",
+        "novySignal": true
+      }
+    ],
+    "novy": true,
+    "zapocitanoTyden": "2026-09-08",
+    "aiZpracovano": true,
+    "lidskyOvereno": true
   }
 ]

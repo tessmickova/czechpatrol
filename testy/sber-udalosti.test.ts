@@ -49,4 +49,16 @@ describe("automatický sběr událostí — pravidla", () => {
     expect(otisk("Copenhagen Airport closed as police investigate drone activity — Bloomberg")).toBe(otisk("Copenhagen airport closed as police investigate drone activity!"));
     expect(otisk("Munich airport drones")).not.toBe(otisk("Oslo airport drones"));
   });
+
+  it("kontroly na hranici a vojáci u nich se zachytí i při přehozeném pořadí slov", () => {
+    // Tohle pravidla původně minula: web o cvičení na hranici se Slovenskem nevěděl.
+    expect(relevantni("Policie chystá na hranici se Slovenskem cvičení, zapojí se i vojáci a celníci")).toBe(true);
+    expect(relevantni("Cvičení na státní hranici se Slovenskem potrvá 24 hodin")).toBe(true);
+    expect(relevantni("Česko obnoví kontroly na hranicích se Slovenskem")).toBe(true);
+    expect(relevantni("Německo prodloužilo hraniční kontroly s Polskem")).toBe(true);
+    expect(relevantni("Polsko nasadilo vojáky na hranici s Běloruskem")).toBe(true);
+    // A pořád nesmí projít běžné zpravodajství.
+    expect(relevantni("Fotbalisté v Polsku hráli na hranici svých sil")).toBe(false);
+    expect(relevantni("Ministr jednal v Berlíně s partnery o bezpečnosti")).toBe(false);
+  });
 });
