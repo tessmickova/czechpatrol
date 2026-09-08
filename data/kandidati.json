@@ -28,6 +28,33 @@
     "stav": "ceka"
   },
   {
+    "id": "k-8585a37857a2d7e5",
+    "zachyceno": "2026-09-08T21:45:45.957Z",
+    "publikovano": "2026-09-08T14:22:39.000Z",
+    "zdroj": {
+      "nazev": "Google News — sabotage Europe",
+      "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxQOTF1R0hKMTQzUG1KeVFsS25QUm9qenNIQzg2d1VmTzdPck5TRTlXTmdzSGdQeFJ2RmF2aHhPbnBWdTQ2eUFfbVptRGdFQjNoSGZHY0RRbm9IRlcyemtJa01RUGNqQ2NXc0NpWjl1eC1RdmxRU0tldXViWnI0RVF4c2ZnNHR3alRBQU01aFRGNWZBdngzUUcxZWxXdnN3cnlRX0xkREtDUE5QS2NOTGVYenhPTlRZZw?oc=5",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Romania's intelligence service says it foiled Russian sabotage operation - Türkiye Today",
+    "titulekPuvodni": "Romania's intelligence service says it foiled Russian sabotage operation - Türkiye Today",
+    "shrnuti": "<a href=\"https://news.google.com/rss/articles/CBMitgFBVV95cUxQOTF1R0hKMTQzUG1KeVFsS25QUm9qenNIQzg2d1VmTzdPck5TRTlXTmdzSGdQeFJ2RmF2aHhPbnBWdTQ2eUFfbVptRGdFQjNoSGZHY0RRbm9IRlcyemtJa01RUGNqQ2NXc0NpWjl1eC1RdmxRU0tldXViWnI0RVF4c2ZnNHR3alRBQU01aFRGNWZBdngzUUcxZWxXdnN3cnlRX0xkREtDUE5QS2NOTGVYenhPTlRZZw?oc=",
+    "kodZeme": "RO",
+    "zeme": "Rumunsko",
+    "kategorie": [
+      "sabotaz",
+      "rusko"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "shody": [
+      "sabotage",
+      "russia"
+    ],
+    "stav": "ceka"
+  },
+  {
     "id": "k-e97734bf5251c587",
     "zachyceno": "2026-09-08T18:28:56.954Z",
     "publikovano": "2026-09-08T14:03:44.000Z",
@@ -348,6 +375,34 @@
     "klasifikace": "pravidla",
     "shody": [
       "sabotaz"
+    ],
+    "stav": "ceka"
+  },
+  {
+    "id": "k-3ddf1e11e2ce180c",
+    "zachyceno": "2026-09-08T21:45:45.936Z",
+    "publikovano": "2026-09-07T05:48:00.000Z",
+    "zdroj": {
+      "nazev": "ERR News (Estonsko)",
+      "url": "https://news.err.ee/1610130319/estonia-shuts-border-crossing-after-2-iranian-nationals-attempt-entry-from-russia",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Estonia shuts border crossing after 2 Iranian nationals attempt entry from Russia",
+    "titulekPuvodni": "Estonia shuts border crossing after 2 Iranian nationals attempt entry from Russia",
+    "shrnuti": "The Police and Border Guard Board (PPA) said Sunday evening it temporarily closed a border crossing in southeast Estonia. The checkpoint has since been reopened.",
+    "kodZeme": "EE",
+    "zeme": "Estonsko",
+    "kategorie": [
+      "hranice",
+      "rusko"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "shody": [
+      "border+closed",
+      "border",
+      "russia"
     ],
     "stav": "ceka"
   },
@@ -1927,6 +1982,35 @@
     "stav": "ceka"
   },
   {
+    "id": "k-484fdbaf935a58da",
+    "zachyceno": "2026-09-08T21:45:45.983Z",
+    "publikovano": "2026-08-28T07:00:00.000Z",
+    "zdroj": {
+      "nazev": "Google News — Moldavsko vzdušný prostor",
+      "url": "https://news.google.com/rss/articles/CBMiS0FVX3lxTFBRNVVpS1hLdHNFdkRJQXhYMFBIcnh0RDB3ZXpsdHA1Mmo2R251ODBjdkk5VjN1TU50b2dCeXNYZGJXMUtDa0FVRjQzUQ?oc=5",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "‘Shoulder to Shoulder’: Zelensky Joins Moldova’s Independence Day Amid Russian Drone Incursions - Kyiv Post",
+    "titulekPuvodni": "‘Shoulder to Shoulder’: Zelensky Joins Moldova’s Independence Day Amid Russian Drone Incursions - Kyiv Post",
+    "shrnuti": "<a href=\"https://news.google.com/rss/articles/CBMiS0FVX3lxTFBRNVVpS1hLdHNFdkRJQXhYMFBIcnh0RDB3ZXpsdHA1Mmo2R251ODBjdkk5VjN1TU50b2dCeXNYZGJXMUtDa0FVRjQzUQ?oc=5\" target=\"_blank\">‘Shoulder to Shoulder’: Zelensky Joins Moldova’s Independence Day Amid Russian Drone Incursions</a> <font color=\"#6f6f6f\">Kyi",
+    "kodZeme": "MD",
+    "zeme": "Moldavsko",
+    "kategorie": [
+      "drony",
+      "rusko"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "shody": [
+      "drone incursion",
+      "dron",
+      "drone",
+      "russia"
+    ],
+    "stav": "ceka"
+  },
+  {
     "id": "k-182912b6af0d5dfd",
     "zachyceno": "2026-09-06T13:59:15.572Z",
     "publikovano": "2026-08-28T07:00:00.000Z",
@@ -2339,6 +2423,37 @@
     "klasifikace": "pravidla",
     "shody": [
       "sabotage",
+      "russia"
+    ],
+    "stav": "ceka"
+  },
+  {
+    "id": "k-a3d7d4fd1c7a1a15",
+    "zachyceno": "2026-09-08T21:45:45.984Z",
+    "publikovano": "2026-08-20T07:41:44.000Z",
+    "zdroj": {
+      "nazev": "Google News — Moldavsko vzdušný prostor",
+      "url": "https://news.google.com/rss/articles/CBMigwJBVV95cUxOaG5zM1Q4XzhWbmxodko3MjFrT2c0VjVtcmg5emVjcWhEbFNVSTNLaFBYcWtlLTAwdUw4dlVoSWJsUmw1ZHFUVDFwR3lURFAxR0JmMWJEM2RjWGxWSjlldjU4eTZMMDB6eDhBRWFWQTl0N2FjV0NQUk5LSTZOenF1d09UNHhYVVo2cFQ3UDdfNlVudGZ5QXctaHo4X2F4a2FkMUhkNnNHeDBvMTQ3RnljdUZUdkVXOENoNE00ZW1vbzFSakFmWDhPQjZWUG5rUjdRZzhDT2pQRnpyTXZSTFIwcExpMV9FWHdkLUJHREs2cmItUTQ3WnczYW5mektOZHNTRVpB?oc=5",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "MAE condemns the attack on Ukraine and the overflight of the airspace of the Republic of Moldova by a Russian drone: \"A serious threat to our sovereignty and security\" - cotidianul.md",
+    "titulekPuvodni": "MAE condemns the attack on Ukraine and the overflight of the airspace of the Republic of Moldova by a Russian drone: \"A serious threat to our sovereignty and security\" - cotidianul.md",
+    "shrnuti": "<a href=\"https://news.google.com/rss/articles/CBMigwJBVV95cUxOaG5zM1Q4XzhWbmxodko3MjFrT2c0VjVtcmg5emVjcWhEbFNVSTNLaFBYcWtlLTAwdUw4dlVoSWJsUmw1ZHFUVDFwR3lURFAxR0JmMWJEM2RjWGxWSjlldjU4eTZMMDB6eDhBRWFWQTl0N2FjV0NQUk5LSTZOenF1d09UNHhYVVo2cFQ3UDdfNlVudGZ5QXctaHo4X2F4a2FkMUhkNnNHeDBvMTQ3RnljdUZUdkVXOENoNE",
+    "kodZeme": "MD",
+    "zeme": "Moldavsko",
+    "kategorie": [
+      "hybridni",
+      "drony",
+      "rusko"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "shody": [
+      "attack on",
+      "dron",
+      "drone",
+      "airspace",
       "russia"
     ],
     "stav": "ceka"
