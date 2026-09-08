@@ -6232,5 +6232,242 @@
     "archivniZaznam": false,
     "druh": "aktualizace",
     "navazujeNa": "nord-stream-2022"
+  },
+  {
+    "id": "i-2026-09-08-rumunsko-sri",
+    "slug": "rumunsko-sri-zmarena-sabotaz-2026",
+    "titulek": "Rumunsko: SRI zmařila sabotážní operaci koordinovanou Ruskem, zadržen ruský občan usazený v zemi",
+    "kratkyTitulek": "Rumunsko: zmařená sabotáž",
+    "zeme": "Rumunsko",
+    "kodZeme": "RO",
+    "kategorie": [
+      "sabotaz",
+      "zpravodajske",
+      "infrastruktura",
+      "vysetrovani"
+    ],
+    "datumUdalosti": "2026-09-08T00:00:00Z",
+    "datumZjisteni": "2026-09-08T00:00:00Z",
+    "aktualizovano": "2026-09-08T20:30:00Z",
+    "zavaznost": "O1",
+    "jistota": "vysoka",
+    "stav": "probiha",
+    "atribuce": "oficialni",
+    "puvodce": "rusko",
+    "druh": "pripad",
+    "fakta": [
+      "Rumunská zpravodajská služba SRI 8. září 2026 oznámila, že ve spolupráci s DIICOT, policejním útvarem DCCO, vojenskou zpravodajskou službou DGIA a zahraničními partnery zabránila sabotážní akci na rumunském území.",
+      "Podezřelým je ruský občan usazený v Rumunsku, kterého SRI podle svého sdělení sledovala od února 2026.",
+      "Od února do července 2026 měl podle SRI pod vedením představitele ruských sítí, se kterým komunikoval přes šifrované aplikace, fotografovat a natáčet komunikační centra, vojenské základny využívané spojenci NATO, sídla institucí obranného a bezpečnostního systému a kritickou infrastrukturu.",
+      "DIICOT 8. září nařídilo zadržení čtyřicetiletého muže na 24 hodin a podalo k Odvolacímu soudu v Bukurešti návrh na třicetidenní vazbu.",
+      "SRI uvedla, že způsob práce odpovídá sabotážním sítím koordinovaným z Ruské federace v dalších evropských státech i případům zmařeným v Rumunsku v letech 2024 a 2025."
+    ],
+    "neznameho": [
+      "Zda soud návrh na vazbu potvrdí a jak bude případ kvalifikován.",
+      "Zda byl vybraný konkrétní cíl a jak blízko byla příprava k provedení."
+    ],
+    "vyznam": "Zmařený pokus, ne škoda. Význam má v tom, že rumunská služba operaci veřejně připsala Ruské federaci a zařadila ji do stejné řady jako případy v dalších evropských státech.",
+    "eskalacniSpousteče": [
+      "Potvrzení vazby a obvinění z konkrétní přípravy útoku na vojenský cíl."
+    ],
+    "deeskalacniSignaly": [
+      "Soud vazbu nepotvrdí nebo se odhalí slabá důkazní opora."
+    ],
+    "zdroje": [
+      {
+        "nazev": "AGERPRES — SRI: Operațiune de sabotaj coordonată de Rusia, prevenită de autoritățile române",
+        "url": "https://agerpres.ro/justitie/2026/09/08/sri-operatiune-de-sabotaj-coordonata-de-rusia---prevenita-de-autoritatile-romane--1591678",
+        "typ": "wire",
+        "publikovano": "2026-09-08T00:00:00Z",
+        "primarni": false,
+        "jazyk": "ro"
+      },
+      {
+        "nazev": "Reuters — Romanian intelligence service says it prevented Russian sabotage operation",
+        "url": "https://www.reuters.com/world/europe/romanian-intelligence-service-says-it-prevented-russian-sabotage-operation-2026-09-08/",
+        "typ": "wire",
+        "publikovano": "2026-09-08T00:00:00Z",
+        "primarni": false,
+        "jazyk": "en"
+      },
+      {
+        "nazev": "The Sofia Globe — Romania's intelligence service foils attempted sabotage operation coordinated by Russia",
+        "url": "https://sofiaglobe.com/2026/09/08/romanias-intelligence-service-foils-attempted-sabotage-operation-coordinated-by-russia/",
+        "typ": "media",
+        "publikovano": "2026-09-08T00:00:00Z",
+        "primarni": false,
+        "jazyk": "en"
+      }
+    ],
+    "souvisejici": [],
+    "historie": [
+      {
+        "kdy": "2026-09-08T00:00:00Z",
+        "text": "SRI oznámila zmařenou sabotážní operaci a zadržení ruského občana.",
+        "novySignal": true
+      }
+    ],
+    "novy": true,
+    "zapocitanoTyden": "2026-09-08",
+    "aiZpracovano": true,
+    "lidskyOvereno": true
+  },
+  {
+    "id": "i-2026-09-08-nemecko-zadrzeni",
+    "slug": "nemecko-rozvodny-zadrzeni-2026",
+    "titulek": "Německo: u elektrárny Weisweiler zadržen osmačtyřicetiletý muž podezřelý ze série útoků na rozvodny",
+    "kratkyTitulek": "Německo: zadržen podezřelý z útoků na rozvodny",
+    "zeme": "Německo",
+    "kodZeme": "DE",
+    "kategorie": [
+      "sabotaz",
+      "infrastruktura",
+      "vysetrovani"
+    ],
+    "datumUdalosti": "2026-09-08T00:00:00Z",
+    "datumZjisteni": "2026-09-08T00:00:00Z",
+    "aktualizovano": "2026-09-08T20:30:00Z",
+    "zavaznost": "O1",
+    "jistota": "vysoka",
+    "stav": "probiha",
+    "atribuce": "domaci",
+    "puvodce": "domaci",
+    "druh": "aktualizace",
+    "navazujeNa": "bergheim-rheidt",
+    "fakta": [
+      "Policie 8. září 2026 zadržela u elektrárny Weisweiler v Severním Porýní-Vestfálsku osmačtyřicetiletého muže podezřelého ze série útoků na rozvodny. Podle policie měl u sebe výbušniny a nekladl odpor.",
+      "Muž se podle vyšetřovatelů k útokům na rozvodny v Severním Porýní-Vestfálsku, Braniborsku a Sasku přihlásil v dopisech, které úřady považují za pravé, a zdůvodnil je odmítáním výroby energie z fosilních paliv.",
+      "Podle policie a provozovatelů sítě byl při útocích do vedení vysokého napětí vystřelován vodivý materiál pyrotechnickými projektily tak, aby vznikl zkrat.",
+      "Německé jméno ani státní příslušnost úřady kvůli ochraně osobnosti nezveřejnily."
+    ],
+    "neznameho": [
+      "Zda bude muž obviněn ze všech útoků v sérii a jak budou kvalifikovány.",
+      "Zda s útoky souvisel někdo další."
+    ],
+    "vyznam": "Zadržení potvrzuje domácí extremistickou stopu u části německých energetických incidentů, kterou web vedl už u záznamů z Bergheimu a Dormagenu. Pro hodnocení to znamená, že tuhle sérii nelze počítat k ruskému hybridnímu tlaku.",
+    "eskalacniSpousteče": [],
+    "deeskalacniSignaly": [
+      "Obvinění, které sérii uzavře jako čin jednotlivce."
+    ],
+    "zdroje": [
+      {
+        "nazev": "AP prostřednictvím The Washington Times — Police arrest suspect in Germany power grid attacks after dayslong search",
+        "url": "https://www.washingtontimes.com/news/2026/sep/8/police-arrest-suspect-series-germany-power-grid-attacks-dayslong/",
+        "typ": "wire",
+        "publikovano": "2026-09-08T00:00:00Z",
+        "primarni": false,
+        "jazyk": "en"
+      },
+      {
+        "nazev": "ABC News — Police arrest suspect in Germany power grid attacks",
+        "url": "https://abcnews.com/International/wireStory/police-arrest-suspect-germany-power-grid-attacks-after-136269467",
+        "typ": "wire",
+        "publikovano": "2026-09-08T00:00:00Z",
+        "primarni": false,
+        "jazyk": "en"
+      },
+      {
+        "nazev": "iROZHLAS — V Německu zadrželi muže podezřelého ze sabotáží na elektrických rozvodnách",
+        "url": "https://www.irozhlas.cz/zpravy-svet/nemecko-sabotaze-rozvodny-zadrzeni_2609081830_kro",
+        "typ": "media",
+        "publikovano": "2026-09-08T00:00:00Z",
+        "primarni": false,
+        "jazyk": "cs"
+      }
+    ],
+    "souvisejici": [
+      {
+        "incidentId": "a16",
+        "potvrzena": true,
+        "popis": "zadržený se přihlásil k útokům na rozvodny včetně Bergheimu"
+      }
+    ],
+    "historie": [
+      {
+        "kdy": "2026-09-08T00:00:00Z",
+        "text": "Zadržen podezřelý; přihlásil se dopisy k sérii útoků na rozvodny.",
+        "novySignal": true
+      }
+    ],
+    "novy": true,
+    "zapocitanoTyden": "2026-09-08",
+    "aiZpracovano": true,
+    "lidskyOvereno": true
+  },
+  {
+    "id": "i-2026-09-08-madarsko-diplomate",
+    "slug": "madarsko-vyhosteni-ruskych-diplomatu-2026",
+    "titulek": "Maďarsko vyhostilo deset ruských diplomatů pro činnost neslučitelnou s diplomatickým statusem; Moskva slíbila odvetu",
+    "kratkyTitulek": "Maďarsko vyhostilo 10 ruských diplomatů",
+    "zeme": "Maďarsko",
+    "kodZeme": "HU",
+    "kategorie": [
+      "diplomacie",
+      "zpravodajske",
+      "rusko"
+    ],
+    "datumUdalosti": "2026-09-08T00:00:00Z",
+    "datumZjisteni": "2026-09-08T00:00:00Z",
+    "aktualizovano": "2026-09-08T20:30:00Z",
+    "zavaznost": "Y3",
+    "jistota": "vysoka",
+    "stav": "bez-vysetrovani",
+    "atribuce": "neznama",
+    "puvodce": null,
+    "druh": "opatreni",
+    "fakta": [
+      "Maďarsko 8. září 2026 nařídilo deseti ruským diplomatům opustit zemi. Podle ministryně zahraničí Anity Orbánové vyvíjeli činnost, která je pro diplomaty podle Vídeňské úmluvy nepřijatelná.",
+      "Budapešť zároveň uvedla, že nepřerušuje diplomatické styky s Ruskem a že jde o krok na ochranu maďarské bezpečnosti a svrchovanosti.",
+      "Ruské ministerstvo zahraničí ústy mluvčí Marije Zacharovové pro agenturu TASS oznámilo „tvrdou a bolestivou“ odpověď."
+    ],
+    "neznameho": [
+      "Konkrétní jednání, kterým maďarská strana vyhoštění zdůvodnila.",
+      "Jakou podobu bude mít ohlášená ruská odveta."
+    ],
+    "vyznam": "Vyhoštění diplomatů je úřední krok státu, ne incident. Význam má v tom, že se k němu odhodlala země, která doposud patřila k nejsmířlivějším vůči Moskvě.",
+    "eskalacniSpousteče": [
+      "Reciproční vyhoštění maďarských diplomatů z Ruska nebo tvrdší odveta."
+    ],
+    "deeskalacniSignaly": [
+      "Odveta zůstane u prohlášení."
+    ],
+    "zdroje": [
+      {
+        "nazev": "Al Jazeera — Hungary expels 10 Russian diplomats, Moscow promises harsh response",
+        "url": "https://www.aljazeera.com/news/2026/9/8/hungary-expels-russian-diplomats-over-unacceptable-activities",
+        "typ": "media",
+        "publikovano": "2026-09-08T00:00:00Z",
+        "primarni": false,
+        "jazyk": "en"
+      },
+      {
+        "nazev": "The Moscow Times — Hungary Expels 10 Russian Diplomats for 'Unacceptable Activities'",
+        "url": "https://www.themoscowtimes.com/2026/09/08/hungary-expels-10-russian-diplomats-for-unacceptable-activities-a93659",
+        "typ": "media",
+        "publikovano": "2026-09-08T00:00:00Z",
+        "primarni": false,
+        "jazyk": "en"
+      },
+      {
+        "nazev": "Xinhua — Hungary asks 10 Russian diplomats to leave",
+        "url": "https://english.news.cn/europe/20260908/a0f11ed87c2a4e868d78aa39f5af52a2/c.html",
+        "typ": "wire",
+        "publikovano": "2026-09-08T00:00:00Z",
+        "primarni": false,
+        "jazyk": "en"
+      }
+    ],
+    "souvisejici": [],
+    "historie": [
+      {
+        "kdy": "2026-09-08T00:00:00Z",
+        "text": "Maďarsko oznámilo vyhoštění deseti ruských diplomatů.",
+        "novySignal": true
+      }
+    ],
+    "novy": true,
+    "zapocitanoTyden": "2026-09-08",
+    "aiZpracovano": true,
+    "lidskyOvereno": true
   }
 ]
