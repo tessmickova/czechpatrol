@@ -46,4 +46,16 @@ export const ZDROJE_UDALOSTI: ZdrojUdalosti[] = [
   { klic: "gn-dron-cz", nazev: "Google News — dron vzdušný prostor", url: gn("dron narušení vzdušného prostoru", true), jazyk: "cs", primarni: false, typ: "media" },
   { klic: "gn-kyber-cz", nazev: "Google News — kybernetický útok", url: gn("kybernetický útok NÚKIB", true), jazyk: "cs", primarni: false, typ: "media" },
   { klic: "gn-bis", nazev: "Google News — BIS špionáž", url: gn("BIS ruská špionáž zadržen", true), jazyk: "cs", primarni: false, typ: "media" },
+
+  // Rychlé kanály pro vzdušný prostor. Tenhle druh události se pozná do minut
+  // na monitorovacích kanálech, ale doložit ji smíme až úředním oznámením nebo
+  // agenturou — proto sem míří hledání přímo na resorty obrany a letiště.
+  { klic: "gn-ro-vzduch", nazev: "Google News — Rumunsko vzdušný prostor", url: gn("Romania MApN drone airspace violation", false), jazyk: "en", primarni: false, typ: "media" },
+  { klic: "gn-md-vzduch", nazev: "Google News — Moldavsko vzdušný prostor", url: gn("Moldova drone airspace Chisinau", false), jazyk: "en", primarni: false, typ: "media" },
+  { klic: "gn-pl-vzduch", nazev: "Google News — Polsko vzdušný prostor", url: gn("Poland airspace drone scrambled jets", false), jazyk: "en", primarni: false, typ: "media" },
+  { klic: "gn-balt-vzduch", nazev: "Google News — Pobaltí vzdušný prostor", url: gn("Baltic airspace violation drone Lithuania Latvia Estonia", false), jazyk: "en", primarni: false, typ: "media" },
+  { klic: "gn-letiste", nazev: "Google News — uzavřené letiště kvůli dronu", url: gn("airport closed drone sighting Europe", false), jazyk: "en", primarni: false, typ: "media" },
+  { klic: "gn-vzduch-cz", nazev: "Google News — narušení vzdušného prostoru", url: gn("narušení vzdušného prostoru dron NATO", true), jazyk: "cs", primarni: false, typ: "media" },
+  { klic: "gn-nouzovy-stav", nazev: "Google News — nouzový stav a mobilizace", url: gn("nouzový stav mobilizace vyhlášen Evropa", true), jazyk: "cs", primarni: false, typ: "media" },
+  { klic: "gn-clanek4", nazev: "Google News — článek 4 a 5 NATO", url: gn("NATO article 4 consultations invoked", false), jazyk: "en", primarni: false, typ: "media" },
 ];

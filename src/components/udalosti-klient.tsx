@@ -12,6 +12,7 @@ import { ctiDotaz, sledujDotaz, zapisDotaz } from "@/lib/url-stav";
 import { DetailObsah, HlavickaDetailu } from "./detail-obsah";
 import { Ikona } from "./ikony";
 import { Nahlaseni } from "./nahlaseni";
+import { OdznakNove } from "./odznak-nove";
 import { SeznamZdroju } from "./zdroje";
 import { Prazdno } from "./zaklad";
 import { sklon, Vlajka } from "./zeme";
@@ -390,7 +391,10 @@ function RadekZaznamu({ z, otevreny, onOtevri, siroky }: { z: Zaznam; otevreny: 
           {jeZjisteni && <span className="text-tlum2">· stalo se {datumPraha(z.datumUdalosti)}</span>}
           {z.historicky && <span className="text-tlum2">· doplněno zpětně</span>}
         </span>
-        <span className={`block text-[15px] font-semibold leading-snug ${otevreny ? "text-akcent-svetla" : "text-inkoust"}`}>{z.titulek}</span>
+        <span className="flex flex-wrap items-baseline gap-x-2 gap-y-1">
+          <OdznakNove kdy={kdyZjisteno(z)} />
+          <span className={`text-[15px] font-semibold leading-snug ${otevreny ? "text-akcent-svetla" : "text-inkoust"}`}>{z.titulek}</span>
+        </span>
         <span className="mt-0.5 flex flex-wrap items-center gap-x-3 gap-y-0.5">
           <Znacka hodnota={`informace: ${JISTOTY[jistota].nazev.toLowerCase()}`} dobra={dobraInfo} />
           {dr === "pripad" && <Znacka hodnota={`pachatel: ${z.puvodce ? PUVODCE_NAZVY[z.puvodce] : "neznámý"}${z.puvodce && !pachatel ? " (nepotvrzeno)" : ""}`} dobra={pachatel ? true : z.puvodce ? false : null} />}

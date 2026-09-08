@@ -8,6 +8,7 @@ import { HeroDashboard } from "./hero-dashboard";
 import { NadpisSekce } from "./nadpisy";
 import { PocitadlaEvropa, type PolozkaPoctu } from "./pocitadla-zive";
 import { NovaZjisteni } from "./nova-zjisteni";
+import { OdznakNove } from "./odznak-nove";
 import { PavucinaHrozeb } from "./pavucina";
 import { PasZemi } from "./pas-zemi";
 import { Pocitadla } from "./pocitadla";
@@ -228,6 +229,7 @@ export function Dashboard({
                     <span aria-hidden className={`h-[8px] w-[8px] shrink-0 rounded-[2px] ${druh(z) === "pripad" ? t.tecka : "border border-tlum2"}`} />
                     <Vlajka kod={z.kodZeme} />
                     <span className="min-w-0 flex-1 truncate text-[13.5px] font-semibold text-inkoust">{z.kratkyTitulek || z.titulek}</span>
+                    <OdznakNove kdy={kdyZjisteno(z)} />
                   </Link>
                 </li>
               );

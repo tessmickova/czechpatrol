@@ -2,6 +2,7 @@ import Link from "next/link";
 import { druh, kdyZjisteno, type Zaznam } from "@/lib/agregace";
 import { datumPraha } from "@/lib/cas";
 import { PASMA, UROVNE } from "@/lib/skala";
+import { OdznakNove } from "./odznak-nove";
 import { Vlajka } from "./zeme";
 
 /*
@@ -46,7 +47,10 @@ export function NovaZjisteni({ polozky }: { polozky: { zaznam: Zaznam; duvod: st
                   <span aria-hidden className="text-tlum2">·</span>
                   <span className={`font-semibold ${BARVA_DUVODU[duvod] ?? "text-tlum"}`}>{duvod}</span>
                 </span>
-                <span className="mt-1 block text-[15.5px] font-semibold leading-snug text-inkoust">{i.kratkyTitulek || i.titulek}</span>
+                <span className="mt-1 flex flex-wrap items-baseline gap-x-2 gap-y-1">
+                  <OdznakNove kdy={kdyZjisteno(i)} />
+                  <span className="text-[15.5px] font-semibold leading-snug text-inkoust">{i.kratkyTitulek || i.titulek}</span>
+                </span>
                 {nove && <span className="mt-1 block text-[13.5px] leading-relaxed text-tlum">{nove}</span>}
               </span>
             </Link>

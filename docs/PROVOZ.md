@@ -51,6 +51,25 @@ Hodinový sběr (`sber/udalosti.ts`) čte RSS kanály úřadů, redakcí a vyhle
 
 Převzetí kandidáta do záznamů: `node nastroje/prijmi-kandidata.mjs <id>` vypíše kostru; člověk doplní fakta, závažnost a jistotu, nastaví `lidskyOvereno: true` a vloží do `data/incidenty.json`. Sběr pak kandidáta sám odloží (stejná adresa zdroje).
 
+## Jak rychle se událost dostane na web
+
+| Krok | Kdy běží | Co udělá |
+|---|---|---|
+| Sběr (`sber.yml`) | každou hodinu v 7. minutě | najde kandidáty a zapíše je do `data/kandidati.json`; web je hned ukáže jako „automaticky zachyceno, čeká na ověření“, ale do počtů nevstupují |
+| Hodinové ověření (Routine) | každou hodinu | otevře zdroje nejvýš pěti nejnovějších kandidátů, ověřené převezme do `data/incidenty.json` a pushne |
+| Nasazení (`nasazeni.yml`) | po každém pushi | přepočítá a nasadí web |
+| Rozhlas (`rozhlas.yml`) | po pushi měnícím záznamy | pošle zprávu do Telegramu |
+| Denní audit (Routine, 4:15) | jednou denně | projde starší kandidáty, opravy a soulad webu s realitou |
+
+Od zachycení k záznamu na webu a do Telegramu tedy uplyne nejvýš zhruba dvě
+hodiny. **Rychleji to vědomě nejde**: publikuje se až to, co je doložené
+úředním oznámením nebo agenturou. Tvrzení z monitorovacích kanálů a sociálních
+sítí, typu „právě letí střela nad městem“, se nezveřejní ani jako možnost —
+to je přesně poplašná zpráva podle Pravidla č. 0.
+
+Štítek **„nové“** u záznamu se počítá v prohlížeči a drží dvanáct hodin od
+zjištění. Kdyby se počítal při sestavení, visel by i na dva dny starém záznamu.
+
 ## Rozhlas do kanálů
 
 `nastroje/rozhlas.mjs` posílá krátké zprávy o nových ověřených záznamech do Telegram kanálu @czechpatrol (bot CzechPatrolBot, správce kanálu). Workflow `.github/workflows/rozhlas.yml`: po každém pushi, který mění `data/incidenty.json` nebo `data/historie.json`, odejdou **okamžité** zprávy (případy se závažností Vysoká a výš, opatření, změny právního stavu a NATO z archivu); denně v 17:00 UTC odejde **souhrn** ostatních nových záznamů. Každý záznam jednou; nová položka v historii případu = jedna zpráva „nové zjištění“. Nejvýš 8 zpráv na běh, zbytek příště. Při prvním běhu se starší záznamy jen označí za oznámené, aby kanál nezaplavil archiv. Stav: `data/fronta/rozhlaseno.json`. Automaticky zachycení kandidáti se neposílají nikdy.

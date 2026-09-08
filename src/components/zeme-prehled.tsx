@@ -8,6 +8,7 @@ import { NadpisBloku } from "./nadpisy";
 import { NovaZjisteni } from "./nova-zjisteni";
 import { PavucinaHrozeb } from "./pavucina";
 import { PocitadlaZeme, type PolozkaPoctu } from "./pocitadla-zive";
+import { OdznakNove } from "./odznak-nove";
 import { Vlajka } from "./zeme";
 
 /*
@@ -32,7 +33,10 @@ function Radek({ i }: { i: Zaznam }) {
             {d === "pripad" && <><span aria-hidden className="text-tlum2">·</span><span>{UROVNE[i.zavaznost].nazev.toLowerCase()} {zDeseti(i.zavaznost)}/10</span></>}
             {uredniZdroj(i) && <><span aria-hidden className="text-tlum2">·</span><span className="text-akcent">úřední zdroj</span></>}
           </span>
-          <span className="mt-0.5 block text-[15px] font-semibold leading-snug text-inkoust">{i.kratkyTitulek || i.titulek}</span>
+          <span className="mt-0.5 flex flex-wrap items-baseline gap-x-2 gap-y-1">
+            <OdznakNove kdy={kdyZjisteno(i)} />
+            <span className="text-[15px] font-semibold leading-snug text-inkoust">{i.kratkyTitulek || i.titulek}</span>
+          </span>
         </span>
       </Link>
     </li>
