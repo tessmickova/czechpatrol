@@ -1,5 +1,87 @@
 [
   {
+    "id": "k-5fb094160000f1e1",
+    "zachyceno": "2026-09-08T18:28:56.919Z",
+    "publikovano": "2026-09-08T15:57:06.000Z",
+    "zdroj": {
+      "nazev": "BBC News — Europe",
+      "url": "https://www.bbc.co.uk/news/articles/cy5zw56lnx3o?at_medium=RSS&at_campaign=rss",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Sabotage suspect held in Germany after spate of attacks on power grid",
+    "titulekPuvodni": "Sabotage suspect held in Germany after spate of attacks on power grid",
+    "shrnuti": "The suspect had reportedly claimed responsibility for attacks on electricity substations in letters.",
+    "kodZeme": "DE",
+    "zeme": "Německo",
+    "kategorie": [
+      "sabotaz",
+      "infrastruktura"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "shody": [
+      "sabotage",
+      "substation",
+      "power grid"
+    ],
+    "stav": "ceka"
+  },
+  {
+    "id": "k-e97734bf5251c587",
+    "zachyceno": "2026-09-08T18:28:56.954Z",
+    "publikovano": "2026-09-08T14:03:44.000Z",
+    "zdroj": {
+      "nazev": "Google News — sabotage Europe",
+      "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxPNUtMaFc5ZHJDWWNvWFNvTHRFX2dsLVg1cEsxSkNYaGYxQTlCM290OUI0Z1JsMkVhbDlJazBpVnhNbklQVDNpT2l2SnVjRDlkbW14dXd4M0VFeXptei1pRXhxc3hHYU85VmFZTjNBSGRmVUN0Rk0zZVZzWnRRZldiNE43cGVPR3FSblpETEdwTEdvQ1FyNTJHeU54VUJKZk5VR2Q3WTM3Y25VNHpVOVlkY3U1ZXZXOUE?oc=5",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Romanian intelligence service says it prevented Russian sabotage operation - Reuters",
+    "titulekPuvodni": "Romanian intelligence service says it prevented Russian sabotage operation - Reuters",
+    "shrnuti": "<a href=\"https://news.google.com/rss/articles/CBMitwFBVV95cUxPNUtMaFc5ZHJDWWNvWFNvTHRFX2dsLVg1cEsxSkNYaGYxQTlCM290OUI0Z1JsMkVhbDlJazBpVnhNbklQVDNpT2l2SnVjRDlkbW14dXd4M0VFeXptei1pRXhxc3hHYU85VmFZTjNBSGRmVUN0Rk0zZVZzWnRRZldiNE43cGVPR3FSblpETEdwTEdvQ1FyNTJHeU54VUJKZk5VR2Q3WTM3Y25VNHpVOVlkY3U1ZXZXOUE?oc",
+    "kodZeme": "RO",
+    "zeme": "Rumunsko",
+    "kategorie": [
+      "sabotaz",
+      "rusko"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "shody": [
+      "sabotage",
+      "russia"
+    ],
+    "stav": "ceka"
+  },
+  {
+    "id": "k-1f4f72e2893ca55e",
+    "zachyceno": "2026-09-08T18:28:56.954Z",
+    "publikovano": "2026-09-08T13:50:03.000Z",
+    "zdroj": {
+      "nazev": "Google News — sabotage Europe",
+      "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxOMUJfbnhvblBQTk9sNlBQX2drc1dmdkoxNDBPYTd3MWgtQmtDRmhVRVZDTDhlWTNOdlpCVEZxYVpnMl9yRkZZZWpVd1BlQVlyWVJodnotWXZjVVRNemcwY1N2TmdMWXNLNTE4N3hyblBucG0tTllEcFpnNVgzNERncEtIbFFrVFloLXNUaEVSeFdFZXRNQm80Y2ZHYkt2VkVxR0FraU5RX0VGelZ1WEdXVGh1SDA?oc=5",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Romania Detains Russian Citizen Over Alleged Sabotage Operation - Bloomberg.com",
+    "titulekPuvodni": "Romania Detains Russian Citizen Over Alleged Sabotage Operation - Bloomberg.com",
+    "shrnuti": "<a href=\"https://news.google.com/rss/articles/CBMitAFBVV95cUxOMUJfbnhvblBQTk9sNlBQX2drc1dmdkoxNDBPYTd3MWgtQmtDRmhVRVZDTDhlWTNOdlpCVEZxYVpnMl9yRkZZZWpVd1BlQVlyWVJodnotWXZjVVRNemcwY1N2TmdMWXNLNTE4N3hyblBucG0tTllEcFpnNVgzNERncEtIbFFrVFloLXNUaEVSeFdFZXRNQm80Y2ZHYkt2VkVxR0FraU5RX0VGelZ1WEdXVGh1SDA?oc=5\" ",
+    "kodZeme": "RO",
+    "zeme": "Rumunsko",
+    "kategorie": [
+      "sabotaz",
+      "rusko"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "shody": [
+      "sabotage",
+      "russia"
+    ],
+    "stav": "ceka"
+  },
+  {
     "id": "k-d817ab07c8af464c",
     "zachyceno": "2026-09-08T15:03:02.858Z",
     "publikovano": "2026-09-08T13:11:24.000Z",
