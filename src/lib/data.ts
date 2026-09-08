@@ -228,11 +228,11 @@ export function zemeDopad(odRoku = new Date().getUTCFullYear()) {
 }
 
 /**
- * Radar pro ČR odvozený jen ze zveřejněných záznamů s kódem CZ.
+ * Radar pro jednu zemi odvozený jen ze zveřejněných záznamů s jejím kódem.
  * Osa bez záznamu je null — web nic nedopočítává.
  */
-export function tlakCr(): HybridniTlak {
-  const cz = incidenty().filter((i) => i.kodZeme === "CZ");
+export function tlakZeme(kodZeme: string): HybridniTlak {
+  const cz = incidenty().filter((i) => i.kodZeme === kodZeme);
   const max = (f: (i: Incident) => boolean): Uroven | null => {
     const z = cz.filter(f);
     if (!z.length) return null;
@@ -253,9 +253,14 @@ export function tlakCr(): HybridniTlak {
       klic: o.klic,
       nazev: o.nazev,
       uroven: o.kat ? max((i) => i.kategorie.includes(o.kat!)) : null,
-      poznamka: o.kat ? "Podle zveřejněných záznamů s kódem CZ." : "Přímé vojenské riziko se pro ČR samostatně nehodnotí.",
+      poznamka: o.kat ? `Podle zveřejněných záznamů se zemí ${kodZeme}.` : "Přímé vojenské riziko se pro jednotlivou zemi samostatně nehodnotí.",
     })),
   };
+}
+
+/** Radar pro Česko. Zkratka nad `tlakZeme`, protože ji volá půlka webu. */
+export function tlakCr(): HybridniTlak {
+  return tlakZeme("CZ");
 }
 
 /**

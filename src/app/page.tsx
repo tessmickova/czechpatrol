@@ -24,6 +24,8 @@ export default function Prehled() {
         watchlist={watchlist()}
         cr={tlakCr().celkem}
         hybridni={hybridniTlak().celkem}
+        tlakEvropa={hybridniTlak()}
+        tlakCesko={tlakCr()}
         obcane={urovenObcanu()}
       />
     </>

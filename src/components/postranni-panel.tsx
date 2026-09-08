@@ -24,6 +24,7 @@ export const HLAVNI_STRANKY: { href: string; label: string; ikona: NazevIkony; p
   { href: "/udalosti/", label: "Události", ikona: "osa", popis: "všechny záznamy se zdroji a filtry" },
   { href: "/vyvoj/", label: "Vývoj", ikona: "graf", popis: "objem a závažnost v čase" },
   { href: "/svet/", label: "Svět", ikona: "globus", popis: "cíle mocností a jak blízko k nim jsou" },
+  { href: "/zeme/", label: "Země", ikona: "vlajka", popis: "přehled a počty pro každou sledovanou zemi" },
   { href: "/muj-prehled/", label: "Můj přehled", ikona: "terc", popis: "země a témata, která sledujete" },
 ];
 

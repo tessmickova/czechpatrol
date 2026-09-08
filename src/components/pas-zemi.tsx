@@ -35,7 +35,7 @@ export function PasZemi({ vse, ted = Date.now() }: { vse: Zaznam[]; ted?: number
     return (
       <Link
         key={`${z.kod}${sufix}`}
-        href={`/udalosti/?zeme=${z.kod}`}
+        href={`/zeme/${z.kod.toLowerCase()}/`}
         title={`${z.nazev}: ${z.pocet} ${sklon(z.pocet, "případ", "případy", "případů")} za 90 dnů${z.nej ? `, nejvyšší závažnost ${UROVNE[z.nej].nazev}` : ""}`}
         className={`mx-1 inline-flex h-[34px] shrink-0 items-center gap-2 rounded-[12px] border px-2.5 text-[12.5px] hover:bg-plocha2 ${t ? `${t.ramecek} ${t.pozadi}` : "border-linka2 bg-plocha"}`}
       >

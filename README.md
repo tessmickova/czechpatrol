@@ -113,6 +113,9 @@ opravy (`/opravy/`, z `data/opravy.json`), o projektu, podpořit, odběr.
 Staré adresy (`/dnes`, `/trend`, `/osa`, `/cr`, `/nato`, `/tlak`, `/watchlist`,
 `/nepotvrzeno`, `/komunita`) přesměrovává `public/_redirects`.
 
+Stránky: přehled, události, vývoj, svět, **země** (rozcestník a stránka pro každou sledovanou zemi),
+můj přehled, metodika, zdroje, opravy.
+
 Nad vším stojí Pravidlo č. 0 v `CLAUDE.md`: právo ČR a EU, žádná poplašná zpráva,
 a v bezpečnostních tématech jen to, co je doložené citací se zdrojem a řešené úředně.
 

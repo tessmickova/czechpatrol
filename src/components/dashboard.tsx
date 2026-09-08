@@ -1,11 +1,14 @@
 import Link from "next/link";
-import { druh, kdyZjisteno, pachatelPotvrzen, podlePuvodce, podleZemi, posledniZmeny, pripady, uredniZdroj, vyber, type Zaznam } from "@/lib/agregace";
+import { druh, kdyZjisteno, novaZjisteni, pachatelPotvrzen, podlePuvodce, podleZemi, posledniZmeny, pripady, uredniZdroj, vyber, type Zaznam } from "@/lib/agregace";
 import { cerstvost, datumCasPraha, datumPraha, stariSlovy } from "@/lib/cas";
-import type { CelkovyStav, Kandidat, NatoPolozka, Nepotvrzene, PravniPolozka, ProvozniPolozka, TydenniHodnoceni, Uroven, Watchlist } from "@/lib/typy";
+import type { CelkovyStav, HybridniTlak, Kandidat, NatoPolozka, Nepotvrzene, PravniPolozka, ProvozniPolozka, TydenniHodnoceni, Uroven, Watchlist } from "@/lib/typy";
 import { PASMA, UROVNE } from "@/lib/skala";
 import { Ikona, type NazevIkony } from "./ikony";
 import { HeroDashboard } from "./hero-dashboard";
 import { NadpisSekce } from "./nadpisy";
+import { PocitadlaEvropa, type PolozkaPoctu } from "./pocitadla-zive";
+import { NovaZjisteni } from "./nova-zjisteni";
+import { PavucinaHrozeb } from "./pavucina";
 import { PasZemi } from "./pas-zemi";
 import { Pocitadla } from "./pocitadla";
 import { Partneri, Sledovat } from "./sledovat";
@@ -140,10 +143,12 @@ function Pruh({ nazev, n, max, barva, odkaz }: { nazev: React.ReactNode; n: numb
 
 export function Dashboard({
   stav, pravni, natoPolozky, provozPolozky, overeno, vse, neprosle, kandidati, tydny, watchlist, cr, hybridni, obcane,
+  tlakEvropa, tlakCesko,
 }: {
   stav: CelkovyStav; pravni: PravniPolozka[]; natoPolozky: NatoPolozka[]; provozPolozky: ProvozniPolozka[];
   overeno: string | null; vse: Zaznam[]; neprosle: Nepotvrzene[]; kandidati: Kandidat[]; tydny: TydenniHodnoceni[]; watchlist: Watchlist;
   cr: Uroven | null; hybridni: Uroven | null; obcane: { uroven: Uroven; popis: string; neovereno: number };
+  tlakEvropa: HybridniTlak; tlakCesko: HybridniTlak;
 }) {
   const platiCr = pravni.filter((p) => p.plati === true);
   const neovereneCr = pravni.filter((p) => p.plati === null).length;
@@ -155,6 +160,10 @@ export function Dashboard({
   const pasmo = stav.uroven ? PASMA[UROVNE[stav.uroven].pasmo] : null;
 
   const dni90 = pripady(vse, { dni: 90 });
+  // Do prohlížeče posíláme jen datum a příznak Česka — počítadla si zbytek dopočítají sama.
+  const pocitadlaData: PolozkaPoctu[] = vse
+    .filter((i) => druh(i) === "pripad")
+    .map((i) => ({ kdy: kdyZjisteno(i), cz: i.kodZeme === "CZ" }));
   const zemi = new Set(dni90.map((i) => i.kodZeme)).size;
   const cz = dni90.filter((i) => i.kodZeme === "CZ").length;
   const potvrzeno = dni90.filter(pachatelPotvrzen).length;
@@ -183,6 +192,9 @@ export function Dashboard({
     <PasZemi vse={vse} />
     <div className="mx-auto max-w-[1280px] px-4 py-5 sm:px-6 sm:py-7">
       <HeroDashboard stav={stav} cr={cr} hybridni={hybridni} obcane={obcane} overeno={overeno} pocetZaznamu={vse.length} pocet90={dni90.length} />
+
+      {/* 1b — kolik případů přibylo; počítá se v prohlížeči, ne při sestavení */}
+      <PocitadlaEvropa polozky={pocitadlaData} ted={Date.now()} />
 
       {/* 2 — mřížka stavů + poslední události */}
       <div className="nalet mt-14 sm:mt-20">
@@ -224,6 +236,40 @@ export function Dashboard({
         </section>
       </div>
 
+      {/* 2b — posuny ve vyšetřování starších případů */}
+      <div className="nalet mt-14 border-t border-linka pt-12 sm:mt-20 sm:pt-14">
+        <NadpisSekce
+          stitek="Nová zjištění"
+          nadpis="Co se zjistilo o tom, co se stalo dřív"
+          popis="Obvinění, rozsudky, úředně potvrzený pachatel. Nejsou to nové události — je to posun ve vyšetřování těch starých."
+          akce={<Link href="/udalosti/?overeni=potvrzeny-pachatel" className="text-[13px] font-semibold text-akcent hover:text-akcent-svetla">všechna zjištění →</Link>}
+        />
+        <NovaZjisteni polozky={novaZjisteni(vse, 6)} />
+      </div>
+
+      {/* 2c — čím je tlak tvořený: pavučina typů hrozeb */}
+      <div className="nalet mt-14 border-t border-linka pt-12 sm:mt-20 sm:pt-14">
+        <NadpisSekce
+          stitek="Typy hrozeb"
+          nadpis="Čím je ten tlak tvořený"
+          popis="Ne jak je velký, ale z čeho se skládá. Vlevo NATO a Evropa jako celek, vpravo Česko podle vlastních záznamů. Rozdíl mezi nimi je to podstatné."
+        />
+        <div className="grid gap-4 lg:grid-cols-2">
+          <PavucinaHrozeb
+            nadpis="NATO a Evropa"
+            popis="Hodnocení projektu podle záznamů z celé sledované oblasti."
+            tlak={tlakEvropa}
+            odkaz={{ href: "/metodika/", text: "jak se hodnotí →" }}
+          />
+          <PavucinaHrozeb
+            nadpis="Česko"
+            popis="Jen ze zveřejněných záznamů s kódem CZ. Prázdná osa znamená, že takový záznam nemáme."
+            tlak={tlakCesko}
+            odkaz={{ href: "/udalosti/?zeme=CZ", text: "české záznamy →" }}
+          />
+        </div>
+      </div>
+
       {/* 3 — čísla, kde, kdo */}
       <div className="nalet mt-14 border-t border-linka pt-12 sm:mt-20 sm:pt-14">
         <NadpisSekce
@@ -244,10 +290,10 @@ export function Dashboard({
           <p className="mt-1.5 text-[11.5px] text-tlum2">{uredni} z {dni90.length} s úředním zdrojem. Aktualizace a prohlášení se nepočítají.</p>
         </section>
         <section aria-label="Kde">
-          <div className="mb-1.5 flex items-center justify-between"><span className="stitek">Kde · případy {rok}</span><Link href="/vyvoj/" className="text-[12px] text-akcent hover:text-akcent-svetla">vývoj →</Link></div>
+          <div className="mb-1.5 flex items-center justify-between"><span className="stitek">Kde · případy {rok}</span><Link href="/zeme/" className="text-[12px] text-akcent hover:text-akcent-svetla">všechny země →</Link></div>
           <ul className="space-y-0.5">
             {zeme.map((z) => (
-              <li key={z.kodZeme}><Pruh nazev={<><Vlajka kod={z.kodZeme} /> {z.zeme}</>} n={z.pripady} max={maxZeme} barva={z.kodZeme === "CZ" ? "bg-akcent" : "bg-tlum2/70"} odkaz={`/udalosti/?zeme=${z.kodZeme}&obdobi=letos`} /></li>
+              <li key={z.kodZeme}><Pruh nazev={<><Vlajka kod={z.kodZeme} /> {z.zeme}</>} n={z.pripady} max={maxZeme} barva={z.kodZeme === "CZ" ? "bg-akcent" : "bg-tlum2/70"} odkaz={`/zeme/${z.kodZeme.toLowerCase()}/`} /></li>
             ))}
           </ul>
         </section>

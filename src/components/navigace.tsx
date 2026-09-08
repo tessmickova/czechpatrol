@@ -13,6 +13,7 @@ export const HLAVNI = [
   { href: "/udalosti/", label: "Události" },
   { href: "/vyvoj/", label: "Vývoj" },
   { href: "/svet/", label: "Svět" },
+  { href: "/zeme/", label: "Země" },
   { href: "/muj-prehled/", label: "Můj přehled" },
 ];
 

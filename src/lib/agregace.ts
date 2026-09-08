@@ -178,6 +178,33 @@ export function podleZemi(vse: Zaznam[]) {
  * Změny k zobrazení na přehledu: nejnovější případy, aktualizace a opatření
  * podle data zjištění. Reakce až po nich — jsou to slova, ne činy.
  */
+/**
+ * Nová zjištění: posuny ve vyšetřování starších případů.
+ *
+ * Sem patří samostatné aktualizace případu a případy, u kterých se pohnul
+ * stav — padlo obvinění, vyšetřování se uzavřelo nebo se potvrdil pachatel.
+ * Není to seznam nových událostí; je to odpověď na otázku „co se dozvědělo
+ * o tom, co se stalo dřív“.
+ */
+export function novaZjisteni(vse: Zaznam[] = incidenty(), pocet = 8): { zaznam: Zaznam; duvod: string }[] {
+  const duvodK = (i: Zaznam): string | null => {
+    const d = druh(i);
+    if (d === "aktualizace") return "nové zjištění k případu";
+    // Prohlášení a opatření sem nepatří — nic nezjišťují, jen reagují.
+    if (d !== "pripad") return null;
+    if (i.stav === "obvineni") return "podáno obvinění";
+    if (i.stav === "uzavreno") return "vyšetřování uzavřeno";
+    if (i.atribuce === "oficialni") return "pachatel potvrzen úředně";
+    if (i.atribuce === "domaci") return "prokázán domácí pachatel";
+    return null;
+  };
+  return vse
+    .map((i) => ({ zaznam: i, duvod: duvodK(i) }))
+    .filter((x): x is { zaznam: Zaznam; duvod: string } => x.duvod !== null)
+    .sort((a, b) => kdyZjisteno(b.zaznam).localeCompare(kdyZjisteno(a.zaznam)))
+    .slice(0, pocet);
+}
+
 export function posledniZmeny(pocet = 5, vse: Zaznam[] = incidenty(), ted = Date.now()): Zaznam[] {
   const dulezite = vyber(vse, { druhy: ["pripad", "aktualizace", "opatreni"], dni: 30, ted });
   const serazene = [...dulezite].sort((a, b) => kdyZjisteno(b).localeCompare(kdyZjisteno(a)));
