@@ -1,6 +1,6 @@
 # CzechPatrol — denní výzkumný audit pro Claude Code
 
-**Vygenerováno:** 7. 9. 2026, Europe/Prague
+**Vygenerováno:** 8. 9. 2026, Europe/Prague
 
 > Toto NENÍ instrukce k bezhlavé kompletní aktualizaci webu. Je to research handoff: níže jsou věci, které jsem při dnešním výzkumu našel jako nové, hodné kontroly nebo potenciálně ne zcela propsané do webu.
 >
@@ -8,84 +8,118 @@
 
 ## P0 — faktická / bezpečnostní správnost
 
-V dnešním auditu jsem nenašel potvrzenou novou P0 změnu českého právního nebo aliančního stavu, kterou by bylo správné automaticky přepsat.
+### 1) Berlínský požár rozvodny z 7. 9. nesmí zůstat prezentovaný jako pravděpodobná sabotáž
 
-- Repo má `data/pravni-stav.json` ověřený 6. 9. 2026 pozdě večer a uvádí: stav ohrožení státu NE, válečný stav NE, mobilizace NE, obecné omezení vycestování NE, mimořádné uzavření hranic NE. Před změnou těchto stavů vyžaduj nový primární úřední důkaz.
-- `data/nato.json` je rovněž ověřen 6. 9. pozdě večer a uvádí čl. 4 i 5 jako neaktivované a bez veřejně oznámené mimořádné změny readiness. Neměň bez nového oficiálního zdroje NATO.
-- U Leipzig/Halle dál drž oddělení: fyzický incident 4. 8. 2026; oficiální německá atribuce Rusku 1. 9. 2026. Nové komentáře k případu nejsou nový útok.
-- U německé energetické série nesmí UI naznačovat, že je celá připsaná Rusku. U části případů se vyšetřování soustředí na 48letého podezřelého s deklarovaným anti-fosilním motivem / možným „climate extremism“. To nijak neruší samostatnou oficiální ruskou atribuci Leipzig/Halle.
+Reuters 7. 9. původně informoval, že policie prověřuje požár trafostanice v Berlíně-Moabitu v kontextu německé série útoků na síť. Pozdější vyšetřovací update téhož dne ale podle policejní prezidentky Barbary Slowik Meisel ukazuje na **technickou závadu / následný zkrat**. Definitivní kriminalistická expertiza může ještě doběhnout, ale aktuální evidence hypotézu sabotáže výrazně oslabuje.
+
+Zdroj:
+- Reuters, 7. 9. 2026 (souhrn s pozdějším updatem): https://www.reuters.com/world/berlin-police-probe-substation-fire-amid-series-attacks-grid-2026-09-07/
+- Reuters text přetištěný Internazionale, 7. 9. 2026: https://www.internazionale.it/ultime-notizie-reuters/2026/09/07/police-in-eastern-german-state-defuse-21-explosive-devices-found-near-power-grid
+
+Pokud web tuto událost mezitím zapsal jako sabotáž / pravděpodobnou sabotáž, oprav confidence/stav a text. Pokud tam není, **nepřidávej ji jako nový sabotážní incident**. Maximálně jako vyšetřovací korekci/negativní signál, pokud to datový model podporuje.
+
+### 2) Český právní stav a NATO jsou čerstvě ověřené a nemají se měnit bez nového primárního důkazu
+
+Repo nyní uvádí `data/pravni-stav.json` ověřený **8. 9. 2026 01:04 UTC**: stav ohrožení státu NE, válečný stav NE, mobilizace NE, nouzový stav NE, obecné omezení vycestování NE, mimořádné uzavření hranic NE. `data/nato.json` je ověřen ve stejný čas a uvádí čl. 4 i čl. 5 jako neaktivované a bez veřejně oznámené mimořádné změny readiness či evakuace personálu/rodin.
+
+Tyto položky jsou nyní správně čerstvé. Neměň je jen proto, že hybridní tlak nebo rétorika rostou.
+
+### 3) Německou energetickou sabotážní sérii stále neslučuj automaticky s ruskou atribucí Leipzig/Halle
+
+Nový rozsah saské série je vážný, ale **není veřejně potvrzené ruské státní řízení celé energetické série**. Leipzig/Halle zůstává samostatným případem s oficiální německou atribucí Rusku.
 
 ## P1 — nové / chybějící informace k porovnání s webem
 
-### 1) Německo: nový ochranný rámec proti sabotážím — 6. 9. 2026
+### 1) Sasko: rozsah série narostl na 21 výbušných zařízení — nový vyšetřovací posun 7. 9. 2026
 
-Reuters 6. 9. uvedl, že německé ministerstvo vnitra připravuje širší ochranný rámec proti sabotážím, dronovým útokům a kybernetickým zásahům po Leipzig/Halle. Jde o **institucionální obrannou reakci**, nikoli krizový stav, mobilizaci nebo známku bezprostředního útoku NATO–Rusko.
+Prokuratura a policie v Sasku 7. 9. oznámily, že při pokračujícím pátrání našly **dalších 9 podomácku vyrobených výbušných zařízení** u vysokonapěťových vedení jižně od rozvodny Graustein v okrese Görlitz. Celkový počet nalezených zařízení v této sérii tím stoupl na **21**.
 
-Zdroj:
-- Reuters, 6. 9. 2026: https://www.reuters.com/business/media-telecom/germany-plans-anti-sabotage-shield-after-airport-drone-attack-bild-reports-2026-09-06/
-
-Porovnej s incidenty/reakcemi v datech. Pokud už je tato reakce zachycena, neduplikuj ji. Pokud není, zvaž ji jako nový institucionální/obranný signál s jasným vysvětlením „co to znamená / co to neznamená“.
-
-### 2) Rusko–Německo: Lavrovova nová eskalační rétorika — 6. 9. 2026
-
-Sergej Lavrov 6. 9. označil německá obvinění Ruska v souvislosti s Leipzig/Halle za začátek „skutečné války“ a obvinil německé vedení z militarizace. Je to **nový oficiální rétorický/diplomatický signál**, nikoli vojenský rozkaz, přesun sil ani změna právního stavu.
+To není „nový útok 7. 9.“. Fyzické umístění zařízení spadá do předchozí série; **novým signálem je vyšetřovací zjištění rozsahu série**.
 
 Zdroj:
-- Reuters, 6. 9. 2026: https://www.reuters.com/world/russias-lavrov-calls-accusations-moscows-involvement-leipzig-drone-incident-2026-09-06/
+- Reuters, 7. 9. 2026 (přetištěno Internazionale): https://www.internazionale.it/ultime-notizie-reuters/2026/09/07/police-in-eastern-german-state-defuse-21-explosive-devices-found-near-power-grid
 
-Pokud bude na webu, severity stanov podle metodiky a confidence odděleně. Nepoužívej titulek typu „Rusko zahájilo válku s Německem“ — fakticky by byl chybný.
+Pokud už web saskou sérii má, preferuj update existujícího incidentu/timeline místo nového duplicitního incidentu. Ověř datum původního incidentu vs. datum zveřejnění nového rozsahu.
 
-### 3) Dánsko: PET veřejně potvrzuje konkrétní ruské plánování sabotáží
+### 2) Wesel: narušení oplocení další rozvodny — zatím pouze podezřelý fyzický incident
 
-Dánská PET na své oficiální stránce 5. 9. výslovně uvedla, že **vidí konkrétní ruské plánování a přípravu sabotáží namířených proti Dánsku**, zejména proti obrannému průmyslu a firmám napojeným na vojenskou pomoc Ukrajině. PET současně výslovně říká, že **nemá informaci o konkrétním bezprostředním útoku v určitém místě nebo čase**. To je důležité pro správné oddělení závažnosti od bezprostřednosti.
-
-Primární zdroj:
-- PET, 5. 9. 2026: https://pet.dk/pet/nyhedsliste/pet-ser-planlaegning-og-forberedelse-af-russisk-sabotageaktivitet-i-danmark/2026/09/05
-
-Sekundární potvrzení:
-- Reuters, 3. 9. 2026: https://www.reuters.com/world/russia-recruits-danes-sabotage-planning-denmark-says-2026-09-03/
-
-Pozor na datum: Reuters o výroku informoval už 3. 9.; oficiální web PET zveřejnil vlastní potvrzení 5. 9. **Nevytvářej z toho dva incidenty.** Pokud už web dánský signál má z Reuters, pouze zvaž doplnění primárního PET zdroje a přesnější formulace.
-
-### 4) Deeskalační protiváha: diplomatický kanál zůstává otevřený — 6. 9. 2026
-
-Reuters 6. 9. uvedl, že Moskva nevylučuje budoucí trilaterální schůzku Putin–Trump–Si a pokračují přípravy dalších bilaterálních kontaktů. To není mírová dohoda ani důkaz deeskalace války, ale je to relevantní **diplomatický protiváhový signál**, pokud dashboard zobrazuje i deeskalační faktory.
+V západoněmeckém Weselu bylo 7. 9. hlášeno narušení bezpečnostního oplocení kolem další trafostanice a policejní prověřování. Zatím není veřejně potvrzené poškození technické infrastruktury, pachatel ani motiv.
 
 Zdroj:
-- Reuters, 6. 9. 2026: https://www.reuters.com/world/china/moscow-has-not-ruled-out-trilateral-meeting-between-presidents-russia-us-china-2026-09-06/
+- Reuters, 7. 9. 2026: https://www.reuters.com/world/berlin-police-probe-substation-fire-amid-series-attacks-grid-2026-09-07/
 
-Nepřidávej jako velký incident, pokud metodika takové diplomatické signály nepočítá. Spíš ho použij tam, kde web vysvětluje „co situaci naopak tlumí“.
+Pokud se zobrazí, drž jako **NEPOTVRZENO / vyšetřování**, ne jako potvrzenou sabotáž. Pokud není další faktický posun, může být lepší nechat jej mimo hlavní feed.
 
-### 5) Česká republika: preventivní opatření nadále nejsou krizovým právním krokem
+### 3) Rusko–Německo: uzavření německého generálního konzulátu v Petrohradu — konkrétní diplomatická odveta 7. 9. 2026
 
-České ministerstvo vnitra 4. 9. potvrdilo přijetí konkrétních preventivních bezpečnostních opatření v reakci na sabotážní/hybridní incidenty v okolních státech; současně ministr uvedl, že bezpečnostní situace v ČR je stabilní a teroristický stupeň zůstává B. Pokud to web obsahuje, musí být obě části vedle sebe — **opatření se zvýšila, ale stát nevyhlásil krizový režim**.
+Rusko 7. 9. oznámilo uzavření německého generálního konzulátu v Petrohradu do 18. 9. jako odvetu za německé kroky po atribuci Leipzig/Halle. Současně potvrdilo ukončení činnosti Goethe-Institutů. Jde o **konkrétní diplomatickou eskalaci**, nikoli vojenský krok ani přerušení diplomatických vztahů jako takových.
 
-Sekundární zdroj ČTK:
-- https://www.blesk.cz/clanek/zpravy-politika/847530/cesko-prijalo-nova-opatreni-po-sabotazich-v-nemecku-vetsi-ochrana-letist-i-energetickych-objektu.html
+Zdroje:
+- Reuters, 7. 9. 2026: https://www.reuters.com/world/europe/russia-closes-german-consulate-st-petersburg-after-drone-spat-2026-09-07/
+- AP, 7. 9. 2026: https://apnews.com/article/f53afb72a33195d1383c2fe450557122
 
-Pokud najdeš primární příspěvek/stanovisko MV nebo ministra, preferuj ho před sekundárním odkazem.
+Pozor na duplicitu: Goethe-Instituty byly oznámeny dříve. Novým bodem 7. 9. je především konkrétní provedení uzavření německého konzulátu a termín.
+
+### 4) Rusko–Norsko: Moskva označila americké raketové instalace za cíle v případě války — 7. 9. 2026
+
+Ruské MZV reagovalo na americké rozmístění systému založeného na Mk-41 v Norsku. Uvedlo, že rozmístění zhoršuje podmínky pro dialog o strategické stabilitě a že rozmístěná místa a velitelská centra by se **v případě vojenského konfliktu** stala cíli.
+
+Důležité: systém podle dostupných zpráv dorazil už v srpnu. **Nový signál 7. 9. je ruská oficiální reakce a explicitní rétorické označení potenciálních cílů**, nikoli nový dnešní přesun zbraní.
+
+Zdroj Reuters, 7. 9. 2026 (přetištěno):
+- https://www.investing.com/news/world-news/russia-slams-us-despatch-of-missile-system-tonorway-as-another-blow-to-idea-of-arms-talks-4890589
+
+Pokud web tento bod přidá, typ má být REAKCE / RÉTORIKA / STRATEGICKÝ SIGNÁL, ne fyzický útok. Explicitně uvést podmínku „v případě vojenského konfliktu“.
+
+### 5) Český politicko-bezpečnostní kontext: vláda připouští ruské kybernetické cílení, ale nejde o krizový právní krok
+
+Premiér Andrej Babiš 6. 9. veřejně uvedl, že Česko je pravděpodobně také cílem ruských kybernetických útoků a že vláda chce případné omezení pohybu ruských diplomatů řešit koordinovaně se spojenci. To je relevantní český hybridní/politický signál, ale neznamená mobilizaci, zákaz vycestování ani jiný krizový právní režim.
+
+Zdroj:
+- iROZHLAS, 6. 9. 2026: https://www.irozhlas.cz/zpravy-domov/je-cesko-cilem-ruskych-kybernetickych-utoku-pravdepodobne-ano-potvrdil-babis_2609061141_kvr
+
+Pokud už web česká preventivní opatření a hybridní tlak zachycuje, nemusí z toho vzniknout nový incident. Spíš zvaž doplnění českého kontextu / zdroje.
+
+### 6) Deeskalační protiváha: americko-rusko-ukrajinský diplomatický kanál zůstává otevřený
+
+Američtí vyslanci Jared Kushner a Steve Witkoff po jednání s Putinem v Moskvě jednali také v Kyjevě. Bez průlomu, ale s veřejně deklarovanou snahou obnovit trilaterální jednání. To není „mírový průlom“, ale je to relevantní deeskalační protiváha k růstu hybridního a diplomatického napětí.
+
+Zdroj:
+- Reuters, 6. 9. 2026: https://www.reuters.com/business/aerospace-defense/us-envoys-make-first-kyiv-visit-amid-ukraine-war-peace-push-2026-09-06/
+
+Použij spíš v „co se nezměnilo / co tlumí eskalaci“ než jako samostatný velký incident.
 
 ## P2 — informační architektura / UX k ověření
 
-- `data/stav.json` má `aktualizovano` 5. 9. a `data/hybridni-tlak.json` / `data/rusko.json` mají také ověření 5. 9., zatímco právní a NATO soubory jsou ověřené 6. 9. pozdě večer. Neznamená to automaticky, že jsou špatně. Zkontroluj ale, zda novější signály z 6. 9. mění pouze popis/zdroje, nebo skutečně i úroveň/trend. **Nezvyšuj level jen kvůli stáří timestampu.**
-- Na homepage musí být jasně vidět současně dvě pravdy: hybridní/sabotážní tlak v Evropě je zvýšený, ale přímé vojenské riziko NATO–Rusko je vedeno odděleně a český právní stav neukazuje mobilizaci či zákaz vycestování.
-- Pokud se Lavrovova rétorika objeví jako karta, zobraz ji jako „oficiální rétorický/diplomatický posun“, nikoli jako fyzický incident.
-- Pokud se PET objeví jako karta, zobraz zároveň „konkrétní plánování/příprava“ a „bez informace o konkrétním bezprostředním útoku“. To je přesně případ, kde severity ≠ imminence ≠ confidence.
-- Ověř, že deeskalační/negativní fakta jsou viditelná a nejsou jen skrytá v detailu. Dashboard nemá uživatele nutit skládat obraz jen z negativních incidentů.
+- `data/stav.json` má stále `aktualizovano: 2026-09-05` a shrnutí stojí hlavně na kumulaci signálů kolem Leipzig/Halle. To **neznamená automaticky, že je level špatně**. Ale po událostech 6.–7. 9. zkontroluj, zda shrnutí/trend už nepůsobí zastarale a zda počet `noveSignaly` odpovídá tomu, co web skutečně ukazuje. Nezvyšuj level jen proto, že timestamp je starší.
+- `data/pravni-stav.json` a `data/nato.json` jsou naopak ověřeny 8. 9. krátce po 01:00 UTC. Pokud homepage ukazuje starší dojem u těchto stavů, je problém ve zobrazení/propagaci timestampu, ne v samotných datech.
+- U německé energetické série je potřeba relation/timeline logika: původní útok → další nalezená zařízení → nový počet 21 → vyšetřovací korekce Berlin technical fault. Nevyrábět čtyři „nové útoky“, když jde zčásti o nové informace k témuž clusteru.
+- Zkontroluj, že homepage umí současně komunikovat: **hybridní tlak je vysoký / zvýšený**, ale **přímý střet zůstává nízký** a **ČR nemá mobilizaci, válečný stav ani obecné omezení vycestování**.
+- Rétorické a diplomatické kroky (Lavrov, Norsko, uzavření konzulátu) nesmí mít vizuální váhu stejného typu jako fyzická sabotáž bez jasného badge/typu.
 
 ## P3 — maximálně několik užitečných nice-to-have prvků
 
-1. U reakčních/rétorických signálů používej samostatný typ nebo badge „REAKCE / RÉTORIKA“, aby se nepletly s fyzickým incidentem.
-2. U primárních zpravodajských varování typu PET zobraz krátký řádek „bezprostřední konkrétní útok: NEUVEDEN“, pokud to primární zdroj výslovně říká.
-3. Pokud už existuje „co se změnilo“, přidej nebo zvýrazni jen krátkou protiváhu „co se nezměnilo“ — právní vycestování, mobilizace, NATO čl. 4/5, přímý střet. Nevytvářej další velkou sekci, pokud to už UI řeší.
+1. **„Korekce / vyšetřování změnilo obraz“** — malý status u incidentu, když se z podezření na sabotáž stane pravděpodobná technická závada nebo naopak. Je to velmi užitečné proti alarmistickému zkreslení.
+2. **Cluster/timeline pro jednu vyšetřovací sérii** — aby nové nálezy (např. 21 zařízení v Sasku) aktualizovaly jeden případ a nevypadaly jako několik nezávislých útoků.
+3. **Badge „REAKCE / DIPLOMACIE / RÉTORIKA“** pro konzuláty, výroky a strategické hrozby; fyzické incidenty nechat vizuálně odlišné.
+
+## Putin / ruské vnitřní hodiny — dnešní kontrola
+
+- Nenašel jsem nový důvěryhodný zdravotní fakt o Vladimiru Putinovi. Zdravotní rumory stále nezapočítávej.
+- Veřejný diplomatický kanál s USA zůstává otevřený; to je protiváha k ostré rétorice.
+- Před ruskými parlamentními volbami 18.–20. 9. stále není nezávisle potvrzený ruský plán na povolební mobilizaci ~300 000 lidí. Ukrajinské tvrzení dál označuj jako **ukrajinské hodnocení**, ne potvrzený plán Kremlu.
+- Ekonomický, vojenský a domácí tlak na režim může být relevantní pro trend, ale bez nového konkrétního faktu dnes není důvod automaticky zvyšovat úroveň.
 
 ## Co jsem dnes záměrně NEZAŘADIL jako nový incident
 
-- Další články o stejných německých rozvodnách bez nového skutkového nebo atribučního posunu.
-- Pokračující pátrání po 48letém podezřelém z německé energetické série samo o sobě nepočítej jako nový sabotážní incident; je to update stejného vyšetřování.
-- Běžné opakované průniky do vzdušného prostoru NATO bez kvalitativní změny vzorce zůstávají baseline.
-- Zdravotní spekulace o Vladimiru Putinovi: nenašel jsem nový důvěryhodný zdravotní fakt. `rusko.json` má správně zdravotní tlak jako neprokázaný; neměň na základě rumorů.
-- Dánské PET potvrzení z 5. 9. nevytvářej jako nový druhý incident, pokud už je v datech stejný výrok z Reuters 3. 9.; jde o silnější primární zdroj k témuž signálu.
+- Berlínský požár trafostanice jako sabotáž — novější informace ukazují spíš na technickou závadu.
+- Každý jednotlivý článek o 21 zařízeních v Sasku jako samostatnou událost — jde o jeden nový vyšetřovací posun v existující sérii.
+- Goethe-Instituty znovu jako nový signál 7. 9., pokud už byly započítané při původním oznámení.
+- Samotný americký raketový systém v Norsku jako nový přesun 7. 9. — podle dostupných zpráv byl dodán už v srpnu; nové je až ruské vyjádření.
+- Wesel jako potvrzenou sabotáž — zatím jen narušené oplocení a vyšetřování.
+- AfD výsledek v Sasku-Anhaltsku jako přímý bezpečnostní incident. Je to politický kontext, ne fyzický nebo právní krizový trigger.
+- Běžné opakované průniky do vzdušného prostoru NATO bez kvalitativní změny vzorce.
+- Zdravotní spekulace o Putinovi.
 
 ## Kontrolní pravidla
 
@@ -94,7 +128,8 @@ Pokud najdeš primární příspěvek/stanovisko MV nebo ministra, preferuj ho p
 - Rozlišuj FAKT / ODHAD / SCÉNÁŘ / NEPOTVRZENO.
 - Rozlišuj datum události od data publikace a od data nové atribuce/vyšetřovacího posunu.
 - Preferuj primární oficiální zdroje, poté Reuters/AP/AFP a kvalitní národní/regionální média.
-- Severity, confidence a bezprostřednost nejsou totéž.
+- Severity, confidence, bezprostřednost a typ události nejsou totéž.
+- U staršího incidentu je nový oficiální atribuční nebo vyšetřovací posun validní nový signál, ale nesmí přepsat původní datum fyzické události.
 - Zachovej profesionální, civilní, nealarmistický vzhled. Žádný generický AI dashboard, dramatická militaristická estetika ani falešná procenta rizika.
 - Neměň root `CLAUDE.md` ani jiné instrukční root MD soubory kvůli tomuto auditu.
 - Po změnách spusť existující testy/typecheck/build a oprav regresní chyby, které změny způsobí.
@@ -105,4 +140,6 @@ Neodpovídej „implementoval jsem všechno z promptu“. Po kontrole stručně 
 - co už bylo na webu správně a nechal jsi beze změny,
 - co bylo v rozporu s aktuálními informacemi a opravil jsi,
 - co nové jsi skutečně doplnil,
-- co jsi záměrně nepřidal, protože to nebylo dost ověřené, bylo duplicitní, metodicky nevhodné nebo už zastaralé.
+- co jsi záměrně nepřidal, protože to nebylo dost ověřené, bylo duplicitní nebo už zastaralé.
+
+Commituj pouze skutečně potřebné změny webu/dat po vlastním ověření. Tento soubor je research handoff, ne zdroj pravdy.
