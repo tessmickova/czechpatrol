@@ -1,5 +1,86 @@
 [
   {
+    "id": "k-4d25a4f42158f0d3",
+    "zachyceno": "2026-09-08T11:03:52.501Z",
+    "publikovano": "2026-09-08T10:54:00.000Z",
+    "zdroj": {
+      "nazev": "iROZHLAS — zprávy",
+      "url": "https://www.irozhlas.cz/zpravy-svet/muz-podezrely-ze-serie-sabotazi-v-nemecku-byl-zadrzen-policii-budil-jeji_2609081254_elv",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Muž podezřelý ze série sabotáží v Německu byl zadržen policií. Budil její pozornost u elektrárny",
+    "titulekPuvodni": "Muž podezřelý ze série sabotáží v Německu byl zadržen policií. Budil její pozornost u elektrárny",
+    "shrnuti": "Policie zadržela 48letého muže podezřelého ze série sabotáží na elektrické síti na několika místech Německa. Informovala o tom v úterý agentura DPA. Podle jejích informací muž vzbudil pozornost policistů poblíž západoněmecké elektrárny Weisweiler nedaleko Cách. Server deníku Frankfurter Allgemeine Z",
+    "kodZeme": "DE",
+    "zeme": "Německo",
+    "kategorie": [
+      "sabotaz",
+      "zpravodajske"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "shody": [
+      "sabotaz",
+      "zadrz"
+    ],
+    "stav": "ceka"
+  },
+  {
+    "id": "k-bc4a45fae5fbcbad",
+    "zachyceno": "2026-09-08T11:03:52.503Z",
+    "publikovano": "2026-09-08T09:45:00.000Z",
+    "zdroj": {
+      "nazev": "iROZHLAS — zprávy",
+      "url": "https://www.irozhlas.cz/zpravy-svet/madarsko-vyhostilo-10-ruskych-diplomatu-o-preruseni-diplomatickych-vztahu-ze_2609081145_elv",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Maďarsko vyhostilo 10 ruských diplomatů. O přerušení diplomatických vztahů ze strany Budapešti nejde",
+    "titulekPuvodni": "Maďarsko vyhostilo 10 ruských diplomatů. O přerušení diplomatických vztahů ze strany Budapešti nejde",
+    "shrnuti": "Maďarsko vyhostilo deset ruských diplomatů, oznámila na sociální síti X ministryně zahraničí Anita Orbánová. Uvedla, že se zabývali aktivitami, které jsou podle Vídeňské úmluvy neslučitelné s jejich funkcí.",
+    "kodZeme": "AT",
+    "zeme": "Rakousko",
+    "kategorie": [
+      "zpravodajske",
+      "rusko"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "shody": [
+      "vyhost",
+      "rusk"
+    ],
+    "stav": "ceka"
+  },
+  {
+    "id": "k-3065d1af0a77d75a",
+    "zachyceno": "2026-09-08T11:03:52.509Z",
+    "publikovano": "2026-09-08T09:23:24.000Z",
+    "zdroj": {
+      "nazev": "ČT24 — hlavní zprávy",
+      "url": "https://ct24.ceskatelevize.cz/clanek/svet/madarsko-vyhostuje-deset-ruskych-diplomatu-377367",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Maďarsko vyhošťuje deset ruských diplomatů, Moskva slibuje odvetu",
+    "titulekPuvodni": "Maďarsko vyhošťuje deset ruských diplomatů, Moskva slibuje odvetu",
+    "shrnuti": "Budapešť vyhošťuje deset ruských diplomatů, kteří se podle maďarských úřadů podíleli na aktivitách odporujících pravidlům diplomatické práce. Na sociální síti X to oznámila šéfka diplomacie Anita Orbánová. Ruské ministerstvo zahraničí podle tiskových agentur slíbilo tvrdou odvetu, která bude Maďarsk",
+    "kodZeme": "HU",
+    "zeme": "Maďarsko",
+    "kategorie": [
+      "zpravodajske",
+      "rusko"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "shody": [
+      "vyhost",
+      "rusk"
+    ],
+    "stav": "ceka"
+  },
+  {
     "id": "k-a73116a3d549287f",
     "zachyceno": "2026-09-07T15:47:06.869Z",
     "publikovano": "2026-09-07T10:42:48.000Z",
@@ -2017,6 +2098,33 @@
     "stav": "ceka"
   },
   {
+    "id": "k-71436534c792345f",
+    "zachyceno": "2026-09-08T11:03:52.528Z",
+    "publikovano": "2026-08-20T17:21:11.000Z",
+    "zdroj": {
+      "nazev": "Google News — sabotage Europe",
+      "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxNMmFrdk1JdUxzbWtMaVo1TTJNaEdjMG5QeVhOdG1CWWI3c0VHa3JiOUJRN2kzRjFFb2N1MUVCQkVEQllqb2hLTzlTQkpLWFFvR0NlWE5ONUNVZ2NqV1pfZVRaT1gtU2daTjhPQlI2XzAtOGFrUGJXaFVHZDdWdzJzcVljeVMwZ2x6YUl0enZKN2JDZ1gwamZUYUQ5dEQyaVNjWGtEUUxxWkdXNXNSSEI2dS1ZMzRaVGJrVXVUY2NtWQ?oc=5",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "From Sabotage to Assassination: Russia’s Escalating War on Europe’s Defense Industry - Robert Lansing Institute",
+    "titulekPuvodni": "From Sabotage to Assassination: Russia’s Escalating War on Europe’s Defense Industry - Robert Lansing Institute",
+    "shrnuti": "<a href=\"https://news.google.com/rss/articles/CBMivwFBVV95cUxNMmFrdk1JdUxzbWtMaVo1TTJNaEdjMG5QeVhOdG1CWWI3c0VHa3JiOUJRN2kzRjFFb2N1MUVCQkVEQllqb2hLTzlTQkpLWFFvR0NlWE5ONUNVZ2NqV1pfZVRaT1gtU2daTjhPQlI2XzAtOGFrUGJXaFVHZDdWdzJzcVljeVMwZ2x6YUl0enZKN2JDZ1gwamZUYUQ5dEQyaVNjWGtEUUxxWkdXNXNSSEI2dS1ZMzRaVGJrVX",
+    "kodZeme": "RU",
+    "zeme": "Rusko",
+    "kategorie": [
+      "sabotaz",
+      "rusko"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "shody": [
+      "sabotage",
+      "russia"
+    ],
+    "stav": "ceka"
+  },
+  {
     "id": "k-563f3c6ce5bbb8df",
     "zachyceno": "2026-09-07T10:06:21.747Z",
     "publikovano": "2026-08-19T18:00:00.000Z",
@@ -2071,116 +2179,6 @@
     "klasifikace": "pravidla",
     "shody": [
       "sabotage",
-      "russia"
-    ],
-    "stav": "ceka"
-  },
-  {
-    "id": "k-26b6e832a642e5f6",
-    "zachyceno": "2026-09-06T13:59:15.574Z",
-    "publikovano": "2026-08-18T07:00:00.000Z",
-    "zdroj": {
-      "nazev": "Google News — sabotage Europe",
-      "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxNQUdqcnJWb1VrdkNjREVVUjBxTTZfc2d0MmpDSTZYV3pHejUzcDZIdUlwVXV2NUlIbndRUG9BQ0JoOWxmdE11c1MzeHJHaDltM0ZXakZJMF9mUnJlQ1hXSW5lVFI3QUxPZThkSjYtNXE3TVFJbFRJVC1SZ1lBMUF4NEJsQnh1RGNLWGR0NmJUYVVzMDVhaFlrOHM2ZjN1N0dTRktreDcyaVNubVplMVlYU3J2OHdXVDM50gG4AUFVX3lxTE9PZUdfQk45bkpuSmJxMy1Qd0gyWXplWnJUbDBTOUtoTUZCRHN1cFJMN2p1MVhORTRrZFRYOVYtemZGTTlYd2RXQnZKVkYyQVFXcHdpWjFBVEktNEsxNzhfTjl3Y20xTFhPYzVOSFBqQXZxaUhWWURzYURwX21laHMwck84cjdRdUVOaXRzQ0czQUdYYTRhYnRwVmR4V3FiWnJYYlg0Q0VnYVN1SWNNX3lkN0tVYXZ6ZVI?oc=5",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "German court convicts Ukrainian man over Russian sabotage plot - South China Morning Post",
-    "titulekPuvodni": "German court convicts Ukrainian man over Russian sabotage plot - South China Morning Post",
-    "shrnuti": "<a href=\"https://news.google.com/rss/articles/CBMiuAFBVV95cUxNQUdqcnJWb1VrdkNjREVVUjBxTTZfc2d0MmpDSTZYV3pHejUzcDZIdUlwVXV2NUlIbndRUG9BQ0JoOWxmdE11c1MzeHJHaDltM0ZXakZJMF9mUnJlQ1hXSW5lVFI3QUxPZThkSjYtNXE3TVFJbFRJVC1SZ1lBMUF4NEJsQnh1RGNLWGR0NmJUYVVzMDVhaFlrOHM2ZjN1N0dTRktreDcyaVNubVplMVlYU3J2OHdXVDM50g",
-    "kodZeme": "DE",
-    "zeme": "Německo",
-    "kategorie": [
-      "sabotaz",
-      "rusko"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "shody": [
-      "sabotage",
-      "russia"
-    ],
-    "stav": "ceka"
-  },
-  {
-    "id": "k-6b5d97d7a96e274f",
-    "zachyceno": "2026-09-06T13:59:15.576Z",
-    "publikovano": "2026-08-18T07:00:00.000Z",
-    "zdroj": {
-      "nazev": "Google News — sabotage Europe",
-      "url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxPRzlSWS1CNTVDR2Z2elBodGxMRVhFUHJfalJDSGZYUktBbGhtYjZSNFZ1QVg1ZFJUcGEwam1Fcm9jNjBSM0tQaFBsSnRrd3c4ZnpyRjI4N04yT2Y0eGVISWxpblZXQTBxTV9NMDNkX3RRU2RQbl9fWExXejFyMHhuTS1telVqdTNrME04dERfZ1VwdHp2VHU1emZ6V0RWNkprZmJxTWtZanpwTmFabHlONmxhRXFlNndYYV9Xb3JYa1JIOTVy?oc=5",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Ukrainian convicted in German court over Russian sabotage plot - Euronews.com",
-    "titulekPuvodni": "Ukrainian convicted in German court over Russian sabotage plot - Euronews.com",
-    "shrnuti": "<a href=\"https://news.google.com/rss/articles/CBMixAFBVV95cUxPRzlSWS1CNTVDR2Z2elBodGxMRVhFUHJfalJDSGZYUktBbGhtYjZSNFZ1QVg1ZFJUcGEwam1Fcm9jNjBSM0tQaFBsSnRrd3c4ZnpyRjI4N04yT2Y0eGVISWxpblZXQTBxTV9NMDNkX3RRU2RQbl9fWExXejFyMHhuTS1telVqdTNrME04dERfZ1VwdHp2VHU1emZ6V0RWNkprZmJxTWtZanpwTmFabHlONmxhRXFlNndYYV",
-    "kodZeme": "DE",
-    "zeme": "Německo",
-    "kategorie": [
-      "sabotaz",
-      "rusko"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "shody": [
-      "sabotage",
-      "russia"
-    ],
-    "stav": "ceka"
-  },
-  {
-    "id": "k-d0be2d131183c6b4",
-    "zachyceno": "2026-09-06T13:59:15.576Z",
-    "publikovano": "2026-08-18T07:00:00.000Z",
-    "zdroj": {
-      "nazev": "Google News — sabotage Europe",
-      "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxNWmhpV2Y2bHRwRUlpazJ3UW5yekVmTGM3SjJsYUZSSnEzcWhKZmVUcHBjRDBZOEZvQ0dhUFpqZWVub1kxZWkzUzdXNDVzdWdvd2NVcE1PMk9oUElmN2RMMGdYWGIxSHAyTE5GQXBtTVZSR0hteWZ1d1VKTExIRnRUVFlTLXhyN0RRalIw?oc=5",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Germany jails Ukrainian over Russian sabotage mission - TVP World",
-    "titulekPuvodni": "Germany jails Ukrainian over Russian sabotage mission - TVP World",
-    "shrnuti": "<a href=\"https://news.google.com/rss/articles/CBMiiwFBVV95cUxNWmhpV2Y2bHRwRUlpazJ3UW5yekVmTGM3SjJsYUZSSnEzcWhKZmVUcHBjRDBZOEZvQ0dhUFpqZWVub1kxZWkzUzdXNDVzdWdvd2NVcE1PMk9oUElmN2RMMGdYWGIxSHAyTE5GQXBtTVZSR0hteWZ1d1VKTExIRnRUVFlTLXhyN0RRalIw?oc=5\" target=\"_blank\">Germany jails Ukrainian over Russian sa",
-    "kodZeme": "DE",
-    "zeme": "Německo",
-    "kategorie": [
-      "sabotaz",
-      "rusko"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "shody": [
-      "sabotage",
-      "russia"
-    ],
-    "stav": "ceka"
-  },
-  {
-    "id": "k-5a1bc8f1d64d2fd9",
-    "zachyceno": "2026-09-06T13:59:15.578Z",
-    "publikovano": "2026-08-18T07:00:00.000Z",
-    "zdroj": {
-      "nazev": "Google News — arson Russia-linked",
-      "url": "https://news.google.com/rss/articles/CBMiywFBVV95cUxNaW45QjlLckFuQVNhTmF1OTltZnk0a0UtdUppb1Y5RjdxM0xEdEZQenRIa1VIaG5JdVJxOEZxcHdwY0xWT3ZIUG1UZ0dIb0doam1MbHI5SU5mTGVnMWhnMmN6aHNkSEZ2ZHNteXcydi0zRUxkLWFZRDVGTW8wYlFDZUIxRUp6emRaWnBNMEpfak9NVlB2UGwzZkp4SGhlbXpjZm40UVNJZmlIaDhOOUdWc3RLVjhfR19nVHpjdEN4ZFc2TGpaYWZKRHNmNA?oc=5",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Estonia PM says arson attack on defence contractor may be linked to Russia - Reuters",
-    "titulekPuvodni": "Estonia PM says arson attack on defence contractor may be linked to Russia - Reuters",
-    "shrnuti": "<a href=\"https://news.google.com/rss/articles/CBMiywFBVV95cUxNaW45QjlLckFuQVNhTmF1OTltZnk0a0UtdUppb1Y5RjdxM0xEdEZQenRIa1VIaG5JdVJxOEZxcHdwY0xWT3ZIUG1UZ0dIb0doam1MbHI5SU5mTGVnMWhnMmN6aHNkSEZ2ZHNteXcydi0zRUxkLWFZRDVGTW8wYlFDZUIxRUp6emRaWnBNMEpfak9NVlB2UGwzZkp4SGhlbXpjZm40UVNJZmlIaDhOOUdWc3RLVjhfR19nVH",
-    "kodZeme": "EE",
-    "zeme": "Estonsko",
-    "kategorie": [
-      "sabotaz",
-      "hybridni",
-      "rusko"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "shody": [
-      "arson",
-      "attack on",
       "russia"
     ],
     "stav": "ceka"
