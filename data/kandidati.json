@@ -1,5 +1,83 @@
 [
   {
+    "id": "k-f57e2217a97f7f37",
+    "zachyceno": "2026-09-09T14:22:05.304Z",
+    "publikovano": "2026-09-09T13:32:00.000Z",
+    "zdroj": {
+      "nazev": "iROZHLAS — zprávy",
+      "url": "https://www.irozhlas.cz/zpravy-svet/pohreb-mladice-mela-evropa-vic-odsoudit-mini-kolar-stanek-meli-bychom-tu-zemi_2609091532_ako",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Pohřeb Mladiće měla Evropa víc odsoudit, míní Kolář. Staněk: Měli bychom tu zemi trochu chápat",
+    "titulekPuvodni": "Pohřeb Mladiće měla Evropa víc odsoudit, míní Kolář. Staněk: Měli bychom tu zemi trochu chápat",
+    "shrnuti": "Tisíce Srbů se přišly v pondělí rozloučit s bývalým velitelem bosenskosrbských vojsk Ratkem Mladićem odsouzeným za válečné zločiny. Eurokomisařka pro rozšíření EU kvůli tomu zrušila plánovanou cestu do Srbska. „Musíme Srbsku nabídnout důvěryhodnou perspektivu,“ říká v pořadu Pro a proti europoslanec",
+    "kodZeme": "EU",
+    "zeme": "EU",
+    "kategorie": [
+      "zpravodajske"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "shody": [
+      "odsoud"
+    ],
+    "stav": "ceka"
+  },
+  {
+    "id": "k-edcc63c9750c0683",
+    "zachyceno": "2026-09-09T14:22:05.311Z",
+    "publikovano": "2026-09-09T11:57:11.000Z",
+    "zdroj": {
+      "nazev": "ČT24 — hlavní zprávy",
+      "url": "https://ct24.ceskatelevize.cz/clanek/svet/britska-letiste-kvuli-problemum-rizeni-provozu-zrusila-pres-dva-tisice-letu-377407",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Britská letiště kvůli problémům řízení provozu zrušila přes dva tisíce letů",
+    "titulekPuvodni": "Britská letiště kvůli problémům řízení provozu zrušila přes dva tisíce letů",
+    "shrnuti": "Britská letiště ve středu opět zrušila či odložila stovky letů kvůli následkům technických problémů řízení letového provozu, které řeší od úterý. Ve dvou dnech bylo zrušeno přes 2000 letů, na letištích uvázly desítky tisíc pasažérů. Ministryně dopravy si ve středu předvolala šéfa dispečerské společn",
+    "kodZeme": "GB",
+    "zeme": "Spojené království",
+    "kategorie": [
+      "kyber"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "shody": [
+      "kyberneticky utok",
+      "kybernetick"
+    ],
+    "stav": "ceka"
+  },
+  {
+    "id": "k-2946b37f4991d345",
+    "zachyceno": "2026-09-09T14:22:05.287Z",
+    "publikovano": "2026-09-09T10:36:00.000Z",
+    "zdroj": {
+      "nazev": "ERR News (Estonsko)",
+      "url": "https://news.err.ee/1610132953/teens-charged-in-hate-fueled-arson-attacks-on-ethnic-owned-tallinn-food-businesses",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Teens charged in hate‑fueled arson attacks on ethnic-owned Tallinn food businesses",
+    "titulekPuvodni": "Teens charged in hate‑fueled arson attacks on ethnic-owned Tallinn food businesses",
+    "shrnuti": "A 16-year-old boy has been charged with multiple arson and assaults motivated by extremist views, with a 19-year-old also charged over a hammer attack.",
+    "kodZeme": "EE",
+    "zeme": "Estonsko",
+    "kategorie": [
+      "sabotaz",
+      "zpravodajske"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "shody": [
+      "arson",
+      "charged with"
+    ],
+    "stav": "ceka"
+  },
+  {
     "id": "k-12348a74fec595a9",
     "zachyceno": "2026-09-09T09:33:43.829Z",
     "publikovano": "2026-09-09T08:18:10.000Z",
@@ -1760,6 +1838,34 @@
     "stav": "ceka"
   },
   {
+    "id": "k-ca5c1ebed12cfed7",
+    "zachyceno": "2026-09-09T14:22:05.352Z",
+    "publikovano": "2026-09-02T14:06:47.000Z",
+    "zdroj": {
+      "nazev": "Google News — článek 4 a 5 NATO",
+      "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxQTGJHQzBLdkp6Y05YSUtiV09IQ0xzdzl0TVVFZFg3VG1OVjJKRTVqSFMxUU9PMFk0UjJCTzBCWm9UbDdkNjdrYzlnb0hKS2phUVlsZHlrYVJ3dTd0c1VKMm1IcGdfTkxCQTJlTFdydkZkX29tenJVRjdrMERzeFpEcXE5djhBMjBrSUNBNUdWYS1zVUd3WTVrdnhKS0pUSnFFVW5CQldNS0RNMjFmVmxiR09B0gG3AUFVX3lxTE9HTW82OFpjTWhRd0FQQzlBZGZOb0liZlBKdDlmeUFONFN1TlFyblRYbE12T0RmcDF4b0UzNU5JX2pNdWtnZ1RLY1FxVnlYd0RYMnh0enY2c0FUQjlEYjcwOFFhQ1I4bUtOcmlyWUtndWk4NjFHZ3lVaEZVVHE1NE05azI0ZHc3SXRQajJON1p4UHBFSF9jSmg1Yy02ekwzdnpRbjFjelFMUjZUWnFrYnMtb0lQa2c2Zw?oc=5",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "In Response to Russian Aggression, Germany Should Trigger NATO’s Article 4 - National Review",
+    "titulekPuvodni": "In Response to Russian Aggression, Germany Should Trigger NATO’s Article 4 - National Review",
+    "shrnuti": "<a href=\"https://news.google.com/rss/articles/CBMisgFBVV95cUxQTGJHQzBLdkp6Y05YSUtiV09IQ0xzdzl0TVVFZFg3VG1OVjJKRTVqSFMxUU9PMFk0UjJCTzBCWm9UbDdkNjdrYzlnb0hKS2phUVlsZHlrYVJ3dTd0c1VKMm1IcGdfTkxCQTJlTFdydkZkX29tenJVRjdrMERzeFpEcXE5djhBMjBrSUNBNUdWYS1zVUd3WTVrdnhKS0pUSnFFVW5CQldNS0RNMjFmVmxiR09B0gG3AUFVX3",
+    "kodZeme": "DE",
+    "zeme": "Německo",
+    "kategorie": [
+      "nato",
+      "rusko"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "shody": [
+      "article 4",
+      "nato",
+      "russia"
+    ],
+    "stav": "ceka"
+  },
+  {
     "id": "k-51b63624c4c7459d",
     "zachyceno": "2026-09-06T13:59:15.569Z",
     "publikovano": "2026-09-02T13:15:48.000Z",
@@ -2594,33 +2700,6 @@
       "cyberattack",
       "cyber",
       "nato",
-      "russia"
-    ],
-    "stav": "ceka"
-  },
-  {
-    "id": "k-a5b95368f483cd22",
-    "zachyceno": "2026-09-07T15:47:06.880Z",
-    "publikovano": "2026-08-19T13:58:12.000Z",
-    "zdroj": {
-      "nazev": "Google News — sabotage Europe",
-      "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxOTU02TDU4dkdpZHBpUnJYQ3Zpb3hhaDZPQkd2RmxXRkM0SHNJaV91all5ZFkxeTFZdjltMWZBczluaXhRbmNFTGhJa3g1Q2VUeUdyaFBjcm9YWmUwZjQ2OG1qaWxlMXZZSXZyS25vMThGZVdJRElNWmJUdF9Vem1IbjVWdl9IOXVXMFJYRGhEdw?oc=5",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Europe Is Running Out of Near Misses From Russian Sabotage - worldpoliticsreview.com",
-    "titulekPuvodni": "Europe Is Running Out of Near Misses From Russian Sabotage - worldpoliticsreview.com",
-    "shrnuti": "<a href=\"https://news.google.com/rss/articles/CBMijwFBVV95cUxOTU02TDU4dkdpZHBpUnJYQ3Zpb3hhaDZPQkd2RmxXRkM0SHNJaV91all5ZFkxeTFZdjltMWZBczluaXhRbmNFTGhJa3g1Q2VUeUdyaFBjcm9YWmUwZjQ2OG1qaWxlMXZZSXZyS25vMThGZVdJRElNWmJUdF9Vem1IbjVWdl9IOXVXMFJYRGhEdw?oc=5\" target=\"_blank\">Europe Is Running Out of Near Mis",
-    "kodZeme": "RU",
-    "zeme": "Rusko",
-    "kategorie": [
-      "sabotaz",
-      "rusko"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "shody": [
-      "sabotage",
       "russia"
     ],
     "stav": "ceka"
