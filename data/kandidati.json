@@ -1,5 +1,209 @@
 [
   {
+    "id": "k-b4a64f9454f3a999",
+    "zachyceno": "2026-09-10T14:15:04.124Z",
+    "publikovano": "2026-09-10T12:15:44.000Z",
+    "zdroj": {
+      "nazev": "BBC News — Europe",
+      "url": "https://www.bbc.co.uk/news/articles/c86x49e379vo?at_medium=RSS&at_campaign=rss",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Russian drone incursion delays Zelensky flight",
+    "titulekPuvodni": "Russian drone incursion delays Zelensky flight",
+    "shrnuti": "The unmanned aircraft entered Moldovan airspace on Tuesday afternoon as the plane was on the runway.",
+    "kodZeme": "MD",
+    "zeme": "Moldavsko",
+    "kategorie": [
+      "drony",
+      "rusko"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "shody": [
+      "drone incursion",
+      "dron",
+      "drone",
+      "airspace",
+      "russia"
+    ],
+    "stav": "ceka"
+  },
+  {
+    "id": "k-591a37060e1734d3",
+    "zachyceno": "2026-09-10T14:15:04.187Z",
+    "publikovano": "2026-09-10T12:07:00.000Z",
+    "zdroj": {
+      "nazev": "Google News — sabotáž",
+      "url": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxPMExjUnFrNmtaaVJzS2UxX1RqejMwN0Qxd3VJN09weGRNdXJaOGs0aHVuekZETXprQnVEbGhuek95LUphaXpqZTRTTVlMZWJiU2JuWG9aem11WmhzR19jamtmVDI4NUJQVlR6QjYxbWQ5RWhzbEw5WG5lV0NFVGJWRlg2WDloSGZFM3M1bm5QN09DOXJuWkZDN2NXNkR6TDdRUnhXTG1SZkxmVTk5UjhyM0hSMXhHY0tTZFFfN00xNEY5Tl9XeTdYQ0VWcTVmNTljbVhHclhaaw?oc=5",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "NATO překazilo ruskou sabotáž, ponorky zkoušely novou zbraní ničit kabely - iDNES.cz",
+    "titulekPuvodni": "NATO překazilo ruskou sabotáž, ponorky zkoušely novou zbraní ničit kabely - iDNES.cz",
+    "shrnuti": "<a href=\"https://news.google.com/rss/articles/CBMi1wFBVV95cUxPMExjUnFrNmtaaVJzS2UxX1RqejMwN0Qxd3VJN09weGRNdXJaOGs0aHVuekZETXprQnVEbGhuek95LUphaXpqZTRTTVlMZWJiU2JuWG9aem11WmhzR19jamtmVDI4NUJQVlR6QjYxbWQ5RWhzbEw5WG5lV0NFVGJWRlg2WDloSGZFM3M1bm5QN09DOXJuWkZDN2NXNkR6TDdRUnhXTG1SZkxmVTk5UjhyM0hSMXhHY0tTZF",
+    "kodZeme": "RU",
+    "zeme": "Rusko",
+    "kategorie": [
+      "sabotaz",
+      "nato",
+      "rusko"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "shody": [
+      "sabotaz",
+      "nato",
+      "rusk"
+    ],
+    "stav": "ceka"
+  },
+  {
+    "id": "k-77cad930b1d94a1d",
+    "zachyceno": "2026-09-10T14:15:04.158Z",
+    "publikovano": "2026-09-10T12:05:00.000Z",
+    "zdroj": {
+      "nazev": "iROZHLAS — zprávy",
+      "url": "https://www.irozhlas.cz/veda-technologie/technologie/112-tisic-evakuacnich-i-zasobovacich-misi-v-bojovych-oblastech-na-ukrajine-se_2609101414_jho",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "112 tisíc evakuačních i zásobovacích misí. V bojových oblastech na Ukrajině se pohybuje stále více robotů",
+    "titulekPuvodni": "112 tisíc evakuačních i zásobovacích misí. V bojových oblastech na Ukrajině se pohybuje stále více robotů",
+    "shrnuti": "Skupina ukrajinských vojáků čeká s raněným kolegou u silnice nedaleko Kosťantynivky. Nemůže se k nim dostat evakuační tým. Po chvíli u nich ale zastavuje prázdné zásobovací robotické vozidlo. Vojáci se přes komunikátor domlouvají s pilotem a následně raněného nakládají na korbu. Podobná videa na int",
+    "kodZeme": "UA",
+    "zeme": "Ukrajina",
+    "kategorie": [
+      "vojsko"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "shody": [
+      "vojak+nasadi",
+      "vojak",
+      "vojaci"
+    ],
+    "stav": "ceka"
+  },
+  {
+    "id": "k-4f8141eac3680821",
+    "zachyceno": "2026-09-10T14:15:04.193Z",
+    "publikovano": "2026-09-10T11:15:09.000Z",
+    "zdroj": {
+      "nazev": "Google News — Moldavsko vzdušný prostor",
+      "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE9GMWdiaDMwcVV2XzdwenVoa19EZWo2LTBDbGt6QW5EZDFzYUtzeEszaTJ0OGFGS1U0OUJLVnVKV2tyWXVTMHRSRi13bXRzMlIwc3Z6SlUxc2gzUQ?oc=5",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Russian drone incursion delays Zelensky flight from Moldova - BBC",
+    "titulekPuvodni": "Russian drone incursion delays Zelensky flight from Moldova - BBC",
+    "shrnuti": "<a href=\"https://news.google.com/rss/articles/CBMiWkFVX3lxTE9GMWdiaDMwcVV2XzdwenVoa19EZWo2LTBDbGt6QW5EZDFzYUtzeEszaTJ0OGFGS1U0OUJLVnVKV2tyWXVTMHRSRi13bXRzMlIwc3Z6SlUxc2gzUQ?oc=5\" target=\"_blank\">Russian drone incursion delays Zelensky flight from Moldova</a> <font color=\"#6f6f6f\">BBC</font>",
+    "kodZeme": "MD",
+    "zeme": "Moldavsko",
+    "kategorie": [
+      "drony",
+      "rusko"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "shody": [
+      "drone incursion",
+      "dron",
+      "drone",
+      "russia"
+    ],
+    "stav": "ceka"
+  },
+  {
+    "id": "k-c8bcbb25fba42a30",
+    "zachyceno": "2026-09-10T14:15:04.172Z",
+    "publikovano": "2026-09-10T11:05:56.000Z",
+    "zdroj": {
+      "nazev": "Google News — sabotage Europe",
+      "url": "https://news.google.com/rss/articles/CBMizwFBVV95cUxNdEdmRzNmQkVPWHVzRG5HRFFMajBSQnpwSUhXRnFiMzF4N3JSdnRVV0pNX3U1U29ydW1RMk1WYnh2V0RjWTNhdEtXSXc1NWNpSFgwOE5CLVRucHgySlhEWkxyQ2taXzl2Z2xZYXNrTWg5SC1hTUZjOWNIZ1QxdzR6UGpoS0RWMEFSMHZZLUd1bi13bUxhMDhQYllqQlM3YmpKYmgxR0EydTdNUkU1RnNLUzlPVFppLXNORzJUdXdVM0NGZWMxaF9EWUF0LUR0RG_SAcABQVVfeXFMTk9faTB5cldCS1RPZDhiNmFFWEdxWjUxenNONFcxcjBDT1poeXc1VU5Xc0Q0SEs3U2NEWTdiQ3ZpVmczNTdQbDYxQ3JHamNaYzJFWk45aVNrQ1NUbjhiYjladkpWa2FmSW96YTJ3TzZ6c1MyT3BSMGVvR29faThTa0lWeHQ4SXA5UV9EeUNyZXBmSktpYXNvTmtFaHlnSVFNXzJnNTZNYnVidXlrVG9teXlULXBvbHF4TVVtaXMyZDQz?oc=5",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Reuters: Deep in Arctic waters, NATO allies thwart Russian plan to sabotage undersea cables - vijesti.me",
+    "titulekPuvodni": "Reuters: Deep in Arctic waters, NATO allies thwart Russian plan to sabotage undersea cables - vijesti.me",
+    "shrnuti": "<a href=\"https://news.google.com/rss/articles/CBMizwFBVV95cUxNdEdmRzNmQkVPWHVzRG5HRFFMajBSQnpwSUhXRnFiMzF4N3JSdnRVV0pNX3U1U29ydW1RMk1WYnh2V0RjWTNhdEtXSXc1NWNpSFgwOE5CLVRucHgySlhEWkxyQ2taXzl2Z2xZYXNrTWg5SC1hTUZjOWNIZ1QxdzR6UGpoS0RWMEFSMHZZLUd1bi13bUxhMDhQYllqQlM3YmpKYmgxR0EydTdNUkU1RnNLUzlPVFppLXNORz",
+    "kodZeme": "RU",
+    "zeme": "Rusko",
+    "kategorie": [
+      "sabotaz",
+      "infrastruktura",
+      "nato",
+      "rusko"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "shody": [
+      "sabotage",
+      "undersea cable",
+      "nato",
+      "russia"
+    ],
+    "stav": "ceka"
+  },
+  {
+    "id": "k-161d1104f54a33e9",
+    "zachyceno": "2026-09-10T14:15:04.162Z",
+    "publikovano": "2026-09-10T10:29:21.000Z",
+    "zdroj": {
+      "nazev": "ČT24 — hlavní zprávy",
+      "url": "https://ct24.ceskatelevize.cz/clanek/svet/akce-nato-odradila-ruske-ponorky-od-poskozeni-kabelu-u-spicberku-377446",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Akce NATO odradila ruské ponorky od poškození kabelů u Špicberků",
+    "titulekPuvodni": "Akce NATO odradila ruské ponorky od poškození kabelů u Špicberků",
+    "shrnuti": "Armády zemí Severoatlantické aliance překazily sabotáž ruských ponorek, které poblíž souostroví Špicberky nacvičovaly poškozování podmořských kabelů. Operaci, při níž Rusko zkoušelo využití sofistikované vojenské techniky nezanechávající stopy, odhalily na jaře armády Spojených států, Británie a Nor",
+    "kodZeme": "NO",
+    "zeme": "Norsko",
+    "kategorie": [
+      "sabotaz",
+      "nato",
+      "rusko"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "shody": [
+      "sabotaz",
+      "poskozeni kabelu",
+      "nato",
+      "aliance",
+      "rusk"
+    ],
+    "stav": "ceka"
+  },
+  {
+    "id": "k-ae5f08ee37d25c26",
+    "zachyceno": "2026-09-10T14:15:04.201Z",
+    "publikovano": "2026-09-10T09:17:41.000Z",
+    "zdroj": {
+      "nazev": "Google News — Moldavsko vzdušný prostor",
+      "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxNd1QzcUx4Ul9rRDBLMzBQbFFmT3NHR01maHJKSnpHaDlHTGRjOWhwZmFIUkx6RnNCY2dlM0cxcEJZSmo2UVRJQ2FzLWI0VnJQa2hXbXdyVl9lOGpqZGt1VWxSTEJPRjRhVkQtUjgzc0djWVhRQTY2RnBCTUI4WVk3M0NvbkZ0dy1XR3R2REJPOEtiU0k?oc=5",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Drone incursion over Moldova delays Zelenskyy’s Norway flight - thetraveler.org",
+    "titulekPuvodni": "Drone incursion over Moldova delays Zelenskyy’s Norway flight - thetraveler.org",
+    "shrnuti": "<a href=\"https://news.google.com/rss/articles/CBMikwFBVV95cUxNd1QzcUx4Ul9rRDBLMzBQbFFmT3NHR01maHJKSnpHaDlHTGRjOWhwZmFIUkx6RnNCY2dlM0cxcEJZSmo2UVRJQ2FzLWI0VnJQa2hXbXdyVl9lOGpqZGt1VWxSTEJPRjRhVkQtUjgzc0djWVhRQTY2RnBCTUI4WVk3M0NvbkZ0dy1XR3R2REJPOEtiU0k?oc=5\" target=\"_blank\">Drone incursion over Moldova",
+    "kodZeme": "NO",
+    "zeme": "Norsko",
+    "kategorie": [
+      "drony"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "shody": [
+      "drone incursion",
+      "dron",
+      "drone"
+    ],
+    "stav": "ceka"
+  },
+  {
     "id": "k-68ef713a1b87c050",
     "zachyceno": "2026-09-10T09:33:26.921Z",
     "publikovano": "2026-09-10T09:15:00.000Z",
@@ -55,6 +259,37 @@
       "dron",
       "drone",
       "airspace"
+    ],
+    "stav": "ceka"
+  },
+  {
+    "id": "k-fdf3b4a0b6ba5c5f",
+    "zachyceno": "2026-09-10T14:15:04.169Z",
+    "publikovano": "2026-09-10T08:19:00.000Z",
+    "zdroj": {
+      "nazev": "Google News — sabotage Europe",
+      "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxNTnhvQWhRV2dsN3FacXZ1NEpIQk9GWURXR2hFSzRwNG1NeFFDSEV4VlBPYlZvWmx1WFZJdGhFcUEwTUdWWjExeWpWWndPcDlNNEYzNkFoY1hxX19rR0lmWXctMVRETUw3VDVCYS1nbG1kb21YQWJMZXBMRmQ5b180d1pDVVViWWFiQUlmaE5R?oc=5",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "NATO allies foil Russian subsea cable sabotage plot - japantimes.co.jp",
+    "titulekPuvodni": "NATO allies foil Russian subsea cable sabotage plot - japantimes.co.jp",
+    "shrnuti": "<a href=\"https://news.google.com/rss/articles/CBMijgFBVV95cUxNTnhvQWhRV2dsN3FacXZ1NEpIQk9GWURXR2hFSzRwNG1NeFFDSEV4VlBPYlZvWmx1WFZJdGhFcUEwTUdWWjExeWpWWndPcDlNNEYzNkFoY1hxX19rR0lmWXctMVRETUw3VDVCYS1nbG1kb21YQWJMZXBMRmQ5b180d1pDVVViWWFiQUlmaE5R?oc=5\" target=\"_blank\">NATO allies foil Russian subsea cab",
+    "kodZeme": "RU",
+    "zeme": "Rusko",
+    "kategorie": [
+      "sabotaz",
+      "infrastruktura",
+      "nato",
+      "rusko"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "shody": [
+      "sabotage",
+      "subsea cable",
+      "nato",
+      "russia"
     ],
     "stav": "ceka"
   },
@@ -1898,6 +2133,60 @@
       "sabotage",
       "power grid",
       "russia"
+    ],
+    "stav": "ceka"
+  },
+  {
+    "id": "k-fe1d2cfb3721b9ff",
+    "zachyceno": "2026-09-10T14:15:04.190Z",
+    "publikovano": "2026-09-03T04:40:00.000Z",
+    "zdroj": {
+      "nazev": "Google News — sabotáž",
+      "url": "https://news.google.com/rss/articles/CBMizwFBVV95cUxQOWlSME1zOUZ1YTZtRm1Ec1FEamhWYjBaZHhHQTQyaF9KekNfbWkzSnVKanhpTFByVERGWXJDUHRkZ0pmSDhSZkV3Sms3a1kyWWFUMjNHSGhqYi0zbExSRWM5U0hLWVBicFBEUUJQWWhNbTcxcFZZRDAtckdPVi1WNWxpLUZYTkpHR1ZSbjNQbGxJaV9rQ3gtR0VoUUJObEtFME85Sm9veEMwdzA3TFF6RS1WTmxpbzVnTXVYcVJubmI0OU1pWkxSQVlBX3FnQ1U?oc=5",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Rusko chystá sabotáže v Dánsku. Cílem je ochromit dodávky zbraní pro Kyjev - iDNES.cz",
+    "titulekPuvodni": "Rusko chystá sabotáže v Dánsku. Cílem je ochromit dodávky zbraní pro Kyjev - iDNES.cz",
+    "shrnuti": "<a href=\"https://news.google.com/rss/articles/CBMizwFBVV95cUxQOWlSME1zOUZ1YTZtRm1Ec1FEamhWYjBaZHhHQTQyaF9KekNfbWkzSnVKanhpTFByVERGWXJDUHRkZ0pmSDhSZkV3Sms3a1kyWWFUMjNHSGhqYi0zbExSRWM5U0hLWVBicFBEUUJQWWhNbTcxcFZZRDAtckdPVi1WNWxpLUZYTkpHR1ZSbjNQbGxJaV9rQ3gtR0VoUUJObEtFME85Sm9veEMwdzA3TFF6RS1WTmxpbzVnTX",
+    "kodZeme": "DK",
+    "zeme": "Dánsko",
+    "kategorie": [
+      "sabotaz",
+      "rusko"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "shody": [
+      "sabotaz",
+      "rusk"
+    ],
+    "stav": "ceka"
+  },
+  {
+    "id": "k-b8cc57e61da91a03",
+    "zachyceno": "2026-09-10T14:15:04.187Z",
+    "publikovano": "2026-09-03T04:32:00.000Z",
+    "zdroj": {
+      "nazev": "Google News — sabotáž",
+      "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxNX1NtbVFWNVJOOF9TeldWQkthSUZONlNtU0pHQmJzQVdIV1c3SU5uTERUTy1sSm5lbnZEa0FobjJPZ2gybTdxMVU2elY1Y1FGdTF6OXhIWWJjejk3M3pia2gxVmtwcTBFTlNVX3RaVnJpZXhxcEU1eGJneFRNRldhaTN1Wk9mQm9IdExjUmNIYkkzenEzSU9sc1NaX2xKajVvczI4NzhuZ05MaVVtWVJ1SjVkVHk?oc=5",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Rusko plánuje sabotáže v Dánsku, varuje tamní tajná služba - Novinky",
+    "titulekPuvodni": "Rusko plánuje sabotáže v Dánsku, varuje tamní tajná služba - Novinky",
+    "shrnuti": "<a href=\"https://news.google.com/rss/articles/CBMitAFBVV95cUxNX1NtbVFWNVJOOF9TeldWQkthSUZONlNtU0pHQmJzQVdIV1c3SU5uTERUTy1sSm5lbnZEa0FobjJPZ2gybTdxMVU2elY1Y1FGdTF6OXhIWWJjejk3M3pia2gxVmtwcTBFTlNVX3RaVnJpZXhxcEU1eGJneFRNRldhaTN1Wk9mQm9IdExjUmNIYkkzenEzSU9sc1NaX2xKajVvczI4NzhuZ05MaVVtWVJ1SjVkVHk?oc=5\" ",
+    "kodZeme": "DK",
+    "zeme": "Dánsko",
+    "kategorie": [
+      "sabotaz",
+      "rusko"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "shody": [
+      "sabotaz",
+      "rusk"
     ],
     "stav": "ceka"
   },
