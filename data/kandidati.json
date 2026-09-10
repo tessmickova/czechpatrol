@@ -294,6 +294,37 @@
     "stav": "ceka"
   },
   {
+    "id": "k-de5a7bf6c626e992",
+    "zachyceno": "2026-09-10T18:17:45.134Z",
+    "publikovano": "2026-09-10T08:00:00.000Z",
+    "zdroj": {
+      "nazev": "Google News — sabotage Europe",
+      "url": "https://news.google.com/rss/articles/CBMiygFBVV95cUxOZHktZzd2S2dFMDJGaGxETjZVYXJ3M0V2b3pmVDBJS2M0S1BkNHpKMUlNalhUQnZLRkVkMWk5eUNCWFZBdktyMUFBOXpta1N1Mk9NQ2w3YU9GekJjMnlHRi13M1N4ME5HSy1pR2ZqOUZsTzhqVW1NOF81M1JtTUJfOHRBS0xtcy1sTmZ0bFJFMUpWLV92NFRVcW5xVlV4U2dCZHRqVkFtTjJ6a3N0U0ZpU29zamlUUlY4bmY4ZWE0YUxSaVlESFJES01B?oc=5",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Nato allies foil Russian undersea cable sabotage plot deep in Arctic waters - Irish Independent",
+    "titulekPuvodni": "Nato allies foil Russian undersea cable sabotage plot deep in Arctic waters - Irish Independent",
+    "shrnuti": "<a href=\"https://news.google.com/rss/articles/CBMiygFBVV95cUxOZHktZzd2S2dFMDJGaGxETjZVYXJ3M0V2b3pmVDBJS2M0S1BkNHpKMUlNalhUQnZLRkVkMWk5eUNCWFZBdktyMUFBOXpta1N1Mk9NQ2w3YU9GekJjMnlHRi13M1N4ME5HSy1pR2ZqOUZsTzhqVW1NOF81M1JtTUJfOHRBS0xtcy1sTmZ0bFJFMUpWLV92NFRVcW5xVlV4U2dCZHRqVkFtTjJ6a3N0U0ZpU29zamlUUlY4bm",
+    "kodZeme": "RU",
+    "zeme": "Rusko",
+    "kategorie": [
+      "sabotaz",
+      "infrastruktura",
+      "nato",
+      "rusko"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "shody": [
+      "sabotage",
+      "undersea cable",
+      "nato",
+      "russia"
+    ],
+    "stav": "ceka"
+  },
+  {
     "id": "k-9876740bda14a0a4",
     "zachyceno": "2026-09-10T09:33:26.921Z",
     "publikovano": "2026-09-10T06:03:00.000Z",
@@ -349,6 +380,33 @@
       "dron",
       "drone",
       "airspace"
+    ],
+    "stav": "ceka"
+  },
+  {
+    "id": "k-a9b5a9bd81fe5bd4",
+    "zachyceno": "2026-09-10T18:17:45.155Z",
+    "publikovano": "2026-09-10T01:08:21.000Z",
+    "zdroj": {
+      "nazev": "Google News — Moldavsko vzdušný prostor",
+      "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxQcHVOSDktS0tSclE1RDZ6bWVlRXhIX2gwZ2hKYWRHSV9iek5XMDZJUG9oenhaTmlST0hnLWdjSlpDcGF5eFNaTDBIaEoyTFNJVDFkWk9Pcy1SX2VPdGVJejlYeXdpNEVYMUFMQTI5dUsxX1hXMmNNQzlURldhdVdGTlBvMDl5RDNERGZYeEJ0WmVuTFZCakpjU2Q1Z0hwWmE2SVl4WE5vNnZKaFVXcmNFMHJjSzBTWjV3VENWN3NB?oc=5",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Zelenskyy's flight to Norway this week was ​delayed in Moldova over a drone incursion, officials say - WRAL",
+    "titulekPuvodni": "Zelenskyy's flight to Norway this week was ​delayed in Moldova over a drone incursion, officials say - WRAL",
+    "shrnuti": "<a href=\"https://news.google.com/rss/articles/CBMivgFBVV95cUxQcHVOSDktS0tSclE1RDZ6bWVlRXhIX2gwZ2hKYWRHSV9iek5XMDZJUG9oenhaTmlST0hnLWdjSlpDcGF5eFNaTDBIaEoyTFNJVDFkWk9Pcy1SX2VPdGVJejlYeXdpNEVYMUFMQTI5dUsxX1hXMmNNQzlURldhdVdGTlBvMDl5RDNERGZYeEJ0WmVuTFZCakpjU2Q1Z0hwWmE2SVl4WE5vNnZKaFVXcmNFMHJjSzBTWjV3VE",
+    "kodZeme": "NO",
+    "zeme": "Norsko",
+    "kategorie": [
+      "drony"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "shody": [
+      "drone incursion",
+      "dron",
+      "drone"
     ],
     "stav": "ceka"
   },
@@ -3241,33 +3299,6 @@
     "klasifikace": "pravidla",
     "shody": [
       "naruseni vzdusneho prostoru"
-    ],
-    "stav": "ceka"
-  },
-  {
-    "id": "k-71436534c792345f",
-    "zachyceno": "2026-09-08T11:03:52.528Z",
-    "publikovano": "2026-08-20T17:21:11.000Z",
-    "zdroj": {
-      "nazev": "Google News — sabotage Europe",
-      "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxNMmFrdk1JdUxzbWtMaVo1TTJNaEdjMG5QeVhOdG1CWWI3c0VHa3JiOUJRN2kzRjFFb2N1MUVCQkVEQllqb2hLTzlTQkpLWFFvR0NlWE5ONUNVZ2NqV1pfZVRaT1gtU2daTjhPQlI2XzAtOGFrUGJXaFVHZDdWdzJzcVljeVMwZ2x6YUl0enZKN2JDZ1gwamZUYUQ5dEQyaVNjWGtEUUxxWkdXNXNSSEI2dS1ZMzRaVGJrVXVUY2NtWQ?oc=5",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "From Sabotage to Assassination: Russia’s Escalating War on Europe’s Defense Industry - Robert Lansing Institute",
-    "titulekPuvodni": "From Sabotage to Assassination: Russia’s Escalating War on Europe’s Defense Industry - Robert Lansing Institute",
-    "shrnuti": "<a href=\"https://news.google.com/rss/articles/CBMivwFBVV95cUxNMmFrdk1JdUxzbWtMaVo1TTJNaEdjMG5QeVhOdG1CWWI3c0VHa3JiOUJRN2kzRjFFb2N1MUVCQkVEQllqb2hLTzlTQkpLWFFvR0NlWE5ONUNVZ2NqV1pfZVRaT1gtU2daTjhPQlI2XzAtOGFrUGJXaFVHZDdWdzJzcVljeVMwZ2x6YUl0enZKN2JDZ1gwamZUYUQ5dEQyaVNjWGtEUUxxWkdXNXNSSEI2dS1ZMzRaVGJrVX",
-    "kodZeme": "RU",
-    "zeme": "Rusko",
-    "kategorie": [
-      "sabotaz",
-      "rusko"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "shody": [
-      "sabotage",
-      "russia"
     ],
     "stav": "ceka"
   }
