@@ -1,9 +1,9 @@
 import { TYPY_ZDROJU } from "@/lib/kategorie";
-import { datum } from "@/lib/format";
-import type { Zdroj } from "@/lib/typy";
+import { datumZdroje } from "@/lib/format";
+import type { KampanZdroj, Zdroj } from "@/lib/typy";
 import { Napoveda } from "./zaklad";
 
-export function ZnackaZdroje({ zdroj }: { zdroj: Zdroj }) {
+export function ZnackaZdroje({ zdroj }: { zdroj: Zdroj | KampanZdroj }) {
   const t = TYPY_ZDROJU[zdroj.typ];
   return (
     <Napoveda popis={<span className="block">{t.popis}</span>}>
@@ -15,7 +15,7 @@ export function ZnackaZdroje({ zdroj }: { zdroj: Zdroj }) {
 }
 
 /** Seznam zdrojů. Každé konkrétní tvrzení na webu musí mít odkud pochází. */
-export function SeznamZdroju({ zdroje, husty = false }: { zdroje: Zdroj[]; husty?: boolean }) {
+export function SeznamZdroju({ zdroje, husty = false }: { zdroje: (Zdroj | KampanZdroj)[]; husty?: boolean }) {
   if (!zdroje.length) {
     return (
       <p className="text-[12px] text-tlum2">
@@ -45,7 +45,7 @@ export function SeznamZdroju({ zdroje, husty = false }: { zdroje: Zdroj[]; husty
             </span>
           )}
           {z.publikovano && (
-            <span className="cislice text-[11.5px] text-tlum2">{datum(z.publikovano)}</span>
+            <span className="cislice text-[11.5px] text-tlum2">{datumZdroje(z.publikovano)}</span>
           )}
           {z.jazyk !== "cs" && (
             <span className="stitek !text-tlum2">{z.jazyk}</span>

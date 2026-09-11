@@ -1,11 +1,12 @@
 import Link from "next/link";
 import { druh, kdyZjisteno, novaZjisteni, pachatelPotvrzen, podlePuvodce, podleZemi, posledniZmeny, pripady, uredniZdroj, vyber, type Zaznam } from "@/lib/agregace";
 import { cerstvost, datumCasPraha, datumPraha, stariSlovy } from "@/lib/cas";
-import type { CelkovyStav, HybridniTlak, Kandidat, NatoPolozka, Nepotvrzene, PravniPolozka, ProvozniPolozka, TydenniHodnoceni, Uroven, Watchlist } from "@/lib/typy";
+import type { CelkovyStav, HybridniTlak, Kampan, Kandidat, NatoPolozka, Nepotvrzene, PravniPolozka, ProvozniPolozka, TydenniHodnoceni, Uroven, Watchlist } from "@/lib/typy";
 import { PASMA, UROVNE } from "@/lib/skala";
 import type { HlavniVeta } from "@/lib/veta";
 import { Ikona, type NazevIkony } from "./ikony";
 import { HeroDashboard } from "./hero-dashboard";
+import { DlazdiceKampane } from "./kampane";
 import { NadpisSekce } from "./nadpisy";
 import { PocitadlaEvropa, type PolozkaPoctu } from "./pocitadla-zive";
 import { NovaZjisteni } from "./nova-zjisteni";
@@ -163,12 +164,13 @@ function Pruh({ nazev, n, max, barva, odkaz }: { nazev: React.ReactNode; n: numb
 
 export function Dashboard({
   stav, pravni, natoPolozky, provozPolozky, overeno, vse, neprosle, kandidati, tydny, watchlist, cr, crHistoricky, hybridni, obcane,
-  tlakEvropa, tlakCesko, veta,
+  tlakEvropa, tlakCesko, veta, kampane, nazvyZemi,
 }: {
   stav: CelkovyStav; pravni: PravniPolozka[]; natoPolozky: NatoPolozka[]; provozPolozky: ProvozniPolozka[];
   overeno: string | null; vse: Zaznam[]; neprosle: Nepotvrzene[]; kandidati: Kandidat[]; tydny: TydenniHodnoceni[]; watchlist: Watchlist;
   cr: Uroven | null; crHistoricky: Uroven | null; hybridni: Uroven | null; obcane: { uroven: Uroven; popis: string; neovereno: number };
   tlakEvropa: HybridniTlak; tlakCesko: HybridniTlak; veta: HlavniVeta;
+  kampane: Kampan[]; nazvyZemi: Record<string, string>;
 }) {
   const platiCr = pravni.filter((p) => p.plati === true);
   const neovereneCr = pravni.filter((p) => p.plati === null).length;
@@ -297,6 +299,21 @@ export function Dashboard({
         />
         <NovaZjisteni polozky={novaZjisteni(vse, 6)} />
       </div>
+
+      {/* 2b2 — manipulační kampaně: operace, ne události */}
+      {kampane.length > 0 && (
+        <div className="nalet mt-14 border-t border-linka pt-12 sm:mt-20 sm:pt-14">
+          <NadpisSekce
+            stitek="Manipulace"
+            nadpis="Kampaně, které cíleně šíří nepravdu"
+            popis="Podvržené dokumenty, falešné weby, profily vydávající se za úředníky. U každé zvlášť říkáme, jestli je manipulace doložená — a jestli víme, kdo za ní stojí."
+            akce={<Link href="/manipulace/" className="text-[13px] font-semibold text-akcent hover:text-akcent-svetla">všechny rozbory →</Link>}
+          />
+          <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+            {kampane.slice(0, 3).map((k) => <DlazdiceKampane key={k.slug} k={k} nazvyZemi={nazvyZemi} />)}
+          </div>
+        </div>
+      )}
 
       {/* 2c — čím je tlak tvořený: pavučina typů hrozeb */}
       <div className="nalet mt-14 border-t border-linka pt-12 sm:mt-20 sm:pt-14">

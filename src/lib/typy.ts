@@ -400,3 +400,81 @@ export interface Svet {
   stret: { otazky: string[]; postoje: Record<string, string[]> };
   sledovat: { text: string; smer: "nahoru" | "dolu" | "obojí" }[];
 }
+
+/* ---------- manipulační kampaně ---------- */
+
+/**
+ * Zdroj u kampaně.
+ *
+ * Oproti zdroji u incidentu smí mít datum jen na měsíc (`2026-08`), když
+ * není doložený den. Domýšlet si první srpna jen proto, aby datum vypadalo
+ * přesně, by bylo horší než přiznat, že přesný den nemáme.
+ */
+export interface KampanZdroj {
+  nazev: string;
+  url: string;
+  typ: TypZdroje;
+  /** `2026-08-17` nebo `2026-08`. Nikdy se nedoplňuje odhadem. */
+  publikovano: string;
+  primarni: boolean;
+  jazyk: string;
+}
+
+/**
+ * Kdo kampaň vede.
+ *
+ * Úmyslně samostatná struktura s vlastní jistotou. Že je něco prokazatelně
+ * manipulace, neříká vůbec nic o tom, kdo za ní stojí — a naopak. Slévat
+ * obojí do jednoho hodnocení je nejčastější chyba, kterou v téhle oblasti
+ * dělají i velká média.
+ */
+export interface KampanPuvodce {
+  /** Komu se kampaň připisuje. Prázdné = nikomu; „neznámý“ je platná odpověď. */
+  koho: string;
+  jistota: Jistota;
+  /** Proč právě takhle. Bez toho je štítek jen tvrzení. */
+  duvod: string;
+}
+
+/**
+ * Manipulační kampaň = koordinované šíření nepravdy, ne jednotlivá lež.
+ *
+ * Kampaň není incident: nemá jedno místo ani jeden okamžik a obvykle míří
+ * na víc zemí najednou. Proto se vede zvlášť a do počtu případů nevstupuje.
+ */
+export interface Kampan {
+  id: string;
+  slug: string;
+  /** Krátké jméno, pod kterým se o kampani mluví. */
+  nazev: string;
+  /** Celá věta: co se dělo. */
+  titulek: string;
+  /** Země, na které kampaň mířila. Jedna kampaň jich může mít víc. */
+  kodyZemi: string[];
+  /** Kdy kampaň vyšla najevo. */
+  odhaleno: string;
+  /** Kdo ji popsal jako první. */
+  kdoOdhalil: string;
+  /** Běží dál, nebo utichla. */
+  probiha: boolean;
+  /** 1 — co se tvrdilo. */
+  tvrzeni: string[];
+  /** 2 — jak se to šířilo. */
+  kanaly: string[];
+  /** 3 — jak to je doloženo. */
+  skutecnost: string[];
+  /** 4 — kdo na to reagoval. */
+  reakce: string[];
+  /** 5 — čemu to mělo posloužit. Výslovně odhad projektu, ne doložený fakt. */
+  ucel: string;
+  /** 6 — co by otázku po původci uzavřelo. */
+  coByPotvrdilo: string[];
+  /** Je to vůbec manipulace? Nezávisle na tom, kdo za ní stojí. */
+  jistotaManipulace: Jistota;
+  duvodManipulace: string;
+  puvodce: KampanPuvodce;
+  zdroje: KampanZdroj[];
+  /** Bez lidské kontroly se kampaň nezobrazuje a do žádného počtu nevstupuje. */
+  lidskyOvereno: boolean;
+  aktualizovano: string;
+}

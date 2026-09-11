@@ -10,7 +10,7 @@ import { TYPY_ZDROJU } from "@/lib/kategorie";
 import type { SvetAktor, SvetTvrzeni } from "@/lib/typy";
 
 export const metadata: Metadata = {
-  title: "Svět: cíle mocností",
+  title: "Aktéři a cíle",
   description: "Kdo chce co, co pro to dělá a jak daleko od toho je. Deklarované cíle se zdroji, míra přiblížení jako hodnocení projektu.",
 };
 
@@ -123,7 +123,7 @@ export default function Svet() {
   return (
     <div className="mx-auto max-w-[1200px] px-5 py-12 sm:px-8 sm:py-16">
       <div>
-        <HlavickaStranky stitek="Svět" nadpis="Kdo čeho chce dosáhnout a jak blízko je" uvod={s.uvod} />
+        <HlavickaStranky stitek="Aktéři a cíle" nadpis="Kdo čeho chce dosáhnout a jak blízko je" uvod={s.uvod} />
         <p className="mt-6 flex flex-wrap items-center gap-x-3 gap-y-1 text-[12.5px] text-tlum2">
           <span>Hodnocení projektu k {datumPraha(s.aktualizovano)}, verze {s.verze}</span>
           <span aria-hidden>·</span>

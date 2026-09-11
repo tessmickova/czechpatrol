@@ -1,6 +1,6 @@
 import { JE_UKAZKA } from "@/config/web";
 import type {
-  Archiv, CelkovyStav, HybridniTlak, Incident, Kandidat, Kategorie, NatoPolozka, Oprava, PravniStav,
+  Archiv, CelkovyStav, HybridniTlak, Incident, Kampan, Kandidat, Kategorie, NatoPolozka, Oprava, PravniStav,
   Nepotvrzene, Provoz, Puvodce, RuskoStav, Svet, TydenniHodnoceni, Uroven, Watchlist,
 } from "./typy";
 import { PORADI_KATEGORII } from "./kategorie";
@@ -21,6 +21,7 @@ import mesiceData from "../../data/mesice.json";
 import ostreOpravy from "../../data/opravy.json";
 import ostriKandidati from "../../data/kandidati.json";
 import ostrySvet from "../../data/svet.json";
+import ostreKampane from "../../data/kampane.json";
 
 import ukazkoveIncidenty from "../../data/ukazka/incidenty.json";
 import ukazkovyStav from "../../data/ukazka/stav.json";
@@ -377,6 +378,59 @@ export function dnyBezZmeny(): { dnu: number; odZacatkuArchivu: boolean } | null
  */
 export function kandidati(): Kandidat[] {
   return jako<Kandidat[]>(ostriKandidati).slice().sort((a, b) => (b.publikovano ?? b.zachyceno).localeCompare(a.publikovano ?? a.zachyceno));
+}
+
+/**
+ * Manipulační kampaně, které prošly lidskou kontrolou. Nejnovější první.
+ *
+ * Do počtu případů nevstupují. Kampaň není událost: nemá jedno místo ani
+ * jeden okamžik a obvykle míří na víc zemí naráz.
+ */
+export function kampane(): Kampan[] {
+  return jako<Kampan[]>(ostreKampane)
+    .filter((k) => k.lidskyOvereno)
+    .slice()
+    .sort((a, b) => b.odhaleno.localeCompare(a.odhaleno));
+}
+
+export function kampan(slug: string): Kampan | undefined {
+  return kampane().find((k) => k.slug === slug);
+}
+
+/** Kampaně mířící na danou zemi. Jedna kampaň se objeví u každé z nich. */
+export function kampaneZeme(kodZeme: string): Kampan[] {
+  return kampane().filter((k) => k.kodyZemi.includes(kodZeme.toUpperCase()));
+}
+
+/**
+ * Kolik zpracovaných kampaní míří na kterou zemi.
+ *
+ * Počítají se jen kampaně, které prošly ověřením — ne všechno, co kde
+ * koluje. Součet přes země je proto vyšší než počet kampaní: jedna kampaň
+ * může mířit na několik zemí naráz a u každé se počítá.
+ */
+export function kampanePodleZemi(): { kodZeme: string; pocet: number; posledni: string }[] {
+  const mapa = new Map<string, { kodZeme: string; pocet: number; posledni: string }>();
+  for (const k of kampane()) {
+    for (const kod of k.kodyZemi) {
+      const z = mapa.get(kod) ?? { kodZeme: kod, pocet: 0, posledni: k.odhaleno };
+      z.pocet += 1;
+      if (k.odhaleno > z.posledni) z.posledni = k.odhaleno;
+      mapa.set(kod, z);
+    }
+  }
+  return [...mapa.values()].sort((a, b) => {
+    if (a.kodZeme === "CZ") return -1;
+    if (b.kodZeme === "CZ") return 1;
+    return b.pocet - a.pocet || a.kodZeme.localeCompare(b.kodZeme);
+  });
+}
+
+/** Kód země → český název podle záznamů. Neznámý kód zůstane kódem, nic se nedomýšlí. */
+export function nazvyZemi(): Record<string, string> {
+  const m: Record<string, string> = { CZ: "Česko" };
+  for (const i of incidenty()) if (!m[i.kodZeme]) m[i.kodZeme] = i.zeme;
+  return m;
 }
 
 /** Cíle mocností a míra jejich naplnění — analytická stránka, verzovaná a datovaná. */

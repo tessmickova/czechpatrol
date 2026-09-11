@@ -3,7 +3,8 @@ import { druh, kdyZjisteno, novaZjisteni, pachatelPotvrzen, uredniZdroj, type Za
 import { datumPraha } from "@/lib/cas";
 import { KATEGORIE } from "@/lib/kategorie";
 import { PASMA, UROVNE, zDeseti } from "@/lib/skala";
-import type { HybridniTlak, Kategorie } from "@/lib/typy";
+import type { HybridniTlak, Kampan, Kategorie } from "@/lib/typy";
+import { DlazdiceKampane } from "./kampane";
 import { NadpisBloku } from "./nadpisy";
 import { NovaZjisteni } from "./nova-zjisteni";
 import { PavucinaHrozeb } from "./pavucina";
@@ -50,6 +51,8 @@ export function ZemePrehled({
   tlak,
   polozky,
   ted,
+  kampane = [],
+  nazvyZemi = {},
 }: {
   kodZeme: string;
   nazev: string;
@@ -57,6 +60,8 @@ export function ZemePrehled({
   tlak: HybridniTlak;
   polozky: PolozkaPoctu[];
   ted: number;
+  kampane?: Kampan[];
+  nazvyZemi?: Record<string, string>;
 }) {
   const pripady = zaznamy.filter((i) => druh(i) === "pripad");
   const potvrzeno = pripady.filter(pachatelPotvrzen).length;
@@ -120,6 +125,19 @@ export function ZemePrehled({
           </section>
         </div>
       </div>
+
+      {kampane.length > 0 && (
+        <div className="nalet mt-14 border-t border-linka pt-12 sm:mt-20 sm:pt-14">
+          <NadpisBloku
+            nadpis="Manipulační kampaně mířené sem"
+            popis="Koordinované šíření nepravdy. Nepočítá se mezi případy — je to operace, ne událost."
+            akce={<Link href="/manipulace/" className="text-[13px] font-semibold text-akcent hover:text-akcent-svetla">celý rozbor →</Link>}
+          />
+          <div className="grid gap-3 sm:grid-cols-2">
+            {kampane.map((k) => <DlazdiceKampane key={k.slug} k={k} nazvyZemi={nazvyZemi} />)}
+          </div>
+        </div>
+      )}
 
       {zjisteni.length > 0 && (
         <div className="nalet mt-14 border-t border-linka pt-12 sm:mt-20 sm:pt-14">

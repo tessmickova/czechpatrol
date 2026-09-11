@@ -1,6 +1,6 @@
 import { BannerStari } from "@/components/cerstvost";
 import { Dashboard } from "@/components/dashboard";
-import { celkovyStav, hybridniTlak, incidenty, kandidati, nato, nepotvrzene, posledniOvereni, pravniStav, provoz, tlakCr, tydny, urovenObcanu, urovenZemeObdobi, watchlist } from "@/lib/data";
+import { celkovyStav, hybridniTlak, incidenty, kampane, kandidati, nato, nazvyZemi, nepotvrzene, posledniOvereni, pravniStav, provoz, tlakCr, tydny, urovenObcanu, urovenZemeObdobi, watchlist } from "@/lib/data";
 import { hlavniVeta } from "@/lib/veta";
 
 /**
@@ -30,6 +30,8 @@ export default function Prehled() {
         tlakCesko={tlakCr()}
         obcane={urovenObcanu()}
         veta={hlavniVeta(pravniStav().polozky, provoz().polozky, hybridniTlak().celkem)}
+        kampane={kampane()}
+        nazvyZemi={nazvyZemi()}
       />
     </>
   );

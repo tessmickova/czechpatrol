@@ -1,0 +1,115 @@
+[
+  {
+    "id": "tesinsko-2026",
+    "slug": "tesinsko-2026",
+    "nazev": "Těšínsko",
+    "titulek": "Podvržený dopis polského ministerstva a falešný web Českého rozhlasu tvrdily, že si Polsko chce vzít část českého území",
+    "kodyZemi": ["CZ", "PL"],
+    "odhaleno": "2026-08-17",
+    "kdoOdhalil": "polský server CyberDefence24",
+    "probiha": false,
+    "tvrzeni": [
+      "Polsko prý po Česku oficiálně žádá vydání 638,44 hektaru území na Těšínsku. Číslo mělo pocházet z dopisu polského ministerstva zahraničí.",
+      "Žádost prý potvrdil český velvyslanec ve Varšavě Břetislav Dančák — jeho jménem se šířil příspěvek i video.",
+      "Občané prý mají přijít na demonstraci na náměstí v Třinci „na obranu českých hranic“."
+    ],
+    "kanaly": [
+      "Průnik do dvou polských webů. Na stránkách regionálního Polského rozhlasu PiK byl přepsán už zveřejněný článek na text o údajném polském plánu.",
+      "Falešná kopie webu Českého rozhlasu na adrese lrozhlas.cz — zaměňuje malé „l“ za velké „I“, takže se v běžném písmu adresa od irozhlas.cz nepozná.",
+      "Falešné facebookové profily vydávající se za českého velvyslance Břetislava Dančáka a za polského náměstka ministra zahraničí Artura Harazima. U jednoho z nich video vytvořené umělou inteligencí.",
+      "Placená propagace z účtu „Adam Sikora“, který zval na demonstraci v Třinci. Účty měly jen několik desítek kontaktů a profilové fotky nasazené až na konci května."
+    ],
+    "skutecnost": [
+      "Polsko žádnou takovou žádost nepodalo. Dopis byl podvrh: byl napsaný česky a jen poslední dvě slova polsky, což podle novinářů CyberDefence24 ukazuje na text vytvořený umělou inteligencí.",
+      "Číslo 638,44 hektaru neodpovídá ničemu skutečnému. Reálný „územní dluh“ z úprav hranic v padesátých letech je zhruba 368,44 hektaru: Polsko tehdy předalo 1 205,9 hektaru a Československo Polsku 837,46 hektaru.",
+      "Kampaň využila skutečnou, desítky let otevřenou technickou otázku mezi oběma státy — a přelepila ji vymyšleným nárokem a vymyšleným číslem."
+    ],
+    "reakce": [
+      "Český rozhlas nechal falešný web vypnout a oznámil, že zvažuje další právní kroky na ochranu své pověsti.",
+      "Polské ministerstvo zahraničí kampaň označilo za pokus postavit Poláky a Čechy proti sobě a uvedlo, že přátelství mezi národy nenaruší.",
+      "Na kampaň veřejně reagoval i polský premiér Donald Tusk.",
+      "Český premiér Andrej Babiš na vládě vytkl civilní rozvědce ÚZSI a velvyslanectví ve Varšavě, že o věci neinformovaly včas."
+    ],
+    "ucel": "Rozdělit Česko a Polsko v době, kdy obě země spolupracují na východním křídle NATO. Kampaň nemířila na jednorázové zmatení, ale na oživení historické křivdy z roku 1938, kterou lze opakovaně připomínat. Tohle je hodnocení projektu, ne doložený fakt.",
+    "coByPotvrdilo": [
+      "Úřední závěr českých nebo polských orgánů, který kampaň připíše konkrétnímu státu nebo skupině.",
+      "Technické doložení průniku do webu Polského rozhlasu PiK (odkud útok vedl, jakými nástroji).",
+      "Napojení účtů „Adam Sikora“ a falešných diplomatických profilů na dříve popsanou síť."
+    ],
+    "jistotaManipulace": "potvrzeno",
+    "duvodManipulace": "Podvržený dokument i falešný web jsou doložené a Český rozhlas nechal napodobeninu vypnout. Že šlo o cílené klamání, není sporné.",
+    "puvodce": {
+      "koho": "Rusko",
+      "jistota": "nizka",
+      "duvod": "Část polských i českých expertů a politiků původ kampaně přisuzuje Rusku. Žádný úřad to zatím veřejně nedoložil, proto to vedeme jako podezření, ne jako zjištění."
+    },
+    "zdroje": [
+      {
+        "nazev": "CyberDefence24: Fake news o polskim zajęciu czeskich ziem. Włamanie do radia i fałszywe strony",
+        "url": "https://cyberdefence24.pl/cyberbezpieczenstwo/dezinformacja/wlamanie-do-radia-i-falszywe-strony-fake-newsy-o-polskim-zajeciu-czeskich-ziem",
+        "typ": "analysis",
+        "publikovano": "2026-08-17",
+        "primarni": false,
+        "jazyk": "pl"
+      },
+      {
+        "nazev": "CyberDefence24: Fałszywe konto na FB uderzało w polsko-czeskie relacje",
+        "url": "https://cyberdefence24.pl/cyberbezpieczenstwo/dezinformacja/falszywe-konto-na-fb-uderzalo-w-polsko-czeskie-relacje-idz-na-protest",
+        "typ": "analysis",
+        "publikovano": "2026-08",
+        "primarni": false,
+        "jazyk": "pl"
+      },
+      {
+        "nazev": "iROZHLAS: Zvažujeme další právní postup. Neznámí útočníci šířili dezinformace skrz falešný web",
+        "url": "https://www.irozhlas.cz/zpravy-domov/zvazujeme-dalsi-pravni-postup-neznami-utocnici-sirili-dezinformace-skrz-falesny_2608251907_jar",
+        "typ": "primary",
+        "publikovano": "2026-08-25",
+        "primarni": true,
+        "jazyk": "cs"
+      },
+      {
+        "nazev": "CyberDefence24: MSZ komentuje kampanię dezinformacyjną o Zaolziu",
+        "url": "https://cyberdefence24.pl/cyberbezpieczenstwo/dezinformacja/msz-komentuje-kampanie-dezinformacyjna-o-zaolziu-przyjazn-miedzy-narodami",
+        "typ": "media",
+        "publikovano": "2026-08",
+        "primarni": false,
+        "jazyk": "pl"
+      },
+      {
+        "nazev": "zwrot.cz: Dezinformační kampaň má poškodit česko-polské vztahy",
+        "url": "https://cs.zwrot.cz/2026/08/dezinformacni-kampan-ma-poskodit-cesko-polske-vztahy/",
+        "typ": "local",
+        "publikovano": "2026-08",
+        "primarni": false,
+        "jazyk": "cs"
+      },
+      {
+        "nazev": "Echo24: Územní dluh 368 hektarů — velvyslanec ve Varšavě popsal kampaň, v níž byl sám zneužit",
+        "url": "https://www.echo24.cz/a/HYdeb/uzemni-dluh-368-hektaru-kampan-polsko-cesko-rusko-dezinformace-vlivova-operace-bretislav-dancak-babis-macinka-mzv",
+        "typ": "media",
+        "publikovano": "2026-08",
+        "primarni": false,
+        "jazyk": "cs"
+      },
+      {
+        "nazev": "Deník: Že chce Polsko zabrat část českého území? Propracovaná lživá kampaň",
+        "url": "https://www.denik.cz/cesko/dezinformace-polsko-nechce-zabrat-cast-ceskeho-uzemi/",
+        "typ": "media",
+        "publikovano": "2026-08",
+        "primarni": false,
+        "jazyk": "cs"
+      },
+      {
+        "nazev": "ČTK / České noviny: Babiš — u dezinformací o polských nárocích chybovala rozvědka a velvyslanec",
+        "url": "https://www.ceskenoviny.cz/zpravy/babis-u-dezinformaci-o-polskych-narocich-chybovala-rozvedka-a-velvyslanec/2867976",
+        "typ": "wire",
+        "publikovano": "2026-08",
+        "primarni": false,
+        "jazyk": "cs"
+      }
+    ],
+    "lidskyOvereno": true,
+    "aktualizovano": "2026-09-11T07:00:00Z"
+  }
+]

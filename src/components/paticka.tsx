@@ -6,11 +6,11 @@ import { Logo } from "./znacka";
 const SLOUPCE: { nadpis: string; odkazy: [string, string][] }[] = [
   {
     nadpis: "Obsah",
-    odkazy: [["/", "Přehled"], ["/udalosti/", "Události"], ["/vyvoj/", "Vývoj"], ["/svet/", "Svět"], ["/zeme/", "Země"], ["/muj-prehled/", "Můj přehled"], ["/odber/", "Odběr a RSS"]],
+    odkazy: [["/", "Přehled"], ["/udalosti/", "Události"], ["/manipulace/", "Manipulace"], ["/zeme/", "Země"], ["/analyzy/", "Analýzy"], ["/muj-prehled/", "Můj přehled"], ["/odber/", "Odběr a RSS"]],
   },
   {
     nadpis: "Důvěryhodnost",
-    odkazy: [["/metodika/", "Metodika"], ["/zdroje/", "Zdroje"], ["/opravy/", "Opravy a historie"], ["/o-projektu/", "O projektu"]],
+    odkazy: [["/metodika/", "Metodika"], ["/zdroje/", "Zdroje"], ["/opravy/", "Opravy a historie"], ["/vyvoj/", "Vývoj"], ["/svet/", "Aktéři a cíle"], ["/o-projektu/", "O projektu"]],
   },
   {
     nadpis: "Projekt",

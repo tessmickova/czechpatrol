@@ -1,3 +1,9 @@
+/** První pád — pro údaj bez dne („srpen 2026“). */
+const MESICE_NAZEV = [
+  "leden", "únor", "březen", "duben", "květen", "červen",
+  "červenec", "srpen", "září", "říjen", "listopad", "prosinec",
+];
+
 const MESICE = [
   "ledna", "února", "března", "dubna", "května", "června",
   "července", "srpna", "září", "října", "listopadu", "prosince",
@@ -44,4 +50,17 @@ export function pocet(n: number, jeden: string, dva: string, pet: string): strin
   if (n === 1) return `${n} ${jeden}`;
   if (n >= 2 && n <= 4) return `${n} ${dva}`;
   return `${n} ${pet}`;
+}
+
+/**
+ * Datum u zdroje.
+ *
+ * Některé zdroje mají doložený jen měsíc vydání. V takovém případě se napíše
+ * měsíc — domyslet si první den jen proto, aby údaj vypadal přesně, by bylo
+ * horší než přiznat, že přesný den nemáme.
+ */
+export function datumZdroje(iso: string): string {
+  const m = /^(\d{4})-(\d{2})$/.exec(iso);
+  if (m) return `${MESICE_NAZEV[Number(m[2]) - 1]} ${m[1]}`;
+  return datum(iso);
 }

@@ -7,13 +7,17 @@ import { Ikona } from "./ikony";
 import { otevriPanel } from "./postranni-panel";
 import { Logo } from "./znacka";
 
-/** Čtyři hlavní cíle. Všechno ostatní je v patičce a v postranním panelu. */
+/*
+  Šest cílů. Vývoj, Aktéři a Manipulace stojí pod jedním rozcestníkem
+  Analýzy — jsou to tři odpovědi na tutéž otázku „co z toho plyne“ a
+  v liště by se rozpadly do nesrozumitelného výčtu.
+*/
 export const HLAVNI = [
   { href: "/", label: "Přehled" },
   { href: "/udalosti/", label: "Události" },
-  { href: "/vyvoj/", label: "Vývoj" },
-  { href: "/svet/", label: "Svět" },
+  { href: "/manipulace/", label: "Manipulace" },
   { href: "/zeme/", label: "Země" },
+  { href: "/analyzy/", label: "Analýzy" },
   { href: "/muj-prehled/", label: "Můj přehled" },
 ];
 

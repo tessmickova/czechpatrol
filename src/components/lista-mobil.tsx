@@ -8,8 +8,8 @@ import { otevriPanel } from "./postranni-panel";
 const POLOZKY: { href: string; label: string; ikona: NazevIkony }[] = [
   { href: "/", label: "Přehled", ikona: "radar" },
   { href: "/udalosti/", label: "Události", ikona: "osa" },
-  { href: "/vyvoj/", label: "Vývoj", ikona: "graf" },
-  { href: "/svet/", label: "Svět", ikona: "globus" },
+  { href: "/manipulace/", label: "Manipulace", ikona: "bublina" },
+  { href: "/analyzy/", label: "Analýzy", ikona: "graf" },
 ];
 
 /** Spodní lišta na mobilu: čtyři stránky a Menu, každý cíl aspoň 44 px vysoký. */

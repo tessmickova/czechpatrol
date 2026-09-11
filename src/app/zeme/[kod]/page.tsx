@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { druh, kdyZjisteno, podleZemi } from "@/lib/agregace";
-import { incidenty, tlakZeme } from "@/lib/data";
+import { incidenty, kampaneZeme, nazvyZemi, tlakZeme } from "@/lib/data";
 import { UROVNE } from "@/lib/skala";
 import { HlavickaStranky } from "@/components/nadpisy";
 import type { PolozkaPoctu } from "@/components/pocitadla-zive";
@@ -57,7 +57,16 @@ export default async function StrankaZeme({ params }: { params: Promise<{ kod: s
         }
       />
       <div id="zaznamy" className="scroll-mt-[84px]" />
-      <ZemePrehled kodZeme={z.kod} nazev={z.nazev} zaznamy={vse} tlak={tlak} polozky={polozky} ted={Date.now()} />
+      <ZemePrehled
+        kodZeme={z.kod}
+        nazev={z.nazev}
+        zaznamy={vse}
+        tlak={tlak}
+        polozky={polozky}
+        ted={Date.now()}
+        kampane={kampaneZeme(z.kod)}
+        nazvyZemi={nazvyZemi()}
+      />
     </div>
   );
 }
