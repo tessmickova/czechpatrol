@@ -6537,5 +6537,439 @@
     "zapocitanoTyden": "2026-09-08",
     "aiZpracovano": true,
     "lidskyOvereno": true
+  },
+  {
+    "id": "i-2026-09-10-svalbard-kabely",
+    "slug": "svalbard-nato-zabranilo-naciku-prerezani-kabelu-2026",
+    "titulek": "Arktida: britské, norské a americké síly zastavily ruské ponorky, které u Špicberk nacvičovaly přerušení podmořských kabelů",
+    "kratkyTitulek": "Špicberky: zmařený nácvik na kabely",
+    "zeme": "Norsko",
+    "kodZeme": "NO",
+    "kategorie": [
+      "sabotaz",
+      "infrastruktura",
+      "nato",
+      "rusko"
+    ],
+    "datumUdalosti": "2026-09-10T00:00:00Z",
+    "datumZjisteni": "2026-09-10T00:00:00Z",
+    "aktualizovano": "2026-09-11T11:00:00Z",
+    "zavaznost": "O1",
+    "jistota": "vysoka",
+    "stav": "bez-vysetrovani",
+    "atribuce": "nepotvrzena",
+    "puvodce": "rusko",
+    "druh": "pripad",
+    "fakta": [
+      "Agentura Reuters 10. září 2026 zveřejnila, že spojenci NATO zastihli v arktických vodách u souostroví Špicberky ruské ponorky při nácviku vyřazení podmořských kabelů. Zprávu převzala řada evropských redakcí.",
+      "Podle dvou západních představitelů, se kterými Reuters mluvila, akci prováděla ruská správa hlubinného výzkumu GUGI pomocí hlubinných ponorných prostředků a šlo o nácvik nasazení prostředku, který má kabel vyřadit bez zanechání stop.",
+      "Společná akce Británie, Norska a Spojených států ruská plavidla sledovala a oslovila na moři. Plavidla nácvik nedokončila a oblast opustila.",
+      "Dva optické kabely dlouhé 1 400 kilometrů spojují Špicberky s pevninským Norskem a leží až 2 700 metrů pod hladinou. Vedou data z pozemní satelitní stanice SvalSat, která je největší svého druhu na světě a je součástí sítě NASA Near Space Network.",
+      "Ruské ministerstvo obrany na žádost Reuters o vyjádření neodpovědělo. Kreml dlouhodobě popírá, že by v zemích NATO prováděl sabotáže."
+    ],
+    "neznameho": [
+      "Přesné datum akce. Reuters uvádí jen jaro 2026; den ani týden zveřejněn nebyl, proto ho zde neuvádíme.",
+      "Jak přesně měl popisovaný prostředek fungovat a zda už byl někde nasazen.",
+      "Zda některá ze zúčastněných vlád akci potvrdí na záznam. Zatím o ní mluvili jen nejmenovaní představitelé."
+    ],
+    "vyznam": "Zmařený nácvik, ne škoda. Podstatné je, na co mířil: kabely ke Špicberkám nesou data z pozemní satelitní stanice, na které závisí i civilní a vědecký provoz. Tohle je hodnocení projektu, ne doložený fakt.",
+    "eskalacniSpousteče": [
+      "Skutečné přerušení některého ze severoatlantických kabelů.",
+      "Oficiální potvrzení akce některou ze zúčastněných vlád spolu s přiřazením konkrétní ruské jednotce."
+    ],
+    "deeskalacniSignaly": [
+      "Doložení, že šlo o běžnou výzkumnou činnost, ne o nácvik na infrastrukturu."
+    ],
+    "zdroje": [
+      {
+        "nazev": "ČT24 — Akce NATO odradila ruské ponorky od poškození kabelů u Špicberků",
+        "url": "https://ct24.ceskatelevize.cz/clanek/svet/akce-nato-odradila-ruske-ponorky-od-poskozeni-kabelu-u-spicberku-377446",
+        "typ": "media",
+        "publikovano": "2026-09-10T00:00:00Z",
+        "primarni": false,
+        "jazyk": "cs"
+      },
+      {
+        "nazev": "Euronews — NATO allies successfully thwart Russian undersea cable sabotage operation",
+        "url": "https://www.euronews.com/my-europe/2026/09/10/nato-allies-successfully-thwart-russian-undersea-cable-sabotage-operation",
+        "typ": "media",
+        "publikovano": "2026-09-10T00:00:00Z",
+        "primarni": false,
+        "jazyk": "en"
+      },
+      {
+        "nazev": "Defense News — NATO allies foil Russian subsea cable sabotage plot",
+        "url": "https://www.defensenews.com/global/europe/2026/09/10/nato-allies-foil-russian-subsea-cable-sabotage-plot/",
+        "typ": "media",
+        "publikovano": "2026-09-10T00:00:00Z",
+        "primarni": false,
+        "jazyk": "en"
+      },
+      {
+        "nazev": "U.S. News (Reuters) — Exclusive: NATO allies foil Russian subsea cable sabotage plot",
+        "url": "https://www.usnews.com/news/world/articles/2026-09-10/exclusive-nato-allies-foil-russian-subsea-cable-sabotage-plot",
+        "typ": "wire",
+        "publikovano": "2026-09-10T00:00:00Z",
+        "primarni": false,
+        "jazyk": "en"
+      },
+      {
+        "nazev": "The Irish Times — Nato allies say they foiled Russian subsea cable sabotage plot",
+        "url": "https://www.irishtimes.com/world/europe/2026/09/11/nato-allies-say-they-foiled-russian-subsea-cable-sabotage-plot/",
+        "typ": "media",
+        "publikovano": "2026-09-11T00:00:00Z",
+        "primarni": false,
+        "jazyk": "en"
+      }
+    ],
+    "souvisejici": [],
+    "historie": [
+      {
+        "kdy": "2026-09-10T00:00:00Z",
+        "text": "Reuters zveřejnila akci, o které dosud žádná vláda veřejně nemluvila.",
+        "novySignal": true
+      }
+    ],
+    "novy": true,
+    "zapocitanoTyden": "2026-W37",
+    "aiZpracovano": true,
+    "lidskyOvereno": true
+  },
+  {
+    "id": "i-2026-09-08-moldavsko-dron",
+    "slug": "moldavsko-dron-uzavrel-vzdusny-prostor-2026",
+    "titulek": "Moldavsko uzavřelo vzdušný prostor kvůli ruskému dronu; zdrželo to i letadlo s ukrajinským prezidentem",
+    "kratkyTitulek": "Moldavsko: dron uzavřel vzdušný prostor",
+    "zeme": "Moldavsko",
+    "kodZeme": "MD",
+    "kategorie": [
+      "drony",
+      "hranice",
+      "rusko"
+    ],
+    "datumUdalosti": "2026-09-08T00:00:00Z",
+    "datumZjisteni": "2026-09-09T00:00:00Z",
+    "aktualizovano": "2026-09-11T11:00:00Z",
+    "zavaznost": "O1",
+    "jistota": "vysoka",
+    "stav": "probiha",
+    "atribuce": "oficialni",
+    "puvodce": "rusko",
+    "druh": "pripad",
+    "fakta": [
+      "Moldavsko v úterý 8. září 2026 odpoledne uzavřelo svůj vzdušný prostor poté, co zaznamenalo vniknutí dronu s proudovým pohonem.",
+      "Uzavření zdrželo tři odlety z mezinárodního letiště v Kišiněvě, mezi nimi letadlo s ukrajinským prezidentem Volodymyrem Zelenským. Ten mířil na pohřeb norského krále Haralda V.",
+      "Letadlo dostalo povolení ke vzletu až poté, co bylo zjištěno, že dron dopadl. Ten explodoval zhruba 160 kilometrů od letiště.",
+      "Moldavská policie našla úlomky dronu; pohonná jednotka a další znaky podle ní odpovídají typu Geran, který Rusko ve velkém používá ve válce proti Ukrajině.",
+      "Norská vláda incident veřejně odsoudila jako narušení moldavského vzdušného prostoru ruskými drony."
+    ],
+    "neznameho": [
+      "Zda dron mířil na konkrétní cíl, nebo šlo o odchylku z kurzu.",
+      "Jak blízko letadla se dron ve skutečnosti dostal. Norský premiér mluvil o tom, že letadlo bylo blízko zasažení; moldavské úřady tuhle formulaci nepoužily."
+    ],
+    "vyznam": "Narušení vzdušného prostoru státu mimo NATO, které na několik hodin zastavilo civilní provoz a dotklo se cesty hlavy státu. Tohle je hodnocení projektu, ne doložený fakt.",
+    "eskalacniSpousteče": [
+      "Opakované uzavření vzdušného prostoru Moldavska nebo sousedního státu NATO.",
+      "Zásah civilního letadla."
+    ],
+    "deeskalacniSignaly": [
+      "Doložení, že šlo o ojedinělou odchylku, a delší období bez dalšího narušení."
+    ],
+    "zdroje": [
+      {
+        "nazev": "Norská vláda — Norway condemns Russian drones violating Moldovan airspace",
+        "url": "https://www.regjeringen.no/no/whats-new/norway-condemn-russian-drones-violating-moldovan-airspace/id3087761",
+        "typ": "primary",
+        "publikovano": "2026-09-09T00:00:00Z",
+        "primarni": true,
+        "jazyk": "no"
+      },
+      {
+        "nazev": "BBC News — Russian drone incursion delays Zelensky flight",
+        "url": "https://www.bbc.co.uk/news/articles/c86x49e379vo",
+        "typ": "media",
+        "publikovano": "2026-09-10T00:00:00Z",
+        "primarni": false,
+        "jazyk": "en"
+      },
+      {
+        "nazev": "CNN — Russian drone incursion delayed Zelensky's departure from Moldova",
+        "url": "https://www.cnn.com/2026/09/09/europe/zelensky-plane-almost-hit-drone-tuesday-norway-pm-intldsk-latam",
+        "typ": "media",
+        "publikovano": "2026-09-09T00:00:00Z",
+        "primarni": false,
+        "jazyk": "en"
+      },
+      {
+        "nazev": "NBC News — Flight carrying Zelenskyy to Norway was delayed in Moldova because of drone incursion",
+        "url": "https://www.nbcnews.com/world/ukraine/flight-carrying-zelenskyy-norway-was-delayed-moldova-drone-incursion-rcna596918",
+        "typ": "media",
+        "publikovano": "2026-09-09T00:00:00Z",
+        "primarni": false,
+        "jazyk": "en"
+      }
+    ],
+    "souvisejici": [],
+    "historie": [
+      {
+        "kdy": "2026-09-09T00:00:00Z",
+        "text": "Incident z 8. září vyšel najevo až po vyjádření norského premiéra.",
+        "novySignal": true
+      }
+    ],
+    "novy": true,
+    "zapocitanoTyden": "2026-W37",
+    "aiZpracovano": true,
+    "lidskyOvereno": true
+  },
+  {
+    "id": "i-2026-09-09-britanie-obvineni-sabotaz",
+    "slug": "britanie-obvineni-sabotaz-dronove-tovarny-2026",
+    "titulek": "Británie: obvinění z pomoci ruské vojenské rozvědce, muž měl nabídnout sabotáž továrny na drony",
+    "kratkyTitulek": "Británie: obvinění za sabotáž pro GRU",
+    "zeme": "Spojené království",
+    "kodZeme": "GB",
+    "kategorie": [
+      "sabotaz",
+      "zpravodajske",
+      "vysetrovani",
+      "rusko"
+    ],
+    "datumUdalosti": "2026-09-09T00:00:00Z",
+    "datumZjisteni": "2026-09-09T00:00:00Z",
+    "aktualizovano": "2026-09-11T11:00:00Z",
+    "zavaznost": "Y3",
+    "jistota": "vysoka",
+    "stav": "obvineni",
+    "atribuce": "vysetrovana",
+    "puvodce": "rusko",
+    "druh": "pripad",
+    "fakta": [
+      "Britská prokuratura 9. září 2026 před londýnským soudem obvinila jednatřicetiletého britského občana podle zákona o národní bezpečnosti z jednání, kterým měl podstatně napomáhat cizí zpravodajské službě.",
+      "Podle obžaloby měl předat údaje o čtyřech továrnách na drony poblíž svého bydliště ve Swindonu v západní Anglii a sám nabídnout provedení sabotáže.",
+      "Pokyny měl podle obžaloby dostávat od údajného představitele takzvaného Dobrovolnického sboru GRU, skupiny ovládané ruskou vojenskou zpravodajskou službou.",
+      "Zadržen byl protiteroristickou policií v prvním zářijovém týdnu. Soud ho vrátil do vazby a nařídil, aby se 25. září dostavil k Ústřednímu trestnímu soudu.",
+      "Za napomáhání takové skupině hrozí podle britského práva až čtrnáct let vězení."
+    ],
+    "neznameho": [
+      "Jak soud rozhodne. Obviněný je až do pravomocného rozsudku nevinný.",
+      "Zda k nějakému zásahu do provozu továren skutečně došlo."
+    ],
+    "vyznam": "Další případ, kdy se má ruská vojenská rozvědka nedostat k cíli přes vlastní lidi, ale přes najatého místního občana. Obranný průmysl je u téhle metody opakovaný cíl. Tohle je hodnocení projektu, ne doložený fakt.",
+    "eskalacniSpousteče": [
+      "Skutečný zásah do výroby v evropském obranném podniku.",
+      "Další obvinění ze stejného náborového vzorce v jiné evropské zemi."
+    ],
+    "deeskalacniSignaly": [
+      "Zproštění obžaloby nebo doložení, že o řízenou operaci nešlo."
+    ],
+    "zdroje": [
+      {
+        "nazev": "Al Jazeera — UK man charged with assisting Russian military spies in sabotage plot",
+        "url": "https://www.aljazeera.com/news/2026/9/9/uk-man-charged-with-assisting-russian-intelligence-connected-group",
+        "typ": "media",
+        "publikovano": "2026-09-09T00:00:00Z",
+        "primarni": false,
+        "jazyk": "en"
+      },
+      {
+        "nazev": "ABC News — British man charged with aiding Russian spies to sabotage UK drone factory",
+        "url": "https://abcnews.com/International/wireStory/british-man-charged-aiding-russian-spies-sabotage-uk-136335037",
+        "typ": "media",
+        "publikovano": "2026-09-09T00:00:00Z",
+        "primarni": false,
+        "jazyk": "en"
+      },
+      {
+        "nazev": "WTOP News (AP) — British man charged with aiding Russian spies in UK sabotage plot",
+        "url": "https://wtop.com/world/2026/09/british-man-charged-with-aiding-russian-spies-in-uk-sabotage-plot",
+        "typ": "wire",
+        "publikovano": "2026-09-09T00:00:00Z",
+        "primarni": false,
+        "jazyk": "en"
+      }
+    ],
+    "souvisejici": [],
+    "historie": [
+      {
+        "kdy": "2026-09-09T00:00:00Z",
+        "text": "Podáno obvinění, věc jde k Ústřednímu trestnímu soudu.",
+        "novySignal": true
+      }
+    ],
+    "novy": true,
+    "zapocitanoTyden": "2026-W37",
+    "aiZpracovano": true,
+    "lidskyOvereno": true
+  },
+  {
+    "id": "i-2026-09-11-nemecko-hamas-obzaloba",
+    "slug": "nemecko-obzaloba-sedmi-clenu-hamasu-2026",
+    "titulek": "Německo: spolkové státní zastupitelství obžalovalo sedm mužů z členství v Hamásu a přípravy útoku, měli shromáždit samopal, třináct pistolí a přes 700 nábojů",
+    "kratkyTitulek": "Německo: obžaloba sedmi členů Hamásu",
+    "zeme": "Německo",
+    "kodZeme": "DE",
+    "kategorie": [
+      "vysetrovani",
+      "pravo"
+    ],
+    "datumUdalosti": "2026-09-11T00:00:00Z",
+    "datumZjisteni": "2026-09-11T00:00:00Z",
+    "aktualizovano": "2026-09-11T11:00:00Z",
+    "zavaznost": "O2",
+    "jistota": "vysoka",
+    "stav": "obvineni",
+    "atribuce": "vysetrovana",
+    "puvodce": "neni-stat",
+    "druh": "pripad",
+    "fakta": [
+      "Německé spolkové státní zastupitelství 11. září 2026 obžalovalo v Berlíně sedm mužů z členství v zahraniční teroristické organizaci a z přípravy útoku, mimo jiné obstaráváním zbraní.",
+      "Podle obžaloby skupina shromáždila přes 700 nábojů, plně automatickou útočnou pušku a třináct pistolí.",
+      "Obvinění měli podle obžaloby jednat na pokyn vysoce postavených představitelů Hamásu a útok měl směřovat na izraelské a židovské cíle v Německu a v Rakousku.",
+      "Vyšetřovatelé podle obžaloby zrekonstruovali dvě pašerácké trasy, kterými se zbraně dostaly z Dánska a z Hesenska do Berlína a do Vídně.",
+      "Sedm mužů bylo zadrženo mezi říjnem 2025 a květnem 2026 a zůstávají ve vazbě."
+    ],
+    "neznameho": [
+      "Jak soud rozhodne. Obžalovaní jsou až do pravomocného rozsudku nevinní.",
+      "Zda byla příprava dovedena k volbě konkrétního místa a termínu."
+    ],
+    "vyznam": "Pro tenhle přehled je to připomínka, že bezpečnostní riziko v Evropě netvoří jen státní aktéři. Obžaloba je vyšetřovací milník, ne rozsudek. Tohle je hodnocení projektu, ne doložený fakt.",
+    "eskalacniSpousteče": [
+      "Další zadržení ve stejné síti v dalším evropském státě."
+    ],
+    "deeskalacniSignaly": [
+      "Zproštění obžaloby nebo výrazné zúžení obvinění soudem."
+    ],
+    "zdroje": [
+      {
+        "nazev": "iROZHLAS — Německá prokuratura obžalovala sedm členů Hamásu, sháněli prý zbraně pro útok",
+        "url": "https://www.irozhlas.cz/zpravy-svet/nemecka-prokuratura-obzalovala-sedm-clenu-hamasu-shaneli-pry-zbrane-pro-utok_2609111424_med",
+        "typ": "media",
+        "publikovano": "2026-09-11T00:00:00Z",
+        "primarni": false,
+        "jazyk": "cs"
+      },
+      {
+        "nazev": "Cyprus Mail (Reuters) — Germany charges seven suspected Hamas members over planned attack",
+        "url": "https://cyprus-mail.com/2026/09/11/germany-charges-seven-suspected-hamas-members-over-planned-attack",
+        "typ": "wire",
+        "publikovano": "2026-09-11T00:00:00Z",
+        "primarni": false,
+        "jazyk": "en"
+      },
+      {
+        "nazev": "The National — Germany charges Hamas gun plot suspects",
+        "url": "https://www.thenationalnews.com/news/europe/2026/09/11/germany-charges-hamas-gun-plot-suspects/",
+        "typ": "media",
+        "publikovano": "2026-09-11T00:00:00Z",
+        "primarni": false,
+        "jazyk": "en"
+      },
+      {
+        "nazev": "The Jerusalem Post — Germany charges seven men for Hamas terror plot, weapons procurement",
+        "url": "https://www.jpost.com/international/article-908385",
+        "typ": "media",
+        "publikovano": "2026-09-11T00:00:00Z",
+        "primarni": false,
+        "jazyk": "en"
+      }
+    ],
+    "souvisejici": [],
+    "historie": [
+      {
+        "kdy": "2026-09-11T00:00:00Z",
+        "text": "Podána obžaloba na sedm osob.",
+        "novySignal": true
+      }
+    ],
+    "novy": true,
+    "zapocitanoTyden": "2026-W37",
+    "aiZpracovano": true,
+    "lidskyOvereno": true
+  },
+  {
+    "id": "i-2026-09-10-rusko-strazny-ambasady",
+    "slug": "rusko-zadrzeni-strazneho-britske-ambasady-2026",
+    "titulek": "Rusko: FSB den po britském obvinění zadržela bývalého strážného britské ambasády a viní ho z vlastizrady ve prospěch Ukrajiny",
+    "kratkyTitulek": "Rusko: zadržen strážný britské ambasády",
+    "zeme": "Rusko",
+    "kodZeme": "RU",
+    "kategorie": [
+      "zpravodajske",
+      "diplomacie",
+      "rusko"
+    ],
+    "datumUdalosti": "2026-09-10T00:00:00Z",
+    "datumZjisteni": "2026-09-10T00:00:00Z",
+    "aktualizovano": "2026-09-11T11:00:00Z",
+    "zavaznost": "Y2",
+    "jistota": "stredni",
+    "stav": "probiha",
+    "atribuce": "neznama",
+    "puvodce": null,
+    "druh": "reakce",
+    "fakta": [
+      "Ruská FSB 10. září 2026 oznámila, že zadržela pětačtyřicetiletého ruského občana, bývalého zaměstnance ostrahy britského velvyslanectví v Moskvě, a obvinila ho z vlastizrady podle článku 275 ruského trestního zákoníku.",
+      "Podle FSB měl shromažďovat údaje o zaměstnancích ambasády včetně adres, schůzek a cest a zjišťovat, jak funguje bezpečnostní systém mise.",
+      "FSB tvrdí, že jednal na pokyn ukrajinské SBU a že údaje měly posloužit k útoku na britský diplomatický personál, který by byl svalen na Rusko. Tohle tvrzení nikdo nezávisle nedoložil.",
+      "Britské ministerstvo zahraničí potvrdilo, že o zadržení bývalého zaměstnance ví a zjišťuje okolnosti. K obvinění ze špionáže se nevyjádřilo.",
+      "Zadržení přišlo den poté, co britská prokuratura obvinila britského občana z pomoci ruské vojenské rozvědce při přípravě sabotáže."
+    ],
+    "neznameho": [
+      "Zda má tvrzení FSB o ukrajinském zadání jakoukoli oporu. Opírá se výhradně o sdělení FSB.",
+      "Zda spolu obě zadržení skutečně souvisejí, nebo jde o shodu okolností."
+    ],
+    "vyznam": "Vedeme to jako reakci, ne jako doložený případ: podstatná část sdělení pochází od ruské tajné služby a nikdo ji neověřil. Načasování den po britském obvinění je nápadné, samo o sobě ale nic nedokazuje. Tohle je hodnocení projektu, ne doložený fakt.",
+    "eskalacniSpousteče": [
+      "Vyhoštění diplomatů na jedné nebo druhé straně.",
+      "Obvinění dalších zaměstnanců zastupitelských úřadů."
+    ],
+    "deeskalacniSignaly": [
+      "Propuštění zadrženého nebo utlumení věci bez dalších kroků."
+    ],
+    "zdroje": [
+      {
+        "nazev": "The Moscow Times — FSB arrests former British embassy guard accused of gathering intel for Ukraine",
+        "url": "https://www.themoscowtimes.com/2026/09/10/fsb-arrests-former-british-embassy-guard-accused-of-gathering-intel-for-ukraine-a93675",
+        "typ": "media",
+        "publikovano": "2026-09-10T00:00:00Z",
+        "primarni": false,
+        "jazyk": "en"
+      },
+      {
+        "nazev": "Meduza — FSB detains British embassy guard on treason charges",
+        "url": "https://meduza.io/en/news/2026/09/10/fsb-detains-british-embassy-guard-on-treason-charges-it-says-he-collected-data-for-ukraine-s-sbu-to-stage-a-terror-attack-and-pin-it-on-russia",
+        "typ": "media",
+        "publikovano": "2026-09-10T00:00:00Z",
+        "primarni": false,
+        "jazyk": "en"
+      },
+      {
+        "nazev": "TASS — FSB detains Ukrainian agent gathering information on UK diplomats in Moscow",
+        "url": "https://tass.com/society/2185277",
+        "typ": "media",
+        "publikovano": "2026-09-10T00:00:00Z",
+        "primarni": false,
+        "jazyk": "ru"
+      }
+    ],
+    "souvisejici": [
+      {
+        "incidentId": "i-2026-09-09-britanie-obvineni-sabotaz",
+        "potvrzena": false,
+        "popis": "Přišlo den po britském obvinění; souvislost nikdo nedoložil."
+      }
+    ],
+    "historie": [
+      {
+        "kdy": "2026-09-10T00:00:00Z",
+        "text": "FSB oznámila zadržení a obvinění z vlastizrady.",
+        "novySignal": true
+      }
+    ],
+    "novy": true,
+    "zapocitanoTyden": "2026-W37",
+    "aiZpracovano": true,
+    "lidskyOvereno": true
   }
 ]

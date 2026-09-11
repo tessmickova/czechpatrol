@@ -71,7 +71,7 @@ const ZAVAZNOSTI: { klic: string; nazev: string; pasma: Pasmo[] }[] = [
 ];
 
 const PUVODCE_NAZVY: Record<string, string> = {
-  rusko: "Rusko", ukrajina: "Ukrajina", "jiny-stat": "jiný stát", domaci: "domácí", neznamy: "neznámý",
+  rusko: "Rusko", ukrajina: "Ukrajina", "jiny-stat": "jiný stát", "neni-stat": "nestátní skupina", domaci: "domácí", neznamy: "neznámý",
 };
 
 interface Filtr {

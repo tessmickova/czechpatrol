@@ -172,6 +172,7 @@ export function puvodce(odRoku = new Date().getUTCFullYear()) {
     { klic: "rusko", nazev: "Rusko" },
     { klic: "ukrajina", nazev: "Ukrajina" },
     { klic: "jiny-stat", nazev: "Jiný stát" },
+    { klic: "neni-stat", nazev: "Nestátní skupina" },
     { klic: "domaci", nazev: "Domácí pachatel" },
     { klic: "neznamy", nazev: "Neznámý" },
   ];

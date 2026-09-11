@@ -27,7 +27,14 @@ export type Atribuce =
   | "oficialni"          // oficiální státní atribuce
   | "domaci";            // prokázán domácí pachatel bez státního řízení
 
-export type Puvodce = "rusko" | "ukrajina" | "jiny-stat" | "domaci" | "neznamy";
+/**
+ * Kdo za činem stojí.
+ *
+ * `neni-stat` je pro ozbrojené skupiny bez státu (teroristická organizace).
+ * Nacpat je pod „jiný stát“ nebo „domácí pachatel“ by bylo věcně špatně
+ * a rozbilo by to přehled Kdo za tím stojí.
+ */
+export type Puvodce = "rusko" | "ukrajina" | "jiny-stat" | "neni-stat" | "domaci" | "neznamy";
 
 export type DruhZaznamu = "pripad" | "aktualizace" | "opatreni" | "reakce";
 
