@@ -133,8 +133,8 @@ export function ZemePrehled({
             popis="Koordinované šíření nepravdy. Nepočítá se mezi případy — je to operace, ne událost."
             akce={<Link href="/manipulace/" className="text-[13px] font-semibold text-akcent hover:text-akcent-svetla">celý rozbor →</Link>}
           />
-          <div className="grid gap-3 sm:grid-cols-2">
-            {kampane.map((k) => <DlazdiceKampane key={k.slug} k={k} nazvyZemi={nazvyZemi} />)}
+          <div className={`grid gap-3 ${kampane.length === 1 ? "" : "sm:grid-cols-2"}`}>
+            {kampane.map((k) => <DlazdiceKampane key={k.slug} k={k} nazvyZemi={nazvyZemi} siroka={kampane.length === 1} />)}
           </div>
         </div>
       )}

@@ -52,7 +52,7 @@ export default async function StrankaZeme({ params }: { params: Promise<{ kod: s
         nadpis={<span className="inline-flex flex-wrap items-center gap-3"><Vlajka kod={z.kod} /> {z.nazev}</span>}
         uvod={
           uroven
-            ? `Nejvyšší úroveň, kterou tu evidujeme, je ${uroven.nazev.toLowerCase()}. Vychází ze zveřejněných záznamů této země, ne z odhadu.`
+            ? `Nejvyšší úroveň, kterou tu od roku 2014 evidujeme, je ${uroven.nazev.toLowerCase()}. Není to stav k dnešku — vychází ze všech zveřejněných záznamů této země, ne z odhadu.`
             : "Pro tuhle zemi zatím nemáme žádný ověřený záznam. Neznamená to, že se nic nestalo — jen že jsme nic nedoložili."
         }
       />
