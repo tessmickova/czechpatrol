@@ -137,6 +137,26 @@ a „kdo za tím stojí?“. Připsat operaci státu jako jisté smí web až te
 to někdo veřejně doložil; do té doby je to podezření. Hlídají to testy
 v `testy/kampane.test.ts`.
 
+**Právě ověřujeme** (`data/overujeme.json`) je jediné místo, kde se na webu
+objeví něco nepotvrzeného — a to jen proto, že mlčet o zprávě, která se šíří
+a mohla by být důležitá, není neutrální.
+
+Web o takové zprávě **netvrdí, že platí**. Tvrdí tři věci, které si sám
+ověřil: kdo ji vydal (s odkazy), že ji projekt nemá potvrzenou a co k ní
+říkají nebo výslovně neříkají úřady. Na kartě stojí úřední stav **první**
+a poslední řádek je vždy pokyn „co dělat teď“ — skoro vždy „nic“.
+
+Podmínky jsou v CLAUDE.md, pravidlo č. 0 bod 4, a jsou vynucené jako **chyby**
+v `nastroje/kontrola-dat.mjs`: aspoň dva nezávislé zdroje s odkazem, vyplněný
+úřední protipól i pokyn, lhůta na uzavření nejvýš týden, nejvýš tři položky
+naráz. Do počtů, budíků ani průměrů nevstupují a **do Telegramu se
+neodesílají**. Každá musí skončit jako *potvrzeno*, *vyvráceno*, nebo *nikdo
+nepotvrdil*; po lhůtě se stáhne z přehledu, ale zůstane zapsaná.
+
+Zařadit položku smí jen člověk. V produkčních datech je soubor zatím prázdný,
+takže se sekce vůbec nezobrazuje; vyzkoušet ji jde v režimu ukázky
+(`NEXT_PUBLIC_REZIM=ukazka`).
+
 **Porovnání s průměrem** (`src/lib/porovnani.ts`): kde stojí číslo za 90 dní,
 stojí vedle něj i celkový údaj a slovní porovnání (mírně / středně / velmi
 významně vyšší nebo nižší). Průměr se počítá z posledních dvou let, ne z celého

@@ -1,0 +1,28 @@
+[
+  {
+    "id": "u-ukazka-vzdusny-prostor",
+    "slug": "ukazka-uzavreni-vzdusneho-prostoru",
+    "coSeHlasi": "Dvě zahraniční redakce uvádějí, že sousední stát údajně na několik hodin uzavřel část vzdušného prostoru kvůli neidentifikovanému objektu.",
+    "kodZeme": "CZ",
+    "zeme": "Česko",
+    "zacalo": "2026-09-11T18:00:00Z",
+    "overenoNaposledy": "2026-09-11T19:30:00Z",
+    "uzavritDo": "2026-09-13T18:00:00Z",
+    "kdoHlasi": [
+      { "nazev": "Ukázkový deník", "url": "https://ukazka.example.invalid/zprava-1", "typ": "media", "primarni": false },
+      { "nazev": "Ukázková agentura", "url": "https://ukazka.example.invalid/zprava-2", "typ": "wire", "primarni": false }
+    ],
+    "coJsmeOverili": [
+      "Zatím nic. Ani jedna z redakcí neuvádí úřední zdroj a obě se odkazují na tentýž nejmenovaný zdroj.",
+      "Veřejné údaje o letovém provozu, které jsme si sami prohlédli, žádné uzavření neukazují."
+    ],
+    "coRikajiUrady": [
+      "Řízení letového provozu ČR žádné omezení nevyhlásilo; český vzdušný prostor je v běžném režimu.",
+      "Ministerstvo vnitra ani HZS nevydaly k věci žádné sdělení."
+    ],
+    "kdybyPlatilo": "Kdyby se to potvrdilo, znamenalo by to krátkodobé omezení letecké dopravy v sousedním státě. Na běžný život v Česku by to samo o sobě nedopadlo.",
+    "coDelatTed": "Nic. Neměňte plány a nepřeposílejte to dál jako hotovou věc. Až to bude ověřené, najdete to tady jako řádný záznam.",
+    "stav": "overujeme",
+    "lidskyOvereno": true
+  }
+]

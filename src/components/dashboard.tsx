@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { druh, kdyZjisteno, novaZjisteni, pachatelPotvrzen, podlePuvodce, podleZemi, posledniZmeny, pripady, uredniZdroj, vyber, type Zaznam } from "@/lib/agregace";
 import { cerstvost, datumCasPraha, datumPraha, stariSlovy } from "@/lib/cas";
-import type { CelkovyStav, HybridniTlak, Kampan, Kandidat, NatoPolozka, Nepotvrzene, PravniPolozka, ProvozniPolozka, TydenniHodnoceni, Uroven, Watchlist } from "@/lib/typy";
+import type { CelkovyStav, HybridniTlak, Kampan, Kandidat, NatoPolozka, Nepotvrzene, Overovana, PravniPolozka, ProvozniPolozka, TydenniHodnoceni, Uroven, Watchlist } from "@/lib/typy";
 import { PASMA, UROVNE } from "@/lib/skala";
 import { cislem, porovnejSPrumerem, prumerNaOkno } from "@/lib/porovnani";
 import type { HlavniVeta } from "@/lib/veta";
@@ -9,6 +9,7 @@ import { Ikona, type NazevIkony } from "./ikony";
 import { HeroDashboard } from "./hero-dashboard";
 import { DlazdiceKampane } from "./kampane";
 import { NadpisSekce } from "./nadpisy";
+import { PruhOverujeme } from "./overujeme";
 import { PocitadlaEvropa, type PolozkaPoctu } from "./pocitadla-zive";
 import { NovaZjisteni } from "./nova-zjisteni";
 import { Odznak, RadekSeznamu, TeckaZavaznosti, Tlacitko } from "./ui";
@@ -166,7 +167,7 @@ function Pruh({ nazev, n, max, barva, odkaz }: { nazev: React.ReactNode; n: numb
 
 export function Dashboard({
   stav, pravni, natoPolozky, provozPolozky, overeno, vse, neprosle, kandidati, tydny, watchlist, cr, crHistoricky, crPocet, hybridni, obcane,
-  tlakEvropa, tlakCesko, veta, kampane, nazvyZemi,
+  tlakEvropa, tlakCesko, veta, kampane, nazvyZemi, overovaneAktivni = [], overovaneUzavrene = [],
 }: {
   stav: CelkovyStav; pravni: PravniPolozka[]; natoPolozky: NatoPolozka[]; provozPolozky: ProvozniPolozka[];
   overeno: string | null; vse: Zaznam[]; neprosle: Nepotvrzene[]; kandidati: Kandidat[]; tydny: TydenniHodnoceni[]; watchlist: Watchlist;
@@ -174,6 +175,9 @@ export function Dashboard({
   hybridni: Uroven | null; obcane: { uroven: Uroven; popis: string; neovereno: number };
   tlakEvropa: HybridniTlak; tlakCesko: HybridniTlak; veta: HlavniVeta;
   kampane: Kampan[]; nazvyZemi: Record<string, string>;
+  /** Zprávy, které se šíří a zatím nejsou ověřené. Do počtů nevstupují. */
+  overovaneAktivni?: Overovana[];
+  overovaneUzavrene?: Overovana[];
 }) {
   const platiCr = pravni.filter((p) => p.plati === true);
   const neovereneCr = pravni.filter((p) => p.plati === null).length;
@@ -242,6 +246,10 @@ export function Dashboard({
     <>
     <PasZemi vse={vse} kampane={kampane} />
     <div className="mx-auto max-w-[1280px] px-4 py-5 sm:px-6 sm:py-7">
+      {/* Nad budíky: co se šíří a zatím není ověřené. Bez toho by
+          závažná, ale nepotvrzená zpráva propadla úplně. */}
+      <PruhOverujeme aktivni={overovaneAktivni} uzavrene={overovaneUzavrene} ted={tedMs} />
+
       <HeroDashboard stav={stav} cr={cr} crHistoricky={crHistoricky} crPocet={crPocet} hybridni={hybridni} obcane={obcane} overeno={overeno} pocetZaznamu={vse.length} pocet90={zapocitatelne90} veta={veta} porovnani90={porovnani90} />
 
       {/* 1b — kolik případů přibylo; počítá se v prohlížeči, ne při sestavení */}

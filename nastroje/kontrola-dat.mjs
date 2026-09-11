@@ -25,6 +25,7 @@ const nato = cti("nato.json");
 const provoz = cti("provoz.json");
 const kandidati = fs.existsSync(path.join(koren, "data", "kandidati.json")) ? cti("kandidati.json") : [];
 const svet = fs.existsSync(path.join(koren, "data", "svet.json")) ? cti("svet.json") : null;
+const overujeme = fs.existsSync(path.join(koren, "data", "overujeme.json")) ? cti("overujeme.json") : [];
 
 const chyby = [];
 const varovani = [];
@@ -102,6 +103,39 @@ for (const i of pripady) poZemich.set(i.kodZeme, (poZemich.get(i.kodZeme) ?? 0) 
 const soucet = [...poZemich.values()].reduce((a, b) => a + b, 0);
 if (soucet !== pripady.length) chyby.push(`součet případů po zemích (${soucet}) ≠ celkem (${pripady.length})`);
 
+// 3b. právě ověřované zprávy
+//
+// Tvrdší kontrola než jinde. Je to jediné místo na webu, kde se objevuje
+// něco nepotvrzeného; když by tu chyběl úřední protipól, lhůta nebo pokyn
+// pro čtenáře, zbyla by z toho holá fáma. Proto chyba, ne varování.
+const tedOv = Date.now();
+for (const o of overujeme) {
+  const kde = `ověřované/${o.slug ?? o.id}`;
+  if (!o.lidskyOvereno) chyby.push(`${kde}: bez lidské kontroly — automat sem nic dávat nesmí`);
+  if (!Array.isArray(o.kdoHlasi) || o.kdoHlasi.length < 2) {
+    chyby.push(`${kde}: musí uvádět aspoň dva nezávislé zdroje, které to hlásí`);
+  }
+  for (const z of o.kdoHlasi ?? []) {
+    if (!z.url || !/^https?:\/\//.test(z.url)) chyby.push(`${kde}: zdroj „${z.nazev}“ bez odkazu`);
+  }
+  if (!Array.isArray(o.coRikajiUrady) || !o.coRikajiUrady.length) {
+    chyby.push(`${kde}: chybí, co k tomu říkají úřady — to je ta ověřená část`);
+  }
+  if (!o.coDelatTed || o.coDelatTed.length < 15) chyby.push(`${kde}: chybí pokyn, co má čtenář dělat teď`);
+  if (!o.kdybyPlatilo || o.kdybyPlatilo.length < 15) chyby.push(`${kde}: chybí, co by to znamenalo, kdyby to platilo`);
+  if (!platneDatum(o.zacalo) || !platneDatum(o.uzavritDo)) chyby.push(`${kde}: neplatné datum`);
+  else if (new Date(o.uzavritDo) <= new Date(o.zacalo)) chyby.push(`${kde}: lhůta na uzavření nesmí být před začátkem`);
+  else if (new Date(o.uzavritDo) - new Date(o.zacalo) > 7 * 86400000) {
+    chyby.push(`${kde}: lhůta delší než týden — neuzavřená zpráva se nesmí vléct`);
+  }
+  if (o.stav !== "overujeme" && !o.jakDopadlo) chyby.push(`${kde}: uzavřeno bez zápisu, jak to dopadlo`);
+  if (o.stav === "overujeme" && new Date(o.uzavritDo).getTime() <= tedOv) {
+    varovani.push(`${kde}: uplynula lhůta, stáhlo se z přehledu — dopiš, jak to dopadlo`);
+  }
+}
+const zivych = overujeme.filter((o) => o.stav === "overujeme" && new Date(o.uzavritDo).getTime() > tedOv).length;
+if (zivych > 3) chyby.push(`právě ověřovaných je ${zivych}; nejvýš 3, jinak se z přehledu stane proud fám`);
+
 // 4. stáří ověření
 const ted = Date.now();
 for (const [nazev, sada] of [["právní stav", pravni], ["NATO", nato], ["provoz", provoz]]) {
@@ -113,7 +147,7 @@ for (const [nazev, sada] of [["právní stav", pravni], ["NATO", nato], ["provoz
 }
 
 // výstup
-const shrnuti = `záznamů ${incidenty.length} (případů ${pripady.length}, aktualizací ${incidenty.filter((i) => druh(i) === "aktualizace").length}, opatření ${incidenty.filter((i) => druh(i) === "opatreni").length}, reakcí ${incidenty.filter((i) => druh(i) === "reakce").length}), neprošlých ${nepotvrzene.length}, oprav ${opravy.length}, kandidátů ${kandidati.length}`;
+const shrnuti = `záznamů ${incidenty.length} (případů ${pripady.length}, aktualizací ${incidenty.filter((i) => druh(i) === "aktualizace").length}, opatření ${incidenty.filter((i) => druh(i) === "opatreni").length}, reakcí ${incidenty.filter((i) => druh(i) === "reakce").length}), neprošlých ${nepotvrzene.length}, oprav ${opravy.length}, kandidátů ${kandidati.length}, ověřovaných ${overujeme.length}`;
 console.log(`Kontrola dat: ${shrnuti}`);
 for (const v of varovani) console.log(`  varování: ${v}`);
 for (const c of chyby) console.log(`  CHYBA: ${c}`);

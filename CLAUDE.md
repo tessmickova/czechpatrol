@@ -24,8 +24,9 @@ Rozbor je v `docs/PRAVNI-KONTROLA.md`. Při pochybnosti platí přísnější v�
 
 ### 2. Poplašná zpráva se nenapíše nikdy
 
-- Tvrzení o ohrožení bez doloženého zdroje se nezveřejní. Ani jako otázka,
-  ani jako možnost, ani „podle nepotvrzených informací“.
+- **Web nikdy netvrdí nic, co nemá doložené.** Neověřené tvrzení o ohrožení
+  se nevydá jako tvrzení — ani jako otázka, ani jako možnost, ani
+  „podle nepotvrzených informací“.
 - Nic se nevyhlašuje a nic se nepředpovídá. Budoucí scénář se nikdy nepíše
   jako jistota.
 - Titulek ani text nesmí budit větší obavu, než unese doložený údaj.
@@ -50,6 +51,50 @@ je řešeno úředně a oficiálně**:
 **Zkráceně: nic nevyhlašujeme, nic nepředpovídáme, nic nepřebíráme bez
 zdroje. Píšeme jen to, co už někdo oficiálně řekl nebo vydal — a říkáme,
 kdo to byl.**
+
+### 4. Jediná výjimka: smíme napsat, že něco neověřeného koluje
+
+Mlčet o zprávě, která se šíří a mohla by být důležitá, není neutrální —
+čtenář se o ní stejně dozví jinde, jen bez protiváhy. Proto existuje
+sekce **Právě ověřujeme** (`data/overujeme.json`).
+
+Hranice vede přesně tady: **web o té zprávě netvrdí, že platí.** Tvrdí
+jen tři věci, které si sám ověřil, a každá z nich je pravdivá
+a doložitelná:
+
+1. že ji vydaly tyhle jmenované redakce (s odkazem),
+2. že ji projekt nemá potvrzenou a co konkrétně sám prověřoval,
+3. co k ní říkají, nebo výslovně neříkají, úřady.
+
+Tím se to míjí se skutkovou podstatou § 357 trestního zákoníku: ta
+předpokládá sdělení **nepravdivé** zprávy. Zveřejněná sdělení jsou
+pravdivá; nepravdivé by bylo teprve převzetí samotného tvrzení za své.
+
+Podmínky, bez kterých se položka nezveřejní — hlídá je
+`nastroje/kontrola-dat.mjs` a jsou to **chyby, ne varování**:
+
+| Podmínka | Proč |
+|---|---|
+| dopad: kdyby to platilo, změnilo by to dnes lidem chování | jinak to do přehledu nepatří vůbec |
+| aspoň dva nezávislé zdroje, každý s odkazem | jedna zpráva není jev |
+| vyplněné „co říkají úřady“ | to je ta ověřená část a stojí na kartě první |
+| vyplněné „co dělat teď“ | skoro vždy „nic“; tohle je protipanický prvek |
+| lhůta na uzavření, nejvýš týden | fáma se nesmí vléct |
+| nejvýš tři položky naráz | jinak je z klidného přehledu proud fám |
+| zápis, jak to dopadlo | nic nemizí potichu |
+
+Každá položka musí skončit v jednom ze tří stavů: **potvrzeno** (vznikne
+řádný záznam), **vyvráceno** (jde mezi neprošlé), nebo **nikdo
+nepotvrdil** (po lhůtě se stáhne z přehledu a zůstane zapsaná).
+
+Dál platí bez výjimky:
+
+- Do počtů, budíků, průměrů ani hodnocení tyhle položky **nevstupují**.
+- Do Telegramu ani jiných kanálů se **neodesílají**. Kanál slouží
+  k tomu, aby se dalo jednat; neověřená zpráva k jednání nevede.
+- Barva závažnosti se na nich **nepoužívá** — žádná ohodnocená není.
+- Zařadit položku smí **jen člověk**. Automat sem nedává nic, viz
+  pravidlo č. 4.
 
 ## Pravidlo č. 1 — nejsme zpravodajství
 

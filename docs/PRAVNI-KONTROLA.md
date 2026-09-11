@@ -95,3 +95,41 @@ přihlášeným s rolí.
 5. Založit 2 správce, smazat `ADMIN_BOOTSTRAP_KOD`.
 6. Před WhatsAppem: Meta Business ověření, šablona, DPA Meta.
 7. Před placenou vrstvou: obchodní podmínky podle § 1820 OZ, podnikatelská identifikace, daně.
+
+## Právě ověřované zprávy a § 357 trestního zákoníku
+
+Sekce **Právě ověřujeme** je jediné místo, kde se na webu objeví zpráva,
+kterou projekt nemá potvrzenou. Rozbor, proč to není šíření poplašné zprávy:
+
+**Skutková podstata** (§ 357 odst. 1 tr. zákoníku) předpokládá, že pachatel
+**úmyslně způsobí nebezpečí vážného znepokojení** aspoň části obyvatelstva
+tím, že rozšiřuje **poplašnou a nepravdivou zprávu**. Klíčový znak je
+nepravdivost sdělované zprávy.
+
+**Co web sděluje.** Nikoli samotné tvrzení, ale tři výroky o něm:
+
+1. „Tuhle zprávu vydaly tyto jmenované redakce“ — pravdivé, doložené odkazem.
+2. „Nemáme ji potvrzenou; ověřovali jsme tohle a tohle“ — pravdivé.
+3. „Úřady k tomu uvedly tohle / neuvedly nic“ — pravdivé, ověřené
+   u úředního zdroje.
+
+Žádný z těch výroků není nepravdivý. Nepravdivé by bylo teprve převzetí
+cizího tvrzení za své, k němuž nedochází.
+
+**Co navíc snižuje způsobilost vyvolat znepokojení:**
+
+- úřední stav stojí na kartě jako první údaj, ne jako dovětek;
+- poslední řádek je pokyn, který čtenáře výslovně odrazuje od jednání
+  („nic, neměňte plány“);
+- nepoužívá se barevná škála závažnosti ani žádný prvek zaměnitelný
+  s varovným systémem státu (viz krizový zákon a JSVV výše);
+- položka se do kanálů neodesílá, takže nikoho neosloví bez vyžádání;
+- po lhůtě nejvýš týden se z přehledu stáhne.
+
+**Doložitelnost.** Každá podmínka je strojově vynucená v
+`nastroje/kontrola-dat.mjs` jako chyba, která zastaví nasazení, a pokrytá
+testy v `testy/overujeme.test.ts`. Historie je v gitu, takže jde zpětně
+doložit, co web kdy tvrdil.
+
+**Při pochybnosti se položka nezveřejní.** Pravidlo č. 0 platí i tady:
+přísnější výklad vyhrává.

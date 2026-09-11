@@ -1,7 +1,7 @@
 import { JE_UKAZKA } from "@/config/web";
 import type {
   Archiv, CelkovyStav, HybridniTlak, Incident, Kampan, Kandidat, Kategorie, NatoPolozka, Oprava, PravniStav,
-  Nepotvrzene, Provoz, Puvodce, RuskoStav, Svet, TydenniHodnoceni, Uroven, Watchlist,
+  Nepotvrzene, Overovana, Provoz, Puvodce, RuskoStav, Svet, TydenniHodnoceni, Uroven, Watchlist,
 } from "./typy";
 import { PORADI_KATEGORII } from "./kategorie";
 import { UROVNE } from "./skala";
@@ -22,6 +22,7 @@ import ostreOpravy from "../../data/opravy.json";
 import ostriKandidati from "../../data/kandidati.json";
 import ostrySvet from "../../data/svet.json";
 import ostreKampane from "../../data/kampane.json";
+import ostreOverujeme from "../../data/overujeme.json";
 
 import ukazkoveIncidenty from "../../data/ukazka/incidenty.json";
 import ukazkovyStav from "../../data/ukazka/stav.json";
@@ -32,6 +33,7 @@ import ukazkovyHybridni from "../../data/ukazka/hybridni-tlak.json";
 import ukazkoveTydny from "../../data/ukazka/tydny.json";
 import ukazkoveRusko from "../../data/ukazka/rusko.json";
 import ukazkovyArchiv from "../../data/ukazka/historie.json";
+import ukazkoveOverujeme from "../../data/ukazka/overujeme.json";
 
 /**
  * Vrstva mezi daty a UI.
@@ -474,6 +476,46 @@ export function kampanePodleZemi(): { kodZeme: string; pocet: number; posledni: 
     if (b.kodZeme === "CZ") return 1;
     return b.pocet - a.pocet || a.kodZeme.localeCompare(b.kodZeme);
   });
+}
+
+/*
+  Právě ověřované zprávy.
+
+  Zveřejňuje se nejvýš pár položek naráz. Kdyby jich mohlo být libovolně
+  mnoho, stal by se z klidného přehledu proud fám — a to je přesně to,
+  proti čemu projekt stojí.
+*/
+export const NEJVYS_OVEROVANYCH = 3;
+
+/** Všechny ověřované zprávy, které prošly lidskou kontrolou. Nejnovější první. */
+export function overujeme(): Overovana[] {
+  const ostre = jako<Overovana[]>(ostreOverujeme).filter((o) => o.lidskyOvereno);
+  const ukazkove = JE_UKAZKA ? jako<Overovana[]>(ukazkoveOverujeme).filter((o) => o.lidskyOvereno) : [];
+  return [...ostre, ...ukazkove].sort((a, b) => b.zacalo.localeCompare(a.zacalo));
+}
+
+/**
+ * Co se právě ověřuje.
+ *
+ * Po uplynutí lhůty se položka z přehledu stáhne, i kdyby ji nikdo
+ * neuzavřel. Viset tam donekonečna by znamenalo držet nahoře tvrzení,
+ * které nikdo nepotvrdil — tedy přesně to, co se tímhle řešit nemá.
+ */
+export function overovaneAktivni(ted = Date.now()): Overovana[] {
+  return overujeme()
+    .filter((o) => o.stav === "overujeme" && new Date(o.uzavritDo).getTime() > ted)
+    .slice(0, NEJVYS_OVEROVANYCH);
+}
+
+/**
+ * Jak dopadly starší ověřované zprávy.
+ *
+ * Uzavřené i ty, kterým vypršela lhůta. Nic nemizí potichu: čtenář musí
+ * mít možnost zpětně zjistit, co z toho, co se tu kdy objevilo, se
+ * nakonec potvrdilo a co ne.
+ */
+export function overovaneUzavrene(ted = Date.now()): Overovana[] {
+  return overujeme().filter((o) => o.stav !== "overujeme" || new Date(o.uzavritDo).getTime() <= ted);
 }
 
 /** Kód země → český název podle záznamů. Neznámý kód zůstane kódem, nic se nedomýšlí. */

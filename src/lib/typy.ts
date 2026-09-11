@@ -511,3 +511,55 @@ export interface Kampan {
   lidskyOvereno: boolean;
   aktualizovano: string;
 }
+
+/* ---------- právě ověřované zprávy ---------- */
+
+/**
+ * Zpráva, která se šíří, může být důležitá — a zatím není ověřená.
+ *
+ * Web o ní **netvrdí, že platí**. Tvrdí jen to, co si sám ověřil: že ji
+ * vydaly jmenované redakce, že ji projekt nemá potvrzenou a co k tomu
+ * říkají (nebo neříkají) úřady. Každá z těch tří vět je pravdivá
+ * a doložitelná — a právě proto se smí zveřejnit, aniž by šlo o šíření
+ * poplašné zprávy podle § 357 trestního zákoníku.
+ *
+ * Do žádného počtu, budíku ani průměru nevstupuje. Do kanálů se
+ * neodesílá. A nikdy nezmizí potichu: musí skončit v jednom ze tří
+ * stavů, jinak by se z přehledu stal generátor fám.
+ */
+export interface Overovana {
+  id: string;
+  slug: string;
+  /** Co se hlásí. Vždy s uvedením, že jde o tvrzení někoho jiného. */
+  coSeHlasi: string;
+  kodZeme: string;
+  zeme: string;
+  /** Kdy jsme to zařadili mezi ověřované. */
+  zacalo: string;
+  /** Kdy se na to člověk naposledy díval. */
+  overenoNaposledy: string;
+  /** Nejzazší termín uzavření. Po něm se položka z přehledu stáhne. */
+  uzavritDo: string;
+  /** Kdo to hlásí. Jmenovitě a s odkazem — anonymní „zdroje“ sem nestačí. */
+  kdoHlasi: { nazev: string; url: string; typ: TypZdroje; primarni: boolean }[];
+  /** Co jsme ověřili sami. Typicky „zatím nic“ — a napíše se to. */
+  coJsmeOverili: string[];
+  /**
+   * Co k tomu říkají úřady.
+   *
+   * Stojí na kartě jako první, ne jako dovětek. Ověřená nepřítomnost
+   * úředního kroku je to podstatné sdělení; tvrzení médií je až druhé.
+   */
+  coRikajiUrady: string[];
+  /** Co by to znamenalo, kdyby to platilo. Výslovně podmíněné. */
+  kdybyPlatilo: string;
+  /** Co má člověk dělat teď. Skoro vždy: nic měnit nemusí. */
+  coDelatTed: string;
+  stav: "overujeme" | "potvrzeno" | "vyvraceno" | "nikdo-nepotvrdil";
+  /** Slug vzniklého záznamu, nebo id zápisu mezi neprošlými. */
+  vyustilo?: string;
+  /** Jak to dopadlo. Povinné, jakmile stav není „overujeme“. */
+  jakDopadlo?: string;
+  /** Bez lidské kontroly se nezobrazí. Automat sem nic nedává. */
+  lidskyOvereno: boolean;
+}
