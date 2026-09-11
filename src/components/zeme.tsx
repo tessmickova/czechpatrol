@@ -80,7 +80,7 @@ export function DopadPoZemich() {
                 </ul>
                 <div className="mt-2.5 flex flex-wrap gap-1">
                   {z.kategorie.slice(0, 3).map((k) => (
-                    <span key={k} className="stitek-tmavy rounded-[10px] border border-linka px-1.5 py-[3px] text-tlum">{KATEGORIE[k].nazev}</span>
+                    <span key={k} className="stitek-tmavy rounded-[12px] border border-linka px-1.5 py-[3px] text-tlum">{KATEGORIE[k].nazev}</span>
                   ))}
                 </div>
                 {z.posledni && (

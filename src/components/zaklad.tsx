@@ -182,7 +182,7 @@ export function OdznakTypu({ typ, vpravo }: { typ: TypObsahu; vpravo?: boolean }
   const t = TYPY[typ];
   return (
     <Napoveda popis={<span className="block">{t.popis}</span>} vpravo={vpravo}>
-      <span className={`stitek-tmavy inline-flex items-center rounded-[16px] border px-1.5 py-[3px] ${t.tridy}`}>
+      <span className={`stitek-tmavy inline-flex items-center rounded-[18px] border px-1.5 py-[3px] ${t.tridy}`}>
         {t.nazev}
       </span>
     </Napoveda>
@@ -251,7 +251,7 @@ export function Karta({
     slez: "sklo border-[#a494d6]/30 bg-slez",
   }[odstin];
   return (
-    <Jako id={id} className={`rounded-[20px] ${odstiny} ${zdvih ? "zdvih" : ""} ${className}`}>
+    <Jako id={id} className={`rounded-[22px] ${odstiny} ${zdvih ? "zdvih" : ""} ${className}`}>
       {children}
     </Jako>
   );
@@ -262,12 +262,12 @@ export function Prazdno({
   nadpis, popis, ikona = "radar",
 }: { nadpis: string; popis: string; ikona?: NazevIkony }) {
   return (
-    <div className="relative flex flex-col items-center gap-4 overflow-hidden sklo rounded-[20px] border-akcent/30 bg-mycka px-6 py-9 text-center sm:flex-row sm:gap-5 sm:py-7 sm:text-left">
+    <div className="relative flex flex-col items-center gap-4 overflow-hidden sklo rounded-[22px] border-akcent/30 bg-mycka px-6 py-9 text-center sm:flex-row sm:gap-5 sm:py-7 sm:text-left">
       <span
         aria-hidden
         className="srafy pointer-events-none absolute inset-x-0 top-0 h-[5px] text-[#e8484f]"
       />
-      <span className="grid h-[44px] w-[44px] shrink-0 place-items-center rounded-[15px] border border-akcent/40 bg-akcent/10 text-akcent">
+      <span className="grid h-[44px] w-[44px] shrink-0 place-items-center rounded-full border border-akcent/40 bg-akcent/10 text-akcent">
         <Ikona nazev={ikona} velikost={21} />
       </span>
       <span className="block">

@@ -35,7 +35,7 @@ export function PlacenaVrstva({
     <div className="relative">
       <div aria-hidden className="pointer-events-none select-none blur-[6px] opacity-40">{children}</div>
       <div className="absolute inset-0 grid place-items-center p-4">
-        <div className="sklo sklo-akcent max-w-[28rem] rounded-[16px] p-5 text-center">
+        <div className="sklo sklo-akcent max-w-[28rem] rounded-[18px] p-5 text-center">
           <span className="mx-auto grid h-10 w-10 place-items-center rounded-[18px] border border-jantar/50 bg-jantar/15 text-jantar">
             <Ikona nazev="zamek" velikost={18} />
           </span>

@@ -148,7 +148,7 @@ export function DetailObsah({ i }: { i: Incident }) {
           <Link href="/#opatreni" className="odkaz">Oficiální opatření</Link>
         </p>
         {i.vyznam && (
-          <div className="mt-3 rounded-[16px] border border-linka2 bg-plocha p-3.5">
+          <div className="mt-3 rounded-[18px] border border-linka2 bg-plocha p-3.5">
             <div className="stitek mb-1">Hodnocení projektu — proč to sledujeme</div>
             <p className="text-[14px] leading-relaxed text-tlum">{i.vyznam}</p>
           </div>

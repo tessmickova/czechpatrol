@@ -44,8 +44,8 @@ export default function Analyzy() {
     {
       href: "/manipulace/",
       stitek: "Manipulace",
-      nadpis: "Kampaně, které šíří nepravdu",
-      popis: "Podvržené dokumenty, falešné weby a profily. U každé kampaně zvlášť: je manipulace doložená, a víme, kdo za ní stojí?",
+      nadpis: "Manipulace a útoky na občany",
+      popis: "Podvržené dokumenty, weby a profily vydávající se za někoho jiného. U každé operace zvlášť: co je doložené, a víme, kdo za ní stojí?",
       cislo: `${kampani} ${sklon(kampani, "rozebraná kampaň", "rozebrané kampaně", "rozebraných kampaní")}`,
       ikona: "bublina",
     },
@@ -70,7 +70,7 @@ export default function Analyzy() {
       <ul className="nalet mt-12 grid gap-3 sm:mt-16 sm:grid-cols-2">
         {karty.map((k) => (
           <li key={k.href}>
-            <Link href={k.href} className="flex h-full flex-col gap-3 rounded-[26px] border border-linka2 bg-plocha p-6 transition-colors hover:border-akcent">
+            <Link href={k.href} className="flex h-full flex-col gap-3 rounded-[28px] border border-linka2 bg-plocha p-6 transition-colors hover:border-akcent">
               <span className="flex items-center gap-2.5">
                 <span className="grid h-10 w-10 place-items-center rounded-full bg-plocha2 text-akcent"><Ikona nazev={k.ikona} velikost={19} tah={1.8} /></span>
                 <span className="stitek-znacky">{k.stitek}</span>

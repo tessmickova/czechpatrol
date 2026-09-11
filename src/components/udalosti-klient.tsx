@@ -12,7 +12,7 @@ import { ctiDotaz, sledujDotaz, zapisDotaz } from "@/lib/url-stav";
 import { DetailObsah, HlavickaDetailu } from "./detail-obsah";
 import { Ikona } from "./ikony";
 import { Nahlaseni } from "./nahlaseni";
-import { OdznakNove } from "./odznak-nove";
+import { Odznak, OdznakZavaznosti, RadekSeznamu, Sdeleni, TeckaZavaznosti, Tlacitko } from "./ui";
 import { SeznamZdroju } from "./zdroje";
 import { Prazdno } from "./zaklad";
 import { sklon, Vlajka } from "./zeme";
@@ -159,8 +159,8 @@ function Cip({ aktivni, onClick, children, title }: { aktivni: boolean; onClick:
       onClick={onClick}
       aria-pressed={aktivni}
       title={title}
-      className={`inline-flex min-h-[36px] items-center gap-1.5 rounded-[12px] px-2.5 text-[13px] font-semibold transition-colors ${
-        aktivni ? "bg-akcent/20 text-akcent-svetla" : "text-tlum hover:bg-plocha2 hover:text-inkoust"
+      className={`inline-flex min-h-[36px] items-center gap-1.5 rounded-full px-3 text-[13px] font-semibold transition-colors ${
+        aktivni ? "border border-akcent/60 bg-akcent/15 text-akcent-svetla" : "border border-transparent text-tlum hover:bg-plocha2 hover:text-inkoust"
       }`}
     >
       {children}
@@ -273,8 +273,8 @@ export function UdalostiKlient({ zaznamy, neprosle, kandidati = [] }: { zaznamy:
                 role="tab"
                 aria-selected={akt}
                 onClick={() => zmen({ zalozka: z.klic })}
-                className={`flex min-h-[46px] flex-col justify-center rounded-[16px] px-3.5 py-1.5 text-left transition-colors ${
-                  akt ? "bg-akcent/15 text-inkoust ring-1 ring-inset ring-akcent/50" : "text-tlum hover:bg-plocha2 hover:text-inkoust"
+                className={`flex min-h-[46px] flex-col justify-center rounded-[18px] border px-3.5 py-1.5 text-left transition-colors ${
+                  akt ? "border-akcent/60 bg-akcent/15 text-inkoust" : "border-transparent text-tlum hover:bg-plocha2 hover:text-inkoust"
                 }`}
               >
                 <span className="flex items-center gap-2 text-[13.5px] font-bold leading-tight">
@@ -288,22 +288,15 @@ export function UdalostiKlient({ zaznamy, neprosle, kandidati = [] }: { zaznamy:
         </div>
 
         {f.zalozka === "cekajici" && (
-          <p className="mt-3 flex items-start gap-2.5 rounded-[16px] border border-dashed border-akcent/50 bg-akcent/[0.07] px-4 py-3 text-[13.5px] leading-relaxed text-tlum">
-            <Ikona nazev="otaznik" velikost={16} tah={2} trida="mt-[2px] shrink-0 text-akcent" />
-            <span>
-              <b className="font-semibold text-inkoust">Tohle CzechPatrol netvrdí.</b> Jsou to zprávy, které hodinový sběr
-              zachytil ve zdrojích a člověk je zatím neověřil. Do žádného počtu, hodnocení ani upozornění nevstupují.
-            </span>
-          </p>
+          <Sdeleni ton="akcent" ikona="otaznik" carkovane nadpis="Tohle CzechPatrol netvrdí." trida="mt-3">
+            Jsou to zprávy, které hodinový sběr zachytil ve zdrojích a člověk je zatím neověřil. Do žádného počtu,
+            hodnocení ani upozornění nevstupují.
+          </Sdeleni>
         )}
         {f.zalozka === "neproslo" && (
-          <p className="mt-3 flex items-start gap-2.5 rounded-[16px] border border-linka2 bg-plocha2 px-4 py-3 text-[13.5px] leading-relaxed text-tlum">
-            <Ikona nazev="krizek" velikost={16} tah={2} trida="mt-[2px] shrink-0 text-tlum2" />
-            <span>
-              <b className="font-semibold text-inkoust">Co ověřením neprošlo.</b> Vedeme to schválně: bez toho by web
-              ukazoval jen to, co vyšlo, a nešlo by poznat, kolik věcí padlo.
-            </span>
-          </p>
+          <Sdeleni ikona="krizek" nadpis="Co ověřením neprošlo." trida="mt-3">
+            Vedeme to schválně: bez toho by web ukazoval jen to, co vyšlo, a nešlo by poznat, kolik věcí padlo.
+          </Sdeleni>
         )}
 
         {/* filtry — kompaktně; na jedné řádce to, co lidé mění nejčastěji */}
@@ -377,7 +370,7 @@ export function UdalostiKlient({ zaznamy, neprosle, kandidati = [] }: { zaznamy:
         {aktivni.length > 0 && (
           <div className="mt-3 flex flex-wrap items-center gap-1.5" aria-label="Aktivní filtry">
             {aktivni.map((a) => (
-              <button key={a.text} type="button" onClick={a.zrus} className="inline-flex min-h-[32px] items-center gap-1 rounded-[12px] border border-linka px-2 text-[12.5px] text-inkoust hover:border-akcent">
+              <button key={a.text} type="button" onClick={a.zrus} className="inline-flex min-h-[32px] items-center gap-1.5 rounded-full border border-linka px-2.5 text-[12.5px] text-inkoust transition-colors hover:border-akcent">
                 {a.text} <Ikona nazev="krizek" velikost={10} tah={2.4} /><span className="sr-only">zrušit filtr</span>
               </button>
             ))}
@@ -421,9 +414,9 @@ export function UdalostiKlient({ zaznamy, neprosle, kandidati = [] }: { zaznamy:
 
         {vysledek.length > limit && (
           <div className="mt-4 flex justify-center">
-            <button type="button" onClick={() => setLimit((l) => l + 10)} className="inline-flex min-h-[44px] items-center gap-2 rounded-[16px] border border-linka px-5 text-[14px] font-semibold text-inkoust hover:border-akcent">
+            <Tlacitko onKlik={() => setLimit((l) => l + 10)} ikonaVpravo="dolu">
               Zobrazit dalších {Math.min(10, vysledek.length - limit)} · zbývá {vysledek.length - limit}
-            </button>
+            </Tlacitko>
           </div>
         )}
 
@@ -433,7 +426,7 @@ export function UdalostiKlient({ zaznamy, neprosle, kandidati = [] }: { zaznamy:
       {siroky && otevreny && (
         <aside aria-label="Detail události" className="lg:sticky lg:top-[88px] lg:max-h-[calc(100dvh-104px)] lg:overflow-y-auto rounded-[22px] border border-linka bg-plocha p-5">
           <div className="mb-3 flex items-center justify-between gap-3">
-            <Link href={`/incident/${otevreny.slug}/`} className="text-[13px] font-semibold text-akcent hover:text-akcent-svetla">Samostatná stránka</Link>
+            <Tlacitko kam={`/incident/${otevreny.slug}/`} varianta="tichy" velikost="s" ikonaVpravo="nahoru" trida="[&>svg:last-child]:rotate-45">Samostatná stránka</Tlacitko>
             <button type="button" onClick={zavri} className="grid h-11 w-11 place-items-center rounded-[12px] text-tlum hover:bg-plocha2 hover:text-inkoust" aria-label="Zavřít detail">
               <Ikona nazev="krizek" velikost={16} tah={2} />
             </button>
@@ -446,101 +439,114 @@ export function UdalostiKlient({ zaznamy, neprosle, kandidati = [] }: { zaznamy:
   );
 }
 
-function Znacka({ hodnota, dobra }: { hodnota: string; dobra: boolean | null }) {
-  const tridy = dobra === true ? "text-[#8fd6ae]" : dobra === false ? "text-jantar" : "text-tlum2";
-  return <span className={`text-[12px] font-semibold ${tridy}`}>{hodnota}</span>;
-}
+/*
+  Tři druhy řádku, jedna stavebnice.
+
+  Ověřený záznam, vyvrácená zpráva i automaticky zachycená zpráva mají
+  stejné sloupce ve stejném pořadí: datum, značka, země a druh, titulek.
+  Liší se jen tím, co ve značkách svítí — a to je přesně ten rozdíl, který
+  má čtenář vidět. Kdyby se lišilo i rozvržení, musel by si každý druh
+  pokaždé přečíst znovu.
+*/
 
 function RadekZaznamu({ z, otevreny, onOtevri, siroky }: { z: Zaznam; otevreny: boolean; onOtevri: () => void; siroky: boolean }) {
-  const t = tokeny(z.zavaznost);
   const dr = druh(z);
   const jistota = jistotaZobrazena(z);
   const dobraInfo = jistota === "potvrzeno" || jistota === "vysoka";
   const pachatel = pachatelPotvrzen(z);
   const jeZjisteni = Boolean(z.datumZjisteni && z.datumZjisteni.slice(0, 10) !== z.datumUdalosti.slice(0, 10));
-  const obsah = (
-    <>
-      <span className="cislice w-[64px] shrink-0 pt-[3px] text-[12.5px] text-tlum">{datumPraha(kdyZjisteno(z)).replace(/ \d{4}$/, "")}</span>
-      <span aria-hidden className={`mt-[7px] h-[10px] w-[10px] shrink-0 rounded-full ${dr === "pripad" ? t.pruh : "border border-tlum2 bg-transparent"}`} />
-      <span className="min-w-0 flex-1">
-        <span className="flex flex-wrap items-center gap-x-2 gap-y-0.5 text-[12px] text-tlum">
-          <Vlajka kod={z.kodZeme} />
-          <span>{z.kodZeme === "CZ" ? "Česko" : z.zeme}</span>
-          <span aria-hidden>·</span>
-          <span>{dr === "pripad" ? UROVNE[z.zavaznost].nazev : dr === "aktualizace" ? "aktualizace" : dr === "opatreni" ? "opatření" : "reakce"}</span>
-          {jeZjisteni && <span className="text-tlum2">· stalo se {datumPraha(z.datumUdalosti)}</span>}
-          {z.historicky && <span className="text-tlum2">· doplněno zpětně</span>}
-        </span>
-        <span className="flex flex-wrap items-baseline gap-x-2 gap-y-1">
-          <OdznakNove kdy={kdyZjisteno(z)} />
-          <span className={`text-[15px] font-semibold leading-snug ${otevreny ? "text-akcent-svetla" : "text-inkoust"}`}>{z.titulek}</span>
-        </span>
-        <span className="mt-0.5 flex flex-wrap items-center gap-x-3 gap-y-0.5">
-          <Znacka hodnota={`informace: ${JISTOTY[jistota].nazev.toLowerCase()}`} dobra={dobraInfo} />
-          {dr === "pripad" && <Znacka hodnota={`pachatel: ${z.puvodce ? PUVODCE_NAZVY[z.puvodce] : "neznámý"}${z.puvodce && !pachatel ? " (nepotvrzeno)" : ""}`} dobra={pachatel ? true : z.puvodce ? false : null} />}
-          <Znacka hodnota={uredniZdroj(z) ? "úřední zdroj" : "zdroj: média"} dobra={uredniZdroj(z) ? true : null} />
-        </span>
-      </span>
-    </>
-  );
-  const tridy = `flex w-full items-start gap-3 border-b border-linka2 py-2.5 text-left transition-colors hover:bg-plocha ${otevreny ? "bg-plocha" : ""}`;
-  return siroky ? (
-    <button type="button" onClick={onOtevri} aria-expanded={otevreny} className={tridy}>{obsah}</button>
-  ) : (
-    <Link href={`/incident/${z.slug}/`} className={tridy}>{obsah}</Link>
+  return (
+    <RadekSeznamu
+      varianta="holy"
+      aktivni={otevreny}
+      kam={siroky ? undefined : `/incident/${z.slug}/`}
+      onKlik={siroky ? onOtevri : undefined}
+      o={{
+        datum: kdyZjisteno(z),
+        tecka: <TeckaZavaznosti uroven={z.zavaznost} plna={dr === "pripad"} velikost={10} />,
+        kodZeme: z.kodZeme,
+        zeme: z.zeme,
+        meta: [
+          dr === "pripad"
+            ? <OdznakZavaznosti key="u" uroven={z.zavaznost} />
+            : <span key="u">{dr === "aktualizace" ? "nové zjištění" : dr === "opatreni" ? "opatření" : "prohlášení"}</span>,
+          jeZjisteni ? <span key="s" className="text-tlum2">stalo se {datumPraha(z.datumUdalosti)}</span> : null,
+          z.historicky ? <span key="h" className="text-tlum2">doplněno zpětně</span> : null,
+        ].filter(Boolean),
+        cerstvost: kdyZjisteno(z),
+        titulek: <span className={otevreny ? "text-akcent-svetla" : undefined}>{z.titulek}</span>,
+        znacky: (
+          <>
+            <Odznak ton={dobraInfo ? "klid" : "neutral"}>informace: {JISTOTY[jistota].nazev.toLowerCase()}</Odznak>
+            {dr === "pripad" && (
+              <Odznak ton={pachatel ? "klid" : z.puvodce ? "pozor" : "neutral"}>
+                pachatel: {z.puvodce ? PUVODCE_NAZVY[z.puvodce] : "neznámý"}{z.puvodce && !pachatel ? " (nepotvrzeno)" : ""}
+              </Odznak>
+            )}
+            <Odznak ton={uredniZdroj(z) ? "klid" : "neutral"} ikona={uredniZdroj(z) ? "fajfka" : undefined}>
+              {uredniZdroj(z) ? "úřední zdroj" : "zdroj: média"}
+            </Odznak>
+          </>
+        ),
+      }}
+    />
   );
 }
 
 function RadekNeprosle({ n }: { n: Nepotvrzene }) {
   return (
-    <details className="group border-b border-linka2">
-      <summary className="flex cursor-pointer items-start gap-3 py-2.5 hover:bg-plocha">
-        <span className="cislice w-[64px] shrink-0 pt-[3px] text-[12.5px] text-tlum">{datumPraha(n.datum).replace(/ \d{4}$/, "")}</span>
-        <span aria-hidden className="mt-[7px] h-[10px] w-[10px] shrink-0 rounded-full bg-tlum2" />
-        <span className="min-w-0 flex-1">
-          <span className="flex flex-wrap items-center gap-x-2 text-[12px] text-tlum">
-            <Vlajka kod={n.kodZeme} /> <span>{n.kodZeme === "CZ" ? "Česko" : n.zeme}</span> <span aria-hidden>·</span>
-            <span className="font-semibold text-[#8fd6ae]">{n.stav === "vyvraceno" ? "vyvráceno" : "nepotvrzeno"}</span>
-          </span>
-          <span className="block text-[15px] font-semibold leading-snug text-tlum">{n.nazev}</span>
-        </span>
-        <Ikona nazev="dolu" velikost={13} tah={2} trida="mt-2 shrink-0 text-tlum2 transition-transform group-open:rotate-180" />
-      </summary>
-      <div className="space-y-3 pb-4 pl-[88px] text-[14px] leading-relaxed">
-        <div><div className="stitek mb-1">Co se původně zdálo</div><p className="text-tlum">{n.puvodne}</p></div>
-        <div><div className="stitek mb-1">Co ověření ukázalo</div><p className="text-inkoust">{n.overeni}</p></div>
-        <p className="text-[12.5px] text-tlum2">Do žádného počtu ani hodnocení nevstupuje.</p>
-        <SeznamZdroju zdroje={n.zdroje} husty />
-      </div>
-    </details>
+    <RadekSeznamu
+      varianta="holy"
+      o={{
+        datum: n.datum,
+        tecka: <TeckaZavaznosti plna velikost={10} />,
+        kodZeme: n.kodZeme,
+        zeme: n.zeme,
+        meta: [<Odznak key="s" ton="klid" ikona="krizek">{n.stav === "vyvraceno" ? "vyvráceno" : "nepotvrzeno"}</Odznak>],
+        titulek: <span className="text-tlum">{n.nazev}</span>,
+      }}
+      detail={
+        <div className="space-y-3 pt-1 text-[14px] leading-relaxed">
+          <div><div className="stitek mb-1">Co se původně zdálo</div><p className="text-tlum">{n.puvodne}</p></div>
+          <div><div className="stitek mb-1">Co ověření ukázalo</div><p className="text-inkoust">{n.overeni}</p></div>
+          <p className="text-[12.5px] text-tlum2">Do žádného počtu ani hodnocení nevstupuje.</p>
+          <SeznamZdroju zdroje={n.zdroje} husty />
+        </div>
+      }
+    />
   );
 }
 
-/** Automaticky zachycená zpráva. Vypadá jinak než záznam: čárkovaně, bez závažnosti, s odkazem na zdroj. */
+/** Automaticky zachycená zpráva. Tentýž řádek, jen bez závažnosti a s odkazem na zdroj. */
 function RadekKandidata({ k }: { k: Kandidat }) {
   return (
-    <details className="group border-b border-dashed border-linka">
-      <summary className="flex cursor-pointer items-start gap-3 py-2.5 hover:bg-plocha">
-        <span className="cislice w-[64px] shrink-0 pt-[3px] text-[12.5px] text-tlum">{datumPraha(k.publikovano ?? k.zachyceno).replace(/ \d{4}$/, "")}</span>
-        <span aria-hidden className="mt-[7px] h-[10px] w-[10px] shrink-0 rounded-full border border-dashed border-akcent" />
-        <span className="min-w-0 flex-1">
-          <span className="flex flex-wrap items-center gap-x-2 text-[12px] text-tlum">
-            {k.kodZeme ? <><Vlajka kod={k.kodZeme} /> <span>{k.kodZeme === "CZ" ? "Česko" : k.zeme}</span></> : <span>země neurčena</span>}
-            <span aria-hidden>·</span>
-            <span className="font-semibold text-akcent">automaticky zachyceno · čeká na ověření</span>
-            {k.klasifikace === "model" && <span className="text-tlum2">· přeloženo modelem</span>}
+    <RadekSeznamu
+      varianta="holy"
+      o={{
+        datum: k.publikovano ?? k.zachyceno,
+        tecka: <span aria-hidden className="mt-[6px] h-[10px] w-[10px] shrink-0 rounded-full border border-dashed border-akcent" />,
+        kodZeme: k.kodZeme ?? undefined,
+        zeme: k.zeme ?? undefined,
+        meta: [
+          <Odznak key="c" ton="akcent" ikona="otaznik">čeká na ověření</Odznak>,
+          k.klasifikace === "model" ? <span key="m" className="text-tlum2">přeloženo modelem</span> : null,
+        ].filter(Boolean),
+        titulek: k.titulek,
+        znacky: (
+          <span className="text-[12px] text-tlum2">
+            zdroj: {k.zdroj.nazev}{k.zdroj.primarni ? " (úřední)" : ""}
+            {k.kategorie.length ? ` · ${k.kategorie.map((x) => KATEGORIE[x as Kategorie]?.nazev ?? x).join(", ")}` : ""}
           </span>
-          <span className="block text-[15px] font-semibold leading-snug text-inkoust">{k.titulek}</span>
-          <span className="mt-0.5 block text-[12px] text-tlum2">zdroj: {k.zdroj.nazev}{k.zdroj.primarni ? " (úřední)" : ""}{k.kategorie.length ? ` · ${k.kategorie.map((x) => KATEGORIE[x as Kategorie]?.nazev ?? x).join(", ")}` : ""}</span>
-        </span>
-        <Ikona nazev="dolu" velikost={13} tah={2} trida="mt-2 shrink-0 text-tlum2 transition-transform group-open:rotate-180" />
-      </summary>
-      <div className="space-y-2 pb-4 pl-[88px] text-[14px] leading-relaxed">
-        {k.shrnuti && <p className="text-tlum">{k.shrnuti}</p>}
-        {k.titulek !== k.titulekPuvodni && <p className="text-[12.5px] text-tlum2">Původní titulek: {k.titulekPuvodni}</p>}
-        <p><a href={k.zdroj.url} target="_blank" rel="noopener noreferrer" className="odkaz break-all">{k.zdroj.url}</a></p>
-        <p className="text-[12.5px] text-tlum2">Zachyceno {datumPraha(k.zachyceno)} hodinovým sběrem. Není to ověřený záznam: závažnost ani jistota nejsou stanovené a do počtů nevstupuje. Po lidské kontrole se buď stane záznamem, nebo po třech týdnech zmizí.</p>
-      </div>
-    </details>
+        ),
+      }}
+      detail={
+        <div className="space-y-2 pt-1 text-[14px] leading-relaxed">
+          {k.shrnuti && <p className="text-tlum">{k.shrnuti}</p>}
+          {k.titulek !== k.titulekPuvodni && <p className="text-[12.5px] text-tlum2">Původní titulek: {k.titulekPuvodni}</p>}
+          <p><a href={k.zdroj.url} target="_blank" rel="noopener noreferrer" className="odkaz break-all">{k.zdroj.url}</a></p>
+          <p className="text-[12.5px] text-tlum2">Zachyceno {datumPraha(k.zachyceno)} hodinovým sběrem. Není to ověřený záznam: závažnost ani jistota nejsou stanovené a do počtů nevstupuje. Po lidské kontrole se buď stane záznamem, nebo po třech týdnech zmizí.</p>
+        </div>
+      }
+    />
   );
 }

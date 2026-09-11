@@ -70,7 +70,7 @@ export function Nahlaseni() {
       </button>
 
       {otevreno && (
-        <form onSubmit={odesli} className="sklo mt-4 w-full max-w-[720px] rounded-[16px] p-5 sm:p-6">
+        <form onSubmit={odesli} className="sklo mt-4 w-full max-w-[720px] rounded-[18px] p-5 sm:p-6">
           <div className="stitek mb-1 !text-akcent">Hlášení události</div>
           <p className="mb-4 text-[14px] leading-relaxed text-tlum">
             Nejlepší je odkaz na úřední zdroj — policii, vládu, NATO, EU. Bez zdroje záznam nezveřejníme, ale rádi ho dohledáme.

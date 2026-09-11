@@ -8,6 +8,7 @@ import { Ikona, type NazevIkony } from "./ikony";
 import { TlacitkoInstalace } from "./pwa";
 import { KruhyKomunity } from "./komunita";
 import { ZnackaKanalu, type Znacka } from "./znacky";
+import { Tlacitko } from "./ui";
 
 /** Kdokoli může panel otevřít — hlavička, spodní lišta, odkaz v textu. */
 export function otevriPanel() {
@@ -24,7 +25,7 @@ export function otevriPanel() {
 export const HLAVNI_STRANKY: { href: string; label: string; ikona: NazevIkony; popis: string }[] = [
   { href: "/", label: "Přehled", ikona: "radar", popis: "stavy, opatření, poslední události" },
   { href: "/udalosti/", label: "Události", ikona: "osa", popis: "všechny záznamy se zdroji a filtry" },
-  { href: "/manipulace/", label: "Manipulace", ikona: "bublina", popis: "rozebrané kampaně, které šíří nepravdu" },
+  { href: "/manipulace/", label: "Manipulace", ikona: "bublina", popis: "operace cílené na občany a co je u nich doložené" },
   { href: "/zeme/", label: "Země", ikona: "vlajka", popis: "přehled a počty pro každou sledovanou zemi" },
   { href: "/analyzy/", label: "Analýzy", ikona: "graf", popis: "vývoj v čase, cíle aktérů, metodika" },
   { href: "/muj-prehled/", label: "Můj přehled", ikona: "terc", popis: "země a témata, která sledujete" },
@@ -211,12 +212,12 @@ export function PostranniPanel() {
                 return (
                   <li key={k.klic}>
                     {url ? (
-                      <a href={url} target="_blank" rel="noopener noreferrer" className="flex min-h-[58px] flex-col items-center justify-center gap-1 rounded-[16px] border border-linka px-1 text-center transition-colors hover:border-akcent">
+                      <a href={url} target="_blank" rel="noopener noreferrer" className="flex min-h-[58px] flex-col items-center justify-center gap-1 rounded-[18px] border border-linka px-1 text-center transition-colors hover:border-akcent">
                         <ZnackaKanalu znacka={k.klic} velikost={22} />
                         <span className="text-[11.5px] font-semibold text-inkoust">{k.nazev}</span>
                       </a>
                     ) : (
-                      <span className="flex min-h-[58px] flex-col items-center justify-center gap-1 rounded-[16px] border border-dashed border-linka px-1 text-center opacity-80">
+                      <span className="flex min-h-[58px] flex-col items-center justify-center gap-1 rounded-[18px] border border-dashed border-linka px-1 text-center opacity-80">
                         <ZnackaKanalu znacka={k.klic} velikost={22} tlumena />
                         <span className="text-[11.5px] font-semibold text-tlum">{k.nazev}</span>
                         <span className="text-[10px] leading-none text-tlum2">připravujeme</span>
@@ -227,7 +228,7 @@ export function PostranniPanel() {
               })}
             </ul>
             <div className="mt-1.5 flex items-center justify-between gap-3 text-[13px]">
-              <a href="/feed.xml" className="inline-flex min-h-[36px] items-center gap-1.5 font-semibold text-akcent hover:text-akcent-svetla"><Ikona nazev="rss" velikost={13} tah={2} /> RSS — funguje vždy</a>
+              <Tlacitko kam="/feed.xml" varianta="tichy" velikost="s" ikona="rss" trida="!text-akcent hover:!text-akcent-svetla">RSS — funguje vždy</Tlacitko>
               <Link href="/odber/" onClick={zavri} className="text-tlum hover:text-inkoust">jak to funguje →</Link>
             </div>
           </section>

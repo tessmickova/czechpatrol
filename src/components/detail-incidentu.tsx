@@ -47,8 +47,8 @@ function Nenalezeno() {
         Zveřejňujeme pouze záznamy, které prošly kontrolou a mají uvedený zdroj.
       </p>
       <div className="mt-8 flex flex-wrap justify-center gap-2.5">
-        <Link href="/udalosti/" className="rounded-[16px] border border-linka bg-plocha px-3 py-2 text-[13px] font-medium transition-colors hover:border-inkoust">Všechny události</Link>
-        <Link href="/" className="rounded-[16px] border border-linka bg-plocha px-3 py-2 text-[13px] font-medium transition-colors hover:border-inkoust">Přehled</Link>
+        <Link href="/udalosti/" className="rounded-[18px] border border-linka bg-plocha px-3 py-2 text-[13px] font-medium transition-colors hover:border-inkoust">Všechny události</Link>
+        <Link href="/" className="rounded-[18px] border border-linka bg-plocha px-3 py-2 text-[13px] font-medium transition-colors hover:border-inkoust">Přehled</Link>
       </div>
     </div>
   );

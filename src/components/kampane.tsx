@@ -3,46 +3,65 @@ import { datumZdroje } from "@/lib/format";
 import { JISTOTY } from "@/lib/skala";
 import type { Jistota, Kampan } from "@/lib/typy";
 import { Ikona, type NazevIkony } from "./ikony";
+import { Odznak, Sdeleni, type Ton } from "./ui";
 import { Napoveda } from "./zaklad";
 import { SeznamZdroju } from "./zdroje";
 import { sklon, Vlajka } from "./zeme";
 
 /*
-  Manipulační kampaně.
+  Manipulace a útoky na občany.
 
-  Kampaň není událost. Nemá jedno místo ani jeden okamžik, obvykle míří na
+  Operace není událost. Nemá jedno místo ani jeden okamžik, obvykle míří na
   víc zemí naráz a nedá se odbýt jedním odstavcem. Karta ji proto rozebírá
   na šest částí — a hlavně odděluje dvě otázky, které se všude slévají:
 
-    1. Je to vůbec manipulace?   (dá se doložit z obsahu a technických stop)
-    2. Kdo za tím stojí?         (dá se doložit skoro vždy jen úředním závěrem)
+    1. Je doložené, že šlo o zásah?  (z obsahu a technických stop)
+    2. Kdo za tím stojí?             (skoro vždy jen úředním závěrem)
 
   Že je něco prokazatelně podvrh, neříká nic o tom, kdo ho vyrobil. Kdo obojí
   spojí do jedné věty, tvrdí víc, než má doloženo — a právě na tom se dá
   projekt nejsnáz nachytat.
+
+  Pojmy, které část čtenářů rovnou odradí, tu schválně nejsou. Web popisuje
+  skutky — podvržený dokument, napodobený web, ukradená identita — ne nálepky.
 */
 
 /** Šest oddílů karty. Pořadí je pevné: co se tvrdilo → co z toho platí → co dál. */
 const CASTI: { klic: keyof Kampan; nadpis: string; popis: string; ikona: NazevIkony }[] = [
-  { klic: "tvrzeni", nadpis: "Co se tvrdilo", popis: "Obsah kampaně vlastními slovy, ne parafráze.", ikona: "bublina" },
+  { klic: "tvrzeni", nadpis: "Co se tvrdilo", popis: "Obsah operace vlastními slovy, ne parafráze.", ikona: "bublina" },
   { klic: "kanaly", nadpis: "Jak se to šířilo", popis: "Kudy to šlo k lidem — weby, profily, placená propagace.", ikona: "komunikace" },
   { klic: "skutecnost", nadpis: "Jak to doopravdy je", popis: "Co je doložené z jiných zdrojů.", ikona: "fajfka" },
   { klic: "reakce", nadpis: "Kdo na to reagoval", popis: "Úřady, instituce a dotčené strany.", ikona: "vaha" },
   { klic: "coByPotvrdilo", nadpis: "Co by otázku uzavřelo", popis: "Co by muselo vyjít najevo, aby se dalo říct, kdo za tím stojí.", ikona: "lupa" },
 ];
 
-/** Barva štítku jistoty. Doložené zelená, podezření jantar — nikdy naopak. */
-const TON_JISTOTY: Record<Jistota, string> = {
-  potvrzeno: "border-[#5cbf8a]/50 bg-[#5cbf8a]/12 text-[#8fd6ae]",
-  vysoka: "border-[#5cbf8a]/40 bg-[#5cbf8a]/10 text-[#8fd6ae]",
-  stredni: "border-[#d9b24c]/45 bg-[#d9b24c]/10 text-[#e6c977]",
-  nizka: "border-linka bg-plocha2 text-tlum",
+/*
+  Jistota se mapuje na tón stavebnice, ne na vlastní barvy.
+
+  Doložené je zelené, rozpracované jantarové, nedoložené šedé — nikdy naopak.
+  Šedá u podezření je záměr: neříká „pozor“, říká „tohle zatím nevíme“.
+  Kdyby měla tahle sekce vlastní paletu, četl by čtenář stejnou barvu jinak
+  než o dvě sekce výš, kde znamená závažnost.
+*/
+const TON_JISTOTY: Record<Jistota, Ton> = {
+  potvrzeno: "klid",
+  vysoka: "klid",
+  stredni: "pozor",
+  nizka: "neutral",
+};
+
+const RAMECEK_JISTOTY: Record<Ton, string> = {
+  klid: "border-[#5cbf8a]/50 bg-[#5cbf8a]/10 text-[#8fd6ae]",
+  pozor: "border-[#d9b24c]/45 bg-[#d9b24c]/10 text-[#e6c977]",
+  vazne: "border-[#e8484f]/50 bg-[#e8484f]/12 text-[#f2848a]",
+  neutral: "border-linka bg-plocha2 text-tlum",
+  akcent: "border-akcent/55 bg-akcent/12 text-akcent-svetla",
 };
 
 function StitekJistoty({ otazka, odpoved, jistota, duvod }: { otazka: string; odpoved: string; jistota: Jistota; duvod: string }) {
   return (
     <Napoveda cele popis={<span className="block">{duvod}</span>}>
-      <span className={`flex min-h-[64px] w-full flex-col justify-center gap-1 rounded-[18px] border px-4 py-3 text-left ${TON_JISTOTY[jistota]}`}>
+      <span className={`flex min-h-[64px] w-full flex-col justify-center gap-1 rounded-[18px] border px-4 py-3 text-left ${RAMECEK_JISTOTY[TON_JISTOTY[jistota]]}`}>
         <span className="stitek !text-tlum2">{otazka}</span>
         <span className="text-[15.5px] font-bold leading-tight">{odpoved}</span>
         <span className="text-[11.5px] leading-tight opacity-90">jistota: {JISTOTY[jistota].nazev.toLowerCase()}</span>
@@ -74,7 +93,7 @@ function Cast({ nadpis, popis, ikona, body }: { nadpis: string; popis: string; i
 
 export function KartaKampane({ k, nazvyZemi }: { k: Kampan; nazvyZemi: Record<string, string> }) {
   return (
-    <article id={k.slug} className="scroll-mt-[84px] overflow-hidden rounded-[26px] border border-linka2 bg-plocha">
+    <article id={k.slug} className="scroll-mt-[84px] overflow-hidden rounded-[28px] border border-linka2 bg-plocha">
       <header className="border-b border-linka2 p-5 sm:p-6">
         <div className="flex flex-wrap items-center gap-x-3 gap-y-1.5 text-[12.5px] text-tlum">
           <span className="flex items-center gap-1.5">
@@ -85,10 +104,9 @@ export function KartaKampane({ k, nazvyZemi }: { k: Kampan; nazvyZemi: Record<st
           <span className="cislice">odhaleno {datumZdroje(k.odhaleno)}</span>
           <span aria-hidden className="text-tlum2">·</span>
           <span>{k.kdoOdhalil}</span>
-          <span className={`ml-auto inline-flex items-center gap-1.5 rounded-full border px-2.5 py-1 text-[11.5px] font-semibold ${k.probiha ? "border-akcent/50 bg-akcent/12 text-akcent-svetla" : "border-linka bg-plocha2 text-tlum2"}`}>
-            <span aria-hidden className={`h-[6px] w-[6px] rounded-full ${k.probiha ? "bg-akcent" : "bg-tlum2"}`} />
+          <Odznak ton={k.probiha ? "akcent" : "neutral"} duraz="silny" ikona={k.probiha ? "oko" : "hodiny"} trida="ml-auto">
             {k.probiha ? "běží dál" : "utichla"}
-          </span>
+          </Odznak>
         </div>
         <h3 className="titul-mensi mt-3">{k.nazev}</h3>
         <p className="mt-2 text-[16px] leading-relaxed text-tlum">{k.titulek}</p>
@@ -98,8 +116,8 @@ export function KartaKampane({ k, nazvyZemi }: { k: Kampan; nazvyZemi: Record<st
       <div className="border-b border-linka2 p-5 sm:p-6">
         <div className="grid gap-2.5 sm:grid-cols-2">
           <StitekJistoty
-            otazka="Je to manipulace?"
-            odpoved={k.jistotaManipulace === "potvrzeno" || k.jistotaManipulace === "vysoka" ? "Ano, doloženo" : k.jistotaManipulace === "stredni" ? "Pravděpodobně ano" : "Zatím sporné"}
+            otazka="Je zásah doložený?"
+            odpoved={k.jistotaManipulace === "potvrzeno" || k.jistotaManipulace === "vysoka" ? "Ano, doloženo" : k.jistotaManipulace === "stredni" ? "Zatím jen pravděpodobně" : "Zatím sporné"}
             jistota={k.jistotaManipulace}
             duvod={k.duvodManipulace}
           />
@@ -126,7 +144,7 @@ export function KartaKampane({ k, nazvyZemi }: { k: Kampan; nazvyZemi: Record<st
             Čemu to mělo posloužit
           </h4>
           <p className="mt-1 pl-9 text-[12px] text-tlum2">Hodnocení projektu, ne doložený fakt. Označeno schválně.</p>
-          <p className="mt-2 rounded-[16px] border border-dashed border-linka bg-plocha2 px-4 py-3 text-[14.5px] leading-relaxed text-tlum sm:ml-9">{k.ucel}</p>
+          <p className="mt-2 rounded-[18px] border border-dashed border-linka bg-plocha2 px-4 py-3 text-[14.5px] leading-relaxed text-tlum sm:ml-9">{k.ucel}</p>
         </section>
 
         <Cast nadpis={CASTI[4].nadpis} popis={CASTI[4].popis} ikona={CASTI[4].ikona} body={k.coByPotvrdilo} />
@@ -162,22 +180,22 @@ export function DlazdiceKampane({ k, nazvyZemi, siroka = false }: { k: Kampan; n
       <span className={`font-bold leading-snug text-inkoust ${siroka ? "text-[21px] sm:col-start-1" : "text-[17px]"}`}>{k.nazev}</span>
       <span className={`text-[14px] leading-relaxed text-tlum ${siroka ? "sm:col-start-1" : ""}`}>{k.titulek}</span>
       <span className={`mt-auto flex flex-wrap gap-1.5 pt-1 ${siroka ? "sm:col-start-2 sm:row-start-1 sm:row-end-4 sm:mt-0 sm:flex-col sm:items-start sm:self-center sm:pt-0" : ""}`}>
-        <span className={`inline-flex items-center rounded-full border px-2.5 py-1 text-[11.5px] font-semibold ${TON_JISTOTY[k.jistotaManipulace]}`}>
-          manipulace: {k.jistotaManipulace === "potvrzeno" || k.jistotaManipulace === "vysoka" ? "doloženo" : k.jistotaManipulace === "stredni" ? "pravděpodobně" : "sporné"}
-        </span>
-        <span className={`inline-flex items-center rounded-full border px-2.5 py-1 text-[11.5px] font-semibold ${TON_JISTOTY[k.puvodce.jistota]}`}>
+        <Odznak ton={TON_JISTOTY[k.jistotaManipulace]} duraz="silny" ikona="fajfka">
+          zásah: {k.jistotaManipulace === "potvrzeno" || k.jistotaManipulace === "vysoka" ? "doloženo" : k.jistotaManipulace === "stredni" ? "pravděpodobně" : "sporné"}
+        </Odznak>
+        <Odznak ton={TON_JISTOTY[k.puvodce.jistota]} duraz="silny" ikona="otaznik">
           původce: {k.puvodce.koho ? (k.puvodce.jistota === "potvrzeno" || k.puvodce.jistota === "vysoka" ? k.puvodce.koho.toLowerCase() : `${k.puvodce.koho.toLowerCase()} — podezření`) : "neznámý"}
-        </span>
+        </Odznak>
       </span>
     </Link>
   );
 }
 
 /**
- * Kolik zpracovaných kampaní míří na kterou zemi.
+ * Kolik zpracovaných operací míří na kterou zemi.
  *
- * Číslo neříká, kolik kampaní proti té zemi běží — jen kolik jich máme
- * rozebraných. Jedna kampaň mířící na dvě země se počítá u obou, takže
+ * Číslo neříká, kolik jich proti té zemi běží — jen kolik jich máme
+ * rozebraných. Jedna operace mířící na dvě země se počítá u obou, takže
  * součet přes země je vyšší než počet kampaní. Napsáno je to i v tabulce.
  */
 export function TabulkaZemiKampani({
@@ -188,11 +206,7 @@ export function TabulkaZemiKampani({
   celkem: number;
 }) {
   if (!radky.length) {
-    return (
-      <p className="rounded-[18px] border border-linka2 bg-plocha px-4 py-5 text-[14.5px] text-tlum">
-        Zatím nemáme rozebranou žádnou kampaň.
-      </p>
-    );
+    return <Sdeleni ikona="lupa">Zatím nemáme rozebranou žádnou kampaň.</Sdeleni>;
   }
   const max = Math.max(...radky.map((r) => r.pocet));
   return (

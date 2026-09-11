@@ -3,6 +3,7 @@ import { RadarTlaku } from "./mericky";
 import { UROVNE } from "@/lib/skala";
 import { PASMA } from "@/lib/skala";
 import type { HybridniTlak } from "@/lib/typy";
+import { Tlacitko } from "./ui";
 
 /*
   Pavučina typů hrozeb.
@@ -48,7 +49,7 @@ export function PavucinaHrozeb({
       <div className="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1">
         <h3 className="titul-mensi">{nadpis}</h3>
         {odkaz && (
-          <Link href={odkaz.href} className="text-[13px] font-semibold text-akcent hover:text-akcent-svetla">{odkaz.text}</Link>
+          <Tlacitko kam={odkaz.href} varianta="tichy" velikost="s" ikonaVpravo="nahoru" trida="[&>svg:last-child]:rotate-90">{odkaz.text}</Tlacitko>
         )}
       </div>
       <p className="mt-2 text-[14px] leading-relaxed text-tlum">{popis}</p>

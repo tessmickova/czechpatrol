@@ -72,7 +72,7 @@ function Aktor({ a, stupne }: { a: SvetAktor; stupne: string[] }) {
   return (
     <article id={a.klic} className="scroll-mt-[72px] rounded-[22px] border border-linka bg-plocha p-5">
       <header className="flex items-start gap-3">
-        <span className="grid h-10 w-10 shrink-0 place-items-center rounded-[16px] bg-plocha2">
+        <span className="grid h-10 w-10 shrink-0 place-items-center rounded-[18px] bg-plocha2">
           {a.kod ? <Vlajka kod={a.kod} velka /> : <Ikona nazev="globus" velikost={20} tah={1.8} trida="text-akcent" />}
         </span>
         <span className="min-w-0">
@@ -89,7 +89,7 @@ function Aktor({ a, stupne }: { a: SvetAktor; stupne: string[] }) {
         <div className="mb-1.5 flex items-center gap-2"><OdznakTypu typ="fakt" /><span className="stitek">Co pro to dělá</span></div>
         <Tvrzeni polozky={a.postup} aktor={a} tlumene />
       </div>
-      <div className="mt-4 rounded-[16px] border border-[#a494d6]/30 bg-[#a494d6]/8 p-3.5">
+      <div className="mt-4 rounded-[18px] border border-[#a494d6]/30 bg-[#a494d6]/8 p-3.5">
         <div className="mb-2 flex items-center gap-2"><OdznakTypu typ="odhad" /><span className="stitek">Jak blízko k cílům je</span></div>
         <Priblizeni stupen={a.priblizeni.stupen} stupne={stupne} />
         <p className="mt-2 text-[14px] leading-relaxed text-tlum">{a.priblizeni.odhad}</p>
@@ -108,7 +108,7 @@ function Aktor({ a, stupne }: { a: SvetAktor; stupne: string[] }) {
           {a.zdroje.map((z, i) => (
             <li key={z.url} className="flex gap-2 text-[13px] leading-snug">
               <span className="cislice shrink-0 text-tlum2">[{i + 1}]</span>
-              <span className={`stitek-tmavy shrink-0 rounded-[10px] border px-1.5 py-[2px] ${TYPY_ZDROJU[z.typ].tridy}`}>{TYPY_ZDROJU[z.typ].znacka}</span>
+              <span className={`stitek-tmavy shrink-0 rounded-[12px] border px-1.5 py-[2px] ${TYPY_ZDROJU[z.typ].tridy}`}>{TYPY_ZDROJU[z.typ].znacka}</span>
               <a href={z.url} target="_blank" rel="noopener noreferrer" className="odkaz min-w-0 break-words text-tlum">{z.nazev}</a>
             </li>
           ))}
@@ -140,7 +140,7 @@ export default function Svet() {
         <ul className="grid gap-1.5 sm:grid-cols-2 lg:grid-cols-4">
           {s.aktori.map((a) => (
             <li key={a.klic}>
-              <a href={`#${a.klic}`} className="flex min-h-[56px] items-center gap-3 rounded-[16px] border border-linka2 bg-plocha px-3 py-2 hover:border-akcent">
+              <a href={`#${a.klic}`} className="flex min-h-[56px] items-center gap-3 rounded-[18px] border border-linka2 bg-plocha px-3 py-2 hover:border-akcent">
                 <span className="shrink-0">{a.kod ? <Vlajka kod={a.kod} /> : <Ikona nazev="globus" velikost={16} tah={1.8} trida="text-akcent" />}</span>
                 <span className="min-w-0 flex-1">
                   <span className="block truncate text-[14px] font-semibold text-inkoust">{a.nazev}</span>

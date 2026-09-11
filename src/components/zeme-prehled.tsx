@@ -1,16 +1,13 @@
 import Link from "next/link";
 import { druh, kdyZjisteno, novaZjisteni, pachatelPotvrzen, uredniZdroj, type Zaznam } from "@/lib/agregace";
-import { datumPraha } from "@/lib/cas";
 import { KATEGORIE } from "@/lib/kategorie";
-import { PASMA, UROVNE, zDeseti } from "@/lib/skala";
 import type { HybridniTlak, Kampan, Kategorie } from "@/lib/typy";
 import { DlazdiceKampane } from "./kampane";
 import { NadpisBloku } from "./nadpisy";
 import { NovaZjisteni } from "./nova-zjisteni";
 import { PavucinaHrozeb } from "./pavucina";
 import { PocitadlaZeme, type PolozkaPoctu } from "./pocitadla-zive";
-import { OdznakNove } from "./odznak-nove";
-import { Vlajka } from "./zeme";
+import { Odznak, OdznakZavaznosti, RadekSeznamu, Sdeleni, SeznamPolozek, TeckaZavaznosti, Tlacitko } from "./ui";
 
 /*
   Přehled jedné země: kolik toho tam je, čím je to tvořené a co konkrétně.
@@ -20,27 +17,24 @@ import { Vlajka } from "./zeme";
   zůstává prázdno a napíše se to.
 */
 
+/** Řádek země používá tutéž stavebnici jako Události a Nová zjištění. */
 function Radek({ i }: { i: Zaznam }) {
-  const t = PASMA[UROVNE[i.zavaznost].pasmo];
   const d = druh(i);
   return (
-    <li>
-      <Link href={`/incident/${i.slug}/`} className="flex flex-col gap-1 px-4 py-3.5 transition-colors hover:bg-plocha2 sm:flex-row sm:items-baseline sm:gap-4 sm:px-5">
-        <span className="cislice shrink-0 text-[13px] text-tlum2 sm:w-[86px]">{datumPraha(kdyZjisteno(i))}</span>
-        <span className="min-w-0 flex-1">
-          <span className="flex flex-wrap items-center gap-x-2.5 gap-y-1 text-[12.5px] text-tlum">
-            <span aria-hidden className={`h-[8px] w-[8px] rounded-full ${t.tecka}`} />
-            <span>{d === "pripad" ? "případ" : d === "aktualizace" ? "nové zjištění" : d === "opatreni" ? "opatření" : "prohlášení"}</span>
-            {d === "pripad" && <><span aria-hidden className="text-tlum2">·</span><span>{UROVNE[i.zavaznost].nazev.toLowerCase()} {zDeseti(i.zavaznost)}/10</span></>}
-            {uredniZdroj(i) && <><span aria-hidden className="text-tlum2">·</span><span className="text-akcent">úřední zdroj</span></>}
-          </span>
-          <span className="mt-0.5 flex flex-wrap items-baseline gap-x-2 gap-y-1">
-            <OdznakNove kdy={kdyZjisteno(i)} />
-            <span className="text-[15px] font-semibold leading-snug text-inkoust">{i.kratkyTitulek || i.titulek}</span>
-          </span>
-        </span>
-      </Link>
-    </li>
+    <RadekSeznamu
+      kam={`/incident/${i.slug}/`}
+      o={{
+        datum: kdyZjisteno(i),
+        tecka: <TeckaZavaznosti uroven={i.zavaznost} plna={d === "pripad"} />,
+        meta: [
+          <span key="d">{d === "pripad" ? "případ" : d === "aktualizace" ? "nové zjištění" : d === "opatreni" ? "opatření" : "prohlášení"}</span>,
+          d === "pripad" ? <OdznakZavaznosti key="u" uroven={i.zavaznost} /> : null,
+          uredniZdroj(i) ? <Odznak key="z" ton="akcent" ikona="fajfka">úřední zdroj</Odznak> : null,
+        ].filter(Boolean),
+        cerstvost: kdyZjisteno(i),
+        titulek: i.kratkyTitulek || i.titulek,
+      }}
+    />
   );
 }
 
@@ -129,9 +123,9 @@ export function ZemePrehled({
       {kampane.length > 0 && (
         <div className="nalet mt-14 border-t border-linka pt-12 sm:mt-20 sm:pt-14">
           <NadpisBloku
-            nadpis="Manipulační kampaně mířené sem"
-            popis="Koordinované šíření nepravdy. Nepočítá se mezi případy — je to operace, ne událost."
-            akce={<Link href="/manipulace/" className="text-[13px] font-semibold text-akcent hover:text-akcent-svetla">celý rozbor →</Link>}
+            nadpis="Manipulace a útoky mířené sem"
+            popis="Připravené operace cílené na občany této země. Nepočítají se mezi případy — je to operace, ne událost."
+            akce={<Tlacitko kam="/manipulace/" varianta="obrys" velikost="s" ikonaVpravo="nahoru" trida="[&>svg:last-child]:rotate-90">celý rozbor</Tlacitko>}
           />
           <div className={`grid gap-3 ${kampane.length === 1 ? "" : "sm:grid-cols-2"}`}>
             {kampane.map((k) => <DlazdiceKampane key={k.slug} k={k} nazvyZemi={nazvyZemi} siroka={kampane.length === 1} />)}
@@ -150,16 +144,16 @@ export function ZemePrehled({
         <NadpisBloku
           nadpis="Všechny záznamy"
           popis="Od nejnovějšího. Případy, jejich pokračování, úřední opatření i prohlášení."
-          akce={<Link href={`/udalosti/?zeme=${kodZeme}`} className="text-[13px] font-semibold text-akcent hover:text-akcent-svetla">otevřít ve filtru →</Link>}
+          akce={<Tlacitko kam={`/udalosti/?zeme=${kodZeme}`} varianta="obrys" velikost="s" ikonaVpravo="nahoru" trida="[&>svg:last-child]:rotate-90">otevřít ve filtru</Tlacitko>}
         />
         {serazene.length ? (
-          <ol className="divide-y divide-linka2 overflow-hidden rounded-[22px] border border-linka2 bg-plocha">
+          <SeznamPolozek>
             {serazene.map((i) => <Radek key={i.slug} i={i} />)}
-          </ol>
+          </SeznamPolozek>
         ) : (
-          <p className="rounded-[22px] border border-linka2 bg-plocha px-4 py-5 text-[14.5px] text-tlum">
-            Pro tuhle zemi zatím nemáme žádný ověřený záznam. <Vlajka kod={kodZeme} /> Neznamená to, že se tam nic nestalo — jen že jsme nic nedoložili.
-          </p>
+          <Sdeleni ikona="lupa">
+            Pro tuhle zemi zatím nemáme žádný ověřený záznam. Neznamená to, že se tam nic nestalo — jen že jsme nic nedoložili.
+          </Sdeleni>
         )}
       </div>
     </>

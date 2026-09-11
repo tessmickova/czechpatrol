@@ -10,7 +10,7 @@ import { DlazdiceKampane } from "./kampane";
 import { NadpisSekce } from "./nadpisy";
 import { PocitadlaEvropa, type PolozkaPoctu } from "./pocitadla-zive";
 import { NovaZjisteni } from "./nova-zjisteni";
-import { OdznakNove } from "./odznak-nove";
+import { RadekSeznamu, TeckaZavaznosti, Tlacitko } from "./ui";
 import { PavucinaHrozeb } from "./pavucina";
 import { PasZemi } from "./pas-zemi";
 import { Pocitadla } from "./pocitadla";
@@ -106,7 +106,7 @@ function Dlazdice({ d }: { d: Dlazdice }) {
   return (
     <li>
       <Napoveda cele popis={<span className="block"><b className="font-semibold">{d.nazev}</b> — {d.stav}. {d.vysvetleni}</span>}>
-        <span className={`flex min-h-[64px] w-full flex-col justify-between rounded-[16px] border px-2.5 py-2 text-left ${t.dlazdice}`}>
+        <span className={`flex min-h-[64px] w-full flex-col justify-between rounded-[18px] border px-2.5 py-2 text-left ${t.dlazdice}`}>
           <span className="flex items-center gap-1.5 text-[12px] leading-tight text-tlum">
             <Ikona nazev={d.ikona} velikost={13} tah={1.9} trida="shrink-0" />
             <span className="truncate">{d.nazev}</span>
@@ -145,7 +145,7 @@ function Hlavni({ nadpis, hodnota, ton, popis, overeno, napoveda, jiskra }: { na
 
 function Cislo({ n, slovo }: { n: number; slovo: string }) {
   return (
-    <span className="flex flex-col rounded-[16px] border border-linka2 bg-plocha px-3 py-2">
+    <span className="flex flex-col rounded-[18px] border border-linka2 bg-plocha px-3 py-2">
       <span className="cislice text-[24px] font-bold leading-none text-inkoust">{n}</span>
       <span className="mt-1 text-[11.5px] leading-tight text-tlum">{slovo}</span>
     </span>
@@ -266,26 +266,28 @@ export function Dashboard({
           </details>
         </section>
 
-        <section aria-label="Poslední události" className="rounded-[18px] border border-linka2 bg-plocha">
-          <div className="flex items-center justify-between border-b border-linka2 px-3 py-2">
+        <section aria-label="Poslední události" className="overflow-hidden rounded-[22px] border border-linka2 bg-plocha">
+          <div className="flex items-center justify-between border-b border-linka2 px-4 py-2">
             <span className="stitek">Poslední události</span>
-            <Link href="/udalosti/" className="text-[12.5px] font-semibold text-akcent hover:text-akcent-svetla">všechny →</Link>
+            <Tlacitko kam="/udalosti/" varianta="tichy" velikost="s" ikonaVpravo="nahoru" trida="[&>svg:last-child]:rotate-90">všechny</Tlacitko>
           </div>
+          {/* Týž řádek jako jinde na webu, jen v husté variantě. */}
           <ol className="divide-y divide-linka2">
-            {posledni.map((z) => {
-              const t = PASMA[UROVNE[z.zavaznost].pasmo];
-              return (
-                <li key={z.id}>
-                  <Link href={`/incident/${z.slug}/`} className="flex min-h-[40px] items-center gap-2 px-3 py-1.5 hover:bg-plocha2">
-                    <span className="cislice w-[38px] shrink-0 text-[11.5px] text-tlum">{datumPraha(kdyZjisteno(z)).replace(/ \d{4}$/, "")}</span>
-                    <span aria-hidden className={`h-[8px] w-[8px] shrink-0 rounded-full ${druh(z) === "pripad" ? t.tecka : "border border-tlum2"}`} />
-                    <Vlajka kod={z.kodZeme} />
-                    <span className="min-w-0 flex-1 truncate text-[13.5px] font-semibold text-inkoust">{z.kratkyTitulek || z.titulek}</span>
-                    <OdznakNove kdy={kdyZjisteno(z)} />
-                  </Link>
-                </li>
-              );
-            })}
+            {posledni.map((z) => (
+              <RadekSeznamu
+                key={z.id}
+                hustota="husta"
+                kam={`/incident/${z.slug}/`}
+                o={{
+                  datum: kdyZjisteno(z),
+                  tecka: <TeckaZavaznosti uroven={z.zavaznost} plna={druh(z) === "pripad"} velikost={8} />,
+                  kodZeme: z.kodZeme,
+                  zeme: z.zeme,
+                  cerstvost: kdyZjisteno(z),
+                  titulek: z.kratkyTitulek || z.titulek,
+                }}
+              />
+            ))}
           </ol>
         </section>
       </div>
@@ -296,7 +298,7 @@ export function Dashboard({
           stitek="Nová zjištění"
           nadpis="Co se zjistilo o tom, co se stalo dřív"
           popis="Obvinění, rozsudky, úředně potvrzený pachatel. Nejsou to nové události — je to posun ve vyšetřování těch starých."
-          akce={<Link href="/udalosti/?overeni=potvrzeny-pachatel" className="text-[13px] font-semibold text-akcent hover:text-akcent-svetla">všechna zjištění →</Link>}
+          akce={<Tlacitko kam="/udalosti/?overeni=potvrzeny-pachatel" varianta="obrys" velikost="s" ikonaVpravo="nahoru" trida="[&>svg:last-child]:rotate-90">všechna zjištění</Tlacitko>}
         />
         <NovaZjisteni polozky={novaZjisteni(vse, 6)} />
       </div>
@@ -306,9 +308,9 @@ export function Dashboard({
         <div className="nalet mt-14 border-t border-linka pt-12 sm:mt-20 sm:pt-14">
           <NadpisSekce
             stitek="Manipulace"
-            nadpis="Kampaně, které cíleně šíří nepravdu"
-            popis="Podvržené dokumenty, falešné weby, profily vydávající se za úředníky. U každé zvlášť říkáme, jestli je manipulace doložená — a jestli víme, kdo za ní stojí."
-            akce={<Link href="/manipulace/" className="text-[13px] font-semibold text-akcent hover:text-akcent-svetla">všechny rozbory →</Link>}
+            nadpis="Manipulace a útoky na občany"
+            popis="Podvržené dokumenty, weby vydávající se za redakce, profily vydávající se za úředníky. U každé operace zvlášť říkáme, co je doložené — a jestli víme, kdo za ní stojí."
+            akce={<Tlacitko kam="/manipulace/" varianta="obrys" velikost="s" ikonaVpravo="nahoru" trida="[&>svg:last-child]:rotate-90">všechny rozbory</Tlacitko>}
           />
           {/* Jedna kampaň by v třetině šířky vypadala jako zapomenutá dlaždice. */}
           <div className={`grid gap-3 ${kampane.length === 1 ? "" : kampane.length === 2 ? "sm:grid-cols-2" : "sm:grid-cols-2 lg:grid-cols-3"}`}>
@@ -352,7 +354,7 @@ export function Dashboard({
       </div>
       <div className="grid gap-8 md:grid-cols-3">
         <section aria-label="Posledních 90 dnů">
-          <div className="mb-1.5 flex items-center justify-between"><span className="stitek">Posledních 90 dnů · případy</span><Link href="/udalosti/?obdobi=30d" className="text-[12px] text-akcent hover:text-akcent-svetla">detail →</Link></div>
+          <div className="mb-1.5 flex items-center justify-between"><span className="stitek">Posledních 90 dnů · případy</span><Tlacitko kam="/udalosti/?obdobi=30d" varianta="tichy" velikost="s" ikonaVpravo="nahoru" trida="[&>svg:last-child]:rotate-90">detail</Tlacitko></div>
           <div className="grid grid-cols-2 gap-1.5">
             <Cislo n={dni90.length} slovo={sklon(dni90.length, "případ", "případy", "případů")} />
             <Cislo n={zemi} slovo={sklon(zemi, "země", "země", "zemí")} />
@@ -362,7 +364,7 @@ export function Dashboard({
           <p className="mt-1.5 text-[11.5px] text-tlum2">{uredni} z {dni90.length} s úředním zdrojem. Aktualizace a prohlášení se nepočítají.</p>
         </section>
         <section aria-label="Kde">
-          <div className="mb-1.5 flex items-center justify-between"><span className="stitek">Kde · případy {rok}</span><Link href="/zeme/" className="text-[12px] text-akcent hover:text-akcent-svetla">všechny země →</Link></div>
+          <div className="mb-1.5 flex items-center justify-between"><span className="stitek">Kde · případy {rok}</span><Tlacitko kam="/zeme/" varianta="tichy" velikost="s" ikonaVpravo="nahoru" trida="[&>svg:last-child]:rotate-90">všechny země</Tlacitko></div>
           <ul className="space-y-0.5">
             {zeme.map((z) => (
               <li key={z.kodZeme}><Pruh nazev={<><Vlajka kod={z.kodZeme} /> {z.zeme}</>} n={z.pripady} max={maxZeme} barva={z.kodZeme === "CZ" ? "bg-akcent" : "bg-tlum2/70"} odkaz={`/zeme/${z.kodZeme.toLowerCase()}/`} /></li>
@@ -396,7 +398,7 @@ export function Dashboard({
           stitek="Archiv"
           nadpis="Všechny záznamy od roku 2014"
           popis="Případy, jejich pokračování, úřední opatření, prohlášení a také to, co neprošlo ověřením. Filtry si můžete uložit v adrese."
-          akce={<Link href="/udalosti/" className="text-[13px] font-semibold text-akcent hover:text-akcent-svetla">samostatná stránka →</Link>}
+          akce={<Tlacitko kam="/udalosti/" varianta="obrys" velikost="s" ikonaVpravo="nahoru" trida="[&>svg:last-child]:rotate-90">samostatná stránka</Tlacitko>}
         />
       </div>
       <div className="mb-5"><Pocitadla vse={vse} neprosle={neprosle} kandidati={kandidati} /></div>
@@ -417,21 +419,21 @@ export function Dashboard({
 
       {/* 6 — sbalené: proč, co by změnilo, odběr */}
       <div className="mt-14 grid gap-3 border-t border-linka pt-12 sm:mt-20 sm:pt-14 md:grid-cols-3">
-        <details className="group rounded-[16px] border border-linka2 bg-plocha">
+        <details className="group rounded-[18px] border border-linka2 bg-plocha">
           <summary className="flex min-h-[40px] cursor-pointer items-center justify-between px-3 text-[13px] font-semibold text-inkoust">Proč je hodnocení {d ? d.nazev.toLowerCase() : "takové"}<Ikona nazev="dolu" velikost={12} tah={2} trida="text-tlum2 transition-transform group-open:rotate-180" /></summary>
           <p className="border-t border-linka2 px-3 py-2.5 text-[13px] leading-relaxed text-tlum">{stav.shrnuti || "Bez zdůvodnění."} <Link href="/metodika/" className="odkaz">Metodika</Link></p>
         </details>
-        <details className="group rounded-[16px] border border-linka2 bg-plocha">
+        <details className="group rounded-[18px] border border-linka2 bg-plocha">
           <summary className="flex min-h-[40px] cursor-pointer items-center justify-between px-3 text-[13px] font-semibold text-inkoust">Co by hodnocení zhoršilo<Ikona nazev="dolu" velikost={12} tah={2} trida="text-tlum2 transition-transform group-open:rotate-180" /></summary>
           <ol className="space-y-1 border-t border-linka2 px-3 py-2.5 text-[13px] leading-snug text-tlum">
             {watchlist.eskalacni.map((e) => <li key={e.cislo} className="flex gap-2"><span className="cislice text-tlum2">{e.cislo}</span>{e.nazev}</li>)}
           </ol>
         </details>
-        <div className="flex min-h-[40px] items-center justify-between gap-3 rounded-[16px] border border-linka2 bg-plocha px-3 text-[13px]">
+        <div className="flex min-h-[40px] items-center justify-between gap-3 rounded-[18px] border border-linka2 bg-plocha px-3 text-[13px]">
           <span className="text-tlum">Změny bez sledování webu</span>
           <span className="flex items-center gap-3">
-            <a href="/feed.xml" className="inline-flex items-center gap-1 font-semibold text-akcent hover:text-akcent-svetla"><Ikona nazev="rss" velikost={13} tah={2} /> RSS</a>
-            <Link href="/odber/" className="font-semibold text-akcent hover:text-akcent-svetla">odběr →</Link>
+            <Tlacitko kam="/feed.xml" varianta="tichy" velikost="s" ikona="rss">RSS</Tlacitko>
+            <Tlacitko kam="/odber/" varianta="tichy" velikost="s" ikonaVpravo="nahoru" trida="[&>svg:last-child]:rotate-90">odběr</Tlacitko>
           </span>
         </div>
       </div>

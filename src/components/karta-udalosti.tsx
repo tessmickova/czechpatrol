@@ -33,7 +33,7 @@ export function KartaUdalosti({
 
   return (
     <article
-      className={`zdvih group relative overflow-hidden rounded-[20px] border ${t.ramecek} ${
+      className={`zdvih group relative overflow-hidden rounded-[22px] border ${t.ramecek} ${
         teple ? t.pozadi : "bg-plocha"
       }`}
     >
@@ -41,7 +41,7 @@ export function KartaUdalosti({
 
       {/* strojová hlavička */}
       <div className={`flex flex-wrap items-center gap-x-3 gap-y-2 border-b ${t.ramecek} px-5 py-2.5 pl-6`}>
-        <span className="stitek-tmavy rounded-[10px] border border-current/25 px-1.5 py-1 opacity-80">
+        <span className="stitek-tmavy rounded-[12px] border border-current/25 px-1.5 py-1 opacity-80">
           {incident.kodZeme}
         </span>
         <span className="stitek">{incident.zeme}</span>

@@ -45,7 +45,7 @@ export default function Podporit() {
       <section className="nalet mt-14 border-t border-linka pt-10">
         <h2 className="titul-mensi">Jak podpořit</h2>
         {BUY_ME_A_COFFEE_URL ? (
-          <a href={BUY_ME_A_COFFEE_URL} target="_blank" rel="noopener noreferrer" className="mt-3 inline-flex min-h-[44px] items-center rounded-[16px] border border-akcent/60 bg-akcent/15 px-5 text-[14px] font-bold text-akcent-svetla hover:bg-akcent/25">
+          <a href={BUY_ME_A_COFFEE_URL} target="_blank" rel="noopener noreferrer" className="mt-3 inline-flex min-h-[44px] items-center rounded-[18px] border border-akcent/60 bg-akcent/15 px-5 text-[14px] font-bold text-akcent-svetla hover:bg-akcent/25">
             Jednorázově přispět
           </a>
         ) : (

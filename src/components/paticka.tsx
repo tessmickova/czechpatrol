@@ -22,7 +22,7 @@ export function Paticka() {
   return (
     // Patička stojí na tmavé desce — jediné velké tmavé místo na stránce.
     <footer className="neni-tisk px-3 pb-6 sm:px-4">
-      <div className="noc mx-auto max-w-[1200px] rounded-[26px] px-6 py-10 sm:px-8">
+      <div className="noc mx-auto max-w-[1200px] rounded-[28px] px-6 py-10 sm:px-8">
         <div className="grid gap-10 md:grid-cols-[minmax(0,1.4fr)_repeat(3,minmax(0,1fr))]">
           <div>
             <Logo velikost={32} pismo={17} tmave />

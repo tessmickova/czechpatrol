@@ -437,10 +437,10 @@ export interface KampanPuvodce {
 }
 
 /**
- * Manipulační kampaň = koordinované šíření nepravdy, ne jednotlivá lež.
+ * Kampaň = připravená operace mířená na veřejnost, ne jeden nepovedený článek.
  *
- * Kampaň není incident: nemá jedno místo ani jeden okamžik a obvykle míří
- * na víc zemí najednou. Proto se vede zvlášť a do počtu případů nevstupuje.
+ * Není to incident: nemá jedno místo ani jeden okamžik a obvykle míří na víc
+ * zemí najednou. Proto se vede zvlášť a do počtu případů nevstupuje.
  */
 export interface Kampan {
   id: string;
@@ -469,7 +469,7 @@ export interface Kampan {
   ucel: string;
   /** 6 — co by otázku po původci uzavřelo. */
   coByPotvrdilo: string[];
-  /** Je to vůbec manipulace? Nezávisle na tom, kdo za ní stojí. */
+  /** Je doložené, že šlo o zásah? Nezávisle na tom, kdo za ním stojí. */
   jistotaManipulace: Jistota;
   duvodManipulace: string;
   puvodce: KampanPuvodce;

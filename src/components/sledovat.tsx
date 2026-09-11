@@ -2,6 +2,7 @@ import Link from "next/link";
 import { KANALY, KOMUNITA, PARTNERI, UCTY_ZAPNUTE, WEB } from "@/config/web";
 import { Ikona } from "./ikony";
 import { ZnackaKanalu, type Znacka } from "./znacky";
+import { Tlacitko } from "./ui";
 
 /*
   Výzvy k akci: kam dál, kde nás sledovat, s kým spolupracujeme.
@@ -16,12 +17,12 @@ const KANALY_DEF: { klic: Znacka; nazev: string; popis: string }[] = [
   { klic: "bluesky", nazev: "Bluesky", popis: "krátká shrnutí" },
 ];
 
-const KARTA = "flex min-h-[64px] items-center gap-3 rounded-[16px] border px-3 py-2 text-left transition-colors";
+const KARTA = "flex min-h-[64px] items-center gap-3 rounded-[18px] border px-3 py-2 text-left transition-colors";
 
 export function Sledovat() {
   return (
     <section id="sledovat" aria-label="Sledujte nás" className="scroll-mt-[84px]">
-      <div className="mb-1.5 flex items-center justify-between"><span className="stitek">Sledujte změny · nemusíte sem chodit</span><Link href="/odber/" className="text-[12px] text-akcent hover:text-akcent-svetla">jak fungují upozornění →</Link></div>
+      <div className="mb-1.5 flex items-center justify-between"><span className="stitek">Sledujte změny · nemusíte sem chodit</span><Tlacitko kam="/odber/" varianta="tichy" velikost="s" ikonaVpravo="nahoru" trida="[&>svg:last-child]:rotate-90">jak fungují upozornění</Tlacitko></div>
       <ul className="grid grid-cols-2 gap-1.5 sm:grid-cols-3 lg:grid-cols-6">
         <li><a href={`${WEB.url}/feed.xml`} className={`${KARTA} border-akcent/50 bg-akcent/10 hover:bg-akcent/20`}><ZnackaKanalu znacka="rss" velikost={26} /><span><span className="block text-[13.5px] font-bold text-inkoust">RSS</span><span className="block text-[11.5px] text-tlum">každá čtečka</span></span></a></li>
         <li>

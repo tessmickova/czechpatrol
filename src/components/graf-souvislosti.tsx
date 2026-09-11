@@ -100,7 +100,7 @@ export function GrafSouvislosti({
           <li key={s.incident.id} className="flex flex-wrap items-baseline gap-x-2.5 gap-y-1">
             <span
               aria-hidden
-              className={`stitek-tmavy rounded-[16px] border px-1.5 py-[3px] ${
+              className={`stitek-tmavy rounded-[18px] border px-1.5 py-[3px] ${
                 s.potvrzena ? "border-inkoust text-inkoust" : "border-dashed border-linka text-tlum2"
               }`}
             >

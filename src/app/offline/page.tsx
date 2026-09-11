@@ -8,7 +8,7 @@ export const metadata: Metadata = { title: "Bez připojení", robots: { index: f
 export default function Offline() {
   return (
     <div className="mx-auto max-w-[640px] px-5 py-24 text-center">
-      <span className="mx-auto grid h-16 w-16 place-items-center rounded-[20px] border border-akcent/40 bg-akcent/10 text-akcent">
+      <span className="mx-auto grid h-16 w-16 place-items-center rounded-[22px] border border-akcent/40 bg-akcent/10 text-akcent">
         <Ikona nazev="komunikace" velikost={30} />
       </span>
       <h1 className="nadpis mt-6 text-[34px]">Bez připojení</h1>

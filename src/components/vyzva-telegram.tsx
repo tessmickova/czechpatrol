@@ -1,6 +1,6 @@
-import Link from "next/link";
 import { KANALY } from "@/config/web";
 import { Ikona } from "./ikony";
+import { Tlacitko } from "./ui";
 import { Znacka } from "./znacka";
 import { ZnackaKanalu } from "./znacky";
 
@@ -18,7 +18,7 @@ import { ZnackaKanalu } from "./znacky";
 export function VyzvaTelegram() {
   const url = KANALY.telegram;
   return (
-    <section aria-label="Odběr urgentních upozornění" className="noc nalet overflow-hidden rounded-[26px]">
+    <section aria-label="Odběr urgentních upozornění" className="noc nalet overflow-hidden rounded-[28px]">
       <div className="relative grid gap-6 px-6 py-8 sm:px-9 sm:py-10 lg:grid-cols-[minmax(0,1.55fr)_minmax(0,1fr)] lg:items-center lg:gap-10">
         {/* Značka jako vodoznak — drží desku v rodině webu, nekřičí. */}
         <span aria-hidden className="pointer-events-none absolute -right-10 -top-12 opacity-[0.07] sm:-right-4">
@@ -40,29 +40,19 @@ export function VyzvaTelegram() {
           </p>
           <p className="mt-5 flex flex-wrap items-center gap-2.5">
             {url ? (
-              <a
-                href={url}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex min-h-[48px] items-center gap-2.5 rounded-full bg-akcent px-6 text-[14.5px] font-bold text-papir transition-colors hover:bg-akcent-svetla"
-              >
+              <Tlacitko kam={url} nove varianta="plny" velikost="l">
                 <ZnackaKanalu znacka="telegram" velikost={20} />
                 Odebírat na Telegramu
-              </a>
+              </Tlacitko>
             ) : (
               <span className="inline-flex min-h-[48px] items-center gap-2.5 rounded-full border border-dashed border-linka px-6 text-[14.5px] font-semibold text-noc-tlum">
                 <ZnackaKanalu znacka="telegram" velikost={20} tlumena /> Telegram připravujeme
               </span>
             )}
-            <a
-              href="/feed.xml"
-              className="inline-flex min-h-[48px] items-center gap-2 rounded-full border border-linka px-5 text-[14px] font-semibold text-noc-text transition-colors hover:border-akcent"
-            >
-              <Ikona nazev="rss" velikost={15} tah={2} /> RSS do čtečky
-            </a>
-            <Link href="/odber/" className="inline-flex min-h-[48px] items-center px-2 text-[13.5px] text-noc-tlum underline underline-offset-4 hover:text-noc-text">
+            <Tlacitko kam="/feed.xml" varianta="obrys" velikost="l" naTmavem ikona="rss">RSS do čtečky</Tlacitko>
+            <Tlacitko kam="/odber/" varianta="tichy" velikost="l" trida="!font-normal text-noc-tlum hover:bg-[rgb(255_255_255/0.06)] hover:text-noc-text">
               kdy přesně upozornění chodí
-            </Link>
+            </Tlacitko>
           </p>
         </div>
 
@@ -72,7 +62,7 @@ export function VyzvaTelegram() {
             { ikona: "vaha" as const, text: "Každá zpráva má u sebe zdroj, na který se dá kliknout." },
             { ikona: "hodiny" as const, text: "Žádné denní souhrny. Ticho znamená, že se nic nezměnilo." },
           ].map((b) => (
-            <li key={b.text} className="flex items-start gap-3 rounded-[16px] border border-linka px-3.5 py-3">
+            <li key={b.text} className="flex items-start gap-3 rounded-[18px] border border-linka px-3.5 py-3">
               <span className="grid h-8 w-8 shrink-0 place-items-center rounded-full bg-[rgb(255_255_255/0.06)] text-akcent"><Ikona nazev={b.ikona} velikost={15} tah={1.9} /></span>
               <span className="text-[13.5px] leading-relaxed text-noc-tlum">{b.text}</span>
             </li>

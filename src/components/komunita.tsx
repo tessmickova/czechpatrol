@@ -53,14 +53,14 @@ export function KruhyKomunity({ onKlik }: { onKlik?: () => void }) {
           href={DISKUZE.url}
           target="_blank"
           rel="noopener noreferrer"
-          className="mt-2.5 flex min-h-[44px] items-center gap-2.5 rounded-[14px] border border-akcent/50 bg-akcent/12 px-3 transition-colors hover:bg-akcent/20"
+          className="mt-2.5 flex min-h-[44px] items-center gap-2.5 rounded-[18px] border border-akcent/50 bg-akcent/12 px-3 transition-colors hover:bg-akcent/20"
         >
           <span className="grid h-7 w-7 shrink-0 place-items-center rounded-full bg-akcent/20 text-akcent"><Ikona nazev="bublina" velikost={14} tah={1.9} /></span>
           <span className="min-w-0 flex-1 text-[13.5px] font-semibold text-inkoust">Živá diskuze k tématu</span>
           <Ikona nazev="nahoru" velikost={12} tah={2} trida="shrink-0 rotate-45 text-akcent" />
         </a>
       ) : (
-        <p className="mt-2.5 rounded-[14px] border border-dashed border-linka px-3 py-2.5 text-[12.5px] leading-relaxed text-tlum2">
+        <p className="mt-2.5 rounded-[18px] border border-dashed border-linka px-3 py-2.5 text-[12.5px] leading-relaxed text-tlum2">
           Živá diskuze zrovna neběží. Otevíráme ji jen u témat, kde to dává smysl — a přístup do ní dostanou
           odběratelé {KANALY.telegram ? "telegramového kanálu" : "upozornění"}.
         </p>

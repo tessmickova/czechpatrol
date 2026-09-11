@@ -1,4 +1,3 @@
-import Link from "next/link";
 import { datumCasPraha } from "@/lib/cas";
 import { PASMA, UROVNE, zDeseti } from "@/lib/skala";
 import type { CelkovyStav, Uroven } from "@/lib/typy";
@@ -6,6 +5,7 @@ import type { HlavniVeta } from "@/lib/veta";
 import { Ikona } from "./ikony";
 import { ObloukovyMerak } from "./mericky";
 import { Napoveda, VykladUrovne } from "./zaklad";
+import { Tlacitko } from "./ui";
 import { sklon } from "./zeme";
 
 /*
@@ -50,7 +50,7 @@ export function HeroDashboard({
   const d = stav.uroven ? UROVNE[stav.uroven] : null;
   const t = stav.uroven ? PASMA[UROVNE[stav.uroven].pasmo] : null;
   return (
-    <section aria-label="Bezpečnostní aktivita" className="sklo rounded-[30px]">
+    <section aria-label="Bezpečnostní aktivita" className="sklo rounded-[28px]">
       {/* Jedna věta, kterou má čtenář odnést, i kdyby dál nečetl. */}
       <p className="border-b border-linka2 px-5 py-5 text-[17px] leading-relaxed text-tlum sm:px-7 sm:py-6 sm:text-[19px]">
         <strong className="font-bold text-inkoust">{veta.cesko}</strong>{" "}
@@ -85,8 +85,8 @@ export function HeroDashboard({
               <span><b className="cislice text-[16px] font-bold text-inkoust">{pocetZaznamu}</b> záznamů od roku 2014</span>
             </p>
             <p className="mt-2 flex flex-wrap gap-2">
-              <Link href="#zaznamy" className="inline-flex min-h-[36px] items-center gap-1.5 rounded-full border border-akcent/60 bg-akcent/15 px-3.5 text-[12.5px] font-bold text-akcent-svetla hover:bg-akcent/25"><Ikona nazev="osa" velikost={13} tah={2} /> Všechny záznamy</Link>
-              <Link href="#sledovat" className="inline-flex min-h-[36px] items-center gap-1.5 rounded-full border border-linka px-3.5 text-[12.5px] font-bold text-inkoust hover:border-akcent"><Ikona nazev="zvonek" velikost={13} tah={2} /> Sledovat změny</Link>
+              <Tlacitko kam="#zaznamy" varianta="zvyrazneny" velikost="s" ikona="osa">Všechny záznamy</Tlacitko>
+              <Tlacitko kam="#sledovat" varianta="obrys" velikost="s" ikona="zvonek">Sledovat změny</Tlacitko>
             </p>
           </div>
         </div>
