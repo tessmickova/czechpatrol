@@ -1,5 +1,33 @@
 [
   {
+    "id": "k-4019207e44c61ea9",
+    "zachyceno": "2026-09-11T14:14:44.679Z",
+    "publikovano": "2026-09-11T12:24:00.000Z",
+    "zdroj": {
+      "nazev": "iROZHLAS — zprávy",
+      "url": "https://www.irozhlas.cz/zpravy-svet/nemecka-prokuratura-obzalovala-sedm-clenu-hamasu-shaneli-pry-zbrane-pro-utok_2609111424_med",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Německá prokuratura obžalovala sedm členů Hamásu, sháněli prý zbraně pro útok",
+    "titulekPuvodni": "Německá prokuratura obžalovala sedm členů Hamásu, sháněli prý zbraně pro útok",
+    "shrnuti": "Německé státní zastupitelství podalo obžalobu na sedm členů palestinské teroristické organizace Hamás. Údajně obstarávali zbraně pro útoky na izraelské nebo židovské cíle na území Německa či Rakouska. Ze sdělení státního zastupitelství vyplývá, že mezi obžalovanými je Burhán K., kterého německá poli",
+    "kodZeme": "DE",
+    "zeme": "Německo",
+    "kategorie": [
+      "zpravodajske",
+      "vojsko"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "shody": [
+      "zadrz",
+      "obzalov",
+      "policie"
+    ],
+    "stav": "ceka"
+  },
+  {
     "id": "k-aca1a294723f9f38",
     "zachyceno": "2026-09-11T09:30:21.130Z",
     "publikovano": "2026-09-11T06:57:39.000Z",
@@ -27,6 +55,31 @@
       "subsea cable",
       "nato",
       "russia"
+    ],
+    "stav": "ceka"
+  },
+  {
+    "id": "k-ca1608ce24073fa4",
+    "zachyceno": "2026-09-11T14:14:44.687Z",
+    "publikovano": "2026-09-11T06:20:16.000Z",
+    "zdroj": {
+      "nazev": "ČT24 — hlavní zprávy",
+      "url": "https://ct24.ceskatelevize.cz/clanek/svet/za-vzpominkove-akce-na-masakr-na-namesti-nebeskeho-klidu-dostali-aktiviste-trest-vezeni-377476",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Za vzpomínkové akce na masakr na náměstí Nebeského klidu dostali aktivisté trest vězení",
+    "titulekPuvodni": "Za vzpomínkové akce na masakr na náměstí Nebeského klidu dostali aktivisté trest vězení",
+    "shrnuti": "Čínský soud v Hongkongu v pátek vynesl tresty v rozpětí pět až sedm let vězení pro tři aktivisty, kteří řadu let organizovali vzpomínkové akce připomínající masakr na pekingském náměstí Nebeského klidu v roce 1989. Případ proti trojici organizátorů je všeobecně považován za barometr svobod v Hongkon",
+    "kodZeme": "IT",
+    "zeme": "Itálie",
+    "kategorie": [
+      "zpravodajske"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "shody": [
+      "odsoud"
     ],
     "stav": "ceka"
   },
@@ -2315,6 +2368,35 @@
     "shody": [
       "sabotage",
       "russia"
+    ],
+    "stav": "ceka"
+  },
+  {
+    "id": "k-cf2562cb57036616",
+    "zachyceno": "2026-09-11T14:14:44.710Z",
+    "publikovano": "2026-09-03T05:39:00.000Z",
+    "zdroj": {
+      "nazev": "Google News — sabotáž",
+      "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxOb3ZZQWV5V2NucnVFTDBwelFlcVRyWDFuNkVvaDhPa2lNVHZtcGNUeUZkVzFpTmtXVHJsTmJfaDdnY0VDUnlBUlI3WGNjSTZRNGFCUHdtMUZwVkhTNFFoTGJTU1oxZWZsXy1DMlc5NmVIdU16emhBMGNKXzdSZGxOb3h5NlI?oc=5",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Rusko plánuje sabotáž v Dánsku, varuje kontrarozvědka. Cílem jsou zbrojní firmy - Hrot24.cz",
+    "titulekPuvodni": "Rusko plánuje sabotáž v Dánsku, varuje kontrarozvědka. Cílem jsou zbrojní firmy - Hrot24.cz",
+    "shrnuti": "<a href=\"https://news.google.com/rss/articles/CBMihAFBVV95cUxOb3ZZQWV5V2NucnVFTDBwelFlcVRyWDFuNkVvaDhPa2lNVHZtcGNUeUZkVzFpTmtXVHJsTmJfaDdnY0VDUnlBUlI3WGNjSTZRNGFCUHdtMUZwVkhTNFFoTGJTU1oxZWZsXy1DMlc5NmVIdU16emhBMGNKXzdSZGxOb3h5NlI?oc=5\" target=\"_blank\">Rusko plánuje sabotáž v Dánsku, varuje kontraroz",
+    "kodZeme": "DK",
+    "zeme": "Dánsko",
+    "kategorie": [
+      "sabotaz",
+      "zpravodajske",
+      "rusko"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "shody": [
+      "sabotaz",
+      "kontrarozvedka",
+      "rusk"
     ],
     "stav": "ceka"
   },
