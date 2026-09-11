@@ -34,12 +34,25 @@ const OBDOBI = [
 ] as const;
 type Obdobi = (typeof OBDOBI)[number]["klic"];
 
+/*
+  Tři záložky místo jednoho společného seznamu.
+
+  Dřív se ověřené záznamy, automatický sběr i vyvrácené zprávy míchaly do
+  jednoho výpisu. Čtenář pak nemohl poznat, co web doopravdy tvrdí — a to je
+  přesně to, na čem projekt stojí. Výchozí je vždy „ověřené“; ostatní dvě
+  záložky se musí otevřít vědomě.
+*/
+const ZALOZKY = [
+  { klic: "overene", nazev: "Ověřené záznamy", popis: "prošly lidskou kontrolou a počítají se" },
+  { klic: "cekajici", nazev: "Čeká na ověření", popis: "automatický sběr; do žádného počtu nevstupuje" },
+  { klic: "neproslo", nazev: "Neprošlo ověřením", popis: "vyvráceno nebo nedoloženo" },
+] as const;
+type Zalozka = (typeof ZALOZKY)[number]["klic"];
+
 const OVERENI = [
   { klic: "vse", nazev: "Vše" },
   { klic: "uredni", nazev: "Jen s úředním zdrojem" },
   { klic: "potvrzeny-pachatel", nazev: "Jen s potvrzeným pachatelem" },
-  { klic: "neprosle", nazev: "Nepotvrzené a vyvrácené" },
-  { klic: "automaticke", nazev: "Automaticky zachycené" },
 ] as const;
 type Overeni = (typeof OVERENI)[number]["klic"];
 
@@ -62,6 +75,7 @@ const PUVODCE_NAZVY: Record<string, string> = {
 };
 
 interface Filtr {
+  zalozka: Zalozka;
   zeme: string | null;
   tema: Kategorie | null;
   obdobi: Obdobi;
@@ -71,13 +85,19 @@ interface Filtr {
   detail: string | null;
 }
 
-const VYCHOZI: Filtr = { zeme: null, tema: null, obdobi: "vse", overeni: "vse", druhy: [], zavaznost: [], detail: null };
+const VYCHOZI: Filtr = { zalozka: "overene", zeme: null, tema: null, obdobi: "vse", overeni: "vse", druhy: [], zavaznost: [], detail: null };
 
 function zAdresy(p: URLSearchParams): Filtr {
   const obdobi = p.get("obdobi");
   const overeni = p.get("overeni");
   const tema = p.get("tema");
+  const tab = p.get("tab");
+  // Starší odkazy vedly na ?overeni=neprosle / =automaticke. Zůstávají funkční.
+  const zalozka: Zalozka = ZALOZKY.some((z) => z.klic === tab)
+    ? (tab as Zalozka)
+    : overeni === "neprosle" ? "neproslo" : overeni === "automaticke" ? "cekajici" : "overene";
   return {
+    zalozka,
     zeme: p.get("zeme")?.toUpperCase() || null,
     tema: tema && (PORADI_KATEGORII as string[]).includes(tema) ? (tema as Kategorie) : null,
     obdobi: OBDOBI.some((o) => o.klic === obdobi) ? (obdobi as Obdobi) : "vse",
@@ -90,6 +110,7 @@ function zAdresy(p: URLSearchParams): Filtr {
 
 function doAdresy(f: Filtr): URLSearchParams {
   const p = new URLSearchParams();
+  if (f.zalozka !== "overene") p.set("tab", f.zalozka);
   if (f.zeme) p.set("zeme", f.zeme);
   if (f.tema) p.set("tema", f.tema);
   if (f.obdobi !== "vse") p.set("obdobi", f.obdobi);
@@ -156,6 +177,7 @@ export function UdalostiKlient({ zaznamy, neprosle, kandidati = [] }: { zaznamy:
   const [f, zmen] = useFiltrVAdrese();
   const siroky = useSiroky();
   const [pokrocile, setPokrocile] = useState(false);
+  const [vsechnyZeme, setVsechnyZeme] = useState(false);
   const [limit, setLimit] = useState(10);
 
   const zeme = useMemo(() => {
@@ -180,7 +202,7 @@ export function UdalostiKlient({ zaznamy, neprosle, kandidati = [] }: { zaznamy:
       if (f.obdobi === "letos" && new Date(kdy).getUTCFullYear() !== rok) return false;
       return true;
     };
-    const a: Radek[] = f.overeni === "neprosle" || f.overeni === "automaticke" ? [] : zaznamy
+    const a: Radek[] = f.zalozka !== "overene" ? [] : zaznamy
       .filter((z) => {
         if (f.zeme && z.kodZeme !== f.zeme) return false;
         if (f.tema && !z.kategorie.includes(f.tema)) return false;
@@ -195,16 +217,16 @@ export function UdalostiKlient({ zaznamy, neprosle, kandidati = [] }: { zaznamy:
         return true;
       })
       .map((z) => ({ typ: "zaznam", kdy: kdyZjisteno(z), z }));
-    const b: Radek[] = f.overeni === "vse" || f.overeni === "neprosle" ? neprosle
-      .filter((n) => (!f.zeme || n.kodZeme === f.zeme) && !f.tema && !f.druhy.length && !f.zavaznost.length && vObdobi(n.datum))
+    const b: Radek[] = f.zalozka === "neproslo" ? neprosle
+      .filter((n) => (!f.zeme || n.kodZeme === f.zeme) && vObdobi(n.datum))
       .map((n) => ({ typ: "neproslo", kdy: n.datum, n })) : [];
-    const c: Radek[] = f.overeni === "vse" || f.overeni === "automaticke" ? kandidati
-      .filter((k) => (!f.zeme || k.kodZeme === f.zeme) && (!f.tema || k.kategorie.includes(f.tema)) && !f.druhy.length && !f.zavaznost.length && vObdobi(k.publikovano ?? k.zachyceno))
+    const c: Radek[] = f.zalozka === "cekajici" ? kandidati
+      .filter((k) => (!f.zeme || k.kodZeme === f.zeme) && (!f.tema || k.kategorie.includes(f.tema)) && vObdobi(k.publikovano ?? k.zachyceno))
       .map((k) => ({ typ: "kandidat", kdy: k.publikovano ?? k.zachyceno, k })) : [];
     return [...a, ...b, ...c].sort((x, y) => y.kdy.localeCompare(x.kdy));
   }, [zaznamy, neprosle, kandidati, f]);
 
-  useEffect(() => { setLimit(10); }, [f.zeme, f.tema, f.obdobi, f.overeni, f.druhy, f.zavaznost]);
+  useEffect(() => { setLimit(10); }, [f.zalozka, f.zeme, f.tema, f.obdobi, f.overeni, f.druhy, f.zavaznost]);
 
   const otevreny = f.detail ? zaznamy.find((z) => z.slug === f.detail) ?? null : null;
   const otevri = (slug: string) => {
@@ -228,69 +250,125 @@ export function UdalostiKlient({ zaznamy, neprosle, kandidati = [] }: { zaznamy:
   if (f.overeni !== "vse") aktivni.push({ text: OVERENI.find((o) => o.klic === f.overeni)!.nazev, zrus: () => zmen({ overeni: "vse" }) });
   for (const d of f.druhy) aktivni.push({ text: DRUHY_FILTR.find((x) => x.klic === d)!.nazev, zrus: () => zmen({ druhy: f.druhy.filter((x) => x !== d) }) });
   for (const z of f.zavaznost) aktivni.push({ text: `závažnost: ${ZAVAZNOSTI.find((x) => x.klic === z)!.nazev.toLowerCase()}`, zrus: () => zmen({ zavaznost: f.zavaznost.filter((x) => x !== z) }) });
-  const maPokrocile = f.druhy.length > 0 || f.zavaznost.length > 0;
+  // Upřesnění = všechno, co je schované pod tlačítkem. Číslo na tlačítku říká,
+  // kolik toho je — jinak by schovaný filtr tiše měnil výsledek.
+  const pocetUpresneni = (f.zeme ? 1 : 0) + (f.tema ? 1 : 0) + (f.overeni !== "vse" ? 1 : 0) + f.druhy.length + f.zavaznost.length;
+  const maPokrocile = pocetUpresneni > 0;
 
   const zobrazene = vysledek.slice(0, limit);
   const pripadu = vysledek.filter((r) => r.typ === "zaznam" && druh(r.z) === "pripad").length;
-  const automatickych = vysledek.filter((r) => r.typ === "kandidat").length;
 
   return (
     <div className={`grid gap-8 ${siroky && otevreny ? "lg:grid-cols-[minmax(0,1fr)_minmax(380px,44%)]" : ""}`}>
       <div className="min-w-0">
-        {/* filtry */}
-        <div className="space-y-1.5 border-b border-linka2 pb-3" role="group" aria-label="Filtry">
+        {/* záložky — co se vlastně ukazuje */}
+        <div role="tablist" aria-label="Co zobrazit" className="flex flex-wrap gap-1.5">
+          {ZALOZKY.map((z) => {
+            const n = z.klic === "overene" ? zaznamy.length : z.klic === "cekajici" ? kandidati.length : neprosle.length;
+            const akt = f.zalozka === z.klic;
+            return (
+              <button
+                key={z.klic}
+                type="button"
+                role="tab"
+                aria-selected={akt}
+                onClick={() => zmen({ zalozka: z.klic })}
+                className={`flex min-h-[46px] flex-col justify-center rounded-[16px] px-3.5 py-1.5 text-left transition-colors ${
+                  akt ? "bg-akcent/15 text-inkoust ring-1 ring-inset ring-akcent/50" : "text-tlum hover:bg-plocha2 hover:text-inkoust"
+                }`}
+              >
+                <span className="flex items-center gap-2 text-[13.5px] font-bold leading-tight">
+                  {z.nazev}
+                  <span className={`cislice rounded-full px-1.5 py-[1px] text-[11px] ${akt ? "bg-akcent/25 text-akcent-svetla" : "bg-plocha2 text-tlum2"}`}>{n}</span>
+                </span>
+                <span className="text-[11.5px] leading-tight text-tlum2">{z.popis}</span>
+              </button>
+            );
+          })}
+        </div>
+
+        {f.zalozka === "cekajici" && (
+          <p className="mt-3 flex items-start gap-2.5 rounded-[16px] border border-dashed border-akcent/50 bg-akcent/[0.07] px-4 py-3 text-[13.5px] leading-relaxed text-tlum">
+            <Ikona nazev="otaznik" velikost={16} tah={2} trida="mt-[2px] shrink-0 text-akcent" />
+            <span>
+              <b className="font-semibold text-inkoust">Tohle CzechPatrol netvrdí.</b> Jsou to zprávy, které hodinový sběr
+              zachytil ve zdrojích a člověk je zatím neověřil. Do žádného počtu, hodnocení ani upozornění nevstupují.
+            </span>
+          </p>
+        )}
+        {f.zalozka === "neproslo" && (
+          <p className="mt-3 flex items-start gap-2.5 rounded-[16px] border border-linka2 bg-plocha2 px-4 py-3 text-[13.5px] leading-relaxed text-tlum">
+            <Ikona nazev="krizek" velikost={16} tah={2} trida="mt-[2px] shrink-0 text-tlum2" />
+            <span>
+              <b className="font-semibold text-inkoust">Co ověřením neprošlo.</b> Vedeme to schválně: bez toho by web
+              ukazoval jen to, co vyšlo, a nešlo by poznat, kolik věcí padlo.
+            </span>
+          </p>
+        )}
+
+        {/* filtry — kompaktně; na jedné řádce to, co lidé mění nejčastěji */}
+        <div className="mt-3 space-y-1.5 border-b border-linka2 pb-3" role="group" aria-label="Filtry">
           <div className="flex flex-wrap items-center gap-1">
-            <span className="stitek mr-1 w-[62px] shrink-0">Země</span>
-            <Cip aktivni={f.zeme === null} onClick={() => zmen({ zeme: null })}>Vše</Cip>
-            {zeme.map(([kod, z]) => (
-              <Cip key={kod} aktivni={f.zeme === kod} onClick={() => zmen({ zeme: f.zeme === kod ? null : kod })} title={z.nazev}>
-                <Vlajka kod={kod} /> <span className="cislice">{kod}</span> <span className="text-tlum2">{z.pocet}</span>
-              </Cip>
-            ))}
-          </div>
-          <div className="flex flex-wrap items-center gap-1">
-            <span className="stitek mr-1 w-[62px] shrink-0">Téma</span>
-            <Cip aktivni={f.tema === null} onClick={() => zmen({ tema: null })}>Vše</Cip>
-            {temata.map((k) => (
-              <Cip key={k} aktivni={f.tema === k} onClick={() => zmen({ tema: f.tema === k ? null : k })}>{KATEGORIE[k].nazev}</Cip>
-            ))}
-          </div>
-          <div className="flex flex-wrap items-center gap-x-4 gap-y-1">
-            <div className="flex flex-wrap items-center gap-1">
-              <span className="stitek mr-1 w-[62px] shrink-0">Období</span>
-              {OBDOBI.map((o) => <Cip key={o.klic} aktivni={f.obdobi === o.klic} onClick={() => zmen({ obdobi: o.klic })}>{o.nazev}</Cip>)}
-            </div>
-          </div>
-          <div className="flex flex-wrap items-center gap-x-4 gap-y-1">
-            <div className="flex flex-wrap items-center gap-1">
-              <span className="stitek mr-1 w-[62px] shrink-0">Ověření</span>
-              {OVERENI.map((o) => <Cip key={o.klic} aktivni={f.overeni === o.klic} onClick={() => zmen({ overeni: o.klic })}>{o.nazev}</Cip>)}
-            </div>
+            <span className="stitek mr-1 w-[62px] shrink-0">Období</span>
+            {OBDOBI.map((o) => <Cip key={o.klic} aktivni={f.obdobi === o.klic} onClick={() => zmen({ obdobi: o.klic })}>{o.nazev}</Cip>)}
             <button
               type="button"
               onClick={() => setPokrocile((x) => !x)}
               aria-expanded={pokrocile || maPokrocile}
-              className="ml-auto inline-flex min-h-[36px] items-center gap-1 text-[13px] text-tlum hover:text-inkoust"
+              className="ml-auto inline-flex min-h-[36px] items-center gap-1.5 rounded-full border border-linka px-3 text-[13px] font-semibold text-tlum transition-colors hover:border-akcent hover:text-inkoust"
             >
-              Další filtry <Ikona nazev="dolu" velikost={12} tah={2} trida={`transition-transform ${pokrocile || maPokrocile ? "rotate-180" : ""}`} />
+              <Ikona nazev="lupa" velikost={13} tah={2} />
+              Země, téma a další
+              {pocetUpresneni > 0 && <span className="cislice rounded-full bg-akcent/20 px-1.5 text-[11px] text-akcent-svetla">{pocetUpresneni}</span>}
+              <Ikona nazev="dolu" velikost={12} tah={2} trida={`transition-transform ${pokrocile || maPokrocile ? "rotate-180" : ""}`} />
             </button>
           </div>
+
           {(pokrocile || maPokrocile) && (
             <div className="space-y-1.5 border-t border-linka2 pt-2">
               <div className="flex flex-wrap items-center gap-1">
-                <span className="stitek mr-1 w-[62px] shrink-0">Druh</span>
-                {DRUHY_FILTR.map((d) => (
-                  <Cip key={d.klic} aktivni={f.druhy.includes(d.klic)} onClick={() => zmen({ druhy: f.druhy.includes(d.klic) ? f.druhy.filter((x) => x !== d.klic) : [...f.druhy, d.klic] })}>{d.nazev}</Cip>
-                ))}
-              </div>
-              <div className="flex flex-wrap items-center gap-1">
-                <span className="stitek mr-1 w-[62px] shrink-0">Závažnost</span>
-                {ZAVAZNOSTI.map((z) => (
-                  <Cip key={z.klic} aktivni={f.zavaznost.includes(z.klic)} onClick={() => zmen({ zavaznost: f.zavaznost.includes(z.klic) ? f.zavaznost.filter((x) => x !== z.klic) : [...f.zavaznost, z.klic] })}>
-                    <span aria-hidden className={`h-[7px] w-[7px] rounded-[2px] ${PASMA[z.pasma[0]].pruh}`} /> {z.nazev}
+                <span className="stitek mr-1 w-[62px] shrink-0">Země</span>
+                <Cip aktivni={f.zeme === null} onClick={() => zmen({ zeme: null })}>Vše</Cip>
+                {(vsechnyZeme ? zeme : zeme.slice(0, 8)).map(([kod, z]) => (
+                  <Cip key={kod} aktivni={f.zeme === kod} onClick={() => zmen({ zeme: f.zeme === kod ? null : kod })} title={z.nazev}>
+                    <Vlajka kod={kod} /> <span className="cislice">{kod}</span> <span className="text-tlum2">{z.pocet}</span>
                   </Cip>
                 ))}
+                {zeme.length > 8 && (
+                  <button type="button" onClick={() => setVsechnyZeme((x) => !x)} className="min-h-[36px] px-2 text-[13px] text-tlum underline underline-offset-4 hover:text-inkoust">
+                    {vsechnyZeme ? "méně zemí" : `+ ${zeme.length - 8} ${sklon(zeme.length - 8, "země", "země", "zemí")}`}
+                  </button>
+                )}
               </div>
+              <div className="flex flex-wrap items-center gap-1">
+                <span className="stitek mr-1 w-[62px] shrink-0">Téma</span>
+                <Cip aktivni={f.tema === null} onClick={() => zmen({ tema: null })}>Vše</Cip>
+                {temata.map((k) => (
+                  <Cip key={k} aktivni={f.tema === k} onClick={() => zmen({ tema: f.tema === k ? null : k })}>{KATEGORIE[k].nazev}</Cip>
+                ))}
+              </div>
+              {f.zalozka === "overene" && (
+                <>
+                  <div className="flex flex-wrap items-center gap-1">
+                    <span className="stitek mr-1 w-[62px] shrink-0">Zdroj</span>
+                    {OVERENI.map((o) => <Cip key={o.klic} aktivni={f.overeni === o.klic} onClick={() => zmen({ overeni: o.klic })}>{o.nazev}</Cip>)}
+                  </div>
+                  <div className="flex flex-wrap items-center gap-1">
+                    <span className="stitek mr-1 w-[62px] shrink-0">Druh</span>
+                    {DRUHY_FILTR.map((d) => (
+                      <Cip key={d.klic} aktivni={f.druhy.includes(d.klic)} onClick={() => zmen({ druhy: f.druhy.includes(d.klic) ? f.druhy.filter((x) => x !== d.klic) : [...f.druhy, d.klic] })}>{d.nazev}</Cip>
+                    ))}
+                  </div>
+                  <div className="flex flex-wrap items-center gap-1">
+                    <span className="stitek mr-1 w-[62px] shrink-0">Závažnost</span>
+                    {ZAVAZNOSTI.map((z) => (
+                      <Cip key={z.klic} aktivni={f.zavaznost.includes(z.klic)} onClick={() => zmen({ zavaznost: f.zavaznost.includes(z.klic) ? f.zavaznost.filter((x) => x !== z.klic) : [...f.zavaznost, z.klic] })}>
+                        <span aria-hidden className={`h-[8px] w-[8px] rounded-full ${PASMA[z.pasma[0]].pruh}`} /> {z.nazev}
+                      </Cip>
+                    ))}
+                  </div>
+                </>
+              )}
             </div>
           )}
         </div>
@@ -312,7 +390,9 @@ export function UdalostiKlient({ zaznamy, neprosle, kandidati = [] }: { zaznamy:
         <p aria-live="polite" className="mt-3 mb-2 text-[13px] text-tlum">
           {vysledek.length === 0
             ? "Žádný záznam neodpovídá filtru."
-            : `${vysledek.length} ${sklon(vysledek.length, "záznam", "záznamy", "záznamů")} · z toho ${pripadu} ${sklon(pripadu, "případ", "případy", "případů")}${automatickych ? ` · ${automatickych} automaticky zachycených čeká na ověření` : ""} · řazeno podle data zjištění`}
+            : f.zalozka === "overene"
+              ? `${vysledek.length} ${sklon(vysledek.length, "ověřený záznam", "ověřené záznamy", "ověřených záznamů")} · z toho ${pripadu} ${sklon(pripadu, "případ", "případy", "případů")} · řazeno podle data zjištění`
+              : `${vysledek.length} ${sklon(vysledek.length, "položka", "položky", "položek")} · řazeno podle data`}
         </p>
 
         {vysledek.length ? (
