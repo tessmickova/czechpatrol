@@ -2,6 +2,7 @@ import { rozsah } from "@/lib/format";
 import { PASMA, tokeny, UROVNE } from "@/lib/skala";
 import type { TydenniHodnoceni, Uroven } from "@/lib/typy";
 import { Ikona } from "./ikony";
+import { sklon } from "./zeme";
 import { Jiskra } from "./mericky";
 import { Karta, Napoveda, Prazdno, Tecka } from "./zaklad";
 
@@ -257,7 +258,7 @@ export function GrafMesicu({ mesice }: { mesice: { mesic: string; uroven: Uroven
             const x0 = LEVO + i * S;
             const tecka = m.zaznamu > 0 && (
               <circle cx={x0 + S / 2} cy={NAHORE + V - 6 - Math.min(4, m.zaznamu) * 6} r={Math.min(4.5, 2 + m.zaznamu * 0.6)} fill={m.nejvyssi ? tokeny(m.nejvyssi).plna : "#c9c6bd"} stroke="#0d0d0a" strokeWidth="1">
-                <title>{`${mm}/${y}: ${m.zaznamu} ${m.zaznamu === 1 ? "záznam" : m.zaznamu < 5 ? "záznamy" : "záznamů"}${m.nejvyssi ? `, nejvyšší ${UROVNE[m.nejvyssi].nazev}` : ""}`}</title>
+                <title>{`${mm}/${y}: ${m.zaznamu} ${sklon(m.zaznamu, "záznam", "záznamy", "záznamů")}${m.nejvyssi ? `, nejvyšší ${UROVNE[m.nejvyssi].nazev}` : ""}`}</title>
               </circle>
             );
             if (!m.uroven) {

@@ -240,7 +240,7 @@ export function tlakZeme(kodZeme: string): HybridniTlak {
   };
   const osy: { klic: string; nazev: string; kat: Kategorie | null }[] = [
     { klic: "sabotaze", nazev: "Sabotáže", kat: "sabotaz" },
-    { klic: "atribuce", nazev: "Vyšetřovací a atribuční posuny", kat: "vysetrovani" },
+    { klic: "atribuce", nazev: "Kdo to byl — vyšetřovací posuny", kat: "vysetrovani" },
     { klic: "kyber", nazev: "Kybernetické operace", kat: "kyber" },
     { klic: "drony", nazev: "Drony a vzdušný prostor", kat: "drony" },
     { klic: "infrastruktura", nazev: "Kritická infrastruktura", kat: "infrastruktura" },
@@ -261,6 +261,29 @@ export function tlakZeme(kodZeme: string): HybridniTlak {
 /** Radar pro Česko. Zkratka nad `tlakZeme`, protože ji volá půlka webu. */
 export function tlakCr(): HybridniTlak {
   return tlakZeme("CZ");
+}
+
+/**
+ * Nejvyšší závažnost země za poslední období.
+ *
+ * Radar `tlakZeme` bere celou historii od roku 2014 — to je správně pro otázku
+ * „čím vším si země prošla“, ale ne pro otázku „jak je na tom teď“. Budík
+ * v hlavičce potřebuje druhou z nich, jinak by vedle sebe stálo „vysoká“
+ * a „0 případů za 90 dní“ a vypadalo to jako rozpor.
+ *
+ * null znamená, že za dané období nemáme ani jeden ověřený případ. Nula se
+ * nedopočítává na „nízkou“ — o období bez záznamu prostě nic netvrdíme.
+ */
+export function urovenZemeObdobi(kodZeme: string, dni = 90): Uroven | null {
+  const hranice = Date.now() - dni * 86_400_000;
+  const z = incidenty().filter(
+    (i) =>
+      i.kodZeme === kodZeme &&
+      (i.druh ?? "pripad") === "pripad" &&
+      new Date(i.datumZjisteni ?? i.datumUdalosti).getTime() >= hranice,
+  );
+  if (!z.length) return null;
+  return z.reduce((m, i) => (UROVNE[i.zavaznost].poradi > UROVNE[m].poradi ? i.zavaznost : m), z[0].zavaznost);
 }
 
 /**

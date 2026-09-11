@@ -100,7 +100,7 @@ export function KartaUdalosti({
           )}
           <Udaj stitek="Stav" hodnota={STAVY[incident.stav]} />
           <Udaj
-            stitek="Atribuce"
+            stitek="Kdo za tím stojí"
             hodnota={ATRIBUCE[incident.atribuce].nazev}
             napoveda={ATRIBUCE[incident.atribuce].popis}
           />

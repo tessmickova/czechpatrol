@@ -12,7 +12,8 @@ export type NazevIkony =
   | "osa" | "graf" | "kniha" | "zebrik" | "hodiny"
   | "nahoru" | "dolu" | "fajfka" | "krizek"
   | "uzivatel" | "zvonek" | "kava" | "telefon" | "sirena" | "zamek" | "srdce" | "menu" | "instalace" | "odeslat"
-  | "info" | "plus" | "minus" | "vykricnik" | "mapa" | "lupa" | "rss";
+  | "info" | "plus" | "minus" | "vykricnik" | "otaznik" | "mapa" | "lupa" | "rss"
+  | "obalka" | "bublina";
 
 const TVARY: Record<NazevIkony, string> = {
   radar:
@@ -72,6 +73,9 @@ const TVARY: Record<NazevIkony, string> = {
   mapa: "M3.5 6.5 9 4l6 2.5 5.5-2.5v13.5L15 20l-6-2.5-5.5 2.5z M9 4v13.5 M15 6.5V20",
   lupa: "M10.5 17.5a7 7 0 1 0 0-14 7 7 0 0 0 0 14 M15.5 15.5 21 21",
   rss: "M4.5 19.5h.01 M4.5 12.5a7 7 0 0 1 7 7 M4.5 5.5a14 14 0 0 1 14 14",
+  otaznik: "M12 21a9 9 0 1 0 0-18 9 9 0 0 0 0 18 M9.4 9.4a2.7 2.7 0 1 1 3.5 2.6c-.6.2-.9.8-.9 1.4v.8 M12 17.4h.01",
+  obalka: "M3 6h18v12H3z M3 6.6 12 13l9-6.4",
+  bublina: "M4 4.5h16v11.5h-9.5L6 20v-4H4z M8 9h8 M8 12.2h5",
 };
 
 export function Ikona({

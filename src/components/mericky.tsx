@@ -102,11 +102,11 @@ export function ObloukovyMerak({
 
 const POPISKY: Record<string, string> = {
   sabotaze: "Sabotáže",
-  atribuce: "Atribuce",
+  atribuce: "Kdo to byl",
   kyber: "Kyber",
   drony: "Drony",
-  infrastruktura: "Infra.",
-  primy: "Střet",
+  infrastruktura: "Infrastr.",
+  primy: "Voj. střet",
 };
 
 /**

@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { HlavickaStranky } from "@/components/nadpisy";
-import { Vlajka } from "@/components/zeme";
+import { sklon, Vlajka } from "@/components/zeme";
 import { podleZemi } from "@/lib/agregace";
 import { datumPraha } from "@/lib/cas";
 import { incidenty } from "@/lib/data";
@@ -39,13 +39,13 @@ export default function Zeme() {
                 </span>
                 <span className="flex items-baseline gap-2">
                   <span className="cislice text-[32px] font-bold leading-none text-inkoust">{z.pripady}</span>
-                  <span className="text-[13px] text-tlum">{z.pripady === 1 ? "případ" : z.pripady < 5 ? "případy" : "případů"}</span>
+                  <span className="text-[13px] text-tlum">{sklon(z.pripady, "případ", "případy", "případů")} od roku 2014</span>
                 </span>
                 <span className="mt-auto flex flex-wrap items-center gap-x-2.5 gap-y-1 text-[12.5px]">
                   {z.nejvyssi && t ? (
                     <>
                       <span aria-hidden className={`h-[8px] w-[8px] rounded-full ${t.tecka}`} />
-                      <span className={`font-semibold ${t.text}`}>{UROVNE[z.nejvyssi].nazev} {zDeseti(z.nejvyssi)}/10</span>
+                      <span className={`font-semibold ${t.text}`}>nejvýš {UROVNE[z.nejvyssi].nazev.toLowerCase()} {zDeseti(z.nejvyssi)}/10</span>
                     </>
                   ) : (
                     <span className="text-tlum2">bez záznamu</span>

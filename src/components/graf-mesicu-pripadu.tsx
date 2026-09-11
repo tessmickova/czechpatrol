@@ -1,5 +1,6 @@
 import { UROVNE } from "@/lib/skala";
 import type { Uroven } from "@/lib/typy";
+import { sklon } from "./zeme";
 
 /*
   Objem sledování po měsících: jedinečné případy podle data zjištění.
@@ -46,7 +47,7 @@ export function GrafMesicuPripadu({
             return (
               <g key={m.mesic}>
                 <rect x={x0 + 0.5} y={NAHORE + V - h} width={Math.max(1, S - 1)} height={h} fill="#e8484f" rx="1">
-                  <title>{`${mm}/${y}: ${m.pripady} ${m.pripady === 1 ? "případ" : m.pripady < 5 ? "případy" : "případů"}${u ? ` · hodnocení ${UROVNE[u].nazev}` : ""}`}</title>
+                  <title>{`${mm}/${y}: ${m.pripady} ${sklon(m.pripady, "případ", "případy", "případů")}${u ? ` · hodnocení ${UROVNE[u].nazev}` : ""}`}</title>
                 </rect>
                 {popisek}
               </g>

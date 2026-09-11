@@ -72,19 +72,19 @@ export function ZemePrehled({
       <div className="nalet mt-14 border-t border-linka pt-12 sm:mt-20 sm:pt-14">
         <NadpisBloku
           nadpis="Čím je tlak tvořený"
-          popis={`Osy podle zveřejněných záznamů se zemí ${kodZeme}. Prázdná osa znamená, že takový záznam nemáme — ne že se nic nestalo.`}
+          popis={`Osy podle všech zveřejněných záznamů se zemí ${kodZeme} od roku 2014. Prázdná osa znamená, že takový záznam nemáme — ne že se nic nestalo.`}
         />
         <div className="grid gap-4 lg:grid-cols-[minmax(0,1fr)_minmax(0,1fr)]">
           <PavucinaHrozeb
             nadpis={nazev}
-            popis="Nejvyšší úroveň v každé oblasti, kterou pro tuhle zemi evidujeme."
+            popis="Nejvyšší úroveň v každé oblasti od roku 2014, ne stav k dnešku."
             tlak={tlak}
           />
           <section aria-label="Souhrn" className="rounded-[22px] border border-linka2 bg-plocha p-5 sm:p-6">
             <h3 className="titul-mensi">Co o tom víme</h3>
             <dl className="mt-4 grid grid-cols-2 gap-x-5 gap-y-4 text-[14px]">
               <div>
-                <dt className="stitek">Případů celkem</dt>
+                <dt className="stitek">Případů od roku 2014</dt>
                 <dd className="cislice mt-1 text-[26px] font-bold leading-none text-inkoust">{pripady.length}</dd>
               </div>
               <div>
@@ -96,7 +96,7 @@ export function ZemePrehled({
                 <dd className="cislice mt-1 text-[26px] font-bold leading-none text-inkoust">{sUrednim}</dd>
               </div>
               <div>
-                <dt className="stitek">Všech záznamů</dt>
+                <dt className="stitek">Všech záznamů od 2014</dt>
                 <dd className="cislice mt-1 text-[26px] font-bold leading-none text-inkoust">{zaznamy.length}</dd>
               </div>
             </dl>

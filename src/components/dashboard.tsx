@@ -3,6 +3,7 @@ import { druh, kdyZjisteno, novaZjisteni, pachatelPotvrzen, podlePuvodce, podleZ
 import { cerstvost, datumCasPraha, datumPraha, stariSlovy } from "@/lib/cas";
 import type { CelkovyStav, HybridniTlak, Kandidat, NatoPolozka, Nepotvrzene, PravniPolozka, ProvozniPolozka, TydenniHodnoceni, Uroven, Watchlist } from "@/lib/typy";
 import { PASMA, UROVNE } from "@/lib/skala";
+import type { HlavniVeta } from "@/lib/veta";
 import { Ikona, type NazevIkony } from "./ikony";
 import { HeroDashboard } from "./hero-dashboard";
 import { NadpisSekce } from "./nadpisy";
@@ -29,12 +30,30 @@ import { sklon, Vlajka } from "./zeme";
 
 type Ton = "klid" | "pozor" | "plati" | "nevime";
 
-const TON: Record<Ton, { dlazdice: string; tecka: string; slovo: string }> = {
-  klid: { dlazdice: "border-linka2 bg-plocha", tecka: "bg-[#5cbf8a]", slovo: "text-[#8fd6ae]" },
-  pozor: { dlazdice: "border-[#d9b24c]/40 bg-[#d9b24c]/10", tecka: "bg-[#d9b24c]", slovo: "text-[#e6c977]" },
-  plati: { dlazdice: "border-[#e8484f]/50 bg-[#e8484f]/12", tecka: "bg-[#e8484f]", slovo: "text-[#f2848a]" },
-  nevime: { dlazdice: "border-dashed border-linka bg-transparent", tecka: "bg-tlum2", slovo: "text-tlum2" },
+/*
+  Stav nesmí být poznat jen podle barvy. Ke každému tónu proto patří i tvar
+  (ikona) a slovo — jinak by dlaždice nic neříkala tomu, kdo barvy nerozliší,
+  ani tomu, kdo si web vytiskne černobíle.
+*/
+const TON: Record<Ton, { dlazdice: string; tecka: string; slovo: string; ikona: NazevIkony }> = {
+  klid: { dlazdice: "border-linka2 bg-plocha", tecka: "bg-[#5cbf8a]", slovo: "text-[#8fd6ae]", ikona: "fajfka" },
+  pozor: { dlazdice: "border-[#d9b24c]/40 bg-[#d9b24c]/10", tecka: "bg-[#d9b24c]", slovo: "text-[#e6c977]", ikona: "vykricnik" },
+  plati: { dlazdice: "border-[#e8484f]/50 bg-[#e8484f]/12", tecka: "bg-[#e8484f]", slovo: "text-[#f2848a]", ikona: "sirena" },
+  nevime: { dlazdice: "border-dashed border-linka bg-transparent", tecka: "bg-tlum2", slovo: "text-tlum2", ikona: "otaznik" },
 };
+
+/** Šest stavů, na které se lidé ptají první. Zbytek je o klik dál. */
+const KLICOVE = ["p-mobilizace", "p-nouzovy-stav", "p-vycestovani", "p-hranice", "n-clanek-5", "v-elektrina"];
+
+/*
+  Skupiny ve sbaleném seznamu. NATO a Evropská unie jsou dvě různé věci —
+  do jedné dlaždice se slévat nesmějí, protože každá rozhoduje o něčem jiném.
+*/
+const SKUPINY = [
+  { predpona: "p", nazev: "Právní stav Česka" },
+  { predpona: "n", nazev: "NATO (obranná aliance, ne Evropská unie)" },
+  { predpona: "v", nazev: "Provoz a běžné služby" },
+];
 
 const KRATCE_PRAVNI: Record<string, string> = {
   "stav-ohrozeni": "Stav ohrožení státu", "valecny-stav": "Válečný stav", mobilizace: "Mobilizace", "nouzovy-stav": "Nouzový stav",
@@ -92,7 +111,7 @@ function Dlazdice({ d }: { d: Dlazdice }) {
           </span>
           <span className="mt-1 flex items-center justify-between gap-2">
             <span className={`flex items-center gap-1.5 text-[13px] font-bold leading-none ${t.slovo}`}>
-              <span aria-hidden className={`h-[7px] w-[7px] shrink-0 rounded-[2px] ${t.tecka}`} />{d.stav}
+              <Ikona nazev={t.ikona} velikost={13} tah={2.2} trida="shrink-0" />{d.stav}
             </span>
             {d.ton !== "nevime" && <Stari overeno={d.overeno} />}
           </span>
@@ -143,13 +162,13 @@ function Pruh({ nazev, n, max, barva, odkaz }: { nazev: React.ReactNode; n: numb
 }
 
 export function Dashboard({
-  stav, pravni, natoPolozky, provozPolozky, overeno, vse, neprosle, kandidati, tydny, watchlist, cr, hybridni, obcane,
-  tlakEvropa, tlakCesko,
+  stav, pravni, natoPolozky, provozPolozky, overeno, vse, neprosle, kandidati, tydny, watchlist, cr, crHistoricky, hybridni, obcane,
+  tlakEvropa, tlakCesko, veta,
 }: {
   stav: CelkovyStav; pravni: PravniPolozka[]; natoPolozky: NatoPolozka[]; provozPolozky: ProvozniPolozka[];
   overeno: string | null; vse: Zaznam[]; neprosle: Nepotvrzene[]; kandidati: Kandidat[]; tydny: TydenniHodnoceni[]; watchlist: Watchlist;
-  cr: Uroven | null; hybridni: Uroven | null; obcane: { uroven: Uroven; popis: string; neovereno: number };
-  tlakEvropa: HybridniTlak; tlakCesko: HybridniTlak;
+  cr: Uroven | null; crHistoricky: Uroven | null; hybridni: Uroven | null; obcane: { uroven: Uroven; popis: string; neovereno: number };
+  tlakEvropa: HybridniTlak; tlakCesko: HybridniTlak; veta: HlavniVeta;
 }) {
   const platiCr = pravni.filter((p) => p.plati === true);
   const neovereneCr = pravni.filter((p) => p.plati === null).length;
@@ -187,12 +206,21 @@ export function Dashboard({
   const natoHodnota = natoAktivni.length ? natoAktivni.map((p) => KRATCE_NATO[p.klic] ?? p.nazev).join(", ") : cl4?.aktivni === null && cl5?.aktivni === null ? "Neověřeno" : "Bez aktivace";
   const natoTon: Ton = natoAktivni.length ? "plati" : cl4?.aktivni === null && cl5?.aktivni === null ? "nevime" : "klid";
 
+  // Dlaždice se počítají jednou: šest klíčových nahoru, zbytek do rozbalovátka.
+  const vsechnyDlazdice: Dlazdice[] = [
+    ...pravni.map(dlazdicePravni),
+    ...natoPolozky.map(dlazdiceNato),
+    ...provozPolozky.map(dlazdiceProvoz),
+  ];
+  const klicove = KLICOVE.map((k) => vsechnyDlazdice.find((d) => d.klic === k)).filter((d): d is Dlazdice => Boolean(d));
+  const ostatni = vsechnyDlazdice.filter((d) => !KLICOVE.includes(d.klic));
+
   void tydny;
   return (
     <>
     <PasZemi vse={vse} />
     <div className="mx-auto max-w-[1280px] px-4 py-5 sm:px-6 sm:py-7">
-      <HeroDashboard stav={stav} cr={cr} hybridni={hybridni} obcane={obcane} overeno={overeno} pocetZaznamu={vse.length} pocet90={dni90.length} />
+      <HeroDashboard stav={stav} cr={cr} crHistoricky={crHistoricky} hybridni={hybridni} obcane={obcane} overeno={overeno} pocetZaznamu={vse.length} pocet90={dni90.length} veta={veta} />
 
       {/* 1b — kolik případů přibylo; počítá se v prohlížeči, ne při sestavení */}
       <PocitadlaEvropa polozky={pocitadlaData} ted={Date.now()} />
@@ -202,16 +230,37 @@ export function Dashboard({
         <NadpisSekce
           stitek="Co právě platí"
           nadpis="Úřední stav v Česku"
-          popis="Dvacet věcí, na které se lidé ptají jako první. Zelená znamená, že opatření neplatí — ověřeno v úřední sbírce, ne odhadnuto."
+          popis="Šest věcí, na které se lidé ptají jako první. Zaškrtnutí znamená, že opatření neplatí — ověřeno v úřední sbírce, ne odhadnuto. Zbylých čtrnáct je o jeden klik dál."
         />
       </div>
       <div className="grid gap-4 lg:grid-cols-[minmax(0,1.35fr)_minmax(0,1fr)]">
         <section aria-label="Oficiální stavy" id="opatreni" className="scroll-mt-[84px]">
-          <ul className="grid grid-cols-2 gap-2.5 sm:grid-cols-3 xl:grid-cols-4">
-            {pravni.map((p) => <Dlazdice key={p.klic} d={dlazdicePravni(p)} />)}
-            {natoPolozky.map((p) => <Dlazdice key={p.klic} d={dlazdiceNato(p)} />)}
-            {provozPolozky.map((p) => <Dlazdice key={p.klic} d={dlazdiceProvoz(p)} />)}
+          <ul className="grid grid-cols-2 gap-2.5 sm:grid-cols-3">
+            {klicove.map((d) => <Dlazdice key={d.klic} d={d} />)}
           </ul>
+          <details className="group mt-3 overflow-hidden rounded-[18px] border border-linka2 bg-plocha">
+            <summary className="flex min-h-[46px] cursor-pointer list-none items-center justify-between gap-3 px-4 text-[13.5px] font-semibold text-inkoust hover:bg-plocha2">
+              <span>Dalších {ostatni.length} {sklon(ostatni.length, "stav", "stavy", "stavů")}</span>
+              <span className="flex items-center gap-2 text-[12.5px] font-normal text-tlum2">
+                právní stav · NATO · provoz
+                <Ikona nazev="dolu" velikost={13} tah={2} trida="transition-transform group-open:rotate-180" />
+              </span>
+            </summary>
+            <div className="space-y-4 border-t border-linka2 p-3">
+              {SKUPINY.map((sk) => {
+                const polozky = ostatni.filter((d) => d.klic.startsWith(`${sk.predpona}-`));
+                if (!polozky.length) return null;
+                return (
+                  <div key={sk.predpona}>
+                    <div className="stitek mb-2">{sk.nazev}</div>
+                    <ul className="grid grid-cols-2 gap-2.5 sm:grid-cols-3">
+                      {polozky.map((d) => <Dlazdice key={d.klic} d={d} />)}
+                    </ul>
+                  </div>
+                );
+              })}
+            </div>
+          </details>
         </section>
 
         <section aria-label="Poslední události" className="rounded-[18px] border border-linka2 bg-plocha">
@@ -254,18 +303,18 @@ export function Dashboard({
         <NadpisSekce
           stitek="Typy hrozeb"
           nadpis="Čím je ten tlak tvořený"
-          popis="Ne jak je velký, ale z čeho se skládá. Vlevo NATO a Evropa jako celek, vpravo Česko podle vlastních záznamů. Rozdíl mezi nimi je to podstatné."
+          popis="Ne jak je velký, ale z čeho se skládá. Vlevo celá sledovaná Evropa — členské i nečlenské země NATO dohromady. Vpravo jen Česko. Rozdíl mezi obrazci je to podstatné."
         />
         <div className="grid gap-4 lg:grid-cols-2">
           <PavucinaHrozeb
-            nadpis="NATO a Evropa"
-            popis="Hodnocení projektu podle záznamů z celé sledované oblasti."
+            nadpis="Evropa jako celek"
+            popis="Všechny sledované země od roku 2014, ať jsou v NATO, nebo ne."
             tlak={tlakEvropa}
             odkaz={{ href: "/metodika/", text: "jak se hodnotí →" }}
           />
           <PavucinaHrozeb
             nadpis="Česko"
-            popis="Jen ze zveřejněných záznamů s kódem CZ. Prázdná osa znamená, že takový záznam nemáme."
+            popis="Jen české záznamy od roku 2014. Prázdná osa znamená, že takový záznam nemáme."
             tlak={tlakCesko}
             odkaz={{ href: "/udalosti/?zeme=CZ", text: "české záznamy →" }}
           />
