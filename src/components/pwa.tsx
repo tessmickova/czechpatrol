@@ -29,9 +29,19 @@ export function RegistraceSW() {
     navigator.serviceWorker.addEventListener("message", prijemZpravy);
     let mameSW = Boolean(navigator.serviceWorker.controller);
     navigator.serviceWorker.addEventListener("controllerchange", () => { if (mameSW) setNovaVerze(true); mameSW = true; });
-    navigator.serviceWorker.register("/sw.js").catch(() => {
-      /* bez service workeru web funguje stejně, jen ne offline */
-    });
+    navigator.serviceWorker
+      .register("/sw.js")
+      .then((reg) => {
+        // Prohlížeč si sám ověřuje service worker jen občas. Bez tohohle
+        // mohl vracející se člověk vidět starou verzi webu ještě den po
+        // nasazení, aniž by tušil proč.
+        reg.update().catch(() => {});
+        const priNavratu = () => { if (document.visibilityState === "visible") reg.update().catch(() => {}); };
+        document.addEventListener("visibilitychange", priNavratu);
+      })
+      .catch(() => {
+        /* bez service workeru web funguje stejně, jen ne offline */
+      });
     return () => navigator.serviceWorker.removeEventListener("message", prijemZpravy);
   }, []);
 

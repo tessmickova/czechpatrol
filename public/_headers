@@ -1,0 +1,26 @@
+# Hlavičky pro Cloudflare Pages.
+#
+# Proč to tu je: stránka se po nasazení lidem neměnila. Build i nasazení
+# byly správně, ale prohlížeč dál servíroval starou kopii HTML — a ta
+# odkazovala na staré soubory buildu, takže se nezměnilo vůbec nic.
+#
+# Pravidlo je jednoduché: co má v názvu otisk obsahu, smí se cachovat
+# navždy; co ho nemá, se musí pokaždé ověřit u serveru.
+
+/*
+  Cache-Control: public, max-age=0, must-revalidate
+
+# Soubory buildu mají v názvu hash. Když se obsah změní, změní se i název,
+# takže je bezpečné držet je v mezipaměti dlouho.
+/_next/static/*
+  Cache-Control: public, max-age=31536000, immutable
+
+# Service worker se nesmí cachovat nikdy. Kdyby se cachoval, zůstala by
+# v prohlížeči stará pravidla pro ukládání a web by se neaktualizoval
+# ani po nasazení.
+/sw.js
+  Cache-Control: no-cache
+  Service-Worker-Allowed: /
+
+/manifest.webmanifest
+  Cache-Control: public, max-age=0, must-revalidate

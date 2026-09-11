@@ -8,7 +8,7 @@
 */
 // Změna verze = nová mezipaměť. Stará se smaže při aktivaci a stránka
 // dostane zprávu, ať nabídne obnovení — nikdy nepřepínáme obsah potichu.
-const VERZE = "cp-v2";
+const VERZE = "cp-v3";
 const SKORAPKA = ["/", "/offline/", "/manifest.webmanifest", "/ikona-192.png"];
 
 self.addEventListener("install", (u) => {
@@ -54,8 +54,11 @@ self.addEventListener("fetch", (u) => {
   }
 
   if (request.mode === "navigate" || request.headers.get("accept")?.includes("text/html")) {
+    // Schválně přes adresu a s „no-cache“: kdybychom pustili původní
+    // požadavek, mohl by ho vyřídit HTTP cache prohlížeče starou kopií
+    // stránky — a ta by odkazovala na staré soubory buildu.
     u.respondWith(
-      fetch(request)
+      fetch(request.url, { cache: "no-cache", credentials: "same-origin" })
         .then((odpoved) => {
           const kopie = odpoved.clone();
           caches.open(VERZE).then((c) => c.put(request, kopie));
