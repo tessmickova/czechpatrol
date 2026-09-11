@@ -73,7 +73,7 @@ export function KartaUdalosti({
             <span
               className={`stitek-tmavy inline-flex items-center gap-1.5 rounded-full border px-2.5 py-1 ${t.ramecek} ${t.text}`}
             >
-              <span aria-hidden className={`h-[6px] w-[6px] rounded-[2px] ${t.tecka}`} />
+              <span aria-hidden className={`h-[6px] w-[6px] rounded-full ${t.tecka}`} />
               {d.nazev}
             </span>
           </Napoveda>

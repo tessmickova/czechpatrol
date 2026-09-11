@@ -2,10 +2,12 @@
 
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
-import { BUY_ME_A_COFFEE_URL, KOMUNITA, POMOCNIK, TISNOVA, UCTY_ZAPNUTE, WEB } from "@/config/web";
+import { BUY_ME_A_COFFEE_URL, DISKUZE, KANALY, POMOCNIK, TISNOVA, UCTY_ZAPNUTE, WEB } from "@/config/web";
 import { odhlasit, ROLE, useUcet } from "@/lib/ucet";
 import { Ikona, type NazevIkony } from "./ikony";
 import { TlacitkoInstalace } from "./pwa";
+import { KruhyKomunity } from "./komunita";
+import { ZnackaKanalu, type Znacka } from "./znacky";
 
 /** Kdokoli může panel otevřít — hlavička, spodní lišta, odkaz v textu. */
 export function otevriPanel() {
@@ -22,22 +24,34 @@ export function otevriPanel() {
 export const HLAVNI_STRANKY: { href: string; label: string; ikona: NazevIkony; popis: string }[] = [
   { href: "/", label: "Přehled", ikona: "radar", popis: "stavy, opatření, poslední události" },
   { href: "/udalosti/", label: "Události", ikona: "osa", popis: "všechny záznamy se zdroji a filtry" },
-  { href: "/vyvoj/", label: "Vývoj", ikona: "graf", popis: "objem a závažnost v čase" },
-  { href: "/svet/", label: "Svět", ikona: "globus", popis: "cíle mocností a jak blízko k nim jsou" },
+  { href: "/manipulace/", label: "Manipulace", ikona: "bublina", popis: "rozebrané kampaně, které šíří nepravdu" },
   { href: "/zeme/", label: "Země", ikona: "vlajka", popis: "přehled a počty pro každou sledovanou zemi" },
+  { href: "/analyzy/", label: "Analýzy", ikona: "graf", popis: "vývoj v čase, cíle aktérů, metodika" },
   { href: "/muj-prehled/", label: "Můj přehled", ikona: "terc", popis: "země a témata, která sledujete" },
 ];
 
 export const DALSI_STRANKY = [
+  { href: "/vyvoj/", label: "Vývoj" },
+  { href: "/svet/", label: "Aktéři a cíle" },
   { href: "/metodika/", label: "Metodika" },
   { href: "/zdroje/", label: "Zdroje" },
   { href: "/opravy/", label: "Opravy a historie" },
   { href: "/o-projektu/", label: "O projektu" },
-  { href: "/odber/", label: "Odběr a RSS" },
-  { href: "/podporit/", label: "Podpořit" },
   { href: "/izs/", label: "Pro záchranné složky" },
   { href: "/soukromi/", label: "Soukromí" },
   { href: "/podminky/", label: "Podmínky" },
+];
+
+/*
+  Kanály v panelu. Telegram je první a největší — je to jediný kanál, kterým
+  se dá zastihnout člověk, který web zrovna nesleduje. Kanál bez adresy se
+  ukáže jako připravovaný, nikdy jako funkční.
+*/
+const KANALY_PANEL: { klic: Znacka; nazev: string; popis: string }[] = [
+  { klic: "telegram", nazev: "Telegram", popis: "upozornění hned" },
+  { klic: "email", nazev: "E-mail", popis: "souhrn" },
+  { klic: "signal", nazev: "Signal", popis: "šifrovaně" },
+  { klic: "whatsapp", nazev: "WhatsApp", popis: "kanál" },
 ];
 
 const RADEK = "flex min-h-[48px] items-center gap-3 px-4 text-[15px] text-inkoust transition-colors hover:bg-plocha";
@@ -168,16 +182,90 @@ export function PostranniPanel() {
             </ul>
           </nav>
 
-          {/* aplikace a podpora */}
-          <section aria-label="Aplikace a podpora" className="border-t border-linka px-4 py-3">
-            <div className="flex flex-wrap items-center gap-x-4 gap-y-2 text-[13.5px]">
+          {/* odběr — Telegram nahoře, ostatní kanály pod ním */}
+          <section aria-label="Odběr" className="border-t border-linka px-4 py-3">
+            <div className="stitek mb-2">Odběr upozornění</div>
+            {KANALY.telegram ? (
+              <a
+                href={KANALY.telegram}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex min-h-[60px] items-center gap-3 rounded-[18px] border border-akcent/55 bg-akcent/12 px-3.5 transition-colors hover:bg-akcent/20"
+              >
+                <ZnackaKanalu znacka="telegram" velikost={30} />
+                <span className="min-w-0 flex-1">
+                  <span className="block text-[14.5px] font-bold text-inkoust">Telegram — urgentní upozornění</span>
+                  <span className="block text-[12px] leading-snug text-tlum">jen změny, kvůli kterým byste jednali jinak</span>
+                </span>
+                <Ikona nazev="nahoru" velikost={13} tah={2} trida="shrink-0 rotate-45 text-akcent" />
+              </a>
+            ) : (
+              <span className="flex min-h-[60px] items-center gap-3 rounded-[18px] border border-dashed border-linka px-3.5">
+                <ZnackaKanalu znacka="telegram" velikost={30} tlumena />
+                <span className="text-[13.5px] text-tlum">Telegram — připravujeme</span>
+              </span>
+            )}
+            <ul className="mt-2 grid grid-cols-3 gap-1.5">
+              {KANALY_PANEL.filter((k) => k.klic !== "telegram").map((k) => {
+                const url = KANALY[k.klic];
+                return (
+                  <li key={k.klic}>
+                    {url ? (
+                      <a href={url} target="_blank" rel="noopener noreferrer" className="flex min-h-[58px] flex-col items-center justify-center gap-1 rounded-[16px] border border-linka px-1 text-center transition-colors hover:border-akcent">
+                        <ZnackaKanalu znacka={k.klic} velikost={22} />
+                        <span className="text-[11.5px] font-semibold text-inkoust">{k.nazev}</span>
+                      </a>
+                    ) : (
+                      <span className="flex min-h-[58px] flex-col items-center justify-center gap-1 rounded-[16px] border border-dashed border-linka px-1 text-center opacity-80">
+                        <ZnackaKanalu znacka={k.klic} velikost={22} tlumena />
+                        <span className="text-[11.5px] font-semibold text-tlum">{k.nazev}</span>
+                        <span className="text-[10px] leading-none text-tlum2">připravujeme</span>
+                      </span>
+                    )}
+                  </li>
+                );
+              })}
+            </ul>
+            <div className="mt-1.5 flex items-center justify-between gap-3 text-[13px]">
+              <a href="/feed.xml" className="inline-flex min-h-[36px] items-center gap-1.5 font-semibold text-akcent hover:text-akcent-svetla"><Ikona nazev="rss" velikost={13} tah={2} /> RSS — funguje vždy</a>
+              <Link href="/odber/" onClick={zavri} className="text-tlum hover:text-inkoust">jak to funguje →</Link>
+            </div>
+          </section>
+
+          {/* komunita */}
+          <section aria-label="Komunita" className="border-t border-linka px-4 py-3">
+            <div className="stitek mb-2">Komunita</div>
+            <KruhyKomunity onKlik={zavri} />
+          </section>
+
+          {/* podpora a aplikace */}
+          <section aria-label="Podpora a aplikace" className="border-t border-linka px-4 py-3">
+            <div className="stitek mb-2">Podpora provozu</div>
+            {BUY_ME_A_COFFEE_URL ? (
+              <a
+                href={BUY_ME_A_COFFEE_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex min-h-[52px] items-center gap-3 rounded-[18px] border border-jantar/50 bg-jantar/10 px-3.5 transition-colors hover:bg-jantar/18"
+              >
+                <span className="grid h-9 w-9 shrink-0 place-items-center rounded-full bg-jantar/20 text-jantar"><Ikona nazev="kava" velikost={17} tah={1.9} /></span>
+                <span className="min-w-0 flex-1">
+                  <span className="block text-[14px] font-bold text-inkoust">Buy me a coffee</span>
+                  <span className="block text-[12px] text-tlum">jednorázově, bez účtu</span>
+                </span>
+              </a>
+            ) : (
+              <Link href="/podporit/" onClick={zavri} className="flex min-h-[52px] items-center gap-3 rounded-[18px] border border-linka px-3.5 transition-colors hover:border-akcent">
+                <span className="grid h-9 w-9 shrink-0 place-items-center rounded-full bg-plocha2 text-jantar"><Ikona nazev="kava" velikost={17} tah={1.9} /></span>
+                <span className="min-w-0 flex-1">
+                  <span className="block text-[14px] font-bold text-inkoust">Podpořit provoz</span>
+                  <span className="block text-[12px] text-tlum">přímý příspěvek zatím připravujeme</span>
+                </span>
+              </Link>
+            )}
+            <div className="mt-2 flex flex-wrap items-center gap-x-4 gap-y-2 text-[13.5px]">
               <span className="flex items-center gap-2 text-tlum"><Ikona nazev="instalace" velikost={14} tah={2} /> Aplikace</span>
               <span className="min-w-0 flex-1"><TlacitkoInstalace /></span>
-            </div>
-            <div className="mt-2 flex flex-wrap gap-x-4 gap-y-1 text-[13.5px]">
-              {BUY_ME_A_COFFEE_URL && <a href={BUY_ME_A_COFFEE_URL} target="_blank" rel="noopener noreferrer" className="inline-flex min-h-[36px] items-center gap-1.5 text-jantar hover:text-inkoust"><Ikona nazev="kava" velikost={14} tah={2} /> Přispět</a>}
-              {KOMUNITA.github && <a href={KOMUNITA.github} target="_blank" rel="noopener noreferrer" className="inline-flex min-h-[36px] items-center gap-1.5 text-tlum hover:text-inkoust"><Ikona nazev="srdce" velikost={14} tah={2} /> GitHub</a>}
-              {KOMUNITA.diskuse && <a href={KOMUNITA.diskuse} target="_blank" rel="noopener noreferrer" className="inline-flex min-h-[36px] items-center gap-1.5 text-tlum hover:text-inkoust"><Ikona nazev="uzivatel" velikost={14} tah={2} /> Diskuse a tipy</a>}
             </div>
           </section>
 

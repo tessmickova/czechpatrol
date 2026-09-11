@@ -461,7 +461,7 @@ function RadekZaznamu({ z, otevreny, onOtevri, siroky }: { z: Zaznam; otevreny: 
   const obsah = (
     <>
       <span className="cislice w-[64px] shrink-0 pt-[3px] text-[12.5px] text-tlum">{datumPraha(kdyZjisteno(z)).replace(/ \d{4}$/, "")}</span>
-      <span aria-hidden className={`mt-[7px] h-[10px] w-[10px] shrink-0 rounded-[2px] ${dr === "pripad" ? t.pruh : "border border-tlum2 bg-transparent"}`} />
+      <span aria-hidden className={`mt-[7px] h-[10px] w-[10px] shrink-0 rounded-full ${dr === "pripad" ? t.pruh : "border border-tlum2 bg-transparent"}`} />
       <span className="min-w-0 flex-1">
         <span className="flex flex-wrap items-center gap-x-2 gap-y-0.5 text-[12px] text-tlum">
           <Vlajka kod={z.kodZeme} />
@@ -496,7 +496,7 @@ function RadekNeprosle({ n }: { n: Nepotvrzene }) {
     <details className="group border-b border-linka2">
       <summary className="flex cursor-pointer items-start gap-3 py-2.5 hover:bg-plocha">
         <span className="cislice w-[64px] shrink-0 pt-[3px] text-[12.5px] text-tlum">{datumPraha(n.datum).replace(/ \d{4}$/, "")}</span>
-        <span aria-hidden className="mt-[7px] h-[10px] w-[10px] shrink-0 rounded-[2px] bg-tlum2" />
+        <span aria-hidden className="mt-[7px] h-[10px] w-[10px] shrink-0 rounded-full bg-tlum2" />
         <span className="min-w-0 flex-1">
           <span className="flex flex-wrap items-center gap-x-2 text-[12px] text-tlum">
             <Vlajka kod={n.kodZeme} /> <span>{n.kodZeme === "CZ" ? "Česko" : n.zeme}</span> <span aria-hidden>·</span>
@@ -522,7 +522,7 @@ function RadekKandidata({ k }: { k: Kandidat }) {
     <details className="group border-b border-dashed border-linka">
       <summary className="flex cursor-pointer items-start gap-3 py-2.5 hover:bg-plocha">
         <span className="cislice w-[64px] shrink-0 pt-[3px] text-[12.5px] text-tlum">{datumPraha(k.publikovano ?? k.zachyceno).replace(/ \d{4}$/, "")}</span>
-        <span aria-hidden className="mt-[7px] h-[10px] w-[10px] shrink-0 rounded-[2px] border border-dashed border-akcent" />
+        <span aria-hidden className="mt-[7px] h-[10px] w-[10px] shrink-0 rounded-full border border-dashed border-akcent" />
         <span className="min-w-0 flex-1">
           <span className="flex flex-wrap items-center gap-x-2 text-[12px] text-tlum">
             {k.kodZeme ? <><Vlajka kod={k.kodZeme} /> <span>{k.kodZeme === "CZ" ? "Česko" : k.zeme}</span></> : <span>země neurčena</span>}

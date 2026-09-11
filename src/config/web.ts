@@ -58,7 +58,7 @@ export const KDY_UPOZORNENI = [
  * neukáže jako funkční.
  */
 export const KOMUNITA: Record<string, string> = {
-  /** Veřejný repozitář s daty i kódem. */
+  /** Veřejný repozitář s daty i kódem. Odkazuje se na něj jen v O projektu a Opravách, ne v menu. */
   github: "https://github.com/tessmickova/czechpatrol",
   /** Diskuse nad metodikou a hodnocením. */
   diskuse: "https://github.com/tessmickova/czechpatrol/issues",
@@ -67,6 +67,23 @@ export const KOMUNITA: Record<string, string> = {
   /** Adresa pro poslání tipu nebo opravy. */
   tipy: "",
 };
+
+/**
+ * Živá diskuze ke konkrétním tématům.
+ *
+ * Neběží pořád — otevírá se jen tam, kde to dává smysl, a přístup dostanou
+ * odběratelé telegramového kanálu. Prázdná adresa znamená, že žádná diskuze
+ * zrovna neběží; web pak nic nepředstírá.
+ */
+export const DISKUZE = {
+  /** Adresa skupiny. Prázdné = diskuze zatím neběží. */
+  url: "",
+  /**
+   * Kolik lidí kanál odebírá. Vyplňuje se ručně podle skutečného čísla
+   * z Telegramu; nula znamená „nevíme“, ne „nikdo“. Číslo se nikdy nedopočítává.
+   */
+  odberatelu: 0,
+} as const;
 
 /**
  * Režim dat.

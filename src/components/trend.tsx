@@ -47,7 +47,7 @@ function Rozlozeni({ t }: { t: TydenniHodnoceni }) {
   if (!c) return <span className="text-[12px] text-tlum2">—</span>;
   return (
     <Napoveda vpravo popis={<span className="block space-y-1">{casti.map((x) => <span key={x.klic} className="block">{PASMA[x.klic].nazev}: {x.n}</span>)}</span>}>
-      <span aria-hidden className="flex h-[7px] w-[64px] overflow-hidden rounded-[2px] bg-linka2">
+      <span aria-hidden className="flex h-[7px] w-[64px] overflow-hidden rounded-full bg-linka2">
         {casti.map((x) => <span key={x.klic} className={PASMA[x.klic].pruh} style={{ width: `${(x.n / c) * 100}%` }} />)}
       </span>
     </Napoveda>

@@ -105,16 +105,28 @@ které adresy skutečně odpovídají, a teprve pak se příznak přepne.
 
 ## Stránky
 
-Hlavní navigace má čtyři cíle: **Přehled** (`/`), **Události** (`/udalosti/`,
-filtry v adrese `?zeme=&tema=&obdobi=&overeni=`, detail v postranním panelu
-`?u=slug` nebo na `/incident/<slug>/`), **Vývoj** (`/vyvoj/`) a **Můj přehled**
-(`/muj-prehled/`, předvolby jen v zařízení). Vedlejší: metodika, zdroje,
-opravy (`/opravy/`, z `data/opravy.json`), o projektu, podpořit, odběr.
+Hlavní navigace má šest cílů: **Přehled** (`/`), **Události** (`/udalosti/`),
+**Manipulace** (`/manipulace/`), **Země** (`/zeme/`), **Analýzy** (`/analyzy/`)
+a **Můj přehled** (`/muj-prehled/`, předvolby jen v zařízení).
+
+Události mají filtry v adrese (`?tab=&zeme=&tema=&obdobi=&overeni=`) a detail
+v postranním panelu (`?u=slug`) nebo na `/incident/<slug>/`. Parametr `tab`
+přepíná mezi třemi záložkami: `overene` (výchozí), `cekajici` (automatický sběr
+čekající na ověření) a `neproslo` (vyvrácené a nedoložené). Starší odkazy
+`?overeni=automaticke` a `?overeni=neprosle` zůstávají funkční.
+
+Analýzy jsou rozcestník na **Vývoj** (`/vyvoj/`), **Aktéři a cíle** (`/svet/`),
+**Manipulace** a metodiku. Vedlejší stránky: zdroje, opravy (`/opravy/`,
+z `data/opravy.json`), o projektu, podpořit, odběr.
 Staré adresy (`/dnes`, `/trend`, `/osa`, `/cr`, `/nato`, `/tlak`, `/watchlist`,
 `/nepotvrzeno`, `/komunita`) přesměrovává `public/_redirects`.
 
-Stránky: přehled, události, vývoj, svět, **země** (rozcestník a stránka pro každou sledovanou zemi),
-můj přehled, metodika, zdroje, opravy.
+**Manipulační kampaně** (`/manipulace/`, z `data/kampane.json`) jsou vedené zvlášť
+od událostí. Kampaň není incident: nemá jedno místo ani jeden okamžik a obvykle
+míří na víc zemí naráz, takže do počtu případů nevstupuje. Každá karta má šest
+částí a dva **nezávislé** štítky jistoty — „je to manipulace?“ a „kdo za tím
+stojí?“. Připsat kampaň státu jako jisté smí web až tehdy, když to někdo veřejně
+doložil; do té doby je to podezření. Hlídají to testy v `testy/kampane.test.ts`.
 
 Nad vším stojí Pravidlo č. 0 v `CLAUDE.md`: právo ČR a EU, žádná poplašná zpráva,
 a v bezpečnostních tématech jen to, co je doložené citací se zdrojem a řešené úředně.

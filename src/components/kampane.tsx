@@ -147,21 +147,21 @@ export function KartaKampane({ k, nazvyZemi }: { k: Kampan; nazvyZemi: Record<st
 }
 
 /** Dlaždice na úvodní stranu: jedna kampaň, dvě odpovědi, odkaz na rozbor. */
-export function DlazdiceKampane({ k, nazvyZemi }: { k: Kampan; nazvyZemi: Record<string, string> }) {
+export function DlazdiceKampane({ k, nazvyZemi, siroka = false }: { k: Kampan; nazvyZemi: Record<string, string>; siroka?: boolean }) {
   return (
     <Link
       href={`/manipulace/#${k.slug}`}
-      className="flex h-full flex-col gap-3 rounded-[22px] border border-linka2 bg-plocha p-5 transition-colors hover:border-akcent"
+      className={`flex h-full flex-col gap-3 rounded-[22px] border border-linka2 bg-plocha p-5 transition-colors hover:border-akcent ${siroka ? "sm:grid sm:grid-cols-[minmax(0,1.6fr)_minmax(0,1fr)] sm:items-center sm:gap-x-8 sm:p-6" : ""}`}
     >
-      <span className="flex flex-wrap items-center gap-x-2.5 gap-y-1 text-[12.5px] text-tlum">
+      <span className={`flex flex-wrap items-center gap-x-2.5 gap-y-1 text-[12.5px] text-tlum ${siroka ? "sm:col-start-1" : ""}`}>
         {k.kodyZemi.map((kod) => <Vlajka key={kod} kod={kod} />)}
         <span>{k.kodyZemi.map((kod) => nazvyZemi[kod] ?? kod).join(" a ")}</span>
         <span aria-hidden className="text-tlum2">·</span>
         <span className="cislice">{datumZdroje(k.odhaleno)}</span>
       </span>
-      <span className="text-[17px] font-bold leading-snug text-inkoust">{k.nazev}</span>
-      <span className="text-[14px] leading-relaxed text-tlum">{k.titulek}</span>
-      <span className="mt-auto flex flex-wrap gap-1.5 pt-1">
+      <span className={`font-bold leading-snug text-inkoust ${siroka ? "text-[21px] sm:col-start-1" : "text-[17px]"}`}>{k.nazev}</span>
+      <span className={`text-[14px] leading-relaxed text-tlum ${siroka ? "sm:col-start-1" : ""}`}>{k.titulek}</span>
+      <span className={`mt-auto flex flex-wrap gap-1.5 pt-1 ${siroka ? "sm:col-start-2 sm:row-start-1 sm:row-end-4 sm:mt-0 sm:flex-col sm:items-start sm:self-center sm:pt-0" : ""}`}>
         <span className={`inline-flex items-center rounded-full border px-2.5 py-1 text-[11.5px] font-semibold ${TON_JISTOTY[k.jistotaManipulace]}`}>
           manipulace: {k.jistotaManipulace === "potvrzeno" || k.jistotaManipulace === "vysoka" ? "doloženo" : k.jistotaManipulace === "stredni" ? "pravděpodobně" : "sporné"}
         </span>
@@ -207,7 +207,7 @@ export function TabulkaZemiKampani({
                 <span className="block h-full rounded-full bg-akcent" style={{ width: `${(r.pocet / max) * 100}%` }} />
               </span>
               <span className="cislice w-6 shrink-0 text-right text-[15px] font-bold text-inkoust">{r.pocet}</span>
-              <span className="hidden w-[7rem] shrink-0 text-right text-[12px] text-tlum2 sm:block">naposledy {datumZdroje(r.posledni)}</span>
+              <span className="hidden w-[10rem] shrink-0 whitespace-nowrap text-right text-[12px] text-tlum2 sm:block">naposledy {datumZdroje(r.posledni)}</span>
             </Link>
           </li>
         ))}

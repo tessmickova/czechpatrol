@@ -96,7 +96,7 @@ export function HeroDashboard({
             nadpis="Situace v Česku"
             uroven={cr}
             obdobi="za 90 dní"
-            popis={cr ? "z ověřených českých případů za 90 dní" : `za 90 dní žádný ověřený případ${crHistoricky ? ` · nejvýš od 2014: ${UROVNE[crHistoricky].nazev.toLowerCase()}` : ""}`}
+            popis={cr ? "z ověřených českých případů" : `žádný ověřený případ${crHistoricky ? `; nejvýš od 2014 ${UROVNE[crHistoricky].nazev.toLowerCase()}` : ""}`}
           />
           <Merak
             nadpis="Dopad na běžný život dnes"

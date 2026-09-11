@@ -15,6 +15,7 @@ import { PavucinaHrozeb } from "./pavucina";
 import { PasZemi } from "./pas-zemi";
 import { Pocitadla } from "./pocitadla";
 import { Partneri, Sledovat } from "./sledovat";
+import { VyzvaTelegram } from "./vyzva-telegram";
 import { UdalostiKlient } from "./udalosti-klient";
 import { Napoveda } from "./zaklad";
 import { sklon, Vlajka } from "./zeme";
@@ -155,7 +156,7 @@ function Pruh({ nazev, n, max, barva, odkaz }: { nazev: React.ReactNode; n: numb
   const telo = (
     <>
       <span className="flex w-[118px] shrink-0 items-center gap-1.5 truncate text-[12.5px] text-inkoust">{nazev}</span>
-      <span className="h-[8px] flex-1 overflow-hidden rounded-[2px] bg-linka2"><span className={`block h-full ${barva}`} style={{ width: `${max ? (n / max) * 100 : 0}%` }} /></span>
+      <span className="h-[8px] flex-1 overflow-hidden rounded-full bg-linka2"><span className={`block h-full ${barva}`} style={{ width: `${max ? (n / max) * 100 : 0}%` }} /></span>
       <span className="cislice w-6 shrink-0 text-right text-[13px] font-bold text-inkoust">{n}</span>
     </>
   );
@@ -277,7 +278,7 @@ export function Dashboard({
                 <li key={z.id}>
                   <Link href={`/incident/${z.slug}/`} className="flex min-h-[40px] items-center gap-2 px-3 py-1.5 hover:bg-plocha2">
                     <span className="cislice w-[38px] shrink-0 text-[11.5px] text-tlum">{datumPraha(kdyZjisteno(z)).replace(/ \d{4}$/, "")}</span>
-                    <span aria-hidden className={`h-[8px] w-[8px] shrink-0 rounded-[2px] ${druh(z) === "pripad" ? t.tecka : "border border-tlum2"}`} />
+                    <span aria-hidden className={`h-[8px] w-[8px] shrink-0 rounded-full ${druh(z) === "pripad" ? t.tecka : "border border-tlum2"}`} />
                     <Vlajka kod={z.kodZeme} />
                     <span className="min-w-0 flex-1 truncate text-[13.5px] font-semibold text-inkoust">{z.kratkyTitulek || z.titulek}</span>
                     <OdznakNove kdy={kdyZjisteno(z)} />
@@ -309,8 +310,11 @@ export function Dashboard({
             popis="Podvržené dokumenty, falešné weby, profily vydávající se za úředníky. U každé zvlášť říkáme, jestli je manipulace doložená — a jestli víme, kdo za ní stojí."
             akce={<Link href="/manipulace/" className="text-[13px] font-semibold text-akcent hover:text-akcent-svetla">všechny rozbory →</Link>}
           />
-          <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
-            {kampane.slice(0, 3).map((k) => <DlazdiceKampane key={k.slug} k={k} nazvyZemi={nazvyZemi} />)}
+          {/* Jedna kampaň by v třetině šířky vypadala jako zapomenutá dlaždice. */}
+          <div className={`grid gap-3 ${kampane.length === 1 ? "" : kampane.length === 2 ? "sm:grid-cols-2" : "sm:grid-cols-2 lg:grid-cols-3"}`}>
+            {kampane.slice(0, 3).map((k) => (
+              <DlazdiceKampane key={k.slug} k={k} nazvyZemi={nazvyZemi} siroka={kampane.length === 1} />
+            ))}
           </div>
         </div>
       )}
@@ -371,7 +375,7 @@ export function Dashboard({
             {puv.skupiny.map((s) => (
               <li key={s.klic} className="flex min-h-[28px] items-center gap-2">
                 <span className="w-[118px] shrink-0 truncate text-[12.5px] text-inkoust">{s.nazev}</span>
-                <span className="h-[8px] flex-1 overflow-hidden rounded-[2px] bg-linka2">
+                <span className="h-[8px] flex-1 overflow-hidden rounded-full bg-linka2">
                   <span className="block h-full bg-tlum2/70" style={{ width: `${(s.pocet / maxPuv) * 100}%` }}>
                     <span className="block h-full bg-[#e8763f]" style={{ width: `${s.pocet ? (s.potvrzeno / s.pocet) * 100 : 0}%` }} />
                   </span>
@@ -382,6 +386,9 @@ export function Dashboard({
           </ul>
         </section>
       </div>
+
+      {/* 3b — tmavší deska: jediné místo, kde web něco chce po čtenáři */}
+      <div className="mt-14 sm:mt-20"><VyzvaTelegram /></div>
 
       {/* 4 — započítávání a úplný seznam */}
       <div className="nalet mt-14 border-t border-linka pt-12 sm:mt-20 sm:pt-14">

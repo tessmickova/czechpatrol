@@ -284,7 +284,7 @@ export function Prazdno({
 export function Neovereno({ kratke = false }: { kratke?: boolean }) {
   return (
     <span className="inline-flex items-center gap-1.5 text-[13px] font-medium text-tlum2">
-      <span aria-hidden className="inline-block h-[7px] w-[7px] rounded-[2px] border border-linka" />
+      <span aria-hidden className="inline-block h-[7px] w-[7px] rounded-full border border-linka" />
       {kratke ? "neověřeno" : "Zatím neověřeno"}
     </span>
   );

@@ -74,9 +74,9 @@ export function DopadPoZemich() {
                   {z.prohlaseni > 0 && <span className="bg-tlum2" style={{ width: `${(z.prohlaseni / z.pocet) * 100}%` }} />}
                 </div>
                 <ul className="mt-2 space-y-1 text-[12.5px] text-tlum">
-                  <li className="flex items-center gap-2"><span aria-hidden className="h-[6px] w-[6px] rounded-[2px] bg-[#e8763f]" /><span className="cislice text-inkoust">{z.potvrzenych}</span> {sklon(z.potvrzenych, "čin", "činy", "činů")} s potvrzeným pachatelem</li>
-                  <li className="flex items-center gap-2"><span aria-hidden className="h-[6px] w-[6px] rounded-[2px] bg-[#d9b24c]" /><span className="cislice text-inkoust">{z.cinu - z.potvrzenych}</span> {sklon(z.cinu - z.potvrzenych, "čin", "činy", "činů")} bez potvrzení</li>
-                  <li className="flex items-center gap-2"><span aria-hidden className="h-[6px] w-[6px] rounded-[2px] bg-tlum2" /><span className="cislice text-inkoust">{z.prohlaseni}</span> {sklon(z.prohlaseni, "prohlášení nebo reakce", "prohlášení nebo reakce", "prohlášení a reakcí")}</li>
+                  <li className="flex items-center gap-2"><span aria-hidden className="h-[6px] w-[6px] rounded-full bg-[#e8763f]" /><span className="cislice text-inkoust">{z.potvrzenych}</span> {sklon(z.potvrzenych, "čin", "činy", "činů")} s potvrzeným pachatelem</li>
+                  <li className="flex items-center gap-2"><span aria-hidden className="h-[6px] w-[6px] rounded-full bg-[#d9b24c]" /><span className="cislice text-inkoust">{z.cinu - z.potvrzenych}</span> {sklon(z.cinu - z.potvrzenych, "čin", "činy", "činů")} bez potvrzení</li>
+                  <li className="flex items-center gap-2"><span aria-hidden className="h-[6px] w-[6px] rounded-full bg-tlum2" /><span className="cislice text-inkoust">{z.prohlaseni}</span> {sklon(z.prohlaseni, "prohlášení nebo reakce", "prohlášení nebo reakce", "prohlášení a reakcí")}</li>
                 </ul>
                 <div className="mt-2.5 flex flex-wrap gap-1">
                   {z.kategorie.slice(0, 3).map((k) => (
