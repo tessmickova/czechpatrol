@@ -1,29 +1,51 @@
 [
   {
-    "id": "k-4019207e44c61ea9",
-    "zachyceno": "2026-09-11T14:14:44.679Z",
-    "publikovano": "2026-09-11T12:24:00.000Z",
+    "id": "k-befe72a348550000",
+    "zachyceno": "2026-09-11T18:21:45.036Z",
+    "publikovano": "2026-09-11T15:24:00.000Z",
     "zdroj": {
       "nazev": "iROZHLAS — zprávy",
-      "url": "https://www.irozhlas.cz/zpravy-svet/nemecka-prokuratura-obzalovala-sedm-clenu-hamasu-shaneli-pry-zbrane-pro-utok_2609111424_med",
+      "url": "https://www.irozhlas.cz/zpravy-svet/tri-hongkongsti-aktiviste-dostali-az-sedm-let-vezeni-za-akce-pripominajici_2609111724_elev",
       "typ": "media",
       "primarni": false
     },
-    "titulek": "Německá prokuratura obžalovala sedm členů Hamásu, sháněli prý zbraně pro útok",
-    "titulekPuvodni": "Německá prokuratura obžalovala sedm členů Hamásu, sháněli prý zbraně pro útok",
-    "shrnuti": "Německé státní zastupitelství podalo obžalobu na sedm členů palestinské teroristické organizace Hamás. Údajně obstarávali zbraně pro útoky na izraelské nebo židovské cíle na území Německa či Rakouska. Ze sdělení státního zastupitelství vyplývá, že mezi obžalovanými je Burhán K., kterého německá poli",
-    "kodZeme": "DE",
-    "zeme": "Německo",
+    "titulek": "Tři hongkongští aktivisté dostali až sedm let vězení za akce připomínající masakr na Tchien-an-men",
+    "titulekPuvodni": "Tři hongkongští aktivisté dostali až sedm let vězení za akce připomínající masakr na Tchien-an-men",
+    "shrnuti": "Čínský soud v Hongkongu v pátek vynesl tresty v rozpětí pět až sedm let vězení pro tři aktivisty, kteří řadu let organizovali vzpomínkové akce připomínající masakr na pekingském náměstí Tchien-an-men (náměstí Nebeského klidu) v roce 1989. Informovala o tom agentura AP. Evropská unie verdikt odsoudil",
+    "kodZeme": "EU",
+    "zeme": "EU",
     "kategorie": [
-      "zpravodajske",
-      "vojsko"
+      "zpravodajske"
     ],
     "druhOdhad": "neurceno",
     "klasifikace": "pravidla",
     "shody": [
-      "zadrz",
-      "obzalov",
-      "policie"
+      "odsoud"
+    ],
+    "stav": "ceka"
+  },
+  {
+    "id": "k-4857a5a3a6bd82a9",
+    "zachyceno": "2026-09-11T18:21:45.072Z",
+    "publikovano": "2026-09-11T12:49:05.000Z",
+    "zdroj": {
+      "nazev": "Google News — sabotáž",
+      "url": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxOaWE5Unk4dzBYdVBfdm1rRW1BQi1mVTVLUjBzRnVHZTRRdlZTclh6VnJxcjBUT080aEtLY0ppeENnVjhDTWxOUGdVXzh3dmtNbzVZeXY1YnZ6bXd1dFpxQXpQMlM5TWtwdUIxd3c0SUxXcmxGbGFGS2FyTjZCU2NUTnJLMVhPZks0TGFkS2pIUzAzdmlrTHVEeTIxX0VEcnVXVWNkY21ucW5ubkVyX053b3ZrWC1kNE5xblFxYVl6c0RsVFg0c3dINDZBdm01OHRJZTZmOGFHRQ?oc=5",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Všichni v Německu se bojí, že se Putin rozzlobí, a Rusové tady mezitím páchají divokou a drsnou sabotáž - RESPEKT",
+    "titulekPuvodni": "Všichni v Německu se bojí, že se Putin rozzlobí, a Rusové tady mezitím páchají divokou a drsnou sabotáž - RESPEKT",
+    "shrnuti": "<a href=\"https://news.google.com/rss/articles/CBMi1wFBVV95cUxOaWE5Unk4dzBYdVBfdm1rRW1BQi1mVTVLUjBzRnVHZTRRdlZTclh6VnJxcjBUT080aEtLY0ppeENnVjhDTWxOUGdVXzh3dmtNbzVZeXY1YnZ6bXd1dFpxQXpQMlM5TWtwdUIxd3c0SUxXcmxGbGFGS2FyTjZCU2NUTnJLMVhPZks0TGFkS2pIUzAzdmlrTHVEeTIxX0VEcnVXVWNkY21ucW5ubkVyX053b3ZrWC1kNE5xbl",
+    "kodZeme": "DE",
+    "zeme": "Německo",
+    "kategorie": [
+      "sabotaz"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "shody": [
+      "sabotaz"
     ],
     "stav": "ceka"
   },
@@ -400,37 +422,6 @@
       "dron",
       "drone",
       "russia"
-    ],
-    "stav": "ceka"
-  },
-  {
-    "id": "k-161d1104f54a33e9",
-    "zachyceno": "2026-09-10T14:15:04.162Z",
-    "publikovano": "2026-09-10T10:29:21.000Z",
-    "zdroj": {
-      "nazev": "ČT24 — hlavní zprávy",
-      "url": "https://ct24.ceskatelevize.cz/clanek/svet/akce-nato-odradila-ruske-ponorky-od-poskozeni-kabelu-u-spicberku-377446",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Akce NATO odradila ruské ponorky od poškození kabelů u Špicberků",
-    "titulekPuvodni": "Akce NATO odradila ruské ponorky od poškození kabelů u Špicberků",
-    "shrnuti": "Armády zemí Severoatlantické aliance překazily sabotáž ruských ponorek, které poblíž souostroví Špicberky nacvičovaly poškozování podmořských kabelů. Operaci, při níž Rusko zkoušelo využití sofistikované vojenské techniky nezanechávající stopy, odhalily na jaře armády Spojených států, Británie a Nor",
-    "kodZeme": "NO",
-    "zeme": "Norsko",
-    "kategorie": [
-      "sabotaz",
-      "nato",
-      "rusko"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "shody": [
-      "sabotaz",
-      "poskozeni kabelu",
-      "nato",
-      "aliance",
-      "rusk"
     ],
     "stav": "ceka"
   },
