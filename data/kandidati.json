@@ -1,5 +1,36 @@
 [
   {
+    "id": "k-b5218d10ba8e3432",
+    "zachyceno": "2026-09-11T04:15:03.533Z",
+    "publikovano": "2026-09-11T02:33:00.000Z",
+    "zdroj": {
+      "nazev": "Google News — sabotage Europe",
+      "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxQMWNZTmJyMWFFX05iclJhSXo4clItb2JtdGhReDVOaWtMNjZzYl9uNEFMeDE4N19TNl9jR0hVWExWZXowaUdlSWExYTJ3R1BJS1BKamVZc3NfclZpcnQwRVlOYmNzQnYySWtQWGFMdklqUEtoaUdKeTVsVkd1UUs1cnNmaGM4M2hHNWt5ZlJzdGw3SW9UMldPYlNPVUVramprdWdXNVRhcG1UNmh1Y3k0ajMxOUI3UQ?oc=5",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Ukraine war briefing: Nato ‘foils Russian undersea cable sabotage drill’ - The Guardian",
+    "titulekPuvodni": "Ukraine war briefing: Nato ‘foils Russian undersea cable sabotage drill’ - The Guardian",
+    "shrnuti": "<a href=\"https://news.google.com/rss/articles/CBMitgFBVV95cUxQMWNZTmJyMWFFX05iclJhSXo4clItb2JtdGhReDVOaWtMNjZzYl9uNEFMeDE4N19TNl9jR0hVWExWZXowaUdlSWExYTJ3R1BJS1BKamVZc3NfclZpcnQwRVlOYmNzQnYySWtQWGFMdklqUEtoaUdKeTVsVkd1UUs1cnNmaGM4M2hHNWt5ZlJzdGw3SW9UMldPYlNPVUVramprdWdXNVRhcG1UNmh1Y3k0ajMxOUI3UQ?oc=",
+    "kodZeme": "UA",
+    "zeme": "Ukrajina",
+    "kategorie": [
+      "sabotaz",
+      "infrastruktura",
+      "nato",
+      "rusko"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "shody": [
+      "sabotage",
+      "undersea cable",
+      "nato",
+      "russia"
+    ],
+    "stav": "ceka"
+  },
+  {
     "id": "k-f5241785d17d9e47",
     "zachyceno": "2026-09-10T21:32:51.699Z",
     "publikovano": "2026-09-10T19:09:36.000Z",
@@ -602,6 +633,35 @@
     "shody": [
       "sabotage",
       "charged with",
+      "russia"
+    ],
+    "stav": "ceka"
+  },
+  {
+    "id": "k-2a7ad2f0b3573061",
+    "zachyceno": "2026-09-11T04:15:03.563Z",
+    "publikovano": "2026-09-09T21:16:19.000Z",
+    "zdroj": {
+      "nazev": "Google News — Moldavsko vzdušný prostor",
+      "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxOdk1nZDF3ejFyYURJdWtfVTRnYU5kaVdkMkhMc0ZBYVZjS1ZVUzlUaXpuOFNmS2VnU3NxRlQ5WFhwNnFVWmRfUGJaeHRMTVR3UldSSE9kLUxhb24xQVZDQU5FSTFGQ1huODVsMmFUN2RtLVB6N2JaSXU4TlJMZnkyLTJ0ZXhXUVJ6Wmt1Zk1OSWNrempBWnJOV2NUMDZxV0dmOXRv?oc=5",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Russian drone incursion delayed Zelensky’s departure from Moldova - CNN",
+    "titulekPuvodni": "Russian drone incursion delayed Zelensky’s departure from Moldova - CNN",
+    "shrnuti": "<a href=\"https://news.google.com/rss/articles/CBMiowFBVV95cUxOdk1nZDF3ejFyYURJdWtfVTRnYU5kaVdkMkhMc0ZBYVZjS1ZVUzlUaXpuOFNmS2VnU3NxRlQ5WFhwNnFVWmRfUGJaeHRMTVR3UldSSE9kLUxhb24xQVZDQU5FSTFGQ1huODVsMmFUN2RtLVB6N2JaSXU4TlJMZnkyLTJ0ZXhXUVJ6Wmt1Zk1OSWNrempBWnJOV2NUMDZxV0dmOXRv?oc=5\" target=\"_blank\">Russian",
+    "kodZeme": "MD",
+    "zeme": "Moldavsko",
+    "kategorie": [
+      "drony",
+      "rusko"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "shody": [
+      "drone incursion",
+      "dron",
+      "drone",
       "russia"
     ],
     "stav": "ceka"
