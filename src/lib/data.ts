@@ -265,6 +265,41 @@ export function tlakCr(): HybridniTlak {
 }
 
 /**
+ * Kampaně přepočtené na započitatelné položky.
+ *
+ * Kampaň není incident v tom smyslu, že by měla jedno místo a jeden
+ * okamžik. Útok to ale je — a útok na to, čemu lidé věří, se do počtů
+ * musí dostat stejně jako sabotáž na rozvodně. Jinak by budík hlásil
+ * „bez záznamu“ ve chvíli, kdy proti občanům běží doložená operace.
+ */
+export function kampaneJakoPolozky(): { slug: string; kdy: string; kodyZemi: string[]; zavaznost: Uroven }[] {
+  return kampane().map((k) => ({ slug: k.slug, kdy: k.odhaleno, kodyZemi: k.kodyZemi, zavaznost: k.zavaznost }));
+}
+
+/**
+ * Všechno, co se počítá jako incident: případy i manipulační operace.
+ *
+ * Jediné místo, odkud se berou počty. Kdyby si každá sekce sestavovala
+ * vlastní množinu, dřív nebo později by se rozešly a web by si odporoval.
+ */
+export function zapocitatelne(): { kdy: string; cz: boolean; kampan: boolean }[] {
+  return [
+    ...incidenty()
+      .filter((i) => (i.druh ?? "pripad") === "pripad")
+      .map((i) => ({ kdy: i.datumZjisteni ?? i.datumUdalosti, cz: i.kodZeme === "CZ", kampan: false })),
+    ...kampane().map((k) => ({ kdy: k.odhaleno, cz: k.kodyZemi.includes("CZ"), kampan: true })),
+  ];
+}
+
+/** Kampaně mířící na zemi, v okně posledních `dni` dnů. */
+function kampaneZemeObdobi(kodZeme: string, dni: number, ted = Date.now()) {
+  const hranice = ted - dni * 86_400_000;
+  return kampaneJakoPolozky().filter(
+    (k) => k.kodyZemi.includes(kodZeme.toUpperCase()) && new Date(k.kdy).getTime() >= hranice,
+  );
+}
+
+/**
  * Nejvyšší závažnost země za poslední období.
  *
  * Radar `tlakZeme` bere celou historii od roku 2014 — to je správně pro otázku
@@ -283,8 +318,22 @@ export function urovenZemeObdobi(kodZeme: string, dni = 90): Uroven | null {
       (i.druh ?? "pripad") === "pripad" &&
       new Date(i.datumZjisteni ?? i.datumUdalosti).getTime() >= hranice,
   );
-  if (!z.length) return null;
-  return z.reduce((m, i) => (UROVNE[i.zavaznost].poradi > UROVNE[m].poradi ? i.zavaznost : m), z[0].zavaznost);
+  // Manipulační operace se počítá jako incident — viz kampaneJakoPolozky.
+  const urovne: Uroven[] = [...z.map((i) => i.zavaznost), ...kampaneZemeObdobi(kodZeme, dni).map((k) => k.zavaznost)];
+  if (!urovne.length) return null;
+  return urovne.reduce((m, u) => (UROVNE[u].poradi > UROVNE[m].poradi ? u : m), urovne[0]);
+}
+
+/** Kolik započitatelných věcí se v zemi stalo za dané období. */
+export function pocetZemeObdobi(kodZeme: string, dni = 90): { pripadu: number; kampani: number } {
+  const hranice = Date.now() - dni * 86_400_000;
+  const pripadu = incidenty().filter(
+    (i) =>
+      i.kodZeme === kodZeme &&
+      (i.druh ?? "pripad") === "pripad" &&
+      new Date(i.datumZjisteni ?? i.datumUdalosti).getTime() >= hranice,
+  ).length;
+  return { pripadu, kampani: kampaneZemeObdobi(kodZeme, dni).length };
 }
 
 /**

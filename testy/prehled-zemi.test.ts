@@ -42,8 +42,23 @@ describe("počítadla oken", () => {
     expect(o.celkem).toBe(4);
     expect(o.nazevRoku).toBe("2026");
   });
-  it("české případy za 30 dní počítá zvlášť", () => {
+  it("české položky za 90 dní i celkem počítá zvlášť", () => {
     const o = spocitejOkna([den("2026-09-06", true), den("2026-09-06"), den("2026-01-01", true)], ted);
-    expect(o.cesko30).toBe(1);
+    expect(o.cesko90).toBe(1);
+    expect(o.ceskoCelkem).toBe(2);
+  });
+
+  it("čtvrtletí je samostatné okno", () => {
+    const o = spocitejOkna([den("2026-09-06"), den("2026-07-01"), den("2026-01-01")], ted);
+    expect(o.ctvrtleti).toBe(2);
+  });
+
+  it("kampaně se počítají, ale jde je z celku vyčíst", () => {
+    const o = spocitejOkna(
+      [{ kdy: "2026-09-06T00:00:00Z", cz: true, kampan: true }, den("2026-09-06")],
+      ted,
+    );
+    expect(o.celkem).toBe(2);
+    expect(o.kampani).toBe(1);
   });
 });

@@ -1,6 +1,6 @@
 import { BannerStari } from "@/components/cerstvost";
 import { Dashboard } from "@/components/dashboard";
-import { celkovyStav, hybridniTlak, incidenty, kampane, kandidati, nato, nazvyZemi, nepotvrzene, posledniOvereni, pravniStav, provoz, tlakCr, tydny, urovenObcanu, urovenZemeObdobi, watchlist } from "@/lib/data";
+import { celkovyStav, hybridniTlak, incidenty, kampane, kandidati, nato, nazvyZemi, nepotvrzene, posledniOvereni, pravniStav, provoz, tlakCr, tydny, pocetZemeObdobi, urovenObcanu, urovenZemeObdobi, watchlist } from "@/lib/data";
 import { hlavniVeta } from "@/lib/veta";
 
 /**
@@ -25,6 +25,7 @@ export default function Prehled() {
         watchlist={watchlist()}
         cr={urovenZemeObdobi("CZ", 90)}
         crHistoricky={tlakCr().celkem}
+        crPocet={pocetZemeObdobi("CZ", 90)}
         hybridni={hybridniTlak().celkem}
         tlakEvropa={hybridniTlak()}
         tlakCesko={tlakCr()}

@@ -25,13 +25,22 @@ Jediný zdroj pravdy jsou soubory v `data/`. Web je statický export; každá zm
 
 Chybí-li `druh`, platí: má původce → případ, jinak reakce (zpětná kompatibilita; nové záznamy mají `druh` vždy).
 
-### Kampaň není událost
+### Kampaň není událost, ale je to incident
 
-Kampaň (`Kampan`) se vede mimo `incidenty.json` a **do žádného počtu případů
-nevstupuje**. Důvod je věcný, ne organizační: kampaň nemá jedno místo ani jeden
-okamžik a obvykle míří na víc zemí naráz. Proto má `kodyZemi` (pole, ne jeden
-kód) a v přehledu zemí se počítá u každé cílové země zvlášť — součet přes země
-je tedy vyšší než počet kampaní a web to u tabulky výslovně píše.
+Kampaň (`Kampan`) se vede mimo `incidenty.json`, protože nemá jedno místo ani
+jeden okamžik a obvykle míří na víc zemí naráz. Proto má `kodyZemi` (pole, ne
+jeden kód) a v přehledu zemí se počítá u každé cílové země zvlášť — součet přes
+země je tedy vyšší než počet kampaní a web to u tabulky výslovně píše.
+
+**Do počtů incidentů ale vstupuje.** Útok na to, čemu lidé věří, je útok; kdyby
+se nepočítal, hlásil by budík „bez záznamu“ ve chvíli, kdy proti občanům běží
+doložená operace. Kampaň proto má `zavaznost` na téže stupnici jako incident
+a jediné místo, odkud se berou počty, je `zapocitatelne()` v `src/lib/data.ts`.
+
+`nazev` je **cíl** operace, ne krycí jméno; to je v `oznaceni`. `metody` jsou
+klíče z číselníku v `src/lib/metody.ts` — volný text by znemožnil porovnání
+napříč zeměmi, což je u téhle sekce hlavní otázka. `zasazeni` říká u každého
+subjektu i to, JAK byl zasažen; bez toho je jméno jen nálepka.
 
 Karta má šest pevných částí (`tvrzeni`, `kanaly`, `skutecnost`, `reakce`,
 `ucel`, `coByPotvrdilo`), z nichž `ucel` je jediná výslovně označená jako

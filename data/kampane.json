@@ -2,9 +2,12 @@
   {
     "id": "tesinsko-2026",
     "slug": "tesinsko-2026",
-    "nazev": "Těšínsko",
+    "nazev": "Rozeštvat Čechy a Poláky vymyšleným územním nárokem",
     "titulek": "Podvržený dopis polského ministerstva a falešný web Českého rozhlasu tvrdily, že si Polsko chce vzít část českého území",
-    "kodyZemi": ["CZ", "PL"],
+    "kodyZemi": [
+      "CZ",
+      "PL"
+    ],
     "odhaleno": "2026-08-17",
     "kdoOdhalil": "polský server CyberDefence24",
     "probiha": false,
@@ -110,6 +113,459 @@
       }
     ],
     "lidskyOvereno": true,
-    "aktualizovano": "2026-09-11T07:00:00Z"
+    "aktualizovano": "2026-09-11T07:00:00Z",
+    "oznaceni": "Těšínsko",
+    "zavaznost": "Y2",
+    "metody": [
+      "prunik-do-redakce",
+      "podvrzeny-dokument",
+      "napodobeny-web",
+      "ukradena-identita",
+      "obsah-z-ai",
+      "falesna-demonstrace",
+      "falesne-ucty",
+      "placena-propagace"
+    ],
+    "zasazeni": [
+      {
+        "nazev": "Český rozhlas",
+        "druh": "medium",
+        "jak": "Napodobený web na adrese lrozhlas.cz. Rozhlas ho nechal vypnout a zvažuje právní kroky."
+      },
+      {
+        "nazev": "Polský rozhlas PiK",
+        "druh": "medium",
+        "jak": "Průnik do webu regionální stanice; už zveřejněný článek byl přepsán na podvrh."
+      },
+      {
+        "nazev": "Břetislav Dančák, velvyslanec ČR v Polsku",
+        "druh": "osoba",
+        "jak": "Falešný facebookový profil a video vytvořené umělou inteligencí."
+      },
+      {
+        "nazev": "Artur Harazim, náměstek polského ministra zahraničí",
+        "druh": "osoba",
+        "jak": "Falešný profil vydávající se za jeho jménem."
+      },
+      {
+        "nazev": "Ministerstvo zahraničních věcí Polska",
+        "druh": "urad",
+        "jak": "Podvržený dopis s vymyšleným územním nárokem."
+      },
+      {
+        "nazev": "Obyvatelé Těšínska",
+        "druh": "verejnost",
+        "jak": "Zvaní na demonstraci na náměstí v Třinci „na obranu českých hranic“."
+      }
+    ]
+  },
+  {
+    "id": "polsko-pap-2024",
+    "slug": "polsko-pap-mobilizace-2024",
+    "nazev": "Vyvolat v Polsku strach z mobilizace před volbami do Europarlamentu",
+    "oznaceni": "PAP",
+    "kodyZemi": [
+      "PL"
+    ],
+    "odhaleno": "2024-05-31",
+    "kdoOdhalil": "polská vláda a agentura PAP",
+    "probiha": false,
+    "zavaznost": "Y3",
+    "metody": [
+      "prunik-do-redakce",
+      "podvrzeny-dokument",
+      "ukradena-identita"
+    ],
+    "zasazeni": [
+      {
+        "nazev": "Polská tisková agentura PAP",
+        "druh": "medium",
+        "jak": "Útočníci se dostali do redakčního systému státní agentury a vydali zprávu jejím jménem."
+      },
+      {
+        "nazev": "Donald Tusk, předseda polské vlády",
+        "druh": "osoba",
+        "jak": "Zpráva se tvářila, že mobilizaci vyhlašuje on."
+      },
+      {
+        "nazev": "Zaměstnanec agentury PAP",
+        "druh": "osoba",
+        "jak": "Podle ministra digitalizace se útočníci dostali dovnitř přes jeho zařízení nakažené škodlivým kódem."
+      }
+    ],
+    "titulek": "Průnik do polské státní tiskové agentury vydal jejím jménem zprávu, že premiér povolává 200 tisíc Poláků k mobilizaci",
+    "tvrzeni": [
+      "Premiér Donald Tusk prý od 1. července povolává 200 tisíc Poláků, aby se zapojili do bojů na Ukrajině.",
+      "Zprávu prý vydala Polská tisková agentura PAP, tedy oficiální státní agentura."
+    ],
+    "kanaly": [
+      "Průnik přímo do redakčního systému agentury PAP. Podle polského ministra digitalizace se útočníci dostali dovnitř přes zařízení jednoho ze zaměstnanců nakažené škodlivým kódem.",
+      "Zpráva byla po osmi minutách stažena, vzápětí se ale objevila znovu a musela být stažena podruhé."
+    ],
+    "skutecnost": [
+      "Žádná mobilizace vyhlášena nebyla. Agentura zprávu okamžitě dementovala.",
+      "Zásah přišel krátce před volbami do Evropského parlamentu v červnu 2024 a před jednáním ministrů zahraničí NATO v Praze."
+    ],
+    "reakce": [
+      "Polská vláda případ označila za kybernetický útok a nechala ho vyšetřovat.",
+      "Ministr digitalizace Krzysztof Gawkowski veřejně uvedl, že vše nasvědčuje útoku řízenému z ruské strany."
+    ],
+    "ucel": "Ukázat Polákům, že válka na Ukrajině se týká přímo jich, a to v týdnech před volbami. Mobilizace je téma, u kterého i krátká zpráva vyvolá okamžitý strach — a osm minut na webu státní agentury stačí, aby se rozešla dál. Tohle je hodnocení projektu, ne doložený fakt.",
+    "coByPotvrdilo": [
+      "Závěr polského vyšetřování, který útok připíše konkrétní skupině nebo státu.",
+      "Technické doložení cesty, kterou se útočníci do systému agentury dostali."
+    ],
+    "jistotaManipulace": "potvrzeno",
+    "duvodManipulace": "Agentura PAP sama potvrdila, že zprávu nevydala, a polská vláda případ vede jako kybernetický útok. O podvrhu není spor.",
+    "puvodce": {
+      "koho": "Rusko",
+      "jistota": "stredni",
+      "duvod": "Polský ministr digitalizace veřejně uvedl, že vše nasvědčuje útoku řízenému z ruské strany. Je to vyjádření člena vlády, ne formální státní atribuce s doklady, proto to vedeme jako silné podezření."
+    },
+    "zdroje": [
+      {
+        "nazev": "Notes From Poland: Fake Polish Press Agency reports on sending troops to Ukraine blamed on Russian hackers",
+        "url": "https://notesfrompoland.com/2024/05/31/fake-polish-press-agency-reports-on-sending-troops-to-ukraine-blamed-on-russian-hackers/",
+        "typ": "media",
+        "publikovano": "2024-05-31",
+        "primarni": false,
+        "jazyk": "en"
+      },
+      {
+        "nazev": "The Record: Poland to probe Russia-linked cyberattack on state news agency",
+        "url": "https://therecord.media/poland-cyberattack-investigation-state-agency",
+        "typ": "media",
+        "publikovano": "2024-05",
+        "primarni": false,
+        "jazyk": "en"
+      },
+      {
+        "nazev": "Alliance for Securing Democracy: Russian hack leads to false news agency story about Polish mobilization",
+        "url": "https://securingdemocracy.gmfus.org/incident/russian-hack-leads-to-false-news-agency-story-about-polish-mobilization/",
+        "typ": "analysis",
+        "publikovano": "2024-05",
+        "primarni": false,
+        "jazyk": "en"
+      },
+      {
+        "nazev": "Cybernews: Russia hacks Polish media, posts fake news about troops to Ukraine",
+        "url": "https://cybernews.com/security/russian-hackers-poland-pap-fake-news-ukraine-military/",
+        "typ": "media",
+        "publikovano": "2024-05",
+        "primarni": false,
+        "jazyk": "en"
+      }
+    ],
+    "lidskyOvereno": true,
+    "aktualizovano": "2026-09-11T09:30:00Z"
+  },
+  {
+    "id": "doppelganger",
+    "slug": "doppelganger-napodobene-redakce",
+    "nazev": "Podlomit v Evropě podporu Ukrajiny napodobenými weby známých redakcí",
+    "oznaceni": "Doppelgänger / RRN",
+    "kodyZemi": [
+      "DE",
+      "FR",
+      "IT",
+      "EE",
+      "UA"
+    ],
+    "odhaleno": "2022-09",
+    "kdoOdhalil": "EU DisinfoLab a Qurium",
+    "probiha": true,
+    "zavaznost": "Y3",
+    "metody": [
+      "napodobeny-web",
+      "falesne-medium",
+      "falesne-ucty",
+      "placena-propagace",
+      "zpetne-citovani"
+    ],
+    "zasazeni": [
+      {
+        "nazev": "Bild",
+        "druh": "medium",
+        "jak": "Napodobená adresa a zkopírovaný vzhled webu."
+      },
+      {
+        "nazev": "20minutes",
+        "druh": "medium",
+        "jak": "Napodobená adresa a zkopírovaný vzhled webu."
+      },
+      {
+        "nazev": "ANSA",
+        "druh": "medium",
+        "jak": "Napodobená adresa a zkopírovaný vzhled webu."
+      },
+      {
+        "nazev": "The Guardian",
+        "druh": "medium",
+        "jak": "Napodobená adresa a zkopírovaný vzhled webu."
+      },
+      {
+        "nazev": "RBC Ukrajina",
+        "druh": "medium",
+        "jak": "Napodobená adresa a zkopírovaný vzhled webu."
+      },
+      {
+        "nazev": "Vládní weby členských států",
+        "druh": "urad",
+        "jak": "Podle Rady EU operace zneužívala i identitu vládních stránek."
+      }
+    ],
+    "titulek": "Dlouhodobá operace zakládá weby na zaměnitelných adresách, kopíruje vzhled známých redakcí a šíří jejich jménem protiukrajinské texty",
+    "tvrzeni": [
+      "Články pod hlavičkou známých evropských redakcí tvrdí, že podpora Ukrajiny poškozuje občany dané země.",
+      "Obsah se tváří jako běžné zpravodajství té redakce, kterou napodobuje."
+    ],
+    "kanaly": [
+      "Desítky domén zaměnitelných s adresami skutečných médií, se zkopírovaným vzhledem.",
+      "Vlastní falešné zpravodajské portály (RRN — Recent Reliable News).",
+      "Umělé účty na sociálních sítích, které na podvrhy odkazují.",
+      "Placená propagace, aby se obsah dostal i k lidem, kteří ho nehledali."
+    ],
+    "skutecnost": [
+      "Redakce, jejichž jména byla použita, o těch textech nevědí a nevydaly je.",
+      "Rada EU 28. července 2023 uvalila omezující opatření na sedm ruských osob a pět subjektů odpovědných za operaci RRN; podle ní se jí účastnily orgány ruského státu nebo orgány na něj napojené.",
+      "Po vyšetřování redakcí CORRECTIV a Qurium většina odkazů koncem roku 2024 přestala fungovat."
+    ],
+    "reakce": [
+      "Rada EU: zmrazení majetku a zákaz vstupu pro označené osoby a subjekty.",
+      "Francouzská služba VIGINUM popsala pět neautentických francouzských portálů napojených na značku RRN.",
+      "CORRECTIV a Qurium zveřejnily technický rozbor sítě."
+    ],
+    "ucel": "Nepřesvědčit čtenáře o konkrétní věci, ale rozmělnit důvěru v to, že se vůbec dá poznat, co která redakce napsala. Operace běží dlouhodobě a přizpůsobuje se — proto ji vedeme jako probíhající. Tohle je hodnocení projektu, ne doložený fakt.",
+    "coByPotvrdilo": [
+      "Doložení, které konkrétní domény provozovaly které označené subjekty.",
+      "Rozhodnutí soudu členského státu ve věci provozovatelů sítě."
+    ],
+    "jistotaManipulace": "potvrzeno",
+    "duvodManipulace": "Napodobené domény a zkopírovaný vzhled jsou technicky doložené a redakce se od obsahu distancovaly. Rada EU operaci popsala ve svém rozhodnutí.",
+    "puvodce": {
+      "koho": "Rusko",
+      "jistota": "vysoka",
+      "duvod": "Rada EU v červenci 2023 označila konkrétní ruské osoby a subjekty (mimo jiné Social Design Agency a Struktura) za odpovědné za operaci a uvalila na ně sankce. Je to úřední akt Evropské unie, ne jen zjištění novinářů."
+    },
+    "zdroje": [
+      {
+        "nazev": "Rada EU: Časová osa sankcí proti Rusku (rozhodnutí z 28. 7. 2023)",
+        "url": "https://www.consilium.europa.eu/en/policies/sanctions-against-russia/timeline-sanctions-against-russia/",
+        "typ": "primary",
+        "publikovano": "2023-07-28",
+        "primarni": true,
+        "jazyk": "en"
+      },
+      {
+        "nazev": "EU DisinfoLab: Doppelganger — Media clones serving Russian propaganda",
+        "url": "https://www.disinfo.eu/doppelganger/",
+        "typ": "analysis",
+        "publikovano": "2022-09",
+        "primarni": false,
+        "jazyk": "en"
+      },
+      {
+        "nazev": "CORRECTIV: Doppelganger investigations bring Russian propaganda campaign to a halt",
+        "url": "https://correctiv.org/en/fact-checking-en/2024/11/15/doppelganger-correctiv-investigations-bring-russian-propaganda-campaign-to-a-halt/",
+        "typ": "analysis",
+        "publikovano": "2024-11-15",
+        "primarni": false,
+        "jazyk": "en"
+      },
+      {
+        "nazev": "EU NEIGHBOURS east: EU imposes sanctions on seven individuals and five entities for information manipulation",
+        "url": "https://euneighbourseast.eu/news/latest-news/eu-imposes-sanctions-on-seven-individuals-and-five-entities-for-information-manipulation-in-russias-war-of-aggression-against-ukraine/",
+        "typ": "media",
+        "publikovano": "2023-07",
+        "primarni": false,
+        "jazyk": "en"
+      }
+    ],
+    "lidskyOvereno": true,
+    "aktualizovano": "2026-09-11T09:30:00Z"
+  },
+  {
+    "id": "estonsko-narvanews",
+    "slug": "estonsko-falesne-mistni-zpravodajstvi",
+    "nazev": "Odtrhnout rusky mluvící obyvatele Estonska od vlastního státu",
+    "oznaceni": "NarvaNews",
+    "kodyZemi": [
+      "EE"
+    ],
+    "odhaleno": "2025-01",
+    "kdoOdhalil": "EU DisinfoLab a estonský Propastop",
+    "probiha": true,
+    "zavaznost": "Y2",
+    "metody": [
+      "falesne-medium",
+      "zpetne-citovani",
+      "falesne-ucty"
+    ],
+    "zasazeni": [
+      {
+        "nazev": "Rusky mluvící obyvatelé Estonska",
+        "druh": "verejnost",
+        "jak": "Cílová skupina, které se obsah předkládá jako místní zpravodajství."
+      },
+      {
+        "nazev": "Město Narva",
+        "druh": "urad",
+        "jak": "Jméno města slouží jako značka portálu, aby působil místně."
+      }
+    ],
+    "titulek": "Portál založený roku 2024 se tváří jako nezávislé místní zpravodajství z Narvy a míchá běžné městské zprávy s obsahem odpovídajícím kremelské linii",
+    "tvrzeni": [
+      "Portál se představuje jako neutrální místní zdroj pro rusky mluvící obyvatele Estonska.",
+      "Mezi běžnými zprávami se objevují texty odpovídající kremelské linii vůči estonskému státu."
+    ],
+    "kanaly": [
+      "Vlastní zpravodajský web vydávající se za místní médium z Narvy.",
+      "Míchání skutečného místního obsahu — spotřebitelské tipy, městské a kulturní zprávy — s politickými texty, aby manipulace působila jako běžný provoz redakce.",
+      "Telegramové kanály vázané identitou na Estonsko a Pobaltí (BALTNEWS, „Estonian News“, InfoDefenseEstonia a další)."
+    ],
+    "skutecnost": [
+      "Texty z portálu pravidelně přebírá RT, telegramový kanál Vladimira Solovjova a ruské nacionalistické weby — a uvádějí je jako „místní estonský zdroj“.",
+      "Tím se vlastnímu obsahu dodává zdání nezávislého potvrzení zvenčí."
+    ],
+    "reakce": [
+      "EU DisinfoLab portál popsal v přehledu estonského dezinformačního prostředí z ledna 2025.",
+      "Estonský projekt Propastop dokumentuje napojení telegramových kanálů na síť Pravda."
+    ],
+    "ucel": "Vytvořit rusky mluvícím obyvatelům Estonska paralelní informační prostředí, ve kterém estonský stát vystupuje jako cizí. Nejde o jednu zprávu, ale o dlouhodobé budování návyku. Tohle je hodnocení projektu, ne doložený fakt.",
+    "coByPotvrdilo": [
+      "Úřední závěr estonských orgánů k provozovateli portálu.",
+      "Doložení financování a majetkového napojení redakce."
+    ],
+    "jistotaManipulace": "vysoka",
+    "duvodManipulace": "Provoz portálu i jeho zpětné citování ruskými státními médii popsaly nezávisle dvě analytické organizace. Chybí ale úřední závěr estonských orgánů.",
+    "puvodce": {
+      "koho": "Rusko",
+      "jistota": "stredni",
+      "duvod": "Napojení na ruská státní média je doložené zpětným citováním. Kdo portál provozuje a kdo ho platí, veřejně doložené není, proto to vedeme jako podezření."
+    },
+    "zdroje": [
+      {
+        "nazev": "EU DisinfoLab: Disinformation landscape in Estonia",
+        "url": "https://www.disinfo.eu/wp-content/uploads/2025/01/20250110_Disinfo-landscape-in-Estonia.pdf",
+        "typ": "analysis",
+        "publikovano": "2025-01-10",
+        "primarni": false,
+        "jazyk": "en"
+      },
+      {
+        "nazev": "Propastop: Estonian in Name, Russian Content — how the Pravda network brings Telegram propaganda into Estonia",
+        "url": "https://www.propastop.org/en/2026/08/04/estonian-in-name-russian-content-how-the-pravda-network-brings-telegram-propaganda-into-estonias-information-space/",
+        "typ": "analysis",
+        "publikovano": "2026-08-04",
+        "primarni": false,
+        "jazyk": "en"
+      },
+      {
+        "nazev": "Espreso: Kremlin creates fake local news portal to destabilize Estonia",
+        "url": "https://global.espreso.tv/russia-fake-news-kremlin-propaganda-outlet-operates-as-local-news-to-target-estonias-russian-speakers",
+        "typ": "media",
+        "publikovano": "2025",
+        "primarni": false,
+        "jazyk": "en"
+      }
+    ],
+    "lidskyOvereno": true,
+    "aktualizovano": "2026-09-11T09:30:00Z"
+  },
+  {
+    "id": "finsko-falesne-pokyny-drony-2026",
+    "slug": "finsko-falesne-pokyny-pri-utoku-dronem",
+    "nazev": "Vydávat se za finský záchranný sbor a rozeslat lidem falešné krizové pokyny",
+    "oznaceni": "Falešné pokyny k dronům",
+    "kodyZemi": [
+      "FI"
+    ],
+    "odhaleno": "2026-04-14",
+    "kdoOdhalil": "finský veřejnoprávní Yle",
+    "probiha": false,
+    "zavaznost": "Y2",
+    "metody": [
+      "zneuzite-logo",
+      "podvrzeny-dokument",
+      "falesne-ucty"
+    ],
+    "zasazeni": [
+      {
+        "nazev": "Finský záchranný sbor",
+        "druh": "urad",
+        "jak": "Na podvrženém dokumentu byl jeho oficiální název i znak."
+      },
+      {
+        "nazev": "Obyvatelé Finska",
+        "druh": "verejnost",
+        "jak": "Dostali nepravé pokyny, jak se chovat při útoku dronem."
+      }
+    ],
+    "titulek": "Po pádu ukrajinských dronů na jihovýchodě Finska začal kolovat dokument se znakem finského záchranného sboru, který radil, jak se chovat při útoku dronem",
+    "tvrzeni": [
+      "Dokument se tvářil jako oficiální pokyn finského záchranného sboru.",
+      "Radil, jak hledat úkryt uvnitř i venku a co dělat po útoku dronem."
+    ],
+    "kanaly": [
+      "Podvržený dokument s oficiálním názvem a znakem finského záchranného sboru.",
+      "Podle zjištění Yle se materiál začal šířit z ruské sociální sítě VKontakte a odtud se dostal do Finska."
+    ],
+    "skutecnost": [
+      "Záchranný sbor takový pokyn nevydal. Skutečné pokyny pro případ dronu zveřejňuje finská vláda na svých stránkách.",
+      "Podvrh se objevil koncem března 2026, krátce po tom, co na jihovýchodě Finska spadly tři ukrajinské drony. Jeden z nich, potvrzený jako ukrajinský AN-196, nesl nevybuchlou hlavici a musel být zneškodněn řízeným odpalem.",
+      "Ukrajina se za incident omluvila a odchylku dronů přičetla ruskému elektronickému rušení."
+    ],
+    "reakce": [
+      "Finská policie zahájila trestní řízení pro vydávání se za úřad a hledá původ materiálu; žádného podezřelého zatím neoznačila.",
+      "Jukka Savolainen z Evropského centra pro potírání hybridních hrozeb uvedl pro Yle, že původ pokynů je pravděpodobně ruský a odpovídá dřívějším vzorcům."
+    ],
+    "ucel": "Využít skutečné a čerstvé události, u které lidé sami hledali informace, a vsunout se do té mezery dřív než úřad. Nejde o obsah pokynů, ale o návyk brát krizové informace odjinud než od státu. Tohle je hodnocení projektu, ne doložený fakt.",
+    "coByPotvrdilo": [
+      "Závěr finského trestního řízení, který materiál připíše konkrétní skupině nebo státu.",
+      "Doložení, kdo dokument vytvořil a kdo ho na VKontakte zveřejnil jako první."
+    ],
+    "jistotaManipulace": "potvrzeno",
+    "duvodManipulace": "Finská policie vede případ jako vydávání se za úřad. Že záchranný sbor dokument nevydal, je nesporné.",
+    "puvodce": {
+      "koho": "Rusko",
+      "jistota": "nizka",
+      "duvod": "Odborník Evropského centra pro potírání hybridních hrozeb označil ruský původ za pravděpodobný a Yle vystopovalo první šíření na ruskou sociální síť. Finská policie ale nikoho neoznačila, proto to vedeme jako podezření."
+    },
+    "zdroje": [
+      {
+        "nazev": "Yle: Authorities' instructions for when you see a drone (skutečné pokyny finské vlády)",
+        "url": "https://valtioneuvosto.fi/en/-/1410869/authorities-instructions-for-when-you-see-a-drone",
+        "typ": "primary",
+        "publikovano": "2026",
+        "primarni": true,
+        "jazyk": "en"
+      },
+      {
+        "nazev": "UNITED24 Media: Finnish police investigating fake drone safety manuals in suspected Russian disinformation campaign",
+        "url": "https://united24media.com/latest-news/finnish-police-investigate-fake-drone-safety-manuals-linked-to-russian-disinformation-17917",
+        "typ": "media",
+        "publikovano": "2026-04",
+        "primarni": false,
+        "jazyk": "en"
+      },
+      {
+        "nazev": "Yle: One of the drones that crashed in southeastern Finland was Ukrainian, air force confirms",
+        "url": "https://yle.fi/a/74-20217941",
+        "typ": "media",
+        "publikovano": "2026-03",
+        "primarni": false,
+        "jazyk": "en"
+      },
+      {
+        "nazev": "The Defense Post: Ukraine apologizes after drones crash in Finland",
+        "url": "https://thedefensepost.com/2026/03/31/ukraine-drones-crash-finland/",
+        "typ": "media",
+        "publikovano": "2026-03-31",
+        "primarni": false,
+        "jazyk": "en"
+      }
+    ],
+    "lidskyOvereno": true,
+    "aktualizovano": "2026-09-11T09:30:00Z"
   }
 ]

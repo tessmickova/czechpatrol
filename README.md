@@ -121,12 +121,27 @@ z `data/opravy.json`), o projektu, podpořit, odběr.
 Staré adresy (`/dnes`, `/trend`, `/osa`, `/cr`, `/nato`, `/tlak`, `/watchlist`,
 `/nepotvrzeno`, `/komunita`) přesměrovává `public/_redirects`.
 
-**Manipulační kampaně** (`/manipulace/`, z `data/kampane.json`) jsou vedené zvlášť
-od událostí. Kampaň není incident: nemá jedno místo ani jeden okamžik a obvykle
-míří na víc zemí naráz, takže do počtu případů nevstupuje. Každá karta má šest
-částí a dva **nezávislé** štítky jistoty — „je to manipulace?“ a „kdo za tím
-stojí?“. Připsat kampaň státu jako jisté smí web až tehdy, když to někdo veřejně
-doložil; do té doby je to podezření. Hlídají to testy v `testy/kampane.test.ts`.
+**Manipulace a útoky na občany** (`/manipulace/`, z `data/kampane.json`) jsou
+vedené zvlášť od událostí, ale **počítají se jako incidenty** — útok na to,
+čemu lidé věří, je útok. Každá operace má proto závažnost na téže stupnici
+a vstupuje do budíků, počítadel i pásu zemí.
+
+Název operace je její **cíl**, ne krycí jméno („Rozeštvat Čechy a Poláky
+vymyšleným územním nárokem“, ne „Těšínsko“). Ke každé patří seznam
+zasažených nebo zneužitých subjektů a **metody z pevného číselníku**
+(`src/lib/metody.ts`). Podle metody se filtruje napříč zeměmi — teprve tak
+je vidět, že stejný postup v Česku, Polsku i ve Finsku není náhoda.
+
+Karta má šest částí a dva **nezávislé** štítky jistoty — „je zásah doložený?“
+a „kdo za tím stojí?“. Připsat operaci státu jako jisté smí web až tehdy, když
+to někdo veřejně doložil; do té doby je to podezření. Hlídají to testy
+v `testy/kampane.test.ts`.
+
+**Porovnání s průměrem** (`src/lib/porovnani.ts`): kde stojí číslo za 90 dní,
+stojí vedle něj i celkový údaj a slovní porovnání (mírně / středně / velmi
+významně vyšší nebo nižší). Průměr se počítá z posledních dvou let, ne z celého
+archivu od roku 2014 — tam je sběr řídký a každé dnešní čtvrtletí by vyšlo
+jako mimořádné.
 
 Nad vším stojí Pravidlo č. 0 v `CLAUDE.md`: právo ČR a EU, žádná poplašná zpráva,
 a v bezpečnostních tématech jen to, co je doložené citací se zdrojem a řešené úředně.

@@ -1,9 +1,10 @@
 import Link from "next/link";
 import { datumZdroje } from "@/lib/format";
+import { METODY, type Metoda } from "@/lib/metody";
 import { JISTOTY } from "@/lib/skala";
-import type { Jistota, Kampan } from "@/lib/typy";
+import type { Jistota, Kampan, ZasazenySubjekt } from "@/lib/typy";
 import { Ikona, type NazevIkony } from "./ikony";
-import { Odznak, Sdeleni, type Ton } from "./ui";
+import { Odznak, OdznakZavaznosti, Sdeleni, type Ton } from "./ui";
 import { Napoveda } from "./zaklad";
 import { SeznamZdroju } from "./zdroje";
 import { sklon, Vlajka } from "./zeme";
@@ -91,6 +92,44 @@ function Cast({ nadpis, popis, ikona, body }: { nadpis: string; popis: string; i
   );
 }
 
+/** Jak se jmenuje druh zasaženého subjektu, aby to dávalo smysl bez legendy. */
+const DRUH_SUBJEKTU: Record<ZasazenySubjekt["druh"], { nazev: string; ikona: NazevIkony }> = {
+  medium: { nazev: "médium", ikona: "dokument" },
+  urad: { nazev: "úřad", ikona: "vaha" },
+  osoba: { nazev: "osoba", ikona: "uzivatel" },
+  platforma: { nazev: "platforma", ikona: "komunikace" },
+  verejnost: { nazev: "veřejnost", ikona: "globus" },
+};
+
+/**
+ * Použité metody.
+ *
+ * Tohle je to, podle čeho se dá porovnávat napříč zeměmi: stejný postup
+ * v Česku, v Polsku i ve Finsku znamená jednu školu, ne náhodu. Proto
+ * jsou metody tučně, mají pevné názvy a dá se podle nich filtrovat.
+ */
+export function MetodyKampane({ metody, odkazovat = true }: { metody: string[]; odkazovat?: boolean }) {
+  const zname = metody.filter((m): m is Metoda => m in METODY);
+  if (!zname.length) return null;
+  return (
+    <ul className="mt-2 flex flex-wrap gap-1.5 sm:pl-9">
+      {zname.map((m) => {
+        const d = METODY[m];
+        const obsah = (
+          <span className="inline-flex items-center gap-1.5 rounded-full border border-akcent/45 bg-akcent/12 px-3 py-1.5 text-[12.5px] font-bold text-akcent-svetla transition-colors hover:bg-akcent/22">
+            {d.nazev}
+          </span>
+        );
+        return (
+          <li key={m} title={`${d.popis} ${d.jakPoznat}`}>
+            {odkazovat ? <Link href={`/manipulace/?metoda=${m}`}>{obsah}</Link> : obsah}
+          </li>
+        );
+      })}
+    </ul>
+  );
+}
+
 export function KartaKampane({ k, nazvyZemi }: { k: Kampan; nazvyZemi: Record<string, string> }) {
   return (
     <article id={k.slug} className="scroll-mt-[84px] overflow-hidden rounded-[28px] border border-linka2 bg-plocha">
@@ -108,9 +147,46 @@ export function KartaKampane({ k, nazvyZemi }: { k: Kampan; nazvyZemi: Record<st
             {k.probiha ? "běží dál" : "utichla"}
           </Odznak>
         </div>
-        <h3 className="titul-mensi mt-3">{k.nazev}</h3>
+        <div className="mt-3 flex flex-wrap items-center gap-2.5">
+          <span className="stitek">Cíl operace</span>
+          <OdznakZavaznosti uroven={k.zavaznost} duraz="silny" />
+          <Odznak ton="neutral">známá jako {k.oznaceni}</Odznak>
+        </div>
+        <h3 className="titul-mensi mt-2">{k.nazev}</h3>
         <p className="mt-2 text-[16px] leading-relaxed text-tlum">{k.titulek}</p>
       </header>
+
+      {/* Použité metody — hned pod hlavičkou, protože podle nich se porovnává. */}
+      <div className="border-b border-linka2 p-5 sm:p-6">
+        <h4 className="flex items-center gap-2 text-[14.5px] font-bold text-inkoust">
+          <span className="grid h-7 w-7 shrink-0 place-items-center rounded-full bg-plocha2 text-akcent"><Ikona nazev="zebrik" velikost={14} tah={1.9} /></span>
+          Jakými způsoby
+        </h4>
+        <p className="mt-1 pl-9 text-[12px] text-tlum2">Klikněte na způsob a uvidíte, kde jinde v Evropě ho použili.</p>
+        <MetodyKampane metody={k.metody} />
+      </div>
+
+      {/* Koho to zasáhlo nebo čí jméno bylo zneužito. */}
+      {k.zasazeni.length > 0 && (
+        <div className="border-b border-linka2 p-5 sm:p-6">
+          <h4 className="flex items-center gap-2 text-[14.5px] font-bold text-inkoust">
+            <span className="grid h-7 w-7 shrink-0 place-items-center rounded-full bg-plocha2 text-akcent"><Ikona nazev="terc" velikost={14} tah={1.9} /></span>
+            Kdo byl zasažen nebo zneužit
+          </h4>
+          <ul className="mt-2.5 grid gap-2 sm:grid-cols-2 sm:pl-9">
+            {k.zasazeni.map((z) => (
+              <li key={z.nazev} className="rounded-[18px] border border-linka2 bg-plocha2 px-3.5 py-3">
+                <span className="flex items-center gap-2">
+                  <span className="grid h-6 w-6 shrink-0 place-items-center rounded-full bg-plocha text-tlum2"><Ikona nazev={DRUH_SUBJEKTU[z.druh].ikona} velikost={12} tah={1.9} /></span>
+                  <span className="text-[14px] font-bold leading-tight text-inkoust">{z.nazev}</span>
+                  <Odznak ton="neutral" trida="ml-auto">{DRUH_SUBJEKTU[z.druh].nazev}</Odznak>
+                </span>
+                <span className="mt-1.5 block text-[13px] leading-relaxed text-tlum">{z.jak}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+      )}
 
       {/* Dva štítky, dvě nezávislé otázky. Vedle sebe schválně. */}
       <div className="border-b border-linka2 p-5 sm:p-6">
@@ -176,9 +252,20 @@ export function DlazdiceKampane({ k, nazvyZemi, siroka = false }: { k: Kampan; n
         <span>{k.kodyZemi.map((kod) => nazvyZemi[kod] ?? kod).join(" a ")}</span>
         <span aria-hidden className="text-tlum2">·</span>
         <span className="cislice">{datumZdroje(k.odhaleno)}</span>
+        <OdznakZavaznosti uroven={k.zavaznost} />
       </span>
       <span className={`font-bold leading-snug text-inkoust ${siroka ? "text-[21px] sm:col-start-1" : "text-[17px]"}`}>{k.nazev}</span>
-      <span className={`text-[14px] leading-relaxed text-tlum ${siroka ? "sm:col-start-1" : ""}`}>{k.titulek}</span>
+      <span className={`text-[13px] leading-relaxed text-tlum ${siroka ? "sm:col-start-1" : ""}`}>
+        {k.titulek}
+      </span>
+      <span className={`flex flex-wrap gap-1.5 ${siroka ? "sm:col-start-1" : ""}`}>
+        {k.metody.filter((m): m is Metoda => m in METODY).slice(0, 3).map((m) => (
+          <span key={m} className="inline-flex rounded-full border border-akcent/40 bg-akcent/10 px-2.5 py-1 text-[11.5px] font-bold text-akcent-svetla">
+            {METODY[m].nazev}
+          </span>
+        ))}
+        {k.metody.length > 3 && <span className="self-center text-[11.5px] text-tlum2">+ {k.metody.length - 3} dalších</span>}
+      </span>
       <span className={`mt-auto flex flex-wrap gap-1.5 pt-1 ${siroka ? "sm:col-start-2 sm:row-start-1 sm:row-end-4 sm:mt-0 sm:flex-col sm:items-start sm:self-center sm:pt-0" : ""}`}>
         <Odznak ton={TON_JISTOTY[k.jistotaManipulace]} duraz="silny" ikona="fajfka">
           zásah: {k.jistotaManipulace === "potvrzeno" || k.jistotaManipulace === "vysoka" ? "doloženo" : k.jistotaManipulace === "stredni" ? "pravděpodobně" : "sporné"}

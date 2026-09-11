@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { druh, kdyZjisteno, podleZemi } from "@/lib/agregace";
-import { incidenty, kampaneZeme, nazvyZemi, tlakZeme } from "@/lib/data";
+import { incidenty, kampane, kampaneZeme, nazvyZemi, tlakZeme } from "@/lib/data";
 import { UROVNE } from "@/lib/skala";
 import { HlavickaStranky } from "@/components/nadpisy";
 import type { PolozkaPoctu } from "@/components/pocitadla-zive";
@@ -10,9 +10,25 @@ import { Vlajka } from "@/components/zeme";
 
 export const dynamicParams = false;
 
-/** Země, pro které stránka vzniká: každá, o níž máme aspoň jeden záznam, plus vždy Česko. */
+/*
+  Země, pro které stránka vzniká: každá, o níž máme aspoň jeden záznam nebo
+  jednu manipulační operaci, plus vždy Česko.
+
+  Kampaně tu musí být taky — jinak by tabulka „na koho to mířilo“ odkazovala
+  na stránky, které neexistují.
+*/
 function zemeSeZaznamy() {
-  return podleZemi(incidenty()).map((z) => ({ kod: z.kodZeme, nazev: z.zeme }));
+  const ze = podleZemi(incidenty()).map((z) => ({ kod: z.kodZeme, nazev: z.zeme }));
+  const nazvy = nazvyZemi();
+  const zname = new Set(ze.map((z) => z.kod));
+  for (const k of kampane()) {
+    for (const kod of k.kodyZemi) {
+      if (zname.has(kod)) continue;
+      zname.add(kod);
+      ze.push({ kod, nazev: nazvy[kod] ?? kod });
+    }
+  }
+  return ze;
 }
 
 export async function generateStaticParams() {
@@ -40,9 +56,11 @@ export default async function StrankaZeme({ params }: { params: Promise<{ kod: s
 
   const vse = incidenty().filter((i) => i.kodZeme === z.kod);
   const tlak = tlakZeme(z.kod);
-  const polozky: PolozkaPoctu[] = vse
-    .filter((i) => druh(i) === "pripad")
-    .map((i) => ({ kdy: kdyZjisteno(i), cz: z.kod === "CZ" }));
+  const kampaneTeto = kampaneZeme(z.kod);
+  const polozky: PolozkaPoctu[] = [
+    ...vse.filter((i) => druh(i) === "pripad").map((i) => ({ kdy: kdyZjisteno(i), cz: z.kod === "CZ" })),
+    ...kampaneTeto.map((k) => ({ kdy: k.odhaleno, cz: z.kod === "CZ", kampan: true })),
+  ];
   const uroven = tlak.celkem ? UROVNE[tlak.celkem] : null;
 
   return (
@@ -64,7 +82,7 @@ export default async function StrankaZeme({ params }: { params: Promise<{ kod: s
         tlak={tlak}
         polozky={polozky}
         ted={Date.now()}
-        kampane={kampaneZeme(z.kod)}
+        kampane={kampaneTeto}
         nazvyZemi={nazvyZemi()}
       />
     </div>

@@ -55,11 +55,13 @@ export function pocet(n: number, jeden: string, dva: string, pet: string): strin
 /**
  * Datum u zdroje.
  *
- * Některé zdroje mají doložený jen měsíc vydání. V takovém případě se napíše
- * měsíc — domyslet si první den jen proto, aby údaj vypadal přesně, by bylo
- * horší než přiznat, že přesný den nemáme.
+ * Některé zdroje mají doložený jen měsíc vydání, u některých starších ani
+ * ten. Vypíše se tedy přesně to, co je doložené — domyslet si první den
+ * nebo první měsíc jen proto, aby údaj vypadal přesně, by bylo horší než
+ * přiznat, že přesnější datum nemáme.
  */
 export function datumZdroje(iso: string): string {
+  if (/^\d{4}$/.test(iso)) return iso;
   const m = /^(\d{4})-(\d{2})$/.exec(iso);
   if (m) return `${MESICE_NAZEV[Number(m[2]) - 1]} ${m[1]}`;
   return datum(iso);

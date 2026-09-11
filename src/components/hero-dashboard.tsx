@@ -1,11 +1,13 @@
 import { datumCasPraha } from "@/lib/cas";
 import { PASMA, UROVNE, zDeseti } from "@/lib/skala";
 import type { CelkovyStav, Uroven } from "@/lib/typy";
+import { cislem } from "@/lib/porovnani";
+import type { Porovnani } from "@/lib/porovnani";
 import type { HlavniVeta } from "@/lib/veta";
 import { Ikona } from "./ikony";
 import { ObloukovyMerak } from "./mericky";
 import { Napoveda, VykladUrovne } from "./zaklad";
-import { Tlacitko } from "./ui";
+import { Odznak, Tlacitko } from "./ui";
 import { sklon } from "./zeme";
 
 /*
@@ -26,13 +28,13 @@ function Merak({
 }) {
   const t = uroven ? PASMA[UROVNE[uroven].pasmo] : null;
   return (
-    <Napoveda cele popis={uroven ? <VykladUrovne uroven={uroven} /> : <span className="block">Bez záznamu, ze kterého by šlo hodnotit. Nedopočítáváme.</span>}>
+    <Napoveda cele popis={uroven ? <VykladUrovne uroven={uroven} /> : <span className="block">Za sledované období tu nemáme jediný ověřený případ ani manipulační operaci. Nedopočítáváme nic — prostě tu nic nebylo.</span>}>
       <span className="flex w-full flex-col items-center px-1.5 py-3 text-center">
         <span className="stitek">{nadpis}</span>
         <span className="mt-1 text-[11px] leading-none text-tlum2">{obdobi}</span>
         <ObloukovyMerak uroven={uroven} naNoci velikost={velikost} skrytPopisek />
-        <span className={`-mt-1 text-[14px] font-bold uppercase leading-tight tracking-[0.03em] ${t ? t.text : "text-tlum2"}`}>
-          {vlastniSlovo ?? (uroven ? UROVNE[uroven].nazev : "bez záznamu")}
+        <span className={`-mt-1 text-[14px] font-bold uppercase leading-tight tracking-[0.03em] ${t ? t.text : vlastniSlovo ? "text-[#8fd6ae]" : "text-tlum2"}`}>
+          {vlastniSlovo ?? (uroven ? UROVNE[uroven].nazev : "bez hodnocení")}
         </span>
         {popis && <span className="mt-1 block max-w-[15rem] text-[11.5px] leading-snug text-tlum2">{popis}</span>}
       </span>
@@ -41,12 +43,28 @@ function Merak({
 }
 
 export function HeroDashboard({
-  stav, cr, crHistoricky, hybridni, obcane, overeno, pocetZaznamu, pocet90, veta,
+  stav, cr, crHistoricky, crPocet, hybridni, obcane, overeno, pocetZaznamu, pocet90, veta, porovnani90,
 }: {
   stav: CelkovyStav; cr: Uroven | null; crHistoricky: Uroven | null; hybridni: Uroven | null;
+  /** Kolik případů a kolik manipulačních operací v Česku za 90 dní. */
+  crPocet: { pripadu: number; kampani: number };
   obcane: { uroven: Uroven; popis: string; neovereno: number };
   overeno: string | null; pocetZaznamu: number; pocet90: number; veta: HlavniVeta;
+  /** Jak je čtvrtletí na tom proti průměru. null = málo historie na průměr. */
+  porovnani90: Porovnani | null;
 }) {
+  /*
+    „Bez záznamu“ znělo, jako by web nic nevěděl. Přitom to znamená pravý
+    opak: za devadesát dní tu nic nebylo. Napsat to rovnou je informace,
+    kterou čtenář hledá — a je to jediná dobrá zpráva na celém budíku.
+  */
+  const crSlovo = cr ? undefined : "Bez incidentu";
+  const crPopis = cr
+    ? [
+        crPocet.pripadu ? `${crPocet.pripadu} ${sklon(crPocet.pripadu, "případ", "případy", "případů")}` : null,
+        crPocet.kampani ? `${crPocet.kampani} ${sklon(crPocet.kampani, "operace proti občanům", "operace proti občanům", "operací proti občanům")}` : null,
+      ].filter(Boolean).join(" a ") + " za 90 dní"
+    : `za 90 dní ani jeden${crHistoricky ? ` · nejvýš od 2014 ${UROVNE[crHistoricky].nazev.toLowerCase()}` : ""}`;
   const d = stav.uroven ? UROVNE[stav.uroven] : null;
   const t = stav.uroven ? PASMA[UROVNE[stav.uroven].pasmo] : null;
   return (
@@ -80,10 +98,20 @@ export function HeroDashboard({
               {stav.trend === "beze-zmeny" && <span>beze změny 7 dní</span>}
               <span>{overeno ? `ověřeno ${datumCasPraha(overeno)}` : "ověření neproběhlo"}</span>
             </p>
-            <p className="mt-2 flex flex-wrap gap-x-4 text-[12.5px] text-tlum">
-              <span><b className="cislice text-[16px] font-bold text-inkoust">{pocet90}</b> případů za 90 dní</span>
+            <p className="mt-2 flex flex-wrap items-center gap-x-3 gap-y-1 text-[12.5px] text-tlum">
+              <span><b className="cislice text-[16px] font-bold text-inkoust">{pocet90}</b> incidentů za 90 dní</span>
+              {porovnani90 && (
+                <Odznak ton={porovnani90.smer === "vyssi" ? "pozor" : porovnani90.smer === "nizsi" ? "klid" : "neutral"} duraz="silny">
+                  {porovnani90.slovo} než průměr
+                </Odznak>
+              )}
               <span><b className="cislice text-[16px] font-bold text-inkoust">{pocetZaznamu}</b> záznamů od roku 2014</span>
             </p>
+            {porovnani90 && (
+              <p className="mt-1 text-[11.5px] text-tlum2">
+                Průměr posledních {porovnani90.zaLet} let je {cislem(porovnani90.prumer)} incidentu na čtvrtletí.
+              </p>
+            )}
             <p className="mt-2 flex flex-wrap gap-2">
               <Tlacitko kam="#zaznamy" varianta="zvyrazneny" velikost="s" ikona="osa">Všechny záznamy</Tlacitko>
               <Tlacitko kam="#sledovat" varianta="obrys" velikost="s" ikona="zvonek">Sledovat změny</Tlacitko>
@@ -92,12 +120,7 @@ export function HeroDashboard({
         </div>
         <div className="grid grid-cols-3 divide-x divide-linka2">
           <Merak nadpis="Aktivita v Evropě" uroven={hybridni} obdobi="stav k dnešku" popis="hybridní tlak napříč Evropou, i mimo NATO" />
-          <Merak
-            nadpis="Situace v Česku"
-            uroven={cr}
-            obdobi="za 90 dní"
-            popis={cr ? "z ověřených českých případů" : `žádný ověřený případ${crHistoricky ? `; nejvýš od 2014 ${UROVNE[crHistoricky].nazev.toLowerCase()}` : ""}`}
-          />
+          <Merak nadpis="Situace v Česku" uroven={cr} obdobi="za 90 dní" popis={crPopis} vlastniSlovo={crSlovo} />
           <Merak
             nadpis="Dopad na běžný život dnes"
             uroven={obcane.uroven}

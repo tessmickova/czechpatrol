@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { KartaKampane, TabulkaZemiKampani } from "@/components/kampane";
+import { TabulkaZemiKampani } from "@/components/kampane";
+import { ManipulaceKlient } from "@/components/manipulace-klient";
 import { HlavickaStranky, NadpisSekce } from "@/components/nadpisy";
 import { Ikona } from "@/components/ikony";
 import { Sdeleni, Tlacitko } from "@/components/ui";
@@ -53,14 +54,12 @@ export default function Manipulace() {
           nadpis={vse.length ? `${vse.length} ${sklon(vse.length, "rozebraná kampaň", "rozebrané kampaně", "rozebraných kampaní")}` : "Zatím bez rozboru"}
           popis={
             vse.length
-              ? `Každá operace v šesti částech: co se tvrdilo, jak se to šířilo, jak to doopravdy je, kdo reagoval, čemu to mělo posloužit a co by otázku uzavřelo.${bezi ? ` ${bezi} z nich podle nás stále běží.` : " Žádná z nich podle nás právě neběží."}`
+              ? `Filtrujte podle způsobu a uvidíte, kde jinde v Evropě sáhli po témže postupu. Každá operace je rozebraná v šesti částech: co se tvrdilo, jak se to šířilo, jak to doopravdy je, kdo reagoval, čemu to mělo posloužit a co by otázku uzavřelo.${bezi ? ` ${bezi} z nich podle nás stále běží.` : " Žádná z nich podle nás právě neběží."}`
               : "Zveřejňujeme jen kampaně, které prošly ověřením a mají dohledatelné zdroje."
           }
         />
         {vse.length ? (
-          <div className="space-y-5">
-            {vse.map((k) => <KartaKampane key={k.slug} k={k} nazvyZemi={nazvy} />)}
-          </div>
+          <ManipulaceKlient kampane={vse} nazvyZemi={nazvy} />
         ) : (
           <Sdeleni ikona="lupa">
             Zatím nemáme rozebranou žádnou kampaň. Neznamená to, že žádná neběží — jen že jsme zatím žádnou nedoložili

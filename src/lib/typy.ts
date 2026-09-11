@@ -414,7 +414,7 @@ export interface KampanZdroj {
   nazev: string;
   url: string;
   typ: TypZdroje;
-  /** `2026-08-17` nebo `2026-08`. Nikdy se nedoplňuje odhadem. */
+  /** `2026-08-17`, `2026-08` nebo `2026`. Přesnost se nikdy nedoplňuje odhadem. */
   publikovano: string;
   primarni: boolean;
   jazyk: string;
@@ -442,11 +442,37 @@ export interface KampanPuvodce {
  * Není to incident: nemá jedno místo ani jeden okamžik a obvykle míří na víc
  * zemí najednou. Proto se vede zvlášť a do počtu případů nevstupuje.
  */
+/** Kdo byl zasažen nebo čí jméno bylo zneužito. */
+export interface ZasazenySubjekt {
+  nazev: string;
+  druh: "medium" | "urad" | "osoba" | "platforma" | "verejnost";
+  /** Jak konkrétně. Bez toho je jméno jen nálepka. */
+  jak: string;
+}
+
 export interface Kampan {
   id: string;
   slug: string;
-  /** Krátké jméno, pod kterým se o kampani mluví. */
+  /**
+   * Název je CÍL operace, ne její krycí jméno.
+   *
+   * „Těšínsko“ čtenáři neřekne nic; „Rozeštvat Čechy a Poláky územním
+   * sporem“ řekne všechno podstatné dřív, než klikne.
+   */
   nazev: string;
+  /** Krátké označení, pod kterým se o věci mluví jinde (Těšínsko, PAP). */
+  oznaceni: string;
+  /**
+   * Závažnost na téže stupnici jako incidenty.
+   *
+   * Kampaň se počítá mezi incidenty: útok na to, čemu lidé věří, je útok.
+   * Bez závažnosti by se nedala zařadit do budíků ani do počtů.
+   */
+  zavaznost: Uroven;
+  /** Metody z pevného číselníku — podle nich se porovnává napříč zeměmi. */
+  metody: string[];
+  /** Koho to zasáhlo nebo čí jméno bylo zneužito. */
+  zasazeni: ZasazenySubjekt[];
   /** Celá věta: co se dělo. */
   titulek: string;
   /** Země, na které kampaň mířila. Jedna kampaň jich může mít víc. */

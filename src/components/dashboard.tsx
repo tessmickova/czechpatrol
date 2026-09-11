@@ -3,6 +3,7 @@ import { druh, kdyZjisteno, novaZjisteni, pachatelPotvrzen, podlePuvodce, podleZ
 import { cerstvost, datumCasPraha, datumPraha, stariSlovy } from "@/lib/cas";
 import type { CelkovyStav, HybridniTlak, Kampan, Kandidat, NatoPolozka, Nepotvrzene, PravniPolozka, ProvozniPolozka, TydenniHodnoceni, Uroven, Watchlist } from "@/lib/typy";
 import { PASMA, UROVNE } from "@/lib/skala";
+import { cislem, porovnejSPrumerem, prumerNaOkno } from "@/lib/porovnani";
 import type { HlavniVeta } from "@/lib/veta";
 import { Ikona, type NazevIkony } from "./ikony";
 import { HeroDashboard } from "./hero-dashboard";
@@ -10,7 +11,7 @@ import { DlazdiceKampane } from "./kampane";
 import { NadpisSekce } from "./nadpisy";
 import { PocitadlaEvropa, type PolozkaPoctu } from "./pocitadla-zive";
 import { NovaZjisteni } from "./nova-zjisteni";
-import { RadekSeznamu, TeckaZavaznosti, Tlacitko } from "./ui";
+import { Odznak, RadekSeznamu, TeckaZavaznosti, Tlacitko } from "./ui";
 import { PavucinaHrozeb } from "./pavucina";
 import { PasZemi } from "./pas-zemi";
 import { Pocitadla } from "./pocitadla";
@@ -164,12 +165,13 @@ function Pruh({ nazev, n, max, barva, odkaz }: { nazev: React.ReactNode; n: numb
 }
 
 export function Dashboard({
-  stav, pravni, natoPolozky, provozPolozky, overeno, vse, neprosle, kandidati, tydny, watchlist, cr, crHistoricky, hybridni, obcane,
+  stav, pravni, natoPolozky, provozPolozky, overeno, vse, neprosle, kandidati, tydny, watchlist, cr, crHistoricky, crPocet, hybridni, obcane,
   tlakEvropa, tlakCesko, veta, kampane, nazvyZemi,
 }: {
   stav: CelkovyStav; pravni: PravniPolozka[]; natoPolozky: NatoPolozka[]; provozPolozky: ProvozniPolozka[];
   overeno: string | null; vse: Zaznam[]; neprosle: Nepotvrzene[]; kandidati: Kandidat[]; tydny: TydenniHodnoceni[]; watchlist: Watchlist;
-  cr: Uroven | null; crHistoricky: Uroven | null; hybridni: Uroven | null; obcane: { uroven: Uroven; popis: string; neovereno: number };
+  cr: Uroven | null; crHistoricky: Uroven | null; crPocet: { pripadu: number; kampani: number };
+  hybridni: Uroven | null; obcane: { uroven: Uroven; popis: string; neovereno: number };
   tlakEvropa: HybridniTlak; tlakCesko: HybridniTlak; veta: HlavniVeta;
   kampane: Kampan[]; nazvyZemi: Record<string, string>;
 }) {
@@ -183,10 +185,27 @@ export function Dashboard({
   const pasmo = stav.uroven ? PASMA[UROVNE[stav.uroven].pasmo] : null;
 
   const dni90 = pripady(vse, { dni: 90 });
-  // Do prohlížeče posíláme jen datum a příznak Česka — počítadla si zbytek dopočítají sama.
-  const pocitadlaData: PolozkaPoctu[] = vse
-    .filter((i) => druh(i) === "pripad")
-    .map((i) => ({ kdy: kdyZjisteno(i), cz: i.kodZeme === "CZ" }));
+  /*
+    Číslo za 90 dní samo o sobě neřekne, jestli je to klid, nebo nejhorší
+    čtvrtletí za dva roky. Proto se k němu počítá porovnání s průměrem —
+    a to z posledních dvou let, ne z celého archivu od roku 2014, kde je
+    sběr řídký a každé dnešní čtvrtletí by vyšlo jako mimořádné.
+  */
+  const tedMs = Date.now();
+  const kampaneVOkne = (dni: number) => kampane.filter((k) => tedMs - new Date(k.odhaleno).getTime() <= dni * 86_400_000).length;
+  const zapocitatelne90 = dni90.length + kampaneVOkne(90);
+  const casyZapocitatelne = [
+    ...vse.filter((i) => druh(i) === "pripad").map((i) => kdyZjisteno(i)),
+    ...kampane.map((k) => k.odhaleno),
+  ];
+  const porovnani90 = porovnejSPrumerem(zapocitatelne90, prumerNaOkno(casyZapocitatelne, 90, tedMs));
+  // Do prohlížeče posíláme jen datum, příznak Česka a druh — počítadla si
+  // zbytek dopočítají sama. Kampaně jsou tu schválně: manipulační operace
+  // proti občanům je incident, i když nemá jedno místo a jeden okamžik.
+  const pocitadlaData: PolozkaPoctu[] = [
+    ...vse.filter((i) => druh(i) === "pripad").map((i) => ({ kdy: kdyZjisteno(i), cz: i.kodZeme === "CZ" })),
+    ...kampane.map((k) => ({ kdy: k.odhaleno, cz: k.kodyZemi.includes("CZ"), kampan: true })),
+  ];
   const zemi = new Set(dni90.map((i) => i.kodZeme)).size;
   const cz = dni90.filter((i) => i.kodZeme === "CZ").length;
   const potvrzeno = dni90.filter(pachatelPotvrzen).length;
@@ -221,9 +240,9 @@ export function Dashboard({
   void tydny;
   return (
     <>
-    <PasZemi vse={vse} />
+    <PasZemi vse={vse} kampane={kampane} />
     <div className="mx-auto max-w-[1280px] px-4 py-5 sm:px-6 sm:py-7">
-      <HeroDashboard stav={stav} cr={cr} crHistoricky={crHistoricky} hybridni={hybridni} obcane={obcane} overeno={overeno} pocetZaznamu={vse.length} pocet90={dni90.length} veta={veta} />
+      <HeroDashboard stav={stav} cr={cr} crHistoricky={crHistoricky} crPocet={crPocet} hybridni={hybridni} obcane={obcane} overeno={overeno} pocetZaznamu={vse.length} pocet90={zapocitatelne90} veta={veta} porovnani90={porovnani90} />
 
       {/* 1b — kolik případů přibylo; počítá se v prohlížeči, ne při sestavení */}
       <PocitadlaEvropa polozky={pocitadlaData} ted={Date.now()} />
@@ -354,14 +373,22 @@ export function Dashboard({
       </div>
       <div className="grid gap-8 md:grid-cols-3">
         <section aria-label="Posledních 90 dnů">
-          <div className="mb-1.5 flex items-center justify-between"><span className="stitek">Posledních 90 dnů · případy</span><Tlacitko kam="/udalosti/?obdobi=30d" varianta="tichy" velikost="s" ikonaVpravo="nahoru" trida="[&>svg:last-child]:rotate-90">detail</Tlacitko></div>
+          <div className="mb-1.5 flex items-center justify-between"><span className="stitek">Posledních 90 dnů · incidenty</span><Tlacitko kam="/udalosti/?obdobi=30d" varianta="tichy" velikost="s" ikonaVpravo="nahoru" trida="[&>svg:last-child]:rotate-90">detail</Tlacitko></div>
           <div className="grid grid-cols-2 gap-1.5">
-            <Cislo n={dni90.length} slovo={sklon(dni90.length, "případ", "případy", "případů")} />
+            <Cislo n={zapocitatelne90} slovo={`za 90 dní · celkem ${casyZapocitatelne.length} od 2014`} />
             <Cislo n={zemi} slovo={sklon(zemi, "země", "země", "zemí")} />
-            <Cislo n={cz} slovo="v Česku" />
+            <Cislo n={cz + kampane.filter((k) => k.kodyZemi.includes("CZ")).length} slovo="v Česku od 2014" />
             <Cislo n={potvrzeno} slovo="s potvrzeným pachatelem" />
           </div>
-          <p className="mt-1.5 text-[11.5px] text-tlum2">{uredni} z {dni90.length} s úředním zdrojem. Aktualizace a prohlášení se nepočítají.</p>
+          {porovnani90 && (
+            <p className="mt-2 flex flex-wrap items-center gap-2 text-[11.5px] text-tlum2">
+              <Odznak ton={porovnani90.smer === "vyssi" ? "pozor" : porovnani90.smer === "nizsi" ? "klid" : "neutral"} duraz="silny">
+                {porovnani90.slovo} než průměr
+              </Odznak>
+              <span>průměr posledních {porovnani90.zaLet} let je {cislem(porovnani90.prumer)} na čtvrtletí</span>
+            </p>
+          )}
+          <p className="mt-1.5 text-[11.5px] text-tlum2">{uredni} z {dni90.length} případů s úředním zdrojem. Počítají se případy a manipulační operace; aktualizace a prohlášení ne.</p>
         </section>
         <section aria-label="Kde">
           <div className="mb-1.5 flex items-center justify-between"><span className="stitek">Kde · případy {rok}</span><Tlacitko kam="/zeme/" varianta="tichy" velikost="s" ikonaVpravo="nahoru" trida="[&>svg:last-child]:rotate-90">všechny země</Tlacitko></div>

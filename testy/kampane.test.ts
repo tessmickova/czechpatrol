@@ -1,7 +1,8 @@
 import fs from "node:fs";
 import path from "node:path";
 import { describe, expect, it } from "vitest";
-import { kampanePodleZemi, kampane, kampaneZeme } from "../src/lib/data";
+import { kampanePodleZemi, kampane, kampaneZeme, pocetZemeObdobi, urovenZemeObdobi, zapocitatelne } from "../src/lib/data";
+import { METODY } from "../src/lib/metody";
 import type { Kampan } from "../src/lib/typy";
 
 const KAMPANE: Kampan[] = JSON.parse(
@@ -29,8 +30,8 @@ describe("manipulační kampaně", () => {
     for (const k of KAMPANE) {
       for (const z of k.zdroje) {
         expect(z.url, `kampaň ${k.slug}: zdroj ${z.nazev} bez adresy`).toMatch(/^https?:\/\//);
-        // Buď celé datum, nebo jen měsíc. Den se nikdy nedomýšlí.
-        expect(z.publikovano, `kampaň ${k.slug}: zdroj ${z.nazev} má divné datum`).toMatch(/^\d{4}-\d{2}(-\d{2})?$/);
+        // Celé datum, měsíc, nebo jen rok. Přesnost se nikdy nedomýšlí nahoru.
+        expect(z.publikovano, `kampaň ${k.slug}: zdroj ${z.nazev} má divné datum`).toMatch(/^\d{4}(-\d{2}(-\d{2})?)?$/);
       }
     }
   });
@@ -69,5 +70,50 @@ describe("manipulační kampaně", () => {
         expect(kampaneZeme(kod).map((x) => x.slug)).toContain(k.slug);
       }
     }
+  });
+});
+
+describe("kampaně se počítají jako incidenty", () => {
+  it("každá kampaň má závažnost, cíl v názvu, označení a aspoň jednu metodu", () => {
+    for (const k of KAMPANE) {
+      expect(k.zavaznost, `kampaň ${k.slug} bez závažnosti`).toBeTruthy();
+      expect(k.oznaceni.length, `kampaň ${k.slug} bez krátkého označení`).toBeGreaterThan(1);
+      // Název je cíl operace, ne krycí jméno — proto musí být delší než označení.
+      expect(k.nazev.length, `kampaň ${k.slug}: název není popsaný cíl`).toBeGreaterThan(20);
+      expect(k.metody.length, `kampaň ${k.slug} bez metody`).toBeGreaterThan(0);
+      expect(k.zasazeni.length, `kampaň ${k.slug} bez zasaženého subjektu`).toBeGreaterThan(0);
+    }
+  });
+
+  it("metody jsou jen z číselníku, aby se daly porovnat napříč zeměmi", () => {
+    for (const k of KAMPANE) {
+      for (const m of k.metody) {
+        expect(Object.keys(METODY), `kampaň ${k.slug}: neznámá metoda ${m}`).toContain(m);
+      }
+    }
+  });
+
+  it("každý zasažený subjekt říká i JAK byl zasažen", () => {
+    for (const k of KAMPANE) {
+      for (const z of k.zasazeni) {
+        expect(z.jak.length, `kampaň ${k.slug}: u ${z.nazev} chybí, jak byl zasažen`).toBeGreaterThan(15);
+      }
+    }
+  });
+
+  it("kampaň se propíše do úrovně i počtu země, na kterou míří", () => {
+    for (const k of kampane()) {
+      for (const kod of k.kodyZemi) {
+        const dni = Math.ceil((Date.now() - new Date(k.odhaleno).getTime()) / 86_400_000) + 1;
+        expect(pocetZemeObdobi(kod, dni).kampani, `kampaň ${k.slug} se nepočítá u ${kod}`).toBeGreaterThan(0);
+        expect(urovenZemeObdobi(kod, dni), `kampaň ${k.slug} nezvedla úroveň u ${kod}`).not.toBeNull();
+      }
+    }
+  });
+
+  it("započitatelné položky obsahují případy i kampaně", () => {
+    const vse = zapocitatelne();
+    expect(vse.filter((x) => x.kampan).length).toBe(kampane().length);
+    expect(vse.filter((x) => !x.kampan).length).toBeGreaterThan(0);
   });
 });
