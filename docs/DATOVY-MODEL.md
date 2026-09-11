@@ -14,6 +14,7 @@ Jediný zdroj pravdy jsou soubory v `data/`. Web je statický export; každá zm
 | **Neprošlé** (`Nepotvrzene`) | `data/nepotvrzeno.json` | co ověřením neprošlo (`vyvraceno` / `nepotvrzeno`) | `datum` |
 | **Oprava** (`Oprava`) | `data/opravy.json` | veřejný zápis opravy | `datum` (zveřejnění opravy) |
 | **Snímek** (`Snimek`) | `data/historie.json` | stav webu v čase, zapisuje se jen při změně | `kdy` |
+| **Kampaň** (`Kampan`) | `data/kampane.json` | manipulační kampaň — koordinované šíření nepravdy | `odhaleno` |
 
 ### Druh záznamu (`druh`)
 
@@ -23,6 +24,34 @@ Jediný zdroj pravdy jsou soubory v `data/`. Web je statický export; každá zm
 - `reakce` — prohlášení, varování, analýza. Bez původce.
 
 Chybí-li `druh`, platí: má původce → případ, jinak reakce (zpětná kompatibilita; nové záznamy mají `druh` vždy).
+
+### Kampaň není událost
+
+Kampaň (`Kampan`) se vede mimo `incidenty.json` a **do žádného počtu případů
+nevstupuje**. Důvod je věcný, ne organizační: kampaň nemá jedno místo ani jeden
+okamžik a obvykle míří na víc zemí naráz. Proto má `kodyZemi` (pole, ne jeden
+kód) a v přehledu zemí se počítá u každé cílové země zvlášť — součet přes země
+je tedy vyšší než počet kampaní a web to u tabulky výslovně píše.
+
+Karta má šest pevných částí (`tvrzeni`, `kanaly`, `skutecnost`, `reakce`,
+`ucel`, `coByPotvrdilo`), z nichž `ucel` je jediná výslovně označená jako
+hodnocení projektu, ne doložený fakt.
+
+#### Dvě nezávislé jistoty u kampaně
+
+| Pole | Otázka |
+|---|---|
+| `jistotaManipulace` + `duvodManipulace` | Je to vůbec manipulace? |
+| `puvodce.jistota` + `puvodce.duvod` | Kdo za tím stojí? |
+
+Slévat je do jednoho čísla se **nesmí**. Podvrh se dá doložit z obsahu
+a technických stop; kdo ho vyrobil, se doloží skoro vždy až úředním závěrem.
+Připsat kampaň státu jako jisté (`vysoka` / `potvrzeno`) smí web jen tehdy,
+když má primární zdroj — hlídá to `testy/kampane.test.ts`.
+
+Zdroj kampaně (`KampanZdroj`) smí mít `publikovano` jen na měsíc (`2026-08`),
+když den není doložený; `datumZdroje()` ho vypíše jako „srpen 2026“ místo
+vymyšleného prvního dne.
 
 ### Dvě nezávislé osy
 
