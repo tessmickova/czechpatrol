@@ -1,5 +1,30 @@
 [
   {
+    "id": "k-e6ed1f3983b73403",
+    "zachyceno": "2026-09-12T16:55:08.278Z",
+    "publikovano": "2026-09-12T15:05:53.000Z",
+    "zdroj": {
+      "nazev": "BBC News — Europe",
+      "url": "https://www.bbc.co.uk/news/articles/c33kp533nn6o?at_medium=RSS&at_campaign=rss",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "French officials investigate if malicious act caused train derailment",
+    "titulekPuvodni": "French officials investigate if malicious act caused train derailment",
+    "shrnuti": "Officials say a rail fragment was found on the tracks after Friday's crash of a passenger train that left 44 people injured.",
+    "kodZeme": "FR",
+    "zeme": "Francie",
+    "kategorie": [
+      "sabotaz"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "shody": [
+      "derailment"
+    ],
+    "stav": "ceka"
+  },
+  {
     "id": "k-f944bb4c5c701989",
     "zachyceno": "2026-09-12T13:31:04.050Z",
     "publikovano": "2026-09-12T09:49:19.000Z",
