@@ -1,5 +1,30 @@
 [
   {
+    "id": "k-f944bb4c5c701989",
+    "zachyceno": "2026-09-12T13:31:04.050Z",
+    "publikovano": "2026-09-12T09:49:19.000Z",
+    "zdroj": {
+      "nazev": "ČT24 — hlavní zprávy",
+      "url": "https://ct24.ceskatelevize.cz/clanek/svet/ve-francii-vykolejil-vlak-hlavni-verzi-pri-vysetrovani-je-podle-afp-cizi-zavineni-377510",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Ve Francii vykolejil vlak, desítky zraněných. Hlavní verzí je dle AFP cizí zavinění",
+    "titulekPuvodni": "Ve Francii vykolejil vlak, desítky zraněných. Hlavní verzí je dle AFP cizí zavinění",
+    "shrnuti": "Cizí zavinění je hlavní verzí při vyšetřování pátečního vykolejení vlaku v Normandii na severozápadě Francie, napsala v sobotu s odkazem na policejní zdroj agentura AFP. Prokurátor mezitím potvrdil, že na trati se našel kus kolejnice. Souprava na trase mezi městy Rouen a Caen vezla téměř dvě stě ces",
+    "kodZeme": "FR",
+    "zeme": "Francie",
+    "kategorie": [
+      "sabotaz"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "shody": [
+      "vykolejeni"
+    ],
+    "stav": "ceka"
+  },
+  {
     "id": "k-da67344ccaaf0b52",
     "zachyceno": "2026-09-12T09:10:43.197Z",
     "publikovano": "2026-09-12T08:18:00.000Z",
@@ -653,6 +678,34 @@
       "undersea cable",
       "nato",
       "russia"
+    ],
+    "stav": "ceka"
+  },
+  {
+    "id": "k-dcb551a3abe94216",
+    "zachyceno": "2026-09-12T13:31:04.103Z",
+    "publikovano": "2026-09-10T07:01:29.000Z",
+    "zdroj": {
+      "nazev": "Google News — Moldavsko vzdušný prostor",
+      "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxPU1VZb21wd3B4dC1VLTQyX1RZczB0VWRwM1JVZGhuWUpFbFZRWnJTU1laSnlKcy1rM1JoN2hzSU1aMzVzcHVQNUZYTldZcjc4bTdQVVlpOW52UEwyZFB4LVpTOTc0VXBkbVlzcHh1UEVKbXBud29OaHROTHRUcFRfQnhMRDgzY1pRQWgtNTdnODZ3cm5pU3VqN2xjdzd0WWpSODU4Y2RhN3d5Zw?oc=5",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Drone incursion closes Moldovan airspace, delays Zelensky's flight to Oslo - streamlinefeed.co.ke",
+    "titulekPuvodni": "Drone incursion closes Moldovan airspace, delays Zelensky's flight to Oslo - streamlinefeed.co.ke",
+    "shrnuti": "<a href=\"https://news.google.com/rss/articles/CBMiqgFBVV95cUxPU1VZb21wd3B4dC1VLTQyX1RZczB0VWRwM1JVZGhuWUpFbFZRWnJTU1laSnlKcy1rM1JoN2hzSU1aMzVzcHVQNUZYTldZcjc4bTdQVVlpOW52UEwyZFB4LVpTOTc0VXBkbVlzcHh1UEVKbXBud29OaHROTHRUcFRfQnhMRDgzY1pRQWgtNTdnODZ3cm5pU3VqN2xjdzd0WWpSODU4Y2RhN3d5Zw?oc=5\" target=\"_blan",
+    "kodZeme": "NO",
+    "zeme": "Norsko",
+    "kategorie": [
+      "drony"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "shody": [
+      "drone incursion",
+      "dron",
+      "drone",
+      "airspace"
     ],
     "stav": "ceka"
   },
@@ -3660,37 +3713,6 @@
     "shody": [
       "sabotage",
       "russia"
-    ],
-    "stav": "ceka"
-  },
-  {
-    "id": "k-0cc40e8726e5ee29",
-    "zachyceno": "2026-09-06T13:59:15.574Z",
-    "publikovano": "2026-08-22T11:51:41.000Z",
-    "zdroj": {
-      "nazev": "Google News — sabotage Europe",
-      "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxOSjJKTVBSVUFlZXlWMlluN0lQX2d0WDQtRUROYUdSVG15OFFQZThaSk0wU0lLOVZJYzFkeUJ3TFBSME1UNXhHWGVuNWdEcnNsbDIyMXFDQnMycUdHdUJpSHFWcHhTbTNhRkZ1cHJVdVlVSGZROEtSdThYOFkzRFF5cGQ3WmdOMHBzUHg0YlA4b1F0ZjNQOWJpYlpfdjNaRWsxRXZxR0szdlRjY2VlLW12eVVn?oc=5",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Spies, Malware, and Blackouts: EU Blames Secret FSB Unit for Decade of Cyber Sabotage - Organized Crime and Corruption Reporting Project | OCCRP",
-    "titulekPuvodni": "Spies, Malware, and Blackouts: EU Blames Secret FSB Unit for Decade of Cyber Sabotage - Organized Crime and Corruption Reporting Project | OCCRP",
-    "shrnuti": "<a href=\"https://news.google.com/rss/articles/CBMisgFBVV95cUxOSjJKTVBSVUFlZXlWMlluN0lQX2d0WDQtRUROYUdSVG15OFFQZThaSk0wU0lLOVZJYzFkeUJ3TFBSME1UNXhHWGVuNWdEcnNsbDIyMXFDQnMycUdHdUJpSHFWcHhTbTNhRkZ1cHJVdVlVSGZROEtSdThYOFkzRFF5cGQ3WmdOMHBzUHg0YlA4b1F0ZjNQOWJpYlpfdjNaRWsxRXZxR0szdlRjY2VlLW12eVVn?oc=5\" tar",
-    "kodZeme": "EU",
-    "zeme": "EU",
-    "kategorie": [
-      "sabotaz",
-      "infrastruktura",
-      "kyber",
-      "zpravodajske"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "shody": [
-      "sabotage",
-      "blackout",
-      "cyber",
-      "fsb"
     ],
     "stav": "ceka"
   }
