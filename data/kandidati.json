@@ -1,5 +1,57 @@
 [
   {
+    "id": "k-73ef75069d4a7e71",
+    "zachyceno": "2026-09-12T19:07:45.809Z",
+    "publikovano": "2026-09-12T17:38:21.000Z",
+    "zdroj": {
+      "nazev": "BBC News — Europe",
+      "url": "https://www.bbc.co.uk/news/articles/cd94kj17zvwo?at_medium=RSS&at_campaign=rss",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Bulgaria investigates fire at weapons site that owner calls sabotage",
+    "titulekPuvodni": "Bulgaria investigates fire at weapons site that owner calls sabotage",
+    "shrnuti": "Officials are not ruling out \"outside interference\", while the company says the blaze at its site was sabotage.",
+    "kodZeme": "BG",
+    "zeme": "Bulharsko",
+    "kategorie": [
+      "sabotaz"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "shody": [
+      "sabotage"
+    ],
+    "stav": "ceka"
+  },
+  {
+    "id": "k-ce7012913b5763f6",
+    "zachyceno": "2026-09-12T19:07:45.877Z",
+    "publikovano": "2026-09-12T17:21:40.000Z",
+    "zdroj": {
+      "nazev": "Google News — Moldavsko vzdušný prostor",
+      "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxQZnB4WFBZdkY1eFJHX1h3T2ZEcVdQMTJWWkZiVVRqa3JBa01rNUZsQVpJSU1hOHd2ZGVOX0JwRGJwUUplQmVnSWRyempoTjFFaFROamd2c0pKVWdOMmJzZVpiMEdxZmhlOEJ6RFhjb0pxVG81djh6aVRiN1g1eWRuUjJRdFQ3ckdNUlVRd3N2RQ?oc=5",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Drone Incursion Over Moldova Causes Flight Delays in Chisinau - logos-pres.md",
+    "titulekPuvodni": "Drone Incursion Over Moldova Causes Flight Delays in Chisinau - logos-pres.md",
+    "shrnuti": "<a href=\"https://news.google.com/rss/articles/CBMijwFBVV95cUxQZnB4WFBZdkY1eFJHX1h3T2ZEcVdQMTJWWkZiVVRqa3JBa01rNUZsQVpJSU1hOHd2ZGVOX0JwRGJwUUplQmVnSWRyempoTjFFaFROamd2c0pKVWdOMmJzZVpiMEdxZmhlOEJ6RFhjb0pxVG81djh6aVRiN1g1eWRuUjJRdFQ3ckdNUlVRd3N2RQ?oc=5\" target=\"_blank\">Drone Incursion Over Moldova Caus",
+    "kodZeme": "MD",
+    "zeme": "Moldavsko",
+    "kategorie": [
+      "drony"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "shody": [
+      "drone incursion",
+      "dron",
+      "drone"
+    ],
+    "stav": "ceka"
+  },
+  {
     "id": "k-e6ed1f3983b73403",
     "zachyceno": "2026-09-12T16:55:08.278Z",
     "publikovano": "2026-09-12T15:05:53.000Z",
