@@ -17,10 +17,13 @@ RP_ID = "czechpatrol.pages.dev"
 NAZEV_WEBU = "CzechPatrol"
 # Odkud API čte stav webu (generuje se při buildu webu).
 STAV_URL = "https://czechpatrol.pages.dev/stav.json"
+# Do kterého repozitáře se kope kvůli sběru dat a který workflow se spouští.
+SBER_REPO = "tessmickova/czechpatrol"
+SBER_WORKFLOW = "sber.yml"
 
 # Tajemství se nastavují přes `wrangler secret put`, nikdy sem:
 #   TELEGRAM_BOT_TOKEN, TELEGRAM_WEBHOOK_SECRET, ADMIN_BOOTSTRAP_KOD,
-#   WHATSAPP_TOKEN, WHATSAPP_PHONE_ID
+#   WHATSAPP_TOKEN, WHATSAPP_PHONE_ID, GH_TOKEN_SBER
 
 [[d1_databases]]
 binding = "DB"
@@ -30,5 +33,7 @@ database_id = "__D1_ID__"
 migrations_dir = "migrace"
 
 [triggers]
-# Každých 10 minut: přečíst stav webu, poslat, co je splatné.
+# Každých 10 minut: přečíst stav webu, poslat, co je splatné, a v každém
+# druhém tiku (v :00 a :30) kopnout do sběru dat na GitHubu. Plánovač GitHubu
+# naplánované běhy zahazuje, tenhle ne — podrobně v src/sber.ts.
 crons = ["*/10 * * * *"]

@@ -30,27 +30,53 @@ jobs:
         with:
           ref: main
 
+      # Sběr dat běží každou půlhodinu, ale data mění jen občas. Když se od
+      # posledního nasazení nic nezměnilo, nemá smysl stavět a nasazovat znovu.
+      # Živý commit je v /stav.json, který se plní při buildu z GITHUB_SHA.
+      # Když se doména neozve, nasazuje se — raději nasazení navíc než žádné.
+      - name: Je vůbec co nasazovat?
+        id: zmena
+        env:
+          ADRESA: https://czechpatrol.pages.dev
+        run: |
+          set -u
+          ZIVY=$(curl -s --max-time 20 "$ADRESA/stav.json" | jq -r '.commit // empty' || true)
+          REPO=$(git rev-parse HEAD)
+          if [ -n "$ZIVY" ] && [ "$ZIVY" = "$REPO" ]; then
+            echo "Na webu už běží $REPO, nasazení se přeskakuje."
+            echo "nasadit=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "Živý commit: ${ZIVY:-neznámý}, repozitář: $REPO — nasazuje se."
+            echo "nasadit=true" >> "$GITHUB_OUTPUT"
+          fi
+
       - uses: actions/setup-node@v4
+        if: steps.zmena.outputs.nasadit == 'true'
         with:
           node-version: "22"
           cache: npm
 
-      - run: npm ci
+      - if: steps.zmena.outputs.nasadit == 'true'
+        run: npm ci
 
       # Do produkce nepustíme data s rozporem ani build, který neprošel testy.
       - name: Kontrola dat
+        if: steps.zmena.outputs.nasadit == 'true'
         run: npm run kontrola:data
       - name: Testy
+        if: steps.zmena.outputs.nasadit == 'true'
         run: npm test
 
       # Adresa API je proměnná repozitáře (Settings → Variables → API_URL).
       # Dokud není nastavená, web účty nenabízí a říká, že se připravují.
       - name: Sestavení
+        if: steps.zmena.outputs.nasadit == 'true'
         run: npm run build
         env:
           NEXT_PUBLIC_API_URL: ${{ vars.API_URL }}
 
       - name: Založit projekt Pages, pokud ještě není
+        if: steps.zmena.outputs.nasadit == 'true'
         run: |
           if npx --yes wrangler@3 pages project list | grep -q '^czechpatrol\|[[:space:]]czechpatrol[[:space:]]'; then
             echo "Projekt už existuje."
@@ -59,6 +85,7 @@ jobs:
           fi
 
       - name: Nasazení na Cloudflare Pages
+        if: steps.zmena.outputs.nasadit == 'true'
         uses: cloudflare/wrangler-action@v3
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}

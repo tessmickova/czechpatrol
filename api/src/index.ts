@@ -3,6 +3,7 @@ import { posliSplatne } from "./dorucovani";
 import * as izs from "./izs";
 import * as ja from "./ja";
 import { ChybaHttp, json, povolenyPuvod, sCors } from "./pomocne";
+import { kopniDoSberu } from "./sber";
 import * as sprava from "./sprava";
 import * as tipy from "./tipy";
 import { synchronizuj, uklid } from "./synchronizace";
@@ -93,9 +94,19 @@ export default {
     }
   },
 
-  async scheduled(_udalost: ScheduledController, env: Env, ctx: ExecutionContext): Promise<void> {
+  async scheduled(udalost: ScheduledController, env: Env, ctx: ExecutionContext): Promise<void> {
     ctx.waitUntil(
       (async () => {
+        // Sběr dat kope worker, protože plánovač GitHubu běhy zahazuje.
+        // Selhání sběru nesmí shodit rozesílání upozornění, proto zvlášť.
+        try {
+          const b = await kopniDoSberu(env, udalost.scheduledTime);
+          if (b.spusteno) console.log("[sběr] spuštěn");
+          else if (b.duvod && b.duvod !== "není čas") console.warn(`[sběr] nespuštěn — ${b.duvod}`);
+        } catch (e) {
+          console.error("[sběr]", e);
+        }
+
         try {
           const s = await synchronizuj(env);
           if (s.zprav) console.log(`[sync] zpráv ${s.zprav}, čtenářů ${s.zasazeni}`);

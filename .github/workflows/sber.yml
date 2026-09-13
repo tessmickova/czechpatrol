@@ -2,8 +2,14 @@ name: Hodinový sběr dat
 
 on:
   schedule:
-    # Každou hodinu v 7. minutě — mimo špičku, kdy plánovač GitHubu nabírá zpoždění.
+    # ZÁLOŽNÍ plánovač. Hlavní je Cloudflare Worker czechpatrol-api, který sem
+    # kope každou půlhodinu (api/src/sber.ts). Plánovač GitHubu je totiž „best
+    # effort": při zátěži se zpožďuje a část běhů zahodí úplně — z hodinového
+    # sběru tak zbýval jeden běh zhruba za čtyři a půl hodiny. Zůstává tu proto,
+    # aby sběr nestál, kdyby workeru vypršel token nebo vypadl Cloudflare.
+    # Sedmá minuta je mimo špičku, tedy mimo celou hodinu.
     - cron: "7 * * * *"
+  # Tudy chodí kopnutí z workeru.
   workflow_dispatch:
 
 permissions:

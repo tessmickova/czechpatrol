@@ -34,6 +34,7 @@
 |---|---|---|
 | GitHub secrets | `CLOUDFLARE_API_TOKEN` s právy Pages, D1 Edit, Workers Scripts Edit | API se nenasadí |
 | GitHub variables | `API_URL` | účty, souhrn a tipy do správy vypnuté |
+| GitHub secrets | `GH_TOKEN_SBER` — fine-grained token jen na `tessmickova/czechpatrol`, práva **Actions: Read and write** a **Metadata: Read** | sběr běží jen na plánovači GitHubu, tedy zhruba jednou za čtyři hodiny místo každé půlhodiny |
 | `src/config/web.ts` | `PROVOZOVATEL.nazev`, `PROVOZOVATEL.kontakt` | stránky o projektu, soukromí a podmínkách říkají, že provozovatel není uveden |
 | `src/config/web.ts` | `TIPY_MAIL` | formulář „Chybí tu událost“ odkazuje jen na GitHub |
 | `src/config/web.ts` | `BUY_ME_A_COFFEE_URL` | stránka Podpořit nemá tlačítko |
@@ -51,13 +52,39 @@ Hodinový sběr (`sber/udalosti.ts`) čte RSS kanály úřadů, redakcí a vyhle
 
 Převzetí kandidáta do záznamů: `node nastroje/prijmi-kandidata.mjs <id>` vypíše kostru; člověk doplní fakta, závažnost a jistotu, nastaví `lidskyOvereno: true` a vloží do `data/incidenty.json`. Sběr pak kandidáta sám odloží (stejná adresa zdroje).
 
+### Kdo sběr spouští
+
+Plánovač GitHub Actions je podle vlastní dokumentace „best effort“: událost
+`schedule` se při zátěži zpožďuje a **část naplánovaných běhů se zahodí úplně**
+(nejhůř kolem celé hodiny, proto je náš cron v 7. minutě). V praxi to u nás
+znamenalo, že z „hodinového“ sběru zbyl jeden běh zhruba za čtyři a půl hodiny.
+
+Sběr proto spouští **Cloudflare Worker `czechpatrol-api`**, který má vlastní,
+nezávislý plánovač. Tiká každých deset minut kvůli rozesílání upozornění;
+v tiku v :00 a :30 navíc zavolá GitHub API `workflow_dispatch` na `sber.yml`
+(`api/src/sber.ts`). Nový cron trigger kvůli tomu nepřibyl — těch je na free
+plánu jen pár na worker — jen se využívá ten stávající.
+
+Okno je desetiminutové, ne přesná minuta: kvůli pár sekundám zpoždění tiku
+nechceme sběr vynechat na celou půlhodinu.
+
+Token (`GH_TOKEN_SBER`) je v GitHub secrets a workflow `Nasazení API` ho
+přenese do Workeru přes `wrangler secret put`, stejně jako telegramí token.
+**Bez tokenu se nic nerozbije** — worker to zaloguje a sběr jede dál jen na
+záložním plánovači GitHubu, tedy jako dřív.
+
+Protože sběr teď běží desetkrát častěji, ale data mění jen občas, **nasazení se
+přeskakuje, když se nic nezměnilo**: krok „Je vůbec co nasazovat?“ porovná
+`commit` z živého `/stav.json` s `HEAD`. Když se doména neozve, nasazuje se —
+raději nasazení navíc než žádné.
+
 ## Jak rychle se událost dostane na web
 
 | Krok | Kdy běží | Co udělá |
 |---|---|---|
-| Sběr (`sber.yml`) | každou hodinu v 7. minutě | najde kandidáty a zapíše je do `data/kandidati.json`; web je hned ukáže jako „automaticky zachyceno, čeká na ověření“, ale do počtů nevstupují |
+| Sběr (`sber.yml`) | každou půlhodinu (kope Worker) + záložně v 7. minutě každé hodiny | najde kandidáty a zapíše je do `data/kandidati.json`; web je hned ukáže jako „automaticky zachyceno, čeká na ověření“, ale do počtů nevstupují |
 | Hodinové ověření (Routine) | každou hodinu | otevře zdroje nejvýš pěti nejnovějších kandidátů, ověřené převezme do `data/incidenty.json` a pushne |
-| Nasazení (`nasazeni.yml`) | po každém pushi | přepočítá a nasadí web |
+| Nasazení (`nasazeni.yml`) | po každém pushi a po sběru | přepočítá a nasadí web; když se od posledního nasazení nic nezměnilo, přeskočí se |
 | Rozhlas (`rozhlas.yml`) | po pushi měnícím záznamy | pošle zprávu do Telegramu |
 | Denní audit (Routine, 4:15) | jednou denně | projde starší kandidáty, opravy a soulad webu s realitou |
 

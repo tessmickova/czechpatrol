@@ -10,6 +10,10 @@ export interface Env {
   ADMIN_BOOTSTRAP_KOD?: string;
   WHATSAPP_TOKEN?: string;
   WHATSAPP_PHONE_ID?: string;
+  // Kopnutí do sběru dat na GitHubu. Bez tokenu se sběr neplánuje odsud.
+  GH_TOKEN_SBER?: string;
+  SBER_REPO?: string;
+  SBER_WORKFLOW?: string;
 }
 
 export type Role = "obcan" | "podporovatel" | "izs" | "admin";
