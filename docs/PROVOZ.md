@@ -32,7 +32,7 @@
 
 | Kde | Co | Bez toho |
 |---|---|---|
-| GitHub secrets | `CLOUDFLARE_API_TOKEN` s právy Pages, D1 Edit, Workers Scripts Edit | API se nenasadí |
+| GitHub secrets | `CLOUDFLARE_API_TOKEN` s právy Pages, D1 Edit, Workers Scripts Edit | **dnes chybí D1 a Workers** → API se nenasadí, neběží upozornění ani spolehlivý plánovač sběru |
 | GitHub variables | `API_URL` | účty, souhrn a tipy do správy vypnuté |
 | GitHub secrets | `GH_TOKEN_SBER` — fine-grained token jen na `tessmickova/czechpatrol`, práva **Actions: Read and write** a **Metadata: Read** | sběr běží jen na plánovači GitHubu, tedy zhruba jednou za čtyři hodiny místo každé půlhodiny |
 | `src/config/web.ts` | `PROVOZOVATEL.nazev`, `PROVOZOVATEL.kontakt` | stránky o projektu, soukromí a podmínkách říkají, že provozovatel není uveden |
@@ -73,6 +73,14 @@ přenese do Workeru přes `wrangler secret put`, stejně jako telegramí token.
 **Bez tokenu se nic nerozbije** — worker to zaloguje a sběr jede dál jen na
 záložním plánovači GitHubu, tedy jako dřív.
 
+> **Stav k 13. 9. 2026: worker zatím neběží.** Všech šest běhů `Nasazení API`
+> selhalo na tom, že `CLOUDFLARE_API_TOKEN` nemá práva `Account · D1 · Edit`
+> a `Account · Workers Scripts · Edit`. Dokud se to nedoplní, neběží ani
+> desetiminutový tik, ani rozesílání upozornění, ani kopání do sběru — sběr
+> stojí výhradně na plánovači GitHubu. Proto má `sber.yml` zatím dva pokusy
+> za hodinu (minuty 7 a 37) místo jednoho: víc pokusů je jediná páka, kterou
+> na straně GitHubu máme.
+
 Protože sběr teď běží desetkrát častěji, ale data mění jen občas, **nasazení se
 přeskakuje, když se nic nezměnilo**: krok „Je vůbec co nasazovat?“ porovná
 `commit` z živého `/stav.json` s `HEAD`. Když se doména neozve, nasazuje se —
@@ -106,7 +114,7 @@ navigace nepatří — český web zůstává tím hlavním, tohle je rozcestní
 
 | Krok | Kdy běží | Co udělá |
 |---|---|---|
-| Sběr (`sber.yml`) | každou půlhodinu (kope Worker) + záložně v 7. minutě každé hodiny | najde kandidáty a zapíše je do `data/kandidati.json`; web je hned ukáže jako „automaticky zachyceno, čeká na ověření“, ale do počtů nevstupují |
+| Sběr (`sber.yml`) | dvakrát za hodinu (minuty 7 a 37); po nasazení Workeru navíc spolehlivě v :00 a :30 | najde kandidáty a zapíše je do `data/kandidati.json`; web je hned ukáže jako „automaticky zachyceno, čeká na ověření“, ale do počtů nevstupují |
 | Hodinové ověření (Routine) | každou hodinu | otevře zdroje nejvýš pěti nejnovějších kandidátů, ověřené převezme do `data/incidenty.json` a pushne |
 | Nasazení (`nasazeni.yml`) | po každém pushi a po sběru | přepočítá a nasadí web; když se od posledního nasazení nic nezměnilo, přeskočí se |
 | Rozhlas (`rozhlas.yml`) | po pushi měnícím záznamy | pošle zprávu do Telegramu |
