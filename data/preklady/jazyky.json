@@ -1,0 +1,77 @@
+[
+  {
+    "kod": "en",
+    "nazev": "English",
+    "cesky": "angličtina"
+  },
+  {
+    "kod": "de",
+    "nazev": "Deutsch",
+    "cesky": "němčina"
+  },
+  {
+    "kod": "pl",
+    "nazev": "Polski",
+    "cesky": "polština"
+  },
+  {
+    "kod": "sk",
+    "nazev": "Slovenčina",
+    "cesky": "slovenština"
+  },
+  {
+    "kod": "uk",
+    "nazev": "Українська",
+    "cesky": "ukrajinština"
+  },
+  {
+    "kod": "lt",
+    "nazev": "Lietuvių",
+    "cesky": "litevština"
+  },
+  {
+    "kod": "lv",
+    "nazev": "Latviešu",
+    "cesky": "lotyština"
+  },
+  {
+    "kod": "et",
+    "nazev": "Eesti",
+    "cesky": "estonština"
+  },
+  {
+    "kod": "fi",
+    "nazev": "Suomi",
+    "cesky": "finština"
+  },
+  {
+    "kod": "sv",
+    "nazev": "Svenska",
+    "cesky": "švédština"
+  },
+  {
+    "kod": "nb",
+    "nazev": "Norsk",
+    "cesky": "norština"
+  },
+  {
+    "kod": "da",
+    "nazev": "Dansk",
+    "cesky": "dánština"
+  },
+  {
+    "kod": "ro",
+    "nazev": "Română",
+    "cesky": "rumunština"
+  },
+  {
+    "kod": "bg",
+    "nazev": "Български",
+    "cesky": "bulharština"
+  },
+  {
+    "kod": "hu",
+    "nazev": "Magyar",
+    "cesky": "maďarština"
+  }
+]

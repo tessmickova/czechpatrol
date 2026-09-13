@@ -1,0 +1,72 @@
+name: Překlady rozhraní
+
+# Proč zvlášť od nasazení: překlad stojí peníze a klíč. Vytěžení vět je levné
+# a deterministické, takže běží i v kontrole; doplnění chybějících překladů
+# se spouští ručně nebo jednou denně, a commituje jen když se něco změnilo.
+
+on:
+  workflow_dispatch:
+  schedule:
+    # Jednou denně; nové věty v rozhraní tak nezůstanou dlouho česky.
+    - cron: "20 3 * * *"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: preklady
+  cancel-in-progress: false
+
+jobs:
+  preloz:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: npm
+
+      - run: npm ci
+
+      - name: Vytěžit věty z kódu
+        run: node nastroje/vytez-preklady.mjs --zapis
+
+      - name: Doplnit chybějící překlady
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: |
+          if [ -z "$ANTHROPIC_API_KEY" ]; then
+            echo "::warning::Chybí ANTHROPIC_API_KEY — nepřeložené věty zůstanou česky."
+            exit 0
+          fi
+          node nastroje/preloz.mjs
+
+      # Neúplný překlad nesmí shodit build: chybějící věta se zobrazí česky.
+      - name: Kontroly
+        run: |
+          npm run kontrola:data
+          npm test
+          npm run build
+
+      - name: Commit, když přibyly překlady
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/preklady/
+          if git diff --cached --quiet; then
+            echo "Beze změny."
+            exit 0
+          fi
+          git commit -m "Překlady rozhraní $(date -u +'%Y-%m-%d %H:%M UTC')"
+          for pokus in 1 2 3 4 5; do
+            git push && exit 0
+            sleep $((pokus * 5))
+            git fetch origin main || true
+            git rebase origin/main || { git rebase --abort || true; }
+          done
+          echo "::error::Překlady se nepodařilo odeslat."
+          exit 1

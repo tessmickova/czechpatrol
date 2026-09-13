@@ -1,8 +1,11 @@
-import Link from "next/link";
+"use client";
+
+import { Odkaz } from "./odkaz";
 import { KOMUNITA, METODIKA_REVIDOVANA, WEB } from "@/config/web";
 import { datum } from "@/lib/format";
 import { Logo } from "./znacka";
 import { JAZYKY } from "@/lib/jazyky";
+import { useT } from "@/lib/i18n";
 
 const SLOUPCE: { nadpis: string; odkazy: [string, string][] }[] = [
   {
@@ -24,15 +27,16 @@ const SLOUPCE: { nadpis: string; odkazy: [string, string][] }[] = [
   hlavním a přepínač je rozcestník pro čtenáře odjinud, ne rovnocenná větev.
 */
 function Jazyky() {
+  const t = useT();
   return (
-    <nav aria-label="Jazyky" className="mt-8 border-t border-white/10 pt-6">
-      <div className="stitek-tmavy mb-3 text-noc-tlum/70">Jiné jazyky / Other languages</div>
+    <nav aria-label={t("Jazyky")} className="mt-8 border-t border-white/10 pt-6">
+      <div className="stitek-tmavy mb-3 text-noc-tlum/70">{t("Jiné jazyky")} / Other languages</div>
       <ul className="flex flex-wrap gap-x-4 gap-y-2 text-[13.5px]">
         {JAZYKY.map((j) => (
           <li key={j.kod}>
-            <Link href={`/${j.kod}/`} hrefLang={j.kod} className="text-noc-tlum transition-colors hover:text-noc-text">
+            <Odkaz href={`/${j.kod}/`} hrefLang={j.kod} className="text-noc-tlum transition-colors hover:text-noc-text">
               {j.nazev}
-            </Link>
+            </Odkaz>
           </li>
         ))}
       </ul>
@@ -41,6 +45,7 @@ function Jazyky() {
 }
 
 export function Paticka() {
+  const t = useT();
   return (
     // Patička stojí na tmavé desce — jediné velké tmavé místo na stránce.
     // Stejný obal jako hlavička a obsah stránky, ať tmavá deska lícuje s panely
@@ -52,25 +57,24 @@ export function Paticka() {
           <div>
             <Logo velikost={32} pismo={17} tmave />
             <p className="mt-3 max-w-[38ch] text-[14px] leading-relaxed text-noc-tlum">
-              Nezávislý přehled bezpečnostních událostí a změn, které mohou mít dopad na lidi v Česku.
-              Není to úřední zdroj ani varovný systém. V nouzi volejte 112.
+              {t("Nezávislý přehled bezpečnostních událostí a změn, které mohou mít dopad na lidi v Česku. Není to úřední zdroj ani varovný systém. V nouzi volejte 112.")}
             </p>
             <p className="mt-3 text-[13px] text-noc-tlum/80">
-              Metodika revidována {datum(METODIKA_REVIDOVANA)}
+              {t("Metodika revidována")} {datum(METODIKA_REVIDOVANA)}
               {KOMUNITA.github && (
                 <>
                   {" · "}
-                  <a href={KOMUNITA.github} target="_blank" rel="noopener noreferrer" className="odkaz">kód a data na GitHubu</a>
+                  <a href={KOMUNITA.github} target="_blank" rel="noopener noreferrer" className="odkaz">{t("kód a data na GitHubu")}</a>
                 </>
               )}
             </p>
           </div>
           {SLOUPCE.map((s) => (
-            <nav key={s.nadpis} aria-label={s.nadpis}>
-              <div className="stitek-tmavy mb-3 text-noc-tlum/70">{s.nadpis}</div>
+            <nav key={t(s.nadpis)} aria-label={t(s.nadpis)}>
+              <div className="stitek-tmavy mb-3 text-noc-tlum/70">{t(s.nadpis)}</div>
               <ul className="space-y-2 text-[14px]">
                 {s.odkazy.map(([href, label]) => (
-                  <li key={href}><Link href={href} className="text-noc-tlum transition-colors hover:text-noc-text">{label}</Link></li>
+                  <li key={href}><Odkaz href={href} className="text-noc-tlum transition-colors hover:text-noc-text">{t(label)}</Odkaz></li>
                 ))}
               </ul>
             </nav>

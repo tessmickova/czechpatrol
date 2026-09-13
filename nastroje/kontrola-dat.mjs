@@ -183,43 +183,25 @@ if (fs.existsSync(cestaOdmitnutych)) {
   }
 }
 
-// 5. překlady — úplnost je podmínka, ne přání
+// 5. překlady rozhraní
 //
-// Poloprázdná cizojazyčná stránka je horší než žádná: čtenář nepozná, jestli
-// mu chybí údaj, nebo jestli se nic nestalo. Chybějící klíč proto zastaví build.
-const dirPrekladu = path.join(koren, "data", "preklady");
-if (fs.existsSync(dirPrekladu)) {
-  const predloha = JSON.parse(fs.readFileSync(path.join(dirPrekladu, "cs.json"), "utf-8"));
-  const oddily = ["rozhrani", "kategorie", "urovne", "stavy", "puvodci"];
-  const soubory = fs.readdirSync(dirPrekladu).filter((f) => f.endsWith(".json"));
+// Klíčem je česká věta, takže chybějící překlad nikdy nevyrobí prázdné místo —
+// zobrazí se čeština. Hlídá se proto úplnost jako varování, ne jako chyba:
+// rozestavěný překlad nesmí zastavit nasazení bezpečnostního webu.
+const dirUi = path.join(koren, "data", "preklady", "ui");
+if (fs.existsSync(path.join(dirUi, "zdroj.json"))) {
+  const zdrojVet = JSON.parse(fs.readFileSync(path.join(dirUi, "zdroj.json"), "utf-8"));
+  const jazyky = JSON.parse(fs.readFileSync(path.join(koren, "data", "preklady", "jazyky.json"), "utf-8"));
+  if (!Array.isArray(zdrojVet) || !zdrojVet.length) varovani.push("zdroj překladů je prázdný — spusť nastroje/vytez-preklady.mjs --zapis");
 
-  for (const soubor of soubory) {
-    const kod = soubor.replace(/\.json$/, "");
-    if (kod === "cs") continue;
-    const pr = JSON.parse(fs.readFileSync(path.join(dirPrekladu, soubor), "utf-8"));
-    if (pr.jazyk !== kod) chyby.push(`překlad ${kod}: pole jazyk je „${pr.jazyk}“, má být „${kod}“`);
-
-    for (const oddil of oddily) {
-      const ocekavane = Object.keys(predloha[oddil] ?? {});
-      const nase = pr[oddil] ?? {};
-      const chybi = ocekavane.filter((k) => !String(nase[k] ?? "").trim());
-      if (chybi.length) chyby.push(`překlad ${kod}/${oddil}: chybí ${chybi.join(", ")}`);
-      const navic = Object.keys(nase).filter((k) => !ocekavane.includes(k));
-      if (navic.length) varovani.push(`překlad ${kod}/${oddil}: klíče navíc ${navic.join(", ")}`);
-
-      // Nepřeložený řetězec shodný s češtinou je u vlastních jmen v pořádku
-      // (NATO), u vět nikoli — to je znamení, že se na oddíl zapomnělo.
-      if (oddil === "rozhrani") {
-        const stejne = ocekavane.filter((k) => nase[k] === predloha[oddil][k] && String(nase[k]).includes(" "));
-        if (stejne.length) varovani.push(`překlad ${kod}: shodné s češtinou — ${stejne.join(", ")}`);
-      }
-    }
-  }
-
-  // Každý jazyk z číselníku webu musí mít soubor, jinak by build spadl.
-  const jazyky = fs.readFileSync(path.join(koren, "src", "lib", "jazyky.ts"), "utf-8");
-  for (const [, kod] of jazyky.matchAll(/\{ kod: "([a-z-]+)"/g)) {
-    if (!soubory.includes(`${kod}.json`)) chyby.push(`jazyk ${kod} je v seznamu, ale data/preklady/${kod}.json chybí`);
+  for (const j of jazyky) {
+    const soubor = path.join(dirUi, `${j.kod}.json`);
+    if (!fs.existsSync(soubor)) { chyby.push(`jazyk ${j.kod} nemá soubor data/preklady/ui/${j.kod}.json`); continue; }
+    const slovnik = JSON.parse(fs.readFileSync(soubor, "utf-8"));
+    const chybi = zdrojVet.filter((v) => !String(slovnik[v] ?? "").trim());
+    const navic = Object.keys(slovnik).filter((k) => !zdrojVet.includes(k));
+    if (chybi.length) varovani.push(`překlad ${j.kod}: chybí ${chybi.length} z ${zdrojVet.length} vět (zobrazí se česky)`);
+    if (navic.length) varovani.push(`překlad ${j.kod}: ${navic.length} vět navíc, které už v kódu nejsou`);
   }
 }
 

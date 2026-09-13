@@ -1,3 +1,5 @@
+"use client";
+
 import Link from "next/link";
 import { druh, kdyZjisteno, novaZjisteni, pachatelPotvrzen, podlePuvodce, podleZemi, posledniZmeny, pripady, uredniZdroj, vyber, type Zaznam } from "@/lib/agregace";
 import { cerstvost, datumCasPraha, datumPraha, stariSlovy } from "@/lib/cas";
@@ -21,6 +23,7 @@ import { VyzvaTelegram } from "./vyzva-telegram";
 import { UdalostiKlient } from "./udalosti-klient";
 import { Napoveda } from "./zaklad";
 import { sklon, Vlajka } from "./zeme";
+import { useT } from "@/lib/i18n";
 
 /*
   Dashboard. Jedna obrazovka, žádné odstavce.
@@ -98,6 +101,7 @@ function dlazdiceProvoz(p: ProvozniPolozka): Dlazdice {
 }
 
 function Stari({ overeno }: { overeno: string | null }) {
+  const t = useT();
   const c = cerstvost(overeno);
   const barva = c === "cerstve" ? "text-tlum2" : c === "nezname" ? "text-tlum2" : "text-[#eaa96b]";
   return <span className={`cislice text-[10.5px] ${barva}`} title={overeno ? datumCasPraha(overeno) : "nikdy neověřeno"}>{overeno ? stariSlovy(overeno) : "neověřeno"}</span>;
@@ -179,6 +183,7 @@ export function Dashboard({
   overovaneAktivni?: Overovana[];
   overovaneUzavrene?: Overovana[];
 }) {
+  const t = useT();
   const platiCr = pravni.filter((p) => p.plati === true);
   const neovereneCr = pravni.filter((p) => p.plati === null).length;
   const naruseno = provozPolozky.filter((p) => p.stav === "narusen");
@@ -258,13 +263,13 @@ export function Dashboard({
       {/* 2 — mřížka stavů + poslední události */}
       <div className="nalet mt-14 sm:mt-20">
         <NadpisSekce
-          stitek="Co právě platí"
-          nadpis="Úřední stav v Česku"
+          stitek={t("Co právě platí")}
+          nadpis={t("Úřední stav v Česku")}
           popis="Šest věcí, na které se lidé ptají jako první. Zaškrtnutí znamená, že opatření neplatí — ověřeno v úřední sbírce, ne odhadnuto. Zbylých čtrnáct je o jeden klik dál."
         />
       </div>
       <div className="grid gap-4 lg:grid-cols-[minmax(0,1.35fr)_minmax(0,1fr)]">
-        <section aria-label="Oficiální stavy" id="opatreni" className="scroll-mt-[84px]">
+        <section aria-label={t("Oficiální stavy")} id="opatreni" className="scroll-mt-[84px]">
           <ul className="grid grid-cols-2 gap-2.5 sm:grid-cols-3">
             {klicove.map((d) => <Dlazdice key={d.klic} d={d} />)}
           </ul>
@@ -293,10 +298,10 @@ export function Dashboard({
           </details>
         </section>
 
-        <section aria-label="Poslední události" className="overflow-hidden rounded-[22px] border border-linka2 bg-plocha">
+        <section aria-label={t("Poslední události")} className="overflow-hidden rounded-[22px] border border-linka2 bg-plocha">
           <div className="flex items-center justify-between border-b border-linka2 px-4 py-2">
-            <span className="stitek">Poslední události</span>
-            <Tlacitko kam="/udalosti/" varianta="tichy" velikost="s" ikonaVpravo="nahoru" trida="[&>svg:last-child]:rotate-90">všechny</Tlacitko>
+            <span className="stitek">{t("Poslední události")}</span>
+            <Tlacitko kam="/udalosti/" varianta="tichy" velikost="s" ikonaVpravo="nahoru" trida="[&>svg:last-child]:rotate-90">{t("všechny")}</Tlacitko>
           </div>
           {/* Týž řádek jako jinde na webu, jen v husté variantě. */}
           <ol className="divide-y divide-linka2">
@@ -322,10 +327,10 @@ export function Dashboard({
       {/* 2b — posuny ve vyšetřování starších případů */}
       <div className="nalet mt-14 border-t border-linka pt-12 sm:mt-20 sm:pt-14">
         <NadpisSekce
-          stitek="Nová zjištění"
-          nadpis="Co se zjistilo o tom, co se stalo dřív"
-          popis="Obvinění, rozsudky, úředně potvrzený pachatel. Nejsou to nové události — je to posun ve vyšetřování těch starých."
-          akce={<Tlacitko kam="/udalosti/?overeni=potvrzeny-pachatel" varianta="obrys" velikost="s" ikonaVpravo="nahoru" trida="[&>svg:last-child]:rotate-90">všechna zjištění</Tlacitko>}
+          stitek={t("Nová zjištění")}
+          nadpis={t("Co se zjistilo o tom, co se stalo dřív")}
+          popis={t("Obvinění, rozsudky, úředně potvrzený pachatel. Nejsou to nové události — je to posun ve vyšetřování těch starých.")}
+          akce={<Tlacitko kam="/udalosti/?overeni=potvrzeny-pachatel" varianta="obrys" velikost="s" ikonaVpravo="nahoru" trida="[&>svg:last-child]:rotate-90">{t("všechna zjištění")}</Tlacitko>}
         />
         <NovaZjisteni polozky={novaZjisteni(vse, 6)} />
       </div>
@@ -335,9 +340,9 @@ export function Dashboard({
         <div className="nalet mt-14 border-t border-linka pt-12 sm:mt-20 sm:pt-14">
           <NadpisSekce
             stitek="Manipulace"
-            nadpis="Manipulace a útoky na občany"
+            nadpis={t("Manipulace a útoky na občany")}
             popis="Podvržené dokumenty, weby vydávající se za redakce, profily vydávající se za úředníky. U každé operace zvlášť říkáme, co je doložené — a jestli víme, kdo za ní stojí."
-            akce={<Tlacitko kam="/manipulace/" varianta="obrys" velikost="s" ikonaVpravo="nahoru" trida="[&>svg:last-child]:rotate-90">všechny rozbory</Tlacitko>}
+            akce={<Tlacitko kam="/manipulace/" varianta="obrys" velikost="s" ikonaVpravo="nahoru" trida="[&>svg:last-child]:rotate-90">{t("všechny rozbory")}</Tlacitko>}
           />
           {/* Jedna kampaň by v třetině šířky vypadala jako zapomenutá dlaždice. */}
           <div className={`grid gap-3 ${kampane.length === 1 ? "" : kampane.length === 2 ? "sm:grid-cols-2" : "sm:grid-cols-2 lg:grid-cols-3"}`}>
@@ -352,19 +357,19 @@ export function Dashboard({
       <div className="nalet mt-14 border-t border-linka pt-12 sm:mt-20 sm:pt-14">
         <NadpisSekce
           stitek="Typy hrozeb"
-          nadpis="Čím je ten tlak tvořený"
+          nadpis={t("Čím je ten tlak tvořený")}
           popis="Ne jak je velký, ale z čeho se skládá. Vlevo celá sledovaná Evropa — členské i nečlenské země NATO dohromady. Vpravo jen Česko. Rozdíl mezi obrazci je to podstatné."
         />
         <div className="grid gap-4 lg:grid-cols-2">
           <PavucinaHrozeb
             nadpis="Evropa jako celek"
-            popis="Všechny sledované země od roku 2014, ať jsou v NATO, nebo ne."
+            popis={t("Všechny sledované země od roku 2014, ať jsou v NATO, nebo ne.")}
             tlak={tlakEvropa}
             odkaz={{ href: "/metodika/", text: "jak se hodnotí →" }}
           />
           <PavucinaHrozeb
-            nadpis="Česko"
-            popis="Jen české záznamy od roku 2014. Prázdná osa znamená, že takový záznam nemáme."
+            nadpis={t("Česko")}
+            popis={t("Jen české záznamy od roku 2014. Prázdná osa znamená, že takový záznam nemáme.")}
             tlak={tlakCesko}
             odkaz={{ href: "/udalosti/?zeme=CZ", text: "české záznamy →" }}
           />
@@ -374,14 +379,14 @@ export function Dashboard({
       {/* 3 — čísla, kde, kdo */}
       <div className="nalet mt-14 border-t border-linka pt-12 sm:mt-20 sm:pt-14">
         <NadpisSekce
-          stitek="Čísla"
-          nadpis="Kolik toho je, kde a kdo za tím stojí"
-          popis="Počítají se jen případy, tedy skutečné události. Pokračování případu, opatření ani prohlášení číslo nezvyšují."
+          stitek={t("Čísla")}
+          nadpis={t("Kolik toho je, kde a kdo za tím stojí")}
+          popis={t("Počítají se jen případy, tedy skutečné události. Pokračování případu, opatření ani prohlášení číslo nezvyšují.")}
         />
       </div>
       <div className="grid gap-8 md:grid-cols-3">
-        <section aria-label="Posledních 90 dnů">
-          <div className="mb-1.5 flex items-center justify-between"><span className="stitek">Posledních 90 dnů · incidenty</span><Tlacitko kam="/udalosti/?obdobi=30d" varianta="tichy" velikost="s" ikonaVpravo="nahoru" trida="[&>svg:last-child]:rotate-90">detail</Tlacitko></div>
+        <section aria-label={t("Posledních 90 dnů")}>
+          <div className="mb-1.5 flex items-center justify-between"><span className="stitek">{t("Posledních 90 dnů · incidenty")}</span><Tlacitko kam="/udalosti/?obdobi=30d" varianta="tichy" velikost="s" ikonaVpravo="nahoru" trida="[&>svg:last-child]:rotate-90">detail</Tlacitko></div>
           <div className="grid grid-cols-2 gap-1.5">
             <Cislo n={zapocitatelne90} slovo={`za 90 dní · celkem ${casyZapocitatelne.length} od 2014`} />
             <Cislo n={zemi} slovo={sklon(zemi, "země", "země", "zemí")} />
@@ -399,7 +404,7 @@ export function Dashboard({
           <p className="mt-1.5 text-[11.5px] text-tlum2">{uredni} z {dni90.length} případů s úředním zdrojem. Počítají se případy a manipulační operace; aktualizace a prohlášení ne.</p>
         </section>
         <section aria-label="Kde">
-          <div className="mb-1.5 flex items-center justify-between"><span className="stitek">Kde · případy {rok}</span><Tlacitko kam="/zeme/" varianta="tichy" velikost="s" ikonaVpravo="nahoru" trida="[&>svg:last-child]:rotate-90">všechny země</Tlacitko></div>
+          <div className="mb-1.5 flex items-center justify-between"><span className="stitek">Kde · případy {rok}</span><Tlacitko kam="/zeme/" varianta="tichy" velikost="s" ikonaVpravo="nahoru" trida="[&>svg:last-child]:rotate-90">{t("všechny země")}</Tlacitko></div>
           <ul className="space-y-0.5">
             {zeme.map((z) => (
               <li key={z.kodZeme}><Pruh nazev={<><Vlajka kod={z.kodZeme} /> {z.zeme}</>} n={z.pripady} max={maxZeme} barva={z.kodZeme === "CZ" ? "bg-akcent" : "bg-tlum2/70"} odkaz={`/zeme/${z.kodZeme.toLowerCase()}/`} /></li>
@@ -431,22 +436,22 @@ export function Dashboard({
       <div className="nalet mt-14 border-t border-linka pt-12 sm:mt-20 sm:pt-14">
         <NadpisSekce
           stitek="Archiv"
-          nadpis="Všechny záznamy od roku 2014"
-          popis="Případy, jejich pokračování, úřední opatření, prohlášení a také to, co neprošlo ověřením. Filtry si můžete uložit v adrese."
-          akce={<Tlacitko kam="/udalosti/" varianta="obrys" velikost="s" ikonaVpravo="nahoru" trida="[&>svg:last-child]:rotate-90">samostatná stránka</Tlacitko>}
+          nadpis={t("Všechny záznamy od roku 2014")}
+          popis={t("Případy, jejich pokračování, úřední opatření, prohlášení a také to, co neprošlo ověřením. Filtry si můžete uložit v adrese.")}
+          akce={<Tlacitko kam="/udalosti/" varianta="obrys" velikost="s" ikonaVpravo="nahoru" trida="[&>svg:last-child]:rotate-90">{t("samostatná stránka")}</Tlacitko>}
         />
       </div>
       <div className="mb-5"><Pocitadla vse={vse} neprosle={neprosle} kandidati={kandidati} /></div>
-      <section id="zaznamy" aria-label="Všechny záznamy" className="scroll-mt-[84px] rounded-[22px] border border-linka2 bg-plocha p-4 sm:p-6">
+      <section id="zaznamy" aria-label={t("Všechny záznamy")} className="scroll-mt-[84px] rounded-[22px] border border-linka2 bg-plocha p-4 sm:p-6">
         <UdalostiKlient zaznamy={vse} neprosle={neprosle} kandidati={kandidati} />
       </section>
 
       {/* 5 — sledovat a partneři */}
       <div className="nalet mt-14 border-t border-linka pt-12 sm:mt-20 sm:pt-14">
         <NadpisSekce
-          stitek="Odběr"
-          nadpis="Jak se to dozvíte, aniž byste sem chodili"
-          popis="Kanály, čtečka nebo vlastní přehled ve vašem zařízení. Nic z toho po vás nechce jméno ani e-mail."
+          stitek={t("Odběr")}
+          nadpis={t("Jak se to dozvíte, aniž byste sem chodili")}
+          popis={t("Kanály, čtečka nebo vlastní přehled ve vašem zařízení. Nic z toho po vás nechce jméno ani e-mail.")}
         />
         <Sledovat />
       </div>
@@ -465,14 +470,14 @@ export function Dashboard({
           </ol>
         </details>
         <div className="flex min-h-[40px] items-center justify-between gap-3 rounded-[18px] border border-linka2 bg-plocha px-3 text-[13px]">
-          <span className="text-tlum">Změny bez sledování webu</span>
+          <span className="text-tlum">{t("Změny bez sledování webu")}</span>
           <span className="flex items-center gap-3">
             <Tlacitko kam="/feed.xml" varianta="tichy" velikost="s" ikona="rss">RSS</Tlacitko>
-            <Tlacitko kam="/odber/" varianta="tichy" velikost="s" ikonaVpravo="nahoru" trida="[&>svg:last-child]:rotate-90">odběr</Tlacitko>
+            <Tlacitko kam="/odber/" varianta="tichy" velikost="s" ikonaVpravo="nahoru" trida="[&>svg:last-child]:rotate-90">{t("odběr")}</Tlacitko>
           </span>
         </div>
       </div>
-      <p className="mt-8 text-[12px] text-tlum2">Není to úřední zdroj ani varovný systém. V nouzi 112. Najeďte na dlaždici pro vysvětlení; každé číslo vede na svůj seznam.</p>
+      <p className="mt-8 text-[12px] text-tlum2">{t("Není to úřední zdroj ani varovný systém. V nouzi 112. Najeďte na dlaždici pro vysvětlení; každé číslo vede na svůj seznam.")}</p>
     </div>
     </>
   );

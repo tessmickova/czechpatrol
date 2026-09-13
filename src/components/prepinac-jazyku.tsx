@@ -1,64 +1,100 @@
 "use client";
 
 import Link from "next/link";
-import { usePathname } from "next/navigation";
+import { useEffect, useRef, useState } from "react";
 import { Ikona } from "./ikony";
 import { JAZYKY } from "@/lib/jazyky";
+import { bezJazyka, sJazykem, useJazyk } from "@/lib/i18n";
 
 /*
   Přepínač jazyků v hlavičce.
 
-  Patnáct jazyků se do lišty nevejde, proto rozbalovací seznam. Stojí na
-  <details>, ne na vlastním stavu: zavírá se klávesou Esc i kliknutím vedle
-  bez jediného řádku javascriptu navíc, a hlavně funguje i dřív, než se
-  stránka oživí.
+  Patnáct jazyků se do lišty nevejde, proto rozbalovací seznam. Původně stál
+  na <details>, jenže ten se zavírá jen kliknutím na sebe — kliknutí vedle ho
+  nechalo viset otevřený. Proto vlastní stav a tři způsoby zavření, které lidé
+  zkoušejí: kliknutí mimo, Esc a výběr položky.
 
-  Čeština je v seznamu první a označená jako závazné znění — cizojazyčné
-  stránky jsou rozcestník k němu, ne rovnocenná větev webu.
+  Odkaz vede na tutéž stránku v jiném jazyce, ne na rozcestník. Kdo čte seznam
+  událostí a přepne na polštinu, má zůstat u seznamu událostí.
 */
 export function PrepinacJazyku({ trida = "" }: { trida?: string }) {
-  const cesta = usePathname();
-  const kod = JAZYKY.find((j) => cesta.startsWith(`/${j.kod}/`))?.kod ?? null;
+  const { kod, cesta } = useJazyk();
+  const [otevreno, nastavOtevreno] = useState(false);
+  const obal = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    if (!otevreno) return;
+
+    const naKlik = (e: MouseEvent) => {
+      if (!obal.current?.contains(e.target as Node)) nastavOtevreno(false);
+    };
+    const naKlavesu = (e: KeyboardEvent) => {
+      if (e.key === "Escape") nastavOtevreno(false);
+    };
+
+    // pointerdown, ne click: zavře se hned při stisku, ne až po puštění.
+    document.addEventListener("pointerdown", naKlik);
+    document.addEventListener("keydown", naKlavesu);
+    return () => {
+      document.removeEventListener("pointerdown", naKlik);
+      document.removeEventListener("keydown", naKlavesu);
+    };
+  }, [otevreno]);
+
   const aktivni = JAZYKY.find((j) => j.kod === kod);
+  const holaCesta = bezJazyka(cesta);
 
   return (
-    <details className={`relative ${trida}`}>
-      <summary
-        className="flex min-h-[44px] cursor-pointer list-none items-center gap-1.5 rounded-full px-3 text-[12px] font-semibold uppercase tracking-[0.06em] text-tlum transition-colors hover:bg-[rgb(255_255_255/0.08)] hover:text-inkoust"
-        style={{ fontFamily: "var(--font-mono)" }}
+    <div ref={obal} className={`relative ${trida}`}>
+      <button
+        type="button"
+        onClick={() => nastavOtevreno((o) => !o)}
+        aria-expanded={otevreno}
+        aria-haspopup="menu"
         aria-label="Jazyk / Language"
+        className="flex min-h-[44px] items-center gap-1.5 rounded-full px-3 text-[12px] font-semibold uppercase tracking-[0.06em] text-tlum transition-colors hover:bg-[rgb(255_255_255/0.08)] hover:text-inkoust"
+        style={{ fontFamily: "var(--font-mono)" }}
       >
         <Ikona nazev="mapa" velikost={16} tah={1.8} />
-        <span>{aktivni ? aktivni.kod.toUpperCase() : "CS"}</span>
-        <Ikona nazev="dolu" velikost={11} tah={2} />
-      </summary>
+        <span>{(aktivni?.kod ?? "cs").toUpperCase()}</span>
+        <Ikona nazev="dolu" velikost={11} tah={2} trida={otevreno ? "rotate-180 transition-transform" : "transition-transform"} />
+      </button>
 
-      <div className="absolute right-0 z-50 mt-2 max-h-[70vh] w-[230px] overflow-y-auto rounded-[18px] border border-linka2 bg-plocha p-2 shadow-lg">
-        <Link
-          href="/"
-          hrefLang="cs"
-          className={`block rounded-[12px] px-3 py-2 text-[13.5px] transition-colors hover:bg-plocha2 ${
-            kod === null ? "font-semibold text-inkoust" : "text-tlum"
-          }`}
+      {otevreno && (
+        <div
+          role="menu"
+          className="absolute right-0 z-50 mt-2 max-h-[70vh] w-[230px] overflow-y-auto rounded-[18px] border border-linka2 bg-plocha p-2 shadow-lg"
         >
-          Čeština
-          <span className="block text-[11.5px] text-tlum2">závazné znění</span>
-        </Link>
-        <div className="my-1 border-t border-linka2" />
-        {JAZYKY.map((j) => (
           <Link
-            key={j.kod}
-            href={`/${j.kod}/`}
-            hrefLang={j.kod}
-            aria-current={j.kod === kod ? "page" : undefined}
+            href={holaCesta}
+            hrefLang="cs"
+            role="menuitem"
+            onClick={() => nastavOtevreno(false)}
             className={`block rounded-[12px] px-3 py-2 text-[13.5px] transition-colors hover:bg-plocha2 ${
-              j.kod === kod ? "font-semibold text-inkoust" : "text-tlum"
+              kod === "cs" ? "font-semibold text-inkoust" : "text-tlum"
             }`}
           >
-            {j.nazev}
+            Čeština
+            <span className="block text-[11.5px] text-tlum2">závazné znění</span>
           </Link>
-        ))}
-      </div>
-    </details>
+          <div className="my-1 border-t border-linka2" />
+          {JAZYKY.map((j) => (
+            <Link
+              key={j.kod}
+              href={sJazykem(holaCesta, j.kod)}
+              hrefLang={j.kod}
+              role="menuitem"
+              aria-current={j.kod === kod ? "page" : undefined}
+              onClick={() => nastavOtevreno(false)}
+              className={`block rounded-[12px] px-3 py-2 text-[13.5px] transition-colors hover:bg-plocha2 ${
+                j.kod === kod ? "font-semibold text-inkoust" : "text-tlum"
+              }`}
+            >
+              {j.nazev}
+            </Link>
+          ))}
+        </div>
+      )}
+    </div>
   );
 }
