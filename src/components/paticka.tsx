@@ -43,8 +43,11 @@ function Jazyky() {
 export function Paticka() {
   return (
     // Patička stojí na tmavé desce — jediné velké tmavé místo na stránce.
-    <footer className="neni-tisk px-3 pb-6 sm:px-4">
-      <div className="noc mx-auto max-w-[1200px] rounded-[28px] px-6 py-10 sm:px-8">
+    // Stejný obal jako hlavička a obsah stránky, ať tmavá deska lícuje s panely
+    // nad sebou. Dřív měla vlastní 1200 px a byla o 16 px zasunutá.
+    <footer className="neni-tisk pb-6">
+      <div className="mx-auto max-w-[1280px] px-4 sm:px-6">
+      <div className="noc rounded-[28px] px-6 py-10 sm:px-8">
         <div className="grid gap-10 md:grid-cols-[minmax(0,1.4fr)_repeat(3,minmax(0,1fr))]">
           <div>
             <Logo velikost={32} pismo={17} tmave />
@@ -74,6 +77,7 @@ export function Paticka() {
           ))}
         </div>
         <Jazyky />
+      </div>
       </div>
     </footer>
   );

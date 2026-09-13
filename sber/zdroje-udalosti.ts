@@ -45,6 +45,21 @@ export const ZDROJE_UDALOSTI: ZdrojUdalosti[] = [
   { klic: "gn-sabotaz", nazev: "Google News — sabotáž", url: gn("sabotáž Rusko", true), jazyk: "cs", primarni: false, typ: "media" },
   { klic: "gn-dron-cz", nazev: "Google News — dron vzdušný prostor", url: gn("dron narušení vzdušného prostoru", true), jazyk: "cs", primarni: false, typ: "media" },
   { klic: "gn-kyber-cz", nazev: "Google News — kybernetický útok", url: gn("kybernetický útok NÚKIB", true), jazyk: "cs", primarni: false, typ: "media" },
+  /*
+    Doplněno 13. 9. 2026. Ten den v noci aktivovalo polské letectvo stroje kvůli
+    ruskému úderu na Ukrajinu a na východě Polska zněly sirény — a v kandidátech
+    to nebylo. Síto za to nemohlo: frázi „vzletly stihacky“ zná. Nedorazila sem
+    vůbec žádná zpráva o tom.
+
+    Důvod je v tomhle seznamu: kanály míří na sabotáže, kabely a kyber, dotaz
+    „dron narušení vzdušného prostoru“ se do titulku „v Polsku vzlétly stíhačky“
+    netrefí a polský zdroj tu nebyl ani jeden. Přidané dotazy míří na vzdušnou
+    obranu jako takovou, ne jen na doložené narušení.
+  */
+  { klic: "gn-vzdusna-cz", nazev: "Google News — stíhačky a vzdušný prostor", url: gn("stíhačky vzdušný prostor Polsko Pobaltí", true), jazyk: "cs", primarni: false, typ: "media" },
+  { klic: "gn-poplach-cz", nazev: "Google News — letecký poplach", url: gn("letecký poplach sirény Polsko", true), jazyk: "cs", primarni: false, typ: "media" },
+  { klic: "gn-scramble", nazev: "Google News — NATO air policing", url: gn("Poland Baltic scramble jets airspace NATO", false), jazyk: "en", primarni: false, typ: "media" },
+  { klic: "gn-polsko", nazev: "Google News — Polsko bezpečnost", url: gn("Poland military airspace incident", false), jazyk: "en", primarni: false, typ: "media" },
   { klic: "gn-bis", nazev: "Google News — BIS špionáž", url: gn("BIS ruská špionáž zadržen", true), jazyk: "cs", primarni: false, typ: "media" },
 
   // Rychlé kanály pro vzdušný prostor. Tenhle druh události se pozná do minut

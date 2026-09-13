@@ -1,5 +1,6 @@
 import { describe, expect, it } from "vitest";
 import { kandidatId, obsahujeSlovo, odhadniTemata, odhadniZemi, otisk, relevantni } from "../sber/udalosti";
+import { normalizuj } from "../sber/nacti";
 
 describe("automatický sběr událostí — pravidla", () => {
   it("pozná zemi události, i když je zmíněné Rusko jako původce", () => {
@@ -60,5 +61,39 @@ describe("automatický sběr událostí — pravidla", () => {
     // A pořád nesmí projít běžné zpravodajství.
     expect(relevantni("Fotbalisté v Polsku hráli na hranici svých sil")).toBe(false);
     expect(relevantni("Ministr jednal v Berlíně s partnery o bezpečnosti")).toBe(false);
+  });
+});
+
+/*
+  Vzdušná obrana. 13. 9. 2026 v noci aktivovalo polské letectvo stroje kvůli
+  ruskému úderu na Ukrajinu a na východě Polska zněly sirény — a v kandidátech
+  to nebylo. Tyhle testy drží obojí: že se takové titulky zachytí, a hlavně že
+  se přitom nezačnou chytat pouhá prohlášení a plány.
+*/
+describe("vzlet stíhaček a letecký poplach", () => {
+  const zachyceno = (t: string) => odhadniTemata(t).akty.length > 0;
+
+  it.each([
+    "Rusko a Ukrajina hlásí mrtvé a raněné po útocích, v Polsku vzlétly stíhačky",
+    "Poplach v Polsku: Armáda vyslala do vzduchu stíhačky, na východě zněly sirény",
+    "Poland scrambles aircraft in response to Russian attack on Ukraine",
+    "Drony nad Polskem odhalil Patriot. Vzlétly F-16, F-35 i letoun AWACS",
+    "Kvůli ruskému náletu vzlétly polské stíhačky, pomohly i české vrtulníky",
+  ])("zachytí vykonané opatření: %s", (t) => {
+    expect(zachyceno(t)).toBe(true);
+  });
+
+  it.each([
+    "Polsko zvažuje posílení protivzdušné obrany, řekl ministr",
+    "Vláda chce příští rok nakoupit nové stíhačky",
+    "Ceny pohonných hmot klesly, vzlétly akcie leteckých firem",
+  ])("nechytá prohlášení, plány ani jmenovce: %s", (t) => {
+    expect(zachyceno(t)).toBe(false);
+  });
+
+  it("v seznamu nezůstal zápis s diakritikou, který se nikdy netrefí", () => {
+    // normalizuj() diakritiku odstraňuje, takže „vzlétly“ v seznamu byl mrtvý
+    // zápis. Test hlídá, že se taková past nevrátí.
+    expect(obsahujeSlovo(normalizuj("v Polsku vzlétly stíhačky"), "vzletly stihacky")).toBe(true);
   });
 });

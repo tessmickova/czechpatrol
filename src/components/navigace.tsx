@@ -6,6 +6,7 @@ import { WEB } from "@/config/web";
 import { Ikona } from "./ikony";
 import { otevriPanel } from "./postranni-panel";
 import { Logo } from "./znacka";
+import { PrepinacJazyku } from "./prepinac-jazyku";
 
 /*
   Šest cílů. Vývoj, Aktéři a Manipulace stojí pod jedním rozcestníkem
@@ -27,8 +28,13 @@ export function Navigace() {
 
   return (
     // Hlavička je skleněná pilulka, ne pruh přes celou šířku — tak ji má značka.
-    <header className="neni-tisk sticky top-0 z-50 px-3 pt-3 sm:px-4">
-      <div className="sklo-hlavicka mx-auto flex min-h-[56px] max-w-[1200px] flex-wrap items-center gap-x-4 gap-y-2 rounded-full px-3 py-2 sm:px-4">
+    // Vnější obal je záměrně shodný s obsahem stránky (max-w-[1280px] + px-4/6),
+    // aby pilulka lícovala s panely pod sebou. Dřív měla vlastní 1200 px a byla
+    // o 16 px zasunutá z každé strany; kopírováním obsahu to zůstane srovnané,
+    // i kdyby se šířka webu někdy změnila.
+    <header className="neni-tisk sticky top-0 z-50 pt-3">
+      <div className="mx-auto max-w-[1280px] px-4 sm:px-6">
+      <div className="sklo-hlavicka flex min-h-[56px] flex-wrap items-center gap-x-4 gap-y-2 rounded-full px-3 py-2 sm:px-4">
         <Link href="/" className="mr-auto flex shrink-0 items-center" aria-label={`${WEB.nazev} — přehled`}>
           <Logo velikost={34} pismo={19} tmave />
         </Link>
@@ -50,6 +56,7 @@ export function Navigace() {
         </nav>
 
         <div className="flex items-center gap-2">
+          <PrepinacJazyku />
           <Link
             href="/podporit/"
             // Jediná plná plocha v hlavičce: na tmavém podkladu papír, po najetí červená.
@@ -67,6 +74,7 @@ export function Navigace() {
             <Ikona nazev="menu" velikost={20} tah={1.8} />
           </button>
         </div>
+      </div>
       </div>
     </header>
   );

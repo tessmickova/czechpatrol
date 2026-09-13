@@ -65,6 +65,30 @@ const AKTY: { kategorie: string; slova: string[] }[] = [
     "sestrel", "shot down", "dopad dronu", "drone crash", "drone incursion",
     "uzavreni letiste", "airport closed", "pozastavila provoz letiste", "grounded flights",
   ] },
+  /*
+    Obranná opatření státu, která se opravdu stala.
+
+    Doplněno 13. 9. 2026: v noci aktivovalo polské letectvo stroje kvůli
+    ruskému úderu na Ukrajinu, na východě zněly sirény — a sběrač to nezachytil.
+    Skupina „drony“ výš totiž vyžaduje NARUŠENÍ (sestřel, dopad, uzavření
+    letiště); preventivní vzlet se netrefil do ničeho a slova „vzdušný prostor“
+    a „dron“ jsou jen KONTEXT, který sám nestačí.
+
+    Přitom vzlet stíhaček i spuštění sirén JSOU skutky, ne prohlášení: stát je
+    vykonal a sám je oznámil. Patří tedy do sběru podle pravidla č. 0 bodu (c).
+
+    Pozor na hranici: zachytává se vykonané opatření, ne připravované. Proto tu
+    není „pohotovost“ ani „zvažuje“ — to jsou stavy a plány. A zachycení není
+    zveřejnění: kandidát jde do fronty a člověk rozhodne. Takový záznam patří
+    do druhu „opatreni“, ne „pripad“, aby nenafukoval počty incidentů.
+  */
+  { kategorie: "drony", slova: [
+    "scrambl", "preventivni vzlet",
+    "uzavrel vzdusny prostor", "uzavreni vzdusneho prostoru", "uzavrela vzdusny prostor",
+    "airspace closed", "closed its airspace", "closed airspace",
+    "letecky poplach", "air raid alert", "air raid siren", "protiletecky poplach",
+    "zněly sireny", "znely sireny", "spustily sireny", "rozeznely se sireny",
+  ] },
   { kategorie: "kyber", slova: [
     "cyberattack", "cyber attack", "kyberneticky utok", "kyberutok", "ransomware", "ddos utok", "ddos attack",
     "hacknut", "hacked", "data breach", "unik dat", "vyrazen z provozu",
@@ -87,7 +111,7 @@ const AKTY: { kategorie: string; slova: string[] }[] = [
   ] },
   { kategorie: "nato", slova: [
     "article 4", "article 5", "clanek 4", "clanku 4", "clanek 5", "clanku 5",
-    "aktivovala clanek", "invoked article", "nato scrambled", "vzlétly stihacky", "vzletly stihacky",
+    "aktivovala clanek", "invoked article", "nato scrambled", "vzletly stihacky",
     "rozmisteni sil", "deployment of troops", "posili vychodni kridlo", "reinforce eastern flank",
   ] },
   { kategorie: "hranice", slova: [
@@ -124,6 +148,13 @@ const AKTY_KOMBINACE: { kategorie: string; a: string[]; b: string[] }[] = [
     kategorie: "hranice",
     a: ["hranic", "border", "prechod"],
     b: ["kontrol", "cviceni", "uzavr", "vojak", "vojaci", "armad", "celnic", "zaloh", "checks", "closed", "exercise", "troops", "soldiers"],
+  },
+  {
+    // „Vzlétly polské stíhačky“ — mezi slovy stojí přívlastek, takže se to
+    // nedá hledat jako jedna fráze. Sloveso i technika musí být obojí.
+    kategorie: "drony",
+    a: ["stihac", "stihack", "vrtulnik", "letectv", "letoun", "fighter jet", "f-16", "f-35", "awacs"],
+    b: ["vzletl", "vzlet", "vyslal", "vyslala", "vyslalo", "scrambl", "aktivoval", "aktivovalo", "zvedl"],
   },
   {
     kategorie: "vojsko",
