@@ -32,9 +32,10 @@
 
 | Kde | Co | Bez toho |
 |---|---|---|
-| GitHub secrets | `CLOUDFLARE_API_TOKEN` s právy Pages, D1 Edit, Workers Scripts Edit | **dnes chybí D1 a Workers** → API se nenasadí, neběží upozornění ani spolehlivý plánovač sběru |
+| GitHub secrets | `CLOUDFLARE_API_TOKEN` s právy Pages, D1 Edit, Workers Scripts Edit | API se nenasadí *(doplněno 13. 9. 2026)* |
 | GitHub variables | `API_URL` | účty, souhrn a tipy do správy vypnuté |
-| GitHub secrets | `GH_TOKEN_SBER` — fine-grained token jen na `tessmickova/czechpatrol`, práva **Actions: Read and write** a **Metadata: Read** | sběr běží jen na plánovači GitHubu, tedy zhruba jednou za čtyři hodiny místo každé půlhodiny |
+| GitHub secrets | `GH_TOKEN_SBER` — fine-grained token jen na `tessmickova/czechpatrol`, práva **Actions: Read and write** a **Metadata: Read** | sběr běží jen na plánovači GitHubu *(doplněno 13. 9. 2026)* |
+| GitHub secrets | `TELEGRAM_WEBHOOK_SECRET` + proměnná `TELEGRAM_BOT_JMENO` | webhook Telegramu se nenastaví — bot nepřijímá `/start` a `/stop`, odesílat umí |
 | `src/config/web.ts` | `PROVOZOVATEL.nazev`, `PROVOZOVATEL.kontakt` | stránky o projektu, soukromí a podmínkách říkají, že provozovatel není uveden |
 | `src/config/web.ts` | `TIPY_MAIL` | formulář „Chybí tu událost“ odkazuje jen na GitHub |
 | `src/config/web.ts` | `BUY_ME_A_COFFEE_URL` | stránka Podpořit nemá tlačítko |
@@ -73,13 +74,16 @@ přenese do Workeru přes `wrangler secret put`, stejně jako telegramí token.
 **Bez tokenu se nic nerozbije** — worker to zaloguje a sběr jede dál jen na
 záložním plánovači GitHubu, tedy jako dřív.
 
-> **Stav k 13. 9. 2026: worker zatím neběží.** Všech šest běhů `Nasazení API`
-> selhalo na tom, že `CLOUDFLARE_API_TOKEN` nemá práva `Account · D1 · Edit`
-> a `Account · Workers Scripts · Edit`. Dokud se to nedoplní, neběží ani
-> desetiminutový tik, ani rozesílání upozornění, ani kopání do sběru — sběr
-> stojí výhradně na plánovači GitHubu. Proto má `sber.yml` zatím dva pokusy
-> za hodinu (minuty 7 a 37) místo jednoho: víc pokusů je jediná páka, kterou
-> na straně GitHubu máme.
+> **Historie:** prvních šest běhů `Nasazení API` (5.–13. 9. 2026) selhalo na
+> tom, že `CLOUDFLARE_API_TOKEN` neměl práva `Account · D1 · Edit` a
+> `Account · Workers Scripts · Edit`. Worker po celou tu dobu neexistoval —
+> neběžel tik, ani rozesílání upozornění. **13. 9. 2026 v 10:39 UTC se práva
+> doplnila a worker se nasadil poprvé** (běh č. 7): databáze D1 založena,
+> tajemství `GH_TOKEN_SBER` i `TELEGRAM_BOT_TOKEN` přenesena.
+>
+> `sber.yml` má od téhož dne dva záložní pokusy za hodinu (minuty 7 a 37)
+> místo jednoho. Zůstávají i po nasazení workeru: dokud se spolehlivost
+> workerova tiku neověří delším provozem, jsou to levné pojistky.
 
 Protože sběr teď běží desetkrát častěji, ale data mění jen občas, **nasazení se
 přeskakuje, když se nic nezměnilo**: krok „Je vůbec co nasazovat?“ porovná
