@@ -156,6 +156,28 @@ Názvy zemí se nepíšou ručně; berou se z `Intl.DisplayNames` podle kódu IS
 v `src/lib/jazyky.ts`. Země bez kódu (Evropa, NATO, mezinárodní vody) zůstává
 česky, dokud pro ni někdo nedoplní překlad. Nepřeložený údaj, ne vymyšlený.
 
+## Pravidlo č. 3c — měříme, co se stalo; nepředpovídáme, co přijde
+
+Opakovaně přijde žádost o „stupnici připravenosti k útoku“, „co je na spadnutí“
+nebo „pravděpodobnost, že zaútočí“. **Nedělá se to, ani v náznaku.** Tři důvody,
+každý sám o sobě stačí:
+
+1. Je to předpověď. Pravidlo č. 0 předpovídání zakazuje a hrozí-li, že by
+   zpráva vyvolala obavu z ohrožení, nevydá se (§ 357 TZ).
+2. Nemáme z čeho. Naše data jsou doložené minulé případy. Bojovou připravenost
+   cizího státu z nich spočítat nejde a odhad místo ní by byl výmysl
+   (pravidlo č. 3).
+3. Číslo s grafem působí jistěji než věta „nevíme“, takže výmysl by tu napáchal
+   větší škodu než jinde.
+
+Co se místo toho dělá: **měřidlo doloženého užití** (`src/lib/zpusoby.ts`,
+sekce „Čím se to doloženě dělá“ na `/svet/`). U každého způsobu jednání
+doložené případy za 90 dní, poměr k dvouletému průměru, kdy naposledy, kde,
+nejvyšší závažnost a kolik z toho je **úředně** přisouzeno. Samá dohledatelná
+čísla, žádný výhled — a sekce to o sobě rovnou píše.
+
+Rozdíl je jako mezi srážkoměrem a předpovědí počasí. Srážkoměr umíme.
+
 ## Pravidlo č. 4 — automat smí potvrdit jen zápor
 
 Sběrač nikdy nic nezveřejňuje. Když najde signál, hodnotu **nemění** — založí

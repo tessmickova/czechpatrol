@@ -34,6 +34,7 @@
 |---|---|---|
 | GitHub secrets | `CLOUDFLARE_API_TOKEN` s právy Pages, D1 Edit, Workers Scripts Edit | API se nenasadí *(doplněno 13. 9. 2026)* |
 | GitHub variables | `API_URL` | účty, souhrn a tipy do správy vypnuté |
+| GitHub secrets | `ANTHROPIC_API_KEY` | **dnes chybí** → tři věci neběží: překlady rozhraní zůstávají česky, sběr netřídí kandidáty modelem a odmítnuté zprávy se neposuzují |
 | GitHub secrets | `GH_TOKEN_SBER` — fine-grained token jen na `tessmickova/czechpatrol`, práva **Actions: Read and write** a **Metadata: Read** | sběr běží jen na plánovači GitHubu *(doplněno 13. 9. 2026)* |
 | GitHub secrets | `TELEGRAM_WEBHOOK_SECRET` + proměnná `TELEGRAM_BOT_JMENO` | webhook Telegramu se nenastaví — bot nepřijímá `/start` a `/stop`, odesílat umí |
 | `src/config/web.ts` | `PROVOZOVATEL.nazev`, `PROVOZOVATEL.kontakt` | stránky o projektu, soukromí a podmínkách říkají, že provozovatel není uveden |

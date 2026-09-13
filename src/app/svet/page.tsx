@@ -6,6 +6,7 @@ import { Vlajka } from "@/components/zeme";
 import { HlavickaStranky, NadpisSekce } from "@/components/nadpisy";
 import { datumPraha } from "@/lib/cas";
 import { svet } from "@/lib/data";
+import { ZpusobyVUziti } from "@/components/zpusoby";
 import { TYPY_ZDROJU } from "@/lib/kategorie";
 import type { SvetAktor, SvetTvrzeni } from "@/lib/typy";
 
@@ -222,6 +223,13 @@ export default function Svet() {
           ))}
         </ul>
       </section>
+
+      {/*
+        Způsoby v užití stojí tady, protože tahle stránka už odděluje FAKT od
+        ODHADU. Tabulka je celá na straně faktu: samá doložená čísla a žádný
+        výhled — proto smí stát vedle deklarovaných cílů, aniž by se to smíchalo.
+      */}
+      <ZpusobyVUziti />
 
       <p className="mt-8 text-[12.5px] leading-relaxed text-tlum2">
         Tato stránka je analytická interpretace veřejných zdrojů, ne zpravodajský produkt státu ani předpověď. Aktualizuje ji ranní kontrola spolu s daty; každá změna je v <Link href="/opravy/" className="odkaz">historii oprav</Link>. Chyba nebo lepší zdroj? Napište přes <Link href="/o-projektu/" className="odkaz">O projektu</Link>.
