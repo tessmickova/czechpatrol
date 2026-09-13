@@ -1,5 +1,65 @@
 [
   {
+    "id": "k-4c43e0cf0f85c49b",
+    "zachyceno": "2026-09-13T12:02:31.326Z",
+    "publikovano": "2026-09-13T11:57:00.000Z",
+    "zdroj": {
+      "nazev": "Google News — narušení vzdušného prostoru",
+      "url": "https://news.google.com/rss/articles/CBMi4wFBVV95cUxNU0p6bHBvNDRrQnFKSUI2dUp6V3pEVUpKN2lxWkVTNDBOQV8xOC11TFZjLXVLeXhUSGJwNEI4MDJSUEhTaW9ZTkJEcjBQOExOMzlMdm13bWFWamVfNS1zOG5veldKOHVQM1V2Wm9xanlscW9VcHJBYTllUGxBQTNhSDI4cXFvaVFLSzJzUFg4ZWNtZ1kyZUljRnJDSG93TkRoa0VMbVo5a3BaRmdTNG5HRk9ScWpTM3ZOMXlldFBFSXhMWk1xd25vNUlBbmZEcDhEREhHLVF2QTA1OWpGcUpoUF9JVQ?oc=5",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Litva kvůli možnému dronu uzavřela letiště ve Vilniusu. Vzlétla stíhačka NATO - Aktuálně.cz",
+    "titulekPuvodni": "Litva kvůli možnému dronu uzavřela letiště ve Vilniusu. Vzlétla stíhačka NATO - Aktuálně.cz",
+    "shrnuti": "<a href=\"https://news.google.com/rss/articles/CBMi4wFBVV95cUxNU0p6bHBvNDRrQnFKSUI2dUp6V3pEVUpKN2lxWkVTNDBOQV8xOC11TFZjLXVLeXhUSGJwNEI4MDJSUEhTaW9ZTkJEcjBQOExOMzlMdm13bWFWamVfNS1zOG5veldKOHVQM1V2Wm9xanlscW9VcHJBYTllUGxBQTNhSDI4cXFvaVFLSzJzUFg4ZWNtZ1kyZUljRnJDSG93TkRoa0VMbVo5a3BaRmdTNG5HRk9ScWpTM3ZOMX",
+    "kodZeme": "LT",
+    "zeme": "Litva",
+    "kategorie": [
+      "drony",
+      "nato"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "shody": [
+      "stihac+vzletl",
+      "dron",
+      "nato"
+    ],
+    "stav": "ceka"
+  },
+  {
+    "id": "k-578fdd0976dd2bcc",
+    "zachyceno": "2026-09-13T12:02:31.251Z",
+    "publikovano": "2026-09-13T11:46:00.000Z",
+    "zdroj": {
+      "nazev": "iROZHLAS — zprávy",
+      "url": "https://www.irozhlas.cz/zpravy-svet/kvuli-dronovym-utokum-na-cas-zastavily-provoz-letiste-litva-a-polsko-vzletla-i_2609131346_med",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Kvůli dronovým útokům na čas zastavily provoz letiště Litva a Polsko. Vzlétla i stíhačka NATO",
+    "titulekPuvodni": "Kvůli dronovým útokům na čas zastavily provoz letiště Litva a Polsko. Vzlétla i stíhačka NATO",
+    "shrnuti": "Letiště ve Vilniusu krátce zastavilo provoz kvůli možnému narušení vzdušného prostoru cizím dronem. Informovalo o tom litevské národní centrum pro řízení krizí. Výstrahu stáhlo zhruba po dvaceti minutách. Kvůli možnému ohrožení vzlétla i stíhačka NATO. Také v Polsku preventivně odstartovaly stíhačky",
+    "kodZeme": "PL",
+    "zeme": "Polsko",
+    "kategorie": [
+      "drony",
+      "nato",
+      "hranice"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "shody": [
+      "naruseni vzdusneho prostoru",
+      "stihac+vzletl",
+      "dron",
+      "drone",
+      "nato",
+      "hranice"
+    ],
+    "stav": "ceka"
+  },
+  {
     "id": "k-48b56662d5a57a85",
     "zachyceno": "2026-09-13T11:02:29.629Z",
     "publikovano": "2026-09-13T10:51:00.000Z",
