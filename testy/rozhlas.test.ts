@@ -1,6 +1,8 @@
 // @ts-nocheck — skript je prostý ES modul bez typů; test hlídá chování, typy hlídá běh.
+import fs from "node:fs";
+import path from "node:path";
 import { describe, expect, it } from "vitest";
-import { klicovaVeta, legendaTecek, pocetZdroju, pruhTecek, rozdelZpravu, sestavSouhrn, sestavTest, sestavZdroje, sestavZmenuStavu, sestavZpravu, vyberNove, vyberZmenyStavu, zahlavi } from "../nastroje/rozhlas.mjs";
+import { klicovaVeta, legendaTecek, pocetZdroju, pruhTecek, PUVODCI, radekPokryti, rozdelZpravu, sestavSouhrn, sestavTest, sestavZdroje, sestavZmenuStavu, sestavZpravu, vyberNove, vyberZmenyStavu, zahlavi } from "../nastroje/rozhlas.mjs";
 import { UROVNE, zDeseti } from "../src/lib/skala";
 import type { Uroven } from "../src/lib/typy";
 
@@ -90,16 +92,16 @@ describe("rozhlas", () => {
     expect(sestavZmenuStavu({ kdy: "2026-09-06T00:00:00Z" }, ["NATO — clanek-4: NE → ANO"])).toContain("<b>Mění se rozsah toho, co úředně platí.");
     expect(sestavTest(venku)).toContain("<b>Kanál je funkční.");
   });
-  it("zpráva je členěná: puntík a krátký titulek, co se stalo, co nevíme, hodnocení, odkaz", () => {
-    const z = sestavZpravu(zaznam({ kratkyTitulek: "Krátce", neznameho: ["Nevíme kdo."] }));
+  it("zpráva je členěná: puntík a krátký titulek, co se stalo, co nevíme, odkaz", () => {
+    const z = sestavZpravu(zaznam({ kratkyTitulek: "Krátce", fakta: ["První fakt."], neznameho: ["Nevíme kdo."] }));
     const radky = z.split("\n");
     expect(radky[0]).toBe("🟠 Závažnost: 7 z 10 · vysoká");
     expect(radky[1]).toBe("<b>Krátce</b>");
     expect(radky[2]).toBe("Německo · případ · 4. 9. 2026");
-    expect(z).toContain("Co se stalo\n• Titulek &lt;b&gt;");
-    expect(z).toContain("Co nebylo potvrzeno\n• Nevíme kdo.");
+    expect(z).toContain("První fakt.");
+    expect(z).toContain("Nepotvrzeno: Nevíme kdo.");
     // Patička dělá ze zprávy citovatelný dokument.
-    expect(z).toContain("Úplný záznam a zdroje: https://czechpatrol.pages.dev/incident/x/");
+    expect(z).toContain("Všechna fakta, hodnocení a všechny zdroje: https://czechpatrol.pages.dev/incident/x/");
     expect(z.trimEnd().endsWith("CzechPatrol · záznam x · aktualizováno 4. 9. 2026")).toBe(true);
   });
   it("souhrn: pruh a legenda nahoře, nejdřív opatření a české záznamy", () => {
@@ -159,21 +161,50 @@ describe("rozhlas", () => {
     primarni: false, jazyk: "cs", ...n,
   });
 
-  it("zpráva vypisuje všechna fakta i všechno, co nevíme — nic se neuřízne", () => {
+  it("do kanálu jde jedna věta co se stalo a jedna co potvrzené není; zbytek je na webu", () => {
     const z = sestavZpravu(zaznam({
       fakta: ["První fakt.", "Druhý fakt.", "Třetí fakt."],
       neznameho: ["Nevíme kdo.", "Nevíme proč."],
       vyznam: "Hodnocení projektu k případu.",
       stav: "probiha",
     }));
-    for (const t of ["První fakt.", "Druhý fakt.", "Třetí fakt.", "Nevíme kdo.", "Nevíme proč."]) {
-      expect(z).toContain(`• ${t}`);
-    }
-    expect(z).toContain("Hodnocení CzechPatrol (nejde o zjištěný fakt)\nHodnocení projektu k případu.");
+    expect(z).toContain("První fakt.");
+    expect(z).not.toContain("Druhý fakt.");
+    // Jedna věta o nepotvrzeném musí zůstat: bez ní si čtenář vyvodí víc,
+    // než data ukazují (pravidlo č. 6).
+    expect(z).toContain("Nepotvrzeno: Nevíme kdo.");
+    expect(z).not.toContain("Nevíme proč.");
+    // Hodnocení se nezkracuje — zkrácené hodnocení bez podkladu je horší
+    // než žádné. Patří na web, kam zpráva odkazuje.
+    expect(z).not.toContain("Hodnocení projektu k případu.");
     expect(z).toContain("Stav: vyšetřování pokračuje");
   });
 
-  it("vypíše všechny zdroje po skupinách a řekne, kolik z nich je od úřadů", () => {
+  it("žádná zpráva se nevejde mimo jednu zprávu Telegramu", () => {
+    // Kanál je upozornění, ne archiv. Dělení na díly „pokračování“ u běžného
+    // záznamu znamenalo, že je zpráva moc dlouhá.
+    const dlouhy = zaznam({
+      fakta: Array.from({ length: 12 }, (_, n) => `Fakt číslo ${n} s poměrně dlouhým popisem události.`),
+      neznameho: Array.from({ length: 6 }, (_, n) => `Nevíme ${n}.`),
+      zdroje: Array.from({ length: 10 }, (_, n) => zdroj({ nazev: `Zdroj ${n}`, url: `https://z.example/${n}` })),
+    });
+    expect(sestavZpravu(dlouhy).length).toBeLessThan(1500);
+    expect(rozdelZpravu(sestavZpravu(dlouhy))).toHaveLength(1);
+  });
+
+  it("zpráva nese poměr zdrojů, ne jejich výpis — výpis je na webu", () => {
+    const i = zaznam({ zdroje: [
+      zdroj({ nazev: "Tagesschau", typ: "media", jazyk: "de", url: "https://ts.de/a" }),
+      zdroj({ nazev: "Policie ČR", typ: "primary", primarni: true, url: "https://policie.cz/b" }),
+      zdroj({ nazev: "Reuters", typ: "wire", jazyk: "en", url: "https://reuters.com/c" }),
+    ] });
+    const z = sestavZpravu(i);
+    expect(z).toContain("Zdroje: 3 (úřady 1 · agentury 1 · média 1)");
+    expect(z).not.toContain("Policie ČR");
+    expect(z).not.toContain("Úřady a primární zdroje");
+  });
+
+  it("úplný výpis zdrojů po skupinách zůstává dostupný mimo kanál", () => {
     const i = zaznam({ zdroje: [
       zdroj({ nazev: "Tagesschau", typ: "media", jazyk: "de", url: "https://ts.de/a" }),
       zdroj({ nazev: "Policie ČR", typ: "primary", primarni: true, url: "https://policie.cz/b" }),
@@ -188,13 +219,14 @@ describe("rozhlas", () => {
     expect(radky.join("\n")).toContain('Agentury\n• <a href="https://reuters.com/c">Reuters</a> · 4. 9. 2026 · en');
     expect(radky.join("\n")).toContain("Noviny a zpravodajství");
     expect(radky.join("\n")).not.toContain("Bez odkazu");
-    expect(sestavZpravu(i)).toContain("Zdroje (3): úřady 1");
   });
 
   it("bez úředního zdroje to zpráva přizná, ale mluví jen o svých odkazech", () => {
+    const vKanalu = sestavZpravu(zaznam({ zdroje: [zdroj({ nazev: "Deník" })] }));
+    expect(vKanalu).toContain("Zdroje: 1 (úřady 0 · média 1)");
+    expect(vKanalu).toContain("Mezi zdroji není přímý odkaz na úřední oznámení");
     const bezUradu = sestavZdroje(zaznam({ zdroje: [zdroj({ nazev: "Deník" })] })).join("\n");
     expect(bezUradu).toContain("Zdroje (1): úřady 0 · média 1");
-    expect(bezUradu).toContain("Mezi zdroji není přímý odkaz na úřední oznámení");
     const sUradem = sestavZdroje(zaznam({ zdroje: [zdroj({ nazev: "Vláda", typ: "primary" })] })).join("\n");
     expect(sUradem).not.toContain("není přímý odkaz");
     expect(sestavZdroje(zaznam({ zdroje: [] }))[0]).toContain("žádný odkaz");
@@ -215,5 +247,31 @@ describe("rozhlas", () => {
     expect(dily).toHaveLength(3);
     expect(dily[1].startsWith("↳ pokračování 2/3")).toBe(true);
     for (const d of dily) expect(d.length).toBeLessThanOrEqual(4096);
+  });
+});
+
+describe("číselníky v rozhlasu se nesmí rozejít s daty", () => {
+  it("každý původce použitý v datech má v kanálu svůj název", () => {
+    // Skript je prostý .mjs a nese kopii číselníku. Když se na webu přidá
+    // hodnota a tady ne, projde do kanálu „Pachatel: undefined“ — což se
+    // jednou stalo u nestátní skupiny.
+    const data = JSON.parse(
+      fs.readFileSync(path.join(process.cwd(), "data", "incidenty.json"), "utf-8"),
+    ) as { puvodce?: string | null }[];
+    const pouzite = new Set(data.map((i) => i.puvodce).filter((p): p is string => Boolean(p)));
+    for (const p of pouzite) {
+      expect(Object.keys(PUVODCI), `původce „${p}“ nemá v rozhlasu název`).toContain(p);
+    }
+  });
+
+  it("žádná sestavená zpráva neobsahuje undefined ani null", () => {
+    const data = JSON.parse(
+      fs.readFileSync(path.join(process.cwd(), "data", "incidenty.json"), "utf-8"),
+    ) as Parameters<typeof sestavZpravu>[0][];
+    for (const i of data) {
+      const z = sestavZpravu(i);
+      expect(z, `záznam ${(i as { slug: string }).slug}`).not.toContain("undefined");
+      expect(z).not.toContain("null");
+    }
   });
 });

@@ -82,10 +82,43 @@ Souhrn místo toho začíná **pruhem puntíků** — tolik puntíků, kolik je 
 
 Hned pod záhlavím stojí **tučně jedna věta** — to nejpodstatnější pro čtenáře v Česku: jestli z toho něco oficiálně plyne, nebo ne. Skládá ji `klicovaVeta()` jen z toho, co v záznamu je (druh, země, vztah k ČR). **Nic se nedomýšlí a nikomu se neradí, jestli někam jet nebo nejet** — na to data nestačí a projekt to nedělá ani na webu. U souhrnu je tučná věta jedna za celou zprávu: platí-li dnes v Česku něco nového, řekne co; jinak řekne, že nic.
 
-Dál má zpráva pevné pořadí a **píše se celá, ne v náznacích**: záhlaví s puntíkem, krátký titulek, řádek země · druh · datum, tučná věta, **Co je nového** (jen u aktualizace), **Co se stalo** se všemi fakty, **Co zatím nevíme** se vším nedořešeným, **Proč to sledujeme** (hodnocení projektu, výslovně označené), řádek Jistota · Pachatel · Stav vyšetřování, výpis zdrojů a odkaz na celý záznam. U opatření a záznamů týkajících se ČR přibývá odkaz na přehled opatření. Kdo chce jen přehled, přečte první čtyři řádky; kdo chce doklady, čte dál.
+Dál má zpráva **pevné pořadí a jde na jednu obrazovku**: záhlaví s puntíkem,
+krátký titulek, řádek země · druh · datum, tučná věta, jedna věta **co se stalo**
+(u aktualizace to nové), jedna věta **Nepotvrzeno**, řádek Jistota · Pachatel ·
+Stav vyšetřování, řádek **poměru zdrojů** a odkaz na celý záznam. U opatření
+a záznamů týkajících se ČR přibývá odkaz na přehled opatření.
 
-**Zdroje se vypisují všechny** a po skupinách v pořadí úřady → agentury → noviny → místní → analýzy → sociální sítě, každý jako odkaz s datem vydání a jazykem. Nad výpisem stojí souhrn `Zdroje (4): úřady 0 · agentury 1 · média 3`, aby bylo vidět, kdo o věci mluví. Když mezi odkazy není žádný úřední, zpráva to řekne — a mluví přitom **jen o svém seznamu odkazů**, ne o světě: úřad mohl věc oznámit, jen na to zatím nemáme přímý odkaz. Nejdelší dnešní záznam dá zprávu kolem 2 900 znaků; delší se rozdělí mezi odstavci na díly označené „pokračování“, protože Telegram bere 4 096 znaků na zprávu.
+Kanál je **upozornění, ne archiv**. Do září 2026 se posílal celý rozbor včetně
+všech faktů, všeho nepotvrzeného, hodnocení projektu a výpisu všech odkazů;
+nejdelší zpráva měla 3 500 znaků a musela se dělit. Dnes má nejdelší 983 znaků
+a žádná se nedělí. Zkrátilo se ale jen to, co je o klik dál — prvky, kvůli kterým
+formát vznikl, zůstaly:
+
+| Prvek | Proč zůstal |
+|---|---|
+| puntík a závažnost číslem | míra se má přečíst, ne odhadnout z titulku |
+| tučná věta o dopadu na ČR | jádro protialarmismu; skoro vždy „neplyne nic“ |
+| jedna věta *Nepotvrzeno* | pravidlo č. 6: k horšímu údaji patří i to, co se nestalo |
+| poměr zdrojů `Zdroje: 5 (úřady 0 · agentury 1 · média 4)` | kvůli tomuhle se odkazy vypisovaly — poměr nese i jeden řádek |
+| věta, že mezi odkazy není úřední | „stojí to jen na novinách“ je podstatná informace |
+| patička se slugem a datem | dělá ze zprávy citovatelný dokument |
+
+Vypadl **výpis odkazů** (poměr nese řádek pokrytí, odkazy jsou na webu)
+a **hodnocení projektu**. Hodnocení se schválně nezkracuje: zkrácené hodnocení
+bez podkladu je horší než žádné, takže se do kanálu neposílá vůbec a zůstává
+na webu, kde je pod ním doložení. Ostatní fakta a zbytek nepotvrzeného jsou
+o jedno kliknutí dál — odkaz vede na `/incident/<slug>/`.
+
+Úplný výpis zdrojů po skupinách (`sestavZdroje`) v kódu zůstává pro případ
+použití mimo kanál; zpráva ho nevolá.
 
 V souhrnu jsou položky zkrácené na titulek, hodnocení, počet zdrojů a odkaz, seřazené podle naléhavosti (opatření nahoru, při shodě české dřív) — souhrn je přehled, ne čtení.
 
-Přístupy: secret `TELEGRAM_BOT_TOKEN`, volitelně variable `TELEGRAM_KANAL` (výchozí @czechpatrol). Bez tokenu skript skončí bez chyby a nic neposílá. Test: workflow Rozhlas ručně s volbou „Poslat testovací zprávu“. Náhled bez odeslání: `node nastroje/rozhlas.mjs --okamzite --nacisto`.
+Přístupy: secret `TELEGRAM_BOT_TOKEN`, volitelně variable `TELEGRAM_KANAL` (výchozí @czechpatrol). Bez tokenu skript skončí bez chyby a nic neposílá. Test: workflow Rozhlas ručně s volbou „Poslat testovací zprávu“. Náhled bez odeslání: `node nastroje/rozhlas.mjs --okamzite --nacisto` — ukáže ale jen to, co ještě neodešlo.
+Podobu zprávy u libovolného záznamu (i už odeslaného) vykreslí
+`node nastroje/nahled-zpravy.mjs <slug> [--souhrn] [--holy]`, případně
+`node nastroje/nahled-zpravy.mjs --nejdelsi 3` pro nejdelší zprávy v datech.
+
+Číselníky (`Z_DESETI`, `PUVODCI`) jsou v `rozhlas.mjs` kopie kvůli tomu, že skript
+je prostý `.mjs`. Testy hlídají, že se nerozejdou s `src/lib/` a s daty — jednou už
+se to stalo a do souhrnu prošlo „Pachatel: undefined“.
