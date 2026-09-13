@@ -35,7 +35,8 @@ const NAZVY_UROVNI = {
 /** Úroveň jako číslo 1–10. Táž tabulka jako `zDeseti()` v src/lib/skala.ts — hlídá test. */
 const Z_DESETI = { G1: 1, G2: 2, G3: 3, Y1: 4, Y2: 5, Y3: 6, YO: 6, O1: 7, O2: 8, O3: 8, R1: 9, R2: 9, R3: 10 };
 const JISTOTY = { nizka: "nízká", stredni: "střední", vysoka: "vysoká", potvrzeno: "potvrzeno" };
-const PUVODCI = { rusko: "Rusko", ukrajina: "Ukrajina", "jiny-stat": "jiný stát", domaci: "domácí", neznamy: "neznámý" };
+// Kopie číselníku z src/lib/typy.ts — skript je prostý .mjs. Test hlídá, že se nerozejdou.
+const PUVODCI = { rusko: "Rusko", ukrajina: "Ukrajina", "jiny-stat": "jiný stát", "neni-stat": "nestátní skupina", domaci: "domácí pachatel", neznamy: "neznámý" };
 const DRUHY = { pripad: "případ", aktualizace: "aktualizace", opatreni: "opatření", reakce: "reakce" };
 /** Šestý pád názvu země, aby věta „stalo se v…“ byla česky. Neznámá země se opíše jinak. */
 const V_ZEMI = {
@@ -182,8 +183,32 @@ export function pocetZdroju(i) {
 }
 
 /**
+ * Pokrytí na jeden řádek: kolik zdrojů a jak se dělí.
+ *
+ * Tohle je to, kvůli čemu se ve zprávě zdroje vypisovaly — aby čtenář na
+ * první pohled viděl, jestli věc stojí na úřadu, nebo jen na novinách.
+ * Výpis odkazů to nesl navíc; poměr nese i samotný řádek, a ten se do
+ * kanálu vejde.
+ */
+export function radekPokryti(i) {
+  const { celkem, pocty, uredni } = pocetZdroju(i);
+  if (!celkem) return ["Zdroje: žádný odkaz. Záznam je vedený jako nedoložený."];
+  const prehled = SKUPINY_ZDROJU.filter((sk) => sk.typ === "primary" || pocty[sk.typ])
+    .map((sk) => `${sk.slovo} ${pocty[sk.typ] ?? 0}`)
+    .join(" · ");
+  const radky = [`Zdroje: ${celkem} (${prehled})`];
+  // Věta mluví o seznamu odkazů, ne o světě: úřad mohl věc oznámit, jen k tomu
+  // nemáme přímý odkaz. Zaměnit obojí by byla nepravda.
+  if (!uredni) radky.push("Mezi zdroji není přímý odkaz na úřední oznámení; údaje jsou zprostředkované.");
+  return radky;
+}
+
+/**
  * Výpis všech zdrojů po skupinách. Úřady první — a když žádný není, napíše se to
  * natvrdo, protože „stojí to jen na novinách“ je pro čtenáře podstatná informace.
+ *
+ * Do kanálu se od září 2026 neposílá; zůstává pro web a pro případ, že by se
+ * někdy hodil plný výpis jinde.
  */
 export function sestavZdroje(i) {
   const zdroje = (i.zdroje ?? []).filter((z) => z.url && /^https?:\/\//.test(z.url));
@@ -210,13 +235,29 @@ export function sestavZdroje(i) {
 }
 
 /**
- * Jedna zpráva k záznamu. Píše se celá, ne v náznacích: záhlaví se závažností,
- * krátký titulek, tučně to nejpodstatnější, všechna fakta, co zatím nevíme,
- * hodnocení projektu, stav vyšetřování a výpis všech zdrojů po skupinách.
- * Kdo chce jen přehled, přečte první čtyři řádky; kdo chce doklady, čte dál.
+ * Jedna zpráva k záznamu.
  *
- * V souhrnu se posílá zkrácená podoba — tam jde o výčet, ne o čtení.
+ * Kanál je upozornění, ne archiv: celý rozbor je na webu a odkaz na něj
+ * vede z každé zprávy. Zpráva proto nese jen to, bez čeho by byla holým
+ * titulkem — a holý titulek je přesně to, co pravidlo č. 0 zakazuje:
+ *
+ *   • puntík a závažnost číslem — aby šla míra přečíst, ne odhadnout,
+ *   • tučná věta, co z toho plyne pro Česko (skoro vždy: nic),
+ *   • jedna věta, co se stalo,
+ *   • jedna věta, co potvrzené není — bez ní by si čtenář vyvodil víc,
+ *     než data ukazují (pravidlo č. 6),
+ *   • jistota, pachatel, stav vyšetřování,
+ *   • poměr zdrojů: kolik z nich je úřad a kolik noviny,
+ *   • odkaz na záznam a citovatelná patička.
+ *
+ * Vypadl výpis všech odkazů (poměr nese řádek pokrytí) a hodnocení
+ * projektu. Hodnocení se schválně nezkracuje: zkrácené hodnocení bez
+ * podkladu je horší než žádné. Patří na web, kde je pod ním doložení.
+ *
+ * V souhrnu se posílá ještě kratší podoba — tam jde o výčet, ne o čtení.
  */
+export { PUVODCI };
+
 export function sestavZpravu(i, { aktualizace = false, souhrn = false } = {}) {
   const d = druh(i);
   const kde = i.kodZeme === "CZ" ? "Česko" : i.zeme;
@@ -245,25 +286,20 @@ export function sestavZpravu(i, { aktualizace = false, souhrn = false } = {}) {
 
   radky.push("", `<b>${esc(klicovaVeta(i))}</b>`);
 
+  // Co se stalo: u aktualizace to nové, jinak první doložený fakt. Jedna věta.
   const nove = aktualizace && i.historie?.length ? i.historie[i.historie.length - 1].text : null;
-  if (nove) radky.push("", "Co je nového", `• ${esc(zkrat(nove, 600))}`);
+  const jadro = nove ?? i.fakta?.[0] ?? i.titulek;
+  radky.push("", `${aktualizace ? "Co je nového: " : ""}${esc(zkrat(jadro, 280))}`);
 
-  radky.push("", "Co se stalo", `• ${esc(zkrat(i.titulek, 400))}`);
-  for (const f of i.fakta ?? []) radky.push(`• ${esc(zkrat(f, 600))}`);
-
-  if (i.neznameho?.length) {
-    radky.push("", "Co nebylo potvrzeno");
-    for (const n of i.neznameho) radky.push(`• ${esc(zkrat(n, 400))}`);
-  }
-
-  if (i.vyznam) radky.push("", "Hodnocení CzechPatrol (nejde o zjištěný fakt)", esc(zkrat(i.vyznam, 600)));
+  // Co potvrzené není. Jedna věta, ale povinně — viz pravidlo č. 6.
+  const nejisté = i.neznameho?.[0];
+  if (nejisté) radky.push(`Nepotvrzeno: ${esc(zkrat(nejisté, 180))}`);
 
   const stav = STAVY[i.stav];
   radky.push("", [jistota, pachatel, stav && stav !== "Neuvedeno" ? `Stav: ${stav.toLowerCase()}` : null].filter(Boolean).join(" · "));
+  radky.push(...radekPokryti(i));
 
-  radky.push("", ...sestavZdroje(i));
-
-  radky.push("", `Úplný záznam a zdroje: ${odkaz}`);
+  radky.push("", `Všechna fakta, hodnocení a všechny zdroje: ${odkaz}`);
   if (d === "opatreni" || seTykaCr(i)) radky.push(`Úřední opatření platná v ČR: ${WEB}/#opatreni`);
   // Patička dělá ze zprávy citovatelný dokument: kdo ji vydal a pod jakým číslem.
   radky.push(`CzechPatrol · záznam ${esc(i.slug)} · aktualizováno ${datumCz(i.aktualizovano ?? kdyZjisteno(i))}`);
