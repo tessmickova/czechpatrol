@@ -38,6 +38,9 @@ jobs:
       - uses: actions/checkout@v4
         with:
           ref: main
+          # Celá historie: bez ní nejde spočítat, o kolik je repozitář napřed
+          # proti tomu, co je nasazené, ani co se mezitím změnilo.
+          fetch-depth: 0
 
       - name: Zjistit stav živého webu
         env:
@@ -53,12 +56,29 @@ jobs:
           REPO=$(git rev-parse HEAD)
           HTML=$(curl -s -o /dev/null -w "%{http_code}" --max-time 25 "$ADRESA/" || echo 000)
           if [ "$ZIVY" = "$REPO" ]; then SHODA=true; else SHODA=false; fi
+
+          # Commity od botů (sběr, rozhlas, tenhle workflow) se dělají výchozím
+          # tokenem, a ten nasazení nespouští. Repozitář je proto běžně o pár
+          # commitů napřed, aniž by to znamenalo problém. Skutečně vadí až
+          # rozdíl v tom, co se na web publikuje — proto se vedle holé shody
+          # počítá i to, o kolik a v čem je repozitář napřed.
+          POZADU=0
+          ROZDIL=false
+          if [ -n "$ZIVY" ] && git cat-file -e "$ZIVY^{commit}" 2>/dev/null; then
+            POZADU=$(git rev-list --count "$ZIVY..HEAD")
+            if git diff --name-only "$ZIVY" HEAD | grep -vE '^data/fronta/' | grep -q .; then
+              ROZDIL=true
+            fi
+          fi
+
           jq -n \
             --arg kdy "$(date -u +%Y-%m-%dT%H:%M:%SZ)" \
             --arg adresa "$ADRESA" \
             --arg kodStav "$KOD" --arg kodHtml "$HTML" \
             --arg zivy "$ZIVY" --arg repo "$REPO" --arg gen "$GENEROVANO" \
-            --argjson shoda "$SHODA" '{
+            --argjson shoda "$SHODA" \
+            --argjson pozadu "${POZADU:-0}" \
+            --argjson rozdil "$ROZDIL" '{
               kontrolovano: $kdy,
               adresa: $adresa,
               dostupny: ($kodHtml == "200"),
@@ -68,7 +88,16 @@ jobs:
               zivyGenerovano: (if $gen == "" then null else $gen end),
               repoCommit: $repo,
               shodujeSe: $shoda,
-              poznamka: "Zapsáno workflow Stav pro routines. Routine tenhle soubor jen čte; na doménu sama nedosáhne."
+              commituNavic: $pozadu,
+              rozdilVObsahu: $rozdil,
+              poznamka: (if $shoda then
+                  "Na webu běží přesně to, co je v repozitáři."
+                elif ($rozdil | not) then
+                  "Repozitář je napřed jen o zápisy stavu (data/fronta), které se na web nepublikují. Není to rozpor."
+                else
+                  "Repozitář je napřed o obsah, který ještě není nasazený. Nejbližší nasazení to srovná; ručně nenasazovat."
+                end),
+              vysvetleni: "Zapsáno workflow Stav pro routines. Routine tenhle soubor jen čte; na doménu sama nedosáhne. Za rozpor považuj jen rozdilVObsahu: true, který trvá i v dalším běhu."
             }' > data/fronta/zivy-web.json
           cat data/fronta/zivy-web.json
 
@@ -99,7 +128,22 @@ jobs:
           git add data/fronta/zivy-web.json data/fronta/behy.json
           if git diff --cached --quiet; then
             echo "Beze změny."
-          else
-            git commit -m "Stav pro routines: živý web a historie běhů $(date -u +'%Y-%m-%d %H:%M UTC')"
-            git push
+            exit 0
           fi
+          git commit -m "Stav pro routines: živý web a historie běhů $(date -u +'%Y-%m-%d %H:%M UTC')"
+
+          # Mezitím mohl na main přibýt commit z jiného workflow (rozhlas zapisuje
+          # stav odeslaných zpráv) a GitHub občas odpoví chybou 500. Obojí je
+          # přechodné: přebasovat na aktuální main a zkusit znovu.
+          for pokus in 1 2 3 4 5; do
+            if git push; then
+              echo "Odesláno na pokus $pokus."
+              exit 0
+            fi
+            echo "Push selhal (pokus $pokus), zkusím znovu."
+            sleep $((pokus * 5))
+            git fetch origin main || true
+            git rebase origin/main || { git rebase --abort || true; }
+          done
+          echo "::error::Stav pro routines se nepodařilo zapsat ani na pátý pokus."
+          exit 1

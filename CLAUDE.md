@@ -158,15 +158,20 @@ Obojí za ni zjišťuje workflow **Stav pro routines**
 
 | Soubor | Co v něm je | Místo čeho |
 |---|---|---|
-| `data/fronta/zivy-web.json` | dostupnost domény, commit živého buildu, commit repozitáře, `shodujeSe` | stažení `czechpatrol.pages.dev` |
+| `data/fronta/zivy-web.json` | dostupnost domény, commit živého buildu, commit repozitáře, `shodujeSe`, `commituNavic`, `rozdilVObsahu` | stažení `czechpatrol.pages.dev` |
 | `data/fronta/behy.json` | posledních 30 běhů: workflow, závěr, SHA, čas, odkaz | volání `api.github.com` |
 
 **Postup pro routine:**
 
 1. `git pull`, pak přečíst oba soubory z pracovní kopie. Žádná síť.
-2. `zivy-web.json` → `shodujeSe: false` znamená, že na doméně běží jiný
-   commit než v repozitáři. Podívej se na `kontrolovano`: když je starší než
-   den, je starý i ten údaj a nezakládá závěr.
+2. `zivy-web.json` → `shodujeSe: false` samo o sobě **není rozpor**.
+   Commity od botů (sběr, rozhlas, zápis stavu) se dělají výchozím tokenem,
+   který nasazení nespouští, takže repozitář bývá běžně o pár commitů napřed.
+   Rozhoduje `rozdilVObsahu`: `false` znamená, že napřed jsou jen zápisy
+   stavu, které se na web nepublikují — do zprávy to nepatří. Jako rozpor ber
+   jen `rozdilVObsahu: true`, které trvá i v následujícím běhu; `commituNavic`
+   říká, o kolik commitů jde. Podívej se i na `kontrolovano`: když je starší
+   než den, je starý i ten údaj a nezakládá závěr.
 3. `behy.json` → závěr posledních běhů Nasazení, Kontrola, Hodinový sběr
    dat a Rozhlas do kanálů.
 4. Když je `kontrolovano: null` nebo pole `behy` prázdné, workflow ještě

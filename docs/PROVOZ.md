@@ -131,7 +131,8 @@ místo toho, aby sáhly na síť:
 
 - `data/fronta/zivy-web.json` — dostupnost `czechpatrol.pages.dev`, commit, ze
   kterého je živý build (bere se z `/stav.json`, pole `commit`, plněné
-  z `GITHUB_SHA` při buildu), commit repozitáře a příznak `shodujeSe`.
+  z `GITHUB_SHA` při buildu), commit repozitáře a příznak `shodujeSe`, vedle
+  toho `commituNavic` a `rozdilVObsahu`.
 - `data/fronta/behy.json` — posledních 30 běhů workflow: název, závěr, SHA, čas
   a odkaz.
 
@@ -143,6 +144,19 @@ z těch omezení nemá, takže zjištění proběhne tam a routine ho jen přeč
 
 Commit se dělá výchozím tokenem, který další workflow nespouští — jinak by se to
 zacyklilo s Nasazením.
+
+**Proč nestačí holá shoda commitů.** Právě proto, že commity od botů (sběr,
+rozhlas, zápis stavu) nasazení nespouštějí, je repozitář běžně o pár commitů
+napřed, aniž by na webu cokoli chybělo. `shodujeSe: false` by tak hlásilo rozpor
+skoro pořád. Workflow proto navíc spočítá, o kolik commitů je repozitář napřed
+(`commituNavic`) a jestli se mezi nimi změnilo něco jiného než `data/fronta/`
+(`rozdilVObsahu`). Za rozpor se bere jen `rozdilVObsahu: true`.
+
+**Zápis se opakuje.** Push z tohohle workflow může selhat ze dvou přechodných
+důvodů: mezitím na `main` přibyl commit z jiného workflow (rozhlas zapisuje stav
+odeslaných zpráv hned po odeslání), nebo GitHub odpoví chybou 500. Krok proto
+zkouší push pětkrát, mezi pokusy přebasuje na aktuální `main` a čeká 5 až 25
+sekund. Obojí se stalo hned při prvních dvou bězích 13. 9. 2026.
 
 Když se poměry změní a routine na doménu dosáhne, soubory tím nepřestanou
 platit; jsou to jen zapsaná zjištění, ne náhrada ověření.
