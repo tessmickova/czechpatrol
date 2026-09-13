@@ -1,5 +1,6 @@
 import { JE_UKAZKA } from "@/config/web";
 import type {
+  Odmitnuty,
   Archiv, CelkovyStav, HybridniTlak, Incident, Kampan, Kandidat, Kategorie, NatoPolozka, Oprava, PravniStav,
   Nepotvrzene, Overovana, Provoz, Puvodce, RuskoStav, Svet, TydenniHodnoceni, Uroven, Watchlist,
 } from "./typy";
@@ -23,6 +24,7 @@ import ostriKandidati from "../../data/kandidati.json";
 import ostrySvet from "../../data/svet.json";
 import ostreKampane from "../../data/kampane.json";
 import ostreOverujeme from "../../data/overujeme.json";
+import ostreOdmitnute from "../../data/fronta/odmitnute.json";
 
 import ukazkoveIncidenty from "../../data/ukazka/incidenty.json";
 import ukazkovyStav from "../../data/ukazka/stav.json";
@@ -428,6 +430,17 @@ export function dnyBezZmeny(): { dnu: number; odZacatkuArchivu: boolean } | null
  * Automaticky zachycené zprávy čekající na ověření. Nejnovější první.
  * Nikdy se nemíchají do incidentů — jsou to kandidáti, ne záznamy.
  */
+/**
+ * Zprávy, které síto nepustilo. Jen pro stránku ve správě.
+ *
+ * Soubor je součástí statického buildu, takže to není tajemství — je to
+ * materiál držený stranou, ne skrytý. Kdo ho najde, uvidí veřejné titulky
+ * a odkazy, nic víc.
+ */
+export function odmitnute(): Odmitnuty[] {
+  return ostreOdmitnute as Odmitnuty[];
+}
+
 export function kandidati(): Kandidat[] {
   return jako<Kandidat[]>(ostriKandidati).slice().sort((a, b) => (b.publikovano ?? b.zachyceno).localeCompare(a.publikovano ?? a.zachyceno));
 }

@@ -146,6 +146,43 @@ for (const [nazev, sada] of [["právní stav", pravni], ["NATO", nato], ["provoz
   }
 }
 
+// 4b. odmítnuté zprávy — pracovní přehled, ne archiv
+//
+// Je to podklad pro člověka. Hlídá se hlavně to, aby nepřerostl: soubor je
+// v gitu a přehled, který se nedá projít, nikdo neprojde.
+const cestaOdmitnutych = path.join(koren, "data", "fronta", "odmitnute.json");
+if (fs.existsSync(cestaOdmitnutych)) {
+  let odmitnute = [];
+  try {
+    odmitnute = JSON.parse(fs.readFileSync(cestaOdmitnutych, "utf-8"));
+  } catch {
+    chyby.push("data/fronta/odmitnute.json nejde přečíst");
+  }
+  if (!Array.isArray(odmitnute)) chyby.push("data/fronta/odmitnute.json není pole");
+  else {
+    if (odmitnute.length > 500) chyby.push(`odmítnutých je ${odmitnute.length}; strop je 500, jinak to nikdo neprojde`);
+    const adresy = new Set();
+    for (const o of odmitnute) {
+      const kde = `odmítnutá ${o.id ?? "bez id"}`;
+      if (!o.id || !o.titulek || !o.zdroj?.url) { chyby.push(`${kde}: chybí id, titulek nebo odkaz`); continue; }
+      if (adresy.has(o.zdroj.url)) chyby.push(`${kde}: stejná adresa je v přehledu dvakrát`);
+      adresy.add(o.zdroj.url);
+      if (!["vylouceno-tematem", "bez-skutku", "bez-mista"].includes(o.duvod)) {
+        chyby.push(`${kde}: neznámý důvod odmítnutí „${o.duvod}“`);
+      }
+      if (o.posouzeni && !["vysoke", "stredni", "zadne"].includes(o.posouzeni.podezreni)) {
+        chyby.push(`${kde}: neznámá míra podezření „${o.posouzeni.podezreni}“`);
+      }
+      // Odmítnutá zpráva nikdy nesmí být zároveň zveřejněným záznamem.
+      if (adresyZaznamu.has(o.zdroj.url)) chyby.push(`${kde}: tahle adresa už je zveřejněný záznam`);
+    }
+    const vazne = odmitnute.filter((o) => o.posouzeni?.podezreni === "vysoke").length;
+    if (vazne) varovani.push(`odmítnutých označených jako vážné: ${vazne} — projít ve správě`);
+    const neposouzene = odmitnute.filter((o) => !o.posouzeni).length;
+    if (neposouzene) varovani.push(`neposouzených odmítnutých: ${neposouzene}`);
+  }
+}
+
 // 5. překlady — úplnost je podmínka, ne přání
 //
 // Poloprázdná cizojazyčná stránka je horší než žádná: čtenář nepozná, jestli

@@ -376,7 +376,8 @@ export interface Kandidat {
   kategorie: string[];
   druhOdhad: "pripad" | "opatreni" | "reakce" | "neurceno";
   /** „pravidla“ = jen klíčová slova; „model“ = přečteno a přeloženo jazykovým modelem. */
-  klasifikace: "pravidla" | "model";
+  /** „clovek“ = vytáhl to člověk z odmítnutých, proti sítu. */
+  klasifikace: "pravidla" | "model" | "clovek";
   shody: string[];
   stav: "ceka";
 }
@@ -562,4 +563,24 @@ export interface Overovana {
   jakDopadlo?: string;
   /** Bez lidské kontroly se nezobrazí. Automat sem nic nedává. */
   lidskyOvereno: boolean;
+}
+
+/*
+  Zpráva, kterou automatické síto nepustilo.
+
+  Není to záznam ani kandidát: je to pracovní materiál pro člověka ve správě.
+  Do počtů, hodnocení ani na veřejné stránky nevstupuje nikdy — jediná cesta
+  dál vede přes ruční převzetí mezi kandidáty.
+*/
+export interface Odmitnuty {
+  id: string;
+  zachyceno: string;
+  publikovano: string | null;
+  zdroj: { nazev: string; url: string; typ: TypZdroje; primarni: boolean };
+  titulek: string;
+  shrnuti: string;
+  duvod: "vylouceno-tematem" | "bez-skutku" | "bez-mista";
+  kategorie: string[];
+  /** null = neposouzeno. Neposouzeno není totéž co „nic vážného“. */
+  posouzeni: { podezreni: "vysoke" | "stredni" | "zadne"; duvod: string; kdy: string } | null;
 }

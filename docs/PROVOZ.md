@@ -53,6 +53,36 @@ Hodinový sběr (`sber/udalosti.ts`) čte RSS kanály úřadů, redakcí a vyhle
 
 Převzetí kandidáta do záznamů: `node nastroje/prijmi-kandidata.mjs <id>` vypíše kostru; člověk doplní fakta, závažnost a jistotu, nastaví `lidskyOvereno: true` a vloží do `data/incidenty.json`. Sběr pak kandidáta sám odloží (stejná adresa zdroje).
 
+### Co síto nepustí — a proč se to nezahazuje
+
+Síto na klíčová slova umí jen to, co je v seznamu. Zprávu, která je vážná, ale
+napsaná mizerně — titulek „Začínáme“ nad textem o vypuknutí války — nepozná
+a nikdy nepozná. Dokud se odmítnuté zprávy zahazovaly, nebylo jak to zachytit
+ani zpětně zjistit, že něco uteklo.
+
+Od 13. 9. 2026 se proto nezahazuje nic:
+
+1. Co síto nepustí, jde do `data/fronta/odmitnute.json` i s důvodem
+   (`vylouceno-tematem`, `bez-skutku`, `bez-mista`). Paměť je týden, strop 500
+   položek — je to pracovní přehled, ne archiv.
+2. Levný model (Haiku) jim dá druhé čtení a označí `podezreni`
+   (`vysoke` / `stredni` / `zadne`) s krátkým odůvodněním. Posuzuje obsah, ne
+   styl: špatně napsaný titulek nad vážnou zprávou je přesně to, co hledá.
+   Nejvýš 120 položek za běh, ať náklady nemají kam utéct. Bez klíče se pass
+   přeskočí a `posouzeni` zůstane `null` — **neposouzeno není totéž co „nic
+   vážného“** a přehled to tak i píše.
+3. `/sprava/odmitnute/` to ukáže po skupinách, nejvýš podezřelé nahoře.
+4. Ruční vytažení: `node nastroje/prijmi-odmitnuty.mjs <id>` (nebo `--vazne`
+   pro všechny označené jako vážné) položku přesune mezi kandidáty se stavem
+   `ceka` a `klasifikace: "clovek"`. Pak ji čeká normální ověření jako každou
+   jinou — otevřít zdroj, ověřit fakta, teprve pak `prijmi-kandidata.mjs`.
+
+**Model nikdy nic nezveřejňuje ani nepřeklápí.** Jen říká, co si zaslouží lidský
+pohled. Nic z `odmitnute.json` nevstupuje do počtů, hodnocení ani na veřejné
+stránky. Soubor je součástí veřejného repozitáře i statického buildu — nejsou
+v něm žádné neveřejné údaje, jen titulky a odkazy; drží se stranou proto, aby
+zpravodajský šum nedělal obsah webu.
+
 ### Kdo sběr spouští
 
 Plánovač GitHub Actions je podle vlastní dokumentace „best effort“: událost

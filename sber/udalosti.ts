@@ -30,15 +30,54 @@ export interface Kandidat {
   zeme: string | null;
   kategorie: string[];
   druhOdhad: "pripad" | "opatreni" | "reakce" | "neurceno";
-  klasifikace: "pravidla" | "model";
+  /** „clovek“ = vytáhl to člověk z odmítnutých, proti sítu. */
+  klasifikace: "pravidla" | "model" | "clovek";
   shody: string[];
   stav: "ceka";
 }
 
 const KOREN = path.join(process.cwd(), "data");
 const SOUBOR = path.join(KOREN, "kandidati.json");
+const SOUBOR_ODMITNUTYCH = path.join(KOREN, "fronta", "odmitnute.json");
 const DNI_ZPET = 21;
 const MAX_KANDIDATU = 200;
+
+/*
+  Odmítnuté zprávy.
+
+  Síto na klíčová slova neumí posoudit zprávu, která je vážná, ale napsaná
+  mizerně — titulek „Začínáme“ nad textem o vypuknutí války se do žádného
+  seznamu slov netrefí. Dokud se odmítnuté zprávy zahazovaly, nebylo jak to
+  zachytit ani zpětně zjistit, že nám něco uteklo.
+
+  Proto se teď nic nezahazuje: co síto nepustí, jde sem. Levný model tomu dá
+  druhé čtení a označí, co vypadá vážně; člověk pak může ručně vytáhnout, co
+  má. Je to podklad pro rozhodnutí člověka, ne druhá cesta na web — do počtů,
+  hodnocení ani na veřejné stránky tenhle soubor nevstupuje nikdy.
+*/
+const MAX_ODMITNUTYCH = 500;
+const DNI_ODMITNUTYCH = 7;
+/** Strop pro jeden běh, aby posouzení modelem nemohlo utéct do nákladů. */
+const MAX_POSUZOVANYCH = 120;
+
+export type DuvodOdmitnuti = "vylouceno-tematem" | "bez-skutku" | "bez-mista";
+
+export interface Odmitnuty {
+  id: string;
+  zachyceno: string;
+  publikovano: string | null;
+  zdroj: { nazev: string; url: string; typ: "primary" | "wire" | "media"; primarni: boolean };
+  titulek: string;
+  shrnuti: string;
+  duvod: DuvodOdmitnuti;
+  /** Co v textu síto našlo — pro člověka, který posuzuje, proč to spadlo. */
+  kategorie: string[];
+  /**
+   * Druhé čtení modelem. null = neposouzeno (chybí klíč nebo došel strop).
+   * Nikdy se nedopočítává: neposouzené se v přehledu tak i označí.
+   */
+  posouzeni: { podezreni: "vysoke" | "stredni" | "zadne"; duvod: string; kdy: string } | null;
+}
 
 /*
   Co sem patří a co ne.
@@ -150,6 +189,17 @@ const AKTY_KOMBINACE: { kategorie: string; a: string[]; b: string[] }[] = [
     b: ["kontrol", "cviceni", "uzavr", "vojak", "vojaci", "armad", "celnic", "zaloh", "checks", "closed", "exercise", "troops", "soldiers"],
   },
   {
+    /*
+      „violated Romanian airspace“, „narušil polský vzdušný prostor“ — mezi
+      slovesem a předmětem stojí přívlastek, takže fráze „violated airspace“
+      v seznamu AKTY se netrefí. Přitom je to nejběžnější způsob, jak se
+      o narušení vzdušného prostoru píše.
+    */
+    kategorie: "drony",
+    a: ["violat", "narusil", "narusila", "narusily", "breach", "incursion"],
+    b: ["airspace", "vzdusny prostor", "vzdusneho prostoru"],
+  },
+  {
     // „Vzlétly polské stíhačky“ — mezi slovy stojí přívlastek, takže se to
     // nedá hledat jako jedna fráze. Sloveso i technika musí být obojí.
     kategorie: "drony",
@@ -253,9 +303,15 @@ export function otisk(titulek: string): string {
 }
 
 export function odhadniZemi(text: string): { kod: string; nazev: string } | null {
-  const t = ` ${normalizuj(text)} `;
-  // Rusko a Ukrajina bývají v každé zprávě zmíněné jako původce; rozhoduje první jiná země.
-  const shody = ZEME.filter((z) => z.slova.some((s) => t.includes(s)));
+  const t = normalizuj(text);
+  /*
+    Slovo se hledá od začátku slova, ne kdekoli uvnitř — stejně jako u klíčových
+    slov. Prosté `includes` tu totiž dělalo tichou škodu: „došlo“ obsahuje
+    „oslo“, takže každá česká zpráva se slovem „došlo“ (a to je skoro každá
+    zpráva o incidentu) se označila jako Norsko. Je to týž případ jako dřívější
+    „bis“ uvnitř jména „Babiš“.
+  */
+  const shody = ZEME.filter((z) => z.slova.some((sl) => obsahujeSlovo(t, sl.trim())));
   const jina = shody.find((z) => z.kod !== "RU" && z.kod !== "UA" && z.kod !== "BY");
   const v = jina ?? shody[0];
   return v ? { kod: v.kod, nazev: v.nazev } : null;
@@ -300,12 +356,23 @@ export function odhadniTemata(text: string): { kategorie: string[]; shody: strin
  * když se vážou ke konkrétní věci.
  */
 export function relevantni(text: string): boolean {
+  return duvodOdmitnuti(text) === null;
+}
+
+/**
+ * Proč zpráva neprošla — nebo null, když prošla.
+ *
+ * Důvod se ukládá k odmítnuté zprávě, aby člověk v přehledu viděl, čím to
+ * spadlo, a poznal, jestli je chyba v sítu, nebo ve zprávě.
+ */
+export function duvodOdmitnuti(text: string): DuvodOdmitnuti | null {
   const t = normalizuj(text);
-  if (VYLOUCIT.some((w) => obsahujeSlovo(t, w))) return false;
+  if (VYLOUCIT.some((w) => obsahujeSlovo(t, w))) return "vylouceno-tematem";
   const { akty, kategorie } = odhadniTemata(text);
-  if (!akty.length) return false;
+  if (!akty.length) return "bez-skutku";
   // Skutek bez místa je půlka informace. Alianční kontext místo nahradí.
-  return Boolean(odhadniZemi(text)) || kategorie.includes("nato");
+  if (!odhadniZemi(text) && !kategorie.includes("nato")) return "bez-mista";
+  return null;
 }
 
 async function stahniZdroj(z: ZdrojUdalosti) {
@@ -392,7 +459,77 @@ async function doplnModelem(nove: Kandidat[]): Promise<Kandidat[]> {
   return vystup;
 }
 
-export async function sbirejUdalosti(): Promise<{ novych: number; celkem: number; nedostupne: string[] }> {
+function ctiOdmitnute(): Odmitnuty[] {
+  if (!fs.existsSync(SOUBOR_ODMITNUTYCH)) return [];
+  try {
+    return JSON.parse(fs.readFileSync(SOUBOR_ODMITNUTYCH, "utf-8")) as Odmitnuty[];
+  } catch {
+    return [];
+  }
+}
+
+/**
+ * Druhé čtení odmítnutých zpráv levným modelem.
+ *
+ * Úkol je jediný a úzký: najít mezi šumem zprávu, která je vážná, i když se
+ * do seznamu slov netrefila. Model nic nezveřejňuje a nic nepřeklápí — jen
+ * označí, co si zaslouží lidský pohled.
+ *
+ * Bez klíče se přeskočí a `posouzeni` zůstane null; přehled to pak tak i
+ * napíše. Neposouzeno není totéž co „nic vážného“.
+ */
+async function posudOdmitnute(polozky: Odmitnuty[]): Promise<Odmitnuty[]> {
+  const kPosouzeni = polozky.filter((o) => !o.posouzeni).slice(0, MAX_POSUZOVANYCH);
+  if (!process.env.ANTHROPIC_API_KEY || !kPosouzeni.length) return polozky;
+
+  const { default: Anthropic } = await import("@anthropic-ai/sdk");
+  const { z } = await import("zod");
+  const { zodOutputFormat } = await import("@anthropic-ai/sdk/helpers/zod");
+  const client = new Anthropic();
+
+  const Vysledek = z.object({
+    polozky: z.array(z.object({
+      id: z.string(),
+      podezreni: z.enum(["vysoke", "stredni", "zadne"]),
+      duvod: z.string(),
+    })),
+  });
+
+  const podleId = new Map<string, { podezreni: "vysoke" | "stredni" | "zadne"; duvod: string }>();
+
+  for (let i = 0; i < kPosouzeni.length; i += 40) {
+    const davka = kPosouzeni.slice(i, i + 40);
+    try {
+      const odpoved = await client.messages.parse({
+        // Levný a rychlý model: tohle je třídění šumu, ne psaní záznamu.
+        model: "claude-haiku-4-5-20251001",
+        max_tokens: 8000,
+        output_config: { effort: "low", format: zodOutputFormat(Vysledek) },
+        system: [
+          "Tyhle zprávy neprošly automatickým sítem českého bezpečnostního přehledu. Tvůj jediný úkol je najít mezi nimi ty, které jsou přesto vážné a měl by si je přečíst člověk.",
+          "podezreni: vysoke = zpráva popisuje závažnou bezpečnostní událost v Evropě (útok, sabotáž, výbuch, narušení vzdušného prostoru, zásah do kritické infrastruktury, mobilizace, vyhlášení mimořádného stavu, ozbrojený incident), i když je titulek nejasný, vtipný nebo neinformativní; stredni = může jít o bezpečnostní událost, ale z titulku to nelze poznat; zadne = zjevně nic z toho (sport, kultura, ekonomika, komentář, běžná politika).",
+          "Posuzuj obsah, ne styl. Špatně napsaný titulek nad vážnou zprávou je přesně to, co hledáme. Naopak dramatický titulek nad ničím je zadne.",
+          "duvod: nejvýš 12 slov česky, věcně. Nic si nedomýšlej — co v textu není, o tom netvrď, že tam je.",
+          "Vrať každé id přesně jednou.",
+        ].join(" "),
+        messages: [{ role: "user", content: JSON.stringify(davka.map((o) => ({ id: o.id, titulek: o.titulek, shrnuti: o.shrnuti, zdroj: o.zdroj.nazev }))) }],
+      });
+      if (odpoved.stop_reason === "refusal" || !odpoved.parsed_output) continue;
+      for (const v of odpoved.parsed_output.polozky) podleId.set(v.id, { podezreni: v.podezreni, duvod: v.duvod });
+    } catch (e) {
+      console.log(`[sber/udalosti] posouzení odmítnutých přeskočeno: ${e instanceof Error ? e.message : e}`);
+      break;
+    }
+  }
+
+  const kdy = nyni();
+  return polozky.map((o) => {
+    const v = podleId.get(o.id);
+    return v ? { ...o, posouzeni: { ...v, kdy } } : o;
+  });
+}
+
+export async function sbirejUdalosti(): Promise<{ novych: number; celkem: number; nedostupne: string[]; odmitnutych: number; podezrelych: number }> {
   const stazene = await Promise.all(ZDROJE_UDALOSTI.map(stahniZdroj));
   const nedostupne = stazene.filter((s) => !s.ok).map((s) => `${s.z.klic}: ${s.chyba}`);
   const stare = ctiKandidaty();
@@ -401,6 +538,10 @@ export async function sbirejUdalosti(): Promise<{ novych: number; celkem: number
   const adresy = new Set(stare.map((k) => k.zdroj.url));
   const otisky = new Set(stare.map((k) => otisk(k.titulekPuvodni)));
 
+  const stareOdmitnute = ctiOdmitnute();
+  const znameOdmitnute = new Set(stareOdmitnute.map((o) => o.zdroj.url));
+  const noveOdmitnute: Odmitnuty[] = [];
+
   const nove: Kandidat[] = [];
   for (const s of stazene) {
     if (!s.ok) continue;
@@ -408,7 +549,25 @@ export async function sbirejUdalosti(): Promise<{ novych: number; celkem: number
       if (!p.odkaz || adresy.has(p.odkaz) || zname.adresy.has(p.odkaz)) continue;
       if (p.publikovano && new Date(p.publikovano).getTime() < hranice) continue;
       const text = `${p.nadpis} ${p.shrnuti}`;
-      if (!relevantni(text)) continue;
+      const duvod = duvodOdmitnuti(text);
+      if (duvod) {
+        // Nic se nezahazuje: odmítnuté jde do přehledu pro člověka.
+        if (!znameOdmitnute.has(p.odkaz)) {
+          znameOdmitnute.add(p.odkaz);
+          noveOdmitnute.push({
+            id: kandidatId(p.odkaz),
+            zachyceno: nyni(),
+            publikovano: p.publikovano,
+            zdroj: { nazev: s.z.nazev, url: p.odkaz, typ: s.z.typ, primarni: s.z.primarni },
+            titulek: p.nadpis,
+            shrnuti: p.shrnuti.slice(0, 300),
+            duvod,
+            kategorie: odhadniTemata(text).kategorie,
+            posouzeni: null,
+          });
+        }
+        continue;
+      }
       const o = otisk(p.nadpis);
       if (otisky.has(o) || zname.otisky.has(o)) continue;
       const zeme = odhadniZemi(text);
@@ -442,5 +601,24 @@ export async function sbirejUdalosti(): Promise<{ novych: number; celkem: number
     .sort((a, b) => (b.publikovano ?? b.zachyceno).localeCompare(a.publikovano ?? a.zachyceno))
     .slice(0, MAX_KANDIDATU);
   fs.writeFileSync(SOUBOR, JSON.stringify(vse, null, 2) + "\n", "utf-8");
-  return { novych: doplnene.length, celkem: vse.length, nedostupne };
+
+  /*
+    Odmítnuté: krátká paměť a pevný strop. Je to pracovní přehled pro člověka,
+    ne archiv — po týdnu položka odchází a do repozitáře se nesmí vejít víc,
+    než co se dá projít.
+  */
+  const hraniceOdmitnutych = Date.now() - DNI_ODMITNUTYCH * 86_400_000;
+  const zbyvajici = stareOdmitnute.filter(
+    (o) => new Date(o.publikovano ?? o.zachyceno).getTime() >= hraniceOdmitnutych && !zname.adresy.has(o.zdroj.url),
+  );
+  const vseOdmitnute = [...noveOdmitnute, ...zbyvajici]
+    .sort((a, b) => (b.publikovano ?? b.zachyceno).localeCompare(a.publikovano ?? a.zachyceno))
+    .slice(0, MAX_ODMITNUTYCH);
+
+  const posouzene = await posudOdmitnute(vseOdmitnute);
+  fs.mkdirSync(path.dirname(SOUBOR_ODMITNUTYCH), { recursive: true });
+  fs.writeFileSync(SOUBOR_ODMITNUTYCH, JSON.stringify(posouzene, null, 2) + "\n", "utf-8");
+
+  const podezrelych = posouzene.filter((o) => o.posouzeni?.podezreni === "vysoke").length;
+  return { novych: doplnene.length, celkem: vse.length, nedostupne, odmitnutych: posouzene.length, podezrelych };
 }

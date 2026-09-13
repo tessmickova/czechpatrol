@@ -166,6 +166,23 @@ nestalo.
 Když se relevantní zdroj nepodaří stáhnout, zápor se nepotvrzuje a datum
 ověření se nezapisuje.
 
+## Pravidlo č. 4a — nic se nezahazuje, ale nic se ani nepřeklápí samo
+
+Síto na klíčová slova nikdy nepozná vážnou zprávu s mizerným titulkem. Co
+neprojde, proto nekončí v koši, ale v `data/fronta/odmitnute.json` i s důvodem.
+Levný model tomu dá druhé čtení a označí, co vypadá vážně; vidět je to na
+`/sprava/odmitnute/`.
+
+Tři věci z toho nesmí nikdo ohnout:
+
+1. **Model nerozhoduje o zveřejnění.** Označí, co si zaslouží lidský pohled.
+   Dál se položka hne jen ručně (`nastroje/prijmi-odmitnuty.mjs`) a i pak jde
+   mezi kandidáty, ne mezi záznamy — čeká ji normální ověření.
+2. **Neposouzeno není „nic vážného“.** Chybí-li klíč nebo dojde strop běhu,
+   `posouzeni` zůstane `null` a přehled to přizná. Nedopočítává se (pravidlo
+   č. 4).
+3. **Odmítnuté nikam nevstupují.** Do počtů, hodnocení ani na veřejné stránky.
+
 ## Pravidlo č. 4b — co nejde ověřit ze sandboxu, čti z repozitáře
 
 **Plánovaná routine nemá přístup na `czechpatrol.pages.dev` ani na

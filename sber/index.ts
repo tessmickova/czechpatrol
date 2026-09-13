@@ -155,7 +155,11 @@ async function main() {
   if (!jenProvoz) {
     try {
       const u = await sbirejUdalosti();
-      console.log(`[sber] události: nových kandidátů ${u.novych}, ve frontě ${u.celkem}` + (u.nedostupne.length ? `, nedostupné: ${u.nedostupne.join("; ")}` : ""));
+      console.log(
+        `[sber] události: nových kandidátů ${u.novych}, ve frontě ${u.celkem}, odmítnutých ${u.odmitnutych}` +
+          (u.podezrelych ? `, z toho vážně vypadá ${u.podezrelych} — projít ve správě` : "") +
+          (u.nedostupne.length ? `, nedostupné: ${u.nedostupne.join("; ")}` : ""),
+      );
     } catch (e) {
       console.log(`[sber] sběr událostí selhal, ostatní pokračuje: ${e instanceof Error ? e.message : e}`);
     }

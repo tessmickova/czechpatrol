@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { kandidatId, obsahujeSlovo, odhadniTemata, odhadniZemi, otisk, relevantni } from "../sber/udalosti";
+import { duvodOdmitnuti, kandidatId, obsahujeSlovo, odhadniTemata, odhadniZemi, otisk, relevantni } from "../sber/udalosti";
 import { normalizuj } from "../sber/nacti";
 
 describe("automatický sběr událostí — pravidla", () => {
@@ -95,5 +95,52 @@ describe("vzlet stíhaček a letecký poplach", () => {
     // normalizuj() diakritiku odstraňuje, takže „vzlétly“ v seznamu byl mrtvý
     // zápis. Test hlídá, že se taková past nevrátí.
     expect(obsahujeSlovo(normalizuj("v Polsku vzlétly stíhačky"), "vzletly stihacky")).toBe(true);
+  });
+});
+
+/*
+  Odmítnuté zprávy.
+
+  Síto na klíčová slova neumí posoudit zprávu, která je vážná, ale napsaná
+  mizerně. Tyhle testy drží dvě věci: že se důvod odmítnutí pozná správně
+  (aby člověk ve správě viděl, čím to spadlo), a hlavně že se taková zpráva
+  NEZAHODÍ — protože právě ona je ten případ, kvůli kterému přehled vznikl.
+*/
+describe("důvod odmítnutí", () => {
+  it("vyloučené téma pozná i nad bezpečnostním slovem", () => {
+    expect(duvodOdmitnuti("Sněmovna schválila rozpočet na obranu")).toBe("vylouceno-tematem");
+  });
+
+  it("zpráva bez skutku spadne na chybějícím skutku", () => {
+    expect(duvodOdmitnuti("Ministr v Polsku mluvil o bezpečnosti regionu")).toBe("bez-skutku");
+  });
+
+  it("skutek bez místa spadne na chybějícím místě", () => {
+    expect(duvodOdmitnuti("Došlo k sabotáži na železnici")).toBe("bez-mista");
+  });
+
+  it("co projde, nemá důvod odmítnutí", () => {
+    expect(duvodOdmitnuti("Russian drone violated Romanian airspace near Tulcea")).toBeNull();
+    expect(duvodOdmitnuti("Poplach v Polsku: Armáda vyslala do vzduchu stíhačky")).toBeNull();
+  });
+
+  it("relevantni a duvodOdmitnuti se nesmějí rozejít", () => {
+    const vzorky = [
+      "Russian drone violated Romanian airspace near Tulcea",
+      "Sněmovna schválila rozpočet na obranu",
+      "Ministr v Polsku mluvil o bezpečnosti regionu",
+      "Došlo k sabotáži na železnici",
+      "Fotbalová liga zná vítěze",
+    ];
+    for (const v of vzorky) expect(relevantni(v)).toBe(duvodOdmitnuti(v) === null);
+  });
+
+  it("blbě napsaná vážná zpráva se odmítne — ale s důvodem, takže se neztratí", () => {
+    // Přesně ten případ, kvůli kterému přehled odmítnutých vznikl: titulek
+    // neříká nic a síto na slova nemá čeho se chytit. Podstatné je, že se
+    // zpráva nezahodí — dostane důvod a jde člověku na stůl.
+    const duvod = duvodOdmitnuti("Začínáme. Co jsme viděli dnes ráno, si budeme pamatovat celý život");
+    expect(duvod).not.toBeNull();
+    expect(["bez-skutku", "bez-mista", "vylouceno-tematem"]).toContain(duvod);
   });
 });

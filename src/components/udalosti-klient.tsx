@@ -530,6 +530,8 @@ function RadekKandidata({ k }: { k: Kandidat }) {
         meta: [
           <Odznak key="c" ton="akcent" ikona="otaznik">čeká na ověření</Odznak>,
           k.klasifikace === "model" ? <span key="m" className="text-tlum2">přeloženo modelem</span> : null,
+          // Ručně vytažené proti sítu: čtenář má vědět, že tohle nevybral automat.
+          k.klasifikace === "clovek" ? <span key="r" className="text-tlum2">vybráno ručně</span> : null,
         ].filter(Boolean),
         titulek: k.titulek,
         znacky: (

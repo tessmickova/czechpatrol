@@ -140,6 +140,24 @@ export function SpravaKlient() {
     <div className="space-y-6">
       {hlaska && <Hlaska typ={hlaska.typ}>{hlaska.text}</Hlaska>}
 
+      {/*
+        Přehled odmítnutých je statická stránka z repozitáře, ne data z API —
+        proto jen odkaz, ne další sekce. Nepotřebuje přihlášení, protože v něm
+        nejsou žádné osobní ani neveřejné údaje, jen titulky a odkazy.
+      */}
+      <Karta odstin="bila" className="p-6">
+        <div className="stitek mb-1">Automatický sběr</div>
+        <h2 className="podnadpis text-[20px]">Co síto nepustilo</h2>
+        <p className="mt-2 max-w-[62ch] text-[14px] leading-relaxed text-tlum">
+          Zprávy, které sběr zachytil, ale nepustil dál. Levný model jim dal druhé čtení a označil, co vypadá vážně —
+          rozhodnutí zůstává na člověku. Je to pojistka proti tomu, aby nám utekla vážná zpráva jen proto, že měla
+          nešikovný titulek.
+        </p>
+        <a href="/sprava/odmitnute/" className="mt-3 inline-block text-[14px] font-semibold text-akcent hover:underline">
+          Otevřít přehled →
+        </a>
+      </Karta>
+
       <Karta odstin={cekajici.length ? "pisek" : "bila"} className="p-6">
         <div className="mb-3 flex items-center justify-between">
           <div>
