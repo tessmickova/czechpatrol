@@ -1,0 +1,105 @@
+name: Stav pro routines
+
+# Proč tenhle workflow existuje
+# -----------------------------
+# Plánované routine běží v sandboxu za agentní proxy, která blokuje doménu
+# czechpatrol.pages.dev, a GitHub API má dostupné jen po ručním přidělení
+# přístupu, o které si sama neumí říct. Nemohla proto ověřit, jestli na
+# doméně běží to, co je v repozitáři, ani jak dopadly poslední běhy.
+#
+# GitHub Actions žádné z těch omezení nemá. Zjistí obojí tady a zapíše to
+# do repozitáře jako obyčejné soubory; routine je pak jen přečte z gitu
+# a nepotřebuje k tomu síť ani API.
+#
+# Commit se dělá výchozím tokenem, který další workflow nespouští — jinak
+# by se to zacyklilo s Nasazením.
+
+on:
+  workflow_run:
+    workflows: ["Nasazení"]
+    types: [completed]
+  schedule:
+    # Dvakrát denně, aby soubor nezestaral, i když se zrovna nenasazuje.
+    - cron: "40 5,17 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  actions: read
+
+concurrency:
+  group: stav-pro-routines
+  cancel-in-progress: false
+
+jobs:
+  zapsat:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+
+      - name: Zjistit stav živého webu
+        env:
+          ADRESA: https://czechpatrol.pages.dev
+        run: |
+          set -u
+          mkdir -p data/fronta
+          # Nasazení na Cloudflare chvíli trvá, než se rozejde.
+          sleep 20
+          KOD=$(curl -s -o /tmp/stav.json -w "%{http_code}" --max-time 25 "$ADRESA/stav.json" || echo 000)
+          ZIVY=$(jq -r '.commit // empty' /tmp/stav.json 2>/dev/null || true)
+          GENEROVANO=$(jq -r '.generovano // empty' /tmp/stav.json 2>/dev/null || true)
+          REPO=$(git rev-parse HEAD)
+          HTML=$(curl -s -o /dev/null -w "%{http_code}" --max-time 25 "$ADRESA/" || echo 000)
+          if [ "$ZIVY" = "$REPO" ]; then SHODA=true; else SHODA=false; fi
+          jq -n \
+            --arg kdy "$(date -u +%Y-%m-%dT%H:%M:%SZ)" \
+            --arg adresa "$ADRESA" \
+            --arg kodStav "$KOD" --arg kodHtml "$HTML" \
+            --arg zivy "$ZIVY" --arg repo "$REPO" --arg gen "$GENEROVANO" \
+            --argjson shoda "$SHODA" '{
+              kontrolovano: $kdy,
+              adresa: $adresa,
+              dostupny: ($kodHtml == "200"),
+              httpUvodni: ($kodHtml | tonumber? // 0),
+              httpStavJson: ($kodStav | tonumber? // 0),
+              zivyCommit: (if $zivy == "" then null else $zivy end),
+              zivyGenerovano: (if $gen == "" then null else $gen end),
+              repoCommit: $repo,
+              shodujeSe: $shoda,
+              poznamka: "Zapsáno workflow Stav pro routines. Routine tenhle soubor jen čte; na doménu sama nedosáhne."
+            }' > data/fronta/zivy-web.json
+          cat data/fronta/zivy-web.json
+
+      - name: Zapsat historii posledních běhů
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -u
+          gh api "repos/${GITHUB_REPOSITORY}/actions/runs?per_page=30" \
+            --jq '{
+              kontrolovano: (now | todate),
+              poznamka: "Zapsáno workflow Stav pro routines místo volání api.github.com, na které routine nedosáhne.",
+              behy: [.workflow_runs[] | {
+                workflow: .name,
+                zaver: (.conclusion // .status),
+                sha: (.head_sha[0:7]),
+                kdy: .created_at,
+                cislo: .run_number,
+                url: .html_url
+              }]
+            }' > data/fronta/behy.json
+          jq '.behy | length' data/fronta/behy.json
+
+      - name: Commit, když se něco změnilo
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/fronta/zivy-web.json data/fronta/behy.json
+          if git diff --cached --quiet; then
+            echo "Beze změny."
+          else
+            git commit -m "Stav pro routines: živý web a historie běhů $(date -u +'%Y-%m-%d %H:%M UTC')"
+            git push
+          fi

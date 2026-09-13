@@ -122,3 +122,27 @@ Podobu zprávy u libovolného záznamu (i už odeslaného) vykreslí
 Číselníky (`Z_DESETI`, `PUVODCI`) jsou v `rozhlas.mjs` kopie kvůli tomu, že skript
 je prostý `.mjs`. Testy hlídají, že se nerozejdou s `src/lib/` a s daty — jednou už
 se to stalo a do souhrnu prošlo „Pachatel: undefined“.
+
+## Stav pro routines
+
+`.github/workflows/stav-pro-routines.yml` běží po každém Nasazení, dvakrát denně
+a na vyžádání. Zapisuje do repozitáře dva soubory, které plánované routine čtou
+místo toho, aby sáhly na síť:
+
+- `data/fronta/zivy-web.json` — dostupnost `czechpatrol.pages.dev`, commit, ze
+  kterého je živý build (bere se z `/stav.json`, pole `commit`, plněné
+  z `GITHUB_SHA` při buildu), commit repozitáře a příznak `shodujeSe`.
+- `data/fronta/behy.json` — posledních 30 běhů workflow: název, závěr, SHA, čas
+  a odkaz.
+
+**Proč to takhle je.** Routine běží v sandboxu za agentní proxy, která doménu
+`czechpatrol.pages.dev` blokuje na úrovni organizace (`connect_rejected —
+organization policy`), a přístup na `api.github.com` se uděluje per session
+nástrojem `add_repo`, který routine k dispozici nemá. GitHub Actions ani jedno
+z těch omezení nemá, takže zjištění proběhne tam a routine ho jen přečte z gitu.
+
+Commit se dělá výchozím tokenem, který další workflow nespouští — jinak by se to
+zacyklilo s Nasazením.
+
+Když se poměry změní a routine na doménu dosáhne, soubory tím nepřestanou
+platit; jsou to jen zapsaná zjištění, ne náhrada ověření.

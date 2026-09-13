@@ -145,6 +145,37 @@ nestalo.
 Když se relevantní zdroj nepodaří stáhnout, zápor se nepotvrzuje a datum
 ověření se nezapisuje.
 
+## Pravidlo č. 4b — co nejde ověřit ze sandboxu, čti z repozitáře
+
+**Plánovaná routine nemá přístup na `czechpatrol.pages.dev` ani na
+`api.github.com`.** První blokuje agentní proxy na úrovni organizace, druhé
+se uděluje per session a routine si o to nemá čím říct. Není to chyba
+routiny a nemá smysl to obcházet ani na to čekat.
+
+Obojí za ni zjišťuje workflow **Stav pro routines**
+(`.github/workflows/stav-pro-routines.yml`) — běží na GitHub Actions, kde
+žádné z těch omezení neplatí — a zapisuje výsledek do repozitáře:
+
+| Soubor | Co v něm je | Místo čeho |
+|---|---|---|
+| `data/fronta/zivy-web.json` | dostupnost domény, commit živého buildu, commit repozitáře, `shodujeSe` | stažení `czechpatrol.pages.dev` |
+| `data/fronta/behy.json` | posledních 30 běhů: workflow, závěr, SHA, čas, odkaz | volání `api.github.com` |
+
+**Postup pro routine:**
+
+1. `git pull`, pak přečíst oba soubory z pracovní kopie. Žádná síť.
+2. `zivy-web.json` → `shodujeSe: false` znamená, že na doméně běží jiný
+   commit než v repozitáři. Podívej se na `kontrolovano`: když je starší než
+   den, je starý i ten údaj a nezakládá závěr.
+3. `behy.json` → závěr posledních běhů Nasazení, Kontrola, Hodinový sběr
+   dat a Rozhlas do kanálů.
+4. Když je `kontrolovano: null` nebo pole `behy` prázdné, workflow ještě
+   neproběhl. **Napiš, že se to nepodařilo zjistit — nedopočítávej to**
+   (pravidlo č. 4).
+
+Kdyby to někdy nestačilo, workflow jde spustit ručně (`workflow_dispatch`);
+routine to ale sama neudělá, protože na Actions API nedosáhne.
+
 ## Pravidlo č. 5 — zdrojový kód patří na GitHub
 
 Každá dokončená změna se commitne a hned nahraje.

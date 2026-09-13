@@ -19,6 +19,14 @@ export function GET() {
     verze: 1,
     web: WEB.url,
     generovano: new Date().toISOString(),
+    /*
+      Commit, ze kterého je tenhle build.
+      
+      Podle něj se dá poznat, jestli na doméně běží to, co je v repozitáři —
+      bez toho se „živá verze“ nedá s ničím porovnat. Mimo GitHub Actions
+      (lokální build, náhled) je null, protože se nemá co vyplnit.
+    */
+    commit: process.env.GITHUB_SHA ?? null,
     overeno: posledniOvereni(),
     uroven: stav.uroven,
     nazev: stav.uroven ? UROVNE[stav.uroven].nazev : null,
