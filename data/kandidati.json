@@ -332,6 +332,36 @@
     "stav": "ceka"
   },
   {
+    "id": "k-b694cf5e827b3765",
+    "zachyceno": "2026-09-13T11:32:29.641Z",
+    "publikovano": "2026-09-12T06:27:00.000Z",
+    "zdroj": {
+      "nazev": "Deutsche Welle — Europe",
+      "url": "https://www.dw.com/en/russia-s-drone-war-comes-to-moldova-and-romania/a-79239591?maca=en-rss-en-eu-2092-rdf",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Russia&apos;s drone war comes to Moldova and Romania",
+    "titulekPuvodni": "Russia&apos;s drone war comes to Moldova and Romania",
+    "shrnuti": "Incursions by Russian drones into Moldovan and Romanian airspace are increasingly common. This week the Ukrainian president&apos;s plane was stopped from taking off from Chisinau. Observers suspect the attacks are deliberate.",
+    "kodZeme": "GB",
+    "zeme": "Spojené království",
+    "kategorie": [
+      "drony",
+      "rusko"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "shody": [
+      "incursion+airspace",
+      "dron",
+      "drone",
+      "airspace",
+      "russia"
+    ],
+    "stav": "ceka"
+  },
+  {
     "id": "k-8d386f7e4944b42f",
     "zachyceno": "2026-09-12T09:10:43.181Z",
     "publikovano": "2026-09-12T06:15:00.000Z",
@@ -605,6 +635,38 @@
     "klasifikace": "pravidla",
     "shody": [
       "sabotage",
+      "russia"
+    ],
+    "stav": "ceka"
+  },
+  {
+    "id": "k-2aa31b2a4d24328a",
+    "zachyceno": "2026-09-13T11:32:29.749Z",
+    "publikovano": "2026-09-10T13:38:53.000Z",
+    "zdroj": {
+      "nazev": "Google News — Moldavsko vzdušný prostor",
+      "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxPZHozcklhamdCWHd5eHVobU9pdmpkTUM1bVp5WU42V0pXRE1MNEJlRXBXa29KRkNaOUt6ZWdpZWp2cGpIVHVPZ0FqX0xaSkFaZDEzeTRBSFI5bnFVemd3MUlyU0FXcEk3ZUJSUGFpX0tBaTl0YUJoQ2pVRHVyamVZM0Q5WVdqSG9YTThNR0hIUk8?oc=5",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "NATO Jets Could Not Stop It: Russian Drone Breached Romanian Airspace, Grounded Zelensky in Moldova - easternherald.com",
+    "titulekPuvodni": "NATO Jets Could Not Stop It: Russian Drone Breached Romanian Airspace, Grounded Zelensky in Moldova - easternherald.com",
+    "shrnuti": "<a href=\"https://news.google.com/rss/articles/CBMikAFBVV95cUxPZHozcklhamdCWHd5eHVobU9pdmpkTUM1bVp5WU42V0pXRE1MNEJlRXBXa29KRkNaOUt6ZWdpZWp2cGpIVHVPZ0FqX0xaSkFaZDEzeTRBSFI5bnFVemd3MUlyU0FXcEk3ZUJSUGFpX0tBaTl0YUJoQ2pVRHVyamVZM0Q5WVdqSG9YTThNR0hIUk8?oc=5\" target=\"_blank\">NATO Jets Could Not Stop It: Rus",
+    "kodZeme": "RO",
+    "zeme": "Rumunsko",
+    "kategorie": [
+      "drony",
+      "nato",
+      "rusko"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "shody": [
+      "breach+airspace",
+      "dron",
+      "drone",
+      "airspace",
+      "nato",
       "russia"
     ],
     "stav": "ceka"
@@ -1437,6 +1499,36 @@
     "stav": "ceka"
   },
   {
+    "id": "k-afb24ce564347ee8",
+    "zachyceno": "2026-09-13T11:32:29.720Z",
+    "publikovano": "2026-09-08T17:23:10.000Z",
+    "zdroj": {
+      "nazev": "Google News — drones airspace NATO",
+      "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxPSl90M2RtcWU3eE91OGp3LWtWNE5pT3pJbFYxcVpYQnRiRXJNZ0ZKWEJRbllnajR6MUFSSUVjSmVZaFNJbEhhVzN0RVNlelQySVJvNTRncElsNFRUcHdQOEpKd0NGRk1rYlFIOWJ5d1VsdURsdHR2Nk10MmJtbGJfekxhc0puWjJWVGRtZnRnd0U3VmpsZXZnUFhuQWFTWDdUN2dJ?oc=5",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Russian drone violates Moldovan and Romanian airspace, crashes in Moldova - The Kyiv Independent",
+    "titulekPuvodni": "Russian drone violates Moldovan and Romanian airspace, crashes in Moldova - The Kyiv Independent",
+    "shrnuti": "<a href=\"https://news.google.com/rss/articles/CBMiowFBVV95cUxPSl90M2RtcWU3eE91OGp3LWtWNE5pT3pJbFYxcVpYQnRiRXJNZ0ZKWEJRbllnajR6MUFSSUVjSmVZaFNJbEhhVzN0RVNlelQySVJvNTRncElsNFRUcHdQOEpKd0NGRk1rYlFIOWJ5d1VsdURsdHR2Nk10MmJtbGJfekxhc0puWjJWVGRtZnRnd0U3VmpsZXZnUFhuQWFTWDdUN2dJ?oc=5\" target=\"_blank\">Russian",
+    "kodZeme": "CZ",
+    "zeme": "Česko",
+    "kategorie": [
+      "drony",
+      "rusko"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "shody": [
+      "violat+airspace",
+      "dron",
+      "drone",
+      "airspace",
+      "russia"
+    ],
+    "stav": "ceka"
+  },
+  {
     "id": "k-c897c1a3e12d8443",
     "zachyceno": "2026-09-09T09:33:43.858Z",
     "publikovano": "2026-09-08T16:38:41.000Z",
@@ -1813,6 +1905,32 @@
       "scrambl",
       "fighter jet+scrambl",
       "russia"
+    ],
+    "stav": "ceka"
+  },
+  {
+    "id": "k-5389558ee6ca5dff",
+    "zachyceno": "2026-09-13T11:32:29.721Z",
+    "publikovano": "2026-09-07T12:26:39.000Z",
+    "zdroj": {
+      "nazev": "Google News — cyberattack infrastructure Europe",
+      "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxQLU1oVlQyb3M1LWw4cmJJcFhXdGZfZG1jc1VJUzZ5Ry0ydlFLRmMtZTY4RzNuZ3R0TFBiQ1N6NXRtQXF3R2pnNGNEcy1RUGtGeUlPaW1oMndqSEw4N08xRE8yU09tS295WmZZWDc0cDVzc1YwSzFBVUVBNXFmSUdHNk5FcmEzenJyVDNsWGdwZXBDZFk?oc=5",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Europe is under cyberattack. Is it ready? - The Parliament Magazine",
+    "titulekPuvodni": "Europe is under cyberattack. Is it ready? - The Parliament Magazine",
+    "shrnuti": "<a href=\"https://news.google.com/rss/articles/CBMikwFBVV95cUxQLU1oVlQyb3M1LWw4cmJJcFhXdGZfZG1jc1VJUzZ5Ry0ydlFLRmMtZTY4RzNuZ3R0TFBiQ1N6NXRtQXF3R2pnNGNEcy1RUGtGeUlPaW1oMndqSEw4N08xRE8yU09tS295WmZZWDc0cDVzc1YwSzFBVUVBNXFmSUdHNk5FcmEzenJyVDNsWGdwZXBDZFk?oc=5\" target=\"_blank\">Europe is under cyberattack.",
+    "kodZeme": "EU",
+    "zeme": "EU",
+    "kategorie": [
+      "kyber"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "shody": [
+      "cyberattack",
+      "cyber"
     ],
     "stav": "ceka"
   },
@@ -2832,6 +2950,33 @@
     "stav": "ceka"
   },
   {
+    "id": "k-cba1a9fc66f26a31",
+    "zachyceno": "2026-09-13T11:32:29.710Z",
+    "publikovano": "2026-09-03T07:00:00.000Z",
+    "zdroj": {
+      "nazev": "Google News — sabotage Europe",
+      "url": "https://news.google.com/rss/articles/CBMijgJBVV95cUxPb0VFR0ZwY1pjVk51TDJyTEJHU0c1LVRJSDZUVXpKYVRHWHVFQzBseVJMOWNrVlBTMUY4WS1CV01STF9xWktEQnlWbXVGTUtGMEhqVVhrQ2hXS3hXUW55Z3NaR3JuamJCZzBUeHFyV1F1WTc5MzVaUzJkZEtJU3lGaUUwNUowLXBEYlF1djBGVWVYQjZMa0hibTBKOUZUVjNJNUo2aWVKZ3Bxc3lqajJYdWVDYmppOHFzdFZDd19OT3lwNFB4cjh0RHBCQ0FnX1VKRUxOUER5UE5tVVlOZ3VoMVhfcXhHTThXVHVaSlBUMWFYdUJMZVFCc2RaYUVLS3diQnFyQ2tlMnFEdXd0dlE?oc=5",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Sabotage threat looms over Europe's power grid: 'The worst-case scenario is not inevitable, but we must be prepared' - Le Monde.fr",
+    "titulekPuvodni": "Sabotage threat looms over Europe's power grid: 'The worst-case scenario is not inevitable, but we must be prepared' - Le Monde.fr",
+    "shrnuti": "<a href=\"https://news.google.com/rss/articles/CBMijgJBVV95cUxPb0VFR0ZwY1pjVk51TDJyTEJHU0c1LVRJSDZUVXpKYVRHWHVFQzBseVJMOWNrVlBTMUY4WS1CV01STF9xWktEQnlWbXVGTUtGMEhqVVhrQ2hXS3hXUW55Z3NaR3JuamJCZzBUeHFyV1F1WTc5MzVaUzJkZEtJU3lGaUUwNUowLXBEYlF1djBGVWVYQjZMa0hibTBKOUZUVjNJNUo2aWVKZ3Bxc3lqajJYdWVDYmppOHFzdF",
+    "kodZeme": "EU",
+    "zeme": "EU",
+    "kategorie": [
+      "sabotaz",
+      "infrastruktura"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "shody": [
+      "sabotage",
+      "power grid"
+    ],
+    "stav": "ceka"
+  },
+  {
     "id": "k-afc97756134a009b",
     "zachyceno": "2026-09-06T13:59:15.565Z",
     "publikovano": "2026-09-03T07:00:00.000Z",
@@ -3800,6 +3945,36 @@
       "sabotaz",
       "kyberutok",
       "rusk"
+    ],
+    "stav": "ceka"
+  },
+  {
+    "id": "k-2edc85b35419aa7e",
+    "zachyceno": "2026-09-13T11:32:29.747Z",
+    "publikovano": "2026-08-27T09:03:55.000Z",
+    "zdroj": {
+      "nazev": "Google News — Moldavsko vzdušný prostor",
+      "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxPRWhYNHBERGZla2MzcFpsLUlmY2dFUXl5RkVseG0wSkh6RlRURWJkV2U1RUVOOGtGejB5ZkpYbHAxYVJ2RXhqMU56SThpcG1vMk1GODJid2lQNUJlc3NBVEowT0h3RmY1QmlySlJtd2xUbWlUTDNxSzkyam14VmF4Z1Y2b3NTMnp3S1hGWXFPYmhNOGlrWkplOFFZbw?oc=5",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Moldova probes fallen drone as five breach airspace in Russian raid - Moldova 1",
+    "titulekPuvodni": "Moldova probes fallen drone as five breach airspace in Russian raid - Moldova 1",
+    "shrnuti": "<a href=\"https://news.google.com/rss/articles/CBMimwFBVV95cUxPRWhYNHBERGZla2MzcFpsLUlmY2dFUXl5RkVseG0wSkh6RlRURWJkV2U1RUVOOGtGejB5ZkpYbHAxYVJ2RXhqMU56SThpcG1vMk1GODJid2lQNUJlc3NBVEowT0h3RmY1QmlySlJtd2xUbWlUTDNxSzkyam14VmF4Z1Y2b3NTMnp3S1hGWXFPYmhNOGlrWkplOFFZbw?oc=5\" target=\"_blank\">Moldova probes fa",
+    "kodZeme": "MD",
+    "zeme": "Moldavsko",
+    "kategorie": [
+      "drony",
+      "rusko"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "shody": [
+      "breach+airspace",
+      "dron",
+      "drone",
+      "airspace",
+      "russia"
     ],
     "stav": "ceka"
   },
