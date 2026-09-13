@@ -3,6 +3,7 @@ import fs from "node:fs";
 import path from "node:path";
 import { ctiRss, normalizuj, stahni } from "./nacti";
 import { ZDROJE_UDALOSTI, type ZdrojUdalosti } from "./zdroje-udalosti";
+import { dostupnyPoskytovatel, strukturovane } from "./model";
 
 /*
   Automatický sběr událostí.
@@ -399,11 +400,8 @@ function znameZIncidentu(): { adresy: Set<string>; otisky: Set<string> } {
  * Bez klíče se přeskočí. Model nikdy nerozhoduje o zveřejnění — to dělá člověk.
  */
 async function doplnModelem(nove: Kandidat[]): Promise<Kandidat[]> {
-  if (!process.env.ANTHROPIC_API_KEY || !nove.length) return nove;
-  const { default: Anthropic } = await import("@anthropic-ai/sdk");
+  if (!dostupnyPoskytovatel() || !nove.length) return nove;
   const { z } = await import("zod");
-  const { zodOutputFormat } = await import("@anthropic-ai/sdk/helpers/zod");
-  const client = new Anthropic();
 
   const Vysledek = z.object({
     polozky: z.array(z.object({
@@ -418,42 +416,42 @@ async function doplnModelem(nove: Kandidat[]): Promise<Kandidat[]> {
     })),
   });
 
+  const POKYNY = [
+    "Třídíš zprávy pro český bezpečnostní přehled. Relevantní jsou jen SKUTEČNÉ události z Evropy: sabotáže, žhářství, útoky na infrastrukturu, narušení vzdušného prostoru, kybernetické útoky s dopadem, zatčení agentů, oficiální atribuce, kroky NATO/EU/vlád, mimořádná právní opatření.",
+    "Nerelevantní: komentáře, analýzy bez nové skutečnosti, sport, kultura, obecná politika, válka na Ukrajině mimo dopad na NATO/EU, stará událost bez nového faktu.",
+    "Pro relevantní napiš věcný český titulek (co se stalo, kde), jednu větu shrnutí bez hodnocení, kód země ISO-2 místa události (EU pro instituce EU, null neurčeno), český název země, oblasti z: cr, nato, hybridni, sabotaz, infrastruktura, drony, hranice, pravo, rusko, diplomacie, kyber, vysetrovani, zpravodajske; druhOdhad: pripad = reálná událost, opatreni = oficiální krok státu/aliance, reakce = prohlášení/varování, neurceno.",
+    "Nic si nedomýšlej. Když zpráva neříká zemi, dej null. Vrať každé id přesně jednou.",
+  ].join(" ");
+
   const vystup: Kandidat[] = [];
   for (let i = 0; i < nove.length; i += 25) {
     const davka = nove.slice(i, i + 25);
-    try {
-      const odpoved = await client.messages.parse({
-        model: "claude-opus-5",
-        max_tokens: 16000,
-        output_config: { effort: "low", format: zodOutputFormat(Vysledek) },
-        system: [
-          "Třídíš zprávy pro český bezpečnostní přehled. Relevantní jsou jen SKUTEČNÉ události z Evropy: sabotáže, žhářství, útoky na infrastrukturu, narušení vzdušného prostoru, kybernetické útoky s dopadem, zatčení agentů, oficiální atribuce, kroky NATO/EU/vlád, mimořádná právní opatření.",
-          "Nerelevantní: komentáře, analýzy bez nové skutečnosti, sport, kultura, obecná politika, válka na Ukrajině mimo dopad na NATO/EU, stará událost bez nového faktu.",
-          "Pro relevantní napiš věcný český titulek (co se stalo, kde), jednu větu shrnutí bez hodnocení, kód země ISO-2 místa události (EU pro instituce EU, null neurčeno), český název země, oblasti z: cr, nato, hybridni, sabotaz, infrastruktura, drony, hranice, pravo, rusko, diplomacie, kyber, vysetrovani, zpravodajske; druhOdhad: pripad = reálná událost, opatreni = oficiální krok státu/aliance, reakce = prohlášení/varování, neurceno.",
-          "Nic si nedomýšlej. Když zpráva neříká zemi, dej null. Vrať každé id přesně jednou.",
-        ].join(" "),
-        messages: [{ role: "user", content: JSON.stringify(davka.map((k) => ({ id: k.id, titulek: k.titulekPuvodni, shrnuti: k.shrnuti, zdroj: k.zdroj.nazev }))) }],
+    const vysledek = await strukturovane({
+      system: POKYNY,
+      vstup: davka.map((k) => ({ id: k.id, titulek: k.titulekPuvodni, shrnuti: k.shrnuti, zdroj: k.zdroj.nazev })),
+      schema: Vysledek,
+      ucel: "třídění kandidátů",
+      maxTokens: 16000,
+    });
+
+    // Bez modelu zůstávají pravidla — kandidát se nezahodí.
+    if (!vysledek) { vystup.push(...davka); continue; }
+
+    const podleId = new Map(vysledek.polozky.map((x) => [x.id, x]));
+    for (const k of davka) {
+      const v = podleId.get(k.id);
+      if (!v) { vystup.push(k); continue; }
+      if (!v.relevantni) continue;
+      vystup.push({
+        ...k,
+        titulek: v.titulekCs || k.titulek,
+        shrnuti: v.shrnutiCs || k.shrnuti,
+        kodZeme: v.kodZeme ?? k.kodZeme,
+        zeme: v.zeme ?? k.zeme,
+        kategorie: v.kategorie.length ? v.kategorie : k.kategorie,
+        druhOdhad: v.druhOdhad,
+        klasifikace: "model",
       });
-      if (odpoved.stop_reason === "refusal" || !odpoved.parsed_output) { vystup.push(...davka); continue; }
-      const podleId = new Map(odpoved.parsed_output.polozky.map((p) => [p.id, p]));
-      for (const k of davka) {
-        const p = podleId.get(k.id);
-        if (!p) { vystup.push(k); continue; }
-        if (!p.relevantni) continue;
-        vystup.push({
-          ...k,
-          titulek: p.titulekCs || k.titulek,
-          shrnuti: p.shrnutiCs || k.shrnuti,
-          kodZeme: p.kodZeme ?? k.kodZeme,
-          zeme: p.zeme ?? k.zeme,
-          kategorie: p.kategorie.length ? p.kategorie : k.kategorie,
-          druhOdhad: p.druhOdhad,
-          klasifikace: "model",
-        });
-      }
-    } catch (e) {
-      console.log(`[sber/udalosti] model nedostupný, zůstávají pravidla: ${e instanceof Error ? e.message : e}`);
-      vystup.push(...davka);
     }
   }
   return vystup;
@@ -480,13 +478,9 @@ function ctiOdmitnute(): Odmitnuty[] {
  */
 async function posudOdmitnute(polozky: Odmitnuty[]): Promise<Odmitnuty[]> {
   const kPosouzeni = polozky.filter((o) => !o.posouzeni).slice(0, MAX_POSUZOVANYCH);
-  if (!process.env.ANTHROPIC_API_KEY || !kPosouzeni.length) return polozky;
+  if (!dostupnyPoskytovatel() || !kPosouzeni.length) return polozky;
 
-  const { default: Anthropic } = await import("@anthropic-ai/sdk");
   const { z } = await import("zod");
-  const { zodOutputFormat } = await import("@anthropic-ai/sdk/helpers/zod");
-  const client = new Anthropic();
-
   const Vysledek = z.object({
     polozky: z.array(z.object({
       id: z.string(),
@@ -495,31 +489,27 @@ async function posudOdmitnute(polozky: Odmitnuty[]): Promise<Odmitnuty[]> {
     })),
   });
 
+  const POKYNY = [
+    "Tyhle zprávy neprošly automatickým sítem českého bezpečnostního přehledu. Tvůj jediný úkol je najít mezi nimi ty, které jsou přesto vážné a měl by si je přečíst člověk.",
+    "podezreni: vysoke = zpráva popisuje závažnou bezpečnostní událost v Evropě (útok, sabotáž, výbuch, narušení vzdušného prostoru, zásah do kritické infrastruktury, mobilizace, vyhlášení mimořádného stavu, ozbrojený incident), i když je titulek nejasný, vtipný nebo neinformativní; stredni = může jít o bezpečnostní událost, ale z titulku to nelze poznat; zadne = zjevně nic z toho (sport, kultura, ekonomika, komentář, běžná politika).",
+    "Posuzuj obsah, ne styl. Špatně napsaný titulek nad vážnou zprávou je přesně to, co hledáme. Naopak dramatický titulek nad ničím je zadne.",
+    "duvod: nejvýš 12 slov česky, věcně. Nic si nedomýšlej — co v textu není, o tom netvrď, že tam je.",
+    "Vrať každé id přesně jednou.",
+  ].join(" ");
+
   const podleId = new Map<string, { podezreni: "vysoke" | "stredni" | "zadne"; duvod: string }>();
 
   for (let i = 0; i < kPosouzeni.length; i += 40) {
     const davka = kPosouzeni.slice(i, i + 40);
-    try {
-      const odpoved = await client.messages.parse({
-        // Levný a rychlý model: tohle je třídění šumu, ne psaní záznamu.
-        model: "claude-haiku-4-5-20251001",
-        max_tokens: 8000,
-        output_config: { effort: "low", format: zodOutputFormat(Vysledek) },
-        system: [
-          "Tyhle zprávy neprošly automatickým sítem českého bezpečnostního přehledu. Tvůj jediný úkol je najít mezi nimi ty, které jsou přesto vážné a měl by si je přečíst člověk.",
-          "podezreni: vysoke = zpráva popisuje závažnou bezpečnostní událost v Evropě (útok, sabotáž, výbuch, narušení vzdušného prostoru, zásah do kritické infrastruktury, mobilizace, vyhlášení mimořádného stavu, ozbrojený incident), i když je titulek nejasný, vtipný nebo neinformativní; stredni = může jít o bezpečnostní událost, ale z titulku to nelze poznat; zadne = zjevně nic z toho (sport, kultura, ekonomika, komentář, běžná politika).",
-          "Posuzuj obsah, ne styl. Špatně napsaný titulek nad vážnou zprávou je přesně to, co hledáme. Naopak dramatický titulek nad ničím je zadne.",
-          "duvod: nejvýš 12 slov česky, věcně. Nic si nedomýšlej — co v textu není, o tom netvrď, že tam je.",
-          "Vrať každé id přesně jednou.",
-        ].join(" "),
-        messages: [{ role: "user", content: JSON.stringify(davka.map((o) => ({ id: o.id, titulek: o.titulek, shrnuti: o.shrnuti, zdroj: o.zdroj.nazev }))) }],
-      });
-      if (odpoved.stop_reason === "refusal" || !odpoved.parsed_output) continue;
-      for (const v of odpoved.parsed_output.polozky) podleId.set(v.id, { podezreni: v.podezreni, duvod: v.duvod });
-    } catch (e) {
-      console.log(`[sber/udalosti] posouzení odmítnutých přeskočeno: ${e instanceof Error ? e.message : e}`);
-      break;
-    }
+    const vysledek = await strukturovane({
+      system: POKYNY,
+      vstup: davka.map((o) => ({ id: o.id, titulek: o.titulek, shrnuti: o.shrnuti, zdroj: o.zdroj.nazev })),
+      schema: Vysledek,
+      ucel: "posouzení odmítnutých",
+    });
+    // Když model vypadne, zbytek zůstane neposouzený — a přehled to přizná.
+    if (!vysledek) break;
+    for (const v of vysledek.polozky) podleId.set(v.id, { podezreni: v.podezreni, duvod: v.duvod });
   }
 
   const kdy = nyni();

@@ -38,9 +38,12 @@ jobs:
       - name: Sběr z veřejných zdrojů
         run: npm run sber
         env:
-          # Nepovinné. S klíčem model vyřadí nerelevantní zprávy a přeloží titulky;
-          # bez něj sběr běží jen podle klíčových slov.
+          # Nepovinné, ale hodně mění. S klíčem model vyřadí nerelevantní zprávy,
+          # přeloží titulky a dá druhé čtení odmítnutým; bez něj sběr běží jen
+          # podle klíčových slov. Stačí jeden klíč — OPENAI má přednost.
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          OPENAI_MODEL: ${{ vars.OPENAI_MODEL }}
 
       - name: Nahrát změny dat
         run: |

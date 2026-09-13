@@ -37,13 +37,16 @@ jobs:
 
       - name: Doplnit chybějící překlady
         env:
+          # Stačí jeden. OPENAI_API_KEY má přednost; ANTHROPIC_API_KEY je druhá cesta.
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          OPENAI_MODEL: ${{ vars.OPENAI_MODEL }}
         run: |
-          if [ -z "$ANTHROPIC_API_KEY" ]; then
-            echo "::warning::Chybí ANTHROPIC_API_KEY — nepřeložené věty zůstanou česky."
+          if [ -z "$OPENAI_API_KEY" ] && [ -z "$ANTHROPIC_API_KEY" ]; then
+            echo "::warning::Chybí OPENAI_API_KEY i ANTHROPIC_API_KEY — nepřeložené věty zůstanou česky."
             exit 0
           fi
-          node nastroje/preloz.mjs
+          npm run preloz
 
       # Neúplný překlad nesmí shodit build: chybějící věta se zobrazí česky.
       - name: Kontroly

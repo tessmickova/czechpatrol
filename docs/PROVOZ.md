@@ -34,7 +34,8 @@
 |---|---|---|
 | GitHub secrets | `CLOUDFLARE_API_TOKEN` s právy Pages, D1 Edit, Workers Scripts Edit | API se nenasadí *(doplněno 13. 9. 2026)* |
 | GitHub variables | `API_URL` | účty, souhrn a tipy do správy vypnuté |
-| GitHub secrets | `ANTHROPIC_API_KEY` | **dnes chybí** → tři věci neběží: překlady rozhraní zůstávají česky, sběr netřídí kandidáty modelem a odmítnuté zprávy se neposuzují |
+| GitHub secrets | `OPENAI_API_KEY` **nebo** `ANTHROPIC_API_KEY` (stačí jeden) | tři věci neběží: překlady rozhraní zůstávají česky, sběr netřídí kandidáty modelem a odmítnuté zprávy se neposuzují |
+| GitHub variables | `OPENAI_MODEL` *(nepovinné)* | model se vybere sám z toho, co účet nabízí — viz „Který model se použije“ |
 | GitHub secrets | `GH_TOKEN_SBER` — fine-grained token jen na `tessmickova/czechpatrol`, práva **Actions: Read and write** a **Metadata: Read** | sběr běží jen na plánovači GitHubu *(doplněno 13. 9. 2026)* |
 | GitHub secrets | `TELEGRAM_WEBHOOK_SECRET` + proměnná `TELEGRAM_BOT_JMENO` | webhook Telegramu se nenastaví — bot nepřijímá `/start` a `/stop`, odesílat umí |
 | `src/config/web.ts` | `PROVOZOVATEL.nazev`, `PROVOZOVATEL.kontakt` | stránky o projektu, soukromí a podmínkách říkají, že provozovatel není uveden |
@@ -120,6 +121,34 @@ Protože sběr teď běží desetkrát častěji, ale data mění jen občas, **
 přeskakuje, když se nic nezměnilo**: krok „Je vůbec co nasazovat?“ porovná
 `commit` z živého `/stav.json` s `HEAD`. Když se doména neozve, nasazuje se —
 raději nasazení navíc než žádné.
+
+## Model: jeden vstup, dva poskytovatelé
+
+Model se používá na tři pomocné věci — třídění kandidátů, druhé čtení
+odmítnutých zpráv a překlad rozhraní. **Ani jedna z nich nic nezveřejňuje**;
+to dělá vždycky člověk.
+
+Všechny tři jdou jedním vstupem, `sber/model.ts`. Poskytovatel se bere podle
+toho, který klíč je nastavený: `OPENAI_API_KEY` má přednost, `ANTHROPIC_API_KEY`
+zůstává jako druhá cesta, aby se přechodem nic nerozbilo. Vynutit jde přes
+`POSKYTOVATEL_MODELU=openai|anthropic` — a vynucený poskytovatel bez svého klíče
+je nedostupný, ne tiché přepnutí na toho druhého.
+
+**Nikdy nevyhazuje výjimku ven.** Když model chybí, odmítne odpovědět nebo
+selže, vrátí `null` a volající pokračuje bez něj: kandidáti zůstanou tříděni
+podle pravidel, odmítnuté zůstanou neposouzené a nepřeložená věta zůstane
+česky. Sběr bezpečnostních dat nesmí spadnout kvůli tomu, že došel kredit.
+
+### Který model se použije
+
+U OpenAI se název nehádá. Není-li v `OPENAI_MODEL`, zeptáme se účtu přes
+`models.list()`, co má k dispozici, a vezmeme první z pořadníku, který tam
+opravdu je (`gpt-5-mini`, `gpt-5`, `gpt-4.1-mini`, `gpt-4o-mini`, `gpt-4.1`,
+`gpt-4o`). Když nic z toho není, vezme se jakýkoli model `gpt-*`; když se
+seznam nepodaří načíst, řekne se to nahlas místo poslání vymyšleného názvu.
+Pořadník míří na levné varianty — je to třídění šumu a překlad popisků.
+
+U Anthropicu se bere `ANTHROPIC_MODEL`, jinak výchozí model projektu.
 
 ## Cizojazyčné přehledy
 
