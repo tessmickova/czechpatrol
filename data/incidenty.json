@@ -6971,5 +6971,180 @@
     "zapocitanoTyden": "2026-W37",
     "aiZpracovano": true,
     "lidskyOvereno": true
+  },
+  {
+    "id": "i-2026-09-12-francie-vykolejeni-cleon",
+    "slug": "francie-vykolejeni-vlaku-cleon-2026",
+    "titulek": "Francie: v Normandii vykolejil osobní vlak se 186 cestujícími, 44 zraněných; hlavní verzí vyšetřování je kus kolejnice položený na trati",
+    "kratkyTitulek": "Francie: vykolejení vlaku v Normandii",
+    "zeme": "Francie",
+    "kodZeme": "FR",
+    "kategorie": [
+      "sabotaz",
+      "infrastruktura",
+      "vysetrovani"
+    ],
+    "datumUdalosti": "2026-09-11T00:00:00Z",
+    "datumZjisteni": "2026-09-12T00:00:00Z",
+    "aktualizovano": "2026-09-13T09:00:00Z",
+    "zavaznost": "O2",
+    "jistota": "vysoka",
+    "stav": "probiha",
+    "atribuce": "vysetrovana",
+    "puvodce": "neznamy",
+    "druh": "pripad",
+    "fakta": [
+      "V pátek 11. září 2026 večer vykolejil u obce Cléon v departementu Seine-Maritime regionální vlak jedoucí z Rouenu do Caen se 186 cestujícími.",
+      "Zraněno bylo 44 lidí. Jedna žena byla letecky převezena do fakultní nemocnice v Rouenu v kritickém stavu; podle úřadů už není v ohrožení života. Ostatní byli ošetřeni a propuštěni nebo k propuštění mířili.",
+      "Státní zástupce Sébastien Gallois v sobotu 12. září uvedl, že hlavní verzí je přítomnost kusu kolejnice na jedné z kolejí, která mohla vykolejení způsobit. Důvod, proč tam byl, podle něj známý není.",
+      "Úřady aktivovaly plán pro hromadné neštěstí: na místě zasahovalo 130 hasičů, pět lékařských týmů a 80 vozidel."
+    ],
+    "neznameho": [
+      "Zda šlo o úmysl. Úřady zatím mluví o neznámém důvodu přítomnosti kusu kolejnice, ne o prokázaném útoku — a nikoho neoznačily.",
+      "Zda věc souvisí s dřívějšími útoky na francouzskou železnici.",
+      "Jak dlouho bude trať mimo provoz a jaký to bude mít dopad na dopravu v regionu."
+    ],
+    "vyznam": "Zatím je doložená událost a její následky, ne příčina. Vedeme to proto jako vyšetřovaný případ, ne jako sabotáž — do doby, než to francouzské orgány uzavřou, je označení „útok“ tvrzením navíc. Tohle je hodnocení projektu, ne doložený fakt.",
+    "eskalacniSpousteče": [
+      "Závěr vyšetřování, který potvrdí úmyslné položení překážky na trať.",
+      "Další podobný zásah do železniční infrastruktury v Evropě."
+    ],
+    "deeskalacniSignaly": [
+      "Zjištění, že kus kolejnice zůstal na trati následkem údržby nebo nehody, ne úmyslu."
+    ],
+    "zdroje": [
+      {
+        "nazev": "ČT24 — Ve Francii vykolejil vlak, hlavní verzí při vyšetřování je podle AFP cizí zavinění",
+        "url": "https://ct24.ceskatelevize.cz/clanek/svet/ve-francii-vykolejil-vlak-hlavni-verzi-pri-vysetrovani-je-podle-afp-cizi-zavineni-377510",
+        "typ": "media",
+        "publikovano": "2026-09-12T00:00:00Z",
+        "primarni": false,
+        "jazyk": "cs"
+      },
+      {
+        "nazev": "CNN — Train derails in France and injures 44 as authorities investigate possible sabotage",
+        "url": "https://www.cnn.com/2026/09/12/europe/train-derails-france-intl",
+        "typ": "media",
+        "publikovano": "2026-09-12T00:00:00Z",
+        "primarni": false,
+        "jazyk": "en"
+      },
+      {
+        "nazev": "RTÉ — Sabotage suspected in French train derailment",
+        "url": "https://www.rte.ie/news/world/2026/0912/1591279-france-trail/",
+        "typ": "media",
+        "publikovano": "2026-09-12T00:00:00Z",
+        "primarni": false,
+        "jazyk": "en"
+      },
+      {
+        "nazev": "UPI — 44 injured, 1 seriously, in France derailment; possible sabotage",
+        "url": "https://www.upi.com/Top_News/World-News/2026/09/12/france-44-injured-train-derailment/4271789244161",
+        "typ": "media",
+        "publikovano": "2026-09-12T00:00:00Z",
+        "primarni": false,
+        "jazyk": "en"
+      }
+    ],
+    "souvisejici": [],
+    "historie": [
+      {
+        "kdy": "2026-09-12T00:00:00Z",
+        "text": "Státní zástupce označil za hlavní verzi kus kolejnice na trati; důvod jeho přítomnosti není známý.",
+        "novySignal": true
+      }
+    ],
+    "novy": true,
+    "zapocitanoTyden": "2026-W37",
+    "aiZpracovano": true,
+    "lidskyOvereno": true
+  },
+  {
+    "id": "i-2026-09-12-bulharsko-emco-pozar",
+    "slug": "bulharsko-emco-pozar-skladu-munice-2026",
+    "titulek": "Bulharsko: výbuch a rozsáhlý požár ve skladu munice firmy EMCO, která dodává střelivo Ukrajině; ministr vnitra prověřuje i sabotáž",
+    "kratkyTitulek": "Bulharsko: požár skladu munice EMCO",
+    "zeme": "Bulharsko",
+    "kodZeme": "BG",
+    "kategorie": [
+      "sabotaz",
+      "infrastruktura",
+      "vysetrovani"
+    ],
+    "datumUdalosti": "2026-09-12T00:00:00Z",
+    "datumZjisteni": "2026-09-12T00:00:00Z",
+    "aktualizovano": "2026-09-13T09:00:00Z",
+    "zavaznost": "O1",
+    "jistota": "vysoka",
+    "stav": "probiha",
+    "atribuce": "vysetrovana",
+    "puvodce": "neznamy",
+    "druh": "pripad",
+    "fakta": [
+      "V noci na 12. září 2026 způsobil výbuch rozsáhlý požár ve skladu zbraní provozovaném bulharskou zbrojovkou EMCO u obce Careva Livada ve středním Bulharsku. Oheň se rozšířil z jednoho skladu na další.",
+      "Podle místních úřadů se nikdo nezranil.",
+      "Bulharský ministr vnitra uvedl, že se prověřuje příčina včetně možnosti sabotáže a možné souvislosti s požárem v jiném areálu téže firmy ze srpna 2026. Jde o druhý takový případ u téhož podniku během několika týdnů.",
+      "EMCO dodává střelivo používané Ukrajinou a vlastní ji bulharský obchodník se zbraněmi Emilian Gebrev.",
+      "Bulharská prokuratura dřívější výbuchy v areálech EMCO spojovala s ruskými občany a s jednotkou 29155 ruské vojenské rozvědky GRU. K tomuhle požáru zatím žádný takový závěr nepadl."
+    ],
+    "neznameho": [
+      "Příčina požáru. Ministr mluví o sabotáži jako o jedné z prověřovaných možností, ne o zjištění.",
+      "Zda spolu oba požáry u téže firmy souvisejí.",
+      "Jaký dopad to bude mít na dodávky střeliva."
+    ],
+    "vyznam": "Druhý požár v jednom podniku během několika týdnů je důvod ke sledování, ne sám o sobě doklad útoku. Podstatné je, že jde o výrobce dodávajícího Ukrajině — to z něj dělá cíl, který se v evropských případech opakuje. Tohle je hodnocení projektu, ne doložený fakt.",
+    "eskalacniSpousteče": [
+      "Závěr vyšetřování, který požár připíše úmyslnému jednání nebo konkrétní skupině.",
+      "Další požár nebo výbuch v evropském podniku dodávajícím Ukrajině."
+    ],
+    "deeskalacniSignaly": [
+      "Zjištění technické příčiny nebo zanedbání bez cizího zavinění."
+    ],
+    "zdroje": [
+      {
+        "nazev": "The Washington Post (AP) — Fire at ammunition depot in Bulgaria raises fears of neglect or sabotage",
+        "url": "https://www.washingtonpost.com/world/2026/09/12/bulgaria-ukraine-arms-depot-explosion-fire/1585bc4c-aeb0-11f1-b498-8697f35a6743_story.html",
+        "typ": "wire",
+        "publikovano": "2026-09-12T00:00:00Z",
+        "primarni": false,
+        "jazyk": "en"
+      },
+      {
+        "nazev": "The Kyiv Independent — Explosion at Bulgarian ammunition depot supplying Ukraine sparks massive fire, sabotage probe",
+        "url": "https://kyivindependent.com/explosion-hits-bulgarian-ammunition-facility-supplying-ukraine-sabotage-probe-underway/",
+        "typ": "media",
+        "publikovano": "2026-09-12T00:00:00Z",
+        "primarni": false,
+        "jazyk": "en"
+      },
+      {
+        "nazev": "Euromaidan Press — Second fire in a month hits the Bulgarian plant that ships ammunition to Ukraine",
+        "url": "https://euromaidanpress.com/2026/09/12/second-fire-in-a-month-hits-the-bulgarian-plant-that-ships-ammunition-to-ukraine-and-sabotage-is-on-the-table/",
+        "typ": "media",
+        "publikovano": "2026-09-12T00:00:00Z",
+        "primarni": false,
+        "jazyk": "en"
+      },
+      {
+        "nazev": "Defence Blog — Bulgarian arms depot hit by fire and explosions again",
+        "url": "https://defence-blog.com/bulgarian-arms-depot-hit-by-fire-and-explosions-again/",
+        "typ": "media",
+        "publikovano": "2026-09-12T00:00:00Z",
+        "primarni": false,
+        "jazyk": "en"
+      }
+    ],
+    "souvisejici": [],
+    "historie": [
+      {
+        "kdy": "2026-09-12T00:00:00Z",
+        "text": "Ministr vnitra oznámil prověřování příčiny včetně sabotáže a možné vazby na srpnový požár.",
+        "novySignal": true
+      }
+    ],
+    "novy": true,
+    "zapocitanoTyden": "2026-W37",
+    "aiZpracovano": true,
+    "lidskyOvereno": true
   }
 ]
