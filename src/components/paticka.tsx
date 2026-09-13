@@ -2,6 +2,7 @@ import Link from "next/link";
 import { KOMUNITA, METODIKA_REVIDOVANA, WEB } from "@/config/web";
 import { datum } from "@/lib/format";
 import { Logo } from "./znacka";
+import { JAZYKY } from "@/lib/jazyky";
 
 const SLOUPCE: { nadpis: string; odkazy: [string, string][] }[] = [
   {
@@ -17,6 +18,27 @@ const SLOUPCE: { nadpis: string; odkazy: [string, string][] }[] = [
     odkazy: [["/podporit/", "Podpořit"], ["/ucet/", "Účet"], ["/izs/", "Pro záchranné složky"], ["/soukromi/", "Soukromí"], ["/podminky/", "Podmínky"]],
   },
 ];
+
+/*
+  Jazyky v patičce. Nejsou v hlavní navigaci schválně: český web zůstává tím
+  hlavním a přepínač je rozcestník pro čtenáře odjinud, ne rovnocenná větev.
+*/
+function Jazyky() {
+  return (
+    <nav aria-label="Jazyky" className="mt-8 border-t border-white/10 pt-6">
+      <div className="stitek-tmavy mb-3 text-noc-tlum/70">Jiné jazyky / Other languages</div>
+      <ul className="flex flex-wrap gap-x-4 gap-y-2 text-[13.5px]">
+        {JAZYKY.map((j) => (
+          <li key={j.kod}>
+            <Link href={`/${j.kod}/`} hrefLang={j.kod} className="text-noc-tlum transition-colors hover:text-noc-text">
+              {j.nazev}
+            </Link>
+          </li>
+        ))}
+      </ul>
+    </nav>
+  );
+}
 
 export function Paticka() {
   return (
@@ -51,6 +73,7 @@ export function Paticka() {
             </nav>
           ))}
         </div>
+        <Jazyky />
       </div>
     </footer>
   );

@@ -135,6 +135,27 @@ jako „zatím neověřeno“.
 Zástupné texty se nenahrazují smyšlenými údaji. Ukázková data patří výhradně do
 `data/ukazka/` a musí být viditelně označená.
 
+## Pravidlo č. 3b — cizí jazyky: překládá se rozhraní, ne fakta
+
+Web nabízí přehled v patnácti jazycích zemí kolem Ruska a našich sousedů
+(`/en/`, `/pl/`, `/lv/` …). Platí u nich tři věci a žádná z nich není volitelná:
+
+1. **Překládá se rozhraní a číselníky, ne fakta.** Popisky, názvy kategorií,
+   úrovní, stavů a původců mají překlad v `data/preklady/<kód>.json`. Titulky
+   a fakta u jednotlivých událostí zůstávají česky, označené `lang="cs"`,
+   s odkazem na český detail. Přeložený titulek by byl tvrzení o události,
+   které nikdo neověřil — a fakta se nesmějí lišit podle jazyka.
+2. **Závazné je české znění** a stránka to říká nahoře. Podmínky užití
+   a zásady soukromí se nepřekládají vůbec: druhé znění právního textu, které
+   si může s tím českým odporovat, je horší než žádné.
+3. **Neúplný překlad zastaví build.** `npm run kontrola:data` hlásí chybějící
+   klíč jako chybu, ne jako varování. Poloprázdná cizojazyčná stránka je horší
+   než žádná — čtenář nepozná, jestli mu chybí údaj, nebo se nic nestalo.
+
+Názvy zemí se nepíšou ručně; berou se z `Intl.DisplayNames` podle kódu ISO
+v `src/lib/jazyky.ts`. Země bez kódu (Evropa, NATO, mezinárodní vody) zůstává
+česky, dokud pro ni někdo nedoplní překlad. Nepřeložený údaj, ne vymyšlený.
+
 ## Pravidlo č. 4 — automat smí potvrdit jen zápor
 
 Sběrač nikdy nic nezveřejňuje. Když najde signál, hodnotu **nemění** — založí

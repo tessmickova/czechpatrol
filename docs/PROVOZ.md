@@ -78,6 +78,30 @@ přeskakuje, když se nic nezměnilo**: krok „Je vůbec co nasazovat?“ porov
 `commit` z živého `/stav.json` s `HEAD`. Když se doména neozve, nasazuje se —
 raději nasazení navíc než žádné.
 
+## Cizojazyčné přehledy
+
+`/[jazyk]/` staví přehled v patnácti jazycích (`src/lib/jazyky.ts`): angličtina,
+němčina, polština, slovenština, ukrajinština, litevština, lotyština, estonština,
+finština, švédština, norština, dánština, rumunština, bulharština, maďarština.
+Výběr jde po zemích, o kterých máme nejvíc záznamů, a po sousedech.
+
+Stránka se **skládá z číselníků**, ne z přeložených vět o událostech: země,
+kategorie, úroveň závažnosti, stav vyšetřování a původce mají překlad
+v `data/preklady/<kód>.json`, takže nová událost je v cizím jazyce čitelná hned,
+jak se zveřejní, a nemůže zastarat. Titulek zůstává česky s `lang="cs"`
+a odkazem na český detail — proč, viz pravidlo č. 3b v CLAUDE.md.
+
+Názvy zemí se neudržují ručně: `Intl.DisplayNames` je odvodí z kódu ISO
+(`KODY_ZEMI`). Co není stát, zůstane česky.
+
+Úplnost hlídá `npm run kontrola:data` (oddíl 5) a `testy/preklady.test.ts`.
+Chybějící klíč je **chyba**, ne varování. Test navíc hlídá, že se názvy úrovní
+v překladech nerozejdou se `src/lib/skala.ts` a že každá země v datech má buď
+kód ISO, nebo je zjevně nestát.
+
+Odkaz na jazyky je v patičce a na každé cizojazyčné stránce; do hlavní
+navigace nepatří — český web zůstává tím hlavním, tohle je rozcestník.
+
 ## Jak rychle se událost dostane na web
 
 | Krok | Kdy běží | Co udělá |
