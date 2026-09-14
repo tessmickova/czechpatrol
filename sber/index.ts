@@ -156,7 +156,7 @@ async function main() {
     try {
       const u = await sbirejUdalosti();
       console.log(
-        `[sber] události: nových kandidátů ${u.novych}, ve frontě ${u.celkem}, odmítnutých ${u.odmitnutych}` +
+        `[sber] události: nových kandidátů ${u.novych}, ve frontě ${u.celkem} (s výřezem zdroje ${u.sVyrezem}), odmítnutých ${u.odmitnutych}` +
           (u.podezrelych ? `, z toho vážně vypadá ${u.podezrelych} — projít ve správě` : "") +
           (u.nedostupne.length ? `, nedostupné: ${u.nedostupne.join("; ")}` : ""),
       );

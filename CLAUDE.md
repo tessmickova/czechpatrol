@@ -218,6 +218,7 @@ Obojí za ni zjišťuje workflow **Stav pro routines**
 
 | Soubor | Co v něm je | Místo čeho |
 |---|---|---|
+| `data/kandidati.json`, pole `vyrez` | začátek zdrojového článku jako text, se stavem a časem stažení | otevření zpravodajského webu |
 | `data/fronta/zivy-web.json` | dostupnost domény, commit živého buildu, commit repozitáře, `shodujeSe`, `commituNavic`, `rozdilVObsahu` | stažení `czechpatrol.pages.dev` |
 | `data/fronta/behy.json` | posledních 30 běhů: workflow, závěr, SHA, čas, odkaz | volání `api.github.com` |
 
@@ -240,6 +241,29 @@ Obojí za ni zjišťuje workflow **Stav pro routines**
 
 Kdyby to někdy nestačilo, workflow jde spustit ručně (`workflow_dispatch`);
 routine to ale sama neudělá, protože na Actions API nedosáhne.
+
+### Ověřování kandidátů z výřezu (od 14. 9. 2026)
+
+Tohle je nejdražší chyba, kterou tenhle projekt zatím udělal, a stojí za to ji
+mít napsanou. Hodinová rutina měla v zadání „otevři zdroj a ověř, co se stalo;
+když se zdroj nepodaří otevřít, kandidáta nepřebírej“. Zpravodajské weby jsou
+ale z jejího prostředí blokované. Rutina tedy dělala **přesně to, co měla** —
+a nepřevzala od 6. do 14. září jediného kandidáta, přičemž každý běh hlásil
+úspěch. Web osm dní stál a nic nekřičelo.
+
+Poučení: **zadání nesmí po automatu chtít něco, na co jeho prostředí nedosáhne.**
+Když to uděláš, nedostaneš chybu — dostaneš ticho, které vypadá jako klid.
+
+Oprava: text zdroje přináší sběr běžící na Actions a ukládá ho ke kandidátovi
+do pole `vyrez` (`text`, `stazeno`, `stav`, případně `chyba`). Rutina ověřuje
+z něj. Platí u toho tři věci:
+
+- **Prázdný výřez s důvodem není „na zdroji nic nebylo“.** Takový kandidát se
+  nepřebírá a důvod jde do zprávy.
+- **Záznam z výřezu má `lidskyOvereno: false`** a jistotu nižší než „potvrzeno“.
+  Ověřoval automat z citace, ne člověk ze zdroje, a web to nesmí zamlčet.
+- **Ukládá se citace, ne článek.** Strop 1200 znaků, vždy vedle odkazu na
+  originál — autorské právo je součástí pravidla č. 0.
 
 ## Pravidlo č. 5 — zdrojový kód patří na GitHub
 

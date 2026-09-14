@@ -85,6 +85,23 @@ stránky. Soubor je součástí veřejného repozitáře i statického buildu �
 v něm žádné neveřejné údaje, jen titulky a odkazy; drží se stranou proto, aby
 zpravodajský šum nedělal obsah webu.
 
+### Výřez ze zdroje: proč rutina osm dní nic nepublikovala
+
+Od 6. do 14. 9. 2026 nepřibyl na web jediný záznam od automatu — všechny
+publikoval člověk v interaktivním sezení. Příčina nebyla v kódu: hodinová
+rutina měla v zadání otevřít zdroj a bez toho kandidáta nepřebírat, jenže
+zpravodajské domény jsou z jejího prostředí blokované (`curl` na ně vrací
+`000`). Dělala tedy správně nic a hlásila úspěch.
+
+Od 14. 9. 2026 stahuje sběr na Actions začátek zdrojového článku a ukládá ho
+ke kandidátovi do pole `vyrez`. Nejvýš **12 článků za běh** a jen tam, kde
+výřez chybí — nedotažené doplní příští běh. Uloží se **nejvýš 1200 znaků**:
+je to citace pro ověření vedle odkazu na originál, ne kopie článku.
+
+Rutina pak ověřuje z `vyrez.text`. Záznam takhle vzniklý má
+`lidskyOvereno: false` a jistotu nižší než „potvrzeno“ — ověřoval automat
+z citace, ne člověk ze zdroje.
+
 ### Kdo sběr spouští
 
 Plánovač GitHub Actions je podle vlastní dokumentace „best effort“: událost

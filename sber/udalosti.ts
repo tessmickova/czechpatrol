@@ -4,6 +4,7 @@ import path from "node:path";
 import { ctiRss, normalizuj, stahni } from "./nacti";
 import { ZDROJE_UDALOSTI, type ZdrojUdalosti } from "./zdroje-udalosti";
 import { dostupnyPoskytovatel, strukturovane } from "./model";
+import { vyrezZeStranky, type VyrezZdroje } from "./text-zdroje";
 
 /*
   Automatický sběr událostí.
@@ -33,6 +34,12 @@ export interface Kandidat {
   druhOdhad: "pripad" | "opatreni" | "reakce" | "neurceno";
   /** „clovek“ = vytáhl to člověk z odmítnutých, proti sítu. */
   klasifikace: "pravidla" | "model" | "clovek";
+  /*
+    Výřez ze zdrojového článku, stažený v Actions. Ověřovací rutina běží
+    v sandboxu, kde jsou zpravodajské domény blokované — ověřuje proto
+    z tohohle textu, ne ze sítě (pravidlo č. 4b). null = ještě nestahováno.
+  */
+  vyrez?: VyrezZdroje | null;
   shody: string[];
   stav: "ceka";
 }
@@ -42,6 +49,12 @@ const SOUBOR = path.join(KOREN, "kandidati.json");
 const SOUBOR_ODMITNUTYCH = path.join(KOREN, "fronta", "odmitnute.json");
 const DNI_ZPET = 21;
 const MAX_KANDIDATU = 200;
+/*
+  Kolik článků se za běh stáhne kvůli výřezu. Strop je tu proto, že běh nemá
+  trvat věčnost a redakce nemají být zbytečně zatěžované; nedotažení se dohoní
+  příští běh, protože se doplňuje jen to, co chybí.
+*/
+const MAX_VYREZU_ZA_BEH = 12;
 
 /*
   Odmítnuté zprávy.
@@ -519,7 +532,7 @@ async function posudOdmitnute(polozky: Odmitnuty[]): Promise<Odmitnuty[]> {
   });
 }
 
-export async function sbirejUdalosti(): Promise<{ novych: number; celkem: number; nedostupne: string[]; odmitnutych: number; podezrelych: number }> {
+export async function sbirejUdalosti(): Promise<{ novych: number; celkem: number; nedostupne: string[]; odmitnutych: number; podezrelych: number; sVyrezem: number }> {
   const stazene = await Promise.all(ZDROJE_UDALOSTI.map(stahniZdroj));
   const nedostupne = stazene.filter((s) => !s.ok).map((s) => `${s.z.klic}: ${s.chyba}`);
   const stare = ctiKandidaty();
@@ -590,6 +603,17 @@ export async function sbirejUdalosti(): Promise<{ novych: number; celkem: number
   const vse = [...doplnene, ...zivi]
     .sort((a, b) => (b.publikovano ?? b.zachyceno).localeCompare(a.publikovano ?? a.zachyceno))
     .slice(0, MAX_KANDIDATU);
+  /*
+    Výřezy ze zdrojů. Tohle je ta část, kvůli které sběr vůbec k něčemu je:
+    bez ní ověřovací rutina nemá co číst, protože na zpravodajské weby sama
+    nedosáhne. Doplňuje se jen to, co chybí, a od nejnovějšího.
+  */
+  const bezVyrezu = vse.filter((k) => !k.vyrez).slice(0, MAX_VYREZU_ZA_BEH);
+  for (const k of bezVyrezu) {
+    k.vyrez = await vyrezZeStranky(k.zdroj.url);
+  }
+  const sVyrezem = vse.filter((k) => k.vyrez?.text).length;
+
   fs.writeFileSync(SOUBOR, JSON.stringify(vse, null, 2) + "\n", "utf-8");
 
   /*
@@ -610,5 +634,5 @@ export async function sbirejUdalosti(): Promise<{ novych: number; celkem: number
   fs.writeFileSync(SOUBOR_ODMITNUTYCH, JSON.stringify(posouzene, null, 2) + "\n", "utf-8");
 
   const podezrelych = posouzene.filter((o) => o.posouzeni?.podezreni === "vysoke").length;
-  return { novych: doplnene.length, celkem: vse.length, nedostupne, odmitnutych: posouzene.length, podezrelych };
+  return { novych: doplnene.length, celkem: vse.length, nedostupne, odmitnutych: posouzene.length, podezrelych, sVyrezem };
 }
