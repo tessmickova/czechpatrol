@@ -828,7 +828,13 @@
       "dron",
       "rusk"
     ],
-    "stav": "ceka"
+    "stav": "ceka",
+    "vyrez": {
+      "text": "",
+      "stazeno": "2026-09-14T06:32:36.790Z",
+      "stav": 403,
+      "chyba": "HTTP 403"
+    }
   },
   {
     "id": "k-befe72a348550000",
@@ -853,7 +859,13 @@
     "shody": [
       "odsoud"
     ],
-    "stav": "ceka"
+    "stav": "ceka",
+    "vyrez": {
+      "text": "",
+      "stazeno": "2026-09-14T06:32:36.832Z",
+      "stav": 403,
+      "chyba": "HTTP 403"
+    }
   },
   {
     "id": "k-4857a5a3a6bd82a9",
@@ -878,7 +890,12 @@
     "shody": [
       "sabotaz"
     ],
-    "stav": "ceka"
+    "stav": "ceka",
+    "vyrez": {
+      "text": "Google News",
+      "stazeno": "2026-09-14T06:32:36.888Z",
+      "stav": 200
+    }
   },
   {
     "id": "k-aca1a294723f9f38",
@@ -909,7 +926,12 @@
       "nato",
       "russia"
     ],
-    "stav": "ceka"
+    "stav": "ceka",
+    "vyrez": {
+      "text": "Google News",
+      "stazeno": "2026-09-14T06:32:37.001Z",
+      "stav": 200
+    }
   },
   {
     "id": "k-ca1608ce24073fa4",
@@ -934,7 +956,12 @@
     "shody": [
       "odsoud"
     ],
-    "stav": "ceka"
+    "stav": "ceka",
+    "vyrez": {
+      "text": "Za vzpomínkové akce na masakr na náměstí Nebeského klidu dostali aktivisté trest vězení — ČT24 — Česká televize\nŽivé vysílání\nTV program\nPočasí\nTeletext\nE-shop\nVše o ČT\nTV poplatky\nKontakty\nSpravovat účet\nOblíbené pořady\nRozkoukaná videa\nPřihlásit se do TV\nOdhlásit se\nZa vzpomínkové akce na masakr na náměstí Nebeského klidu dostali aktivisté trest vězení\nČTK\n, pov\n11. 9. 2026 11. 9. 2026 ‌ ‌ | Zdroj: ČTK\nPolicie před soudem v Hongkongu, 11. září 2026\nZdroj: Reuters/Vernon Yuen\nČínský soud v Hongkongu v pátek vynesl tresty v rozpětí pět až sedm let vězení pro tři aktivisty, kteří řadu let organizovali vzpomínkové akce připomínající masakr na pekingském náměstí Nebeského klidu v roce 1989. Případ proti trojici organizátorů je všeobecně považován za barometr svobod v Hongkongu v době, kdy Peking, pod jehož správu toto poloautonomní území spadá, tvrdě potlačuje jakoukoli opozici. Verdikt odsoudila OSN i EU, která jej také označila za politicky motivovaný.\nAktivisty už soud letos na základě Pekingem prosazeného zákona o národní bezpečnosti shledal vinnými z podněcování ke svržení čínského režimu. Jednačtyřicetiletá Chow Hang-tung a 69letý Lee Cheuk-yan, kteří trvali na své nevině,…",
+      "stazeno": "2026-09-14T06:32:37.111Z",
+      "stav": 200
+    }
   },
   {
     "id": "k-b5218d10ba8e3432",
@@ -965,7 +992,12 @@
       "nato",
       "russia"
     ],
-    "stav": "ceka"
+    "stav": "ceka",
+    "vyrez": {
+      "text": "Google News",
+      "stazeno": "2026-09-14T06:32:38.055Z",
+      "stav": 200
+    }
   },
   {
     "id": "k-ec7241916184af99",
@@ -996,7 +1028,12 @@
       "nato",
       "russia"
     ],
-    "stav": "ceka"
+    "stav": "ceka",
+    "vyrez": {
+      "text": "Google News",
+      "stazeno": "2026-09-14T06:32:38.178Z",
+      "stav": 200
+    }
   },
   {
     "id": "k-f5241785d17d9e47",
@@ -1023,7 +1060,12 @@
       "sabotage",
       "russia"
     ],
-    "stav": "ceka"
+    "stav": "ceka",
+    "vyrez": {
+      "text": "Google News",
+      "stazeno": "2026-09-14T06:32:38.300Z",
+      "stav": 200
+    }
   },
   {
     "id": "k-615950c20e52d94f",
@@ -1050,7 +1092,12 @@
       "sabotage",
       "russia"
     ],
-    "stav": "ceka"
+    "stav": "ceka",
+    "vyrez": {
+      "text": "Google News",
+      "stazeno": "2026-09-14T06:32:38.430Z",
+      "stav": 200
+    }
   },
   {
     "id": "k-ba82964dd25587c5",
@@ -1077,7 +1124,12 @@
       "sabotage",
       "russia"
     ],
-    "stav": "ceka"
+    "stav": "ceka",
+    "vyrez": {
+      "text": "Google News",
+      "stazeno": "2026-09-14T06:32:38.550Z",
+      "stav": 200
+    }
   },
   {
     "id": "k-2aa31b2a4d24328a",
@@ -1109,7 +1161,12 @@
       "nato",
       "russia"
     ],
-    "stav": "ceka"
+    "stav": "ceka",
+    "vyrez": {
+      "text": "Google News",
+      "stazeno": "2026-09-14T06:32:38.701Z",
+      "stav": 200
+    }
   },
   {
     "id": "k-b4a64f9454f3a999",
@@ -1139,7 +1196,12 @@
       "airspace",
       "russia"
     ],
-    "stav": "ceka"
+    "stav": "ceka",
+    "vyrez": {
+      "text": "Russian drone incursion delays Zelensky flight from Moldova - BBC News\nImage source, Reuters\nImage caption, Zelensky&#x27;s plane after it landed in Norway after flying in from Moldova\nBy Dan Sales\nPublished\n10 September 2026\nA plane carrying Ukrainian President Volodymyr Zelensky was delayed by a Russian drone as he prepared to fly to attend a state funeral in Oslo, Moldovan and Norwegian authorities say.\nZelensky and his wife Olena were on the jet at Chisinau, Moldova&#x27;s capital, ahead of Wednesday&#x27;s funeral of Norway&#x27;s King Harald V when the unmanned aircraft crossed over the Moldovan border.\nThe drone prompted an immediate airspace shutdown and Zelensky&#x27;s plane was left on the runway for around an hour before it could take off.\nThe flight was only authorised after it was confirmed the drone had come down 160km (100 miles) away. Asked by reporters on Thursday, the Kremlin said there had been no threat to the jet.\nZelensky&#x27;s plane had been due to take off at around 16:30 (14:30 GMT) from Chisinau International Airport.\nBut Moldovan government spokesman Dumitru Ciorici told the BBC that Moldova had closed its airspace after noticing a Russian drone had…",
+      "stazeno": "2026-09-14T06:32:38.808Z",
+      "stav": 200
+    }
   },
   {
     "id": "k-591a37060e1734d3",
