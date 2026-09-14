@@ -1643,7 +1643,12 @@
       "nato",
       "russia"
     ],
-    "stav": "ceka"
+    "stav": "ceka",
+    "vyrez": {
+      "text": "Google News",
+      "stazeno": "2026-09-14T07:32:31.454Z",
+      "stav": 200
+    }
   },
   {
     "id": "k-7a416976371ce97d",
@@ -1671,7 +1676,12 @@
       "drone",
       "airspace"
     ],
-    "stav": "ceka"
+    "stav": "ceka",
+    "vyrez": {
+      "text": "Google News",
+      "stazeno": "2026-09-14T07:32:31.571Z",
+      "stav": 200
+    }
   },
   {
     "id": "k-a9b5a9bd81fe5bd4",
@@ -1698,7 +1708,12 @@
       "dron",
       "drone"
     ],
-    "stav": "ceka"
+    "stav": "ceka",
+    "vyrez": {
+      "text": "Google News",
+      "stazeno": "2026-09-14T07:32:31.682Z",
+      "stav": 200
+    }
   },
   {
     "id": "k-374902a1f13f460f",
@@ -1726,7 +1741,12 @@
       "drone",
       "airspace"
     ],
-    "stav": "ceka"
+    "stav": "ceka",
+    "vyrez": {
+      "text": "Google News",
+      "stazeno": "2026-09-14T07:32:31.793Z",
+      "stav": 200
+    }
   },
   {
     "id": "k-5f85e37f0433bbe5",
@@ -1753,7 +1773,12 @@
       "dron",
       "drone"
     ],
-    "stav": "ceka"
+    "stav": "ceka",
+    "vyrez": {
+      "text": "Google News",
+      "stazeno": "2026-09-14T07:32:31.912Z",
+      "stav": 200
+    }
   },
   {
     "id": "k-e269fa410089c8c4",
@@ -1782,7 +1807,12 @@
       "charged with",
       "russia"
     ],
-    "stav": "ceka"
+    "stav": "ceka",
+    "vyrez": {
+      "text": "Google News",
+      "stazeno": "2026-09-14T07:32:32.026Z",
+      "stav": 200
+    }
   },
   {
     "id": "k-2a7ad2f0b3573061",
@@ -1811,7 +1841,12 @@
       "drone",
       "russia"
     ],
-    "stav": "ceka"
+    "stav": "ceka",
+    "vyrez": {
+      "text": "Google News",
+      "stazeno": "2026-09-14T07:32:32.145Z",
+      "stav": 200
+    }
   },
   {
     "id": "k-ee65ae12cea03028",
@@ -1840,7 +1875,12 @@
       "charged with",
       "russia"
     ],
-    "stav": "ceka"
+    "stav": "ceka",
+    "vyrez": {
+      "text": "Google News",
+      "stazeno": "2026-09-14T07:32:32.295Z",
+      "stav": 200
+    }
   },
   {
     "id": "k-ef40eea805fd9d19",
@@ -1871,7 +1911,13 @@
       "vojak",
       "vojaci"
     ],
-    "stav": "ceka"
+    "stav": "ceka",
+    "vyrez": {
+      "text": "",
+      "stazeno": "2026-09-14T07:32:32.409Z",
+      "stav": 403,
+      "chyba": "HTTP 403"
+    }
   },
   {
     "id": "k-9d4bd4c8a4f1ec9a",
@@ -1898,7 +1944,12 @@
       "sabotage",
       "russia"
     ],
-    "stav": "ceka"
+    "stav": "ceka",
+    "vyrez": {
+      "text": "Google News",
+      "stazeno": "2026-09-14T07:32:32.444Z",
+      "stav": 200
+    }
   },
   {
     "id": "k-f77482d22a9abbd9",
@@ -1925,7 +1976,12 @@
       "sabotage",
       "russia"
     ],
-    "stav": "ceka"
+    "stav": "ceka",
+    "vyrez": {
+      "text": "Google News",
+      "stazeno": "2026-09-14T07:32:32.574Z",
+      "stav": 200
+    }
   },
   {
     "id": "k-f57e2217a97f7f37",
@@ -1950,7 +2006,13 @@
     "shody": [
       "odsoud"
     ],
-    "stav": "ceka"
+    "stav": "ceka",
+    "vyrez": {
+      "text": "",
+      "stazeno": "2026-09-14T07:32:32.688Z",
+      "stav": 403,
+      "chyba": "HTTP 403"
+    }
   },
   {
     "id": "k-edcc63c9750c0683",
