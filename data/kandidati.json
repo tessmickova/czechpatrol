@@ -1230,7 +1230,12 @@
       "nato",
       "rusk"
     ],
-    "stav": "ceka"
+    "stav": "ceka",
+    "vyrez": {
+      "text": "Google News",
+      "stazeno": "2026-09-14T07:02:31.852Z",
+      "stav": 200
+    }
   },
   {
     "id": "k-77cad930b1d94a1d",
@@ -1257,7 +1262,13 @@
       "vojak",
       "vojaci"
     ],
-    "stav": "ceka"
+    "stav": "ceka",
+    "vyrez": {
+      "text": "",
+      "stazeno": "2026-09-14T07:02:32.000Z",
+      "stav": 403,
+      "chyba": "HTTP 403"
+    }
   },
   {
     "id": "k-7e9e017babc38e37",
@@ -1286,7 +1297,12 @@
       "nato",
       "russia"
     ],
-    "stav": "ceka"
+    "stav": "ceka",
+    "vyrez": {
+      "text": "Google News",
+      "stazeno": "2026-09-14T07:02:32.059Z",
+      "stav": 200
+    }
   },
   {
     "id": "k-4f8141eac3680821",
@@ -1315,7 +1331,12 @@
       "drone",
       "russia"
     ],
-    "stav": "ceka"
+    "stav": "ceka",
+    "vyrez": {
+      "text": "Google News",
+      "stazeno": "2026-09-14T07:02:32.217Z",
+      "stav": 200
+    }
   },
   {
     "id": "k-c8bcbb25fba42a30",
@@ -1346,7 +1367,12 @@
       "nato",
       "russia"
     ],
-    "stav": "ceka"
+    "stav": "ceka",
+    "vyrez": {
+      "text": "Google News",
+      "stazeno": "2026-09-14T07:02:32.336Z",
+      "stav": 200
+    }
   },
   {
     "id": "k-930e1a80177dab19",
@@ -1375,7 +1401,12 @@
       "drone",
       "russia"
     ],
-    "stav": "ceka"
+    "stav": "ceka",
+    "vyrez": {
+      "text": "Google News",
+      "stazeno": "2026-09-14T07:02:32.454Z",
+      "stav": 200
+    }
   },
   {
     "id": "k-ae5f08ee37d25c26",
@@ -1402,7 +1433,12 @@
       "dron",
       "drone"
     ],
-    "stav": "ceka"
+    "stav": "ceka",
+    "vyrez": {
+      "text": "Google News",
+      "stazeno": "2026-09-14T07:02:32.601Z",
+      "stav": 200
+    }
   },
   {
     "id": "k-68ef713a1b87c050",
@@ -1433,7 +1469,12 @@
       "nato",
       "russia"
     ],
-    "stav": "ceka"
+    "stav": "ceka",
+    "vyrez": {
+      "text": "Google News",
+      "stazeno": "2026-09-14T07:02:32.745Z",
+      "stav": 200
+    }
   },
   {
     "id": "k-9c84f8e98aca16d1",
@@ -1461,7 +1502,12 @@
       "drone",
       "airspace"
     ],
-    "stav": "ceka"
+    "stav": "ceka",
+    "vyrez": {
+      "text": "Google News",
+      "stazeno": "2026-09-14T07:02:32.890Z",
+      "stav": 200
+    }
   },
   {
     "id": "k-fdf3b4a0b6ba5c5f",
@@ -1492,7 +1538,12 @@
       "nato",
       "russia"
     ],
-    "stav": "ceka"
+    "stav": "ceka",
+    "vyrez": {
+      "text": "Google News",
+      "stazeno": "2026-09-14T07:02:33.042Z",
+      "stav": 200
+    }
   },
   {
     "id": "k-de5a7bf6c626e992",
@@ -1523,7 +1574,12 @@
       "nato",
       "russia"
     ],
-    "stav": "ceka"
+    "stav": "ceka",
+    "vyrez": {
+      "text": "Google News",
+      "stazeno": "2026-09-14T07:02:33.154Z",
+      "stav": 200
+    }
   },
   {
     "id": "k-dcb551a3abe94216",
@@ -1551,7 +1607,12 @@
       "drone",
       "airspace"
     ],
-    "stav": "ceka"
+    "stav": "ceka",
+    "vyrez": {
+      "text": "Google News",
+      "stazeno": "2026-09-14T07:02:33.309Z",
+      "stav": 200
+    }
   },
   {
     "id": "k-9876740bda14a0a4",
@@ -4663,60 +4724,6 @@
     "titulek": "Russia Has Launched New Wave Of Sabotage At Weapons Factories Across Europe - uatv.ua",
     "titulekPuvodni": "Russia Has Launched New Wave Of Sabotage At Weapons Factories Across Europe - uatv.ua",
     "shrnuti": "<a href=\"https://news.google.com/rss/articles/CBMimwFBVV95cUxOeUladUdrbFF0VE9mdzBqTlFJVjZNSTdYM1QzQnBGX19kcDFvelFIbk1FcmNIbXlPMEx3OUJOeGlMeEJmS1U1WWNzMjkzcl8wMjRVb19zOEp1X2UyeDF2WDB5SjFRN1Via3dKZHJNUW5xdlVja2llaG5BcldMYkozV1Z1UTlVcXQxbmNqTURGWU52Zk9iM2ltUkhFQQ?oc=5\" target=\"_blank\">Russia Has Launch",
-    "kodZeme": "RU",
-    "zeme": "Rusko",
-    "kategorie": [
-      "sabotaz",
-      "rusko"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "shody": [
-      "sabotage",
-      "russia"
-    ],
-    "stav": "ceka"
-  },
-  {
-    "id": "k-eff90926cf65daa1",
-    "zachyceno": "2026-09-06T13:59:15.572Z",
-    "publikovano": "2026-08-24T07:00:00.000Z",
-    "zdroj": {
-      "nazev": "Google News — sabotage Europe",
-      "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxOeEpwOUFURlNpS21GbE9SZTlQdEwyV3BWbGNfSVdmUTB5RHFaX0ROcHBOelhvQV9LeG05OUNBQXRnWXF6ZUlzWXVvSXJlWXpjTUQxQnl6TjlSVWU1ekhocXZLdEQtN0o0V2U2MHhoaWJjOVNRQmU5NlpGNDdPa0ZLclU3RDFkRDU0bEQ1SUtoUDlaa2Uza0I5Zw?oc=5",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "‘We need to be prepared’: Finland sounds alarm over rising Russian sabotage threat - TVP World",
-    "titulekPuvodni": "‘We need to be prepared’: Finland sounds alarm over rising Russian sabotage threat - TVP World",
-    "shrnuti": "<a href=\"https://news.google.com/rss/articles/CBMimAFBVV95cUxOeEpwOUFURlNpS21GbE9SZTlQdEwyV3BWbGNfSVdmUTB5RHFaX0ROcHBOelhvQV9LeG05OUNBQXRnWXF6ZUlzWXVvSXJlWXpjTUQxQnl6TjlSVWU1ekhocXZLdEQtN0o0V2U2MHhoaWJjOVNRQmU5NlpGNDdPa0ZLclU3RDFkRDU0bEQ1SUtoUDlaa2Uza0I5Zw?oc=5\" target=\"_blank\">‘We need to be prepar",
-    "kodZeme": "FI",
-    "zeme": "Finsko",
-    "kategorie": [
-      "sabotaz",
-      "rusko"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "shody": [
-      "sabotage",
-      "russia"
-    ],
-    "stav": "ceka"
-  },
-  {
-    "id": "k-bada982d6243f7de",
-    "zachyceno": "2026-09-06T13:59:15.576Z",
-    "publikovano": "2026-08-24T07:00:00.000Z",
-    "zdroj": {
-      "nazev": "Google News — sabotage Europe",
-      "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxNSzVjVkpacl8wUHJFWG50RDNLQkZmbjYzakk5R3JmZG5uTlk3QTZnTWF6emhqX3VrWmpLT0ZpMzN0c2txMVNJZUUxVVBFS0F2NERIcDlrdkhvdE1BYWhsaTZIV2pZMmoxRnk3MHQzZmk0YWhMUUp4dktKWFI3V0YtWWJlTHd5NjR0VUYxMjlidm1WOFA5cWF1NFUwUk5CRVVsNE9ONDJaS1BNNktZd1lKVTEtX0t6aUVPakZ2dE1MN25nZVlfRUHSAcsBQVVfeXFMUDlBc3YwZGoyem5pb3RIUjBWbEVWVnE5QU91TGJIaG0zYVVSRFhBTkRkamxkMTljcnRPb21EX0RoVXkwLUVOdDVZenc5WFp6T1QzaTZyc1lNLWtIY29mUWpnWXZ2MmpxLWVfOXhyeXAtOWNfeUo5QjBaRmRLWmtqQXlaZlI4V1dnZzJOUG4wakpnQWs5SGw1dWdLb3RZRVpSN0s3VlZpdHpaYjV6YlB2S2ZxYUpzVEFFQkxwVHlfekFrNVVmV3JsUzgwR0k?oc=5",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Russia orchestrating sabotage attacks at European arms plants to sow discord: Report - WION",
-    "titulekPuvodni": "Russia orchestrating sabotage attacks at European arms plants to sow discord: Report - WION",
-    "shrnuti": "<a href=\"https://news.google.com/rss/articles/CBMixgFBVV95cUxNSzVjVkpacl8wUHJFWG50RDNLQkZmbjYzakk5R3JmZG5uTlk3QTZnTWF6emhqX3VrWmpLT0ZpMzN0c2txMVNJZUUxVVBFS0F2NERIcDlrdkhvdE1BYWhsaTZIV2pZMmoxRnk3MHQzZmk0YWhMUUp4dktKWFI3V0YtWWJlTHd5NjR0VUYxMjlidm1WOFA5cWF1NFUwUk5CRVVsNE9ONDJaS1BNNktZd1lKVTEtX0t6aUVPak",
     "kodZeme": "RU",
     "zeme": "Rusko",
     "kategorie": [
