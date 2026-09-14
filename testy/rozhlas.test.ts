@@ -275,3 +275,34 @@ describe("číselníky v rozhlasu se nesmí rozejít s daty", () => {
     }
   });
 });
+
+/*
+  „Kde se to stalo“ versus „týká se to nás“.
+
+  Tohle byly dřív jedno a totéž a zpráva o ruském dronu, který zasáhl vlak na
+  Ukrajině, tvrdila odběratelům „Záznam se týká území České republiky“ — jen
+  proto, že měl oblast „cr“ kvůli českému politikovi ve vlaku. Nepravda
+  v kanálu je to nejhorší, co tenhle projekt může vypustit.
+*/
+describe("místo události se nesmí plést s významem pro Česko", () => {
+  const zaklad = {
+    id: "i-test", slug: "test", titulek: "Zkouška", kratkyTitulek: "Zkouška",
+    datumUdalosti: "2026-09-13T00:00:00Z", datumZjisteni: "2026-09-13T00:00:00Z",
+    aktualizovano: "2026-09-14T00:00:00Z", zavaznost: "O1", jistota: "vysoka",
+    stav: "probiha", atribuce: "vysetrovana", puvodce: "rusko", druh: "pripad",
+    fakta: ["Něco se stalo."], neznameho: [], vyznam: "", zdroje: [],
+  };
+
+  it("událost mimo ČR netvrdí, že se stala u nás — ani když je vedená jako významná pro Česko", () => {
+    const z = sestavZpravu({ ...zaklad, zeme: "Ukrajina", kodZeme: "UA", kategorie: ["drony", "cr"] }, {});
+    expect(z).not.toContain("týká území České republiky");
+    expect(z).toContain("nikoli v České republice");
+    // Vazba na Česko se přitom nesmí ztratit.
+    expect(z).toContain("Pro Česko je podstatná");
+  });
+
+  it("událost v ČR se pozná podle země, ne podle oblasti", () => {
+    const z = sestavZpravu({ ...zaklad, zeme: "Česko", kodZeme: "CZ", kategorie: ["sabotaz"] }, {});
+    expect(z).toContain("týká území České republiky");
+  });
+});

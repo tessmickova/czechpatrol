@@ -135,7 +135,19 @@ export function legendaTecek(zaznamy) {
   return PORADI_TECEK.filter((t) => pocty[t]).map((t) => `${t} ${pocty[t]}× ${POPIS_TECKY[t]}`).join(" · ");
 }
 
-const seTykaCr = (i) => i.kodZeme === "CZ" || (i.kategorie ?? []).includes("cr");
+/*
+  Dvě různé otázky, které se nesmějí slít do jedné věty:
+  „stalo se to u nás“ (kodZeme) a „týká se nás to“ (oblast „cr“).
+
+  Dřív to byla jedna funkce a zpráva o ruském dronu, který zasáhl vlak na
+  Ukrajině, tvrdila „Záznam se týká území České republiky“, protože záznam
+  nesl oblast „cr“ kvůli českému politikovi ve vlaku. To je nepravda, a ještě
+  v kanálu s odběrateli.
+*/
+const naUzemiCr = (i) => i.kodZeme === "CZ";
+const tykaSeCr = (i) => (i.kategorie ?? []).includes("cr");
+/** Sjednocení pro pořadí a denní souhrn: doma NEBO se nás to týká. */
+const dulezitePro = (i) => naUzemiCr(i) || tykaSeCr(i);
 
 /**
  * Naléhavost pro řazení v souhrnu: opatření nahoru, pak podle závažnosti.
@@ -145,7 +157,7 @@ export function vaha(i) {
   const u = i.zavaznost ?? "";
   const zaklad = druh(i) === "opatreni" ? 100
     : u.startsWith("R") ? 40 : u.startsWith("O") || u === "YO" ? 30 : u.startsWith("Y") ? 20 : 10;
-  return zaklad * 10 + (seTykaCr(i) ? 1 : 0);
+  return zaklad * 10 + (dulezitePro(i) ? 1 : 0);
 }
 
 /**
@@ -160,18 +172,20 @@ export function klicovaVeta(i) {
   const nato = i.kodZeme === "EU";
   // „z toho“ sedí za všechny předchozí věty (událost, záznam, opatření) — jiné zájmeno by některou z nich rozbilo.
   const nic = "Pro Českou republiku z toho neplyne žádné nové úřední opatření.";
-  if (d === "opatreni" && seTykaCr(i)) {
+  if (d === "opatreni" && naUzemiCr(i)) {
     const nazev = zkrat(String(i.kratkyTitulek || i.titulek).replace(/^(ČR|Česko|Česká republika)\s*[:–-]\s*/i, ""), 90);
     return `V České republice bylo přijato úřední opatření: ${nazev}. Rozsah a platnost uvádí přehled opatření.`;
   }
   const kde = nato ? "v rámci NATO" : V_ZEMI[i.kodZeme];
   if (d === "opatreni") return `Opatření platí ${kde ?? `mimo Českou republiku (${i.zeme})`}, nikoli v České republice. ${nic}`;
-  if (seTykaCr(i)) return `Záznam se týká území České republiky. ${nic}`;
+  if (naUzemiCr(i)) return `Záznam se týká území České republiky. ${nic}`;
   if (nato) return `Záznam se týká NATO jako celku. ${nic}`;
   const misto = kde
     ? `${d === "reakce" ? "Jde o vyjádření k dění" : "Událost nastala"} ${kde}, nikoli v České republice.`
     : `Událost nastala mimo Českou republiku (${i.zeme}).`;
-  return `${misto} ${nic}`;
+  // Událost mimo ČR, která se Česka přesto týká: řekne se obojí, ne jen jedno.
+  const vazba = tykaSeCr(i) ? " Pro Česko je podstatná, proto ji vedeme." : "";
+  return `${misto}${vazba} ${nic}`;
 }
 
 /** Souhrn pokrytí: kolik zdrojů a kdo z nich je úřad. Přesně to, co čtenář chce vědět. */
@@ -300,7 +314,7 @@ export function sestavZpravu(i, { aktualizace = false, souhrn = false } = {}) {
   radky.push(...radekPokryti(i));
 
   radky.push("", `Všechna fakta, hodnocení a všechny zdroje: ${odkaz}`);
-  if (d === "opatreni" || seTykaCr(i)) radky.push(`Úřední opatření platná v ČR: ${WEB}/#opatreni`);
+  if (d === "opatreni" || dulezitePro(i)) radky.push(`Úřední opatření platná v ČR: ${WEB}/#opatreni`);
   // Patička dělá ze zprávy citovatelný dokument: kdo ji vydal a pod jakým číslem.
   radky.push(`CzechPatrol · záznam ${esc(i.slug)} · aktualizováno ${datumCz(i.aktualizovano ?? kdyZjisteno(i))}`);
   return radky.join("\n");
@@ -324,9 +338,9 @@ export function rozdelZpravu(text, { limit = 3800 } = {}) {
 
 /** Nejzásadnější věta celého souhrnu: platí dnes v Česku něco nového, nebo ne. */
 export function klicovaVetaSouhrnu(zaznamy) {
-  const opatreniCr = zaznamy.find((i) => druh(i) === "opatreni" && seTykaCr(i));
+  const opatreniCr = zaznamy.find((i) => druh(i) === "opatreni" && dulezitePro(i));
   if (opatreniCr) return klicovaVeta(opatreniCr);
-  const ceske = zaznamy.find((i) => seTykaCr(i));
+  const ceske = zaznamy.find((i) => dulezitePro(i));
   if (ceske) {
     const nazev = zkrat(String(ceske.kratkyTitulek || ceske.titulek).replace(/^(ČR|Česko|Česká republika)\s*[:–-]\s*/i, ""), 90);
     return `Území České republiky se týká záznam: ${nazev}. Nové úřední opatření z něj neplyne.`;
