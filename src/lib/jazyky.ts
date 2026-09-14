@@ -65,6 +65,7 @@ export const KODY_ZEMI: Record<string, string> = {
   "Bosna a Hercegovina": "BA", Albánie: "AL", "Severní Makedonie": "MK", Řecko: "GR",
   Turecko: "TR", Kypr: "CY", Malta: "MT", Gruzie: "GE", Arménie: "AM", Ázerbájdžán: "AZ",
   Kazachstán: "KZ", "Spojené státy": "US", Kanada: "CA",
+  "Saúdská Arábie": "SA", Irák: "IQ", Írán: "IR", Izrael: "IL", Egypt: "EG",
 };
 
 /**

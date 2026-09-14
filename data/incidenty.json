@@ -1,5 +1,104 @@
 [
   {
+    "id": "i-2026-09-10-sauda-arabie-ropovod-vychod-zapad",
+    "slug": "sauda-arabie-ropovod-vychod-zapad-2026",
+    "titulek": "Saúdská Arábie: drony vypuštěné z iráckého území zasáhly ropovod Východ–Západ, ministerstvo energetiky ho preventivně odstavilo",
+    "kratkyTitulek": "Saúdská Arábie: zasažen ropovod Východ–Západ",
+    "zeme": "Saúdská Arábie",
+    "kodZeme": "SA",
+    "kategorie": [
+      "infrastruktura",
+      "drony"
+    ],
+    "datumUdalosti": "2026-09-10T00:00:00Z",
+    "datumZjisteni": "2026-09-11T00:00:00Z",
+    "aktualizovano": "2026-09-14T06:00:00Z",
+    "zavaznost": "O1",
+    "jistota": "vysoka",
+    "stav": "probiha",
+    "atribuce": "vysetrovana",
+    "puvodce": "neznamy",
+    "druh": "pripad",
+    "fakta": [
+      "Ráno 10. září 2026 zasáhly ropovod Východ–Západ drony vypuštěné z iráckého území, a to v oblastech Rijádu a Medíny. Vznikly požáry, poškozené byly čerpací stanice a několik lidí se zranilo.",
+      "Saúdské ministerstvo energetiky útok potvrdilo a oznámilo, že ropovod preventivně odstavilo.",
+      "Saúdské ministerstvo zahraničí útok odsoudilo v oficiálním prohlášení z 11. září. Uvedlo, že království v tuto chvíli nereaguje silou, aby podpořilo úsilí irácké vlády, a zároveň si vyhrazuje právo na opatření k ochraně vlastní bezpečnosti.",
+      "Irácká vláda připustila, že útok byl veden z jejího území, a odvolala velitele provincie Maysán.",
+      "Ropovod měří zhruba 1200 kilometrů a vede z východních ropných polí do přístavu Janbu u Rudého moře. Je to náhradní cesta, která obchází Hormuzský průliv.",
+      "Podle zdrojů agentury Reuters by oprava mohla trvat pět až šest týdnů; jiný zdroj agentury uvedl, že provoz může být obnoven dřív."
+    ],
+    "neznameho": [
+      "Kdo drony vypustil. Irák připustil, že start byl z jeho území, ale odpovědnost nebyla úředně přisouzena konkrétnímu aktérovi.",
+      "O kolik přesně klesnou globální dodávky ropy. Údaj „zhruba 4 % světových exportů“, který koluje po sociálních sítích, jsme nedoložili z žádného úředního ani agenturního zdroje.",
+      "Jak dlouho odstávka potrvá. Pět až šest týdnů je odhad zdrojů agentury, ne oznámení provozovatele.",
+      "Jaký bude dopad na ceny pohonných hmot v Česku. To je otázka trhu, ne bezpečnostní údaj, a nepředpovídáme ji."
+    ],
+    "vyznam": "Hodnocení projektu, ne fakt. Pro Česko z toho neplyne přímý výpadek paliva: ropa se sem dopravuje ropovody Družba a TAL/IKL, ne tankery přes Hormuzský průliv, a členské státy EU drží povinné nouzové zásoby na 90 dní. Přenos je tedy nepřímý, přes světovou cenu ropy. Záznam je na webu proto, že jde o útok na kritickou energetickou infrastrukturu; co udělá cena nafty u českých pump, tenhle web netvrdí ani neodhaduje.",
+    "eskalacniSpousteče": [
+      "Úřední přisouzení útoku konkrétnímu státu nebo skupině.",
+      "Prodloužení odstávky nad odhadovaných pět až šest týdnů.",
+      "Doložený výpadek dodávek ropy nebo pohonných hmot do Česka oznámený MPO, SSHR nebo ČEPREM."
+    ],
+    "deeskalacniSignaly": [
+      "Obnovení provozu ropovodu oznámené saúdským ministerstvem energetiky.",
+      "Otevření Hormuzského průlivu pro běžnou lodní dopravu."
+    ],
+    "zdroje": [
+      {
+        "nazev": "Saudi Press Agency — Saudi Arabia Strongly Condemns Drone Attack on East-West Pipeline by Drones Launched from Iraq",
+        "url": "https://www.spa.gov.sa/en/N2674116",
+        "typ": "primary",
+        "publikovano": "2026-09-11T00:00:00Z",
+        "primarni": true,
+        "jazyk": "en"
+      },
+      {
+        "nazev": "Al Jazeera — Saudi Arabia says East-West pipeline hit by drones launched from Iraq",
+        "url": "https://www.aljazeera.com/news/2026/9/11/saudi-arabia-says-east-west-pipeline-hit-by-drones-launched-from-iraq",
+        "typ": "media",
+        "publikovano": "2026-09-11T00:00:00Z",
+        "primarni": false,
+        "jazyk": "en"
+      },
+      {
+        "nazev": "CNBC — Saudi Arabia shut down East-West crude oil pipeline after multiple attacks by drones from Iraq",
+        "url": "https://www.cnbc.com/2026/09/11/saudi-arabia-shut-down-east-west-crude-oil-pipeline.html",
+        "typ": "media",
+        "publikovano": "2026-09-11T00:00:00Z",
+        "primarni": false,
+        "jazyk": "en"
+      },
+      {
+        "nazev": "CNN — Saudi oil pipeline shut down after attack triggers fires",
+        "url": "https://www.cnn.com/2026/09/11/politics/saudi-arabian-oil-pipeline-hit-by-projectiles-triggering-fires",
+        "typ": "media",
+        "publikovano": "2026-09-11T00:00:00Z",
+        "primarni": false,
+        "jazyk": "en"
+      },
+      {
+        "nazev": "Al Jazeera — Why Saudi Arabia’s East-West pipeline matters for global oil",
+        "url": "https://www.aljazeera.com/news/2026/9/14/why-saudi-arabias-east-west-pipeline-matters-for-global-oil",
+        "typ": "media",
+        "publikovano": "2026-09-14T00:00:00Z",
+        "primarni": false,
+        "jazyk": "en"
+      }
+    ],
+    "souvisejici": [],
+    "historie": [
+      {
+        "kdy": "2026-09-11T00:00:00Z",
+        "text": "Saúdské ministerstvo energetiky potvrdilo útok a preventivní odstavení ropovodu.",
+        "novySignal": true
+      }
+    ],
+    "novy": true,
+    "zapocitanoTyden": "2026-W37",
+    "aiZpracovano": false,
+    "lidskyOvereno": true
+  },
+  {
     "id": "a01",
     "slug": "shadow-fleet-drony",
     "titulek": "Analýza: ruská „shadow fleet“ jako platforma pro dronové operace",
