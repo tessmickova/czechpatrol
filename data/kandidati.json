@@ -1,5 +1,37 @@
 [
   {
+    "id": "k-76b2d13810030cbd",
+    "zachyceno": "2026-09-14T11:32:41.934Z",
+    "publikovano": "2026-09-14T11:26:00.000Z",
+    "zdroj": {
+      "nazev": "Google News — sabotage Europe",
+      "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE9MSUg5UVBQVnlHeVlsZk9lY3VnU3RvS0RibkVMX2Y4S2RzcWlQSUwyUVpCbHJQUTVfTVpEYkZuT2gta0FhR0NSS0paTng4REliemxIT2tFRVd2T1J3alFHWDhtZ0JNZmM?oc=5",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Poland Warns Russia Could Escalate With Unprecedented Sabotage Across Europe - Межа. Новини України.",
+    "titulekPuvodni": "Poland Warns Russia Could Escalate With Unprecedented Sabotage Across Europe - Межа. Новини України.",
+    "shrnuti": "<a href=\"https://news.google.com/rss/articles/CBMiZ0FVX3lxTE9MSUg5UVBQVnlHeVlsZk9lY3VnU3RvS0RibkVMX2Y4S2RzcWlQSUwyUVpCbHJQUTVfTVpEYkZuT2gta0FhR0NSS0paTng4REliemxIT2tFRVd2T1J3alFHWDhtZ0JNZmM?oc=5\" target=\"_blank\">Poland Warns Russia Could Escalate With Unprecedented Sabotage Across Europe</a> <font c",
+    "kodZeme": "PL",
+    "zeme": "Polsko",
+    "kategorie": [
+      "sabotaz",
+      "rusko"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "shody": [
+      "sabotage",
+      "russia"
+    ],
+    "stav": "ceka",
+    "vyrez": {
+      "text": "Google News",
+      "stazeno": "2026-09-14T11:32:42.010Z",
+      "stav": 200
+    }
+  },
+  {
     "id": "k-0577b0e3a1406ee7",
     "zachyceno": "2026-09-14T09:32:41.718Z",
     "publikovano": "2026-09-14T09:05:00.000Z",
@@ -4767,7 +4799,12 @@
       "sabotaz",
       "rusk"
     ],
-    "stav": "ceka"
+    "stav": "ceka",
+    "vyrez": {
+      "text": "Google News",
+      "stazeno": "2026-09-14T11:32:42.126Z",
+      "stav": 200
+    }
   },
   {
     "id": "k-d281fd405fef9ae2",
@@ -4792,7 +4829,12 @@
     "shody": [
       "sabotaz"
     ],
-    "stav": "ceka"
+    "stav": "ceka",
+    "vyrez": {
+      "text": "Google News",
+      "stazeno": "2026-09-14T11:32:42.242Z",
+      "stav": 200
+    }
   },
   {
     "id": "k-5ebf57ed57d3ec30",
@@ -4822,7 +4864,12 @@
       "drone",
       "russia"
     ],
-    "stav": "ceka"
+    "stav": "ceka",
+    "vyrez": {
+      "text": "Google News",
+      "stazeno": "2026-09-14T11:32:42.411Z",
+      "stav": 200
+    }
   },
   {
     "id": "k-32cc680dde2fb69d",
@@ -4849,7 +4896,12 @@
       "sabotaz",
       "rusk"
     ],
-    "stav": "ceka"
+    "stav": "ceka",
+    "vyrez": {
+      "text": "Google News",
+      "stazeno": "2026-09-14T11:32:42.545Z",
+      "stav": 200
+    }
   },
   {
     "id": "k-e13157ec5ccd03e4",
@@ -4876,7 +4928,12 @@
       "sabotage",
       "russia"
     ],
-    "stav": "ceka"
+    "stav": "ceka",
+    "vyrez": {
+      "text": "Google News",
+      "stazeno": "2026-09-14T11:32:42.657Z",
+      "stav": 200
+    }
   },
   {
     "id": "k-2dd1c93bbdc6f8e7",
@@ -4903,7 +4960,12 @@
       "sabotaz",
       "rusk"
     ],
-    "stav": "ceka"
+    "stav": "ceka",
+    "vyrez": {
+      "text": "Google News",
+      "stazeno": "2026-09-14T11:32:42.795Z",
+      "stav": 200
+    }
   },
   {
     "id": "k-73d8cee1f467ff3d",
@@ -4931,7 +4993,12 @@
       "dron",
       "drone"
     ],
-    "stav": "ceka"
+    "stav": "ceka",
+    "vyrez": {
+      "text": "Google News",
+      "stazeno": "2026-09-14T11:32:42.930Z",
+      "stav": 200
+    }
   },
   {
     "id": "k-e7ac1bbbbb4badf6",
@@ -4961,7 +5028,12 @@
       "cyber",
       "russia"
     ],
-    "stav": "ceka"
+    "stav": "ceka",
+    "vyrez": {
+      "text": "Google News",
+      "stazeno": "2026-09-14T11:32:43.066Z",
+      "stav": 200
+    }
   },
   {
     "id": "k-8ed8f41ce6c97400",
@@ -4992,7 +5064,12 @@
       "nato",
       "russia"
     ],
-    "stav": "ceka"
+    "stav": "ceka",
+    "vyrez": {
+      "text": "Google News",
+      "stazeno": "2026-09-14T11:32:43.181Z",
+      "stav": 200
+    }
   },
   {
     "id": "k-6b973c2cc0058d4e",
@@ -5019,7 +5096,12 @@
       "bomb",
       "russia"
     ],
-    "stav": "ceka"
+    "stav": "ceka",
+    "vyrez": {
+      "text": "Google News",
+      "stazeno": "2026-09-14T11:32:43.290Z",
+      "stav": 200
+    }
   },
   {
     "id": "k-484fdbaf935a58da",
@@ -5048,7 +5130,12 @@
       "drone",
       "russia"
     ],
-    "stav": "ceka"
+    "stav": "ceka",
+    "vyrez": {
+      "text": "Google News",
+      "stazeno": "2026-09-14T11:32:43.410Z",
+      "stav": 200
+    }
   },
   {
     "id": "k-182912b6af0d5dfd",
