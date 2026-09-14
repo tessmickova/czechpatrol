@@ -1,5 +1,40 @@
 [
   {
+    "id": "k-b1f98b36e50301bb",
+    "zachyceno": "2026-09-14T08:33:17.497Z",
+    "publikovano": "2026-09-14T08:04:00.000Z",
+    "zdroj": {
+      "nazev": "iROZHLAS — zprávy",
+      "url": "https://www.irozhlas.cz/zpravy-svet/online-rusko-zasahlo-navadenou-leteckou-bombou-izjum-zraneni-jsou-tri-lide_2609141004_raf",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "ONLINE: Rusko zasáhlo naváděnou leteckou bombou Izjum. Zranění jsou tři lidé, včetně malého dítěte",
+    "titulekPuvodni": "ONLINE: Rusko zasáhlo naváděnou leteckou bombou Izjum. Zranění jsou tři lidé, včetně malého dítěte",
+    "shrnuti": "Rusko v noci na pondělí zasáhlo naváděnou leteckou bombou východoukrajinský Izjum, kde utrpěli zranění tři lidé, včetně dvouměsíčního dítěte. Na síti Telegram to oznámil náčelník správy Charkovské oblasti Oleh Syněhubov. Ještě v neděli ruské útoky v ukrajinské Dněpropetrovské oblasti zranily čtyři l",
+    "kodZeme": "GB",
+    "zeme": "Spojené království",
+    "kategorie": [
+      "sabotaz",
+      "drony",
+      "rusko"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "shody": [
+      "bomb",
+      "dron",
+      "rusk"
+    ],
+    "stav": "ceka",
+    "vyrez": {
+      "text": "",
+      "stazeno": "2026-09-14T08:33:17.555Z",
+      "stav": 403,
+      "chyba": "HTTP 403"
+    }
+  },
+  {
     "id": "k-78826c10c28a14c5",
     "zachyceno": "2026-09-14T05:32:29.536Z",
     "publikovano": "2026-09-14T05:25:39.000Z",
@@ -2428,7 +2463,12 @@
       "sabotage",
       "russia"
     ],
-    "stav": "ceka"
+    "stav": "ceka",
+    "vyrez": {
+      "text": "Google News",
+      "stazeno": "2026-09-14T08:33:17.610Z",
+      "stav": 200
+    }
   },
   {
     "id": "k-7beabe40138113c2",
@@ -2455,7 +2495,12 @@
       "sabotage",
       "russia"
     ],
-    "stav": "ceka"
+    "stav": "ceka",
+    "vyrez": {
+      "text": "Google News",
+      "stazeno": "2026-09-14T08:33:17.776Z",
+      "stav": 200
+    }
   },
   {
     "id": "k-41331d58b2ab95fd",
@@ -2482,7 +2527,12 @@
       "sabotage",
       "russia"
     ],
-    "stav": "ceka"
+    "stav": "ceka",
+    "vyrez": {
+      "text": "Google News",
+      "stazeno": "2026-09-14T08:33:17.913Z",
+      "stav": 200
+    }
   },
   {
     "id": "k-aa10a1558d5d08cf",
@@ -2511,7 +2561,12 @@
       "zadrz",
       "rozvodna"
     ],
-    "stav": "ceka"
+    "stav": "ceka",
+    "vyrez": {
+      "text": "V Německu zadrželi muže podezřelého ze sabotáží na elektrických rozvodnách — ČT24 — Česká televize\nŽivé vysílání\nTV program\nPočasí\nTeletext\nE-shop\nVše o ČT\nTV poplatky\nKontakty\nSpravovat účet\nOblíbené pořady\nRozkoukaná videa\nPřihlásit se do TV\nOdhlásit se\nV Německu zadrželi muže podezřelého ze sabotáží na elektrických rozvodnách\nČTK\n, kak\n8. 9. 2026 ‌ ‌ | Zdroj: ČTK\nIlustrační snímek\nZdroj: Pixabay/Andrew Martin\nNěmecká policie zadržela 48letého muže podezřelého ze série sabotáží na elektrické síti na několika místech v Německu. Informovala o tom v úterý agentura DPA. Podle jejích informací muž vzbudil pozornost policistů poblíž západoněmecké elektrárny Weisweiler nedaleko Cách.\nServer deníku Frankfurter Allgemeine Zeitung napsal, že byl muž z Gevelsbergu v jižním Porúří zadržen při dopravní kontrole. Policie uvedla, že měl u sebe při zatýkání výbušná zařízení a policistům nekladl odpor.\nÚřady po muži pátraly několik dní. Podle úřadů se pokusil na několika místech ve spolkových zemích Severní Porýní-Vestfálsko, Braniborsko a Sasko s pomocí podomácku vyrobených raket vystřelit tenký drát přes vedení vysokého napětí a způsobit zkrat, píše DPA.\nNaposledy v pondělí bylo na drátech…",
+      "stazeno": "2026-09-14T08:33:18.050Z",
+      "stav": 200
+    }
   },
   {
     "id": "k-4d25a4f42158f0d3",
@@ -2538,7 +2593,13 @@
       "sabotaz",
       "zadrz"
     ],
-    "stav": "ceka"
+    "stav": "ceka",
+    "vyrez": {
+      "text": "",
+      "stazeno": "2026-09-14T08:33:19.103Z",
+      "stav": 403,
+      "chyba": "HTTP 403"
+    }
   },
   {
     "id": "k-bc4a45fae5fbcbad",
@@ -2565,7 +2626,13 @@
       "vyhost",
       "rusk"
     ],
-    "stav": "ceka"
+    "stav": "ceka",
+    "vyrez": {
+      "text": "",
+      "stazeno": "2026-09-14T08:33:19.385Z",
+      "stav": 403,
+      "chyba": "HTTP 403"
+    }
   },
   {
     "id": "k-3065d1af0a77d75a",
@@ -2592,7 +2659,12 @@
       "vyhost",
       "rusk"
     ],
-    "stav": "ceka"
+    "stav": "ceka",
+    "vyrez": {
+      "text": "Maďarsko vyhošťuje deset ruských diplomatů, Moskva slibuje odvetu — ČT24 — Česká televize\nŽivé vysílání\nTV program\nPočasí\nTeletext\nE-shop\nVše o ČT\nTV poplatky\nKontakty\nSpravovat účet\nOblíbené pořady\nRozkoukaná videa\nPřihlásit se do TV\nOdhlásit se\nMaďarsko vyhošťuje deset ruských diplomatů, Moskva slibuje odvetu\nČTK\n, den\n8. 9. 2026 8. 9. 2026 ‌ ‌ | Zdroj: ČTK\nŠéfka maďarské diplomacie Anita Orbánová\nZdroj: Zuma Press Wire/Shutterstock Editorial/Profimedia\nBudapešť vyhošťuje deset ruských diplomatů, kteří se podle maďarských úřadů podíleli na aktivitách odporujících pravidlům diplomatické práce. Na sociální síti X to oznámila šéfka diplomacie Anita Orbánová. Ruské ministerstvo zahraničí podle tiskových agentur slíbilo tvrdou odvetu, která bude Maďarsko bolet.\nÚřady podle Orbánové „vyhodnotily, že deset členů ruského zastupitelského úřadu se v Maďarsku podílelo na aktivitách, jež jsou podle Vídeňské úmluvy pro diplomaty nepřípustné“. „Maďarská strana proto vyzvala tyto osoby, aby opustily Maďarsko,“ napsala ministryně.\nPodotkla zároveň, že tento krok neznamená přerušení diplomatických vztahů s Moskvou. „Maďarsko má v úmyslu pokračovat v potřebném dialogu založeném na vzájemném…",
+      "stazeno": "2026-09-14T08:33:19.494Z",
+      "stav": 200
+    }
   },
   {
     "id": "k-810c35a16354348a",
@@ -2620,7 +2692,12 @@
       "fighter jet+scrambl",
       "russia"
     ],
-    "stav": "ceka"
+    "stav": "ceka",
+    "vyrez": {
+      "text": "Google News",
+      "stazeno": "2026-09-14T08:33:20.452Z",
+      "stav": 200
+    }
   },
   {
     "id": "k-5389558ee6ca5dff",
@@ -2646,7 +2723,12 @@
       "cyberattack",
       "cyber"
     ],
-    "stav": "ceka"
+    "stav": "ceka",
+    "vyrez": {
+      "text": "Google News",
+      "stazeno": "2026-09-14T08:33:20.598Z",
+      "stav": 200
+    }
   },
   {
     "id": "k-a73116a3d549287f",
@@ -2673,7 +2755,12 @@
       "sabotaz",
       "rozvodna"
     ],
-    "stav": "ceka"
+    "stav": "ceka",
+    "vyrez": {
+      "text": "Policie na západě Německa podnikla v souvislosti se sabotážemi několik zásahů — ČT24 — Česká televize\nŽivé vysílání\nTV program\nPočasí\nTeletext\nE-shop\nVše o ČT\nTV poplatky\nKontakty\nSpravovat účet\nOblíbené pořady\nRozkoukaná videa\nPřihlásit se do TV\nOdhlásit se\nPolicie na západě Německa podnikla v souvislosti se sabotážemi několik zásahů\nČTK\n, den\n7. 9. 2026 7. 9. 2026 ‌ ‌ | Zdroj: ČTK , Bild\nIlustrační fotografie\nZdroj: Pexels/Michael Pointner\nPolicie u západoněmeckého Wuppertalu podnikla rozsáhlý zásah u elektrické stanice, odkud byl ohlášen pohyb podezřelého člověka. Nikoho ale nezadržela. Další zásahy provedla policie i na jiných místech v zemi, mimo jiné u elektrárny ve Weisweileru nedaleko Cách, kde u vysokonapěťového vedení nalezla několik výbušných zařízení, napsala agentura DPA. Německo v posledních dnech čelí sérii sabotáží v rozvodnách elektřiny.\nMluvčí policie v Kolíně nad Rýnem řekl, že zásah začal již dopoledne a že souvisí s pátráním. Podrobnosti ale sdělit odmítl. DPA připomněla, že německá policie několik dní pátrá po 48letém Danielovi V. z Gevelsbergu na západě Německa, kterého ministr vnitra Alexander Dobrindt označil za klimatického aktivistu. Ten se k sabotážím…",
+      "stazeno": "2026-09-14T08:33:20.754Z",
+      "stav": 200
+    }
   },
   {
     "id": "k-9c1a383ffe679ee8",
@@ -2700,7 +2787,12 @@
       "sabotage",
       "russia"
     ],
-    "stav": "ceka"
+    "stav": "ceka",
+    "vyrez": {
+      "text": "Google News",
+      "stazeno": "2026-09-14T08:33:21.626Z",
+      "stav": 200
+    }
   },
   {
     "id": "k-74af3ae247ae5439",
