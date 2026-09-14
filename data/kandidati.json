@@ -1,5 +1,35 @@
 [
   {
+    "id": "k-0577b0e3a1406ee7",
+    "zachyceno": "2026-09-14T09:32:41.718Z",
+    "publikovano": "2026-09-14T09:05:00.000Z",
+    "zdroj": {
+      "nazev": "Google News — sabotáž",
+      "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxQN2pYM1doX1hxaHRJclZOYlRTLXpvX3pGeTJNOThvZ1FIRUM5Qm91YllzWmNLc3RfUDQ1X0FDbXhvWUstUkdVUjZOcFc1MHFUdFZsVDBHSWVaSU5VVVFvZVJ5LUhHR3JrWEdfckMyZy0wUm9pQU1BV1VXN1FmVDJMSzEtbVkxQQ?oc=5",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Sabotáže v EU řídil kubánský učitel tance - voxpot.cz",
+    "titulekPuvodni": "Sabotáže v EU řídil kubánský učitel tance - voxpot.cz",
+    "shrnuti": "<a href=\"https://news.google.com/rss/articles/CBMihgFBVV95cUxQN2pYM1doX1hxaHRJclZOYlRTLXpvX3pGeTJNOThvZ1FIRUM5Qm91YllzWmNLc3RfUDQ1X0FDbXhvWUstUkdVUjZOcFc1MHFUdFZsVDBHSWVaSU5VVVFvZVJ5LUhHR3JrWEdfckMyZy0wUm9pQU1BV1VXN1FmVDJMSzEtbVkxQQ?oc=5\" target=\"_blank\">Sabotáže v EU řídil kubánský učitel tance</a>",
+    "kodZeme": "EU",
+    "zeme": "EU",
+    "kategorie": [
+      "sabotaz"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "shody": [
+      "sabotaz"
+    ],
+    "stav": "ceka",
+    "vyrez": {
+      "text": "Google News",
+      "stazeno": "2026-09-14T09:32:41.753Z",
+      "stav": 200
+    }
+  },
+  {
     "id": "k-b1f98b36e50301bb",
     "zachyceno": "2026-09-14T08:33:17.497Z",
     "publikovano": "2026-09-14T08:04:00.000Z",
@@ -32,6 +62,36 @@
       "stazeno": "2026-09-14T08:33:17.555Z",
       "stav": 403,
       "chyba": "HTTP 403"
+    }
+  },
+  {
+    "id": "k-275a6574069863d6",
+    "zachyceno": "2026-09-14T09:32:41.687Z",
+    "publikovano": "2026-09-14T06:05:15.000Z",
+    "zdroj": {
+      "nazev": "ČT24 — hlavní zprávy",
+      "url": "https://ct24.ceskatelevize.cz/clanek/ekonomika/ropa-vyrazne-zdrazuje-po-utocich-hutiu-na-saudskou-arabii-377553",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Ropa a plyn výrazně zdražují po útocích hútíů na Saúdskou Arábii",
+    "titulekPuvodni": "Ropa a plyn výrazně zdražují po útocích hútíů na Saúdskou Arábii",
+    "shrnuti": "Ceny ropy na začátku týdne výrazně rostou po nových útocích hútíů na Saúdskou Arábii a po íránských útocích na lodě v Perském zálivu. Dál se zvýšily obavy o dodávky, které již dříve vyvolalo uzavření klíčového saúdskoarabského ropovodu. Severomořská ropa Brent je zpět nad 107 dolary za barel. Také c",
+    "kodZeme": "EU",
+    "zeme": "EU",
+    "kategorie": [
+      "hranice"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "shody": [
+      "hranic+uzavr"
+    ],
+    "stav": "ceka",
+    "vyrez": {
+      "text": "Ropa a plyn výrazně zdražují po útocích hútíů na Saúdskou Arábii — ČT24 — Česká televize\nŽivé vysílání\nTV program\nPočasí\nTeletext\nE-shop\nVše o ČT\nTV poplatky\nKontakty\nSpravovat účet\nOblíbené pořady\nRozkoukaná videa\nPřihlásit se do TV\nOdhlásit se\nRopa a plyn výrazně zdražují po útocích hútíů na Saúdskou Arábii\nČTK\n, apm\n14. 9. 2026 před 3 m minutami | Zdroj: ČTK , ČT24\nRopné pole společnosti Saudi Aramco v Saúdské Arábii, ilustrační snímek\nZdroj: Reuters/Hamad I Mohammed\nCeny ropy na začátku týdne výrazně rostou po nových útocích hútíů na Saúdskou Arábii a po íránských útocích na lodě v Perském zálivu. Dál se zvýšily obavy o dodávky, které již dříve vyvolalo uzavření klíčového saúdskoarabského ropovodu. Severomořská ropa Brent je zpět nad 107 dolary za barel. Také cena plynu pro evropský trh reaguje na výpadky dodávek z Blízkého východu a přesáhla hranici 84 eur za megawatthodinu. Je tak nejvýše od roku 2022.\nBrent krátce před 07:30 SELČ přidával proti pátečnímu závěru zhruba 2,5 procenta a prodával se kolem 107,20 dolaru za barel. Americká lehká ropa West Texas Intermediate (WTI) vykazovala nárůst 2,55 procenta na 102,60 dolaru za barel.\n„Navazuje to na zesílení útoků na…",
+      "stazeno": "2026-09-14T09:32:41.952Z",
+      "stav": 200
     }
   },
   {
@@ -3211,7 +3271,12 @@
       "sabotage",
       "russia"
     ],
-    "stav": "ceka"
+    "stav": "ceka",
+    "vyrez": {
+      "text": "Google News",
+      "stazeno": "2026-09-14T09:32:42.805Z",
+      "stav": 200
+    }
   },
   {
     "id": "k-25fe1453e6762e51",
@@ -3238,7 +3303,12 @@
       "sabotaz",
       "rusk"
     ],
-    "stav": "ceka"
+    "stav": "ceka",
+    "vyrez": {
+      "text": "Google News",
+      "stazeno": "2026-09-14T09:32:42.990Z",
+      "stav": 200
+    }
   },
   {
     "id": "k-0769a877c73fea35",
@@ -3265,7 +3335,12 @@
       "sabotage",
       "russia"
     ],
-    "stav": "ceka"
+    "stav": "ceka",
+    "vyrez": {
+      "text": "Google News",
+      "stazeno": "2026-09-14T09:32:43.171Z",
+      "stav": 200
+    }
   },
   {
     "id": "k-a23209aa7d7963b0",
@@ -3292,7 +3367,12 @@
       "sabotage",
       "russia"
     ],
-    "stav": "ceka"
+    "stav": "ceka",
+    "vyrez": {
+      "text": "Google News",
+      "stazeno": "2026-09-14T09:32:43.353Z",
+      "stav": 200
+    }
   },
   {
     "id": "k-4dff001f8058f032",
@@ -3319,7 +3399,12 @@
       "sabotage",
       "russia"
     ],
-    "stav": "ceka"
+    "stav": "ceka",
+    "vyrez": {
+      "text": "Google News",
+      "stazeno": "2026-09-14T09:32:43.551Z",
+      "stav": 200
+    }
   },
   {
     "id": "k-51486cd393a5833b",
@@ -3346,7 +3431,12 @@
       "sabotage",
       "russia"
     ],
-    "stav": "ceka"
+    "stav": "ceka",
+    "vyrez": {
+      "text": "Google News",
+      "stazeno": "2026-09-14T09:32:43.742Z",
+      "stav": 200
+    }
   },
   {
     "id": "k-9465fb417d50df5c",
@@ -3375,7 +3465,12 @@
       "attack on",
       "russia"
     ],
-    "stav": "ceka"
+    "stav": "ceka",
+    "vyrez": {
+      "text": "Europe targeted by spiralling campaign of sabotage and Russia is the chief suspect - BBC News\nImage source, Reuters\nImage caption, Germany said the attack at Leipzig airport was part of a pattern of \"Russian hybrid operations\" in Europe\nBy Sarah Rainsford Southern and Eastern Europe correspondent\nPublished\n4 September 2026\nAs summer temperatures in Europe smashed records and many politicians shifted to holiday mode, Russia remained focused on its war.\nNot only did its military attacks across Ukraine intensify last month, becoming ever more deadly for civilians, Russia also appears to have escalated its sabotage campaign across Europe.\nThis time, military and defence sector sites were the prime target.\nA full month after drones packed with explosives were found at Leipzig&#x27;s airport, used by Ukraine to transport military goods, Germany&#x27;s interior minister has declared that \"Russia is responsible\".\nRussia&#x27;s President Vladimir Putin is demanding proof, as always, and his officials call the accusation \"absurd\".\nBut the drones were just a dramatic start. August then brought a series of suspicious fires at defence facilities from Italy to Estonia.\nSome of the affected…",
+      "stazeno": "2026-09-14T09:32:43.923Z",
+      "stav": 200
+    }
   },
   {
     "id": "k-0a0111a5a515814c",
@@ -3402,7 +3497,12 @@
       "sabotage",
       "russia"
     ],
-    "stav": "ceka"
+    "stav": "ceka",
+    "vyrez": {
+      "text": "Google News",
+      "stazeno": "2026-09-14T09:32:44.730Z",
+      "stav": 200
+    }
   },
   {
     "id": "k-a1c039cf88e8ac1f",
@@ -3431,7 +3531,12 @@
       "dron",
       "rusk"
     ],
-    "stav": "ceka"
+    "stav": "ceka",
+    "vyrez": {
+      "text": "Ruský dron zasáhl centrálu tajné služby SBU. Kyjev chystá odpověď — ČT24 — Česká televize\nŽivé vysílání\nTV program\nPočasí\nTeletext\nE-shop\nVše o ČT\nTV poplatky\nKontakty\nSpravovat účet\nOblíbené pořady\nRozkoukaná videa\nPřihlásit se do TV\nOdhlásit se\nRuský dron zasáhl centrálu tajné služby SBU. Kyjev chystá odpověď\nČTK\n, ag\n4. 9. 2026 4. 9. 2026 ‌ ‌ | Zdroj: ČTK\nNásledky ruského úderu na sídlo SBU v Kyjevě\nZdroj: Reuters/Gleb Garanich\nRuský dron v pátek odpoledne zasáhl centrální budovu ukrajinské tajné služby SBU v centru Kyjeva, uvedl server Ukrajinska pravda. Po výbuchu z místa stoupal hustý dým, uvedli očití svědci. Později informaci potvrdil i ukrajinský prezident Volodymyr Zelenskyj s tím, že uložil šéfovi tajné služby na ruský útok odpovědět. Ruský dron zasáhl přímo pracovnu šéfa SBU, který v ní ale v tu chvíli zrovna nebyl, napsal server Ukrajinska pravda. Šéf ukrajinské diplomacie Andrij Sybiha označil útok za „významnou eskalaci“ války, kterou Rusko proti Ukrajině vede pátým rokem.\nNálet si vyžádal nejméně sedm raněných, uvedl starosta ukrajinské metropole Vitalij Klyčko, který dříve informoval o požáru v jedné ze čtvrtí hlavního města v důsledku dopadu dronu na střechu…",
+      "stazeno": "2026-09-14T09:32:44.920Z",
+      "stav": 200
+    }
   },
   {
     "id": "k-15eb00032759b5be",
@@ -3458,7 +3563,12 @@
       "sabotaz",
       "rusk"
     ],
-    "stav": "ceka"
+    "stav": "ceka",
+    "vyrez": {
+      "text": "Google News",
+      "stazeno": "2026-09-14T09:32:46.147Z",
+      "stav": 200
+    }
   },
   {
     "id": "k-cda4a4f57b9bb199",
