@@ -42,6 +42,83 @@
     }
   },
   {
+    "id": "k-7b11bb477de92d87",
+    "zachyceno": "2026-09-15T22:26:33.843Z",
+    "publikovano": "2026-09-15T22:10:00.000Z",
+    "zdroj": {
+      "nazev": "Český rozhlas — domácí zprávy",
+      "url": "https://www.irozhlas.cz/zpravy-svet/rusko-zvysuje-tlak-na-retoricke-i-diplomaticke-fronte-pripravuje-se-na_2609160010_kma",
+      "typ": "primary",
+      "primarni": true
+    },
+    "titulek": "Rusko zvyšuje tlak na rétorické i diplomatické frontě. Připravuje se na mobilizaci, domnívá se Lipavský",
+    "titulekPuvodni": "Rusko zvyšuje tlak na rétorické i diplomatické frontě. Připravuje se na mobilizaci, domnívá se Lipavský",
+    "shrnuti": "Stíhačky NATO v noci na úterý sestřelily nad Litvou dron, který pravděpodobně přiletěl z Běloruska. V neděli pouhé dva kilometry od polských hranic ruský dron zasáhl vlak jedoucí z Kyjeva do Varšavy. „Rusko zvyšuje intenzitu a tlak na diplomatické a rétorické frontě,“ říká v pořadu Dvacet minut Radi",
+    "kodZeme": "PL",
+    "zeme": "Polsko",
+    "kategorie": [
+      "drony",
+      "nato",
+      "rusko",
+      "cr"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "sestrel",
+      "dron+zasahl",
+      "dron",
+      "nato",
+      "rusk",
+      "radiozurnal"
+    ],
+    "naliehave": null,
+    "stav": "ceka",
+    "vyrez": {
+      "text": "",
+      "stazeno": "2026-09-15T22:26:34.270Z",
+      "stav": 403,
+      "chyba": "HTTP 403"
+    }
+  },
+  {
+    "id": "k-98a8eb3b71973832",
+    "zachyceno": "2026-09-15T22:26:34.200Z",
+    "publikovano": "2026-09-15T22:01:15.000Z",
+    "zdroj": {
+      "nazev": "Polsko — sabotaz",
+      "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE9td3gxSnZ3bm1ZY2t1cWxnRVJrZmZiaF9oYjg3T0t4VEhSNnRuRlhUMElKWDhVelNfV2FEMzdvLU1mN2w4cEM4NGpOTE92cVFTRW4wZE1PUXJTZlZYYm90VmNwVm9MMHNXMlV4OHVuQmhLTGtU?oc=5",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Russian Sabotage Campaign Against NATO Surges - Substack",
+    "titulekPuvodni": "Russian Sabotage Campaign Against NATO Surges - Substack",
+    "shrnuti": "Russian Sabotage Campaign Against NATO Surges Substack",
+    "kodZeme": "RU",
+    "zeme": "Rusko",
+    "kategorie": [
+      "sabotaz",
+      "nato",
+      "rusko"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "sabotage",
+      "nato",
+      "russia"
+    ],
+    "naliehave": null,
+    "stav": "ceka",
+    "vyrez": {
+      "text": "Google News",
+      "stazeno": "2026-09-15T22:26:34.335Z",
+      "stav": 200
+    }
+  },
+  {
     "id": "k-11fcae692a0fcd77",
     "zachyceno": "2026-09-15T22:02:57.534Z",
     "publikovano": "2026-09-15T21:49:49.000Z",
@@ -10141,142 +10218,66 @@
     "naliehave": null
   },
   {
-    "id": "k-e5f0b65e468d2df1",
-    "zachyceno": "2026-09-15T22:02:57.553Z",
+    "id": "k-63885fc0aa6022ca",
+    "zachyceno": "2026-09-15T22:26:33.980Z",
     "publikovano": "2026-09-02T07:00:00.000Z",
     "zdroj": {
-      "nazev": "Téma: energetika (anglicky)",
-      "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxQY01EUWF4RU1QR1lTQTZZb2N3d2FpN3FlVFdmS3J1VVdRNnVSNGI1QldMR3dWYVAta01zZ0ZFR2ZERjNYSXNhMTF0YnBTd2JRSkFWTWJmSFBsdVlqNTNUcTRRU0pTcGVjekJ0bzN0OFBRdWJTNHFFN2llMEpaaThhWXczRUo2RDRXdEtpQ1A3SEdXc3JsMVE3N28tcGY3Z2RHenROSHdqZXZ6WFk1Wlc4a0ZDTVl0elBncmhJ?oc=5",
+      "nazev": "Téma: sabotaz (česky)",
+      "url": "https://news.google.com/rss/articles/CBMi2gFBVV95cUxQVDVZZkNsY2U1ejc3Ync4bVhCZ3R5VzlhZkZ2V0dacDNaQjNoajZ5UTRUTDJBQ1huWFFwRDctX1RfS3M0X01OeWNPN00zVHlYTE9mRFlDdEdNblNLSUtZUVBXdVhBSzkzajMyN1NnUERrMHFYUklwVlZWUnV2Zkt5WUFUX3ZLVlNoVUNTNkxkd1ZUUXJIaV9aOG5rNlI5LTJnVm92cUR1SUxwSHVGVVBDZ1FhSnk2X2lSU0ZoX3VjZG5ZWmM5by0wZ0k2cU5DaGVwN0gwSG9neXFQZw?oc=5",
       "typ": "media",
       "primarni": false
     },
-    "titulek": "Germany probes suspected sabotage after disruption at 2 power substations - AP News",
-    "titulekPuvodni": "Germany probes suspected sabotage after disruption at 2 power substations - AP News",
-    "shrnuti": "Germany probes suspected sabotage after disruption at 2 power substations AP News",
+    "titulek": "Další sabotáž? Exploze po zkratu v rozvodně v Německu: Prošetřují opět vliv cizího státu - Blesk",
+    "titulekPuvodni": "Další sabotáž? Exploze po zkratu v rozvodně v Německu: Prošetřují opět vliv cizího státu - Blesk",
+    "shrnuti": "Další sabotáž? Exploze po zkratu v rozvodně v Německu: Prošetřují opět vliv cizího státu Blesk",
     "kodZeme": "DE",
     "zeme": "Německo",
     "kategorie": [
-      "sabotaz",
-      "infrastruktura"
+      "sabotaz"
     ],
     "druhOdhad": "neurceno",
     "klasifikace": "pravidla",
     "zeSite": null,
     "shody": [
-      "sabotage",
-      "substation"
+      "sabotaz"
     ],
     "naliehave": null,
     "stav": "ceka",
     "vyrez": {
       "text": "Google News",
-      "stazeno": "2026-09-15T22:02:58.062Z",
+      "stazeno": "2026-09-15T22:26:34.474Z",
       "stav": 200
     }
   },
   {
-    "id": "k-89dffae5ead87c1c",
-    "zachyceno": "2026-09-15T22:02:57.556Z",
+    "id": "k-d281fd405fef9ae2",
+    "zachyceno": "2026-09-15T22:26:33.983Z",
     "publikovano": "2026-09-02T07:00:00.000Z",
     "zdroj": {
-      "nazev": "Téma: energetika (anglicky)",
-      "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxNRjM3N0xBZU5RaEtrYWVXTzBrZWtia3N3NGFfaUpFRXNCcWtsRDJQWGd6UWkyckxZb2V5WDlIcmh3T1Z2WWZEYU9ldUlnNnFIUDJGUXVfcDJ0c3l6RWtMUFh2WmFtcEMzWUxXeGwtZnJDUDMwenlIQi1rV2JJbWpDYktWaFBtTy14VkVVNjlnWFUtVmhRWnhnR1NWdExVSVNIRTJXcENn?oc=5",
+      "nazev": "Téma: sabotaz (česky)",
+      "url": "https://news.google.com/rss/articles/CBMi2wFBVV95cUxNN0R0SGxKTHFkd05BMHJmZ0J3QWNfT1pFQVpRek9WZjQ3QWpPbmZwV21OUnZmODhjM1BaU3lhdWpJT2c5azg2UVZ4LTJHOWkydUZnYVZQb3NjandQcUlUcTdBTGNaOWM0UjcwbmxyRmR1MlNGVFdsTUpPNFBiQjFYeFNBZGMxbDhkT3QwMFBTemNrTHhHLTBvdDktUVBHdEJGWEcyak1LalVNLXJVcDBZNWdXTXd0eWdGSzJvNXFTS2lDWDVsdEstVjVtWFZUUU03ZEIzdlloR1kxSW8?oc=5",
       "typ": "media",
       "primarni": false
     },
-    "titulek": "German police report sabotage attack on power grid near Cologne - Anadolu Ajansı",
-    "titulekPuvodni": "German police report sabotage attack on power grid near Cologne - Anadolu Ajansı",
-    "shrnuti": "German police report sabotage attack on power grid near Cologne Anadolu Ajansı",
+    "titulek": "Sabotáž v Německu odpojila elektrárny. Napětí mezi Berlínem a Moskvou eskaluje - iDNES.cz",
+    "titulekPuvodni": "Sabotáž v Německu odpojila elektrárny. Napětí mezi Berlínem a Moskvou eskaluje - iDNES.cz",
+    "shrnuti": "Sabotáž v Německu odpojila elektrárny. Napětí mezi Berlínem a Moskvou eskaluje iDNES.cz",
     "kodZeme": "DE",
     "zeme": "Německo",
     "kategorie": [
-      "sabotaz",
-      "hybridni",
-      "infrastruktura"
+      "sabotaz"
     ],
     "druhOdhad": "neurceno",
     "klasifikace": "pravidla",
     "zeSite": null,
     "shody": [
-      "sabotage",
-      "attack on",
-      "power grid"
+      "sabotaz"
     ],
     "naliehave": null,
     "stav": "ceka",
     "vyrez": {
       "text": "Google News",
-      "stazeno": "2026-09-15T22:02:58.210Z",
-      "stav": 200
-    }
-  },
-  {
-    "id": "k-8f964837c080fe31",
-    "zachyceno": "2026-09-15T22:02:57.566Z",
-    "publikovano": "2026-09-02T07:00:00.000Z",
-    "zdroj": {
-      "nazev": "Téma: energetika (anglicky)",
-      "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxPZVhoeWNfMVBUWktrTktsZVcta1hQb1NQWGd5dVd5MHh0ZEtDcU5RVGtxMVVsZ1IyWWZmaVlzN3d1V3h0cHlMWDk4T2xzam1RenRRWVFrRzFWWGFyYzdKZUlfRU9uRjFOd3JkQnVqSVNTUlQtVFJGVEJrRHIydFJxcTlUdlpDV0hT?oc=5",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Two sabotage attacks jolt Germany’s power grid - balkangreenenergynews.com",
-    "titulekPuvodni": "Two sabotage attacks jolt Germany’s power grid - balkangreenenergynews.com",
-    "shrnuti": "Two sabotage attacks jolt Germany’s power grid balkangreenenergynews.com",
-    "kodZeme": "DE",
-    "zeme": "Německo",
-    "kategorie": [
-      "sabotaz",
-      "infrastruktura"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "zeSite": null,
-    "shody": [
-      "sabotage",
-      "power grid"
-    ],
-    "naliehave": null,
-    "stav": "ceka",
-    "vyrez": {
-      "text": "Google News",
-      "stazeno": "2026-09-15T22:02:58.367Z",
-      "stav": 200
-    }
-  },
-  {
-    "id": "k-8ff19747d68cfb09",
-    "zachyceno": "2026-09-15T22:02:57.568Z",
-    "publikovano": "2026-09-02T07:00:00.000Z",
-    "zdroj": {
-      "nazev": "Téma: energetika (anglicky)",
-      "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxORmlRbl8wNzJEWjF5dHFIc0Rod2xlRVZQSExJWGxiOEhLcGtraXljb3kzYXpEMFgyTEljY2oxT0lXY3FHQTgzRnhNMk9hbVRYSkhLYkgwbnNqTzFwT2JSVDZTM1ZkSmh1UTgtcTJhZnJTR1hVU1lCV0o3UzR4MjNwNjRaRUFSWGhyRXF5VFF0V1IyUQ?oc=5",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "German police report another sabotage attack on power grid - TVP World",
-    "titulekPuvodni": "German police report another sabotage attack on power grid - TVP World",
-    "shrnuti": "German police report another sabotage attack on power grid TVP World",
-    "kodZeme": "DE",
-    "zeme": "Německo",
-    "kategorie": [
-      "sabotaz",
-      "hybridni",
-      "infrastruktura"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "zeSite": null,
-    "shody": [
-      "sabotage",
-      "attack on",
-      "power grid"
-    ],
-    "naliehave": null,
-    "stav": "ceka",
-    "vyrez": {
-      "text": "Google News",
-      "stazeno": "2026-09-15T22:02:58.496Z",
+      "stazeno": "2026-09-15T22:26:34.592Z",
       "stav": 200
     }
   }
