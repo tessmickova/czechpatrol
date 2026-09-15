@@ -5,6 +5,7 @@ import { useEffect, useState } from "react";
 import { cislem, porovnejSPrumerem, prumerNaOkno, type Porovnani } from "@/lib/porovnani";
 import { Odznak } from "./ui";
 import { sklon } from "./zeme";
+import { Napoveda } from "./zaklad";
 
 /*
   Kolik toho přibylo dnes, za týden, za měsíc a za čtvrtletí.
@@ -69,6 +70,14 @@ function OdznakPorovnani({ p }: { p: Porovnani | null }) {
   );
 }
 
+/*
+  Jedno počítadlo.
+
+  Na úzkém displeji se pět počítadel do jedné řady nevejde — čísla se sice
+  udrží, ale popisky se lámou po slabikách a odznak přeteče přes okraj.
+  Mřížka je proto na mobilu třísloupcová a teprve od `sm` se dlaždice
+  roztáhnou do řady.
+*/
 function Cislo({
   n, popis, odkaz, zvyraznit = false, podtext, odznak,
 }: {
@@ -77,10 +86,10 @@ function Cislo({
   return (
     <Link
       href={odkaz}
-      className="group flex min-w-0 flex-1 flex-col gap-1 rounded-[18px] border border-linka2 bg-plocha px-4 py-4 transition-colors hover:border-akcent sm:px-5 sm:py-5"
+      className="dlazdice-stav group flex min-w-0 flex-col gap-1 rounded-[20px] border border-linka2 bg-plocha px-3.5 py-3.5 hover:border-akcent sm:flex-1 sm:px-5 sm:py-5"
     >
-      <span className={`cislice text-[34px] font-bold leading-none sm:text-[44px] ${zvyraznit && n > 0 ? "text-akcent" : "text-inkoust"}`}>{n}</span>
-      <span className="text-[13px] leading-tight text-tlum">{popis}</span>
+      <span className={`cislice text-[28px] font-bold leading-none sm:text-[44px] ${zvyraznit && n > 0 ? "text-akcent" : "text-inkoust"}`}>{n}</span>
+      <span className="text-[12.5px] leading-tight text-tlum sm:text-[13px]">{popis}</span>
       {podtext && <span className="text-[11.5px] leading-tight text-tlum2">{podtext}</span>}
       {odznak}
     </Link>
@@ -103,20 +112,29 @@ export function PocitadlaEvropa({ polozky, ted }: { polozky: PolozkaPoctu[]; ted
   const o = spocitejOkna(polozky, useZiveHodiny(ted));
   return (
     <section aria-label="Kolik incidentů přibylo" className="mt-4">
-      <div className="flex flex-wrap gap-2.5 sm:gap-3">
+      <div className="grid grid-cols-3 gap-2.5 sm:flex sm:flex-wrap sm:gap-3">
         <Cislo n={o.dnes} popis="dnes" odkaz="/udalosti/?obdobi=7d" zvyraznit />
         <Cislo n={o.tyden} popis="za 7 dní" odkaz="/udalosti/?obdobi=7d" />
         <Cislo n={o.mesic} popis="za 30 dní" odkaz="/udalosti/?obdobi=30d" />
         <Cislo n={o.ctvrtleti} popis="za 90 dní" odkaz="/udalosti/?obdobi=30d" odznak={<OdznakPorovnani p={o.porovnani} />} />
         <Cislo n={o.celkem} popis="celkem od roku 2014" odkaz="/udalosti/" podtext={`z toho ${o.kampani} ${sklon(o.kampani, "operace", "operace", "operací")} proti občanům`} />
       </div>
-      <p className="mt-2.5 text-[12.5px] leading-relaxed text-tlum2">
-        Případy a manipulační operace v Evropě podle dne, kdy vyšly najevo. V Česku {o.cesko90} za 90 dní,
-        {" "}{o.ceskoCelkem} celkem. Počítá se v prohlížeči, takže „dnes“ platí i mezi sestaveními webu.
-        {o.porovnani && (
-          <> Průměr za poslední dva roky je {cislem(o.porovnani.prumer)} na čtvrtletí.</>
-        )}{" "}
-        Nula znamená, že dosud nic neprošlo ověřením — ne že se nic nestalo.
+      {/*
+        Vysvětlivka patří do nápovědy, ne pod čísla. Odstavec o tom, jak se
+        počítá „dnes“ a co znamená nula, tu stál přes tři řádky a nikomu
+        v obavách neřekl nic o tom, jestli se má bát.
+      */}
+      <p className="mt-2.5 text-[12.5px] text-tlum2">
+        <Napoveda popis={
+          <span className="block">
+            Případy a manipulační operace v Evropě podle dne, kdy vyšly najevo. Počítá se v prohlížeči,
+            takže „dnes“ platí i mezi sestaveními webu.
+            {o.porovnani && <> Průměr za poslední dva roky je {cislem(o.porovnani.prumer)} na čtvrtletí.</>}
+            {" "}Nula znamená, že dosud nic neprošlo ověřením — ne že se nic nestalo.
+          </span>
+        }>
+          <span className="odkaz">V Česku {o.cesko90} za 90 dní, {o.ceskoCelkem} celkem.</span>
+        </Napoveda>
       </p>
     </section>
   );
@@ -127,7 +145,7 @@ export function PocitadlaZeme({ polozky, ted, nazev }: { polozky: PolozkaPoctu[]
   const o = spocitejOkna(polozky, useZiveHodiny(ted));
   return (
     <section aria-label={`Kolik incidentů přibylo — ${nazev}`} className="mt-10">
-      <div className="flex flex-wrap gap-2.5 sm:gap-3">
+      <div className="grid grid-cols-3 gap-2.5 sm:flex sm:flex-wrap sm:gap-3">
         <Cislo n={o.dnes} popis="dnes" odkaz="#zaznamy" zvyraznit />
         <Cislo n={o.tyden} popis="za 7 dní" odkaz="#zaznamy" />
         <Cislo n={o.mesic} popis="za 30 dní" odkaz="#zaznamy" />
@@ -139,11 +157,18 @@ export function PocitadlaZeme({ polozky, ted, nazev }: { polozky: PolozkaPoctu[]
           podtext={o.kampani ? `z toho ${o.kampani} ${sklon(o.kampani, "operace", "operace", "operací")} proti občanům` : undefined}
         />
       </div>
-      <p className="mt-2.5 text-[12.5px] leading-relaxed text-tlum2">
-        Případy a manipulační operace podle dne, kdy vyšly najevo. Počítá se v prohlížeči, takže „dnes“ platí
-        i mezi sestaveními webu.
-        {o.porovnani && <> Průměr za poslední dva roky je {cislem(o.porovnani.prumer)} na čtvrtletí.</>}
-      </p>
+      {o.porovnani && (
+        <p className="mt-2.5 text-[12.5px] text-tlum2">
+          <Napoveda popis={
+            <span className="block">
+              Případy a manipulační operace podle dne, kdy vyšly najevo. Počítá se v prohlížeči, takže
+              „dnes“ platí i mezi sestaveními webu.
+            </span>
+          }>
+            <span className="odkaz">Průměr za poslední dva roky: {cislem(o.porovnani.prumer)} na čtvrtletí.</span>
+          </Napoveda>
+        </p>
+      )}
     </section>
   );
 }

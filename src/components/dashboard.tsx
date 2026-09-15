@@ -51,17 +51,17 @@ const TON: Record<Ton, { dlazdice: string; tecka: string; slovo: string; ikona: 
   nevime: { dlazdice: "border-dashed border-linka bg-transparent", tecka: "bg-tlum2", slovo: "text-tlum2", ikona: "otaznik" },
 };
 
-/** Šest stavů, na které se lidé ptají první. Zbytek je o klik dál. */
+/** Stavy, na které se lidé ptají první. Stojí v čele své skupiny. */
 const KLICOVE = ["p-mobilizace", "p-nouzovy-stav", "p-vycestovani", "p-hranice", "n-clanek-5", "v-elektrina"];
 
 /*
-  Skupiny ve sbaleném seznamu. NATO a Evropská unie jsou dvě různé věci —
-  do jedné dlaždice se slévat nesmějí, protože každá rozhoduje o něčem jiném.
+  Tři skupiny stavů. NATO a Evropská unie jsou dvě různé věci — do jedné
+  dlaždice se slévat nesmějí, protože každá rozhoduje o něčem jiném.
 */
 const SKUPINY = [
-  { predpona: "p", nazev: "Právní stav Česka" },
-  { predpona: "n", nazev: "NATO (obranná aliance, ne Evropská unie)" },
-  { predpona: "v", nazev: "Provoz a běžné služby" },
+  { predpona: "p", nazev: "Právní stav" },
+  { predpona: "n", nazev: "NATO" },
+  { predpona: "v", nazev: "Běžný život" },
 ];
 
 const KRATCE_PRAVNI: Record<string, string> = {
@@ -133,7 +133,7 @@ function Dlazdice({ d }: { d: Dlazdice }) {
   return (
     <li>
       <Napoveda cele popis={<span className="block"><b className="font-semibold">{d.nazev}</b> — {d.stav}. {d.vysvetleni}</span>}>
-        <span className={`flex min-h-[64px] w-full flex-col justify-between rounded-[18px] border px-2.5 py-2 text-left ${t.dlazdice}`}>
+        <span className={`dlazdice-stav flex min-h-[64px] w-full flex-col justify-between rounded-[20px] border px-2.5 py-2 text-left ${t.dlazdice}`}>
           <span className="flex items-center gap-1.5 text-[12px] leading-tight text-tlum">
             <Ikona nazev={d.ikona} velikost={13} tah={1.9} trida="shrink-0" />
             <span className="truncate">{d.nazev}</span>
@@ -258,14 +258,27 @@ export function Dashboard({
   const natoHodnota = natoAktivni.length ? natoAktivni.map((p) => KRATCE_NATO[p.klic] ?? p.nazev).join(", ") : cl4?.aktivni === null && cl5?.aktivni === null ? "Neověřeno" : "Bez aktivace";
   const natoTon: Ton = natoAktivni.length ? "plati" : cl4?.aktivni === null && cl5?.aktivni === null ? "nevime" : "klid";
 
-  // Dlaždice se počítají jednou: šest klíčových nahoru, zbytek do rozbalovátka.
+  /*
+    Dlaždice se počítají jednou a ukazují se VŠECHNY.
+
+    Dřív jich šest stálo nahoře a čtrnáct bylo schovaných v rozbalovátku.
+    Kdo sem chodí ve strachu, ale nehledá šest věcí — hledá tu jednu svoji,
+    a klikat po ní nebude. Rozbalovátko taky mlčky tvrdí, že schovaný stav
+    je méně důležitý.
+
+    Pořadí uvnitř skupiny: na co se lidé ptají první, stojí vepředu.
+  */
   const vsechnyDlazdice: Dlazdice[] = [
     ...pravni.map(dlazdicePravni),
     ...natoPolozky.map(dlazdiceNato),
     ...provozPolozky.map(dlazdiceProvoz),
   ];
-  const klicove = KLICOVE.map((k) => vsechnyDlazdice.find((d) => d.klic === k)).filter((d): d is Dlazdice => Boolean(d));
-  const ostatni = vsechnyDlazdice.filter((d) => !KLICOVE.includes(d.klic));
+  const skupinyDlazdic = SKUPINY.map((sk) => ({
+    ...sk,
+    polozky: vsechnyDlazdice
+      .filter((d) => d.klic.startsWith(`${sk.predpona}-`))
+      .sort((a, b) => (KLICOVE.includes(a.klic) ? 0 : 1) - (KLICOVE.includes(b.klic) ? 0 : 1)),
+  })).filter((sk) => sk.polozky.length > 0);
 
   void tydny;
   return (
@@ -286,37 +299,19 @@ export function Dashboard({
         <NadpisSekce
           stitek={t("Co právě platí")}
           nadpis={t("Úřední stav v Česku")}
-          popis="Šest věcí, na které se lidé ptají jako první. Zaškrtnutí znamená, že opatření neplatí — ověřeno v úřední sbírce, ne odhadnuto. Zbylých čtrnáct je o jeden klik dál."
+          popis="Zelená znamená, že opatření neplatí. Ověřeno v úřední sbírce."
         />
       </div>
       <div className="grid gap-4 lg:grid-cols-[minmax(0,1.35fr)_minmax(0,1fr)]">
-        <section aria-label={t("Oficiální stavy")} id="opatreni" className="scroll-mt-[84px]">
-          <ul className="grid grid-cols-2 gap-2.5 sm:grid-cols-3">
-            {klicove.map((d) => <Dlazdice key={d.klic} d={d} />)}
-          </ul>
-          <details className="group mt-3 overflow-hidden rounded-[18px] border border-linka2 bg-plocha">
-            <summary className="flex min-h-[46px] cursor-pointer list-none items-center justify-between gap-3 px-4 text-[13.5px] font-semibold text-inkoust hover:bg-plocha2">
-              <span>Dalších {ostatni.length} {sklon(ostatni.length, "stav", "stavy", "stavů")}</span>
-              <span className="flex items-center gap-2 text-[12.5px] font-normal text-tlum2">
-                právní stav · NATO · provoz
-                <Ikona nazev="dolu" velikost={13} tah={2} trida="transition-transform group-open:rotate-180" />
-              </span>
-            </summary>
-            <div className="space-y-4 border-t border-linka2 p-3">
-              {SKUPINY.map((sk) => {
-                const polozky = ostatni.filter((d) => d.klic.startsWith(`${sk.predpona}-`));
-                if (!polozky.length) return null;
-                return (
-                  <div key={sk.predpona}>
-                    <div className="stitek mb-2">{sk.nazev}</div>
-                    <ul className="grid grid-cols-2 gap-2.5 sm:grid-cols-3">
-                      {polozky.map((d) => <Dlazdice key={d.klic} d={d} />)}
-                    </ul>
-                  </div>
-                );
-              })}
+        <section aria-label={t("Oficiální stavy")} id="opatreni" className="scroll-mt-[84px] space-y-4">
+          {skupinyDlazdic.map((sk) => (
+            <div key={sk.predpona}>
+              <div className="stitek mb-2">{sk.nazev}</div>
+              <ul className="grid grid-cols-2 gap-2.5 sm:grid-cols-3">
+                {sk.polozky.map((d) => <Dlazdice key={d.klic} d={d} />)}
+              </ul>
             </div>
-          </details>
+          ))}
 
           {/* Cena paliva: měřená řada ČSÚ. Nic o tom, kam ceny půjdou dál. */}
           <CenaPaliva />
@@ -353,7 +348,7 @@ export function Dashboard({
         <NadpisSekce
           stitek={t("Nová zjištění")}
           nadpis={t("Co se zjistilo o tom, co se stalo dřív")}
-          popis={t("Obvinění, rozsudky, úředně potvrzený pachatel. Nejsou to nové události — je to posun ve vyšetřování těch starých.")}
+          popis={t("Obvinění, rozsudky, potvrzený pachatel. Ne nové události — posun ve vyšetřování těch starých.")}
           akce={<Tlacitko kam="/udalosti/?overeni=potvrzeny-pachatel" varianta="obrys" velikost="s" ikonaVpravo="nahoru" trida="[&>svg:last-child]:rotate-90">{t("všechna zjištění")}</Tlacitko>}
         />
         <NovaZjisteni polozky={novaZjisteni(vse, 6)} />
@@ -365,7 +360,7 @@ export function Dashboard({
           <NadpisSekce
             stitek="Manipulace"
             nadpis={t("Manipulace a útoky na občany")}
-            popis="Podvržené dokumenty, weby vydávající se za redakce, profily vydávající se za úředníky. U každé operace zvlášť říkáme, co je doložené — a jestli víme, kdo za ní stojí."
+            popis="Podvržené dokumenty, weby vydávající se za redakce, profily vydávající se za úředníky."
             akce={<Tlacitko kam="/manipulace/" varianta="obrys" velikost="s" ikonaVpravo="nahoru" trida="[&>svg:last-child]:rotate-90">{t("všechny rozbory")}</Tlacitko>}
           />
           {/* Jedna kampaň by v třetině šířky vypadala jako zapomenutá dlaždice. */}
@@ -382,18 +377,18 @@ export function Dashboard({
         <NadpisSekce
           stitek="Typy hrozeb"
           nadpis={t("Čím je ten tlak tvořený")}
-          popis="Ne jak je velký, ale z čeho se skládá. Vlevo celá sledovaná Evropa — členské i nečlenské země NATO dohromady. Vpravo jen Česko. Rozdíl mezi obrazci je to podstatné."
+          popis="Ne jak je velký, ale z čeho se skládá. Vlevo Evropa, vpravo Česko."
         />
         <div className="grid gap-4 lg:grid-cols-2">
           <PavucinaHrozeb
             nadpis="Evropa jako celek"
-            popis={t("Všechny sledované země od roku 2014, ať jsou v NATO, nebo ne.")}
+            popis={t("Všechny sledované země od roku 2014.")}
             tlak={tlakEvropa}
             odkaz={{ href: "/metodika/", text: "jak se hodnotí →" }}
           />
           <PavucinaHrozeb
             nadpis={t("Česko")}
-            popis={t("Jen české záznamy od roku 2014. Prázdná osa znamená, že takový záznam nemáme.")}
+            popis={t("Jen české záznamy od roku 2014.")}
             tlak={tlakCesko}
             odkaz={{ href: "/udalosti/?zeme=CZ", text: "české záznamy →" }}
           />
@@ -405,7 +400,7 @@ export function Dashboard({
         <NadpisSekce
           stitek={t("Čísla")}
           nadpis={t("Kolik toho je, kde a kdo za tím stojí")}
-          popis={t("Počítají se jen případy, tedy skutečné události. Pokračování případu, opatření ani prohlášení číslo nezvyšují.")}
+          popis={t("Počítají se jen skutečné události — ne jejich pokračování, opatření ani prohlášení.")}
         />
       </div>
       <div className="grid gap-8 md:grid-cols-3">
@@ -461,7 +456,7 @@ export function Dashboard({
         <NadpisSekce
           stitek="Archiv"
           nadpis={t("Všechny záznamy od roku 2014")}
-          popis={t("Případy, jejich pokračování, úřední opatření, prohlášení a také to, co neprošlo ověřením. Filtry si můžete uložit v adrese.")}
+          popis={t("Případy, jejich pokračování, opatření, prohlášení i to, co neprošlo ověřením.")}
           akce={<Tlacitko kam="/udalosti/" varianta="obrys" velikost="s" ikonaVpravo="nahoru" trida="[&>svg:last-child]:rotate-90">{t("samostatná stránka")}</Tlacitko>}
         />
       </div>
@@ -475,7 +470,7 @@ export function Dashboard({
         <NadpisSekce
           stitek={t("Odběr")}
           nadpis={t("Jak se to dozvíte, aniž byste sem chodili")}
-          popis={t("Kanály, čtečka nebo vlastní přehled ve vašem zařízení. Nic z toho po vás nechce jméno ani e-mail.")}
+          popis={t("Kanály, čtečka nebo vlastní přehled. Nic z toho po vás nechce jméno ani e-mail.")}
         />
         <Sledovat />
       </div>

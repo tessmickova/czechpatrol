@@ -186,11 +186,18 @@ body {
 
 /* Skleněná plocha podle brandbooku. Nikdy ne pod drobným textem — jen jako deska. */
 .sklo, .sklo-noc {
-  background: rgb(255 255 255 / 0.06);
-  backdrop-filter: blur(20px) saturate(140%);
-  -webkit-backdrop-filter: blur(20px) saturate(140%);
+  /*
+    Přeliv shora dolů místo ploché výplně: deska tím dostane hloubku, aniž by
+    se pod textem cokoli ztmavilo. Vnitřní světlá linka nahoře je odlesk hrany.
+  */
+  background:
+    linear-gradient(180deg, rgb(255 255 255 / 0.085) 0%, rgb(255 255 255 / 0.045) 46%, rgb(255 255 255 / 0.055) 100%);
+  backdrop-filter: blur(22px) saturate(145%);
+  -webkit-backdrop-filter: blur(22px) saturate(145%);
   border: 1px solid rgb(255 255 255 / 0.13);
-  box-shadow: 0 16px 40px rgb(0 0 0 / 0.45);
+  box-shadow:
+    0 20px 50px rgb(0 0 0 / 0.42),
+    inset 0 1px 0 rgb(255 255 255 / 0.10);
 }
 /* Vnořená karta zůstává plná — sklo na skle by rozmazalo text. */
 .sklo-noc-slabe {
@@ -297,6 +304,32 @@ html, body { overflow-x: clip; }
 .pas-obal:hover .pas-beh, .pas-obal:focus-within .pas-beh { animation-play-state: paused; }
 @media (prefers-reduced-motion: reduce) { .pas-beh { animation: none; } }
 
+/*
+  Dlaždice stavu.
+
+  Plocha, na kterou se člověk ve strachu dívá nejdřív, nemá být mrtvá —
+  ale ani hlučná. Jedno nadzvednutí a o kousek světlejší okraj stačí na to,
+  aby bylo poznat, že se s dlaždicí dá pracovat. Barvu ani tón to nemění,
+  takže význam zůstává na tónu, ikoně a slovu, ne na efektu.
+*/
+.dlazdice-stav {
+  transition:
+    transform 0.2s cubic-bezier(0.22, 1, 0.36, 1),
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+  will-change: transform;
+}
+.napoveda-obal:hover .dlazdice-stav,
+.napoveda-obal:focus-within .dlazdice-stav {
+  transform: translate3d(0, -2px, 0);
+  border-color: rgb(255 255 255 / 0.22);
+  box-shadow: 0 10px 24px rgb(0 0 0 / 0.34);
+}
+@media (prefers-reduced-motion: reduce) {
+  .dlazdice-stav { transition: none; }
+  .napoveda-obal:hover .dlazdice-stav { transform: none; }
+}
+
 /* ---------- pohyb: parallax a nálet ---------- */
 
 /*
@@ -341,6 +374,21 @@ html, body { overflow-x: clip; }
     }
   }
   @supports (animation-timeline: view()) {
+    /*
+      Hlavička přehledu se při odrolování jemně vzdálí a ztmaví. Je to jediný
+      pohyb navázaný na samotnou desku — dává dolní části stránky přednost,
+      aniž by cokoli zmizelo dřív, než to jde přečíst.
+    */
+    .paralax-deska {
+      animation: paralax-deska linear both;
+      animation-timeline: view();
+      animation-range: exit 0% exit 100%;
+    }
+    @keyframes paralax-deska {
+      from { transform: none; opacity: 1; }
+      to { transform: scale(0.975) translate3d(0, -12px, 0); opacity: 0.72; }
+    }
+
     /* Sekce naletí zespodu, jakmile se dostane do pohledu. Jednou, decentně. */
     .nalet {
       animation: nalet linear both;
