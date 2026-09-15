@@ -82,7 +82,7 @@ export const UROVNE: Record<Uroven, DefiniceUrovne> = {
   O2: {
     kod: "O2", pasmo: "oranzova", nazev: "Vysoká", poradi: 9,
     znamena: "Státy přijímají mimořádná bezpečnostní opatření.",
-    zpusobuje: "Aktivace čl. 4, mimořádná ochrana infrastruktury, změna readiness.",
+    zpusobuje: "Aktivace čl. 4, mimořádná ochrana infrastruktury, změna pohotovosti Aliance.",
     neznamena: "Neznamená vyhlášení válečného stavu ani obecné omezení vycestování.",
     posunVys: "Vojenský incident mezi NATO a Ruskem s oběťmi nebo škodou.",
   },

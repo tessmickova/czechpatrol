@@ -503,18 +503,70 @@ export function vyberZmenyStavu(archiv, stav) {
 }
 
 /** `nahled` = ukázat kartu odkazu. U souhrnu s mnoha odkazy jen překáží. */
-async function posliTelegram(text, { nahled = true } = {}) {
+/*
+  Odeslání jedné zprávy do Telegramu.
+
+  Co se změnilo oproti původní verzi a proč:
+
+  - Kontroluje se TĚLO odpovědi, ne jen HTTP stav. Bot API umí vrátit 200
+    s `ok: false`; brát to jako úspěch znamenalo tiše ztratit zprávu.
+  - Ukládá se `message_id` a čas. Bez něj se nedá navázat oprava na původní
+    zprávu ani dohledat, co vlastně odešlo.
+  - HTTP 429 se řeší podle `retry_after`, ne jako obyčejná chyba.
+  - Po vypršení časového limitu se vrací `nejisty`, ne `chyba`. Telegram mohl
+    zprávu přijmout a odpověď se cestou ztratit; tvrdit, že neodešla, by vedlo
+    k druhému odeslání. Exactly-once se tu slíbit nedá a nepředstíráme to.
+*/
+
+/** Kolik sekund navíc počkat nad rámec toho, co řekne Telegram. */
+const REZERVA_429 = 1;
+/** Časový limit jednoho pokusu. Delší čekání blokuje celý běh. */
+const LIMIT_MS = 20_000;
+
+async function posliTelegram(text, { nahled = true, pokusu = 3 } = {}) {
   const token = process.env.TELEGRAM_BOT_TOKEN;
   const kanal = process.env.TELEGRAM_KANAL || "@czechpatrol";
   if (!token) return { ok: false, chyba: "chybí TELEGRAM_BOT_TOKEN" };
-  const r = await fetch(`https://api.telegram.org/bot${token}/sendMessage`, {
-    method: "POST",
-    headers: { "content-type": "application/json" },
-    body: JSON.stringify({ chat_id: kanal, text, parse_mode: "HTML", disable_web_page_preview: !nahled }),
-  });
-  if (r.ok) return { ok: true };
-  const t = await r.text().catch(() => "");
-  return { ok: false, chyba: `telegram ${r.status}: ${t.slice(0, 200)}` };
+
+  for (let pokus = 1; pokus <= pokusu; pokus++) {
+    let r;
+    try {
+      r = await fetch(`https://api.telegram.org/bot${token}/sendMessage`, {
+        method: "POST",
+        headers: { "content-type": "application/json" },
+        body: JSON.stringify({ chat_id: kanal, text, parse_mode: "HTML", disable_web_page_preview: !nahled }),
+        signal: AbortSignal.timeout(LIMIT_MS),
+      });
+    } catch (e) {
+      // Spojení spadlo nebo vypršel limit. Nevíme, jestli zpráva prošla.
+      return { ok: false, nejisty: true, chyba: `spojení selhalo (${e?.name ?? e}); výsledek je nejistý` };
+    }
+
+    const telo = await r.json().catch(() => null);
+
+    if (r.ok && telo?.ok) {
+      return { ok: true, messageId: telo.result?.message_id ?? null, kdy: new Date().toISOString() };
+    }
+
+    //Limit rychlosti: Telegram sám řekne, jak dlouho počkat.
+    const pockat = telo?.parameters?.retry_after;
+    if (r.status === 429 && pockat && pokus < pokusu) {
+      console.log(`[rozhlas] Telegram omezuje rychlost, čekám ${pockat + REZERVA_429} s`);
+      await new Promise((x) => setTimeout(x, (pockat + REZERVA_429) * 1000));
+      continue;
+    }
+
+    // Dočasná chyba na straně Telegramu — zkusit znovu s odstupem má smysl.
+    if (r.status >= 500 && pokus < pokusu) {
+      await new Promise((x) => setTimeout(x, 1000 * 2 ** pokus));
+      continue;
+    }
+
+    const popis = telo?.description ?? (await r.text().catch(() => "")).slice(0, 200);
+    return { ok: false, chyba: `telegram ${r.status}: ${popis}` };
+  }
+
+  return { ok: false, chyba: "vyčerpány pokusy" };
 }
 
 async function main() {
@@ -535,8 +587,13 @@ async function main() {
     process.exit(v.ok ? 0 : 1);
   }
   if (!process.env.TELEGRAM_BOT_TOKEN && !nacisto) {
-    console.log("[rozhlas] chybí TELEGRAM_BOT_TOKEN, nic se neposílá");
-    return;
+    /*
+      Chybějící token nesmí vypadat jako úspěšný běh s nulou zpráv. Přesně
+      tak totiž vypadá i výpadek doručování — a nikdo by si ho nevšiml.
+      Nasucho (--nacisto) je to naopak legitimní stav bez poplachu.
+    */
+    console.error("[rozhlas] CHYBÍ TELEGRAM_BOT_TOKEN — služba neběží, nic se neodeslalo");
+    process.exit(1);
   }
 
   const archiv = JSON.parse(fs.readFileSync(path.join(koren, "data", "historie.json"), "utf-8"));
@@ -550,7 +607,7 @@ async function main() {
   for (const { snimek, zmeny } of vyberZmenyStavu(archiv, stav)) {
     if (prvniBeh) { stav.snimky[snimek.kdy] = { kdy: new Date(ted).toISOString(), ticho: true }; continue; }
     const v = await posli(sestavZmenuStavu(snimek, zmeny), { nahled: false });
-    if (v.ok) { stav.snimky[snimek.kdy] = { kdy: new Date(ted).toISOString() }; odeslano++; } else { selhalo++; console.log(`[rozhlas] ${v.chyba}`); }
+    if (v.ok) { stav.snimky[snimek.kdy] = { kdy: new Date(ted).toISOString(), messageId: v.messageId ?? null }; odeslano++; } else { selhalo++; console.log(`[rozhlas] ${v.chyba}`); }
   }
 
   /*
@@ -567,7 +624,7 @@ async function main() {
       stav.palivo[skok.tyden] = { kdy: new Date(ted).toISOString(), ticho: true };
     } else {
       const v = await posli(sestavPalivo(skok), { nahled: false });
-      if (v.ok) { stav.palivo[skok.tyden] = { kdy: new Date(ted).toISOString() }; odeslano++; }
+      if (v.ok) { stav.palivo[skok.tyden] = { kdy: new Date(ted).toISOString(), messageId: v.messageId ?? null }; odeslano++; }
       else { selhalo++; console.log(`[rozhlas] ${v.chyba}`); }
     }
   }
@@ -584,12 +641,24 @@ async function main() {
     for (const { i, aktualizace } of davka) {
       const dily = rozdelZpravu(sestavZpravu(i, { aktualizace }));
       let ok = true;
+      // Id první zprávy si držíme, aby se na ni dala navázat případná oprava.
+      let prvniId = null;
+      let nejisty = false;
       for (const [n, dil] of dily.entries()) {
         // Náhled webu jen u prvního dílu, ať se karta neopakuje.
         const v = await posli(dil, { nahled: n === 0 });
-        if (!v.ok) { ok = false; console.log(`[rozhlas] ${v.chyba}`); }
+        if (v.ok) { if (n === 0) prvniId = v.messageId ?? null; }
+        else { ok = false; if (v.nejisty) nejisty = true; console.log(`[rozhlas] ${v.chyba}`); }
       }
-      if (ok) { stav.zaznamy[i.id] = { kdy: new Date(ted).toISOString(), historie: i.historie?.length ?? 0 }; odeslano += dily.length; }
+      /*
+        Nejistý výsledek si pamatujeme jako odeslaný. Telegram mohl zprávu
+        přijmout a odpověď se cestou ztratit; druhé odeslání téhož záznamu
+        je horší než jedna možná chybějící zpráva, kterou člověk dohledá.
+      */
+      if (!ok && nejisty) {
+        stav.zaznamy[i.id] = { kdy: new Date(ted).toISOString(), historie: i.historie?.length ?? 0, nejistyVysledek: true };
+      }
+      if (ok) { stav.zaznamy[i.id] = { kdy: new Date(ted).toISOString(), historie: i.historie?.length ?? 0, messageId: prvniId }; odeslano += dily.length; }
       else selhalo++;
     }
   }

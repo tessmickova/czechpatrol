@@ -100,13 +100,18 @@ export function ObloukovyMerak({
 
 /* ---------------- radar hybridního tlaku ---------------- */
 
+/*
+  Názvy os. „Kdo to byl", „Infrastr." a „Voj. střet" byly zkratky, které
+  neoznačovaly měřenou veličinu — první nebyla ani metrika, další dvě se
+  nedaly přečíst. Celé názvy jsou delší, ale dají se pochopit bez legendy.
+*/
 const POPISKY: Record<string, string> = {
   sabotaze: "Sabotáže",
-  atribuce: "Kdo to byl",
-  kyber: "Kyber",
+  atribuce: "Připsání odpovědnosti",
+  kyber: "Kybernetické útoky",
   drony: "Drony",
-  infrastruktura: "Infrastr.",
-  primy: "Voj. střet",
+  infrastruktura: "Infrastruktura",
+  primy: "Vojenský střet",
 };
 
 /**

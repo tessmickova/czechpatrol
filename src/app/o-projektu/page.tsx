@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { HlavickaStranky } from "@/components/nadpisy";
 import Link from "next/link";
-import { KOMUNITA, METODIKA_REVIDOVANA, PROVOZOVATEL, UCTY_ZAPNUTE, WEB } from "@/config/web";
+import { DORUCOVANI, KANALY, KOMUNITA, METODIKA_REVIDOVANA, PROVOZOVATEL, UCTY_ZAPNUTE, WEB } from "@/config/web";
 import { datumPraha } from "@/lib/cas";
 import { pocty } from "@/lib/agregace";
 import { incidenty, nepotvrzene } from "@/lib/data";
@@ -48,7 +48,15 @@ export default function OProjektu() {
         <Odstavec nadpis="Co zatím není hotové">
           <ul className="list-disc space-y-1 pl-5">
             <li>Účty, týdenní souhrn a upozornění: {UCTY_ZAPNUTE ? "běží" : "kód existuje, služba zatím neběží"}.</li>
-            <li>Kanály na Telegramu, WhatsAppu a dalších sítích: nejsou spuštěné, proto se nikde nenabízejí.</li>
+            {/*
+              Tohle tvrzení bylo v rozporu se skutečností i s vlastním úvodem
+              webu: telegramový kanál běží a nabízí se. Věta se teď skládá
+              z konfigurace, aby se rozejít nemohla.
+            */}
+            <li>
+              {DORUCOVANI.telegram.nazev}: {KANALY.telegram ? `běží — ${DORUCOVANI.telegram.kadence}` : "není spuštěný"}.
+              {" "}Ostatní sítě (WhatsApp, Signal, Bluesky) spuštěné nejsou, proto se nenabízejí.
+            </li>
             <li>Role partnera pro záchranné složky: připravená v kódu, přiděluje ji jen správce po ověření.</li>
           </ul>
         </Odstavec>

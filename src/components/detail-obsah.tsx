@@ -2,7 +2,7 @@ import Link from "next/link";
 import { aktualizaceK, dolozeno, druh, jistotaZobrazena, pripadK, uredniZdroj } from "@/lib/agregace";
 import { datumCasPraha, datumPraha } from "@/lib/cas";
 import { incidenty, opravyK } from "@/lib/data";
-import { ATRIBUCE, KATEGORIE, STAVY } from "@/lib/kategorie";
+import { ATRIBUCE, KATEGORIE, PUVODCI, STAVY } from "@/lib/kategorie";
 import { JISTOTY, UROVNE, zDeseti } from "@/lib/skala";
 import type { Incident } from "@/lib/typy";
 import { Ikona } from "./ikony";
@@ -127,8 +127,15 @@ export function DetailObsah({ i }: { i: Incident }) {
       <Blok nadpis="Co se stalo" popis="Jen doložené skutečnosti. Každá je krytá zdrojem níže.">
         <Seznam polozky={i.fakta} />
         <p className="mt-3 text-[13px] text-tlum">
-          Stav: {STAVY[i.stav]} · Pachatel: {ATRIBUCE[i.atribuce].nazev.toLowerCase()}
-          {i.puvodce && potvrzenPachatel ? "" : i.puvodce ? " (nepotvrzeno)" : ""}
+          {/*
+            Dřív tu stálo „Pachatel: oficiální" — na místě osoby nebo státu
+            se zobrazoval typ důkazu. Teď je zvlášť původce a zvlášť to,
+            v jakém stavu je připsání odpovědnosti.
+          */}
+          Stav: {STAVY[i.stav]}
+          {i.puvodce && <> · Původce: {PUVODCI[i.puvodce]}</>}
+          {" "}· Připsání odpovědnosti: {ATRIBUCE[i.atribuce].nazev.toLowerCase()}
+          {i.puvodce && !potvrzenPachatel ? ", dosud nepotvrzeno" : ""}
           {" · "}Oblasti: {i.kategorie.map((k) => KATEGORIE[k].nazev).join(", ")}
         </p>
       </Blok>

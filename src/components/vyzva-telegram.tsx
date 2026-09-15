@@ -1,4 +1,5 @@
 import { KANALY } from "@/config/web";
+import { DORUCOVANI } from "@/config/web";
 import { Ikona } from "./ikony";
 import { Tlacitko } from "./ui";
 import { Znacka } from "./znacka";
@@ -30,7 +31,7 @@ export function VyzvaTelegram() {
             <span className="grid h-8 w-8 place-items-center rounded-full bg-akcent/20 text-akcent"><Ikona nazev="zvonek" velikost={16} tah={1.9} /></span>
             <span className="stitek-znacky">Urgentní upozornění</span>
           </div>
-          <h2 className="titul-mensi mt-4 text-noc-text">Až se něco změní, nebudete zrovna na tomhle webu</h2>
+          <h2 className="titul-mensi mt-4 text-noc-text">Upozornění na nové události</h2>
           <p className="mt-3 max-w-[46ch] text-[16px] leading-relaxed text-noc-tlum">
             <strong className="font-bold text-noc-text">
               Kanál posílá zprávu jen tehdy, když se změní něco, kvůli čemu byste jednali jinak.
@@ -60,7 +61,14 @@ export function VyzvaTelegram() {
           {[
             { ikona: "zamek" as const, text: "Bez jména, bez e-mailu, bez účtu." },
             { ikona: "vaha" as const, text: "Každá zpráva má u sebe zdroj, na který se dá kliknout." },
-            { ikona: "hodiny" as const, text: "Žádné denní souhrny. Ticho znamená, že se nic nezměnilo." },
+            /*
+              Dřív tu stálo „Žádné denní souhrny. Ticho znamená, že se nic
+              nezměnilo." Obojí bylo nepravdivé: denní souhrn běží podle
+              workflow a z ticha v kanálu na stav situace usuzovat nelze —
+              může znamenat i to, že se zaseklo doručování.
+            */
+            { ikona: "hodiny" as const, text: DORUCOVANI.telegram.rozsah },
+            { ikona: "info" as const, text: "Bez nové zprávy nelze usuzovat na stav situace. Aktuálnost monitoringu je vidět na webu." },
           ].map((b) => (
             <li key={b.text} className="flex items-start gap-3 rounded-[18px] border border-linka px-3.5 py-3">
               <span className="grid h-8 w-8 shrink-0 place-items-center rounded-full bg-[rgb(255_255_255/0.06)] text-akcent"><Ikona nazev={b.ikona} velikost={15} tah={1.9} /></span>

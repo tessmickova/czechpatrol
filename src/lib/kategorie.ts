@@ -1,4 +1,4 @@
-import type { Atribuce, Kategorie, StavVysetrovani, TypZdroje } from "./typy";
+import type { Atribuce, Kategorie, Puvodce, StavVysetrovani, TypZdroje } from "./typy";
 
 export const KATEGORIE: Record<Kategorie, { nazev: string; znak: string }> = {
   cr: { nazev: "ČR", znak: "CZ" },
@@ -21,6 +21,19 @@ export const PORADI_KATEGORII: Kategorie[] = [
   "hranice", "pravo", "rusko", "diplomacie", "kyber", "vysetrovani", "zpravodajske",
 ];
 
+/*
+  Kdo za činem stojí. Velké písmeno je záměr: v datech je klíč „rusko",
+  ale čtenáři se jméno státu píše, jak se píše.
+*/
+export const PUVODCI: Record<Puvodce, string> = {
+  rusko: "Rusko",
+  ukrajina: "Ukrajina",
+  "jiny-stat": "jiný stát",
+  "neni-stat": "nestátní skupina",
+  domaci: "domácí pachatel",
+  neznamy: "neznámý",
+};
+
 export const ATRIBUCE: Record<Atribuce, { nazev: string; popis: string }> = {
   neznama: { nazev: "Neznámá", popis: "Pachatel není znám." },
   vysetrovana: { nazev: "Vyšetřovaná", popis: "Vyšetřování probíhá, závěr zatím není." },
@@ -37,25 +50,30 @@ export const STAVY: Record<StavVysetrovani, string> = {
   neuvedeno: "Neuvedeno",
 };
 
+/*
+  Typy zdrojů. Značky byly anglické velkými písmeny (PRIMARY, WIRE, MEDIA) —
+  interní kód vystavený čtenáři, který ho musel luštit. Teď je to česky
+  a normálním písmem; přesné jméno vydavatele stojí vedle.
+*/
 export const TYPY_ZDROJU: Record<TypZdroje, { znacka: string; popis: string; tridy: string }> = {
   primary: {
-    znacka: "PRIMARY", popis: "Orgán, který věc sám oznámil — policie, vláda, NATO, EU.",
+    znacka: "Úřední zdroj", popis: "Orgán, který věc sám oznámil — policie, vláda, NATO, EU.",
     tridy: "border-akcent/50 bg-akcent/15 text-akcent-svetla",
   },
   wire: {
-    znacka: "WIRE", popis: "Mezinárodní agentura — Reuters, AP, AFP.",
+    znacka: "Agentura", popis: "Mezinárodní agentura — Reuters, AP, AFP.",
     tridy: "border-linka bg-noc/60 text-inkoust",
   },
   media: {
-    znacka: "MEDIA", popis: "Zpravodajské médium.",
+    znacka: "Médium", popis: "Zpravodajské médium.",
     tridy: "border-linka bg-noc/60 text-tlum",
   },
   local: {
-    znacka: "LOCAL", popis: "Regionální nebo místní médium.",
+    znacka: "Místní médium", popis: "Regionální nebo místní médium.",
     tridy: "border-linka bg-noc/60 text-tlum",
   },
   analysis: {
-    znacka: "ANALYSIS", popis: "Analytický zdroj — think tank, výzkumné pracoviště.",
+    znacka: "Analýza", popis: "Analytický zdroj — think tank, výzkumné pracoviště.",
     tridy: "border-[#a494d6]/40 bg-[#a494d6]/10 text-[#c4b8e6]",
   },
   social: {

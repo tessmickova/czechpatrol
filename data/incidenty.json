@@ -6734,7 +6734,7 @@
     "id": "i-2026-09-10-svalbard-kabely",
     "slug": "svalbard-nato-zabranilo-naciku-prerezani-kabelu-2026",
     "titulek": "Arktida: britské, norské a americké síly zastavily ruské ponorky, které u Špicberk nacvičovaly přerušení podmořských kabelů",
-    "kratkyTitulek": "Špicberky: zmařený nácvik na kabely",
+    "kratkyTitulek": "Špicberky: NATO zastavilo ruské ponorky u kabelů",
     "zeme": "Norsko",
     "kodZeme": "NO",
     "kategorie": [
@@ -6820,6 +6820,11 @@
         "kdy": "2026-09-10T00:00:00Z",
         "text": "Reuters zveřejnila akci, o které dosud žádná vláda veřejně nemluvila.",
         "novySignal": true
+      },
+      {
+        "kdy": "2026-09-15T06:45:00Z",
+        "text": "Upřesněn krátký titulek. „Zmařený nácvik na kabely\" nepojmenovával doložené jednání a přisuzoval záměr přerušit kabely jako fakt; podle Reuters jde o vyjádření dvou západních představitelů. Titulek teď popisuje, co je doložené: spojenci plavidla zastavili u kabelů.",
+        "novySignal": false
       }
     ],
     "novy": true,

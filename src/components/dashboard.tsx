@@ -415,9 +415,9 @@ export function Dashboard({
       {/* 2c — čím je tlak tvořený: pavučina typů hrozeb */}
       <div className="nalet mt-14 border-t border-linka pt-12 sm:mt-20 sm:pt-14">
         <NadpisSekce
-          stitek="Typy hrozeb"
-          nadpis={t("Čím je ten tlak tvořený")}
-          popis="Ne jak je velký, ale z čeho se skládá. Vlevo Evropa, vpravo Česko."
+          stitek="Typy událostí"
+          nadpis={t("Typy evidovaných událostí")}
+          popis="Evidované události podle typu za posledních 90 dní. Vlevo Evropa, vpravo Česko."
         />
         <div className="grid gap-4 lg:grid-cols-2">
           <PavucinaHrozeb

@@ -228,7 +228,7 @@ export function PostranniPanel() {
               })}
             </ul>
             <div className="mt-1.5 flex items-center justify-between gap-3 text-[13px]">
-              <Tlacitko kam="/feed.xml" varianta="tichy" velikost="s" ikona="rss" trida="!text-akcent hover:!text-akcent-svetla">RSS — funguje vždy</Tlacitko>
+              <Tlacitko kam="/feed.xml" varianta="tichy" velikost="s" ikona="rss" trida="!text-akcent hover:!text-akcent-svetla">RSS — odběr ve čtečce</Tlacitko>
               <Link href="/odber/" onClick={zavri} className="text-tlum hover:text-inkoust">jak to funguje →</Link>
             </div>
           </section>

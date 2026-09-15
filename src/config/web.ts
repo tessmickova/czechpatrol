@@ -41,6 +41,42 @@ export const KANALY: Record<string, string> = {
 };
 
 /**
+ * Co která cesta doručování SKUTEČNĚ dělá.
+ *
+ * Tohle je jediné místo, odkud se berou věty o dostupnosti kanálů. Vzniklo
+ * proto, že si stránky odporovaly: úvod nabízel Telegram a tvrdil „žádné denní
+ * souhrny", workflow přitom denní souhrn má; /odber/ zmiňoval týdenní souhrn
+ * a odhlášení v účtu, /ucet/ říkal, že účty neběží, a /o-projektu/ tvrdil,
+ * že kanály nejsou spuštěné.
+ *
+ * Pravidlo: co tu není označené jako `bezi`, se nikde nesmí nabízet jako
+ * dostupné. Funkci, která neběží, web představí jako připravovanou.
+ */
+export const DORUCOVANI = {
+  telegram: {
+    bezi: true,
+    nazev: "Telegram",
+    /** Co do kanálu opravdu chodí. Nesmí slibovat víc, než workflow dělá. */
+    rozsah: "Vážné případy a úřední opatření odcházejí hned. Ostatní ověřené záznamy jednou denně v souhrnu.",
+    /** Podle .github/workflows/rozhlas.yml. Změna workflow = změna téhle věty. */
+    kadence: "průběžně u vážných, denní souhrn v 19:00 (v zimě v 18:00)",
+  },
+  rss: {
+    bezi: true,
+    nazev: "RSS",
+    rozsah: "Všechny ověřené záznamy ve čtečce.",
+    kadence: "obnovuje se při každém sestavení webu",
+  },
+  ucty: {
+    /** Účty běží jen s nasazeným API. Bez něj se nesmějí nabízet. */
+    bezi: false,
+    nazev: "Účet s vlastním výběrem",
+    rozsah: "Výběr témat a oblastí, týdenní souhrn.",
+    kadence: "zatím neběží",
+  },
+} as const;
+
+/**
  * Kdy se odesílá upozornění.
  *
  * Záměrně ne u každé události — od toho je web. Upozornění chodí jen tehdy,

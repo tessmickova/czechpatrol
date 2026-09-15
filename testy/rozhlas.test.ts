@@ -4,6 +4,7 @@ import path from "node:path";
 import { describe, expect, it } from "vitest";
 import { klicovaVeta, legendaTecek, pocetZdroju, pruhTecek, PUVODCI, radekPokryti, rozdelZpravu, sestavPalivo, sestavSouhrn, sestavTest, sestavZdroje, sestavZmenuStavu, sestavZpravu, vyberNove, vyberPalivo, vyberZmenyStavu, zahlavi } from "../nastroje/rozhlas.mjs";
 import { UROVNE, zDeseti } from "../src/lib/skala";
+import { PUVODCI as PUVODCI_WEB } from "../src/lib/kategorie";
 import type { Uroven } from "../src/lib/typy";
 
 const zaznam = (n: Record<string, unknown>) => ({
@@ -350,5 +351,13 @@ describe("skokový pohyb ceny paliv", () => {
     const stav = { palivo: { "2026-W37": { kdy: "2026-09-08T00:00:00Z" } } };
     expect(vyberPalivo({ zprava }, stav)).toBeNull();
     expect(vyberPalivo({ zprava }, { palivo: {} })).toEqual(zprava);
+  });
+});
+
+describe("slovníky se nesmějí rozejít", () => {
+  it("původci v rozhlasu odpovídají webu", () => {
+    // rozhlas.mjs je prostý ES modul bez typů a číselník má vlastní kopii.
+    // Kdyby se rozešly, kanál by psal o jiném původci než web.
+    expect(PUVODCI).toEqual(PUVODCI_WEB);
   });
 });
