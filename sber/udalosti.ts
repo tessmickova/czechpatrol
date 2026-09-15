@@ -243,6 +243,24 @@ const AKTY_KOMBINACE: { kategorie: string; a: string[]; b: string[] }[] = [
     b: ["airspace", "vzdusny prostor", "vzdusneho prostoru"],
   },
   {
+    /*
+      Dron, který spadl, byl nalezen nebo se po něm pátrá.
+
+      Chybělo to celé: česká věta „nedaleko letiště německé armády se zřítil
+      dron“ neobsahuje ani jednu frázi ze seznamu (ty míří na sestřelení
+      a na narušení vzdušného prostoru), takže ji síto zahodilo jako zprávu
+      bez skutku. Přitom je to přesně ten druh události, kvůli kterému tenhle
+      web vznikl.
+
+      Sloveso a předmět zvlášť, každé jako kmen — čeština mezi ně vkládá
+      přívlastek („zřítil se podezřelý dron“) a slova skloňuje.
+    */
+    kategorie: "drony",
+    a: ["dron", "drone", "uav", "bezpilotn"],
+    b: ["zritil", "spadl", "havaroval", "nalezen", "nalezli", "naslo", "patraji", "patrala",
+      "dopadl", "zasahl", "crashed", "crashes", "fell", "recovered"],
+  },
+  {
     // „Vzlétly polské stíhačky“ — mezi slovy stojí přívlastek, takže se to
     // nedá hledat jako jedna fráze. Sloveso i technika musí být obojí.
     kategorie: "drony",
@@ -312,7 +330,14 @@ const VYLOUCIT = [
   web existuje.
 */
 const ZEME: { kod: string; nazev: string; slova: string[]; presna?: string[] }[] = [
-  { kod: "CZ", nazev: "Česko", slova: ["czech", "cesko", "ceska republika", "ceske", " cr ", "policie cr", "praha", "praze", "prague", "brno", "brne", "ostrav", "cesky rozhlas", "ceskeho rozhlasu", "radiozurnal", "irozhlas"] },
+  /*
+      „cr" muselo mezi přesné tokeny ze stejného důvodu jako „uk": s povolenou
+      koncovkou sedělo na „crash", „crisis" i „critical infrastructure", takže
+      anglické zprávy o dronech a kritické infrastruktuře web označoval jako
+      české. V datech tak například stálo, že ruský dron nad Moldavskem
+      a Rumunskem je zpráva z Česka.
+    */
+    { kod: "CZ", nazev: "Česko", slova: ["czech", "cesko", "ceska republika", "ceske", "policie cr", "praha", "praze", "prahou", "prahy", "prague", "brno", "brne", "ostrav"], presna: ["cr"] },
   { kod: "SK", nazev: "Slovensko", slova: ["slovak", "slovensk", "bratislav", "kosic"] },
   { kod: "PL", nazev: "Polsko", slova: ["poland", "polish", "polsk", "warsaw", "varsav", "rzeszow", "gdansk"] },
   { kod: "DE", nazev: "Německo", slova: ["germany", "german", "nemeck", "berlin", "hamburg", "leipzig", "munich", "mnichov", "bundeswehr"] },
@@ -335,7 +360,7 @@ const ZEME: { kod: string; nazev: string; slova: string[]; presna?: string[] }[]
   { kod: "UA", nazev: "Ukrajina", slova: ["ukraine", "ukrainian", "ukrajin", "kyiv", "kyjev", "odesa", "lviv"] },
   { kod: "RU", nazev: "Rusko", slova: ["russia", "russian", "rusk", "moscow", "moskv", "kremlin", "kreml"] },
   { kod: "BY", nazev: "Bělorusko", slova: ["belarus", "belorus", "minsk"] },
-  { kod: "IT", nazev: "Itálie", slova: ["italy", "italian", "itali", "rome", "rim "] },
+  { kod: "IT", nazev: "Itálie", slova: ["italy", "italian", "itali", "rome"], presna: ["rim"] },
   { kod: "ES", nazev: "Španělsko", slova: ["spain", "spanish", "spanel", "madrid"] },
   { kod: "EU", nazev: "EU", slova: ["european union", "european commission", "evropska unie", "evropska komise"], presna: ["eu"] },
 ];
@@ -375,6 +400,13 @@ export function odhadniZemi(text: string): { kod: string; nazev: string } | null
     zpráva o incidentu) se označila jako Norsko. Je to týž případ jako dřívější
     „bis“ uvnitř jména „Babiš“.
   */
+  /*
+    Krizové vysílání Českého rozhlasu je česká událost i bez zmínky o místě.
+    Samotný název redakce ale značkou země být nesmí: iROZHLAS píše i o Litvě
+    a jeho jméno je pod každým takovým článkem — chvíli kvůli tomu web tvrdil,
+    že zastavené letiště v Litvě je zpráva z Česka.
+  */
+  if (naliehavost(text)?.druh === "krizove-vysilani") return { kod: "CZ", nazev: "Česko" };
   const shody = ZEME.filter(
     (z) => z.slova.some((sl) => obsahujeSlovo(t, sl.trim())) || (z.presna ?? []).some((sl) => obsahujeToken(t, sl)),
   );

@@ -24,13 +24,24 @@ export async function stahni(url: string, pokusu = 3): Promise<{ stav: number; t
 }
 
 function odtaguj(s: string): string {
-  return s
-    .replace(/<!\[CDATA\[([\s\S]*?)\]\]>/g, "$1")
-    .replace(/<[^>]+>/g, " ")
-    .replace(/&amp;/g, "&").replace(/&lt;/g, "<").replace(/&gt;/g, ">")
-    .replace(/&quot;/g, '"').replace(/&#39;/g, "'").replace(/&nbsp;/g, " ")
-    .replace(/\s+/g, " ")
-    .trim();
+  const dekoduj = (x: string) =>
+    x
+      .replace(/<!\[CDATA\[([\s\S]*?)\]\]>/g, "$1")
+      .replace(/&amp;/g, "&").replace(/&lt;/g, "<").replace(/&gt;/g, ">")
+      .replace(/&quot;/g, '"').replace(/&#39;/g, "'").replace(/&nbsp;/g, " ");
+  /*
+    Dvakrát, a pokaždé nejdřív rozkódovat a teprve pak odstranit značky.
+
+    RSS popisky bývají zakódované dvojitě (&lt;a href="…"&gt;). Při jednom
+    průchodu se nejdřív odstranily skutečné značky, pak se rozkódovaly entity
+    — a v textu zůstal vypsaný odkaz i s base64 adresou z Google News. Ten
+    text pak chodil do rozpoznávání i na web: čtenář viděl v shrnutí kandidáta
+    „<a href=…CBMilAFBVV95cUxOSHdY…", a rozpoznávání zemí v tom nacházelo
+    zkratky, protože pomlčky a podtržítka v base64 se chovají jako mezery.
+  */
+  let t = dekoduj(s).replace(/<[^>]+>/g, " ");
+  t = dekoduj(t).replace(/<[^>]+>/g, " ");
+  return t.replace(/\s+/g, " ").trim();
 }
 
 function vytahni(blok: string, znacka: string): string {
@@ -42,6 +53,30 @@ function vytahni(blok: string, znacka: string): string {
  * Minimalistický čtečka RSS a Atomu. Záměrně bez knihovny — jde o pár značek
  * a každá závislost navíc je něco, co může v hodinovém běhu selhat.
  */
+/**
+ * Text bez značek a bez adres. Používá se na shrnutí z RSS — a taky na
+ * dočištění starších zápisů, ve kterých značky uvízly jako holý text.
+ */
+export function ocistiText(s: string): string {
+  /*
+    Poslední smetení: nedokončené značky.
+
+    Starší zápisy mají shrnutí oříznuté na 600 znaků — a base64 adresa uvnitř
+    odkazu z Google News je sama delší než 400 znaků, takže se ořízlo uprostřed
+    značky a uzavírací „>" v textu vůbec není. Běžné odstranění značek na to
+    nestačí, protože hledá dvojici.
+  */
+  return bezAdres(odtaguj(s))
+    .replace(/<\/?[a-z][^<>]*>?/gi, " ")
+    .replace(/\s+/g, " ")
+    .trim();
+}
+
+/** Odkazy ven z textu. Použije se na shrnutí z RSS, ne na stažené stránky. */
+export function bezAdres(s: string): string {
+  return s.replace(/https?:\/\/\S+/g, " ").replace(/\s+/g, " ").trim();
+}
+
 export function ctiRss(xml: string): Polozka[] {
   const bloky = [
     ...xml.matchAll(/<item[\s>][\s\S]*?<\/item>/gi),
@@ -58,7 +93,12 @@ export function ctiRss(xml: string): Polozka[] {
       nadpis: vytahni(b, "title"),
       odkaz,
       publikovano: t && !Number.isNaN(t.getTime()) ? t.toISOString() : null,
-      shrnuti: (vytahni(b, "description") || vytahni(b, "summary") || vytahni(b, "content")).slice(0, 600),
+      /*
+        Adresy ze shrnutí pryč. V kanálech Google News je popisek jen odkazem
+        na článek; base64 v té adrese nenese žádnou informaci, zato kazí
+        rozpoznávání tématu i země a na webu vypadá jako porucha.
+      */
+      shrnuti: bezAdres(vytahni(b, "description") || vytahni(b, "summary") || vytahni(b, "content")).slice(0, 600),
     };
   }).filter((p) => p.nadpis);
 }

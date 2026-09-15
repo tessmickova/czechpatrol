@@ -1,6 +1,6 @@
 import { describe, expect, it } from "vitest";
 import { duvodOdmitnuti, kandidatId, obsahujeSlovo, odhadniTemata, odhadniZemi, otisk, relevantni } from "../sber/udalosti";
-import { normalizuj } from "../sber/nacti";
+import { normalizuj, ocistiText } from "../sber/nacti";
 
 describe("automatický sběr událostí — pravidla", () => {
   it("pozná zemi události, i když je zmíněné Rusko jako původce", () => {
@@ -142,5 +142,74 @@ describe("důvod odmítnutí", () => {
     const duvod = duvodOdmitnuti("Začínáme. Co jsme viděli dnes ráno, si budeme pamatovat celý život");
     expect(duvod).not.toBeNull();
     expect(["bez-skutku", "bez-mista", "vylouceno-tematem"]).toContain(duvod);
+  });
+});
+
+describe("dron, který spadl nebo se po něm pátrá", () => {
+  /*
+    15. 9. 2026 v 17:43 napsaly Novinky, že se nedaleko letiště německé armády
+    zřítil dron. Web o tom nenapsal nic — a nebylo to zpožděním. Věta
+    neobsahovala ani jednu frázi ze seznamu skutků (ty mířily na sestřelení
+    a na narušení vzdušného prostoru), takže ji síto zahodilo jako zprávu
+    „bez skutku".
+  */
+  it.each([
+    "Nedaleko letiště německé armády se zřítil dron",
+    "Policisté v Německu pátrají po dalším podezřelém dronu",
+    "Drone crashes near German air force base",
+    "U základny v Německu byl nalezen bezpilotní letoun",
+  ])("projde sítem: %s", (v) => {
+    expect(relevantni(v), duvodOdmitnuti(v) ?? "").toBe(true);
+  });
+
+  it("skutek bez místa se zahodí i tak — půlka informace nestačí", () => {
+    // Pravidlo webu, ne chyba: „u základny byl nalezen dron“ neříká kde.
+    expect(duvodOdmitnuti("U základny byl nalezen bezpilotní letoun")).toBe("bez-mista");
+  });
+
+  it("dron v článku o zemědělství skutek není", () => {
+    expect(relevantni("Researchers found drone technology useful in farming")).toBe(false);
+  });
+});
+
+describe("zkratky zemí se nesmějí trefit doprostřed anglických slov", () => {
+  /*
+    „cr" s povolenou koncovkou sedělo na „crash", „crisis" i „critical", takže
+    anglické zprávy web označoval jako české. V datech kvůli tomu stálo, že
+    ruský dron nad Moldavskem a Rumunskem je zpráva z Česka.
+  */
+  it.each([
+    ["Drone crashes near German air force base", "DE"],
+    ["Attack on critical infrastructure in Poland", "PL"],
+    ["Nad Prahou zadržela policie muže s dronem", "CZ"],
+  ])("%s → %s", (veta, kod) => {
+    expect(odhadniZemi(veta)?.kod).toBe(kod);
+  });
+
+  it("anglická zpráva bez místa se neoznačí jako česká", () => {
+    expect(odhadniZemi("Baltic crisis deepens after cable damage")?.kod).not.toBe("CZ");
+  });
+});
+
+describe("shrnutí z RSS", () => {
+  /*
+    Popisky v kanálech Google News jsou zakódované dvojitě, takže po prvním
+    průchodu zůstal v textu vypsaný odkaz i s base64 adresou. Chodilo to do
+    rozpoznávání i na web: čtenář viděl v shrnutí kandidáta „<a href=…CBMilAF…"
+    a rozpoznávání zemí v tom nacházelo zkratky, protože pomlčky a podtržítka
+    v base64 se chovají jako mezery.
+  */
+  it("z popisku zmizí značky i adresa", () => {
+    const vstup = '&lt;a href="https://news.google.com/rss/articles/CBMilAFBVV95cUxO-cr_uk"&gt;Deník N&lt;/a&gt;&amp;nbsp;Litva';
+    expect(ocistiText(vstup)).toBe("Deník N Litva");
+  });
+
+  it("poradí si i s ořízlou značkou bez uzavření", () => {
+    // Starší zápisy mají shrnutí oříznuté na 600 znaků uprostřed odkazu.
+    expect(ocistiText('<a href="https://news.google.com/rss/articles/CBMilAF')).toBe("");
+  });
+
+  it("běžný text zůstane beze změny", () => {
+    expect(ocistiText("Dron se zřítil u letiště v Německu.")).toBe("Dron se zřítil u letiště v Německu.");
   });
 });

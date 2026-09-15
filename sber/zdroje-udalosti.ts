@@ -89,6 +89,15 @@ export const ZDROJE_UDALOSTI: ZdrojUdalosti[] = [
     režimu, je praktická informace sama o sobě. Vlastní kanál ČRo tu je proto,
     že o svém vysílání píše dřív a spolehlivěji než kdokoli jiný.
   */
+  /*
+    Drony nad Německem. Chybělo to: dotazy mířily na Polsko, Pobaltí, Rumunsko
+    a Moldavsko, takže o dronu, který 15. 9. 2026 spadl u letiště Bundeswehru,
+    sem nepřišla žádná zpráva. Německo má přitom v evidenci druhý nejvyšší
+    počet případů ze všech sledovaných zemí.
+  */
+  { klic: "gn-dron-de", nazev: "Google News — drony nad Německem", url: gn("Germany drone Bundeswehr airbase sighting", false), jazyk: "en", primarni: false, typ: "media" },
+  { klic: "gn-dron-de-cz", nazev: "Google News — dron Německo česky", url: gn("dron Německo armáda letiště", true), jazyk: "cs", primarni: false, typ: "media" },
+
   { klic: "cro-rss", nazev: "Český rozhlas — zprávy", url: "https://www.irozhlas.cz/rss/irozhlas/zpravy-domov", jazyk: "cs", primarni: true, typ: "primary" },
   { klic: "gn-mobilizace-ru", nazev: "Google News — vyhlášení mobilizace v Rusku", url: gn("Rusko vyhlásilo mobilizaci Kreml", true), jazyk: "cs", primarni: false, typ: "media" },
   { klic: "gn-mobilisation-ru", nazev: "Google News — Russian mobilisation ordered", url: gn("Russia mobilisation ordered decree Kremlin", false), jazyk: "en", primarni: false, typ: "media" },
