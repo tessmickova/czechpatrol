@@ -1,5 +1,23 @@
 [
   {
+    "id": "k-a0de85f6f6726307",
+    "zachyceno": "2026-09-15T19:11:46.943Z",
+    "publikovano": "2026-09-15T19:01:00.000Z",
+    "zdroj": {
+      "nazev": "Český rozhlas — domácí zprávy",
+      "url": "https://www.irozhlas.cz/zpravy-svet/carney-pozastavi-dalsi-kolo-boje-s-trumpem-vraci-se-ke-klidnejsimu-tonu-mini_2609152101_elv",
+      "typ": "primary",
+      "primarni": true
+    },
+    "titulek": "Carney pozastaví další kolo boje s Trumpem. Vrací se ke klidnějšímu tónu, míní exvelvyslanec Lizec",
+    "shrnuti": "Od úterý začínají platit dodatečná padesátiprocentní americká cla na vybrané zboží z Kanady, o nichž rozhodl prezident Donald Trump. Kanadský premiér Mark Carney v reakci na americkou celní politiku přesměrovává kanadský obchod na Evropu a také se chce více orientovat na Velkou Británii. „Carney zat",
+    "duvod": "bez-skutku",
+    "kategorie": [
+      "cr"
+    ],
+    "posouzeni": null
+  },
+  {
     "id": "k-c2516264a8271b5d",
     "zachyceno": "2026-09-15T19:02:55.041Z",
     "publikovano": "2026-09-15T18:59:00.000Z",
@@ -3747,6 +3765,25 @@
     },
     "titulek": "NATO jets shoot down drone over Lithuanian airspace after it flew in from Belarus - The Kyiv Independent",
     "shrnuti": "<a href=\"https://news.google.com/rss/articles/CBMipAFBVV95cUxQMnVlUExMMmVuNHVjWVpMZ2VrRGV4dTlCYVpZVENfNUhsWnVsMTQyWHhLejNUUmN6Mnd4Sm13b0FnWkJHLUJ6RjhLbUFnQk45bkhMQUNxTDNzX0dlcjFfVVJLdEM1ODMxMFF5UUtEMWlvZ1lTQW11QnZtQVMwN0hnOG5uZE1HdHNtZzdMNVg1VmtLRmxpR3dNUGxMU0pGRTdWODNaaw?oc=5\" target=\"_blank\">NATO ",
+    "duvod": "bez-skutku",
+    "kategorie": [
+      "drony",
+      "nato"
+    ],
+    "posouzeni": null
+  },
+  {
+    "id": "k-a7299968eb3b2f83",
+    "zachyceno": "2026-09-15T19:11:47.114Z",
+    "publikovano": "2026-09-14T23:26:00.000Z",
+    "zdroj": {
+      "nazev": "Téma: vzdusna-obrana (anglicky)",
+      "url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE9xV1p2dnc2YlRrdUhwbG5QaDRqY19XSGY0eC1vRElYb3pINXUyUE4zNGM0eWRReGlVT0NQa09JaFJNcVlIblJzRUNwRGxBWkFHbWJfbzZ6bzVkaHQ1TFE?oc=5",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Nato jets down drone that entered Lithuanian airspace - BBC",
+    "shrnuti": "Nato jets down drone that entered Lithuanian airspace BBC",
     "duvod": "bez-skutku",
     "kategorie": [
       "drony",
@@ -8455,42 +8492,6 @@
     "duvod": "bez-skutku",
     "kategorie": [
       "rusko"
-    ],
-    "posouzeni": null
-  },
-  {
-    "id": "k-9efe46ea56344e7e",
-    "zachyceno": "2026-09-15T17:03:06.621Z",
-    "publikovano": "2026-09-08T22:48:03.000Z",
-    "zdroj": {
-      "nazev": "Téma: diplomate (anglicky)",
-      "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxOMmkzRTE3WnQ5RmdrdHVnOWxjRkN3WnpqdlVSaDhqLVUyU1RibzdwaEN1emxNVDExdnlrUjZEN2VMVVNyN01PeHJPSHJwRE13ZnBwR19TbzYtQjB0RWRkQ3pjS1pabklQZkxILWl4TFFzRm13WTYxYzlJS1draVpaSFp0cDJ0OHlGVExhaWQyZVdlMkpPOEE?oc=5",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Hungary: 10 Russian Diplomats Expelled, Moscow Promises Retaliation - Benin Web TV",
-    "shrnuti": "Hungary: 10 Russian Diplomats Expelled, Moscow Promises Retaliation Benin Web TV",
-    "duvod": "bez-skutku",
-    "kategorie": [
-      "rusko"
-    ],
-    "posouzeni": null
-  },
-  {
-    "id": "k-a451b1374dc077ac",
-    "zachyceno": "2026-09-15T17:03:06.529Z",
-    "publikovano": "2026-09-08T22:17:53.000Z",
-    "zdroj": {
-      "nazev": "Téma: energetika (anglicky)",
-      "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxOMXV5bnZXbUE3dXY4Z243QTY2cGdFcHRlUW9qUjlfTGJZb3g2dVlyZDBzUlY0Wm91anJMcWdRWm1vcmxyRUtiS2ZzOTFneS01S25hUzZTMmtQUzc0eEp1NmU2dU1sczVHRXBOUmR4aG0ycFM1TEFiS19tblhmREJtWl95d0l0NnlUa2J2eHJMSmJQdlk5RXFUYU5MeWlfb1ZVbHpFRlZWWGt3WW1i0gGyAUFVX3lxTE1ZQ0JLREN1ZWNGcV9fcEZNNm12Qi1UUllmdnFQSmF2cEM1R1U4V0tKT2VCdmhLX3B5R3VveEtVXzQ0ck92eGQyaEtjenVuWm1HZTg1T3hXSnZfdzNCbnVFWE1HcHFiNDBSTFZVV0JnNGRWTlZ4MTk2UWVDYTdsWmZFMGhidDZVUlhDLVdfaUphWnB3eG5DNVk2Q2VZUllwaURWaHFfTldVQ2tjYWpac3duMmc?oc=5",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Police arrest suspect in Germany power grid attacks after dayslong search - ABC News - Breaking News, Latest News and Videos",
-    "shrnuti": "Police arrest suspect in Germany power grid attacks after dayslong search ABC News - Breaking News, Latest News and Videos",
-    "duvod": "bez-skutku",
-    "kategorie": [
-      "infrastruktura"
     ],
     "posouzeni": null
   }
