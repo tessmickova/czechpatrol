@@ -99,16 +99,6 @@ export const ZDROJE: RegistrZdroj[] = [
     nazev: "e-Sbírka — úřední sbírka právních předpisů",
     druh: "pravni",
     url: "https://www.e-sbirka.cz/",
-    /*
-      Hlavní adresa vrací jen slupku o kilobajtu — obsah dokresluje JavaScript,
-      který sběr nespouští. Zkoušíme proto i další adresy Sbírky; která z nich
-      vrací čitelný text, ukáže běh „Ověření zdrojů".
-    */
-    zalozniUrl: [
-      "https://sbirka.gov.cz/",
-      "https://aplikace.mvcr.cz/sbirka-zakonu/",
-      "https://www.e-sbirka.cz/rejstrik",
-    ],
     format: "html",
     jazyk: "cs",
     primarni: true,
@@ -116,6 +106,13 @@ export const ZDROJE: RegistrZdroj[] = [
     sledovana: PRAVNI_TEMATA,
     /* Opatření k platbám i kybernetickému nebezpečí se vyhlašují právním předpisem. */
     tyka: ["stav-ohrozeni", "valecny-stav", "mobilizace", "nouzovy-stav", "kyber", "banky"],
+    /*
+      Měřeno 15. 9. 2026: hlavní adresa vrací 8 znaků textu, zbytek dokresluje
+      JavaScript, který sběr nespouští. Tři jiné adresy Sbírky vrátily totéž.
+      Do pokrytí se e-Sbírka proto nepočítá, dokud se nenajde adresa, ze které
+      jde číst — položky, které měla krýt, stojí na jiných zdrojích.
+    */
+    ocekavaneBlokovani: "javascript",
     overenaAdresa: false,
   },
   {
@@ -127,10 +124,15 @@ export const ZDROJE: RegistrZdroj[] = [
     format: "html",
     jazyk: "cs",
     primarni: true,
-    klicova: [...PRAVNI_VYHLASENI, ...PALIVO_VYHLASENI, ...PENIZE_VYHLASENI, "evakuace obcanu cr", "evakuacni let"],
-    sledovana: [...PRAVNI_TEMATA, "nouzove zasoby", "evakuace"],
-    /* O uvolnění státních hmotných rezerv rozhoduje vláda, ne jen SSHR. */
-    tyka: ["stav-ohrozeni", "nouzovy-stav", "hranice", "bezny-zivot", "palivo", "banky", "evakuace"],
+    klicova: [...PRAVNI_VYHLASENI, ...PALIVO_VYHLASENI, ...PENIZE_VYHLASENI, ...KYBER_VYHLASENI, "evakuace obcanu cr", "evakuacni let"],
+    sledovana: [...PRAVNI_TEMATA, "nouzove zasoby", "evakuace", "kyberneticke nebezpeci"],
+    /*
+      Vláda nouzový stav vyhlašuje, mobilizaci navrhuje prezidentovi a o
+      uvolnění státních hmotných rezerv rozhoduje. Po vyřazení e-Sbírky
+      (nejde z ní číst) je u některých těchhle položek jediným úředním
+      zdrojem, který skutečně odpovídá.
+    */
+    tyka: ["stav-ohrozeni", "nouzovy-stav", "mobilizace", "hranice", "bezny-zivot", "palivo", "banky", "evakuace", "kyber"],
     overenaAdresa: false,
   },
   {
@@ -144,7 +146,8 @@ export const ZDROJE: RegistrZdroj[] = [
     primarni: true,
     klicova: [...PRAVNI_VYHLASENI, "mimoradna schuze k bezpecnostni"],
     sledovana: [...PRAVNI_TEMATA, "mimoradna schuze"],
-    tyka: ["stav-ohrozeni", "valecny-stav", "schuze-parlamentu"],
+    /* Prodloužení nouzového stavu nad 30 dnů schvaluje Sněmovna. */
+    tyka: ["stav-ohrozeni", "valecny-stav", "nouzovy-stav", "schuze-parlamentu"],
     overenaAdresa: false,
   },
   {
@@ -176,7 +179,7 @@ export const ZDROJE: RegistrZdroj[] = [
     klicova: ["narizuje mobilizaci", "naridil mobilizaci", "vyhlasil valecny stav"],
     sledovana: ["mobilizace"],
     tyka: ["mobilizace"],
-    ocekavaneBlokovani: true,
+    ocekavaneBlokovani: "blokuje",
     overenaAdresa: false,
   },
   {
@@ -189,7 +192,8 @@ export const ZDROJE: RegistrZdroj[] = [
     primarni: true,
     klicova: PRAVNI_VYHLASENI,
     sledovana: [...PRAVNI_TEMATA, "hranicni kontroly"],
-    tyka: ["hranice", "vycestovani"],
+    /* Krizová opatření za nouzového stavu vyhlašuje a zveřejňuje i vnitro. */
+    tyka: ["hranice", "vycestovani", "nouzovy-stav"],
     overenaAdresa: false,
   },
   {
@@ -293,7 +297,7 @@ export const ZDROJE: RegistrZdroj[] = [
     klicova: ["uvolneni nouzovych zasob", "regulace prodeje pohonnych", "vyhlasil stav nouze"],
     sledovana: ["nouzove zasoby"],
     tyka: ["palivo"],
-    ocekavaneBlokovani: true,
+    ocekavaneBlokovani: "blokuje",
     overenaAdresa: false,
   },
   {
@@ -331,9 +335,9 @@ export const ZDROJE: RegistrZdroj[] = [
     format: "html",
     jazyk: "cs",
     primarni: true,
-    klicova: ["rozsahly vypadek site", "celostatni vypadek", "vyhlasil stav nouze"],
-    sledovana: ["vypadek site"],
-    tyka: ["komunikace"],
+    klicova: ["rozsahly vypadek site", "celostatni vypadek", "vyhlasil stav nouze", ...KYBER_VYHLASENI],
+    sledovana: ["vypadek site", "kyberneticke nebezpeci"],
+    tyka: ["komunikace", "kyber"],
     overenaAdresa: false,
   },
   {
@@ -380,6 +384,8 @@ export const ZDROJE: RegistrZdroj[] = [
     klicova: ["uzavreni hranicniho prechodu", "uzavreny hranicni prechod"],
     sledovana: ["hranicni kontroly", "omezeni nakladni dopravy"],
     tyka: ["hranice"],
+    /* Měřeno 15. 9. 2026: neodpovídá hlavní adresa ani žádná ze tří záložních. */
+    ocekavaneBlokovani: "neodpovida",
     overenaAdresa: false,
   },
   {

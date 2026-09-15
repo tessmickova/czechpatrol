@@ -125,7 +125,7 @@ describe("co smí automat tvrdit o stavu opatření", () => {
 
   it("zdroj blokující automaty kontrolu nezdrží", () => {
     // Web prezidenta vrací 403. Kdyby byl povinný, položka by byla trvale nedostupná.
-    const blokujici = zdroj("hrad", ["mobilizace"], ["naridil mobilizaci"], [], { ocekavaneBlokovani: true });
+    const blokujici = zdroj("hrad", ["mobilizace"], ["naridil mobilizaci"], [], { ocekavaneBlokovani: "blokuje" });
     const r = rozhodni("mobilizace", [
       stazeno(MOBILIZACE, `Nic zvláštního. ${VYPLN}`),
       stazeno(blokujici, "", false),
@@ -176,15 +176,24 @@ describe("registr zdrojů", () => {
 });
 
 describe("pokrytí sledovaných položek", () => {
-  it("každou položku pokrývá aspoň jeden zdroj, který neblokuje automaty", () => {
-    // Zdroj vracející 403 nesmí být jediný, kdo položku kryje — jinak by se
-    // její zápor nedal potvrdit nikdy a web by u ní hlásil „neověřeno“.
-    const dostupne = ZDROJE.filter((z) => !z.ocekavaneBlokovani);
-    const kryte = new Set(dostupne.flatMap((z) => z.tyka ?? []));
-    for (const z of ZDROJE) {
-      for (const k of z.tyka ?? []) {
-        expect(kryte.has(k), `položku „${k}“ kryje jen zdroj blokující automaty`).toBe(true);
-      }
+  it("žádnou položku nedrží jediný čitelný zdroj", () => {
+    /*
+      Dvě věci se tu hlídají najednou.
+
+      Zdroj, ze kterého automat nic nepřečte — vrací 403, prázdnou slupku
+      dokreslovanou JavaScriptem, nebo neodpovídá — se do pokrytí nepočítá.
+      Kdyby se počítal, web by u položky hlásil dva zdroje a fakticky neměl
+      ani jeden.
+
+      A čitelný zdroj nesmí být jediný. Když vypadne, nezbude o položce nic
+      a web u ní mlčí — přesně ve chvíli, kdy na ni lidé koukají.
+    */
+    const citelne = ZDROJE.filter((z) => !z.ocekavaneBlokovani);
+    const polozky = new Set(ZDROJE.flatMap((z) => z.tyka ?? []));
+    for (const k of polozky) {
+      const kryji = citelne.filter((z) => (z.tyka ?? []).includes(k));
+      expect(kryji.length, `položku „${k}“ kryje ${kryji.length} čitelných zdrojů: ${kryji.map((z) => z.klic).join(", ") || "žádný"}`)
+        .toBeGreaterThanOrEqual(2);
     }
   });
 });

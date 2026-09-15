@@ -40,11 +40,19 @@ export interface RegistrZdroj {
   /** Ke kterým položkám webu se zdroj vztahuje. */
   tyka?: string[];
   /**
-   * Zdroj vrací 403 na automatizované dotazy. Necháváme ho v registru, aby
-   * bylo vidět, že s ním počítáme, ale hlášení o něm nekřičí jako o poruše.
-   * Položka, kterou pokrývá, musí být krytá ještě jiným, dostupným zdrojem.
+   * Zdroj existuje, ale automat z něj nepřečte nic. Tři důvody, které jsme
+   * potkali:
+   *   "blokuje"     — vrací 403 na automatizované dotazy (Hrad, SSHR),
+   *   "javascript"  — vrátí prázdnou slupku, obsah dokresluje prohlížeč
+   *                   (e-Sbírka: 8 znaků textu na hlavní i záložních adresách),
+   *   "neodpovida"  — adresa je mrtvá a záložní taky (Dopravní info).
+   *
+   * Necháváme takový zdroj v registru, aby bylo vidět, že s ním počítáme, ale
+   * hlášení o něm nekřičí jako o poruše — a hlavně se NEPOČÍTÁ do pokrytí
+   * položky. Pokrytí ze zdroje, ze kterého nejde číst, je pokrytí na papíře.
+   * Položka, kterou takový zdroj kryje, musí mít ještě jiný, čitelný.
    */
-  ocekavaneBlokovani?: boolean;
+  ocekavaneBlokovani?: "blokuje" | "javascript" | "neodpovida";
   /**
    * Je tenhle zdroj ÚPLNÝ autoritativní seznam pro území a typ opatření,
    * kterých se týká? Jen takový zdroj smí doložit i zápor — tedy že opatření
