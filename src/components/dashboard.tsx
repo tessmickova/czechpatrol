@@ -384,10 +384,10 @@ export function Dashboard({
           závažná, ale nepotvrzená zpráva propadla úplně. */}
       <PruhOverujeme aktivni={overovaneAktivni} uzavrene={overovaneUzavrene} ted={tedMs} />
 
-      <HeroDashboard stav={stav} cr={cr} crHistoricky={crHistoricky} crPocet={crPocet} obcane={obcane} overeno={overeno} pocetZaznamu={vse.length} pocet90={zapocitatelne90} veta={veta} porovnani90={porovnani90} />
+      <HeroDashboard stav={stav} cr={cr} crHistoricky={crHistoricky} crPocet={crPocet} obcane={obcane} overeno={overeno} veta={veta} />
 
       {/* 1b — kolik případů přibylo; počítá se v prohlížeči, ne při sestavení */}
-      <PocitadlaEvropa polozky={pocitadlaData} ted={ted} />
+      <PocitadlaEvropa polozky={pocitadlaData} ted={ted} zaznamuCelkem={vse.length} />
 
       {/* 2 — mřížka stavů + poslední události */}
       <div className="nalet mt-14 sm:mt-20">

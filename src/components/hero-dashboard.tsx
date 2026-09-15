@@ -3,14 +3,12 @@
 import { datumCasPraha } from "@/lib/cas";
 import { PASMA, UROVNE } from "@/lib/skala";
 import type { CelkovyStav, Uroven } from "@/lib/typy";
-import { cislem } from "@/lib/porovnani";
-import type { Porovnani } from "@/lib/porovnani";
 import type { HlavniVeta } from "@/lib/veta";
 import { Ikona } from "./ikony";
 import { Znacka } from "./znacka";
 import { ObloukovyMerak } from "./mericky";
 import { Napoveda, VykladUrovne } from "./zaklad";
-import { Odznak, Tlacitko } from "./ui";
+import { Tlacitko } from "./ui";
 import { sklon } from "./zeme";
 import { useT } from "@/lib/i18n";
 
@@ -61,15 +59,13 @@ function Merak({
 }
 
 export function HeroDashboard({
-  stav, cr, crHistoricky, crPocet, obcane, overeno, pocetZaznamu, pocet90, veta, porovnani90,
+  stav, cr, crHistoricky, crPocet, obcane, overeno, veta,
 }: {
   stav: CelkovyStav; cr: Uroven | null; crHistoricky: Uroven | null;
   /** Kolik případů a kolik manipulačních operací v Česku za 90 dní. */
   crPocet: { pripadu: number; kampani: number };
   obcane: { uroven: Uroven; popis: string; neovereno: number };
-  overeno: string | null; pocetZaznamu: number; pocet90: number; veta: HlavniVeta;
-  /** Jak je čtvrtletí na tom proti průměru. null = málo historie na průměr. */
-  porovnani90: Porovnani | null;
+  overeno: string | null; veta: HlavniVeta;
 }) {
   const t = useT();
   /*
@@ -132,33 +128,7 @@ export function HeroDashboard({
               záznamu, kde je vedle ní vysvětlení.
             */}
             <p className="mt-1 text-drobne text-tlum2">dnes</p>
-            <p className="mt-1.5 flex flex-wrap items-center gap-x-3 text-drobne text-tlum">
-              {stav.trend === "nahoru" && <span className="flex items-center gap-1 font-semibold text-stari-text2"><Ikona nazev="nahoru" velikost={12} tah={2.2} />{t("zhoršení za 7 dní")}</span>}
-              {stav.trend === "dolu" && <span className="flex items-center gap-1 font-semibold text-klid-text"><Ikona nazev="dolu" velikost={12} tah={2.2} />{t("zlepšení za 7 dní")}</span>}
-              {stav.trend === "beze-zmeny" && <span>{t("beze změny 7 dní")}</span>}
-              <span>{overeno ? `ověřeno ${datumCasPraha(overeno)}` : "ověření neproběhlo"}</span>
-            </p>
-            <p className="mt-2 flex flex-wrap items-center gap-x-3 gap-y-1 text-drobne text-tlum">
-              <span><b className="cislice text-vetsi font-bold text-inkoust">{pocet90}</b>{t("incidentů za 90 dní")}</span>
-              {porovnani90 ? (
-                <span title={`Průměr posledních ${porovnani90.zaLet} let je ${cislem(porovnani90.prumer)} incidentu na čtvrtletí.`}>
-                  <Odznak ton={porovnani90.smer === "vyssi" ? "pozor" : porovnani90.smer === "nizsi" ? "klid" : "neutral"} duraz="silny">
-                    {porovnani90.slovo}
-                  </Odznak>
-                </span>
-              ) : (
-                /*
-                  Bez srovnatelného období se neporovnává. Pravidelný sběr běží
-                  kratší dobu než okno průměru, takže vyšší dnešní číslo by
-                  měřilo náš sběr, ne skutečnost.
-                */
-                <Napoveda popis={<span className="block">Pravidelný sběr běží od července 2026. Starší záznamy jsou doplněné zpětně a zachytily jen to nejviditelnější, takže se s dneškem porovnávat nedají.</span>}>
-                  <span className="text-drobne text-tlum2">bez srovnání</span>
-                </Napoveda>
-              )}
-              <span><b className="cislice text-vetsi font-bold text-inkoust">{pocetZaznamu}</b>{t("záznamů od roku 2014")}</span>
-            </p>
-            <p className="mt-2 flex flex-wrap gap-2">
+            <p className="mt-3 flex flex-wrap gap-2">
               <Tlacitko kam="#zaznamy" varianta="zvyrazneny" velikost="s" ikona="osa">{t("Všechny záznamy")}</Tlacitko>
               <Tlacitko kam="#sledovat" varianta="obrys" velikost="s" ikona="zvonek">{t("Sledovat změny")}</Tlacitko>
             </p>
@@ -188,6 +158,32 @@ export function HeroDashboard({
             vlastniSlovo={obcane.uroven === "G1" ? "Bez omezení" : undefined}
           />
         </div>
+      </div>
+
+      {/*
+        Provozní řádek na patě karty.
+
+        Trend, čas ověření a počty stály dřív uprostřed úvodu, hned pod názvem
+        úrovně — pět různě dlouhých údajů v odstavci, každý jinou barvou.
+        Do prvního dojmu z toho šlo přečíst jen to, že je toho hodně. Čísla se
+        přesunula do pásu počítadel pod úvodem, kde mají všechny stejný tvar;
+        tady zůstává jen to, co se týká samotného hodnocení: kam se pohnulo
+        a kdy ho někdo naposled potvrdil. Mono písmem a potichu, jako údaj
+        na přístroji.
+      */}
+      <div className="flex flex-wrap items-center gap-x-4 gap-y-1 border-t border-linka2 px-5 py-2.5 text-mikro text-tlum2 sm:px-7">
+        {stav.trend === "nahoru" && (
+          <span className="flex items-center gap-1 font-semibold text-stari-text2">
+            <Ikona nazev="nahoru" velikost={11} tah={2.2} />{t("zhoršení za 7 dní")}
+          </span>
+        )}
+        {stav.trend === "dolu" && (
+          <span className="flex items-center gap-1 font-semibold text-klid-text">
+            <Ikona nazev="dolu" velikost={11} tah={2.2} />{t("zlepšení za 7 dní")}
+          </span>
+        )}
+        {stav.trend === "beze-zmeny" && <span>{t("beze změny 7 dní")}</span>}
+        <span className="cislice">{overeno ? `ověřeno ${datumCasPraha(overeno)}` : "ověření neproběhlo"}</span>
       </div>
     </section>
   );

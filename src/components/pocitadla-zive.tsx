@@ -101,7 +101,16 @@ function Cislo({
 }
 
 /** Velká počítadla pod hlavičkou: kolik toho přibylo a za jak dlouho. */
-export function PocitadlaEvropa({ polozky, ted }: { polozky: PolozkaPoctu[]; ted: number }) {
+export function PocitadlaEvropa({
+  polozky,
+  ted,
+  zaznamuCelkem,
+}: {
+  polozky: PolozkaPoctu[];
+  ted: number;
+  /** Všechny záznamy včetně aktualizací a opatření — stálo to dřív v úvodu. */
+  zaznamuCelkem?: number;
+}) {
   const o = spocitejOkna(polozky, useZiveHodiny(ted));
   return (
     <section aria-label="Kolik incidentů přibylo" className="mt-4">
@@ -127,6 +136,7 @@ export function PocitadlaEvropa({ polozky, ted }: { polozky: PolozkaPoctu[]; ted
         }>
           <span className="odkaz">V Česku {o.cesko90} za 90 dní, {o.ceskoCelkem} celkem.</span>
         </Napoveda>
+        {zaznamuCelkem ? <> · {zaznamuCelkem} záznamů od roku 2014 včetně aktualizací a opatření</> : null}
       </p>
     </section>
   );
