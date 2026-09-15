@@ -56,3 +56,20 @@ export function OdznakUkazky() {
     </span>
   );
 }
+
+/*
+  Jedna věta nahoře: kdo tenhle web dělá.
+
+  Návštěvník, který sem přijde ve strachu, musí hned vědět, že nečte úřední
+  výstrahu. Delší vysvětlení patří do patičky a na stránku o projektu —
+  tady stačí šest slov, aby si nespletl zdroj.
+*/
+export function PruhPuvodu() {
+  return (
+    <div className="border-b border-linka2 bg-plocha2/60">
+      <div className="mx-auto max-w-[1280px] px-4 py-1.5 text-[12.5px] text-tlum2 sm:px-6">
+        Nezávislý projekt dobrovolníků. Není to úřední zdroj ani varovný systém — v nouzi volejte 112.
+      </div>
+    </div>
+  );
+}

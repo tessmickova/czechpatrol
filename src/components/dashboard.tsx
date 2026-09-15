@@ -7,6 +7,7 @@ import type { CelkovyStav, HybridniTlak, Kampan, Kandidat, NatoPolozka, Nepotvrz
 import { CenaPaliva } from "./palivo";
 import { stavPaliva, vetaOCene } from "@/lib/palivo";
 import { stavPravni, stavProvozu } from "@/lib/pokryti";
+import { StavDetail } from "./stav-detail";
 import { PASMA, UROVNE } from "@/lib/skala";
 import { cislem, porovnejSPrumerem, prumerNaOkno } from "@/lib/porovnani";
 import type { HlavniVeta } from "@/lib/veta";
@@ -16,7 +17,6 @@ import { DlazdiceKampane } from "./kampane";
 import { NadpisSekce } from "./nadpisy";
 import { PruhOverujeme } from "./overujeme";
 import { PocitadlaEvropa, type PolozkaPoctu } from "./pocitadla-zive";
-import { NovaZjisteni } from "./nova-zjisteni";
 import { Odznak, RadekSeznamu, TeckaZavaznosti, Tlacitko } from "./ui";
 import { PavucinaHrozeb } from "./pavucina";
 import { PasZemi } from "./pas-zemi";
@@ -84,10 +84,17 @@ const IKONY_PRAVNI: Record<string, NazevIkony> = {
 
 interface Dlazdice {
   klic: string; nazev: string; ikona: NazevIkony; ton: Ton; stav: string;
+  /** Původní položka a skupina — z nich se skládá rozbalený detail. */
+  zdrojovaPolozka: PravniPolozka | NatoPolozka | ProvozniPolozka;
+  skupina: "Právní stav" | "NATO" | "Běžný život";
+  coByZmenilo?: string[];
   /** Čas, který se u položky ukazuje — věcné ověření, nebo jen poslední kontrola. */
   cas: string | null;
   popisekCasu: "ověřeno" | "kontrolováno" | "bez kontroly";
+  /** Co položka znamená. Stálé, nemění se podle běhu sběru. */
   vysvetleni: string;
+  /** Co plyne z POSLEDNÍ kontroly. Mění se každý běh. */
+  stavVysvetleni: string;
 }
 
 function dlazdicePravni(p: PravniPolozka): Dlazdice {
@@ -95,7 +102,8 @@ function dlazdicePravni(p: PravniPolozka): Dlazdice {
   return {
     klic: `p-${p.klic}`, nazev: KRATCE_PRAVNI[p.klic] ?? p.nazev, ikona: IKONY_PRAVNI[p.klic] ?? "dokument",
     ton: st.ton, stav: st.slovo, cas: st.cas, popisekCasu: st.popisekCasu,
-    vysvetleni: `${st.vysvetleni} ${p.vysvetleni}`,
+    vysvetleni: p.vysvetleni, stavVysvetleni: st.vysvetleni,
+    zdrojovaPolozka: p, skupina: "Právní stav",
   };
 }
 
@@ -108,7 +116,8 @@ function dlazdiceNato(p: NatoPolozka): Dlazdice {
     ton: kridlo ? "pozor" : st.ton,
     stav: kridlo ? "posíleno" : st.slovo,
     cas: st.cas, popisekCasu: st.popisekCasu,
-    vysvetleni: `${st.vysvetleni} ${p.vysvetleni}`,
+    vysvetleni: p.vysvetleni, stavVysvetleni: st.vysvetleni,
+    zdrojovaPolozka: p, skupina: "NATO",
   };
 }
 
@@ -117,7 +126,8 @@ function dlazdiceProvoz(p: ProvozniPolozka): Dlazdice {
   const d: Dlazdice = {
     klic: `v-${p.klic}`, nazev: p.nazev, ikona: (p.ikona as NazevIkony) || "dokument",
     ton: st.ton, stav: st.slovo, cas: st.cas, popisekCasu: st.popisekCasu,
-    vysvetleni: `${st.vysvetleni} ${p.detail}`,
+    vysvetleni: p.detail, stavVysvetleni: st.vysvetleni,
+    zdrojovaPolozka: p, skupina: "Běžný život", coByZmenilo: p.coByZmenilo,
   };
 
   /*
@@ -177,17 +187,28 @@ function RadekStavu({ d, casSkupiny }: { d: Dlazdice; casSkupiny: string | null 
   const vlastniCas = d.cas !== casSkupiny;
   const zvyraznit = d.ton === "plati" || d.ton === "pozor";
   return (
-    <li className={`border-b border-linka2 ${zvyraznit ? t.dlazdice : ""}`}>
-      <Napoveda cele popis={<span className="block"><b className="font-semibold">{d.nazev}</b> — {d.stav}. {d.vysvetleni}</span>}>
-        <span className="flex min-h-[54px] w-full items-center gap-2.5 px-3 py-2 text-left">
+    /*
+      Rozbalený řádek zabere celou šířku panelu. V půlce dvousloupcové mřížky
+      by detail padal do sloupce širokého pár slov a četl by se po kouskách.
+    */
+    <li className={`border-b border-linka2 has-[details[open]]:col-span-full ${zvyraznit ? t.dlazdice : ""}`}>
+      {/*
+        Rozkliknutí místo bubliny při najetí myší. Podrobnosti se tak dají
+        otevřít dotykem i klávesnicí a zůstanou otevřené; z nápovědy na hover
+        byla informace, ke které se na telefonu nikdo nedostal.
+      */}
+      <details className="group">
+        <summary className="flex min-h-[54px] w-full cursor-pointer list-none items-center gap-2.5 px-3 py-2 text-left hover:bg-plocha2">
           <Ikona nazev={d.ikona} velikost={15} tah={1.8} trida="shrink-0 text-tlum2" />
           <span className="min-w-0 flex-1">
-            <span className="block truncate text-[13px] leading-tight text-tlum">{d.nazev}</span>
-            <span className={`block text-[13.5px] font-semibold leading-tight ${t.slovo}`}>{d.stav}</span>
+            <span className="block truncate text-[13.5px] leading-tight text-tlum">{d.nazev}</span>
+            <span className={`block text-[15px] font-bold leading-tight ${t.slovo}`}>{d.stav}</span>
           </span>
           {vlastniCas && <Stari cas={d.cas} popisek={d.popisekCasu} />}
-        </span>
-      </Napoveda>
+          <Ikona nazev="dolu" velikost={13} tah={2} trida="shrink-0 text-tlum2 transition-transform group-open:rotate-180" />
+        </summary>
+        <StavDetail polozka={d.zdrojovaPolozka} skupina={d.skupina} vysvetleni={d.vysvetleni} stavVysvetleni={d.stavVysvetleni} coByZmenilo={d.coByZmenilo} />
+      </details>
     </li>
   );
 }
@@ -288,7 +309,16 @@ export function Dashboard({
   const maxZeme = Math.max(1, ...zeme.map((z) => z.pripady));
   const puv = podlePuvodce(letos);
   const maxPuv = Math.max(1, ...puv.skupiny.map((s) => s.pocet));
-  const posledni = posledniZmeny(6, vse);
+  /*
+    Co je nového = nové záznamy i posuny ve vyšetřování starých případů,
+    v jednom chronologickém seznamu. Štítek u řádku říká, o co jde.
+  */
+  const zjisteni = novaZjisteni(vse, 8);
+  const stitkyNovinek = new Map(zjisteni.map((z) => [z.zaznam.id, z.duvod]));
+  const coJeNoveho = [...posledniZmeny(8, vse), ...zjisteni.map((z) => z.zaznam)]
+    .filter((z, i, pole) => pole.findIndex((x) => x.id === z.id) === i)
+    .sort((a, b) => kdyZjisteno(b).localeCompare(kdyZjisteno(a)))
+    .slice(0, 7);
   const stariCelkem = cerstvost(overeno);
 
   const crHodnota = platiCr.length ? platiCr.map((p) => KRATCE_PRAVNI[p.klic] ?? p.nazev).join(", ") : naruseno.length ? "Narušeno" : sledujeme.length ? "Sledujeme" : "Bez omezení";
@@ -377,14 +407,24 @@ export function Dashboard({
           <CenaPaliva />
         </section>
 
-        <section aria-label={t("Poslední události")} className="overflow-hidden rounded-[22px] border border-linka2 bg-plocha">
-          <div className="flex items-center justify-between border-b border-linka2 px-4 py-2">
-            <span className="stitek">{t("Poslední události")}</span>
+        {/*
+          Jeden seznam „Co je nového", ne dvě sekce vedle sebe.
+
+          Dřív stály na úvodu zvlášť „Poslední události" a zvlášť „Nová
+          zjištění". Čtenář tím dostal dvakrát tutéž otázku — co je nového —
+          rozdělenou podle toho, jestli jde o novou událost, nebo o posun ve
+          vyšetřování staré. To je naše vnitřní rozlišení, ne jeho.
+
+          Teď je to jeden chronologický seznam a typ nese štítek u řádku.
+          Kdo chce jen posuny ve vyšetřování, má vedle nadpisu filtr.
+        */}
+        <section aria-label={t("Co je nového")} className="overflow-hidden rounded-[22px] border border-linka2 bg-plocha">
+          <div className="flex items-center justify-between gap-2 border-b border-linka2 px-4 py-2">
+            <span className="stitek">{t("Co je nového")}</span>
             <Tlacitko kam="/udalosti/" varianta="tichy" velikost="s" ikonaVpravo="nahoru" trida="[&>svg:last-child]:rotate-90">{t("všechny")}</Tlacitko>
           </div>
-          {/* Týž řádek jako jinde na webu, jen v husté variantě. */}
           <ol className="divide-y divide-linka2">
-            {posledni.map((z) => (
+            {coJeNoveho.map((z) => (
               <RadekSeznamu
                 key={z.id}
                 hustota="husta"
@@ -396,22 +436,18 @@ export function Dashboard({
                   zeme: z.zeme,
                   cerstvost: kdyZjisteno(z),
                   titulek: z.kratkyTitulek || z.titulek,
+                  // Štítek říká, jestli je to nová událost, nebo posun ve vyšetřování staré.
+                  meta: stitkyNovinek.has(z.id) ? [stitkyNovinek.get(z.id)] : undefined,
                 }}
               />
             ))}
           </ol>
+          <div className="border-t border-linka2 px-4 py-2">
+            <Tlacitko kam="/udalosti/?overeni=potvrzeny-pachatel" varianta="tichy" velikost="s">
+              {t("jen posuny ve vyšetřování")}
+            </Tlacitko>
+          </div>
         </section>
-      </div>
-
-      {/* 2b — posuny ve vyšetřování starších případů */}
-      <div className="nalet mt-14 border-t border-linka pt-12 sm:mt-20 sm:pt-14">
-        <NadpisSekce
-          stitek={t("Nová zjištění")}
-          nadpis={t("Co se zjistilo o tom, co se stalo dřív")}
-          popis={t("Obvinění, rozsudky, potvrzený pachatel. Ne nové události — posun ve vyšetřování těch starých.")}
-          akce={<Tlacitko kam="/udalosti/?overeni=potvrzeny-pachatel" varianta="obrys" velikost="s" ikonaVpravo="nahoru" trida="[&>svg:last-child]:rotate-90">{t("všechna zjištění")}</Tlacitko>}
-        />
-        <NovaZjisteni polozky={novaZjisteni(vse, 6)} />
       </div>
 
       {/* 2b2 — manipulační kampaně: operace, ne události */}
@@ -556,7 +592,6 @@ export function Dashboard({
           </span>
         </div>
       </div>
-      <p className="mt-8 text-[12px] text-tlum2">{t("Není to úřední zdroj ani varovný systém. V nouzi 112. Najeďte na dlaždici pro vysvětlení; každé číslo vede na svůj seznam.")}</p>
     </div>
     </>
   );

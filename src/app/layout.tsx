@@ -5,7 +5,7 @@ import { Navigace } from "@/components/navigace";
 import { PostranniPanel } from "@/components/postranni-panel";
 import { RegistraceSW } from "@/components/pwa";
 import { Paticka } from "@/components/paticka";
-import { UkazkaPruh } from "@/components/pruhy";
+import { PruhPuvodu, UkazkaPruh } from "@/components/pruhy";
 import { Znacka } from "@/components/znacka";
 import { SKRIPT_POHYBU } from "@/components/pohyb";
 import { WEB } from "@/config/web";
@@ -87,6 +87,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           Přeskočit na obsah
         </a>
         <Navigace />
+        <PruhPuvodu />
         <UkazkaPruh />
         <main id="obsah" className="pb-[calc(60px+env(safe-area-inset-bottom))] md:pb-0">{children}</main>
         <Paticka />

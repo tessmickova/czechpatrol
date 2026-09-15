@@ -225,8 +225,13 @@ body {
   background-attachment: fixed;
   color: var(--color-inkoust);
   font-family: var(--font-sans);
-  font-size: 16px;
-  line-height: 1.5;
+  /*
+    Základní text 17 px a řádkování 1,6. Šestnáct s 1,5 bylo na hranici
+    čitelnosti pro člověka, který čte ve stresu nebo unavený; o pixel víc
+    a širší proklad je levnější než jakékoli vysvětlování.
+  */
+  font-size: 17px;
+  line-height: 1.6;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
 }
@@ -239,13 +244,18 @@ body {
 }
 
 /* Popisky, kódy sekcí. Mono s prostrkáním, jediná kapitálková věc na webu. */
+/*
+  Štítek sekce. Neproporcionální písmo velkými písmeny se čte pomaleji, proto
+  je tu jen na krátká návěští — nikdy ne na větu. Váha 600 místo 500: ve
+  světlém režimu bylo prostrkané mono při 500 příliš slabé.
+*/
 .stitek {
   font-family: var(--font-mono);
   font-size: 12px;
   line-height: 1.2;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.06em;
   text-transform: uppercase;
-  font-weight: 500;
+  font-weight: 600;
   color: var(--color-tlum2);
 }
 .stitek-tmavy {
@@ -292,12 +302,24 @@ body {
 /* Vodicí věta pod nadpisem: větší než běžný text, v barvě textu, ne šedá. */
 .uvodni-veta {
   font-size: clamp(17px, 1.35vw, 20px);
-  line-height: 1.55;
+  line-height: 1.6;
   color: var(--color-inkoust);
-  opacity: 0.88;
-  max-width: 44ch;
+  opacity: 0.9;
+  max-width: 42ch;
   text-wrap: pretty;
 }
+
+/*
+  Strop délky řádku pro běžné odstavce.
+
+  Delší řádek než zhruba sedmdesát znaků se hůř sleduje a oko ztrácí návaznost
+  — u člověka, který čte ve stresu, o to dřív. Platí na odstavce a odrážky,
+  ne na tabulky a seznamy, kde je šířka daná obsahem.
+*/
+p, li {
+  max-width: 72ch;
+}
+.bez-stropu, .bez-stropu p, .bez-stropu li { max-width: none; }
 /* Štítek nad nadpisem nese barvu značky — je to část identity, ne popisek. */
 .stitek-znacky {
   font-family: var(--font-mono);

@@ -2,7 +2,7 @@
 import fs from "node:fs";
 import path from "node:path";
 import { describe, expect, it } from "vitest";
-import { klicovaVeta, legendaTecek, pocetZdroju, pruhTecek, PUVODCI, radekPokryti, rozdelZpravu, sestavPalivo, sestavSouhrn, sestavTest, sestavZdroje, sestavZmenuStavu, sestavZpravu, vyberNove, vyberPalivo, vyberZmenyStavu, zahlavi } from "../nastroje/rozhlas.mjs";
+import { klicovaVeta, legendaTecek, pocetZdroju, pruhTecek, PUVODCI, radekPokryti, jeArchivni, radekData, rozdelZpravu, sestavPalivo, sestavSouhrn, sestavTest, sestavZdroje, sestavZmenuStavu, sestavZpravu, vyberNove, vyberPalivo, vyberZmenyStavu, zahlavi } from "../nastroje/rozhlas.mjs";
 import { UROVNE, zDeseti } from "../src/lib/skala";
 import { PUVODCI as PUVODCI_WEB } from "../src/lib/kategorie";
 import type { Uroven } from "../src/lib/typy";
@@ -18,8 +18,8 @@ describe("rozhlas", () => {
   it("zpráva má titulek, závažnost i jistotu zvlášť, odkaz na celý záznam a únik HTML", () => {
     const z = sestavZpravu(zaznam({}));
     expect(z).toContain("🟠 Závažnost: 7 z 10 · vysoká\n<b>Titulek &lt;b&gt;</b>");
-    expect(z).toContain("Jistota: vysoká");
-    expect(z).toContain("Pachatel: neznámý");
+    expect(z).toContain("Jistota informace: vysoká");
+    expect(z).toContain("Původce: neznámý");
     expect(z).toContain("https://czechpatrol.pages.dev/incident/x/");
   });
   it("okamžitě jdou jen vážné případy a opatření, zbytek do souhrnu; každý záznam jednou", () => {
@@ -98,7 +98,8 @@ describe("rozhlas", () => {
     const radky = z.split("\n");
     expect(radky[0]).toBe("🟠 Závažnost: 7 z 10 · vysoká");
     expect(radky[1]).toBe("<b>Krátce</b>");
-    expect(radky[2]).toBe("Německo · případ · 4. 9. 2026");
+    // Datum události, ne datum zápisu. Rozdíl tří dnů je běžná prodleva, tak se píše jedno.
+    expect(radky[2]).toBe("Německo · případ · 1. 9. 2026");
     expect(z).toContain("První fakt.");
     expect(z).toContain("Nepotvrzeno: Nevíme kdo.");
     // Patička dělá ze zprávy citovatelný dokument.
@@ -359,5 +360,67 @@ describe("slovníky se nesmějí rozejít", () => {
     // rozhlas.mjs je prostý ES modul bez typů a číselník má vlastní kopii.
     // Kdyby se rozešly, kanál by psal o jiném původci než web.
     expect(PUVODCI).toEqual(PUVODCI_WEB);
+  });
+});
+
+describe("stará událost se nesmí tvářit jako nová", () => {
+  const stary = {
+    id: "i-archiv", slug: "archiv", titulek: "Sabotáž z roku 2024", kratkyTitulek: "Sabotáž 2024",
+    zeme: "Polsko", kodZeme: "PL", kategorie: ["sabotaz"],
+    datumUdalosti: "2024-05-10T00:00:00Z",
+    // Do přehledu ho doplňujeme teprve teď — datum zjištění je dnešní.
+    datumZjisteni: "2026-09-15T00:00:00Z", aktualizovano: "2026-09-15T00:00:00Z",
+    zavaznost: "O2", jistota: "vysoka", stav: "uzavreno", atribuce: "oficialni",
+    puvodce: "rusko", druh: "pripad", fakta: ["Něco se stalo."], neznameho: [], vyznam: "", zdroje: [],
+    historie: [],
+  };
+  const ted = Date.parse("2026-09-15T12:00:00Z");
+
+  it("pozná archivní záznam podle data události, ne podle data zápisu", () => {
+    expect(jeArchivni(stary, ted)).toBe(true);
+    expect(jeArchivni({ ...stary, datumUdalosti: "2026-09-14T00:00:00Z" }, ted)).toBe(false);
+  });
+
+  it("zpráva nese obě data, když se liší", () => {
+    const z = sestavZpravu(stary, {});
+    expect(z).toContain("stalo se");
+    expect(z).toContain("vyšlo najevo");
+    expect(z).toContain("10. 5. 2024");
+  });
+
+  it("zpráva o archivu to říká hned, ne až v odkazu", () => {
+    /*
+      Bez tohohle by „závažnost 8 z 10" u dvouleté události vypadala jako
+      hrozba, která probíhá právě teď. Přesně to vyvolá paniku.
+    */
+    const z = sestavZpravu(stary, {});
+    expect(z).toContain("ARCHIV");
+    expect(z).toContain("neděje se teď");
+  });
+
+  it("čerstvá událost žádné archivní označení nedostane", () => {
+    const novy = { ...stary, datumUdalosti: "2026-09-14T00:00:00Z", datumZjisteni: "2026-09-15T00:00:00Z" };
+    const z = sestavZpravu(novy, {});
+    expect(z).not.toContain("ARCHIV");
+    expect(z).not.toContain("vyšlo najevo");
+  });
+
+  it("archivní záznam se do kanálu neposílá, jen se zapamatuje", () => {
+    const stav = { zaznamy: {}, snimky: {}, palivo: {}, prvniBeh: "2026-09-01T00:00:00Z" };
+    const vybrane = vyberNove([{ ...stary, lidskyOvereno: true }], stav, { rezim: "okamzite", ted });
+    expect(vybrane).toHaveLength(0);
+    expect(stav.zaznamy["i-archiv"]?.ticho).toBe(true);
+  });
+
+  it("nové zjištění ke starému případu novinka je", () => {
+    // Úřední atribuce po dvou letech je aktuální zpráva, i když událost je stará.
+    const stav = {
+      zaznamy: { "i-archiv": { kdy: "2026-09-01T00:00:00Z", historie: 0 } },
+      snimky: {}, palivo: {}, prvniBeh: "2026-09-01T00:00:00Z",
+    };
+    const sNovym = { ...stary, lidskyOvereno: true, historie: [{ kdy: "2026-09-15T00:00:00Z", text: "Obžaloba podána.", novySignal: true }] };
+    const vybrane = vyberNove([sNovym], stav, { rezim: "okamzite", ted });
+    expect(vybrane).toHaveLength(1);
+    expect(vybrane[0].aktualizace).toBe(true);
   });
 });

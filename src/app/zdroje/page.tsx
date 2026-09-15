@@ -3,6 +3,7 @@ import { HlavickaStranky, Obsah } from "@/components/hlavicka";
 import { SeznamZdroju } from "@/components/zdroje";
 import { Karta } from "@/components/zaklad";
 import { vsechnyZdroje } from "@/lib/data";
+import { KontrolaPokryti } from "@/components/kontrola-pokryti";
 
 export const metadata: Metadata = {
   title: "Zdroje",
@@ -27,6 +28,9 @@ export default function Zdroje() {
         popis="Každé konkrétní tvrzení na webu má uvedený zdroj. Sociální sítě označujeme jako neověřené a samy o sobě nikdy nezvyšují stupeň hrozby."
       />
       <Obsah>
+        <div className="mb-10">
+          <KontrolaPokryti />
+        </div>
         <div className="grid gap-5 lg:grid-cols-[minmax(0,1fr)_minmax(0,1.5fr)]">
           <Karta className="h-fit p-5 sm:p-6">
             <h2 className="podnadpis mb-4 text-[16px]">Pořadí důvěryhodnosti</h2>

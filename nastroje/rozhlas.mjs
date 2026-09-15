@@ -71,8 +71,55 @@ const SKUPINY_ZDROJU = [
   { typ: "social", nadpis: "Sociální sítě — samy o sobě nic nedokládají", slovo: "sítě" },
 ];
 
+/*
+  Stará událost se nesmí tvářit jako nová.
+
+  Zpráva dřív ukazovala jen datum ZJIŠTĚNÍ. Když se do archivu doplnil případ
+  z roku 2024, jeho datum zjištění bylo dnešní — a v kanálu to vypadalo, že
+  se to právě stalo. To je přesně ten druh zprávy, která vyvolá paniku kvůli
+  něčemu, co je dávno za námi.
+
+  Nově se datum události a datum zjištění píšou obě, kdykoli se liší o víc než
+  pár dní, a záznam starší než měsíc dostane v záhlaví slovo ARCHIV.
+*/
+
+/** Od jakého rozdílu se datum události a zjištění píšou obě. */
+export const DNI_ROZDILU = 3;
+/** Od jakého stáří události je záznam archivní. */
+export const DNI_ARCHIVU = 31;
+
 export const druh = (i) => i.druh ?? (i.puvodce ? "pripad" : "reakce");
 export const kdyZjisteno = (i) => i.datumZjisteni ?? i.datumUdalosti;
+
+/** Kolik dní uplynulo od události do teď. null = neznámé datum. */
+export function stariUdalostiDni(i, ted = Date.now()) {
+  const t = new Date(i.datumUdalosti ?? kdyZjisteno(i)).getTime();
+  if (Number.isNaN(t)) return null;
+  return Math.floor((ted - t) / 86_400_000);
+}
+
+/**
+ * Je to archivní záznam? Tedy událost, která se stala dávno, i když ji do
+ * přehledu doplňujeme teprve teď.
+ */
+export function jeArchivni(i, ted = Date.now()) {
+  if (i.historicky || i.archivniZaznam) return true;
+  const dni = stariUdalostiDni(i, ted);
+  return dni !== null && dni > DNI_ARCHIVU;
+}
+
+/**
+ * Řádek s datem. Píše obě data, když se liší — „stalo se" a „vyšlo najevo".
+ * Jedno datum stačí jen tehdy, když událost vyšla najevo prakticky hned.
+ */
+export function radekData(i) {
+  const udalost = i.datumUdalosti;
+  const zjisteno = kdyZjisteno(i);
+  if (!udalost || udalost.slice(0, 10) === zjisteno.slice(0, 10)) return datumCz(zjisteno);
+  const rozdil = Math.abs(new Date(zjisteno).getTime() - new Date(udalost).getTime()) / 86_400_000;
+  if (rozdil <= DNI_ROZDILU) return datumCz(udalost);
+  return `stalo se ${datumCz(udalost)} · vyšlo najevo ${datumCz(zjisteno)}`;
+}
 const vazne = (i) => /^[OR]/.test(i.zavaznost);
 const esc = (s) => String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
 
@@ -91,12 +138,18 @@ export function tecka(i) {
  * úroveň z webu, ne pravděpodobnost. Záznamy bez závažnosti (opatření,
  * prohlášení, aktualizace) mají místo čísla slovo, čím jsou.
  */
-export function zahlavi(i) {
+export function zahlavi(i, ted = Date.now()) {
   const d = druh(i);
-  if (d !== "pripad") return `${tecka(i)} ${DRUH_SLOVA[d]}`;
+  /*
+    Archiv se pozná hned v prvním řádku. Čtenář, který uvidí červený puntík
+    a vysokou závažnost, musí okamžitě vědět, jestli se to děje teď, nebo
+    jestli doplňujeme něco z loňska.
+  */
+  const archiv = jeArchivni(i, ted) ? "🗄 ARCHIV · " : "";
+  if (d !== "pripad") return `${tecka(i)} ${archiv}${DRUH_SLOVA[d]}`;
   const cislo = Z_DESETI[i.zavaznost];
   const nazev = NAZVY_UROVNI[i.zavaznost] ?? i.zavaznost;
-  return `${tecka(i)} Závažnost: ${cislo ?? "?"} z 10 · ${nazev.toLowerCase()}`;
+  return `${tecka(i)} ${archiv}Závažnost: ${cislo ?? "?"} z 10 · ${nazev.toLowerCase()}`;
 }
 
 export function datumCz(iso) {
@@ -280,22 +333,33 @@ export function sestavZpravu(i, { aktualizace = false, souhrn = false } = {}) {
     zahlavi(i),
     `<b>${esc(zkrat(i.kratkyTitulek || i.titulek, 90))}</b>`,
     // Druh se opakuje jen u případů — u ostatních ho už nese záhlaví.
-    `${esc(kde)} · ${d === "pripad" ? `${DRUHY[d]} · ` : ""}${datumCz(kdyZjisteno(i))}${aktualizace ? " · nové zjištění" : ""}`,
+    `${esc(kde)} · ${d === "pripad" ? `${DRUHY[d]} · ` : ""}${esc(radekData(i))}${aktualizace ? " · nové zjištění" : ""}`,
   ];
-  const jistota = `Jistota: ${JISTOTY[i.jistota] ?? i.jistota}`;
+  const jistota = `Jistota informace: ${JISTOTY[i.jistota] ?? i.jistota}`;
   const potvrzen = i.atribuce === "oficialni" || i.atribuce === "domaci";
   const pachatel = d === "pripad"
-    ? `Pachatel: ${PUVODCI[i.puvodce ?? "neznamy"]}${i.puvodce && i.puvodce !== "neznamy" && !potvrzen ? " (nepotvrzeno)" : ""}`
+    ? `Původce: ${PUVODCI[i.puvodce ?? "neznamy"]}${i.puvodce && i.puvodce !== "neznamy" && !potvrzen ? " — dosud nepotvrzeno" : ""}`
     : null;
 
   if (souhrn) {
     const { celkem, uredni } = pocetZdroju(i);
     radky.push(
       esc(zkrat(i.titulek, 200)),
+      jeArchivni(i) ? "Archivní záznam — událost se nestala teď." : null,
       [jistota, pachatel, celkem ? `Zdroje: ${celkem} (úřady ${uredni})` : null].filter(Boolean).join(" · "),
       odkaz,
     );
-    return radky.join("\n");
+    return radky.filter((r) => r !== null).join("\n");
+  }
+
+  /*
+    U archivního záznamu jde vysvětlení před klíčovou větu. Bez něj by
+    „závažnost 8 z 10" u dvouleté události působila jako aktuální hrozba.
+  */
+  if (jeArchivni(i)) {
+    const dni = stariUdalostiDni(i);
+    const kdy = dni !== null && dni > 365 ? `před ${Math.round(dni / 365)} lety` : `před ${Math.round((dni ?? 0) / 30)} měsíci`;
+    radky.push("", `<b>Archivní záznam: událost se stala ${esc(kdy)}. Doplňujeme ji do přehledu, neděje se teď.</b>`);
   }
 
   radky.push("", `<b>${esc(klicovaVeta(i))}</b>`);
@@ -477,8 +541,16 @@ export function vyberNove(zaznamy, stav, { rezim, ted = Date.now() }) {
     const historie = i.historie?.length ?? 0;
     const z = stav.zaznamy[i.id];
     const zjisteno = new Date(kdyZjisteno(i)).getTime();
-    // Zpětně doplněná osa a staré události nejsou novinka: jen se zapamatují, aby kanál nezaplavil archiv.
-    if (!z && (i.historicky || zjisteno < hraniceStari || (prvni && zjisteno < hranicePrvni))) {
+    /*
+      Zpětně doplněná osa a staré události nejsou novinka: jen se zapamatují,
+      aby kanál nezaplavil archiv. Rozhoduje stáří UDÁLOSTI, ne datum, kdy
+      jsme ji zapsali — jinak by případ z loňska odešel jako čerstvá zpráva
+      jen proto, že jsme ho doplnili dnes.
+
+      Nové zjištění k takovému případu novinka je; přijde příště jako
+      aktualizace, protože záznam už budeme mít zapamatovaný.
+    */
+    if (!z && (jeArchivni(i, ted) || zjisteno < hraniceStari || (prvni && zjisteno < hranicePrvni))) {
       stav.zaznamy[i.id] = { kdy: new Date(ted).toISOString(), historie, ticho: true };
       continue;
     }
