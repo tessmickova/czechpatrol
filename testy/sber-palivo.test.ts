@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { druhZRadku, isoTyden, naCislo, naDatum, rozdelRadek, zCsv } from "../sber/palivo";
+import { druhZRadku, isoTyden, naCislo, naDatum, odkazyZeZaznamu, rozdelRadek, zCsv } from "../sber/palivo";
 
 /*
   Čtení úřední datové sady s cenami pohonných hmot.
@@ -120,5 +120,39 @@ describe("čtení sady", () => {
     const v = zCsv(anglicky);
     expect(v.chyba).toBeNull();
     expect(v.rada[0].nafta).toBe(38.79);
+  });
+});
+
+describe("odkazy ze záznamu sady v katalogu", () => {
+  it("z JSON-LD vytáhne soubor ke stažení a dá ho před ostatní odkazy", () => {
+    /*
+      Tvar podle otevřené formální normy DCAT-AP-CZ, kterou ČSÚ používá.
+      Klíče jsou české; na jejich přesné znění se ale nespoléháme, proto
+      test hlídá jen pořadí: soubor ke stažení musí být první.
+    */
+    const zaznam = JSON.stringify({
+      "@context": "https://ofn.gov.cz/dcat-ap-cz.../kontexty.jsonld",
+      iri: "https://vdb.czso.cz/pll/eweb/lkod_ld.datova_sada?nazev=Ceny_PHM_tydny",
+      název: { cs: "Průměrné spotřebitelské ceny pohonných hmot" },
+      distribuce: [
+        {
+          "přístupové_URL": "https://vdb.czso.cz/pll/eweb/cenyphm.stranka",
+          "soubor_ke_stažení": "https://vdb.czso.cz/pll/eweb/ceny_phm_tydny.csv",
+        },
+      ],
+    });
+    const odkazy = odkazyZeZaznamu(zaznam);
+    expect(odkazy[0]).toBe("https://vdb.czso.cz/pll/eweb/ceny_phm_tydny.csv");
+    expect(odkazy).toContain("https://vdb.czso.cz/pll/eweb/cenyphm.stranka");
+  });
+
+  it("z HTML stránky seberou odkazy z textu", () => {
+    const html = '<a href="https://vdb.czso.cz/data.csv">data</a> <a href="https://priklad.invalid/x">x</a>';
+    expect(odkazyZeZaznamu(html)).toEqual(["https://vdb.czso.cz/data.csv", "https://priklad.invalid/x"]);
+  });
+
+  it("z prázdné odpovědi nevyrobí žádný odkaz", () => {
+    expect(odkazyZeZaznamu("")).toEqual([]);
+    expect(odkazyZeZaznamu("{}")).toEqual([]);
   });
 });

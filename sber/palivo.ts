@@ -235,6 +235,51 @@ export function zCsv(csv: string): Vysledek {
 /* ---------- běh ---------- */
 
 /**
+ * Vytáhne odkazy na soubory ze záznamu sady.
+ *
+ * Záznam je JSON-LD podle otevřené formální normy DCAT-AP-CZ (běh 02:11 UTC:
+ * @context míří na ofn.gov.cz/dcat-ap-cz-…/2024-05-28). Klíče v ní jsou české
+ * — „distribuce", „soubor_ke_stažení", „přístupové_URL" — ale na konkrétní
+ * názvy se nespoléháme: projde se celá struktura a odkazy pod klíčem, který
+ * mluví o stažení nebo přístupu, jdou dopředu. Kdyby záznam přišel jako HTML,
+ * seberou se odkazy z textu.
+ */
+export function odkazyZeZaznamu(telo: string): string[] {
+  /*
+    Tři přihrádky podle toho, co klíč slibuje. Soubor ke stažení je to, co
+    hledáme; přístupové URL bývá stránka o sadě, ne data; zbytek je kontext,
+    licence a podobně. Pořadí přihrádek je celá chytrost téhle funkce.
+  */
+  const souborove: string[] = [];
+  const pristupove: string[] = [];
+  const ostatni: string[] = [];
+  const znam = (a: string) => souborove.includes(a) || pristupove.includes(a) || ostatni.includes(a);
+  const pridej = (kam: string[], a: string) => {
+    const b = a.replace(/[.,;]+$/, "");
+    if (/^https?:\/\//.test(b) && !znam(b)) kam.push(b);
+  };
+
+  try {
+    const projdi = (uzel: unknown, klic: string) => {
+      if (typeof uzel === "string") {
+        const k = bezDiakritiky(klic);
+        pridej(/stazen|download|soubor/.test(k) ? souborove : /pristup|access/.test(k) ? pristupove : ostatni, uzel);
+      } else if (Array.isArray(uzel)) {
+        for (const x of uzel) projdi(x, klic);
+      } else if (uzel && typeof uzel === "object") {
+        for (const [k, v] of Object.entries(uzel)) projdi(v, k);
+      }
+    };
+    projdi(JSON.parse(telo), "");
+    return [...souborove, ...pristupove, ...ostatni];
+  } catch {
+    // Není to JSON — tedy nejspíš HTML stránka. Odkazy se vezmou z textu.
+    for (const m of telo.matchAll(/https?:\/\/[^"'\s<>\\)]+/g)) pridej(ostatni, m[0]);
+    return ostatni;
+  }
+}
+
+/**
  * Dohledá adresy datových souborů v katalogu ČSÚ.
  *
  * Katalog je seznam sad, ne dat — u každé sady vede odkaz na její záznam
@@ -298,17 +343,16 @@ export async function zKatalogu(): Promise<string[]> {
       se jen přeskočí a řekne se to.
     */
     const odkazy: string[] = [];
+    const navstivene: string[] = [KATALOG];
     let ukazkaStranky = "";
     for (const r of poradi.slice(0, 5)) {
       for (const kam of [r[iIri], r[iStranka]].filter(Boolean)) {
         try {
           const { stav: s2, telo: t2 } = await stahni(kam, 1);
+          navstivene.push(kam);
           if (s2 >= 400) continue;
           if (!ukazkaStranky) ukazkaStranky = t2.slice(0, 500).replace(/\s+/g, " ");
-          for (const m of t2.matchAll(/https?:\/\/[^"'\s<>\\)]+/g)) {
-            const a = m[0].replace(/[.,;]+$/, "");
-            if (!odkazy.includes(a)) odkazy.push(a);
-          }
+          for (const a of odkazyZeZaznamu(t2)) if (!odkazy.includes(a)) odkazy.push(a);
         } catch {
           // Jedna nedosažitelná stránka katalog neshazuje.
         }
@@ -325,6 +369,8 @@ export async function zKatalogu(): Promise<string[]> {
       return 3;
     };
     const adresy = odkazy
+      // Záznam sady odkazuje sám na sebe i na normy; ani jedno nejsou data.
+      .filter((a) => !navstivene.includes(a) && !/^https?:\/\/(ofn|data)\.gov\.cz/.test(a))
       .filter((a) => !/\.(pdf|xlsx?|docx?|zip|png|jpe?g|js|css)$/i.test(a) && !/dokumentace$/i.test(a))
       .sort((a, b) => skore(a) - skore(b));
 
