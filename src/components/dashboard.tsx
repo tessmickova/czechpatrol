@@ -332,6 +332,10 @@ export function Dashboard({
     .filter((z, i, pole) => pole.findIndex((x) => x.id === z.id) === i)
     .sort((a, b) => kdyZjisteno(b).localeCompare(kdyZjisteno(a)))
     .slice(0, 7);
+  /* Pět nejnovějších zachycených zpráv, které ještě nikdo neověřil. */
+  const cekajici = [...kandidati]
+    .sort((a, b) => (b.publikovano ?? b.zachyceno).localeCompare(a.publikovano ?? a.zachyceno))
+    .slice(0, 5);
   const stariCelkem = cerstvost(overeno, tedMs);
 
   const crHodnota = platiCr.length ? platiCr.map((p) => KRATCE_PRAVNI[p.klic] ?? p.nazev).join(", ") : naruseno.length ? "Narušeno" : sledujeme.length ? "Sledujeme" : "Bez omezení";
@@ -454,6 +458,41 @@ export function Dashboard({
               />
             ))}
           </ol>
+          {/*
+            Poslední zachycené zprávy, které ještě nikdo neověřil.
+
+            Bez nich vypadal web mrtvě pokaždé, když pár dní nikdo nic
+            nezveřejnil: sběr mezitím zachytil desítky zpráv, ale „Co je
+            nového" ukazovalo poslední ověřený záznam starý dva dny. Ptát se
+            „kde jsou nové zprávy" bylo na místě — byly ve frontě a nikde je
+            nebylo vidět.
+
+            Jsou zřetelně oddělené a označené. Do počtů nevstupují a odkaz
+            vede na zdroj, ne na náš záznam — protože žádný ještě není.
+          */}
+          {cekajici.length > 0 && (
+            <div className="border-t border-linka2 px-4 py-3">
+              <div className="stitek mb-2 flex items-center gap-1.5 text-akcent">
+                <Ikona nazev="otaznik" velikost={11} tah={2} />
+                Zachyceno, čeká na ověření
+              </div>
+              <ul className="space-y-1.5">
+                {cekajici.map((k) => (
+                  <li key={k.id} className="flex gap-2 text-male leading-snug">
+                    <span className="cislice shrink-0 text-mikro text-tlum2">{datumPraha(k.publikovano ?? k.zachyceno)}</span>
+                    <a href={k.zdroj.url} target="_blank" rel="noopener noreferrer" className="min-w-0 text-tlum hover:text-inkoust">
+                      {k.titulek}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+              <div className="mt-2">
+                <Tlacitko kam="/udalosti/?zalozka=cekajici" varianta="tichy" velikost="s">
+                  {t("všechno, co čeká na ověření")}
+                </Tlacitko>
+              </div>
+            </div>
+          )}
           <div className="border-t border-linka2 px-4 py-2">
             <Tlacitko kam="/udalosti/?overeni=potvrzeny-pachatel" varianta="tichy" velikost="s">
               {t("jen posuny ve vyšetřování")}

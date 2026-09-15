@@ -2,7 +2,7 @@
 import fs from "node:fs";
 import path from "node:path";
 import { describe, expect, it } from "vitest";
-import { klicovaVeta, legendaTecek, pocetZdroju, pruhTecek, PUVODCI, radekPokryti, jeArchivni, radekData, rozdelZpravu, sestavPalivo, sestavSouhrn, sestavSignal, sestavTest, sestavVystrahu, sestavZdroje, sestavZmenuStavu, sestavZpravu, vyberNove, vyberPalivo, vyberSignaly, vyberVystrahu, vyberZmenyStavu, zahlavi } from "../nastroje/rozhlas.mjs";
+import { klicovaVeta, legendaTecek, pocetZdroju, pruhTecek, PUVODCI, radekPokryti, jeArchivni, radekData, rozdelZpravu, sestavPalivo, sestavSouhrn, sestavPrehledZachycenych, sestavSignal, sestavTest, sestavVystrahu, sestavZdroje, sestavZmenuStavu, sestavZpravu, vyberDoPrehledu, vyberNove, vyberPalivo, vyberSignaly, vyberVystrahu, vyberZmenyStavu, zahlavi } from "../nastroje/rozhlas.mjs";
 import { UROVNE, zDeseti } from "../src/lib/skala";
 import { PUVODCI as PUVODCI_WEB } from "../src/lib/kategorie";
 import type { Uroven } from "../src/lib/typy";
@@ -514,5 +514,36 @@ describe("neověřené signály do kanálu", () => {
   it("víc než dva signály za běh neodejde", () => {
     const hodne = [1, 2, 3, 4, 5].map((i) => signal(`k-${i}`, 1));
     expect(vyberSignaly(hodne, { signaly: {} }).length).toBeLessThanOrEqual(2);
+  });
+});
+
+describe("denní přehled zachyceného", () => {
+  /*
+    Kanál dosud mlčel vždy, když pár dní nikdo nic nezveřejnil — přestože sběr
+    mezitím zachytil desítky zpráv. Zvenčí to vypadá jako klid, a to je to
+    poslední, co má bezpečnostní přehled předstírat.
+  */
+  const ted = new Date("2026-09-15T20:00:00Z").getTime();
+  const kandidat = (id: string, hodinZpet: number) => ({
+    id,
+    titulek: `Zpráva ${id}`,
+    zeme: "Nizozemsko",
+    zdroj: { nazev: "zdroj", url: `https://e.example/${id}` },
+    publikovano: new Date(ted - hodinZpet * 3_600_000).toISOString(),
+    zachyceno: new Date(ted - hodinZpet * 3_600_000).toISOString(),
+  });
+
+  it("bere jen zprávy za posledních 24 hodin a nejvýš pět", () => {
+    const vstup = [1, 2, 3, 4, 5, 6, 7].map((i) => kandidat(`n${i}`, i)).concat(kandidat("stara", 40));
+    const v = vyberDoPrehledu(vstup, { ted });
+    expect(v).toHaveLength(5);
+    expect(v.some((k: { id: string }) => k.id === "stara")).toBe(false);
+  });
+
+  it("přehled hned v úvodu říká, že to nikdo neověřil", () => {
+    const z = sestavPrehledZachycenych([kandidat("a", 2)], { ted });
+    expect(z).toContain("Co zachytil sběr");
+    expect(z).toContain("Nic z toho zatím neověřil člověk");
+    expect(z).toContain("https://e.example/a");
   });
 });

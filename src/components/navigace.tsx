@@ -36,9 +36,19 @@ export function Navigace() {
     // i kdyby se šířka webu někdy změnila.
     <header className="neni-tisk sticky top-0 z-50 pt-3">
       <div className="mx-auto max-w-[1280px] px-4 sm:px-6">
-      <div className="sklo-hlavicka flex min-h-[56px] flex-wrap items-center gap-x-4 gap-y-2 rounded-full px-3 py-2 sm:px-4">
-        <Odkaz href="/" className="mr-auto flex shrink-0 items-center" aria-label={`${WEB.nazev} — přehled`}>
-          <Logo velikost={34} pismo={19} tmave />
+      {/*
+        Jeden řádek, i na úzkém displeji.
+
+        Hlavička se dřív zalamovala: značka je s nápisem a štítkem BETA široká,
+        takže se přepínač jazyka a menu odsunuly na druhý řádek a z pilulky
+        byla vysoká deska s dírou uprostřed. Nezalamuje se (`flex-nowrap`)
+        a značka je na mobilu menší — víc než logo a dvě tlačítka se na
+        390 px stejně nevejde.
+      */}
+      <div className="sklo-hlavicka flex min-h-[56px] flex-nowrap items-center gap-x-2 rounded-full px-3 py-2 sm:gap-x-4 sm:px-4">
+        <Odkaz href="/" className="mr-auto flex min-w-0 shrink items-center" aria-label={`${WEB.nazev} — přehled`}>
+          <span className="sm:hidden"><Logo velikost={26} pismo={15} tmave /></span>
+          <span className="hidden sm:block"><Logo velikost={34} pismo={19} tmave /></span>
         </Odkaz>
 
         <nav aria-label={t("Hlavní")} className="hidden items-center gap-1 md:flex">
@@ -57,7 +67,7 @@ export function Navigace() {
           ))}
         </nav>
 
-        <div className="flex items-center gap-2">
+        <div className="flex shrink-0 items-center gap-1 sm:gap-2">
           <PrepinacJazyku />
           <Odkaz
             href="/podporit/"

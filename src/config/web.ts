@@ -57,7 +57,7 @@ export const DORUCOVANI = {
     bezi: true,
     nazev: "Telegram",
     /** Co do kanálu opravdu chodí. Nesmí slibovat víc, než workflow dělá. */
-    rozsah: "Mimořádná výstraha a vážné případy odcházejí hned. U pěti nejzávažnějších témat posíláme i neověřený signál — vždy označený, s odkazem na zdroj. Ostatní ověřené záznamy jednou denně v souhrnu.",
+    rozsah: "Mimořádná výstraha a vážné případy odcházejí hned. U pěti nejzávažnějších témat posíláme i neověřený signál — vždy označený, s odkazem na zdroj. Ostatní ověřené záznamy jednou denně v souhrnu; v den, kdy žádný není, přijde místo něj přehled toho, co sběr zachytil, a tipy k přípravě.",
     /** Podle .github/workflows/rozhlas.yml. Změna workflow = změna téhle věty. */
     kadence: "průběžně u vážných, denní souhrn v 19:00 (v zimě v 18:00)",
   },

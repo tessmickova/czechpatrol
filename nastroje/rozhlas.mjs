@@ -618,6 +618,42 @@ export function sestavSignal(k) {
 }
 
 /*
+  Denní přehled toho, co sběr zachytil.
+
+  Do kanálu dosud chodily jen zveřejněné záznamy — tedy to, co prošlo lidským
+  ověřením. Když pár dní nikdo nic nezveřejnil, kanál mlčel, přestože sběr
+  mezitím zachytil desítky zpráv. Zvenčí to vypadá jako klid, a to je ta
+  nejhorší věc, jakou může bezpečnostní přehled předstírat.
+
+  Přehled proto odchází jednou denně se souhrnem a jen tehdy, když ten den
+  neodešel žádný ověřený záznam. Je označený jako neověřený, každá položka má
+  odkaz na zdroj a je jich nejvýš pět.
+*/
+const MAX_V_PREHLEDU = 5;
+
+export function vyberDoPrehledu(kandidati, { ted = Date.now(), hodin = 24 } = {}) {
+  const od = ted - hodin * 3_600_000;
+  return (kandidati ?? [])
+    .filter((k) => new Date(k.publikovano ?? k.zachyceno).getTime() >= od)
+    .sort((a, b) => (b.publikovano ?? b.zachyceno).localeCompare(a.publikovano ?? a.zachyceno))
+    .slice(0, MAX_V_PREHLEDU);
+}
+
+export function sestavPrehledZachycenych(kandidati, { ted = Date.now() } = {}) {
+  const radky = [
+    "\u{1F4E1} <b>Co zachytil sběr za posledních 24 hodin</b>",
+    "",
+    "<b>Nic z toho zatím neověřil člověk.</b> Je to seznam zpráv, které prošly sítem a čekají na kontrolu — ne potvrzené případy. Do počtů na webu nevstupují.",
+    "",
+  ];
+  for (const k of kandidati) {
+    radky.push(`• <a href="${esc(k.zdroj.url)}">${esc(zkrat(k.titulek, 120))}</a>${k.zeme ? ` — ${esc(k.zeme)}` : ""}`);
+  }
+  radky.push("", `${WEB}/udalosti/?zalozka=cekajici`);
+  return radky.join("\n");
+}
+
+/*
   Tipy k přípravě.
 
   Do kanálu jdou stejně jako ostatní zprávy: jednou, s odkazem na zdroj.
@@ -661,12 +697,12 @@ function ctiPalivo() {
 }
 
 function ctiStav() {
-  if (!fs.existsSync(STAV)) return { zaznamy: {}, snimky: {}, palivo: {}, vystrahy: {}, signaly: {}, tipy: {}, prvniBeh: null };
+  if (!fs.existsSync(STAV)) return { zaznamy: {}, snimky: {}, palivo: {}, vystrahy: {}, signaly: {}, tipy: {}, prehledy: {}, prvniBeh: null };
   try {
     const s = JSON.parse(fs.readFileSync(STAV, "utf-8"));
     // Starší stav pole „palivo", „vystrahy" a „signaly" nemá; bez doplnění by první zápis spadl.
-    return { palivo: {}, vystrahy: {}, signaly: {}, tipy: {}, ...s };
-  } catch { return { zaznamy: {}, snimky: {}, palivo: {}, vystrahy: {}, signaly: {}, tipy: {}, prvniBeh: null }; }
+    return { palivo: {}, vystrahy: {}, signaly: {}, tipy: {}, prehledy: {}, ...s };
+  } catch { return { zaznamy: {}, snimky: {}, palivo: {}, vystrahy: {}, signaly: {}, tipy: {}, prehledy: {}, prvniBeh: null }; }
 }
 function zapisStav(s) {
   fs.mkdirSync(path.dirname(STAV), { recursive: true });
@@ -927,6 +963,22 @@ async function main() {
       }
       if (ok) { stav.zaznamy[i.id] = { kdy: new Date(ted).toISOString(), historie: i.historie?.length ?? 0, messageId: prvniId }; odeslano += dily.length; }
       else selhalo++;
+    }
+  }
+
+  /*
+    Denní přehled zachyceného. Až úplně nakonec a jen v souhrnném režimu:
+    když ten den odešel ověřený záznam, kanál má co říct a přehled by byl
+    šum navíc. Když neodešlo nic, je to jediná zpráva, která ten den přijde —
+    a ta má říct pravdu: sběr běží, tohle zachytil, nikdo to zatím neověřil.
+  */
+  const den = new Date(ted).toISOString().slice(0, 10);
+  if (rezim === "souhrn" && !prvniBeh && !(stav.prehledy ?? {})[den] && odeslano === 0) {
+    const zachycene = vyberDoPrehledu(ctiKandidaty(), { ted });
+    if (zachycene.length) {
+      const v = await posli(sestavPrehledZachycenych(zachycene, { ted }), { nahled: false });
+      if (v.ok) { stav.prehledy[den] = { kdy: new Date(ted).toISOString(), polozek: zachycene.length }; odeslano++; }
+      else { selhalo++; console.log(`[rozhlas] přehled neodešel: ${v.chyba}`); }
     }
   }
 
