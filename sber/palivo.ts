@@ -133,6 +133,22 @@ export function naCislo(hodnota: string): number | null {
   return Number.isFinite(n) ? n : null;
 }
 
+/**
+ * Datum neděle daného ISO týdne.
+ *
+ * Sada ČSÚ (vdb.czso.cz/pll/eweb/cenyphm.data) datum nemá — nese sloupce
+ * `rok` a `tyden`. Konec týdne se z nich odvodí: první ISO týden je ten,
+ * ve kterém leží 4. leden.
+ */
+export function konecTydne(rok: number, tyden: number): string | null {
+  if (!Number.isInteger(rok) || !Number.isInteger(tyden) || tyden < 1 || tyden > 53) return null;
+  const ctvrty = new Date(Date.UTC(rok, 0, 4));
+  const den = ctvrty.getUTCDay() || 7;
+  const pondeliPrvniho = new Date(ctvrty.getTime() - (den - 1) * 86_400_000);
+  const nedele = new Date(pondeliPrvniho.getTime() + ((tyden - 1) * 7 + 6) * 86_400_000);
+  return nedele.toISOString().slice(0, 10);
+}
+
 /** Týden podle ISO 8601 z data konce šetření, například 2026-W37. */
 export function isoTyden(datum: string): string {
   const d = new Date(`${datum}T00:00:00Z`);
@@ -184,7 +200,21 @@ export function zCsv(csv: string): Vysledek {
   const sloupecCeny = skoreCeny.indexOf(Math.max(...skoreCeny));
   const ukazka = `hlavička: ${hlavicka.slice(0, 20).join(" | ")}`;
 
-  if (skoreData[sloupecData] === 0) return { rada: [], chyba: `nenašel se sloupec s datem (${ukazka})`, prectenoRadku: 0 };
+  /*
+    Sada ČSÚ datum nemá — má `rok` a `tyden`. Když se sloupec s datem
+    nenajde, zkusíme tuhle dvojici. Poznává se podle názvu sloupce, ne podle
+    obsahu: čísla 1–53 se najdou i v kódech území a položek a zaměnit je za
+    týden by vyrobilo data, která nikdy nikdo neměřil.
+  */
+  const sloupecRoku = hlavicka.findIndex((h) => /^(rok|year)$/.test(h.toLowerCase()));
+  const sloupecTydne = hlavicka.findIndex((h) => /^(tyden|týden|week)$/.test(h.toLowerCase()));
+  const zTydne = skoreData[sloupecData] === 0 && sloupecRoku >= 0 && sloupecTydne >= 0;
+
+  if (skoreData[sloupecData] === 0 && !zTydne) {
+    // Ukázka řádku: bez ní se nedá poznat, jestli datum chybí, nebo ho jen neumíme přečíst.
+    const prvni = data[0]?.slice(0, 20).join(" | ") ?? "";
+    return { rada: [], chyba: `nenašel se sloupec s datem (${ukazka}; první řádek: ${prvni})`, prectenoRadku: 0 };
+  }
   if (skoreCeny[sloupecCeny] === 0) return { rada: [], chyba: `nenašel se sloupec s cenou (${ukazka})`, prectenoRadku: 0 };
 
   /*
@@ -204,7 +234,9 @@ export function zCsv(csv: string): Vysledek {
     if (!druh) continue;
     if (maCr && !/ceska republika/.test(bezDiakritiky(celyRadek))) continue;
 
-    const konec = naDatum(r[sloupecData] ?? "");
+    const konec = zTydne
+      ? konecTydne(Number(r[sloupecRoku]), Number(r[sloupecTydne]))
+      : naDatum(r[sloupecData] ?? "");
     const cena = naCislo(r[sloupecCeny] ?? "");
     if (!konec || cena === null) continue;
 

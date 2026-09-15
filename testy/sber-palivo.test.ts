@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { druhZRadku, isoTyden, naCislo, naDatum, odkazyZeZaznamu, rozdelRadek, zCsv } from "../sber/palivo";
+import { druhZRadku, isoTyden, konecTydne, naCislo, naDatum, odkazyZeZaznamu, rozdelRadek, zCsv } from "../sber/palivo";
 
 /*
   Čtení úřední datové sady s cenami pohonných hmot.
@@ -120,6 +120,53 @@ describe("čtení sady", () => {
     const v = zCsv(anglicky);
     expect(v.chyba).toBeNull();
     expect(v.rada[0].nafta).toBe(38.79);
+  });
+});
+
+describe("sada ČSÚ bez sloupce s datem", () => {
+  /*
+    Skutečný tvar sady vdb.czso.cz/pll/eweb/cenyphm.data (běh 02:16 UTC):
+    datum v ní není, jsou tam sloupce `rok` a `tyden`.
+  */
+  const CSV_TYDNY = [
+    "idhod;hodnota;ukazatel_kod;polozka_kod;obdobi;rok;tyden;uzemi_kod;ukazatel_txt;polozka_txt",
+    '1;38,79;1;1;37;2026;37;19;"Průměrná cena";"Motorová nafta"',
+    '2;35,20;1;2;37;2026;37;19;"Průměrná cena";"Benzin automobilový bezolovnatý 95 O"',
+    '3;36,99;1;1;36;2026;36;19;"Průměrná cena";"Motorová nafta"',
+  ].join("\n");
+
+  it("spočítá konec týdne z roku a čísla týdne", () => {
+    // ISO týden 37 roku 2026 končí v neděli.
+    expect(konecTydne(2026, 37)).toBe("2026-09-13");
+    expect(konecTydne(2026, 1)).toBe("2026-01-04");
+    // Nesmysly se nedopočítávají.
+    expect(konecTydne(2026, 0)).toBeNull();
+    expect(konecTydne(2026, 54)).toBeNull();
+    expect(konecTydne(NaN, 37)).toBeNull();
+  });
+
+  it("přečte sadu, která místo data nese rok a týden", () => {
+    const v = zCsv(CSV_TYDNY);
+    expect(v.chyba).toBeNull();
+    expect(v.rada).toHaveLength(2);
+    expect(v.rada[1]).toMatchObject({ konec: "2026-09-13", nafta: 38.79, benzin95: 35.2 });
+  });
+
+  it("čísla 1–53 v kódech se za týden nevydávají", () => {
+    /*
+      Kdyby se sloupec s týdnem hledal podle obsahu, vyhrál by kterýkoli
+      číselníkový kód — a z cen by vypadla data, která nikdo nikdy neměřil.
+      Bez sloupce jménem „tyden" se sada raději nepřečte.
+    */
+    const bezTydne = [
+      "hodnota;polozka_cis;uzemi_kod;polozka_txt",
+      '38,79;37;19;"Motorová nafta"',
+    ].join("\n");
+    const v = zCsv(bezTydne);
+    expect(v.rada).toHaveLength(0);
+    expect(v.chyba).toContain("nenašel se sloupec s datem");
+    // V důvodu je i ukázka řádku, aby šlo poznat, co vlastně přišlo.
+    expect(v.chyba).toContain("první řádek");
   });
 });
 

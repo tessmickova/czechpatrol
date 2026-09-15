@@ -7,8 +7,8 @@
     "primarni": true
   },
   "poznamka": "Řadu plní sběr běžící na GitHub Actions; v sandboxu rutiny jsou úřední domény nedostupné. Dokud řada není naplněná, na webu se o ceně nepíše nic — prázdná řada není nula.",
-  "chyba": "https://data.csu.gov.cz/api/dotaz/v1/data/sady/CENPHMTT01?format=csv: HTTP 400 | https://data.csu.gov.cz/data/csu/data/CENPHMTT01.csv: nenašel se sloupec s datem (hlavička: <!doctype html>) | https://data.csu.gov.cz/datastat/data/VYBER/CENPHMTT01?format=csv: nenašel se sloupec s datem (hlavička: <!doctype html>) | https://vdb.czso.cz/pll/eweb/cenyphm.data: nenašel se sloupec s datem (hlavička: idhod | hodnota | ukazatel_kod | polozka_cis | polozka_kod | obdobi | rok | tyden | uzemi_cis | uzemi_kod | ukazatel_txt | polozka_txt) | https://vdb.czso.cz/pll/eweb/lkod_ld.datova_sada?nazev=Ceny_PHM_t",
+  "chyba": null,
   "rada": [],
   "zprava": null,
-  "pokus": "2026-09-15T02:16:27.148Z"
+  "pokus": null
 }
