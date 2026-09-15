@@ -6,6 +6,7 @@ import { ZDROJE } from "./zdroje";
 import type { Nalez, VysledekZdroje } from "./typy";
 import { lidskaZmena } from "../src/lib/archiv-text";
 import { sbirejUdalosti } from "./udalosti";
+import { sbirejPalivo } from "./palivo";
 
 /**
  * Hodinový sběr.
@@ -163,6 +164,18 @@ async function main() {
     } catch (e) {
       console.log(`[sber] sběr událostí selhal, ostatní pokračuje: ${e instanceof Error ? e.message : e}`);
     }
+  }
+
+  /* ---------- ceny pohonných hmot ---------- */
+  /*
+    Vlastní blok, ne součást provozní položky: cena je změřená řada, kdežto
+    „dostupnost paliva" je stav ověřovaný proti úředním zdrojům. Kdyby se
+    stahování rozbilo, nesmí to zablokovat zbytek sběru — proto try.
+  */
+  try {
+    await sbirejPalivo();
+  } catch (e) {
+    console.log(`[sber] ceny paliv selhaly, ostatní pokračuje: ${e instanceof Error ? e.message : e}`);
   }
 
   /* ---------- archiv v čase ---------- */

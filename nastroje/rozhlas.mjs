@@ -409,9 +409,53 @@ export function sestavTest(ukazka) {
   return radky.join("\n");
 }
 
+/**
+ * Zpráva o skokové změně ceny pohonných hmot.
+ *
+ * Text skládá sběr (`src/lib/palivo.ts`) nad čerstvě staženou řadou ČSÚ —
+ * tady se jen obalí do tvaru kanálu. Je to schválně: „co je skok" se nesmí
+ * rozhodovat na dvou místech.
+ *
+ * Co v té zprávě nikdy nebude: že cena poroste a že je vhodné natankovat.
+ * Předpověď nemáme z čeho doložit a výzva k tankování by u čerpacích stanic
+ * způsobila přesně tu škodu, které se celý web vyhýbá.
+ */
+export function sestavPalivo(zprava) {
+  const [nadpis, ...zbytek] = zprava.text.split("\n");
+  return [
+    `\u26fd <b>${esc(nadpis)}</b>`,
+    ...zbytek.map((r) => (r ? esc(r) : "")),
+    "",
+    `${WEB}/#opatreni`,
+  ].join("\n");
+}
+
+/**
+ * Vybere zprávu o palivu, pokud je čím se pochlubit a ještě neodešla.
+ * Klíčem je týden šetření — týž týden se neoznamuje dvakrát, ani kdyby
+ * sběr mezitím řadu stáhl znovu.
+ */
+export function vyberPalivo(palivo, stav) {
+  const z = palivo?.zprava;
+  if (!z || !z.tyden || !z.text) return null;
+  if ((stav.palivo ?? {})[z.tyden]) return null;
+  return z;
+}
+
+/** Ceny paliv. Chybějící soubor není chyba — jen se o palivu nic neřekne. */
+function ctiPalivo() {
+  const soubor = path.join(koren, "data", "palivo.json");
+  if (!fs.existsSync(soubor)) return null;
+  try { return JSON.parse(fs.readFileSync(soubor, "utf-8")); } catch { return null; }
+}
+
 function ctiStav() {
-  if (!fs.existsSync(STAV)) return { zaznamy: {}, snimky: {}, prvniBeh: null };
-  try { return JSON.parse(fs.readFileSync(STAV, "utf-8")); } catch { return { zaznamy: {}, snimky: {}, prvniBeh: null }; }
+  if (!fs.existsSync(STAV)) return { zaznamy: {}, snimky: {}, palivo: {}, prvniBeh: null };
+  try {
+    const s = JSON.parse(fs.readFileSync(STAV, "utf-8"));
+    // Starší stav pole „palivo" nemá; bez doplnění by první zápis spadl.
+    return { palivo: {}, ...s };
+  } catch { return { zaznamy: {}, snimky: {}, palivo: {}, prvniBeh: null }; }
 }
 function zapisStav(s) {
   fs.mkdirSync(path.dirname(STAV), { recursive: true });
@@ -507,6 +551,25 @@ async function main() {
     if (prvniBeh) { stav.snimky[snimek.kdy] = { kdy: new Date(ted).toISOString(), ticho: true }; continue; }
     const v = await posli(sestavZmenuStavu(snimek, zmeny), { nahled: false });
     if (v.ok) { stav.snimky[snimek.kdy] = { kdy: new Date(ted).toISOString() }; odeslano++; } else { selhalo++; console.log(`[rozhlas] ${v.chyba}`); }
+  }
+
+  /*
+    1b. skokový pohyb ceny pohonných hmot.
+
+    Jde jen v okamžitém režimu a jen tehdy, když sběr skok opravdu naměřil.
+    Při prvním běhu se jen zapamatuje — jinak by kanál začal cenou, která
+    mohla vyskočit před týdnem a už dávno není novinka.
+  */
+  const palivo = ctiPalivo();
+  const skok = vyberPalivo(palivo, stav);
+  if (rezim === "okamzite" && skok) {
+    if (prvniBeh) {
+      stav.palivo[skok.tyden] = { kdy: new Date(ted).toISOString(), ticho: true };
+    } else {
+      const v = await posli(sestavPalivo(skok), { nahled: false });
+      if (v.ok) { stav.palivo[skok.tyden] = { kdy: new Date(ted).toISOString() }; odeslano++; }
+      else { selhalo++; console.log(`[rozhlas] ${v.chyba}`); }
+    }
   }
 
   // 2. záznamy

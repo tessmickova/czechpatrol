@@ -15,6 +15,7 @@ Jediný zdroj pravdy jsou soubory v `data/`. Web je statický export; každá zm
 | **Oprava** (`Oprava`) | `data/opravy.json` | veřejný zápis opravy | `datum` (zveřejnění opravy) |
 | **Snímek** (`Snimek`) | `data/historie.json` | stav webu v čase, zapisuje se jen při změně | `kdy` |
 | **Kampaň** (`Kampan`) | `data/kampane.json` | manipulační kampaň — koordinované šíření nepravdy | `odhaleno` |
+| **Ceny paliv** (`RadaCen`) | `data/palivo.json` | týdenní řada průměrných cen ČSÚ — měření, ne předpověď | `aktualizovano` (kdy se řadu podařilo stáhnout), `konec` u každého týdne |
 
 ### Druh záznamu (`druh`)
 

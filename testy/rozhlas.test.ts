@@ -2,7 +2,7 @@
 import fs from "node:fs";
 import path from "node:path";
 import { describe, expect, it } from "vitest";
-import { klicovaVeta, legendaTecek, pocetZdroju, pruhTecek, PUVODCI, radekPokryti, rozdelZpravu, sestavSouhrn, sestavTest, sestavZdroje, sestavZmenuStavu, sestavZpravu, vyberNove, vyberZmenyStavu, zahlavi } from "../nastroje/rozhlas.mjs";
+import { klicovaVeta, legendaTecek, pocetZdroju, pruhTecek, PUVODCI, radekPokryti, rozdelZpravu, sestavPalivo, sestavSouhrn, sestavTest, sestavZdroje, sestavZmenuStavu, sestavZpravu, vyberNove, vyberPalivo, vyberZmenyStavu, zahlavi } from "../nastroje/rozhlas.mjs";
 import { UROVNE, zDeseti } from "../src/lib/skala";
 import type { Uroven } from "../src/lib/typy";
 
@@ -304,5 +304,51 @@ describe("místo události se nesmí plést s významem pro Česko", () => {
   it("událost v ČR se pozná podle země, ne podle oblasti", () => {
     const z = sestavZpravu({ ...zaklad, zeme: "Česko", kodZeme: "CZ", kategorie: ["sabotaz"] }, {});
     expect(z).toContain("týká území České republiky");
+  });
+});
+
+describe("skokový pohyb ceny paliv", () => {
+  const zprava = {
+    tyden: "2026-W37",
+    text: [
+      "Skokový pohyb ceny pohonných hmot",
+      "",
+      "Nafta 38,79 Kč/l · za týden +2,10 Kč · nejvýš za 14 měsíců.",
+      "",
+      "Průměrné spotřebitelské ceny za týden do 7. 9. 2026 podle týdenního šetření Českého statistického úřadu.",
+      "Je to změřený údaj za uplynulý týden, ne předpověď. Kam ceny půjdou dál, nevíme a netvrdíme to.",
+    ].join("\n"),
+  };
+
+  it("zpráva nese změřená čísla a odkaz na web", () => {
+    const z = sestavPalivo(zprava);
+    expect(z).toContain("Nafta 38,79 Kč/l");
+    expect(z).toContain("za týden +2,10 Kč");
+    expect(z).toContain("czechpatrol");
+  });
+
+  it("zpráva nikdy neradí natankovat ani nevěští", () => {
+    /*
+      Tohle je ten nejdůležitější test v souboru. Zpráva jde tisícům lidí
+      najednou; věta „bude dráž, natankujte" by z kanálu udělala spouštěč
+      nájezdu na čerpací stanice. Doložit ji navíc nemáme čím.
+    */
+    const z = sestavPalivo(zprava);
+    expect(z).not.toMatch(/natankuj|předzásob|zásobte|bude dráž|poroste|zdraží|očekáv|dokud je čas/i);
+    // Slovo „předpověď" smí padnout jedině v popření; tvrdit se nesmí nikdy.
+    expect(z).not.toMatch(/(?<!ne )předpověď|předpovídáme/i);
+    expect(z).toContain("ne předpověď");
+  });
+
+  it("bez naměřeného skoku se neposílá nic", () => {
+    expect(vyberPalivo(null, { palivo: {} })).toBeNull();
+    expect(vyberPalivo({ zprava: null }, { palivo: {} })).toBeNull();
+    expect(vyberPalivo({ zprava: { tyden: "", text: "" } }, { palivo: {} })).toBeNull();
+  });
+
+  it("týž týden neodejde dvakrát", () => {
+    const stav = { palivo: { "2026-W37": { kdy: "2026-09-08T00:00:00Z" } } };
+    expect(vyberPalivo({ zprava }, stav)).toBeNull();
+    expect(vyberPalivo({ zprava }, { palivo: {} })).toEqual(zprava);
   });
 });

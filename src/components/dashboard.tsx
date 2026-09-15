@@ -4,6 +4,8 @@ import Link from "next/link";
 import { druh, kdyZjisteno, novaZjisteni, pachatelPotvrzen, podlePuvodce, podleZemi, posledniZmeny, pripady, uredniZdroj, vyber, type Zaznam } from "@/lib/agregace";
 import { cerstvost, datumCasPraha, datumPraha, stariSlovy } from "@/lib/cas";
 import type { CelkovyStav, HybridniTlak, Kampan, Kandidat, NatoPolozka, Nepotvrzene, Overovana, PravniPolozka, ProvozniPolozka, TydenniHodnoceni, Uroven, Watchlist } from "@/lib/typy";
+import { CenaPaliva } from "./palivo";
+import { stavPaliva, vetaOCene } from "@/lib/palivo";
 import { PASMA, UROVNE } from "@/lib/skala";
 import { cislem, porovnejSPrumerem, prumerNaOkno } from "@/lib/porovnani";
 import type { HlavniVeta } from "@/lib/veta";
@@ -92,12 +94,31 @@ function dlazdiceNato(p: NatoPolozka): Dlazdice {
   };
 }
 function dlazdiceProvoz(p: ProvozniPolozka): Dlazdice {
-  return {
+  const d: Dlazdice = {
     klic: `v-${p.klic}`, nazev: p.nazev, ikona: (p.ikona as NazevIkony) || "dokument",
     ton: p.stav === "bez-zdroje" ? "nevime" : p.stav === "bezny" ? "klid" : p.stav === "sledujeme" ? "pozor" : "plati",
     stav: p.stav === "bez-zdroje" ? "bez zdroje" : p.stav === "bezny" ? "běžný" : p.stav === "sledujeme" ? "sledujeme" : "NARUŠENO",
     overeno: p.overeno, vysvetleni: p.detail,
   };
+
+  /*
+    U paliva se na dlaždici píše změřená cena nafty místo slova „běžný".
+    Dostupnost a cena jsou dvě různé věci a čtenáře zajímají obě; dlaždice
+    přitom unese jen jeden údaj, a cena je ten, který se mění každý týden.
+    Skok v ceně zvedne tón na „pozor" — ale ani tady nepadne ani slovo o tom,
+    co bude dál. To by byla předpověď.
+  */
+  if (p.klic === "palivo" && p.stav !== "bez-zdroje") {
+    const nafta = stavPaliva("nafta");
+    const veta = vetaOCene(nafta);
+    if (nafta.cena !== null && veta) {
+      d.stav = `${nafta.cena.toFixed(2).replace(".", ",")} Kč/l`;
+      if (nafta.skok && p.stav === "bezny") d.ton = "pozor";
+      d.vysvetleni = `${veta} ${p.detail}`;
+    }
+  }
+
+  return d;
 }
 
 function Stari({ overeno }: { overeno: string | null }) {
@@ -296,6 +317,9 @@ export function Dashboard({
               })}
             </div>
           </details>
+
+          {/* Cena paliva: měřená řada ČSÚ. Nic o tom, kam ceny půjdou dál. */}
+          <CenaPaliva />
         </section>
 
         <section aria-label={t("Poslední události")} className="overflow-hidden rounded-[22px] border border-linka2 bg-plocha">

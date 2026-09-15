@@ -1,0 +1,13 @@
+{
+  "aktualizovano": null,
+  "zdroj": {
+    "nazev": "Český statistický úřad — průměrné spotřebitelské ceny pohonných hmot (týdenní šetření)",
+    "url": "https://data.csu.gov.cz/datastat/data/VYBER/CENPHMTT01",
+    "typ": "primary",
+    "primarni": true
+  },
+  "poznamka": "Řadu plní sběr běžící na GitHub Actions; v sandboxu rutiny jsou úřední domény nedostupné. Dokud řada není naplněná, na webu se o ceně nepíše nic — prázdná řada není nula.",
+  "chyba": null,
+  "rada": [],
+  "zprava": null
+}
