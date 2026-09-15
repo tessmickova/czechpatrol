@@ -7,6 +7,7 @@ import { RegistraceSW } from "@/components/pwa";
 import { Paticka } from "@/components/paticka";
 import { UkazkaPruh } from "@/components/pruhy";
 import { Znacka } from "@/components/znacka";
+import { SKRIPT_POHYBU } from "@/components/pohyb";
 import { WEB } from "@/config/web";
 import "./globals.css";
 
@@ -63,7 +64,11 @@ export const viewport: Viewport = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="cs" className={`${archivo.variable} ${mono.variable}`}>
+    <html lang="cs" className={`${archivo.variable} ${mono.variable}`} suppressHydrationWarning>
+      <head>
+        {/* Volba pohybu se nastaví před vykreslením, ať nic neproblikne. */}
+        <script dangerouslySetInnerHTML={{ __html: SKRIPT_POHYBU }} />
+      </head>
       <body className="min-h-dvh">
         {/*
           Pozadí, které se hýbe pomaleji než obsah. Je to jen ozdoba: leží pod

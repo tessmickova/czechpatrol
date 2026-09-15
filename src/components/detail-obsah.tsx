@@ -66,7 +66,16 @@ export function HlavickaDetailu({ i, velka = false }: { i: Incident; velka?: boo
         <span className="inline-flex items-center gap-1.5"><Vlajka kod={i.kodZeme} /> {i.kodZeme === "CZ" ? "Česko" : i.zeme}{i.region ? `, ${i.region}` : ""}</span>
         {i.historicky && <><span aria-hidden>·</span><span>doplněno zpětně</span></>}
       </div>
-      <h2 className={`mt-2 font-bold leading-tight text-inkoust ${velka ? "text-[26px] sm:text-[32px]" : "text-[20px]"}`}>{i.titulek}</h2>
+      {/*
+        Na samostatné stránce detailu je název události hlavním nadpisem
+        stránky, tedy H1. V seznamu, kde je hlavní nadpis jinde, je to H2.
+        Dřív to byl H2 vždycky a stránka detailu neměla H1 vůbec.
+      */}
+      {velka ? (
+        <h1 className="mt-2 text-[26px] font-bold leading-tight text-inkoust sm:text-[32px]">{i.titulek}</h1>
+      ) : (
+        <h2 className="mt-2 text-[20px] font-bold leading-tight text-inkoust">{i.titulek}</h2>
+      )}
       {rodic && (
         <p className="mt-2 text-[13.5px] text-tlum">
           Navazuje na případ <Link href={`/incident/${rodic.slug}/`} className="odkaz">{rodic.kratkyTitulek || rodic.titulek}</Link>.

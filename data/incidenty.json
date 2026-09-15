@@ -6841,23 +6841,23 @@
     ],
     "datumUdalosti": "2026-09-08T00:00:00Z",
     "datumZjisteni": "2026-09-09T00:00:00Z",
-    "aktualizovano": "2026-09-11T11:00:00Z",
+    "aktualizovano": "2026-09-15T06:10:00Z",
     "zavaznost": "O1",
     "jistota": "vysoka",
     "stav": "probiha",
-    "atribuce": "oficialni",
+    "atribuce": "vysetrovana",
     "puvodce": "rusko",
     "druh": "pripad",
     "fakta": [
       "Moldavsko v úterý 8. září 2026 odpoledne uzavřelo svůj vzdušný prostor poté, co zaznamenalo vniknutí dronu s proudovým pohonem.",
       "Uzavření zdrželo tři odlety z mezinárodního letiště v Kišiněvě, mezi nimi letadlo s ukrajinským prezidentem Volodymyrem Zelenským. Ten mířil na pohřeb norského krále Haralda V.",
       "Letadlo dostalo povolení ke vzletu až poté, co bylo zjištěno, že dron dopadl. Ten explodoval zhruba 160 kilometrů od letiště.",
-      "Moldavská policie našla úlomky dronu; pohonná jednotka a další znaky podle ní odpovídají typu Geran, který Rusko ve velkém používá ve válce proti Ukrajině.",
-      "Norská vláda incident veřejně odsoudila jako narušení moldavského vzdušného prostoru ruskými drony."
+      "Moldavská policie našla úlomky dronu; pohonná jednotka a další znaky podle ní odpovídají typu Geran, který Rusko ve velkém používá ve válce proti Ukrajině."
     ],
     "neznameho": [
+      "Kdo dron vypustil. Moldavská policie popsala úlomky jako odpovídající typu Geran; úřední připsání odpovědnosti konkrétnímu státu zatím nemáme doložené.",
       "Zda dron mířil na konkrétní cíl, nebo šlo o odchylku z kurzu.",
-      "Jak blízko letadla se dron ve skutečnosti dostal. Norský premiér mluvil o tom, že letadlo bylo blízko zasažení; moldavské úřady tuhle formulaci nepoužily."
+      "Jak blízko letadla se dron ve skutečnosti dostal. Norský premiér podle zpravodajství mluvil o tom, že letadlo bylo blízko zasažení; moldavské úřady tuhle formulaci nepoužily."
     ],
     "vyznam": "Narušení vzdušného prostoru státu mimo NATO, které na několik hodin zastavilo civilní provoz a dotklo se cesty hlavy státu. Tohle je hodnocení projektu, ne doložený fakt.",
     "eskalacniSpousteče": [
@@ -6868,14 +6868,6 @@
       "Doložení, že šlo o ojedinělou odchylku, a delší období bez dalšího narušení."
     ],
     "zdroje": [
-      {
-        "nazev": "Norská vláda — Norway condemns Russian drones violating Moldovan airspace",
-        "url": "https://www.regjeringen.no/no/whats-new/norway-condemn-russian-drones-violating-moldovan-airspace/id3087761",
-        "typ": "primary",
-        "publikovano": "2026-09-09T00:00:00Z",
-        "primarni": true,
-        "jazyk": "no"
-      },
       {
         "nazev": "BBC News — Russian drone incursion delays Zelensky flight",
         "url": "https://www.bbc.co.uk/news/articles/c86x49e379vo",
@@ -6907,6 +6899,11 @@
         "kdy": "2026-09-09T00:00:00Z",
         "text": "Incident z 8. září vyšel najevo až po vyjádření norského premiéra.",
         "novySignal": true
+      },
+      {
+        "kdy": "2026-09-15T06:10:00Z",
+        "text": "Oprava: jako úřední doklad byl u záznamu veden dokument norské vlády, který je ale z 13. 2. 2025 a tuhle událost nepopisuje. Zdroj byl odebrán, tvrzení o norském odsouzení staženo a připsání odpovědnosti sníženo z úředního na vyšetřované. Samotná událost zůstává doložena zpravodajstvím BBC, CNN a NBC.",
+        "novySignal": false
       }
     ],
     "novy": true,

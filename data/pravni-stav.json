@@ -1,5 +1,5 @@
 {
-  "overeno": "2026-09-15T06:31:32.570Z",
+  "overeno": null,
   "polozky": [
     {
       "klic": "stav-ohrozeni",
@@ -8,7 +8,7 @@
       "hodnota": "NE",
       "vysvetleni": "Vyhlašuje Parlament na návrh vlády, je-li bezprostředně ohrožena svrchovanost, územní celistvost nebo demokratické základy státu. Potřebuje souhlas nadpoloviční většiny všech poslanců i všech senátorů — nejde o rozhodnutí jednoho úřadu.",
       "pravniZaklad": "ústavní zákon č. 110/1998 Sb., o bezpečnosti ČR, čl. 7",
-      "overeno": "2026-09-15T06:31:32.570Z",
+      "overeno": null,
       "zdroje": [
         {
           "nazev": "Ministerstvo vnitra — Stav ohrožení státu",
@@ -26,7 +26,10 @@
           "primarni": true,
           "jazyk": "cs"
         }
-      ]
+      ],
+      "zkontrolovano": "2026-09-15T06:31:32.570Z",
+      "pokryti": "orientacni",
+      "pokrytiDuvod": "zdroje přečteny, ale žádný z nich není úplný seznam — zápor z nich neplyne"
     },
     {
       "klic": "valecny-stav",
@@ -35,7 +38,7 @@
       "hodnota": "NE",
       "vysvetleni": "Vyhlašuje Parlament, je-li ČR napadena nebo je-li třeba plnit mezinárodní smluvní závazky o společné obraně. Je to samostatný ústavní akt — nevzniká automaticky tím, že se zhorší bezpečnostní situace.",
       "pravniZaklad": "Ústava ČR, čl. 43",
-      "overeno": "2026-09-15T06:31:32.570Z",
+      "overeno": null,
       "zdroje": [
         {
           "nazev": "Ústava ČR (ústavní zákon č. 1/1993 Sb.)",
@@ -45,7 +48,10 @@
           "primarni": true,
           "jazyk": "cs"
         }
-      ]
+      ],
+      "zkontrolovano": "2026-09-15T06:31:32.570Z",
+      "pokryti": "orientacni",
+      "pokrytiDuvod": "zdroje přečteny, ale žádný z nich není úplný seznam — zápor z nich neplyne"
     },
     {
       "klic": "mobilizace",
@@ -54,7 +60,7 @@
       "hodnota": "NE",
       "vysvetleni": "Nařizuje prezident republiky na návrh vlády, a to až po vyhlášení stavu ohrožení státu nebo válečného stavu. Může být částečná, nebo všeobecná. Zvýšená bezpečnostní situace sama o sobě mobilizaci neznamená — jde o konkrétní právní krok, který má vlastní podmínky a vlastní úřední vyhlášení.",
       "pravniZaklad": "zákon č. 585/2004 Sb. (branný zákon)",
-      "overeno": "2026-09-15T06:31:32.570Z",
+      "overeno": null,
       "zdroje": [
         {
           "nazev": "Portál občana — Vyhlášení mobilizace ozbrojených sil ČR",
@@ -72,7 +78,10 @@
           "primarni": true,
           "jazyk": "cs"
         }
-      ]
+      ],
+      "zkontrolovano": "2026-09-15T06:31:32.570Z",
+      "pokryti": "orientacni",
+      "pokrytiDuvod": "zdroje přečteny, ale žádný z nich není úplný seznam — zápor z nich neplyne"
     },
     {
       "klic": "nouzovy-stav",
@@ -81,7 +90,7 @@
       "hodnota": "NE",
       "vysvetleni": "Vyhlašuje vláda nejdéle na 30 dnů, prodloužení schvaluje Sněmovna. Vyhlašuje se i z nebezpečnostních důvodů, které s vojenským ohrožením nesouvisejí — například při živelní pohromě nebo havárii.",
       "pravniZaklad": "ústavní zákon č. 110/1998 Sb., čl. 5 a 6",
-      "overeno": "2026-09-15T06:31:32.570Z",
+      "overeno": null,
       "zdroje": [
         {
           "nazev": "Ústavní zákon č. 110/1998 Sb.",
@@ -91,7 +100,10 @@
           "primarni": true,
           "jazyk": "cs"
         }
-      ]
+      ],
+      "zkontrolovano": "2026-09-15T06:31:32.570Z",
+      "pokryti": "orientacni",
+      "pokrytiDuvod": "zdroje přečteny, ale žádný z nich není úplný seznam — zápor z nich neplyne"
     },
     {
       "klic": "vycestovani",
@@ -100,7 +112,7 @@
       "hodnota": "NE",
       "vysvetleni": "Svoboda vycestovat je zaručena Listinou základních práv a svobod a lze ji omezit jen zákonem. Je nutné odlišit dvě různé věci: kontrola na hranici (ověření dokladu při přechodu) není zákaz vycestování. Kontroly mohou být zavedeny, aniž by se kdokoli nemohl vydat do zahraničí.",
       "pravniZaklad": "Listina základních práv a svobod, čl. 14",
-      "overeno": "2026-09-15T06:31:32.570Z",
+      "overeno": null,
       "zdroje": [
         {
           "nazev": "Listina základních práv a svobod (č. 2/1993 Sb.)",
@@ -110,7 +122,10 @@
           "primarni": true,
           "jazyk": "cs"
         }
-      ]
+      ],
+      "zkontrolovano": "2026-09-15T06:31:32.570Z",
+      "pokryti": "orientacni",
+      "pokrytiDuvod": "zdroje přečteny, ale žádný z nich není úplný seznam — zápor z nich neplyne"
     },
     {
       "klic": "hranice",
@@ -119,7 +134,7 @@
       "hodnota": "NE",
       "vysvetleni": "Dočasné znovuzavedení kontrol na vnitřních schengenských hranicích je běžný nástroj, který státy používají i z jiných než vojenských důvodů. Uzavření hranice je něco jiného a mnohem výjimečnějšího.",
       "pravniZaklad": "Schengenský hraniční kodex, nařízení (EU) 2016/399, čl. 25–28",
-      "overeno": "2026-09-15T06:31:32.570Z",
+      "overeno": null,
       "zdroje": [
         {
           "nazev": "Nařízení (EU) 2016/399 — Schengenský hraniční kodex",
@@ -137,7 +152,10 @@
           "primarni": true,
           "jazyk": "cs"
         }
-      ]
+      ],
+      "zkontrolovano": "2026-09-15T06:31:32.570Z",
+      "pokryti": "orientacni",
+      "pokrytiDuvod": "zdroje přečteny, ale žádný z nich není úplný seznam — zápor z nich neplyne"
     },
     {
       "klic": "schuze-parlamentu",
@@ -146,7 +164,7 @@
       "hodnota": "NE",
       "vysvetleni": "Svolání mimořádné schůze k bezpečnostnímu tématu je samo o sobě signálem, který sledujeme — neznamená ale, že bylo něco vyhlášeno. Program schůze je veřejný.",
       "pravniZaklad": "jednací řád Poslanecké sněmovny (zákon č. 90/1995 Sb.)",
-      "overeno": "2026-09-15T06:31:32.570Z",
+      "overeno": null,
       "zdroje": [
         {
           "nazev": "Poslanecká sněmovna Parlamentu ČR",
@@ -156,7 +174,11 @@
           "primarni": true,
           "jazyk": "cs"
         }
-      ]
+      ],
+      "zkontrolovano": "2026-09-15T06:31:32.570Z",
+      "pokryti": "orientacni",
+      "pokrytiDuvod": "zdroje přečteny, ale žádný z nich není úplný seznam — zápor z nich neplyne"
     }
-  ]
+  ],
+  "zkontrolovano": "2026-09-15T06:31:32.570Z"
 }

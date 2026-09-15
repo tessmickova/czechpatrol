@@ -50,9 +50,14 @@ describe("způsoby v užití", () => {
 
   it("porovnání s průměrem je buď spočítané, nebo přiznaně chybějící", () => {
     // Nikdy se nedopočítává: málo historie = null, ne vymyšlená nula.
+    /*
+      Porovnání smí chybět ze dvou důvodů: málo historie na průměr, nebo
+      nesrovnatelné období (pravidelný sběr běží kratší dobu než okno průměru).
+      Když je spočítané, musí stát na kladném průměru.
+    */
     for (const z of radky) {
       if (z.prumer === null) expect(z.porovnani, z.klic).toBeNull();
-      else expect(z.porovnani?.prumer, z.klic).toBeGreaterThan(0);
+      else if (z.porovnani) expect(z.porovnani.prumer, z.klic).toBeGreaterThan(0);
     }
   });
 

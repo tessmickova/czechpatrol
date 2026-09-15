@@ -299,10 +299,22 @@ html, body { overflow-x: clip; }
 
 /* ---------- běžící pás zemí ---------- */
 
+/*
+  Pás zemí.
+
+  Běží jen tehdy, když si návštěvník pohyb sám zapne. Automaticky běžící pás
+  je pro část lidí (ADHD, migréna, vestibulární obtíže) nepoužitelný a pauza
+  při najetí myší jim nepomůže — na dotyku ani klávesnici není kam najet.
+  Bez pohybu se pás dá normálně odrolovat do strany a nic se neztratí.
+*/
 @keyframes pas-beh { from { transform: translateX(0); } to { transform: translateX(-50%); } }
-.pas-beh { display: flex; width: max-content; animation: pas-beh 55s linear infinite; }
-.pas-obal:hover .pas-beh, .pas-obal:focus-within .pas-beh { animation-play-state: paused; }
-@media (prefers-reduced-motion: reduce) { .pas-beh { animation: none; } }
+.pas-beh { display: flex; width: max-content; }
+html[data-pohyb="zapnuty"] .pas-beh { animation: pas-beh 55s linear infinite; }
+html[data-pohyb="zapnuty"] .pas-obal:hover .pas-beh,
+html[data-pohyb="zapnuty"] .pas-obal:focus-within .pas-beh { animation-play-state: paused; }
+/* Druhá kopie pásu má smysl jen kvůli plynulému běhu. Bez pohybu jen zabírá. */
+html:not([data-pohyb="zapnuty"]) .pas-kopie { display: none; }
+@media (prefers-reduced-motion: reduce) { .pas-beh { animation: none !important; } }
 
 /*
   Dlaždice stavu.
@@ -354,9 +366,16 @@ html, body { overflow-x: clip; }
   opacity: 0.05;
 }
 
+/*
+  Pohyb vázaný na rolování — parallax pozadí, vzdálení hlavičky, nálety sekcí.
+
+  Výchozí stav je VYPNUTO. Obyčejné odrolování musí okamžitě ukázat plně
+  čitelný obsah; odkrývací animace na bezpečnostním webu zdržují právě toho,
+  kdo spěchá. Kdo o pohyb stojí, zapne si ho v patičce; volba se pamatuje.
+*/
 @media (prefers-reduced-motion: no-preference) {
   @supports (animation-timeline: scroll()) {
-    .paralax-vrstva {
+    html[data-pohyb="zapnuty"] .paralax-vrstva {
       animation: paralax-posun linear both;
       animation-timeline: scroll(root);
     }
@@ -364,7 +383,7 @@ html, body { overflow-x: clip; }
       from { transform: translate3d(0, 0, 0); }
       to { transform: translate3d(0, -14%, 0); }
     }
-    .paralax-znacka {
+    html[data-pohyb="zapnuty"] .paralax-znacka {
       animation: paralax-otoc linear both;
       animation-timeline: scroll(root);
     }
@@ -379,7 +398,7 @@ html, body { overflow-x: clip; }
       pohyb navázaný na samotnou desku — dává dolní části stránky přednost,
       aniž by cokoli zmizelo dřív, než to jde přečíst.
     */
-    .paralax-deska {
+    html[data-pohyb="zapnuty"] .paralax-deska {
       animation: paralax-deska linear both;
       animation-timeline: view();
       animation-range: exit 0% exit 100%;
@@ -390,7 +409,7 @@ html, body { overflow-x: clip; }
     }
 
     /* Sekce naletí zespodu, jakmile se dostane do pohledu. Jednou, decentně. */
-    .nalet {
+    html[data-pohyb="zapnuty"] .nalet {
       animation: nalet linear both;
       animation-timeline: view();
       animation-range: entry 0% entry 46%;

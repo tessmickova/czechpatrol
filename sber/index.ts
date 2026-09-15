@@ -29,6 +29,19 @@ function nactiJson<T>(soubor: string): T {
   return JSON.parse(fs.readFileSync(path.join(KOREN, soubor), "utf-8")) as T;
 }
 
+/**
+ * Nejstarší věcné ověření mezi položkami.
+ *
+ * Stránka je ověřená jen tak, jak je ověřená její nejhůř pokrytá položka.
+ * Kdyby se sem psalo „teď“, jedna zkontrolovaná položka by přebarvila celý
+ * přehled na čerstvě ověřený — včetně těch, u kterých kontrola neproběhla.
+ */
+function nejstarsiOvereni(polozky: Record<string, unknown>[]): string | null {
+  const casy = polozky.map((p) => p.overeno).filter((c): c is string => typeof c === "string");
+  if (!casy.length || casy.length < polozky.length) return casy.length ? casy.slice().sort()[0] : null;
+  return casy.slice().sort()[0];
+}
+
 function zapisJson(soubor: string, data: unknown) {
   fs.writeFileSync(path.join(KOREN, soubor), JSON.stringify(data, null, 2) + "\n", "utf-8");
 }
@@ -84,87 +97,107 @@ async function main() {
 
   const doFronty: Nalez[] = [];
 
+  /*
+    Společný zápis stavu položky.
+
+    Rozlišuje dvě různá data, která se dřív slévala do jednoho:
+      `overeno`      — kdy byl stav naposledy VĚCNĚ ověřen (doložený zápor)
+      `zkontrolovano` — kdy jsme se na zdroje naposledy dívali
+
+    Orientační pokrytí obnoví jen `zkontrolovano`. Web pak může poctivě
+    napsat „v kontrolovaných zdrojích bez doloženého vyhlášení", místo aby
+    tvrdil „ověřeno, neplatí".
+  */
+  function zapisPokryti(p: Record<string, unknown>, r: ReturnType<typeof rozhodni>) {
+    p.zkontrolovano = TED;
+    p.pokryti = r.pokryti;
+    p.pokrytiDuvod = r.duvod;
+    if (r.vecneOvereno) p.overeno = TED;
+  }
+
   /* ---------- právní stav ---------- */
   if (!jenProvoz) {
     const pravni = nactiJson<{ overeno: string | null; polozky: Record<string, unknown>[] }>("pravni-stav.json");
-    let potvrzeno = 0;
     for (const p of pravni.polozky) {
       const klic = p.klic as string;
       const r = rozhodni(klic, stazene);
       doFronty.push(...r.nalezy);
-      if (r.ciste) {
-        // Žádné vyhlášení v úředních zdrojích → zápor je ověřený.
+      zapisPokryti(p, r);
+
+      /*
+        Aktivní opatření automat nikdy neruší. Ukončit ho smí jen doložené
+        ukončení nebo uplynutí výslovné platnosti — ne to, že o něm zdroj
+        přestal psát. Dřív stačilo stáhnout jeden zdroj bez shody.
+      */
+      if (p.plati === true) {
+        if (r.signal) console.log(`[sber] „${klic}“ platí a zdroj o něm dál píše — beze změny`);
+        else console.log(`[sber] „${klic}“ platí; automat ho nezruší, ukončení musí být doložené`);
+        continue;
+      }
+
+      if (r.vecneOvereno) {
         p.plati = false;
         p.hodnota = "NE";
-        p.overeno = TED;
-        potvrzeno++;
-      } else if (r.nalezy.length) {
+      } else if (r.signal) {
         // Něco se našlo. Hodnotu NEMĚNÍME — rozhodne člověk.
         console.log(`[sber] signál u „${klic}“ (${r.nalezy.length}) — ponecháno ke kontrole`);
       }
     }
-    // Datum ověření zapisujeme jen tehdy, když se opravdu něco ověřit podařilo.
-    // Jinak by web tvrdil, že proběhla kontrola, která neproběhla.
-    if (potvrzeno > 0) pravni.overeno = TED;
+    /*
+      Datum na celé stránce je nejstarší věcné ověření položek, ne „teď".
+      Jedna zkontrolovaná položka nesmí přebarvit celý přehled na čerstvý.
+    */
+    pravni.overeno = nejstarsiOvereni(pravni.polozky);
     zapisJson("pravni-stav.json", pravni);
 
     /* ---------- NATO ---------- */
     const nato = nactiJson<{ overeno: string | null; polozky: Record<string, unknown>[] }>("nato.json");
-    let potvrzenoNato = 0;
     for (const p of nato.polozky) {
       const klic = p.klic as string;
       if (klic === "vychodni-kridlo") continue; // dlouhodobý stav, ne automatická položka
       const r = rozhodni(klic, stazene);
       doFronty.push(...r.nalezy);
-      if (r.ciste) {
+      zapisPokryti(p, r);
+
+      if (p.aktivni === true) {
+        console.log(`[sber] „${klic}“ je aktivní; automat ho nedeaktivuje bez dokladu`);
+        continue;
+      }
+      if (r.vecneOvereno) {
         p.aktivni = false;
         p.hodnota = klic.startsWith("clanek") ? "neaktivován" : "bez veřejně oznámené změny";
-        p.overeno = TED;
-        potvrzenoNato++;
       }
     }
-    if (potvrzenoNato > 0) nato.overeno = TED;
+    nato.overeno = nejstarsiOvereni(nato.polozky);
     zapisJson("nato.json", nato);
   }
 
   /* ---------- provozní dostupnost ---------- */
   const provoz = nactiJson<{ overeno: string | null; polozky: Record<string, unknown>[] }>("provoz.json");
-  let potvrzenoProvoz = 0;
   for (const p of provoz.polozky) {
     const klic = p.klic as string;
     const r = rozhodni(klic, stazene);
     doFronty.push(...r.nalezy);
-    if (r.ciste) {
-      p.stav = "bezny";
-      p.hodnota = vychoziHodnota(klic);
-      p.overeno = TED;
-      potvrzenoProvoz++;
-    } else if (r.nalezy.length) {
+    zapisPokryti(p, r);
+
+    if (r.signal) {
       // Signál nezhoršuje stav automaticky — jen ho označí ke sledování.
       p.stav = "sledujeme";
       p.hodnota = "prověřujeme hlášení";
-      p.overeno = TED;
-    } else if (r.overeno.length === 0) {
-      p.stav = "bez-zdroje";
-      p.hodnota = "";
+    } else if (r.pokryti === "nedostupne") {
+      /*
+        Zdroj nedostupný: poslední známý stav ZŮSTÁVÁ. Dřív se položka
+        překlopila na „bez zdroje" a z přehledu tím zmizel údaj, který jsme
+        chvíli předtím měli. Neznámá aktuálnost není totéž co nic nevíme.
+      */
+      if (p.stav === undefined || p.stav === null) p.stav = "bez-zdroje";
+    } else if (r.vecneOvereno) {
+      p.stav = "bezny";
+      p.hodnota = vychoziHodnota(klic);
     }
   }
-  if (potvrzenoProvoz > 0) provoz.overeno = TED;
+  provoz.overeno = nejstarsiOvereni(provoz.polozky);
   zapisJson("provoz.json", provoz);
-
-  /* ---------- automatický sběr událostí ---------- */
-  if (!jenProvoz) {
-    try {
-      const u = await sbirejUdalosti();
-      console.log(
-        `[sber] události: nových kandidátů ${u.novych}, ve frontě ${u.celkem} (s výřezem zdroje ${u.sVyrezem}), odmítnutých ${u.odmitnutych}` +
-          (u.podezrelych ? `, z toho vážně vypadá ${u.podezrelych} — projít ve správě` : "") +
-          (u.nedostupne.length ? `, nedostupné: ${u.nedostupne.join("; ")}` : ""),
-      );
-    } catch (e) {
-      console.log(`[sber] sběr událostí selhal, ostatní pokračuje: ${e instanceof Error ? e.message : e}`);
-    }
-  }
 
   /* ---------- ceny pohonných hmot ---------- */
   /*

@@ -9,8 +9,15 @@ import type { PravniPolozka, ProvozniPolozka, Uroven } from "./typy";
   ukazují, ale barvou a jedním slovem — to se dá přečíst špatně.
 
   Věta se nikdy nepíše ručně. Skládá se z toho, co je v datech: první část
-  jen z ověřených úředních položek, druhá z hodnocení pro Evropu. Kde ověření
-  chybí, věta to řekne — nedopočítává se a neuklidňuje bez podkladu.
+  jen z úředních položek, druhá z hodnocení pro Evropu. Kde ověření chybí,
+  věta to řekne — nedopočítává se a neuklidňuje bez podkladu.
+
+  Proč tu nestojí kategorické „dnes neplatí žádné mimořádné omezení": takové
+  tvrzení by znamenalo, že máme úplný seznam všech opatření v zemi. Nemáme ho.
+  Sledujeme konkrétní úřední zdroje, a když v nich nic není, je pravdivé jen
+  to slabší: v kontrolovaných zdrojích doložené celostátní omezení nemáme.
+  Rozdíl je podstatný hlavně pro člověka, kterého se týká místní opatření —
+  ten se nesmí z úvodní věty dozvědět, že se ho nic netýká.
 */
 
 export interface HlavniVeta {
@@ -37,18 +44,27 @@ export function hlavniVeta(
   const sledujeme = provoz.filter((p) => p.stav === "sledujeme");
   const neovereno = pravni.filter((p) => p.plati === null).length + provoz.filter((p) => p.stav === "bez-zdroje").length;
 
-  // Zápor smí web tvrdit jen tam, kde ho někdo ověřil v úřední sbírce.
-  const overenoDost = pravni.some((p) => p.plati === false);
+
+  /*
+    Kategorický zápor smí padnout jen z autoritativního pokrytí — tedy
+    z úplného seznamu. Jinak se píše, co v kontrolovaných zdrojích není.
+  */
+  const doloženýZápor = pravni.some((p) => p.plati === false && p.pokryti === "autoritativni");
+  const kontrolaProbehla = pravni.some((p) => p.pokryti && p.pokryti !== "nedostupne");
+
+  const bezOmezeni = doloženýZápor
+    ? "Pro běžný život v Česku dnes neplatí žádné mimořádné omezení."
+    : kontrolaProbehla
+      ? "V kontrolovaných úředních zdrojích nemáme doložené žádné celostátní omezení běžného života. Místní situace se může lišit."
+      : "Úřední stav Česka se dnes nepodařilo zkontrolovat — nic o něm proto netvrdíme.";
 
   const cesko = plati.length
     ? `V Česku platí ${vyjmenuj(plati.map((p) => p.nazev.toLowerCase()))}.`
     : naruseno.length
-      ? `Pro běžný život v Česku dnes neplatí mimořádné opatření, ale hlásíme narušení: ${vyjmenuj(naruseno.map((p) => p.nazev.toLowerCase()))}.`
+      ? `Hlásíme narušení: ${vyjmenuj(naruseno.map((p) => p.nazev.toLowerCase()))}. Celostátní mimořádné opatření k tomu doložené nemáme.`
       : sledujeme.length
-        ? `Pro běžný život v Česku dnes neplatí žádné mimořádné omezení; u ${vyjmenuj(sledujeme.map((p) => p.nazev.toLowerCase()))} sledujeme možné výpadky.`
-        : overenoDost
-          ? "Pro běžný život v Česku dnes neplatí žádné mimořádné omezení."
-          : "Úřední stav Česka se dnes nepodařilo ověřit — nic z toho proto netvrdíme.";
+        ? `${bezOmezeni} U ${vyjmenuj(sledujeme.map((p) => p.nazev.toLowerCase()))} prověřujeme hlášení.`
+        : bezOmezeni;
 
   const pasmo = evropa ? UROVNE[evropa].pasmo : null;
   const evropaVeta =

@@ -6,6 +6,7 @@ import { cerstvost, datumCasPraha, datumPraha, stariSlovy } from "@/lib/cas";
 import type { CelkovyStav, HybridniTlak, Kampan, Kandidat, NatoPolozka, Nepotvrzene, Overovana, PravniPolozka, ProvozniPolozka, TydenniHodnoceni, Uroven, Watchlist } from "@/lib/typy";
 import { CenaPaliva } from "./palivo";
 import { stavPaliva, vetaOCene } from "@/lib/palivo";
+import { stavPravni, stavProvozu } from "@/lib/pokryti";
 import { PASMA, UROVNE } from "@/lib/skala";
 import { cislem, porovnejSPrumerem, prumerNaOkno } from "@/lib/porovnani";
 import type { HlavniVeta } from "@/lib/veta";
@@ -37,7 +38,7 @@ import { useT } from "@/lib/i18n";
   Vysvětlení jsou v nápovědách a na podstránkách, ne tady.
 */
 
-type Ton = "klid" | "pozor" | "plati" | "nevime";
+type Ton = "klid" | "pozor" | "plati" | "nedolozeno" | "nevime";
 
 /*
   Stav nesmí být poznat jen podle barvy. Ke každému tónu proto patří i tvar
@@ -48,6 +49,12 @@ const TON: Record<Ton, { dlazdice: string; tecka: string; slovo: string; ikona: 
   klid: { dlazdice: "border-linka2 bg-plocha", tecka: "bg-[#5cbf8a]", slovo: "text-[#8fd6ae]", ikona: "fajfka" },
   pozor: { dlazdice: "border-[#d9b24c]/40 bg-[#d9b24c]/10", tecka: "bg-[#d9b24c]", slovo: "text-[#e6c977]", ikona: "vykricnik" },
   plati: { dlazdice: "border-[#e8484f]/50 bg-[#e8484f]/12", tecka: "bg-[#e8484f]", slovo: "text-[#f2848a]", ikona: "sirena" },
+  /*
+    „Nedoloženo" je vlastní tón, ne zelená. Znamená: v kontrolovaných zdrojích
+    jsme nic nenašli, ale úplný seznam nemáme. Zelená by tvrdila ověřený klid,
+    na který doklad nemáme.
+  */
+  nedolozeno: { dlazdice: "border-linka2 bg-transparent", tecka: "bg-tlum2", slovo: "text-tlum", ikona: "info" },
   nevime: { dlazdice: "border-dashed border-linka bg-transparent", tecka: "bg-tlum2", slovo: "text-tlum2", ikona: "otaznik" },
 };
 
@@ -75,45 +82,56 @@ const IKONY_PRAVNI: Record<string, NazevIkony> = {
   "stav-ohrozeni": "vystraha", "valecny-stav": "stit", mobilizace: "uzivatel", "nouzovy-stav": "sirena", vycestovani: "pas", hranice: "hranice", "schuze-parlamentu": "vaha",
 };
 
-interface Dlazdice { klic: string; nazev: string; ikona: NazevIkony; ton: Ton; stav: string; overeno: string | null; vysvetleni: string }
+interface Dlazdice {
+  klic: string; nazev: string; ikona: NazevIkony; ton: Ton; stav: string;
+  /** Čas, který se u položky ukazuje — věcné ověření, nebo jen poslední kontrola. */
+  cas: string | null;
+  popisekCasu: "ověřeno" | "kontrolováno" | "bez kontroly";
+  vysvetleni: string;
+}
 
 function dlazdicePravni(p: PravniPolozka): Dlazdice {
+  const st = stavPravni(p);
   return {
     klic: `p-${p.klic}`, nazev: KRATCE_PRAVNI[p.klic] ?? p.nazev, ikona: IKONY_PRAVNI[p.klic] ?? "dokument",
-    ton: p.plati === null ? "nevime" : p.plati ? "plati" : "klid",
-    stav: p.plati === null ? "neověřeno" : p.plati ? "PLATÍ" : p.klic === "vycestovani" ? "bez omezení" : p.klic === "hranice" ? "běžný režim" : "nevyhlášen",
-    overeno: p.overeno, vysvetleni: p.vysvetleni,
+    ton: st.ton, stav: st.slovo, cas: st.cas, popisekCasu: st.popisekCasu,
+    vysvetleni: `${st.vysvetleni} ${p.vysvetleni}`,
   };
 }
+
 function dlazdiceNato(p: NatoPolozka): Dlazdice {
+  const st = stavPravni(p);
+  // Východní křídlo je dlouhodobý stav, ne vyhlášené opatření.
+  const kridlo = p.klic === "vychodni-kridlo" && p.aktivni === true;
   return {
     klic: `n-${p.klic}`, nazev: KRATCE_NATO[p.klic] ?? p.nazev, ikona: "globus",
-    ton: p.aktivni === null ? "nevime" : p.aktivni ? (p.klic === "vychodni-kridlo" ? "pozor" : "plati") : "klid",
-    stav: p.aktivni === null ? "neověřeno" : p.aktivni ? (p.klic === "vychodni-kridlo" ? "posíleno" : "AKTIVNÍ") : "neaktivní",
-    overeno: p.overeno, vysvetleni: p.vysvetleni,
+    ton: kridlo ? "pozor" : st.ton,
+    stav: kridlo ? "posíleno" : st.slovo,
+    cas: st.cas, popisekCasu: st.popisekCasu,
+    vysvetleni: `${st.vysvetleni} ${p.vysvetleni}`,
   };
 }
+
 function dlazdiceProvoz(p: ProvozniPolozka): Dlazdice {
+  const st = stavProvozu(p);
   const d: Dlazdice = {
     klic: `v-${p.klic}`, nazev: p.nazev, ikona: (p.ikona as NazevIkony) || "dokument",
-    ton: p.stav === "bez-zdroje" ? "nevime" : p.stav === "bezny" ? "klid" : p.stav === "sledujeme" ? "pozor" : "plati",
-    stav: p.stav === "bez-zdroje" ? "bez zdroje" : p.stav === "bezny" ? "běžný" : p.stav === "sledujeme" ? "sledujeme" : "NARUŠENO",
-    overeno: p.overeno, vysvetleni: p.detail,
+    ton: st.ton, stav: st.slovo, cas: st.cas, popisekCasu: st.popisekCasu,
+    vysvetleni: `${st.vysvetleni} ${p.detail}`,
   };
 
   /*
-    U paliva se na dlaždici píše změřená cena nafty místo slova „běžný".
-    Dostupnost a cena jsou dvě různé věci a čtenáře zajímají obě; dlaždice
-    přitom unese jen jeden údaj, a cena je ten, který se mění každý týden.
-    Skok v ceně zvedne tón na „pozor" — ale ani tady nepadne ani slovo o tom,
-    co bude dál. To by byla předpověď.
+    U paliva se píše změřená cena nafty místo slova o dostupnosti. Dostupnost
+    a cena jsou dvě různé věci a čtenáře zajímají obě; řádek přitom unese jen
+    jeden údaj, a cena je ten, který se mění každý týden. Skok zvedne tón na
+    „pozor" — ani tady ale nepadne slovo o tom, co bude dál. To by byla předpověď.
   */
   if (p.klic === "palivo" && p.stav !== "bez-zdroje") {
     const nafta = stavPaliva("nafta");
     const veta = vetaOCene(nafta);
     if (nafta.cena !== null && veta) {
       d.stav = `${nafta.cena.toFixed(2).replace(".", ",")} Kč/l`;
-      if (nafta.skok && p.stav === "bezny") d.ton = "pozor";
+      if (nafta.skok) d.ton = "pozor";
       d.vysvetleni = `${veta} ${p.detail}`;
     }
   }
@@ -121,29 +139,51 @@ function dlazdiceProvoz(p: ProvozniPolozka): Dlazdice {
   return d;
 }
 
-function Stari({ overeno }: { overeno: string | null }) {
-  const t = useT();
-  const c = cerstvost(overeno);
-  const barva = c === "cerstve" ? "text-tlum2" : c === "nezname" ? "text-tlum2" : "text-[#eaa96b]";
-  return <span className={`cislice text-[10.5px] ${barva}`} title={overeno ? datumCasPraha(overeno) : "nikdy neověřeno"}>{overeno ? stariSlovy(overeno) : "neověřeno"}</span>;
+/*
+  Čas u položky.
+
+  Ukazuje se, CO se stalo: „ověřeno" znamená doložený stav, „kontrolováno"
+  znamená, že jsme se dívali do zdrojů. Dřív se obojí jmenovalo stejně a
+  relativní čas byl jediný údaj — absolutní se dal zjistit jen najetím myší,
+  což na dotyku ani klávesnici nejde.
+*/
+function Stari({ cas, popisek }: { cas: string | null; popisek: Dlazdice["popisekCasu"] }) {
+  if (!cas) return <span className="shrink-0 text-[10.5px] text-tlum2">bez kontroly</span>;
+  const c = cerstvost(cas);
+  const barva = c === "cerstve" || c === "nezname" ? "text-tlum2" : "text-[#eaa96b]";
+  return (
+    <span className={`shrink-0 text-right text-[10.5px] leading-tight ${barva}`}>
+      {popisek}
+      <br />
+      <span className="cislice">{datumCasPraha(cas)}</span>
+    </span>
+  );
 }
 
-function Dlazdice({ d }: { d: Dlazdice }) {
+/*
+  Jeden stav jako řádek, ne jako kartička.
+
+  Dvacet samostatných rámečků vedle sebe dělalo z přehledu mozaiku, ve které
+  nešlo poznat, co je důležité. Teď má rámeček jen skupina; uvnitř jsou řádky
+  oddělené linkou. Barevná plocha zbyla jen tam, kde něco platí nebo se něco
+  prověřuje — tedy tam, kde barva opravdu něco znamená.
+
+  Stav nese slovo i barva, ne jen barva: kdo barvy nerozliší nebo si web
+  vytiskne černobíle, přečte totéž.
+*/
+function RadekStavu({ d }: { d: Dlazdice }) {
   const t = TON[d.ton];
+  const zvyraznit = d.ton === "plati" || d.ton === "pozor";
   return (
-    <li>
+    <li className={`border-b border-linka2 ${zvyraznit ? t.dlazdice : ""}`}>
       <Napoveda cele popis={<span className="block"><b className="font-semibold">{d.nazev}</b> — {d.stav}. {d.vysvetleni}</span>}>
-        <span className={`dlazdice-stav flex min-h-[64px] w-full flex-col justify-between rounded-[20px] border px-2.5 py-2 text-left ${t.dlazdice}`}>
-          <span className="flex items-center gap-1.5 text-[12px] leading-tight text-tlum">
-            <Ikona nazev={d.ikona} velikost={13} tah={1.9} trida="shrink-0" />
-            <span className="truncate">{d.nazev}</span>
+        <span className="flex min-h-[54px] w-full items-center gap-2.5 px-3 py-2 text-left">
+          <Ikona nazev={d.ikona} velikost={15} tah={1.8} trida="shrink-0 text-tlum2" />
+          <span className="min-w-0 flex-1">
+            <span className="block truncate text-[13px] leading-tight text-tlum">{d.nazev}</span>
+            <span className={`block text-[13.5px] font-semibold leading-tight ${t.slovo}`}>{d.stav}</span>
           </span>
-          <span className="mt-1 flex items-center justify-between gap-2">
-            <span className={`flex items-center gap-1.5 text-[13px] font-bold leading-none ${t.slovo}`}>
-              <Ikona nazev={t.ikona} velikost={13} tah={2.2} trida="shrink-0" />{d.stav}
-            </span>
-            {d.ton !== "nevime" && <Stari overeno={d.overeno} />}
-          </span>
+          <Stari cas={d.cas} popisek={d.popisekCasu} />
         </span>
       </Napoveda>
     </li>
@@ -158,7 +198,7 @@ function Hlavni({ nadpis, hodnota, ton, popis, overeno, napoveda, jiskra }: { na
       <span className={`flex min-h-[112px] w-full flex-col justify-between rounded-[18px] border p-4 text-left ${t ? t.dlazdice : "border-linka bg-plocha"}`}>
         <span className="flex items-center justify-between gap-2">
           <span className="stitek">{nadpis}</span>
-          <Stari overeno={overeno} />
+          <Stari cas={overeno} popisek="kontrolováno" />
         </span>
         <span className="mt-2 flex items-end justify-between gap-3">
           <span className={`text-[26px] font-bold leading-none sm:text-[30px] ${t ? t.slovo : ""}`}>{hodnota}</span>
@@ -299,16 +339,16 @@ export function Dashboard({
         <NadpisSekce
           stitek={t("Co právě platí")}
           nadpis={t("Úřední stav v Česku")}
-          popis="Zelená znamená, že opatření neplatí. Ověřeno v úřední sbírce."
+          popis="Co jsme našli v úředních zdrojích a kdy jsme se tam naposledy dívali."
         />
       </div>
       <div className="grid gap-4 lg:grid-cols-[minmax(0,1.35fr)_minmax(0,1fr)]">
         <section aria-label={t("Oficiální stavy")} id="opatreni" className="scroll-mt-[84px] space-y-4">
           {skupinyDlazdic.map((sk) => (
-            <div key={sk.predpona}>
-              <div className="stitek mb-2">{sk.nazev}</div>
-              <ul className="grid grid-cols-2 gap-2.5 sm:grid-cols-3">
-                {sk.polozky.map((d) => <Dlazdice key={d.klic} d={d} />)}
+            <div key={sk.predpona} className="overflow-hidden rounded-[20px] border border-linka2 bg-plocha">
+              <div className="stitek border-b border-linka2 px-3 py-2">{sk.nazev}</div>
+              <ul className="sm:grid sm:grid-cols-2">
+                {sk.polozky.map((d) => <RadekStavu key={d.klic} d={d} />)}
               </ul>
             </div>
           ))}

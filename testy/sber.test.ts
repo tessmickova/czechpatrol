@@ -5,13 +5,18 @@ import type { RegistrZdroj } from "../sber/typy";
 
 const zdroj = (
   klic: string, tyka: string[], klicova: string[], sledovana: string[] = [],
+  navic: Partial<RegistrZdroj> = {},
 ): RegistrZdroj => ({
   klic, nazev: klic, druh: "pravni", url: `https://example.invalid/${klic}`,
   format: "html", jazyk: "cs", primarni: true, klicova, sledovana, tyka, overenaAdresa: false,
+  ...navic,
 });
 
-const stazeno = (z: RegistrZdroj, text: string, ok = true): Stazeno => ({
-  zdroj: z, ok, text, polozky: [], stav: ok ? 200 : 503,
+/** Text musí být delší než práh obsahu, jinak se počítá jako prázdná stránka. */
+const VYPLN = "Úřední stránka s běžným obsahem. ".repeat(20);
+
+const stazeno = (z: RegistrZdroj, text: string, ok = true, stav?: number): Stazeno => ({
+  zdroj: z, ok, text, polozky: [], stav: stav ?? (ok ? 200 : 503),
 });
 
 const MOBILIZACE = zdroj(
@@ -21,62 +26,123 @@ const MOBILIZACE = zdroj(
   ["mobilizace"],
 );
 
-describe("sběrač smí potvrdit jen zápor", () => {
-  it("bez nálezu a s funkčním zdrojem potvrdí zápor", () => {
-    const r = rozhodni("mobilizace", [stazeno(MOBILIZACE, "Běžná tisková zpráva o ničem zvláštním.")]);
-    expect(r.ciste).toBe(true);
-    expect(r.nalezy).toHaveLength(0);
+describe("co smí automat tvrdit o stavu opatření", () => {
+  it("nenález v tiskové stránce úřadu zápor NEDOKLÁDÁ", () => {
+    /*
+      Tohle je jádro celé opravy. Dřív stačilo stáhnout jeden relevantní zdroj
+      a nenajít v něm frázi, a sběr přepsal právní stav na „neplatí" a obnovil
+      datum ověření. Z toho, že o opatření tisková stránka nepíše, ale neplyne,
+      že neexistuje — plyne z toho jen to, že o něm ta stránka nepíše.
+    */
+    const r = rozhodni("mobilizace", [stazeno(MOBILIZACE, `Běžná tisková zpráva. ${VYPLN}`)]);
+    expect(r.kontrolaDokoncena).toBe(true);
+    expect(r.pokryti).toBe("orientacni");
+    expect(r.vecneOvereno).toBe(false);
+    expect(r.duvod).toContain("úplný seznam");
   });
 
-  it("při frázi o vyhlášení zápor NEpotvrdí a založí položku do fronty", () => {
-    const r = rozhodni("mobilizace", [
-      stazeno(MOBILIZACE, "Prezident naridil mobilizaci ozbrojených sil."),
-    ]);
-    expect(r.ciste).toBe(false);
-    expect(r.nalezy).toHaveLength(1);
+  it("úplný autoritativní seznam zápor doložit smí", () => {
+    const registr = zdroj("registr", ["mobilizace"], ["naridil mobilizaci"], [], { autoritativni: true });
+    const r = rozhodni("mobilizace", [stazeno(registr, `Seznam vyhlášených opatření: žádné. ${VYPLN}`)]);
+    expect(r.pokryti).toBe("autoritativni");
+    expect(r.vecneOvereno).toBe(true);
+  });
+
+  it("fráze o vyhlášení blokuje zápor i v autoritativním seznamu", () => {
+    const registr = zdroj("registr", ["mobilizace"], ["naridil mobilizaci"], [], { autoritativni: true });
+    const r = rozhodni("mobilizace", [stazeno(registr, `Prezident naridil mobilizaci. ${VYPLN}`)]);
+    expect(r.signal).toBe(true);
+    expect(r.vecneOvereno).toBe(false);
     expect(r.nalezy[0].shody).toContain("naridil mobilizaci");
     expect(r.nalezy[0].polozka.shrnuti.length).toBeGreaterThan(0);
   });
 
   it("najde frázi i s diakritikou v textu", () => {
-    const r = rozhodni("mobilizace", [stazeno(MOBILIZACE, "Parlament VYHLÁSIL VÁLEČNÝ STAV.")]);
-    expect(r.ciste).toBe(false);
+    const r = rozhodni("mobilizace", [stazeno(MOBILIZACE, `Parlament VYHLÁSIL VÁLEČNÝ STAV. ${VYPLN}`)]);
+    expect(r.signal).toBe(true);
     expect(r.nalezy[0].shody).toContain("vyhlasil valecny stav");
   });
 
-  it("tematická zmínka jde do fronty, ale zápor neblokuje", () => {
-    // Slovo „mobilizace“ je trvale v menu i v archivu úředních webů. Kdyby
-    // blokovalo, web by hlásil „neověřeno“ napořád.
+  it("tematická zmínka jde do fronty, ale není signál o vyhlášení", () => {
+    // Slovo „mobilizace" je trvale v menu i v archivu úředních webů.
     const r = rozhodni("mobilizace", [
-      stazeno(MOBILIZACE, "Sekce Obrana státu: mobilizace, branná povinnost, zálohy."),
+      stazeno(MOBILIZACE, `Sekce Obrana státu: mobilizace, branná povinnost, zálohy. ${VYPLN}`),
     ]);
-    expect(r.ciste).toBe(true);
+    expect(r.signal).toBe(false);
     expect(r.nalezy).toHaveLength(1);
     expect(r.nalezy[0].shody).toContain("mobilizace");
   });
 
-  it("při výpadku všech zdrojů zápor NEpotvrdí", () => {
-    // Nedostupný úřední web nesmí vypadat jako „nic se neděje“.
+  it("prázdné HTML ani JS skořápka nejsou provedená kontrola", () => {
+    // Úřad vrátí HTTP 200 a v těle skoro nic. To není doklad, to je ticho.
+    const r = rozhodni("mobilizace", [stazeno(MOBILIZACE, "<div id=app></div>")]);
+    expect(r.zpracovano).toEqual([]);
+    expect(r.kontrolaDokoncena).toBe(false);
+    expect(r.pokryti).toBe("nedostupne");
+    expect(r.vecneOvereno).toBe(false);
+  });
+
+  it("při výpadku zdroje se nic neověřuje", () => {
     const r = rozhodni("mobilizace", [stazeno(MOBILIZACE, "", false)]);
-    expect(r.ciste).toBe(false);
+    expect(r.pokryti).toBe("nedostupne");
     expect(r.selhalo).toEqual(["urad"]);
+    expect(r.vecneOvereno).toBe(false);
+  });
+
+  it("jeden funkční a jeden potřebný nefunkční zdroj kontrolu nedokončí", () => {
+    /*
+      Regresní scénář ze zadání: dřív stačil jediný úspěšný zdroj a selhání
+      druhého potřebného výsledek nezablokovalo.
+    */
+    const druhy = zdroj("druhy", ["mobilizace"], ["naridil mobilizaci"], [], { autoritativni: true });
+    const r = rozhodni("mobilizace", [
+      stazeno(MOBILIZACE, `Nic zvláštního. ${VYPLN}`),
+      stazeno(druhy, "", false),
+    ]);
+    expect(r.kontrolaDokoncena).toBe(false);
+    expect(r.vecneOvereno).toBe(false);
+    expect(r.duvod).toContain("druhy");
   });
 
   it("stačí jediný zdroj s frází, i když ostatní mlčí", () => {
     const druhy = zdroj("druhy", ["mobilizace"], ["naridil mobilizaci"]);
     const r = rozhodni("mobilizace", [
-      stazeno(MOBILIZACE, "Nic zvláštního."),
-      stazeno(druhy, "Prezident nařídil mobilizaci."),
+      stazeno(MOBILIZACE, `Nic zvláštního. ${VYPLN}`),
+      stazeno(druhy, `Prezident nařídil mobilizaci. ${VYPLN}`),
     ]);
-    expect(r.ciste).toBe(false);
+    expect(r.signal).toBe(true);
     expect(r.nalezy).toHaveLength(1);
   });
 
   it("bez relevantního zdroje se nic nepotvrzuje", () => {
     const jiny = zdroj("jiny", ["elektrina"], ["stav nouze"]);
-    const r = rozhodni("mobilizace", [stazeno(jiny, "Nic zvláštního.")]);
-    expect(r.ciste).toBe(false);
-    expect(r.overeno).toHaveLength(0);
+    const r = rozhodni("mobilizace", [stazeno(jiny, `Nic zvláštního. ${VYPLN}`)]);
+    expect(r.pokryti).toBe("nedostupne");
+    expect(r.stazeno).toHaveLength(0);
+  });
+
+  it("zdroj blokující automaty kontrolu nezdrží", () => {
+    // Web prezidenta vrací 403. Kdyby byl povinný, položka by byla trvale nedostupná.
+    const blokujici = zdroj("hrad", ["mobilizace"], ["naridil mobilizaci"], [], { ocekavaneBlokovani: true });
+    const r = rozhodni("mobilizace", [
+      stazeno(MOBILIZACE, `Nic zvláštního. ${VYPLN}`),
+      stazeno(blokujici, "", false),
+    ]);
+    expect(r.kontrolaDokoncena).toBe(true);
+    expect(r.pokryti).toBe("orientacni");
+  });
+});
+
+describe("dnešní registr zdrojů", () => {
+  it("žádný zdroj se nevydává za úplný seznam", () => {
+    /*
+      Schválně. Ani e-Sbírka, ani tisková stránka vlády nejsou načítané tak,
+      aby z nich šlo doložit, že opatření NEEXISTUJE. Dokud to nebude platit,
+      web zápor nedokládá a píše, co v kontrolovaných zdrojích není.
+      Až někdo označí zdroj jako autoritativní, musí zároveň doložit, které
+      území a typ opatření pokrývá celý a jak se pozná úplné načtení.
+    */
+    expect(ZDROJE.filter((z) => z.autoritativni).map((z) => z.klic)).toEqual([]);
   });
 });
 

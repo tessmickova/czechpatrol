@@ -75,7 +75,7 @@ export function PasZemi({ vse, kampane = [], ted = Date.now() }: { vse: Zaznam[]
           <div className="pas-beh">
             {polozky("")}
             {/* druhá kopie jen kvůli plynulému běhu; čtečce se neoznamuje */}
-            <span aria-hidden className="contents">{polozky("-2")}</span>
+            <span aria-hidden className="pas-kopie contents">{polozky("-2")}</span>
           </div>
         </div>
       </div>

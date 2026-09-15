@@ -166,6 +166,15 @@ export interface TydenniHodnoceni {
 }
 
 /** Jedna položka právního semaforu. */
+/**
+ * Jak spolehlivě byla položka v posledním běhu pokrytá zdroji.
+ *
+ * `autoritativni` je jediná hodnota, ze které smí plynout „neplatí“. Potřebuje
+ * úplný seznam pro dané území a typ opatření — tisková stránka úřadu, na které
+ * hledané slovo není, takový seznam není.
+ */
+export type Pokryti = "nedostupne" | "orientacni" | "autoritativni";
+
 export interface PravniPolozka {
   klic: string;
   nazev: string;
@@ -178,8 +187,17 @@ export interface PravniPolozka {
   hodnota: string;
   vysvetleni: string;
   pravniZaklad?: string;
-  /** Kdy sběrač naposledy ověřil. null = zatím nikdy. */
+  /**
+   * Kdy byl stav naposledy VĚCNĚ ověřen — tedy doložen, ne jen prohlédnut.
+   * null = nikdy. Absence klíčového slova v tiskové zprávě ověření není.
+   */
   overeno: string | null;
+  /** Kdy se sběr naposledy díval na zdroje. Není totéž co věcné ověření. */
+  zkontrolovano?: string | null;
+  /** Jak spolehlivě byla položka v posledním běhu pokrytá. */
+  pokryti?: Pokryti;
+  /** Proč zrovna takové pokrytí. Do nápovědy i do provozního hlášení. */
+  pokrytiDuvod?: string;
   zdroje: Zdroj[];
 }
 
@@ -196,6 +214,9 @@ export interface NatoPolozka {
   hodnota: string;
   vysvetleni: string;
   overeno: string | null;
+  zkontrolovano?: string | null;
+  pokryti?: Pokryti;
+  pokrytiDuvod?: string;
   zdroje: Zdroj[];
 }
 
@@ -220,6 +241,9 @@ export interface ProvozniPolozka {
   /** Co by se muselo stát, aby se stav změnil. */
   coByZmenilo: string[];
   overeno: string | null;
+  zkontrolovano?: string | null;
+  pokryti?: Pokryti;
+  pokrytiDuvod?: string;
   zdroje: Zdroj[];
 }
 

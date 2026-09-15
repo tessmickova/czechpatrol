@@ -1,6 +1,7 @@
 "use client";
 
 import { Odkaz } from "./odkaz";
+import { PrepinacPohybu } from "./pohyb";
 import { KOMUNITA, METODIKA_REVIDOVANA, WEB } from "@/config/web";
 import { datum } from "@/lib/format";
 import { Logo } from "./znacka";
@@ -79,6 +80,13 @@ export function Paticka() {
               </ul>
             </nav>
           ))}
+        </div>
+        {/*
+          Nastavení zobrazení. Pohyb je vypnutý, dokud si ho někdo nezapne —
+          ovládání proto musí být trvale dostupné, ne jen pauza při najetí myší.
+        */}
+        <div className="mt-8 border-t border-white/10 pt-5">
+          <PrepinacPohybu />
         </div>
         <Jazyky />
       </div>

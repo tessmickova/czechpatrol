@@ -88,8 +88,18 @@ export function HeroDashboard({
   const pasmo = stav.uroven ? PASMA[UROVNE[stav.uroven].pasmo] : null;
   return (
     <section aria-label={t("Bezpečnostní aktivita")} className="sklo paralax-deska rounded-[28px]">
+      {/*
+        Hlavní nadpis stránky. Úvod ho dřív neměl vůbec — čtečka obrazovky
+        pak neuměla říct, co ta stránka je, a přeskakování po nadpisech
+        začínalo až u třetí sekce.
+      */}
+      <div className="border-b border-linka2 px-5 pt-5 sm:px-7 sm:pt-6">
+        <h1 className="text-[15px] font-semibold uppercase tracking-[0.06em] text-tlum2">
+          {t("Bezpečnostní situace v Česku a okolí")}
+        </h1>
+      </div>
       {/* Jedna věta, kterou má čtenář odnést, i kdyby dál nečetl. */}
-      <p className="border-b border-linka2 px-5 py-5 text-[17px] leading-relaxed text-tlum sm:px-7 sm:py-6 sm:text-[19px]">
+      <p className="border-b border-linka2 px-5 pb-5 pt-3 text-[17px] leading-relaxed text-tlum sm:px-7 sm:pb-6 sm:text-[19px]">
         <strong className="font-bold text-inkoust">{veta.cesko}</strong>{" "}
         <span>{veta.evropa}</span>
         {veta.neovereno > 0 && (
@@ -122,12 +132,21 @@ export function HeroDashboard({
             </p>
             <p className="mt-2 flex flex-wrap items-center gap-x-3 gap-y-1 text-[12.5px] text-tlum">
               <span><b className="cislice text-[16px] font-bold text-inkoust">{pocet90}</b>{t("incidentů za 90 dní")}</span>
-              {porovnani90 && (
+              {porovnani90 ? (
                 <span title={`Průměr posledních ${porovnani90.zaLet} let je ${cislem(porovnani90.prumer)} incidentu na čtvrtletí.`}>
                   <Odznak ton={porovnani90.smer === "vyssi" ? "pozor" : porovnani90.smer === "nizsi" ? "klid" : "neutral"} duraz="silny">
-                    {porovnani90.slovo} než průměr
+                    {porovnani90.slovo}
                   </Odznak>
                 </span>
+              ) : (
+                /*
+                  Bez srovnatelného období se neporovnává. Pravidelný sběr běží
+                  kratší dobu než okno průměru, takže vyšší dnešní číslo by
+                  měřilo náš sběr, ne skutečnost.
+                */
+                <Napoveda popis={<span className="block">Pravidelný sběr běží od července 2026. Starší záznamy jsou doplněné zpětně a zachytily jen to nejviditelnější, takže se s dneškem porovnávat nedají.</span>}>
+                  <span className="text-[12px] text-tlum2">období nejsou srovnatelná</span>
+                </Napoveda>
               )}
               <span><b className="cislice text-[16px] font-bold text-inkoust">{pocetZaznamu}</b>{t("záznamů od roku 2014")}</span>
             </p>

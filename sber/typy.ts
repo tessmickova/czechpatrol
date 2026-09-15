@@ -46,6 +46,21 @@ export interface RegistrZdroj {
    */
   ocekavaneBlokovani?: boolean;
   /**
+   * Je tenhle zdroj ÚPLNÝ autoritativní seznam pro území a typ opatření,
+   * kterých se týká? Jen takový zdroj smí doložit i zápor — tedy že opatření
+   * neplatí.
+   *
+   * Tisková stránka úřadu, RSS novinek ani rozcestník to nejsou: z toho, že
+   * o opatření nepíšou, neplyne, že neexistuje. Aby zdroj mohl mít `true`,
+   * musí být jasné, které území a jaký typ opatření pokrývá celý, jak se
+   * pozná úplnost načtení a co znamená prázdný výsledek.
+   *
+   * Dnes tuhle podmínku nesplňuje ani jeden náš zdroj. Je to schválně:
+   * radši ať web přizná, že zápor nemá doložený, než aby ho vyrobil
+   * z absence klíčového slova.
+   */
+  autoritativni?: boolean;
+  /**
    * Ověřeno živým stažením. Nové zdroje sem přidávejte s false;
    * `npm run sber:zdroje` napíše, které adresy skutečně odpovídají.
    */

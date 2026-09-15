@@ -65,7 +65,7 @@ function OdznakPorovnani({ p }: { p: Porovnani | null }) {
   if (!p) return null;
   return (
     <Odznak ton={p.smer === "vyssi" ? "pozor" : p.smer === "nizsi" ? "klid" : "neutral"} duraz="silny" trida="mt-1.5 self-start">
-      {p.slovo} než průměr
+      {p.slovo}
     </Odznak>
   );
 }

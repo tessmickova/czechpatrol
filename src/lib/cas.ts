@@ -52,21 +52,55 @@ export function stariHodin(iso: string | null | undefined, ted = Date.now()): nu
   return Math.max(0, (ted - t) / 3_600_000);
 }
 
-export type Cerstvost = "cerstve" | "starsi" | "zastarale" | "nezname";
+export type Cerstvost = "cerstve" | "starsi" | "zastarale" | "nezname" | "budoucnost";
+
+/*
+  Lhůty čerstvosti podle typu údaje.
+
+  Jedna univerzální lhůta nedávala smysl: týdenní šetření cen paliva je po
+  třech dnech pořád aktuální, kdežto provozní stav po třech dnech neříká nic.
+  Každý údaj má proto vlastní okno podle toho, jak rychle se doopravdy mění.
+*/
+export const LHUTY = {
+  /** Provozní stavy a úřední opatření — mění se v řádu hodin. */
+  provoz: { cerstve: 6, starsi: 24 },
+  /** Hodnocení a přehledy, které se přepočítávají denně. */
+  prehled: { cerstve: 24, starsi: 72 },
+  /** Týdenní šetření (ceny pohonných hmot). Nové číslo přijde jednou za týden. */
+  tydenni: { cerstve: 8 * 24, starsi: 14 * 24 },
+} as const;
+
+export type Lhuta = keyof typeof LHUTY;
 
 /**
- * Čerstvost podkladu: do 24 h čerstvé, do 72 h starší, pak zastaralé.
- * Neověřené nikdy nevypadá jako čerstvé.
+ * Čerstvost podkladu.
+ *
+ * Čas z budoucnosti dostane vlastní stav, ne zelenou: je to chyba dat nebo
+ * špatně nastavené hodiny a tvářit se u toho, že je všechno ověřené,
+ * by bylo nejhorší možné chování. Neznámý a nečitelný čas zelený není nikdy.
  */
-export function cerstvost(iso: string | null | undefined, ted = Date.now()): Cerstvost {
-  const h = stariHodin(iso, ted);
-  if (h === null) return "nezname";
-  if (h <= 24) return "cerstve";
-  if (h <= 72) return "starsi";
+export function cerstvost(iso: string | null | undefined, ted = Date.now(), lhuta: Lhuta = "prehled"): Cerstvost {
+  if (!iso) return "nezname";
+  const t = new Date(iso).getTime();
+  if (Number.isNaN(t)) return "nezname";
+
+  // Minutová rezerva na rozdíl hodin mezi serverem a prohlížečem.
+  const hodinDopredu = (t - ted) / 3_600_000;
+  if (hodinDopredu > 0.05) return "budoucnost";
+
+  const h = Math.max(0, (ted - t) / 3_600_000);
+  const l = LHUTY[lhuta];
+  if (h <= l.cerstve) return "cerstve";
+  if (h <= l.starsi) return "starsi";
   return "zastarale";
 }
 
 export function stariSlovy(iso: string | null | undefined, ted = Date.now()): string {
+  if (iso) {
+    const t = new Date(iso).getTime();
+    // Čas z budoucnosti se nepřevádí na „před 0 h“ — to by vypadalo jako čerstvost.
+    if (!Number.isNaN(t) && t - ted > 3 * 60_000) return "čas z budoucnosti";
+  }
   const h = stariHodin(iso, ted);
   if (h === null) return "neověřeno";
   if (h < 1) return "před méně než hodinou";

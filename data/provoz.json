@@ -1,5 +1,5 @@
 {
-  "overeno": "2026-09-15T06:31:32.570Z",
+  "overeno": null,
   "polozky": [
     {
       "klic": "vycestovani",
@@ -13,7 +13,7 @@
         "delší čekací doby na konkrétních přechodech",
         "omezení vstupu vyhlášené sousedním státem, ne ČR"
       ],
-      "overeno": "2026-09-15T06:31:32.570Z",
+      "overeno": null,
       "zdroje": [
         {
           "nazev": "Ministerstvo vnitra ČR",
@@ -31,7 +31,10 @@
           "primarni": true,
           "jazyk": "cs"
         }
-      ]
+      ],
+      "zkontrolovano": "2026-09-15T06:31:32.570Z",
+      "pokryti": "orientacni",
+      "pokrytiDuvod": "zdroje přečteny, ale žádný z nich není úplný seznam — zápor z nich neplyne"
     },
     {
       "klic": "hranice",
@@ -45,7 +48,7 @@
         "uzavření jednotlivého přechodu z technických důvodů",
         "omezení nákladní dopravy"
       ],
-      "overeno": "2026-09-15T06:31:32.570Z",
+      "overeno": null,
       "zdroje": [
         {
           "nazev": "Dopravní info (ŘSD)",
@@ -63,7 +66,10 @@
           "primarni": true,
           "jazyk": "cs"
         }
-      ]
+      ],
+      "zkontrolovano": "2026-09-15T06:31:32.570Z",
+      "pokryti": "orientacni",
+      "pokrytiDuvod": "zdroje přečteny, ale žádný z nich není úplný seznam — zápor z nich neplyne"
     },
     {
       "klic": "palivo",
@@ -77,7 +83,7 @@
         "skokový růst cen bez omezení dostupnosti",
         "uvolnění nouzových zásob Správou státních hmotných rezerv"
       ],
-      "overeno": "2026-09-15T06:31:32.570Z",
+      "overeno": null,
       "zdroje": [
         {
           "nazev": "Správa státních hmotných rezerv",
@@ -95,7 +101,10 @@
           "primarni": true,
           "jazyk": "cs"
         }
-      ]
+      ],
+      "zkontrolovano": "2026-09-15T06:31:32.570Z",
+      "pokryti": "orientacni",
+      "pokrytiDuvod": "zdroje přečteny, ale žádný z nich není úplný seznam — zápor z nich neplyne"
     },
     {
       "klic": "elektrina",
@@ -109,7 +118,7 @@
         "omezení odběru pro velké spotřebitele",
         "rozsáhlejší výpadek přenosové soustavy"
       ],
-      "overeno": "2026-09-15T06:31:32.570Z",
+      "overeno": null,
       "zdroje": [
         {
           "nazev": "ČEPS — provoz přenosové soustavy",
@@ -127,7 +136,10 @@
           "primarni": true,
           "jazyk": "cs"
         }
-      ]
+      ],
+      "zkontrolovano": "2026-09-15T06:31:32.570Z",
+      "pokryti": "orientacni",
+      "pokrytiDuvod": "zdroje přečteny, ale žádný z nich není úplný seznam — zápor z nich neplyne"
     },
     {
       "klic": "plyn",
@@ -140,7 +152,7 @@
         "vyhlášení stavu nouze v plynárenství",
         "výrazný pokles zásob mimo topnou sezónu"
       ],
-      "overeno": "2026-09-15T06:31:32.570Z",
+      "overeno": null,
       "zdroje": [
         {
           "nazev": "OTE — operátor trhu",
@@ -150,7 +162,10 @@
           "primarni": true,
           "jazyk": "cs"
         }
-      ]
+      ],
+      "zkontrolovano": "2026-09-15T06:31:32.570Z",
+      "pokryti": "orientacni",
+      "pokrytiDuvod": "zdroje přečteny, ale žádný z nich není úplný seznam — zápor z nich neplyne"
     },
     {
       "klic": "banky",
@@ -164,7 +179,7 @@
         "omezení bezhotovostních plateb při technické poruše",
         "opatření ČNB k platebnímu styku"
       ],
-      "overeno": "2026-09-15T06:31:32.570Z",
+      "overeno": null,
       "zdroje": [
         {
           "nazev": "Česká národní banka",
@@ -174,7 +189,10 @@
           "primarni": true,
           "jazyk": "cs"
         }
-      ]
+      ],
+      "zkontrolovano": "2026-09-15T06:31:32.570Z",
+      "pokryti": "orientacni",
+      "pokrytiDuvod": "zdroje přečteny, ale žádný z nich není úplný seznam — zápor z nich neplyne"
     },
     {
       "klic": "komunikace",
@@ -188,7 +206,7 @@
         "regionální výpadek datové sítě",
         "vyhlášení stavu kybernetického nebezpečí"
       ],
-      "overeno": "2026-09-15T06:31:32.570Z",
+      "overeno": null,
       "zdroje": [
         {
           "nazev": "Český telekomunikační úřad",
@@ -206,7 +224,10 @@
           "primarni": true,
           "jazyk": "cs"
         }
-      ]
+      ],
+      "zkontrolovano": "2026-09-15T06:31:32.570Z",
+      "pokryti": "orientacni",
+      "pokrytiDuvod": "zdroje přečteny, ale žádný z nich není úplný seznam — zápor z nich neplyne"
     },
     {
       "klic": "bezny-zivot",
@@ -219,7 +240,7 @@
         "krajské mimořádné opatření",
         "pokyn hejtmana nebo krizového štábu"
       ],
-      "overeno": "2026-09-15T06:31:32.570Z",
+      "overeno": null,
       "zdroje": [
         {
           "nazev": "Vláda ČR",
@@ -237,7 +258,11 @@
           "primarni": true,
           "jazyk": "cs"
         }
-      ]
+      ],
+      "zkontrolovano": "2026-09-15T06:31:32.570Z",
+      "pokryti": "orientacni",
+      "pokrytiDuvod": "zdroje přečteny, ale žádný z nich není úplný seznam — zápor z nich neplyne"
     }
-  ]
+  ],
+  "zkontrolovano": "2026-09-15T06:31:32.570Z"
 }

@@ -402,6 +402,19 @@ export function posledniOvereni(): string | null {
 }
 
 /**
+ * Kdy se sběr naposledy díval do zdrojů.
+ *
+ * Není to ověření. Je to odpověď na otázku „běží to vůbec?“ — a ta se musí
+ * dát zodpovědět i ve chvíli, kdy z kontroly žádný doložený závěr neplyne.
+ */
+export function posledniKontrola(): string | null {
+  const casy = [pravniStav(), nato(), provoz()]
+    .flatMap((x) => x.polozky.map((p) => p.zkontrolovano))
+    .filter((x): x is string => Boolean(x));
+  return casy.length ? casy.slice().sort().at(-1)! : null;
+}
+
+/**
  * Jak dlouho se nezměnil právní stav ČR ani stav NATO.
  *
  * Klid je taky informace — bez něj by web ukazoval jen to, co se pokazilo.

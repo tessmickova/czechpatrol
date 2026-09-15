@@ -9,7 +9,17 @@
   do roku 2014, ale pravidelný sběr běží krátce; kdyby se průměroval celý
   archiv, vyšlo by skoro každé čtvrtletí jako „velmi významně vyšší“
   a slovo by přestalo něco znamenat.
+
+  A hlavně: dokud srovnávané období není celé pokryté stejně hustým sběrem,
+  NENÍ z rozdílu závěr o růstu hrozby. Zpětně doplněný archiv zachytil jen to
+  nejviditelnější, kdežto dnešní sběr bere i drobnosti — vyšší číslo pak měří
+  náš sběr, ne skutečnost. V takovém případě se tu žádné hodnocení nevrací,
+  jen holý počet a přiznání, že období nejsou srovnatelná. Slovo „významně“
+  je statistický závěr; bez metody, která ho unese, tu nemá co dělat.
 */
+
+/** Měsíc, od kterého běží pravidelný sběr. Starší záznamy jsou doplněné zpětně. */
+export const PLNE_POKRYTI_OD = "2026-07";
 
 export type SmerPorovnani = "vyssi" | "nizsi" | "stejne";
 
@@ -35,13 +45,13 @@ export interface Porovnani {
   případy sem nebo tam nedají vydávat za trend.
 */
 const PASMA_POMERU: { od: number; slovo: string; smer: SmerPorovnani }[] = [
-  { od: 2.0, slovo: "velmi významně vyšší", smer: "vyssi" },
-  { od: 1.5, slovo: "středně vyšší", smer: "vyssi" },
-  { od: 1.15, slovo: "mírně vyšší", smer: "vyssi" },
+  { od: 2.0, slovo: "víc než dvojnásobek průměru", smer: "vyssi" },
+  { od: 1.5, slovo: "nad průměrem", smer: "vyssi" },
+  { od: 1.15, slovo: "mírně nad průměrem", smer: "vyssi" },
   { od: 0.85, slovo: "na úrovni průměru", smer: "stejne" },
-  { od: 0.65, slovo: "mírně nižší", smer: "nizsi" },
-  { od: 0.4, slovo: "středně nižší", smer: "nizsi" },
-  { od: 0, slovo: "velmi významně nižší", smer: "nizsi" },
+  { od: 0.65, slovo: "mírně pod průměrem", smer: "nizsi" },
+  { od: 0.4, slovo: "pod průměrem", smer: "nizsi" },
+  { od: 0, slovo: "výrazně pod průměrem", smer: "nizsi" },
 ];
 
 /**
@@ -68,11 +78,26 @@ export function prumerNaOkno(
   return vOkne / pocetOken;
 }
 
+/**
+ * Je celé srovnávané okno pokryté stejně hustým sběrem?
+ *
+ * Když ne, porovnání s průměrem neříká nic o skutečnosti — měří, jak se
+ * v čase měnil náš vlastní sběr.
+ */
+export function srovnatelneObdobi(ted: number, roky = 2, pokrytiOd = PLNE_POKRYTI_OD): boolean {
+  const zacatekOkna = new Date(ted - roky * 365 * 86_400_000);
+  const [r, m] = pokrytiOd.split("-").map(Number);
+  return zacatekOkna.getTime() >= Date.UTC(r, m - 1, 1);
+}
+
 export function porovnejSPrumerem(
   hodnota: number,
   prumer: number | null,
   roky = 2,
+  ted = Date.now(),
 ): Porovnani | null {
+  // Nesrovnatelná období: žádné hodnocení. Číslo ano, závěr ne.
+  if (!srovnatelneObdobi(ted, roky)) return null;
   if (prumer === null || prumer <= 0) return null;
   const pomer = hodnota / prumer;
   const p = PASMA_POMERU.find((x) => pomer >= x.od)!;

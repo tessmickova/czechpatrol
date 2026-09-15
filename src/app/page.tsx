@@ -1,6 +1,6 @@
 import { BannerStari } from "@/components/cerstvost";
 import { Dashboard } from "@/components/dashboard";
-import { celkovyStav, hybridniTlak, incidenty, kampane, kandidati, nato, nazvyZemi, nepotvrzene, posledniOvereni, pravniStav, provoz, tlakCr, tydny, overovaneAktivni, overovaneUzavrene, pocetZemeObdobi, urovenObcanu, urovenZemeObdobi, watchlist } from "@/lib/data";
+import { celkovyStav, hybridniTlak, incidenty, kampane, kandidati, nato, nazvyZemi, nepotvrzene, posledniKontrola, posledniOvereni, pravniStav, provoz, tlakCr, tydny, overovaneAktivni, overovaneUzavrene, pocetZemeObdobi, urovenObcanu, urovenZemeObdobi, watchlist } from "@/lib/data";
 import { hlavniVeta } from "@/lib/veta";
 
 /**
@@ -11,7 +11,7 @@ import { hlavniVeta } from "@/lib/veta";
 export default function Prehled() {
   return (
     <>
-      <BannerStari overeno={posledniOvereni()} />
+      <BannerStari overeno={posledniOvereni()} zkontrolovano={posledniKontrola()} />
       <Dashboard
         stav={celkovyStav()}
         pravni={pravniStav().polozky}

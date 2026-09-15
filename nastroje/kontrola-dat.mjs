@@ -6,9 +6,11 @@
  * Chyba (nenulový návrat) = něco, co nesmí do produkce:
  *   duplicitní id nebo slug, aktualizace bez existujícího případu,
  *   opatření nebo reakce s původcem, „potvrzený“ záznam bez odkazu,
- *   neplatné datum, zjištění před událostí, oprava bez cíle.
+ *   neplatné datum, zjištění před událostí, oprava bez cíle,
+ *   zdroj vydaný víc než měsíc před událostí (nemůže ji dokládat).
  * Varování = k prověření, ale nezastaví nasazení:
- *   případ bez zdroje s URL, ověření starší než 72 h, chybějící čas.
+ *   případ bez zdroje s URL, ověření starší než 72 h, chybějící čas,
+ *   zdroj o pár dní starší než událost, úřední atribuce bez primárního zdroje.
  */
 import fs from "node:fs";
 import path from "node:path";
@@ -55,6 +57,43 @@ for (const i of incidenty) {
   if (d === "pripad" && !sUrl) varovani.push(`${i.slug}: případ bez zdroje s URL${i.archivniZaznam ? " (označen jako archivní)" : ""}`);
   if (!i.lidskyOvereno) varovani.push(`${i.slug}: neprošel lidskou kontrolou — na webu se nezobrazí`);
   for (const z of i.zdroje ?? []) if (z.url && !/^https?:\/\//.test(z.url)) chyby.push(`${i.slug}: zdroj „${z.nazev}“ má neplatnou adresu`);
+
+  /*
+    Dokument vydaný dlouho PŘED událostí ji nemůže dokládat.
+
+    Odkud to pravidlo je: u záznamu o uzavření moldavského vzdušného prostoru
+    (8. 9. 2026) stál jako úřední zdroj dokument norské vlády ze 13. 2. 2025 —
+    obecné odsouzení narušování moldavského vzdušného prostoru, které tuhle
+    událost nepopisuje. V datech u něj přitom bylo napsané datum 9. 9. 2026
+    a záznam z něj měl úřední připsání odpovědnosti. Úřední doména, funkční
+    odkaz ani HTTP 200 nejsou doklad obsahu.
+
+    Den rozdílu je běžný: agentura píše o chystané cestě večer předtím, jiné
+    časové pásmo posune datum. Měsíc a víc už není ta samá věc.
+  */
+  for (const z of i.zdroje ?? []) {
+    if (!z.publikovano || !platneDatum(z.publikovano) || !platneDatum(i.datumUdalosti)) continue;
+    const dni = (new Date(i.datumUdalosti).getTime() - new Date(z.publikovano).getTime()) / 86_400_000;
+    if (dni > 30) {
+      chyby.push(
+        `${i.slug}: zdroj „${z.nazev}“ je z ${z.publikovano.slice(0, 10)}, ` +
+          `tedy ${Math.round(dni)} dní před událostí (${i.datumUdalosti.slice(0, 10)}) — nemůže ji dokládat`,
+      );
+    } else if (dni > 1) {
+      varovani.push(
+        `${i.slug}: zdroj „${z.nazev}“ vyšel ${Math.round(dni)} dní před událostí — ověřit, že ji opravdu popisuje`,
+      );
+    }
+  }
+
+  /*
+    Úřední připsání odpovědnosti potřebuje úřední doklad. Bez primárního zdroje
+    je to převzaté tvrzení, ne úřední akt — a na webu se přitom počítá do
+    „úředně přisouzeno“.
+  */
+  if (i.atribuce === "oficialni" && !(i.zdroje ?? []).some((z) => z.primarni)) {
+    varovani.push(`${i.slug}: úřední připsání odpovědnosti bez primárního zdroje`);
+  }
 }
 for (const n of nepotvrzene) {
   if (!(n.zdroje ?? []).some((z) => z.url)) varovani.push(`nepotvrzeno/${n.id}: bez zdroje s URL`);
