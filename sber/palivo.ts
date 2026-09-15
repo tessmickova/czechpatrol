@@ -286,25 +286,60 @@ export async function zKatalogu(): Promise<string[]> {
     const tydenni = nalezene.filter((r) => /tyden|week|W$|P1W/.test(bezDiakritiky(r[iOpakovani] ?? "")));
     const poradi = [...tydenni, ...nalezene.filter((r) => !tydenni.includes(r))];
 
-    const adresy: string[] = [];
+    /*
+      Ze záznamu sady i z její stránky vytáhneme VŠECHNY odkazy, ne jen ty
+      končící na .csv. Běh v 02:05 UTC ukázal proč: katalog vedl na správnou
+      sadu („Průměrné spotřebitelské ceny pohonných hmot – týdenní šetření",
+      opakování R/P1W), ale jediný odkaz s příponou .csv na té stránce byl
+      číselník statistických proměnných, ne data.
+
+      Pořadí rozhoduje podle toho, co je v adrese: nejdřív odkazy, které nesou
+      název sady, pak ostatní. Každá se zkusí přečíst — sada, která se nepřečte,
+      se jen přeskočí a řekne se to.
+    */
+    const odkazy: string[] = [];
+    let ukazkaStranky = "";
     for (const r of poradi.slice(0, 5)) {
       for (const kam of [r[iIri], r[iStranka]].filter(Boolean)) {
         try {
           const { stav: s2, telo: t2 } = await stahni(kam, 1);
           if (s2 >= 400) continue;
-          for (const m of t2.matchAll(/https?:\/\/[^"'\s<>\\]+?\.csv/g)) {
-            if (!adresy.includes(m[0])) adresy.push(m[0]);
+          if (!ukazkaStranky) ukazkaStranky = t2.slice(0, 500).replace(/\s+/g, " ");
+          for (const m of t2.matchAll(/https?:\/\/[^"'\s<>\\)]+/g)) {
+            const a = m[0].replace(/[.,;]+$/, "");
+            if (!odkazy.includes(a)) odkazy.push(a);
           }
         } catch {
           // Jedna nedosažitelná stránka katalog neshazuje.
         }
       }
-      if (adresy.length) break;
+      if (odkazy.length) break;
     }
 
-    if (adresy.length) console.log(`[palivo] z katalogu vyšly adresy: ${adresy.slice(0, 5).join(", ")}`);
-    else console.log("[palivo] v záznamech sad se nenašel žádný odkaz na .csv");
-    return adresy.slice(0, 5);
+    const nazevSady = bezDiakritiky((poradi[0]?.[iNazev] ?? "").replace(/\s+/g, "_"));
+    const skore = (a: string) => {
+      const t = bezDiakritiky(a);
+      if (/ceny_phm|cenyphm/.test(t)) return 0;
+      if (/kestazeni|download|\.csv/.test(t)) return 1;
+      if (nazevSady && t.includes(nazevSady.slice(0, 10))) return 2;
+      return 3;
+    };
+    const adresy = odkazy
+      .filter((a) => !/\.(pdf|xlsx?|docx?|zip|png|jpe?g|js|css)$/i.test(a) && !/dokumentace$/i.test(a))
+      .sort((a, b) => skore(a) - skore(b));
+
+    if (!adresy.length && ukazkaStranky) {
+      // Bez ukázky by se nedalo poznat, jestli stránka odkazy nemá, nebo jsme je nepoznali.
+      console.log(`[palivo] záznam sady bez použitelných odkazů, začátek stránky: ${ukazkaStranky}`);
+    }
+
+    /*
+      Strop na čtyřech adresách. Každá nedosažitelná stojí dvacet sekund
+      časového limitu a hodinový sběr je společný běh — pátá adresa už by
+      zdržovala víc, než kolik má naději přinést.
+    */
+    if (adresy.length) console.log(`[palivo] z katalogu vyšly adresy: ${adresy.slice(0, 4).join(", ")}`);
+    return adresy.slice(0, 4);
   } catch (e) {
     console.log(`[palivo] katalog ČSÚ nedostupný: ${e instanceof Error ? e.message : e}`);
     return [];
