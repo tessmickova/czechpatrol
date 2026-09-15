@@ -199,6 +199,21 @@ async function main() {
   provoz.overeno = nejstarsiOvereni(provoz.polozky);
   zapisJson("provoz.json", provoz);
 
+  /* ---------- automatický sběr událostí ---------- */
+  if (!jenProvoz) {
+    try {
+      const u = await sbirejUdalosti();
+      console.log(
+        `[sber] události: nových kandidátů ${u.novych}, ve frontě ${u.celkem} (s výřezem zdroje ${u.sVyrezem}), odmítnutých ${u.odmitnutych}` +
+          (u.zeSiti ? `, z profilů na sítích ${u.zeSiti}` : "") +
+          (u.podezrelych ? `, z toho vážně vypadá ${u.podezrelych} — projít ve správě` : "") +
+          (u.nedostupne.length ? `, nedostupné: ${u.nedostupne.join("; ")}` : ""),
+      );
+    } catch (e) {
+      console.log(`[sber] sběr událostí selhal, ostatní pokračuje: ${e instanceof Error ? e.message : e}`);
+    }
+  }
+
   /* ---------- ceny pohonných hmot ---------- */
   /*
     Vlastní blok, ne součást provozní položky: cena je změřená řada, kdežto

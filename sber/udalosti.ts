@@ -5,6 +5,9 @@ import { ctiRss, normalizuj, stahni } from "./nacti";
 import { ZDROJE_UDALOSTI, type ZdrojUdalosti } from "./zdroje-udalosti";
 import { dostupnyPoskytovatel, strukturovane } from "./model";
 import { vyrezZeStranky, type VyrezZdroje } from "./text-zdroje";
+import { ctenaProfily } from "./socialni";
+import { ctiProfil } from "./cteni-socialni";
+import type { Polozka } from "./typy";
 
 /*
   Automatický sběr událostí.
@@ -24,7 +27,7 @@ export interface Kandidat {
   id: string;
   zachyceno: string;
   publikovano: string | null;
-  zdroj: { nazev: string; url: string; typ: "primary" | "wire" | "media"; primarni: boolean };
+  zdroj: { nazev: string; url: string; typ: "primary" | "wire" | "media" | "social"; primarni: boolean };
   titulek: string;
   titulekPuvodni: string;
   shrnuti: string;
@@ -34,6 +37,13 @@ export interface Kandidat {
   druhOdhad: "pripad" | "opatreni" | "reakce" | "neurceno";
   /** „clovek“ = vytáhl to člověk z odmítnutých, proti sítu. */
   klasifikace: "pravidla" | "model" | "clovek";
+  /*
+    Kandidát z profilu na sociální síti. Je to SIGNÁL, ne doklad: nesmí sám
+    vytvořit záznam ani zvýšit jistotu. Člověk k němu musí dohledat nezávislé
+    potvrzení — a u podvrženého profilu je tím potvrzením i to, že příspěvek
+    vůbec existuje.
+  */
+  zeSite?: { kdo: string; role: string; sit: string } | null;
   /*
     Výřez ze zdrojového článku, stažený v Actions. Ověřovací rutina běží
     v sandboxu, kde jsou zpravodajské domény blokované — ověřuje proto
@@ -80,7 +90,7 @@ export interface Odmitnuty {
   id: string;
   zachyceno: string;
   publikovano: string | null;
-  zdroj: { nazev: string; url: string; typ: "primary" | "wire" | "media"; primarni: boolean };
+  zdroj: { nazev: string; url: string; typ: "primary" | "wire" | "media" | "social"; primarni: boolean };
   titulek: string;
   shrnuti: string;
   duvod: DuvodOdmitnuti;
@@ -532,9 +542,35 @@ async function posudOdmitnute(polozky: Odmitnuty[]): Promise<Odmitnuty[]> {
   });
 }
 
-export async function sbirejUdalosti(): Promise<{ novych: number; celkem: number; nedostupne: string[]; odmitnutych: number; podezrelych: number; sVyrezem: number }> {
+export async function sbirejUdalosti(): Promise<{ novych: number; celkem: number; nedostupne: string[]; odmitnutych: number; podezrelych: number; sVyrezem: number; zeSiti: number }> {
   const stazene = await Promise.all(ZDROJE_UDALOSTI.map(stahniZdroj));
-  const nedostupne = stazene.filter((s) => !s.ok).map((s) => `${s.z.klic}: ${s.chyba}`);
+
+  /*
+    Profily představitelů a institucí. Ministr často řekne věc nejdřív na svém
+    profilu a teprve potom v tiskové zprávě; kdo profily nesleduje, dozví se to
+    o hodiny později. Čtou se ale jen ty s doloženou pravostí — a co z nich
+    přijde, je kandidát ke kontrole, nikdy hotový záznam.
+  */
+  const profily = await Promise.all(ctenaProfily().map((p) => ctiProfil(p)));
+  /* Týž tvar jako u zpravodajských zdrojů, aby se zbytek sběru nemusel měnit. */
+  type Zdrojovy = { z: ZdrojUdalosti; ok: boolean; polozky: Polozka[]; chyba?: string };
+  const zeSiti: Zdrojovy[] = profily
+    .filter((v): v is typeof v => v.polozky.length > 0)
+    .map((v) => ({
+      z: {
+        klic: v.profil.klic,
+        nazev: `${v.profil.kdo} (${v.profil.role}) — ${v.profil.sit}`,
+        url: v.profil.odkaz,
+        jazyk: (v.profil.jazyk === "cs" ? "cs" : "en") as "cs" | "en",
+        primarni: false,
+        typ: "social" as const,
+      },
+      ok: true,
+      polozky: v.polozky,
+    }));
+  const chybyProfilu = profily.filter((v) => Boolean(v.chyba)).map((v) => `${v.profil.klic}: ${v.chyba}`);
+
+  const nedostupne = [...stazene.filter((s) => !s.ok).map((s) => `${s.z.klic}: ${s.chyba}`), ...chybyProfilu];
   const stare = ctiKandidaty();
   const zname = znameZIncidentu();
   const hranice = Date.now() - DNI_ZPET * 86_400_000;
@@ -546,7 +582,7 @@ export async function sbirejUdalosti(): Promise<{ novych: number; celkem: number
   const noveOdmitnute: Odmitnuty[] = [];
 
   const nove: Kandidat[] = [];
-  for (const s of stazene) {
+  for (const s of [...stazene, ...zeSiti]) {
     if (!s.ok) continue;
     for (const p of s.polozky) {
       if (!p.odkaz || adresy.has(p.odkaz) || zname.adresy.has(p.odkaz)) continue;
@@ -589,6 +625,13 @@ export async function sbirejUdalosti(): Promise<{ novych: number; celkem: number
         kategorie,
         druhOdhad: "neurceno",
         klasifikace: "pravidla",
+        /*
+          U kandidáta ze sítě si necháme, čí profil to byl. Člověk pak vidí,
+          jestli mluví ministerstvo, nebo anonymní účet — a hlavně to, že
+          k tomuhle kandidátovi musí dohledat nezávislé potvrzení, protože
+          příspěvek sám nedokládá ani to, že se něco stalo.
+        */
+        zeSite: s.z.typ === "social" ? { kdo: s.z.nazev, role: "profil na síti", sit: s.z.klic } : null,
         shody,
         stav: "ceka",
       });
@@ -634,5 +677,6 @@ export async function sbirejUdalosti(): Promise<{ novych: number; celkem: number
   fs.writeFileSync(SOUBOR_ODMITNUTYCH, JSON.stringify(posouzene, null, 2) + "\n", "utf-8");
 
   const podezrelych = posouzene.filter((o) => o.posouzeni?.podezreni === "vysoke").length;
-  return { novych: doplnene.length, celkem: vse.length, nedostupne, odmitnutych: posouzene.length, podezrelych, sVyrezem };
+  const zeSitiPocet = doplnene.filter((k) => k.zdroj.typ === "social").length;
+  return { novych: doplnene.length, celkem: vse.length, nedostupne, odmitnutych: posouzene.length, podezrelych, sVyrezem, zeSiti: zeSitiPocet };
 }

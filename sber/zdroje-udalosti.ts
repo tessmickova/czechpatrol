@@ -13,7 +13,12 @@ export interface ZdrojUdalosti {
   jazyk: "cs" | "en";
   /** Úřad nebo instituce, která věc sama oznamuje. */
   primarni: boolean;
-  typ: "primary" | "wire" | "media";
+  /*
+    `social` je profil na sociální síti. Nikdy není `primarni`: i pravý profil
+    ministra je signál, ne doklad — a u podvrženého profilu není doložené
+    ani to, kdo příspěvek napsal.
+  */
+  typ: "primary" | "wire" | "media" | "social";
 }
 
 const gn = (dotaz: string, cs: boolean) =>

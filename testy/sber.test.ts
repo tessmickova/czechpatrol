@@ -1,7 +1,9 @@
+import fs from "node:fs";
 import { describe, expect, it } from "vitest";
 import { rozhodni, type Stazeno } from "../sber/rozhodovani";
 import { ZDROJE } from "../sber/zdroje";
 import type { RegistrZdroj } from "../sber/typy";
+import { blueskyFeed, ctenaProfily, mastodonRss, telegramNahled } from "../sber/socialni";
 
 const zdroj = (
   klic: string, tyka: string[], klicova: string[], sledovana: string[] = [],
@@ -184,5 +186,48 @@ describe("pokrytí sledovaných položek", () => {
         expect(kryte.has(k), `položku „${k}“ kryje jen zdroj blokující automaty`).toBe(true);
       }
     }
+  });
+});
+
+describe("profily na sociálních sítích", () => {
+  it("seznam obsahuje jen profily s doloženou pravostí", () => {
+    /*
+      Modrý odznak si koupí kdokoli. Pravost účtu se dokládá odkazem
+      z vlastního webu instituce — bez něj se profil nečte, protože bychom
+      jinak připisovali instituci příspěvky někoho úplně jiného.
+    */
+    for (const p of ctenaProfily()) {
+      expect(p.pravostDolozena, p.klic).toMatch(/^https?:\/\//);
+      expect(p.overenaAdresa, p.klic).toBe(true);
+    }
+  });
+
+  it("nečte se profil bez dokladu pravosti, ani když má ověřenou adresu", () => {
+    const podvrh = {
+      klic: "x", kdo: "Ministr", role: "ministr", sit: "mastodon" as const, ucet: "x@example.invalid",
+      url: "https://example.invalid/@x.rss", odkaz: "https://example.invalid/@x", jazyk: "cs",
+      pravostDolozena: "", overenaAdresa: true,
+    };
+    expect([podvrh].filter((p) => p.pravostDolozena && p.overenaAdresa)).toHaveLength(0);
+  });
+
+  it("adresy se skládají podle veřejných rozhraní jednotlivých sítí", () => {
+    expect(mastodonRss("social.example", "urad")).toBe("https://social.example/@urad.rss");
+    expect(blueskyFeed("urad.example")).toContain("public.api.bsky.app");
+    expect(telegramNahled("kanal")).toBe("https://t.me/s/kanal");
+  });
+});
+
+describe("sběr nesmí tiše vynechat celý krok", () => {
+  it("hodinový běh volá sběr událostí", () => {
+    /*
+      Tenhle test existuje kvůli skutečné chybě: při přepisu rozhodovací
+      logiky 15. 9. 2026 vypadlo z běhu celé volání sbirejUdalosti(). Sběr
+      dál hlásil úspěch, jen přestal zachytávat události — a nikde to nebylo
+      vidět, protože „nula nových kandidátů" vypadá stejně jako klid.
+    */
+    const beh = fs.readFileSync(new URL("../sber/index.ts", import.meta.url), "utf-8");
+    expect(beh).toContain("await sbirejUdalosti()");
+    expect(beh).toContain("await sbirejPalivo()");
   });
 });

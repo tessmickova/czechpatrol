@@ -54,6 +54,24 @@ for (const i of incidenty) {
   if (i.datumZjisteni && i.datumZjisteni.slice(0, 10) < i.datumUdalosti.slice(0, 10)) chyby.push(`${i.slug}: zjištění dřív než událost`);
   const sUrl = (i.zdroje ?? []).some((z) => z.url);
   if ((i.jistota === "potvrzeno" || i.jistota === "vysoka") && !sUrl) chyby.push(`${i.slug}: jistota „${i.jistota}“ bez odkazu na zdroj`);
+
+  /*
+    Sociální síť sama o sobě nic nedokládá.
+
+    Příspěvek na profilu — i na pravém profilu ministra — je signál, ne důkaz.
+    Nedá se z něj ověřit, co se stalo, a u podvrženého profilu ani to, kdo ho
+    napsal. Záznam, pod kterým nestojí nic než sítě, proto nesmí mít vysokou
+    jistotu ani úřední připsání odpovědnosti.
+  */
+  const jenSite = (i.zdroje ?? []).length > 0 && (i.zdroje ?? []).every((z) => z.typ === "social");
+  if (jenSite) {
+    if (i.jistota === "potvrzeno" || i.jistota === "vysoka") {
+      chyby.push(`${i.slug}: jistota „${i.jistota}“ jen ze sociálních sítí — ty samy nic nedokládají`);
+    }
+    if (i.atribuce === "oficialni") {
+      chyby.push(`${i.slug}: úřední připsání odpovědnosti jen ze sociálních sítí`);
+    }
+  }
   if (d === "pripad" && !sUrl) varovani.push(`${i.slug}: případ bez zdroje s URL${i.archivniZaznam ? " (označen jako archivní)" : ""}`);
   if (!i.lidskyOvereno) varovani.push(`${i.slug}: neprošel lidskou kontrolou — na webu se nezobrazí`);
   for (const z of i.zdroje ?? []) if (z.url && !/^https?:\/\//.test(z.url)) chyby.push(`${i.slug}: zdroj „${z.nazev}“ má neplatnou adresu`);
