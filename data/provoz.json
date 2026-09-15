@@ -32,7 +32,7 @@
           "jazyk": "cs"
         }
       ],
-      "zkontrolovano": "2026-09-15T15:01:43.535Z",
+      "zkontrolovano": "2026-09-15T15:14:45.619Z",
       "pokryti": "orientacni",
       "pokrytiDuvod": "přečteno mvcr, mzv; žádný z nich není úplný seznam, zápor z nich neplyne"
     },
@@ -67,7 +67,7 @@
           "jazyk": "cs"
         }
       ],
-      "zkontrolovano": "2026-09-15T15:01:43.535Z",
+      "zkontrolovano": "2026-09-15T15:14:45.619Z",
       "pokryti": "nedostupne",
       "pokrytiDuvod": "nepodařilo se přečíst: dopravni-info"
     },
@@ -102,9 +102,9 @@
           "jazyk": "cs"
         }
       ],
-      "zkontrolovano": "2026-09-15T15:01:43.535Z",
+      "zkontrolovano": "2026-09-15T15:14:45.619Z",
       "pokryti": "orientacni",
-      "pokrytiDuvod": "přečteno mpo; žádný z nich není úplný seznam, zápor z nich neplyne"
+      "pokrytiDuvod": "přečteno vlada, mpo; žádný z nich není úplný seznam, zápor z nich neplyne"
     },
     {
       "klic": "elektrina",
@@ -137,7 +137,7 @@
           "jazyk": "cs"
         }
       ],
-      "zkontrolovano": "2026-09-15T15:01:43.535Z",
+      "zkontrolovano": "2026-09-15T15:14:45.619Z",
       "pokryti": "orientacni",
       "pokrytiDuvod": "přečteno ceps, eru, ote, mpo; žádný z nich není úplný seznam, zápor z nich neplyne"
     },
@@ -163,7 +163,7 @@
           "jazyk": "cs"
         }
       ],
-      "zkontrolovano": "2026-09-15T15:01:43.535Z",
+      "zkontrolovano": "2026-09-15T15:14:45.619Z",
       "pokryti": "orientacni",
       "pokrytiDuvod": "přečteno eru, ote, mpo; žádný z nich není úplný seznam, zápor z nich neplyne"
     },
@@ -190,9 +190,9 @@
           "jazyk": "cs"
         }
       ],
-      "zkontrolovano": "2026-09-15T15:01:43.535Z",
-      "pokryti": "orientacni",
-      "pokrytiDuvod": "přečteno cnb; žádný z nich není úplný seznam, zápor z nich neplyne"
+      "zkontrolovano": "2026-09-15T15:14:45.619Z",
+      "pokryti": "nedostupne",
+      "pokrytiDuvod": "nepodařilo se přečíst: e-sbirka"
     },
     {
       "klic": "komunikace",
@@ -225,7 +225,7 @@
           "jazyk": "cs"
         }
       ],
-      "zkontrolovano": "2026-09-15T15:01:43.535Z",
+      "zkontrolovano": "2026-09-15T15:14:45.619Z",
       "pokryti": "orientacni",
       "pokrytiDuvod": "přečteno ctu, nukib; žádný z nich není úplný seznam, zápor z nich neplyne"
     },
@@ -259,7 +259,7 @@
           "jazyk": "cs"
         }
       ],
-      "zkontrolovano": "2026-09-15T15:01:43.535Z",
+      "zkontrolovano": "2026-09-15T15:14:45.619Z",
       "pokryti": "orientacni",
       "pokrytiDuvod": "přečteno vlada, hzs; žádný z nich není úplný seznam, zápor z nich neplyne"
     }
