@@ -8486,7 +8486,12 @@
       "policie"
     ],
     "naliehave": null,
-    "stav": "ceka"
+    "stav": "ceka",
+    "vyrez": {
+      "text": "Google News",
+      "stazeno": "2026-09-15T20:02:57.366Z",
+      "stav": 200
+    }
   },
   {
     "id": "k-bd9afcdf8863b740",
@@ -8515,7 +8520,12 @@
       "power grid"
     ],
     "naliehave": null,
-    "stav": "ceka"
+    "stav": "ceka",
+    "vyrez": {
+      "text": "Google News",
+      "stazeno": "2026-09-15T20:02:57.490Z",
+      "stav": 200
+    }
   },
   {
     "id": "k-5edbb94f41699106",
@@ -8544,7 +8554,12 @@
       "power grid"
     ],
     "naliehave": null,
-    "stav": "ceka"
+    "stav": "ceka",
+    "vyrez": {
+      "text": "Google News",
+      "stazeno": "2026-09-15T20:02:57.627Z",
+      "stav": 200
+    }
   },
   {
     "id": "k-3b566a7e6e8785c5",
@@ -8577,7 +8592,12 @@
       "russia"
     ],
     "naliehave": null,
-    "stav": "ceka"
+    "stav": "ceka",
+    "vyrez": {
+      "text": "Google News",
+      "stazeno": "2026-09-15T20:02:57.762Z",
+      "stav": 200
+    }
   },
   {
     "id": "k-bed23a81ba61ff3b",
@@ -8939,7 +8959,12 @@
       "policie"
     ],
     "naliehave": null,
-    "stav": "ceka"
+    "stav": "ceka",
+    "vyrez": {
+      "text": "Google News",
+      "stazeno": "2026-09-15T20:02:57.915Z",
+      "stav": 200
+    }
   },
   {
     "id": "k-885ad0b903f1fc5e",
@@ -9001,7 +9026,12 @@
       "irozhlas"
     ],
     "naliehave": null,
-    "stav": "ceka"
+    "stav": "ceka",
+    "vyrez": {
+      "text": "Google News",
+      "stazeno": "2026-09-15T20:02:58.037Z",
+      "stav": 200
+    }
   },
   {
     "id": "k-a5a91e67344f6b22",
@@ -9032,7 +9062,12 @@
       "power grid"
     ],
     "naliehave": null,
-    "stav": "ceka"
+    "stav": "ceka",
+    "vyrez": {
+      "text": "Google News",
+      "stazeno": "2026-09-15T20:02:58.168Z",
+      "stav": 200
+    }
   },
   {
     "id": "k-ff269ce7224f25af",
@@ -9061,7 +9096,12 @@
       "power grid"
     ],
     "naliehave": null,
-    "stav": "ceka"
+    "stav": "ceka",
+    "vyrez": {
+      "text": "Google News",
+      "stazeno": "2026-09-15T20:02:58.299Z",
+      "stav": 200
+    }
   },
   {
     "id": "k-12e9ff710fbddcdb",
@@ -9088,7 +9128,12 @@
       "arson"
     ],
     "naliehave": null,
-    "stav": "ceka"
+    "stav": "ceka",
+    "vyrez": {
+      "text": "Google News",
+      "stazeno": "2026-09-15T20:02:58.431Z",
+      "stav": 200
+    }
   },
   {
     "id": "k-cba1a9fc66f26a31",
@@ -9556,7 +9601,12 @@
       "russia"
     ],
     "naliehave": null,
-    "stav": "ceka"
+    "stav": "ceka",
+    "vyrez": {
+      "text": "Google News",
+      "stazeno": "2026-09-15T20:02:58.551Z",
+      "stav": 200
+    }
   },
   {
     "id": "k-d0dff67870500d26",
@@ -9884,7 +9934,12 @@
       "sabotaz"
     ],
     "naliehave": null,
-    "stav": "ceka"
+    "stav": "ceka",
+    "vyrez": {
+      "text": "Google News",
+      "stazeno": "2026-09-15T20:02:58.682Z",
+      "stav": 200
+    }
   },
   {
     "id": "k-c349f33643d3b245",
@@ -9918,6 +9973,66 @@
       "stav": 200
     },
     "naliehave": null
+  },
+  {
+    "id": "k-d281fd405fef9ae2",
+    "zachyceno": "2026-09-15T20:02:57.103Z",
+    "publikovano": "2026-09-02T07:00:00.000Z",
+    "zdroj": {
+      "nazev": "Téma: sabotaz (česky)",
+      "url": "https://news.google.com/rss/articles/CBMi2wFBVV95cUxNN0R0SGxKTHFkd05BMHJmZ0J3QWNfT1pFQVpRek9WZjQ3QWpPbmZwV21OUnZmODhjM1BaU3lhdWpJT2c5azg2UVZ4LTJHOWkydUZnYVZQb3NjandQcUlUcTdBTGNaOWM0UjcwbmxyRmR1MlNGVFdsTUpPNFBiQjFYeFNBZGMxbDhkT3QwMFBTemNrTHhHLTBvdDktUVBHdEJGWEcyak1LalVNLXJVcDBZNWdXTXd0eWdGSzJvNXFTS2lDWDVsdEstVjVtWFZUUU03ZEIzdlloR1kxSW8?oc=5",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Sabotáž v Německu odpojila elektrárny. Napětí mezi Berlínem a Moskvou eskaluje - iDNES.cz",
+    "titulekPuvodni": "Sabotáž v Německu odpojila elektrárny. Napětí mezi Berlínem a Moskvou eskaluje - iDNES.cz",
+    "shrnuti": "Sabotáž v Německu odpojila elektrárny. Napětí mezi Berlínem a Moskvou eskaluje iDNES.cz",
+    "kodZeme": "DE",
+    "zeme": "Německo",
+    "kategorie": [
+      "sabotaz"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "sabotaz"
+    ],
+    "naliehave": null,
+    "stav": "ceka",
+    "vyrez": {
+      "text": "Google News",
+      "stazeno": "2026-09-15T20:02:58.798Z",
+      "stav": 200
+    }
+  },
+  {
+    "id": "k-b5c6e94d4bd3dc68",
+    "zachyceno": "2026-09-15T20:02:57.243Z",
+    "publikovano": "2026-09-02T07:00:00.000Z",
+    "zdroj": {
+      "nazev": "Téma: hranice (anglicky)",
+      "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxQN1dWSk5vNmNwYU04d1RXNFpsZnFxV1J6V3hyVzdKSmEtY09CUUZGWEllZnhHWFpkQmxHTElPbTBnb0VZLXZQOTdwYWVFa2NqM3B6bE1aQVdzeEpTT0Y5ZjVSQTloV3EwSF8xbmtzcXFtZVFvSVBKRTBZOWFELThlQ1djRFRhUXF0bkZ5Z1oxY3dVMFVwZHNabmRiRFhhV1ZPMkpPYjYyZEZtaUFrYzQ5dV92WFpHUTlzbWtKbUJR?oc=5",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Poland extends border controls with Lithuania, Germany through April 2027 - lrt.lt",
+    "titulekPuvodni": "Poland extends border controls with Lithuania, Germany through April 2027 - lrt.lt",
+    "shrnuti": "Poland extends border controls with Lithuania, Germany through April 2027 lrt.lt",
+    "kodZeme": "PL",
+    "zeme": "Polsko",
+    "kategorie": [
+      "hranice"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "border controls",
+      "border"
+    ],
+    "naliehave": null,
+    "stav": "ceka"
   },
   {
     "id": "k-390dfdf8edb996b9",
@@ -10119,64 +10234,6 @@
     "shody": [
       "sabotage",
       "attack on",
-      "power grid"
-    ],
-    "naliehave": null,
-    "stav": "ceka"
-  },
-  {
-    "id": "k-8f964837c080fe31",
-    "zachyceno": "2026-09-15T16:32:52.344Z",
-    "publikovano": "2026-09-02T07:00:00.000Z",
-    "zdroj": {
-      "nazev": "Téma: energetika (anglicky)",
-      "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxPZVhoeWNfMVBUWktrTktsZVcta1hQb1NQWGd5dVd5MHh0ZEtDcU5RVGtxMVVsZ1IyWWZmaVlzN3d1V3h0cHlMWDk4T2xzam1RenRRWVFrRzFWWGFyYzdKZUlfRU9uRjFOd3JkQnVqSVNTUlQtVFJGVEJrRHIydFJxcTlUdlpDV0hT?oc=5",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Two sabotage attacks jolt Germany’s power grid - Balkan Green Energy News",
-    "titulekPuvodni": "Two sabotage attacks jolt Germany’s power grid - Balkan Green Energy News",
-    "shrnuti": "Two sabotage attacks jolt Germany’s power grid Balkan Green Energy News",
-    "kodZeme": "DE",
-    "zeme": "Německo",
-    "kategorie": [
-      "sabotaz",
-      "infrastruktura"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "zeSite": null,
-    "shody": [
-      "sabotage",
-      "power grid"
-    ],
-    "naliehave": null,
-    "stav": "ceka"
-  },
-  {
-    "id": "k-5c862e0c6d04d1d0",
-    "zachyceno": "2026-09-15T16:32:52.346Z",
-    "publikovano": "2026-09-02T07:00:00.000Z",
-    "zdroj": {
-      "nazev": "Téma: energetika (anglicky)",
-      "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxOUFpiazdwSFE4a0xGSzBLTHVyNUNuSUc5RnpvTEhYRVV3T3FISTV5eWJkUWJpWjlZQ3pWSFRPWjVmV0V5UkR0YTAyRnpZNTNPcV9CY2NBalpua0VCbGhmYzdNOEVfbERuSHVmeWRmaGIwZVpRMy0zNk9tSW03QnUtNTVCTWtLZ1lGX1d0T3M1N0hkX3NCOGFwby1MamFuMVJUWHpoeE9tQTZkSXBLXzZGT3RMM3o?oc=5",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Germany investigates ‘state-sponsored sabotage’ after attacks on power grids - Anadolu Ajansı",
-    "titulekPuvodni": "Germany investigates ‘state-sponsored sabotage’ after attacks on power grids - Anadolu Ajansı",
-    "shrnuti": "Germany investigates ‘state-sponsored sabotage’ after attacks on power grids Anadolu Ajansı",
-    "kodZeme": "DE",
-    "zeme": "Německo",
-    "kategorie": [
-      "sabotaz",
-      "infrastruktura"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "zeSite": null,
-    "shody": [
-      "sabotage",
       "power grid"
     ],
     "naliehave": null,
