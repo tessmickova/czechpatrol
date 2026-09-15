@@ -1,6 +1,6 @@
 import { describe, expect, it } from "vitest";
 import { duvodOdmitnuti, kandidatId, obsahujeSlovo, odhadniTemata, odhadniZemi, otisk, relevantni } from "../sber/udalosti";
-import { normalizuj, ocistiText } from "../sber/nacti";
+import { normalizuj, ocistiText, polozkyZeStranky } from "../sber/nacti";
 
 describe("automatický sběr událostí — pravidla", () => {
   it("pozná zemi události, i když je zmíněné Rusko jako původce", () => {
@@ -211,5 +211,38 @@ describe("shrnutí z RSS", () => {
 
   it("běžný text zůstane beze změny", () => {
     expect(ocistiText("Dron se zřítil u letiště v Německu.")).toBe("Dron se zřítil u letiště v Německu.");
+  });
+});
+
+describe("čtení stránky, když kanál RSS nefunguje", () => {
+  /*
+    15. 9. 2026 vrátily všechny čtyři úřední kanály (NATO, Policie ČR, NÚKIB,
+    vláda) chybu 404 nebo prázdno. Sběr běžel bez jediného primárního zdroje
+    a nikdo si toho nevšiml: „nula zpráv z úřadu" vypadá stejně jako klid.
+  */
+  const stranka = `
+    <nav><a href="/">Úvod</a> <a href="/kontakty">Kontakty</a></nav>
+    <ul>
+      <li><a href="/clanek/dron-u-zakladny">U letiště armády se zřítil neznámý dron</a></li>
+      <li><a href="https://jiny.example/x">Policie zadržela muže podezřelého ze sabotáže</a></li>
+      <li><a href="/clanek/dron-u-zakladny">U letiště armády se zřítil neznámý dron</a></li>
+    </ul>`;
+
+  it("vybere články a přeskočí navigaci", () => {
+    const p = polozkyZeStranky(stranka, "https://policie.example/aktuality/");
+    expect(p).toHaveLength(2);
+    expect(p[0].nadpis).toBe("U letiště armády se zřítil neznámý dron");
+    // Krátké odkazy jako „Úvod" nebo „Kontakty" články nejsou.
+    expect(p.some((x) => x.nadpis === "Úvod")).toBe(false);
+  });
+
+  it("doplní celou adresu a nezopakuje týž odkaz", () => {
+    const p = polozkyZeStranky(stranka, "https://policie.example/aktuality/");
+    expect(p[0].odkaz).toBe("https://policie.example/clanek/dron-u-zakladny");
+    expect(new Set(p.map((x) => x.odkaz)).size).toBe(p.length);
+  });
+
+  it("stránka bez článků nevrátí nic", () => {
+    expect(polozkyZeStranky("<nav><a href=\"/\">Úvod</a></nav>", "https://x.example/")).toHaveLength(0);
   });
 });

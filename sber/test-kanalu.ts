@@ -1,4 +1,4 @@
-import { ctiRss, stahni } from "./nacti";
+import { ctiRss, polozkyZeStranky, stahni } from "./nacti";
 import { KATALOG, ZDROJE_UDALOSTI } from "./zdroje-udalosti";
 
 /**
@@ -18,7 +18,11 @@ async function zkus(z: (typeof ZDROJE_UDALOSTI)[number]) {
   try {
     const { stav, telo } = await stahni(z.url, 1);
     if (stav >= 400) return { z, stav, polozek: 0 };
-    return { z, stav, polozek: ctiRss(telo).length };
+    const rss = ctiRss(telo).length;
+    /* Stejný nouzový režim jako ve sběru, ať test měří to, co sběr doopravdy dělá. */
+    if (rss) return { z, stav, polozek: rss, jak: "rss" };
+    const ze = polozkyZeStranky(telo, z.url).length;
+    return { z, stav, polozek: ze, jak: ze ? "ze stránky" : "nic" };
   } catch (e) {
     return { z, stav: null, polozek: 0, duvod: e instanceof Error ? e.message : String(e) };
   }
@@ -43,7 +47,7 @@ async function main() {
     console.log(
       `${znacka.padEnd(8)}${String(v.stav ?? "---").padEnd(5)}${String(v.polozek).padStart(4)} položek  ${v.z.klic.padEnd(24)} ${v.z.nazev}${
         "duvod" in v && v.duvod ? `  (${v.duvod})` : ""
-      }`,
+      }${"jak" in v && v.jak === "ze stránky" ? "  (čteno ze stránky, ne z RSS)" : ""}`,
     );
   }
 

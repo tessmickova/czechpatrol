@@ -77,6 +77,38 @@ export function bezAdres(s: string): string {
   return s.replace(/https?:\/\/\S+/g, " ").replace(/\s+/g, " ").trim();
 }
 
+/**
+ * Položky z obyčejné HTML stránky — nouzový režim, když kanál RSS nefunguje.
+ *
+ * Vzniklo to z měření: 15. 9. 2026 vrátily všechny čtyři úřední kanály (NATO,
+ * Policie ČR, NÚKIB, vláda) chybu 404 nebo prázdno. Sběr tak běžel bez
+ * jediného primárního zdroje a nikdo si toho nevšiml, protože „nula nových
+ * zpráv z úřadu" vypadá úplně stejně jako klid.
+ *
+ * Tiskové stránky těch úřadů přitom odpovídají a jde z nich číst — jen to
+ * není RSS. Bere se z nich odkaz a jeho text; datum vydání stránka neuvádí,
+ * takže zůstává prázdné a platí čas zachycení. Je to hrubé, ale zpráva
+ * z úřadu má přijít i tehdy, když se úřadu rozbije kanál.
+ */
+export function polozkyZeStranky(html: string, zaklad: string, max = 40): Polozka[] {
+  const out: Polozka[] = [];
+  const videne = new Set<string>();
+  for (const m of html.matchAll(/<a\b[^>]*href="([^"#]+)"[^>]*>([\s\S]*?)<\/a>/gi)) {
+    const [, href, vnitrek] = m;
+    if (/^(mailto:|javascript:|tel:)/i.test(href)) continue;
+    const nadpis = odtaguj(vnitrek);
+    /* Krátké texty jsou navigace („Úvod", „Více"), dlouhé jsou celé odstavce. */
+    if (nadpis.length < 25 || nadpis.length > 200) continue;
+    let odkaz: string;
+    try { odkaz = new URL(href, zaklad).toString(); } catch { continue; }
+    if (videne.has(odkaz)) continue;
+    videne.add(odkaz);
+    out.push({ nadpis, odkaz, publikovano: null, shrnuti: "" });
+    if (out.length >= max) break;
+  }
+  return out;
+}
+
 export function ctiRss(xml: string): Polozka[] {
   const bloky = [
     ...xml.matchAll(/<item[\s>][\s\S]*?<\/item>/gi),

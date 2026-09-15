@@ -1,7 +1,7 @@
 import { createHash } from "node:crypto";
 import fs from "node:fs";
 import path from "node:path";
-import { ctiRss, normalizuj, stahni } from "./nacti";
+import { ctiRss, normalizuj, polozkyZeStranky, stahni } from "./nacti";
 import { ZDROJE_UDALOSTI, type ZdrojUdalosti } from "./zdroje-udalosti";
 import { dostupnyPoskytovatel, strukturovane } from "./model";
 import { vyrezZeStranky, type VyrezZdroje } from "./text-zdroje";
@@ -670,7 +670,14 @@ async function stahniZdroj(z: ZdrojUdalosti) {
   try {
     const { stav, telo } = await stahni(z.url, 2);
     if (stav >= 400) return { z, ok: false, polozky: [], chyba: `HTTP ${stav}` };
-    return { z, ok: true, polozky: ctiRss(telo) };
+    const polozky = ctiRss(telo);
+    /*
+      Když z adresy nepřijde RSS, zkusí se přečíst jako obyčejná stránka.
+      Úřady si kanály stěhují a ruší — a zpráva z úřadu má dorazit i tehdy,
+      když se kanál rozbije. Viz polozkyZeStranky v sber/nacti.ts.
+    */
+    if (!polozky.length && /<a\b/i.test(telo)) return { z, ok: true, polozky: polozkyZeStranky(telo, z.url) };
+    return { z, ok: true, polozky };
   } catch (e) {
     return { z, ok: false, polozky: [], chyba: String(e instanceof Error ? e.message : e) };
   }

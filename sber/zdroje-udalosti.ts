@@ -103,10 +103,18 @@ const TEMATA = [
   a to se pozná jen tím, že se zkusí: `npm run sber:kanaly`.
 */
 const PRIME: ZdrojUdalosti[] = [
-  { klic: "nato-news", nazev: "NATO — novinky", url: "https://www.nato.int/cps/rss/en/natohq/rssFeed.xsl/rssFeed.xml", jazyk: "en", primarni: true, typ: "primary" },
-  { klic: "policie-rss", nazev: "Policie ČR — aktuality", url: "https://www.policie.cz/rss/aktuality.aspx", jazyk: "cs", primarni: true, typ: "primary" },
-  { klic: "nukib-rss", nazev: "NÚKIB — aktuality", url: "https://nukib.gov.cz/cs/rss/", jazyk: "cs", primarni: true, typ: "primary" },
-  { klic: "vlada-rss", nazev: "Vláda ČR — tiskové zprávy", url: "https://vlada.gov.cz/cz/media-centrum/rss/", jazyk: "cs", primarni: true, typ: "primary" },
+  /*
+    Čtyři úřední zdroje. Do 15. 9. 2026 tu stály jako adresy RSS — a všechny
+    čtyři vracely 404 nebo prázdno. Sběr tak běžel bez jediného primárního
+    zdroje a nebylo to nikde vidět: „nula zpráv z úřadu" vypadá stejně jako
+    klid. Teď tu jsou adresy tiskových stránek, o kterých je ZMĚŘENO, že
+    odpovídají a jde z nich číst (běh Ověření zdrojů); sběr je přečte jako
+    stránku, když z nich nepřijde RSS.
+  */
+  { klic: "nato-news", nazev: "NATO — novinky", url: "https://www.nato.int/cps/en/natohq/news.htm", jazyk: "en", primarni: true, typ: "primary" },
+  { klic: "policie-rss", nazev: "Policie ČR — aktuality", url: "https://www.policie.cz/", jazyk: "cs", primarni: true, typ: "primary" },
+  { klic: "nukib-rss", nazev: "NÚKIB — aktuality", url: "https://nukib.gov.cz/cs/infoservis/aktuality/", jazyk: "cs", primarni: true, typ: "primary" },
+  { klic: "vlada-rss", nazev: "Vláda ČR — tiskové zprávy", url: "https://vlada.gov.cz/cz/media-centrum/tiskove-zpravy/", jazyk: "cs", primarni: true, typ: "primary" },
   { klic: "cro-rss", nazev: "Český rozhlas — domácí zprávy", url: "https://www.irozhlas.cz/rss/irozhlas/zpravy-domov", jazyk: "cs", primarni: true, typ: "primary" },
   { klic: "irozhlas", nazev: "iROZHLAS — zprávy", url: "https://www.irozhlas.cz/rss/irozhlas", jazyk: "cs", primarni: false, typ: "media" },
   { klic: "ct24", nazev: "ČT24 — hlavní zprávy", url: "https://ct24.ceskatelevize.cz/rss/hlavni-zpravy", jazyk: "cs", primarni: false, typ: "media" },
@@ -114,8 +122,9 @@ const PRIME: ZdrojUdalosti[] = [
   { klic: "dw-europe", nazev: "Deutsche Welle — Europe", url: "https://rss.dw.com/rdf/rss-en-eu", jazyk: "en", primarni: false, typ: "media" },
   { klic: "yle-en", nazev: "Yle News (Finsko)", url: "https://yle.fi/rss/t/18-205950/en", jazyk: "en", primarni: false, typ: "media" },
   { klic: "err-en", nazev: "ERR News (Estonsko)", url: "https://news.err.ee/rss", jazyk: "en", primarni: false, typ: "media" },
-  { klic: "lrt-en", nazev: "LRT English (Litva)", url: "https://www.lrt.lt/en/rss", jazyk: "en", primarni: false, typ: "media" },
-  { klic: "kyiv-independent", nazev: "The Kyiv Independent", url: "https://kyivindependent.com/feed/", jazyk: "en", primarni: false, typ: "media" },
+  /* LRT i Kyiv Independent vracely 404; jejich adresy se zkusí jako stránky. */
+  { klic: "lrt-en", nazev: "LRT English (Litva)", url: "https://www.lrt.lt/en/news-in-english", jazyk: "en", primarni: false, typ: "media" },
+  { klic: "kyiv-independent", nazev: "The Kyiv Independent", url: "https://kyivindependent.com/", jazyk: "en", primarni: false, typ: "media" },
 ];
 
 /** Obecné dotazy — jeden česky, jeden anglicky ke každému tématu. */
