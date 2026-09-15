@@ -437,7 +437,12 @@
       "airspace",
       "nato"
     ],
-    "stav": "ceka"
+    "stav": "ceka",
+    "vyrez": {
+      "text": "Google News",
+      "stazeno": "2026-09-15T13:03:25.264Z",
+      "stav": 200
+    }
   },
   {
     "id": "k-10b1a096feea114a",
@@ -707,7 +712,12 @@
       "nato",
       "border"
     ],
-    "stav": "ceka"
+    "stav": "ceka",
+    "vyrez": {
+      "text": "Google News",
+      "stazeno": "2026-09-15T13:03:25.440Z",
+      "stav": 200
+    }
   },
   {
     "id": "k-29e0c4955eb7d7e0",
