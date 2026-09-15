@@ -1,5 +1,106 @@
 [
   {
+    "id": "k-ce6ddf20c5672dcd",
+    "zachyceno": "2026-09-15T05:02:40.259Z",
+    "publikovano": "2026-09-15T04:55:00.000Z",
+    "zdroj": {
+      "nazev": "iROZHLAS — zprávy",
+      "url": "https://www.irozhlas.cz/zpravy-svet/stihacky-sestrelily-dron-nad-litvou-dekuji-spojencum-za-jejich-rychlou-reakci_2609150655_elv",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Stíhačky sestřelily dron nad Litvou. ‚Děkuji spojencům za jejich rychlou reakci,‘ uvedl prezident Nauséda",
+    "titulekPuvodni": "Stíhačky sestřelily dron nad Litvou. ‚Děkuji spojencům za jejich rychlou reakci,‘ uvedl prezident Nauséda",
+    "shrnuti": "Stíhačky Severoatlantické aliance během noci sestřelily v litevském vzdušném prostoru dron, napsal na své sociální síti prezident pobaltské země Gitanas Nauséda. Bezpilotní letoun nejspíše přiletěl z Běloruska a směřoval na západ, uvedla litevská média. Kvůli narušení vzdušného prostoru země se mírn",
+    "kodZeme": "LT",
+    "zeme": "Litva",
+    "kategorie": [
+      "drony",
+      "nato"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "shody": [
+      "naruseni vzdusneho prostoru",
+      "sestrel",
+      "dron",
+      "aliance"
+    ],
+    "stav": "ceka",
+    "vyrez": {
+      "text": "",
+      "stazeno": "2026-09-15T05:02:40.345Z",
+      "stav": 403,
+      "chyba": "HTTP 403"
+    }
+  },
+  {
+    "id": "k-926d1eaa7b6e3843",
+    "zachyceno": "2026-09-15T05:02:40.335Z",
+    "publikovano": "2026-09-15T04:30:00.000Z",
+    "zdroj": {
+      "nazev": "Google News — narušení vzdušného prostoru",
+      "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxOdFF0Z1EzUi1xQlI1cWhPWDFPVzFBNEkzelc5Q1NMdVN2R254UE4taFhwQzdUREJmdzNUNXkzWkNFYjg5Qi1CZi11R2dxcGNKc01CNkJmelhFOHhSZ01UbjlERTNsNDVsY0NfdmRIcmJrUnNOMXN0bUY3b1VFZm81Nnpnc05fUUc0OGwzYUVOeVk2cVZCRlRzV0gzQW5SaHFt?oc=5",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Stíhačky NATO sestřelily dron nad Litvou. Nejspíš přiletěl z Běloruska - iDNES.cz",
+    "titulekPuvodni": "Stíhačky NATO sestřelily dron nad Litvou. Nejspíš přiletěl z Běloruska - iDNES.cz",
+    "shrnuti": "<a href=\"https://news.google.com/rss/articles/CBMioAFBVV95cUxOdFF0Z1EzUi1xQlI1cWhPWDFPVzFBNEkzelc5Q1NMdVN2R254UE4taFhwQzdUREJmdzNUNXkzWkNFYjg5Qi1CZi11R2dxcGNKc01CNkJmelhFOHhSZ01UbjlERTNsNDVsY0NfdmRIcmJrUnNOMXN0bUY3b1VFZm81Nnpnc05fUUc0OGwzYUVOeVk2cVZCRlRzV0gzQW5SaHFt?oc=5\" target=\"_blank\">Stíhačky NA",
+    "kodZeme": "LT",
+    "zeme": "Litva",
+    "kategorie": [
+      "drony",
+      "nato"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "shody": [
+      "sestrel",
+      "dron",
+      "nato"
+    ],
+    "stav": "ceka",
+    "vyrez": {
+      "text": "Google News",
+      "stazeno": "2026-09-15T05:02:40.374Z",
+      "stav": 200
+    }
+  },
+  {
+    "id": "k-fcd7227680c5f155",
+    "zachyceno": "2026-09-15T05:02:40.309Z",
+    "publikovano": "2026-09-15T04:15:39.000Z",
+    "zdroj": {
+      "nazev": "Google News — stíhačky a vzdušný prostor",
+      "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxQbERlTlplUzYySkxadE1qMnI4ZHJwSVdNd01Xd1dIVWcyU1NzT3FHRy1wbXdIMnoybFUxVDg0RWFjQ0Q5Q29yZHBpZnZCSm9IZ1lqUTRiR2pDQURlQkhxWFhGT3BxR254U25HQ29SMVE2b3Zwc2RDQTBwNkVQaG1pOFZkSmxpbUhLY3FXdS1ZSTBlb0hiTVJtOGhrcVgtZw?oc=5",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Stíhačky NATO sestřelily nad Litvou dron - Novinky",
+    "titulekPuvodni": "Stíhačky NATO sestřelily nad Litvou dron - Novinky",
+    "shrnuti": "<a href=\"https://news.google.com/rss/articles/CBMingFBVV95cUxQbERlTlplUzYySkxadE1qMnI4ZHJwSVdNd01Xd1dIVWcyU1NzT3FHRy1wbXdIMnoybFUxVDg0RWFjQ0Q5Q29yZHBpZnZCSm9IZ1lqUTRiR2pDQURlQkhxWFhGT3BxR254U25HQ29SMVE2b3Zwc2RDQTBwNkVQaG1pOFZkSmxpbUhLY3FXdS1ZSTBlb0hiTVJtOGhrcVgtZw?oc=5\" target=\"_blank\">Stíhačky NATO",
+    "kodZeme": "LT",
+    "zeme": "Litva",
+    "kategorie": [
+      "drony",
+      "nato"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "shody": [
+      "sestrel",
+      "dron",
+      "nato"
+    ],
+    "stav": "ceka",
+    "vyrez": {
+      "text": "Google News",
+      "stazeno": "2026-09-15T05:02:40.505Z",
+      "stav": 200
+    }
+  },
+  {
     "id": "k-36620d6356152f1c",
     "zachyceno": "2026-09-15T04:02:38.573Z",
     "publikovano": "2026-09-15T03:39:00.000Z",
