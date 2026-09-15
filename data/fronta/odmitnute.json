@@ -1,5 +1,39 @@
 [
   {
+    "id": "k-4f58cf96794a54a3",
+    "zachyceno": "2026-09-15T20:32:50.979Z",
+    "publikovano": "2026-09-15T20:14:00.000Z",
+    "zdroj": {
+      "nazev": "Český rozhlas — domácí zprávy",
+      "url": "https://www.irozhlas.cz/zpravy-svet/jelen-ten-kdo-ma-valku-ukoncit-je-putin-ne-ukrajina-aby-se-kyjev-vzdal-uzemi-je_2609152214_elev",
+      "typ": "primary",
+      "primarni": true
+    },
+    "titulek": "Jelen: Ten, kdo má válku ukončit, je Putin, ne Ukrajina. Aby se Kyjev vzdal území, je nepřijatelné",
+    "shrnuti": "Washington se údajně připravil na hlavní část mírové dohody s Ruskem a k jejímu uzavření chybí podle Bílého domu už jen souhlas Ukrajiny s postoupením části jejího území. „Zapomíná se pořád na fakt, že ten, kdo má válku ukončit, je Vladimir Putin, nikoliv Ukrajina,“ zdůrazňuje v Osobnosti Plus polit",
+    "duvod": "bez-skutku",
+    "kategorie": [
+      "rusko"
+    ],
+    "posouzeni": null
+  },
+  {
+    "id": "k-df977079640817c8",
+    "zachyceno": "2026-09-15T20:32:50.980Z",
+    "publikovano": "2026-09-15T20:12:00.000Z",
+    "zdroj": {
+      "nazev": "Český rozhlas — domácí zprávy",
+      "url": "https://www.irozhlas.cz/zpravy-domov/zavolat-ai-asistentce-nove-mohou-lide-v-benesove-na-bezne-dotazy-odpovida-mimo_2609152212_vaa",
+      "typ": "primary",
+      "primarni": true
+    },
+    "titulek": "Zavolat AI asistentce nově mohou lidé v Benešově. Na běžné dotazy odpovídá mimo úřední hodiny",
+    "shrnuti": "Umělá inteligence stále častěji pomáhá lidem v hledání informací na webových stránkách obcí a měst. Celkem běžní jsou takzvaní chatboti. V Benešově začali využívat dokonce AI asistentku, se kterou mohou lidé telefonovat.",
+    "duvod": "bez-skutku",
+    "kategorie": [],
+    "posouzeni": null
+  },
+  {
     "id": "k-5c6be90cb2198290",
     "zachyceno": "2026-09-15T20:02:56.963Z",
     "publikovano": "2026-09-15T19:35:00.000Z",
@@ -8338,6 +8372,24 @@
     "posouzeni": null
   },
   {
+    "id": "k-5c24c8b5692d4c51",
+    "zachyceno": "2026-09-15T20:32:51.165Z",
+    "publikovano": "2026-09-09T16:18:00.000Z",
+    "zdroj": {
+      "nazev": "Téma: kyber (anglicky)",
+      "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxPYWVhcm9jYkJjT0k0OV90ZENlbEo0SnFJeWtjWFR4bVJzeFFnZjZqZ3lKa2RJdHFad2xzcU8wUmY5dFF5a3Q2MzVrSzM4bU5zdmsxT2xOT3g0QTk0YmRHM3BPRzlnd0JPLW5RWHpQelF0YU1HOTg1SDFBMlJ3dGIxQUN3dUV3SFdvc21haDBfbGlqelRReVE?oc=5",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Pennsylvania utility says it blocks 'tens of thousands' of cyberattack attempts each month - Yahoo",
+    "shrnuti": "Pennsylvania utility says it blocks 'tens of thousands' of cyberattack attempts each month Yahoo",
+    "duvod": "bez-mista",
+    "kategorie": [
+      "kyber"
+    ],
+    "posouzeni": null
+  },
+  {
     "id": "k-20332e6c1c839381",
     "zachyceno": "2026-09-15T17:03:06.600Z",
     "publikovano": "2026-09-09T14:47:27.000Z",
@@ -8422,60 +8474,6 @@
     },
     "titulek": "The Kremlin threatens an “appropriate response” after Hungary expelled ten Russian diplomats, but says it wants to maintain dialogue - Informat.ro",
     "shrnuti": "The Kremlin threatens an “appropriate response” after Hungary expelled ten Russian diplomats, but says it wants to maintain dialogue Informat.ro",
-    "duvod": "bez-skutku",
-    "kategorie": [
-      "rusko"
-    ],
-    "posouzeni": null
-  },
-  {
-    "id": "k-8de647b432eb312c",
-    "zachyceno": "2026-09-15T17:03:06.594Z",
-    "publikovano": "2026-09-09T10:26:39.000Z",
-    "zdroj": {
-      "nazev": "Téma: diplomate (anglicky)",
-      "url": "https://news.google.com/rss/articles/CBMi2AFBVV95cUxPZE1kNVNmb2U0TmlaZGNFWXBHMVN2dWF6d3FMeGxHU0pCMnhYSXk1VThoZEVPQjBzM0NPdzVMYU9YQjh4aGJ4TXlQU2FJdldFZi1SWXhSYlVfckZQS1dCOXdaWTI4b2RaRHVWMElZRlBnZlA2blZsZGNDUzVRT25qYjV6QWZfaW9pZHlJXzRFV2VMMFFYWnZETFFFYUZBN3c4cXhNZEZjZ0NVd1h1bEVMOVpCeloyZHAwNmZuT0tDSW85T0d2MlROcndnYzByaW1DeU1iS0JnNWk?oc=5",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Russia is big, but its resources are not infinite; replacing those who have been expelled from Hungary will be difficult - Telex",
-    "shrnuti": "Russia is big, but its resources are not infinite; replacing those who have been expelled from Hungary will be difficult Telex",
-    "duvod": "bez-skutku",
-    "kategorie": [
-      "rusko"
-    ],
-    "posouzeni": null
-  },
-  {
-    "id": "k-1ab833a05cbbd8d1",
-    "zachyceno": "2026-09-15T17:03:06.610Z",
-    "publikovano": "2026-09-09T09:26:04.000Z",
-    "zdroj": {
-      "nazev": "Téma: diplomate (anglicky)",
-      "url": "https://news.google.com/rss/articles/CBMic0FVX3lxTE9UeTFoS3lJVmU5cno3a2hHTTBrZWRyWC1lTXVCRFZDeTNhMjNYYmhMTUp2T3B4WVlnNTA2YlJKdDVwZFR5bk9NcGpuSU9idXFqaVNWZHp5b2NzZjByM3VCZkw3bC04bVFOQkxMbUszbFFxOFE?oc=5",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Breaking: Hungary orders 10 Russian embassy staff to leave – UPDATE: Russia’s threat - Daily News Hungary",
-    "shrnuti": "Breaking: Hungary orders 10 Russian embassy staff to leave – UPDATE: Russia’s threat Daily News Hungary",
-    "duvod": "bez-skutku",
-    "kategorie": [
-      "rusko"
-    ],
-    "posouzeni": null
-  },
-  {
-    "id": "k-756392fcaf77fa45",
-    "zachyceno": "2026-09-15T17:03:06.712Z",
-    "publikovano": "2026-09-09T09:00:00.000Z",
-    "zdroj": {
-      "nazev": "Rumunsko — sabotaz",
-      "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxNZ194emhqOWNoeVpQNFE1NXB6U1FWTUlxajFnOHdET2xxV1FlMXRHNkZ1ZXpHay1BdkR3WVFZUVlBMXRsMjlNWEpnR2NhaGhRSWRNMlRGb1A5cXd6WUFodUtkcDFKRTVpOXBLeDFWNFkyVUZMV25laXBIbFlBNXBxNGM2YnI1M290ek5EQg?oc=5",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Hungary expels 10 Russian diplomats - The Arkansas Democrat-Gazette",
-    "shrnuti": "Hungary expels 10 Russian diplomats The Arkansas Democrat-Gazette",
     "duvod": "bez-skutku",
     "kategorie": [
       "rusko"
