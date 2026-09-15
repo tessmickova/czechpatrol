@@ -131,11 +131,41 @@ export function stavPaliva(druh: DruhPaliva, data: RadaCen = DATA): StavPaliva {
   const posledni = body.at(-1)!;
   const cena = posledni[druh] as number;
 
-  const predchozi = body.at(-2);
-  const zaTyden = predchozi ? zaokrouhli(cena - (predchozi[druh] as number)) : null;
+  /*
+    Změna se počítá podle DATA, ne podle pořadí v řadě.
 
-  const ctvrtletiZpet = body.at(-14);
-  const zaCtvrtleti = ctvrtletiZpet ? zaokrouhli(cena - (ctvrtletiZpet[druh] as number)) : null;
+    ČSÚ některé týdny nešetří — kolem Nového roku a Velikonoc jsou v řadě
+    mezery čtrnácti- i jednadvacetidenní. Kdyby se brala prostě předchozí
+    položka, vyšla by dvoutýdenní změna vydávaná za týdenní: mezera
+    2024-12-22 → 2025-01-05 by takhle hlásila „za týden −2,26 Kč" a při
+    prahu dvou korun by to odešlo i do kanálu. Tvrzení o týdnu musí být
+    o týdnu, jinak se neřekne nic.
+  */
+  const dniMezi = (a: TydenCeny, b: TydenCeny) =>
+    Math.round((new Date(b.konec).getTime() - new Date(a.konec).getTime()) / 86_400_000);
+
+  const predchozi = body.at(-2);
+  const zaTyden =
+    predchozi && Math.abs(dniMezi(predchozi, posledni) - 7) <= 2
+      ? zaokrouhli(cena - (predchozi[druh] as number))
+      : null;
+
+  /*
+    Čtvrtletí: vezme se bod nejbližší devadesáti jedna dnům zpět a přijme se
+    jen tehdy, když do tří týdnů od té hranice opravdu leží. Třináctý záznam
+    odzadu je v řadě s mezerami něco jiného než čtvrtletí.
+  */
+  const cil = new Date(posledni.konec).getTime() - 91 * 86_400_000;
+  const ctvrtletiZpet = body
+    .slice(0, -1)
+    .reduce<TydenCeny | null>((nej, t) => {
+      const rozdil = Math.abs(new Date(t.konec).getTime() - cil);
+      return !nej || rozdil < Math.abs(new Date(nej.konec).getTime() - cil) ? t : nej;
+    }, null);
+  const zaCtvrtleti =
+    ctvrtletiZpet && Math.abs(new Date(ctvrtletiZpet.konec).getTime() - cil) <= 21 * 86_400_000
+      ? zaokrouhli(cena - (ctvrtletiZpet[druh] as number))
+      : null;
 
   /*
     „Nejvyšší za X měsíců“: jdeme zpět, dokud nenarazíme na týden, kdy bylo

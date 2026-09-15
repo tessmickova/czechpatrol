@@ -81,6 +81,17 @@ export function CenaPaliva() {
       <ul className="divide-y divide-linka2">
         {paliva.map((s) => <Cena key={s.druh} s={s} />)}
       </ul>
+      {/* Čtvrtletí ukazuje, jestli je týdenní pohyb výkyv, nebo pokračování. */}
+      {paliva.some((s) => s.zaCtvrtleti !== null) && (
+        <p className="mt-2 text-[12px] text-tlum2">
+          Za čtvrtletí:{" "}
+          {paliva
+            .filter((s) => s.zaCtvrtleti !== null)
+            .map((s) => `${s.nazev.toLowerCase()} ${s.zaCtvrtleti! > 0 ? "+" : "−"}${Math.abs(s.zaCtvrtleti!).toFixed(2).replace(".", ",")} Kč`)
+            .join(" · ")}
+          .
+        </p>
+      )}
       <p className="mt-2 text-[11.5px] leading-snug text-tlum2">
         Zdroj:{" "}
         <a href={data.zdroj.url} rel="noopener noreferrer" target="_blank" className="underline hover:text-inkoust">

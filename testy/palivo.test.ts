@@ -62,6 +62,36 @@ describe("cena paliva", () => {
     expect(s.cena).toBe(38.79);
   });
 
+  it("mezera v šetření nevydává dvoutýdenní změnu za týdenní", () => {
+    /*
+      Skutečná mezera z řady ČSÚ: kolem Nového roku se týden nešetří.
+      2024-12-22 → 2025-01-05 je čtrnáct dní a cena nafty klesla o 2,26 Kč.
+      Kdyby se brala prostě předchozí položka, hlásil by web „za týden
+      −2,26 Kč" — a při prahu dvou korun by to odešlo i do kanálu jako
+      skoková změna, která se nikdy za týden nestala.
+    */
+    const s = stavPaliva("nafta", rada([tyden("2024-12-22", 37.26), tyden("2025-01-05", 35.0)]));
+    expect(s.cena).toBe(35);
+    expect(s.zaTyden).toBeNull();
+    expect(s.skok).toBe(false);
+    expect(s.proZpravu).toBe(false);
+    expect(vetaOCene(s)).not.toContain("za týden");
+  });
+
+  it("čtvrtletní změna se měří datem, ne třináctou položkou odzadu", () => {
+    // V řadě s mezerami je třináctý záznam odzadu něco jiného než čtvrtletí.
+    const body: TydenCeny[] = [
+      tyden("2026-06-14", 40.0), // zhruba 91 dní zpět — sem se má měřit
+      tyden("2026-08-30", 44.0),
+      tyden("2026-09-13", 45.0),
+    ];
+    expect(stavPaliva("nafta", rada(body)).zaCtvrtleti).toBe(5);
+
+    // Bez dostatečně staré položky se čtvrtletí neříká vůbec.
+    const kratka = [tyden("2026-08-30", 44.0), tyden("2026-09-06", 45.0)];
+    expect(stavPaliva("nafta", rada(kratka)).zaCtvrtleti).toBeNull();
+  });
+
   it("chybějící týden nevyrobí dopočítanou změnu", () => {
     /*
       Uprostřed řady chybí u nafty číslo. Změna se musí počítat proti
@@ -72,8 +102,12 @@ describe("cena paliva", () => {
       "nafta",
       rada([tyden("2026-08-24", 36.5), tyden("2026-08-31", null), tyden("2026-09-07", 37.5)]),
     );
-    expect(s.zaTyden).toBe(1);
     expect(s.cena).toBe(37.5);
+    /*
+      Poslední týden s naftou před 7. 9. je 24. 8. — čtrnáct dní zpátky.
+      Změna „za týden" se tedy neřekne; dvoutýdenní rozdíl není týdenní.
+    */
+    expect(s.zaTyden).toBeNull();
   });
 
   it("palivo, které v řadě vůbec není, zůstane prázdné", () => {
