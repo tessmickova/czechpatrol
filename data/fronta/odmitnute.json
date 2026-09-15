@@ -1,5 +1,69 @@
 [
   {
+    "id": "k-276c44c5e280f0c6",
+    "zachyceno": "2026-09-15T19:32:53.535Z",
+    "publikovano": "2026-09-15T19:21:00.000Z",
+    "zdroj": {
+      "nazev": "Český rozhlas — domácí zprávy",
+      "url": "https://www.irozhlas.cz/sport/ostatni-sporty/basketbal-peter-sedlak-nbl-fiba_2609152121_kri",
+      "typ": "primary",
+      "primarni": true
+    },
+    "titulek": "Bývalý basketbalista Sedmák dostal za sázkařskou kauzu osmiletý trest. V Česku je to první takový případ",
+    "shrnuti": "V českém basketbalu se objevila první kauza spojená s nekalým sázením na zápasy. Mezinárodní basketbalová federace FIBA potrestala Petera Sedmáka, někdejšího hráče Nového Jičína či USK Praha, slovenského reprezentanta a člena vedení klubu z Hradce Králové, zákazem činnosti na osm let.",
+    "duvod": "vylouceno-tematem",
+    "kategorie": [],
+    "posouzeni": null
+  },
+  {
+    "id": "k-be5e18be27b42ac2",
+    "zachyceno": "2026-09-15T19:32:53.550Z",
+    "publikovano": "2026-09-15T19:19:47.000Z",
+    "zdroj": {
+      "nazev": "ČT24 — hlavní zprávy",
+      "url": "https://ct24.ceskatelevize.cz/clanek/svet/kennedyho-centrum-bude-okamzite-uzavreno-oznamil-trump-377653",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Kennedyho centrum bude okamžitě uzavřeno, oznámil Trump",
+    "shrnuti": "Správní rada Kennedyho centra hlasovala pro okamžité uzavření kulturní instituce ve Washingtonu. Oznámil to v úterý americký prezident Donald Trump, který je zároveň předsedou správní rady. Rozhodnutí přišlo v době, kdy se centrum potýká s finančními problémy a se spory o instalaci Trumpova jména na",
+    "duvod": "bez-skutku",
+    "kategorie": [],
+    "posouzeni": null
+  },
+  {
+    "id": "k-66695d945dee3598",
+    "zachyceno": "2026-09-15T19:32:53.535Z",
+    "publikovano": "2026-09-15T19:18:00.000Z",
+    "zdroj": {
+      "nazev": "Český rozhlas — domácí zprávy",
+      "url": "https://www.irozhlas.cz/zpravy-domov/ctyri-z-peti-nemocnic-zakonci-rok-se-ztratou-hospodareni-je-tezko-predvidatelne_2609152118_aha",
+      "typ": "primary",
+      "primarni": true
+    },
+    "titulek": "Čtyři z pěti nemocnic zakončí rok se ztrátou. Hospodaření je těžko předvídatelné, říká radní",
+    "shrnuti": "Hospodaření krajských nemocnic v následujících letech jsou podle vedení Kraje Vysočiny v současné době těžko předvídatelná. Na pondělním jednání krajských zastupitelů to řekl radní pro oblast zdravotnictví Jiří Běhounek (kandiduje v podzimních volbách) ze SOCDEM.",
+    "duvod": "vylouceno-tematem",
+    "kategorie": [],
+    "posouzeni": null
+  },
+  {
+    "id": "k-8676437f147a12b6",
+    "zachyceno": "2026-09-15T19:32:53.536Z",
+    "publikovano": "2026-09-15T19:09:00.000Z",
+    "zdroj": {
+      "nazev": "Český rozhlas — domácí zprávy",
+      "url": "https://www.irozhlas.cz/zpravy-svet/merz-zrusil-cestu-na-valne-shromazdeni-osn-nemecky-kancler-musi-zustat-v-berline_2609152109_elev",
+      "typ": "primary",
+      "primarni": true
+    },
+    "titulek": "Merz zrušil cestu na Valné shromáždění OSN. Německý kancléř musí zůstat v Berlíně",
+    "shrnuti": "Německý kancléř Friedrich Merz ruší cestu na Valné shromáždění OSN, informuje agentura DPA s odvoláním na zdroje v německé vládě. Šéf spolkové vlády měl do New Yorku letět příští týden, je ale pod stále větším politickým tlakem po nedávném historickém volebním úspěchu antiimigrační Alternativy pro N",
+    "duvod": "vylouceno-tematem",
+    "kategorie": [],
+    "posouzeni": null
+  },
+  {
     "id": "k-a0de85f6f6726307",
     "zachyceno": "2026-09-15T19:11:46.943Z",
     "publikovano": "2026-09-15T19:01:00.000Z",
@@ -8416,79 +8480,6 @@
     },
     "titulek": "Hungary expels 10 Russian diplomats over Vienna Convention breach - Moldova 1",
     "shrnuti": "Hungary expels 10 Russian diplomats over Vienna Convention breach Moldova 1",
-    "duvod": "bez-skutku",
-    "kategorie": [
-      "rusko"
-    ],
-    "posouzeni": null
-  },
-  {
-    "id": "k-882777d33d6ef4b1",
-    "zachyceno": "2026-09-15T17:03:06.579Z",
-    "publikovano": "2026-09-09T07:51:28.000Z",
-    "zdroj": {
-      "nazev": "Téma: diplomate (anglicky)",
-      "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxOdTIzX3paNXBHZXZ1LWZmeU9PV2J6cnNGeFN4Z3ppUFVycTg5LTM4OHhJdnpDRldmVTJOWGNCWnk0TUhzUzNsb3AyYkNtS3k2SUVXWlYzeE02NzlWQUIyRUFqQWNPNUxkN3FJbmtSYkdqRjRVQ0k0MkpjaXdMU0s3UzhRUk1jTWEwT3hWRE5aek45d2lBSjZSWFRMU0RrLWc?oc=5",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "TISZA Government Expels Russian Diplomats — Moscow Vows a \"Tough and Painful\" Response - Hungary Today",
-    "shrnuti": "TISZA Government Expels Russian Diplomats — Moscow Vows a \"Tough and Painful\" Response Hungary Today",
-    "duvod": "bez-skutku",
-    "kategorie": [
-      "rusko"
-    ],
-    "posouzeni": null
-  },
-  {
-    "id": "k-b2e052acf7475566",
-    "zachyceno": "2026-09-15T17:03:06.722Z",
-    "publikovano": "2026-09-09T07:00:00.000Z",
-    "zdroj": {
-      "nazev": "Moldavsko — drony",
-      "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxNTlFrQWdXejVSSVdTeFNzUHlBT095WVlraDBzYWtzRF81YnpWM0NISTROZlBjS2x0NXFoMnJRZVYtbV91cV9JR19QVW1FZVYzWlBOanhMd0x1NGpKR0RzWjg0NWx0M2psMnpReVVvTzhaU2hqLTNVMVJ0Rjd0eVNIaVRrS002NGZnN1ZrRkRFVmtlNFhaa2tMT1hHTWZDS2c?oc=5",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Zelensky's plane nearly hit by drone amid Moldovan border strikes - streamlinefeed.co.ke",
-    "shrnuti": "Zelensky's plane nearly hit by drone amid Moldovan border strikes streamlinefeed.co.ke",
-    "duvod": "bez-skutku",
-    "kategorie": [
-      "drony",
-      "hranice"
-    ],
-    "posouzeni": null
-  },
-  {
-    "id": "k-bdc2b0c49b792c1f",
-    "zachyceno": "2026-09-15T17:03:06.645Z",
-    "publikovano": "2026-09-09T06:46:37.000Z",
-    "zdroj": {
-      "nazev": "Téma: nouzovy-stav (anglicky)",
-      "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxQVDZFdE9ZWGU4RDRTdWJwbGl6NmFyUEl5OEtCSXJqUTRqYjFhMDRPdU94THVwenlJb0t5dGpKa21YYzJkRTZmaGVLb09hMk5odW5XUHJaYWZMa0Z0aVUweW56bkZaWEl0TTJCUW5SWWs4UmFQZE40Y2w5OTY0MFIzRm9md0QxS3IxMjB5cGpvQzRFM19KTkltNTI2U1B2YjNoUmoyOXZvdmR3NzJIcnZXYkxFUdIBuwFBVV95cUxPNC1FZTBvb2RIOHJ6SEM3Sk1RVkJwVFRfcExtNk5ZRU9QTmlCRW52RG5lOXlkZWFxTUl4QzU4bVY3TUxzRU04MTVNUVB3NmNCa2VMTWtqWXJSZWxkUjQ3Znd0bHowR01XcWNCdlpBdHF1ZGp1TXA5U2tPUWZrMG5nWVFRZE1QajljTE50VVBoZ3Z4TnVMTzV1TzhSZVljQm0xQXQ4NW1CbldPVkZHNFA0ZzIybTZyUEVBVkc4?oc=5",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Local state of emergency declared due to damage in Malibu - NBC Los Angeles",
-    "shrnuti": "Local state of emergency declared due to damage in Malibu NBC Los Angeles",
-    "duvod": "bez-mista",
-    "kategorie": [
-      "pravo"
-    ],
-    "posouzeni": null
-  },
-  {
-    "id": "k-33176812f3493494",
-    "zachyceno": "2026-09-15T17:03:06.445Z",
-    "publikovano": "2026-09-09T05:57:00.000Z",
-    "zdroj": {
-      "nazev": "Deutsche Welle — Europe",
-      "url": "https://www.dw.com/en/putin-rejects-mobilization-rumors-many-russians-unconvinced/a-79193386?maca=en-rss-en-eu-2092-rdf",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Putin rejects mobilization rumors, many Russians unconvinced",
-    "shrnuti": "Russia’s President Vladimir Putin has dismissed rumors about military mobilization. But many Russians, including many DW users, say they are preparing for the possibility.",
     "duvod": "bez-skutku",
     "kategorie": [
       "rusko"
