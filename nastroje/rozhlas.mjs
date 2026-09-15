@@ -548,6 +548,75 @@ export function sestavVystrahu(v) {
   return radky.join("\n");
 }
 
+/*
+  Naléhavé signály ze sběru.
+
+  Tohle je jediné místo, kde do kanálu odchází NEOVĚŘENÁ zpráva. Důvod: mezi
+  zachycením a lidským ověřením jsou u téhle věci hodiny, a u vyhlášené
+  mobilizace nebo spuštěného krizového vysílání je ta prodleva to jediné,
+  na čem záleží.
+
+  Proto tvrdá pravidla:
+  - jen spouštěče stupně 1 (mobilizace, krizové vysílání, článek 4/5,
+    mimořádný právní stav v ČR, uzavření hranic) — příprava mobilizace ani
+    dron nad Aliancí sem nepatří, ty počkají na člověka,
+  - zpráva začíná slovem NEOVĚŘENO a nese odkaz na zdroj, aby si to každý
+    mohl přečíst sám,
+  - nejvýš dvě za běh, ať se z kanálu nestane proud fám,
+  - každý kandidát jen jednou (klíčem je jeho id).
+
+  Co to NENÍ: potvrzení, že se to stalo. Přesně tohle je hranice, kterou si
+  tenhle web hlídá — proto to v té zprávě stojí napsané.
+*/
+const MAX_SIGNALU_NA_BEH = 2;
+
+export function ctiKandidaty() {
+  const soubor = path.join(koren, "data", "kandidati.json");
+  if (!fs.existsSync(soubor)) return [];
+  try { return JSON.parse(fs.readFileSync(soubor, "utf-8")); } catch { return []; }
+}
+
+export function vyberSignaly(kandidati, stav, { ted = Date.now(), maxStari = 6 * 3_600_000 } = {}) {
+  const poslane = stav.signaly ?? {};
+  return (kandidati ?? [])
+    .filter((k) => k?.naliehave?.stupen === 1 && !poslane[k.id])
+    /*
+      Jen čerstvé. Kandidát může do fronty přijít i s několikadenním zpožděním
+      (kanál se probral, zdroj doplnil datum) a rozeslat takovou zprávu jako
+      naléhavou by bylo horší než mlčet.
+    */
+    .filter((k) => ted - new Date(k.publikovano ?? k.zachyceno).getTime() <= maxStari)
+    .sort((a, b) => (a.publikovano ?? a.zachyceno).localeCompare(b.publikovano ?? b.zachyceno))
+    .slice(0, MAX_SIGNALU_NA_BEH);
+}
+
+const NAZVY_SIGNALU = {
+  "mobilizace-rusko": "vyhlášení mobilizace v Rusku",
+  "krizove-vysilani": "krizové vysílání Českého rozhlasu",
+  "clanek-nato": "aktivace článku 4 nebo 5 NATO",
+  "pravni-stav-cr": "mimořádný právní stav v ČR",
+  "hranice-cr": "uzavření hranic ČR",
+  "priprava-mobilizace": "přípravy mobilizace v Rusku",
+  "vzdusny-prostor-nato": "narušení vzdušného prostoru Aliance",
+};
+
+export function sestavSignal(k) {
+  const co = NAZVY_SIGNALU[k.naliehave?.druh] ?? "sledovaná událost";
+  /* Prázdné řádky jsou tu schválně — na telefonu se ta zpráva musí dát přelétnout. */
+  const radky = ["\u26a0\ufe0f <b>NEOVĚŘENO — signál ke kontrole</b>", "", `<b>${esc(k.titulek)}</b>`];
+  if (k.shrnuti) radky.push(esc(zkrat(k.shrnuti, 220)));
+  radky.push(
+    "",
+    `Téma: ${esc(co)}${k.zeme ? ` · ${esc(k.zeme)}` : ""}`,
+    `Zdroj: <a href="${esc(k.zdroj.url)}">${esc(k.zdroj.nazev)}</a>`,
+    "",
+    "Zachytil to automatický sběr. <b>Neověřil to zatím člověk</b> — není to potvrzené a do žádných počtů na webu to nevstupuje. Posíláme to proto, že u téhle věci je každá hodina znát.",
+    "",
+    `${WEB}/udalosti/?zalozka=cekajici`,
+  );
+  return radky.join("\n");
+}
+
 /** Ceny paliv. Chybějící soubor není chyba — jen se o palivu nic neřekne. */
 function ctiPalivo() {
   const soubor = path.join(koren, "data", "palivo.json");
@@ -556,12 +625,12 @@ function ctiPalivo() {
 }
 
 function ctiStav() {
-  if (!fs.existsSync(STAV)) return { zaznamy: {}, snimky: {}, palivo: {}, vystrahy: {}, prvniBeh: null };
+  if (!fs.existsSync(STAV)) return { zaznamy: {}, snimky: {}, palivo: {}, vystrahy: {}, signaly: {}, prvniBeh: null };
   try {
     const s = JSON.parse(fs.readFileSync(STAV, "utf-8"));
-    // Starší stav pole „palivo" a „vystrahy" nemá; bez doplnění by první zápis spadl.
-    return { palivo: {}, vystrahy: {}, ...s };
-  } catch { return { zaznamy: {}, snimky: {}, palivo: {}, vystrahy: {}, prvniBeh: null }; }
+    // Starší stav pole „palivo", „vystrahy" a „signaly" nemá; bez doplnění by první zápis spadl.
+    return { palivo: {}, vystrahy: {}, signaly: {}, ...s };
+  } catch { return { zaznamy: {}, snimky: {}, palivo: {}, vystrahy: {}, signaly: {}, prvniBeh: null }; }
 }
 function zapisStav(s) {
   fs.mkdirSync(path.dirname(STAV), { recursive: true });
@@ -734,6 +803,22 @@ async function main() {
       const v = await posli(sestavVystrahu(vystraha), { nahled: false });
       if (v.ok) { stav.vystrahy[vystraha.klic] = { kdy: new Date(ted).toISOString(), messageId: v.messageId ?? null }; odeslano++; }
       else { selhalo++; console.log(`[rozhlas] výstraha neodešla: ${v.chyba}`); }
+    }
+  }
+
+  /*
+    0b. naléhavé signály ze sběru — neověřené, jasně označené.
+
+    Při prvním běhu se jen zapamatují: prázdný stav znamená i to, že se soubor
+    ztratil, a rozeslat kvůli tomu dávku starých signálů by z kanálu udělalo
+    přesně ten proud fám, kterému se web brání.
+  */
+  if (rezim === "okamzite") {
+    for (const k of vyberSignaly(ctiKandidaty(), stav, { ted })) {
+      if (prvniBeh) { stav.signaly[k.id] = { kdy: new Date(ted).toISOString(), ticho: true }; continue; }
+      const v = await posli(sestavSignal(k), { nahled: false });
+      if (v.ok) { stav.signaly[k.id] = { kdy: new Date(ted).toISOString(), messageId: v.messageId ?? null }; odeslano++; }
+      else { selhalo++; console.log(`[rozhlas] signál neodešel: ${v.chyba}`); }
     }
   }
 

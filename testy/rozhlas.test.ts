@@ -2,7 +2,7 @@
 import fs from "node:fs";
 import path from "node:path";
 import { describe, expect, it } from "vitest";
-import { klicovaVeta, legendaTecek, pocetZdroju, pruhTecek, PUVODCI, radekPokryti, jeArchivni, radekData, rozdelZpravu, sestavPalivo, sestavSouhrn, sestavTest, sestavVystrahu, sestavZdroje, sestavZmenuStavu, sestavZpravu, vyberNove, vyberPalivo, vyberVystrahu, vyberZmenyStavu, zahlavi } from "../nastroje/rozhlas.mjs";
+import { klicovaVeta, legendaTecek, pocetZdroju, pruhTecek, PUVODCI, radekPokryti, jeArchivni, radekData, rozdelZpravu, sestavPalivo, sestavSouhrn, sestavSignal, sestavTest, sestavVystrahu, sestavZdroje, sestavZmenuStavu, sestavZpravu, vyberNove, vyberPalivo, vyberSignaly, vyberVystrahu, vyberZmenyStavu, zahlavi } from "../nastroje/rozhlas.mjs";
 import { UROVNE, zDeseti } from "../src/lib/skala";
 import { PUVODCI as PUVODCI_WEB } from "../src/lib/kategorie";
 import type { Uroven } from "../src/lib/typy";
@@ -468,5 +468,51 @@ describe("mimořádná výstraha v kanálu", () => {
 
   it("bez výstrahy se neposílá nic", () => {
     expect(vyberVystrahu(null, { vystrahy: {} })).toBeNull();
+  });
+});
+
+describe("neověřené signály do kanálu", () => {
+  const signal = (id: string, stupen: 1 | 2, kdy = new Date().toISOString()) => ({
+    id,
+    titulek: "Rusko vyhlásilo všeobecnou mobilizaci",
+    shrnuti: "Oznámil to Kreml.",
+    zeme: "Rusko",
+    zdroj: { nazev: "iROZHLAS", url: "https://www.irozhlas.cz/x" },
+    naliehave: { druh: "mobilizace-rusko", stupen, proc: "vyhlasil+mobilizac" },
+    publikovano: kdy,
+    zachyceno: kdy,
+  });
+
+  it("zpráva začíná tím, že jde o NEOVĚŘENÝ signál", () => {
+    /*
+      Tohle je jediné místo, kde do kanálu jde nepotvrzená zpráva. Kdyby to
+      z ní nebylo poznat hned v prvním řádku, přeposílala by se dál jako fakt
+      — a přesně takové případy tenhle web dokumentuje u jiných.
+    */
+    const z = sestavSignal(signal("k-1", 1));
+    expect(z.startsWith("⚠️ <b>NEOVĚŘENO")).toBe(true);
+    expect(z).toContain("Neověřil to zatím člověk");
+    expect(z).toContain("https://www.irozhlas.cz/x");
+  });
+
+  it("posílá se jen stupeň 1", () => {
+    // Přípravy mobilizace a drony nad Aliancí se dějí opakovaně; v kanálu by z nich byl šum.
+    expect(vyberSignaly([signal("k-1", 1)], { signaly: {} })).toHaveLength(1);
+    expect(vyberSignaly([signal("k-2", 2)], { signaly: {} })).toHaveLength(0);
+  });
+
+  it("týž kandidát se neposílá dvakrát", () => {
+    expect(vyberSignaly([signal("k-1", 1)], { signaly: { "k-1": { kdy: "…" } } })).toHaveLength(0);
+  });
+
+  it("starý signál se neposílá", () => {
+    // Kandidát může doputovat se zpožděním; rozeslat ho jako naléhavý by bylo horší než mlčet.
+    const stary = signal("k-3", 1, "2026-09-01T00:00:00Z");
+    expect(vyberSignaly([stary], { signaly: {} }, { ted: new Date("2026-09-15T12:00:00Z").getTime() })).toHaveLength(0);
+  });
+
+  it("víc než dva signály za běh neodejde", () => {
+    const hodne = [1, 2, 3, 4, 5].map((i) => signal(`k-${i}`, 1));
+    expect(vyberSignaly(hodne, { signaly: {} }).length).toBeLessThanOrEqual(2);
   });
 });

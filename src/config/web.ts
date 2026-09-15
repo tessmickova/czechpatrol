@@ -57,7 +57,7 @@ export const DORUCOVANI = {
     bezi: true,
     nazev: "Telegram",
     /** Co do kanálu opravdu chodí. Nesmí slibovat víc, než workflow dělá. */
-    rozsah: "Mimořádná výstraha a vážné případy odcházejí hned. Ostatní ověřené záznamy jednou denně v souhrnu.",
+    rozsah: "Mimořádná výstraha a vážné případy odcházejí hned. U pěti nejzávažnějších témat posíláme i neověřený signál — vždy označený, s odkazem na zdroj. Ostatní ověřené záznamy jednou denně v souhrnu.",
     /** Podle .github/workflows/rozhlas.yml. Změna workflow = změna téhle věty. */
     kadence: "průběžně u vážných, denní souhrn v 19:00 (v zimě v 18:00)",
   },
@@ -83,12 +83,36 @@ export const DORUCOVANI = {
  * když se změní něco, kvůli čemu by člověk mohl jednat jinak.
  */
 export const KDY_UPOZORNENI = [
-  "mimořádná výstraha — vyhlášená mobilizace v Rusku",
-  "mimořádná výstraha — spuštěné krizové vysílání Českého rozhlasu",
+  "vyhlášení mobilizace v Rusku",
+  "spuštěné krizové vysílání Českého rozhlasu",
+  "aktivace článku 4 nebo 5 NATO",
+  "nouzový stav, stav ohrožení nebo válečný stav v ČR",
+  "uzavření hranic ČR",
   "změna celkové úrovně",
   "změna právního stavu ČR (mobilizace, stav ohrožení, vycestování, hranice)",
-  "aktivace článku 4 nebo 5 NATO",
   "narušení provozu, které se dotkne běžného života",
+] as const;
+
+/**
+ * Témata, u kterých kanál pošle i NEOVĚŘENOU zprávu — hned, jak ji sběr
+ * zachytí, a vždy označenou.
+ *
+ * Je to vědomá výjimka z pravidla „ven jde jen ověřené". Mezi zachycením
+ * a lidským ověřením jsou hodiny a u těchhle pěti věcí je ta prodleva to
+ * jediné, na čem záleží. Proto zpráva začíná slovem NEOVĚŘENO, nese odkaz na
+ * zdroj a říká, že to nikdo nepotvrdil; do počtů na webu taková zpráva
+ * nevstupuje.
+ *
+ * Co sem NEPATŘÍ: přípravy mobilizace a narušení vzdušného prostoru Aliance.
+ * Stávají se opakovaně, samy o sobě nic nemění a v kanálu by z nich byl šum,
+ * ve kterém by zapadlo to podstatné. Ty jdou jen nahoru ve frontě ke kontrole.
+ */
+export const NEOVERENE_SIGNALY = [
+  "vyhlášení mobilizace v Rusku",
+  "spuštěné krizové vysílání Českého rozhlasu",
+  "aktivace článku 4 nebo 5 NATO",
+  "nouzový stav, stav ohrožení nebo válečný stav v ČR",
+  "uzavření hranic ČR",
 ] as const;
 
 /**

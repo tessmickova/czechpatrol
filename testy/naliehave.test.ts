@@ -68,3 +68,35 @@ describe("zkratky zemí se nesmějí trefit doprostřed slova", () => {
     expect(odhadniZemi(veta)?.kod).toBe(kod);
   });
 });
+
+describe("stupně naléhavosti", () => {
+  /*
+    Stupeň 1 jde hned do telegramového kanálu jako neověřený signál, stupeň 2
+    jen nahoru ve frontě. Rozdíl je v tom, jestli má smysl budit člověka:
+    vyhlášená mobilizace ano, změna branného zákona ne.
+  */
+  it.each([
+    ["Rusko vyhlásilo všeobecnou mobilizaci, oznámil Kreml", "mobilizace-rusko", 1],
+    ["Český rozhlas zahájil mimořádné vysílání", "krizove-vysilani", 1],
+    ["Polsko aktivovalo článek 4 Severoatlantické smlouvy", "clanek-nato", 1],
+    ["Vláda ČR vyhlásila nouzový stav", "pravni-stav-cr", 1],
+    ["Česko uzavřelo hranice s Rakouskem", "hranice-cr", 1],
+    ["Rusko rozšířilo brannou povinnost a zvýšilo věk odvodů", "priprava-mobilizace", 2],
+    ["Russia expands conscription age for reservists", "priprava-mobilizace", 2],
+    ["Ruský dron narušil polský vzdušný prostor", "vzdusny-prostor-nato", 2],
+  ])("%s → %s (stupeň %i)", (veta, druh, stupen) => {
+    const n = naliehavost(veta as string);
+    expect(n?.druh).toBe(druh);
+    expect(n?.stupen).toBe(stupen);
+  });
+
+  it("nouzový stav v cizí zemi není mimořádný právní stav v ČR", () => {
+    // Spouštěč pro ČR musí mít v textu i Česko, jinak by web hlásil cizí krize jako naše.
+    expect(naliehavost("Francie vyhlásila nouzový stav po nepokojích")?.druh).not.toBe("pravni-stav-cr");
+  });
+
+  it("když sedí víc spouštěčů, rozhoduje ten naléhavější", () => {
+    const n = naliehavost("Rusko vyhlásilo mobilizaci, ruský dron narušil polský vzdušný prostor");
+    expect(n?.stupen).toBe(1);
+  });
+});

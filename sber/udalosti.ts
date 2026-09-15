@@ -58,7 +58,7 @@ export interface Kandidat {
     Kdyby to uměl automat, stačila by jedna podvržená zpráva k tomu, aby web
     sám vyhlásil mobilizaci.
   */
-  naliehave?: { druh: "mobilizace-rusko" | "krizove-vysilani"; proc: string } | null;
+  naliehave?: Naliehavost | null;
   stav: "ceka";
 }
 
@@ -66,7 +66,7 @@ const KOREN = path.join(process.cwd(), "data");
 const SOUBOR = path.join(KOREN, "kandidati.json");
 const SOUBOR_ODMITNUTYCH = path.join(KOREN, "fronta", "odmitnute.json");
 const DNI_ZPET = 21;
-const MAX_KANDIDATU = 200;
+const MAX_KANDIDATU = 300;
 /*
   Kolik článků se za běh stáhne kvůli výřezu. Strop je tu proto, že běh nemá
   trvat věčnost a redakce nemají být zbytečně zatěžované; nedotažení se dohoní
@@ -211,7 +211,7 @@ const AKTY: { kategorie: string; slova: string[] }[] = [
     „pusť si rádio“. Bez téhle skupiny by taková zpráva propadla sítem jako
     „bez skutku“, protože se v ní nestřílí ani nic nepadá.
   */
-  { kategorie: "vysilani", slova: [
+  { kategorie: "cr", slova: [
     "mimoradne vysilani", "krizove vysilani", "mimoradny vysilaci rezim", "krizovy rezim vysilani",
     "zahajil mimoradne vysilani", "zahajila mimoradne vysilani", "prechazi na mimoradne vysilani",
     "emergency broadcast", "emergency broadcasting",
@@ -284,6 +284,35 @@ const AKTY_KOMBINACE: { kategorie: string; a: string[]; b: string[] }[] = [
       "podepsal", "ukaz", "dekret", "ordered", "orders", "declared", "declares", "announces", "signed"],
     b: ["mobilizac", "mobilisation", "mobilization"],
   },
+  {
+    /*
+      Změny branné legislativy a odvodů. Nejsou to mobilizace, ale jsou to
+      kroky, které jí předcházejí — a zkušební běh ukázal, že věta „Rusko
+      zvýšilo věk odvodů" propadla sítem jako zpráva bez skutku.
+    */
+    kategorie: "pravo",
+    a: ["odvod", "branna povinnost", "brannou povinnost", "conscription", "reservist", "zalozn", "mobilizacn"],
+    b: ["zvys", "rozsir", "schvalil", "schvalila", "prijal", "prijala", "zmen", "povolav",
+      "raises", "expands", "approved", "extends", "introduces"],
+  },
+  {
+    /* Rušení navigace. U Baltu se hlásí opakovaně a dotýká se civilních letů. */
+    kategorie: "infrastruktura",
+    a: ["gps", "navigac", "galileo"],
+    b: ["ruseni", "rusi", "vypadek", "jamming", "spoofing", "disrupted", "interference"],
+  },
+  {
+    /* Stínová flotila: zadržený nebo zabavený tanker. */
+    kategorie: "hybridni",
+    a: ["tanker", "shadow fleet", "stinove flotily", "stinova flotila", "stinovou flotilu"],
+    b: ["zadrz", "zabav", "detained", "seized", "boarded", "impounded", "odstavil"],
+  },
+  {
+    /* Nařízená evakuace personálu nebo obyvatel. */
+    kategorie: "diplomacie",
+    a: ["evakuac", "evacuation"],
+    b: ["naridil", "naridila", "naridilo", "zahajil", "zahajila", "zahajilo", "ordered", "begins", "started"],
+  },
 ];
 
 /** Slova, která zprávě jen přidají oblast. Samy o sobě nikdy nestačí. */
@@ -301,7 +330,7 @@ const KONTEXT: { kategorie: string; slova: string[] }[] = [
   { kategorie: "hranice", slova: ["hranice", "hranicni prechod", "schengen", "border"] },
   { kategorie: "vojsko", slova: ["armada", "vojak", "vojaci", "policie", "celnici"] },
   { kategorie: "rusko", slova: ["rusk", "russia", "kreml", "kremlin"] },
-  { kategorie: "vysilani", slova: ["cesky rozhlas", "ceskeho rozhlasu", "radiozurnal", "irozhlas", "ceska televize", "rozhlas"] },
+  { kategorie: "cr", slova: ["cesky rozhlas", "ceskeho rozhlasu", "radiozurnal", "irozhlas", "ceska televize", "rozhlas"] },
 ];
 
 /**
@@ -339,7 +368,7 @@ const ZEME: { kod: string; nazev: string; slova: string[]; presna?: string[] }[]
     */
     { kod: "CZ", nazev: "Česko", slova: ["czech", "cesko", "ceska republika", "ceske", "policie cr", "praha", "praze", "prahou", "prahy", "prague", "brno", "brne", "ostrav"], presna: ["cr"] },
   { kod: "SK", nazev: "Slovensko", slova: ["slovak", "slovensk", "bratislav", "kosic"] },
-  { kod: "PL", nazev: "Polsko", slova: ["poland", "polish", "polsk", "warsaw", "varsav", "rzeszow", "gdansk"] },
+  { kod: "PL", nazev: "Polsko", slova: ["poland", "polish", "polsk", "polac", "warsaw", "varsav", "rzeszow", "gdansk"] },
   { kod: "DE", nazev: "Německo", slova: ["germany", "german", "nemeck", "berlin", "hamburg", "leipzig", "munich", "mnichov", "bundeswehr"] },
   { kod: "AT", nazev: "Rakousko", slova: ["austria", "rakousk", "vienna", "viden"] },
   { kod: "HU", nazev: "Maďarsko", slova: ["hungary", "hungarian", "madarsk", "budapest"] },
@@ -426,66 +455,148 @@ export function obsahujeSlovo(text: string, slovo: string): boolean {
   return new RegExp(`(^|[^a-z0-9])${vzor}[a-z]*([^a-z0-9]|$)`).test(text);
 }
 
+/** Slovo přesně, bez povolené koncovky. Pro zkratky jako „uk“, „eu“ nebo „cr“. */
+export function obsahujeToken(text: string, slovo: string): boolean {
+  const vzor = slovo.trim().replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+  return new RegExp(`(^|[^a-z0-9])${vzor}([^a-z0-9]|$)`).test(text);
+}
+
 /*
-  Vyhlášení mobilizace. Schválně jen SLOVESO s předmětem, ne samotné slovo
-  „mobilizace“: to je v článcích o roce 2022, v komentářích i v archivech
-  trvale a naléhavost by se spustila každý den.
+  Naléhavé spouštěče.
+
+  Tabulka místo šesti zvláštních funkcí: každý řádek říká, co se musí v textu
+  potkat, aby šlo o tuhle věc. Sloveso a předmět zvlášť, každé jako kmen —
+  čeština mezi ně vkládá přívlastek a slova skloňuje, takže hledání celých
+  frází míjí („Rusko vyhlásilo VŠEOBECNOU mobilizaci“).
+
+  Stupeň 1 jde hned do telegramového kanálu jako NEOVĚŘENÝ signál.
+  Stupeň 2 jde jen nahoru ve frontě ke kontrole. Rozdíl je v tom, jestli má
+  smysl budit člověka: vyhlášená mobilizace ano, změna branného zákona ne.
+
+  Naléhavost nikdy nic nezveřejní jako fakt a nezapíná mimořádnou výstrahu.
+  To umí jen člověk — viz nastroje/vystraha.mjs.
 */
-/*
-  Čeština skloňuje: „vyhlásil mobilizaci“, „vyhlásilo všeobecnou mobilizaci“,
-  „vyhlášení mobilizace“. Hledání celých frází to míjelo — zkusmý běh ukázal,
-  že věta „Rusko vyhlásilo všeobecnou mobilizaci“ neprošla vůbec. Hledá se
-  proto sloveso a předmět zvlášť, každé jako kmen.
-*/
-const MOBILIZACE_SLOVESO = [
-  "vyhlasil", "vyhlasila", "vyhlasilo", "vyhlaseni", "naridil", "naridila", "naridilo",
-  "zahajil", "zahajila", "zahajilo", "podepsal", "ukaz", "dekret",
-  "ordered", "orders", "declared", "declares", "announced", "announces", "signed",
+export type DruhNaliehavosti =
+  | "mobilizace-rusko"
+  | "priprava-mobilizace"
+  | "krizove-vysilani"
+  | "clanek-nato"
+  | "pravni-stav-cr"
+  | "hranice-cr"
+  | "vzdusny-prostor-nato";
+
+export interface Naliehavost {
+  druh: DruhNaliehavosti;
+  /** 1 = hned do kanálu, 2 = nahoru ve frontě. */
+  stupen: 1 | 2;
+  /** Co se v textu potkalo. Pro člověka, který se ptá „proč zrovna tohle“. */
+  proc: string;
+}
+
+const RUSKO = ["rusk", "russia", "russian", "kreml", "kremlin", "putin", "moskv", "moscow"];
+const CESKO = ["cesko", "ceska republika", "ceske", "cesku", "czech", "vlada cr", "praha"];
+const NATO_STATY = [
+  "polsk", "poland", "litv", "lithuania", "lotys", "latvia", "estonsk", "estonia",
+  "finsk", "finland", "norsk", "norway", "rumunsk", "romania", "nemeck", "germany",
+  "slovensk", "slovakia", "cesko", "czech", "dansk", "denmark", "svedsk", "sweden",
+  "nizozem", "netherlands", "belgi", "belgium", "spanel", "spain", "italsk", "italy",
 ];
-const MOBILIZACE_PREDMET = ["mobilizac", "mobilisation", "mobilization"];
 
-const RUSKO_KONTEXT = ["rusk", "russia", "russian", "kreml", "kremlin", "putin", "moskv", "moscow"];
-
-/*
-  Krizové (mimořádné) vysílání. Český rozhlas má vysílat, když ostatní cesty
-  selžou — a to, že začal, je pro člověka v Česku informace sama o sobě:
-  znamená to, že si má pustit rádio.
-*/
-const VYSILANI_ZAHAJENO = [
-  "mimoradne vysilani", "krizove vysilani", "mimoradny vysilaci rezim", "krizovy rezim vysilani",
-  "zahajil mimoradne vysilani", "zahajila mimoradne vysilani", "prechazi na mimoradne vysilani",
-  "emergency broadcast", "emergency broadcasting",
-];
-
-const VYSILANI_KDO = [
-  "cesky rozhlas", "ceskeho rozhlasu", "radiozurnal", "irozhlas", "cro", "ceska televize", "ct24",
+const SPOUSTECE: {
+  druh: DruhNaliehavosti;
+  stupen: 1 | 2;
+  sloveso: string[];
+  predmet: string[];
+  /** Aspoň jedno slovo odtud musí být v textu taky. Prázdné = nevyžaduje se. */
+  kontext: string[];
+}[] = [
+  {
+    /* Vyhlášená mobilizace v Rusku. Nejtvrdší spouštěč, jaký tenhle web má. */
+    druh: "mobilizace-rusko",
+    stupen: 1,
+    sloveso: ["vyhlasil", "vyhlasila", "vyhlasilo", "vyhlaseni", "naridil", "naridila", "naridilo",
+      "podepsal", "ukaz", "dekret", "ordered", "orders", "declared", "declares", "announces", "signed"],
+    predmet: ["mobilizac", "mobilisation", "mobilization"],
+    kontext: RUSKO,
+  },
+  {
+    /*
+      Přípravy. Samy o sobě nic neznamenají — branný zákon se mění i v klidu —
+      ale jsou to kroky, které mobilizaci předcházejí, a mají být vidět dřív
+      než ona. Proto stupeň 2: do fronty nahoru, do kanálu ne.
+    */
+    druh: "priprava-mobilizace",
+    stupen: 2,
+    sloveso: ["rozsir", "zvys", "zmen", "schvalil", "schvalila", "zavadi", "prijal", "povolav",
+      "expands", "raises", "approved", "introduces", "extends", "widens"],
+    predmet: ["branna povinnost", "brannou povinnost", "odvod", "zalozn", "rezervist", "mobilizacn",
+      "conscription", "draft age", "reservist", "call-up", "mobilisation law", "mobilization law"],
+    kontext: RUSKO,
+  },
+  {
+    /* Krizové vysílání: praktická informace — pusť si rádio. */
+    druh: "krizove-vysilani",
+    stupen: 1,
+    sloveso: ["zahajil", "zahajila", "zahajilo", "prechazi", "prechazi na", "spustil", "spustila", "vyhlasil"],
+    predmet: ["mimoradne vysilani", "krizove vysilani", "mimoradny vysilaci rezim", "krizovy rezim vysilani",
+      "emergency broadcast", "emergency broadcasting"],
+    kontext: ["cesky rozhlas", "ceskeho rozhlasu", "radiozurnal", "irozhlas", "ceska televize", "rozhlas"],
+  },
+  {
+    /* Článek 4 nebo 5 Washingtonské smlouvy. */
+    druh: "clanek-nato",
+    stupen: 1,
+    sloveso: ["aktivoval", "aktivovala", "aktivovalo", "aktivace", "pozadal", "pozadala", "vyvolal",
+      "invoked", "invoke", "invoking", "triggered", "requested"],
+    predmet: ["clanek 4", "clanku 4", "clanek 5", "clanku 5", "article 4", "article 5"],
+    kontext: ["nato", "aliance", "alliance", "severoatlantick", "north atlantic"],
+  },
+  {
+    /* Mimořádný právní stav v Česku. */
+    druh: "pravni-stav-cr",
+    stupen: 1,
+    sloveso: ["vyhlasil", "vyhlasila", "vyhlasilo", "vyhlaseni", "vyhlasen", "declared"],
+    predmet: ["nouzovy stav", "stav ohrozeni statu", "valecny stav", "stav nebezpeci", "state of emergency"],
+    kontext: CESKO,
+  },
+  {
+    /* Uzavření hranic ČR. Ne kontroly — ty jsou běžné a řeší se ve frontě. */
+    druh: "hranice-cr",
+    stupen: 1,
+    sloveso: ["uzavrel", "uzavrela", "uzavrelo", "uzavreni", "closed", "closes", "shut"],
+    predmet: ["hranic", "hranicni prechod", "border"],
+    kontext: CESKO,
+  },
+  {
+    /*
+      Dron nebo letoun ve vzdušném prostoru členského státu Aliance. Stává se
+      to opakovaně a pokaždé to neznamená eskalaci, proto stupeň 2.
+    */
+    druh: "vzdusny-prostor-nato",
+    stupen: 2,
+    sloveso: ["narusil", "narusila", "narusily", "vnikl", "vnikla", "violated", "violates", "breached", "entered"],
+    predmet: ["vzdusny prostor", "vzdusneho prostoru", "airspace"],
+    kontext: NATO_STATY,
+  },
 ];
 
 /**
  * Je to zpráva, kterou má člověk vidět první?
  *
- * Vrací jen značku pro pořadí ve frontě. Nic nezveřejňuje, nic nepotvrzuje
- * a do žádného počtu nevstupuje — kandidát zůstává „čeká na ověření“ jako
- * každý jiný.
+ * Vrací jen značku pro pořadí ve frontě a pro rozhodnutí, jestli o ní dát
+ * vědět do kanálu. Nic nezveřejňuje jako ověřené a do žádného počtu
+ * nevstupuje — kandidát zůstává „čeká na ověření“ jako každý jiný.
  */
-export function naliehavost(text: string): { druh: "mobilizace-rusko" | "krizove-vysilani"; proc: string } | null {
+export function naliehavost(text: string): Naliehavost | null {
   const t = normalizuj(text);
-  const sloveso = MOBILIZACE_SLOVESO.find((w) => obsahujeSlovo(t, w));
-  const predmet = MOBILIZACE_PREDMET.find((w) => obsahujeSlovo(t, w));
-  if (sloveso && predmet && RUSKO_KONTEXT.some((w) => obsahujeSlovo(t, w))) {
-    return { druh: "mobilizace-rusko", proc: `${sloveso}+${predmet}` };
-  }
-  const vys = VYSILANI_ZAHAJENO.find((w) => obsahujeSlovo(t, w));
-  if (vys && VYSILANI_KDO.some((w) => obsahujeSlovo(t, w))) {
-    return { druh: "krizove-vysilani", proc: vys };
-  }
-  return null;
-}
-
-/** Slovo přesně, bez povolené koncovky. Pro zkratky jako „uk“ nebo „eu“. */
-export function obsahujeToken(text: string, slovo: string): boolean {
-  const vzor = slovo.trim().replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
-  return new RegExp(`(^|[^a-z0-9])${vzor}([^a-z0-9]|$)`).test(text);
+  const nalez = SPOUSTECE.map((s) => {
+    const sloveso = s.sloveso.find((w) => obsahujeSlovo(t, w));
+    const predmet = s.predmet.find((w) => obsahujeSlovo(t, w));
+    const kontext = !s.kontext.length || s.kontext.some((w) => obsahujeSlovo(t, w));
+    return sloveso && predmet && kontext ? { druh: s.druh, stupen: s.stupen, proc: `${sloveso}+${predmet}` } : null;
+  }).filter((x): x is Naliehavost => x !== null);
+  /* Když sedí víc spouštěčů, rozhoduje ten naléhavější. */
+  return nalez.sort((a, b) => a.stupen - b.stupen)[0] ?? null;
 }
 
 export function odhadniTemata(text: string): { kategorie: string[]; shody: string[]; akty: string[] } {
@@ -533,6 +644,26 @@ export function duvodOdmitnuti(text: string): DuvodOdmitnuti | null {
   // Skutek bez místa je půlka informace. Alianční kontext místo nahradí.
   if (!odhadniZemi(text) && !kategorie.includes("nato")) return "bez-mista";
   return null;
+}
+
+/*
+  Kolik kanálů se stahuje naráz.
+
+  Katalog má přes sto kanálů a většina z nich vede na jeden server (Google
+  News). Stáhnout je všechny naráz je nejrychlejší způsob, jak si vysloužit
+  odmítnutí kvůli rychlosti — a odmítnutý kanál vypadá úplně stejně jako
+  klid. Šest naráz projde celý katalog v jednotkách desítek sekund a server
+  to nedráždí.
+*/
+const NARAZ = 6;
+
+/** Zpracuje pole po dávkách, aby se nestahovalo všechno naráz. */
+async function poDavkach<T, R>(polozky: T[], kolik: number, f: (x: T) => Promise<R>): Promise<R[]> {
+  const vysledky: R[] = [];
+  for (let i = 0; i < polozky.length; i += kolik) {
+    vysledky.push(...(await Promise.all(polozky.slice(i, i + kolik).map(f))));
+  }
+  return vysledky;
 }
 
 async function stahniZdroj(z: ZdrojUdalosti) {
@@ -679,7 +810,7 @@ async function posudOdmitnute(polozky: Odmitnuty[]): Promise<Odmitnuty[]> {
 }
 
 export async function sbirejUdalosti(): Promise<{ novych: number; celkem: number; nedostupne: string[]; odmitnutych: number; podezrelych: number; sVyrezem: number; zeSiti: number }> {
-  const stazene = await Promise.all(ZDROJE_UDALOSTI.map(stahniZdroj));
+  const stazene = await poDavkach(ZDROJE_UDALOSTI, NARAZ, stahniZdroj);
 
   /*
     Profily představitelů a institucí. Ministr často řekne věc nejdřív na svém
@@ -780,8 +911,12 @@ export async function sbirejUdalosti(): Promise<{ novych: number; celkem: number
   const doplnene = await doplnModelem(nove);
   // Staří kandidáti odcházejí, když jsou starší než okno nebo už byli zveřejněni jako záznam.
   const zivi = stare.filter((k) => new Date(k.publikovano ?? k.zachyceno).getTime() >= hranice && !zname.adresy.has(k.zdroj.url) && !zname.otisky.has(otisk(k.titulek)));
+  /*
+    Strop fronty. Naléhavé napřed — kdyby se fronta zaplnila běžnými zprávami,
+    vytlačila by z ní zrovna tu jednu, kvůli které tu celý sběr je.
+  */
   const vse = [...doplnene, ...zivi]
-    .sort((a, b) => (b.publikovano ?? b.zachyceno).localeCompare(a.publikovano ?? a.zachyceno))
+    .sort((a, b) => (b.naliehave ? 1 : 0) - (a.naliehave ? 1 : 0) || (b.publikovano ?? b.zachyceno).localeCompare(a.publikovano ?? a.zachyceno))
     .slice(0, MAX_KANDIDATU);
   /*
     Výřezy ze zdrojů. Tohle je ta část, kvůli které sběr vůbec k něčemu je:

@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { DORUCOVANI, KANALY, KDY_UPOZORNENI, UCTY_ZAPNUTE, WEB } from "@/config/web";
+import { DORUCOVANI, KANALY, KDY_UPOZORNENI, NEOVERENE_SIGNALY, UCTY_ZAPNUTE, WEB } from "@/config/web";
 import { Ikona } from "./ikony";
 
 /**
@@ -65,7 +65,7 @@ export function OdberPanel({ kompaktni = false }: { kompaktni?: boolean }) {
           <ul className="space-y-1.5">
             {KDY_UPOZORNENI.map((k) => {
               /* Mimořádná výstraha je jiná kategorie než běžná změna stavu — i v seznamu. */
-              const vystraha = k.startsWith("mimořádná výstraha");
+              const vystraha = (NEOVERENE_SIGNALY as readonly string[]).includes(k);
               return (
                 <li key={k} className={`flex gap-2 text-[13.5px] leading-snug ${vystraha ? "text-inkoust" : "text-tlum"}`}>
                   <span aria-hidden className={`mt-[3px] shrink-0 ${vystraha ? "text-akcent" : "text-klid-text"}`}>
@@ -86,6 +86,16 @@ export function OdberPanel({ kompaktni = false }: { kompaktni?: boolean }) {
             „Odhlášení v účtu" tu stálo, i když účty neběží. Z telegramového
             kanálu se odchází opuštěním kanálu a nikde se nezakládá účet.
           */}
+          {/*
+            Čtenář má vědět, že u pěti témat dostane i nepotvrzenou zprávu —
+            a proč. Bez toho by první takový signál vypadal jako to, proti
+            čemu se tenhle web staví.
+          */}
+          <p className="mt-3 text-[12.5px] leading-snug text-tlum">
+            U prvních pěti témat pošleme zprávu, i když ji zatím nikdo neověřil. Je označená,
+            vede na zdroj a do počtů na webu nevstupuje — mezi zachycením a ověřením jsou hodiny
+            a zrovna u těchhle věcí je to znát.
+          </p>
           <p className="mt-3 text-[12.5px] text-tlum2">Opakovanému odeslání téže změny se bráníme; postup je popsaný v metodice. Z kanálu se odhlásíte jeho opuštěním — nezakládá se žádný účet.</p>
         </div>
       )}
