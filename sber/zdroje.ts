@@ -99,6 +99,16 @@ export const ZDROJE: RegistrZdroj[] = [
     nazev: "e-Sbírka — úřední sbírka právních předpisů",
     druh: "pravni",
     url: "https://www.e-sbirka.cz/",
+    /*
+      Hlavní adresa vrací jen slupku o kilobajtu — obsah dokresluje JavaScript,
+      který sběr nespouští. Zkoušíme proto i další adresy Sbírky; která z nich
+      vrací čitelný text, ukáže běh „Ověření zdrojů".
+    */
+    zalozniUrl: [
+      "https://sbirka.gov.cz/",
+      "https://aplikace.mvcr.cz/sbirka-zakonu/",
+      "https://www.e-sbirka.cz/rejstrik",
+    ],
     format: "html",
     jazyk: "cs",
     primarni: true,
