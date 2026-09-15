@@ -1,5 +1,38 @@
 [
   {
+    "id": "k-78ea89905c91bdb6",
+    "zachyceno": "2026-09-15T06:02:44.951Z",
+    "publikovano": "2026-09-15T05:55:16.000Z",
+    "zdroj": {
+      "nazev": "Google News — sabotage Europe",
+      "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxQRDRiSk1zTGFzalVzWFc5WjUwZy1KMXJGNHc4dmoyZUxOM2NuRlZIb0JhUU5yQVdxU0JuazQtbWZENFMxUXdVVmdBd0drTlNBcjRQc2NzU2tWYlBRQlNWcEdyaHNSSUNiZV96VXNTNFg3OGktM1BWZzc1cXlSRDRaWk5nbFdrTG16dHdoeUVPb1pmN0hualdDaQ?oc=5",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Arson, sabotage and 'disposable agents': How Russia is waging a covert war across Europe - RBC-Ukraine",
+    "titulekPuvodni": "Arson, sabotage and 'disposable agents': How Russia is waging a covert war across Europe - RBC-Ukraine",
+    "shrnuti": "<a href=\"https://news.google.com/rss/articles/CBMimAFBVV95cUxQRDRiSk1zTGFzalVzWFc5WjUwZy1KMXJGNHc4dmoyZUxOM2NuRlZIb0JhUU5yQVdxU0JuazQtbWZENFMxUXdVVmdBd0drTlNBcjRQc2NzU2tWYlBRQlNWcEdyaHNSSUNiZV96VXNTNFg3OGktM1BWZzc1cXlSRDRaWk5nbFdrTG16dHdoeUVPb1pmN0hualdDaQ?oc=5\" target=\"_blank\">Arson, sabotage and '",
+    "kodZeme": "GB",
+    "zeme": "Spojené království",
+    "kategorie": [
+      "sabotaz",
+      "rusko"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "shody": [
+      "sabotage",
+      "arson",
+      "russia"
+    ],
+    "stav": "ceka",
+    "vyrez": {
+      "text": "Google News",
+      "stazeno": "2026-09-15T06:02:45.027Z",
+      "stav": 200
+    }
+  },
+  {
     "id": "k-ce6ddf20c5672dcd",
     "zachyceno": "2026-09-15T05:02:40.259Z",
     "publikovano": "2026-09-15T04:55:00.000Z",
@@ -97,6 +130,40 @@
     "vyrez": {
       "text": "Google News",
       "stazeno": "2026-09-15T05:02:40.505Z",
+      "stav": 200
+    }
+  },
+  {
+    "id": "k-1d4f7617a3d94164",
+    "zachyceno": "2026-09-15T06:02:45.015Z",
+    "publikovano": "2026-09-15T03:45:07.000Z",
+    "zdroj": {
+      "nazev": "Google News — Polsko vzdušný prostor",
+      "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxNa3lfbzk1QkdVZHN0d0tUeWIwS3JUa2FBSk1tMVUtZVBDTlA2VUhSWFBXNWdSaTg1a2NzZ3RPdEVmaVR1ZFIzODZ2UHFZd2cyVkxpWFdXWS03RXFjQ3NKMk1kSHl2a2pySEJ5MENSZVdyUG9pQ0RzRk5MZkdLbG5KZlRscU1YZURPNnpDRUFtSVBpNVVKZ0t0OURSYUtkeWc0U0tqeG5qSTNCeE02SU5FUV83eHBWcTRHVEV3?oc=5",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Ukraine-Russia war latest: Poland scrambles jets as Putin attacks Kyiv with jet-powered drones - inkl",
+    "titulekPuvodni": "Ukraine-Russia war latest: Poland scrambles jets as Putin attacks Kyiv with jet-powered drones - inkl",
+    "shrnuti": "<a href=\"https://news.google.com/rss/articles/CBMiuwFBVV95cUxNa3lfbzk1QkdVZHN0d0tUeWIwS3JUa2FBSk1tMVUtZVBDTlA2VUhSWFBXNWdSaTg1a2NzZ3RPdEVmaVR1ZFIzODZ2UHFZd2cyVkxpWFdXWS03RXFjQ3NKMk1kSHl2a2pySEJ5MENSZVdyUG9pQ0RzRk5MZkdLbG5KZlRscU1YZURPNnpDRUFtSVBpNVVKZ0t0OURSYUtkeWc0U0tqeG5qSTNCeE02SU5FUV83eHBWcTRHVE",
+    "kodZeme": "PL",
+    "zeme": "Polsko",
+    "kategorie": [
+      "drony",
+      "rusko"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "shody": [
+      "scrambl",
+      "dron",
+      "drone",
+      "russia"
+    ],
+    "stav": "ceka",
+    "vyrez": {
+      "text": "Google News",
+      "stazeno": "2026-09-15T06:02:45.216Z",
       "stav": 200
     }
   },
