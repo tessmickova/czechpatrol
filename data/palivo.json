@@ -7,7 +7,8 @@
     "primarni": true
   },
   "poznamka": "Řadu plní sběr běžící na GitHub Actions; v sandboxu rutiny jsou úřední domény nedostupné. Dokud řada není naplněná, na webu se o ceně nepíše nic — prázdná řada není nula.",
-  "chyba": "https://data.csu.gov.cz/api/dotaz/v1/data/sady/CENPHMTT01?format=csv: HTTP 400 | https://data.csu.gov.cz/data/csu/data/CENPHMTT01.csv: nenašel se sloupec s datem (hlavička: <!doctype html>) | https://data.csu.gov.cz/datastat/data/VYBER/CENPHMTT01?format=csv: nenašel se sloupec s datem (hlavička: <!doctype html>) | https://vdb.czso.cz/pll/eweb/lkod_ld.seznam: nenašel se sloupec s cenou (hlavička: dataset_iri | dataset_id | title | provider | description | spatial | modified | page | periodicity | start | end | keywords_all)",
+  "chyba": "https://data.csu.gov.cz/api/dotaz/v1/data/sady/CENPHMTT01?format=csv: HTTP 400 | https://data.csu.gov.cz/data/csu/data/CENPHMTT01.csv: nenašel se sloupec s datem (hlavička: <!doctype html>) | https://data.csu.gov.cz/datastat/data/VYBER/CENPHMTT01?format=csv: nenašel se sloupec s datem (hlavička: <!doctype html>) | https://vdb.czso.cz/pll/eweb/stapro.csv: nenašel se sloupec s cenou (hlavička: kod | text | text_en | platiod | neplatipo | definice | definice_en)",
   "rada": [],
-  "zprava": null
+  "zprava": null,
+  "pokus": "2026-09-15T02:05:27.521Z"
 }
