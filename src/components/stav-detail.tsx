@@ -104,6 +104,23 @@ export function StavDetail({
       )}
 
       {p.chybi && <Radek popisek="Co nám chybí">{p.chybi}</Radek>}
+
+      {/*
+        Odkaz na úřad, který o věci rozhoduje. Kdo potřebuje jistotu teď hned,
+        nemá čekat, až ji ověříme my — má jít rovnou ke zdroji. Adresy jsou
+        tytéž, které čte sběr, takže se nemůžou rozejít.
+      */}
+      {p.zdroje.length > 0 && (
+        <Radek popisek="Ověřit u úřadu">
+          <span className="flex flex-wrap gap-x-3 gap-y-1">
+            {p.zdroje.map((z) => (
+              <a key={z.klic} href={z.url} target="_blank" rel="noopener noreferrer" className="odkaz">
+                {z.nazev} ↗
+              </a>
+            ))}
+          </span>
+        </Radek>
+      )}
     </dl>
   );
 }

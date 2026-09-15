@@ -1,5 +1,6 @@
 import type { ReactNode } from "react";
 import { Znacka } from "./znacka";
+import { Otaznik } from "./zaklad";
 
 /*
   Nadpisy webu. Tři velikosti a jedno pravidlo: čtenář má z velikosti poznat,
@@ -64,8 +65,15 @@ export function NadpisSekce({
             <span className="stitek-znacky">{stitek}</span>
           </div>
         )}
-        <h2 className="titul-sekce">{nadpis}</h2>
-        {popis && <p className="uvodni-veta mt-4">{popis}</p>}
+        {/*
+          Vysvětlivka je v puntíku vedle nadpisu, ne odstavcem pod ním.
+          Kdo nadpis zná, jde rovnou na obsah; kdo potřebuje vědět, za jaké
+          období a z jaké množiny to je, si to rozklikne.
+        */}
+        <h2 className="titul-sekce flex flex-wrap items-center gap-x-2.5 gap-y-1">
+          {nadpis}
+          {popis && <Otaznik popis={popis} label="Co tahle sekce ukazuje" />}
+        </h2>
       </div>
       {akce && <div className="shrink-0">{akce}</div>}
     </div>
@@ -87,8 +95,10 @@ export function NadpisBloku({
   return (
     <div className="mb-5 flex flex-col gap-3 scroll-mt-[84px] sm:flex-row sm:items-end sm:justify-between sm:gap-6" id={id}>
       <div className="max-w-[44rem]">
-        <h3 className="titul-mensi">{nadpis}</h3>
-        {popis && <p className="mt-2.5 text-[15.5px] leading-relaxed text-tlum">{popis}</p>}
+        <h3 className="titul-mensi flex flex-wrap items-center gap-x-2 gap-y-1">
+          {nadpis}
+          {popis && <Otaznik popis={popis} label="Co tenhle blok ukazuje" />}
+        </h3>
       </div>
       {akce && <div className="shrink-0">{akce}</div>}
     </div>

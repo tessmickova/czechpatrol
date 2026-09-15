@@ -107,8 +107,8 @@ export function ObloukovyMerak({
 */
 const POPISKY: Record<string, string> = {
   sabotaze: "Sabotáže",
-  atribuce: "Připsání odpovědnosti",
-  kyber: "Kybernetické útoky",
+  atribuce: "Připsání",
+  kyber: "Kybernetické",
   drony: "Drony",
   infrastruktura: "Infrastruktura",
   primy: "Vojenský střet",
@@ -125,7 +125,14 @@ export function RadarTlaku({ tlak, velikost = 300, okraj = 72 }: { tlak: Hybridn
   const osy = tlak.podkategorie;
   if (osy.length < 3) return null;
 
-  const cx = velikost / 2;
+  /*
+    Plátno je širší než vyšší. Popisky os jsou vodorovné a nejdelší z nich
+    („Infrastruktura", „Vojenský střet") přesahovaly hranu čtverce a ořezávaly
+    se — z „Vojenský střet" zbylo „ký střet". Rozšíření je levnější než
+    zkracování názvů: zkratky na osách byly ta věc, kterou audit vytýkal.
+  */
+  const sirka = Math.round(velikost * 1.45);
+  const cx = sirka / 2;
   const cy = velikost / 2;
   const r = velikost / 2 - okraj;
   const n = osy.length;
@@ -142,8 +149,8 @@ export function RadarTlaku({ tlak, velikost = 300, okraj = 72 }: { tlak: Hybridn
 
   return (
     <svg
-      viewBox={`0 0 ${velikost} ${velikost}`}
-      width={velikost}
+      viewBox={`0 0 ${sirka} ${velikost}`}
+      width={sirka}
       height={velikost}
       role="img"
       aria-label="Rozložení hybridního tlaku podle dílčích ukazatelů"
@@ -182,7 +189,7 @@ export function RadarTlaku({ tlak, velikost = 300, okraj = 72 }: { tlak: Hybridn
             x={x}
             y={y + 3.5}
             textAnchor={Math.abs(x - cx) < 8 ? "middle" : x > cx ? "start" : "end"}
-            fontSize="11"
+            fontSize="10.5"
             fill="var(--color-tlum2)"
             fontFamily="var(--font-mono)"
             letterSpacing="0.6"

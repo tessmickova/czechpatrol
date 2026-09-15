@@ -99,10 +99,13 @@ export function Logo({
   velikost = 34,
   pismo = 19,
   tmave = false,
+  beta = true,
 }: {
   velikost?: number;
   pismo?: number;
   tmave?: boolean;
+  /** Označení rozpracovanosti vedle názvu. */
+  beta?: boolean;
 }) {
   return (
     <span className="flex items-center gap-2.5">
@@ -118,6 +121,19 @@ export function Logo({
       >
         Czech<span style={{ color: "var(--color-akcent)" }}>Patrol</span>
       </span>
+      {/*
+        BETA. Není to ozdoba: web je rozpracovaný a návštěvník to má vědět dřív,
+        než podle něj něco udělá. Obrysová pilulka v barvě akcentu — drží se
+        značky, nekřičí a nesoupeří s názvem.
+      */}
+      {beta && (
+        <span
+          className="shrink-0 rounded-full border border-akcent/60 px-[6px] py-[2px] font-mono font-semibold uppercase leading-none tracking-[0.12em] text-akcent"
+          style={{ fontSize: Math.max(8, Math.round(pismo * 0.48)) }}
+        >
+          beta
+        </span>
+      )}
     </span>
   );
 }

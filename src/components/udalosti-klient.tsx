@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { useCallback, useEffect, useMemo, useState } from "react";
+import { Fragment, useCallback, useEffect, useMemo, useState } from "react";
 import { druh, jistotaZobrazena, kdyZjisteno, pachatelPotvrzen, uredniZdroj, type Zaznam } from "@/lib/agregace";
 import { datumPraha } from "@/lib/cas";
 import { KATEGORIE, PORADI_KATEGORII } from "@/lib/kategorie";
@@ -12,6 +12,7 @@ import { ctiDotaz, sledujDotaz, zapisDotaz } from "@/lib/url-stav";
 import { DetailObsah, HlavickaDetailu } from "./detail-obsah";
 import { Ikona } from "./ikony";
 import { Nahlaseni } from "./nahlaseni";
+import { RadaUdaju, Udaj, UdajZavaznosti } from "./udaje";
 import { Odznak, OdznakZavaznosti, RadekSeznamu, Sdeleni, TeckaZavaznosti, Tlacitko } from "./ui";
 import { SeznamZdroju } from "./zdroje";
 import { Prazdno } from "./zaklad";
@@ -394,17 +395,24 @@ export function UdalostiKlient({ zaznamy, neprosle, kandidati = [] }: { zaznamy:
               const rok = r.kdy.slice(0, 4);
               const novyRok = i === 0 || zobrazene[i - 1].kdy.slice(0, 4) !== rok;
               return (
-                <li key={r.typ === "zaznam" ? r.z.id : r.typ === "neproslo" ? `n-${r.n.id}` : r.k.id} className="contents">
+                /*
+                  Fragment, ne <li>. RadekSeznamu si vlastní <li> vykresluje
+                  sám, takže obal z něj dělal <li> uvnitř <li>. Prohlížeč to
+                  po svém přeskládá, React pak hlásí neshodu vykreslení
+                  (chyba #418) a celý strom pod tím překreslí — na úvodní
+                  straně, v událostech i v jazykových variantách.
+                */
+                <Fragment key={r.typ === "zaznam" ? r.z.id : r.typ === "neproslo" ? `n-${r.n.id}` : r.k.id}>
                   {novyRok && (
-                    <div className="mt-3 mb-1 flex items-center gap-3">
+                    <li className="mt-3 mb-1 flex items-center gap-3">
                       <span className="cislice text-[15px] font-bold text-inkoust">{rok}</span>
                       <span className="stitek">{vysledek.filter((x) => x.kdy.slice(0, 4) === rok).length} {sklon(vysledek.filter((x) => x.kdy.slice(0, 4) === rok).length, "záznam", "záznamy", "záznamů")}</span>
-                    </div>
+                    </li>
                   )}
                   {r.typ === "zaznam"
                     ? <RadekZaznamu z={r.z} otevreny={otevreny?.slug === r.z.slug} onOtevri={() => (siroky ? otevri(r.z.slug) : undefined)} siroky={siroky} />
                     : r.typ === "neproslo" ? <RadekNeprosle n={r.n} /> : <RadekKandidata k={r.k} />}
-                </li>
+                </Fragment>
               );
             })}
           </ol>
@@ -476,21 +484,31 @@ function RadekZaznamu({ z, otevreny, onOtevri, siroky }: { z: Zaznam; otevreny: 
         cerstvost: kdyZjisteno(z),
         titulek: <span className={otevreny ? "text-akcent-svetla" : undefined}>{z.titulek}</span>,
         znacky: (
-          <>
-            <Odznak ton={dobraInfo ? "klid" : "neutral"}>jistota informace: {JISTOTY[jistota].nazev.toLowerCase()}</Odznak>
+          /*
+            Čtyři údaje, podle kterých se pozná, jestli se dá záznamu věřit.
+            Dřív to byly stejně vypadající pilulky v řadě a splývaly.
+          */
+          <RadaUdaju>
+            {dr === "pripad" && <UdajZavaznosti uroven={z.zavaznost} />}
+            <Udaj popisek="Jistota informace" hodnota={JISTOTY[jistota].nazev} ton={dobraInfo ? "dobry" : "neutral"} />
             {dr === "pripad" && (
-              <Odznak ton={pachatel ? "klid" : z.puvodce ? "pozor" : "neutral"}>
-                {/*
-                  „pachatel: oficiální" míchalo osobu s typem důkazu. Původce
-                  a stav připsání odpovědnosti jsou dvě různé věci.
-                */}
-                původce: {z.puvodce ? PUVODCE_NAZVY[z.puvodce] : "neznámý"}{z.puvodce && !pachatel ? " — dosud nepotvrzeno" : ""}
-              </Odznak>
+              <Udaj
+                popisek="Původce"
+                ton={pachatel ? "dobry" : z.puvodce ? "pozor" : "neutral"}
+                hodnota={
+                  <>
+                    {z.puvodce ? PUVODCE_NAZVY[z.puvodce] : "neznámý"}
+                    {z.puvodce && !pachatel && <span className="font-normal text-tlum"> — dosud nepotvrzeno</span>}
+                  </>
+                }
+              />
             )}
-            <Odznak ton={uredniZdroj(z) ? "klid" : "neutral"} ikona={uredniZdroj(z) ? "fajfka" : undefined}>
-              {uredniZdroj(z) ? "úřední zdroj" : "zdroj: média"}
-            </Odznak>
-          </>
+            <Udaj
+              popisek="Zdroj"
+              hodnota={uredniZdroj(z) ? "úřední" : "média"}
+              ton={uredniZdroj(z) ? "dobry" : "neutral"}
+            />
+          </RadaUdaju>
         ),
       }}
     />

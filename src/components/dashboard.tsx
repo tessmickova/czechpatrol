@@ -19,6 +19,9 @@ import { PruhOverujeme } from "./overujeme";
 import { PocitadlaEvropa, type PolozkaPoctu } from "./pocitadla-zive";
 import { Odznak, RadekSeznamu, TeckaZavaznosti, Tlacitko } from "./ui";
 import { PavucinaHrozeb } from "./pavucina";
+import { KaruselZemi } from "./karusel-zemi";
+import { useZiveHodiny } from "@/lib/cas-klient";
+import { SignalySiti } from "./signaly-siti";
 import { PasZemi } from "./pas-zemi";
 import { Pocitadla } from "./pocitadla";
 import { Partneri, Sledovat } from "./sledovat";
@@ -157,9 +160,10 @@ function dlazdiceProvoz(p: ProvozniPolozka): Dlazdice {
   relativní čas byl jediný údaj — absolutní se dal zjistit jen najetím myší,
   což na dotyku ani klávesnici nejde.
 */
-function Stari({ cas, popisek }: { cas: string | null; popisek: Dlazdice["popisekCasu"] }) {
+function Stari({ cas, popisek, ted }: { cas: string | null; popisek: Dlazdice["popisekCasu"]; ted: number }) {
   if (!cas) return <span className="shrink-0 text-[10.5px] text-tlum2">bez kontroly</span>;
-  const c = cerstvost(cas);
+  // Čas je předaný, ne braný z Date.now() — jinak se vykreslení neshodnou.
+  const c = cerstvost(cas, ted);
   const barva = c === "cerstve" || c === "nezname" ? "text-tlum2" : "text-stari-text";
   return (
     <span className={`shrink-0 text-right text-[10.5px] leading-tight ${barva}`}>
@@ -181,7 +185,7 @@ function Stari({ cas, popisek }: { cas: string | null; popisek: Dlazdice["popise
   Stav nese slovo i barva, ne jen barva: kdo barvy nerozliší nebo si web
   vytiskne černobíle, přečte totéž.
 */
-function RadekStavu({ d, casSkupiny }: { d: Dlazdice; casSkupiny: string | null }) {
+function RadekStavu({ d, casSkupiny, ted }: { d: Dlazdice; casSkupiny: string | null; ted: number }) {
   const t = TON[d.ton];
   // Čas se u řádku píše jen tehdy, když se liší od času celé skupiny.
   const vlastniCas = d.cas !== casSkupiny;
@@ -204,7 +208,7 @@ function RadekStavu({ d, casSkupiny }: { d: Dlazdice; casSkupiny: string | null 
             <span className="block truncate text-[13.5px] leading-tight text-tlum">{d.nazev}</span>
             <span className={`block text-[15px] font-bold leading-tight ${t.slovo}`}>{d.stav}</span>
           </span>
-          {vlastniCas && <Stari cas={d.cas} popisek={d.popisekCasu} />}
+          {vlastniCas && <Stari cas={d.cas} popisek={d.popisekCasu} ted={ted} />}
           <Ikona nazev="dolu" velikost={13} tah={2} trida="shrink-0 text-tlum2 transition-transform group-open:rotate-180" />
         </summary>
         <StavDetail polozka={d.zdrojovaPolozka} skupina={d.skupina} vysvetleni={d.vysvetleni} stavVysvetleni={d.stavVysvetleni} coByZmenilo={d.coByZmenilo} />
@@ -221,7 +225,7 @@ function Hlavni({ nadpis, hodnota, ton, popis, overeno, napoveda, jiskra }: { na
       <span className={`flex min-h-[112px] w-full flex-col justify-between rounded-[18px] border p-4 text-left ${t ? t.dlazdice : "border-linka bg-plocha"}`}>
         <span className="flex items-center justify-between gap-2">
           <span className="stitek">{nadpis}</span>
-          <Stari cas={overeno} popisek="kontrolováno" />
+          <Stari cas={overeno} popisek="kontrolováno" ted={Date.parse(overeno ?? "") || 0} />
         </span>
         <span className="mt-2 flex items-end justify-between gap-3">
           <span className={`text-[26px] font-bold leading-none sm:text-[30px] ${t ? t.slovo : ""}`}>{hodnota}</span>
@@ -254,10 +258,12 @@ function Pruh({ nazev, n, max, barva, odkaz }: { nazev: React.ReactNode; n: numb
 }
 
 export function Dashboard({
-  stav, pravni, natoPolozky, provozPolozky, overeno, vse, neprosle, kandidati, tydny, watchlist, cr, crHistoricky, crPocet, hybridni, obcane,
+  stav, pravni, natoPolozky, provozPolozky, overeno, vse, neprosle, kandidati, tydny, watchlist, cr, crHistoricky, crPocet, hybridni, obcane, ted,
   tlakEvropa, tlakCesko, veta, kampane, nazvyZemi, overovaneAktivni = [], overovaneUzavrene = [],
 }: {
   stav: CelkovyStav; pravni: PravniPolozka[]; natoPolozky: NatoPolozka[]; provozPolozky: ProvozniPolozka[];
+  /** Čas sestavení. Klient z něj vychází, aby se první vykreslení shodlo. */
+  ted: number;
   overeno: string | null; vse: Zaznam[]; neprosle: Nepotvrzene[]; kandidati: Kandidat[]; tydny: TydenniHodnoceni[]; watchlist: Watchlist;
   cr: Uroven | null; crHistoricky: Uroven | null; crPocet: { pripadu: number; kampani: number };
   hybridni: Uroven | null; obcane: { uroven: Uroven; popis: string; neovereno: number };
@@ -284,7 +290,13 @@ export function Dashboard({
     a to z posledních dvou let, ne z celého archivu od roku 2014, kde je
     sběr řídký a každé dnešní čtvrtletí by vyšlo jako mimořádné.
   */
-  const tedMs = Date.now();
+  /*
+    Čas přichází ze serverové stránky a po připojení se přepne na živý.
+    Kdyby si ho komponenta brala sama přes Date.now(), lišilo by se
+    vykreslení při sestavení a při hydrataci — React na to hlásil chybu
+    #418 na úvodní straně, v událostech i v jazykových variantách.
+  */
+  const tedMs = useZiveHodiny(ted);
   const kampaneVOkne = (dni: number) => kampane.filter((k) => tedMs - new Date(k.odhaleno).getTime() <= dni * 86_400_000).length;
   const zapocitatelne90 = dni90.length + kampaneVOkne(90);
   const casyZapocitatelne = [
@@ -319,7 +331,7 @@ export function Dashboard({
     .filter((z, i, pole) => pole.findIndex((x) => x.id === z.id) === i)
     .sort((a, b) => kdyZjisteno(b).localeCompare(kdyZjisteno(a)))
     .slice(0, 7);
-  const stariCelkem = cerstvost(overeno);
+  const stariCelkem = cerstvost(overeno, tedMs);
 
   const crHodnota = platiCr.length ? platiCr.map((p) => KRATCE_PRAVNI[p.klic] ?? p.nazev).join(", ") : naruseno.length ? "Narušeno" : sledujeme.length ? "Sledujeme" : "Bez omezení";
   const crTon: Ton = platiCr.length ? "plati" : naruseno.length ? "plati" : sledujeme.length ? "pozor" : neovereneCr === pravni.length ? "nevime" : "klid";
@@ -374,7 +386,7 @@ export function Dashboard({
       <HeroDashboard stav={stav} cr={cr} crHistoricky={crHistoricky} crPocet={crPocet} obcane={obcane} overeno={overeno} pocetZaznamu={vse.length} pocet90={zapocitatelne90} veta={veta} porovnani90={porovnani90} />
 
       {/* 1b — kolik případů přibylo; počítá se v prohlížeči, ne při sestavení */}
-      <PocitadlaEvropa polozky={pocitadlaData} ted={Date.now()} />
+      <PocitadlaEvropa polozky={pocitadlaData} ted={ted} />
 
       {/* 2 — mřížka stavů + poslední události */}
       <div className="nalet mt-14 sm:mt-20">
@@ -394,10 +406,10 @@ export function Dashboard({
               */}
               <div className="flex items-center justify-between gap-3 border-b border-linka2 px-3 py-2">
                 <span className="stitek">{sk.nazev}</span>
-                <Stari cas={sk.cas} popisek={sk.popisekCasu} />
+                <Stari cas={sk.cas} popisek={sk.popisekCasu} ted={tedMs} />
               </div>
               <ul className="sm:grid sm:grid-cols-2">
-                {sk.polozky.map((d) => <RadekStavu key={d.klic} d={d} casSkupiny={sk.cas} />)}
+                {sk.polozky.map((d) => <RadekStavu key={d.klic} d={d} casSkupiny={sk.cas} ted={tedMs} />)}
               </ul>
             </div>
           ))}
@@ -447,6 +459,13 @@ export function Dashboard({
             </Tlacitko>
           </div>
         </section>
+
+        {/*
+          Signály z profilů představitelů a institucí. Zobrazí se jen tehdy,
+          když nějaké máme — prázdná sekce s nadpisem by tvrdila, že se nic
+          neděje, přitom by znamenala jen to, že profily zatím nesledujeme.
+        */}
+        <SignalySiti />
       </div>
 
       {/* 2b2 — manipulační kampaně: operace, ne události */}
@@ -474,6 +493,11 @@ export function Dashboard({
           nadpis={t("Typy evidovaných událostí")}
           popis="Evidované události podle typu za posledních 90 dní. Vlevo Evropa, vpravo Česko."
         />
+        {/*
+          Nejdřív Evropa a Česko vedle sebe — to je hlavní srovnání. Pak
+          karusel ostatních zemí: kdo chce vidět, kde se dělá co, projede ho;
+          kdo ne, přejde dál. Neposouvá se sám.
+        */}
         <div className="grid gap-4 lg:grid-cols-2">
           <PavucinaHrozeb
             nadpis="Evropa jako celek"
@@ -488,7 +512,32 @@ export function Dashboard({
             odkaz={{ href: "/udalosti/?zeme=CZ", text: "české záznamy →" }}
           />
         </div>
+        <div className="mt-4">
+          <div className="stitek mb-2">Ostatní sledované země</div>
+          <KaruselZemi />
+        </div>
       </div>
+
+      {/*
+        Pořadí prohozeno: nejdřív seznam záznamů, pak čísla o něm.
+
+        Čtenář, který dojde až sem, hledá konkrétní událost — ne souhrnnou
+        statistiku. Čísla dávají smysl až nad seznamem, který si prohlédl,
+        ne před ním.
+      */}
+      {/* 4 — započítávání a úplný seznam */}
+      <div className="nalet mt-14 border-t border-linka pt-12 sm:mt-20 sm:pt-14">
+        <NadpisSekce
+          stitek="Archiv"
+          nadpis={t("Všechny záznamy od roku 2014")}
+          popis={t("Případy, jejich pokračování, opatření, prohlášení i to, co neprošlo ověřením.")}
+          akce={<Tlacitko kam="/udalosti/" varianta="obrys" velikost="s" ikonaVpravo="nahoru" trida="[&>svg:last-child]:rotate-90">{t("samostatná stránka")}</Tlacitko>}
+        />
+      </div>
+      <div className="mb-5"><Pocitadla vse={vse} neprosle={neprosle} kandidati={kandidati} /></div>
+      <section id="zaznamy" aria-label={t("Všechny záznamy")} className="scroll-mt-[84px] rounded-[22px] border border-linka2 bg-plocha p-4 sm:p-6">
+        <UdalostiKlient zaznamy={vse} neprosle={neprosle} kandidati={kandidati} />
+      </section>
 
       {/* 3 — čísla, kde, kdo */}
       <div className="nalet mt-14 border-t border-linka pt-12 sm:mt-20 sm:pt-14">
@@ -545,20 +594,6 @@ export function Dashboard({
 
       {/* 3b — tmavší deska: jediné místo, kde web něco chce po čtenáři */}
       <div className="mt-14 sm:mt-20"><VyzvaTelegram /></div>
-
-      {/* 4 — započítávání a úplný seznam */}
-      <div className="nalet mt-14 border-t border-linka pt-12 sm:mt-20 sm:pt-14">
-        <NadpisSekce
-          stitek="Archiv"
-          nadpis={t("Všechny záznamy od roku 2014")}
-          popis={t("Případy, jejich pokračování, opatření, prohlášení i to, co neprošlo ověřením.")}
-          akce={<Tlacitko kam="/udalosti/" varianta="obrys" velikost="s" ikonaVpravo="nahoru" trida="[&>svg:last-child]:rotate-90">{t("samostatná stránka")}</Tlacitko>}
-        />
-      </div>
-      <div className="mb-5"><Pocitadla vse={vse} neprosle={neprosle} kandidati={kandidati} /></div>
-      <section id="zaznamy" aria-label={t("Všechny záznamy")} className="scroll-mt-[84px] rounded-[22px] border border-linka2 bg-plocha p-4 sm:p-6">
-        <UdalostiKlient zaznamy={vse} neprosle={neprosle} kandidati={kandidati} />
-      </section>
 
       {/* 5 — sledovat a partneři */}
       <div className="nalet mt-14 border-t border-linka pt-12 sm:mt-20 sm:pt-14">

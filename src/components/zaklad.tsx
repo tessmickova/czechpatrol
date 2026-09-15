@@ -25,15 +25,23 @@ export function Napoveda({
   );
 }
 
-/** Malý kroužek s otazníkem vedle popisku. */
-export function Otaznik({ popis, vpravo }: { popis: ReactNode; vpravo?: boolean }) {
+/*
+  Informační puntík.
+
+  Jediné místo, kde se na webu schovávají vysvětlivky. Nadpis nese název,
+  puntík vedle něj nese všechno ostatní — metodiku, období, definici množiny.
+  Dřív ta vysvětlení stála jako odstavce pod nadpisy a čtenář je musel
+  přeskakovat, i když je nechtěl.
+
+  Obrysový kroužek v barvě akcentu: drží se značky, je malý a nekřičí.
+  Není `aria-hidden` — vysvětlení musí být dostupné i čtečkou a klávesnicí,
+  ne jen najetím myší.
+*/
+export function Otaznik({ popis, vpravo, label = "Vysvětlivka" }: { popis: ReactNode; vpravo?: boolean; label?: string }) {
   return (
-    <Napoveda popis={popis} vpravo={vpravo}>
-      <span
-        aria-hidden
-        className="inline-grid h-[14px] w-[14px] place-items-center rounded-full border border-linka text-[9px] font-semibold text-tlum2 transition-colors hover:border-inkoust hover:text-inkoust"
-      >
-        ?
+    <Napoveda popis={popis} vpravo={vpravo} label={label}>
+      <span className="inline-grid h-[15px] w-[15px] shrink-0 place-items-center rounded-full border border-akcent/55 text-[9.5px] font-semibold leading-none text-akcent transition-colors hover:border-akcent hover:bg-akcent/15">
+        i
       </span>
     </Napoveda>
   );

@@ -402,6 +402,11 @@ export interface Kandidat {
   /** „pravidla“ = jen klíčová slova; „model“ = přečteno a přeloženo jazykovým modelem. */
   /** „clovek“ = vytáhl to člověk z odmítnutých, proti sítu. */
   klasifikace: "pravidla" | "model" | "clovek";
+  /**
+   * Kandidát z profilu na sociální síti. Signál, ne doklad: do počtů
+   * nevstupuje a závažnost nezvyšuje. null = přišel ze zpravodajství.
+   */
+  zeSite?: { kdo: string; role: string; sit: string } | null;
   shody: string[];
   stav: "ceka";
 }

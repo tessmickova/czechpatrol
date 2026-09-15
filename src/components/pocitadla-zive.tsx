@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { useEffect, useState } from "react";
+import { useZiveHodiny } from "@/lib/cas-klient";
 import { cislem, porovnejSPrumerem, prumerNaOkno, type Porovnani } from "@/lib/porovnani";
 import { Odznak } from "./ui";
 import { sklon } from "./zeme";
@@ -98,17 +98,6 @@ function Cislo({
       {odznak}
     </Link>
   );
-}
-
-function useZiveHodiny(ted: number) {
-  const [cas, setCas] = useState(ted);
-  useEffect(() => {
-    setCas(Date.now());
-    // Přepočet po minutě stačí; číslo se mění nanejvýš jednou za hodinu.
-    const t = setInterval(() => setCas(Date.now()), 60_000);
-    return () => clearInterval(t);
-  }, []);
-  return cas;
 }
 
 /** Velká počítadla pod hlavičkou: kolik toho přibylo a za jak dlouho. */

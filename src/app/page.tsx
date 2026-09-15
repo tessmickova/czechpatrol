@@ -13,6 +13,7 @@ export default function Prehled() {
     <>
       <BannerStari overeno={posledniOvereni()} zkontrolovano={posledniKontrola()} />
       <Dashboard
+        ted={Date.now()}
         stav={celkovyStav()}
         pravni={pravniStav().polozky}
         natoPolozky={nato().polozky}
