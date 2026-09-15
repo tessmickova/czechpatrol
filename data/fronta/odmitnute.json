@@ -1,5 +1,37 @@
 [
   {
+    "id": "k-8d59223adb7dc0a8",
+    "zachyceno": "2026-09-15T18:32:58.667Z",
+    "publikovano": "2026-09-15T18:27:00.000Z",
+    "zdroj": {
+      "nazev": "Český rozhlas — domácí zprávy",
+      "url": "https://www.irozhlas.cz/kultura/film/cast-letenskeho-parku-obsadi-filmari-na-zamecku-budou-tocit-adaptaci-tajemstvi_2609152027_dci",
+      "typ": "primary",
+      "primarni": true
+    },
+    "titulek": "Část letenského parku obsadí filmaři. Na zámečku budou točit adaptaci Tajemství všech tajemství",
+    "shrnuti": "Ve středu 16. září bude kvůli natáčení seriálu Netflixu Tajemství všech tajemství omezený průchod částí Letenských sadů v Praze. Filmaři budou pracovat u Letenského zámečku, částečně proto uzavřou některé cesty v jeho okolí. Před Národním technickým muzeem bude také zakázané parkování.",
+    "duvod": "vylouceno-tematem",
+    "kategorie": [],
+    "posouzeni": null
+  },
+  {
+    "id": "k-bae78f3d68f1cc65",
+    "zachyceno": "2026-09-15T18:32:58.684Z",
+    "publikovano": "2026-09-15T18:19:17.000Z",
+    "zdroj": {
+      "nazev": "ČT24 — hlavní zprávy",
+      "url": "https://ct24.ceskatelevize.cz/clanek/domaci/o-prazdninach-zemrelo-na-silnici-sto-lidi-mezirocne-vice-377652",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "O prázdninách zemřelo na silnici sto lidí, meziročně více",
+    "shrnuti": "Bilance nehod na silnicích posledních let v letních měsících klesala. Letos se trend otočil a o prázdninách stoupl počet nehod i obětí. Při více než 15,5 tisících nehod zemřelo sto lidí, o dvanáct více než loni. Téměř třetina obětí připadá na motocyklisty. Nejrizikovější skupinou z nich nejsou mladí",
+    "duvod": "bez-skutku",
+    "kategorie": [],
+    "posouzeni": null
+  },
+  {
     "id": "k-343ef456782ccc96",
     "zachyceno": "2026-09-15T18:02:53.838Z",
     "publikovano": "2026-09-15T17:50:41.000Z",
@@ -1769,6 +1801,24 @@
     "duvod": "bez-mista",
     "kategorie": [
       "zpravodajske"
+    ],
+    "posouzeni": null
+  },
+  {
+    "id": "k-9ad7ec9c8b5e3045",
+    "zachyceno": "2026-09-15T18:32:58.975Z",
+    "publikovano": "2026-09-15T13:07:51.000Z",
+    "zdroj": {
+      "nazev": "Téma: krizove-vysilani (česky)",
+      "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxOMERKVUxLVmNUY3k5NDFmOTZtU3V5dTQ3RVFaRHRZeGhJMEtnWXFxLUdlb3RkQk02aE5GNTJrS0tXOEd5YzBoV1B2T2dhSFZmM01rSlp6eXlXU2JxVkJhUm16U0pzQngtMlJtN1RsYkVscEppT1lMcTc3SzQ5MTcyTHozeGEtTGtjN2owdXBFUW0?oc=5",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Český rozhlas a složky IZS podepsaly memoranda o krizovém vysílání - Hasičský záchranný sbor ČR",
+    "shrnuti": "Český rozhlas a složky IZS podepsaly memoranda o krizovém vysílání Hasičský záchranný sbor ČR",
+    "duvod": "bez-skutku",
+    "kategorie": [
+      "cr"
     ],
     "posouzeni": null
   },
@@ -7659,6 +7709,22 @@
     "posouzeni": null
   },
   {
+    "id": "k-683c6cb1b66613ec",
+    "zachyceno": "2026-09-15T18:32:58.965Z",
+    "publikovano": "2026-09-10T21:58:09.000Z",
+    "zdroj": {
+      "nazev": "Téma: nouzovy-stav (anglicky)",
+      "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxOUUtxTmI4cHlqME00VXpMaDBLVFNUVlEwdnJPa3NMTDZ5ZkhVbko3VDZhWDlJY0RCeWlxYWl6aGhSMlA4SnB3a0lUYTdFLVVGZ2JHNFJ6Z29jMTN2TDYwQmNCMXJuYTdfcDNGTXpGX01GWHJCbTAybm5sdGpKTjRoZXFILWZDQ1QtTElveVNjd1hPSEowdlJxZkpMelQ1b2JPNk5ZQjJOVjdXYlhCWVp2ZzQ1UkE4QQ?oc=5",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "FEMA Administrator Visits Wildfire-Damaged Communities in Washington State, Highlights State-led Response and Recovery - FEMA.gov",
+    "shrnuti": "FEMA Administrator Visits Wildfire-Damaged Communities in Washington State, Highlights State-led Response and Recovery FEMA.gov",
+    "duvod": "bez-skutku",
+    "kategorie": [],
+    "posouzeni": null
+  },
+  {
     "id": "k-d782d93f679cb97a",
     "zachyceno": "2026-09-15T17:03:06.716Z",
     "publikovano": "2026-09-10T15:45:54.000Z",
@@ -8421,77 +8487,6 @@
     },
     "titulek": "Hungary expels 10 Russian diplomats as it shifts away from previous pro-Moscow stance - AP News",
     "shrnuti": "Hungary expels 10 Russian diplomats as it shifts away from previous pro-Moscow stance AP News",
-    "duvod": "bez-skutku",
-    "kategorie": [
-      "rusko"
-    ],
-    "posouzeni": null
-  },
-  {
-    "id": "k-e3f082282b0d3059",
-    "zachyceno": "2026-09-15T17:03:06.711Z",
-    "publikovano": "2026-09-08T19:36:31.000Z",
-    "zdroj": {
-      "nazev": "Rumunsko — sabotaz",
-      "url": "https://news.google.com/rss/articles/CBMiS0FVX3lxTE55Nkk1RlV3YkdQNUxuWXEyTWVOeEFvbGtobFRua0hMTDFMZDFrQmk1cVF4ekZyLWZMYmQ3bUI2MzhnQ0ZiRVowRlVDSQ?oc=5",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Romania detains Russian citizen over surveillance of NATO bases and Ukrainian cargo planes - theins.press",
-    "shrnuti": "Romania detains Russian citizen over surveillance of NATO bases and Ukrainian cargo planes theins.press",
-    "duvod": "bez-skutku",
-    "kategorie": [
-      "nato",
-      "rusko"
-    ],
-    "posouzeni": null
-  },
-  {
-    "id": "k-44cfe27119ce108b",
-    "zachyceno": "2026-09-15T17:03:06.446Z",
-    "publikovano": "2026-09-08T18:35:00.000Z",
-    "zdroj": {
-      "nazev": "Deutsche Welle — Europe",
-      "url": "https://www.dw.com/en/german-economy-frets-about-saxony-anhalt-election-results/a-79162871?maca=en-rss-en-eu-2092-rdf",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "German economy frets about Saxony-Anhalt election results",
-    "shrnuti": "The AfD won the election in the eastern German state by a wide margin. While politicians and election analysts are still debating the reasons for the far-right party&apos;s popularity, economists are sounding the alarm.",
-    "duvod": "bez-skutku",
-    "kategorie": [],
-    "posouzeni": null
-  },
-  {
-    "id": "k-e2789cfd9b471214",
-    "zachyceno": "2026-09-15T18:02:54.043Z",
-    "publikovano": "2026-09-08T17:00:31.000Z",
-    "zdroj": {
-      "nazev": "Téma: diplomate (anglicky)",
-      "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxOYmVvN2NKZUFIV0tOSWZhOVFpMGJ0ZmxlWU41YUxuZ0tOZ2l3MjFYcXY3ZE5TeXJVQVZES21aMFJXTWVXMGNCcnBYeWVib2IycktIcmpndHB0ckwxbEFRT0ZuOHJIQ0dTZm1BVThEVkRQMXhIWUNqWEhDdDE0RlZrQUxzcmhkUzhzaEtvUk50bEs0aFUwV3lQRU9rWlBXMnZDbHpJQWdILVg?oc=5",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Hungary expels ten Russian diplomats over activities deemed unacceptable - European Interest",
-    "shrnuti": "Hungary expels ten Russian diplomats over activities deemed unacceptable European Interest",
-    "duvod": "bez-skutku",
-    "kategorie": [
-      "rusko"
-    ],
-    "posouzeni": null
-  },
-  {
-    "id": "k-f68c63cc82768808",
-    "zachyceno": "2026-09-15T18:02:54.079Z",
-    "publikovano": "2026-09-08T16:46:43.000Z",
-    "zdroj": {
-      "nazev": "Téma: diplomate (anglicky)",
-      "url": "https://news.google.com/rss/articles/CBMi-AFBVV95cUxQTkdIZGVCeXMxSzk0aWNfRTRsUW1EWjJ2QXB5d0VFd2VzdDd1bmJ4OUozbGhmZzBlcUJEdlFTb0NJdEJvTUNWbktKeEtTbVd6NXlHcURua3BIOUFDZ1NTLVhEdnhJNm9ER1d0VU5POVRGOXd6T3R4bTJycVYzTml0bU1uZFhybEhGM2EyVUk5RmtuV3F1aVpnU1RVSGtTRlBlOTFpLUtfaHAzT1hHdmlKRXIycmg2ZWlua0RpRzhWVHZkZmtyc1pTQVBva2lfNVktdXJvT184d3NXWHUwSjZ6bHZwSndFSy1qZVVNSjNaY2pROURLTkhfU9IB_gFBVV95cUxNMy1PaVNFRWlwMnEwM3pwd3Z5ajVGSmJxVzdPNUtuNDRoM1BlQVd4c1JoV0JUTndkNVlsSVdCT3RPbWFfZXZZTDNPS1FJOGZMTEY5U05wcGZkRkhQNHNSSVNYYmhUTG4tS0RSalBuLUd5QVZFRWhURXdHSFN0cmVCd2FsaTVGLXN0em05QXNicmFiQmFuVExKZEprSzM2eENsd2tjSzRKUXBoQ0JiZEJ4Q0MwVEV0VF94Tkl0UFhTajZ5ZW1BQ1U4U2VuX1k5eWlzWFlSTFVEU25yVUx0bWxkTUdUUTF1OFA1MXdScHczaGNLeGY2dG9XenlZSVJtUQ?oc=5",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Hungary Breaks With Putin: Ten Russian Diplomats Expelled Over Unspecified Activities - The Times of India",
-    "shrnuti": "Hungary Breaks With Putin: Ten Russian Diplomats Expelled Over Unspecified Activities The Times of India",
     "duvod": "bez-skutku",
     "kategorie": [
       "rusko"

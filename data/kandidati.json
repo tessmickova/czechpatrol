@@ -42,6 +42,38 @@
     }
   },
   {
+    "id": "k-e69210715ec71ee2",
+    "zachyceno": "2026-09-15T18:32:58.817Z",
+    "publikovano": "2026-09-15T18:26:39.000Z",
+    "zdroj": {
+      "nazev": "Téma: zeleznice (anglicky)",
+      "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxNb3BBdkUweDZ4UnlMVGhiQ0QzdG91cmd1UE9raWVvMUU4aUo1bXBOZVpUREhaR1Z6eVRiMGY2Qm1VbWNhNVNTZGhkajdqLUx0TWFCOFozY29XbWFQTkx1cEhoNnhRUVliOTFhOFJTMUkwYXpXX3BkZk84Zm5wRG9KUXlhQVU5ektiTTlQN1RjN3VoV2VPTG9IT3I2NFo2M3dUbjRF0gGjAUFVX3lxTFBPa0VnUWlPNVVHaTZ3ZTJhVzduX2pCMkpmRmFYMUpWTi1yZE95ckQzS0JralRRRVRIdjJFRF9XSG5Eajl4aW15V0pFSWFMTUcwZmlwbHF4TklkYWIzU0JoemhkWXd3T0Q3X1RFU1d1NmJPWTZaWnJ6bjRNcmc3NENqeGdvTnZseHhzV0VjR25vQ1Fma3RZcVY1YVpVRFZaVjlWNVk?oc=5",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Dutch rail network crippled by suspected sabotage - South China Morning Post",
+    "titulekPuvodni": "Dutch rail network crippled by suspected sabotage - South China Morning Post",
+    "shrnuti": "Dutch rail network crippled by suspected sabotage South China Morning Post",
+    "kodZeme": "NL",
+    "zeme": "Nizozemsko",
+    "kategorie": [
+      "sabotaz"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "sabotage"
+    ],
+    "naliehave": null,
+    "stav": "ceka",
+    "vyrez": {
+      "text": "Google News",
+      "stazeno": "2026-09-15T18:32:59.064Z",
+      "stav": 200
+    }
+  },
+  {
     "id": "k-3f502387b34bc106",
     "zachyceno": "2026-09-15T16:32:52.197Z",
     "publikovano": null,
@@ -280,6 +312,38 @@
     "vyrez": {
       "text": "Google News",
       "stazeno": "2026-09-15T16:32:54.168Z",
+      "stav": 200
+    }
+  },
+  {
+    "id": "k-0f2271a5dfae7744",
+    "zachyceno": "2026-09-15T18:32:58.819Z",
+    "publikovano": "2026-09-15T13:39:30.000Z",
+    "zdroj": {
+      "nazev": "Téma: zeleznice (anglicky)",
+      "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxQMzFDdVkwSFVQZkIxbDdMODJ5NXBEalFWS3loUVV6UkpJUVA0RnhrZUNtTHV0d2h3eXc0dDJudXpwb3FBTTRzNjMyelBQN1lBcTFDdXRPVHUyak01TGh5OFRMVFZvcHJVMG5xUUZmNkJzckl1dXR5OEliUWd3dkhpUmpfclEzTUZBOVBzMkxrZHNnblk1YTRrRVp0c0h4UEdON2c?oc=5",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Suspected sabotage causes major Netherlands rail disruption - Yahoo",
+    "titulekPuvodni": "Suspected sabotage causes major Netherlands rail disruption - Yahoo",
+    "shrnuti": "Suspected sabotage causes major Netherlands rail disruption Yahoo",
+    "kodZeme": "NL",
+    "zeme": "Nizozemsko",
+    "kategorie": [
+      "sabotaz"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "sabotage"
+    ],
+    "naliehave": null,
+    "stav": "ceka",
+    "vyrez": {
+      "text": "Google News",
+      "stazeno": "2026-09-15T18:32:59.187Z",
       "stav": 200
     }
   },
@@ -3794,7 +3858,12 @@
       "russia"
     ],
     "naliehave": null,
-    "stav": "ceka"
+    "stav": "ceka",
+    "vyrez": {
+      "text": "Google News",
+      "stazeno": "2026-09-15T18:32:59.300Z",
+      "stav": 200
+    }
   },
   {
     "id": "k-2ff9ff6bb00e55c3",
@@ -3825,7 +3894,12 @@
       "russia"
     ],
     "naliehave": null,
-    "stav": "ceka"
+    "stav": "ceka",
+    "vyrez": {
+      "text": "Google News",
+      "stazeno": "2026-09-15T18:32:59.432Z",
+      "stav": 200
+    }
   },
   {
     "id": "k-703701dacf79a784",
@@ -3853,7 +3927,12 @@
       "derailment"
     ],
     "naliehave": null,
-    "stav": "ceka"
+    "stav": "ceka",
+    "vyrez": {
+      "text": "Google News",
+      "stazeno": "2026-09-15T18:32:59.561Z",
+      "stav": 200
+    }
   },
   {
     "id": "k-da67344ccaaf0b52",
@@ -3989,7 +4068,12 @@
       "russia"
     ],
     "naliehave": null,
-    "stav": "ceka"
+    "stav": "ceka",
+    "vyrez": {
+      "text": "Google News",
+      "stazeno": "2026-09-15T18:32:59.713Z",
+      "stav": 200
+    }
   },
   {
     "id": "k-1d63585071b63a56",
@@ -4021,7 +4105,12 @@
       "russia"
     ],
     "naliehave": null,
-    "stav": "ceka"
+    "stav": "ceka",
+    "vyrez": {
+      "text": "Google News",
+      "stazeno": "2026-09-15T18:32:59.854Z",
+      "stav": 200
+    }
   },
   {
     "id": "k-ca385d8fe66280de",
@@ -4048,7 +4137,12 @@
       "sabotaz"
     ],
     "naliehave": null,
-    "stav": "ceka"
+    "stav": "ceka",
+    "vyrez": {
+      "text": "Google News",
+      "stazeno": "2026-09-15T18:32:59.975Z",
+      "stav": 200
+    }
   },
   {
     "id": "k-befe72a348550000",
@@ -4353,7 +4447,12 @@
       "russia"
     ],
     "naliehave": null,
-    "stav": "ceka"
+    "stav": "ceka",
+    "vyrez": {
+      "text": "Google News",
+      "stazeno": "2026-09-15T18:33:00.103Z",
+      "stav": 200
+    }
   },
   {
     "id": "k-615950c20e52d94f",
@@ -4629,7 +4728,12 @@
       "russia"
     ],
     "naliehave": null,
-    "stav": "ceka"
+    "stav": "ceka",
+    "vyrez": {
+      "text": "Google News",
+      "stazeno": "2026-09-15T18:33:00.223Z",
+      "stav": 200
+    }
   },
   {
     "id": "k-f31ee9106785626f",
@@ -4663,7 +4767,12 @@
       "russia"
     ],
     "naliehave": null,
-    "stav": "ceka"
+    "stav": "ceka",
+    "vyrez": {
+      "text": "Google News",
+      "stazeno": "2026-09-15T18:33:00.326Z",
+      "stav": 200
+    }
   },
   {
     "id": "k-7e9e017babc38e37",
@@ -4729,7 +4838,12 @@
       "russia"
     ],
     "naliehave": null,
-    "stav": "ceka"
+    "stav": "ceka",
+    "vyrez": {
+      "text": "Google News",
+      "stazeno": "2026-09-15T18:33:00.433Z",
+      "stav": 200
+    }
   },
   {
     "id": "k-4f8141eac3680821",
@@ -7934,6 +8048,35 @@
     "naliehave": null
   },
   {
+    "id": "k-03688206f84b7da9",
+    "zachyceno": "2026-09-15T18:32:59.045Z",
+    "publikovano": "2026-09-04T07:00:00.000Z",
+    "zdroj": {
+      "nazev": "Rumunsko — sabotaz",
+      "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxQZzBfZXhkSGdUbThHeVkyZUhWZlExeFlkLWdvSThxYmVBWkJsSmVIZXdnS1hWNVJ5QWRQZEM0d09zNlJMWVo4THBmSHlaVzh1TjNSRUw5ZDBBRFl0dW1KQ1AwUlpTZGVaelgxRm4tMnpCV3AweG9Oa3k3dEItcnUzSTBGTmtxX3lJU2pnUHc0VklLNEllb1dtR09YQldFYlhqUk9iMmpNaw?oc=5",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Three Bulgarians Detained in Munich Amid Russian Sabotage Probe - Novinite.com",
+    "titulekPuvodni": "Three Bulgarians Detained in Munich Amid Russian Sabotage Probe - Novinite.com",
+    "shrnuti": "Three Bulgarians Detained in Munich Amid Russian Sabotage Probe Novinite.com",
+    "kodZeme": "DE",
+    "zeme": "Německo",
+    "kategorie": [
+      "sabotaz",
+      "rusko"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "sabotage",
+      "russia"
+    ],
+    "naliehave": null,
+    "stav": "ceka"
+  },
+  {
     "id": "k-715dad618379345a",
     "zachyceno": "2026-09-15T16:32:52.252Z",
     "publikovano": "2026-09-04T07:00:00.000Z",
@@ -9878,103 +10021,5 @@
       "stav": 200
     },
     "naliehave": null
-  },
-  {
-    "id": "k-e13157ec5ccd03e4",
-    "zachyceno": "2026-09-06T13:59:15.575Z",
-    "publikovano": "2026-09-01T17:54:00.000Z",
-    "zdroj": {
-      "nazev": "Google News — sabotage Europe",
-      "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTFBoV0xmZTIzWE5vX1Fkc3JtZDlhR3ZWVWlZSkhBSGEwWDJUdVloYmRQWl9fNnd6OXlZaHhQSlFhengxSUVCOVdzdnFWR1ppTGtLb0HSAVdBVV95cUxQb21XQ2pocFIzaUdSbkdwaGJCRmRUU0R6S2xXQWQySGlrNXNvbWI1NlJnaFRxVVF0VHdiMFllLTh0VVJjRW84c1hvMmhNRS1qc241SjJZaTA?oc=5",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Germany accuses Russia of attempted sabotage at Leipzig Airport - Armenpress",
-    "titulekPuvodni": "Germany accuses Russia of attempted sabotage at Leipzig Airport - Armenpress",
-    "shrnuti": "",
-    "kodZeme": "DE",
-    "zeme": "Německo",
-    "kategorie": [
-      "sabotaz",
-      "rusko"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "shody": [
-      "sabotage",
-      "russia"
-    ],
-    "stav": "ceka",
-    "vyrez": {
-      "text": "Google News",
-      "stazeno": "2026-09-14T11:32:42.657Z",
-      "stav": 200
-    },
-    "naliehave": null
-  },
-  {
-    "id": "k-2dd1c93bbdc6f8e7",
-    "zachyceno": "2026-09-06T13:59:15.578Z",
-    "publikovano": "2026-09-01T11:49:17.000Z",
-    "zdroj": {
-      "nazev": "Google News — sabotáž",
-      "url": "https://news.google.com/rss/articles/CBMi4gFBVV95cUxQa19pTUZzblg5SlkzUm12YW1KNl8wdDZVb1ozRTlQU3JCZGlhQ3lZZUhUdFVwemNMYnRIU2xtOVpxRHVQRUE5enMxNWRWMGt6aG4xMzVOTXhNOWhrdnBTcVpyS2ZCLWJrSWVKOWtjd0xfWTdVZUJPeHVTYzFPWjI5RnpiZmotam9xRXUxZ21FdkNOM04yRUp5aTVHZVRLcmlHMkRPVWhCOF9qNG5laTVxZFRfVndVeGxsdkJiSkk2dnNHRnBqQXBpdXBxUmtlMFVJcjVRZ1BrVmhEQU1BTFRZeVFB?oc=5",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Příští měsíce budou napínavé, varuje polský premiér. Varšava vyšetřuje několik nových podezření na ruskou sabotáž - Hospodářské noviny",
-    "titulekPuvodni": "Příští měsíce budou napínavé, varuje polský premiér. Varšava vyšetřuje několik nových podezření na ruskou sabotáž - Hospodářské noviny",
-    "shrnuti": "",
-    "kodZeme": "PL",
-    "zeme": "Polsko",
-    "kategorie": [
-      "sabotaz",
-      "rusko"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "shody": [
-      "sabotaz",
-      "rusk"
-    ],
-    "stav": "ceka",
-    "vyrez": {
-      "text": "Google News",
-      "stazeno": "2026-09-14T11:32:42.795Z",
-      "stav": 200
-    },
-    "naliehave": null
-  },
-  {
-    "id": "k-984895914082a047",
-    "zachyceno": "2026-09-15T16:32:52.470Z",
-    "publikovano": "2026-09-01T09:37:32.000Z",
-    "zdroj": {
-      "nazev": "Téma: vzdusna-obrana (anglicky)",
-      "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxNOE5HcGJ2TXk2bVBUM0lCU2JibzktZzlFMl8ycm52WFNOX3d6MkJFd2FFSWpmVEg3NWhnbzE5a0FOLWtzWlN6WUlOOVJRMkZnVVZkQmtyamZWc2EtYm1Ia19WdWx0UnU4bmJIak0tMFc5dHNhVkc2VDhiMGstNDdPSjhtclJTQlRZNkpGM1pnMA?oc=5",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "NATO jets scramble after drones enter Baltic airspace - UK Defence Journal",
-    "titulekPuvodni": "NATO jets scramble after drones enter Baltic airspace - UK Defence Journal",
-    "shrnuti": "NATO jets scramble after drones enter Baltic airspace UK Defence Journal",
-    "kodZeme": "GB",
-    "zeme": "Spojené království",
-    "kategorie": [
-      "drony",
-      "nato"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "zeSite": null,
-    "shody": [
-      "scrambl",
-      "dron",
-      "drone",
-      "airspace",
-      "nato"
-    ],
-    "naliehave": null,
-    "stav": "ceka"
   }
 ]
