@@ -46,34 +46,34 @@ function Karta({ o, ted }: { o: Overovana; ted: number }) {
     <article className="overflow-hidden rounded-[22px] border border-dashed border-jantar/55 bg-jantar/[0.07]">
       <header className="flex flex-wrap items-center gap-x-3 gap-y-1.5 border-b border-dashed border-jantar/35 px-5 py-3">
         <Odznak ton="pozor" duraz="silny" ikona="otaznik">Neověřeno — ověřujeme</Odznak>
-        <span className="inline-flex items-center gap-1.5 text-[12.5px] text-tlum">
+        <span className="inline-flex items-center gap-1.5 text-drobne text-tlum">
           <Vlajka kod={o.kodZeme} /> {o.kodZeme === "CZ" ? "Česko" : o.zeme}
         </span>
         <span aria-hidden className="text-tlum2">·</span>
-        <span className="cislice text-[12px] text-tlum2">naposledy prověřeno {datumCasPraha(o.overenoNaposledy)}</span>
-        {lhuta && <span className="ml-auto text-[12px] text-tlum2">{lhuta}</span>}
+        <span className="cislice text-drobne text-tlum2">naposledy prověřeno {datumCasPraha(o.overenoNaposledy)}</span>
+        {lhuta && <span className="ml-auto text-drobne text-tlum2">{lhuta}</span>}
       </header>
 
       <div className="space-y-4 p-5">
         {/* Úřední stav stojí první. Je to to jediné, co je tu jisté. */}
         <section>
-          <h3 className="flex items-center gap-2 text-[14px] font-bold text-inkoust">
+          <h3 className="flex items-center gap-2 text-zaklad font-bold text-inkoust">
             <span className="grid h-6 w-6 shrink-0 place-items-center rounded-full bg-klid/15 text-klid-text"><Ikona nazev="fajfka" velikost={12} tah={2.2} /></span>
             Co je jisté: co říkají úřady
           </h3>
           <ul className="mt-1.5 space-y-1 pl-8">
             {o.coRikajiUrady.map((t) => (
-              <li key={t} className="text-[14.5px] leading-relaxed text-inkoust">{t}</li>
+              <li key={t} className="text-zaklad leading-relaxed text-inkoust">{t}</li>
             ))}
           </ul>
         </section>
 
         <section className="border-t border-dashed border-jantar/30 pt-3.5">
-          <h3 className="flex items-center gap-2 text-[14px] font-bold text-inkoust">
+          <h3 className="flex items-center gap-2 text-zaklad font-bold text-inkoust">
             <span className="grid h-6 w-6 shrink-0 place-items-center rounded-full bg-jantar/20 text-jantar"><Ikona nazev="bublina" velikost={12} tah={2.2} /></span>
             Co se zatím jen hlásí
           </h3>
-          <p className="mt-1.5 pl-8 text-[14.5px] leading-relaxed text-tlum">{o.coSeHlasi}</p>
+          <p className="mt-1.5 pl-8 text-zaklad leading-relaxed text-tlum">{o.coSeHlasi}</p>
           <div className="mt-2.5 pl-8">
             <div className="stitek mb-1.5">Kdo to uvádí ({o.kdoHlasi.length})</div>
             <SeznamZdroju zdroje={o.kdoHlasi.map((z) => ({ ...z, publikovano: "", jazyk: "cs" }))} husty />
@@ -81,16 +81,16 @@ function Karta({ o, ted }: { o: Overovana; ted: number }) {
         </section>
 
         <section className="border-t border-dashed border-jantar/30 pt-3.5">
-          <h3 className="flex items-center gap-2 text-[14px] font-bold text-inkoust">
+          <h3 className="flex items-center gap-2 text-zaklad font-bold text-inkoust">
             <span className="grid h-6 w-6 shrink-0 place-items-center rounded-full bg-plocha2 text-tlum2"><Ikona nazev="lupa" velikost={12} tah={2.2} /></span>
             Co jsme ověřili my
           </h3>
           <ul className="mt-1.5 space-y-1 pl-8">
             {o.coJsmeOverili.map((t) => (
-              <li key={t} className="text-[14px] leading-relaxed text-tlum">{t}</li>
+              <li key={t} className="text-zaklad leading-relaxed text-tlum">{t}</li>
             ))}
           </ul>
-          <p className="mt-2 pl-8 text-[14px] leading-relaxed text-tlum">
+          <p className="mt-2 pl-8 text-zaklad leading-relaxed text-tlum">
             <b className="font-semibold text-inkoust">Kdyby to platilo:</b> {o.kdybyPlatilo}
           </p>
         </section>
@@ -100,7 +100,7 @@ function Karta({ o, ted }: { o: Overovana; ted: number }) {
           <span className="mt-[1px] grid h-[22px] w-[22px] shrink-0 place-items-center rounded-full text-klid-text">
             <Ikona nazev="stit" velikost={15} tah={2} />
           </span>
-          <span className="text-[14.5px] leading-relaxed text-tlum">
+          <span className="text-zaklad leading-relaxed text-tlum">
             <b className="font-bold text-inkoust">Co dělat teď:</b> {o.coDelatTed}
           </span>
         </p>
@@ -134,7 +134,7 @@ export function PruhOverujeme({
         <>
           <div className="mb-2 flex flex-wrap items-center gap-x-3 gap-y-1">
             <span className="stitek-znacky">Právě ověřujeme</span>
-            <span className="text-[12.5px] text-tlum2">
+            <span className="text-drobne text-tlum2">
               {ziveKarty.length} {sklon(ziveKarty.length, "zpráva, kterou", "zprávy, které", "zpráv, které")} zatím nemáme potvrzené
             </span>
           </div>
@@ -150,7 +150,7 @@ export function PruhOverujeme({
 
       {vsechnyUzavrene.length > 0 && (
         <details className="group mt-2.5 overflow-hidden rounded-[18px] border border-linka2 bg-plocha">
-          <summary className="flex min-h-[44px] cursor-pointer list-none items-center justify-between gap-3 px-4 text-[13.5px] font-semibold text-inkoust hover:bg-plocha2">
+          <summary className="flex min-h-[44px] cursor-pointer list-none items-center justify-between gap-3 px-4 text-male font-semibold text-inkoust hover:bg-plocha2">
             <span>Jak dopadly starší ověřované zprávy ({vsechnyUzavrene.length})</span>
             <Ikona nazev="dolu" velikost={13} tah={2} trida="text-tlum2 transition-transform group-open:rotate-180" />
           </summary>
@@ -159,14 +159,14 @@ export function PruhOverujeme({
               const vyprselo = o.stav === "overujeme";
               return (
                 <li key={o.slug} className="px-4 py-3">
-                  <span className="flex flex-wrap items-center gap-2 text-[12.5px]">
+                  <span className="flex flex-wrap items-center gap-2 text-drobne">
                     <Odznak ton={o.stav === "potvrzeno" ? "pozor" : "klid"} duraz="silny">
                       {o.stav === "potvrzeno" ? "potvrdilo se" : o.stav === "vyvraceno" ? "vyvráceno" : "nikdo nepotvrdil"}
                     </Odznak>
                     <span className="cislice text-tlum2">{datumCasPraha(o.zacalo)}</span>
                   </span>
-                  <span className="mt-1 block text-[14px] leading-relaxed text-tlum">{o.coSeHlasi}</span>
-                  <span className="mt-1 block text-[13px] leading-relaxed text-tlum2">
+                  <span className="mt-1 block text-zaklad leading-relaxed text-tlum">{o.coSeHlasi}</span>
+                  <span className="mt-1 block text-male leading-relaxed text-tlum2">
                     {o.jakDopadlo ?? (vyprselo ? "Uplynula lhůta a nikdo to nepotvrdil. Stáhli jsme to z přehledu." : "")}
                   </span>
                 </li>

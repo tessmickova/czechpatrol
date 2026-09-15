@@ -14,7 +14,7 @@ function Udaj({ stitek, hodnota, napoveda }: { stitek: string; hodnota: string; 
   const telo = (
     <span className="block">
       <span className="stitek mb-1.5 block">{stitek}</span>
-      <span className="block text-[13px] font-medium leading-tight">{hodnota}</span>
+      <span className="block text-male font-medium leading-tight">{hodnota}</span>
     </span>
   );
   return napoveda ? <Napoveda popis={<span className="block">{napoveda}</span>}>{telo}</Napoveda> : telo;
@@ -81,7 +81,7 @@ export function KartaUdalosti({
       </div>
 
       <div className="px-5 pb-5 pl-6 pt-5">
-        <h3 className="podnadpis text-[19px] sm:text-[21px]">
+        <h3 className="podnadpis text-velke sm:text-velke">
           <Link href={`/incident/${incident.slug}/`} className="hover:underline hover:underline-offset-4">
             {incident.titulek}
           </Link>
@@ -115,7 +115,7 @@ export function KartaUdalosti({
       {rozbalitelna && (
         <details open={vychoziOtevrena} className="group/d">
           <summary
-            className={`flex items-center justify-between border-t ${t.ramecek} px-5 py-3.5 pl-6 text-[13px] font-medium transition-colors hover:bg-inkoust/[0.03]`}
+            className={`flex items-center justify-between border-t ${t.ramecek} px-5 py-3.5 pl-6 text-male font-medium transition-colors hover:bg-inkoust/[0.03]`}
           >
             <span>Fakta, zdroje a co nevíme</span>
             <Ikona nazev="dolu" velikost={14} tah={1.8} trida="transition-transform group-open/d:rotate-180" />
@@ -136,7 +136,7 @@ export function ObsahUdalosti({ incident }: { incident: Incident }) {
       <Blok typ="fakt" nadpis="Co víme">
         <ul className="space-y-2.5">
           {incident.fakta.map((f, i) => (
-            <li key={i} className="flex gap-3 text-[14px] leading-relaxed">
+            <li key={i} className="flex gap-3 text-zaklad leading-relaxed">
               <span aria-hidden className="mt-[8px] h-[4px] w-[4px] shrink-0 rounded-full bg-inkoust" />
               {f}
             </li>
@@ -147,7 +147,7 @@ export function ObsahUdalosti({ incident }: { incident: Incident }) {
       <Blok typ="nepotvrzeno" nadpis="Co nevíme">
         <ul className="space-y-2.5">
           {incident.neznameho.map((f, i) => (
-            <li key={i} className="flex gap-3 text-[14px] leading-relaxed text-tlum">
+            <li key={i} className="flex gap-3 text-zaklad leading-relaxed text-tlum">
               <span aria-hidden className="mt-[8px] h-[4px] w-[4px] shrink-0 rounded-full bg-tlum2" />
               {f}
             </li>
@@ -156,14 +156,14 @@ export function ObsahUdalosti({ incident }: { incident: Incident }) {
       </Blok>
 
       <Blok typ="odhad" nadpis="Proč to sledujeme">
-        <p className="text-[14px] leading-relaxed text-tlum">{incident.vyznam}</p>
+        <p className="text-zaklad leading-relaxed text-tlum">{incident.vyznam}</p>
       </Blok>
 
       {incident.eskalacniSpousteče.length > 0 && (
         <Blok typ="scenar" nadpis="Co by hodnocení změnilo">
           <ul className="space-y-2.5">
             {incident.eskalacniSpousteče.map((f, i) => (
-              <li key={i} className="flex gap-3 text-[14px] leading-relaxed text-tlum">
+              <li key={i} className="flex gap-3 text-zaklad leading-relaxed text-tlum">
                 <span className="mt-[2px] shrink-0 text-[#e8834a]">
                   <Ikona nazev="nahoru" velikost={13} tah={2} />
                 </span>
@@ -171,7 +171,7 @@ export function ObsahUdalosti({ incident }: { incident: Incident }) {
               </li>
             ))}
             {incident.deeskalacniSignaly.map((f, i) => (
-              <li key={`d${i}`} className="flex gap-3 text-[14px] leading-relaxed text-tlum">
+              <li key={`d${i}`} className="flex gap-3 text-zaklad leading-relaxed text-tlum">
                 <span className="mt-[2px] shrink-0 text-[#4fbe86]">
                   <Ikona nazev="dolu" velikost={13} tah={2} />
                 </span>

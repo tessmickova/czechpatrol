@@ -52,7 +52,7 @@ export function PrepinacPohybu() {
       type="button"
       onClick={prepni}
       aria-pressed={zapnuty}
-      className="min-h-[44px] text-left text-[14px] text-noc-tlum underline underline-offset-4 hover:text-noc-text"
+      className="min-h-[44px] text-left text-zaklad text-noc-tlum underline underline-offset-4 hover:text-noc-text"
     >
       Pohyb na stránce: {zapnuty ? "zapnutý" : "vypnutý"}
     </button>
@@ -106,7 +106,7 @@ export function PrepinacMotivu() {
 
   return (
     <fieldset className="border-0 p-0">
-      <legend className="text-[14px] text-noc-tlum">Vzhled</legend>
+      <legend className="text-zaklad text-noc-tlum">Vzhled</legend>
       <div className="mt-1.5 flex flex-wrap gap-1.5">
         {(["system", "svetly"] as Motiv[]).map((m) => (
           <button
@@ -114,7 +114,7 @@ export function PrepinacMotivu() {
             type="button"
             onClick={() => nastav(m)}
             aria-pressed={motiv === m}
-            className={`min-h-[44px] rounded-full px-3.5 text-[13.5px] ${
+            className={`min-h-[44px] rounded-full px-3.5 text-male ${
               motiv === m ? "bg-noc-text text-noc2 font-semibold" : "text-noc-tlum hover:text-noc-text"
             }`}
           >

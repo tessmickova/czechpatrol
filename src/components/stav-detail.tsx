@@ -25,7 +25,7 @@ function Radek({ popisek, children }: { popisek: string; children: React.ReactNo
   return (
     <div className="grid gap-0.5 sm:grid-cols-[9rem_minmax(0,1fr)] sm:gap-3">
       <dt className="stitek pt-[3px]">{popisek}</dt>
-      <dd className="text-[13.5px] leading-snug text-tlum">{children}</dd>
+      <dd className="text-male leading-snug text-tlum">{children}</dd>
     </div>
   );
 }

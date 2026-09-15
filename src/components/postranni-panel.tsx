@@ -55,7 +55,7 @@ const KANALY_PANEL: { klic: Znacka; nazev: string; popis: string }[] = [
   { klic: "whatsapp", nazev: "WhatsApp", popis: "kanál" },
 ];
 
-const RADEK = "flex min-h-[48px] items-center gap-3 px-4 text-[15px] text-inkoust transition-colors hover:bg-plocha";
+const RADEK = "flex min-h-[48px] items-center gap-3 px-4 text-zaklad text-inkoust transition-colors hover:bg-plocha";
 
 export function PostranniPanel() {
   const [otevreno, setOtevreno] = useState(false);
@@ -102,8 +102,8 @@ export function PostranniPanel() {
         <div className="flex h-[56px] shrink-0 items-center justify-between border-b border-linka pl-4 pr-2">
           <span className="flex items-center gap-2.5">
             <span className="grid h-[28px] w-[28px] place-items-center rounded-[12px] bg-akcent/15 text-akcent"><Ikona nazev="radar" velikost={16} tah={1.8} /></span>
-            <span className="text-[16px] font-bold">{WEB.nazev}</span>
-            <span className="text-[13px] text-tlum2">menu</span>
+            <span className="text-vetsi font-bold">{WEB.nazev}</span>
+            <span className="text-male text-tlum2">menu</span>
           </span>
           <button ref={zavrit} type="button" onClick={zavri} className="grid h-11 w-11 place-items-center rounded-[12px] text-tlum transition-colors hover:bg-plocha hover:text-inkoust">
             <span className="sr-only">Zavřít menu</span>
@@ -121,7 +121,7 @@ export function PostranniPanel() {
                     <span className="grid h-9 w-9 shrink-0 place-items-center rounded-[12px] bg-plocha2 text-akcent"><Ikona nazev={o.ikona} velikost={17} tah={1.8} /></span>
                     <span className="min-w-0 flex-1">
                       <span className="block font-semibold">{o.label}</span>
-                      <span className="block text-[12.5px] text-tlum">{o.popis}</span>
+                      <span className="block text-drobne text-tlum">{o.popis}</span>
                     </span>
                     <Ikona nazev="nahoru" velikost={13} tah={2} trida="shrink-0 rotate-90 text-tlum2" />
                   </Link>
@@ -134,9 +134,9 @@ export function PostranniPanel() {
           <section aria-label="Účet" className="border-t border-linka py-2">
             <div className="stitek px-4 pb-1 pt-2">Účet</div>
             {!UCTY_ZAPNUTE ? (
-              <p className="px-4 pb-2 text-[13.5px] leading-relaxed text-tlum">Účty a upozornění zatím neběží. RSS funguje bez účtu.</p>
+              <p className="px-4 pb-2 text-male leading-relaxed text-tlum">Účty a upozornění zatím neběží. RSS funguje bez účtu.</p>
             ) : nacita ? (
-              <p className="px-4 pb-2 text-[13.5px] text-tlum">Ověřuji přihlášení…</p>
+              <p className="px-4 pb-2 text-male text-tlum">Ověřuji přihlášení…</p>
             ) : ucet ? (
               <ul>
                 <li>
@@ -144,7 +144,7 @@ export function PostranniPanel() {
                     <span className="grid h-9 w-9 shrink-0 place-items-center rounded-[12px] bg-plocha2 text-akcent"><Ikona nazev="uzivatel" velikost={17} tah={1.8} /></span>
                     <span className="min-w-0 flex-1">
                       <span className="block font-semibold">{ROLE[ucet.role].nazev}</span>
-                      <span className="block text-[12.5px] text-tlum">upozornění a nastavení · #{ucet.id.slice(0, 8)}</span>
+                      <span className="block text-drobne text-tlum">upozornění a nastavení · #{ucet.id.slice(0, 8)}</span>
                     </span>
                     <Ikona nazev="nahoru" velikost={13} tah={2} trida="shrink-0 rotate-90 text-tlum2" />
                   </Link>
@@ -164,7 +164,7 @@ export function PostranniPanel() {
                 <span className="grid h-9 w-9 shrink-0 place-items-center rounded-[12px] bg-plocha2 text-akcent"><Ikona nazev="zamek" velikost={17} tah={1.8} /></span>
                 <span className="min-w-0 flex-1">
                   <span className="block font-semibold">Přihlásit nebo založit účet</span>
-                  <span className="block text-[12.5px] text-tlum">bez jména a e-mailu, passkey v zařízení</span>
+                  <span className="block text-drobne text-tlum">bez jména a e-mailu, passkey v zařízení</span>
                 </span>
                 <Ikona nazev="nahoru" velikost={13} tah={2} trida="shrink-0 rotate-90 text-tlum2" />
               </Link>
@@ -177,7 +177,7 @@ export function PostranniPanel() {
             <ul className="grid grid-cols-2">
               {DALSI_STRANKY.map((o) => (
                 <li key={o.href}>
-                  <Link href={o.href} onClick={zavri} className="flex min-h-[40px] items-center px-4 text-[14px] text-tlum hover:bg-plocha hover:text-inkoust">{o.label}</Link>
+                  <Link href={o.href} onClick={zavri} className="flex min-h-[40px] items-center px-4 text-zaklad text-tlum hover:bg-plocha hover:text-inkoust">{o.label}</Link>
                 </li>
               ))}
             </ul>
@@ -195,15 +195,15 @@ export function PostranniPanel() {
               >
                 <ZnackaKanalu znacka="telegram" velikost={30} />
                 <span className="min-w-0 flex-1">
-                  <span className="block text-[14.5px] font-bold text-inkoust">Telegram — urgentní upozornění</span>
-                  <span className="block text-[12px] leading-snug text-tlum">jen změny, kvůli kterým byste jednali jinak</span>
+                  <span className="block text-zaklad font-bold text-inkoust">Telegram — urgentní upozornění</span>
+                  <span className="block text-drobne leading-snug text-tlum">jen změny, kvůli kterým byste jednali jinak</span>
                 </span>
                 <Ikona nazev="nahoru" velikost={13} tah={2} trida="shrink-0 rotate-45 text-akcent" />
               </a>
             ) : (
               <span className="flex min-h-[60px] items-center gap-3 rounded-[18px] border border-dashed border-linka px-3.5">
                 <ZnackaKanalu znacka="telegram" velikost={30} tlumena />
-                <span className="text-[13.5px] text-tlum">Telegram — připravujeme</span>
+                <span className="text-male text-tlum">Telegram — připravujeme</span>
               </span>
             )}
             <ul className="mt-2 grid grid-cols-3 gap-1.5">
@@ -214,20 +214,20 @@ export function PostranniPanel() {
                     {url ? (
                       <a href={url} target="_blank" rel="noopener noreferrer" className="flex min-h-[58px] flex-col items-center justify-center gap-1 rounded-[18px] border border-linka px-1 text-center transition-colors hover:border-akcent">
                         <ZnackaKanalu znacka={k.klic} velikost={22} />
-                        <span className="text-[11.5px] font-semibold text-inkoust">{k.nazev}</span>
+                        <span className="text-mikro font-semibold text-inkoust">{k.nazev}</span>
                       </a>
                     ) : (
                       <span className="flex min-h-[58px] flex-col items-center justify-center gap-1 rounded-[18px] border border-dashed border-linka px-1 text-center opacity-80">
                         <ZnackaKanalu znacka={k.klic} velikost={22} tlumena />
-                        <span className="text-[11.5px] font-semibold text-tlum">{k.nazev}</span>
-                        <span className="text-[10px] leading-none text-tlum2">připravujeme</span>
+                        <span className="text-mikro font-semibold text-tlum">{k.nazev}</span>
+                        <span className="text-mikro leading-none text-tlum2">připravujeme</span>
                       </span>
                     )}
                   </li>
                 );
               })}
             </ul>
-            <div className="mt-1.5 flex items-center justify-between gap-3 text-[13px]">
+            <div className="mt-1.5 flex items-center justify-between gap-3 text-male">
               <Tlacitko kam="/feed.xml" varianta="tichy" velikost="s" ikona="rss" trida="!text-akcent hover:!text-akcent-svetla">RSS — odběr ve čtečce</Tlacitko>
               <Link href="/odber/" onClick={zavri} className="text-tlum hover:text-inkoust">jak to funguje →</Link>
             </div>
@@ -251,20 +251,20 @@ export function PostranniPanel() {
               >
                 <span className="grid h-9 w-9 shrink-0 place-items-center rounded-full bg-jantar/20 text-jantar"><Ikona nazev="kava" velikost={17} tah={1.9} /></span>
                 <span className="min-w-0 flex-1">
-                  <span className="block text-[14px] font-bold text-inkoust">Buy me a coffee</span>
-                  <span className="block text-[12px] text-tlum">jednorázově, bez účtu</span>
+                  <span className="block text-zaklad font-bold text-inkoust">Buy me a coffee</span>
+                  <span className="block text-drobne text-tlum">jednorázově, bez účtu</span>
                 </span>
               </a>
             ) : (
               <Link href="/podporit/" onClick={zavri} className="flex min-h-[52px] items-center gap-3 rounded-[18px] border border-linka px-3.5 transition-colors hover:border-akcent">
                 <span className="grid h-9 w-9 shrink-0 place-items-center rounded-full bg-plocha2 text-jantar"><Ikona nazev="kava" velikost={17} tah={1.9} /></span>
                 <span className="min-w-0 flex-1">
-                  <span className="block text-[14px] font-bold text-inkoust">Podpořit provoz</span>
-                  <span className="block text-[12px] text-tlum">přímý příspěvek zatím připravujeme</span>
+                  <span className="block text-zaklad font-bold text-inkoust">Podpořit provoz</span>
+                  <span className="block text-drobne text-tlum">přímý příspěvek zatím připravujeme</span>
                 </span>
               </Link>
             )}
-            <div className="mt-2 flex flex-wrap items-center gap-x-4 gap-y-2 text-[13.5px]">
+            <div className="mt-2 flex flex-wrap items-center gap-x-4 gap-y-2 text-male">
               <span className="flex items-center gap-2 text-tlum"><Ikona nazev="instalace" velikost={14} tah={2} /> Aplikace</span>
               <span className="min-w-0 flex-1"><TlacitkoInstalace /></span>
             </div>
@@ -272,7 +272,7 @@ export function PostranniPanel() {
 
           {/* úřední odkazy */}
           <details className="group border-t border-linka">
-            <summary className="flex min-h-[44px] cursor-pointer items-center justify-between px-4 text-[14px] font-semibold text-inkoust hover:bg-plocha">
+            <summary className="flex min-h-[44px] cursor-pointer items-center justify-between px-4 text-zaklad font-semibold text-inkoust hover:bg-plocha">
               Úřední odkazy
               <Ikona nazev="dolu" velikost={13} tah={2} trida="text-tlum2 transition-transform group-open:rotate-180" />
             </summary>
@@ -280,8 +280,8 @@ export function PostranniPanel() {
               {POMOCNIK.map((p) => (
                 <li key={p.url}>
                   <a href={p.url} target="_blank" rel="noopener noreferrer" className="block px-4 py-2 hover:bg-plocha">
-                    <span className="block text-[14px] font-semibold text-inkoust">{p.nazev}</span>
-                    <span className="block text-[12.5px] leading-snug text-tlum">{p.popis}</span>
+                    <span className="block text-zaklad font-semibold text-inkoust">{p.nazev}</span>
+                    <span className="block text-drobne leading-snug text-tlum">{p.popis}</span>
                   </a>
                 </li>
               ))}
@@ -295,8 +295,8 @@ export function PostranniPanel() {
           <div className="grid grid-cols-4 gap-2">
             {TISNOVA.map((t) => (
               <a key={t.cislo} href={`tel:${t.cislo}`} title={t.popis} className="rounded-[12px] border border-linka py-1.5 text-center hover:border-akcent">
-                <span className="cislice block text-[18px] font-bold text-inkoust">{t.cislo}</span>
-                <span className="block text-[10.5px] text-tlum2">{t.popis.split(" ")[0]}</span>
+                <span className="cislice block text-velke font-bold text-inkoust">{t.cislo}</span>
+                <span className="block text-mikro text-tlum2">{t.popis.split(" ")[0]}</span>
               </a>
             ))}
           </div>

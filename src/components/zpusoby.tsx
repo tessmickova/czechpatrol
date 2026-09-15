@@ -28,7 +28,7 @@ function Pruh({ z }: { z: ZpusobVUziti }) {
   */
   const porovnani = z.porovnani;
   if (!porovnani) {
-    return <span className="text-[12px] text-tlum2">průměr nelze spočítat</span>;
+    return <span className="text-drobne text-tlum2">průměr nelze spočítat</span>;
   }
   const pomer = Math.min(z.zaObdobi / porovnani.prumer, 3);
   const sirka = Math.max(2, Math.round((pomer / 3) * SIRKA_PRUHU));
@@ -48,7 +48,7 @@ function Pruh({ z }: { z: ZpusobVUziti }) {
         {/* Ryska průměru: bez ní pruh neříká, proti čemu se měří. */}
         <span className="absolute top-[-3px] h-[12px] w-[1px] bg-inkoust/50" style={{ left: SIRKA_PRUHU / 3 }} />
       </span>
-      <span className="text-[12px] text-tlum2">
+      <span className="text-drobne text-tlum2">
         {porovnani.slovo}, průměr {cislem(porovnani.prumer)}
       </span>
     </span>
@@ -63,7 +63,7 @@ function Radek({ z }: { z: ZpusobVUziti }) {
     <li className="grid gap-3 border-b border-linka2 px-4 py-4 last:border-b-0 sm:grid-cols-[minmax(0,1fr)_auto] sm:px-5">
       <div className="min-w-0">
         <div className="flex flex-wrap items-center gap-x-2.5 gap-y-1.5">
-          <span className="text-[15px] font-semibold text-inkoust">{z.nazev}</span>
+          <span className="text-zaklad font-semibold text-inkoust">{z.nazev}</span>
           <Napoveda popis={s.popis}>
             <Odznak ton={ton} duraz="silny">
               {s.nazev}
@@ -71,7 +71,7 @@ function Radek({ z }: { z: ZpusobVUziti }) {
           </Napoveda>
         </div>
 
-        <div className="mt-2 flex flex-wrap items-center gap-x-4 gap-y-1.5 text-[12.5px] text-tlum2">
+        <div className="mt-2 flex flex-wrap items-center gap-x-4 gap-y-1.5 text-drobne text-tlum2">
           <span>
             naposledy{" "}
             {z.naposledy ? (
@@ -91,7 +91,7 @@ function Radek({ z }: { z: ZpusobVUziti }) {
           Úřední atribuce se uvádí i když je nula — a právě tehdy nejvíc.
           Bez toho by čtenář mohl číst celý sloupec jako „tohle dělá Rusko“.
         */}
-        <p className="mt-1.5 text-[12.5px] text-tlum2">
+        <p className="mt-1.5 text-drobne text-tlum2">
           úředně přisouzeno Rusku:{" "}
           <b className="font-semibold text-tlum">
             {z.prisouzenoRusku} z {z.zaObdobi}
@@ -101,8 +101,8 @@ function Radek({ z }: { z: ZpusobVUziti }) {
       </div>
 
       <div className="sm:text-right">
-        <div className="font-mono text-[26px] font-bold leading-none text-inkoust">{z.zaObdobi}</div>
-        <div className="mt-1 text-[11.5px] uppercase tracking-wide text-tlum2">
+        <div className="font-mono text-cislo font-bold leading-none text-inkoust">{z.zaObdobi}</div>
+        <div className="mt-1 text-mikro uppercase tracking-wide text-tlum2">
           za {OKNO_DNI} dní · celkem {z.celkem}
         </div>
         <div className="mt-2 sm:flex sm:justify-end">
@@ -137,7 +137,7 @@ export function ZpusobyVUziti() {
         ))}
       </ol>
 
-      <p className="mt-3 text-[12.5px] leading-relaxed text-tlum2">
+      <p className="mt-3 text-drobne leading-relaxed text-tlum2">
         Počítají se jen skutečné případy se zdrojem, ne prohlášení, reakce ani opatření. „Úředně přisouzeno“ znamená
         formální atribuci státu nebo EU — podezření, byť silné, se nepočítá. Kde je průměru málo dat, tabulka to přizná
         místo toho, aby číslo dopočítala.

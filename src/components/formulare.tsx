@@ -5,13 +5,13 @@ import type { ReactNode } from "react";
 /** Jednotné ovládací prvky formulářů — jeden vzhled napříč účtem, IZS i správou. */
 
 export const TLACITKO =
-  "inline-flex items-center justify-center gap-2 rounded-full border px-4 py-2.5 text-[14px] font-bold uppercase tracking-[0.05em] transition-all disabled:cursor-not-allowed disabled:opacity-50";
+  "inline-flex items-center justify-center gap-2 rounded-full border px-4 py-2.5 text-zaklad font-bold uppercase tracking-[0.05em] transition-all disabled:cursor-not-allowed disabled:opacity-50";
 export const TLACITKO_AKCENT = `${TLACITKO} border-akcent/60 bg-akcent/15 text-akcent-svetla  hover:bg-akcent/25`;
 export const TLACITKO_TICHE = `${TLACITKO} border-linka text-inkoust hover:border-akcent/60`;
 export const TLACITKO_VAROVNE = `${TLACITKO} border-akcent/50 text-akcent-svetla hover:bg-akcent/10`;
 
 export const POLE =
-  "w-full rounded-[18px] border border-linka bg-noc/60 px-3.5 py-2.5 text-[15px] text-inkoust placeholder:text-tlum2 focus:border-akcent focus:outline-none";
+  "w-full rounded-[18px] border border-linka bg-noc/60 px-3.5 py-2.5 text-zaklad text-inkoust placeholder:text-tlum2 focus:border-akcent focus:outline-none";
 
 export function Popisek({ children, pro }: { children: ReactNode; pro?: string }) {
   return (
@@ -28,7 +28,7 @@ export function Hlaska({ typ, children }: { typ: "chyba" | "ok" | "info"; childr
     info: "border-akcent/40 bg-akcent/10 text-akcent-svetla",
   }[typ];
   return (
-    <div role={typ === "chyba" ? "alert" : "status"} className={`rounded-[18px] border px-4 py-3 text-[14px] leading-relaxed ${tridy}`}>
+    <div role={typ === "chyba" ? "alert" : "status"} className={`rounded-[18px] border px-4 py-3 text-zaklad leading-relaxed ${tridy}`}>
       {children}
     </div>
   );
@@ -58,10 +58,10 @@ export function Volby<T extends string>({
               aktivni ? "border-akcent/60 bg-akcent/10" : "border-linka hover:border-akcent/40"
             }`}
           >
-            <span className={`block text-[15px] font-bold uppercase tracking-[0.03em] ${aktivni ? "text-akcent-svetla" : "text-inkoust"}`}>
+            <span className={`block text-zaklad font-bold uppercase tracking-[0.03em] ${aktivni ? "text-akcent-svetla" : "text-inkoust"}`}>
               {m.nazev}
             </span>
-            <span className="mt-1 block text-[13.5px] leading-snug text-tlum">{m.popis}</span>
+            <span className="mt-1 block text-male leading-snug text-tlum">{m.popis}</span>
           </button>
         );
       })}
@@ -81,8 +81,8 @@ export function Prepinac({
       className="flex w-full items-center justify-between gap-4 rounded-[22px] border border-linka p-3.5 text-left transition-colors hover:border-akcent/40"
     >
       <span>
-        <span className="block text-[15px] font-semibold text-inkoust">{nazev}</span>
-        {popis && <span className="mt-0.5 block text-[13.5px] leading-snug text-tlum">{popis}</span>}
+        <span className="block text-zaklad font-semibold text-inkoust">{nazev}</span>
+        {popis && <span className="mt-0.5 block text-male leading-snug text-tlum">{popis}</span>}
       </span>
       <span
         aria-hidden

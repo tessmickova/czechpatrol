@@ -23,17 +23,17 @@ export function HodnoceniProjektu({ stav }: { stav: CelkovyStav }) {
       </div>
       {d ? (
         <Napoveda popis={<VykladUrovne uroven={stav.uroven!} />}>
-          <span className={`inline-flex items-center gap-2 text-[22px] font-bold ${t!.text}`}>
+          <span className={`inline-flex items-center gap-2 text-velke font-bold ${t!.text}`}>
             <span aria-hidden className={`h-3 w-3 rounded-[3px] ${t!.tecka}`} />
             {d.nazev}
           </span>
         </Napoveda>
       ) : (
-        <p className="text-[18px] font-bold text-tlum">Zatím nestanoveno</p>
+        <p className="text-velke font-bold text-tlum">Zatím nestanoveno</p>
       )}
-      {d && <p className="mt-2 text-[14px] leading-relaxed text-tlum">{d.znamena}</p>}
-      {d && d.neznamena !== "—" && <p className="mt-1.5 text-[13.5px] leading-relaxed text-tlum2">{d.neznamena}</p>}
-      <p className="mt-3 text-[12.5px] text-tlum2">
+      {d && <p className="mt-2 text-zaklad leading-relaxed text-tlum">{d.znamena}</p>}
+      {d && d.neznamena !== "—" && <p className="mt-1.5 text-male leading-relaxed text-tlum2">{d.neznamena}</p>}
+      <p className="mt-3 text-drobne text-tlum2">
         {stav.aktualizovano ? `Stanoveno ${datumCasPraha(stav.aktualizovano)}` : "Datum stanovení chybí"} · <Link href="/metodika/" className="odkaz">metodika</Link>
       </p>
     </section>

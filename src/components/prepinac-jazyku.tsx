@@ -52,7 +52,7 @@ export function PrepinacJazyku({ trida = "" }: { trida?: string }) {
         aria-expanded={otevreno}
         aria-haspopup="menu"
         aria-label="Jazyk / Language"
-        className="flex min-h-[44px] items-center gap-1.5 rounded-full px-3 text-[12px] font-semibold uppercase tracking-[0.06em] text-tlum transition-colors hover:bg-[rgb(255_255_255/0.08)] hover:text-inkoust"
+        className="flex min-h-[44px] items-center gap-1.5 rounded-full px-3 text-drobne font-semibold uppercase tracking-[0.06em] text-tlum transition-colors hover:bg-[rgb(255_255_255/0.08)] hover:text-inkoust"
         style={{ fontFamily: "var(--font-mono)" }}
       >
         <Ikona nazev="mapa" velikost={16} tah={1.8} />
@@ -70,12 +70,12 @@ export function PrepinacJazyku({ trida = "" }: { trida?: string }) {
             hrefLang="cs"
             role="menuitem"
             onClick={() => nastavOtevreno(false)}
-            className={`block rounded-[12px] px-3 py-2 text-[13.5px] transition-colors hover:bg-plocha2 ${
+            className={`block rounded-[12px] px-3 py-2 text-male transition-colors hover:bg-plocha2 ${
               kod === "cs" ? "font-semibold text-inkoust" : "text-tlum"
             }`}
           >
             Čeština
-            <span className="block text-[11.5px] text-tlum2">závazné znění</span>
+            <span className="block text-mikro text-tlum2">závazné znění</span>
           </Link>
           <div className="my-1 border-t border-linka2" />
           {JAZYKY.map((j) => (
@@ -86,7 +86,7 @@ export function PrepinacJazyku({ trida = "" }: { trida?: string }) {
               role="menuitem"
               aria-current={j.kod === kod ? "page" : undefined}
               onClick={() => nastavOtevreno(false)}
-              className={`block rounded-[12px] px-3 py-2 text-[13.5px] transition-colors hover:bg-plocha2 ${
+              className={`block rounded-[12px] px-3 py-2 text-male transition-colors hover:bg-plocha2 ${
                 j.kod === kod ? "font-semibold text-inkoust" : "text-tlum"
               }`}
             >

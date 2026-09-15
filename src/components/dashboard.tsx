@@ -22,6 +22,7 @@ import { PavucinaHrozeb } from "./pavucina";
 import { KaruselZemi } from "./karusel-zemi";
 import { useZiveHodiny } from "@/lib/cas-klient";
 import { SignalySiti } from "./signaly-siti";
+import { TipyKPriprave } from "./tipy";
 import { PasZemi } from "./pas-zemi";
 import { Pocitadla } from "./pocitadla";
 import { Partneri, Sledovat } from "./sledovat";
@@ -161,12 +162,12 @@ function dlazdiceProvoz(p: ProvozniPolozka): Dlazdice {
   což na dotyku ani klávesnici nejde.
 */
 function Stari({ cas, popisek, ted }: { cas: string | null; popisek: Dlazdice["popisekCasu"]; ted: number }) {
-  if (!cas) return <span className="shrink-0 text-[10.5px] text-tlum2">bez kontroly</span>;
+  if (!cas) return <span className="shrink-0 text-mikro text-tlum2">bez kontroly</span>;
   // Čas je předaný, ne braný z Date.now() — jinak se vykreslení neshodnou.
   const c = cerstvost(cas, ted);
   const barva = c === "cerstve" || c === "nezname" ? "text-tlum2" : "text-stari-text";
   return (
-    <span className={`shrink-0 text-right text-[10.5px] leading-tight ${barva}`}>
+    <span className={`shrink-0 text-right text-mikro leading-tight ${barva}`}>
       {popisek}
       <br />
       <span className="cislice">{datumCasPraha(cas)}</span>
@@ -205,8 +206,8 @@ function RadekStavu({ d, casSkupiny, ted }: { d: Dlazdice; casSkupiny: string | 
         <summary className="flex min-h-[54px] w-full cursor-pointer list-none items-center gap-2.5 px-3 py-2 text-left hover:bg-plocha2">
           <Ikona nazev={d.ikona} velikost={15} tah={1.8} trida="shrink-0 text-tlum2" />
           <span className="min-w-0 flex-1">
-            <span className="block truncate text-[13.5px] leading-tight text-tlum">{d.nazev}</span>
-            <span className={`block text-[15px] font-bold leading-tight ${t.slovo}`}>{d.stav}</span>
+            <span className="block truncate text-male leading-tight text-tlum">{d.nazev}</span>
+            <span className={`block text-zaklad font-bold leading-tight ${t.slovo}`}>{d.stav}</span>
           </span>
           {vlastniCas && <Stari cas={d.cas} popisek={d.popisekCasu} ted={ted} />}
           <Ikona nazev="dolu" velikost={13} tah={2} trida="shrink-0 text-tlum2 transition-transform group-open:rotate-180" />
@@ -228,10 +229,10 @@ function Hlavni({ nadpis, hodnota, ton, popis, overeno, napoveda, jiskra }: { na
           <Stari cas={overeno} popisek="kontrolováno" ted={Date.parse(overeno ?? "") || 0} />
         </span>
         <span className="mt-2 flex items-end justify-between gap-3">
-          <span className={`text-[26px] font-bold leading-none sm:text-[30px] ${t ? t.slovo : ""}`}>{hodnota}</span>
+          <span className={`text-cislo font-bold leading-none sm:text-cislo-l ${t ? t.slovo : ""}`}>{hodnota}</span>
           {jiskra}
         </span>
-        <span className="mt-2 text-[12.5px] leading-snug text-tlum">{popis}</span>
+        <span className="mt-2 text-drobne leading-snug text-tlum">{popis}</span>
       </span>
     </Napoveda>
   );
@@ -240,8 +241,8 @@ function Hlavni({ nadpis, hodnota, ton, popis, overeno, napoveda, jiskra }: { na
 function Cislo({ n, slovo }: { n: number; slovo: string }) {
   return (
     <span className="flex flex-col rounded-[18px] border border-linka2 bg-plocha px-3 py-2">
-      <span className="cislice text-[24px] font-bold leading-none text-inkoust">{n}</span>
-      <span className="mt-1 text-[11.5px] leading-tight text-tlum">{slovo}</span>
+      <span className="cislice text-cislo font-bold leading-none text-inkoust">{n}</span>
+      <span className="mt-1 text-mikro leading-tight text-tlum">{slovo}</span>
     </span>
   );
 }
@@ -249,9 +250,9 @@ function Cislo({ n, slovo }: { n: number; slovo: string }) {
 function Pruh({ nazev, n, max, barva, odkaz }: { nazev: React.ReactNode; n: number; max: number; barva: string; odkaz?: string }) {
   const telo = (
     <>
-      <span className="flex w-[118px] shrink-0 items-center gap-1.5 truncate text-[12.5px] text-inkoust">{nazev}</span>
+      <span className="flex w-[118px] shrink-0 items-center gap-1.5 truncate text-drobne text-inkoust">{nazev}</span>
       <span className="h-[8px] flex-1 overflow-hidden rounded-full bg-linka2"><span className={`block h-full ${barva}`} style={{ width: `${max ? (n / max) * 100 : 0}%` }} /></span>
-      <span className="cislice w-6 shrink-0 text-right text-[13px] font-bold text-inkoust">{n}</span>
+      <span className="cislice w-6 shrink-0 text-right text-male font-bold text-inkoust">{n}</span>
     </>
   );
   return odkaz ? <Link href={odkaz} className="flex min-h-[28px] items-center gap-2 hover:bg-plocha">{telo}</Link> : <span className="flex min-h-[28px] items-center gap-2">{telo}</span>;
@@ -466,6 +467,12 @@ export function Dashboard({
           neděje, přitom by znamenala jen to, že profily zatím nesledujeme.
         */}
         <SignalySiti />
+        {/*
+          Tipy k přípravě. Odpovídají na jinou otázku než zbytek webu: ne co
+          se stalo, ale co s tím může člověk udělat dnes. Bez tipu se
+          nevykreslí nic.
+        */}
+        <TipyKPriprave ted={ted} />
       </div>
 
       {/* 2b2 — manipulační kampaně: operace, ne události */}
@@ -477,10 +484,20 @@ export function Dashboard({
             popis="Podvržené dokumenty, weby vydávající se za redakce, profily vydávající se za úředníky."
             akce={<Tlacitko kam="/manipulace/" varianta="obrys" velikost="s" ikonaVpravo="nahoru" trida="[&>svg:last-child]:rotate-90">{t("všechny rozbory")}</Tlacitko>}
           />
-          {/* Jedna kampaň by v třetině šířky vypadala jako zapomenutá dlaždice. */}
-          <div className={`grid gap-3 ${kampane.length === 1 ? "" : kampane.length === 2 ? "sm:grid-cols-2" : "sm:grid-cols-2 lg:grid-cols-3"}`}>
-            {kampane.slice(0, 3).map((k) => (
-              <DlazdiceKampane key={k.slug} k={k} nazvyZemi={nazvyZemi} siroka={kampane.length === 1} />
+          {/*
+            Karusel, ne mřížka. Kampaní přibývá a mřížka je buď useknutá na
+            tři, nebo z ní je stěna dlaždic; takhle jich jde projet víc a
+            výška sekce zůstane stejná.
+          */}
+          <div
+            className="pas-scroll -mx-4 flex snap-x snap-mandatory gap-3 overflow-x-auto px-4 pb-2 sm:mx-0 sm:px-0"
+            role="list"
+            aria-label={t("Manipulace a útoky na občany")}
+          >
+            {kampane.slice(0, 8).map((k) => (
+              <div key={k.slug} role="listitem" className="w-[min(82vw,360px)] shrink-0 snap-start">
+                <DlazdiceKampane k={k} nazvyZemi={nazvyZemi} />
+              </div>
             ))}
           </div>
         </div>
@@ -491,31 +508,23 @@ export function Dashboard({
         <NadpisSekce
           stitek="Typy událostí"
           nadpis={t("Typy evidovaných událostí")}
-          popis="Evidované události podle typu za posledních 90 dní. Vlevo Evropa, vpravo Česko. Prázdná osa znamená, že odtud takový záznam nemáme — ne že se nic neděje."
+          popis="Evidované události podle typu za posledních 90 dní, po zemích. Prázdná osa znamená, že odtud takový záznam nemáme — ne že se nic neděje."
         />
         {/*
-          Nejdřív Evropa a Česko vedle sebe — to je hlavní srovnání. Pak
-          karusel ostatních zemí: kdo chce vidět, kde se dělá co, projede ho;
-          kdo ne, přejde dál. Neposouvá se sám.
+          Jeden karusel, ne tři obrazce ve dvou velikostech. Evropa je první
+          karta, Česko hned za ní — porovnávat se dají jen věci, které jsou
+          stejně velké a stojí vedle sebe.
         */}
-        <div className="grid gap-4 lg:grid-cols-2">
-          <PavucinaHrozeb
-            nadpis="Evropa jako celek"
-            popis={t("Všechny sledované země od roku 2014.")}
-            tlak={tlakEvropa}
-            odkaz={{ href: "/metodika/", text: "jak se hodnotí →" }}
-          />
-          <PavucinaHrozeb
-            nadpis={t("Česko")}
-            popis={t("Jen české záznamy od roku 2014.")}
-            tlak={tlakCesko}
-            odkaz={{ href: "/udalosti/?zeme=CZ", text: "české záznamy →" }}
-          />
-        </div>
-        <div className="mt-4">
-          <div className="stitek mb-2">Ostatní sledované země</div>
-          <KaruselZemi />
-        </div>
+        <KaruselZemi
+          prvni={
+            <PavucinaHrozeb
+              nadpis="Evropa jako celek"
+              popis={t("Všechny sledované země od roku 2014.")}
+              tlak={tlakEvropa}
+              odkaz={{ href: "/metodika/", text: "jak se hodnotí →" }}
+            />
+          }
+        />
       </div>
 
       {/*
@@ -557,14 +566,14 @@ export function Dashboard({
             <Cislo n={potvrzeno} slovo="s potvrzeným pachatelem" />
           </div>
           {porovnani90 && (
-            <p className="mt-2 flex flex-wrap items-center gap-2 text-[11.5px] text-tlum2">
+            <p className="mt-2 flex flex-wrap items-center gap-2 text-mikro text-tlum2">
               <Odznak ton={porovnani90.smer === "vyssi" ? "pozor" : porovnani90.smer === "nizsi" ? "klid" : "neutral"} duraz="silny">
                 {porovnani90.slovo} než průměr
               </Odznak>
               <span>průměr posledních {porovnani90.zaLet} let je {cislem(porovnani90.prumer)} na čtvrtletí</span>
             </p>
           )}
-          <p className="mt-1.5 text-[11.5px] text-tlum2">{uredni} z {dni90.length} případů s úředním zdrojem. Počítají se případy a manipulační operace; aktualizace a prohlášení ne.</p>
+          <p className="mt-1.5 text-mikro text-tlum2">{uredni} z {dni90.length} případů s úředním zdrojem. Počítají se případy a manipulační operace; aktualizace a prohlášení ne.</p>
         </section>
         <section aria-label="Kde">
           <div className="mb-1.5 flex items-center justify-between"><span className="stitek">Kde · případy {rok}</span><Tlacitko kam="/zeme/" varianta="tichy" velikost="s" ikonaVpravo="nahoru" trida="[&>svg:last-child]:rotate-90">{t("všechny země")}</Tlacitko></div>
@@ -575,17 +584,17 @@ export function Dashboard({
           </ul>
         </section>
         <section aria-label="Kdo">
-          <div className="mb-1.5 flex items-center justify-between"><span className="stitek">Kdo · případy {rok}</span><span className="text-[11.5px] text-tlum2">potvrzeno / celkem</span></div>
+          <div className="mb-1.5 flex items-center justify-between"><span className="stitek">Kdo · případy {rok}</span><span className="text-mikro text-tlum2">potvrzeno / celkem</span></div>
           <ul className="space-y-0.5">
             {puv.skupiny.map((s) => (
               <li key={s.klic} className="flex min-h-[28px] items-center gap-2">
-                <span className="w-[118px] shrink-0 truncate text-[12.5px] text-inkoust">{s.nazev}</span>
+                <span className="w-[118px] shrink-0 truncate text-drobne text-inkoust">{s.nazev}</span>
                 <span className="h-[8px] flex-1 overflow-hidden rounded-full bg-linka2">
                   <span className="block h-full bg-tlum2/70" style={{ width: `${(s.pocet / maxPuv) * 100}%` }}>
                     <span className="block h-full bg-oranz" style={{ width: `${s.pocet ? (s.potvrzeno / s.pocet) * 100 : 0}%` }} />
                   </span>
                 </span>
-                <span className="cislice w-12 shrink-0 text-right text-[13px] text-inkoust"><b className="font-bold">{s.potvrzeno}</b><span className="text-tlum2"> / {s.pocet}</span></span>
+                <span className="cislice w-12 shrink-0 text-right text-male text-inkoust"><b className="font-bold">{s.potvrzeno}</b><span className="text-tlum2"> / {s.pocet}</span></span>
               </li>
             ))}
           </ul>
@@ -609,16 +618,16 @@ export function Dashboard({
       {/* 6 — sbalené: proč, co by změnilo, odběr */}
       <div className="mt-14 grid gap-3 border-t border-linka pt-12 sm:mt-20 sm:pt-14 md:grid-cols-3">
         <details className="group rounded-[18px] border border-linka2 bg-plocha">
-          <summary className="flex min-h-[40px] cursor-pointer items-center justify-between px-3 text-[13px] font-semibold text-inkoust">Proč je hodnocení {d ? d.nazev.toLowerCase() : "takové"}<Ikona nazev="dolu" velikost={12} tah={2} trida="text-tlum2 transition-transform group-open:rotate-180" /></summary>
-          <p className="border-t border-linka2 px-3 py-2.5 text-[13px] leading-relaxed text-tlum">{stav.shrnuti || "Bez zdůvodnění."} <Link href="/metodika/" className="odkaz">Metodika</Link></p>
+          <summary className="flex min-h-[40px] cursor-pointer items-center justify-between px-3 text-male font-semibold text-inkoust">Proč je hodnocení {d ? d.nazev.toLowerCase() : "takové"}<Ikona nazev="dolu" velikost={12} tah={2} trida="text-tlum2 transition-transform group-open:rotate-180" /></summary>
+          <p className="border-t border-linka2 px-3 py-2.5 text-male leading-relaxed text-tlum">{stav.shrnuti || "Bez zdůvodnění."} <Link href="/metodika/" className="odkaz">Metodika</Link></p>
         </details>
         <details className="group rounded-[18px] border border-linka2 bg-plocha">
-          <summary className="flex min-h-[40px] cursor-pointer items-center justify-between px-3 text-[13px] font-semibold text-inkoust">Co by hodnocení zhoršilo<Ikona nazev="dolu" velikost={12} tah={2} trida="text-tlum2 transition-transform group-open:rotate-180" /></summary>
-          <ol className="space-y-1 border-t border-linka2 px-3 py-2.5 text-[13px] leading-snug text-tlum">
+          <summary className="flex min-h-[40px] cursor-pointer items-center justify-between px-3 text-male font-semibold text-inkoust">Co by hodnocení zhoršilo<Ikona nazev="dolu" velikost={12} tah={2} trida="text-tlum2 transition-transform group-open:rotate-180" /></summary>
+          <ol className="space-y-1 border-t border-linka2 px-3 py-2.5 text-male leading-snug text-tlum">
             {watchlist.eskalacni.map((e) => <li key={e.cislo} className="flex gap-2"><span className="cislice text-tlum2">{e.cislo}</span>{e.nazev}</li>)}
           </ol>
         </details>
-        <div className="flex min-h-[40px] items-center justify-between gap-3 rounded-[18px] border border-linka2 bg-plocha px-3 text-[13px]">
+        <div className="flex min-h-[40px] items-center justify-between gap-3 rounded-[18px] border border-linka2 bg-plocha px-3 text-male">
           <span className="text-tlum">{t("Změny bez sledování webu")}</span>
           <span className="flex items-center gap-3">
             <Tlacitko kam="/feed.xml" varianta="tichy" velikost="s" ikona="rss">RSS</Tlacitko>

@@ -15,7 +15,7 @@ export function StariPodkladu({ overeno, ted }: { overeno: string | null | undef
   const c = cerstvost(overeno, ted);
   const v = VZHLED[c];
   return (
-    <span className={`inline-flex items-center gap-1 text-[12.5px] ${v.tridy}`} title={overeno ? datumCasPraha(overeno) : undefined}>
+    <span className={`inline-flex items-center gap-1 text-drobne ${v.tridy}`} title={overeno ? datumCasPraha(overeno) : undefined}>
       <Ikona nazev={v.ikona} velikost={12} tah={2} />
       {v.slovo}{overeno ? ` ${stariSlovy(overeno, ted)}` : ""}
     </span>
@@ -59,7 +59,7 @@ export function BannerStari({ overeno, zkontrolovano }: { overeno: string | null
       className={poplach ? "border-b border-stari/40 bg-stari/10" : "border-b border-linka2 bg-plocha"}
     >
       <div
-        className={`mx-auto flex max-w-[1200px] items-start gap-2.5 px-4 py-2.5 text-[14px] sm:px-6 ${
+        className={`mx-auto flex max-w-[1200px] items-start gap-2.5 px-4 py-2.5 text-zaklad sm:px-6 ${
           poplach ? "text-stari-text" : "text-tlum"
         }`}
       >

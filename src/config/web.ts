@@ -120,10 +120,17 @@ export const NEOVERENE_SIGNALY = [
  * neukáže jako funkční.
  */
 export const KOMUNITA: Record<string, string> = {
-  /** Veřejný repozitář s daty i kódem. Odkazuje se na něj jen v O projektu a Opravách, ne v menu. */
-  github: "https://github.com/tessmickova/czechpatrol",
-  /** Diskuse nad metodikou a hodnocením. */
-  diskuse: "https://github.com/tessmickova/czechpatrol/issues",
+  /*
+    Repozitář a diskuse jsou schválně prázdné.
+
+    Odkaz na repozitář vede na účet konkrétního člověka, a tím i na jméno,
+    které za projektem stojí. Dokud to tak má zůstat, nesmí být odkaz nikde
+    — ani v patičce, ani v podmínkách, ani ve formuláři hlášení. Prázdná
+    hodnota znamená „neexistuje": web pak odkaz nevykreslí a nikde o něm
+    nemluví.
+  */
+  github: "",
+  diskuse: "",
   /** Skupina, kde se dají posílat tipy. */
   skupina: "",
   /** Adresa pro poslání tipu nebo opravy. */

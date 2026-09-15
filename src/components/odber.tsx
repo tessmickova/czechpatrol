@@ -22,30 +22,30 @@ export function OdberPanel({ kompaktni = false }: { kompaktni?: boolean }) {
           <span className="mt-0.5 grid h-9 w-9 shrink-0 place-items-center rounded-[12px] bg-akcent/15 text-akcent"><Ikona nazev="komunikace" velikost={16} tah={2} /></span>
           <span>
             {KANALY.telegram ? (
-              <a href={KANALY.telegram} target="_blank" rel="noopener noreferrer" className="text-[15px] font-semibold text-inkoust underline decoration-linka underline-offset-4 hover:decoration-inkoust">{DORUCOVANI.telegram.nazev}</a>
+              <a href={KANALY.telegram} target="_blank" rel="noopener noreferrer" className="text-zaklad font-semibold text-inkoust underline decoration-linka underline-offset-4 hover:decoration-inkoust">{DORUCOVANI.telegram.nazev}</a>
             ) : (
-              <span className="text-[15px] font-semibold text-tlum">{DORUCOVANI.telegram.nazev}</span>
+              <span className="text-zaklad font-semibold text-tlum">{DORUCOVANI.telegram.nazev}</span>
             )}
-            <span className="block text-[13.5px] leading-snug text-tlum">{DORUCOVANI.telegram.rozsah}</span>
-            <span className="block text-[12.5px] leading-snug text-tlum2">Bez nové zprávy nelze usuzovat na stav situace.</span>
+            <span className="block text-male leading-snug text-tlum">{DORUCOVANI.telegram.rozsah}</span>
+            <span className="block text-drobne leading-snug text-tlum2">Bez nové zprávy nelze usuzovat na stav situace.</span>
           </span>
         </li>
         <li className="flex gap-3">
           <span className="mt-0.5 grid h-9 w-9 shrink-0 place-items-center rounded-[12px] bg-akcent/15 text-akcent"><Ikona nazev="rss" velikost={16} tah={2} /></span>
           <span>
-            <a href={`${WEB.url}/feed.xml`} className="text-[15px] font-semibold text-inkoust underline decoration-linka underline-offset-4 hover:decoration-inkoust">{DORUCOVANI.rss.nazev}</a>
-            <span className="block text-[13.5px] leading-snug text-tlum">{DORUCOVANI.rss.rozsah} Bez účtu a bez adresy.</span>
+            <a href={`${WEB.url}/feed.xml`} className="text-zaklad font-semibold text-inkoust underline decoration-linka underline-offset-4 hover:decoration-inkoust">{DORUCOVANI.rss.nazev}</a>
+            <span className="block text-male leading-snug text-tlum">{DORUCOVANI.rss.rozsah} Bez účtu a bez adresy.</span>
           </span>
         </li>
         <li className="flex gap-3">
           <span className="mt-0.5 grid h-9 w-9 shrink-0 place-items-center rounded-[12px] bg-plocha2 text-tlum2"><Ikona nazev="zvonek" velikost={16} tah={2} /></span>
           <span>
             {UCTY_ZAPNUTE ? (
-              <Link href="/ucet/" className="text-[15px] font-semibold text-inkoust underline decoration-linka underline-offset-4 hover:decoration-inkoust">{DORUCOVANI.ucty.nazev}</Link>
+              <Link href="/ucet/" className="text-zaklad font-semibold text-inkoust underline decoration-linka underline-offset-4 hover:decoration-inkoust">{DORUCOVANI.ucty.nazev}</Link>
             ) : (
-              <span className="text-[15px] font-semibold text-tlum">{DORUCOVANI.ucty.nazev} — připravujeme</span>
+              <span className="text-zaklad font-semibold text-tlum">{DORUCOVANI.ucty.nazev} — připravujeme</span>
             )}
-            <span className="block text-[13.5px] leading-snug text-tlum">
+            <span className="block text-male leading-snug text-tlum">
               {UCTY_ZAPNUTE
                 ? DORUCOVANI.ucty.rozsah
                 : "Zatím neběží — chybí nasazená účetní služba. Neslibujeme termín a nikam vás zatím neregistrujeme."}
@@ -55,7 +55,7 @@ export function OdberPanel({ kompaktni = false }: { kompaktni?: boolean }) {
         {dalsi.map(([k, url]) => (
           <li key={k} className="flex gap-3">
             <span className="mt-0.5 grid h-9 w-9 shrink-0 place-items-center rounded-[12px] bg-akcent/15 text-akcent"><Ikona nazev="komunikace" velikost={16} tah={2} /></span>
-            <a href={url} target="_blank" rel="noopener noreferrer" className="text-[15px] font-semibold text-inkoust underline decoration-linka underline-offset-4 hover:decoration-inkoust">{k}</a>
+            <a href={url} target="_blank" rel="noopener noreferrer" className="text-zaklad font-semibold text-inkoust underline decoration-linka underline-offset-4 hover:decoration-inkoust">{k}</a>
           </li>
         ))}
       </ul>
@@ -67,7 +67,7 @@ export function OdberPanel({ kompaktni = false }: { kompaktni?: boolean }) {
               /* Mimořádná výstraha je jiná kategorie než běžná změna stavu — i v seznamu. */
               const vystraha = (NEOVERENE_SIGNALY as readonly string[]).includes(k);
               return (
-                <li key={k} className={`flex gap-2 text-[13.5px] leading-snug ${vystraha ? "text-inkoust" : "text-tlum"}`}>
+                <li key={k} className={`flex gap-2 text-male leading-snug ${vystraha ? "text-inkoust" : "text-tlum"}`}>
                   <span aria-hidden className={`mt-[3px] shrink-0 ${vystraha ? "text-akcent" : "text-klid-text"}`}>
                     <Ikona nazev={vystraha ? "sirena" : "fajfka"} velikost={12} tah={2} />
                   </span>
@@ -91,12 +91,12 @@ export function OdberPanel({ kompaktni = false }: { kompaktni?: boolean }) {
             a proč. Bez toho by první takový signál vypadal jako to, proti
             čemu se tenhle web staví.
           */}
-          <p className="mt-3 text-[12.5px] leading-snug text-tlum">
+          <p className="mt-3 text-drobne leading-snug text-tlum">
             U prvních pěti témat pošleme zprávu, i když ji zatím nikdo neověřil. Je označená,
             vede na zdroj a do počtů na webu nevstupuje — mezi zachycením a ověřením jsou hodiny
             a zrovna u těchhle věcí je to znát.
           </p>
-          <p className="mt-3 text-[12.5px] text-tlum2">Opakovanému odeslání téže změny se bráníme; postup je popsaný v metodice. Z kanálu se odhlásíte jeho opuštěním — nezakládá se žádný účet.</p>
+          <p className="mt-3 text-drobne text-tlum2">Opakovanému odeslání téže změny se bráníme; postup je popsaný v metodice. Z kanálu se odhlásíte jeho opuštěním — nezakládá se žádný účet.</p>
         </div>
       )}
     </div>

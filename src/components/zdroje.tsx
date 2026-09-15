@@ -18,7 +18,7 @@ export function ZnackaZdroje({ zdroj }: { zdroj: Zdroj | KampanZdroj }) {
 export function SeznamZdroju({ zdroje, husty = false }: { zdroje: (Zdroj | KampanZdroj)[]; husty?: boolean }) {
   if (!zdroje.length) {
     return (
-      <p className="text-[12px] text-tlum2">
+      <p className="text-drobne text-tlum2">
         U tohoto záznamu zatím nejsou uvedeny zdroje — proto se na produkci nezobrazuje.
       </p>
     );
@@ -27,25 +27,25 @@ export function SeznamZdroju({ zdroje, husty = false }: { zdroje: (Zdroj | Kampa
     <ol className={husty ? "space-y-1.5" : "space-y-2.5"}>
       {zdroje.map((z, i) => (
         <li key={z.url + i} className="flex flex-wrap items-baseline gap-x-2.5 gap-y-1">
-          <span className="cislice w-4 shrink-0 text-[11px] text-tlum2">{i + 1}</span>
+          <span className="cislice w-4 shrink-0 text-mikro text-tlum2">{i + 1}</span>
           <ZnackaZdroje zdroj={z} />
           {z.url ? (
             <a
               href={z.url}
               target="_blank"
               rel="noopener noreferrer"
-              className="odkaz text-[13px] font-medium"
+              className="odkaz text-male font-medium"
             >
               {z.nazev}
             </a>
           ) : (
-            <span className="text-[13px] font-medium">
+            <span className="text-male font-medium">
               {z.nazev}
               <span className="stitek ml-2">odkaz k doplnění</span>
             </span>
           )}
           {z.publikovano && (
-            <span className="cislice text-[11.5px] text-tlum2">{datumZdroje(z.publikovano)}</span>
+            <span className="cislice text-mikro text-tlum2">{datumZdroje(z.publikovano)}</span>
           )}
           {z.jazyk !== "cs" && (
             <span className="stitek !text-tlum2">{z.jazyk}</span>

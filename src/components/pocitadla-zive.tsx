@@ -92,9 +92,9 @@ function Cislo({
       href={odkaz}
       className="dlazdice-stav group flex min-w-0 flex-col gap-1 px-3.5 py-3.5 hover:bg-plocha2 sm:flex-1 sm:px-5 sm:py-5"
     >
-      <span className={`cislice text-[28px] font-bold leading-none sm:text-[44px] ${zvyraznit && n > 0 ? "text-akcent" : "text-inkoust"}`}>{n}</span>
-      <span className="text-[12.5px] leading-tight text-tlum sm:text-[13px]">{popis}</span>
-      {podtext && <span className="text-[11.5px] leading-tight text-tlum2">{podtext}</span>}
+      <span className={`cislice text-cislo-l font-bold leading-none sm:text-cislo-xl ${zvyraznit && n > 0 ? "text-akcent" : "text-inkoust"}`}>{n}</span>
+      <span className="text-drobne leading-tight text-tlum sm:text-male">{popis}</span>
+      {podtext && <span className="text-mikro leading-tight text-tlum2">{podtext}</span>}
       {odznak}
     </Link>
   );
@@ -117,7 +117,7 @@ export function PocitadlaEvropa({ polozky, ted }: { polozky: PolozkaPoctu[]; ted
         počítá „dnes“ a co znamená nula, tu stál přes tři řádky a nikomu
         v obavách neřekl nic o tom, jestli se má bát.
       */}
-      <p className="mt-2.5 text-[12.5px] text-tlum2">
+      <p className="mt-2.5 text-drobne text-tlum2">
         <Napoveda popis={
           <span className="block">
             Případy a manipulační operace v Evropě podle dne, kdy vyšly najevo.
@@ -150,7 +150,7 @@ export function PocitadlaZeme({ polozky, ted, nazev }: { polozky: PolozkaPoctu[]
         />
       </div>
       {o.porovnani && (
-        <p className="mt-2.5 text-[12.5px] text-tlum2">
+        <p className="mt-2.5 text-drobne text-tlum2">
           <Napoveda popis={
             <span className="block">
               Případy a manipulační operace podle dne, kdy vyšly najevo. Počítá se v prohlížeči, takže

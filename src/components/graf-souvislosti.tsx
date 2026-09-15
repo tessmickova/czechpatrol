@@ -26,13 +26,13 @@ export function GrafSouvislosti({
   return (
     <div className="rounded-[22px] border border-linka bg-plocha p-5 sm:p-6">
       <div className="mb-1.5 flex flex-wrap items-center justify-between gap-3">
-        <h2 className="podnadpis text-[16px]">Souvislosti</h2>
+        <h2 className="podnadpis text-vetsi">Souvislosti</h2>
         <div className="flex flex-wrap items-center gap-4">
-          <span className="flex items-center gap-2 text-[11.5px] text-tlum">
+          <span className="flex items-center gap-2 text-mikro text-tlum">
             <svg width="22" height="2" aria-hidden><line x1="0" y1="1" x2="22" y2="1" stroke="var(--color-inkoust)" strokeWidth="1.6" /></svg>
             potvrzená
           </span>
-          <span className="flex items-center gap-2 text-[11.5px] text-tlum">
+          <span className="flex items-center gap-2 text-mikro text-tlum">
             <svg width="22" height="2" aria-hidden><line x1="0" y1="1" x2="22" y2="1" stroke="var(--color-tlum2)" strokeWidth="1.6" strokeDasharray="3 3" /></svg>
             vyšetřovaná
           </span>
@@ -106,10 +106,10 @@ export function GrafSouvislosti({
             >
               {s.potvrzena ? "Potvrzená" : "Vyšetřovaná"}
             </span>
-            <Link href={`/incident/${s.incident.slug}/`} className="odkaz text-[13px] font-medium">
+            <Link href={`/incident/${s.incident.slug}/`} className="odkaz text-male font-medium">
               {s.incident.titulek}
             </Link>
-            <span className="text-[12.5px] text-tlum">{s.popis}</span>
+            <span className="text-drobne text-tlum">{s.popis}</span>
           </li>
         ))}
       </ul>

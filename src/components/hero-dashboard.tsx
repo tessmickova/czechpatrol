@@ -7,6 +7,7 @@ import { cislem } from "@/lib/porovnani";
 import type { Porovnani } from "@/lib/porovnani";
 import type { HlavniVeta } from "@/lib/veta";
 import { Ikona } from "./ikony";
+import { Znacka } from "./znacka";
 import { ObloukovyMerak } from "./mericky";
 import { Napoveda, VykladUrovne } from "./zaklad";
 import { Odznak, Tlacitko } from "./ui";
@@ -48,12 +49,12 @@ function Merak({
     >
       <span className="flex w-full flex-col items-center px-1.5 py-3 text-center">
         <span className="stitek">{nadpis}</span>
-        <span className="mt-1 text-[11px] leading-none text-tlum2">{obdobi}</span>
+        <span className="mt-1 text-mikro leading-none text-tlum2">{obdobi}</span>
         <ObloukovyMerak uroven={uroven} naNoci velikost={velikost} skrytPopisek />
-        <span className={`-mt-1 text-[14px] font-bold uppercase leading-tight tracking-[0.03em] ${pasmo ? pasmo.text : vlastniSlovo ? "text-klid-text" : "text-tlum2"}`}>
+        <span className={`-mt-1 text-zaklad font-bold uppercase leading-tight tracking-[0.03em] ${pasmo ? pasmo.text : vlastniSlovo ? "text-klid-text" : "text-tlum2"}`}>
           {vlastniSlovo ?? (uroven ? UROVNE[uroven].nazev : "bez hodnocení")}
         </span>
-        {popis && <span className="mt-1 block max-w-[15rem] text-[11.5px] leading-snug text-tlum2">{popis}</span>}
+        {popis && <span className="mt-1 block max-w-[15rem] text-mikro leading-snug text-tlum2">{popis}</span>}
       </span>
     </Napoveda>
   );
@@ -89,22 +90,25 @@ export function HeroDashboard({
   return (
     <section aria-label={t("Bezpečnostní aktivita")} className="sklo paralax-deska rounded-[28px]">
       {/*
-        Hlavní nadpis stránky. Úvod ho dřív neměl vůbec — čtečka obrazovky
-        pak neuměla říct, co ta stránka je, a přeskakování po nadpisech
-        začínalo až u třetí sekce.
+        Hlavička úvodu ve stejném tvaru jako u každé jiné sekce: značka,
+        štítek v barvě značky, nadpis v .titul-sekce. Dřív tu stál nadpis
+        vlastního formátu (15px verzálkami, šedý) — vypadal jako popisek
+        a čtenář z něj nepoznal, že je to nadpis stránky.
       */}
       <div className="border-b border-linka2 px-5 pt-5 sm:px-7 sm:pt-6">
-        <h1 className="text-[15px] font-semibold uppercase tracking-[0.06em] text-tlum2">
-          {t("Bezpečnostní situace v Česku a okolí")}
-        </h1>
+        <div className="mb-3 flex items-center gap-2">
+          <Znacka velikost={26} tmave />
+          <span className="stitek-znacky">{t("Bezpečnostní přehled")}</span>
+        </div>
+        <h1 className="titul-sekce pb-4">{t("Bezpečnostní situace v Česku a okolí")}</h1>
       </div>
       {/* Jedna věta, kterou má čtenář odnést, i kdyby dál nečetl. */}
-      <p className="border-b border-linka2 px-5 pb-5 pt-3 text-[17px] leading-relaxed text-tlum sm:px-7 sm:pb-6 sm:text-[19px]">
+      <p className="uvodni-veta border-b border-linka2 px-5 pb-5 pt-4 sm:px-7 sm:pb-6">
         <strong className="font-bold text-inkoust">{veta.cesko}</strong>{" "}
-        <span>{veta.evropa}</span>
+        <span className="text-tlum">{veta.evropa}</span>
         {veta.neovereno > 0 && (
           <span
-            className="mt-2 flex items-center gap-1.5 text-[13px] text-tlum2"
+            className="mt-2 flex items-center gap-1.5 text-male text-tlum2"
             title={`${veta.neovereno} ${sklon(veta.neovereno, "položka nemá", "položky nemají", "položek nemá")} ověření a do věty nevstupuje.`}
           >
             <Ikona nazev="otaznik" velikost={13} tah={1.9} />
@@ -120,22 +124,22 @@ export function HeroDashboard({
           </Napoveda>
           <div className="min-w-0">
             <div className="stitek">{t("Hodnocení projektu · Evropa, dnes")}</div>
-            <p className={`text-[34px] font-bold leading-none sm:text-[40px] ${pasmo ? pasmo.text : "text-tlum"}`}>{d ? d.nazev : "Nestanoveno"}</p>
+            <p className={`text-cislo-l font-bold leading-none sm:text-cislo-xl ${pasmo ? pasmo.text : "text-tlum"}`}>{d ? d.nazev : "Nestanoveno"}</p>
             {/*
               Číslo „6 z 10" je pryč. Vypadalo jako měření, ale je to jen jinak
               zapsané totéž slovo — a hlavně se dalo číst jako pravděpodobnost
               útoku, což není. Stupnice i s čísly zůstává v metodice a v detailu
               záznamu, kde je vedle ní vysvětlení.
             */}
-            <p className="mt-1 text-[12.5px] text-tlum2">dnes</p>
-            <p className="mt-1.5 flex flex-wrap items-center gap-x-3 text-[12.5px] text-tlum">
+            <p className="mt-1 text-drobne text-tlum2">dnes</p>
+            <p className="mt-1.5 flex flex-wrap items-center gap-x-3 text-drobne text-tlum">
               {stav.trend === "nahoru" && <span className="flex items-center gap-1 font-semibold text-stari-text2"><Ikona nazev="nahoru" velikost={12} tah={2.2} />{t("zhoršení za 7 dní")}</span>}
               {stav.trend === "dolu" && <span className="flex items-center gap-1 font-semibold text-klid-text"><Ikona nazev="dolu" velikost={12} tah={2.2} />{t("zlepšení za 7 dní")}</span>}
               {stav.trend === "beze-zmeny" && <span>{t("beze změny 7 dní")}</span>}
               <span>{overeno ? `ověřeno ${datumCasPraha(overeno)}` : "ověření neproběhlo"}</span>
             </p>
-            <p className="mt-2 flex flex-wrap items-center gap-x-3 gap-y-1 text-[12.5px] text-tlum">
-              <span><b className="cislice text-[16px] font-bold text-inkoust">{pocet90}</b>{t("incidentů za 90 dní")}</span>
+            <p className="mt-2 flex flex-wrap items-center gap-x-3 gap-y-1 text-drobne text-tlum">
+              <span><b className="cislice text-vetsi font-bold text-inkoust">{pocet90}</b>{t("incidentů za 90 dní")}</span>
               {porovnani90 ? (
                 <span title={`Průměr posledních ${porovnani90.zaLet} let je ${cislem(porovnani90.prumer)} incidentu na čtvrtletí.`}>
                   <Odznak ton={porovnani90.smer === "vyssi" ? "pozor" : porovnani90.smer === "nizsi" ? "klid" : "neutral"} duraz="silny">
@@ -149,10 +153,10 @@ export function HeroDashboard({
                   měřilo náš sběr, ne skutečnost.
                 */
                 <Napoveda popis={<span className="block">Pravidelný sběr běží od července 2026. Starší záznamy jsou doplněné zpětně a zachytily jen to nejviditelnější, takže se s dneškem porovnávat nedají.</span>}>
-                  <span className="text-[12px] text-tlum2">bez srovnání</span>
+                  <span className="text-drobne text-tlum2">bez srovnání</span>
                 </Napoveda>
               )}
-              <span><b className="cislice text-[16px] font-bold text-inkoust">{pocetZaznamu}</b>{t("záznamů od roku 2014")}</span>
+              <span><b className="cislice text-vetsi font-bold text-inkoust">{pocetZaznamu}</b>{t("záznamů od roku 2014")}</span>
             </p>
             <p className="mt-2 flex flex-wrap gap-2">
               <Tlacitko kam="#zaznamy" varianta="zvyrazneny" velikost="s" ikona="osa">{t("Všechny záznamy")}</Tlacitko>

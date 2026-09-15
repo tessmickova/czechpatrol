@@ -35,24 +35,24 @@ function Radek({ o }: { o: Odmitnuty }) {
   return (
     <li className="border-b border-linka2 px-4 py-3.5 last:border-b-0 sm:px-5">
       <div className="flex flex-wrap items-center gap-x-2.5 gap-y-1.5">
-        <span className="font-mono text-[11.5px] text-tlum2">{datumCas(o.publikovano ?? o.zachyceno)}</span>
+        <span className="font-mono text-mikro text-tlum2">{datumCas(o.publikovano ?? o.zachyceno)}</span>
         <Odznak ton="neutral">{DUVODY[o.duvod]}</Odznak>
         {o.zdroj.primarni && <Odznak ton="klid">úřední zdroj</Odznak>}
-        <span className="text-[11.5px] text-tlum2">{o.zdroj.nazev}</span>
+        <span className="text-mikro text-tlum2">{o.zdroj.nazev}</span>
       </div>
 
       <a
         href={o.zdroj.url}
         target="_blank"
         rel="noopener noreferrer"
-        className="mt-1.5 block text-[14.5px] font-semibold leading-snug text-inkoust hover:underline"
+        className="mt-1.5 block text-zaklad font-semibold leading-snug text-inkoust hover:underline"
       >
         {o.titulek}
       </a>
-      {o.shrnuti && <p className="mt-1 text-[13px] leading-relaxed text-tlum2">{o.shrnuti}</p>}
+      {o.shrnuti && <p className="mt-1 text-male leading-relaxed text-tlum2">{o.shrnuti}</p>}
 
       {o.posouzeni && o.posouzeni.podezreni !== "zadne" && (
-        <p className="mt-2 text-[13px] text-tlum">
+        <p className="mt-2 text-male text-tlum">
           <b className="font-semibold text-inkoust">Model:</b> {o.posouzeni.duvod}
         </p>
       )}
@@ -62,7 +62,7 @@ function Radek({ o }: { o: Odmitnuty }) {
         Web je statický — zapsat do repozitáře odsud nejde a předstírat tlačítko,
         které nic neudělá, by bylo horší než příkaz k okopírování.
       */}
-      <p className="mt-2 font-mono text-[11.5px] text-tlum2">node nastroje/prijmi-odmitnuty.mjs {o.id}</p>
+      <p className="mt-2 font-mono text-mikro text-tlum2">node nastroje/prijmi-odmitnuty.mjs {o.id}</p>
     </li>
   );
 }
@@ -72,9 +72,9 @@ function Skupina({ nadpis, popis, polozky, otevreno = false }: { nadpis: string;
   return (
     <details open={otevreno} className="mt-6 overflow-hidden rounded-[22px] border border-linka2 bg-plocha">
       <summary className="cursor-pointer list-none px-4 py-3.5 sm:px-5">
-        <span className="text-[15px] font-semibold text-inkoust">{nadpis}</span>
-        <span className="ml-2 font-mono text-[13px] text-tlum2">{polozky.length}</span>
-        <span className="mt-0.5 block text-[12.5px] text-tlum2">{popis}</span>
+        <span className="text-zaklad font-semibold text-inkoust">{nadpis}</span>
+        <span className="ml-2 font-mono text-male text-tlum2">{polozky.length}</span>
+        <span className="mt-0.5 block text-drobne text-tlum2">{popis}</span>
       </summary>
       <ol className="border-t border-linka2">
         {polozky.map((o) => (

@@ -58,9 +58,9 @@ const VARIANTY: Record<Varianta, string> = {
 };
 
 const VELIKOSTI: Record<Velikost, string> = {
-  s: "min-h-[36px] gap-1.5 px-3.5 text-[12.5px]",
-  m: "min-h-[44px] gap-2 px-5 text-[14px]",
-  l: "min-h-[48px] gap-2.5 px-6 text-[14.5px]",
+  s: "min-h-[36px] gap-1.5 px-3.5 text-drobne",
+  m: "min-h-[44px] gap-2 px-5 text-zaklad",
+  l: "min-h-[48px] gap-2.5 px-6 text-zaklad",
 };
 
 export function Tlacitko({
@@ -112,7 +112,7 @@ export function Odznak({
   const t = TONY[ton];
   return (
     <span
-      className={`inline-flex shrink-0 items-center gap-1.5 rounded-full px-2.5 py-[3px] text-[11.5px] font-semibold leading-none ${
+      className={`inline-flex shrink-0 items-center gap-1.5 rounded-full px-2.5 py-[3px] text-mikro font-semibold leading-none ${
         duraz === "silny" ? `border ${t.ramecek} ${t.pozadi} ${t.text}` : `${t.text}`
       } ${trida}`}
     >
@@ -156,7 +156,7 @@ export function Sdeleni({
 }) {
   const t = TONY[ton];
   return (
-    <p className={`flex items-start gap-2.5 rounded-[18px] border ${carkovane ? "border-dashed" : ""} ${t.ramecek} ${t.pozadi} px-4 py-3 text-[13.5px] leading-relaxed text-tlum ${trida}`}>
+    <p className={`flex items-start gap-2.5 rounded-[18px] border ${carkovane ? "border-dashed" : ""} ${t.ramecek} ${t.pozadi} px-4 py-3 text-male leading-relaxed text-tlum ${trida}`}>
       <span className={`mt-[1px] grid h-[22px] w-[22px] shrink-0 place-items-center rounded-full ${t.text}`}>
         <Ikona nazev={ikona ?? t.ikona} velikost={15} tah={2} />
       </span>
@@ -207,13 +207,13 @@ function TeloRadku({ o, hustota }: { o: ObsahRadku; hustota: "husta" | "normalni
   const husta = hustota === "husta";
   return (
     <>
-      <span className={`cislice ${SIRKA_DATA[hustota]} shrink-0 whitespace-nowrap ${husta ? "" : "pt-[2px]"} text-[12.5px] leading-[1.5] text-tlum2`}>
+      <span className={`cislice ${SIRKA_DATA[hustota]} shrink-0 whitespace-nowrap ${husta ? "" : "pt-[2px]"} text-drobne leading-[1.5] text-tlum2`}>
         {datumRadku(o.datum)}
       </span>
       {o.tecka}
       <span className="min-w-0 flex-1">
         {!husta && (o.kodZeme || o.meta?.length) && (
-          <span className="flex flex-wrap items-center gap-x-2 gap-y-0.5 text-[12px] leading-[1.5] text-tlum">
+          <span className="flex flex-wrap items-center gap-x-2 gap-y-0.5 text-drobne leading-[1.5] text-tlum">
             {o.kodZeme && (
               <span className="inline-flex items-center gap-1.5">
                 <Vlajka kod={o.kodZeme} /> {o.kodZeme === "CZ" ? "Česko" : o.zeme}
@@ -230,12 +230,12 @@ function TeloRadku({ o, hustota }: { o: ObsahRadku; hustota: "husta" | "normalni
         <span className="flex flex-wrap items-center gap-x-2 gap-y-1">
           {husta && o.kodZeme && <Vlajka kod={o.kodZeme} />}
           {o.cerstvost && <OdznakNove kdy={o.cerstvost} />}
-          <span className={`font-semibold leading-snug text-inkoust ${husta ? "min-w-0 flex-1 truncate text-[13.5px]" : "text-[15px]"}`}>
+          <span className={`font-semibold leading-snug text-inkoust ${husta ? "min-w-0 flex-1 truncate text-male" : "text-zaklad"}`}>
             {o.titulek}
           </span>
         </span>
         {o.znacky && <span className="mt-0.5 flex flex-wrap items-center gap-x-3 gap-y-0.5">{o.znacky}</span>}
-        {o.popis && <span className="mt-1 block text-[13.5px] leading-relaxed text-tlum">{o.popis}</span>}
+        {o.popis && <span className="mt-1 block text-male leading-relaxed text-tlum">{o.popis}</span>}
       </span>
     </>
   );

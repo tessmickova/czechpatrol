@@ -15,7 +15,7 @@ function Odstavec({ nadpis, children }: { nadpis: string; children: React.ReactN
   return (
     <section className="nalet border-t border-linka pt-10">
       <h2 className="titul-mensi">{nadpis}</h2>
-      <div className="mt-4 space-y-3.5 text-[16px] leading-relaxed text-tlum">{children}</div>
+      <div className="mt-4 space-y-3.5 text-vetsi leading-relaxed text-tlum">{children}</div>
     </section>
   );
 }
@@ -67,9 +67,7 @@ export default function OProjektu() {
               : "Provozovatel zatím není v nastavení webu vyplněn — do jeho doplnění tu nic nevymýšlíme. Kód i data jsou veřejné."}
           </p>
           <p>
-            <a href={KOMUNITA.github} target="_blank" rel="noopener noreferrer" className="odkaz">Kód a data na GitHubu</a>
             {" · "}
-            <a href={KOMUNITA.diskuse} target="_blank" rel="noopener noreferrer" className="odkaz">Diskuse a podněty</a>
             {" · "}
             <Link href="/soukromi/" className="odkaz">Soukromí</Link>
             {" · "}

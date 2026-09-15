@@ -617,6 +617,42 @@ export function sestavSignal(k) {
   return radky.join("\n");
 }
 
+/*
+  Tipy k přípravě.
+
+  Do kanálu jdou stejně jako ostatní zprávy: jednou, s odkazem na zdroj.
+  Není to výstraha ani signál — je to věc, kterou se vyplatí vědět dřív, než
+  bude potřeba. Proto chodí i ve chvíli, kdy se nic neděje, a proto nejvýš
+  jeden za běh: kdyby jich přišlo pět naráz, nikdo si nepřečte ani jeden.
+*/
+export function ctiTipy() {
+  const soubor = path.join(koren, "data", "tipy.json");
+  if (!fs.existsSync(soubor)) return [];
+  try { return JSON.parse(fs.readFileSync(soubor, "utf-8")); } catch { return []; }
+}
+
+export function vyberTip(tipy, stav, { ted = Date.now() } = {}) {
+  const poslane = stav.tipy ?? {};
+  return (tipy ?? [])
+    .filter((t) => t?.klic && !poslane[t.klic])
+    .filter((t) => (t.zdroje ?? []).some((z) => /^https?:\/\//.test(z?.url ?? "")))
+    .filter((t) => !t.platiDo || new Date(t.platiDo).getTime() > ted)
+    .sort((a, b) => String(b.kdy).localeCompare(String(a.kdy)))[0] ?? null;
+}
+
+export function sestavTip(t) {
+  const radky = [
+    "\u{1F4A1} <b>Tip k přípravě</b>",
+    "",
+    `<b>${esc(t.nadpis)}</b>`,
+    esc(t.text),
+    "",
+  ];
+  for (const z of t.zdroje ?? []) radky.push(`Zdroj: <a href="${esc(z.url)}">${esc(z.nazev)}</a>`);
+  radky.push("", WEB);
+  return radky.join("\n");
+}
+
 /** Ceny paliv. Chybějící soubor není chyba — jen se o palivu nic neřekne. */
 function ctiPalivo() {
   const soubor = path.join(koren, "data", "palivo.json");
@@ -625,12 +661,12 @@ function ctiPalivo() {
 }
 
 function ctiStav() {
-  if (!fs.existsSync(STAV)) return { zaznamy: {}, snimky: {}, palivo: {}, vystrahy: {}, signaly: {}, prvniBeh: null };
+  if (!fs.existsSync(STAV)) return { zaznamy: {}, snimky: {}, palivo: {}, vystrahy: {}, signaly: {}, tipy: {}, prvniBeh: null };
   try {
     const s = JSON.parse(fs.readFileSync(STAV, "utf-8"));
     // Starší stav pole „palivo", „vystrahy" a „signaly" nemá; bez doplnění by první zápis spadl.
-    return { palivo: {}, vystrahy: {}, signaly: {}, ...s };
-  } catch { return { zaznamy: {}, snimky: {}, palivo: {}, vystrahy: {}, signaly: {}, prvniBeh: null }; }
+    return { palivo: {}, vystrahy: {}, signaly: {}, tipy: {}, ...s };
+  } catch { return { zaznamy: {}, snimky: {}, palivo: {}, vystrahy: {}, signaly: {}, tipy: {}, prvniBeh: null }; }
 }
 function zapisStav(s) {
   fs.mkdirSync(path.dirname(STAV), { recursive: true });
@@ -819,6 +855,18 @@ async function main() {
       const v = await posli(sestavSignal(k), { nahled: false });
       if (v.ok) { stav.signaly[k.id] = { kdy: new Date(ted).toISOString(), messageId: v.messageId ?? null }; odeslano++; }
       else { selhalo++; console.log(`[rozhlas] signál neodešel: ${v.chyba}`); }
+    }
+  }
+
+  /* 0c. tip k přípravě — jeden za běh, v klidném režimu i v souhrnu. */
+  const tip = vyberTip(ctiTipy(), stav, { ted });
+  if (tip) {
+    if (prvniBeh) {
+      stav.tipy[tip.klic] = { kdy: new Date(ted).toISOString(), ticho: true };
+    } else {
+      const v = await posli(sestavTip(tip), { nahled: false });
+      if (v.ok) { stav.tipy[tip.klic] = { kdy: new Date(ted).toISOString(), messageId: v.messageId ?? null }; odeslano++; }
+      else { selhalo++; console.log(`[rozhlas] tip neodešel: ${v.chyba}`); }
     }
   }
 

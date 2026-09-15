@@ -44,21 +44,21 @@ export function PruhVystrahy() {
             <span aria-hidden className="h-[5px] w-[5px] rounded-full bg-akcent" />
             Mimořádná výstraha
           </span>
-          <span className="cislice text-[12px] text-tlum">
+          <span className="cislice text-drobne text-tlum">
             {datumCasPraha(v.kdy)}
           </span>
         </div>
 
-        <h2 id="vystraha-nadpis" className="mt-2.5 text-[19px] font-bold leading-snug text-inkoust sm:text-[22px]">
+        <h2 id="vystraha-nadpis" className="mt-2.5 text-velke font-bold leading-snug text-inkoust sm:text-velke">
           {v.nadpis}
         </h2>
-        <p className="mt-2 max-w-[60ch] text-[15px] leading-relaxed text-inkoust/90">{v.text}</p>
+        <p className="mt-2 max-w-[60ch] text-zaklad leading-relaxed text-inkoust/90">{v.text}</p>
 
         <div className="mt-3.5 grid gap-x-8 gap-y-3 sm:grid-cols-2">
           {v.coToZnamena.length > 0 && (
             <div>
               <div className="stitek mb-1">Co to znamená</div>
-              <ul className="space-y-1 text-[14px] leading-snug text-tlum">
+              <ul className="space-y-1 text-zaklad leading-snug text-tlum">
                 {v.coToZnamena.map((x) => <li key={x}>{x}</li>)}
               </ul>
             </div>
@@ -72,14 +72,14 @@ export function PruhVystrahy() {
           {v.coToNeznamena.length > 0 && (
             <div>
               <div className="stitek mb-1">Co to neznamená</div>
-              <ul className="space-y-1 text-[14px] leading-snug text-tlum">
+              <ul className="space-y-1 text-zaklad leading-snug text-tlum">
                 {v.coToNeznamena.map((x) => <li key={x}>{x}</li>)}
               </ul>
             </div>
           )}
         </div>
 
-        <div className="mt-4 flex flex-wrap items-center gap-x-4 gap-y-2 text-[13px]">
+        <div className="mt-4 flex flex-wrap items-center gap-x-4 gap-y-2 text-male">
           <span className="text-tlum2">Zdroje:</span>
           {v.zdroje.map((z) => (
             <a key={z.url} href={z.url} target="_blank" rel="noopener noreferrer" className="odkaz">
@@ -94,7 +94,7 @@ export function PruhVystrahy() {
               href={telegram}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 rounded-full bg-akcent px-4 py-2 text-[14px] font-semibold text-white transition-opacity hover:opacity-90"
+              className="inline-flex items-center gap-2 rounded-full bg-akcent px-4 py-2 text-zaklad font-semibold text-white transition-opacity hover:opacity-90"
             >
               <Ikona nazev="zvonek" velikost={15} />
               Odebírat na Telegramu
@@ -102,11 +102,11 @@ export function PruhVystrahy() {
           )}
           <Link
             href="/odber/"
-            className="inline-flex items-center gap-2 rounded-full border border-linka px-4 py-2 text-[14px] font-semibold text-inkoust transition-colors hover:border-akcent/60"
+            className="inline-flex items-center gap-2 rounded-full border border-linka px-4 py-2 text-zaklad font-semibold text-inkoust transition-colors hover:border-akcent/60"
           >
             Další způsoby odběru
           </Link>
-          <span className="text-[12.5px] text-tlum2">
+          <span className="text-drobne text-tlum2">
             Ověřeno {datumCasPraha(v.overeno)} · {v.overil}
           </span>
         </div>

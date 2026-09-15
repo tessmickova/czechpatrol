@@ -33,10 +33,10 @@ export default function Zdroje() {
         </div>
         <div className="grid gap-5 lg:grid-cols-[minmax(0,1fr)_minmax(0,1.5fr)]">
           <Karta className="h-fit p-5 sm:p-6">
-            <h2 className="podnadpis mb-4 text-[16px]">Pořadí důvěryhodnosti</h2>
+            <h2 className="podnadpis mb-4 text-vetsi">Pořadí důvěryhodnosti</h2>
             <ol className="space-y-2.5">
               {PORADI.map((p, i) => (
-                <li key={i} className="flex gap-3 text-[13px] leading-relaxed text-tlum">
+                <li key={i} className="flex gap-3 text-male leading-relaxed text-tlum">
                   <span className="cislice stitek mt-[3px] w-3 shrink-0">{i + 1}</span>
                   {p}
                 </li>
@@ -46,7 +46,7 @@ export default function Zdroje() {
           </Karta>
 
           <Karta className="p-5 sm:p-6">
-            <h2 className="podnadpis mb-4 text-[16px]">Použité zdroje</h2>
+            <h2 className="podnadpis mb-4 text-vetsi">Použité zdroje</h2>
             <SeznamZdroju zdroje={vsechnyZdroje()} />
           </Karta>
         </div>

@@ -40,10 +40,10 @@ export function Udaj({
     <span className="flex items-stretch gap-2">
       <span aria-hidden className={`w-[3px] shrink-0 rounded-full ${barvaPruhu ?? t.pruh}`} />
       <span className="min-w-0">
-        <span className={`block font-mono text-[10px] font-semibold uppercase leading-none tracking-[0.08em] ${t.popisek}`}>
+        <span className={`block font-mono text-mikro font-semibold uppercase leading-none tracking-[0.08em] ${t.popisek}`}>
           {popisek}
         </span>
-        <span className="mt-[3px] block text-[13px] font-semibold leading-tight text-inkoust">{hodnota}</span>
+        <span className="mt-[3px] block text-male font-semibold leading-tight text-inkoust">{hodnota}</span>
       </span>
     </span>
   );

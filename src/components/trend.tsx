@@ -44,7 +44,7 @@ function Rozlozeni({ t }: { t: TydenniHodnoceni }) {
     { klic: "oranzova" as const, n: t.pocty.oranzova },
     { klic: "cervena" as const, n: t.pocty.cervena },
   ].filter((x) => x.n > 0);
-  if (!c) return <span className="text-[12px] text-tlum2">—</span>;
+  if (!c) return <span className="text-drobne text-tlum2">—</span>;
   return (
     <Napoveda vpravo popis={<span className="block space-y-1">{casti.map((x) => <span key={x.klic} className="block">{PASMA[x.klic].nazev}: {x.n}</span>)}</span>}>
       <span aria-hidden className="flex h-[7px] w-[64px] overflow-hidden rounded-full bg-linka2">
@@ -55,11 +55,11 @@ function Rozlozeni({ t }: { t: TydenniHodnoceni }) {
 }
 
 function ZnackaTrendu({ nyni, drive }: { nyni: Uroven; drive?: Uroven }) {
-  if (!drive) return <span className="text-[12px] text-tlum2">—</span>;
+  if (!drive) return <span className="text-drobne text-tlum2">—</span>;
   const r = UROVNE[nyni].poradi - UROVNE[drive].poradi;
-  if (r === 0) return <span className="flex items-center gap-1 text-[12.5px] text-tlum"><Ikona nazev="minus" velikost={11} tah={2} /> stejně</span>;
+  if (r === 0) return <span className="flex items-center gap-1 text-drobne text-tlum"><Ikona nazev="minus" velikost={11} tah={2} /> stejně</span>;
   return (
-    <span className={`flex items-center gap-1 text-[12.5px] font-semibold ${r > 0 ? "text-stari-text2" : "text-klid-text"}`}>
+    <span className={`flex items-center gap-1 text-drobne font-semibold ${r > 0 ? "text-stari-text2" : "text-klid-text"}`}>
       <Ikona nazev={r > 0 ? "nahoru" : "dolu"} velikost={11} tah={2.2} /> {r > 0 ? "zhoršení" : "zlepšení"}
     </span>
   );
@@ -93,15 +93,15 @@ export function TabulkaTydnu({ tydny }: { tydny: TydenniHodnoceni[] }) {
             const okno = sestupne.slice(i, i + 5).reverse();
             return (
               <tr key={t.zacatek} className="border-b border-linka2 last:border-0">
-                <td className="cislice py-2 pr-3 text-[13px] text-inkoust">{rozsah(t.zacatek, t.konec)}</td>
+                <td className="cislice py-2 pr-3 text-male text-inkoust">{rozsah(t.zacatek, t.konec)}</td>
                 <td className="py-2 pr-3">
-                  <span className="flex items-center gap-2 text-[13.5px] font-semibold">
+                  <span className="flex items-center gap-2 text-male font-semibold">
                     <Tecka uroven={t.celkova} /> {UROVNE[t.celkova].nazev}
                   </span>
                 </td>
                 <td className="py-2 pr-3">
                   <span className="flex items-center gap-1.5">
-                    <span className="cislice text-[14px] font-bold text-inkoust">{t.uplnost === "castecne" && n > 0 ? "≥ " : ""}{n}</span>
+                    <span className="cislice text-zaklad font-bold text-inkoust">{t.uplnost === "castecne" && n > 0 ? "≥ " : ""}{n}</span>
                     <Vykricniky n={n} />
                     {t.uplnost === "castecne" && n === 0 && <span className="stitek !text-tlum2">neúplná data</span>}
                   </span>
@@ -174,11 +174,11 @@ export function GrafTrendu({ tydny }: { tydny: TydenniHodnoceni[] }) {
     <div>
       <div className="mb-3 flex flex-wrap items-center gap-x-5 gap-y-2">
         {RADY.map((r) => (
-          <span key={r.klic} className="flex items-center gap-2 text-[12.5px] text-tlum">
+          <span key={r.klic} className="flex items-center gap-2 text-drobne text-tlum">
             <span aria-hidden className="h-[2px] w-4 rounded-full" style={{ background: r.barva }} /> {r.nazev}
           </span>
         ))}
-        <span className="flex items-center gap-2 text-[12.5px] text-tlum2"><span aria-hidden className="srafy h-[10px] w-4 text-tlum2" /> bez dat</span>
+        <span className="flex items-center gap-2 text-drobne text-tlum2"><span aria-hidden className="srafy h-[10px] w-4 text-tlum2" /> bez dat</span>
       </div>
       <div className="overflow-x-auto">
         <svg viewBox={`0 0 ${SIRKA} ${NAHORE + V + DOLE}`} role="img" aria-label="Vývoj hodnocení po týdnech od začátku roku" className="h-[230px] w-full min-w-[560px]">

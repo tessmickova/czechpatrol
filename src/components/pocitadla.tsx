@@ -32,8 +32,8 @@ export function Pocitadla({ vse, neprosle, kandidati = [], ted = Date.now() }: {
         <span className="stitek">Započítané případy</span>
         {okna.map((o) => (
           <span key={o.nazev} className="flex items-baseline gap-1.5">
-            <span className="cislice text-[20px] font-bold leading-none text-inkoust">{o.n}</span>
-            <span className="text-[12px] text-tlum">{o.nazev}</span>
+            <span className="cislice text-velke font-bold leading-none text-inkoust">{o.n}</span>
+            <span className="text-drobne text-tlum">{o.nazev}</span>
           </span>
         ))}
         {/*
@@ -42,7 +42,7 @@ export function Pocitadla({ vse, neprosle, kandidati = [], ted = Date.now() }: {
           nic, co by potřeboval. Zůstalo jen to, co mění výklad čísel nalevo —
           co se do nich nepočítá — a ke kterému dni platí.
         */}
-        <span className="ml-auto text-[11.5px] text-tlum2">
+        <span className="ml-auto text-mikro text-tlum2">
           + {zbytek} {sklon(zbytek, "navazující záznam", "navazující záznamy", "navazujících záznamů")} · {neprosle.length} neprošlo ověřením
           · <span className="text-akcent">{kandidati.length} čeká na ověření</span> · stav k {datumPraha(new Date(ted).toISOString())}
         </span>

@@ -16,8 +16,8 @@ function Oddil({ cislo, nadpis, children }: { cislo: string; nadpis: string; chi
     <section className="grid gap-3 border-t border-linka py-7 md:grid-cols-[120px_minmax(0,1fr)]">
       <div className="cislice stitek pt-1">{cislo}</div>
       <div>
-        <h2 className="podnadpis text-[19px]">{nadpis}</h2>
-        <div className="mt-3 space-y-3 text-[15px] leading-relaxed text-tlum [&_b]:font-semibold [&_b]:text-inkoust [&_li]:pl-1">{children}</div>
+        <h2 className="podnadpis text-velke">{nadpis}</h2>
+        <div className="mt-3 space-y-3 text-zaklad leading-relaxed text-tlum [&_b]:font-semibold [&_b]:text-inkoust [&_li]:pl-1">{children}</div>
       </div>
     </section>
   );
@@ -42,15 +42,15 @@ export default function SoukromiStranka() {
         <div className="grid gap-4 md:grid-cols-3">
           <Karta odstin="zelena" className="p-5">
             <div className="stitek mb-2 !text-klid-text">Čtení webu</div>
-            <p className="text-[15px] leading-relaxed text-tlum">Žádné sledovací cookies, žádná analytika třetích stran, žádný účet. Nic se neukládá k vám.</p>
+            <p className="text-zaklad leading-relaxed text-tlum">Žádné sledovací cookies, žádná analytika třetích stran, žádný účet. Nic se neukládá k vám.</p>
           </Karta>
           <Karta odstin="modra" className="p-5">
             <div className="stitek mb-2 !text-akcent">Účet</div>
-            <p className="text-[15px] leading-relaxed text-tlum">Náhodný identifikátor, veřejná část passkey, vaše nastavení. Bez jména, e-mailu a telefonu.</p>
+            <p className="text-zaklad leading-relaxed text-tlum">Náhodný identifikátor, veřejná část passkey, vaše nastavení. Bez jména, e-mailu a telefonu.</p>
           </Karta>
           <Karta odstin="pisek" className="p-5">
             <div className="stitek mb-2 !text-jantar">Kanály</div>
-            <p className="text-[15px] leading-relaxed text-tlum">Telegram: číslo chatu. WhatsApp: telefonní číslo. Jen pro doručení, kdykoli smažete.</p>
+            <p className="text-zaklad leading-relaxed text-tlum">Telegram: číslo chatu. WhatsApp: telefonní číslo. Jen pro doručení, kdykoli smažete.</p>
           </Karta>
         </div>
 
@@ -61,7 +61,7 @@ export default function SoukromiStranka() {
             ) : (
               <p>Správce osobních údajů a kontakt na něj zveřejníme nejpozději se spuštěním účtů. Do té doby web žádné údaje k uživatelům neukládá.</p>
             )}
-            <p>Web běží na adrese {WEB.url}. Kód i data jsou veřejné na GitHubu; osobní údaje tam nejsou.</p>
+            <p>Web běží na adrese {WEB.url}.</p>
           </Oddil>
 
           <Oddil cislo="02" nadpis="Čtení bez účtu">
@@ -113,8 +113,7 @@ export default function SoukromiStranka() {
             <ul className="list-disc space-y-1 pl-5">
               <li><b>Cloudflare, Inc.</b> — hosting webu, běh API a databáze. Zpracovatel; data mohou být zpracována i mimo EU na základě standardních smluvních doložek a rámce EU–US Data Privacy Framework.</li>
               <li><b>Telegram Messenger Inc.</b> a <b>Meta Platforms Ireland Ltd.</b> — jen pokud si kanál propojíte; doručují zprávy jako samostatní správci.</li>
-              <li><b>GitHub, Inc.</b> — hostuje veřejný kód a data webu. Osobní údaje uživatelů tam nejsou.</li>
-            </ul>
+                          </ul>
             <p>Nikomu údaje neprodáváme a nepoužíváme je k reklamě.</p>
           </Oddil>
 

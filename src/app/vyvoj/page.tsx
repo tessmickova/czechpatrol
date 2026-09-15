@@ -59,8 +59,8 @@ export default function Vyvoj() {
         />
         <GrafMesicuPripadu rada={rada} hodnoceni={hodnoceni} />
         <details className="mt-3">
-          <summary className="min-h-[36px] cursor-pointer text-[13.5px] font-semibold text-tlum hover:text-inkoust">Stejná data jako tabulka po letech</summary>
-          <table className="mt-2 w-full max-w-[420px] text-left text-[13.5px]">
+          <summary className="min-h-[36px] cursor-pointer text-male font-semibold text-tlum hover:text-inkoust">Stejná data jako tabulka po letech</summary>
+          <table className="mt-2 w-full max-w-[420px] text-left text-male">
             <thead><tr className="border-b border-linka"><th className="stitek py-1.5 font-medium">Rok</th><th className="stitek py-1.5 text-right font-medium">Případů</th><th className="stitek py-1.5 text-right font-medium">Pokrytí</th></tr></thead>
             <tbody>
               {[...poRoce.entries()].sort((a, b) => b[0].localeCompare(a[0])).map(([r, n]) => (
@@ -72,7 +72,7 @@ export default function Vyvoj() {
               ))}
             </tbody>
           </table>
-          <p className="mt-2 text-[12.5px] text-tlum2">Roky 2010–2013: žádný záznam, který by prošel ověřením. Neznamená to, že se nic nestalo.</p>
+          <p className="mt-2 text-drobne text-tlum2">Roky 2010–2013: žádný záznam, který by prošel ověřením. Neznamená to, že se nic nestalo.</p>
         </details>
       </section>
 
@@ -85,7 +85,7 @@ export default function Vyvoj() {
         />
         <GrafTrendu tydny={tydenni} />
         <details className="mt-3">
-          <summary className="min-h-[36px] cursor-pointer text-[13.5px] font-semibold text-tlum hover:text-inkoust">Týdenní přehled jako tabulka</summary>
+          <summary className="min-h-[36px] cursor-pointer text-male font-semibold text-tlum hover:text-inkoust">Týdenní přehled jako tabulka</summary>
           <div className="mt-2"><TabulkaTydnu tydny={tydenni} /></div>
         </details>
       </section>
@@ -100,16 +100,16 @@ export default function Vyvoj() {
         {zmenyArchivu.length ? (
           <ol className="divide-y divide-linka2 border-y border-linka2">
             {zmenyArchivu.map((s) => (
-              <li key={s.kdy} className="flex gap-4 py-2.5 text-[14px]">
-                <span className="cislice w-[92px] shrink-0 text-[13px] text-tlum">{datumPraha(s.kdy)}</span>
+              <li key={s.kdy} className="flex gap-4 py-2.5 text-zaklad">
+                <span className="cislice w-[92px] shrink-0 text-male text-tlum">{datumPraha(s.kdy)}</span>
                 <span className="min-w-0">
-                  {s.uroven && <span className="mr-2 text-[12.5px] text-tlum2">{UROVNE[s.uroven].nazev}</span>}
+                  {s.uroven && <span className="mr-2 text-drobne text-tlum2">{UROVNE[s.uroven].nazev}</span>}
                   {s.zmeny.join(" · ")}
                 </span>
               </li>
             ))}
           </ol>
-        ) : <p className="text-[14px] text-tlum">Archiv zatím nezachytil žádnou změnu.</p>}
+        ) : <p className="text-zaklad text-tlum">Archiv zatím nezachytil žádnou změnu.</p>}
       </section>
 
       <section aria-labelledby="kde" className="nalet mt-16 border-t border-linka pt-12 sm:mt-24 sm:pt-16">
@@ -121,7 +121,7 @@ export default function Vyvoj() {
         />
         <div className="grid gap-8 md:grid-cols-[minmax(0,1.4fr)_minmax(0,1fr)]">
           <div className="overflow-x-auto">
-            <table className="w-full min-w-[520px] text-left text-[13.5px]">
+            <table className="w-full min-w-[520px] text-left text-male">
               <thead>
                 <tr className="border-b border-linka">
                   <th className="stitek py-2 pr-3 font-medium">Země</th>
@@ -152,18 +152,18 @@ export default function Vyvoj() {
             <div className="stitek mb-2">Kdo za případy stojí</div>
             <ul className="divide-y divide-linka2 border-y border-linka2">
               {puv.skupiny.map((s) => (
-                <li key={s.klic} className="py-2 text-[14px]">
+                <li key={s.klic} className="py-2 text-zaklad">
                   <div className="flex items-center gap-3">
                     <span className={s.pocet ? "font-semibold text-inkoust" : "text-tlum2"}>{s.nazev}</span>
-                    <span className="cislice ml-auto text-[16px] font-bold text-inkoust">{s.pocet}</span>
+                    <span className="cislice ml-auto text-vetsi font-bold text-inkoust">{s.pocet}</span>
                   </div>
                   {s.pocet > 0 && s.klic !== "neznamy" && (
-                    <div className="text-[12.5px] text-tlum2">{s.potvrzeno} potvrzeno · {s.vysetruje} vyšetřuje se · {s.podezreni} podezření bez potvrzení</div>
+                    <div className="text-drobne text-tlum2">{s.potvrzeno} potvrzeno · {s.vysetruje} vyšetřuje se · {s.podezreni} podezření bez potvrzení</div>
                   )}
                 </li>
               ))}
             </ul>
-            <p className="mt-2 text-[12.5px] text-tlum2">Do hodnocení projektu tento rozpad nevstupuje.</p>
+            <p className="mt-2 text-drobne text-tlum2">Do hodnocení projektu tento rozpad nevstupuje.</p>
           </div>
         </div>
       </section>

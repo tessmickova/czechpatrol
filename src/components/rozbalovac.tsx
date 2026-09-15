@@ -14,7 +14,7 @@ export function Rozbalovac({
         type="button"
         onClick={() => setOtevreno((x) => !x)}
         aria-expanded={otevreno}
-        className={`inline-flex items-center gap-1.5 rounded-full border px-3.5 py-1.5 text-[12.5px] font-bold uppercase tracking-[0.05em] transition-colors ${
+        className={`inline-flex items-center gap-1.5 rounded-full border px-3.5 py-1.5 text-drobne font-bold uppercase tracking-[0.05em] transition-colors ${
           otevreno
             ? "border-akcent bg-akcent text-noc"
             : akcent

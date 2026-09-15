@@ -38,7 +38,7 @@ export function UkazkaPruh() {
         <span className="stitek-tmavy mt-[1px] shrink-0 rounded-[18px] border border-[#5e5124] bg-[#2a2410] px-1.5 py-[3px] text-[#f0d47e]">
           Ukázka
         </span>
-        <p className="text-[12px] leading-relaxed text-[#f0d47e]">
+        <p className="text-drobne leading-relaxed text-[#f0d47e]">
           Zobrazený obsah je <b className="font-semibold">smyšlený ukázkový materiál</b> sloužící
           k posouzení vzhledu a rozvržení. Nejde o skutečné bezpečnostní události.
           Produkční verze zobrazuje pouze ověřené záznamy s uvedenými zdroji.
@@ -67,7 +67,7 @@ export function OdznakUkazky() {
 export function PruhPuvodu() {
   return (
     <div className="border-b border-linka2 bg-plocha2/60">
-      <div className="mx-auto max-w-[1280px] px-4 py-1.5 text-[12.5px] text-tlum2 sm:px-6">
+      <div className="mx-auto max-w-[1280px] px-4 py-1.5 text-drobne text-tlum2 sm:px-6">
         Nezávislý projekt, ne úřední zdroj. V nouzi 112.
       </div>
     </div>

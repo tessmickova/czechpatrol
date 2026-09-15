@@ -32,14 +32,14 @@ function Cena({ s }: { s: StavPaliva }) {
   return (
     <li className="flex items-baseline justify-between gap-3 py-1.5">
       <span className="flex items-baseline gap-2">
-        <span className="text-[13.5px] text-tlum">{s.nazev}</span>
-        <span className="cislice text-[15px] font-semibold text-inkoust">
+        <span className="text-male text-tlum">{s.nazev}</span>
+        <span className="cislice text-zaklad font-semibold text-inkoust">
           {s.cena.toFixed(2).replace(".", ",")} Kč/l
         </span>
       </span>
       <span className="flex items-center gap-2">
         {zmena && (
-          <span className={`cislice text-[12.5px] ${s.skok ? (roste ? "text-akcent-svetla" : "text-klid-text") : "text-tlum2"}`}>
+          <span className={`cislice text-drobne ${s.skok ? (roste ? "text-akcent-svetla" : "text-klid-text") : "text-tlum2"}`}>
             {zmena} Kč za týden
           </span>
         )}
@@ -74,7 +74,7 @@ export function CenaPaliva() {
             </span>
           }
         >
-          <span className="text-[12px] text-tlum2">za týden do {tyden ? datumPraha(tyden) : "—"}</span>
+          <span className="text-drobne text-tlum2">za týden do {tyden ? datumPraha(tyden) : "—"}</span>
         </Napoveda>
       </div>
       <ul className="divide-y divide-linka2">
@@ -82,7 +82,7 @@ export function CenaPaliva() {
       </ul>
       {/* Čtvrtletí ukazuje, jestli je týdenní pohyb výkyv, nebo pokračování. */}
       {paliva.some((s) => s.zaCtvrtleti !== null) && (
-        <p className="mt-2 text-[12px] text-tlum2">
+        <p className="mt-2 text-drobne text-tlum2">
           Za čtvrtletí:{" "}
           {paliva
             .filter((s) => s.zaCtvrtleti !== null)
@@ -91,7 +91,7 @@ export function CenaPaliva() {
           .
         </p>
       )}
-      <p className="mt-2 text-[11.5px] leading-snug text-tlum2">
+      <p className="mt-2 text-mikro leading-snug text-tlum2">
         Zdroj:{" "}
         <a href={data.zdroj.url} rel="noopener noreferrer" target="_blank" className="underline hover:text-inkoust">
           {data.zdroj.nazev}

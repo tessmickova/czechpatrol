@@ -1,3 +1,4 @@
+import type { ReactNode } from "react";
 import { podleZemi, pripady } from "@/lib/agregace";
 import { incidenty, tlakZeme } from "@/lib/data";
 import { PavucinaHrozeb } from "./pavucina";
@@ -6,8 +7,11 @@ import { Vlajka } from "./zeme";
 /*
   Karusel zemí.
 
-  Jedna pavučina za každou zemi, ve které máme zveřejněný záznam. Rozdíl
-  mezi obrazci je to podstatné: kde se dělá co a jak se to liší od Česka.
+  Jedna pavučina za každou zemi, ve které máme zveřejněný záznam, a jako
+  první karta Evropa jako celek. Rozdíl mezi obrazci je to podstatné: kde se
+  dělá co a jak se to liší od Česka. Evropa a Česko stály dřív zvlášť nad
+  karuselem — byly to tři obrazce ve dvou různých velikostech, které se
+  nedaly porovnat.
 
   Posouvá se rolováním do strany, ne samo od sebe. Automatický posun by
   odnesl obrazec dřív, než ho někdo dočte, a pohyb je na tomhle webu vypnutý
@@ -18,12 +22,19 @@ import { Vlajka } from "./zeme";
   přitom by znamenala jen to, že odtud nic nemáme.
 */
 
-export function KaruselZemi({ maxZemi = 12 }: { maxZemi?: number }) {
+export function KaruselZemi({
+  maxZemi = 12,
+  prvni,
+}: {
+  maxZemi?: number;
+  /** Karta, která stojí před zeměmi — na přehledu je to Evropa jako celek. */
+  prvni?: ReactNode;
+}) {
   const zeme = podleZemi(pripady(incidenty()))
     .filter((z) => z.pripady > 0)
     .slice(0, maxZemi);
 
-  if (!zeme.length) return null;
+  if (!zeme.length && !prvni) return null;
 
   return (
     <div
@@ -32,8 +43,13 @@ export function KaruselZemi({ maxZemi = 12 }: { maxZemi?: number }) {
       role="list"
       aria-label="Typy událostí po zemích"
     >
+      {prvni && (
+        <div role="listitem" className="w-[min(78vw,320px)] shrink-0 snap-start">
+          {prvni}
+        </div>
+      )}
       {zeme.map((z) => (
-        <div key={z.kodZeme} role="listitem" className="w-[min(88vw,420px)] shrink-0 snap-start">
+        <div key={z.kodZeme} role="listitem" className="w-[min(78vw,320px)] shrink-0 snap-start">
           <PavucinaHrozeb
             nadpis={z.zeme}
             /* Vysvětlení má sekce, ne každá z dvanácti karet — jinak to je dvanáctkrát tentýž odstavec. */

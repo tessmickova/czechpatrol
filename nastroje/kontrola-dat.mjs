@@ -30,6 +30,7 @@ const kandidati = fs.existsSync(path.join(koren, "data", "kandidati.json")) ? ct
 const svet = fs.existsSync(path.join(koren, "data", "svet.json")) ? cti("svet.json") : null;
 const overujeme = fs.existsSync(path.join(koren, "data", "overujeme.json")) ? cti("overujeme.json") : [];
 const vystrahy = fs.existsSync(path.join(koren, "data", "vystraha.json")) ? cti("vystraha.json") : { aktivni: null, archiv: [] };
+const tipy = fs.existsSync(path.join(koren, "data", "tipy.json")) ? cti("tipy.json") : [];
 
 const chyby = [];
 const varovani = [];
@@ -210,6 +211,22 @@ if (vystrahy.aktivni) {
 }
 for (const a of vystrahy.archiv ?? []) {
   if (!a.procSundano) chyby.push(`výstraha v archivu (${a.klic}): chybí, proč se sundala`);
+}
+
+// 3d. tipy k přípravě
+//
+// Tip jde i do telegramového kanálu, takže platí totéž co pro záznam: bez
+// doloženého zdroje ven nesmí. A musí být krátký — tip na deset vět nikdo
+// nepřečte a v kanálu zabere celou obrazovku.
+for (const t of tipy) {
+  const kde = `tip/${t.klic ?? "?"}`;
+  if (!t.klic || !t.nadpis || !t.text || !t.kdy) chyby.push(`${kde}: chybí klíč, nadpis, text nebo datum`);
+  if (!(t.zdroje ?? []).some((z) => /^https?:\/\//.test(z?.url ?? ""))) chyby.push(`${kde}: bez zdroje s adresou`);
+  if (t.kdy && !platneDatum(t.kdy)) chyby.push(`${kde}: neplatné datum`);
+  if ((t.text ?? "").length > 400) chyby.push(`${kde}: text je delší než 400 znaků`);
+  if (/\b(odjeďte|utíkejte|vyberte hotovost|nakupte|zásobte se)\b/i.test(`${t.nadpis ?? ""} ${t.text ?? ""}`)) {
+    chyby.push(`${kde}: tip radí, co má člověk dělat v krizi — to tenhle web nedělá`);
+  }
 }
 
 // 4. stáří ověření

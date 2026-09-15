@@ -16,6 +16,28 @@
   --font-sans: var(--font-chakra), Archivo, ui-sans-serif, system-ui, sans-serif;
   --font-mono: var(--font-mono-web), "IBM Plex Mono", ui-monospace, Menlo, monospace;
 
+  /*
+    Velikosti písma jako tokeny.
+
+    Na webu bylo 556 míst s velikostí zapsanou natvrdo (text-[13.5px]) ve
+    25 různých hodnotách — 12 i 12,5, 13 i 13,5, 14 i 14,5. Rozdíl půl pixelu
+    nikdo nevidí jako záměr, jen jako nepořádek: text stejné důležitosti
+    vypadal na každé stránce jinak.
+
+    Šest stupňů stačí. Co je menší než mikro, se nedá číst; co je větší než
+    velké, je nadpis a má vlastní třídu (.titul-strany, .titul-sekce,
+    .titul-mensi).
+  */
+  --text-mikro: 11.5px;     /* popisky v mono, odznaky */
+  --text-drobne: 12.5px;    /* doplňkový údaj pod obsahem */
+  --text-male: 13.5px;      /* text v kartách a seznamech */
+  --text-zaklad: 14.5px;    /* běžný text */
+  --text-vetsi: 17px;       /* vodicí věta, důraz */
+  --text-velke: 20px;       /* číslo v přehledu, nadpis karty */
+  --text-cislo: 26px;       /* velké číslo v dlaždici */
+  --text-cislo-l: 34px;     /* hlavní číslo nebo název stavu */
+  --text-cislo-xl: 44px;    /* jediné číslo, které nese celou dlaždici */
+
   /* zaoblení podle brandbooku: pilulky 999, velké karty 26, střední 22, řádky 14 */
   --r-s: 14px;
   --r-m: 18px;
@@ -454,14 +476,11 @@ html, body { overflow-x: clip; }
   při najetí myší jim nepomůže — na dotyku ani klávesnici není kam najet.
   Bez pohybu se pás dá normálně odrolovat do strany a nic se neztratí.
 */
-@keyframes pas-beh { from { transform: translateX(0); } to { transform: translateX(-50%); } }
-.pas-beh { display: flex; width: max-content; }
-html[data-pohyb="zapnuty"] .pas-beh { animation: pas-beh 55s linear infinite; }
-html[data-pohyb="zapnuty"] .pas-obal:hover .pas-beh,
-html[data-pohyb="zapnuty"] .pas-obal:focus-within .pas-beh { animation-play-state: paused; }
-/* Druhá kopie pásu má smysl jen kvůli plynulému běhu. Bez pohybu jen zabírá. */
-html:not([data-pohyb="zapnuty"]) .pas-kopie { display: none; }
-@media (prefers-reduced-motion: reduce) { .pas-beh { animation: none !important; } }
+/*
+  Běh pásu už neřídí CSS, ale kód (src/components/pas-beh-klient.tsx): posouvá
+  se skutečné rolování, takže pás jede sám a zároveň se dá odtáhnout prstem.
+  Animace transformem uměla jen jedno z toho.
+*/
 
 /*
   Dlaždice stavu.

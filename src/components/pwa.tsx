@@ -48,13 +48,13 @@ export function RegistraceSW() {
   if (!novaVerze && !offline) return null;
   return (
     <div className="fixed inset-x-0 bottom-[calc(60px+env(safe-area-inset-bottom))] z-[70] px-3 md:bottom-4">
-      <div role="status" className="mx-auto flex max-w-[560px] flex-wrap items-center justify-between gap-3 rounded-[18px] border border-linka bg-plocha2 px-4 py-3 text-[14px] text-inkoust shadow-[0_8px_24px_rgba(0,0,0,0.35)]">
+      <div role="status" className="mx-auto flex max-w-[560px] flex-wrap items-center justify-between gap-3 rounded-[18px] border border-linka bg-plocha2 px-4 py-3 text-zaklad text-inkoust shadow-[0_8px_24px_rgba(0,0,0,0.35)]">
         {offline ? (
           <span className="flex items-center gap-2"><Ikona nazev="vystraha" velikost={15} tah={2} trida="text-stari-text" /> Bez připojení. Zobrazený stav je poslední načtený, ne aktuální.</span>
         ) : (
           <>
             <span className="flex items-center gap-2"><Ikona nazev="info" velikost={15} tah={2} trida="text-akcent" /> Je k dispozici nová verze webu.</span>
-            <button type="button" onClick={() => location.reload()} className="min-h-[36px] rounded-[12px] border border-akcent/60 bg-akcent/15 px-3 text-[13px] font-bold text-akcent-svetla hover:bg-akcent/25">Obnovit</button>
+            <button type="button" onClick={() => location.reload()} className="min-h-[36px] rounded-[12px] border border-akcent/60 bg-akcent/15 px-3 text-male font-bold text-akcent-svetla hover:bg-akcent/25">Obnovit</button>
           </>
         )}
       </div>
@@ -97,7 +97,7 @@ export function TlacitkoInstalace({ cele = false }: { cele?: boolean }) {
 
   if (nainstalovano) {
     return (
-      <p className="flex items-center gap-2 text-[14px] text-tlum">
+      <p className="flex items-center gap-2 text-zaklad text-tlum">
         <span className="text-klid-text"><Ikona nazev="fajfka" velikost={14} tah={2} /></span>
         Běží jako aplikace.
       </p>
@@ -113,7 +113,7 @@ export function TlacitkoInstalace({ cele = false }: { cele?: boolean }) {
           const { outcome } = await udalost.userChoice;
           if (outcome === "accepted") setUdalost(null);
         }}
-        className={`inline-flex items-center justify-center gap-2 rounded-full border border-akcent/60 bg-akcent/15 px-4 py-2.5 text-[14px] font-bold uppercase tracking-[0.05em] text-akcent-svetla  transition-all hover:bg-akcent/25 ${cele ? "w-full" : ""}`}
+        className={`inline-flex items-center justify-center gap-2 rounded-full border border-akcent/60 bg-akcent/15 px-4 py-2.5 text-zaklad font-bold uppercase tracking-[0.05em] text-akcent-svetla  transition-all hover:bg-akcent/25 ${cele ? "w-full" : ""}`}
       >
         <Ikona nazev="instalace" velikost={16} tah={1.9} />
         Přidat na plochu
@@ -123,7 +123,7 @@ export function TlacitkoInstalace({ cele = false }: { cele?: boolean }) {
 
   if (ios) {
     return (
-      <p className="text-[14px] leading-relaxed text-tlum">
+      <p className="text-zaklad leading-relaxed text-tlum">
         Na iPhonu: <b className="font-semibold text-inkoust">Sdílet</b> →{" "}
         <b className="font-semibold text-inkoust">Přidat na plochu</b>. Aplikace se pak otevírá
         bez prohlížeče.
@@ -132,7 +132,7 @@ export function TlacitkoInstalace({ cele = false }: { cele?: boolean }) {
   }
 
   return (
-    <p className="text-[14px] leading-relaxed text-tlum">
+    <p className="text-zaklad leading-relaxed text-tlum">
       V nabídce prohlížeče zvolte <b className="font-semibold text-inkoust">Nainstalovat aplikaci</b>{" "}
       nebo <b className="font-semibold text-inkoust">Přidat na plochu</b>.
     </p>

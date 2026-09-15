@@ -41,8 +41,8 @@ export default function IzsStranka() {
                 </span>
                 <span className="cislice stitek">0{i + 1}</span>
               </div>
-              <h2 className="text-[17px] font-bold uppercase tracking-[0.02em]">{k.nadpis}</h2>
-              <p className="mt-2 text-[14px] leading-relaxed text-tlum">{k.popis}</p>
+              <h2 className="text-vetsi font-bold uppercase tracking-[0.02em]">{k.nadpis}</h2>
+              <p className="mt-2 text-zaklad leading-relaxed text-tlum">{k.popis}</p>
             </Karta>
           ))}
         </div>
@@ -50,8 +50,8 @@ export default function IzsStranka() {
         <div className="mt-10 grid gap-4 lg:grid-cols-2">
           <Karta odstin="pisek" className="p-6">
             <div className="stitek mb-2 !text-jantar">Co to není</div>
-            <h2 className="podnadpis text-[20px]">Ne úřední varování</h2>
-            <ul className="mt-3 space-y-2 text-[15px] leading-relaxed text-tlum">
+            <h2 className="podnadpis text-velke">Ne úřední varování</h2>
+            <ul className="mt-3 space-y-2 text-zaklad leading-relaxed text-tlum">
               <li>Oficiální varování obyvatel běží přes jednotný systém varování a vyrozumění (sirény, státní SMS, veřejnoprávní média). CzechPatrol ho nenahrazuje a nikdy se za něj nevydává.</li>
               <li>Zpráva partnera nese jméno složky a označení „zpráva partnera IZS“. Neobsahuje hodnocení situace ani rady typu „odjet / neodjet“.</li>
               <li>Šíření poplašné zprávy je trestný čin. Proto každou zprávu před odesláním čte člověk.</li>
@@ -59,19 +59,19 @@ export default function IzsStranka() {
           </Karta>
           <Karta className="p-6">
             <div className="stitek mb-2">Pro složky</div>
-            <h2 className="podnadpis text-[20px]">Jak získat roli partnera</h2>
-            <p className="mt-3 text-[15px] leading-relaxed text-tlum">
+            <h2 className="podnadpis text-velke">Jak získat roli partnera</h2>
+            <p className="mt-3 text-zaklad leading-relaxed text-tlum">
               Založte si anonymní účet a napište nám z úřední adresy vaší složky. Ověříme, že
               adresa patří složce, a roli přidělíme k účtu, jehož identifikátor nám pošlete.
             </p>
             {IZS_KONTAKT ? (
-              <a href={`mailto:${IZS_KONTAKT}`} className="mt-4 inline-flex items-center gap-2 text-[15px] font-semibold text-akcent hover:text-akcent-svetla">
+              <a href={`mailto:${IZS_KONTAKT}`} className="mt-4 inline-flex items-center gap-2 text-zaklad font-semibold text-akcent hover:text-akcent-svetla">
                 <Ikona nazev="odeslat" velikost={15} tah={1.9} /> {IZS_KONTAKT}
               </a>
             ) : (
-              <p className="mt-4 text-[14px] text-tlum2">Kontakt pro ověření zveřejníme se spuštěním účtů.</p>
+              <p className="mt-4 text-zaklad text-tlum2">Kontakt pro ověření zveřejníme se spuštěním účtů.</p>
             )}
-            <p className="mt-4 text-[14px] text-tlum">
+            <p className="mt-4 text-zaklad text-tlum">
               <Link href="/ucet/" className="odkaz text-inkoust">Založit účet</Link>
             </p>
           </Karta>

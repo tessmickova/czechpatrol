@@ -66,7 +66,7 @@ export function OdznakUrovne({
   if (!uroven) {
     return (
       <span
-        className={`inline-flex items-center gap-2 rounded-full border border-dashed px-2.5 py-1 text-[11px] font-medium ${
+        className={`inline-flex items-center gap-2 rounded-full border border-dashed px-2.5 py-1 text-mikro font-medium ${
           naNoci ? "border-white/20 text-noc-tlum" : "border-linka text-tlum2"
         }`}
       >
@@ -77,9 +77,9 @@ export function OdznakUrovne({
   const d = UROVNE[uroven];
   const t = tokeny(uroven);
   const rozmery = {
-    s: "px-2 py-1 text-[12px] gap-1.5",
-    m: "px-2.5 py-1.5 text-[13.5px] gap-2",
-    l: "px-3 py-2 text-[15px] gap-2",
+    s: "px-2 py-1 text-drobne gap-1.5",
+    m: "px-2.5 py-1.5 text-male gap-2",
+    l: "px-3 py-2 text-zaklad gap-2",
   }[velikost];
   return (
     <span
@@ -99,7 +99,7 @@ export function VykladUrovne({ uroven }: { uroven: Uroven }) {
   const d = UROVNE[uroven];
   return (
     <span className="block space-y-2">
-      <span className="block text-[10px] font-semibold uppercase tracking-[0.09em] opacity-60">
+      <span className="block text-mikro font-semibold uppercase tracking-[0.09em] opacity-60">
         Úroveň {d.nazev}
       </span>
       <span className="block">{d.znamena}</span>
@@ -129,7 +129,7 @@ export function OdznakJistoty({ jistota }: { jistota: Jistota }) {
     <Napoveda
       popis={
         <span className="block space-y-1.5">
-          <span className="block text-[10px] font-semibold uppercase tracking-[0.09em] opacity-60">
+          <span className="block text-mikro font-semibold uppercase tracking-[0.09em] opacity-60">
             Jistota informace
           </span>
           <span className="block">{j.popis}</span>
@@ -140,7 +140,7 @@ export function OdznakJistoty({ jistota }: { jistota: Jistota }) {
         </span>
       }
     >
-      <span className="inline-flex items-center gap-1.5 text-[12.5px] font-medium text-tlum">
+      <span className="inline-flex items-center gap-1.5 text-drobne font-medium text-tlum">
         <span aria-hidden className="flex gap-[3px]">
           {[1, 2, 3, 4].map((i) => (
             <span
@@ -276,8 +276,8 @@ export function Prazdno({
         <Ikona nazev={ikona} velikost={21} />
       </span>
       <span className="block">
-        <span className="block text-[18px] font-bold uppercase tracking-[0.02em]">{nadpis}</span>
-        <span className="mt-1.5 block max-w-[38rem] text-[15px] leading-relaxed text-tlum">
+        <span className="block text-velke font-bold uppercase tracking-[0.02em]">{nadpis}</span>
+        <span className="mt-1.5 block max-w-[38rem] text-zaklad leading-relaxed text-tlum">
           {popis}
         </span>
       </span>
@@ -288,7 +288,7 @@ export function Prazdno({
 /** Hodnota, kterou sběrač zatím neověřil. Nikdy ji nedopočítáváme. */
 export function Neovereno({ kratke = false }: { kratke?: boolean }) {
   return (
-    <span className="inline-flex items-center gap-1.5 text-[13px] font-medium text-tlum2">
+    <span className="inline-flex items-center gap-1.5 text-male font-medium text-tlum2">
       <span aria-hidden className="inline-block h-[7px] w-[7px] rounded-full border border-linka" />
       {kratke ? "neověřeno" : "Zatím neověřeno"}
     </span>

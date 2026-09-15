@@ -27,7 +27,7 @@ export function PlacenaVrstva({
         <span className="stitek flex items-center gap-1.5 !text-noc-tlum">
           <Ikona nazev="zamek" velikost={12} /> {co}
         </span>
-        <span className="mt-2 text-[12.5px] font-bold uppercase leading-tight tracking-[0.02em] text-jantar">pro podporovatele</span>
+        <span className="mt-2 text-drobne font-bold uppercase leading-tight tracking-[0.02em] text-jantar">pro podporovatele</span>
       </Link>
     );
   }
@@ -39,11 +39,11 @@ export function PlacenaVrstva({
           <span className="mx-auto grid h-10 w-10 place-items-center rounded-[18px] border border-jantar/50 bg-jantar/15 text-jantar">
             <Ikona nazev="zamek" velikost={18} />
           </span>
-          <p className="mt-3 text-[16px] font-bold uppercase tracking-[0.03em]">{co} je pro podporovatele</p>
-          <p className="mt-2 text-[14px] leading-relaxed text-tlum">
+          <p className="mt-3 text-vetsi font-bold uppercase tracking-[0.03em]">{co} je pro podporovatele</p>
+          <p className="mt-2 text-zaklad leading-relaxed text-tlum">
             Provoz platí sběr dat a doručování. Podporovatelé mají tuhle část odemčenou.
           </p>
-          <Link href="/ucet/" className="mt-4 inline-flex items-center gap-2 rounded-full border border-jantar/60 bg-jantar/15 px-4 py-2 text-[13px] font-bold uppercase tracking-[0.05em] text-jantar">
+          <Link href="/ucet/" className="mt-4 inline-flex items-center gap-2 rounded-full border border-jantar/60 bg-jantar/15 px-4 py-2 text-male font-bold uppercase tracking-[0.05em] text-jantar">
             Přihlásit nebo podpořit
           </Link>
         </div>

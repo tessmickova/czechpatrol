@@ -21,9 +21,9 @@ export function HlavickaStranky({
           {ikona && <Ikona nazev={ikona} velikost={13} tah={1.6} trida="text-akcent-svetla" />}
           <span className="stitek !text-noc-tlum">{stitek}</span>
         </div>
-        <h1 className="nadpis max-w-[22ch] text-[32px] text-noc-text sm:text-[44px]">{nadpis}</h1>
+        <h1 className="nadpis max-w-[22ch] text-cislo-l text-noc-text sm:text-cislo-xl">{nadpis}</h1>
         {popis && (
-          <div className="mt-4 max-w-[44rem] text-[14px] leading-relaxed text-noc-tlum">{popis}</div>
+          <div className="mt-4 max-w-[44rem] text-zaklad leading-relaxed text-noc-tlum">{popis}</div>
         )}
         {doplnek && <div className="mt-6">{doplnek}</div>}
       </div>

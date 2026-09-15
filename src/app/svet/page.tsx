@@ -30,7 +30,7 @@ function Odkazy({ idx, aktor }: { idx: number[]; aktor: SvetAktor }) {
         const z = aktor.zdroje[i];
         if (!z) return null;
         return (
-          <a key={i} href={z.url} target="_blank" rel="noopener noreferrer" title={z.nazev} className="cislice text-[10.5px] text-akcent hover:text-akcent-svetla">
+          <a key={i} href={z.url} target="_blank" rel="noopener noreferrer" title={z.nazev} className="cislice text-mikro text-akcent hover:text-akcent-svetla">
             [{i + 1}]
           </a>
         );
@@ -43,7 +43,7 @@ function Tvrzeni({ polozky, aktor, tlumene = false }: { polozky: SvetTvrzeni[]; 
   return (
     <ul className="space-y-1.5">
       {polozky.map((t, i) => (
-        <li key={i} className={`flex gap-2.5 text-[14px] leading-relaxed ${tlumene ? "text-tlum" : "text-inkoust"}`}>
+        <li key={i} className={`flex gap-2.5 text-zaklad leading-relaxed ${tlumene ? "text-tlum" : "text-inkoust"}`}>
           <span aria-hidden className={`mt-[9px] h-[4px] w-[4px] shrink-0 rounded-full ${t.odhad ? "bg-fialova-text" : "bg-akcent"}`} />
           <span>
             {t.text}
@@ -63,8 +63,8 @@ function Priblizeni({ stupen, stupne }: { stupen: number; stupne: string[] }) {
       <span aria-hidden className="flex gap-[3px]">
         {stupne.map((_, i) => <span key={i} className={`h-[10px] w-[26px] rounded-[2px] ${i <= stupen ? barvy[stupen] : "bg-linka2"}`} />)}
       </span>
-      <span className="text-[14px] font-bold uppercase tracking-[0.03em] text-inkoust">{stupne[stupen]}</span>
-      <span className="text-[11.5px] text-tlum2">{stupen + 1} z {stupne.length}</span>
+      <span className="text-zaklad font-bold uppercase tracking-[0.03em] text-inkoust">{stupne[stupen]}</span>
+      <span className="text-mikro text-tlum2">{stupen + 1} z {stupne.length}</span>
     </div>
   );
 }
@@ -77,8 +77,8 @@ function Aktor({ a, stupne }: { a: SvetAktor; stupne: string[] }) {
           {a.kod ? <Vlajka kod={a.kod} velka /> : <Ikona nazev="globus" velikost={20} tah={1.8} trida="text-akcent" />}
         </span>
         <span className="min-w-0">
-          <h3 className="text-[20px] font-bold leading-tight">{a.nazev}</h3>
-          <p className="mt-0.5 text-[13.5px] text-tlum">{a.role}</p>
+          <h3 className="text-velke font-bold leading-tight">{a.nazev}</h3>
+          <p className="mt-0.5 text-male text-tlum">{a.role}</p>
         </span>
       </header>
 
@@ -93,21 +93,21 @@ function Aktor({ a, stupne }: { a: SvetAktor; stupne: string[] }) {
       <div className="mt-4 rounded-[18px] border border-fialova/30 bg-fialova/8 p-3.5">
         <div className="mb-2 flex items-center gap-2"><OdznakTypu typ="odhad" /><span className="stitek">Jak blízko k cílům je</span></div>
         <Priblizeni stupen={a.priblizeni.stupen} stupne={stupne} />
-        <p className="mt-2 text-[14px] leading-relaxed text-tlum">{a.priblizeni.odhad}</p>
+        <p className="mt-2 text-zaklad leading-relaxed text-tlum">{a.priblizeni.odhad}</p>
       </div>
       <div className="mt-4">
         <div className="mb-1.5 flex items-center gap-2"><OdznakTypu typ="scenar" /><span className="stitek">Co by obrázek změnilo</span></div>
         <ul className="space-y-1">
-          {a.coByZmenilo.map((c) => <li key={c} className="flex gap-2.5 text-[13.5px] leading-relaxed text-tlum"><span aria-hidden className="mt-[8px] h-[4px] w-[4px] shrink-0 rounded-full bg-tlum2" />{c}</li>)}
+          {a.coByZmenilo.map((c) => <li key={c} className="flex gap-2.5 text-male leading-relaxed text-tlum"><span aria-hidden className="mt-[8px] h-[4px] w-[4px] shrink-0 rounded-full bg-tlum2" />{c}</li>)}
         </ul>
       </div>
       <details className="mt-4 group">
-        <summary className="flex min-h-[36px] cursor-pointer items-center gap-2 text-[13px] font-semibold text-tlum hover:text-inkoust">
+        <summary className="flex min-h-[36px] cursor-pointer items-center gap-2 text-male font-semibold text-tlum hover:text-inkoust">
           <Ikona nazev="dolu" velikost={12} tah={2} trida="transition-transform group-open:rotate-180" /> Zdroje ({a.zdroje.length})
         </summary>
         <ol className="mt-2 space-y-1.5">
           {a.zdroje.map((z, i) => (
-            <li key={z.url} className="flex gap-2 text-[13px] leading-snug">
+            <li key={z.url} className="flex gap-2 text-male leading-snug">
               <span className="cislice shrink-0 text-tlum2">[{i + 1}]</span>
               <span className={`stitek-tmavy shrink-0 rounded-[12px] border px-1.5 py-[2px] ${TYPY_ZDROJU[z.typ].tridy}`}>{TYPY_ZDROJU[z.typ].znacka}</span>
               <a href={z.url} target="_blank" rel="noopener noreferrer" className="odkaz min-w-0 break-words text-tlum">{z.nazev}</a>
@@ -125,7 +125,7 @@ export default function Svet() {
     <div className="mx-auto max-w-[1200px] px-5 py-12 sm:px-8 sm:py-16">
       <div>
         <HlavickaStranky stitek="Aktéři a cíle" nadpis="Kdo čeho chce dosáhnout a jak blízko je" uvod={s.uvod} />
-        <p className="mt-6 flex flex-wrap items-center gap-x-3 gap-y-1 text-[12.5px] text-tlum2">
+        <p className="mt-6 flex flex-wrap items-center gap-x-3 gap-y-1 text-drobne text-tlum2">
           <span>Hodnocení projektu k {datumPraha(s.aktualizovano)}, verze {s.verze}</span>
           <span aria-hidden>·</span>
           <span className="inline-flex items-center gap-1.5"><OdznakTypu typ="fakt" /> doloženo zdrojem</span>
@@ -144,8 +144,8 @@ export default function Svet() {
               <a href={`#${a.klic}`} className="flex min-h-[56px] items-center gap-3 rounded-[18px] border border-linka2 bg-plocha px-3 py-2 hover:border-akcent">
                 <span className="shrink-0">{a.kod ? <Vlajka kod={a.kod} /> : <Ikona nazev="globus" velikost={16} tah={1.8} trida="text-akcent" />}</span>
                 <span className="min-w-0 flex-1">
-                  <span className="block truncate text-[14px] font-semibold text-inkoust">{a.nazev}</span>
-                  <span className="block text-[11.5px] text-tlum2">k cílům: {s.stupne[a.priblizeni.stupen]}</span>
+                  <span className="block truncate text-zaklad font-semibold text-inkoust">{a.nazev}</span>
+                  <span className="block text-mikro text-tlum2">k cílům: {s.stupne[a.priblizeni.stupen]}</span>
                 </span>
                 <span aria-hidden className="flex gap-[2px]">
                   {s.stupne.map((_, i) => <span key={i} className={`h-[8px] w-[7px] rounded-[1px] ${i <= a.priblizeni.stupen ? "bg-fialova-text" : "bg-linka2"}`} />)}
@@ -178,7 +178,7 @@ export default function Svet() {
           popis="Stejné otázky, různé odpovědi. Postoje jsou zkrácené podle deklarací výše; pomlčka znamená, že se k tomu aktér nevyjadřuje nebo v tom nehraje roli."
         />
         <div className="overflow-x-auto rounded-[18px] border border-linka">
-          <table className="w-full min-w-[980px] border-collapse text-left text-[13px]">
+          <table className="w-full min-w-[980px] border-collapse text-left text-male">
             <thead>
               <tr className="border-b border-linka bg-plocha">
                 <th className="stitek sticky left-0 bg-plocha px-3 py-2.5 font-medium">Otázka</th>
@@ -192,7 +192,7 @@ export default function Svet() {
             <tbody>
               {s.stret.otazky.map((o, i) => (
                 <tr key={o} className="border-b border-linka2 last:border-0">
-                  <th scope="row" className="sticky left-0 bg-papir px-3 py-2.5 text-[13px] font-semibold text-inkoust">{o}</th>
+                  <th scope="row" className="sticky left-0 bg-papir px-3 py-2.5 text-male font-semibold text-inkoust">{o}</th>
                   {s.aktori.map((a) => {
                     const p = s.stret.postoje[a.klic]?.[i] ?? "—";
                     return <td key={a.klic} className={`px-3 py-2.5 align-top leading-snug ${p === "—" ? "text-tlum2" : "text-tlum"}`}>{p}</td>;
@@ -214,7 +214,7 @@ export default function Svet() {
         />
         <ul className="divide-y divide-linka2 border-y border-linka2">
           {s.sledovat.map((x) => (
-            <li key={x.text} className="flex items-start gap-3 py-2.5 text-[14px] leading-relaxed text-inkoust">
+            <li key={x.text} className="flex items-start gap-3 py-2.5 text-zaklad leading-relaxed text-inkoust">
               <span className={`mt-[3px] shrink-0 ${x.smer === "nahoru" ? "text-stari-text2" : x.smer === "dolu" ? "text-klid-text" : "text-tlum2"}`}>
                 <Ikona nazev={x.smer === "nahoru" ? "nahoru" : x.smer === "dolu" ? "dolu" : "minus"} velikost={13} tah={2.2} />
               </span>
@@ -231,7 +231,7 @@ export default function Svet() {
       */}
       <ZpusobyVUziti />
 
-      <p className="mt-8 text-[12.5px] leading-relaxed text-tlum2">
+      <p className="mt-8 text-drobne leading-relaxed text-tlum2">
         Tato stránka je analytická interpretace veřejných zdrojů, ne zpravodajský produkt státu ani předpověď. Aktualizuje ji ranní kontrola spolu s daty; každá změna je v <Link href="/opravy/" className="odkaz">historii oprav</Link>. Chyba nebo lepší zdroj? Napište přes <Link href="/o-projektu/" className="odkaz">O projektu</Link>.
       </p>
     </div>

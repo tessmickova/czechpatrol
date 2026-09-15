@@ -75,9 +75,9 @@ export default function Analyzy() {
                 <span className="grid h-10 w-10 place-items-center rounded-full bg-plocha2 text-akcent"><Ikona nazev={k.ikona} velikost={19} tah={1.8} /></span>
                 <span className="stitek-znacky">{k.stitek}</span>
               </span>
-              <span className="text-[20px] font-bold leading-snug text-inkoust">{k.nadpis}</span>
-              <span className="text-[14.5px] leading-relaxed text-tlum">{k.popis}</span>
-              <span className="mt-auto flex items-center gap-2 pt-1 text-[12.5px] text-tlum2">
+              <span className="text-velke font-bold leading-snug text-inkoust">{k.nadpis}</span>
+              <span className="text-zaklad leading-relaxed text-tlum">{k.popis}</span>
+              <span className="mt-auto flex items-center gap-2 pt-1 text-drobne text-tlum2">
                 <span className="cislice">{k.cislo}</span>
                 <Ikona nazev="nahoru" velikost={12} tah={2} trida="rotate-90 text-akcent" />
               </span>

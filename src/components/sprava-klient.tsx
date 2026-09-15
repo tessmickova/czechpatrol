@@ -80,7 +80,7 @@ export function SpravaKlient() {
   }, [jeAdmin, nacti]);
 
   if (!UCTY_ZAPNUTE) return <Hlaska typ="info">Účty zatím nejsou zapnuté, takže není co spravovat.</Hlaska>;
-  if (nacita) return <p className="text-[15px] text-tlum">Ověřuji přihlášení…</p>;
+  if (nacita) return <p className="text-zaklad text-tlum">Ověřuji přihlášení…</p>;
   if (!ucet) return <Hlaska typ="info">Správa je jen pro přihlášené správce.</Hlaska>;
 
   if (!jeAdmin) {
@@ -88,8 +88,8 @@ export function SpravaKlient() {
     return (
       <Karta odstin="pisek" className="max-w-[560px] p-6">
         <div className="stitek mb-2 !text-jantar">Zavedení správce</div>
-        <h2 className="podnadpis text-[20px]">Tenhle účet není správce</h2>
-        <p className="mt-3 text-[14.5px] leading-relaxed text-tlum">
+        <h2 className="podnadpis text-velke">Tenhle účet není správce</h2>
+        <p className="mt-3 text-zaklad leading-relaxed text-tlum">
           Prvního správce zakládá provozovatel jednorázovým kódem. Další správce pak přidává
           existující správce ve správě účtů.
         </p>
@@ -147,13 +147,13 @@ export function SpravaKlient() {
       */}
       <Karta odstin="bila" className="p-6">
         <div className="stitek mb-1">Automatický sběr</div>
-        <h2 className="podnadpis text-[20px]">Co síto nepustilo</h2>
-        <p className="mt-2 max-w-[62ch] text-[14px] leading-relaxed text-tlum">
+        <h2 className="podnadpis text-velke">Co síto nepustilo</h2>
+        <p className="mt-2 max-w-[62ch] text-zaklad leading-relaxed text-tlum">
           Zprávy, které sběr zachytil, ale nepustil dál. Levný model jim dal druhé čtení a označil, co vypadá vážně —
           rozhodnutí zůstává na člověku. Je to pojistka proti tomu, aby nám utekla vážná zpráva jen proto, že měla
           nešikovný titulek.
         </p>
-        <a href="/sprava/odmitnute/" className="mt-3 inline-block text-[14px] font-semibold text-akcent hover:underline">
+        <a href="/sprava/odmitnute/" className="mt-3 inline-block text-zaklad font-semibold text-akcent hover:underline">
           Otevřít přehled →
         </a>
       </Karta>
@@ -162,7 +162,7 @@ export function SpravaKlient() {
         <div className="mb-3 flex items-center justify-between">
           <div>
             <div className="stitek mb-1">Zprávy partnerů IZS</div>
-            <h2 className="podnadpis text-[20px]">{cekajici.length ? `${cekajici.length} čeká na rozhodnutí` : "Nic nečeká"}</h2>
+            <h2 className="podnadpis text-velke">{cekajici.length ? `${cekajici.length} čeká na rozhodnutí` : "Nic nečeká"}</h2>
           </div>
           <button type="button" onClick={nacti} className={TLACITKO_TICHE}>Obnovit</button>
         </div>
@@ -178,10 +178,10 @@ export function SpravaKlient() {
       <Karta odstin={tipy.some((x) => x.stav === "novy") ? "modra" : "bila"} className="p-6">
         <div className="mb-3">
           <div className="stitek mb-1">Hlášení od čtenářů</div>
-          <h2 className="podnadpis text-[20px]">{tipy.filter((x) => x.stav === "novy").length} nových</h2>
+          <h2 className="podnadpis text-velke">{tipy.filter((x) => x.stav === "novy").length} nových</h2>
         </div>
         {tipy.length === 0 ? (
-          <p className="text-[14px] text-tlum">Zatím žádné.</p>
+          <p className="text-zaklad text-tlum">Zatím žádné.</p>
         ) : (
           <ul className="space-y-3">
             {tipy.map((x) => (
@@ -192,10 +192,10 @@ export function SpravaKlient() {
                   </span>
                   <span className="stitek">{datumCas(x.vytvoreno)}</span>
                 </div>
-                <p className="whitespace-pre-wrap text-[14.5px] leading-relaxed text-inkoust">{x.popis}</p>
-                {x.odkaz && <a href={x.odkaz} target="_blank" rel="noopener noreferrer" className="mt-2 block break-all text-[13px] text-akcent underline underline-offset-4">{x.odkaz}</a>}
+                <p className="whitespace-pre-wrap text-zaklad leading-relaxed text-inkoust">{x.popis}</p>
+                {x.odkaz && <a href={x.odkaz} target="_blank" rel="noopener noreferrer" className="mt-2 block break-all text-male text-akcent underline underline-offset-4">{x.odkaz}</a>}
                 {(x.jmeno || x.email || x.telefon) && (
-                  <p className="mt-2 text-[13px] text-tlum">Kontakt: {[x.jmeno, x.email, x.telefon].filter(Boolean).join(" · ")}</p>
+                  <p className="mt-2 text-male text-tlum">Kontakt: {[x.jmeno, x.email, x.telefon].filter(Boolean).join(" · ")}</p>
                 )}
                 {x.stav === "novy" && (
                   <div className="mt-3 flex gap-2">
@@ -213,12 +213,12 @@ export function SpravaKlient() {
         <div className="mb-4 flex flex-wrap items-end justify-between gap-3">
           <div>
             <div className="stitek mb-1">Účty</div>
-            <h2 className="podnadpis text-[20px]">{ucty.length} účtů</h2>
+            <h2 className="podnadpis text-velke">{ucty.length} účtů</h2>
           </div>
           <input value={hledat} onChange={(e) => setHledat(e.target.value)} className={`${POLE} cislice max-w-[240px]`} placeholder="hledat podle #id" />
         </div>
         <div className="overflow-x-auto">
-          <table className="w-full text-[14px]">
+          <table className="w-full text-zaklad">
             <thead>
               <tr className="text-left">
                 {["Účet", "Role", "Založen", "Přihlášen", "Kanály", "Passkey", "Složka / poznámka"].map((h) => (
@@ -235,7 +235,7 @@ export function SpravaKlient() {
                       value={u.role}
                       disabled={u.id === ucet.id}
                       onChange={(e) => zmenRoli(u.id, e.target.value as Role)}
-                      className="rounded-[12px] border border-linka bg-noc/60 px-2 py-1 text-[13.5px] text-inkoust disabled:opacity-60"
+                      className="rounded-[12px] border border-linka bg-noc/60 px-2 py-1 text-male text-inkoust disabled:opacity-60"
                     >
                       {(Object.keys(ROLE) as Role[]).map((r) => <option key={r} value={r}>{ROLE[r].nazev}</option>)}
                     </select>
@@ -254,8 +254,8 @@ export function SpravaKlient() {
 
       <Karta className="p-6">
         <div className="stitek mb-1">Audit</div>
-        <h2 className="podnadpis mb-4 text-[20px]">Kdo co změnil</h2>
-        <ul className="space-y-1.5 text-[13.5px]">
+        <h2 className="podnadpis mb-4 text-velke">Kdo co změnil</h2>
+        <ul className="space-y-1.5 text-male">
           {audit.map((a) => (
             <li key={a.id} className="flex flex-wrap gap-x-3 border-b border-linka2 py-1.5">
               <span className="cislice text-tlum2">{datumCas(a.kdy)}</span>

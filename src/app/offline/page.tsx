@@ -11,12 +11,12 @@ export default function Offline() {
       <span className="mx-auto grid h-16 w-16 place-items-center rounded-[22px] border border-akcent/40 bg-akcent/10 text-akcent">
         <Ikona nazev="komunikace" velikost={30} />
       </span>
-      <h1 className="nadpis mt-6 text-[34px]">Bez připojení</h1>
-      <p className="mt-4 text-[17px] leading-relaxed text-tlum">
+      <h1 className="nadpis mt-6 text-cislo-l">Bez připojení</h1>
+      <p className="mt-4 text-vetsi leading-relaxed text-tlum">
         Tahle stránka není uložená pro čtení bez sítě. Přehled, který jste už otevřeli, je
         k dispozici — poslední ověřený stav platí, dokud ho nepřepíše nový.
       </p>
-      <Link href="/" className="mt-8 inline-flex items-center gap-2 rounded-full border border-akcent/60 bg-akcent/15 px-5 py-3 text-[14px] font-bold uppercase tracking-[0.05em] text-akcent-svetla">
+      <Link href="/" className="mt-8 inline-flex items-center gap-2 rounded-full border border-akcent/60 bg-akcent/15 px-5 py-3 text-zaklad font-bold uppercase tracking-[0.05em] text-akcent-svetla">
         Zpět na přehled
       </Link>
     </div>

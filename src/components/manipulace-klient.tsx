@@ -75,7 +75,7 @@ export function ManipulaceKlient({
   // zemích a dvě operace v sedmi zemích jsou dvě různě silná tvrzení.
   const zemiVeVysledku = new Set(vysledek.flatMap((k) => k.kodyZemi)).size;
   const cip = (aktivni: boolean) =>
-    `inline-flex min-h-[36px] items-center gap-1.5 rounded-full border px-3 text-[13px] font-semibold transition-colors ${
+    `inline-flex min-h-[36px] items-center gap-1.5 rounded-full border px-3 text-male font-semibold transition-colors ${
       aktivni ? "border-akcent/60 bg-akcent/15 text-akcent-svetla" : "border-transparent text-tlum hover:bg-plocha2 hover:text-inkoust"
     }`;
 
@@ -114,7 +114,7 @@ export function ManipulaceKlient({
         </Sdeleni>
       )}
 
-      <p aria-live="polite" className="mt-3 mb-4 flex flex-wrap items-center gap-x-3 gap-y-1 text-[13px] text-tlum">
+      <p aria-live="polite" className="mt-3 mb-4 flex flex-wrap items-center gap-x-3 gap-y-1 text-male text-tlum">
         <span>
           {vysledek.length} {sklon(vysledek.length, "rozebraná operace", "rozebrané operace", "rozebraných operací")}
           {f.zeme || f.metoda ? ` z ${kampane.length}` : ""}

@@ -19,9 +19,9 @@ export function Presmerovani({ kam, co }: { kam: string; co: string }) {
   return (
     <div className="mx-auto max-w-[640px] px-5 py-20 text-center">
       <p className="stitek mb-3">Stránka se přestěhovala</p>
-      <h1 className="text-[24px] font-bold">{co}</h1>
-      <p className="mt-3 text-[14.5px] text-tlum">Přesměrujeme vás. Pokud se nic neděje, pokračujte odkazem.</p>
-      <Link href={kam} className="mt-6 inline-flex min-h-[44px] items-center rounded-[18px] border border-linka px-4 text-[14px] font-semibold text-inkoust hover:border-akcent">Pokračovat</Link>
+      <h1 className="text-cislo font-bold">{co}</h1>
+      <p className="mt-3 text-zaklad text-tlum">Přesměrujeme vás. Pokud se nic neděje, pokračujte odkazem.</p>
+      <Link href={kam} className="mt-6 inline-flex min-h-[44px] items-center rounded-[18px] border border-linka px-4 text-zaklad font-semibold text-inkoust hover:border-akcent">Pokračovat</Link>
     </div>
   );
 }

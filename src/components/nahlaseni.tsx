@@ -37,7 +37,7 @@ export function Nahlaseni() {
     }
     if (!UCTY_ZAPNUTE) {
       if (TIPY_MAIL) window.location.href = mailto();
-      else setStav({ typ: "chyba", text: "Příjem hlášení se připravuje. Zatím prosím použijte diskusi na GitHubu." });
+      else setStav({ typ: "chyba", text: "Příjem hlášení se připravuje. Zkuste to prosím znovu později." });
       return;
     }
     setOdesila(true);
@@ -72,7 +72,7 @@ export function Nahlaseni() {
       {otevreno && (
         <form onSubmit={odesli} className="sklo mt-4 w-full max-w-[720px] rounded-[18px] p-5 sm:p-6">
           <div className="stitek mb-1 !text-akcent">Hlášení události</div>
-          <p className="mb-4 text-[14px] leading-relaxed text-tlum">
+          <p className="mb-4 text-zaklad leading-relaxed text-tlum">
             Nejlepší je odkaz na úřední zdroj — policii, vládu, NATO, EU. Bez zdroje záznam nezveřejníme, ale rádi ho dohledáme.
             Kontakt je dobrovolný; použijeme ho jen na doptání a po roce smažeme.
           </p>
@@ -107,8 +107,7 @@ export function Nahlaseni() {
                 <Ikona nazev="odeslat" velikost={14} tah={2} /> {odesila ? "Odesílám…" : UCTY_ZAPNUTE ? "Odeslat správci" : TIPY_MAIL ? "Odeslat e-mailem" : "Odeslat"}
               </button>
               {KOMUNITA.diskuse && (
-                <a href={KOMUNITA.diskuse} target="_blank" rel="noopener noreferrer" className="text-[13px] text-tlum underline underline-offset-4 hover:text-inkoust">
-                  nebo veřejně na GitHubu
+                <a href={KOMUNITA.diskuse} target="_blank" rel="noopener noreferrer" className="text-male text-tlum underline underline-offset-4 hover:text-inkoust">
                 </a>
               )}
             </div>

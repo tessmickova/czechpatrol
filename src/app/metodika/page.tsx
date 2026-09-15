@@ -74,7 +74,7 @@ function Seznam({ polozky, znak, barva }: { polozky: string[]; znak: string; bar
   return (
     <ul className="space-y-2">
       {polozky.map((p) => (
-        <li key={p} className="flex gap-2.5 text-[13.5px] leading-relaxed text-tlum">
+        <li key={p} className="flex gap-2.5 text-male leading-relaxed text-tlum">
           <span aria-hidden className={`mt-[1px] shrink-0 ${barva}`}>{znak}</span>
           {p}
         </li>
@@ -96,7 +96,7 @@ export default function Metodika() {
             <span className="stitek-tmavy rounded-[18px] border border-linka px-2 py-1 text-tlum">
               Verze {METODIKA_VERZE}
             </span>
-            <span className="text-[12px] text-tlum2">
+            <span className="text-drobne text-tlum2">
               Revidováno {datum(METODIKA_REVIDOVANA)} · verze 2 mění jen názvy úrovní (Nízká → Mírně zvýšená → Střední → Zvýšená → Vysoká → Vážná), prahy a hodnocení zůstávají · <Link href="/opravy/" className="odkaz">historie změn</Link>
             </span>
           </div>
@@ -106,19 +106,19 @@ export default function Metodika() {
       <Sekce nadpis="Co započítáváme jako nový signál" prvni>
         <div className="grid gap-5 lg:grid-cols-2">
           <Karta className="p-5 sm:p-6">
-            <h3 className="podnadpis mb-4 text-[15px]">Započítáváme</h3>
+            <h3 className="podnadpis mb-4 text-zaklad">Započítáváme</h3>
             <Seznam polozky={ZAPOCITAVAME} znak="+" barva="text-[#7fdcac]" />
           </Karta>
           <Karta className="p-5 sm:p-6">
-            <h3 className="podnadpis mb-4 text-[15px]">Nezapočítáváme jako nový incident</h3>
+            <h3 className="podnadpis mb-4 text-zaklad">Nezapočítáváme jako nový incident</h3>
             <Seznam polozky={NEZAPOCITAVAME} znak="−" barva="text-tlum2" />
-            <p className="mt-5 border-t border-linka2 pt-4 text-[13px] leading-relaxed text-tlum">
+            <p className="mt-5 border-t border-linka2 pt-4 text-male leading-relaxed text-tlum">
               Nejsme zpravodajský web. Zajímá nás skutek, který mění bezpečnostní
               situaci, a úřední rozhodnutí, které mění, co platí — ne to, co kdo
               slíbil nebo se chystá projednat. Prohlášení zapisujeme jen tehdy,
               když se váže ke konkrétnímu skutku, a vedeme ho odděleně jako reakci.
             </p>
-            <p className="mt-3 text-[12.5px] leading-relaxed text-tlum2">
+            <p className="mt-3 text-drobne leading-relaxed text-tlum2">
               Nové úřední vyšetřovací zjištění nebo atribuce staršího případu ale
               novým signálem být může. Rozhoduje, jestli přibyl fakt — ne jestli
               přibyl článek.
@@ -132,7 +132,7 @@ export default function Metodika() {
         popis="Bez baseline by každá jednotlivá událost vypadala jako zhoršení."
       >
         <Karta className="p-5 sm:p-6">
-          <p className="mb-5 max-w-[46rem] text-[13.5px] leading-relaxed text-tlum">
+          <p className="mb-5 max-w-[46rem] text-male leading-relaxed text-tlum">
             Některé jevy mají dlouhodobě nenulové pozadí. Například běžné jednotlivé
             průniky do vzdušného prostoru se dějí opakovaně a samy o sobě hodnocení
             nezvyšují. Zvyšuje ho až <b className="font-semibold text-inkoust">změna vzorce</b>:
@@ -141,7 +141,7 @@ export default function Metodika() {
             {ZMENA_VZORCE.map((z) => (
               <li
                 key={z}
-                className="rounded-[18px] border border-linka bg-papir px-2.5 py-1.5 text-[12.5px] text-tlum"
+                className="rounded-[18px] border border-linka bg-papir px-2.5 py-1.5 text-drobne text-tlum"
               >
                 {z}
               </li>
@@ -171,14 +171,14 @@ export default function Metodika() {
                   return (
                     <tr key={u} className="border-b border-linka2 last:border-0">
                       <td className="whitespace-nowrap px-4 py-3.5 pl-5">
-                        <span className={`inline-flex items-center gap-2 text-[12.5px] font-semibold ${t.text}`}>
+                        <span className={`inline-flex items-center gap-2 text-drobne font-semibold ${t.text}`}>
                           <span aria-hidden className={`h-[7px] w-[7px] rounded-[2px] ${t.pruh}`} />
                           {d.nazev}
                         </span>
                       </td>
-                      <td className="cislice whitespace-nowrap px-4 py-3.5 text-[12.5px] text-tlum">{zDeseti(u)} z 10</td>
-                      <td className="px-4 py-3.5 text-[12.5px] leading-relaxed text-tlum">{d.znamena}</td>
-                      <td className="px-4 py-3.5 pr-5 text-[12.5px] leading-relaxed text-tlum2">
+                      <td className="cislice whitespace-nowrap px-4 py-3.5 text-drobne text-tlum">{zDeseti(u)} z 10</td>
+                      <td className="px-4 py-3.5 text-drobne leading-relaxed text-tlum">{d.znamena}</td>
+                      <td className="px-4 py-3.5 pr-5 text-drobne leading-relaxed text-tlum2">
                         {d.neznamena === "—" ? "" : d.neznamena}
                       </td>
                     </tr>
@@ -187,7 +187,7 @@ export default function Metodika() {
               </tbody>
             </table>
           </div>
-          <p className="border-t border-linka px-5 py-3.5 text-[11.5px] leading-relaxed text-tlum2">
+          <p className="border-t border-linka px-5 py-3.5 text-mikro leading-relaxed text-tlum2">
             Číslo „z 10“ je jen jinak zapsaná táž úroveň — pořadí na stupnici, aby se
             hodnocení vešlo i do krátké zprávy. Stupnice má třináct stupňů a deset čísel,
             takže sousední stupně se stejným názvem sdílí jedno číslo; liší se tím, co
@@ -203,7 +203,7 @@ export default function Metodika() {
         popis="Rusko, Ukrajina, jiný stát, domácí pachatel, neznámý. Rozhoduje zjištění dotčeného státu, ne to, na čí straně kdo stojí."
       >
         <Karta className="p-5 sm:p-6">
-          <div className="max-w-[46rem] space-y-3 text-[13.5px] leading-relaxed text-tlum">
+          <div className="max-w-[46rem] space-y-3 text-male leading-relaxed text-tlum">
             <p>
               Zbloudilý ukrajinský dron, který spadne v Lotyšsku, má původce Ukrajinu — i když ho z kurzu vychýlilo ruské rušení a
               nikdo netvrdí úmysl. Ruská střela, která dopadne v Polsku, má původce Rusko. Útok Ukrajiny na ropovod v Rusku, který
@@ -225,14 +225,14 @@ export default function Metodika() {
         <div className="grid gap-5 sm:grid-cols-2">
           <Karta className="p-5 sm:p-6">
             <div className="stitek mb-3">Závažnost</div>
-            <p className="text-[13.5px] leading-relaxed text-tlum">
+            <p className="text-male leading-relaxed text-tlum">
               Jak vážný je dopad, pokud se věc potvrdí. Odpovídá na otázku „jak moc by to
               vadilo“.
             </p>
           </Karta>
           <Karta className="p-5 sm:p-6">
             <div className="stitek mb-3">Jistota</div>
-            <p className="text-[13.5px] leading-relaxed text-tlum">
+            <p className="text-male leading-relaxed text-tlum">
               Jak dobře je věc doložená. Odpovídá na otázku „jak moc tomu můžeme věřit“.
               Něco může být velmi závažné a špatně potvrzené — i naprosto potvrzené
               a málo závažné.
@@ -247,21 +247,21 @@ export default function Metodika() {
       >
         <div className="grid gap-5 lg:grid-cols-2">
           <Karta className="p-5 sm:p-6">
-            <h3 className="podnadpis mb-4 text-[15px]">Nepoužíváme</h3>
+            <h3 className="podnadpis mb-4 text-zaklad">Nepoužíváme</h3>
             <ul className="space-y-2.5">
               {ZAKAZANE.map((z) => (
-                <li key={z} className="flex gap-2.5 text-[13.5px] leading-relaxed text-tlum2 line-through decoration-tlum2/40">
+                <li key={z} className="flex gap-2.5 text-male leading-relaxed text-tlum2 line-through decoration-tlum2/40">
                   <span aria-hidden className="mt-[1px] shrink-0 no-underline">✕</span>
                   {z}
                 </li>
               ))}
             </ul>
-            <p className="mt-5 border-t border-linka2 pt-4 text-[12.5px] leading-relaxed text-tlum2">
+            <p className="mt-5 border-t border-linka2 pt-4 text-drobne leading-relaxed text-tlum2">
               Budoucí scénář se nikdy nepíše jako jistota.
             </p>
           </Karta>
           <Karta className="p-5 sm:p-6">
-            <h3 className="podnadpis mb-4 text-[15px]">Dáváme přednost</h3>
+            <h3 className="podnadpis mb-4 text-zaklad">Dáváme přednost</h3>
             <Seznam polozky={PREFEROVANE} znak="✓" barva="text-[#7fdcac]" />
           </Karta>
         </div>
@@ -277,7 +277,7 @@ export default function Metodika() {
               <div className="mb-3">
                 <OdznakTypu typ={t} />
               </div>
-              <p className="text-[12.5px] leading-relaxed text-tlum">
+              <p className="text-drobne leading-relaxed text-tlum">
                 {{
                   fakt: "Doloženo zdrojem uvedeným u záznamu.",
                   odhad: "Analytická interpretace dostupných informací. Není to fakt ani předpověď.",
@@ -292,8 +292,8 @@ export default function Metodika() {
 
       <Obsah>
         <Karta className="p-5 sm:p-6">
-          <h2 className="podnadpis mb-3 text-[16px]">Role automatizace</h2>
-          <div className="max-w-[46rem] space-y-3 text-[13.5px] leading-relaxed text-tlum">
+          <h2 className="podnadpis mb-3 text-vetsi">Role automatizace</h2>
+          <div className="max-w-[46rem] space-y-3 text-male leading-relaxed text-tlum">
             <p>
               Sběr běží automaticky každou hodinu. Automat ale nic nezveřejňuje: ukládá
               kandidáty do fronty ke kontrole. Na web se dostane jen záznam, který prošel

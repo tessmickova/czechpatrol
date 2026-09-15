@@ -35,13 +35,13 @@ export default function Zeme() {
               >
                 <span className="flex items-center gap-2.5">
                   <Vlajka kod={z.kodZeme} />
-                  <span className="text-[17px] font-bold text-inkoust">{z.zeme}</span>
+                  <span className="text-vetsi font-bold text-inkoust">{z.zeme}</span>
                 </span>
                 <span className="flex items-baseline gap-2">
-                  <span className="cislice text-[32px] font-bold leading-none text-inkoust">{z.pripady}</span>
-                  <span className="text-[13px] text-tlum">{sklon(z.pripady, "případ", "případy", "případů")} od roku 2014</span>
+                  <span className="cislice text-cislo-l font-bold leading-none text-inkoust">{z.pripady}</span>
+                  <span className="text-male text-tlum">{sklon(z.pripady, "případ", "případy", "případů")} od roku 2014</span>
                 </span>
-                <span className="mt-auto flex flex-wrap items-center gap-x-2.5 gap-y-1 text-[12.5px]">
+                <span className="mt-auto flex flex-wrap items-center gap-x-2.5 gap-y-1 text-drobne">
                   {z.nejvyssi && t ? (
                     <>
                       <span aria-hidden className={`h-[8px] w-[8px] rounded-full ${t.tecka}`} />
@@ -58,7 +58,7 @@ export default function Zeme() {
         })}
       </ul>
 
-      <p className="mt-8 text-[13px] leading-relaxed text-tlum2">
+      <p className="mt-8 text-male leading-relaxed text-tlum2">
         Počítají se jen případy, tedy skutečné události. Pokračování případu, úřední opatření ani prohlášení
         číslo nezvyšují. Země bez záznamu neznamená klid — znamená, že jsme odtud nic nedoložili.
       </p>

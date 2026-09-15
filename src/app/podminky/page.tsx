@@ -16,8 +16,8 @@ function Oddil({ cislo, nadpis, children }: { cislo: string; nadpis: string; chi
     <section className="grid gap-3 border-t border-linka py-7 md:grid-cols-[120px_minmax(0,1fr)]">
       <div className="cislice stitek pt-1">{cislo}</div>
       <div>
-        <h2 className="podnadpis text-[19px]">{nadpis}</h2>
-        <div className="mt-3 space-y-3 text-[15px] leading-relaxed text-tlum [&_b]:font-semibold [&_b]:text-inkoust">{children}</div>
+        <h2 className="podnadpis text-velke">{nadpis}</h2>
+        <div className="mt-3 space-y-3 text-zaklad leading-relaxed text-tlum [&_b]:font-semibold [&_b]:text-inkoust">{children}</div>
       </div>
     </section>
   );
@@ -36,7 +36,7 @@ export default function PodminkyStranka() {
       <Obsah>
         <Karta odstin="pisek" className="p-6">
           <div className="stitek mb-2 !text-jantar">Nejdůležitější věta</div>
-          <p className="text-[17px] leading-relaxed text-inkoust">
+          <p className="text-vetsi leading-relaxed text-inkoust">
             CzechPatrol není úřední zdroj ani varovný systém. V krizi se řiďte pokyny státních orgánů
             a složek integrovaného záchranného systému, ne tímto webem.
           </p>
@@ -86,7 +86,7 @@ export default function PodminkyStranka() {
           </Oddil>
 
           <Oddil cislo="09" nadpis="Obsah a licence">
-            <p>Kód projektu je veřejný na GitHubu. Data událostí uvádějí zdroje; citované texty patří jejich autorům. Přehled můžete citovat s odkazem na zdroj.</p>
+            <p>Data událostí uvádějí zdroje; citované texty patří jejich autorům. Přehled můžete citovat s odkazem na zdroj.</p>
           </Oddil>
 
           <Oddil cislo="10" nadpis="Právo a spory">

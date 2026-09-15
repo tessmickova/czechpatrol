@@ -28,7 +28,7 @@ export function KontrolaPokryti() {
     <section aria-labelledby="pokryti-nadpis" className="space-y-5">
       <div>
         <h2 id="pokryti-nadpis" className="titul-mensi">Co o kterém stavu můžeme vědět</h2>
-        <p className="mt-2 max-w-[52ch] text-[15px] leading-relaxed text-tlum">
+        <p className="mt-2 max-w-[52ch] text-zaklad leading-relaxed text-tlum">
           Sledujeme {s.celkem} úředních stavů. Doložit, že opatření neplatí, jde jen z úplného
           registru — takový máme u <b className="font-semibold text-inkoust">{s.uplne}</b> z nich.
           U zbytku umíme spolehlivě zachytit vyhlášení, ale ne jeho nepřítomnost.
@@ -45,16 +45,16 @@ export function KontrolaPokryti() {
               {moje.map((r) => (
                 <li key={`${sk}-${r.klic}`} className="border-b border-linka2 px-3 py-2.5 last:border-b-0">
                   <div className="flex flex-wrap items-baseline justify-between gap-x-3 gap-y-1">
-                    <span className="text-[14.5px] font-semibold text-inkoust">{r.nazev}</span>
+                    <span className="text-zaklad font-semibold text-inkoust">{r.nazev}</span>
                     <Odznak ton={TON_STUPNE[r.stupen]}>{STUPNE[r.stupen].nazev.toLowerCase()}</Odznak>
                   </div>
-                  <p className="mt-1 text-[13.5px] leading-snug text-tlum">
+                  <p className="mt-1 text-male leading-snug text-tlum">
                     {r.zdroje.length
                       ? `Čteme: ${r.zdroje.map((z) => z.nazev).join(", ")}.`
                       : "Automaticky čitelný zdroj zatím nemáme."}
                   </p>
                   {r.stupen !== "uplne" && r.chybi && (
-                    <p className="mt-1 text-[13px] leading-snug text-tlum2">
+                    <p className="mt-1 text-male leading-snug text-tlum2">
                       K doložení, že opatření neplatí, by byl potřeba: {r.chybi.replace(/\.$/, "")}.
                     </p>
                   )}

@@ -28,7 +28,7 @@ export function OdznakNove({ kdy, hodin = OKNO_HODIN }: { kdy: string; hodin?: n
 
   if (!cerstve) return null;
   return (
-    <span className="inline-flex shrink-0 items-center gap-1.5 rounded-full bg-akcent px-2 py-[3px] text-[10.5px] font-bold uppercase leading-none tracking-[0.1em] text-papir">
+    <span className="inline-flex shrink-0 items-center gap-1.5 rounded-full bg-akcent px-2 py-[3px] text-mikro font-bold uppercase leading-none tracking-[0.1em] text-papir">
       <span aria-hidden className="h-[5px] w-[5px] rounded-full bg-papir" />
       nové
     </span>

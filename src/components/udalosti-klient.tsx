@@ -160,7 +160,7 @@ function Cip({ aktivni, onClick, children, title }: { aktivni: boolean; onClick:
       onClick={onClick}
       aria-pressed={aktivni}
       title={title}
-      className={`inline-flex min-h-[36px] items-center gap-1.5 rounded-full px-3 text-[13px] font-semibold transition-colors ${
+      className={`inline-flex min-h-[36px] items-center gap-1.5 rounded-full px-3 text-male font-semibold transition-colors ${
         aktivni ? "border border-akcent/60 bg-akcent/15 text-akcent-svetla" : "border border-transparent text-tlum hover:bg-plocha2 hover:text-inkoust"
       }`}
     >
@@ -286,11 +286,11 @@ export function UdalostiKlient({ zaznamy, neprosle, kandidati = [] }: { zaznamy:
                   akt ? "border-akcent/60 bg-akcent/15 text-inkoust" : "border-transparent text-tlum hover:bg-plocha2 hover:text-inkoust"
                 }`}
               >
-                <span className="flex items-center gap-2 text-[13.5px] font-bold leading-tight">
+                <span className="flex items-center gap-2 text-male font-bold leading-tight">
                   {z.nazev}
-                  <span className={`cislice rounded-full px-1.5 py-[1px] text-[11px] ${akt ? "bg-akcent/25 text-akcent-svetla" : "bg-plocha2 text-tlum2"}`}>{n}</span>
+                  <span className={`cislice rounded-full px-1.5 py-[1px] text-mikro ${akt ? "bg-akcent/25 text-akcent-svetla" : "bg-plocha2 text-tlum2"}`}>{n}</span>
                 </span>
-                <span className="text-[11.5px] leading-tight text-tlum2">{z.popis}</span>
+                <span className="text-mikro leading-tight text-tlum2">{z.popis}</span>
               </button>
             );
           })}
@@ -317,11 +317,11 @@ export function UdalostiKlient({ zaznamy, neprosle, kandidati = [] }: { zaznamy:
               type="button"
               onClick={() => setPokrocile((x) => !x)}
               aria-expanded={pokrocile || maPokrocile}
-              className="ml-auto inline-flex min-h-[36px] items-center gap-1.5 rounded-full border border-linka px-3 text-[13px] font-semibold text-tlum transition-colors hover:border-akcent hover:text-inkoust"
+              className="ml-auto inline-flex min-h-[36px] items-center gap-1.5 rounded-full border border-linka px-3 text-male font-semibold text-tlum transition-colors hover:border-akcent hover:text-inkoust"
             >
               <Ikona nazev="lupa" velikost={13} tah={2} />
               Země, téma a další
-              {pocetUpresneni > 0 && <span className="cislice rounded-full bg-akcent/20 px-1.5 text-[11px] text-akcent-svetla">{pocetUpresneni}</span>}
+              {pocetUpresneni > 0 && <span className="cislice rounded-full bg-akcent/20 px-1.5 text-mikro text-akcent-svetla">{pocetUpresneni}</span>}
               <Ikona nazev="dolu" velikost={12} tah={2} trida={`transition-transform ${pokrocile || maPokrocile ? "rotate-180" : ""}`} />
             </button>
           </div>
@@ -337,7 +337,7 @@ export function UdalostiKlient({ zaznamy, neprosle, kandidati = [] }: { zaznamy:
                   </Cip>
                 ))}
                 {zeme.length > 8 && (
-                  <button type="button" onClick={() => setVsechnyZeme((x) => !x)} className="min-h-[36px] px-2 text-[13px] text-tlum underline underline-offset-4 hover:text-inkoust">
+                  <button type="button" onClick={() => setVsechnyZeme((x) => !x)} className="min-h-[36px] px-2 text-male text-tlum underline underline-offset-4 hover:text-inkoust">
                     {vsechnyZeme ? "méně zemí" : `+ ${zeme.length - 8} ${sklon(zeme.length - 8, "země", "země", "zemí")}`}
                   </button>
                 )}
@@ -379,17 +379,17 @@ export function UdalostiKlient({ zaznamy, neprosle, kandidati = [] }: { zaznamy:
         {aktivni.length > 0 && (
           <div className="mt-3 flex flex-wrap items-center gap-1.5" aria-label="Aktivní filtry">
             {aktivni.map((a) => (
-              <button key={a.text} type="button" onClick={a.zrus} className="inline-flex min-h-[32px] items-center gap-1.5 rounded-full border border-linka px-2.5 text-[12.5px] text-inkoust transition-colors hover:border-akcent">
+              <button key={a.text} type="button" onClick={a.zrus} className="inline-flex min-h-[32px] items-center gap-1.5 rounded-full border border-linka px-2.5 text-drobne text-inkoust transition-colors hover:border-akcent">
                 {a.text} <Ikona nazev="krizek" velikost={10} tah={2.4} /><span className="sr-only">zrušit filtr</span>
               </button>
             ))}
-            <button type="button" onClick={() => zmen({ ...VYCHOZI, detail: f.detail })} className="ml-1 min-h-[32px] text-[13px] text-tlum underline underline-offset-4 hover:text-inkoust">
+            <button type="button" onClick={() => zmen({ ...VYCHOZI, detail: f.detail })} className="ml-1 min-h-[32px] text-male text-tlum underline underline-offset-4 hover:text-inkoust">
               Zrušit vše
             </button>
           </div>
         )}
 
-        <p aria-live="polite" className="mt-3 mb-2 text-[13px] text-tlum">
+        <p aria-live="polite" className="mt-3 mb-2 text-male text-tlum">
           {vysledek.length === 0
             ? "Žádný záznam neodpovídá filtru."
             : f.zalozka === "overene"
@@ -413,7 +413,7 @@ export function UdalostiKlient({ zaznamy, neprosle, kandidati = [] }: { zaznamy:
                 <Fragment key={r.typ === "zaznam" ? r.z.id : r.typ === "neproslo" ? `n-${r.n.id}` : r.k.id}>
                   {novyRok && (
                     <li className="mt-3 mb-1 flex items-center gap-3">
-                      <span className="cislice text-[15px] font-bold text-inkoust">{rok}</span>
+                      <span className="cislice text-zaklad font-bold text-inkoust">{rok}</span>
                       <span className="stitek">{vysledek.filter((x) => x.kdy.slice(0, 4) === rok).length} {sklon(vysledek.filter((x) => x.kdy.slice(0, 4) === rok).length, "záznam", "záznamy", "záznamů")}</span>
                     </li>
                   )}
@@ -536,10 +536,10 @@ function RadekNeprosle({ n }: { n: Nepotvrzene }) {
         titulek: <span className="text-tlum">{n.nazev}</span>,
       }}
       detail={
-        <div className="space-y-3 pt-1 text-[14px] leading-relaxed">
+        <div className="space-y-3 pt-1 text-zaklad leading-relaxed">
           <div><div className="stitek mb-1">Co se původně zdálo</div><p className="text-tlum">{n.puvodne}</p></div>
           <div><div className="stitek mb-1">Co ověření ukázalo</div><p className="text-inkoust">{n.overeni}</p></div>
-          <p className="text-[12.5px] text-tlum2">Do žádného počtu ani hodnocení nevstupuje.</p>
+          <p className="text-drobne text-tlum2">Do žádného počtu ani hodnocení nevstupuje.</p>
           <SeznamZdroju zdroje={n.zdroje} husty />
         </div>
       }
@@ -575,18 +575,18 @@ function RadekKandidata({ k }: { k: Kandidat }) {
         ].filter(Boolean),
         titulek: k.titulek,
         znacky: (
-          <span className="text-[12px] text-tlum2">
+          <span className="text-drobne text-tlum2">
             zdroj: {k.zdroj.nazev}{k.zdroj.primarni ? " (úřední)" : ""}
             {k.kategorie.length ? ` · ${k.kategorie.map((x) => KATEGORIE[x as Kategorie]?.nazev ?? x).join(", ")}` : ""}
           </span>
         ),
       }}
       detail={
-        <div className="space-y-2 pt-1 text-[14px] leading-relaxed">
+        <div className="space-y-2 pt-1 text-zaklad leading-relaxed">
           {k.shrnuti && <p className="text-tlum">{k.shrnuti}</p>}
-          {k.titulek !== k.titulekPuvodni && <p className="text-[12.5px] text-tlum2">Původní titulek: {k.titulekPuvodni}</p>}
+          {k.titulek !== k.titulekPuvodni && <p className="text-drobne text-tlum2">Původní titulek: {k.titulekPuvodni}</p>}
           <p><a href={k.zdroj.url} target="_blank" rel="noopener noreferrer" className="odkaz break-all">{k.zdroj.url}</a></p>
-          <p className="text-[12.5px] text-tlum2">Zachyceno {datumPraha(k.zachyceno)} hodinovým sběrem. Není to ověřený záznam: závažnost ani jistota nejsou stanovené a do počtů nevstupuje. Po lidské kontrole se buď stane záznamem, nebo po třech týdnech zmizí.</p>
+          <p className="text-drobne text-tlum2">Zachyceno {datumPraha(k.zachyceno)} hodinovým sběrem. Není to ověřený záznam: závažnost ani jistota nejsou stanovené a do počtů nevstupuje. Po lidské kontrole se buď stane záznamem, nebo po třech týdnech zmizí.</p>
         </div>
       }
     />

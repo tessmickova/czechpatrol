@@ -2,7 +2,7 @@ import { JE_UKAZKA } from "@/config/web";
 import type {
   Odmitnuty,
   Archiv, CelkovyStav, HybridniTlak, Incident, Kampan, Kandidat, Kategorie, NatoPolozka, Oprava, PravniStav,
-  Nepotvrzene, Overovana, Provoz, Puvodce, RuskoStav, Svet, TydenniHodnoceni, Uroven, Vystraha, VystrahaSoubor, Watchlist,
+  Nepotvrzene, Overovana, Provoz, Puvodce, RuskoStav, Svet, Tip, TydenniHodnoceni, Uroven, Vystraha, VystrahaSoubor, Watchlist,
 } from "./typy";
 import { PORADI_KATEGORII } from "./kategorie";
 import { UROVNE } from "./skala";
@@ -13,6 +13,7 @@ import ostryPravni from "../../data/pravni-stav.json";
 import ostreNato from "../../data/nato.json";
 import ostryProvoz from "../../data/provoz.json";
 import souborVystrahy from "../../data/vystraha.json";
+import ostreTipy from "../../data/tipy.json";
 import ostryHybridni from "../../data/hybridni-tlak.json";
 import ostreTydny from "../../data/tydny.json";
 import ostreRusko from "../../data/rusko.json";
@@ -135,6 +136,17 @@ export function vystraha(): Vystraha | null {
   if (!v.overeno || !v.overil || !maZdroje) return null;
   if (v.platiDo && new Date(v.platiDo).getTime() < Date.now()) return null;
   return v;
+}
+
+/**
+ * Tipy k přípravě. Ven jde jen tip s doloženým zdrojem a s platností —
+ * stejné pravidlo jako u záznamů. Nejnovější první.
+ */
+export function tipy(ted = Date.now()): Tip[] {
+  return jako<Tip[]>(ostreTipy)
+    .filter((t) => (t.zdroje ?? []).some((z) => /^https?:\/\//.test(z.url ?? "")))
+    .filter((t) => !t.platiDo || new Date(t.platiDo).getTime() > ted)
+    .sort((a, b) => b.kdy.localeCompare(a.kdy));
 }
 
 export function hybridniTlak(): HybridniTlak {

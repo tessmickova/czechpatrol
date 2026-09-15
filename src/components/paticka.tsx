@@ -32,7 +32,7 @@ function Jazyky() {
   return (
     <nav aria-label={t("Jazyky")} className="mt-8 border-t border-white/10 pt-6">
       <div className="stitek-tmavy mb-3 text-noc-tlum/70">{t("Jiné jazyky")} / Other languages</div>
-      <ul className="flex flex-wrap gap-x-4 gap-y-2 text-[13.5px]">
+      <ul className="flex flex-wrap gap-x-4 gap-y-2 text-male">
         {JAZYKY.map((j) => (
           <li key={j.kod}>
             <Odkaz href={`/${j.kod}/`} hrefLang={j.kod} className="text-noc-tlum transition-colors hover:text-noc-text">
@@ -57,10 +57,10 @@ export function Paticka() {
         <div className="grid gap-10 md:grid-cols-[minmax(0,1.4fr)_repeat(3,minmax(0,1fr))]">
           <div>
             <Logo velikost={32} pismo={17} tmave />
-            <p className="mt-3 max-w-[38ch] text-[14px] leading-relaxed text-noc-tlum">
+            <p className="mt-3 max-w-[38ch] text-zaklad leading-relaxed text-noc-tlum">
               {t("Nezávislý přehled bezpečnostních událostí a změn, které mohou mít dopad na lidi v Česku. Není to úřední zdroj ani varovný systém. V nouzi volejte 112.")}
             </p>
-            <p className="mt-3 text-[13px] text-noc-tlum/80">
+            <p className="mt-3 text-male text-noc-tlum/80">
               {t("Metodika revidována")} {datum(METODIKA_REVIDOVANA)}
               {KOMUNITA.github && (
                 <>
@@ -73,7 +73,7 @@ export function Paticka() {
           {SLOUPCE.map((s) => (
             <nav key={t(s.nadpis)} aria-label={t(s.nadpis)}>
               <div className="stitek-tmavy mb-3 text-noc-tlum/70">{t(s.nadpis)}</div>
-              <ul className="space-y-2 text-[14px]">
+              <ul className="space-y-2 text-zaklad">
                 {s.odkazy.map(([href, label]) => (
                   <li key={href}><Odkaz href={href} className="text-noc-tlum transition-colors hover:text-noc-text">{t(label)}</Odkaz></li>
                 ))}

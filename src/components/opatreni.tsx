@@ -49,13 +49,13 @@ function Radek({
     <li>
       <details className="group">
         <summary className="flex min-h-[44px] cursor-pointer flex-wrap items-center gap-x-3 gap-y-1 border-b border-linka2 py-2.5 hover:bg-plocha">
-          <span className="min-w-[200px] flex-1 text-[15px] leading-snug">
+          <span className="min-w-[200px] flex-1 text-zaklad leading-snug">
             <span className="font-semibold text-inkoust">{co}</span>
             <span className="text-tlum">: {hodnota}</span>
           </span>
           <span className="ml-auto flex shrink-0 items-center gap-3">
             {odznak && (
-              <span className={`inline-flex items-center gap-1.5 rounded-[12px] border px-2 py-1 text-[12.5px] font-semibold ${v.tridy}`}>
+              <span className={`inline-flex items-center gap-1.5 rounded-[12px] border px-2 py-1 text-drobne font-semibold ${v.tridy}`}>
                 <Ikona nazev={v.ikona} velikost={12} tah={2.2} /> {v.slovo}
               </span>
             )}
@@ -63,7 +63,7 @@ function Radek({
             <span aria-hidden className="text-tlum2 transition-transform group-open:rotate-180"><Ikona nazev="dolu" velikost={13} tah={2} /></span>
           </span>
         </summary>
-        <div className="space-y-3 border-b border-linka2 py-3 pl-1 text-[14px] leading-relaxed text-tlum">
+        <div className="space-y-3 border-b border-linka2 py-3 pl-1 text-zaklad leading-relaxed text-tlum">
           <p>{vysvetleni}</p>
           {prvni && prvni.length > 0 && (
             <div>
@@ -85,7 +85,7 @@ export function Opatreni({
     <div className="grid gap-8 lg:grid-cols-2">
       <div>
         <h3 className="stitek mb-1">Oficiální opatření v ČR a NATO</h3>
-        <p className="mb-2 text-[13.5px] text-tlum">Právní stav podle úředních sbírek a oznámení. Změna nenastává sama od sebe — vyhlašuje ji vláda, Parlament nebo Aliance.</p>
+        <p className="mb-2 text-male text-tlum">Právní stav podle úředních sbírek a oznámení. Změna nenastává sama od sebe — vyhlašuje ji vláda, Parlament nebo Aliance.</p>
         <ul>
           {pravni.map((p) => {
             const v = VETY_PRAVNI[p.klic] ?? { co: p.nazev, ano: "platí", ne: "není vyhlášeno" };
@@ -103,7 +103,7 @@ export function Opatreni({
       </div>
       <div>
         <h3 className="stitek mb-1">Dopad na běžný život</h3>
-        <p className="mb-2 text-[13.5px] text-tlum">Služby, kterých by se změna dotkla. Kde chybí veřejný zdroj, je to napsané — nedopočítáváme.</p>
+        <p className="mb-2 text-male text-tlum">Služby, kterých by se změna dotkla. Kde chybí veřejný zdroj, je to napsané — nedopočítáváme.</p>
         <ul>
           {provoz.map((p) => (
             <Radek

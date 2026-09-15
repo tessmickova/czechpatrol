@@ -27,45 +27,45 @@ export default function Podporit() {
 
       <section className="nalet mt-16 border-t border-linka pt-12 sm:mt-20">
         <h2 className="titul-mensi">Co provoz stojí</h2>
-        <p className="mt-1 text-[13.5px] text-tlum">Odhad podle ceníků služeb k {naklady.aktualizovano}. Skutečné faktury se doplní, až budou.</p>
-        <table className="mt-3 w-full text-left text-[14px]">
+        <p className="mt-1 text-male text-tlum">Odhad podle ceníků služeb k {naklady.aktualizovano}. Skutečné faktury se doplní, až budou.</p>
+        <table className="mt-3 w-full text-left text-zaklad">
           <tbody>
             {polozky.map((x) => (
               <tr key={x.nazev} className="border-b border-linka2">
-                <td className="py-2 pr-3"><span className="font-semibold text-inkoust">{x.nazev}</span><span className="block text-[12.5px] text-tlum2">{x.poznamka}</span></td>
+                <td className="py-2 pr-3"><span className="font-semibold text-inkoust">{x.nazev}</span><span className="block text-drobne text-tlum2">{x.poznamka}</span></td>
                 <td className="cislice py-2 text-right text-inkoust">{x.mesicneKc} Kč</td>
               </tr>
             ))}
             <tr><td className="py-2 font-semibold text-inkoust">Měsíčně celkem</td><td className="cislice py-2 text-right font-bold text-inkoust">{celkem} Kč</td></tr>
           </tbody>
         </table>
-        <p className="mt-2 text-[12.5px] text-tlum2">Lidská práce (ověřování, hodnocení, opravy) v tabulce není — dělá se zdarma. Vstupy jsou v souboru docs/naklady.json.</p>
+        <p className="mt-2 text-drobne text-tlum2">Lidská práce (ověřování, hodnocení, opravy) v tabulce není — dělá se zdarma. Vstupy jsou v souboru docs/naklady.json.</p>
       </section>
 
       <section className="nalet mt-14 border-t border-linka pt-10">
         <h2 className="titul-mensi">Jak podpořit</h2>
         {BUY_ME_A_COFFEE_URL ? (
-          <a href={BUY_ME_A_COFFEE_URL} target="_blank" rel="noopener noreferrer" className="mt-3 inline-flex min-h-[44px] items-center rounded-[18px] border border-akcent/60 bg-akcent/15 px-5 text-[14px] font-bold text-akcent-svetla hover:bg-akcent/25">
+          <a href={BUY_ME_A_COFFEE_URL} target="_blank" rel="noopener noreferrer" className="mt-3 inline-flex min-h-[44px] items-center rounded-[18px] border border-akcent/60 bg-akcent/15 px-5 text-zaklad font-bold text-akcent-svetla hover:bg-akcent/25">
             Jednorázově přispět
           </a>
         ) : (
-          <p className="mt-2 text-[15px] leading-relaxed text-tlum">
+          <p className="mt-2 text-zaklad leading-relaxed text-tlum">
             Platební adresa zatím není nastavená, takže tu není žádné tlačítko. Až bude, objeví se tady. Do té doby pomůže nejvíc
-            {" "}<a href={KOMUNITA.diskuse} target="_blank" rel="noopener noreferrer" className="odkaz">hlášení chyb a chybějících událostí</a>.
+             hlášení chyb a chybějících událostí.
           </p>
         )}
       </section>
 
       <section className="nalet mt-14 border-t border-linka pt-10">
         <h2 className="titul-mensi">Co uvažujeme do budoucna</h2>
-        <p className="mt-1 text-[13.5px] text-tlum">Záměr, ne nabídka. Nic z toho se teď nedá koupit.</p>
-        <ul className="mt-3 space-y-2 text-[14.5px] leading-relaxed text-tlum">
+        <p className="mt-1 text-male text-tlum">Záměr, ne nabídka. Nic z toho se teď nedá koupit.</p>
+        <ul className="mt-3 space-y-2 text-zaklad leading-relaxed text-tlum">
           <li><b className="font-semibold text-inkoust">Plus</b> — pohodlí navíc: upozornění na míru, export, archiv. Pracovní hypotéza ceny {naklady.plus.mesicneKc} Kč měsíčně nebo {naklady.plus.rocneKc} Kč ročně; ověří se až s prvními zájemci. Bezpečnostní informace tam nikdy nebudou zamčené.</li>
           <li><b className="font-semibold text-inkoust">Pilot pro organizace</b> — obce, školy, firmy: společný přehled a kontakt na správce. Až po ověření zájmu.</li>
         </ul>
       </section>
 
-      <p className="mt-8 text-[13.5px] text-tlum">Proč to takhle: <Link href="/o-projektu/" className="odkaz">O projektu</Link>.</p>
+      <p className="mt-8 text-male text-tlum">Proč to takhle: <Link href="/o-projektu/" className="odkaz">O projektu</Link>.</p>
     </div>
   );
 }

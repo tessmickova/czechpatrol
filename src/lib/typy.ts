@@ -666,3 +666,29 @@ export interface VystrahaSoubor {
   /** Co kdy platilo. Výstraha nikdy nezmizí beze stopy. */
   archiv: (Vystraha & { sundano: string; procSundano: string })[];
 }
+
+/* ---------------- tipy k přípravě ---------------- */
+
+/**
+ * Praktický tip k přípravě. Krátce a k věci: co se změnilo a co s tím může
+ * člověk udělat dnes.
+ *
+ * Není to rada, co dělat v krizi — od toho jsou úřady. Je to popis něčeho,
+ * co existuje a co se vyplatí vědět dřív, než to bude potřeba: že rozhlas
+ * zkoušel varovný systém, že se v paneláku hodí vědět, kde je uzávěr vody.
+ *
+ * Každý tip stojí na doloženém zdroji. Bez zdroje se nezobrazí — tip bez
+ * doložení je fáma s ikonou.
+ */
+export interface Tip {
+  klic: string;
+  /** Co se stalo nebo co existuje. Jedna věta. */
+  nadpis: string;
+  /** Dvě až čtyři věty. Co to je a co s tím člověk může udělat. */
+  text: string;
+  /** Kdy to začalo platit. Absolutní datum. */
+  kdy: string;
+  zdroje: Zdroj[];
+  /** Kdy tip zmizí z přehledu. null = platí, dokud ho někdo nesundá. */
+  platiDo: string | null;
+}

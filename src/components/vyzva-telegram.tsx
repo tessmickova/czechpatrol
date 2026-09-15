@@ -32,7 +32,7 @@ export function VyzvaTelegram() {
             <span className="stitek-znacky">Urgentní upozornění</span>
           </div>
           <h2 className="titul-mensi mt-4 text-noc-text">Upozornění na nové události</h2>
-          <p className="mt-3 max-w-[46ch] text-[16px] leading-relaxed text-noc-tlum">
+          <p className="mt-3 max-w-[46ch] text-vetsi leading-relaxed text-noc-tlum">
             <strong className="font-bold text-noc-text">
               Kanál posílá zprávu jen tehdy, když se změní něco, kvůli čemu byste jednali jinak.
             </strong>{" "}
@@ -46,7 +46,7 @@ export function VyzvaTelegram() {
                 Odebírat na Telegramu
               </Tlacitko>
             ) : (
-              <span className="inline-flex min-h-[48px] items-center gap-2.5 rounded-full border border-dashed border-linka px-6 text-[14.5px] font-semibold text-noc-tlum">
+              <span className="inline-flex min-h-[48px] items-center gap-2.5 rounded-full border border-dashed border-linka px-6 text-zaklad font-semibold text-noc-tlum">
                 <ZnackaKanalu znacka="telegram" velikost={20} tlumena /> Telegram připravujeme
               </span>
             )}
@@ -72,7 +72,7 @@ export function VyzvaTelegram() {
           ].map((b) => (
             <li key={b.text} className="flex items-start gap-3 rounded-[18px] border border-linka px-3.5 py-3">
               <span className="grid h-8 w-8 shrink-0 place-items-center rounded-full bg-[rgb(255_255_255/0.06)] text-akcent"><Ikona nazev={b.ikona} velikost={15} tah={1.9} /></span>
-              <span className="text-[13.5px] leading-relaxed text-noc-tlum">{b.text}</span>
+              <span className="text-male leading-relaxed text-noc-tlum">{b.text}</span>
             </li>
           ))}
         </ul>

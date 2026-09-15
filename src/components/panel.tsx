@@ -58,12 +58,12 @@ export function Panel({
             <span className={`stitek ${tmavy ? "!text-noc-tlum" : ""}`}>{kod}</span>
           </div>
           <h2
-            className={`podnadpis text-[19px] sm:text-[21px] ${tmavy ? "text-noc-text" : ""}`}
+            className={`podnadpis text-velke sm:text-velke ${tmavy ? "text-noc-text" : ""}`}
           >
             {nadpis}
           </h2>
           {popis && (
-            <p className={`mt-1.5 max-w-[56ch] text-[14.5px] leading-snug ${tmavy ? "text-noc-tlum" : "text-tlum"}`}>
+            <p className={`mt-1.5 max-w-[56ch] text-zaklad leading-snug ${tmavy ? "text-noc-tlum" : "text-tlum"}`}>
               {popis}
             </p>
           )}

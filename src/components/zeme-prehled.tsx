@@ -81,22 +81,22 @@ export function ZemePrehled({
           />
           <section aria-label="Souhrn" className="rounded-[22px] border border-linka2 bg-plocha p-5 sm:p-6">
             <h3 className="titul-mensi">Co o tom víme</h3>
-            <dl className="mt-4 grid grid-cols-2 gap-x-5 gap-y-4 text-[14px]">
+            <dl className="mt-4 grid grid-cols-2 gap-x-5 gap-y-4 text-zaklad">
               <div>
                 <dt className="stitek">Případů od roku 2014</dt>
-                <dd className="cislice mt-1 text-[26px] font-bold leading-none text-inkoust">{pripady.length}</dd>
+                <dd className="cislice mt-1 text-cislo font-bold leading-none text-inkoust">{pripady.length}</dd>
               </div>
               <div>
                 <dt className="stitek">S potvrzeným pachatelem</dt>
-                <dd className="cislice mt-1 text-[26px] font-bold leading-none text-inkoust">{potvrzeno}</dd>
+                <dd className="cislice mt-1 text-cislo font-bold leading-none text-inkoust">{potvrzeno}</dd>
               </div>
               <div>
                 <dt className="stitek">S úředním zdrojem</dt>
-                <dd className="cislice mt-1 text-[26px] font-bold leading-none text-inkoust">{sUrednim}</dd>
+                <dd className="cislice mt-1 text-cislo font-bold leading-none text-inkoust">{sUrednim}</dd>
               </div>
               <div>
                 <dt className="stitek">Všech záznamů od 2014</dt>
-                <dd className="cislice mt-1 text-[26px] font-bold leading-none text-inkoust">{zaznamy.length}</dd>
+                <dd className="cislice mt-1 text-cislo font-bold leading-none text-inkoust">{zaznamy.length}</dd>
               </div>
             </dl>
             {kategorie.length > 0 && (
@@ -107,7 +107,7 @@ export function ZemePrehled({
                     <li key={k}>
                       <Link
                         href={`/udalosti/?zeme=${kodZeme}&tema=${k}`}
-                        className="inline-flex rounded-full border border-linka2 px-3 py-1.5 text-[12.5px] text-tlum transition-colors hover:border-akcent hover:text-inkoust"
+                        className="inline-flex rounded-full border border-linka2 px-3 py-1.5 text-drobne text-tlum transition-colors hover:border-akcent hover:text-inkoust"
                       >
                         {KATEGORIE[k].nazev}
                       </Link>

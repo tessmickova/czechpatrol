@@ -47,7 +47,7 @@ export function Navigace() {
               key={o.href}
               href={o.href}
               aria-current={aktivni(o.href) ? "page" : undefined}
-              className={`rounded-full px-3.5 py-2 text-[13px] font-semibold uppercase tracking-[0.06em] transition-colors ${
+              className={`rounded-full px-3.5 py-2 text-male font-semibold uppercase tracking-[0.06em] transition-colors ${
                 aktivni(o.href) ? "bg-[rgb(255_255_255/0.12)] text-inkoust" : "text-tlum hover:bg-[rgb(255_255_255/0.07)] hover:text-inkoust"
               }`}
               style={{ fontFamily: "var(--font-mono)" }}
@@ -62,7 +62,7 @@ export function Navigace() {
           <Odkaz
             href="/podporit/"
             // Jediná plná plocha v hlavičce: na tmavém podkladu papír, po najetí červená.
-            className="hidden rounded-full bg-inkoust px-5 py-2.5 text-[12px] font-semibold uppercase tracking-[0.06em] text-papir transition-colors hover:bg-akcent hover:text-papir md:inline-block"
+            className="hidden rounded-full bg-inkoust px-5 py-2.5 text-drobne font-semibold uppercase tracking-[0.06em] text-papir transition-colors hover:bg-akcent hover:text-papir md:inline-block"
             style={{ fontFamily: "var(--font-mono)" }}
           >
             Podpořit

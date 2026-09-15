@@ -37,7 +37,7 @@ export function SignalySiti({ maxPolozek = 5 }: { maxPolozek?: number }) {
     <section aria-label="Signály z profilů" className="overflow-hidden rounded-[22px] border border-linka2 bg-plocha">
       <div className="flex items-center justify-between gap-2 border-b border-linka2 px-4 py-2">
         <span className="stitek">Signály z profilů</span>
-        <span className="text-[11.5px] text-tlum2">neověřeno</span>
+        <span className="text-mikro text-tlum2">neověřeno</span>
       </div>
 
       <div className="px-4 pt-3">
@@ -52,7 +52,7 @@ export function SignalySiti({ maxPolozek = 5 }: { maxPolozek?: number }) {
           const sit = k.zeSite?.sit ?? "";
           return (
             <li key={k.id} className="px-4 py-2.5">
-              <div className="flex items-center gap-2 text-[12px] text-tlum2">
+              <div className="flex items-center gap-2 text-drobne text-tlum2">
                 <Ikona nazev={IKONY_SITI[sit] ?? "komunikace"} velikost={13} tah={1.9} trida="shrink-0" />
                 <span className="truncate">{k.zdroj.nazev}</span>
                 <span aria-hidden>·</span>
@@ -62,7 +62,7 @@ export function SignalySiti({ maxPolozek = 5 }: { maxPolozek?: number }) {
                 href={k.zdroj.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="mt-1 block text-[14px] leading-snug text-inkoust hover:text-akcent-svetla"
+                className="mt-1 block text-zaklad leading-snug text-inkoust hover:text-akcent-svetla"
               >
                 {k.titulek}
               </a>

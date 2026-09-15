@@ -42,8 +42,8 @@ export default function Manipulace() {
         ].map((b) => (
           <div key={b.nadpis} className="rounded-[22px] border border-linka2 bg-plocha p-5">
             <span className="grid h-9 w-9 place-items-center rounded-full bg-plocha2 text-akcent"><Ikona nazev={b.ikona} velikost={17} tah={1.9} /></span>
-            <h2 className="mt-3 text-[15.5px] font-bold text-inkoust">{b.nadpis}</h2>
-            <p className="mt-1.5 text-[14px] leading-relaxed text-tlum">{b.text}</p>
+            <h2 className="mt-3 text-zaklad font-bold text-inkoust">{b.nadpis}</h2>
+            <p className="mt-1.5 text-zaklad leading-relaxed text-tlum">{b.text}</p>
           </div>
         ))}
       </section>
@@ -78,7 +78,7 @@ export default function Manipulace() {
         <TabulkaZemiKampani radky={zeme} nazvyZemi={nazvy} celkem={vse.length} />
       </div>
 
-      <p className="mt-10 text-[12.5px] leading-relaxed text-tlum2">
+      <p className="mt-10 text-drobne leading-relaxed text-tlum2">
         Kampaně se nepočítají mezi bezpečnostní případy — jsou to operace, ne události. Do hodnocení úrovně
         ani do počtů na úvodní straně nevstupují.
       </p>

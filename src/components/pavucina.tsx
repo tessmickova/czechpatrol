@@ -47,13 +47,13 @@ function Rozpis({ tlak }: { tlak: HybridniTlak }) {
         return (
           <li key={o.klic}>
             <span className="flex items-baseline justify-between gap-3">
-              <span className="text-[14px] text-tlum">{o.nazev}</span>
-              <span className={`shrink-0 text-[13px] font-semibold ${t ? t.text : "text-tlum2"}`}>
+              <span className="text-zaklad text-tlum">{o.nazev}</span>
+              <span className={`shrink-0 text-male font-semibold ${t ? t.text : "text-tlum2"}`}>
                 {u ? u.nazev : "bez záznamu"}
               </span>
             </span>
             <span className="mt-1 block"><Pruh uroven={o.uroven} /></span>
-            {ukazatPoznamky && o.poznamka && <span className="mt-0.5 block text-[12.5px] leading-snug text-tlum2">{o.poznamka}</span>}
+            {ukazatPoznamky && o.poznamka && <span className="mt-0.5 block text-drobne leading-snug text-tlum2">{o.poznamka}</span>}
           </li>
         );
       })}

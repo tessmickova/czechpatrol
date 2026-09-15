@@ -31,8 +31,8 @@ export function UcetKlient() {
   if (!UCTY_ZAPNUTE) {
     return (
       <Karta odstin="modra" className="p-6">
-        <h2 className="podnadpis text-[20px]">Účty připravujeme</h2>
-        <p className="mt-3 max-w-[60ch] text-[15px] leading-relaxed text-tlum">
+        <h2 className="podnadpis text-velke">Účty připravujeme</h2>
+        <p className="mt-3 max-w-[60ch] text-zaklad leading-relaxed text-tlum">
           Až budou, půjde založit účet bez jména, e-mailu i telefonu a nechat si posílat důležité
           změny na Telegram nebo WhatsApp. Do té doby funguje RSS — bez účtu a bez adresy.
         </p>
@@ -43,7 +43,7 @@ export function UcetKlient() {
     );
   }
 
-  if (nacita) return <p className="text-[15px] text-tlum">Ověřuji přihlášení…</p>;
+  if (nacita) return <p className="text-zaklad text-tlum">Ověřuji přihlášení…</p>;
   if (!ucet) return <Prihlaseni po={obnov} />;
   return <Nastaveni ucet={ucet} dostupne={dostupne} obnov={obnov} />;
 }
@@ -81,12 +81,12 @@ function Prihlaseni({ po }: { po: () => void }) {
     return (
       <Karta odstin="pisek" className="p-6">
         <div className="stitek mb-2 !text-jantar">Jednou a naposledy</div>
-        <h2 className="podnadpis text-[22px]">Uložte si obnovovací kód</h2>
-        <p className="mt-3 max-w-[60ch] text-[15px] leading-relaxed text-tlum">
+        <h2 className="podnadpis text-velke">Uložte si obnovovací kód</h2>
+        <p className="mt-3 max-w-[60ch] text-zaklad leading-relaxed text-tlum">
           Účet nemá e-mail ani telefon, takže není kam poslat „zapomenuté heslo“. Tenhle kód je
           jediná cesta k účtu z nového zařízení. Neuvidíte ho podruhé.
         </p>
-        <div className="velke-cislo mt-5 select-all break-all rounded-[22px] border border-jantar/40 bg-noc/60 px-5 py-4 text-[26px] tracking-[0.08em] text-jantar">
+        <div className="velke-cislo mt-5 select-all break-all rounded-[22px] border border-jantar/40 bg-noc/60 px-5 py-4 text-cislo tracking-[0.08em] text-jantar">
           {novyKod}
         </div>
         <button
@@ -96,7 +96,7 @@ function Prihlaseni({ po }: { po: () => void }) {
         >
           Zkopírovat
         </button>
-        <label className="mt-6 flex items-start gap-3 text-[15px] text-inkoust">
+        <label className="mt-6 flex items-start gap-3 text-zaklad text-inkoust">
           <input type="checkbox" checked={potvrzeno} onChange={(e) => setPotvrzeno(e.target.checked)} className="mt-1 h-4 w-4 accent-akcent" />
           Kód mám uložený mimo tento prohlížeč.
         </label>
@@ -111,8 +111,8 @@ function Prihlaseni({ po }: { po: () => void }) {
     <div className="grid gap-4 lg:grid-cols-2">
       <Karta odstin="modra" className="p-6">
         <div className="stitek mb-2 !text-akcent">Passkey</div>
-        <h2 className="podnadpis text-[22px]">Bez jména, bez hesla</h2>
-        <p className="mt-3 text-[15px] leading-relaxed text-tlum">
+        <h2 className="podnadpis text-velke">Bez jména, bez hesla</h2>
+        <p className="mt-3 text-zaklad leading-relaxed text-tlum">
           Účet je jen klíč v tomhle zařízení — otisk, obličej nebo PIN. Nesbíráme jméno,
           e-mail ani telefon. Ani my nevíme, kdo jste.
         </p>
@@ -130,8 +130,8 @@ function Prihlaseni({ po }: { po: () => void }) {
 
       <Karta className="p-6">
         <div className="stitek mb-2">Nové zařízení</div>
-        <h2 className="podnadpis text-[22px]">Obnovovací kód</h2>
-        <p className="mt-3 text-[15px] leading-relaxed text-tlum">
+        <h2 className="podnadpis text-velke">Obnovovací kód</h2>
+        <p className="mt-3 text-zaklad leading-relaxed text-tlum">
           Kód jste dostali při založení účtu. Přihlásí vás na novém zařízení; pak si k němu
           přidáte další passkey.
         </p>
@@ -232,9 +232,9 @@ function Nastaveni({
       <div className="space-y-4">
         <Karta odstin="modra" className="p-6">
           <div className="stitek mb-2 !text-akcent">Účet</div>
-          <div className="podnadpis text-[24px] text-akcent-svetla">{ROLE[ucet.role].nazev}</div>
-          <p className="mt-2 text-[14px] text-tlum">{ROLE[ucet.role].popis}</p>
-          <dl className="mt-5 grid grid-cols-2 gap-3 text-[14px]">
+          <div className="podnadpis text-cislo text-akcent-svetla">{ROLE[ucet.role].nazev}</div>
+          <p className="mt-2 text-zaklad text-tlum">{ROLE[ucet.role].popis}</p>
+          <dl className="mt-5 grid grid-cols-2 gap-3 text-zaklad">
             <div>
               <dt className="stitek mb-1">Identifikátor</dt>
               <dd className="cislice text-inkoust">#{ucet.id.slice(0, 8)}</dd>
@@ -278,8 +278,8 @@ function Nastaveni({
           {novyKod && (
             <div className="mt-4 rounded-[22px] border border-jantar/40 bg-jantar/10 p-4">
               <div className="stitek mb-2 !text-jantar">Nový kód — uvidíte ho jen teď</div>
-              <div className="velke-cislo select-all break-all text-[22px] tracking-[0.08em] text-jantar">{novyKod}</div>
-              <button type="button" onClick={() => setNovyKod(null)} className="mt-3 text-[13px] text-tlum underline underline-offset-4 hover:text-inkoust">Mám uloženo, skrýt</button>
+              <div className="velke-cislo select-all break-all text-velke tracking-[0.08em] text-jantar">{novyKod}</div>
+              <button type="button" onClick={() => setNovyKod(null)} className="mt-3 text-male text-tlum underline underline-offset-4 hover:text-inkoust">Mám uloženo, skrýt</button>
             </div>
           )}
         </Karta>
@@ -289,7 +289,7 @@ function Nastaveni({
           <div className="space-y-4">
             <div className="rounded-[22px] border border-linka p-4">
               <div className="flex items-center justify-between gap-3">
-                <span className="text-[15px] font-bold">Telegram</span>
+                <span className="text-zaklad font-bold">Telegram</span>
                 {ucet.telegram ? (
                   <span className="stitek-tmavy rounded-full border border-klid/40 bg-klid/10 px-2 py-1 text-klid-text">propojeno</span>
                 ) : !dostupne.telegram ? (
@@ -297,30 +297,30 @@ function Nastaveni({
                 ) : null}
               </div>
               {ucet.telegram ? (
-                <button type="button" onClick={odpojTelegram} className="mt-3 text-[13px] text-tlum underline underline-offset-4 hover:text-inkoust">
+                <button type="button" onClick={odpojTelegram} className="mt-3 text-male text-tlum underline underline-offset-4 hover:text-inkoust">
                   Odpojit
                 </button>
               ) : dostupne.telegram ? (
                 telegram ? (
-                  <div className="mt-3 space-y-2 text-[14px] text-tlum">
+                  <div className="mt-3 space-y-2 text-zaklad text-tlum">
                     <p>Otevřete bota a stiskněte <b className="font-semibold text-inkoust">Start</b>. Kód platí 15 minut.</p>
                     <a href={telegram.odkaz} target="_blank" rel="noopener noreferrer" className={TLACITKO_AKCENT}>
                       Otevřít Telegram
                     </a>
-                    <p className="cislice text-[13px] text-tlum2">nebo botovi pošlete: /start {telegram.kod}</p>
-                    <button type="button" onClick={obnov} className="text-[13px] underline underline-offset-4 hover:text-inkoust">Hotovo, zkontrolovat</button>
+                    <p className="cislice text-male text-tlum2">nebo botovi pošlete: /start {telegram.kod}</p>
+                    <button type="button" onClick={obnov} className="text-male underline underline-offset-4 hover:text-inkoust">Hotovo, zkontrolovat</button>
                   </div>
                 ) : (
                   <button type="button" onClick={propojTelegram} className={`${TLACITKO_TICHE} mt-3`}>Propojit Telegram</button>
                 )
               ) : (
-                <p className="mt-2 text-[13.5px] text-tlum">Bot ještě neběží. Až poběží, propojení je jedno kliknutí.</p>
+                <p className="mt-2 text-male text-tlum">Bot ještě neběží. Až poběží, propojení je jedno kliknutí.</p>
               )}
             </div>
 
             <div className="rounded-[22px] border border-linka p-4">
               <div className="flex items-center justify-between gap-3">
-                <span className="text-[15px] font-bold">WhatsApp</span>
+                <span className="text-zaklad font-bold">WhatsApp</span>
                 {ucet.whatsapp ? (
                   <span className="stitek-tmavy rounded-full border border-klid/40 bg-klid/10 px-2 py-1 text-klid-text">propojeno</span>
                 ) : !dostupne.whatsapp ? (
@@ -328,7 +328,7 @@ function Nastaveni({
                 ) : null}
               </div>
               {ucet.whatsapp ? (
-                <button type="button" onClick={() => api("/ja/whatsapp", { method: "DELETE" }).then(obnov)} className="mt-3 text-[13px] text-tlum underline underline-offset-4 hover:text-inkoust">
+                <button type="button" onClick={() => api("/ja/whatsapp", { method: "DELETE" }).then(obnov)} className="mt-3 text-male text-tlum underline underline-offset-4 hover:text-inkoust">
                   Odpojit a smazat číslo
                 </button>
               ) : dostupne.whatsapp ? (
@@ -338,10 +338,10 @@ function Nastaveni({
                     <input id="wa" value={whatsapp} onChange={(e) => setWhatsapp(e.target.value)} className={`${POLE} cislice`} placeholder="+420" inputMode="tel" />
                     <button type="button" onClick={ulozWhatsapp} disabled={!whatsapp.trim()} className={TLACITKO_TICHE}>Uložit</button>
                   </div>
-                  <p className="mt-2 text-[13px] text-tlum2">Číslo jde kdykoli smazat. Jediný údaj, který u WhatsAppu bez čísla nejde obejít.</p>
+                  <p className="mt-2 text-male text-tlum2">Číslo jde kdykoli smazat. Jediný údaj, který u WhatsAppu bez čísla nejde obejít.</p>
                 </div>
               ) : (
-                <p className="mt-2 text-[13.5px] text-tlum">Vyžaduje schválení Meta Business. Až bude, přibude tady pole na číslo.</p>
+                <p className="mt-2 text-male text-tlum">Vyžaduje schválení Meta Business. Až bude, přibude tady pole na číslo.</p>
               )}
             </div>
           </div>
@@ -349,7 +349,7 @@ function Nastaveni({
 
         <Karta className="border-akcent/30 p-6">
           <div className="stitek mb-2 !text-akcent-svetla">Smazání</div>
-          <p className="text-[14px] leading-relaxed text-tlum">
+          <p className="text-zaklad leading-relaxed text-tlum">
             Smaže účet, passkeye, propojené kanály i nastavení. Hned a bez zálohy.
           </p>
           <button type="button" disabled={mazu} onClick={smaz} className={`${TLACITKO_VAROVNE} mt-4`}>
@@ -361,7 +361,7 @@ function Nastaveni({
       {/* upozornění */}
       <Karta odstin="modra" className="p-6" id="upozorneni">
         <div className="stitek mb-2 !text-akcent">Upozornění</div>
-        <h2 className="podnadpis text-[22px]">Co a kdy vám má přijít</h2>
+        <h2 className="podnadpis text-velke">Co a kdy vám má přijít</h2>
         {zadnyKanal && (
           <div className="mt-4">
             <Hlaska typ="info">Zatím nemáte propojený žádný kanál. Nastavení se uloží, doručovat začneme, jakmile nějaký propojíte.</Hlaska>
@@ -394,7 +394,7 @@ function Nastaveni({
                   <Popisek pro="do">do</Popisek>
                   <input id="do" type="time" value={n.ticho.do} onChange={(e) => setN({ ...n, ticho: { ...n.ticho!, do: e.target.value } })} className={`${POLE} cislice`} />
                 </div>
-                <p className="col-span-2 text-[13px] text-tlum2">Vážné změny tiché hodiny nerespektují. Ostatní počkají do rána.</p>
+                <p className="col-span-2 text-male text-tlum2">Vážné změny tiché hodiny nerespektují. Ostatní počkají do rána.</p>
               </div>
             )}
             <Prepinac
@@ -410,7 +410,7 @@ function Nastaveni({
                   <option value="">Jen celostátní zprávy</option>
                   {KRAJE.map((k) => <option key={k} value={k}>{k}</option>)}
                 </select>
-                <p className="mt-2 text-[13px] text-tlum2">Kraj se ukládá jen k nastavení. Není z něj vidět, kde bydlíte.</p>
+                <p className="mt-2 text-male text-tlum2">Kraj se ukládá jen k nastavení. Není z něj vidět, kde bydlíte.</p>
               </div>
             )}
           </div>
@@ -425,7 +425,7 @@ function Nastaveni({
                     type="button"
                     aria-pressed={aktivni}
                     onClick={() => setN({ ...n, oblasti: aktivni ? n.oblasti.filter((x) => x !== k) : [...n.oblasti, k] })}
-                    className={`rounded-full border px-3 py-1.5 text-[13.5px] font-medium transition-colors ${
+                    className={`rounded-full border px-3 py-1.5 text-male font-medium transition-colors ${
                       aktivni ? "border-akcent/60 bg-akcent/15 text-akcent-svetla" : "border-linka text-tlum hover:border-akcent/40"
                     }`}
                   >

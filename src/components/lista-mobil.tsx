@@ -31,7 +31,7 @@ export function ListaMobil() {
                 className={`flex min-h-[52px] flex-col items-center justify-center gap-1 ${aktivni ? "text-akcent" : "text-tlum"}`}
               >
                 <Ikona nazev={p.ikona} velikost={20} />
-                <span className="text-[11px] font-semibold">{p.label}</span>
+                <span className="text-mikro font-semibold">{p.label}</span>
               </Odkaz>
             </li>
           );
@@ -39,7 +39,7 @@ export function ListaMobil() {
         <li>
           <button type="button" onClick={otevriPanel} className="flex min-h-[52px] w-full flex-col items-center justify-center gap-1 text-tlum">
             <Ikona nazev="menu" velikost={20} />
-            <span className="text-[11px] font-semibold">Menu</span>
+            <span className="text-mikro font-semibold">Menu</span>
           </button>
         </li>
       </ul>

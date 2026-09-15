@@ -76,8 +76,8 @@ export function IzsKlient() {
     <div className="grid gap-4 lg:grid-cols-[minmax(0,1.2fr)_minmax(0,1fr)]">
       <Karta odstin="modra" className="p-6">
         <div className="stitek mb-2 !text-akcent">Nová zpráva partnera</div>
-        <h2 className="podnadpis text-[22px]">Co mají čtenáři vědět</h2>
-        <p className="mt-2 text-[14px] leading-relaxed text-tlum">
+        <h2 className="podnadpis text-velke">Co mají čtenáři vědět</h2>
+        <p className="mt-2 text-zaklad leading-relaxed text-tlum">
           Věcně, bez hodnocení situace. Co se děje, kde, co mají lidé udělat, kde je úřední zdroj.
           Zpráva odejde s označením „zpráva partnera IZS“ a jménem vaší složky.
         </p>
@@ -109,7 +109,7 @@ export function IzsKlient() {
       <Karta className="p-6">
         <div className="stitek mb-3">Vaše zprávy</div>
         {zpravy.length === 0 ? (
-          <p className="text-[14px] text-tlum">Zatím žádná.</p>
+          <p className="text-zaklad text-tlum">Zatím žádná.</p>
         ) : (
           <ul className="space-y-3">
             {zpravy.map((z) => <PolozkaZpravy key={z.id} z={z} />)}
@@ -128,9 +128,9 @@ export function PolozkaZpravy({ z, akce }: { z: ZpravaIzs; akce?: React.ReactNod
         <span className={`stitek-tmavy rounded-full border px-2 py-1 ${s.tridy}`}>{s.nazev}</span>
         <span className="stitek">{z.oblast} · {datumCas(z.vytvoreno)}</span>
       </div>
-      <p className="whitespace-pre-wrap text-[14.5px] leading-relaxed text-inkoust">{z.text}</p>
+      <p className="whitespace-pre-wrap text-zaklad leading-relaxed text-inkoust">{z.text}</p>
       {z.platnostDo && <p className="stitek mt-2">platí do {datumCas(z.platnostDo)}</p>}
-      {z.poznamka && <p className="mt-2 text-[13px] text-tlum">Poznámka správce: {z.poznamka}</p>}
+      {z.poznamka && <p className="mt-2 text-male text-tlum">Poznámka správce: {z.poznamka}</p>}
       {typeof z.doruceno === "number" && z.stav === "odeslano" && (
         <p className="stitek mt-2 !text-klid-text">doručeno {z.doruceno}× </p>
       )}
