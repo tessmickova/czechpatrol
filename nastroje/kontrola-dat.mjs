@@ -15,6 +15,7 @@
 import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
+import { chybyVystrahy } from "./vystraha-pravidla.mjs";
 
 const koren = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const cti = (f) => JSON.parse(fs.readFileSync(path.join(koren, "data", f), "utf-8"));
@@ -28,6 +29,7 @@ const provoz = cti("provoz.json");
 const kandidati = fs.existsSync(path.join(koren, "data", "kandidati.json")) ? cti("kandidati.json") : [];
 const svet = fs.existsSync(path.join(koren, "data", "svet.json")) ? cti("svet.json") : null;
 const overujeme = fs.existsSync(path.join(koren, "data", "overujeme.json")) ? cti("overujeme.json") : [];
+const vystrahy = fs.existsSync(path.join(koren, "data", "vystraha.json")) ? cti("vystraha.json") : { aktivni: null, archiv: [] };
 
 const chyby = [];
 const varovani = [];
@@ -192,6 +194,23 @@ for (const o of overujeme) {
 }
 const zivych = overujeme.filter((o) => o.stav === "overujeme" && new Date(o.uzavritDo).getTime() > tedOv).length;
 if (zivych > 3) chyby.push(`právě ověřovaných je ${zivych}; nejvýš 3, jinak se z přehledu stane proud fám`);
+
+// 3c. mimořádná výstraha
+//
+// Pruh přes celou šířku na každé stránce je to nejsilnější, co web umí říct.
+// Proto se kontroluje i tady, ne jen v nástroji, kterým se vyhlašuje: mezi
+// vyhlášením a nasazením může soubor sáhnout kdokoli a cokoli.
+for (const c of chybyVystrahy(vystrahy.aktivni ?? undefined)) {
+  if (vystrahy.aktivni) chyby.push(`výstraha: ${c}`);
+}
+if (vystrahy.aktivni) {
+  const stari = (Date.now() - new Date(vystrahy.aktivni.overeno).getTime()) / 3_600_000;
+  // Výstraha, kterou nikdo dva dny nepotvrdil, přestává být zprávou o dnešku.
+  if (stari > 48) varovani.push(`výstraha platí ${Math.round(stari / 24)} dní bez nového ověření — potvrď ji, nebo sundej`);
+}
+for (const a of vystrahy.archiv ?? []) {
+  if (!a.procSundano) chyby.push(`výstraha v archivu (${a.klic}): chybí, proč se sundala`);
+}
 
 // 4. stáří ověření
 const ted = Date.now();

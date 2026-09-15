@@ -51,6 +51,14 @@ export interface Kandidat {
   */
   vyrez?: VyrezZdroje | null;
   shody: string[];
+  /*
+    Naléhavý kandidát. Je to jediná věc, kterou sběr kolem mimořádné výstrahy
+    umí: označit zprávu, kterou má člověk vidět první. Výstrahu samotnou
+    nezapíná a zapnout nemůže — od toho je nastroje/vystraha.mjs a člověk.
+    Kdyby to uměl automat, stačila by jedna podvržená zpráva k tomu, aby web
+    sám vyhlásil mobilizaci.
+  */
+  naliehave?: { druh: "mobilizace-rusko" | "krizove-vysilani"; proc: string } | null;
   stav: "ceka";
 }
 
@@ -197,6 +205,17 @@ const AKTY: { kategorie: string; slova: string[] }[] = [
   { kategorie: "hybridni", slova: [
     "utok na", "attack on", "strela dopadla", "missile struck", "raketa dopadla", "ostrelovani",
   ] },
+  /*
+    Zahájené krizové vysílání je skutek, ne prohlášení: někdo přepnul rádio do
+    jiného režimu. Pro člověka v Česku je to praktická informace — znamená to
+    „pusť si rádio“. Bez téhle skupiny by taková zpráva propadla sítem jako
+    „bez skutku“, protože se v ní nestřílí ani nic nepadá.
+  */
+  { kategorie: "vysilani", slova: [
+    "mimoradne vysilani", "krizove vysilani", "mimoradny vysilaci rezim", "krizovy rezim vysilani",
+    "zahajil mimoradne vysilani", "zahajila mimoradne vysilani", "prechazi na mimoradne vysilani",
+    "emergency broadcast", "emergency broadcasting",
+  ] },
 ];
 
 /**
@@ -235,6 +254,18 @@ const AKTY_KOMBINACE: { kategorie: string; a: string[]; b: string[] }[] = [
     a: ["vojak", "vojaci", "armad", "zaloh", "troops", "soldiers"],
     b: ["nasazen", "nasadi", "povolan", "hlidk", "deployed", "deploy", "mobiliz"],
   },
+  {
+    /*
+      Vyhlášení mobilizace. Bez téhle kombinace síto zprávu „Rusko vyhlásilo
+      všeobecnou mobilizaci“ zahodilo jako „bez skutku“: v seznamu frází byly
+      jen tvary „vyhlásil mobilizaci“ a „částečná mobilizace“, a čeština si
+      slova přehazuje a skloňuje.
+    */
+    kategorie: "pravo",
+    a: ["vyhlasil", "vyhlasila", "vyhlasilo", "vyhlaseni", "naridil", "naridila", "naridilo",
+      "podepsal", "ukaz", "dekret", "ordered", "orders", "declared", "declares", "announces", "signed"],
+    b: ["mobilizac", "mobilisation", "mobilization"],
+  },
 ];
 
 /** Slova, která zprávě jen přidají oblast. Samy o sobě nikdy nestačí. */
@@ -252,6 +283,7 @@ const KONTEXT: { kategorie: string; slova: string[] }[] = [
   { kategorie: "hranice", slova: ["hranice", "hranicni prechod", "schengen", "border"] },
   { kategorie: "vojsko", slova: ["armada", "vojak", "vojaci", "policie", "celnici"] },
   { kategorie: "rusko", slova: ["rusk", "russia", "kreml", "kremlin"] },
+  { kategorie: "vysilani", slova: ["cesky rozhlas", "ceskeho rozhlasu", "radiozurnal", "irozhlas", "ceska televize", "rozhlas"] },
 ];
 
 /**
@@ -271,8 +303,16 @@ const VYLOUCIT = [
   "pocasi", "predpoved pocasi", "dopravni nehoda", "srazka aut",
 ];
 
-const ZEME: { kod: string; nazev: string; slova: string[] }[] = [
-  { kod: "CZ", nazev: "Česko", slova: ["czech", "cesko", "ceska republika", "ceske", " cr ", "policie cr", "praha", "praze", "prague", "brno", "brne", "ostrav"] },
+/*
+  `presna` jsou zkratky, které se smějí trefit jen jako celé slovo. „uk“
+  s povolenou koncovkou se totiž trefí do „ukaz“, „ukrajina“ i „ukonceni“ —
+  a zpráva o ruském ukazu o mobilizaci se pak označí jako Spojené království.
+  Je to týž případ jako dřívější „bis“ uvnitř „Babiš“ a „oslo“ uvnitř „došlo“,
+  jen s dražším následkem: špatná země u zrovna té zprávy, kvůli které tenhle
+  web existuje.
+*/
+const ZEME: { kod: string; nazev: string; slova: string[]; presna?: string[] }[] = [
+  { kod: "CZ", nazev: "Česko", slova: ["czech", "cesko", "ceska republika", "ceske", " cr ", "policie cr", "praha", "praze", "prague", "brno", "brne", "ostrav", "cesky rozhlas", "ceskeho rozhlasu", "radiozurnal", "irozhlas"] },
   { kod: "SK", nazev: "Slovensko", slova: ["slovak", "slovensk", "bratislav", "kosic"] },
   { kod: "PL", nazev: "Polsko", slova: ["poland", "polish", "polsk", "warsaw", "varsav", "rzeszow", "gdansk"] },
   { kod: "DE", nazev: "Německo", slova: ["germany", "german", "nemeck", "berlin", "hamburg", "leipzig", "munich", "mnichov", "bundeswehr"] },
@@ -288,7 +328,7 @@ const ZEME: { kod: string; nazev: string; slova: string[] }[] = [
   { kod: "NL", nazev: "Nizozemsko", slova: ["netherlands", "dutch", "nizozem", "amsterdam", "hague", "haag"] },
   { kod: "BE", nazev: "Belgie", slova: ["belgium", "belgian", "belgi", "brussels", "brusel"] },
   { kod: "FR", nazev: "Francie", slova: ["france", "french", "francie", "francouz", "paris", "pariz"] },
-  { kod: "GB", nazev: "Spojené království", slova: ["britain", "british", "uk ", "united kingdom", "britsk", "london", "londyn"] },
+  { kod: "GB", nazev: "Spojené království", slova: ["britain", "british", "united kingdom", "britsk", "britani", "velka britanie", "london", "londyn"], presna: ["uk"] },
   { kod: "RO", nazev: "Rumunsko", slova: ["romania", "rumunsk", "bucharest", "bukurest"] },
   { kod: "BG", nazev: "Bulharsko", slova: ["bulgaria", "bulharsk", "sofia"] },
   { kod: "MD", nazev: "Moldavsko", slova: ["moldova", "moldav", "chisinau"] },
@@ -297,7 +337,7 @@ const ZEME: { kod: string; nazev: string; slova: string[] }[] = [
   { kod: "BY", nazev: "Bělorusko", slova: ["belarus", "belorus", "minsk"] },
   { kod: "IT", nazev: "Itálie", slova: ["italy", "italian", "itali", "rome", "rim "] },
   { kod: "ES", nazev: "Španělsko", slova: ["spain", "spanish", "spanel", "madrid"] },
-  { kod: "EU", nazev: "EU", slova: ["european union", "european commission", "evropska unie", "evropska komise", " eu "] },
+  { kod: "EU", nazev: "EU", slova: ["european union", "european commission", "evropska unie", "evropska komise"], presna: ["eu"] },
 ];
 
 const nyni = () => new Date().toISOString();
@@ -335,7 +375,9 @@ export function odhadniZemi(text: string): { kod: string; nazev: string } | null
     zpráva o incidentu) se označila jako Norsko. Je to týž případ jako dřívější
     „bis“ uvnitř jména „Babiš“.
   */
-  const shody = ZEME.filter((z) => z.slova.some((sl) => obsahujeSlovo(t, sl.trim())));
+  const shody = ZEME.filter(
+    (z) => z.slova.some((sl) => obsahujeSlovo(t, sl.trim())) || (z.presna ?? []).some((sl) => obsahujeToken(t, sl)),
+  );
   const jina = shody.find((z) => z.kod !== "RU" && z.kod !== "UA" && z.kod !== "BY");
   const v = jina ?? shody[0];
   return v ? { kod: v.kod, nazev: v.nazev } : null;
@@ -350,6 +392,68 @@ export function odhadniZemi(text: string): { kod: string; nazev: string } | null
 export function obsahujeSlovo(text: string, slovo: string): boolean {
   const vzor = slovo.trim().replace(/[.*+?^${}()|[\]\\]/g, "\\$&").replace(/\s+/g, "\\s+");
   return new RegExp(`(^|[^a-z0-9])${vzor}[a-z]*([^a-z0-9]|$)`).test(text);
+}
+
+/*
+  Vyhlášení mobilizace. Schválně jen SLOVESO s předmětem, ne samotné slovo
+  „mobilizace“: to je v článcích o roce 2022, v komentářích i v archivech
+  trvale a naléhavost by se spustila každý den.
+*/
+/*
+  Čeština skloňuje: „vyhlásil mobilizaci“, „vyhlásilo všeobecnou mobilizaci“,
+  „vyhlášení mobilizace“. Hledání celých frází to míjelo — zkusmý běh ukázal,
+  že věta „Rusko vyhlásilo všeobecnou mobilizaci“ neprošla vůbec. Hledá se
+  proto sloveso a předmět zvlášť, každé jako kmen.
+*/
+const MOBILIZACE_SLOVESO = [
+  "vyhlasil", "vyhlasila", "vyhlasilo", "vyhlaseni", "naridil", "naridila", "naridilo",
+  "zahajil", "zahajila", "zahajilo", "podepsal", "ukaz", "dekret",
+  "ordered", "orders", "declared", "declares", "announced", "announces", "signed",
+];
+const MOBILIZACE_PREDMET = ["mobilizac", "mobilisation", "mobilization"];
+
+const RUSKO_KONTEXT = ["rusk", "russia", "russian", "kreml", "kremlin", "putin", "moskv", "moscow"];
+
+/*
+  Krizové (mimořádné) vysílání. Český rozhlas má vysílat, když ostatní cesty
+  selžou — a to, že začal, je pro člověka v Česku informace sama o sobě:
+  znamená to, že si má pustit rádio.
+*/
+const VYSILANI_ZAHAJENO = [
+  "mimoradne vysilani", "krizove vysilani", "mimoradny vysilaci rezim", "krizovy rezim vysilani",
+  "zahajil mimoradne vysilani", "zahajila mimoradne vysilani", "prechazi na mimoradne vysilani",
+  "emergency broadcast", "emergency broadcasting",
+];
+
+const VYSILANI_KDO = [
+  "cesky rozhlas", "ceskeho rozhlasu", "radiozurnal", "irozhlas", "cro", "ceska televize", "ct24",
+];
+
+/**
+ * Je to zpráva, kterou má člověk vidět první?
+ *
+ * Vrací jen značku pro pořadí ve frontě. Nic nezveřejňuje, nic nepotvrzuje
+ * a do žádného počtu nevstupuje — kandidát zůstává „čeká na ověření“ jako
+ * každý jiný.
+ */
+export function naliehavost(text: string): { druh: "mobilizace-rusko" | "krizove-vysilani"; proc: string } | null {
+  const t = normalizuj(text);
+  const sloveso = MOBILIZACE_SLOVESO.find((w) => obsahujeSlovo(t, w));
+  const predmet = MOBILIZACE_PREDMET.find((w) => obsahujeSlovo(t, w));
+  if (sloveso && predmet && RUSKO_KONTEXT.some((w) => obsahujeSlovo(t, w))) {
+    return { druh: "mobilizace-rusko", proc: `${sloveso}+${predmet}` };
+  }
+  const vys = VYSILANI_ZAHAJENO.find((w) => obsahujeSlovo(t, w));
+  if (vys && VYSILANI_KDO.some((w) => obsahujeSlovo(t, w))) {
+    return { druh: "krizove-vysilani", proc: vys };
+  }
+  return null;
+}
+
+/** Slovo přesně, bez povolené koncovky. Pro zkratky jako „uk“ nebo „eu“. */
+export function obsahujeToken(text: string, slovo: string): boolean {
+  const vzor = slovo.trim().replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+  return new RegExp(`(^|[^a-z0-9])${vzor}([^a-z0-9]|$)`).test(text);
 }
 
 export function odhadniTemata(text: string): { kategorie: string[]; shody: string[]; akty: string[] } {
@@ -633,6 +737,7 @@ export async function sbirejUdalosti(): Promise<{ novych: number; celkem: number
         */
         zeSite: s.z.typ === "social" ? { kdo: s.z.nazev, role: "profil na síti", sit: s.z.klic } : null,
         shody,
+        naliehave: naliehavost(text),
         stav: "ceka",
       });
       adresy.add(p.odkaz);

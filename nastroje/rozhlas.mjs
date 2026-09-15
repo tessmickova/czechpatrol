@@ -506,6 +506,48 @@ export function vyberPalivo(palivo, stav) {
   return z;
 }
 
+/*
+  Mimořádná výstraha.
+
+  Do kanálu odchází jako první zpráva běhu a jen jednou — klíčem je `klic`
+  výstrahy. Kdyby se posílala podle obsahu, každá oprava překlepu by se
+  odeslala znovu jako nový poplach.
+
+  Text drží stejné pravidlo jako pruh na webu: hned za tím, co se stalo,
+  stojí i to, co z toho neplyne. Do Telegramu chodí lidé s telefonem v ruce
+  a zpráva bez druhé části by se šířila dál už jen tou první.
+*/
+export function ctiVystrahu() {
+  const soubor = path.join(koren, "data", "vystraha.json");
+  if (!fs.existsSync(soubor)) return null;
+  try { return JSON.parse(fs.readFileSync(soubor, "utf-8")).aktivni ?? null; } catch { return null; }
+}
+
+export function vyberVystrahu(vystraha, stav) {
+  if (!vystraha?.klic) return null;
+  if ((stav.vystrahy ?? {})[vystraha.klic]) return null;
+  return vystraha;
+}
+
+export function sestavVystrahu(v) {
+  const radky = [
+    "\u{1F6A8} <b>MIMOŘÁDNÁ VÝSTRAHA</b>",
+    "",
+    `<b>${esc(v.nadpis)}</b>`,
+    esc(v.text),
+  ];
+  if (v.coToZnamena?.length) {
+    radky.push("", "<b>Co to znamená</b>", ...v.coToZnamena.map((x) => `• ${esc(x)}`));
+  }
+  if (v.coToNeznamena?.length) {
+    radky.push("", "<b>Co to neznamená</b>", ...v.coToNeznamena.map((x) => `• ${esc(x)}`));
+  }
+  radky.push("", `Událost: ${datumCz(v.kdy)} · ověřeno ${datumCz(v.overeno)} (${esc(v.overil)})`);
+  for (const z of v.zdroje ?? []) radky.push(`Zdroj: <a href="${esc(z.url)}">${esc(z.nazev)}</a>`);
+  radky.push("", WEB);
+  return radky.join("\n");
+}
+
 /** Ceny paliv. Chybějící soubor není chyba — jen se o palivu nic neřekne. */
 function ctiPalivo() {
   const soubor = path.join(koren, "data", "palivo.json");
@@ -514,12 +556,12 @@ function ctiPalivo() {
 }
 
 function ctiStav() {
-  if (!fs.existsSync(STAV)) return { zaznamy: {}, snimky: {}, palivo: {}, prvniBeh: null };
+  if (!fs.existsSync(STAV)) return { zaznamy: {}, snimky: {}, palivo: {}, vystrahy: {}, prvniBeh: null };
   try {
     const s = JSON.parse(fs.readFileSync(STAV, "utf-8"));
-    // Starší stav pole „palivo" nemá; bez doplnění by první zápis spadl.
-    return { palivo: {}, ...s };
-  } catch { return { zaznamy: {}, snimky: {}, palivo: {}, prvniBeh: null }; }
+    // Starší stav pole „palivo" a „vystrahy" nemá; bez doplnění by první zápis spadl.
+    return { palivo: {}, vystrahy: {}, ...s };
+  } catch { return { zaznamy: {}, snimky: {}, palivo: {}, vystrahy: {}, prvniBeh: null }; }
 }
 function zapisStav(s) {
   fs.mkdirSync(path.dirname(STAV), { recursive: true });
@@ -674,6 +716,26 @@ async function main() {
   const prvniBeh = !stav.prvniBeh;
 
   let odeslano = 0, selhalo = 0;
+
+  /*
+    0. mimořádná výstraha — před vším ostatním.
+
+    Při prvním běhu (prázdný stav) se posílá jen výstraha ověřená v posledních
+    24 hodinách. Starší se jen zapamatuje: prázdný stav znamená i to, že se
+    soubor stavu ztratil, a rozeslat kvůli tomu týden starý poplach by bylo
+    horší než mlčet.
+  */
+  const vystraha = vyberVystrahu(ctiVystrahu(), stav);
+  if (vystraha) {
+    const cerstva = ted - new Date(vystraha.overeno).getTime() <= 24 * 3_600_000;
+    if (prvniBeh && !cerstva) {
+      stav.vystrahy[vystraha.klic] = { kdy: new Date(ted).toISOString(), ticho: true };
+    } else {
+      const v = await posli(sestavVystrahu(vystraha), { nahled: false });
+      if (v.ok) { stav.vystrahy[vystraha.klic] = { kdy: new Date(ted).toISOString(), messageId: v.messageId ?? null }; odeslano++; }
+      else { selhalo++; console.log(`[rozhlas] výstraha neodešla: ${v.chyba}`); }
+    }
+  }
 
   // 1. změny oficiálních stavů — vždy hned
   for (const { snimek, zmeny } of vyberZmenyStavu(archiv, stav)) {

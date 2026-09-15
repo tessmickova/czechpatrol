@@ -63,11 +63,18 @@ export function OdberPanel({ kompaktni = false }: { kompaktni?: boolean }) {
         <div className="rounded-[18px] border border-linka2 bg-plocha p-4">
           <div className="stitek mb-2">Kdy přijde okamžité upozornění</div>
           <ul className="space-y-1.5">
-            {KDY_UPOZORNENI.map((k) => (
-              <li key={k} className="flex gap-2 text-[13.5px] leading-snug text-tlum">
-                <span aria-hidden className="mt-[3px] shrink-0 text-klid-text"><Ikona nazev="fajfka" velikost={12} tah={2} /></span>{k}
-              </li>
-            ))}
+            {KDY_UPOZORNENI.map((k) => {
+              /* Mimořádná výstraha je jiná kategorie než běžná změna stavu — i v seznamu. */
+              const vystraha = k.startsWith("mimořádná výstraha");
+              return (
+                <li key={k} className={`flex gap-2 text-[13.5px] leading-snug ${vystraha ? "text-inkoust" : "text-tlum"}`}>
+                  <span aria-hidden className={`mt-[3px] shrink-0 ${vystraha ? "text-akcent" : "text-klid-text"}`}>
+                    <Ikona nazev={vystraha ? "sirena" : "fajfka"} velikost={12} tah={2} />
+                  </span>
+                  {k}
+                </li>
+              );
+            })}
           </ul>
           {/*
             Dřív tu byla záruka „stejná změna se nikdy nepošle dvakrát". Taková
@@ -75,7 +82,11 @@ export function OdberPanel({ kompaktni = false }: { kompaktni?: boolean }) {
             nedá — po vypršení časového limitu nemusí být jasné, jestli zpráva
             dorazila. Popis deduplikace patří do metodiky, ne do slibu.
           */}
-          <p className="mt-3 text-[12.5px] text-tlum2">Opakovanému odeslání téže změny se bráníme; postup je popsaný v metodice. Odhlášení je jedním kliknutím v účtu.</p>
+          {/*
+            „Odhlášení v účtu" tu stálo, i když účty neběží. Z telegramového
+            kanálu se odchází opuštěním kanálu a nikde se nezakládá účet.
+          */}
+          <p className="mt-3 text-[12.5px] text-tlum2">Opakovanému odeslání téže změny se bráníme; postup je popsaný v metodice. Z kanálu se odhlásíte jeho opuštěním — nezakládá se žádný účet.</p>
         </div>
       )}
     </div>

@@ -224,7 +224,15 @@ export function UdalostiKlient({ zaznamy, neprosle, kandidati = [] }: { zaznamy:
     const c: Radek[] = f.zalozka === "cekajici" ? kandidati
       .filter((k) => (!f.zeme || k.kodZeme === f.zeme) && (!f.tema || k.kategorie.includes(f.tema)) && vObdobi(k.publikovano ?? k.zachyceno))
       .map((k) => ({ typ: "kandidat", kdy: k.publikovano ?? k.zachyceno, k })) : [];
-    return [...a, ...b, ...c].sort((x, y) => y.kdy.localeCompare(x.kdy));
+    /*
+      Řadí se podle času, s jednou výjimkou: naléhavý kandidát jde nahoru.
+      Vyhlášená mobilizace v Rusku nemá čekat na svoje místo v chronologii
+      mezi zprávami o kabelech.
+    */
+    const naliehave = (r: Radek) => (r.typ === "kandidat" && r.k.naliehave ? 1 : 0);
+    return [...a, ...b, ...c].sort(
+      (x, y) => naliehave(y) - naliehave(x) || y.kdy.localeCompare(x.kdy),
+    );
   }, [zaznamy, neprosle, kandidati, f]);
 
   useEffect(() => { setLimit(10); }, [f.zalozka, f.zeme, f.tema, f.obdobi, f.overeni, f.druhy, f.zavaznost]);
@@ -551,6 +559,16 @@ function RadekKandidata({ k }: { k: Kandidat }) {
         zeme: k.zeme ?? undefined,
         meta: [
           <Odznak key="c" ton="akcent" ikona="otaznik">čeká na ověření</Odznak>,
+          /*
+            Naléhavé je pořadí ve frontě, ne tvrzení. Odznak proto říká, čeho
+            se to týká, a vedle něj zůstává „čeká na ověření“ — ať je vidět,
+            že tahle zpráva potvrzená NENÍ, i když je nahoře.
+          */
+          k.naliehave
+            ? <Odznak key="n" ton="vazne" ikona="sirena">
+                {k.naliehave.druh === "mobilizace-rusko" ? "k okamžité kontrole: mobilizace" : "k okamžité kontrole: krizové vysílání"}
+              </Odznak>
+            : null,
           k.klasifikace === "model" ? <span key="m" className="text-tlum2">přeloženo modelem</span> : null,
           // Ručně vytažené proti sítu: čtenář má vědět, že tohle nevybral automat.
           k.klasifikace === "clovek" ? <span key="r" className="text-tlum2">vybráno ručně</span> : null,

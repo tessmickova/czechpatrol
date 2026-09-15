@@ -2,7 +2,7 @@
 import fs from "node:fs";
 import path from "node:path";
 import { describe, expect, it } from "vitest";
-import { klicovaVeta, legendaTecek, pocetZdroju, pruhTecek, PUVODCI, radekPokryti, jeArchivni, radekData, rozdelZpravu, sestavPalivo, sestavSouhrn, sestavTest, sestavZdroje, sestavZmenuStavu, sestavZpravu, vyberNove, vyberPalivo, vyberZmenyStavu, zahlavi } from "../nastroje/rozhlas.mjs";
+import { klicovaVeta, legendaTecek, pocetZdroju, pruhTecek, PUVODCI, radekPokryti, jeArchivni, radekData, rozdelZpravu, sestavPalivo, sestavSouhrn, sestavTest, sestavVystrahu, sestavZdroje, sestavZmenuStavu, sestavZpravu, vyberNove, vyberPalivo, vyberVystrahu, vyberZmenyStavu, zahlavi } from "../nastroje/rozhlas.mjs";
 import { UROVNE, zDeseti } from "../src/lib/skala";
 import { PUVODCI as PUVODCI_WEB } from "../src/lib/kategorie";
 import type { Uroven } from "../src/lib/typy";
@@ -422,5 +422,51 @@ describe("stará událost se nesmí tvářit jako nová", () => {
     const vybrane = vyberNove([sNovym], stav, { rezim: "okamzite", ted });
     expect(vybrane).toHaveLength(1);
     expect(vybrane[0].aktualizace).toBe(true);
+  });
+});
+
+describe("mimořádná výstraha v kanálu", () => {
+  const V = {
+    klic: "v-2026-09-15",
+    nadpis: "Rusko vyhlásilo mobilizaci",
+    text: "Co se ví, ve dvou větách.",
+    kdy: "2026-09-15T08:00:00Z",
+    overeno: "2026-09-15T09:00:00Z",
+    overil: "jméno",
+    zdroje: [
+      { nazev: "Zdroj A", url: "https://a.example/1" },
+      { nazev: "Zdroj B", url: "https://b.example/2" },
+    ],
+    coToZnamena: ["Něco doložitelného."],
+    coToNeznamena: ["Něco, co z toho neplyne."],
+  };
+
+  it("zpráva nese i to, co z výstrahy NEPLYNE", () => {
+    /*
+      Do Telegramu chodí lidé s telefonem v ruce a přeposílají první odstavec.
+      Kdyby v něm stálo jen „Rusko vyhlásilo mobilizaci“, šířilo by se dál
+      jenom to.
+    */
+    const z = sestavVystrahu(V);
+    expect(z).toContain("MIMOŘÁDNÁ VÝSTRAHA");
+    expect(z).toContain("Co to neznamená");
+    expect(z).toContain("Něco, co z toho neplyne.");
+  });
+
+  it("nese obě adresy zdrojů a podpis toho, kdo ověřil", () => {
+    const z = sestavVystrahu(V);
+    expect(z).toContain("https://a.example/1");
+    expect(z).toContain("https://b.example/2");
+    expect(z).toContain("jméno");
+  });
+
+  it("táž výstraha se neodešle dvakrát", () => {
+    // Klíčem je klic, ne text — oprava překlepu nesmí být nový poplach.
+    expect(vyberVystrahu(V, { vystrahy: {} })?.klic).toBe("v-2026-09-15");
+    expect(vyberVystrahu(V, { vystrahy: { "v-2026-09-15": { kdy: "…" } } })).toBeNull();
+  });
+
+  it("bez výstrahy se neposílá nic", () => {
+    expect(vyberVystrahu(null, { vystrahy: {} })).toBeNull();
   });
 });

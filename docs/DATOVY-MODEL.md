@@ -76,6 +76,30 @@ Pachatel je „potvrzený“ jen při `atribuce: oficialni` nebo `domaci`.
 - Zobrazení v Europe/Prague včetně letního času (`datumPraha`, `datumCasPraha`).
 - Čerstvost ověření: ≤ 24 h čerstvé, ≤ 72 h starší, jinak zastaralé; `null` = neověřeno (nikdy nevypadá jako čerstvé).
 
+## Mimořádná výstraha
+
+`data/vystraha.json` — `{ aktivni, archiv }`. Když je `aktivni` vyplněné, web na
+každé stránce ukáže červený pruh nad vším ostatním a rozhlas o výstraze jednou
+pošle zprávu do telegramového kanálu.
+
+Zapíná se **jen člověkem**: `node nastroje/vystraha.mjs vyhlas navrh.json`,
+sundává `… sundej "důvod"`. Automatický sběr k souboru nesahá — umí jen označit
+kandidáta jako naléhavého (`naliehave` v `data/kandidati.json`), aby ho člověk
+viděl ve frontě první. Kdyby výstrahu uměl zapnout automat, stačila by jedna
+podvržená zpráva k tomu, aby web sám vyhlásil mobilizaci.
+
+Podmínky, bez kterých se výstraha nezobrazí (`nastroje/vystraha-pravidla.mjs`,
+kontroluje se v nástroji, v `kontrola-dat` i v `src/lib/data.ts`):
+
+- aspoň **dva zdroje z různých domén**, každý s adresou a datem vydání,
+- žádný zdroj vydaný dřív, než se věc stala,
+- `overeno` + `overil` — za výstrahou je podepsaný člověk,
+- neprázdné **„co to neznamená“** (bez něj je z výstrahy poplach),
+- žádná rada, co má člověk dělat, a žádný vykřičník.
+
+Sundaná výstraha jde do `archiv[]` i s tím, proč se sundala. Nikdy nemizí beze
+stopy.
+
 ## Agregace
 
 Všechny počty jdou z `src/lib/agregace.ts`; komponenty nepočítají samy. Každá funkce říká, z jaké množiny počítá (`pocty(vse, "rok 2026")`). Kontrola konzistence (součet po zemích = celkem) běží v `nastroje/kontrola-dat.mjs` a v testech `testy/agregace.test.ts`.

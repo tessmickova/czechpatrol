@@ -408,6 +408,12 @@ export interface Kandidat {
    */
   zeSite?: { kdo: string; role: string; sit: string } | null;
   shody: string[];
+  /**
+   * Zpráva, kterou má člověk vidět první — vyhlášená mobilizace v Rusku nebo
+   * spuštěné krizové vysílání. Je to jen pořadí ve frontě: kandidát zůstává
+   * neověřený, do počtů nevstupuje a mimořádnou výstrahu nezapíná.
+   */
+  naliehave?: { druh: "mobilizace-rusko" | "krizove-vysilani"; proc: string } | null;
   stav: "ceka";
 }
 
@@ -612,4 +618,51 @@ export interface Odmitnuty {
   kategorie: string[];
   /** null = neposouzeno. Neposouzeno není totéž co „nic vážného“. */
   posouzeni: { podezreni: "vysoke" | "stredni" | "zadne"; duvod: string; kdy: string } | null;
+}
+
+/* ---------------- mimořádná výstraha ---------------- */
+
+/**
+ * Mimořádná výstraha — pruh přes celou šířku na každé stránce.
+ *
+ * Používá se výjimečně a jen na to, kvůli čemu by člověk měl vědět hned:
+ * vyhlášená mobilizace v Rusku, spuštěné krizové vysílání Českého rozhlasu.
+ * Ne na „zvýšené napětí“ a ne na zprávu, kterou zatím nikdo nepotvrdil.
+ *
+ * Zapnout ji smí jen člověk, a to zápisem do data/vystraha.json
+ * (`node nastroje/vystraha.mjs`). Automatický sběr ji zapnout nemůže — sběr
+ * umí jen označit kandidáta jako naléhavého, aby ho člověk viděl první.
+ * Kdyby mohl sběr, stačila by jedna podvržená zpráva k tomu, aby web sám
+ * vyhlásil mobilizaci; a přesně tenhle druh manipulace tenhle web dokumentuje.
+ */
+export interface Vystraha {
+  /** Klíč běhu. Podle něj se pozná, že už se zpráva do kanálu poslala. */
+  klic: string;
+  druh: "mobilizace-rusko" | "krizove-vysilani" | "jine";
+  /** Co se stalo. Oznamovací věta, ne heslo a ne otázka. */
+  nadpis: string;
+  /** Dvě až čtyři věty. Co se stalo a co se ví — nic, co se neví. */
+  text: string;
+  /** Kdy se to stalo. Ne kdy jsme to zjistili. */
+  kdy: string;
+  /** Kdy to ověřil člověk. Bez tohohle se výstraha nezobrazí. */
+  overeno: string;
+  /** Kdo ověřil. Za výstrahu je vždycky někdo podepsaný. */
+  overil: string;
+  uroven: Uroven;
+  /** Aspoň dva nezávislé zdroje, každý s adresou. Jeden zdroj nestačí. */
+  zdroje: Zdroj[];
+  /** Co z toho plyne pro lidi v Česku. Jen doložitelné věci. */
+  coToZnamena: string[];
+  /** Co z toho NEplyne. Bez téhle části je z výstrahy poplach. */
+  coToNeznamena: string[];
+  /** Kdy výstrahu sundat, pokud se nic nezmění. null = do rozhodnutí člověka. */
+  platiDo: string | null;
+}
+
+export interface VystrahaSoubor {
+  /** null = žádná výstraha neplatí a na webu není žádný pruh. */
+  aktivni: Vystraha | null;
+  /** Co kdy platilo. Výstraha nikdy nezmizí beze stopy. */
+  archiv: (Vystraha & { sundano: string; procSundano: string })[];
 }

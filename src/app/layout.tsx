@@ -6,6 +6,7 @@ import { PostranniPanel } from "@/components/postranni-panel";
 import { RegistraceSW } from "@/components/pwa";
 import { Paticka } from "@/components/paticka";
 import { PruhPuvodu, UkazkaPruh } from "@/components/pruhy";
+import { PruhVystrahy } from "@/components/vystraha";
 import { Znacka } from "@/components/znacka";
 import { SKRIPT_POHYBU } from "@/components/pohyb";
 import { WEB } from "@/config/web";
@@ -87,6 +88,12 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           Přeskočit na obsah
         </a>
         <Navigace />
+        {/*
+          Výstraha stojí nad vším ostatním — nad pruhem původu i nad obsahem.
+          Když platí, je to první věc na stránce; když neplatí (a to je skoro
+          vždycky), nevykreslí se vůbec nic.
+        */}
+        <PruhVystrahy />
         <PruhPuvodu />
         <UkazkaPruh />
         <main id="obsah" className="pb-[calc(60px+env(safe-area-inset-bottom))] md:pb-0">{children}</main>

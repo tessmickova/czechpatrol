@@ -78,4 +78,19 @@ export const ZDROJE_UDALOSTI: ZdrojUdalosti[] = [
   { klic: "gn-vzduch-cz", nazev: "Google News — narušení vzdušného prostoru", url: gn("narušení vzdušného prostoru dron NATO", true), jazyk: "cs", primarni: false, typ: "media" },
   { klic: "gn-nouzovy-stav", nazev: "Google News — nouzový stav a mobilizace", url: gn("nouzový stav mobilizace vyhlášen Evropa", true), jazyk: "cs", primarni: false, typ: "media" },
   { klic: "gn-clanek4", nazev: "Google News — článek 4 a 5 NATO", url: gn("NATO article 4 consultations invoked", false), jazyk: "en", primarni: false, typ: "media" },
+
+  /*
+    Dvě věci, kvůli kterým má člověk vědět hned.
+
+    Vyhlášená mobilizace v Rusku: hlídá se sloveso s předmětem, ne samotné
+    slovo — o mobilizaci z roku 2022 se píše pořád.
+
+    Krizové vysílání Českého rozhlasu: to, že rozhlas přepnul do mimořádného
+    režimu, je praktická informace sama o sobě. Vlastní kanál ČRo tu je proto,
+    že o svém vysílání píše dřív a spolehlivěji než kdokoli jiný.
+  */
+  { klic: "cro-rss", nazev: "Český rozhlas — zprávy", url: "https://www.irozhlas.cz/rss/irozhlas/zpravy-domov", jazyk: "cs", primarni: true, typ: "primary" },
+  { klic: "gn-mobilizace-ru", nazev: "Google News — vyhlášení mobilizace v Rusku", url: gn("Rusko vyhlásilo mobilizaci Kreml", true), jazyk: "cs", primarni: false, typ: "media" },
+  { klic: "gn-mobilisation-ru", nazev: "Google News — Russian mobilisation ordered", url: gn("Russia mobilisation ordered decree Kremlin", false), jazyk: "en", primarni: false, typ: "media" },
+  { klic: "gn-krizove-vysilani", nazev: "Google News — mimořádné vysílání rozhlasu", url: gn("Český rozhlas mimořádné vysílání krizové", true), jazyk: "cs", primarni: false, typ: "media" },
 ];

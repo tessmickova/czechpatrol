@@ -2,7 +2,7 @@ import { JE_UKAZKA } from "@/config/web";
 import type {
   Odmitnuty,
   Archiv, CelkovyStav, HybridniTlak, Incident, Kampan, Kandidat, Kategorie, NatoPolozka, Oprava, PravniStav,
-  Nepotvrzene, Overovana, Provoz, Puvodce, RuskoStav, Svet, TydenniHodnoceni, Uroven, Watchlist,
+  Nepotvrzene, Overovana, Provoz, Puvodce, RuskoStav, Svet, TydenniHodnoceni, Uroven, Vystraha, VystrahaSoubor, Watchlist,
 } from "./typy";
 import { PORADI_KATEGORII } from "./kategorie";
 import { UROVNE } from "./skala";
@@ -12,6 +12,7 @@ import ostryStav from "../../data/stav.json";
 import ostryPravni from "../../data/pravni-stav.json";
 import ostreNato from "../../data/nato.json";
 import ostryProvoz from "../../data/provoz.json";
+import souborVystrahy from "../../data/vystraha.json";
 import ostryHybridni from "../../data/hybridni-tlak.json";
 import ostreTydny from "../../data/tydny.json";
 import ostreRusko from "../../data/rusko.json";
@@ -112,6 +113,28 @@ export function provoz(): Provoz {
       return n ? { ...p, stav: n.stav, hodnota: n.hodnota, overeno: n.overeno } : p;
     }),
   };
+}
+
+/**
+ * Mimořádná výstraha do pruhu přes celou šířku.
+ *
+ * Vrací ji, jen když je v datech ověřená člověkem a má aspoň dva zdroje.
+ * Rozhodovat se o tom až tady, a ne jen při zápisu, je schválně: kdyby se
+ * do souboru někdy dostal neúplný záznam — ručně, omylem, skriptem — web ho
+ * neukáže. Poplašný pruh bez doložení je přesně to, co tenhle web u jiných
+ * popisuje jako manipulaci.
+ *
+ * Ukázkový režim výstrahu nikdy nezapíná: v ukázce by vypadala jako
+ * skutečná a nikdo by nepoznal rozdíl.
+ */
+export function vystraha(): Vystraha | null {
+  if (JE_UKAZKA) return null;
+  const v = jako<VystrahaSoubor>(souborVystrahy).aktivni;
+  if (!v) return null;
+  const maZdroje = (v.zdroje ?? []).filter((z) => /^https?:\/\//.test(z.url ?? "")).length >= 2;
+  if (!v.overeno || !v.overil || !maZdroje) return null;
+  if (v.platiDo && new Date(v.platiDo).getTime() < Date.now()) return null;
+  return v;
 }
 
 export function hybridniTlak(): HybridniTlak {
