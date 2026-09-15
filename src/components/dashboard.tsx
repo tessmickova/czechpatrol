@@ -381,7 +381,6 @@ export function Dashboard({
         <NadpisSekce
           stitek={t("Co právě platí")}
           nadpis={t("Úřední stav v Česku")}
-          popis="Co jsme našli v úředních zdrojích a kdy jsme se tam naposledy dívali."
         />
       </div>
       <div className="grid gap-4 lg:grid-cols-[minmax(0,1.35fr)_minmax(0,1fr)]">

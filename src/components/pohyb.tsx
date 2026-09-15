@@ -61,8 +61,13 @@ export function PrepinacPohybu() {
 
 type Motiv = "system" | "svetly" | "tmavy";
 
+/*
+  Výchozí je tmavý, ne nastavení systému. Tmavá je součást značky a nikdo
+  na web nemá přistát na bílé ploše; světlý je vědomá volba pro toho,
+  komu tmavé pozadí nevyhovuje.
+*/
 const NAZVY_MOTIVU: Record<Motiv, string> = {
-  system: "podle systému",
+  system: "tmavý (výchozí)",
   svetly: "světlý",
   tmavy: "tmavý",
 };
@@ -103,7 +108,7 @@ export function PrepinacMotivu() {
     <fieldset className="border-0 p-0">
       <legend className="text-[14px] text-noc-tlum">Vzhled</legend>
       <div className="mt-1.5 flex flex-wrap gap-1.5">
-        {(Object.keys(NAZVY_MOTIVU) as Motiv[]).map((m) => (
+        {(["system", "svetly"] as Motiv[]).map((m) => (
           <button
             key={m}
             type="button"

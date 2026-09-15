@@ -1,4 +1,4 @@
-import { cerstvost, datumCasPraha, stariSlovy, type Cerstvost } from "@/lib/cas";
+import { casPraha, cerstvost, datumCasPraha, stariSlovy, type Cerstvost } from "@/lib/cas";
 import { Ikona, type NazevIkony } from "./ikony";
 
 const VZHLED: Record<Cerstvost, { slovo: string; tridy: string; ikona: NazevIkony }> = {
@@ -35,14 +35,20 @@ export function BannerStari({ overeno, zkontrolovano }: { overeno: string | null
   const cKontrola = cerstvost(zkontrolovano, undefined, "provoz");
   if (cOvereno === "cerstve") return null;
 
+  /*
+    Pruh nahoře má jednu práci: říct, jestli kontrola běží. Tři řádky
+    vysvětlování, proč z nenálezu neplyne nepřítomnost opatření, tu nikoho
+    neuklidnily ani nepoučily — patří k jednotlivým stavům, kde se to dá
+    rozkliknout, a na stránku Zdroje. Tady stačí pár slov.
+  */
   const zprava =
     cKontrola === "budoucnost" || cOvereno === "budoucnost"
-      ? "U části podkladů je čas z budoucnosti. Dokud to nespravíme, neberte jejich stáří jako ověřené."
+      ? "Chybný čas u části podkladů."
       : cKontrola === "cerstve" || cKontrola === "starsi"
-        ? `Zdroje jsme naposledy kontrolovali ${stariSlovy(zkontrolovano)}. Nenašli jsme v nich doložené celostátní omezení — sledované zdroje ale nejsou úplný seznam, takže z toho neplyne, že žádné neexistuje.`
+        ? `Zkontrolováno ${casPraha(zkontrolovano!)} · bez nálezu`
         : zkontrolovano
-          ? `Aktuálnost údajů se nepodařilo ověřit. Poslední úspěšná kontrola: ${datumCasPraha(zkontrolovano)}. Zobrazujeme poslední známý stav.`
-          : "Aktuálnost údajů se zatím nepodařilo ověřit. Zobrazujeme poslední známý stav.";
+          ? `Aktuálnost neověřena · naposledy ${datumCasPraha(zkontrolovano)}`
+          : "Aktuálnost zatím neověřena.";
 
   // Běžný stav kontroly není poplach — barví se jen to, co je opravdu v nepořádku.
   const poplach = cKontrola === "zastarale" || cKontrola === "nezname" || cKontrola === "budoucnost";

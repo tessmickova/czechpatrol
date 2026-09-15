@@ -81,56 +81,16 @@
 /*
   Světlý režim.
 
-  Výchozí je nastavení systému; návštěvník si může vynutit světlý nebo tmavý
-  a volba se pamatuje. Žádný z režimů není univerzálně lepší — pro část lidí
-  je tmavý web hůř čitelný, pro jinou část je bílá plocha nesnesitelná.
+  VÝCHOZÍ JE TMAVÝ, vždycky. Web se nepřepíná podle nastavení systému —
+  tmavá je součást značky a nikdo na něj nemá přistát na bílé ploše.
+  Světlý režim zůstává jen jako vědomá volba v patičce pro ty, kterým
+  tmavé pozadí nevyhovuje; sám od sebe se nikdy nezapne.
 
   Předefinovávají se jen tokeny. Barva, která je čitelná na černé, je na bílé
   často skoro neviditelná, takže stavové barvy mají ve světlém režimu vlastní,
   tmavší hodnoty — význam zůstává stejný, jen se dá přečíst.
 */
-:root[data-motiv="svetly"],
-html:not([data-motiv="tmavy"]) body.svetly-auto {
-  color-scheme: light;
-}
-
-@media (prefers-color-scheme: light) {
-  :root:not([data-motiv="tmavy"]) {
-    color-scheme: light;
-
-    --color-papir: #faf9f6;
-    --color-plocha: #ffffff;
-    --color-plocha2: #f1efe9;
-    --color-inkoust: #14140f;
-    --color-tlum: #46443d;
-    --color-tlum2: #5f5c53;
-    --color-linka: rgb(20 20 15 / 0.16);
-    --color-linka2: rgb(20 20 15 / 0.10);
-
-    --color-noc: #14140f;
-    --color-noc2: #14140f;
-    --color-noc3: rgb(255 255 255 / 0.10);
-    --color-noc-text: #fffefb;
-    --color-noc-tlum: #c9c6bd;
-    --color-noc-linka: rgb(255 255 255 / 0.18);
-
-    --color-akcent: #c1272d;
-    --color-akcent-tmava: #8e1a1f;
-    --color-akcent-svetla: #a51f25;
-
-    --color-klid: #1d7a4c;
-    --color-klid-text: #14613b;
-    --color-pozor: #8a6100;
-    --color-pozor-text: #6f4e00;
-    --color-stari: #9a5200;
-    --color-stari-text: #7d4200;
-    --color-stari-text2: #8a3d10;
-    --color-oranz: #b34b14;
-    --color-fialova: #5b4a99;
-    --color-fialova-text: #493a7d;
-    --color-jantar: #8a6100;
-  }
-}
+:root[data-motiv="svetly"] { color-scheme: light; }
 
 /* Vynucený světlý režim: totéž, ale bez ohledu na systém. */
 :root[data-motiv="svetly"] {
@@ -171,23 +131,6 @@ html:not([data-motiv="tmavy"]) body.svetly-auto {
   Ve světlém režimu je „sklo" bílá deska s jemnou linkou, ne průsvit.
   Rozmazané průsvitné plochy na světlém pozadí ztrácejí kontrast textu.
 */
-@media (prefers-color-scheme: light) {
-  :root:not([data-motiv="tmavy"]) .sklo,
-  :root:not([data-motiv="tmavy"]) .sklo-noc {
-    background: var(--color-plocha);
-    backdrop-filter: none;
-    -webkit-backdrop-filter: none;
-    border-color: var(--color-linka);
-    box-shadow: 0 10px 28px rgb(20 20 15 / 0.08);
-  }
-  :root:not([data-motiv="tmavy"]) .sklo-hlavicka {
-    background: rgb(250 249 246 / 0.92);
-    border-color: var(--color-linka);
-    box-shadow: 0 8px 20px rgb(20 20 15 / 0.07);
-  }
-  :root:not([data-motiv="tmavy"]) .sklo-rozmaz { background: rgb(250 249 246 / 0.92); }
-  :root:not([data-motiv="tmavy"]) .paralax-vrstva { opacity: 0.45; }
-}
 :root[data-motiv="svetly"] .sklo,
 :root[data-motiv="svetly"] .sklo-noc {
   background: var(--color-plocha);
@@ -205,9 +148,6 @@ html:not([data-motiv="tmavy"]) body.svetly-auto {
 :root[data-motiv="svetly"] .paralax-vrstva { opacity: 0.45; }
 
 /* Pozadí s červenou září patří tmavému webu; na světlém by bylo špinavé. */
-@media (prefers-color-scheme: light) {
-  :root:not([data-motiv="tmavy"]) body { background: var(--color-papir); }
-}
 :root[data-motiv="svetly"] body { background: var(--color-papir); }
 
 

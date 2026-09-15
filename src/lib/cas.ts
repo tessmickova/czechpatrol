@@ -107,3 +107,10 @@ export function stariSlovy(iso: string | null | undefined, ted = Date.now()): st
   if (h < 48) return `před ${Math.round(h)} h`;
   return `před ${Math.round(h / 24)} dny`;
 }
+
+/** Jen hodiny a minuty v pražském čase. Pro pruhy, kde je na datum málo místa. */
+export function casPraha(iso: string): string {
+  const d = new Date(iso);
+  if (Number.isNaN(d.getTime())) return "";
+  return new Intl.DateTimeFormat("cs-CZ", { timeZone: ZONA, hour12: false, hour: "2-digit", minute: "2-digit" }).format(d);
+}

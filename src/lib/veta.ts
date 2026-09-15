@@ -55,13 +55,13 @@ export function hlavniVeta(
   const bezOmezeni = doloženýZápor
     ? "Pro běžný život v Česku dnes neplatí žádné mimořádné omezení."
     : kontrolaProbehla
-      ? "V kontrolovaných úředních zdrojích nemáme doložené žádné celostátní omezení běžného života. Místní situace se může lišit."
-      : "Úřední stav Česka se dnes nepodařilo zkontrolovat — nic o něm proto netvrdíme.";
+      ? "V kontrolovaných zdrojích žádné celostátní omezení. Místní situace se může lišit."
+      : "Úřední stav Česka se dnes nepodařilo zkontrolovat.";
 
   const cesko = plati.length
     ? `V Česku platí ${vyjmenuj(plati.map((p) => p.nazev.toLowerCase()))}.`
     : naruseno.length
-      ? `Hlásíme narušení: ${vyjmenuj(naruseno.map((p) => p.nazev.toLowerCase()))}. Celostátní mimořádné opatření k tomu doložené nemáme.`
+      ? `Hlásíme narušení: ${vyjmenuj(naruseno.map((p) => p.nazev.toLowerCase()))}.`
       : sledujeme.length
         ? `${bezOmezeni} U ${vyjmenuj(sledujeme.map((p) => p.nazev.toLowerCase()))} prověřujeme hlášení.`
         : bezOmezeni;

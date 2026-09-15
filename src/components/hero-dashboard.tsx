@@ -127,9 +127,7 @@ export function HeroDashboard({
               útoku, což není. Stupnice i s čísly zůstává v metodice a v detailu
               záznamu, kde je vedle ní vysvětlení.
             */}
-            <p className="mt-1 text-[12.5px] text-tlum2">
-              hodnocení projektu k dnešnímu dni, ne měření
-            </p>
+            <p className="mt-1 text-[12.5px] text-tlum2">dnes</p>
             <p className="mt-1.5 flex flex-wrap items-center gap-x-3 text-[12.5px] text-tlum">
               {stav.trend === "nahoru" && <span className="flex items-center gap-1 font-semibold text-stari-text2"><Ikona nazev="nahoru" velikost={12} tah={2.2} />{t("zhoršení za 7 dní")}</span>}
               {stav.trend === "dolu" && <span className="flex items-center gap-1 font-semibold text-klid-text"><Ikona nazev="dolu" velikost={12} tah={2.2} />{t("zlepšení za 7 dní")}</span>}
@@ -151,7 +149,7 @@ export function HeroDashboard({
                   měřilo náš sběr, ne skutečnost.
                 */
                 <Napoveda popis={<span className="block">Pravidelný sběr běží od července 2026. Starší záznamy jsou doplněné zpětně a zachytily jen to nejviditelnější, takže se s dneškem porovnávat nedají.</span>}>
-                  <span className="text-[12px] text-tlum2">období nejsou srovnatelná</span>
+                  <span className="text-[12px] text-tlum2">bez srovnání</span>
                 </Napoveda>
               )}
               <span><b className="cislice text-[16px] font-bold text-inkoust">{pocetZaznamu}</b>{t("záznamů od roku 2014")}</span>
