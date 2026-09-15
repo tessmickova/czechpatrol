@@ -49,6 +49,8 @@ export interface RadaCen {
   rada: TydenCeny[];
   /** Když se stažení nepovedlo, tady je důvod. Prázdno není totéž co „v pořádku“. */
   chyba?: string | null;
+  /** Kdy se naposledy zkoušelo stahovat — ať už to dopadlo jakkoli. */
+  pokus?: string | null;
   /**
    * Doložený skok, který stojí za samostatnou zprávu do kanálu.
    *

@@ -25,20 +25,47 @@ const SOUBOR = path.join(process.cwd(), "data", "palivo.json");
 const LET_ZPET = 8;
 
 /*
+  Jak často se sahá na úřad.
+
+  Šetření je TÝDENNÍ — stahovat ho každou půlhodinu spolu se zbytkem sběru
+  nemá co přinést a jen to zdržuje hodinový běh o desítky sekund na časových
+  limitech. Po úspěchu se tedy čeká půl dne, po neúspěchu dvě hodiny: chybu
+  má smysl zkusit znovu dřív, ale taky ne pořád dokola.
+*/
+const HODIN_PO_USPECHU = 12;
+const HODIN_PO_CHYBE = 2;
+
+function jeCerstve(kdy: string | null | undefined, hodin: number): boolean {
+  if (!kdy) return false;
+  const t = new Date(kdy).getTime();
+  return Number.isFinite(t) && Date.now() - t < hodin * 3_600_000;
+}
+
+/*
   Kandidáti na adresu datové sady. Zkoušejí se popořadě a do dat se zapíše ta,
   která opravdu zabrala — nikdy ta, o které si myslíme, že by zabrat měla.
-  Poslední v řadě je katalog: když neprojde nic, aspoň se do logu vypíše,
-  co úřad nabízí, a adresa se opraví podle skutečnosti.
+  Když neprojde žádná, hledá se dál v katalogu (níž).
 */
 const ADRESY = [
   "https://data.csu.gov.cz/api/dotaz/v1/data/sady/CENPHMTT01?format=csv",
   "https://data.csu.gov.cz/data/csu/data/CENPHMTT01.csv",
   "https://data.csu.gov.cz/datastat/data/VYBER/CENPHMTT01?format=csv",
-  "https://vdb.czso.cz/pll/eweb/lkod_ld.seznam",
 ];
 
-/** Adresa katalogu — jen do logu, když selže všechno ostatní. */
-const KATALOG = "https://data.csu.gov.cz/api/katalog/v1/sady?dotaz=pohonn";
+/*
+  Lokální katalog otevřených dat ČSÚ — strojově čitelný seznam všech sad
+  úřadu. Běh 2026-09-15 02:00 UTC ukázal, že tahle adresa odpovídá a vrací
+  CSV se sloupci dataset_iri, dataset_id, title, provider, description,
+  spatial, modified, page, periodicity, start, end, keywords_all.
+
+  Proto se adresa datové sady nehádá: nejdřív se zkusí adresy, které známe,
+  a když neprojdou, dohledá se v katalogu ta skutečná. Když úřad sadu
+  přestěhuje, sběr ji najde sám místo aby tiše přestal.
+*/
+const KATALOG = "https://vdb.czso.cz/pll/eweb/lkod_ld.seznam";
+
+/** Podle čeho se sada v katalogu pozná. Hledá se v názvu, popisu i klíčových slovech. */
+const HLEDANE = /pohonn|nafta|benzin/;
 
 /* ---------- čtení CSV ---------- */
 
@@ -208,6 +235,83 @@ export function zCsv(csv: string): Vysledek {
 /* ---------- běh ---------- */
 
 /**
+ * Dohledá adresy datových souborů v katalogu ČSÚ.
+ *
+ * Katalog je seznam sad, ne dat — u každé sady vede odkaz na její záznam
+ * a na stránku. V obojím hledáme adresu souboru .csv. Nic se nedomýšlí:
+ * když se v katalogu nic nenajde, vrátí se prázdno a řekne se to.
+ *
+ * Nalezené sady se vypisují do logu vždycky. Bez toho by se při změně na
+ * straně úřadu nedalo zjistit, co vlastně katalog nabízí.
+ */
+export async function zKatalogu(): Promise<string[]> {
+  try {
+    const { stav, telo } = await stahni(KATALOG, 1);
+    if (stav >= 400) {
+      console.log(`[palivo] katalog ČSÚ: HTTP ${stav}`);
+      return [];
+    }
+
+    const radky = telo.split(/\r?\n/).filter((r) => r.trim());
+    if (radky.length < 2) return [];
+    const oddelovac = odhadniOddelovac(radky[0]);
+    const hlavicka = rozdelRadek(radky[0], oddelovac).map((h) => h.toLowerCase());
+    const sloupec = (jmeno: string) => hlavicka.indexOf(jmeno);
+
+    const iIri = sloupec("dataset_iri");
+    const iNazev = sloupec("title");
+    const iStranka = sloupec("page");
+    const iOpakovani = sloupec("periodicity");
+
+    const nalezene = radky
+      .slice(1)
+      .map((r) => rozdelRadek(r, oddelovac))
+      .filter((r) => HLEDANE.test(bezDiakritiky(r.join(" "))));
+
+    if (!nalezene.length) {
+      console.log(`[palivo] v katalogu ČSÚ (${radky.length - 1} sad) není žádná s pohonnými hmotami`);
+      return [];
+    }
+
+    console.log(`[palivo] katalog ČSÚ: ${nalezene.length} sad k pohonným hmotám`);
+    for (const r of nalezene.slice(0, 10)) {
+      console.log(`  - ${r[iNazev] ?? "?"} [${r[iOpakovani] ?? "?"}] ${r[iIri] ?? ""} ${r[iStranka] ?? ""}`);
+    }
+
+    /*
+      Týdenní sada má přednost před měsíční a roční — sledujeme týdenní
+      šetření. Když opakování v katalogu není, pořadí se nemění.
+      Záznam sady i její stránka se prohledají na odkaz na soubor .csv.
+    */
+    const tydenni = nalezene.filter((r) => /tyden|week|W$|P1W/.test(bezDiakritiky(r[iOpakovani] ?? "")));
+    const poradi = [...tydenni, ...nalezene.filter((r) => !tydenni.includes(r))];
+
+    const adresy: string[] = [];
+    for (const r of poradi.slice(0, 5)) {
+      for (const kam of [r[iIri], r[iStranka]].filter(Boolean)) {
+        try {
+          const { stav: s2, telo: t2 } = await stahni(kam, 1);
+          if (s2 >= 400) continue;
+          for (const m of t2.matchAll(/https?:\/\/[^"'\s<>\\]+?\.csv/g)) {
+            if (!adresy.includes(m[0])) adresy.push(m[0]);
+          }
+        } catch {
+          // Jedna nedosažitelná stránka katalog neshazuje.
+        }
+      }
+      if (adresy.length) break;
+    }
+
+    if (adresy.length) console.log(`[palivo] z katalogu vyšly adresy: ${adresy.slice(0, 5).join(", ")}`);
+    else console.log("[palivo] v záznamech sad se nenašel žádný odkaz na .csv");
+    return adresy.slice(0, 5);
+  } catch (e) {
+    console.log(`[palivo] katalog ČSÚ nedostupný: ${e instanceof Error ? e.message : e}`);
+    return [];
+  }
+}
+
+/**
  * Stáhne a uloží řadu.
  *
  * Nikdy nevyhazuje a nikdy nemaže data, která už máme: když se stažení
@@ -216,11 +320,27 @@ export function zCsv(csv: string): Vysledek {
  */
 export async function sbirejPalivo(): Promise<void> {
   const puvodni = JSON.parse(fs.readFileSync(SOUBOR, "utf-8")) as RadaCen;
+
+  const cerstve = puvodni.chyba
+    ? jeCerstve(puvodni.pokus, HODIN_PO_CHYBE)
+    : jeCerstve(puvodni.aktualizovano, HODIN_PO_USPECHU);
+  if (cerstve) {
+    console.log(`[palivo] přeskočeno, poslední pokus ${puvodni.pokus ?? puvodni.aktualizovano}`);
+    return;
+  }
+
+  const ted = new Date().toISOString();
   const duvody: string[] = [];
 
-  for (const url of ADRESY) {
+  /*
+    Nejdřív adresy, které známe, pak to, co vydá katalog. Pořadí je schválně
+    takové: známá adresa je rychlá, katalog stojí dvě další stažení.
+  */
+  const adresy = [...ADRESY, ...(await zKatalogu())];
+
+  for (const url of adresy) {
     try {
-      const { stav, telo } = await stahni(url, 2);
+      const { stav, telo } = await stahni(url, 1);
       if (stav >= 400) {
         duvody.push(`${url}: HTTP ${stav}`);
         continue;
@@ -234,7 +354,8 @@ export async function sbirejPalivo(): Promise<void> {
 
       const data: RadaCen = {
         ...puvodni,
-        aktualizovano: new Date().toISOString(),
+        aktualizovano: ted,
+        pokus: ted,
         zdroj: { ...puvodni.zdroj, url },
         chyba: null,
         rada: v.rada,
@@ -260,12 +381,5 @@ export async function sbirejPalivo(): Promise<void> {
   // Nepovedlo se nic. Důvod se zapíše do dat, aby o něm web i rutina věděly.
   const chyba = duvody.join(" | ").slice(0, 600);
   console.log(`[palivo] řadu se nepodařilo stáhnout: ${chyba}`);
-  try {
-    const { stav, telo } = await stahni(KATALOG, 1);
-    console.log(`[palivo] katalog ČSÚ (HTTP ${stav}): ${telo.slice(0, 800)}`);
-  } catch (e) {
-    console.log(`[palivo] katalog ČSÚ nedostupný: ${e instanceof Error ? e.message : e}`);
-  }
-
-  fs.writeFileSync(SOUBOR, JSON.stringify({ ...puvodni, chyba }, null, 2) + "\n", "utf-8");
+  fs.writeFileSync(SOUBOR, JSON.stringify({ ...puvodni, chyba, pokus: ted }, null, 2) + "\n", "utf-8");
 }
