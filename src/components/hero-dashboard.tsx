@@ -1,7 +1,7 @@
 "use client";
 
 import { datumCasPraha } from "@/lib/cas";
-import { PASMA, UROVNE, zDeseti } from "@/lib/skala";
+import { PASMA, UROVNE } from "@/lib/skala";
 import type { CelkovyStav, Uroven } from "@/lib/typy";
 import { cislem } from "@/lib/porovnani";
 import type { Porovnani } from "@/lib/porovnani";
@@ -60,9 +60,9 @@ function Merak({
 }
 
 export function HeroDashboard({
-  stav, cr, crHistoricky, crPocet, hybridni, obcane, overeno, pocetZaznamu, pocet90, veta, porovnani90,
+  stav, cr, crHistoricky, crPocet, obcane, overeno, pocetZaznamu, pocet90, veta, porovnani90,
 }: {
-  stav: CelkovyStav; cr: Uroven | null; crHistoricky: Uroven | null; hybridni: Uroven | null;
+  stav: CelkovyStav; cr: Uroven | null; crHistoricky: Uroven | null;
   /** Kolik případů a kolik manipulačních operací v Česku za 90 dní. */
   crPocet: { pripadu: number; kampani: number };
   obcane: { uroven: Uroven; popis: string; neovereno: number };
@@ -119,10 +119,16 @@ export function HeroDashboard({
             <span className="block"><ObloukovyMerak uroven={stav.uroven} naNoci velikost={164} skrytPopisek /></span>
           </Napoveda>
           <div className="min-w-0">
-            <div className="stitek">{t("Bezpečnostní aktivita · Evropa")}</div>
+            <div className="stitek">{t("Hodnocení projektu · Evropa, dnes")}</div>
             <p className={`text-[34px] font-bold leading-none sm:text-[40px] ${pasmo ? pasmo.text : "text-tlum"}`}>{d ? d.nazev : "Nestanoveno"}</p>
-            <p className="mt-1 text-[12.5px] text-tlum2" title="Hodnocení k dnešnímu dni, ne za celou historii.">
-              {stav.uroven ? `${zDeseti(stav.uroven)} z 10 · ` : ""}dnes
+            {/*
+              Číslo „6 z 10" je pryč. Vypadalo jako měření, ale je to jen jinak
+              zapsané totéž slovo — a hlavně se dalo číst jako pravděpodobnost
+              útoku, což není. Stupnice i s čísly zůstává v metodice a v detailu
+              záznamu, kde je vedle ní vysvětlení.
+            */}
+            <p className="mt-1 text-[12.5px] text-tlum2">
+              hodnocení projektu k dnešnímu dni, ne měření
             </p>
             <p className="mt-1.5 flex flex-wrap items-center gap-x-3 text-[12.5px] text-tlum">
               {stav.trend === "nahoru" && <span className="flex items-center gap-1 font-semibold text-stari-text2"><Ikona nazev="nahoru" velikost={12} tah={2.2} />{t("zhoršení za 7 dní")}</span>}
@@ -156,8 +162,14 @@ export function HeroDashboard({
             </p>
           </div>
         </div>
-        <div className="grid grid-cols-3 divide-x divide-linka2">
-          <Merak nadpis={t("Aktivita v Evropě")} uroven={hybridni} obdobi="dnes" />
+        {/*
+          Dřív tu stály tři budíky a jeden z nich („Aktivita v Evropě") říkal
+          totéž co velký budík vlevo — jen jiným slovem a jiným číslem.
+          Dva konstrukty s téměř shodným názvem vedle sebe se nedaly rozlišit.
+          Zůstávají dva, které odpovídají na jinou otázku než velký budík:
+          co se děje v Česku a co z toho plyne pro dnešek.
+        */}
+        <div className="grid grid-cols-2 divide-x divide-linka2">
           <Merak
             nadpis={t("Situace v Česku")}
             uroven={cr}

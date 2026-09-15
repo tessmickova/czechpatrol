@@ -371,7 +371,7 @@ export function Dashboard({
           závažná, ale nepotvrzená zpráva propadla úplně. */}
       <PruhOverujeme aktivni={overovaneAktivni} uzavrene={overovaneUzavrene} ted={tedMs} />
 
-      <HeroDashboard stav={stav} cr={cr} crHistoricky={crHistoricky} crPocet={crPocet} hybridni={hybridni} obcane={obcane} overeno={overeno} pocetZaznamu={vse.length} pocet90={zapocitatelne90} veta={veta} porovnani90={porovnani90} />
+      <HeroDashboard stav={stav} cr={cr} crHistoricky={crHistoricky} crPocet={crPocet} obcane={obcane} overeno={overeno} pocetZaznamu={vse.length} pocet90={zapocitatelne90} veta={veta} porovnani90={porovnani90} />
 
       {/* 1b — kolik případů přibylo; počítá se v prohlížeči, ne při sestavení */}
       <PocitadlaEvropa polozky={pocitadlaData} ted={Date.now()} />
