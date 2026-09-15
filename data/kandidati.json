@@ -1,5 +1,445 @@
 [
   {
+    "id": "k-8c057ebc88a5edf8",
+    "zachyceno": "2026-09-15T12:32:49.058Z",
+    "publikovano": "2026-09-15T11:55:36.000Z",
+    "zdroj": {
+      "nazev": "BBC News — Europe",
+      "url": "https://www.bbc.co.uk/news/articles/c8ly49w9g1edo?at_medium=RSS&at_campaign=rss",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Suspected sabotage causes major Netherlands rail disruption",
+    "titulekPuvodni": "Suspected sabotage causes major Netherlands rail disruption",
+    "shrnuti": "Trains were cancelled or delayed on Tuesday after objects were found on tracks at multiple locations.",
+    "kodZeme": "NL",
+    "zeme": "Nizozemsko",
+    "kategorie": [
+      "sabotaz"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "sabotage"
+    ],
+    "stav": "ceka",
+    "vyrez": {
+      "text": "Netherlands rail disruption due to suspected sabotage, operator says - BBC News\nImage source, EPA\nBy Amy Walker\nPublished\n15 September 2026, 10:02 BST\nUpdated 36 minutes ago\nParts of the Netherlands, including Amsterdam, have been hit by major rail disruption after suspected sabotage to the tracks, the country&#x27;s railway infrastructure operator has said.\nProRail warned that passengers in the country&#x27;s centre and north should expect cancellations and delays on Tuesday, while the closure of some level crossings could cause disruption to roads.\nPipes and cables were placed on the tracks in multiple locations, according to local media. In a statement, ProRail said the incident appeared to be \"an intentional disruption... caused by human action\".\nIt added that no suspects or motives had been identified. Police said a criminal investigation had been launched.\n\"Objects were found on railway tracks at several locations across the country, causing major disruption to rail traffic,\" Dutch police said in a statement.\nThe network&#x27;s website showed that at least 15 disruptions had been recorded across the country on Tuesday, with routes to the main international airport, Schiphol,…",
+      "stazeno": "2026-09-15T12:32:49.245Z",
+      "stav": 200
+    }
+  },
+  {
+    "id": "k-f93ff21d6f4b60fc",
+    "zachyceno": "2026-09-15T12:32:49.226Z",
+    "publikovano": "2026-09-15T10:53:08.000Z",
+    "zdroj": {
+      "nazev": "Google News — Polsko vzdušný prostor",
+      "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxQR0lZQTVhTmFPSTljVk94bXB5aDB3bGl4YjUwbFBkSk5zV3N2VXVVRVpiS2U5UWpjcDRyQWl5QV9pblRSUFZ0YnpXTzV4WlRhU3RRd0FqZjFOWFBKcW50djh0SEVlQkRsbURrOU93NzU1OEJmZEd6T3prcDd2UFE2SFZ5ZWV4TkwyVng4bi1OMWt5UHIzLUx6TUI1LW1yaDZyX0RBN3ZiUHZhcXBQVUdKMXdlRmktS3JD?oc=5",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Poland Scrambles Jets as Russia Attacks Western Ukraine With Jet-Powered Drones - UNITED24 Media",
+    "titulekPuvodni": "Poland Scrambles Jets as Russia Attacks Western Ukraine With Jet-Powered Drones - UNITED24 Media",
+    "shrnuti": "<a href=\"https://news.google.com/rss/articles/CBMiuAFBVV95cUxQR0lZQTVhTmFPSTljVk94bXB5aDB3bGl4YjUwbFBkSk5zV3N2VXVVRVpiS2U5UWpjcDRyQWl5QV9pblRSUFZ0YnpXTzV4WlRhU3RRd0FqZjFOWFBKcW50djh0SEVlQkRsbURrOU93NzU1OEJmZEd6T3prcDd2UFE2SFZ5ZWV4TkwyVng4bi1OMWt5UHIzLUx6TUI1LW1yaDZyX0RBN3ZiUHZhcXBQVUdKMXdlRmktS3JD?o",
+    "kodZeme": "PL",
+    "zeme": "Polsko",
+    "kategorie": [
+      "drony",
+      "rusko"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "scrambl",
+      "dron",
+      "drone",
+      "russia"
+    ],
+    "stav": "ceka",
+    "vyrez": {
+      "text": "Google News",
+      "stazeno": "2026-09-15T12:32:49.324Z",
+      "stav": 200
+    }
+  },
+  {
+    "id": "k-42cc75a028d45cd4",
+    "zachyceno": "2026-09-15T12:32:49.227Z",
+    "publikovano": "2026-09-15T10:19:00.000Z",
+    "zdroj": {
+      "nazev": "Google News — Polsko vzdušný prostor",
+      "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxQVTIxV0xIaERSVVRQMlFSbi1LNk13aFRUczh5Mi0wVldvZG01aTVnMVRqalJORXdVdWkyckdWb0l0WndxMWRkNUFsU2NYTGNvLUdFakJvWEdtSlRQdmsxLUJJcjhtVDU1U3MxX2lPbGREb2d0R3dabVQwTzZHSFM0UDBCUFY3V1lJRU8zYm1rMVVjQS1IXzVtNmt2OE9jeG5Od0E?oc=5",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Fighter jets launched over Poland after Russian drone attack on Ukraine - The Independent",
+    "titulekPuvodni": "Fighter jets launched over Poland after Russian drone attack on Ukraine - The Independent",
+    "shrnuti": "<a href=\"https://news.google.com/rss/articles/CBMiogFBVV95cUxQVTIxV0xIaERSVVRQMlFSbi1LNk13aFRUczh5Mi0wVldvZG01aTVnMVRqalJORXdVdWkyckdWb0l0WndxMWRkNUFsU2NYTGNvLUdFakJvWEdtSlRQdmsxLUJJcjhtVDU1U3MxX2lPbGREb2d0R3dabVQwTzZHSFM0UDBCUFY3V1lJRU8zYm1rMVVjQS1IXzVtNmt2OE9jeG5Od0E?oc=5\" target=\"_blank\">Fighter ",
+    "kodZeme": "PL",
+    "zeme": "Polsko",
+    "kategorie": [
+      "hybridni",
+      "drony",
+      "rusko"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "attack on",
+      "dron",
+      "drone",
+      "russia"
+    ],
+    "stav": "ceka",
+    "vyrez": {
+      "text": "Google News",
+      "stazeno": "2026-09-15T12:32:49.433Z",
+      "stav": 200
+    }
+  },
+  {
+    "id": "k-830b1e63983ef081",
+    "zachyceno": "2026-09-15T12:32:49.153Z",
+    "publikovano": "2026-09-15T09:55:57.000Z",
+    "zdroj": {
+      "nazev": "Google News — sabotage Europe",
+      "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxPbk5ydnFITWFLR0thVmJFSlR4V2JiR0ViMTRQNGhHLWpoZ2FkR2piQ0VKcmlKYk1VNmRWVE1UeHVPbUQtRk9HaEJUNHZBY0FTMXQyeGxZQXJNYmNqbTh1VnVHc28wdnZOUk9qQ0p3X3VuX0F4VlNTdVdmWnV1MnpIM2VVbUVxSERDY2I5ZWpibzdGdjlscUdr?oc=5",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Russia is destabilizing Europe with sabotage - NATO reveals Kremlin's plan - RBC-Ukraine",
+    "titulekPuvodni": "Russia is destabilizing Europe with sabotage - NATO reveals Kremlin's plan - RBC-Ukraine",
+    "shrnuti": "<a href=\"https://news.google.com/rss/articles/CBMilwFBVV95cUxPbk5ydnFITWFLR0thVmJFSlR4V2JiR0ViMTRQNGhHLWpoZ2FkR2piQ0VKcmlKYk1VNmRWVE1UeHVPbUQtRk9HaEJUNHZBY0FTMXQyeGxZQXJNYmNqbTh1VnVHc28wdnZOUk9qQ0p3X3VuX0F4VlNTdVdmWnV1MnpIM2VVbUVxSERDY2I5ZWpibzdGdjlscUdr?oc=5\" target=\"_blank\">Russia is destabilizing",
+    "kodZeme": "GB",
+    "zeme": "Spojené království",
+    "kategorie": [
+      "sabotaz",
+      "nato",
+      "rusko"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "sabotage",
+      "nato",
+      "russia",
+      "kreml",
+      "kremlin"
+    ],
+    "stav": "ceka",
+    "vyrez": {
+      "text": "Google News",
+      "stazeno": "2026-09-15T12:32:49.562Z",
+      "stav": 200
+    }
+  },
+  {
+    "id": "k-4fdc7b8139e7d687",
+    "zachyceno": "2026-09-15T12:32:49.126Z",
+    "publikovano": "2026-09-15T09:47:00.000Z",
+    "zdroj": {
+      "nazev": "iROZHLAS — zprávy",
+      "url": "https://www.irozhlas.cz/zpravy-domov/povodne-blackout-nebo-chemicka-havarie-cesky-rozhlas-vytvoril-22-scenaru-pro_2609151147_aru",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Povodně, blackout nebo chemická havárie. Český rozhlas vytváří 22 scénářů pro mimořádné události",
+    "titulekPuvodni": "Povodně, blackout nebo chemická havárie. Český rozhlas vytváří 22 scénářů pro mimořádné události",
+    "shrnuti": "Český rozhlas, Hasičský záchranný sbor ČR, Policejní prezidium a pražská zdravotní záchranná služba podepsaly memoranda o spolupráci při krizovém vysílání. Český rozhlas připravuje scénáře pro 22 mimořádných situací od povodní, požárů či blackoutu přes chemické a radiační havárie až po rozsáhlé výpa",
+    "kodZeme": "CZ",
+    "zeme": "Česko",
+    "kategorie": [
+      "infrastruktura"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "blackout"
+    ],
+    "stav": "ceka",
+    "vyrez": {
+      "text": "",
+      "stazeno": "2026-09-15T12:32:49.681Z",
+      "stav": 403,
+      "chyba": "HTTP 403"
+    }
+  },
+  {
+    "id": "k-8e175046cef4bee6",
+    "zachyceno": "2026-09-15T12:32:49.136Z",
+    "publikovano": "2026-09-15T09:45:04.000Z",
+    "zdroj": {
+      "nazev": "ČT24 — hlavní zprávy",
+      "url": "https://ct24.ceskatelevize.cz/clanek/domaci/vojenska-policie-zasahuje-kvuli-zakazkam-v-ustredni-vojenske-nemocnici-377629",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Vojenská policie zadržela tři lidi kvůli zakázkám v ÚVN",
+    "titulekPuvodni": "Vojenská policie zadržela tři lidi kvůli zakázkám v ÚVN",
+    "shrnuti": "Vojenská policie zadržela tři lidi v souvislosti s vyšetřováním rozsáhlé trestné činnosti při zadávání veřejných zakázek v Ústřední vojenské nemocnici v Praze (ÚVN). Mezi zadrženými jsou bývalí a současní náměstci nemocnice. Podle nemocnice se vyšetřování týká bývalého vedení.",
+    "kodZeme": "CZ",
+    "zeme": "Česko",
+    "kategorie": [
+      "zpravodajske",
+      "vojsko"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "zadrz",
+      "policie"
+    ],
+    "stav": "ceka",
+    "vyrez": {
+      "text": "Vojenská policie zadržela tři lidi kvůli zakázkám v ÚVN — ČT24 — Česká televize\nŽivé vysílání\nTV program\nPočasí\nTeletext\nE-shop\nVše o ČT\nTV poplatky\nKontakty\nSpravovat účet\nOblíbené pořady\nRozkoukaná videa\nPřihlásit se do TV\nOdhlásit se\nVojenská policie zadržela tři lidi kvůli zakázkám v ÚVN\nČTK\n, mas ,\nden\n15. 9. 2026 před 5 m minutami | Zdroj: ČTK\nÚstřední vojenská nemocnice, hlavní vstup\nZdroj: ČTK/Markéta Vojtíková\nVojenská policie zadržela tři lidi v souvislosti s vyšetřováním rozsáhlé trestné činnosti při zadávání veřejných zakázek v Ústřední vojenské nemocnici v Praze (ÚVN). Mezi zadrženými jsou bývalí a současní náměstci nemocnice. Podle nemocnice se vyšetřování týká bývalého vedení.\n„Vojenští policisté provádí celkem jedenáct domovních prohlídek a zadrželi tři osoby, které působí či v minulosti působily ve funkci náměstků Ústřední vojenské nemocnice. Mezi zadrženými není žádný voják z povolání,“ uvedla před polednem policie. Případ podle její mluvčí Nikoly Rimkevič Hájkové dozoruje Obvodní státní zastupitelství pro Prahu 6.\n„Ústřední vojenská nemocnice - Vojenská fakultní nemocnice Praha sděluje, že dnešního dne poskytuje plnou součinnost k provádění úkonů Vojenské…",
+      "stazeno": "2026-09-15T12:32:49.717Z",
+      "stav": 200
+    }
+  },
+  {
+    "id": "k-cc569867837cac17",
+    "zachyceno": "2026-09-15T12:32:49.151Z",
+    "publikovano": "2026-09-15T09:03:00.000Z",
+    "zdroj": {
+      "nazev": "Google News — sabotage Europe",
+      "url": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxQZXF2WmdBZlpJXzZMT1BoY1Y3ZlFLczdoUEcyNzExS3hiQWpOOF9CRlRmbWtxcG5GcjByYi1qelVzSTMtQ1NscEpDUDVTb2RmS3EtalNqRTVKbGxEUVEzbDhRVWRrVDBCTWQ1OFByNU5PcGo0NmhUS3lqeXFzR015c1dVNzg4Mjg0MUVYeWlER3FXRDhZQnFiRl9VYk5uWnZnbXVVRUY0YkMtUElDSkwyckZoSDNJa194eWY5QUNUV3Nsem1BUDFmNzdFTkZ5bElE0gHMAUFVX3lxTE4teXZZWHBmZVQwQ0ZSRnlYcGRUU3JqMV82ejRXSXFpQXZxR0RlUHZUWmV0MEZtTG13eHZTT2w0d3ZrNnRHVHVnWW5pSUd4Z0pOOVBPcXhrcnA3Tjk3cklDLV9CcFdkWXhQTDRleTJkTEpuV0VqMDUtY1Fhd1d3WEFQMW83bFFjNUpUNkxic2ZuOGpIZzZiZndNVzFZZHZlOVJXeWJObUdvX0JSbHFRR09WcHo1X3V2VnJfamx4Skt1enBkeEN4NURnNkFRZQ?oc=5",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Cuban dance teacher in Russia ran Europe-wide sabotage network - The New Voice of Ukraine",
+    "titulekPuvodni": "Cuban dance teacher in Russia ran Europe-wide sabotage network - The New Voice of Ukraine",
+    "shrnuti": "<a href=\"https://news.google.com/rss/articles/CBMi0AFBVV95cUxQZXF2WmdBZlpJXzZMT1BoY1Y3ZlFLczdoUEcyNzExS3hiQWpOOF9CRlRmbWtxcG5GcjByYi1qelVzSTMtQ1NscEpDUDVTb2RmS3EtalNqRTVKbGxEUVEzbDhRVWRrVDBCTWQ1OFByNU5PcGo0NmhUS3lqeXFzR015c1dVNzg4Mjg0MUVYeWlER3FXRDhZQnFiRl9VYk5uWnZnbXVVRUY0YkMtUElDSkwyckZoSDNJa194eW",
+    "kodZeme": "GB",
+    "zeme": "Spojené království",
+    "kategorie": [
+      "sabotaz",
+      "rusko"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "sabotage",
+      "russia"
+    ],
+    "stav": "ceka",
+    "vyrez": {
+      "text": "Google News",
+      "stazeno": "2026-09-15T12:32:50.529Z",
+      "stav": 200
+    }
+  },
+  {
+    "id": "k-e321b81d37b1a5b0",
+    "zachyceno": "2026-09-15T12:32:49.077Z",
+    "publikovano": "2026-09-15T08:46:00.000Z",
+    "zdroj": {
+      "nazev": "Deutsche Welle — Europe",
+      "url": "https://www.dw.com/en/netherlands-suspected-sabotage-disrupts-train-services/a-79269600?maca=en-rss-en-eu-2092-rdf",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Netherlands: Suspected sabotage disrupts train services",
+    "titulekPuvodni": "Netherlands: Suspected sabotage disrupts train services",
+    "shrnuti": "A major outage has hit parts of the Dutch railway system after objects were found placed across lines, authorities say. The company responsible for rail infrastructure says it suspects deliberate wrongdoing.",
+    "kodZeme": "NL",
+    "zeme": "Nizozemsko",
+    "kategorie": [
+      "sabotaz",
+      "infrastruktura"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "sabotage",
+      "railway"
+    ],
+    "stav": "ceka",
+    "vyrez": {
+      "text": "Netherlands: Suspected sabotage disrupts train services\nSkip to content\nSkip to main menu\nSkip to more DW sites\nIn focus\nGerman politics AI El Nino\nLatest audio Latest videos\nLive TV\nAdvertisement\nhttps://p.dw.com/p/5Mbdw\nThe disruption began during Tuesday's morning rush hour Image: Vincent Jannink/ANP/IMAGO Advertisement\nTrain services in various parts of the Netherlands have been severely disrupted, with ProRail, the company that maintains the nation's rail infrastructure, saying that sabotage was possibly at play.\nNational railway company NS said that train services around the central cities of Zwolle, Deventer and Amersfoort have been affected since the morning rush hour.\nThe national railway company said it is not clear when services can resume Image: Vincent Jannink/ANP/IMAGO\nWhat do we know about the causes of the disruption?\nIn a statement, rail authority ProRail said that \"[m]aterials deliberately placed on the tracks have been found at several locations. This is causing track-circuit failures. It appears to be a case of sabotage.\"\nThe ‌objects caused failures ‌across ​the network, affecting several level crossings, which disrupted ​road traffic, Pro Rail said.\nProRail…",
+      "stazeno": "2026-09-15T12:32:50.638Z",
+      "stav": 200
+    }
+  },
+  {
+    "id": "k-28e3b669c8504277",
+    "zachyceno": "2026-09-15T12:32:49.229Z",
+    "publikovano": "2026-09-15T07:44:22.000Z",
+    "zdroj": {
+      "nazev": "Google News — Polsko vzdušný prostor",
+      "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxNMHVPZU5UampRalJlelJTLXhFSzg4eVNVM3NackZNdllBWlZzVC1nT3lwNmtxcUowanJ3N2NodlpkUVk0azI0VzZDLXFua05OWkpyMkh5aEtyZVlxS1k4RmZnZDFWVnNpdlVYandFMk1tb0FnT1Q1cTJjT0MzbmxOZF9DZktmTnlsVTExMGxsOFltWEc2c2tF?oc=5",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Romania, Poland scramble fighter jets over drone incidents - The Sofia Globe",
+    "titulekPuvodni": "Romania, Poland scramble fighter jets over drone incidents - The Sofia Globe",
+    "shrnuti": "<a href=\"https://news.google.com/rss/articles/CBMilwFBVV95cUxNMHVPZU5UampRalJlelJTLXhFSzg4eVNVM3NackZNdllBWlZzVC1nT3lwNmtxcUowanJ3N2NodlpkUVk0azI0VzZDLXFua05OWkpyMkh5aEtyZVlxS1k4RmZnZDFWVnNpdlVYandFMk1tb0FnT1Q1cTJjT0MzbmxOZF9DZktmTnlsVTExMGxsOFltWEc2c2tF?oc=5\" target=\"_blank\">Romania, Poland scrambl",
+    "kodZeme": "PL",
+    "zeme": "Polsko",
+    "kategorie": [
+      "drony"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "scrambl",
+      "fighter jet+scrambl",
+      "dron",
+      "drone"
+    ],
+    "stav": "ceka",
+    "vyrez": {
+      "text": "Google News",
+      "stazeno": "2026-09-15T12:32:51.334Z",
+      "stav": 200
+    }
+  },
+  {
+    "id": "k-87e3e3e4ef081d01",
+    "zachyceno": "2026-09-15T12:32:49.230Z",
+    "publikovano": "2026-09-15T07:34:12.000Z",
+    "zdroj": {
+      "nazev": "Google News — Polsko vzdušný prostor",
+      "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxPYkpwZndMeE1fZ1JOODlVQzI1b3lVNDNqdVhvWVFNOVo5dXRSb21CQk81aG1jNmkyMk1RSmVmVW56cXZseU1CcFVtVzlMWjlGMy00eTNGRHB6WllLYU5ubDd5Tm9zOHlaeEhwZm56MldxQVl0emIzbXVTVnkzRDQ5Sjk0Y0Q2M01KekdWa3F0SmtmdkJyUDlHQjlTRUhQa0dMVndnMzBPMDhpUQ?oc=5",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Poland and Romania scrambled fighter jets in response to Russian drones over Ukraine - UA.NEWS",
+    "titulekPuvodni": "Poland and Romania scrambled fighter jets in response to Russian drones over Ukraine - UA.NEWS",
+    "shrnuti": "<a href=\"https://news.google.com/rss/articles/CBMiqgFBVV95cUxPYkpwZndMeE1fZ1JOODlVQzI1b3lVNDNqdVhvWVFNOVo5dXRSb21CQk81aG1jNmkyMk1RSmVmVW56cXZseU1CcFVtVzlMWjlGMy00eTNGRHB6WllLYU5ubDd5Tm9zOHlaeEhwZm56MldxQVl0emIzbXVTVnkzRDQ5Sjk0Y0Q2M01KekdWa3F0SmtmdkJyUDlHQjlTRUhQa0dMVndnMzBPMDhpUQ?oc=5\" target=\"_blan",
+    "kodZeme": "PL",
+    "zeme": "Polsko",
+    "kategorie": [
+      "drony",
+      "rusko"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "scrambl",
+      "fighter jet+scrambl",
+      "dron",
+      "drone",
+      "russia"
+    ],
+    "stav": "ceka",
+    "vyrez": {
+      "text": "Google News",
+      "stazeno": "2026-09-15T12:32:51.469Z",
+      "stav": 200
+    }
+  },
+  {
+    "id": "k-5a80fc0b20644a43",
+    "zachyceno": "2026-09-15T12:32:49.185Z",
+    "publikovano": "2026-09-15T07:27:42.000Z",
+    "zdroj": {
+      "nazev": "Google News — drones airspace NATO",
+      "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxOd1ZJcktGYjB2SUJzaEo4cWhVWkMycnZLUUdFMTIybWxWTTBpY1piMkZ2c2dxbGxBeFlXeV9kN1dVMEtSZElIUnBSeDlKS2NNc2RINGEwbHRyUUFQRW9OWTRmckRkc05majdEdm9YXzRXOUtYUksxVVoxaGhiLU5adkpRc0E0ay15NmNBSk1zSkpzZw?oc=5",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "NATO Jets Shoot Down Drone After It Violates Lithuanian Airspace - Khaama Press",
+    "titulekPuvodni": "NATO Jets Shoot Down Drone After It Violates Lithuanian Airspace - Khaama Press",
+    "shrnuti": "<a href=\"https://news.google.com/rss/articles/CBMikgFBVV95cUxOd1ZJcktGYjB2SUJzaEo4cWhVWkMycnZLUUdFMTIybWxWTTBpY1piMkZ2c2dxbGxBeFlXeV9kN1dVMEtSZElIUnBSeDlKS2NNc2RINGEwbHRyUUFQRW9OWTRmckRkc05majdEdm9YXzRXOUtYUksxVVoxaGhiLU5adkpRc0E0ay15NmNBSk1zSkpzZw?oc=5\" target=\"_blank\">NATO Jets Shoot Down Drone Af",
+    "kodZeme": "LT",
+    "zeme": "Litva",
+    "kategorie": [
+      "drony",
+      "nato"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "violat+airspace",
+      "dron",
+      "drone",
+      "airspace",
+      "nato"
+    ],
+    "stav": "ceka",
+    "vyrez": {
+      "text": "Google News",
+      "stazeno": "2026-09-15T12:32:51.600Z",
+      "stav": 200
+    }
+  },
+  {
+    "id": "k-e88c3f4b4ef8fc86",
+    "zachyceno": "2026-09-15T12:32:49.149Z",
+    "publikovano": "2026-09-15T06:42:38.000Z",
+    "zdroj": {
+      "nazev": "Google News — sabotage Europe",
+      "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxNX25fNnl6RDdza19Za0FHMnhLTjdwYmtyUjFmVW4weFFobmRHeTlKWl9KUDIxRnJBUzlTemtsenlmYXlacXFhTF9kZEJnV1AxakZxbk9rVmN0Y1ZPaXJJYXpsODZKNEtTaXExUnIxNU1oZWNnRndRSEw4QXFmdFpLakU4T25TUnJOS0VWcWdGUHdicE9qOVQ0bA?oc=5",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "The Russian connection – sabotage against Europe’s defence industry - Tomorrow's Affairs",
+    "titulekPuvodni": "The Russian connection – sabotage against Europe’s defence industry - Tomorrow's Affairs",
+    "shrnuti": "<a href=\"https://news.google.com/rss/articles/CBMimAFBVV95cUxNX25fNnl6RDdza19Za0FHMnhLTjdwYmtyUjFmVW4weFFobmRHeTlKWl9KUDIxRnJBUzlTemtsenlmYXlacXFhTF9kZEJnV1AxakZxbk9rVmN0Y1ZPaXJJYXpsODZKNEtTaXExUnIxNU1oZWNnRndRSEw4QXFmdFpLakU4T25TUnJOS0VWcWdGUHdicE9qOVQ0bA?oc=5\" target=\"_blank\">The Russian connectio",
+    "kodZeme": "EU",
+    "zeme": "EU",
+    "kategorie": [
+      "sabotaz",
+      "rusko"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "sabotage",
+      "russia"
+    ],
+    "stav": "ceka",
+    "vyrez": {
+      "text": "Google News",
+      "stazeno": "2026-09-15T12:32:51.764Z",
+      "stav": 200
+    }
+  },
+  {
+    "id": "k-486913d51e20c008",
+    "zachyceno": "2026-09-15T12:32:49.181Z",
+    "publikovano": "2026-09-15T06:41:50.000Z",
+    "zdroj": {
+      "nazev": "Google News — drones airspace NATO",
+      "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxNa0p5by05aldTODNfdXVGMmMwUUQwVWhhYlljYlhFbUxZaEl6Uy1VU1VxZ3VJbXpIbjgyLWxqX1ZkaXNWMEVMOEN4dHczUDhzY0dDdjdoYW1BZGZfQWZRcjdydGVfNkROeFA5WDZqMWRBcmdBRWtaZ05SX1daYkczS09CY0I2WlZZRFl1QTNB?oc=5",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "NATO fighter jets shoot down drone violating Lithuania’s airspace - Latest news from Azerbaijan",
+    "titulekPuvodni": "NATO fighter jets shoot down drone violating Lithuania’s airspace - Latest news from Azerbaijan",
+    "shrnuti": "<a href=\"https://news.google.com/rss/articles/CBMijgFBVV95cUxNa0p5by05aldTODNfdXVGMmMwUUQwVWhhYlljYlhFbUxZaEl6Uy1VU1VxZ3VJbXpIbjgyLWxqX1ZkaXNWMEVMOEN4dHczUDhzY0dDdjdoYW1BZGZfQWZRcjdydGVfNkROeFA5WDZqMWRBcmdBRWtaZ05SX1daYkczS09CY0I2WlZZRFl1QTNB?oc=5\" target=\"_blank\">NATO fighter jets shoot down drone ",
+    "kodZeme": "LT",
+    "zeme": "Litva",
+    "kategorie": [
+      "drony",
+      "nato"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "violat+airspace",
+      "dron",
+      "drone",
+      "airspace",
+      "nato"
+    ],
+    "stav": "ceka"
+  },
+  {
     "id": "k-10b1a096feea114a",
     "zachyceno": "2026-09-15T06:32:40.452Z",
     "publikovano": "2026-09-15T06:12:05.000Z",
@@ -236,6 +676,38 @@
       "stazeno": "2026-09-15T04:02:38.617Z",
       "stav": 200
     }
+  },
+  {
+    "id": "k-03d1b8363ea6f9fa",
+    "zachyceno": "2026-09-15T12:32:49.178Z",
+    "publikovano": "2026-09-15T00:26:50.000Z",
+    "zdroj": {
+      "nazev": "Google News — drones airspace NATO",
+      "url": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxPYnQwUkdJdlNOaDV0cVJ0TWctcktpOWpnNVY5dlN2Y1UtX2Q2ZU5XdE9OVWFJaGp6U1FHYmJFd3lCTnZibXFad2dLVm9KSF9walVETURvd21USndsaG9vOTB6TFZoZG8zNGZXQlNYbXNIZ0RHaEpxU2Y5QmJ6Q1ZWLXVwWV9tZG51VF9IbkZmZ3ZTOF93MkExR083NllkTjRUMklwQngwNWRBOHJmSkRIY0ZJRzJuelkzRktfYWhqeGpQT3E4VjBnOQ?oc=5",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Drone incursions sow fear and chaos along NATO's Baltic and Finnish borders - Reuters",
+    "titulekPuvodni": "Drone incursions sow fear and chaos along NATO's Baltic and Finnish borders - Reuters",
+    "shrnuti": "<a href=\"https://news.google.com/rss/articles/CBMiyAFBVV95cUxPYnQwUkdJdlNOaDV0cVJ0TWctcktpOWpnNVY5dlN2Y1UtX2Q2ZU5XdE9OVWFJaGp6U1FHYmJFd3lCTnZibXFad2dLVm9KSF9walVETURvd21USndsaG9vOTB6TFZoZG8zNGZXQlNYbXNIZ0RHaEpxU2Y5QmJ6Q1ZWLXVwWV9tZG51VF9IbkZmZ3ZTOF93MkExR083NllkTjRUMklwQngwNWRBOHJmSkRIY0ZJRzJuelkzRk",
+    "kodZeme": "FI",
+    "zeme": "Finsko",
+    "kategorie": [
+      "drony",
+      "nato",
+      "hranice"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "drone incursion",
+      "dron",
+      "drone",
+      "nato",
+      "border"
+    ],
+    "stav": "ceka"
   },
   {
     "id": "k-29e0c4955eb7d7e0",
@@ -5914,38 +6386,6 @@
     "vyrez": {
       "text": "Google News",
       "stazeno": "2026-09-14T12:02:39.115Z",
-      "stav": 200
-    }
-  },
-  {
-    "id": "k-f6aee637660d0ac4",
-    "zachyceno": "2026-09-06T13:59:15.575Z",
-    "publikovano": "2026-08-25T07:00:00.000Z",
-    "zdroj": {
-      "nazev": "Google News — sabotage Europe",
-      "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxOeUladUdrbFF0VE9mdzBqTlFJVjZNSTdYM1QzQnBGX19kcDFvelFIbk1FcmNIbXlPMEx3OUJOeGlMeEJmS1U1WWNzMjkzcl8wMjRVb19zOEp1X2UyeDF2WDB5SjFRN1Via3dKZHJNUW5xdlVja2llaG5BcldMYkozV1Z1UTlVcXQxbmNqTURGWU52Zk9iM2ltUkhFQQ?oc=5",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Russia Has Launched New Wave Of Sabotage At Weapons Factories Across Europe - uatv.ua",
-    "titulekPuvodni": "Russia Has Launched New Wave Of Sabotage At Weapons Factories Across Europe - uatv.ua",
-    "shrnuti": "<a href=\"https://news.google.com/rss/articles/CBMimwFBVV95cUxOeUladUdrbFF0VE9mdzBqTlFJVjZNSTdYM1QzQnBGX19kcDFvelFIbk1FcmNIbXlPMEx3OUJOeGlMeEJmS1U1WWNzMjkzcl8wMjRVb19zOEp1X2UyeDF2WDB5SjFRN1Via3dKZHJNUW5xdlVja2llaG5BcldMYkozV1Z1UTlVcXQxbmNqTURGWU52Zk9iM2ltUkhFQQ?oc=5\" target=\"_blank\">Russia Has Launch",
-    "kodZeme": "RU",
-    "zeme": "Rusko",
-    "kategorie": [
-      "sabotaz",
-      "rusko"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "shody": [
-      "sabotage",
-      "russia"
-    ],
-    "stav": "ceka",
-    "vyrez": {
-      "text": "Google News",
-      "stazeno": "2026-09-14T12:02:39.255Z",
       "stav": 200
     }
   }
