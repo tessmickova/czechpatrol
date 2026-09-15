@@ -32,9 +32,9 @@
           "jazyk": "cs"
         }
       ],
-      "zkontrolovano": "2026-09-15T06:31:32.570Z",
+      "zkontrolovano": "2026-09-15T07:01:28.693Z",
       "pokryti": "orientacni",
-      "pokrytiDuvod": "zdroje přečteny, ale žádný z nich není úplný seznam — zápor z nich neplyne"
+      "pokrytiDuvod": "přečteno mvcr, mzv; žádný z nich není úplný seznam, zápor z nich neplyne"
     },
     {
       "klic": "hranice",
@@ -67,9 +67,9 @@
           "jazyk": "cs"
         }
       ],
-      "zkontrolovano": "2026-09-15T06:31:32.570Z",
-      "pokryti": "orientacni",
-      "pokrytiDuvod": "zdroje přečteny, ale žádný z nich není úplný seznam — zápor z nich neplyne"
+      "zkontrolovano": "2026-09-15T07:01:28.693Z",
+      "pokryti": "nedostupne",
+      "pokrytiDuvod": "nepodařilo se přečíst: dopravni-info"
     },
     {
       "klic": "palivo",
@@ -102,9 +102,9 @@
           "jazyk": "cs"
         }
       ],
-      "zkontrolovano": "2026-09-15T06:31:32.570Z",
+      "zkontrolovano": "2026-09-15T07:01:28.693Z",
       "pokryti": "orientacni",
-      "pokrytiDuvod": "zdroje přečteny, ale žádný z nich není úplný seznam — zápor z nich neplyne"
+      "pokrytiDuvod": "přečteno mpo; žádný z nich není úplný seznam, zápor z nich neplyne"
     },
     {
       "klic": "elektrina",
@@ -137,9 +137,9 @@
           "jazyk": "cs"
         }
       ],
-      "zkontrolovano": "2026-09-15T06:31:32.570Z",
+      "zkontrolovano": "2026-09-15T07:01:28.693Z",
       "pokryti": "orientacni",
-      "pokrytiDuvod": "zdroje přečteny, ale žádný z nich není úplný seznam — zápor z nich neplyne"
+      "pokrytiDuvod": "přečteno ceps, eru, ote, mpo; žádný z nich není úplný seznam, zápor z nich neplyne"
     },
     {
       "klic": "plyn",
@@ -163,9 +163,9 @@
           "jazyk": "cs"
         }
       ],
-      "zkontrolovano": "2026-09-15T06:31:32.570Z",
+      "zkontrolovano": "2026-09-15T07:01:28.693Z",
       "pokryti": "orientacni",
-      "pokrytiDuvod": "zdroje přečteny, ale žádný z nich není úplný seznam — zápor z nich neplyne"
+      "pokrytiDuvod": "přečteno eru, ote, mpo; žádný z nich není úplný seznam, zápor z nich neplyne"
     },
     {
       "klic": "banky",
@@ -190,9 +190,9 @@
           "jazyk": "cs"
         }
       ],
-      "zkontrolovano": "2026-09-15T06:31:32.570Z",
+      "zkontrolovano": "2026-09-15T07:01:28.693Z",
       "pokryti": "orientacni",
-      "pokrytiDuvod": "zdroje přečteny, ale žádný z nich není úplný seznam — zápor z nich neplyne"
+      "pokrytiDuvod": "přečteno cnb; žádný z nich není úplný seznam, zápor z nich neplyne"
     },
     {
       "klic": "komunikace",
@@ -225,9 +225,9 @@
           "jazyk": "cs"
         }
       ],
-      "zkontrolovano": "2026-09-15T06:31:32.570Z",
+      "zkontrolovano": "2026-09-15T07:01:28.693Z",
       "pokryti": "orientacni",
-      "pokrytiDuvod": "zdroje přečteny, ale žádný z nich není úplný seznam — zápor z nich neplyne"
+      "pokrytiDuvod": "přečteno ctu, nukib; žádný z nich není úplný seznam, zápor z nich neplyne"
     },
     {
       "klic": "bezny-zivot",
@@ -259,9 +259,9 @@
           "jazyk": "cs"
         }
       ],
-      "zkontrolovano": "2026-09-15T06:31:32.570Z",
+      "zkontrolovano": "2026-09-15T07:01:28.693Z",
       "pokryti": "orientacni",
-      "pokrytiDuvod": "zdroje přečteny, ale žádný z nich není úplný seznam — zápor z nich neplyne"
+      "pokrytiDuvod": "přečteno vlada, hzs; žádný z nich není úplný seznam, zápor z nich neplyne"
     }
   ],
   "zkontrolovano": "2026-09-15T06:31:32.570Z"
