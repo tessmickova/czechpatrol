@@ -38,7 +38,8 @@ export function Znacka({
   tmave?: boolean;
   trida?: string;
 }) {
-  const plocha = tmave ? "#e8484f" : "#c1272d";
+  // Akcent bere token — ve světlém režimu je tmavší, aby text prošel kontrastem.
+  const plocha = "var(--color-akcent)";
   const kresba = tmave ? "#14140f" : "#fffefb";
   const kruhy = pocetKruhu(velikost);
   const osy = velikost >= 28;
@@ -108,9 +109,14 @@ export function Logo({
       <Znacka velikost={velikost} tmave={tmave} />
       <span
         className="whitespace-nowrap font-bold leading-none tracking-[-0.03em]"
-        style={{ fontSize: pismo, color: tmave ? "#fffefb" : undefined }}
+        /*
+          Barvy berou tokeny, ne napevno zapsanou bílou. Ve světlém režimu byl
+          bílý nápis „Czech" na světlé hlavičce neviditelný; token se přepíše
+          podle režimu i podle toho, jestli logo stojí na tmavé desce.
+        */
+        style={{ fontSize: pismo, color: "var(--color-inkoust)" }}
       >
-        Czech<span style={{ color: tmave ? "#e8484f" : "#c1272d" }}>Patrol</span>
+        Czech<span style={{ color: "var(--color-akcent)" }}>Patrol</span>
       </span>
     </span>
   );

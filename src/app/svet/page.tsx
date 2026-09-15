@@ -44,7 +44,7 @@ function Tvrzeni({ polozky, aktor, tlumene = false }: { polozky: SvetTvrzeni[]; 
     <ul className="space-y-1.5">
       {polozky.map((t, i) => (
         <li key={i} className={`flex gap-2.5 text-[14px] leading-relaxed ${tlumene ? "text-tlum" : "text-inkoust"}`}>
-          <span aria-hidden className={`mt-[9px] h-[4px] w-[4px] shrink-0 rounded-full ${t.odhad ? "bg-[#c4b8e6]" : "bg-akcent"}`} />
+          <span aria-hidden className={`mt-[9px] h-[4px] w-[4px] shrink-0 rounded-full ${t.odhad ? "bg-fialova-text" : "bg-akcent"}`} />
           <span>
             {t.text}
             {t.odhad && <span className="ml-1.5 align-middle"><OdznakTypu typ="odhad" /></span>}
@@ -57,7 +57,7 @@ function Tvrzeni({ polozky, aktor, tlumene = false }: { polozky: SvetTvrzeni[]; 
 }
 
 function Priblizeni({ stupen, stupne }: { stupen: number; stupne: string[] }) {
-  const barvy = ["bg-tlum2", "bg-[#d9b24c]", "bg-[#e08a3c]", "bg-[#e8763f]", "bg-[#e8484f]"];
+  const barvy = ["bg-tlum2", "bg-pozor", "bg-stari", "bg-oranz", "bg-akcent"];
   return (
     <div className="flex items-center gap-3">
       <span aria-hidden className="flex gap-[3px]">
@@ -90,7 +90,7 @@ function Aktor({ a, stupne }: { a: SvetAktor; stupne: string[] }) {
         <div className="mb-1.5 flex items-center gap-2"><OdznakTypu typ="fakt" /><span className="stitek">Co pro to dělá</span></div>
         <Tvrzeni polozky={a.postup} aktor={a} tlumene />
       </div>
-      <div className="mt-4 rounded-[18px] border border-[#a494d6]/30 bg-[#a494d6]/8 p-3.5">
+      <div className="mt-4 rounded-[18px] border border-fialova/30 bg-fialova/8 p-3.5">
         <div className="mb-2 flex items-center gap-2"><OdznakTypu typ="odhad" /><span className="stitek">Jak blízko k cílům je</span></div>
         <Priblizeni stupen={a.priblizeni.stupen} stupne={stupne} />
         <p className="mt-2 text-[14px] leading-relaxed text-tlum">{a.priblizeni.odhad}</p>
@@ -148,7 +148,7 @@ export default function Svet() {
                   <span className="block text-[11.5px] text-tlum2">k cílům: {s.stupne[a.priblizeni.stupen]}</span>
                 </span>
                 <span aria-hidden className="flex gap-[2px]">
-                  {s.stupne.map((_, i) => <span key={i} className={`h-[8px] w-[7px] rounded-[1px] ${i <= a.priblizeni.stupen ? "bg-[#c4b8e6]" : "bg-linka2"}`} />)}
+                  {s.stupne.map((_, i) => <span key={i} className={`h-[8px] w-[7px] rounded-[1px] ${i <= a.priblizeni.stupen ? "bg-fialova-text" : "bg-linka2"}`} />)}
                 </span>
               </a>
             </li>
@@ -215,7 +215,7 @@ export default function Svet() {
         <ul className="divide-y divide-linka2 border-y border-linka2">
           {s.sledovat.map((x) => (
             <li key={x.text} className="flex items-start gap-3 py-2.5 text-[14px] leading-relaxed text-inkoust">
-              <span className={`mt-[3px] shrink-0 ${x.smer === "nahoru" ? "text-[#f0996e]" : x.smer === "dolu" ? "text-[#8fd6ae]" : "text-tlum2"}`}>
+              <span className={`mt-[3px] shrink-0 ${x.smer === "nahoru" ? "text-stari-text2" : x.smer === "dolu" ? "text-klid-text" : "text-tlum2"}`}>
                 <Ikona nazev={x.smer === "nahoru" ? "nahoru" : x.smer === "dolu" ? "dolu" : "minus"} velikost={13} tah={2.2} />
               </span>
               {x.text}

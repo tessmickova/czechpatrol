@@ -51,7 +51,7 @@ export function PasZemi({ vse, kampane = [], ted = Date.now() }: { vse: Zaznam[]
         <span className="font-semibold text-inkoust">{z.nazev}</span>
         <span className={`cislice text-[14px] font-bold ${t ? t.text : "text-tlum2"}`}>{z.pocet}</span>
         {z.vykricniky > 0 && (
-          <span aria-label={`${z.vykricniky === 3 ? "velmi vysoká" : z.vykricniky === 2 ? "vysoká" : "zvýšená"} aktivita`} className="flex gap-[1px] text-[#e8484f]">
+          <span aria-label={`${z.vykricniky === 3 ? "velmi vysoká" : z.vykricniky === 2 ? "vysoká" : "zvýšená"} aktivita`} className="flex gap-[1px] text-akcent">
             {Array.from({ length: z.vykricniky }, (_, i) => <Ikona key={i} nazev="vykricnik" velikost={12} tah={2.6} />)}
           </span>
         )}

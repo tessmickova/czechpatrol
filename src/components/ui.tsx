@@ -29,9 +29,9 @@ import { Vlajka } from "./zeme";
 export type Ton = "klid" | "pozor" | "vazne" | "neutral" | "akcent";
 
 const TONY: Record<Ton, { text: string; ramecek: string; pozadi: string; tecka: string; ikona: NazevIkony }> = {
-  klid: { text: "text-[#8fd6ae]", ramecek: "border-[#5cbf8a]/45", pozadi: "bg-[#5cbf8a]/10", tecka: "bg-[#5cbf8a]", ikona: "fajfka" },
-  pozor: { text: "text-[#e6c977]", ramecek: "border-[#d9b24c]/45", pozadi: "bg-[#d9b24c]/10", tecka: "bg-[#d9b24c]", ikona: "vykricnik" },
-  vazne: { text: "text-[#f2848a]", ramecek: "border-[#e8484f]/50", pozadi: "bg-[#e8484f]/12", tecka: "bg-[#e8484f]", ikona: "sirena" },
+  klid: { text: "text-klid-text", ramecek: "border-klid/45", pozadi: "bg-klid/10", tecka: "bg-klid", ikona: "fajfka" },
+  pozor: { text: "text-pozor-text", ramecek: "border-pozor/45", pozadi: "bg-pozor/10", tecka: "bg-pozor", ikona: "vykricnik" },
+  vazne: { text: "text-akcent-svetla", ramecek: "border-akcent/50", pozadi: "bg-akcent/12", tecka: "bg-akcent", ikona: "sirena" },
   neutral: { text: "text-tlum", ramecek: "border-linka", pozadi: "bg-plocha2", tecka: "bg-tlum2", ikona: "info" },
   akcent: { text: "text-akcent-svetla", ramecek: "border-akcent/55", pozadi: "bg-akcent/12", tecka: "bg-akcent", ikona: "radar" },
 };

@@ -187,7 +187,7 @@ export function SpravaKlient() {
             {tipy.map((x) => (
               <li key={x.id} className="rounded-[22px] border border-linka p-4">
                 <div className="mb-2 flex flex-wrap items-center justify-between gap-2">
-                  <span className={`stitek-tmavy rounded-full border px-2 py-1 ${x.stav === "novy" ? "border-akcent/40 bg-akcent/10 text-akcent-svetla" : x.stav === "prijato" ? "border-[#5cbf8a]/40 bg-[#5cbf8a]/10 text-[#8fd6ae]" : "border-linka text-tlum2"}`}>
+                  <span className={`stitek-tmavy rounded-full border px-2 py-1 ${x.stav === "novy" ? "border-akcent/40 bg-akcent/10 text-akcent-svetla" : x.stav === "prijato" ? "border-klid/40 bg-klid/10 text-klid-text" : "border-linka text-tlum2"}`}>
                     {x.stav === "novy" ? "Nové" : x.stav === "prijato" ? "Přijato" : "Zamítnuto"}
                   </span>
                   <span className="stitek">{datumCas(x.vytvoreno)}</span>

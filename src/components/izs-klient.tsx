@@ -24,8 +24,8 @@ export interface ZpravaIzs {
 export const STAVY_ZPRAV: Record<ZpravaIzs["stav"], { nazev: string; tridy: string }> = {
   navrh: { nazev: "Čeká na schválení", tridy: "border-jantar/40 bg-jantar/10 text-jantar" },
   schvaleno: { nazev: "Schváleno", tridy: "border-akcent/40 bg-akcent/10 text-akcent-svetla" },
-  odeslano: { nazev: "Odesláno", tridy: "border-[#5cbf8a]/40 bg-[#5cbf8a]/10 text-[#8fd6ae]" },
-  zamitnuto: { nazev: "Zamítnuto", tridy: "border-[#e8484f]/40 bg-[#e8484f]/10 text-[#f2848a]" },
+  odeslano: { nazev: "Odesláno", tridy: "border-klid/40 bg-klid/10 text-klid-text" },
+  zamitnuto: { nazev: "Zamítnuto", tridy: "border-akcent/40 bg-akcent/10 text-akcent-svetla" },
 };
 
 const MAX = 600;
@@ -132,7 +132,7 @@ export function PolozkaZpravy({ z, akce }: { z: ZpravaIzs; akce?: React.ReactNod
       {z.platnostDo && <p className="stitek mt-2">platí do {datumCas(z.platnostDo)}</p>}
       {z.poznamka && <p className="mt-2 text-[13px] text-tlum">Poznámka správce: {z.poznamka}</p>}
       {typeof z.doruceno === "number" && z.stav === "odeslano" && (
-        <p className="stitek mt-2 !text-[#8fd6ae]">doručeno {z.doruceno}× </p>
+        <p className="stitek mt-2 !text-klid-text">doručeno {z.doruceno}× </p>
       )}
       {akce && <div className="mt-3 flex flex-wrap gap-2">{akce}</div>}
     </li>

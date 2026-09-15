@@ -2,12 +2,12 @@ import { cerstvost, datumCasPraha, stariSlovy, type Cerstvost } from "@/lib/cas"
 import { Ikona, type NazevIkony } from "./ikony";
 
 const VZHLED: Record<Cerstvost, { slovo: string; tridy: string; ikona: NazevIkony }> = {
-  cerstve: { slovo: "ověřeno", tridy: "text-[#8fd6ae]", ikona: "fajfka" },
-  starsi: { slovo: "starší ověření", tridy: "text-[#e6c977]", ikona: "hodiny" },
-  zastarale: { slovo: "zastaralé", tridy: "text-[#f0996e]", ikona: "vystraha" },
+  cerstve: { slovo: "ověřeno", tridy: "text-klid-text", ikona: "fajfka" },
+  starsi: { slovo: "starší ověření", tridy: "text-pozor-text", ikona: "hodiny" },
+  zastarale: { slovo: "zastaralé", tridy: "text-stari-text2", ikona: "vystraha" },
   nezname: { slovo: "neověřeno", tridy: "text-tlum2", ikona: "info" },
   // Čas z budoucnosti je chyba dat nebo hodin. Zelená by z ní udělala ověření.
-  budoucnost: { slovo: "čas z budoucnosti", tridy: "text-[#f0996e]", ikona: "vystraha" },
+  budoucnost: { slovo: "čas z budoucnosti", tridy: "text-stari-text2", ikona: "vystraha" },
 };
 
 /** Stáří podkladu u jednotlivého stavu. Neověřené nikdy nevypadá jako čerstvé. */
@@ -50,11 +50,11 @@ export function BannerStari({ overeno, zkontrolovano }: { overeno: string | null
   return (
     <div
       role="status"
-      className={poplach ? "border-b border-[#e08a3c]/40 bg-[#e08a3c]/10" : "border-b border-linka2 bg-plocha"}
+      className={poplach ? "border-b border-stari/40 bg-stari/10" : "border-b border-linka2 bg-plocha"}
     >
       <div
         className={`mx-auto flex max-w-[1200px] items-start gap-2.5 px-4 py-2.5 text-[14px] sm:px-6 ${
-          poplach ? "text-[#eaa96b]" : "text-tlum"
+          poplach ? "text-stari-text" : "text-tlum"
         }`}
       >
         <Ikona nazev={poplach ? "vystraha" : "info"} velikost={16} tah={2} trida="mt-[2px] shrink-0" />

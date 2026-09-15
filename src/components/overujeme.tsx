@@ -58,7 +58,7 @@ function Karta({ o, ted }: { o: Overovana; ted: number }) {
         {/* Úřední stav stojí první. Je to to jediné, co je tu jisté. */}
         <section>
           <h3 className="flex items-center gap-2 text-[14px] font-bold text-inkoust">
-            <span className="grid h-6 w-6 shrink-0 place-items-center rounded-full bg-[#5cbf8a]/15 text-[#8fd6ae]"><Ikona nazev="fajfka" velikost={12} tah={2.2} /></span>
+            <span className="grid h-6 w-6 shrink-0 place-items-center rounded-full bg-klid/15 text-klid-text"><Ikona nazev="fajfka" velikost={12} tah={2.2} /></span>
             Co je jisté: co říkají úřady
           </h3>
           <ul className="mt-1.5 space-y-1 pl-8">
@@ -97,7 +97,7 @@ function Karta({ o, ted }: { o: Overovana; ted: number }) {
 
         {/* Poslední slovo má vždycky pokyn, ne tvrzení. */}
         <p className="flex items-start gap-2.5 rounded-[18px] border border-linka2 bg-plocha px-4 py-3">
-          <span className="mt-[1px] grid h-[22px] w-[22px] shrink-0 place-items-center rounded-full text-[#8fd6ae]">
+          <span className="mt-[1px] grid h-[22px] w-[22px] shrink-0 place-items-center rounded-full text-klid-text">
             <Ikona nazev="stit" velikost={15} tah={2} />
           </span>
           <span className="text-[14.5px] leading-relaxed text-tlum">

@@ -15,9 +15,9 @@ import { SeznamZdroju } from "./zdroje";
 type Stav = "plati" | "neplati" | "sledujeme" | "narusen" | "neovereno";
 
 const VZHLED: Record<Stav, { slovo: string; tridy: string; ikona: NazevIkony }> = {
-  plati: { slovo: "platí", tridy: "border-[#e8484f]/40 bg-[#e8484f]/10 text-[#f2848a]", ikona: "vystraha" },
-  narusen: { slovo: "narušeno", tridy: "border-[#e8763f]/40 bg-[#e8763f]/10 text-[#f0996e]", ikona: "vystraha" },
-  sledujeme: { slovo: "sledujeme", tridy: "border-[#d9b24c]/40 bg-[#d9b24c]/10 text-[#e6c977]", ikona: "oko" },
+  plati: { slovo: "platí", tridy: "border-akcent/40 bg-akcent/10 text-akcent-svetla", ikona: "vystraha" },
+  narusen: { slovo: "narušeno", tridy: "border-oranz/40 bg-oranz/10 text-stari-text2", ikona: "vystraha" },
+  sledujeme: { slovo: "sledujeme", tridy: "border-pozor/40 bg-pozor/10 text-pozor-text", ikona: "oko" },
   neplati: { slovo: "není vyhlášeno", tridy: "border-linka text-tlum", ikona: "fajfka" },
   neovereno: { slovo: "neověřeno", tridy: "border-dashed border-linka text-tlum2", ikona: "info" },
 };

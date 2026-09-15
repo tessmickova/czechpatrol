@@ -18,7 +18,7 @@ export function Rozbalovac({
           otevreno
             ? "border-akcent bg-akcent text-noc"
             : akcent
-              ? "border-[#e08a3c]/60 bg-[#e08a3c]/15 text-[#eaa96b] hover:bg-[#e08a3c]/25"
+              ? "border-stari/60 bg-stari/15 text-stari-text hover:bg-stari/25"
               : "border-akcent/60 bg-akcent/15 text-akcent-svetla hover:bg-akcent/25"
         }`}
       >

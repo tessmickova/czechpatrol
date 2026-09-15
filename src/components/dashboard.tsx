@@ -46,9 +46,9 @@ type Ton = "klid" | "pozor" | "plati" | "nedolozeno" | "nevime";
   ani tomu, kdo si web vytiskne černobíle.
 */
 const TON: Record<Ton, { dlazdice: string; tecka: string; slovo: string; ikona: NazevIkony }> = {
-  klid: { dlazdice: "border-linka2 bg-plocha", tecka: "bg-[#5cbf8a]", slovo: "text-[#8fd6ae]", ikona: "fajfka" },
-  pozor: { dlazdice: "border-[#d9b24c]/40 bg-[#d9b24c]/10", tecka: "bg-[#d9b24c]", slovo: "text-[#e6c977]", ikona: "vykricnik" },
-  plati: { dlazdice: "border-[#e8484f]/50 bg-[#e8484f]/12", tecka: "bg-[#e8484f]", slovo: "text-[#f2848a]", ikona: "sirena" },
+  klid: { dlazdice: "border-linka2 bg-plocha", tecka: "bg-klid", slovo: "text-klid-text", ikona: "fajfka" },
+  pozor: { dlazdice: "border-pozor/40 bg-pozor/10", tecka: "bg-pozor", slovo: "text-pozor-text", ikona: "vykricnik" },
+  plati: { dlazdice: "border-akcent/50 bg-akcent/12", tecka: "bg-akcent", slovo: "text-akcent-svetla", ikona: "sirena" },
   /*
     „Nedoloženo" je vlastní tón, ne zelená. Znamená: v kontrolovaných zdrojích
     jsme nic nenašli, ale úplný seznam nemáme. Zelená by tvrdila ověřený klid,
@@ -150,7 +150,7 @@ function dlazdiceProvoz(p: ProvozniPolozka): Dlazdice {
 function Stari({ cas, popisek }: { cas: string | null; popisek: Dlazdice["popisekCasu"] }) {
   if (!cas) return <span className="shrink-0 text-[10.5px] text-tlum2">bez kontroly</span>;
   const c = cerstvost(cas);
-  const barva = c === "cerstve" || c === "nezname" ? "text-tlum2" : "text-[#eaa96b]";
+  const barva = c === "cerstve" || c === "nezname" ? "text-tlum2" : "text-stari-text";
   return (
     <span className={`shrink-0 text-right text-[10.5px] leading-tight ${barva}`}>
       {popisek}
@@ -171,8 +171,10 @@ function Stari({ cas, popisek }: { cas: string | null; popisek: Dlazdice["popise
   Stav nese slovo i barva, ne jen barva: kdo barvy nerozliší nebo si web
   vytiskne černobíle, přečte totéž.
 */
-function RadekStavu({ d }: { d: Dlazdice }) {
+function RadekStavu({ d, casSkupiny }: { d: Dlazdice; casSkupiny: string | null }) {
   const t = TON[d.ton];
+  // Čas se u řádku píše jen tehdy, když se liší od času celé skupiny.
+  const vlastniCas = d.cas !== casSkupiny;
   const zvyraznit = d.ton === "plati" || d.ton === "pozor";
   return (
     <li className={`border-b border-linka2 ${zvyraznit ? t.dlazdice : ""}`}>
@@ -183,7 +185,7 @@ function RadekStavu({ d }: { d: Dlazdice }) {
             <span className="block truncate text-[13px] leading-tight text-tlum">{d.nazev}</span>
             <span className={`block text-[13.5px] font-semibold leading-tight ${t.slovo}`}>{d.stav}</span>
           </span>
-          <Stari cas={d.cas} popisek={d.popisekCasu} />
+          {vlastniCas && <Stari cas={d.cas} popisek={d.popisekCasu} />}
         </span>
       </Napoveda>
     </li>
@@ -313,12 +315,22 @@ export function Dashboard({
     ...natoPolozky.map(dlazdiceNato),
     ...provozPolozky.map(dlazdiceProvoz),
   ];
-  const skupinyDlazdic = SKUPINY.map((sk) => ({
-    ...sk,
-    polozky: vsechnyDlazdice
+  const skupinyDlazdic = SKUPINY.map((sk) => {
+    const polozky = vsechnyDlazdice
       .filter((d) => d.klic.startsWith(`${sk.predpona}-`))
-      .sort((a, b) => (KLICOVE.includes(a.klic) ? 0 : 1) - (KLICOVE.includes(b.klic) ? 0 : 1)),
-  })).filter((sk) => sk.polozky.length > 0);
+      .sort((a, b) => (KLICOVE.includes(a.klic) ? 0 : 1) - (KLICOVE.includes(b.klic) ? 0 : 1));
+    /*
+      Společný čas skupiny: nejstarší z položek. Skupina není zkontrolovanější,
+      než je její nejhůř pokrytá položka — brát nejnovější čas by tvrdilo víc,
+      než na co máme doklad.
+    */
+    const casy = polozky.map((d) => d.cas).filter((c): c is string => Boolean(c));
+    const cas = casy.length ? casy.slice().sort()[0] : null;
+    const popisekCasu = cas
+      ? (polozky.every((d) => d.popisekCasu === "ověřeno") ? "ověřeno" as const : "kontrolováno" as const)
+      : "bez kontroly" as const;
+    return { ...sk, polozky, cas, popisekCasu };
+  }).filter((sk) => sk.polozky.length > 0);
 
   void tydny;
   return (
@@ -346,9 +358,17 @@ export function Dashboard({
         <section aria-label={t("Oficiální stavy")} id="opatreni" className="scroll-mt-[84px] space-y-4">
           {skupinyDlazdic.map((sk) => (
             <div key={sk.predpona} className="overflow-hidden rounded-[20px] border border-linka2 bg-plocha">
-              <div className="stitek border-b border-linka2 px-3 py-2">{sk.nazev}</div>
+              {/*
+                Čas kontroly stojí v hlavičce skupiny, ne u každého řádku.
+                Dvacet stejných časových razítek pod sebou je šum; položka,
+                která má čas jiný, si ho vypíše sama.
+              */}
+              <div className="flex items-center justify-between gap-3 border-b border-linka2 px-3 py-2">
+                <span className="stitek">{sk.nazev}</span>
+                <Stari cas={sk.cas} popisek={sk.popisekCasu} />
+              </div>
               <ul className="sm:grid sm:grid-cols-2">
-                {sk.polozky.map((d) => <RadekStavu key={d.klic} d={d} />)}
+                {sk.polozky.map((d) => <RadekStavu key={d.klic} d={d} casSkupiny={sk.cas} />)}
               </ul>
             </div>
           ))}
@@ -478,7 +498,7 @@ export function Dashboard({
                 <span className="w-[118px] shrink-0 truncate text-[12.5px] text-inkoust">{s.nazev}</span>
                 <span className="h-[8px] flex-1 overflow-hidden rounded-full bg-linka2">
                   <span className="block h-full bg-tlum2/70" style={{ width: `${(s.pocet / maxPuv) * 100}%` }}>
-                    <span className="block h-full bg-[#e8763f]" style={{ width: `${s.pocet ? (s.potvrzeno / s.pocet) * 100 : 0}%` }} />
+                    <span className="block h-full bg-oranz" style={{ width: `${s.pocet ? (s.potvrzeno / s.pocet) * 100 : 0}%` }} />
                   </span>
                 </span>
                 <span className="cislice w-12 shrink-0 text-right text-[13px] text-inkoust"><b className="font-bold">{s.potvrzeno}</b><span className="text-tlum2"> / {s.pocet}</span></span>

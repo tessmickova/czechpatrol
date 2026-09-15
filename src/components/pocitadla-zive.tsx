@@ -77,6 +77,10 @@ function OdznakPorovnani({ p }: { p: Porovnani | null }) {
   udrží, ale popisky se lámou po slabikách a odznak přeteče přes okraj.
   Mřížka je proto na mobilu třísloupcová a teprve od `sm` se dlaždice
   roztáhnou do řady.
+
+  Rámeček má celá skupina, ne každé číslo zvlášť. Pět orámovaných kartiček
+  vedle sebe vypadalo jako pět nesouvisejících věcí, přitom je to jedna
+  řada téhož údaje v různých oknech.
 */
 function Cislo({
   n, popis, odkaz, zvyraznit = false, podtext, odznak,
@@ -86,7 +90,7 @@ function Cislo({
   return (
     <Link
       href={odkaz}
-      className="dlazdice-stav group flex min-w-0 flex-col gap-1 rounded-[20px] border border-linka2 bg-plocha px-3.5 py-3.5 hover:border-akcent sm:flex-1 sm:px-5 sm:py-5"
+      className="dlazdice-stav group flex min-w-0 flex-col gap-1 px-3.5 py-3.5 hover:bg-plocha2 sm:flex-1 sm:px-5 sm:py-5"
     >
       <span className={`cislice text-[28px] font-bold leading-none sm:text-[44px] ${zvyraznit && n > 0 ? "text-akcent" : "text-inkoust"}`}>{n}</span>
       <span className="text-[12.5px] leading-tight text-tlum sm:text-[13px]">{popis}</span>
@@ -112,7 +116,7 @@ export function PocitadlaEvropa({ polozky, ted }: { polozky: PolozkaPoctu[]; ted
   const o = spocitejOkna(polozky, useZiveHodiny(ted));
   return (
     <section aria-label="Kolik incidentů přibylo" className="mt-4">
-      <div className="grid grid-cols-3 gap-2.5 sm:flex sm:flex-wrap sm:gap-3">
+      <div className="grid grid-cols-3 divide-x divide-y divide-linka2 overflow-hidden rounded-[20px] border border-linka2 bg-plocha sm:flex sm:divide-y-0">
         <Cislo n={o.dnes} popis="dnes" odkaz="/udalosti/?obdobi=7d" zvyraznit />
         <Cislo n={o.tyden} popis="za 7 dní" odkaz="/udalosti/?obdobi=7d" />
         <Cislo n={o.mesic} popis="za 30 dní" odkaz="/udalosti/?obdobi=30d" />
@@ -145,7 +149,7 @@ export function PocitadlaZeme({ polozky, ted, nazev }: { polozky: PolozkaPoctu[]
   const o = spocitejOkna(polozky, useZiveHodiny(ted));
   return (
     <section aria-label={`Kolik incidentů přibylo — ${nazev}`} className="mt-10">
-      <div className="grid grid-cols-3 gap-2.5 sm:flex sm:flex-wrap sm:gap-3">
+      <div className="grid grid-cols-3 divide-x divide-y divide-linka2 overflow-hidden rounded-[20px] border border-linka2 bg-plocha sm:flex sm:divide-y-0">
         <Cislo n={o.dnes} popis="dnes" odkaz="#zaznamy" zvyraznit />
         <Cislo n={o.tyden} popis="za 7 dní" odkaz="#zaznamy" />
         <Cislo n={o.mesic} popis="za 30 dní" odkaz="#zaznamy" />

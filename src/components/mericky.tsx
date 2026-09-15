@@ -67,9 +67,9 @@ export function ObloukovyMerak({
 
       {/* Krajní popisky rozsahu — bez nich by měřák neříkal, čeho je to škála. */}
       <text x={cx - r - 6} y={cy + 17} textAnchor="start" fontSize="10" fontFamily="var(--font-mono)"
-        fill="#9d9a92" letterSpacing="0.9">NÍZKÁ</text>
+        fill="var(--color-tlum2)" letterSpacing="0.9">NÍZKÁ</text>
       <text x={cx + r + 6} y={cy + 17} textAnchor="end" fontSize="10" fontFamily="var(--font-mono)"
-        fill="#9d9a92" letterSpacing="0.9">VÁŽNÁ</text>
+        fill="var(--color-tlum2)" letterSpacing="0.9">VÁŽNÁ</text>
 
       {/* Hodnota patří dovnitř přístroje — pokud ji nenese okolí. */}
       {!skrytPopisek && (
@@ -87,7 +87,7 @@ export function ObloukovyMerak({
               ? PASMA[UROVNE[uroven].pasmo].plnaNoc
               : PASMA[UROVNE[uroven].pasmo].plna
             : naNoci
-              ? "#9d9a92"
+              ? "var(--color-tlum2)"
               : "#9d9a92"
         }
       >
@@ -165,7 +165,7 @@ export function RadarTlaku({ tlak, velikost = 300, okraj = 72 }: { tlak: Hybridn
 
       {maUdaje && (
         <>
-          <polygon points={body.join(" ")} fill="rgba(232,72,79,0.16)" stroke="#e8484f" strokeWidth="1.6" />
+          <polygon points={body.join(" ")} fill="rgba(232,72,79,0.16)" stroke="var(--color-akcent)" strokeWidth="1.6" />
           {osy.map((o, i) => {
             const [x, y] = bodOsy(i, Math.max(podily[i], 0.02));
             const barva = o.uroven ? PASMA[UROVNE[o.uroven].pasmo].plnaNoc : "#9d9a92";
@@ -183,7 +183,7 @@ export function RadarTlaku({ tlak, velikost = 300, okraj = 72 }: { tlak: Hybridn
             y={y + 3.5}
             textAnchor={Math.abs(x - cx) < 8 ? "middle" : x > cx ? "start" : "end"}
             fontSize="11"
-            fill="#9d9a92"
+            fill="var(--color-tlum2)"
             fontFamily="var(--font-mono)"
             letterSpacing="0.6"
           >

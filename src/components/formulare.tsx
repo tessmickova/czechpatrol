@@ -8,7 +8,7 @@ export const TLACITKO =
   "inline-flex items-center justify-center gap-2 rounded-full border px-4 py-2.5 text-[14px] font-bold uppercase tracking-[0.05em] transition-all disabled:cursor-not-allowed disabled:opacity-50";
 export const TLACITKO_AKCENT = `${TLACITKO} border-akcent/60 bg-akcent/15 text-akcent-svetla  hover:bg-akcent/25`;
 export const TLACITKO_TICHE = `${TLACITKO} border-linka text-inkoust hover:border-akcent/60`;
-export const TLACITKO_VAROVNE = `${TLACITKO} border-[#e8484f]/50 text-[#f2848a] hover:bg-[#e8484f]/10`;
+export const TLACITKO_VAROVNE = `${TLACITKO} border-akcent/50 text-akcent-svetla hover:bg-akcent/10`;
 
 export const POLE =
   "w-full rounded-[18px] border border-linka bg-noc/60 px-3.5 py-2.5 text-[15px] text-inkoust placeholder:text-tlum2 focus:border-akcent focus:outline-none";
@@ -23,8 +23,8 @@ export function Popisek({ children, pro }: { children: ReactNode; pro?: string }
 
 export function Hlaska({ typ, children }: { typ: "chyba" | "ok" | "info"; children: ReactNode }) {
   const tridy = {
-    chyba: "border-[#e8484f]/40 bg-[#e8484f]/10 text-[#f2848a]",
-    ok: "border-[#5cbf8a]/40 bg-[#5cbf8a]/10 text-[#8fd6ae]",
+    chyba: "border-akcent/40 bg-akcent/10 text-akcent-svetla",
+    ok: "border-klid/40 bg-klid/10 text-klid-text",
     info: "border-akcent/40 bg-akcent/10 text-akcent-svetla",
   }[typ];
   return (

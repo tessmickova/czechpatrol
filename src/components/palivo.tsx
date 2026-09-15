@@ -39,7 +39,7 @@ function Cena({ s }: { s: StavPaliva }) {
       </span>
       <span className="flex items-center gap-2">
         {zmena && (
-          <span className={`cislice text-[12.5px] ${s.skok ? (roste ? "text-[#f2848a]" : "text-[#8fd6ae]") : "text-tlum2"}`}>
+          <span className={`cislice text-[12.5px] ${s.skok ? (roste ? "text-akcent-svetla" : "text-klid-text") : "text-tlum2"}`}>
             {zmena} Kč za týden
           </span>
         )}

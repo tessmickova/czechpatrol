@@ -21,7 +21,7 @@ export function GrafMesicuPripadu({
         <svg viewBox={`0 0 ${SIRKA} ${NAHORE + V + DOLE}`} role="img" aria-label="Počet jedinečných případů po měsících" className="h-[150px] w-full min-w-[640px]">
           <defs>
             <pattern id="srafy-pripady" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(-45)">
-              <line x1="0" y1="0" x2="0" y2="6" stroke="#9d9a92" strokeWidth="1" strokeOpacity="0.3" />
+              <line x1="0" y1="0" x2="0" y2="6" stroke="var(--color-tlum2)" strokeWidth="1" strokeOpacity="0.3" />
             </pattern>
           </defs>
           {kroky.map((k) => {
@@ -29,7 +29,7 @@ export function GrafMesicuPripadu({
             return (
               <g key={k}>
                 <line x1={LEVO} x2={SIRKA - PRAVO} y1={y} y2={y} stroke="#232320" strokeWidth="1" />
-                <text x={LEVO - 6} y={y + 4} textAnchor="end" fontSize="11" fontFamily="var(--font-mono)" fill="#c9c6bd">{k}</text>
+                <text x={LEVO - 6} y={y + 4} textAnchor="end" fontSize="11" fontFamily="var(--font-mono)" fill="var(--color-tlum)">{k}</text>
               </g>
             );
           })}
@@ -37,7 +37,7 @@ export function GrafMesicuPripadu({
             const [y, mm] = m.mesic.split("-").map(Number);
             const x0 = LEVO + i * S;
             const popisek = mm === 1 && (rada.length < 60 || y % 2 === 0) && (
-              <text x={x0 + 2} y={NAHORE + V + 18} fontSize="11" fontFamily="var(--font-mono)" fill="#9d9a92">{y}</text>
+              <text x={x0 + 2} y={NAHORE + V + 18} fontSize="11" fontFamily="var(--font-mono)" fill="var(--color-tlum2)">{y}</text>
             );
             if (m.pripady === null) {
               return <g key={m.mesic}><rect x={x0} y={NAHORE} width={S} height={V} fill="url(#srafy-pripady)" /><title>{`${mm}/${y}: mimo plné pokrytí`}</title>{popisek}</g>;
@@ -46,7 +46,7 @@ export function GrafMesicuPripadu({
             const u = hodnoceni.get(m.mesic);
             return (
               <g key={m.mesic}>
-                <rect x={x0 + 0.5} y={NAHORE + V - h} width={Math.max(1, S - 1)} height={h} fill="#e8484f" rx="1">
+                <rect x={x0 + 0.5} y={NAHORE + V - h} width={Math.max(1, S - 1)} height={h} fill="var(--color-akcent)" rx="1">
                   <title>{`${mm}/${y}: ${m.pripady} ${sklon(m.pripady, "případ", "případy", "případů")}${u ? ` · hodnocení ${UROVNE[u].nazev}` : ""}`}</title>
                 </rect>
                 {popisek}

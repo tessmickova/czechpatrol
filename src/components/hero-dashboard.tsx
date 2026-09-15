@@ -50,7 +50,7 @@ function Merak({
         <span className="stitek">{nadpis}</span>
         <span className="mt-1 text-[11px] leading-none text-tlum2">{obdobi}</span>
         <ObloukovyMerak uroven={uroven} naNoci velikost={velikost} skrytPopisek />
-        <span className={`-mt-1 text-[14px] font-bold uppercase leading-tight tracking-[0.03em] ${pasmo ? pasmo.text : vlastniSlovo ? "text-[#8fd6ae]" : "text-tlum2"}`}>
+        <span className={`-mt-1 text-[14px] font-bold uppercase leading-tight tracking-[0.03em] ${pasmo ? pasmo.text : vlastniSlovo ? "text-klid-text" : "text-tlum2"}`}>
           {vlastniSlovo ?? (uroven ? UROVNE[uroven].nazev : "bez hodnocení")}
         </span>
         {popis && <span className="mt-1 block max-w-[15rem] text-[11.5px] leading-snug text-tlum2">{popis}</span>}
@@ -125,8 +125,8 @@ export function HeroDashboard({
               {stav.uroven ? `${zDeseti(stav.uroven)} z 10 · ` : ""}dnes
             </p>
             <p className="mt-1.5 flex flex-wrap items-center gap-x-3 text-[12.5px] text-tlum">
-              {stav.trend === "nahoru" && <span className="flex items-center gap-1 font-semibold text-[#f0996e]"><Ikona nazev="nahoru" velikost={12} tah={2.2} />{t("zhoršení za 7 dní")}</span>}
-              {stav.trend === "dolu" && <span className="flex items-center gap-1 font-semibold text-[#8fd6ae]"><Ikona nazev="dolu" velikost={12} tah={2.2} />{t("zlepšení za 7 dní")}</span>}
+              {stav.trend === "nahoru" && <span className="flex items-center gap-1 font-semibold text-stari-text2"><Ikona nazev="nahoru" velikost={12} tah={2.2} />{t("zhoršení za 7 dní")}</span>}
+              {stav.trend === "dolu" && <span className="flex items-center gap-1 font-semibold text-klid-text"><Ikona nazev="dolu" velikost={12} tah={2.2} />{t("zlepšení za 7 dní")}</span>}
               {stav.trend === "beze-zmeny" && <span>{t("beze změny 7 dní")}</span>}
               <span>{overeno ? `ověřeno ${datumCasPraha(overeno)}` : "ověření neproběhlo"}</span>
             </p>

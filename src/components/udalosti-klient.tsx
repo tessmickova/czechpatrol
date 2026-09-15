@@ -477,10 +477,14 @@ function RadekZaznamu({ z, otevreny, onOtevri, siroky }: { z: Zaznam; otevreny: 
         titulek: <span className={otevreny ? "text-akcent-svetla" : undefined}>{z.titulek}</span>,
         znacky: (
           <>
-            <Odznak ton={dobraInfo ? "klid" : "neutral"}>informace: {JISTOTY[jistota].nazev.toLowerCase()}</Odznak>
+            <Odznak ton={dobraInfo ? "klid" : "neutral"}>jistota informace: {JISTOTY[jistota].nazev.toLowerCase()}</Odznak>
             {dr === "pripad" && (
               <Odznak ton={pachatel ? "klid" : z.puvodce ? "pozor" : "neutral"}>
-                pachatel: {z.puvodce ? PUVODCE_NAZVY[z.puvodce] : "neznámý"}{z.puvodce && !pachatel ? " (nepotvrzeno)" : ""}
+                {/*
+                  „pachatel: oficiální" míchalo osobu s typem důkazu. Původce
+                  a stav připsání odpovědnosti jsou dvě různé věci.
+                */}
+                původce: {z.puvodce ? PUVODCE_NAZVY[z.puvodce] : "neznámý"}{z.puvodce && !pachatel ? " — dosud nepotvrzeno" : ""}
               </Odznak>
             )}
             <Odznak ton={uredniZdroj(z) ? "klid" : "neutral"} ikona={uredniZdroj(z) ? "fajfka" : undefined}>

@@ -52,9 +52,9 @@ const TON_JISTOTY: Record<Jistota, Ton> = {
 };
 
 const RAMECEK_JISTOTY: Record<Ton, string> = {
-  klid: "border-[#5cbf8a]/50 bg-[#5cbf8a]/10 text-[#8fd6ae]",
-  pozor: "border-[#d9b24c]/45 bg-[#d9b24c]/10 text-[#e6c977]",
-  vazne: "border-[#e8484f]/50 bg-[#e8484f]/12 text-[#f2848a]",
+  klid: "border-klid/50 bg-klid/10 text-klid-text",
+  pozor: "border-pozor/45 bg-pozor/10 text-pozor-text",
+  vazne: "border-akcent/50 bg-akcent/12 text-akcent-svetla",
   neutral: "border-linka bg-plocha2 text-tlum",
   akcent: "border-akcent/55 bg-akcent/12 text-akcent-svetla",
 };

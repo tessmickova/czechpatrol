@@ -50,7 +50,7 @@ export function RegistraceSW() {
     <div className="fixed inset-x-0 bottom-[calc(60px+env(safe-area-inset-bottom))] z-[70] px-3 md:bottom-4">
       <div role="status" className="mx-auto flex max-w-[560px] flex-wrap items-center justify-between gap-3 rounded-[18px] border border-linka bg-plocha2 px-4 py-3 text-[14px] text-inkoust shadow-[0_8px_24px_rgba(0,0,0,0.35)]">
         {offline ? (
-          <span className="flex items-center gap-2"><Ikona nazev="vystraha" velikost={15} tah={2} trida="text-[#eaa96b]" /> Bez připojení. Zobrazený stav je poslední načtený, ne aktuální.</span>
+          <span className="flex items-center gap-2"><Ikona nazev="vystraha" velikost={15} tah={2} trida="text-stari-text" /> Bez připojení. Zobrazený stav je poslední načtený, ne aktuální.</span>
         ) : (
           <>
             <span className="flex items-center gap-2"><Ikona nazev="info" velikost={15} tah={2} trida="text-akcent" /> Je k dispozici nová verze webu.</span>
@@ -98,7 +98,7 @@ export function TlacitkoInstalace({ cele = false }: { cele?: boolean }) {
   if (nainstalovano) {
     return (
       <p className="flex items-center gap-2 text-[14px] text-tlum">
-        <span className="text-[#8fd6ae]"><Ikona nazev="fajfka" velikost={14} tah={2} /></span>
+        <span className="text-klid-text"><Ikona nazev="fajfka" velikost={14} tah={2} /></span>
         Běží jako aplikace.
       </p>
     );

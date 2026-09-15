@@ -163,7 +163,7 @@ const TYPY: Record<TypObsahu, { nazev: string; popis: string; tridy: string }> =
   odhad: {
     nazev: "Odhad",
     popis: "Analytická interpretace dostupných informací. Není to fakt ani předpověď.",
-    tridy: "border-[#a494d6]/40 bg-[#a494d6]/10 text-[#c4b8e6]",
+    tridy: "border-fialova/40 bg-fialova/10 text-fialova-text",
   },
   scenar: {
     nazev: "Scénář",
@@ -246,9 +246,9 @@ export function Karta({
     bila: "sklo",
     papir: "sklo-noc-slabe",
     modra: "sklo border-akcent/30 bg-mycka",
-    zelena: "sklo border-[#5cbf8a]/30 bg-list",
+    zelena: "sklo border-klid/30 bg-list",
     pisek: "sklo border-jantar/30 bg-pisek",
-    slez: "sklo border-[#a494d6]/30 bg-slez",
+    slez: "sklo border-fialova/30 bg-slez",
   }[odstin];
   return (
     <Jako id={id} className={`rounded-[22px] ${odstiny} ${zdvih ? "zdvih" : ""} ${className}`}>
@@ -265,7 +265,7 @@ export function Prazdno({
     <div className="relative flex flex-col items-center gap-4 overflow-hidden sklo rounded-[22px] border-akcent/30 bg-mycka px-6 py-9 text-center sm:flex-row sm:gap-5 sm:py-7 sm:text-left">
       <span
         aria-hidden
-        className="srafy pointer-events-none absolute inset-x-0 top-0 h-[5px] text-[#e8484f]"
+        className="srafy pointer-events-none absolute inset-x-0 top-0 h-[5px] text-akcent"
       />
       <span className="grid h-[44px] w-[44px] shrink-0 place-items-center rounded-full border border-akcent/40 bg-akcent/10 text-akcent">
         <Ikona nazev={ikona} velikost={21} />

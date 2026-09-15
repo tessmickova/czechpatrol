@@ -30,7 +30,7 @@ export function Vykricniky({ n }: { n: number }) {
   const k = n >= 20 ? 3 : n >= 10 ? 2 : n >= 5 ? 1 : 0;
   if (!k) return null;
   return (
-    <span aria-label={`${k === 3 ? "velmi vysoký" : k === 2 ? "vysoký" : "zvýšený"} počet signálů`} className="inline-flex items-center gap-[1px] text-[#e8484f]">
+    <span aria-label={`${k === 3 ? "velmi vysoký" : k === 2 ? "vysoký" : "zvýšený"} počet signálů`} className="inline-flex items-center gap-[1px] text-akcent">
       {Array.from({ length: k }, (_, i) => <Ikona key={i} nazev="vykricnik" velikost={13} tah={2.6} />)}
     </span>
   );
@@ -59,7 +59,7 @@ function ZnackaTrendu({ nyni, drive }: { nyni: Uroven; drive?: Uroven }) {
   const r = UROVNE[nyni].poradi - UROVNE[drive].poradi;
   if (r === 0) return <span className="flex items-center gap-1 text-[12.5px] text-tlum"><Ikona nazev="minus" velikost={11} tah={2} /> stejně</span>;
   return (
-    <span className={`flex items-center gap-1 text-[12.5px] font-semibold ${r > 0 ? "text-[#f0996e]" : "text-[#8fd6ae]"}`}>
+    <span className={`flex items-center gap-1 text-[12.5px] font-semibold ${r > 0 ? "text-stari-text2" : "text-klid-text"}`}>
       <Ikona nazev={r > 0 ? "nahoru" : "dolu"} velikost={11} tah={2.2} /> {r > 0 ? "zhoršení" : "zlepšení"}
     </span>
   );
@@ -184,17 +184,17 @@ export function GrafTrendu({ tydny }: { tydny: TydenniHodnoceni[] }) {
         <svg viewBox={`0 0 ${SIRKA} ${NAHORE + V + DOLE}`} role="img" aria-label="Vývoj hodnocení po týdnech od začátku roku" className="h-[230px] w-full min-w-[560px]">
           <defs>
             <pattern id="srafy-bez-dat" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(-45)">
-              <line x1="0" y1="0" x2="0" y2="8" stroke="#9d9a92" strokeWidth="1" strokeOpacity="0.35" />
+              <line x1="0" y1="0" x2="0" y2="8" stroke="var(--color-tlum2)" strokeWidth="1" strokeOpacity="0.35" />
             </pattern>
             <linearGradient id="plocha-celkem" x1="0" y1="0" x2="0" y2="1">
-              <stop offset="0%" stopColor="#fffefb" stopOpacity="0.14" />
-              <stop offset="100%" stopColor="#fffefb" stopOpacity="0" />
+              <stop offset="0%" stopColor="var(--color-inkoust)" stopOpacity="0.14" />
+              <stop offset="100%" stopColor="var(--color-inkoust)" stopOpacity="0" />
             </linearGradient>
           </defs>
           {prvniSData > 0 && (
             <>
               <rect x={x(0)} y={NAHORE} width={x(prvniSData) - x(0)} height={V} fill="url(#srafy-bez-dat)" />
-              <text x={(x(0) + x(prvniSData)) / 2} y={NAHORE + V / 2} textAnchor="middle" fontSize="13" fontFamily="var(--font-mono)" fill="#9d9a92">bez doložených dat</text>
+              <text x={(x(0) + x(prvniSData)) / 2} y={NAHORE + V / 2} textAnchor="middle" fontSize="13" fontFamily="var(--font-mono)" fill="var(--color-tlum2)">bez doložených dat</text>
             </>
           )}
           {popisky.map((p) => {
@@ -202,7 +202,7 @@ export function GrafTrendu({ tydny }: { tydny: TydenniHodnoceni[] }) {
             return (
               <g key={p.poradi}>
                 <line x1={LEVO - 8} x2={SIRKA - PRAVO} y1={yy} y2={yy} stroke="#232320" strokeWidth="1" />
-                <text x={LEVO - 14} y={yy + 4.5} textAnchor="end" fontSize="13" fontFamily="var(--font-mono)" fill="#c9c6bd">{p.text}</text>
+                <text x={LEVO - 14} y={yy + 4.5} textAnchor="end" fontSize="13" fontFamily="var(--font-mono)" fill="var(--color-tlum)">{p.text}</text>
               </g>
             );
           })}
@@ -215,7 +215,7 @@ export function GrafTrendu({ tydny }: { tydny: TydenniHodnoceni[] }) {
             return (
               <g key={s.od}>
                 {prvniVMesici && (
-                  <text x={x(i)} y={NAHORE + V + 20} textAnchor="middle" fontSize="12" fontFamily="var(--font-mono)" fill="#c9c6bd">{mesice[d.getUTCMonth()]}</text>
+                  <text x={x(i)} y={NAHORE + V + 20} textAnchor="middle" fontSize="12" fontFamily="var(--font-mono)" fill="var(--color-tlum)">{mesice[d.getUTCMonth()]}</text>
                 )}
                 {s.tyden && (
                   <>
@@ -250,14 +250,14 @@ export function GrafMesicu({ mesice }: { mesice: { mesic: string; uroven: Uroven
         <svg viewBox={`0 0 ${SIRKA} ${NAHORE + V + DOLE}`} role="img" aria-label="Měsíční úroveň od roku 2013" className="h-[124px] w-full min-w-[560px]">
           <defs>
             <pattern id="srafy-mesice" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(-45)">
-              <line x1="0" y1="0" x2="0" y2="6" stroke="#9d9a92" strokeWidth="1" strokeOpacity="0.3" />
+              <line x1="0" y1="0" x2="0" y2="6" stroke="var(--color-tlum2)" strokeWidth="1" strokeOpacity="0.3" />
             </pattern>
           </defs>
           {mesice.map((m, i) => {
             const [y, mm] = m.mesic.split("-").map(Number);
             const x0 = LEVO + i * S;
             const tecka = m.zaznamu > 0 && (
-              <circle cx={x0 + S / 2} cy={NAHORE + V - 6 - Math.min(4, m.zaznamu) * 6} r={Math.min(4.5, 2 + m.zaznamu * 0.6)} fill={m.nejvyssi ? tokeny(m.nejvyssi).plna : "#c9c6bd"} stroke="#0d0d0a" strokeWidth="1">
+              <circle cx={x0 + S / 2} cy={NAHORE + V - 6 - Math.min(4, m.zaznamu) * 6} r={Math.min(4.5, 2 + m.zaznamu * 0.6)} fill={m.nejvyssi ? tokeny(m.nejvyssi).plna : "var(--color-tlum)"} stroke="#0d0d0a" strokeWidth="1">
                 <title>{`${mm}/${y}: ${m.zaznamu} ${sklon(m.zaznamu, "záznam", "záznamy", "záznamů")}${m.nejvyssi ? `, nejvyšší ${UROVNE[m.nejvyssi].nazev}` : ""}`}</title>
               </circle>
             );
@@ -266,7 +266,7 @@ export function GrafMesicu({ mesice }: { mesice: { mesic: string; uroven: Uroven
                 <g key={m.mesic}>
                   <rect x={x0} y={NAHORE} width={S} height={V} fill="url(#srafy-mesice)" />
                   {tecka}
-                  {mm === 1 && (y % 2 === 0) && <text x={x0 + 2} y={NAHORE + V + 18} fontSize="11" fontFamily="var(--font-mono)" fill="#9d9a92">{y}</text>}
+                  {mm === 1 && (y % 2 === 0) && <text x={x0 + 2} y={NAHORE + V + 18} fontSize="11" fontFamily="var(--font-mono)" fill="var(--color-tlum2)">{y}</text>}
                 </g>
               );
             }
@@ -277,7 +277,7 @@ export function GrafMesicu({ mesice }: { mesice: { mesic: string; uroven: Uroven
                   <title>{`${mm}/${y}: ${UROVNE[m.uroven].nazev}`}</title>
                 </rect>
                 {tecka}
-                {mm === 1 && (y % 2 === 0) && <text x={x0 + 2} y={NAHORE + V + 18} fontSize="11" fontFamily="var(--font-mono)" fill="#c9c6bd">{y}</text>}
+                {mm === 1 && (y % 2 === 0) && <text x={x0 + 2} y={NAHORE + V + 18} fontSize="11" fontFamily="var(--font-mono)" fill="var(--color-tlum)">{y}</text>}
               </g>
             );
           })}

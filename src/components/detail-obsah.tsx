@@ -182,12 +182,12 @@ export function DetailObsah({ i }: { i: Incident }) {
             <ul className="mt-2 space-y-2 pl-1">
               {i.eskalacniSpousteče.map((f, n) => (
                 <li key={`e${n}`} className="flex gap-2.5 text-[14px] leading-relaxed text-tlum">
-                  <span className="mt-[3px] shrink-0 text-[#f0996e]"><Ikona nazev="nahoru" velikost={12} tah={2} /></span>{f}
+                  <span className="mt-[3px] shrink-0 text-stari-text2"><Ikona nazev="nahoru" velikost={12} tah={2} /></span>{f}
                 </li>
               ))}
               {i.deeskalacniSignaly.map((f, n) => (
                 <li key={`d${n}`} className="flex gap-2.5 text-[14px] leading-relaxed text-tlum">
-                  <span className="mt-[3px] shrink-0 text-[#8fd6ae]"><Ikona nazev="dolu" velikost={12} tah={2} /></span>{f}
+                  <span className="mt-[3px] shrink-0 text-klid-text"><Ikona nazev="dolu" velikost={12} tah={2} /></span>{f}
                 </li>
               ))}
             </ul>
@@ -208,7 +208,7 @@ export function DetailObsah({ i }: { i: Incident }) {
             {historie.map((h, n) => (
               <li key={n} className="flex flex-col gap-0.5 text-[14px] leading-relaxed sm:flex-row sm:gap-3">
                 <span className="cislice shrink-0 text-[13px] text-tlum sm:w-[130px]">{datumCasPraha(h.kdy)}</span>
-                <span className={h.druh === "oprava" ? "text-[#e6c977]" : "text-tlum"}>{h.text}</span>
+                <span className={h.druh === "oprava" ? "text-pozor-text" : "text-tlum"}>{h.text}</span>
               </li>
             ))}
           </ol>

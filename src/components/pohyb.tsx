@@ -15,9 +15,14 @@ import { useEffect, useState } from "react";
 */
 
 export const KLIC_POHYBU = "cp-pohyb";
+export const KLIC_MOTIVU = "cp-motiv";
 
 /** Běží v <head> před vykreslením. Bez něj by pohyb na okamžik problikl. */
-export const SKRIPT_POHYBU = `try{if(localStorage.getItem("${KLIC_POHYBU}")==="zapnuty")document.documentElement.dataset.pohyb="zapnuty"}catch(e){}`;
+export const SKRIPT_POHYBU =
+  `try{var d=document.documentElement;` +
+  `if(localStorage.getItem("${KLIC_POHYBU}")==="zapnuty")d.dataset.pohyb="zapnuty";` +
+  `var m=localStorage.getItem("${KLIC_MOTIVU}");if(m==="svetly"||m==="tmavy")d.dataset.motiv=m;` +
+  `}catch(e){}`;
 
 export function PrepinacPohybu() {
   const [zapnuty, setZapnuty] = useState(false);
@@ -51,5 +56,67 @@ export function PrepinacPohybu() {
     >
       Pohyb na stránce: {zapnuty ? "zapnutý" : "vypnutý"}
     </button>
+  );
+}
+
+type Motiv = "system" | "svetly" | "tmavy";
+
+const NAZVY_MOTIVU: Record<Motiv, string> = {
+  system: "podle systému",
+  svetly: "světlý",
+  tmavy: "tmavý",
+};
+
+/*
+  Přepínač světlého a tmavého režimu.
+
+  Výchozí je nastavení systému. Žádný z režimů není univerzálně lepší:
+  pro část lidí je tmavý web hůř čitelný, pro jinou je bílá plocha
+  nesnesitelná. Volba se ukládá a nastavuje se před vykreslením, aby
+  stránka neproblikla opačným motivem.
+*/
+export function PrepinacMotivu() {
+  const [motiv, setMotiv] = useState<Motiv>("system");
+
+  useEffect(() => {
+    try {
+      const m = localStorage.getItem(KLIC_MOTIVU);
+      if (m === "svetly" || m === "tmavy") setMotiv(m);
+    } catch {
+      // Zamčené úložiště: zůstane volba podle systému.
+    }
+  }, []);
+
+  function nastav(novy: Motiv) {
+    setMotiv(novy);
+    if (novy === "system") delete document.documentElement.dataset.motiv;
+    else document.documentElement.dataset.motiv = novy;
+    try {
+      if (novy === "system") localStorage.removeItem(KLIC_MOTIVU);
+      else localStorage.setItem(KLIC_MOTIVU, novy);
+    } catch {
+      // Neuložilo se; pro tuhle návštěvu to platí.
+    }
+  }
+
+  return (
+    <fieldset className="border-0 p-0">
+      <legend className="text-[14px] text-noc-tlum">Vzhled</legend>
+      <div className="mt-1.5 flex flex-wrap gap-1.5">
+        {(Object.keys(NAZVY_MOTIVU) as Motiv[]).map((m) => (
+          <button
+            key={m}
+            type="button"
+            onClick={() => nastav(m)}
+            aria-pressed={motiv === m}
+            className={`min-h-[44px] rounded-full px-3.5 text-[13.5px] ${
+              motiv === m ? "bg-noc-text text-noc2 font-semibold" : "text-noc-tlum hover:text-noc-text"
+            }`}
+          >
+            {NAZVY_MOTIVU[m]}
+          </button>
+        ))}
+      </div>
+    </fieldset>
   );
 }
