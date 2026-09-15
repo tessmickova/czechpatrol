@@ -36,7 +36,8 @@ export function KaruselZemi({ maxZemi = 12 }: { maxZemi?: number }) {
         <div key={z.kodZeme} role="listitem" className="w-[min(88vw,420px)] shrink-0 snap-start">
           <PavucinaHrozeb
             nadpis={z.zeme}
-            popis={`Typy událostí podle zveřejněných záznamů se zemí ${z.zeme}. Osa bez záznamu zůstává prázdná — neznamená to klid, znamená to, že odtud takový záznam nemáme.`}
+            /* Vysvětlení má sekce, ne každá z dvanácti karet — jinak to je dvanáctkrát tentýž odstavec. */
+            popis={`Záznamy se zemí ${z.zeme}.`}
             tlak={tlakZeme(z.kodZeme)}
             vlajka={<Vlajka kod={z.kodZeme} />}
             odkaz={{ href: `/zeme/${z.kodZeme.toLowerCase()}/`, text: `${z.pripady} ${z.pripady === 1 ? "záznam" : z.pripady < 5 ? "záznamy" : "záznamů"} →` }}

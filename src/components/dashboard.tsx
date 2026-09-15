@@ -491,7 +491,7 @@ export function Dashboard({
         <NadpisSekce
           stitek="Typy událostí"
           nadpis={t("Typy evidovaných událostí")}
-          popis="Evidované události podle typu za posledních 90 dní. Vlevo Evropa, vpravo Česko."
+          popis="Evidované události podle typu za posledních 90 dní. Vlevo Evropa, vpravo Česko. Prázdná osa znamená, že odtud takový záznam nemáme — ne že se nic neděje."
         />
         {/*
           Nejdřív Evropa a Česko vedle sebe — to je hlavní srovnání. Pak

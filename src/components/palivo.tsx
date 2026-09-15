@@ -70,8 +70,7 @@ export function CenaPaliva() {
           popis={
             <span className="block">
               Průměrné spotřebitelské ceny z týdenního šetření Českého statistického úřadu.
-              Je to <b className="font-semibold">měření, ne předpověď</b> — o tom, kam ceny půjdou dál,
-              tu nenajdete nic, protože to nikdo doložit neumí.
+              <b className="font-semibold"> Měření, ne předpověď.</b>
             </span>
           }
         >

@@ -1,5 +1,5 @@
 import { datumCasPraha } from "@/lib/cas";
-import { pokrytiPolozky, STUPNE, type PokrytiPolozky } from "@/lib/pokryti-stavu";
+import { pokrytiPolozky, type PokrytiPolozky } from "@/lib/pokryti-stavu";
 import type { NatoPolozka, PravniPolozka, ProvozniPolozka } from "@/lib/typy";
 
 /*
@@ -11,21 +11,15 @@ import type { NatoPolozka, PravniPolozka, ProvozniPolozka } from "@/lib/typy";
 
   Ukazuje čtyři věci, na které se člověk ptá:
     1. co ta položka znamená,
-    2. z čeho to víme (konkrétní zdroje s odkazy),
-    3. kdy jsme se tam naposledy dívali,
+    2. co plyne z poslední kontroly,
+    3. kdy jsme se dívali a kde si to ověřit přímo u úřadu,
     4. co by se muselo stát, aby se stav změnil.
 
-  Pátá věc je nejdůležitější a nikde jinde na webu není: co nám k doložení
-  chybí. Bez ní vypadá „vyhlášení nedoloženo" jako naše chyba, a přitom je to
-  poctivý popis toho, co z veřejných zdrojů jde a nejde zjistit.
+  Co tu naopak NENÍ: stupně pokrytí zdroji, seznam registrů, které nám chybí,
+  a poznámky o úřadech odmítajících automatické dotazy. Je to pravda, ale je
+  to popis naší práce, ne odpověď na čtenářovu otázku — a ubírá pozornost
+  tomu podstatnému. Celý rozbor zůstává na stránce Zdroje.
 */
-
-const BARVA_STUPNE: Record<PokrytiPolozky["stupen"], string> = {
-  uplne: "text-klid-text",
-  vicezdrojove: "text-tlum",
-  jednozdrojove: "text-pozor-text",
-  chybi: "text-stari-text",
-};
 
 function Radek({ popisek, children }: { popisek: string; children: React.ReactNode }) {
   return (
@@ -63,55 +57,21 @@ export function StavDetail({
       */}
       <Radek popisek="Po poslední kontrole">{stavVysvetleni}</Radek>
 
-      <Radek popisek="Z čeho to víme">
-        {p.zdroje.length ? (
-          <ul className="flex flex-wrap gap-x-3 gap-y-1">
-            {p.zdroje.map((z) => (
-              <li key={z.klic}>
-                <a href={z.url} target="_blank" rel="noopener noreferrer" className="odkaz">
-                  {z.nazev}
-                </a>
-                {z.primarni && <span className="ml-1 text-[12px] text-tlum2">úřední</span>}
-              </li>
-            ))}
-          </ul>
-        ) : (
-          "Zatím z ničeho, co by šlo číst automaticky."
-        )}
-        {p.blokujici.length > 0 && (
-          <span className="mt-1 block text-[12.5px] text-tlum2">
-            {p.blokujici.map((z) => z.nazev).join(", ")} — odmítá automatické dotazy, čte se ručně.
-          </span>
-        )}
-      </Radek>
-
-      <Radek popisek="Pokrytí zdroji">
-        <span className={BARVA_STUPNE[p.stupen]}>{STUPNE[p.stupen].nazev}.</span> {STUPNE[p.stupen].popis}
-      </Radek>
-
       {p.zkontrolovano && (
         <Radek popisek="Kontrolováno">
           <span className="cislice">{datumCasPraha(p.zkontrolovano)}</span>
         </Radek>
       )}
 
-      {coByZmenilo && coByZmenilo.length > 0 && (
-        <Radek popisek="Co by změnilo stav">
-          <ul className="list-disc space-y-0.5 pl-4">
-            {coByZmenilo.map((x) => <li key={x}>{x}</li>)}
-          </ul>
-        </Radek>
-      )}
-
-      {p.chybi && <Radek popisek="Co nám chybí">{p.chybi}</Radek>}
-
       {/*
-        Odkaz na úřad, který o věci rozhoduje. Kdo potřebuje jistotu teď hned,
-        nemá čekat, až ji ověříme my — má jít rovnou ke zdroji. Adresy jsou
-        tytéž, které čte sběr, takže se nemůžou rozejít.
+        Odkaz na úřad, který o věci rozhoduje — a zároveň adresa, kterou čte
+        sběr. Dřív tu stály dvakrát: jednou jako „z čeho to víme", podruhé jako
+        „ověřit u úřadu". Byly to tytéž odkazy.
+
+        Kdo potřebuje jistotu teď hned, nemá čekat, až ji ověříme my.
       */}
-      {p.zdroje.length > 0 && (
-        <Radek popisek="Ověřit u úřadu">
+      <Radek popisek="Ověřit u úřadu">
+        {p.zdroje.length ? (
           <span className="flex flex-wrap gap-x-3 gap-y-1">
             {p.zdroje.map((z) => (
               <a key={z.klic} href={z.url} target="_blank" rel="noopener noreferrer" className="odkaz">
@@ -119,6 +79,16 @@ export function StavDetail({
               </a>
             ))}
           </span>
+        ) : (
+          "Přímý úřední zdroj k téhle položce zatím nemáme."
+        )}
+      </Radek>
+
+      {coByZmenilo && coByZmenilo.length > 0 && (
+        <Radek popisek="Co by změnilo stav">
+          <ul className="list-disc space-y-0.5 pl-4">
+            {coByZmenilo.map((x) => <li key={x}>{x}</li>)}
+          </ul>
         </Radek>
       )}
     </dl>

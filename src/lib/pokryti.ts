@@ -58,8 +58,12 @@ export interface StavPolozky {
 
 const VETA_POKRYTI: Record<Pokryti, string> = {
   autoritativni: "Doloženo úplným úředním seznamem.",
-  orientacni:
-    "V kontrolovaných zdrojích jsme nenašli doložené vyhlášení. Sledované zdroje ale nejsou úplný seznam, takže z toho neplyne, že opatření nikde neexistuje.",
+  /*
+    Krátce, ale pořád poctivě: „nenašli jsme" není totéž co „neplatí".
+    Delší vysvětlení, proč sledované zdroje nejsou úplný seznam, je na stránce
+    Zdroje — u každého z dvaceti stavů by to byl odstavec, který nikdo nečte.
+  */
+  orientacni: "V kontrolovaných zdrojích jsme vyhlášení nenašli. Není to úplný seznam.",
   nedostupne: "Zdroje se nepodařilo přečíst, takže tenhle údaj nemusí být aktuální. Zůstává poslední známý stav.",
 };
 

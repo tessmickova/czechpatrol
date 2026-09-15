@@ -70,9 +70,19 @@ export function NadpisSekce({
           Kdo nadpis zná, jde rovnou na obsah; kdo potřebuje vědět, za jaké
           období a z jaké množiny to je, si to rozklikne.
         */}
-        <h2 className="titul-sekce flex flex-wrap items-center gap-x-2.5 gap-y-1">
+        {/*
+          Puntík drží u posledního slova pevná mezera. Ve flexboxu se totiž
+          choval jako samostatná položka a u delšího nadpisu spadl na vlastní
+          řádek, kde vypadal jako zapomenutá tečka.
+        */}
+        <h2 className="titul-sekce">
           {nadpis}
-          {popis && <Otaznik popis={popis} label="Co tahle sekce ukazuje" />}
+          {popis && (
+            <>
+              {"\u00A0"}
+              <Otaznik popis={popis} label="Co tahle sekce ukazuje" />
+            </>
+          )}
         </h2>
       </div>
       {akce && <div className="shrink-0">{akce}</div>}
@@ -95,9 +105,14 @@ export function NadpisBloku({
   return (
     <div className="mb-5 flex flex-col gap-3 scroll-mt-[84px] sm:flex-row sm:items-end sm:justify-between sm:gap-6" id={id}>
       <div className="max-w-[44rem]">
-        <h3 className="titul-mensi flex flex-wrap items-center gap-x-2 gap-y-1">
+        <h3 className="titul-mensi">
           {nadpis}
-          {popis && <Otaznik popis={popis} label="Co tenhle blok ukazuje" />}
+          {popis && (
+            <>
+              {"\u00A0"}
+              <Otaznik popis={popis} label="Co tenhle blok ukazuje" />
+            </>
+          )}
         </h3>
       </div>
       {akce && <div className="shrink-0">{akce}</div>}

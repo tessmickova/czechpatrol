@@ -1,27 +1,24 @@
 import type { ReactNode } from "react";
 import { JISTOTY, tokeny, UROVNE } from "@/lib/skala";
 import { Ikona, type NazevIkony } from "./ikony";
+import { ObalNapovedy } from "./napoveda-klient";
 import { Znacka } from "./znacka";
 import type { Jistota, Uroven } from "@/lib/typy";
 
 /* ---------- nápověda ---------- */
 
 /**
- * Nápověda dostupná myší i klávesnicí. Spouštěč je tlačítko, takže se na něj
- * dá dostat tabulátorem a obsah se otevře přes :focus-within.
+ * Nápověda dostupná myší, prstem i klávesnicí. Vlastní chování má klientská
+ * komponenta — tady zůstává jen vstupní bod, aby se ostatní soubory nemusely
+ * starat o to, co běží na serveru a co v prohlížeči.
  */
 export function Napoveda({
   children, popis, vpravo = false, label = "Co to znamená?", cele = false,
 }: { children: ReactNode; popis: ReactNode; vpravo?: boolean; label?: string; /** Spouštěč vyplní celou šířku (dlaždice). */ cele?: boolean }) {
   return (
-    <span className={`napoveda-obal ${cele ? "w-full" : ""}`}>
-      <button type="button" className={`text-left ${cele ? "w-full" : ""}`} aria-label={label}>
-        {children}
-      </button>
-      <span role="tooltip" className={`napoveda ${vpravo ? "napoveda-vpravo" : ""}`}>
-        {popis}
-      </span>
-    </span>
+    <ObalNapovedy popis={popis} vpravo={vpravo} label={label} cele={cele}>
+      {children}
+    </ObalNapovedy>
   );
 }
 
@@ -40,7 +37,7 @@ export function Napoveda({
 export function Otaznik({ popis, vpravo, label = "Vysvětlivka" }: { popis: ReactNode; vpravo?: boolean; label?: string }) {
   return (
     <Napoveda popis={popis} vpravo={vpravo} label={label}>
-      <span className="inline-grid h-[15px] w-[15px] shrink-0 place-items-center rounded-full border border-akcent/55 text-[9.5px] font-semibold leading-none text-akcent transition-colors hover:border-akcent hover:bg-akcent/15">
+      <span className="inline-grid h-[15px] w-[15px] shrink-0 -translate-y-[1px] place-items-center rounded-full border border-akcent/55 align-middle text-[9.5px] font-semibold leading-none text-akcent transition-colors hover:border-akcent hover:bg-akcent/15">
         i
       </span>
     </Napoveda>

@@ -120,8 +120,7 @@ export function PocitadlaEvropa({ polozky, ted }: { polozky: PolozkaPoctu[]; ted
       <p className="mt-2.5 text-[12.5px] text-tlum2">
         <Napoveda popis={
           <span className="block">
-            Případy a manipulační operace v Evropě podle dne, kdy vyšly najevo. Počítá se v prohlížeči,
-            takže „dnes“ platí i mezi sestaveními webu.
+            Případy a manipulační operace v Evropě podle dne, kdy vyšly najevo.
             {o.porovnani && <> Průměr za poslední dva roky je {cislem(o.porovnani.prumer)} na čtvrtletí.</>}
             {" "}Nula znamená, že dosud nic neprošlo ověřením — ne že se nic nestalo.
           </span>

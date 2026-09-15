@@ -14,26 +14,30 @@ import type { NatoPolozka, Pokryti, PravniPolozka, ProvozniPolozka } from "./typ
   to tím, že tiskové stránky úřadů nejsou úplné seznamy. Dokud se to nezmění,
   web u těchhle stavů nesmí tvrdit „neplatí", jen „nenašli jsme doložené
   vyhlášení". Přehled níž říká, co by k tomu bylo potřeba sehnat.
+
+  Texty se ukazují jen na stránce Zdroje. U jednotlivých stavů na přehledu
+  nemají co dělat: čtenář, který přišel zjistit, jestli může zítra odjet,
+  nepotřebuje vědět, kolik adres čteme a která z nich odmítá roboty.
 */
 
 export type StupenPokryti = "uplne" | "vicezdrojove" | "jednozdrojove" | "chybi";
 
 export const STUPNE: Record<StupenPokryti, { nazev: string; popis: string }> = {
   uplne: {
-    nazev: "Úplný seznam",
-    popis: "Máme autoritativní registr, ze kterého jde doložit i to, že opatření neplatí.",
+    nazev: "Úplný registr",
+    popis: "Doložíme i to, že opatření neplatí.",
   },
   vicezdrojove: {
-    nazev: "Více zdrojů, žádný úplný",
-    popis: "Sledujeme několik úředních zdrojů. Vyhlášení zachytíme, nevyhlášení z nich ale neplyne.",
+    nazev: "Úřední zdroje",
+    popis: "Vyhlášení zachytíme. Že opatření neplatí, z toho neplyne.",
   },
   jednozdrojove: {
-    nazev: "Jediný zdroj",
-    popis: "Položku kryje jediný dostupný zdroj. Když vypadne, nevíme o ní nic.",
+    nazev: "Úřední zdroj",
+    popis: "Vyhlášení zachytíme. Že opatření neplatí, z toho neplyne.",
   },
   chybi: {
-    nazev: "Bez zdroje",
-    popis: "Pro tuhle položku zatím nemáme automaticky čitelný veřejný zdroj.",
+    nazev: "Bez automatického zdroje",
+    popis: "Položku vede člověk, ne sběr.",
   },
 };
 
@@ -58,23 +62,23 @@ export interface PokrytiPolozky {
   než přiznat, že ho zatím nemáme.
 */
 const CO_CHYBI: Record<string, string> = {
-  "stav-ohrozeni": "Strojově čitelný výpis vyhlášených krizových stavů ze Sbírky zákonů (ne titulní stránka).",
-  "valecny-stav": "Strojově čitelný výpis usnesení Parlamentu o válečném stavu.",
-  mobilizace: "Strojově čitelný výpis rozhodnutí prezidenta o mobilizaci.",
-  "nouzovy-stav": "Strojově čitelný výpis usnesení vlády o nouzovém stavu, včetně platnosti a území.",
-  vycestovani: "Úřední seznam platných omezení vycestování — dnes se hlídá jen text tiskových stránek.",
+  "stav-ohrozeni": "Úplný výpis vyhlášených krizových stavů ze Sbírky zákonů.",
+  "valecny-stav": "Úplný výpis usnesení Parlamentu o válečném stavu.",
+  mobilizace: "Úplný výpis rozhodnutí prezidenta o mobilizaci.",
+  "nouzovy-stav": "Úplný výpis usnesení vlády o nouzovém stavu s platností a územím.",
+  vycestovani: "Úřední seznam platných omezení vycestování.",
   hranice: "Seznam znovuzavedených kontrol na vnitřních hranicích s platností a přechody.",
-  "schuze-parlamentu": "Strojově čitelný program schůzí Sněmovny; dnes jen jeden zdroj a jen text stránky.",
-  "clanek-4": "Strojový výpis konzultací podle článku 4 z NATO; dnes jen zpravodajská stránka Aliance.",
-  "clanek-5": "Strojový výpis rozhodnutí Severoatlantické rady; dnes jen zpravodajská stránka Aliance.",
-  readiness: "Úřední přehled stupňů pohotovosti; dnes jen tiskové zprávy.",
-  evakuace: "Úřední přehled evakuací personálu; dnes jen stránka MZV.",
+  "schuze-parlamentu": "Úplný program schůzí Sněmovny v strojové podobě.",
+  "clanek-4": "Úřední výpis konzultací podle článku 4.",
+  "clanek-5": "Úřední výpis rozhodnutí Severoatlantické rady.",
+  readiness: "Úřední přehled stupňů pohotovosti.",
+  evakuace: "Úřední přehled evakuací personálu.",
   "vychodni-kridlo": "Dlouhodobý stav bez automatického zdroje — vede ho člověk.",
-  palivo: "Hlášení o dostupnosti pohonných hmot; SSHR odmítá automatizované dotazy, zbývá jediný zdroj.",
+  palivo: "Úřední hlášení o dostupnosti pohonných hmot.",
   elektrina: "Výpis vyhlášených stavů nouze v elektroenergetice s územím a platností.",
   plyn: "Výpis vyhlášených stavů nouze v plynárenství s územím a platností.",
-  banky: "Úřední přehled omezení platebního styku; dnes jediný zdroj.",
-  komunikace: "Přehled výpadků sítí od operátorů nebo ČTÚ; dnes se hlídá jen text stránek.",
+  banky: "Úřední přehled omezení platebního styku.",
+  komunikace: "Přehled výpadků sítí od operátorů nebo ČTÚ.",
   "bezny-zivot": "Přehled celostátních opatření dotýkajících se škol a úřadů.",
 };
 

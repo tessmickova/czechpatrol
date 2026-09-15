@@ -52,11 +52,10 @@ export function KontrolaPokryti() {
                     {r.zdroje.length
                       ? `Čteme: ${r.zdroje.map((z) => z.nazev).join(", ")}.`
                       : "Automaticky čitelný zdroj zatím nemáme."}
-                    {r.blokujici.length > 0 && ` ${r.blokujici.map((z) => z.nazev).join(", ")} odmítá automatické dotazy.`}
                   </p>
-                  {r.chybi && (
+                  {r.stupen !== "uplne" && r.chybi && (
                     <p className="mt-1 text-[13px] leading-snug text-tlum2">
-                      <span className="text-stari-text">Chybí:</span> {r.chybi}
+                      K doložení, že opatření neplatí, by byl potřeba: {r.chybi.replace(/\.$/, "")}.
                     </p>
                   )}
                 </li>

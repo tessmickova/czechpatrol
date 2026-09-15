@@ -416,13 +416,26 @@ html, body { overflow-x: clip; }
   transition: opacity 0.12s, transform 0.12s, visibility 0.12s;
   pointer-events: none;
 }
-.napoveda-obal:hover > .napoveda,
-.napoveda-obal:focus-within > .napoveda { opacity: 1; visibility: visible; transform: translateY(0); }
 .napoveda-obal:has(> .napoveda-vpravo) > .napoveda-vpravo { left: auto; right: 0; }
 /* Skrytá nápověda nesmí zabírat místo v rozvržení — jinak roztahuje stránku vpravo. */
 .napoveda { display: none; }
-.napoveda-obal:hover > .napoveda,
-.napoveda-obal:focus-within > .napoveda { display: block; }
+
+/*
+  Otevřeno řídí kód (data-otevreno), aby vysvětlivka fungovala i prstem.
+  Dokud se kód nenačte, platí záložní pravidlo na :hover a :focus-within;
+  jakmile je připojený (data-js), přebírá otevírání on a záloha se vypne,
+  jinak by na dotykovém displeji zůstala viset „zaseklá" myš.
+*/
+.napoveda-obal:not([data-js]):hover > .napoveda,
+.napoveda-obal:not([data-js]):focus-within > .napoveda,
+.napoveda-obal[data-otevreno] > .napoveda {
+  display: block;
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+/* Otevřenou vysvětlivku jde označit a proklikat; zavírá se klepnutím mimo. */
+.napoveda-obal[data-otevreno] > .napoveda { pointer-events: auto; }
 /* Na úzkém displeji se nápověda ukotví ke spodnímu okraji, aby se vždy vešla. */
 @media (max-width: 640px) {
   .napoveda, .napoveda-obal:has(> .napoveda-vpravo) > .napoveda-vpravo {
@@ -466,6 +479,7 @@ html:not([data-pohyb="zapnuty"]) .pas-kopie { display: none; }
   will-change: transform;
 }
 .napoveda-obal:hover .dlazdice-stav,
+.napoveda-obal[data-otevreno] .dlazdice-stav,
 .napoveda-obal:focus-within .dlazdice-stav {
   transform: translate3d(0, -2px, 0);
   border-color: rgb(255 255 255 / 0.22);

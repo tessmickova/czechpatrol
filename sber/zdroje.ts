@@ -56,6 +56,42 @@ const PROVOZNI_VYHLASENI = [
 
 const PROVOZNI_TEMATA = ["stav nouze", "rozsahly vypadek", "krizove opatreni"];
 
+/*
+  Kybernetické nebezpečí. Vyhlašuje ho NÚKIB, ale opatření se zveřejňuje
+  i ve Sbírce — proto stejné fráze hlídá víc míst.
+*/
+const KYBER_VYHLASENI = [
+  "vyhlasil stav kyberneticke nouze",
+  "vyhlaseni stavu kyberneticke nouze",
+  "vyhlasil stav kybernetickeho nebezpeci",
+  "stav kybernetickeho nebezpeci",
+];
+
+/* Omezení plateb a výběrů hotovosti. */
+const PENIZE_VYHLASENI = [
+  "omezeni platebniho styku",
+  "omezeni vyberu hotovosti",
+  "pozastaveni vyberu hotovosti",
+  "vypadek platebniho systemu",
+];
+
+/* Uvolnění nouzových zásob a regulace prodeje paliva. */
+const PALIVO_VYHLASENI = [
+  "uvolneni nouzovych zasob",
+  "uvolnila nouzove zasoby",
+  "regulace prodeje pohonnych",
+  "prideleni pohonnych hmot",
+];
+
+/* Aktivace konzultací a závazku podle Washingtonské smlouvy — česky. */
+const NATO_CLANKY_CS = [
+  "aktivace clanku 4",
+  "aktivovala clanek 4",
+  "konzultace podle clanku 4",
+  "aktivace clanku 5",
+  "aktivovala clanek 5",
+];
+
 export const ZDROJE: RegistrZdroj[] = [
   /* ---------- právní stav ČR ---------- */
   {
@@ -66,9 +102,10 @@ export const ZDROJE: RegistrZdroj[] = [
     format: "html",
     jazyk: "cs",
     primarni: true,
-    klicova: PRAVNI_VYHLASENI,
+    klicova: [...PRAVNI_VYHLASENI, ...KYBER_VYHLASENI, ...PENIZE_VYHLASENI],
     sledovana: PRAVNI_TEMATA,
-    tyka: ["stav-ohrozeni", "valecny-stav", "mobilizace", "nouzovy-stav"],
+    /* Opatření k platbám i kybernetickému nebezpečí se vyhlašují právním předpisem. */
+    tyka: ["stav-ohrozeni", "valecny-stav", "mobilizace", "nouzovy-stav", "kyber", "banky"],
     overenaAdresa: false,
   },
   {
@@ -80,9 +117,10 @@ export const ZDROJE: RegistrZdroj[] = [
     format: "html",
     jazyk: "cs",
     primarni: true,
-    klicova: PRAVNI_VYHLASENI,
-    sledovana: PRAVNI_TEMATA,
-    tyka: ["stav-ohrozeni", "nouzovy-stav", "hranice", "bezny-zivot"],
+    klicova: [...PRAVNI_VYHLASENI, ...PALIVO_VYHLASENI, ...PENIZE_VYHLASENI, "evakuace obcanu cr", "evakuacni let"],
+    sledovana: [...PRAVNI_TEMATA, "nouzove zasoby", "evakuace"],
+    /* O uvolnění státních hmotných rezerv rozhoduje vláda, ne jen SSHR. */
+    tyka: ["stav-ohrozeni", "nouzovy-stav", "hranice", "bezny-zivot", "palivo", "banky", "evakuace"],
     overenaAdresa: false,
   },
   {
@@ -91,6 +129,24 @@ export const ZDROJE: RegistrZdroj[] = [
     druh: "pravni",
     url: "https://www.psp.cz/sqw/hp.sqw",
     odkaz: "https://www.psp.cz/",
+    format: "html",
+    jazyk: "cs",
+    primarni: true,
+    klicova: [...PRAVNI_VYHLASENI, "mimoradna schuze k bezpecnostni"],
+    sledovana: [...PRAVNI_TEMATA, "mimoradna schuze"],
+    tyka: ["stav-ohrozeni", "valecny-stav", "schuze-parlamentu"],
+    overenaAdresa: false,
+  },
+  {
+    klic: "senat",
+    nazev: "Senát Parlamentu ČR",
+    druh: "pravni",
+    /*
+      Stav ohrožení státu i válečný stav schvaluje Parlament — obě komory.
+      Sněmovna tu byla od začátku, Senát chyběl: kdyby Sněmovna měla výpadek
+      webu, nezůstal by k těmhle stavům žádný parlamentní zdroj.
+    */
+    url: "https://www.senat.cz/",
     format: "html",
     jazyk: "cs",
     primarni: true,
@@ -167,9 +223,9 @@ export const ZDROJE: RegistrZdroj[] = [
     format: "html",
     jazyk: "cs",
     primarni: true,
-    klicova: ["narizuje mobilizaci", "naridil mobilizaci", "vyhlasena bojova pohotovost"],
-    sledovana: ["mobilizace", "zvysena pohotovost"],
-    tyka: ["mobilizace", "readiness"],
+    klicova: ["narizuje mobilizaci", "naridil mobilizaci", "vyhlasena bojova pohotovost", ...NATO_CLANKY_CS],
+    sledovana: ["mobilizace", "zvysena pohotovost", "clanek 4", "clanek 5"],
+    tyka: ["mobilizace", "readiness", "clanek-4", "clanek-5"],
     overenaAdresa: false,
   },
 

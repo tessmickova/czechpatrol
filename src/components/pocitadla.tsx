@@ -1,5 +1,5 @@
 import { druh, kdyZjisteno, type Zaznam } from "@/lib/agregace";
-import { datumCasPraha, datumPraha } from "@/lib/cas";
+import { datumPraha } from "@/lib/cas";
 import type { Kandidat, Nepotvrzene } from "@/lib/typy";
 import { sklon } from "./zeme";
 
@@ -25,9 +25,7 @@ export function Pocitadla({ vse, neprosle, kandidati = [], ted = Date.now() }: {
     { nazev: `rok ${rok}`, n: p.filter((i) => kdyZjisteno(i).startsWith(rok)).length },
     { nazev: "od 2014", n: p.length },
   ];
-  const posledniPridan = vse.map((i) => i.aktualizovano).sort().at(-1) ?? null;
   const zbytek = vse.length - p.length;
-  const automaticky24 = kandidati.filter((k) => ted - new Date(k.zachyceno).getTime() <= 86_400_000).length;
   return (
     <section aria-label="Započítávání" className="rounded-[18px] border border-linka2 bg-plocha px-3 py-2.5">
       <div className="flex flex-wrap items-center gap-x-4 gap-y-1">
@@ -38,10 +36,15 @@ export function Pocitadla({ vse, neprosle, kandidati = [], ted = Date.now() }: {
             <span className="text-[12px] text-tlum">{o.nazev}</span>
           </span>
         ))}
+        {/*
+          Dřív tu stál celý provozní výpis: kolik přibylo za 24 hodin, kdy byl
+          poslední zápis, že se přepočítává po každém sběru. Čtenáři to neřeklo
+          nic, co by potřeboval. Zůstalo jen to, co mění výklad čísel nalevo —
+          co se do nich nepočítá — a ke kterému dni platí.
+        */}
         <span className="ml-auto text-[11.5px] text-tlum2">
-          + {zbytek} {sklon(zbytek, "aktualizace, opatření nebo reakce", "aktualizace, opatření a reakce", "aktualizací, opatření a reakcí")} · {neprosle.length} neprošlo ověřením
-          · <span className="text-akcent">{kandidati.length} automaticky zachycených čeká na ověření{automaticky24 ? ` (${automaticky24} za 24 h)` : ""}</span>
-          {posledniPridan && <> · poslední zápis {datumCasPraha(posledniPridan)}</>} · přepočet po každém sběru, stav k {datumPraha(new Date(ted).toISOString())}
+          + {zbytek} {sklon(zbytek, "navazující záznam", "navazující záznamy", "navazujících záznamů")} · {neprosle.length} neprošlo ověřením
+          · <span className="text-akcent">{kandidati.length} čeká na ověření</span> · stav k {datumPraha(new Date(ted).toISOString())}
         </span>
       </div>
     </section>

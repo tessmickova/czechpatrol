@@ -1,0 +1,34 @@
+name: Ověření zdrojů
+
+# Odpovídají adresy v registru zdrojů? Z vývojového prostředí to nejde zjistit —
+# úřední weby jsou odtamtud nedosažitelné, takže „nedostupný" by tam znamenalo
+# jen „nedosáhnu na něj já". Tenhle běh se dívá ze stejné sítě, ze které běží
+# sběr, takže jeho výsledek je ten, na kterém záleží.
+#
+# Spouští se ručně po každém přidání zdroje a jednou týdně, aby se přestěhovaná
+# adresa poznala dřív, než na ní web mlčky přestane stát.
+
+on:
+  workflow_dispatch:
+  schedule:
+    # Pondělí ráno, mimo špičku.
+    - cron: "40 5 * * 1"
+
+permissions:
+  contents: read
+
+jobs:
+  zdroje:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: npm
+
+      - run: npm ci
+
+      - name: Zkusit každou adresu z registru
+        run: npm run sber:zdroje
