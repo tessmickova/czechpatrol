@@ -27,9 +27,9 @@
           "jazyk": "cs"
         }
       ],
-      "zkontrolovano": "2026-09-15T15:14:45.619Z",
-      "pokryti": "nedostupne",
-      "pokrytiDuvod": "nepodařilo se přečíst: e-sbirka"
+      "zkontrolovano": "2026-09-15T15:31:39.827Z",
+      "pokryti": "orientacni",
+      "pokrytiDuvod": "přečteno vlada, psp, senat; žádný z nich není úplný seznam, zápor z nich neplyne"
     },
     {
       "klic": "valecny-stav",
@@ -49,9 +49,9 @@
           "jazyk": "cs"
         }
       ],
-      "zkontrolovano": "2026-09-15T15:14:45.619Z",
-      "pokryti": "nedostupne",
-      "pokrytiDuvod": "nepodařilo se přečíst: e-sbirka"
+      "zkontrolovano": "2026-09-15T15:31:39.827Z",
+      "pokryti": "orientacni",
+      "pokrytiDuvod": "přečteno psp, senat; žádný z nich není úplný seznam, zápor z nich neplyne"
     },
     {
       "klic": "mobilizace",
@@ -79,9 +79,9 @@
           "jazyk": "cs"
         }
       ],
-      "zkontrolovano": "2026-09-15T15:14:45.619Z",
-      "pokryti": "nedostupne",
-      "pokrytiDuvod": "nepodařilo se přečíst: e-sbirka"
+      "zkontrolovano": "2026-09-15T15:31:39.827Z",
+      "pokryti": "orientacni",
+      "pokrytiDuvod": "přečteno vlada, army; žádný z nich není úplný seznam, zápor z nich neplyne"
     },
     {
       "klic": "nouzovy-stav",
@@ -101,9 +101,9 @@
           "jazyk": "cs"
         }
       ],
-      "zkontrolovano": "2026-09-15T15:14:45.619Z",
-      "pokryti": "nedostupne",
-      "pokrytiDuvod": "nepodařilo se přečíst: e-sbirka"
+      "zkontrolovano": "2026-09-15T15:31:39.827Z",
+      "pokryti": "orientacni",
+      "pokrytiDuvod": "přečteno vlada, psp, mvcr; žádný z nich není úplný seznam, zápor z nich neplyne"
     },
     {
       "klic": "vycestovani",
@@ -123,7 +123,7 @@
           "jazyk": "cs"
         }
       ],
-      "zkontrolovano": "2026-09-15T15:14:45.619Z",
+      "zkontrolovano": "2026-09-15T15:31:39.827Z",
       "pokryti": "orientacni",
       "pokrytiDuvod": "přečteno mvcr, mzv; žádný z nich není úplný seznam, zápor z nich neplyne"
     },
@@ -153,9 +153,9 @@
           "jazyk": "cs"
         }
       ],
-      "zkontrolovano": "2026-09-15T15:14:45.619Z",
-      "pokryti": "nedostupne",
-      "pokrytiDuvod": "nepodařilo se přečíst: dopravni-info"
+      "zkontrolovano": "2026-09-15T15:31:39.827Z",
+      "pokryti": "orientacni",
+      "pokrytiDuvod": "přečteno vlada, mvcr, policie; žádný z nich není úplný seznam, zápor z nich neplyne"
     },
     {
       "klic": "schuze-parlamentu",
@@ -175,7 +175,7 @@
           "jazyk": "cs"
         }
       ],
-      "zkontrolovano": "2026-09-15T15:14:45.619Z",
+      "zkontrolovano": "2026-09-15T15:31:39.827Z",
       "pokryti": "orientacni",
       "pokrytiDuvod": "přečteno psp, senat; žádný z nich není úplný seznam, zápor z nich neplyne"
     }
