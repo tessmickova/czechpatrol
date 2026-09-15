@@ -80,6 +80,13 @@ export interface Polozka {
   odkaz: string;
   publikovano: string | null;
   shrnuti: string;
+  /**
+   * Položka vytažená z obyčejné stránky, ne z RSS. Je mezi nimi i navigace
+   * („Prohlášení o přístupnosti“, „Zahrada Strakovy akademie“) a ta nemá co
+   * dělat v přehledu odmítnutých zpráv — ten je pracovní seznam pro člověka
+   * a musí se dát projít.
+   */
+  zeStranky?: boolean;
 }
 
 export interface Nalez {

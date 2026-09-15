@@ -864,8 +864,14 @@ export async function sbirejUdalosti(): Promise<{ novych: number; celkem: number
       const text = `${p.nadpis} ${p.shrnuti}`;
       const duvod = duvodOdmitnuti(text);
       if (duvod) {
-        // Nic se nezahazuje: odmítnuté jde do přehledu pro člověka.
-        if (!znameOdmitnute.has(p.odkaz)) {
+        /*
+          Nic se nezahazuje: odmítnuté jde do přehledu pro člověka. S jednou
+          výjimkou — položky vytažené z obyčejné stránky. Je mezi nimi i
+          navigace („Prohlášení o přístupnosti“, „Pracovní a poradní orgány“)
+          a jeden běh jí do přehledu nasypal přes sto. Přehled odmítnutých je
+          pracovní seznam, který má někdo projít; zaplavený je k ničemu.
+        */
+        if (!p.zeStranky && !znameOdmitnute.has(p.odkaz)) {
           znameOdmitnute.add(p.odkaz);
           noveOdmitnute.push({
             id: kandidatId(p.odkaz),

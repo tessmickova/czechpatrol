@@ -246,3 +246,23 @@ describe("čtení stránky, když kanál RSS nefunguje", () => {
     expect(polozkyZeStranky("<nav><a href=\"/\">Úvod</a></nav>", "https://x.example/")).toHaveLength(0);
   });
 });
+
+describe("navigace z úřední stránky nekazí přehled odmítnutých", () => {
+  it("položka ze stránky je označená, aby se poznala", () => {
+    /*
+      První běh se čtením stránek nasypal do přehledu odmítnutých přes sto
+      položek jako „Prohlášení o přístupnosti" nebo „Zahrada Strakovy
+      akademie". Ten přehled je pracovní seznam, který má někdo projít —
+      zaplavený je k ničemu.
+    */
+    const p = polozkyZeStranky('<a href="/a">Prohlášení o přístupnosti webu vlády</a>', "https://x.example/");
+    expect(p[0].zeStranky).toBe(true);
+  });
+
+  it("z textu zmizí i konec HTML komentáře", () => {
+    // Bez toho zůstávalo v titulcích „--> " z konce komentáře.
+    const p = polozkyZeStranky('<!-- menu --><a href="/b">Vláda projednala návrh rozpočtu obrany</a>', "https://x.example/");
+    expect(p[0].nadpis.startsWith("-->")).toBe(false);
+    expect(p[0].nadpis).toBe("Vláda projednala návrh rozpočtu obrany");
+  });
+});

@@ -26,6 +26,8 @@ export async function stahni(url: string, pokusu = 3): Promise<{ stav: number; t
 function odtaguj(s: string): string {
   const dekoduj = (x: string) =>
     x
+      /* Komentáře pryč celé. Bez tohohle zůstávalo v textu „-->“ z konce komentáře. */
+      .replace(/<!--[\s\S]*?-->/g, " ")
       .replace(/<!\[CDATA\[([\s\S]*?)\]\]>/g, "$1")
       .replace(/&amp;/g, "&").replace(/&lt;/g, "<").replace(/&gt;/g, ">")
       .replace(/&quot;/g, '"').replace(/&#39;/g, "'").replace(/&nbsp;/g, " ");
@@ -103,7 +105,7 @@ export function polozkyZeStranky(html: string, zaklad: string, max = 40): Polozk
     try { odkaz = new URL(href, zaklad).toString(); } catch { continue; }
     if (videne.has(odkaz)) continue;
     videne.add(odkaz);
-    out.push({ nadpis, odkaz, publikovano: null, shrnuti: "" });
+    out.push({ nadpis, odkaz, publikovano: null, shrnuti: "", zeStranky: true });
     if (out.length >= max) break;
   }
   return out;
