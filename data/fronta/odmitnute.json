@@ -1,5 +1,55 @@
 [
   {
+    "id": "k-02dff32b47b8f15a",
+    "zachyceno": "2026-09-16T17:03:07.719Z",
+    "publikovano": "2026-09-16T16:58:00.000Z",
+    "zdroj": {
+      "nazev": "Český rozhlas — domácí zprávy",
+      "url": "https://www.irozhlas.cz/zpravy-domov/o-stavbe-elektraren-v-ralsku-a-bystre-nad-jizerou-mistni-rozhodnou-v-rijnovem_2609161858_bva",
+      "typ": "primary",
+      "primarni": true
+    },
+    "titulek": "O stavbě elektráren v Ralsku a Bystré nad Jizerou místní rozhodnou v říjnovém referendu",
+    "shrnuti": "Nadcházející komunální a senátní volby doplní v některých obcích místní referenda. Týká se to i dvou obcí v Libereckém kraji – Ralska na Českolipsku a Bystré nad Jizerou na Semilsku.",
+    "duvod": "vylouceno-tematem",
+    "kategorie": [],
+    "posouzeni": null
+  },
+  {
+    "id": "k-5e4a93301b5634d8",
+    "zachyceno": "2026-09-16T17:03:07.778Z",
+    "publikovano": "2026-09-16T16:50:00.000Z",
+    "zdroj": {
+      "nazev": "Deutsche Welle — Europe",
+      "url": "https://www.dw.com/en/can-canada-and-the-eu-build-a-deeper-partnership/a-79295388?maca=en-rss-en-eu-2092-rdf",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Can Canada and the EU build a deeper partnership?",
+    "shrnuti": "Canadian Prime Minister Carney is known for standing up to US President Donald Trump. Now he wants to forge a \"unique alliance\" with Europe. But what could such a partnership look like?",
+    "duvod": "bez-skutku",
+    "kategorie": [],
+    "posouzeni": null
+  },
+  {
+    "id": "k-ee9f83a464612e39",
+    "zachyceno": "2026-09-16T17:03:07.719Z",
+    "publikovano": "2026-09-16T16:35:00.000Z",
+    "zdroj": {
+      "nazev": "Český rozhlas — domácí zprávy",
+      "url": "https://www.irozhlas.cz/sport/fotbal/fotbal-evropska-liga-ac-sparta-praha-fc-ararat-arnania_2609161835_kri",
+      "typ": "primary",
+      "primarni": true
+    },
+    "titulek": "ŽIVĚ: Sparta rozehrála v Arménii Evropskou ligu. Radiožurnál Sport vysílá přímý přenos",
+    "shrnuti": "Fotbalisté Sparty si na začátku Evropské ligy po roce zopakují duel v arménském Jerevanu. Ve středečním utkání na startu ligové fáze nastoupili proti Araratu-Armenia. Ten Sparťané před rokem vyřadili ve třetím předkole Konferenční ligy, oproti minulému roku mají však značně obměněný kádr.",
+    "duvod": "vylouceno-tematem",
+    "kategorie": [
+      "cr"
+    ],
+    "posouzeni": null
+  },
+  {
     "id": "k-203b8a7d6f5308fe",
     "zachyceno": "2026-09-16T16:32:53.005Z",
     "publikovano": "2026-09-16T16:28:00.000Z",
@@ -67,6 +117,22 @@
     "kategorie": [
       "vojsko"
     ],
+    "posouzeni": null
+  },
+  {
+    "id": "k-94e85786fe798174",
+    "zachyceno": "2026-09-16T17:03:07.779Z",
+    "publikovano": "2026-09-16T15:59:00.000Z",
+    "zdroj": {
+      "nazev": "Deutsche Welle — Europe",
+      "url": "https://www.dw.com/en/shock-in-kosovo-as-hague-convicts-former-president-thaci/a-79294916?maca=en-rss-en-eu-2092-rdf",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Shock in Kosovo as Hague convicts former President Thaci",
+    "shrnuti": "The conviction in The Hague of former President Hashim Thaci and three former Kosovo Liberation Army leaders has caused consternation in Kosovo — both among political leaders and on the streets. DW reports from Pristina.",
+    "duvod": "bez-skutku",
+    "kategorie": [],
     "posouzeni": null
   },
   {
@@ -898,6 +964,22 @@
     },
     "titulek": "Zkrácení čekacích dob, více operací a širší tým lékařů. Brněnské transplantační centrum změnilo adresu",
     "shrnuti": "Brněnské Centrum kardiovaskulární a transplantační chirurgie se přestěhovalo do nové budovy v Bohunicích. Zatímco dříve sídlilo v areálu Fakultní nemocnice u svaté Anny, teď ho pacienti najdou u Jihlavské ulice v areálu Fakultní nemocnice Brno. Nové zázemí včetně vybavení vyšlo na tři a půl miliardy",
+    "duvod": "bez-skutku",
+    "kategorie": [],
+    "posouzeni": null
+  },
+  {
+    "id": "k-c139f579bd7a43ee",
+    "zachyceno": "2026-09-16T17:03:08.099Z",
+    "publikovano": "2026-09-16T10:32:00.000Z",
+    "zdroj": {
+      "nazev": "Téma: krizove-vysilani (česky)",
+      "url": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxPNzdCbUZHd0R3elRHM09WbzQtMmppQmllRUpXNW14NU1EbzR4RndzdVFIajhNWU5kMjVCVlNLTmdjbG5tUWZwbk5pdjc4RC1HdzlUbEI3WlJzRUhFXzc4bWI0T0xFMy1kbEpQNy1raDR0S0psbGZfRUdObGtvNVU1Yzg5d1VYZ3lkcnN5bEtEZDJvQkRJOGdpNGh1TTdEYWtrRVJKZFVIeGIxT3F2Uk1VUlVGS2RQTHlPMlplYWpjRGFzMFdQOEZMM1R5VlBjYmRDTVBtQkdwVQ?oc=5",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Poslanci mají brzy začít projednávat konec poplatků za ČT a ČRo. Verdikt padne zítra - echo24.cz",
+    "shrnuti": "Poslanci mají brzy začít projednávat konec poplatků za ČT a ČRo. Verdikt padne zítra echo24.cz",
     "duvod": "bez-skutku",
     "kategorie": [],
     "posouzeni": null
@@ -8355,86 +8437,6 @@
     },
     "titulek": "India-China thaw: PLA deployment along LAC drops as Modi-Xi diplomacy gathers pace - thestatesman.com",
     "shrnuti": "India-China thaw: PLA deployment along LAC drops as Modi-Xi diplomacy gathers pace thestatesman.com",
-    "duvod": "bez-skutku",
-    "kategorie": [],
-    "posouzeni": null
-  },
-  {
-    "id": "k-7c1c665d41503e31",
-    "zachyceno": "2026-09-14T07:32:31.352Z",
-    "publikovano": "2026-09-14T07:00:00.000Z",
-    "zdroj": {
-      "nazev": "iROZHLAS — zprávy",
-      "url": "https://www.irozhlas.cz/zpravy-svet/expertka-na-balkan-cerna-hora-v-eu-do-roku-2028-je-realne-ale-branit-tomu-muze_2609140900_raf",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Expertka na Balkán: Černá Hora v EU do roku 2028? Je to reálné, ale bránit tomu může krajní pravice v EU",
-    "shrnuti": "Rozšiřování Evropské unie je nyní v Bruselu jednou z priorit. Slovinská eurokomisařka Marta Kosová hlásá, že „přichází podzim rozšíření“. Černá Hora podle ní přistoupí v roce 2028. „Byla bych pozitivní, máme momentum. Ale nezáleží jen na nich,“ varuje v podcastu Bruselské chlebíčky odbornice na rozš",
-    "duvod": "bez-skutku",
-    "kategorie": [],
-    "posouzeni": null
-  },
-  {
-    "id": "k-b62fd5d7dd098960",
-    "zachyceno": "2026-09-14T07:32:31.353Z",
-    "publikovano": "2026-09-14T06:58:00.000Z",
-    "zdroj": {
-      "nazev": "iROZHLAS — zprávy",
-      "url": "https://www.irozhlas.cz/zpravy-domov/novy-kruhovy-objezd-v-holicich-na-pardubicku-ma-zpozdeni-silnicari-nasli-pod_2609140858_lhv",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Nový kruhový objezd v Holicích na Pardubicku má zpoždění. Silničáři našli pod křižovatkou staré sklepy",
-    "shrnuti": "Kruhový objezd z provizorních plastových dílů z centra Holic na Pardubicku letos nezmizí. Dlouho očekávaná výstavba jeho nového nástupce nabírá zpoždění. Podle silničářů asi půl roku. Důvodem je nečekaný nález dutých prostor pod úrovní stávající křižovatky, které by mohly ohrozit stabilitu nové stav",
-    "duvod": "bez-skutku",
-    "kategorie": [],
-    "posouzeni": null
-  },
-  {
-    "id": "k-3e3b7bf8a3e5c2b5",
-    "zachyceno": "2026-09-14T07:02:31.738Z",
-    "publikovano": "2026-09-14T06:51:00.000Z",
-    "zdroj": {
-      "nazev": "ERR News (Estonsko)",
-      "url": "https://news.err.ee/1610137480/estonia-linked-woman-unknown-wins-golden-lion-at-venice-film-festival",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Estonia-linked 'Woman Unknown' wins Golden Lion at Venice Film Festival",
-    "shrnuti": "The Estonia co-produced feature \"Woman Unknown\" has won the Golden Lion, the top prize at the Venice Film Festival, days after receiving a seven-and-a-half-minute standing ovation at its premiere.",
-    "duvod": "vylouceno-tematem",
-    "kategorie": [],
-    "posouzeni": null
-  },
-  {
-    "id": "k-ec9df448957aba20",
-    "zachyceno": "2026-09-14T07:02:31.772Z",
-    "publikovano": "2026-09-14T06:44:16.000Z",
-    "zdroj": {
-      "nazev": "ČT24 — hlavní zprávy",
-      "url": "https://ct24.ceskatelevize.cz/clanek/domaci/ikem-porusoval-zakon-a-chyboval-v-zakazkach-zjistil-nku-377554",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "IKEM porušoval zákon a chyboval v zakázkách, zjistil NKÚ",
-    "shrnuti": "Institut klinické a experimentální medicíny (IKEM) v letech 2022 až 2024 opakovaně porušoval zákony i vlastní vnitřní předpisy při nakládání s majetkem a veřejnými penězi. Zjistil to Nejvyšší kontrolní úřad (NKÚ) při kontrole, která prověřila 102 případů nakládání s penězi v celkovém objemu 905,3 mi",
-    "duvod": "bez-skutku",
-    "kategorie": [],
-    "posouzeni": null
-  },
-  {
-    "id": "k-781cb1a7e69549e2",
-    "zachyceno": "2026-09-14T07:02:31.763Z",
-    "publikovano": "2026-09-14T06:43:00.000Z",
-    "zdroj": {
-      "nazev": "iROZHLAS — zprávy",
-      "url": "https://www.irozhlas.cz/zpravy-domov/do-lavic-pesky-na-kole-nebo-kolobezce-vyzva-pesky-do-skoly-chce-deti-motivovat-k_2609140843_lhv",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Do lavic pěšky, na kole nebo koloběžce. Výzva Pěšky do školy chce děti motivovat k pohybu a zklidnit dopravu",
-    "shrnuti": "Žáci z víc než pěti set škol po celém Česku budou tento týden cíleně chodit do školy pěšky. Zapojí se totiž do výzvy Pěšky do školy, kterou organizuje projekt Pěšky městem. Cílem je přimět děti k pohybu a zklidnit v okolí škol dopravu. Výzvu plní třeba děti z jablonecké základní školy Pasířská.",
     "duvod": "bez-skutku",
     "kategorie": [],
     "posouzeni": null
