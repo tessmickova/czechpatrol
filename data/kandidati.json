@@ -80,6 +80,42 @@
     }
   },
   {
+    "id": "k-7693865f7711920a",
+    "zachyceno": "2026-09-16T10:32:48.049Z",
+    "publikovano": null,
+    "zdroj": {
+      "nazev": "LRT English (Litva)",
+      "url": "https://www.lrt.lt/en/news-in-english/19/3054232/nauseda-drone-shot-down-over-lithuania-was-russian-gerbera-headed-for-ukraine",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Nausėda: drone shot down over Lithuania was Russian Gerbera headed for Ukraine",
+    "titulekPuvodni": "Nausėda: drone shot down over Lithuania was Russian Gerbera headed for Ukraine",
+    "shrnuti": "",
+    "kodZeme": "LT",
+    "zeme": "Litva",
+    "kategorie": [
+      "drony",
+      "rusko"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "shot down",
+      "dron",
+      "drone",
+      "russia"
+    ],
+    "naliehave": null,
+    "stav": "ceka",
+    "vyrez": {
+      "text": "Nausėda: drone shot down over Lithuania was Russian Gerbera headed for Ukraine - LRT\n\r\nNaujienų srautas\nNews\n6 min. ago\nUS to lift sanctions on 2 Belarusian companies, Minsk to release 25 political prisoners\nNews\n29 min. ago\nNausėda: drone shot down over Lithuania was Russian Gerbera headed for Ukraine\nNews\n3 h ago\nLithuanian MEP: Europe must stop being afraid to respond – opinion\nNews\n3 h ago\nLithuanian defence minister says determining drone origin will take time\nNews\n4 h ago\nGerman FM says NATO will not be intimidated by Russia after drone downing in Lithuania\nNews\n5 h ago\nCuban salsa teacher linked to alleged Russian terror network across Europe – investigation\nNews\n20 h ago\nGold-plated skulls depicting famous Lithuanian royal romance divide opinions\nNews\n21 h ago\nKaunas to begin designing first tram line\nNews\n1 d ago\nLithuanian anti-fraud agency searches National Paying Agency in EU funds probe\nNews\n1 d ago\nVilnius airport temporarily halts flights after unidentified object detected\nNews\n1 d ago\nLithuania’s central bank keeps 2026 growth forecast at 2.7%\nNews\n1 d ago\nResidents near Lithuania drone crash describe a night of fear and explosions\nNews\n1 d ago\nLithuania weighs…",
+      "stazeno": "2026-09-16T10:32:48.424Z",
+      "stav": 200
+    }
+  },
+  {
     "id": "k-5e0064da30f33e0d",
     "zachyceno": "2026-09-16T09:32:53.679Z",
     "publikovano": null,
@@ -10267,39 +10303,6 @@
     "vyrez": {
       "text": "Google News",
       "stazeno": "2026-09-14T10:32:34.605Z",
-      "stav": 200
-    },
-    "naliehave": null
-  },
-  {
-    "id": "k-5b41904d03f0148f",
-    "zachyceno": "2026-09-06T13:59:15.578Z",
-    "publikovano": "2026-09-03T05:26:56.000Z",
-    "zdroj": {
-      "nazev": "Google News — sabotáž",
-      "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxOejc1SUNMa090LVhwN3VobTJNcmMwNGJMdWFVQkFjTnB0ZGhzRTRfcDNpRDF6bVZ2VS0wUVBLbk1GaXNTN2dGLVUtcHRJZ2RfeUUtNDVqWlFtVnRtTEc3VXZCSGhvMWplbjdyMGluQWN4Vy1BRDJNMlU1WG8wYkNFT0ZjWEtkbUpzZ2taQWVlaGEtbnJ6dGZJeDBYRldCX3hmRWJsXzF3UlBnTmNtU2JBamxHZmhTV1VYeEMw?oc=5",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Rusko plánuje sabotáž v Dánsku, varovala dánská zpravodajská služba - Seznam Zprávy",
-    "titulekPuvodni": "Rusko plánuje sabotáž v Dánsku, varovala dánská zpravodajská služba - Seznam Zprávy",
-    "shrnuti": "",
-    "kodZeme": "DK",
-    "zeme": "Dánsko",
-    "kategorie": [
-      "sabotaz",
-      "rusko"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "shody": [
-      "sabotaz",
-      "rusk"
-    ],
-    "stav": "ceka",
-    "vyrez": {
-      "text": "Google News",
-      "stazeno": "2026-09-14T10:32:34.757Z",
       "stav": 200
     },
     "naliehave": null
