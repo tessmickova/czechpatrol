@@ -1,5 +1,37 @@
 [
   {
+    "id": "k-dff4de2b40e90133",
+    "zachyceno": "2026-09-16T11:32:59.421Z",
+    "publikovano": "2026-09-16T11:11:00.000Z",
+    "zdroj": {
+      "nazev": "ERR News (Estonsko)",
+      "url": "https://news.err.ee/1610139478/estonia-rejects-eu-plan-for-mandatory-ev-charging-infrastructure-in-public-parking-lots",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Estonia rejects EU plan for mandatory EV charging infrastructure in public parking lots",
+    "shrnuti": "Estonia will only partially transpose a EU directive that would require half of the parking spaces outside larger stores to have the necessary cable conduits for electric vehicle charging by next year.",
+    "duvod": "bez-skutku",
+    "kategorie": [],
+    "posouzeni": null
+  },
+  {
+    "id": "k-91b91b254e7bccd1",
+    "zachyceno": "2026-09-16T11:32:59.422Z",
+    "publikovano": "2026-09-16T10:59:00.000Z",
+    "zdroj": {
+      "nazev": "ERR News (Estonsko)",
+      "url": "https://news.err.ee/1610139628/prisma-peremarket-files-redundancy-notice-67-support-jobs-lost",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Prisma Peremarket files redundancy notice, 67 support jobs lost",
+    "shrnuti": "Finnish-owned supermarket Prisma's Estonian arm, acquired by Coop this year, has filed a collective redundancy notice affecting 67 support unit employees.",
+    "duvod": "bez-skutku",
+    "kategorie": [],
+    "posouzeni": null
+  },
+  {
     "id": "k-871c5e09c4cab743",
     "zachyceno": "2026-09-16T11:03:04.341Z",
     "publikovano": "2026-09-16T10:59:00.000Z",
@@ -8392,40 +8424,6 @@
       "drony",
       "rusko"
     ],
-    "posouzeni": null
-  },
-  {
-    "id": "k-164c92877f3d7191",
-    "zachyceno": "2026-09-13T18:32:35.818Z",
-    "publikovano": "2026-09-13T18:11:00.000Z",
-    "zdroj": {
-      "nazev": "iROZHLAS — zprávy",
-      "url": "https://www.irozhlas.cz/zpravy-domov/prezident-pavel-bude-v-cele-ceske-delegace-na-pristim-summitu-nato-v-tirane_2609132011_aru",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Prezident Pavel bude v čele české delegace na příštím summitu NATO v Tiraně, uvedl premiér Babiš",
-    "shrnuti": "V čele české delegace na příštím summitu Severoatlantické aliance (NATO) v Tiraně bude prezident Petr Pavel. Uvedla to Česká televize s odkazem na vyjádření premiéra Andreje Babiše (ANO). Předseda vlády už v červenci uvedl, že nemá problém s tím, aby Pavel na příští alianční summit jel. O letošní sl",
-    "duvod": "bez-skutku",
-    "kategorie": [
-      "nato"
-    ],
-    "posouzeni": null
-  },
-  {
-    "id": "k-cd2011c6df1fab68",
-    "zachyceno": "2026-09-13T18:32:35.819Z",
-    "publikovano": "2026-09-13T18:09:00.000Z",
-    "zdroj": {
-      "nazev": "iROZHLAS — zprávy",
-      "url": "https://www.irozhlas.cz/sport/ostatni-sporty/mas-slavi-domaci-triumf-na-vuelte-spanelsko-slavi-vitezstvi-na-zaverecne-grand_2609132009_rej",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Mas slaví domácí triumf na Vueltě. Španělsko slaví vítězství na závěrečné Grand Tour po dvanácti letech",
-    "shrnuti": "Španělský cyklista Enric Mas ovládl Vueltu jako první domácí jezdec od triumfu Alberta Contadora v roce 2014. V poslední etapě v Granadě zvítězil Nor Tobias Johannessen.",
-    "duvod": "bez-skutku",
-    "kategorie": [],
     "posouzeni": null
   }
 ]
