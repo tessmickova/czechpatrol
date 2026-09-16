@@ -1,5 +1,55 @@
 [
   {
+    "id": "k-97354f4ce63af736",
+    "zachyceno": "2026-09-16T19:03:20.673Z",
+    "publikovano": "2026-09-16T18:56:38.000Z",
+    "zdroj": {
+      "nazev": "Téma: nouzovy-stav (anglicky)",
+      "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxONUJkTVV5WDVLQVB0Z0tQRElBeGhrNEE4VXpyaG51MjNSUmpXOWhHOXFCeGxqUDEzb2lRdEpmb0JMSnZHbnF6VTlRS1dtdEVQVm9UaEdjUFBYREpTZkZiTU5PbnJUWWVHVzhBb2FRVTlpdk43bTNuOW9nMnR5OVlsSUJZckdZeEJOZGszY0w1TEVIbm1GSkFhY3RR?oc=5",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Spanberger declares state of emergency targeting Virginia farmers - The Virginian-Pilot",
+    "shrnuti": "Spanberger declares state of emergency targeting Virginia farmers The Virginian-Pilot",
+    "duvod": "bez-mista",
+    "kategorie": [
+      "pravo"
+    ],
+    "posouzeni": null
+  },
+  {
+    "id": "k-ba8aa132af5a2fee",
+    "zachyceno": "2026-09-16T19:03:20.376Z",
+    "publikovano": "2026-09-16T18:47:42.000Z",
+    "zdroj": {
+      "nazev": "ČT24 — hlavní zprávy",
+      "url": "https://ct24.ceskatelevize.cz/clanek/svet/volby-cekaji-dalsi-nemeckou-spolkovou-zemi-i-tam-vede-afd-377691",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Volby čekají další německou spolkovou zemi. I tam vede AfD",
+    "shrnuti": "Dva týdny po výhře Alternativy pro Německo (AfD) v Sasku-Anhaltsku se tuto neděli chystá volit další spolková země. I v Meklenbursku-Předním Pomořansku má AfD šanci stát se nejsilnější stranou. Podle úterního průzkumu INSA by volby vyhrála s 37 procenty, více než dvojnásobkem oproti minulým volbám. ",
+    "duvod": "vylouceno-tematem",
+    "kategorie": [],
+    "posouzeni": null
+  },
+  {
+    "id": "k-c8bf3c377f89bad4",
+    "zachyceno": "2026-09-16T19:03:20.359Z",
+    "publikovano": "2026-09-16T18:35:00.000Z",
+    "zdroj": {
+      "nazev": "Český rozhlas — domácí zprávy",
+      "url": "https://www.irozhlas.cz/zpravy-domov/rychliky-mezi-prahou-a-hradcem-kralove-ma-prevzit-regiojet-vyhral-zakazku-za_2609162035_dns",
+      "typ": "primary",
+      "primarni": true
+    },
+    "titulek": "Rychlíky mezi Prahou a Hradcem Králové má převzít RegioJet. Vyhrál zakázku za více než 3,25 miliardy",
+    "shrnuti": "Rychlíky mezi Prahou, Hradcem Králové a Trutnovem bude od prosince 2028 nejspíš provozovat společnost RegioJet. O výsledku výběrového řízení, který vyhlásilo ministerstvo dopravy, ale který zatím není definitivní, informoval web Zdopravy.cz. Soukromý dopravce by měl nahradit stávající České dráhy, k",
+    "duvod": "bez-skutku",
+    "kategorie": [],
+    "posouzeni": null
+  },
+  {
     "id": "k-7c607eb4778b42b6",
     "zachyceno": "2026-09-16T18:33:08.408Z",
     "publikovano": "2026-09-16T18:20:00.000Z",
@@ -147,6 +197,24 @@
     "duvod": "bez-mista",
     "kategorie": [
       "pravo"
+    ],
+    "posouzeni": null
+  },
+  {
+    "id": "k-413e626a9e99b27d",
+    "zachyceno": "2026-09-16T19:03:20.543Z",
+    "publikovano": "2026-09-16T17:33:00.000Z",
+    "zdroj": {
+      "nazev": "Téma: kyber (anglicky)",
+      "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxQdFpLX1pQVGZyQWU4Z1hCdVBCMWExTS1SWlpQLVhFaDVFRUtuOFl4Yk42RlI4NVluQWV3dmw4YkVJdmV5UGFjZ3o4TzB3ZEhTUHZ4b3VNbU8zTjNkdXI3SVpQcGVyQjZNdk5fTHBlSXZrVjRFYnItWk5UVW9Cdng2RGo2WjExRURIVVJJRHRGWXJQUHc5YjMyV2c4bkxfcGxIajgySjVpQdIBrAFBVV95cUxQd3MxbkFRdDBfdGlmeXRQVlNGczNhckppc1NqRVBSYms2NEQ3MnVUZWQ2M0JXbEVxYjJVZHliNVp0WUh1REJVaDlrRm4ya1BWQ2N1cmVQOVNST28wR3c0Y0xLc2QzTlFMSHZFaGJGZWkyS2IxbDkxNkdWZlBFOW1MRWg1V1BNRVE3dkc0NnlPcjMzUWkyWVlVNk03OHJqTWJqci1tRUl6eHZiNzlx?oc=5",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Intelligence: Norwegian infrastructure used for cyberattacks on Ukraine - LIGA.net",
+    "shrnuti": "Intelligence: Norwegian infrastructure used for cyberattacks on Ukraine LIGA.net",
+    "duvod": "vylouceno-tematem",
+    "kategorie": [
+      "kyber"
     ],
     "posouzeni": null
   },
@@ -8375,70 +8443,6 @@
     },
     "titulek": "Kurzy doučování jsou čím dál oblíbenější. Poskytují je i neziskové organizace, mají ale plné kapacity",
     "shrnuti": "V Česku roste zájem o doučování. Kurzy pomáhají dětem se vrátit do školního procesu i dostat se na svoji vysněnou školu. Ceny dlouhodobých kurzů se však pohybují v tisících korun a ne všichni rodiče si je mohou dovolit. V tomto případě potom pomáhají neziskové organizace. „Už jenom to, že se těm dět",
-    "duvod": "bez-skutku",
-    "kategorie": [],
-    "posouzeni": null
-  },
-  {
-    "id": "k-a6071d9ac7555ec3",
-    "zachyceno": "2026-09-15T16:32:52.449Z",
-    "publikovano": "2026-09-14T09:17:00.000Z",
-    "zdroj": {
-      "nazev": "Téma: vojsko (anglicky)",
-      "url": "https://news.google.com/rss/articles/CBMi5AFBVV95cUxQTVJkT3R5SkVqTGZpZVNMZjN2bWVnVHV4aGQzaFRHZkhQZXE0ZXFkVEdkelJ1RGt6cl92eXRMbktMc3hqbGFqMTdPV1NuYloyTEM3YVAwVVBaVHUtNWQxT3JJV1llUk8tUVVpWXJLM2xMMHg1NjVJdVhzajAyU2FPUkZzaENsU21mYmFiQmxFeEFjWTYtQjNQaE5HazRlWEFWekYwMktJX05IQXBVVk56TnhzQjFfcFRIbk9oQWdSa003b2dvcEJaX1VLRE81Q3hjbWFkUGh6ZDN1RGM5eWJERXVXZFY?oc=5",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "PLA Scales Back LAC-Facing Troops in 2025 While Retaining 10 Combined Arms Formations: Indian Defence Ministry Report - Defence.in",
-    "shrnuti": "PLA Scales Back LAC-Facing Troops in 2025 While Retaining 10 Combined Arms Formations: Indian Defence Ministry Report Defence.in",
-    "duvod": "bez-skutku",
-    "kategorie": [],
-    "posouzeni": null
-  },
-  {
-    "id": "k-3f1d2120f4dfb7b6",
-    "zachyceno": "2026-09-14T09:32:41.656Z",
-    "publikovano": "2026-09-14T09:10:00.000Z",
-    "zdroj": {
-      "nazev": "ERR News (Estonsko)",
-      "url": "https://news.err.ee/1610137567/parnu-s-old-dairy-plant-site-set-for-major-new-development",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Pärnu's old dairy plant site set for major new development",
-    "shrnuti": "Pärnu's former dairy plant site is set for a €50–60 million redevelopment featuring business spaces, entertainment and a multipurpose arena.",
-    "duvod": "bez-skutku",
-    "kategorie": [],
-    "posouzeni": null
-  },
-  {
-    "id": "k-08b3ad2628707bef",
-    "zachyceno": "2026-09-14T09:32:41.676Z",
-    "publikovano": "2026-09-14T09:10:00.000Z",
-    "zdroj": {
-      "nazev": "iROZHLAS — zprávy",
-      "url": "https://www.irozhlas.cz/zpravy-domov/turek-se-ma-omluvit-hnuti-duha-za-vyroky-o-mrtvych-pri-povodnich-a-parazitech_2609141110_vdv",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Turek se má omluvit Hnutí Duha za výroky o mrtvých při povodních a parazitech, rozhodl soud",
-    "shrnuti": "Poslanec Filip Turek (Motoristé sobě) se má omluvit Hnutí Duha za výroky, které v dubnu sdílel na svém facebooku. V pondělí o tom nepravomocně rozhodl Městský soud v Praze, potvrdila pro iROZHLAS.cz mluvčí soudu Kateřina Eliášová. Turek tehdy řekl, že při povodních zemřelo několik lidí, protože hnut",
-    "duvod": "bez-skutku",
-    "kategorie": [],
-    "posouzeni": null
-  },
-  {
-    "id": "k-b57debe9efd6921a",
-    "zachyceno": "2026-09-14T09:32:41.677Z",
-    "publikovano": "2026-09-14T08:57:00.000Z",
-    "zdroj": {
-      "nazev": "iROZHLAS — zprávy",
-      "url": "https://www.irozhlas.cz/zpravy-domov/pavel-je-rad-za-obnoveni-schuzek-s-babisem-macinkovu-nepritomnost-respektuje_2609141057_raf",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Pavel je rád za obnovení schůzek s Babišem. Macinkovu nepřítomnost respektuje",
-    "shrnuti": "Prezident Petr Pavel je rád, že se v pondělí obnoví jeho schůzky s premiérem Andrejem Babišem (ANO). Mluvit mají především o zahraničních tématech. Pavel pozval na Pražský hrad také ministra zahraničí Petra Macinku (Motoristé), respektuje ale dohodu obou vládních politiků, že se jednání zúčastní jen",
     "duvod": "bez-skutku",
     "kategorie": [],
     "posouzeni": null
