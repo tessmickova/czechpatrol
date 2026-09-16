@@ -44,6 +44,17 @@ const V_ZEMI = {
   LT: "v Litvě", LV: "v Lotyšsku", EE: "v Estonsku", FI: "ve Finsku", SE: "ve Švédsku",
   NO: "v Norsku", DK: "v Dánsku", NL: "v Nizozemsku", GB: "ve Spojeném království",
   RU: "v Rusku", BG: "v Bulharsku", RO: "v Rumunsku", ME: "v Černé Hoře", XZ: "ve Středomoří",
+  /*
+    Doplněno 16. 9. 2026. Chybějící země spadla do náhradní věty „Událost
+    nastala mimo Českou republiku (Moldavsko)" — jiný tvar než u ostatních
+    zemí, takže to vypadalo jako dvě různá pravidla. Není to nahodilost,
+    je to díra ve slovníku.
+  */
+  MD: "v Moldavsku", AT: "v Rakousku", HU: "v Maďarsku", BE: "v Belgii", FR: "ve Francii",
+  IT: "v Itálii", ES: "ve Španělsku", PT: "v Portugalsku", IE: "v Irsku", CH: "ve Švýcarsku",
+  BY: "v Bělorusku", SI: "ve Slovinsku", HR: "v Chorvatsku", RS: "v Srbsku", GR: "v Řecku",
+  TR: "v Turecku", SA: "v Saúdské Arábii", IL: "v Izraeli", IQ: "v Iráku", IR: "v Íránu",
+  US: "ve Spojených státech", CA: "v Kanadě", IS: "na Islandu", LU: "v Lucembursku",
 };
 /** Co která barva znamená a v jakém pořadí naléhavosti se puntíky řadí. */
 const POPIS_TECKY = {
@@ -235,7 +246,8 @@ export function klicovaVeta(i) {
   if (nato) return `Záznam se týká NATO jako celku. ${nic}`;
   const misto = kde
     ? `${d === "reakce" ? "Jde o vyjádření k dění" : "Událost nastala"} ${kde}, nikoli v České republice.`
-    : `Událost nastala mimo Českou republiku (${i.zeme}).`;
+    /* Týž tvar i pro zemi, která ve slovníku chybí — ať zpráva nezní pokaždé jinak. */
+    : `Událost nastala v zemi ${i.zeme}, nikoli v České republice.`;
   // Událost mimo ČR, která se Česka přesto týká: řekne se obojí, ne jen jedno.
   const vazba = tykaSeCr(i) ? " Pro Česko je podstatná, proto ji vedeme." : "";
   return `${misto}${vazba} ${nic}`;
@@ -329,17 +341,47 @@ export function sestavZpravu(i, { aktualizace = false, souhrn = false } = {}) {
   const d = druh(i);
   const kde = i.kodZeme === "CZ" ? "Česko" : i.zeme;
   const odkaz = `${WEB}/incident/${i.slug}/`;
+  /*
+    Nadpis nese datum v závorce a nic víc.
+
+    Dřív pod ním stál ještě řádek „Moldavsko · případ · 9. 9. 2026 · nové
+    zjištění". Země byla v nadpisu podruhé, slovo „případ" stálo skoro v každé
+    zprávě a „nové zjištění" nikdo nespojil s tím, že jde o novinku k dřív
+    zveřejněné události. Aktualizace se proto pozná ze slova na začátku
+    nadpisu — a co je na ní nového, říká řádek „Co je nového" níž.
+  */
   const radky = [
     zahlavi(i),
-    `<b>${esc(zkrat(i.kratkyTitulek || i.titulek, 90))}</b>`,
-    // Druh se opakuje jen u případů — u ostatních ho už nese záhlaví.
-    `${esc(kde)} · ${d === "pripad" ? `${DRUHY[d]} · ` : ""}${esc(radekData(i))}${aktualizace ? " · nové zjištění" : ""}`,
+    `<b>${aktualizace ? "Aktualizace — " : ""}${esc(zkrat(i.kratkyTitulek || i.titulek, 90))} (${esc(radekData(i))})</b>`,
   ];
-  const jistota = `Jistota informace: ${JISTOTY[i.jistota] ?? i.jistota}`;
+  /*
+    Jistota a původce — dvě věci, které se nesmějí slít.
+
+    Dřív tu stálo „Jistota: vysoká · Pachatel: Rusko (nepotvrzeno)". Čtenář to
+    přečte jako jednu větu a vyjde mu z toho „s vysokou jistotou to udělalo
+    Rusko". Přitom ta jistota se týká jen toho, ŽE SE UDÁLOST STALA, a o
+    původci v tu chvíli nikdo nic neví — vyšetřování teprve začíná.
+
+    U nového případu je to navíc nejnebezpečnější okamžik: viníka lze
+    ukázat prstem hned, doložit ho až za měsíce, a v mezičase se to šíří dál.
+    Tenhle web zároveň dokumentuje případy, kdy se rychlé připsání ukázalo
+    jako mylné. Proto:
+
+    - jistota se jmenuje tím, čeho se týká,
+    - dokud atribuce není úřední (nebo doložený domácí pachatel), NEPÍŠE SE
+      původce jako údaj. Píše se, že určen není, a odděleně to, že ho někdo
+      uvádí — jako tvrzení médií, ne jako náš závěr.
+  */
+  const jistota = `<b>Jistota, že se událost stala:</b> ${JISTOTY[i.jistota] ?? i.jistota}`;
   const potvrzen = i.atribuce === "oficialni" || i.atribuce === "domaci";
-  const pachatel = d === "pripad"
-    ? `Původce: ${PUVODCI[i.puvodce ?? "neznamy"]}${i.puvodce && i.puvodce !== "neznamy" && !potvrzen ? " — dosud nepotvrzeno" : ""}`
-    : null;
+  const kdoSeUvadi = i.puvodce && i.puvodce !== "neznamy" ? PUVODCI[i.puvodce] : null;
+  const pachatel = d !== "pripad"
+    ? null
+    : potvrzen
+      ? `<b>Původce:</b> ${PUVODCI[i.puvodce ?? "neznamy"]} — potvrzeno úředním závěrem`
+      : kdoSeUvadi
+        ? `<b>Původce: zatím neurčen.</b> Média a komentáře uvádějí ${kdoSeUvadi}; úřední potvrzení k tomu není a vyšetřování pokračuje.`
+        : "<b>Původce: zatím neurčen.</b> Vyšetřování pokračuje.";
 
   if (souhrn) {
     const { celkem, uredni } = pocetZdroju(i);
@@ -367,14 +409,17 @@ export function sestavZpravu(i, { aktualizace = false, souhrn = false } = {}) {
   // Co se stalo: u aktualizace to nové, jinak první doložený fakt. Jedna věta.
   const nove = aktualizace && i.historie?.length ? i.historie[i.historie.length - 1].text : null;
   const jadro = nove ?? i.fakta?.[0] ?? i.titulek;
-  radky.push("", `${aktualizace ? "Co je nového: " : ""}${esc(zkrat(jadro, 280))}`);
+  radky.push("", `${aktualizace ? "<b>Co je nového:</b> " : ""}${esc(zkrat(jadro, 280))}`);
 
   // Co potvrzené není. Jedna věta, ale povinně — viz pravidlo č. 6.
   const nejisté = i.neznameho?.[0];
-  if (nejisté) radky.push(`Nepotvrzeno: ${esc(zkrat(nejisté, 180))}`);
+  if (nejisté) radky.push(`<b>Nepotvrzeno:</b> ${esc(zkrat(nejisté, 180))}`);
 
   const stav = STAVY[i.stav];
-  radky.push("", [jistota, pachatel, stav && stav !== "Neuvedeno" ? `Stav: ${stav.toLowerCase()}` : null].filter(Boolean).join(" · "));
+  /* Každý údaj na vlastní řádek: na telefonu se tři věci za tečkou slijí v jednu větu. */
+  radky.push("", jistota);
+  if (pachatel) radky.push(pachatel);
+  if (stav && stav !== "Neuvedeno") radky.push(`<b>Stav:</b> ${stav.toLowerCase()}`);
   radky.push(...radekPokryti(i));
 
   radky.push("", `Všechna fakta, hodnocení a všechny zdroje: ${odkaz}`);
@@ -449,7 +494,7 @@ export function sestavZmenuStavu(snimek, zmeny) {
     "",
     `<b>Mění se rozsah toho, co úředně platí. Aktuální stav uvádí přehled opatření.</b>`,
     "",
-    "Co se změnilo",
+    "<b>Co se změnilo</b>",
     ...zmeny.map((z) => `• ${esc(z)}`),
     "",
     `Úřední opatření platná v ČR: ${WEB}/#opatreni`,

@@ -17,9 +17,10 @@ const zaznam = (n: Record<string, unknown>) => ({
 describe("rozhlas", () => {
   it("zpráva má titulek, závažnost i jistotu zvlášť, odkaz na celý záznam a únik HTML", () => {
     const z = sestavZpravu(zaznam({}));
-    expect(z).toContain("🟠 Závažnost: 7 z 10 · vysoká\n<b>Titulek &lt;b&gt;</b>");
-    expect(z).toContain("Jistota informace: vysoká");
-    expect(z).toContain("Původce: neznámý");
+    // Nadpis nese datum v závorce; řádek „země · případ · datum" pod ním zanikl.
+    expect(z).toContain("🟠 Závažnost: 7 z 10 · vysoká\n<b>Titulek &lt;b&gt; (1. 9. 2026)</b>");
+    expect(z).toContain("<b>Jistota, že se událost stala:</b> vysoká");
+    expect(z).toContain("<b>Původce: zatím neurčen.</b>");
     expect(z).toContain("https://czechpatrol.pages.dev/incident/x/");
   });
   it("okamžitě jdou jen vážné případy a opatření, zbytek do souhrnu; každý záznam jednou", () => {
@@ -97,11 +98,16 @@ describe("rozhlas", () => {
     const z = sestavZpravu(zaznam({ kratkyTitulek: "Krátce", fakta: ["První fakt."], neznameho: ["Nevíme kdo."] }));
     const radky = z.split("\n");
     expect(radky[0]).toBe("🟠 Závažnost: 7 z 10 · vysoká");
-    expect(radky[1]).toBe("<b>Krátce</b>");
-    // Datum události, ne datum zápisu. Rozdíl tří dnů je běžná prodleva, tak se píše jedno.
-    expect(radky[2]).toBe("Německo · případ · 1. 9. 2026");
+    expect(radky[1]).toBe("<b>Krátce (1. 9. 2026)</b>");
+    /*
+      Třetí řádek zprávy už není „Německo · případ · 1. 9. 2026". Země stála
+      v nadpisu podruhé, slovo „případ" bylo skoro v každé zprávě a datum se
+      přesunulo do závorky za nadpis. Datum je pořád datum UDÁLOSTI, ne zápisu.
+    */
+    expect(radky[1]).toContain("(1. 9. 2026)");
+    expect(radky[2]).toBe("");
     expect(z).toContain("První fakt.");
-    expect(z).toContain("Nepotvrzeno: Nevíme kdo.");
+    expect(z).toContain("<b>Nepotvrzeno:</b> Nevíme kdo.");
     // Patička dělá ze zprávy citovatelný dokument.
     expect(z).toContain("Všechna fakta, hodnocení a všechny zdroje: https://czechpatrol.pages.dev/incident/x/");
     expect(z.trimEnd().endsWith("CzechPatrol · záznam x · aktualizováno 4. 9. 2026")).toBe(true);
@@ -174,12 +180,12 @@ describe("rozhlas", () => {
     expect(z).not.toContain("Druhý fakt.");
     // Jedna věta o nepotvrzeném musí zůstat: bez ní si čtenář vyvodí víc,
     // než data ukazují (pravidlo č. 6).
-    expect(z).toContain("Nepotvrzeno: Nevíme kdo.");
+    expect(z).toContain("<b>Nepotvrzeno:</b> Nevíme kdo.");
     expect(z).not.toContain("Nevíme proč.");
     // Hodnocení se nezkracuje — zkrácené hodnocení bez podkladu je horší
     // než žádné. Patří na web, kam zpráva odkazuje.
     expect(z).not.toContain("Hodnocení projektu k případu.");
-    expect(z).toContain("Stav: vyšetřování pokračuje");
+    expect(z).toContain("<b>Stav:</b> vyšetřování pokračuje");
   });
 
   it("žádná zpráva se nevejde mimo jednu zprávu Telegramu", () => {
@@ -545,5 +551,53 @@ describe("denní přehled zachyceného", () => {
     expect(z).toContain("Co zachytil sběr");
     expect(z).toContain("Nic z toho zatím neověřil člověk");
     expect(z).toContain("https://e.example/a");
+  });
+});
+
+describe("původce se nepřipisuje dřív, než je doložený", () => {
+  /*
+    Ve zprávě stálo „Jistota: vysoká · Pachatel: Rusko (nepotvrzeno)". Čtenář
+    to přečte jako jednu větu a vyjde mu „s vysokou jistotou to udělalo Rusko".
+    Ta jistota se přitom týká jen toho, že se událost stala.
+
+    U čerstvého případu je to nejcitlivější místo: viníka lze ukázat hned,
+    doložit až za měsíce — a tenhle web sám dokumentuje případy, kdy se rychlé
+    připsání ukázalo jako mylné.
+  */
+  const zaznam = (atribuce: string) => ({
+    id: "x", slug: "moldavsko-dron",
+    titulek: "Moldavsko: dron uzavřel vzdušný prostor",
+    kratkyTitulek: "Moldavsko: dron uzavřel vzdušný prostor",
+    zeme: "Moldavsko", kodZeme: "MD", zavaznost: "O1", jistota: "vysoka",
+    puvodce: "rusko", atribuce, stav: "probiha",
+    datumUdalosti: "2026-09-09", datumZjisteni: "2026-09-09", druh: "pripad",
+    fakta: ["Úlomky odpovídají typu Geran."], neznameho: ["Kdo dron vypustil."],
+    zdroje: [{ typ: "media", url: "https://a" }, { typ: "media", url: "https://b" }],
+    aktualizovano: "2026-09-15",
+  });
+
+  it("bez úředního závěru se Rusko neuvádí jako původce", () => {
+    const z = sestavZpravu(zaznam("vysetrovana"));
+    expect(z).toContain("<b>Původce: zatím neurčen.</b>");
+    expect(z).toContain("Média a komentáře uvádějí Rusko");
+    expect(z).toContain("úřední potvrzení k tomu není");
+    // Tohle je ta věta, která tam nesmí být.
+    expect(z).not.toContain("Původce: Rusko");
+  });
+
+  it("s úředním závěrem se původce uvede i s tím, že je potvrzený", () => {
+    const z = sestavZpravu(zaznam("oficialni"));
+    expect(z).toContain("<b>Původce:</b> Rusko — potvrzeno úředním závěrem");
+  });
+
+  it("jistota se jmenuje tím, čeho se týká", () => {
+    // „Jistota: vysoká" samo o sobě nikomu neřekne, čeho se ta jistota týká.
+    const z = sestavZpravu(zaznam("vysetrovana"));
+    expect(z).toContain("<b>Jistota, že se událost stala:</b> vysoká");
+  });
+
+  it("země se popisuje jednotně, i když chybí ve slovníku tvarů", () => {
+    const z = sestavZpravu({ ...zaznam("vysetrovana"), kodZeme: "ZZ", zeme: "Vymyšlensko" });
+    expect(z).toContain("Událost nastala v zemi Vymyšlensko, nikoli v České republice.");
   });
 });

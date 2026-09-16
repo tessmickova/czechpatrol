@@ -21,9 +21,16 @@ import rada from "../../data/palivo.json";
 */
 
 /** Skok za týden, od kterého to stojí za zmínku. Běžný pohyb bývá do půl koruny. */
-export const PRAH_SKOKU = 1.0;
-/** Skok, který patří i do kanálu jako samostatná zpráva. */
-export const PRAH_ZPRAVY = 2.0;
+export const PRAH_SKOKU = 0.5;
+/*
+  Skok, který patří i do kanálu jako samostatná zpráva.
+
+  Celá koruna na litru je změna, kterou člověk pozná na jedné nádrži — o té
+  má smysl dát vědět. Haléře do kanálu nepatří, z těch by byl šum, ve kterém
+  zapadne skutečný skok. Na webu se zmíní dřív (od padesáti haléřů): tam si
+  údaj někdo vyhledá sám, kdežto zpráva do telefonu přijde, ať chce nebo ne.
+*/
+export const PRAH_ZPRAVY = 1.0;
 
 export type DruhPaliva = "nafta" | "benzin95";
 
