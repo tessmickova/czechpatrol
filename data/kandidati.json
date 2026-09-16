@@ -841,6 +841,40 @@
     }
   },
   {
+    "id": "k-5a9fe326cf627a6e",
+    "zachyceno": "2026-09-16T16:03:14.549Z",
+    "publikovano": "2026-09-16T03:46:52.000Z",
+    "zdroj": {
+      "nazev": "Finsko — hranice",
+      "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxNVlFXMjVqbEZuVzFDcGptOXpCYVhwWW5qc1E0Q2x5Z2NJam9XV1k0WFVUSVJQeVB1MVlzZWZKLVpKRklBWk5ocUlBNmN5ZHZzdkJwZjhFMzRXbUJFaHJza0dlWmMzQ2xzSVBGa1ZaNm0wQ2ZzODdURDduV2MtekU2dXNCRjlIWXEwNmhUbHhINW9VNFk1OTdsWUNNYS1QQ3FYSjZGZjlR?oc=5",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Spain extends border checks on arrivals from Italy until Oct 8 - Daily Finland",
+    "titulekPuvodni": "Spain extends border checks on arrivals from Italy until Oct 8 - Daily Finland",
+    "shrnuti": "Spain extends border checks on arrivals from Italy until Oct 8 Daily Finland",
+    "kodZeme": "FI",
+    "zeme": "Finsko",
+    "kategorie": [
+      "hranice"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "border checks",
+      "border+checks",
+      "border"
+    ],
+    "naliehave": null,
+    "stav": "ceka",
+    "vyrez": {
+      "text": "Google News",
+      "stazeno": "2026-09-16T16:03:14.593Z",
+      "stav": 200
+    }
+  },
+  {
     "id": "k-8fec161692da422d",
     "zachyceno": "2026-09-16T03:02:46.723Z",
     "publikovano": null,
@@ -10281,39 +10315,5 @@
       "stav": 200
     },
     "naliehave": null
-  },
-  {
-    "id": "k-b939805d929329ae",
-    "zachyceno": "2026-09-15T16:32:52.257Z",
-    "publikovano": "2026-09-03T10:27:20.000Z",
-    "zdroj": {
-      "nazev": "Téma: sabotaz (česky)",
-      "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxNenA3bUlDbVVudTZuM0MtblF0azRVLTc1OGx6YTg3Wm80QnVIbFJ3cnlVYVBJWnhkZDNmRlJKNm11SnZMYWYxT1Y1dm9uamFJSkF6X3RZSE1rSW14RFBPaHFDX0RWbHNlSFZDY3E5dVh3UmI4d1N1RE05Qm1BejdwbDlVUFFpVHNJZlh1V2lR?oc=5",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Nová sabotáž v Německu. K zapálení aut se přihlásili levicoví extremisté, policie zkoumá protiizraelský motiv - Echo24",
-    "titulekPuvodni": "Nová sabotáž v Německu. K zapálení aut se přihlásili levicoví extremisté, policie zkoumá protiizraelský motiv - Echo24",
-    "shrnuti": "Nová sabotáž v Německu. K zapálení aut se přihlásili levicoví extremisté, policie zkoumá protiizraelský motiv Echo24",
-    "kodZeme": "DE",
-    "zeme": "Německo",
-    "kategorie": [
-      "sabotaz",
-      "vojsko"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "zeSite": null,
-    "shody": [
-      "sabotaz",
-      "policie"
-    ],
-    "naliehave": null,
-    "stav": "ceka",
-    "vyrez": {
-      "text": "Google News",
-      "stazeno": "2026-09-15T20:02:57.915Z",
-      "stav": 200
-    }
   }
 ]
