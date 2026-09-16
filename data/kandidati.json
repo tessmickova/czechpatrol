@@ -80,6 +80,40 @@
     }
   },
   {
+    "id": "k-105b4fd3548ab0ea",
+    "zachyceno": "2026-09-16T12:33:06.143Z",
+    "publikovano": "2026-09-16T12:26:00.000Z",
+    "zdroj": {
+      "nazev": "iROZHLAS — zprávy",
+      "url": "https://www.irozhlas.cz/zpravy-domov/obzalobu-muze-stihaneho-kvuli-spionazi-pro-cinu-bude-v-rijnu-projednavat-mestsky_2609161426_aru",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Obžalobu muže stíhaného kvůli špionáži pro Čínu bude v říjnu projednávat Městský soud v Praze",
+    "titulekPuvodni": "Obžalobu muže stíhaného kvůli špionáži pro Čínu bude v říjnu projednávat Městský soud v Praze",
+    "shrnuti": "Městský soud v Praze začne v říjnu projednávat obžalobu muže stíhaného kvůli špionáži pro čínskou zpravodajskou službu. Odvolací senát Vrchního soudu v Praze na základě stížnosti státního zástupce zrušil rozhodnutí, kterým případ vrátil žalobci k došetření. Odvolací soud zároveň obžalovaného cizince",
+    "kodZeme": "CZ",
+    "zeme": "Česko",
+    "kategorie": [
+      "zpravodajske"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "obzalov",
+      "spionaz"
+    ],
+    "naliehave": null,
+    "stav": "ceka",
+    "vyrez": {
+      "text": "",
+      "stazeno": "2026-09-16T12:33:06.579Z",
+      "stav": 403,
+      "chyba": "HTTP 403"
+    }
+  },
+  {
     "id": "k-fdc5f938d7966a24",
     "zachyceno": "2026-09-16T12:03:24.992Z",
     "publikovano": "2026-09-16T12:00:50.000Z",
@@ -10278,38 +10312,6 @@
     "vyrez": {
       "text": "Google News",
       "stazeno": "2026-09-15T20:02:58.299Z",
-      "stav": 200
-    }
-  },
-  {
-    "id": "k-12e9ff710fbddcdb",
-    "zachyceno": "2026-09-15T16:32:52.536Z",
-    "publikovano": "2026-09-03T07:00:00.000Z",
-    "zdroj": {
-      "nazev": "Německo — sabotaz",
-      "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxNR1Juc29BTGE4YzlvZk1pcUIwUG9pa0lmN0haSGswSTVxbGR0cVRHNTN0emFqZFBXRlpwNkswd09YWHQyenhUVkFkNl9mRk5zazg2dVVSV1JXUXA4SXV0d2dqNGpuSDJKbHU1X1p3cmRHenV0akFva0hMQlUybE1PeTYyaThUanJkQzY2U0dLMUw3NF85cWx3b1F3?oc=5",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Germany news: Police say arson attack targeted defense firm - dw.com",
-    "titulekPuvodni": "Germany news: Police say arson attack targeted defense firm - dw.com",
-    "shrnuti": "Germany news: Police say arson attack targeted defense firm dw.com",
-    "kodZeme": "DE",
-    "zeme": "Německo",
-    "kategorie": [
-      "sabotaz"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "zeSite": null,
-    "shody": [
-      "arson"
-    ],
-    "naliehave": null,
-    "stav": "ceka",
-    "vyrez": {
-      "text": "Google News",
-      "stazeno": "2026-09-15T20:02:58.431Z",
       "stav": 200
     }
   }
