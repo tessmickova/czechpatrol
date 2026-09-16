@@ -101,6 +101,63 @@ function Cislo({
 }
 
 /** Velká počítadla pod hlavičkou: kolik toho přibylo a za jak dlouho. */
+/*
+  Čísla v úvodu.
+
+  Dřív stál pod úvodem samostatný rámeček s pěti velkými čísly a v úvodu
+  k tomu ještě odstavec s dalšími dvěma. Vycházelo to nastejno, ale znělo
+  to jako dva různé údaje: „23 incidentů za 90 dní" nahoře a „23 za 90 dní"
+  o kus níž. Čísla jsou teď jen jednou, přímo v úvodu, a pod nimi jedna
+  věta, která říká, co se do nich počítá a co ne.
+*/
+export function CislaVUvodu({
+  polozky,
+  ted,
+  zaznamuCelkem,
+}: {
+  polozky: PolozkaPoctu[];
+  ted: number;
+  /** Všechny záznamy včetně aktualizací, opatření a reakcí. */
+  zaznamuCelkem?: number;
+}) {
+  const o = spocitejOkna(polozky, useZiveHodiny(ted));
+  const okna = [
+    { n: o.dnes, popis: "dnes", kam: "/udalosti/?obdobi=7d", zvyraznit: true },
+    { n: o.tyden, popis: "za 7 dní", kam: "/udalosti/?obdobi=7d" },
+    { n: o.mesic, popis: "za 30 dní", kam: "/udalosti/?obdobi=30d" },
+    { n: o.ctvrtleti, popis: "za 90 dní", kam: "/udalosti/?obdobi=30d" },
+    { n: o.celkem, popis: "od roku 2014", kam: "/udalosti/" },
+  ];
+  return (
+    <div className="border-t border-linka2 px-5 py-3 sm:px-7">
+      {/* Jeden řádek, i na úzkém displeji: pět čísel ve dvou řádcích vypadá jako tabulka. */}
+      <ul className="pas-scroll -mx-1 flex items-baseline gap-x-6 overflow-x-auto px-1">
+        {okna.map((x) => (
+          <li key={x.popis} className="shrink-0">
+            <Link href={x.kam} className="group flex items-baseline gap-1.5">
+              <span className={`cislice text-cislo font-bold leading-none ${x.zvyraznit && x.n > 0 ? "text-akcent" : "text-inkoust"}`}>{x.n}</span>
+              <span className="text-drobne text-tlum group-hover:text-inkoust">{x.popis}</span>
+            </Link>
+          </li>
+        ))}
+      </ul>
+      {/*
+        Jedna věta místo čtyř vysvětlivek. Čísla nahoře jsou případy
+        a operace proti občanům; aktualizace, opatření a prohlášení se do nich
+        nepočítají, ale v evidenci jsou — proto stojí celkový počet vedle.
+      */}
+      {/*
+        Jedna krátká věta. Delší vysvětlení, co se do čísel počítá a co ne,
+        patří na stránku Události — ne pod čísla, kde ho nikdo nečte.
+      */}
+      <p className="mt-1.5 text-mikro leading-snug text-tlum2">
+        Případy a operace proti občanům{zaznamuCelkem ? ` · v evidenci ${zaznamuCelkem} záznamů včetně aktualizací a opatření` : ""}
+        {o.porovnani ? ` · čtvrtletí ${o.porovnani.slovo.toLowerCase()} než průměr` : ""}
+      </p>
+    </div>
+  );
+}
+
 export function PocitadlaEvropa({
   polozky,
   ted,

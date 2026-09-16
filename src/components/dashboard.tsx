@@ -16,7 +16,8 @@ import { HeroDashboard } from "./hero-dashboard";
 import { DlazdiceKampane } from "./kampane";
 import { NadpisSekce } from "./nadpisy";
 import { PruhOverujeme } from "./overujeme";
-import { PocitadlaEvropa, type PolozkaPoctu } from "./pocitadla-zive";
+import { CislaVUvodu, type PolozkaPoctu } from "./pocitadla-zive";
+import { UrgentniUpozorneni } from "./urgentni";
 import { Odznak, RadekSeznamu, TeckaZavaznosti, Tlacitko } from "./ui";
 import { PavucinaHrozeb } from "./pavucina";
 import { KaruselZemi } from "./karusel-zemi";
@@ -388,10 +389,17 @@ export function Dashboard({
           závažná, ale nepotvrzená zpráva propadla úplně. */}
       <PruhOverujeme aktivni={overovaneAktivni} uzavrene={overovaneUzavrene} ted={tedMs} />
 
-      <HeroDashboard stav={stav} cr={cr} crHistoricky={crHistoricky} crPocet={crPocet} obcane={obcane} overeno={overeno} veta={veta} />
+      <HeroDashboard
+        stav={stav} cr={cr} crHistoricky={crHistoricky} crPocet={crPocet} obcane={obcane} overeno={overeno} veta={veta}
+        cisla={<CislaVUvodu polozky={pocitadlaData} ted={ted} zaznamuCelkem={vse.length} />}
+      />
 
-      {/* 1b — kolik případů přibylo; počítá se v prohlížeči, ne při sestavení */}
-      <PocitadlaEvropa polozky={pocitadlaData} ted={ted} zaznamuCelkem={vse.length} />
+      {/*
+        1b — urgentní upozornění na místě, kde byl rámeček s čísly. Čísla jsou
+        v úvodu, tady je odpověď na otázku, se kterou sem člověk chodí: děje se
+        právě teď něco, kvůli čemu bych měl něco dělat?
+      */}
+      <UrgentniUpozorneni kandidati={kandidati} zkontrolovano={overeno} />
 
       {/* 2 — mřížka stavů + poslední události */}
       <div className="nalet mt-14 sm:mt-20">
@@ -520,7 +528,7 @@ export function Dashboard({
           <NadpisSekce
             stitek="Manipulace"
             nadpis={t("Manipulace a útoky na občany")}
-            popis="Podvržené dokumenty, weby vydávající se za redakce, profily vydávající se za úředníky."
+            popis="Podvržené dokumenty, weby a profily vydávající se za někoho jiného."
             akce={<Tlacitko kam="/manipulace/" varianta="obrys" velikost="s" ikonaVpravo="nahoru" trida="[&>svg:last-child]:rotate-90">{t("všechny rozbory")}</Tlacitko>}
           />
           {/*
@@ -547,7 +555,7 @@ export function Dashboard({
         <NadpisSekce
           stitek="Typy událostí"
           nadpis={t("Typy evidovaných událostí")}
-          popis="Evidované události podle typu za posledních 90 dní, po zemích. Prázdná osa znamená, že odtud takový záznam nemáme — ne že se nic neděje."
+          popis="Podle typu za 90 dní. Prázdná osa = odtud záznam nemáme."
         />
         {/*
           Jeden karusel, ne tři obrazce ve dvou velikostech. Evropa je první

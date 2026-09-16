@@ -40,15 +40,15 @@ function Rozpis({ tlak }: { tlak: HybridniTlak }) {
   const poznamky = new Set(tlak.podkategorie.map((o) => o.poznamka).filter(Boolean));
   const ukazatPoznamky = poznamky.size > 1;
   return (
-    <ul className="mt-3 grid gap-2.5">
+    <ul className="mt-2 grid gap-1.5">
       {tlak.podkategorie.map((o) => {
         const u = o.uroven ? UROVNE[o.uroven] : null;
         const t = o.uroven ? PASMA[UROVNE[o.uroven].pasmo] : null;
         return (
           <li key={o.klic}>
             <span className="flex items-baseline justify-between gap-3">
-              <span className="text-zaklad text-tlum">{o.nazev}</span>
-              <span className={`shrink-0 text-male font-semibold ${t ? t.text : "text-tlum2"}`}>
+              <span className="text-male text-tlum">{o.nazev}</span>
+              <span className={`shrink-0 text-drobne font-semibold ${t ? t.text : "text-tlum2"}`}>
                 {u ? u.nazev : "bez záznamu"}
               </span>
             </span>
@@ -76,9 +76,14 @@ export function PavucinaHrozeb({
   vlajka?: React.ReactNode;
 }) {
   return (
-    <section aria-label={nadpis} className="h-full rounded-[22px] border border-linka2 bg-plocha p-4 sm:p-5">
+    /*
+      Minimalistická karta: bez rámečku a bez výplně, jen vlasová linka vlevo
+      od obsahu by byla příliš. Karet je v karuselu třináct a třináct
+      orámovaných desek vedle sebe je mřížka, ne přehled.
+    */
+    <section aria-label={nadpis} className="h-full rounded-[18px] bg-plocha/60 p-3 sm:p-3.5">
       <div className="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1">
-        <h3 className="titul-mensi flex flex-wrap items-center gap-x-2 gap-y-1">
+        <h3 className="text-vetsi font-bold leading-tight flex flex-wrap items-center gap-x-2 gap-y-1">
           {vlajka}
           {nadpis}
           {popis && <Otaznik popis={popis} label="Co graf ukazuje" />}
@@ -92,8 +97,8 @@ export function PavucinaHrozeb({
         mřížky obojí zmáčklo: popisky os se ořezávaly a názvy kategorií se
         lámaly po slabikách. Nad sebou má každé plnou šířku.
       */}
-      <div className="mt-3">
-        <div className="flex justify-center"><RadarTlaku tlak={tlak} velikost={210} okraj={52} /></div>
+      <div className="mt-2">
+        <div className="flex justify-center"><RadarTlaku tlak={tlak} velikost={168} okraj={44} /></div>
         <Rozpis tlak={tlak} />
       </div>
     </section>

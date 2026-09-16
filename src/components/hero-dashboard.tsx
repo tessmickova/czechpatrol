@@ -45,11 +45,22 @@ function Merak({
         </span>
       }
     >
-      <span className="flex w-full flex-col items-center px-1.5 py-3 text-center">
+      {/*
+        Na mobilu bez oblouku.
+
+        Tři oblouky pod sebou zabraly půl obrazovky a dva z nich říkaly totéž
+        co slovo pod nimi — jen pomaleji. Na úzkém displeji proto zůstává
+        barevná tečka, slovo a jedna věta; oblouk se vrací od šířky tabletu,
+        kde má kam se vejít.
+      */}
+      <span className="flex w-full flex-col items-center px-1.5 py-2.5 text-center sm:py-3">
         <span className="stitek">{nadpis}</span>
         <span className="mt-1 text-mikro leading-none text-tlum2">{obdobi}</span>
-        <ObloukovyMerak uroven={uroven} naNoci velikost={velikost} skrytPopisek />
-        <span className={`-mt-1 text-zaklad font-bold uppercase leading-tight tracking-[0.03em] ${pasmo ? pasmo.text : vlastniSlovo ? "text-klid-text" : "text-tlum2"}`}>
+        <span className="hidden sm:block">
+          <ObloukovyMerak uroven={uroven} naNoci velikost={velikost} skrytPopisek />
+        </span>
+        <span aria-hidden className={`mt-2 mb-1 h-[7px] w-[7px] rounded-full sm:hidden ${pasmo ? pasmo.tecka : "bg-klid"}`} />
+        <span className={`text-zaklad font-bold uppercase leading-tight tracking-[0.03em] sm:-mt-1 ${pasmo ? pasmo.text : vlastniSlovo ? "text-klid-text" : "text-tlum2"}`}>
           {vlastniSlovo ?? (uroven ? UROVNE[uroven].nazev : "bez hodnocení")}
         </span>
         {popis && <span className="mt-1 block max-w-[15rem] text-mikro leading-snug text-tlum2">{popis}</span>}
@@ -59,13 +70,15 @@ function Merak({
 }
 
 export function HeroDashboard({
-  stav, cr, crHistoricky, crPocet, obcane, overeno, veta,
+  stav, cr, crHistoricky, crPocet, obcane, overeno, veta, cisla,
 }: {
   stav: CelkovyStav; cr: Uroven | null; crHistoricky: Uroven | null;
   /** Kolik případů a kolik manipulačních operací v Česku za 90 dní. */
   crPocet: { pripadu: number; kampani: number };
   obcane: { uroven: Uroven; popis: string; neovereno: number };
   overeno: string | null; veta: HlavniVeta;
+  /** Řádek s velkými čísly. Počítá se v prohlížeči, proto přichází zvenčí. */
+  cisla?: React.ReactNode;
 }) {
   const t = useT();
   /*
@@ -91,15 +104,15 @@ export function HeroDashboard({
         vlastního formátu (15px verzálkami, šedý) — vypadal jako popisek
         a čtenář z něj nepoznal, že je to nadpis stránky.
       */}
-      <div className="border-b border-linka2 px-5 pt-5 sm:px-7 sm:pt-6">
-        <div className="mb-3 flex items-center gap-2">
+      <div className="border-b border-linka2 px-5 pt-4 sm:px-7 sm:pt-5">
+        <div className="mb-2 flex items-center gap-2">
           <Znacka velikost={26} tmave />
           <span className="stitek-znacky">{t("Bezpečnostní přehled")}</span>
         </div>
-        <h1 className="titul-sekce pb-4">{t("Bezpečnostní situace v Česku a okolí")}</h1>
+        <h1 className="titul-sekce pb-3">{t("Bezpečnostní situace v Česku a okolí")}</h1>
       </div>
       {/* Jedna věta, kterou má čtenář odnést, i kdyby dál nečetl. */}
-      <p className="uvodni-veta border-b border-linka2 px-5 pb-5 pt-4 sm:px-7 sm:pb-6">
+      <p className="uvodni-veta border-b border-linka2 px-5 pb-4 pt-3 sm:px-7 sm:pb-5">
         <strong className="font-bold text-inkoust">{veta.cesko}</strong>{" "}
         <span className="text-tlum">{veta.evropa}</span>
         {veta.neovereno > 0 && (
@@ -113,14 +126,14 @@ export function HeroDashboard({
         )}
       </p>
 
-      <div className="grid gap-2 p-3 sm:p-4 lg:grid-cols-[minmax(0,1.05fr)_minmax(0,1.4fr)]">
+      <div className="grid gap-2 p-3 sm:p-3.5 lg:grid-cols-[minmax(0,1.05fr)_minmax(0,1.4fr)]">
         <div className="flex items-center gap-4 border-b border-linka2 pb-3 lg:border-b-0 lg:border-r lg:pb-0 lg:pr-4">
           <Napoveda popis={stav.uroven ? <VykladUrovne uroven={stav.uroven} /> : <span className="block">{t("Hodnocení zatím nebylo stanoveno.")}</span>}>
-            <span className="block"><ObloukovyMerak uroven={stav.uroven} naNoci velikost={164} skrytPopisek /></span>
+            <span className="block"><ObloukovyMerak uroven={stav.uroven} naNoci velikost={132} skrytPopisek /></span>
           </Napoveda>
           <div className="min-w-0">
             <div className="stitek">{t("Hodnocení projektu · Evropa, dnes")}</div>
-            <p className={`text-cislo-l font-bold leading-none sm:text-cislo-xl ${pasmo ? pasmo.text : "text-tlum"}`}>{d ? d.nazev : "Nestanoveno"}</p>
+            <p className={`text-cislo-l font-bold leading-none ${pasmo ? pasmo.text : "text-tlum"}`}>{d ? d.nazev : "Nestanoveno"}</p>
             {/*
               Číslo „6 z 10" je pryč. Vypadalo jako měření, ale je to jen jinak
               zapsané totéž slovo — a hlavně se dalo číst jako pravděpodobnost
@@ -128,7 +141,7 @@ export function HeroDashboard({
               záznamu, kde je vedle ní vysvětlení.
             */}
             <p className="mt-1 text-drobne text-tlum2">dnes</p>
-            <p className="mt-3 flex flex-wrap gap-2">
+            <p className="mt-2.5 flex flex-wrap gap-2">
               <Tlacitko kam="#zaznamy" varianta="zvyrazneny" velikost="s" ikona="osa">{t("Všechny záznamy")}</Tlacitko>
               <Tlacitko kam="#sledovat" varianta="obrys" velikost="s" ikona="zvonek">{t("Sledovat změny")}</Tlacitko>
             </p>
@@ -159,6 +172,8 @@ export function HeroDashboard({
           />
         </div>
       </div>
+
+      {cisla}
 
       {/*
         Provozní řádek na patě karty.

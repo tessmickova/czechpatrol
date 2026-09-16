@@ -44,16 +44,16 @@ export function KaruselZemi({
       aria-label="Typy událostí po zemích"
     >
       {prvni && (
-        <div role="listitem" className="w-[min(78vw,320px)] shrink-0 snap-start">
+        <div role="listitem" className="w-[min(72vw,270px)] shrink-0 snap-start">
           {prvni}
         </div>
       )}
       {zeme.map((z) => (
-        <div key={z.kodZeme} role="listitem" className="w-[min(78vw,320px)] shrink-0 snap-start">
+        <div key={z.kodZeme} role="listitem" className="w-[min(72vw,270px)] shrink-0 snap-start">
           <PavucinaHrozeb
             nadpis={z.zeme}
             /* Vysvětlení má sekce, ne každá z dvanácti karet — jinak to je dvanáctkrát tentýž odstavec. */
-            popis={`Záznamy se zemí ${z.zeme}.`}
+            popis=""
             tlak={tlakZeme(z.kodZeme)}
             vlajka={<Vlajka kod={z.kodZeme} />}
             odkaz={{ href: `/zeme/${z.kodZeme.toLowerCase()}/`, text: `${z.pripady} ${z.pripady === 1 ? "záznam" : z.pripady < 5 ? "záznamy" : "záznamů"} →` }}
