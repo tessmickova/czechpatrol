@@ -117,6 +117,40 @@
     }
   },
   {
+    "id": "k-590b6872166b6dc3",
+    "zachyceno": "2026-09-16T10:02:46.139Z",
+    "publikovano": "2026-09-16T09:15:32.000Z",
+    "zdroj": {
+      "nazev": "Česko — sabotaz",
+      "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxPVlVBcWM0d0FaWU5USnZlUUVESnp6bVR3alZaRHlyTEpTWGE1U013Qkl4dE51UXVKV29xdlZCWGlscWFEOThRRGFvVXBTN2dfVXZsbUVpMlBxN3ZpZk9jUVJhcmozRmZidkhLQk85YmFzLWVhbFFBMENOZlZkaFdHaWlMaDh5UDNHWTdZRURfUlFXeGtwTm5ySENMQWtkY3BsN0N5NtIBpwFBVV95cUxObzk5ZEZiSUMzRi15Yk5XQmtqZkdlRWFUdWwwc0I5WW02MkItMGYweUVrZVh0S2Z4dmlCbXE3WWFjc2s0YU5CWTQyM2I3YW96OUxMbUxtVXZNQUxYQlNwa1hIRE1ncVJCNGtTQzkyN1BGcWFBODdlNlZhYjJGYkxKS3BDR2V2RlFGb1J2SDZNQ19tUWxSMDNSYnEteUtpZ1dNMlFyWlpUSQ?oc=5",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "US Charges 5 In Russian Intelligence Sabotage And Assassination Plot - Radio Free Europe/Radio Liberty",
+    "titulekPuvodni": "US Charges 5 In Russian Intelligence Sabotage And Assassination Plot - Radio Free Europe/Radio Liberty",
+    "shrnuti": "US Charges 5 In Russian Intelligence Sabotage And Assassination Plot Radio Free Europe/Radio Liberty",
+    "kodZeme": "RU",
+    "zeme": "Rusko",
+    "kategorie": [
+      "sabotaz",
+      "rusko"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "sabotage",
+      "russia"
+    ],
+    "naliehave": null,
+    "stav": "ceka",
+    "vyrez": {
+      "text": "Google News",
+      "stazeno": "2026-09-16T10:02:46.225Z",
+      "stav": 200
+    }
+  },
+  {
     "id": "k-36771a6cd12d7c9b",
     "zachyceno": "2026-09-16T08:33:07.290Z",
     "publikovano": "2026-09-16T08:13:51.000Z",
@@ -10266,41 +10300,6 @@
     "vyrez": {
       "text": "Google News",
       "stazeno": "2026-09-14T10:32:34.757Z",
-      "stav": 200
-    },
-    "naliehave": null
-  },
-  {
-    "id": "k-daef3efbcdfbcc9c",
-    "zachyceno": "2026-09-06T13:59:15.573Z",
-    "publikovano": "2026-09-03T04:55:00.000Z",
-    "zdroj": {
-      "nazev": "Google News — sabotage Europe",
-      "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTE9pQVVhZUFGOFpMcjdHNHNGUXJ5SUhJOGxKXzA5Y3hMdGFCLXVseGZNcVoxNWFzeWhuWmhJd2Fpb29CX1k4M0t5SGhSZXNHYXFFU1ZJNWQ2TGVWeExEaU1nR0U2QWR4MXRLWmloSzdhV0VEQmVrVGc?oc=5",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Germany's Power Grid Hit by Sabotage as EU Weighs New Russia Sanctions and Crypto Crackdown - finance.biggo.com",
-    "titulekPuvodni": "Germany's Power Grid Hit by Sabotage as EU Weighs New Russia Sanctions and Crypto Crackdown - finance.biggo.com",
-    "shrnuti": "Germany's Power Grid Hit by Sabotage as EU Weighs New Russia Sanctio",
-    "kodZeme": "DE",
-    "zeme": "Německo",
-    "kategorie": [
-      "sabotaz",
-      "infrastruktura",
-      "rusko"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "shody": [
-      "sabotage",
-      "power grid",
-      "russia"
-    ],
-    "stav": "ceka",
-    "vyrez": {
-      "text": "Google News",
-      "stazeno": "2026-09-14T10:32:34.918Z",
       "stav": 200
     },
     "naliehave": null
