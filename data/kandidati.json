@@ -10280,36 +10280,38 @@
     "naliehave": null
   },
   {
-    "id": "k-f44171bc8661754d",
-    "zachyceno": "2026-09-16T14:33:05.465Z",
+    "id": "k-a5a91e67344f6b22",
+    "zachyceno": "2026-09-16T15:03:12.273Z",
     "publikovano": "2026-09-03T07:00:00.000Z",
     "zdroj": {
-      "nazev": "Téma: sabotaz (česky)",
-      "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxPX0pSakZ5bERhbk9NbFo2ZHN6ckZoVy1VY0xmU1ZqenB0d0ZybGE4QkFpSnVDRmtXQmV2cElqZVk2cnRfSTFXVlJ2aFJ4VGM2ZW1YMlhmaUdtQ2NHZnJJMERwZHc5LVB1aDhfV3dQMkNPa0ZOQXhqMmpXWEU4YlBFTGdZZUNxTHhKYWN5eUdEdldRNzVCM0tyNDFWSWE3SE5vdGV5aWg3MG9UT2FSMXVKS1BOMm9uXzMyMlJrYU9JTThFdEJJc2NR?oc=5",
+      "nazev": "Téma: energetika (anglicky)",
+      "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxQX0dlb21RUFVyR012ZjY5YnNadVY0Y05PaF8zb3RRNGo4MVdZMElzOXZZTkEzQzNLS0RncWFOa0NkcHFqZWdqZUEzQzdQaGVtdWVad2lIaDQ4NW1NUGhiaGhXbmRrakpzeVlKdDhqRENHeWFJSTRfdDRBVTRkaGdTOF8xUnpWTlJITGc?oc=5",
       "typ": "media",
       "primarni": false
     },
-    "titulek": "OTÁZKY A ODPOVĚDI: Sabotáže v Německu. Co o nich víme a hrozí něco podobného i v Česku? - iROZHLAS",
-    "titulekPuvodni": "OTÁZKY A ODPOVĚDI: Sabotáže v Německu. Co o nich víme a hrozí něco podobného i v Česku? - iROZHLAS",
-    "shrnuti": "OTÁZKY A ODPOVĚDI: Sabotáže v Německu. Co o nich víme a hrozí něco podobného i v Česku? iROZHLAS",
+    "titulek": "Germany probes double sabotage attack on power grid - euractiv.com",
+    "titulekPuvodni": "Germany probes double sabotage attack on power grid - euractiv.com",
+    "shrnuti": "Germany probes double sabotage attack on power grid euractiv.com",
     "kodZeme": "DE",
     "zeme": "Německo",
     "kategorie": [
       "sabotaz",
-      "cr"
+      "hybridni",
+      "infrastruktura"
     ],
     "druhOdhad": "neurceno",
     "klasifikace": "pravidla",
     "zeSite": null,
     "shody": [
-      "sabotaz",
-      "irozhlas"
+      "sabotage",
+      "attack on",
+      "power grid"
     ],
     "naliehave": null,
     "stav": "ceka",
     "vyrez": {
       "text": "Google News",
-      "stazeno": "2026-09-16T14:33:05.771Z",
+      "stazeno": "2026-09-16T15:03:12.547Z",
       "stav": 200
     }
   }
