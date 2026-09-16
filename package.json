@@ -21,7 +21,8 @@
     "nahled:ukazka": "NEXT_PUBLIC_REZIM=ukazka next build && NEXT_PUBLIC_REZIM=ukazka node nastroje/nahled-artefakt.mjs",
     "preloz": "tsx nastroje/preloz.ts",
     "preklady:vytez": "node nastroje/vytez-preklady.mjs --zapis",
-    "sber:kanaly": "tsx sber/test-kanalu.ts"
+    "sber:kanaly": "tsx sber/test-kanalu.ts",
+    "spravce": "node nastroje/spravce.mjs"
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^0.124.0",
