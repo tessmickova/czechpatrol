@@ -9313,6 +9313,40 @@
     "naliehave": null
   },
   {
+    "id": "k-e5f0b65e468d2df1",
+    "zachyceno": "2026-09-16T02:32:58.643Z",
+    "publikovano": "2026-09-03T07:00:00.000Z",
+    "zdroj": {
+      "nazev": "Téma: energetika (anglicky)",
+      "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxQY01EUWF4RU1QR1lTQTZZb2N3d2FpN3FlVFdmS3J1VVdRNnVSNGI1QldMR3dWYVAta01zZ0ZFR2ZERjNYSXNhMTF0YnBTd2JRSkFWTWJmSFBsdVlqNTNUcTRRU0pTcGVjekJ0bzN0OFBRdWJTNHFFN2llMEpaaThhWXczRUo2RDRXdEtpQ1A3SEdXc3JsMVE3N28tcGY3Z2RHenROSHdqZXZ6WFk1Wlc4a0ZDTVl0elBncmhJ?oc=5",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Germany probes suspected sabotage after disruption at 2 power substations - AP News",
+    "titulekPuvodni": "Germany probes suspected sabotage after disruption at 2 power substations - AP News",
+    "shrnuti": "Germany probes suspected sabotage after disruption at 2 power substations AP News",
+    "kodZeme": "DE",
+    "zeme": "Německo",
+    "kategorie": [
+      "sabotaz",
+      "infrastruktura"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "sabotage",
+      "substation"
+    ],
+    "naliehave": null,
+    "stav": "ceka",
+    "vyrez": {
+      "text": "Google News",
+      "stazeno": "2026-09-16T02:32:58.898Z",
+      "stav": 200
+    }
+  },
+  {
     "id": "k-122caa0957a2f2df",
     "zachyceno": "2026-09-16T02:02:53.554Z",
     "publikovano": "2026-09-03T07:00:00.000Z",
@@ -10257,37 +10291,5 @@
       "stav": 200
     },
     "naliehave": null
-  },
-  {
-    "id": "k-eaab1c422fde4448",
-    "zachyceno": "2026-09-15T16:32:52.263Z",
-    "publikovano": "2026-09-02T10:26:21.000Z",
-    "zdroj": {
-      "nazev": "Téma: sabotaz (česky)",
-      "url": "https://news.google.com/rss/articles/CBMi3wFBVV95cUxQSmpnYVBMbXlzTUp6SDBBZDZYWXlCT25WblE5NUFERUtCaDJJN0F1aHNmcmdwZlYxVnVrNGMtYWE2d2hKTzdMM2ZtRnJ5MTNqaHFPQTJsUDBPX19RTjlmdWxwdEZVU2VKRGd5OV83dEM3QTBtWFl6QVVUVzdfVlo1SzlQdHFvME1hNmdYOTRjQWU4aFdWMWZZZjlocEJ0YlhXcFUzODVsYXZGallxb0VEYkZOdG5OR1dIb0pXNmt2cjh0NGVrVV9fMW5IX0E4NW1aakFRNUxuVHJrdXZ4QTNF?oc=5",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "GALERIE: Další sabotáž? Exploze po zkratu v rozvodně v Německu: Prošetřují opět vliv cizího státu | FOTO 1 - Blesk",
-    "titulekPuvodni": "GALERIE: Další sabotáž? Exploze po zkratu v rozvodně v Německu: Prošetřují opět vliv cizího státu | FOTO 1 - Blesk",
-    "shrnuti": "GALERIE: Další sabotáž? Exploze po zkratu v rozvodně v Německu: Prošetřují opět vliv cizího státu | FOTO 1 Blesk",
-    "kodZeme": "DE",
-    "zeme": "Německo",
-    "kategorie": [
-      "sabotaz"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "zeSite": null,
-    "shody": [
-      "sabotaz"
-    ],
-    "naliehave": null,
-    "stav": "ceka",
-    "vyrez": {
-      "text": "Google News",
-      "stazeno": "2026-09-15T20:02:58.682Z",
-      "stav": 200
-    }
   }
 ]
