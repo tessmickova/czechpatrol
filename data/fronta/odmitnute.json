@@ -1,5 +1,73 @@
 [
   {
+    "id": "k-ec5353a07914b5ca",
+    "zachyceno": "2026-09-16T15:32:43.975Z",
+    "publikovano": "2026-09-16T15:26:00.000Z",
+    "zdroj": {
+      "nazev": "Český rozhlas — domácí zprávy",
+      "url": "https://www.irozhlas.cz/zpravy-domov/na-kontaminovane-sumavske-uzemi-bylo-ve-stredu-podano-trestni-oznameni-vec_2609161726_elev",
+      "typ": "primary",
+      "primarni": true
+    },
+    "titulek": "Na kontaminované šumavské území bylo ve středu podáno trestní oznámení. Věc prověřuje policie",
+    "shrnuti": "Policie přijala kvůli kontaminované šumavské lokalitě trestní oznámení. Věc prověřuje pro podezření z obecného ohrožení z nedbalosti a z poškození a ohrožení životního prostředí z nedbalosti, informovala policie na síti X.",
+    "duvod": "bez-skutku",
+    "kategorie": [
+      "vojsko"
+    ],
+    "posouzeni": null
+  },
+  {
+    "id": "k-2a5425f4643cd653",
+    "zachyceno": "2026-09-16T15:32:43.976Z",
+    "publikovano": "2026-09-16T15:23:00.000Z",
+    "zdroj": {
+      "nazev": "Český rozhlas — domácí zprávy",
+      "url": "https://www.irozhlas.cz/zivotni-styl/zdravi/vysetri-2500-lidi-rocne-a-200-jich-odoperuje-ustecke-oddeleni-sportovni-mediciny_2609161723_dns",
+      "typ": "primary",
+      "primarni": true
+    },
+    "titulek": "Vyšetří 2500 lidí ročně a 200 jich odoperuje. Ústecké oddělení sportovní medicíny slaví 10 let existence",
+    "shrnuti": "Oddělení sportovní medicíny Masarykovy nemocnice v Ústí nad Labem, kam pacienti přicházejí s problémy, jako jsou přetrhané křížové vazy, prasklý meniskus nebo třeba vyhozené rameno, si letos připomíná desáté výročí své existence. Stále přitom jde o jediné pracoviště tohoto typu pod správou Krajské z",
+    "duvod": "bez-skutku",
+    "kategorie": [],
+    "posouzeni": null
+  },
+  {
+    "id": "k-6cfe74b0f205021d",
+    "zachyceno": "2026-09-16T15:32:43.976Z",
+    "publikovano": "2026-09-16T15:00:00.000Z",
+    "zdroj": {
+      "nazev": "Český rozhlas — domácí zprávy",
+      "url": "https://www.irozhlas.cz/sport/hokej/hokej-tipsport-extraliga-dynamo-pardubice-hradec-kralove-rytiri-kladno-vitkovice_2609161700_kri",
+      "typ": "primary",
+      "primarni": true
+    },
+    "titulek": "ŽIVĚ: Extraliga pokračuje, Vítkovice vyzvou Kladno. Radiožurnál Sport odvysílá všechny přímé přenosy",
+    "shrnuti": "První kolo hokejové extraligy ve středu pokračuje šesti zápasy. Kladenští Rytíři rozehrají v Ostravě s Vítkovicemi a budou se snažit navázat na výkony z konce minulé sezony, ve kterém dlouho trápili Spartu. Pomoci by k tomu měl i nový trenérský tým v čele s bývalým reprezentačním koučem Radimem Rulí",
+    "duvod": "vylouceno-tematem",
+    "kategorie": [
+      "cr"
+    ],
+    "posouzeni": null
+  },
+  {
+    "id": "k-1f2a8bd4c71ebc7b",
+    "zachyceno": "2026-09-16T15:32:44.009Z",
+    "publikovano": "2026-09-16T14:50:26.000Z",
+    "zdroj": {
+      "nazev": "BBC News — Europe",
+      "url": "https://www.bbc.co.uk/news/articles/c6dj4nn0n97ro?at_medium=RSS&at_campaign=rss",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Eight German state premiers back Merz amid speculation over future",
+    "shrnuti": "Christian Democratic Union leadership throws its weight behind the chancellor ahead of two state elections this weekend.",
+    "duvod": "bez-skutku",
+    "kategorie": [],
+    "posouzeni": null
+  },
+  {
     "id": "k-2440156f251b6a77",
     "zachyceno": "2026-09-16T15:03:12.090Z",
     "publikovano": "2026-09-16T14:40:00.000Z",
@@ -8362,76 +8430,6 @@
     "shrnuti": "V Plzeňském kraji by mohly vzniknout další tři bezobslužné prodejny. O dotacích na jejich zřízení budou v pondělí 14. září jednat krajští zastupitelé. Tyto obchody lidé můžou navštívit nepřetržitě sedm dní v týdnu a nakoupit si tam, co potřebují. Prodavač tam buď není vůbec nebo jen v určitý čas. Po",
     "duvod": "bez-skutku",
     "kategorie": [],
-    "posouzeni": null
-  },
-  {
-    "id": "k-beb0c62c7e7b118d",
-    "zachyceno": "2026-09-14T06:02:39.118Z",
-    "publikovano": "2026-09-14T05:51:00.000Z",
-    "zdroj": {
-      "nazev": "iROZHLAS — zprávy",
-      "url": "https://www.irozhlas.cz/zpravy-domov/dodavatel-bez-souteze-chybejici-dokumenty-ikem-opakovane-porusil-zakon-zjistili_2609140751_vdv",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Dodavatel bez soutěže, chybějící dokumenty. IKEM opakovaně porušil zákon, zjistili kontroloři",
-    "shrnuti": "Institut klinické a experimentální medicíny (IKEM) v letech 2022 až 2024 opakovaně porušoval zákony i své vnitřní předpisy při nakládání s majetkem a veřejnými penězi. Zjistil to Nejvyšší kontrolní úřad při kontrole, která prověřila 102 případů nakládání s penězi v celkovém objemu 905,3 milionu koru",
-    "duvod": "bez-skutku",
-    "kategorie": [],
-    "posouzeni": null
-  },
-  {
-    "id": "k-a16645c55430c26d",
-    "zachyceno": "2026-09-14T06:02:39.119Z",
-    "publikovano": "2026-09-14T05:42:00.000Z",
-    "zdroj": {
-      "nazev": "iROZHLAS — zprávy",
-      "url": "https://www.irozhlas.cz/zpravy-domov/z-ceskych-mostaren-letos-vytece-min-ovocne-stavy-pestitele-vini-jarni-mrazy_2609140742_jkd",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Z českých moštáren letos vyteče míň ovocné šťávy. Pěstitelé viní jarní mrazy, extrémní sucha i škůdce",
-    "shrnuti": "V Česku začala hlavní sezona moštování. Jablečné šťávy ale bude letos méně než obvykle. Úrodu totiž poškodily jarní mrazy i následné sucho a horko. Je to i případ rodinné moštárny v Tulešicích u Moravského Krumlova, kde šťávu vyrábějí z vlastní úrody.",
-    "duvod": "bez-skutku",
-    "kategorie": [],
-    "posouzeni": null
-  },
-  {
-    "id": "k-2d2c7d866b0999a4",
-    "zachyceno": "2026-09-14T06:02:39.136Z",
-    "publikovano": "2026-09-14T05:37:00.000Z",
-    "zdroj": {
-      "nazev": "Google News — sabotage Europe",
-      "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxObFQxa3FiN1NYWGZSdVFNY0t3OTlZRXBUOVljM1l6MXFqekl0TFk1dlpoUE1aRjY5NTZ3bkNuUlp2b1psRVlvalBVQ1p1N3BsQXA4N1Q5cXlvMGoybDhRSkc2UHljdGk3WnRiTXNPNWJ4OHBIYXBIX1ZaNkJJRFpwaFVGdnVxQkRXaV8yNUhQcTY0dDdla3lRZHhMdGdmSU8waUpBTWYyUkdQREHSAacBQVVfeXFMT0V3UjV3LXVudjdpYi1ZQVpGZ2l3UnhDc1JmZGI2clFTXzRHOUxTY2hWd1FwRTl3TThTb1dqXzFNMjdjc3lzTjhCbnFlN2pYc1FUTnpWS2FZbUtDUnBxbU9nSjhSa3lPMFhPQWQxYk1keU1Rd0JNQVUyLXFHOVBYMFlnaUY3d3lSM1VoMC03ZnFWQ0dFVWtNaHVnZ2Z5SHFEcXVxM29ZRXM?oc=5",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Russia is bringing its terror to the doorstep of the EU and NATO – Estonian FM - The New Voice of Ukraine",
-    "shrnuti": "<a href=\"https://news.google.com/rss/articles/CBMiqwFBVV95cUxObFQxa3FiN1NYWGZSdVFNY0t3OTlZRXBUOVljM1l6MXFqekl0TFk1dlpoUE1aRjY5NTZ3bkNuUlp2b1psRVlvalBVQ1p1N3BsQXA4N1Q5cXlvMGoybDhRSkc2UHljdGk3WnRiTXNPNWJ4OHBIYXBIX1ZaNkJJRFpwaFVGdnVxQkRXaV8yNUhQcTY0dDdla3lRZHhMdGdmSU8waUpBTWYyUkdQREHSAacBQVVfeXFMT0V3Uj",
-    "duvod": "bez-skutku",
-    "kategorie": [
-      "nato",
-      "rusko"
-    ],
-    "posouzeni": null
-  },
-  {
-    "id": "k-84d6de19a0f0b8e1",
-    "zachyceno": "2026-09-14T06:02:39.120Z",
-    "publikovano": "2026-09-14T05:31:00.000Z",
-    "zdroj": {
-      "nazev": "iROZHLAS — zprávy",
-      "url": "https://www.irozhlas.cz/zpravy-svet/tohle-jsou-neklidne-casy-rusove-pred-volbami-citi-uzkost-z-valky-a-mozne_2609140731_raf",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "‚Tohle jsou neklidné časy.‘ Rusové před volbami cítí úzkost z války a možné mobilizace",
-    "shrnuti": "Ruskou veřejností se před parlamentními volbami šíří úzkost vyvolaná válkou s Ukrajinou. Kreml sice tvrdí, že válku vyhrává, ale téměř pět let od jejího začátku jsou Rusové čím dál více znepokojeni jejími dopady na běžný život. Nervozitu posilují i útoky ukrajinských dronů, kvůli kterým Rusové válku",
-    "duvod": "bez-skutku",
-    "kategorie": [
-      "drony",
-      "rusko"
-    ],
     "posouzeni": null
   }
 ]
