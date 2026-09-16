@@ -158,47 +158,6 @@ export function CislaVUvodu({
   );
 }
 
-export function PocitadlaEvropa({
-  polozky,
-  ted,
-  zaznamuCelkem,
-}: {
-  polozky: PolozkaPoctu[];
-  ted: number;
-  /** Všechny záznamy včetně aktualizací a opatření — stálo to dřív v úvodu. */
-  zaznamuCelkem?: number;
-}) {
-  const o = spocitejOkna(polozky, useZiveHodiny(ted));
-  return (
-    <section aria-label="Kolik incidentů přibylo" className="mt-4">
-      <div className="grid grid-cols-3 divide-x divide-y divide-linka2 overflow-hidden rounded-[20px] border border-linka2 bg-plocha sm:flex sm:divide-y-0">
-        <Cislo n={o.dnes} popis="dnes" odkaz="/udalosti/?obdobi=7d" zvyraznit />
-        <Cislo n={o.tyden} popis="za 7 dní" odkaz="/udalosti/?obdobi=7d" />
-        <Cislo n={o.mesic} popis="za 30 dní" odkaz="/udalosti/?obdobi=30d" />
-        <Cislo n={o.ctvrtleti} popis="za 90 dní" odkaz="/udalosti/?obdobi=30d" odznak={<OdznakPorovnani p={o.porovnani} />} />
-        <Cislo n={o.celkem} popis="celkem od roku 2014" odkaz="/udalosti/" podtext={`z toho ${o.kampani} ${sklon(o.kampani, "operace", "operace", "operací")} proti občanům`} />
-      </div>
-      {/*
-        Vysvětlivka patří do nápovědy, ne pod čísla. Odstavec o tom, jak se
-        počítá „dnes“ a co znamená nula, tu stál přes tři řádky a nikomu
-        v obavách neřekl nic o tom, jestli se má bát.
-      */}
-      <p className="mt-2.5 text-drobne text-tlum2">
-        <Napoveda popis={
-          <span className="block">
-            Případy a manipulační operace v Evropě podle dne, kdy vyšly najevo.
-            {o.porovnani && <> Průměr za poslední dva roky je {cislem(o.porovnani.prumer)} na čtvrtletí.</>}
-            {" "}Nula znamená, že dosud nic neprošlo ověřením — ne že se nic nestalo.
-          </span>
-        }>
-          <span className="odkaz">V Česku {o.cesko90} za 90 dní, {o.ceskoCelkem} celkem.</span>
-        </Napoveda>
-        {zaznamuCelkem ? <> · {zaznamuCelkem} záznamů od roku 2014 včetně aktualizací a opatření</> : null}
-      </p>
-    </section>
-  );
-}
-
 /** Táž počítadla pro jednu zemi. „V Česku“ tu nedává smysl, proto vlastní sada. */
 export function PocitadlaZeme({ polozky, ted, nazev }: { polozky: PolozkaPoctu[]; ted: number; nazev: string }) {
   const o = spocitejOkna(polozky, useZiveHodiny(ted));

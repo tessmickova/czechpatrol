@@ -121,7 +121,9 @@ const POPISKY: Record<string, string> = {
  * že hybridní tlak může být vysoký, zatímco přímé riziko zůstává nízké.
  * To je celý smysl grafu.
  */
-export function RadarTlaku({ tlak, velikost = 300, okraj = 72 }: { tlak: HybridniTlak; velikost?: number; okraj?: number }) {
+export function RadarTlaku({
+  tlak, velikost = 300, okraj = 72, bezPopisku = false,
+}: { tlak: HybridniTlak; velikost?: number; okraj?: number; bezPopisku?: boolean }) {
   const osy = tlak.podkategorie;
   if (osy.length < 3) return null;
 
@@ -130,8 +132,11 @@ export function RadarTlaku({ tlak, velikost = 300, okraj = 72 }: { tlak: Hybridn
     („Infrastruktura", „Vojenský střet") přesahovaly hranu čtverce a ořezávaly
     se — z „Vojenský střet" zbylo „ký střet". Rozšíření je levnější než
     zkracování názvů: zkratky na osách byly ta věc, kterou audit vytýkal.
+
+    Bez popisků je plátno čtvercové: šířka navíc je jen místo pro text, a
+    když text není, jen by obrazec zmenšila.
   */
-  const sirka = Math.round(velikost * 1.45);
+  const sirka = bezPopisku ? velikost : Math.round(velikost * 1.45);
   const cx = sirka / 2;
   const cy = velikost / 2;
   const r = velikost / 2 - okraj;
@@ -181,7 +186,7 @@ export function RadarTlaku({ tlak, velikost = 300, okraj = 72 }: { tlak: Hybridn
         </>
       )}
 
-      {osy.map((o, i) => {
+      {!bezPopisku && osy.map((o, i) => {
         const [x, y] = bodOsy(i, 1.26);
         return (
           <text

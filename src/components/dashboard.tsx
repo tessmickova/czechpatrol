@@ -399,7 +399,7 @@ export function Dashboard({
         v úvodu, tady je odpověď na otázku, se kterou sem člověk chodí: děje se
         právě teď něco, kvůli čemu bych měl něco dělat?
       */}
-      <UrgentniUpozorneni kandidati={kandidati} zkontrolovano={overeno} />
+      <UrgentniUpozorneni kandidati={kandidati} zkontrolovano={overeno} ted={tedMs} />
 
       {/* 2 — mřížka stavů + poslední události */}
       <div className="nalet mt-14 sm:mt-20">

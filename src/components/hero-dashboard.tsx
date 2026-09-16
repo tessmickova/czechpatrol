@@ -140,7 +140,6 @@ export function HeroDashboard({
               útoku, což není. Stupnice i s čísly zůstává v metodice a v detailu
               záznamu, kde je vedle ní vysvětlení.
             */}
-            <p className="mt-1 text-drobne text-tlum2">dnes</p>
             <p className="mt-2.5 flex flex-wrap gap-2">
               <Tlacitko kam="#zaznamy" varianta="zvyrazneny" velikost="s" ikona="osa">{t("Všechny záznamy")}</Tlacitko>
               <Tlacitko kam="#sledovat" varianta="obrys" velikost="s" ikona="zvonek">{t("Sledovat změny")}</Tlacitko>

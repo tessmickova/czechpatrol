@@ -33,12 +33,20 @@ function Pruh({ uroven }: { uroven: HybridniTlak["podkategorie"][number]["uroven
 
 function Rozpis({ tlak }: { tlak: HybridniTlak }) {
   /*
-    Poznámka u osy se píše jen tehdy, když se řádky liší. U karty jedné země
-    je u všech šesti os stejná věta („Podle zveřejněných záznamů se zemí DE.")
-    a šestkrát pod sebou je to jen šum — totéž stojí v puntíku u nadpisu.
+    Poznámka u osy se píše jen tam, kde se liší od ostatních.
+
+    U karty jedné země je u pěti os tatáž věta („Podle zveřejněných záznamů
+    se zemí DE.") a u šesté jiná. Počítat jen různost nestačilo: dvě různé
+    věty zapnuly výpis u všech šesti a pětkrát pod sebou stálo totéž. Bere
+    se proto nejčastější věta jako pozadí a vypíše se jen to, co se z něj
+    vymyká — u karty Evropy se liší všechny, takže se vypíšou všechny.
   */
-  const poznamky = new Set(tlak.podkategorie.map((o) => o.poznamka).filter(Boolean));
-  const ukazatPoznamky = poznamky.size > 1;
+  const cetnost = new Map<string, number>();
+  for (const o of tlak.podkategorie) {
+    if (o.poznamka) cetnost.set(o.poznamka, (cetnost.get(o.poznamka) ?? 0) + 1);
+  }
+  const nejcastejsi = [...cetnost.entries()].sort((a, b) => b[1] - a[1])[0];
+  const pozadi = nejcastejsi && nejcastejsi[1] > 1 ? nejcastejsi[0] : null;
   return (
     <ul className="mt-2 grid gap-1.5">
       {tlak.podkategorie.map((o) => {
@@ -53,7 +61,9 @@ function Rozpis({ tlak }: { tlak: HybridniTlak }) {
               </span>
             </span>
             <span className="mt-1 block"><Pruh uroven={o.uroven} /></span>
-            {ukazatPoznamky && o.poznamka && <span className="mt-0.5 block text-drobne leading-snug text-tlum2">{o.poznamka}</span>}
+            {o.poznamka && o.poznamka !== pozadi && (
+              <span className="mt-0.5 block text-drobne leading-snug text-tlum2">{o.poznamka}</span>
+            )}
           </li>
         );
       })}
@@ -96,9 +106,14 @@ export function PavucinaHrozeb({
         Obrazec nad rozpisem, ne vedle něj. Vedle sebe se v půlce dvousloupcové
         mřížky obojí zmáčklo: popisky os se ořezávaly a názvy kategorií se
         lámaly po slabikách. Nad sebou má každé plnou šířku.
+
+        Obrazec je bez popisků os. Popisky se nezmenšují s grafem, takže
+        v úzké kartě karuselu zbylo z „Infrastruktura" jen „rastruktura" —
+        a hlavně: tytéž názvy stojí hned pod obrazcem v rozpisu, každý
+        i s úrovní slovy. Dvakrát totéž, z toho jednou ořezaně.
       */}
       <div className="mt-2">
-        <div className="flex justify-center"><RadarTlaku tlak={tlak} velikost={168} okraj={44} /></div>
+        <div className="flex justify-center"><RadarTlaku tlak={tlak} velikost={150} okraj={18} bezPopisku /></div>
         <Rozpis tlak={tlak} />
       </div>
     </section>
