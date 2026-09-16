@@ -1,5 +1,55 @@
 [
   {
+    "id": "k-1215b5024001476a",
+    "zachyceno": "2026-09-16T08:02:38.317Z",
+    "publikovano": "2026-09-16T07:41:00.000Z",
+    "zdroj": {
+      "nazev": "Český rozhlas — domácí zprávy",
+      "url": "https://www.irozhlas.cz/zpravy-domov/armada-zahaji-pruzkum-kontaminovane-oblasti-na-sumave-vycisteni-lokality-vyjde_2609160941_bva",
+      "typ": "primary",
+      "primarni": true
+    },
+    "titulek": "Armáda zahájí průzkum kontaminované oblasti na Šumavě. Vyčištění lokality vyjde asi na 190 milionů",
+    "shrnuti": "Česká armáda ve středu na Šumavě začne s průzkumem kontaminované lokality u Zhůří na Klatovsku. O tom, že v národním parku Šumava jsou dvě stovky sudů s nebezpečnými chemikáliemi a tisíc tun znečištěné půdy, informoval minulý týden ministr životního postředí Igor Červený z Motoristů. Vyčištění prost",
+    "duvod": "bez-skutku",
+    "kategorie": [
+      "vojsko"
+    ],
+    "posouzeni": null
+  },
+  {
+    "id": "k-788c47e2b9f0c522",
+    "zachyceno": "2026-09-16T08:02:38.357Z",
+    "publikovano": "2026-09-16T07:40:00.000Z",
+    "zdroj": {
+      "nazev": "ERR News (Estonsko)",
+      "url": "https://news.err.ee/1610138803/harri-tiido-big-money-s-big-worries",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Harri Tiido: Big money's big worries",
+    "shrnuti": "In Harri Tiido's commentary series, the grand plans of the ultra rich are under review this time. The truly rich decide for themselves where and what to build so they do not have to mix with the rest of the crowd, Tiido notes.",
+    "duvod": "bez-skutku",
+    "kategorie": [],
+    "posouzeni": null
+  },
+  {
+    "id": "k-2971c3cf04ac68cd",
+    "zachyceno": "2026-09-16T08:02:38.349Z",
+    "publikovano": "2026-09-16T07:28:00.000Z",
+    "zdroj": {
+      "nazev": "Deutsche Welle — Europe",
+      "url": "https://www.dw.com/en/kosovo-ex-president-thaci-faces-hague-war-crimes-verdict/a-79286344?maca=en-rss-en-eu-2092-rdf",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Kosovo ex-president Thaci faces Hague war crimes verdict",
+    "shrnuti": "A tribunal will rule if Hashim Thaci, a former commander of the Kosovo Liberation Army (KLA), committed war crimes during the war of independence with Serbia.",
+    "duvod": "bez-skutku",
+    "kategorie": [],
+    "posouzeni": null
+  },
+  {
     "id": "k-f94614f3ebca70a4",
     "zachyceno": "2026-09-16T07:32:46.535Z",
     "publikovano": "2026-09-16T07:24:07.000Z",
@@ -64,6 +114,22 @@
       "kyber",
       "infrastruktura"
     ],
+    "posouzeni": null
+  },
+  {
+    "id": "k-c1095e1b42f2c904",
+    "zachyceno": "2026-09-16T08:02:38.358Z",
+    "publikovano": "2026-09-16T07:04:00.000Z",
+    "zdroj": {
+      "nazev": "ERR News (Estonsko)",
+      "url": "https://news.err.ee/1610138827/court-rules-in-favor-of-local-residents-in-nursipalu-training-area-expansion-dispute",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Court rules in favor of local residents in Nursipalu Training Area expansion dispute",
+    "shrnuti": "Tallinn Administrative Court upheld complaints filed by nonprofit organizations and local residents seeking to annul government orders expanding the Estonian Defense Forces' Nursipalu training area.",
+    "duvod": "bez-skutku",
+    "kategorie": [],
     "posouzeni": null
   },
   {
@@ -3195,6 +3261,24 @@
     "titulek": "Denmark says Russian warship fired flares at military helicopter",
     "shrnuti": "The Danish prime minister has accused Russia of \"reckless\" behaviour, while the Kremlin is yet to comment.",
     "duvod": "vylouceno-tematem",
+    "kategorie": [
+      "rusko"
+    ],
+    "posouzeni": null
+  },
+  {
+    "id": "k-c6f16b6b936a383a",
+    "zachyceno": "2026-09-16T08:02:38.537Z",
+    "publikovano": "2026-09-15T11:38:00.000Z",
+    "zdroj": {
+      "nazev": "Slovensko — spionaz",
+      "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxPRUtQU2hjbjJ3YnJTaHdNcE1ZLWJCQW5sc0dOUWs1QzhHUWt3d3JkQTc4NFpUbi1TamZfMFJjSWZNZTZCdGhrdUtWdEhLSkxCY2xNZFBnWllhbzZmUmczOUUycGh3akRYWG9RcWZxT3pVSm5yekdHZWFfak1vcUUzWHdQTXE2Y0daRWFZZC15LUxMeWtfaHJ1NXM1d0FCclA1cVFlSFB4VUNDdGpvb0U4c2hUbWI?oc=5",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "France wants spy back in exchange for delisting Russian tycoon media - bignewsnetwork.com",
+    "shrnuti": "France wants spy back in exchange for delisting Russian tycoon media bignewsnetwork.com",
+    "duvod": "bez-skutku",
     "kategorie": [
       "rusko"
     ],
@@ -8360,94 +8444,6 @@
     "shrnuti": "Norbert Olah is an artist. He&apos;s also Romani. For a long time, he avoided making his ethnic background a theme of his art for fear of being pigeonholed. Then it became his focus.",
     "duvod": "bez-skutku",
     "kategorie": [],
-    "posouzeni": null
-  },
-  {
-    "id": "k-f1b899d14f76a025",
-    "zachyceno": "2026-09-15T17:03:06.705Z",
-    "publikovano": "2026-09-13T07:00:00.000Z",
-    "zdroj": {
-      "nazev": "Norsko — sabotaz",
-      "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxPOUsyOWd5cmFISEZ3ejdlS3ZOZ0p3TTgtczNmWHlMRl9PMXVhODRCS3RvaTlrYmZUWmVicUFhSDNuS0Z2aEJLb0Rjenc3Yl9YMEhqdlNRSDQySk1za3NjbjRVM2d3TkYyUlM5cFRFZlJHQTJSdFg5ZkZFUFVLOWRUd2Yzdm1YaUNpODIweURscGtrTHY4YUJWQnNJbm42VjNvd3BnUk04WG84Z0lpLUlrWUh3cmQwaU5OcVV0aHF5czQyMjZyVWc?oc=5",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Russia’s undersea war games expose a nightmare scenario for the global internet - bizpacreview.com",
-    "shrnuti": "Russia’s undersea war games expose a nightmare scenario for the global internet bizpacreview.com",
-    "duvod": "bez-skutku",
-    "kategorie": [
-      "rusko"
-    ],
-    "posouzeni": null
-  },
-  {
-    "id": "k-6a0e411d48d904d0",
-    "zachyceno": "2026-09-15T17:03:06.694Z",
-    "publikovano": "2026-09-13T04:14:01.000Z",
-    "zdroj": {
-      "nazev": "Lotyšsko — spionaz",
-      "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxNVEdQY1JSLVI4ajRtbHhJUmpfakd5aklHVzBLenEwSXF0OFdsVGJ6VHMwR3Z5NGJKTGV5dTN2eDFBN2JNdGFKMDI3ZFlZZDM3RWFNNzMzYkpjeHBhZGxhQThmZFZfb3d2bXhBMmRHdFRUZGJwQ1FXSkRVMk1PeXNMb0s4WGVRbGZiM1NhZHNua0dTTDhnZi16Vm5SVGN0ZWR1S0Q4UF9tNjdGT01wajRmb3R5N3llcHRsaUE2WDd3?oc=5",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Latvian citizen handed prison sentence for spying for Russia / Article - LSM",
-    "shrnuti": "Latvian citizen handed prison sentence for spying for Russia / Article LSM",
-    "duvod": "bez-skutku",
-    "kategorie": [
-      "rusko"
-    ],
-    "posouzeni": null
-  },
-  {
-    "id": "k-9467cbf831b883ad",
-    "zachyceno": "2026-09-15T17:03:06.641Z",
-    "publikovano": "2026-09-13T03:54:57.000Z",
-    "zdroj": {
-      "nazev": "Téma: nouzovy-stav (anglicky)",
-      "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxQVDJTVGxWUG9Pc2dWYm9laWFCeHJIVVNYZVZyc2NFZmxWZDJhbFRJYTRua1NxREdVRmQwT1hES0dZeHpFRHBoU3RCakF1cHh5MzhzMlBqVl93ZDRGLS1uTWY4RWo1SkxVeWhISTFsZnlUTVVVMk5EeUlCV1ZjY2s1WVNybWJibjlxUjNrVjk3OEZKYkcwa1lCS3pPcVZzT28?oc=5",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "City of Washington declares state of emergency after severe flash flooding - CBS News",
-    "shrnuti": "City of Washington declares state of emergency after severe flash flooding CBS News",
-    "duvod": "bez-mista",
-    "kategorie": [
-      "pravo"
-    ],
-    "posouzeni": null
-  },
-  {
-    "id": "k-9950a0fdc364ffbe",
-    "zachyceno": "2026-09-15T17:03:06.435Z",
-    "publikovano": "2026-09-13T02:59:29.000Z",
-    "zdroj": {
-      "nazev": "BBC News — Europe",
-      "url": "https://www.bbc.co.uk/news/videos/cpq01p1wn78o?at_medium=RSS&at_campaign=rss",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "'She's back': Fans dance, sing and cry after Céline Dion's comeback concert in Paris",
-    "shrnuti": "Thousands turned out to witness Céline Dion perform in Paris on Saturday, her first show after a six year illness-induced hiatus.",
-    "duvod": "vylouceno-tematem",
-    "kategorie": [],
-    "posouzeni": null
-  },
-  {
-    "id": "k-11508df7a8365e95",
-    "zachyceno": "2026-09-15T17:03:06.622Z",
-    "publikovano": "2026-09-13T02:45:00.000Z",
-    "zdroj": {
-      "nazev": "Téma: vojsko (anglicky)",
-      "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxONTNOZjAwa0JrYVdiVTBkMUJ1YWhoRmJjZWViUUdmR3JaM1NNTnZtTURtUnFpYVFQSTVGenZnVXE1ZjVJY1p2NUl0bTB3cTBOY1NEZUs0UFNhNmF2OEJuRTRRc3BXVnJ3UjlGVXhJQ3VLQnUweGZmbXhIcVF3SjJvZXIwN2FESTFoVEdGWE1ScFBYU3d2RVVVQg?oc=5",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "NH Army National Guard units to deploy to southern border - WMUR",
-    "shrnuti": "NH Army National Guard units to deploy to southern border WMUR",
-    "duvod": "bez-skutku",
-    "kategorie": [
-      "hranice"
-    ],
     "posouzeni": null
   }
 ]
