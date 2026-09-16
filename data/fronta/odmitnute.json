@@ -1,5 +1,73 @@
 [
   {
+    "id": "k-987ccd000de8a207",
+    "zachyceno": "2026-09-16T13:03:09.063Z",
+    "publikovano": "2026-09-16T12:40:00.000Z",
+    "zdroj": {
+      "nazev": "ERR News (Estonsko)",
+      "url": "https://news.err.ee/1610139505/heleriin-paeoja-how-teachers-really-spend-their-working-hours",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Heleriin Paeoja: How teachers really spend their working hours",
+    "shrnuti": "The Ministry of Education plans a study to determine teachers' tasks and the time required for them, with a planned cost of €70,000. Teacher Heleriin Paeoja wrote down how her working time was spent over the course of one week.",
+    "duvod": "bez-skutku",
+    "kategorie": [],
+    "posouzeni": null
+  },
+  {
+    "id": "k-b9d601912a5a1a1b",
+    "zachyceno": "2026-09-16T13:03:09.040Z",
+    "publikovano": "2026-09-16T12:38:15.000Z",
+    "zdroj": {
+      "nazev": "BBC News — Europe",
+      "url": "https://www.bbc.co.uk/news/articles/crwyz8j00q5no?at_medium=RSS&at_campaign=rss",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "French former minister on trial over alleged Renault-Nissan lobbying",
+    "shrnuti": "Rachida Dati, 61, is accused of taking money from the carmaker in return for political influence.",
+    "duvod": "bez-skutku",
+    "kategorie": [],
+    "posouzeni": null
+  },
+  {
+    "id": "k-cf1b88b4886e36f1",
+    "zachyceno": "2026-09-16T13:03:09.024Z",
+    "publikovano": "2026-09-16T12:33:27.000Z",
+    "zdroj": {
+      "nazev": "ČT24 — hlavní zprávy",
+      "url": "https://ct24.ceskatelevize.cz/clanek/svet/saudska-arabie-exportuje-ropu-pres-oman-nektere-dodavky-do-evropy-rusi-377677",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Saúdská Arábie exportuje ropu přes Omán. Některé dodávky do Evropy ruší",
+    "shrnuti": "Saúdská Arábie nabízí odběratelům z Asie více ropy k nakládce prostřednictvím přepravy z lodi na loď u ománského přístavu Suhár. S odkazem na zdroje z odvětví to ve středu uvedla agentura Reuters. Rijád tak reaguje na útoky dronů, které poškodily jeho klíčový ropovod vedoucí k Rudému moři. Saúdská A",
+    "duvod": "bez-skutku",
+    "kategorie": [
+      "drony"
+    ],
+    "posouzeni": null
+  },
+  {
+    "id": "k-5d4590b7f40bfddf",
+    "zachyceno": "2026-09-16T13:03:09.041Z",
+    "publikovano": "2026-09-16T12:26:00.000Z",
+    "zdroj": {
+      "nazev": "BBC News — Europe",
+      "url": "https://www.bbc.co.uk/news/articles/cjp3077led9qo?at_medium=RSS&at_campaign=rss",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "US accuses Russia of trying to kill Ukrainian allies overseas",
+    "shrnuti": "The FBI says five men \"conspired to intimidate, threaten, or murder people on US soil and around the world\".",
+    "duvod": "bez-skutku",
+    "kategorie": [
+      "rusko"
+    ],
+    "posouzeni": null
+  },
+  {
     "id": "k-c6d8b1b3d6e254db",
     "zachyceno": "2026-09-16T12:33:06.197Z",
     "publikovano": "2026-09-16T12:26:00.000Z",
@@ -7568,6 +7636,22 @@
     "posouzeni": null
   },
   {
+    "id": "k-f39b3d99dae54fa1",
+    "zachyceno": "2026-09-16T13:03:09.042Z",
+    "publikovano": "2026-09-14T08:36:09.000Z",
+    "zdroj": {
+      "nazev": "BBC News — Europe",
+      "url": "https://www.bbc.co.uk/news/articles/c0qx5d79kdeo?at_medium=RSS&at_campaign=rss",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Swedish left-wing bloc narrowly ahead with election too close to call",
+    "shrnuti": "With more than 90% of ballots processed early on Monday, the left-wing bloc was in front by approximately 20,000 votes.",
+    "duvod": "bez-skutku",
+    "kategorie": [],
+    "posouzeni": null
+  },
+  {
     "id": "k-5df1596a653c58ed",
     "zachyceno": "2026-09-14T08:33:17.493Z",
     "publikovano": "2026-09-14T08:21:00.000Z",
@@ -8337,88 +8421,6 @@
     "kategorie": [
       "rusko"
     ],
-    "posouzeni": null
-  },
-  {
-    "id": "k-0ac6ceb279446133",
-    "zachyceno": "2026-09-14T04:02:39.567Z",
-    "publikovano": "2026-09-14T03:37:00.000Z",
-    "zdroj": {
-      "nazev": "iROZHLAS — zprávy",
-      "url": "https://www.irozhlas.cz/ekonomika/vysokoskolaci-si-v-jihlave-priplati-za-bydleni-o-osm-procent-mistni-univerzita_2609140537_jkd",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Vysokoškoláci si v Jihlavě připlatí za bydlení o osm procent. Místní univerzita jim slibuje nové koleje",
-    "shrnuti": "Začínají podzimní semestry na vysokých školách. A s nimi výdaje pro studenty a jejich rodiny. Mezi ty nejvýraznější patří nájemné, které se za poslední rok zvýšilo. Zdražení pocítili i studenti z Vysočiny.",
-    "duvod": "bez-skutku",
-    "kategorie": [],
-    "posouzeni": null
-  },
-  {
-    "id": "k-083c988973692709",
-    "zachyceno": "2026-09-14T03:32:32.737Z",
-    "publikovano": "2026-09-14T03:13:00.000Z",
-    "zdroj": {
-      "nazev": "iROZHLAS — zprávy",
-      "url": "https://www.irozhlas.cz/zpravy-domov/vojkovice-na-karlovarsku-uzavrely-silnicni-most-casti-konstrukce-padaji-do_2609140513_lhv",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Vojkovice na Karlovarsku uzavřely silniční most. Části konstrukce padají do kolejiště pod ním",
-    "shrnuti": "Vojkovice u Karlových Varů uzavřely zchátralý most nad blízkou železniční tratí. Z přemostění odpadávají kusy betonu a kamení. Přejít po mostě je prakticky nemožné. Kvůli zhoršujícímu se stavu mostu pod ním už dva roky musí vlaky projíždět sníženou rychlostí. Rekonstrukci mostu může zkomplikovat prá",
-    "duvod": "bez-skutku",
-    "kategorie": [
-      "infrastruktura"
-    ],
-    "posouzeni": null
-  },
-  {
-    "id": "k-cced9997416d41b8",
-    "zachyceno": "2026-09-14T03:32:32.738Z",
-    "publikovano": "2026-09-14T03:00:00.000Z",
-    "zdroj": {
-      "nazev": "iROZHLAS — zprávy",
-      "url": "https://www.irozhlas.cz/zpravy-domov/ano-bez-boje-vyklidilo-tri-senatni-klani-muze-tim-nahrat-kubovi-smardovi-ale_2609140500_jgr",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "ANO bez boje vyklidilo tři senátní klání. Může tím nahrát Kubovi, Šmardovi, ale paradoxně i Starostům",
-    "shrnuti": "Hnutí ANO letos do senátních voleb nasazuje 24 kandidátů z 27 možných, což je méně než minule. Web iROZHLAS.cz nabízí detailní pohled do tří obvodů, kde se bude bojovat (nejen) o hlasy nepřítomného hnutí ANO. Přestože ve všech třech obvodech mohlo alespoň podpořit kandidáty koaliční SPD, nijak se do",
-    "duvod": "bez-skutku",
-    "kategorie": [],
-    "posouzeni": null
-  },
-  {
-    "id": "k-e20c1d75dc716fb7",
-    "zachyceno": "2026-09-14T06:02:39.127Z",
-    "publikovano": "2026-09-14T01:39:38.000Z",
-    "zdroj": {
-      "nazev": "ČT24 — hlavní zprávy",
-      "url": "https://ct24.ceskatelevize.cz/clanek/domaci/vlada-se-bude-zabyvat-novelou-o-navykovych-latkach-377549",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Vláda se bude zabývat i novelou o návykových látkách",
-    "shrnuti": "Rozšíření okruhu zdravotnických pracovníků, kteří mohou provádět očkování lidí starších 18 let, projedná v pondělí vláda. Týkat by se mělo lékařů všech odborností, zubních lékařů a farmaceutů. Ministři se budou zabývat i novelou o návykových látkách, podle které by mimo jiné bylo možné koupit od pří",
-    "duvod": "vylouceno-tematem",
-    "kategorie": [],
-    "posouzeni": null
-  },
-  {
-    "id": "k-b8fa1ac7e9fa647c",
-    "zachyceno": "2026-09-14T05:32:29.525Z",
-    "publikovano": "2026-09-14T01:12:35.000Z",
-    "zdroj": {
-      "nazev": "ČT24 — hlavní zprávy",
-      "url": "https://ct24.ceskatelevize.cz/clanek/svet/ve-svedskych-parlamentnich-volbach-tesne-vede-opozicni-stredolevy-blok-377548",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Ve švédských parlamentních volbách těsně vede opoziční středolevý blok",
-    "shrnuti": "Středolevý opoziční blok podle aktualizovaných předběžných výsledků nedělních parlamentních voleb ve Švédsku získal 176 křesel, dosavadní vládní blok 173. Vyplývá to podle agentury Reuters z projekcí švédského volebního úřadu.",
-    "duvod": "vylouceno-tematem",
-    "kategorie": [],
     "posouzeni": null
   }
 ]

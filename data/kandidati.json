@@ -80,6 +80,40 @@
     }
   },
   {
+    "id": "k-9871dbb9bd50f5b2",
+    "zachyceno": "2026-09-16T13:03:09.326Z",
+    "publikovano": "2026-09-16T13:02:40.000Z",
+    "zdroj": {
+      "nazev": "Česko — sabotaz",
+      "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE5tWGxiS05IQlllYWRMT2w1c0daRXR6ejRKT3VIZ3pFZ2FVZlViY1lIaFFUVlVaZUJHRkRwNGxjam9pSW5Ka29UdmJta2kyTmJBYXkzNTZWUzU?oc=5",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Cuban Dance Instructor Orchestrated Sabotage Attacks Across Europe from Russia for Russian Intelligence - CubaHeadlines",
+    "titulekPuvodni": "Cuban Dance Instructor Orchestrated Sabotage Attacks Across Europe from Russia for Russian Intelligence - CubaHeadlines",
+    "shrnuti": "Cuban Dance Instructor Orchestrated Sabotage Attacks Across Europe from Russia for Russian Intelligence CubaHeadlines",
+    "kodZeme": "RU",
+    "zeme": "Rusko",
+    "kategorie": [
+      "sabotaz",
+      "rusko"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "sabotage",
+      "russia"
+    ],
+    "naliehave": null,
+    "stav": "ceka",
+    "vyrez": {
+      "text": "Google News",
+      "stazeno": "2026-09-16T13:03:09.396Z",
+      "stav": 200
+    }
+  },
+  {
     "id": "k-105b4fd3548ab0ea",
     "zachyceno": "2026-09-16T12:33:06.143Z",
     "publikovano": "2026-09-16T12:26:00.000Z",
@@ -10278,40 +10312,6 @@
     "vyrez": {
       "text": "Google News",
       "stazeno": "2026-09-15T20:02:58.168Z",
-      "stav": 200
-    }
-  },
-  {
-    "id": "k-ff269ce7224f25af",
-    "zachyceno": "2026-09-15T16:32:52.337Z",
-    "publikovano": "2026-09-03T07:00:00.000Z",
-    "zdroj": {
-      "nazev": "Téma: energetika (anglicky)",
-      "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxQNlVad2dnZGxlVVNHSW1wQ2cxTTF0bDBoc2JERXpuWnh1RVA1cy15QWVEc3dXY3luLXBDS3dydG4wOTlxNmNoM3dDNHFVMFV6ZE0zNWdvSExRQ0czb1VaN01IZVBnNmNTTnhadk5WRlJ0WG1mekRDdF9CNlZRZ2dwdGNrVjY2dGNxSU5hNGFOb0FtV1JiUmVITVVOQjJweDE2ZUc0OUtlVFloODFvU1Rsdk9JdTZtVGFyanc?oc=5",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "German police react to new sabotage attempts on power grids, Bild reports - reuters.com",
-    "titulekPuvodni": "German police react to new sabotage attempts on power grids, Bild reports - reuters.com",
-    "shrnuti": "German police react to new sabotage attempts on power grids, Bild reports reuters.com",
-    "kodZeme": "DE",
-    "zeme": "Německo",
-    "kategorie": [
-      "sabotaz",
-      "infrastruktura"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "zeSite": null,
-    "shody": [
-      "sabotage",
-      "power grid"
-    ],
-    "naliehave": null,
-    "stav": "ceka",
-    "vyrez": {
-      "text": "Google News",
-      "stazeno": "2026-09-15T20:02:58.299Z",
       "stav": 200
     }
   }
