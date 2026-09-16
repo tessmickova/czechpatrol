@@ -1,5 +1,87 @@
 [
   {
+    "id": "k-8161295dc0465c57",
+    "zachyceno": "2026-09-16T06:32:44.840Z",
+    "publikovano": "2026-09-16T06:18:00.000Z",
+    "zdroj": {
+      "nazev": "Český rozhlas — domácí zprávy",
+      "url": "https://www.irozhlas.cz/zivotni-styl/spolecnost/petilety-jindra-hleda-darce-kostni-drene-potrebuje-ho-rychle-lide-se-mohou_2609160818_ako",
+      "typ": "primary",
+      "primarni": true
+    },
+    "titulek": "Pětiletý Jindra hledá dárce kostní dřeně, potřebuje ho rychle. Lidé se mohou zapsat do registru",
+    "shrnuti": "Jan a Barbora Ondrejkovi z Karlovarska zažívají noční můru každého rodiče. Pětiletý syn Jindra onemocněl akutní leukémií. Ještě před několika týdny byl přitom zdravý. K tomu, aby nemoc porazil, potřebuje dárce kostní dřeně. Pražský IKEM na podporu chlapce spustil speciální nábor dárců. Zapsat se bez",
+    "duvod": "bez-skutku",
+    "kategorie": [],
+    "posouzeni": null
+  },
+  {
+    "id": "k-a13f9eef1eeb6e72",
+    "zachyceno": "2026-09-16T06:32:44.905Z",
+    "publikovano": "2026-09-16T06:15:00.000Z",
+    "zdroj": {
+      "nazev": "ERR News (Estonsko)",
+      "url": "https://news.err.ee/1610139370/defense-agency-rejects-datasel-talks-as-eu-funding-period-ends",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Defense agency rejects Datasel talks as EU funding period ends",
+    "shrnuti": "The State Defense Investment Centre (RKIK) has rejected a proposal by arms firm Datasel to resolve an ongoing dispute through a joint working group, noting the financing period for the contracts has expired.",
+    "duvod": "bez-skutku",
+    "kategorie": [],
+    "posouzeni": null
+  },
+  {
+    "id": "k-47335505dbfdb06e",
+    "zachyceno": "2026-09-16T06:32:44.842Z",
+    "publikovano": "2026-09-16T06:12:00.000Z",
+    "zdroj": {
+      "nazev": "Český rozhlas — domácí zprávy",
+      "url": "https://www.irozhlas.cz/zpravy-domov/cvicny-nemocnicni-pokoj-nebo-kuchynka-stredni-skola-zivnostenska-otevrela-nove_2609160812_aha",
+      "typ": "primary",
+      "primarni": true
+    },
+    "titulek": "Cvičný nemocniční pokoj nebo kuchyňka. Střední škola živnostenská otevřela nové výukové prostory",
+    "shrnuti": "Nové výukové prostory otevřela Střední škola živnostenská v Plané na Tachovsku. Vznikly přestavbou vrchní části budovy domova mládeže v Bezdružické ulici. V modelově zařízených učebnách budou trénovat své dovednosti žáci oborů ubytovací služby, ošetřovatelství nebo praktická sestra. K dispozici mají",
+    "duvod": "bez-skutku",
+    "kategorie": [],
+    "posouzeni": null
+  },
+  {
+    "id": "k-1d032bb425264534",
+    "zachyceno": "2026-09-16T06:32:44.843Z",
+    "publikovano": "2026-09-16T06:00:00.000Z",
+    "zdroj": {
+      "nazev": "Český rozhlas — domácí zprávy",
+      "url": "https://www.irozhlas.cz/zivotni-styl/spolecnost/prvni-privezeniny-adopcni-proces-je-u-rodicu-z-ostravska-ve-finalni-fazi_2609160800_eml",
+      "typ": "primary",
+      "primarni": true
+    },
+    "titulek": "První ‚přivezeniny‘. Adopční proces je u rodičů z Ostravska ve finální fázi",
+    "shrnuti": "Šest let sledoval Radiožurnál v rámci seriálu Deníky adopce život Lenky a Tomáše. Na podzim 2020 se stali čekateli na osvojení a v únoru 2023 si přivezli domů ročního chlapečka. V ten den slaví pravidelně přivezeniny. O rok později pak soud rozhodl, že jsou právoplatní rodiče. Tobiáš dostal jiné pří",
+    "duvod": "bez-skutku",
+    "kategorie": [
+      "cr"
+    ],
+    "posouzeni": null
+  },
+  {
+    "id": "k-7c30df6a68c5fe4e",
+    "zachyceno": "2026-09-16T06:32:44.844Z",
+    "publikovano": "2026-09-16T06:00:00.000Z",
+    "zdroj": {
+      "nazev": "Český rozhlas — domácí zprávy",
+      "url": "https://www.irozhlas.cz/zpravy-domov/jakon-topinambur-nebo-batata-vedci-na-vysocine-testuji-pestovani-pro-cesko_2609160800_vaa",
+      "typ": "primary",
+      "primarni": true
+    },
+    "titulek": "Jakon, topinambur nebo batáta. Vědci na Vysočině testují pěstování pro Česko netradičních okopanin",
+    "shrnuti": "Na pokusné farmě Výzkumného ústavu bramborářského ve Valečově na Havlíčkobrodsku kvete jakon, ze země tam vykopávají batáty a sklízí topinambur. Výzkumníci chtějí zjistit, jestli by pro naši zemi netradiční okopaniny nešlo v budoucnu na Vysočině pěstovat ve velkém. Své výpěstky zkoušejí i vařit.",
+    "duvod": "bez-skutku",
+    "kategorie": [],
+    "posouzeni": null
+  },
+  {
     "id": "k-3fb3c51a890f8c82",
     "zachyceno": "2026-09-16T06:02:51.496Z",
     "publikovano": "2026-09-16T05:57:00.000Z",
@@ -3541,6 +3623,24 @@
     "kategorie": [
       "drony",
       "nato"
+    ],
+    "posouzeni": null
+  },
+  {
+    "id": "k-aed150e2efc6b6b9",
+    "zachyceno": "2026-09-16T06:32:45.158Z",
+    "publikovano": "2026-09-15T08:52:00.000Z",
+    "zdroj": {
+      "nazev": "Téma: krizove-vysilani (česky)",
+      "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxQamFmOHNxdVhUWE5SNzBQWGpiLUdjWTFiZ0tGYjZHcWg4UXhadnpESTNLMi1lRE5yYzlCWE9NVkxOS3lLTllfUGp2SW9PaVZKaEs2VTJQZ3NURzk3S1dyVGlmTlZpRVhJUXJ0OGJmUWNfZWRjbE5ScTh0d0ZHNjRwVU1IZjRGLXJUUGxmeElsR3pFYzJRNk13QXVoRnR1WkRrRDRSV2JqMjNDRVk4WGU3NWJyQUVvTFE?oc=5",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Český rozhlas vytvořil systém pro informování lidí v krizích, má 22 scénářů - České noviny",
+    "shrnuti": "Český rozhlas vytvořil systém pro informování lidí v krizích, má 22 scénářů České noviny",
+    "duvod": "bez-skutku",
+    "kategorie": [
+      "cr"
     ],
     "posouzeni": null
   },
@@ -8355,107 +8455,6 @@
     },
     "titulek": "Record heatwaves in France set to make champagne stronger",
     "shrnuti": "Winemakers can produce bubbly up to 15% ABV following an unusual harvest that produced sweeter grapes.",
-    "duvod": "bez-skutku",
-    "kategorie": [],
-    "posouzeni": null
-  },
-  {
-    "id": "k-4ca7db24828e1735",
-    "zachyceno": "2026-09-15T17:03:06.682Z",
-    "publikovano": "2026-09-12T12:57:00.000Z",
-    "zdroj": {
-      "nazev": "Německo — sabotaz",
-      "url": "https://news.google.com/rss/articles/CBMi3gFBVV95cUxNV2RER2VGalEyUnBmeHRqYWV2U1dERUZfTHRSUTdFUnZxNVpIOW9lZk5lR0tkcWVoWVo2aGxKRzNZWllPV1JQV0hYc2hWcUFRLUFCNjlJSEoyRGIteFBNSWhqQ2oyWkVwQVgya0xHNGFaNG5xYzNrcGs5bk1vY1ZvVFhiVXlzSGFfdDVhdkg1QlFJMU13c1I1YThVWk9tdVd4a3lPSmY5WWJUaHJqSU5aLXZtTk9DdzRET0dHVVNNZVBWaHBFVVFfRFNXSlcwZWg3a3kzemRvMzJuOWI4dXfSAeMBQVVfeXFMT3FGLWVmcWhuLXZ1V0E1WjBmSDVLNXpCYlpYR2YtdGNMWUdMZkFWWHMzZWNtVGp4aTJiTHhNNk9WT1lnUF9lTEZobUdQcVlXcEVtRE1qYWotakY2dm9Uallib1dQOGZocnZCSkh5WklxdlVxVUwwLUFUWWFhZEtWbU9JN3p1bERUOVRYVVBoYlFESXdjeFVhdV9FVXNudmNmM2RVckJ3UGVUQjNWbFQwX1NMTENoMEN1d1czZFJwZWJMdnYxS0kwc2luaTNlNnZzeU9sMmdGWFo4VEpORjlGck1lbGs?oc=5",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Germany suspects Russian spy link in Leipzig airport drone plot: Report - The Times of India",
-    "shrnuti": "Germany suspects Russian spy link in Leipzig airport drone plot: Report The Times of India",
-    "duvod": "bez-skutku",
-    "kategorie": [
-      "drony",
-      "rusko"
-    ],
-    "posouzeni": null
-  },
-  {
-    "id": "k-210ced796659d7ca",
-    "zachyceno": "2026-09-15T17:03:06.506Z",
-    "publikovano": "2026-09-12T12:06:00.000Z",
-    "zdroj": {
-      "nazev": "Téma: sabotaz (česky)",
-      "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxQMlZvenBhVHRZSEsyZnZFQ1pLeTZCS2VXTjQwQkpERGo3ZHdCSFRDUGVSLXFveVQ4endxakhGb21yUFhQNjVaZlM3aWN5el9Cbk9BdEZua3FLTDNVVVM0YnJlNnN0Yl9Yei0xR083N2syN2FacU40NTdzMTJxcWk2d1lFNW9hMVZ5al9IejBCeTFUYXBrbGJuVW5YNVhOME42eVJIemJEN25ZX3VYTEtpTTNfdw?oc=5",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Je to sabotáž, míní úřady po nálezu, který zavinil vykolejení vlaku ve Francii - iDNES.cz",
-    "shrnuti": "Je to sabotáž, míní úřady po nálezu, který zavinil vykolejení vlaku ve Francii iDNES.cz",
-    "duvod": "bez-mista",
-    "kategorie": [
-      "sabotaz"
-    ],
-    "posouzeni": null
-  },
-  {
-    "id": "k-02840eec2351da56",
-    "zachyceno": "2026-09-15T17:03:06.667Z",
-    "publikovano": "2026-09-12T08:29:18.000Z",
-    "zdroj": {
-      "nazev": "Česko — sabotaz",
-      "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxNN0pmUHgxcFBnbGw5YUFVZlpPTTdJbTJoVHRuRm12YWtVMnFNb2FMaHRDZlYtVF9SbVRYbWU0SjF2N3ZXYXJveW5XWF83eW41SElybUhkblhOb2NqQ214RzV1bEd1NWdSOXZLWFRSRFRON0hPbU5DckpuRHU2SndEaVUyWWV2ckxrUHdWTURRaWNaU0FfUHBDWGdxUFMxWThrWWtyQkl5WHdHT21rUlhLSTMtSmHSAboBQVVfeXFMTmg2enFGX3hFTGZaNGJZSDZoV21zSmQ4MEFaUHBqVGpfRkN1VWI2cVJ5SDIzNWJJSmJkOFRtT3FNQ2pERGY4a1otVVBZMlR1Um91bEhXZ0RycEN6R2FkSks3MUVrTlFFS0dDbUozek1TWlNyWGVaWXpMTzZGV2NfbEE1WHhtS3JBMmd4aW4zRzRJNTFzd3pKdjdUMTM2N3kxWThSYWt1T0U1X0E0dUNOU2JhOFZ4bTFFQ29n?oc=5",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Explodes another arms depot in Bulgaria linked to shipments for Ukraine - democrata.es",
-    "shrnuti": "Explodes another arms depot in Bulgaria linked to shipments for Ukraine democrata.es",
-    "duvod": "bez-skutku",
-    "kategorie": [],
-    "posouzeni": null
-  },
-  {
-    "id": "k-cb34dd0a1c4a2d5c",
-    "zachyceno": "2026-09-15T17:03:06.662Z",
-    "publikovano": "2026-09-12T06:51:42.000Z",
-    "zdroj": {
-      "nazev": "Česko — sabotaz",
-      "url": "https://news.google.com/rss/articles/CBMiRkFVX3lxTE5VWTBNWXZwLXlqTXI4MDhjQllWenNwMUE3WWZhTno3ejRBMmJmU1llb2FzWTd4ZDZwMFB3X2JWbnp3QnNuUGfSAUtBVV95cUxNMk5tR3VzR25LVlE5dEZVMm1CS201S0JUd1U0cU5wdng3SVF6aVNESFR3Nk43QVc4bWFob1NKWThIZmR6TEhMN0k5N3M?oc=5",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "German Media Named Belarusian Suspected of Preparing Terrorist Attack in Leipzig - Наша Ніва",
-    "shrnuti": "German Media Named Belarusian Suspected of Preparing Terrorist Attack in Leipzig Наша Ніва",
-    "duvod": "bez-skutku",
-    "kategorie": [],
-    "posouzeni": null
-  },
-  {
-    "id": "k-b8daa9e1ddcd00db",
-    "zachyceno": "2026-09-15T17:03:06.441Z",
-    "publikovano": "2026-09-12T05:46:00.000Z",
-    "zdroj": {
-      "nazev": "Deutsche Welle — Europe",
-      "url": "https://www.dw.com/en/dw-exclusive-zelenskyy-offers-to-meet-putin-at-g20-in-miami/a-79241703?maca=en-rss-en-eu-2092-rdf",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "DW exclusive: Zelenskyy offers to meet Putin at G20 in Miami",
-    "shrnuti": "In an interview with DW, Ukrainian President Volodymyr Zelenskyy said his country was in a strong position to negotiate and offered to meet Vladimir Putin in Miami.",
-    "duvod": "bez-skutku",
-    "kategorie": [],
-    "posouzeni": null
-  },
-  {
-    "id": "k-ac4a2d84fc514275",
-    "zachyceno": "2026-09-15T17:03:06.646Z",
-    "publikovano": "2026-09-12T00:54:00.000Z",
-    "zdroj": {
-      "nazev": "Téma: nouzovy-stav (anglicky)",
-      "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxNd25lekhIZUZORWQzR18tblNLRUZ3MmZ5ZE1jbi1Jd29ma01xNk5GRGE5eFEzR3lwbG5BUEVwQWNfMVVKN0dTY1R6WVMyT2JiTGp3YXlXaTh5ZFpoeVpBZ0hYTmhlQUNUb0RpNGlOTnE4dWVZVHRDUGtPT1ZaY214Ti1hdFNNMEtDaGd6NGRVNjJFSy0wcGwzUVZCUU9oejF5V1R2aE5acFhPLTlEc1FIdEMxMk1wMFdUVUFldkhjOTNuSXQwVUk4?oc=5",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Laguna Beach declares local emergency due to coastal erosion, sand loss - Los Angeles Times",
-    "shrnuti": "Laguna Beach declares local emergency due to coastal erosion, sand loss Los Angeles Times",
     "duvod": "bez-skutku",
     "kategorie": [],
     "posouzeni": null

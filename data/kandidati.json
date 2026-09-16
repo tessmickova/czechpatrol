@@ -42,6 +42,41 @@
     }
   },
   {
+    "id": "k-42a895b81bf1d567",
+    "zachyceno": "2026-09-16T06:32:44.905Z",
+    "publikovano": "2026-09-16T06:31:00.000Z",
+    "zdroj": {
+      "nazev": "ERR News (Estonsko)",
+      "url": "https://news.err.ee/1610138830/crimes-against-the-estonian-state-plea-deal-defendant-faces-7-years-in-prison",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Crimes against the Estonian state plea deal: Defendant faces 7 years in prison",
+    "titulekPuvodni": "Crimes against the Estonian state plea deal: Defendant faces 7 years in prison",
+    "shrnuti": "A plea agreement was struck on day one of the trial of a pro-Kremlin propagandist charged with activities harmful to Estonia's national security.",
+    "kodZeme": "EE",
+    "zeme": "Estonsko",
+    "kategorie": [
+      "zpravodajske",
+      "rusko"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "charged with",
+      "kreml",
+      "kremlin"
+    ],
+    "naliehave": null,
+    "stav": "ceka",
+    "vyrez": {
+      "text": "Crimes against the Estonian state plea deal: Defendant faces 7 years in prison | News | ERR\n{{noticeUi.heading[langCode]}}\n{{infoLink[langCode].label}}\n{{noticeUi.allowAllLabel[langCode]}}\n{{rewokeLabels[langCode]}}\nX !\nNews\nERR\n{{1789540260000 | amCalendar}}\nshare Facebook X (Twitter) e-mail\nOleg Bessedin at the Harju County Court courthouse (photo taken 2025). Source: Priit Mürk / ERR\nNews\nA plea agreement was struck on day one of the trial of a pro-Kremlin propagandist charged with activities harmful to Estonia's national security.\nOleg Bessedin's hearing began on Tuesday at the first-tier Harju County Court. He has been in custody since his arrest last November, and faces seven years in prison under the terms of the plea agreement.\nLead State Prosecutor Taavi Pern told ERR's Russian-language portal that, following negotiations with the defendant and his lawyer, the Prosecutor's Office agreed to resolve the criminal case via a plea agreement provided Bessedin serves seven years of actual prison time and the court confiscates more than &euro;73,000 in assets obtained via the crimes.\nThose crimes are primarily acting against Estonia's national security. \"According to the…",
+      "stazeno": "2026-09-16T06:32:45.248Z",
+      "stav": 200
+    }
+  },
+  {
     "id": "k-dbf14a3bdfe8e309",
     "zachyceno": "2026-09-16T05:55:56.651Z",
     "publikovano": "2026-09-16T05:34:14.000Z",
@@ -10260,39 +10295,6 @@
     "vyrez": {
       "text": "Google News",
       "stazeno": "2026-09-14T11:02:41.528Z",
-      "stav": 200
-    },
-    "naliehave": null
-  },
-  {
-    "id": "k-3e1f7559c18f3275",
-    "zachyceno": "2026-09-06T13:59:15.575Z",
-    "publikovano": "2026-09-02T14:48:15.000Z",
-    "zdroj": {
-      "nazev": "Google News — sabotage Europe",
-      "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxPWGQzZjFRRUs2NW00WkV3OGVjWW02Mkp1X2pYNTI3QnczdFZFNERGbDZkdVAzV3RZOUdIZi0yb3BtX2FEbEIxZzRTX09xekVFcXJWZGljc2JSTDRqY0lZbjJ0Q1cwLWhVdUctbWthd05XRXhvUzlCOE05WmRGWGdNVjRubUxTbUt4aV9fMFZfX2xCSV9xT1MzUmwwV3pENEJNUjA3ZFNvbjE1VENiaEV30gGgAUFVX3lxTFBnWHZwX0pSM3BQblJ5N2V3aC1heGRZMXNuZWJZM2EzeU85TkV0cWFvWVA3WXVjNGZRVTBsQUJRblBkRWhBRU4zQWNXbWF3YS14YkZMWjNjVGtITXJmOUIzLW9zU0FqNm1jVDFOSmQ0akhNY3h5NVRfQ0xSSTRaWkExS1JHSERvZGEyMVp0SS1jeUpDTzBoTE1aUXBCVDVTbmk?oc=5",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "EU steps up pressure on Russia, Germany investigates new sabotage - vijesti.me",
-    "titulekPuvodni": "EU steps up pressure on Russia, Germany investigates new sabotage - vijesti.me",
-    "shrnuti": "",
-    "kodZeme": "DE",
-    "zeme": "Německo",
-    "kategorie": [
-      "sabotaz",
-      "rusko"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "shody": [
-      "sabotage",
-      "russia"
-    ],
-    "stav": "ceka",
-    "vyrez": {
-      "text": "Google News",
-      "stazeno": "2026-09-14T11:02:41.683Z",
       "stav": 200
     },
     "naliehave": null
