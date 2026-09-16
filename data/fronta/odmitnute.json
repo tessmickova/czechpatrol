@@ -1,5 +1,23 @@
 [
   {
+    "id": "k-d4249669a5c74c33",
+    "zachyceno": "2026-09-16T22:03:12.741Z",
+    "publikovano": "2026-09-16T21:28:00.000Z",
+    "zdroj": {
+      "nazev": "Český rozhlas — domácí zprávy",
+      "url": "https://www.irozhlas.cz/zpravy-domov/korunovacni-klenoty-maji-magickou-moc-respekt-k-nim-musime-predavat-dalsi_2609162328_jar",
+      "typ": "primary",
+      "primarni": true
+    },
+    "titulek": "Korunovační klenoty mají magickou moc. Respekt k nim musíme předávat další generaci, říká kurátor",
+    "shrnuti": "Od soboty do 30. září je ve Vladislavském sále Pražského hradu otevřená výstava korunovačních klenotů, kterou doprovází výstava Habsburkové 500. Kurátorem doprovodné výstavy je Štěpán Vácha, který s Radiožurnálem mluvil nejen o historii klenotů, ale také o jejich významu pro současnou společnost. „R",
+    "duvod": "vylouceno-tematem",
+    "kategorie": [
+      "cr"
+    ],
+    "posouzeni": null
+  },
+  {
     "id": "k-7e101120b8869b35",
     "zachyceno": "2026-09-16T21:32:54.564Z",
     "publikovano": "2026-09-16T21:25:00.000Z",
@@ -32,6 +50,24 @@
     "posouzeni": null
   },
   {
+    "id": "k-7991956a9410701f",
+    "zachyceno": "2026-09-16T22:03:13.092Z",
+    "publikovano": "2026-09-16T20:43:15.000Z",
+    "zdroj": {
+      "nazev": "Téma: nouzovy-stav (anglicky)",
+      "url": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxQY1ZpZkx1S2ZhNlpOMUxsanNXRU5nMWtEeXpqSUYyeGdrSFhqVGJtd0t4T3BfdkpuNFZkbkp5LUJtd0xXaXQ1U2RaSkpZSmFWTV9FZk1TOU9xWENabkdkc1JoMGtZeXZBb1lYQnFuQllxV0p4bXdVbkFXRE42ZHU5dFdNQ3gwN09iWDhBNGlwblRTTmhIaWFraVhSb1phQVVxZmxmc0JzRmljcXJSSlR1RHBhY0Ryc0FfNC1kTnBZYk9ZQ1JPWHNnTjRyVnRfWFlkRUppeQ?oc=5",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Spanberger declares a state of emergency due to drought conditions and low hay production in Virginia - Cardinal News",
+    "shrnuti": "Spanberger declares a state of emergency due to drought conditions and low hay production in Virginia Cardinal News",
+    "duvod": "bez-mista",
+    "kategorie": [
+      "pravo"
+    ],
+    "posouzeni": null
+  },
+  {
     "id": "k-0d6347f73366e8fc",
     "zachyceno": "2026-09-16T21:03:14.968Z",
     "publikovano": "2026-09-16T20:33:00.000Z",
@@ -45,6 +81,24 @@
     "shrnuti": "Americká centrální banka (Fed) na závěr dvoudenního zasedání svého měnového výboru podle očekávání zvýšila základní úrokovou sazbu o čtvrt procentního bodu do pásma 3,75 až 4,00 procenta. Oznámila to v tiskové zprávě. Rozhodnutí bylo jednomyslné, hlasovalo pro něj všech dvanáct členů výboru.",
     "duvod": "bez-skutku",
     "kategorie": [],
+    "posouzeni": null
+  },
+  {
+    "id": "k-eab282eb10c6160d",
+    "zachyceno": "2026-09-16T22:03:12.957Z",
+    "publikovano": "2026-09-16T20:24:05.000Z",
+    "zdroj": {
+      "nazev": "Téma: kyber (anglicky)",
+      "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE5TWWVFNURqUENOMHF4ZXh0MWNuSWZZd2l0VGVacmhQM3FKcFlNU0FwZHVjTmVmZ0c4a3M0VG5aNVlsUWJzTWg0OHNoRm9ZZEd4bVg4MmhQN1o4NlUzRXM4cUliczh3dmYwOTJ5ejd6a081UThwbE5OUk1xVEVGSG8?oc=5",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "CISA promotes a fresh way to deter cyberattackers: Lie to them - CyberScoop",
+    "shrnuti": "CISA promotes a fresh way to deter cyberattackers: Lie to them CyberScoop",
+    "duvod": "bez-mista",
+    "kategorie": [
+      "kyber"
+    ],
     "posouzeni": null
   },
   {
@@ -8411,54 +8465,6 @@
     "kategorie": [
       "drony"
     ],
-    "posouzeni": null
-  },
-  {
-    "id": "k-f09275f91867145f",
-    "zachyceno": "2026-09-14T12:02:37.948Z",
-    "publikovano": "2026-09-14T11:44:00.000Z",
-    "zdroj": {
-      "nazev": "iROZHLAS — zprávy",
-      "url": "https://www.irozhlas.cz/kultura/televize/eben-a-kostkova-budou-letos-naposledy-moderovat-stardance-televize-zatim_2609141344_elev",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Eben a Kostková budou letos naposledy moderovat StarDance. Televize zatím neoznámila, kdo je nahradí",
-    "shrnuti": "Marek Eben a Tereza Kostková budou letos naposledy moderovat taneční soutěž StarDance. Náhradu zatím Česká televize neoznámila. Na zahradě britského velvyslanectví v pondělí televize také představila aktuální znělku soutěže, jejíž 14. řada začne 10. října. Slavnostní finálový večer se uskuteční 12. ",
-    "duvod": "bez-skutku",
-    "kategorie": [],
-    "posouzeni": null
-  },
-  {
-    "id": "k-af309872db4e0557",
-    "zachyceno": "2026-09-14T12:02:37.929Z",
-    "publikovano": "2026-09-14T11:43:00.000Z",
-    "zdroj": {
-      "nazev": "ERR News (Estonsko)",
-      "url": "https://news.err.ee/1610137639/estonia-s-robert-virves-inches-closer-to-wrc2-2026-drivers-title",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Estonia's Robert Virves inches closer to WRC2 2026 drivers' title",
-    "shrnuti": "Robert Virves has secured the World Rally Championship WRC2 Challenger title after finishing second at the weekend's Rally Chile.",
-    "duvod": "bez-skutku",
-    "kategorie": [],
-    "posouzeni": null
-  },
-  {
-    "id": "k-2e0ff749de024392",
-    "zachyceno": "2026-09-14T12:02:37.948Z",
-    "publikovano": "2026-09-14T11:38:00.000Z",
-    "zdroj": {
-      "nazev": "iROZHLAS — zprávy",
-      "url": "https://www.irozhlas.cz/sport/fotbal/cech-vzpomina-na-mikloska-otevrel-v-anglii-dvere-ostatnim-radil-mi-kdyz-jsem_2609141338_mim",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Čech vzpomíná na Mikloška: Otevřel v Anglii dveře ostatním. Radil mi, když jsem přišel do Chelsea",
-    "shrnuti": "Úmrtí bývalého fotbalového brankáře Luďka Mikloška velmi zasáhlo i jiného někdejšího reprezentačního gólmana Petra Čecha. Čtyřiačtyřicetiletý rodák z Plzně se s legendou West Hamu během své kariéry radil, když sám v roce 2004 přicházel do Londýna do Chelsea. Čech připomněl, že Mikloško českým gólman",
-    "duvod": "vylouceno-tematem",
-    "kategorie": [],
     "posouzeni": null
   }
 ]
