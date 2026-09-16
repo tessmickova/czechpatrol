@@ -1,5 +1,5 @@
 {
-  "aktualizovano": "2026-09-16T02:32:59.055Z",
+  "aktualizovano": "2026-09-16T14:33:05.931Z",
   "zdroj": {
     "nazev": "Český statistický úřad — průměrné spotřebitelské ceny pohonných hmot (týdenní šetření)",
     "url": "https://vdb.czso.cz/pll/eweb/cenyphm.data",
@@ -2416,6 +2416,9 @@
       "benzin95": 43.71
     }
   ],
-  "zprava": null,
-  "pokus": "2026-09-16T02:32:59.055Z"
+  "zprava": {
+    "tyden": "2026-W37",
+    "text": "Skokový pohyb ceny pohonných hmot\n\nNafta 47,39 Kč/l · za týden +1,47 Kč · nejvýš za 5 měsíců.\nBenzin 95 43,71 Kč/l · za týden +1,69 Kč · nejvýš za 49 měsíců.\n\nPrůměrné spotřebitelské ceny za týden do 13. 9. 2026 podle týdenního šetření Českého statistického úřadu.\nJe to změřený údaj za uplynulý týden, ne předpověď. Kam ceny půjdou dál, nevíme a netvrdíme to."
+  },
+  "pokus": "2026-09-16T14:33:05.931Z"
 }
