@@ -6331,6 +6331,40 @@
     "naliehave": null
   },
   {
+    "id": "k-d207afa343a34a0a",
+    "zachyceno": "2026-09-16T00:32:48.291Z",
+    "publikovano": "2026-09-09T02:22:48.000Z",
+    "zdroj": {
+      "nazev": "Rumunsko — sabotaz",
+      "url": "https://news.google.com/rss/articles/CBMi4AFBVV95cUxOaWJCbTVHQlB6NkFKNmtucDdtbHNVQWZTUi1MVWVZdTlZTXJpYlBGSEJyR1Faa2RhaUhDbllWLUFKYy1xSTVyZjREbHRwM3dWT0JXWmp5OTNmdEN6dkZiZWplbFMzblJQd3VjTW51Sml2ZDhfSmdjaUU5aXFIZDd5YW9USllOMHZhbnozbF9YcXN3M1BXanFETk04d3V6Q3Bwd09ReG9PSUJncGxtTEFjRXpfTUhsVWgtcS1PSHByOXFzMGtEeGhxdlp1RU1zeWhfMmdZLTdjQVZfOVZabkhFUQ?oc=5",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Russian citizen who plotted acts of diversion and sabotage in Romania placed under pre-trial arrest - Agerpres",
+    "titulekPuvodni": "Russian citizen who plotted acts of diversion and sabotage in Romania placed under pre-trial arrest - Agerpres",
+    "shrnuti": "Russian citizen who plotted acts of diversion and sabotage in Romania placed under pre-trial arrest Agerpres",
+    "kodZeme": "RO",
+    "zeme": "Rumunsko",
+    "kategorie": [
+      "sabotaz",
+      "rusko"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "sabotage",
+      "russia"
+    ],
+    "naliehave": null,
+    "stav": "ceka",
+    "vyrez": {
+      "text": "Google News",
+      "stazeno": "2026-09-16T00:32:48.312Z",
+      "stav": 200
+    }
+  },
+  {
     "id": "k-abf23ccd319dda1c",
     "zachyceno": "2026-09-15T16:32:52.321Z",
     "publikovano": "2026-09-08T20:55:41.000Z",
@@ -10252,37 +10286,5 @@
       "stav": 200
     },
     "naliehave": null
-  },
-  {
-    "id": "k-63885fc0aa6022ca",
-    "zachyceno": "2026-09-16T00:02:59.244Z",
-    "publikovano": "2026-09-02T07:00:00.000Z",
-    "zdroj": {
-      "nazev": "Téma: sabotaz (česky)",
-      "url": "https://news.google.com/rss/articles/CBMi2gFBVV95cUxQVDVZZkNsY2U1ejc3Ync4bVhCZ3R5VzlhZkZ2V0dacDNaQjNoajZ5UTRUTDJBQ1huWFFwRDctX1RfS3M0X01OeWNPN00zVHlYTE9mRFlDdEdNblNLSUtZUVBXdVhBSzkzajMyN1NnUERrMHFYUklwVlZWUnV2Zkt5WUFUX3ZLVlNoVUNTNkxkd1ZUUXJIaV9aOG5rNlI5LTJnVm92cUR1SUxwSHVGVVBDZ1FhSnk2X2lSU0ZoX3VjZG5ZWmM5by0wZ0k2cU5DaGVwN0gwSG9neXFQZw?oc=5",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Další sabotáž? Exploze po zkratu v rozvodně v Německu: Prošetřují opět vliv cizího státu - Blesk",
-    "titulekPuvodni": "Další sabotáž? Exploze po zkratu v rozvodně v Německu: Prošetřují opět vliv cizího státu - Blesk",
-    "shrnuti": "Další sabotáž? Exploze po zkratu v rozvodně v Německu: Prošetřují opět vliv cizího státu Blesk",
-    "kodZeme": "DE",
-    "zeme": "Německo",
-    "kategorie": [
-      "sabotaz"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "zeSite": null,
-    "shody": [
-      "sabotaz"
-    ],
-    "naliehave": null,
-    "stav": "ceka",
-    "vyrez": {
-      "text": "Google News",
-      "stazeno": "2026-09-16T00:02:59.718Z",
-      "stav": 200
-    }
   }
 ]
