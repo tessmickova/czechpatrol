@@ -80,6 +80,43 @@
     }
   },
   {
+    "id": "k-ff57897ddbb9c803",
+    "zachyceno": "2026-09-16T13:33:05.323Z",
+    "publikovano": "2026-09-16T13:27:00.000Z",
+    "zdroj": {
+      "nazev": "Český rozhlas — domácí zprávy",
+      "url": "https://www.irozhlas.cz/zpravy-domov/tri-zadrzeni-v-kauze-uvn-jsou-na-svobode-policejni-vysetrovani-bezi-dal-je_2609161527_ako",
+      "typ": "primary",
+      "primarni": true
+    },
+    "titulek": "Tři zadržení v kauze ÚVN jsou na svobodě. Policejní vyšetřování běží dál, je potřeba vyhodnotit důkazy",
+    "titulekPuvodni": "Tři zadržení v kauze ÚVN jsou na svobodě. Policejní vyšetřování běží dál, je potřeba vyhodnotit důkazy",
+    "shrnuti": "Tři zadržení v kauze zadávání veřejných zakázek v Ústřední vojenské nemocnici v Praze (ÚVN) byli propuštěni na svobodu. Prověřování pokračuje, uvedl ve středu mluvčí pražského městského státního zastupitelství Aleš Cimbala. Tři lidi v souvislosti s vyšetřováním rozsáhlé trestné činnosti v ÚVN zadrže",
+    "kodZeme": "CZ",
+    "zeme": "Česko",
+    "kategorie": [
+      "zpravodajske",
+      "vojsko"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "zadrz",
+      "vojaci+povolan",
+      "vojaci",
+      "policie"
+    ],
+    "naliehave": null,
+    "stav": "ceka",
+    "vyrez": {
+      "text": "",
+      "stazeno": "2026-09-16T13:33:05.784Z",
+      "stav": 403,
+      "chyba": "HTTP 403"
+    }
+  },
+  {
     "id": "k-9871dbb9bd50f5b2",
     "zachyceno": "2026-09-16T13:03:09.326Z",
     "publikovano": "2026-09-16T13:02:40.000Z",
@@ -10276,42 +10313,6 @@
     "vyrez": {
       "text": "Google News",
       "stazeno": "2026-09-15T20:02:58.037Z",
-      "stav": 200
-    }
-  },
-  {
-    "id": "k-a5a91e67344f6b22",
-    "zachyceno": "2026-09-15T16:32:52.322Z",
-    "publikovano": "2026-09-03T07:00:00.000Z",
-    "zdroj": {
-      "nazev": "Téma: energetika (anglicky)",
-      "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxQX0dlb21RUFVyR012ZjY5YnNadVY0Y05PaF8zb3RRNGo4MVdZMElzOXZZTkEzQzNLS0RncWFOa0NkcHFqZWdqZUEzQzdQaGVtdWVad2lIaDQ4NW1NUGhiaGhXbmRrakpzeVlKdDhqRENHeWFJSTRfdDRBVTRkaGdTOF8xUnpWTlJITGc?oc=5",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Germany probes double sabotage attack on power grid - euractiv.com",
-    "titulekPuvodni": "Germany probes double sabotage attack on power grid - euractiv.com",
-    "shrnuti": "Germany probes double sabotage attack on power grid euractiv.com",
-    "kodZeme": "DE",
-    "zeme": "Německo",
-    "kategorie": [
-      "sabotaz",
-      "hybridni",
-      "infrastruktura"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "zeSite": null,
-    "shody": [
-      "sabotage",
-      "attack on",
-      "power grid"
-    ],
-    "naliehave": null,
-    "stav": "ceka",
-    "vyrez": {
-      "text": "Google News",
-      "stazeno": "2026-09-15T20:02:58.168Z",
       "stav": 200
     }
   }
