@@ -1,5 +1,53 @@
 [
   {
+    "id": "k-be2b2efbe5b77cc3",
+    "zachyceno": "2026-09-16T05:55:56.522Z",
+    "publikovano": "2026-09-16T05:49:00.000Z",
+    "zdroj": {
+      "nazev": "iROZHLAS — zprávy",
+      "url": "https://www.irozhlas.cz/zpravy-domov/ulehci-obyvatelum-i-doprave-ridici-muzou-nove-jezdit-po-silnici-mezi-prazskym_2609160749_aha",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Ulehčí obyvatelům i dopravě. Řidiči mohou nově jezdit po silnici mezi pražským Slivencem a Lochkovem",
+    "shrnuti": "Řidiči mohou nově jezdit po silnici mezi pražským Slivencem a Lochkovem v jihozápadní části hlavního města. Úsek dříve využívali dělníci při budování Lochkovského tunelu. Nyní by měl pomoci snížit počet projíždějících aut v městských částech. Někteří řidiči se díky silnici dostanou rychleji do práce",
+    "duvod": "bez-skutku",
+    "kategorie": [],
+    "posouzeni": null
+  },
+  {
+    "id": "k-5fdbcb2d30ea3c85",
+    "zachyceno": "2026-09-16T05:55:56.567Z",
+    "publikovano": "2026-09-16T05:34:00.000Z",
+    "zdroj": {
+      "nazev": "ERR News (Estonsko)",
+      "url": "https://news.err.ee/1610139322/jaan-tallinn-tops-aripaev-rich-list-with-10-3bn-net-worth",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Jaan Tallinn tops Äripäev rich list with €10.3bn net worth",
+    "shrnuti": "Tech entrepreneur Jaan Tallinn tops this year's Äripäev rich list with an estimated net worth of €10.3 billion.",
+    "duvod": "bez-skutku",
+    "kategorie": [],
+    "posouzeni": null
+  },
+  {
+    "id": "k-7630f3f696af17d8",
+    "zachyceno": "2026-09-16T05:55:56.509Z",
+    "publikovano": "2026-09-16T05:33:00.000Z",
+    "zdroj": {
+      "nazev": "Český rozhlas — domácí zprávy",
+      "url": "https://www.irozhlas.cz/zpravy-domov/scitani-hlasu-do-zastupitelstev-je-narocne-olomouc-skolila-komisare-pro_2609160726_dns",
+      "typ": "primary",
+      "primarni": true
+    },
+    "titulek": "‚Sčítání hlasů do zastupitelstev je náročné.‘ Olomouc školila komisaře pro komunální a senátní volby",
+    "shrnuti": "Na blížící se komunální a senátní volby, které se uskuteční za necelé čtyři týdny, se začínají chystat i volební komisaři. V rámci příprav musí absolvovat povinné školení, na němž se dozví, jak podle pravidel připravit hlasovací místnost, používat čtečku elektronického občanského průkazu nebo správn",
+    "duvod": "vylouceno-tematem",
+    "kategorie": [],
+    "posouzeni": null
+  },
+  {
     "id": "k-921251497ad23934",
     "zachyceno": "2026-09-16T05:32:39.377Z",
     "publikovano": "2026-09-16T05:20:00.000Z",
@@ -8410,56 +8458,6 @@
     "shrnuti": "Patriot Platform wants to build a group of working-class voters to influence political parties on the right.",
     "duvod": "bez-skutku",
     "kategorie": [],
-    "posouzeni": null
-  },
-  {
-    "id": "k-5b4b4707b347277c",
-    "zachyceno": "2026-09-15T17:03:06.539Z",
-    "publikovano": "2026-09-11T19:10:00.000Z",
-    "zdroj": {
-      "nazev": "Téma: energetika (anglicky)",
-      "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxOd2JoTW9JUmV6cU9ZMExLZEVrMk9XTzkwcXIxTWhIY0lSWjVUR1E4bUxGXzZ0N21vdExPeTV2cGU5QW5VM253S3A1QVNHeDVXZjFSUFFhTFBpRTZ5NnNadlRBczk1aGhIYkMtd2hRQUxTMEN4Z3Y0MHpmOGdKWGlwRElzNmFQTzhfVVljTUZQUHVRUW54bHUwQWJkZ2x2VGozaGNfQlR6OEVKTFVCZ2pXZA?oc=5",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "German climate activist planned 160 attacks on electricity grids in Germany, Netherlands - nltimes.nl",
-    "shrnuti": "German climate activist planned 160 attacks on electricity grids in Germany, Netherlands nltimes.nl",
-    "duvod": "bez-skutku",
-    "kategorie": [],
-    "posouzeni": null
-  },
-  {
-    "id": "k-e141ce212cfda3bb",
-    "zachyceno": "2026-09-15T17:03:06.639Z",
-    "publikovano": "2026-09-11T18:58:59.000Z",
-    "zdroj": {
-      "nazev": "Téma: nouzovy-stav (anglicky)",
-      "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxQNzBOenlacFBKTXY4ZndOaTAxa0tVLWQ1eUJHYWtWQUkzY2c1aUNoWWlGMDZ6blNEVVBadVJTTkNmVmR0S01rWXNPWHpMa1c0aDlxNEpFb2xFMzZUQ3ppc25lVHNEbm0ybTBfYmdzbWtCdE9oUkwwYW13SEwzQUw1eWxKcDl4UWE2cEZ2TUpaM0ozZGxESE5tbHJVcjVtLVpIX3E2VjNVdw?oc=5",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "OC Beach Cities Declare States of Emergency After High Tides Batter Coast - voiceofoc.org",
-    "shrnuti": "OC Beach Cities Declare States of Emergency After High Tides Batter Coast voiceofoc.org",
-    "duvod": "bez-skutku",
-    "kategorie": [],
-    "posouzeni": null
-  },
-  {
-    "id": "k-c943934af957637a",
-    "zachyceno": "2026-09-15T17:03:06.693Z",
-    "publikovano": "2026-09-11T18:26:00.000Z",
-    "zdroj": {
-      "nazev": "Lotyšsko — sabotaz",
-      "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxPUGZVc1JRQ2M2RUVKbVN6TjVlb0ZuNXh0VHIyU3R5Z0xPN1dFSlVWLVBMUmhmQ01SZkh2dVh6RXdkR0dacGZ6eUJBS19VbjJXQ0RqTW41SWZkdE95ME03aFlWeWRWRGZuMG9DYlUxbVZjTWlQc3ZNSGlJYUEzMk1hbHZlbVB2cXc?oc=5",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "‘There cannot be a weak link’: Latvian PM warns of Russian hybrid attacks - TVP World",
-    "shrnuti": "‘There cannot be a weak link’: Latvian PM warns of Russian hybrid attacks TVP World",
-    "duvod": "bez-skutku",
-    "kategorie": [
-      "rusko"
-    ],
     "posouzeni": null
   }
 ]
