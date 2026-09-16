@@ -42,6 +42,42 @@
     }
   },
   {
+    "id": "k-5676a1691071958a",
+    "zachyceno": "2026-09-16T04:32:44.756Z",
+    "publikovano": "2026-09-16T04:16:00.000Z",
+    "zdroj": {
+      "nazev": "Český rozhlas — domácí zprávy",
+      "url": "https://www.irozhlas.cz/zpravy-svet/najemne-vrazdy-sledovani-nebo-nabor-spojene-staty-obvinily-pet-osob-z-ruska-ze_2609160616_aru",
+      "typ": "primary",
+      "primarni": true
+    },
+    "titulek": "Nájemné vraždy, sledování nebo nábor. Spojené státy obvinily pět osob z Ruska ze spiknutí",
+    "titulekPuvodni": "Nájemné vraždy, sledování nebo nábor. Spojené státy obvinily pět osob z Ruska ze spiknutí",
+    "shrnuti": "Americké ministerstvo spravedlnosti obvinilo pět osob v souvislosti s údajnými ruskými plány zahrnujícími sledování, nábor a nájemné vraždy, vyplývá z obžaloby zveřejněné v úterý. Podle obžaloby pětice pracovala pro ruské zpravodajské služby a měla za úkol provádět útoky a vraždy po celém světě, vče",
+    "kodZeme": "RU",
+    "zeme": "Rusko",
+    "kategorie": [
+      "zpravodajske",
+      "rusko"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "obvin",
+      "obzalov",
+      "rusk"
+    ],
+    "naliehave": null,
+    "stav": "ceka",
+    "vyrez": {
+      "text": "",
+      "stazeno": "2026-09-16T04:32:45.189Z",
+      "stav": 403,
+      "chyba": "HTTP 403"
+    }
+  },
+  {
     "id": "k-8fec161692da422d",
     "zachyceno": "2026-09-16T03:02:46.723Z",
     "publikovano": null,
@@ -10258,39 +10294,6 @@
     "vyrez": {
       "text": "Google News",
       "stazeno": "2026-09-14T11:02:41.987Z",
-      "stav": 200
-    },
-    "naliehave": null
-  },
-  {
-    "id": "k-53b7aa8f5b8e816e",
-    "zachyceno": "2026-09-06T13:59:15.575Z",
-    "publikovano": "2026-09-02T13:05:02.000Z",
-    "zdroj": {
-      "nazev": "Google News — sabotage Europe",
-      "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxPbHVROERHaFRTcFFFX0ZySGNBTWFRakZmS25vSTB2SzFCSF9JdXhjLU5sR1RXTDQ4YTlJc05KdmVsbFE3TXVQYkZYMjhZV1VqbjdZYXl4a0xQeXBzaTE4TkVxQ1NlYVVFMVdxbEVhSW1YRDJoN3hhUUhCV09sT0hzN2s1dGtmSHcyZkxHaWRnMi00b095?oc=5",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Russia is waging hybrid war against Europe, Polish MFA warns over Leipzig sabotage - RBC-Ukraine",
-    "titulekPuvodni": "Russia is waging hybrid war against Europe, Polish MFA warns over Leipzig sabotage - RBC-Ukraine",
-    "shrnuti": "Russia is waging hybrid war",
-    "kodZeme": "PL",
-    "zeme": "Polsko",
-    "kategorie": [
-      "sabotaz",
-      "rusko"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "shody": [
-      "sabotage",
-      "russia"
-    ],
-    "stav": "ceka",
-    "vyrez": {
-      "text": "Google News",
-      "stazeno": "2026-09-14T11:02:42.128Z",
       "stav": 200
     },
     "naliehave": null
