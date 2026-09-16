@@ -42,6 +42,40 @@
     }
   },
   {
+    "id": "k-8fec161692da422d",
+    "zachyceno": "2026-09-16T03:02:46.723Z",
+    "publikovano": null,
+    "zdroj": {
+      "nazev": "The Kyiv Independent",
+      "url": "https://kyivindependent.com/us-charges-5-suspects-linked-to-alleged-russian-assassination-sabotage-network-targeting-ukraines-allies/",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "US charges 5 suspects linked to alleged Russian assassination, sabotage network targeting Ukraine&#x27;s allies.",
+    "titulekPuvodni": "US charges 5 suspects linked to alleged Russian assassination, sabotage network targeting Ukraine&#x27;s allies.",
+    "shrnuti": "",
+    "kodZeme": "UA",
+    "zeme": "Ukrajina",
+    "kategorie": [
+      "sabotaz",
+      "rusko"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "sabotage",
+      "russia"
+    ],
+    "naliehave": null,
+    "stav": "ceka",
+    "vyrez": {
+      "text": "US charges 5 suspects linked to alleged Russian assassination, sabotage network targeting Ukraine&#x27;s allies\nRussia US charges 5 suspects linked to alleged Russian assassination, sabotage network targeting Ukraine&#x27;s allies\nSeptember 16, 2026 5:33 am • 3 min read\nPrefer on Google\nT\nby Tamara Nowakowsky\nU.S. Attorney General Todd Blanche answers questions from reporters during a press briefing in the Rose Garden of the White House Washington, DC on September 15, 2026. (Kevin Dietsch/Getty Images)\nU.S. prosecutors have charged five people accused of working for Russian intelligence as part of a network that allegedly plotted assassinations and terrorist acts in countries supporting Ukraine, the Justice Department announced Sept. 15.\nThe global network has operated since at least 2024 and most recently attempted to recruit multiple people in the U.S. to surveil and kill Russian dissidents, prosecutors claimed.\nThe defendants allegedly paid or attempted to pay people in the U.S. and elsewhere to conduct surveillance, carry out targeted killings, and attack civilian and military infrastructure in European countries aligned with Ukraine , according to the Justice Department…",
+      "stazeno": "2026-09-16T03:02:46.975Z",
+      "stav": 200
+    }
+  },
+  {
     "id": "k-82f0430ab256f00f",
     "zachyceno": "2026-09-16T00:02:59.254Z",
     "publikovano": "2026-09-15T23:47:47.000Z",
@@ -10257,37 +10291,6 @@
     "vyrez": {
       "text": "Google News",
       "stazeno": "2026-09-14T11:02:42.128Z",
-      "stav": 200
-    },
-    "naliehave": null
-  },
-  {
-    "id": "k-24655c44276cc524",
-    "zachyceno": "2026-09-06T13:59:15.579Z",
-    "publikovano": "2026-09-02T12:40:00.000Z",
-    "zdroj": {
-      "nazev": "Google News — sabotáž",
-      "url": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxPQ3NiTUZ4NHhYWjM5c2hNVkpkcmVxcm9sNlNLQ3ljbGhDLXlGbkU5WXQzbl80dV8zUllrRGtHd3lDcWV1VHozVF9WLTJHY3VYQUhfYUt1eW9sUTNzY3ZHT3hUTzN1N25JSHhBT01idF9DZWpYZFMzM3gxa0xNWU9WWkZIVXRrNWNDOGVRWXUzVGhOaGxKQ0F0WWhiSEdzRzg3Y2FKaGU5WTNGZi0xRlRYZ1l3a29ETFp1MTRkMFRDWGMzQnBhaGJCNVJVaGFmRGUydlE?oc=5",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "„Hrubá chyba,“ řekl Putin k odvetě Berlína. Německo hlásí další sabotáže - Seznam Zprávy",
-    "titulekPuvodni": "„Hrubá chyba,“ řekl Putin k odvetě Berlína. Německo hlásí další sabotáže - Seznam Zprávy",
-    "shrnuti": "",
-    "kodZeme": "DE",
-    "zeme": "Německo",
-    "kategorie": [
-      "sabotaz"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "shody": [
-      "sabotaz"
-    ],
-    "stav": "ceka",
-    "vyrez": {
-      "text": "Google News",
-      "stazeno": "2026-09-14T11:02:42.275Z",
       "stav": 200
     },
     "naliehave": null
