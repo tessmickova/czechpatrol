@@ -42,6 +42,74 @@
     }
   },
   {
+    "id": "k-fb7872f6d42fd530",
+    "zachyceno": "2026-09-16T07:32:46.523Z",
+    "publikovano": "2026-09-16T07:24:00.000Z",
+    "zdroj": {
+      "nazev": "iROZHLAS — zprávy",
+      "url": "https://www.irozhlas.cz/zpravy-domov/pet-lidi-zadrzenych-pri-zasahu-protimafianske-centraly-v-nymburce-je-na-svobode_2609160924_ako",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Pět lidí zadržených při zásahu protimafiánské centrály v Nymburce je na svobodě. Nebyli obviněni",
+    "titulekPuvodni": "Pět lidí zadržených při zásahu protimafiánské centrály v Nymburce je na svobodě. Nebyli obviněni",
+    "shrnuti": "Policie po úterním zásahu Národní centrály proti organizovanému zločinu v Nymburce a na dalších místech zadržela pět lidí. Všechny propustila a nikoho neobvinila. Zásah souvisí s podezřením na trestnou činnost při zadávání veřejných zakázek. V tiskové zprávě o tom ve středu informoval státní zástupc",
+    "kodZeme": "CZ",
+    "zeme": "Česko",
+    "kategorie": [
+      "zpravodajske",
+      "vojsko"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "zadrz",
+      "obvin",
+      "policie"
+    ],
+    "naliehave": null,
+    "stav": "ceka",
+    "vyrez": {
+      "text": "",
+      "stazeno": "2026-09-16T07:32:46.935Z",
+      "stav": 403,
+      "chyba": "HTTP 403"
+    }
+  },
+  {
+    "id": "k-ddd2ee30f97d327e",
+    "zachyceno": "2026-09-16T07:32:46.648Z",
+    "publikovano": "2026-09-16T07:10:30.000Z",
+    "zdroj": {
+      "nazev": "Téma: zeleznice (anglicky)",
+      "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxOdE9VX2Q0QVp2d0xpQmJFQk5XMHpIZ1lwS0NLelM4OUJrcGxrQkFvSUc5SHZKMV9rZl9kRi1TaFZld2d0aXdmbWtNekdaeVJ0d2VFa0ZrS0xlWmtrbUVNMi1KN2s1Q29QcEEwSmNLa0ZHdDM3UFZWV004Ynl4VHpGN3hCZUtaVVpBclRJeEZ4YzZveUF2R0lhbnV3?oc=5",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Rail sabotage: farm activists suspected as police investigate - dutchnews.nl",
+    "titulekPuvodni": "Rail sabotage: farm activists suspected as police investigate - dutchnews.nl",
+    "shrnuti": "Rail sabotage: farm activists suspected as police investigate dutchnews.nl",
+    "kodZeme": "NL",
+    "zeme": "Nizozemsko",
+    "kategorie": [
+      "sabotaz"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "sabotage"
+    ],
+    "naliehave": null,
+    "stav": "ceka",
+    "vyrez": {
+      "text": "Google News",
+      "stazeno": "2026-09-16T07:32:47.061Z",
+      "stav": 200
+    }
+  },
+  {
     "id": "k-42a895b81bf1d567",
     "zachyceno": "2026-09-16T06:32:44.905Z",
     "publikovano": "2026-09-16T06:31:00.000Z",
@@ -4484,6 +4552,39 @@
     "vyrez": {
       "text": "Google News",
       "stazeno": "2026-09-15T18:32:59.300Z",
+      "stav": 200
+    }
+  },
+  {
+    "id": "k-c67a0e11238fca2b",
+    "zachyceno": "2026-09-16T07:32:46.650Z",
+    "publikovano": "2026-09-12T09:15:13.000Z",
+    "zdroj": {
+      "nazev": "Téma: zeleznice (anglicky)",
+      "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxPVEt5aUN2dFVfUVotemdBSkNrWE9NTWZwVERCNHlRVHNFelJJM1oxbjdrdC16a19yaFIxaXJZZ1dwWlBQZHBhc2JDMWZ1RFN6SFVaXzh6NFlNTGVrWGFFZEk5THpWWFQyUFZBZjYtYTV0UWFTZ3pMWHpFUko0emk2UmZ1N1h2Rk5NTzluNE5aZkZKYnlEZW5yTHVZd3Bycmc?oc=5",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "French investigators suspect train derailment was sabotage - France 24",
+    "titulekPuvodni": "French investigators suspect train derailment was sabotage - France 24",
+    "shrnuti": "French investigators suspect train derailment was sabotage France 24",
+    "kodZeme": "FR",
+    "zeme": "Francie",
+    "kategorie": [
+      "sabotaz"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "sabotage",
+      "derailment"
+    ],
+    "naliehave": null,
+    "stav": "ceka",
+    "vyrez": {
+      "text": "Google News",
+      "stazeno": "2026-09-16T07:32:47.219Z",
       "stav": 200
     }
   },
@@ -10193,108 +10294,6 @@
     "vyrez": {
       "text": "Google News",
       "stazeno": "2026-09-14T11:02:41.138Z",
-      "stav": 200
-    },
-    "naliehave": null
-  },
-  {
-    "id": "k-fc724927c6d24ae7",
-    "zachyceno": "2026-09-06T13:59:15.574Z",
-    "publikovano": "2026-09-02T15:32:15.000Z",
-    "zdroj": {
-      "nazev": "Google News — sabotage Europe",
-      "url": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxPc0ZRUmRvbTdIRi1ZQTVsbHJ4ZkViX25jdlo0RzlXbUJNUjdubkc1NjZoUXJfZzdqSDhpZVlJNVFtRGdnY1E2WERoZUFXSU9TYXc4c1lRTTd6NXpfVjU4bmZVRVE4dzRJYlBieU0zZjZNdzZhLVViU1dsdC1IYWNSNVVYRjNpMjNsTEdIaGhMaF9uZGRfa2U1MVR0SUJ0bVFHRDRFbFU4WjFnMEVoWHRCbzg0di1EV1lqYndXTWVPdmZvRG40RHNKaw?oc=5",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Attempted Sabotage In Leipzig Will Only Strengthen EU's Resolve To Help Ukraine — European Commission President - uatv.ua",
-    "titulekPuvodni": "Attempted Sabotage In Leipzig Will Only Strengthen EU's Resolve To Help Ukraine — European Commission President - uatv.ua",
-    "shrnuti": "",
-    "kodZeme": "DE",
-    "zeme": "Německo",
-    "kategorie": [
-      "sabotaz"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "shody": [
-      "sabotage"
-    ],
-    "stav": "ceka",
-    "vyrez": {
-      "text": "Google News",
-      "stazeno": "2026-09-14T11:02:41.265Z",
-      "stav": 200
-    },
-    "naliehave": null
-  },
-  {
-    "id": "k-849a66d5100e4b91",
-    "zachyceno": "2026-09-06T13:59:15.575Z",
-    "publikovano": "2026-09-02T15:05:04.000Z",
-    "zdroj": {
-      "nazev": "Google News — sabotage Europe",
-      "url": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxQSHZrVzJORVFsTmRaTTBnVFhmcWdoRXJpYVlLQjB1cllnYTFMZml2QnF2Y3RIdTFmSGdZc3VGTnp3TWpaRS1DNTdMQlk5VVFaczBSWWEtOFBhVmo4dU5CVl9YNXZaU0pRWmJsMXRwNzhVMW9ZNW9xc3JIcXdNUlBqcFdEdGJVRE0tOHdwdTB3NHRMQV9ZdE5tS1NaV05FalYycjNiOTlJX05MdkxUMXg5a3MteVJsWGdYUE1jR0JMX2JCUUVmdGhyT0dFOVlSQUxaNFdLZ2ZrMNIB3AFBVV95cUxNRDBlbTVWUzFsZmJvanhQRGNyTTFSUXJWZi1odzVsdWRKYmtZMW5YT0FiUmNYVHJySm5GaHBjTzRjdHlOTEFyeU1HeUg0bWpQaFFyZ0ZqVHBkTmRMNXE2ejRSc2o0eEQ1WmEyWGxtNmJPN3VCNDc3bUFaRk1KWUQ1MkxiRGl2bDB6MVBrazVJUXdpM1ZjSTI4aFNMTkxrRzhHWVBZUDFWMTFvVmh6cklxZkFfSGc4cVRVWU9ja0JlNzFCcHlwSzNQejM2aEtzLWhkdXdmQ0x5X1d0TVVl?oc=5",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "EU seeks new Russia sanctions after drone attack as Germany probes sabotage - Business Standard",
-    "titulekPuvodni": "EU seeks new Russia sanctions after drone attack as Germany probes sabotage - Business Standard",
-    "shrnuti": "",
-    "kodZeme": "DE",
-    "zeme": "Německo",
-    "kategorie": [
-      "sabotaz",
-      "drony",
-      "rusko"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "shody": [
-      "sabotage",
-      "dron",
-      "drone",
-      "russia"
-    ],
-    "stav": "ceka",
-    "vyrez": {
-      "text": "Google News",
-      "stazeno": "2026-09-14T11:02:41.387Z",
-      "stav": 200
-    },
-    "naliehave": null
-  },
-  {
-    "id": "k-c9a2e4423d04689d",
-    "zachyceno": "2026-09-06T13:59:15.574Z",
-    "publikovano": "2026-09-02T14:56:00.000Z",
-    "zdroj": {
-      "nazev": "Google News — sabotage Europe",
-      "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxOM3hVWGZEOTdwcXA0dzlyb3I3VVJXeW9pMjhvcFZ0VW9DU0NHelgtQndVeWxZZXBXMWJ1eGlDTGE3dTRjNFZHbTVfb1Zpc0Y5QWgtNTFvWUE3dWFFNmI5UVlvZkFHZC1mWEZsd0VicG51cHRDU0xjWVFOZUlfTHJCckRSNzFQTWJWeklaT3Zhdl9IZGxSTVV2LXJQVS1hSXhpaVJESlNpSEVnWmloQVgzMGtB?oc=5",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "NATO And EU Preparing Response To Russia Over Leipzig Airport Sabotage — Details From Brussels - uatv.ua",
-    "titulekPuvodni": "NATO And EU Preparing Response To Russia Over Leipzig Airport Sabotage — Details From Brussels - uatv.ua",
-    "shrnuti": "",
-    "kodZeme": "DE",
-    "zeme": "Německo",
-    "kategorie": [
-      "sabotaz",
-      "nato",
-      "rusko"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "shody": [
-      "sabotage",
-      "nato",
-      "russia"
-    ],
-    "stav": "ceka",
-    "vyrez": {
-      "text": "Google News",
-      "stazeno": "2026-09-14T11:02:41.528Z",
       "stav": 200
     },
     "naliehave": null
