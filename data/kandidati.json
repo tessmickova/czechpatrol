@@ -80,6 +80,41 @@
     }
   },
   {
+    "id": "k-ab7a6c8042552993",
+    "zachyceno": "2026-09-17T04:32:57.889Z",
+    "publikovano": "2026-09-17T04:24:00.000Z",
+    "zdroj": {
+      "nazev": "Český rozhlas — domácí zprávy",
+      "url": "https://www.irozhlas.cz/zpravy-svet/online-zasah-skladiste-a-obytnych-budov-rusky-utok-na-kyjev-a-odesu-zranil-13_2609170624_dns",
+      "typ": "primary",
+      "primarni": true
+    },
+    "titulek": "ONLINE: Zásah skladiště a obytných budov. Ruský útok na Kyjev a Oděsu zranil 13 lidí včetně dítěte",
+    "titulekPuvodni": "ONLINE: Zásah skladiště a obytných budov. Ruský útok na Kyjev a Oděsu zranil 13 lidí včetně dítěte",
+    "shrnuti": "Ruské vzdušné údery zranily v noci na čtvrtek deset lidí v Kyjevě a tři další včetně dítěte v Oděse, kde byla zasažena 19patrová obytná budova. S odvoláním na ukrajinské úřady to píše agentura AFP.",
+    "kodZeme": "UA",
+    "zeme": "Ukrajina",
+    "kategorie": [
+      "hybridni",
+      "rusko"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "utok na",
+      "rusk"
+    ],
+    "naliehave": null,
+    "stav": "ceka",
+    "vyrez": {
+      "text": "",
+      "stazeno": "2026-09-17T04:32:58.336Z",
+      "stav": 403,
+      "chyba": "HTTP 403"
+    }
+  },
+  {
     "id": "k-fb212ca5cb15e3d9",
     "zachyceno": "2026-09-16T17:03:07.891Z",
     "publikovano": "2026-09-16T16:41:53.000Z",
@@ -10281,39 +10316,6 @@
     "vyrez": {
       "text": "Google News",
       "stazeno": "2026-09-14T10:02:48.201Z",
-      "stav": 200
-    },
-    "naliehave": null
-  },
-  {
-    "id": "k-bca7df7174be3bde",
-    "zachyceno": "2026-09-06T13:59:15.566Z",
-    "publikovano": "2026-09-03T17:36:00.000Z",
-    "zdroj": {
-      "nazev": "Google News — sabotage Europe",
-      "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxNdU14c0RBd3lpQVNUdl9PZFlJTlgyR0R4UVE0QkUyR1NGSlBqdG4zLUhFX1E1OGJuUnk0dHhqa2VxcnZJclJtVFVSR3czaGVGbFRPZ2pSYjJqQXk2OWtvNjNUbzIyYlBybWMxRktQclA2RU9uT1BEX0I4Nms2UjF4SHZFX2tGX0g1eDhSUA?oc=5",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Putin’s long game: Russia’s sabotage campaign aims to break Europe’s support for Ukraine - TVP World",
-    "titulekPuvodni": "Putin’s long game: Russia’s sabotage campaign aims to break Europe’s support for Ukraine - TVP World",
-    "shrnuti": "Putin’s long game: Russia’s sabotage",
-    "kodZeme": "UA",
-    "zeme": "Ukrajina",
-    "kategorie": [
-      "sabotaz",
-      "rusko"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "shody": [
-      "sabotage",
-      "russia"
-    ],
-    "stav": "ceka",
-    "vyrez": {
-      "text": "Google News",
-      "stazeno": "2026-09-14T10:02:48.329Z",
       "stav": 200
     },
     "naliehave": null
