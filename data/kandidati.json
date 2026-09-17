@@ -114,6 +114,41 @@
     }
   },
   {
+    "id": "k-873c3f78ff24394c",
+    "zachyceno": "2026-09-17T00:23:58.193Z",
+    "publikovano": "2026-09-16T14:05:00.000Z",
+    "zdroj": {
+      "nazev": "Téma: vojsko (anglicky)",
+      "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxNU3hMUHZOTVNCWnUxeVg1TWJUUllxQmtIRGlBM3NBNzJQRGJ5LVotUVZLQXlLTkdKMVlmMGZKTzZVNnBVZUZ1SlpmUGZ0ekRIcml6OVhBVUVGUUszUzVBYVByZm1vNXJoM1hrUUxiYXVFYmY5bC1FTjFueHloX09KZVp2ZzUyR083TUhxTg?oc=5",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Belarus has deployed troops to its borders with Poland and Lithuania - shelter.in.ua",
+    "titulekPuvodni": "Belarus has deployed troops to its borders with Poland and Lithuania - shelter.in.ua",
+    "shrnuti": "Belarus has deployed troops to its borders with Poland and Lithuania shelter.in.ua",
+    "kodZeme": "PL",
+    "zeme": "Polsko",
+    "kategorie": [
+      "hranice",
+      "vojsko"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "border+troops",
+      "troops+deployed",
+      "border"
+    ],
+    "naliehave": null,
+    "stav": "ceka",
+    "vyrez": {
+      "text": "Google News",
+      "stazeno": "2026-09-17T00:23:58.355Z",
+      "stav": 200
+    }
+  },
+  {
     "id": "k-307a7ad39eb36a91",
     "zachyceno": "2026-09-16T14:02:52.769Z",
     "publikovano": null,
@@ -10279,39 +10314,6 @@
     "vyrez": {
       "text": "Google News",
       "stazeno": "2026-09-14T10:02:48.329Z",
-      "stav": 200
-    },
-    "naliehave": null
-  },
-  {
-    "id": "k-c5a14dcc78083a4f",
-    "zachyceno": "2026-09-06T13:59:15.567Z",
-    "publikovano": "2026-09-03T17:10:59.000Z",
-    "zdroj": {
-      "nazev": "Google News — sabotage Europe",
-      "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxPNjFYRkNzVDZTeEtYTzE4M1pPVnhTd192WEtLZk9Za19HUEhZSVVFS0paal9seXlOQ0VicEtLSmIwYUdGY0IwMGJtVGVGSVFqejRSWjE2cmMzamZ4Tjh0OEtybEt5SmFUa0FyTUNDMGRWaTJSbjJZVlhyZHpCakJKOU03VmVqcTdVUlhmVm01OA?oc=5",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "European allies sound alarm at more incidents of alleged Russian sabotage - ABC News & Headlines – Australian Broadcasting Corporation",
-    "titulekPuvodni": "European allies sound alarm at more incidents of alleged Russian sabotage - ABC News & Headlines – Australian Broadcasting Corporation",
-    "shrnuti": "European allies sound alarm at mo",
-    "kodZeme": "RU",
-    "zeme": "Rusko",
-    "kategorie": [
-      "sabotaz",
-      "rusko"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "shody": [
-      "sabotage",
-      "russia"
-    ],
-    "stav": "ceka",
-    "vyrez": {
-      "text": "Google News",
-      "stazeno": "2026-09-14T10:02:48.505Z",
       "stav": 200
     },
     "naliehave": null
