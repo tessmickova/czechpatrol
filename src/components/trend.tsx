@@ -59,8 +59,12 @@ function ZnackaTrendu({ nyni, drive }: { nyni: Uroven; drive?: Uroven }) {
   const r = UROVNE[nyni].poradi - UROVNE[drive].poradi;
   if (r === 0) return <span className="flex items-center gap-1 text-drobne text-tlum"><Ikona nazev="minus" velikost={11} tah={2} /> stejně</span>;
   return (
-    <span className={`flex items-center gap-1 text-drobne font-semibold ${r > 0 ? "text-stari-text2" : "text-klid-text"}`}>
-      <Ikona nazev={r > 0 ? "nahoru" : "dolu"} velikost={11} tah={2.2} /> {r > 0 ? "zhoršení" : "zlepšení"}
+    <span className="flex items-center gap-1 text-drobne font-semibold text-tlum">
+      {/* Barvu nese šipka, slovo ne. */}
+      <span className={r > 0 ? "text-stari" : "text-klid"}>
+        <Ikona nazev={r > 0 ? "nahoru" : "dolu"} velikost={11} tah={2.2} />
+      </span>{" "}
+      {r > 0 ? "zhoršení" : "zlepšení"}
     </span>
   );
 }

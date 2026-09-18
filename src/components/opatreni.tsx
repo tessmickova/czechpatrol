@@ -14,10 +14,15 @@ import { SeznamZdroju } from "./zdroje";
 
 type Stav = "plati" | "neplati" | "sledujeme" | "narusen" | "neovereno";
 
+/*
+  Vybarvené je jen „platí" — vyhlášené opatření. Ostatní stavy se poznají
+  po ikoně a slově; tři různě tónované štítky v jednom seznamu znamenaly, že
+  vybarvené je skoro všechno, a tím vybarvení přestalo něco znamenat.
+*/
 const VZHLED: Record<Stav, { slovo: string; tridy: string; ikona: NazevIkony }> = {
   plati: { slovo: "platí", tridy: "border-akcent/40 bg-akcent/10 text-akcent-svetla", ikona: "vystraha" },
-  narusen: { slovo: "narušeno", tridy: "border-oranz/40 bg-oranz/10 text-stari-text2", ikona: "vystraha" },
-  sledujeme: { slovo: "sledujeme", tridy: "border-pozor/40 bg-pozor/10 text-pozor-text", ikona: "oko" },
+  narusen: { slovo: "narušeno", tridy: "border-linka bg-plocha2 text-inkoust", ikona: "vystraha" },
+  sledujeme: { slovo: "sledujeme", tridy: "border-linka bg-plocha2 text-tlum", ikona: "oko" },
   neplati: { slovo: "není vyhlášeno", tridy: "border-linka text-tlum", ikona: "fajfka" },
   neovereno: { slovo: "neověřeno", tridy: "border-dashed border-linka text-tlum2", ikona: "info" },
 };

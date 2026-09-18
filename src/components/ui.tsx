@@ -28,12 +28,33 @@ import { Vlajka } from "./zeme";
 /** Jediná tónová škála webu. Barvy vycházejí z pásem závažnosti. */
 export type Ton = "klid" | "pozor" | "vazne" | "neutral" | "akcent";
 
+/*
+  Tón sdělení.
+
+  Stejné pravidlo jako u pásem závažnosti (src/lib/skala.ts): barva je
+  značka, ne plocha. Stavba odznaku i rámečku je u všech tónů shodná —
+  vlasová linka, tmavá plocha, inkoustové písmo. Tón se pozná po tečce
+  u odznaku a po barvě ikony u rámečku; obojí je malé.
+
+  Dřív se tón podepisoval do písma, rámečku i pozadí naráz, takže zelený,
+  žlutý a červený odznak vedle sebe rozsvítily celý řádek. Rozlišit je šlo
+  i tak, ale přehled to nepřipomínalo.
+*/
 const TONY: Record<Ton, { text: string; ramecek: string; pozadi: string; tecka: string; ikona: NazevIkony }> = {
-  klid: { text: "text-klid-text", ramecek: "border-klid/45", pozadi: "bg-klid/10", tecka: "bg-klid", ikona: "fajfka" },
-  pozor: { text: "text-pozor-text", ramecek: "border-pozor/45", pozadi: "bg-pozor/10", tecka: "bg-pozor", ikona: "vykricnik" },
-  vazne: { text: "text-akcent-svetla", ramecek: "border-akcent/50", pozadi: "bg-akcent/12", tecka: "bg-akcent", ikona: "sirena" },
-  neutral: { text: "text-tlum", ramecek: "border-linka", pozadi: "bg-plocha2", tecka: "bg-tlum2", ikona: "info" },
-  akcent: { text: "text-akcent-svetla", ramecek: "border-akcent/55", pozadi: "bg-akcent/12", tecka: "bg-akcent", ikona: "radar" },
+  klid: { text: "text-tlum", ramecek: "border-linka2", pozadi: "bg-plocha2", tecka: "bg-klid", ikona: "fajfka" },
+  pozor: { text: "text-tlum", ramecek: "border-linka2", pozadi: "bg-plocha2", tecka: "bg-pozor", ikona: "vykricnik" },
+  vazne: { text: "text-tlum", ramecek: "border-linka2", pozadi: "bg-plocha2", tecka: "bg-akcent", ikona: "sirena" },
+  neutral: { text: "text-tlum", ramecek: "border-linka2", pozadi: "bg-plocha2", tecka: "bg-tlum2", ikona: "info" },
+  akcent: { text: "text-tlum", ramecek: "border-linka2", pozadi: "bg-plocha2", tecka: "bg-akcent", ikona: "radar" },
+};
+
+/** Barva ikony podle tónu. Jediné barevné místo v rámečku sdělení. */
+const IKONA_TONU: Record<Ton, string> = {
+  klid: "text-klid",
+  pozor: "text-pozor",
+  vazne: "text-akcent",
+  neutral: "text-tlum2",
+  akcent: "text-akcent",
 };
 
 /* ---------------- tlačítka ---------------- */
@@ -116,6 +137,14 @@ export function Odznak({
         duraz === "silny" ? `border ${t.ramecek} ${t.pozadi} ${t.text}` : `${t.text}`
       } ${trida}`}
     >
+      {/*
+        Tečka místo barevného písma. Odznak tak zůstane čitelný a tón je
+        pořád vidět — jen zabírá 5 px a ne celé slovo. U vlastní ikony
+        a u neutrálního tónu se nekreslí: tam by nic nepřidala.
+      */}
+      {!ikona && ton !== "neutral" && (
+        <span aria-hidden className={`h-[5px] w-[5px] shrink-0 rounded-full ${t.tecka}`} />
+      )}
       {ikona && <Ikona nazev={ikona} velikost={12} tah={2} trida="shrink-0" />}
       {children}
     </span>
@@ -157,7 +186,7 @@ export function Sdeleni({
   const t = TONY[ton];
   return (
     <p className={`flex items-start gap-2.5 rounded-[18px] border ${carkovane ? "border-dashed" : ""} ${t.ramecek} ${t.pozadi} px-4 py-3 text-male leading-relaxed text-tlum ${trida}`}>
-      <span className={`mt-[1px] grid h-[22px] w-[22px] shrink-0 place-items-center rounded-full ${t.text}`}>
+      <span className={`mt-[1px] grid h-[22px] w-[22px] shrink-0 place-items-center rounded-full ${IKONA_TONU[ton]}`}>
         <Ikona nazev={ikona ?? t.ikona} velikost={15} tah={2} />
       </span>
       <span>

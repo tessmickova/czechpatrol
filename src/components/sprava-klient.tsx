@@ -87,7 +87,7 @@ export function SpravaKlient() {
     // První správce vzniká jednorázovým kódem, který zná jen provozovatel.
     return (
       <Karta odstin="pisek" className="max-w-[560px] p-6">
-        <div className="stitek mb-2 !text-jantar">Zavedení správce</div>
+        <div className="stitek mb-2">Zavedení správce</div>
         <h2 className="podnadpis text-velke">Tenhle účet není správce</h2>
         <p className="mt-3 text-zaklad leading-relaxed text-tlum">
           Prvního správce zakládá provozovatel jednorázovým kódem. Další správce pak přidává

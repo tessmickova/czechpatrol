@@ -41,7 +41,7 @@ export default function SoukromiStranka() {
       <Obsah>
         <div className="grid gap-4 md:grid-cols-3">
           <Karta odstin="zelena" className="p-5">
-            <div className="stitek mb-2 !text-klid-text">Čtení webu</div>
+            <div className="stitek mb-2">Čtení webu</div>
             <p className="text-zaklad leading-relaxed text-tlum">Žádné sledovací cookies, žádná analytika třetích stran, žádný účet. Nic se neukládá k vám.</p>
           </Karta>
           <Karta odstin="modra" className="p-5">
@@ -49,7 +49,7 @@ export default function SoukromiStranka() {
             <p className="text-zaklad leading-relaxed text-tlum">Náhodný identifikátor, veřejná část passkey, vaše nastavení. Bez jména, e-mailu a telefonu.</p>
           </Karta>
           <Karta odstin="pisek" className="p-5">
-            <div className="stitek mb-2 !text-jantar">Kanály</div>
+            <div className="stitek mb-2">Kanály</div>
             <p className="text-zaklad leading-relaxed text-tlum">Telegram: číslo chatu. WhatsApp: telefonní číslo. Jen pro doručení, kdykoli smažete.</p>
           </Karta>
         </div>

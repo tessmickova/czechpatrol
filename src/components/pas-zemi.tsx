@@ -1,18 +1,15 @@
 import Link from "next/link";
-import { druh, kdyZjisteno, pripady, type Zaznam } from "@/lib/agregace";
+import { pripady, type Zaznam } from "@/lib/agregace";
 import { PASMA, UROVNE } from "@/lib/skala";
 import type { Kampan, Uroven } from "@/lib/typy";
-import { Ikona } from "./ikony";
 import { sklon, Vlajka } from "./zeme";
 import { PasBeh } from "./pas-beh-klient";
 
 /*
   Běžící pás zemí nahoře.
 
-  Každá země: vlajka, počet incidentů za 90 dnů, barva podle nejvyšší
-  závažnosti v tom období, vykřičníky podle počtu vysokých a vážných
-  případů za 30 dnů (1 = aspoň jeden, 2 = aspoň dva, 3 = aspoň čtyři)
-  a tři tečky = poslední tři záznamy.
+  Každá země: vlajka, počet incidentů za 90 dnů a jedna tečka podle nejvyšší
+  závažnosti v tom období. Nic víc — podrobnosti jsou na stránce země.
 
   Pás sám pomalu jede a zároveň se dá chytit a odtáhnout — viz PasBeh.
   Při omezení pohybu v systému stojí a jen se roluje.
@@ -24,20 +21,16 @@ import { PasBeh } from "./pas-beh-klient";
 
 export function PasZemi({ vse, kampane = [], ted = Date.now() }: { vse: Zaznam[]; kampane?: Kampan[]; ted?: number }) {
   const dni90 = pripady(vse, { dni: 90, ted });
-  const dni30 = pripady(vse, { dni: 30, ted });
   const kampane90 = kampane.filter((k) => ted - new Date(k.odhaleno).getTime() <= 90 * 86_400_000);
   const kody = [...new Set([...dni90.map((i) => i.kodZeme), ...kampane90.flatMap((k) => k.kodyZemi), "CZ"])];
   const zeme = kody.map((kod) => {
     const p = dni90.filter((i) => i.kodZeme === kod);
     const kp = kampane90.filter((k) => k.kodyZemi.includes(kod));
-    const vysoke = dni30.filter((i) => i.kodZeme === kod && ["oranzova", "cervena"].includes(UROVNE[i.zavaznost].pasmo)).length;
     const urovne: Uroven[] = [...p.map((i) => i.zavaznost), ...kp.map((k) => k.zavaznost)];
     const nej = urovne.reduce<Uroven | null>((m, u) => (!m || UROVNE[u].poradi > UROVNE[m].poradi ? u : m), null);
-    const posledni = vse.filter((i) => i.kodZeme === kod).sort((a, b) => kdyZjisteno(b).localeCompare(kdyZjisteno(a))).slice(0, 3);
     return {
       kod, nazev: kod === "CZ" ? "Česko" : p[0]?.zeme ?? vse.find((i) => i.kodZeme === kod)?.zeme ?? kod,
-      pocet: p.length + kp.length, kampani: kp.length,
-      vykricniky: vysoke >= 4 ? 3 : vysoke >= 2 ? 2 : vysoke >= 1 ? 1 : 0, nej, posledni,
+      pocet: p.length + kp.length, kampani: kp.length, nej,
     };
   }).sort((a, b) => (a.kod === "CZ" ? -1 : b.kod === "CZ" ? 1 : b.pocet - a.pocet));
 
@@ -48,24 +41,28 @@ export function PasZemi({ vse, kampane = [], ted = Date.now() }: { vse: Zaznam[]
         key={`${z.kod}${sufix}`}
         href={`/zeme/${z.kod.toLowerCase()}/`}
         title={`${z.nazev}: ${z.pocet} ${sklon(z.pocet, "incident", "incidenty", "incidentů")} za 90 dnů${z.kampani ? ` (z toho ${z.kampani} ${sklon(z.kampani, "operace proti občanům", "operace proti občanům", "operací proti občanům")})` : ""}${z.nej ? `, nejvyšší závažnost ${UROVNE[z.nej].nazev}` : ""}`}
-        className={`mx-1 inline-flex h-[34px] shrink-0 items-center gap-2 rounded-[12px] border px-2.5 text-drobne hover:bg-plocha2 ${t ? `${t.ramecek} ${t.pozadi}` : "border-linka2 bg-plocha"}`}
+        className="mx-1 inline-flex h-[34px] shrink-0 items-center gap-2 rounded-[12px] border border-linka2 bg-plocha px-2.5 text-drobne hover:bg-plocha2"
       >
         <Vlajka kod={z.kod} />
         <span className="font-semibold text-inkoust">{z.nazev}</span>
-        <span className={`cislice text-zaklad font-bold ${t ? t.text : "text-tlum2"}`}>{z.pocet}</span>
-        {z.vykricniky > 0 && (
-          <span aria-label={`${z.vykricniky === 3 ? "velmi vysoká" : z.vykricniky === 2 ? "vysoká" : "zvýšená"} aktivita`} className="flex gap-[1px] text-akcent">
-            {Array.from({ length: z.vykricniky }, (_, i) => <Ikona key={i} nazev="vykricnik" velikost={12} tah={2.6} />)}
-          </span>
-        )}
-        <span aria-hidden className="flex gap-[3px]">
-          {[0, 1, 2].map((i) => {
-            const z3 = z.posledni[i];
-            if (!z3) return <span key={i} className="h-[6px] w-[6px] rounded-full border border-linka" />;
-            const tt = PASMA[UROVNE[z3.zavaznost].pasmo];
-            return <span key={i} className={`h-[6px] w-[6px] rounded-full ${druh(z3) === "pripad" ? tt.tecka : "border border-tlum2"}`} title={z3.kratkyTitulek || z3.titulek} />;
-          })}
-        </span>
+        <span className="cislice text-zaklad font-bold text-inkoust">{z.pocet}</span>
+        {/*
+          Jedna tečka na dlaždici, a to je všechno.
+
+          Dřív nesla každá dlaždice šest barevných signálů naráz: barevný
+          rámeček, tónované pozadí, barevný počet, až tři červené vykřičníky
+          a tři tečky posledních záznamů. Dvacet takových dlaždic v jedné
+          řadě nahoře na stránce byla duha, ve které se nedalo poznat, která
+          země je na tom zle — a právě to měl pás říkat.
+
+          Zůstává nejvyšší závažnost za devadesát dní jako tečka. Počty,
+          druhy a jednotlivé záznamy jsou na stránce země, kam dlaždice vede;
+          plné znění je v title.
+        */}
+        <span
+          aria-hidden
+          className={`h-[7px] w-[7px] shrink-0 rounded-full ${t ? t.tecka : "border border-linka"}`}
+        />
       </Link>
     );
   });

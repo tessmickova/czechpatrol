@@ -35,7 +35,7 @@ export default function PodminkyStranka() {
       />
       <Obsah>
         <Karta odstin="pisek" className="p-6">
-          <div className="stitek mb-2 !text-jantar">Nejdůležitější věta</div>
+          <div className="stitek mb-2">Nejdůležitější věta</div>
           <p className="text-vetsi leading-relaxed text-inkoust">
             CzechPatrol není úřední zdroj ani varovný systém. V krizi se řiďte pokyny státních orgánů
             a složek integrovaného záchranného systému, ne tímto webem.

@@ -61,7 +61,7 @@ export function DopadPoZemich() {
                     <span className="stitek">nejvyšší závažnost</span>
                   </>
                 ) : (
-                  <span className="stitek !text-klid-text">žádný zveřejněný záznam</span>
+                  <span className="stitek">žádný zveřejněný záznam</span>
                 )}
               </span>
             </div>

@@ -51,12 +51,18 @@ const TON_JISTOTY: Record<Jistota, Ton> = {
   nizka: "neutral",
 };
 
+/*
+  Štítky jistoty mají u všech tónů stejnou stavbu. Zeleně vybarvené
+  „zásah: doloženo" a žluté „původce: podezření" vedle sebe rozsvítily
+  každou kartu; jistota se přitom dá přečíst ze slova a tón stačí naznačit
+  tečkou, kterou přidává Odznak.
+*/
 const RAMECEK_JISTOTY: Record<Ton, string> = {
-  klid: "border-klid/50 bg-klid/10 text-klid-text",
-  pozor: "border-pozor/45 bg-pozor/10 text-pozor-text",
-  vazne: "border-akcent/50 bg-akcent/12 text-akcent-svetla",
-  neutral: "border-linka bg-plocha2 text-tlum",
-  akcent: "border-akcent/55 bg-akcent/12 text-akcent-svetla",
+  klid: "border-linka2 bg-plocha2 text-tlum",
+  pozor: "border-linka2 bg-plocha2 text-tlum",
+  vazne: "border-linka2 bg-plocha2 text-tlum",
+  neutral: "border-linka2 bg-plocha2 text-tlum",
+  akcent: "border-linka2 bg-plocha2 text-tlum",
 };
 
 function StitekJistoty({ otazka, odpoved, jistota, duvod }: { otazka: string; odpoved: string; jistota: Jistota; duvod: string }) {
@@ -259,8 +265,14 @@ export function DlazdiceKampane({ k, nazvyZemi, siroka = false }: { k: Kampan; n
         {k.titulek}
       </span>
       <span className={`flex flex-wrap gap-1.5 ${siroka ? "sm:col-start-1" : ""}`}>
+        {/*
+          Metody jsou neutrální štítky. Červeně vybarvených pilulek bylo
+          na kartě až pět a v karuselu jich svítily desítky — červená je
+          přitom u téhle značky vyhrazená značce, hlavní akci a mimořádné
+          výstraze, ne výčtu použitých postupů.
+        */}
         {k.metody.filter((m): m is Metoda => m in METODY).slice(0, 3).map((m) => (
-          <span key={m} className="inline-flex rounded-full border border-akcent/40 bg-akcent/10 px-2.5 py-1 text-mikro font-bold text-akcent-svetla">
+          <span key={m} className="inline-flex rounded-full border border-linka2 bg-plocha2 px-2.5 py-1 text-mikro font-semibold text-tlum">
             {METODY[m].nazev}
           </span>
         ))}

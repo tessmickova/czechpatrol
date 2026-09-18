@@ -17,10 +17,11 @@ import type { Uroven } from "@/lib/typy";
 
 export type TonUdaje = "neutral" | "dobry" | "pozor";
 
+/* Barvu nese jen pruh; popisek zůstává neutrální, aby řádek nesvítil dvakrát. */
 const TONY: Record<TonUdaje, { pruh: string; popisek: string }> = {
   neutral: { pruh: "bg-linka", popisek: "text-tlum2" },
-  dobry: { pruh: "bg-klid", popisek: "text-klid-text" },
-  pozor: { pruh: "bg-pozor", popisek: "text-pozor-text" },
+  dobry: { pruh: "bg-klid", popisek: "text-tlum2" },
+  pozor: { pruh: "bg-pozor", popisek: "text-tlum2" },
 };
 
 export function Udaj({

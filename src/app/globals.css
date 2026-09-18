@@ -179,10 +179,18 @@ html {
 }
 
 body {
-  /* Dvě záře v rozích: červená vlevo, chladná vpravo. Hluboký inkoust pod nimi. */
+  /*
+    Dvě záře v rozích: červená vlevo, chladná vpravo. Hluboký inkoust pod nimi.
+
+    Obě jsou tlumené. Dřív měly krytí 0,34 a 0,28 a pod nimi ještě parallaxová
+    vrstva s dalšími dvěma — červená se tak sčítala do vínového závoje přes
+    celou stránku, který navíc nikam neodroloval. Barevný podklad je první
+    věc, kterou oko přečte, a u bezpečnostního přehledu nemá co říct. Záře
+    má být znát jako materiál, ne jako barva.
+  */
   background:
-    radial-gradient(1100px 620px at 12% -8%, rgba(193, 39, 45, 0.34) 0%, rgba(193, 39, 45, 0) 62%),
-    radial-gradient(900px 560px at 92% 8%, rgba(90, 110, 150, 0.28) 0%, rgba(90, 110, 150, 0) 60%),
+    radial-gradient(1100px 620px at 12% -8%, rgba(193, 39, 45, 0.13) 0%, rgba(193, 39, 45, 0) 62%),
+    radial-gradient(900px 560px at 92% 8%, rgba(90, 110, 150, 0.12) 0%, rgba(90, 110, 150, 0) 60%),
     var(--color-papir);
   background-attachment: fixed;
   color: var(--color-inkoust);
@@ -522,8 +530,8 @@ html, body { overflow-x: clip; }
   z-index: -1;
   pointer-events: none;
   background:
-    radial-gradient(760px 520px at 14% 12%, rgb(193 39 45 / 0.18) 0%, rgb(193 39 45 / 0) 62%),
-    radial-gradient(680px 480px at 88% 68%, rgb(90 110 150 / 0.16) 0%, rgb(90 110 150 / 0) 60%);
+    radial-gradient(760px 520px at 14% 12%, rgb(193 39 45 / 0.07) 0%, rgb(193 39 45 / 0) 62%),
+    radial-gradient(680px 480px at 88% 68%, rgb(90 110 150 / 0.07) 0%, rgb(90 110 150 / 0) 60%);
 }
 .paralax-znacka {
   position: absolute;

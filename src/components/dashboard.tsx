@@ -50,10 +50,21 @@ type Ton = "klid" | "pozor" | "plati" | "nedolozeno" | "nevime";
   (ikona) a slovo — jinak by dlaždice nic neříkala tomu, kdo barvy nerozliší,
   ani tomu, kdo si web vytiskne černobíle.
 */
+/*
+  Plocha dlaždice je u všech tónů stejná; tón se pozná po tečce, ikoně a slově.
+
+  Tónovaná pozadí a barevné rámečky dělaly z mřížky dvanácti stavů barevnou
+  mozaiku, ve které se „platí" nedalo odlišit od „sledujeme" rychleji než
+  přečtením. Barva pomáhá, dokud jí není moc.
+
+  Výjimka je jediná: „platí", tedy vyhlášené mimořádné opatření. Tam je
+  tenká akcentní linka opodstatněná — je to ta jedna dlaždice, kterou má
+  člověk najít bez čtení.
+*/
 const TON: Record<Ton, { dlazdice: string; tecka: string; slovo: string; ikona: NazevIkony }> = {
-  klid: { dlazdice: "border-linka2 bg-plocha", tecka: "bg-klid", slovo: "text-klid-text", ikona: "fajfka" },
-  pozor: { dlazdice: "border-pozor/40 bg-pozor/10", tecka: "bg-pozor", slovo: "text-pozor-text", ikona: "vykricnik" },
-  plati: { dlazdice: "border-akcent/50 bg-akcent/12", tecka: "bg-akcent", slovo: "text-akcent-svetla", ikona: "sirena" },
+  klid: { dlazdice: "border-linka2 bg-plocha", tecka: "bg-klid", slovo: "text-inkoust", ikona: "fajfka" },
+  pozor: { dlazdice: "border-linka2 bg-plocha", tecka: "bg-pozor", slovo: "text-inkoust", ikona: "vykricnik" },
+  plati: { dlazdice: "border-akcent/45 bg-plocha", tecka: "bg-akcent", slovo: "text-inkoust", ikona: "sirena" },
   /*
     „Nedoloženo" je vlastní tón, ne zelená. Znamená: v kontrolovaných zdrojích
     jsme nic nenašli, ale úplný seznam nemáme. Zelená by tvrdila ověřený klid,

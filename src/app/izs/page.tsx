@@ -49,7 +49,7 @@ export default function IzsStranka() {
 
         <div className="mt-10 grid gap-4 lg:grid-cols-2">
           <Karta odstin="pisek" className="p-6">
-            <div className="stitek mb-2 !text-jantar">Co to není</div>
+            <div className="stitek mb-2">Co to není</div>
             <h2 className="podnadpis text-velke">Ne úřední varování</h2>
             <ul className="mt-3 space-y-2 text-zaklad leading-relaxed text-tlum">
               <li>Oficiální varování obyvatel běží přes jednotný systém varování a vyrozumění (sirény, státní SMS, veřejnoprávní média). CzechPatrol ho nenahrazuje a nikdy se za něj nevydává.</li>

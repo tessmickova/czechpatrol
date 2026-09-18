@@ -132,7 +132,7 @@ export function PolozkaZpravy({ z, akce }: { z: ZpravaIzs; akce?: React.ReactNod
       {z.platnostDo && <p className="stitek mt-2">platí do {datumCas(z.platnostDo)}</p>}
       {z.poznamka && <p className="mt-2 text-male text-tlum">Poznámka správce: {z.poznamka}</p>}
       {typeof z.doruceno === "number" && z.stav === "odeslano" && (
-        <p className="stitek mt-2 !text-klid-text">doručeno {z.doruceno}× </p>
+        <p className="stitek mt-2">doručeno {z.doruceno}× </p>
       )}
       {akce && <div className="mt-3 flex flex-wrap gap-2">{akce}</div>}
     </li>

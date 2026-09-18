@@ -37,6 +37,39 @@ Pásma závažnosti musí projít na tmavém podkladu, proto jsou svítivá: ní
 `#5cbf8a`, střední `#d9b24c`, zvýšená `#e08a3c`, vysoká `#e8763f`, vážná
 `#e8484f`. Barva nikdy nenese informaci sama — vždy ji doprovází slovo.
 
+### Barva je značka, ne plocha
+
+Tohle je hlavní pravidlo webu a platí přede všemi ostatními. Web je
+**neutrální**: tmavá plocha, inkoustové písmo, vlasové linky. Barva přichází
+až potom, málo a v malém.
+
+**Barva smí být:**
+
+- tečka do 8 px vedle slova,
+- pruh v grafu (6 px),
+- bod nebo dílek v přístroji (budík, pavučina),
+- ikona v rámečku sdělení.
+
+**Barva nesmí být:**
+
+- tónované pozadí karty, dlaždice nebo pilulky,
+- barevný rámeček (výjimka: jediná dlaždice s vyhlášeným opatřením),
+- barevné písmo — ani nadpis, ani číslo, ani slovo úrovně,
+- záře, `drop-shadow` ani barevný přechod pod obsahem.
+
+Slovo nese význam, barva ho jen ukazuje. Úroveň je na webu vždycky napsaná,
+takže neutrální písmo nic neztrácí — jen přestane křičet.
+
+**Červená `akcent` je vyhrazená** značce, hlavní akci a mimořádné výstraze.
+Závažnost jednotlivého záznamu, počet případů, zdražení nafty ani použitá
+metoda manipulace ji nedostanou; ty mají tečku.
+
+> Odkud pravidlo pochází: závažnost se dřív podepisovala do rámečku, pozadí,
+> písma, tečky i pruhu naráz. Na jedné obrazovce se sešlo šest odstínů
+> v desítkách prvků a výsledek působil jako dětské hřiště, ne jako
+> bezpečnostní přehled. A hlavně: když je barevné všechno, neznamená barva
+> nic — vážná věc se nemá jak odlišit od běžné.
+
 ## Písmo
 
 Archivo nese nadpisy, tlačítka i běžný text. IBM Plex Mono nese popisky, čísla,

@@ -38,8 +38,13 @@ function Cena({ s }: { s: StavPaliva }) {
         </span>
       </span>
       <span className="flex items-center gap-2">
+        {/*
+          Skok v ceně je údaj, ne poplach. Akcentní červená patří značce,
+          hlavní akci a mimořádné výstraze; zdražení nafty o korunu do té
+          společnosti nepatří. Že je skok neobvyklý, řekne odznak vedle.
+        */}
         {zmena && (
-          <span className={`cislice text-drobne ${s.skok ? (roste ? "text-akcent-svetla" : "text-klid-text") : "text-tlum2"}`}>
+          <span className={`cislice text-drobne ${s.skok ? "text-tlum" : "text-tlum2"}`}>
             {zmena} Kč za týden
           </span>
         )}

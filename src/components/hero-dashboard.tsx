@@ -186,14 +186,17 @@ export function HeroDashboard({
         na přístroji.
       */}
       <div className="flex flex-wrap items-center gap-x-4 gap-y-1 border-t border-linka2 px-5 py-2.5 text-mikro text-tlum2 sm:px-7">
+        {/* Barvu nese šipka, slovo zůstává neutrální — jinak svítí celý řádek dvakrát. */}
         {stav.trend === "nahoru" && (
-          <span className="flex items-center gap-1 font-semibold text-stari-text2">
-            <Ikona nazev="nahoru" velikost={11} tah={2.2} />{t("zhoršení za 7 dní")}
+          <span className="flex items-center gap-1 font-semibold text-tlum">
+            <span className="text-stari"><Ikona nazev="nahoru" velikost={11} tah={2.2} /></span>
+            {t("zhoršení za 7 dní")}
           </span>
         )}
         {stav.trend === "dolu" && (
-          <span className="flex items-center gap-1 font-semibold text-klid-text">
-            <Ikona nazev="dolu" velikost={11} tah={2.2} />{t("zlepšení za 7 dní")}
+          <span className="flex items-center gap-1 font-semibold text-tlum">
+            <span className="text-klid"><Ikona nazev="dolu" velikost={11} tah={2.2} /></span>
+            {t("zlepšení za 7 dní")}
           </span>
         )}
         {stav.trend === "beze-zmeny" && <span>{t("beze změny 7 dní")}</span>}

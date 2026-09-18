@@ -40,8 +40,24 @@ export function ObloukovyMerak({
 
   const t = uroven ? PASMA[UROVNE[uroven].pasmo] : null;
   const barvaAktivni = t ? (naNoci ? t.plnaNoc : t.plna) : "#9d9a92";
-  // Prázdný díl oblouku na tmavém podkladu: patrný, ale nesmí soupeřit s barvou úrovně.
-  const barvaPrazdna = "rgba(255,255,255,0.14)";
+  /*
+    Prázdný díl oblouku a díly pod aktivním: patrné, ale nesmí soupeřit
+    s barvou úrovně. Jako tokeny, ne natvrdo — bílé krytí je na světlém
+    podkladu neviditelné a ve světlém režimu z budíku zbyl jediný barevný
+    dílek ve vzduchu.
+  */
+  const barvaPrazdna = "var(--color-linka)";
+  /*
+    Barevný je jen dílek, na kterém hodnocení stojí; dílky pod ním jsou
+    světlý inkoust.
+
+    Dřív jich svítilo barvou všech třináct, se stoupající průhledností a
+    se `drop-shadow` kolem každého — tři takové budíky vedle sebe udělaly
+    z hlavičky neon. Přístroj má mít ručičku, ne podsvícený ciferník:
+    kde hodnocení je, řekne jedna barevná značka na konci stupnice, a že
+    stupnice pokračuje dál, řeknou prázdné dílky napravo.
+  */
+  const barvaPod = "var(--color-tlum2)";
 
   return (
     <svg
@@ -59,9 +75,7 @@ export function ObloukovyMerak({
           fill="none"
           strokeWidth={sirka}
           strokeLinecap="butt"
-          stroke={s.i < aktivni ? barvaAktivni : barvaPrazdna}
-          opacity={s.i < aktivni ? (0.55 + (0.45 * (s.i + 1)) / Math.max(1, aktivni)) : 1}
-          style={s.i < aktivni ? { filter: `drop-shadow(0 0 4px ${barvaAktivni})` } : undefined}
+          stroke={s.i === aktivni - 1 ? barvaAktivni : s.i < aktivni ? barvaPod : barvaPrazdna}
         />
       ))}
 
@@ -81,15 +95,8 @@ export function ObloukovyMerak({
         fontWeight="700"
         letterSpacing="0.3"
         style={{ textTransform: "uppercase" }}
-        fill={
-          uroven
-            ? naNoci
-              ? PASMA[UROVNE[uroven].pasmo].plnaNoc
-              : PASMA[UROVNE[uroven].pasmo].plna
-            : naNoci
-              ? "var(--color-tlum2)"
-              : "#9d9a92"
-        }
+        /* Slovo je inkoust. Barvu úrovně nese dílek oblouku nad ním. */
+        fill={uroven ? "var(--color-inkoust)" : "var(--color-tlum2)"}
       >
         {popisek ?? (uroven ? UROVNE[uroven].nazev : "Zatím nestanoveno")}
       </text>
@@ -166,18 +173,26 @@ export function RadarTlaku({
           key={p}
           points={osy.map((_, i) => bodOsy(i, p).map((x) => x.toFixed(1)).join(",")).join(" ")}
           fill="none"
-          stroke="rgba(255,255,255,0.12)"
+          stroke="var(--color-linka)"
           strokeWidth="1"
         />
       ))}
       {osy.map((_, i) => {
         const [x, y] = bodOsy(i, 1);
-        return <line key={i} x1={cx} y1={cy} x2={x} y2={y} stroke="rgba(255,255,255,0.12)" strokeWidth="1" />;
+        return <line key={i} x1={cx} y1={cy} x2={x} y2={y} stroke="var(--color-linka)" strokeWidth="1" />;
       })}
 
       {maUdaje && (
         <>
-          <polygon points={body.join(" ")} fill="rgba(232,72,79,0.16)" stroke="var(--color-akcent)" strokeWidth="1.6" />
+          {/*
+            Obrazec je neutrální, barvu nesou body na osách.
+
+            Červený obrazec na každé z třinácti karet karuselu znamenal
+            třináct červených pavučin v jedné řadě — a červená je u téhle
+            značky vyhrazená značce, hlavní akci a mimořádné výstraze.
+            Tvar obrazce nese informaci sám, barvu k tomu nepotřebuje.
+          */}
+          <polygon points={body.join(" ")} fill="var(--color-noc)" stroke="var(--color-tlum2)" strokeWidth="1.4" />
           {osy.map((o, i) => {
             const [x, y] = bodOsy(i, Math.max(podily[i], 0.02));
             const barva = o.uroven ? PASMA[UROVNE[o.uroven].pasmo].plnaNoc : "#9d9a92";

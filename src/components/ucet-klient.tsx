@@ -80,7 +80,7 @@ function Prihlaseni({ po }: { po: () => void }) {
   if (novyKod) {
     return (
       <Karta odstin="pisek" className="p-6">
-        <div className="stitek mb-2 !text-jantar">Jednou a naposledy</div>
+        <div className="stitek mb-2">Jednou a naposledy</div>
         <h2 className="podnadpis text-velke">Uložte si obnovovací kód</h2>
         <p className="mt-3 max-w-[60ch] text-zaklad leading-relaxed text-tlum">
           Účet nemá e-mail ani telefon, takže není kam poslat „zapomenuté heslo“. Tenhle kód je
@@ -277,7 +277,7 @@ function Nastaveni({
           </div>
           {novyKod && (
             <div className="mt-4 rounded-[22px] border border-jantar/40 bg-jantar/10 p-4">
-              <div className="stitek mb-2 !text-jantar">Nový kód — uvidíte ho jen teď</div>
+              <div className="stitek mb-2">Nový kód — uvidíte ho jen teď</div>
               <div className="velke-cislo select-all break-all text-velke tracking-[0.08em] text-jantar">{novyKod}</div>
               <button type="button" onClick={() => setNovyKod(null)} className="mt-3 text-male text-tlum underline underline-offset-4 hover:text-inkoust">Mám uloženo, skrýt</button>
             </div>

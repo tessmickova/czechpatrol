@@ -123,12 +123,39 @@ export const UROVNE: Record<Uroven, DefiniceUrovne> = {
  * ukazují na stejné, dostatečně svítivé odstíny — barva musí projít na tmavém.
  * Sada „Noc“ zůstává kvůli komponentám, které ji dostávají explicitně.
  */
+/*
+  Barvy pásem.
+
+  Pravidlo, které tady drží celý web pohromadě: **barva je značka, ne plocha.**
+
+  Dřív nesla úroveň závažnosti pět věcí naráz — barevný rámeček, tónované
+  pozadí, barevné písmo, barevnou tečku a barevný pruh. Na jedné obrazovce
+  se tak sešlo šest odstínů v desítkách prvků a výsledek vypadal jako dětské
+  hřiště, ne jako bezpečnostní přehled. A hlavně: když je barevné všechno,
+  neznamená barva nic. Vážná věc se nemá jak odlišit od běžné.
+
+  Proto:
+  - `tecka`, `pruh`, `plna` barvu NESOU — je to malá značka (tečka do 8 px,
+    tenký pruh, bod v grafu). Tam je barva čitelná a nekřičí.
+  - `text`, `ramecek`, `pozadi` jsou NEUTRÁLNÍ. Písmo je inkoust, rámeček
+    vlasová linka, plocha tmavá jako zbytek webu.
+
+  Význam se tím neztrácí: úroveň je na webu vždycky napsaná i slovem, barva
+  byla jen zdvojení. Rozlišení zůstává — jen se přesunulo do tečky vedle
+  slova místo do slova samotného.
+
+  Červený akcent značky je vyhrazený značce, hlavní akci a mimořádné
+  výstraze. Závažnost jednotlivého záznamu ho nepoužívá; ta má tečku.
+*/
 export const PASMA: Record<Pasmo, {
   nazev: string;
+  /** Barevná tečka. Jediné místo, kde barva pásma stojí sama. */
   tecka: string;
+  /** Neutrální písmo. Úroveň nese slovo, barvu vedle něj nese tečka. */
   text: string;
   ramecek: string;
   pozadi: string;
+  /** Tenký pruh v grafu — barva na 6 px je údaj, ne výzdoba. */
   pruh: string;
   plna: string;
   /* na tmavém podkladu — dnes totéž, ponecháno kvůli rozhraní */
@@ -140,38 +167,38 @@ export const PASMA: Record<Pasmo, {
 }> = {
   zelena: {
     nazev: "Nízká",
-    tecka: "bg-klid", text: "text-klid-text", ramecek: "border-klid/35",
-    pozadi: "bg-klid/12", pruh: "bg-klid", plna: "#5cbf8a",
-    teckaNoc: "bg-klid", textNoc: "text-klid-text", ramecekNoc: "border-klid/35",
-    pozadiNoc: "bg-klid/12", plnaNoc: "#5cbf8a",
+    tecka: "bg-klid", text: "text-inkoust", ramecek: "border-linka2",
+    pozadi: "bg-plocha", pruh: "bg-klid", plna: "#5cbf8a",
+    teckaNoc: "bg-klid", textNoc: "text-inkoust", ramecekNoc: "border-linka2",
+    pozadiNoc: "bg-plocha", plnaNoc: "#5cbf8a",
   },
   zluta: {
     nazev: "Střední",
-    tecka: "bg-pozor", text: "text-pozor-text", ramecek: "border-pozor/35",
-    pozadi: "bg-pozor/12", pruh: "bg-pozor", plna: "#d9b24c",
-    teckaNoc: "bg-pozor", textNoc: "text-pozor-text", ramecekNoc: "border-pozor/35",
-    pozadiNoc: "bg-pozor/12", plnaNoc: "#d9b24c",
+    tecka: "bg-pozor", text: "text-inkoust", ramecek: "border-linka2",
+    pozadi: "bg-plocha", pruh: "bg-pozor", plna: "#d9b24c",
+    teckaNoc: "bg-pozor", textNoc: "text-inkoust", ramecekNoc: "border-linka2",
+    pozadiNoc: "bg-plocha", plnaNoc: "#d9b24c",
   },
   prechod: {
     nazev: "Zvýšená",
-    tecka: "bg-stari", text: "text-stari-text", ramecek: "border-stari/35",
-    pozadi: "bg-stari/12", pruh: "bg-stari", plna: "#e08a3c",
-    teckaNoc: "bg-stari", textNoc: "text-stari-text", ramecekNoc: "border-stari/35",
-    pozadiNoc: "bg-stari/12", plnaNoc: "#e08a3c",
+    tecka: "bg-stari", text: "text-inkoust", ramecek: "border-linka2",
+    pozadi: "bg-plocha", pruh: "bg-stari", plna: "#e08a3c",
+    teckaNoc: "bg-stari", textNoc: "text-inkoust", ramecekNoc: "border-linka2",
+    pozadiNoc: "bg-plocha", plnaNoc: "#e08a3c",
   },
   oranzova: {
     nazev: "Vysoká",
-    tecka: "bg-oranz", text: "text-stari-text2", ramecek: "border-oranz/35",
-    pozadi: "bg-oranz/12", pruh: "bg-oranz", plna: "#e8763f",
-    teckaNoc: "bg-oranz", textNoc: "text-stari-text2", ramecekNoc: "border-oranz/35",
-    pozadiNoc: "bg-oranz/12", plnaNoc: "#e8763f",
+    tecka: "bg-oranz", text: "text-inkoust", ramecek: "border-linka2",
+    pozadi: "bg-plocha", pruh: "bg-oranz", plna: "#e8763f",
+    teckaNoc: "bg-oranz", textNoc: "text-inkoust", ramecekNoc: "border-linka2",
+    pozadiNoc: "bg-plocha", plnaNoc: "#e8763f",
   },
   cervena: {
     nazev: "Vážná",
-    tecka: "bg-akcent", text: "text-akcent-svetla", ramecek: "border-akcent/40",
-    pozadi: "bg-akcent/12", pruh: "bg-akcent", plna: "#e8484f",
-    teckaNoc: "bg-akcent", textNoc: "text-akcent-svetla", ramecekNoc: "border-akcent/40",
-    pozadiNoc: "bg-akcent/12", plnaNoc: "#e8484f",
+    tecka: "bg-akcent", text: "text-inkoust", ramecek: "border-linka2",
+    pozadi: "bg-plocha", pruh: "bg-akcent", plna: "#e8484f",
+    teckaNoc: "bg-akcent", textNoc: "text-inkoust", ramecekNoc: "border-linka2",
+    pozadiNoc: "bg-plocha", plnaNoc: "#e8484f",
   },
 };
 
