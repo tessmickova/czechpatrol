@@ -51,7 +51,16 @@ export function Navigace() {
           <span className="hidden sm:block"><Logo velikost={34} pismo={19} tmave /></span>
         </Odkaz>
 
-        <nav aria-label={t("Hlavní")} className="hidden items-center gap-1 md:flex">
+        {/*
+          Vodorovná nabídka až od 1024 px, ne od 768.
+
+          Šest položek, tlačítko Podpořit, přepínač jazyka a menu se do
+          tabletové šířky nevešly: řádek se nezalomil (flex-nowrap), jen
+          přetekl doleva přes logo, takže „PŘEHLED" leželo na slově
+          „CzechPatrol". Pod 1024 px vede nabídka přes tlačítko menu, které
+          je na liště pořád.
+        */}
+        <nav aria-label={t("Hlavní")} className="hidden items-center gap-1 lg:flex">
           {HLAVNI.map((o) => (
             <Odkaz
               key={o.href}
@@ -72,7 +81,7 @@ export function Navigace() {
           <Odkaz
             href="/podporit/"
             // Jediná plná plocha v hlavičce: na tmavém podkladu papír, po najetí červená.
-            className="hidden rounded-full bg-inkoust px-5 py-2.5 text-drobne font-semibold uppercase tracking-[0.06em] text-papir transition-colors hover:bg-akcent hover:text-papir md:inline-block"
+            className="hidden rounded-full bg-inkoust px-5 py-2.5 text-drobne font-semibold uppercase tracking-[0.06em] text-papir transition-colors hover:bg-akcent hover:text-papir lg:inline-block"
             style={{ fontFamily: "var(--font-mono)" }}
           >
             Podpořit
