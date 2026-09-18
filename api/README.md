@@ -42,8 +42,23 @@ V GitHubu (Settings → Secrets and variables → Actions):
 | variable | `TELEGRAM_BOT_JMENO` | uživatelské jméno bota bez @ (pro odkaz `t.me/...`) |
 | secret | `TELEGRAM_WEBHOOK_SECRET` | náhodný řetězec; Telegram ho posílá v hlavičce každé zprávy |
 | secret | `WHATSAPP_TOKEN`, `WHATSAPP_PHONE_ID` | WhatsApp Cloud API (Meta Business) — bez nich se WhatsApp nenabízí |
+| variable | `SPRAVCE_CHAT` | chat na Telegramu, kam hlídač hlásí, že sběr přestal běžet |
+| variable | `TELEGRAM_KANAL` | veřejný kanál; hlídač do něj napíše až po 12 h bez sběru |
 
 Prázdné tajemství = kanál vypnutý. Web i API to poznají a nic nepředstírají.
+
+### Hlídač sběru
+
+Worker po každém kopnutí do sběru přečte na GitHubu, jak běhy dopadly. Když
+poslední **úspěšný** sběr proběhl před více než třemi hodinami, napíše na
+`SPRAVCE_CHAT`; po dvanácti hodinách i do `TELEGRAM_KANAL`, protože odběratel
+má právo vědět, že se na kanál nedá spolehnout. Připomíná se nejvýš jednou za
+šest hodin. Bez nastavených chatů jen píše do logu workeru.
+
+Proč to dělá worker: 17. 9. 2026 v 08:03 přestal sběr na GitHubu běžet a web
+dva dny ukazoval starý stav, aniž by to kdokoli poznal — všechno, co by to
+mohlo ohlásit, běželo na tomtéž GitHubu. Hlídač uvnitř hlídaného systému
+nehlídá nic.
 
 ### Postup spuštění
 

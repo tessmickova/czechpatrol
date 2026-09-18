@@ -1,5 +1,8 @@
+"use client";
+
 import Link from "next/link";
 import { datumCasPraha, datumPraha } from "@/lib/cas";
+import { useZiveHodiny } from "@/lib/cas-klient";
 import { vystraha } from "@/lib/data";
 import type { Kandidat } from "@/lib/typy";
 import { Ikona } from "./ikony";
@@ -60,7 +63,13 @@ export function UrgentniUpozorneni({
   ted?: number;
 }) {
   const v = vystraha();
-  const naliehave = naliehaveVOkne(kandidati, ted);
+  /*
+    Okno se počítá proti hodinám prohlížeče, ne proti času sestavení. Web je
+    statický: kdyby se čas vzal z buildu, zamrzl by spolu s ním a zachycená
+    zpráva by pod nadpisem „urgentní" zůstala viset i týden po tom, co se
+    web přestal sestavovat. Právě tehdy je na tom nejvíc záležet.
+  */
+  const naliehave = naliehaveVOkne(kandidati, useZiveHodiny(ted));
 
   return (
     <section aria-labelledby="urgentni-nadpis" className="mt-4 overflow-hidden rounded-[20px] border border-linka2 bg-plocha">

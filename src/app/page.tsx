@@ -1,4 +1,4 @@
-import { BannerStari } from "@/components/cerstvost";
+import { PruhKontroly } from "@/components/banner-stari-klient";
 import { Dashboard } from "@/components/dashboard";
 import { celkovyStav, hybridniTlak, incidenty, kampane, kandidati, nato, nazvyZemi, nepotvrzene, posledniKontrola, posledniOvereni, pravniStav, provoz, tlakCr, tydny, overovaneAktivni, overovaneUzavrene, pocetZemeObdobi, urovenObcanu, urovenZemeObdobi, watchlist } from "@/lib/data";
 import { hlavniVeta } from "@/lib/veta";
@@ -9,11 +9,17 @@ import { hlavniVeta } from "@/lib/veta";
  * Text a vysvětlení jsou v nápovědách a na podstránkách.
  */
 export default function Prehled() {
+  /*
+    Jeden a týž čas pro pruh i pro dashboard. Klientské komponenty ho
+    dostanou ze serveru, aby se první vykreslení shodlo s HTML; teprve
+    po připojení si vezmou skutečný čas prohlížeče (viz useZiveHodiny).
+  */
+  const ted = Date.now();
   return (
     <>
-      <BannerStari overeno={posledniOvereni()} zkontrolovano={posledniKontrola()} />
+      <PruhKontroly zkontrolovano={posledniKontrola()} ted={ted} />
       <Dashboard
-        ted={Date.now()}
+        ted={ted}
         stav={celkovyStav()}
         pravni={pravniStav().polozky}
         natoPolozky={nato().polozky}

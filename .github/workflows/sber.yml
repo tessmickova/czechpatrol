@@ -2,16 +2,22 @@ name: Hodinový sběr dat
 
 on:
   schedule:
-    # ZÁLOŽNÍ plánovač. Hlavní je Cloudflare Worker czechpatrol-api, který sem
-    # kope každou půlhodinu (api/src/sber.ts). Plánovač GitHubu je totiž „best
-    # effort": při zátěži se zpožďuje a část běhů zahodí úplně — z hodinového
-    # sběru tak zbýval jeden běh zhruba za čtyři a půl hodiny. Zůstává tu proto,
-    # aby sběr nestál, kdyby workeru vypršel token nebo vypadl Cloudflare.
-    # Dva pokusy za hodinu, ne jeden: plánovač část běhů zahodí, takže dvojnásobek
-    # pokusů je jediná páka, kterou na jeho straně máme. Sběr commituje jen když
-    # se data změnila, a nasazení se při shodě přeskakuje — běh navíc nic nestojí.
-    # Minuty 7 a 37 jsou mimo špičku, tedy mimo celou a půl hodiny.
-    - cron: "7,37 * * * *"
+    # ZÁLOŽNÍ plánovač, a od 18. 9. 2026 řídký. Hlavní je Cloudflare Worker
+    # czechpatrol-api, který sem kope každou půlhodinu (api/src/sber.ts).
+    # Plánovač GitHubu je „best effort": při zátěži se zpožďuje a část běhů
+    # zahodí úplně, proto sám o sobě nestačí.
+    #
+    # Dřív tu stálo "7,37 * * * *", tedy dvakrát za hodinu. Spolu s workerem
+    # to dělalo kolem 96 běhů denně. Repozitář je soukromý a tam se každý běh
+    # účtuje z měsíčního přídělu minut, navíc zaokrouhlený nahoru na celou
+    # minutu. Příděl došel 17. 9. 2026 v 08:03 a od té chvíle neběželo nic:
+    # web se nesestavoval, do kanálů nic neodešlo, a nikdo se to nedozvěděl.
+    # Dva plánovače na tutéž práci stály dvojnásobek a přinesly málo.
+    #
+    # Zůstává jako záchrana pro případ, že workeru vyprší token nebo vypadne
+    # Cloudflare. Že sběr stojí, hlásí hlídač v api/src/hlidac.ts — ten běží
+    # na Cloudflare, takže výpadek GitHubu přežije a umí o něm říct.
+    - cron: "17 */3 * * *"
   # Tudy chodí kopnutí z workeru.
   workflow_dispatch:
 

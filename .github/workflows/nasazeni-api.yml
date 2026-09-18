@@ -74,8 +74,11 @@ jobs:
           WHATSAPP_TOKEN: ${{ secrets.WHATSAPP_TOKEN }}
           WHATSAPP_PHONE_ID: ${{ secrets.WHATSAPP_PHONE_ID }}
           GH_TOKEN_SBER: ${{ secrets.GH_TOKEN_SBER }}
+          # Kam hlídač hlásí, že sběr přestal běžet (api/src/hlidac.ts).
+          SPRAVCE_CHAT: ${{ vars.SPRAVCE_CHAT }}
+          TELEGRAM_KANAL: ${{ vars.TELEGRAM_KANAL }}
         run: |
-          for N in TELEGRAM_BOT_TOKEN TELEGRAM_WEBHOOK_SECRET TELEGRAM_BOT_JMENO ADMIN_BOOTSTRAP_KOD WHATSAPP_TOKEN WHATSAPP_PHONE_ID GH_TOKEN_SBER; do
+          for N in TELEGRAM_BOT_TOKEN TELEGRAM_WEBHOOK_SECRET TELEGRAM_BOT_JMENO ADMIN_BOOTSTRAP_KOD WHATSAPP_TOKEN WHATSAPP_PHONE_ID GH_TOKEN_SBER SPRAVCE_CHAT TELEGRAM_KANAL; do
             V="${!N}"
             if [ -n "$V" ]; then
               printf '%s' "$V" | npx wrangler secret put "$N" >/dev/null && echo "nastaveno: $N"

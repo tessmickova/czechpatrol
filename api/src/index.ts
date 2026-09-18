@@ -3,6 +3,7 @@ import { posliSplatne } from "./dorucovani";
 import * as izs from "./izs";
 import * as ja from "./ja";
 import { ChybaHttp, json, povolenyPuvod, sCors } from "./pomocne";
+import { zkontrolujSber } from "./hlidac";
 import { kopniDoSberu } from "./sber";
 import * as sprava from "./sprava";
 import * as tipy from "./tipy";
@@ -105,6 +106,19 @@ export default {
           else if (b.duvod && b.duvod !== "není čas") console.warn(`[sběr] nespuštěn — ${b.duvod}`);
         } catch (e) {
           console.error("[sběr]", e);
+        }
+
+        /*
+          Kopnout do sběru nestačí. Když GitHub kopnutí přijme a pak běh
+          shodí, vypadá to odsud stejně jako úspěch — a přesně tak se stalo,
+          že web dva dny stál a nikdo o tom nevěděl. Hlídač se dívá na to,
+          jak běhy dopadly.
+        */
+        try {
+          const h = await zkontrolujSber(env, udalost.scheduledTime);
+          if (h?.ohlaseno.length) console.warn(`[hlídač] ohlášeno ${h.ohlaseno.join(", ")} — ${Math.round(h.hodin)} h bez sběru`);
+        } catch (e) {
+          console.error("[hlídač]", e);
         }
 
         try {

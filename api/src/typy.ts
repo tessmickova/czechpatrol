@@ -14,6 +14,9 @@ export interface Env {
   GH_TOKEN_SBER?: string;
   SBER_REPO?: string;
   SBER_WORKFLOW?: string;
+  /* Kam hlídač hlásí, že sběr přestal běžet. Viz src/hlidac.ts. */
+  SPRAVCE_CHAT?: string;
+  TELEGRAM_KANAL?: string;
 }
 
 export type Role = "obcan" | "podporovatel" | "izs" | "admin";
