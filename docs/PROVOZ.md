@@ -5,8 +5,91 @@
 | Část | Kde | Jak se nasazuje |
 |---|---|---|
 | Web (statický) | Cloudflare Pages, projekt `czechpatrol` | `.github/workflows/nasazeni.yml` po pushi na `main` a po úspěšném sběru |
-| Sběr dat | GitHub Actions, každou hodinu | `.github/workflows/sber.yml` → commit do `data/` |
-| API (účty, odběr, tipy) | Cloudflare Worker + D1 | `.github/workflows/nasazeni-api.yml` — **zatím selhává**, token nemá práva D1 Edit a Workers Scripts Edit |
+| Sběr dat | GitHub Actions, každou půlhodinu | `.github/workflows/sber.yml` → commit do `data/`. Kope do něj Cloudflare Worker; plánovač GitHubu je jen záloha jednou za tři hodiny |
+| API (účty, odběr, tipy, hlídač) | Cloudflare Worker `czechpatrol-api` + D1 | `.github/workflows/nasazeni-api.yml`. Nasazení prošlo 13. 9. 2026, worker běží — je to on, kdo spouští sběr a kdo hlídá jeho výpadky |
+
+> Účty na webu jsou něco jiného než běžící worker. Aby je web nabízel, musí
+> být při jeho sestavení nastavená proměnná `API_URL` a tajemství
+> `ADMIN_BOOTSTRAP_KOD`; bez nich web říká, že se účty připravují. Jestli
+> jsou nastavené, poznáš na živém webu na stránce `/ucet/`. Postup zavedení
+> prvního správce je v `api/README.md`.
+
+## Když se web zastaví: jak ho rozběhnout
+
+Návod pro člověka, který není programátor. Nepotřebuješ nic instalovat,
+všechno se dá naklikat v prohlížeči.
+
+### 1. Poznat, že jde o tohle
+
+Příznak: **na webu svítí „Sběr neběží"** a datum poslední kontroly se
+nehýbe. Do Telegramu nic nechodí.
+
+Otevři <https://github.com/tessmickova/czechpatrol/actions>. Když u posledních
+běhů svítí červený křížek a každý trval jen pár vteřin, sběr se ani nespustil.
+
+Pak otevři <https://github.com/settings/billing>. Hledej stránku s využitím
+GitHub Actions (GitHub ji čas od času přejmenovává — bývá to „Usage",
+„Plans and usage" nebo „Budgets and alerts"). Když je měsíční příděl minut
+vyčerpaný nebo je dosažený limit útraty, je to ono.
+
+> Repozitář je soukromý, a **u soukromých repozitářů se každý běh účtuje**
+> z měsíčního přídělu 2 000 minut, navíc zaokrouhlený nahoru na celou minutu.
+> Příděl se obnoví na začátku dalšího zúčtovacího období, takže se to samo
+> rozjede — a za pár týdnů zase zastaví. Není to oprava, jen odklad.
+
+### 2. Oprava, kterou doporučuju: zveřejnit repozitář
+
+**U veřejných repozitářů jsou minuty GitHub Actions zdarma a bez stropu.**
+Odpadne tím i celý problém do budoucna.
+
+1. Otevři <https://github.com/tessmickova/czechpatrol/settings>
+2. Sjeď úplně dolů na **Danger Zone**
+3. **Change repository visibility** → **Change to public**
+4. GitHub tě nechá opsat název repozitáře pro potvrzení
+
+**Co zůstane utajené:** všechna hesla, tokeny a klíče. Nejsou v kódu, jsou
+v úložišti GitHub Secrets a to je skryté i u veřejného repozitáře. Nikdo je
+nepřečte a ani ty je už nikdy neuvidíš — jdou jen přepsat.
+
+**Co se stane veřejným:** zdrojový kód, data o událostech a celá historie
+změn. Prošel jsem historii i všechny sledované soubory — žádný klíč, heslo
+ani osobní údaj v nich není.
+
+**Co za to:** kdo by chtěl sběru uniknout, může si přečíst seznamy klíčových
+slov. Zdroje, ze kterých se čte, jsou ale veřejná média, takže jde spíš
+o teoretickou nevýhodu. A zveřejnění nejde vzít zpět — kdo si repozitář
+mezitím zkopíruje, tu kopii má.
+
+### 3. Když zveřejnit nechceš
+
+**Zaplatit minuty.** Na <https://github.com/settings/billing> zvyš limit
+útraty. Minuta navíc stojí zhruba 0,008 USD; při dnešní kadenci to vychází
+odhadem na 250–350 Kč měsíčně. Přesné číslo uvidíš na stránce s využitím.
+
+**Nebo sbírat méně často.** Sběr spouští Cloudflare Worker každou půlhodinu,
+záložně GitHub jednou za tři hodiny. Kadenci workeru řídí `KAZDYCH_MINUT`
+v `api/src/sber.ts`. Hodinový sběr spotřebu zhruba půlí — za cenu toho, že
+se zpráva na web dostane o půl hodiny později.
+
+### 4. Rozběhnout to
+
+Po opravě se sběr rozjede sám do půl hodiny (kope do něj Cloudflare Worker).
+Když nechceš čekat:
+
+1. <https://github.com/tessmickova/czechpatrol/actions>
+2. vlevo **Hodinový sběr dat**
+3. vpravo **Run workflow** → **Run workflow**
+
+Hotovo poznáš tak, že na webu zmizí pruh „Sběr neběží" a datum poslední
+kontroly bude dnešní. Trvá to pár minut — sběr běží první, nasazení webu
+hned po něm.
+
+### 5. Ať se to příště pozná dřív
+
+Hlídač v `api/src/hlidac.ts` běží na Cloudflare, ne na GitHubu, takže výpadek
+GitHubu přežije. Ohlásí ho, jakmile mu řekneš kam:
+nastav proměnnou `SPRAVCE_CHAT` (Settings → Secrets and variables → Actions →
+Variables) na svůj chat na Telegramu. Podrobně v `api/README.md`.
 
 ## Kontroly
 
