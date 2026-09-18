@@ -206,6 +206,35 @@ const AKTY: { kategorie: string; slova: string[] }[] = [
     "utok na", "attack on", "strela dopadla", "missile struck", "raketa dopadla", "ostrelovani",
   ] },
   /*
+    Svolané mimořádné jednání o bezpečnosti.
+
+    Doplněno 18. 9. 2026: francouzský prezident svolal na pátek předsedy
+    parlamentních stran kvůli „rychlému zhoršení" mezinárodní situace a jejím
+    důsledkům pro bezpečnost a energetiku Francie. Sběrač to minul — v takové
+    zprávě se nestřílí, nic nepadá a žádný stav se nevyhlašuje, takže spadla
+    jako „bez skutku". Přitom je to přesně ten krok, kterým stát dává najevo,
+    že situaci považuje za vážnou, a čtenář v Česku má právo vědět, že ho
+    sousední země udělala a naše zatím ne.
+
+    Hranice proti běžné politice je v tom, že se svolává MIMOŘÁDNĚ a kvůli
+    BEZPEČNOSTI. „Ministr vnitra jednal v Berlíně s partnery o bezpečnosti"
+    je pracovní cesta a sítem dál neprojde; „svolal mimořádné jednání
+    bezpečnostní rady" je vykonaný krok, který někdo musel nařídit.
+
+    Prohlášení a výzvy sem nepatří ani teď: „opozice vyzvala premiéra, ať
+    schůzku svolá" je návrh, ne svolaná schůzka. Zachytí se až samotné
+    svolání. Takový záznam patří do druhu „opatreni“ nebo „reakce“, ne
+    „pripad“, aby nenafukoval počty incidentů.
+  */
+  { kategorie: "diplomacie", slova: [
+    "bezpecnostni rada statu", "jednani bezpecnostni rady", "zasedani bezpecnostni rady",
+    "national security council", "conseil de defense", "conseil de securite",
+    "narodni bezpecnostni poradce", "national security adviser", "national security advisor",
+    "mimoradny summit", "emergency summit", "extraordinary summit",
+    "emergency meeting", "crisis meeting", "crisis talks",
+  ] },
+
+  /*
     Zahájené krizové vysílání je skutek, ne prohlášení: někdo přepnul rádio do
     jiného režimu. Pro člověka v Česku je to praktická informace — znamená to
     „pusť si rádio“. Bez téhle skupiny by taková zpráva propadla sítem jako
@@ -226,6 +255,23 @@ const AKTY: { kategorie: string; slova: string[] }[] = [
  * proto minulo. Stačí, když se v textu potkají slova z obou sloupců.
  */
 const AKTY_KOMBINACE: { kategorie: string; a: string[]; b: string[] }[] = [
+  {
+    /*
+      Svolání mimořádného jednání o bezpečnosti, ať už jsou slova v jakémkoli
+      pořadí: „svolává na pátek předsedy stran kvůli bezpečnostní situaci",
+      „mimořádné jednání vlády o obraně", „convened party leaders on security".
+
+      V `a` je jen svolání a mimořádnost, ne holé „jednání" — to by zachytilo
+      každou pracovní schůzku ministra. V `b` je bezpečnostní kontext, aby
+      neprošlo mimořádné jednání o rozpočtu nebo o cenách energií.
+    */
+    kategorie: "diplomacie",
+    a: ["svolal", "svolala", "svolava", "svolani", "mimoradne jednani", "mimoradna schuze",
+        "mimoradne zasedani", "convened", "convenes", "summoned", "convie"],
+    b: ["bezpecnost", "obran", "security", "defence", "defense",
+        "predsedy stran", "predsedu stran", "sefu stran", "lidry stran", "party leaders",
+        "ustavnich cinitelu", "bezpecnostni rady"],
+  },
   {
     kategorie: "hranice",
     a: ["hranic", "border", "prechod"],
@@ -358,6 +404,15 @@ const VYLOUCIT = [
   jen s dražším následkem: špatná země u zrovna té zprávy, kvůli které tenhle
   web existuje.
 */
+/*
+  Sídla moci se počítají jako místo.
+
+  Doplněno 18. 9. 2026: zprávy o svolaném jednání píšou často o budově, ne
+  o zemi („jednání v Elysejském paláci", „na Downing Street"). Jména politiků
+  tu schválně nejsou — mění se s volbami a jednou už nás podobný seznam
+  (názvy redakcí) dostal k tomu, že se každý článek iROZHLASu označil jako
+  český. Budova sídla vlády se nepřejmenovává.
+*/
 const ZEME: { kod: string; nazev: string; slova: string[]; presna?: string[] }[] = [
   /*
       „cr" muselo mezi přesné tokeny ze stejného důvodu jako „uk": s povolenou
@@ -366,7 +421,16 @@ const ZEME: { kod: string; nazev: string; slova: string[]; presna?: string[] }[]
       české. V datech tak například stálo, že ruský dron nad Moldavskem
       a Rumunskem je zpráva z Česka.
     */
-    { kod: "CZ", nazev: "Česko", slova: ["czech", "cesko", "ceska republika", "ceske", "policie cr", "praha", "praze", "prahou", "prahy", "prague", "brno", "brne", "ostrav"], presna: ["cr"] },
+    { kod: "CZ", nazev: "Česko", /*
+      „cesk" místo tří tvarů („cesko", „ceska republika", „ceske"): výčet
+      koncovek vždycky nějakou vynechá. Chyběla zrovna ta nejběžnější —
+      „česká vláda" a „český premiér" se sítu nezdály být o Česku a zpráva
+      padala jako „bez místa". Kmen pokryje všechny tvary naráz.
+
+      „cesti" je tam navíc kvůli češtině: v množném čísle se k mění na t
+      („čeští vojáci"), a to kmen s tolerancí koncovky nedožene.
+    */
+    slova: ["czech", "cesk", "cesti", "policie cr", "praha", "praze", "prahou", "prahy", "prague", "brno", "brne", "ostrav", "strakova akademie", "kramarova vila"], presna: ["cr"] },
   { kod: "SK", nazev: "Slovensko", slova: ["slovak", "slovensk", "bratislav", "kosic"] },
   { kod: "PL", nazev: "Polsko", slova: ["poland", "polish", "polsk", "polac", "warsaw", "varsav", "rzeszow", "gdansk"] },
   { kod: "DE", nazev: "Německo", slova: ["germany", "german", "nemeck", "berlin", "hamburg", "leipzig", "munich", "mnichov", "bundeswehr"] },
@@ -381,8 +445,8 @@ const ZEME: { kod: string; nazev: string; slova: string[]; presna?: string[] }[]
   { kod: "DK", nazev: "Dánsko", slova: ["denmark", "danish", "dansk", "copenhagen", "kodan"] },
   { kod: "NL", nazev: "Nizozemsko", slova: ["netherlands", "dutch", "nizozem", "amsterdam", "hague", "haag"] },
   { kod: "BE", nazev: "Belgie", slova: ["belgium", "belgian", "belgi", "brussels", "brusel"] },
-  { kod: "FR", nazev: "Francie", slova: ["france", "french", "francie", "francouz", "paris", "pariz"] },
-  { kod: "GB", nazev: "Spojené království", slova: ["britain", "british", "united kingdom", "britsk", "britani", "velka britanie", "london", "londyn"], presna: ["uk"] },
+  { kod: "FR", nazev: "Francie", slova: ["france", "french", "francie", "francouz", "paris", "pariz", "elysee", "elysejsk"] },
+  { kod: "GB", nazev: "Spojené království", slova: ["britain", "british", "united kingdom", "britsk", "britani", "velka britanie", "london", "londyn", "downing street"], presna: ["uk"] },
   { kod: "RO", nazev: "Rumunsko", slova: ["romania", "rumunsk", "bucharest", "bukurest"] },
   { kod: "BG", nazev: "Bulharsko", slova: ["bulgaria", "bulharsk", "sofia"] },
   { kod: "MD", nazev: "Moldavsko", slova: ["moldova", "moldav", "chisinau"] },

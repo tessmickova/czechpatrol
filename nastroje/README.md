@@ -1,5 +1,39 @@
 # Pomocné skripty
 
+## Správa z terminálu
+
+```bash
+npm run spravce              co čeká na rozhodnutí
+npm run spravce fronta       všechno zachycené, naléhavé nahoře
+npm run spravce navrhy       hotové záznamy čekající na schválení
+npm run spravce schval <id>  schválit návrh a zveřejnit ho
+npm run spravce prijmi <id>  kostra záznamu z kandidáta
+npm run spravce tip [soubor] tipy k přípravě
+npm run spravce vystraha …   vyhlásit nebo sundat mimořádnou výstrahu
+npm run spravce nahled       co by teď odešlo do kanálu (neodešle nic)
+```
+
+Běží na tvém počítači proti souborům v repozitáři; nepotřebuje účet ani síť
+a nikdo ho nemůže odstavit.
+
+### Fronta návrhů
+
+Mezičlánek mezi zachyceným titulkem a zveřejněným záznamem. Kandidát ze sběru
+je holý odkaz; zveřejněný záznam musí mít fakta, zdroje a lidské ověření —
+zveřejnění bez něj zablokují testy i `kontrola:data`, a to je správně. Návrh
+je hotový text, který čeká jen na to, aby se na něj někdo podíval.
+
+Stojí v `data/navrhy.json`. Na web se nedostane a do počtů nevstupuje.
+Pole `kam` říká, kam po schválení půjde:
+
+| `kam` | cíl | k čemu |
+|---|---|---|
+| `zaznam` | `data/incidenty.json` | doložená událost nebo úřední krok |
+| `overujeme` | `data/overujeme.json` | tvrzení, které se teprve ověřuje |
+
+U `overujeme` se týdenní lhůta počítá od schválení, ne od přípravy — ten
+týden má běžet od chvíle, kdy se zpráva objeví na webu.
+
 ## Klikací náhled
 
 ```bash

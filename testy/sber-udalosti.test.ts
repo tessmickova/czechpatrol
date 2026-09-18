@@ -266,3 +266,53 @@ describe("navigace z úřední stránky nekazí přehled odmítnutých", () => {
     expect(p[0].nadpis).toBe("Vláda projednala návrh rozpočtu obrany");
   });
 });
+
+describe("svolané mimořádné jednání o bezpečnosti", () => {
+  /*
+    Třetí zpráva v řadě, kterou síto minulo jako „bez skutku". Svolání
+    mimořádného jednání je vykonaný krok — někdo ho musel nařídit a rozeslat
+    pozvánky — a pro čtenáře v Česku je to informace o tom, jak vážně situaci
+    berou vlády kolem něj.
+  */
+  it("zachytí svolané mimořádné jednání o bezpečnosti", () => {
+    expect(relevantni("Francouzský prezident svolal na pátek předsedy parlamentních stran kvůli bezpečnostní situaci")).toBe(true);
+    /* Sídlo moci stačí jako místo — zprávy píšou o budově, ne vždy o zemi. */
+    expect(relevantni("Mimořádné jednání o bezpečnosti svolal Elysejský palác na pátek")).toBe(true);
+    expect(relevantni("Česká vláda svolala mimořádné jednání Bezpečnostní rady státu")).toBe(true);
+    expect(relevantni("Polish government convened an emergency meeting on security after the incident")).toBe(true);
+    expect(relevantni("Německo svolává mimořádné zasedání k obraně východního křídla")).toBe(true);
+  });
+
+  it("běžná pracovní jednání se dál nesbírají", () => {
+    /* Hranice proti zpravodajství: mimořádnost a bezpečnost, ne každá schůzka. */
+    expect(relevantni("Ministr vnitra jednal v Berlíně s partnery o bezpečnosti")).toBe(false);
+    expect(relevantni("Vláda svolala mimořádné jednání o cenách energií v Česku")).toBe(false);
+    expect(relevantni("Premiér svolal poradu o rozpočtu, uvedla vláda v Praze")).toBe(false);
+  });
+
+  it("výzva ke svolání není svolání", () => {
+    /*
+      „Opozice žádá, ať premiér schůzku svolá" je návrh, ne vykonaný krok.
+      Zachytí se až samotné svolání — jinak by web hlásil jako opatření něco,
+      co se nestalo.
+    */
+    expect(relevantni("Opozice v Česku vyzvala premiéra, aby jednal o bezpečnosti")).toBe(false);
+  });
+
+  it("svolání bez místa se zahodí jako každý jiný skutek", () => {
+    expect(relevantni("Svolal mimořádné jednání o bezpečnosti")).toBe(false);
+  });
+});
+
+describe("české tvary jako místo", () => {
+  it("česká vláda i český premiér jsou Česko", () => {
+    /* Výčet koncovek vynechal zrovna tu nejběžnější a zpráva padala „bez místa". */
+    expect(odhadniZemi("Česká vláda svolala mimořádné jednání Bezpečnostní rady státu")?.kod).toBe("CZ");
+    expect(odhadniZemi("Český premiér odmítl formát koordinačních schůzek")?.kod).toBe("CZ");
+    expect(odhadniZemi("Čeští vojáci posílili ostrahu")?.kod).toBe("CZ");
+  });
+  it("sídlo moci stačí jako místo", () => {
+    expect(odhadniZemi("Jednání v Elysejském paláci potrvá dvě hodiny")?.kod).toBe("FR");
+    expect(odhadniZemi("Downing Street svolala poradu")?.kod).toBe("GB");
+  });
+});
