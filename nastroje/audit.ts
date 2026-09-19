@@ -77,6 +77,8 @@ const Posouzeni = z.object({
       fakta: z.array(z.string()),
       /** Co z textu NEPLYNE a chybí k tomu doklad. */
       nedolozeno: z.array(z.string()),
+      /** Kdy se to stalo (YYYY-MM-DD), podle textu. null = z textu to neplyne. */
+      datumUdalosti: z.string().nullable(),
       kodZeme: z.string().nullable(),
       druh: z.enum(["pripad", "opatreni", "reakce", "neurceno"]),
       zavaznost: z.enum(["G1", "G2", "G3", "Y1", "Y2", "Y3", "O1", "O2", "O3", "R1", "R2", "R3"]),
@@ -90,7 +92,7 @@ const POKYNY = [
   "",
   "Pravidla, která musíš dodržet:",
   "- Nový článek o známé věci NENÍ nová událost. Když jde o pokračování, vyplň duplikatSlugu.",
-  "- Datum události není datum publikace ani datum nové atribuce.",
+  "- Datum události není datum publikace ani datum nové atribuce. Do datumUdalosti piš datum, kdy se to stalo, ve tvaru RRRR-MM-DD. Když se z textu určit nedá, dej null — nehádej podle data článku.",
   "- Do fakt piš jen to, co je v textu doložené. Nic nedomýšlej a nic nedopočítávej.",
   "- Původce (kdo to udělal) nepiš jako fakt, dokud to nepotvrdil úřední závěr. Podezření patří do nedolozeno.",
   "- Závažnost, jistota a bezprostřednost jsou tři různé věci. Zpravodajská spekulace není vysoká jistota.",
@@ -232,7 +234,17 @@ async function main() {
     });
     if (zahozeno) continue;
 
-    const kdy = (k.publikovano ?? k.zachyceno).slice(0, 10);
+    const kdyZachyceno = (k.publikovano ?? k.zachyceno).slice(0, 10);
+    /*
+      Datum události není datum článku — to je jedno ze základních pravidel
+      projektu. Když ho model z textu nevyčte, nevyplní se potichu datem
+      zveřejnění: zůstane tu, ale člověk se o tom dozví z neznameho.
+    */
+    const datumZTextu = /^\d{4}-\d{2}-\d{2}$/.test(p.datumUdalosti ?? "") ? p.datumUdalosti! : null;
+    const kdy = datumZTextu ?? kdyZachyceno;
+    const neznameho = datumZTextu
+      ? p.nedolozeno
+      : [...p.nedolozeno, `Datum události se z textu určit nedá. Uvedeno datum zveřejnění (${kdyZachyceno}) — ověřit.`];
     nove.push({
       kam: "zaznam",
       pripravil: "audit",
@@ -245,7 +257,7 @@ async function main() {
       kodZeme: p.kodZeme ?? k.kodZeme ?? "EU",
       kategorie: k.kategorie,
       datumUdalosti: `${kdy}T00:00:00Z`,
-      datumZjisteni: `${kdy}T00:00:00Z`,
+      datumZjisteni: `${kdyZachyceno}T00:00:00Z`,
       aktualizovano: new Date().toISOString(),
       zavaznost: p.zavaznost,
       jistota: p.jistota,
@@ -254,7 +266,7 @@ async function main() {
       puvodce: null,
       druh: p.druh === "neurceno" ? "reakce" : p.druh,
       fakta: p.fakta,
-      neznameho: p.nedolozeno,
+      neznameho,
       vyznam: "[DOPLNIT] — co z toho plyne pro čtenáře v Česku.",
       eskalacniSpousteče: [],
       deeskalacniSignaly: [],
