@@ -207,6 +207,14 @@ async function main() {
   const hranice = Date.now() - DNI * 86_400_000;
 
   const kPosouzeni = kandidati
+    /*
+      Jen to, co ještě čeká.
+      
+      Bez tohohle filtru audit posuzoval i zprávy, které sám dřív odepsal:
+      rozpočet modelu padl na tutéž práci dokola a fronta se skoro nehýbala —
+      24 posouzených, a ubyla jedna položka.
+    */
+    .filter((k) => k.stav === "ceka")
     .filter((k) => !zname.has(k.zdroj.url) && !uzNavrzene.has(k.zdroj.url))
     .filter((k) => new Date(k.publikovano ?? k.zachyceno).getTime() >= hranice)
     // Naléhavé napřed, pak nejnovější: když je rozpočet malý, ať padne na to podstatné.
@@ -371,9 +379,11 @@ async function main() {
   }
 
   const kdyVyrizeno = new Date().toISOString();
+  let odepsano = 0;
   const kandidatiPoAuditu = kandidati.map((k) => {
     const v = vyrizeno.get(k.id);
     if (!v || k.stav !== "ceka") return k;
+    odepsano++;
     return {
       ...k,
       stav: "vyrizen" as const,
@@ -387,13 +397,13 @@ async function main() {
     poskytovatel,
     posouzeno: vysledek.polozky.length,
     navrhu: nove.length,
-    vyrizeno: vyrizeno.size,
+    vyrizeno: odepsano,
     cekaDal: kandidatiPoAuditu.filter((k) => k.stav === "ceka").length,
     rozhodnuti: prehled,
   };
 
   console.log(
-    `[audit] posouzeno ${vysledek.polozky.length}, nových návrhů ${nove.length}, z fronty odepsáno ${vyrizeno.size}`,
+    `[audit] posouzeno ${vysledek.polozky.length}, nových návrhů ${nove.length}, z fronty odepsáno ${odepsano}`,
   );
   for (const r of prehled as { titulek: string; zahozeno: string | null; duvod: string; neznamySlug: string | null }[]) {
     console.log(`  ${r.zahozeno ? `— ${r.zahozeno}` : "NÁVRH"} · ${r.titulek.slice(0, 60)} — ${r.duvod.slice(0, 70)}`);
@@ -408,7 +418,7 @@ async function main() {
   if (nove.length) {
     fs.writeFileSync(cesta("data/navrhy.json"), `${JSON.stringify([...navrhy, ...nove], null, 2)}\n`);
   }
-  if (vyrizeno.size) {
+  if (odepsano) {
     fs.writeFileSync(cesta("data/kandidati.json"), `${JSON.stringify(kandidatiPoAuditu, null, 2)}\n`);
   }
 }
