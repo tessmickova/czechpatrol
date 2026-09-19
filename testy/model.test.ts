@@ -84,6 +84,19 @@ describe("volba modelu Anthropic", () => {
   it("výchozí model je v kódu, ne v proměnné", () => {
     /* Bez klíče se nic nevolá, ale název se nemá hádat za běhu. */
     const zdroj = readFileSync(new URL("../sber/model.ts", import.meta.url), "utf-8");
-    expect(zdroj).toContain('"claude-haiku-4-5"');
+    expect(zdroj).toContain('"claude-sonnet-5"');
+  });
+
+  it("nabídka ve správě a záloha v kódu se nerozejdou", () => {
+    /*
+      Správa nabízí pevný seznam modelů. Kdyby v něm chyběl ten, který je
+      v kódu jako záloha, přepnutí na něj by po výpadku nastavení skončilo
+      u modelu, který si správce nikdy nevybral.
+    */
+    const kod = readFileSync(new URL("../sber/model.ts", import.meta.url), "utf-8");
+    const sprava = readFileSync(new URL("../api/src/nastaveni.ts", import.meta.url), "utf-8");
+    const zaloha = kod.match(/ANTHROPIC_MODEL\?\.trim\(\) \|\| "([^"]+)"/)?.[1];
+    expect(zaloha, "záloha modelu v sber/model.ts").toBeTruthy();
+    expect(sprava, `${zaloha} chybí v nabídce správy`).toContain(`"${zaloha}"`);
   });
 });

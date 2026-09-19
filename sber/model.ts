@@ -116,12 +116,17 @@ export async function strukturovane<T>({ system, vstup, schema, ucel, maxTokens 
     const client = new Anthropic();
 
     /*
-      Haiku 4.5 je záměrná volba, ne šetření na nesprávném místě. Model tu
-      dělá tři pomocné věci — třídí kandidáty, dává druhé čtení odmítnutým
-      a překládá popisky rozhraní. Ani jedna nic nezveřejňuje; zveřejňuje
-      vždycky člověk. Na tohle je nejmenší model z rodiny dost a běží často.
+      Model se nastavuje ve správě, ne v kódu — běh sběru si ho přečte
+      a předá sem v ANTHROPIC_MODEL. Tady stojí jen záloha pro případ, že
+      se nastavení nepodaří načíst.
+
+      Proč Sonnet místo Haiku: Haiku bylo mezi běhy nespolehlivé. Tutéž
+      zprávu označilo jednou za doloženou a podruhé za nedoloženou, pletlo
+      si id zachycených zpráv se slugy záznamů a kazila se mu čeština
+      v titulcích. Na třídění, kde za tím stojí člověk, to ještě šlo;
+      na přípravu textů záznamů ne.
     */
-    const model = process.env.ANTHROPIC_MODEL?.trim() || "claude-haiku-4-5";
+    const model = process.env.ANTHROPIC_MODEL?.trim() || "claude-sonnet-5";
 
     /*
       `effort` se posílá jen modelům, které ho znají.

@@ -37,7 +37,7 @@ describe("brzdy v API", () => {
 
   it("do workeru se nedostal node:fs", () => {
     /* Ve Workeru neexistuje. Kdyby se tam dostal, spadne to až za běhu. */
-    for (const f of ["index.ts", "sber.ts", "hlidac.ts", "sprava.ts", "navrhy.ts", "auth.ts"]) {
+    for (const f of ["index.ts", "sber.ts", "hlidac.ts", "sprava.ts", "navrhy.ts", "nastaveni.ts", "patrol.ts", "auth.ts"]) {
       expect(zdroj(f), `${f} importuje node:fs`).not.toContain("node:fs");
     }
   });

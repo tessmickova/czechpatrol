@@ -41,7 +41,6 @@ jobs:
     env:
       ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
       OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
-      ANTHROPIC_MODEL: ${{ vars.ANTHROPIC_MODEL }}
       OPENAI_MODEL: ${{ vars.OPENAI_MODEL }}
       TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
       SPRAVCE_CHAT: ${{ vars.SPRAVCE_CHAT }}
@@ -63,10 +62,38 @@ jobs:
       - if: steps.moduly.outputs.cache-hit != 'true'
         run: npm ci --no-audit --fund=false
 
+      # Zapnutí a volba modelu se přepínají ve Správě, ne tady. Běh si je
+      # přečte; když se API neozve, jede se s výchozím nastavením z kódu —
+      # výpadek správy nemá zastavit posuzování.
+      - name: Nastavení ověřovací vrstvy
+        id: ai
+        env:
+          API_URL: ${{ vars.API_URL }}
+        run: |
+          set -u
+          ZAPNUTO=true
+          MODEL=""
+          if [ -n "${API_URL:-}" ]; then
+            ODPOVED=$(curl -s --max-time 15 "$API_URL/nastaveni-sberu" || true)
+            if [ -n "$ODPOVED" ]; then
+              ZAPNUTO=$(echo "$ODPOVED" | jq -r '.zapnuto // true')
+              MODEL=$(echo "$ODPOVED" | jq -r '.model // empty')
+            fi
+          fi
+          echo "zapnuto=$ZAPNUTO" >> "$GITHUB_OUTPUT"
+          echo "ANTHROPIC_MODEL=$MODEL" >> "$GITHUB_ENV"
+          echo "Ověřovací vrstva: zapnuto=$ZAPNUTO, model=${MODEL:-výchozí z kódu}"
+
+      - name: Ověřovací vrstva je vypnutá
+        if: steps.ai.outputs.zapnuto != 'true'
+        run: |
+          echo "Ve Správě je ověřovací model vypnutý — audit se přeskakuje."
+
       # Návratový kód se nechává projít dál, aby se k poruše modelu dal
       # poslat srozumitelný signál místo holého „workflow failed".
       - name: Audit fronty
         id: audit
+        if: steps.ai.outputs.zapnuto == 'true'
         continue-on-error: true
         run: |
           set +e
@@ -74,7 +101,7 @@ jobs:
           echo "kod=${PIPESTATUS[0]}" >> "$GITHUB_OUTPUT"
 
       - name: Ohlásit poruchu ověřovacího modelu
-        if: steps.audit.outputs.kod == '3' || steps.audit.outputs.kod == '4'
+        if: steps.ai.outputs.zapnuto == 'true' && (steps.audit.outputs.kod == '3' || steps.audit.outputs.kod == '4')
         run: |
           if [ -z "$TELEGRAM_BOT_TOKEN" ] || [ -z "$SPRAVCE_CHAT" ]; then
             echo "Není kam hlásit (chybí TELEGRAM_BOT_TOKEN nebo SPRAVCE_CHAT)."
@@ -91,6 +118,7 @@ jobs:
           echo "Porucha ohlášena správci."
 
       - name: Uložit návrhy a zprávu z auditu
+        if: steps.ai.outputs.zapnuto == 'true'
         run: |
           if [ -z "$(git status --porcelain data/)" ]; then
             echo "Audit nic nezměnil."
@@ -109,7 +137,7 @@ jobs:
       # Porucha modelu se ohlásila výše; teprve teď se má běh obarvit červeně,
       # aby to nezůstalo jen v Telegramu.
       - name: Skončit chybou, když model neběžel
-        if: steps.audit.outputs.kod != '0'
+        if: steps.ai.outputs.zapnuto == 'true' && steps.audit.outputs.kod != '0'
         run: |
           echo "Audit skončil kódem ${{ steps.audit.outputs.kod }}."
           exit 1
