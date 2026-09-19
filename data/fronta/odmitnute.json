@@ -1,5 +1,111 @@
 [
   {
+    "id": "k-b692e978127ae322",
+    "zachyceno": "2026-09-19T15:01:55.440Z",
+    "publikovano": "2026-09-19T14:30:00.000Z",
+    "zdroj": {
+      "nazev": "Český rozhlas — domácí zprávy",
+      "url": "https://www.irozhlas.cz/komentare/sledovat-ruske-volby-ma-svuj-smysl_2609191630_vsn",
+      "typ": "primary",
+      "primarni": true
+    },
+    "titulek": "Sledovat ruské volby má svůj smysl",
+    "shrnuti": "Od pátečního odpoledne až do nedělního večera mohou ruští občané hlasovat ve volbách do Státní dumy. Řeklo by se, proč to vůbec sledovat, když je výsledek předem dán? Nikdo soudný nepochybuje o tom, že vítězem bude vládnoucí státostrana Jednotné Rusko.",
+    "duvod": "vylouceno-tematem",
+    "kategorie": [
+      "rusko"
+    ],
+    "posouzeni": {
+      "podezreni": "zadne",
+      "duvod": "Jde o komentář k ruským volbám, žádná bezpečnostní událost.",
+      "kdy": "2026-09-19T15:03:28.474Z"
+    }
+  },
+  {
+    "id": "k-edc8abf8e3ce50e5",
+    "zachyceno": "2026-09-19T15:01:55.441Z",
+    "publikovano": "2026-09-19T14:30:00.000Z",
+    "zdroj": {
+      "nazev": "Český rozhlas — domácí zprávy",
+      "url": "https://www.irozhlas.cz/zpravy-domov/borsice-ziskaly-titul-vesnice-roku-2026-mohou-byt-inspiraci-pro-celou-ceskou_2609191630_kma",
+      "typ": "primary",
+      "primarni": true
+    },
+    "titulek": "Boršice získaly titul Vesnice roku 2026. Mohou být inspirací pro celou Českou republiku, říká hodnotitel",
+    "shrnuti": "Boršice ze Zlínského kraje získaly titul Vesnice roku 2026. Obec s více než dvěma tisíci obyvateli zaujala komisi tím, jak se místní zapojují do dění a udržují tradice. Působí tam třeba folklorní soubor Pentla nebo dechová hudba Boršičanka a pořádají se tam slovácké hody. Porota vyzdvihla také práci",
+    "duvod": "bez-skutku",
+    "kategorie": [
+      "cr"
+    ],
+    "posouzeni": {
+      "podezreni": "zadne",
+      "duvod": "Zpráva o oceněné vesnici, nic bezpečnostního.",
+      "kdy": "2026-09-19T15:03:28.474Z"
+    }
+  },
+  {
+    "id": "k-6c9f671872c1fc3d",
+    "zachyceno": "2026-09-19T15:01:55.443Z",
+    "publikovano": "2026-09-19T14:24:00.000Z",
+    "zdroj": {
+      "nazev": "Český rozhlas — domácí zprávy",
+      "url": "https://www.irozhlas.cz/zpravy-svet/online-americke-ministerstvo-podporilo-prodej-strel-protivzdusne-obrany-ukrajine_2609191624_ako",
+      "typ": "primary",
+      "primarni": true
+    },
+    "titulek": "ONLINE: Americké ministerstvo podpořilo prodej střel protivzdušné obrany Ukrajině. Rozhodne Kongres",
+    "shrnuti": "Americké ministerstvo zahraničí schválilo možný prodej zbraní protivzdušné obrany na Ukrajinu v objemu 2,68 miliardy dolarů (zhruba 57 miliard korun). Diplomacie to oznámila v prohlášení s tím, že nákup by Ukrajina financovala s pomocí evropských příspěvků a amerického grantového a půjčkového progra",
+    "duvod": "bez-skutku",
+    "kategorie": [],
+    "posouzeni": {
+      "podezreni": "stredni",
+      "duvod": "Vojenská dodávka zbraní souvisí s konfliktem, ale jde o politické rozhodnutí.",
+      "kdy": "2026-09-19T15:03:28.474Z"
+    }
+  },
+  {
+    "id": "k-473c4f59687cca6c",
+    "zachyceno": "2026-09-19T15:01:55.511Z",
+    "publikovano": "2026-09-19T14:15:00.000Z",
+    "zdroj": {
+      "nazev": "ERR News (Estonsko)",
+      "url": "https://news.err.ee/1610142736/wandering-cat-kurri-covers-15-000-kilometers-in-two-months",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Wandering cat Kurri covers 15,000 kilometers in two months",
+    "shrnuti": "Kurri, adopted from a shelter, has over the years become a travel‑loving wanderer with six summer road trips behind him.",
+    "duvod": "bez-skutku",
+    "kategorie": [],
+    "posouzeni": {
+      "podezreni": "zadne",
+      "duvod": "Zpráva o cestující kočce, nesouvisí s bezpečností.",
+      "kdy": "2026-09-19T15:03:28.474Z"
+    }
+  },
+  {
+    "id": "k-5bf62def3220ab14",
+    "zachyceno": "2026-09-19T15:01:55.581Z",
+    "publikovano": "2026-09-19T13:58:44.000Z",
+    "zdroj": {
+      "nazev": "Téma: letiste (anglicky)",
+      "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE96YXltVVNONThlNGh5SHpJNi1QaExMVkdzSXYtaEV5NGpUMjVuREpTSXB1dVRxNUhqaFBFMHdLVDUxUnhlUGRrdTlXQTMxcEpkbGk5TVZLbjhVZjBneGF6eUQ2dlk4anM0MGFfVXRMbnZiSjZD0gF0QVVfeXFMTTNiaDlpMXU3aEdLUy1udEx0TmRleHFlMFFiNFhOaTZqMkw4ZTNlcmptTlZsamhuZ3dReXhscnh3bWJGTmFCLTB0dmdMaE5sZEtIcVlNRFhmVUd1ZmNEMUJNRFRSdGlfZk5EWFREWnM1RERBa3E?oc=5",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Drone sightings briefly shut Luxembourg airport - dw.com",
+    "shrnuti": "Drone sightings briefly shut Luxembourg airport dw.com",
+    "duvod": "bez-skutku",
+    "kategorie": [
+      "drony"
+    ],
+    "posouzeni": {
+      "podezreni": "vysoke",
+      "duvod": "Drony uzavřely letiště v Lucemburku, narušení letecké infrastruktury.",
+      "kdy": "2026-09-19T15:03:28.474Z"
+    }
+  },
+  {
     "id": "k-cde9ce378762e260",
     "zachyceno": "2026-09-19T14:01:49.449Z",
     "publikovano": "2026-09-19T13:50:12.000Z",
@@ -10337,112 +10443,6 @@
     "posouzeni": {
       "podezreni": "vysoke",
       "duvod": "Ukrajinská protiofenzivní operace u Lymanu potvrzena velitelem",
-      "kdy": "2026-09-19T14:04:15.203Z"
-    }
-  },
-  {
-    "id": "k-073497bcf22082b4",
-    "zachyceno": "2026-09-15T16:06:44.657Z",
-    "publikovano": "2026-09-15T15:45:00.000Z",
-    "zdroj": {
-      "nazev": "iROZHLAS — zprávy",
-      "url": "https://www.irozhlas.cz/sport/hokej/hokej-tipsport-extraliga-energie-karlovy-vary-ocelari-trinec_2609171745_kri",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "ŽIVĚ: Karlovy Vary proti Třinci odstartovaly nový ročník extraligy. Radiožurnál Sport vysílá přímý přenos",
-    "shrnuti": "Jediným zápasem začal v úterý nový ročník hokejové extraligy. V prvním utkání tuzemské nejvyšší hokejové soutěže rozehráli hokejisté Karlových Varů proti třineckým Ocelářům. Oba kluby se v přípravných zápasech představovaly úspěšně a dá se tak očekávat vyrovnaný souboj. Utkání začalo v 18.00, Radiož",
-    "duvod": "vylouceno-tematem",
-    "kategorie": [
-      "vysilani"
-    ],
-    "posouzeni": {
-      "podezreni": "zadne",
-      "duvod": "Sportovní přenos hokejového zápasu",
-      "kdy": "2026-09-19T14:04:15.203Z"
-    }
-  },
-  {
-    "id": "k-809740b14d116175",
-    "zachyceno": "2026-09-15T16:02:43.140Z",
-    "publikovano": "2026-09-15T15:43:00.000Z",
-    "zdroj": {
-      "nazev": "iROZHLAS — zprávy",
-      "url": "https://www.irozhlas.cz/zpravy-domov/u-mochova-se-srazil-zemedelsky-stroj-s-autem-a-dodavkou-jeden-clovek-zemrel-a_2609151743_aha",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "U Mochova se srazil zemědělský stroj s autem a dodávkou. Jeden člověk zemřel a tři jsou zranění",
-    "shrnuti": "Poblíž Mochova u Prahy se v úterý odpoledne srazil zemědělský stroj s autem a dodávkou, jeden člověk zemřel a tři lidé jsou vážně zranění. Jednoho do nemocnice přepravil vrtulník, uvedli policejní mluvčí Barbora Schneeweissová a mluvčí středočeské záchranné služby Marek Hylebrant.",
-    "duvod": "bez-skutku",
-    "kategorie": [],
-    "posouzeni": {
-      "podezreni": "zadne",
-      "duvod": "Dopravní nehoda, ne bezpečnostní hrozba",
-      "kdy": "2026-09-19T14:04:15.203Z"
-    }
-  },
-  {
-    "id": "k-8a13523a2802eac4",
-    "zachyceno": "2026-09-15T16:02:43.141Z",
-    "publikovano": "2026-09-15T15:39:00.000Z",
-    "zdroj": {
-      "nazev": "iROZHLAS — zprávy",
-      "url": "https://www.irozhlas.cz/zpravy-domov/pivo-neskladuji-v-lednici-ale-v-lezackem-sklepe-a-v-tradicnim-sudu-jsme-rarita_2609151739_kch",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Pivo neskladují v lednici, ale v ležáckém sklepě a v tradičním sudu. ‚Jsme rarita,‘ říká bednář",
-    "shrnuti": "Říká se jim žijící lidské poklady a umí to, co už jen málokdo. Řeč je o Nositelích tradic lidových řemesel. Titul uděluje ministerstvo kultury a držitelů ocenění je v Česku jen zhruba stovka. Letos jich přibylo dalších pět a ceny si převzali v Chrudimi.",
-    "duvod": "bez-skutku",
-    "kategorie": [],
-    "posouzeni": {
-      "podezreni": "zadne",
-      "duvod": "Kulturní zpráva o řemesle a pivu",
-      "kdy": "2026-09-19T14:04:15.203Z"
-    }
-  },
-  {
-    "id": "k-69b0c2d5a67a8930",
-    "zachyceno": "2026-09-15T15:32:45.938Z",
-    "publikovano": "2026-09-15T15:27:00.000Z",
-    "zdroj": {
-      "nazev": "iROZHLAS — zprávy",
-      "url": "https://www.irozhlas.cz/zpravy-svet/putinova-valka-mela-prime-paralely-s-hitlerovou-za-vyrok-si-historik-gastronomie_2609151727_elev",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": ",Putinova válka měla přímé paralely s Hitlerovou.‘ Za výrok si historik gastronomie odsedí šest let ve vězení",
-    "shrnuti": "Soud v Moskvě poslal na šest roků do vězení předního historika ruské gastronomie Pavla Sjutkina. Shledal ho vinným z úmyslného šíření lživých informací o ruské armádě kvůli více než čtyři roky starému příspěvku na sociálních sítích, který se týkal ruské války na Ukrajině.",
-    "duvod": "bez-skutku",
-    "kategorie": [
-      "rusko"
-    ],
-    "posouzeni": {
-      "podezreni": "stredni",
-      "duvod": "Uvěznění historika za kritiku ruské armády, politický zásah",
-      "kdy": "2026-09-19T14:04:15.203Z"
-    }
-  },
-  {
-    "id": "k-240b9f52447daa3b",
-    "zachyceno": "2026-09-15T16:32:52.304Z",
-    "publikovano": "2026-09-15T15:20:24.000Z",
-    "zdroj": {
-      "nazev": "Téma: zeleznice (anglicky)",
-      "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxPQ0VFMFVXTFNLbWdaR0J4Qmxid01kbVM4bXpEcmxDeUR2dVdWMGdxcEVJdUZiVWpvWXMwZUU5Z1FKZjY2dGlsc3ROOHAtWTZndjNrOXZzUFpyVWVkM2haY0JiMk9QUVA3UmNhT3pQV0Y4NHQwUi03OVgtbDEyYm9JRVdUUTFOZS1uQUk3SXB5WFJNQlBaek94RzV3aHlBOVh3Y2Jid0ZLQ3I?oc=5",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Police appeal for help identifying driver seen near Deurne tracks before rail sabotage - NL Times",
-    "shrnuti": "Police appeal for help identifying driver seen near Deurne tracks before rail sabotage NL Times",
-    "duvod": "bez-mista",
-    "kategorie": [
-      "sabotaz"
-    ],
-    "posouzeni": {
-      "podezreni": "vysoke",
-      "duvod": "Policie vyšetřuje sabotáž železniční trati",
       "kdy": "2026-09-19T14:04:15.203Z"
     }
   }
