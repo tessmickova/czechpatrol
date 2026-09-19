@@ -25,6 +25,16 @@ const NAZVY: Record<string, string> = {
   "claude-haiku-4-5": "Haiku — levnější, mezi běhy kolísá",
 };
 
+interface Zadani {
+  id: string;
+  zadano: string;
+  zadal: string;
+  stav: string;
+  zadani: string;
+  odpoved?: string | null;
+  hotovo?: string | null;
+}
+
 interface Ai {
   zapnuto: boolean;
   model: string;
@@ -33,6 +43,7 @@ interface Ai {
 
 export function OvladaniOverovani() {
   const [ai, setAi] = useState<Ai | null>(null);
+  const [fronta, setFronta] = useState<Zadani[]>([]);
   const [zadani, setZadani] = useState("");
   const [hlaska, setHlaska] = useState<{ typ: "ok" | "chyba"; text: string } | null>(null);
   const [ceka, setCeka] = useState(false);
@@ -42,6 +53,12 @@ export function OvladaniOverovani() {
       setAi(await api<Ai>("/nastaveni-sberu"));
     } catch (e) {
       setHlaska({ typ: "chyba", text: e instanceof Error ? e.message : "Nastavení se nepodařilo načíst." });
+    }
+    try {
+      const d = await api<{ zadani: Zadani[] }>("/sprava/patrol");
+      setFronta(d.zadani);
+    } catch {
+      /* Fronta zadání je doplněk; když se nenačte, nastavení výše má jet dál. */
     }
   }, []);
 
@@ -67,6 +84,7 @@ export function OvladaniOverovani() {
     try {
       await api("/sprava/patrol", { method: "POST", telo: { zadani } });
       setZadani("");
+      nacti();
       setHlaska({ typ: "ok", text: "Zadání zapsáno na větev. Patrol si ji čte po svém, takže chvíli potrvá, než se do toho pustí." });
     } catch (e) {
       setHlaska({ typ: "chyba", text: e instanceof Error ? e.message : "Zadání se nepodařilo odeslat." });
@@ -144,6 +162,32 @@ export function OvladaniOverovani() {
           </button>
           <span className="stitek text-tlum2">{zadani.length}/2000</span>
         </div>
+
+        {/*
+          Odpověď stojí u zadání, kterého se týká. Dokud chodila jen na
+          Telegram, musel si ji člověk k úkolu párovat sám — a u desítek
+          položek to znamená, že to nedělá.
+        */}
+        {fronta.length > 0 && (
+          <ul className="mt-4 space-y-2 border-t border-linka2 pt-4">
+            {fronta.map((z) => (
+              <li key={z.id} className="rounded-[18px] border border-linka p-3.5">
+                <div className="mb-1 flex flex-wrap items-center justify-between gap-2">
+                  <span className="stitek">
+                    {z.stav === "hotovo" ? "Vyřízeno" : z.stav === "odmitnuto" ? "Odmítnuto" : "Čeká"}
+                  </span>
+                  <span className="stitek text-tlum2">{datumCas(z.zadano)}</span>
+                </div>
+                <p className="text-male leading-snug text-inkoust">{z.zadani}</p>
+                {z.odpoved ? (
+                  <p className="mt-2 border-l border-linka pl-3 text-male leading-snug text-tlum">{z.odpoved}</p>
+                ) : (
+                  <p className="mt-2 text-mikro text-tlum2">Odpověď zatím nepřišla.</p>
+                )}
+              </li>
+            ))}
+          </ul>
+        )}
       </div>
     </Karta>
   );

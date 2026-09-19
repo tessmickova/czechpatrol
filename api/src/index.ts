@@ -66,6 +66,7 @@ const CESTY: [string, RegExp, Obsluha][] = [
   ["POST", /^\/tipy$/, (req, env) => tipy.prijmi(env, req)],
   ["GET", /^\/nastaveni-sberu$/, async (req, env) => nastaveni.proSber(env)],
   ["PUT", /^\/sprava\/nastaveni-ai$/, async (req, env) => nastaveni.uloz(env, req, await vyzadujPrihlaseni(env, req))],
+  ["GET", /^\/sprava\/patrol$/, async (req, env) => patrol.seznam(env, await vyzadujPrihlaseni(env, req))],
   ["POST", /^\/sprava\/patrol$/, async (req, env) => patrol.zadej(env, req, await vyzadujPrihlaseni(env, req))],
   ["GET", /^\/sprava\/navrhy$/, async (req, env) => navrhy.seznam(env, await vyzadujPrihlaseni(env, req))],
   ["POST", /^\/sprava\/navrhy\/([\w.-]+)\/rozhodnout$/, async (req, env, _u, id) => navrhy.rozhodni(env, req, await vyzadujPrihlaseni(env, req), id)],

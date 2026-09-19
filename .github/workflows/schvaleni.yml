@@ -38,6 +38,8 @@ concurrency:
 jobs:
   rozhodnout:
     runs-on: ubuntu-latest
+    outputs:
+      zmena: ${{ steps.zapis.outputs.zmena }}
     steps:
       - uses: actions/checkout@v7
 
@@ -78,6 +80,7 @@ jobs:
           npm test
 
       - name: Zapsat rozhodnutí
+        id: zapis
         env:
           AKCE: ${{ inputs.akce }}
           NAVRH: ${{ inputs.id }}
@@ -95,3 +98,29 @@ jobs:
             sleep $((2**i))
             git pull --rebase
           done
+          echo "zmena=true" >> "$GITHUB_OUTPUT"
+
+      # Rozeslání musí proběhnout tady, ne v rozhlas.yml.
+      #
+      # Rozhlas se spouští změnou data/incidenty.json na main — jenže tenhle
+      # commit dělá workflow, a GitHub záměrně nespouští workflow z pushů,
+      # které udělal jiný workflow (ochrana proti smyčce). Schválený záznam
+      # se tak dostal na web, ale do kanálu už nic nepřišlo a nebylo poznat
+      # proč. Totéž platí pro nasazení.
+      - name: Rozeslat do kanálů
+        if: inputs.akce == 'schval' && steps.zapis.outputs.zmena == 'true'
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_KANAL: ${{ vars.TELEGRAM_KANAL || '@czechpatrol' }}
+          SPRAVCE_CHAT: ${{ vars.SPRAVCE_CHAT }}
+        run: node nastroje/rozhlas.mjs --okamzite
+
+
+  # Nasazení se volá přímo, ne přes push. Commit z workflow žádný další
+  # workflow nespustí, takže by schválený záznam zůstal v repozitáři
+  # a na web by se dostal až s nejbližší jinou změnou.
+  nasadit:
+    needs: rozhodnout
+    if: needs.rozhodnout.outputs.zmena == 'true'
+    uses: ./.github/workflows/nasazeni.yml
+    secrets: inherit

@@ -15,12 +15,44 @@ import type { Env, Prihlaseny } from "./typy";
 */
 
 const WORKFLOW = "pro-patrola.yml";
+const VETEV = "patrol/overovani";
 const MAX_ZADANI = 2000;
+
+function hlavicky(token: string) {
+  return {
+    authorization: `Bearer ${token}`,
+    accept: "application/vnd.github+json",
+    "x-github-api-version": "2022-11-28",
+    "user-agent": "czechpatrol-api",
+  };
+}
 
 function nastaveni(env: Env): { repo: string; token: string } {
   if (!env.GH_TOKEN_SBER) throw new ChybaHttp(503, "Není nastavený přístup na GitHub (GH_TOKEN_SBER).");
   if (!env.SBER_REPO) throw new ChybaHttp(503, "Není nastavený repozitář (SBER_REPO).");
   return { repo: env.SBER_REPO, token: env.GH_TOKEN_SBER };
+}
+
+/**
+ * Fronta zadání i s odpověďmi.
+ *
+ * Patrol píše výsledek do téhož souboru, takže odpověď stojí u zadání,
+ * kterého se týká. Dokud chodila jen na Telegram, musel si ji člověk
+ * k úkolu párovat sám — a u desítek položek to znamená, že to nedělá.
+ */
+export async function seznam(env: Env, ucet: Prihlaseny): Promise<Response> {
+  if (ucet.role !== "admin") throw new ChybaHttp(403, "Jen pro správce.");
+  const { repo, token } = nastaveni(env);
+
+  const odpoved = await fetch(
+    `https://api.github.com/repos/${repo}/contents/data/fronta/pro-patrola.json?ref=${VETEV}`,
+    { headers: { ...hlavicky(token), accept: "application/vnd.github.raw" } },
+  );
+  if (odpoved.status === 404) return json({ zadani: [] });
+  if (!odpoved.ok) throw new ChybaHttp(502, `GitHub odpověděl ${odpoved.status}. Má token právo číst obsah repozitáře?`);
+
+  const vse = (await odpoved.json().catch(() => [])) as unknown[];
+  return json({ zadani: Array.isArray(vse) ? vse.slice(-30).reverse() : [] });
 }
 
 export async function zadej(env: Env, req: Request, ucet: Prihlaseny): Promise<Response> {
@@ -36,13 +68,7 @@ export async function zadej(env: Env, req: Request, ucet: Prihlaseny): Promise<R
 
   const odpoved = await fetch(`https://api.github.com/repos/${repo}/actions/workflows/${WORKFLOW}/dispatches`, {
     method: "POST",
-    headers: {
-      authorization: `Bearer ${token}`,
-      accept: "application/vnd.github+json",
-      "x-github-api-version": "2022-11-28",
-      "content-type": "application/json",
-      "user-agent": "czechpatrol-api",
-    },
+    headers: { ...hlavicky(token), "content-type": "application/json" },
     // Workflow běží nad hlavní větví, ale zapisuje na Patrolovu.
     body: JSON.stringify({ ref: "main", inputs: { zadani, zadal: ucet.id.slice(0, 8) } }),
   });

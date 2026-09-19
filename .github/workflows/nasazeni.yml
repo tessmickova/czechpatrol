@@ -13,6 +13,9 @@ on:
   # Tenhle workflow zůstává pro ruční nasazení a pro commity, které udělá
   # člověk (ty `push` spouští normálně).
   workflow_dispatch:
+  # Volatelné z jiných běhů (schvaleni.yml). Push z workflow nespustí další
+  # workflow, takže se nasazení po schválení musí zavolat přímo.
+  workflow_call:
 
 permissions:
   contents: read
