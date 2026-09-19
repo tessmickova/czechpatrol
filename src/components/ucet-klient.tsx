@@ -7,6 +7,7 @@ import { KATEGORIE, PORADI_KATEGORII } from "@/lib/kategorie";
 import { obnovit, podporujePasskey, pridatPasskey, prihlasit, registrovat } from "@/lib/passkey";
 import { api, odhlasit, ROLE, ulozToken, useUcet, VYCHOZI_UPOZORNENI, type Frekvence, type MinZavaznost, type NastaveniUpozorneni } from "@/lib/ucet";
 import { datum } from "@/lib/format";
+import { useDialog } from "./dialog";
 import { Hlaska, POLE, Popisek, Prepinac, TLACITKO_AKCENT, TLACITKO_TICHE, TLACITKO_VAROVNE, Volby } from "./formulare";
 import { Ikona } from "./ikony";
 import { Karta } from "./zaklad";
@@ -171,6 +172,7 @@ function Nastaveni({
   const [whatsapp, setWhatsapp] = useState("");
   const [mazu, setMazu] = useState(false);
   const [novyKod, setNovyKod] = useState<string | null>(null);
+  const { potvrd } = useDialog();
 
   useEffect(() => setN(ucet.upozorneni ?? VYCHOZI_UPOZORNENI), [ucet]);
 
@@ -214,7 +216,13 @@ function Nastaveni({
   };
 
   const smaz = async () => {
-    if (!confirm("Účet i všechna nastavení se nenávratně smažou. Pokračovat?")) return;
+    const ano = await potvrd({
+      nadpis: "Smazat účet?",
+      text: "Účet, passkey i všechna nastavení upozornění se nenávratně smažou. Vrátit to nejde a obnovovací kód po tom nepomůže.",
+      potvrdit: "Smazat účet",
+      zrusit: "Nechat být",
+    });
+    if (!ano) return;
     setMazu(true);
     try {
       await api("/ja", { method: "DELETE" });
@@ -259,7 +267,12 @@ function Nastaveni({
             <button
               type="button"
               onClick={async () => {
-                if (!confirm("Starý obnovovací kód přestane platit. Pokračovat?")) return;
+                const ano = await potvrd({
+                  nadpis: "Vystavit nový obnovovací kód?",
+                  text: "Starý kód okamžitě přestane platit. Nový se ukáže jednou — opište si ho dřív, než stránku zavřete.",
+                  potvrdit: "Vystavit nový",
+                });
+                if (!ano) return;
                 try {
                   const v = await api<{ obnovovaciKod: string }>("/ja/obnova", { method: "POST" });
                   setNovyKod(v.obnovovaciKod);

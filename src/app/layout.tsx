@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from "next";
 import { Archivo, IBM_Plex_Mono } from "next/font/google";
 import { ListaMobil } from "@/components/lista-mobil";
 import { Navigace } from "@/components/navigace";
+import { DialogProvider } from "@/components/dialog";
 import { PostranniPanel } from "@/components/postranni-panel";
 import { RegistraceSW } from "@/components/pwa";
 import { Paticka } from "@/components/paticka";
@@ -96,7 +97,13 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <PruhVystrahy />
         <PruhPuvodu />
         <UkazkaPruh />
-        <main id="obsah" className="pb-[calc(60px+env(safe-area-inset-bottom))] md:pb-0">{children}</main>
+        {/*
+          Dialogy místo alert/confirm/prompt. Obaluje obsah, aby se na ně dalo
+          sáhnout odkudkoli ze stránky.
+        */}
+        <DialogProvider>
+          <main id="obsah" className="pb-[calc(60px+env(safe-area-inset-bottom))] md:pb-0">{children}</main>
+        </DialogProvider>
         <Paticka />
         <PostranniPanel />
         <ListaMobil />
