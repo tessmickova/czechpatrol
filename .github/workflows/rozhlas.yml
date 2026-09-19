@@ -15,6 +15,14 @@ on:
         description: "Poslat testovací zprávu"
         type: boolean
         default: false
+      komu:
+        # Zkouška nastavení nemá chodit odběratelům. Výchozí je proto
+        # soukromá zpráva správci — tou se navíc ověří přesně ta cesta,
+        # kterou se hlásí výpadek sběru.
+        description: "Komu testovací zprávu"
+        type: choice
+        options: ["spravci soukrome", "do verejneho kanalu"]
+        default: "spravci soukrome"
 
 permissions:
   contents: write
@@ -29,6 +37,7 @@ jobs:
     env:
       TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
       TELEGRAM_KANAL: ${{ vars.TELEGRAM_KANAL || '@czechpatrol' }}
+      SPRAVCE_CHAT: ${{ vars.SPRAVCE_CHAT }}
     steps:
       - uses: actions/checkout@v7
         with:
@@ -36,7 +45,12 @@ jobs:
 
       - name: Testovací zpráva
         if: github.event_name == 'workflow_dispatch' && inputs.test
-        run: node nastroje/rozhlas.mjs --test
+        run: |
+          if [ "${{ inputs.komu }}" = "do verejneho kanalu" ]; then
+            node nastroje/rozhlas.mjs --test
+          else
+            node nastroje/rozhlas.mjs --test --test-spravce
+          fi
 
       - name: Okamžité zprávy (vážné případy, opatření, změny oficiálních stavů)
         if: github.event_name != 'schedule'

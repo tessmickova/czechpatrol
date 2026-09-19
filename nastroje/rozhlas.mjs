@@ -823,10 +823,21 @@ const REZERVA_429 = 1;
 /** Časový limit jednoho pokusu. Delší čekání blokuje celý běh. */
 const LIMIT_MS = 20_000;
 
-async function posliTelegram(text, { nahled = true, pokusu = 3 } = {}) {
+/*
+  `komu` rozlišuje veřejný kanál a soukromou zprávu správci.
+
+  Testovací zpráva nemá chodit odběratelům. Dokud šla jen do kanálu, nedalo
+  se vyzkoušet, jestli bot umí napsat správci — a to je přesně ta cesta,
+  kterou se hlásí výpadek sběru. Ověřit ji až ve chvíli, kdy výpadek nastane,
+  je pozdě.
+*/
+async function posliTelegram(text, { nahled = true, pokusu = 3, komu = "kanal" } = {}) {
   const token = process.env.TELEGRAM_BOT_TOKEN;
-  const kanal = process.env.TELEGRAM_KANAL || "@czechpatrol";
+  const kanal = komu === "spravce"
+    ? process.env.SPRAVCE_CHAT
+    : process.env.TELEGRAM_KANAL || "@czechpatrol";
   if (!token) return { ok: false, chyba: "chybí TELEGRAM_BOT_TOKEN" };
+  if (!kanal) return { ok: false, chyba: komu === "spravce" ? "není nastaven SPRAVCE_CHAT" : "není nastaven TELEGRAM_KANAL" };
 
   for (let pokus = 1; pokus <= pokusu; pokus++) {
     let r;
@@ -880,10 +891,25 @@ async function main() {
     .sort((a, b) => kdyZjisteno(a).localeCompare(kdyZjisteno(b)));
 
   if (test) {
+    /*
+      `--test-spravce` pošle zprávu soukromě správci, ne do kanálu.
+      Odběratelé nemají důvod číst, že si někdo zkouší nastavení.
+    */
+    const komu = arg.includes("--test-spravce") ? "spravce" : "kanal";
     // Ukázkou je poslední ověřený záznam — na výmyslu by se formát ověřit nedal.
     const ukazka = [...zaznamy].reverse().find((i) => i.lidskyOvereno && druh(i) === "pripad");
-    const v = await posli(sestavTest(ukazka));
-    console.log(v.ok ? "test odeslán" : `test selhal: ${v.chyba}`);
+    const text = komu === "spravce"
+      ? [
+          "<b>Zkouška spojení</b>",
+          "",
+          "Tuhle zprávu poslal hlídač sběru, aby se ověřilo, že ti bot umí napsat.",
+          "Nic se nestalo a nic nedělej — je to jen zkouška.",
+          "",
+          "Až sběr opravdu vypadne, přijde sem hlášení se stejnou cestou: po třech hodinách bez úspěšného sběru.",
+        ].join("\n")
+      : sestavTest(ukazka);
+    const v = await posli(text, { komu });
+    console.log(v.ok ? `test odeslán (${komu})` : `test selhal (${komu}): ${v.chyba}`);
     process.exit(v.ok ? 0 : 1);
   }
   if (!process.env.TELEGRAM_BOT_TOKEN && !nacisto) {
