@@ -13,9 +13,19 @@ name: Denní audit fronty
 # vrstva je důležitá součást a její tiché vypnutí je porucha, ne klid.
 
 on:
-  schedule:
-    # Ráno, ať jsou návrhy připravené na začátek dne.
-    - cron: "35 5 * * *"
+  # POZASTAVENO 19. 9. 2026 — denní běh je vypnutý.
+  #
+  # Proč: frontu 300 kandidátů právě prochází externí agent Patrol. Kdyby
+  # audit běžel dál, oba by si šli po týchž zprávách a dělali dvojí práci.
+  #
+  # Zpátky se zapne odkomentováním `schedule` níže, až bude fronta pročištěná.
+  # Pak má audit hlídat jen nové přírůstky.
+  #
+  # Ruční spuštění (workflow_dispatch) funguje pořád — vypnutý je jen kalendář.
+  #
+  # schedule:
+  #   # Ráno, ať jsou návrhy připravené na začátek dne.
+  #   - cron: "35 5 * * *"
   workflow_dispatch:
 
 permissions:
