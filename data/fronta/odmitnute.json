@@ -1,5 +1,39 @@
 [
   {
+    "id": "k-37814664532503db",
+    "zachyceno": "2026-09-19T09:02:03.978Z",
+    "publikovano": "2026-09-19T08:54:00.000Z",
+    "zdroj": {
+      "nazev": "Český rozhlas — domácí zprávy",
+      "url": "https://www.irozhlas.cz/kultura/vytvarne-umeni/dat-prostor-touze-druhych-ustecka-vystava-ukazuje-infrastrukturu-jako-nastroj-k_2609191054_raf",
+      "typ": "primary",
+      "primarni": true
+    },
+    "titulek": "Dát prostor touze druhých. Ústecká výstava ukazuje infrastrukturu jako nástroj k porozumění",
+    "shrnuti": "V Domě umění v Ústí nad Labem se koná výstava současného umění s názvem Infrastruktury: dát prostor touze druhých. Skrze různé sítě, kterými jsou lidé spojení, zkoumá, jak si můžeme navzájem více naslouchat a porozumět. „Ta výstava je velmi plná, trošičku potemnělá a člověk tam ty věci musí hledat t",
+    "duvod": "bez-skutku",
+    "kategorie": [
+      "cr"
+    ],
+    "posouzeni": null
+  },
+  {
+    "id": "k-f5b29b86a7c07440",
+    "zachyceno": "2026-09-19T09:02:03.979Z",
+    "publikovano": "2026-09-19T08:51:00.000Z",
+    "zdroj": {
+      "nazev": "Český rozhlas — domácí zprávy",
+      "url": "https://www.irozhlas.cz/veda-technologie/historie/pred-85-lety-museli-zide-zacit-nosit-zlutou-hvezdu-byla-trvale-stigma-vysvetluje_2609191051_eml",
+      "typ": "primary",
+      "primarni": true
+    },
+    "titulek": "Před 85 lety museli Židé začít nosit žlutou hvězdu. ‚Byla trvalé stigma,‘ vysvětluje historik Breitfelder",
+    "shrnuti": "Nařízení vydal říšský ministr vnitra 1. září 1941, podepsal ho šéf Hlavního úřadu říšské bezpečnosti Reinhard Heydrich a začalo platit 19. září. V té době už Židé museli snášet řadu drastických omezení a povinné označení žlutou hvězdou se stalo dalším krokem v jejich vydělení ze společnosti. Po něm ",
+    "duvod": "bez-skutku",
+    "kategorie": [],
+    "posouzeni": null
+  },
+  {
     "id": "k-5a97306119c71189",
     "zachyceno": "2026-09-19T08:53:21.069Z",
     "publikovano": "2026-09-19T08:35:00.000Z",
@@ -8411,40 +8445,6 @@
     "kategorie": [
       "vojsko"
     ],
-    "posouzeni": null
-  },
-  {
-    "id": "k-8b3e70023202b260",
-    "zachyceno": "2026-09-15T12:32:49.117Z",
-    "publikovano": "2026-09-15T12:02:00.000Z",
-    "zdroj": {
-      "nazev": "iROZHLAS — zprávy",
-      "url": "https://www.irozhlas.cz/zpravy-domov/sanaci-kontaminovaneho-uzemi-na-sumave-bude-provadet-armada-zacne-ve-stredu_2609151402_aru",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Sanaci kontaminovaného území na Šumavě bude provádět armáda. Začne ve středu, uvedl Hlaváč",
-    "shrnuti": "Armáda ve středu zahájí průzkum kontaminované lokality u Zhůří na Klatovsku v národním parku Šumava a poté oznámí další postup. Řekl to náčelník generálního štábu armády Miroslav Hlaváč, uvedla Česká televize. O tom, že sanaci bude dělat právě armáda, informoval v pondělí premiér Andrej Babiš (ANO).",
-    "duvod": "bez-skutku",
-    "kategorie": [
-      "vojsko"
-    ],
-    "posouzeni": null
-  },
-  {
-    "id": "k-93370870b4da162f",
-    "zachyceno": "2026-09-15T12:32:49.089Z",
-    "publikovano": "2026-09-15T12:00:00.000Z",
-    "zdroj": {
-      "nazev": "ERR News (Estonsko)",
-      "url": "https://news.err.ee/1610138674/datasel-seeks-resolution-in-estonia-ammunition-dispute",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Datasel seeks resolution in Estonia ammunition dispute",
-    "shrnuti": "India‑owned Datasel says it is ready to resolve a dispute over ammunition deliveries and meet Estonia's quality and quantity requirements, according to a proposal sent to the government and the Ministry of Defense.",
-    "duvod": "bez-skutku",
-    "kategorie": [],
     "posouzeni": null
   }
 ]
