@@ -22,7 +22,8 @@
     "preloz": "tsx nastroje/preloz.ts",
     "preklady:vytez": "node nastroje/vytez-preklady.mjs --zapis",
     "sber:kanaly": "tsx sber/test-kanalu.ts",
-    "spravce": "node nastroje/spravce.mjs"
+    "spravce": "node nastroje/spravce.mjs",
+    "audit": "tsx nastroje/audit.ts"
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^0.127.0",
