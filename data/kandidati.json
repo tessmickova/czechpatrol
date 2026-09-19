@@ -1,5 +1,45 @@
 [
   {
+    "id": "k-cc09e9220e46f644",
+    "zachyceno": "2026-09-19T08:00:22.136Z",
+    "publikovano": "2026-09-17T13:01:00.000Z",
+    "zdroj": {
+      "nazev": "ERR News (Estonsko)",
+      "url": "https://news.err.ee/1610141023/pm-estonia-ready-to-immediately-close-border-in-case-of-russian-mobilization",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "PM: Estonia ready to immediately close border in case of Russian mobilization",
+    "titulekPuvodni": "PM: Estonia ready to immediately close border in case of Russian mobilization",
+    "shrnuti": "Estonia is preparing for possible security risks if Russia declares a general mobilization, with Prime Minister Kristen Michal saying the country could close its border immediately if the threat assessment warrants it.",
+    "kodZeme": "EE",
+    "zeme": "Estonsko",
+    "kategorie": [
+      "pravo",
+      "hranice",
+      "rusko"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "declares+mobilization",
+      "border",
+      "russia"
+    ],
+    "naliehave": {
+      "druh": "mobilizace-rusko",
+      "stupen": 1,
+      "proc": "declares+mobilization"
+    },
+    "stav": "ceka",
+    "vyrez": {
+      "text": "PM: Estonia ready to immediately close border in case of Russian mobilization | News | ERR\n{{noticeUi.heading[langCode]}}\n{{infoLink[langCode].label}}\n{{noticeUi.allowAllLabel[langCode]}}\n{{rewokeLabels[langCode]}}\nX !\nNews\nERR\n{{1789650060000 | amCalendar}}\nshare Facebook X (Twitter) e-mail\nMargus Tsahkna and Kristen Michal. Source: Ken Mürk/ERR\nNews\nEstonia is preparing for possible security risks if Russia declares a general mobilization, with Prime Minister Kristen Michal saying the country could close its border immediately if the threat assessment warrants it.\nForeign Minister Margus Tsahkna said Thursday that Estonia is preparing for various scenarios if Russia declares a general mobilization, after a file titled \"Cabinet memo: Russian Federation mobilization\" appeared in the government's document register.\nTsahkna said the security cabinet regularly discusses potential Russian actions and how Estonia should respond, adding that a general mobilization would significantly increase domestic tensions in Russia.\nPrime Minister Kristen Michal stressed at the press conference that it is important to have regular updates on the security situation.\n\"There is nothing mysterious or…",
+      "stazeno": "2026-09-19T08:00:22.604Z",
+      "stav": 200
+    }
+  },
+  {
     "id": "k-c0ffc68c11c9b2d4",
     "zachyceno": "2026-09-16T09:32:53.875Z",
     "publikovano": "2026-09-09T15:35:18.000Z",
@@ -78,6 +118,517 @@
       "stazeno": "2026-09-15T16:32:52.624Z",
       "stav": 200
     }
+  },
+  {
+    "id": "k-6ed040efc8ef8060",
+    "zachyceno": "2026-09-19T08:00:22.175Z",
+    "publikovano": null,
+    "zdroj": {
+      "nazev": "The Kyiv Independent",
+      "url": "https://kyivindependent.com/russia-increasingly-using-repurposed-s-400-training-missiles-to-bombard-ukraine-reuters-reports/",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Russia increasingly using repurposed S-400 training missiles to bombard Ukraine, Reuters reports.",
+    "titulekPuvodni": "Russia increasingly using repurposed S-400 training missiles to bombard Ukraine, Reuters reports.",
+    "shrnuti": "",
+    "kodZeme": "UA",
+    "zeme": "Ukrajina",
+    "kategorie": [
+      "sabotaz",
+      "rusko"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "bomb",
+      "russia"
+    ],
+    "naliehave": null,
+    "stav": "ceka",
+    "vyrez": {
+      "text": "Russia increasingly using repurposed S-400 training missiles to bombard Ukraine, Reuters reports\nWar Russia increasingly using repurposed S-400 training missiles to bombard Ukraine, Reuters reports\nSeptember 18, 2026 8:11 pm • 2 min read\nPrefer on Google\nby Jimmy Rushton\nRussian S-400 Triumph medium-range and long-range surface-to-air missile systems on Red Square in Moscow on May 9, 2017. (Natalia Kolesnikova/AFP via Getty Images)\nRussia increasingly uses repurposed S-400 training missiles to strike Ukrainian cities, Reuters reports, citing figures compiled by military analysts at Ukraine&#x27;s General Prosecutor&#x27;s Office.\nRussia fired 87 of the RM48U training missiles at Ukraine in July, compared to 10 in June and 14 in May, Reuters said. The RM48U is significantly less accurate than a purpose-built ballistic missile but still capable of causing significant damage.\nRussia uses such repurposed training missiles, originally designed to serve as aerial targets in military training, to keep up pressure on Ukraine and conserve stocks of their more valuable ballistic missiles, an analyst interviewed by Reuters said.\n\"Their use allows the Russians to husband the more capable…",
+      "stazeno": "2026-09-19T08:00:22.906Z",
+      "stav": 200
+    }
+  },
+  {
+    "id": "k-2f0f0fd062704b10",
+    "zachyceno": "2026-09-19T08:00:22.172Z",
+    "publikovano": null,
+    "zdroj": {
+      "nazev": "The Kyiv Independent",
+      "url": "https://kyivindependent.com/russian-attack-on-sumy-kills-2-injures-7-as-guided-aerial-bombs-hit-apartment-building/",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Russian attack on Sumy kills 2, injures 8 as guided aerial bombs hit apartment building.",
+    "titulekPuvodni": "Russian attack on Sumy kills 2, injures 8 as guided aerial bombs hit apartment building.",
+    "shrnuti": "",
+    "kodZeme": "RU",
+    "zeme": "Rusko",
+    "kategorie": [
+      "sabotaz",
+      "hybridni",
+      "rusko"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "bomb",
+      "attack on",
+      "russia"
+    ],
+    "naliehave": null,
+    "stav": "ceka",
+    "vyrez": {
+      "text": "Russian attack on Sumy kills 2, injures 8 as guided aerial bombs hit apartment building\nWar Russian attack on Sumy kills 2, injures 8 as guided aerial bombs hit apartment building\nSeptember 18, 2026 10:58 pm • 2 min read\nPrefer on Google\nby Olena Goncharova\nEmergency workers work at the sity of Russian attack in Sumy on Sept. 18. (State Emergency Service / Telegram)\nA Russian guided aerial bomb struck a high-rise residential building in Sumy late on Sept. 18, killing two people and injuring at least eight others, regional authorities reported.\nA 13-year-old girl was among those injured, Sumy Oblast Governor Oleh Hryhorov said . Three of the injured are in serious condition and are receiving medical treatment.\nThe attack struck the residential building directly between its third and fourth floors, President Volodymyr Zelensky said later that evening.\nFour people, including a child, have been rescued from under the rubble, according to Zelensky. He said more people could still be trapped as emergency workers continued search-and-rescue operations and worked to extinguish fires.\nRussian guided aerial bombs struck an apartment building in Sumy late on Sept. 18. (State Emergency…",
+      "stazeno": "2026-09-19T08:00:23.220Z",
+      "stav": 200
+    }
+  },
+  {
+    "id": "k-9c4373877a16ce67",
+    "zachyceno": "2026-09-19T08:00:22.405Z",
+    "publikovano": "2026-09-18T15:51:00.000Z",
+    "zdroj": {
+      "nazev": "Téma: vzdusna-obrana (česky)",
+      "url": "https://news.google.com/rss/articles/CBMi5AFBVV95cUxNRXJkaEwyVG9nYTdwRXBSLTRsX0wzNy1rNDNRX3lBYzYxUldGby1nXzdMTEVWeXRvc3lPSjlreHR2U2VBUFVmRHE0a24tWmdPd0NJdjFCTWRqVHEzcDY4VzVEZnRRUkZUVVJ2TS1mV0pmTzJsaEpmS1htelVfc3dfbUR2OUJPTnhuZkVoS1pibllrRW1WcGRuZDRVSmQxSEoyU3l1RG1nNklCUVMwVGZJaFhNV1QzeFRVbkk1cDVoWHlzWkI4ekYycXRiNGZadi14ZzdZSWh4a0RpWjlvbThzYnNIX1A?oc=5",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Ruské drony zvedly české gripeny: Stíhačky vyrazily z Pardubic k východní hranici NATO - Blesk",
+    "titulekPuvodni": "Ruské drony zvedly české gripeny: Stíhačky vyrazily z Pardubic k východní hranici NATO - Blesk",
+    "shrnuti": "Ruské drony zvedly české gripeny: Stíhačky vyrazily z Pardubic k východní hranici NATO Blesk",
+    "kodZeme": "CZ",
+    "zeme": "Česko",
+    "kategorie": [
+      "drony",
+      "nato",
+      "rusko"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "stihac+zvedl",
+      "dron",
+      "nato",
+      "rusk"
+    ],
+    "naliehave": null,
+    "stav": "ceka",
+    "vyrez": {
+      "text": "Google News",
+      "stazeno": "2026-09-19T08:00:23.601Z",
+      "stav": 200
+    }
+  },
+  {
+    "id": "k-99bed44d31908c7c",
+    "zachyceno": "2026-09-19T08:00:22.112Z",
+    "publikovano": "2026-09-18T12:40:00.000Z",
+    "zdroj": {
+      "nazev": "ERR News (Estonsko)",
+      "url": "https://news.err.ee/1610141914/estonia-seeks-more-stores-to-join-emergency-preparedness-network",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Estonia seeks more stores to join emergency preparedness network",
+    "titulekPuvodni": "Estonia seeks more stores to join emergency preparedness network",
+    "shrnuti": "Estonia has 60 emergency-ready gas stations and 79 stores equipped with generators in case of a power outage. By the end of the year, the number of such stores is expected to reach 110.",
+    "kodZeme": "EE",
+    "zeme": "Estonsko",
+    "kategorie": [
+      "infrastruktura"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "power outage"
+    ],
+    "naliehave": null,
+    "stav": "ceka",
+    "vyrez": {
+      "text": "Estonia seeks more stores to join emergency preparedness network | News | ERR\n{{noticeUi.heading[langCode]}}\n{{infoLink[langCode].label}}\n{{noticeUi.allowAllLabel[langCode]}}\n{{rewokeLabels[langCode]}}\nX !\nNews\nLeevi Lillemäe\n{{1789735200000 | amCalendar}}\nshare Facebook X (Twitter) e-mail\nFood items at a supermarket checkout. Source: Priit Mürk/ERR\nNews\nEstonia has 60 emergency-ready gas stations and 79 stores equipped with generators in case of a power outage. By the end of the year, the number of such stores is expected to reach 110.\nEstonia has more than 550 gas stations, around 10 percent of which have now been designated emergency-ready gas stations. Compared with other gas stations, they maintain larger fuel reserves and have generators for use in an emergency, Priit Ploompuu, a member of the management board of the Estonian Stockpiling Agency, said.\n\"We can say that already today there are around 60 gas stations with enhanced emergency preparedness that are able to dispense fuel during a power outage. That is more than 10 percent of all gas stations in Estonia. The designation comes with an obligation to maintain a reasonable reserve of fuel in the tanks at an…",
+      "stazeno": "2026-09-19T08:00:23.719Z",
+      "stav": 200
+    }
+  },
+  {
+    "id": "k-7abcd2822fd274a2",
+    "zachyceno": "2026-09-19T08:00:22.414Z",
+    "publikovano": "2026-09-18T11:10:59.000Z",
+    "zdroj": {
+      "nazev": "Téma: vzdusna-obrana (anglicky)",
+      "url": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxNY3hTeUd0MU1XRERCSUlZbHJlOTZNMEhiaE01QTdsaTQ2Rm16OXhXaWZ3UHBqVkJ5R25aTWk3aUl0M0d6NGtIbmw0em5zYmk5RjBhU0ExME5jVjRpaGNXaTFzYk5kaUN1V2ZMWU1wTWhoQkRfVXpHWGRkamZ6WnB0cHJwMGJxQklzeDI0NnZpRXRsemVtMS1XVWpDdnY2QVB5ZjNEaTU1S3F3UW5MZHo1dDZYOXN1QkJlWmxzYTRqZzlDTkxzVmtBZjlNZldaYi1VaVHSAdcBQVVfeXFMUFJGYm5aSVpYRVRIYUJvOU03RkxnY0lXckZ6anRqbHNTNnE1VjRLUW01bmwtMVo1aU5NRzBQeVNYTmZjRER6UFFDdUdxTnRERjhYUW1aa1NMamxIOTV0YU4tYWFvejJEU0czc1AwWHJhaHkwaUV6em9yb2dlVEp2cUowaFVPLVZ0SDBqdkRPcTJ6SzNhX290YkhIaUN1cXFhU0RCU0Y1VWJpdWVlblFGa2ktRDBFaXZ0ZjlIT1ZKQi1hS3ZvR3htLVF0alJBQkdtMFd6cTd0Wnc?oc=5",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Italian Eurofighters scrambled after Russian aircraft violate Lithuanian airspace - Aviation24.be",
+    "titulekPuvodni": "Italian Eurofighters scrambled after Russian aircraft violate Lithuanian airspace - Aviation24.be",
+    "shrnuti": "Italian Eurofighters scrambled after Russian aircraft violate Lithuanian airspace Aviation24.be",
+    "kodZeme": "LT",
+    "zeme": "Litva",
+    "kategorie": [
+      "drony",
+      "rusko"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "scrambl",
+      "violat+airspace",
+      "airspace",
+      "russia"
+    ],
+    "naliehave": null,
+    "stav": "ceka",
+    "vyrez": {
+      "text": "Google News",
+      "stazeno": "2026-09-19T08:00:23.833Z",
+      "stav": 200
+    }
+  },
+  {
+    "id": "k-07fc5064aa48390d",
+    "zachyceno": "2026-09-19T08:00:22.502Z",
+    "publikovano": "2026-09-18T10:58:53.000Z",
+    "zdroj": {
+      "nazev": "Slovensko — spionaz",
+      "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxOVGpyWExQRjU5bFd2LUdGVFFBMnhjWDY4LUJvOXY2a01XVmR3Q3NuT3Rib1NEWTNPdkJEcXd3RUdCUzRjdHVoSVZBcWdEUTNETTY5WkJ0bXZxS3dla1V6QVlzMDVwSHJiRGxtTUUtaEp2b0FsWmdUMk8zNFU5OWp0aGg1OHBWLV9Da1k2YUZjMmxvbjRJTGVncmN2QndXd2FoUEJ0cWlpTVBTb0doN08wQ00xLVlfemE4Q3RacHF0Mm0?oc=5",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Fico will ‘do everything’ to keep Slovakia out of war with Russia and reject NATO’s Article 5 - London Business News",
+    "titulekPuvodni": "Fico will ‘do everything’ to keep Slovakia out of war with Russia and reject NATO’s Article 5 - London Business News",
+    "shrnuti": "Fico will ‘do everything’ to keep Slovakia out of war with Russia and reject NATO’s Article 5 London Business News",
+    "kodZeme": "SK",
+    "zeme": "Slovensko",
+    "kategorie": [
+      "nato",
+      "rusko"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "article 5",
+      "nato",
+      "russia"
+    ],
+    "naliehave": null,
+    "stav": "ceka",
+    "vyrez": {
+      "text": "Google News",
+      "stazeno": "2026-09-19T08:00:23.954Z",
+      "stav": 200
+    }
+  },
+  {
+    "id": "k-322c4221ae3e05d5",
+    "zachyceno": "2026-09-19T08:00:22.395Z",
+    "publikovano": "2026-09-18T09:50:54.000Z",
+    "zdroj": {
+      "nazev": "Téma: vojsko (česky)",
+      "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxOSHQ1VkV2cS1IQV9uanY2eEwyVTM1MWFiaGlIRmgtdzA4U0VhVG5ESmYzUk9pNmJKVU9VbW12bXB3b091XzFBV3MyQm1BTVRvc0dwaERjcXF6Z3JHX2lFTy0xdVdtbGc2dkxNSmtmY2g1OHptbV9aZjhpODlpVV9HdGVKektRSFVVRHhWc25IV1Y1ZXN0aGNSV1c0WkpWTF80TmNLTG1EZi0zYnpZYVE?oc=5",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Polsko vyslalo vojáky na hranice s Ukrajinou. Rusko ohrožuje bezpečnost celé Evropy a to musí skončit - ArmádníZpravodaj.cz",
+    "titulekPuvodni": "Polsko vyslalo vojáky na hranice s Ukrajinou. Rusko ohrožuje bezpečnost celé Evropy a to musí skončit - ArmádníZpravodaj.cz",
+    "shrnuti": "Polsko vyslalo vojáky na hranice s Ukrajinou. Rusko ohrožuje bezpečnost celé Evropy a to musí skončit ArmádníZpravodaj.cz",
+    "kodZeme": "PL",
+    "zeme": "Polsko",
+    "kategorie": [
+      "hranice",
+      "vojsko",
+      "rusko"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "hranic+vojak",
+      "hranice",
+      "vojak",
+      "rusk"
+    ],
+    "naliehave": null,
+    "stav": "ceka",
+    "vyrez": {
+      "text": "Google News",
+      "stazeno": "2026-09-19T08:00:24.064Z",
+      "stav": 200
+    }
+  },
+  {
+    "id": "k-8a1833a84bd22e27",
+    "zachyceno": "2026-09-19T08:00:22.042Z",
+    "publikovano": "2026-09-18T08:04:56.000Z",
+    "zdroj": {
+      "nazev": "ČT24 — hlavní zprávy",
+      "url": "https://ct24.ceskatelevize.cz/clanek/svet/s-kym-a-proc-budeme-bojovat-fico-se-odmita-ridit-clankem-5-nato-377737",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "„S kým a proč budeme bojovat?“ Fico zpochybnil závazek článku 5 NATO",
+    "titulekPuvodni": "„S kým a proč budeme bojovat?“ Fico zpochybnil závazek článku 5 NATO",
+    "shrnuti": "Slovenský premiér Robert Fico (Smer) prohlásil, že v případě ruského útoku nehodlá plnit závazky Slovenska vyplývající z článku 5 Severoatlantické smlouvy o kolektivní obraně. Během projevu ke studentům a zaměstnancům nemocnice v Prešově se ptal, s kým by se vlastně bojovalo, proč a za co, přičemž M",
+    "kodZeme": "SK",
+    "zeme": "Slovensko",
+    "kategorie": [
+      "nato",
+      "rusko"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "clanku 5",
+      "nato",
+      "rusk"
+    ],
+    "naliehave": null,
+    "stav": "ceka",
+    "vyrez": {
+      "text": "„S kým a proč budeme bojovat?“ Fico zpochybnil závazek článku 5 NATO — ČT24 — Česká televize\nŽivé vysílání\nTV program\nPočasí\nTeletext\nE-shop\nVše o ČT\nTV poplatky\nKontakty\nSpravovat účet\nOblíbené pořady\nRozkoukaná videa\nPřihlásit se do TV\nOdhlásit se\n„S kým a proč budeme bojovat?“ Fico zpochybnil závazek článku 5 NATO\nTamara Kejlová\n18. 9. 2026 před 21 h hodinami | Zdroj: ČTK , Ukrajinska pravda , ČT24\nSlovenský premiér Robert Fico (Smer)\nZdroj: Reuters/Radovan Stoklasa\nSlovenský premiér Robert Fico (Smer) prohlásil, že v případě ruského útoku nehodlá plnit závazky Slovenska vyplývající z článku 5 Severoatlantické smlouvy o kolektivní obraně. Během projevu ke studentům a zaměstnancům nemocnice v Prešově se ptal, s kým by se vlastně bojovalo, proč a za co, přičemž Moskvu ani jednou neoznačil za agresora.\nFico v souvislosti s Ukrajinou, která se pátým rokem brání plnohodnotné ruské agresi, mluvil o riziku rozsáhlého konfliktu. „Situace nikdy nebyla tak vážná a vypjatá, pokud jde o možnost celoevropského vojenského konfliktu, jako je tomu nyní,“ varoval ministerský předseda.\nFakta\nČlánek 5 Severoatlantické smlouvy\nDodal, že udělá všechno pro to, aby Slovensko nebylo zataženo do války.…",
+      "stazeno": "2026-09-19T08:00:24.200Z",
+      "stav": 200
+    }
+  },
+  {
+    "id": "k-d893478cd747b628",
+    "zachyceno": "2026-09-19T08:00:22.391Z",
+    "publikovano": "2026-09-18T07:18:11.000Z",
+    "zdroj": {
+      "nazev": "Téma: hranice (anglicky)",
+      "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTFBmRkRQNUs0LUxEbVpSUUFyb1VMUHc4c1dmQXh5ZXcyUzFnMmZZVlBFRHgwQll6N0U5Uk43clpzc3VXOV9KYlJ0dmRpU2tIMHZucFFpaWRtNW1wSUs4QnN3NnBZS0p3X2ZpVWp1b0xMRWhyZU1a?oc=5",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Temporary border checks spread across Schengen as exceptional measures become routine - EU Today",
+    "titulekPuvodni": "Temporary border checks spread across Schengen as exceptional measures become routine - EU Today",
+    "shrnuti": "Temporary border checks spread across Schengen as exceptional measures become routine EU Today",
+    "kodZeme": "EU",
+    "zeme": "EU",
+    "kategorie": [
+      "hranice"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "border checks",
+      "border+checks",
+      "schengen",
+      "border"
+    ],
+    "naliehave": null,
+    "stav": "ceka",
+    "vyrez": {
+      "text": "Google News",
+      "stazeno": "2026-09-19T08:00:25.442Z",
+      "stav": 200
+    }
+  },
+  {
+    "id": "k-f0ffc8ce7eccecc7",
+    "zachyceno": "2026-09-19T08:00:22.247Z",
+    "publikovano": "2026-09-18T06:28:22.000Z",
+    "zdroj": {
+      "nazev": "Téma: zeleznice (anglicky)",
+      "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE9laHhoTzZtckVFb3lqMEQxOUwxUmtRTDVtaFloUHNkTDdMXzJjQ3I1VnRjandIZzlUYS0zT1VoMHo4czREQ08tX0JsbEtUYlNXN0dvSFJGaVdFUWJYdzB5R3R2cmljbVo3X2Y2Rk5PMzE?oc=5",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Suspected Sabotage Paralyzes Dutch Railway Network - suaragarut.id",
+    "titulekPuvodni": "Suspected Sabotage Paralyzes Dutch Railway Network - suaragarut.id",
+    "shrnuti": "Suspected Sabotage Paralyzes Dutch Railway Network suaragarut.id",
+    "kodZeme": "NL",
+    "zeme": "Nizozemsko",
+    "kategorie": [
+      "sabotaz",
+      "infrastruktura"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "sabotage",
+      "railway"
+    ],
+    "naliehave": null,
+    "stav": "ceka",
+    "vyrez": {
+      "text": "Google News",
+      "stazeno": "2026-09-19T08:00:25.560Z",
+      "stav": 200
+    }
+  },
+  {
+    "id": "k-c103ec7f8245403a",
+    "zachyceno": "2026-09-19T08:00:22.249Z",
+    "publikovano": "2026-09-17T18:39:04.000Z",
+    "zdroj": {
+      "nazev": "Téma: kabely (anglicky)",
+      "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxNSENFRzBaMDBxUjRKLU9sRnYtMHp2eEJPdXkzM0NqQ283TTduZjhXZlBJOWVubUd4OXlER1I3dDZhSXZLT1lMR1dyamJDd1lGMUhaT0xDRnUzdVFQajZjQzdQelo1T1dEb0ppUWt3WmtNTUFZcmFoQ2Fna2EySlhZVUNMeDBoSWNxbkNrbE5sdVpVOXpmS2J1dlRxZDVDNS1EM0VEQk5BaGNOemhsWWfSAbsBQVVfeXFMTjR2ZjM3dUMtdC1OTHFIREM5NGVCb0llR20wWjg5TXRoUDYwUlFqSG1nYjhEMXhET3MtekhiQXBKcDRTQ2hjWlhodkpCSWd0dnZsdnk3TV9xT3BDMHpUR0pGUmNfbDU3Q1dtZWQ0ZzRTUmV0c0dvdE5jNE1SWnFjQVRmajcxb0JhaDN0TXdhTEhUNkZISFRJa2tlcFVkQmx6QXBWQTVXSVlNMENzU25UZWREamR4STJiaHpZbw?oc=5",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Finland tests response to Baltic undersea cable sabotage in live drill - Baird Maritime",
+    "titulekPuvodni": "Finland tests response to Baltic undersea cable sabotage in live drill - Baird Maritime",
+    "shrnuti": "Finland tests response to Baltic undersea cable sabotage in live drill Baird Maritime",
+    "kodZeme": "FI",
+    "zeme": "Finsko",
+    "kategorie": [
+      "sabotaz",
+      "infrastruktura"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "sabotage",
+      "undersea cable"
+    ],
+    "naliehave": null,
+    "stav": "ceka",
+    "vyrez": {
+      "text": "Google News",
+      "stazeno": "2026-09-19T08:00:25.692Z",
+      "stav": 200
+    }
+  },
+  {
+    "id": "k-d0ed6c7938345ff3",
+    "zachyceno": "2026-09-19T08:00:22.417Z",
+    "publikovano": "2026-09-17T17:54:00.000Z",
+    "zdroj": {
+      "nazev": "Téma: vzdusna-obrana (anglicky)",
+      "url": "https://news.google.com/rss/articles/CBMi9AFBVV95cUxNY0dzREdENndVZGFMcWRSMm1FRUlWUk96c2dvVmlYVTNLUXFFTEVxVUVLaVo4NmNvYVhHVmtSdndISElaVzhVVkEwbXdfM1c1NUpPdjBUTUJPU0FfMGh4bnNmMmk3OHd5MTFvLVI0cWJ6LUQzeXpHUWVJVjRobHV2ZWZlelNBOHpOXzhKZ2d0bnRqREFwZmJSNVhRY0xNaTRWZmRabm42R01hZmc0d29GLUVFaUdkd2g1VHpSUHRkRlBqeFZWSVNRV0hGNlN0Sk91T2FxTktOb1BjOXlKNjhKbzNpb3JZRktaZGRVeHNaUzA1cWZU0gH6AUFVX3lxTE9LX3luNUpSUC1BSUtWd3JnXzNDNW9wVFZ1V0lOVXZHbWFMdlZsWkhweUJMZlpOMnVmM1MxbjJ5VzZUc1VIaGJvVEU4SS1BSFVleDVWM0VjX2t1eGYtZnJBaGV4QnpvdnprQ3BTdVB3cC1IQURNa3pnUFdMZ3pOVHF1YmRMTXdMQ0FxRGprNk5OVXZod19QZWp3cDlBbUtjcE9QVzBMZnVCZlpPUi1kZTE2UnA0OThBUE94SU03RVRhMnBrdEx6aG5hcWlXR01id0p5MXhHY0k3RHd2MXlETVJMOHJFbHRqTTY3eXRWVW82WDMwc0ZSbGdRNmc?oc=5",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Russian military jets violate Lithuanian airspace, Italian fighters scrambled - ANSA",
+    "titulekPuvodni": "Russian military jets violate Lithuanian airspace, Italian fighters scrambled - ANSA",
+    "shrnuti": "Russian military jets violate Lithuanian airspace, Italian fighters scrambled ANSA",
+    "kodZeme": "LT",
+    "zeme": "Litva",
+    "kategorie": [
+      "drony",
+      "rusko"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "scrambl",
+      "violat+airspace",
+      "airspace",
+      "russia"
+    ],
+    "naliehave": null,
+    "stav": "ceka"
+  },
+  {
+    "id": "k-4645d0d12972ba95",
+    "zachyceno": "2026-09-19T08:00:22.052Z",
+    "publikovano": "2026-09-17T13:57:41.000Z",
+    "zdroj": {
+      "nazev": "ČT24 — hlavní zprávy",
+      "url": "https://ct24.ceskatelevize.cz/clanek/svet/nemecka-policie-zadrzela-iracana-chtel-podle-ni-zautocit-na-kostel-377721",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Německá policie zadržela Iráčana, chtěl podle ní zaútočit na kostel",
+    "titulekPuvodni": "Německá policie zadržela Iráčana, chtěl podle ní zaútočit na kostel",
+    "shrnuti": "Německá policie ve čtvrtek zadržela 24letého Iráčana, který podle vyšetřovatelů chystal útok na kostel v Brémách na severu Německa, oznámilo spolkové státní zastupitelství s tím, že muž se hlásil k ideologii teroristické organizace Islámský stát. Pro útok, který podle prohlášení plánoval již na jaře",
+    "kodZeme": "DE",
+    "zeme": "Německo",
+    "kategorie": [
+      "zpravodajske",
+      "hybridni",
+      "vojsko"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "zadrz",
+      "utok na",
+      "policie"
+    ],
+    "naliehave": null,
+    "stav": "ceka"
+  },
+  {
+    "id": "k-a0633179d350f19c",
+    "zachyceno": "2026-09-19T08:00:22.138Z",
+    "publikovano": "2026-09-17T12:40:00.000Z",
+    "zdroj": {
+      "nazev": "ERR News (Estonsko)",
+      "url": "https://news.err.ee/1610140978/kaja-kallas-russia-using-hybrid-attacks-to-erode-europe-s-support-for-ukraine",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Kaja Kallas: Russia using hybrid attacks to erode Europe's support for Ukraine",
+    "titulekPuvodni": "Kaja Kallas: Russia using hybrid attacks to erode Europe's support for Ukraine",
+    "shrnuti": "The European Union's High Representative for Foreign Affairs, Kaja Kallas, said that Russia's increasing hybrid attacks, acts of sabotage, and stray drones are aimed at frightening the residents of European countries and deterring them from supporting Ukraine.",
+    "kodZeme": "EU",
+    "zeme": "EU",
+    "kategorie": [
+      "sabotaz",
+      "drony",
+      "rusko"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "sabotage",
+      "dron",
+      "drone",
+      "russia"
+    ],
+    "naliehave": null,
+    "stav": "ceka"
+  },
+  {
+    "id": "k-5aa3a52cd44e1707",
+    "zachyceno": "2026-09-19T08:00:22.409Z",
+    "publikovano": "2026-09-17T07:16:35.000Z",
+    "zdroj": {
+      "nazev": "Téma: vzdusna-obrana (anglicky)",
+      "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxOYVdEcV9aRndmWG5QTDhRR3RRUzdDWkYwV19SNDBmTGc2bnN3ZnhqTDZqTXc3VTczY0x4UzhYMlRpeHFleG04dkZ5NkMteWE0ZjJvVnVMZmE2M3ZGMG1FZ3F6cnhRZkw3Sk9nVFhDNENGSjJndmwxZlQxVjFZcDEyS05LazRPRmtmQzZoNm1sdFg2MVhwMWlsaExCWmVuUmF0WHVkaHNTc3NMdUl5amZTUjlYZw?oc=5",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Russian military jets violate Lithuanian airspace; Italian fighter jets are scrambled - Il Sole 24 ORE",
+    "titulekPuvodni": "Russian military jets violate Lithuanian airspace; Italian fighter jets are scrambled - Il Sole 24 ORE",
+    "shrnuti": "Russian military jets violate Lithuanian airspace; Italian fighter jets are scrambled Il Sole 24 ORE",
+    "kodZeme": "LT",
+    "zeme": "Litva",
+    "kategorie": [
+      "drony",
+      "rusko"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "scrambl",
+      "violat+airspace",
+      "fighter jet+scrambl",
+      "airspace",
+      "russia"
+    ],
+    "naliehave": null,
+    "stav": "ceka"
   },
   {
     "id": "k-ab7a6c8042552993",
@@ -840,6 +1391,35 @@
     }
   },
   {
+    "id": "k-287b8beb79329b02",
+    "zachyceno": "2026-09-19T08:00:22.491Z",
+    "publikovano": "2026-09-16T07:00:00.000Z",
+    "zdroj": {
+      "nazev": "Česko — sabotaz",
+      "url": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxOc29TMEhhcXBEVTVKbHlDNHl1bENiNGRpNFM0dkNOeWstRVdkUG1EZ0dhUEt4VTBubVdITzFaOEpFc1ZQV3RaSTdpRDZEc2tTVDdEQWx4YlF3MWNYTjJ4NTFESmxxR0h6OVNEdWpPZ1dHZWN6NXN0NU1WUmFPMFRKdVltYWR2RDYyWHZwb2I4ZkNJejliVkJzQTFTMzJLNkRLMmcxSUdGOWU4Y2ZkNXlsYnRxcXVteFJndFlabENpai1iYVlLdTJ4SA?oc=5",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Russian sabotage network: Poland’s Internal Security Agency has investigated the Polish connection since 2024 - MILMAG",
+    "titulekPuvodni": "Russian sabotage network: Poland’s Internal Security Agency has investigated the Polish connection since 2024 - MILMAG",
+    "shrnuti": "Russian sabotage network: Poland’s Internal Security Agency has investigated the Polish connection since 2024 MILMAG",
+    "kodZeme": "PL",
+    "zeme": "Polsko",
+    "kategorie": [
+      "sabotaz",
+      "rusko"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "sabotage",
+      "russia"
+    ],
+    "naliehave": null,
+    "stav": "ceka"
+  },
+  {
     "id": "k-42a895b81bf1d567",
     "zachyceno": "2026-09-16T06:32:44.905Z",
     "publikovano": "2026-09-16T06:31:00.000Z",
@@ -1432,6 +2012,35 @@
     }
   },
   {
+    "id": "k-1737f095efdffe4f",
+    "zachyceno": "2026-09-19T08:00:22.477Z",
+    "publikovano": "2026-09-15T16:11:59.000Z",
+    "zdroj": {
+      "nazev": "Téma: krizove-vysilani (česky)",
+      "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxOWTZtVVJHNUwzTUN5emVkZjRKWU5QNFNxTWRzYzF5V1ljZHh5TExBcE9VSXYtMmc3Z1RIaFFTU05CYmpZbVJfMl93aHB4TmxybFA1R0hhRVhQZ0pmRGFMQVM2RURwdTE5S1pya1NMMks1Rld1bElSN09vemNITXNHdXBBcG53WXJ2MUFDdW9EMTVfQ2Rxc0VuNEV0c1JObjhLVi1sUkFwRnZ0NDZCRnJEUmZtWmVaTHhCSXBScUJOU3o1c3RPcWtr?oc=5",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Český rozhlas posiluje krizové vysílání. Spojí síly s hasiči, policií a záchranáři - mam.cz",
+    "titulekPuvodni": "Český rozhlas posiluje krizové vysílání. Spojí síly s hasiči, policií a záchranáři - mam.cz",
+    "shrnuti": "Český rozhlas posiluje krizové vysílání. Spojí síly s hasiči, policií a záchranáři mam.cz",
+    "kodZeme": "CZ",
+    "zeme": "Česko",
+    "kategorie": [
+      "cr"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "krizove vysilani",
+      "cesky rozhlas",
+      "rozhlas"
+    ],
+    "naliehave": null,
+    "stav": "ceka"
+  },
+  {
     "id": "k-01cd70435afade84",
     "zachyceno": "2026-09-16T14:02:52.831Z",
     "publikovano": "2026-09-15T16:02:46.000Z",
@@ -1765,6 +2374,34 @@
       "stazeno": "2026-09-15T16:32:54.510Z",
       "stav": 200
     }
+  },
+  {
+    "id": "k-07e2037cf44d2b06",
+    "zachyceno": "2026-09-19T08:00:22.481Z",
+    "publikovano": "2026-09-15T12:38:42.000Z",
+    "zdroj": {
+      "nazev": "Téma: krizove-vysilani (česky)",
+      "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxQeVRySTBfeFUwaVZSWlpjQ2lraFAxd1o2ZzhQWW91MUNJeDVBVndpcmVHbUlyVVFnXzhEX05CTWRNd2VsS25nNTdIUHlTaWUzY3VMZlVYMFQ5TE1TU2l5LWpvaHo3WnhKMjMwbVAzNVpPMkdDREM5cm5aZjd4U1R2LVNoWWtGYXNIb214bGpnTFl5LWd3MVVoVjlHLVBqdXpJTDRqQmNRZW81cjdKR0pOUW1DM0loakozMjhFd0N0c3lPQQ?oc=5",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Od první pomoci po krizové vysílání. Pražská záchranka rozvíjí spolupráci s Českým rozhlasem - zzshmp.cz",
+    "titulekPuvodni": "Od první pomoci po krizové vysílání. Pražská záchranka rozvíjí spolupráci s Českým rozhlasem - zzshmp.cz",
+    "shrnuti": "Od první pomoci po krizové vysílání. Pražská záchranka rozvíjí spolupráci s Českým rozhlasem zzshmp.cz",
+    "kodZeme": "CZ",
+    "zeme": "Česko",
+    "kategorie": [
+      "cr"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "krizove vysilani",
+      "rozhlas"
+    ],
+    "naliehave": null,
+    "stav": "ceka"
   },
   {
     "id": "k-ed8a125c59e139fc",
@@ -5488,6 +6125,38 @@
     }
   },
   {
+    "id": "k-b4996e1572a57e7c",
+    "zachyceno": "2026-09-19T08:00:22.530Z",
+    "publikovano": "2026-09-12T13:21:30.000Z",
+    "zdroj": {
+      "nazev": "Rakousko — sabotaz",
+      "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxNVnFvU2N3UkdEOU4weEFYZC01b19NclprSFMyUmQ4UjhKbE9CRW8xRUM4ZHFWNG9ZSlJuMTVUcV85WDlEMjZ4RW1JM3RUVm1QbEZyUDBxZEtIdE5qX0NUX2ZLU1FlaXBDc2lUTW1jY1JaMW1xb3ZvRkVlUjBDMk94Rjg1MHhCaUFfTWZEYVJaNzN3MlMwVWx3bmFYSEpYc2tMZjdXY280UXBBOC16UkZndG9BeTctVlFZdHdpVFhIemZzQQ?oc=5",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Drone attack on Leipzig: clues apparently point to Russian intelligence service - Euronews.com",
+    "titulekPuvodni": "Drone attack on Leipzig: clues apparently point to Russian intelligence service - Euronews.com",
+    "shrnuti": "Drone attack on Leipzig: clues apparently point to Russian intelligence service Euronews.com",
+    "kodZeme": "DE",
+    "zeme": "Německo",
+    "kategorie": [
+      "hybridni",
+      "drony",
+      "rusko"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "attack on",
+      "dron",
+      "drone",
+      "russia"
+    ],
+    "naliehave": null,
+    "stav": "ceka"
+  },
+  {
     "id": "k-518051c5848b27ed",
     "zachyceno": "2026-09-15T16:32:52.528Z",
     "publikovano": "2026-09-12T09:54:51.000Z",
@@ -6642,6 +7311,39 @@
     "naliehave": null
   },
   {
+    "id": "k-937c504449973022",
+    "zachyceno": "2026-09-19T08:00:22.554Z",
+    "publikovano": "2026-09-10T11:03:34.000Z",
+    "zdroj": {
+      "nazev": "Norsko — sabotaz",
+      "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxPa2R1Z3V2TWNRdWtydTBKZXVXQmI1ZXl4NEZvTmFoN3JJVDZTb3dwaExKbWtjaGU2VDBWUU5BZXJfVi1uNDVMYWd6YXVfUlplSEhCdjBoRHQ5OWtRdDRldjdPcWE4SC1rZENHeVVta1lXSEVqcmFPRFRQS2pXZnlla1g4YURrdw?oc=5",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "NATO Allies Disrupt Russian Subsea Cable Sabotage Exercise - Marine News Magazine",
+    "titulekPuvodni": "NATO Allies Disrupt Russian Subsea Cable Sabotage Exercise - Marine News Magazine",
+    "shrnuti": "NATO Allies Disrupt Russian Subsea Cable Sabotage Exercise Marine News Magazine",
+    "kodZeme": "RU",
+    "zeme": "Rusko",
+    "kategorie": [
+      "sabotaz",
+      "infrastruktura",
+      "nato",
+      "rusko"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "sabotage",
+      "subsea cable",
+      "nato",
+      "russia"
+    ],
+    "naliehave": null,
+    "stav": "ceka"
+  },
+  {
     "id": "k-930e1a80177dab19",
     "zachyceno": "2026-09-10T21:32:51.727Z",
     "publikovano": "2026-09-10T10:31:55.000Z",
@@ -6887,6 +7589,37 @@
       "stav": 200
     },
     "naliehave": null
+  },
+  {
+    "id": "k-18934c095679246a",
+    "zachyceno": "2026-09-19T08:00:22.552Z",
+    "publikovano": "2026-09-10T07:00:00.000Z",
+    "zdroj": {
+      "nazev": "Norsko — sabotaz",
+      "url": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxQSnNCWC1EQkZRSWNyc1VBZWQyeTBRekVrSGk4bHdHZ3Y2M1o0RThmXzNQcDQ0ZUNhQU5rQ0Nhc2FLMWg2VWJqQ0JTQnZwRUhoSlAtZjlLSXdfVmZjY0FyaTdvejJHV2stb2RubjEzLVV1WVJ6Wm5JVEhEcmE5emRMU1dNWm9fbVQwVW5tRGN4WHBNTEdSRTNMdzgzZlhRcmkydVByeEFjNm9lbW5ac0V1dlRrM3Fzd2x1UWphVGtEaWxYRHc3c2FIaGcwYVVqVDlEelhac0FR?oc=5",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "NATO Allies Disrupted Russia’s GUGI Arctic Training Near Svalbard To Simulate Cable Sabotage: 13 outlets compared - NewsCord",
+    "titulekPuvodni": "NATO Allies Disrupted Russia’s GUGI Arctic Training Near Svalbard To Simulate Cable Sabotage: 13 outlets compared - NewsCord",
+    "shrnuti": "NATO Allies Disrupted Russia’s GUGI Arctic Training Near Svalbard To Simulate Cable Sabotage: 13 outlets compared NewsCord",
+    "kodZeme": "RU",
+    "zeme": "Rusko",
+    "kategorie": [
+      "sabotaz",
+      "nato",
+      "rusko"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "sabotage",
+      "nato",
+      "russia"
+    ],
+    "naliehave": null,
+    "stav": "ceka"
   },
   {
     "id": "k-9876740bda14a0a4",
@@ -7535,6 +8268,37 @@
       "stav": 200
     },
     "naliehave": null
+  },
+  {
+    "id": "k-7b27f533c4080b11",
+    "zachyceno": "2026-09-19T08:00:22.573Z",
+    "publikovano": "2026-09-09T07:00:00.000Z",
+    "zdroj": {
+      "nazev": "Rumunsko — sabotaz",
+      "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxPdEptcEJlRTNkVDhGMHoxRnlEdVVlakRJS0MyZWVpRUhnZ2E1NGVqbUQ2b3EzamNsb1JTLXo1WkhfOUdMMktMSGx0bkxzX2R0TFE1UlgtRjRTZWxIN01VNHhfY2ttcndRekdCcVIxLUJrRFpKLS1iSjN4UHlCNDJMT0tLbTFWcDlkY05sUGRwU2tNVjRMMnpxdWxNalZEZHJFRlJSSnA2WFFxbjNkcnpN?oc=5",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Romania: A Russian Arrested, Bucharest Says It Foiled a Sabotage Coordinated by Moscow - Benin Web TV",
+    "titulekPuvodni": "Romania: A Russian Arrested, Bucharest Says It Foiled a Sabotage Coordinated by Moscow - Benin Web TV",
+    "shrnuti": "Romania: A Russian Arrested, Bucharest Says It Foiled a Sabotage Coordinated by Moscow Benin Web TV",
+    "kodZeme": "RO",
+    "zeme": "Rumunsko",
+    "kategorie": [
+      "sabotaz",
+      "zpravodajske",
+      "rusko"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "sabotage",
+      "arrested",
+      "russia"
+    ],
+    "naliehave": null,
+    "stav": "ceka"
   },
   {
     "id": "k-026ac9c87491e313",
@@ -8696,6 +9460,63 @@
     }
   },
   {
+    "id": "k-13ed0cf668301006",
+    "zachyceno": "2026-09-19T08:00:22.292Z",
+    "publikovano": "2026-09-08T07:00:00.000Z",
+    "zdroj": {
+      "nazev": "Téma: energetika (anglicky)",
+      "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTFBtWWRsYUtZNzdTR0xId2Vza3hXODBORWRPYUtwZGVlRjRtT2Frbm9RaWxYQzg0b3Z6SVVHY0xtdnBZaTlOVms2RjRaR0k5RnBYaXI5bHdaSGJWazJ5?oc=5",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "German police arrest suspect over sabotage attacks on power grid - BBC",
+    "titulekPuvodni": "German police arrest suspect over sabotage attacks on power grid - BBC",
+    "shrnuti": "German police arrest suspect over sabotage attacks on power grid BBC",
+    "kodZeme": "DE",
+    "zeme": "Německo",
+    "kategorie": [
+      "sabotaz",
+      "infrastruktura"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "sabotage",
+      "power grid"
+    ],
+    "naliehave": null,
+    "stav": "ceka"
+  },
+  {
+    "id": "k-a2bd3d3b7a6c7200",
+    "zachyceno": "2026-09-19T08:00:22.593Z",
+    "publikovano": "2026-09-08T07:00:00.000Z",
+    "zdroj": {
+      "nazev": "Moldavsko — sabotaz",
+      "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxNcldZX2lkNUU0cEd3azFGVEgwRXNxLTVQeGVVWldOWjk1NGdIeWRyZFFISXRyOFU2NnZPSnYySXNwX1VySDdqaXhvQ1U1ZlEydzZMZjlsbkZHUUUyZG5lYlpfQXhwWjdndy00aGR1dHRQVXRPNDJJRWsxVDFDOVJEaDBNb1ppaW1WWnRnT0dsWFk3UzFG?oc=5",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "An Azerbaijani national was arrested in Moldova on charges of spying for the FSB - UA.NEWS",
+    "titulekPuvodni": "An Azerbaijani national was arrested in Moldova on charges of spying for the FSB - UA.NEWS",
+    "shrnuti": "An Azerbaijani national was arrested in Moldova on charges of spying for the FSB UA.NEWS",
+    "kodZeme": "MD",
+    "zeme": "Moldavsko",
+    "kategorie": [
+      "zpravodajske"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "arrested",
+      "fsb"
+    ],
+    "naliehave": null,
+    "stav": "ceka"
+  },
+  {
     "id": "k-c75f826e0619aad4",
     "zachyceno": "2026-09-15T16:32:52.277Z",
     "publikovano": "2026-09-08T05:56:11.000Z",
@@ -9473,849 +10294,6 @@
     "vyrez": {
       "text": "Google News",
       "stazeno": "2026-09-14T09:02:40.315Z",
-      "stav": 200
-    },
-    "naliehave": null
-  },
-  {
-    "id": "k-a2d2352dedfb9df3",
-    "zachyceno": "2026-09-07T10:06:21.695Z",
-    "publikovano": "2026-09-05T07:20:17.000Z",
-    "zdroj": {
-      "nazev": "BBC News — Europe",
-      "url": "https://www.bbc.co.uk/news/articles/c7v4npv1m22o?at_medium=RSS&at_campaign=rss",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Tate brothers officially indicted with trafficking and sex crimes in Romania",
-    "titulekPuvodni": "Tate brothers officially indicted with trafficking and sex crimes in Romania",
-    "shrnuti": "Andrew and Tristan Tate are currently in a Miami jail fighting extradition to the UK over separate charges and deny all the allegations.",
-    "kodZeme": "GB",
-    "zeme": "Spojené království",
-    "kategorie": [
-      "zpravodajske"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "shody": [
-      "indicted"
-    ],
-    "stav": "ceka",
-    "vyrez": {
-      "text": "Tate brothers officially indicted with trafficking and sex crimes in Romania - BBC News\nImage source, Reuters\nImage caption, Tristan and Andrew Tate pictured in April 2026 at Kaseya Center, Miami\nBy Dan Sales\nPublished\n5 September 2026\nRomanian prosecutors have officially indicted social media influencers Andrew and Tristan Tate with a range of trafficking and sex offences.\nThey are accused of making more than $1.2m (£888,000) by coercing a girl to perform sex acts on video chats, according to the Romanian Directorate for Investigating Crime and Terrorism (DIICOT).\nAndrew, 39, is charged with trafficking minors, money laundering and having sex with a minor. Tristan, 38, is charged with complicity in trafficking in minors and money laundering.\nThe Tates - currently in a Miami jail fighting extradition to the UK over separate charges - deny all the allegations.\nWill the Tate brothers be extradited from the US to the UK?\nPublished\n21 July\nThe brothers - former kickboxers with dual US and British citizenship - have been under criminal investigation in Romania since December 2022.\nThey have been mainly based there since 2017, drawing a large social media audience - many of them young…",
-      "stazeno": "2026-09-14T09:02:40.448Z",
-      "stav": 200
-    },
-    "naliehave": null
-  },
-  {
-    "id": "k-ac69947e0d46f548",
-    "zachyceno": "2026-09-06T13:59:15.571Z",
-    "publikovano": "2026-09-05T05:50:09.000Z",
-    "zdroj": {
-      "nazev": "Google News — sabotage Europe",
-      "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxQVGJ3N3czQ0pURG5HWU11MTY3YnY0WHB0NXUybmxZdUJxUXhfeGkxQ3Fsekx3d2xyQjNlbGppLWEyLS1WT253U2JySGUtQjM2RVFtSDd5a2U2UV9HcDh3NmFJQTVsQkFlMHl4NWpoT09UeEVtbTcyWjJ4ZjlCQjNpdXM4Y1hzMlpNX2txMHdPbzg3LVp4azAzY2ZIQTZ2d25BdHlGaFh2TGFSdjZ0cnpyRTZJZjlDOXN10gGqAUFVX3lxTE5nblc5ZjBMUjQ3QVUxYkl2dndURndsU3NOcW5XLWxOUTJFR1ZlV25SMlFwZEYwdl83X1gxZ00ydWJSSVpiQWMzeDRWTE9nYThMdXJKcTJCZlc3WGctb2YwcU9mT181cGx0b1hUaFBGcVBabWQ0SUFGb3p0RDJsY3VSQ3FaTlgybFB6cC1sNmhuNVctT1VxcGJrQ2h2c2dNRWYtRkF5eGw1NERB?oc=5",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Russian Sabotage in Europe: How to Make Moscow Pay Without Going to War - vijesti.me",
-    "titulekPuvodni": "Russian Sabotage in Europe: How to Make Moscow Pay Without Going to War - vijesti.me",
-    "shrnuti": "",
-    "kodZeme": "RU",
-    "zeme": "Rusko",
-    "kategorie": [
-      "sabotaz",
-      "rusko"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "shody": [
-      "sabotage",
-      "russia"
-    ],
-    "stav": "ceka",
-    "vyrez": {
-      "text": "Google News",
-      "stazeno": "2026-09-14T09:32:42.805Z",
-      "stav": 200
-    },
-    "naliehave": null
-  },
-  {
-    "id": "k-25fe1453e6762e51",
-    "zachyceno": "2026-09-06T13:59:15.579Z",
-    "publikovano": "2026-09-05T05:41:55.000Z",
-    "zdroj": {
-      "nazev": "Google News — sabotáž",
-      "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxQOElVaFBmemtYeEF3NVpva0gzYU5TZ2VwenpLUVp4dmhoTXBHNUg2dHIzMFJMMTFMZTJVU2xHYVdmSVlGSjlaMXk0SlRlTmZGVnVOcElJc0RmdWFsTHhWSEdzSTBHYlFub1hNN21fU3I3QVV4ekJ5MmRtNXpLWVMyUWc0cjA0b1dreURpZGs0LXBsY2VGRkVLcXVYa01BWmwxYmhIcHVwZzM5cDFFa3B4UXFpVko?oc=5",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Skoro 500 sabotáží za tři roky: Američané odhalili, jak masivně Rusko útočí na Evropu, aniž by vystřelilo - armadnizpravodaj.cz",
-    "titulekPuvodni": "Skoro 500 sabotáží za tři roky: Američané odhalili, jak masivně Rusko útočí na Evropu, aniž by vystřelilo - armadnizpravodaj.cz",
-    "shrnuti": "",
-    "kodZeme": "RU",
-    "zeme": "Rusko",
-    "kategorie": [
-      "sabotaz",
-      "rusko"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "shody": [
-      "sabotaz",
-      "rusk"
-    ],
-    "stav": "ceka",
-    "vyrez": {
-      "text": "Google News",
-      "stazeno": "2026-09-14T09:32:42.990Z",
-      "stav": 200
-    },
-    "naliehave": null
-  },
-  {
-    "id": "k-0769a877c73fea35",
-    "zachyceno": "2026-09-06T13:59:15.575Z",
-    "publikovano": "2026-09-05T03:57:08.000Z",
-    "zdroj": {
-      "nazev": "Google News — sabotage Europe",
-      "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTFBkSktENXdYVndHYi1RUkdHS3hTRmtxR2VNTTlFdXFNbU1mOHdFOTdtdG1yYnpKelFUdjFaQ0hPd0UzaEh2WndwNTZib3dJVExzSHMtNVV4dmpqY0lHNmlqeXJfMk05MUdW?oc=5",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "The New York Times fabricates a “Russian sabotage” narrative - World Socialist Web Site",
-    "titulekPuvodni": "The New York Times fabricates a “Russian sabotage” narrative - World Socialist Web Site",
-    "shrnuti": "The New York Times fabricates a “Russian sabotage” narrative",
-    "kodZeme": "RU",
-    "zeme": "Rusko",
-    "kategorie": [
-      "sabotaz",
-      "rusko"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "shody": [
-      "sabotage",
-      "russia"
-    ],
-    "stav": "ceka",
-    "vyrez": {
-      "text": "Google News",
-      "stazeno": "2026-09-14T09:32:43.171Z",
-      "stav": 200
-    },
-    "naliehave": null
-  },
-  {
-    "id": "k-a23209aa7d7963b0",
-    "zachyceno": "2026-09-06T13:59:15.574Z",
-    "publikovano": "2026-09-04T19:07:50.000Z",
-    "zdroj": {
-      "nazev": "Google News — sabotage Europe",
-      "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxQVVVCUEJjSkpBakFQb01ObUpCczhiaWEwTjlWNnlteDk5VFdHSjNEUzVmTDdsakYtM3ZjWTJzRi1mUnJfYUJ2cURkTFlxQ1ctN2FNZVJqVTNSQUx6NThsTmljM2lHS0tvWFVqakhCTUZLbF8tYUhPeVl5aVhsNkJxYWtGRlpJdWtzWHNob0dxTTJHZmFEXzJKT3IxZTMwM3IwYmVLUkhmT00?oc=5",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Europe Targeted by Spiralling Campaign of Sabotage, Russia Chief Suspect - lemonwire.com",
-    "titulekPuvodni": "Europe Targeted by Spiralling Campaign of Sabotage, Russia Chief Suspect - lemonwire.com",
-    "shrnuti": "",
-    "kodZeme": "RU",
-    "zeme": "Rusko",
-    "kategorie": [
-      "sabotaz",
-      "rusko"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "shody": [
-      "sabotage",
-      "russia"
-    ],
-    "stav": "ceka",
-    "vyrez": {
-      "text": "Google News",
-      "stazeno": "2026-09-14T09:32:43.353Z",
-      "stav": 200
-    },
-    "naliehave": null
-  },
-  {
-    "id": "k-4dff001f8058f032",
-    "zachyceno": "2026-09-06T13:59:15.570Z",
-    "publikovano": "2026-09-04T18:59:28.000Z",
-    "zdroj": {
-      "nazev": "Google News — sabotage Europe",
-      "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxQUUZhcTczcV9pOTZhR3hhaFJsRWxybGxTamZUbXJaMGp6QkUtQndEeGxyYUNYQTJ2RXVLLU5IX1pPalZidFkwZjlSRUVpS0J5aGo0MkRhTUlJNWIxcWhqQnlhdkFtR0lUNEFET05CRlhTRzNfNUxpeWJUbDM2Q21TekFUdHJMMEpCVDVCZlc0TWltOVFWeFBPSFdPa3RPT0pNV014MW5zbGY2eWUzb0JpUW9Vek0tQXRxSlZ6bjZzaFhhMHlsT1HSAcQBQVVfeXFMTmYteW9Nem52aFVPMF9RT3Z1VFZ6OEVzN1hpNThnRUppM0FBdXZrdjdkNnNCOVlEREhtenNIakNSTW9ibWRIdW5lUFlhcXlqdzB5cldOaHRnM2x5eHpyR191dDFMVVAyR0E1a1JacHhWVU8xSk5yRzM0X2RFdzhsSkxsN2hyUTM0WDRTd1l4WGIwMm5OdGhRZXJucTcwUXBKSEhBMEJhNm82S0ZYS2Vmb2d2TVVReHV6Wk1Zbl9VbWFpNU9ZcA?oc=5",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Germany calls on the EU to restrict the issuance of tourist visas to Russians following acts of sabotage - Українські Національні Новини (УНН)",
-    "titulekPuvodni": "Germany calls on the EU to restrict the issuance of tourist visas to Russians following acts of sabotage - Українські Національні Новини (УНН)",
-    "shrnuti": "",
-    "kodZeme": "DE",
-    "zeme": "Německo",
-    "kategorie": [
-      "sabotaz",
-      "rusko"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "shody": [
-      "sabotage",
-      "russia"
-    ],
-    "stav": "ceka",
-    "vyrez": {
-      "text": "Google News",
-      "stazeno": "2026-09-14T09:32:43.551Z",
-      "stav": 200
-    },
-    "naliehave": null
-  },
-  {
-    "id": "k-51486cd393a5833b",
-    "zachyceno": "2026-09-06T13:59:15.572Z",
-    "publikovano": "2026-09-04T17:39:00.000Z",
-    "zdroj": {
-      "nazev": "Google News — sabotage Europe",
-      "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxOOFExRkdoNGtuRklUcUZIVWNnT2F4VGlwQ25ZLXZ2UmZXMGFnNWpGUm5UdEFHNDBUWEI2OFUybDhtVUhzOU9sZnVYN05wcjMwRGJueEZUcEd5VFpFck9vN20wWW9mQWFueEVJYS1HNnYwTEZZUFRNTS12c1lYSlVxallPTlA2eFdz?oc=5",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Russia Intensifies Sabotage Campaign Across Europe – Report - TVC News",
-    "titulekPuvodni": "Russia Intensifies Sabotage Campaign Across Europe – Report - TVC News",
-    "shrnuti": "Russia Intensifies Sabotage Campaign Across",
-    "kodZeme": "RU",
-    "zeme": "Rusko",
-    "kategorie": [
-      "sabotaz",
-      "rusko"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "shody": [
-      "sabotage",
-      "russia"
-    ],
-    "stav": "ceka",
-    "vyrez": {
-      "text": "Google News",
-      "stazeno": "2026-09-14T09:32:43.742Z",
-      "stav": 200
-    },
-    "naliehave": null
-  },
-  {
-    "id": "k-431f0fede915d9e3",
-    "zachyceno": "2026-09-15T16:32:52.328Z",
-    "publikovano": "2026-09-04T17:19:11.000Z",
-    "zdroj": {
-      "nazev": "Téma: energetika (anglicky)",
-      "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxQa0RLbmxiVTd1VnZzQm5MYVV0dm51X2xEaHhnNXVCX3pnNFE2Q1JxbjdmN3pyOVhqRGlOS0VrVjVad0k0ODg2Z2pCT2c1Nm8zSV93VzdfNUdzbHJIeDlKU3YyZndRYlFVR0NhQnJwbFBrZWNiVzhjZWdsWmI1UFJMTmZPY0NibEdPQkctVjNNRk9qRnFjb3FXSk1IZjEyeGRFVGVDVld4S1Y1TFMxdk53?oc=5",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Germany hunts climate activist suspected of power grid sabotage - France 24",
-    "titulekPuvodni": "Germany hunts climate activist suspected of power grid sabotage - France 24",
-    "shrnuti": "Germany hunts climate activist suspected of power grid sabotage France 24",
-    "kodZeme": "DE",
-    "zeme": "Německo",
-    "kategorie": [
-      "sabotaz",
-      "infrastruktura"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "zeSite": null,
-    "shody": [
-      "sabotage",
-      "power grid"
-    ],
-    "naliehave": null,
-    "stav": "ceka",
-    "vyrez": {
-      "text": "Google News",
-      "stazeno": "2026-09-15T19:32:55.105Z",
-      "stav": 200
-    }
-  },
-  {
-    "id": "k-9465fb417d50df5c",
-    "zachyceno": "2026-09-06T13:59:15.558Z",
-    "publikovano": "2026-09-04T16:49:15.000Z",
-    "zdroj": {
-      "nazev": "BBC News — Europe",
-      "url": "https://www.bbc.co.uk/news/articles/c5y4g6meekro?at_medium=RSS&at_campaign=rss",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Europe targeted by spiralling campaign of sabotage - and Russia is the chief suspect",
-    "titulekPuvodni": "Europe targeted by spiralling campaign of sabotage - and Russia is the chief suspect",
-    "shrnuti": "Germany has blamed Russia for an attack on Leipzig airport but there has been a series of suspicious incidents elsewhere.",
-    "kodZeme": "DE",
-    "zeme": "Německo",
-    "kategorie": [
-      "sabotaz",
-      "hybridni",
-      "rusko"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "shody": [
-      "sabotage",
-      "attack on",
-      "russia"
-    ],
-    "stav": "ceka",
-    "vyrez": {
-      "text": "Europe targeted by spiralling campaign of sabotage and Russia is the chief suspect - BBC News\nImage source, Reuters\nImage caption, Germany said the attack at Leipzig airport was part of a pattern of \"Russian hybrid operations\" in Europe\nBy Sarah Rainsford Southern and Eastern Europe correspondent\nPublished\n4 September 2026\nAs summer temperatures in Europe smashed records and many politicians shifted to holiday mode, Russia remained focused on its war.\nNot only did its military attacks across Ukraine intensify last month, becoming ever more deadly for civilians, Russia also appears to have escalated its sabotage campaign across Europe.\nThis time, military and defence sector sites were the prime target.\nA full month after drones packed with explosives were found at Leipzig&#x27;s airport, used by Ukraine to transport military goods, Germany&#x27;s interior minister has declared that \"Russia is responsible\".\nRussia&#x27;s President Vladimir Putin is demanding proof, as always, and his officials call the accusation \"absurd\".\nBut the drones were just a dramatic start. August then brought a series of suspicious fires at defence facilities from Italy to Estonia.\nSome of the affected…",
-      "stazeno": "2026-09-14T09:32:43.923Z",
-      "stav": 200
-    },
-    "naliehave": null
-  },
-  {
-    "id": "k-0a0111a5a515814c",
-    "zachyceno": "2026-09-06T13:59:15.566Z",
-    "publikovano": "2026-09-04T15:22:00.000Z",
-    "zdroj": {
-      "nazev": "Google News — sabotage Europe",
-      "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxPcGxMSV9PVk5qWDhIRXozTnk1ckV0ODlXb3RZRWtVcUpRRUkyQ2pYU3l4VUpTeVAteG1jSi1VNWF5NWdwQWk5ZTh4Y0dfRlB2cVNEU2VJYTRwNlAyR0pWYlQ1M0NjQ2F3bHNwVXdsYU5FU1ZQMUNfZnZ3bTBjNk9uS3BXWEJLdms?oc=5",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Germany urges EU to cut Russians’ holiday visas after sabotage attacks - The Guardian",
-    "titulekPuvodni": "Germany urges EU to cut Russians’ holiday visas after sabotage attacks - The Guardian",
-    "shrnuti": "Germany urges EU to cut Russians’ holiday vi",
-    "kodZeme": "DE",
-    "zeme": "Německo",
-    "kategorie": [
-      "sabotaz",
-      "rusko"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "shody": [
-      "sabotage",
-      "russia"
-    ],
-    "stav": "ceka",
-    "vyrez": {
-      "text": "Google News",
-      "stazeno": "2026-09-14T09:32:44.730Z",
-      "stav": 200
-    },
-    "naliehave": null
-  },
-  {
-    "id": "k-a1c039cf88e8ac1f",
-    "zachyceno": "2026-09-06T13:59:15.564Z",
-    "publikovano": "2026-09-04T13:11:47.000Z",
-    "zdroj": {
-      "nazev": "ČT24 — hlavní zprávy",
-      "url": "https://ct24.ceskatelevize.cz/clanek/svet/rusky-dron-zasahl-budovu-tajne-sluzby-sbu-v-centru-kyjeva-pise-ukrajinska-pravda-377276",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Ruský dron zasáhl centrálu tajné služby SBU. Kyjev chystá odpověď",
-    "titulekPuvodni": "Ruský dron zasáhl centrálu tajné služby SBU. Kyjev chystá odpověď",
-    "shrnuti": "Ruský dron v pátek odpoledne zasáhl centrální budovu ukrajinské tajné služby SBU v centru Kyjeva, uvedl server Ukrajinska pravda. Po výbuchu z místa stoupal hustý dým, uvedli očití svědci. Později informaci potvrdil i ukrajinský prezident Volodymyr Zelenskyj s tím, že uložil šéfovi tajné služby na r",
-    "kodZeme": "UA",
-    "zeme": "Ukrajina",
-    "kategorie": [
-      "sabotaz",
-      "drony",
-      "rusko"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "shody": [
-      "vybuch",
-      "dron",
-      "rusk"
-    ],
-    "stav": "ceka",
-    "vyrez": {
-      "text": "Ruský dron zasáhl centrálu tajné služby SBU. Kyjev chystá odpověď — ČT24 — Česká televize\nŽivé vysílání\nTV program\nPočasí\nTeletext\nE-shop\nVše o ČT\nTV poplatky\nKontakty\nSpravovat účet\nOblíbené pořady\nRozkoukaná videa\nPřihlásit se do TV\nOdhlásit se\nRuský dron zasáhl centrálu tajné služby SBU. Kyjev chystá odpověď\nČTK\n, ag\n4. 9. 2026 4. 9. 2026 ‌ ‌ | Zdroj: ČTK\nNásledky ruského úderu na sídlo SBU v Kyjevě\nZdroj: Reuters/Gleb Garanich\nRuský dron v pátek odpoledne zasáhl centrální budovu ukrajinské tajné služby SBU v centru Kyjeva, uvedl server Ukrajinska pravda. Po výbuchu z místa stoupal hustý dým, uvedli očití svědci. Později informaci potvrdil i ukrajinský prezident Volodymyr Zelenskyj s tím, že uložil šéfovi tajné služby na ruský útok odpovědět. Ruský dron zasáhl přímo pracovnu šéfa SBU, který v ní ale v tu chvíli zrovna nebyl, napsal server Ukrajinska pravda. Šéf ukrajinské diplomacie Andrij Sybiha označil útok za „významnou eskalaci“ války, kterou Rusko proti Ukrajině vede pátým rokem.\nNálet si vyžádal nejméně sedm raněných, uvedl starosta ukrajinské metropole Vitalij Klyčko, který dříve informoval o požáru v jedné ze čtvrtí hlavního města v důsledku dopadu dronu na střechu…",
-      "stazeno": "2026-09-14T09:32:44.920Z",
-      "stav": 200
-    },
-    "naliehave": null
-  },
-  {
-    "id": "k-15eb00032759b5be",
-    "zachyceno": "2026-09-06T13:59:15.578Z",
-    "publikovano": "2026-09-04T11:33:00.000Z",
-    "zdroj": {
-      "nazev": "Google News — sabotáž",
-      "url": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxPVFU1Yk53dWp1RGxmR08xaVoxLXlaYTFDNHppbjlodjJLdWk3d0lUYTVoRkxQQTRfOEpicVh6dGV3UEh6MmY5NlB0WWFsQmV1OEFpbmhYdG5Gc1RMbWJSXzloczVocnhPUTEyZjlZdkFLeWR0TXk4LU1jWXRsLWJYZTlvZnNoVlBCRndBeHZURjFsZTA2Nm9SWmVnbExMcGNnRFNyVTA1aElvWmRvcEYtamlsaGg0RktsTDFxaWY5bnN6Sm1raFd2UA?oc=5",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Ruské sabotáže zlevnily, lidé se verbují přes síť Telegram. Neumí po sobě ale zamést stopy, říká Bříza - irozhlas.cz",
-    "titulekPuvodni": "Ruské sabotáže zlevnily, lidé se verbují přes síť Telegram. Neumí po sobě ale zamést stopy, říká Bříza - irozhlas.cz",
-    "shrnuti": "",
-    "kodZeme": "RU",
-    "zeme": "Rusko",
-    "kategorie": [
-      "sabotaz",
-      "rusko",
-      "vysilani"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "shody": [
-      "sabotaz",
-      "rusk"
-    ],
-    "stav": "ceka",
-    "vyrez": {
-      "text": "Google News",
-      "stazeno": "2026-09-14T09:32:46.147Z",
-      "stav": 200
-    },
-    "naliehave": null
-  },
-  {
-    "id": "k-cda4a4f57b9bb199",
-    "zachyceno": "2026-09-06T13:59:15.565Z",
-    "publikovano": "2026-09-04T10:43:04.000Z",
-    "zdroj": {
-      "nazev": "Google News — sabotage Europe",
-      "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxNOGVCRXpkUzE2bkd3bm9CakdIbDdGZDFfdWdRUG8xUWxjZTQwYklybmN6QzR1NkFzUDBOaERhTFZ5UWpUVHlnMWV5UE1WeEtZSmNwdDFtSGYxMUJYS2NiaGJ3Q1l5cWlLNFhjVkI0X0pXN0NYVFBxeVB0bzN3dmxvQWREVUo1SzY3YThrbmdtRUZBdjFSOUg5YW9sOWJGVHY1aUl1MnZPVF9QclQ5LVMzNkhFcF9HQ2xxR0ZGcQ?oc=5",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Wave of Russian sabotage attacks exposes counter-intelligence gaps on Nato’s eastern flank - EUobserver",
-    "titulekPuvodni": "Wave of Russian sabotage attacks exposes counter-intelligence gaps on Nato’s eastern flank - EUobserver",
-    "shrnuti": "",
-    "kodZeme": "RU",
-    "zeme": "Rusko",
-    "kategorie": [
-      "sabotaz",
-      "nato",
-      "rusko"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "shody": [
-      "sabotage",
-      "nato",
-      "eastern flank",
-      "russia"
-    ],
-    "stav": "ceka",
-    "vyrez": {
-      "text": "Google News",
-      "stazeno": "2026-09-14T10:02:47.460Z",
-      "stav": 200
-    },
-    "naliehave": null
-  },
-  {
-    "id": "k-97dc0feceddc9392",
-    "zachyceno": "2026-09-06T13:59:15.566Z",
-    "publikovano": "2026-09-04T10:00:10.000Z",
-    "zdroj": {
-      "nazev": "Google News — sabotage Europe",
-      "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxNbXluemRIa1JmZHFwdkdNRjF0c1lxQkoyRVVEVUxWLVhBZm9rOXJCdkl6SXFpdWNPcHBoUHh1Y1JIRWJKU1Atd29FV3psMWVaVl9WMmJia19RQ21ibjVFLWM1SC01bTI4WDhlZ1k3SUpnRTdDWkNrS3dWWXV1RUR3NWQ3endnY2c3SUxDSWFWQ3RIWkRHbXd2RHJiZV8?oc=5",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "A Surge of Russian Sabotage Attacks in Europe, and Musk’s Political War Chest - The New York Times",
-    "titulekPuvodni": "A Surge of Russian Sabotage Attacks in Europe, and Musk’s Political War Chest - The New York Times",
-    "shrnuti": "A Surge of Russi",
-    "kodZeme": "RU",
-    "zeme": "Rusko",
-    "kategorie": [
-      "sabotaz",
-      "rusko"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "shody": [
-      "sabotage",
-      "russia"
-    ],
-    "stav": "ceka",
-    "vyrez": {
-      "text": "Google News",
-      "stazeno": "2026-09-14T10:02:47.588Z",
-      "stav": 200
-    },
-    "naliehave": null
-  },
-  {
-    "id": "k-1a1e9ce3f827c324",
-    "zachyceno": "2026-09-06T13:59:15.565Z",
-    "publikovano": "2026-09-04T09:03:31.000Z",
-    "zdroj": {
-      "nazev": "Google News — sabotage Europe",
-      "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxNZjVnY1hFVnFrR29sNG5XZzA5Wno1dWlNdkNpQkFqZGd4eC1ZdEFVUVlYUEg0S3V5UlRKODZhVVJwa2l0RUQxMzRueFliQld1XzhuU2JPU0VweFNIb1Q0RW80ZDlHaWZRRHpUYnJyVkhvV2FPb0pfTmV6ZWFQWDZzb2d5ejFBVGc?oc=5",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "The Risk of Russian Sabotage in Europe: A Fight That Spirals Out of Control - The New York Times",
-    "titulekPuvodni": "The Risk of Russian Sabotage in Europe: A Fight That Spirals Out of Control - The New York Times",
-    "shrnuti": "The Risk of Russian Sabotage in Europe: A Fi",
-    "kodZeme": "RU",
-    "zeme": "Rusko",
-    "kategorie": [
-      "sabotaz",
-      "rusko"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "shody": [
-      "sabotage",
-      "russia"
-    ],
-    "stav": "ceka",
-    "vyrez": {
-      "text": "Google News",
-      "stazeno": "2026-09-14T10:02:47.743Z",
-      "stav": 200
-    },
-    "naliehave": null
-  },
-  {
-    "id": "k-03688206f84b7da9",
-    "zachyceno": "2026-09-15T18:32:59.045Z",
-    "publikovano": "2026-09-04T07:00:00.000Z",
-    "zdroj": {
-      "nazev": "Rumunsko — sabotaz",
-      "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxQZzBfZXhkSGdUbThHeVkyZUhWZlExeFlkLWdvSThxYmVBWkJsSmVIZXdnS1hWNVJ5QWRQZEM0d09zNlJMWVo4THBmSHlaVzh1TjNSRUw5ZDBBRFl0dW1KQ1AwUlpTZGVaelgxRm4tMnpCV3AweG9Oa3k3dEItcnUzSTBGTmtxX3lJU2pnUHc0VklLNEllb1dtR09YQldFYlhqUk9iMmpNaw?oc=5",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Three Bulgarians Detained in Munich Amid Russian Sabotage Probe - Novinite.com",
-    "titulekPuvodni": "Three Bulgarians Detained in Munich Amid Russian Sabotage Probe - Novinite.com",
-    "shrnuti": "Three Bulgarians Detained in Munich Amid Russian Sabotage Probe Novinite.com",
-    "kodZeme": "DE",
-    "zeme": "Německo",
-    "kategorie": [
-      "sabotaz",
-      "rusko"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "zeSite": null,
-    "shody": [
-      "sabotage",
-      "russia"
-    ],
-    "naliehave": null,
-    "stav": "ceka",
-    "vyrez": {
-      "text": "Google News",
-      "stazeno": "2026-09-15T19:32:55.235Z",
-      "stav": 200
-    }
-  },
-  {
-    "id": "k-715dad618379345a",
-    "zachyceno": "2026-09-15T16:32:52.252Z",
-    "publikovano": "2026-09-04T07:00:00.000Z",
-    "zdroj": {
-      "nazev": "Téma: sabotaz (česky)",
-      "url": "https://news.google.com/rss/articles/CBMi8gFBVV95cUxON0FZelFaOHczVDRpSE1LU1JWbElCTlFWVVI3RlA0cGNSNzFBSEo1b1pjSGRZd09oZ2llZ05STkdKcHgwdUU1MTZEZHRNbVhBNTNsUXdzTmhJTlBEUndLcG5GRUdRV0gwaHVqb3FhWkFIUlQzeWVrelByR2k2WVNxeTRNWW9BVkgyYU9iTmh1YUd1UTlFbXFxRXJFbDVVaDJCVnBrMy1pSjN0anlnbVVmTW1GN19CeklEQnd3QkEzajVJQjQ1NmJpT1IwbDBOUXphQjM4bTN5OHFhdVgtMFZpVTVSYzVIQ0YxVnZ4TEFXZWlxZw?oc=5",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Sabotáž v Dormagenu. Německá policie vyšetřuje další případ útoku na elektrickou stanici - Aktuálně.cz",
-    "titulekPuvodni": "Sabotáž v Dormagenu. Německá policie vyšetřuje další případ útoku na elektrickou stanici - Aktuálně.cz",
-    "shrnuti": "Sabotáž v Dormagenu. Německá policie vyšetřuje další případ útoku na elektrickou stanici Aktuálně.cz",
-    "kodZeme": "DE",
-    "zeme": "Německo",
-    "kategorie": [
-      "sabotaz",
-      "vojsko"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "zeSite": null,
-    "shody": [
-      "sabotaz",
-      "policie"
-    ],
-    "naliehave": null,
-    "stav": "ceka",
-    "vyrez": {
-      "text": "Google News",
-      "stazeno": "2026-09-15T19:32:55.358Z",
-      "stav": 200
-    }
-  },
-  {
-    "id": "k-4bf5735c13f09476",
-    "zachyceno": "2026-09-15T16:32:52.269Z",
-    "publikovano": "2026-09-04T07:00:00.000Z",
-    "zdroj": {
-      "nazev": "Téma: sabotaz (česky)",
-      "url": "https://news.google.com/rss/articles/CBMi7wFBVV95cUxQMzR4VEtoenFieVQ4dlhFYmtTTC11Wnlva1V3QnMtV0hjcWE4dndIYmlFcFlGWW1zRzRmNDNrM3V3WUdTMDJMSWRPV2NJVmdCSTc4bWxYMmlsdzdxdjJuc09LWWU1TlhTQmxBLUdBLVhnZ3JDLTJtWFZlWnVKUVV1ekJqb0tCYzdvd1B6LUgtOVEyVVlWMWt4N1BUTGhBLUJmLWg2QXhISlgtQXdWYjBOQzRINDNfNkFMSlc5QkFlN0xHWnZ5TVoxTmZ2d1R3RG1lUXVUYXpobFFhMENQRVU1WmtiQUd5ZVNUZkNMRi1kRQ?oc=5",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Další podezření na sabotáž v Německu. Policie našla zařízení mířící na elektrické vedení - Expres.cz",
-    "titulekPuvodni": "Další podezření na sabotáž v Německu. Policie našla zařízení mířící na elektrické vedení - Expres.cz",
-    "shrnuti": "Další podezření na sabotáž v Německu. Policie našla zařízení mířící na elektrické vedení Expres.cz",
-    "kodZeme": "DE",
-    "zeme": "Německo",
-    "kategorie": [
-      "sabotaz",
-      "vojsko"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "zeSite": null,
-    "shody": [
-      "sabotaz",
-      "policie"
-    ],
-    "naliehave": null,
-    "stav": "ceka",
-    "vyrez": {
-      "text": "Google News",
-      "stazeno": "2026-09-15T20:02:57.366Z",
-      "stav": 200
-    }
-  },
-  {
-    "id": "k-bd9afcdf8863b740",
-    "zachyceno": "2026-09-15T16:32:52.335Z",
-    "publikovano": "2026-09-04T07:00:00.000Z",
-    "zdroj": {
-      "nazev": "Téma: energetika (anglicky)",
-      "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxNZzBQdjdQMjRhV0g0ZFptWDkxeGNmSVFTTV9JdzZBQ3dDQ0hrRXNTNVo3ZDktQWRqYUFIR0FzZHZFWE1sejJCMloza0tnRlJXVmQxMDNSem1mNzZZdEd3c1BfcHNXTXhoN0hlNDl2V0N0aHdZb3ZGVVp6ZXBSQzhWUlVmY29UdGZsLU1HOEhhZVVsNjRuaWhxWFV3c0I3eU9Sd2FyaDRUZTMyX2gt?oc=5",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "German Police Probe Fresh Attempts to Sabotage Power Grid - bloomberg.com",
-    "titulekPuvodni": "German Police Probe Fresh Attempts to Sabotage Power Grid - bloomberg.com",
-    "shrnuti": "German Police Probe Fresh Attempts to Sabotage Power Grid bloomberg.com",
-    "kodZeme": "DE",
-    "zeme": "Německo",
-    "kategorie": [
-      "sabotaz",
-      "infrastruktura"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "zeSite": null,
-    "shody": [
-      "sabotage",
-      "power grid"
-    ],
-    "naliehave": null,
-    "stav": "ceka",
-    "vyrez": {
-      "text": "Google News",
-      "stazeno": "2026-09-15T20:02:57.490Z",
-      "stav": 200
-    }
-  },
-  {
-    "id": "k-5edbb94f41699106",
-    "zachyceno": "2026-09-15T16:32:52.351Z",
-    "publikovano": "2026-09-04T07:00:00.000Z",
-    "zdroj": {
-      "nazev": "Téma: energetika (anglicky)",
-      "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxQMFRTQjdrWEFQeG9JQk40NjAtVE1BVzdaZVFueDZac0Rja0pXM0NrZTllME5fSlhuWjJMMTVkMkJwLUk4akRoejlueVhLRTU1LUZRQTAzUFZxMkd2enpMLU5kRUthVU9CbHpUc3RpRUdLQlFlZTAySEVUX0U1WUR1Vl9JMzZac1k?oc=5",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Germany launches manhunt after spate of sabotage attacks on power grid - Yahoo News UK",
-    "titulekPuvodni": "Germany launches manhunt after spate of sabotage attacks on power grid - Yahoo News UK",
-    "shrnuti": "Germany launches manhunt after spate of sabotage attacks on power grid Yahoo News UK",
-    "kodZeme": "DE",
-    "zeme": "Německo",
-    "kategorie": [
-      "sabotaz",
-      "infrastruktura"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "zeSite": null,
-    "shody": [
-      "sabotage",
-      "power grid"
-    ],
-    "naliehave": null,
-    "stav": "ceka",
-    "vyrez": {
-      "text": "Google News",
-      "stazeno": "2026-09-15T20:02:57.627Z",
-      "stav": 200
-    }
-  },
-  {
-    "id": "k-3b566a7e6e8785c5",
-    "zachyceno": "2026-09-15T16:32:52.514Z",
-    "publikovano": "2026-09-04T07:00:00.000Z",
-    "zdroj": {
-      "nazev": "Slovensko — sabotaz",
-      "url": "https://news.google.com/rss/articles/CBMiygFBVV95cUxNVloySms4Wm5TeElPcUJad2VPU1ZxU0pSVG9NRmU5MGtDMnVvRFJiX1Fid05VUHRKeEtIcjdOVlV3MWVRc0FxZlRIMkVCaXFkOWpUdVMxeW01aDRMQ09ZM0tXa0E5QnVHZ0FJUUozR0FNOU5BMEU2cVczME1xRlRCZF9qRWJaTWtWZ3NjSmtUSGktd0hhdXZXTWhwS0lxTHY1Yi1tVmtUaXJmUEFPT0thWlMzYzgzWmFxVm55RHpHT3FNOVdJVUFrcm93?oc=5",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Democracy Digest: Poland Investigates Arson of Drone Factory as Suspected Russian Sabotage - Balkan Insight",
-    "titulekPuvodni": "Democracy Digest: Poland Investigates Arson of Drone Factory as Suspected Russian Sabotage - Balkan Insight",
-    "shrnuti": "Democracy Digest: Poland Investigates Arson of Drone Factory as Suspected Russian Sabotage Balkan Insight",
-    "kodZeme": "PL",
-    "zeme": "Polsko",
-    "kategorie": [
-      "sabotaz",
-      "drony",
-      "rusko"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "zeSite": null,
-    "shody": [
-      "sabotage",
-      "arson",
-      "dron",
-      "drone",
-      "russia"
-    ],
-    "naliehave": null,
-    "stav": "ceka",
-    "vyrez": {
-      "text": "Google News",
-      "stazeno": "2026-09-15T20:02:57.762Z",
-      "stav": 200
-    }
-  },
-  {
-    "id": "k-bed23a81ba61ff3b",
-    "zachyceno": "2026-09-15T16:06:44.731Z",
-    "publikovano": "2026-09-04T07:00:00.000Z",
-    "zdroj": {
-      "nazev": "Google News — dron Německo česky",
-      "url": "https://news.google.com/rss/articles/CBMiekFVX3lxTFB5eC0xQ1RHU2FVYTBLbEpYSDZ1QjVkS1dpMV9yZFUycDVIbmFGZVQ4aW5fZENUOV9naTk0b3hSZjVxei0yLXNSMm80YkFJaVJ5QXJlVVptdUNSSGNWLWpkdXl5RUtIZ1pFWExsOFVfVE1seWR3TC1zeklB?oc=5",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Má Německo schopnost zachytit bezpilotní letouny naložené výbušninami? - Vietnam.vn",
-    "titulekPuvodni": "Má Německo schopnost zachytit bezpilotní letouny naložené výbušninami? - Vietnam.vn",
-    "shrnuti": "Má Německo schopnost zachytit bezpilotní letouny naložené výbušninami? Vietnam.vn",
-    "kodZeme": "DE",
-    "zeme": "Německo",
-    "kategorie": [
-      "sabotaz"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "zeSite": null,
-    "shody": [
-      "vybusnina",
-      "naloz"
-    ],
-    "naliehave": null,
-    "stav": "ceka",
-    "vyrez": {
-      "text": "Google News",
-      "stazeno": "2026-09-15T16:06:45.983Z",
-      "stav": 200
-    }
-  },
-  {
-    "id": "k-99dcadedff5bba04",
-    "zachyceno": "2026-09-06T13:59:15.574Z",
-    "publikovano": "2026-09-04T02:31:00.000Z",
-    "zdroj": {
-      "nazev": "Google News — sabotage Europe",
-      "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxNb2hiYXJMeU9pckdMM0V4ZUpGY25uZENUeHpCZHVIVFJYNDBnUE5VclZac1RYQ0ZTM2F5NDZwaFNELUpONUwzMnEzaFFhS2stbGhyWHVwSVJ2dTV0MHItSWRUMl90Qkt4MVBkeml1LXplX1hmck1Sc1RnTE1teHVvRElaVE1FdXRXbmJTcg?oc=5",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Russia Preparing Sabotage Operations In Europe, Denmark Warns - TVC News",
-    "titulekPuvodni": "Russia Preparing Sabotage Operations In Europe, Denmark Warns - TVC News",
-    "shrnuti": "Russia Preparing Sabotage Operations",
-    "kodZeme": "DK",
-    "zeme": "Dánsko",
-    "kategorie": [
-      "sabotaz",
-      "rusko"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "shody": [
-      "sabotage",
-      "russia"
-    ],
-    "stav": "ceka",
-    "vyrez": {
-      "text": "Google News",
-      "stazeno": "2026-09-14T10:02:47.865Z",
-      "stav": 200
-    },
-    "naliehave": null
-  },
-  {
-    "id": "k-d772ea0abd4ab5cc",
-    "zachyceno": "2026-09-06T13:59:15.579Z",
-    "publikovano": "2026-09-03T23:08:00.000Z",
-    "zdroj": {
-      "nazev": "Google News — sabotáž",
-      "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxObFMyUWN1WjBISDJpbmhvdlBkajRkQ1Q5a2pwN282c05fNlMxOEZ1UFRGTDlra2FmckY0MlBIVGxEUWFldmZ6ZXVQaUszTWtxOTRqZEI2TTFSbkVDRC1GTll3MFV6NnVBZzJsbzhvVlFvbEs2eUZZMThWSlJSQWNEYl92LXRjYmpvaVRFeUt5Y3F4dTRVU2VFeDkzUXFGMzFDY0dCN2FibmNaVHl4Tk45Z19SSmM?oc=5",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "V reakci na ruskou sabotáž v Lipsku Německo předá Ukrajině řízené střely a drony - Britské listy",
-    "titulekPuvodni": "V reakci na ruskou sabotáž v Lipsku Německo předá Ukrajině řízené střely a drony - Britské listy",
-    "shrnuti": "",
-    "kodZeme": "DE",
-    "zeme": "Německo",
-    "kategorie": [
-      "sabotaz",
-      "drony",
-      "rusko"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "shody": [
-      "sabotaz",
-      "dron",
-      "rusk"
-    ],
-    "stav": "ceka",
-    "vyrez": {
-      "text": "Google News",
-      "stazeno": "2026-09-14T10:02:48.049Z",
-      "stav": 200
-    },
-    "naliehave": null
-  },
-  {
-    "id": "k-5e3f46d757546f02",
-    "zachyceno": "2026-09-06T16:55:44.199Z",
-    "publikovano": "2026-09-03T20:33:15.000Z",
-    "zdroj": {
-      "nazev": "Google News — sabotage Europe",
-      "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxPZUFlNjVwR3h5YnlMZDMybUpvMkJoZ1E5UzR5WkhSZDM1VmltYmpGTGlhblNYcXpGM0VRbVB3MFh4ajY3czFLcTRVcGxfNW9sVkVaU3cxXzdRQ2NKVnhLUHppeFY5QU4zZXlJZFdjaS1HdktzRlZra0o1NXIyd29iSTFPVG9RX3JpOEctRjhaZmdzd0d0NlFKS2V6M2ZqQ2la?oc=5",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Germany probes suspected arson at defence firm as European sabotage concerns mount - reuters.com",
-    "titulekPuvodni": "Germany probes suspected arson at defence firm as European sabotage concerns mount - reuters.com",
-    "shrnuti": "Germany pro",
-    "kodZeme": "DE",
-    "zeme": "Německo",
-    "kategorie": [
-      "sabotaz"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "shody": [
-      "sabotage",
-      "arson"
-    ],
-    "stav": "ceka",
-    "vyrez": {
-      "text": "Google News",
-      "stazeno": "2026-09-14T10:02:48.201Z",
       "stav": 200
     },
     "naliehave": null
