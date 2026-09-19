@@ -7414,5 +7414,72 @@
     "aiZpracovano": true,
     "lidskyOvereno": true,
     "archivniZaznam": false
+  },
+  {
+    "id": "i-2026-09-15-7c0975db9a",
+    "slug": "pl-7c0975db9a",
+    "titulek": "Polsko: armáda posiluje hraniční přechody s Ukrajinou u Dorohuska, Medyky a Korczowé",
+    "kratkyTitulek": "Polsko: armáda posiluje hraniční přechody s Ukra",
+    "zeme": "Polsko",
+    "kodZeme": "PL",
+    "kategorie": [
+      "hranice",
+      "nato"
+    ],
+    "datumUdalosti": "2026-09-15T00:00:00Z",
+    "datumZjisteni": "2026-09-16T00:00:00Z",
+    "aktualizovano": "2026-09-19T11:11:45.723Z",
+    "zavaznost": "Y1",
+    "jistota": "stredni",
+    "stav": "bez-vysetrovani",
+    "atribuce": "neznama",
+    "puvodce": null,
+    "druh": "opatreni",
+    "fakta": [
+      "Podle polského ministra obrany Władysława Kosiniaka-Kamysze, který to oznámil 15. 9. 2026, se ve shodě s rozhodnutím vlády posiluje ochrana hraničních přechodů s Ukrajinou.",
+      "Podle Polskiego Radia 24 vojáci 4. a 18. pluku ženistů budují pozorovací a strážní stanoviště u přechodů Dorohusk, Medyka a Korczowa z modulárních fortifikačních prvků HESCO Bastion a podporují Nadbużańský oddíl Pohraniční stráže.",
+      "Podle Polskiego Radia jde o součást projektu Tarcza Wschód a ministr to zdůvodnil slovy, že „ostatní dny ukazují, že činnost Ruska ohrožuje bezpečnost celé Evropy“.",
+      "Podle Polskiego Radia práce následují po ruských útocích dronů poblíž polské hranice."
+    ],
+    "neznameho": [
+      "Kolik vojáků je nasazeno a kdy práce skončí, zdroje neuvádějí.",
+      "Zda jde o trvalé, nebo dočasné opatření, zdroje neuvádějí.",
+      "Ministrův původní příspěvek ani vládní rozhodnutí jsem neotevřel; údaje jsou z médií, která ho citují.",
+      "Původní odkaz kandidáta (Censor.net přes Google News) jsem přímo neotevřel; otevřel jsem přímou adresu téhož článku na censor.net."
+    ],
+    "vyznam": "[DOPLNIT] — co z toho plyne pro čtenáře v Česku.",
+    "eskalacniSpousteče": [],
+    "deeskalacniSignaly": [],
+    "zdroje": [
+      {
+        "nazev": "Censor.net — Poland has deployed troops to reinforce border crossings with Ukraine due to threat from Russia",
+        "url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxQYWlpNVVYN0pRclRJM1piQnRSWm9yV3phSk1lZ3VLVVVVcUpocTJrWDNDZkZWYkFmUGZvbWFNU1BFcklFbFQxTmNjaHpiTmlLYld5ZS1QUGN0QU9ET3lFVndSbkF1anFhMmdkQVJYaklKbGhJY2VsRXlSMncyNDJBNU1oaDBDYlhSOXpzZW1XYkpQSnJJQWE4OHQyOFJCU0dEc1NKQ2RqTHNNYnFjUVNUanlZcGZHS280V21FeGJxdDZjWG4x?oc=5",
+        "typ": "media",
+        "publikovano": "2026-09-16T00:00:00Z",
+        "primarni": false,
+        "jazyk": "en"
+      },
+      {
+        "nazev": "Polskie Radio 24 — Polska wzmacnia granicę z Ukrainą. Saperzy budują nowe posterunki",
+        "url": "https://polskieradio24.pl/polska/polska-wzmacnia-granice-z-ukraina-saperzy-buduja-nowe-posterunki",
+        "typ": "media",
+        "publikovano": "2026-09-15T00:00:00Z",
+        "primarni": false,
+        "jazyk": "pl"
+      }
+    ],
+    "souvisejici": [],
+    "historie": [
+      {
+        "kdy": "2026-09-15T00:00:00Z",
+        "text": "Zachyceno sběrem, druhý zdroj dohledal Patrol.",
+        "novySignal": true
+      }
+    ],
+    "novy": true,
+    "zapocitanoTyden": "2026-09-15",
+    "aiZpracovano": true,
+    "lidskyOvereno": true,
+    "archivniZaznam": false
   }
 ]
