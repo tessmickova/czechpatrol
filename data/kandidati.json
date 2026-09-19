@@ -651,6 +651,41 @@
     }
   },
   {
+    "id": "k-f541bddc80326642",
+    "zachyceno": "2026-09-19T08:53:21.458Z",
+    "publikovano": "2026-09-17T06:43:54.000Z",
+    "zdroj": {
+      "nazev": "Rakousko — drony",
+      "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxNcU9aUkNZaGdiNWh5RjZleElwVTNSZmlaVGx6bDltcU51OGd6UlZsYjh1SGJ4NF9pb1ExM0F2X2NvMEZNVWoyWEFYU2NPbEhCeUNESkdTNjFQakhNSW1iUU1PRVVmMTU1QnBmTlNMTzlqQzJoNEtocnl5TVNWRGFIZFM0MXN6VzFaM292bDRTQk14NGxCUEpDTEpPS2liSUttYnlCM3hLV2VOWGpyS2lzYm9PV3Z5Zw?oc=5",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "The regional risks caused by the violation of airspace by drones, reported by Moldova to the OSCE - ipn.md",
+    "titulekPuvodni": "The regional risks caused by the violation of airspace by drones, reported by Moldova to the OSCE - ipn.md",
+    "shrnuti": "The regional risks caused by the violation of airspace by drones, reported by Moldova to the OSCE ipn.md",
+    "kodZeme": "MD",
+    "zeme": "Moldavsko",
+    "kategorie": [
+      "drony"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "violat+airspace",
+      "dron",
+      "drone",
+      "airspace"
+    ],
+    "naliehave": null,
+    "stav": "ceka",
+    "vyrez": {
+      "text": "Google News",
+      "stazeno": "2026-09-19T08:53:22.442Z",
+      "stav": 200
+    }
+  },
+  {
     "id": "k-ab7a6c8042552993",
     "zachyceno": "2026-09-17T04:32:57.889Z",
     "publikovano": "2026-09-17T04:24:00.000Z",
@@ -10327,39 +10362,6 @@
     "vyrez": {
       "text": "Google News",
       "stazeno": "2026-09-14T09:02:40.065Z",
-      "stav": 200
-    },
-    "naliehave": null
-  },
-  {
-    "id": "k-9bc964dd1f09c8a0",
-    "zachyceno": "2026-09-06T13:59:15.565Z",
-    "publikovano": "2026-09-06T07:19:49.000Z",
-    "zdroj": {
-      "nazev": "Google News — sabotage Europe",
-      "url": "https://news.google.com/rss/articles/CBMizwFBVV95cUxOZ3pvZk5ESVJpdC1lM2U0bE9PTndmYjAyMUR6bGtqNUpiM0VIcG9wd2RGWUgxNnNTY2dqWE5VRDNyMWY0UlVvaGt6OTlWQjZNdVJqcjctaGtDdTlFWnRwRTkzNGItWjZhbkl2RDZnMUVWendKb0w4ZnJDLTlTNWpWbHp1aVk3ZlpjVXZWcjR1RUdCaUlwTW5qeW5IaW9tOTVQM2JIWkViVVczS3M5YnRTa3RicmkxZ2J0NHpQNGNpaFZKRnBFSnBxY3NZVm0xTG_SAdQBQVVfeXFMUEJwVWhwX20tNHk1WUN2eERkLUluOFl5Ym9WSktBQTNfS192eDB6Q3NpY2pDR2pGSFhjdklFS0JKVERaWkJvRjVKcmFmMy1FeFAtMzRGX0N2cmRsSFlfaTZVLWkzaFNIRXQ3OHc5bkpBQ2FCeXdoQWtNXzJjNklMYjNMY3IzUmNiUThqeHdaOVNEbE9DMXhFZml1SktQVkJmaEllNmgyOC01aTRzQlNaaVg4OUlPNFFiWk1UVXlCYTY1aXlFclBDZVkyaTFkYVVjYUtpNjQ?oc=5",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Germany urges Europe to block Russians from getting tourist visas after sabotage attacks - firstpost.com",
-    "titulekPuvodni": "Germany urges Europe to block Russians from getting tourist visas after sabotage attacks - firstpost.com",
-    "shrnuti": "",
-    "kodZeme": "DE",
-    "zeme": "Německo",
-    "kategorie": [
-      "sabotaz",
-      "rusko"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "shody": [
-      "sabotage",
-      "russia"
-    ],
-    "stav": "ceka",
-    "vyrez": {
-      "text": "Google News",
-      "stazeno": "2026-09-14T09:02:40.189Z",
       "stav": 200
     },
     "naliehave": null
