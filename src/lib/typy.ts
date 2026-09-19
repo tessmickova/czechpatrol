@@ -414,7 +414,26 @@ export interface Kandidat {
    * neověřený, do počtů nevstupuje a mimořádnou výstrahu nezapíná.
    */
   naliehave?: { druh: "mobilizace-rusko" | "krizove-vysilani"; proc: string } | null;
-  stav: "ceka";
+  /**
+   * Kde kandidát je.
+   *
+   * `ceka` — nikdo ho ještě neposoudil.
+   * `vyrizen` — posouzení proběhlo a dál se o něm nerozhoduje.
+   *
+   * Proč to přibylo: fronta měla 300 položek, z nichž 57 už audit posoudil
+   * a přesto v ní pořád stály. Zachycený článek NENÍ událost — je to jeden
+   * doklad. Jakmile se ví, ke které události patří (nebo že k žádné),
+   * nemá se tvářit, že na něco čeká.
+   */
+  stav: "ceka" | "vyrizen";
+  /** Proč je vyřízený a kam se to propsalo. U čekajících chybí. */
+  vyrizeni?: {
+    kdy: string;
+    duvod: "neudalost" | "pokracovani" | "navrh" | "jeden-zdroj" | "zdroj-navrhu";
+    /** Slug záznamu nebo id návrhu, ke kterému kandidát patří. */
+    patriK?: string | null;
+    poznamka?: string | null;
+  } | null;
 }
 
 /* ---------- svět: cíle mocností ---------- */

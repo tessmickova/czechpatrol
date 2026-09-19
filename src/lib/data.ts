@@ -489,8 +489,24 @@ export function odmitnute(): Odmitnuty[] {
   return ostreOdmitnute as Odmitnuty[];
 }
 
+/**
+ * Zachycené zprávy, které na něco čekají. Nejnovější první.
+ *
+ * Vyřízené se nevracejí. Zachycený článek není událost — je to jeden doklad.
+ * Jakmile se ví, ke které události patří (nebo že k žádné), nemá se dál
+ * tvářit, že čeká: patřil by do počtu „čeká na ověření" a na titulce by stál
+ * mezi novinkami, přestože o něm je rozhodnuto.
+ */
 export function kandidati(): Kandidat[] {
-  return jako<Kandidat[]>(ostriKandidati).slice().sort((a, b) => (b.publikovano ?? b.zachyceno).localeCompare(a.publikovano ?? a.zachyceno));
+  return jako<Kandidat[]>(ostriKandidati)
+    .filter((k) => k.stav !== "vyrizen")
+    .slice()
+    .sort((a, b) => (b.publikovano ?? b.zachyceno).localeCompare(a.publikovano ?? a.zachyceno));
+}
+
+/** Všechny zachycené zprávy včetně vyřízených — pro přehledy a statistiku. */
+export function vsichniKandidati(): Kandidat[] {
+  return jako<Kandidat[]>(ostriKandidati);
 }
 
 /**

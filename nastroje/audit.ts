@@ -67,6 +67,8 @@ interface Kandidat {
   zdroj: { nazev: string; url: string; typ: string; primarni: boolean };
   vyrez?: { text: string } | null;
   naliehave?: { druh: string } | null;
+  stav: "ceka" | "vyrizen";
+  vyrizeni?: { kdy: string; duvod: string; patriK: string | null; poznamka: string | null } | null;
 }
 
 const Posouzeni = z.object({
@@ -341,16 +343,58 @@ async function main() {
     });
   }
 
+  /*
+    Posouzený kandidát se z fronty odepíše.
+
+    Zachycený článek není událost — je to jeden doklad. Jakmile se ví, ke
+    které události patří (nebo že k žádné), nemá stát ve frontě a tvářit se,
+    že na něco čeká. Bez tohohle kroku fronta jen rostla: 300 položek, z nichž
+    57 už bylo posouzeno.
+  */
+  const vyrizeno = new Map<string, { duvod: string; patriK: string | null }>();
+  for (const p2 of vysledek.polozky) {
+    const r = prehled.find((x) => (x as { id: string }).id === p2.id) as
+      | { zahozeno: string | null; duplikatSlugu: string | null }
+      | undefined;
+    if (!r) continue;
+    if (!r.zahozeno) {
+      vyrizeno.set(p2.id, { duvod: "navrh", patriK: null });
+      /* Zprávy, ze kterých se staly další zdroje návrhu, taky dořešené jsou. */
+      for (const dalsi of p2.dalsiId) vyrizeno.set(dalsi, { duvod: "zdroj-navrhu", patriK: null });
+    } else if (r.duplikatSlugu) {
+      vyrizeno.set(p2.id, { duvod: "pokracovani", patriK: r.duplikatSlugu });
+    } else if (r.zahozeno.startsWith("hlásí to jen jeden zdroj")) {
+      /* Tenhle čeká na dohledání druhého zdroje — z fronty se neodepisuje. */
+    } else {
+      vyrizeno.set(p2.id, { duvod: "neudalost", patriK: null });
+    }
+  }
+
+  const kdyVyrizeno = new Date().toISOString();
+  const kandidatiPoAuditu = kandidati.map((k) => {
+    const v = vyrizeno.get(k.id);
+    if (!v || k.stav !== "ceka") return k;
+    return {
+      ...k,
+      stav: "vyrizen" as const,
+      vyrizeni: { kdy: kdyVyrizeno, duvod: v.duvod, patriK: v.patriK, poznamka: null },
+    };
+  });
+
   const zprava = {
     kdy: new Date().toISOString(),
     stav: "ok",
     poskytovatel,
     posouzeno: vysledek.polozky.length,
     navrhu: nove.length,
+    vyrizeno: vyrizeno.size,
+    cekaDal: kandidatiPoAuditu.filter((k) => k.stav === "ceka").length,
     rozhodnuti: prehled,
   };
 
-  console.log(`[audit] posouzeno ${vysledek.polozky.length}, nových návrhů ${nove.length}`);
+  console.log(
+    `[audit] posouzeno ${vysledek.polozky.length}, nových návrhů ${nove.length}, z fronty odepsáno ${vyrizeno.size}`,
+  );
   for (const r of prehled as { titulek: string; zahozeno: string | null; duvod: string; neznamySlug: string | null }[]) {
     console.log(`  ${r.zahozeno ? `— ${r.zahozeno}` : "NÁVRH"} · ${r.titulek.slice(0, 60)} — ${r.duvod.slice(0, 70)}`);
     if (r.neznamySlug) console.log(`      pozor: model ukázal na neexistující záznam ${r.neznamySlug}`);
@@ -363,6 +407,9 @@ async function main() {
   }
   if (nove.length) {
     fs.writeFileSync(cesta("data/navrhy.json"), `${JSON.stringify([...navrhy, ...nove], null, 2)}\n`);
+  }
+  if (vyrizeno.size) {
+    fs.writeFileSync(cesta("data/kandidati.json"), `${JSON.stringify(kandidatiPoAuditu, null, 2)}\n`);
   }
 }
 
