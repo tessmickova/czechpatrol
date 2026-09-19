@@ -1,5 +1,85 @@
 [
   {
+    "id": "k-bbb97e2b7d68d1bd",
+    "zachyceno": "2026-09-19T19:02:28.433Z",
+    "publikovano": "2026-09-19T18:30:00.000Z",
+    "zdroj": {
+      "nazev": "Český rozhlas — domácí zprávy",
+      "url": "https://www.irozhlas.cz/zivotni-styl/cestovani/delfin-je-zpet-v-cesku-legendarni-vlak-prijel-po-23-letech-do-prahy-zachranili_2609191930_vsn",
+      "typ": "primary",
+      "primarni": true
+    },
+    "titulek": "Delfín je zpět v Česku. Legendární vlak přijel po 23 letech do Prahy, zachránili ho nadšenci z Německa",
+    "shrnuti": "Legendární východoněmecký vlak zvaný Delfín dorazil do Česka. Veterána, který spojoval Berlín, Prahu a Vídeň, po mnoha letech zachránili a opravili nadšenci v německém Zhořelci. Zážitkové jízdy v Česku jsou sice beznadějně vyprodané, jeho krásu je ale možné tento víkend obdivovat třeba v Praze nebo ",
+    "duvod": "bez-skutku",
+    "kategorie": [],
+    "posouzeni": {
+      "podezreni": "zadne",
+      "duvod": "Kulturní zpráva o historickém vlaku.",
+      "kdy": "2026-09-19T19:04:17.357Z"
+    }
+  },
+  {
+    "id": "k-f8bcf9a033773745",
+    "zachyceno": "2026-09-19T19:02:28.434Z",
+    "publikovano": "2026-09-19T18:18:00.000Z",
+    "zdroj": {
+      "nazev": "Český rozhlas — domácí zprávy",
+      "url": "https://www.irozhlas.cz/zpravy-domov/300-bytu-knihovna-i-nabrezi-upy-tak-mohl-v-budoucnosti-vypadat-novy-krizik-v_2609191643_kch",
+      "typ": "primary",
+      "primarni": true
+    },
+    "titulek": "300 bytů, knihovna i nábřeží Úpy. Tak by mohl v budoucnosti vypadat Nový Křižík v Trutnově",
+    "shrnuti": "Bytová zástavba, městská knihovna, prostor pro setkávání i přístupné nábřeží řeky Úpy. Taková by mohla být podle vítězného návrhu urbanistické soutěže budoucí podoba lokality Nový Křižík nedaleko historického centra Trutnova, informovali zástupci radnice. Město spolu s vlastníkem průmyslového areálu",
+    "duvod": "bez-skutku",
+    "kategorie": [],
+    "posouzeni": {
+      "podezreni": "zadne",
+      "duvod": "Urbanistický plán, běžná stavební zpráva.",
+      "kdy": "2026-09-19T19:04:17.357Z"
+    }
+  },
+  {
+    "id": "k-07ab07c342baa198",
+    "zachyceno": "2026-09-19T19:02:28.435Z",
+    "publikovano": "2026-09-19T18:13:00.000Z",
+    "zdroj": {
+      "nazev": "Český rozhlas — domácí zprávy",
+      "url": "https://www.irozhlas.cz/zpravy-domov/na-kladensku-se-pri-nehode-zranilo-pet-lidi-kvuli-uniku-chemikalii-uzavirka-trva_2609192013_kma",
+      "typ": "primary",
+      "primarni": true
+    },
+    "titulek": "Na Kladensku se při nehodě zranilo pět lidí. Kvůli úniku chemikálií uzavírka trvá a pokračuje sanace",
+    "shrnuti": "Při nehodě auta a cisterny u Luníkova na Kladensku na silnici I/16 se v sobotu ráno lehce zranilo pět lidí. Cisterna převážela benzin i naftu, po nehodě část látek unikla. Hasiči zbývající paliva přečerpali a vůz vyprostili, pokračuje sanace kontaminované půdy. Silnice bude uzavřená zřejmě až do pon",
+    "duvod": "vylouceno-tematem",
+    "kategorie": [],
+    "posouzeni": {
+      "podezreni": "stredni",
+      "duvod": "Nehoda s únikem chemikálií, možný dopad na infrastrukturu.",
+      "kdy": "2026-09-19T19:04:17.357Z"
+    }
+  },
+  {
+    "id": "k-760db9dae88742be",
+    "zachyceno": "2026-09-19T19:02:28.455Z",
+    "publikovano": "2026-09-19T18:06:13.000Z",
+    "zdroj": {
+      "nazev": "ČT24 — hlavní zprávy",
+      "url": "https://ct24.ceskatelevize.cz/clanek/domaci/superdavku-cekaji-dalsi-zmeny-377771",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Superdávku čekají další změny",
+    "shrnuti": "Superdávku, která slučuje dávky na bydlení, živobytí a děti, čekají další změny. Ministr práce a sociálních věcí Aleš Juchelka (ANO) je chce s opozicí dohodnout ještě během podzimu. Týkat se mají například exekucí a insolvencí, protože nárok na podporu v současné době stát odvozuje před přihlédnutím",
+    "duvod": "bez-skutku",
+    "kategorie": [],
+    "posouzeni": {
+      "podezreni": "zadne",
+      "duvod": "Sociální politika, žádná bezpečnostní událost.",
+      "kdy": "2026-09-19T19:04:17.357Z"
+    }
+  },
+  {
     "id": "k-b17e5348aac8ef3e",
     "zachyceno": "2026-09-19T18:02:36.597Z",
     "publikovano": "2026-09-19T17:53:00.000Z",
@@ -10369,89 +10449,6 @@
     "posouzeni": {
       "podezreni": "zadne",
       "duvod": "Bankrot letecké společnosti, ekonomická zpráva.",
-      "kdy": "2026-09-19T14:04:15.203Z"
-    }
-  },
-  {
-    "id": "k-f60f5be2c294f4b9",
-    "zachyceno": "2026-09-15T16:32:52.182Z",
-    "publikovano": null,
-    "zdroj": {
-      "nazev": "LRT English (Litva)",
-      "url": "https://www.lrt.lt/en/news-in-english/19/3052301/lithuania-police-open-hate-incitement-probe-after-pig-s-head-displayed-at-kaunas-mosque",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Lithuania police open hate-incitement probe after pig’s head displayed at Kaunas mosque",
-    "shrnuti": "",
-    "duvod": "bez-skutku",
-    "kategorie": [],
-    "posouzeni": {
-      "podezreni": "stredni",
-      "duvod": "Vyšetřování nenávistného incidentu u mešity.",
-      "kdy": "2026-09-19T14:04:15.203Z"
-    }
-  },
-  {
-    "id": "k-60be89959cdf9ca6",
-    "zachyceno": "2026-09-15T16:32:52.181Z",
-    "publikovano": null,
-    "zdroj": {
-      "nazev": "LRT English (Litva)",
-      "url": "https://www.lrt.lt/en/news-in-english/19/3052364/study-finds-rise-in-heavy-alcohol-use-tobacco-consumption-in-lithuania",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Study finds rise in heavy alcohol use, tobacco consumption in Lithuania",
-    "shrnuti": "",
-    "duvod": "bez-skutku",
-    "kategorie": [],
-    "posouzeni": {
-      "podezreni": "zadne",
-      "duvod": "Studie o spotřebě alkoholu a tabáku, zdravotní téma.",
-      "kdy": "2026-09-19T14:04:15.203Z"
-    }
-  },
-  {
-    "id": "k-84b47dcb43bcee8d",
-    "zachyceno": "2026-09-15T16:32:52.181Z",
-    "publikovano": null,
-    "zdroj": {
-      "nazev": "LRT English (Litva)",
-      "url": "https://www.lrt.lt/en/news-in-english/19/3052357/poland-says-suspected-russian-drone-found-on-baltic-coast",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Poland says suspected Russian drone found on Baltic coast",
-    "shrnuti": "",
-    "duvod": "bez-skutku",
-    "kategorie": [
-      "drony",
-      "rusko"
-    ],
-    "posouzeni": {
-      "podezreni": "vysoke",
-      "duvod": "Podezřelý ruský dron nalezen na pobřeží Polska",
-      "kdy": "2026-09-19T14:04:15.203Z"
-    }
-  },
-  {
-    "id": "k-f2d6f75825efb23c",
-    "zachyceno": "2026-09-15T16:32:52.180Z",
-    "publikovano": null,
-    "zdroj": {
-      "nazev": "LRT English (Litva)",
-      "url": "https://www.lrt.lt/en/news-in-english/19/3053077/lithuania-weighs-fuel-tax-cuts-as-middle-east-tensions-push-oil-prices-higher",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Lithuania weighs fuel tax cuts as Middle East tensions push oil prices higher",
-    "shrnuti": "",
-    "duvod": "bez-skutku",
-    "kategorie": [],
-    "posouzeni": {
-      "podezreni": "zadne",
-      "duvod": "Ekonomické téma - daně na palivo",
       "kdy": "2026-09-19T14:04:15.203Z"
     }
   }

@@ -825,43 +825,6 @@
     }
   },
   {
-    "id": "k-7c0975db9a1c62f2",
-    "zachyceno": "2026-09-16T15:32:44.216Z",
-    "publikovano": "2026-09-16T13:18:00.000Z",
-    "zdroj": {
-      "nazev": "Téma: vojsko (anglicky)",
-      "url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxQYWlpNVVYN0pRclRJM1piQnRSWm9yV3phSk1lZ3VLVVVVcUpocTJrWDNDZkZWYkFmUGZvbWFNU1BFcklFbFQxTmNjaHpiTmlLYld5ZS1QUGN0QU9ET3lFVndSbkF1anFhMmdkQVJYaklKbGhJY2VsRXlSMncyNDJBNU1oaDBDYlhSOXpzZW1XYkpQSnJJQWE4OHQyOFJCU0dEc1NKQ2RqTHNNYnFjUVNUanlZcGZHS280V21FeGJxdDZjWG4x?oc=5",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Poland has deployed troops to reinforce border crossings with Ukraine due to threat from Russia, - Kosiniak-Kamysz - Цензор.НЕТ",
-    "titulekPuvodni": "Poland has deployed troops to reinforce border crossings with Ukraine due to threat from Russia, - Kosiniak-Kamysz - Цензор.НЕТ",
-    "shrnuti": "Poland has deployed troops to reinforce border crossings with Ukraine due to threat from Russia, - Kosiniak-Kamysz Цензор.НЕТ",
-    "kodZeme": "PL",
-    "zeme": "Polsko",
-    "kategorie": [
-      "hranice",
-      "vojsko",
-      "rusko"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "zeSite": null,
-    "shody": [
-      "border+troops",
-      "troops+deployed",
-      "border",
-      "russia"
-    ],
-    "naliehave": null,
-    "stav": "ceka",
-    "vyrez": {
-      "text": "Google News",
-      "stazeno": "2026-09-16T15:32:44.345Z",
-      "stav": 200
-    }
-  },
-  {
     "id": "k-9871dbb9bd50f5b2",
     "zachyceno": "2026-09-16T13:03:09.326Z",
     "publikovano": "2026-09-16T13:02:40.000Z",
@@ -10361,6 +10324,40 @@
     "vyrez": {
       "text": "Google News",
       "stazeno": "2026-09-19T18:04:20.821Z",
+      "stav": 200
+    }
+  },
+  {
+    "id": "k-77b020b9c7f0544b",
+    "zachyceno": "2026-09-19T19:02:28.777Z",
+    "publikovano": "2026-09-04T11:16:04.000Z",
+    "zdroj": {
+      "nazev": "Slovensko — sabotaz",
+      "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxPUDg0RC14a3NGcnZfeDZsZEY5aEFFbDhYM1lrNC1nWUVTLVJrQnREVzRwMWZ2a21LbDVCdVJzMExnb2dxWXAyRGNpSGdOS0t5eW96aTVqX0VzNzdKMGlGdXNGekVNY0MyWjFGQ1BZLXJKUWdaMlNDT3VUc1VZa1JwWkhGd0xtR213dEszRHo2WnRQZlc5NW5YRzJYenlaUl9fb0w3OGF0bXRCR2xMOGZuUEhncTZLNU1M?oc=5",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Europe Targeted by Spiralling Campaign of Sabotage and Russia is the Chief Suspect - Albanian Daily News",
+    "titulekPuvodni": "Europe Targeted by Spiralling Campaign of Sabotage and Russia is the Chief Suspect - Albanian Daily News",
+    "shrnuti": "Europe Targeted by Spiralling Campaign of Sabotage and Russia is the Chief Suspect Albanian Daily News",
+    "kodZeme": "RU",
+    "zeme": "Rusko",
+    "kategorie": [
+      "sabotaz",
+      "rusko"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "sabotage",
+      "russia"
+    ],
+    "naliehave": null,
+    "stav": "ceka",
+    "vyrez": {
+      "text": "Google News",
+      "stazeno": "2026-09-19T19:04:13.497Z",
       "stav": 200
     }
   }
