@@ -65,6 +65,31 @@ Odhadem to vychází na **1 100–1 300 minut měsíčně**. Je to odhad — sku
 zhruba půlí za cenu toho, že se zpráva na web dostane nejpozději za dvě
 hodiny.
 
+### 2b. Nasazování webu pryč z GitHub Actions (doporučeno, jen klikání)
+
+Cloudflare Pages umí web sestavit samo po každém pushi, ze svých vlastních
+bezplatných build minut (500 sestavení měsíčně). Nasazení tím přestane
+záviset na GitHub Actions natrvalo — a to je u projektu, který má být
+pojistkou, důležitější než ušetřené minuty: dnes je GitHub jediné místo,
+jehož výpadek položí celý web, a přesně to se 17. 9. 2026 stalo.
+
+1. <https://dash.cloudflare.com> → **Workers & Pages** → projekt `czechpatrol`
+2. karta **Settings** → **Builds & deployments** → **Connect to Git**
+3. povol Cloudflare přístup k repozitáři `tessmickova/czechpatrol`
+4. nastav:
+
+| Pole | Hodnota |
+|---|---|
+| Production branch | `main` |
+| Build command | `npm run build` |
+| Build output directory | `out` |
+| Environment variable | `NEXT_PUBLIC_API_URL` = adresa workeru (jen pokud máš zapnuté účty) |
+
+Verzi Node si Cloudflare vezme ze souboru `.nvmrc` v repozitáři (je tam 22).
+
+Od té chvíle stačí cokoli pushnout do `main` a web se sestaví a nasadí bez
+GitHub Actions. Krok „Nasazení" v `sber.yml` pak můžeme vypnout úplně.
+
 ### 3. Tenhle měsíc to možná ještě nenaskočí
 
 Úsporná opatření platí od dalšího běhu, ale **minuty, které už jsou
