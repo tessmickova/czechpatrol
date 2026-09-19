@@ -6,6 +6,7 @@ import { datumCas } from "@/lib/format";
 import { api, ROLE, useUcet, type Role } from "@/lib/ucet";
 import { Hlaska, POLE, Popisek, TLACITKO_AKCENT, TLACITKO_TICHE } from "./formulare";
 import { AkceSchvaleni, PolozkaZpravy, type ZpravaIzs } from "./izs-klient";
+import { JakToChodi } from "./jak-to-chodi";
 import { NavrhyKeSchvaleni } from "./navrhy-klient";
 import { OvladaniOverovani } from "./overovani-klient";
 import { Karta } from "./zaklad";
@@ -180,6 +181,8 @@ export function SpravaKlient() {
       <NavrhyKeSchvaleni />
 
       <OvladaniOverovani />
+
+      <JakToChodi />
 
       <Karta odstin={tipy.some((x) => x.stav === "novy") ? "modra" : "bila"} className="p-6">
         <div className="mb-3">
