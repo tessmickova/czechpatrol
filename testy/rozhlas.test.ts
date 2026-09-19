@@ -2,7 +2,7 @@
 import fs from "node:fs";
 import path from "node:path";
 import { describe, expect, it } from "vitest";
-import { klicovaVeta, legendaTecek, pocetZdroju, pruhTecek, PUVODCI, radekPokryti, jeArchivni, radekData, rozdelZpravu, sestavPalivo, sestavSouhrn, sestavPrehledZachycenych, sestavSignal, sestavTest, sestavVystrahu, sestavZdroje, sestavZmenuStavu, sestavZpravu, vyberDoPrehledu, vyberNove, vyberPalivo, vyberSignaly, vyberVystrahu, vyberZmenyStavu, zahlavi } from "../nastroje/rozhlas.mjs";
+import { klicovaVeta, legendaTecek, pocetZdroju, pruhTecek, PUVODCI, radekPokryti, jeArchivni, radekData, rozdelZpravu, sestavPalivo, sestavSouhrn, sestavPrehledZachycenych, sestavSignal, sestavTest, sestavVystrahu, sestavZdroje, sestavZmenuStavu, sestavZpravu, vyberDoPrehledu, vyberNove, vyberPalivo, vyberSignaly, vyberVystrahu, vyberZmenyStavu, zahlavi, sestavVaznyNavrh, vyberVazneNavrhy } from "../nastroje/rozhlas.mjs";
 import { UROVNE, zDeseti } from "../src/lib/skala";
 import { PUVODCI as PUVODCI_WEB } from "../src/lib/kategorie";
 import type { Uroven } from "../src/lib/typy";
@@ -609,5 +609,74 @@ describe("původce se nepřipisuje dřív, než je doložený", () => {
   it("země se popisuje jednotně, i když chybí ve slovníku tvarů", () => {
     const z = sestavZpravu({ ...zaznam("vysetrovana"), kodZeme: "ZZ", zeme: "Vymyšlensko" });
     expect(z).toContain("Událost nastala v zemi Vymyšlensko, nikoli v České republice.");
+  });
+});
+
+/*
+  Vážné případy doložené i úředním zdrojem.
+
+  Jediná cesta, kterou se do kanálu dostane něco neschváleného kromě
+  naléhavých signálů. U takhle doložené zprávy je čekání na schválení dražší
+  než ta nejistota — schválením se obvykle nezmění, jen se zdrží.
+
+  Podmínky jsou proto úzké a tenhle test je hlídá. Kdyby se rozvolnily,
+  začalo by do kanálu chodit neschválené běžné zpravodajství a z projektu by
+  byl agregátor titulků.
+*/
+describe("vážné případy z úředního zdroje", () => {
+  const ted = new Date("2026-09-19T12:00:00Z").getTime();
+  const navrh = (zmeny: Record<string, unknown>) => ({
+    id: "n1",
+    kam: "zaznam",
+    zavaznost: "O2",
+    titulek: "Případ",
+    datumUdalosti: new Date(ted - 3_600_000).toISOString(),
+    zdroje: [
+      { nazev: "Policie ČR", url: "https://policie.cz/a", primarni: true },
+      { nazev: "ČTK", url: "https://ctk.cz/b", primarni: false },
+    ],
+    ...zmeny,
+  });
+
+  it("projde jen vážný případ se dvěma zdroji, z nichž jeden je úřední", () => {
+    expect(vyberVazneNavrhy([navrh({})], { signaly: {} }, { ted })).toHaveLength(1);
+  });
+
+  it("mírnější závažnost neprojde", () => {
+    for (const z of ["G1", "Y3"]) {
+      expect(vyberVazneNavrhy([navrh({ zavaznost: z })], { signaly: {} }, { ted }), z).toHaveLength(0);
+    }
+  });
+
+  it("bez úředního zdroje neprojde ani vážný případ", () => {
+    const bezUradu = navrh({
+      zdroje: [
+        { nazev: "Médium A", url: "https://a", primarni: false },
+        { nazev: "Médium B", url: "https://b", primarni: false },
+      ],
+    });
+    expect(vyberVazneNavrhy([bezUradu], { signaly: {} }, { ted })).toHaveLength(0);
+  });
+
+  it("jediný zdroj neprojde, i když je úřední", () => {
+    const jeden = navrh({ zdroje: [{ nazev: "Policie ČR", url: "https://a", primarni: true }] });
+    expect(vyberVazneNavrhy([jeden], { signaly: {} }, { ted })).toHaveLength(0);
+  });
+
+  it("stará událost neprojde — varování se nedává zpětně", () => {
+    const stara = navrh({ datumUdalosti: new Date(ted - 5 * 86_400_000).toISOString() });
+    expect(vyberVazneNavrhy([stara], { signaly: {} }, { ted })).toHaveLength(0);
+  });
+
+  it("co už odešlo, neodejde podruhé", () => {
+    const stav = { signaly: { n1: { kdy: "kdykoli" } } };
+    expect(vyberVazneNavrhy([navrh({})], stav, { ted })).toHaveLength(0);
+  });
+
+  it("zpráva říká, že to ještě neprošlo člověkem", () => {
+    /* Bez téhle věty by se dala číst jako zveřejněný záznam. */
+    const z = sestavVaznyNavrh(navrh({}));
+    expect(z).toContain("NEOVĚŘENO");
+    expect(z).toContain("Záznam ještě neprošel lidskou kontrolou.");
   });
 });

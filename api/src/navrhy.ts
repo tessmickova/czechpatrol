@@ -63,6 +63,7 @@ interface Navrh {
   id?: string;
   slug?: string;
   titulek?: string;
+  kratkyTitulek?: string;
   zeme?: string;
   kam?: string;
   pripravil?: string;
@@ -169,5 +170,85 @@ export async function rozhodni(env: Env, req: Request, ucet: Prihlaseny, id: str
     Rozhodnutí je odeslané, ne hotové — workflow teprve poběží. Stránka to
     musí říct stejně, aby se „odesláno" nečetlo jako „na webu".
   */
+  return json({ ok: true, stav: "odeslano" }, 202);
+}
+
+/*
+  Zveřejněné záznamy a jejich oprava.
+
+  Chyba se pozná většinou až na webu. Dokud šlo upravit jen návrh, byla
+  jediná cesta k opravě zveřejněného údaje příkazová řádka — a to znamená,
+  že se oprava neudělá.
+*/
+const WORKFLOW_OPRAVA = "oprava-zaznamu.yml";
+
+export async function zaznamy(env: Env, ucet: Prihlaseny): Promise<Response> {
+  jenSpravce(ucet);
+  const { repo, token } = nastaveni(env);
+
+  const odpoved = await fetch(`https://api.github.com/repos/${repo}/contents/data/incidenty.json?ref=main`, {
+    headers: { ...hlavicky(token), accept: "application/vnd.github.raw" },
+  });
+  if (!odpoved.ok) throw new ChybaHttp(502, `GitHub odpověděl ${odpoved.status}. Má token právo číst obsah repozitáře?`);
+
+  const vse = (await odpoved.json().catch(() => [])) as (Navrh & { slug?: string; aktualizovano?: string })[];
+  /* Nejnovější nahoře a jen to, co je k úpravě potřeba vidět. */
+  const zaznamy = (Array.isArray(vse) ? vse : [])
+    .slice(-60)
+    .reverse()
+    .map((z) => ({
+      slug: z.slug ?? null,
+      titulek: z.titulek ?? null,
+      kratkyTitulek: z.kratkyTitulek ?? null,
+      zeme: z.zeme ?? null,
+      datumUdalosti: z.datumUdalosti ?? null,
+      aktualizovano: z.aktualizovano ?? null,
+      zavaznost: z.zavaznost ?? null,
+      jistota: z.jistota ?? null,
+      druh: z.druh ?? null,
+      atribuce: z.atribuce ?? null,
+      puvodce: z.puvodce ?? null,
+      vyznam: z.vyznam ?? null,
+      fakta: z.fakta ?? [],
+      neznameho: z.neznameho ?? [],
+      zdroje: (z.zdroje ?? []).map((x) => ({ nazev: x.nazev ?? null, url: x.url ?? null })),
+    }));
+  return json({ zaznamy });
+}
+
+export async function opravZaznam(env: Env, req: Request, ucet: Prihlaseny, slug: string): Promise<Response> {
+  jenSpravce(ucet);
+  await omez(env, req, "oprava", 20, 60);
+  const { repo, token } = nastaveni(env);
+
+  const { duvod, upravy } = await telo<{ duvod?: string; upravy?: Record<string, unknown> }>(req);
+  if (!duvod || duvod.trim().length < 10) {
+    /* Bez důvodu se zveřejněný údaj nepřepisuje — jinak je to tichá oprava. */
+    throw new ChybaHttp(400, "Napište, proč se to opravuje. Objeví se to na stránce Opravy.");
+  }
+  if (!upravy || !Object.keys(upravy).length) throw new ChybaHttp(400, "Není co opravit.");
+  for (const klic of Object.keys(upravy)) {
+    if (!UPRAVITELNA.has(klic)) throw new ChybaHttp(400, `Pole ${klic} se měnit nedá.`);
+  }
+  if (!/^[\w-]{1,120}$/.test(slug)) throw new ChybaHttp(400, "Podivný slug záznamu.");
+
+  const telo_ = JSON.stringify({ ...upravy, duvod: duvod.trim().slice(0, 600) });
+  if (telo_.length > MAX_UPRAVY) throw new ChybaHttp(400, "Úprav je příliš mnoho.");
+
+  const odpoved = await fetch(`https://api.github.com/repos/${repo}/actions/workflows/${WORKFLOW_OPRAVA}/dispatches`, {
+    method: "POST",
+    headers: { ...hlavicky(token), "content-type": "application/json" },
+    body: JSON.stringify({ ref: "main", inputs: { slug, upravy: telo_ } }),
+  });
+  if (odpoved.status !== 204) {
+    const text = await odpoved.text().catch(() => "");
+    console.error(`dispatch ${WORKFLOW_OPRAVA}: ${odpoved.status} ${text.slice(0, 200)}`);
+    throw new ChybaHttp(502, `GitHub odpověděl ${odpoved.status}.`);
+  }
+
+  await env.DB.prepare("INSERT INTO audit (kdy, kdo, co, cil) VALUES (?, ?, ?, ?)")
+    .bind(ted(), ucet.id, "oprava zveřejněného záznamu", slug)
+    .run();
+
   return json({ ok: true, stav: "odeslano" }, 202);
 }

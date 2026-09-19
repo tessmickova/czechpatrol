@@ -10,6 +10,7 @@ import { AkceSchvaleni, PolozkaZpravy, type ZpravaIzs } from "./izs-klient";
 import { useDialog } from "./dialog";
 import { JakToChodi } from "./jak-to-chodi";
 import { NavrhyKeSchvaleni } from "./navrhy-klient";
+import { OpravaZaznamu } from "./opravy-klient";
 import { OvladaniOverovani } from "./overovani-klient";
 import { Karta } from "./zaklad";
 
@@ -224,6 +225,8 @@ export function SpravaKlient() {
       </Karta>
 
       <NavrhyKeSchvaleni />
+
+      <OpravaZaznamu />
 
       <OvladaniOverovani />
 

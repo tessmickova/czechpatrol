@@ -354,6 +354,81 @@ function uprav(id, jsonText) {
   console.log(`Návrh ${id}: upraveno ${pouzite.join(", ")}.`);
 }
 
+
+/*
+  Oprava už zveřejněného záznamu.
+
+  Do té doby se dal opravit jen návrh, tedy něco, co ještě nikdo neviděl.
+  Jenže chyba se pozná většinou až na webu — a oprava zveřejněného údaje je
+  přesně ta situace, kdy se projekt pozná: buď se přizná, nebo se přepíše
+  potichu.
+
+  Proto se tu dělají dvě věci naráz: opraví se záznam A zapíše se to do
+  data/opravy.json, které web ukazuje na stránce Opravy. Bez zápisu do oprav
+  by to bylo tiché přepsání a to se tady nedělá.
+*/
+function upravZaznam(slug, jsonText) {
+  if (!slug || !jsonText) {
+    console.error("Použití: npm run spravce uprav-zaznam <slug> '<json se změnami a důvodem>'");
+    process.exit(1);
+  }
+  let vstup;
+  try {
+    vstup = JSON.parse(jsonText);
+  } catch {
+    console.error("Změny nejsou platný JSON.");
+    process.exit(1);
+  }
+  const { duvod, ...zmeny } = vstup;
+  if (!duvod || String(duvod).trim().length < 10) {
+    console.error("Chybí důvod opravy. Bez něj se zveřejněný údaj nepřepisuje.");
+    process.exit(1);
+  }
+
+  const inc = cti("data/incidenty.json", []);
+  const z = inc.find((x) => x.slug === slug);
+  if (!z) {
+    console.error(`Záznam ${slug} tu není.`);
+    process.exit(1);
+  }
+
+  const pouzite = [];
+  for (const [klic, hodnota] of Object.entries(zmeny)) {
+    if (!UPRAVITELNA.includes(klic)) {
+      console.error(`Pole ${klic} se takhle měnit nedá — mění se jen: ${UPRAVITELNA.join(", ")}.`);
+      process.exit(1);
+    }
+    if (hodnota === null || hodnota === undefined) continue;
+    z[klic] = hodnota;
+    pouzite.push(klic);
+  }
+  if (!pouzite.length) {
+    console.log("Nic k úpravě.");
+    return;
+  }
+
+  const ted = new Date();
+  z.aktualizovano = ted.toISOString();
+  z.historie = [
+    ...(z.historie ?? []),
+    { kdy: ted.toISOString(), text: `Opraveno po zveřejnění: ${pouzite.join(", ")}. Důvod: ${duvod}`, novySignal: false },
+  ];
+
+  const opravy = cti("data/opravy.json", []);
+  opravy.push({
+    id: `o-${ted.toISOString().slice(0, 10)}-${slug}`.slice(0, 80),
+    datum: ted.toISOString().slice(0, 10),
+    tykaSe: slug,
+    druh: "oprava-udaje",
+    co: `Upraveno: ${pouzite.join(", ")}.`,
+    proc: String(duvod).trim().slice(0, 600),
+  });
+
+  fs.writeFileSync(path.join(koren, "data/incidenty.json"), `${JSON.stringify(inc, null, 2)}\n`);
+  fs.writeFileSync(path.join(koren, "data/opravy.json"), `${JSON.stringify(opravy, null, 2)}\n`);
+  console.log(`Záznam ${slug}: upraveno ${pouzite.join(", ")}. Zapsáno i do oprav.`);
+}
+
 const prikaz = process.argv[2];
 const arg = process.argv.slice(3);
 
@@ -364,6 +439,7 @@ else if (prikaz === "schval") schval(arg[0]);
 else if (prikaz === "zamitni") zamitni(arg[0], arg.slice(1).join(" "));
 else if (prikaz === "znovu") znovu(arg[0], arg.slice(1).join(" "));
 else if (prikaz === "uprav") uprav(arg[0], arg.slice(1).join(" "));
+else if (prikaz === "uprav-zaznam") upravZaznam(arg[0], arg.slice(1).join(" "));
 else if (prikaz === "tip") tip(arg[0]);
 else if (prikaz === "prijmi") {
   /* Delegace na stávající nástroj: kostru záznamu už umí a umí ji dobře. */
@@ -375,6 +451,6 @@ else if (prikaz === "prijmi") {
   execFileSync("node", [path.join(koren, "nastroje/rozhlas.mjs"), "--nacisto", ...arg], { stdio: "inherit" });
 } else {
   console.error(`Neznámý příkaz: ${prikaz}`);
-  console.error("Použití: stav | fronta | navrhy | uprav <id> <json> | schval <id> | znovu <id> [důvod] | zamitni <id> [důvod] | prijmi <id> | tip [soubor] | vystraha … | nahled");
+  console.error("Použití: stav | fronta | navrhy | uprav <id> <json> | uprav-zaznam <slug> <json> | schval <id> | znovu <id> [důvod] | zamitni <id> [důvod] | prijmi <id> | tip [soubor] | vystraha … | nahled");
   process.exit(1);
 }

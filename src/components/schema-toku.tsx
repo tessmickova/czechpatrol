@@ -34,6 +34,7 @@ const UZLY: Uzel[] = [
   { x: 16, y: 456, nadpis: "Na webu", popis: "počítá se do statistik" },
   { x: 232, y: 456, nadpis: "Telegram", popis: "vážné hned, zbytek v souhrnu" },
   { x: 232, y: 104, nadpis: "Zachyceno, neověřeno", popis: "na titulce, mimo počty" },
+  { x: 232, y: 192, nadpis: "Telegram bez schválení", popis: "naléhavé a úředně doložené", brana: true },
 ];
 
 const SIPKY: [number, number, number, number][] = [
@@ -46,6 +47,7 @@ const SIPKY: [number, number, number, number][] = [
   [184, 382, 232, 306], // rozhodnutí → zpět ověřovateli
   [184, 482, 232, 482], // web → telegram
   [184, 130, 232, 130], // kandidáti → zachyceno neověřeno
+  [184, 218, 232, 218], // posouzení → Telegram bez schválení
 ];
 
 export function SchemaToku() {

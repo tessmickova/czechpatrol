@@ -636,6 +636,12 @@ export function ctiKandidaty() {
   try { return JSON.parse(fs.readFileSync(soubor, "utf-8")); } catch { return []; }
 }
 
+export function ctiNavrhy() {
+  const soubor = path.join(koren, "data", "navrhy.json");
+  if (!fs.existsSync(soubor)) return [];
+  try { return JSON.parse(fs.readFileSync(soubor, "utf-8")); } catch { return []; }
+}
+
 export function vyberSignaly(kandidati, stav, { ted = Date.now(), maxStari = 6 * 3_600_000 } = {}) {
   const poslane = stav.signaly ?? {};
   return (kandidati ?? [])
@@ -659,6 +665,51 @@ const NAZVY_SIGNALU = {
   "priprava-mobilizace": "přípravy mobilizace v Rusku",
   "vzdusny-prostor-nato": "narušení vzdušného prostoru Aliance",
 };
+
+
+/**
+ * Vážné případy doložené i úředním zdrojem.
+ *
+ * Výjimka z pravidla, že do kanálu jde jen schválené. Když je případ vážný
+ * (O nebo R), stojí nejméně na dvou nezávislých zdrojích a aspoň jeden z nich
+ * je úřední nebo primární, je čekání na schválení dražší než ta nejistota:
+ * takhle doložená zpráva se schválením obvykle nezmění, jen se zdrží.
+ *
+ * Na web se tím NIC nedostane. Záznam dál čeká ve frontě na člověka a zpráva
+ * je označená jako neověřená — kanál dostane varování dřív, web pravdu
+ * později.
+ */
+export function vyberVazneNavrhy(navrhy, stav, { ted = Date.now(), maxStari = 48 * 3_600_000 } = {}) {
+  const poslane = stav.signaly ?? {};
+  return (navrhy ?? [])
+    .filter((n) => (n.kam ?? "zaznam") === "zaznam" && !poslane[n.id])
+    .filter((n) => /^[OR]/.test(n.zavaznost ?? ""))
+    .filter((n) => (n.zdroje ?? []).length >= 2)
+    .filter((n) => (n.zdroje ?? []).some((z) => z.primarni === true || z.typ === "primary"))
+    /* Stará událost není varování. Rozhoduje datum UDÁLOSTI, ne zápisu. */
+    .filter((n) => n.datumUdalosti && ted - new Date(n.datumUdalosti).getTime() <= maxStari)
+    .slice(0, MAX_SIGNALU_NA_BEH);
+}
+
+export function sestavVaznyNavrh(n) {
+  const uredni = (n.zdroje ?? []).filter((z) => z.primarni === true || z.typ === "primary");
+  const radky = [
+    "\u26a0\ufe0f <b>NEOVĚŘENO — vážný případ z úředního zdroje</b>",
+    "",
+    `<b>${esc(zkrat(n.kratkyTitulek || n.titulek, 90))}</b>`,
+  ];
+  if (n.fakta?.[0]) radky.push("", esc(zkrat(n.fakta[0], 280)));
+  if (n.neznameho?.[0]) radky.push(`<b>Nepotvrzeno:</b> ${esc(zkrat(n.neznameho[0], 180))}`);
+  radky.push(
+    "",
+    `Zdroje: ${(n.zdroje ?? []).length}, z toho úřední ${uredni.length}`,
+    ...(n.zdroje ?? []).slice(0, 3).map((z) => `• <a href="${esc(z.url)}">${esc(zkrat(z.nazev, 110))}</a>`),
+    "",
+    "Záznam ještě neprošel lidskou kontrolou. Na web se dostane až po ní.",
+    `CzechPatrol · ${datumCz(new Date().toISOString())}`,
+  );
+  return radky.join("\n");
+}
 
 export function sestavSignal(k) {
   const co = NAZVY_SIGNALU[k.naliehave?.druh] ?? "sledovaná událost";
@@ -977,6 +1028,22 @@ async function main() {
       const v = await posli(sestavSignal(k), { nahled: false });
       if (v.ok) { stav.signaly[k.id] = { kdy: new Date(ted).toISOString(), messageId: v.messageId ?? null }; odeslano++; }
       else { selhalo++; console.log(`[rozhlas] signál neodešel: ${v.chyba}`); }
+    }
+  }
+
+  /*
+    0b2. vážné případy doložené úředním zdrojem.
+
+    Jediná cesta, kterou se do kanálu dostane něco neschváleného kromě
+    naléhavých signálů. Podmínky jsou schválně úzké: vážnost O nebo R, dva
+    nezávislé zdroje a aspoň jeden úřední.
+  */
+  if (rezim === "okamzite") {
+    for (const n of vyberVazneNavrhy(ctiNavrhy(), stav, { ted })) {
+      if (prvniBeh) { stav.signaly[n.id] = { kdy: new Date(ted).toISOString(), ticho: true }; continue; }
+      const v = await posli(sestavVaznyNavrh(n), { nahled: false });
+      if (v.ok) { stav.signaly[n.id] = { kdy: new Date(ted).toISOString(), messageId: v.messageId ?? null }; odeslano++; }
+      else { selhalo++; console.log(`[rozhlas] vážný návrh neodešel: ${v.chyba}`); }
     }
   }
 

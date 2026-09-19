@@ -80,7 +80,17 @@ const KAM: Cil[] = [
   {
     nazev: "Telegram — veřejný kanál",
     podminka: "lidskyOvereno = true",
-    kdy: "Vážné případy, opatření a změny úředních stavů odcházejí hned; zbytek v denním souhrnu. Neschválený návrh do kanálu nikdy nejde.",
+    kdy: "Vážné případy, opatření a změny úředních stavů odcházejí hned po schválení; zbytek v denním souhrnu v 19:00.",
+  },
+  {
+    nazev: "Telegram — naléhavý signál, BEZ schválení",
+    podminka: "mobilizace · krizové vysílání · článek 4/5 NATO · stav nouze · uzavření hranic",
+    kdy: "Odchází samo, do hodiny od zachycení, a je zřetelně označené jako neověřené. U téhle pětky je zpoždění horší než nejistota. Na web se tím nic nedostane.",
+  },
+  {
+    nazev: "Telegram — vážný případ z úředního zdroje, BEZ schválení",
+    podminka: "závažnost O nebo R · dva nezávislé zdroje · aspoň jeden úřední",
+    kdy: "Odchází samo a je označené jako neověřené. Takhle doložená zpráva se schválením obvykle nezmění, jen zdrží. Záznam dál čeká ve frontě — do počtů a na web ho pustí až člověk.",
   },
   {
     nazev: "Telegram — soukromě správci",
@@ -171,7 +181,14 @@ export function JakToChodi() {
               </li>
               <li>
                 <span className="text-inkoust">Ve frontě to je, ale na webu ne.</span>{" "}
-                To je správně. Bez schválení se nezveřejňuje nic — ani do počtů, ani do Telegramu.
+                To je správně. Bez schválení se na web nedostane nic. Do Telegramu smí bez schválení
+                jen dvě věci, obě označené jako neověřené: naléhavý signál a vážný případ doložený
+                úředním zdrojem.
+              </li>
+              <li>
+                <span className="text-inkoust">Na webu je chyba.</span>{" "}
+                Zveřejněný záznam jde opravit výše v oddílu „Oprava toho, co je na webu". Důvod
+                opravy je povinný a objeví se čtenářům na stránce Opravy — tiše se tu nepřepisuje.
               </li>
               <li>
                 <span className="text-inkoust">Schválil jsem to a pořád nic.</span>{" "}
