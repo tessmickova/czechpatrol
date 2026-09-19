@@ -190,43 +190,6 @@
     }
   },
   {
-    "id": "k-9c4373877a16ce67",
-    "zachyceno": "2026-09-19T08:00:22.405Z",
-    "publikovano": "2026-09-18T15:51:00.000Z",
-    "zdroj": {
-      "nazev": "Téma: vzdusna-obrana (česky)",
-      "url": "https://news.google.com/rss/articles/CBMi5AFBVV95cUxNRXJkaEwyVG9nYTdwRXBSLTRsX0wzNy1rNDNRX3lBYzYxUldGby1nXzdMTEVWeXRvc3lPSjlreHR2U2VBUFVmRHE0a24tWmdPd0NJdjFCTWRqVHEzcDY4VzVEZnRRUkZUVVJ2TS1mV0pmTzJsaEpmS1htelVfc3dfbUR2OUJPTnhuZkVoS1pibllrRW1WcGRuZDRVSmQxSEoyU3l1RG1nNklCUVMwVGZJaFhNV1QzeFRVbkk1cDVoWHlzWkI4ekYycXRiNGZadi14ZzdZSWh4a0RpWjlvbThzYnNIX1A?oc=5",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Ruské drony zvedly české gripeny: Stíhačky vyrazily z Pardubic k východní hranici NATO - Blesk",
-    "titulekPuvodni": "Ruské drony zvedly české gripeny: Stíhačky vyrazily z Pardubic k východní hranici NATO - Blesk",
-    "shrnuti": "Ruské drony zvedly české gripeny: Stíhačky vyrazily z Pardubic k východní hranici NATO Blesk",
-    "kodZeme": "CZ",
-    "zeme": "Česko",
-    "kategorie": [
-      "drony",
-      "nato",
-      "rusko"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "zeSite": null,
-    "shody": [
-      "stihac+zvedl",
-      "dron",
-      "nato",
-      "rusk"
-    ],
-    "naliehave": null,
-    "stav": "ceka",
-    "vyrez": {
-      "text": "Google News",
-      "stazeno": "2026-09-19T08:00:23.601Z",
-      "stav": 200
-    }
-  },
-  {
     "id": "k-99bed44d31908c7c",
     "zachyceno": "2026-09-19T08:00:22.112Z",
     "publikovano": "2026-09-18T12:40:00.000Z",
@@ -10365,5 +10328,40 @@
       "stav": 200
     },
     "naliehave": null
+  },
+  {
+    "id": "k-be313ede18bcf6c0",
+    "zachyceno": "2026-09-19T18:02:36.742Z",
+    "publikovano": "2026-09-04T17:46:22.000Z",
+    "zdroj": {
+      "nazev": "Téma: energetika (anglicky)",
+      "url": "https://news.google.com/rss/articles/CBMiS0FVX3lxTFBjMWNXZUQ1eUducXZNczBmYmxpRDgxd1pjaEpSX0NLRXZYWURxVkVVZHJVXzhIVlozY214UXEyZ0JLQllTcnpyQXd4OA?oc=5",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Německo vyšetřuje další pokus o sabotáž rozvodny",
+    "titulekPuvodni": "Germany investigates new attempted sabotage at power substation as police search for man who claimed responsibility for prior attacks - theins.press",
+    "shrnuti": "Policie pátrá po muži, který se přihlásil k odpovědnosti za předchozí útoky na energetickou infrastrukturu.",
+    "kodZeme": "DE",
+    "zeme": "Německo",
+    "kategorie": [
+      "sabotaz",
+      "infrastruktura",
+      "vysetrovani"
+    ],
+    "druhOdhad": "pripad",
+    "klasifikace": "model",
+    "zeSite": null,
+    "shody": [
+      "sabotage",
+      "substation"
+    ],
+    "naliehave": null,
+    "stav": "ceka",
+    "vyrez": {
+      "text": "Google News",
+      "stazeno": "2026-09-19T18:04:20.821Z",
+      "stav": 200
+    }
   }
 ]

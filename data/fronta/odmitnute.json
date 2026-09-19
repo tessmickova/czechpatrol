@@ -1,5 +1,91 @@
 [
   {
+    "id": "k-b17e5348aac8ef3e",
+    "zachyceno": "2026-09-19T18:02:36.597Z",
+    "publikovano": "2026-09-19T17:53:00.000Z",
+    "zdroj": {
+      "nazev": "Český rozhlas — domácí zprávy",
+      "url": "https://www.irozhlas.cz/zpravy-domov/obr-z-brazilie-s-ceskym-rodokmenem-c-390-se-poprve-ukaze-ceske-verejnosti_2609191953_vsn",
+      "typ": "primary",
+      "primarni": true
+    },
+    "titulek": "Obr z Brazílie s českým rodokmenem. C-390 se poprvé ukáže české veřejnosti",
+    "shrnuti": "Nový transportní letoun Vzdušných sil Armády ČR bude jednou z hlavních hvězd Dnů NATO v Ostravě. Umí hasit požáry, tankovat Gripeny i přijímat palivo za letu, přepravit obrněnec nebo vrtulník — a významná část jeho konstrukce vzniká ve Vodochodech.",
+    "duvod": "bez-skutku",
+    "kategorie": [
+      "nato"
+    ],
+    "posouzeni": {
+      "podezreni": "zadne",
+      "duvod": "Prezentace letounu na Dnech NATO, žádná bezpečnostní událost.",
+      "kdy": "2026-09-19T18:04:25.917Z"
+    }
+  },
+  {
+    "id": "k-fe18173674ca2635",
+    "zachyceno": "2026-09-19T18:02:36.597Z",
+    "publikovano": "2026-09-19T17:25:00.000Z",
+    "zdroj": {
+      "nazev": "Český rozhlas — domácí zprávy",
+      "url": "https://www.irozhlas.cz/veda-technologie/historie/neslo-jen-o-modu-ale-o-vsechno-spotrebni-zbozi-tri-mista-vypravi-o-historii_2609191925_raf",
+      "typ": "primary",
+      "primarni": true
+    },
+    "titulek": "‚Nešlo jen o módu, ale o všechno spotřební zboží.‘ Tři místa vypráví o historii Libereckých výstavních trhů",
+    "shrnuti": "V Technickém muzeu, Severočeském muzeu a BG Klubu v Liberci se koná výstava o třech částech, která zkoumá historii bývalého areálu Libereckých výstavních trhů, známých jako LVT. Ukazuje veškeré předměty, které se na místě prodávaly, i dobové fotografie už zaniklých pavilonů. „Snažíme se představit v",
+    "duvod": "bez-skutku",
+    "kategorie": [
+      "cr"
+    ],
+    "posouzeni": {
+      "podezreni": "zadne",
+      "duvod": "Kulturní výstava o historii výstaviště.",
+      "kdy": "2026-09-19T18:04:25.917Z"
+    }
+  },
+  {
+    "id": "k-c09d778ca607e6d0",
+    "zachyceno": "2026-09-19T18:02:36.598Z",
+    "publikovano": "2026-09-19T17:13:00.000Z",
+    "zdroj": {
+      "nazev": "Český rozhlas — domácí zprávy",
+      "url": "https://www.irozhlas.cz/zpravy-svet/kez-znovu-bouchlo-pred-volbami-se-vzpomina-na-nejvetsi-rasove-nepokoje-v_2609191913_ako",
+      "typ": "primary",
+      "primarni": true
+    },
+    "titulek": "‚Kéž by to znovu bouchlo.‘ Před volbami se vzpomíná na největší rasové nepokoje v poválečném Německu",
+    "shrnuti": "Německou spolkovou zemi Meklenbursko-Přední Pomořansko čekají v neděli zemské volby. Hlasovat se bude také v rostocké čtvrti Lichtenhagen, kde začátkem 90. let proběhly největší rasové nepokoje v poválečném Německu. Několikadenní hon na cizince tehdy vyvrcholil zapálením takzvaného Slunečnicového do",
+    "duvod": "vylouceno-tematem",
+    "kategorie": [],
+    "posouzeni": {
+      "podezreni": "zadne",
+      "duvod": "Historický komentář k volbám, ne aktuální incident.",
+      "kdy": "2026-09-19T18:04:25.917Z"
+    }
+  },
+  {
+    "id": "k-3459698659a6d10f",
+    "zachyceno": "2026-09-19T18:02:36.673Z",
+    "publikovano": "2026-09-19T17:08:17.000Z",
+    "zdroj": {
+      "nazev": "Téma: letiste (česky)",
+      "url": "https://news.google.com/rss/articles/CBMiywFBVV95cUxPT1BNeWhrNVNlYnVWamM0aTYyNTdlRjlmOWE1dW1KRUk2T0cyeWMzMDQxWmZoeHhMZGdGWFBvUGpOaDJPczdaUzBWWm1remYxV0xOak9fQ2VOa2NCUWZTUWdxcDA2SDB5M0hJMWlhTVo3enhwTjJzVGd5bEUzek1JMkRSRVJvbHNCeUpzeFFFWVRHOVpESnhTeUQ1YWR3a1JPbF9aS09wd0pLdE5YX1VhYnR3Vm90ZW5uVFVoazNvalRGU3FTT1d3a0FyZw?oc=5",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Drony zastavily celé evropské letiště. Přes 1 800 cestujících skončilo na letištích v jiných zemích - TrendySvet.cz",
+    "shrnuti": "Drony zastavily celé evropské letiště. Přes 1 800 cestujících skončilo na letištích v jiných zemích TrendySvet.cz",
+    "duvod": "bez-skutku",
+    "kategorie": [
+      "drony"
+    ],
+    "posouzeni": {
+      "podezreni": "vysoke",
+      "duvod": "Drony narušily provoz evropského letiště, tisíce cestujících postiženo.",
+      "kdy": "2026-09-19T18:04:25.917Z"
+    }
+  },
+  {
     "id": "k-6e53caa26df910a7",
     "zachyceno": "2026-09-19T17:01:56.821Z",
     "publikovano": "2026-09-19T16:32:00.000Z",
@@ -10366,89 +10452,6 @@
     "posouzeni": {
       "podezreni": "zadne",
       "duvod": "Ekonomické téma - daně na palivo",
-      "kdy": "2026-09-19T14:04:15.203Z"
-    }
-  },
-  {
-    "id": "k-f07367778f14d5b9",
-    "zachyceno": "2026-09-15T16:32:52.180Z",
-    "publikovano": null,
-    "zdroj": {
-      "nazev": "LRT English (Litva)",
-      "url": "https://www.lrt.lt/en/news-in-english/19/3053032/nato-jets-shoot-down-drone-that-entered-lithuanian-airspace",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "NATO jets shoot down drone that entered Lithuanian airspace",
-    "shrnuti": "",
-    "duvod": "bez-skutku",
-    "kategorie": [
-      "drony",
-      "nato"
-    ],
-    "posouzeni": {
-      "podezreni": "vysoke",
-      "duvod": "NATO sestřelilo dron nad Litvou, narušení vzdušného prostoru",
-      "kdy": "2026-09-19T14:04:15.203Z"
-    }
-  },
-  {
-    "id": "k-03c01be7cffad7a7",
-    "zachyceno": "2026-09-15T16:32:52.176Z",
-    "publikovano": null,
-    "zdroj": {
-      "nazev": "LRT English (Litva)",
-      "url": "https://www.lrt.lt/en/news-in-english/19/3053196/lithuania-s-central-bank-keeps-2026-growth-forecast-at-2-7",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Lithuania’s central bank keeps 2026 growth forecast at 2.7%",
-    "shrnuti": "",
-    "duvod": "bez-skutku",
-    "kategorie": [],
-    "posouzeni": {
-      "podezreni": "zadne",
-      "duvod": "Ekonomická prognóza růstu",
-      "kdy": "2026-09-19T14:04:15.203Z"
-    }
-  },
-  {
-    "id": "k-d932bc5bfd829f35",
-    "zachyceno": "2026-09-15T16:32:52.175Z",
-    "publikovano": null,
-    "zdroj": {
-      "nazev": "LRT English (Litva)",
-      "url": "https://www.lrt.lt/en/news-in-english/19/3053272/lithuanian-anti-fraud-agency-searches-national-paying-agency-in-eu-funds-probe",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Lithuanian anti-fraud agency searches National Paying Agency in EU funds probe",
-    "shrnuti": "",
-    "duvod": "bez-skutku",
-    "kategorie": [],
-    "posouzeni": {
-      "podezreni": "zadne",
-      "duvod": "Vyšetřování dotačního podvodu, ne bezpečnostní událost",
-      "kdy": "2026-09-19T14:04:15.203Z"
-    }
-  },
-  {
-    "id": "k-f41d7f5978c52da1",
-    "zachyceno": "2026-09-15T16:32:52.175Z",
-    "publikovano": null,
-    "zdroj": {
-      "nazev": "LRT English (Litva)",
-      "url": "https://www.lrt.lt/en/news-in-english/19/3053216/vilnius-airport-temporarily-halts-flights-after-unidentified-object-detected",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Vilnius airport temporarily halts flights after unidentified object detected",
-    "shrnuti": "",
-    "duvod": "bez-skutku",
-    "kategorie": [],
-    "posouzeni": {
-      "podezreni": "stredni",
-      "duvod": "Neidentifikovaný objekt zastavil lety na letišti",
       "kdy": "2026-09-19T14:04:15.203Z"
     }
   }
