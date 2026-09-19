@@ -21,13 +21,13 @@ jobs:
   preloz:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
         with:
           ref: main
 
-      - uses: actions/setup-node@v4
+      - uses: actions/setup-node@v7
         with:
-          node-version: "22"
+          node-version: "24"
           cache: npm
 
       # Hotové node_modules z mezipaměti — viz sber.yml. V soukromém
@@ -35,10 +35,10 @@ jobs:
       # takže ušetřená půlminuta je ušetřená minuta.
       - name: Balíčky z mezipaměti
         id: moduly
-        uses: actions/cache@v4
+        uses: actions/cache@v6
         with:
           path: node_modules
-          key: moduly-${{ runner.os }}-node22-${{ hashFiles('package-lock.json') }}
+          key: moduly-${{ runner.os }}-node24-${{ hashFiles('package-lock.json') }}
 
       - if: steps.moduly.outputs.cache-hit != 'true'
         run: npm ci --no-audit --fund=false

@@ -35,7 +35,7 @@ jobs:
   zapsat:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
         with:
           ref: main
           # Celá historie: bez ní nejde spočítat, o kolik je repozitář napřed
