@@ -1,5 +1,87 @@
 [
   {
+    "id": "k-d7b17a2ea99113a5",
+    "zachyceno": "2026-09-19T20:02:25.904Z",
+    "publikovano": "2026-09-19T19:45:00.000Z",
+    "zdroj": {
+      "nazev": "Český rozhlas — domácí zprávy",
+      "url": "https://www.irozhlas.cz/zpravy-svet/ve-spojenych-statech-vzrostl-pocet-detskych-otrav-drogami-problemem-jsou_2609192130_eml",
+      "typ": "primary",
+      "primarni": true
+    },
+    "titulek": "Ve Spojených státech vzrostl počet dětských otrav drogami. Problémem jsou obzvlášť konopné potraviny",
+    "shrnuti": "Malé děti poznávají svět tím, že se věcí dotýkají, ochutnávají je a strkají si je do úst. To může být nebezpečné, pokud zdánlivě obyčejný bonbón nebo sušenka obsahuje například konopí.",
+    "duvod": "bez-skutku",
+    "kategorie": [],
+    "posouzeni": {
+      "podezreni": "zadne",
+      "duvod": "Zdravotní téma, nejde o bezpečnostní událost.",
+      "kdy": "2026-09-19T20:03:56.706Z"
+    }
+  },
+  {
+    "id": "k-ee96afb66378fa91",
+    "zachyceno": "2026-09-19T20:02:25.906Z",
+    "publikovano": "2026-09-19T19:35:00.000Z",
+    "zdroj": {
+      "nazev": "Český rozhlas — domácí zprávy",
+      "url": "https://www.irozhlas.cz/zivotni-styl/spolecnost/srazky-aut-se-zveri-na-podzim-pribyvaji-nejvetsi-riziko-panuje-za-svitani-a-za_2609191536_raf",
+      "typ": "primary",
+      "primarni": true
+    },
+    "titulek": "Srážek aut se zvěří na podzim přibývá. Největší riziko panuje za svítání a za soumraku",
+    "shrnuti": "Na podzim přibývá srážek a častěji se vyskytuje mlha. Zhoršená viditelnost tak způsobuje více případů srážek aut se zvěří. Nejvíce jde o srnky nebo divoká prasata. Jak se těmto nehodám vyhnout a v jakých případech volat policii? „Je důležité si hlídat cestu, pokud projíždíte lesy, loukami a poli,“ ř",
+    "duvod": "bez-skutku",
+    "kategorie": [
+      "cr"
+    ],
+    "posouzeni": {
+      "podezreni": "zadne",
+      "duvod": "Běžné dopravní nehody se zvěří, nikoli bezpečnostní incident.",
+      "kdy": "2026-09-19T20:03:56.706Z"
+    }
+  },
+  {
+    "id": "k-40af38b37d01664a",
+    "zachyceno": "2026-09-19T20:02:25.907Z",
+    "publikovano": "2026-09-19T19:15:00.000Z",
+    "zdroj": {
+      "nazev": "Český rozhlas — domácí zprávy",
+      "url": "https://www.irozhlas.cz/zpravy-svet/husiove-se-prihlasili-k-utokum-pobliz-rijadu-ma-jit-o-odvetu-za-zlocinne-snahy_2609192115_vsn",
+      "typ": "primary",
+      "primarni": true
+    },
+    "titulek": "Húsíové se přihlásili k útokům poblíž Rijádu. Má jít o odvetu za ‚zločinné snahy zasáhnout město Saná‘",
+    "shrnuti": "Jemenští povstalci Húsíové se v sobotu přihlásili k několika útokům poblíž saúdskoarabského Rijádu. Jejich vojenský mluvčí Jahjá Sárí v sobotu na Telegramu oznámil, že rebelové podnikli útoky na „citlivá místa“ včetně palivové nádrže saúdskoarabské ropné společnosti Aramco. Dříve agentura AFP inform",
+    "duvod": "bez-skutku",
+    "kategorie": [],
+    "posouzeni": {
+      "podezreni": "vysoke",
+      "duvod": "Útoky poblíž Rijádu, zasažena ropná infrastruktura - závažný incident.",
+      "kdy": "2026-09-19T20:03:56.706Z"
+    }
+  },
+  {
+    "id": "k-48f19091360241d1",
+    "zachyceno": "2026-09-19T20:02:25.909Z",
+    "publikovano": "2026-09-19T19:15:00.000Z",
+    "zdroj": {
+      "nazev": "Český rozhlas — domácí zprávy",
+      "url": "https://www.irozhlas.cz/veda-technologie/priroda/proc-nekacet-baobaby-tisicilete-stromy-hosti-vice-hub-a-udrzuji-zdravou-pudu_2609192115_elev",
+      "typ": "primary",
+      "primarni": true
+    },
+    "titulek": "Proč nekácet baobaby? Tisícileté stromy hostí více hub a udržují zdravou půdu",
+    "shrnuti": "Studie z Chile prokázala, že tisícileté stromy hostí nejméně dvojnásobek druhů mykorhizních hub oproti mladým porostům. Když se pokácejí, zboří se i podzemní síť z houbových vláken a ohrozí život v půdě. K tisíciletým stromů se řadí například baobaby, které proslavil mimo jiné spisovatel Antoine de ",
+    "duvod": "bez-skutku",
+    "kategorie": [],
+    "posouzeni": {
+      "podezreni": "zadne",
+      "duvod": "Přírodovědné téma o stromech a houbách.",
+      "kdy": "2026-09-19T20:03:56.706Z"
+    }
+  },
+  {
     "id": "k-bbb97e2b7d68d1bd",
     "zachyceno": "2026-09-19T19:02:28.433Z",
     "publikovano": "2026-09-19T18:30:00.000Z",
@@ -141,6 +223,28 @@
       "podezreni": "zadne",
       "duvod": "Historický komentář k volbám, ne aktuální incident.",
       "kdy": "2026-09-19T18:04:25.917Z"
+    }
+  },
+  {
+    "id": "k-7e9bcfa13731c3d0",
+    "zachyceno": "2026-09-19T20:02:26.032Z",
+    "publikovano": "2026-09-19T17:12:30.000Z",
+    "zdroj": {
+      "nazev": "Téma: letiste (česky)",
+      "url": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxNYjVLZV9Da19kdGFCX2FWa3lrWS03Y1FCTEtpdHBXd1ZlTXVfb0c3YmJTMDZPeU5oWWowc2tZTnplbWVpLVRpNUlqVHBtM3VMQmpTR3FVM3VGUjFqNF9XdnY3SzBlRXFSY1BYbjFtajRsaHowMy1ZTHhGTkV5bzBlcG1xeTFGTXRwSUp4Mlp0ZFNJaXljLVNwYWxQS3hKRG9IYTdpdUtLaUF3SzBrUEtzQkdMQUwyVmg1Wnprdm9HeHJXN2xxN0dmNzc4aENNY1lL?oc=5",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Drony zastavily celé evropské letiště. Přes 1 800 cestujících skončilo na letištích v jiných zemích - Centrum.cz",
+    "shrnuti": "Drony zastavily celé evropské letiště. Přes 1 800 cestujících skončilo na letištích v jiných zemích Centrum.cz",
+    "duvod": "bez-skutku",
+    "kategorie": [
+      "drony"
+    ],
+    "posouzeni": {
+      "podezreni": "vysoke",
+      "duvod": "Drony narušily provoz evropského letiště, zásah do infrastruktury.",
+      "kdy": "2026-09-19T20:03:56.706Z"
     }
   },
   {
@@ -10345,110 +10449,6 @@
     "posouzeni": {
       "podezreni": "stredni",
       "duvod": "Obtěžování u mešity, možný náboženský incident.",
-      "kdy": "2026-09-19T14:04:15.203Z"
-    }
-  },
-  {
-    "id": "k-eefc1b69224200f4",
-    "zachyceno": "2026-09-15T16:32:52.185Z",
-    "publikovano": null,
-    "zdroj": {
-      "nazev": "LRT English (Litva)",
-      "url": "https://www.lrt.lt/en/tag/russian-invasion-of-ukraine",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Russian invasion of Ukraine",
-    "shrnuti": "",
-    "duvod": "bez-skutku",
-    "kategorie": [
-      "rusko"
-    ],
-    "posouzeni": {
-      "podezreni": "zadne",
-      "duvod": "Obecná kategorie tématu, žádná konkrétní zpráva.",
-      "kdy": "2026-09-19T14:04:15.203Z"
-    }
-  },
-  {
-    "id": "k-bf978b62fc7fea83",
-    "zachyceno": "2026-09-15T16:32:52.184Z",
-    "publikovano": null,
-    "zdroj": {
-      "nazev": "LRT English (Litva)",
-      "url": "https://www.lrt.lt/en/news-in-english/19/3052208/revolut-says-some-customers-data-exposed-in-phishing-attack-media",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Revolut says some customers’ data exposed in phishing attack – media",
-    "shrnuti": "",
-    "duvod": "bez-skutku",
-    "kategorie": [],
-    "posouzeni": {
-      "podezreni": "stredni",
-      "duvod": "Únik dat zákazníků při phishingovém útoku.",
-      "kdy": "2026-09-19T14:04:15.203Z"
-    }
-  },
-  {
-    "id": "k-236061b681c182db",
-    "zachyceno": "2026-09-15T16:32:52.184Z",
-    "publikovano": null,
-    "zdroj": {
-      "nazev": "LRT English (Litva)",
-      "url": "https://www.lrt.lt/en/news-in-english/19/3052101/lithuania-investigates-unidentified-object-that-crossed-airspace-from-belarus",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Lithuania investigates unidentified object that crossed airspace from Belarus",
-    "shrnuti": "",
-    "duvod": "bez-skutku",
-    "kategorie": [
-      "drony"
-    ],
-    "posouzeni": {
-      "podezreni": "vysoke",
-      "duvod": "Narušení vzdušného prostoru neidentifikovaným objektem z Běloruska.",
-      "kdy": "2026-09-19T14:04:15.203Z"
-    }
-  },
-  {
-    "id": "k-a2a7b41482e16905",
-    "zachyceno": "2026-09-15T16:32:52.183Z",
-    "publikovano": null,
-    "zdroj": {
-      "nazev": "LRT English (Litva)",
-      "url": "https://www.lrt.lt/en/news-in-english/19/3052254/trump-envoy-for-belarus-visits-lithuania-to-discuss-political-prisoners",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Trump envoy for Belarus visits Lithuania to discuss political prisoners",
-    "shrnuti": "",
-    "duvod": "bez-skutku",
-    "kategorie": [],
-    "posouzeni": {
-      "podezreni": "zadne",
-      "duvod": "Diplomatická návštěva ohledně politických vězňů.",
-      "kdy": "2026-09-19T14:04:15.203Z"
-    }
-  },
-  {
-    "id": "k-8bf7f7c7237e2c24",
-    "zachyceno": "2026-09-15T16:32:52.183Z",
-    "publikovano": null,
-    "zdroj": {
-      "nazev": "LRT English (Litva)",
-      "url": "https://www.lrt.lt/en/news-in-english/19/3052213/latvia-s-airbaltic-files-for-bankruptcy-protection-in-us",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Latvia’s airBaltic files for bankruptcy protection in US",
-    "shrnuti": "",
-    "duvod": "bez-skutku",
-    "kategorie": [],
-    "posouzeni": {
-      "podezreni": "zadne",
-      "duvod": "Bankrot letecké společnosti, ekonomická zpráva.",
       "kdy": "2026-09-19T14:04:15.203Z"
     }
   }
