@@ -101,6 +101,7 @@ const POKYNY = [
   "",
   "Pravidla, která musíš dodržet:",
   "- Nový článek o známé věci NENÍ nová událost. Když jde o pokračování, vyplň duplikatSlugu.",
+  "- Do duplikatSlugu patří VÝHRADNĚ slug ze seznamu znameZaznamy (např. nemecko-zeleznice-2022). Nikdy tam nedávej id zachycené zprávy (to, co začíná k-) — na spojení dvou zachycených zpráv je dalsiId. Když se nehodí žádný slug ze seznamu, dej null.",
   "- Datum události není datum publikace ani datum nové atribuce. Do datumUdalosti piš datum, kdy se to stalo, ve tvaru RRRR-MM-DD. Když se z textu určit nedá, dej null — nehádej podle data článku.",
   "- Do fakt piš jen to, co je v textu doložené. Nic nedomýšlej a nic nedopočítávej.",
   "- Původce (kdo to udělal) nepiš jako fakt, dokud to nepotvrdil úřední závěr. Podezření patří do nedolozeno.",
