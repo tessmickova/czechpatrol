@@ -36,9 +36,22 @@ interface Navrh {
   zdroje: { nazev: string | null; url: string | null }[];
   druh: string | null;
   puvodce: string | null;
+  atribuce: string | null;
+  vyznam: string | null;
   archivniZaznam: boolean;
   preverit: { kdy: string; duvod: string | null } | null;
 }
+
+const POLE_UPRAV: { klic: string; popis: string; zastupny?: string; volby?: string[] }[] = [
+  { klic: "titulek", popis: "Titulek — co se stalo a kde" },
+  { klic: "kratkyTitulek", popis: "Krátký titulek (do výpisů)" },
+  { klic: "zavaznost", popis: "Závažnost", volby: ["G1", "G2", "G3", "Y1", "Y2", "Y3", "O1", "O2", "O3", "R1", "R2", "R3"] },
+  { klic: "jistota", popis: "Jistota", volby: ["nizka", "stredni", "vysoka", "potvrzeno"] },
+  { klic: "druh", popis: "Druh", volby: ["pripad", "opatreni", "reakce"] },
+  { klic: "atribuce", popis: "Atribuce", volby: ["neznama", "podezreni", "urednizaver"] },
+  { klic: "puvodce", popis: "Původce — jen s úředním závěrem", zastupny: "nechte prázdné, dokud to není potvrzené" },
+  { klic: "vyznam", popis: "Co z toho plyne pro čtenáře v Česku" },
+];
 
 export function NavrhyKeSchvaleni() {
   const [navrhy, setNavrhy] = useState<Navrh[]>([]);
@@ -46,6 +59,9 @@ export function NavrhyKeSchvaleni() {
   const [nacita, setNacita] = useState(true);
   const [odeslane, setOdeslane] = useState<Record<string, string>>({});
   const [duvody, setDuvody] = useState<Record<string, string>>({});
+  /* Rozepsané úpravy. Drží se mimo návrh, aby nezmizely při obnovení fronty. */
+  const [upravy, setUpravy] = useState<Record<string, Record<string, string>>>({});
+  const [upravuje, setUpravuje] = useState<string | null>(null);
 
   const nacti = useCallback(async () => {
     setNacita(true);
@@ -66,11 +82,19 @@ export function NavrhyKeSchvaleni() {
 
   async function rozhodni(id: string, akce: "schval" | "znovu" | "zamitni") {
     try {
-      await api(`/sprava/navrhy/${id}/rozhodnout`, { method: "POST", telo: { akce, duvod: duvody[id] ?? "" } });
+      const zmeny = akce === "schval" ? (upravy[id] ?? {}) : {};
+      await api(`/sprava/navrhy/${id}/rozhodnout`, {
+        method: "POST",
+        telo: { akce, duvod: duvody[id] ?? "", upravy: zmeny },
+      });
       setOdeslane((p) => ({ ...p, [id]: akce }));
     } catch (e) {
       setChyba(e instanceof Error ? e.message : "Rozhodnutí se nepodařilo odeslat.");
     }
+  }
+
+  function zmen(id: string, klic: string, hodnota: string) {
+    setUpravy((p) => ({ ...p, [id]: { ...(p[id] ?? {}), [klic]: hodnota } }));
   }
 
   const ceka = navrhy.filter((n) => n.id && !odeslane[n.id]);
@@ -180,6 +204,46 @@ export function NavrhyKeSchvaleni() {
                 </p>
               )}
 
+              {upravuje === id && (
+                <div className="mt-3 border-t border-linka2 pt-3">
+                  <div className="stitek mb-2">Úprava před zveřejněním</div>
+                  {/*
+                    Zdroje ani historie se tu needitují. O ověření rozhoduje
+                    schválení, ne formulář, a zdroje se nemají přepisovat
+                    ručně — celá cena projektu je v tom, že odkazují na doklad.
+                  */}
+                  <div className="grid gap-2">
+                    {POLE_UPRAV.map((f) => (
+                      <label key={f.klic} className="block">
+                        <span className="stitek mb-1 block">{f.popis}</span>
+                        {f.volby ? (
+                          <select
+                            className={`${POLE} w-full`}
+                            value={upravy[id]?.[f.klic] ?? (n[f.klic as keyof Navrh] as string) ?? ""}
+                            onChange={(e) => zmen(id, f.klic, e.target.value)}
+                          >
+                            {f.volby.map((v) => (
+                              <option key={v} value={v}>{v || "—"}</option>
+                            ))}
+                          </select>
+                        ) : (
+                          <input
+                            className={`${POLE} w-full`}
+                            value={upravy[id]?.[f.klic] ?? (n[f.klic as keyof Navrh] as string) ?? ""}
+                            placeholder={f.zastupny}
+                            onChange={(e) => zmen(id, f.klic, e.target.value)}
+                          />
+                        )}
+                      </label>
+                    ))}
+                  </div>
+                  <p className="mt-2 text-mikro leading-snug text-tlum2">
+                    Změny se zapíšou až při schválení a zůstane po nich stopa v historii
+                    záznamu. Původce nevyplňujte, dokud to nepotvrdil úřední závěr.
+                  </p>
+                </div>
+              )}
+
               {hotovo ? (
                 <p className="mt-3 text-male text-tlum2">
                   {hotovo === "schval"
@@ -192,6 +256,13 @@ export function NavrhyKeSchvaleni() {
                 <div className="mt-3 flex flex-wrap items-center gap-2">
                   <button type="button" onClick={() => rozhodni(id, "schval")} className={TLACITKO_AKCENT}>
                     Schválit
+                  </button>
+                  <button
+                    type="button"
+                    onClick={() => setUpravuje((p) => (p === id ? null : id))}
+                    className={TLACITKO_TICHE}
+                  >
+                    {upravuje === id ? "Skrýt úpravy" : "Upravit"}
                   </button>
                   <button type="button" onClick={() => rozhodni(id, "znovu")} className={TLACITKO_TICHE}>
                     Znovu ověřit

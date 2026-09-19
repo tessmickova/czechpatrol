@@ -16,6 +16,28 @@ import type { Env, Prihlaseny } from "./typy";
 
 const WORKFLOW = "schvaleni.yml";
 
+/*
+  Co smí správce před schválením změnit.
+
+  Zdroje, historie, id ani lidskyOvereno v seznamu nejsou. O ověření
+  rozhoduje samo schválení, ne obsah formuláře; a zdroje se nemají přepisovat
+  ručně, když je celá cena projektu v tom, že odkazují na doklad.
+*/
+const UPRAVITELNA = new Set([
+  "titulek",
+  "kratkyTitulek",
+  "zavaznost",
+  "jistota",
+  "druh",
+  "puvodce",
+  "atribuce",
+  "vyznam",
+  "datumUdalosti",
+  "fakta",
+  "neznameho",
+]);
+const MAX_UPRAVY = 6000;
+
 function jenSpravce(ucet: Prihlaseny) {
   if (ucet.role !== "admin") throw new ChybaHttp(403, "Jen pro správce.");
 }
@@ -50,6 +72,8 @@ interface Navrh {
   jistota?: string;
   druh?: string;
   puvodce?: string | null;
+  atribuce?: string;
+  vyznam?: string;
   archivniZaznam?: boolean;
   preverit?: { kdy: string; duvod: string | null };
   fakta?: string[];
@@ -87,6 +111,8 @@ export async function seznam(env: Env, ucet: Prihlaseny): Promise<Response> {
     jistota: n.jistota ?? null,
     druh: n.druh ?? null,
     puvodce: n.puvodce ?? null,
+    atribuce: n.atribuce ?? null,
+    vyznam: n.vyznam ?? null,
     archivniZaznam: n.archivniZaznam ?? false,
     preverit: n.preverit ?? null,
     fakta: n.fakta ?? [],
@@ -102,17 +128,30 @@ export async function rozhodni(env: Env, req: Request, ucet: Prihlaseny, id: str
   await omez(env, req, "rozhodnuti", 30, 60);
   const { repo, token } = nastaveni(env);
 
-  const { akce, duvod } = await telo<{ akce?: string; duvod?: string }>(req);
+  const { akce, duvod, upravy } = await telo<{ akce?: string; duvod?: string; upravy?: Record<string, unknown> }>(req);
   if (akce !== "schval" && akce !== "znovu" && akce !== "zamitni") {
     throw new ChybaHttp(400, "Akce je schval, znovu, nebo zamitni.");
   }
   /* Id jde do příkazu na běžci — pustí se jen tvar, který sem opravdu patří. */
   if (!/^[\w.-]{1,80}$/.test(id)) throw new ChybaHttp(400, "Podivné id návrhu.");
 
+  let upravyText = "";
+  if (upravy && Object.keys(upravy).length) {
+    if (akce !== "schval") throw new ChybaHttp(400, "Upravovat jde jen při schválení.");
+    for (const klic of Object.keys(upravy)) {
+      if (!UPRAVITELNA.has(klic)) throw new ChybaHttp(400, `Pole ${klic} se měnit nedá.`);
+    }
+    upravyText = JSON.stringify(upravy);
+    if (upravyText.length > MAX_UPRAVY) throw new ChybaHttp(400, "Úprav je příliš mnoho.");
+  }
+
   const odpoved = await fetch(`https://api.github.com/repos/${repo}/actions/workflows/${WORKFLOW}/dispatches`, {
     method: "POST",
     headers: { ...hlavicky(token), "content-type": "application/json" },
-    body: JSON.stringify({ ref: "main", inputs: { id, akce, duvod: (duvod ?? "").slice(0, 300) } }),
+    body: JSON.stringify({
+      ref: "main",
+      inputs: { id, akce, duvod: (duvod ?? "").slice(0, 300), upravy: upravyText },
+    }),
   });
 
   if (odpoved.status !== 204) {
@@ -123,7 +162,7 @@ export async function rozhodni(env: Env, req: Request, ucet: Prihlaseny, id: str
   }
 
   await env.DB.prepare("INSERT INTO audit (kdy, kdo, co, cil) VALUES (?, ?, ?, ?)")
-    .bind(ted(), ucet.id, `návrh ${akce}`, id)
+    .bind(ted(), ucet.id, `návrh ${akce}${upravyText ? " (upraveno)" : ""}`, id)
     .run();
 
   /*

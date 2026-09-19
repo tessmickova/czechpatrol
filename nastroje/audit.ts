@@ -321,7 +321,7 @@ async function main() {
       deeskalacniSignaly: [],
       zdroje,
       souvisejici: [],
-      historie: [{ kdy: `${kdy}T00:00:00Z`, text: "Zachyceno sběrem, posouzeno auditem.", novySignal: true }],
+      historie: [{ kdy: `${kdy}T00:00:00Z`, text: "Zachyceno automatickým sběrem, posouzeno před zařazením do fronty.", novySignal: true }],
       novy: true,
       zapocitanoTyden: kdy,
       aiZpracovano: true,

@@ -285,6 +285,75 @@ function znovu(id, duvod) {
   console.log(`Návrh ${id} označen k dalšímu ověření.`);
 }
 
+
+/*
+  Úprava návrhu před schválením.
+
+  Návrh připravil stroj. Schválení je jediné místo, kde do něj vstupuje
+  člověk — a dokud šlo jen odkliknout ano/ne, znamenalo to zveřejnit strojový
+  text tak, jak je. Tady se dá opravit titulek, doplnit původce nebo přepsat,
+  co z textu neplyne.
+
+  Mění se jen vyjmenovaná pole. Zbytek (lidskyOvereno, id, zdroje, historie)
+  se odsud sáhnout nedá: o ověření rozhoduje schválení, ne obsah formuláře,
+  a zdroje se nemají přepisovat ručně, když je celá cena projektu v tom, že
+  odkazují na doklad.
+*/
+const UPRAVITELNA = [
+  "titulek",
+  "kratkyTitulek",
+  "zavaznost",
+  "jistota",
+  "druh",
+  "puvodce",
+  "atribuce",
+  "vyznam",
+  "datumUdalosti",
+  "fakta",
+  "neznameho",
+];
+
+function uprav(id, jsonText) {
+  if (!id || !jsonText) {
+    console.error("Použití: npm run spravce uprav <id> '<json se změnami>'");
+    process.exit(1);
+  }
+  let zmeny;
+  try {
+    zmeny = JSON.parse(jsonText);
+  } catch {
+    console.error("Změny nejsou platný JSON.");
+    process.exit(1);
+  }
+  const n = cti("data/navrhy.json", []);
+  const z = n.find((x) => x.id === id);
+  if (!z) {
+    console.error(`Návrh ${id} tu není.`);
+    process.exit(1);
+  }
+  const pouzite = [];
+  for (const [klic, hodnota] of Object.entries(zmeny)) {
+    if (!UPRAVITELNA.includes(klic)) {
+      console.error(`Pole ${klic} se takhle měnit nedá — mění se jen: ${UPRAVITELNA.join(", ")}.`);
+      process.exit(1);
+    }
+    if (hodnota === null || hodnota === undefined) continue;
+    z[klic] = hodnota;
+    pouzite.push(klic);
+  }
+  if (!pouzite.length) {
+    console.log("Nic k úpravě.");
+    return;
+  }
+  /* Stopa po lidském zásahu. Bez ní nejde poznat, co psal stroj a co člověk. */
+  z.historie = [
+    ...(z.historie ?? []),
+    { kdy: new Date().toISOString(), text: `Před zveřejněním upraveno správcem: ${pouzite.join(", ")}.`, novySignal: false },
+  ];
+  fs.writeFileSync(path.join(koren, "data/navrhy.json"), `${JSON.stringify(n, null, 2)}\n`);
+  console.log(`Návrh ${id}: upraveno ${pouzite.join(", ")}.`);
+}
+
 const prikaz = process.argv[2];
 const arg = process.argv.slice(3);
 
@@ -294,6 +363,7 @@ else if (prikaz === "navrhy") navrhy();
 else if (prikaz === "schval") schval(arg[0]);
 else if (prikaz === "zamitni") zamitni(arg[0], arg.slice(1).join(" "));
 else if (prikaz === "znovu") znovu(arg[0], arg.slice(1).join(" "));
+else if (prikaz === "uprav") uprav(arg[0], arg.slice(1).join(" "));
 else if (prikaz === "tip") tip(arg[0]);
 else if (prikaz === "prijmi") {
   /* Delegace na stávající nástroj: kostru záznamu už umí a umí ji dobře. */
@@ -305,6 +375,6 @@ else if (prikaz === "prijmi") {
   execFileSync("node", [path.join(koren, "nastroje/rozhlas.mjs"), "--nacisto", ...arg], { stdio: "inherit" });
 } else {
   console.error(`Neznámý příkaz: ${prikaz}`);
-  console.error("Použití: stav | fronta | navrhy | schval <id> | znovu <id> [důvod] | zamitni <id> [důvod] | prijmi <id> | tip [soubor] | vystraha … | nahled");
+  console.error("Použití: stav | fronta | navrhy | uprav <id> <json> | schval <id> | znovu <id> [důvod] | zamitni <id> [důvod] | prijmi <id> | tip [soubor] | vystraha … | nahled");
   process.exit(1);
 }

@@ -26,6 +26,10 @@ on:
         description: "Důvod zamítnutí nebo toho, co má ověřovatel doplnit"
         required: false
         default: ""
+      upravy:
+        description: "JSON se změnami, které správce udělal před schválením"
+        required: false
+        default: ""
 
 permissions:
   contents: write
@@ -60,6 +64,16 @@ jobs:
 
       # Vstupy jdou přes proměnné prostředí, ne do textu příkazu. Vložené
       # přímo by z nich šlo vypsat cokoli dalšího a spustit to na běžci.
+      # Úpravy se zapíšou před rozhodnutím, aby se schvaloval už opravený
+      # text. Opačné pořadí by znamenalo zveřejnit strojovou verzi a opravovat
+      # ji až potom — tedy na webu a v kanálu by chvíli stála ta nepřesná.
+      - name: Zapsat úpravy správce
+        if: inputs.upravy != ''
+        env:
+          NAVRH: ${{ inputs.id }}
+          UPRAVY: ${{ inputs.upravy }}
+        run: npm run spravce -- uprav "$NAVRH" "$UPRAVY"
+
       - name: Provést rozhodnutí
         env:
           AKCE: ${{ inputs.akce }}
