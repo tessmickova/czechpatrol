@@ -30,7 +30,18 @@ jobs:
           node-version: "22"
           cache: npm
 
-      - run: npm ci
+      # Hotové node_modules z mezipaměti — viz sber.yml. V soukromém
+      # repozitáři se běh účtuje zaokrouhlený nahoru na celou minutu,
+      # takže ušetřená půlminuta je ušetřená minuta.
+      - name: Balíčky z mezipaměti
+        id: moduly
+        uses: actions/cache@v4
+        with:
+          path: node_modules
+          key: moduly-${{ runner.os }}-node22-${{ hashFiles('package-lock.json') }}
+
+      - if: steps.moduly.outputs.cache-hit != 'true'
+        run: npm ci --no-audit --fund=false
 
       - name: Vytěžit věty z kódu
         run: node nastroje/vytez-preklady.mjs --zapis

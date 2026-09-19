@@ -17,7 +17,7 @@ on:
     # Zůstává jako záchrana pro případ, že workeru vyprší token nebo vypadne
     # Cloudflare. Že sběr stojí, hlásí hlídač v api/src/hlidac.ts — ten běží
     # na Cloudflare, takže výpadek GitHubu přežije a umí o něm říct.
-    - cron: "17 */3 * * *"
+    - cron: "17 */6 * * *"
   # Tudy chodí kopnutí z workeru.
   workflow_dispatch:
 
@@ -39,7 +39,22 @@ jobs:
           node-version: "22"
           cache: npm
 
-      - run: npm ci
+      # Hotové node_modules z mezipaměti, ne instalace pokaždé znovu.
+      #
+      # `cache: npm` výš schovává jen stažené balíčky, `npm ci` je i tak
+      # pokaždé rozbaluje — a to byla většina z těch sta sekund, které běh
+      # trval. V soukromém repozitáři se každý běh účtuje zaokrouhlený
+      # nahoru na celou minutu, takže zkrátit běh pod minutu znamená
+      # zaplatit polovinu.
+      - name: Balíčky z mezipaměti
+        id: moduly
+        uses: actions/cache@v4
+        with:
+          path: node_modules
+          key: moduly-${{ runner.os }}-node22-${{ hashFiles('package-lock.json') }}
+
+      - if: steps.moduly.outputs.cache-hit != 'true'
+        run: npm ci --no-audit --fund=false
 
       - name: Sběr z veřejných zdrojů
         run: npm run sber
@@ -52,9 +67,11 @@ jobs:
           OPENAI_MODEL: ${{ vars.OPENAI_MODEL }}
 
       - name: Nahrát změny dat
+        id: zmena
         run: |
           if [ -z "$(git status --porcelain data/)" ]; then
             echo "Data se nezměnila, není co commitnout."
+            echo "zmena=false" >> "$GITHUB_OUTPUT"
             exit 0
           fi
           git config user.name "sber"
@@ -67,3 +84,40 @@ jobs:
             sleep $((2**i))
             git pull --rebase
           done
+          echo "zmena=true" >> "$GITHUB_OUTPUT"
+
+      # ---------------------------------------------------------------
+      # Nasazení rovnou tady, a jen když se data opravdu změnila.
+      #
+      # Dřív po každém sběru nastartovalo samostatné Nasazení, zjistilo,
+      # že není co nasazovat, a skončilo. Jenže spuštěná úloha se účtuje,
+      # i když nic neudělá — a hned po ní se rozjela ještě třetí (Stav pro
+      # routines). Z jednoho sběru byly tři úlohy a nejméně čtyři minuty,
+      # i ve chvíli, kdy se za tu hodinu nic nestalo. Při sběru po
+      # půlhodinách to dělalo skoro trojnásobek měsíčního přídělu.
+      #
+      # Commit dat je hotový a nahraný dřív, než se začne nasazovat.
+      # I kdyby nasazení spadlo, data zůstanou v repozitáři.
+      # ---------------------------------------------------------------
+      - name: Kontrola dat
+        if: steps.zmena.outputs.zmena == 'true'
+        run: npm run kontrola:data
+
+      - name: Testy
+        if: steps.zmena.outputs.zmena == 'true'
+        run: npm test
+
+      - name: Sestavení
+        if: steps.zmena.outputs.zmena == 'true'
+        run: npm run build
+        env:
+          NEXT_PUBLIC_API_URL: ${{ vars.API_URL }}
+
+      - name: Nasazení na Cloudflare Pages
+        if: steps.zmena.outputs.zmena == 'true'
+        uses: cloudflare/wrangler-action@v3
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          wranglerVersion: "3.114.1"
+          command: pages deploy out --project-name=czechpatrol --branch=main --commit-dirty=true

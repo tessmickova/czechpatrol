@@ -37,43 +37,64 @@ vyčerpaný nebo je dosažený limit útraty, je to ono.
 > Příděl se obnoví na začátku dalšího zúčtovacího období, takže se to samo
 > rozjede — a za pár týdnů zase zastaví. Není to oprava, jen odklad.
 
-### 2. Oprava, kterou doporučuju: zveřejnit repozitář
+### 2. Vejít se do bezplatného přídělu
 
-**U veřejných repozitářů jsou minuty GitHub Actions zdarma a bez stropu.**
-Odpadne tím i celý problém do budoucna.
+Repozitář zůstává soukromý. Příděl je **2 000 minut měsíčně** a ten musí stačit.
 
-1. Otevři <https://github.com/tessmickova/czechpatrol/settings>
-2. Sjeď úplně dolů na **Danger Zone**
-3. **Change repository visibility** → **Change to public**
-4. GitHub tě nechá opsat název repozitáře pro potvrzení
+**Kde se minuty ztrácely.** Z jednoho sběru se spouštěly tři úlohy: sběr,
+pak Nasazení a pak Stav pro routines. Druhá i třetí naběhly i ve chvíli, kdy
+se za tu hodinu nic nestalo — a spuštěná úloha se účtuje, i když nic neudělá.
+Při sběru po půlhodinách to dělalo kolem 5 700 minut měsíčně, skoro
+trojnásobek přídělu.
 
-**Co zůstane utajené:** všechna hesla, tokeny a klíče. Nejsou v kódu, jsou
-v úložišti GitHub Secrets a to je skryté i u veřejného repozitáře. Nikdo je
-nepřečte a ani ty je už nikdy neuvidíš — jdou jen přepsat.
+**Co je nastavené teď** (v repozitáři, nemusíš nic klikat):
 
-**Co se stane veřejným:** zdrojový kód, data o událostech a celá historie
-změn. Prošel jsem historii i všechny sledované soubory — žádný klíč, heslo
-ani osobní údaj v nich není.
+| Změna | Co to dělá |
+|---|---|
+| nasazení složené do sběru | jedna úloha místo tří; nasazuje se jen při skutečné změně dat |
+| Stav pro routines už neběží po každém nasazení | zůstal dvakrát denně |
+| balíčky z mezipaměti | běh kratší než minuta místo skoro dvou |
+| sběr jednou za hodinu | dřív dvakrát |
+| záložní plánovač GitHubu jednou za 6 h | dřív každé 3 h |
 
-**Co za to:** kdo by chtěl sběru uniknout, může si přečíst seznamy klíčových
-slov. Zdroje, ze kterých se čte, jsou ale veřejná média, takže jde spíš
-o teoretickou nevýhodu. A zveřejnění nejde vzít zpět — kdo si repozitář
-mezitím zkopíruje, tu kopii má.
+Odhadem to vychází na **1 100–1 300 minut měsíčně**. Je to odhad — skutečné
+číslo uvidíš za pár dní na stránce s využitím a podle něj se dá ještě ubrat.
 
-### 3. Když zveřejnit nechceš
+**Kdyby to pořád nestačilo**, jediná další páka bez placení je sbírat méně
+často: v `api/src/sber.ts` změnit `KAZDYCH_MINUT` z 60 na 120. Spotřebu to
+zhruba půlí za cenu toho, že se zpráva na web dostane nejpozději za dvě
+hodiny.
 
-**Zaplatit minuty.** Na <https://github.com/settings/billing> zvyš limit
-útraty. Minuta navíc stojí zhruba 0,008 USD; při dnešní kadenci to vychází
-odhadem na 250–350 Kč měsíčně. Přesné číslo uvidíš na stránce s využitím.
+### 3. Tenhle měsíc to možná ještě nenaskočí
 
-**Nebo sbírat méně často.** Sběr spouští Cloudflare Worker každou půlhodinu,
-záložně GitHub jednou za tři hodiny. Kadenci workeru řídí `KAZDYCH_MINUT`
-v `api/src/sber.ts`. Hodinový sběr spotřebu zhruba půlí — za cenu toho, že
-se zpráva na web dostane o půl hodiny později.
+Úsporná opatření platí od dalšího běhu, ale **minuty, které už jsou
+vyčerpané, nevrátí**. Příděl se obnoví na začátku dalšího zúčtovacího období.
+
+Datum obnovy najdeš na <https://github.com/settings/billing> na stránce
+s využitím Actions. Do té doby web zůstane stát — pokud ho nerozběhneš
+z vlastního počítače:
+
+```bash
+git pull
+npm ci
+npm run sber                 # přečte zdroje a zapíše do data/
+npm run kontrola:data        # musí hlásit 0 chyb
+git add data/ && git commit -m "Sběr dat ručně" && git push
+```
+
+Nasazení webu pak buď z GitHubu (Actions → Nasazení → Run workflow, až budou
+minuty), nebo rovnou:
+
+```bash
+npm run build
+npx wrangler@3 pages deploy out --project-name=czechpatrol --branch=main
+```
+
+Druhý příkaz se zeptá na přihlášení k Cloudflare.
 
 ### 4. Rozběhnout to
 
-Po opravě se sběr rozjede sám do půl hodiny (kope do něj Cloudflare Worker).
+Po obnovení přídělu se sběr rozjede sám do hodiny (kope do něj Cloudflare Worker).
 Když nechceš čekat:
 
 1. <https://github.com/tessmickova/czechpatrol/actions>
@@ -81,8 +102,8 @@ Když nechceš čekat:
 3. vpravo **Run workflow** → **Run workflow**
 
 Hotovo poznáš tak, že na webu zmizí pruh „Sběr neběží" a datum poslední
-kontroly bude dnešní. Trvá to pár minut — sběr běží první, nasazení webu
-hned po něm.
+kontroly bude dnešní. Trvá to pár minut; nasazení webu je od 19. 9. 2026
+součástí téhož běhu, takže se nečeká na druhou úlohu.
 
 ### 5. Ať se to příště pozná dřív
 

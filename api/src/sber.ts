@@ -13,8 +13,16 @@
 */
 import type { Env } from "./typy";
 
-/** Jak často chceme sbírat. Tik workeru chodí po deseti minutách. */
-const KAZDYCH_MINUT = 30;
+/**
+ * Jak často chceme sbírat. Tik workeru chodí po deseti minutách.
+ *
+ * Od 19. 9. 2026 jednou za hodinu, dřív dvakrát. Repozitář je soukromý a
+ * tam se každý běh na GitHubu účtuje z měsíčního přídělu 2 000 minut.
+ * Půlhodinový sběr se do přídělu nevejde ani po zeštíhlení úloh; hodinový
+ * ano. Je to vědomá výměna: zpráva se na web dostane nejpozději za hodinu
+ * místo za půlhodiny.
+ */
+const KAZDYCH_MINUT = 60;
 
 /**
  * Je tenhle tik ten, ve kterém se sbírá?

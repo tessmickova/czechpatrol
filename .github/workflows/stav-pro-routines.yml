@@ -15,9 +15,9 @@ name: Stav pro routines
 # by se to zacyklilo s Nasazením.
 
 on:
-  workflow_run:
-    workflows: ["Nasazení"]
-    types: [completed]
+  # Spouštění po každém nasazení je pryč: byla to třetí úloha v řadě za
+  # jedním sběrem a účtovala se, i když jen přepsala dva soubory. Dvakrát
+  # denně stačí — soubor má říct, co běží naživo, ne zaznamenat každý běh.
   schedule:
     # Dvakrát denně, aby soubor nezestaral, i když se zrovna nenasazuje.
     - cron: "40 5,17 * * *"
