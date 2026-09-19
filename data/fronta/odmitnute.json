@@ -1,5 +1,156 @@
 [
   {
+    "id": "k-03da5176f3e02821",
+    "zachyceno": "2026-09-19T15:53:05.752Z",
+    "publikovano": "2026-09-19T15:37:00.000Z",
+    "zdroj": {
+      "nazev": "Český rozhlas — domácí zprávy",
+      "url": "https://www.irozhlas.cz/zpravy-domov/evropa-ma-rakety-na-obranu-nizsich-vysek-u-vyssich-spolehala-na-usa-priblizuje_2609191737_ako",
+      "typ": "primary",
+      "primarni": true
+    },
+    "titulek": "Evropa má rakety na obranu nižších výšek, u vyšších spoléhala na USA, přibližuje vojenský expert Šedivý",
+    "shrnuti": "Premiér Andrej Babiš z ANO tento týden opět zmínil svou výzvu k vytvoření společného projektu protivzdušné obrany Europatriot. „Není to úplně nová myšlenka,“ hodnotí pro Radiožurnál vojensko-bezpečnostní expert Jiří Šedivý z CEVRO Univerzity, bývalý náčelník generálního štábu. Protiraketová obrana E",
+    "duvod": "bez-skutku",
+    "kategorie": [
+      "cr"
+    ],
+    "posouzeni": {
+      "podezreni": "zadne",
+      "duvod": "Komentář experta k politické debatě o protivzdušné obraně, žádný incident.",
+      "kdy": "2026-09-19T15:54:40.584Z"
+    }
+  },
+  {
+    "id": "k-5d6dba6e36dfc6ac",
+    "zachyceno": "2026-09-19T15:53:05.806Z",
+    "publikovano": "2026-09-19T15:37:00.000Z",
+    "zdroj": {
+      "nazev": "Deutsche Welle — Europe",
+      "url": "https://www.dw.com/en/ukraine-steps-up-measures-to-protect-railways/a-79339087?maca=en-rss-en-eu-2092-rdf",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Ukraine steps up measures to protect railways",
+    "shrnuti": "As Russia increases its attacks on Ukraine&apos;s rail infrastructure, the Ukrainian government has called for help to replace destroyed locomotives and is making plans to keep passengers safe.",
+    "duvod": "bez-skutku",
+    "kategorie": [
+      "infrastruktura",
+      "rusko"
+    ],
+    "posouzeni": {
+      "podezreni": "vysoke",
+      "duvod": "Rusko útočí na železniční infrastrukturu Ukrajiny.",
+      "kdy": "2026-09-19T15:54:40.584Z"
+    }
+  },
+  {
+    "id": "k-d3e4ba30f641f97a",
+    "zachyceno": "2026-09-19T15:53:05.752Z",
+    "publikovano": "2026-09-19T15:32:00.000Z",
+    "zdroj": {
+      "nazev": "Český rozhlas — domácí zprávy",
+      "url": "https://www.irozhlas.cz/sport/tenis/tenis-davisuv-pohar-david-cup-cesko-usa_2609191732_lbk",
+      "typ": "primary",
+      "primarni": true
+    },
+    "titulek": "Tenisté musí v Davisově poháru opět dotahovat. Rikl s Pavláskem nevyužili mečboly a padli v tiebreaku",
+    "shrnuti": "Adam Pavlásek s Patrikem Riklem nevyužili čtyři mečboly, s Christianem Harrisonem a Austinem Krajickem ztratili obrovskou bitvu 7:5, 3:6, 6:7 a v boji o čtvrtfinále Davis Cupu v Praze prohrávají Češi s Američany 1:2 na zápasy. Tým kapitána Tomáše Berdycha se nyní pokusí v O2 areně otočit vývoj ve dv",
+    "duvod": "vylouceno-tematem",
+    "kategorie": [],
+    "posouzeni": {
+      "podezreni": "zadne",
+      "duvod": "Sportovní zpráva o tenisovém zápase.",
+      "kdy": "2026-09-19T15:54:40.584Z"
+    }
+  },
+  {
+    "id": "k-87e045d153a94023",
+    "zachyceno": "2026-09-19T15:53:05.753Z",
+    "publikovano": "2026-09-19T15:30:00.000Z",
+    "zdroj": {
+      "nazev": "Český rozhlas — domácí zprávy",
+      "url": "https://www.irozhlas.cz/sport/hokej/hokej-extraliga-ocelari-trinec-skoda-plzen_2609191730_lbk",
+      "typ": "primary",
+      "primarni": true
+    },
+    "titulek": "ŽIVĚ: Třinec hostí v hokejové extralize Plzeň, Radiožurnál Sport odvysílá přímý přenos",
+    "shrnuti": "Hokejisté Třince hostí v rámci třetího kola extraligy Plzeň. V uplynulém ročníku skončila všechna utkání výsledkem 2:1, z toho třikrát pro Oceláře. Doma se Západočechy pak prohráli naposledy v lednu roku 2022. Svěřenci Josefa Jandače se nelichotivou sérii v třinecké Werk Areně pokusí zlomit od 18 ho",
+    "duvod": "vylouceno-tematem",
+    "kategorie": [
+      "cr"
+    ],
+    "posouzeni": {
+      "podezreni": "zadne",
+      "duvod": "Sportovní přenos hokejového zápasu.",
+      "kdy": "2026-09-19T15:54:40.584Z"
+    }
+  },
+  {
+    "id": "k-4503d57ceda21eb1",
+    "zachyceno": "2026-09-19T15:53:05.754Z",
+    "publikovano": "2026-09-19T15:30:00.000Z",
+    "zdroj": {
+      "nazev": "Český rozhlas — domácí zprávy",
+      "url": "https://www.irozhlas.cz/sport/fotbal/fotbal-chance-liga-slovacko-banik-ostrava-zive-primy-prenos_2609191730_lbk",
+      "typ": "primary",
+      "primarni": true
+    },
+    "titulek": "ŽIVĚ: Slovácko zabojuje o první ligovou výhru proti Baníku, Radiožurnál Sport odvysílá přímý přenos",
+    "shrnuti": "V rámci devátého kola fotbalové Chance ligy se střetne Slovácko s Baníkem Ostrava. Tomu se v Uherském Hradišti poslední roky nedaří. Vyhrál tu jen jeden z posledních pěti zápasů, třikrát se naopak radovali domácí. Utkání je na programu od 18 hodin, Radiožurnál Sport odvysílá přímý přenos.",
+    "duvod": "vylouceno-tematem",
+    "kategorie": [
+      "cr"
+    ],
+    "posouzeni": {
+      "podezreni": "zadne",
+      "duvod": "Sportovní přenos fotbalového zápasu.",
+      "kdy": "2026-09-19T15:54:40.584Z"
+    }
+  },
+  {
+    "id": "k-20f046ee1cbe4788",
+    "zachyceno": "2026-09-19T15:53:05.754Z",
+    "publikovano": "2026-09-19T15:18:00.000Z",
+    "zdroj": {
+      "nazev": "Český rozhlas — domácí zprávy",
+      "url": "https://www.irozhlas.cz/veda-technologie/priroda/jsou-pro-mesto-nenahraditelne-deset-vyznamnych-olomouckych-stromu-dostalo_2609191718_raf",
+      "typ": "primary",
+      "primarni": true
+    },
+    "titulek": "‚Jsou pro město nenahraditelné.‘ Deset významných olomouckých stromů dostalo ochranné štítky",
+    "shrnuti": "Deset vzrostlých a významných stromů v Olomouci v pátek dostalo speciální štítky celostátní kampaně TreeTag, která upozorňuje na význam stromů ve městech a jejich přínos pro životní prostředí. Mezi označenými stromy jsou památné lípy, jilm, dub či metasekvoje. Některé z nich v minulosti čelily požad",
+    "duvod": "vylouceno-tematem",
+    "kategorie": [],
+    "posouzeni": {
+      "podezreni": "zadne",
+      "duvod": "Kulturně-environmentální zpráva o označení stromů.",
+      "kdy": "2026-09-19T15:54:40.584Z"
+    }
+  },
+  {
+    "id": "k-2212a2a1a816bddd",
+    "zachyceno": "2026-09-19T15:53:05.771Z",
+    "publikovano": "2026-09-19T15:04:20.000Z",
+    "zdroj": {
+      "nazev": "ČT24 — hlavní zprávy",
+      "url": "https://ct24.ceskatelevize.cz/clanek/svet/policie-zabranila-novinarum-cnn-a-msnow-vstoupit-do-arealu-bileho-domu-377774",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Policie zabránila novinářům CNN a MSNOW vstoupit do areálu Bílého domu",
+    "shrnuti": "Policie v sobotu reportérům ze stanic CNN a MSNOW zabránila v přístupu do areálu Bílého domu poté, co americký prezident Donald Trump v pátek večer oznámil, že s okamžitou platností zruší akreditace těchto dvou médií a serveru Politico do prezidentského sídla. Informovaly o tom obě stanice, které zá",
+    "duvod": "bez-skutku",
+    "kategorie": [
+      "vojsko"
+    ],
+    "posouzeni": {
+      "podezreni": "zadne",
+      "duvod": "Mediálně-politický spor o akreditace novinářů, žádná bezpečnostní událost.",
+      "kdy": "2026-09-19T15:54:40.584Z"
+    }
+  },
+  {
     "id": "k-b692e978127ae322",
     "zachyceno": "2026-09-19T15:01:55.440Z",
     "publikovano": "2026-09-19T14:30:00.000Z",
@@ -10294,155 +10445,6 @@
     "posouzeni": {
       "podezreni": "zadne",
       "duvod": "Kulturní kontroverze o uměleckém díle",
-      "kdy": "2026-09-19T14:04:15.203Z"
-    }
-  },
-  {
-    "id": "k-6f02d57f194f8b30",
-    "zachyceno": "2026-09-15T17:03:06.395Z",
-    "publikovano": "2026-09-15T16:32:00.000Z",
-    "zdroj": {
-      "nazev": "Český rozhlas — domácí zprávy",
-      "url": "https://www.irozhlas.cz/zpravy-domov/e-mail-seznamu-neni-bezpecny-tvrdil-turek-ted-se-ma-za-vyrok-omluvit-rozhodl_2609151832_kma",
-      "typ": "primary",
-      "primarni": true
-    },
-    "titulek": "E-mail Seznamu není bezpečný, tvrdil Turek. Teď se má za výrok omluvit, rozhodl soud",
-    "shrnuti": "Poslanec za Motoristy Filip Turek se musí omluvit společnosti Seznam.cz za tvrzení, že zaměstnanci Seznamu nahlížejí do e-mailů uživatelů. V pondělí o tom rozhodl Městský soud v Praze, uvedly v úterý Novinky.cz. Turek musí omluvu zveřejnit do tří dnů, stejně tak by měl zaplatit náklady spojené s žal",
-    "duvod": "bez-skutku",
-    "kategorie": [],
-    "posouzeni": {
-      "podezreni": "zadne",
-      "duvod": "Soudní spor o výrok politika, žádná bezpečnostní událost",
-      "kdy": "2026-09-19T14:04:15.203Z"
-    }
-  },
-  {
-    "id": "k-3906117e23b344a1",
-    "zachyceno": "2026-09-15T17:03:06.396Z",
-    "publikovano": "2026-09-15T16:22:00.000Z",
-    "zdroj": {
-      "nazev": "Český rozhlas — domácí zprávy",
-      "url": "https://www.irozhlas.cz/zpravy-svet/online-zeleznice-udrzuji-zemi-v-chodu-ukrajina-zada-spojence-o-pomoc-s-vlaky_2609151822_jar",
-      "typ": "primary",
-      "primarni": true
-    },
-    "titulek": "ONLINE: ‚Železnice udržují zemi v chodu.‘ Ukrajina žádá spojence o pomoc s vlaky zničenými Ruskem",
-    "shrnuti": "Ukrajinský ministr zahraničí Andrij Sybiha v úterý vyzval spojence k dodávkám železničních lokomotiv zemi napadené Ruskem. Rusko jich podle něj od začátku rozsáhlé invaze v roce 2022 zničilo přes 500, z toho více než polovinu v letošním roce.",
-    "duvod": "bez-skutku",
-    "kategorie": [
-      "infrastruktura",
-      "rusko"
-    ],
-    "posouzeni": {
-      "podezreni": "stredni",
-      "duvod": "Zničené lokomotivy Ruskem v probíhající válce",
-      "kdy": "2026-09-19T14:04:15.203Z"
-    }
-  },
-  {
-    "id": "k-5a750cd50c9baebf",
-    "zachyceno": "2026-09-15T17:03:06.396Z",
-    "publikovano": "2026-09-15T16:21:00.000Z",
-    "zdroj": {
-      "nazev": "Český rozhlas — domácí zprávy",
-      "url": "https://www.irozhlas.cz/zpravy-domov/zvysit-bezpecnost-v-rannim-shonu-skoly-se-snazi-omezovat-dopravu-kdyz-jdou-deti_2609151821_aha",
-      "typ": "primary",
-      "primarni": true
-    },
-    "titulek": "Zvýšit bezpečnost v ranním shonu. Školy se snaží omezovat dopravu, když jdou děti do školy",
-    "shrnuti": "Do školy bez aut. To má zpříjemnit cestu do školy a zvýšit bezpečí. Tento týden se do celostátní výzvy Pěšky do školy zapojují školy po celé republice. Podobná opatření na některých místech fungují dlouhodobě. Například v Meziboří vznikla v blízkosti školy parkoviště určená k vysazení dítěte označen",
-    "duvod": "bez-skutku",
-    "kategorie": [],
-    "posouzeni": {
-      "podezreni": "zadne",
-      "duvod": "Bezpečnost dětí u škol, běžné opatření",
-      "kdy": "2026-09-19T14:04:15.203Z"
-    }
-  },
-  {
-    "id": "k-6b5335ba887ecb1d",
-    "zachyceno": "2026-09-15T17:03:06.707Z",
-    "publikovano": "2026-09-15T16:16:41.000Z",
-    "zdroj": {
-      "nazev": "Dánsko — sabotaz",
-      "url": "https://news.google.com/rss/articles/CBMi3gFBVV95cUxPclpwQU5nUDdkT0VtbURtZ1dDSXFNMEQ1Tlh4RzdRWE1id05DWTA1dG8tRzByaTJTRXdGYkZPXzFkcHF0enNQTlhOSzYwRkh3SkNoQ2lUSS02NEpDTFNsOUN1ODZrZF83bHNJeW5IcFlheHZvNGtQWEszam0wZ1dqUVE1NmVoQi14Y0h5OE5obGdMRFZWWGd0NFhPWWVKUEZwVlRZTDVBZWRHNDl0Nl9FMTVmMWdpNjUxa2JCVm9VQ2dIMmlyNXdWekdhS1YzMzVXTnNLdGswQ1djR2xmM2c?oc=5",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Russian Frigate Fires Flares Toward Danish Fennec Helicopter Off Gedser: 17 outlets compared - newscord.org",
-    "shrnuti": "Russian Frigate Fires Flares Toward Danish Fennec Helicopter Off Gedser: 17 outlets compared newscord.org",
-    "duvod": "vylouceno-tematem",
-    "kategorie": [
-      "rusko"
-    ],
-    "posouzeni": {
-      "podezreni": "vysoke",
-      "duvod": "Ruská fregata vystřelila světlice na dánský vrtulník",
-      "kdy": "2026-09-19T14:04:15.203Z"
-    }
-  },
-  {
-    "id": "k-33e837888f6803b1",
-    "zachyceno": "2026-09-15T17:03:06.438Z",
-    "publikovano": "2026-09-15T16:14:00.000Z",
-    "zdroj": {
-      "nazev": "Deutsche Welle — Europe",
-      "url": "https://www.dw.com/en/why-do-authoritarian-regimes-target-the-lgbtq-community/a-79276831?maca=en-rss-en-eu-2092-rdf",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Why do authoritarian regimes target the LGBTQ+ community?",
-    "shrnuti": "A recent crackdown on the LGBTQ+ community in Turkey is symptomatic of a wider rights regression, according to experts. It&apos;s worse under authoritarian regimes, but why is it such a popular policy for these states?",
-    "duvod": "bez-skutku",
-    "kategorie": [],
-    "posouzeni": {
-      "podezreni": "zadne",
-      "duvod": "Komentář o právech LGBTQ+ v autoritářských režimech",
-      "kdy": "2026-09-19T14:04:15.203Z"
-    }
-  },
-  {
-    "id": "k-1737f095efdffe4f",
-    "zachyceno": "2026-09-15T17:03:06.652Z",
-    "publikovano": "2026-09-15T16:11:59.000Z",
-    "zdroj": {
-      "nazev": "Téma: krizove-vysilani (česky)",
-      "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxOWTZtVVJHNUwzTUN5emVkZjRKWU5QNFNxTWRzYzF5V1ljZHh5TExBcE9VSXYtMmc3Z1RIaFFTU05CYmpZbVJfMl93aHB4TmxybFA1R0hhRVhQZ0pmRGFMQVM2RURwdTE5S1pya1NMMks1Rld1bElSN09vemNITXNHdXBBcG53WXJ2MUFDdW9EMTVfQ2Rxc0VuNEV0c1JObjhLVi1sUkFwRnZ0NDZCRnJEUmZtWmVaTHhCSXBScUJOU3o1c3RPcWtr?oc=5",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Český rozhlas posiluje krizové vysílání. Spojí síly s hasiči, policií a záchranáři - mam.cz",
-    "shrnuti": "Český rozhlas posiluje krizové vysílání. Spojí síly s hasiči, policií a záchranáři mam.cz",
-    "duvod": "bez-mista",
-    "kategorie": [
-      "cr"
-    ],
-    "posouzeni": {
-      "podezreni": "zadne",
-      "duvod": "Posílení krizového vysílání, organizační zpráva",
-      "kdy": "2026-09-19T14:04:15.203Z"
-    }
-  },
-  {
-    "id": "k-ad0f2b130efedaaf",
-    "zachyceno": "2026-09-15T16:02:43.153Z",
-    "publikovano": "2026-09-15T15:45:48.000Z",
-    "zdroj": {
-      "nazev": "ČT24 — hlavní zprávy",
-      "url": "https://ct24.ceskatelevize.cz/clanek/svet/ukrajina-zahajila-u-lymanu-protiofenzivni-operace-potvrdil-ukrajinsky-velitel-377646",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Ukrajina zahájila u Lymanu protiofenzivní operace, potvrdil ukrajinský velitel",
-    "shrnuti": "Ukrajinská armáda zahájila u důležitého města Lymanu v Doněcké oblasti protiofenzivní operace, oznámil v úterý podle agentury AFP velitel 3. armádního sboru ukrajinské armády Andrij Bileckyj. Zprávy o probíhajících operacích se objevovaly už v předešlých dnech, až nyní však informaci Ukrajina potvrd",
-    "duvod": "bez-skutku",
-    "kategorie": [
-      "vojsko"
-    ],
-    "posouzeni": {
-      "podezreni": "vysoke",
-      "duvod": "Ukrajinská protiofenzivní operace u Lymanu potvrzena velitelem",
       "kdy": "2026-09-19T14:04:15.203Z"
     }
   }
