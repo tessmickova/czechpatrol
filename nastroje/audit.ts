@@ -100,6 +100,38 @@ const POKYNY = [
   "Odpovídej česky. Titulek je věcný: co se stalo a kde.",
 ].join("\n");
 
+/**
+ * Proč z posouzené zprávy vznikne nebo nevznikne návrh.
+ *
+ * Odděleně od zbytku, protože tohle je celé rozhodování auditu a má se dát
+ * otestovat bez volání modelu.
+ */
+export function trideni(
+  p: { novaUdalost: boolean; duplikatSlugu: string | null; fakta: string[] },
+  znameSlugy: Set<string>,
+): { duplikat: string | null; neznamySlug: string | null; zahozeno: string | null } {
+  /*
+    Slug na pokračování musí existovat. Když model ukáže na záznam, který tu
+    není, je to vymyšlený údaj — a ten nesmí potichu zahodit návrh.
+  */
+  const duplikat = p.duplikatSlugu && znameSlugy.has(p.duplikatSlugu) ? p.duplikatSlugu : null;
+  const neznamySlug = p.duplikatSlugu && !duplikat ? p.duplikatSlugu : null;
+
+  /*
+    Důvod se zapisuje vždy. Dřív se nikam nezapisoval a report hlásil
+    „posouzeno 12, návrhů 0" bez vysvětlení — což vypadalo stejně jako porucha.
+
+    Prázdný seznam nedoloženého návrh nebrzdí: zpráva, u které je všechno
+    doložené, je ten nejlepší případ, ne důvod k zahození.
+  */
+  let zahozeno: string | null = null;
+  if (!p.novaUdalost) zahozeno = "není nová událost";
+  else if (duplikat) zahozeno = `pokračování záznamu ${duplikat}`;
+  else if (!p.fakta.length) zahozeno = "z textu neplyne žádné doložené faktum";
+
+  return { duplikat, neznamySlug, zahozeno };
+}
+
 async function main() {
   const sucho = process.argv.includes("--sucho");
   const poskytovatel = dostupnyPoskytovatel();
@@ -174,22 +206,26 @@ async function main() {
   }
 
   const podleId = new Map(kPosouzeni.map((k) => [k.id, k]));
+  const znameSlugy = new Set(incidenty.map((i) => i.slug));
   const nove: unknown[] = [];
   const prehled: unknown[] = [];
 
   for (const p of vysledek.polozky) {
     const k = podleId.get(p.id);
     if (!k) continue;
+
+    const { duplikat, neznamySlug, zahozeno } = trideni(p, znameSlugy);
+
     prehled.push({
       id: p.id,
       titulek: p.titulekCs,
       novaUdalost: p.novaUdalost,
       duvod: p.duvod,
-      duplikatSlugu: p.duplikatSlugu,
+      duplikatSlugu: duplikat,
+      neznamySlug,
+      zahozeno,
     });
-    if (!p.novaUdalost || p.duplikatSlugu) continue;
-    /* Bez fakt a bez toho, co není doložené, návrh nevzniká. */
-    if (!p.fakta.length || !p.nedolozeno.length) continue;
+    if (zahozeno) continue;
 
     const kdy = (k.publikovano ?? k.zachyceno).slice(0, 10);
     nove.push({
@@ -245,8 +281,9 @@ async function main() {
   };
 
   console.log(`[audit] posouzeno ${vysledek.polozky.length}, nových návrhů ${nove.length}`);
-  for (const r of prehled as { titulek: string; novaUdalost: boolean; duvod: string }[]) {
-    console.log(`  ${r.novaUdalost ? "NOVÉ " : "známé"} ${r.titulek.slice(0, 66)} — ${r.duvod.slice(0, 80)}`);
+  for (const r of prehled as { titulek: string; zahozeno: string | null; duvod: string; neznamySlug: string | null }[]) {
+    console.log(`  ${r.zahozeno ? `— ${r.zahozeno}` : "NÁVRH"} · ${r.titulek.slice(0, 60)} — ${r.duvod.slice(0, 70)}`);
+    if (r.neznamySlug) console.log(`      pozor: model ukázal na neexistující záznam ${r.neznamySlug}`);
   }
 
   if (sucho) {
@@ -260,4 +297,11 @@ async function main() {
   }
 }
 
-await main();
+/*
+  Spustit jen při skutečném běhu (`npm run audit`). Při importu z testu se
+  rozhodovací funkce jenom čte — audit se pouštět nemá a nemá ani sahat
+  na model.
+*/
+if (process.argv[1] && /audit\.ts$/.test(process.argv[1])) {
+  await main();
+}
