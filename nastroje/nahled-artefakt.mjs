@@ -14,15 +14,31 @@ import path from "node:path";
 
 const rezim = process.env.NEXT_PUBLIC_REZIM ?? "ostry";
 
-const cssAdresar = "out/_next/static/css";
-if (!fs.existsSync(cssAdresar)) {
-  console.error("Chybí out/. Spusťte nejdřív `npm run build` (nebo `npm run nahled`).");
+/*
+  CSS se hledá v celém out/_next, ne na jedné pevné cestě.
+
+  Next 16 přestal generovat out/_next/static/css/ a odložil styly mezi ostatní
+  kusy do .../chunks/. Skript to nepoznal a hlásil „chybí out/" i nad hotovým
+  buildem — celá kontrola v CI kvůli tomu padala. Hledání stromem přežije
+  i příští přesun.
+*/
+function najdiCss(adresar) {
+  if (!fs.existsSync(adresar)) return [];
+  return fs.readdirSync(adresar, { withFileTypes: true }).flatMap((polozka) => {
+    const cesta = path.join(adresar, polozka.name);
+    if (polozka.isDirectory()) return najdiCss(cesta);
+    return polozka.name.endsWith(".css") ? [cesta] : [];
+  });
+}
+
+const soubory = najdiCss("out/_next");
+if (soubory.length === 0) {
+  console.error("V out/ není žádná CSS. Spusťte nejdřív `npm run build` (nebo `npm run nahled`).");
   process.exit(1);
 }
-const css = fs
-  .readdirSync(cssAdresar)
-  .filter((f) => f.endsWith(".css"))
-  .map((f) => fs.readFileSync(path.join(cssAdresar, f), "utf-8"))
+const css = soubory
+  .sort()
+  .map((f) => fs.readFileSync(f, "utf-8"))
   .join("\n")
   // Deklarace písem z buildu ukazují na soubory, které náhled nemá.
   // Písma sem dodává Google Fonts, tyhle pravidla by jen házela 404.
