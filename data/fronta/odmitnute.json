@@ -1,5 +1,49 @@
 [
   {
+    "id": "k-6e53caa26df910a7",
+    "zachyceno": "2026-09-19T17:01:56.821Z",
+    "publikovano": "2026-09-19T16:32:00.000Z",
+    "zdroj": {
+      "nazev": "Český rozhlas — domácí zprávy",
+      "url": "https://www.irozhlas.cz/zpravy-domov/zacala-oprava-prejezdu-na-silnici-mezi-benesovem-a-frantiskovem-nad-ploucnici_2609191832_kch",
+      "typ": "primary",
+      "primarni": true
+    },
+    "titulek": "Začala oprava přejezdu na silnici mezi Benešovem a Františkovem nad Ploučnicí. Auta přes něj neprojedou",
+    "shrnuti": "Doprava v okolí Benešova nad Ploučnicí na Děčínsku je od středy komplikovanější. Od té chvíle probíhá výluka na železnici v a sobotu se k tomu přidala i uzavírka železničního přejezdu po cestě na Františkov nad Ploučnicí.",
+    "duvod": "bez-skutku",
+    "kategorie": [
+      "infrastruktura"
+    ],
+    "posouzeni": {
+      "podezreni": "zadne",
+      "duvod": "Běžná dopravní uzavírka kvůli opravě, nejde o bezpečnostní událost.",
+      "kdy": "2026-09-19T17:03:35.564Z"
+    }
+  },
+  {
+    "id": "k-314b31c460e31914",
+    "zachyceno": "2026-09-19T17:01:56.822Z",
+    "publikovano": "2026-09-19T16:04:00.000Z",
+    "zdroj": {
+      "nazev": "Český rozhlas — domácí zprávy",
+      "url": "https://www.irozhlas.cz/zpravy-svet/poslani-informovat-bude-pokracovat-policie-nepustila-novinare-cnn-a-msnow-do_2609191804_vsn",
+      "typ": "primary",
+      "primarni": true
+    },
+    "titulek": "‚Poslání informovat bude pokračovat.‘ Policie nepustila CNN, MSNOW a Politico do Bílého domu",
+    "shrnuti": "Policie v sobotu reportérům stanic CNN a MSNOW (dříve MSNBC) a serveru Politico zabránila v přístupu do areálu Bílého domu poté, co americký prezident Donald Trump v pátek večer oznámil, že s okamžitou platností ruší akreditace těchto tří médií do prezidentského sídla. Informovaly o tom všechna tři ",
+    "duvod": "bez-skutku",
+    "kategorie": [
+      "vojsko"
+    ],
+    "posouzeni": {
+      "podezreni": "zadne",
+      "duvod": "Politický spor o akreditace médií v USA, nikoli bezpečnostní událost.",
+      "kdy": "2026-09-19T17:03:35.564Z"
+    }
+  },
+  {
     "id": "k-03da5176f3e02821",
     "zachyceno": "2026-09-19T15:53:05.752Z",
     "publikovano": "2026-09-19T15:37:00.000Z",
@@ -10405,46 +10449,6 @@
     "posouzeni": {
       "podezreni": "stredni",
       "duvod": "Neidentifikovaný objekt zastavil lety na letišti",
-      "kdy": "2026-09-19T14:04:15.203Z"
-    }
-  },
-  {
-    "id": "k-63063224d4fefe9c",
-    "zachyceno": "2026-09-15T16:32:52.174Z",
-    "publikovano": null,
-    "zdroj": {
-      "nazev": "LRT English (Litva)",
-      "url": "https://www.lrt.lt/en/news-in-english/19/3053392/kaunas-to-begin-designing-first-tram-line",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Kaunas to begin designing first tram line",
-    "shrnuti": "",
-    "duvod": "bez-skutku",
-    "kategorie": [],
-    "posouzeni": {
-      "podezreni": "zadne",
-      "duvod": "Plánování tramvajové linky",
-      "kdy": "2026-09-19T14:04:15.203Z"
-    }
-  },
-  {
-    "id": "k-4482f14ee368fc93",
-    "zachyceno": "2026-09-15T16:32:52.173Z",
-    "publikovano": null,
-    "zdroj": {
-      "nazev": "LRT English (Litva)",
-      "url": "https://www.lrt.lt/en/news-in-english/19/3053172/gold-plated-skulls-depicting-famous-lithuanian-royal-romance-divide-opinions",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Gold-plated skulls depicting famous Lithuanian royal romance divide opinions",
-    "shrnuti": "",
-    "duvod": "vylouceno-tematem",
-    "kategorie": [],
-    "posouzeni": {
-      "podezreni": "zadne",
-      "duvod": "Kulturní kontroverze o uměleckém díle",
       "kdy": "2026-09-19T14:04:15.203Z"
     }
   }
