@@ -1,3 +1,4 @@
+import { dostupnyPoskytovatel } from "./model";
 import fs from "node:fs";
 import path from "node:path";
 import { ctiHtml, ctiRss, stahni } from "./nacti";
@@ -78,6 +79,23 @@ async function main() {
   fs.mkdirSync(FRONTA, { recursive: true });
 
   console.log(`[sber] start ${TED}`);
+
+  /*
+    Který model se použije, řekni nahlas hned na začátku.
+
+    Jestli AI vrstva běží, se dosud nedalo zjistit jinak než tak, že někdo
+    prošel data a hledal, jestli mají kandidáti značku modelu. Když klíč
+    chybí nebo je špatný, sběr běží dál jen podle klíčových slov — a to je
+    správné chování, sběr nesmí spadnout kvůli modelu — ale nikde to nebylo
+    vidět. Tiché vypnutí poloviny funkce je přesně ten druh poruchy, kterou
+    tenhle projekt nesmí mít.
+  */
+  const poskytovatel = dostupnyPoskytovatel();
+  console.log(
+    poskytovatel
+      ? `[model] zapnuto: ${poskytovatel}, model ${poskytovatel === "anthropic" ? process.env.ANTHROPIC_MODEL?.trim() || "claude-haiku-4-5" : process.env.OPENAI_MODEL?.trim() || "podle účtu"}`
+      : "[model] VYPNUTO — není nastaven ANTHROPIC_API_KEY ani OPENAI_API_KEY; jede se jen podle klíčových slov",
+  );
   const stazene = await stahniVse();
 
   const vysledky: VysledekZdroje[] = stazene.map((s) => ({
