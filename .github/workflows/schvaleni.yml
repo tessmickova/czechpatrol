@@ -20,10 +20,10 @@ on:
         description: "Co s ním"
         required: true
         type: choice
-        options: [schval, zamitni]
+        options: [schval, znovu, zamitni]
         default: schval
       duvod:
-        description: "Důvod zamítnutí (u schválení se ignoruje)"
+        description: "Důvod zamítnutí nebo toho, co má ověřovatel doplnit"
         required: false
         default: ""
 
@@ -67,7 +67,7 @@ jobs:
           DUVOD: ${{ inputs.duvod }}
         run: |
           case "$AKCE" in
-            schval|zamitni) ;;
+            schval|znovu|zamitni) ;;
             *) echo "Neznámá akce: $AKCE"; exit 1 ;;
           esac
           npm run spravce -- "$AKCE" "$NAVRH" "$DUVOD"
@@ -99,6 +99,46 @@ jobs:
             git pull --rebase
           done
           echo "zmena=true" >> "$GITHUB_OUTPUT"
+
+      # Vrácené návrhy musí dojít i k ověřovateli, jinak se u nich jen objeví
+      # poznámka a nikdo s nimi nic neudělá.
+      - name: Poslat k doplnění ověřovateli
+        if: inputs.akce == 'znovu'
+        env:
+          NAVRH: ${{ inputs.id }}
+          DUVOD: ${{ inputs.duvod }}
+        run: |
+          set -u
+          git fetch origin patrol/overovani
+          git checkout -q -B patrol-vetev origin/patrol/overovani
+          NAVRH="$NAVRH" DUVOD="$DUVOD" node --input-type=module -e '
+            import fs from "node:fs";
+            const cesta = "data/fronta/pro-patrola.json";
+            fs.mkdirSync("data/fronta", { recursive: true });
+            let fronta = [];
+            try { fronta = JSON.parse(fs.readFileSync(cesta, "utf-8")); } catch {}
+            if (!Array.isArray(fronta)) fronta = [];
+            const duvod = (process.env.DUVOD ?? "").trim();
+            fronta.push({
+              id: `z-${Date.now().toString(36)}`,
+              zadano: new Date().toISOString(),
+              zadal: "sprava",
+              stav: "ceka",
+              tykaSe: process.env.NAVRH,
+              zadani: `Doplň návrh ${process.env.NAVRH}. ${duvod || "Správce ho vrátil k dalšímu ověření."}`,
+            });
+            fs.writeFileSync(cesta, `${JSON.stringify(fronta, null, 2)}\n`);
+          '
+          git config user.name "sprava"
+          git config user.email "sprava@users.noreply.github.com"
+          git add data/fronta/pro-patrola.json
+          git commit -m "Návrh $NAVRH vrácen k doplnění"
+          for i in 1 2 3 4; do
+            git push origin HEAD:patrol/overovani && break
+            sleep $((2**i))
+            git pull --rebase origin patrol/overovani
+          done
+          git checkout -q main
 
       # Rozeslání musí proběhnout tady, ne v rozhlas.yml.
       #

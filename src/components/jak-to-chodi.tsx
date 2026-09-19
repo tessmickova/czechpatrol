@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { SchemaToku } from "./schema-toku";
 import { Karta } from "./zaklad";
 
 /*
@@ -108,6 +109,14 @@ export function JakToChodi() {
 
       {otevreno && (
         <div className="mt-5 border-t border-linka2 pt-5">
+          {/*
+            Schéma nahoře, popis pod ním. Opakovaná otázka nebyla „jaké jsou
+            kroky", ale „kde to uvázlo" — na to odpovídá tvar, ne seznam.
+          */}
+          <div className="mb-6 flex justify-center">
+            <SchemaToku />
+          </div>
+
           <ol className="space-y-0">
             {KROKY.map((k, i) => (
               <li key={k.cislo} className="relative pb-6 pl-8 last:pb-0">

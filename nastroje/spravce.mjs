@@ -261,6 +261,30 @@ function zamitni(id, duvod) {
   console.log(`Návrh ${id} zamítnut. Zůstala po něm stopa v data/fronta/zamitnute-navrhy.json.`);
 }
 
+
+/*
+  Vrácení návrhu k dalšímu ověření.
+
+  Návrh zůstane ve frontě, jen se u něj poznačí, že čeká na doplnění. Bez té
+  poznámky by se po kliknutí nic viditelného nestalo a člověk by tlačítko
+  zmáčkl znovu — nebo návrh omylem schválil.
+*/
+function znovu(id, duvod) {
+  if (!id) {
+    console.error("Který návrh? npm run spravce znovu <id> [důvod]");
+    process.exit(1);
+  }
+  const n = cti("data/navrhy.json", []);
+  const z = n.find((x) => x.id === id);
+  if (!z) {
+    console.error(`Návrh ${id} tu není. Seznam: npm run spravce navrhy`);
+    process.exit(1);
+  }
+  z.preverit = { kdy: new Date().toISOString(), duvod: (duvod ?? "").slice(0, 300) || null };
+  fs.writeFileSync(path.join(koren, "data/navrhy.json"), `${JSON.stringify(n, null, 2)}\n`);
+  console.log(`Návrh ${id} označen k dalšímu ověření.`);
+}
+
 const prikaz = process.argv[2];
 const arg = process.argv.slice(3);
 
@@ -269,6 +293,7 @@ else if (prikaz === "fronta") fronta();
 else if (prikaz === "navrhy") navrhy();
 else if (prikaz === "schval") schval(arg[0]);
 else if (prikaz === "zamitni") zamitni(arg[0], arg.slice(1).join(" "));
+else if (prikaz === "znovu") znovu(arg[0], arg.slice(1).join(" "));
 else if (prikaz === "tip") tip(arg[0]);
 else if (prikaz === "prijmi") {
   /* Delegace na stávající nástroj: kostru záznamu už umí a umí ji dobře. */
@@ -280,6 +305,6 @@ else if (prikaz === "prijmi") {
   execFileSync("node", [path.join(koren, "nastroje/rozhlas.mjs"), "--nacisto", ...arg], { stdio: "inherit" });
 } else {
   console.error(`Neznámý příkaz: ${prikaz}`);
-  console.error("Použití: stav | fronta | navrhy | schval <id> | zamitni <id> [důvod] | prijmi <id> | tip [soubor] | vystraha … | nahled");
+  console.error("Použití: stav | fronta | navrhy | schval <id> | znovu <id> [důvod] | zamitni <id> [důvod] | prijmi <id> | tip [soubor] | vystraha … | nahled");
   process.exit(1);
 }

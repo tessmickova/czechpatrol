@@ -48,6 +48,10 @@ interface Navrh {
   datumUdalosti?: string;
   zavaznost?: string;
   jistota?: string;
+  druh?: string;
+  puvodce?: string | null;
+  archivniZaznam?: boolean;
+  preverit?: { kdy: string; duvod: string | null };
   fakta?: string[];
   neznameho?: string[];
   zdroje?: { nazev?: string; url?: string }[];
@@ -81,6 +85,10 @@ export async function seznam(env: Env, ucet: Prihlaseny): Promise<Response> {
     datumUdalosti: n.datumUdalosti ?? null,
     zavaznost: n.zavaznost ?? null,
     jistota: n.jistota ?? null,
+    druh: n.druh ?? null,
+    puvodce: n.puvodce ?? null,
+    archivniZaznam: n.archivniZaznam ?? false,
+    preverit: n.preverit ?? null,
     fakta: n.fakta ?? [],
     neznameho: n.neznameho ?? [],
     zdroje: (n.zdroje ?? []).map((z) => ({ nazev: z.nazev ?? null, url: z.url ?? null })),
@@ -95,7 +103,9 @@ export async function rozhodni(env: Env, req: Request, ucet: Prihlaseny, id: str
   const { repo, token } = nastaveni(env);
 
   const { akce, duvod } = await telo<{ akce?: string; duvod?: string }>(req);
-  if (akce !== "schval" && akce !== "zamitni") throw new ChybaHttp(400, "Akce je schval, nebo zamitni.");
+  if (akce !== "schval" && akce !== "znovu" && akce !== "zamitni") {
+    throw new ChybaHttp(400, "Akce je schval, znovu, nebo zamitni.");
+  }
   /* Id jde do příkazu na běžci — pustí se jen tvar, který sem opravdu patří. */
   if (!/^[\w.-]{1,80}$/.test(id)) throw new ChybaHttp(400, "Podivné id návrhu.");
 

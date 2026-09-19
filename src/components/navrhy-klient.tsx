@@ -2,6 +2,7 @@
 
 import { useCallback, useEffect, useState } from "react";
 import { datumCas } from "@/lib/format";
+import { kamOdejde } from "@/lib/kam-odejde";
 import { api } from "@/lib/ucet";
 import { Hlaska, POLE, TLACITKO_AKCENT, TLACITKO_TICHE } from "./formulare";
 import { Karta } from "./zaklad";
@@ -33,6 +34,10 @@ interface Navrh {
   fakta: string[];
   neznameho: string[];
   zdroje: { nazev: string | null; url: string | null }[];
+  druh: string | null;
+  puvodce: string | null;
+  archivniZaznam: boolean;
+  preverit: { kdy: string; duvod: string | null } | null;
 }
 
 export function NavrhyKeSchvaleni() {
@@ -59,7 +64,7 @@ export function NavrhyKeSchvaleni() {
     nacti();
   }, [nacti]);
 
-  async function rozhodni(id: string, akce: "schval" | "zamitni") {
+  async function rozhodni(id: string, akce: "schval" | "znovu" | "zamitni") {
     try {
       await api(`/sprava/navrhy/${id}/rozhodnout`, { method: "POST", telo: { akce, duvod: duvody[id] ?? "" } });
       setOdeslane((p) => ({ ...p, [id]: akce }));
@@ -160,24 +165,46 @@ export function NavrhyKeSchvaleni() {
                 </ul>
               </div>
 
+              {/*
+                Co se stane po schválení. Bez téhle věty se kliká naslepo —
+                a u zprávy, která jde odběratelům do telefonu, je to málo.
+              */}
+              <p className="mt-3 border-t border-linka2 pt-3 text-male leading-snug text-tlum">
+                {kamOdejde(n).vysvetleni}
+              </p>
+
+              {n.preverit && (
+                <p className="mt-2 text-male leading-snug text-inkoust">
+                  Vráceno k doplnění {datumCas(n.preverit.kdy)}
+                  {n.preverit.duvod ? `: ${n.preverit.duvod}` : "."}
+                </p>
+              )}
+
               {hotovo ? (
                 <p className="mt-3 text-male text-tlum2">
-                  {hotovo === "schval" ? "Schválení odesláno. Běží kontrola a nasazení." : "Zamítnutí odesláno."}
+                  {hotovo === "schval"
+                    ? "Schválení odesláno. Běží kontrola, rozeslání a nasazení."
+                    : hotovo === "znovu"
+                      ? "Posláno ověřovateli k doplnění. Návrh zůstává ve frontě."
+                      : "Zamítnutí odesláno."}
                 </p>
               ) : (
                 <div className="mt-3 flex flex-wrap items-center gap-2">
                   <button type="button" onClick={() => rozhodni(id, "schval")} className={TLACITKO_AKCENT}>
                     Schválit
                   </button>
-                  <input
-                    className={`${POLE} max-w-[240px]`}
-                    placeholder="Důvod zamítnutí"
-                    value={duvody[id] ?? ""}
-                    onChange={(e) => setDuvody((p) => ({ ...p, [id]: e.target.value }))}
-                  />
+                  <button type="button" onClick={() => rozhodni(id, "znovu")} className={TLACITKO_TICHE}>
+                    Znovu ověřit
+                  </button>
                   <button type="button" onClick={() => rozhodni(id, "zamitni")} className={TLACITKO_TICHE}>
                     Zamítnout
                   </button>
+                  <input
+                    className={`${POLE} max-w-[260px]`}
+                    placeholder="Důvod (u vrácení i zamítnutí)"
+                    value={duvody[id] ?? ""}
+                    onChange={(e) => setDuvody((p) => ({ ...p, [id]: e.target.value }))}
+                  />
                 </div>
               )}
             </li>
