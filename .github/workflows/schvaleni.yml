@@ -202,7 +202,26 @@ jobs:
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           TELEGRAM_KANAL: ${{ vars.TELEGRAM_KANAL || '@czechpatrol' }}
           SPRAVCE_CHAT: ${{ vars.SPRAVCE_CHAT }}
-        run: node nastroje/rozhlas.mjs --okamzite
+        run: |
+          node nastroje/rozhlas.mjs --okamzite
+
+          # Zápis o tom, co už odešlo, musí zpátky do repozitáře.
+          #
+          # Rozhlas si pamatuje odeslané zprávy v data/fronta/rozhlaseno.json.
+          # Dokud se ten soubor necommitl, byl záznam při dalším běhu pořád
+          # „neodeslaný" a odešel znovu — odběratelé dostali tutéž zprávu
+          # dvakrát.
+          if [ -z "$(git status --porcelain data/fronta/rozhlaseno.json)" ]; then
+            echo "Stav rozhlasu se nezměnil."
+            exit 0
+          fi
+          git add data/fronta/rozhlaseno.json
+          git commit -m "Rozhlas: stav odeslaných zpráv"
+          for i in 1 2 3 4; do
+            git push && break
+            sleep $((2**i))
+            git pull --rebase
+          done
 
 
   # Nasazení se volá přímo, ne přes push. Commit z workflow žádný další

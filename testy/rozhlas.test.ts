@@ -15,11 +15,10 @@ const zaznam = (n: Record<string, unknown>) => ({
 });
 
 describe("rozhlas", () => {
-  it("zpráva má titulek, závažnost i jistotu zvlášť, odkaz na celý záznam a únik HTML", () => {
+  it("zpráva má titulek, závažnost, odkaz na celý záznam a únik HTML", () => {
     const z = sestavZpravu(zaznam({}));
     // Nadpis nese datum v závorce; řádek „země · případ · datum" pod ním zanikl.
     expect(z).toContain("🟠 Závažnost: 7 z 10 · vysoká\n<b>Titulek &lt;b&gt; (1. 9. 2026)</b>");
-    expect(z).toContain("<b>Jistota, že se událost stala:</b> vysoká");
     expect(z).toContain("<b>Původce: zatím neurčen.</b>");
     expect(z).toContain("https://czechpatrol.pages.dev/incident/x/");
   });
@@ -108,9 +107,11 @@ describe("rozhlas", () => {
     expect(radky[2]).toBe("");
     expect(z).toContain("První fakt.");
     expect(z).toContain("<b>Nepotvrzeno:</b> Nevíme kdo.");
-    // Patička dělá ze zprávy citovatelný dokument.
+    // Patička říká, kdo zprávu vydal a kdy. Vnitřní označení záznamu v ní
+    // není — čtenáři nic neříká a odkaz na záznam je o řádek výš.
     expect(z).toContain("Všechna fakta, hodnocení a všechny zdroje: https://czechpatrol.pages.dev/incident/x/");
-    expect(z.trimEnd().endsWith("CzechPatrol · záznam x · aktualizováno 4. 9. 2026")).toBe(true);
+    expect(z.trimEnd().endsWith("CzechPatrol · aktualizováno 4. 9. 2026")).toBe(true);
+    expect(z).not.toContain("záznam x");
   });
   it("souhrn: pruh a legenda nahoře, nejdřív opatření a české záznamy", () => {
     const polozky = [
@@ -590,10 +591,19 @@ describe("původce se nepřipisuje dřív, než je doložený", () => {
     expect(z).toContain("<b>Původce:</b> Rusko — potvrzeno úředním závěrem");
   });
 
-  it("jistota se jmenuje tím, čeho se týká", () => {
-    // „Jistota: vysoká" samo o sobě nikomu neřekne, čeho se ta jistota týká.
+  it("jistota se do kanálu nepíše vůbec", () => {
+    /*
+      Do kanálu jde jen to, co prošlo lidským ověřením. Věta „střední jistota,
+      že se to stalo" u takové zprávy čtenáře mate — zní, jako bychom si
+      nebyli jistí, jestli publikujeme skutečnost. Na webu u záznamu jistota
+      zůstává, tam ji lze číst vedle fakt a zdrojů.
+
+      Co platit nepřestává: jistota a původce se nesmějí slít do jedné věty.
+      Proto se hlídá, že o původci se pořád mluví odděleně a opatrně.
+    */
     const z = sestavZpravu(zaznam("vysetrovana"));
-    expect(z).toContain("<b>Jistota, že se událost stala:</b> vysoká");
+    expect(z).not.toContain("Jistota");
+    expect(z).toContain("<b>Původce: zatím neurčen.</b>");
   });
 
   it("země se popisuje jednotně, i když chybí ve slovníku tvarů", () => {

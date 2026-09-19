@@ -301,7 +301,13 @@ async function main() {
       id: `i-${kdy}-${p.id.replace(/^k-/, "").slice(0, 10)}`,
       slug: `${(p.kodZeme ?? k.kodZeme ?? "xx").toLowerCase()}-${p.id.replace(/^k-/, "").slice(0, 10)}`,
       titulek: p.titulekCs,
-      kratkyTitulek: p.titulekCs.slice(0, 48),
+      /*
+        Žádné slepé krácení. Dřív tu bylo slice(0, 48) a do veřejného kanálu
+        odešlo „Polsko: armáda posiluje hraniční přechody s Ukra". Když je
+        titulek dlouhý, zkrátí ho až rozhlas na hranici slova; tady se
+        neseká nic.
+      */
+      kratkyTitulek: p.titulekCs,
       zeme: k.zeme ?? "—",
       kodZeme: p.kodZeme ?? k.kodZeme ?? "EU",
       kategorie: k.kategorie,
@@ -316,7 +322,12 @@ async function main() {
       druh: p.druh === "neurceno" ? "reakce" : p.druh,
       fakta: p.fakta,
       neznameho,
-      vyznam: "[DOPLNIT] — co z toho plyne pro čtenáře v Česku.",
+      /*
+        Prázdné, ne zástupný text. „[DOPLNIT]" se přes schválení dostalo na
+        živý web a stálo tam místo vysvětlení. Prázdné pole se nezobrazí
+        vůbec, což je pravda; zástupný text je chyba na očích čtenáře.
+      */
+      vyznam: "",
       eskalacniSpousteče: [],
       deeskalacniSignaly: [],
       zdroje,
