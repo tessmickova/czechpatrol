@@ -79,6 +79,8 @@ const Posouzeni = z.object({
       nedolozeno: z.array(z.string()),
       /** Kdy se to stalo (YYYY-MM-DD), podle textu. null = z textu to neplyne. */
       datumUdalosti: z.string().nullable(),
+      /** Id dalších zachycených zpráv o TÉŽE události — druhý a další zdroj. */
+      dalsiId: z.array(z.string()),
       kodZeme: z.string().nullable(),
       druh: z.enum(["pripad", "opatreni", "reakce", "neurceno"]),
       zavaznost: z.enum(["G1", "G2", "G3", "Y1", "Y2", "Y3", "O1", "O2", "O3", "R1", "R2", "R3"]),
@@ -98,6 +100,7 @@ const POKYNY = [
   "- Závažnost, jistota a bezprostřednost jsou tři různé věci. Zpravodajská spekulace není vysoká jistota.",
   "- Stupnice závažnosti: G = nízká, Y = střední, O = vysoká, R = vážná. Běžná zahraniční zpráva bez dopadu na Česko je G nebo Y.",
   "- Když je text kusý a nedá se z něj nic doložit, dej novaUdalost=false a napiš to do duvod.",
+  "- Když tutéž událost hlásí víc zachycených zpráv, vyber jednu hlavní, ostatní jejich id vypiš do jejího dalsiId a u těch ostatních dej novaUdalost=false. Jedna událost = jedna položka s více zdroji.",
   "",
   "Odpovídej česky. Titulek je věcný: co se stalo a kde.",
 ].join("\n");
@@ -132,6 +135,29 @@ export function trideni(
   else if (!p.fakta.length) zahozeno = "z textu neplyne žádné doložené faktum";
 
   return { duplikat, neznamySlug, zahozeno };
+}
+
+/**
+ * Zdroje návrhu: hlavní zachycená zpráva a další hlášení téže události.
+ *
+ * Táž zpráva se do sběru dostane i dvakrát (přetisk, agregátor), proto se
+ * shoduje podle adresy — jinak by dva otisky jednoho článku vypadaly jako
+ * dvě nezávislá hlášení a pravidlo o dvou zdrojích by bylo jen na oko.
+ */
+export function zdrojeNavrhu(
+  kandidati: { titulek: string; publikovano?: string | null; zachyceno: string; zdroj: { nazev: string; url: string; primarni: boolean } }[],
+): { nazev: string; url: string; typ: string; publikovano: string; primarni: boolean; jazyk: string }[] {
+  const videnaUrl = new Set<string>();
+  return kandidati
+    .filter((z) => !videnaUrl.has(z.zdroj.url) && videnaUrl.add(z.zdroj.url))
+    .map((z) => ({
+      nazev: `${z.zdroj.nazev} — ${z.titulek}`.slice(0, 120),
+      url: z.zdroj.url,
+      typ: "media",
+      publikovano: `${(z.publikovano ?? z.zachyceno).slice(0, 10)}T00:00:00Z`,
+      primarni: z.zdroj.primarni,
+      jazyk: "cs",
+    }));
 }
 
 async function main() {
@@ -245,6 +271,21 @@ async function main() {
     const neznameho = datumZTextu
       ? p.nedolozeno
       : [...p.nedolozeno, `Datum události se z textu určit nedá. Uvedeno datum zveřejnění (${kdyZachyceno}) — ověřit.`];
+
+    /*
+      Jeden zdroj nestačí — to platí v celém projektu, u záznamů i u právě
+      ověřovaných. Druhý zdroj je jiná zachycená zpráva o téže události;
+      model je spojuje přes dalsiId.
+    */
+    const zdroje = zdrojeNavrhu([k, ...p.dalsiId.map((id) => podleId.get(id)).filter((x) => x !== undefined)]);
+
+    if (zdroje.length < 2) {
+      /* Ne potichu: v reportu je vidět, co čeká na dohledání druhého zdroje. */
+      (prehled[prehled.length - 1] as { zahozeno: string | null }).zahozeno =
+        "hlásí to jen jeden zdroj — druhý musí dohledat člověk";
+      continue;
+    }
+
     nove.push({
       kam: "zaznam",
       pripravil: "audit",
@@ -270,14 +311,7 @@ async function main() {
       vyznam: "[DOPLNIT] — co z toho plyne pro čtenáře v Česku.",
       eskalacniSpousteče: [],
       deeskalacniSignaly: [],
-      zdroje: [{
-        nazev: `${k.zdroj.nazev} — ${k.titulek}`.slice(0, 120),
-        url: k.zdroj.url,
-        typ: "media",
-        publikovano: `${kdy}T00:00:00Z`,
-        primarni: false,
-        jazyk: "cs",
-      }],
+      zdroje,
       souvisejici: [],
       historie: [{ kdy: `${kdy}T00:00:00Z`, text: "Zachyceno sběrem, posouzeno auditem.", novySignal: true }],
       novy: true,

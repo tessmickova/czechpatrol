@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { trideni } from "../nastroje/audit";
+import { trideni, zdrojeNavrhu } from "../nastroje/audit";
 
 /*
   Audit posuzuje zachycené zprávy a připravuje návrhy pro člověka. Tenhle
@@ -46,5 +46,32 @@ describe("třídění auditu", () => {
   it("každé zahození má vždy napsaný důvod", () => {
     const r = trideni({ novaUdalost: false, duplikatSlugu: null, fakta: ["x"] }, ZNAME);
     expect(r.zahozeno).toBe("není nová událost");
+  });
+});
+
+/*
+  Jeden zdroj nestačí — platí to u záznamů i u právě ověřovaných. Audit
+  vyráběl návrhy z jediného článku; schválit by je nešlo a fronta by se jimi
+  jen plnila. Hlídá to i testy/navrhy.test.ts nad hotovou frontou, tady jde
+  o to, aby se dva otisky jednoho článku nepočítaly jako dvě hlášení.
+*/
+describe("zdroje návrhu", () => {
+  const k = (url: string, nazev: string) => ({
+    titulek: "Sabotáž na trati",
+    zachyceno: "2026-09-18T10:00:00Z",
+    zdroj: { nazev, url, primarni: false },
+  });
+
+  it("dvě nezávislá hlášení dají dva zdroje", () => {
+    expect(zdrojeNavrhu([k("https://a.cz/1", "A"), k("https://b.cz/2", "B")])).toHaveLength(2);
+  });
+
+  it("týž článek dvakrát je pořád jeden zdroj", () => {
+    expect(zdrojeNavrhu([k("https://a.cz/1", "A"), k("https://a.cz/1", "A přetisk")])).toHaveLength(1);
+  });
+
+  it("datum zdroje se bere ze zveřejnění, ne ze zachycení", () => {
+    const z = zdrojeNavrhu([{ ...k("https://a.cz/1", "A"), publikovano: "2026-09-17T06:00:00Z" }]);
+    expect(z[0].publikovano).toBe("2026-09-17T00:00:00Z");
   });
 });
