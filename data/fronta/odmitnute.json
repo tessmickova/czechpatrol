@@ -1,5 +1,131 @@
 [
   {
+    "id": "k-beb967199c69d0ea",
+    "zachyceno": "2026-09-19T10:02:01.861Z",
+    "publikovano": "2026-09-19T09:54:00.000Z",
+    "zdroj": {
+      "nazev": "Český rozhlas — domácí zprávy",
+      "url": "https://www.irozhlas.cz/zpravy-domov/svata-barbora-drzi-ochrannou-ruku-nad-delniky-metra-d-jeste-pred-hloubenim_2609191021_brz",
+      "typ": "primary",
+      "primarni": true
+    },
+    "titulek": "Svatá Barbora drží ochrannou ruku nad dělníky metra D. Ještě před hloubením tunelů sošce požehnal farář",
+    "shrnuti": "Dělníci začali s ražbou pražského metra D v úseku od stanice Ryšánka na Nové Dvory, kde jako první vyhloubí přístupový a větrací tunel. Ještě před vstupem do podzemí ale museli nechat posvětit sochu svaté Barbory, která má nad probíhajícími pracemi držet ochrannou ruku.",
+    "duvod": "bez-skutku",
+    "kategorie": [],
+    "posouzeni": {
+      "podezreni": "zadne",
+      "duvod": "Stavba metra, církevní rituál, bez bezpečnostního hrozby",
+      "kdy": "2026-09-19T10:03:46.805Z"
+    }
+  },
+  {
+    "id": "k-18c584936a19b361",
+    "zachyceno": "2026-09-19T10:02:01.862Z",
+    "publikovano": "2026-09-19T09:53:00.000Z",
+    "zdroj": {
+      "nazev": "Český rozhlas — domácí zprávy",
+      "url": "https://www.irozhlas.cz/zpravy-svet/elektronicke-hlasovani-v-moskve-celi-masivnimu-utoku-podle-volebni-komise-je_2609191153_ape",
+      "typ": "primary",
+      "primarni": true
+    },
+    "titulek": "Elektronické hlasování v Moskvě čelí masivnímu útoku. Podle volební komise je situace pod kontrolou",
+    "shrnuti": "Systém on-line hlasování v Moskvě je od noci pod masivním vnějším útokem, situace je ale pod kontrolou. V sobotu to podle agentury TASS oznámila šéfka ruské volební komise Ella Pamfilovová. Ta neupřesnila, kdo za útokem stojí.",
+    "duvod": "vylouceno-tematem",
+    "kategorie": [
+      "rusko"
+    ],
+    "posouzeni": {
+      "podezreni": "vysoke",
+      "duvod": "Kybernetický útok na volební systém v Moskvě",
+      "kdy": "2026-09-19T10:03:46.805Z"
+    }
+  },
+  {
+    "id": "k-fa2220b41727029c",
+    "zachyceno": "2026-09-19T10:02:01.863Z",
+    "publikovano": "2026-09-19T09:45:00.000Z",
+    "zdroj": {
+      "nazev": "Český rozhlas — domácí zprávy",
+      "url": "https://www.irozhlas.cz/sport/fotbal/atmosfera-v-tymu-je-po-umrti-mikloska-urcite-jina-na-hristi-ale-znat-nebude_2609191145_rej",
+      "typ": "primary",
+      "primarni": true
+    },
+    "titulek": "Atmosféra v týmu je po úmrtí Mikloška určitě jiná. Na hřišti to ale znát nebude, myslí si Horváth o Baníku",
+    "shrnuti": "Čtyřmi zápasy v sobotu začne 9. kolo fotbalové Chance ligy, tedy poslední před netradičně dlouhou reprezentační pauzou. Sobotní program zakončí v 18 hodin souboj Slovácka s ostravským Baníkem. Myslí si expert Radiožurnálu Sport Pavel Horváth, že bude výkon baníkovských fotbalistů výrazně ovlivněn ne",
+    "duvod": "vylouceno-tematem",
+    "kategorie": [
+      "cr"
+    ],
+    "posouzeni": {
+      "podezreni": "zadne",
+      "duvod": "Zpráva o fotbale, smrt ve týmu, sport",
+      "kdy": "2026-09-19T10:03:46.805Z"
+    }
+  },
+  {
+    "id": "k-2b10aa67787682f7",
+    "zachyceno": "2026-09-19T10:02:01.864Z",
+    "publikovano": "2026-09-19T09:41:00.000Z",
+    "zdroj": {
+      "nazev": "Český rozhlas — domácí zprávy",
+      "url": "https://www.irozhlas.cz/sport/ostatni-sporty/novym-sefem-svetoveho-biatlonu-je-slovinec-farcnik-hamzu-ktery-uz-nekandidoval_2609191141_cen",
+      "typ": "primary",
+      "primarni": true
+    },
+    "titulek": "Novým šéfem světového biatlonu je Slovinec Farčnik. Hamzu, který už nekandidoval, nahradila Domeijová",
+    "shrnuti": "Slovinec Tim Farčnik je novým předsedou Mezinárodní biatlonové unie (IBU). Viceprezidenta Jiřího Hamzu, jenž funkci zastával osm let, vystřídala Švédka Sofia Domeijová. Farčnik nahradil Olleho Dahlina, kterému vypršel mandát. Nové vedení si zvolili členové na 17. řádném kongresu IBU v Berchtesgadenu",
+    "duvod": "bez-skutku",
+    "kategorie": [],
+    "posouzeni": {
+      "podezreni": "zadne",
+      "duvod": "Volby v mezinárodní sportovní organizaci",
+      "kdy": "2026-09-19T10:03:46.805Z"
+    }
+  },
+  {
+    "id": "k-68c1ccffeb5ca44c",
+    "zachyceno": "2026-09-19T10:02:01.865Z",
+    "publikovano": "2026-09-19T09:33:00.000Z",
+    "zdroj": {
+      "nazev": "Český rozhlas — domácí zprávy",
+      "url": "https://www.irozhlas.cz/zpravy-domov/hrady-v-libereckem-kraji-mely-uspesnou-letni-sezonu-houska-za-vdeci-i-modre-krvi_2609191133_raf",
+      "typ": "primary",
+      "primarni": true
+    },
+    "titulek": "Hrady v Libereckém kraji měly úspěšnou letní sezonu. Houska za to vděčí i Modré krvi",
+    "shrnuti": "Hrady v Libereckém kraji pomalu ukončují úspěšnou sezonu. Na hrad Houska se v létě přišlo podívat více než 20 tisíc lidí. Hrad na konci sezony chystá historické klání a po uzavření turistům plánuje také renovaci. „Jsou objednáni restaurátoři, kteří by měli dát už definitivně do kupy unikátní houseck",
+    "duvod": "bez-skutku",
+    "kategorie": [
+      "cr"
+    ],
+    "posouzeni": {
+      "podezreni": "zadne",
+      "duvod": "Návštěvnost hradů, cestovní ruch, turistika",
+      "kdy": "2026-09-19T10:03:46.805Z"
+    }
+  },
+  {
+    "id": "k-dcef355d626148c4",
+    "zachyceno": "2026-09-19T10:02:01.919Z",
+    "publikovano": "2026-09-19T09:15:00.000Z",
+    "zdroj": {
+      "nazev": "ERR News (Estonsko)",
+      "url": "https://news.err.ee/1610142052/tartu-illustration-festival-back-for-third-year-with-european-guests",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Tartu Illustration Festival back for third year with European guests",
+    "shrnuti": "Tartu Illustration Festival (TIF) is back September 25–26, bringing together creators from Estonia and beyond for two days of workshops, talks, a market and more.",
+    "duvod": "bez-skutku",
+    "kategorie": [],
+    "posouzeni": {
+      "podezreni": "zadne",
+      "duvod": "Ilustrační festival, kultura",
+      "kdy": "2026-09-19T10:03:46.805Z"
+    }
+  },
+  {
     "id": "k-5167cbaaa0e818b2",
     "zachyceno": "2026-09-19T09:10:41.960Z",
     "publikovano": "2026-09-19T09:04:00.000Z",
@@ -16,7 +142,11 @@
       "rusko",
       "cr"
     ],
-    "posouzeni": null
+    "posouzeni": {
+      "podezreni": "vysoke",
+      "duvod": "Pokračování války na Ukrajině, strategické záměry",
+      "kdy": "2026-09-19T10:03:46.805Z"
+    }
   },
   {
     "id": "k-37814664532503db",
@@ -34,7 +164,11 @@
     "kategorie": [
       "cr"
     ],
-    "posouzeni": null
+    "posouzeni": {
+      "podezreni": "zadne",
+      "duvod": "Výstava umění, kultura",
+      "kdy": "2026-09-19T10:03:46.805Z"
+    }
   },
   {
     "id": "k-f5b29b86a7c07440",
@@ -50,7 +184,11 @@
     "shrnuti": "Nařízení vydal říšský ministr vnitra 1. září 1941, podepsal ho šéf Hlavního úřadu říšské bezpečnosti Reinhard Heydrich a začalo platit 19. září. V té době už Židé museli snášet řadu drastických omezení a povinné označení žlutou hvězdou se stalo dalším krokem v jejich vydělení ze společnosti. Po něm ",
     "duvod": "bez-skutku",
     "kategorie": [],
-    "posouzeni": null
+    "posouzeni": {
+      "podezreni": "zadne",
+      "duvod": "Historická připomínka z druhé světové války",
+      "kdy": "2026-09-19T10:03:46.805Z"
+    }
   },
   {
     "id": "k-5a97306119c71189",
@@ -66,7 +204,11 @@
     "shrnuti": "Estonia and the United States are working toward an agreement on rare earth elements to strengthen supply security. The talks are not about Estonia's mineral deposits; the goal is to develop local industry and attract new investment, says Foreign Minister Margus Tsahkna. On Thursday, Lithuania signe",
     "duvod": "bez-skutku",
     "kategorie": [],
-    "posouzeni": null
+    "posouzeni": {
+      "podezreni": "stredni",
+      "duvod": "Dohoda USA-Estonsko o vzácných zemích, průmysl",
+      "kdy": "2026-09-19T10:03:46.805Z"
+    }
   },
   {
     "id": "k-9fdcd7f1be27bfb0",
@@ -82,7 +224,11 @@
     "shrnuti": "Výstava korunovačních klenotů ve Vladislavském sále na Pražském hradě je od soboty otevřená pro veřejnost. Od úterý se na ně mohly přijít podívat školní skupiny s rezervací. Už první den ráno se na výstavu stojí fronty dlouhé několik set metrů. Korunovační klenoty letos připomínají také 500. výročí ",
     "duvod": "vylouceno-tematem",
     "kategorie": [],
-    "posouzeni": null
+    "posouzeni": {
+      "podezreni": "zadne",
+      "duvod": "Výstava korunovačních klenotů, historie",
+      "kdy": "2026-09-19T10:03:46.805Z"
+    }
   },
   {
     "id": "k-f524c28c9ae5b736",
@@ -98,7 +244,11 @@
     "shrnuti": "Rozhodl se reprezentovat Česko, ale v nominaci fotbalového národního týmu chybí. Řeč je o německém útočníkovi Ryaenu Naderim, který měl díky bulharskému otci a české matce hned tři možnosti.",
     "duvod": "vylouceno-tematem",
     "kategorie": [],
-    "posouzeni": null
+    "posouzeni": {
+      "podezreni": "zadne",
+      "duvod": "Fotbalista, reprezentace, sport",
+      "kdy": "2026-09-19T10:03:46.805Z"
+    }
   },
   {
     "id": "k-0c96c712848bef98",
@@ -116,7 +266,11 @@
     "kategorie": [
       "nato"
     ],
-    "posouzeni": null
+    "posouzeni": {
+      "podezreni": "zadne",
+      "duvod": "Dni NATO, vojenská přehlídka, letiště",
+      "kdy": "2026-09-19T10:03:46.805Z"
+    }
   },
   {
     "id": "k-d2c5a0652c6453a8",
@@ -132,7 +286,11 @@
     "shrnuti": "In recent weeks, leading figures in the tech world have grown increasingly vocal in warning about the risks posed by the rapid development of artificial intelligence. However, University of Tartu Professor of Artificial Intelligence Meelis Kull says there is currently no existential risk.",
     "duvod": "bez-skutku",
     "kategorie": [],
-    "posouzeni": null
+    "posouzeni": {
+      "podezreni": "zadne",
+      "duvod": "Komentář o AI, bez hrozby bezpečnosti",
+      "kdy": "2026-09-19T10:03:46.805Z"
+    }
   },
   {
     "id": "k-19b2cfbc98df404f",
@@ -148,7 +306,11 @@
     "shrnuti": "Několik stovek lidí demonstrovalo v noci na sobotu před Kennedyho kulturním centrem ve Washingtonu proti plánům amerického prezidenta Donalda Trumpa na uzavření této instituce. Protestující kolem budovy centra vytvořili lidský řetěz, informovaly agentury. Uzavření centra bylo oznámeno v úterý.",
     "duvod": "bez-skutku",
     "kategorie": [],
-    "posouzeni": null
+    "posouzeni": {
+      "podezreni": "zadne",
+      "duvod": "Protest proti uzavření kulturního centra",
+      "kdy": "2026-09-19T10:03:46.805Z"
+    }
   },
   {
     "id": "k-c42cebad19386903",
@@ -164,7 +326,11 @@
     "shrnuti": "Ve Šternberku restaurují fasádu bývalého augustiniánského kláštera. Hotová má být na jaře roku 2027. Práce začaly v roce 2021 a byly rozplánované do sedmi etap. Podle původního plánu měli dělníci letos zvládnout pátou a šestou etapu, nakonec mohli začít i závěrečnou sedmou. Na dokončení obnovy fasád",
     "duvod": "bez-skutku",
     "kategorie": [],
-    "posouzeni": null
+    "posouzeni": {
+      "podezreni": "zadne",
+      "duvod": "Rekonstrukce kláštera, stavba",
+      "kdy": "2026-09-19T10:03:46.805Z"
+    }
   },
   {
     "id": "k-5ba3277f618b084a",
@@ -184,7 +350,11 @@
       "vojsko",
       "rusko"
     ],
-    "posouzeni": null
+    "posouzeni": {
+      "podezreni": "vysoke",
+      "duvod": "Vojenská pomoc Ukrajině od českých muzikantů",
+      "kdy": "2026-09-19T10:03:46.805Z"
+    }
   },
   {
     "id": "k-bce872d7f158f2cd",
@@ -200,7 +370,11 @@
     "shrnuti": "Construction on the Tallinn–Pärnu section will continue, but work on other segments can be postponed, says infrastructure minister Kuldar Leis.",
     "duvod": "bez-skutku",
     "kategorie": [],
-    "posouzeni": null
+    "posouzeni": {
+      "podezreni": "stredni",
+      "duvod": "Infrastrukturní projekt Rail Baltica, EU fondy",
+      "kdy": "2026-09-19T10:03:46.805Z"
+    }
   },
   {
     "id": "k-32af3fc5799a7194",
@@ -216,7 +390,11 @@
     "shrnuti": "Švédská popová superstar Zara Larsson kritizuje Bílý dům a americkou administrativu prezidenta Donalda Trumpa za to, že v příspěvcích na sociálních sítích bez jejího vědomí používá jednu z jejích nejznámějších písní. Prezidentská kancelář na sítě přidala video, na kterém jsou zobrazeny razie protiim",
     "duvod": "bez-skutku",
     "kategorie": [],
-    "posouzeni": null
+    "posouzeni": {
+      "podezreni": "zadne",
+      "duvod": "Kritika používání písně v deportačních klipech",
+      "kdy": "2026-09-19T10:03:46.805Z"
+    }
   },
   {
     "id": "k-da5c3db02c4ee8ec",
@@ -232,7 +410,11 @@
     "shrnuti": "Informační centrum ve Staré radnici ve Vrchlabí uspořádalo výstavu prací žáků výtvarného oboru místní základní umělecké školy. Jmenuje se „Písně v plátně“. Třicet obrazů vypovídá o cestě k folkloru, o inspiracích v lidové tradici a o významu minulosti pro dnešní dobu.",
     "duvod": "bez-skutku",
     "kategorie": [],
-    "posouzeni": null
+    "posouzeni": {
+      "podezreni": "zadne",
+      "duvod": "Výstava dětských prací o folkloru",
+      "kdy": "2026-09-19T10:03:46.805Z"
+    }
   },
   {
     "id": "k-8a77f642ad6f4ad1",
@@ -250,7 +432,11 @@
     "kategorie": [
       "cr"
     ],
-    "posouzeni": null
+    "posouzeni": {
+      "podezreni": "zadne",
+      "duvod": "Hokej, extraliga, sport",
+      "kdy": "2026-09-19T10:03:46.805Z"
+    }
   },
   {
     "id": "k-9e0d0dd6f51aa2fd",
@@ -266,7 +452,11 @@
     "shrnuti": "Klub vojenské historie Padesátdvojka pořádá den s armádou. V Pivovarské zahradě v Českém Krumlově tak bude od soboty 19. září do neděle 20. září možné vidět ukázky současných i historických vozidel, polní nemocnice a polní kuchyně. Součásti akce budou také komentované prohlídky a odborné přednášky. ",
     "duvod": "bez-skutku",
     "kategorie": [],
-    "posouzeni": null
+    "posouzeni": {
+      "podezreni": "zadne",
+      "duvod": "Vojenská historie, akce klubu",
+      "kdy": "2026-09-19T10:03:46.805Z"
+    }
   },
   {
     "id": "k-ca158a2f9923feae",
@@ -282,7 +472,11 @@
     "shrnuti": "Reve Lambur, the lead organizer of Day of Countryside Living, said that anyone interested in rural life should definitely go meet the vibrant communities who are eager to welcome new residents.",
     "duvod": "bez-skutku",
     "kategorie": [],
-    "posouzeni": null
+    "posouzeni": {
+      "podezreni": "zadne",
+      "duvod": "Den venkovského života, rozhovor",
+      "kdy": "2026-09-19T10:03:46.805Z"
+    }
   },
   {
     "id": "k-3ba6249db38cd194",
@@ -298,7 +492,11 @@
     "shrnuti": "Přípravy na letošní komunální a senátní volby vrcholí a obce začínají školit členy volebních komisí. V Orlové už za sebou má první schůzku všech 300 komisařek a komisařů, kteří se seznamovali s pravidly hlasování i s novinkami, které letošní volby přinášejí.",
     "duvod": "vylouceno-tematem",
     "kategorie": [],
-    "posouzeni": null
+    "posouzeni": {
+      "podezreni": "zadne",
+      "duvod": "Školení volebních komisí, komunální volby",
+      "kdy": "2026-09-19T10:03:46.805Z"
+    }
   },
   {
     "id": "k-1d1c5887347ba29b",
@@ -314,7 +512,11 @@
     "shrnuti": "Over the past three years, more and more Israelis have been purchasing property and investing in Cyprus, with many moving to the island permanently. How has this changed the Cypriot economy and how are locals responding?",
     "duvod": "bez-skutku",
     "kategorie": [],
-    "posouzeni": null
+    "posouzeni": {
+      "podezreni": "zadne",
+      "duvod": "Izraelci se stěhují na Kypr, ekonomika",
+      "kdy": "2026-09-19T10:03:46.805Z"
+    }
   },
   {
     "id": "k-a9d8958487f03180",
@@ -330,7 +532,11 @@
     "shrnuti": "With less than half a year until the Riigikogu elections, Estonia's major political parties are assembling candidate lists and drafting election programs. Some have already begun campaigning, while others will finalize their lists and platforms only in January.",
     "duvod": "bez-skutku",
     "kategorie": [],
-    "posouzeni": null
+    "posouzeni": {
+      "podezreni": "zadne",
+      "duvod": "Příprava voleb v Estonsku, politika",
+      "kdy": "2026-09-19T10:03:46.805Z"
+    }
   },
   {
     "id": "k-b55311d3844d9518",
@@ -348,7 +554,11 @@
     "kategorie": [
       "cr"
     ],
-    "posouzeni": null
+    "posouzeni": {
+      "podezreni": "zadne",
+      "duvod": "Týdeník o různých tématech, zpravodajství",
+      "kdy": "2026-09-19T10:03:46.805Z"
+    }
   },
   {
     "id": "k-ae89fe6a0bcd3b16",
@@ -364,7 +574,11 @@
     "shrnuti": "Houbaři se konečně dočkali. Po abnormálně suchém létě lesy zalily srážky a z podrostu začínají vykukovat houby. Zatím sice nerostou úplně všude, ale například na Pelhřimovsku už lidé nosí domů plné koše.",
     "duvod": "bez-skutku",
     "kategorie": [],
-    "posouzeni": null
+    "posouzeni": {
+      "podezreni": "zadne",
+      "duvod": "Houbaření, sběr hub, příroda",
+      "kdy": "2026-09-19T10:03:46.805Z"
+    }
   },
   {
     "id": "k-31b5facdfb49d716",
@@ -380,7 +594,11 @@
     "shrnuti": "Čeští tenisté hrají se Spojenými státy po úvodním dni nerozhodně 1:1. Jakub Menšík nejprve podlehl Learneru Tienovi, Jiří Lehečka pak porazil Bena Sheltona. I v sobotu se bude hrát před zaplněnými tribunami libeňské haly, kam se daviscupové utkání vrátilo po 13 letech.",
     "duvod": "bez-skutku",
     "kategorie": [],
-    "posouzeni": null
+    "posouzeni": {
+      "podezreni": "zadne",
+      "duvod": "Tenis, Davis Cup, sport",
+      "kdy": "2026-09-19T10:03:46.805Z"
+    }
   },
   {
     "id": "k-5995987fa49b389d",
@@ -396,7 +614,11 @@
     "shrnuti": "Justice Chancellor Ülle Madise is questioning a new retirement age system that could mean people in Estonia born in the same year start receiving a pension at different times.",
     "duvod": "bez-skutku",
     "kategorie": [],
-    "posouzeni": null
+    "posouzeni": {
+      "podezreni": "stredni",
+      "duvod": "Systém důchodového věku v Estonsku",
+      "kdy": "2026-09-19T10:03:46.805Z"
+    }
   },
   {
     "id": "k-fc0a6372fb1d986b",
@@ -412,7 +634,11 @@
     "shrnuti": "V sobotu 19. září se v Přelouči uskuteční už 32. ročník Cen Františka Filipovského za dabing. Celá událost bude přenášena živě v iVysílání České televize. Návštěvníci města budou mít také možnost udílení sledovat na velkoplošné obrazovce na Masarykově náměstí. Porota letos vybírala ze 140 návrhů, na",
     "duvod": "bez-skutku",
     "kategorie": [],
-    "posouzeni": null
+    "posouzeni": {
+      "podezreni": "zadne",
+      "duvod": "Ceny za dabing, filmová kultura",
+      "kdy": "2026-09-19T10:03:46.805Z"
+    }
   },
   {
     "id": "k-8f0910b3e6134be5",
@@ -430,7 +656,11 @@
     "kategorie": [
       "rusko"
     ],
-    "posouzeni": null
+    "posouzeni": {
+      "podezreni": "zadne",
+      "duvod": "Ruské volby, bez příslušnosti k Česku",
+      "kdy": "2026-09-19T10:03:46.805Z"
+    }
   },
   {
     "id": "k-ed7e3b1bc2ede3ac",
@@ -446,7 +676,11 @@
     "shrnuti": "Vzácné historické lokomotivy z Česka i zahraničí dorazily na 7. ročník Festivalu parních lokomotiv v Benešově. Divácky oblíbená akce je ale letos naposledy. Na trati z Prahy přes Benešov do Českých Budějovic bude od poloviny prosince letošního roku fungovat nový zabezpečovací systém ETCS, který parn",
     "duvod": "bez-skutku",
     "kategorie": [],
-    "posouzeni": null
+    "posouzeni": {
+      "podezreni": "zadne",
+      "duvod": "Festival parních lokomotiv, kultura",
+      "kdy": "2026-09-19T10:03:46.805Z"
+    }
   },
   {
     "id": "k-eb193e8cab8b4b7e",
@@ -465,7 +699,11 @@
       "sabotaz",
       "vojsko"
     ],
-    "posouzeni": null
+    "posouzeni": {
+      "podezreni": "vysoke",
+      "duvod": "Sebevražedný útok v Pákistánu, 31 mrtvých",
+      "kdy": "2026-09-19T10:03:46.805Z"
+    }
   },
   {
     "id": "k-8534af617122fe00",
@@ -481,7 +719,11 @@
     "shrnuti": "Městské divadlo Zlín zahájí v sobotu 19. září sezonu uvedením satirické komedie Volpone. Hra pojednává o bohatém benátském měšťanovi, který předstírá smrtelnou nemoc a s pomocí svého sluhy hledá údajného dědice. Příběh o chamtivosti a lidské hlouposti je podle tvůrců aktuální i po staletích.",
     "duvod": "bez-skutku",
     "kategorie": [],
-    "posouzeni": null
+    "posouzeni": {
+      "podezreni": "zadne",
+      "duvod": "Divadelní představení, kultura",
+      "kdy": "2026-09-19T10:03:46.805Z"
+    }
   },
   {
     "id": "k-be8957e6c67ce2d5",
@@ -497,7 +739,11 @@
     "shrnuti": "Schodek státního rozpočtu v příštím roce se zřejmě sníží o několik miliard korun proti původnímu návrhu ministerstva financí, který počítal s 389 miliardami. I přes toto snížení bude návrh znamenat druhý nejhlubší rozpočtový deficit od vzniku Česka. Podobu rozpočtu v pondělí projedná vláda a následn",
     "duvod": "vylouceno-tematem",
     "kategorie": [],
-    "posouzeni": null
+    "posouzeni": {
+      "podezreni": "zadne",
+      "duvod": "Státní rozpočet, ekonomika",
+      "kdy": "2026-09-19T10:03:46.805Z"
+    }
   },
   {
     "id": "k-769795d03b251209",
@@ -513,7 +759,11 @@
     "shrnuti": "„Rozhodují politicky, a ne skutečně obsahově, což nás mrzí,“ řekl Andrej Babiš (ANO) o senátorech, když vyzýval voliče, aby v nadcházejících volbách do horní komory Parlamentu dali hlas kandidátům z hnutí ANO. Dodejme, že toho času je v 81členném Senátu jen 15 zástupců hnutí ANO. A za Okamurovce a M",
     "duvod": "bez-skutku",
     "kategorie": [],
-    "posouzeni": null
+    "posouzeni": {
+      "podezreni": "zadne",
+      "duvod": "Komentář o reformě Senátu, politika",
+      "kdy": "2026-09-19T10:03:46.805Z"
+    }
   },
   {
     "id": "k-1c2390b0ea349ec5",
@@ -531,7 +781,11 @@
     "kategorie": [
       "pravo"
     ],
-    "posouzeni": null
+    "posouzeni": {
+      "podezreni": "vysoke",
+      "duvod": "Vyhlášení nouzového stavu kvůli záplavám",
+      "kdy": "2026-09-19T10:03:46.805Z"
+    }
   },
   {
     "id": "k-ff0d45d3bc3d980f",
@@ -547,7 +801,11 @@
     "shrnuti": "Karlovarský kraj má nově vlastní bezpečnostní kanál na WhatsAppu. Kraj chce tímto způsobem dostat ověřená sdělení k obyvatelům co nejrychleji. Lidé tak v aplikaci najdou například informace o aktuálních uzavírkách a dopravních omezeních na krajských silnicích, ale i jiná upozornění.",
     "duvod": "bez-skutku",
     "kategorie": [],
-    "posouzeni": null
+    "posouzeni": {
+      "podezreni": "zadne",
+      "duvod": "WhatsApp kanál kraje pro dopravní zprávy",
+      "kdy": "2026-09-19T10:03:46.805Z"
+    }
   },
   {
     "id": "k-bcccd3dc79e6e335",
@@ -565,7 +823,11 @@
     "kategorie": [
       "rusko"
     ],
-    "posouzeni": null
+    "posouzeni": {
+      "podezreni": "vysoke",
+      "duvod": "Americké sankce proti Rusku kvůli Ukrajině",
+      "kdy": "2026-09-19T10:03:46.805Z"
+    }
   },
   {
     "id": "k-13134b73f7d271f2",
@@ -583,7 +845,11 @@
     "kategorie": [
       "cr"
     ],
-    "posouzeni": null
+    "posouzeni": {
+      "podezreni": "zadne",
+      "duvod": "Izraelské volby, politika, sans bezpečnostního charakteru",
+      "kdy": "2026-09-19T10:03:46.805Z"
+    }
   },
   {
     "id": "k-0f2273ca2df93af5",
@@ -599,7 +865,11 @@
     "shrnuti": "Na vinicích je letos méně hroznů, než vinaři čekali. V letních vedrech hrozny totiž dozrály rychleji než obvykle, jsou ale mnohem menší. I když je ovoce podle vinařů kvalitní, bude podle prvních odhadů sklizeň asi o třetinu menší.",
     "duvod": "bez-skutku",
     "kategorie": [],
-    "posouzeni": null
+    "posouzeni": {
+      "podezreni": "zadne",
+      "duvod": "Zemědělství, sklizeň hroznů, ekonomika",
+      "kdy": "2026-09-19T10:03:46.805Z"
+    }
   },
   {
     "id": "k-0f005f3eb4ad976b",
@@ -617,7 +887,11 @@
     "kategorie": [
       "pravo"
     ],
-    "posouzeni": null
+    "posouzeni": {
+      "podezreni": "zadne",
+      "duvod": "Přírodní katastrofa v USA, bez bezpečnostního prvku",
+      "kdy": "2026-09-19T10:03:46.805Z"
+    }
   },
   {
     "id": "k-d8b948cb300839c4",
@@ -636,7 +910,11 @@
       "vojsko",
       "cr"
     ],
-    "posouzeni": null
+    "posouzeni": {
+      "podezreni": "zadne",
+      "duvod": "Soud, právní případ, osobní trestní věc",
+      "kdy": "2026-09-19T10:03:46.805Z"
+    }
   },
   {
     "id": "k-4cbe372978b7b097",
@@ -652,7 +930,11 @@
     "shrnuti": "An outbreak of malaria at Frankfurt Airport this summer has raised alarm. Experts believe parasites probably arrived in a passenger&apos;s luggage. But with the onset of fall, the risks of contracting the disease are low.",
     "duvod": "bez-skutku",
     "kategorie": [],
-    "posouzeni": null
+    "posouzeni": {
+      "podezreni": "zadne",
+      "duvod": "Zdravotnictví, onemocnění, bez bezpečnostního prvku",
+      "kdy": "2026-09-19T10:03:46.805Z"
+    }
   },
   {
     "id": "k-83e9529895aebe46",
@@ -671,7 +953,11 @@
       "infrastruktura",
       "rusko"
     ],
-    "posouzeni": null
+    "posouzeni": {
+      "podezreni": "vysoke",
+      "duvod": "Ruské hybridní útoky na evropskou kritickou infrastrukturu",
+      "kdy": "2026-09-19T10:03:46.805Z"
+    }
   },
   {
     "id": "k-d406dbc9718280a9",
@@ -689,7 +975,11 @@
     "kategorie": [
       "pravo"
     ],
-    "posouzeni": null
+    "posouzeni": {
+      "podezreni": "zadne",
+      "duvod": "Přírodní katastrofa v USA, bez bezpečnostního prvku",
+      "kdy": "2026-09-19T10:03:46.805Z"
+    }
   },
   {
     "id": "k-27beba54729c5aaa",
@@ -707,7 +997,11 @@
     "kategorie": [
       "kyber"
     ],
-    "posouzeni": null
+    "posouzeni": {
+      "podezreni": "vysoke",
+      "duvod": "Severokorejská kybernetická útoky, krádeže osobních dat",
+      "kdy": "2026-09-19T10:03:46.805Z"
+    }
   },
   {
     "id": "k-a70c830d86b34040",
@@ -723,7 +1017,11 @@
     "shrnuti": "Status velvyslance a vedoucího stálých misí se liší, „tu druhou skupinu (…) vybírá a de facto jmenuje ministr zahraničí“, uvedl v Interview ČT24 poslanec Tomáš Doležal (SPD). Vládní koalice chtěla novelou prezidentovi odebrat pravomoc pověřovat a odvolávat vedoucí stálých misí u mezinárodních organi",
     "duvod": "vylouceno-tematem",
     "kategorie": [],
-    "posouzeni": null
+    "posouzeni": {
+      "podezreni": "zadne",
+      "duvod": "Česká domácí politika, právomoci prezidenta",
+      "kdy": "2026-09-19T10:03:46.805Z"
+    }
   },
   {
     "id": "k-e16e191edb7b8b13",
@@ -739,7 +1037,11 @@
     "shrnuti": "O'Leary described his choice of language as \"careless\" and said \"it won't happen again\".",
     "duvod": "bez-skutku",
     "kategorie": [],
-    "posouzeni": null
+    "posouzeni": {
+      "podezreni": "zadne",
+      "duvod": "Komentář manažera letecké společnosti, bez bezpečnostního prvku",
+      "kdy": "2026-09-19T10:03:46.805Z"
+    }
   },
   {
     "id": "k-cb327782738748be",
@@ -757,7 +1059,11 @@
     "kategorie": [
       "pravo"
     ],
-    "posouzeni": null
+    "posouzeni": {
+      "podezreni": "zadne",
+      "duvod": "Přírodní katastrofa v USA, bez bezpečnostního prvku",
+      "kdy": "2026-09-19T10:03:46.805Z"
+    }
   },
   {
     "id": "k-6441a5704cb72e96",
@@ -775,7 +1081,11 @@
     "kategorie": [
       "drony"
     ],
-    "posouzeni": null
+    "posouzeni": {
+      "podezreni": "vysoke",
+      "duvod": "Nález dronu u německé vojenské základny, sabotáž",
+      "kdy": "2026-09-19T10:03:46.805Z"
+    }
   },
   {
     "id": "k-da44235cc3e59bd9",
@@ -793,7 +1103,11 @@
     "kategorie": [
       "pravo"
     ],
-    "posouzeni": null
+    "posouzeni": {
+      "podezreni": "zadne",
+      "duvod": "Přírodní katastrofa v USA, bez bezpečnostního prvku",
+      "kdy": "2026-09-19T10:03:46.805Z"
+    }
   },
   {
     "id": "k-a05e86ca39e79c7c",
@@ -811,7 +1125,11 @@
     "kategorie": [
       "rusko"
     ],
-    "posouzeni": null
+    "posouzeni": {
+      "podezreni": "vysoke",
+      "duvod": "Ruské útoky na evropskou infrastrukturu, sabotáž",
+      "kdy": "2026-09-19T10:03:46.805Z"
+    }
   },
   {
     "id": "k-217ed6f220bc212f",
@@ -829,7 +1147,11 @@
     "kategorie": [
       "drony"
     ],
-    "posouzeni": null
+    "posouzeni": {
+      "podezreni": "vysoke",
+      "duvod": "Český vzdušný prostor, gripenové stíhačky, vzduchobraná",
+      "kdy": "2026-09-19T10:03:46.805Z"
+    }
   },
   {
     "id": "k-45499b28f126b454",
@@ -845,7 +1167,11 @@
     "shrnuti": "Though Canada may be some distance from Europe geographically, closer political ties are in the cards. With talk of an associate membership, DW takes a look at other arrangements the EU has with particular countries.",
     "duvod": "bez-skutku",
     "kategorie": [],
-    "posouzeni": null
+    "posouzeni": {
+      "podezreni": "zadne",
+      "duvod": "Politické vztahy EU a Kanady, bez bezpečnostního prvku",
+      "kdy": "2026-09-19T10:03:46.805Z"
+    }
   },
   {
     "id": "k-1a3853d41ac42836",
@@ -861,7 +1187,11 @@
     "shrnuti": "The Transport Administration is installing thermal cameras along major highways to collect data on when, at what speed, and what types of vehicles are traveling there.",
     "duvod": "bez-skutku",
     "kategorie": [],
-    "posouzeni": null
+    "posouzeni": {
+      "podezreni": "zadne",
+      "duvod": "Dopravní infrastruktura, sběr dat, bez bezpečnostního prvku",
+      "kdy": "2026-09-19T10:03:46.805Z"
+    }
   },
   {
     "id": "k-686124c11f34b917",
@@ -877,7 +1207,11 @@
     "shrnuti": "Požár haly na zpracování plastů v Rynholci zatím není pod kontrolou, avšak hasiči dohašují ohniska. Velitel lokalizaci zřejmě vyhlásí až v sobotu v brzkých ranních hodinách. Jde o stejný areál, kde loni hořela skládka. Škoda dosáhne podle předběžného odhadu hasičů a majitele 300 až 400 milionů korun",
     "duvod": "bez-skutku",
     "kategorie": [],
-    "posouzeni": null
+    "posouzeni": {
+      "podezreni": "zadne",
+      "duvod": "Požár průmyslové haly, havárie bez bezpečnostního prvku",
+      "kdy": "2026-09-19T10:03:46.805Z"
+    }
   },
   {
     "id": "k-a129bde87b59576b",
@@ -895,7 +1229,11 @@
     "kategorie": [
       "drony"
     ],
-    "posouzeni": null
+    "posouzeni": {
+      "podezreni": "zadne",
+      "duvod": "Vzdělávání, drony pro děti, bez bezpečnostního prvku",
+      "kdy": "2026-09-19T10:03:46.805Z"
+    }
   },
   {
     "id": "k-37c632e5b69d9d05",
@@ -916,7 +1254,11 @@
       "vojsko",
       "rusko"
     ],
-    "posouzeni": null
+    "posouzeni": {
+      "podezreni": "vysoke",
+      "duvod": "Ruské hrozby, posílení policie, hybridní válka",
+      "kdy": "2026-09-19T10:03:46.805Z"
+    }
   },
   {
     "id": "k-58f7df91f52a3114",
@@ -932,7 +1274,11 @@
     "shrnuti": "People heading into the woods should wear white clothing or a neon-colored reflective vest, determine their location before entering the woods and tell a family member or trusted friend where their secret mushroom-picking spot is, a PPA expert told ERR.",
     "duvod": "bez-skutku",
     "kategorie": [],
-    "posouzeni": null
+    "posouzeni": {
+      "podezreni": "zadne",
+      "duvod": "Lesnictví, bezpečnost houbařů, bez bezpečnostního prvku",
+      "kdy": "2026-09-19T10:03:46.805Z"
+    }
   },
   {
     "id": "k-71886998b4ddd585",
@@ -950,7 +1296,11 @@
     "kategorie": [
       "pravo"
     ],
-    "posouzeni": null
+    "posouzeni": {
+      "podezreni": "zadne",
+      "duvod": "Zemědělství, katastrofa živin, bez bezpečnostního prvku",
+      "kdy": "2026-09-19T10:03:46.805Z"
+    }
   },
   {
     "id": "k-bad586ba305c1ba5",
@@ -966,7 +1316,11 @@
     "shrnuti": "The Riigikogu's EU Affairs Committee (ELAK) clarified the government's mandate for negotiations on reforming the Emissions Trading System (ETS) at its meeting on Friday, but avoided setting any numerical parameters.",
     "duvod": "bez-skutku",
     "kategorie": [],
-    "posouzeni": null
+    "posouzeni": {
+      "podezreni": "zadne",
+      "duvod": "Klimatická politika EU, bez bezpečnostního prvku",
+      "kdy": "2026-09-19T10:03:46.805Z"
+    }
   },
   {
     "id": "k-32cbea8f49cda7b7",
@@ -985,7 +1339,11 @@
       "nato",
       "hranice"
     ],
-    "posouzeni": null
+    "posouzeni": {
+      "podezreni": "zadne",
+      "duvod": "Obranné výdaje, politická diskuse, bez zvěřené hrozby",
+      "kdy": "2026-09-19T10:03:46.805Z"
+    }
   },
   {
     "id": "k-f8a311bb3d81cb84",
@@ -1001,7 +1359,11 @@
     "shrnuti": "This week marked the official start of preparations for the XIV Youth Song and Dance Celebration and the XXIX Song and XXII Dance Celebration, taking place in summer 2028. Artistic director of the Song Celebration, Riivo Jõgi, said that some changes can be expected, and meetings are underway to find",
     "duvod": "bez-skutku",
     "kategorie": [],
-    "posouzeni": null
+    "posouzeni": {
+      "podezreni": "zadne",
+      "duvod": "Kultura, přípravy hudebního festivalu, bez bezpečnostního prvku",
+      "kdy": "2026-09-19T10:03:46.805Z"
+    }
   },
   {
     "id": "k-8cacc6627e99601e",
@@ -1017,7 +1379,11 @@
     "shrnuti": "Cristiano Ronaldo is named in the first squad selected by new Portugal coach Jorge Jesus for their upcoming Nations League games.",
     "duvod": "bez-skutku",
     "kategorie": [],
-    "posouzeni": null
+    "posouzeni": {
+      "podezreni": "zadne",
+      "duvod": "Sport, fotbal, bez bezpečnostního prvku",
+      "kdy": "2026-09-19T10:03:46.805Z"
+    }
   },
   {
     "id": "k-59c2b51363fcccdc",
@@ -1035,7 +1401,11 @@
     "kategorie": [
       "infrastruktura"
     ],
-    "posouzeni": null
+    "posouzeni": {
+      "podezreni": "vysoke",
+      "duvod": "Ochrana podmořských kabelů, finské cvičení, kritická infrastruktura",
+      "kdy": "2026-09-19T10:03:46.805Z"
+    }
   },
   {
     "id": "k-60852a32054a5131",
@@ -1051,7 +1421,11 @@
     "shrnuti": "Police reportedly fired into the air on Friday morning as they struggled to contain crowds jostling to secure a place at the tented site.",
     "duvod": "bez-skutku",
     "kategorie": [],
-    "posouzeni": null
+    "posouzeni": {
+      "podezreni": "zadne",
+      "duvod": "Migrace, pořádkový problém, bez bezpečnostního prvku",
+      "kdy": "2026-09-19T10:03:46.805Z"
+    }
   },
   {
     "id": "k-452f1b243500350c",
@@ -1069,7 +1443,11 @@
     "kategorie": [
       "infrastruktura"
     ],
-    "posouzeni": null
+    "posouzeni": {
+      "podezreni": "vysoke",
+      "duvod": "Kybernetické útoky na tankery, hrozba kritické infrastruktuře",
+      "kdy": "2026-09-19T10:03:46.805Z"
+    }
   },
   {
     "id": "k-e312ea5555f1c310",
@@ -1085,7 +1463,11 @@
     "shrnuti": "The Northern District Prosecutor's Office has closed a criminal case against a man who arranged a break‑in at a stranger's apartment to retrieve his missing cat.",
     "duvod": "bez-skutku",
     "kategorie": [],
-    "posouzeni": null
+    "posouzeni": {
+      "podezreni": "zadne",
+      "duvod": "Trestní případy, osobní věci, bez bezpečnostního prvku",
+      "kdy": "2026-09-19T10:03:46.805Z"
+    }
   },
   {
     "id": "k-861858312bc9f4e6",
@@ -1101,7 +1483,11 @@
     "shrnuti": "Estonian freestyle skier and Olympic silver medalist Henry Sildaru was drafted to XC Golden State, where he'll team up with gold medalist Eileen Gu in the new X Games league.",
     "duvod": "vylouceno-tematem",
     "kategorie": [],
-    "posouzeni": null
+    "posouzeni": {
+      "podezreni": "zadne",
+      "duvod": "Sport, olympijská medaile, bez bezpečnostního prvku",
+      "kdy": "2026-09-19T10:03:46.805Z"
+    }
   },
   {
     "id": "k-2e12f1415e700c8f",
@@ -1117,7 +1503,11 @@
     "shrnuti": "This fall, 187 new medical residents began specialist training at the University of Tartu, bringing the total number of residents to a record 891. In recent years, interest and competition have intensified in critical specialties such as family medicine and emergency medicine, the university said.",
     "duvod": "bez-skutku",
     "kategorie": [],
-    "posouzeni": null
+    "posouzeni": {
+      "podezreni": "zadne",
+      "duvod": "Vzdělání, medicínské rezidentury, bez bezpečnostního prvku",
+      "kdy": "2026-09-19T10:03:46.805Z"
+    }
   },
   {
     "id": "k-69b98769f6f64a72",
@@ -1135,7 +1525,11 @@
     "kategorie": [
       "rusko"
     ],
-    "posouzeni": null
+    "posouzeni": {
+      "podezreni": "vysoke",
+      "duvod": "Ruské ztráty na Ukrajině, vojenský konflikt v Evropě",
+      "kdy": "2026-09-19T10:03:46.805Z"
+    }
   },
   {
     "id": "k-323dcc01ec7a6d51",
@@ -1151,7 +1545,11 @@
     "shrnuti": "Ukrajinský prezident Volodymyr Zelenskyj v pátek v horském středisku Bukovel na západě Ukrajiny přivítal lídry a představitele zemí takzvané Karpatské osmičky, jejíž třídenní summit tam začíná. V úvodním projevu ohlásil, že první den budou podepsány investiční a obchodní dohody v objemu jedné miliar",
     "duvod": "bez-skutku",
     "kategorie": [],
-    "posouzeni": null
+    "posouzeni": {
+      "podezreni": "zadne",
+      "duvod": "Ukrajinská politika, obchodní jednání, bez bezpečnostního prvku",
+      "kdy": "2026-09-19T10:03:46.805Z"
+    }
   },
   {
     "id": "k-011b89763c527d4e",
@@ -1167,7 +1565,11 @@
     "shrnuti": "Europe needs an emissions trading system that works — one that pushes companies to adopt better technologies but does not force European industry to shut down before those technologies actually exist, writes Andres Tropp.",
     "duvod": "bez-skutku",
     "kategorie": [],
-    "posouzeni": null
+    "posouzeni": {
+      "podezreni": "zadne",
+      "duvod": "Klimatická politika, komentář bez bezpečnostního prvku",
+      "kdy": "2026-09-19T10:03:46.805Z"
+    }
   },
   {
     "id": "k-15611e90a51fd94d",
@@ -1185,7 +1587,11 @@
     "kategorie": [
       "kyber"
     ],
-    "posouzeni": null
+    "posouzeni": {
+      "podezreni": "vysoke",
+      "duvod": "Kybernetické útoky, digitální bezpečnost v Perském zálivu",
+      "kdy": "2026-09-19T10:03:46.805Z"
+    }
   },
   {
     "id": "k-317221612a9e1107",
@@ -1201,7 +1607,11 @@
     "shrnuti": "In his commentary series, Harri Tiido this time examines survival in chaos with the help of Mark Leonard. Leonard writes that today's global divide is not so much between democracies and autocracies or East and West, but between different approaches to the very idea of order, Tiido notes.",
     "duvod": "bez-skutku",
     "kategorie": [],
-    "posouzeni": null
+    "posouzeni": {
+      "podezreni": "zadne",
+      "duvod": "Geopolitika, komentář bez konkrétní bezpečnostní hrozby",
+      "kdy": "2026-09-19T10:03:46.805Z"
+    }
   },
   {
     "id": "k-2ca85156616cb759",
@@ -1219,7 +1629,11 @@
     "kategorie": [
       "pravo"
     ],
-    "posouzeni": null
+    "posouzeni": {
+      "podezreni": "zadne",
+      "duvod": "Přírodní katastrofa v USA, bez bezpečnostního prvku",
+      "kdy": "2026-09-19T10:03:46.805Z"
+    }
   },
   {
     "id": "k-fd7ba97aa21fd37c",
@@ -1235,7 +1649,11 @@
     "shrnuti": "Estonian sumo wrestler Anatoli Zadorožnõi has officially joined Japan's professional sumo league, the Estonian Sumo Association announced.",
     "duvod": "bez-skutku",
     "kategorie": [],
-    "posouzeni": null
+    "posouzeni": {
+      "podezreni": "zadne",
+      "duvod": "Sport, sumo, bez bezpečnostního prvku",
+      "kdy": "2026-09-19T10:03:46.805Z"
+    }
   },
   {
     "id": "k-84da567553b243b2",
@@ -1251,7 +1669,11 @@
     "shrnuti": "\"Lihtsad uudised,\" meaning easy or simple news, is for anyone who wants to improve their Estonian language skills. Listen and read a selection of this week's news stories below.",
     "duvod": "bez-skutku",
     "kategorie": [],
-    "posouzeni": null
+    "posouzeni": {
+      "podezreni": "zadne",
+      "duvod": "Jazykové cvičení, různé zprávy, bez bezpečnostního prvku",
+      "kdy": "2026-09-19T10:03:46.805Z"
+    }
   },
   {
     "id": "k-06ed1b9a9e25db8d",
@@ -8346,106 +8768,6 @@
     "kategorie": [
       "hranice"
     ],
-    "posouzeni": null
-  },
-  {
-    "id": "k-07e2037cf44d2b06",
-    "zachyceno": "2026-09-15T16:02:43.259Z",
-    "publikovano": "2026-09-15T12:38:42.000Z",
-    "zdroj": {
-      "nazev": "Google News — mimořádné vysílání rozhlasu",
-      "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxQeVRySTBfeFUwaVZSWlpjQ2lraFAxd1o2ZzhQWW91MUNJeDVBVndpcmVHbUlyVVFnXzhEX05CTWRNd2VsS25nNTdIUHlTaWUzY3VMZlVYMFQ5TE1TU2l5LWpvaHo3WnhKMjMwbVAzNVpPMkdDREM5cm5aZjd4U1R2LVNoWWtGYXNIb214bGpnTFl5LWd3MVVoVjlHLVBqdXpJTDRqQmNRZW81cjdKR0pOUW1DM0loakozMjhFd0N0c3lPQQ?oc=5",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Od první pomoci po krizové vysílání. Pražská záchranka rozvíjí spolupráci s Českým rozhlasem - zzshmp.cz",
-    "shrnuti": "<a href=\"https://news.google.com/rss/articles/CBMiwgFBVV95cUxQeVRySTBfeFUwaVZSWlpjQ2lraFAxd1o2ZzhQWW91MUNJeDVBVndpcmVHbUlyVVFnXzhEX05CTWRNd2VsS25nNTdIUHlTaWUzY3VMZlVYMFQ5TE1TU2l5LWpvaHo3WnhKMjMwbVAzNVpPMkdDREM5cm5aZjd4U1R2LVNoWWtGYXNIb214bGpnTFl5LWd3MVVoVjlHLVBqdXpJTDRqQmNRZW81cjdKR0pOUW1DM0loakozMj",
-    "duvod": "bez-mista",
-    "kategorie": [
-      "vysilani"
-    ],
-    "posouzeni": null
-  },
-  {
-    "id": "k-db5ed978e5179d32",
-    "zachyceno": "2026-09-15T13:03:25.175Z",
-    "publikovano": "2026-09-15T12:38:42.000Z",
-    "zdroj": {
-      "nazev": "ČT24 — hlavní zprávy",
-      "url": "https://ct24.ceskatelevize.cz/clanek/domaci/vakciny-proti-chripce-maji-zpozdeni-377628",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Vakcíny proti chřipce mají zpoždění",
-    "shrnuti": "Letos se zpozdí většina dodávek očkovacích látek proti sezonní chřipce, sdělil epidemiolog a virolog Roman Prymula. Příčinou jsou nové kmeny viru, které se objevily na jižní polokouli a donutily výrobce aktualizovat plány.",
-    "duvod": "bez-skutku",
-    "kategorie": [],
-    "posouzeni": null
-  },
-  {
-    "id": "k-7f9d0e21545dd8d8",
-    "zachyceno": "2026-09-15T16:02:43.263Z",
-    "publikovano": "2026-09-15T12:34:27.000Z",
-    "zdroj": {
-      "nazev": "Google News — mimořádné vysílání rozhlasu",
-      "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxNRTRtdFdFd0s5MzVQMnlYOFRMMDIyTFlUaHVuV3VUTGJfSjlPRUdWcmZDdXQ0eFlsZ1JnbGJDLWVtM3RwMHJ4ZFlZU2ViNk1BalRoak9ic3JyRndfWVE5RnotUTJSdGhTTnk2Q19OMGVTaGh4ZmFhY3loNUNBWXA3Tk5tSDRQcUlxTFFIcU5IWEczT0xXQWFDUHBreElwN19NcFFlUHNzSy0?oc=5",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Český rozhlas vytvořil systém pro informování lidí v krizích, má 22 scénářů - Radio Prague International",
-    "shrnuti": "<a href=\"https://news.google.com/rss/articles/CBMiqAFBVV95cUxNRTRtdFdFd0s5MzVQMnlYOFRMMDIyTFlUaHVuV3VUTGJfSjlPRUdWcmZDdXQ0eFlsZ1JnbGJDLWVtM3RwMHJ4ZFlZU2ViNk1BalRoak9ic3JyRndfWVE5RnotUTJSdGhTTnk2Q19OMGVTaGh4ZmFhY3loNUNBWXA3Tk5tSDRQcUlxTFFIcU5IWEczT0xXQWFDUHBreElwN19NcFFlUHNzSy0?oc=5\" target=\"_blank\">",
-    "duvod": "bez-skutku",
-    "kategorie": [
-      "vysilani"
-    ],
-    "posouzeni": null
-  },
-  {
-    "id": "k-63876f9f083e88be",
-    "zachyceno": "2026-09-15T12:32:49.133Z",
-    "publikovano": "2026-09-15T12:30:47.000Z",
-    "zdroj": {
-      "nazev": "ČT24 — hlavní zprávy",
-      "url": "https://ct24.ceskatelevize.cz/clanek/svet/fico-navrhl-odvolat-ministra-tarabu-jak-zadala-vladni-strana-sns-377637",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Fico navrhl odvolat ministra Tarabu, jak žádala vládní strana SNS",
-    "shrnuti": "Slovenský premiér Robert Fico (Smer) navrhl hlavě státu odvolání ministra životního prostředí Tomáše Taraby, informoval prezident Peter Pellegrini. Krok už letos na jaře žádala nejmenší vládní strana SNS, která Tarabu navrhla členem nynějšího kabinetu po parlamentních volbách z roku 2023. SNS dříve ",
-    "duvod": "bez-skutku",
-    "kategorie": [],
-    "posouzeni": null
-  },
-  {
-    "id": "k-fe3f86c200401b1d",
-    "zachyceno": "2026-09-15T12:32:49.088Z",
-    "publikovano": "2026-09-15T12:23:00.000Z",
-    "zdroj": {
-      "nazev": "ERR News (Estonsko)",
-      "url": "https://news.err.ee/1610138473/two-longtime-tenants-parting-ways-with-tartu-s-legendary-genialistide-klubi",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Two longtime tenants parting ways with Tartu's legendary Genialistide Klubi",
-    "shrnuti": "Tartu's Genialistide Klubi is facing a shake-up as longtime subtenants Must Kast theater and Möku Bar plan to move out, citing the venue's uncertain future and desire to grow.",
-    "duvod": "bez-skutku",
-    "kategorie": [],
-    "posouzeni": null
-  },
-  {
-    "id": "k-9dfa91216b1b3509",
-    "zachyceno": "2026-09-15T12:32:49.115Z",
-    "publikovano": "2026-09-15T12:22:00.000Z",
-    "zdroj": {
-      "nazev": "iROZHLAS — zprávy",
-      "url": "https://www.irozhlas.cz/veda-technologie/priroda/rostou-prakticky-jen-na-sumave-houbarska-sezona-na-jihu-cech-zatim-zustava-pod_2609151422_dci",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Rostou prakticky jen na Šumavě. Houbařská sezona na jihu Čech zatím zůstává pod průměrem",
-    "shrnuti": "Houbaři na mnoha místech v Česku nosí z lesa koše plné hub. Na jihu země můžou houbařské žně ale zažít jen v některých lokalitách. Mykoložka Libuše Kotilová pro Český rozhlas České Budějovice vysvětluje, že hub letos na většině míst není k nalezení mnoho. A nasbírané košíky bývají oproti ostatním po",
-    "duvod": "bez-skutku",
-    "kategorie": [],
     "posouzeni": null
   }
 ]
