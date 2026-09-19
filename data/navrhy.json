@@ -962,5 +962,145 @@
     "aiZpracovano": true,
     "lidskyOvereno": false,
     "archivniZaznam": false
+  },
+  {
+    "kam": "zaznam",
+    "pripravil": "audit",
+    "pripraveno": "2026-09-19T19:32:03.564Z",
+    "id": "i-2026-09-17-7abcd2822f",
+    "slug": "lt-7abcd2822f",
+    "titulek": "Litva: ruská vojenská letadla narušila vzdušný prostor, vzlétly italské stíhačky Eurofighter",
+    "kratkyTitulek": "Litva: ruská vojenská letadla narušila vzdušný prostor, vzlétly italské stíhačky Eurofighter",
+    "zeme": "Litva",
+    "kodZeme": "LT",
+    "kategorie": [
+      "drony",
+      "rusko"
+    ],
+    "datumUdalosti": "2026-09-17T00:00:00Z",
+    "datumZjisteni": "2026-09-18T00:00:00Z",
+    "aktualizovano": "2026-09-19T19:32:03.564Z",
+    "zavaznost": "O2",
+    "jistota": "vysoka",
+    "stav": "bez-vysetrovani",
+    "atribuce": "neznama",
+    "puvodce": null,
+    "druh": "pripad",
+    "fakta": [
+      "Ruská vojenská letadla narušila litevský vzdušný prostor.",
+      "Italské stíhačky Eurofighter NATO byly vyslány k zásahu."
+    ],
+    "neznameho": [
+      "Přesný počet a typ ruských letadel",
+      "Zda šlo o úmyslné narušení"
+    ],
+    "vyznam": "",
+    "eskalacniSpousteče": [],
+    "deeskalacniSignaly": [],
+    "zdroje": [
+      {
+        "nazev": "Téma: vzdusna-obrana (anglicky) — Italian Eurofighters scrambled after Russian aircraft violate Lithuanian airspace - Av",
+        "url": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxNY3hTeUd0MU1XRERCSUlZbHJlOTZNMEhiaE01QTdsaTQ2Rm16OXhXaWZ3UHBqVkJ5R25aTWk3aUl0M0d6NGtIbmw0em5zYmk5RjBhU0ExME5jVjRpaGNXaTFzYk5kaUN1V2ZMWU1wTWhoQkRfVXpHWGRkamZ6WnB0cHJwMGJxQklzeDI0NnZpRXRsemVtMS1XVWpDdnY2QVB5ZjNEaTU1S3F3UW5MZHo1dDZYOXN1QkJlWmxzYTRqZzlDTkxzVmtBZjlNZldaYi1VaVHSAdcBQVVfeXFMUFJGYm5aSVpYRVRIYUJvOU03RkxnY0lXckZ6anRqbHNTNnE1VjRLUW01bmwtMVo1aU5NRzBQeVNYTmZjRER6UFFDdUdxTnRERjhYUW1aa1NMamxIOTV0YU4tYWFvejJEU0czc1AwWHJhaHkwaUV6em9yb2dlVEp2cUowaFVPLVZ0SDBqdkRPcTJ6SzNhX290YkhIaUN1cXFhU0RCU0Y1VWJpdWVlblFGa2ktRDBFaXZ0ZjlIT1ZKQi1hS3ZvR3htLVF0alJBQkdtMFd6cTd0Wnc?oc=5",
+        "typ": "media",
+        "publikovano": "2026-09-18T00:00:00Z",
+        "primarni": false,
+        "jazyk": "cs"
+      },
+      {
+        "nazev": "Téma: vzdusna-obrana (anglicky) — Russian military jets violate Lithuanian airspace, Italian fighters scrambled - ANSA",
+        "url": "https://news.google.com/rss/articles/CBMi9AFBVV95cUxNY0dzREdENndVZGFMcWRSMm1FRUlWUk96c2dvVmlYVTNLUXFFTEVxVUVLaVo4NmNvYVhHVmtSdndISElaVzhVVkEwbXdfM1c1NUpPdjBUTUJPU0FfMGh4bnNmMmk3OHd5MTFvLVI0cWJ6LUQzeXpHUWVJVjRobHV2ZWZlelNBOHpOXzhKZ2d0bnRqREFwZmJSNVhRY0xNaTRWZmRabm42R01hZmc0d29GLUVFaUdkd2g1VHpSUHRkRlBqeFZWSVNRV0hGNlN0Sk91T2FxTktOb1BjOXlKNjhKbzNpb3JZRktaZGRVeHNaUzA1cWZU0gH6AUFVX3lxTE9LX3luNUpSUC1BSUtWd3JnXzNDNW9wVFZ1V0lOVXZHbWFMdlZsWkhweUJMZlpOMnVmM1MxbjJ5VzZUc1VIaGJvVEU4SS1BSFVleDVWM0VjX2t1eGYtZnJBaGV4QnpvdnprQ3BTdVB3cC1IQURNa3pnUFdMZ3pOVHF1YmRMTXdMQ0FxRGprNk5OVXZod19QZWp3cDlBbUtjcE9QVzBMZnVCZlpPUi1kZTE2UnA0OThBUE94SU03RVRhMnBrdEx6aG5hcWlXR01id0p5MXhHY0k3RHd2MXlETVJMOHJFbHRqTTY3eXRWVW82WDMwc0ZSbGdRNmc?oc=5",
+        "typ": "media",
+        "publikovano": "2026-09-17T00:00:00Z",
+        "primarni": false,
+        "jazyk": "cs"
+      },
+      {
+        "nazev": "Téma: vzdusna-obrana (anglicky) — Russian military jets violate Lithuanian airspace; Italian fighter jets are scrambled ",
+        "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxOYVdEcV9aRndmWG5QTDhRR3RRUzdDWkYwV19SNDBmTGc2bnN3ZnhqTDZqTXc3VTczY0x4UzhYMlRpeHFleG04dkZ5NkMteWE0ZjJvVnVMZmE2M3ZGMG1FZ3F6cnhRZkw3Sk9nVFhDNENGSjJndmwxZlQxVjFZcDEyS05LazRPRmtmQzZoNm1sdFg2MVhwMWlsaExCWmVuUmF0WHVkaHNTc3NMdUl5amZTUjlYZw?oc=5",
+        "typ": "media",
+        "publikovano": "2026-09-17T00:00:00Z",
+        "primarni": false,
+        "jazyk": "cs"
+      }
+    ],
+    "souvisejici": [],
+    "historie": [
+      {
+        "kdy": "2026-09-17T00:00:00Z",
+        "text": "Zachyceno automatickým sběrem, posouzeno před zařazením do fronty.",
+        "novySignal": true
+      }
+    ],
+    "novy": true,
+    "zapocitanoTyden": "2026-09-17",
+    "aiZpracovano": true,
+    "lidskyOvereno": false,
+    "archivniZaznam": false
+  },
+  {
+    "kam": "zaznam",
+    "pripravil": "audit",
+    "pripraveno": "2026-09-19T19:32:03.564Z",
+    "id": "i-2026-09-16-fdc5f938d7",
+    "slug": "cz-fdc5f938d7",
+    "titulek": "Česko: Číňan stíhaný kvůli špionáži zůstává ve vazbě, rozhodl vrchní soud",
+    "kratkyTitulek": "Česko: Číňan stíhaný kvůli špionáži zůstává ve vazbě, rozhodl vrchní soud",
+    "zeme": "Česko",
+    "kodZeme": "CZ",
+    "kategorie": [
+      "zpravodajske"
+    ],
+    "datumUdalosti": "2026-09-16T00:00:00Z",
+    "datumZjisteni": "2026-09-16T00:00:00Z",
+    "aktualizovano": "2026-09-19T19:32:03.564Z",
+    "zavaznost": "O1",
+    "jistota": "potvrzeno",
+    "stav": "bez-vysetrovani",
+    "atribuce": "neznama",
+    "puvodce": null,
+    "druh": "pripad",
+    "fakta": [
+      "Vrchní soud v Praze zrušil rozhodnutí o vrácení případu k došetření a o propuštění obviněného z vazby.",
+      "Obviněný má zůstat ve vazbě.",
+      "Městský soud v Praze má ve věci znovu jednat a rozhodnout, projednávání obžaloby začne v říjnu."
+    ],
+    "neznameho": [
+      "Konkrétní obsah obvinění ze špionáže",
+      "Datum události se z textu určit nedá. Uvedeno datum zveřejnění (2026-09-16) — ověřit."
+    ],
+    "vyznam": "",
+    "eskalacniSpousteče": [],
+    "deeskalacniSignaly": [],
+    "zdroje": [
+      {
+        "nazev": "ČT24 — hlavní zprávy — Číňan stíhaný v Česku má kvůli špionáži zůstat ve vazbě, rozhodl vrchní soud",
+        "url": "https://ct24.ceskatelevize.cz/clanek/domaci/cinan-stihany-v-cesku-ma-kvuli-spionazi-zustat-ve-vazbe-rozhodl-vrchni-soud-377678",
+        "typ": "media",
+        "publikovano": "2026-09-16T00:00:00Z",
+        "primarni": false,
+        "jazyk": "cs"
+      },
+      {
+        "nazev": "iROZHLAS — zprávy — Obžalobu muže stíhaného kvůli špionáži pro Čínu bude v říjnu projednávat Městský soud v Praze",
+        "url": "https://www.irozhlas.cz/zpravy-domov/obzalobu-muze-stihaneho-kvuli-spionazi-pro-cinu-bude-v-rijnu-projednavat-mestsky_2609161426_aru",
+        "typ": "media",
+        "publikovano": "2026-09-16T00:00:00Z",
+        "primarni": false,
+        "jazyk": "cs"
+      }
+    ],
+    "souvisejici": [],
+    "historie": [
+      {
+        "kdy": "2026-09-16T00:00:00Z",
+        "text": "Zachyceno automatickým sběrem, posouzeno před zařazením do fronty.",
+        "novySignal": true
+      }
+    ],
+    "novy": true,
+    "zapocitanoTyden": "2026-09-16",
+    "aiZpracovano": true,
+    "lidskyOvereno": false,
+    "archivniZaznam": false
   }
 ]
