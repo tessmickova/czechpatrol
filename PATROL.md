@@ -86,3 +86,32 @@ ať se dá diff přečíst.
 
 Nepiš odhad. Napiš do `neznameho`, co chybí, a pokračuj dál. Nedoložený
 návrh je použitelný. Vymyšlený údaj zahodí důvěru v celý projekt.
+
+## Ruční zadání ze Správy
+
+V `data/fronta/pro-patrola.json` jsou úkoly zadané člověkem ze Správy.
+Ber je přednostně — někdo na tu odpověď čeká.
+
+**Odpověď piš do téhož souboru, ne na Telegram.** U položky, kterou jsi
+vyřídil, doplň:
+
+```json
+{
+  "stav": "hotovo",
+  "hotovo": "2026-09-19T18:30:00.000Z",
+  "odpoved": "Co jsi zjistil, dvě až pět vět. Když jsi něco odmítl, napiš proč."
+}
+```
+
+`stav` je `hotovo`, nebo `odmitnuto`, když jsi úkol neudělal. Odmítnutí není
+chyba — chyba je mlčet nebo tvrdit, že hotové je něco, co hotové není.
+
+Proč do souboru: odpověď v Telegramu stojí mimo věc, které se týká, a musí se
+k ní ručně párovat. Ve frontě ji Správa ukáže přímo u zadání.
+
+## Když je úkolů moc
+
+Nezkoušej vyřídit všechno naráz a nevzdávej to, když to nejde celé. Udělej,
+co zvládneš, zbytek nech ve frontě jako `ceka` a do `odpoved` u vyřízené
+části napiš, kolik jsi jich zpracoval a co zbývá. Rozpracovaná práce
+s poznámkou je použitelná; tiché selhání ne.
