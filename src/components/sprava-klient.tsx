@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { useCallback, useEffect, useState } from "react";
 import { UCTY_ZAPNUTE } from "@/config/web";
 import { datumCas } from "@/lib/format";
@@ -84,7 +85,30 @@ export function SpravaKlient() {
 
   if (!UCTY_ZAPNUTE) return <Hlaska typ="info">Účty zatím nejsou zapnuté, takže není co spravovat.</Hlaska>;
   if (nacita) return <p className="text-zaklad text-tlum">Ověřuji přihlášení…</p>;
-  if (!ucet) return <Hlaska typ="info">Správa je jen pro přihlášené správce.</Hlaska>;
+  if (!ucet) {
+    /*
+      Odkaz tu musí být. Hláška „jen pro přihlášené" bez cesty k přihlášení
+      je slepá ulička — kdo neví, že se přihlašuje na /ucet/, tak se sem
+      nedostane a bude hledat login, který na téhle stránce není.
+    */
+    return (
+      <Karta odstin="pisek" className="max-w-[560px] p-6">
+        <div className="stitek mb-2">Přihlášení</div>
+        <h2 className="podnadpis text-velke">Správa je jen pro přihlášené správce</h2>
+        <p className="mt-3 text-zaklad leading-relaxed text-tlum">
+          Účet se zakládá i přihlašuje passkey — otiskem, obličejem nebo kódem zařízení.
+          Heslo se nikde nezadává, protože žádné není.
+        </p>
+        <Link href="/ucet/" className={`${TLACITKO_AKCENT} mt-4 inline-flex`}>
+          Přejít na přihlášení
+        </Link>
+        <p className="mt-3 text-male leading-snug text-tlum2">
+          Poprvé tu? Na účtu zvolte „Založit nový anonymní účet" a pak se sem vraťte —
+          první správce se zavádí jednorázovým kódem provozovatele.
+        </p>
+      </Karta>
+    );
+  }
 
   if (!jeAdmin) {
     // První správce vzniká jednorázovým kódem, který zná jen provozovatel.
