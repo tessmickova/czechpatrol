@@ -1,5 +1,25 @@
 [
   {
+    "id": "k-f0d0319b33a919d4",
+    "zachyceno": "2026-09-19T23:02:19.312Z",
+    "publikovano": "2026-09-19T22:10:00.000Z",
+    "zdroj": {
+      "nazev": "Český rozhlas — domácí zprávy",
+      "url": "https://www.irozhlas.cz/veda-technologie/vesmir/evropa-rada-vice-investovala-do-vesmiru-oproti-usa-ma-ale-petkrat-mene_2609200010_vsn",
+      "typ": "primary",
+      "primarni": true
+    },
+    "titulek": "Evropa by ráda více investovala do vesmíru. Oproti USA má ale pětkrát méně soukromých investic",
+    "shrnuti": "Evropa chce mít ve vesmíru větší slovo – čísla ale ukazují, že má co dohánět. Podle nové zprávy Organizace pro hospodářskou spolupráci a rozvoj míří do evropského vesmírného sektoru pětkrát méně soukromých investic než ve Spojených státech. Závod o to, kdo bude do vesmíru investovat nejvíc, ale v Ev",
+    "duvod": "bez-skutku",
+    "kategorie": [],
+    "posouzeni": {
+      "podezreni": "zadne",
+      "duvod": "Jde o ekonomické srovnání investic do vesmíru, žádná bezpečnostní událost.",
+      "kdy": "2026-09-19T23:03:54.001Z"
+    }
+  },
+  {
     "id": "k-1a1573abbaf84c8f",
     "zachyceno": "2026-09-19T21:02:30.663Z",
     "publikovano": "2026-09-19T20:55:00.000Z",
@@ -10428,28 +10448,6 @@
     "posouzeni": {
       "podezreni": "zadne",
       "duvod": "Kulturně-gastronomický článek, žádná bezpečnostní souvislost.",
-      "kdy": "2026-09-19T14:04:15.203Z"
-    }
-  },
-  {
-    "id": "k-52125168b4a2e556",
-    "zachyceno": "2026-09-15T16:32:52.189Z",
-    "publikovano": null,
-    "zdroj": {
-      "nazev": "LRT English (Litva)",
-      "url": "https://www.lrt.lt/en/news-in-english/19/3048198/new-proposal-sees-lithuania-phasing-out-russian-language-instruction-in-schools",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "New proposal sees Lithuania phasing out Russian-language instruction in schools",
-    "shrnuti": "",
-    "duvod": "bez-skutku",
-    "kategorie": [
-      "rusko"
-    ],
-    "posouzeni": {
-      "podezreni": "zadne",
-      "duvod": "Vzdělávací politika, žádná bezpečnostní událost.",
       "kdy": "2026-09-19T14:04:15.203Z"
     }
   }
