@@ -27,6 +27,11 @@ on:
   #   # Ráno, ať jsou návrhy připravené na začátek dne.
   #   - cron: "35 5 * * *"
   workflow_dispatch:
+    inputs:
+      dni:
+        description: "Jak staré zprávy posuzovat (dny). 4 = denní provoz, víc = úklid fronty"
+        required: false
+        default: "4"
 
 permissions:
   contents: write
@@ -102,6 +107,8 @@ jobs:
         id: audit
         if: steps.ai.outputs.zapnuto == 'true'
         continue-on-error: true
+        env:
+          AUDIT_DNI: ${{ inputs.dni || '4' }}
         run: |
           set +e
           npm run audit 2>&1 | tee /tmp/audit.log

@@ -52,8 +52,15 @@ const cti = <T>(p: string, zaloha: T): T => {
   Strop zůstává, aby ve zpravodajsky divoký den nevznikl obří dotaz.
 */
 const NARAZ = 60;
-/** Jak staré kandidáty má smysl posuzovat. Starší už nejsou aktuality. */
-const DNI = 4;
+/*
+  Jak staré kandidáty má smysl posuzovat.
+
+  Pro denní provoz stačí čtyři dny: starší zprávy už nejsou aktuality a nemá
+  cenu na ně utrácet model. Jenže fronta, která se nahromadila, je celá starší
+  — z 250 čekajících bylo v okně čtyř dnů šest. Úklidový běh proto potřebuje
+  okno širší a nastavuje se přes AUDIT_DNI.
+*/
+const DNI = Math.min(60, Math.max(1, Number(process.env.AUDIT_DNI) || 4));
 
 interface Kandidat {
   id: string;
