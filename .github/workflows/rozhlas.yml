@@ -43,10 +43,15 @@ jobs:
         with:
           ref: main
 
+      # Volba jde přes proměnnou prostředí, ne do textu příkazu. Je to sice
+      # výběr z pevného seznamu, ale pravidlo platí pro všechny vstupy zvenčí
+      # stejně — jinak se u příštího vstupu zapomene.
       - name: Testovací zpráva
         if: github.event_name == 'workflow_dispatch' && inputs.test
+        env:
+          KOMU: ${{ inputs.komu }}
         run: |
-          if [ "${{ inputs.komu }}" = "do verejneho kanalu" ]; then
+          if [ "$KOMU" = "do verejneho kanalu" ]; then
             node nastroje/rozhlas.mjs --test
           else
             node nastroje/rozhlas.mjs --test --test-spravce

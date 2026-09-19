@@ -5,6 +5,7 @@ import * as ja from "./ja";
 import { ChybaHttp, json, povolenyPuvod, sCors } from "./pomocne";
 import { zkontrolujSber } from "./hlidac";
 import { kopniDoSberu } from "./sber";
+import * as navrhy from "./navrhy";
 import * as sprava from "./sprava";
 import * as tipy from "./tipy";
 import { synchronizuj, uklid } from "./synchronizace";
@@ -61,6 +62,8 @@ const CESTY: [string, RegExp, Obsluha][] = [
   }],
 
   ["POST", /^\/tipy$/, (req, env) => tipy.prijmi(env, req)],
+  ["GET", /^\/sprava\/navrhy$/, async (req, env) => navrhy.seznam(env, await vyzadujPrihlaseni(env, req))],
+  ["POST", /^\/sprava\/navrhy\/([\w.-]+)\/rozhodnout$/, async (req, env, _u, id) => navrhy.rozhodni(env, req, await vyzadujPrihlaseni(env, req), id)],
   ["GET", /^\/sprava\/tipy$/, async (req, env) => tipy.seznam(env, await vyzadujPrihlaseni(env, req))],
   ["PUT", /^\/sprava\/tipy\/([\w-]+)$/, async (req, env, _u, id) => tipy.vyrid(env, req, await vyzadujPrihlaseni(env, req), id)],
 

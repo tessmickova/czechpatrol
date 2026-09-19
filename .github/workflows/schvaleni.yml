@@ -1,0 +1,97 @@
+name: Rozhodnutí o návrhu
+
+# Co to dělá
+# ----------
+# Provede lidské rozhodnutí o jednom návrhu z fronty: schválí ho (záznam jde
+# na web) nebo zamítne (zůstane po něm stopa).
+#
+# Proč přes workflow a ne přímo z webu: rozhodnutí je změna v repozitáři a má
+# mít commit, autora a historii. Web (stránka Správa) sem jen pošle pokyn,
+# vlastní práci dělá `npm run spravce`, tedy tentýž kód jako z příkazové řádky.
+# Dvě cesty ke schválení, jedno chování.
+
+on:
+  workflow_dispatch:
+    inputs:
+      id:
+        description: "Id návrhu"
+        required: true
+      akce:
+        description: "Co s ním"
+        required: true
+        type: choice
+        options: [schval, zamitni]
+        default: schval
+      duvod:
+        description: "Důvod zamítnutí (u schválení se ignoruje)"
+        required: false
+        default: ""
+
+permissions:
+  contents: write
+
+concurrency:
+  # Dvě rozhodnutí naráz by si přepsala data/navrhy.json.
+  group: rozhodnuti
+  cancel-in-progress: false
+
+jobs:
+  rozhodnout:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+
+      - uses: actions/setup-node@v7
+        with:
+          node-version: "24"
+          cache: npm
+
+      - name: Balíčky z mezipaměti
+        id: moduly
+        uses: actions/cache@v6
+        with:
+          path: node_modules
+          key: moduly-${{ runner.os }}-node24-${{ hashFiles('package-lock.json') }}
+
+      - if: steps.moduly.outputs.cache-hit != 'true'
+        run: npm ci --no-audit --fund=false
+
+      # Vstupy jdou přes proměnné prostředí, ne do textu příkazu. Vložené
+      # přímo by z nich šlo vypsat cokoli dalšího a spustit to na běžci.
+      - name: Provést rozhodnutí
+        env:
+          AKCE: ${{ inputs.akce }}
+          NAVRH: ${{ inputs.id }}
+          DUVOD: ${{ inputs.duvod }}
+        run: |
+          case "$AKCE" in
+            schval|zamitni) ;;
+            *) echo "Neznámá akce: $AKCE"; exit 1 ;;
+          esac
+          npm run spravce -- "$AKCE" "$NAVRH" "$DUVOD"
+
+      # Schválený záznam jde na web. Když neprojde kontrolou, nemá tam co dělat
+      # a běh musí spadnout dřív, než se to commitne.
+      - name: Kontrola dat a testy
+        run: |
+          npm run kontrola:data
+          npm test
+
+      - name: Zapsat rozhodnutí
+        env:
+          AKCE: ${{ inputs.akce }}
+          NAVRH: ${{ inputs.id }}
+        run: |
+          if [ -z "$(git status --porcelain data/)" ]; then
+            echo "Nic se nezměnilo — návrh už zřejmě rozhodnutý byl."
+            exit 0
+          fi
+          git config user.name "sprava"
+          git config user.email "sprava@users.noreply.github.com"
+          git add data/
+          git commit -m "Návrh $NAVRH: $AKCE"
+          for i in 1 2 3 4; do
+            git push && break
+            sleep $((2**i))
+            git pull --rebase
+          done
