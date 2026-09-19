@@ -45,7 +45,14 @@ jobs:
       TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
       SPRAVCE_CHAT: ${{ vars.SPRAVCE_CHAT }}
     steps:
+      # Současná špička main, ne stav z chvíle, kdy se běh založil.
+      #
+      # Fronta běhů je seřadí, ale checkout bez tohohle stáhne data z doby
+      # PŘED předchozím během. Druhý audit by pak posuzoval kandidáty, které
+      # první už odepsal, a push by skončil konfliktem v data/kandidati.json.
       - uses: actions/checkout@v7
+        with:
+          ref: main
 
       - uses: actions/setup-node@v7
         with:
@@ -128,11 +135,14 @@ jobs:
           git config user.email "audit@users.noreply.github.com"
           git add data/
           git commit -m "Audit fronty $(date -u +'%Y-%m-%d %H:%M UTC')"
-          for i in 1 2 3 4; do
-            git push && break
-            sleep $((2**i))
-            git pull --rebase
-          done
+          if git push; then exit 0; fi
+
+          # Mezitím zapsal někdo jiný. Rebase tu nepomůže — dva zápisy do
+          # týchž polí v JSONu se sloučit nedají. Výsledek auditu se zahodí;
+          # posoudí se znovu při dalším běhu nad čerstvými daty.
+          echo "Push odmítnut, výsledek tohoto běhu se zahazuje."
+          git reset --hard origin/main
+          exit 1
 
       # Porucha modelu se ohlásila výše; teprve teď se má běh obarvit červeně,
       # aby to nezůstalo jen v Telegramu.
