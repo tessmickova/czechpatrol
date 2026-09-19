@@ -1,5 +1,55 @@
 [
   {
+    "id": "k-9fdcd7f1be27bfb0",
+    "zachyceno": "2026-09-19T08:32:03.993Z",
+    "publikovano": "2026-09-19T08:21:00.000Z",
+    "zdroj": {
+      "nazev": "iROZHLAS — zprávy",
+      "url": "https://www.irozhlas.cz/zivotni-styl/cestovani/korunovacni-klenoty-jsou-dostupne-pro-verejnost-letos-pripomenou-500-let-od_2609191021_raf",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Korunovační klenoty jsou dostupné pro veřejnost. Letos připomenou 500 let od nástupu Habsburků",
+    "shrnuti": "Výstava korunovačních klenotů ve Vladislavském sále na Pražském hradě je od soboty otevřená pro veřejnost. Od úterý se na ně mohly přijít podívat školní skupiny s rezervací. Už první den ráno se na výstavu stojí fronty dlouhé několik set metrů. Korunovační klenoty letos připomínají také 500. výročí ",
+    "duvod": "vylouceno-tematem",
+    "kategorie": [],
+    "posouzeni": null
+  },
+  {
+    "id": "k-f524c28c9ae5b736",
+    "zachyceno": "2026-09-19T08:32:03.978Z",
+    "publikovano": "2026-09-19T08:16:00.000Z",
+    "zdroj": {
+      "nazev": "Český rozhlas — domácí zprávy",
+      "url": "https://www.irozhlas.cz/sport/fotbal/naderi-je-odhodlany-reprezentovat-cesko-mrzi-me-ze-jsme-jeste-nedotahli_2609191016_rej",
+      "typ": "primary",
+      "primarni": true
+    },
+    "titulek": "Naderi je odhodlaný reprezentovat Česko. Mrzí mě, že jsme ještě nedotáhli papírování, říká Nedvěd",
+    "shrnuti": "Rozhodl se reprezentovat Česko, ale v nominaci fotbalového národního týmu chybí. Řeč je o německém útočníkovi Ryaenu Naderim, který měl díky bulharskému otci a české matce hned tři možnosti.",
+    "duvod": "vylouceno-tematem",
+    "kategorie": [],
+    "posouzeni": null
+  },
+  {
+    "id": "k-0c96c712848bef98",
+    "zachyceno": "2026-09-19T08:32:04.004Z",
+    "publikovano": "2026-09-19T08:00:40.000Z",
+    "zdroj": {
+      "nazev": "ČT24 — hlavní zprávy",
+      "url": "https://ct24.ceskatelevize.cz/clanek/domaci/na-letisti-v-mosnove-zacaly-dny-nato-v-kolone-mohou-lide-cekat-i-dve-hodiny-377766",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Na letišti v Mošnově začaly Dny NATO, v koloně mohou lidé čekat i dvě hodiny",
+    "shrnuti": "Na letišti v Mošnově na Novojičínsku v sobotu začaly dvoudenní Dny NATO v Ostravě a Dny Vzdušných sil Armády ČR, které jsou největší bezpečnostní přehlídkou v Evropě. Ze všech stran jsou kolony aut, která na akci jedou. Nejdelší kolona je ze strany od Studénky ve směru od dálnice D1. Je dlouhá asi d",
+    "duvod": "bez-skutku",
+    "kategorie": [
+      "nato"
+    ],
+    "posouzeni": null
+  },
+  {
     "id": "k-d2c5a0652c6453a8",
     "zachyceno": "2026-09-19T08:00:22.098Z",
     "publikovano": "2026-09-19T07:57:00.000Z",
@@ -11,6 +61,38 @@
     },
     "titulek": "AI professor: Today's chatbots will not end civilization",
     "shrnuti": "In recent weeks, leading figures in the tech world have grown increasingly vocal in warning about the risks posed by the rapid development of artificial intelligence. However, University of Tartu Professor of Artificial Intelligence Meelis Kull says there is currently no existential risk.",
+    "duvod": "bez-skutku",
+    "kategorie": [],
+    "posouzeni": null
+  },
+  {
+    "id": "k-19b2cfbc98df404f",
+    "zachyceno": "2026-09-19T08:32:03.979Z",
+    "publikovano": "2026-09-19T07:56:00.000Z",
+    "zdroj": {
+      "nazev": "Český rozhlas — domácí zprávy",
+      "url": "https://www.irozhlas.cz/zpravy-svet/lide-ve-washingtonu-vytvorili-lidsky-retez-kolem-kennedyho-centra-odmitaji-jeho_2609190956_ape",
+      "typ": "primary",
+      "primarni": true
+    },
+    "titulek": "Lidé ve Washingtonu vytvořili lidský řetěz kolem Kennedyho centra. Odmítají jeho uzavření",
+    "shrnuti": "Několik stovek lidí demonstrovalo v noci na sobotu před Kennedyho kulturním centrem ve Washingtonu proti plánům amerického prezidenta Donalda Trumpa na uzavření této instituce. Protestující kolem budovy centra vytvořili lidský řetěz, informovaly agentury. Uzavření centra bylo oznámeno v úterý.",
+    "duvod": "bez-skutku",
+    "kategorie": [],
+    "posouzeni": null
+  },
+  {
+    "id": "k-c42cebad19386903",
+    "zachyceno": "2026-09-19T08:32:03.980Z",
+    "publikovano": "2026-09-19T07:52:00.000Z",
+    "zdroj": {
+      "nazev": "Český rozhlas — domácí zprávy",
+      "url": "https://www.irozhlas.cz/zpravy-domov/obnova-fasady-sternberskeho-klastera-se-blizi-ke-konci-hotova-ma-byt-pristi-rok_2609190952_tez",
+      "typ": "primary",
+      "primarni": true
+    },
+    "titulek": "Obnova fasády šternberského kláštera se blíží ke konci. Hotová má být příští rok na jaře",
+    "shrnuti": "Ve Šternberku restaurují fasádu bývalého augustiniánského kláštera. Hotová má být na jaře roku 2027. Práce začaly v roce 2021 a byly rozplánované do sedmi etap. Podle původního plánu měli dělníci letos zvládnout pátou a šestou etapu, nakonec mohli začít i závěrečnou sedmou. Na dokončení obnovy fasád",
     "duvod": "bez-skutku",
     "kategorie": [],
     "posouzeni": null
@@ -8363,94 +8445,6 @@
     "shrnuti": "Vládní koalice se nedohodla na znovuzavedení karenční doby, tedy prvních tří dnů nemoci bez náhrady výdělku. Proti byla část ANO a SPD, uvedl pro Českou televizi ministr pro sport, prevenci a zdraví Boris Šťastný (Motoristé).",
     "duvod": "vylouceno-tematem",
     "kategorie": [],
-    "posouzeni": null
-  },
-  {
-    "id": "k-48d651bce7a204f3",
-    "zachyceno": "2026-09-15T12:32:49.117Z",
-    "publikovano": "2026-09-15T11:51:00.000Z",
-    "zdroj": {
-      "nazev": "iROZHLAS — zprávy",
-      "url": "https://www.irozhlas.cz/zpravy-svet/dalsi-propojeni-strnada-a-kalinaka-firma-slovenskeho-ministra-obrany-lobbovala_2609151351_mst",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Další propojení Strnada a Kaliňáka. Firma slovenského ministra obrany lobbovala za miliony",
-    "shrnuti": "Firma slovenského ministra obrany Roberta Kaliňáka (Směr) KALLAN Consulting dostávala miliony korun za poradenství a lobbování pro jednu ze zbrojařských společností českého miliardáře Michala Strnada, zjistily Seznam Zprávy. Spolupráce přitom probíhala i v době, kdy už byl Kaliňák ve funkci ministra",
-    "duvod": "bez-skutku",
-    "kategorie": [],
-    "posouzeni": null
-  },
-  {
-    "id": "k-4035bf867ed03b43",
-    "zachyceno": "2026-09-15T12:32:49.041Z",
-    "publikovano": "2026-09-15T11:40:00.000Z",
-    "zdroj": {
-      "nazev": "BBC News — Europe",
-      "url": "https://www.bbc.co.uk/news/articles/cwn8mjl31p5yo?at_medium=RSS&at_campaign=rss",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Denmark says Russian warship fired flares at military helicopter",
-    "shrnuti": "The Danish prime minister has accused Russia of \"reckless\" behaviour, while the Kremlin is yet to comment.",
-    "duvod": "vylouceno-tematem",
-    "kategorie": [
-      "rusko"
-    ],
-    "posouzeni": null
-  },
-  {
-    "id": "k-9ec666f2e3c9395c",
-    "zachyceno": "2026-09-16T09:02:47.081Z",
-    "publikovano": "2026-09-15T11:38:00.000Z",
-    "zdroj": {
-      "nazev": "Slovensko — spionaz",
-      "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxQRzVKNl9jdDhxODZYNXAwbVRpSUhvZTZNNU9oQ3Z0VUEtUXJrd1BUX3RWRVM2OTlEYm5ucnBHTXVtcmJfeVpZTWg2dExkdEhiOUJ0YWlMb3MwdUVDTkFieHh4TG0yekRPNjFLbEpLRUtubFRzRWk4OE9MNU9lRlU2MkxSYUdpY0tjRC1BbGVGQmw2SUM4U2F6aTUxRkZvM05lVjFDMzhqY1VlQTlQSUZrR0dMZk4?oc=5",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "France wants spy back in exchange for delisting Russian tycoon - media - Big News Network.com",
-    "shrnuti": "France wants spy back in exchange for delisting Russian tycoon - media Big News Network.com",
-    "duvod": "bez-skutku",
-    "kategorie": [
-      "rusko"
-    ],
-    "posouzeni": null
-  },
-  {
-    "id": "k-c6f16b6b936a383a",
-    "zachyceno": "2026-09-16T08:02:38.537Z",
-    "publikovano": "2026-09-15T11:38:00.000Z",
-    "zdroj": {
-      "nazev": "Slovensko — spionaz",
-      "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxPRUtQU2hjbjJ3YnJTaHdNcE1ZLWJCQW5sc0dOUWs1QzhHUWt3d3JkQTc4NFpUbi1TamZfMFJjSWZNZTZCdGhrdUtWdEhLSkxCY2xNZFBnWllhbzZmUmczOUUycGh3akRYWG9RcWZxT3pVSm5yekdHZWFfak1vcUUzWHdQTXE2Y0daRWFZZC15LUxMeWtfaHJ1NXM1d0FCclA1cVFlSFB4VUNDdGpvb0U4c2hUbWI?oc=5",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "France wants spy back in exchange for delisting Russian tycoon media - bignewsnetwork.com",
-    "shrnuti": "France wants spy back in exchange for delisting Russian tycoon media bignewsnetwork.com",
-    "duvod": "bez-skutku",
-    "kategorie": [
-      "rusko"
-    ],
-    "posouzeni": null
-  },
-  {
-    "id": "k-e9e6dfb23c3ea7fa",
-    "zachyceno": "2026-09-15T12:32:49.090Z",
-    "publikovano": "2026-09-15T11:30:00.000Z",
-    "zdroj": {
-      "nazev": "ERR News (Estonsko)",
-      "url": "https://news.err.ee/1610138554/expert-says-putin-unlikely-to-ever-seek-peace-deal-with-ukraine",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Expert says Putin unlikely to ever seek peace deal with Ukraine",
-    "shrnuti": "Russia is attacking Ukraine with increasing force, and since Russian leader Vladimir Putin assumes that Russia can endure longer, it is not particularly likely that he will ever seek to conclude a peace agreement with Ukraine, says Kristi Raik, director of the International Center for Defense and Se",
-    "duvod": "bez-skutku",
-    "kategorie": [
-      "rusko"
-    ],
     "posouzeni": null
   }
 ]
