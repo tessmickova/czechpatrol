@@ -9,8 +9,8 @@ import type { z } from "zod";
   výjimku ven: když model není k dispozici nebo selže, vrátí null a volající
   pokračuje bez něj. Sběr dat nesmí spadnout kvůli tomu, že došel kredit.
 
-  Poskytovatel se bere podle toho, který klíč je nastavený. OPENAI_API_KEY má
-  přednost; ANTHROPIC_API_KEY zůstává jako druhá cesta, aby se přechodem nic
+  Poskytovatel se bere podle toho, který klíč je nastavený. ANTHROPIC_API_KEY
+  má přednost; OPENAI_API_KEY zůstává jako druhá cesta, aby se přechodem nic
   nerozbilo. Vynutit jde přes POSKYTOVATEL_MODELU=openai|anthropic.
 */
 
@@ -20,8 +20,8 @@ export function dostupnyPoskytovatel(): Poskytovatel | null {
   const vynuceny = process.env.POSKYTOVATEL_MODELU?.trim().toLowerCase();
   if (vynuceny === "openai") return process.env.OPENAI_API_KEY ? "openai" : null;
   if (vynuceny === "anthropic") return process.env.ANTHROPIC_API_KEY ? "anthropic" : null;
-  if (process.env.OPENAI_API_KEY) return "openai";
   if (process.env.ANTHROPIC_API_KEY) return "anthropic";
+  if (process.env.OPENAI_API_KEY) return "openai";
   return null;
 }
 
@@ -115,10 +115,30 @@ export async function strukturovane<T>({ system, vstup, schema, ucel, maxTokens 
     const { zodOutputFormat } = await import("@anthropic-ai/sdk/helpers/zod");
     const client = new Anthropic();
 
+    /*
+      Haiku 4.5 je záměrná volba, ne šetření na nesprávném místě. Model tu
+      dělá tři pomocné věci — třídí kandidáty, dává druhé čtení odmítnutým
+      a překládá popisky rozhraní. Ani jedna nic nezveřejňuje; zveřejňuje
+      vždycky člověk. Na tohle je nejmenší model z rodiny dost a běží často.
+    */
+    const model = process.env.ANTHROPIC_MODEL?.trim() || "claude-haiku-4-5";
+
+    /*
+      `effort` se posílá jen modelům, které ho znají.
+
+      Haiku 4.5 a Sonnet 4.5 ho odmítají chybou 400. Dokud tu stál
+      claude-opus-5, nebylo to vidět; po přepnutí na Haiku by každé volání
+      spadlo — a protože se chyby tady záměrně polykají, projevilo by se to
+      jen tím, že by model tiše přestal fungovat. Přesně ten druh poruchy,
+      která se pozná až po týdnech.
+    */
+    const bezEffortu = /^claude-(haiku|sonnet)-4-5/.test(model);
+    const format = zodOutputFormat(schema);
+
     const odpoved = await client.messages.parse({
-      model: process.env.ANTHROPIC_MODEL?.trim() || "claude-opus-5",
+      model,
       max_tokens: maxTokens,
-      output_config: { effort: "low", format: zodOutputFormat(schema) },
+      output_config: bezEffortu ? { format } : { effort: "low", format },
       system,
       messages: [{ role: "user", content: JSON.stringify(vstup) }],
     });

@@ -1,3 +1,4 @@
+import { readFileSync } from "node:fs";
 import { afterEach, describe, expect, it } from "vitest";
 import { dostupnyPoskytovatel, strukturovane } from "../sber/model";
 import { z } from "zod";
@@ -25,14 +26,14 @@ describe("který poskytovatel se použije", () => {
     expect(dostupnyPoskytovatel()).toBeNull();
   });
 
-  it("OpenAI má přednost, když jsou oba klíče", () => {
+  it("Anthropic má přednost, když jsou oba klíče", () => {
     nastav({ OPENAI_API_KEY: "x", ANTHROPIC_API_KEY: "y" });
-    expect(dostupnyPoskytovatel()).toBe("openai");
+    expect(dostupnyPoskytovatel()).toBe("anthropic");
   });
 
-  it("Anthropic zůstává druhou cestou, aby se přechodem nic nerozbilo", () => {
-    nastav({ ANTHROPIC_API_KEY: "y" });
-    expect(dostupnyPoskytovatel()).toBe("anthropic");
+  it("OpenAI zůstává druhou cestou, aby se přechodem nic nerozbilo", () => {
+    nastav({ OPENAI_API_KEY: "x" });
+    expect(dostupnyPoskytovatel()).toBe("openai");
   });
 
   it("vynucení přes proměnnou prostředí platí", () => {
@@ -57,5 +58,32 @@ describe("chování bez modelu", () => {
       ucel: "test",
     });
     expect(v).toBeNull();
+  });
+});
+
+describe("volba modelu Anthropic", () => {
+  /*
+    Haiku 4.5 a Sonnet 4.5 odmítají `effort` chybou 400. Chyby se v tomhle
+    modulu záměrně polykají (sběr nesmí spadnout kvůli modelu), takže by se
+    taková vada projevila jen tím, že model tiše přestane fungovat. Proto
+    se hlídá tady.
+  */
+  const BEZ_EFFORTU = /^claude-(haiku|sonnet)-4-5/;
+
+  it("modelům 4.5 se effort neposílá", () => {
+    expect(BEZ_EFFORTU.test("claude-haiku-4-5")).toBe(true);
+    expect(BEZ_EFFORTU.test("claude-sonnet-4-5")).toBe(true);
+  });
+
+  it("novějším modelům se posílá dál", () => {
+    expect(BEZ_EFFORTU.test("claude-opus-5")).toBe(false);
+    expect(BEZ_EFFORTU.test("claude-sonnet-5")).toBe(false);
+    expect(BEZ_EFFORTU.test("claude-opus-4-8")).toBe(false);
+  });
+
+  it("výchozí model je v kódu, ne v proměnné", () => {
+    /* Bez klíče se nic nevolá, ale název se nemá hádat za běhu. */
+    const zdroj = readFileSync(new URL("../sber/model.ts", import.meta.url), "utf-8");
+    expect(zdroj).toContain('"claude-haiku-4-5"');
   });
 });

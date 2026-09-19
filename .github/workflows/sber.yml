@@ -61,10 +61,11 @@ jobs:
         env:
           # Nepovinné, ale hodně mění. S klíčem model vyřadí nerelevantní zprávy,
           # přeloží titulky a dá druhé čtení odmítnutým; bez něj sběr běží jen
-          # podle klíčových slov. Stačí jeden klíč — OPENAI má přednost.
+          # podle klíčových slov. Stačí jeden klíč — ANTHROPIC má přednost.
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
           OPENAI_MODEL: ${{ vars.OPENAI_MODEL }}
+          ANTHROPIC_MODEL: ${{ vars.ANTHROPIC_MODEL }}
 
       - name: Nahrát změny dat
         id: zmena

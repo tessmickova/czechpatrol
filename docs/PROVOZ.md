@@ -270,31 +270,30 @@ raději nasazení navíc než žádné.
 
 ## Model: jeden vstup, dva poskytovatelé
 
-Model se používá na tři pomocné věci — třídění kandidátů, druhé čtení
-odmítnutých zpráv a překlad rozhraní. **Ani jedna z nich nic nezveřejňuje**;
-to dělá vždycky člověk.
+Model dělá tři pomocné věci: třídí kandidáty ze sběru, dává druhé čtení
+odmítnutým zprávám a překládá popisky rozhraní. **Ani jedna z nich nic
+nezveřejňuje** — zveřejňuje vždycky člověk. Proto `sber/model.ts` nikdy
+nevyhodí výjimku ven: když model chybí nebo selže, vrátí `null` a sběr běží
+dál jen podle klíčových slov.
 
-Všechny tři jdou jedním vstupem, `sber/model.ts`. Poskytovatel se bere podle
-toho, který klíč je nastavený: `OPENAI_API_KEY` má přednost, `ANTHROPIC_API_KEY`
-zůstává jako druhá cesta, aby se přechodem nic nerozbilo. Vynutit jde přes
-`POSKYTOVATEL_MODELU=openai|anthropic` — a vynucený poskytovatel bez svého klíče
-je nedostupný, ne tiché přepnutí na toho druhého.
+| | |
+|---|---|
+| Výchozí poskytovatel | **Anthropic** (`ANTHROPIC_API_KEY`) |
+| Výchozí model | **`claude-haiku-4-5`** |
+| Druhá cesta | OpenAI (`OPENAI_API_KEY`), použije se, když chybí klíč Anthropic |
+| Vynutit | `POSKYTOVATEL_MODELU=openai` nebo `anthropic` |
+| Jiný model | proměnná `ANTHROPIC_MODEL`, případně `OPENAI_MODEL` |
 
-**Nikdy nevyhazuje výjimku ven.** Když model chybí, odmítne odpovědět nebo
-selže, vrátí `null` a volající pokračuje bez něj: kandidáti zůstanou tříděni
-podle pravidel, odmítnuté zůstanou neposouzené a nepřeložená věta zůstane
-česky. Sběr bezpečnostních dat nesmí spadnout kvůli tomu, že došel kredit.
+Haiku je zvolené záměrně: na třídění šumu a překlad popisků je nejmenší model
+z rodiny dost a běží často.
 
-### Který model se použije
+### Pozor na `effort`
 
-U OpenAI se název nehádá. Není-li v `OPENAI_MODEL`, zeptáme se účtu přes
-`models.list()`, co má k dispozici, a vezmeme první z pořadníku, který tam
-opravdu je (`gpt-5-mini`, `gpt-5`, `gpt-4.1-mini`, `gpt-4o-mini`, `gpt-4.1`,
-`gpt-4o`). Když nic z toho není, vezme se jakýkoli model `gpt-*`; když se
-seznam nepodaří načíst, řekne se to nahlas místo poslání vymyšleného názvu.
-Pořadník míří na levné varianty — je to třídění šumu a překlad popisků.
-
-U Anthropicu se bere `ANTHROPIC_MODEL`, jinak výchozí model projektu.
+Haiku 4.5 a Sonnet 4.5 parametr `output_config.effort` **odmítají chybou 400**.
+Dokud tu stál `claude-opus-5`, nebylo to vidět. `sber/model.ts` ho proto posílá
+jen modelům, které ho znají — jinak by po přepnutí na Haiku každé volání spadlo
+a protože se chyby tady záměrně polykají, projevilo by se to jen tím, že by
+model tiše přestal fungovat. Hlídají to testy v `testy/model.test.ts`.
 
 ## Cizojazyčné přehledy
 
