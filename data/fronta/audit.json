@@ -1,26 +1,26 @@
 {
-  "kdy": "2026-09-19T19:32:03.565Z",
+  "kdy": "2026-09-19T19:43:19.729Z",
   "stav": "ok",
   "poskytovatel": "anthropic",
-  "posouzeno": 30,
-  "navrhu": 2,
-  "vyrizeno": 22,
-  "cekaDal": 251,
+  "posouzeno": 24,
+  "navrhu": 0,
+  "vyrizeno": 13,
+  "cekaDal": 250,
   "rozhodnuti": [
     {
       "id": "k-cc09e9220e46f644",
       "titulek": "Estonsko: premiér Michal – země je připravena okamžitě uzavřít hranici v případě ruské mobilizace",
       "novaUdalost": true,
-      "duvod": "Nové prohlášení estonského premiéra o připravenosti okamžitě uzavřít hranici v případě ruské mobilizace.",
+      "duvod": "Nové prohlášení estonské premiérky o připravenosti uzavřít hranici v případě ruské mobilizace, nejde o pokračování žádné dosavadní zaznamenané události.",
       "duplikatSlugu": null,
       "neznamySlug": null,
       "zahozeno": "hlásí to jen jeden zdroj — druhý musí dohledat člověk"
     },
     {
       "id": "k-6ed040efc8ef8060",
-      "titulek": "Rusko zvyšuje použití přestavěných cvičných raket S-400 proti Ukrajině",
+      "titulek": "Rusko údajně stále více používá přestavěné cvičné střely S-400 proti Ukrajině",
       "novaUdalost": false,
-      "duvod": "Jde o obecnou zprávu o vývoji ruské válečné taktiky vůči Ukrajině, nejde o konkrétní novou bezpečnostní událost s dopadem na sledovaný rámec.",
+      "duvod": "Jde o obecnou zpravodajskou informaci o vedení ruské války proti Ukrajině bez přímé vazby na hybridní hrozby vůči Evropě/ČR, nejedná se o novou bezpečnostní událost pro přehled.",
       "duplikatSlugu": null,
       "neznamySlug": null,
       "zahozeno": "není nová událost"
@@ -29,88 +29,61 @@
       "id": "k-2f0f0fd062704b10",
       "titulek": "Ruský útok na Sumy zabil dva lidi",
       "novaUdalost": false,
-      "duvod": "Běžná zpravodajská zpráva o ruském útoku na Ukrajinu bez přímého bezpečnostního dopadu na sledovaný rámec.",
+      "duvod": "Běžná zpráva o průběhu bojů na Ukrajině bez vazby na sledovanou hybridní/bezpečnostní agendu.",
       "duplikatSlugu": null,
       "neznamySlug": null,
       "zahozeno": "není nová událost"
     },
     {
       "id": "k-99bed44d31908c7c",
-      "titulek": "Estonsko rozšiřuje síť obchodů a čerpacích stanic pro případ výpadku energie",
+      "titulek": "Estonsko rozšiřuje síť obchodů pro nouzové zásobování při výpadku energie",
       "novaUdalost": true,
-      "duvod": "Nová informace o rozšiřování estonské sítě nouzové připravenosti obchodů a čerpacích stanic.",
+      "duvod": "Nová informace o rozšiřování estonské sítě nouzové připravenosti obchodů, není pokračováním žádné existující položky.",
       "duplikatSlugu": null,
       "neznamySlug": null,
       "zahozeno": "hlásí to jen jeden zdroj — druhý musí dohledat člověk"
     },
     {
-      "id": "k-7abcd2822fd274a2",
-      "titulek": "Litva: ruská vojenská letadla narušila vzdušný prostor, vzlétly italské stíhačky Eurofighter",
-      "novaUdalost": true,
-      "duvod": "Nová konkrétní událost – narušení litevského vzdušného prostoru ruskými letouny a zásah italských stíhaček NATO, potvrzeno více zdroji.",
-      "duplikatSlugu": null,
-      "neznamySlug": null,
-      "zahozeno": null
-    },
-    {
       "id": "k-322c4221ae3e05d5",
-      "titulek": "Polsko vyslalo vojáky na hranici s Ukrajinou",
+      "titulek": "Polsko posílá vojáky na hranici s Ukrajinou",
       "novaUdalost": false,
-      "duvod": "Jde o pokračování/duplicitní zprávu o posilování polských hraničních přechodů s Ukrajinou.",
+      "duvod": "Jde o stejné posílení polských hraničních přechodů s Ukrajinou jako v existujícím záznamu.",
       "duplikatSlugu": "pl-7c0975db9a",
       "neznamySlug": null,
       "zahozeno": "není nová událost"
     },
     {
       "id": "k-d893478cd747b628",
-      "titulek": "Rozšíření dočasných hraničních kontrol v Schengenu",
+      "titulek": "Dočasné hraniční kontroly v Schengenu se šíří",
       "novaUdalost": false,
-      "duvod": "Text je příliš kusý (pouhý titulek), nelze doložit konkrétní fakta o nové události.",
+      "duvod": "Text je jen titulek bez obsahu, nelze doložit žádná fakta.",
       "duplikatSlugu": null,
       "neznamySlug": null,
       "zahozeno": "není nová událost"
     },
     {
       "id": "k-c103ec7f8245403a",
-      "titulek": "Finsko otestovalo reakci na sabotáž podmořských kabelů v Baltském moři",
+      "titulek": "Finsko nacvičilo reakci na sabotáž podmořských kabelů v Baltském moři",
       "novaUdalost": true,
-      "duvod": "Nová informace o finském cvičení reakce na sabotáž podmořských kabelů v Baltském moři.",
+      "duvod": "Nová zpráva o finském nácviku reakce na sabotáž podmořských kabelů, jiná událost než dosud zaznamenané případy.",
       "duplikatSlugu": null,
       "neznamySlug": null,
       "zahozeno": "hlásí to jen jeden zdroj — druhý musí dohledat člověk"
     },
     {
-      "id": "k-d0ed6c7938345ff3",
-      "titulek": "Litva: ruská letadla narušila vzdušný prostor, italské stíhačky vzlétly",
-      "novaUdalost": false,
-      "duvod": "Duplicitní zpráva o témže narušení litevského vzdušného prostoru ruskými letouny.",
-      "duplikatSlugu": null,
-      "neznamySlug": null,
-      "zahozeno": "není nová událost"
-    },
-    {
       "id": "k-a0633179d350f19c",
-      "titulek": "Kallasová: Rusko používá hybridní útoky k oslabení podpory Ukrajiny",
-      "novaUdalost": false,
-      "duvod": "Obecné vyjádření Kaji Kallasové o hybridních hrozbách, bez konkrétní nové události.",
+      "titulek": "Kallasová: Rusko používá hybridní útoky k oslabení podpory Ukrajiny v Evropě",
+      "novaUdalost": true,
+      "duvod": "Nové prohlášení šéfky diplomacie EU Kallasové o hybridních útocích Ruska, nejde o popis konkrétní pokračující události ze seznamu.",
       "duplikatSlugu": null,
       "neznamySlug": null,
-      "zahozeno": "není nová událost"
-    },
-    {
-      "id": "k-5aa3a52cd44e1707",
-      "titulek": "Litva: ruská vojenská letadla narušila vzdušný prostor",
-      "novaUdalost": false,
-      "duvod": "Další duplicitní zpráva o témže narušení litevského vzdušného prostoru.",
-      "duplikatSlugu": null,
-      "neznamySlug": null,
-      "zahozeno": "není nová událost"
+      "zahozeno": "hlásí to jen jeden zdroj — druhý musí dohledat člověk"
     },
     {
       "id": "k-f541bddc80326642",
-      "titulek": "Moldavsko nahlásilo OBSE regionální rizika kvůli narušení vzdušného prostoru drony",
+      "titulek": "Moldavsko nahlásilo OBSE regionální rizika způsobená narušením vzdušného prostoru drony",
       "novaUdalost": false,
-      "duvod": "Jde o pokračování/hlášení již známé události narušení moldavského vzdušného prostoru dronem.",
+      "duvod": "Týká se stejného narušení moldavského vzdušného prostoru drony, které je již zaznamenáno.",
       "duplikatSlugu": "moldavsko-dron-uzavrel-vzdusny-prostor-2026",
       "neznamySlug": null,
       "zahozeno": "není nová událost"
@@ -119,7 +92,7 @@
       "id": "k-ab7a6c8042552993",
       "titulek": "Ruský útok na Kyjev a Oděsu zranil 13 lidí",
       "novaUdalost": false,
-      "duvod": "Běžná zpravodajská zpráva o ruském útoku na Ukrajinu, bez přímého bezpečnostního dopadu na sledovaný rámec.",
+      "duvod": "Běžná zpráva o ruském útoku na Ukrajinu bez vazby na sledovanou hybridní agendu vůči Evropě/ČR.",
       "duplikatSlugu": null,
       "neznamySlug": null,
       "zahozeno": "není nová událost"
@@ -128,151 +101,124 @@
       "id": "k-873c3f78ff24394c",
       "titulek": "Bělorusko rozmístilo vojska na hranicích s Polskem a Litvou",
       "novaUdalost": true,
-      "duvod": "Nová informace o rozmístění běloruských vojsk na hranicích s Polskem a Litvou.",
+      "duvod": "Nová zpráva o přesunu běloruských jednotek k hranicím s Polskem a Litvou, samostatná od dosavadních záznamů.",
       "duplikatSlugu": null,
       "neznamySlug": null,
       "zahozeno": "hlásí to jen jeden zdroj — druhý musí dohledat člověk"
     },
     {
       "id": "k-307a7ad39eb36a91",
-      "titulek": "Litva: v lese nalezen dron, nasazeni pyrotechnici",
+      "titulek": "Litva: v lese nalezen dron, nasazen pyrotechnický tým",
+      "novaUdalost": false,
+      "duvod": "Text je jen agregovaný přehled titulků bez konkrétních podložených faktů k tomuto incidentu.",
+      "duplikatSlugu": null,
+      "neznamySlug": null,
+      "zahozeno": "není nová událost"
+    },
+    {
+      "id": "k-ff57897ddbb9c803",
+      "titulek": "Česko: tři zadržení v kauze ÚVN propuštěni na svobodu, vyšetřování pokračuje",
       "novaUdalost": true,
-      "duvod": "Nová konkrétní událost – nález dronu v litevském lese a nasazení pyrotechniků.",
+      "duvod": "Nová informace o propuštění zadržených v korupční kauze ÚVN, samostatný domácí případ.",
       "duplikatSlugu": null,
       "neznamySlug": null,
       "zahozeno": "hlásí to jen jeden zdroj — druhý musí dohledat člověk"
     },
     {
-      "id": "k-ff57897ddbb9c803",
-      "titulek": "Tři zadržení v kauze ÚVN propuštěni na svobodu",
-      "novaUdalost": false,
-      "duvod": "Jde o pokračování soudního/policejního řízení v kauze ÚVN, nejde o novou bezpečnostní událost v tomto rámci.",
-      "duplikatSlugu": null,
-      "neznamySlug": null,
-      "zahozeno": "není nová událost"
-    },
-    {
-      "id": "k-105b4fd3548ab0ea",
-      "titulek": "Obžaloba muže stíhaného kvůli špionáži pro Čínu bude projednávána v říjnu",
-      "novaUdalost": false,
-      "duvod": "Duplicitní zpráva o témže případu čínské špionáže, sloučeno s podrobnější zprávou.",
-      "duplikatSlugu": null,
-      "neznamySlug": null,
-      "zahozeno": "není nová událost"
-    },
-    {
-      "id": "k-fdc5f938d7966a24",
-      "titulek": "Česko: Číňan stíhaný kvůli špionáži zůstává ve vazbě, rozhodl vrchní soud",
-      "novaUdalost": true,
-      "duvod": "Nové soudní rozhodnutí v případu čínské špionáže v Česku – muž zůstává ve vazbě.",
-      "duplikatSlugu": null,
-      "neznamySlug": null,
-      "zahozeno": null
-    },
-    {
       "id": "k-e626c1e97aecffa2",
       "titulek": "Ukrajina zasáhla ruský bombardér na Krymu",
       "novaUdalost": false,
-      "duvod": "Běžná zpráva o vojenských úderech Ukrajiny na Rusko v rámci probíhající války, bez přímého bezpečnostního dopadu na sledovaný rámec.",
+      "duvod": "Běžná zpráva o bojové operaci na Ukrajině bez vazby na sledovanou hybridní agendu.",
       "duplikatSlugu": null,
       "neznamySlug": null,
       "zahozeno": "není nová událost"
     },
     {
       "id": "k-b19ad52154b53d09",
-      "titulek": "Rusko: partyzáni sabotovali elektrickou přípojku závodu vyrábějícího raketové komponenty ve Voroněži",
+      "titulek": "Ukrajinská partyzánská skupina Atesh tvrdí, že sabotovala ruský závod na součástky raket",
       "novaUdalost": true,
-      "duvod": "Nová sabotážní akce ukrajinských partyzánů na ruském závodě vyrábějícím raketové součástky.",
+      "duvod": "Nová zpráva o sabotáži ukrajinské partyzánské skupiny v ruském závodě, samostatná událost.",
       "duplikatSlugu": null,
       "neznamySlug": null,
       "zahozeno": "hlásí to jen jeden zdroj — druhý musí dohledat člověk"
     },
     {
       "id": "k-5e0064da30f33e0d",
-      "titulek": "Polsko dočasně uzavřelo letiště Lublin a Rzeszów kvůli ruskému dronovému útoku na Ukrajinu",
+      "titulek": "Polsko dočasně uzavřelo letiště Lublin a Rzeszów a vyslalo stíhačky kvůli ruskému dronovému útoku na Ukrajinu",
       "novaUdalost": true,
-      "duvod": "Nová konkrétní událost – Polsko dočasně uzavřelo letiště a vyslalo stíhačky kvůli ruskému dronovému útoku na Ukrajinu poblíž hranice.",
+      "duvod": "Nová konkrétní událost – uzavření polských letišť a stíhací pohotovost kvůli ruskému dronovému útoku na Ukrajinu dne 16. září, odlišná od dřívějších záznamů.",
       "duplikatSlugu": null,
       "neznamySlug": null,
       "zahozeno": "hlásí to jen jeden zdroj — druhý musí dohledat člověk"
     },
     {
       "id": "k-7b7262bf9da00772",
-      "titulek": "Ruský dronový útok na autobus na Ukrajině zabil pět lidí",
+      "titulek": "Ruský dronový útok na autobus zabil pět lidí na Ukrajině",
       "novaUdalost": false,
-      "duvod": "Běžná zpráva o ruském útoku na Ukrajinu v rámci probíhající války, bez přímého bezpečnostního dopadu na sledovaný rámec.",
+      "duvod": "Běžná zpráva o ruském útoku na Ukrajinu bez vazby na sledovanou hybridní agendu vůči Evropě/ČR.",
       "duplikatSlugu": null,
       "neznamySlug": null,
       "zahozeno": "není nová událost"
     },
     {
       "id": "k-194c238f4e0b2bf9",
-      "titulek": "Ruská arktická vesnice: nouzový stav po úniku 200 tun nafty",
+      "titulek": "Únik nafty v ruské arktické vesnici",
       "novaUdalost": false,
-      "duvod": "Jde o environmentální havárii bez zjevného bezpečnostního/hybridního rozměru, mimo sledovaný rámec.",
+      "duvod": "Nesouvisí s bezpečnostní/hybridní agendou sledovanou v přehledu, jde o ekologickou havárii bez vazby na ČR nebo hybridní hrozby.",
       "duplikatSlugu": null,
       "neznamySlug": null,
       "zahozeno": "není nová událost"
     },
     {
       "id": "k-fb7872f6d42fd530",
-      "titulek": "Zásah proti organizovanému zločinu v Nymburce, zadržení propuštěni",
-      "novaUdalost": false,
-      "duvod": "Jde o domácí kriminální kauzu (veřejné zakázky), nejde o bezpečnostní událost v tomto rámci.",
+      "titulek": "Česko: pět zadržených při zásahu v Nymburce propuštěno bez obvinění",
+      "novaUdalost": true,
+      "duvod": "Nová informace o zásahu Národní centrály proti organizovanému zločinu v Nymburce, samostatný domácí případ.",
       "duplikatSlugu": null,
       "neznamySlug": null,
-      "zahozeno": "není nová událost"
+      "zahozeno": "hlásí to jen jeden zdroj — druhý musí dohledat člověk"
     },
     {
       "id": "k-6e8d7ef6961706d4",
       "titulek": "Litva zvažuje znovuzavedení kontrol na hranici s Lotyšskem",
       "novaUdalost": true,
-      "duvod": "Nová informace o zvažovaném znovuzavedení kontrol na litevsko-lotyšské hranici.",
+      "duvod": "Nová zpráva o zvažování litevských hraničních kontrol s Lotyšskem, samostatná od jiných hraničních opatření v seznamu.",
       "duplikatSlugu": null,
       "neznamySlug": null,
       "zahozeno": "hlásí to jen jeden zdroj — druhý musí dohledat člověk"
     },
     {
       "id": "k-287b8beb79329b02",
-      "titulek": "Polská kontrarozvědka vyšetřuje polské napojení na ruskou sabotážní síť",
+      "titulek": "Polská kontrarozvědka vyšetřuje polské napojení na ruskou sabotážní síť od roku 2024",
       "novaUdalost": false,
-      "duvod": "Text je pouze titulek bez konkrétních nových faktů, jde o pokračování dlouhodobého vyšetřování od roku 2024.",
+      "duvod": "Text je jen titulek bez obsahu, nelze doložit fakta.",
       "duplikatSlugu": null,
       "neznamySlug": null,
       "zahozeno": "není nová událost"
     },
     {
       "id": "k-5a9fe326cf627a6e",
-      "titulek": "Španělsko prodloužilo hraniční kontroly na příjezdech z Itálie",
+      "titulek": "Španělsko prodloužilo hraniční kontroly s Itálií do 8. října",
       "novaUdalost": false,
-      "duvod": "Rutinní schengenské opatření bez přímé souvislosti s hybridními hrozbami sledovanými v tomto rámci.",
+      "duvod": "Rutinní schengenské hraniční opatření bez vazby na sledovanou hybridní/bezpečnostní agendu.",
       "duplikatSlugu": null,
       "neznamySlug": null,
       "zahozeno": "není nová událost"
     },
     {
       "id": "k-7b11bb477de92d87",
-      "titulek": "Lipavský: Rusko zvyšuje tlak, připravuje se na mobilizaci",
-      "novaUdalost": false,
-      "duvod": "Jde o souhrnný komentářový článek kombinující více již hlášených událostí (sestřelení dronu nad Litvou, zásah vlaku u polské hranice) a vyjádření ministra, bez jasně vymezené jedné nové samostatné události.",
+      "titulek": "NATO sestřelilo nad Litvou dron pravděpodobně z Běloruska, dříve dron zasáhl vlak u polských hranic",
+      "novaUdalost": true,
+      "duvod": "Nová zpráva o sestřelení dronu z Běloruska nad Litvou a o zásahu vlaku dronem u polských hranic, jde o odlišné konkrétní incidenty od dosavadních záznamů.",
       "duplikatSlugu": null,
       "neznamySlug": null,
-      "zahozeno": "není nová událost"
+      "zahozeno": "hlásí to jen jeden zdroj — druhý musí dohledat člověk"
     },
     {
       "id": "k-98a8eb3b71973832",
-      "titulek": "Ruská sabotážní kampaň proti NATO se zintenzivňuje",
+      "titulek": "Ruská sabotážní kampaň proti NATO sílí",
       "novaUdalost": false,
-      "duvod": "Jde o obecný analytický článek o ruské sabotážní kampani proti NATO bez konkrétní nové události.",
-      "duplikatSlugu": null,
-      "neznamySlug": null,
-      "zahozeno": "není nová událost"
-    },
-    {
-      "id": "k-30ec37f440e94e91",
-      "titulek": "Ruská sabotážní kampaň proti NATO se zintenzivňuje",
-      "novaUdalost": false,
-      "duvod": "Duplicitní analytický článek se stejným titulkem jako jiná zachycená zpráva, bez konkrétní nové události.",
+      "duvod": "Text je jen titulek bez obsahu, nelze doložit žádná fakta.",
       "duplikatSlugu": null,
       "neznamySlug": null,
       "zahozeno": "není nová událost"
