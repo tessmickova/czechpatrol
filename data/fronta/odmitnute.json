@@ -1,5 +1,25 @@
 [
   {
+    "id": "k-02e83e4bfff75569",
+    "zachyceno": "2026-09-19T20:38:04.583Z",
+    "publikovano": "2026-09-19T20:30:00.000Z",
+    "zdroj": {
+      "nazev": "Český rozhlas — domácí zprávy",
+      "url": "https://www.irozhlas.cz/veda-technologie/veda/mohou-ovce-zachranit-ledovce-svycarske-vedce-prekvapil-material-jehoz-znacna_2609192230_ako",
+      "typ": "primary",
+      "primarni": true
+    },
+    "titulek": "Mohou ovce zachránit ledovce? Švýcarské vědce překvapil materiál, jehož značná část se vyhazuje",
+    "shrnuti": "Zatímco se Švýcarsko snaží zabránit úbytku svých ledovců, vědci provádějí v Alpách neobvyklý experiment, aby zjistili, zda může pomoci jeden z méně ceněných přírodních zdrojů: ovčí vlna. Informovala o tom agentura Reuters.",
+    "duvod": "bez-skutku",
+    "kategorie": [],
+    "posouzeni": {
+      "podezreni": "zadne",
+      "duvod": "Vědecký experiment o ledovcích a ovčí vlně, bez bezpečnostního obsahu.",
+      "kdy": "2026-09-19T20:39:44.345Z"
+    }
+  },
+  {
     "id": "k-d7b17a2ea99113a5",
     "zachyceno": "2026-09-19T20:02:25.904Z",
     "publikovano": "2026-09-19T19:45:00.000Z",
@@ -633,6 +653,26 @@
     }
   },
   {
+    "id": "k-35a9b4850f7da160",
+    "zachyceno": "2026-09-19T20:38:04.656Z",
+    "publikovano": "2026-09-19T13:30:00.000Z",
+    "zdroj": {
+      "nazev": "ERR News (Estonsko)",
+      "url": "https://news.err.ee/1610142709/mart-meesak-only-devoted-die-hards-will-keep-working-in-the-food-service-sector",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Märt Meesak: Only devoted die‑hards will keep working in the food service sector",
+    "shrnuti": "Eating out is not a luxury, and only the true fanatics of the foodservice sector — those who have not yet given up — will continue operating, writes Märt Meesak.",
+    "duvod": "bez-skutku",
+    "kategorie": [],
+    "posouzeni": {
+      "podezreni": "zadne",
+      "duvod": "Komentář o ekonomice gastro sektoru v Estonsku.",
+      "kdy": "2026-09-19T20:39:44.345Z"
+    }
+  },
+  {
     "id": "k-cdf28b4e9670ea25",
     "zachyceno": "2026-09-19T14:01:49.025Z",
     "publikovano": "2026-09-19T13:30:00.000Z",
@@ -732,6 +772,26 @@
       "podezreni": "zadne",
       "duvod": "Kulturní výstava umění",
       "kdy": "2026-09-19T13:05:21.142Z"
+    }
+  },
+  {
+    "id": "k-f93ba263f929e6b4",
+    "zachyceno": "2026-09-19T20:38:04.605Z",
+    "publikovano": "2026-09-19T12:37:24.000Z",
+    "zdroj": {
+      "nazev": "ČT24 — hlavní zprávy",
+      "url": "https://ct24.ceskatelevize.cz/clanek/svet/letiste-v-rijadu-celi-vyznamnemu-naruseni-jsou-videt-plameny-377769",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "K útoku v Rijádu se přihlásili hútíové. Saúdové mluví o balistických střelách",
+    "shrnuti": "Nedaleko letiště v Rijádu byly v sobotu vidět plameny a hustý oblak černého kouře. Hořela palivová nádrž saúdskoarabské ropné společnosti Aramco, k útoku se později přihlásili hútíové, informovala agentura AFP. Server Flightradar24 uvedl, že mezinárodní letiště čelí významnému narušení provozu. Koal",
+    "duvod": "vylouceno-tematem",
+    "kategorie": [],
+    "posouzeni": {
+      "podezreni": "vysoke",
+      "duvod": "Útok balistickými střelami na letiště a ropný sklad v Rijádu.",
+      "kdy": "2026-09-19T20:39:44.345Z"
     }
   },
   {
@@ -10387,68 +10447,6 @@
     "posouzeni": {
       "podezreni": "zadne",
       "duvod": "Politické prohlášení o obraně, ne konkrétní incident.",
-      "kdy": "2026-09-19T14:04:15.203Z"
-    }
-  },
-  {
-    "id": "k-ac6b7688e3152179",
-    "zachyceno": "2026-09-15T16:32:52.187Z",
-    "publikovano": null,
-    "zdroj": {
-      "nazev": "LRT English (Litva)",
-      "url": "https://www.lrt.lt/en/news-in-english/19/3042090/lithuania-tightens-inspections-of-russian-grain-amid-concerns-over-ukrainian-cargo",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Lithuania tightens inspections of Russian grain amid concerns over Ukrainian cargo",
-    "shrnuti": "",
-    "duvod": "bez-skutku",
-    "kategorie": [
-      "rusko"
-    ],
-    "posouzeni": {
-      "podezreni": "zadne",
-      "duvod": "Kontroly obilí, obchodní/regulační opatření.",
-      "kdy": "2026-09-19T14:04:15.203Z"
-    }
-  },
-  {
-    "id": "k-d261560fd26626e7",
-    "zachyceno": "2026-09-15T16:32:52.186Z",
-    "publikovano": null,
-    "zdroj": {
-      "nazev": "LRT English (Litva)",
-      "url": "https://www.lrt.lt/en/tag/baltics-and-eastern-europe",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Baltics and Eastern Europe",
-    "shrnuti": "",
-    "duvod": "bez-skutku",
-    "kategorie": [],
-    "posouzeni": {
-      "podezreni": "zadne",
-      "duvod": "Obecná kategorie, žádná konkrétní zpráva.",
-      "kdy": "2026-09-19T14:04:15.203Z"
-    }
-  },
-  {
-    "id": "k-fc232d315c78b43c",
-    "zachyceno": "2026-09-15T16:32:52.185Z",
-    "publikovano": null,
-    "zdroj": {
-      "nazev": "LRT English (Litva)",
-      "url": "https://www.lrt.lt/en/news-in-english/19/3052087/mufti-urges-lithuania-to-protect-muslims-after-biker-group-harasses-mosque-prayers",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Mufti urges Lithuania to protect Muslims after biker group harasses mosque prayers",
-    "shrnuti": "",
-    "duvod": "bez-skutku",
-    "kategorie": [],
-    "posouzeni": {
-      "podezreni": "stredni",
-      "duvod": "Obtěžování u mešity, možný náboženský incident.",
       "kdy": "2026-09-19T14:04:15.203Z"
     }
   }
