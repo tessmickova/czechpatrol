@@ -43,8 +43,15 @@ const cti = <T>(p: string, zaloha: T): T => {
   }
 };
 
-/** Kolik kandidátů se pošle modelu. Víc než hrst stojí čas i peníze. */
-const NARAZ = 12;
+/*
+  Kolik kandidátů se pošle modelu naráz.
+
+  Nejde jen o cenu. Druhý zdroj vzniká tím, že model najde dvě zprávy o téže
+  události — a to může jen tehdy, když obě dorazí v jedné dávce. Při dvanácti
+  se z osmdesáti kandidátů v okně potkaly málokdy a audit nevyrobil nic.
+  Strop zůstává, aby ve zpravodajsky divoký den nevznikl obří dotaz.
+*/
+const NARAZ = 60;
 /** Jak staré kandidáty má smysl posuzovat. Starší už nejsou aktuality. */
 const DNI = 4;
 
