@@ -1109,5 +1109,178 @@
     "aiZpracovano": true,
     "lidskyOvereno": false,
     "archivniZaznam": false
+  },
+  {
+    "kam": "zaznam",
+    "pripravil": "patrol",
+    "pripraveno": "2026-09-19T11:49:08.769Z",
+    "id": "i-2026-09-08-a2bd3d3b7a",
+    "slug": "md-a2bd3d3b7a",
+    "titulek": "Moldavsko: policie zadržela ázerbájdžánského občana, kterého podezírá ze sběru informací o vojenských objektech pro ruské tajné služby",
+    "kratkyTitulek": "Moldavsko: policie zadržela ázerbájdžánského obč",
+    "zeme": "Moldavsko",
+    "kodZeme": "MD",
+    "kategorie": [
+      "zpravodajske",
+      "vysetrovani"
+    ],
+    "datumUdalosti": "2026-09-08T00:00:00Z",
+    "datumZjisteni": "2026-09-08T00:00:00Z",
+    "aktualizovano": "2026-09-19T11:49:08.769Z",
+    "zavaznost": "Y2",
+    "jistota": "stredni",
+    "stav": "probiha",
+    "atribuce": "neznama",
+    "puvodce": null,
+    "druh": "pripad",
+    "fakta": [
+      "Podle moldavské policie byl v Kišiněvě zadržen 49letý občan Ázerbájdžánu podezřelý z neoprávněného sběru informací pro zástupce ruských zvláštních služeb (Unimedia, Digi24).",
+      "Podle policie měl sledovat vojenské objekty v Moldavsku i americké cíle na moldavském území a byl vytipován k diverzním aktivitám v Moldavsku a na Ukrajině (Unimedia).",
+      "Podle Unimedia a OC Media byl při domovní prohlídce zajištěn mobil s kontakty na osobu, která se představovala jako pracovník FSB.",
+      "Podle UA.NEWS (cituje TV8) a Digi24 soud nařídil 30 dnů předběžné vazby; podle OC Media a UA.NEWS hrozí za neoprávněný sběr informací dva až pět let vězení."
+    ],
+    "neznameho": [
+      "Přesné datum zadržení; zdroje uvádějí zprávu z 8. 9. 2026, ne datum zadržení, a do datumu události je dáno datum policejního sdělení.",
+      "Totožnost zadrženého, jeho úloha a to, zda šlo o skutečné přípravy sabotáže; jde o podezření, ne o rozsudek.",
+      "Web moldavské policie ani ministerstva vnitra jsem neotevřel; údaje jsou z médií citujících policejní sdělení.",
+      "Původní odkaz kandidáta (UA.NEWS přes Google News) jsem přímo neotevřel; otevřel jsem přímou adresu téhož článku na ua.news.",
+      "Datum publikace OC Media jsem z otevřené stránky nezjistil; uvedeno datum shodné s ostatními zdroji."
+    ],
+    "vyznam": "[DOPLNIT] — co z toho plyne pro čtenáře v Česku.",
+    "eskalacniSpousteče": [],
+    "deeskalacniSignaly": [],
+    "zdroje": [
+      {
+        "nazev": "UA.NEWS — An Azerbaijani national was arrested in Moldova on charges of spying for the FSB",
+        "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxNcldZX2lkNUU0cEd3azFGVEgwRXNxLTVQeGVVWldOWjk1NGdIeWRyZFFISXRyOFU2NnZPSnYySXNwX1VySDdqaXhvQ1U1ZlEydzZMZjlsbkZHUUUyZG5lYlpfQXhwWjdndy00aGR1dHRQVXRPNDJJRWsxVDFDOVJEaDBNb1ppaW1WWnRnT0dsWFk3UzFG?oc=5",
+        "typ": "media",
+        "publikovano": "2026-09-08T00:00:00Z",
+        "primarni": false,
+        "jazyk": "en"
+      },
+      {
+        "nazev": "Unimedia — Un azer de 49 de ani, reținut la Chișinău: ar fi colectat informații pentru FSB despre obiective militare din Moldova și ale SUA",
+        "url": "https://unimedia.info/ro/news/b6a0d69772369843/audio-un-azer-de-49-de-ani-retinut-la-chisinau-ar-fi-colectat-informatii-pentru-fsb-despre-obiective-militare-din-moldova-si-ale-sua.html",
+        "typ": "media",
+        "publikovano": "2026-09-08T00:00:00Z",
+        "primarni": false,
+        "jazyk": "ro"
+      },
+      {
+        "nazev": "Digi24 — Un azer care spiona pentru serviciile secrete ale lui Putin a fost reținut în Republica Moldova",
+        "url": "https://www.digi24.ro/stiri/externe/moldova/un-azer-care-spiona-pentru-serviciile-secrete-ale-lui-putin-a-fost-retinut-in-republica-moldova-anuntul-autoritatilor-3939705",
+        "typ": "media",
+        "publikovano": "2026-09-08T00:00:00Z",
+        "primarni": false,
+        "jazyk": "ro"
+      },
+      {
+        "nazev": "OC Media — Moldova arrests Azerbaijani man on suspicion of Russian espionage",
+        "url": "https://oc-media.org/moldova-arrests-azerbaijani-man-on-suspicion-of-russian-espionage/",
+        "typ": "media",
+        "publikovano": "2026-09-08T00:00:00Z",
+        "primarni": false,
+        "jazyk": "en"
+      }
+    ],
+    "souvisejici": [],
+    "historie": [
+      {
+        "kdy": "2026-09-08T00:00:00Z",
+        "text": "Zachyceno sběrem, druhý zdroj dohledal Patrol.",
+        "novySignal": true
+      }
+    ],
+    "novy": true,
+    "zapocitanoTyden": "2026-09-08",
+    "aiZpracovano": true,
+    "lidskyOvereno": false,
+    "archivniZaznam": false
+  },
+  {
+    "kam": "zaznam",
+    "pripravil": "patrol",
+    "pripraveno": "2026-09-19T11:49:08.769Z",
+    "id": "i-2026-08-07-bcde1eaa56",
+    "slug": "de-bcde1eaa56",
+    "titulek": "Německo: kybernetický útok na zemskou síť Berlína zasáhl dvě senátní správy, odcizená data byla 4. září zveřejněna",
+    "kratkyTitulek": "Německo: kybernetický útok na zemskou síť Berlín",
+    "zeme": "Německo",
+    "kodZeme": "DE",
+    "kategorie": [
+      "kyber"
+    ],
+    "datumUdalosti": "2026-08-07T00:00:00Z",
+    "datumZjisteni": "2026-08-18T00:00:00Z",
+    "aktualizovano": "2026-09-19T11:49:08.769Z",
+    "zavaznost": "Y3",
+    "jistota": "vysoka",
+    "stav": "probiha",
+    "atribuce": "neznama",
+    "puvodce": null,
+    "druh": "pripad",
+    "fakta": [
+      "Podle oficiální stránky Berlína k útoku došlo v období 7.–12. 8. 2026; systémy byly 14. 8. preventivně odpojeny od sítě.",
+      "Podle Behörden Spiegel útok oznámila 17.–18. 8. berlínská Senatskanzlei; zasaženy jsou senátní správy pro rozvoj města, bydlení a stavebnictví a pro mobilitu, dopravu, ochranu klimatu a životní prostředí.",
+      "Podle oficiální stránky Berlína byla 4. 9. 2026 na dark webu zveřejněna odcizená data poté, co Berlín odmítl vyděračské požadavky.",
+      "Podle Berlína jde o nestrukturovaná data ze sdílených a osobních adresářů zaměstnanců, pravděpodobně včetně osobních údajů zaměstnanců, občanů a firem; úřad se ke konkrétním dokumentům nevyjadřuje.",
+      "Podle Berlína věc vyšetřují zemská kriminálka, ochrana ústavy, BSI a prokuratura."
+    ],
+    "neznameho": [
+      "Kdo je pachatel: heise uvádí ransomwarovou skupinu Rhysida a požadavek 30 bitcoinů; otevřený text úřadu skupinu nejmenuje a atribuce se nepřipisuje.",
+      "Rozsah úniku: heise uvádí přibližně 1,44 milionu souborů (5,8 TB) a mezi nimi i podrobnosti o kritické infrastruktuře; úřad to na otevřené stránce nepotvrzuje a Table.Briefings (kandidát) píše jen „may also have been compromised“.",
+      "Datum události je začátek průniku (7. 8.); průnik trval do 12. 8., systémy odpojeny 14. 8., veřejně oznámeno 17.–18. 8.",
+      "Datum poslední aktualizace oficiální stránky berlin.de jsem nezjistil, proto u ní datum publikace chybí.",
+      "Původní odkaz kandidáta (Table.Briefings přes Google News) jsem neotevřel; je pravděpodobně za paywallem."
+    ],
+    "vyznam": "[DOPLNIT] — co z toho plyne pro čtenáře v Česku.",
+    "eskalacniSpousteče": [],
+    "deeskalacniSignaly": [],
+    "zdroje": [
+      {
+        "nazev": "Table.Briefings — Cybersecurity: Data on critical infrastructure may also have been compromised in cyberattack on Berlin city government",
+        "url": "https://news.google.com/rss/articles/CBMi6gFBVV95cUxQZnI2NlhFenVLaUFsZ2xOSnV5MGpydHh3anpHa2NlaFNpWGozZW5TUjg0N3JuaTl5U2VHVTBoSERVWmxnWmRrbGlQVy1fQm1aOTh4T2Y5OTBaVmVHNkUxdzhlZUthUUdoOHA2dmFfNUtwSE5MdXBDYzE3bmdDMlRVSUdOam1hOU9rOGdWNXJqeEtPeS1kMVNVejJRQTJ0YWF5cFMzMXNsY3FUQ2NBVjVKLW9nNGhlMWZUMzEzcjBXVkFMYm4zX083R0o1YXdpdE9DMm9XOUpUQlNGOXVDSXNGMEY0ZVFZWGxWNWc?oc=5",
+        "typ": "media",
+        "publikovano": "2026-09-08T00:00:00Z",
+        "primarni": false,
+        "jazyk": "en"
+      },
+      {
+        "nazev": "Berlin.de — Cyberangriff auf das Landesnetz: Informationen für Bürgerinnen und Bürger",
+        "url": "https://www.berlin.de/cyberangriff/informationen-fuer-buergerinnen-und-buerger/",
+        "typ": "primary",
+        "primarni": true,
+        "jazyk": "de"
+      },
+      {
+        "nazev": "Behörden Spiegel — Cyber-Angriff trifft zwei Berliner Senatsverwaltungen",
+        "url": "https://www.behoerden-spiegel.de/2026/08/18/cyber-angriff-trifft-zwei-berliner-senatsverwaltungen/",
+        "typ": "media",
+        "publikovano": "2026-08-18T00:00:00Z",
+        "primarni": false,
+        "jazyk": "de"
+      },
+      {
+        "nazev": "heise online — Cyberattacke auf Berlin könnte größere Folgen haben als bisher gedacht",
+        "url": "https://www.heise.de/news/Cyberangriff-Berlin-mit-Steuerungseinheit-will-Betroffene-kontaktieren-11442896.html",
+        "typ": "media",
+        "publikovano": "2026-09-06T00:00:00Z",
+        "primarni": false,
+        "jazyk": "de"
+      }
+    ],
+    "souvisejici": [],
+    "historie": [
+      {
+        "kdy": "2026-08-07T00:00:00Z",
+        "text": "Zachyceno sběrem, druhý zdroj dohledal Patrol.",
+        "novySignal": true
+      }
+    ],
+    "novy": true,
+    "zapocitanoTyden": "2026-08-07",
+    "aiZpracovano": true,
+    "lidskyOvereno": false,
+    "archivniZaznam": false
   }
 ]
