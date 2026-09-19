@@ -1,6 +1,93 @@
 {
-  "kdy": "2026-09-19T09:26:15.202Z",
-  "stav": "model-selhal",
-  "posouzeno": 0,
-  "navrhu": 0
+  "kdy": "2026-09-19T09:33:59.439Z",
+  "stav": "ok",
+  "poskytovatel": "anthropic",
+  "posouzeno": 12,
+  "navrhu": 0,
+  "rozhodnuti": [
+    {
+      "id": "k-cc09e9220e46f644",
+      "titulek": "Estonsko: premiérka připravena zavřít hranici při ruské mobilizaci",
+      "novaUdalost": false,
+      "duvod": "Zpráva o přípravách a plánech, nikoliv o konkrétní bezpečnostní události. Jde o prohlášení premiérky o možné reakci na ruskou mobilizaci.",
+      "duplikatSlugu": null
+    },
+    {
+      "id": "k-6ed040efc8ef8060",
+      "titulek": "Rusko: zvýšené nasazení přestavěných tréninkovacích střel S-400 proti Ukrajině",
+      "novaUdalost": false,
+      "duvod": "Pokračování známého vzorce - Rusko používá různé typy střel proti Ukrajině. Jde o reportáž o taktice, bez nové události.",
+      "duplikatSlugu": "nemecko-zeleznice-2022"
+    },
+    {
+      "id": "k-2f0f0fd062704b10",
+      "titulek": "Rusko: bombardování Sumy řízené municí, 2 mrtví, 8 zraněných",
+      "novaUdalost": true,
+      "duvod": "Nový konkrétní útok s uvedeným datem a místem.",
+      "duplikatSlugu": null
+    },
+    {
+      "id": "k-9c4373877a16ce67",
+      "titulek": "Česko: ruské drony vyprovokoly vzlet českých gripenů z Pardubic k hranici NATO",
+      "novaUdalost": true,
+      "duvod": "Nový konkrétní incident se vzduchovými prostředky a českou obranou.",
+      "duplikatSlugu": null
+    },
+    {
+      "id": "k-99bed44d31908c7c",
+      "titulek": "Estonsko: rozšiřování sítě obchodů a pump s generátory pro nouzové zásobování",
+      "novaUdalost": false,
+      "duvod": "Zpráva o přípravách a opatřeních pro případ výpadku elektřiny, nikoliv o konkrétní bezpečnostní incidentu.",
+      "duplikatSlugu": null
+    },
+    {
+      "id": "k-7abcd2822fd274a2",
+      "titulek": "Litva: ruské letadlo porušilo vzdušný prostor, vzlétly italské eurofightry NATO",
+      "novaUdalost": true,
+      "duvod": "Nový incident porušení vzdušného prostoru.",
+      "duplikatSlugu": null
+    },
+    {
+      "id": "k-07fc5064aa48390d",
+      "titulek": "Slovensko: Fico se zaměřuje na udržení neutrality vůči Rusku",
+      "novaUdalost": false,
+      "duvod": "Politické prohlášení, nikoliv bezpečnostní incident. Zpráva bez konkrétního obsahu.",
+      "duplikatSlugu": null
+    },
+    {
+      "id": "k-322c4221ae3e05d5",
+      "titulek": "Polsko: poslání vojáků na hranici s Ukrajinou",
+      "novaUdalost": false,
+      "duvod": "Politické prohlášení o vojenských opatřeních, bez konkrétních bezpečnostních incidentů.",
+      "duplikatSlugu": null
+    },
+    {
+      "id": "k-8a1833a84bd22e27",
+      "titulek": "Slovensko: Fico zpochybňuje závazek článku 5 NATO",
+      "novaUdalost": false,
+      "duvod": "Politické prohlášení slovenského premiéra o článku 5 NATO, nikoliv bezpečnostní incident.",
+      "duplikatSlugu": null
+    },
+    {
+      "id": "k-d893478cd747b628",
+      "titulek": "EU: rozšíření dočasných kontrol na hranicích Schengenu",
+      "novaUdalost": false,
+      "duvod": "Obecná analýza trendů v Schengenu, bez konkrétní bezpečnostní události.",
+      "duplikatSlugu": null
+    },
+    {
+      "id": "k-f0ffc8ce7eccecc7",
+      "titulek": "Nizozemsko: podezření na sabotáž paralyzuje železniční síť",
+      "novaUdalost": true,
+      "duvod": "Hlášení o podezření na sabotáž železniční infrastruktury.",
+      "duplikatSlugu": null
+    },
+    {
+      "id": "k-c103ec7f8245403a",
+      "titulek": "Finsko: cvičení reagování na sabotáž podmořských kabelů v Baltiku",
+      "novaUdalost": false,
+      "duvod": "Zpráva o cvičení a testech připravenosti, nikoliv o skutečné bezpečnostní incidentu.",
+      "duplikatSlugu": null
+    }
+  ]
 }
