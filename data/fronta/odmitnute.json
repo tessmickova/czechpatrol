@@ -1,5 +1,28 @@
 [
   {
+    "id": "k-1a1573abbaf84c8f",
+    "zachyceno": "2026-09-19T21:02:30.663Z",
+    "publikovano": "2026-09-19T20:55:00.000Z",
+    "zdroj": {
+      "nazev": "Český rozhlas — domácí zprávy",
+      "url": "https://www.irozhlas.cz/zpravy-svet/nekteri-zapadni-politici-usiluji-o-konflikt-mezi-nato-a-ruskem-rekl-fico_2609192255_vsn",
+      "typ": "primary",
+      "primarni": true
+    },
+    "titulek": "Někteří západní politici usilují o konflikt mezi NATO a Ruskem, řekl Fico",
+    "shrnuti": "Někteří západní politici usilují o konflikt mezi Severoatlantickou aliancí (NATO) a Ruskem poté, co selhala strategie zničit Rusko ve válce na Ukrajině, prohlásil v sobotu slovenský premiér Robert Fico ve videu zveřejněném na facebooku. Válku proti Ukrajině rozpoutala v únoru 2022 Moskva a Kyjev se ",
+    "duvod": "bez-skutku",
+    "kategorie": [
+      "nato",
+      "rusko"
+    ],
+    "posouzeni": {
+      "podezreni": "zadne",
+      "duvod": "Politický komentář/výrok premiéra, žádná konkrétní bezpečnostní událost.",
+      "kdy": "2026-09-19T21:04:01.800Z"
+    }
+  },
+  {
     "id": "k-02e83e4bfff75569",
     "zachyceno": "2026-09-19T20:38:04.583Z",
     "publikovano": "2026-09-19T20:30:00.000Z",
@@ -10427,26 +10450,6 @@
     "posouzeni": {
       "podezreni": "zadne",
       "duvod": "Zpráva o hodnocení hrozby, žádná konkrétní událost.",
-      "kdy": "2026-09-19T14:04:15.203Z"
-    }
-  },
-  {
-    "id": "k-c324f7f9b8571284",
-    "zachyceno": "2026-09-15T16:32:52.187Z",
-    "publikovano": null,
-    "zdroj": {
-      "nazev": "LRT English (Litva)",
-      "url": "https://www.lrt.lt/en/news-in-english/19/3048420/poland-would-be-first-to-step-in-if-baltics-attacked-says-warsaw",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Poland would be ‘first to step in’ if Baltics attacked, says Warsaw",
-    "shrnuti": "",
-    "duvod": "bez-skutku",
-    "kategorie": [],
-    "posouzeni": {
-      "podezreni": "zadne",
-      "duvod": "Politické prohlášení o obraně, ne konkrétní incident.",
       "kdy": "2026-09-19T14:04:15.203Z"
     }
   }
