@@ -1,3 +1,4 @@
+import { omez } from "./limit";
 import { ChybaHttp, json, stejne, ted, telo } from "./pomocne";
 import { jeRole, smiZmenitRoli } from "./role";
 import type { Env, Prihlaseny, Role } from "./typy";
@@ -48,8 +49,21 @@ export async function audit(env: Env, ucet: Prihlaseny): Promise<Response> {
   return json({ audit: results });
 }
 
-/** První správce: jednorázový kód, který zná jen provozovatel. Funguje, jen dokud správce není. */
+/**
+ * První správce: jednorázový kód, který zná jen provozovatel. Funguje, jen
+ * dokud správce není.
+ *
+ * Brzda je tu proto, že od 19. 9. 2026 je repozitář veřejný. Do té doby
+ * chránila tenhle krok i neznalost — nikdo zvenčí nevěděl, že takový
+ * koncový bod existuje ani jak se jmenuje. Teď si to může kdokoli přečíst,
+ * a z hádání kódu se stává reálná možnost: účet si založí kdokoli, kód se
+ * porovnává v konstantním čase, ale bez omezení počtu pokusů by stačil čas.
+ *
+ * Pět pokusů za hodinu z jednoho místa. Provozovatel, který kód opisuje,
+ * se do pěti pokusů vejde; ten, kdo hádá, ne.
+ */
 export async function bootstrap(env: Env, req: Request, ucet: Prihlaseny): Promise<Response> {
+  await omez(env, req, "bootstrap", 5, 60);
   const { kod } = await telo<{ kod: string }>(req);
   if (!env.ADMIN_BOOTSTRAP_KOD) throw new ChybaHttp(503, "Zavedení správce není nastavené.");
   const spravcu = (await env.DB.prepare("SELECT COUNT(*) AS n FROM ucty WHERE role = 'admin'").first<{ n: number }>())?.n ?? 0;

@@ -28,10 +28,17 @@ const KAZDYCH_MINUT = 60;
  * Je tenhle tik ten, ve kterém se sbírá?
  *
  * Okno je desetiminutové, ne přesná minuta: tik může dorazit s malým
- * zpožděním a kvůli pár sekundám nechceme sběr vynechat na celou půlhodinu.
+ * zpožděním a kvůli pár sekundám nechceme sběr vynechat na celou hodinu.
+ *
+ * Počítá se z minut od počátku epochy, ne z minut v rámci hodiny.
+ * Původní `getUTCMinutes() % kazdychMinut` fungovalo jen pro hodnoty menší
+ * než 60: minuta je vždycky 0–59, takže pro 120 vycházel zbytek stejně jako
+ * pro 60 a sbíralo se dál každou hodinu. Bylo to schované, dokud byla
+ * kadence 30 — a přitom je zpomalení sběru jediná páka, kterou na spotřebu
+ * minut bez placení máme. Takhle funguje pro libovolný interval.
  */
 export function maSeSbirat(cas: number, kazdychMinut = KAZDYCH_MINUT): boolean {
-  return new Date(cas).getUTCMinutes() % kazdychMinut < 10;
+  return Math.floor(cas / 60_000) % kazdychMinut < 10;
 }
 
 export interface VysledekSberu {
