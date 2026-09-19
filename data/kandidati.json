@@ -9575,7 +9575,12 @@
       "power grid"
     ],
     "naliehave": null,
-    "stav": "ceka"
+    "stav": "ceka",
+    "vyrez": {
+      "text": "Google News",
+      "stazeno": "2026-09-19T08:36:05.208Z",
+      "stav": 200
+    }
   },
   {
     "id": "k-a2bd3d3b7a6c7200",
@@ -9603,7 +9608,12 @@
       "fsb"
     ],
     "naliehave": null,
-    "stav": "ceka"
+    "stav": "ceka",
+    "vyrez": {
+      "text": "Google News",
+      "stazeno": "2026-09-19T08:36:05.362Z",
+      "stav": 200
+    }
   },
   {
     "id": "k-c75f826e0619aad4",
@@ -9810,6 +9820,40 @@
     "vyrez": {
       "text": "Google News",
       "stazeno": "2026-09-15T19:32:54.697Z",
+      "stav": 200
+    }
+  },
+  {
+    "id": "k-2d2fdb50378ef60c",
+    "zachyceno": "2026-09-19T08:36:04.981Z",
+    "publikovano": "2026-09-07T13:57:00.000Z",
+    "zdroj": {
+      "nazev": "Téma: sabotaz (česky)",
+      "url": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxNWXA4REJRajZacVMtQTdhNTBTakNyTDBaNnEwTnV2NGotVlV2eVZpMWo4MU5pRGtqMTZWQklodmJVcEpqMXhLaG4xMFQ4aDRCOTVmb3NZRXFfUjVucDVneWNZQXkxdmdFc3p2bjZkdmpyTHU4U1FRMWFrXzFRNWhaNW41TGNKcHFRVDRpYXpqZFNtSjJQZ1BRb1lqV0x3RjJnOVh5Rks3RC1DbU1vckpyV3VyaDVkdmhsbWQyTDhsc1EzczFvc2dYUjBzUFpyZG9helE?oc=5",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "GALERIE: Zásah na západě Německa: Další sabotáž v rozvodně elektřiny?! Policie pátrá po muži | FOTO 1 - Blesk",
+    "titulekPuvodni": "GALERIE: Zásah na západě Německa: Další sabotáž v rozvodně elektřiny?! Policie pátrá po muži | FOTO 1 - Blesk",
+    "shrnuti": "GALERIE: Zásah na západě Německa: Další sabotáž v rozvodně elektřiny?! Policie pátrá po muži | FOTO 1 Blesk",
+    "kodZeme": "DE",
+    "zeme": "Německo",
+    "kategorie": [
+      "sabotaz",
+      "vojsko"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "sabotaz",
+      "policie"
+    ],
+    "naliehave": null,
+    "stav": "ceka",
+    "vyrez": {
+      "text": "Google News",
+      "stazeno": "2026-09-19T08:36:05.490Z",
       "stav": 200
     }
   },
@@ -10319,39 +10363,5 @@
       "stav": 200
     },
     "naliehave": null
-  },
-  {
-    "id": "k-73e17232ea4453a3",
-    "zachyceno": "2026-09-15T16:06:44.730Z",
-    "publikovano": "2026-09-06T07:00:00.000Z",
-    "zdroj": {
-      "nazev": "Google News — dron Německo česky",
-      "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxPZ3VxcmJfTHh6R2JaRm1lVWh3N0h6YVJFclFrNmJIYlFsOXByQ0tFeS1kT0JMNk9xdFltYmZFTE5Id1RUYTFSZUIyNkNRSXFXZzRZUzlqaTJIY2t6LXM2d3FaYjYtbjhvcEVjWENEZkE5SlRzNWg3NXBmOXBkRmhtQ1Z0WHo0SF82ZVZ4cThkTXlOelNzRnllZ3ZrUERXMjhicVFSRkZlZDlrdWE4M0ZWTVozMlZEM3lUM2pOeTV1MA?oc=5",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Útok na letadlo v Lipsku. Proč vyšetřovatele vedou stopy do Kremlu - novinky.cz",
-    "titulekPuvodni": "Útok na letadlo v Lipsku. Proč vyšetřovatele vedou stopy do Kremlu - novinky.cz",
-    "shrnuti": "Útok na letadlo v Lipsku. Proč vyšetřovatele vedou stopy do Kremlu novinky.cz",
-    "kodZeme": "RU",
-    "zeme": "Rusko",
-    "kategorie": [
-      "hybridni",
-      "rusko"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "zeSite": null,
-    "shody": [
-      "utok na",
-      "kreml"
-    ],
-    "naliehave": null,
-    "stav": "ceka",
-    "vyrez": {
-      "text": "Google News",
-      "stazeno": "2026-09-15T16:06:45.854Z",
-      "stav": 200
-    }
   }
 ]
