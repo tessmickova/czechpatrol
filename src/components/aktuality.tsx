@@ -36,8 +36,8 @@ const NAZVY_NALEHAVOSTI: Record<string, string> = {
 export function Aktuality({
   zaznamy,
   kandidati,
-  overenych = 5,
-  zachycenych = 6,
+  overenych = 4,
+  zachycenych = 2,
 }: {
   zaznamy: Zaznam[];
   kandidati: Kandidat[];
@@ -55,13 +55,19 @@ export function Aktuality({
   return (
     <aside
       aria-labelledby="aktuality-nadpis"
-      className="flex h-full flex-col overflow-hidden rounded-[28px] border border-linka2 bg-plocha"
+      className="flex h-full flex-col overflow-hidden rounded-[28px] border border-linka2 bg-plocha xl:absolute xl:inset-0"
     >
       <div className="flex items-center gap-1.5 border-b border-linka2 px-4 py-3">
         <Ikona nazev="osa" velikost={13} tah={2} />
         <h2 id="aktuality-nadpis" className="stitek">Aktuality</h2>
       </div>
 
+      {/*
+        Pojistka pro dny, kdy je zachyceného víc: zkrátí se seznam, ne patička.
+        Bez min-h-0 by flexbox oblast nezmenšil a odkaz na všechny události by
+        vypadl ze zaobleného rámu pryč.
+      */}
+      <div className="flex min-h-0 flex-1 flex-col overflow-hidden">
       <ul className="divide-y divide-linka2">
         {posledni.map((z) => {
           const t = PASMA[UROVNE[z.zavaznost].pasmo];
@@ -71,7 +77,7 @@ export function Aktuality({
                 <span aria-hidden className={`mt-[7px] h-[6px] w-[6px] shrink-0 rounded-full ${t.tecka}`} />
                 <span className="min-w-0">
                   <span className="cislice block text-mikro text-tlum2">{datumPraha(kdyZjisteno(z))}</span>
-                  <span className="block text-male leading-snug text-inkoust">{z.kratkyTitulek || z.titulek}</span>
+                  <span className="line-clamp-2 block text-male leading-snug text-inkoust">{z.kratkyTitulek || z.titulek}</span>
                 </span>
               </Link>
             </li>
@@ -111,7 +117,7 @@ export function Aktuality({
                       {k.naliehave && ` · ${NAZVY_NALEHAVOSTI[k.naliehave.druh] ?? k.naliehave.druh}`}
                       {k.zdroj.nazev && ` · ${k.zdroj.nazev.slice(0, 28)}`}
                     </span>
-                    <span className="block text-male leading-snug text-tlum">{k.titulek}</span>
+                    <span className="line-clamp-2 block text-male leading-snug text-tlum">{k.titulek}</span>
                   </span>
                 </a>
               </li>
@@ -119,6 +125,7 @@ export function Aktuality({
           </ul>
         </>
       )}
+      </div>
 
       <div className="mt-auto border-t border-linka2 px-4 py-2.5">
         <Link href="/udalosti/" className="stitek text-tlum2 transition-colors hover:text-inkoust">

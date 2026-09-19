@@ -413,14 +413,25 @@ export function Dashboard({
         Na mobilu jsou pod sebou; třetinový sloupec na úzkém displeji není
         sloupec, jen úzký proužek.
       */}
-      <div className="grid gap-4 lg:grid-cols-3">
-        <div className="lg:col-span-2">
+      <div className="grid gap-4 xl:grid-cols-3">
+        <div className="xl:col-span-2">
           <HeroDashboard
             stav={stav} cr={cr} crHistoricky={crHistoricky} crPocet={crPocet} obcane={obcane} overeno={overeno} veta={veta}
             cisla={<CislaVUvodu polozky={pocitadlaData} ted={ted} zaznamuCelkem={vse.length} />}
           />
         </div>
-        <Aktuality zaznamy={vse} kandidati={kandidati} />
+        {/*
+          Sloupec se nesmí roztahovat řádek. Absolutní umístění znamená, že
+          výšku řádku určuje jen úvodní panel — aktuality se mu přizpůsobí,
+          ne naopak. Bez toho vedle panelu vysokého 580 px stál sloupec
+          vysoký 920 px a pod úvodem zůstalo prázdné místo.
+
+          Zlom je až na 1280 px. Při 1024 px by měl sloupec jen ~310 px,
+          titulky by se lámaly do čtyř řádků a nevešly by se ani čtyři.
+        */}
+        <div className="xl:relative">
+          <Aktuality zaznamy={vse} kandidati={kandidati} />
+        </div>
       </div>
 
       {/*
