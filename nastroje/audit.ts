@@ -134,6 +134,20 @@ export function trideni(
 
 async function main() {
   const sucho = process.argv.includes("--sucho");
+
+  /*
+    Nasucho se nesmí sáhnout na data. Dřív tudy prošly i krátké reporty
+    (chybí model, není co posuzovat) a zkušební běh přepsal výsledek
+    skutečného běhu.
+  */
+  const zapisReport = (r: Record<string, unknown>) => {
+    if (sucho) {
+      console.log(`[audit] nasucho: report by byl ${JSON.stringify(r)}`);
+      return;
+    }
+    fs.mkdirSync(cesta("data/fronta"), { recursive: true });
+    fs.writeFileSync(cesta("data/fronta/audit.json"), `${JSON.stringify(r, null, 2)}\n`);
+  };
   const poskytovatel = dostupnyPoskytovatel();
 
   if (!poskytovatel) {
@@ -142,10 +156,7 @@ async function main() {
       Workflow tuhle návratovou hodnotu pozná a pošle hlášku správci.
     */
     console.log("[audit] MODEL NEDOSTUPNÝ — není nastaven ANTHROPIC_API_KEY ani OPENAI_API_KEY");
-    fs.writeFileSync(
-      cesta("data/fronta/audit.json"),
-      `${JSON.stringify({ kdy: new Date().toISOString(), stav: "model-nedostupny", posouzeno: 0, navrhu: 0 }, null, 2)}\n`,
-    );
+    zapisReport({ kdy: new Date().toISOString(), stav: "model-nedostupny", posouzeno: 0, navrhu: 0 });
     process.exit(3);
   }
 
@@ -168,10 +179,7 @@ async function main() {
 
   console.log(`[audit] poskytovatel ${poskytovatel}, k posouzení ${kPosouzeni.length} z ${kandidati.length}`);
   if (!kPosouzeni.length) {
-    fs.writeFileSync(
-      cesta("data/fronta/audit.json"),
-      `${JSON.stringify({ kdy: new Date().toISOString(), stav: "nic-noveho", posouzeno: 0, navrhu: 0 }, null, 2)}\n`,
-    );
+    zapisReport({ kdy: new Date().toISOString(), stav: "nic-noveho", posouzeno: 0, navrhu: 0 });
     return;
   }
 
@@ -198,10 +206,7 @@ async function main() {
   if (!vysledek) {
     /* Model je nastavený, ale nevrátil nic. To je porucha, ne klid. */
     console.log("[audit] MODEL SELHAL — volání nevrátilo výsledek");
-    fs.writeFileSync(
-      cesta("data/fronta/audit.json"),
-      `${JSON.stringify({ kdy: new Date().toISOString(), stav: "model-selhal", posouzeno: 0, navrhu: 0 }, null, 2)}\n`,
-    );
+    zapisReport({ kdy: new Date().toISOString(), stav: "model-selhal", posouzeno: 0, navrhu: 0 });
     process.exit(4);
   }
 
@@ -286,12 +291,11 @@ async function main() {
     if (r.neznamySlug) console.log(`      pozor: model ukázal na neexistující záznam ${r.neznamySlug}`);
   }
 
+  zapisReport(zprava);
   if (sucho) {
-    console.log("[audit] nasucho: nic se nezapisuje");
+    console.log("[audit] nasucho: návrhy se nezapisují");
     return;
   }
-  fs.mkdirSync(cesta("data/fronta"), { recursive: true });
-  fs.writeFileSync(cesta("data/fronta/audit.json"), `${JSON.stringify(zprava, null, 2)}\n`);
   if (nove.length) {
     fs.writeFileSync(cesta("data/navrhy.json"), `${JSON.stringify([...navrhy, ...nove], null, 2)}\n`);
   }
