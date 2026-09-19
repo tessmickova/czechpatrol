@@ -17,6 +17,7 @@ import { DlazdiceKampane } from "./kampane";
 import { NadpisSekce } from "./nadpisy";
 import { PruhOverujeme } from "./overujeme";
 import { CislaVUvodu, type PolozkaPoctu } from "./pocitadla-zive";
+import { Aktuality } from "./aktuality";
 import { UrgentniUpozorneni } from "./urgentni";
 import { Odznak, RadekSeznamu, TeckaZavaznosti, Tlacitko } from "./ui";
 import { PavucinaHrozeb } from "./pavucina";
@@ -400,10 +401,27 @@ export function Dashboard({
           závažná, ale nepotvrzená zpráva propadla úplně. */}
       <PruhOverujeme aktivni={overovaneAktivni} uzavrene={overovaneUzavrene} ted={tedMs} />
 
-      <HeroDashboard
-        stav={stav} cr={cr} crHistoricky={crHistoricky} crPocet={crPocet} obcane={obcane} overeno={overeno} veta={veta}
-        cisla={<CislaVUvodu polozky={pocitadlaData} ted={ted} zaznamuCelkem={vse.length} />}
-      />
+      {/*
+        Úvod dvě třetiny, aktuality třetina.
+
+        Na titulce nebylo poznat, že projekt žije: ověřené záznamy přibývají
+        po dnech, protože každý musí projít člověkem, a mezi nimi web vypadal
+        zamrzle, i když sběr každou hodinu něco zachytil. Sloupec vedle
+        ukazuje obojí — nejdřív ověřené, pod nimi zachycené a neověřené,
+        oddělené tak, aby se to nedalo splést.
+
+        Na mobilu jsou pod sebou; třetinový sloupec na úzkém displeji není
+        sloupec, jen úzký proužek.
+      */}
+      <div className="grid gap-4 lg:grid-cols-3">
+        <div className="lg:col-span-2">
+          <HeroDashboard
+            stav={stav} cr={cr} crHistoricky={crHistoricky} crPocet={crPocet} obcane={obcane} overeno={overeno} veta={veta}
+            cisla={<CislaVUvodu polozky={pocitadlaData} ted={ted} zaznamuCelkem={vse.length} />}
+          />
+        </div>
+        <Aktuality zaznamy={vse} kandidati={kandidati} />
+      </div>
 
       {/*
         1b — urgentní upozornění na místě, kde byl rámeček s čísly. Čísla jsou

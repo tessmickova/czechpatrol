@@ -1,0 +1,130 @@
+"use client";
+
+import Link from "next/link";
+import { datumPraha } from "@/lib/cas";
+import { kdyZjisteno, type Zaznam } from "@/lib/agregace";
+import { PASMA, UROVNE } from "@/lib/skala";
+import type { Kandidat } from "@/lib/typy";
+import { Ikona } from "./ikony";
+
+/*
+  Aktuality vedle úvodu.
+
+  Proč vznikly: na titulce nebylo poznat, že projekt vůbec žije. Ověřené
+  záznamy přibývají po dnech, protože každý musí projít člověkem — a mezi
+  nimi web vypadal jako zamrzlý, i když sběr každou hodinu něco zachytil.
+
+  Sloupec proto ukazuje obojí, a to v tomhle pořadí:
+    1. ověřené záznamy — to je to, za čím si projekt stojí,
+    2. zachycené a neověřené — důkaz, že se čte, ne tvrzení, že se to stalo.
+
+  Hranice mezi nimi je to jediné, co tenhle sloupec nesmí rozmazat. Neověřené
+  má vlastní nadpis, vlastní vysvětlení a odkazuje ven na zdroj, ne dovnitř
+  na záznam, který neexistuje.
+*/
+
+const NAZVY_NALEHAVOSTI: Record<string, string> = {
+  "mobilizace-rusko": "mobilizace v Rusku",
+  "priprava-mobilizace": "přípravy mobilizace",
+  "krizove-vysilani": "krizové vysílání",
+  "clanek-nato": "článek 4/5 NATO",
+  "pravni-stav-cr": "právní stav ČR",
+  "hranice-cr": "hranice ČR",
+  "vzdusny-prostor-nato": "vzdušný prostor Aliance",
+};
+
+export function Aktuality({
+  zaznamy,
+  kandidati,
+  overenych = 5,
+  zachycenych = 6,
+}: {
+  zaznamy: Zaznam[];
+  kandidati: Kandidat[];
+  overenych?: number;
+  zachycenych?: number;
+}) {
+  const posledni = [...zaznamy]
+    .sort((a, b) => kdyZjisteno(b).localeCompare(kdyZjisteno(a)))
+    .slice(0, overenych);
+
+  const zachycene = [...kandidati]
+    .sort((a, b) => (b.publikovano ?? b.zachyceno).localeCompare(a.publikovano ?? a.zachyceno))
+    .slice(0, zachycenych);
+
+  return (
+    <aside
+      aria-labelledby="aktuality-nadpis"
+      className="flex h-full flex-col overflow-hidden rounded-[28px] border border-linka2 bg-plocha"
+    >
+      <div className="flex items-center gap-1.5 border-b border-linka2 px-4 py-3">
+        <Ikona nazev="osa" velikost={13} tah={2} />
+        <h2 id="aktuality-nadpis" className="stitek">Aktuality</h2>
+      </div>
+
+      <ul className="divide-y divide-linka2">
+        {posledni.map((z) => {
+          const t = PASMA[UROVNE[z.zavaznost].pasmo];
+          return (
+            <li key={z.slug}>
+              <Link href={`/udalosti/?u=${z.slug}`} className="flex gap-2.5 px-4 py-2.5 hover:bg-plocha2">
+                <span aria-hidden className={`mt-[7px] h-[6px] w-[6px] shrink-0 rounded-full ${t.tecka}`} />
+                <span className="min-w-0">
+                  <span className="cislice block text-mikro text-tlum2">{datumPraha(kdyZjisteno(z))}</span>
+                  <span className="block text-male leading-snug text-inkoust">{z.kratkyTitulek || z.titulek}</span>
+                </span>
+              </Link>
+            </li>
+          );
+        })}
+      </ul>
+
+      {zachycene.length > 0 && (
+        <>
+          <div className="border-y border-linka2 bg-plocha2/60 px-4 py-2">
+            <div className="stitek flex items-center gap-1.5">
+              <Ikona nazev="otaznik" velikost={12} tah={2} />
+              Zachyceno, neověřeno
+            </div>
+            {/*
+              Tahle věta tu musí být. Bez ní čte člověk seznam pod ověřenými
+              záznamy jako jejich pokračování — a to by z neověřené zprávy
+              udělalo tvrzení projektu.
+            */}
+            <p className="mt-1 text-mikro leading-snug text-tlum2">
+              Přečetl to sběr, nikdo to zatím neověřil. Do počtů ani do hodnocení nevstupuje.
+            </p>
+          </div>
+          <ul className="divide-y divide-linka2">
+            {zachycene.map((k) => (
+              <li key={k.id}>
+                <a
+                  href={k.zdroj.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex gap-2.5 px-4 py-2.5 hover:bg-plocha2"
+                >
+                  <span aria-hidden className="mt-[7px] h-[6px] w-[6px] shrink-0 rounded-full border border-linka" />
+                  <span className="min-w-0">
+                    <span className="cislice block text-mikro text-tlum2">
+                      {datumPraha(k.publikovano ?? k.zachyceno)}
+                      {k.naliehave && ` · ${NAZVY_NALEHAVOSTI[k.naliehave.druh] ?? k.naliehave.druh}`}
+                      {k.zdroj.nazev && ` · ${k.zdroj.nazev.slice(0, 28)}`}
+                    </span>
+                    <span className="block text-male leading-snug text-tlum">{k.titulek}</span>
+                  </span>
+                </a>
+              </li>
+            ))}
+          </ul>
+        </>
+      )}
+
+      <div className="mt-auto border-t border-linka2 px-4 py-2.5">
+        <Link href="/udalosti/" className="stitek text-tlum2 transition-colors hover:text-inkoust">
+          Všechny události →
+        </Link>
+      </div>
+    </aside>
+  );
+}
