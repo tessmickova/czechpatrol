@@ -88,6 +88,40 @@ jobs:
           echo "zmena=true" >> "$GITHUB_OUTPUT"
 
       # ---------------------------------------------------------------
+      # Naléhavý signál musí odejít hned, ne za den.
+      #
+      # Vyhlášení mobilizace, krizové vysílání, článek 4 nebo 5 NATO,
+      # mimořádný právní stav a uzavření hranic se posílají neověřené
+      # a zřetelně označené — u takové zprávy je zpoždění horší než
+      # nejistota.
+      #
+      # Dřív odcházely až s denním souhrnem v 17:00 UTC, nebo když někdo
+      # schválil záznam. Rozhlas se totiž spouští změnou data/incidenty.json,
+      # jenže sběr mění data/kandidati.json — a navíc push z workflow žádný
+      # další workflow nespustí. Signál tak mohl čekat skoro celý den.
+      - name: Naléhavé signály do kanálu
+        if: steps.zmena.outputs.zmena == 'true'
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_KANAL: ${{ vars.TELEGRAM_KANAL || '@czechpatrol' }}
+          SPRAVCE_CHAT: ${{ vars.SPRAVCE_CHAT }}
+        run: |
+          node nastroje/rozhlas.mjs --okamzite
+
+          # Co odešlo, se musí zapsat zpátky, jinak to příště odejde znovu.
+          if [ -z "$(git status --porcelain data/fronta/rozhlaseno.json)" ]; then
+            echo "Nic nového k rozeslání."
+            exit 0
+          fi
+          git add data/fronta/rozhlaseno.json
+          git commit -m "Rozhlas: stav odeslaných zpráv"
+          for i in 1 2 3 4; do
+            git push && break
+            sleep $((2**i))
+            git pull --rebase
+          done
+
+      # ---------------------------------------------------------------
       # Nasazení rovnou tady, a jen když se data opravdu změnila.
       #
       # Dřív po každém sběru nastartovalo samostatné Nasazení, zjistilo,
