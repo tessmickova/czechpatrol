@@ -1,38 +1,155 @@
 {
-  "kdy": "2026-09-19T19:48:13.868Z",
+  "kdy": "2026-09-19T19:56:38.778Z",
   "stav": "ok",
   "poskytovatel": "anthropic",
-  "posouzeno": 3,
-  "navrhu": 0,
-  "vyrizeno": 0,
-  "cekaDal": 250,
+  "posouzeno": 16,
+  "navrhu": 6,
+  "vyrizeno": 54,
+  "cekaDal": 196,
   "rozhodnuti": [
     {
-      "id": "k-873c3f78ff24394c",
-      "titulek": "Bělorusko přesunulo jednotky k hranicím s Polskem a Litvou",
+      "id": "k-8c057ebc88a5edf8",
+      "titulek": "Nizozemsko: podezřelá sabotáž ochromila železniční dopravu ve velké části země",
       "novaUdalost": true,
-      "duvod": "Nová zpráva o přesunu běloruských jednotek k hranicím s Polskem a Litvou, nesouvisí s dosavadními záznamy.",
+      "duvod": "Nová událost - rozsáhlá podezřelá sabotáž na nizozemské železnici, více zdrojů popisuje stejný incident.",
+      "duplikatSlugu": null,
+      "neznamySlug": null,
+      "zahozeno": null
+    },
+    {
+      "id": "k-ce6ddf20c5672dcd",
+      "titulek": "Litva: stíhačky NATO sestřelily dron, který narušil vzdušný prostor",
+      "novaUdalost": true,
+      "duvod": "Nová událost - sestřelení dronu nad Litvou, více zdrojů popisuje stejný incident.",
+      "duplikatSlugu": null,
+      "neznamySlug": null,
+      "zahozeno": null
+    },
+    {
+      "id": "k-41f016ed9e3a9bcc",
+      "titulek": "Kubánský lektor tance v Rusku podle vyšetřování DW organizoval síť náboru pro sabotáže v EU",
+      "novaUdalost": true,
+      "duvod": "Nová událost - odhalení sítě náboru pro sabotáže v EU, popsáno více zdroji.",
+      "duplikatSlugu": null,
+      "neznamySlug": null,
+      "zahozeno": null
+    },
+    {
+      "id": "k-f93ff21d6f4b60fc",
+      "titulek": "Polsko a Rumunsko vyslaly stíhačky kvůli ruskému dronovému útoku na západní Ukrajinu",
+      "novaUdalost": true,
+      "duvod": "Nová událost - Polsko a Rumunsko vyslaly stíhačky kvůli ruskému útoku na Ukrajinu 15. září.",
+      "duplikatSlugu": null,
+      "neznamySlug": null,
+      "zahozeno": null
+    },
+    {
+      "id": "k-5e0064da30f33e0d",
+      "titulek": "Polsko dočasně uzavřelo letiště Lublin a Rzeszów kvůli ruskému dronovému útoku na Ukrajinu",
+      "novaUdalost": true,
+      "duvod": "Samostatná událost - k opakovanému uzavření polských letišť došlo o den později, 16. září.",
+      "duplikatSlugu": null,
+      "neznamySlug": null,
+      "zahozeno": "hlásí to jen jeden zdroj — druhý musí dohledat člověk"
+    },
+    {
+      "id": "k-d7ea48aa931ccb94",
+      "titulek": "Rumunsko vyslalo stíhačky F-18 kvůli narušení vzdušného prostoru NATO u hranice s Moldavskem",
+      "novaUdalost": true,
+      "duvod": "Nová událost - narušení vzdušného prostoru u moldavské hranice, vyslání rumunských stíhaček.",
+      "duplikatSlugu": null,
+      "neznamySlug": null,
+      "zahozeno": "hlásí to jen jeden zdroj — druhý musí dohledat člověk"
+    },
+    {
+      "id": "k-873c3f78ff24394c",
+      "titulek": "Bělorusko nasadilo vojska k hranicím s Polskem a Litvou",
+      "novaUdalost": true,
+      "duvod": "Nová událost - přesun běloruských vojsk k hranicím Polska a Litvy.",
       "duplikatSlugu": null,
       "neznamySlug": null,
       "zahozeno": "hlásí to jen jeden zdroj — druhý musí dohledat člověk"
     },
     {
       "id": "k-b19ad52154b53d09",
-      "titulek": "Rusko: partyzáni Atesh nahlásili sabotáž závodu na součástky raket ve Voroněži",
+      "titulek": "Ukrajinská partyzánská skupina Atesh tvrdí, že sabotovala ruský závod vyrábějící součástky raket",
       "novaUdalost": true,
-      "duvod": "Nová zpráva o sabotáži partyzánské skupiny Atesh na ruském závodě vyrábějícím součástky pro střely.",
+      "duvod": "Nová událost - tvrzení partyzánské skupiny Atesh o sabotáži ruského závodu.",
       "duplikatSlugu": null,
       "neznamySlug": null,
       "zahozeno": "hlásí to jen jeden zdroj — druhý musí dohledat člověk"
     },
     {
-      "id": "k-5e0064da30f33e0d",
-      "titulek": "Polsko: kvůli ruskému dronovému útoku na Ukrajinu vzlétly stíhačky, dočasně uzavřena letiště Lublin a Rzeszów",
+      "id": "k-c0ffc68c11c9b2d4",
+      "titulek": "Rusko: údajné vydání mobilizačních povolávacích rozkazů statisícům mužů",
+      "novaUdalost": false,
+      "duvod": "Zpráva je příliš kusá (pouze titulek bez podrobností) a nelze z ní doložit žádná fakta.",
+      "duplikatSlugu": null,
+      "neznamySlug": null,
+      "zahozeno": "není nová událost"
+    },
+    {
+      "id": "k-fcada4a440690a20",
+      "titulek": "Rusko udeřilo na Kyjev a Záporoží, Ukrajina zasáhla rafinerii v Syzrani a sklad v Taganrogu",
       "novaUdalost": true,
-      "duvod": "Nová zpráva o dočasném uzavření letišť Lublin a Rzeszów a vzletu polských stíhaček kvůli ruskému dronovému útoku na Ukrajinu.",
+      "duvod": "Nová událost - noční ruské útoky na Kyjev a Záporoží a ukrajinské údery v hloubi Ruska.",
+      "duplikatSlugu": null,
+      "neznamySlug": null,
+      "zahozeno": null
+    },
+    {
+      "id": "k-d8de71f85e08e810",
+      "titulek": "Británie: ruští špioni údajně nabírají teenagery k násilným a sabotážním činům",
+      "novaUdalost": true,
+      "duvod": "Nová událost - zpráva o ruském náboru britských teenagerů k sabotážím.",
       "duplikatSlugu": null,
       "neznamySlug": null,
       "zahozeno": "hlásí to jen jeden zdroj — druhý musí dohledat člověk"
+    },
+    {
+      "id": "k-8e175046cef4bee6",
+      "titulek": "Česko: Vojenská policie zadržela tři lidi kvůli zakázkám v Ústřední vojenské nemocnici",
+      "novaUdalost": true,
+      "duvod": "Nová událost - zadržení osob v souvislosti s korupcí v ÚVN.",
+      "duplikatSlugu": null,
+      "neznamySlug": null,
+      "zahozeno": "hlásí to jen jeden zdroj — druhý musí dohledat člověk"
+    },
+    {
+      "id": "k-4fdc7b8139e7d687",
+      "titulek": "Česko: Český rozhlas připravuje 22 scénářů krizového vysílání ve spolupráci se záchrannými složkami",
+      "novaUdalost": true,
+      "duvod": "Nová událost - dohoda o krizovém vysílání a přípravě scénářů.",
+      "duplikatSlugu": null,
+      "neznamySlug": null,
+      "zahozeno": null
+    },
+    {
+      "id": "k-830b1e63983ef081",
+      "titulek": "Analýza: Rusko destabilizuje Evropu sabotážemi, tvrdí NATO",
+      "novaUdalost": false,
+      "duvod": "Obecný analytický článek o ruských sabotážích v Evropě bez konkrétní nové události.",
+      "duplikatSlugu": null,
+      "neznamySlug": null,
+      "zahozeno": "není nová událost"
+    },
+    {
+      "id": "k-78ea89905c91bdb6",
+      "titulek": "Přehled: žhářství, sabotáže a 'jednorázoví agenti' - tajná válka Ruska v Evropě",
+      "novaUdalost": false,
+      "duvod": "Obecný přehledový článek o ruských sabotážích v Evropě bez konkrétní nové události.",
+      "duplikatSlugu": null,
+      "neznamySlug": null,
+      "zahozeno": "není nová událost"
+    },
+    {
+      "id": "k-e88c3f4b4ef8fc86",
+      "titulek": "Analýza: ruské napojení na sabotáže proti evropskému obrannému průmyslu",
+      "novaUdalost": false,
+      "duvod": "Obecný analytický článek o sabotážích proti evropskému obrannému průmyslu bez konkrétní nové události.",
+      "duplikatSlugu": null,
+      "neznamySlug": null,
+      "zahozeno": "není nová událost"
     }
   ]
 }
