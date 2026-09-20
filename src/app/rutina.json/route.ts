@@ -1,6 +1,6 @@
 import { WEB } from "@/config/web";
 import {
-  celkovyStav, incidenty, kandidati, nepotvrzeneZaznamy, posledniKontrola, posledniOvereni,
+  celkovyStav, incidenty, kandidati, nepotvrzeneZaznamy, posledniKontrola, posledniOvereni, vsichniKandidati,
 } from "@/lib/data";
 import { UROVNE } from "@/lib/skala";
 
@@ -33,7 +33,16 @@ export function GET() {
   const nepotvrzene = nepotvrzeneZaznamy();
   const stav = celkovyStav();
 
-  const sberNaposledy = fronta.reduce<string | null>(
+  /*
+    Kdy sběr naposledy něco uložil — ze VŠECH zachycených, ne jen z těch,
+    co čekají ve frontě.
+
+    Počítalo se to z čekajících a 21. 9. 2026 fronta poprvé klesla na nulu.
+    Údaj tím spadl na null a ranní kontrola by z toho usoudila, že sběr
+    neběží. Prázdná fronta je ale úspěch, ne výpadek: znamená, že se
+    všechno posoudilo.
+  */
+  const sberNaposledy = vsichniKandidati().reduce<string | null>(
     (nej, k) => (k.zachyceno && (!nej || k.zachyceno > nej) ? k.zachyceno : nej),
     null,
   );
