@@ -6,6 +6,8 @@ import { kdyZjisteno, type Zaznam } from "@/lib/agregace";
 import { PASMA, UROVNE } from "@/lib/skala";
 import type { Kandidat } from "@/lib/typy";
 import { Ikona } from "./ikony";
+import { PanelNahledu, type Nahled } from "./nahled-radku";
+import { useState } from "react";
 
 /*
   Aktuality vedle úvodu.
@@ -47,6 +49,28 @@ const NAZVY_NALEHAVOSTI: Record<string, string> = {
   zdola — tedy nejstarší zachycená zpráva, což je ta nejméně podstatná.
   Celý seznam je stejně jen ochutnávka; úplný je v Událostech.
 */
+/*
+  Náhled zachycené zprávy.
+
+  Datum se popisuje slovem. U zachycené zprávy totiž není datum události —
+  je to datum článku, a když to zdroj neuvádí, je to datum, kdy si toho sběr
+  všiml. Holé datum u řádku se přitom čte jako „tehdy se to stalo". Proto
+  je v náhledu napsané, o které z nich jde.
+*/
+function nahledKandidata(k: Kandidat): Nahled {
+  const radky = [
+    k.publikovano ? `zdroj vyšel ${datumPraha(k.publikovano)}` : `zachyceno ${datumPraha(k.zachyceno)}, datum zdroje neuvedeno`,
+    k.zeme ?? "země neurčena",
+    k.zdroj.nazev,
+  ];
+  if (k.naliehave) radky.push(NAZVY_NALEHAVOSTI[k.naliehave.druh] ?? k.naliehave.druh);
+  return {
+    titulek: k.titulek,
+    radky,
+    poznamka: "Zachyceno sběrem, nikdo to zatím neověřil. Klepnutím se otevře původní zdroj.",
+  };
+}
+
 export function Aktuality({
   zaznamy,
   kandidati,
@@ -66,13 +90,22 @@ export function Aktuality({
     .sort((a, b) => (b.publikovano ?? b.zachyceno).localeCompare(a.publikovano ?? a.zachyceno))
     .slice(0, zachycenych);
 
+  const [nahled, setNahled] = useState<Nahled | null>(null);
+
   return (
     <aside
       aria-labelledby="aktuality-nadpis"
-      className="flex h-full flex-col overflow-hidden rounded-[28px] border border-linka2 bg-plocha xl:absolute xl:inset-0"
+      className="relative flex h-full flex-col overflow-hidden rounded-[28px] border border-linka2 bg-plocha xl:absolute xl:inset-0"
+      onPointerLeave={() => setNahled(null)}
     >
-      <div className="flex items-center gap-1.5 border-b border-linka2 px-4 py-3">
-        <Ikona nazev="osa" velikost={13} tah={2} />
+      {/*
+        Hlavička stejná jako v úvodu vedle: červená tečka a štítek. Barva je
+        značka, ne plocha — jedna tečka do 8 px, nic víc (docs/ZNACKA.md).
+      */}
+      <div className="flex items-center gap-2 border-b border-linka2 px-4 py-3">
+        <span aria-hidden className="grid h-[18px] w-[18px] shrink-0 place-items-center rounded-full border border-akcent/50">
+          <span className="h-[6px] w-[6px] rounded-full bg-akcent" />
+        </span>
         <h2 id="aktuality-nadpis" className="stitek">Aktuality</h2>
       </div>
 
@@ -86,8 +119,23 @@ export function Aktuality({
         {posledni.map((z) => {
           const t = PASMA[UROVNE[z.zavaznost].pasmo];
           return (
-            <li key={z.slug}>
-              <Link href={`/udalosti/?u=${z.slug}`} className="flex items-baseline gap-2.5 px-4 py-2 hover:bg-plocha2">
+            <li
+              key={z.slug}
+              onPointerEnter={() => setNahled({
+                titulek: z.titulek,
+                radky: [datumPraha(kdyZjisteno(z)), z.zeme, `závažnost ${UROVNE[z.zavaznost].nazev.toLowerCase()}`],
+                poznamka: "Ověřený záznam. Klepnutím se otevře i se zdroji.",
+              })}
+            >
+              <Link
+                href={`/udalosti/?u=${z.slug}`}
+                className="flex items-baseline gap-2.5 px-4 py-2 hover:bg-plocha2"
+                onFocus={() => setNahled({
+                  titulek: z.titulek,
+                  radky: [datumPraha(kdyZjisteno(z)), z.zeme, `závažnost ${UROVNE[z.zavaznost].nazev.toLowerCase()}`],
+                  poznamka: "Ověřený záznam. Klepnutím se otevře i se zdroji.",
+                })}
+              >
                 <span aria-hidden className={`h-[6px] w-[6px] shrink-0 translate-y-[-1px] rounded-full ${t.tecka}`} />
                 <span className="flex min-w-0 flex-1 items-baseline gap-2">
                   <span className="cislice shrink-0 text-mikro text-tlum2">{datumPraha(kdyZjisteno(z))}</span>
@@ -117,12 +165,13 @@ export function Aktuality({
           </div>
           <ul className="divide-y divide-linka2">
             {zachycene.map((k) => (
-              <li key={k.id}>
+              <li key={k.id} onPointerEnter={() => setNahled(nahledKandidata(k))}>
                 <a
                   href={k.zdroj.url}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-baseline gap-2.5 px-4 py-2 hover:bg-plocha2"
+                  onFocus={() => setNahled(nahledKandidata(k))}
                 >
                   <span aria-hidden className="h-[6px] w-[6px] shrink-0 translate-y-[-1px] rounded-full border border-linka" />
                   <span className="flex min-w-0 flex-1 items-baseline gap-2">
@@ -143,6 +192,8 @@ export function Aktuality({
         </>
       )}
       </div>
+
+      <PanelNahledu nahled={nahled} />
 
       <div className="mt-auto border-t border-linka2 px-4 py-2.5">
         <Link href="/udalosti/" className="stitek text-tlum2 transition-colors hover:text-inkoust">
