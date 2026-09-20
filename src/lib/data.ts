@@ -58,7 +58,8 @@ const jako = <T,>(x: unknown): T => x as T;
 
 export function incidenty(): SUkazkou<Incident>[] {
   // Na produkci se zobrazují jen záznamy, které prošly lidskou kontrolou.
-  const ostre = jako<Incident[]>(ostreIncidenty).filter((i) => i.lidskyOvereno);
+  /* Zveřejněné je to, co prošlo člověkem, nebo co je doložené dvěma zdroji včetně úředního. */
+  const ostre = jako<Incident[]>(ostreIncidenty).filter((i) => i.lidskyOvereno || i.overeni === "automaticke");
   const ukazkove = JE_UKAZKA
     ? jako<Incident[]>(ukazkoveIncidenty).map((i) => ({ ...i, ukazka: true }))
     : [];

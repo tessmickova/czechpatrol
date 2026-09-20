@@ -114,6 +114,16 @@ jobs:
           npm run audit 2>&1 | tee /tmp/audit.log
           echo "kod=${PIPESTATUS[0]}" >> "$GITHUB_OUTPUT"
 
+      # Dobře doložené návrhy jdou na web samy.
+      #
+      # Podmínky jsou úzké: dva nezávislé zdroje a aspoň jeden úřední. Co je
+      # nesplní, zůstane ve frontě a na webu se ukazuje jen mezi zachycenými
+      # a neověřenými. Záznam nese označení, že ho nikdo nečetl — bez toho by
+      # web tvrdil, že prošel člověkem.
+      - name: Zveřejnit dobře doložené
+        if: steps.ai.outputs.zapnuto == 'true' && steps.audit.outputs.kod == '0'
+        run: npm run spravce -- zverejni
+
       - name: Ohlásit poruchu ověřovacího modelu
         if: steps.ai.outputs.zapnuto == 'true' && (steps.audit.outputs.kod == '3' || steps.audit.outputs.kod == '4')
         run: |

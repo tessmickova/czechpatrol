@@ -140,6 +140,18 @@ export interface Incident {
   /** Prošlo lidskou kontrolou. Bez toho se na produkci nezobrazuje. */
   lidskyOvereno: boolean;
   /**
+   * Jak záznam prošel kontrolou, než se zveřejnil.
+   *
+   * `lidske` — přečetl a schválil člověk.
+   * `automaticke` — zveřejnilo se samo, protože stojí na dvou nezávislých
+   *   zdrojích a aspoň jeden z nich je úřední. Nikdo to nečetl.
+   *
+   * Musí to být u záznamu VIDĚT. Web dlouho sliboval, že všechno na něm
+   * prošlo člověkem; jakmile to přestane platit, je jediná poctivá cesta
+   * napsat u každého záznamu, jak to u něj je.
+   */
+  overeni?: "lidske" | "automaticke";
+  /**
    * Záznam přenesený z dřívějšího monitoringu. Odkaz na primární zdroj u něj
    * zatím není doplněný — web to musí přiznat, ne to zamlčet.
    */

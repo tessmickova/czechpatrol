@@ -444,6 +444,66 @@ function upravZaznam(slug, jsonText) {
   console.log(`Záznam ${slug}: upraveno ${pouzite.join(", ")}. Zapsáno i do oprav.`);
 }
 
+
+/*
+  Automatické zveřejnění dobře doložených návrhů.
+
+  Podmínky jsou úzké a všechny musí platit naráz: dva nezávislé zdroje
+  a aspoň jeden z nich úřední. Co je nesplní, zůstane ve frontě a na webu
+  se ukazuje jen mezi zachycenými a neověřenými.
+
+  Bez lidského čtení se nezveřejňuje hodnocení projektu — jen doložená fakta,
+  zdroje a datum. Hodnocení je názor a ten nemá vzniknout bez člověka.
+
+  Záznam nese overeni: "automaticke", aby šlo na webu napsat, že ho nikdo
+  nečetl. Web dlouho sliboval, že všechno na něm prošlo člověkem; jakmile to
+  přestane platit, musí to být u každého záznamu vidět.
+*/
+function dobreDolozeny(n) {
+  const zdroje = n.zdroje ?? [];
+  return (
+    (n.kam ?? "zaznam") === "zaznam" &&
+    zdroje.length >= 2 &&
+    zdroje.some((z) => z.primarni === true || z.typ === "primary") &&
+    (n.fakta ?? []).length > 0
+  );
+}
+
+function zverejniAutomaticky() {
+  const navrhy = cti("data/navrhy.json", []);
+  const inc = cti("data/incidenty.json", []);
+  const jiz = new Set(inc.map((x) => x.id));
+
+  const kZverejneni = navrhy.filter((n) => dobreDolozeny(n) && !jiz.has(n.id));
+  if (!kZverejneni.length) {
+    console.log(`Nic dobře doloženého k zveřejnění. Ve frontě zůstává ${navrhy.length}.`);
+    return;
+  }
+
+  const ted = new Date().toISOString();
+  for (const n of kZverejneni) {
+    const { kam: _k, pripravil: _p, pripraveno: _q, preverit: _r, ...zaznam } = n;
+    zaznam.lidskyOvereno = false;
+    zaznam.overeni = "automaticke";
+    /* U případu musí původce stát; „neznámý" je pravdivá odpověď. */
+    if ((zaznam.druh ?? "pripad") === "pripad" && !zaznam.puvodce) zaznam.puvodce = "neznamy";
+    /* Hodnocení je názor — bez člověka nevzniká. */
+    zaznam.vyznam = "";
+    zaznam.aktualizovano = ted;
+    zaznam.historie = [
+      ...(zaznam.historie ?? []),
+      { kdy: ted, text: "Zveřejněno automaticky: dva nezávislé zdroje, z toho úřední. Bez lidské kontroly.", novySignal: false },
+    ];
+    inc.push(zaznam);
+  }
+
+  const zbytek = navrhy.filter((n) => !kZverejneni.some((z) => z.id === n.id));
+  fs.writeFileSync(path.join(koren, "data/incidenty.json"), `${JSON.stringify(inc, null, 2)}\n`);
+  fs.writeFileSync(path.join(koren, "data/navrhy.json"), `${JSON.stringify(zbytek, null, 2)}\n`);
+  console.log(`Zveřejněno automaticky: ${kZverejneni.length}. Ve frontě zůstává ${zbytek.length}.`);
+  for (const n of kZverejneni) console.log(`  + ${n.slug} (${n.zdroje.length} zdrojů)`);
+}
+
 const prikaz = process.argv[2];
 const arg = process.argv.slice(3);
 
@@ -455,6 +515,7 @@ else if (prikaz === "zamitni") zamitni(arg[0], arg.slice(1).join(" "));
 else if (prikaz === "znovu") znovu(arg[0], arg.slice(1).join(" "));
 else if (prikaz === "uprav") uprav(arg[0], arg.slice(1).join(" "));
 else if (prikaz === "uprav-zaznam") upravZaznam(arg[0], arg.slice(1).join(" "));
+else if (prikaz === "zverejni") zverejniAutomaticky();
 else if (prikaz === "tip") tip(arg[0]);
 else if (prikaz === "prijmi") {
   /* Delegace na stávající nástroj: kostru záznamu už umí a umí ji dobře. */
@@ -466,6 +527,6 @@ else if (prikaz === "prijmi") {
   execFileSync("node", [path.join(koren, "nastroje/rozhlas.mjs"), "--nacisto", ...arg], { stdio: "inherit" });
 } else {
   console.error(`Neznámý příkaz: ${prikaz}`);
-  console.error("Použití: stav | fronta | navrhy | uprav <id> <json> | uprav-zaznam <slug> <json> | schval <id> | znovu <id> [důvod] | zamitni <id> [důvod] | prijmi <id> | tip [soubor] | vystraha … | nahled");
+  console.error("Použití: stav | fronta | navrhy | uprav <id> <json> | uprav-zaznam <slug> <json> | zverejni | schval <id> | znovu <id> [důvod] | zamitni <id> [důvod] | prijmi <id> | tip [soubor] | vystraha … | nahled");
   process.exit(1);
 }

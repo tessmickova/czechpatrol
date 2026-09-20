@@ -335,7 +335,12 @@ async function main() {
       jistota: p.jistota,
       stav: "bez-vysetrovani",
       atribuce: "neznama",
-      puvodce: null,
+      /*
+        „Neznámý" je pravdivá hodnota, ne výplň. Prázdné pole znamená, že se
+        na otázku po původci nikdo neptal; „neznamy" znamená, že se ptal
+        a odpověď nemá. Kontrola dat to u případu vyžaduje právě proto.
+      */
+      puvodce: p.druh === "pripad" ? "neznamy" : null,
       druh: p.druh === "neurceno" ? "reakce" : p.druh,
       fakta: p.fakta,
       neznameho,

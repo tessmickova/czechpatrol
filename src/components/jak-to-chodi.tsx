@@ -48,9 +48,9 @@ const KROKY: Krok[] = [
   },
   {
     cislo: "4",
-    nadpis: "Schválení člověkem",
-    kdo: "vy, tlačítkem ve Správě",
-    co: "Jediné místo, kde se lidskyOvereno přepne na true. Teprve tím se ze záznamu stane něco, za čím projekt stojí.",
+    nadpis: "Zveřejnění",
+    kdo: "automaticky, nebo vy ve Správě",
+    co: "Návrh se dvěma nezávislými zdroji, z nichž aspoň jeden je úřední, jde na web sám a je označený jako nečtený. Všechno ostatní čeká na vaše schválení — teprve tím se ze záznamu stane něco, za čím projekt stojí.",
     zastavi: "Zamítnutý návrh jde do koše i s důvodem. Nemaže se, aby šlo poznat, že už jednou posuzován byl.",
   },
 ];
@@ -63,9 +63,14 @@ interface Cil {
 
 const KAM: Cil[] = [
   {
-    nazev: "Záznamy a počty na webu",
-    podminka: "lidskyOvereno = true",
-    kdy: "Hned po schválení a nasazení. Tohle je jediný obsah, který se počítá do statistik a hodnocení situace.",
+    nazev: "Záznamy a počty na webu — schválené",
+    podminka: "schválil člověk",
+    kdy: "Hned po schválení a nasazení. Nese hodnocení projektu, protože si ho někdo přečetl.",
+  },
+  {
+    nazev: "Záznamy a počty na webu — automatické",
+    podminka: "dva nezávislé zdroje · aspoň jeden úřední",
+    kdy: "Zveřejní se samo, bez čekání na člověka. U záznamu je napsáno, že ho nikdo nečetl, a hodnocení projektu u něj není — jen doložená fakta a zdroje. Do počtů vstupuje.",
   },
   {
     nazev: "Právě ověřované",

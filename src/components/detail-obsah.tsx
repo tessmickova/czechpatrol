@@ -163,6 +163,24 @@ export function DetailObsah({ i }: { i: Incident }) {
           {" "}
           <Link href="/#opatreni" className="odkaz">Oficiální opatření</Link>
         </p>
+        {/*
+          Kdo záznam ověřil, musí být vidět.
+
+          Web dlouho sliboval, že všechno na něm prošlo člověkem. Od chvíle,
+          kdy se dobře doložené záznamy zveřejňují samy, to neplatí — a mlčet
+          o tom by znamenalo tvrdit čtenáři něco, co není pravda. Věta je
+          proto u záznamu, ne schovaná v metodice.
+        */}
+        {i.overeni === "automaticke" && (
+          <div className="mt-3 rounded-[18px] border border-linka p-3.5">
+            <div className="stitek mb-1">Jak byl tenhle záznam ověřen</div>
+            <p className="text-zaklad leading-relaxed text-tlum">
+              Zveřejnil se automaticky, protože stojí na dvou nezávislých zdrojích
+              a aspoň jeden z nich je úřední. <span className="text-inkoust">Nikdo z nás ho nečetl.</span>{" "}
+              Fakta i odkazy jsou přesně to, co uvádějí zdroje — hodnocení projektu u něj proto není.
+            </p>
+          </div>
+        )}
         {i.vyznam && (
           <div className="mt-3 rounded-[18px] border border-linka2 bg-plocha p-3.5">
             <div className="stitek mb-1">Hodnocení projektu — proč to sledujeme</div>
