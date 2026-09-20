@@ -1,5 +1,53 @@
 [
   {
+    "id": "k-313473f6a5135e70",
+    "zachyceno": "2026-09-20T18:02:24.737Z",
+    "publikovano": "2026-09-20T17:46:57.000Z",
+    "zdroj": {
+      "nazev": "BBC News — Europe",
+      "url": "https://www.bbc.co.uk/news/articles/cvwyz29n0nn2o?at_medium=RSS&at_campaign=rss",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "German Chancellor Merz calls state election a 'disaster' for his party but vows to stay on",
+    "shrnuti": "Exit polls show damaging losses for Merz's centre-right CDU party in the states of Berlin and Mecklenburg-Vorpommern.",
+    "duvod": "bez-skutku",
+    "kategorie": [],
+    "posouzeni": null
+  },
+  {
+    "id": "k-610a840fa1e870de",
+    "zachyceno": "2026-09-20T18:02:24.707Z",
+    "publikovano": "2026-09-20T17:40:00.000Z",
+    "zdroj": {
+      "nazev": "Český rozhlas — domácí zprávy",
+      "url": "https://www.irozhlas.cz/zpravy-svet/v-meklenbursku-vyhrala-afd-v-berline-strana-levice-hlasi-prognozy_2609201940_aha",
+      "typ": "primary",
+      "primarni": true
+    },
+    "titulek": "V Meklenbursku vyhrála AfD, v Berlíně strana Levice. Hlásí prognózy",
+    "shrnuti": "Volby v německé spolkové zemi Meklenbursko-Přední Pomořansko vyhrála strana Alternativa pro Německo (AfD). Podle prognóz veřejnoprávních stanic ARD a ZDF získala 37 až 38 procent hlasů. V Berlíně vyhrála strana Levice. Podle prognóz ARD a ZDF získala 25,1 až 25,5 procenta hlasů. Na druhém místě s od",
+    "duvod": "vylouceno-tematem",
+    "kategorie": [],
+    "posouzeni": null
+  },
+  {
+    "id": "k-b301f388dd3889ba",
+    "zachyceno": "2026-09-20T18:02:24.708Z",
+    "publikovano": "2026-09-20T17:12:00.000Z",
+    "zdroj": {
+      "nazev": "Český rozhlas — domácí zprávy",
+      "url": "https://www.irozhlas.cz/zpravy-domov/do-polska-zamirilo-deset-ohrozenych-kachen-z-ostravske-zoo-vzacni-ptaci-posili_2609201912_ntu",
+      "typ": "primary",
+      "primarni": true
+    },
+    "titulek": "Do Polska zamířilo deset ohrožených kachen z ostravské zoo. Vzácní ptáci posílí divokou populaci",
+    "shrnuti": "Ostravská zoologická zahrada poskytla pro vypuštění v Polsku deset poláků malých, kteří jsou ohroženým druhem potápivé kachny. Zahrada se podílí na mezinárodním repatriačním projektu, jehož cílem je obnova divoké populace tohoto druhu v oblasti přírodní rezervace Miliczské rybníky. Novinářům to v ne",
+    "duvod": "bez-skutku",
+    "kategorie": [],
+    "posouzeni": null
+  },
+  {
     "id": "k-e15f6e7ded03e33d",
     "zachyceno": "2026-09-20T17:02:35.149Z",
     "publikovano": "2026-09-20T17:00:00.000Z",
@@ -83,6 +131,24 @@
     "duvod": "vylouceno-tematem",
     "kategorie": [
       "cr"
+    ],
+    "posouzeni": null
+  },
+  {
+    "id": "k-d763cbfeb4846126",
+    "zachyceno": "2026-09-20T18:02:24.801Z",
+    "publikovano": "2026-09-20T15:45:30.000Z",
+    "zdroj": {
+      "nazev": "Téma: letiste (anglicky)",
+      "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTE9CMVh5NkRxXzI5WHpKeGhuREZ6VmV1RWZyX0JnMW5UdFJpQ0hfVVB4MTliZk5vUnUxTmVXaG5TeU5tcnNVb0NWajBBVWNFeXZtR3RtSkJMMXA0TllTRlpYNnBHRjgtNWV4d0g4SDhTNlMxY1RDOUdoSw?oc=5",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Drone reported near plane descending in Dublin Airport - rte.ie",
+    "shrnuti": "Drone reported near plane descending in Dublin Airport rte.ie",
+    "duvod": "bez-skutku",
+    "kategorie": [
+      "drony"
     ],
     "posouzeni": null
   },
@@ -10081,89 +10147,6 @@
     "posouzeni": {
       "podezreni": "zadne",
       "duvod": "Politický průzkum v Estonsku",
-      "kdy": "2026-09-19T13:05:21.142Z"
-    }
-  },
-  {
-    "id": "k-ccf1fd540f89b308",
-    "zachyceno": "2026-09-16T05:02:57.830Z",
-    "publikovano": "2026-09-16T04:55:00.000Z",
-    "zdroj": {
-      "nazev": "Český rozhlas — domácí zprávy",
-      "url": "https://www.irozhlas.cz/zpravy-domov/chvali-si-odhlucneni-i-akustiku-studenti-teplicke-konzervatore-se-po-roce_2609160655_bva",
-      "typ": "primary",
-      "primarni": true
-    },
-    "titulek": "Chválí si odhlučnění i akustiku. Studenti teplické konzervatoře se po roce vrátili do opravených učeben",
-    "shrnuti": "Konzervatoř Teplice funguje právě 55 let a výročí oslaví v opravené budově v Českobratrské ulici. Nová je střecha, fasáda, všechny vnitřní instalace nebo ústřední topení. Po rok a půl trvající přestavbě se zvýšil komfort pro učitele i žáky. A taky se zlepšila zvuková pohoda, která je pro hudebníky d",
-    "duvod": "bez-skutku",
-    "kategorie": [],
-    "posouzeni": {
-      "podezreni": "zadne",
-      "duvod": "Oprava učeben konzervatoře",
-      "kdy": "2026-09-19T13:05:21.142Z"
-    }
-  },
-  {
-    "id": "k-eb89494f8cb2f647",
-    "zachyceno": "2026-09-16T05:02:57.831Z",
-    "publikovano": "2026-09-16T04:51:00.000Z",
-    "zdroj": {
-      "nazev": "Český rozhlas — domácí zprávy",
-      "url": "https://www.irozhlas.cz/zpravy-svet/online-ukrajina-testuje-nove-drony-jsou-schopne-nicit-ruska-proudova_2609160651_aru",
-      "typ": "primary",
-      "primarni": true
-    },
-    "titulek": "ONLINE: Ukrajina testuje nové drony. Jsou schopné ničit ruská proudová nepilotovaná letadla",
-    "shrnuti": "Ukrajina v praxi testuje nové drony, které budou schopné čelit ruským nepilovaným letounům s proudovým pohonem. Agentura Reuters s odvoláním na vojenské zdroje napsala, že dosavadní testy nebyly úspěšné.",
-    "duvod": "bez-skutku",
-    "kategorie": [
-      "drony",
-      "rusko"
-    ],
-    "posouzeni": {
-      "podezreni": "zadne",
-      "duvod": "Testování dronů proti dronům, žádný incident",
-      "kdy": "2026-09-19T13:05:21.142Z"
-    }
-  },
-  {
-    "id": "k-5eb7ff6c566322c8",
-    "zachyceno": "2026-09-16T05:02:58.188Z",
-    "publikovano": "2026-09-16T04:45:05.000Z",
-    "zdroj": {
-      "nazev": "Česko — sabotaz",
-      "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxNaVcydElyMUpibVQ4WTVkdWpJMFdWSnJlYW15QmxIdDlxTFJTTTZVMGpQNHh1TU5vbkZKaUdESG5XdWhYQWtldE9YaG81MGtlYnk1OGRiSnk3NWtXWURhY05vYnpTVEdmLXFDT19tVndKYVZrR0k1TGhxbEpqQzNUeUM4SnlZZENhV3BrajBxTEVxZFctVVVNd214SlBjbm01X1RIQVdDYkJDV3REeWxBb1A4dXBUUUVOLUE?oc=5",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Investigation: Cuban dance instructor recruits random people to carry out acts of terror in Europe - EUalive",
-    "shrnuti": "Investigation: Cuban dance instructor recruits random people to carry out acts of terror in Europe EUalive",
-    "duvod": "bez-skutku",
-    "kategorie": [],
-    "posouzeni": {
-      "podezreni": "vysoke",
-      "duvod": "Nábor lidí k teroristickým útokům v Evropě",
-      "kdy": "2026-09-19T13:05:21.142Z"
-    }
-  },
-  {
-    "id": "k-d3bb80b0eee50a35",
-    "zachyceno": "2026-09-16T05:02:57.832Z",
-    "publikovano": "2026-09-16T04:44:00.000Z",
-    "zdroj": {
-      "nazev": "Český rozhlas — domácí zprávy",
-      "url": "https://www.irozhlas.cz/zpravy-domov/vzdelavani-budoucich-techniku-a-vedcu-soukrome-lyceum-zalozily-v-nove-pace_2609160644_vaa",
-      "typ": "primary",
-      "primarni": true
-    },
-    "titulek": "Vzdělávání budoucích techniků a vědců. Soukromé lyceum založily v Nové Pace průmyslové firmy",
-    "shrnuti": "Průmyslové firmy v Nové Pace otevřely v letošním školním roce soukromé technické lyceum. Jejich snahou je vychovat dostatek odborníků v technických oborech, kterých je v regionu dlouhodobě nedostatek. Do prvního ročníku nastoupilo patnáct studentů, z toho čtyři dívky. Za sebou už mají adaptační kurz",
-    "duvod": "bez-skutku",
-    "kategorie": [],
-    "posouzeni": {
-      "podezreni": "zadne",
-      "duvod": "Otevření soukromého lycea",
       "kdy": "2026-09-19T13:05:21.142Z"
     }
   }
