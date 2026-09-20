@@ -72,9 +72,10 @@ export function StavDetail({
       */}
       <Radek popisek="Ověřit u úřadu">
         {p.zdroje.length ? (
-          <span className="flex flex-wrap gap-x-3 gap-y-1">
+          /* Odkazy s výškou na prst: na mobilu se na ně klepe, ne kliká. */
+          <span className="flex flex-wrap gap-x-3">
             {p.zdroje.map((z) => (
-              <a key={z.klic} href={z.url} target="_blank" rel="noopener noreferrer" className="odkaz">
+              <a key={z.klic} href={z.url} target="_blank" rel="noopener noreferrer" className="odkaz inline-flex min-h-[32px] items-center">
                 {z.nazev} ↗
               </a>
             ))}

@@ -126,8 +126,13 @@ export function HeroDashboard({
         )}
       </p>
 
-      <div className="grid gap-2 p-3 sm:p-3.5 lg:grid-cols-[minmax(0,1.05fr)_minmax(0,1.4fr)]">
-        <div className="flex items-center gap-4 border-b border-linka2 pb-3 lg:border-b-0 lg:border-r lg:pb-0 lg:pr-4">
+      {/*
+        Sloupec s minimem 0. Bez toho má jediný sloupec na mobilu minimum
+        „auto" a roztáhne se podle nejširšího obsahu — dva budíky vedle sebe
+        ho vyhnaly na 677 px a celý panel se na 390 px displeji ořízl vpravo.
+      */}
+      <div className="grid grid-cols-[minmax(0,1fr)] gap-2 p-3 sm:p-3.5 lg:grid-cols-[minmax(0,1.05fr)_minmax(0,1.4fr)]">
+        <div className="flex min-w-0 items-center gap-4 border-b border-linka2 pb-3 lg:border-b-0 lg:border-r lg:pb-0 lg:pr-4">
           <Napoveda popis={stav.uroven ? <VykladUrovne uroven={stav.uroven} /> : <span className="block">{t("Hodnocení zatím nebylo stanoveno.")}</span>}>
             <span className="block"><ObloukovyMerak uroven={stav.uroven} naNoci velikost={132} skrytPopisek /></span>
           </Napoveda>
@@ -153,7 +158,7 @@ export function HeroDashboard({
           Zůstávají dva, které odpovídají na jinou otázku než velký budík:
           co se děje v Česku a co z toho plyne pro dnešek.
         */}
-        <div className="grid grid-cols-2 divide-x divide-linka2">
+        <div className="grid min-w-0 grid-cols-2 divide-x divide-linka2">
           <Merak
             nadpis={t("Situace v Česku")}
             uroven={cr}

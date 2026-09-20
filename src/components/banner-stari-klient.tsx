@@ -121,7 +121,7 @@ function Pruh({ text, poplach = false }: { text: string; poplach?: boolean }) {
       className={poplach ? "border-b border-stari/40 bg-stari/10" : "border-b border-linka2 bg-plocha"}
     >
       <div
-        className={`mx-auto flex max-w-[1200px] items-start gap-2.5 px-4 py-2.5 text-zaklad sm:px-6 ${
+        className={`mx-auto flex max-w-[1280px] items-start gap-2.5 px-4 py-2.5 text-zaklad sm:px-6 ${
           poplach ? "text-stari-text" : "text-tlum"
         }`}
       >

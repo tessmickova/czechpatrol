@@ -216,7 +216,7 @@ export function Sekce({
           <div className="vrstva vzor-mrizka absolute inset-x-0 -inset-y-[35%]" />
         </div>
       )}
-      <div className="mx-auto max-w-[1180px] px-5 py-20 sm:px-8 sm:py-28">
+      <div className="mx-auto max-w-[1280px] px-4 py-20 sm:px-6 sm:py-28">
         <div className="mb-10 flex flex-col gap-5 sm:mb-14 sm:flex-row sm:items-end sm:justify-between sm:gap-8">
           <div className="max-w-[46rem]">
             {kicker && (

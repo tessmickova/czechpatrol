@@ -27,6 +27,11 @@ export const dynamic = "force-static";
 
 /** Kolik položek se vypisuje jmenovitě. Zbytek je jen v počtech. */
 const NEJVYS = 12;
+/*
+  Zachycených méně: rutina z nich čte jen počet a stáří nejnovější, ale každá
+  nese adresu zdroje — u Google News přes čtyři sta znaků. Osm stačí.
+*/
+const NEJVYS_ZACHYCENYCH = 8;
 
 export function GET() {
   const fronta = kandidati();
@@ -87,7 +92,7 @@ export function GET() {
       })),
 
     /* Nejnovější zachycené zprávy, které nikdo neposoudil. */
-    zachyceno: fronta.slice(0, NEJVYS).map((k) => ({
+    zachyceno: fronta.slice(0, NEJVYS_ZACHYCENYCH).map((k) => ({
       id: k.id,
       titulek: k.titulek,
       zeme: k.zeme ?? null,

@@ -24,7 +24,7 @@ export default function OProjektu() {
   const p = pocty(incidenty(), "všechny zveřejněné záznamy");
   const n = nepotvrzene().length;
   return (
-    <div className="mx-auto max-w-[820px] px-5 py-12 sm:px-8 sm:py-16">
+    <div className="mx-auto max-w-[860px] px-5 py-12 sm:px-8 sm:py-16">
       <HlavickaStranky
         stitek="O projektu"
         nadpis="Kdo to píše a podle čeho"

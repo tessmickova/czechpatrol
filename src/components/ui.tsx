@@ -217,7 +217,7 @@ export interface ObsahRadku {
   popis?: ReactNode;
 }
 
-const SIRKA_DATA = { husta: "w-[42px]", normalni: "w-[62px] sm:w-[78px]" } as const;
+const SIRKA_DATA = { husta: "w-[42px]", normalni: "w-[84px]" } as const;
 
 /*
   Datum v seznamu.

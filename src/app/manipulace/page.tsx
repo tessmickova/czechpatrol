@@ -27,7 +27,7 @@ export default function Manipulace() {
   const bezi = vse.filter((k) => k.probiha).length;
 
   return (
-    <div className="mx-auto max-w-[1100px] px-5 py-12 sm:px-8 sm:py-16">
+    <div className="mx-auto max-w-[1280px] px-4 py-12 sm:px-6 sm:py-16">
       <HlavickaStranky
         stitek="Manipulace"
         nadpis="Manipulace a útoky na občany"

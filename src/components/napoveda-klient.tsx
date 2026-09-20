@@ -61,7 +61,8 @@ export function ObalNapovedy({
     >
       <button
         type="button"
-        className={`text-left ${cele ? "w-full" : ""}`}
+        /* U malého spouštěče (ikona „i") se zvětší jen dotyková plocha, ne místo v textu. */
+        className={`text-left ${cele ? "w-full" : "-m-2 inline-flex min-h-[32px] min-w-[32px] items-center p-2"}`}
         aria-label={label}
         aria-expanded={otevreno}
         aria-describedby={otevreno ? id : undefined}
