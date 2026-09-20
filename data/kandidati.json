@@ -138,6 +138,75 @@
     }
   },
   {
+    "id": "k-fd657b73cb784ec2",
+    "zachyceno": "2026-09-20T13:02:21.024Z",
+    "publikovano": "2026-09-20T12:26:47.000Z",
+    "zdroj": {
+      "nazev": "Česko — sabotaz",
+      "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxPQ1RQT2kyTFVDRmZvQWdsbDBIRERhR0I1REJSSVE3N2JYSjFXWGQxWVJSVzBZUjRvZ3NMZV9HRnc5eWdsdjR2QVZxd0t2VEVXQ2o2aW1jVl9teGQ2NkNXcjNTTFl1NnJoa3B3WjROcXFDUlVKby1TUDRBLXlFck5LS193R2NsWG5xS1NTeVJVazF0SzdlbnVyXzJUemM4VmcybXc?oc=5",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "US Charges Russian Network in Alleged European Sabotage, US Murder Plot - OCCRP",
+    "titulekPuvodni": "US Charges Russian Network in Alleged European Sabotage, US Murder Plot - OCCRP",
+    "shrnuti": "US Charges Russian Network in Alleged European Sabotage, US Murder Plot OCCRP",
+    "kodZeme": "RU",
+    "zeme": "Rusko",
+    "kategorie": [
+      "sabotaz",
+      "rusko"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "sabotage",
+      "russia"
+    ],
+    "naliehave": null,
+    "stav": "ceka",
+    "vyrez": {
+      "text": "Google News",
+      "stazeno": "2026-09-20T13:02:21.880Z",
+      "stav": 200
+    }
+  },
+  {
+    "id": "k-ad9e995a839bf16f",
+    "zachyceno": "2026-09-20T13:02:20.680Z",
+    "publikovano": "2026-09-20T10:45:39.000Z",
+    "zdroj": {
+      "nazev": "BBC News — Europe",
+      "url": "https://www.bbc.co.uk/news/articles/c34gdjk1ne8yo?at_medium=RSS&at_campaign=rss",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Largest attack on Moscow sees Ukraine fire hundreds of drones, mayor says",
+    "titulekPuvodni": "Largest attack on Moscow sees Ukraine fire hundreds of drones, mayor says",
+    "shrnuti": "Moscow's mayor says 450 drones were downed during the overnight barrage, in which two people died.",
+    "kodZeme": "UA",
+    "zeme": "Ukrajina",
+    "kategorie": [
+      "hybridni",
+      "drony"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "attack on",
+      "dron",
+      "drone"
+    ],
+    "naliehave": null,
+    "stav": "ceka",
+    "vyrez": {
+      "text": "Largest attack on Moscow sees Ukraine fire hundreds of drones, mayor says - BBC News\nFigure caption, Moscow oil refinery seen on fire after Ukrainian drone attack\nBy Jaroslav Lukiv   and   Dearbail Jordan\nPublished\n20 September 2026, 06:04 BST\nUpdated 2 hours ago\nUkraine has fired its largest drone attack on the Moscow region, the mayor has said, hitting the city&#x27;s main oil refinery and a residential building.\nMayor Sergei Sobyanin said 450 drones heading for the capital had been shot down in what he called \"the most massive\" attack. The region&#x27;s governor said at least two people were killed and 20 injured.\nUkraine&#x27;s President Volodymyr Zelensky confirmed Kyiv had hit a \"key\" Russian oil facility and a logistics site in the region with drones and missiles, representing \"billions of dollars that sustain the war machine\".\nUkrainian officials meanwhile said nine people, including three children, had been killed in Russian attacks in the Kyiv and Sumy regions on Saturday.\nRussia and Ukraine have recently intensified their strikes, targeting energy-generating and transport facilities, as well as major logistics hubs.\nA 44-year-old woman was killed in Sofyino on Sunday…",
+      "stazeno": "2026-09-20T13:02:22.032Z",
+      "stav": 200
+    }
+  },
+  {
     "id": "k-036cb3bbc9dd78ee",
     "zachyceno": "2026-09-20T09:01:21.569Z",
     "publikovano": null,
@@ -12004,88 +12073,6 @@
       "kdy": "2026-09-20T07:57:42.752Z",
       "duvod": "pokracovani",
       "patriK": "lavrov-lipsko-skutecna-valka-2026",
-      "poznamka": null
-    }
-  },
-  {
-    "id": "k-c8a7438df26afc74",
-    "zachyceno": "2026-09-06T13:59:15.566Z",
-    "publikovano": "2026-09-06T10:44:45.000Z",
-    "zdroj": {
-      "nazev": "Google News — sabotage Europe",
-      "url": "https://news.google.com/rss/articles/CBMiS0FVX3lxTE05bG80UUtfU2NXUU5PNVdaWF9HQ1BWUHlHV1FoQlJGakVzUVZGU1ZJQlE3dHpzMVltdGNoN0E3VEdENmRUejNkSnhpVQ?oc=5",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Germany Boosts Defenses Against Russian Drones and Sabotage - Kyiv Post",
-    "titulekPuvodni": "Germany Boosts Defenses Against Russian Drones and Sabotage - Kyiv Post",
-    "shrnuti": "Germany Boosts Defenses Against Russian Drones and Sabotage Kyiv Post",
-    "kodZeme": "DE",
-    "zeme": "Německo",
-    "kategorie": [
-      "sabotaz",
-      "drony",
-      "rusko"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "shody": [
-      "sabotage",
-      "dron",
-      "drone",
-      "russia"
-    ],
-    "stav": "vyrizen",
-    "vyrez": {
-      "text": "Google News",
-      "stazeno": "2026-09-14T09:02:40.065Z",
-      "stav": 200
-    },
-    "naliehave": null,
-    "vyrizeni": {
-      "kdy": "2026-09-20T07:57:42.752Z",
-      "duvod": "neudalost",
-      "patriK": null,
-      "poznamka": null
-    }
-  },
-  {
-    "id": "k-be313ede18bcf6c0",
-    "zachyceno": "2026-09-20T06:02:32.434Z",
-    "publikovano": "2026-09-04T17:46:22.000Z",
-    "zdroj": {
-      "nazev": "Téma: energetika (anglicky)",
-      "url": "https://news.google.com/rss/articles/CBMiS0FVX3lxTFBjMWNXZUQ1eUducXZNczBmYmxpRDgxd1pjaEpSX0NLRXZYWURxVkVVZHJVXzhIVlozY214UXEyZ0JLQllTcnpyQXd4OA?oc=5",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Germany investigates new attempted sabotage at power substation as police search for man who claimed responsibility for prior attacks - theins.press",
-    "titulekPuvodni": "Germany investigates new attempted sabotage at power substation as police search for man who claimed responsibility for prior attacks - theins.press",
-    "shrnuti": "Germany investigates new attempted sabotage at power substation as police search for man who claimed responsibility for prior attacks theins.press",
-    "kodZeme": "DE",
-    "zeme": "Německo",
-    "kategorie": [
-      "sabotaz",
-      "infrastruktura"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "zeSite": null,
-    "shody": [
-      "sabotage",
-      "substation"
-    ],
-    "naliehave": null,
-    "stav": "vyrizen",
-    "vyrez": {
-      "text": "Google News",
-      "stazeno": "2026-09-20T06:04:11.141Z",
-      "stav": 200
-    },
-    "vyrizeni": {
-      "kdy": "2026-09-20T07:57:42.752Z",
-      "duvod": "pokracovani",
-      "patriK": "nemecko-rozvodny-zadrzeni-2026",
       "poznamka": null
     }
   }
