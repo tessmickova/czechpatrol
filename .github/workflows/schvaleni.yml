@@ -20,10 +20,14 @@ on:
         description: "Co s ním"
         required: true
         type: choice
-        options: [schval, zamitni]
+        options: [schval, znovu, zamitni]
         default: schval
       duvod:
-        description: "Důvod zamítnutí (u schválení se ignoruje)"
+        description: "Důvod zamítnutí nebo toho, co má ověřovatel doplnit"
+        required: false
+        default: ""
+      upravy:
+        description: "JSON se změnami, které správce udělal před schválením"
         required: false
         default: ""
 
@@ -31,15 +35,27 @@ permissions:
   contents: write
 
 concurrency:
-  # Dvě rozhodnutí naráz by si přepsala data/navrhy.json.
+  # Dvě rozhodnutí naráz by si přepsala data/navrhy.json. Fronta je nutná,
+  # ale nestačí — viz checkout níž.
   group: rozhodnuti
   cancel-in-progress: false
 
 jobs:
   rozhodnout:
     runs-on: ubuntu-latest
+    outputs:
+      zmena: ${{ steps.zapis.outputs.zmena }}
     steps:
+      # Stáhnout SOUČASNOU špičku main, ne stav z chvíle, kdy se běh založil.
+      #
+      # Bez toho: dvě schválení pár vteřin po sobě se sice seřadila do fronty,
+      # ale to druhé si vyzvedlo kód z doby PŘED prvním. Rozhodlo nad starými
+      # daty, push mu neprošel a rebase skončil konfliktem v data/incidenty.json
+      # — dva zápisy na konec téhož pole se sloučit nedají. Schválení tiše
+      # spadlo a do kanálu ani na web nešlo nic.
       - uses: actions/checkout@v7
+        with:
+          ref: main
 
       - uses: actions/setup-node@v7
         with:
@@ -58,6 +74,16 @@ jobs:
 
       # Vstupy jdou přes proměnné prostředí, ne do textu příkazu. Vložené
       # přímo by z nich šlo vypsat cokoli dalšího a spustit to na běžci.
+      # Úpravy se zapíšou před rozhodnutím, aby se schvaloval už opravený
+      # text. Opačné pořadí by znamenalo zveřejnit strojovou verzi a opravovat
+      # ji až potom — tedy na webu a v kanálu by chvíli stála ta nepřesná.
+      - name: Zapsat úpravy správce
+        if: inputs.upravy != ''
+        env:
+          NAVRH: ${{ inputs.id }}
+          UPRAVY: ${{ inputs.upravy }}
+        run: npm run spravce -- uprav "$NAVRH" "$UPRAVY"
+
       - name: Provést rozhodnutí
         env:
           AKCE: ${{ inputs.akce }}
@@ -65,7 +91,7 @@ jobs:
           DUVOD: ${{ inputs.duvod }}
         run: |
           case "$AKCE" in
-            schval|zamitni) ;;
+            schval|znovu|zamitni) ;;
             *) echo "Neznámá akce: $AKCE"; exit 1 ;;
           esac
           npm run spravce -- "$AKCE" "$NAVRH" "$DUVOD"
@@ -78,9 +104,12 @@ jobs:
           npm test
 
       - name: Zapsat rozhodnutí
+        id: zapis
         env:
           AKCE: ${{ inputs.akce }}
           NAVRH: ${{ inputs.id }}
+          DUVOD: ${{ inputs.duvod }}
+          UPRAVY: ${{ inputs.upravy }}
         run: |
           if [ -z "$(git status --porcelain data/)" ]; then
             echo "Nic se nezměnilo — návrh už zřejmě rozhodnutý byl."
@@ -90,8 +119,116 @@ jobs:
           git config user.email "sprava@users.noreply.github.com"
           git add data/
           git commit -m "Návrh $NAVRH: $AKCE"
+          if git push; then
+            echo "zmena=true" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+
+          # Mezitím někdo jiný zapsal. Rebase tu nepomůže — dva zápisy na
+          # konec téhož pole v JSONu se sloučit nedají. Rozhodnutí se proto
+          # zahodí a udělá znovu nad čerstvými daty.
+          for i in 1 2 3; do
+            sleep $((2**i))
+            git fetch origin main
+            git reset --hard origin/main
+            if [ -n "$UPRAVY" ]; then npm run spravce -- uprav "$NAVRH" "$UPRAVY"; fi
+            npm run spravce -- "$AKCE" "$NAVRH" "$DUVOD"
+            npm run kontrola:data
+            if [ -z "$(git status --porcelain data/)" ]; then
+              echo "Rozhodnutí už je zapsané, hotovo."
+              echo "zmena=false" >> "$GITHUB_OUTPUT"
+              exit 0
+            fi
+            git add data/
+            git commit -m "Návrh $NAVRH: $AKCE"
+            if git push; then
+              echo "zmena=true" >> "$GITHUB_OUTPUT"
+              exit 0
+            fi
+          done
+          echo "Zápis se nepodařil ani na čtvrtý pokus."
+          exit 1
+
+      # Vrácené návrhy musí dojít i k ověřovateli, jinak se u nich jen objeví
+      # poznámka a nikdo s nimi nic neudělá.
+      - name: Poslat k doplnění ověřovateli
+        if: inputs.akce == 'znovu'
+        env:
+          NAVRH: ${{ inputs.id }}
+          DUVOD: ${{ inputs.duvod }}
+        run: |
+          set -u
+          git fetch origin patrol/overovani
+          git checkout -q -B patrol-vetev origin/patrol/overovani
+          NAVRH="$NAVRH" DUVOD="$DUVOD" node --input-type=module -e '
+            import fs from "node:fs";
+            const cesta = "data/fronta/pro-patrola.json";
+            fs.mkdirSync("data/fronta", { recursive: true });
+            let fronta = [];
+            try { fronta = JSON.parse(fs.readFileSync(cesta, "utf-8")); } catch {}
+            if (!Array.isArray(fronta)) fronta = [];
+            const duvod = (process.env.DUVOD ?? "").trim();
+            fronta.push({
+              id: `z-${Date.now().toString(36)}`,
+              zadano: new Date().toISOString(),
+              zadal: "sprava",
+              stav: "ceka",
+              tykaSe: process.env.NAVRH,
+              zadani: `Doplň návrh ${process.env.NAVRH}. ${duvod || "Správce ho vrátil k dalšímu ověření."}`,
+            });
+            fs.writeFileSync(cesta, `${JSON.stringify(fronta, null, 2)}\n`);
+          '
+          git config user.name "sprava"
+          git config user.email "sprava@users.noreply.github.com"
+          git add data/fronta/pro-patrola.json
+          git commit -m "Návrh $NAVRH vrácen k doplnění"
+          for i in 1 2 3 4; do
+            git push origin HEAD:patrol/overovani && break
+            sleep $((2**i))
+            git pull --rebase origin patrol/overovani
+          done
+          git checkout -q main
+
+      # Rozeslání musí proběhnout tady, ne v rozhlas.yml.
+      #
+      # Rozhlas se spouští změnou data/incidenty.json na main — jenže tenhle
+      # commit dělá workflow, a GitHub záměrně nespouští workflow z pushů,
+      # které udělal jiný workflow (ochrana proti smyčce). Schválený záznam
+      # se tak dostal na web, ale do kanálu už nic nepřišlo a nebylo poznat
+      # proč. Totéž platí pro nasazení.
+      - name: Rozeslat do kanálů
+        if: inputs.akce == 'schval' && steps.zapis.outputs.zmena == 'true'
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_KANAL: ${{ vars.TELEGRAM_KANAL || '@czechpatrol' }}
+          SPRAVCE_CHAT: ${{ vars.SPRAVCE_CHAT }}
+        run: |
+          node nastroje/rozhlas.mjs --okamzite
+
+          # Zápis o tom, co už odešlo, musí zpátky do repozitáře.
+          #
+          # Rozhlas si pamatuje odeslané zprávy v data/fronta/rozhlaseno.json.
+          # Dokud se ten soubor necommitl, byl záznam při dalším běhu pořád
+          # „neodeslaný" a odešel znovu — odběratelé dostali tutéž zprávu
+          # dvakrát.
+          if [ -z "$(git status --porcelain data/fronta/rozhlaseno.json)" ]; then
+            echo "Stav rozhlasu se nezměnil."
+            exit 0
+          fi
+          git add data/fronta/rozhlaseno.json
+          git commit -m "Rozhlas: stav odeslaných zpráv"
           for i in 1 2 3 4; do
             git push && break
             sleep $((2**i))
             git pull --rebase
           done
+
+
+  # Nasazení se volá přímo, ne přes push. Commit z workflow žádný další
+  # workflow nespustí, takže by schválený záznam zůstal v repozitáři
+  # a na web by se dostal až s nejbližší jinou změnou.
+  nasadit:
+    needs: rozhodnout
+    if: needs.rozhodnout.outputs.zmena == 'true'
+    uses: ./.github/workflows/nasazeni.yml
+    secrets: inherit

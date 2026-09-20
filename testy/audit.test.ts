@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { trideni, zdrojeNavrhu } from "../nastroje/audit";
+import { posudDavku, trideni, zdrojeNavrhu } from "../nastroje/audit";
 
 /*
   Audit posuzuje zachycené zprávy a připravuje návrhy pro člověka. Tenhle
@@ -73,5 +73,67 @@ describe("zdroje návrhu", () => {
   it("datum zdroje se bere ze zveřejnění, ne ze zachycení", () => {
     const z = zdrojeNavrhu([{ ...k("https://a.cz/1", "A"), publikovano: "2026-09-17T06:00:00Z" }]);
     expect(z[0].publikovano).toBe("2026-09-17T00:00:00Z");
+  });
+});
+
+/*
+  Dělení dávek.
+
+  Proč: 20. 9. 2026 se odpověď modelu na šedesát kandidátů nevešla do stropu,
+  JSON se utnul uprostřed řetězce a běh přišel o celou dávku — fronta se
+  nepohnula o jedinou položku, přestože model běžel tři minuty. Od té doby se
+  dávka při nezdaru půlí. Tenhle blok hlídá, že se tím výsledek neztrácí.
+*/
+const kandidat = (i: number) =>
+  ({
+    id: `k-${i}`,
+    zachyceno: "2026-09-19T00:00:00Z",
+    publikovano: null,
+    titulek: `zpráva ${i}`,
+    shrnuti: "",
+    kodZeme: "CZ",
+    zeme: "Česko",
+    kategorie: [],
+    zdroj: { nazev: "zdroj", url: `https://priklad.cz/${i}`, typ: "media", primarni: false },
+    stav: "ceka" as const,
+  });
+
+const polozka = (id: string) => ({ id }) as never;
+
+describe("dělení dávky při nezdaru", () => {
+  it("celá dávka projde napoprvé a nedělí se", async () => {
+    const velikosti: number[] = [];
+    const r = await posudDavku([...Array(60).keys()].map(kandidat), [], async (z) => {
+      velikosti.push((z.vstup as { kandidati: unknown[] }).kandidati.length);
+      return { polozky: [polozka("k-0")] };
+    });
+    expect(velikosti).toEqual([60]);
+    expect(r.neposouzeno).toBe(0);
+  });
+
+  it("když se velká dávka neposoudí, menší půlky se zachrání", async () => {
+    const velikosti: number[] = [];
+    const r = await posudDavku([...Array(60).keys()].map(kandidat), [], async (z) => {
+      const n = (z.vstup as { kandidati: { id: string }[] }).kandidati;
+      velikosti.push(n.length);
+      // Nad třicítku se odpověď utne — přesně jako 20. 9.
+      if (n.length > 30) return null;
+      return { polozky: n.map((k) => polozka(k.id)) };
+    });
+    expect(velikosti).toEqual([60, 30, 30]);
+    expect(r.polozky).toHaveLength(60);
+    expect(r.neposouzeno).toBe(0);
+  });
+
+  it("pod nejmenší dávkou se přestane dělit a zbytek zůstane ve frontě", async () => {
+    let volani = 0;
+    const r = await posudDavku([...Array(16).keys()].map(kandidat), [], async () => {
+      volani++;
+      return null;
+    });
+    // 16 → 8 + 8, a níž už ne.
+    expect(volani).toBe(3);
+    expect(r.polozky).toHaveLength(0);
+    expect(r.neposouzeno).toBe(16);
   });
 });

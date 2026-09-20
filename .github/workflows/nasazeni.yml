@@ -13,6 +13,9 @@ on:
   # Tenhle workflow zůstává pro ruční nasazení a pro commity, které udělá
   # člověk (ty `push` spouští normálně).
   workflow_dispatch:
+  # Volatelné z jiných běhů (schvaleni.yml). Push z workflow nespustí další
+  # workflow, takže se nasazení po schválení musí zavolat přímo.
+  workflow_call:
 
 permissions:
   contents: read
@@ -40,11 +43,22 @@ jobs:
         id: zmena
         env:
           ADRESA: https://czechpatrol.pages.dev
+          RUCNE: ${{ github.event_name }}
         run: |
           set -u
           ZIVY=$(curl -s --max-time 20 "$ADRESA/stav.json" | jq -r '.commit // empty' || true)
           REPO=$(git rev-parse HEAD)
-          if [ -n "$ZIVY" ] && [ "$ZIVY" = "$REPO" ]; then
+          if [ "$RUCNE" = "workflow_dispatch" ]; then
+            # Ruční spuštění se nikdy nepřeskakuje.
+            #
+            # Proměnné repozitáře (API_URL a spol.) se zapékají při sestavení,
+            # ale commit nemění. Porovnání commitů proto po jejich změně hlásilo
+            # „už to běží" a build se přeskočil — nastavení se nikdy neprojevilo
+            # a vypadalo to, že se změna neuložila. Kdo pustí nasazení rukou,
+            # chce nasadit.
+            echo "Ruční spuštění — staví se vždy."
+            echo "nasadit=true" >> "$GITHUB_OUTPUT"
+          elif [ -n "$ZIVY" ] && [ "$ZIVY" = "$REPO" ]; then
             echo "Na webu už běží $REPO, nasazení se přeskakuje."
             echo "nasadit=false" >> "$GITHUB_OUTPUT"
           else

@@ -5,7 +5,9 @@ import * as ja from "./ja";
 import { ChybaHttp, json, povolenyPuvod, sCors } from "./pomocne";
 import { zkontrolujSber } from "./hlidac";
 import { kopniDoSberu } from "./sber";
+import * as nastaveni from "./nastaveni";
 import * as navrhy from "./navrhy";
+import * as patrol from "./patrol";
 import * as sprava from "./sprava";
 import * as tipy from "./tipy";
 import { synchronizuj, uklid } from "./synchronizace";
@@ -62,6 +64,12 @@ const CESTY: [string, RegExp, Obsluha][] = [
   }],
 
   ["POST", /^\/tipy$/, (req, env) => tipy.prijmi(env, req)],
+  ["GET", /^\/nastaveni-sberu$/, async (req, env) => nastaveni.proSber(env)],
+  ["PUT", /^\/sprava\/nastaveni-ai$/, async (req, env) => nastaveni.uloz(env, req, await vyzadujPrihlaseni(env, req))],
+  ["GET", /^\/sprava\/patrol$/, async (req, env) => patrol.seznam(env, await vyzadujPrihlaseni(env, req))],
+  ["POST", /^\/sprava\/patrol$/, async (req, env) => patrol.zadej(env, req, await vyzadujPrihlaseni(env, req))],
+  ["GET", /^\/sprava\/zaznamy$/, async (req, env) => navrhy.zaznamy(env, await vyzadujPrihlaseni(env, req))],
+  ["POST", /^\/sprava\/zaznamy\/([\w-]+)\/opravit$/, async (req, env, _u, slug) => navrhy.opravZaznam(env, req, await vyzadujPrihlaseni(env, req), slug)],
   ["GET", /^\/sprava\/navrhy$/, async (req, env) => navrhy.seznam(env, await vyzadujPrihlaseni(env, req))],
   ["POST", /^\/sprava\/navrhy\/([\w.-]+)\/rozhodnout$/, async (req, env, _u, id) => navrhy.rozhodni(env, req, await vyzadujPrihlaseni(env, req), id)],
   ["GET", /^\/sprava\/tipy$/, async (req, env) => tipy.seznam(env, await vyzadujPrihlaseni(env, req))],

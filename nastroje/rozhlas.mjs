@@ -34,7 +34,6 @@ const NAZVY_UROVNI = {
 };
 /** Úroveň jako číslo 1–10. Táž tabulka jako `zDeseti()` v src/lib/skala.ts — hlídá test. */
 const Z_DESETI = { G1: 1, G2: 2, G3: 3, Y1: 4, Y2: 5, Y3: 6, YO: 6, O1: 7, O2: 8, O3: 8, R1: 9, R2: 9, R3: 10 };
-const JISTOTY = { nizka: "nízká", stredni: "střední", vysoka: "vysoká", potvrzeno: "potvrzeno" };
 // Kopie číselníku z src/lib/typy.ts — skript je prostý .mjs. Test hlídá, že se nerozejdou.
 const PUVODCI = { rusko: "Rusko", ukrajina: "Ukrajina", "jiny-stat": "jiný stát", "neni-stat": "nestátní skupina", domaci: "domácí pachatel", neznamy: "neznámý" };
 const DRUHY = { pripad: "případ", aktualizace: "aktualizace", opatreni: "opatření", reakce: "reakce" };
@@ -169,10 +168,18 @@ export function datumCz(iso) {
 }
 
 function zkrat(s, n = 240) {
-  s = String(s).trim();
-  if (s.length <= n) return s;
-  const cut = s.slice(0, n);
-  return `${cut.slice(0, Math.max(cut.lastIndexOf(". "), cut.lastIndexOf(", "), n - 40) + 1).trim()}…`;
+  /*
+    Kráceno na hranici slova, ne uprostřed.
+
+    Do kanálu odešlo „Polsko: armáda posiluje hraniční přechody s Ukra".
+    Useknuté slovo vypadá jako porucha a u zprávy, kterou čtou lidé kvůli
+    bezpečnosti, bere důvěru celé zprávě.
+  */
+  const t = String(s ?? "").trim();
+  if (t.length <= n) return t;
+  const orez = t.slice(0, n - 1);
+  const mezera = orez.lastIndexOf(" ");
+  return `${(mezera > n * 0.6 ? orez.slice(0, mezera) : orez).replace(/[\s,;:.–-]+$/, "")}…`;
 }
 
 function spocitejTecky(zaznamy) {
@@ -325,7 +332,7 @@ export function sestavZdroje(i) {
  *   • jedna věta, co se stalo,
  *   • jedna věta, co potvrzené není — bez ní by si čtenář vyvodil víc,
  *     než data ukazují (pravidlo č. 6),
- *   • jistota, pachatel, stav vyšetřování,
+ *   • pachatel, stav vyšetřování,
  *   • poměr zdrojů: kolik z nich je úřad a kolik noviny,
  *   • odkaz na záznam a citovatelná patička.
  *
@@ -372,7 +379,6 @@ export function sestavZpravu(i, { aktualizace = false, souhrn = false } = {}) {
       původce jako údaj. Píše se, že určen není, a odděleně to, že ho někdo
       uvádí — jako tvrzení médií, ne jako náš závěr.
   */
-  const jistota = `<b>Jistota, že se událost stala:</b> ${JISTOTY[i.jistota] ?? i.jistota}`;
   const potvrzen = i.atribuce === "oficialni" || i.atribuce === "domaci";
   const kdoSeUvadi = i.puvodce && i.puvodce !== "neznamy" ? PUVODCI[i.puvodce] : null;
   const pachatel = d !== "pripad"
@@ -388,7 +394,7 @@ export function sestavZpravu(i, { aktualizace = false, souhrn = false } = {}) {
     radky.push(
       esc(zkrat(i.titulek, 200)),
       jeArchivni(i) ? "Archivní záznam — událost se nestala teď." : null,
-      [jistota, pachatel, celkem ? `Zdroje: ${celkem} (úřady ${uredni})` : null].filter(Boolean).join(" · "),
+      [pachatel, celkem ? `Zdroje: ${celkem} (úřady ${uredni})` : null].filter(Boolean).join(" · "),
       odkaz,
     );
     return radky.filter((r) => r !== null).join("\n");
@@ -417,15 +423,24 @@ export function sestavZpravu(i, { aktualizace = false, souhrn = false } = {}) {
 
   const stav = STAVY[i.stav];
   /* Každý údaj na vlastní řádek: na telefonu se tři věci za tečkou slijí v jednu větu. */
-  radky.push("", jistota);
+  /*
+    Jistota, že se událost stala, se do kanálu nepíše.
+
+    Do kanálu jde jen to, co prošlo lidským ověřením — „střední jistota, že
+    se to stalo" u takové zprávy čtenáře jen mate a zní, jako bychom si
+    nebyli jistí, jestli publikujeme skutečnost. Na webu u záznamu zůstává,
+    tam má vedle sebe fakta i zdroje a dá se přečíst v souvislostech.
+  */
+  radky.push("");
   if (pachatel) radky.push(pachatel);
   if (stav && stav !== "Neuvedeno") radky.push(`<b>Stav:</b> ${stav.toLowerCase()}`);
   radky.push(...radekPokryti(i));
 
   radky.push("", `Všechna fakta, hodnocení a všechny zdroje: ${odkaz}`);
   if (d === "opatreni" || dulezitePro(i)) radky.push(`Úřední opatření platná v ČR: ${WEB}/#opatreni`);
-  // Patička dělá ze zprávy citovatelný dokument: kdo ji vydal a pod jakým číslem.
-  radky.push(`CzechPatrol · záznam ${esc(i.slug)} · aktualizováno ${datumCz(i.aktualizovano ?? kdyZjisteno(i))}`);
+  // Patička říká, kdo zprávu vydal a kdy. Vnitřní označení záznamu do ní
+  // nepatří — čtenáři nic neříká a odkaz na záznam je o řádek výš.
+  radky.push(`CzechPatrol · aktualizováno ${datumCz(i.aktualizovano ?? kdyZjisteno(i))}`);
   return radky.join("\n");
 }
 
@@ -621,6 +636,12 @@ export function ctiKandidaty() {
   try { return JSON.parse(fs.readFileSync(soubor, "utf-8")); } catch { return []; }
 }
 
+export function ctiNavrhy() {
+  const soubor = path.join(koren, "data", "navrhy.json");
+  if (!fs.existsSync(soubor)) return [];
+  try { return JSON.parse(fs.readFileSync(soubor, "utf-8")); } catch { return []; }
+}
+
 export function vyberSignaly(kandidati, stav, { ted = Date.now(), maxStari = 6 * 3_600_000 } = {}) {
   const poslane = stav.signaly ?? {};
   return (kandidati ?? [])
@@ -644,6 +665,51 @@ const NAZVY_SIGNALU = {
   "priprava-mobilizace": "přípravy mobilizace v Rusku",
   "vzdusny-prostor-nato": "narušení vzdušného prostoru Aliance",
 };
+
+
+/**
+ * Vážné případy doložené i úředním zdrojem.
+ *
+ * Výjimka z pravidla, že do kanálu jde jen schválené. Když je případ vážný
+ * (O nebo R), stojí nejméně na dvou nezávislých zdrojích a aspoň jeden z nich
+ * je úřední nebo primární, je čekání na schválení dražší než ta nejistota:
+ * takhle doložená zpráva se schválením obvykle nezmění, jen se zdrží.
+ *
+ * Na web se tím NIC nedostane. Záznam dál čeká ve frontě na člověka a zpráva
+ * je označená jako neověřená — kanál dostane varování dřív, web pravdu
+ * později.
+ */
+export function vyberVazneNavrhy(navrhy, stav, { ted = Date.now(), maxStari = 48 * 3_600_000 } = {}) {
+  const poslane = stav.signaly ?? {};
+  return (navrhy ?? [])
+    .filter((n) => (n.kam ?? "zaznam") === "zaznam" && !poslane[n.id])
+    .filter((n) => /^[OR]/.test(n.zavaznost ?? ""))
+    .filter((n) => (n.zdroje ?? []).length >= 2)
+    .filter((n) => (n.zdroje ?? []).some((z) => z.primarni === true || z.typ === "primary"))
+    /* Stará událost není varování. Rozhoduje datum UDÁLOSTI, ne zápisu. */
+    .filter((n) => n.datumUdalosti && ted - new Date(n.datumUdalosti).getTime() <= maxStari)
+    .slice(0, MAX_SIGNALU_NA_BEH);
+}
+
+export function sestavVaznyNavrh(n) {
+  const uredni = (n.zdroje ?? []).filter((z) => z.primarni === true || z.typ === "primary");
+  const radky = [
+    "\u26a0\ufe0f <b>NEOVĚŘENO — vážný případ z úředního zdroje</b>",
+    "",
+    `<b>${esc(zkrat(n.kratkyTitulek || n.titulek, 90))}</b>`,
+  ];
+  if (n.fakta?.[0]) radky.push("", esc(zkrat(n.fakta[0], 280)));
+  if (n.neznameho?.[0]) radky.push(`<b>Nepotvrzeno:</b> ${esc(zkrat(n.neznameho[0], 180))}`);
+  radky.push(
+    "",
+    `Zdroje: ${(n.zdroje ?? []).length}, z toho úřední ${uredni.length}`,
+    ...(n.zdroje ?? []).slice(0, 3).map((z) => `• <a href="${esc(z.url)}">${esc(zkrat(z.nazev, 110))}</a>`),
+    "",
+    "Záznam ještě neprošel lidskou kontrolou. Na web se dostane až po ní.",
+    `CzechPatrol · ${datumCz(new Date().toISOString())}`,
+  );
+  return radky.join("\n");
+}
 
 export function sestavSignal(k) {
   const co = NAZVY_SIGNALU[k.naliehave?.druh] ?? "sledovaná událost";
@@ -962,6 +1028,22 @@ async function main() {
       const v = await posli(sestavSignal(k), { nahled: false });
       if (v.ok) { stav.signaly[k.id] = { kdy: new Date(ted).toISOString(), messageId: v.messageId ?? null }; odeslano++; }
       else { selhalo++; console.log(`[rozhlas] signál neodešel: ${v.chyba}`); }
+    }
+  }
+
+  /*
+    0b2. vážné případy doložené úředním zdrojem.
+
+    Jediná cesta, kterou se do kanálu dostane něco neschváleného kromě
+    naléhavých signálů. Podmínky jsou schválně úzké: vážnost O nebo R, dva
+    nezávislé zdroje a aspoň jeden úřední.
+  */
+  if (rezim === "okamzite") {
+    for (const n of vyberVazneNavrhy(ctiNavrhy(), stav, { ted })) {
+      if (prvniBeh) { stav.signaly[n.id] = { kdy: new Date(ted).toISOString(), ticho: true }; continue; }
+      const v = await posli(sestavVaznyNavrh(n), { nahled: false });
+      if (v.ok) { stav.signaly[n.id] = { kdy: new Date(ted).toISOString(), messageId: v.messageId ?? null }; odeslano++; }
+      else { selhalo++; console.log(`[rozhlas] vážný návrh neodešel: ${v.chyba}`); }
     }
   }
 

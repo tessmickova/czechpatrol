@@ -173,6 +173,17 @@ function schval(id) {
     console.error(`Návrh ${id} tu není. Seznam: npm run spravce navrhy`);
     process.exit(1);
   }
+  /*
+    Co doložené není, musí u zveřejněného záznamu stát. Je to jedno z pravidel
+    webu: čtenář má vedle fakt vidět i hranici toho, co víme. Model to někdy
+    nevyplní — doplnit to je práce člověka, ne důvod záznam zahodit.
+  */
+  if (!(z.neznameho ?? []).length) {
+    console.error(`Návrh ${id} neříká, co doložené není. Doplňte to a schvalte znovu:`);
+    console.error(`  npm run spravce uprav ${id} '{"neznameho":["…"]}'`);
+    process.exit(2);
+  }
+
   const kam = z.kam ?? "zaznam";
   const soubor = kam === "overujeme" ? "data/overujeme.json" : "data/incidenty.json";
   const cil = cti(soubor, []);
@@ -261,6 +272,238 @@ function zamitni(id, duvod) {
   console.log(`Návrh ${id} zamítnut. Zůstala po něm stopa v data/fronta/zamitnute-navrhy.json.`);
 }
 
+
+/*
+  Vrácení návrhu k dalšímu ověření.
+
+  Návrh zůstane ve frontě, jen se u něj poznačí, že čeká na doplnění. Bez té
+  poznámky by se po kliknutí nic viditelného nestalo a člověk by tlačítko
+  zmáčkl znovu — nebo návrh omylem schválil.
+*/
+function znovu(id, duvod) {
+  if (!id) {
+    console.error("Který návrh? npm run spravce znovu <id> [důvod]");
+    process.exit(1);
+  }
+  const n = cti("data/navrhy.json", []);
+  const z = n.find((x) => x.id === id);
+  if (!z) {
+    console.error(`Návrh ${id} tu není. Seznam: npm run spravce navrhy`);
+    process.exit(1);
+  }
+  z.preverit = { kdy: new Date().toISOString(), duvod: (duvod ?? "").slice(0, 300) || null };
+  fs.writeFileSync(path.join(koren, "data/navrhy.json"), `${JSON.stringify(n, null, 2)}\n`);
+  console.log(`Návrh ${id} označen k dalšímu ověření.`);
+}
+
+
+/*
+  Úprava návrhu před schválením.
+
+  Návrh připravil stroj. Schválení je jediné místo, kde do něj vstupuje
+  člověk — a dokud šlo jen odkliknout ano/ne, znamenalo to zveřejnit strojový
+  text tak, jak je. Tady se dá opravit titulek, doplnit původce nebo přepsat,
+  co z textu neplyne.
+
+  Mění se jen vyjmenovaná pole. Zbytek (lidskyOvereno, id, zdroje, historie)
+  se odsud sáhnout nedá: o ověření rozhoduje schválení, ne obsah formuláře,
+  a zdroje se nemají přepisovat ručně, když je celá cena projektu v tom, že
+  odkazují na doklad.
+*/
+const SEZNAMY = ["fakta", "neznameho"];
+const UPRAVITELNA = [
+  "titulek",
+  "kratkyTitulek",
+  "zavaznost",
+  "jistota",
+  "druh",
+  "puvodce",
+  "atribuce",
+  "vyznam",
+  "datumUdalosti",
+  "fakta",
+  "neznameho",
+];
+
+function uprav(id, jsonText) {
+  if (!id || !jsonText) {
+    console.error("Použití: npm run spravce uprav <id> '<json se změnami>'");
+    process.exit(1);
+  }
+  let zmeny;
+  try {
+    zmeny = JSON.parse(jsonText);
+  } catch {
+    console.error("Změny nejsou platný JSON.");
+    process.exit(1);
+  }
+  const n = cti("data/navrhy.json", []);
+  const z = n.find((x) => x.id === id);
+  if (!z) {
+    console.error(`Návrh ${id} tu není.`);
+    process.exit(1);
+  }
+  const pouzite = [];
+  for (const [klic, hodnota] of Object.entries(zmeny)) {
+    if (!UPRAVITELNA.includes(klic)) {
+      console.error(`Pole ${klic} se takhle měnit nedá — mění se jen: ${UPRAVITELNA.join(", ")}.`);
+      process.exit(1);
+    }
+    if (hodnota === null || hodnota === undefined) continue;
+    /* Formulář posílá seznamy jako text po řádcích. */
+    z[klic] = SEZNAMY.includes(klic) && typeof hodnota === "string"
+      ? hodnota.split("\n").map((r) => r.trim()).filter(Boolean)
+      : hodnota;
+    pouzite.push(klic);
+  }
+  if (!pouzite.length) {
+    console.log("Nic k úpravě.");
+    return;
+  }
+  /* Stopa po lidském zásahu. Bez ní nejde poznat, co psal stroj a co člověk. */
+  z.historie = [
+    ...(z.historie ?? []),
+    { kdy: new Date().toISOString(), text: `Před zveřejněním upraveno správcem: ${pouzite.join(", ")}.`, novySignal: false },
+  ];
+  fs.writeFileSync(path.join(koren, "data/navrhy.json"), `${JSON.stringify(n, null, 2)}\n`);
+  console.log(`Návrh ${id}: upraveno ${pouzite.join(", ")}.`);
+}
+
+
+/*
+  Oprava už zveřejněného záznamu.
+
+  Do té doby se dal opravit jen návrh, tedy něco, co ještě nikdo neviděl.
+  Jenže chyba se pozná většinou až na webu — a oprava zveřejněného údaje je
+  přesně ta situace, kdy se projekt pozná: buď se přizná, nebo se přepíše
+  potichu.
+
+  Proto se tu dělají dvě věci naráz: opraví se záznam A zapíše se to do
+  data/opravy.json, které web ukazuje na stránce Opravy. Bez zápisu do oprav
+  by to bylo tiché přepsání a to se tady nedělá.
+*/
+function upravZaznam(slug, jsonText) {
+  if (!slug || !jsonText) {
+    console.error("Použití: npm run spravce uprav-zaznam <slug> '<json se změnami a důvodem>'");
+    process.exit(1);
+  }
+  let vstup;
+  try {
+    vstup = JSON.parse(jsonText);
+  } catch {
+    console.error("Změny nejsou platný JSON.");
+    process.exit(1);
+  }
+  const { duvod, ...zmeny } = vstup;
+  if (!duvod || String(duvod).trim().length < 10) {
+    console.error("Chybí důvod opravy. Bez něj se zveřejněný údaj nepřepisuje.");
+    process.exit(1);
+  }
+
+  const inc = cti("data/incidenty.json", []);
+  const z = inc.find((x) => x.slug === slug);
+  if (!z) {
+    console.error(`Záznam ${slug} tu není.`);
+    process.exit(1);
+  }
+
+  const pouzite = [];
+  for (const [klic, hodnota] of Object.entries(zmeny)) {
+    if (!UPRAVITELNA.includes(klic)) {
+      console.error(`Pole ${klic} se takhle měnit nedá — mění se jen: ${UPRAVITELNA.join(", ")}.`);
+      process.exit(1);
+    }
+    if (hodnota === null || hodnota === undefined) continue;
+    z[klic] = hodnota;
+    pouzite.push(klic);
+  }
+  if (!pouzite.length) {
+    console.log("Nic k úpravě.");
+    return;
+  }
+
+  const ted = new Date();
+  z.aktualizovano = ted.toISOString();
+  z.historie = [
+    ...(z.historie ?? []),
+    { kdy: ted.toISOString(), text: `Opraveno po zveřejnění: ${pouzite.join(", ")}. Důvod: ${duvod}`, novySignal: false },
+  ];
+
+  const opravy = cti("data/opravy.json", []);
+  opravy.push({
+    id: `o-${ted.toISOString().slice(0, 10)}-${slug}`.slice(0, 80),
+    datum: ted.toISOString().slice(0, 10),
+    tykaSe: slug,
+    druh: "oprava-udaje",
+    co: `Upraveno: ${pouzite.join(", ")}.`,
+    proc: String(duvod).trim().slice(0, 600),
+  });
+
+  fs.writeFileSync(path.join(koren, "data/incidenty.json"), `${JSON.stringify(inc, null, 2)}\n`);
+  fs.writeFileSync(path.join(koren, "data/opravy.json"), `${JSON.stringify(opravy, null, 2)}\n`);
+  console.log(`Záznam ${slug}: upraveno ${pouzite.join(", ")}. Zapsáno i do oprav.`);
+}
+
+
+/*
+  Automatické zveřejnění dobře doložených návrhů.
+
+  Podmínky jsou úzké a všechny musí platit naráz: dva nezávislé zdroje
+  a aspoň jeden z nich úřední. Co je nesplní, zůstane ve frontě a na webu
+  se ukazuje jen mezi zachycenými a neověřenými.
+
+  Bez lidského čtení se nezveřejňuje hodnocení projektu — jen doložená fakta,
+  zdroje a datum. Hodnocení je názor a ten nemá vzniknout bez člověka.
+
+  Záznam nese overeni: "automaticke", aby šlo na webu napsat, že ho nikdo
+  nečetl. Web dlouho sliboval, že všechno na něm prošlo člověkem; jakmile to
+  přestane platit, musí to být u každého záznamu vidět.
+*/
+function dobreDolozeny(n) {
+  const zdroje = n.zdroje ?? [];
+  return (
+    (n.kam ?? "zaznam") === "zaznam" &&
+    zdroje.length >= 2 &&
+    zdroje.some((z) => z.primarni === true || z.typ === "primary") &&
+    (n.fakta ?? []).length > 0
+  );
+}
+
+function zverejniAutomaticky() {
+  const navrhy = cti("data/navrhy.json", []);
+  const inc = cti("data/incidenty.json", []);
+  const jiz = new Set(inc.map((x) => x.id));
+
+  const kZverejneni = navrhy.filter((n) => dobreDolozeny(n) && !jiz.has(n.id));
+  if (!kZverejneni.length) {
+    console.log(`Nic dobře doloženého k zveřejnění. Ve frontě zůstává ${navrhy.length}.`);
+    return;
+  }
+
+  const ted = new Date().toISOString();
+  for (const n of kZverejneni) {
+    const { kam: _k, pripravil: _p, pripraveno: _q, preverit: _r, ...zaznam } = n;
+    zaznam.lidskyOvereno = false;
+    zaznam.overeni = "automaticke";
+    /* U případu musí původce stát; „neznámý" je pravdivá odpověď. */
+    if ((zaznam.druh ?? "pripad") === "pripad" && !zaznam.puvodce) zaznam.puvodce = "neznamy";
+    /* Hodnocení je názor — bez člověka nevzniká. */
+    zaznam.vyznam = "";
+    zaznam.aktualizovano = ted;
+    zaznam.historie = [
+      ...(zaznam.historie ?? []),
+      { kdy: ted, text: "Zveřejněno automaticky: dva nezávislé zdroje, z toho úřední. Bez lidské kontroly.", novySignal: false },
+    ];
+    inc.push(zaznam);
+  }
+
+  const zbytek = navrhy.filter((n) => !kZverejneni.some((z) => z.id === n.id));
+  fs.writeFileSync(path.join(koren, "data/incidenty.json"), `${JSON.stringify(inc, null, 2)}\n`);
+  fs.writeFileSync(path.join(koren, "data/navrhy.json"), `${JSON.stringify(zbytek, null, 2)}\n`);
+  console.log(`Zveřejněno automaticky: ${kZverejneni.length}. Ve frontě zůstává ${zbytek.length}.`);
+  for (const n of kZverejneni) console.log(`  + ${n.slug} (${n.zdroje.length} zdrojů)`);
+}
+
 const prikaz = process.argv[2];
 const arg = process.argv.slice(3);
 
@@ -269,6 +512,10 @@ else if (prikaz === "fronta") fronta();
 else if (prikaz === "navrhy") navrhy();
 else if (prikaz === "schval") schval(arg[0]);
 else if (prikaz === "zamitni") zamitni(arg[0], arg.slice(1).join(" "));
+else if (prikaz === "znovu") znovu(arg[0], arg.slice(1).join(" "));
+else if (prikaz === "uprav") uprav(arg[0], arg.slice(1).join(" "));
+else if (prikaz === "uprav-zaznam") upravZaznam(arg[0], arg.slice(1).join(" "));
+else if (prikaz === "zverejni") zverejniAutomaticky();
 else if (prikaz === "tip") tip(arg[0]);
 else if (prikaz === "prijmi") {
   /* Delegace na stávající nástroj: kostru záznamu už umí a umí ji dobře. */
@@ -280,6 +527,6 @@ else if (prikaz === "prijmi") {
   execFileSync("node", [path.join(koren, "nastroje/rozhlas.mjs"), "--nacisto", ...arg], { stdio: "inherit" });
 } else {
   console.error(`Neznámý příkaz: ${prikaz}`);
-  console.error("Použití: stav | fronta | navrhy | schval <id> | zamitni <id> [důvod] | prijmi <id> | tip [soubor] | vystraha … | nahled");
+  console.error("Použití: stav | fronta | navrhy | uprav <id> <json> | uprav-zaznam <slug> <json> | zverejni | schval <id> | znovu <id> [důvod] | zamitni <id> [důvod] | prijmi <id> | tip [soubor] | vystraha … | nahled");
   process.exit(1);
 }

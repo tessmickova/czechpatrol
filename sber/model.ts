@@ -16,7 +16,27 @@ import type { z } from "zod";
 
 export type Poskytovatel = "openai" | "anthropic";
 
+/*
+  Placené volání modelu je vypnuté.
+
+  20. 9. 2026 došel kredit a projekt na něj nemá. Ověřování dělá externí
+  agent Patrol, který běží na vlastním serveru a přes API se neúčtuje.
+
+  Klíče se proto do běhů vůbec nepředávají (viz .github/workflows). Tenhle
+  vypínač stojí navíc, a to schválně: kdyby se klíč do prostředí dostal
+  jinudy — zapomenutý secret, lokální .env, nová větev — nesmí začít utrácet
+  potichu. Zapnout to jde jedině vědomě, MODEL_PRES_API=1.
+
+  Nic tím nespadne. Celý modul je postavený tak, že „model není" je běžný
+  stav: sběr třídí podle klíčových slov, překlad nechá věty česky a fronta
+  kandidátů jde Patrolovi.
+*/
+export function presApiPovoleno(): boolean {
+  return process.env.MODEL_PRES_API === "1";
+}
+
 export function dostupnyPoskytovatel(): Poskytovatel | null {
+  if (!presApiPovoleno()) return null;
   const vynuceny = process.env.POSKYTOVATEL_MODELU?.trim().toLowerCase();
   if (vynuceny === "openai") return process.env.OPENAI_API_KEY ? "openai" : null;
   if (vynuceny === "anthropic") return process.env.ANTHROPIC_API_KEY ? "anthropic" : null;
@@ -116,12 +136,17 @@ export async function strukturovane<T>({ system, vstup, schema, ucel, maxTokens 
     const client = new Anthropic();
 
     /*
-      Haiku 4.5 je záměrná volba, ne šetření na nesprávném místě. Model tu
-      dělá tři pomocné věci — třídí kandidáty, dává druhé čtení odmítnutým
-      a překládá popisky rozhraní. Ani jedna nic nezveřejňuje; zveřejňuje
-      vždycky člověk. Na tohle je nejmenší model z rodiny dost a běží často.
+      Model se nastavuje ve správě, ne v kódu — běh sběru si ho přečte
+      a předá sem v ANTHROPIC_MODEL. Tady stojí jen záloha pro případ, že
+      se nastavení nepodaří načíst.
+
+      Proč Sonnet místo Haiku: Haiku bylo mezi běhy nespolehlivé. Tutéž
+      zprávu označilo jednou za doloženou a podruhé za nedoloženou, pletlo
+      si id zachycených zpráv se slugy záznamů a kazila se mu čeština
+      v titulcích. Na třídění, kde za tím stojí člověk, to ještě šlo;
+      na přípravu textů záznamů ne.
     */
-    const model = process.env.ANTHROPIC_MODEL?.trim() || "claude-haiku-4-5";
+    const model = process.env.ANTHROPIC_MODEL?.trim() || "claude-sonnet-5";
 
     /*
       `effort` se posílá jen modelům, které ho znají.
@@ -135,21 +160,48 @@ export async function strukturovane<T>({ system, vstup, schema, ucel, maxTokens 
     const bezEffortu = /^claude-(haiku|sonnet)-4-5/.test(model);
     const format = zodOutputFormat(schema);
 
-    const odpoved = await client.messages.parse({
+    /*
+      Streamovaně, i když nás průběžné kusy odpovědi nezajímají.
+
+      SDK odmítne nestreamované volání, u kterého odhadne dobu nad deset minut
+      — což je při stropu nad 21 333 tokenů vždycky. Chyba přitom nepřijde ze
+      serveru, ale hned z klienta, takže vypadá jako porucha modelu. Strop
+      potřebujeme vyšší: 20. 9. 2026 se odpověď do 16 000 tokenů nevešla
+      a utnula se uprostřed JSONu.
+    */
+    const proud = client.messages.stream({
       model,
       max_tokens: maxTokens,
       output_config: bezEffortu ? { format } : { effort: "low", format },
       system,
       messages: [{ role: "user", content: JSON.stringify(vstup) }],
     });
+    const odpoved = await proud.finalMessage();
 
     if (odpoved.stop_reason === "refusal") {
       console.log(`[model] ${ucel}: model odmítl odpovědět`);
       return null;
     }
+    /*
+      Useknutá odpověď se nesmí tvářit jako prázdný výsledek: volající by ji
+      vzal jako „model nic nenašel" a práce by se tiše zahodila.
+    */
+    if (odpoved.stop_reason === "max_tokens") {
+      console.log(`[model] ${ucel}: odpověď se nevešla do stropu ${maxTokens} tokenů a utnula se`);
+      return null;
+    }
     return (odpoved.parsed_output as T) ?? null;
   } catch (e) {
-    console.log(`[model] ${ucel} selhalo: ${e instanceof Error ? e.message : e}`);
+    const text = e instanceof Error ? e.message : String(e);
+    /*
+      Useknutá odpověď se pozná podle toho, že JSON končí uprostřed. Bez téhle
+      věty to v logu vypadá jako rozbitý model — a hledá se chyba, která tam
+      není. Je to jen strop: odpověď se do maxTokens nevešla.
+    */
+    if (/parse structured output/i.test(text)) {
+      console.log(`[model] ${ucel}: odpověď se nevešla do stropu ${maxTokens} tokenů a utnula se`);
+    }
+    console.log(`[model] ${ucel} selhalo: ${text}`);
     return null;
   }
 }

@@ -1,12 +1,17 @@
 "use client";
 
+import Link from "next/link";
 import { useCallback, useEffect, useState } from "react";
 import { UCTY_ZAPNUTE } from "@/config/web";
 import { datumCas } from "@/lib/format";
 import { api, ROLE, useUcet, type Role } from "@/lib/ucet";
 import { Hlaska, POLE, Popisek, TLACITKO_AKCENT, TLACITKO_TICHE } from "./formulare";
 import { AkceSchvaleni, PolozkaZpravy, type ZpravaIzs } from "./izs-klient";
+import { useDialog } from "./dialog";
+import { JakToChodi } from "./jak-to-chodi";
 import { NavrhyKeSchvaleni } from "./navrhy-klient";
+import { OpravaZaznamu } from "./opravy-klient";
+import { OvladaniOverovani } from "./overovani-klient";
 import { Karta } from "./zaklad";
 
 interface UcetSprava {
@@ -56,6 +61,7 @@ export function SpravaKlient() {
   const [hledat, setHledat] = useState("");
   const [bootstrap, setBootstrap] = useState("");
   const [hlaska, setHlaska] = useState<{ typ: "ok" | "chyba"; text: string } | null>(null);
+  const { zeptejSe } = useDialog();
 
   const jeAdmin = ucet?.role === "admin";
 
@@ -82,7 +88,30 @@ export function SpravaKlient() {
 
   if (!UCTY_ZAPNUTE) return <Hlaska typ="info">Účty zatím nejsou zapnuté, takže není co spravovat.</Hlaska>;
   if (nacita) return <p className="text-zaklad text-tlum">Ověřuji přihlášení…</p>;
-  if (!ucet) return <Hlaska typ="info">Správa je jen pro přihlášené správce.</Hlaska>;
+  if (!ucet) {
+    /*
+      Odkaz tu musí být. Hláška „jen pro přihlášené" bez cesty k přihlášení
+      je slepá ulička — kdo neví, že se přihlašuje na /ucet/, tak se sem
+      nedostane a bude hledat login, který na téhle stránce není.
+    */
+    return (
+      <Karta odstin="pisek" className="max-w-[560px] p-6">
+        <div className="stitek mb-2">Přihlášení</div>
+        <h2 className="podnadpis text-velke">Správa je jen pro přihlášené správce</h2>
+        <p className="mt-3 text-zaklad leading-relaxed text-tlum">
+          Účet se zakládá i přihlašuje passkey — otiskem, obličejem nebo kódem zařízení.
+          Heslo se nikde nezadává, protože žádné není.
+        </p>
+        <Link href="/ucet/" className={`${TLACITKO_AKCENT} mt-4 inline-flex`}>
+          Přejít na přihlášení
+        </Link>
+        <p className="mt-3 text-male leading-snug text-tlum2">
+          Poprvé tu? Na účtu zvolte „Založit nový anonymní účet" a pak se sem vraťte —
+          první správce se zavádí jednorázovým kódem provozovatele.
+        </p>
+      </Karta>
+    );
+  }
 
   if (!jeAdmin) {
     // První správce vzniká jednorázovým kódem, který zná jen provozovatel.
@@ -121,10 +150,29 @@ export function SpravaKlient() {
     let nazev = "";
     let poznamka = "";
     if (role === "izs") {
-      nazev = prompt("Název složky, jak se objeví ve zprávách (např. HZS Kraje Vysočina):") ?? "";
-      if (!nazev.trim()) return;
-      poznamka = prompt("Jak byla složka ověřena (adresa, datum):") ?? "";
-      if (!poznamka.trim()) return;
+      /*
+        Obojí je povinné. Název se objevuje ve zprávách u zdroje a doklad
+        o ověření je jediná stopa, proč tenhle účet za složku IZS vystupuje.
+      */
+      const a = await zeptejSe({
+        nadpis: "Přidat složku IZS",
+        text: "Název se bude ukazovat u zpráv, které složka pošle. Pište ho tak, jak má být vidět veřejně.",
+        popisek: "Název složky",
+        zastupny: "HZS Kraje Vysočina",
+        potvrdit: "Pokračovat",
+      });
+      if (!a?.trim()) return;
+      nazev = a;
+
+      const b = await zeptejSe({
+        nadpis: "Jak byla složka ověřena?",
+        text: "Zapište, odkud víte, že účet té složce opravdu patří — úřední adresa, telefon, datum. Zůstane to u účtu jako doklad.",
+        popisek: "Doklad o ověření",
+        zastupny: "telefonicky na 950 xxx xxx, 19. 9. 2026",
+        potvrdit: "Přidat složku",
+      });
+      if (!b?.trim()) return;
+      poznamka = b;
     }
     try {
       await api(`/sprava/ucty/${id}/role`, { method: "PUT", telo: { role, poznamka, nazev } });
@@ -177,6 +225,12 @@ export function SpravaKlient() {
       </Karta>
 
       <NavrhyKeSchvaleni />
+
+      <OpravaZaznamu />
+
+      <OvladaniOverovani />
+
+      <JakToChodi />
 
       <Karta odstin={tipy.some((x) => x.stav === "novy") ? "modra" : "bila"} className="p-6">
         <div className="mb-3">

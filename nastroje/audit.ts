@@ -1,6 +1,17 @@
 /**
  * Denní audit fronty: co z nasbíraného je opravdu nová událost.
  *
+ * POZASTAVENO 20. 9. 2026 — tenhle nástroj se nespouští.
+ * --------------------------------------------------------
+ * Stojí na placeném volání modelu, a to je vypnuté: kredit došel a projekt
+ * na něj nemá. Frontu posuzuje externí ověřovatel Patrol, kterému se
+ * neúčtuje; zadání mu chystá `nastroje/zadani-pro-patrola.mjs` a doručuje
+ * běh „Fronta Patrolovi".
+ *
+ * Kód i testy tu zůstávají celé a funkční. Zpátky se to zapne dvěma kroky:
+ * MODEL_PRES_API=1 s klíčem v prostředí a obnovením běhu, který to volá.
+ * Nic dalšího se měnit nemusí.
+ *
  *   npm run audit            projde frontu a připraví návrhy
  *   npm run audit -- --sucho nic nezapíše, jen vypíše, co by udělal
  *
@@ -52,8 +63,31 @@ const cti = <T>(p: string, zaloha: T): T => {
   Strop zůstává, aby ve zpravodajsky divoký den nevznikl obří dotaz.
 */
 const NARAZ = 60;
-/** Jak staré kandidáty má smysl posuzovat. Starší už nejsou aktuality. */
-const DNI = 4;
+/*
+  Jak staré kandidáty má smysl posuzovat.
+
+  Pro denní provoz stačí čtyři dny: starší zprávy už nejsou aktuality a nemá
+  cenu na ně utrácet model. Jenže fronta, která se nahromadila, je celá starší
+  — z 250 čekajících bylo v okně čtyř dnů šest. Úklidový běh proto potřebuje
+  okno širší a nastavuje se přes AUDIT_DNI.
+*/
+const DNI = Math.min(60, Math.max(1, Number(process.env.AUDIT_DNI) || 4));
+/*
+  Pod tuhle velikost se dávka při nezdaru už nedělí.
+
+  Dělení má zachránit běh, ne ho rozdrobit na desítky dotazů. Když neprojde
+  ani osmička, je chyba jinde než v délce odpovědi a další půlení by jen
+  utrácelo model.
+*/
+const NEJMENSI_DAVKA = 8;
+/*
+  Strop odpovědi modelu.
+
+  16 000 nestačilo: 20. 9. 2026 se odpověď na šedesát kandidátů utnula
+  uprostřed řetězce (JSON skončil na pozici 4289) a běh přišel o všechno.
+  Strop je kvůli tomu dvojnásobný a navíc se dávka při nezdaru půlí.
+*/
+const STROP_ODPOVEDI = 32_000;
 
 interface Kandidat {
   id: string;
@@ -67,6 +101,8 @@ interface Kandidat {
   zdroj: { nazev: string; url: string; typ: string; primarni: boolean };
   vyrez?: { text: string } | null;
   naliehave?: { druh: string } | null;
+  stav: "ceka" | "vyrizen";
+  vyrizeni?: { kdy: string; duvod: string; patriK: string | null; poznamka: string | null } | null;
 }
 
 const Posouzeni = z.object({
@@ -95,6 +131,8 @@ const Posouzeni = z.object({
     }),
   ),
 });
+
+type Polozka = z.infer<typeof Posouzeni>["polozky"][number];
 
 const POKYNY = [
   "Jsi pomocník bezpečnostního přehledu pro Česko. Posuzuješ zachycené zprávy a rozhoduješ, co je nová událost.",
@@ -168,6 +206,62 @@ export function zdrojeNavrhu(
     }));
 }
 
+/**
+ * Posouzení jedné dávky kandidátů; při nezdaru se dávka rozpůlí a zkusí znovu.
+ *
+ * Proč se vůbec dělí: šedesát kandidátů v jednom dotazu není náhoda — druhý
+ * zdroj vznikne jen tak, že se dvě zprávy o téže události potkají v jedné
+ * dávce. Jenže 20. 9. 2026 se odpověď do stropu nevešla, JSON se utnul
+ * uprostřed řetězce a běh přišel o celou šedesátku: fronta se nepohnula ani
+ * o jednu položku, přestože model běžel tři minuty.
+ *
+ * Půlení je kompromis, ne oprava párování: ztratí se nejvýš spojení uvnitř
+ * neúspěšné poloviny, ne výsledek celého běhu. Co se posoudit nepodařilo,
+ * se vrací jako počet — ve frontě to zůstává a v reportu je to vidět.
+ */
+export async function posudDavku(
+  davka: Kandidat[],
+  znameZaznamy: { slug: string; titulek: string }[],
+  /* Volání modelu se dá v testu podstrčit — dělení dávek se tak ověří bez API. */
+  zeptejSe: (z: Parameters<typeof strukturovane<{ polozky: Polozka[] }>>[0]) => Promise<{ polozky: Polozka[] } | null> = strukturovane,
+): Promise<{ polozky: Polozka[]; neposouzeno: number }> {
+  const odpoved = await zeptejSe({
+    system: POKYNY,
+    vstup: {
+      znameZaznamy,
+      kandidati: davka.map((k) => ({
+        id: k.id,
+        titulek: k.titulek,
+        shrnuti: k.shrnuti,
+        publikovano: k.publikovano,
+        zeme: k.zeme,
+        kodZeme: k.kodZeme,
+        zdroj: k.zdroj.nazev,
+        text: (k.vyrez?.text ?? "").slice(0, 2500),
+      })),
+    },
+    schema: Posouzeni,
+    ucel: `denní audit fronty (${davka.length} kandidátů)`,
+    maxTokens: STROP_ODPOVEDI,
+  });
+
+  if (odpoved) return { polozky: odpoved.polozky, neposouzeno: 0 };
+
+  if (davka.length <= NEJMENSI_DAVKA) {
+    console.log(`[audit] dávka ${davka.length} neprošla ani po zmenšení — zůstává ve frontě`);
+    return { polozky: [], neposouzeno: davka.length };
+  }
+
+  const pul = Math.ceil(davka.length / 2);
+  console.log(`[audit] dávka ${davka.length} neprošla, zkouší se po ${pul} a ${davka.length - pul}`);
+  const prvni = await posudDavku(davka.slice(0, pul), znameZaznamy, zeptejSe);
+  const druha = await posudDavku(davka.slice(pul), znameZaznamy, zeptejSe);
+  return {
+    polozky: [...prvni.polozky, ...druha.polozky],
+    neposouzeno: prvni.neposouzeno + druha.neposouzeno,
+  };
+}
+
 async function main() {
   const sucho = process.argv.includes("--sucho");
 
@@ -205,6 +299,14 @@ async function main() {
   const hranice = Date.now() - DNI * 86_400_000;
 
   const kPosouzeni = kandidati
+    /*
+      Jen to, co ještě čeká.
+      
+      Bez tohohle filtru audit posuzoval i zprávy, které sám dřív odepsal:
+      rozpočet modelu padl na tutéž práci dokola a fronta se skoro nehýbala —
+      24 posouzených, a ubyla jedna položka.
+    */
+    .filter((k) => k.stav === "ceka")
     .filter((k) => !zname.has(k.zdroj.url) && !uzNavrzene.has(k.zdroj.url))
     .filter((k) => new Date(k.publikovano ?? k.zachyceno).getTime() >= hranice)
     // Naléhavé napřed, pak nejnovější: když je rozpočet malý, ať padne na to podstatné.
@@ -219,31 +321,17 @@ async function main() {
     return;
   }
 
-  const vysledek = await strukturovane({
-    system: POKYNY,
-    vstup: {
-      znameZaznamy: incidenty.slice(-40).map((i) => ({ slug: i.slug, titulek: i.titulek })),
-      kandidati: kPosouzeni.map((k) => ({
-        id: k.id,
-        titulek: k.titulek,
-        shrnuti: k.shrnuti,
-        publikovano: k.publikovano,
-        zeme: k.zeme,
-        kodZeme: k.kodZeme,
-        zdroj: k.zdroj.nazev,
-        text: (k.vyrez?.text ?? "").slice(0, 2500),
-      })),
-    },
-    schema: Posouzeni,
-    ucel: "denní audit fronty",
-    maxTokens: 16000,
-  });
+  const znameZaznamy = incidenty.slice(-40).map((i) => ({ slug: i.slug, titulek: i.titulek }));
+  const { polozky, neposouzeno } = await posudDavku(kPosouzeni, znameZaznamy);
 
-  if (!vysledek) {
+  if (!polozky.length) {
     /* Model je nastavený, ale nevrátil nic. To je porucha, ne klid. */
     console.log("[audit] MODEL SELHAL — volání nevrátilo výsledek");
-    zapisReport({ kdy: new Date().toISOString(), stav: "model-selhal", posouzeno: 0, navrhu: 0 });
+    zapisReport({ kdy: new Date().toISOString(), stav: "model-selhal", posouzeno: 0, navrhu: 0, neposouzeno });
     process.exit(4);
+  }
+  if (neposouzeno) {
+    console.log(`[audit] ${neposouzeno} kandidátů se posoudit nepodařilo, zůstávají ve frontě`);
   }
 
   const podleId = new Map(kPosouzeni.map((k) => [k.id, k]));
@@ -251,7 +339,7 @@ async function main() {
   const nove: unknown[] = [];
   const prehled: unknown[] = [];
 
-  for (const p of vysledek.polozky) {
+  for (const p of polozky) {
     const k = podleId.get(p.id);
     if (!k) continue;
 
@@ -301,7 +389,13 @@ async function main() {
       id: `i-${kdy}-${p.id.replace(/^k-/, "").slice(0, 10)}`,
       slug: `${(p.kodZeme ?? k.kodZeme ?? "xx").toLowerCase()}-${p.id.replace(/^k-/, "").slice(0, 10)}`,
       titulek: p.titulekCs,
-      kratkyTitulek: p.titulekCs.slice(0, 48),
+      /*
+        Žádné slepé krácení. Dřív tu bylo slice(0, 48) a do veřejného kanálu
+        odešlo „Polsko: armáda posiluje hraniční přechody s Ukra". Když je
+        titulek dlouhý, zkrátí ho až rozhlas na hranici slova; tady se
+        neseká nic.
+      */
+      kratkyTitulek: p.titulekCs,
       zeme: k.zeme ?? "—",
       kodZeme: p.kodZeme ?? k.kodZeme ?? "EU",
       kategorie: k.kategorie,
@@ -312,16 +406,26 @@ async function main() {
       jistota: p.jistota,
       stav: "bez-vysetrovani",
       atribuce: "neznama",
-      puvodce: null,
+      /*
+        „Neznámý" je pravdivá hodnota, ne výplň. Prázdné pole znamená, že se
+        na otázku po původci nikdo neptal; „neznamy" znamená, že se ptal
+        a odpověď nemá. Kontrola dat to u případu vyžaduje právě proto.
+      */
+      puvodce: p.druh === "pripad" ? "neznamy" : null,
       druh: p.druh === "neurceno" ? "reakce" : p.druh,
       fakta: p.fakta,
       neznameho,
-      vyznam: "[DOPLNIT] — co z toho plyne pro čtenáře v Česku.",
+      /*
+        Prázdné, ne zástupný text. „[DOPLNIT]" se přes schválení dostalo na
+        živý web a stálo tam místo vysvětlení. Prázdné pole se nezobrazí
+        vůbec, což je pravda; zástupný text je chyba na očích čtenáře.
+      */
+      vyznam: "",
       eskalacniSpousteče: [],
       deeskalacniSignaly: [],
       zdroje,
       souvisejici: [],
-      historie: [{ kdy: `${kdy}T00:00:00Z`, text: "Zachyceno sběrem, posouzeno auditem.", novySignal: true }],
+      historie: [{ kdy: `${kdy}T00:00:00Z`, text: "Zachyceno automatickým sběrem, posouzeno před zařazením do fronty.", novySignal: true }],
       novy: true,
       zapocitanoTyden: kdy,
       aiZpracovano: true,
@@ -330,16 +434,77 @@ async function main() {
     });
   }
 
+  /*
+    Posouzený kandidát se z fronty odepíše.
+
+    Zachycený článek není událost — je to jeden doklad. Jakmile se ví, ke
+    které události patří (nebo že k žádné), nemá stát ve frontě a tvářit se,
+    že na něco čeká. Bez tohohle kroku fronta jen rostla: 300 položek, z nichž
+    57 už bylo posouzeno.
+  */
+  const vyrizeno = new Map<string, { duvod: string; patriK: string | null }>();
+  for (const p2 of polozky) {
+    const r = prehled.find((x) => (x as { id: string }).id === p2.id) as
+      | { zahozeno: string | null; duplikatSlugu: string | null }
+      | undefined;
+    if (!r) continue;
+    if (!r.zahozeno) {
+      vyrizeno.set(p2.id, { duvod: "navrh", patriK: null });
+      /* Zprávy, ze kterých se staly další zdroje návrhu, taky dořešené jsou. */
+      for (const dalsi of p2.dalsiId) vyrizeno.set(dalsi, { duvod: "zdroj-navrhu", patriK: null });
+    } else if (r.duplikatSlugu) {
+      vyrizeno.set(p2.id, { duvod: "pokracovani", patriK: r.duplikatSlugu });
+    } else if (r.zahozeno.startsWith("hlásí to jen jeden zdroj")) {
+      /* Tenhle čeká na dohledání druhého zdroje — z fronty se neodepisuje. */
+    } else {
+      vyrizeno.set(p2.id, { duvod: "neudalost", patriK: null });
+    }
+  }
+
+  /*
+    Kandidát, jehož odkaz už je zdrojem návrhu nebo zveřejněného záznamu,
+    z fronty taky odchází.
+
+    Bez tohohle kroku zůstal viset: z posuzování ho vyřadí filtr na známé
+    adresy, takže se o něm už nikdy nerozhodne — a ve frontě se přitom dál
+    tváří, že na někoho čeká. Po úklidovém běhu 20. 9. 2026 takhle zbyly tři.
+  */
+  const zaznamPodleUrl = new Map(incidenty.flatMap((i) => i.zdroje.map((z) => [z.url, i.slug] as const)));
+  for (const k of kandidati) {
+    if (k.stav !== "ceka" || vyrizeno.has(k.id)) continue;
+    const slug = zaznamPodleUrl.get(k.zdroj.url);
+    if (slug) vyrizeno.set(k.id, { duvod: "pokracovani", patriK: slug });
+    else if (uzNavrzene.has(k.zdroj.url)) vyrizeno.set(k.id, { duvod: "zdroj-navrhu", patriK: null });
+  }
+
+  const kdyVyrizeno = new Date().toISOString();
+  let odepsano = 0;
+  const kandidatiPoAuditu = kandidati.map((k) => {
+    const v = vyrizeno.get(k.id);
+    if (!v || k.stav !== "ceka") return k;
+    odepsano++;
+    return {
+      ...k,
+      stav: "vyrizen" as const,
+      vyrizeni: { kdy: kdyVyrizeno, duvod: v.duvod, patriK: v.patriK, poznamka: null },
+    };
+  });
+
   const zprava = {
     kdy: new Date().toISOString(),
     stav: "ok",
     poskytovatel,
-    posouzeno: vysledek.polozky.length,
+    posouzeno: polozky.length,
+    neposouzeno,
     navrhu: nove.length,
+    vyrizeno: odepsano,
+    cekaDal: kandidatiPoAuditu.filter((k) => k.stav === "ceka").length,
     rozhodnuti: prehled,
   };
 
-  console.log(`[audit] posouzeno ${vysledek.polozky.length}, nových návrhů ${nove.length}`);
+  console.log(
+    `[audit] posouzeno ${polozky.length}, nových návrhů ${nove.length}, z fronty odepsáno ${odepsano}`,
+  );
   for (const r of prehled as { titulek: string; zahozeno: string | null; duvod: string; neznamySlug: string | null }[]) {
     console.log(`  ${r.zahozeno ? `— ${r.zahozeno}` : "NÁVRH"} · ${r.titulek.slice(0, 60)} — ${r.duvod.slice(0, 70)}`);
     if (r.neznamySlug) console.log(`      pozor: model ukázal na neexistující záznam ${r.neznamySlug}`);
@@ -352,6 +517,9 @@ async function main() {
   }
   if (nove.length) {
     fs.writeFileSync(cesta("data/navrhy.json"), `${JSON.stringify([...navrhy, ...nove], null, 2)}\n`);
+  }
+  if (odepsano) {
+    fs.writeFileSync(cesta("data/kandidati.json"), `${JSON.stringify(kandidatiPoAuditu, null, 2)}\n`);
   }
 }
 

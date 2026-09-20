@@ -373,7 +373,7 @@
     "id": "a04",
     "slug": "leipzig-halle-utok",
     "titulek": "Leipzig/Halle: pokus o útok výbušným dronem",
-    "kratkyTitulek": "Leipzig/Halle: pokus o útok",
+    "kratkyTitulek": "Leipzig/Halle: pokus o útok výbušným dronem",
     "zeme": "Německo",
     "kodZeme": "DE",
     "kategorie": [
@@ -784,7 +784,7 @@
     "id": "a10",
     "slug": "bis-vyrocni-zprava",
     "titulek": "Výroční zpráva BIS k ruské hybridní aktivitě",
-    "kratkyTitulek": "Výroční zpráva BIS",
+    "kratkyTitulek": "Výroční zpráva BIS k ruské hybridní aktivitě",
     "zeme": "Česko",
     "kodZeme": "CZ",
     "kategorie": [
@@ -1549,7 +1549,7 @@
     "id": "a22",
     "slug": "cr-podpora-atribuce",
     "titulek": "ČR: diplomatická reakce na německou atribuci Leipzig/Halle",
-    "kratkyTitulek": "ČR: diplomatická reakce",
+    "kratkyTitulek": "ČR: diplomatická reakce na německou atribuci Leipzig/Halle",
     "zeme": "Česko",
     "kodZeme": "CZ",
     "kategorie": [
@@ -2385,7 +2385,7 @@
     "id": "h05",
     "slug": "notpetya-2017",
     "titulek": "NotPetya: destruktivní kyberútok z Ukrajiny se rozšířil do Evropy; připsán ruské armádě",
-    "kratkyTitulek": "NotPetya",
+    "kratkyTitulek": "NotPetya: destruktivní kyberútok z Ukrajiny se rozšířil do Evropy; připsán ruské armádě",
     "zeme": "Ukrajina",
     "kodZeme": "UA",
     "kategorie": [
@@ -2453,7 +2453,7 @@
     "id": "h06",
     "slug": "salisbury-2018",
     "titulek": "Salisbury: otrava novičokem; Británie obvinila dva důstojníky GRU",
-    "kratkyTitulek": "Salisbury",
+    "kratkyTitulek": "Salisbury: otrava novičokem; Británie obvinila dva důstojníky GRU",
     "zeme": "Spojené království",
     "kodZeme": "GB",
     "kategorie": [
@@ -2967,7 +2967,7 @@
     "id": "h14",
     "slug": "nord-stream-2022",
     "titulek": "Nord Stream: výbuchy na plynovodech; německé vyšetřování vede k ukrajinské skupině",
-    "kratkyTitulek": "Nord Stream",
+    "kratkyTitulek": "Nord Stream: výbuchy na plynovodech; německé vyšetřování vede k ukrajinské skupině",
     "zeme": "Německo (Baltské moře)",
     "kodZeme": "DE",
     "kategorie": [
@@ -3037,7 +3037,7 @@
     "id": "h15",
     "slug": "przewodow-2022",
     "titulek": "Przewodów: dopad rakety v Polsku, dva mrtví; podle Polska i NATO šlo o ukrajinskou protivzdušnou obranu",
-    "kratkyTitulek": "Przewodów",
+    "kratkyTitulek": "Przewodów: dopad rakety v Polsku, dva mrtví; podle Polska i NATO šlo o ukrajinskou protivzdušnou obranu",
     "zeme": "Polsko",
     "kodZeme": "PL",
     "kategorie": [
@@ -3103,7 +3103,7 @@
     "id": "h16",
     "slug": "balticconnector-2023",
     "titulek": "Balticconnector: plynovod mezi Finskem a Estonskem poškodila kotva čínské lodi",
-    "kratkyTitulek": "Balticconnector",
+    "kratkyTitulek": "Balticconnector: plynovod mezi Finskem a Estonskem poškodila kotva čínské lodi",
     "zeme": "Finsko",
     "kodZeme": "FI",
     "kategorie": [
@@ -3569,7 +3569,7 @@
     "id": "h23",
     "slug": "estlink2-2024",
     "titulek": "Estlink 2: přerušení kabelu mezi Finskem a Estonskem; Finsko zadrželo tanker Eagle S",
-    "kratkyTitulek": "Estlink 2",
+    "kratkyTitulek": "Estlink 2: přerušení kabelu mezi Finskem a Estonskem; Finsko zadrželo tanker Eagle S",
     "zeme": "Finsko",
     "kodZeme": "FI",
     "kategorie": [
@@ -7340,5 +7340,465 @@
     "zapocitanoTyden": "2026-W37",
     "aiZpracovano": true,
     "lidskyOvereno": true
+  },
+  {
+    "id": "i-2026-09-18-9c4373877a",
+    "slug": "cz-9c4373877a",
+    "titulek": "Česko: gripeny z Pardubic na rozkaz spojeneckého velitelství hlídkovaly u východní hranice Polska kvůli dronům nad západní Ukrajinou",
+    "kratkyTitulek": "Česko: gripeny z Pardubic na rozkaz spojeneckého velitelství hlídkovaly u východní hranice Polska kvůli dronům nad západní Ukrajinou",
+    "zeme": "Česko",
+    "kodZeme": "CZ",
+    "kategorie": [
+      "nato",
+      "drony",
+      "cr"
+    ],
+    "datumUdalosti": "2026-09-18T00:00:00Z",
+    "datumZjisteni": "2026-09-18T00:00:00Z",
+    "aktualizovano": "2026-09-19T11:05:34.024Z",
+    "zavaznost": "Y1",
+    "jistota": "stredni",
+    "stav": "bez-vysetrovani",
+    "atribuce": "neznama",
+    "puvodce": null,
+    "druh": "opatreni",
+    "fakta": [
+      "Podle armády ČR vzlétly stíhačky JAS-39 Gripen z Pardubic na rozkaz spojeneckého velitelství v rámci integrované protivzdušné a protiraketové obrany NATO.",
+      "Monitorovaly vzdušný prostor u východní hranice Polska kvůli aktivitě bezpilotních prostředků v západní Ukrajině.",
+      "Zásah nebyl nutný; po vystřídání polskými stíhači se gripeny bezpečně vrátily do Pardubic."
+    ],
+    "neznameho": [
+      "Přesný čas vzletu a délku hlídky zdroje neuvádějí.",
+      "Původní vyjádření armády ČR jsem neotevřel; informace je převzatá z médií, která ji citují.",
+      "Zda a jak souvisí s tím, že dron dopadl u polské hranice u Jahodyna, uvádí jen Aktuálně.cz jako kontext, ne jako vyjádření armády."
+    ],
+    "vyznam": "",
+    "eskalacniSpousteče": [],
+    "deeskalacniSignaly": [],
+    "zdroje": [
+      {
+        "nazev": "Blesk — Ruské drony zvedly české gripeny: Stíhačky vyrazily z Pardubic k východní hranici NATO",
+        "url": "https://news.google.com/rss/articles/CBMi5AFBVV95cUxNRXJkaEwyVG9nYTdwRXBSLTRsX0wzNy1rNDNRX3lBYzYxUldGby1nXzdMTEVWeXRvc3lPSjlreHR2U2VBUFVmRHE0a24tWmdPd0NJdjFCTWRqVHEzcDY4VzVEZnRRUkZUVVJ2TS1mV0pmTzJsaEpmS1htelVfc3dfbUR2OUJPTnhuZkVoS1pibllrRW1WcGRuZDRVSmQxSEoyU3l1RG1nNklCUVMwVGZJaFhNV1QzeFRVbkk1cDVoWHlzWkI4ekYycXRiNGZadi14ZzdZSWh4a0RpWjlvbThzYnNIX1A?oc=5",
+        "typ": "media",
+        "publikovano": "2026-09-18T00:00:00Z",
+        "primarni": false,
+        "jazyk": "cs"
+      },
+      {
+        "nazev": "ČeskéNoviny.cz (ČTK) — České gripeny letěly do Polska kvůli dronům na Ukrajině",
+        "url": "https://www.ceskenoviny.cz/zpravy/ceske-gripeny-letely-do-polska-kvuli-dronum-na-ukrajine/2876430",
+        "typ": "wire",
+        "publikovano": "2026-09-18T00:00:00Z",
+        "primarni": false,
+        "jazyk": "cs"
+      },
+      {
+        "nazev": "Aktuálně.cz — Gripeny v akci. Armáda potvrdila start našich stíhaček proti ruské hrozbě",
+        "url": "https://zpravy.aktualne.cz/zahranici/gripeny-v-akci-armada-potvrdila-start-nasich-stihacek-proti-ruske-hrozbe/r~aaa298255b6dd74e47df077b2d2cd7cf/?lp=1",
+        "typ": "media",
+        "publikovano": "2026-09-19T00:00:00Z",
+        "primarni": false,
+        "jazyk": "cs"
+      }
+    ],
+    "souvisejici": [],
+    "historie": [
+      {
+        "kdy": "2026-09-18T00:00:00Z",
+        "text": "Zachyceno automatickým sběrem, druhý nezávislý zdroj doložen při ověření.",
+        "novySignal": true
+      }
+    ],
+    "novy": true,
+    "zapocitanoTyden": "2026-09-18",
+    "aiZpracovano": true,
+    "lidskyOvereno": true,
+    "archivniZaznam": false
+  },
+  {
+    "id": "i-2026-09-15-7c0975db9a",
+    "slug": "pl-7c0975db9a",
+    "titulek": "Polsko: armáda posiluje hraniční přechody s Ukrajinou u Dorohuska, Medyky a Korczowé",
+    "kratkyTitulek": "Polsko: armáda posiluje hraniční přechody s Ukrajinou u Dorohuska, Medyky a Korczowé",
+    "zeme": "Polsko",
+    "kodZeme": "PL",
+    "kategorie": [
+      "hranice",
+      "nato"
+    ],
+    "datumUdalosti": "2026-09-15T00:00:00Z",
+    "datumZjisteni": "2026-09-16T00:00:00Z",
+    "aktualizovano": "2026-09-19T11:11:45.723Z",
+    "zavaznost": "Y1",
+    "jistota": "stredni",
+    "stav": "bez-vysetrovani",
+    "atribuce": "neznama",
+    "puvodce": null,
+    "druh": "opatreni",
+    "fakta": [
+      "Podle polského ministra obrany Władysława Kosiniaka-Kamysze, který to oznámil 15. 9. 2026, se ve shodě s rozhodnutím vlády posiluje ochrana hraničních přechodů s Ukrajinou.",
+      "Podle Polskiego Radia 24 vojáci 4. a 18. pluku ženistů budují pozorovací a strážní stanoviště u přechodů Dorohusk, Medyka a Korczowa z modulárních fortifikačních prvků HESCO Bastion a podporují Nadbużańský oddíl Pohraniční stráže.",
+      "Podle Polskiego Radia jde o součást projektu Tarcza Wschód a ministr to zdůvodnil slovy, že „ostatní dny ukazují, že činnost Ruska ohrožuje bezpečnost celé Evropy“.",
+      "Podle Polskiego Radia práce následují po ruských útocích dronů poblíž polské hranice."
+    ],
+    "neznameho": [
+      "Kolik vojáků je nasazeno a kdy práce skončí, zdroje neuvádějí.",
+      "Zda jde o trvalé, nebo dočasné opatření, zdroje neuvádějí.",
+      "Ministrův původní příspěvek ani vládní rozhodnutí jsem neotevřel; údaje jsou z médií, která ho citují.",
+      "Původní odkaz kandidáta (Censor.net přes Google News) jsem přímo neotevřel; otevřel jsem přímou adresu téhož článku na censor.net."
+    ],
+    "vyznam": "",
+    "eskalacniSpousteče": [],
+    "deeskalacniSignaly": [],
+    "zdroje": [
+      {
+        "nazev": "Censor.net — Poland has deployed troops to reinforce border crossings with Ukraine due to threat from Russia",
+        "url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxQYWlpNVVYN0pRclRJM1piQnRSWm9yV3phSk1lZ3VLVVVVcUpocTJrWDNDZkZWYkFmUGZvbWFNU1BFcklFbFQxTmNjaHpiTmlLYld5ZS1QUGN0QU9ET3lFVndSbkF1anFhMmdkQVJYaklKbGhJY2VsRXlSMncyNDJBNU1oaDBDYlhSOXpzZW1XYkpQSnJJQWE4OHQyOFJCU0dEc1NKQ2RqTHNNYnFjUVNUanlZcGZHS280V21FeGJxdDZjWG4x?oc=5",
+        "typ": "media",
+        "publikovano": "2026-09-16T00:00:00Z",
+        "primarni": false,
+        "jazyk": "en"
+      },
+      {
+        "nazev": "Polskie Radio 24 — Polska wzmacnia granicę z Ukrainą. Saperzy budują nowe posterunki",
+        "url": "https://polskieradio24.pl/polska/polska-wzmacnia-granice-z-ukraina-saperzy-buduja-nowe-posterunki",
+        "typ": "media",
+        "publikovano": "2026-09-15T00:00:00Z",
+        "primarni": false,
+        "jazyk": "pl"
+      }
+    ],
+    "souvisejici": [],
+    "historie": [
+      {
+        "kdy": "2026-09-15T00:00:00Z",
+        "text": "Zachyceno automatickým sběrem, druhý nezávislý zdroj doložen při ověření.",
+        "novySignal": true
+      }
+    ],
+    "novy": true,
+    "zapocitanoTyden": "2026-09-15",
+    "aiZpracovano": true,
+    "lidskyOvereno": true,
+    "archivniZaznam": false
+  },
+  {
+    "id": "i-2026-09-15-590b687216",
+    "slug": "us-590b687216",
+    "titulek": "USA: obvinila pět osob z ruské sabotážní a atentátnické sítě",
+    "kratkyTitulek": "USA: obvinila pět osob z ruské sabotážní a atentátnické sítě",
+    "zeme": "Rusko",
+    "kodZeme": "US",
+    "kategorie": [
+      "sabotaz",
+      "rusko"
+    ],
+    "datumUdalosti": "2026-09-15T00:00:00Z",
+    "datumZjisteni": "2026-09-16T00:00:00Z",
+    "aktualizovano": "2026-09-20T05:01:00.551Z",
+    "zavaznost": "O3",
+    "jistota": "potvrzeno",
+    "stav": "bez-vysetrovani",
+    "atribuce": "neznama",
+    "puvodce": "neznamy",
+    "druh": "pripad",
+    "fakta": [
+      "USA obvinila pět osob pracujících pro ruskou rozvědku",
+      "Sítě operuje od roku 2024",
+      "Plánovala atentáty a sabotáže v zemích podporujících Ukrajinu"
+    ],
+    "neznameho": [
+      "Konkrétní identita obviněných",
+      "Konkrétní plánované cíle"
+    ],
+    "vyznam": "",
+    "eskalacniSpousteče": [],
+    "deeskalacniSignaly": [],
+    "zdroje": [
+      {
+        "nazev": "Česko — sabotaz — US Charges 5 In Russian Intelligence Sabotage And Assassination Plot - Radio Free Europe/Radio Liberty",
+        "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxPVlVBcWM0d0FaWU5USnZlUUVESnp6bVR3alZaRHlyTEpTWGE1U013Qkl4dE51UXVKV29xdlZCWGlscWFEOThRRGFvVXBTN2dfVXZsbUVpMlBxN3ZpZk9jUVJhcmozRmZidkhLQk85YmFzLWVhbFFBMENOZlZkaFdHaWlMaDh5UDNHWTdZRURfUlFXeGtwTm5ySENMQWtkY3BsN0N5NtIBpwFBVV95cUxObzk5ZEZiSUMzRi15Yk5XQmtqZkdlRWFUdWwwc0I5WW02MkItMGYweUVrZVh0S2Z4dmlCbXE3WWFjc2s0YU5CWTQyM2I3YW96OUxMbUxtVXZNQUxYQlNwa1hIRE1ncVJCNGtTQzkyN1BGcWFBODdlNlZhYjJGYkxKS3BDR2V2RlFGb1J2SDZNQ19tUWxSMDNSYnEteUtpZ1dNMlFyWlpUSQ?oc=5",
+        "typ": "media",
+        "publikovano": "2026-09-16T00:00:00Z",
+        "primarni": false,
+        "jazyk": "cs"
+      },
+      {
+        "nazev": "Moldavsko — sabotaz — US charges five in Russian plot to kill dissidents and sabotage Europe - Moldova 1",
+        "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxQWi1KOXFfYjA1NURFckhGS2NJTWFaRXo2QU80RUtreHRWVHdsZlAxeVFqNzBYdEFBZ0hXR29LYTF0elFpU1UtOTdiTno4NTNuSFp3VTdCbWZ4VzEtWmpQNEdsc29Rd2VGX092aWQzWHNWYld0RkVXeVBtM1o3MzhTaUhTVDdmM2Z2bnVFSU9DMWp2VE5OVmpfTl8yUXNkVDg?oc=5",
+        "typ": "media",
+        "publikovano": "2026-09-16T00:00:00Z",
+        "primarni": false,
+        "jazyk": "cs"
+      },
+      {
+        "nazev": "The Kyiv Independent — US charges 5 suspects linked to alleged Russian assassination, sabotage network targeting Ukraine",
+        "url": "https://kyivindependent.com/us-charges-5-suspects-linked-to-alleged-russian-assassination-sabotage-network-targeting-ukraines-allies/",
+        "typ": "media",
+        "publikovano": "2026-09-16T00:00:00Z",
+        "primarni": false,
+        "jazyk": "cs"
+      },
+      {
+        "nazev": "Český rozhlas — domácí zprávy — Nájemné vraždy, sledování nebo nábor. Spojené státy obvinily pět osob z Ruska ze spiknut",
+        "url": "https://www.irozhlas.cz/zpravy-svet/najemne-vrazdy-sledovani-nebo-nabor-spojene-staty-obvinily-pet-osob-z-ruska-ze_2609160616_aru",
+        "typ": "media",
+        "publikovano": "2026-09-16T00:00:00Z",
+        "primarni": true,
+        "jazyk": "cs"
+      }
+    ],
+    "souvisejici": [],
+    "historie": [
+      {
+        "kdy": "2026-09-15T00:00:00Z",
+        "text": "Zachyceno automatickým sběrem, posouzeno před zařazením do fronty.",
+        "novySignal": true
+      },
+      {
+        "kdy": "2026-09-20T05:01:00.551Z",
+        "text": "Zveřejněno automaticky: dva nezávislé zdroje, z toho úřední. Bez lidské kontroly.",
+        "novySignal": false
+      }
+    ],
+    "novy": true,
+    "zapocitanoTyden": "2026-09-15",
+    "aiZpracovano": true,
+    "lidskyOvereno": false,
+    "archivniZaznam": false,
+    "overeni": "automaticke"
+  },
+  {
+    "id": "i-2026-09-17-4645d0d129",
+    "slug": "de-4645d0d129",
+    "titulek": "Německo: spolkové státní zastupitelství zadrželo Iráčana podezřelého z přípravy útoku na kostel v Brémách",
+    "kratkyTitulek": "Německo: spolkové státní zastupitelství zadrželo Iráčana podezřelého z přípravy útoku na kostel v Brémách",
+    "zeme": "Německo",
+    "kodZeme": "DE",
+    "kategorie": [
+      "vysetrovani",
+      "pravo"
+    ],
+    "datumUdalosti": "2026-09-17T00:00:00Z",
+    "datumZjisteni": "2026-09-17T00:00:00Z",
+    "aktualizovano": "2026-09-20T05:01:00.551Z",
+    "zavaznost": "Y3",
+    "jistota": "vysoka",
+    "stav": "probiha",
+    "atribuce": "neznama",
+    "puvodce": "neznamy",
+    "druh": "pripad",
+    "fakta": [
+      "Spolkové státní zastupitelství (Generalbundesanwalt) oznámilo zatčení 24letého iráckého státního příslušníka v okrese Barnim v Braniborsku.",
+      "Podle žalobce se hlásí k ideologii teroristické organizace Islámský stát a na jaře 2025 plánoval útoky v Německu; kostel v Brémách měl být prvním cílem skupiny.",
+      "Podle žalobce si obstaral střelnou zbraň a kostel v Brémách vytipoval; získal jednoho dalšího člověka, další nábor se nezdařil.",
+      "Podezřívá se z pokusu o založení teroristické skupiny, přípravy závažného násilného činu ohrožujícího stát a porušení zákona o zbraních; zatykač vydal 8. září 2026 vyšetřující soudce Spolkového soudního dvora."
+    ],
+    "neznameho": [
+      "Jde o podezření vyšetřovatelů, obžaloba ani rozsudek nejsou.",
+      "Kdo byl druhý získaný člověk a jak daleko plán byl, zdroje neuvádějí.",
+      "Zda měl podezřelý vazbu na organizaci Islámský stát nad rámec sdílené ideologie, žalobce neuvedl."
+    ],
+    "vyznam": "",
+    "eskalacniSpousteče": [],
+    "deeskalacniSignaly": [],
+    "zdroje": [
+      {
+        "nazev": "ČT24 (ČTK) — Německá policie zadržela Iráčana, chtěl podle ní zaútočit na kostel",
+        "url": "https://ct24.ceskatelevize.cz/clanek/svet/nemecka-policie-zadrzela-iracana-chtel-podle-ni-zautocit-na-kostel-377721",
+        "typ": "wire",
+        "publikovano": "2026-09-17T00:00:00Z",
+        "primarni": false,
+        "jazyk": "cs"
+      },
+      {
+        "nazev": "Generalbundesanwalt — Festnahme wegen versuchter Gründung einer terroristischen Vereinigung und Vorbereitung einer schweren staatsgefährdenden Gewalttat",
+        "url": "https://www.generalbundesanwalt.de/SharedDocs/Pressemitteilungen/DE/2026/Pressemitteilung-vom-17-09-2026.html?nn=478184",
+        "typ": "primary",
+        "publikovano": "2026-09-17T00:00:00Z",
+        "primarni": true,
+        "jazyk": "de"
+      }
+    ],
+    "souvisejici": [],
+    "historie": [
+      {
+        "kdy": "2026-09-17T00:00:00Z",
+        "text": "Zachyceno automatickým sběrem, druhý nezávislý zdroj doložen při ověření.",
+        "novySignal": true
+      },
+      {
+        "kdy": "2026-09-20T05:01:00.551Z",
+        "text": "Zveřejněno automaticky: dva nezávislé zdroje, z toho úřední. Bez lidské kontroly.",
+        "novySignal": false
+      }
+    ],
+    "novy": true,
+    "zapocitanoTyden": "2026-09-17",
+    "aiZpracovano": true,
+    "lidskyOvereno": false,
+    "archivniZaznam": false,
+    "overeni": "automaticke"
+  },
+  {
+    "id": "i-2026-09-12-8097dca796",
+    "slug": "ro-8097dca796",
+    "titulek": "Rumunsko: dron, který přeletěl Ukrajinu a Moldavsko, dopadl u Botoșenița Mare v župě Suceava; zvednuty byly rumunské F-16",
+    "kratkyTitulek": "Rumunsko: dron, který přeletěl Ukrajinu a Moldavsko, dopadl u Botoșenița Mare v župě Suceava; zvednuty byly rumunské F-16",
+    "zeme": "Rumunsko",
+    "kodZeme": "RO",
+    "kategorie": [
+      "drony",
+      "nato"
+    ],
+    "datumUdalosti": "2026-09-12T00:00:00Z",
+    "datumZjisteni": "2026-09-12T00:00:00Z",
+    "aktualizovano": "2026-09-20T05:01:00.551Z",
+    "zavaznost": "Y2",
+    "jistota": "stredni",
+    "stav": "bez-vysetrovani",
+    "atribuce": "neznama",
+    "puvodce": "neznamy",
+    "druh": "pripad",
+    "fakta": [
+      "Podle rumunského ministerstva obrany informovala 12. 9. 2026 operační střediska Ukrajiny a Moldavska Rumunsko, že dron přeletěl vzdušný prostor obou států a mířil do severovýchodního Rumunska; Rumunsko vyslalo dva F-16 ze základny Borcea.",
+      "Podle ministerstva byl havarovaný stroj nalezen na kukuřičném poli u Botoșenița Mare v župě Suceava; dopad vytvořil kráter o průměru 1 m a hloubce 30 cm a menší požár. Ministerstvo neuvádí oběti a na místo vyslalo pyrotechnický tým.",
+      "Podle Moldova 1 zaznamenal radar moldavské armády vniknutí z Ukrajiny v 15:26 místního času a Moldavsko asi na hodinu uzavřelo vzdušný prostor ve středních a severních regionech, což zablokovalo lety z Kišiněva."
+    ],
+    "neznameho": [
+      "Původ a typ dronu rumunské ministerstvo neuvedlo; Moldova 1 ho označuje za ruský, úřední potvrzení jsem neotevřel.",
+      "Zda dron nesl výbušninu a co ukáže ohledání, zatím není známo.",
+      "Originál tiskové informace na webu rumunského ministerstva jsem neotevřel, jen její zrcadlo na globalsecurity.org.",
+      "Původní odkaz kandidáta (Moldova 1 přes Google News) jsem přímo neotevřel; otevřel jsem přímou adresu téhož článku na moldova1.md."
+    ],
+    "vyznam": "",
+    "eskalacniSpousteče": [],
+    "deeskalacniSignaly": [],
+    "zdroje": [
+      {
+        "nazev": "Moldova 1 — Russian drone breaches Moldova airspace and crashes in Romania",
+        "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxQSVZBTEFMMHFPSWx3SmxMeUZLQUh0T1h5bmZYbHFrQkM4Y0R0Vkl3dmI3R0MxdEEwUW9MSDFQMWx3bTl6M1NVbjZ5S0dOUFlKVTBuekZTSE5xQWlTWWtmaHgwMm9rbnotMVBfWENHdkFoU2pEWWdBakpSU1g5N2pjRHlaVEJvSTlsUWk0YTZfOTRVajlh?oc=5",
+        "typ": "media",
+        "publikovano": "2026-09-12T00:00:00Z",
+        "primarni": false,
+        "jazyk": "en"
+      },
+      {
+        "nazev": "Ministerstvo národní obrany Rumunska — Press Information (zrcadlo na globalsecurity.org)",
+        "url": "https://www.globalsecurity.org/military/library/news/2026/09/mil-260914-ro-mnd01.htm",
+        "typ": "primary",
+        "publikovano": "2026-09-14T00:00:00Z",
+        "primarni": true,
+        "jazyk": "en"
+      }
+    ],
+    "souvisejici": [],
+    "historie": [
+      {
+        "kdy": "2026-09-12T00:00:00Z",
+        "text": "Zachyceno automatickým sběrem, druhý nezávislý zdroj doložen při ověření.",
+        "novySignal": true
+      },
+      {
+        "kdy": "2026-09-20T05:01:00.551Z",
+        "text": "Zveřejněno automaticky: dva nezávislé zdroje, z toho úřední. Bez lidské kontroly.",
+        "novySignal": false
+      }
+    ],
+    "novy": true,
+    "zapocitanoTyden": "2026-09-12",
+    "aiZpracovano": true,
+    "lidskyOvereno": false,
+    "archivniZaznam": false,
+    "overeni": "automaticke"
+  },
+  {
+    "id": "i-2026-09-07-dae06bfd15",
+    "slug": "de-dae06bfd15",
+    "titulek": "Německo: spolkové státní zastupitelství obžalovalo berlínskou podnikatelku Ilonu W. ze špionážní činnosti pro cizí tajnou službu",
+    "kratkyTitulek": "Německo: spolkové státní zastupitelství obžalovalo berlínskou podnikatelku Ilonu W. ze špionážní činnosti pro cizí tajnou službu",
+    "zeme": "Německo",
+    "kodZeme": "DE",
+    "kategorie": [
+      "zpravodajske",
+      "vysetrovani"
+    ],
+    "datumUdalosti": "2026-09-07T00:00:00Z",
+    "datumZjisteni": "2026-09-14T00:00:00Z",
+    "aktualizovano": "2026-09-20T05:01:00.551Z",
+    "zavaznost": "Y3",
+    "jistota": "vysoka",
+    "stav": "obvineni",
+    "atribuce": "neznama",
+    "puvodce": "neznamy",
+    "druh": "pripad",
+    "fakta": [
+      "Podle tiskové zprávy Generalbundesanwalt z 14. 9. 2026 podal žalobce 7. 9. 2026 obžalobu u státněbezpečnostního senátu berlínského vrchního zemského soudu (Kammergericht) pro činnost pro tajnou službu cizí mocnosti (§ 99 odst. 1 č. 1 trestního zákoníku).",
+      "Podle žalobce byla obviněná 21. 1. 2026 zatčena a od té doby je ve vazbě.",
+      "Podle žalobce udržovala nejpozději od října 2023 kontakt s hlavním pracovníkem tajné služby; dpa a AP uvádějí, že šlo o pracovníka ruské ambasády v Berlíně. Měla mu předávat tipy na významné společenské akce a umožnit mu účast na nich.",
+      "Podle žalobce se pokoušela získat osoby z ministerstva obrany a zbrojního průmyslu a podle pokynů kontaktu hledala informace o německé obranné politice a zbrojním průmyslu, zejména v souvislosti s válkou."
+    ],
+    "neznameho": [
+      "Jde o obžalobu, ne o rozsudek; hlavní líčení ani jeho termín zdroje neuvádějí.",
+      "Které tajné službě podle žalobce pracovala: Ruskou ambasádu uvádějí dpa a AP, tisková zpráva žalobce ji podle otevřeného výtahu jmenovitě neuvádí; atribuce proto zůstává „neznámá“.",
+      "Datum podání obžaloby: tisková zpráva žalobce uvádí 7. 9., AP 6. 9.; platí údaj žalobce.",
+      "Původní odkaz kandidáta (The Insider přes Google News) jsem neotevřel a přímou adresu jsem nenašel."
+    ],
+    "vyznam": "",
+    "eskalacniSpousteče": [],
+    "deeskalacniSignaly": [],
+    "zdroje": [
+      {
+        "nazev": "Generalbundesanwalt — Anklage wegen geheimdienstlicher Agententätigkeit erhoben",
+        "url": "https://www.generalbundesanwalt.de/SharedDocs/Pressemitteilungen/DE/2026/Pressemitteilung-vom-14-09-2026.html?nn=478184",
+        "typ": "primary",
+        "publikovano": "2026-09-14T00:00:00Z",
+        "primarni": true,
+        "jazyk": "de"
+      },
+      {
+        "nazev": "Tagesspiegel (dpa) — Deutsch-Ukrainerin Ilona W.: Mutmaßliche russische Spionin in Berlin angeklagt",
+        "url": "https://www.tagesspiegel.de/politik/dpa-deutsch-ukrainerin-ilona-w-mutmassliche-russische-spionin-in-berlin-angeklagt-16049988.html",
+        "typ": "wire",
+        "publikovano": "2026-09-14T00:00:00Z",
+        "primarni": false,
+        "jazyk": "de"
+      },
+      {
+        "nazev": "AP (přes WRAL.com) — Prosecutors charge German-Ukrainian woman with aiding Russian intelligence",
+        "url": "https://www.wral.com/news/ap/0aec7-prosecutors-charge-german-ukrainian-woman-with-aiding-russian-intelligence/",
+        "typ": "wire",
+        "publikovano": "2026-09-14T00:00:00Z",
+        "primarni": false,
+        "jazyk": "en"
+      },
+      {
+        "nazev": "The Insider — Berlin-based German-Ukrainian businesswoman charged with spying for Russia",
+        "url": "https://news.google.com/rss/articles/CBMiS0FVX3lxTE5CdUhIbVB5OE5fdzVZRWJaMEdJRU8xSEV2LTB3aXFPSWY4TW5VcUpnZTFNeGl6Z3IzVWYwZjBoeU55WEE4RHZ5WVd4OA?oc=5",
+        "typ": "media",
+        "publikovano": "2026-09-14T00:00:00Z",
+        "primarni": false,
+        "jazyk": "en"
+      }
+    ],
+    "souvisejici": [],
+    "historie": [
+      {
+        "kdy": "2026-09-07T00:00:00Z",
+        "text": "Zachyceno automatickým sběrem, druhý nezávislý zdroj doložen při ověření.",
+        "novySignal": true
+      },
+      {
+        "kdy": "2026-09-20T05:01:00.551Z",
+        "text": "Zveřejněno automaticky: dva nezávislé zdroje, z toho úřední. Bez lidské kontroly.",
+        "novySignal": false
+      }
+    ],
+    "novy": true,
+    "zapocitanoTyden": "2026-09-07",
+    "aiZpracovano": true,
+    "lidskyOvereno": false,
+    "archivniZaznam": false,
+    "overeni": "automaticke"
   }
 ]

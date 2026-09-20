@@ -1,0 +1,95 @@
+name: Oprava zveřejněného záznamu
+
+# Co to dělá
+# ----------
+# Opraví údaj u záznamu, který už je na webu, a zároveň to zapíše do
+# data/opravy.json, které web ukazuje na stránce Opravy.
+#
+# Proč obojí naráz: chyba se pozná většinou až po zveřejnění. Oprava
+# zveřejněného údaje je přesně ta situace, kdy se projekt pozná — buď se
+# přizná, nebo přepíše potichu. Tady se přiznává; tichá oprava tu možná není.
+
+on:
+  workflow_dispatch:
+    inputs:
+      slug:
+        description: "Slug záznamu (např. cz-9c4373877a)"
+        required: true
+      upravy:
+        description: "JSON se změnami a povinným polem duvod"
+        required: true
+
+permissions:
+  contents: write
+
+concurrency:
+  group: rozhodnuti
+  cancel-in-progress: false
+
+jobs:
+  opravit:
+    runs-on: ubuntu-latest
+    outputs:
+      zmena: ${{ steps.zapis.outputs.zmena }}
+    steps:
+      # Současná špička main, ne stav z chvíle založení běhu — jinak by se
+      # oprava dělala nad starými daty a push by skončil konfliktem.
+      - uses: actions/checkout@v7
+        with:
+          ref: main
+
+      - uses: actions/setup-node@v7
+        with:
+          node-version: "24"
+          cache: npm
+
+      - name: Balíčky z mezipaměti
+        id: moduly
+        uses: actions/cache@v6
+        with:
+          path: node_modules
+          key: moduly-${{ runner.os }}-node24-${{ hashFiles('package-lock.json') }}
+
+      - if: steps.moduly.outputs.cache-hit != 'true'
+        run: npm ci --no-audit --fund=false
+
+      # Vstupy přes proměnné prostředí, ne do textu příkazu.
+      - name: Provést opravu
+        env:
+          SLUG: ${{ inputs.slug }}
+          UPRAVY: ${{ inputs.upravy }}
+        run: npm run spravce -- uprav-zaznam "$SLUG" "$UPRAVY"
+
+      - name: Kontrola dat a testy
+        run: |
+          npm run kontrola:data
+          npm test
+
+      - name: Zapsat opravu
+        id: zapis
+        env:
+          SLUG: ${{ inputs.slug }}
+        run: |
+          if [ -z "$(git status --porcelain data/)" ]; then
+            echo "Nic se nezměnilo."
+            echo "zmena=false" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+          git config user.name "sprava"
+          git config user.email "sprava@users.noreply.github.com"
+          git add data/
+          git commit -m "Oprava záznamu $SLUG"
+          for i in 1 2 3 4; do
+            git push && break
+            sleep $((2**i))
+            git pull --rebase
+          done
+          echo "zmena=true" >> "$GITHUB_OUTPUT"
+
+  # Opravený záznam se musí objevit na webu. Push z workflow žádný další
+  # workflow nespustí, proto se nasazení volá přímo.
+  nasadit:
+    needs: opravit
+    if: needs.opravit.outputs.zmena == 'true'
+    uses: ./.github/workflows/nasazeni.yml
+    secrets: inherit

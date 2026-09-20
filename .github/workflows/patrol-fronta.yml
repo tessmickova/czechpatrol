@@ -1,0 +1,89 @@
+name: Fronta Patrolovi
+
+# Co to dělá
+# ----------
+# Srovná Patrolovi datové soubory s main a zapíše mu zadání z čekající fronty.
+#
+# Proč to vzniklo
+# ---------------
+# Frontu posuzoval denní audit modelem přes API. 20. 9. 2026 došel kredit
+# a placené volání se vyplo — tím se ale fronta přestala hýbat úplně.
+# Posuzovat umí i Patrol a neúčtuje se; chybělo jediné: říct mu, co má vzít.
+#
+# Druhá věc, kterou to řeší: na větev patrol/overovani se z main nikdy nic
+# nepřenášelo. Patrol tak pracoval nad frontou v podobě, v jaké byla naposledy
+# ručně slitá — 20. 9. se lišilo šestnáct datových souborů. Práce nad starými
+# daty není poloviční práce, je to práce k zahození.
+#
+# Na main se odsud nikdy nezapisuje. Opačný směr (jeho návrhy do main) obstarává
+# běh „Převzít práci od Patrola".
+
+on:
+  schedule:
+    # Po dvou hodinách. Skript sám nepřidá zadání, dokud předchozí čeká,
+    # takže častější běh jen dřív zaznamená, že je fronta prázdná.
+    - cron: "25 */2 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  # Společná skupina s ručním zadáním — dva zápisy do téhož souboru
+  # by si přepsaly výsledek.
+  group: pro-patrola
+  cancel-in-progress: false
+
+jobs:
+  predat:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          ref: patrol/overovani
+          fetch-depth: 0
+
+      - uses: actions/setup-node@v7
+        with:
+          node-version: "24"
+
+      # Sloučením, ne kopírováním souborů.
+      #
+      # První pokus bral z main jen data/ — a spadl na tom, že skript, který
+      # zadání sestavuje, na téhle větvi ještě nebyl. Sloučení srovná obojí
+      # naráz a zachová, co žije jen tady: PATROL.md a frontu zadání.
+      #
+      # `-X theirs` znamená, že při rozporu vyhrává main. Je to správně:
+      # Patrolovy výsledky se z téhle větve odvážejí do main hned po každém
+      # jeho pushi, takže main je novější verze téhož.
+      #
+      # Balíčky se neinstalují: skript stojí jen na tom, co umí Node sám.
+      - name: Srovnat větev s main
+        run: |
+          set -u
+          git fetch origin main
+          git config user.name "fronta"
+          git config user.email "fronta@users.noreply.github.com"
+          git merge --no-edit -X theirs origin/main
+
+      - name: Sestavit zadání z fronty
+        run: node nastroje/zadani-pro-patrola.mjs
+
+      - name: Odeslat na větev
+        run: |
+          set -u
+          if [ -n "$(git status --porcelain data/)" ]; then
+            git add data/
+            git commit -m "Zadání pro Patrola $(date -u +'%Y-%m-%d %H:%M UTC')"
+          fi
+          # Push i tehdy, když se zadání nepřidalo: samotné sloučení s main
+          # je změna, kvůli které tenhle běh existuje.
+          if git diff --quiet HEAD origin/patrol/overovani; then
+            echo "Patrol má data i zadání aktuální."
+            exit 0
+          fi
+          for i in 1 2 3 4; do
+            git push origin HEAD:patrol/overovani && break
+            sleep $((2**i))
+            git pull --rebase origin patrol/overovani
+          done

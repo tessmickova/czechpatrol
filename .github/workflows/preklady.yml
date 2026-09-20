@@ -46,19 +46,12 @@ jobs:
       - name: Vytěžit věty z kódu
         run: node nastroje/vytez-preklady.mjs --zapis
 
+      # Strojový překlad je vypnutý: klíč k modelu se sem nepředává, protože
+      # kredit došel a projekt na placené volání nemá. Nepřeložená věta se
+      # zobrazí česky — web tím nespadne, jen v cizojazyčné verzi zůstane
+      # kus češtiny. To je přijatelné; tichý výdaj by nebyl.
       - name: Doplnit chybějící překlady
-        env:
-          # Stačí jeden. OPENAI_API_KEY má přednost; ANTHROPIC_API_KEY je druhá cesta.
-          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
-          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
-          OPENAI_MODEL: ${{ vars.OPENAI_MODEL }}
-          ANTHROPIC_MODEL: ${{ vars.ANTHROPIC_MODEL }}
-        run: |
-          if [ -z "$OPENAI_API_KEY" ] && [ -z "$ANTHROPIC_API_KEY" ]; then
-            echo "::warning::Chybí OPENAI_API_KEY i ANTHROPIC_API_KEY — nepřeložené věty zůstanou česky."
-            exit 0
-          fi
-          npm run preloz
+        run: echo "::warning::Strojový překlad je vypnutý — nepřeložené věty zůstanou česky."
 
       # Neúplný překlad nesmí shodit build: chybějící věta se zobrazí česky.
       - name: Kontroly

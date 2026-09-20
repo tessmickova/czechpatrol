@@ -1,0 +1,82 @@
+name: Zadání pro Patrola
+
+# Co to dělá
+# ----------
+# Zapíše ruční zadání do data/fronta/pro-patrola.json na větvi patrol/overovani.
+#
+# Proč takhle: Patrol běží na cizím serveru za firewallem a nedá se mu zavolat.
+# Sám se každých pár minut dívá na svou větev — takže jediný způsob, jak mu
+# něco zadat, je na tu větev zapsat. Stránka Správa sem pošle pokyn, zápis
+# udělá tenhle běh, aby měl commit a autora.
+#
+# Na main se odsud nikdy nic nezapisuje.
+
+on:
+  workflow_dispatch:
+    inputs:
+      zadani:
+        description: "Co má Patrol ověřit"
+        required: true
+      zadal:
+        description: "Zkrácený identifikátor zadavatele"
+        required: false
+        default: "sprava"
+
+permissions:
+  contents: write
+
+concurrency:
+  # Dvě zadání naráz by si přepsala soubor.
+  group: pro-patrola
+  cancel-in-progress: false
+
+jobs:
+  zapsat:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          ref: patrol/overovani
+
+      # Vstupy jdou přes proměnné prostředí, ne do textu příkazu — vložené
+      # přímo by z nich šlo vypsat cokoli dalšího a spustit to na běžci.
+      - name: Zapsat zadání
+        env:
+          ZADANI: ${{ inputs.zadani }}
+          ZADAL: ${{ inputs.zadal }}
+        run: |
+          node --input-type=module -e '
+            import fs from "node:fs";
+            const cesta = "data/fronta/pro-patrola.json";
+            const zadani = (process.env.ZADANI ?? "").trim().slice(0, 2000);
+            if (zadani.length < 10) { console.error("Prázdné zadání."); process.exit(1); }
+            fs.mkdirSync("data/fronta", { recursive: true });
+            let fronta = [];
+            try { fronta = JSON.parse(fs.readFileSync(cesta, "utf-8")); } catch {}
+            if (!Array.isArray(fronta)) fronta = [];
+            fronta.push({
+              id: `z-${Date.now().toString(36)}`,
+              zadano: new Date().toISOString(),
+              zadal: (process.env.ZADAL ?? "sprava").slice(0, 16),
+              stav: "ceka",
+              zadani,
+            });
+            fs.writeFileSync(cesta, `${JSON.stringify(fronta, null, 2)}\n`);
+            console.log(`Zadání zapsáno, ve frontě je jich ${fronta.length}.`);
+          '
+
+      - name: Odeslat na větev
+        run: |
+          if [ -z "$(git status --porcelain data/fronta/pro-patrola.json)" ]; then
+            echo "Nic se nezměnilo."
+            exit 0
+          fi
+          git config user.name "sprava"
+          git config user.email "sprava@users.noreply.github.com"
+          git add data/fronta/pro-patrola.json
+          git commit -m "Zadání pro Patrola"
+          for i in 1 2 3 4; do
+            git push origin HEAD:patrol/overovani && break
+            sleep $((2**i))
+            git pull --rebase origin patrol/overovani
+          done

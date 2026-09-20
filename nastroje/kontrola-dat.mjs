@@ -136,7 +136,8 @@ for (const k of kandidati) {
   if (!/^https?:\/\//.test(k.zdroj?.url ?? "")) chyby.push(`kandidát ${k.id}: neplatná adresa zdroje`);
   if (!platneDatum(k.zachyceno)) chyby.push(`kandidát ${k.id}: neplatné datum zachycení`);
   if (adresyZaznamu.has(k.zdroj?.url)) varovani.push(`kandidát ${k.id}: stejná adresa jako zveřejněný záznam — sběr ho příště odloží`);
-  if (k.stav !== "ceka") chyby.push(`kandidát ${k.id}: neznámý stav ${k.stav}`);
+  if (k.stav !== "ceka" && k.stav !== "vyrizen") chyby.push(`kandidát ${k.id}: neznámý stav ${k.stav}`);
+  if (k.stav === "vyrizen" && !k.vyrizeni?.duvod) chyby.push(`kandidát ${k.id}: vyřízený bez důvodu`);
 }
 
 // 2c. svět: každé tvrzení odkazuje na existující zdroj, postoje mají správnou délku

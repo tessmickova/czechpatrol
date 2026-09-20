@@ -140,6 +140,18 @@ export interface Incident {
   /** Prošlo lidskou kontrolou. Bez toho se na produkci nezobrazuje. */
   lidskyOvereno: boolean;
   /**
+   * Jak záznam prošel kontrolou, než se zveřejnil.
+   *
+   * `lidske` — přečetl a schválil člověk.
+   * `automaticke` — zveřejnilo se samo, protože stojí na dvou nezávislých
+   *   zdrojích a aspoň jeden z nich je úřední. Nikdo to nečetl.
+   *
+   * Musí to být u záznamu VIDĚT. Web dlouho sliboval, že všechno na něm
+   * prošlo člověkem; jakmile to přestane platit, je jediná poctivá cesta
+   * napsat u každého záznamu, jak to u něj je.
+   */
+  overeni?: "lidske" | "automaticke";
+  /**
    * Záznam přenesený z dřívějšího monitoringu. Odkaz na primární zdroj u něj
    * zatím není doplněný — web to musí přiznat, ne to zamlčet.
    */
@@ -414,7 +426,26 @@ export interface Kandidat {
    * neověřený, do počtů nevstupuje a mimořádnou výstrahu nezapíná.
    */
   naliehave?: { druh: "mobilizace-rusko" | "krizove-vysilani"; proc: string } | null;
-  stav: "ceka";
+  /**
+   * Kde kandidát je.
+   *
+   * `ceka` — nikdo ho ještě neposoudil.
+   * `vyrizen` — posouzení proběhlo a dál se o něm nerozhoduje.
+   *
+   * Proč to přibylo: fronta měla 300 položek, z nichž 57 už audit posoudil
+   * a přesto v ní pořád stály. Zachycený článek NENÍ událost — je to jeden
+   * doklad. Jakmile se ví, ke které události patří (nebo že k žádné),
+   * nemá se tvářit, že na něco čeká.
+   */
+  stav: "ceka" | "vyrizen";
+  /** Proč je vyřízený a kam se to propsalo. U čekajících chybí. */
+  vyrizeni?: {
+    kdy: string;
+    duvod: "neudalost" | "pokracovani" | "navrh" | "jeden-zdroj" | "zdroj-navrhu";
+    /** Slug záznamu nebo id návrhu, ke kterému kandidát patří. */
+    patriK?: string | null;
+    poznamka?: string | null;
+  } | null;
 }
 
 /* ---------- svět: cíle mocností ---------- */

@@ -170,7 +170,19 @@ export const JE_UKAZKA = REZIM === "ukazka";
  * Adresa API (účty, upozornění, IZS). Prázdná adresa = účty vypnuté;
  * web pak ukáže, že se připravují, a nic nepředstírá.
  */
-export const API_URL = (process.env.NEXT_PUBLIC_API_URL ?? "").replace(/\/$/, "");
+export const API_URL = ((adresa: string) => {
+  const a = adresa.trim().replace(/\/$/, "");
+  if (a === "") return "";
+  /*
+    Bez schématu to není adresa, ale relativní cesta.
+
+    „czechpatrol-api.neco.workers.dev" prohlížeč nepošle na worker — připojí
+    si to k adrese webu a POST skončí na statickém hostingu, který odpoví 405.
+    Vypadá to jako rozbité přihlašování, přitom je to chybějící https://.
+    Kdo adresu opisuje z Cloudflare, schéma tam často nemá.
+  */
+  return /^https?:\/\//.test(a) ? a : `https://${a}`;
+})(process.env.NEXT_PUBLIC_API_URL ?? "");
 export const UCTY_ZAPNUTE = API_URL !== "";
 
 /**

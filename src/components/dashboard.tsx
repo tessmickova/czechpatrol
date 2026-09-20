@@ -272,13 +272,13 @@ function Pruh({ nazev, n, max, barva, odkaz }: { nazev: React.ReactNode; n: numb
 }
 
 export function Dashboard({
-  stav, pravni, natoPolozky, provozPolozky, overeno, vse, neprosle, kandidati, tydny, watchlist, cr, crHistoricky, crPocet, hybridni, obcane, ted,
+  stav, pravni, natoPolozky, provozPolozky, overeno, vse, neprosle, kandidati, nepotvrzene = [], tydny, watchlist, cr, crHistoricky, crPocet, hybridni, obcane, ted,
   tlakEvropa, tlakCesko, veta, kampane, nazvyZemi, overovaneAktivni = [], overovaneUzavrene = [],
 }: {
   stav: CelkovyStav; pravni: PravniPolozka[]; natoPolozky: NatoPolozka[]; provozPolozky: ProvozniPolozka[];
   /** Čas sestavení. Klient z něj vychází, aby se první vykreslení shodlo. */
   ted: number;
-  overeno: string | null; vse: Zaznam[]; neprosle: Nepotvrzene[]; kandidati: Kandidat[]; tydny: TydenniHodnoceni[]; watchlist: Watchlist;
+  overeno: string | null; vse: Zaznam[]; neprosle: Nepotvrzene[]; kandidati: Kandidat[]; nepotvrzene?: Zaznam[]; tydny: TydenniHodnoceni[]; watchlist: Watchlist;
   cr: Uroven | null; crHistoricky: Uroven | null; crPocet: { pripadu: number; kampani: number };
   hybridni: Uroven | null; obcane: { uroven: Uroven; popis: string; neovereno: number };
   tlakEvropa: HybridniTlak; tlakCesko: HybridniTlak; veta: HlavniVeta;
@@ -630,9 +630,9 @@ export function Dashboard({
           akce={<Tlacitko kam="/udalosti/" varianta="obrys" velikost="s" ikonaVpravo="nahoru" trida="[&>svg:last-child]:rotate-90">{t("samostatná stránka")}</Tlacitko>}
         />
       </div>
-      <div className="mb-5"><Pocitadla vse={vse} neprosle={neprosle} kandidati={kandidati} /></div>
+      <div className="mb-5"><Pocitadla vse={vse} neprosle={neprosle} kandidati={kandidati} nepotvrzenych={nepotvrzene.length} /></div>
       <section id="zaznamy" aria-label={t("Všechny záznamy")} className="scroll-mt-[84px] rounded-[22px] border border-linka2 bg-plocha p-4 sm:p-6">
-        <UdalostiKlient zaznamy={vse} neprosle={neprosle} kandidati={kandidati} />
+        <UdalostiKlient zaznamy={vse} neprosle={neprosle} kandidati={kandidati} nepotvrzene={nepotvrzene} />
       </section>
 
       {/* 3 — čísla, kde, kdo */}

@@ -102,7 +102,26 @@ export async function api<T>(cesta: string, init: RequestInit & { telo?: unknown
   });
   if (odpoved.status === 401) ulozToken(null);
   const text = await odpoved.text();
-  const data = text ? (JSON.parse(text) as { chyba?: string } & T) : ({} as T);
+
+  /*
+    Odpověď, která není JSON, znamená skoro vždycky jedinou věc: API_URL
+    nemíří na Worker, ale na statický web. Ten na POST odpovídá 405 a na
+    neznámou cestu vrací HTML. Worker se takhle chovat neumí — neznámou
+    cestu hlásí jako 404 v JSONu.
+
+    Bez tohohle rozlišení dostane člověk holé „Chyba 405", což nevypadá jako
+    špatná adresa, ale jako rozbité přihlašování, a hledá se to hodinu.
+  */
+  let data: { chyba?: string } & T;
+  try {
+    data = text ? (JSON.parse(text) as { chyba?: string } & T) : ({} as { chyba?: string } & T);
+  } catch {
+    throw new ChybaApi(
+      odpoved.status,
+      `API neodpovídá jako API (stav ${odpoved.status}). Zkontrolujte adresu ${API_URL} — má mířit na worker, ne na web. Ověření: ${API_URL}/zdravi má vrátit {"ok":true}.`,
+    );
+  }
+
   if (!odpoved.ok) throw new ChybaApi(odpoved.status, (data as { chyba?: string }).chyba ?? `Chyba ${odpoved.status}`);
   return data;
 }

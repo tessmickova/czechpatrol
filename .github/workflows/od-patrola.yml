@@ -1,0 +1,116 @@
+name: Převzít práci od Patrola
+
+# Co to dělá
+# ----------
+# Když externí ověřovatel pushne na svou větev, přenese odsud jeho NÁVRHY
+# do main, aby se objevily ve Správě. Nic tím nezveřejňuje: návrhy mají
+# lidskyOvereno: false a na web je pustí až člověk.
+#
+# Proč automaticky: mezi „Patrol něco našel" a „je to vidět ve Správě" nemá
+# stát nikdo, kdo by musel něco spouštět. Lidská kontrola je až u schvalování,
+# ne u přenosu souboru.
+#
+# Co se NEPŘENÁŠÍ: cokoli mimo data/. Patrol má do repozitáře zápis a kód se
+# přes tenhle běh dovnitř nedostane — na změnu kódu se otevírá pull request
+# a čte ho člověk. Bez tohohle omezení by šlo automatickým převzetím propašovat
+# do main i změnu testů, která hlídá lidské ověření.
+
+on:
+  push:
+    branches: [patrol/overovani]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pull-requests: write
+
+concurrency:
+  group: od-patrola
+  cancel-in-progress: false
+
+jobs:
+  prevzit:
+    runs-on: ubuntu-latest
+    env:
+      TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+      SPRAVCE_CHAT: ${{ vars.SPRAVCE_CHAT }}
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          ref: main
+          fetch-depth: 0
+
+      - uses: actions/setup-node@v7
+        with:
+          node-version: "24"
+          cache: npm
+
+      - name: Balíčky z mezipaměti
+        id: moduly
+        uses: actions/cache@v6
+        with:
+          path: node_modules
+          key: moduly-${{ runner.os }}-node24-${{ hashFiles('package-lock.json') }}
+
+      - if: steps.moduly.outputs.cache-hit != 'true'
+        run: npm ci --no-audit --fund=false
+
+      - name: Vzít jen data
+        id: vzit
+        run: |
+          set -u
+          git fetch origin patrol/overovani
+          # Jen datové soubory. Všechno ostatní z té větve se ignoruje.
+          git checkout origin/patrol/overovani -- data/ || true
+          # PATROL.md je pracovní příkaz pro ověřovatele, na main nepatří.
+          git reset -q HEAD -- PATROL.md 2>/dev/null || true
+          git checkout -q -- PATROL.md 2>/dev/null || true
+          rm -f PATROL.md
+          if [ -z "$(git status --porcelain data/)" ]; then
+            echo "zmena=false" >> "$GITHUB_OUTPUT"
+            echo "Žádná nová data."
+          else
+            echo "zmena=true" >> "$GITHUB_OUTPUT"
+            git status --porcelain data/
+          fi
+
+      # Data z cizí větve projdou týmiž kontrolami jako cokoli jiného.
+      # Kdyby návrh porušoval pravidla (jeden zdroj, chybějící lidské
+      # ověření, zdroj starší než událost), nesmí se do main dostat.
+      - name: Kontrola dat a testy
+        if: steps.vzit.outputs.zmena == 'true'
+        run: |
+          npm run kontrola:data
+          npm test
+
+      - name: Přenést do main
+        if: steps.vzit.outputs.zmena == 'true'
+        run: |
+          git config user.name "od-patrola"
+          git config user.email "od-patrola@users.noreply.github.com"
+          git add data/
+          git commit -m "Návrhy od externího ověřovatele"
+          for i in 1 2 3 4; do
+            git push && break
+            sleep $((2**i))
+            git pull --rebase
+          done
+
+      # Změny mimo data/ se nepřevádějí automaticky — otevře se na ně pull
+      # request, aby si je někdo přečetl.
+      - name: Upozornit na změny kódu
+        run: |
+          set -u
+          ROZDIL=$(git diff --name-only origin/main origin/patrol/overovani -- . ':(exclude)data/' ':(exclude)PATROL.md' || true)
+          if [ -z "$ROZDIL" ]; then
+            echo "Mimo data/ se na větvi nic neliší."
+            exit 0
+          fi
+          echo "Na větvi jsou změny mimo data/:"
+          echo "$ROZDIL"
+          if [ -n "${TELEGRAM_BOT_TOKEN:-}" ] && [ -n "${SPRAVCE_CHAT:-}" ]; then
+            POCET=$(echo "$ROZDIL" | wc -l | tr -d ' ')
+            TEXT="<b>Patrol změnil i kód</b>%0A%0ANa větvi patrol/overovani se mimo data/ liší ${POCET} souborů. Do main se automaticky nepřenesly — přečtěte si je a rozhodněte.%0A%0AActions → Převzít práci od Patrola"
+            curl -sS -X POST "https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage" \
+              -d "chat_id=${SPRAVCE_CHAT}" -d "parse_mode=HTML" -d "text=${TEXT}" -o /dev/null
+          fi

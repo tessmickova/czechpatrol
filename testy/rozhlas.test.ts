@@ -2,7 +2,7 @@
 import fs from "node:fs";
 import path from "node:path";
 import { describe, expect, it } from "vitest";
-import { klicovaVeta, legendaTecek, pocetZdroju, pruhTecek, PUVODCI, radekPokryti, jeArchivni, radekData, rozdelZpravu, sestavPalivo, sestavSouhrn, sestavPrehledZachycenych, sestavSignal, sestavTest, sestavVystrahu, sestavZdroje, sestavZmenuStavu, sestavZpravu, vyberDoPrehledu, vyberNove, vyberPalivo, vyberSignaly, vyberVystrahu, vyberZmenyStavu, zahlavi } from "../nastroje/rozhlas.mjs";
+import { klicovaVeta, legendaTecek, pocetZdroju, pruhTecek, PUVODCI, radekPokryti, jeArchivni, radekData, rozdelZpravu, sestavPalivo, sestavSouhrn, sestavPrehledZachycenych, sestavSignal, sestavTest, sestavVystrahu, sestavZdroje, sestavZmenuStavu, sestavZpravu, vyberDoPrehledu, vyberNove, vyberPalivo, vyberSignaly, vyberVystrahu, vyberZmenyStavu, zahlavi, sestavVaznyNavrh, vyberVazneNavrhy } from "../nastroje/rozhlas.mjs";
 import { UROVNE, zDeseti } from "../src/lib/skala";
 import { PUVODCI as PUVODCI_WEB } from "../src/lib/kategorie";
 import type { Uroven } from "../src/lib/typy";
@@ -15,11 +15,10 @@ const zaznam = (n: Record<string, unknown>) => ({
 });
 
 describe("rozhlas", () => {
-  it("zpráva má titulek, závažnost i jistotu zvlášť, odkaz na celý záznam a únik HTML", () => {
+  it("zpráva má titulek, závažnost, odkaz na celý záznam a únik HTML", () => {
     const z = sestavZpravu(zaznam({}));
     // Nadpis nese datum v závorce; řádek „země · případ · datum" pod ním zanikl.
     expect(z).toContain("🟠 Závažnost: 7 z 10 · vysoká\n<b>Titulek &lt;b&gt; (1. 9. 2026)</b>");
-    expect(z).toContain("<b>Jistota, že se událost stala:</b> vysoká");
     expect(z).toContain("<b>Původce: zatím neurčen.</b>");
     expect(z).toContain("https://czechpatrol.pages.dev/incident/x/");
   });
@@ -108,9 +107,11 @@ describe("rozhlas", () => {
     expect(radky[2]).toBe("");
     expect(z).toContain("První fakt.");
     expect(z).toContain("<b>Nepotvrzeno:</b> Nevíme kdo.");
-    // Patička dělá ze zprávy citovatelný dokument.
+    // Patička říká, kdo zprávu vydal a kdy. Vnitřní označení záznamu v ní
+    // není — čtenáři nic neříká a odkaz na záznam je o řádek výš.
     expect(z).toContain("Všechna fakta, hodnocení a všechny zdroje: https://czechpatrol.pages.dev/incident/x/");
-    expect(z.trimEnd().endsWith("CzechPatrol · záznam x · aktualizováno 4. 9. 2026")).toBe(true);
+    expect(z.trimEnd().endsWith("CzechPatrol · aktualizováno 4. 9. 2026")).toBe(true);
+    expect(z).not.toContain("záznam x");
   });
   it("souhrn: pruh a legenda nahoře, nejdřív opatření a české záznamy", () => {
     const polozky = [
@@ -590,14 +591,92 @@ describe("původce se nepřipisuje dřív, než je doložený", () => {
     expect(z).toContain("<b>Původce:</b> Rusko — potvrzeno úředním závěrem");
   });
 
-  it("jistota se jmenuje tím, čeho se týká", () => {
-    // „Jistota: vysoká" samo o sobě nikomu neřekne, čeho se ta jistota týká.
+  it("jistota se do kanálu nepíše vůbec", () => {
+    /*
+      Do kanálu jde jen to, co prošlo lidským ověřením. Věta „střední jistota,
+      že se to stalo" u takové zprávy čtenáře mate — zní, jako bychom si
+      nebyli jistí, jestli publikujeme skutečnost. Na webu u záznamu jistota
+      zůstává, tam ji lze číst vedle fakt a zdrojů.
+
+      Co platit nepřestává: jistota a původce se nesmějí slít do jedné věty.
+      Proto se hlídá, že o původci se pořád mluví odděleně a opatrně.
+    */
     const z = sestavZpravu(zaznam("vysetrovana"));
-    expect(z).toContain("<b>Jistota, že se událost stala:</b> vysoká");
+    expect(z).not.toContain("Jistota");
+    expect(z).toContain("<b>Původce: zatím neurčen.</b>");
   });
 
   it("země se popisuje jednotně, i když chybí ve slovníku tvarů", () => {
     const z = sestavZpravu({ ...zaznam("vysetrovana"), kodZeme: "ZZ", zeme: "Vymyšlensko" });
     expect(z).toContain("Událost nastala v zemi Vymyšlensko, nikoli v České republice.");
+  });
+});
+
+/*
+  Vážné případy doložené i úředním zdrojem.
+
+  Jediná cesta, kterou se do kanálu dostane něco neschváleného kromě
+  naléhavých signálů. U takhle doložené zprávy je čekání na schválení dražší
+  než ta nejistota — schválením se obvykle nezmění, jen se zdrží.
+
+  Podmínky jsou proto úzké a tenhle test je hlídá. Kdyby se rozvolnily,
+  začalo by do kanálu chodit neschválené běžné zpravodajství a z projektu by
+  byl agregátor titulků.
+*/
+describe("vážné případy z úředního zdroje", () => {
+  const ted = new Date("2026-09-19T12:00:00Z").getTime();
+  const navrh = (zmeny: Record<string, unknown>) => ({
+    id: "n1",
+    kam: "zaznam",
+    zavaznost: "O2",
+    titulek: "Případ",
+    datumUdalosti: new Date(ted - 3_600_000).toISOString(),
+    zdroje: [
+      { nazev: "Policie ČR", url: "https://policie.cz/a", primarni: true },
+      { nazev: "ČTK", url: "https://ctk.cz/b", primarni: false },
+    ],
+    ...zmeny,
+  });
+
+  it("projde jen vážný případ se dvěma zdroji, z nichž jeden je úřední", () => {
+    expect(vyberVazneNavrhy([navrh({})], { signaly: {} }, { ted })).toHaveLength(1);
+  });
+
+  it("mírnější závažnost neprojde", () => {
+    for (const z of ["G1", "Y3"]) {
+      expect(vyberVazneNavrhy([navrh({ zavaznost: z })], { signaly: {} }, { ted }), z).toHaveLength(0);
+    }
+  });
+
+  it("bez úředního zdroje neprojde ani vážný případ", () => {
+    const bezUradu = navrh({
+      zdroje: [
+        { nazev: "Médium A", url: "https://a", primarni: false },
+        { nazev: "Médium B", url: "https://b", primarni: false },
+      ],
+    });
+    expect(vyberVazneNavrhy([bezUradu], { signaly: {} }, { ted })).toHaveLength(0);
+  });
+
+  it("jediný zdroj neprojde, i když je úřední", () => {
+    const jeden = navrh({ zdroje: [{ nazev: "Policie ČR", url: "https://a", primarni: true }] });
+    expect(vyberVazneNavrhy([jeden], { signaly: {} }, { ted })).toHaveLength(0);
+  });
+
+  it("stará událost neprojde — varování se nedává zpětně", () => {
+    const stara = navrh({ datumUdalosti: new Date(ted - 5 * 86_400_000).toISOString() });
+    expect(vyberVazneNavrhy([stara], { signaly: {} }, { ted })).toHaveLength(0);
+  });
+
+  it("co už odešlo, neodejde podruhé", () => {
+    const stav = { signaly: { n1: { kdy: "kdykoli" } } };
+    expect(vyberVazneNavrhy([navrh({})], stav, { ted })).toHaveLength(0);
+  });
+
+  it("zpráva říká, že to ještě neprošlo člověkem", () => {
+    /* Bez téhle věty by se dala číst jako zveřejněný záznam. */
+    const z = sestavVaznyNavrh(navrh({}));
+    expect(z).toContain("NEOVĚŘENO");
+    expect(z).toContain("Záznam ještě neprošel lidskou kontrolou.");
   });
 });

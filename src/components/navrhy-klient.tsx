@@ -2,6 +2,7 @@
 
 import { useCallback, useEffect, useState } from "react";
 import { datumCas } from "@/lib/format";
+import { kamOdejde } from "@/lib/kam-odejde";
 import { api } from "@/lib/ucet";
 import { Hlaska, POLE, TLACITKO_AKCENT, TLACITKO_TICHE } from "./formulare";
 import { Karta } from "./zaklad";
@@ -33,7 +34,30 @@ interface Navrh {
   fakta: string[];
   neznameho: string[];
   zdroje: { nazev: string | null; url: string | null }[];
+  druh: string | null;
+  puvodce: string | null;
+  atribuce: string | null;
+  vyznam: string | null;
+  archivniZaznam: boolean;
+  preverit: { kdy: string; duvod: string | null } | null;
 }
+
+const POLE_UPRAV: { klic: string; popis: string; zastupny?: string; volby?: string[]; viceradkove?: boolean }[] = [
+  { klic: "titulek", popis: "Titulek — co se stalo a kde" },
+  { klic: "kratkyTitulek", popis: "Krátký titulek (do výpisů)" },
+  { klic: "zavaznost", popis: "Závažnost", volby: ["G1", "G2", "G3", "Y1", "Y2", "Y3", "O1", "O2", "O3", "R1", "R2", "R3"] },
+  { klic: "jistota", popis: "Jistota", volby: ["nizka", "stredni", "vysoka", "potvrzeno"] },
+  { klic: "druh", popis: "Druh", volby: ["pripad", "opatreni", "reakce"] },
+  { klic: "atribuce", popis: "Atribuce", volby: ["neznama", "podezreni", "urednizaver"] },
+  { klic: "puvodce", popis: "Původce — jen s úředním závěrem", zastupny: "nechte prázdné, dokud to není potvrzené" },
+  { klic: "vyznam", popis: "Co z toho plyne pro čtenáře v Česku" },
+  /*
+    Povinné ke schválení. Když model nic nedoloženého neoznačí, schválení se
+    zastaví — čtenář má vedle fakt vidět i hranici toho, co víme.
+  */
+  { klic: "neznameho", popis: "Co doložené NENÍ — povinné, každý řádek zvlášť", viceradkove: true },
+  { klic: "fakta", popis: "Fakta — každý řádek zvlášť", viceradkove: true },
+];
 
 export function NavrhyKeSchvaleni() {
   const [navrhy, setNavrhy] = useState<Navrh[]>([]);
@@ -41,6 +65,9 @@ export function NavrhyKeSchvaleni() {
   const [nacita, setNacita] = useState(true);
   const [odeslane, setOdeslane] = useState<Record<string, string>>({});
   const [duvody, setDuvody] = useState<Record<string, string>>({});
+  /* Rozepsané úpravy. Drží se mimo návrh, aby nezmizely při obnovení fronty. */
+  const [upravy, setUpravy] = useState<Record<string, Record<string, string>>>({});
+  const [upravuje, setUpravuje] = useState<string | null>(null);
 
   const nacti = useCallback(async () => {
     setNacita(true);
@@ -59,13 +86,21 @@ export function NavrhyKeSchvaleni() {
     nacti();
   }, [nacti]);
 
-  async function rozhodni(id: string, akce: "schval" | "zamitni") {
+  async function rozhodni(id: string, akce: "schval" | "znovu" | "zamitni") {
     try {
-      await api(`/sprava/navrhy/${id}/rozhodnout`, { method: "POST", telo: { akce, duvod: duvody[id] ?? "" } });
+      const zmeny = akce === "schval" ? (upravy[id] ?? {}) : {};
+      await api(`/sprava/navrhy/${id}/rozhodnout`, {
+        method: "POST",
+        telo: { akce, duvod: duvody[id] ?? "", upravy: zmeny },
+      });
       setOdeslane((p) => ({ ...p, [id]: akce }));
     } catch (e) {
       setChyba(e instanceof Error ? e.message : "Rozhodnutí se nepodařilo odeslat.");
     }
+  }
+
+  function zmen(id: string, klic: string, hodnota: string) {
+    setUpravy((p) => ({ ...p, [id]: { ...(p[id] ?? {}), [klic]: hodnota } }));
   }
 
   const ceka = navrhy.filter((n) => n.id && !odeslane[n.id]);
@@ -160,24 +195,103 @@ export function NavrhyKeSchvaleni() {
                 </ul>
               </div>
 
+              {/*
+                Co se stane po schválení. Bez téhle věty se kliká naslepo —
+                a u zprávy, která jde odběratelům do telefonu, je to málo.
+              */}
+              <p className="mt-3 border-t border-linka2 pt-3 text-male leading-snug text-tlum">
+                {kamOdejde(n).vysvetleni}
+              </p>
+
+              {n.preverit && (
+                <p className="mt-2 text-male leading-snug text-inkoust">
+                  Vráceno k doplnění {datumCas(n.preverit.kdy)}
+                  {n.preverit.duvod ? `: ${n.preverit.duvod}` : "."}
+                </p>
+              )}
+
+              {upravuje === id && (
+                <div className="mt-3 border-t border-linka2 pt-3">
+                  <div className="stitek mb-2">Úprava před zveřejněním</div>
+                  {/*
+                    Zdroje ani historie se tu needitují. O ověření rozhoduje
+                    schválení, ne formulář, a zdroje se nemají přepisovat
+                    ručně — celá cena projektu je v tom, že odkazují na doklad.
+                  */}
+                  <div className="grid gap-2">
+                    {POLE_UPRAV.map((f) => (
+                      <label key={f.klic} className="block">
+                        <span className="stitek mb-1 block">{f.popis}</span>
+                        {f.viceradkove ? (
+                          <textarea
+                            className={`${POLE} min-h-[72px] w-full`}
+                            value={
+                              upravy[id]?.[f.klic] ??
+                              ((n[f.klic as keyof Navrh] as string[] | undefined) ?? []).join("\n")
+                            }
+                            placeholder={f.zastupny}
+                            onChange={(e) => zmen(id, f.klic, e.target.value)}
+                          />
+                        ) : f.volby ? (
+                          <select
+                            className={`${POLE} w-full`}
+                            value={upravy[id]?.[f.klic] ?? (n[f.klic as keyof Navrh] as string) ?? ""}
+                            onChange={(e) => zmen(id, f.klic, e.target.value)}
+                          >
+                            {f.volby.map((v) => (
+                              <option key={v} value={v}>{v || "—"}</option>
+                            ))}
+                          </select>
+                        ) : (
+                          <input
+                            className={`${POLE} w-full`}
+                            value={upravy[id]?.[f.klic] ?? (n[f.klic as keyof Navrh] as string) ?? ""}
+                            placeholder={f.zastupny}
+                            onChange={(e) => zmen(id, f.klic, e.target.value)}
+                          />
+                        )}
+                      </label>
+                    ))}
+                  </div>
+                  <p className="mt-2 text-mikro leading-snug text-tlum2">
+                    Změny se zapíšou až při schválení a zůstane po nich stopa v historii
+                    záznamu. Původce nevyplňujte, dokud to nepotvrdil úřední závěr.
+                  </p>
+                </div>
+              )}
+
               {hotovo ? (
                 <p className="mt-3 text-male text-tlum2">
-                  {hotovo === "schval" ? "Schválení odesláno. Běží kontrola a nasazení." : "Zamítnutí odesláno."}
+                  {hotovo === "schval"
+                    ? "Schválení odesláno. Běží kontrola, rozeslání a nasazení."
+                    : hotovo === "znovu"
+                      ? "Posláno ověřovateli k doplnění. Návrh zůstává ve frontě."
+                      : "Zamítnutí odesláno."}
                 </p>
               ) : (
                 <div className="mt-3 flex flex-wrap items-center gap-2">
                   <button type="button" onClick={() => rozhodni(id, "schval")} className={TLACITKO_AKCENT}>
                     Schválit
                   </button>
-                  <input
-                    className={`${POLE} max-w-[240px]`}
-                    placeholder="Důvod zamítnutí"
-                    value={duvody[id] ?? ""}
-                    onChange={(e) => setDuvody((p) => ({ ...p, [id]: e.target.value }))}
-                  />
+                  <button
+                    type="button"
+                    onClick={() => setUpravuje((p) => (p === id ? null : id))}
+                    className={TLACITKO_TICHE}
+                  >
+                    {upravuje === id ? "Skrýt úpravy" : "Upravit"}
+                  </button>
+                  <button type="button" onClick={() => rozhodni(id, "znovu")} className={TLACITKO_TICHE}>
+                    Znovu ověřit
+                  </button>
                   <button type="button" onClick={() => rozhodni(id, "zamitni")} className={TLACITKO_TICHE}>
                     Zamítnout
                   </button>
+                  <input
+                    className={`${POLE} max-w-[260px]`}
+                    placeholder="Důvod (u vrácení i zamítnutí)"
+                    value={duvody[id] ?? ""}
+                    onChange={(e) => setDuvody((p) => ({ ...p, [id]: e.target.value }))}
+                  />
                 </div>
               )}
             </li>

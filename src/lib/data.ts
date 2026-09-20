@@ -27,6 +27,7 @@ import ostrySvet from "../../data/svet.json";
 import ostreKampane from "../../data/kampane.json";
 import ostreOverujeme from "../../data/overujeme.json";
 import ostreOdmitnute from "../../data/fronta/odmitnute.json";
+import ostreNavrhy from "../../data/navrhy.json";
 
 import ukazkoveIncidenty from "../../data/ukazka/incidenty.json";
 import ukazkovyStav from "../../data/ukazka/stav.json";
@@ -58,7 +59,8 @@ const jako = <T,>(x: unknown): T => x as T;
 
 export function incidenty(): SUkazkou<Incident>[] {
   // Na produkci se zobrazují jen záznamy, které prošly lidskou kontrolou.
-  const ostre = jako<Incident[]>(ostreIncidenty).filter((i) => i.lidskyOvereno);
+  /* Zveřejněné je to, co prošlo člověkem, nebo co je doložené dvěma zdroji včetně úředního. */
+  const ostre = jako<Incident[]>(ostreIncidenty).filter((i) => i.lidskyOvereno || i.overeni === "automaticke");
   const ukazkove = JE_UKAZKA
     ? jako<Incident[]>(ukazkoveIncidenty).map((i) => ({ ...i, ukazka: true }))
     : [];
@@ -489,8 +491,47 @@ export function odmitnute(): Odmitnuty[] {
   return ostreOdmitnute as Odmitnuty[];
 }
 
+/**
+ * Zachycené zprávy, které na něco čekají. Nejnovější první.
+ *
+ * Vyřízené se nevracejí. Zachycený článek není událost — je to jeden doklad.
+ * Jakmile se ví, ke které události patří (nebo že k žádné), nemá se dál
+ * tvářit, že čeká: patřil by do počtu „čeká na ověření" a na titulce by stál
+ * mezi novinkami, přestože o něm je rozhodnuto.
+ */
 export function kandidati(): Kandidat[] {
-  return jako<Kandidat[]>(ostriKandidati).slice().sort((a, b) => (b.publikovano ?? b.zachyceno).localeCompare(a.publikovano ?? a.zachyceno));
+  return jako<Kandidat[]>(ostriKandidati)
+    .filter((k) => k.stav !== "vyrizen")
+    .slice()
+    .sort((a, b) => (b.publikovano ?? b.zachyceno).localeCompare(a.publikovano ?? a.zachyceno));
+}
+
+/**
+ * Nepotvrzené záznamy — připravené, ale ještě neschválené člověkem.
+ *
+ * Proč jsou na webu: zpráva, která čeká na schválení, se ve světě už stala.
+ * Dokud byla vidět jen ve Správě, vypadal web během čekání jako by se nic
+ * nedělo — a to je zavádějící jinak, ale stejně jako zveřejnit neověřené
+ * tvrzení. Ukazuje se proto obojí, jen zřetelně oddělené.
+ *
+ * Co nepotvrzený záznam NENÍ: tvrzení projektu. Nevstupuje do počtů, do
+ * hodnocení situace ani do upozornění a nemá vlastní stránku — odkazuje
+ * ven na zdroje, ze kterých se o věci ví.
+ *
+ * Potvrdí se dvěma cestami: schválením ve Správě, nebo doložením druhým
+ * nezávislým zdrojem, z nichž aspoň jeden je úřední — pak se zveřejní sám
+ * a je označený jako nečtený.
+ */
+export function nepotvrzeneZaznamy(): Incident[] {
+  return jako<Incident[]>(ostreNavrhy)
+    .filter((n) => (n as Incident & { kam?: string }).kam === "zaznam" && !n.lidskyOvereno)
+    .slice()
+    .sort((a, b) => (b.datumZjisteni ?? b.datumUdalosti).localeCompare(a.datumZjisteni ?? a.datumUdalosti));
+}
+
+/** Všechny zachycené zprávy včetně vyřízených — pro přehledy a statistiku. */
+export function vsichniKandidati(): Kandidat[] {
+  return jako<Kandidat[]>(ostriKandidati);
 }
 
 /**

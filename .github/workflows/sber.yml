@@ -17,7 +17,15 @@ on:
     # Zůstává jako záchrana pro případ, že workeru vyprší token nebo vypadne
     # Cloudflare. Že sběr stojí, hlásí hlídač v api/src/hlidac.ts — ten běží
     # na Cloudflare, takže výpadek GitHubu přežije a umí o něm říct.
-    - cron: "17 */6 * * *"
+    #
+    # Po třech hodinách, ne po šesti (20. 9. 2026). Hlavní plánovač je
+    # hodinový, takže záloha po šesti hodinách znamenala, že výpadek workeru
+    # stáhne čerstvost webu šestinásobně. Hodinová záloha by ale běžela
+    # souběžně s workerem pořád a v soukromém repozitáři se každý běh účtuje
+    # z měsíčního přídělu minut — a ten už jednou došel (17. 9. v 08:03,
+    # kdy přestalo běžet všechno). Tři hodiny jsou kompromis, který se
+    # do přídělu vejde.
+    - cron: "17 */3 * * *"
   # Tudy chodí kopnutí z workeru.
   workflow_dispatch:
 
@@ -56,16 +64,15 @@ jobs:
       - if: steps.moduly.outputs.cache-hit != 'true'
         run: npm ci --no-audit --fund=false
 
+      # Bez klíče k modelu, schválně. Kredit došel 20. 9. 2026 a projekt na
+      # placené volání nemá; sběr běží podle klíčových slov a posuzování
+      # dělá externí ověřovatel Patrol, kterému se neúčtuje.
+      #
+      # Co tím sběr ztrácí: model vyřazoval nerelevantní zprávy, překládal
+      # titulky a dával druhé čtení odmítnutým. Do fronty proto chodí víc
+      # šumu — a to je viditelná cena, ne skrytá porucha.
       - name: Sběr z veřejných zdrojů
         run: npm run sber
-        env:
-          # Nepovinné, ale hodně mění. S klíčem model vyřadí nerelevantní zprávy,
-          # přeloží titulky a dá druhé čtení odmítnutým; bez něj sběr běží jen
-          # podle klíčových slov. Stačí jeden klíč — ANTHROPIC má přednost.
-          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
-          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
-          OPENAI_MODEL: ${{ vars.OPENAI_MODEL }}
-          ANTHROPIC_MODEL: ${{ vars.ANTHROPIC_MODEL }}
 
       - name: Nahrát změny dat
         id: zmena
@@ -86,6 +93,40 @@ jobs:
             git pull --rebase
           done
           echo "zmena=true" >> "$GITHUB_OUTPUT"
+
+      # ---------------------------------------------------------------
+      # Naléhavý signál musí odejít hned, ne za den.
+      #
+      # Vyhlášení mobilizace, krizové vysílání, článek 4 nebo 5 NATO,
+      # mimořádný právní stav a uzavření hranic se posílají neověřené
+      # a zřetelně označené — u takové zprávy je zpoždění horší než
+      # nejistota.
+      #
+      # Dřív odcházely až s denním souhrnem v 17:00 UTC, nebo když někdo
+      # schválil záznam. Rozhlas se totiž spouští změnou data/incidenty.json,
+      # jenže sběr mění data/kandidati.json — a navíc push z workflow žádný
+      # další workflow nespustí. Signál tak mohl čekat skoro celý den.
+      - name: Naléhavé signály do kanálu
+        if: steps.zmena.outputs.zmena == 'true'
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_KANAL: ${{ vars.TELEGRAM_KANAL || '@czechpatrol' }}
+          SPRAVCE_CHAT: ${{ vars.SPRAVCE_CHAT }}
+        run: |
+          node nastroje/rozhlas.mjs --okamzite
+
+          # Co odešlo, se musí zapsat zpátky, jinak to příště odejde znovu.
+          if [ -z "$(git status --porcelain data/fronta/rozhlaseno.json)" ]; then
+            echo "Nic nového k rozeslání."
+            exit 0
+          fi
+          git add data/fronta/rozhlaseno.json
+          git commit -m "Rozhlas: stav odeslaných zpráv"
+          for i in 1 2 3 4; do
+            git push && break
+            sleep $((2**i))
+            git pull --rebase
+          done
 
       # ---------------------------------------------------------------
       # Nasazení rovnou tady, a jen když se data opravdu změnila.

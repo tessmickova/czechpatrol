@@ -45,6 +45,13 @@ type Obdobi = (typeof OBDOBI)[number]["klic"];
 */
 const ZALOZKY = [
   { klic: "overene", nazev: "Ověřené záznamy", popis: "prošly lidskou kontrolou a počítají se" },
+  /*
+    Nepotvrzené stojí mezi ověřenými a zachycenými schválně. Je to zpracovaná
+    zpráva se zdroji — víc než holý titulek ze sběru, míň než záznam, za
+    kterým projekt stojí. Kdyby se schovala k jednomu z obou sousedů, jeden
+    by se tím nafoukl a druhý zlehčil.
+  */
+  { klic: "nepotvrzene", nazev: "Nepotvrzené", popis: "zpracované, čekají na schválení nebo úřední zdroj" },
   { klic: "cekajici", nazev: "Čeká na ověření", popis: "automatický sběr; do žádného počtu nevstupuje" },
   { klic: "neproslo", nazev: "Neprošlo ověřením", popis: "vyvráceno nebo nedoloženo" },
 ] as const;
@@ -171,10 +178,11 @@ function Cip({ aktivni, onClick, children, title }: { aktivni: boolean; onClick:
 
 type Radek =
   | { typ: "zaznam"; kdy: string; z: Zaznam }
+  | { typ: "nepotvrzeny"; kdy: string; z: Zaznam }
   | { typ: "neproslo"; kdy: string; n: Nepotvrzene }
   | { typ: "kandidat"; kdy: string; k: Kandidat };
 
-export function UdalostiKlient({ zaznamy, neprosle, kandidati = [] }: { zaznamy: Zaznam[]; neprosle: Nepotvrzene[]; kandidati?: Kandidat[] }) {
+export function UdalostiKlient({ zaznamy, neprosle, kandidati = [], nepotvrzene = [] }: { zaznamy: Zaznam[]; neprosle: Nepotvrzene[]; kandidati?: Kandidat[]; nepotvrzene?: Zaznam[] }) {
   const [f, zmen] = useFiltrVAdrese();
   const siroky = useSiroky();
   const [pokrocile, setPokrocile] = useState(false);
@@ -221,6 +229,13 @@ export function UdalostiKlient({ zaznamy, neprosle, kandidati = [] }: { zaznamy:
     const b: Radek[] = f.zalozka === "neproslo" ? neprosle
       .filter((n) => (!f.zeme || n.kodZeme === f.zeme) && vObdobi(n.datum))
       .map((n) => ({ typ: "neproslo", kdy: n.datum, n })) : [];
+    const np: Radek[] = f.zalozka === "nepotvrzene" ? nepotvrzene
+      .filter((z) => {
+        if (f.zeme && z.kodZeme !== f.zeme) return false;
+        if (f.tema && !z.kategorie.includes(f.tema)) return false;
+        return vObdobi(kdyZjisteno(z));
+      })
+      .map((z) => ({ typ: "nepotvrzeny" as const, kdy: kdyZjisteno(z), z })) : [];
     const c: Radek[] = f.zalozka === "cekajici" ? kandidati
       .filter((k) => (!f.zeme || k.kodZeme === f.zeme) && (!f.tema || k.kategorie.includes(f.tema)) && vObdobi(k.publikovano ?? k.zachyceno))
       .map((k) => ({ typ: "kandidat", kdy: k.publikovano ?? k.zachyceno, k })) : [];
@@ -230,10 +245,10 @@ export function UdalostiKlient({ zaznamy, neprosle, kandidati = [] }: { zaznamy:
       mezi zprávami o kabelech.
     */
     const naliehave = (r: Radek) => (r.typ === "kandidat" && r.k.naliehave ? 1 : 0);
-    return [...a, ...b, ...c].sort(
+    return [...a, ...np, ...b, ...c].sort(
       (x, y) => naliehave(y) - naliehave(x) || y.kdy.localeCompare(x.kdy),
     );
-  }, [zaznamy, neprosle, kandidati, f]);
+  }, [zaznamy, neprosle, kandidati, nepotvrzene, f]);
 
   useEffect(() => { setLimit(10); }, [f.zalozka, f.zeme, f.tema, f.obdobi, f.overeni, f.druhy, f.zavaznost]);
 
@@ -273,7 +288,10 @@ export function UdalostiKlient({ zaznamy, neprosle, kandidati = [] }: { zaznamy:
         {/* záložky — co se vlastně ukazuje */}
         <div role="tablist" aria-label="Co zobrazit" className="flex flex-wrap gap-1.5">
           {ZALOZKY.map((z) => {
-            const n = z.klic === "overene" ? zaznamy.length : z.klic === "cekajici" ? kandidati.length : neprosle.length;
+            const n = z.klic === "overene" ? zaznamy.length
+              : z.klic === "nepotvrzene" ? nepotvrzene.length
+              : z.klic === "cekajici" ? kandidati.length
+              : neprosle.length;
             const akt = f.zalozka === z.klic;
             return (
               <button
@@ -296,6 +314,13 @@ export function UdalostiKlient({ zaznamy, neprosle, kandidati = [] }: { zaznamy:
           })}
         </div>
 
+        {f.zalozka === "nepotvrzene" && (
+          <Sdeleni ton="akcent" ikona="otaznik" carkovane nadpis="Stalo se to, ale my za to zatím neručíme." trida="mt-3">
+            Zpracované zprávy se zdroji, které ještě neprošly člověkem. Ukazujeme je proto, aby na webu bylo vidět,
+            co se ve světě děje, i když schválení chvíli trvá. Do počtů, hodnocení situace ani upozornění nevstupují.
+            Potvrdí se schválením — nebo samy, jakmile je doloží druhý nezávislý zdroj a aspoň jeden z nich je úřední.
+          </Sdeleni>
+        )}
         {f.zalozka === "cekajici" && (
           <Sdeleni ton="akcent" ikona="otaznik" carkovane nadpis="Tohle CzechPatrol netvrdí." trida="mt-3">
             Jsou to zprávy, které hodinový sběr zachytil ve zdrojích a člověk je zatím neověřil. Do žádného počtu,
@@ -349,7 +374,7 @@ export function UdalostiKlient({ zaznamy, neprosle, kandidati = [] }: { zaznamy:
                   <Cip key={k} aktivni={f.tema === k} onClick={() => zmen({ tema: f.tema === k ? null : k })}>{KATEGORIE[k].nazev}</Cip>
                 ))}
               </div>
-              {f.zalozka === "overene" && (
+              {(f.zalozka === "overene" || f.zalozka === "nepotvrzene") && (
                 <>
                   <div className="flex flex-wrap items-center gap-1">
                     <span className="stitek mr-1 w-[62px] shrink-0">Zdroj</span>
@@ -394,7 +419,9 @@ export function UdalostiKlient({ zaznamy, neprosle, kandidati = [] }: { zaznamy:
             ? "Žádný záznam neodpovídá filtru."
             : f.zalozka === "overene"
               ? `${vysledek.length} ${sklon(vysledek.length, "ověřený záznam", "ověřené záznamy", "ověřených záznamů")} · z toho ${pripadu} ${sklon(pripadu, "případ", "případy", "případů")} · řazeno podle data zjištění`
-              : `${vysledek.length} ${sklon(vysledek.length, "položka", "položky", "položek")} · řazeno podle data`}
+              : f.zalozka === "nepotvrzene"
+                ? `${vysledek.length} ${sklon(vysledek.length, "nepotvrzený záznam", "nepotvrzené záznamy", "nepotvrzených záznamů")} · do počtů nevstupují · řazeno podle data`
+                : `${vysledek.length} ${sklon(vysledek.length, "položka", "položky", "položek")} · řazeno podle data`}
         </p>
 
         {vysledek.length ? (
@@ -410,7 +437,7 @@ export function UdalostiKlient({ zaznamy, neprosle, kandidati = [] }: { zaznamy:
                   (chyba #418) a celý strom pod tím překreslí — na úvodní
                   straně, v událostech i v jazykových variantách.
                 */
-                <Fragment key={r.typ === "zaznam" ? r.z.id : r.typ === "neproslo" ? `n-${r.n.id}` : r.k.id}>
+                <Fragment key={r.typ === "zaznam" ? r.z.id : r.typ === "nepotvrzeny" ? `np-${r.z.id}` : r.typ === "neproslo" ? `n-${r.n.id}` : r.k.id}>
                   {novyRok && (
                     <li className="mt-3 mb-1 flex items-center gap-3">
                       <span className="cislice text-zaklad font-bold text-inkoust">{rok}</span>
@@ -419,6 +446,7 @@ export function UdalostiKlient({ zaznamy, neprosle, kandidati = [] }: { zaznamy:
                   )}
                   {r.typ === "zaznam"
                     ? <RadekZaznamu z={r.z} otevreny={otevreny?.slug === r.z.slug} onOtevri={() => (siroky ? otevri(r.z.slug) : undefined)} siroky={siroky} />
+                    : r.typ === "nepotvrzeny" ? <RadekNepotvrzeneho z={r.z} />
                     : r.typ === "neproslo" ? <RadekNeprosle n={r.n} /> : <RadekKandidata k={r.k} />}
                 </Fragment>
               );
@@ -548,6 +576,76 @@ function RadekNeprosle({ n }: { n: Nepotvrzene }) {
 }
 
 /** Automaticky zachycená zpráva. Tentýž řádek, jen bez závažnosti a s odkazem na zdroj. */
+/*
+  Nepotvrzený záznam.
+
+  Je to zpracovaná zpráva: má titulek, zemi, závažnost a doložené zdroje.
+  Chybí jediné — že si to někdo přečetl a postavil se za to. Řádek proto
+  vypadá jako záznam, ale nikam nevede: klepnutí na něj by otevřelo stránku,
+  která neexistuje, a i kdyby existovala, tvářila by se jako hotová věc.
+
+  Místo toho jsou v rozbalení zdroje ven a věta o tom, co konkrétně chybí.
+  „Chybí úřední zdroj" je užitečnější než „čeká na schválení": říká to,
+  co by stav změnilo.
+*/
+function RadekNepotvrzeneho({ z }: { z: Zaznam }) {
+  const uredni = z.zdroje.filter((x) => x.typ === "primary" && Boolean(x.url));
+  const dost = z.zdroje.length >= 2;
+  return (
+    <RadekSeznamu
+      varianta="holy"
+      o={{
+        datum: kdyZjisteno(z),
+        tecka: <span aria-hidden className={`mt-[6px] h-[10px] w-[10px] shrink-0 rounded-full border border-dashed ${PASMA[UROVNE[z.zavaznost].pasmo].pruh.replace("bg-", "border-")}`} />,
+        kodZeme: z.kodZeme,
+        zeme: z.zeme,
+        meta: [
+          <Odznak key="n" ton="akcent" ikona="otaznik">nepotvrzeno</Odznak>,
+          <span key="z" className="text-tlum2">{UROVNE[z.zavaznost].nazev.toLowerCase()}</span>,
+        ],
+        titulek: z.titulek,
+        znacky: (
+          <span className="text-drobne text-tlum2">
+            {z.zdroje.length} {sklon(z.zdroje.length, "zdroj", "zdroje", "zdrojů")}
+            {uredni.length ? ` · ${uredni.length} úřední` : " · žádný úřední"}
+            {z.kategorie.length ? ` · ${z.kategorie.map((x) => KATEGORIE[x as Kategorie]?.nazev ?? x).join(", ")}` : ""}
+          </span>
+        ),
+      }}
+      detail={
+        <div className="space-y-2 pt-1 text-zaklad leading-relaxed">
+          {z.fakta.length > 0 && (
+            <ul className="space-y-1 text-tlum">
+              {z.fakta.map((f) => <li key={f}>{f}</li>)}
+            </ul>
+          )}
+          {z.neznameho.length > 0 && (
+            <div className="border-l border-linka pl-3 text-male text-tlum2">
+              <span className="text-inkoust">Co doložené není:</span>
+              <ul className="mt-1 space-y-1">{z.neznameho.map((n) => <li key={n}>{n}</li>)}</ul>
+            </div>
+          )}
+          <ul className="space-y-1 text-drobne">
+            {z.zdroje.map((x) => (
+              <li key={x.url}>
+                <a href={x.url} target="_blank" rel="noopener noreferrer" className="odkaz break-all">{x.nazev}</a>
+                {x.typ === "primary" ? <span className="text-tlum2"> (úřední)</span> : null}
+              </li>
+            ))}
+          </ul>
+          <p className="text-drobne text-tlum2">
+            {!dost
+              ? "Chybí druhý nezávislý zdroj. Bez něj se záznam nezveřejní ani po schválení."
+              : uredni.length
+                ? "Doloženo dvěma zdroji včetně úředního — zveřejní se samo při nejbližším běhu."
+                : "Doloženo jen médii. Zveřejní se, až to schválí člověk, nebo až přibude úřední zdroj."}
+          </p>
+        </div>
+      }
+    />
+  );
+}
+
 function RadekKandidata({ k }: { k: Kandidat }) {
   return (
     <RadekSeznamu

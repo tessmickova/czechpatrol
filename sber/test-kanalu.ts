@@ -30,7 +30,8 @@ async function zkus(z: (typeof ZDROJE_UDALOSTI)[number]) {
 
 async function main() {
   console.log(
-    `Katalog: ${KATALOG.pocty.celkem} kanálů — ${KATALOG.pocty.prime} redakcí a úřadů, ` +
+    `Katalog: ${KATALOG.pocty.celkem} kanálů — ${KATALOG.pocty.urady} úřadů, ` +
+      `${KATALOG.pocty.redakce} redakcí, ` +
       `${KATALOG.pocty.obecne} obecných dotazů, ${KATALOG.pocty.poZemich} po zemích ` +
       `(${KATALOG.TEMATA.length} témat, ${KATALOG.ZEME.filter((z) => z.blizke).length} blízkých zemí)\n`,
   );
