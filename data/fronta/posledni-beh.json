@@ -1,5 +1,5 @@
 {
-  "kdy": "2026-09-20T18:17:41.487Z",
+  "kdy": "2026-09-20T18:01:09.651Z",
   "zdroje": [
     {
       "klic": "e-sbirka",
@@ -113,9 +113,10 @@
     },
     {
       "klic": "dopravni-info",
-      "ok": true,
-      "stav": 200,
-      "pocetPolozek": 0
+      "ok": false,
+      "stav": null,
+      "pocetPolozek": 0,
+      "chyba": "fetch failed"
     },
     {
       "klic": "policie",
