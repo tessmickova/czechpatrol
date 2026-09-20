@@ -1,5 +1,74 @@
 [
   {
+    "id": "k-e15f6e7ded03e33d",
+    "zachyceno": "2026-09-20T17:02:35.149Z",
+    "publikovano": "2026-09-20T17:00:00.000Z",
+    "zdroj": {
+      "nazev": "Český rozhlas — domácí zprávy",
+      "url": "https://www.irozhlas.cz/zpravy-svet/oktoberfest-v-mnichove-prvni-den-navstivilo-450-000-lidi-poradatele-jich-cekaji_2609201900_elev",
+      "typ": "primary",
+      "primarni": true
+    },
+    "titulek": "Oktoberfest v Mnichově první den navštívilo 450 000 lidí, pořadatelé jich čekají šest milionů",
+    "shrnuti": "Každoroční pivní slavnosti Oktoberfest první den navštívilo téměř půl milionu lidí. S odvoláním na pořadatele o tom v neděli informovala agentura DPA. Největší lidovou veselici na světě zahájil mnichovský primátor Dominik Krause v sobotu v poledne. Potrvá do 4. října a pořadatelé očekávají přes šest",
+    "duvod": "bez-skutku",
+    "kategorie": [],
+    "posouzeni": null
+  },
+  {
+    "id": "k-3cc3d537551edb66",
+    "zachyceno": "2026-09-20T17:02:35.150Z",
+    "publikovano": "2026-09-20T16:35:00.000Z",
+    "zdroj": {
+      "nazev": "Český rozhlas — domácí zprávy",
+      "url": "https://www.irozhlas.cz/zpravy-domov/do-ceskych-budejovic-denne-miri-tisice-aut-hustemu-provozu-ulevi-severni-spojka_2609201525_ntu",
+      "typ": "primary",
+      "primarni": true
+    },
+    "titulek": "Do Českých Budějovic denně míří tisíce aut. Hustému provozu uleví severní spojka a záchytná parkoviště",
+    "shrnuti": "Dopravě v Českých Budějovicích mají ulevit nové obchvaty, propojení ulic i záchytná parkoviště. Do krajského města denně přijíždí až 20 tisíc automobilů z okolních měst a obcí a kapacita odstavných ploch nestačí. Město posiluje městskou hromadnou dopravu a zavádí novou linku. Kamionovou dopravu z mě",
+    "duvod": "bez-skutku",
+    "kategorie": [],
+    "posouzeni": null
+  },
+  {
+    "id": "k-a6ee6dc30be1efc2",
+    "zachyceno": "2026-09-20T17:02:35.151Z",
+    "publikovano": "2026-09-20T16:27:00.000Z",
+    "zdroj": {
+      "nazev": "Český rozhlas — domácí zprávy",
+      "url": "https://www.irozhlas.cz/zpravy-svet/washigtonsky-vitezny-oblouk-bude-slouzit-jako-vojensky-komplex-upravu_2609201827_aha",
+      "typ": "primary",
+      "primarni": true
+    },
+    "titulek": "Washigtonský vítězný oblouk bude sloužit jako vojenský komplex. Úpravu odsouhlasil Trump",
+    "shrnuti": "Americký prezident Donald Trump v neděli odsouhlasil, že jím navrhovaná 76metrová stavba vítězného oblouku ve Washingtonu bude přeměněna na vojenský komplex sloužící národní bezpečnosti. Podle prezidenta by měl projekt v případě potřeby umožnit ubytování personálu a skladování i nasazení velkého mno",
+    "duvod": "bez-skutku",
+    "kategorie": [
+      "drony"
+    ],
+    "posouzeni": null
+  },
+  {
+    "id": "k-e6daf9073f2c2d91",
+    "zachyceno": "2026-09-20T17:02:35.151Z",
+    "publikovano": "2026-09-20T16:12:00.000Z",
+    "zdroj": {
+      "nazev": "Český rozhlas — domácí zprávy",
+      "url": "https://www.irozhlas.cz/zpravy-svet/rusko-volby-statni-duma-putin_2609201812_ula",
+      "typ": "primary",
+      "primarni": true
+    },
+    "titulek": "Končí volby do ruské Státní dumy. Putin volil online, na okupovaných územích na ně dohlížela armáda",
+    "shrnuti": "V neděli večer končí volby do ruské Státní dumy. Poprvé se hlasuje na okupovaných ukrajinských územích, o nichž Moskva v rozporu s mezinárodním právem tvrdí, že patří k Ruské federaci. Výsledky jsou podle odborníků dopředu dané a předpokládaným vítězem je prokremelská strana Jednotné Rusko. Volby čá",
+    "duvod": "vylouceno-tematem",
+    "kategorie": [
+      "vojsko",
+      "rusko"
+    ],
+    "posouzeni": null
+  },
+  {
     "id": "k-57378eaf5b4f5f16",
     "zachyceno": "2026-09-20T16:02:35.485Z",
     "publikovano": "2026-09-20T15:49:00.000Z",
@@ -10095,86 +10164,6 @@
     "posouzeni": {
       "podezreni": "zadne",
       "duvod": "Otevření soukromého lycea",
-      "kdy": "2026-09-19T13:05:21.142Z"
-    }
-  },
-  {
-    "id": "k-f255d7bba797ee8c",
-    "zachyceno": "2026-09-16T05:02:57.833Z",
-    "publikovano": "2026-09-16T04:32:00.000Z",
-    "zdroj": {
-      "nazev": "Český rozhlas — domácí zprávy",
-      "url": "https://www.irozhlas.cz/veda-technologie/priroda/ozonova-dira-nad-antarktidou-se-v-zari-prudce-zvetsila-k-jejimu-ztenceni-prispel_2609160632_ntu",
-      "typ": "primary",
-      "primarni": true
-    },
-    "titulek": "Ozonová díra nad Antarktidou se v září prudce zvětšila. K jejímu ztenčení přispěl mráz ve stratosféře",
-    "shrnuti": "Ozonová díra nad Antarktidou se v první polovině září prudce zvětšila, informovala ve středu služba Evropské unie pro sledování klimatu Copernicus. Dne 12. září dosáhla její rozloha zhruba 25 milionů kilometrů čtverečních, což je přibližně o pět milionů kilometrů čtverečních více než je průměr pro t",
-    "duvod": "bez-skutku",
-    "kategorie": [],
-    "posouzeni": {
-      "podezreni": "zadne",
-      "duvod": "Zpráva o ozonové díře, ekologické téma",
-      "kdy": "2026-09-19T13:05:21.142Z"
-    }
-  },
-  {
-    "id": "k-b4950b47d6164a7f",
-    "zachyceno": "2026-09-16T04:32:44.773Z",
-    "publikovano": "2026-09-16T04:30:00.000Z",
-    "zdroj": {
-      "nazev": "ČT24 — hlavní zprávy",
-      "url": "https://ct24.ceskatelevize.cz/clanek/domaci/chmelari-hlasi-rekordne-nizkou-urodu-prvni-velky-pivovar-uz-zdrazuje-377648",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Chmelaři hlásí rekordně nízkou úrodu. První velký pivovar už zdražuje",
-    "shrnuti": "Česko zažívá jednu z historicky nejhorších sklizní chmele. Podle svazu pěstitelů bude až o čtvrtinu nižší než v jiných letech. Úrodu ovlivnily vysoké teploty, výrazné sucho, ale i nepříznivé povětrnostní podmínky. Chmelu tak chybí pivovarsky důležité látky, které ovlivňují jeho kvalitu. To může spol",
-    "duvod": "bez-skutku",
-    "kategorie": [],
-    "posouzeni": {
-      "podezreni": "zadne",
-      "duvod": "Nízká úroda chmele, ekonomické téma",
-      "kdy": "2026-09-19T13:05:21.142Z"
-    }
-  },
-  {
-    "id": "k-2f57119766d1759f",
-    "zachyceno": "2026-09-16T05:02:57.834Z",
-    "publikovano": "2026-09-16T04:29:00.000Z",
-    "zdroj": {
-      "nazev": "Český rozhlas — domácí zprávy",
-      "url": "https://www.irozhlas.cz/komentare/dalsi-volebni-kampan-ktera-volice-nemotivuje-ale-nudi_2609160629_elev",
-      "typ": "primary",
-      "primarni": true
-    },
-    "titulek": "Další volební kampaň, která voliče nemotivuje, ale nudí",
-    "shrnuti": "Zapomeňme na teorii. V turbulentní době volby druhého řádu prakticky neexistují. Skoro každý rok chodíme k urnám – a i když se zrovna nerozhoduje o příští vládě, je cenné vědět, jak se k politickým stranám a hnutím stavíme.",
-    "duvod": "vylouceno-tematem",
-    "kategorie": [],
-    "posouzeni": {
-      "podezreni": "zadne",
-      "duvod": "Komentář k volební kampani",
-      "kdy": "2026-09-19T13:05:21.142Z"
-    }
-  },
-  {
-    "id": "k-f393796dd251a6a1",
-    "zachyceno": "2026-09-16T04:32:44.747Z",
-    "publikovano": "2026-09-16T04:22:00.000Z",
-    "zdroj": {
-      "nazev": "Český rozhlas — domácí zprávy",
-      "url": "https://www.irozhlas.cz/ekonomika/zemedelci-ustupuji-od-pestovani-repky-olejne-naklady-na-pestovani-jsou-vyssi-a_2609160622_aha",
-      "typ": "primary",
-      "primarni": true
-    },
-    "titulek": "Zemědělci ustupují od pěstování řepky olejné. Náklady na pěstování jsou vyšší a výnosy se snižují",
-    "shrnuti": "Čeští zemědělci ustupují od pěstování řepky olejné. Produkce se jim nevyplácí. Ochranné prostředky proti škůdcům dostatečně nezabírají. Náklady na pěstování jsou tak vyšší a výnosy se už několik let neustále snižují. Řepku proto farmáři nahrazují jinými plodinami.",
-    "duvod": "bez-skutku",
-    "kategorie": [],
-    "posouzeni": {
-      "podezreni": "zadne",
-      "duvod": "Zemědělský trend s řepkou",
       "kdy": "2026-09-19T13:05:21.142Z"
     }
   }
