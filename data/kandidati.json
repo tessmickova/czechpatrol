@@ -138,6 +138,74 @@
     }
   },
   {
+    "id": "k-067e59f23929511d",
+    "zachyceno": "2026-09-20T18:18:06.673Z",
+    "publikovano": null,
+    "zdroj": {
+      "nazev": "Estonská policie — news",
+      "url": "https://www.politsei.ee/en/news/a-gru-military-unit-launched-cyberattacks-against-estonian-authorities-12173",
+      "typ": "primary",
+      "primarni": true
+    },
+    "titulek": "A GRU military unit launched cyberattacks against Estonian authorities",
+    "titulekPuvodni": "A GRU military unit launched cyberattacks against Estonian authorities",
+    "shrnuti": "",
+    "kodZeme": "EE",
+    "zeme": "Estonsko",
+    "kategorie": [
+      "kyber",
+      "zpravodajske"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "cyberattack",
+      "cyber",
+      "gru"
+    ],
+    "naliehave": null,
+    "stav": "ceka",
+    "vyrez": {
+      "text": "A GRU military unit launched cyberattacks against Estonian authorities - News - Police and Border Guard Board\nA GRU military unit launched cyberattacks against Estonian authorities\n05. September 2024\nDuring joint operation Toy Soldier conducted in cooperation with 14 services from 10 states, the Estonian Internal Security Service identified that military unit 29155, which is under the command of the Main Directorate of the General Staff of the Armed Forces of the Russian Federation (GRU), acquired cyber capabilities and had been launching cyberattacks against both Ukraine as well as NATO and EU member states, including Estonia, since 2020.\nThe National Criminal Police conducted criminal proceedings under the direction of the Office of the Prosecutor General, and found that the same unit launched attacks against Estonian state authorities in 2020. The criminal proceedings helped to identify three GRU officers suspected of the attacks: Yuri Denisov, Nikolay Korchagin and Vitali Shevchenko.\n“Based on the suspicion, all three were serving in GRU’s military unit 29155 at the time of the attacks. We identified the first suspect and leads at the early stages of the investigation, and…",
+      "stazeno": "2026-09-20T18:18:07.331Z",
+      "stav": 200
+    }
+  },
+  {
+    "id": "k-2054b9c611dd2b43",
+    "zachyceno": "2026-09-20T18:18:06.669Z",
+    "publikovano": null,
+    "zdroj": {
+      "nazev": "Estonská policie — news",
+      "url": "https://www.politsei.ee/en/news/police-to-temporarily-close-narva-border-crossing-point-from-30-april-to-2-may-for-training-exercise-12554",
+      "typ": "primary",
+      "primarni": true
+    },
+    "titulek": "Police to temporarily close Narva border crossing point from 30 April to 2 May for training exercise",
+    "titulekPuvodni": "Police to temporarily close Narva border crossing point from 30 April to 2 May for training exercise",
+    "shrnuti": "",
+    "kodZeme": "EE",
+    "zeme": "Estonsko",
+    "kategorie": [
+      "hranice"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "border+exercise",
+      "border"
+    ],
+    "naliehave": null,
+    "stav": "ceka",
+    "vyrez": {
+      "text": "Police to temporarily close Narva border crossing point from 30 April to 2 May for training exercise - News - Police and Border Guard Board\nPolice to temporarily close Narva border crossing point from 30 April to 2 May for training exercise\n21. March 2025\nThe East Prefecture, in cooperation with the Estonian Defence League, will conduct a joint exercise called KILP, during which the Narva border crossing point will be temporarily closed from April 30 to May 2. The border crossing point will reopen for regular operations on May 3.\nAccording to Eerik Purgel, Head of the Border Guard Bureau of the East Prefecture, the plans to temporarily close the Narva border crossing point are related to a long-planned exercise, as some of the activities are going to be carried out at the border crossing point. “We ask people to take this into account when planning their journeys – from April 30 to May 2, the Narva border crossing point will be temporarily closed, and it will not be possible to cross the border there. During this period, the border can be crossed at the Koidula and Luhamaa border crossing points, which are open 24/7 and allow for crossing by car as well,” he added.\nThe joint…",
+      "stazeno": "2026-09-20T18:18:07.720Z",
+      "stav": 200
+    }
+  },
+  {
     "id": "k-fd657b73cb784ec2",
     "zachyceno": "2026-09-20T13:02:21.024Z",
     "publikovano": "2026-09-20T12:26:47.000Z",
@@ -11976,88 +12044,6 @@
       "kdy": "2026-09-20T07:57:42.752Z",
       "duvod": "navrh",
       "patriK": null,
-      "poznamka": null
-    }
-  },
-  {
-    "id": "k-9e515e48b1671c46",
-    "zachyceno": "2026-09-13T11:02:29.631Z",
-    "publikovano": "2026-09-06T12:09:40.000Z",
-    "zdroj": {
-      "nazev": "Google News — Polsko bezpečnost",
-      "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxQY1IySXVYZklOTDRJRDVBXzVjVno5M2JvS0pnUW5tVWRUU1E5R05VU2tHY1FIRHFSeXZLSjlVdkRjQ3llLTZpdGlyOXZVN3ZTUk8tem1BdE1MczVpelFEQWlWT3BaZ3JmOXNCcWVob2puU0FZbks5SVFicDlZbmhUQnp2RnN1YzlRcGloYkNwQnd4QWM?oc=5",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Poland scrambles aircraft over suspected airspace breach - UK Defence Journal",
-    "titulekPuvodni": "Poland scrambles aircraft over suspected airspace breach - UK Defence Journal",
-    "shrnuti": "Poland scrambles aircraft ov",
-    "kodZeme": "PL",
-    "zeme": "Polsko",
-    "kategorie": [
-      "drony"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "shody": [
-      "scrambl",
-      "airspace"
-    ],
-    "stav": "vyrizen",
-    "vyrez": {
-      "text": "Google News",
-      "stazeno": "2026-09-14T09:02:38.815Z",
-      "stav": 200
-    },
-    "naliehave": null,
-    "vyrizeni": {
-      "kdy": "2026-09-20T07:57:42.752Z",
-      "duvod": "neudalost",
-      "patriK": null,
-      "poznamka": null
-    }
-  },
-  {
-    "id": "k-89c9fba617bfd64b",
-    "zachyceno": "2026-09-06T13:59:15.562Z",
-    "publikovano": "2026-09-06T11:21:38.000Z",
-    "zdroj": {
-      "nazev": "ČT24 — hlavní zprávy",
-      "url": "https://ct24.ceskatelevize.cz/clanek/svet/vineni-moskvy-z-utoku-v-lipsku-je-zacatkem-skutecne-valky-vzkazal-lavrov-zapadu-377308",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Vinění Moskvy z útoku v Lipsku je začátkem skutečné války, vzkázal Lavrov Západu",
-    "titulekPuvodni": "Vinění Moskvy z útoku v Lipsku je začátkem skutečné války, vzkázal Lavrov Západu",
-    "shrnuti": "Obvinění ze strany západních zemí, že se Moskva podílela na dronovém incidentu v Lipsku, jsou v podstatě začátkem skutečné války, prohlásil podle agentury Interfax ruský ministr zahraničí Sergej Lavrov. Německá vláda srpnový hybridní útok na východoněmecké letiště Lipsko/Halle přičítá Rusku, které t",
-    "kodZeme": "DE",
-    "zeme": "Německo",
-    "kategorie": [
-      "zpravodajske",
-      "hybridni",
-      "drony",
-      "rusko"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "shody": [
-      "obvin",
-      "utok na",
-      "dron",
-      "hybridni",
-      "rusk"
-    ],
-    "stav": "vyrizen",
-    "vyrez": {
-      "text": "Vinění Moskvy z útoku v Lipsku je začátkem skutečné války, vzkázal Lavrov Západu — ČT24 — Česká televize\nŽivé vysílání\nTV program\nPočasí\nTeletext\nE-shop\nVše o ČT\nTV poplatky\nKontakty\nSpravovat účet\nOblíbené pořady\nRozkoukaná videa\nPřihlásit se do TV\nOdhlásit se\nVinění Moskvy z útoku v Lipsku je začátkem skutečné války, vzkázal Lavrov Západu\nČTK\n, jol\n6. 9. 2026 ‌ ‌ | Zdroj: ČTK\nRuský ministr zahraničí Sergej Lavrov\nZdroj: Reuters/Ramil Sitdikov\nObvinění ze strany západních zemí, že se Moskva podílela na dronovém incidentu v Lipsku, jsou v podstatě začátkem skutečné války, prohlásil podle agentury Interfax ruský ministr zahraničí Sergej Lavrov. Německá vláda srpnový hybridní útok na východoněmecké letiště Lipsko/Halle přičítá Rusku, které to popírá. Zaměstnanec letiště poblíž ukrajinského letadla společnosti Antonov objevil 4. srpna dron s výbušninou, ale s nefunkční roznětkou.\n„Našli nějaký dron. Tvrdili, že se jednalo o ruský dron, ale nikdo se to neobtěžoval vyšetřit. To je v podstatě začátek skutečné války,“ řekl Lavrov v rozhovoru s ruskými médii.\nNěmecko v reakci na letištní incident rozhodlo mimo jiné o uzavření ruského generálního konzulátu v Bonnu a vypovězení smlouvy…",
-      "stazeno": "2026-09-14T09:02:38.948Z",
-      "stav": 200
-    },
-    "naliehave": null,
-    "vyrizeni": {
-      "kdy": "2026-09-20T07:57:42.752Z",
-      "duvod": "pokracovani",
-      "patriK": "lavrov-lipsko-skutecna-valka-2026",
       "poznamka": null
     }
   }
