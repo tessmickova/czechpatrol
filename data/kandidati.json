@@ -210,6 +210,43 @@
     }
   },
   {
+    "id": "k-0dc73a486a490a63",
+    "zachyceno": "2026-09-20T11:02:28.038Z",
+    "publikovano": "2026-09-20T07:29:41.000Z",
+    "zdroj": {
+      "nazev": "ČT24 — hlavní zprávy",
+      "url": "https://ct24.ceskatelevize.cz/clanek/svet/starosta-moskvy-tvrdi-ze-mesto-celilo-dosud-nejvetsimu-dronovemu-utoku-377780",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Ukrajina zasáhla rafinerii v moskevském regionu, uvedl Zelenskyj",
+    "titulekPuvodni": "Ukrajina zasáhla rafinerii v moskevském regionu, uvedl Zelenskyj",
+    "shrnuti": "Ukrajinský prezident Volodymyr Zelenskyj na síti X oznámil, že Ukrajina v moskevském regionu zasáhla rafinerii, která patří ke klíčovým zařízením tamního ropného průmyslu. Předtím starosta Moskvy Sergej Sobjanin uvedl, že Ukrajina od soboty vypustila na Rusko více než 1600 dronů, z toho 450 na metro",
+    "kodZeme": "UA",
+    "zeme": "Ukrajina",
+    "kategorie": [
+      "hybridni",
+      "drony",
+      "rusko"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "utok na",
+      "dron+zasahl",
+      "dron",
+      "rusk"
+    ],
+    "naliehave": null,
+    "stav": "ceka",
+    "vyrez": {
+      "text": "Ukrajina zasáhla rafinerii v moskevském regionu, uvedl Zelenskyj — ČT24 — Česká televize\nŽivé vysílání\nTV program\nPočasí\nTeletext\nE-shop\nVše o ČT\nTV poplatky\nKontakty\nSpravovat účet\nOblíbené pořady\nRozkoukaná videa\nPřihlásit se do TV\nOdhlásit se\nUkrajina zasáhla rafinerii v moskevském regionu, uvedl Zelenskyj\nČTK\n, kak\n20. 9. 2026 před 20 m minutami | Zdroj: ČTK\nKouř z ropné rafinerie v Moskvě po útoku ukrajinského dronu\nZdroj: REUTERS/Stringer TPX IMAGES OF THE DAY\nUkrajinský prezident Volodymyr Zelenskyj na síti X oznámil, že Ukrajina v moskevském regionu zasáhla rafinerii, která patří ke klíčovým zařízením tamního ropného průmyslu. Předtím starosta Moskvy Sergej Sobjanin uvedl, že Ukrajina od soboty vypustila na Rusko více než 1600 dronů, z toho 450 na metropoli. Podle ruskojazyčné verze stanice BBC šlo o největší ohlášený ukrajinský útok na Moskvu. Gubernátor Andrej Vorobjov tvrdí, že v Moskevské oblasti si údery vyžádaly dva mrtvé a šest zraněných. Rusko naopak udeřilo na Ukrajinu, při útocích zemřelo několik lidí.\n„Dosud nejrozsáhlejší útok nepřátelských dronů na Moskvu byl odražen,“ napsal Sobjanin na telegramu s tím, že několik dronů zasáhlo moskevskou rafinerii a obytnou…",
+      "stazeno": "2026-09-20T11:02:29.394Z",
+      "stav": 200
+    }
+  },
+  {
     "id": "k-80fc2a9669627d74",
     "zachyceno": "2026-09-20T09:01:21.455Z",
     "publikovano": "2026-09-20T06:53:00.000Z",
@@ -12049,46 +12086,6 @@
       "kdy": "2026-09-20T07:57:42.752Z",
       "duvod": "pokracovani",
       "patriK": "nemecko-rozvodny-zadrzeni-2026",
-      "poznamka": null
-    }
-  },
-  {
-    "id": "k-77b020b9c7f0544b",
-    "zachyceno": "2026-09-20T06:02:32.627Z",
-    "publikovano": "2026-09-04T11:16:04.000Z",
-    "zdroj": {
-      "nazev": "Slovensko — sabotaz",
-      "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxPUDg0RC14a3NGcnZfeDZsZEY5aEFFbDhYM1lrNC1nWUVTLVJrQnREVzRwMWZ2a21LbDVCdVJzMExnb2dxWXAyRGNpSGdOS0t5eW96aTVqX0VzNzdKMGlGdXNGekVNY0MyWjFGQ1BZLXJKUWdaMlNDT3VUc1VZa1JwWkhGd0xtR213dEszRHo2WnRQZlc5NW5YRzJYenlaUl9fb0w3OGF0bXRCR2xMOGZuUEhncTZLNU1M?oc=5",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Europe Targeted by Spiralling Campaign of Sabotage and Russia is the Chief Suspect - Albanian Daily News",
-    "titulekPuvodni": "Europe Targeted by Spiralling Campaign of Sabotage and Russia is the Chief Suspect - Albanian Daily News",
-    "shrnuti": "Europe Targeted by Spiralling Campaign of Sabotage and Russia is the Chief Suspect Albanian Daily News",
-    "kodZeme": "RU",
-    "zeme": "Rusko",
-    "kategorie": [
-      "sabotaz",
-      "rusko"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "zeSite": null,
-    "shody": [
-      "sabotage",
-      "russia"
-    ],
-    "naliehave": null,
-    "stav": "vyrizen",
-    "vyrez": {
-      "text": "Google News",
-      "stazeno": "2026-09-20T06:04:11.305Z",
-      "stav": 200
-    },
-    "vyrizeni": {
-      "kdy": "2026-09-20T07:57:42.752Z",
-      "duvod": "neudalost",
-      "patriK": null,
       "poznamka": null
     }
   }
