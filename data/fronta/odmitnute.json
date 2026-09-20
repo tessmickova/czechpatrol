@@ -3392,6 +3392,28 @@
     }
   },
   {
+    "id": "k-a9b487b5533195bd",
+    "zachyceno": "2026-09-20T00:02:21.644Z",
+    "publikovano": "2026-09-17T23:20:00.000Z",
+    "zdroj": {
+      "nazev": "Téma: nouzovy-stav (anglicky)",
+      "url": "https://news.google.com/rss/articles/CBMi2AFBVV95cUxNbjFCbVdJd0RheE03NFNNTFBmUURvV1AyYnB1NWloN3FXaHBCMWZNOE1SX2gwVnYyeDVCekNNX0pVMGhpTG5hVk9pdEo0X3J3eU4wN21WWDNaUkdrMXNpMVJEWXFhQmJ4b3ZKWUw2U2ttcEpGUTF4VDNhRUFaMWZ3cGc4NWRVejJnLWdjbGpNb3lxSS1wTjZSSzNTVktxZWRBd1A1SUxoOVMzc2NxbEpCejllWUhVcnhHejVCTnpqUGR6VmlUNXBSWWswQUNieHlETHZUc2hYMGg?oc=5",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "State of emergency declared for Mason County following severe flooding - WV News",
+    "shrnuti": "State of emergency declared for Mason County following severe flooding WV News",
+    "duvod": "bez-mista",
+    "kategorie": [
+      "pravo"
+    ],
+    "posouzeni": {
+      "podezreni": "zadne",
+      "duvod": "Jde o povodně v USA, nikoli v Evropě.",
+      "kdy": "2026-09-20T00:03:46.738Z"
+    }
+  },
+  {
     "id": "k-30124dac23378276",
     "zachyceno": "2026-09-19T08:00:22.428Z",
     "publikovano": "2026-09-17T23:18:00.000Z",
@@ -10428,26 +10450,6 @@
     "posouzeni": {
       "podezreni": "zadne",
       "duvod": "Kulturní/společenská akce, Pride pochod.",
-      "kdy": "2026-09-19T14:04:15.203Z"
-    }
-  },
-  {
-    "id": "k-0b8087d6b6edc271",
-    "zachyceno": "2026-09-15T16:32:52.190Z",
-    "publikovano": null,
-    "zdroj": {
-      "nazev": "LRT English (Litva)",
-      "url": "https://www.lrt.lt/en/news-in-english/19/3045409/a-lithuanian-hotelier-bringing-cold-pink-soup-to-cambodia",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "A Lithuanian hotelier bringing cold pink soup to Cambodia",
-    "shrnuti": "",
-    "duvod": "bez-skutku",
-    "kategorie": [],
-    "posouzeni": {
-      "podezreni": "zadne",
-      "duvod": "Kulturně-gastronomický článek, žádná bezpečnostní souvislost.",
       "kdy": "2026-09-19T14:04:15.203Z"
     }
   }
