@@ -12,8 +12,260 @@
     "id": "z-mua4upch",
     "zadano": "2026-09-20T18:11:32.945Z",
     "zadal": "fronta",
-    "stav": "ceka",
+    "stav": "hotovo",
     "zadani": "Posuď frontu zachycených zpráv: 17 čeká na rozhodnutí.\n\nData máš u sebe v data/kandidati.json (stav = \"ceka\"). Zveřejněné záznamy\njsou v data/incidenty.json, rozdělaná práce v data/navrhy.json.\n\nPravidla se nemění — jsou v PATROL.md na tvé větvi. Připomínka toho,\nna čem to nejčastěji padá: dva nezávislé zdroje vždycky, datum události\nnení datum článku, původce až po úředním závěru, [DOPLNIT] se nenahrazuje\nodhadem.\n\nNEJDŘÍV — 9 zpráv, kde chybí jen druhý zdroj:\n- k-b19ad52154b53d09 · 2026-09-16 · Rusko · Partisans claim sabotage at Russian plant producing missile components.\n  https://kyivindependent.com/partisans-claim-sabotage-at-russian-plant-producing-missile-components/\n- k-8e175046cef4bee6 · 2026-09-15 · Česko · Vojenská policie zadržela tři lidi kvůli zakázkám v ÚVN\n  https://ct24.ceskatelevize.cz/clanek/domaci/vojenska-policie-zasahuje-kvuli-zakazkam-v-ustredni-vojenske-nemocnici-377629\n- k-edcc63c9750c0683 · 2026-09-09 · Spojené království · Britská letiště kvůli problémům řízení provozu zrušila přes dva tisíce letů\n  https://ct24.ceskatelevize.cz/clanek/svet/britska-letiste-kvuli-problemum-rizeni-provozu-zrusila-pres-dva-tisice-letu-377407\n- k-2946b37f4991d345 · 2026-09-09 · Estonsko · Teens charged in hate‑fueled arson attacks on ethnic-owned Tallinn food businesses\n  https://news.err.ee/1610132953/teens-charged-in-hate-fueled-arson-attacks-on-ethnic-owned-tallinn-food-businesses\n- k-a2bd3d3b7a6c7200 · 2026-09-08 · Moldavsko · An Azerbaijani national was arrested in Moldova on charges of spying for the FSB - UA.NEWS\n  https://news.google.com/rss/articles/CBMilAFBVV95cUxNcldZX2lkNUU0cEd3azFGVEgwRXNxLTVQeGVVWldOWjk1NGdIeWRyZFFISXRyOFU2NnZPSnYySXNwX1VySDdqaXhvQ1U1ZlEydzZMZjlsbkZHUUUyZG5lYlpfQXhwWjdndy00aGR1dHRQVXRPNDJJRWsxVDFDOVJEaDBNb1ppaW1WWnRnT0dsWFk3UzFG?oc=5\n- k-bcde1eaa561bc489 · 2026-09-08 · Německo · Cybersecurity: Data on critical infrastructure may also have been compromised in cyberattack on Berlin city government - Table.Briefings\n  https://news.google.com/rss/articles/CBMi6gFBVV95cUxQZnI2NlhFenVLaUFsZ2xOSnV5MGpydHh3anpHa2NlaFNpWGozZW5TUjg0N3JuaTl5U2VHVTBoSERVWmxnWmRrbGlQVy1fQm1aOTh4T2Y5OTBaVmVHNkUxdzhlZUthUUdoOHA2dmFfNUtwSE5MdXBDYzE3bmdDMlRVSUdOam1hOU9rOGdWNXJqeEtPeS1kMVNVejJRQTJ0YWF5cFMzMXNsY3FUQ2NBVjVKLW9nNGhlMWZUMzEzcjBXVkFMYm4zX083R0o1YXdpdE9DMm9XOUpUQlNGOXVDSXNGMEY0ZVFZWGxWNWc?oc=5\n- k-3ddf1e11e2ce180c · 2026-09-07 · Estonsko · Estonia shuts border crossing after 2 Iranian nationals attempt entry from Russia\n  https://news.err.ee/1610130319/estonia-shuts-border-crossing-after-2-iranian-nationals-attempt-entry-from-russia\n- k-7e249853102bdd05 · 2026-09-07 · Spojené království · Drzé Rusko narušilo GPS stovek britských letů. Británie investuje miliony do systému, který nelze rušit ani za války - Centrum.cz\n  https://news.google.com/rss/articles/CBMi5gFBVV95cUxQdW5CS3oxNUM4dkJ6UUFha0xtWTZxSzNVNGFKWmpNNVJFTkx0RExESjlzSmRtaU1vMUN6NjVqbTBHMWg4SEUzNVpQNUN6MUphVng0allScWJTRE5UVWZQMHFVQ0tPTDU2MElXRXVSNm4xS3dVN1VtRmpXcDVBYlpPRFg2VThxWEpBMGNhZ05zVDZfcGx3YUJ6d2s3Vkp6b0VtbDRjbVowcFZQdmozN0ppaWNqNjNyWmZ4QkF5N285TDdsd2k4ZWZKeWEtYWU0Tm1yZ0ZhbUtjX09oRWI4RVNwYmxOLVNQQQ?oc=5\n- k-5c0279c99bbbdd8e · 2026-09-07 · Lotyšsko · Rusové chtěli škodit Evropě, Lotyšsko dva ruské agenty za sabotáž zavřelo. Jeden to udělal za pouhých 1 000 euro - centrum.cz\n  https://news.google.com/rss/articles/CBMi4AFBVV95cUxPT1picl9aZGJnSUNvenowNHpTWnIydmJ6aDNpZ0NiZzh5WUFOek5IOTVucFBPa2FxX0gwSUNmZVY1SFI5ZW5PcW55M1JGUWc2UU9sR3FrTEdrcXlEbUdiS2Q0djBkeU1UV1Rvc0g5cFNnVFM5UUh0d25pQzVTMTFXS2FFSUFWM3BVZDRyTDFrdE9Jbnl0NV9qUmpGdU5oTFpON0p4c3RZV2VBcTc4a2pIRnFiR3Rvc0hvOGJoU3NlTWF5c2kwS2VFMWR0TGpYZzE4VFRmMldJY0Z1bkYzdC13YQ?oc=5\n\nU těchhle je rozhodnuto, že jde o novou událost. Chybí druhé nezávislé\nhlášení — a to smíš hledat i mimo frontu. Úřední zdroj má přednost před\nmédiem: se dvěma zdroji, z nichž jeden je úřední, jde záznam na web sám.\n\nPOTOM — 8 neposouzených:\n- k-fd657b73cb784ec2 · 2026-09-20 · Rusko · US Charges Russian Network in Alleged European Sabotage, US Murder Plot - OCCRP\n  https://news.google.com/rss/articles/CBMiogFBVV95cUxPQ1RQT2kyTFVDRmZvQWdsbDBIRERhR0I1REJSSVE3N2JYSjFXWGQxWVJSVzBZUjRvZ3NMZV9HRnc5eWdsdjR2QVZxd0t2VEVXQ2o2aW1jVl9teGQ2NkNXcjNTTFl1NnJoa3B3WjROcXFDUlVKby1TUDRBLXlFck5LS193R2NsWG5xS1NTeVJVazF0SzdlbnVyXzJUemM4VmcybXc?oc=5\n- k-ad9e995a839bf16f · 2026-09-20 · Ukrajina · Largest attack on Moscow sees Ukraine fire hundreds of drones, mayor says\n  https://www.bbc.co.uk/news/articles/c34gdjk1ne8yo?at_medium=RSS&at_campaign=rss\n- k-036cb3bbc9dd78ee · 2026-09-20 · Rusko · Russia claims cyberattacks on voting systems during parliamentary election.\n  https://kyivindependent.com/russia-claims-cyberattacks-on-voting-systems-during-parliamentary-election/\n- k-143a1bf2a88713bc · 2026-09-20 · Rusko · Russia reports deadly mass drone attack on Moscow region, oil refinery amid parliamentary election.\n  https://kyivindependent.com/russia-says-dozens-of-ukrainian-drones-targeted-moscow-as-broader-attack-hit-multiple-regions/\n- k-59bedaf44d0d33d4 · 2026-09-20 · Česko · Německo o dva měsíce prodlouží kontroly na hranicích s ČR, Polskem a Švýcarskem - epochtimes.cz\n  https://news.google.com/rss/articles/CBMiiwJBVV95cUxOaGp2Si1IWHBGMTIyaVV5ZTZNZjRxeFFCODBXU3JNS3FXN0ZqdU1iRmgxa04tcmpHQTA5TmxfMkJVVUtPSE5nbGRvM2dkNnhlLU9UR1dUT0RxeHNxOVFlNjNFeGpfZ3J4YXFTVFh3SUJOVXZRTEh5U0ZMOHAwQmJRMFl6WjNOcUxqVTg3UnN3Rm5UamotT3QxenIxdXNLNWFBZWlhZWVqeUNVd0h0QXJVeXlOeFVZdVE0Ulhmd0JIcldGT1h5REF4eGtZX1ctUEc1aC15d0JpOXFrX1hUMVllc0RTQlczX09LcDZpTmhBRHgxczVDcUVhY09IVjVLdnBPeV9lVlBLVHBtZnM?oc=5\n- k-0dc73a486a490a63 · 2026-09-20 · Ukrajina · Ukrajina zasáhla rafinerii v moskevském regionu, uvedl Zelenskyj\n  https://ct24.ceskatelevize.cz/clanek/svet/starosta-moskvy-tvrdi-ze-mesto-celilo-dosud-nejvetsimu-dronovemu-utoku-377780\n- k-80fc2a9669627d74 · 2026-09-20 · Ukrajina · ONLINE: Nejrozsáhlejší útok na Moskvu. Ukrajina poslala na ruskou metropoli podle starosty 450 dronů\n  https://www.irozhlas.cz/zpravy-domov/online-nejrozsahlejsi-utok-na-moskvu-ukrajina-poslala-na-ruskou-metropoli-podle_2609200853_lhv\n- k-06fadafd7744894f · 2026-09-12 · Bulharsko · Explosion at Bulgarian ammunition depot supplying Ukraine sparks massive fire, sabotage probe - The Kyiv Independent\n  https://news.google.com/rss/articles/CBMitgFBVV95cUxQeENxQ0VwcUhEdTlRTHJONjNlREE3eDVERV9fWjk0dWdZdGIzeURjMDlrYVlXdkJObF9NN0VzMEtocHFXU1AyenAyWEJwRzZTRElZOWk1amc1ZFRWV19MNGlaT29xa1dNSTV3TkFxUU1TdXBiOV9wNGt5RWlyUXFOVktyeUluM2c3MGlsNkotdy03QU8wcmlBTi1Yc0JuZHI4V3k2ZmZsNnhJZ01MNm1CdzBLcDVmdw?oc=5\n\nVýsledek dej do data/navrhy.json s lidskyOvereno: false. U zpráv, ze\nkterých návrh nevznikl, napiš proč — tichý zápor vypadá stejně jako\nporucha.",
-    "odpoved": "Posouzeno všech 17. Hotové jsou 3 návrhy, ale nezapsal jsem je: nové testy chtějí, aby kandidát, jehož odkaz je zdrojem návrhu, měl v data/kandidati.json stav „vyrizen“ (dřív to dělal audit, teď je vypnutý), a do toho souboru mi CLAUDE.md zapisovat nedovoluje. Připravené jsou Moldavsko – zadržení podezřelého ze špionáže pro FSB (k-a2bd3d…), Berlín – kyberútok na zemskou síť, data zveřejněna 4. 9. (k-bcde1e…, úřední zdroj berlin.de) a Estonsko – uzavření přechodu Luhamaa (k-3ddf1e…). Stačí říct, ať smím kandidáty odepisovat, a zapíšu je.\n\nBez návrhu: k-b19ad5 (tvrzení partyzánů Atesh, KI i Kyiv Post to nemohly ověřit), k-8e1750 (korupce v ÚVN, žádný bezpečnostní rozměr), k-edcc63 (technická závada NATS, NATS i ministryně kyberútok popřely), k-2946b3 (podle titulku domácí trestný čin z nenávisti, text jsem neotevřel), k-7e2498 (starší údaje z roku 2024 a oznámení plánu, ne skutek), k-5c0279 (jediný původní zdroj LSM/VDD, originál se nepodařilo otevřít, rozsudek z 20. 8. není pravomocný).\n\nDuplicity: k-fd657b je týž případ jako us-590b687216, ale úřední tisková zpráva DOJ z 15. 9. jmenuje obviněné a Prahu (červen 2024) — záznam by šlo doplnit přes správce; k-06fadaf je už zdrojem záznamu bulharsko-emco (chybí tam jen adresa přes Google News). Recyklovaná stará zpráva: k-59beda (titulek z 8. 12. 2023, aktuální prodloužení kontrol z 18. 8. je migrační opatření).\n\nÚdery na Ukrajinu/Moskvu k tvému rozhodnutí: k-ad9e99, k-143a1b, k-0dc73a, k-80fc2a (dronový útok na Moskvu a rafinerii v Kapotně, oběti se ve zdrojích liší, stranám nevěřím bez nezávislého potvrzení). k-036cb3 je jen ruské tvrzení o kyberútocích na volby, nikdo nezávislý ho nepotvrdil.\n\nOprava k mému dřívějšímu návrhu: záznam ro-8097dca796 (dron dopadl v Rumunsku) se zveřejnil automaticky díky zdroji, který jsem označil jako primární, ale je to jen zrcadlo tiskové zprávy rumunského ministerstva na globalsecurity.org, ne web ministerstva. To byla moje chyba; mělo být primarni: false. Záznam je v incidenty.json a upravit ho smí jen správce (kontrola: zdroj, jistota střední)."
+    "odpoved": "Posouzeno všech 17. Hotové jsou 3 návrhy, ale nezapsal jsem je: nové testy chtějí, aby kandidát, jehož odkaz je zdrojem návrhu, měl v data/kandidati.json stav „vyrizen“ (dřív to dělal audit, teď je vypnutý), a do toho souboru mi CLAUDE.md zapisovat nedovoluje. Připravené jsou Moldavsko – zadržení podezřelého ze špionáže pro FSB (k-a2bd3d…), Berlín – kyberútok na zemskou síť, data zveřejněna 4. 9. (k-bcde1e…, úřední zdroj berlin.de) a Estonsko – uzavření přechodu Luhamaa (k-3ddf1e…). Stačí říct, ať smím kandidáty odepisovat, a zapíšu je.\n\nBez návrhu: k-b19ad5 (tvrzení partyzánů Atesh, KI i Kyiv Post to nemohly ověřit), k-8e1750 (korupce v ÚVN, žádný bezpečnostní rozměr), k-edcc63 (technická závada NATS, NATS i ministryně kyberútok popřely), k-2946b3 (podle titulku domácí trestný čin z nenávisti, text jsem neotevřel), k-7e2498 (starší údaje z roku 2024 a oznámení plánu, ne skutek), k-5c0279 (jediný původní zdroj LSM/VDD, originál se nepodařilo otevřít, rozsudek z 20. 8. není pravomocný).\n\nDuplicity: k-fd657b je týž případ jako us-590b687216, ale úřední tisková zpráva DOJ z 15. 9. jmenuje obviněné a Prahu (červen 2024) — záznam by šlo doplnit přes správce; k-06fadaf je už zdrojem záznamu bulharsko-emco (chybí tam jen adresa přes Google News). Recyklovaná stará zpráva: k-59beda (titulek z 8. 12. 2023, aktuální prodloužení kontrol z 18. 8. je migrační opatření).\n\nÚdery na Ukrajinu/Moskvu k tvému rozhodnutí: k-ad9e99, k-143a1b, k-0dc73a, k-80fc2a (dronový útok na Moskvu a rafinerii v Kapotně, oběti se ve zdrojích liší, stranám nevěřím bez nezávislého potvrzení). k-036cb3 je jen ruské tvrzení o kyberútocích na volby, nikdo nezávislý ho nepotvrdil.\n\nOprava k mému dřívějšímu návrhu: záznam ro-8097dca796 (dron dopadl v Rumunsku) se zveřejnil automaticky díky zdroji, který jsem označil jako primární, ale je to jen zrcadlo tiskové zprávy rumunského ministerstva na globalsecurity.org, ne web ministerstva. To byla moje chyba; mělo být primarni: false. Záznam je v incidenty.json a upravit ho smí jen správce (kontrola: zdroj, jistota střední).",
+    "uzavreno": "2026-09-20T18:55:46.801Z"
+  },
+  {
+    "id": "z-mua6fl2q",
+    "zadano": "2026-09-20T18:55:46.802Z",
+    "zadal": "fronta",
+    "stav": "hotovo",
+    "seznam": [
+      {
+        "druh": "navrh",
+        "id": "i-2026-09-18-fr-svolani-lidru",
+        "popis": "2026-09-18 · Francie · Francie: prezident svolal na 18. září předsedy parlamentních stran kvůli rychlému zhoršení mezinárodní situace",
+        "url": "https://www.franceinfo.fr/monde/moyen-orient/emmanuel-macron-convie-les-chefs-de-parti-vendredi-pour-evoquer-la-degradation-rapide-de-la-situation-internationale-et-ses-consequences-en-france-sur-la-securite-et-l-energie_8196932.html"
+      },
+      {
+        "druh": "navrh",
+        "id": "i-2026-09-18-8a1833a84b",
+        "popis": "2026-09-18 · Slovensko · Slovensko: Fico zpochybnil závazek článku 5 NATO",
+        "url": "https://ct24.ceskatelevize.cz/clanek/svet/s-kym-a-proc-budeme-bojovat-fico-se-odmita-ridit-clankem-5-nato-377737"
+      },
+      {
+        "druh": "navrh",
+        "id": "i-2026-09-15-f0ffc8ce7e",
+        "popis": "2026-09-15 · Nizozemsko · Nizozemsko: železniční síť paralyzována po umístění předmětů na koleje",
+        "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE9laHhoTzZtckVFb3lqMEQxOUwxUmtRTDVtaFloUHNkTDdMXzJjQ3I1VnRjandIZzlUYS0zT1VoMHo4czREQ08tX0JsbEtUYlNXN0dvSFJGaVdFUWJYdzB5R3R2cmljbVo3X2Y2Rk5PMzE?oc=5"
+      },
+      {
+        "druh": "navrh",
+        "id": "i-2026-09-16-9871dbb9bd",
+        "popis": "2026-09-16 · Rusko · Rusko: kubánský tanečník měl koordinovat sabotáže po celé Evropě",
+        "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE5tWGxiS05IQlllYWRMT2w1c0daRXR6ejRKT3VIZ3pFZ2FVZlViY1lIaFFUVlVaZUJHRkRwNGxjam9pSW5Ka29UdmJta2kyTmJBYXkzNTZWUzU?oc=5"
+      },
+      {
+        "druh": "navrh",
+        "id": "i-2026-09-15-7693865f77",
+        "popis": "2026-09-15 · Litva · Litva: italské Eurofightery NATO sestřelily nad okresem Kaišiadorys dron, který podle LRT vletěl z Běloruska",
+        "url": "https://www.lrt.lt/en/news-in-english/19/3054232/nauseda-drone-shot-down-over-lithuania-was-russian-gerbera-headed-for-ukraine"
+      },
+      {
+        "druh": "navrh",
+        "id": "i-2026-09-15-42a895b81b",
+        "popis": "2026-09-15 · Estonsko · Estonsko: prokuratura uzavřela dohodu o vině s Olegem Bessedinem, obviněným z činnosti proti státu ve prospěch Ruska; navržený trest je sedm let",
+        "url": "https://news.err.ee/1610138830/crimes-against-the-estonian-state-plea-deal-defendant-faces-7-years-in-prison"
+      },
+      {
+        "druh": "navrh",
+        "id": "i-2026-09-14-246402d611",
+        "popis": "2026-09-14 · Německo · Německo: u vojenského letiště Wunstorf u Hannoveru našla policie trosky dronu, původ zatím není znám",
+        "url": "https://www.antenne.com/niedersachsen/nachrichten/regional/Polizei-im-Gro%C3%9Feinsatz-Drohne-nahe-Steinhuder-Meer-abgest%C3%BCrzt-id1721572.html"
+      },
+      {
+        "druh": "navrh",
+        "id": "i-2026-09-17-7abcd2822f",
+        "popis": "2026-09-17 · Litva · Litva: ruská vojenská letadla narušila vzdušný prostor, vzlétly italské stíhačky Eurofighter",
+        "url": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxNY3hTeUd0MU1XRERCSUlZbHJlOTZNMEhiaE01QTdsaTQ2Rm16OXhXaWZ3UHBqVkJ5R25aTWk3aUl0M0d6NGtIbmw0em5zYmk5RjBhU0ExME5jVjRpaGNXaTFzYk5kaUN1V2ZMWU1wTWhoQkRfVXpHWGRkamZ6WnB0cHJwMGJxQklzeDI0NnZpRXRsemVtMS1XVWpDdnY2QVB5ZjNEaTU1S3F3UW5MZHo1dDZYOXN1QkJlWmxzYTRqZzlDTkxzVmtBZjlNZldaYi1VaVHSAdcBQVVfeXFMUFJGYm5aSVpYRVRIYUJvOU03RkxnY0lXckZ6anRqbHNTNnE1VjRLUW01bmwtMVo1aU5NRzBQeVNYTmZjRER6UFFDdUdxTnRERjhYUW1aa1NMamxIOTV0YU4tYWFvejJEU0czc1AwWHJhaHkwaUV6em9yb2dlVEp2cUowaFVPLVZ0SDBqdkRPcTJ6SzNhX290YkhIaUN1cXFhU0RCU0Y1VWJpdWVlblFGa2ktRDBFaXZ0ZjlIT1ZKQi1hS3ZvR3htLVF0alJBQkdtMFd6cTd0Wnc?oc=5"
+      },
+      {
+        "druh": "navrh",
+        "id": "i-2026-09-16-fdc5f938d7",
+        "popis": "2026-09-16 · Česko · Česko: Číňan stíhaný kvůli špionáži zůstává ve vazbě, rozhodl vrchní soud",
+        "url": "https://ct24.ceskatelevize.cz/clanek/domaci/cinan-stihany-v-cesku-ma-kvuli-spionazi-zustat-ve-vazbe-rozhodl-vrchni-soud-377678"
+      },
+      {
+        "druh": "navrh",
+        "id": "i-2026-09-15-8c057ebc88",
+        "popis": "2026-09-15 · Nizozemsko · Nizozemsko: podezřelá sabotáž ochromila železniční dopravu ve velké části země",
+        "url": "https://www.bbc.co.uk/news/articles/c8ly49w9g1edo?at_medium=RSS&at_campaign=rss"
+      },
+      {
+        "druh": "navrh",
+        "id": "i-2026-09-15-ce6ddf20c5",
+        "popis": "2026-09-15 · Litva · Litva: stíhačky NATO sestřelily dron, který narušil vzdušný prostor",
+        "url": "https://www.irozhlas.cz/zpravy-svet/stihacky-sestrelily-dron-nad-litvou-dekuji-spojencum-za-jejich-rychlou-reakci_2609150655_elv"
+      },
+      {
+        "druh": "navrh",
+        "id": "i-2026-09-15-41f016ed9e",
+        "popis": "2026-09-15 · EU · Kubánský lektor tance v Rusku podle vyšetřování DW organizoval síť náboru pro sabotáže v EU",
+        "url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxOUTBTY193Q3JQcEFIVTRoYjMyTkVDb2tUSkVWeHFoUkF0Z0NCR0RiWjhtRWVXTURHQjRzamtQYm1RU2taOWpYX1BvSzFBM25fRVR2SWFIdlh4NHM5THJySGZWNUs4di1PX1Bzb0IzdmVIeHRFM3VVU0N1eVhrOGFqOElvTWlGRDJMSGJ4VnZucVJWNUU1QmlHN3JZM3k3d3VfRVhTT21tTEFHdmRpY0lEaFlXTjY3bDB2TDFxT3FveHV4S25S?oc=5"
+      },
+      {
+        "druh": "navrh",
+        "id": "i-2026-09-15-f93ff21d6f",
+        "popis": "2026-09-15 · Polsko · Polsko a Rumunsko vyslaly stíhačky kvůli ruskému dronovému útoku na západní Ukrajinu",
+        "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxQR0lZQTVhTmFPSTljVk94bXB5aDB3bGl4YjUwbFBkSk5zV3N2VXVVRVpiS2U5UWpjcDRyQWl5QV9pblRSUFZ0YnpXTzV4WlRhU3RRd0FqZjFOWFBKcW50djh0SEVlQkRsbURrOU93NzU1OEJmZEd6T3prcDd2UFE2SFZ5ZWV4TkwyVng4bi1OMWt5UHIzLUx6TUI1LW1yaDZyX0RBN3ZiUHZhcXBQVUdKMXdlRmktS3JD?oc=5"
+      },
+      {
+        "druh": "navrh",
+        "id": "i-2026-09-15-fcada4a440",
+        "popis": "2026-09-15 · Ukrajina · Rusko udeřilo na Kyjev a Záporoží, Ukrajina zasáhla rafinerii v Syzrani a sklad v Taganrogu",
+        "url": "https://ct24.ceskatelevize.cz/clanek/svet/ukrajinci-opet-uderili-v-hloubi-ruska-zasahli-rafinerii-i-sklad-prodejce-ozon-377617"
+      },
+      {
+        "druh": "navrh",
+        "id": "i-2026-09-15-4fdc7b8139",
+        "popis": "2026-09-15 · Česko · Česko: Český rozhlas připravuje 22 scénářů krizového vysílání ve spolupráci se záchrannými složkami",
+        "url": "https://www.irozhlas.cz/zpravy-domov/povodne-blackout-nebo-chemicka-havarie-cesky-rozhlas-vytvoril-22-scenaru-pro_2609151147_aru"
+      },
+      {
+        "druh": "navrh",
+        "id": "i-2026-09-14-9bd0f18fb2",
+        "popis": "2026-09-14 · Litva · Litva: stíhačky NATO sestřelily dron nad litevským vzdušným prostorem",
+        "url": "https://ct24.ceskatelevize.cz/clanek/svet/stihacky-nato-sestrelily-nad-litvou-dron-potvrdil-prezident-nauseda-377614"
+      },
+      {
+        "druh": "navrh",
+        "id": "i-2026-09-14-0577b0e3a1",
+        "popis": "2026-09-14 · EU · Vyšetřování DW: sabotáže v EU řídil z Ruska kubánský učitel tance",
+        "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxQN2pYM1doX1hxaHRJclZOYlRTLXpvX3pGeTJNOThvZ1FIRUM5Qm91YllzWmNLc3RfUDQ1X0FDbXhvWUstUkdVUjZOcFc1MHFUdFZsVDBHSWVaSU5VVVFvZVJ5LUhHR3JrWEdfckMyZy0wUm9pQU1BV1VXN1FmVDJMSzEtbVkxQQ?oc=5"
+      },
+      {
+        "druh": "navrh",
+        "id": "i-2026-09-13-daec1ea3be",
+        "popis": "2026-09-13 · Německo · Německo označilo hlavní podezřelé z dronového útoku na letiště Lipsko/Halle",
+        "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxQLWxYX2xXXzBVdWVYbVdYeDRsM2JXSkdXMF9sOGlyQ25sdjZIVTJ0RFBfcnhiZHRpMkNkYnRBVWZPcS16d0U1OEZLTmlkYlNubWtxWEJ0S1ZaOGFrWThiVzNrZzB4cXViWHYxN0JmaU9JdkZ6QzhBYldTNGppdFBVaVUtdDJxYXVTUGR5Vk9tN3cwMVVQMGlkWjgxcEJMYmozLVdwUlhESVFkWTNPYTNleHYzM1ZzNzQ?oc=5"
+      },
+      {
+        "druh": "navrh",
+        "id": "i-2026-09-13-4c43e0cf0f",
+        "popis": "2026-09-13 · Litva · Litva: letiště ve Vilniusu krátce uzavřeno kvůli domnělému dronu, šlo o hejno ptáků",
+        "url": "https://news.google.com/rss/articles/CBMi4wFBVV95cUxNU0p6bHBvNDRrQnFKSUI2dUp6V3pEVUpKN2lxWkVTNDBOQV8xOC11TFZjLXVLeXhUSGJwNEI4MDJSUEhTaW9ZTkJEcjBQOExOMzlMdm13bWFWamVfNS1zOG5veldKOHVQM1V2Wm9xanlscW9VcHJBYTllUGxBQTNhSDI4cXFvaVFLSzJzUFg4ZWNtZ1kyZUljRnJDSG93TkRoa0VMbVo5a3BaRmdTNG5HRk9ScWpTM3ZOMXlldFBFSXhMWk1xd25vNUlBbmZEcDhEREhHLVF2QTA1OWpGcUpoUF9JVQ?oc=5"
+      },
+      {
+        "druh": "navrh",
+        "id": "i-2026-09-13-31de033fc0",
+        "popis": "2026-09-13 · Polsko · Polsko: ruský dron zasáhl vlak u hranice s Ukrajinou, vyhlášen letecký poplach a vzlétly stíhačky",
+        "url": "https://ct24.ceskatelevize.cz/clanek/svet/kyjev-zasahl-ropnou-rafinerii-v-krasnodarskem-kraji-uvadi-ukrajinska-armada-377532"
+      },
+      {
+        "druh": "navrh",
+        "id": "i-2026-09-12-39a8c14760",
+        "popis": "2026-09-12 · Německo · Německo: podezřelý ze sabotáže na letišti Lipsko má být napojen na ruskou GRU",
+        "url": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxNTVl1UEhtSHltdjdEejFnU1ZoV1VZU0pLMmt5bTN6eEUya0lnV2FFLVVLejdQdnRGeWtwSk1WRFJqTGlPZm4waS1uQW4xQnYyWEQ5ZktreXFvSS1GMTJFUEVNZXEwVU5hN0o2c3FURkYzX2hiWjlCakVVcElHVXpxWnZiVEpCRXB2YzhwQ3pXRGkwR3JzQmEwT0FEYTc3QzhYRVhjVjVPQWpuVjc4MTZ3di16R0tDUDFreF9PNzE0OVB0MVh2Y2NCSnhTYTItUnZveHfSAdABQVVfeXFMT1laUzFTVFpwYzNlajZEaGFCaUt2bXFRZFlFUUphX1N4OUJ6Mnp6OEtVcGUteGFpXzZKdVdDRVJDWEpDVzJnUjcxYTlIY0szczdiUXRUdjBWaXJHOHpHUW0zQk9sR285QzU0emx3Z0ZNYVQtcGJjdG5wTF9sQW1tcWJIVUw4el94TGc2R3pUQ3JZdGtuNDhxbjdETW5aY2todERXM3k2Wmx6UjA5SGExSjVpeHFYajdYWEl0b1ZpLU8zM19HT0cxSG1kNXgzYVNZMQ?oc=5"
+      },
+      {
+        "druh": "navrh",
+        "id": "i-2026-09-16-5e0064da30",
+        "popis": "2026-09-16 · Polsko · Polsko: stíhačky vzlétly, letiště Lublin a Rzeszów dočasně zastavila provoz kvůli ruskému útoku na Ukrajinu",
+        "url": "https://kyivindependent.com/poland-scrambles-fighter-jets-temporarily-closes-airports-while-russian-drones-attack-ukraine/"
+      },
+      {
+        "druh": "navrh",
+        "id": "i-2026-09-07-52c149ed72",
+        "popis": "2026-09-07 · Ukrajina · NATO opakovaně zvedalo stíhačky nad Baltským regionem kvůli ruským letadlům",
+        "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxOSlI4VENaa3RVb0VlQ0RoVzFBdmVSenpYME1ERVRGdEMxRi1TLXJOVERoTXlsSVI4WWVBZHhhSjN5bnZEemVWdGJLazRSN1Q0NU4tVVJXNml1VW5Zc1RkSVJoSkpjRkROUUZ0TVZ6aWlFUVpTUGtRTEp0cUYtVkEzNV9seVJPRm1SeWNSV011VUhMWGdsVUFJcFN3?oc=5"
+      },
+      {
+        "druh": "navrh",
+        "id": "i-2026-09-06-bd956e0f9c",
+        "popis": "2026-09-06 · Polsko · Polsko: podezřelé narušení vzdušného prostoru způsobilo hejno ptáků",
+        "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxOX2kwRlJwUXlHOEk0RWswcGFrdGl2TmRPdG9sZW1Kb0dVTU9GbjZxMzdBZGxuWmEzbkJvVlMwWWZzUFJOZUhuQzY5a09zWENiTThTaVVZd3k0b3E4UURkLTFZUG85MFRhTlk0SHJ5bHVFY1dCYnk0dmRDYnh2OGthaEZvUE1BbndHWl9nYjFTbVFDcnpGOGdwT3hn?oc=5"
+      },
+      {
+        "druh": "navrh",
+        "id": "i-2026-09-12-8097dca796",
+        "popis": "2026-09-12 · Rumunsko · Rumunsko: dron, který přeletěl Ukrajinu a Moldavsko, dopadl u Botoșenița Mare v župě Suceava; zvednuty byly rumunské F-16",
+        "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxQSVZBTEFMMHFPSWx3SmxMeUZLQUh0T1h5bmZYbHFrQkM4Y0R0Vkl3dmI3R0MxdEEwUW9MSDFQMWx3bTl6M1NVbjZ5S0dOUFlKVTBuekZTSE5xQWlTWWtmaHgwMm9rbnotMVBfWENHdkFoU2pEWWdBakpSU1g5N2pjRHlaVEJvSTlsUWk0YTZfOTRVajlh?oc=5"
+      },
+      {
+        "druh": "navrh",
+        "id": "i-2026-09-15-590b687216",
+        "popis": "2026-09-15 · Rusko · USA: obvinila pět osob z ruské sabotážní a atentátnické sítě",
+        "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxPVlVBcWM0d0FaWU5USnZlUUVESnp6bVR3alZaRHlyTEpTWGE1U013Qkl4dE51UXVKV29xdlZCWGlscWFEOThRRGFvVXBTN2dfVXZsbUVpMlBxN3ZpZk9jUVJhcmozRmZidkhLQk85YmFzLWVhbFFBMENOZlZkaFdHaWlMaDh5UDNHWTdZRURfUlFXeGtwTm5ySENMQWtkY3BsN0N5NtIBpwFBVV95cUxObzk5ZEZiSUMzRi15Yk5XQmtqZkdlRWFUdWwwc0I5WW02MkItMGYweUVrZVh0S2Z4dmlCbXE3WWFjc2s0YU5CWTQyM2I3YW96OUxMbUxtVXZNQUxYQlNwa1hIRE1ncVJCNGtTQzkyN1BGcWFBODdlNlZhYjJGYkxKS3BDR2V2RlFGb1J2SDZNQ19tUWxSMDNSYnEteUtpZ1dNMlFyWlpUSQ?oc=5"
+      },
+      {
+        "druh": "kandidat",
+        "id": "k-fd657b73cb784ec2",
+        "popis": "2026-09-20 · Rusko · US Charges Russian Network in Alleged European Sabotage, US Murder Plot - OCCRP",
+        "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxPQ1RQT2kyTFVDRmZvQWdsbDBIRERhR0I1REJSSVE3N2JYSjFXWGQxWVJSVzBZUjRvZ3NMZV9HRnc5eWdsdjR2QVZxd0t2VEVXQ2o2aW1jVl9teGQ2NkNXcjNTTFl1NnJoa3B3WjROcXFDUlVKby1TUDRBLXlFck5LS193R2NsWG5xS1NTeVJVazF0SzdlbnVyXzJUemM4VmcybXc?oc=5"
+      },
+      {
+        "druh": "kandidat",
+        "id": "k-ad9e995a839bf16f",
+        "popis": "2026-09-20 · Ukrajina · Largest attack on Moscow sees Ukraine fire hundreds of drones, mayor says",
+        "url": "https://www.bbc.co.uk/news/articles/c34gdjk1ne8yo?at_medium=RSS&at_campaign=rss"
+      },
+      {
+        "druh": "kandidat",
+        "id": "k-036cb3bbc9dd78ee",
+        "popis": "2026-09-20 · Rusko · Russia claims cyberattacks on voting systems during parliamentary election.",
+        "url": "https://kyivindependent.com/russia-claims-cyberattacks-on-voting-systems-during-parliamentary-election/"
+      },
+      {
+        "druh": "kandidat",
+        "id": "k-143a1bf2a88713bc",
+        "popis": "2026-09-20 · Rusko · Russia reports deadly mass drone attack on Moscow region, oil refinery amid parliamentary election.",
+        "url": "https://kyivindependent.com/russia-says-dozens-of-ukrainian-drones-targeted-moscow-as-broader-attack-hit-multiple-regions/"
+      },
+      {
+        "druh": "kandidat",
+        "id": "k-59bedaf44d0d33d4",
+        "popis": "2026-09-20 · Česko · Německo o dva měsíce prodlouží kontroly na hranicích s ČR, Polskem a Švýcarskem - epochtimes.cz",
+        "url": "https://news.google.com/rss/articles/CBMiiwJBVV95cUxOaGp2Si1IWHBGMTIyaVV5ZTZNZjRxeFFCODBXU3JNS3FXN0ZqdU1iRmgxa04tcmpHQTA5TmxfMkJVVUtPSE5nbGRvM2dkNnhlLU9UR1dUT0RxeHNxOVFlNjNFeGpfZ3J4YXFTVFh3SUJOVXZRTEh5U0ZMOHAwQmJRMFl6WjNOcUxqVTg3UnN3Rm5UamotT3QxenIxdXNLNWFBZWlhZWVqeUNVd0h0QXJVeXlOeFVZdVE0Ulhmd0JIcldGT1h5REF4eGtZX1ctUEc1aC15d0JpOXFrX1hUMVllc0RTQlczX09LcDZpTmhBRHgxczVDcUVhY09IVjVLdnBPeV9lVlBLVHBtZnM?oc=5"
+      },
+      {
+        "druh": "kandidat",
+        "id": "k-0dc73a486a490a63",
+        "popis": "2026-09-20 · Ukrajina · Ukrajina zasáhla rafinerii v moskevském regionu, uvedl Zelenskyj",
+        "url": "https://ct24.ceskatelevize.cz/clanek/svet/starosta-moskvy-tvrdi-ze-mesto-celilo-dosud-nejvetsimu-dronovemu-utoku-377780"
+      },
+      {
+        "druh": "kandidat",
+        "id": "k-80fc2a9669627d74",
+        "popis": "2026-09-20 · Ukrajina · ONLINE: Nejrozsáhlejší útok na Moskvu. Ukrajina poslala na ruskou metropoli podle starosty 450 dronů",
+        "url": "https://www.irozhlas.cz/zpravy-domov/online-nejrozsahlejsi-utok-na-moskvu-ukrajina-poslala-na-ruskou-metropoli-podle_2609200853_lhv"
+      },
+      {
+        "druh": "kandidat",
+        "id": "k-b19ad52154b53d09",
+        "popis": "2026-09-16 · Rusko · Partisans claim sabotage at Russian plant producing missile components.",
+        "url": "https://kyivindependent.com/partisans-claim-sabotage-at-russian-plant-producing-missile-components/"
+      },
+      {
+        "druh": "kandidat",
+        "id": "k-8e175046cef4bee6",
+        "popis": "2026-09-15 · Česko · Vojenská policie zadržela tři lidi kvůli zakázkám v ÚVN",
+        "url": "https://ct24.ceskatelevize.cz/clanek/domaci/vojenska-policie-zasahuje-kvuli-zakazkam-v-ustredni-vojenske-nemocnici-377629"
+      },
+      {
+        "druh": "kandidat",
+        "id": "k-06fadafd7744894f",
+        "popis": "2026-09-12 · Bulharsko · Explosion at Bulgarian ammunition depot supplying Ukraine sparks massive fire, sabotage probe - The Kyiv Independent",
+        "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxQeENxQ0VwcUhEdTlRTHJONjNlREE3eDVERV9fWjk0dWdZdGIzeURjMDlrYVlXdkJObF9NN0VzMEtocHFXU1AyenAyWEJwRzZTRElZOWk1amc1ZFRWV19MNGlaT29xa1dNSTV3TkFxUU1TdXBiOV9wNGt5RWlyUXFOVktyeUluM2c3MGlsNkotdy03QU8wcmlBTi1Yc0JuZHI4V3k2ZmZsNnhJZ01MNm1CdzBLcDVmdw?oc=5"
+      },
+      {
+        "druh": "kandidat",
+        "id": "k-edcc63c9750c0683",
+        "popis": "2026-09-09 · Spojené království · Britská letiště kvůli problémům řízení provozu zrušila přes dva tisíce letů",
+        "url": "https://ct24.ceskatelevize.cz/clanek/svet/britska-letiste-kvuli-problemum-rizeni-provozu-zrusila-pres-dva-tisice-letu-377407"
+      },
+      {
+        "druh": "kandidat",
+        "id": "k-2946b37f4991d345",
+        "popis": "2026-09-09 · Estonsko · Teens charged in hate‑fueled arson attacks on ethnic-owned Tallinn food businesses",
+        "url": "https://news.err.ee/1610132953/teens-charged-in-hate-fueled-arson-attacks-on-ethnic-owned-tallinn-food-businesses"
+      },
+      {
+        "druh": "kandidat",
+        "id": "k-a2bd3d3b7a6c7200",
+        "popis": "2026-09-08 · Moldavsko · An Azerbaijani national was arrested in Moldova on charges of spying for the FSB - UA.NEWS",
+        "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxNcldZX2lkNUU0cEd3azFGVEgwRXNxLTVQeGVVWldOWjk1NGdIeWRyZFFISXRyOFU2NnZPSnYySXNwX1VySDdqaXhvQ1U1ZlEydzZMZjlsbkZHUUUyZG5lYlpfQXhwWjdndy00aGR1dHRQVXRPNDJJRWsxVDFDOVJEaDBNb1ppaW1WWnRnT0dsWFk3UzFG?oc=5"
+      },
+      {
+        "druh": "kandidat",
+        "id": "k-bcde1eaa561bc489",
+        "popis": "2026-09-08 · Německo · Cybersecurity: Data on critical infrastructure may also have been compromised in cyberattack on Berlin city government - Table.Briefings",
+        "url": "https://news.google.com/rss/articles/CBMi6gFBVV95cUxQZnI2NlhFenVLaUFsZ2xOSnV5MGpydHh3anpHa2NlaFNpWGozZW5TUjg0N3JuaTl5U2VHVTBoSERVWmxnWmRrbGlQVy1fQm1aOTh4T2Y5OTBaVmVHNkUxdzhlZUthUUdoOHA2dmFfNUtwSE5MdXBDYzE3bmdDMlRVSUdOam1hOU9rOGdWNXJqeEtPeS1kMVNVejJRQTJ0YWF5cFMzMXNsY3FUQ2NBVjVKLW9nNGhlMWZUMzEzcjBXVkFMYm4zX083R0o1YXdpdE9DMm9XOUpUQlNGOXVDSXNGMEY0ZVFZWGxWNWc?oc=5"
+      }
+    ],
+    "zadani": "Seznam k vyřízení: 40 položek. Projdi ho celý.\n\nU KAŽDÉ položky musí po tobě zůstat stopa v datech — buď zápis, nebo\nodepsání s důvodem. Položka, ke které nic nenapíšeš, se počítá jako\nnevyřízená a vrátí se ti v dalším zadání.\n\nPravidla jsou v PATROL.md na tvé větvi a nemění se. Nejčastěji to padá na:\ndva nezávislé zdroje vždycky, datum události není datum článku, původce až\npo úředním závěru, [DOPLNIT] se nenahrazuje odhadem.\n\nA) 26 NÁVRHŮ BEZ ÚŘEDNÍHO ZDROJE — dohledej ho\n\nTyhle jsou zpracované a na webu už jsou vidět jako nepotvrzené. Chybí jim\ndruhý doklad z první ruky: úřad, policie, armáda, národní CERT nebo\nprovozovatel zasažené infrastruktury. S ním se záznam zveřejní sám.\n\nSběr od 20. 9. 2026 čte 35 úředních kanálů — vlády, ministerstva vnitra\na obrany, bezpečnostní služby, CERTy a policie sledovaných zemí, k tomu\nNATO, ENISA, Evropskou komisi a provozovatele sítí (ČEPS, Správa železnic,\nProRail). Seznam je v sber/zdroje-udalosti.ts v poli URADY. Hledej nejdřív\ntam; u nizozemské železnice je správný zdroj ProRail, ne médium.\n\nPOZOR na to, na čem se to už jednou zlomilo: úřední zdroj je odkaz NA ÚŘAD.\nZrcadlo tiskové zprávy (globalsecurity.org), distribuce (mynewsdesk.com)\nani veřejnoprávní vysílatel (irozhlas.cz) úřední zdroj nejsou. Kvůli tomu\nse 20. 9. musely stáhnout z webu dva záznamy, které se zveřejnily samy.\n\n 1. i-2026-09-18-fr-svolani-lidru · 2026-09-18 · Francie · Francie: prezident svolal na 18. září předsedy parlamentních stran kvůli rychlému zhoršení mezinárodní situace\n    https://www.franceinfo.fr/monde/moyen-orient/emmanuel-macron-convie-les-chefs-de-parti-vendredi-pour-evoquer-la-degradation-rapide-de-la-situation-internationale-et-ses-consequences-en-france-sur-la-securite-et-l-energie_8196932.html\n 2. i-2026-09-18-8a1833a84b · 2026-09-18 · Slovensko · Slovensko: Fico zpochybnil závazek článku 5 NATO\n    https://ct24.ceskatelevize.cz/clanek/svet/s-kym-a-proc-budeme-bojovat-fico-se-odmita-ridit-clankem-5-nato-377737\n 3. i-2026-09-15-f0ffc8ce7e · 2026-09-15 · Nizozemsko · Nizozemsko: železniční síť paralyzována po umístění předmětů na koleje\n    https://news.google.com/rss/articles/CBMicEFVX3lxTE9laHhoTzZtckVFb3lqMEQxOUwxUmtRTDVtaFloUHNkTDdMXzJjQ3I1VnRjandIZzlUYS0zT1VoMHo4czREQ08tX0JsbEtUYlNXN0dvSFJGaVdFUWJYdzB5R3R2cmljbVo3X2Y2Rk5PMzE?oc=5\n 4. i-2026-09-16-9871dbb9bd · 2026-09-16 · Rusko · Rusko: kubánský tanečník měl koordinovat sabotáže po celé Evropě\n    https://news.google.com/rss/articles/CBMiWEFVX3lxTE5tWGxiS05IQlllYWRMT2w1c0daRXR6ejRKT3VIZ3pFZ2FVZlViY1lIaFFUVlVaZUJHRkRwNGxjam9pSW5Ka29UdmJta2kyTmJBYXkzNTZWUzU?oc=5\n 5. i-2026-09-15-7693865f77 · 2026-09-15 · Litva · Litva: italské Eurofightery NATO sestřelily nad okresem Kaišiadorys dron, který podle LRT vletěl z Běloruska\n    https://www.lrt.lt/en/news-in-english/19/3054232/nauseda-drone-shot-down-over-lithuania-was-russian-gerbera-headed-for-ukraine\n 6. i-2026-09-15-42a895b81b · 2026-09-15 · Estonsko · Estonsko: prokuratura uzavřela dohodu o vině s Olegem Bessedinem, obviněným z činnosti proti státu ve prospěch Ruska; navržený trest je sedm let\n    https://news.err.ee/1610138830/crimes-against-the-estonian-state-plea-deal-defendant-faces-7-years-in-prison\n 7. i-2026-09-14-246402d611 · 2026-09-14 · Německo · Německo: u vojenského letiště Wunstorf u Hannoveru našla policie trosky dronu, původ zatím není znám\n    https://www.antenne.com/niedersachsen/nachrichten/regional/Polizei-im-Gro%C3%9Feinsatz-Drohne-nahe-Steinhuder-Meer-abgest%C3%BCrzt-id1721572.html\n 8. i-2026-09-17-7abcd2822f · 2026-09-17 · Litva · Litva: ruská vojenská letadla narušila vzdušný prostor, vzlétly italské stíhačky Eurofighter\n    https://news.google.com/rss/articles/CBMi0gFBVV95cUxNY3hTeUd0MU1XRERCSUlZbHJlOTZNMEhiaE01QTdsaTQ2Rm16OXhXaWZ3UHBqVkJ5R25aTWk3aUl0M0d6NGtIbmw0em5zYmk5RjBhU0ExME5jVjRpaGNXaTFzYk5kaUN1V2ZMWU1wTWhoQkRfVXpHWGRkamZ6WnB0cHJwMGJxQklzeDI0NnZpRXRsemVtMS1XVWpDdnY2QVB5ZjNEaTU1S3F3UW5MZHo1dDZYOXN1QkJlWmxzYTRqZzlDTkxzVmtBZjlNZldaYi1VaVHSAdcBQVVfeXFMUFJGYm5aSVpYRVRIYUJvOU03RkxnY0lXckZ6anRqbHNTNnE1VjRLUW01bmwtMVo1aU5NRzBQeVNYTmZjRER6UFFDdUdxTnRERjhYUW1aa1NMamxIOTV0YU4tYWFvejJEU0czc1AwWHJhaHkwaUV6em9yb2dlVEp2cUowaFVPLVZ0SDBqdkRPcTJ6SzNhX290YkhIaUN1cXFhU0RCU0Y1VWJpdWVlblFGa2ktRDBFaXZ0ZjlIT1ZKQi1hS3ZvR3htLVF0alJBQkdtMFd6cTd0Wnc?oc=5\n 9. i-2026-09-16-fdc5f938d7 · 2026-09-16 · Česko · Česko: Číňan stíhaný kvůli špionáži zůstává ve vazbě, rozhodl vrchní soud\n    https://ct24.ceskatelevize.cz/clanek/domaci/cinan-stihany-v-cesku-ma-kvuli-spionazi-zustat-ve-vazbe-rozhodl-vrchni-soud-377678\n10. i-2026-09-15-8c057ebc88 · 2026-09-15 · Nizozemsko · Nizozemsko: podezřelá sabotáž ochromila železniční dopravu ve velké části země\n    https://www.bbc.co.uk/news/articles/c8ly49w9g1edo?at_medium=RSS&at_campaign=rss\n11. i-2026-09-15-ce6ddf20c5 · 2026-09-15 · Litva · Litva: stíhačky NATO sestřelily dron, který narušil vzdušný prostor\n    https://www.irozhlas.cz/zpravy-svet/stihacky-sestrelily-dron-nad-litvou-dekuji-spojencum-za-jejich-rychlou-reakci_2609150655_elv\n12. i-2026-09-15-41f016ed9e · 2026-09-15 · EU · Kubánský lektor tance v Rusku podle vyšetřování DW organizoval síť náboru pro sabotáže v EU\n    https://news.google.com/rss/articles/CBMixAFBVV95cUxOUTBTY193Q3JQcEFIVTRoYjMyTkVDb2tUSkVWeHFoUkF0Z0NCR0RiWjhtRWVXTURHQjRzamtQYm1RU2taOWpYX1BvSzFBM25fRVR2SWFIdlh4NHM5THJySGZWNUs4di1PX1Bzb0IzdmVIeHRFM3VVU0N1eVhrOGFqOElvTWlGRDJMSGJ4VnZucVJWNUU1QmlHN3JZM3k3d3VfRVhTT21tTEFHdmRpY0lEaFlXTjY3bDB2TDFxT3FveHV4S25S?oc=5\n13. i-2026-09-15-f93ff21d6f · 2026-09-15 · Polsko · Polsko a Rumunsko vyslaly stíhačky kvůli ruskému dronovému útoku na západní Ukrajinu\n    https://news.google.com/rss/articles/CBMiuAFBVV95cUxQR0lZQTVhTmFPSTljVk94bXB5aDB3bGl4YjUwbFBkSk5zV3N2VXVVRVpiS2U5UWpjcDRyQWl5QV9pblRSUFZ0YnpXTzV4WlRhU3RRd0FqZjFOWFBKcW50djh0SEVlQkRsbURrOU93NzU1OEJmZEd6T3prcDd2UFE2SFZ5ZWV4TkwyVng4bi1OMWt5UHIzLUx6TUI1LW1yaDZyX0RBN3ZiUHZhcXBQVUdKMXdlRmktS3JD?oc=5\n14. i-2026-09-15-fcada4a440 · 2026-09-15 · Ukrajina · Rusko udeřilo na Kyjev a Záporoží, Ukrajina zasáhla rafinerii v Syzrani a sklad v Taganrogu\n    https://ct24.ceskatelevize.cz/clanek/svet/ukrajinci-opet-uderili-v-hloubi-ruska-zasahli-rafinerii-i-sklad-prodejce-ozon-377617\n15. i-2026-09-15-4fdc7b8139 · 2026-09-15 · Česko · Česko: Český rozhlas připravuje 22 scénářů krizového vysílání ve spolupráci se záchrannými složkami\n    https://www.irozhlas.cz/zpravy-domov/povodne-blackout-nebo-chemicka-havarie-cesky-rozhlas-vytvoril-22-scenaru-pro_2609151147_aru\n16. i-2026-09-14-9bd0f18fb2 · 2026-09-14 · Litva · Litva: stíhačky NATO sestřelily dron nad litevským vzdušným prostorem\n    https://ct24.ceskatelevize.cz/clanek/svet/stihacky-nato-sestrelily-nad-litvou-dron-potvrdil-prezident-nauseda-377614\n17. i-2026-09-14-0577b0e3a1 · 2026-09-14 · EU · Vyšetřování DW: sabotáže v EU řídil z Ruska kubánský učitel tance\n    https://news.google.com/rss/articles/CBMihgFBVV95cUxQN2pYM1doX1hxaHRJclZOYlRTLXpvX3pGeTJNOThvZ1FIRUM5Qm91YllzWmNLc3RfUDQ1X0FDbXhvWUstUkdVUjZOcFc1MHFUdFZsVDBHSWVaSU5VVVFvZVJ5LUhHR3JrWEdfckMyZy0wUm9pQU1BV1VXN1FmVDJMSzEtbVkxQQ?oc=5\n18. i-2026-09-13-daec1ea3be · 2026-09-13 · Německo · Německo označilo hlavní podezřelé z dronového útoku na letiště Lipsko/Halle\n    https://news.google.com/rss/articles/CBMitwFBVV95cUxQLWxYX2xXXzBVdWVYbVdYeDRsM2JXSkdXMF9sOGlyQ25sdjZIVTJ0RFBfcnhiZHRpMkNkYnRBVWZPcS16d0U1OEZLTmlkYlNubWtxWEJ0S1ZaOGFrWThiVzNrZzB4cXViWHYxN0JmaU9JdkZ6QzhBYldTNGppdFBVaVUtdDJxYXVTUGR5Vk9tN3cwMVVQMGlkWjgxcEJMYmozLVdwUlhESVFkWTNPYTNleHYzM1ZzNzQ?oc=5\n19. i-2026-09-13-4c43e0cf0f · 2026-09-13 · Litva · Litva: letiště ve Vilniusu krátce uzavřeno kvůli domnělému dronu, šlo o hejno ptáků\n    https://news.google.com/rss/articles/CBMi4wFBVV95cUxNU0p6bHBvNDRrQnFKSUI2dUp6V3pEVUpKN2lxWkVTNDBOQV8xOC11TFZjLXVLeXhUSGJwNEI4MDJSUEhTaW9ZTkJEcjBQOExOMzlMdm13bWFWamVfNS1zOG5veldKOHVQM1V2Wm9xanlscW9VcHJBYTllUGxBQTNhSDI4cXFvaVFLSzJzUFg4ZWNtZ1kyZUljRnJDSG93TkRoa0VMbVo5a3BaRmdTNG5HRk9ScWpTM3ZOMXlldFBFSXhMWk1xd25vNUlBbmZEcDhEREhHLVF2QTA1OWpGcUpoUF9JVQ?oc=5\n20. i-2026-09-13-31de033fc0 · 2026-09-13 · Polsko · Polsko: ruský dron zasáhl vlak u hranice s Ukrajinou, vyhlášen letecký poplach a vzlétly stíhačky\n    https://ct24.ceskatelevize.cz/clanek/svet/kyjev-zasahl-ropnou-rafinerii-v-krasnodarskem-kraji-uvadi-ukrajinska-armada-377532\n21. i-2026-09-12-39a8c14760 · 2026-09-12 · Německo · Německo: podezřelý ze sabotáže na letišti Lipsko má být napojen na ruskou GRU\n    https://news.google.com/rss/articles/CBMi0gFBVV95cUxNTVl1UEhtSHltdjdEejFnU1ZoV1VZU0pLMmt5bTN6eEUya0lnV2FFLVVLejdQdnRGeWtwSk1WRFJqTGlPZm4waS1uQW4xQnYyWEQ5ZktreXFvSS1GMTJFUEVNZXEwVU5hN0o2c3FURkYzX2hiWjlCakVVcElHVXpxWnZiVEpCRXB2YzhwQ3pXRGkwR3JzQmEwT0FEYTc3QzhYRVhjVjVPQWpuVjc4MTZ3di16R0tDUDFreF9PNzE0OVB0MVh2Y2NCSnhTYTItUnZveHfSAdABQVVfeXFMT1laUzFTVFpwYzNlajZEaGFCaUt2bXFRZFlFUUphX1N4OUJ6Mnp6OEtVcGUteGFpXzZKdVdDRVJDWEpDVzJnUjcxYTlIY0szczdiUXRUdjBWaXJHOHpHUW0zQk9sR285QzU0emx3Z0ZNYVQtcGJjdG5wTF9sQW1tcWJIVUw4el94TGc2R3pUQ3JZdGtuNDhxbjdETW5aY2todERXM3k2Wmx6UjA5SGExSjVpeHFYajdYWEl0b1ZpLU8zM19HT0cxSG1kNXgzYVNZMQ?oc=5\n22. i-2026-09-16-5e0064da30 · 2026-09-16 · Polsko · Polsko: stíhačky vzlétly, letiště Lublin a Rzeszów dočasně zastavila provoz kvůli ruskému útoku na Ukrajinu\n    https://kyivindependent.com/poland-scrambles-fighter-jets-temporarily-closes-airports-while-russian-drones-attack-ukraine/\n23. i-2026-09-07-52c149ed72 · 2026-09-07 · Ukrajina · NATO opakovaně zvedalo stíhačky nad Baltským regionem kvůli ruským letadlům\n    https://news.google.com/rss/articles/CBMimgFBVV95cUxOSlI4VENaa3RVb0VlQ0RoVzFBdmVSenpYME1ERVRGdEMxRi1TLXJOVERoTXlsSVI4WWVBZHhhSjN5bnZEemVWdGJLazRSN1Q0NU4tVVJXNml1VW5Zc1RkSVJoSkpjRkROUUZ0TVZ6aWlFUVpTUGtRTEp0cUYtVkEzNV9seVJPRm1SeWNSV011VUhMWGdsVUFJcFN3?oc=5\n24. i-2026-09-06-bd956e0f9c · 2026-09-06 · Polsko · Polsko: podezřelé narušení vzdušného prostoru způsobilo hejno ptáků\n    https://news.google.com/rss/articles/CBMimgFBVV95cUxOX2kwRlJwUXlHOEk0RWswcGFrdGl2TmRPdG9sZW1Kb0dVTU9GbjZxMzdBZGxuWmEzbkJvVlMwWWZzUFJOZUhuQzY5a09zWENiTThTaVVZd3k0b3E4UURkLTFZUG85MFRhTlk0SHJ5bHVFY1dCYnk0dmRDYnh2OGthaEZvUE1BbndHWl9nYjFTbVFDcnpGOGdwT3hn?oc=5\n25. i-2026-09-12-8097dca796 · 2026-09-12 · Rumunsko · Rumunsko: dron, který přeletěl Ukrajinu a Moldavsko, dopadl u Botoșenița Mare v župě Suceava; zvednuty byly rumunské F-16\n    https://news.google.com/rss/articles/CBMilAFBVV95cUxQSVZBTEFMMHFPSWx3SmxMeUZLQUh0T1h5bmZYbHFrQkM4Y0R0Vkl3dmI3R0MxdEEwUW9MSDFQMWx3bTl6M1NVbjZ5S0dOUFlKVTBuekZTSE5xQWlTWWtmaHgwMm9rbnotMVBfWENHdkFoU2pEWWdBakpSU1g5N2pjRHlaVEJvSTlsUWk0YTZfOTRVajlh?oc=5\n26. i-2026-09-15-590b687216 · 2026-09-15 · Rusko · USA: obvinila pět osob z ruské sabotážní a atentátnické sítě\n    https://news.google.com/rss/articles/CBMipAFBVV95cUxPVlVBcWM0d0FaWU5USnZlUUVESnp6bVR3alZaRHlyTEpTWGE1U013Qkl4dE51UXVKV29xdlZCWGlscWFEOThRRGFvVXBTN2dfVXZsbUVpMlBxN3ZpZk9jUVJhcmozRmZidkhLQk85YmFzLWVhbFFBMENOZlZkaFdHaWlMaDh5UDNHWTdZRURfUlFXeGtwTm5ySENMQWtkY3BsN0N5NtIBpwFBVV95cUxObzk5ZEZiSUMzRi15Yk5XQmtqZkdlRWFUdWwwc0I5WW02MkItMGYweUVrZVh0S2Z4dmlCbXE3WWFjc2s0YU5CWTQyM2I3YW96OUxMbUxtVXZNQUxYQlNwa1hIRE1ncVJCNGtTQzkyN1BGcWFBODdlNlZhYjJGYkxKS3BDR2V2RlFGb1J2SDZNQ19tUWxSMDNSYnEteUtpZ1dNMlFyWlpUSQ?oc=5\n\nB) 14 NEPOSOUZENÝCH ZACHYCENÝCH ZPRÁV\n\nRozhodni, co je nová událost a co ne. U toho, co ne, napiš proč —\ntichý zápor vypadá zvenčí stejně jako porucha.\n\n 1. k-fd657b73cb784ec2 · 2026-09-20 · Rusko · US Charges Russian Network in Alleged European Sabotage, US Murder Plot - OCCRP\n    https://news.google.com/rss/articles/CBMiogFBVV95cUxPQ1RQT2kyTFVDRmZvQWdsbDBIRERhR0I1REJSSVE3N2JYSjFXWGQxWVJSVzBZUjRvZ3NMZV9HRnc5eWdsdjR2QVZxd0t2VEVXQ2o2aW1jVl9teGQ2NkNXcjNTTFl1NnJoa3B3WjROcXFDUlVKby1TUDRBLXlFck5LS193R2NsWG5xS1NTeVJVazF0SzdlbnVyXzJUemM4VmcybXc?oc=5\n 2. k-ad9e995a839bf16f · 2026-09-20 · Ukrajina · Largest attack on Moscow sees Ukraine fire hundreds of drones, mayor says\n    https://www.bbc.co.uk/news/articles/c34gdjk1ne8yo?at_medium=RSS&at_campaign=rss\n 3. k-036cb3bbc9dd78ee · 2026-09-20 · Rusko · Russia claims cyberattacks on voting systems during parliamentary election.\n    https://kyivindependent.com/russia-claim",
+    "hotovo": "2026-09-20T19:10:43.230Z",
+    "odpoved": "A) 26 návrhů: úřední zdroj doplněn u 4 (adresu jsem vždy otevřel a ověřil funkcí jeUredniZdroj): nizozemská železnice i-…f0ffc8ce7e (ProRail; sloučeno s …8c057ebc88), kubánský tanečník i-…9871dbb9bd (polská ABW; sloučeny …41f016ed9e a …0577b0e3a1), dron v Rumunsku i-…8097dca796 (originál mapn.ro místo zrcadla) a obvinění v USA i-…590b687216 (justice.gov). Bez úředního zdroje jsem nechal 4 skutečné události: Litva – sestřel dronu …7693865f77 (kam.lt a ac.nato.int vracejí 403), Estonsko – dohoda o vině …42a895b81b (prokuratuur.ee není v seznamu), Wunstorf …246402d611 (policie Dolního Saska není v seznamu) a Čína – vazba …fdc5f938d7 (soudní domény nejsou v seznamu, vyjádření mluvčí jen přes ČTK).\n\nOdstraněno 18: duplicity …8c057ebc88, …ce6ddf20c5, …9bd0f18fb2, …41f016ed9e, …0577b0e3a1, …31de033fc0 (vlak je už záznam ukrajina-dron-vlak…), Lipsko …daec1ea3be a …39a8c14760 (GBA nejmenuje podezřelé ani GRU, jde jen o zprávy médií); vyvráceno …7abcd2822f (litevská armáda narušení popřela, LRT 18. 9.); planý poplach …4c43e0cf0f (Vilnius) a …bd956e0f9c (Polsko, ptáci); mimo pravidlo č. 1: …fr-svolani-lidru (jednání prezidenta), …8a1833a84b (politický výrok Fica), …4fdc7b8139 (scénáře Českého rozhlasu), …52c149ed72 (statistika vzletů), …f93ff21d6f a …5e0064da30 (rutinní preventivní vzlety bez narušení vzdušného prostoru, DORSZ komunikuje jen přes X), …fcada4a440 (údery na Ukrajině a v Rusku, k tvému rozhodnutí).\n\nB) 14 zpráv: nové návrhy 3 (Moldavsko – zadržení pro FSB k-a2bd3d…, Berlín – kyberútok na zemskou síť k-bcde1e…, plus Luhamaa k-3ddf1e… z předchozího zadání); úřední zdroj u nich chybí (politia.md a mai.gov.md nedostupné, berlin.de a politsei.ee nejsou/neobsahují). Duplicity: k-fd657b (OCCRP, týž případ jako …590b687216, doplněn DOJ) a k-06fadaf (už zdroj záznamu bulharsko-emco…). Bez návrhu: k-59beda (recyklovaný titulek z 12/2023, aktuální prodloužení kontrol z 18. 8. je migrační opatření), k-b19ad5 (tvrzení partyzánů), k-8e1750 (korupce v ÚVN), k-edcc63 (technická závada NATS), k-2946b3 (podle titulku domácí trestný čin z nenávisti, text jsem neotevřel), k-036cb3 (ruské tvrzení o kyberútocích na volby bez nezávislého potvrzení) a k-ad9e99, k-143a1b, k-0dc73a, k-80fc2a (dronový útok na Moskvu a rafinerii, válečná činnost k tvému rozhodnutí).\n\nAby návrhy bez úředního zdroje mohly dostat úřední odkaz, chybí v seznamu domén: kariuomene.lt, prokuratuur.ee, lka.polizei-nds.de, berlin.de, justice.cz, msoud.cz, nsz.cz, pansa.pl, elysee.fr (a DORSZ komunikuje jen na X, které nejde otevřít)."
   }
 ]

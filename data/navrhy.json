@@ -1,105 +1,5 @@
 [
   {
-    "id": "i-2026-09-18-fr-svolani-lidru",
-    "slug": "fr-mimoradne-jednani-predsedu-stran-2026-09",
-    "titulek": "Francie: prezident svolal na 18. září předsedy parlamentních stran kvůli rychlému zhoršení mezinárodní situace",
-    "kratkyTitulek": "FR: mimořádné jednání předsedů stran",
-    "zeme": "Francie",
-    "kodZeme": "FR",
-    "kategorie": [
-      "diplomacie",
-      "nato"
-    ],
-    "datumUdalosti": "2026-09-18T00:00:00Z",
-    "datumZjisteni": "2026-09-18T00:00:00Z",
-    "aktualizovano": "2026-09-18T00:00:00Z",
-    "zavaznost": "G3",
-    "jistota": "vysoka",
-    "stav": "bez-vysetrovani",
-    "atribuce": "neznama",
-    "puvodce": null,
-    "druh": "opatreni",
-    "fakta": [
-      "Francouzský prezident Emmanuel Macron svolal na pátek 18. září 2026 na 10:30 do Elysejského paláce předsedy stran zastoupených v parlamentu, případně jejich prezidentské kandidáty.",
-      "Jako důvod prezidentský úřad uvedl rychlé zhoršení mezinárodní situace a otázku, jaké to může mít důsledky pro bezpečnost a energetiku Francie.",
-      "Jednání se kromě prezidenta účastní premiér Sébastien Lecornu a představitelé armády a zpravodajských služeb. Formát byl ohlášen jako důvěrný brífink politických sil; společná rozhodnutí ani konkrétní domácí opatření ohlášena nebyla.",
-      "V Česku vyzval předseda opoziční ODS Martin Kupka premiéra Andreje Babiše, aby kvůli sabotážím a útokům v Německu a v Polsku svolal schůzku předsedů sněmovních stran ke společnému postupu v zahraničně-bezpečnostní politice. Smyslem má být debata o přijatých opatřeních, formulování společné pozice a pojmenování rizik.",
-      "Kupka zároveň upozornil, že vláda po rezignaci diplomata Hynka Kmoníčka k 9. srpnu 2026 neobsadila post národního bezpečnostního poradce, který se má podílet na koordinaci zajišťování bezpečnosti.",
-      "Premiér Babiš odmítl návrh prezidenta Petra Pavla na obnovení pravidelných schůzek nejvyšších ústavních činitelů ke koordinaci zahraniční a bezpečnostní politiky; podle něj vláda považuje tento formát za zbytečný, protože zahraniční politiku primárně řídí vláda."
-    ],
-    "neznameho": [
-      "Svolání obdobné schůzky předsedů sněmovních stran v Česku není ke dni 18. 9. 2026 v kontrolovaných zdrojích doloženo. Neznamená to, že se nechystá — jen že o něm nic nevíme.",
-      "Co z francouzského jednání vzešlo. Bylo ohlášeno jako důvěrný brífink, takže výstup nemusí být zveřejněn vůbec.",
-      "Zda a kdy bude obsazen post národního bezpečnostního poradce v Česku."
-    ],
-    "vyznam": "Svolání předsedů všech parlamentních stran je krok, kterým stát dává najevo, že situaci považuje za vážnou a chce k ní jednotný postoj napříč politikou. Sám o sobě neznamená, že se něco stalo nebo chystá: nejde o opatření, které by se čtenáře prakticky dotklo, a žádné omezení z něj neplyne. Pro čtenáře v Česku je podstatné to srovnání — ve Francii se takové jednání koná, v Česku o ně opozice žádá a doloženo není.",
-    "eskalacniSpousteče": [
-      "Vyhlášení konkrétních opatření po jednání — na hranicích, v energetice nebo ve vzdušném prostoru.",
-      "Svolání Bezpečnostní rady státu nebo obdobné schůzky v Česku."
-    ],
-    "deeskalacniSignaly": [
-      "Po jednání nenásleduje žádné opatření a formát se nebude opakovat."
-    ],
-    "zdroje": [
-      {
-        "nazev": "franceinfo — Emmanuel Macron convie les chefs de parti vendredi pour évoquer la « dégradation rapide » de la situation internationale",
-        "url": "https://www.franceinfo.fr/monde/moyen-orient/emmanuel-macron-convie-les-chefs-de-parti-vendredi-pour-evoquer-la-degradation-rapide-de-la-situation-internationale-et-ses-consequences-en-france-sur-la-securite-et-l-energie_8196932.html",
-        "typ": "media",
-        "publikovano": "2026-09-17T00:00:00Z",
-        "primarni": false,
-        "jazyk": "fr"
-      },
-      {
-        "nazev": "Public Sénat — Emmanuel Macron convie les chefs de partis vendredi pour évoquer la situation internationale",
-        "url": "https://www.publicsenat.fr/actualites/politique/emmanuel-macron-convie-les-chefs-de-partis-vendredi-pour-evoquer-la-situation-internationale-et-ses-consequences",
-        "typ": "media",
-        "publikovano": "2026-09-17T00:00:00Z",
-        "primarni": false,
-        "jazyk": "fr"
-      },
-      {
-        "nazev": "FORUM 24 — ODS vyzývá Babiše ke svolání schůzky na téma bezpečnosti",
-        "url": "https://www.forum24.cz/ods-vyzyva-babise-ke-svolani-schuzky-na-tema-bezpecnosti-cilem-je-formulovani-spolecne-pozice",
-        "typ": "media",
-        "publikovano": "2026-09-14T00:00:00Z",
-        "primarni": false,
-        "jazyk": "cs"
-      },
-      {
-        "nazev": "ČeskéNoviny — Kupka doufá v obnovení koordinačních schůzek k zahraniční politice",
-        "url": "https://www.ceskenoviny.cz/zpravy/kupka-doufa-v-obnoveni-koordinacnich-schuzek-k-zahranicni-politice/2830477",
-        "typ": "media",
-        "publikovano": "2026-09-14T00:00:00Z",
-        "primarni": false,
-        "jazyk": "cs"
-      },
-      {
-        "nazev": "Echo24 — Babiš se chce k zahraniční politice potkávat s Pavlem, formát s dalšími činiteli má za zbytečný",
-        "url": "https://m.echo24.cz/a/HWmiL/zpravy-domaci-zahranici-diplomacie-prezident-premier-babis-petr-pavel-nato-koordinace-schuzky-ustavnich-cinitelu",
-        "typ": "media",
-        "publikovano": "2026-09-14T00:00:00Z",
-        "primarni": false,
-        "jazyk": "cs"
-      }
-    ],
-    "souvisejici": [],
-    "historie": [
-      {
-        "kdy": "2026-09-18T00:00:00Z",
-        "text": "Zaznamenáno svolání mimořádného jednání předsedů parlamentních stran ve Francii; v Česku obdobná schůzka doložena není.",
-        "novySignal": true
-      }
-    ],
-    "novy": true,
-    "zapocitanoTyden": "2026-09-14",
-    "aiZpracovano": false,
-    "lidskyOvereno": false,
-    "archivniZaznam": false,
-    "pripravil": "sber+reserse",
-    "pripraveno": "2026-09-18T00:00:00Z",
-    "kam": "zaznam"
-  },
-  {
     "kam": "overujeme",
     "id": "o-2026-09-18-ru-mobilizace",
     "slug": "ru-priprava-mobilizace-2026-09",
@@ -154,76 +54,10 @@
     "kam": "zaznam",
     "pripravil": "audit",
     "pripraveno": "2026-09-19T09:58:56.914Z",
-    "id": "i-2026-09-18-8a1833a84b",
-    "slug": "sk-8a1833a84b",
-    "titulek": "Slovensko: Fico zpochybnil závazek článku 5 NATO",
-    "kratkyTitulek": "Slovensko: Fico zpochybnil závazek článku 5 NATO",
-    "zeme": "Slovensko",
-    "kodZeme": "SK",
-    "kategorie": [
-      "nato",
-      "rusko"
-    ],
-    "datumUdalosti": "2026-09-18T00:00:00Z",
-    "datumZjisteni": "2026-09-18T00:00:00Z",
-    "aktualizovano": "2026-09-19T09:58:56.914Z",
-    "zavaznost": "Y3",
-    "jistota": "potvrzeno",
-    "stav": "bez-vysetrovani",
-    "atribuce": "neznama",
-    "puvodce": null,
-    "druh": "pripad",
-    "fakta": [
-      "Slovenský premiér Robert Fico prohlásil, že nebude plnit závazky vyplývající z článku 5 Severoatlantické smlouvy",
-      "Fico se vyslovil proti zapojení do konfliktu s Ruskem",
-      "Fico v projevu Moskvu neoznačil za agresora"
-    ],
-    "neznameho": [
-      "Zda Slovensko formálně změní svou pozici"
-    ],
-    "vyznam": "",
-    "eskalacniSpousteče": [],
-    "deeskalacniSignaly": [],
-    "zdroje": [
-      {
-        "nazev": "ČT24 — hlavní zprávy — „S kým a proč budeme bojovat?“ Fico zpochybnil závazek článku 5 NATO",
-        "url": "https://ct24.ceskatelevize.cz/clanek/svet/s-kym-a-proc-budeme-bojovat-fico-se-odmita-ridit-clankem-5-nato-377737",
-        "typ": "media",
-        "publikovano": "2026-09-18T00:00:00Z",
-        "primarni": false,
-        "jazyk": "cs"
-      },
-      {
-        "nazev": "Slovensko — spionaz — Fico will ‘do everything’ to keep Slovakia out of war with Russia and reject NATO’s Article 5 - Lo",
-        "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxOVGpyWExQRjU5bFd2LUdGVFFBMnhjWDY4LUJvOXY2a01XVmR3Q3NuT3Rib1NEWTNPdkJEcXd3RUdCUzRjdHVoSVZBcWdEUTNETTY5WkJ0bXZxS3dla1V6QVlzMDVwSHJiRGxtTUUtaEp2b0FsWmdUMk8zNFU5OWp0aGg1OHBWLV9Da1k2YUZjMmxvbjRJTGVncmN2QndXd2FoUEJ0cWlpTVBTb0doN08wQ00xLVlfemE4Q3RacHF0Mm0?oc=5",
-        "typ": "media",
-        "publikovano": "2026-09-18T00:00:00Z",
-        "primarni": false,
-        "jazyk": "cs"
-      }
-    ],
-    "souvisejici": [],
-    "historie": [
-      {
-        "kdy": "2026-09-18T00:00:00Z",
-        "text": "Zachyceno automatickým sběrem, posouzeno před zařazením do fronty.",
-        "novySignal": true
-      }
-    ],
-    "novy": true,
-    "zapocitanoTyden": "2026-09-18",
-    "aiZpracovano": true,
-    "lidskyOvereno": false,
-    "archivniZaznam": false
-  },
-  {
-    "kam": "zaznam",
-    "pripravil": "audit",
-    "pripraveno": "2026-09-19T09:58:56.914Z",
     "id": "i-2026-09-15-f0ffc8ce7e",
     "slug": "nl-f0ffc8ce7e",
-    "titulek": "Nizozemsko: železniční síť paralyzována po umístění předmětů na koleje",
-    "kratkyTitulek": "Nizozemsko: železniční síť paralyzována po umístění předmětů na koleje",
+    "titulek": "Nizozemsko: úmyslně umístěné trubky a kabely narušily železniční dopravu ve středu a na severu země; původce není znám",
+    "kratkyTitulek": "Nizozemsko: úmyslně umístěné trubky a kabely narušily železniční dopravu ve středu a na severu země; původce není znám",
     "zeme": "Nizozemsko",
     "kodZeme": "NL",
     "kategorie": [
@@ -232,7 +66,7 @@
     ],
     "datumUdalosti": "2026-09-15T00:00:00Z",
     "datumZjisteni": "2026-09-18T00:00:00Z",
-    "aktualizovano": "2026-09-19T09:58:56.914Z",
+    "aktualizovano": "2026-09-20T19:05:50.866Z",
     "zavaznost": "Y2",
     "jistota": "stredni",
     "stav": "bez-vysetrovani",
@@ -240,18 +74,28 @@
     "puvodce": null,
     "druh": "pripad",
     "fakta": [
-      "V Nizozemsku byly umístěny kovové trubky na železniční tratě",
-      "Došlo k rozsáhlému narušení železniční sítě",
-      "Železniční operátor podezírá sabotáž"
+      "Podle ProRail (aktualizace 15. 9. 2026 20:33) byly na kolejích ve středním a severním Nizozemsku úmyslně umístěny trubky a kabely; ProRail hlásí více než 35 poruch, které byly do 20:33 vyřešeny.",
+      "Podle ProRail se ráno u Steenwijku vlak srazil s materiálem na trati, bez následků, protože jel s výstrahou.",
+      "Podle ProRail je umísťování materiálu na koleje „levensgevaarlijk en onacceptabel“ (životu nebezpečné a nepřijatelné) a vyšetřování vede policie."
     ],
     "neznameho": [
-      "Původce sabotáže",
-      "Konkrétní místa všech incidentů"
+      "Kdo je pachatel: ProRail uvádí, že původce je neznámý a je součástí policejního vyšetřování.",
+      "Verzi o radikálních zemědělských aktivistech uvádějí média (DutchNews, Al Jazeera podle zdrojů NOS), ne policie ani ProRail; nikdo se k činu nepřihlásil.",
+      "Počet poruch se ve zdrojích liší (ProRail více než 35, některá média nejméně 20 lokalit).",
+      "Vyjádření nizozemské policie ani prokuratury (politie.nl, om.nl) jsem nenašel."
     ],
     "vyznam": "",
     "eskalacniSpousteče": [],
     "deeskalacniSignaly": [],
     "zdroje": [
+      {
+        "nazev": "ProRail — Sectiestoring veroorzaakt grote hinder voor treinverkeer in midden- en noord-Nederland",
+        "url": "https://www.prorail.nl/nieuws/sectiestoring-veroorzaakt-grote-hinder-voor-treinverkeer-in-midden--en-noord-nederland",
+        "typ": "primary",
+        "publikovano": "2026-09-15T00:00:00Z",
+        "primarni": true,
+        "jazyk": "nl"
+      },
       {
         "nazev": "Téma: zeleznice (anglicky) — Suspected Sabotage Paralyzes Dutch Railway Network - suaragarut.id",
         "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE9laHhoTzZtckVFb3lqMEQxOUwxUmtRTDVtaFloUHNkTDdMXzJjQ3I1VnRjandIZzlUYS0zT1VoMHo4czREQ08tX0JsbEtUYlNXN0dvSFJGaVdFUWJYdzB5R3R2cmljbVo3X2Y2Rk5PMzE?oc=5",
@@ -369,17 +213,17 @@
     "pripraveno": "2026-09-19T09:58:56.914Z",
     "id": "i-2026-09-16-9871dbb9bd",
     "slug": "ru-9871dbb9bd",
-    "titulek": "Rusko: kubánský tanečník měl koordinovat sabotáže po celé Evropě",
-    "kratkyTitulek": "Rusko: kubánský tanečník měl koordinovat sabotáže po celé Evropě",
-    "zeme": "Rusko",
-    "kodZeme": "RU",
+    "titulek": "Sabotáže v EU: podle vyšetřování DW je řídil z Ruska kubánský učitel tance; polská ABW vyšetřuje polskou větev sítě od roku 2024",
+    "kratkyTitulek": "Sabotáže v EU: podle vyšetřování DW je řídil z Ruska kubánský učitel tance; polská ABW vyšetřuje polskou větev sítě od roku 2024",
+    "zeme": "EU",
+    "kodZeme": "EU",
     "kategorie": [
       "sabotaz",
       "rusko"
     ],
     "datumUdalosti": "2026-09-16T00:00:00Z",
     "datumZjisteni": "2026-09-16T00:00:00Z",
-    "aktualizovano": "2026-09-19T09:58:56.914Z",
+    "aktualizovano": "2026-09-20T19:05:50.866Z",
     "zavaznost": "O2",
     "jistota": "stredni",
     "stav": "bez-vysetrovani",
@@ -387,18 +231,29 @@
     "puvodce": null,
     "druh": "pripad",
     "fakta": [
-      "Kubánský tanečník měl koordinovat sabotážní útoky v Evropě",
-      "Jednalo se údajně o síť pracující pro ruskou rozvědku"
+      "Podle vyšetřování DW měl kubánský učitel tance působící v Rusku organizovat nábor vykonavatelů sabotáží v zemích EU.",
+      "Podle polské ABW vyšetřuje polskou větev případu od roku 2024; žhářské útoky na sklady stavebních materiálů ve Varšavě a Radomi v květnu 2024 podle ní provedl občan Kolumbie.",
+      "Podle ABW byla jeho činnost zadávána, řízena a financována osobou spojenou s ruskými zvláštními službami; konkrétní službu ABW nejmenuje.",
+      "Podle ABW spolupracují Polsko, Česko, Litva a Rumunsko ve společném vyšetřovacím týmu; ABW uvádí, že to potvrzuje Eurojust."
     ],
     "neznameho": [
-      "Konkrétní sabotáže",
-      "Podrobný seznam cílů",
-      "Datum události se z textu určit nedá. Uvedeno datum zveřejnění (2026-09-16) — ověřit."
+      "ABW jmenuje jen iniciály „Oemis R.D.“ a o „kubánském učiteli tance“ mluví DW; spojení obou není v otevřeném textu ABW potvrzeno.",
+      "Datum zprávy ABW jsem na stránce nezjistil; zpráva odkazuje na americký komunikát z 15. 9. 2026.",
+      "Původce se nepřipisuje: ABW uvádí osobu spojenou s ruskými zvláštními službami bez konkrétní služby.",
+      "Datum události se z textu určit nedá; uvedeno datum zveřejnění (2026-09-16), ověřit.",
+      "Konkrétní sabotáže mimo Polsko a podrobný seznam cílů zdroje neuvádějí."
     ],
     "vyznam": "",
     "eskalacniSpousteče": [],
     "deeskalacniSignaly": [],
     "zdroje": [
+      {
+        "nazev": "ABW — Rosyjska siatka dywersyjna. ABW prowadzi polski wątek od 2024 r.",
+        "url": "https://www.abw.gov.pl/pl/aktualnosci/2842,Rosyjska-siatka-dywersyjna-ABW-prowadzi-polski-watek-od-2024-r.html",
+        "typ": "primary",
+        "primarni": true,
+        "jazyk": "pl"
+      },
       {
         "nazev": "Česko — sabotaz — Cuban Dance Instructor Orchestrated Sabotage Attacks Across Europe from Russia for Russian Intelligenc",
         "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE5tWGxiS05IQlllYWRMT2w1c0daRXR6ejRKT3VIZ3pFZ2FVZlViY1lIaFFUVlVaZUJHRkRwNGxjam9pSW5Ka29UdmJta2kyTmJBYXkzNTZWUzU?oc=5",
@@ -669,80 +524,6 @@
     "kam": "zaznam",
     "pripravil": "audit",
     "pripraveno": "2026-09-19T19:32:03.564Z",
-    "id": "i-2026-09-17-7abcd2822f",
-    "slug": "lt-7abcd2822f",
-    "titulek": "Litva: ruská vojenská letadla narušila vzdušný prostor, vzlétly italské stíhačky Eurofighter",
-    "kratkyTitulek": "Litva: ruská vojenská letadla narušila vzdušný prostor, vzlétly italské stíhačky Eurofighter",
-    "zeme": "Litva",
-    "kodZeme": "LT",
-    "kategorie": [
-      "drony",
-      "rusko"
-    ],
-    "datumUdalosti": "2026-09-17T00:00:00Z",
-    "datumZjisteni": "2026-09-18T00:00:00Z",
-    "aktualizovano": "2026-09-19T19:32:03.564Z",
-    "zavaznost": "O2",
-    "jistota": "vysoka",
-    "stav": "bez-vysetrovani",
-    "atribuce": "neznama",
-    "puvodce": null,
-    "druh": "pripad",
-    "fakta": [
-      "Ruská vojenská letadla narušila litevský vzdušný prostor.",
-      "Italské stíhačky Eurofighter NATO byly vyslány k zásahu."
-    ],
-    "neznameho": [
-      "Přesný počet a typ ruských letadel",
-      "Zda šlo o úmyslné narušení"
-    ],
-    "vyznam": "",
-    "eskalacniSpousteče": [],
-    "deeskalacniSignaly": [],
-    "zdroje": [
-      {
-        "nazev": "Téma: vzdusna-obrana (anglicky) — Italian Eurofighters scrambled after Russian aircraft violate Lithuanian airspace - Av",
-        "url": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxNY3hTeUd0MU1XRERCSUlZbHJlOTZNMEhiaE01QTdsaTQ2Rm16OXhXaWZ3UHBqVkJ5R25aTWk3aUl0M0d6NGtIbmw0em5zYmk5RjBhU0ExME5jVjRpaGNXaTFzYk5kaUN1V2ZMWU1wTWhoQkRfVXpHWGRkamZ6WnB0cHJwMGJxQklzeDI0NnZpRXRsemVtMS1XVWpDdnY2QVB5ZjNEaTU1S3F3UW5MZHo1dDZYOXN1QkJlWmxzYTRqZzlDTkxzVmtBZjlNZldaYi1VaVHSAdcBQVVfeXFMUFJGYm5aSVpYRVRIYUJvOU03RkxnY0lXckZ6anRqbHNTNnE1VjRLUW01bmwtMVo1aU5NRzBQeVNYTmZjRER6UFFDdUdxTnRERjhYUW1aa1NMamxIOTV0YU4tYWFvejJEU0czc1AwWHJhaHkwaUV6em9yb2dlVEp2cUowaFVPLVZ0SDBqdkRPcTJ6SzNhX290YkhIaUN1cXFhU0RCU0Y1VWJpdWVlblFGa2ktRDBFaXZ0ZjlIT1ZKQi1hS3ZvR3htLVF0alJBQkdtMFd6cTd0Wnc?oc=5",
-        "typ": "media",
-        "publikovano": "2026-09-18T00:00:00Z",
-        "primarni": false,
-        "jazyk": "cs"
-      },
-      {
-        "nazev": "Téma: vzdusna-obrana (anglicky) — Russian military jets violate Lithuanian airspace, Italian fighters scrambled - ANSA",
-        "url": "https://news.google.com/rss/articles/CBMi9AFBVV95cUxNY0dzREdENndVZGFMcWRSMm1FRUlWUk96c2dvVmlYVTNLUXFFTEVxVUVLaVo4NmNvYVhHVmtSdndISElaVzhVVkEwbXdfM1c1NUpPdjBUTUJPU0FfMGh4bnNmMmk3OHd5MTFvLVI0cWJ6LUQzeXpHUWVJVjRobHV2ZWZlelNBOHpOXzhKZ2d0bnRqREFwZmJSNVhRY0xNaTRWZmRabm42R01hZmc0d29GLUVFaUdkd2g1VHpSUHRkRlBqeFZWSVNRV0hGNlN0Sk91T2FxTktOb1BjOXlKNjhKbzNpb3JZRktaZGRVeHNaUzA1cWZU0gH6AUFVX3lxTE9LX3luNUpSUC1BSUtWd3JnXzNDNW9wVFZ1V0lOVXZHbWFMdlZsWkhweUJMZlpOMnVmM1MxbjJ5VzZUc1VIaGJvVEU4SS1BSFVleDVWM0VjX2t1eGYtZnJBaGV4QnpvdnprQ3BTdVB3cC1IQURNa3pnUFdMZ3pOVHF1YmRMTXdMQ0FxRGprNk5OVXZod19QZWp3cDlBbUtjcE9QVzBMZnVCZlpPUi1kZTE2UnA0OThBUE94SU03RVRhMnBrdEx6aG5hcWlXR01id0p5MXhHY0k3RHd2MXlETVJMOHJFbHRqTTY3eXRWVW82WDMwc0ZSbGdRNmc?oc=5",
-        "typ": "media",
-        "publikovano": "2026-09-17T00:00:00Z",
-        "primarni": false,
-        "jazyk": "cs"
-      },
-      {
-        "nazev": "Téma: vzdusna-obrana (anglicky) — Russian military jets violate Lithuanian airspace; Italian fighter jets are scrambled ",
-        "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxOYVdEcV9aRndmWG5QTDhRR3RRUzdDWkYwV19SNDBmTGc2bnN3ZnhqTDZqTXc3VTczY0x4UzhYMlRpeHFleG04dkZ5NkMteWE0ZjJvVnVMZmE2M3ZGMG1FZ3F6cnhRZkw3Sk9nVFhDNENGSjJndmwxZlQxVjFZcDEyS05LazRPRmtmQzZoNm1sdFg2MVhwMWlsaExCWmVuUmF0WHVkaHNTc3NMdUl5amZTUjlYZw?oc=5",
-        "typ": "media",
-        "publikovano": "2026-09-17T00:00:00Z",
-        "primarni": false,
-        "jazyk": "cs"
-      }
-    ],
-    "souvisejici": [],
-    "historie": [
-      {
-        "kdy": "2026-09-17T00:00:00Z",
-        "text": "Zachyceno automatickým sběrem, posouzeno před zařazením do fronty.",
-        "novySignal": true
-      }
-    ],
-    "novy": true,
-    "zapocitanoTyden": "2026-09-17",
-    "aiZpracovano": true,
-    "lidskyOvereno": false,
-    "archivniZaznam": false
-  },
-  {
-    "kam": "zaznam",
-    "pripravil": "audit",
-    "pripraveno": "2026-09-19T19:32:03.564Z",
     "id": "i-2026-09-16-fdc5f938d7",
     "slug": "cz-fdc5f938d7",
     "titulek": "Česko: Číňan stíhaný kvůli špionáži zůstává ve vazbě, rozhodl vrchní soud",
@@ -806,1552 +587,6 @@
     "archivniZaznam": false
   },
   {
-    "kam": "zaznam",
-    "pripravil": "audit",
-    "pripraveno": "2026-09-19T19:56:38.777Z",
-    "id": "i-2026-09-15-8c057ebc88",
-    "slug": "nl-8c057ebc88",
-    "titulek": "Nizozemsko: podezřelá sabotáž ochromila železniční dopravu ve velké části země",
-    "kratkyTitulek": "Nizozemsko: podezřelá sabotáž ochromila železniční dopravu ve velké části země",
-    "zeme": "Nizozemsko",
-    "kodZeme": "NL",
-    "kategorie": [
-      "sabotaz"
-    ],
-    "datumUdalosti": "2026-09-15T00:00:00Z",
-    "datumZjisteni": "2026-09-15T00:00:00Z",
-    "aktualizovano": "2026-09-19T19:56:38.778Z",
-    "zavaznost": "O2",
-    "jistota": "stredni",
-    "stav": "bez-vysetrovani",
-    "atribuce": "neznama",
-    "puvodce": null,
-    "druh": "pripad",
-    "fakta": [
-      "Na kolejích na více místech Nizozemska byly nalezeny záměrně umístěné předměty (trubky, kabely)",
-      "Provozovatel infrastruktury ProRail incident označil za pravděpodobně úmyslné jednání",
-      "Policie zahájila trestní vyšetřování",
-      "K narušení došlo v ranní špičce 15. září 2026, v den zahájení parlamentního roku (Prinsjesdag)",
-      "Postiženo bylo přes 24 míst, včetně tras kolem Zwolle, Deventeru, Amersfoortu a spojů na letiště Schiphol"
-    ],
-    "neznameho": [
-      "totožnost a motiv pachatelů"
-    ],
-    "vyznam": "",
-    "eskalacniSpousteče": [],
-    "deeskalacniSignaly": [],
-    "zdroje": [
-      {
-        "nazev": "BBC News — Europe — Suspected sabotage causes major Netherlands rail disruption",
-        "url": "https://www.bbc.co.uk/news/articles/c8ly49w9g1edo?at_medium=RSS&at_campaign=rss",
-        "typ": "media",
-        "publikovano": "2026-09-15T00:00:00Z",
-        "primarni": false,
-        "jazyk": "cs"
-      },
-      {
-        "nazev": "Téma: zeleznice (anglicky) — Expansion | Netherlands investigates a possible sabotage that paralyzes part of its railway",
-        "url": "https://news.google.com/rss/articles/CBMi3AFBVV95cUxPLWk0SS0xRVF3RFVfMDhKNXJxMlZXNHRrdlhaTDdRbGVkZl9WY0NNTkJRdGNQNXRnVDlsZEZRc1FqeW4tV3NlWVQ1SlVYMGxfSDlrMnFUZURQTjBmU3JqRGVzY2JFcl9BbktYTTRpTm1uT0RKTEZOWUdUUUlvTXV1c0U2UXB3QktXYk1TbXNBMEdCdHIyb1hUNVZ4elNXZ2VSQk5mNUNxcEpHa25kMEI1RmFrMWM1NUczbXVpNWRvZ2cyV0hsNVZBZmE5a1pxcl9MRjhkOHFIZDJIZ3o50gHcAUFVX3lxTE8taTRJLTFFUXdEVV8wOEo1cnEyVlc0dGt2WFpMN1FsZWRmX1ZjQ01OQlF0Y1A1dGdUOWxkRlFzUWp5bi1Xc2VZVDVKVVgwbF9IOWsycVRlRFBOMGZTcmpEZXNjYkVyX0FuS1hNNGlObW5PREpMRk5ZR1RRSW9NdXVzRTZRcHdCS1diTVNtc0EwR0J0cjJvWFQ1Vnh6U1dnZVJCTmY1Q3FwSkdrbmQwQjVGYWsxYzU1RzNtdWk1ZG9nZzJXSGw1VkFmYTlrWnFyX0xGOGQ4cUhkMkhnejk?oc=5",
-        "typ": "media",
-        "publikovano": "2026-09-15T00:00:00Z",
-        "primarni": false,
-        "jazyk": "cs"
-      },
-      {
-        "nazev": "Téma: zeleznice (anglicky) — Suspected sabotage causes major Netherlands rail disruption - Yahoo",
-        "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxQMzFDdVkwSFVQZkIxbDdMODJ5NXBEalFWS3loUVV6UkpJUVA0RnhrZUNtTHV0d2h3eXc0dDJudXpwb3FBTTRzNjMyelBQN1lBcTFDdXRPVHUyak01TGh5OFRMVFZvcHJVMG5xUUZmNkJzckl1dXR5OEliUWd3dkhpUmpfclEzTUZBOVBzMkxrZHNnblk1YTRrRVp0c0h4UEdON2c?oc=5",
-        "typ": "media",
-        "publikovano": "2026-09-15T00:00:00Z",
-        "primarni": false,
-        "jazyk": "cs"
-      },
-      {
-        "nazev": "Téma: zeleznice (anglicky) — Suspected sabotage to trains during Dutch rush hour after pipes left on track - Sky News",
-        "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxPN0FTUVVCMW9EeVpHOTNOYWtQQWlDTlpFUS1CXy1IUVF4aXdFRFZnQk02cGhyMmRfTG56NEt6QUgyTlpXVGpBOUtrbDFNSUc2Z2VnXzRVa1dfN3hOV0R0VlJ6c0tDTFhPRzZUaEJsa1AycDVPX0ROMUNUYmZ1NnBXUUVYdUQyN3NuTmc4eExEeUJiemF2VEtkRXR0TTg1MlNiQk5XMmw3djFrbUNaamhNUlRQaw?oc=5",
-        "typ": "media",
-        "publikovano": "2026-09-15T00:00:00Z",
-        "primarni": false,
-        "jazyk": "cs"
-      },
-      {
-        "nazev": "Téma: zeleznice (anglicky) — Netherlands rail disruption due to suspected sabotage, operator says - BBC",
-        "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE85OEtqWnVPOUttNU5HdmViWUFBYklicU9sVktUX3dqMXprZFhGeHlkemJhTURaYVVpdXV2anhBajhzY0ppUW1Wa1Atbzc0RTBiRUppQmc5dHFXbDg?oc=5",
-        "typ": "media",
-        "publikovano": "2026-09-15T00:00:00Z",
-        "primarni": false,
-        "jazyk": "cs"
-      },
-      {
-        "nazev": "Téma: zeleznice (anglicky) — Sabotage disrupts Dutch train services ahead of state opening of parliament - The Jerusalem",
-        "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE01Yk4tbnBQbTdVRlN5eGd3dFVQNkFaMWY3S2xBeE4yVVhLdjJHcm5taWMzai1kYmVLcENyc3hjY0d6RmxGa04wR25QdEhSWnhVM0RIRXJCVlJUaktpbEVR?oc=5",
-        "typ": "media",
-        "publikovano": "2026-09-15T00:00:00Z",
-        "primarni": false,
-        "jazyk": "cs"
-      },
-      {
-        "nazev": "Téma: zeleznice (anglicky) — Possible sabotage brings chaos to large parts of Dutch rail network - upi.com",
-        "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxQalBjQV9RR09hejBzdmFja293WlhnQWhlZnZfMXpnWXJWNWFnVml0dURzVzNkM0pNQ1oxZnlIZnhCSGJJVE92bi1yWmxDM3FNMDVoeUoweEk3b0hhdDRSc2kwZko5Unhodjh6VU04blpURjRFMHVoS2xXbXN1MzFMTGd2ZG9oSVo1aDJEUXJyOU1uenp0dmVtOF9ubXpKbFNFdWY1Ym5DTElnb3BMUDFnR9IBtgFBVV95cUxQNVh3eDA0NWFQWXE4MVp4R0xyQ2JRY0otaV95NVhLdEJ4XzBLT1k5M2xGM2RoTGlKclI4b21wLTc3UkJ3enI1ejNVVXRGOEhqU2F3bEZ0U2xqUzFwRENEaVZFelM3LXNDOHlGV2NJSHlpR1FCbHJIX0w5SGt6V1YtaUxMalhjR1dBcWlOX2RzdE1GY0FyekJ5aWFyQ3pubW9SOWo5bnZVS1BVdVlXbmFUUWU4QVc1dw?oc=5",
-        "typ": "media",
-        "publikovano": "2026-09-15T00:00:00Z",
-        "primarni": false,
-        "jazyk": "cs"
-      },
-      {
-        "nazev": "Téma: zeleznice (anglicky) — Sabotage: More debris found as Dutch trains restart; Fires set along highways - NL Times",
-        "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxQNUptdjhnaTdsVU5md1NJWXAxdUFTSXROQlAtTUkxSkdzdVRFS1BEa0I5X2swNHdpZUowNndnbVhfcExpQnd1TXpzTUpIa29senVKSl81Y0pRR243bWQtaUpfYUxiVmtieGpDUmxxVGloNFhKSXdqNFVwdkhvdGR0N2lZUUk5UVM5NGZLeTZWNUVsZnlUWUZ6MWdaaEpyUQ?oc=5",
-        "typ": "media",
-        "publikovano": "2026-09-15T00:00:00Z",
-        "primarni": false,
-        "jazyk": "cs"
-      },
-      {
-        "nazev": "Téma: zeleznice (anglicky) — Netherlands rail network hit by suspected sabotage - Latest news from Azerbaijan",
-        "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTE56amZWalRJYndfZUlfV3QtbmFzbGZsb09qNlRnMDl2Y2J4R3dnWHZmd000VXFzc0RMR2RXSTZKaVRJZGwwZDFxVmV6c2dOMnM0ZlZHOWllb0E0ZFVmbzJ3dWJfbUU0N2F4WkFjVkdWUlRTejA3ZTRVNGtycw?oc=5",
-        "typ": "media",
-        "publikovano": "2026-09-15T00:00:00Z",
-        "primarni": false,
-        "jazyk": "cs"
-      },
-      {
-        "nazev": "Téma: zeleznice (anglicky) — Coordinated rail sabotage hits Netherlands on Prince’s Day - EUalive",
-        "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxObm5SS0lteS1WUmxVWTN1elFaV19rWDRDOXI1b1E0ajdsd2JndDdnODQ5R0k1U2RwdmFJVnYzcnVhcm9WbG80WU12VDc1U0xmNS10eFZ0V2RJT2xEcWFKODBYX3FTRm9UME9FREFsMmg0Ny1vcFRucTREekp3aUJfR1BUamY?oc=5",
-        "typ": "media",
-        "publikovano": "2026-09-15T00:00:00Z",
-        "primarni": false,
-        "jazyk": "cs"
-      },
-      {
-        "nazev": "Téma: zeleznice (anglicky) — Suspected Sabotage Disrupts Dutch Rail System During Rush Hour - SuaraGarut.ID",
-        "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE1NdTJCN1dOdFN6SGtUakpoclFyME91T2UwdnVpd2ZTNWd0SjVpVG9zSlBDM0Exem11RUZtZTBCYWFtc2ZaMzB4aEs1YzA0SF90YlZPRnkwdUlJZC14RkYzUGFWcE8zNTEtcTU1c016QXBlOWFNb0cydnlkMG5rSXM?oc=5",
-        "typ": "media",
-        "publikovano": "2026-09-15T00:00:00Z",
-        "primarni": false,
-        "jazyk": "cs"
-      },
-      {
-        "nazev": "Téma: zeleznice (anglicky) — Sabotage suspected as parts of Dutch rail network come to a standstill - politico.eu",
-        "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxNbjNnWDdpZjMxTzdmY0ZpUXdnZXZZUkxzRGFMRFN1QlN6T0lZRmplcW4zUFNFV3ZEMzduZjdMWEtweEd2RjhucUJrSE82RW9pdzVYLWJPc1ZCb0t4WjBabzFDZExKZHJGMnNUZ1RoazF5MmFWeko2bDR6eTdsaHVxS3YwUU1iTjExZTZ4b1p3eFdzSTg4UFFpcDJxWDVoSTNLSXJZTHZB?oc=5",
-        "typ": "media",
-        "publikovano": "2026-09-15T00:00:00Z",
-        "primarni": false,
-        "jazyk": "cs"
-      },
-      {
-        "nazev": "Téma: zeleznice (anglicky) — Suspected sabotage causes major Netherlands rail disruption - the-star.co.ke",
-        "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxQUUg2Q0ZNMmVmaXI5ZVE2VlJEbHNEeVlScnh0dVFUOE5JaG02eDNvMlpBaWRXQl9GcVlVNkpXdTlTM3RlODM1R1N4NE9oNkJFWkJHSHNsYnNCTG1HMndjTWZuYWVLd0xzZVdiamN2WWM2cHZBcm1BRFd6a0VNaEhPT3NQSHRwSjdoZ25hMVpwa0F3TlVqYzZRVy1VSzFkYVJLZXhlSzQ2MlFVQlM1?oc=5",
-        "typ": "media",
-        "publikovano": "2026-09-15T00:00:00Z",
-        "primarni": false,
-        "jazyk": "cs"
-      },
-      {
-        "nazev": "Téma: zeleznice (anglicky) — ‘Deliberate disruption’: Suspected sabotage halts rail services across the Netherlands - TV",
-        "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxOakJIeWlZY2J2VDByZnpoTEY0a2p0V3NCalhmUHQ1V00zU29TSVR4bEgtdTdLcnhxdEdvWkRiSlR0dnUzZ1FOd3FOTmc3SDlkRlJOT3dyLVdlS3N3LXpITEdZekJoRjVGMlpUMllRemFrQjNlcmxmV2h3X3A3TmcySjJXLUJZQ0xmN0xwQzkwc0NPNzBLZzhsQ0NPRlZKazFaSHkyZWhEbHhvc0tXU3pmbUlmanFqUQ?oc=5",
-        "typ": "media",
-        "publikovano": "2026-09-15T00:00:00Z",
-        "primarni": false,
-        "jazyk": "cs"
-      },
-      {
-        "nazev": "Téma: zeleznice (anglicky) — Suspected Sabotage Ties Up Dutch Rail Network on Budget Day, ProRail Finds Track-Circuit Fa",
-        "url": "https://news.google.com/rss/articles/CBMi6AFBVV95cUxQekRMRU1YUGxsd0EwMFlpU0RUTFcwQ0lGa2RtclJHMjlobVRsY28zcWN0SmNaa2Z6akNsVjZTckFueEpvZTdPdC1KOUI1aEVWLUtpYmI4SGtQclBMMWNZamxFTXVkWjdMdUtOd09mZDEtbVZHclI4YzFGVlJ2QmNDdlhRcS1BMzRiamRNeHZPTmgxNklmSTFVUUpHeHlTVE5Uc2liZlZPOU1UdDQ4Z1VhN2FhUW1CaG4tRWQ0QVd1SFRjVjF5M3ViNGRjNGQ5R01Uc2k2SFhzY1pEZE1talVobHBXcjdPR1RO?oc=5",
-        "typ": "media",
-        "publikovano": "2026-09-15T00:00:00Z",
-        "primarni": false,
-        "jazyk": "cs"
-      },
-      {
-        "nazev": "Téma: sabotaz (česky) — Velká sabotáž na železnici?! Kovové trubky připevnili na koleje na desítkách míst v Nizozemsku -",
-        "url": "https://news.google.com/rss/articles/CBMi3AFBVV95cUxOLUtudmpBaVMtRlMtVmoxekRBQzVBa1k0Ti1LZTgycFM1blBjZXlxZjVBZ3FoMDNQdlNqV19SMUx5ZXJSUHQtbkQtbG9SallldGROUzZwcWF5OUxxNUt6N0p3SjZydUZabTBwNjJGbkxDZ3ZZSWZDUmpFTENtRUxFYWtDZkk2NTRlU3ZraWxWYjRqOW1oMkN2Sl9yX2NSZVB2UTg0Z0dCZ0NrUElZWEZRMl9fR0tmOTBMNVR0c2hDZk9Ha1RJanFpbi1VSkUtZG54Qkd4NlBlRjh5SU5S?oc=5",
-        "typ": "media",
-        "publikovano": "2026-09-15T00:00:00Z",
-        "primarni": false,
-        "jazyk": "cs"
-      },
-      {
-        "nazev": "Téma: zeleznice (anglicky) — Suspected sabotage triggers major Dutch rail outage during morning rush hour - The Indian E",
-        "url": "https://news.google.com/rss/articles/CBMi3wFBVV95cUxQeThwYUNoUThaa21LWmRzYkxWTVo2U3NibG9ZUktXWjlOMW5ySWNEQVlTRjRCVEhnVWZGNW1Mc3pNdDROaF90dTF0MTM3c1FfRnpSWjBUMjljVER6NTA0YVJnd1d0OFVGVHZJbTJHNkNtSFRXLUJwN3JFOUZleXoxNDdTWWcxLXNlT1JnTVFhYTBnWk1jcDRiNTE1Sy1WRWl6eFRTdHF2RkJyTFJsMGNPWF9jdHhMdmNfYkFJMm43bE9YekRUUnZUNkZzRmk2OFN5eUFDUnNDdlhIZXd3Wm5z0gHmAUFVX3lxTFBGZUZGZ3RlUXkwZEk3TWVzUHlBUnJSR0xJUndCNGJLVU1RZlM5NnowSi16RUNNRjBoS1N3MnR4WVR0bkRtTkh2eHU1b2wteFJhLVdha0JYV25HM1hJSEdzcktxaUtoeE1IM0V3QjVwWXpobjNaNFhJU2ItandxRm9mZUNaYWFFOHRpOS16bW1yTG04T052NVBLVkdIanFEQml1S0dreXZBMEYwTjRjUDZZYkdZcS1vOUVYTUtqUEduZkxINzFaSmM2dGNZajF1RkUxODg0U2FNUXZDa21LVHBzR05PbFVn?oc=5",
-        "typ": "media",
-        "publikovano": "2026-09-15T00:00:00Z",
-        "primarni": false,
-        "jazyk": "cs"
-      },
-      {
-        "nazev": "Téma: zeleznice (anglicky) — Trains Down Across Netherlands As Sabotage Investigated - Newsweek",
-        "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxPOURqUTNmcFgzbUFTSjJ2VWJ1QzVBMW44aURLOHRSckFYWFR6RXpCbFpPYmtMaTBkd1EydW5SLWl0cDRoUXhVVi1QZUZIYzNFTEN6eG5RRHVyM1VfcHZyVDI3VmVTTlRYdkRTcnZsczcwZVhnRktvNTlPYm5OX1BWZy1rZmlOWXVsN1NlRGNJNHdkVkE?oc=5",
-        "typ": "media",
-        "publikovano": "2026-09-15T00:00:00Z",
-        "primarni": false,
-        "jazyk": "cs"
-      },
-      {
-        "nazev": "Téma: zeleznice (anglicky) — Netherlands: Suspected sabotage disrupts train services - dw.com",
-        "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxNSDFXNG1Wc2xkMk11T3FRZnZNNW53bkZBN3l6dFVKX2FXMXdINFgwZFEwSm92Z0p5RWoyLWRWQTE4VVFFTExMX0FwRzhnS3dCekQ5cG1kWFdvQmd4UFdfa0d1SDE3Tk1MYUYydUc5d1ptXzZSWVhfWlNRZ0lfZVVocmt4TDhvMWdMellvZmJMN1bSAZABQVVfeXFMTUNIenBtaTN6cS1tLU9HaUw2dVlFSG1lbDluSWxDMUZhUFZYSmdNZjg0cGQtMldEM1hmMzA3VWRKUEdyejRMTk4zWThSMDNfWUpwTnFVUmdsYzBLN01lWktNQ2xXYjI2YlBtaU1SMXJKemFwcGJFVEJxdDJsNkhWdzE0OTJnV0VQWEpZZFh0dm9w?oc=5",
-        "typ": "media",
-        "publikovano": "2026-09-15T00:00:00Z",
-        "primarni": false,
-        "jazyk": "cs"
-      },
-      {
-        "nazev": "Téma: zeleznice (anglicky) — Material found at several sites: Suspected sabotage causes major Dutch rail outage during r",
-        "url": "https://news.google.com/rss/articles/CBMigwJBVV95cUxPMllSb3FIZFJmaGlPMWxUYWM0cWdORW5US0VZbFhfV05NWkswR1cya2xJeDNyc2t0bTBjb0FWaFpEVmhUMTZRVWJEdXA3dm5zUUVMR3FkQm1LVGkzLTVNeHBDVm54TmRHRnJSeXlLaWVFN1gzS3hoNGRZb3ROVjIyTkNFRGlIWUg0ajlVTHpTMF9SdTJoTFpDdzJTU0g3QjYyakNKT2FRLUFPbmRyWXdmYmYyY1FlVk5jcVZFRnBySVoyZnZBbHN5dFRyVkNSM0E0VnpfbVhNRmY1SEQ2YUQyM1RZa1VtUmlCSzVNczNOUkp4di1IYVFYaXhTd19oYnFwd1Fz0gGIAkFVX3lxTFBQVVBtM2tlUnhhS2dNc1IxRjVDNVZsMXl5bWw1SG9RX3BnNVFoVnFYMWRNNnpGeVBBckRKYm5fZ2FkczJaeVI1ZVk0aExJV0hHd1lCNndNaUlVZmVjY1RfczVIRlhxMWpvcVZ3RXNOM21hc0RLcDQ5My1DWXJ2LU9PVF84Nnlkc28zRFZ6VDJmRk9ZbjdKTGl3VldvSmpJNTBtWF9raVpTMnd5ZExrWnJHeEx3cWdqUDNzd3lfU3NvdkE0NFpoNlhMOHJZRGNoWlp0QXIyUk00YVlfTG54eVVPX3JsbllzajI1bDVrcGhzb1BXNjh1bkVQa1FxS1dQWkVzdnlPa0hDZw?oc=5",
-        "typ": "media",
-        "publikovano": "2026-09-15T00:00:00Z",
-        "primarni": false,
-        "jazyk": "cs"
-      },
-      {
-        "nazev": "Téma: zeleznice (anglicky) — Suspected sabotage halts Dutch trains across 24 locations during rush hour - India Today",
-        "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxNdzlqa2F2WHM2M0FCOC12eVJSTUh4VWsxQTJ4MEdPLU9fTXFKcHZNV0JNYTlWeXVmTjZNU0JITktMdlcwNUZDOU83M2RRYm1BY0xNa1hBZTcxeWlFQllVWWt1RFBXUnc4Z09Yby1iUkVrcEJJYkxDWVY1VWtGMVlwRTZISW53RjVEa1BXLXJkUlNMNWZ6bkE2ZFNtYWlKYmViZnp5ak1BNDYteHIxa3ZSb2dqUVlZbE5XakhISzlmY1FpSlRwQ3pR0gHHAUFVX3lxTE13OWprYXZYczYzQUI4LXZ5UlJNSHhVazFBMngwR08tT19NcUpwdk1XQk1hOVZ5dWZONk1TQkhOS0x2VzA1RkM5TzczZFFibUFjTE1rWEFlNzF5aUVCWVVZa3VEUFdSdzhnT1hvLWJSRWtwQkliTENZVjVVa0YxWXBFNkhJbndGNURrUFctcmRSU0w1ZnpuQTZkU21haUpiZWJmenlqTUE0Ni14cjFrdlJvZ2pRWVlsTldqSEhLOWZjUWlKVHBDelE?oc=5",
-        "typ": "media",
-        "publikovano": "2026-09-15T00:00:00Z",
-        "primarni": false,
-        "jazyk": "cs"
-      },
-      {
-        "nazev": "Téma: zeleznice (anglicky) — Suspected sabotage triggers a major Dutch rail outage during the morning rush hour - apnews",
-        "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxQM1lmY1J6LUwzRVdITkttdl9JYW8yLTZIZExhZUEySG1sNkJpRmEzMmFmUU9qbjU3MGI5UTFtTFRzem16LU1UcXpZa1JRZFNZTzhqMzZRQXRhY3RHdTF0RmJyNGlOZ1otRllWbVpOMWs1Nl9qeXZnM0g1b2RuRm9oZFg1eTRLa3B1RzdEczM0M1pMd21TUlFvSTBCVUtVTE5vb3BN?oc=5",
-        "typ": "media",
-        "publikovano": "2026-09-15T00:00:00Z",
-        "primarni": false,
-        "jazyk": "cs"
-      },
-      {
-        "nazev": "Téma: sabotaz (česky) — Kolaps v ranní špičce. Nizozemská železniční doprava kolabovala, šlo možná o sabotáž - Aktuálně.",
-        "url": "https://news.google.com/rss/articles/CBMi3AFBVV95cUxNVDBrYVVUdmsxc2VLYldSQVdDSGRPUkVKTlh5YjZYZ3ZJZ253YWlaUW5wNTlwQ2RhYUNtSDhGSVZZQmZObWtzN3F2RnpqUUlfYS1qb0JSaGF0RjN5NXQydUY5dFQxM3pGNEZCWnZLZjQ1ZmJ2UWRXM2wtcFZLOVVwWmpCckZZWUxTNWZQMkRUYW4tU3JFMnZ4Umw4dExoLXlKc1ZKNFRMSUctUmhuMzF4eXZGa3hrbXAzUjlmdGZfRFZ5MnkyYUxhbjBRUTZ6TEJZTkJwZ2I4eUdSWl85?oc=5",
-        "typ": "media",
-        "publikovano": "2026-09-15T00:00:00Z",
-        "primarni": false,
-        "jazyk": "cs"
-      },
-      {
-        "nazev": "Téma: zeleznice (česky) — V části Nizozemska je omezena železniční doprava, mohlo by jít o sabotáž - České noviny",
-        "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxQbVBlRTdpRzRmVXluRVlLSERCbFJ1dk5nZ2dYNHVjMEtIM040ZVRuVmZHV2dQQ1ZUR2lWSjJNU1JMVzMwOUx3MUgxcmo4d2ljWThRLTRKSGZCNVR3cWlTUEFUY3hkSk10alVzOElWaU5fb09JaXpKZkNTNVVsal9GQlZhVUN2ZGtXdkFnNmJ4VHJuZWg0UWg0V3hCSGVUemlmVHFaVnlEczBMdHdidkpibWk3TQ?oc=5",
-        "typ": "media",
-        "publikovano": "2026-09-15T00:00:00Z",
-        "primarni": false,
-        "jazyk": "cs"
-      },
-      {
-        "nazev": "Téma: zeleznice (anglicky) — Multiple simultaneous acts of sabotage on Dutch railways - RailFreight.com",
-        "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxOMkRoUzhVYkRIZGNVU0UxeHBhTDZWR3A5MFlEUzlwb3dSUlhISDNmZmp6NFhZZENrYWp6VFhYeDJadkxxWmVaeTBzekUyUlpnZzhuQU9feVFwdWM2ZjlBMWpaMk9ycGJhdGtTRmFqQzNXNlhDM19WZUd6SnJJSTZQUUx1SVNoWGxQX2JrOVFlcEF2MkFWWGVCZGVYeW4yUE1kOFM0MFUweXlQbWNa?oc=5",
-        "typ": "media",
-        "publikovano": "2026-09-15T00:00:00Z",
-        "primarni": false,
-        "jazyk": "cs"
-      },
-      {
-        "nazev": "Téma: zeleznice (anglicky) — Dutch railway network disrupted by sabotage to tracks - DutchNews.nl",
-        "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxPMWlQbVEtbDNpazFYQkNYdUZuNWtDZ2E5amJtOTVEWUZJTGRmM1FhUFcxbFluNjg2TWs5WlNYRnR3R0R0WDZfMGJBZE51UWpEQmJtSy1FeW9Pb2dZR3dSQnJiV2RDUU9ZWk9pZTk1RWdPblFJS1gwX19WaEdna0pCdTZlMkYxTDBzcWpfUjBwTHU?oc=5",
-        "typ": "media",
-        "publikovano": "2026-09-15T00:00:00Z",
-        "primarni": false,
-        "jazyk": "cs"
-      },
-      {
-        "nazev": "Deutsche Welle — Europe — Netherlands: Suspected sabotage disrupts train services",
-        "url": "https://www.dw.com/en/netherlands-suspected-sabotage-disrupts-train-services/a-79269600?maca=en-rss-en-eu-2092-rdf",
-        "typ": "media",
-        "publikovano": "2026-09-15T00:00:00Z",
-        "primarni": false,
-        "jazyk": "cs"
-      }
-    ],
-    "souvisejici": [],
-    "historie": [
-      {
-        "kdy": "2026-09-15T00:00:00Z",
-        "text": "Zachyceno automatickým sběrem, posouzeno před zařazením do fronty.",
-        "novySignal": true
-      }
-    ],
-    "novy": true,
-    "zapocitanoTyden": "2026-09-15",
-    "aiZpracovano": true,
-    "lidskyOvereno": false,
-    "archivniZaznam": false
-  },
-  {
-    "kam": "zaznam",
-    "pripravil": "audit",
-    "pripraveno": "2026-09-19T19:56:38.778Z",
-    "id": "i-2026-09-15-ce6ddf20c5",
-    "slug": "lt-ce6ddf20c5",
-    "titulek": "Litva: stíhačky NATO sestřelily dron, který narušil vzdušný prostor",
-    "kratkyTitulek": "Litva: stíhačky NATO sestřelily dron, který narušil vzdušný prostor",
-    "zeme": "Litva",
-    "kodZeme": "LT",
-    "kategorie": [
-      "drony",
-      "nato"
-    ],
-    "datumUdalosti": "2026-09-15T00:00:00Z",
-    "datumZjisteni": "2026-09-15T00:00:00Z",
-    "aktualizovano": "2026-09-19T19:56:38.778Z",
-    "zavaznost": "Y2",
-    "jistota": "vysoka",
-    "stav": "bez-vysetrovani",
-    "atribuce": "neznama",
-    "puvodce": null,
-    "druh": "reakce",
-    "fakta": [
-      "Stíhačky NATO v noci sestřelily dron, který narušil litevský vzdušný prostor",
-      "Dron podle litevských médií nejspíš přiletěl z Běloruska a mířil na západ",
-      "Prezident Gitanas Nausėda poděkoval spojencům za rychlou reakci",
-      "Kvůli incidentu byl mírně omezen provoz v dotčené oblasti"
-    ],
-    "neznameho": [
-      "přesný původ a účel letu dronu"
-    ],
-    "vyznam": "",
-    "eskalacniSpousteče": [],
-    "deeskalacniSignaly": [],
-    "zdroje": [
-      {
-        "nazev": "iROZHLAS — zprávy — Stíhačky sestřelily dron nad Litvou. ‚Děkuji spojencům za jejich rychlou reakci,‘ uvedl prezident Na",
-        "url": "https://www.irozhlas.cz/zpravy-svet/stihacky-sestrelily-dron-nad-litvou-dekuji-spojencum-za-jejich-rychlou-reakci_2609150655_elv",
-        "typ": "media",
-        "publikovano": "2026-09-15T00:00:00Z",
-        "primarni": false,
-        "jazyk": "cs"
-      },
-      {
-        "nazev": "Google News — narušení vzdušného prostoru — NATO sestřelilo dron nad Litvou. Stroj pravděpodobně přiletěl z Běloruska - ",
-        "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxOSHdYczFaWDRtcy00U2tsZlZfby1STW03Si1MSEpOWWp3NFY0N0FwbVdNejhnc3RrRVdOcGNETzAwTGVyQW4wMDRKY2JRa29HQUktQzF6dDVELTBqVVlvSDZnR1ZJZHVmUUV2bWdvUUNwcGFIczc2UDF0cUxYX3VEbVk4Tk5VMlE3OEc4YUlEaDBsa214?oc=5",
-        "typ": "media",
-        "publikovano": "2026-09-15T00:00:00Z",
-        "primarni": false,
-        "jazyk": "cs"
-      },
-      {
-        "nazev": "Téma: drony (česky) — Stíhačky NATO sestřelily nad Litvou dron - RESPEKT",
-        "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxQUlZnN0QtblNnSWRBZ1FvTERHbWUxWlp5WFhxanBDWTVLeHc5ZVZweWxKSDVYbVUxM19NZVFCcmh4Tmplci1SOHZoUE9ZdDRfbkNTUG5zRTliWEZsZnFsSzFWblM4a0RSYXN4TGFhVVRQZ0R3RkZuVi1aaFZ2Zms1SkIwSHhNcU10aUVBcUZBRk8yRDd2MVU2eVQwSTBfZHM?oc=5",
-        "typ": "media",
-        "publikovano": "2026-09-15T00:00:00Z",
-        "primarni": false,
-        "jazyk": "cs"
-      },
-      {
-        "nazev": "Google News — drones airspace NATO — NATO Jets Shoot Down Drone After It Violates Lithuanian Airspace - Khaama Press",
-        "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxOd1ZJcktGYjB2SUJzaEo4cWhVWkMycnZLUUdFMTIybWxWTTBpY1piMkZ2c2dxbGxBeFlXeV9kN1dVMEtSZElIUnBSeDlKS2NNc2RINGEwbHRyUUFQRW9OWTRmckRkc05majdEdm9YXzRXOUtYUksxVVoxaGhiLU5adkpRc0E0ay15NmNBSk1zSkpzZw?oc=5",
-        "typ": "media",
-        "publikovano": "2026-09-15T00:00:00Z",
-        "primarni": false,
-        "jazyk": "cs"
-      },
-      {
-        "nazev": "Google News — drones airspace NATO — NATO fighter jets shoot down drone violating Lithuania’s airspace - Latest news fro",
-        "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxNa0p5by05aldTODNfdXVGMmMwUUQwVWhhYlljYlhFbUxZaEl6Uy1VU1VxZ3VJbXpIbjgyLWxqX1ZkaXNWMEVMOEN4dHczUDhzY0dDdjdoYW1BZGZfQWZRcjdydGVfNkROeFA5WDZqMWRBcmdBRWtaZ05SX1daYkczS09CY0I2WlZZRFl1QTNB?oc=5",
-        "typ": "media",
-        "publikovano": "2026-09-15T00:00:00Z",
-        "primarni": false,
-        "jazyk": "cs"
-      },
-      {
-        "nazev": "Google News — drones airspace NATO — A NATO fighter jet has shut down a drone violating Lithuanian airspace - airlive",
-        "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxNb0V5MmMwS0YxS2FoeTNOblJLWmtTOTNFU3M2WTlYZmVMTWdnU05WclpTdVhWVy1tdGZCMGFWVGM5a0pSOHg1dW1QZW80b3BabjVYSG9JQWRjTVhwQWFIQW00bFAxVjZxekxGUnFQMDNvRlQ3SFdkdF9ocW96UkJtd2l3OHppanVkR3REWXo2UmpXYVRIV2lWeGJsZnRXZ2Nja0NGWmJVSnptS0IwaU9McA?oc=5",
-        "typ": "media",
-        "publikovano": "2026-09-15T00:00:00Z",
-        "primarni": false,
-        "jazyk": "cs"
-      },
-      {
-        "nazev": "Litva — drony — NATO Jets Shoot Down Drone Violating Lithuanian Airspace From Belarus - streamlinefeed.co.ke",
-        "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxPODBITzBaUG1DRHAtT1hiSVN3QmxWQy1TdlhEdk95NnpHcUhidlJSSVJ0ZWw1bHNYbXFJbnFudGw5bkZ1Y0poa1NzSjhPUnRuNzlqZVZWYmZVeVAzVk44U3U2U2FGRDJHUFU4dDFRVG9mWERVTlhBa0ZGYVp3RlhrOV9pV21CcmQ3aXVPVzdvekI2RVJKb3pkZ3dUOC1KdU1IeWtsY2hn?oc=5",
-        "typ": "media",
-        "publikovano": "2026-09-15T00:00:00Z",
-        "primarni": false,
-        "jazyk": "cs"
-      },
-      {
-        "nazev": "Google News — narušení vzdušného prostoru — Stíhačky NATO sestřelily dron nad Litvou. Nejspíš přiletěl z Běloruska - iDN",
-        "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxOdFF0Z1EzUi1xQlI1cWhPWDFPVzFBNEkzelc5Q1NMdVN2R254UE4taFhwQzdUREJmdzNUNXkzWkNFYjg5Qi1CZi11R2dxcGNKc01CNkJmelhFOHhSZ01UbjlERTNsNDVsY0NfdmRIcmJrUnNOMXN0bUY3b1VFZm81Nnpnc05fUUc0OGwzYUVOeVk2cVZCRlRzV0gzQW5SaHFt?oc=5",
-        "typ": "media",
-        "publikovano": "2026-09-15T00:00:00Z",
-        "primarni": false,
-        "jazyk": "cs"
-      },
-      {
-        "nazev": "Google News — stíhačky a vzdušný prostor — Stíhačky NATO sestřelily nad Litvou dron - Novinky",
-        "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxQbERlTlplUzYySkxadE1qMnI4ZHJwSVdNd01Xd1dIVWcyU1NzT3FHRy1wbXdIMnoybFUxVDg0RWFjQ0Q5Q29yZHBpZnZCSm9IZ1lqUTRiR2pDQURlQkhxWFhGT3BxR254U25HQ29SMVE2b3Zwc2RDQTBwNkVQaG1pOFZkSmxpbUhLY3FXdS1ZSTBlb0hiTVJtOGhrcVgtZw?oc=5",
-        "typ": "media",
-        "publikovano": "2026-09-15T00:00:00Z",
-        "primarni": false,
-        "jazyk": "cs"
-      },
-      {
-        "nazev": "Google News — drones airspace NATO — Nato jets shoot down drone violating Lithuania’s airspace - The Guardian",
-        "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxOMFZoZkwzV18xemh3Zm1UeVdoNk03c3d4TVBIQWd6b1JZY2s2NWEwc3hCTlBsMVIzZGZjcmcwVEFBcnJjeWp1bzVBNnQ4VFIyTFFZbnZqMGx3T0NsQWpsM20zQnFaUVRodE5YODY3Q0Y1LUU3OHNYYnc5UUN5UVBZWE1qa0I2MjVmMF9IYUpwSHpicVYzNE8yWDNmRWc5T0wyYzczcmxuYnRrLXlH?oc=5",
-        "typ": "media",
-        "publikovano": "2026-09-15T00:00:00Z",
-        "primarni": false,
-        "jazyk": "cs"
-      }
-    ],
-    "souvisejici": [],
-    "historie": [
-      {
-        "kdy": "2026-09-15T00:00:00Z",
-        "text": "Zachyceno automatickým sběrem, posouzeno před zařazením do fronty.",
-        "novySignal": true
-      }
-    ],
-    "novy": true,
-    "zapocitanoTyden": "2026-09-15",
-    "aiZpracovano": true,
-    "lidskyOvereno": false,
-    "archivniZaznam": false
-  },
-  {
-    "kam": "zaznam",
-    "pripravil": "audit",
-    "pripraveno": "2026-09-19T19:56:38.778Z",
-    "id": "i-2026-09-15-41f016ed9e",
-    "slug": "eu-41f016ed9e",
-    "titulek": "Kubánský lektor tance v Rusku podle vyšetřování DW organizoval síť náboru pro sabotáže v EU",
-    "kratkyTitulek": "Kubánský lektor tance v Rusku podle vyšetřování DW organizoval síť náboru pro sabotáže v EU",
-    "zeme": "EU",
-    "kodZeme": "EU",
-    "kategorie": [
-      "sabotaz",
-      "nato",
-      "rusko"
-    ],
-    "datumUdalosti": "2026-09-15T00:00:00Z",
-    "datumZjisteni": "2026-09-15T00:00:00Z",
-    "aktualizovano": "2026-09-19T19:56:38.778Z",
-    "zavaznost": "Y2",
-    "jistota": "stredni",
-    "stav": "bez-vysetrovani",
-    "atribuce": "neznama",
-    "puvodce": null,
-    "druh": "pripad",
-    "fakta": [
-      "Podle vyšetřování DW kubánský lektor tance působící v Rusku najímal agenty pro sabotážní operace v zemích EU"
-    ],
-    "neznameho": [
-      "konkrétní provedené sabotáže a jejich rozsah",
-      "přímé napojení na ruský stát",
-      "Datum události se z textu určit nedá. Uvedeno datum zveřejnění (2026-09-15) — ověřit."
-    ],
-    "vyznam": "",
-    "eskalacniSpousteče": [],
-    "deeskalacniSignaly": [],
-    "zdroje": [
-      {
-        "nazev": "Google News — sabotáž — Kubánský lektor tance organizoval z Ruska sabotáže v zemích EU - natoaktual.cz",
-        "url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxOUTBTY193Q3JQcEFIVTRoYjMyTkVDb2tUSkVWeHFoUkF0Z0NCR0RiWjhtRWVXTURHQjRzamtQYm1RU2taOWpYX1BvSzFBM25fRVR2SWFIdlh4NHM5THJySGZWNUs4di1PX1Bzb0IzdmVIeHRFM3VVU0N1eVhrOGFqOElvTWlGRDJMSGJ4VnZucVJWNUU1QmlHN3JZM3k3d3VfRVhTT21tTEFHdmRpY0lEaFlXTjY3bDB2TDFxT3FveHV4S25S?oc=5",
-        "typ": "media",
-        "publikovano": "2026-09-15T00:00:00Z",
-        "primarni": false,
-        "jazyk": "cs"
-      },
-      {
-        "nazev": "Google News — sabotage Europe — Cuban salsa teacher in Russia recruited agents for sabotage across EU, DW finds - Hromad",
-        "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxOdW1vaVNsTUR5Mk51TGcwMVRXTzVjM05rcXFTRUt4VjIyazR1dFRZUEdVZi03Q0tJOFBuQ0prT1NGcHBiY1cwOWhsSFlkWEhobW81dWR2djdIc3pSQjdsTnc5SHZYenY3cnhmUzNybHZZdnJwVGJGT0dyV2hWNWxCNFR2UFFLajdOSE9qTWdZMG5MSk01aFoxMldzeW1BWE1nNkhzVkxGVEVNTWl0eWNDQmJMNNIBuAFBVV95cUxOT2Zta2NSMVU0a0ltclF5RUdzWWc5VmhpYmRHYWpnMkVmM1VyQmVhY2F4ckpxTlJUbHZUM1o1ejNDVjBBTDlLcVRwWkJxU295OFlkTEpZcVNSekxaM0I4b0UtXzI0dGctVGgzcFR2b0c5dDdoa0pZYWxQci05VDhmaXZzZUVVNjRzajNJVGwtWE1qT3NoazBmc0dvajBpMTVDLVBTcFpGRUF4SGRxdlZUZFJCQVctV19V?oc=5",
-        "typ": "media",
-        "publikovano": "2026-09-15T00:00:00Z",
-        "primarni": false,
-        "jazyk": "cs"
-      },
-      {
-        "nazev": "Téma: sabotaz (anglicky) — How a Cuban dance teacher aided Russian sabotage in EU - dw.com",
-        "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxPTXVBZUVUYW50bjFwcTNJVzFuXzNSd0xlSVpCUjdETjdmeE1zcnBmV1ExSnpSZ2RUTGkyM2VGNjdGVnZMeE9PZDZKNEZjRjlRZEdZSmt2Q05iczkwcVMyNDEydVI1djBSNUQyakRucWdsMk80ZzFHRlhLblBxTVZZcU84M09fbkl0Vjl2dlVQZWFLZTNxX3c?oc=5",
-        "typ": "media",
-        "publikovano": "2026-09-15T00:00:00Z",
-        "primarni": false,
-        "jazyk": "cs"
-      },
-      {
-        "nazev": "Google News — sabotage Europe — Cuban dance teacher in Russia ran Europe-wide sabotage network - The New Voice of Ukrain",
-        "url": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxQZXF2WmdBZlpJXzZMT1BoY1Y3ZlFLczdoUEcyNzExS3hiQWpOOF9CRlRmbWtxcG5GcjByYi1qelVzSTMtQ1NscEpDUDVTb2RmS3EtalNqRTVKbGxEUVEzbDhRVWRrVDBCTWQ1OFByNU5PcGo0NmhUS3lqeXFzR015c1dVNzg4Mjg0MUVYeWlER3FXRDhZQnFiRl9VYk5uWnZnbXVVRUY0YkMtUElDSkwyckZoSDNJa194eWY5QUNUV3Nsem1BUDFmNzdFTkZ5bElE0gHMAUFVX3lxTE4teXZZWHBmZVQwQ0ZSRnlYcGRUU3JqMV82ejRXSXFpQXZxR0RlUHZUWmV0MEZtTG13eHZTT2w0d3ZrNnRHVHVnWW5pSUd4Z0pOOVBPcXhrcnA3Tjk3cklDLV9CcFdkWXhQTDRleTJkTEpuV0VqMDUtY1Fhd1d3WEFQMW83bFFjNUpUNkxic2ZuOGpIZzZiZndNVzFZZHZlOVJXeWJObUdvX0JSbHFRR09WcHo1X3V2VnJfamx4Skt1enBkeEN4NURnNkFRZQ?oc=5",
-        "typ": "media",
-        "publikovano": "2026-09-15T00:00:00Z",
-        "primarni": false,
-        "jazyk": "cs"
-      }
-    ],
-    "souvisejici": [],
-    "historie": [
-      {
-        "kdy": "2026-09-15T00:00:00Z",
-        "text": "Zachyceno automatickým sběrem, posouzeno před zařazením do fronty.",
-        "novySignal": true
-      }
-    ],
-    "novy": true,
-    "zapocitanoTyden": "2026-09-15",
-    "aiZpracovano": true,
-    "lidskyOvereno": false,
-    "archivniZaznam": false
-  },
-  {
-    "kam": "zaznam",
-    "pripravil": "audit",
-    "pripraveno": "2026-09-19T19:56:38.778Z",
-    "id": "i-2026-09-15-f93ff21d6f",
-    "slug": "pl-f93ff21d6f",
-    "titulek": "Polsko a Rumunsko vyslaly stíhačky kvůli ruskému dronovému útoku na západní Ukrajinu",
-    "kratkyTitulek": "Polsko a Rumunsko vyslaly stíhačky kvůli ruskému dronovému útoku na západní Ukrajinu",
-    "zeme": "Polsko",
-    "kodZeme": "PL",
-    "kategorie": [
-      "drony",
-      "rusko"
-    ],
-    "datumUdalosti": "2026-09-15T00:00:00Z",
-    "datumZjisteni": "2026-09-15T00:00:00Z",
-    "aktualizovano": "2026-09-19T19:56:38.778Z",
-    "zavaznost": "Y2",
-    "jistota": "vysoka",
-    "stav": "bez-vysetrovani",
-    "atribuce": "neznama",
-    "puvodce": null,
-    "druh": "reakce",
-    "fakta": [
-      "Polsko a Rumunsko vyslaly stíhačky poté, co Rusko zaútočilo drony na západní Ukrajinu",
-      "Polsko preventivně omezilo provoz ve vzdušném prostoru u hranic s Ukrajinou"
-    ],
-    "neznameho": [],
-    "vyznam": "",
-    "eskalacniSpousteče": [],
-    "deeskalacniSignaly": [],
-    "zdroje": [
-      {
-        "nazev": "Google News — Polsko vzdušný prostor — Poland Scrambles Jets as Russia Attacks Western Ukraine With Jet-Powered Drones -",
-        "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxQR0lZQTVhTmFPSTljVk94bXB5aDB3bGl4YjUwbFBkSk5zV3N2VXVVRVpiS2U5UWpjcDRyQWl5QV9pblRSUFZ0YnpXTzV4WlRhU3RRd0FqZjFOWFBKcW50djh0SEVlQkRsbURrOU93NzU1OEJmZEd6T3prcDd2UFE2SFZ5ZWV4TkwyVng4bi1OMWt5UHIzLUx6TUI1LW1yaDZyX0RBN3ZiUHZhcXBQVUdKMXdlRmktS3JD?oc=5",
-        "typ": "media",
-        "publikovano": "2026-09-15T00:00:00Z",
-        "primarni": false,
-        "jazyk": "cs"
-      },
-      {
-        "nazev": "Google News — Polsko vzdušný prostor — Fighter jets launched over Poland after Russian drone attack on Ukraine - The Ind",
-        "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxQVTIxV0xIaERSVVRQMlFSbi1LNk13aFRUczh5Mi0wVldvZG01aTVnMVRqalJORXdVdWkyckdWb0l0WndxMWRkNUFsU2NYTGNvLUdFakJvWEdtSlRQdmsxLUJJcjhtVDU1U3MxX2lPbGREb2d0R3dabVQwTzZHSFM0UDBCUFY3V1lJRU8zYm1rMVVjQS1IXzVtNmt2OE9jeG5Od0E?oc=5",
-        "typ": "media",
-        "publikovano": "2026-09-15T00:00:00Z",
-        "primarni": false,
-        "jazyk": "cs"
-      },
-      {
-        "nazev": "Google News — Polsko vzdušný prostor — Romania, Poland scramble fighter jets over drone incidents - The Sofia Globe",
-        "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxNMHVPZU5UampRalJlelJTLXhFSzg4eVNVM3NackZNdllBWlZzVC1nT3lwNmtxcUowanJ3N2NodlpkUVk0azI0VzZDLXFua05OWkpyMkh5aEtyZVlxS1k4RmZnZDFWVnNpdlVYandFMk1tb0FnT1Q1cTJjT0MzbmxOZF9DZktmTnlsVTExMGxsOFltWEc2c2tF?oc=5",
-        "typ": "media",
-        "publikovano": "2026-09-15T00:00:00Z",
-        "primarni": false,
-        "jazyk": "cs"
-      },
-      {
-        "nazev": "Google News — Polsko vzdušný prostor — Poland and Romania scrambled fighter jets in response to Russian drones over Ukra",
-        "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxPYkpwZndMeE1fZ1JOODlVQzI1b3lVNDNqdVhvWVFNOVo5dXRSb21CQk81aG1jNmkyMk1RSmVmVW56cXZseU1CcFVtVzlMWjlGMy00eTNGRHB6WllLYU5ubDd5Tm9zOHlaeEhwZm56MldxQVl0emIzbXVTVnkzRDQ5Sjk0Y0Q2M01KekdWa3F0SmtmdkJyUDlHQjlTRUhQa0dMVndnMzBPMDhpUQ?oc=5",
-        "typ": "media",
-        "publikovano": "2026-09-15T00:00:00Z",
-        "primarni": false,
-        "jazyk": "cs"
-      },
-      {
-        "nazev": "Google News — Polsko vzdušný prostor — Ukraine-Russia war latest: Poland scrambles jets as Putin attacks Kyiv with jet-p",
-        "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxNa3lfbzk1QkdVZHN0d0tUeWIwS3JUa2FBSk1tMVUtZVBDTlA2VUhSWFBXNWdSaTg1a2NzZ3RPdEVmaVR1ZFIzODZ2UHFZd2cyVkxpWFdXWS03RXFjQ3NKMk1kSHl2a2pySEJ5MENSZVdyUG9pQ0RzRk5MZkdLbG5KZlRscU1YZURPNnpDRUFtSVBpNVVKZ0t0OURSYUtkeWc0U0tqeG5qSTNCeE02SU5FUV83eHBWcTRHVEV3?oc=5",
-        "typ": "media",
-        "publikovano": "2026-09-15T00:00:00Z",
-        "primarni": false,
-        "jazyk": "cs"
-      }
-    ],
-    "souvisejici": [],
-    "historie": [
-      {
-        "kdy": "2026-09-15T00:00:00Z",
-        "text": "Zachyceno automatickým sběrem, posouzeno před zařazením do fronty.",
-        "novySignal": true
-      }
-    ],
-    "novy": true,
-    "zapocitanoTyden": "2026-09-15",
-    "aiZpracovano": true,
-    "lidskyOvereno": false,
-    "archivniZaznam": false
-  },
-  {
-    "kam": "zaznam",
-    "pripravil": "audit",
-    "pripraveno": "2026-09-19T19:56:38.778Z",
-    "id": "i-2026-09-15-fcada4a440",
-    "slug": "ua-fcada4a440",
-    "titulek": "Rusko udeřilo na Kyjev a Záporoží, Ukrajina zasáhla rafinerii v Syzrani a sklad v Taganrogu",
-    "kratkyTitulek": "Rusko udeřilo na Kyjev a Záporoží, Ukrajina zasáhla rafinerii v Syzrani a sklad v Taganrogu",
-    "zeme": "Ukrajina",
-    "kodZeme": "UA",
-    "kategorie": [
-      "drony",
-      "rusko"
-    ],
-    "datumUdalosti": "2026-09-15T00:00:00Z",
-    "datumZjisteni": "2026-09-15T00:00:00Z",
-    "aktualizovano": "2026-09-19T19:56:38.778Z",
-    "zavaznost": "Y2",
-    "jistota": "vysoka",
-    "stav": "bez-vysetrovani",
-    "atribuce": "neznama",
-    "puvodce": null,
-    "druh": "pripad",
-    "fakta": [
-      "Ruský dron zasáhl čerpací stanici v Kyjevě, jeden člověk zemřel a nejméně 12 bylo zraněno",
-      "V Záporoží po ruském úderu zemřel jeden člověk",
-      "Ukrajinské síly během noci zaútočily na rafinerii v Syzrani v Samarské oblasti a sklad firmy Ozon v Taganrogu v Rostovské oblasti",
-      "Rusko vyslalo na Ukrajinu 200 dronů, 187 bylo sestřeleno nebo odkloněno rušením"
-    ],
-    "neznameho": [],
-    "vyznam": "",
-    "eskalacniSpousteče": [],
-    "deeskalacniSignaly": [],
-    "zdroje": [
-      {
-        "nazev": "ČT24 — hlavní zprávy — Rusové udeřili v Kyjevě i Záporoží. Ukrajinci zasáhli rafinerii",
-        "url": "https://ct24.ceskatelevize.cz/clanek/svet/ukrajinci-opet-uderili-v-hloubi-ruska-zasahli-rafinerii-i-sklad-prodejce-ozon-377617",
-        "typ": "media",
-        "publikovano": "2026-09-15T00:00:00Z",
-        "primarni": false,
-        "jazyk": "cs"
-      },
-      {
-        "nazev": "The Kyiv Independent — Russia launches drone attack on Kyiv, killing at least 1, injuring 12.",
-        "url": "https://kyivindependent.com/russian-forces-strike-kyiv-gas-station-as-one-person-hospitalized/",
-        "typ": "media",
-        "publikovano": "2026-09-15T00:00:00Z",
-        "primarni": false,
-        "jazyk": "cs"
-      }
-    ],
-    "souvisejici": [],
-    "historie": [
-      {
-        "kdy": "2026-09-15T00:00:00Z",
-        "text": "Zachyceno automatickým sběrem, posouzeno před zařazením do fronty.",
-        "novySignal": true
-      }
-    ],
-    "novy": true,
-    "zapocitanoTyden": "2026-09-15",
-    "aiZpracovano": true,
-    "lidskyOvereno": false,
-    "archivniZaznam": false
-  },
-  {
-    "kam": "zaznam",
-    "pripravil": "audit",
-    "pripraveno": "2026-09-19T19:56:38.778Z",
-    "id": "i-2026-09-15-4fdc7b8139",
-    "slug": "cz-4fdc7b8139",
-    "titulek": "Česko: Český rozhlas připravuje 22 scénářů krizového vysílání ve spolupráci se záchrannými složkami",
-    "kratkyTitulek": "Česko: Český rozhlas připravuje 22 scénářů krizového vysílání ve spolupráci se záchrannými složkami",
-    "zeme": "Česko",
-    "kodZeme": "CZ",
-    "kategorie": [
-      "infrastruktura",
-      "vysilani"
-    ],
-    "datumUdalosti": "2026-09-15T00:00:00Z",
-    "datumZjisteni": "2026-09-15T00:00:00Z",
-    "aktualizovano": "2026-09-19T19:56:38.778Z",
-    "zavaznost": "G1",
-    "jistota": "vysoka",
-    "stav": "bez-vysetrovani",
-    "atribuce": "neznama",
-    "puvodce": null,
-    "druh": "opatreni",
-    "fakta": [
-      "Český rozhlas, Hasičský záchranný sbor ČR, Policejní prezidium a pražská záchranná služba podepsaly memoranda o spolupráci při krizovém vysílání",
-      "Český rozhlas připravuje 22 scénářů pro mimořádné situace včetně povodní, požárů, blackoutu a chemických či radiačních havárií"
-    ],
-    "neznameho": [],
-    "vyznam": "",
-    "eskalacniSpousteče": [],
-    "deeskalacniSignaly": [],
-    "zdroje": [
-      {
-        "nazev": "iROZHLAS — zprávy — Povodně, blackout nebo chemická havárie. Český rozhlas vytváří 22 scénářů pro mimořádné události",
-        "url": "https://www.irozhlas.cz/zpravy-domov/povodne-blackout-nebo-chemicka-havarie-cesky-rozhlas-vytvoril-22-scenaru-pro_2609151147_aru",
-        "typ": "media",
-        "publikovano": "2026-09-15T00:00:00Z",
-        "primarni": false,
-        "jazyk": "cs"
-      },
-      {
-        "nazev": "Téma: krizove-vysilani (česky) — Od první pomoci po krizové vysílání. Pražská záchranka rozvíjí spolupráci s Českým rozh",
-        "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxQeVRySTBfeFUwaVZSWlpjQ2lraFAxd1o2ZzhQWW91MUNJeDVBVndpcmVHbUlyVVFnXzhEX05CTWRNd2VsS25nNTdIUHlTaWUzY3VMZlVYMFQ5TE1TU2l5LWpvaHo3WnhKMjMwbVAzNVpPMkdDREM5cm5aZjd4U1R2LVNoWWtGYXNIb214bGpnTFl5LWd3MVVoVjlHLVBqdXpJTDRqQmNRZW81cjdKR0pOUW1DM0loakozMjhFd0N0c3lPQQ?oc=5",
-        "typ": "media",
-        "publikovano": "2026-09-15T00:00:00Z",
-        "primarni": false,
-        "jazyk": "cs"
-      }
-    ],
-    "souvisejici": [],
-    "historie": [
-      {
-        "kdy": "2026-09-15T00:00:00Z",
-        "text": "Zachyceno automatickým sběrem, posouzeno před zařazením do fronty.",
-        "novySignal": true
-      }
-    ],
-    "novy": true,
-    "zapocitanoTyden": "2026-09-15",
-    "aiZpracovano": true,
-    "lidskyOvereno": false,
-    "archivniZaznam": false
-  },
-  {
-    "kam": "zaznam",
-    "pripravil": "audit",
-    "pripraveno": "2026-09-20T07:44:20.270Z",
-    "id": "i-2026-09-14-9bd0f18fb2",
-    "slug": "lt-9bd0f18fb2",
-    "titulek": "Litva: stíhačky NATO sestřelily dron nad litevským vzdušným prostorem",
-    "kratkyTitulek": "Litva: stíhačky NATO sestřelily dron nad litevským vzdušným prostorem",
-    "zeme": "Litva",
-    "kodZeme": "LT",
-    "kategorie": [
-      "drony",
-      "nato"
-    ],
-    "datumUdalosti": "2026-09-14T00:00:00Z",
-    "datumZjisteni": "2026-09-14T00:00:00Z",
-    "aktualizovano": "2026-09-20T07:44:20.270Z",
-    "zavaznost": "O2",
-    "jistota": "vysoka",
-    "stav": "bez-vysetrovani",
-    "atribuce": "neznama",
-    "puvodce": "neznamy",
-    "druh": "pripad",
-    "fakta": [
-      "Stíhačky NATO sestřelily v noci dron, který vletěl do litevského vzdušného prostoru",
-      "Prezident Nausėda poděkoval spojencům za rychlou reakci, původ dronu neupřesnil",
-      "Litevská média uvedla, že dron pravděpodobně přiletěl z Běloruska a mířil na západ",
-      "Kvůli incidentu se mírně zpozdilo několik civilních letů"
-    ],
-    "neznameho": [
-      "odkud přesně dron přiletěl",
-      "komu patřil"
-    ],
-    "vyznam": "",
-    "eskalacniSpousteče": [],
-    "deeskalacniSignaly": [],
-    "zdroje": [
-      {
-        "nazev": "ČT24 — hlavní zprávy — Stíhačky NATO sestřelily nad Litvou dron",
-        "url": "https://ct24.ceskatelevize.cz/clanek/svet/stihacky-nato-sestrelily-nad-litvou-dron-potvrdil-prezident-nauseda-377614",
-        "typ": "media",
-        "publikovano": "2026-09-14T00:00:00Z",
-        "primarni": false,
-        "jazyk": "cs"
-      },
-      {
-        "nazev": "Google News — dron vzdušný prostor — Stíhačky NATO sestřelily nad Litvou dron, potvrdil prezident Nauséda - ČT24",
-        "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxNRmhNVnRMYlpoREdHRmc1M3pLbTBKeUtOajZwNHgzTlhMLXcwblZ0dzVseGM3YnZxNk15NmRyY3BBTjE0MjBOTmRCYUpyY1NhaDVFbzEtR2h1MFE2NUUzcHdQald5UEljczdLOWlYNXNweWhNMlVXbEM2R0xleEZVR1FoZFRrWTZqcnM3RWlvVnliOERJQ2dHRnhBTVZPNTc3QjJtZlFoUmw5T1BFTmNqV2NrTWttLVk?oc=5",
-        "typ": "media",
-        "publikovano": "2026-09-14T00:00:00Z",
-        "primarni": false,
-        "jazyk": "cs"
-      },
-      {
-        "nazev": "Google News — drones airspace NATO — NATO fighter jets shot down a drone that violated Lithuania’s airspace - unn.ua",
-        "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxPanE5UEQtVmtGYUtCS0hocXZZQURsVjl1Vm9CcDd5TXBIV3lfMzZKSVh4bnV5SFQ3RlM1dmphSmd5UGxQaVVkSjFXLXZGVVVoV0o2Tmlpa2lZTEZzeFlfM3NsT2o2VEpFemZJZjdGSHd3c05tUWJwRUFnYnZmWWNkNkU2TW41YjctX3VQaC1rVU9jRG1KMjlJ0gGWAUFVX3lxTE1lb2lBVnU3c3dNZ2ZEZlFWaWdLRkNGbGJ1MmlvX1J1YWVvd2M5cXdjS2V6aGJMam5rOXNwVzg1LWhnTW1iV2FVbHNIQmdDd2gxQWVISEpzUXdPWnI1WWJaZTV6a1RSNGc2el9FT2YwcXJNT1hyLW40c1FkcTlleHlzMjJQbE9fTERKN2hVOXhuVDQzUDZtUQ?oc=5",
-        "typ": "media",
-        "publikovano": "2026-09-14T00:00:00Z",
-        "primarni": false,
-        "jazyk": "cs"
-      },
-      {
-        "nazev": "Google News — narušení vzdušného prostoru — Sestřel v Litvě: Dron pronikl až k hlavnímu městu, zasáhla stíhačka NATO - C",
-        "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxNMzB2dTAzX1pramNTYkxJQ2ZxZ1FhTkFpX1RBMEI4SFQyUmNjeEczSnYtaU5jMjF6bFNJWm40SFAyVmdaUk9scTZJdzBhWVg5LXlWZk9MRTVHMi1qMUR6Mzc1Yy1aTUpJSWpPeWpCWTNsQzBpejFiWGhzVy1YSXJPdnN5a1VFM2RjMTB1MVYtdVFFdHdydGhVYmktV0o0ZkRlZDUwR05KYw?oc=5",
-        "typ": "media",
-        "publikovano": "2026-09-14T00:00:00Z",
-        "primarni": false,
-        "jazyk": "cs"
-      },
-      {
-        "nazev": "Téma: letiste (česky) — NATO vyslalo stíhačku kvůli podezření na dron nad Litvou - natoaktual.cz",
-        "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxQaDN2OUQxbndJaFdRcjF2SndaRVVibF9LUThWRWtyc0cxXzJoU3pWUTFubHc5N2JsWV9LeXd6RDZseENGcXZ2bDQ4azNIUERva1c3cV9odlFTM3Q4cno1M1RRV3g4S21fMXpRRzhrSTV5R0NOUkFhRDA4Rk1EdTFTeV9BYmtneWhXLWMwUllXdWx6NkxWbFYwSmNwamtNNVZOWXNxLXdjWV9hMUI4OF9nUFB3ZHlHWjZsbHMtTg?oc=5",
-        "typ": "media",
-        "publikovano": "2026-09-14T00:00:00Z",
-        "primarni": false,
-        "jazyk": "cs"
-      },
-      {
-        "nazev": "Téma: vzdusna-obrana (anglicky) — NATO fighters shoot down drone over Lithuania after airspace incursion - aerotime.aero",
-        "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxOcG5jNm1lSWdsS0U1MmdwUkZ3ZjAxSFM5MjF3RGJzNFZCekpHanpCWkFCb1Ixd2lDRXE5TW9EY0Jyd0NpMTlrWnZjeXdKSjQ1am5Oc1U4Y3FyVGxHaV9oWlo1VmhfNC1MZjJVMXg3YkNaYVdwVlhCdlZrZjlkRzVXYzZROVhSTEtCRVHSAY8BQVVfeXFMUEVzcm1pbFkwV1Q3aDBSd0U4bWpOYWgxUF9qdkt5dWt3ZHpnR2F1eHR6T2JEWTVLQWRBY255YWFaaHMwSnI5aWk4dmk1WnVkdElwc0xoN3VhLVJGSFpxXzZLZ29COWZ4MC0xWGxoblYwSnh4SDVKV29GWk5FNUtUOWRVQjBiOGZwM05uLXVXd0U?oc=5",
-        "typ": "media",
-        "publikovano": "2026-09-14T00:00:00Z",
-        "primarni": false,
-        "jazyk": "cs"
-      }
-    ],
-    "souvisejici": [],
-    "historie": [
-      {
-        "kdy": "2026-09-14T00:00:00Z",
-        "text": "Zachyceno automatickým sběrem, posouzeno před zařazením do fronty.",
-        "novySignal": true
-      }
-    ],
-    "novy": true,
-    "zapocitanoTyden": "2026-09-14",
-    "aiZpracovano": true,
-    "lidskyOvereno": false,
-    "archivniZaznam": false
-  },
-  {
-    "kam": "zaznam",
-    "pripravil": "audit",
-    "pripraveno": "2026-09-20T07:44:20.270Z",
-    "id": "i-2026-09-14-0577b0e3a1",
-    "slug": "eu-0577b0e3a1",
-    "titulek": "Vyšetřování DW: sabotáže v EU řídil z Ruska kubánský učitel tance",
-    "kratkyTitulek": "Vyšetřování DW: sabotáže v EU řídil z Ruska kubánský učitel tance",
-    "zeme": "EU",
-    "kodZeme": "EU",
-    "kategorie": [
-      "sabotaz"
-    ],
-    "datumUdalosti": "2026-09-14T00:00:00Z",
-    "datumZjisteni": "2026-09-14T00:00:00Z",
-    "aktualizovano": "2026-09-20T07:44:20.270Z",
-    "zavaznost": "Y2",
-    "jistota": "stredni",
-    "stav": "bez-vysetrovani",
-    "atribuce": "neznama",
-    "puvodce": "neznamy",
-    "druh": "pripad",
-    "fakta": [
-      "Novinářské vyšetřování DW odhalilo síť tzv. jednorázových agentů řízenou z Ruska, kteří páchali sabotáže v evropských zemích",
-      "Kubánský instruktor tance usazený v Rusku podle vyšetřování koordinoval žhářské a sabotážní akce, mimo jiné v Rumunsku",
-      "Za zapálení cílů v Rumunsku bylo nabízeno až 3000 dolarů"
-    ],
-    "neznameho": [
-      "přímé napojení na ruské státní orgány u všech případů",
-      "rozsah sítě v dalších zemích",
-      "Datum události se z textu určit nedá. Uvedeno datum zveřejnění (2026-09-14) — ověřit."
-    ],
-    "vyznam": "",
-    "eskalacniSpousteče": [],
-    "deeskalacniSignaly": [],
-    "zdroje": [
-      {
-        "nazev": "Google News — sabotáž — Sabotáže v EU řídil kubánský učitel tance - voxpot.cz",
-        "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxQN2pYM1doX1hxaHRJclZOYlRTLXpvX3pGeTJNOThvZ1FIRUM5Qm91YllzWmNLc3RfUDQ1X0FDbXhvWUstUkdVUjZOcFc1MHFUdFZsVDBHSWVaSU5VVVFvZVJ5LUhHR3JrWEdfckMyZy0wUm9pQU1BV1VXN1FmVDJMSzEtbVkxQQ?oc=5",
-        "typ": "media",
-        "publikovano": "2026-09-14T00:00:00Z",
-        "primarni": false,
-        "jazyk": "cs"
-      },
-      {
-        "nazev": "Česko — sabotaz — Cuban Dance Instructor Sought for Ties to Russian Sabotage Network in Europe - CubaHeadlines",
-        "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE5WOFJjN1h4czJYYlJUUXA4WktvVk56Tjhjd1JPT3hRcGFocEQ1SVgwTGFuRW9rSE5zc3dBbEZuZWJxVjNUZFhRQ096TWI1b3VPNGVzZFQtYVA?oc=5",
-        "typ": "media",
-        "publikovano": "2026-09-14T00:00:00Z",
-        "primarni": false,
-        "jazyk": "cs"
-      },
-      {
-        "nazev": "Česko — sabotaz — They are looking for a Cuban dance instructor linked to a network of Russian sabotage in Europe - Cibe",
-        "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxOeHl4UlRHUGF4YjBwMXpaX2QtMnV6bkkySVZ3U0lGZDJtdmlSNWNydF9jUEkxYndpRlBOWmlGVmY4d01fa1pxWEFYVWY3MjJwYkhZb1NjUndRVERRMldkNWhuMXM5OEZfcnFJWHRtbmdEOEt0VjRDNklOcVh5SVJ6d1l3WUxrdUpVdEJaSW9KM1hVb08zb2VYY2hzSG5jSFVOdUFVLXFINnJFTkFhbTY1M1VzN1NEWTZv?oc=5",
-        "typ": "media",
-        "publikovano": "2026-09-14T00:00:00Z",
-        "primarni": false,
-        "jazyk": "cs"
-      },
-      {
-        "nazev": "Google News — sabotage Europe — DW: A Cuban dance instructor, recruited by the Russian intelligence services, coordinate",
-        "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxQSGM5R2ZTVzJOR1F3aFVHYloxN3V6amVxckdkUE1fSUxNT1lKYldEeWZ2WjNvN3loVFUyR2Z3U3FmRnAxR1RrVDQ2UVZvTEJ6UDRvS19ZQ1hBMGNBYnZjaHVzcHpqNTIxY0JUMWVDUDFrUk9kVTNtZ0tlQU92Q0JhTEZfNHRETHBPbUJGaFVrakNpVkhoZHFrZDZld05mRVVVUkZ4ZGZQWE5iWHpWNGE4UVUwVzJDVkpTOUVIUC1wSmg?oc=5",
-        "typ": "media",
-        "publikovano": "2026-09-14T00:00:00Z",
-        "primarni": false,
-        "jazyk": "cs"
-      },
-      {
-        "nazev": "Rumunsko — sabotaz — $3,000 to set fire to targets in Romania. How a Cuban dance teacher based in Russia coordinated sab",
-        "url": "https://news.google.com/rss/articles/CBMi9gFBVV95cUxQaWRJX2VRWnRxcFpyMVJIWFF5ZDd2dFdodzktemR1cXZYaFh0ME1pSEJ3RVFNNE9ucGRlUVdLX0t1dUgzY285Z3pUQm5yYl84VTg1YUhPTF9SZlFXSmZoa0tSeWZSWUV6YkJ2dVAxTVotSjE4UW13QVNGbExKcjBGRGROTUUxUUF0cjVXaWdsbm1YUnFUT1F6QTlDdG5qM3I5OVF3b1hQdjg0eEVaVXFJbEVwTWp2UUtVWFVLRGVld2VWajZwdTZveXN4TzVrb1UycmFxb1NYVUtvYXc3OGpKNjExMmtOOXFUNTdpSWF4RWJkUUlNN0E?oc=5",
-        "typ": "media",
-        "publikovano": "2026-09-14T00:00:00Z",
-        "primarni": false,
-        "jazyk": "cs"
-      },
-      {
-        "nazev": "Rumunsko — sabotaz — New cross-border investigation uncovers Russian-directed network of ‘disposable agents’ behind Euro",
-        "url": "https://news.google.com/rss/articles/CBMi5AFBVV95cUxPZ0Zhbkpsb1ZrMU1GS244djI1U01uZktDTVJDd2RmaVBSeldPRDRhM2RKWlZSeWptM2pMNWZNR1JFNGw2T3lzdkNhYXp6cHRZN1lDYWJuZ09QU1dsWVhET0NLVl9hN3Z5dEZUNXdOYWNfNHpjcVlmX3NiVXd2ZFdhdDRUQklGYmlxbkY1V1UwTFlIQ0t3R0YwUkxMS0ZCV2xHVS1BOExnNU1sRTFUZFNjd2RpWVRWOHlMOW1GVTlFRGM5eGZ0RkFkTjdqVWV6SlpHRzduMVA0aEtKdU5Nczd4cm02OWg?oc=5",
-        "typ": "media",
-        "publikovano": "2026-09-14T00:00:00Z",
-        "primarni": false,
-        "jazyk": "cs"
-      },
-      {
-        "nazev": "Google News — sabotage Europe — Cuban dance teacher ordered EU sabotage attacks from Russia - dw.com",
-        "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxPZEtXbUNwQXNjMk5jeFBpbUxXMTdNUjBvNWVwNTVzWlVBZWN6cnRSdE9qQzI4ekw3bFRlTTM5MjUybDBzLXNsWlh3dE1JZTBMRFRLNkJTOVlCS3lEX2IyaC0yQWhjWVJDUDE5elo1eGV6b291ZWNLd3h3UUFzTkFOcjBKRU5jcU85SHFXNGlwYnNBRV9UWW5r0gGXAUFVX3lxTE5Tc3dYdzFFR3JJMk9yNk92RzJZdUdIbXdGMjUwbXlKeWJETlJBVE5EVGhBMU1xdUJaSjJ4TXUzaW5OZEVLNFJLMzhLR01SVVJFWWRrbXIzN1lwUkF3b05LR3FhMFdXXzZNWnRGSHluZkJnNTd2ZHMzU1FtcDFBVVF4SVdfdjJBVnFNQzJpWkpzNGNlQl8td2M?oc=5",
-        "typ": "media",
-        "publikovano": "2026-09-14T00:00:00Z",
-        "primarni": false,
-        "jazyk": "cs"
-      },
-      {
-        "nazev": "Google News — sabotage Europe — DW investigation: Sabotage attacks in the EU for Russia - dw.com",
-        "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxOemVDUkJNeXJHQVl1ZkgtYWtkbFBsaXAyc2NZTnB2aGZoLVhYSDFGZWRUREplWGxXX2tsekZma3ZpSTlHcmplSmxQc3lWbHdWRTZoVDBtdzkzQlpzNVBoUWZTQWxHSEtvaVVlVGFCWm5RaHo0YmFVWHhoMFJhcWx5VUU2Z3ZNOXI2VmhEUXdBS3Y3Q2VVci13M1BUd1lwenJodDBQYWZOeEZUaE5vNDc5TTBvRUUyb0hxZ0RhaHM3SF9nRnBGM1E?oc=5",
-        "typ": "media",
-        "publikovano": "2026-09-14T00:00:00Z",
-        "primarni": false,
-        "jazyk": "cs"
-      },
-      {
-        "nazev": "Google News — sabotage Europe — DW News. . In 2024, several Latin Americans were caught committing sabotage and arson on",
-        "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxOdm5CdE1Ba3ZZcjlZX1B4a09XV1B4VXAwRVl1VDdnM0tHUVIxRzBYVVNOVXNfUFpuZlFOMFA4YkI3Ym50RVhURkQzekNpdFRBRVJPTlhQTVk3bGZqYWs3NTJkdG5YV2JtRDNZNi1wZlMzbXkxZHFCRjJGWUxxR3d2dEZnQ2RhdzBnNkswXzhGUXQyeDJ1NVRVUXFQRXpLalpseHdjMWhQWVpSTDBhT3o0VWdBVk04cWg1TUpIYVFxSQ?oc=5",
-        "typ": "media",
-        "publikovano": "2026-09-14T00:00:00Z",
-        "primarni": false,
-        "jazyk": "cs"
-      }
-    ],
-    "souvisejici": [],
-    "historie": [
-      {
-        "kdy": "2026-09-14T00:00:00Z",
-        "text": "Zachyceno automatickým sběrem, posouzeno před zařazením do fronty.",
-        "novySignal": true
-      }
-    ],
-    "novy": true,
-    "zapocitanoTyden": "2026-09-14",
-    "aiZpracovano": true,
-    "lidskyOvereno": false,
-    "archivniZaznam": false
-  },
-  {
-    "kam": "zaznam",
-    "pripravil": "audit",
-    "pripraveno": "2026-09-20T07:44:20.270Z",
-    "id": "i-2026-09-13-daec1ea3be",
-    "slug": "de-daec1ea3be",
-    "titulek": "Německo označilo hlavní podezřelé z dronového útoku na letiště Lipsko/Halle",
-    "kratkyTitulek": "Německo označilo hlavní podezřelé z dronového útoku na letiště Lipsko/Halle",
-    "zeme": "Německo",
-    "kodZeme": "DE",
-    "kategorie": [
-      "hybridni",
-      "drony"
-    ],
-    "datumUdalosti": "2026-09-13T00:00:00Z",
-    "datumZjisteni": "2026-09-13T00:00:00Z",
-    "aktualizovano": "2026-09-20T07:44:20.270Z",
-    "zavaznost": "O2",
-    "jistota": "stredni",
-    "stav": "bez-vysetrovani",
-    "atribuce": "neznama",
-    "puvodce": "neznamy",
-    "druh": "pripad",
-    "fakta": [
-      "Německé úřady označily hlavní podezřelé v souvislosti s dronovým útokem na letiště Lipsko/Halle",
-      "Podezřelý má být podle zpráv napojen na ruskou vojenskou rozvědku"
-    ],
-    "neznameho": [
-      "totožnost podezřelých",
-      "důkazy napojení na GRU",
-      "Datum události se z textu určit nedá. Uvedeno datum zveřejnění (2026-09-13) — ověřit."
-    ],
-    "vyznam": "",
-    "eskalacniSpousteče": [],
-    "deeskalacniSignaly": [],
-    "zdroje": [
-      {
-        "nazev": "Lotyšsko — sabotaz — Germany names main suspects in drone attack on Leipzig/Halle Airport - UA.NEWS",
-        "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxQLWxYX2xXXzBVdWVYbVdYeDRsM2JXSkdXMF9sOGlyQ25sdjZIVTJ0RFBfcnhiZHRpMkNkYnRBVWZPcS16d0U1OEZLTmlkYlNubWtxWEJ0S1ZaOGFrWThiVzNrZzB4cXViWHYxN0JmaU9JdkZ6QzhBYldTNGppdFBVaVUtdDJxYXVTUGR5Vk9tN3cwMVVQMGlkWjgxcEJMYmozLVdwUlhESVFkWTNPYTNleHYzM1ZzNzQ?oc=5",
-        "typ": "media",
-        "publikovano": "2026-09-13T00:00:00Z",
-        "primarni": false,
-        "jazyk": "cs"
-      },
-      {
-        "nazev": "Německo — sabotaz — Suspect in Leipzig airport sabotage reportedly linked to Russian military intelligence - theins.pres",
-        "url": "https://news.google.com/rss/articles/CBMiS0FVX3lxTFBRZ3dMMThTbDZfSHBjZFpNUkNXVnBUNXQxWExOVXFhbFR1dC1kbURxWmFOV2lvcHBiWDd1OE5vTFdheDhQNUs1c1VtUQ?oc=5",
-        "typ": "media",
-        "publikovano": "2026-09-14T00:00:00Z",
-        "primarni": false,
-        "jazyk": "cs"
-      }
-    ],
-    "souvisejici": [],
-    "historie": [
-      {
-        "kdy": "2026-09-13T00:00:00Z",
-        "text": "Zachyceno automatickým sběrem, posouzeno před zařazením do fronty.",
-        "novySignal": true
-      }
-    ],
-    "novy": true,
-    "zapocitanoTyden": "2026-09-13",
-    "aiZpracovano": true,
-    "lidskyOvereno": false,
-    "archivniZaznam": false
-  },
-  {
-    "kam": "zaznam",
-    "pripravil": "audit",
-    "pripraveno": "2026-09-20T07:44:20.270Z",
-    "id": "i-2026-09-13-4c43e0cf0f",
-    "slug": "lt-4c43e0cf0f",
-    "titulek": "Litva: letiště ve Vilniusu krátce uzavřeno kvůli domnělému dronu, šlo o hejno ptáků",
-    "kratkyTitulek": "Litva: letiště ve Vilniusu krátce uzavřeno kvůli domnělému dronu, šlo o hejno ptáků",
-    "zeme": "Litva",
-    "kodZeme": "LT",
-    "kategorie": [
-      "drony",
-      "nato"
-    ],
-    "datumUdalosti": "2026-09-13T00:00:00Z",
-    "datumZjisteni": "2026-09-13T00:00:00Z",
-    "aktualizovano": "2026-09-20T07:44:20.270Z",
-    "zavaznost": "G1",
-    "jistota": "vysoka",
-    "stav": "bez-vysetrovani",
-    "atribuce": "neznama",
-    "puvodce": null,
-    "druh": "reakce",
-    "fakta": [
-      "Letiště ve Vilniusu dočasně zastavilo provoz kvůli hlášení možného narušení vzdušného prostoru dronem",
-      "Kvůli podezření vzlétla stíhačka NATO",
-      "Výstraha byla po zhruba dvaceti minutách stažena, incident byl vyhodnocen jako hejno ptáků",
-      "V Polsku ve stejnou dobu preventivně vzlétly stíhačky"
-    ],
-    "neznameho": [],
-    "vyznam": "",
-    "eskalacniSpousteče": [],
-    "deeskalacniSignaly": [],
-    "zdroje": [
-      {
-        "nazev": "Google News — narušení vzdušného prostoru — Litva kvůli možnému dronu uzavřela letiště ve Vilniusu. Vzlétla stíhačka NAT",
-        "url": "https://news.google.com/rss/articles/CBMi4wFBVV95cUxNU0p6bHBvNDRrQnFKSUI2dUp6V3pEVUpKN2lxWkVTNDBOQV8xOC11TFZjLXVLeXhUSGJwNEI4MDJSUEhTaW9ZTkJEcjBQOExOMzlMdm13bWFWamVfNS1zOG5veldKOHVQM1V2Wm9xanlscW9VcHJBYTllUGxBQTNhSDI4cXFvaVFLSzJzUFg4ZWNtZ1kyZUljRnJDSG93TkRoa0VMbVo5a3BaRmdTNG5HRk9ScWpTM3ZOMXlldFBFSXhMWk1xd25vNUlBbmZEcDhEREhHLVF2QTA1OWpGcUpoUF9JVQ?oc=5",
-        "typ": "media",
-        "publikovano": "2026-09-13T00:00:00Z",
-        "primarni": false,
-        "jazyk": "cs"
-      },
-      {
-        "nazev": "Google News — dron vzdušný prostor — Kvůli dronovým útokům na čas zastavilo provoz letiště v Litvě. Vzlétla i stíhačka N",
-        "url": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxNUlhZMld4bE9GdFpRcVg1QThoTk5HUHRydzFHR1BUT0Q1ZFp0Ql9zUDJGaWd6SUZlaDB3S0RrcHQ1UXFmSmZzcUo0Yzh1U3pBR2xIaGJYZ090dWZBUkJ3WmpEcHdZX1dBNW5ZbUZQNG5DM181QmJNcENMV25QcjdlTm1mOFZiSk5jQWZFblNYMFhLX2tzRXRfdEVHRWs4aXlfeWRKclRBR1ozc2planJucTJsR09WNzlaNGdpak1ycnl2X2JiWTg4Vw?oc=5",
-        "typ": "media",
-        "publikovano": "2026-09-13T00:00:00Z",
-        "primarni": false,
-        "jazyk": "cs"
-      },
-      {
-        "nazev": "Téma: letiste (anglicky) — Vilnius Airport Closed & NATO Fighter Jets Scrambled After Birds Mistaken For A Drone - Simpl",
-        "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxQNFNlTFFFSm1UVjI3U0gtX1QyR0dGT0J5VEtaUzNlZU93OEJEbUdPMXZRLUVoN0ZNVGY0WW96Q3Zxc2ZpYjBLRU8tTFktcV9zMmlZSFFXTUFNVEhXa3ZKU2JLRlBESlkxMXlaTGptbXVCNGZnWDJ2NUNZZkMtd2swWHJNSGR1dFdV?oc=5",
-        "typ": "media",
-        "publikovano": "2026-09-13T00:00:00Z",
-        "primarni": false,
-        "jazyk": "cs"
-      },
-      {
-        "nazev": "Téma: vzdusna-obrana (anglicky) — Suspected drone alert briefly closes Vilnius Airport as NATO scrambles fighter jet - A",
-        "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE4teHduWVhLV1lqMFpIalVoVmlFX2pVY05sN2dOTEo2bUt5dHNjUW5GZWU5cFBtVktTNmlaTXlGYlpJOE5PZ1NrS3YzSTV6ZldOTlhZOQ?oc=5",
-        "typ": "media",
-        "publikovano": "2026-09-13T00:00:00Z",
-        "primarni": false,
-        "jazyk": "cs"
-      },
-      {
-        "nazev": "Litva — drony — Nato jet scrambled to Lithuania ‘drone threat’ - Newswav",
-        "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxQQVZyZnBVRGNfaVZrY2JXNlVKUjRFY0JaaF95c2JaRmI5SkxOUzFXRXhQbG4wOTdKLWd6U21UOEdVeVZqMWJGYTV0emdhOGdMdndOLWVJUk4xZDl6YkpvTGRvN0twSlpVampIek1wR2tTWmxWTGRxQXFZTUxoMUkzTXlZQ29tUGUxbWdmc0x3?oc=5",
-        "typ": "media",
-        "publikovano": "2026-09-13T00:00:00Z",
-        "primarni": false,
-        "jazyk": "cs"
-      },
-      {
-        "nazev": "Téma: vzdusna-obrana (anglicky) — Vilnius Airport closed and NATO fighter jets scrambled after a drone was spotted - صوت",
-        "url": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxOcGpRY1VTY1VlWDFBZmpVajViMzJCNXZrZXNXQ0JZTGdmU0MwamRDRks4S0Vhc0x3Y20zZ294ajdGWUxCSnR4X05zQ2FOMDNRVjVxY0pqT0lCZTNWNXhkQ2plYVNOWExYVnpFOXVabHo2WEhxTzNxRHdkTXM1SU00WVdpMkgwRkpXUWVlZnFraEhucDZYUGFZQ25UdXByNjh2a2hQOW9zeTZmT1N0MDdoQVgtVEtCZ25PZXdfWS1OWGZGQWFqY0wtbTdWdVpVUV9sWHc?oc=5",
-        "typ": "media",
-        "publikovano": "2026-09-13T00:00:00Z",
-        "primarni": false,
-        "jazyk": "cs"
-      },
-      {
-        "nazev": "Google News — drones airspace NATO — Nato jet scrambled to Lithuania ‘drone threat’ turns out to be flock of birds - The",
-        "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxOamw3ZzNEOWhjek01RlZ0OHNIVEFieXJWUzlnaG1VbjBSQXFSM3pna0NRckhCUjQ4S3NXRkN5SzVUZUlfUF9xcC16WTNGV0NWb3d6YTVWZGJ3emdMVHNuZ0xjMEdCQ3YtektoaVZ6LUZRTHZOUlJOVjNjcElRd3FvYldMaXQ0VjFiS3lMY21wTnJES2hoUnlxMXpJR2ppYVp3MjV0U214SVBJM1ZmSFE?oc=5",
-        "typ": "media",
-        "publikovano": "2026-09-13T00:00:00Z",
-        "primarni": false,
-        "jazyk": "cs"
-      },
-      {
-        "nazev": "Téma: letiste (anglicky) — Drone alert over Lithuania turns out to be flock of birds - as NATO jet scrambled - Sky News",
-        "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxQYXBxUE9JU3h2bFMtdU1Yak9DeTQ4VEs5cFpEc0VGS0l2aWs4NUdyNDVkNllBVnhMUFVqZU9PM3ZnZVlzZ3BZM0Z1ajVYVVd6cGQ5RTkyUGcwZVVobUlDcm1QbXJpQVNQVGs4VEs4UjlwTHZsS2puSHo5WGk5YllFWkp5ODB5TzE2ZlcwSmk1QzlFSjJQa2lheEhlV3F3dzlVeEczVl9CT0s0NjRyUGFOalRzX1RPQQ?oc=5",
-        "typ": "media",
-        "publikovano": "2026-09-13T00:00:00Z",
-        "primarni": false,
-        "jazyk": "cs"
-      },
-      {
-        "nazev": "Téma: vzdusna-obrana (anglicky) — Nato fighter jets scramble to intercept drone that was flock of birds - Metro.co.uk",
-        "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxOZ1AtakdLZ1NLUzRwYlhPdVhQVFNqdzJPbmZ4Ti1HVzVsS3FGR1A3NGdjMTZtajAxN21SWG1sVEo3dkNtcGo2RjdsOHprVUNXTS1pX2RtUzFqazVEMWQ4ZmNMQmFfQ2dGNzNub2U2eWhPWmtaR0laczhKODFRbDhrSkdwWkdHbUhac0xjWFp4WjYyeWNhZkNreFVEVjBJUnh2YlNZU1FTQmTSAa4BQVVfeXFMUDBsWEVLa1lhVTdNX0taTEJYN1paeTRKdFljSzBYMWp3Z1NWOHJMZXJzc0QzdTlUZ3VoQW5iNldTeGxKbTZQT2FqOGQwTUJZT05xZnlvRVVDZEx1U2U1UWE2WTR2ZXRLQUQ3QWJsS0pBTl9Udk5EX1VTODcwSWFYVmg4LV92REVPc0hob0U2QzBvdUxmcWJPazVab3BvaDc4Y19oc05IZ3dWaXVKekpB?oc=5",
-        "typ": "media",
-        "publikovano": "2026-09-13T00:00:00Z",
-        "primarni": false,
-        "jazyk": "cs"
-      },
-      {
-        "nazev": "Téma: letiste (anglicky) — Nato jet scrambled over drone scare at Lithuania airport, turns out to be birds - India Today",
-        "url": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxNanRISVNIa1BzcEdyZEN1UU5LRldKQlRtMmphU2FBMzRCZzRYZHFSWm1aeG1mUE5CVm5sOUxyakZXb1NVTFJZbnlzTGF6STFrNUhZY3Z4V3lvVFk0NHFpTzBkdGQtVkJaMTJUYi1QMzNQQmF6Xy1Gcl83d2g2MnZfQ1hQRmNaRFJSNzdaTlJ6UjhEVGV3QkpibzhjNHd3cDV3SlVQNllvS2JGNjl6bFV4c09Dc0NzQ0VvM1ZSd0xOZVpNVk5QVW5oTVRWcG9HSVFpc2fSAdcBQVVfeXFMTXJ4UXoyOEllTUZPcHdHb1VGTjN5cmpyR0p0Tlg4cmdPUDZ2QThfa2RnTU5PZTZNb3NCcGt1VDA3Rmo3OWs4LU1aZXRoZVc2Mi1VOUFZbjktLXptUV9aWGtDQ0pza2hOQjlCTy1HclpjOXBuSmxicDBOUGwxMzh5cGxEVVdDV1JZUE81SmxSaFp3NldaMjMxeWpUblMyYkpKNDhOVVRncTE0cER5QWJ5NjhQUjhMRjE4V3U1bDhIRHZMZXJwd19lWjh4SExsdTVhaDh4b3RGQ0U?oc=5",
-        "typ": "media",
-        "publikovano": "2026-09-14T00:00:00Z",
-        "primarni": false,
-        "jazyk": "cs"
-      },
-      {
-        "nazev": "Téma: vzdusna-obrana (anglicky) — Lithuania's 'Neurosis' Over Russian Drones: Jets Scramble for Birds - 조선일보",
-        "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxOeUJvZ2FMOWd5MFlpM21udm1QZVNRck9MMXJWQmduZkR0aDlRUktrMWRGSExMLXpSOFV3ZDJmV1REUHFVUTVtX0EyR3JFaWZZZFlnY290ZzBhdHAwMVJNNXFzak52bGEzLWFGVTBta2x2SjJKNWQwMWRaSl9EelllQ0lmNXU?oc=5",
-        "typ": "media",
-        "publikovano": "2026-09-14T00:00:00Z",
-        "primarni": false,
-        "jazyk": "cs"
-      }
-    ],
-    "souvisejici": [],
-    "historie": [
-      {
-        "kdy": "2026-09-13T00:00:00Z",
-        "text": "Zachyceno automatickým sběrem, posouzeno před zařazením do fronty.",
-        "novySignal": true
-      }
-    ],
-    "novy": true,
-    "zapocitanoTyden": "2026-09-13",
-    "aiZpracovano": true,
-    "lidskyOvereno": false,
-    "archivniZaznam": false
-  },
-  {
-    "kam": "zaznam",
-    "pripravil": "audit",
-    "pripraveno": "2026-09-20T07:44:20.270Z",
-    "id": "i-2026-09-13-31de033fc0",
-    "slug": "pl-31de033fc0",
-    "titulek": "Polsko: ruský dron zasáhl vlak u hranice s Ukrajinou, vyhlášen letecký poplach a vzlétly stíhačky",
-    "kratkyTitulek": "Polsko: ruský dron zasáhl vlak u hranice s Ukrajinou, vyhlášen letecký poplach a vzlétly stíhačky",
-    "zeme": "Polsko",
-    "kodZeme": "PL",
-    "kategorie": [
-      "drony",
-      "hranice",
-      "rusko"
-    ],
-    "datumUdalosti": "2026-09-13T00:00:00Z",
-    "datumZjisteni": "2026-09-13T00:00:00Z",
-    "aktualizovano": "2026-09-20T07:44:20.270Z",
-    "zavaznost": "O2",
-    "jistota": "vysoka",
-    "stav": "bez-vysetrovani",
-    "atribuce": "neznama",
-    "puvodce": "neznamy",
-    "druh": "pripad",
-    "fakta": [
-      "Ruský dron zasáhl lokomotivu osobního vlaku jedoucího z Kyjeva do Varšavy poblíž hraničního přechodu Jahodyn–Dorohusk",
-      "Nikdo nebyl zabit ani zraněn díky včasné výstraze",
-      "Polsko kvůli útokům vyhlásilo letecký poplach a vyslalo stíhačky, dočasně byla zastavena letiště",
-      "Polský premiér Tusk svolal zvláštní poradu s ministry a zpravodajskými službami",
-      "Představitelé EU včetně Kaji Kallasové označili útok za pokus zastrašit spojence Ukrajiny"
-    ],
-    "neznameho": [
-      "přesný počet a typ dronů",
-      "zda šlo o úmyslný cíl na vlak"
-    ],
-    "vyznam": "",
-    "eskalacniSpousteče": [],
-    "deeskalacniSignaly": [],
-    "zdroje": [
-      {
-        "nazev": "ČT24 — hlavní zprávy — Ruské drony útočily poblíž polské hranice, zasáhly vlak do Varšavy, uvádí Kyjev",
-        "url": "https://ct24.ceskatelevize.cz/clanek/svet/kyjev-zasahl-ropnou-rafinerii-v-krasnodarskem-kraji-uvadi-ukrajinska-armada-377532",
-        "typ": "media",
-        "publikovano": "2026-09-13T00:00:00Z",
-        "primarni": false,
-        "jazyk": "cs"
-      },
-      {
-        "nazev": "Deutsche Welle — Europe — EU leaders urge unity after Russian strike on train",
-        "url": "https://www.dw.com/en/eu-leaders-urge-unity-after-russian-strike-on-train/a-79259807?maca=en-rss-en-eu-2092-rdf",
-        "typ": "media",
-        "publikovano": "2026-09-14T00:00:00Z",
-        "primarni": false,
-        "jazyk": "cs"
-      },
-      {
-        "nazev": "Google News — letecký poplach — Rusko začalo útočiť koridorom na západ. V Poľsku bol letecký poplach, dron udrel na vlak",
-        "url": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxQVDdHaU1jMExUbEd2ZWVEaHdTVFU4RDZrLWdmUjZUemVLaGl2VDdiWVZBMU1uWklTbWNPbktKakRMOWdaSUxQT2Y1OXRFcUwyZ2N3dHN1Vl9XYm9WLUVraGRjNWN2TnJyeGtaY3RaR0hmV0ViSXBVRG9aV1NZemxIS29aNGkyZVh6bk1WS05qd0hzbUgxUWwycVhSbnFUczIzdlBKUlcxd3VVMG9tWFAtUHVPYXJVZXAtZGRSVlNZbHBUSjRoTGJwemZjbHhndWY4WXZNTGRn?oc=5",
-        "typ": "media",
-        "publikovano": "2026-09-13T00:00:00Z",
-        "primarni": false,
-        "jazyk": "cs"
-      },
-      {
-        "nazev": "Google News — Polsko vzdušný prostor — Poland Scrambles Fighter Jets Over Threat of Russian Air Strike - Around Prague",
-        "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxQcEpONnF5ZlhWeld0X2doRG1QRGZTb3BzV0EyeFBhdEdTUUJPdnRoUnRzZjBoakFFb2J0MVRUbHJwUHlFZGtKaUJ1bVppeExrWTlXVWNSLXZnaFBrTUJNVnUwOWJTMlN6bjY4WmZ6N2JUSl9iVGZOZXE4VmNlRTM4NUlEWHNiY1JRUk1DN2huZF9MN3RocU1vTTlqaw?oc=5",
-        "typ": "media",
-        "publikovano": "2026-09-13T00:00:00Z",
-        "primarni": false,
-        "jazyk": "cs"
-      },
-      {
-        "nazev": "Google News — letecký poplach — Poplach v Polsku: Armáda vyslala do vzduchu stíhačky, na východě zněly sirény - Deník.cz",
-        "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxNcWZGTGxkN3FRYnBSQWItR3cwbEtmUmRhMXRxYXNUOFhTTEFMVlNSWE1xRE1HZFl0dE1VR3g3Uk5TZkhLMHZuQ2lMRTNhbGMzckVrQnpmQ21Gbk5rUllzbVU4WEt6WmdnNmZSRWlQTk1iSm1od0NNUXQ2ZGR3eEJVSEZyRE1QVjBpTm9FM05nODZ5U1VYMm5vWUtlOVYxdW9UblBYYy1n?oc=5",
-        "typ": "media",
-        "publikovano": "2026-09-13T00:00:00Z",
-        "primarni": false,
-        "jazyk": "cs"
-      },
-      {
-        "nazev": "Google News — letecký poplach — Rusko začalo útočit koridorem na západ. V Polsku byl letecký poplach, dron udeřil na vla",
-        "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxPZ1VGaXo1Wkp2M0dTUmUxS2dqbDFZU2tGTEhTR05xS0hQUm5lTm1KeFJRdWR6S3lRYjN1QXNXeGsyQ1N0N0FqenJkeHRIc0IxbVJUck9scWJEZ053ekR3cEZaa1B6NzdVSHZ6X1R3dEJuT2R5Zzl1WVJ1UkZKa2MxRXZDSEF6UUNtYUhQc0Z6T2lLZzJCLTNQekVRWEgxcVVXZDRYNk1JTk82WWpqbVZLTGt3Q1p3YmdRSTV6Vg?oc=5",
-        "typ": "media",
-        "publikovano": "2026-09-13T00:00:00Z",
-        "primarni": false,
-        "jazyk": "cs"
-      },
-      {
-        "nazev": "Téma: vzdusna-obrana (česky) — Rusko a Ukrajina hlásí mrtvé a raněné po útocích, v Polsku vzlétly stíhačky - České novin",
-        "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxNWWxXNHlTUW1YdmpwN1VhWWVZQkZWc3FVY1pxMzNrem42SXRPaHM5Z1RmTzZPRHdNZ0dBUUttMFNLVWJ6emUxaEtGQ2xmRWJmZUQ5NUVjWk1FNjVPc2VOeHp3Ymk5cmxNSTdON3dBNUtUdzJqWGFfcHE1bnBaSkJUcktyb3Q0TWk2YTROWURNX3dyRmJlVTNKV05JYWlOY2t2N2dUaVUwa3dRTUhwWktFZGJULVNzX0U?oc=5",
-        "typ": "media",
-        "publikovano": "2026-09-13T00:00:00Z",
-        "primarni": false,
-        "jazyk": "cs"
-      },
-      {
-        "nazev": "iROZHLAS — zprávy — Kvůli dronovým útokům na čas zastavily provoz letiště Litva a Polsko. Vzlétla i stíhačka NATO",
-        "url": "https://www.irozhlas.cz/zpravy-svet/kvuli-dronovym-utokum-na-cas-zastavily-provoz-letiste-litva-a-polsko-vzletla-i_2609131346_med",
-        "typ": "media",
-        "publikovano": "2026-09-13T00:00:00Z",
-        "primarni": false,
-        "jazyk": "cs"
-      },
-      {
-        "nazev": "Google News — Polsko vzdušný prostor — Poland Scrambled Fighter Jets After Russian Attack on Ukraine, Airspace Violation",
-        "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTFBnc0dFVWVmalpvUHc5Zl9kUUtMbVFpeHRoLXdVVzZuS09RcEJLdUFJT1dGTEVWY3ZvSFV0TUVRaVJVY0g4Q2JRSWZTQTJ2SjZmOEhJWG5LNDBodnBERkVUZEhtam40OUJkMFdSNWFR?oc=5",
-        "typ": "media",
-        "publikovano": "2026-09-13T00:00:00Z",
-        "primarni": false,
-        "jazyk": "cs"
-      }
-    ],
-    "souvisejici": [],
-    "historie": [
-      {
-        "kdy": "2026-09-13T00:00:00Z",
-        "text": "Zachyceno automatickým sběrem, posouzeno před zařazením do fronty.",
-        "novySignal": true
-      }
-    ],
-    "novy": true,
-    "zapocitanoTyden": "2026-09-13",
-    "aiZpracovano": true,
-    "lidskyOvereno": false,
-    "archivniZaznam": false
-  },
-  {
-    "kam": "zaznam",
-    "pripravil": "audit",
-    "pripraveno": "2026-09-20T07:48:17.186Z",
-    "id": "i-2026-09-12-39a8c14760",
-    "slug": "de-39a8c14760",
-    "titulek": "Německo: podezřelý ze sabotáže na letišti Lipsko má být napojen na ruskou GRU",
-    "kratkyTitulek": "Německo: podezřelý ze sabotáže na letišti Lipsko má být napojen na ruskou GRU",
-    "zeme": "Německo",
-    "kodZeme": "DE",
-    "kategorie": [
-      "sabotaz",
-      "zpravodajske",
-      "rusko"
-    ],
-    "datumUdalosti": "2026-09-12T00:00:00Z",
-    "datumZjisteni": "2026-09-12T00:00:00Z",
-    "aktualizovano": "2026-09-20T07:48:17.187Z",
-    "zavaznost": "O2",
-    "jistota": "stredni",
-    "stav": "bez-vysetrovani",
-    "atribuce": "neznama",
-    "puvodce": "neznamy",
-    "druh": "pripad",
-    "fakta": [
-      "Jeden z podezřelých ze sabotáže na letišti Lipsko má být podle vyšetřovatelů napojen na ruskou vojenskou rozvědku GRU"
-    ],
-    "neznameho": [
-      "Přímé úřední potvrzení napojení na GRU",
-      "Totožnost podezřelého"
-    ],
-    "vyznam": "",
-    "eskalacniSpousteče": [],
-    "deeskalacniSignaly": [],
-    "zdroje": [
-      {
-        "nazev": "Německo — sabotaz — In Germany, one of the suspects in the sabotage at Leipzig Airport was linked to the GRU of the Russ",
-        "url": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxNTVl1UEhtSHltdjdEejFnU1ZoV1VZU0pLMmt5bTN6eEUya0lnV2FFLVVLejdQdnRGeWtwSk1WRFJqTGlPZm4waS1uQW4xQnYyWEQ5ZktreXFvSS1GMTJFUEVNZXEwVU5hN0o2c3FURkYzX2hiWjlCakVVcElHVXpxWnZiVEpCRXB2YzhwQ3pXRGkwR3JzQmEwT0FEYTc3QzhYRVhjVjVPQWpuVjc4MTZ3di16R0tDUDFreF9PNzE0OVB0MVh2Y2NCSnhTYTItUnZveHfSAdABQVVfeXFMT1laUzFTVFpwYzNlajZEaGFCaUt2bXFRZFlFUUphX1N4OUJ6Mnp6OEtVcGUteGFpXzZKdVdDRVJDWEpDVzJnUjcxYTlIY0szczdiUXRUdjBWaXJHOHpHUW0zQk9sR285QzU0emx3Z0ZNYVQtcGJjdG5wTF9sQW1tcWJIVUw4el94TGc2R3pUQ3JZdGtuNDhxbjdETW5aY2todERXM3k2Wmx6UjA5SGExSjVpeHFYajdYWEl0b1ZpLU8zM19HT0cxSG1kNXgzYVNZMQ?oc=5",
-        "typ": "media",
-        "publikovano": "2026-09-12T00:00:00Z",
-        "primarni": false,
-        "jazyk": "cs"
-      },
-      {
-        "nazev": "Rakousko — sabotaz — Drone attack on Leipzig: clues apparently point to Russian intelligence service - Euronews.com",
-        "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxNVnFvU2N3UkdEOU4weEFYZC01b19NclprSFMyUmQ4UjhKbE9CRW8xRUM4ZHFWNG9ZSlJuMTVUcV85WDlEMjZ4RW1JM3RUVm1QbEZyUDBxZEtIdE5qX0NUX2ZLU1FlaXBDc2lUTW1jY1JaMW1xb3ZvRkVlUjBDMk94Rjg1MHhCaUFfTWZEYVJaNzN3MlMwVWx3bmFYSEpYc2tMZjdXY280UXBBOC16UkZndG9BeTctVlFZdHdpVFhIemZzQQ?oc=5",
-        "typ": "media",
-        "publikovano": "2026-09-12T00:00:00Z",
-        "primarni": false,
-        "jazyk": "cs"
-      },
-      {
-        "nazev": "Německo — sabotaz — German Investigators Suspect Russian Linked to GRU in Attempted Attack on Leipzig Airport - Наша Нів",
-        "url": "https://news.google.com/rss/articles/CBMiS0FVX3lxTE0yTm1HdXNHbktWUTl0RlUybUJLbTVLQlR3VTRxTnB2eDdJUXppU0RIVHc2TjdBVzhtYWhvU0pZOEhmZHpMSEw3STk3c9IBS0FVX3lxTE0yTm1HdXNHbktWUTl0RlUybUJLbTVLQlR3VTRxTnB2eDdJUXppU0RIVHc2TjdBVzhtYWhvU0pZOEhmZHpMSEw3STk3cw?oc=5",
-        "typ": "media",
-        "publikovano": "2026-09-12T00:00:00Z",
-        "primarni": false,
-        "jazyk": "cs"
-      },
-      {
-        "nazev": "Německo — sabotaz — Media: One of the suspects in the Leipzig airport sabotage may be linked to the Russian GRU - Бабель",
-        "url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxNUjZZSTdDeFZoZ3I1dHEyQlRFN1libklocGFUd0ZCLXJNY1UyeE1xbUhzeGZhaFZfbUwycTlqZmRRMUlzNjNlX2drWGdIMDNsS01SR3hlbkFDaWR5ZWVacDdhVTdZZzRYRWhTUU9pUTVzQ2NNRlVMNVJSQ1J6dnd4NjRVVS1Jel9vSlc0dG8yVmZGRHhwTmZMSHhXbUlSV3UwTFNBaG1EVU1jT3RqamtpajdIQkVTbG84Z1hubGdSdVU3M3Q10gHEAUFVX3lxTE1SNllJN0N4VmhncjV0cTJCVEU3WWJuSWhwYVR3RkItck1jVTJ4TXFtSHN4ZmFoVl9tTDJxOWpmZFExSXM2M2VfZ2tYZ0gwM2xLTVJHeGVuQUNpZHllZVpwN2FVN1lnNFhFaFNRT2lRNXNDY01GVUw1UlJDUnp2d3g2NFVVLUl6X29KVzR0bzJWZkZEeHBOZkxIeFdtSVJXdTBMU0FobURVTWNPdGpqa2lqN0hCRVNsbzhnWG5sZ1J1VTczdDU?oc=5",
-        "typ": "media",
-        "publikovano": "2026-09-12T00:00:00Z",
-        "primarni": false,
-        "jazyk": "cs"
-      },
-      {
-        "nazev": "iROZHLAS — zprávy — Představa, že by útok v Lipsku dopadl podle ruských plánů, Merze drží v dost velkém napětí, říká exp",
-        "url": "https://www.irozhlas.cz/zpravy-svet/nemecko-rusko-vztahy-drony-letiste-lipsko_2609130700_ula",
-        "typ": "media",
-        "publikovano": "2026-09-13T00:00:00Z",
-        "primarni": false,
-        "jazyk": "cs"
-      },
-      {
-        "nazev": "Google News — sabotáž — Ruská sabotáž v srdci Evropy? Lipsko dělily od katastrofy centimetry - Ekonomický magazín",
-        "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxNd2l4SU1BeGpZVGk3M1JmR3RBYTZyRFQ4N0ZJZjF4ZGxYOUV6STVsVlMxRFlxMXF2NmxDaHJVVi1zYnRSYklQVzI5LWEwcXdtMDk2bWdsSGEza2c1RmpkdENUZ2l6RDY4b2h4MVBEb1ptWkNiTGlKaHcwbjY5RzM1TzhBWHNFNUpHTXBwR0wxMXhvOUE4MUhSeThZTlY?oc=5",
-        "typ": "media",
-        "publikovano": "2026-09-13T00:00:00Z",
-        "primarni": false,
-        "jazyk": "cs"
-      },
-      {
-        "nazev": "Google News — sabotage Europe — Leipzig Sabotage: Why Transport Underpins NATO and Russia’s Defences - Royal United Serv",
-        "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxPX0pUVTF5TEhEZzB0b0pSaGFIRU5GTE1tTG9panI5empISHNMUlR3UU1qUDVkRndzU0cxcXdUMndXNVZjTFhKeU9pc2dzaXNuN240VDFwQ1l4Q0dUaWdLMEFSWFI5MV9LLTRQS25xMG1yclExanE0WUI3eFdwampSTjBVUG9wLXBaMmJyMlYxM0EwT0JNTTdsUndOUlBJRm10WFE?oc=5",
-        "typ": "media",
-        "publikovano": "2026-09-10T00:00:00Z",
-        "primarni": false,
-        "jazyk": "cs"
-      }
-    ],
-    "souvisejici": [],
-    "historie": [
-      {
-        "kdy": "2026-09-12T00:00:00Z",
-        "text": "Zachyceno automatickým sběrem, posouzeno před zařazením do fronty.",
-        "novySignal": true
-      }
-    ],
-    "novy": true,
-    "zapocitanoTyden": "2026-09-12",
-    "aiZpracovano": true,
-    "lidskyOvereno": false,
-    "archivniZaznam": false
-  },
-  {
-    "kam": "zaznam",
-    "pripravil": "audit",
-    "pripraveno": "2026-09-20T07:54:19.262Z",
-    "id": "i-2026-09-16-5e0064da30",
-    "slug": "pl-5e0064da30",
-    "titulek": "Polsko: stíhačky vzlétly, letiště Lublin a Rzeszów dočasně zastavila provoz kvůli ruskému útoku na Ukrajinu",
-    "kratkyTitulek": "Polsko: stíhačky vzlétly, letiště Lublin a Rzeszów dočasně zastavila provoz kvůli ruskému útoku na Ukrajinu",
-    "zeme": "Polsko",
-    "kodZeme": "PL",
-    "kategorie": [
-      "drony",
-      "rusko"
-    ],
-    "datumUdalosti": "2026-09-16T00:00:00Z",
-    "datumZjisteni": "2026-09-16T00:00:00Z",
-    "aktualizovano": "2026-09-20T07:54:19.262Z",
-    "zavaznost": "Y1",
-    "jistota": "vysoka",
-    "stav": "bez-vysetrovani",
-    "atribuce": "neznama",
-    "puvodce": null,
-    "druh": "opatreni",
-    "fakta": [
-      "Polsko vyslalo stíhačky a dočasně zastavilo provoz letišť v Lublinu a Rzeszówě",
-      "Šlo o preventivní opatření kvůli ruskému dronovému útoku na Ukrajinu",
-      "V ukrajinské Volyňské oblasti platily letecké poplachy"
-    ],
-    "neznameho": [],
-    "vyznam": "",
-    "eskalacniSpousteče": [],
-    "deeskalacniSignaly": [],
-    "zdroje": [
-      {
-        "nazev": "The Kyiv Independent — Poland scrambles fighter jets, temporarily closes airports while Russian drones attack Ukraine.",
-        "url": "https://kyivindependent.com/poland-scrambles-fighter-jets-temporarily-closes-airports-while-russian-drones-attack-ukraine/",
-        "typ": "media",
-        "publikovano": "2026-09-16T00:00:00Z",
-        "primarni": false,
-        "jazyk": "cs"
-      },
-      {
-        "nazev": "Google News — narušení vzdušného prostoru — Ruské drony na ukrajinsko-polské hranici vyplašily i Litvu. Vzlétly stíhačky",
-        "url": "https://news.google.com/rss/articles/CBMi3gFBVV95cUxQTjByRWFBY0VMeHFFWUQ1X0NPTGdfNWZNNldid3laUWdNZ2RBeEtuQkZhRUpnbjlEU2s4ME1pUlZpa3lFa0psSkduOGcyUWp1dTVwdng4TEtqbF9WaFFoX3J1S3E2T0tFS1AtYklOMDI0TGdwT0dBbVBldXhHMzNhTnQ5UjUzdFItMUNyeG44ZGQ0YmR4QW1TVWJaX2gyX0FuX0NiZm9EQzYxaVEwQWlhQkNxVnhSdDkzemo5bDJpbi1ucFZRR1RyU2wyTkJSWlBScDljOVNaUFczNXp2Qmc?oc=5",
-        "typ": "media",
-        "publikovano": "2026-09-13T00:00:00Z",
-        "primarni": false,
-        "jazyk": "cs"
-      }
-    ],
-    "souvisejici": [],
-    "historie": [
-      {
-        "kdy": "2026-09-16T00:00:00Z",
-        "text": "Zachyceno automatickým sběrem, posouzeno před zařazením do fronty.",
-        "novySignal": true
-      }
-    ],
-    "novy": true,
-    "zapocitanoTyden": "2026-09-16",
-    "aiZpracovano": true,
-    "lidskyOvereno": false,
-    "archivniZaznam": false
-  },
-  {
-    "kam": "zaznam",
-    "pripravil": "audit",
-    "pripraveno": "2026-09-20T07:57:42.752Z",
-    "id": "i-2026-09-07-52c149ed72",
-    "slug": "ua-52c149ed72",
-    "titulek": "NATO opakovaně zvedalo stíhačky nad Baltským regionem kvůli ruským letadlům",
-    "kratkyTitulek": "NATO opakovaně zvedalo stíhačky nad Baltským regionem kvůli ruským letadlům",
-    "zeme": "Ukrajina",
-    "kodZeme": "UA",
-    "kategorie": [
-      "drony",
-      "nato"
-    ],
-    "datumUdalosti": "2026-09-07T00:00:00Z",
-    "datumZjisteni": "2026-09-07T00:00:00Z",
-    "aktualizovano": "2026-09-20T07:57:42.752Z",
-    "zavaznost": "G2",
-    "jistota": "stredni",
-    "stav": "bez-vysetrovani",
-    "atribuce": "neznama",
-    "puvodce": null,
-    "druh": "reakce",
-    "fakta": [
-      "Stíhačky NATO byly během jednoho týdne několikrát vyslány nad Baltský region kvůli ruským letadlům"
-    ],
-    "neznameho": [
-      "konkrétní incidenty",
-      "Datum události se z textu určit nedá. Uvedeno datum zveřejnění (2026-09-07) — ověřit."
-    ],
-    "vyznam": "",
-    "eskalacniSpousteče": [],
-    "deeskalacniSignaly": [],
-    "zdroje": [
-      {
-        "nazev": "Téma: vzdusna-obrana (anglicky) — NATO jets scrambled multiple times over Baltic region in one week - The Kyiv Independe",
-        "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxOSlI4VENaa3RVb0VlQ0RoVzFBdmVSenpYME1ERVRGdEMxRi1TLXJOVERoTXlsSVI4WWVBZHhhSjN5bnZEemVWdGJLazRSN1Q0NU4tVVJXNml1VW5Zc1RkSVJoSkpjRkROUUZ0TVZ6aWlFUVpTUGtRTEp0cUYtVkEzNV9seVJPRm1SeWNSV011VUhMWGdsVUFJcFN3?oc=5",
-        "typ": "media",
-        "publikovano": "2026-09-07T00:00:00Z",
-        "primarni": false,
-        "jazyk": "cs"
-      },
-      {
-        "nazev": "Téma: vzdusna-obrana (anglicky) — NATO fighter jets were scrambled three times over Baltic states last week due to Russi",
-        "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxPeGx2RXpZM3cybHFBaFpFS0VhVTRkMlR3dVpJVFl3el9hMVg5cmFIa1BtMXJwSk9Wa3JJTTY3azVpancyMG90blNld3NnNnE1dFppalBRQ21YQy1fb3gwX2xfdHN5cU1ZcmJ1dXJhOXRmQjVwcjlGY0U5UlloMG5tMEk2bjY5TXdBX0lONEFZeFN2cy1NRW9aT2ZLM1pvRnRDWEwtS21GUzlLMmlOTXB1TFg0MEJLYXNS?oc=5",
-        "typ": "media",
-        "publikovano": "2026-09-07T00:00:00Z",
-        "primarni": false,
-        "jazyk": "cs"
-      }
-    ],
-    "souvisejici": [],
-    "historie": [
-      {
-        "kdy": "2026-09-07T00:00:00Z",
-        "text": "Zachyceno automatickým sběrem, posouzeno před zařazením do fronty.",
-        "novySignal": true
-      }
-    ],
-    "novy": true,
-    "zapocitanoTyden": "2026-09-07",
-    "aiZpracovano": true,
-    "lidskyOvereno": false,
-    "archivniZaznam": false
-  },
-  {
-    "kam": "zaznam",
-    "pripravil": "audit",
-    "pripraveno": "2026-09-20T07:57:42.752Z",
-    "id": "i-2026-09-06-bd956e0f9c",
-    "slug": "pl-bd956e0f9c",
-    "titulek": "Polsko: podezřelé narušení vzdušného prostoru způsobilo hejno ptáků",
-    "kratkyTitulek": "Polsko: podezřelé narušení vzdušného prostoru způsobilo hejno ptáků",
-    "zeme": "Polsko",
-    "kodZeme": "PL",
-    "kategorie": [
-      "drony"
-    ],
-    "datumUdalosti": "2026-09-06T00:00:00Z",
-    "datumZjisteni": "2026-09-06T00:00:00Z",
-    "aktualizovano": "2026-09-20T07:57:42.752Z",
-    "zavaznost": "G1",
-    "jistota": "vysoka",
-    "stav": "bez-vysetrovani",
-    "atribuce": "neznama",
-    "puvodce": null,
-    "druh": "reakce",
-    "fakta": [
-      "Polsko vyslalo letadla kvůli podezřelému narušení vzdušného prostoru",
-      "Polské úřady později uvedly, že šlo o hejno ptáků"
-    ],
-    "neznameho": [],
-    "vyznam": "",
-    "eskalacniSpousteče": [],
-    "deeskalacniSignaly": [],
-    "zdroje": [
-      {
-        "nazev": "Google News — Polsko bezpečnost — Poland says suspected airspace violation caused by bird flock - Global Banking & Finan",
-        "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxOX2kwRlJwUXlHOEk0RWswcGFrdGl2TmRPdG9sZW1Kb0dVTU9GbjZxMzdBZGxuWmEzbkJvVlMwWWZzUFJOZUhuQzY5a09zWENiTThTaVVZd3k0b3E4UURkLTFZUG85MFRhTlk0SHJ5bHVFY1dCYnk0dmRDYnh2OGthaEZvUE1BbndHWl9nYjFTbVFDcnpGOGdwT3hn?oc=5",
-        "typ": "media",
-        "publikovano": "2026-09-06T00:00:00Z",
-        "primarni": false,
-        "jazyk": "cs"
-      },
-      {
-        "nazev": "Google News — Polsko bezpečnost — Poland scrambles aircraft over suspected airspace breach - UK Defence Journal",
-        "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxQY1IySXVYZklOTDRJRDVBXzVjVno5M2JvS0pnUW5tVWRUU1E5R05VU2tHY1FIRHFSeXZLSjlVdkRjQ3llLTZpdGlyOXZVN3ZTUk8tem1BdE1MczVpelFEQWlWT3BaZ3JmOXNCcWVob2puU0FZbks5SVFicDlZbmhUQnp2RnN1YzlRcGloYkNwQnd4QWM?oc=5",
-        "typ": "media",
-        "publikovano": "2026-09-06T00:00:00Z",
-        "primarni": false,
-        "jazyk": "cs"
-      }
-    ],
-    "souvisejici": [],
-    "historie": [
-      {
-        "kdy": "2026-09-06T00:00:00Z",
-        "text": "Zachyceno automatickým sběrem, posouzeno před zařazením do fronty.",
-        "novySignal": true
-      }
-    ],
-    "novy": true,
-    "zapocitanoTyden": "2026-09-06",
-    "aiZpracovano": true,
-    "lidskyOvereno": false,
-    "archivniZaznam": false
-  },
-  {
     "id": "i-2026-09-12-8097dca796",
     "slug": "ro-8097dca796",
     "titulek": "Rumunsko: dron, který přeletěl Ukrajinu a Moldavsko, dopadl u Botoșenița Mare v župě Suceava; zvednuty byly rumunské F-16",
@@ -2364,7 +599,7 @@
     ],
     "datumUdalosti": "2026-09-12T00:00:00Z",
     "datumZjisteni": "2026-09-12T00:00:00Z",
-    "aktualizovano": "2026-09-20T18:50:36.124Z",
+    "aktualizovano": "2026-09-20T19:04:37.454Z",
     "zavaznost": "Y2",
     "jistota": "stredni",
     "stav": "bez-vysetrovani",
@@ -2379,8 +614,8 @@
     "neznameho": [
       "Původ a typ dronu rumunské ministerstvo neuvedlo; Moldova 1 ho označuje za ruský, úřední potvrzení jsem neotevřel.",
       "Zda dron nesl výbušninu a co ukáže ohledání, zatím není známo.",
-      "Originál tiskové informace na webu rumunského ministerstva jsem neotevřel, jen její zrcadlo na globalsecurity.org.",
-      "Původní odkaz kandidáta (Moldova 1 přes Google News) jsem přímo neotevřel; otevřel jsem přímou adresu téhož článku na moldova1.md."
+      "Původní odkaz kandidáta (Moldova 1 přes Google News) jsem přímo neotevřel; otevřel jsem přímou adresu téhož článku na moldova1.md.",
+      "Ministerstvo v otevřené informaci neuvádí, zda šlo o ruský dron; označení „ruský“ je jen z Moldova 1 a nepřipisuje se."
     ],
     "vyznam": "",
     "eskalacniSpousteče": [],
@@ -2395,12 +630,12 @@
         "jazyk": "en"
       },
       {
-        "nazev": "Ministerstvo národní obrany Rumunska — Press Information (zrcadlo na globalsecurity.org)",
-        "url": "https://www.globalsecurity.org/military/library/news/2026/09/mil-260914-ro-mnd01.htm",
-        "typ": "media",
-        "publikovano": "2026-09-14T00:00:00Z",
-        "primarni": false,
-        "jazyk": "en"
+        "nazev": "Ministerstvo národní obrany Rumunska — Informație de presă (12. 9. 2026)",
+        "url": "https://www.mapn.ro/cpresa/19400_informa%C8%9Bie-de-presa",
+        "typ": "primary",
+        "publikovano": "2026-09-12T00:00:00Z",
+        "primarni": true,
+        "jazyk": "ro"
       }
     ],
     "souvisejici": [],
@@ -2443,7 +678,7 @@
     ],
     "datumUdalosti": "2026-09-15T00:00:00Z",
     "datumZjisteni": "2026-09-16T00:00:00Z",
-    "aktualizovano": "2026-09-20T18:50:36.340Z",
+    "aktualizovano": "2026-09-20T19:03:32.470Z",
     "zavaznost": "O3",
     "jistota": "potvrzeno",
     "stav": "bez-vysetrovani",
@@ -2451,18 +686,28 @@
     "puvodce": "neznamy",
     "druh": "pripad",
     "fakta": [
-      "USA obvinila pět osob pracujících pro ruskou rozvědku",
-      "Sítě operuje od roku 2024",
-      "Plánovala atentáty a sabotáže v zemích podporujících Ukrajinu"
+      "Podle tiskové zprávy Ministerstva spravedlnosti USA z 15. 9. 2026 bylo obviněno pět členů sítě napojené na ruské zpravodajské služby ze spiknutí k financování terorismu (nejvýše 20 let vězení); tři z nich také ze spiknutí k najmutí vraha (nejvýše 10 let).",
+      "Podle obžaloby jeden z obviněných v červnu 2024 koordinoval útok v Praze a v září 2024 útok v Litvě; jde o tvrzení obžaloby, ne o prokázané skutky.",
+      "Podle obžaloby byla osobě s pobytem v USA nabídnuta částka 40 000 dolarů za „eliminaci“ nebo „zmizení“ disidenta."
     ],
     "neznameho": [
-      "Konkrétní identita obviněných",
-      "Konkrétní plánované cíle"
+      "Jde o obvinění, ne o rozsudek; hlavní líčení ani vydání obviněných zdroje neuvádějí.",
+      "Jména obviněných a podrobnosti obžaloby jsou v tiskové zprávě DOJ; zde se neuvádějí.",
+      "Jaký byl rozsah a následek údajných útoků v Praze a Litvě, tisková zpráva neuvádí; vyjádření českých orgánů jsem neotevřel.",
+      "Původce se nepřipisuje; síť podle DOJ souvisí s ruskými zpravodajskými službami, což je tvrzení obžaloby."
     ],
     "vyznam": "",
     "eskalacniSpousteče": [],
     "deeskalacniSignaly": [],
     "zdroje": [
+      {
+        "nazev": "Ministerstvo spravedlnosti USA — Members of Russian Intelligence Services Network Charged with Conspiring to Finance Terrorism and Commit Murder for Hire in the United States",
+        "url": "https://www.justice.gov/opa/pr/members-russian-intelligence-services-network-charged-conspiring-finance-terrorism-and",
+        "typ": "primary",
+        "publikovano": "2026-09-15T00:00:00Z",
+        "primarni": true,
+        "jazyk": "en"
+      },
       {
         "nazev": "Česko — sabotaz — US Charges 5 In Russian Intelligence Sabotage And Assassination Plot - Radio Free Europe/Radio Liberty",
         "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxPVlVBcWM0d0FaWU5USnZlUUVESnp6bVR3alZaRHlyTEpTWGE1U013Qkl4dE51UXVKV29xdlZCWGlscWFEOThRRGFvVXBTN2dfVXZsbUVpMlBxN3ZpZk9jUVJhcmozRmZidkhLQk85YmFzLWVhbFFBMENOZlZkaFdHaWlMaDh5UDNHWTdZRURfUlFXeGtwTm5ySENMQWtkY3BsN0N5NtIBpwFBVV95cUxObzk5ZEZiSUMzRi15Yk5XQmtqZkdlRWFUdWwwc0I5WW02MkItMGYweUVrZVh0S2Z4dmlCbXE3WWFjc2s0YU5CWTQyM2I3YW96OUxMbUxtVXZNQUxYQlNwa1hIRE1ncVJCNGtTQzkyN1BGcWFBODdlNlZhYjJGYkxKS3BDR2V2RlFGb1J2SDZNQ19tUWxSMDNSYnEteUtpZ1dNMlFyWlpUSQ?oc=5",
@@ -2522,5 +767,248 @@
     "kam": "zaznam",
     "pripravil": "stazeno",
     "pripraveno": "2026-09-20T18:50:36.340Z"
+  },
+  {
+    "kam": "zaznam",
+    "pripravil": "patrol",
+    "pripraveno": "2026-09-20T19:09:26.654Z",
+    "id": "i-2026-09-08-a2bd3d3b7a",
+    "slug": "md-a2bd3d3b7a",
+    "titulek": "Moldavsko: policie zadržela ázerbájdžánského občana, kterého podezírá ze sběru informací o vojenských objektech pro ruské tajné služby",
+    "kratkyTitulek": "Moldavsko: policie zadržela ázerbájdžánského občana, kterého podezírá ze sběru informací o vojenských objektech pro ruské tajné služby",
+    "zeme": "Moldavsko",
+    "kodZeme": "MD",
+    "kategorie": [
+      "zpravodajske",
+      "vysetrovani"
+    ],
+    "datumUdalosti": "2026-09-08T00:00:00Z",
+    "datumZjisteni": "2026-09-08T00:00:00Z",
+    "aktualizovano": "2026-09-20T19:09:26.654Z",
+    "zavaznost": "Y2",
+    "jistota": "stredni",
+    "stav": "probiha",
+    "atribuce": "neznama",
+    "puvodce": "neznamy",
+    "druh": "pripad",
+    "fakta": [
+      "Podle moldavské policie byl v Kišiněvě zadržen 49letý občan Ázerbájdžánu podezřelý z neoprávněného sběru informací pro zástupce ruských zvláštních služeb (Unimedia, Digi24).",
+      "Podle policie měl sledovat vojenské objekty v Moldavsku i americké cíle na moldavském území a byl vytipován k diverzním aktivitám v Moldavsku a na Ukrajině (Unimedia).",
+      "Podle Unimedia a OC Media byl při domovní prohlídce zajištěn mobil s kontakty na osobu, která se představovala jako pracovník FSB.",
+      "Podle UA.NEWS (cituje TV8) a Digi24 soud nařídil 30 dnů předběžné vazby; podle OC Media a UA.NEWS hrozí za neoprávněný sběr informací dva až pět let vězení."
+    ],
+    "neznameho": [
+      "Přesné datum zadržení; zdroje uvádějí zprávu z 8. 9. 2026, ne datum zadržení, a do datumu události je dáno datum policejního sdělení.",
+      "Totožnost zadrženého, jeho úloha a to, zda šlo o skutečné přípravy sabotáže; jde o podezření, ne o rozsudek.",
+      "Web moldavské policie ani ministerstva vnitra jsem neotevřel; údaje jsou z médií citujících policejní sdělení.",
+      "Původní odkaz kandidáta (UA.NEWS přes Google News) jsem přímo neotevřel; otevřel jsem přímou adresu téhož článku na ua.news.",
+      "Datum publikace OC Media jsem z otevřené stránky nezjistil; uvedeno datum shodné s ostatními zdroji."
+    ],
+    "vyznam": "",
+    "eskalacniSpousteče": [],
+    "deeskalacniSignaly": [],
+    "zdroje": [
+      {
+        "nazev": "UA.NEWS — An Azerbaijani national was arrested in Moldova on charges of spying for the FSB",
+        "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxNcldZX2lkNUU0cEd3azFGVEgwRXNxLTVQeGVVWldOWjk1NGdIeWRyZFFISXRyOFU2NnZPSnYySXNwX1VySDdqaXhvQ1U1ZlEydzZMZjlsbkZHUUUyZG5lYlpfQXhwWjdndy00aGR1dHRQVXRPNDJJRWsxVDFDOVJEaDBNb1ppaW1WWnRnT0dsWFk3UzFG?oc=5",
+        "typ": "media",
+        "publikovano": "2026-09-08T00:00:00Z",
+        "primarni": false,
+        "jazyk": "en"
+      },
+      {
+        "nazev": "Unimedia — Un azer de 49 de ani, reținut la Chișinău: ar fi colectat informații pentru FSB despre obiective militare din Moldova și ale SUA",
+        "url": "https://unimedia.info/ro/news/b6a0d69772369843/audio-un-azer-de-49-de-ani-retinut-la-chisinau-ar-fi-colectat-informatii-pentru-fsb-despre-obiective-militare-din-moldova-si-ale-sua.html",
+        "typ": "media",
+        "publikovano": "2026-09-08T00:00:00Z",
+        "primarni": false,
+        "jazyk": "ro"
+      },
+      {
+        "nazev": "Digi24 — Un azer care spiona pentru serviciile secrete ale lui Putin a fost reținut în Republica Moldova",
+        "url": "https://www.digi24.ro/stiri/externe/moldova/un-azer-care-spiona-pentru-serviciile-secrete-ale-lui-putin-a-fost-retinut-in-republica-moldova-anuntul-autoritatilor-3939705",
+        "typ": "media",
+        "publikovano": "2026-09-08T00:00:00Z",
+        "primarni": false,
+        "jazyk": "ro"
+      },
+      {
+        "nazev": "OC Media — Moldova arrests Azerbaijani man on suspicion of Russian espionage",
+        "url": "https://oc-media.org/moldova-arrests-azerbaijani-man-on-suspicion-of-russian-espionage/",
+        "typ": "media",
+        "publikovano": "2026-09-08T00:00:00Z",
+        "primarni": false,
+        "jazyk": "en"
+      }
+    ],
+    "souvisejici": [],
+    "historie": [
+      {
+        "kdy": "2026-09-08T00:00:00Z",
+        "text": "Zachyceno automatickým sběrem, druhý zdroj doložen před zařazením do fronty.",
+        "novySignal": true
+      }
+    ],
+    "novy": true,
+    "zapocitanoTyden": "2026-09-08",
+    "aiZpracovano": true,
+    "lidskyOvereno": false,
+    "archivniZaznam": false
+  },
+  {
+    "kam": "zaznam",
+    "pripravil": "patrol",
+    "pripraveno": "2026-09-20T19:09:26.654Z",
+    "id": "i-2026-08-07-bcde1eaa56",
+    "slug": "de-bcde1eaa56",
+    "titulek": "Německo: kybernetický útok na zemskou síť Berlína zasáhl dvě senátní správy, odcizená data byla 4. září zveřejněna",
+    "kratkyTitulek": "Německo: kybernetický útok na zemskou síť Berlína zasáhl dvě senátní správy, odcizená data byla 4. září zveřejněna",
+    "zeme": "Německo",
+    "kodZeme": "DE",
+    "kategorie": [
+      "kyber"
+    ],
+    "datumUdalosti": "2026-08-07T00:00:00Z",
+    "datumZjisteni": "2026-08-18T00:00:00Z",
+    "aktualizovano": "2026-09-20T19:09:26.654Z",
+    "zavaznost": "Y3",
+    "jistota": "vysoka",
+    "stav": "probiha",
+    "atribuce": "neznama",
+    "puvodce": "neznamy",
+    "druh": "pripad",
+    "fakta": [
+      "Podle oficiální stránky Berlína k útoku došlo v období 7.–12. 8. 2026; systémy byly 14. 8. preventivně odpojeny od sítě.",
+      "Podle Behörden Spiegel útok oznámila 17.–18. 8. berlínská Senatskanzlei; zasaženy jsou senátní správy pro rozvoj města, bydlení a stavebnictví a pro mobilitu, dopravu, ochranu klimatu a životní prostředí.",
+      "Podle oficiální stránky Berlína byla 4. 9. 2026 na dark webu zveřejněna odcizená data poté, co Berlín odmítl vyděračské požadavky.",
+      "Podle Berlína jde o nestrukturovaná data ze sdílených a osobních adresářů zaměstnanců, pravděpodobně včetně osobních údajů zaměstnanců, občanů a firem; úřad se ke konkrétním dokumentům nevyjadřuje.",
+      "Podle Berlína věc vyšetřují zemská kriminálka, ochrana ústavy, BSI a prokuratura."
+    ],
+    "neznameho": [
+      "Kdo je pachatel: heise uvádí ransomwarovou skupinu Rhysida a požadavek 30 bitcoinů; otevřený text úřadu skupinu nejmenuje a atribuce se nepřipisuje.",
+      "Rozsah úniku: heise uvádí přibližně 1,44 milionu souborů (5,8 TB) a mezi nimi i podrobnosti o kritické infrastruktuře; úřad to na otevřené stránce nepotvrzuje a Table.Briefings (kandidát) píše jen „may also have been compromised“.",
+      "Datum události je začátek průniku (7. 8.); průnik trval do 12. 8., systémy odpojeny 14. 8., veřejně oznámeno 17.–18. 8.",
+      "Datum poslední aktualizace oficiální stránky berlin.de jsem nezjistil, proto u ní datum publikace chybí.",
+      "Původní odkaz kandidáta (Table.Briefings přes Google News) jsem neotevřel; je pravděpodobně za paywallem."
+    ],
+    "vyznam": "",
+    "eskalacniSpousteče": [],
+    "deeskalacniSignaly": [],
+    "zdroje": [
+      {
+        "nazev": "Table.Briefings — Cybersecurity: Data on critical infrastructure may also have been compromised in cyberattack on Berlin city government",
+        "url": "https://news.google.com/rss/articles/CBMi6gFBVV95cUxQZnI2NlhFenVLaUFsZ2xOSnV5MGpydHh3anpHa2NlaFNpWGozZW5TUjg0N3JuaTl5U2VHVTBoSERVWmxnWmRrbGlQVy1fQm1aOTh4T2Y5OTBaVmVHNkUxdzhlZUthUUdoOHA2dmFfNUtwSE5MdXBDYzE3bmdDMlRVSUdOam1hOU9rOGdWNXJqeEtPeS1kMVNVejJRQTJ0YWF5cFMzMXNsY3FUQ2NBVjVKLW9nNGhlMWZUMzEzcjBXVkFMYm4zX083R0o1YXdpdE9DMm9XOUpUQlNGOXVDSXNGMEY0ZVFZWGxWNWc?oc=5",
+        "typ": "media",
+        "publikovano": "2026-09-08T00:00:00Z",
+        "primarni": false,
+        "jazyk": "en"
+      },
+      {
+        "nazev": "Berlin.de — Cyberangriff auf das Landesnetz: Informationen für Bürgerinnen und Bürger",
+        "url": "https://www.berlin.de/cyberangriff/informationen-fuer-buergerinnen-und-buerger/",
+        "typ": "primary",
+        "primarni": true,
+        "jazyk": "de"
+      },
+      {
+        "nazev": "Behörden Spiegel — Cyber-Angriff trifft zwei Berliner Senatsverwaltungen",
+        "url": "https://www.behoerden-spiegel.de/2026/08/18/cyber-angriff-trifft-zwei-berliner-senatsverwaltungen/",
+        "typ": "media",
+        "publikovano": "2026-08-18T00:00:00Z",
+        "primarni": false,
+        "jazyk": "de"
+      },
+      {
+        "nazev": "heise online — Cyberattacke auf Berlin könnte größere Folgen haben als bisher gedacht",
+        "url": "https://www.heise.de/news/Cyberangriff-Berlin-mit-Steuerungseinheit-will-Betroffene-kontaktieren-11442896.html",
+        "typ": "media",
+        "publikovano": "2026-09-06T00:00:00Z",
+        "primarni": false,
+        "jazyk": "de"
+      }
+    ],
+    "souvisejici": [],
+    "historie": [
+      {
+        "kdy": "2026-08-07T00:00:00Z",
+        "text": "Zachyceno automatickým sběrem, druhý zdroj doložen před zařazením do fronty.",
+        "novySignal": true
+      }
+    ],
+    "novy": true,
+    "zapocitanoTyden": "2026-08-07",
+    "aiZpracovano": true,
+    "lidskyOvereno": false,
+    "archivniZaznam": false
+  },
+  {
+    "kam": "zaznam",
+    "pripravil": "patrol",
+    "pripraveno": "2026-09-20T19:09:26.737Z",
+    "id": "i-2026-09-06-3ddf1e11e2",
+    "slug": "ee-3ddf1e11e2",
+    "titulek": "Estonsko: policie dočasně uzavřela přechod Luhamaa poté, co se dva Íránci opakovaně pokoušeli vstoupit z Ruska",
+    "kratkyTitulek": "Estonsko: policie dočasně uzavřela přechod Luhamaa poté, co se dva Íránci opakovaně pokoušeli vstoupit z Ruska",
+    "zeme": "Estonsko",
+    "kodZeme": "EE",
+    "kategorie": [
+      "hranice"
+    ],
+    "datumUdalosti": "2026-09-06T00:00:00Z",
+    "datumZjisteni": "2026-09-07T00:00:00Z",
+    "aktualizovano": "2026-09-20T19:09:26.737Z",
+    "zavaznost": "G3",
+    "jistota": "stredni",
+    "stav": "neuvedeno",
+    "atribuce": "neznama",
+    "puvodce": "neznamy",
+    "druh": "pripad",
+    "fakta": [
+      "Podle estonské policie a hraniční stráže (PPA) se dva íránští občané v neděli opakovaně pokusili vstoupit do Estonska z Ruska přes přechod Luhamaa (kraj Võrumaa) a hned po příjezdu z ruského území zničili cestovní doklady.",
+      "Podle PPA neměli právní důvod k překročení hranice; pohraničníci jim zakázali vstup a vrátili je do Ruska.",
+      "PPA uvádí, že o případu informovala ruské úřady, ale ruská strana Íráncům podle ní dovolila pokračovat v pokusech o vstup.",
+      "PPA proto přechod dočasně uzavřela dříve než obvykle; podle ERR ho později znovu otevřela poté, co Íránce v pondělí ráno převzala ruská strana.",
+      "Podle ERR se pokusy íránských občanů o nelegální vstup zvyšují od července."
+    ],
+    "neznameho": [
+      "Původní sdělení PPA (politsei.ee) jsem neotevřel; údaje jsou z ERR a MKE, které ho přebírají a čerpají z téhož sdělení.",
+      "Přesný čas uzavření a znovuotevření zdroje neuvádějí konzistentně; neuvádí se.",
+      "Proč ruská strana Íránce nezadržela a zda šlo o záměr, PPA neuvedla; žádná atribuce se nepřipisuje.",
+      "Datum události: ERR News je z pondělí 7. 9., událost je z neděle 6. 9.; ověřit přímo u PPA."
+    ],
+    "vyznam": "",
+    "eskalacniSpousteče": [],
+    "deeskalacniSignaly": [],
+    "zdroje": [
+      {
+        "nazev": "ERR News (Estonsko) — Estonia shuts border crossing after 2 Iranian nationals attempt entry from Russia",
+        "url": "https://news.err.ee/1610130319/estonia-shuts-border-crossing-after-2-iranian-nationals-attempt-entry-from-russia",
+        "typ": "media",
+        "publikovano": "2026-09-07T00:00:00Z",
+        "primarni": false,
+        "jazyk": "en"
+      },
+      {
+        "nazev": "Maaleht/MKE — Luhamaa piiripunkt suleti ebaseaduslike migrantide tõttu enneaegselt",
+        "url": "https://www.mke.ee/et/uudised-et/luhamaa-piiripunkt-suleti-ebaseaduslike-migrantide-tottu-enneaegselt/",
+        "typ": "media",
+        "publikovano": "2026-09-07T00:00:00Z",
+        "primarni": false,
+        "jazyk": "et"
+      }
+    ],
+    "souvisejici": [],
+    "historie": [
+      {
+        "kdy": "2026-09-06T00:00:00Z",
+        "text": "Zachyceno automatickým sběrem, druhý zdroj doložen před zařazením do fronty.",
+        "novySignal": true
+      }
+    ],
+    "novy": true,
+    "zapocitanoTyden": "2026-09-06",
+    "aiZpracovano": true,
+    "lidskyOvereno": false,
+    "archivniZaznam": false
   }
 ]
