@@ -18,7 +18,7 @@ export default function Podporit() {
   const polozky = naklady.polozky as { nazev: string; mesicneKc: number; poznamka: string }[];
   const celkem = polozky.reduce((s, x) => s + x.mesicneKc, 0);
   return (
-    <div className="mx-auto max-w-[820px] px-5 py-12 sm:px-8 sm:py-16">
+    <div className="mx-auto max-w-[860px] px-5 py-12 sm:px-8 sm:py-16">
       <HlavickaStranky
         stitek="Podpora"
         nadpis="Web zdarma. Provoz ne."

@@ -32,10 +32,11 @@ function Jazyky() {
   return (
     <nav aria-label={t("Jazyky")} className="mt-8 border-t border-white/10 pt-6">
       <div className="stitek-tmavy mb-3 text-noc-tlum/70">{t("Jiné jazyky")} / Other languages</div>
-      <ul className="flex flex-wrap gap-x-4 gap-y-2 text-male">
+      {/* Každý odkaz aspoň 36 px vysoký: na mobilu se míří prstem, ne kurzorem. */}
+      <ul className="flex flex-wrap gap-x-4 text-male">
         {JAZYKY.map((j) => (
           <li key={j.kod}>
-            <Odkaz href={`/${j.kod}/`} hrefLang={j.kod} className="text-noc-tlum transition-colors hover:text-noc-text">
+            <Odkaz href={`/${j.kod}/`} hrefLang={j.kod} className="inline-flex min-h-[36px] items-center text-noc-tlum transition-colors hover:text-noc-text">
               {j.nazev}
             </Odkaz>
           </li>
@@ -73,9 +74,9 @@ export function Paticka() {
           {SLOUPCE.map((s) => (
             <nav key={t(s.nadpis)} aria-label={t(s.nadpis)}>
               <div className="stitek-tmavy mb-3 text-noc-tlum/70">{t(s.nadpis)}</div>
-              <ul className="space-y-2 text-zaklad">
+              <ul className="text-zaklad">
                 {s.odkazy.map(([href, label]) => (
-                  <li key={href}><Odkaz href={href} className="text-noc-tlum transition-colors hover:text-noc-text">{t(label)}</Odkaz></li>
+                  <li key={href}><Odkaz href={href} className="inline-flex min-h-[36px] items-center text-noc-tlum transition-colors hover:text-noc-text">{t(label)}</Odkaz></li>
                 ))}
               </ul>
             </nav>

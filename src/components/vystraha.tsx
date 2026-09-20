@@ -38,7 +38,7 @@ export function PruhVystrahy() {
       aria-labelledby="vystraha-nadpis"
       className="neni-tisk border-b border-akcent/45 bg-[#2a0f12]"
     >
-      <div className="mx-auto max-w-[1180px] px-5 py-4 sm:px-8 sm:py-5">
+      <div className="mx-auto max-w-[1280px] px-4 py-4 sm:px-6 sm:py-5">
         <div className="flex flex-wrap items-center gap-x-3 gap-y-1.5">
           <span className="stitek-tmavy inline-flex items-center gap-1.5 rounded-full border border-akcent/60 px-2.5 py-1 text-akcent">
             <span aria-hidden className="h-[5px] w-[5px] rounded-full bg-akcent" />

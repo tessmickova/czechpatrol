@@ -17,7 +17,7 @@ export default function Zeme() {
   const celkem = radky.reduce((s, z) => s + z.pripady, 0);
 
   return (
-    <div className="mx-auto max-w-[1200px] px-5 py-12 sm:px-8 sm:py-16">
+    <div className="mx-auto max-w-[1280px] px-4 py-12 sm:px-6 sm:py-16">
       <HlavickaStranky
         stitek="Země"
         nadpis="Kde se to děje"

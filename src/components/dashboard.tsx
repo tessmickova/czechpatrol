@@ -269,7 +269,7 @@ function Pruh({ nazev, n, max, barva, odkaz }: { nazev: React.ReactNode; n: numb
       <span className="cislice w-6 shrink-0 text-right text-male font-bold text-inkoust">{n}</span>
     </>
   );
-  return odkaz ? <Link href={odkaz} className="flex min-h-[28px] items-center gap-2 hover:bg-plocha">{telo}</Link> : <span className="flex min-h-[28px] items-center gap-2">{telo}</span>;
+  return odkaz ? <Link href={odkaz} className="flex min-h-[36px] items-center gap-2 hover:bg-plocha">{telo}</Link> : <span className="flex min-h-[36px] items-center gap-2">{telo}</span>;
 }
 
 export function Dashboard({
@@ -419,7 +419,7 @@ export function Dashboard({
         sloupec, jen úzký proužek.
       */}
       <div className="grid gap-4 xl:grid-cols-3">
-        <div className="xl:col-span-2">
+        <div className="min-w-0 xl:col-span-2">
           <HeroDashboard
             stav={stav} cr={cr} crHistoricky={crHistoricky} crPocet={crPocet} obcane={obcane} overeno={overeno} veta={veta}
             cisla={<CislaVUvodu polozky={pocitadlaData} ted={ted} zaznamuCelkem={vse.length} />}
@@ -434,8 +434,8 @@ export function Dashboard({
           Zlom je až na 1280 px. Při 1024 px by měl sloupec jen ~310 px,
           titulky by se lámaly do čtyř řádků a nevešly by se ani čtyři.
         */}
-        <div className="xl:relative">
-          <Aktuality zaznamy={vse} kandidati={kandidati} />
+        <div className="min-w-0 xl:relative">
+          <Aktuality zaznamy={vse} kandidati={kandidati} nepotvrzene={nepotvrzene} />
         </div>
       </div>
 
@@ -621,7 +621,7 @@ export function Dashboard({
           <div className="mb-1.5 flex items-center justify-between"><span className="stitek">Kdo · případy {rok}</span><span className="text-mikro text-tlum2">potvrzeno / celkem</span></div>
           <ul className="space-y-0.5">
             {puv.skupiny.map((s) => (
-              <li key={s.klic} className="flex min-h-[28px] items-center gap-2">
+              <li key={s.klic} className="flex min-h-[36px] items-center gap-2">
                 <span className="w-[118px] shrink-0 truncate text-drobne text-inkoust">{s.nazev}</span>
                 <span className="h-[8px] flex-1 overflow-hidden rounded-full bg-linka2">
                   <span className="block h-full bg-tlum2/70" style={{ width: `${(s.pocet / maxPuv) * 100}%` }}>

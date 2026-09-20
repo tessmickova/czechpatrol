@@ -20,7 +20,7 @@ const DRUHY: Record<string, string> = {
 export default function Opravy() {
   const seznam = opravy();
   return (
-    <div className="mx-auto max-w-[900px] px-5 py-12 sm:px-8 sm:py-16">
+    <div className="mx-auto max-w-[860px] px-5 py-12 sm:px-8 sm:py-16">
       <HlavickaStranky
         stitek="Opravy"
         nadpis="Co jsme napsali špatně"

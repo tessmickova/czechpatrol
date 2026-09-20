@@ -134,7 +134,7 @@ export function CislaVUvodu({
       <ul className="pas-scroll -mx-1 flex items-baseline gap-x-6 overflow-x-auto px-1">
         {okna.map((x) => (
           <li key={x.popis} className="shrink-0">
-            <Link href={x.kam} className="group flex items-baseline gap-1.5">
+            <Link href={x.kam} className="group flex min-h-[36px] items-baseline gap-1.5 py-1">
               <span className={`cislice text-cislo font-bold leading-none ${x.zvyraznit && x.n > 0 ? "text-akcent" : "text-inkoust"}`}>{x.n}</span>
               <span className="text-drobne text-tlum group-hover:text-inkoust">{x.popis}</span>
             </Link>

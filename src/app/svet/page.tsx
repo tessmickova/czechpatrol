@@ -122,7 +122,7 @@ function Aktor({ a, stupne }: { a: SvetAktor; stupne: string[] }) {
 export default function Svet() {
   const s = svet();
   return (
-    <div className="mx-auto max-w-[1200px] px-5 py-12 sm:px-8 sm:py-16">
+    <div className="mx-auto max-w-[1280px] px-4 py-12 sm:px-6 sm:py-16">
       <div>
         <HlavickaStranky stitek="Aktéři a cíle" nadpis="Kdo čeho chce dosáhnout a jak blízko je" uvod={s.uvod} />
         <p className="mt-6 flex flex-wrap items-center gap-x-3 gap-y-1 text-drobne text-tlum2">

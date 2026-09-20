@@ -214,6 +214,23 @@ const casti = [
   "Pravidla jsou v PATROL.md na tvé větvi a nemění se. Nejčastěji to padá na:",
   "dva nezávislé zdroje vždycky, datum události není datum článku, původce až",
   "po úředním závěru, [DOPLNIT] se nenahrazuje odhadem.",
+  "",
+  "ROZSAH — válka v Rusku a na Ukrajině",
+  "",
+  "Ptal ses na to dvakrát, tak ať je to napsané a neptáš se potřetí. Pravidlo",
+  "plyne z naší vlastní metodiky, oddíl o původci: „Útok Ukrajiny na ropovod",
+  "v Rusku, který zastaví dodávky do Maďarska, je záznam.\" Rozhoduje tedy",
+  "doložený následek pro země, které sledujeme — ne to, kde se to stalo.",
+  "",
+  "- Úder uvnitř Ruska nebo Ukrajiny BEZ doloženého následku pro sledované",
+  "  země je mimo rozsah. Zapiš `rozhodnuti: \"mimo-rozsah\"` a důvod.",
+  "- Týž úder S doloženým následkem (zastavené dodávky, zasažená evropská",
+  "  firma, uzavřený vzdušný prostor, zbloudilý dron přes hranici) je záznam",
+  "  jako každý jiný.",
+  "",
+  "Není to hodnocení té války. Je to hranice projektu: bezpečnostní situace",
+  "v Česku a okolí. Kdybychom sem brali průběh bojů, utopí se v něm to, kvůli",
+  "čemu sem lidé chodí.",
 ];
 
 if (navrhyVSeznamu.length) {

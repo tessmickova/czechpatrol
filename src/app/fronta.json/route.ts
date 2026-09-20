@@ -1,5 +1,5 @@
 import { WEB } from "@/config/web";
-import { kandidati, nepotvrzeneZaznamy, posledniKontrola } from "@/lib/data";
+import { kandidati, nepotvrzeneZaznamy, posledniKontrola, vsichniKandidati } from "@/lib/data";
 
 export const dynamic = "force-static";
 
@@ -63,7 +63,7 @@ export function GET() {
       protože to je jediný údaj, který se nedá zaměnit s ověřováním stavů —
       a rutina se právě podle něj pozná, jestli sběr vůbec běží.
     */
-    sberNaposledy: vse.reduce<string | null>((nej, k) => {
+    sberNaposledy: vsichniKandidati().reduce<string | null>((nej, k) => {
       const kdy = k.zachyceno ?? null;
       return kdy && (!nej || kdy > nej) ? kdy : nej;
     }, null),

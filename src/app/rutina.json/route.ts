@@ -1,6 +1,6 @@
 import { WEB } from "@/config/web";
 import {
-  celkovyStav, incidenty, kandidati, nepotvrzeneZaznamy, posledniKontrola, posledniOvereni,
+  celkovyStav, incidenty, kandidati, nepotvrzeneZaznamy, posledniKontrola, posledniOvereni, vsichniKandidati,
 } from "@/lib/data";
 import { UROVNE } from "@/lib/skala";
 
@@ -27,13 +27,27 @@ export const dynamic = "force-static";
 
 /** Kolik položek se vypisuje jmenovitě. Zbytek je jen v počtech. */
 const NEJVYS = 12;
+/*
+  Zachycených méně: rutina z nich čte jen počet a stáří nejnovější, ale každá
+  nese adresu zdroje — u Google News přes čtyři sta znaků. Osm stačí.
+*/
+const NEJVYS_ZACHYCENYCH = 8;
 
 export function GET() {
   const fronta = kandidati();
   const nepotvrzene = nepotvrzeneZaznamy();
   const stav = celkovyStav();
 
-  const sberNaposledy = fronta.reduce<string | null>(
+  /*
+    Kdy sběr naposledy něco uložil — ze VŠECH zachycených, ne jen z těch,
+    co čekají ve frontě.
+
+    Počítalo se to z čekajících a 21. 9. 2026 fronta poprvé klesla na nulu.
+    Údaj tím spadl na null a ranní kontrola by z toho usoudila, že sběr
+    neběží. Prázdná fronta je ale úspěch, ne výpadek: znamená, že se
+    všechno posoudilo.
+  */
+  const sberNaposledy = vsichniKandidati().reduce<string | null>(
     (nej, k) => (k.zachyceno && (!nej || k.zachyceno > nej) ? k.zachyceno : nej),
     null,
   );
@@ -78,7 +92,7 @@ export function GET() {
       })),
 
     /* Nejnovější zachycené zprávy, které nikdo neposoudil. */
-    zachyceno: fronta.slice(0, NEJVYS).map((k) => ({
+    zachyceno: fronta.slice(0, NEJVYS_ZACHYCENYCH).map((k) => ({
       id: k.id,
       titulek: k.titulek,
       zeme: k.zeme ?? null,

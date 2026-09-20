@@ -1,3 +1,4 @@
+import type { ReactNode } from "react";
 import Link from "next/link";
 import { JE_UKAZKA } from "@/config/web";
 import { Napoveda } from "./zaklad";
@@ -6,7 +7,7 @@ import { Napoveda } from "./zaklad";
 export function BetaPruh() {
   return (
     <div className="neni-tisk border-b border-linka bg-plocha">
-      <div className="mx-auto flex max-w-[1180px] items-center gap-3 px-5 py-2 sm:px-8">
+      <div className="mx-auto flex max-w-[1280px] items-center gap-3 px-4 py-2 sm:px-6">
         <Napoveda
           label="Co tento web je"
           popis={
@@ -34,7 +35,7 @@ export function UkazkaPruh() {
   if (!JE_UKAZKA) return null;
   return (
     <div className="border-b border-[#5e5124] bg-[#2a2410]">
-      <div className="mx-auto flex max-w-[1180px] items-start gap-2.5 px-5 py-2.5 sm:px-8">
+      <div className="mx-auto flex max-w-[1280px] items-start gap-2.5 px-4 py-2.5 sm:px-6">
         <span className="stitek-tmavy mt-[1px] shrink-0 rounded-[18px] border border-[#5e5124] bg-[#2a2410] px-1.5 py-[3px] text-[#f0d47e]">
           Ukázka
         </span>
@@ -64,11 +65,17 @@ export function OdznakUkazky() {
   výstrahu. Delší vysvětlení patří do patičky a na stránku o projektu —
   tady stačí šest slov, aby si nespletl zdroj.
 */
-export function PruhPuvodu() {
+export function PruhPuvodu({ vpravo }: { vpravo?: ReactNode }) {
   return (
     <div className="border-b border-linka2 bg-plocha2/60">
-      <div className="mx-auto max-w-[1280px] px-4 py-1.5 text-drobne text-tlum2 sm:px-6">
-        Nezávislý projekt, ne úřední zdroj. V nouzi 112.
+      {/*
+        Vpravo stav kontroly. Dřív měl vlastní pruh hned pod tímhle — dvě
+        tenké linky nad sebou kvůli dvěma větám. Když je co hlásit, vlastní
+        pruh dostane zpátky; klid se vejde sem.
+      */}
+      <div className="mx-auto flex max-w-[1280px] flex-wrap items-center justify-between gap-x-4 gap-y-0.5 px-4 py-1.5 text-drobne text-tlum2 sm:px-6">
+        <span>Nezávislý projekt, ne úřední zdroj. V nouzi 112.</span>
+        {vpravo}
       </div>
     </div>
   );

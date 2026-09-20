@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 
 export default function Udalosti() {
   return (
-    <div className="mx-auto max-w-[1200px] px-5 py-12 sm:px-8 sm:py-16">
+    <div className="mx-auto max-w-[1280px] px-4 py-12 sm:px-6 sm:py-16">
       <HlavickaStranky
         stitek="Události"
         nadpis="Co se stalo a odkud to víme"

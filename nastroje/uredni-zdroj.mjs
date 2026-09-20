@@ -51,11 +51,18 @@ const UREDNI_DOMENY = new Set([
   // Česko
   "policie.cz", "nukib.gov.cz", "vlada.gov.cz", "mvcr.cz", "bis.cz", "hzscr.cz",
   "ceps.cz", "spravazeleznic.cz", "mzv.gov.cz", "army.cz", "mocr.army.cz",
+  /* Justice: ministerstvo a soudy. Rozhodnutí soudu je doklad z první ruky. */
+  "justice.cz", "msoud.cz", "nsoud.cz", "usoud.cz", "nssoud.cz",
   // Slovensko
   "sk-cert.sk", "nbu.gov.sk",
   // Německo
   "bsi.bund.de", "bundesregierung.de", "generalbundesanwalt.de", "bundeswehr.de",
-  "polizei.brandenburg.de", "bka.de",
+  "polizei.brandenburg.de", "bka.de", "polizei-nds.de",
+  /*
+    Zemské portály. berlin.de je oficiální web města a zemské vlády —
+    kyberútok na jeho síť oznámil na něm nikdo jiný než on sám.
+  */
+  "berlin.de", "hamburg.de", "bayern.de", "sachsen.de",
   // Polsko
   "gov.pl", "abw.gov.pl", "cert.pl",
   // Nizozemsko
@@ -63,7 +70,7 @@ const UREDNI_DOMENY = new Set([
   "prosecutionservice.nl", "om.nl",
   // Pobaltí
   "cert.lv", "ria.ee", "politsei.ee", "kapo.ee", "kriis.ee", "valitsus.ee",
-  "emta.ee", "nksc.lt", "kam.lt",
+  "emta.ee", "prokuratuur.ee", "nksc.lt", "kam.lt", "kariuomene.lt",
   // Severské státy
   "msb.se", "sakerhetspolisen.se", "government.se", "regeringen.se",
   "kyberturvallisuuskeskus.fi", "traficom.fi", "raja.fi", "valtioneuvosto.fi",

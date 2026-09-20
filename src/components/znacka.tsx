@@ -129,7 +129,7 @@ export function Logo({
       {beta && (
         <span
           className="shrink-0 rounded-full border border-akcent/60 px-[6px] py-[2px] font-mono font-semibold uppercase leading-none tracking-[0.12em] text-akcent"
-          style={{ fontSize: Math.max(8, Math.round(pismo * 0.48)) }}
+          style={{ fontSize: Math.max(10, Math.round(pismo * 0.48)) }}
         >
           beta
         </span>

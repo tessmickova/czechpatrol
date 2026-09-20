@@ -123,7 +123,7 @@ export function UrgentniUpozorneni({
       )}
 
       <div className="border-t border-linka2 px-4 py-2">
-        <Link href="/odber/" className="stitek text-tlum2 transition-colors hover:text-inkoust">
+        <Link href="/odber/" className="stitek inline-flex min-h-[32px] items-center text-tlum2 transition-colors hover:text-inkoust">
           Jak se to dozvíte hned →
         </Link>
       </div>

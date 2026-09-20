@@ -16,7 +16,7 @@ export function HlavickaStranky({
       <div aria-hidden className="pointer-events-none absolute inset-0 -z-10 overflow-hidden">
         <div className="vrstva vzor-mrizka absolute inset-x-0 -inset-y-[60%]" />
       </div>
-      <div className="mx-auto max-w-[1180px] px-5 py-12 sm:px-8 sm:py-16">
+      <div className="mx-auto max-w-[1280px] px-4 py-12 sm:px-6 sm:py-16">
         <div className="mb-5 inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-3 py-1.5">
           {ikona && <Ikona nazev={ikona} velikost={13} tah={1.6} trida="text-akcent-svetla" />}
           <span className="stitek !text-noc-tlum">{stitek}</span>
@@ -32,5 +32,5 @@ export function HlavickaStranky({
 }
 
 export function Obsah({ children }: { children: ReactNode }) {
-  return <div className="mx-auto max-w-[1180px] px-5 py-11 sm:px-8 sm:py-14">{children}</div>;
+  return <div className="mx-auto max-w-[1280px] px-4 py-11 sm:px-6 sm:py-14">{children}</div>;
 }
