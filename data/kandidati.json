@@ -2355,11 +2355,17 @@
       "russia"
     ],
     "naliehave": null,
-    "stav": "ceka",
+    "stav": "vyrizen",
     "vyrez": {
       "text": "Google News",
       "stazeno": "2026-09-15T19:02:55.284Z",
       "stav": 200
+    },
+    "vyrizeni": {
+      "kdy": "2026-09-20T07:48:17.187Z",
+      "duvod": "neudalost",
+      "patriK": null,
+      "poznamka": null
     }
   },
   {
@@ -4821,13 +4827,19 @@
       "sabotage",
       "russia"
     ],
-    "stav": "ceka",
+    "stav": "vyrizen",
     "vyrez": {
       "text": "Google News",
       "stazeno": "2026-09-14T18:32:45.846Z",
       "stav": 200
     },
-    "naliehave": null
+    "naliehave": null,
+    "vyrizeni": {
+      "kdy": "2026-09-20T07:48:17.187Z",
+      "duvod": "neudalost",
+      "patriK": null,
+      "poznamka": null
+    }
   },
   {
     "id": "k-86858ea109acaeee",
@@ -5222,13 +5234,19 @@
       "sabotage",
       "russia"
     ],
-    "stav": "ceka",
+    "stav": "vyrizen",
     "vyrez": {
       "text": "Google News",
       "stazeno": "2026-09-14T11:32:42.010Z",
       "stav": 200
     },
-    "naliehave": null
+    "naliehave": null,
+    "vyrizeni": {
+      "kdy": "2026-09-20T07:48:17.187Z",
+      "duvod": "neudalost",
+      "patriK": null,
+      "poznamka": null
+    }
   },
   {
     "id": "k-1169d14396ee9326",
@@ -6605,13 +6623,19 @@
       "sabotaz",
       "rusk"
     ],
-    "stav": "ceka",
+    "stav": "vyrizen",
     "vyrez": {
       "text": "Google News",
       "stazeno": "2026-09-14T06:07:00.606Z",
       "stav": 200
     },
-    "naliehave": null
+    "naliehave": null,
+    "vyrizeni": {
+      "kdy": "2026-09-20T07:48:17.187Z",
+      "duvod": "zdroj-navrhu",
+      "patriK": null,
+      "poznamka": null
+    }
   },
   {
     "id": "k-7601cd734b6fea66",
@@ -6638,13 +6662,19 @@
       "sabotage",
       "russia"
     ],
-    "stav": "ceka",
+    "stav": "vyrizen",
     "vyrez": {
       "text": "Google News",
       "stazeno": "2026-09-14T06:07:00.760Z",
       "stav": 200
     },
-    "naliehave": null
+    "naliehave": null,
+    "vyrizeni": {
+      "kdy": "2026-09-20T07:48:17.187Z",
+      "duvod": "neudalost",
+      "patriK": null,
+      "poznamka": null
+    }
   },
   {
     "id": "k-b0555f4bf72a7818",
@@ -6675,14 +6705,20 @@
       "rusk",
       "kreml"
     ],
-    "stav": "ceka",
+    "stav": "vyrizen",
     "vyrez": {
       "text": "",
       "stazeno": "2026-09-14T06:07:00.881Z",
       "stav": 403,
       "chyba": "HTTP 403"
     },
-    "naliehave": null
+    "naliehave": null,
+    "vyrizeni": {
+      "kdy": "2026-09-20T07:48:17.187Z",
+      "duvod": "zdroj-navrhu",
+      "patriK": null,
+      "poznamka": null
+    }
   },
   {
     "id": "k-113cc8340e19dbe5",
@@ -6709,13 +6745,19 @@
       "dron",
       "drone"
     ],
-    "stav": "ceka",
+    "stav": "vyrizen",
     "vyrez": {
       "text": "Google News",
       "stazeno": "2026-09-14T06:07:00.921Z",
       "stav": 200
     },
-    "naliehave": null
+    "naliehave": null,
+    "vyrizeni": {
+      "kdy": "2026-09-20T07:48:17.187Z",
+      "duvod": "pokracovani",
+      "patriK": "moldavsko-dron-uzavrel-vzdusny-prostor-2026",
+      "poznamka": null
+    }
   },
   {
     "id": "k-e7fae8bc808e1604",
@@ -6746,11 +6788,17 @@
       "drone"
     ],
     "naliehave": null,
-    "stav": "ceka",
+    "stav": "vyrizen",
     "vyrez": {
       "text": "Google News",
       "stazeno": "2026-09-15T18:02:55.468Z",
       "stav": 200
+    },
+    "vyrizeni": {
+      "kdy": "2026-09-20T07:48:17.187Z",
+      "duvod": "pokracovani",
+      "patriK": "moldavsko-dron-uzavrel-vzdusny-prostor-2026",
+      "poznamka": null
     }
   },
   {
@@ -6776,13 +6824,19 @@
     "shody": [
       "sabotage"
     ],
-    "stav": "ceka",
+    "stav": "vyrizen",
     "vyrez": {
       "text": "Bulgaria investigates fire at weapons site that owner calls sabotage - BBC News\nImage source, Reuters\nImage caption, Fire and smoke rise at EMCO&#x27;s ammunition storage facility near Gorni Varpishta in central Bulgaria\nBy Jaroslav Lukiv\nPublished\n12 September 2026\nBulgaria is investigating the cause of an overnight fire at an ammunition storage site run by a private defence company.\nInterior Minister Ivan Demerdzhiev said the authorities \"are not ruling out outside interference\" in the incident in central Bulgaria. No-one was injured in the blaze that triggered a series of explosions.\nEMCO company, whose weapons are used by Ukraine against invading Russian forces, said the fire at its site was sabotage and that human error was \"completely ruled out\". It did not say who might be responsible.\nThe latest incident follows last month&#x27;s fire and blasts at another EMCO ammunition warehouse in the area.\nIn a statement, EMCO said the storage facility that was burned this time - near the central village of Gorni Varpishta, some 170km (106 miles) east of the capital Sofia - had not been used for months and was inspected just 20 days ago, when full compliance with all regulations was…",
       "stazeno": "2026-09-14T06:07:01.053Z",
       "stav": 200
     },
-    "naliehave": null
+    "naliehave": null,
+    "vyrizeni": {
+      "kdy": "2026-09-20T07:48:17.187Z",
+      "duvod": "pokracovani",
+      "patriK": "bulharsko-emco-pozar-skladu-munice-2026",
+      "poznamka": null
+    }
   },
   {
     "id": "k-ce7012913b5763f6",
@@ -6809,13 +6863,19 @@
       "dron",
       "drone"
     ],
-    "stav": "ceka",
+    "stav": "vyrizen",
     "vyrez": {
       "text": "Google News",
       "stazeno": "2026-09-14T06:07:01.390Z",
       "stav": 200
     },
-    "naliehave": null
+    "naliehave": null,
+    "vyrizeni": {
+      "kdy": "2026-09-20T07:48:17.187Z",
+      "duvod": "pokracovani",
+      "patriK": "moldavsko-dron-uzavrel-vzdusny-prostor-2026",
+      "poznamka": null
+    }
   },
   {
     "id": "k-e6ed1f3983b73403",
@@ -6840,13 +6900,19 @@
     "shody": [
       "derailment"
     ],
-    "stav": "ceka",
+    "stav": "vyrizen",
     "vyrez": {
       "text": "French officials investigate if malicious act caused train derailment - BBC News\nImage source, AFP via Getty Images\nImage caption, Authorities have yet to comment on media reports that sabotage may have caused the derailment\nBy Jaroslav Lukiv\nPublished\n12 September 2026\nOfficials in northern France are investigating whether the derailment of a passenger train on Friday evening was the result of a malicious act.\n\"At this stage, the leading theory is that a piece of rail was present on one of the tracks, potentially causing the derailment. The reason for its presence is unknown,\" prosecutor Sébastien Gallois said on Saturday.\nLocal media say 186 passengers were on board the train that was operating between Rouen and Caen in Normandy.\nForty-four people were treated for injuries, including an 18-year-old woman who was airlifted to hospital in a critical condition.\n\"The train&#x27;s &#x27;black box&#x27; has been seized. Several interviews are scheduled, and a court-appointed expert has been called in,\" prosecutor Gallois said in a press release.\n\"The main victim is still in hospital but her life is no longer in danger. The other victims have received care and treatment; they have…",
       "stazeno": "2026-09-14T06:07:01.524Z",
       "stav": 200
     },
-    "naliehave": null
+    "naliehave": null,
+    "vyrizeni": {
+      "kdy": "2026-09-20T07:48:17.187Z",
+      "duvod": "pokracovani",
+      "patriK": "francie-vykolejeni-vlaku-cleon-2026",
+      "poznamka": null
+    }
   },
   {
     "id": "k-39a8c14760934807",
@@ -6877,11 +6943,17 @@
       "russia"
     ],
     "naliehave": null,
-    "stav": "ceka",
+    "stav": "vyrizen",
     "vyrez": {
       "text": "Google News",
       "stazeno": "2026-09-15T18:02:55.723Z",
       "stav": 200
+    },
+    "vyrizeni": {
+      "kdy": "2026-09-20T07:48:17.187Z",
+      "duvod": "navrh",
+      "patriK": null,
+      "poznamka": null
     }
   },
   {
@@ -6914,11 +6986,17 @@
       "russia"
     ],
     "naliehave": null,
-    "stav": "ceka",
+    "stav": "vyrizen",
     "vyrez": {
       "text": "Google News",
       "stazeno": "2026-09-19T08:32:06.971Z",
       "stav": 200
+    },
+    "vyrizeni": {
+      "kdy": "2026-09-20T07:48:17.187Z",
+      "duvod": "neudalost",
+      "patriK": null,
+      "poznamka": null
     }
   },
   {
@@ -6950,11 +7028,17 @@
       "russia"
     ],
     "naliehave": null,
-    "stav": "ceka",
+    "stav": "vyrizen",
     "vyrez": {
       "text": "Google News",
       "stazeno": "2026-09-15T18:32:59.300Z",
       "stav": 200
+    },
+    "vyrizeni": {
+      "kdy": "2026-09-20T07:48:17.187Z",
+      "duvod": "neudalost",
+      "patriK": null,
+      "poznamka": null
     }
   },
   {
@@ -6983,11 +7067,17 @@
       "derailment"
     ],
     "naliehave": null,
-    "stav": "ceka",
+    "stav": "vyrizen",
     "vyrez": {
       "text": "Google News",
       "stazeno": "2026-09-16T07:32:47.219Z",
       "stav": 200
+    },
+    "vyrizeni": {
+      "kdy": "2026-09-20T07:48:17.187Z",
+      "duvod": "pokracovani",
+      "patriK": "francie-vykolejeni-vlaku-cleon-2026",
+      "poznamka": null
     }
   },
   {
@@ -7019,11 +7109,17 @@
       "russia"
     ],
     "naliehave": null,
-    "stav": "ceka",
+    "stav": "vyrizen",
     "vyrez": {
       "text": "Google News",
       "stazeno": "2026-09-15T18:32:59.432Z",
       "stav": 200
+    },
+    "vyrizeni": {
+      "kdy": "2026-09-20T07:48:17.187Z",
+      "duvod": "neudalost",
+      "patriK": null,
+      "poznamka": null
     }
   },
   {
@@ -7052,11 +7148,17 @@
       "derailment"
     ],
     "naliehave": null,
-    "stav": "ceka",
+    "stav": "vyrizen",
     "vyrez": {
       "text": "Google News",
       "stazeno": "2026-09-16T15:32:44.539Z",
       "stav": 200
+    },
+    "vyrizeni": {
+      "kdy": "2026-09-20T07:48:17.187Z",
+      "duvod": "pokracovani",
+      "patriK": "francie-vykolejeni-vlaku-cleon-2026",
+      "poznamka": null
     }
   },
   {
@@ -7085,11 +7187,17 @@
       "derailment"
     ],
     "naliehave": null,
-    "stav": "ceka",
+    "stav": "vyrizen",
     "vyrez": {
       "text": "Google News",
       "stazeno": "2026-09-15T18:32:59.561Z",
       "stav": 200
+    },
+    "vyrizeni": {
+      "kdy": "2026-09-20T07:48:17.187Z",
+      "duvod": "pokracovani",
+      "patriK": "francie-vykolejeni-vlaku-cleon-2026",
+      "poznamka": null
     }
   },
   {
@@ -7117,13 +7225,19 @@
       "sabotage",
       "russia"
     ],
-    "stav": "ceka",
+    "stav": "vyrizen",
     "vyrez": {
       "text": "Google News",
       "stazeno": "2026-09-14T06:07:01.792Z",
       "stav": 200
     },
-    "naliehave": null
+    "naliehave": null,
+    "vyrizeni": {
+      "kdy": "2026-09-20T07:48:17.187Z",
+      "duvod": "neudalost",
+      "patriK": null,
+      "poznamka": null
+    }
   },
   {
     "id": "k-b694cf5e827b3765",
@@ -7153,13 +7267,19 @@
       "airspace",
       "russia"
     ],
-    "stav": "ceka",
+    "stav": "vyrizen",
     "vyrez": {
       "text": "Russia&#x27;s drone war comes to Moldova and Romania\nSkip to content\nSkip to main menu\nSkip to more DW sites\nIn focus\nBRICS German politics El Nino\nLatest audio Latest videos\nLive TV\nAdvertisement\nhttps://p.dw.com/p/5MTpv\nA Russian drone struck the border crossing of Starokozache between Ukraine and Moldova on the night of September 8 Image: OdeskaODA/Telegram Advertisement\nFor Ukrainians, Russia's air war has been a bitter, bloody reality for years. People in Ukraine are being  killed every day by missiles, bombs, and drones . But the country's central and southeastern European neighbors have also found themselves affected, albeit on a smaller scale: Missiles and drones sometimes invade their air space, and occasionally even crash on their territory.\nNow the Russian drone war is coming dangerously close to two of Ukraine's neighbors: Romania and the Republic of Moldova , where drone incidents are now an almost daily occurrence. The drones often explode, leaving people injured, and there have also been recent attacks on Ukrainian checkpoints at the Moldovan and Romanian borders.\nThe attacks have now escalated to such a degree that many observers believe they can no longer be…",
       "stazeno": "2026-09-14T06:07:01.939Z",
       "stav": 200
     },
-    "naliehave": null
+    "naliehave": null,
+    "vyrizeni": {
+      "kdy": "2026-09-20T07:48:17.187Z",
+      "duvod": "pokracovani",
+      "patriK": "moldavsko-dron-uzavrel-vzdusny-prostor-2026",
+      "poznamka": null
+    }
   },
   {
     "id": "k-8d386f7e4944b42f",
@@ -7188,14 +7308,20 @@
       "dron",
       "rusk"
     ],
-    "stav": "ceka",
+    "stav": "vyrizen",
     "vyrez": {
       "text": "",
       "stazeno": "2026-09-14T06:32:36.790Z",
       "stav": 403,
       "chyba": "HTTP 403"
     },
-    "naliehave": null
+    "naliehave": null,
+    "vyrizeni": {
+      "kdy": "2026-09-20T07:48:17.187Z",
+      "duvod": "neudalost",
+      "patriK": null,
+      "poznamka": null
+    }
   },
   {
     "id": "k-243dfa269384714d",
@@ -7226,11 +7352,17 @@
       "russia"
     ],
     "naliehave": null,
-    "stav": "ceka",
+    "stav": "vyrizen",
     "vyrez": {
       "text": "Google News",
       "stazeno": "2026-09-15T18:32:59.713Z",
       "stav": 200
+    },
+    "vyrizeni": {
+      "kdy": "2026-09-20T07:48:17.187Z",
+      "duvod": "pokracovani",
+      "patriK": "rumunsko-sri-zmarena-sabotaz-2026",
+      "poznamka": null
     }
   },
   {
@@ -7325,14 +7457,20 @@
     "shody": [
       "odsoud"
     ],
-    "stav": "ceka",
+    "stav": "vyrizen",
     "vyrez": {
       "text": "",
       "stazeno": "2026-09-14T06:32:36.832Z",
       "stav": 403,
       "chyba": "HTTP 403"
     },
-    "naliehave": null
+    "naliehave": null,
+    "vyrizeni": {
+      "kdy": "2026-09-20T07:48:17.187Z",
+      "duvod": "neudalost",
+      "patriK": null,
+      "poznamka": null
+    }
   },
   {
     "id": "k-4857a5a3a6bd82a9",
@@ -7357,13 +7495,19 @@
     "shody": [
       "sabotaz"
     ],
-    "stav": "ceka",
+    "stav": "vyrizen",
     "vyrez": {
       "text": "Google News",
       "stazeno": "2026-09-14T06:32:36.888Z",
       "stav": 200
     },
-    "naliehave": null
+    "naliehave": null,
+    "vyrizeni": {
+      "kdy": "2026-09-20T07:48:17.187Z",
+      "duvod": "neudalost",
+      "patriK": null,
+      "poznamka": null
+    }
   },
   {
     "id": "k-aca1a294723f9f38",
@@ -7394,13 +7538,19 @@
       "nato",
       "russia"
     ],
-    "stav": "ceka",
+    "stav": "vyrizen",
     "vyrez": {
       "text": "Google News",
       "stazeno": "2026-09-14T06:32:37.001Z",
       "stav": 200
     },
-    "naliehave": null
+    "naliehave": null,
+    "vyrizeni": {
+      "kdy": "2026-09-20T07:48:17.187Z",
+      "duvod": "pokracovani",
+      "patriK": "svalbard-nato-zabranilo-naciku-prerezani-kabelu-2026",
+      "poznamka": null
+    }
   },
   {
     "id": "k-ca1608ce24073fa4",
@@ -7423,13 +7573,19 @@
     "shody": [
       "odsoud"
     ],
-    "stav": "ceka",
+    "stav": "vyrizen",
     "vyrez": {
       "text": "Za vzpomínkové akce na masakr na náměstí Nebeského klidu dostali aktivisté trest vězení — ČT24 — Česká televize\nŽivé vysílání\nTV program\nPočasí\nTeletext\nE-shop\nVše o ČT\nTV poplatky\nKontakty\nSpravovat účet\nOblíbené pořady\nRozkoukaná videa\nPřihlásit se do TV\nOdhlásit se\nZa vzpomínkové akce na masakr na náměstí Nebeského klidu dostali aktivisté trest vězení\nČTK\n, pov\n11. 9. 2026 11. 9. 2026 ‌ ‌ | Zdroj: ČTK\nPolicie před soudem v Hongkongu, 11. září 2026\nZdroj: Reuters/Vernon Yuen\nČínský soud v Hongkongu v pátek vynesl tresty v rozpětí pět až sedm let vězení pro tři aktivisty, kteří řadu let organizovali vzpomínkové akce připomínající masakr na pekingském náměstí Nebeského klidu v roce 1989. Případ proti trojici organizátorů je všeobecně považován za barometr svobod v Hongkongu v době, kdy Peking, pod jehož správu toto poloautonomní území spadá, tvrdě potlačuje jakoukoli opozici. Verdikt odsoudila OSN i EU, která jej také označila za politicky motivovaný.\nAktivisty už soud letos na základě Pekingem prosazeného zákona o národní bezpečnosti shledal vinnými z podněcování ke svržení čínského režimu. Jednačtyřicetiletá Chow Hang-tung a 69letý Lee Cheuk-yan, kteří trvali na své nevině,…",
       "stazeno": "2026-09-14T06:32:37.111Z",
       "stav": 200
     },
-    "naliehave": null
+    "naliehave": null,
+    "vyrizeni": {
+      "kdy": "2026-09-20T07:48:17.187Z",
+      "duvod": "neudalost",
+      "patriK": null,
+      "poznamka": null
+    }
   },
   {
     "id": "k-b5218d10ba8e3432",
@@ -7460,13 +7616,19 @@
       "nato",
       "russia"
     ],
-    "stav": "ceka",
+    "stav": "vyrizen",
     "vyrez": {
       "text": "Google News",
       "stazeno": "2026-09-14T06:32:38.055Z",
       "stav": 200
     },
-    "naliehave": null
+    "naliehave": null,
+    "vyrizeni": {
+      "kdy": "2026-09-20T07:48:17.187Z",
+      "duvod": "pokracovani",
+      "patriK": "svalbard-nato-zabranilo-naciku-prerezani-kabelu-2026",
+      "poznamka": null
+    }
   },
   {
     "id": "k-ec7241916184af99",
@@ -7497,13 +7659,19 @@
       "nato",
       "russia"
     ],
-    "stav": "ceka",
+    "stav": "vyrizen",
     "vyrez": {
       "text": "Google News",
       "stazeno": "2026-09-14T06:32:38.178Z",
       "stav": 200
     },
-    "naliehave": null
+    "naliehave": null,
+    "vyrizeni": {
+      "kdy": "2026-09-20T07:48:17.187Z",
+      "duvod": "pokracovani",
+      "patriK": "svalbard-nato-zabranilo-naciku-prerezani-kabelu-2026",
+      "poznamka": null
+    }
   },
   {
     "id": "k-f5241785d17d9e47",
@@ -7530,13 +7698,19 @@
       "sabotage",
       "russia"
     ],
-    "stav": "ceka",
+    "stav": "vyrizen",
     "vyrez": {
       "text": "Google News",
       "stazeno": "2026-09-14T06:32:38.300Z",
       "stav": 200
     },
-    "naliehave": null
+    "naliehave": null,
+    "vyrizeni": {
+      "kdy": "2026-09-20T07:48:17.187Z",
+      "duvod": "pokracovani",
+      "patriK": "rumunsko-sri-zmarena-sabotaz-2026",
+      "poznamka": null
+    }
   },
   {
     "id": "k-62c665896ecc123f",
@@ -7568,13 +7742,19 @@
       "drone",
       "russia"
     ],
-    "stav": "ceka",
+    "stav": "vyrizen",
     "vyrez": {
       "text": "Google News",
       "stazeno": "2026-09-14T13:02:47.738Z",
       "stav": 200
     },
-    "naliehave": null
+    "naliehave": null,
+    "vyrizeni": {
+      "kdy": "2026-09-20T07:48:17.187Z",
+      "duvod": "pokracovani",
+      "patriK": "britanie-obvineni-sabotaz-dronove-tovarny-2026",
+      "poznamka": null
+    }
   },
   {
     "id": "k-c84ceb80dadad15b",
@@ -7605,11 +7785,17 @@
       "russia"
     ],
     "naliehave": null,
-    "stav": "ceka",
+    "stav": "vyrizen",
     "vyrez": {
       "text": "Google News",
       "stazeno": "2026-09-15T18:33:00.103Z",
       "stav": 200
+    },
+    "vyrizeni": {
+      "kdy": "2026-09-20T07:48:17.187Z",
+      "duvod": "pokracovani",
+      "patriK": "rumunsko-sri-zmarena-sabotaz-2026",
+      "poznamka": null
     }
   },
   {
@@ -7637,13 +7823,19 @@
       "sabotage",
       "russia"
     ],
-    "stav": "ceka",
+    "stav": "vyrizen",
     "vyrez": {
       "text": "Google News",
       "stazeno": "2026-09-14T06:32:38.430Z",
       "stav": 200
     },
-    "naliehave": null
+    "naliehave": null,
+    "vyrizeni": {
+      "kdy": "2026-09-20T07:48:17.187Z",
+      "duvod": "pokracovani",
+      "patriK": "rusko-zadrzeni-strazneho-britske-ambasady-2026",
+      "poznamka": null
+    }
   },
   {
     "id": "k-ba82964dd25587c5",
@@ -7670,13 +7862,19 @@
       "sabotage",
       "russia"
     ],
-    "stav": "ceka",
+    "stav": "vyrizen",
     "vyrez": {
       "text": "Google News",
       "stazeno": "2026-09-14T06:32:38.550Z",
       "stav": 200
     },
-    "naliehave": null
+    "naliehave": null,
+    "vyrizeni": {
+      "kdy": "2026-09-20T07:48:17.187Z",
+      "duvod": "neudalost",
+      "patriK": null,
+      "poznamka": null
+    }
   },
   {
     "id": "k-d3ef37f163d4d10e",
@@ -7707,11 +7905,17 @@
       "russia"
     ],
     "naliehave": null,
-    "stav": "ceka",
+    "stav": "vyrizen",
     "vyrez": {
       "text": "Google News",
       "stazeno": "2026-09-15T16:06:45.714Z",
       "stav": 200
+    },
+    "vyrizeni": {
+      "kdy": "2026-09-20T07:48:17.187Z",
+      "duvod": "pokracovani",
+      "patriK": "moldavsko-dron-uzavrel-vzdusny-prostor-2026",
+      "poznamka": null
     }
   },
   {
@@ -7744,13 +7948,19 @@
       "nato",
       "russia"
     ],
-    "stav": "ceka",
+    "stav": "vyrizen",
     "vyrez": {
       "text": "Google News",
       "stazeno": "2026-09-14T06:32:38.701Z",
       "stav": 200
     },
-    "naliehave": null
+    "naliehave": null,
+    "vyrizeni": {
+      "kdy": "2026-09-20T07:48:17.187Z",
+      "duvod": "pokracovani",
+      "patriK": "moldavsko-dron-uzavrel-vzdusny-prostor-2026",
+      "poznamka": null
+    }
   },
   {
     "id": "k-b4a64f9454f3a999",
@@ -7780,13 +7990,19 @@
       "airspace",
       "russia"
     ],
-    "stav": "ceka",
+    "stav": "vyrizen",
     "vyrez": {
       "text": "Russian drone incursion delays Zelensky flight from Moldova - BBC News\nImage source, Reuters\nImage caption, Zelensky&#x27;s plane after it landed in Norway after flying in from Moldova\nBy Dan Sales\nPublished\n10 September 2026\nA plane carrying Ukrainian President Volodymyr Zelensky was delayed by a Russian drone as he prepared to fly to attend a state funeral in Oslo, Moldovan and Norwegian authorities say.\nZelensky and his wife Olena were on the jet at Chisinau, Moldova&#x27;s capital, ahead of Wednesday&#x27;s funeral of Norway&#x27;s King Harald V when the unmanned aircraft crossed over the Moldovan border.\nThe drone prompted an immediate airspace shutdown and Zelensky&#x27;s plane was left on the runway for around an hour before it could take off.\nThe flight was only authorised after it was confirmed the drone had come down 160km (100 miles) away. Asked by reporters on Thursday, the Kremlin said there had been no threat to the jet.\nZelensky&#x27;s plane had been due to take off at around 16:30 (14:30 GMT) from Chisinau International Airport.\nBut Moldovan government spokesman Dumitru Ciorici told the BBC that Moldova had closed its airspace after noticing a Russian drone had…",
       "stazeno": "2026-09-14T06:32:38.808Z",
       "stav": 200
     },
-    "naliehave": null
+    "naliehave": null,
+    "vyrizeni": {
+      "kdy": "2026-09-20T07:48:17.187Z",
+      "duvod": "pokracovani",
+      "patriK": "moldavsko-dron-uzavrel-vzdusny-prostor-2026",
+      "poznamka": null
+    }
   },
   {
     "id": "k-591a37060e1734d3",
@@ -7815,13 +8031,19 @@
       "nato",
       "rusk"
     ],
-    "stav": "ceka",
+    "stav": "vyrizen",
     "vyrez": {
       "text": "Google News",
       "stazeno": "2026-09-14T07:02:31.852Z",
       "stav": 200
     },
-    "naliehave": null
+    "naliehave": null,
+    "vyrizeni": {
+      "kdy": "2026-09-20T07:48:17.187Z",
+      "duvod": "pokracovani",
+      "patriK": "svalbard-nato-zabranilo-naciku-prerezani-kabelu-2026",
+      "poznamka": null
+    }
   },
   {
     "id": "k-77cad930b1d94a1d",
@@ -7848,14 +8070,20 @@
       "vojak",
       "vojaci"
     ],
-    "stav": "ceka",
+    "stav": "vyrizen",
     "vyrez": {
       "text": "",
       "stazeno": "2026-09-14T07:02:32.000Z",
       "stav": 403,
       "chyba": "HTTP 403"
     },
-    "naliehave": null
+    "naliehave": null,
+    "vyrizeni": {
+      "kdy": "2026-09-20T07:48:17.187Z",
+      "duvod": "neudalost",
+      "patriK": null,
+      "poznamka": null
+    }
   },
   {
     "id": "k-34cb9c343d165cf4",
@@ -7886,11 +8114,17 @@
       "russia"
     ],
     "naliehave": null,
-    "stav": "ceka",
+    "stav": "vyrizen",
     "vyrez": {
       "text": "Google News",
       "stazeno": "2026-09-15T18:33:00.223Z",
       "stav": 200
+    },
+    "vyrizeni": {
+      "kdy": "2026-09-20T07:48:17.187Z",
+      "duvod": "pokracovani",
+      "patriK": "moldavsko-dron-uzavrel-vzdusny-prostor-2026",
+      "poznamka": null
     }
   },
   {
@@ -7925,11 +8159,17 @@
       "russia"
     ],
     "naliehave": null,
-    "stav": "ceka",
+    "stav": "vyrizen",
     "vyrez": {
       "text": "Google News",
       "stazeno": "2026-09-15T18:33:00.326Z",
       "stav": 200
+    },
+    "vyrizeni": {
+      "kdy": "2026-09-20T07:48:17.187Z",
+      "duvod": "pokracovani",
+      "patriK": "britanie-obvineni-sabotaz-dronove-tovarny-2026",
+      "poznamka": null
     }
   },
   {
@@ -7959,13 +8199,19 @@
       "nato",
       "russia"
     ],
-    "stav": "ceka",
+    "stav": "vyrizen",
     "vyrez": {
       "text": "Google News",
       "stazeno": "2026-09-14T07:02:32.059Z",
       "stav": 200
     },
-    "naliehave": null
+    "naliehave": null,
+    "vyrizeni": {
+      "kdy": "2026-09-20T07:48:17.187Z",
+      "duvod": "neudalost",
+      "patriK": null,
+      "poznamka": null
+    }
   },
   {
     "id": "k-1168b0e53688b788",
@@ -7996,11 +8242,17 @@
       "russia"
     ],
     "naliehave": null,
-    "stav": "ceka",
+    "stav": "vyrizen",
     "vyrez": {
       "text": "Google News",
       "stazeno": "2026-09-15T18:33:00.433Z",
       "stav": 200
+    },
+    "vyrizeni": {
+      "kdy": "2026-09-20T07:48:17.187Z",
+      "duvod": "pokracovani",
+      "patriK": "moldavsko-dron-uzavrel-vzdusny-prostor-2026",
+      "poznamka": null
     }
   },
   {
@@ -8030,13 +8282,19 @@
       "drone",
       "russia"
     ],
-    "stav": "ceka",
+    "stav": "vyrizen",
     "vyrez": {
       "text": "Google News",
       "stazeno": "2026-09-14T07:02:32.217Z",
       "stav": 200
     },
-    "naliehave": null
+    "naliehave": null,
+    "vyrizeni": {
+      "kdy": "2026-09-20T07:48:17.187Z",
+      "duvod": "pokracovani",
+      "patriK": "moldavsko-dron-uzavrel-vzdusny-prostor-2026",
+      "poznamka": null
+    }
   },
   {
     "id": "k-c8bcbb25fba42a30",
@@ -8067,13 +8325,19 @@
       "nato",
       "russia"
     ],
-    "stav": "ceka",
+    "stav": "vyrizen",
     "vyrez": {
       "text": "Google News",
       "stazeno": "2026-09-14T07:02:32.336Z",
       "stav": 200
     },
-    "naliehave": null
+    "naliehave": null,
+    "vyrizeni": {
+      "kdy": "2026-09-20T07:48:17.187Z",
+      "duvod": "pokracovani",
+      "patriK": "svalbard-nato-zabranilo-naciku-prerezani-kabelu-2026",
+      "poznamka": null
+    }
   },
   {
     "id": "k-937c504449973022",
@@ -8106,11 +8370,17 @@
       "russia"
     ],
     "naliehave": null,
-    "stav": "ceka",
+    "stav": "vyrizen",
     "vyrez": {
       "text": "Google News",
       "stazeno": "2026-09-19T08:32:07.076Z",
       "stav": 200
+    },
+    "vyrizeni": {
+      "kdy": "2026-09-20T07:48:17.187Z",
+      "duvod": "pokracovani",
+      "patriK": "svalbard-nato-zabranilo-naciku-prerezani-kabelu-2026",
+      "poznamka": null
     }
   },
   {
@@ -8140,13 +8410,19 @@
       "drone",
       "russia"
     ],
-    "stav": "ceka",
+    "stav": "vyrizen",
     "vyrez": {
       "text": "Google News",
       "stazeno": "2026-09-14T07:02:32.454Z",
       "stav": 200
     },
-    "naliehave": null
+    "naliehave": null,
+    "vyrizeni": {
+      "kdy": "2026-09-20T07:48:17.187Z",
+      "duvod": "pokracovani",
+      "patriK": "moldavsko-dron-uzavrel-vzdusny-prostor-2026",
+      "poznamka": null
+    }
   },
   {
     "id": "k-ae5f08ee37d25c26",
@@ -8173,13 +8449,19 @@
       "dron",
       "drone"
     ],
-    "stav": "ceka",
+    "stav": "vyrizen",
     "vyrez": {
       "text": "Google News",
       "stazeno": "2026-09-14T07:02:32.601Z",
       "stav": 200
     },
-    "naliehave": null
+    "naliehave": null,
+    "vyrizeni": {
+      "kdy": "2026-09-20T07:48:17.187Z",
+      "duvod": "pokracovani",
+      "patriK": "moldavsko-dron-uzavrel-vzdusny-prostor-2026",
+      "poznamka": null
+    }
   },
   {
     "id": "k-68ef713a1b87c050",
@@ -8210,13 +8492,19 @@
       "nato",
       "russia"
     ],
-    "stav": "ceka",
+    "stav": "vyrizen",
     "vyrez": {
       "text": "Google News",
       "stazeno": "2026-09-14T07:02:32.745Z",
       "stav": 200
     },
-    "naliehave": null
+    "naliehave": null,
+    "vyrizeni": {
+      "kdy": "2026-09-20T07:48:17.187Z",
+      "duvod": "pokracovani",
+      "patriK": "svalbard-nato-zabranilo-naciku-prerezani-kabelu-2026",
+      "poznamka": null
+    }
   },
   {
     "id": "k-9c84f8e98aca16d1",
@@ -8244,13 +8532,19 @@
       "drone",
       "airspace"
     ],
-    "stav": "ceka",
+    "stav": "vyrizen",
     "vyrez": {
       "text": "Google News",
       "stazeno": "2026-09-14T07:02:32.890Z",
       "stav": 200
     },
-    "naliehave": null
+    "naliehave": null,
+    "vyrizeni": {
+      "kdy": "2026-09-20T07:48:17.187Z",
+      "duvod": "pokracovani",
+      "patriK": "moldavsko-dron-uzavrel-vzdusny-prostor-2026",
+      "poznamka": null
+    }
   },
   {
     "id": "k-fdf3b4a0b6ba5c5f",
@@ -8281,13 +8575,19 @@
       "nato",
       "russia"
     ],
-    "stav": "ceka",
+    "stav": "vyrizen",
     "vyrez": {
       "text": "Google News",
       "stazeno": "2026-09-14T07:02:33.042Z",
       "stav": 200
     },
-    "naliehave": null
+    "naliehave": null,
+    "vyrizeni": {
+      "kdy": "2026-09-20T07:48:17.187Z",
+      "duvod": "pokracovani",
+      "patriK": "svalbard-nato-zabranilo-naciku-prerezani-kabelu-2026",
+      "poznamka": null
+    }
   },
   {
     "id": "k-de5a7bf6c626e992",
@@ -8318,13 +8618,19 @@
       "nato",
       "russia"
     ],
-    "stav": "ceka",
+    "stav": "vyrizen",
     "vyrez": {
       "text": "Google News",
       "stazeno": "2026-09-14T07:02:33.154Z",
       "stav": 200
     },
-    "naliehave": null
+    "naliehave": null,
+    "vyrizeni": {
+      "kdy": "2026-09-20T07:48:17.187Z",
+      "duvod": "pokracovani",
+      "patriK": "svalbard-nato-zabranilo-naciku-prerezani-kabelu-2026",
+      "poznamka": null
+    }
   },
   {
     "id": "k-dcb551a3abe94216",

@@ -1,541 +1,550 @@
 {
-  "kdy": "2026-09-20T07:44:20.271Z",
+  "kdy": "2026-09-20T07:48:17.187Z",
   "stav": "ok",
   "poskytovatel": "anthropic",
-  "posouzeno": 59,
+  "posouzeno": 60,
   "neposouzeno": 0,
-  "navrhu": 5,
+  "navrhu": 1,
   "vyrizeno": 51,
-  "cekaDal": 149,
+  "cekaDal": 98,
   "rozhodnuti": [
     {
       "id": "k-d7ea48aa931ccb94",
-      "titulek": "Rumunsko: stíhačky vzlétly kvůli narušení vzdušného prostoru NATO poblíž hranice s Moldavskem",
+      "titulek": "Rumunsko: stíhačky vzlétly kvůli narušení vzdušného prostoru poblíž moldavské hranice",
       "novaUdalost": true,
-      "duvod": "Nový incident narušení vzdušného prostoru u moldavské hranice",
+      "duvod": "Nová konkrétní událost - narušení vzdušného prostoru u moldavské hranice se scramblem rumunských stíhaček, odlišné od pozdějšího incidentu se Zelenského letadlem.",
       "duplikatSlugu": null,
       "neznamySlug": null,
       "zahozeno": "hlásí to jen jeden zdroj — druhý musí dohledat člověk"
     },
     {
       "id": "k-873c3f78ff24394c",
-      "titulek": "Bělorusko rozmístilo vojska na hranicích s Polskem a Litvou",
+      "titulek": "Bělorusko rozmístilo jednotky na hranicích s Polskem a Litvou",
       "novaUdalost": true,
-      "duvod": "Nová zpráva o přesunu běloruských vojsk k hranicím",
+      "duvod": "Nová zpráva o vojenském nasazení Běloruska na hranicích s Polskem a Litvou.",
       "duplikatSlugu": null,
       "neznamySlug": null,
       "zahozeno": "hlásí to jen jeden zdroj — druhý musí dohledat člověk"
     },
     {
-      "id": "k-963edadb6fd952a1",
-      "titulek": "USA obvinily pět osob z ruského sabotážního a atentátnického plánu",
-      "novaUdalost": false,
-      "duvod": "Duplicitní zpráva o obvinění pěti osob z ruského sabotážního plánu",
-      "duplikatSlugu": "us-590b687216",
-      "neznamySlug": null,
-      "zahozeno": "není nová událost"
-    },
-    {
       "id": "k-b19ad52154b53d09",
-      "titulek": "Rusko: partyzáni Atesh nahlásili sabotáž rozvodny zásobující zbrojovku ve Voroněži",
+      "titulek": "Rusko: partyzánská skupina Atesh se přihlásila k sabotáži elektrárny u závodu VZPP-Sborka ve Voroněži",
       "novaUdalost": true,
-      "duvod": "Nové tvrzení partyzánské skupiny o sabotáži v Rusku",
+      "duvod": "Nová zpráva o sabotáži ruské partyzánské skupiny Atesh na továrně vyrábějící součástky pro rakety.",
       "duplikatSlugu": null,
       "neznamySlug": null,
       "zahozeno": "hlásí to jen jeden zdroj — druhý musí dohledat člověk"
     },
     {
       "id": "k-5e0064da30f33e0d",
-      "titulek": "Polsko: kvůli ruskému útoku na Ukrajinu vzlétly stíhačky, dočasně zavřena letiště Lublin a Rzeszów",
+      "titulek": "Polsko: kvůli ruskému úderu na Ukrajinu dočasně uzavřena letiště Lublin a Rzeszów, vzlétly stíhačky",
       "novaUdalost": true,
-      "duvod": "Nový incident, samostatné vzlétnutí stíhaček 16. září",
+      "duvod": "Nová konkrétní událost - dočasné uzavření letišť Lublin a Rzeszów a scramble stíhaček kvůli ruskému úderu na Ukrajinu.",
       "duplikatSlugu": null,
       "neznamySlug": null,
       "zahozeno": "hlásí to jen jeden zdroj — druhý musí dohledat člověk"
     },
     {
-      "id": "k-0949dd11b8eab367",
-      "titulek": "USA obvinily pět osob z ruského sabotážního a atentátnického plánu",
-      "novaUdalost": false,
-      "duvod": "Duplicitní zpráva o obvinění pěti osob z ruského sabotážního plánu",
-      "duplikatSlugu": "us-590b687216",
-      "neznamySlug": null,
-      "zahozeno": "není nová událost"
-    },
-    {
       "id": "k-5c9f56c26a2c9155",
-      "titulek": "Nizozemsko: podezření na sabotáž ochromilo železniční síť",
+      "titulek": "Nizozemsko: provoz na železniční síti narušen kvůli podezření na sabotáž",
       "novaUdalost": true,
-      "duvod": "Nová zpráva o podezření na sabotáž nizozemské železnice",
+      "duvod": "Nová zpráva o podezřelé sabotáži nizozemské železniční sítě.",
       "duplikatSlugu": null,
       "neznamySlug": null,
       "zahozeno": "hlásí to jen jeden zdroj — druhý musí dohledat člověk"
     },
     {
       "id": "k-d8de71f85e08e810",
-      "titulek": "Británie: ruští špioni údajně verbují britské teenagery k násilí a sabotážím",
-      "novaUdalost": true,
-      "duvod": "Nová zpráva o ruském verbování britských teenagerů",
+      "titulek": "Spojené království: obecné tvrzení o náboru teenagerů ruskými špiony",
+      "novaUdalost": false,
+      "duvod": "Obecná zpravodajská spekulace bez konkrétní doložené události.",
       "duplikatSlugu": null,
       "neznamySlug": null,
-      "zahozeno": "hlásí to jen jeden zdroj — druhý musí dohledat člověk"
+      "zahozeno": "není nová událost"
     },
     {
       "id": "k-8e175046cef4bee6",
-      "titulek": "Česko: vojenská policie zadržela tři lidi kvůli zakázkám v Ústřední vojenské nemocnici",
+      "titulek": "Česko: vojenská policie zadržela tři osoby kvůli zakázkám v Ústřední vojenské nemocnici",
       "novaUdalost": true,
-      "duvod": "Nová domácí kauza zadržení v ÚVN",
+      "duvod": "Nová konkrétní událost - zadržení tří osob vojenskou policií kvůli zakázkám v ÚVN.",
       "duplikatSlugu": null,
       "neznamySlug": null,
       "zahozeno": "hlásí to jen jeden zdroj — druhý musí dohledat člověk"
-    },
-    {
-      "id": "k-03d1b8363ea6f9fa",
-      "titulek": "Přehled dronových incidentů podél baltských a finských hranic NATO",
-      "novaUdalost": false,
-      "duvod": "Obecný přehledový článek shrnující již známé dronové incidenty v Pobaltí a Finsku",
-      "duplikatSlugu": "finsko-liutyi-2026",
-      "neznamySlug": null,
-      "zahozeno": "není nová událost"
-    },
-    {
-      "id": "k-9bd0f18fb2713b00",
-      "titulek": "Litva: stíhačky NATO sestřelily dron nad litevským vzdušným prostorem",
-      "novaUdalost": true,
-      "duvod": "Nový incident sestřelení dronu nad Litvou stíhačkami NATO",
-      "duplikatSlugu": null,
-      "neznamySlug": null,
-      "zahozeno": null
-    },
-    {
-      "id": "k-887ad57154ca3675",
-      "titulek": "Sabotáže v EU řídil kubánský učitel tance",
-      "novaUdalost": false,
-      "duvod": "Součást hlavní zprávy o síti sabotáží řízené z Ruska (kubánský instruktor tance)",
-      "duplikatSlugu": null,
-      "neznamySlug": null,
-      "zahozeno": "není nová událost"
-    },
-    {
-      "id": "k-1adcf1faed18dab5",
-      "titulek": "Sabotáže v EU řídil kubánský učitel tance",
-      "novaUdalost": false,
-      "duvod": "Součást hlavní zprávy o síti sabotáží řízené z Ruska (kubánský instruktor tance)",
-      "duplikatSlugu": null,
-      "neznamySlug": null,
-      "zahozeno": "není nová událost"
-    },
-    {
-      "id": "k-1f7fb02c1e4b0887",
-      "titulek": "Litva: stíhačky NATO sestřelily dron",
-      "novaUdalost": false,
-      "duvod": "Součást hlavní zprávy o sestřelení dronu nad Litvou",
-      "duplikatSlugu": null,
-      "neznamySlug": null,
-      "zahozeno": "není nová událost"
-    },
-    {
-      "id": "k-2fcfe11a5ed51967",
-      "titulek": "Litva: stíhačky NATO sestřelily dron",
-      "novaUdalost": false,
-      "duvod": "Součást hlavní zprávy o sestřelení dronu nad Litvou",
-      "duplikatSlugu": null,
-      "neznamySlug": null,
-      "zahozeno": "není nová událost"
-    },
-    {
-      "id": "k-a897677b4b076145",
-      "titulek": "Británie: muž se přiznal k dlouholetému zneužívání manželky",
-      "novaUdalost": false,
-      "duvod": "Nesouvisí s bezpečnostní tematikou přehledu (kriminální kauza)",
-      "duplikatSlugu": null,
-      "neznamySlug": null,
-      "zahozeno": "není nová událost"
     },
     {
       "id": "k-42d945cc29f4bef1",
-      "titulek": "Ukrajina: ministr Sybiha varoval před ruským verbováním agentů v Německu",
-      "novaUdalost": true,
-      "duvod": "Nové varování ukrajinského ministra o ruském verbování v Německu",
-      "duplikatSlugu": null,
-      "neznamySlug": null,
-      "zahozeno": "hlásí to jen jeden zdroj — druhý musí dohledat člověk"
-    },
-    {
-      "id": "k-86858ea109acaeee",
-      "titulek": "Litva: stíhačky NATO sestřelily dron",
+      "titulek": "Německo: ukrajinský ministr zahraničí varuje před náborem agentů Ruskem",
       "novaUdalost": false,
-      "duvod": "Součást hlavní zprávy o sestřelení dronu nad Litvou",
-      "duplikatSlugu": null,
-      "neznamySlug": null,
-      "zahozeno": "není nová událost"
-    },
-    {
-      "id": "k-c1fa528d3c8c77ed",
-      "titulek": "Německo obžalovalo podnikatelku ze špionáže pro Rusko",
-      "novaUdalost": false,
-      "duvod": "Duplicitní zpráva o obžalobě berlínské podnikatelky za špionáž",
-      "duplikatSlugu": "de-dae06bfd15",
-      "neznamySlug": null,
-      "zahozeno": "není nová událost"
-    },
-    {
-      "id": "k-f827bbd3acb02f0d",
-      "titulek": "Německo obžalovalo podnikatelku ze špionáže pro Rusko",
-      "novaUdalost": false,
-      "duvod": "Duplicitní zpráva o obžalobě berlínské podnikatelky za špionáž",
-      "duplikatSlugu": "de-dae06bfd15",
-      "neznamySlug": null,
-      "zahozeno": "není nová událost"
-    },
-    {
-      "id": "k-9aef057706085518",
-      "titulek": "Německo obžalovalo podnikatelku ze špionáže pro Rusko",
-      "novaUdalost": false,
-      "duvod": "Duplicitní zpráva o obžalobě berlínské podnikatelky za špionáž",
-      "duplikatSlugu": "de-dae06bfd15",
-      "neznamySlug": null,
-      "zahozeno": "není nová událost"
-    },
-    {
-      "id": "k-9a68948bbe488430",
-      "titulek": "Sabotáže v EU řídil kubánský učitel tance",
-      "novaUdalost": false,
-      "duvod": "Součást hlavní zprávy o síti sabotáží řízené z Ruska (kubánský instruktor tance)",
+      "duvod": "Obecné politické vyjádření bez konkrétní nové události.",
       "duplikatSlugu": null,
       "neznamySlug": null,
       "zahozeno": "není nová událost"
     },
     {
       "id": "k-76b2d13810030cbd",
-      "titulek": "Polsko varuje před možnou bezprecedentní eskalací ruských sabotáží v Evropě",
+      "titulek": "Polsko varuje před možnou eskalací ruských sabotáží v Evropě",
+      "novaUdalost": false,
+      "duvod": "Obecné varování bez konkrétní nové události.",
+      "duplikatSlugu": null,
+      "neznamySlug": null,
+      "zahozeno": "není nová událost"
+    },
+    {
+      "id": "k-6944447263f36132",
+      "titulek": "Polsko/Litva: ruské drony u ukrajinské hranice vyvolaly scramble stíhaček NATO",
       "novaUdalost": true,
-      "duvod": "Nové varování Polska před eskalací sabotáží",
+      "duvod": "Nová zpráva o ruských dronech u polsko-ukrajinské hranice, které znepokojily Litvu a vyvolaly scramble stíhaček NATO.",
       "duplikatSlugu": null,
       "neznamySlug": null,
       "zahozeno": "hlásí to jen jeden zdroj — druhý musí dohledat člověk"
     },
     {
-      "id": "k-1169d14396ee9326",
-      "titulek": "Sabotáže v EU řídil kubánský učitel tance",
+      "id": "k-b4d10ebe93b82986",
+      "titulek": "Německo: analýza blízkosti katastrofy při útoku na Lipsko",
       "novaUdalost": false,
-      "duvod": "Součást hlavní zprávy o síti sabotáží řízené z Ruska (kubánský instruktor tance)",
+      "duvod": "Součást vyšetřování sabotáže na letišti Lipsko, patří k hlavní položce o podezřelém napojeném na GRU.",
       "duplikatSlugu": null,
       "neznamySlug": null,
       "zahozeno": "není nová událost"
     },
     {
-      "id": "k-63d88e3e376ad985",
-      "titulek": "Německo obžalovalo osobu ze špionáže pro Rusko",
+      "id": "k-7601cd734b6fea66",
+      "titulek": "Komentář: ruská sabotážní kampaň v Evropě",
       "novaUdalost": false,
-      "duvod": "Duplicitní zpráva o obžalobě za špionáž v Německu",
-      "duplikatSlugu": "de-dae06bfd15",
-      "neznamySlug": null,
-      "zahozeno": "není nová událost"
-    },
-    {
-      "id": "k-dade8142b3720333",
-      "titulek": "Německo obžalovalo podnikatelku ze špionáže pro Rusko",
-      "novaUdalost": false,
-      "duvod": "Duplicitní zpráva o obžalobě berlínské podnikatelky za špionáž",
-      "duplikatSlugu": "de-dae06bfd15",
-      "neznamySlug": null,
-      "zahozeno": "není nová událost"
-    },
-    {
-      "id": "k-6882bcbee469d8a3",
-      "titulek": "Sabotáže v EU řídil kubánský učitel tance",
-      "novaUdalost": false,
-      "duvod": "Součást hlavní zprávy o síti sabotáží řízené z Ruska (kubánský instruktor tance)",
+      "duvod": "Obecný komentářový článek bez konkrétní nové události.",
       "duplikatSlugu": null,
       "neznamySlug": null,
       "zahozeno": "není nová událost"
     },
     {
-      "id": "k-0577b0e3a1406ee7",
-      "titulek": "Vyšetřování DW: sabotáže v EU řídil z Ruska kubánský učitel tance",
+      "id": "k-b0555f4bf72a7818",
+      "titulek": "Německo: expertní komentář k napětí kolem útoku na Lipsko",
+      "novaUdalost": false,
+      "duvod": "Analytický komentář k případu Lipsko, patří k hlavní položce o podezřelém napojeném na GRU.",
+      "duplikatSlugu": null,
+      "neznamySlug": null,
+      "zahozeno": "není nová událost"
+    },
+    {
+      "id": "k-113cc8340e19dbe5",
+      "titulek": "Moldavsko: narušení vzdušného prostoru dronem zdrželo lety",
+      "novaUdalost": false,
+      "duvod": "Duplicitní zpráva o dronovém incidentu, který zdržel let Zelenského z Moldavska.",
+      "duplikatSlugu": "moldavsko-dron-uzavrel-vzdusny-prostor-2026",
+      "neznamySlug": null,
+      "zahozeno": "není nová událost"
+    },
+    {
+      "id": "k-e7fae8bc808e1604",
+      "titulek": "Moldavsko/Rumunsko: dron přeletěl a havaroval v Rumunsku",
+      "novaUdalost": false,
+      "duvod": "Duplicitní zpráva o stejném dronovém incidentu.",
+      "duplikatSlugu": "moldavsko-dron-uzavrel-vzdusny-prostor-2026",
+      "neznamySlug": null,
+      "zahozeno": "není nová událost"
+    },
+    {
+      "id": "k-73ef75069d4a7e71",
+      "titulek": "Bulharsko: vyšetřování požáru skladu zbraní EMCO",
+      "novaUdalost": false,
+      "duvod": "Duplicitní zpráva o požáru skladu munice EMCO v Bulharsku.",
+      "duplikatSlugu": "bulharsko-emco-pozar-skladu-munice-2026",
+      "neznamySlug": null,
+      "zahozeno": "není nová událost"
+    },
+    {
+      "id": "k-ce7012913b5763f6",
+      "titulek": "Moldavsko: dron zdržel lety v Kišiněvě",
+      "novaUdalost": false,
+      "duvod": "Duplicitní zpráva o dronovém incidentu nad Moldavskem.",
+      "duplikatSlugu": "moldavsko-dron-uzavrel-vzdusny-prostor-2026",
+      "neznamySlug": null,
+      "zahozeno": "není nová událost"
+    },
+    {
+      "id": "k-e6ed1f3983b73403",
+      "titulek": "Francie: vyšetřování možné sabotáže při vykolejení vlaku",
+      "novaUdalost": false,
+      "duvod": "Duplicitní/pokračující zpráva o vykolejení vlaku v Normandii.",
+      "duplikatSlugu": "francie-vykolejeni-vlaku-cleon-2026",
+      "neznamySlug": null,
+      "zahozeno": "není nová událost"
+    },
+    {
+      "id": "k-39a8c14760934807",
+      "titulek": "Německo: podezřelý ze sabotáže na letišti Lipsko má být napojen na ruskou GRU",
       "novaUdalost": true,
-      "duvod": "Nové novinářské vyšetřování odhalující síť sabotážních agentů řízenou z Ruska",
+      "duvod": "Nová konkrétní informace - podezřelý ze sabotáže na letišti Lipsko má být napojen na ruskou GRU.",
       "duplikatSlugu": null,
       "neznamySlug": null,
       "zahozeno": null
     },
     {
-      "id": "k-b1f98b36e50301bb",
-      "titulek": "Rusko zasáhlo leteckou bombou Izjum na Ukrajině",
+      "id": "k-b4996e1572a57e7c",
+      "titulek": "Německo: stopy útoku na Lipsko vedou k ruské rozvědce",
       "novaUdalost": false,
-      "duvod": "Běžná zpráva o ruském útoku na Ukrajinu bez nového rozměru pro ČR",
+      "duvod": "Duplicitní zpráva o napojení podezřelého na GRU.",
       "duplikatSlugu": null,
       "neznamySlug": null,
       "zahozeno": "není nová událost"
     },
     {
-      "id": "k-275a6574069863d6",
-      "titulek": "Ceny ropy a plynu rostou po útocích hútíů na Saúdskou Arábii",
+      "id": "k-518051c5848b27ed",
+      "titulek": "Německo: vyšetřovatelé podezírají Rusa napojeného na GRU z pokusu o útok na letiště Lipsko",
       "novaUdalost": false,
-      "duvod": "Ekonomická zpráva o cenách ropy, nesouvisí s bezpečnostní tematikou přehledu",
+      "duvod": "Duplicitní zpráva o podezřelém napojeném na GRU.",
       "duplikatSlugu": null,
       "neznamySlug": null,
       "zahozeno": "není nová událost"
     },
     {
-      "id": "k-ad6c90ba3f81625b",
-      "titulek": "Litva: poplach s dronem se ukázal být hejnem ptáků",
+      "id": "k-c67a0e11238fca2b",
+      "titulek": "Francie: vyšetřovatelé podezírají sabotáž při vykolejení vlaku",
       "novaUdalost": false,
-      "duvod": "Součást hlavní zprávy o falešném poplachu s dronem ve Vilniusu",
+      "duvod": "Duplicitní zpráva o vyšetřování sabotáže vlaku ve Francii.",
+      "duplikatSlugu": "francie-vykolejeni-vlaku-cleon-2026",
+      "neznamySlug": null,
+      "zahozeno": "není nová událost"
+    },
+    {
+      "id": "k-2ff9ff6bb00e55c3",
+      "titulek": "Německo: médium uvádí možné napojení podezřelého na GRU",
+      "novaUdalost": false,
+      "duvod": "Duplicitní zpráva o podezřelém napojeném na GRU.",
       "duplikatSlugu": null,
       "neznamySlug": null,
       "zahozeno": "není nová událost"
     },
     {
-      "id": "k-78826c10c28a14c5",
-      "titulek": "Sabotáže v EU řídil kubánský učitel tance",
+      "id": "k-568dbe308e4ce2e5",
+      "titulek": "Francie: policie podezírá sabotáž z vykolejení vlaku",
       "novaUdalost": false,
-      "duvod": "Součást hlavní zprávy o síti sabotáží řízené z Ruska (kubánský instruktor tance)",
+      "duvod": "Duplicitní zpráva o vyšetřování sabotáže vlaku ve Francii.",
+      "duplikatSlugu": "francie-vykolejeni-vlaku-cleon-2026",
+      "neznamySlug": null,
+      "zahozeno": "není nová událost"
+    },
+    {
+      "id": "k-703701dacf79a784",
+      "titulek": "Francie: policie podezírá sabotáž z vykolejení vlaku v Normandii",
+      "novaUdalost": false,
+      "duvod": "Duplicitní zpráva o vyšetřování sabotáže vlaku ve Francii.",
+      "duplikatSlugu": "francie-vykolejeni-vlaku-cleon-2026",
+      "neznamySlug": null,
+      "zahozeno": "není nová událost"
+    },
+    {
+      "id": "k-da67344ccaaf0b52",
+      "titulek": "Komentář: ne každý incident je ruská sabotáž",
+      "novaUdalost": false,
+      "duvod": "Obecný komentář, ne konkrétní událost.",
       "duplikatSlugu": null,
       "neznamySlug": null,
       "zahozeno": "není nová událost"
     },
     {
-      "id": "k-2c0dce755d9fb21b",
-      "titulek": "Sabotáže v EU řídil kubánský učitel tance",
+      "id": "k-b694cf5e827b3765",
+      "titulek": "Moldavsko a Rumunsko: rostoucí počet dronových incidentů",
       "novaUdalost": false,
-      "duvod": "Součást hlavní zprávy o síti sabotáží řízené z Ruska (kubánský instruktor tance)",
+      "duvod": "Duplicitní/přehledová zpráva o dronových incidentech u Moldavska a Rumunska.",
+      "duplikatSlugu": "moldavsko-dron-uzavrel-vzdusny-prostor-2026",
+      "neznamySlug": null,
+      "zahozeno": "není nová událost"
+    },
+    {
+      "id": "k-8d386f7e4944b42f",
+      "titulek": "Rusko a Ukrajina: vzájemné útoky s oběťmi",
+      "novaUdalost": false,
+      "duvod": "Obecná denní zpráva o bojích, ne samostatná nová událost.",
       "duplikatSlugu": null,
       "neznamySlug": null,
       "zahozeno": "není nová událost"
     },
     {
-      "id": "k-15c37e3270fe42b3",
-      "titulek": "Sabotáže v EU řídil kubánský učitel tance",
+      "id": "k-243dfa269384714d",
+      "titulek": "Rumunsko: zadržen ruský občan podezřelý ze špionáže vůči základnám NATO",
       "novaUdalost": false,
-      "duvod": "Součást hlavní zprávy o síti sabotáží řízené z Ruska (kubánský instruktor tance)",
-      "duplikatSlugu": null,
+      "duvod": "Duplicitní zpráva o zadrženém ruském občanovi v Rumunsku podezřelém ze špionáže.",
+      "duplikatSlugu": "rumunsko-sri-zmarena-sabotaz-2026",
       "neznamySlug": null,
       "zahozeno": "není nová událost"
     },
     {
-      "id": "k-9f81099424eae60f",
-      "titulek": "Litva: poplach s dronem se ukázal být hejnem ptáků",
-      "novaUdalost": false,
-      "duvod": "Součást hlavní zprávy o falešném poplachu s dronem ve Vilniusu",
-      "duplikatSlugu": null,
-      "neznamySlug": null,
-      "zahozeno": "není nová událost"
-    },
-    {
-      "id": "k-3f98b658db78d5e7",
-      "titulek": "Polsko: vzlétly stíhačky po ruském úderu na Ukrajinu",
-      "novaUdalost": false,
-      "duvod": "Součást hlavní zprávy o dronovém útoku na vlak u polské hranice",
-      "duplikatSlugu": null,
-      "neznamySlug": null,
-      "zahozeno": "není nová událost"
-    },
-    {
-      "id": "k-daec1ea3be3bd079",
-      "titulek": "Německo označilo hlavní podezřelé z dronového útoku na letiště Lipsko/Halle",
+      "id": "k-1d63585071b63a56",
+      "titulek": "Slovensko: podezřelý z náboru přes Telegram plánoval žhářský útok na továrnu na drony",
       "novaUdalost": true,
-      "duvod": "Nová informace o označení podezřelých z útoku na letiště Lipsko/Halle",
+      "duvod": "Nová zpráva o plánu žhářského útoku na továrnu na drony na Slovensku s podezřením na ruské napojení.",
       "duplikatSlugu": null,
       "neznamySlug": null,
-      "zahozeno": null
+      "zahozeno": "hlásí to jen jeden zdroj — druhý musí dohledat člověk"
     },
     {
-      "id": "k-7dd0b08d77afbe67",
-      "titulek": "Analýza: stojí za vlnou sabotáží v Evropě Rusko?",
-      "novaUdalost": false,
-      "duvod": "Obecná spekulativní analýza bez nových ověřených faktů",
-      "duplikatSlugu": null,
-      "neznamySlug": null,
-      "zahozeno": "není nová událost"
-    },
-    {
-      "id": "k-4e62a68efdf2c876",
-      "titulek": "Litva: poplach s dronem se ukázal být hejnem ptáků",
-      "novaUdalost": false,
-      "duvod": "Součást hlavní zprávy o falešném poplachu s dronem ve Vilniusu",
-      "duplikatSlugu": null,
-      "neznamySlug": null,
-      "zahozeno": "není nová událost"
-    },
-    {
-      "id": "k-063e1898ac9d8be8",
-      "titulek": "Litva: poplach s dronem se ukázal být hejnem ptáků",
-      "novaUdalost": false,
-      "duvod": "Součást hlavní zprávy o falešném poplachu s dronem ve Vilniusu",
-      "duplikatSlugu": null,
-      "neznamySlug": null,
-      "zahozeno": "není nová událost"
-    },
-    {
-      "id": "k-20ad16f689fad251",
-      "titulek": "Litva: poplach s dronem se ukázal být hejnem ptáků",
-      "novaUdalost": false,
-      "duvod": "Součást hlavní zprávy o falešném poplachu s dronem ve Vilniusu",
-      "duplikatSlugu": null,
-      "neznamySlug": null,
-      "zahozeno": "není nová událost"
-    },
-    {
-      "id": "k-dd45b3473ef2b544",
-      "titulek": "Litva: poplach s dronem se ukázal být hejnem ptáků",
-      "novaUdalost": false,
-      "duvod": "Součást hlavní zprávy o falešném poplachu s dronem ve Vilniusu",
-      "duplikatSlugu": null,
-      "neznamySlug": null,
-      "zahozeno": "není nová událost"
-    },
-    {
-      "id": "k-8face13858170d82",
-      "titulek": "Litva: poplach s dronem se ukázal být hejnem ptáků",
-      "novaUdalost": false,
-      "duvod": "Součást hlavní zprávy o falešném poplachu s dronem ve Vilniusu",
-      "duplikatSlugu": null,
-      "neznamySlug": null,
-      "zahozeno": "není nová událost"
-    },
-    {
-      "id": "k-daac5165dea7e152",
-      "titulek": "Litva: poplach s dronem se ukázal být hejnem ptáků",
-      "novaUdalost": false,
-      "duvod": "Součást hlavní zprávy o falešném poplachu s dronem ve Vilniusu",
-      "duplikatSlugu": null,
-      "neznamySlug": null,
-      "zahozeno": "není nová událost"
-    },
-    {
-      "id": "k-d84413102d40bbb3",
-      "titulek": "Litva: poplach s dronem se ukázal být hejnem ptáků",
-      "novaUdalost": false,
-      "duvod": "Součást hlavní zprávy o falešném poplachu s dronem ve Vilniusu",
-      "duplikatSlugu": null,
-      "neznamySlug": null,
-      "zahozeno": "není nová událost"
-    },
-    {
-      "id": "k-4c43e0cf0f85c49b",
-      "titulek": "Litva: letiště ve Vilniusu krátce uzavřeno kvůli domnělému dronu, šlo o hejno ptáků",
+      "id": "k-ca385d8fe66280de",
+      "titulek": "Polsko: rozvědka vyšetřuje podezřelý požár skladu hraček jako možnou sabotáž",
       "novaUdalost": true,
-      "duvod": "Hlavní záznam falešného poplachu s dronem ve Vilniusu",
+      "duvod": "Nová zpráva o vyšetřování podezřelého požáru skladu hraček v Polsku jako možné sabotáže.",
       "duplikatSlugu": null,
       "neznamySlug": null,
-      "zahozeno": null
+      "zahozeno": "hlásí to jen jeden zdroj — druhý musí dohledat člověk"
     },
     {
-      "id": "k-a38f4d83ce5b6b23",
-      "titulek": "Litva: poplach s dronem se ukázal být hejnem ptáků",
+      "id": "k-befe72a348550000",
+      "titulek": "Hongkong: aktivisté odsouzeni za vzpomínkové akce na Tchien-an-men",
       "novaUdalost": false,
-      "duvod": "Duplicitní zpráva sloučená do hlavního záznamu o falešném poplachu ve Vilniusu",
+      "duvod": "Netýká se bezpečnostní/hybridní tematiky sledované v přehledu.",
       "duplikatSlugu": null,
       "neznamySlug": null,
       "zahozeno": "není nová událost"
     },
     {
-      "id": "k-48b56662d5a57a85",
-      "titulek": "Polsko: letecký poplach, dron udeřil na vlak",
+      "id": "k-4857a5a3a6bd82a9",
+      "titulek": "Německo: obavy z ruské sabotáže a Putinovy reakce",
       "novaUdalost": false,
-      "duvod": "Součást hlavní zprávy o dronovém útoku na vlak u polské hranice",
+      "duvod": "Obecný publicistický článek, ne konkrétní nová událost.",
       "duplikatSlugu": null,
       "neznamySlug": null,
       "zahozeno": "není nová událost"
     },
     {
-      "id": "k-12ab0ca5ff90f09a",
-      "titulek": "Polsko: vzlétly stíhačky kvůli ruskému úderu",
+      "id": "k-aca1a294723f9f38",
+      "titulek": "NATO zmařilo ruský plán sabotáže podmořských kabelů",
       "novaUdalost": false,
-      "duvod": "Součást hlavní zprávy o dronovém útoku na vlak u polské hranice",
+      "duvod": "Duplicitní zpráva o zmařené sabotáži podmořských kabelů NATO.",
+      "duplikatSlugu": "svalbard-nato-zabranilo-naciku-prerezani-kabelu-2026",
+      "neznamySlug": null,
+      "zahozeno": "není nová událost"
+    },
+    {
+      "id": "k-ca1608ce24073fa4",
+      "titulek": "Hongkong: aktivisté odsouzeni za vzpomínkové akce na Tchien-an-men",
+      "novaUdalost": false,
+      "duvod": "Duplicitní zpráva netýkající se bezpečnostní tematiky sledované v přehledu.",
       "duplikatSlugu": null,
       "neznamySlug": null,
       "zahozeno": "není nová událost"
     },
     {
-      "id": "k-fa55100fb40635f8",
-      "titulek": "Polsko: poplach, armáda vyslala stíhačky",
+      "id": "k-b5218d10ba8e3432",
+      "titulek": "NATO zmařilo ruský nácvik přerušení podmořských kabelů",
       "novaUdalost": false,
-      "duvod": "Součást hlavní zprávy o dronovém útoku na vlak u polské hranice",
+      "duvod": "Duplicitní zpráva o zmařené sabotáži podmořských kabelů NATO.",
+      "duplikatSlugu": "svalbard-nato-zabranilo-naciku-prerezani-kabelu-2026",
+      "neznamySlug": null,
+      "zahozeno": "není nová událost"
+    },
+    {
+      "id": "k-ec7241916184af99",
+      "titulek": "NATO úspěšně zmařilo ruskou misi sabotáže podmořských kabelů",
+      "novaUdalost": false,
+      "duvod": "Duplicitní zpráva o zmařené sabotáži podmořských kabelů NATO.",
+      "duplikatSlugu": "svalbard-nato-zabranilo-naciku-prerezani-kabelu-2026",
+      "neznamySlug": null,
+      "zahozeno": "není nová událost"
+    },
+    {
+      "id": "k-f5241785d17d9e47",
+      "titulek": "Rumunsko: zadržen Rus podezřelý z pokusu o sabotáž",
+      "novaUdalost": false,
+      "duvod": "Duplicitní zpráva o zadrženém ruském občanovi v Rumunsku.",
+      "duplikatSlugu": "rumunsko-sri-zmarena-sabotaz-2026",
+      "neznamySlug": null,
+      "zahozeno": "není nová událost"
+    },
+    {
+      "id": "k-62c665896ecc123f",
+      "titulek": "Británie: muž obviněn z pomoci ruským špionům při sabotáži továrny na drony",
+      "novaUdalost": false,
+      "duvod": "Duplicitní zpráva o obvinění muže z pomoci ruským špionům při sabotáži továrny na drony.",
+      "duplikatSlugu": "britanie-obvineni-sabotaz-dronove-tovarny-2026",
+      "neznamySlug": null,
+      "zahozeno": "není nová událost"
+    },
+    {
+      "id": "k-c84ceb80dadad15b",
+      "titulek": "Rusko odmítá obvinění ze sabotáže v Rumunsku",
+      "novaUdalost": false,
+      "duvod": "Duplicitní zpráva - ruská ambasáda popírá obvinění ze sabotáže v Rumunsku.",
+      "duplikatSlugu": "rumunsko-sri-zmarena-sabotaz-2026",
+      "neznamySlug": null,
+      "zahozeno": "není nová událost"
+    },
+    {
+      "id": "k-615950c20e52d94f",
+      "titulek": "Rusko zadrželo bývalého strážného britské ambasády kvůli vlastizradě",
+      "novaUdalost": false,
+      "duvod": "Duplicitní zpráva o zadržení bývalého strážného britské ambasády Ruskem.",
+      "duplikatSlugu": "rusko-zadrzeni-strazneho-britske-ambasady-2026",
+      "neznamySlug": null,
+      "zahozeno": "není nová událost"
+    },
+    {
+      "id": "k-ba82964dd25587c5",
+      "titulek": "Komentář: jak může Evropa zastavit ruskou sabotáž bez eskalace",
+      "novaUdalost": false,
+      "duvod": "Video komentář, ne konkrétní událost.",
       "duplikatSlugu": null,
       "neznamySlug": null,
       "zahozeno": "není nová událost"
     },
     {
-      "id": "k-31de033fc0b32894",
-      "titulek": "Polsko: ruský dron zasáhl vlak u hranice s Ukrajinou, vyhlášen letecký poplach a vzlétly stíhačky",
-      "novaUdalost": true,
-      "duvod": "Hlavní záznam incidentu s dronovým útokem na vlak u polské hranice",
-      "duplikatSlugu": null,
+      "id": "k-d3ef37f163d4d10e",
+      "titulek": "Moldavsko: dron havaroval 160 km od letiště Kišiněv",
+      "novaUdalost": false,
+      "duvod": "Duplicitní zpráva o dronovém incidentu, který zdržel let Zelenského.",
+      "duplikatSlugu": "moldavsko-dron-uzavrel-vzdusny-prostor-2026",
       "neznamySlug": null,
-      "zahozeno": null
+      "zahozeno": "není nová událost"
     },
     {
-      "id": "k-ef19317f2fb2fa4e",
-      "titulek": "Polsko: letecký poplach, dron udeřil na vlak",
+      "id": "k-2aa31b2a4d24328a",
+      "titulek": "Rumunsko: ruský dron narušil vzdušný prostor, zdržel let Zelenského z Moldavska",
       "novaUdalost": false,
-      "duvod": "Součást hlavní zprávy o dronovém útoku na vlak u polské hranice",
+      "duvod": "Duplicitní zpráva o dronovém incidentu, který zdržel let Zelenského.",
+      "duplikatSlugu": "moldavsko-dron-uzavrel-vzdusny-prostor-2026",
+      "neznamySlug": null,
+      "zahozeno": "není nová událost"
+    },
+    {
+      "id": "k-b4a64f9454f3a999",
+      "titulek": "Moldavsko: ruský dron zdržel odlet letadla se Zelenským",
+      "novaUdalost": false,
+      "duvod": "Pokračování/hlavní zdroj již evidované události zdržení letu Zelenského dronem nad Moldavskem.",
+      "duplikatSlugu": "moldavsko-dron-uzavrel-vzdusny-prostor-2026",
+      "neznamySlug": null,
+      "zahozeno": "není nová událost"
+    },
+    {
+      "id": "k-591a37060e1734d3",
+      "titulek": "NATO zmařilo ruskou sabotáž, ponorky zkoušely novou zbraní ničit kabely",
+      "novaUdalost": false,
+      "duvod": "Pokračování/hlavní zdroj již evidované události zmaření sabotáže podmořských kabelů u Špicberk.",
+      "duplikatSlugu": "svalbard-nato-zabranilo-naciku-prerezani-kabelu-2026",
+      "neznamySlug": null,
+      "zahozeno": "není nová událost"
+    },
+    {
+      "id": "k-77cad930b1d94a1d",
+      "titulek": "Ukrajina: nárůst používání robotů v bojových oblastech",
+      "novaUdalost": false,
+      "duvod": "Obecná zpráva o použití robotů na frontě, ne bezpečnostní incident.",
       "duplikatSlugu": null,
       "neznamySlug": null,
       "zahozeno": "není nová událost"
     },
     {
-      "id": "k-936871cfcd8743fd",
-      "titulek": "Rusko a Ukrajina hlásí mrtvé a raněné, v Polsku vzlétly stíhačky",
+      "id": "k-34cb9c343d165cf4",
+      "titulek": "Moldavsko: narušení dronem zdrželo let Zelenského",
       "novaUdalost": false,
-      "duvod": "Součást hlavní zprávy o dronovém útoku na vlak u polské hranice",
+      "duvod": "Duplicitní zpráva o dronovém incidentu, který zdržel let Zelenského.",
+      "duplikatSlugu": "moldavsko-dron-uzavrel-vzdusny-prostor-2026",
+      "neznamySlug": null,
+      "zahozeno": "není nová událost"
+    },
+    {
+      "id": "k-f31ee9106785626f",
+      "titulek": "Muž obviněn z plánu sabotáže továrny na drony s ruským napojením",
+      "novaUdalost": false,
+      "duvod": "Duplicitní zpráva o obvinění muže ze sabotáže továrny na drony.",
+      "duplikatSlugu": "britanie-obvineni-sabotaz-dronove-tovarny-2026",
+      "neznamySlug": null,
+      "zahozeno": "není nová událost"
+    },
+    {
+      "id": "k-7e9e017babc38e37",
+      "titulek": "Analýza: sabotáž v Lipsku a role dopravní infrastruktury pro NATO a Rusko",
+      "novaUdalost": false,
+      "duvod": "Analytický článek k sabotáži v Lipsku, patří k hlavní položce o podezřelém napojeném na GRU.",
       "duplikatSlugu": null,
       "neznamySlug": null,
       "zahozeno": "není nová událost"
     },
     {
-      "id": "k-578fdd0976dd2bcc",
-      "titulek": "Litva a Polsko na čas zastavily provoz letišť, vzlétla stíhačka NATO",
+      "id": "k-1168b0e53688b788",
+      "titulek": "Ruský dron zdržel let Zelenského",
       "novaUdalost": false,
-      "duvod": "Součást hlavní zprávy o dronovém útoku na vlak u polské hranice",
-      "duplikatSlugu": null,
+      "duvod": "Duplicitní zpráva o dronovém incidentu, který zdržel let Zelenského.",
+      "duplikatSlugu": "moldavsko-dron-uzavrel-vzdusny-prostor-2026",
       "neznamySlug": null,
       "zahozeno": "není nová událost"
     },
     {
-      "id": "k-f226d03b4ff9c9ec",
-      "titulek": "Spekulace o nedostatku ruských vojáků a možné mobilizaci",
+      "id": "k-4f8141eac3680821",
+      "titulek": "Ruský dron zdržel let Zelenského z Moldavska",
       "novaUdalost": false,
-      "duvod": "Spekulativní článek o ruské mobilizaci bez ověřených faktů",
-      "duplikatSlugu": null,
+      "duvod": "Duplicitní zpráva o dronovém incidentu, který zdržel let Zelenského.",
+      "duplikatSlugu": "moldavsko-dron-uzavrel-vzdusny-prostor-2026",
       "neznamySlug": null,
       "zahozeno": "není nová událost"
     },
     {
-      "id": "k-4df15dd27c63c718",
-      "titulek": "Podezřelý z sabotáže letiště Lipsko napojen na ruskou vojenskou rozvědku",
+      "id": "k-c8bcbb25fba42a30",
+      "titulek": "NATO zmařilo ruský plán sabotáže podmořských kabelů v Arktidě",
       "novaUdalost": false,
-      "duvod": "Součást hlavní zprávy o označení podezřelých z útoku na letiště Lipsko/Halle",
-      "duplikatSlugu": null,
+      "duvod": "Duplicitní zpráva o zmařené sabotáži podmořských kabelů NATO v Arktidě.",
+      "duplikatSlugu": "svalbard-nato-zabranilo-naciku-prerezani-kabelu-2026",
       "neznamySlug": null,
       "zahozeno": "není nová událost"
     },
     {
-      "id": "k-b6aacad64cac1446",
-      "titulek": "Německo obžalovalo osobu ze špionáže pro Rusko v Berlíně",
+      "id": "k-937c504449973022",
+      "titulek": "NATO narušilo ruský nácvik sabotáže podmořských kabelů",
       "novaUdalost": false,
-      "duvod": "Duplicitní zpráva o obžalobě za špionáž v Berlíně",
-      "duplikatSlugu": "de-dae06bfd15",
+      "duvod": "Duplicitní zpráva o zmařené sabotáži podmořských kabelů NATO.",
+      "duplikatSlugu": "svalbard-nato-zabranilo-naciku-prerezani-kabelu-2026",
       "neznamySlug": null,
       "zahozeno": "není nová událost"
     },
     {
-      "id": "k-00338102cab1011a",
-      "titulek": "EU vyzývá k jednotě po ruském útoku na vlak",
+      "id": "k-930e1a80177dab19",
+      "titulek": "Ruský dron zdržel let Zelenského do Osla",
       "novaUdalost": false,
-      "duvod": "Součást hlavní zprávy o dronovém útoku na vlak u polské hranice",
-      "duplikatSlugu": null,
+      "duvod": "Duplicitní zpráva o dronovém incidentu, který zdržel let Zelenského.",
+      "duplikatSlugu": "moldavsko-dron-uzavrel-vzdusny-prostor-2026",
       "neznamySlug": null,
       "zahozeno": "není nová událost"
     },
     {
-      "id": "k-72c0e138a9f8cfe2",
-      "titulek": "NATO sestřelilo dron nad Litvou po narušení vzdušného prostoru",
+      "id": "k-ae5f08ee37d25c26",
+      "titulek": "Dronový incident nad Moldavskem zdržel let Zelenského do Norska",
       "novaUdalost": false,
-      "duvod": "Součást hlavní zprávy o sestřelení dronu nad Litvou",
-      "duplikatSlugu": null,
+      "duvod": "Duplicitní zpráva o dronovém incidentu, který zdržel let Zelenského.",
+      "duplikatSlugu": "moldavsko-dron-uzavrel-vzdusny-prostor-2026",
+      "neznamySlug": null,
+      "zahozeno": "není nová událost"
+    },
+    {
+      "id": "k-68ef713a1b87c050",
+      "titulek": "NATO zmařilo podezřelý ruský plán sabotáže podmořských kabelů",
+      "novaUdalost": false,
+      "duvod": "Duplicitní zpráva o zmařené sabotáži podmořských kabelů NATO.",
+      "duplikatSlugu": "svalbard-nato-zabranilo-naciku-prerezani-kabelu-2026",
+      "neznamySlug": null,
+      "zahozeno": "není nová událost"
+    },
+    {
+      "id": "k-9c84f8e98aca16d1",
+      "titulek": "Let Zelenského zdržen po uzavření moldavského vzdušného prostoru kvůli dronu",
+      "novaUdalost": false,
+      "duvod": "Duplicitní zpráva o dronovém incidentu, který zdržel let Zelenského.",
+      "duplikatSlugu": "moldavsko-dron-uzavrel-vzdusny-prostor-2026",
+      "neznamySlug": null,
+      "zahozeno": "není nová událost"
+    },
+    {
+      "id": "k-fdf3b4a0b6ba5c5f",
+      "titulek": "Spojenci NATO zmařili ruský plán sabotáže podmořských kabelů",
+      "novaUdalost": false,
+      "duvod": "Duplicitní zpráva o zmařené sabotáži podmořských kabelů NATO.",
+      "duplikatSlugu": "svalbard-nato-zabranilo-naciku-prerezani-kabelu-2026",
+      "neznamySlug": null,
+      "zahozeno": "není nová událost"
+    },
+    {
+      "id": "k-de5a7bf6c626e992",
+      "titulek": "NATO zmařilo ruskou sabotáž podmořských kabelů hluboko v Arktidě",
+      "novaUdalost": false,
+      "duvod": "Duplicitní zpráva o zmařené sabotáži podmořských kabelů NATO v Arktidě.",
+      "duplikatSlugu": "svalbard-nato-zabranilo-naciku-prerezani-kabelu-2026",
       "neznamySlug": null,
       "zahozeno": "není nová událost"
     }

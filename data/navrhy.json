@@ -2044,5 +2044,111 @@
     "aiZpracovano": true,
     "lidskyOvereno": false,
     "archivniZaznam": false
+  },
+  {
+    "kam": "zaznam",
+    "pripravil": "audit",
+    "pripraveno": "2026-09-20T07:48:17.186Z",
+    "id": "i-2026-09-12-39a8c14760",
+    "slug": "de-39a8c14760",
+    "titulek": "Německo: podezřelý ze sabotáže na letišti Lipsko má být napojen na ruskou GRU",
+    "kratkyTitulek": "Německo: podezřelý ze sabotáže na letišti Lipsko má být napojen na ruskou GRU",
+    "zeme": "Německo",
+    "kodZeme": "DE",
+    "kategorie": [
+      "sabotaz",
+      "zpravodajske",
+      "rusko"
+    ],
+    "datumUdalosti": "2026-09-12T00:00:00Z",
+    "datumZjisteni": "2026-09-12T00:00:00Z",
+    "aktualizovano": "2026-09-20T07:48:17.187Z",
+    "zavaznost": "O2",
+    "jistota": "stredni",
+    "stav": "bez-vysetrovani",
+    "atribuce": "neznama",
+    "puvodce": "neznamy",
+    "druh": "pripad",
+    "fakta": [
+      "Jeden z podezřelých ze sabotáže na letišti Lipsko má být podle vyšetřovatelů napojen na ruskou vojenskou rozvědku GRU"
+    ],
+    "neznameho": [
+      "Přímé úřední potvrzení napojení na GRU",
+      "Totožnost podezřelého"
+    ],
+    "vyznam": "",
+    "eskalacniSpousteče": [],
+    "deeskalacniSignaly": [],
+    "zdroje": [
+      {
+        "nazev": "Německo — sabotaz — In Germany, one of the suspects in the sabotage at Leipzig Airport was linked to the GRU of the Russ",
+        "url": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxNTVl1UEhtSHltdjdEejFnU1ZoV1VZU0pLMmt5bTN6eEUya0lnV2FFLVVLejdQdnRGeWtwSk1WRFJqTGlPZm4waS1uQW4xQnYyWEQ5ZktreXFvSS1GMTJFUEVNZXEwVU5hN0o2c3FURkYzX2hiWjlCakVVcElHVXpxWnZiVEpCRXB2YzhwQ3pXRGkwR3JzQmEwT0FEYTc3QzhYRVhjVjVPQWpuVjc4MTZ3di16R0tDUDFreF9PNzE0OVB0MVh2Y2NCSnhTYTItUnZveHfSAdABQVVfeXFMT1laUzFTVFpwYzNlajZEaGFCaUt2bXFRZFlFUUphX1N4OUJ6Mnp6OEtVcGUteGFpXzZKdVdDRVJDWEpDVzJnUjcxYTlIY0szczdiUXRUdjBWaXJHOHpHUW0zQk9sR285QzU0emx3Z0ZNYVQtcGJjdG5wTF9sQW1tcWJIVUw4el94TGc2R3pUQ3JZdGtuNDhxbjdETW5aY2todERXM3k2Wmx6UjA5SGExSjVpeHFYajdYWEl0b1ZpLU8zM19HT0cxSG1kNXgzYVNZMQ?oc=5",
+        "typ": "media",
+        "publikovano": "2026-09-12T00:00:00Z",
+        "primarni": false,
+        "jazyk": "cs"
+      },
+      {
+        "nazev": "Rakousko — sabotaz — Drone attack on Leipzig: clues apparently point to Russian intelligence service - Euronews.com",
+        "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxNVnFvU2N3UkdEOU4weEFYZC01b19NclprSFMyUmQ4UjhKbE9CRW8xRUM4ZHFWNG9ZSlJuMTVUcV85WDlEMjZ4RW1JM3RUVm1QbEZyUDBxZEtIdE5qX0NUX2ZLU1FlaXBDc2lUTW1jY1JaMW1xb3ZvRkVlUjBDMk94Rjg1MHhCaUFfTWZEYVJaNzN3MlMwVWx3bmFYSEpYc2tMZjdXY280UXBBOC16UkZndG9BeTctVlFZdHdpVFhIemZzQQ?oc=5",
+        "typ": "media",
+        "publikovano": "2026-09-12T00:00:00Z",
+        "primarni": false,
+        "jazyk": "cs"
+      },
+      {
+        "nazev": "Německo — sabotaz — German Investigators Suspect Russian Linked to GRU in Attempted Attack on Leipzig Airport - Наша Нів",
+        "url": "https://news.google.com/rss/articles/CBMiS0FVX3lxTE0yTm1HdXNHbktWUTl0RlUybUJLbTVLQlR3VTRxTnB2eDdJUXppU0RIVHc2TjdBVzhtYWhvU0pZOEhmZHpMSEw3STk3c9IBS0FVX3lxTE0yTm1HdXNHbktWUTl0RlUybUJLbTVLQlR3VTRxTnB2eDdJUXppU0RIVHc2TjdBVzhtYWhvU0pZOEhmZHpMSEw3STk3cw?oc=5",
+        "typ": "media",
+        "publikovano": "2026-09-12T00:00:00Z",
+        "primarni": false,
+        "jazyk": "cs"
+      },
+      {
+        "nazev": "Německo — sabotaz — Media: One of the suspects in the Leipzig airport sabotage may be linked to the Russian GRU - Бабель",
+        "url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxNUjZZSTdDeFZoZ3I1dHEyQlRFN1libklocGFUd0ZCLXJNY1UyeE1xbUhzeGZhaFZfbUwycTlqZmRRMUlzNjNlX2drWGdIMDNsS01SR3hlbkFDaWR5ZWVacDdhVTdZZzRYRWhTUU9pUTVzQ2NNRlVMNVJSQ1J6dnd4NjRVVS1Jel9vSlc0dG8yVmZGRHhwTmZMSHhXbUlSV3UwTFNBaG1EVU1jT3RqamtpajdIQkVTbG84Z1hubGdSdVU3M3Q10gHEAUFVX3lxTE1SNllJN0N4VmhncjV0cTJCVEU3WWJuSWhwYVR3RkItck1jVTJ4TXFtSHN4ZmFoVl9tTDJxOWpmZFExSXM2M2VfZ2tYZ0gwM2xLTVJHeGVuQUNpZHllZVpwN2FVN1lnNFhFaFNRT2lRNXNDY01GVUw1UlJDUnp2d3g2NFVVLUl6X29KVzR0bzJWZkZEeHBOZkxIeFdtSVJXdTBMU0FobURVTWNPdGpqa2lqN0hCRVNsbzhnWG5sZ1J1VTczdDU?oc=5",
+        "typ": "media",
+        "publikovano": "2026-09-12T00:00:00Z",
+        "primarni": false,
+        "jazyk": "cs"
+      },
+      {
+        "nazev": "iROZHLAS — zprávy — Představa, že by útok v Lipsku dopadl podle ruských plánů, Merze drží v dost velkém napětí, říká exp",
+        "url": "https://www.irozhlas.cz/zpravy-svet/nemecko-rusko-vztahy-drony-letiste-lipsko_2609130700_ula",
+        "typ": "media",
+        "publikovano": "2026-09-13T00:00:00Z",
+        "primarni": false,
+        "jazyk": "cs"
+      },
+      {
+        "nazev": "Google News — sabotáž — Ruská sabotáž v srdci Evropy? Lipsko dělily od katastrofy centimetry - Ekonomický magazín",
+        "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxNd2l4SU1BeGpZVGk3M1JmR3RBYTZyRFQ4N0ZJZjF4ZGxYOUV6STVsVlMxRFlxMXF2NmxDaHJVVi1zYnRSYklQVzI5LWEwcXdtMDk2bWdsSGEza2c1RmpkdENUZ2l6RDY4b2h4MVBEb1ptWkNiTGlKaHcwbjY5RzM1TzhBWHNFNUpHTXBwR0wxMXhvOUE4MUhSeThZTlY?oc=5",
+        "typ": "media",
+        "publikovano": "2026-09-13T00:00:00Z",
+        "primarni": false,
+        "jazyk": "cs"
+      },
+      {
+        "nazev": "Google News — sabotage Europe — Leipzig Sabotage: Why Transport Underpins NATO and Russia’s Defences - Royal United Serv",
+        "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxPX0pUVTF5TEhEZzB0b0pSaGFIRU5GTE1tTG9panI5empISHNMUlR3UU1qUDVkRndzU0cxcXdUMndXNVZjTFhKeU9pc2dzaXNuN240VDFwQ1l4Q0dUaWdLMEFSWFI5MV9LLTRQS25xMG1yclExanE0WUI3eFdwampSTjBVUG9wLXBaMmJyMlYxM0EwT0JNTTdsUndOUlBJRm10WFE?oc=5",
+        "typ": "media",
+        "publikovano": "2026-09-10T00:00:00Z",
+        "primarni": false,
+        "jazyk": "cs"
+      }
+    ],
+    "souvisejici": [],
+    "historie": [
+      {
+        "kdy": "2026-09-12T00:00:00Z",
+        "text": "Zachyceno automatickým sběrem, posouzeno před zařazením do fronty.",
+        "novySignal": true
+      }
+    ],
+    "novy": true,
+    "zapocitanoTyden": "2026-09-12",
+    "aiZpracovano": true,
+    "lidskyOvereno": false,
+    "archivniZaznam": false
   }
 ]
