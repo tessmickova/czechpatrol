@@ -1,5 +1,24 @@
 [
   {
+    "id": "k-3e48a33c52a0ea46",
+    "zachyceno": "2026-09-20T23:02:38.078Z",
+    "publikovano": "2026-09-20T22:10:00.000Z",
+    "zdroj": {
+      "nazev": "Český rozhlas — domácí zprávy",
+      "url": "https://www.irozhlas.cz/zpravy-svet/dronovy-utok-v-lipsku-byl-jen-varovnym-vystrelem-reakce-nemecka-nebyla-podle_2609210010_lhv",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "‚Dronový útok v Lipsku byl jen varovným výstřelem.‘ Reakce Německa nebyla podle Lucase dostatečná",
+    "shrnuti": "Po dronovém útoku na letišti v Lipsku německé úřady reagovaly uzavřením ruského konzulátu v Bonnu a Ruského domu v Berlíně, zpřísnily cestovní omezení a vyzvaly Evropskou unii k zavedení dalších sankcí. Podle někdejšího editora týdeníku Economist, nyní šéfa think-tanku Baltské centrum pro mezinárodn",
+    "duvod": "bez-skutku",
+    "kategorie": [
+      "drony",
+      "rusko"
+    ],
+    "posouzeni": null
+  },
+  {
     "id": "k-46733c36bd79a2fc",
     "zachyceno": "2026-09-20T20:48:28.401Z",
     "publikovano": "2026-09-20T20:28:00.000Z",
@@ -1713,6 +1732,25 @@
     "shrnuti": "European Commission Factsheet Brussels, 20 Sep 2026 Solidarity with Ukraine Solidarity with Ukraine",
     "duvod": "bez-skutku",
     "kategorie": [],
+    "posouzeni": null
+  },
+  {
+    "id": "k-79728199603879fb",
+    "zachyceno": "2026-09-20T23:02:38.248Z",
+    "publikovano": "2026-09-19T21:30:19.000Z",
+    "zdroj": {
+      "nazev": "Téma: sabotaz (anglicky)",
+      "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxOT2Z3RmVyMWVNdU44TDkxYzNkOHYyU1p6aUVCX2U5Vk5VX1JuRlFBTjk1cE52QnFPSjZqQ2c2REhpcWlhLUxFMVRYb0ZhTmpRUGU4akx3ZlQzdUFOazU2dHg0S1VmWXk5bnRwOUpKMEZGYTU4ZV9seUg1bUpaV21yZUg5SThRbzF0SzRJaGVKYzNLcjV3Z0ZPNjZEU2JuSVJXelZrRVNoVjc4Sm1oODFOMmotTVTSAboBQVVfeXFMTjZPUmZTMDFnSEN6dDBIcFhFVGVJNjd5aTMwVU9rTkFPQzlRYWY0ZkMzUzRNeGhMSW1tZm94Nm16MHpFZ3hRUnpKY2tXdlZpcG0xWjUxZjRheE94ZHE4bHcwWUlxSlJTdDJUdmZrLUkzWmI4Uk1GMlBxamt3SkhEdlRUQ0o3eWVFT3AzZVJKWFdBMVpyQTd5SV9aZXVWX19SUEVBZFJ0SFgwWno3XzZUbnNaMktja0RNSi1R?oc=5",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Explosive drone at German airport linked to Russian military intelligence, US intel source says - ABC News - Breaking News, Latest News and Videos",
+    "shrnuti": "Explosive drone at German airport linked to Russian military intelligence, US intel source says ABC News - Breaking News, Latest News and Videos",
+    "duvod": "bez-skutku",
+    "kategorie": [
+      "drony",
+      "rusko"
+    ],
     "posouzeni": null
   },
   {
@@ -10018,49 +10056,6 @@
     "posouzeni": {
       "podezreni": "zadne",
       "duvod": "Stavební jednání o justičním areálu",
-      "kdy": "2026-09-19T13:05:21.142Z"
-    }
-  },
-  {
-    "id": "k-f5183ecd6dd76732",
-    "zachyceno": "2026-09-16T07:32:46.688Z",
-    "publikovano": "2026-09-16T07:04:27.000Z",
-    "zdroj": {
-      "nazev": "Téma: kyber (anglicky)",
-      "url": "https://news.google.com/rss/articles/CBMi9AFBVV95cUxQUjFKOFltUjljUVdPTHN6SXN1NnRRMXZvNGNJcUx1elhEVDVZQXRQYkJhMW1zenREbDhQcWphQ1RCNXkySnk2dkZ6YS1LaHNTbGN6RFlYWTU0RzBCM2NQMDJEUFFURDN2MER5WkhYU3VEdGZ5dlhaallDM25GNl91RjFGQkJFN0hDOHpQSXA4bWQ4OHNid1dBVHZSZVlDdDJlSFZjSmluSkJJMGtmNDh0UEJjNXp2c2dhanBjVzJPODdUS1ZRanROOUhGSE1RZExKOHA5UnB5WkxDdEZqVmNQYXdwQy02X3pjVFJUVnRpS3VHMFI0?oc=5",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "NASCIO reports state CIOs confront expanding critical infrastructure cyber risks amid local capability, governance gaps - Industrial Cyber",
-    "shrnuti": "NASCIO reports state CIOs confront expanding critical infrastructure cyber risks amid local capability, governance gaps Industrial Cyber",
-    "duvod": "bez-skutku",
-    "kategorie": [
-      "kyber",
-      "infrastruktura"
-    ],
-    "posouzeni": {
-      "podezreni": "stredni",
-      "duvod": "Zpráva o kybernetických rizicích kritické infrastruktury",
-      "kdy": "2026-09-19T13:05:21.142Z"
-    }
-  },
-  {
-    "id": "k-c1095e1b42f2c904",
-    "zachyceno": "2026-09-16T08:02:38.358Z",
-    "publikovano": "2026-09-16T07:04:00.000Z",
-    "zdroj": {
-      "nazev": "ERR News (Estonsko)",
-      "url": "https://news.err.ee/1610138827/court-rules-in-favor-of-local-residents-in-nursipalu-training-area-expansion-dispute",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Court rules in favor of local residents in Nursipalu Training Area expansion dispute",
-    "shrnuti": "Tallinn Administrative Court upheld complaints filed by nonprofit organizations and local residents seeking to annul government orders expanding the Estonian Defense Forces' Nursipalu training area.",
-    "duvod": "bez-skutku",
-    "kategorie": [],
-    "posouzeni": {
-      "podezreni": "stredni",
-      "duvod": "Soudní spor o rozšíření vojenského cvičiště",
       "kdy": "2026-09-19T13:05:21.142Z"
     }
   }
