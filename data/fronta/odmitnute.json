@@ -1,5 +1,45 @@
 [
   {
+    "id": "k-f100bf967a0f89e3",
+    "zachyceno": "2026-09-20T04:02:32.311Z",
+    "publikovano": "2026-09-20T03:35:00.000Z",
+    "zdroj": {
+      "nazev": "Český rozhlas — domácí zprávy",
+      "url": "https://www.irozhlas.cz/zivotni-styl/zdravi/na-kolinsku-se-testuje-aplikace-ktera-pomuze-odhalit-demenci-bylo-na-zpusob_2609200535_kma",
+      "typ": "primary",
+      "primarni": true
+    },
+    "titulek": "Na Kolínsku se testuje aplikace, která pomůže odhalit demenci. ‚Bylo to na způsob pexesa,‘ říká pacient",
+    "shrnuti": "Senioři ve 12 zařízeních po celé republice testují novou aplikaci, která sleduje změny jejich psychického i fyzického stavu, testuje paměť a pozornost. Do budoucna by mohla pomáhat s odhalováním Alzeimerovy choroby, Parkinsonovy nemoci nebo demence. Jedním z míst, kde aplikaci testují, je domov pro ",
+    "duvod": "bez-skutku",
+    "kategorie": [],
+    "posouzeni": {
+      "podezreni": "zadne",
+      "duvod": "Zpráva o zdravotnické aplikaci, nejde o bezpečnostní událost.",
+      "kdy": "2026-09-20T04:03:57.731Z"
+    }
+  },
+  {
+    "id": "k-6ede4e710d97abaa",
+    "zachyceno": "2026-09-20T04:02:32.313Z",
+    "publikovano": "2026-09-20T03:00:00.000Z",
+    "zdroj": {
+      "nazev": "Český rozhlas — domácí zprávy",
+      "url": "https://www.irozhlas.cz/zpravy-domov/zeman-podnet-uoou-hospitalizace-informace-zdravi-prezidenta-uvn_2609200500_tec",
+      "typ": "primary",
+      "primarni": true
+    },
+    "titulek": "V ÚVN si nastavili, co mohou říct o zdraví prezidenta. Nemocnici to po Zemanově podnětu nařídil úřad",
+    "shrnuti": "Ústřední vojenská nemocnice v Praze přijala nové vnitřní předpisy týkající se toho, jak informovat o zdravotním stavu prezidenta. Vedení tak reagovalo na rozhodnutí Úřadu pro ochranu osobních údajů, který na jaře upozornil nemocnici na nedostatky a nařídil jí vše napravit. Podnět dal úřadu před více",
+    "duvod": "bez-skutku",
+    "kategorie": [],
+    "posouzeni": {
+      "podezreni": "zadne",
+      "duvod": "Jde o administrativní záležitost, ne bezpečnostní událost.",
+      "kdy": "2026-09-20T04:03:57.731Z"
+    }
+  },
+  {
     "id": "k-f0d0319b33a919d4",
     "zachyceno": "2026-09-19T23:02:19.312Z",
     "publikovano": "2026-09-19T22:10:00.000Z",
@@ -4051,6 +4091,28 @@
       "podezreni": "vysoke",
       "duvod": "EU plán proti hybridním útokům Ruska",
       "kdy": "2026-09-19T11:03:33.710Z"
+    }
+  },
+  {
+    "id": "k-da44b36df7e55fa3",
+    "zachyceno": "2026-09-20T04:02:32.730Z",
+    "publikovano": "2026-09-17T11:53:25.000Z",
+    "zdroj": {
+      "nazev": "Téma: nouzovy-stav (anglicky)",
+      "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTFBYaFVPa1hUX2tVWTAwTmtHeW5COGYwdzJTdEg5TzkzU3JkTU9XS3BGaUpzeFJIdmJ0TEIyeEdqSHBIUlNlMlpuV1lFb2NKODI3dkZJTnhzNGlrSTRtZHpBb08zeW9WaEdhZzdfSGoySXBRX0xsaUE?oc=5",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Spanberger Declares Drought State of Emergency - New River Valley News",
+    "shrnuti": "Spanberger Declares Drought State of Emergency New River Valley News",
+    "duvod": "bez-mista",
+    "kategorie": [
+      "pravo"
+    ],
+    "posouzeni": {
+      "podezreni": "zadne",
+      "duvod": "Vyhlášení nouzového stavu kvůli suchu v USA, ne bezpečnostní incident.",
+      "kdy": "2026-09-20T04:03:57.731Z"
     }
   },
   {
@@ -10388,68 +10450,6 @@
     "posouzeni": {
       "podezreni": "zadne",
       "duvod": "Výzva k odběru newsletteru, žádný obsah.",
-      "kdy": "2026-09-19T14:04:15.203Z"
-    }
-  },
-  {
-    "id": "k-8be18c43ccd662a1",
-    "zachyceno": "2026-09-15T16:32:52.191Z",
-    "publikovano": null,
-    "zdroj": {
-      "nazev": "LRT English (Litva)",
-      "url": "https://www.lrt.lt/en/news-in-english/19/3047171/middle-powers-guarding-europe-s-eastern-flank-opinion",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Middle powers guarding Europe’s eastern flank – opinion",
-    "shrnuti": "",
-    "duvod": "bez-skutku",
-    "kategorie": [
-      "nato"
-    ],
-    "posouzeni": {
-      "podezreni": "zadne",
-      "duvod": "Komentářový článek, žádná konkrétní událost.",
-      "kdy": "2026-09-19T14:04:15.203Z"
-    }
-  },
-  {
-    "id": "k-d6307347b60089ee",
-    "zachyceno": "2026-09-15T16:32:52.191Z",
-    "publikovano": null,
-    "zdroj": {
-      "nazev": "LRT English (Litva)",
-      "url": "https://www.lrt.lt/en/news-in-english/19/3047131/cambridge-university-looks-to-set-up-lithuanian-studies",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Cambridge University looks to set up Lithuanian studies",
-    "shrnuti": "",
-    "duvod": "bez-skutku",
-    "kategorie": [],
-    "posouzeni": {
-      "podezreni": "zadne",
-      "duvod": "Akademická zpráva o studiích, nesouvisí s bezpečností.",
-      "kdy": "2026-09-19T14:04:15.203Z"
-    }
-  },
-  {
-    "id": "k-dd6a193204646ce0",
-    "zachyceno": "2026-09-15T16:32:52.190Z",
-    "publikovano": null,
-    "zdroj": {
-      "nazev": "LRT English (Litva)",
-      "url": "https://www.lrt.lt/en/news-in-english/19/3048411/kaunas-prepares-for-second-pride-march-this-saturday",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Kaunas prepares for second Pride march this Saturday",
-    "shrnuti": "",
-    "duvod": "bez-skutku",
-    "kategorie": [],
-    "posouzeni": {
-      "podezreni": "zadne",
-      "duvod": "Kulturní/společenská akce, Pride pochod.",
       "kdy": "2026-09-19T14:04:15.203Z"
     }
   }
