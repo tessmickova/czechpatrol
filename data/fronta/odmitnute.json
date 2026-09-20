@@ -1,5 +1,39 @@
 [
   {
+    "id": "k-46733c36bd79a2fc",
+    "zachyceno": "2026-09-20T20:48:28.401Z",
+    "publikovano": "2026-09-20T20:28:00.000Z",
+    "zdroj": {
+      "nazev": "Český rozhlas — domácí zprávy",
+      "url": "https://www.irozhlas.cz/zpravy-domov/na-jedno-espresso-je-potreba-sesbirat-35-kavovych-tresni-vypravi-spolumajitel_2609202228_elev",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Na jedno espresso je potřeba sesbírat 35 kávových třešní, vypráví spolumajitel rodinné pražírny",
+    "shrnuti": "Příběh rodinné pražírny Jablum Czech se začal psát před dvaceti lety. Petr Nývlt tehdy kávu ještě nepil, ale jeho žena ano a přála si k Vánocům kávovar. A tak Petr Nývlt, protože se snaží proniknout do tajů problémů, místo do supermarketu vyrazil na kávový kurz. „Pak jsem vybral kávovar a hledal zaj",
+    "duvod": "bez-skutku",
+    "kategorie": [
+      "cr"
+    ],
+    "posouzeni": null
+  },
+  {
+    "id": "k-6956cdbe3720a47e",
+    "zachyceno": "2026-09-20T20:48:28.402Z",
+    "publikovano": "2026-09-20T20:05:00.000Z",
+    "zdroj": {
+      "nazev": "Český rozhlas — domácí zprávy",
+      "url": "https://www.irozhlas.cz/sport/hokej/hokej-tipsport-extraliga_2609202205_ssi",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Hokejisté Českých Budějovic bodovali i potřetí v sezoně. ‚Byl to hodně těžký večer,‘ řekl trenér Vrbata",
+    "shrnuti": "Hokejisté Českých Budějovic porazili v utkání 3. kola extraligy na domácím ledě Olomouc 3:2. Jihočeši i potřetí v sezoně bodovali, druhé výhry dosáhli díky obratu ve třetí třetině, v níž se prosadili Jan Štencel a Jakub Pour. Hanáci podruhé prohráli.",
+    "duvod": "vylouceno-tematem",
+    "kategorie": [],
+    "posouzeni": null
+  },
+  {
     "id": "k-b97869716c4ae3b8",
     "zachyceno": "2026-09-20T20:03:06.133Z",
     "publikovano": "2026-09-20T19:50:00.000Z",
@@ -10031,46 +10065,6 @@
     "posouzeni": {
       "podezreni": "zadne",
       "duvod": "Prodej rekreačního areálu",
-      "kdy": "2026-09-19T13:05:21.142Z"
-    }
-  },
-  {
-    "id": "k-4d435287b9ce4e13",
-    "zachyceno": "2026-09-16T07:02:46.788Z",
-    "publikovano": "2026-09-16T06:40:00.000Z",
-    "zdroj": {
-      "nazev": "Český rozhlas — domácí zprávy",
-      "url": "https://www.irozhlas.cz/zpravy-svet/zive-projev-o-stavu-evropske-unie-von-der-leyenova-predstavi-svoji-vizi-pro-eu_2609160840_vdv",
-      "typ": "primary",
-      "primarni": true
-    },
-    "titulek": "ŽIVĚ: Projev o stavu Evropské unie. Von der Leyenová představí svoji vizi pro EU do konce mandátu",
-    "shrnuti": "Předsedkyně Evropské komise Ursula von der Leyenová přednese v 9.00 projev o stavu Evropské unie. Hojně očekávaná výroční událost přichází v době, kdy se EU potýká s řadou výzev od klimatické změny, konkurenceschopnosti, bezpečnosti či umělé inteligence a sociálních sítí. Co pomyslná prezidentka EU ",
-    "duvod": "bez-skutku",
-    "kategorie": [],
-    "posouzeni": {
-      "podezreni": "zadne",
-      "duvod": "Politický projev o stavu EU",
-      "kdy": "2026-09-19T13:05:21.142Z"
-    }
-  },
-  {
-    "id": "k-9b1a734b37b35276",
-    "zachyceno": "2026-09-16T07:02:46.841Z",
-    "publikovano": "2026-09-16T06:35:00.000Z",
-    "zdroj": {
-      "nazev": "ERR News (Estonsko)",
-      "url": "https://news.err.ee/1610138770/lhv-bank-to-close-customer-offices-in-tartu-and-parnu",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "LHV Bank to close customer offices in Tartu and Pärnu",
-    "shrnuti": "LHV will close its customer offices in Tartu and Pärnu, citing changing banking habits and a continued decline in office visits.",
-    "duvod": "bez-skutku",
-    "kategorie": [],
-    "posouzeni": {
-      "podezreni": "zadne",
-      "duvod": "Zavírání bankovních poboček",
       "kdy": "2026-09-19T13:05:21.142Z"
     }
   }
