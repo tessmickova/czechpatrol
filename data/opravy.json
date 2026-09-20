@@ -1,5 +1,21 @@
 [
   {
+    "id": "o-2026-09-20-stazeno-ro-8097dca796",
+    "datum": "2026-09-20",
+    "tykaSe": "ro-8097dca796",
+    "druh": "oprava-dat",
+    "co": "Záznam stažen ze zveřejněných mezi nepotvrzené. Do počtů se už nezapočítává.",
+    "proc": "Záznam se zveřejnil sám na základě zdroje označeného jako úřední. Odkaz ale vedl na globalsecurity.org, což je zrcadlo tiskové zprávy rumunského ministerstva obrany, ne ministerstvo. Podmínka dvou zdrojů, z nichž jeden je úřední, tím splněná nebyla. Chybu nahlásil externí ověřovatel, který ji udělal."
+  },
+  {
+    "id": "o-2026-09-20-stazeno-us-590b687216",
+    "datum": "2026-09-20",
+    "tykaSe": "us-590b687216",
+    "druh": "oprava-dat",
+    "co": "Záznam stažen ze zveřejněných mezi nepotvrzené. Do počtů se už nezapočítává.",
+    "proc": "Záznam se zveřejnil sám na základě zdroje označeného jako úřední, kterým byl článek Českého rozhlasu. Veřejnoprávní vysílatel o věci referuje, neoznamuje ji; úřední zdroj to není. Tisková zpráva amerického ministerstva spravedlnosti k obvinění existuje a musí se doložit odkazem na ni."
+  },
+  {
     "id": "o-2026-09-15-moldavsko-norsky-zdroj",
     "datum": "2026-09-15",
     "tykaSe": "moldavsko-dron-uzavrel-vzdusny-prostor-2026",

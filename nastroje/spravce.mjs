@@ -31,6 +31,7 @@ import { execFileSync } from "node:child_process";
 import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
+import { maUredniZdroj } from "./uredni-zdroj.mjs";
 
 const koren = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const cti = (f, zaloha) => {
@@ -430,7 +431,8 @@ function upravZaznam(slug, jsonText) {
   ];
 
   const opravy = cti("data/opravy.json", []);
-  opravy.push({
+  /* Na začátek: stránka Opravy ukazuje nejnovější první a pořadí je v souboru. */
+  opravy.unshift({
     id: `o-${ted.toISOString().slice(0, 10)}-${slug}`.slice(0, 80),
     datum: ted.toISOString().slice(0, 10),
     tykaSe: slug,
@@ -444,6 +446,74 @@ function upravZaznam(slug, jsonText) {
   console.log(`Záznam ${slug}: upraveno ${pouzite.join(", ")}. Zapsáno i do oprav.`);
 }
 
+
+/*
+  Stažení zveřejněného záznamu zpět mezi nepotvrzené.
+
+  Protiváha automatického zveřejnění. Když se ukáže, že záznam podmínky
+  nesplňoval — typicky že jeho „úřední" zdroj úřední nebyl — nesmí zůstat
+  mezi tím, za čím projekt stojí. Ale nesmí ani zmizet: tiché smazání je
+  k nerozeznání od toho, že tam nikdy nebyl.
+
+  Proto se záznam vrací do fronty návrhů, kde je na webu dál vidět jako
+  nepotvrzený, a důvod se zapíše na stránku Opravy.
+*/
+function stahniZaznam(slug, jsonText) {
+  if (!slug || !jsonText) {
+    console.error("Použití: npm run spravce stahni <slug> '<json s důvodem>'");
+    process.exit(1);
+  }
+  let vstup;
+  try {
+    vstup = JSON.parse(jsonText);
+  } catch {
+    console.error("Důvod není platný JSON.");
+    process.exit(1);
+  }
+  const duvod = String(vstup.duvod ?? "").trim();
+  if (duvod.length < 10) {
+    console.error("Chybí důvod stažení. Bez něj se zveřejněný záznam nestahuje.");
+    process.exit(1);
+  }
+
+  const inc = cti("data/incidenty.json", []);
+  const i = inc.findIndex((x) => x.slug === slug);
+  if (i < 0) {
+    console.error(`Záznam ${slug} mezi zveřejněnými není.`);
+    process.exit(1);
+  }
+
+  const ted = new Date();
+  const { overeni: _o, ...z } = inc[i];
+  z.lidskyOvereno = false;
+  z.kam = "zaznam";
+  z.pripravil = "stazeno";
+  z.pripraveno = ted.toISOString();
+  z.aktualizovano = ted.toISOString();
+  z.historie = [
+    ...(z.historie ?? []),
+    { kdy: ted.toISOString(), text: `Staženo ze zveřejněných mezi nepotvrzené. Důvod: ${duvod}`, novySignal: false },
+  ];
+
+  inc.splice(i, 1);
+  const navrhy = cti("data/navrhy.json", []);
+  navrhy.push(z);
+
+  const opravy = cti("data/opravy.json", []);
+  opravy.unshift({
+    id: `o-${ted.toISOString().slice(0, 10)}-stazeno-${slug}`.slice(0, 80),
+    datum: ted.toISOString().slice(0, 10),
+    tykaSe: slug,
+    druh: "oprava-dat",
+    co: "Záznam stažen ze zveřejněných mezi nepotvrzené. Do počtů se už nezapočítává.",
+    proc: duvod.slice(0, 600),
+  });
+
+  fs.writeFileSync(path.join(koren, "data/incidenty.json"), `${JSON.stringify(inc, null, 2)}\n`);
+  fs.writeFileSync(path.join(koren, "data/navrhy.json"), `${JSON.stringify(navrhy, null, 2)}\n`);
+  fs.writeFileSync(path.join(koren, "data/opravy.json"), `${JSON.stringify(opravy, null, 2)}\n`);
+  console.log(`Záznam ${slug} stažen mezi nepotvrzené a zapsán do oprav.`);
+}
 
 /*
   Automatické zveřejnění dobře doložených návrhů.
@@ -464,7 +534,13 @@ function dobreDolozeny(n) {
   return (
     (n.kam ?? "zaznam") === "zaznam" &&
     zdroje.length >= 2 &&
-    zdroje.some((z) => z.primarni === true || z.typ === "primary") &&
+    /*
+      Úřední zdroj se pozná podle adresy, ne podle toho, co si o sobě napsal.
+      Dřív stačilo `typ: "primary"` — a tak se 20. 9. 2026 zveřejnil sám
+      záznam doložený „tiskovou zprávou rumunského ministerstva", která ale
+      byla jejím zrcadlem na globalsecurity.org.
+    */
+    maUredniZdroj(zdroje) &&
     (n.fakta ?? []).length > 0
   );
 }
@@ -515,6 +591,7 @@ else if (prikaz === "zamitni") zamitni(arg[0], arg.slice(1).join(" "));
 else if (prikaz === "znovu") znovu(arg[0], arg.slice(1).join(" "));
 else if (prikaz === "uprav") uprav(arg[0], arg.slice(1).join(" "));
 else if (prikaz === "uprav-zaznam") upravZaznam(arg[0], arg.slice(1).join(" "));
+else if (prikaz === "stahni") stahniZaznam(arg[0], arg.slice(1).join(" "));
 else if (prikaz === "zverejni") zverejniAutomaticky();
 else if (prikaz === "tip") tip(arg[0]);
 else if (prikaz === "prijmi") {
