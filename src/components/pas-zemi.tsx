@@ -85,8 +85,12 @@ export function PasZemi({ vse, kampane = [], ted = Date.now() }: { vse: Zaznam[]
           úplně, takže tam běžela řada čísel bez jakéhokoli vysvětlení.
           Věta nad řadou se vejde vždycky a přečte se jako první.
         */}
-        <p className="stitek pt-2 text-tlum2">
-          Incidenty a operace proti občanům za posledních 90 dní
+        {/*
+          Běžné písmo, ne prostrkaný štítek. Se štítkem se věta na dvě řádky
+          lámala i na širokém displeji a nad lištou to vypadalo jako chyba.
+        */}
+        <p className="pt-2 text-mikro leading-snug text-tlum2">
+          Počet incidentů a operací proti občanům za posledních 90 dní
           {celkem > 0 && <span className="text-tlum"> · celkem {celkem}</span>}
         </p>
         <div className="flex items-center pb-1.5">
