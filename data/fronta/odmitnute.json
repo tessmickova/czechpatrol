@@ -1,5 +1,21 @@
 [
   {
+    "id": "k-020f9056b4df04da",
+    "zachyceno": "2026-09-20T11:20:06.109Z",
+    "publikovano": "2026-09-20T11:09:00.000Z",
+    "zdroj": {
+      "nazev": "Český rozhlas — domácí zprávy",
+      "url": "https://www.irozhlas.cz/sport/ostatni-sporty/salac-dojel-na-velke-cene-rakouska-druhy-cesky-motocyklista-nestacil-ve-tride_2609201309_mim",
+      "typ": "primary",
+      "primarni": true
+    },
+    "titulek": "Salač dojel na Velké ceně Rakouska druhý. Český motocyklista nestačil ve třídě Moto2 jen na Španěla",
+    "shrnuti": "Filip Salač obsadil druhé místo v motocyklové Velké ceně Rakouska. Český jezdec po sobotním vítězství v kvalifikaci nestačil v nedělním závodě Moto2 jen na suverénního Španěla Izana Guevaru, za nímž zaostal o 1,728 sekundy.",
+    "duvod": "bez-skutku",
+    "kategorie": [],
+    "posouzeni": null
+  },
+  {
     "id": "k-7ae3b380ea51aae0",
     "zachyceno": "2026-09-20T11:02:27.997Z",
     "publikovano": "2026-09-20T10:53:00.000Z",
@@ -10287,29 +10303,6 @@
     "posouzeni": {
       "podezreni": "zadne",
       "duvod": "statistika dopravních nehod, nikoli bezpečnostní hrozba",
-      "kdy": "2026-09-19T13:05:21.142Z"
-    }
-  },
-  {
-    "id": "k-f4309f02f67e8aca",
-    "zachyceno": "2026-09-16T11:24:57.742Z",
-    "publikovano": "2026-09-15T18:08:12.000Z",
-    "zdroj": {
-      "nazev": "Téma: vojsko (česky)",
-      "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxON1VaNlJGNXc4X2kyMGlRWWhSRkZxNkx0MHJZRWx3U2I0MVRsOGZ3ZzFKamJjeHBpRXRQa1lyckNfVFJmVEZXTUdsUnAxdHc1M0Z5V29SbG02X1VBRGhxTkZ4bzJHZkxDQnZUbmdkckxBWnE1aGd1SXIxWHQ4WHB2ek5YMnlTd0h1U01HN3N6MVVodUJLYlRHbVFJSy0xdnhNNFFkdUJJWVY4aGM?oc=5",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Čína snižuje počet vojáků podél indické hranice, což je nový signál deeskalace napětí. - Vietnam.vn",
-    "shrnuti": "Čína snižuje počet vojáků podél indické hranice, což je nový signál deeskalace napětí. Vietnam.vn",
-    "duvod": "bez-mista",
-    "kategorie": [
-      "hranice",
-      "vojsko"
-    ],
-    "posouzeni": {
-      "podezreni": "zadne",
-      "duvod": "deeskalace napětí, snížení počtu vojáků",
       "kdy": "2026-09-19T13:05:21.142Z"
     }
   }
