@@ -173,6 +173,17 @@ function schval(id) {
     console.error(`Návrh ${id} tu není. Seznam: npm run spravce navrhy`);
     process.exit(1);
   }
+  /*
+    Co doložené není, musí u zveřejněného záznamu stát. Je to jedno z pravidel
+    webu: čtenář má vedle fakt vidět i hranici toho, co víme. Model to někdy
+    nevyplní — doplnit to je práce člověka, ne důvod záznam zahodit.
+  */
+  if (!(z.neznameho ?? []).length) {
+    console.error(`Návrh ${id} neříká, co doložené není. Doplňte to a schvalte znovu:`);
+    console.error(`  npm run spravce uprav ${id} '{"neznameho":["…"]}'`);
+    process.exit(2);
+  }
+
   const kam = z.kam ?? "zaznam";
   const soubor = kam === "overujeme" ? "data/overujeme.json" : "data/incidenty.json";
   const cil = cti(soubor, []);
@@ -299,6 +310,7 @@ function znovu(id, duvod) {
   a zdroje se nemají přepisovat ručně, když je celá cena projektu v tom, že
   odkazují na doklad.
 */
+const SEZNAMY = ["fakta", "neznameho"];
 const UPRAVITELNA = [
   "titulek",
   "kratkyTitulek",
@@ -338,7 +350,10 @@ function uprav(id, jsonText) {
       process.exit(1);
     }
     if (hodnota === null || hodnota === undefined) continue;
-    z[klic] = hodnota;
+    /* Formulář posílá seznamy jako text po řádcích. */
+    z[klic] = SEZNAMY.includes(klic) && typeof hodnota === "string"
+      ? hodnota.split("\n").map((r) => r.trim()).filter(Boolean)
+      : hodnota;
     pouzite.push(klic);
   }
   if (!pouzite.length) {

@@ -42,7 +42,7 @@ interface Navrh {
   preverit: { kdy: string; duvod: string | null } | null;
 }
 
-const POLE_UPRAV: { klic: string; popis: string; zastupny?: string; volby?: string[] }[] = [
+const POLE_UPRAV: { klic: string; popis: string; zastupny?: string; volby?: string[]; viceradkove?: boolean }[] = [
   { klic: "titulek", popis: "Titulek — co se stalo a kde" },
   { klic: "kratkyTitulek", popis: "Krátký titulek (do výpisů)" },
   { klic: "zavaznost", popis: "Závažnost", volby: ["G1", "G2", "G3", "Y1", "Y2", "Y3", "O1", "O2", "O3", "R1", "R2", "R3"] },
@@ -51,6 +51,12 @@ const POLE_UPRAV: { klic: string; popis: string; zastupny?: string; volby?: stri
   { klic: "atribuce", popis: "Atribuce", volby: ["neznama", "podezreni", "urednizaver"] },
   { klic: "puvodce", popis: "Původce — jen s úředním závěrem", zastupny: "nechte prázdné, dokud to není potvrzené" },
   { klic: "vyznam", popis: "Co z toho plyne pro čtenáře v Česku" },
+  /*
+    Povinné ke schválení. Když model nic nedoloženého neoznačí, schválení se
+    zastaví — čtenář má vedle fakt vidět i hranici toho, co víme.
+  */
+  { klic: "neznameho", popis: "Co doložené NENÍ — povinné, každý řádek zvlášť", viceradkove: true },
+  { klic: "fakta", popis: "Fakta — každý řádek zvlášť", viceradkove: true },
 ];
 
 export function NavrhyKeSchvaleni() {
@@ -216,7 +222,17 @@ export function NavrhyKeSchvaleni() {
                     {POLE_UPRAV.map((f) => (
                       <label key={f.klic} className="block">
                         <span className="stitek mb-1 block">{f.popis}</span>
-                        {f.volby ? (
+                        {f.viceradkove ? (
+                          <textarea
+                            className={`${POLE} min-h-[72px] w-full`}
+                            value={
+                              upravy[id]?.[f.klic] ??
+                              ((n[f.klic as keyof Navrh] as string[] | undefined) ?? []).join("\n")
+                            }
+                            placeholder={f.zastupny}
+                            onChange={(e) => zmen(id, f.klic, e.target.value)}
+                          />
+                        ) : f.volby ? (
                           <select
                             className={`${POLE} w-full`}
                             value={upravy[id]?.[f.klic] ?? (n[f.klic as keyof Navrh] as string) ?? ""}

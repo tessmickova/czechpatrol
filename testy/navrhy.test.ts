@@ -23,7 +23,15 @@ describe("fronta návrhů", () => {
   it("návrh má fakta, nedoložené i zdroje s adresou", () => {
     for (const n of navrhy) {
       expect(n.fakta.length, `${n.slug} bez fakt`).toBeGreaterThan(0);
-      expect(n.neznameho.length, `${n.slug} neříká, co doložené není`).toBeGreaterThan(0);
+      /*
+        Ve frontě smí být návrh, u kterého model nic nedoloženého neoznačil.
+        Vynutit tu neprázdný seznam by znamenalo buď zahodit dobře doloženou
+        zprávu, nebo do ní dopsat vatu. Brána je až u schválení: `spravce
+        schval` zveřejnit bez téhle věty nedovolí a člověk ji napíše.
+
+        Proč to nestačí nechat na testu: tenhle test běží i v hodinovém sběru,
+        takže jeden takový návrh zastavil nasazení celého webu.
+      */
       expect(n.zdroje.length, `${n.slug} má méně než dva zdroje`).toBeGreaterThanOrEqual(2);
       for (const z of n.zdroje) {
         expect(z.url, `${n.slug}: zdroj ${z.nazev} bez adresy`).toMatch(/^https?:\/\//);
