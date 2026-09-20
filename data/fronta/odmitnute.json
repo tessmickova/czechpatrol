@@ -1,5 +1,73 @@
 [
   {
+    "id": "k-57378eaf5b4f5f16",
+    "zachyceno": "2026-09-20T16:02:35.485Z",
+    "publikovano": "2026-09-20T15:49:00.000Z",
+    "zdroj": {
+      "nazev": "Český rozhlas — domácí zprávy",
+      "url": "https://www.irozhlas.cz/zpravy-svet/v-nemecku-zacaly-dalsi-volby-prohra-cdu-byla-pro-merze-vrazedny-mix-rika_2609201749_lhv",
+      "typ": "primary",
+      "primarni": true
+    },
+    "titulek": "Prohra CDU by byla pro Merze vražedný mix, říká politolog Novotný o volbách v Německu",
+    "shrnuti": "V německém hlavním městě a ve spolkové zemi Meklenbursko-Přední Pomořansko se konají volby. V Berlíně zhruba 2,5 milionu voličů rozhodne o složení Poslanecké sněmovny i o vedení města. „Očekávám pro CDU velmi špatné výsledky kvůli tomu, že se kancléři nedaří lidem odlehčovat,“ říká v rozhovoru pro R",
+    "duvod": "vylouceno-tematem",
+    "kategorie": [
+      "cr"
+    ],
+    "posouzeni": null
+  },
+  {
+    "id": "k-81805f902d4d5de7",
+    "zachyceno": "2026-09-20T16:02:35.485Z",
+    "publikovano": "2026-09-20T15:30:00.000Z",
+    "zdroj": {
+      "nazev": "Český rozhlas — domácí zprávy",
+      "url": "https://www.irozhlas.cz/sport/fotbal/zive-fotbaliste-slavie-hosti-ve-slagru-kola-plzen-radiozurnal-sport-odvysila_2609201730_mim",
+      "typ": "primary",
+      "primarni": true
+    },
+    "titulek": "ŽIVĚ: Fotbalisté Slavie hostí ve šlágru kola Plzeň. Radiožurnál Sport odvysílá přímý přenos",
+    "shrnuti": "Lídr fotbalové ligy Slavia přivítá v 9. kole trápící se Plzeň. Úřadující šampion chce před reprezentační přestávkou potvrdit pozici jediného neporaženého týmu nejvyšší soutěže a upevnit si vedení před druhým Libercem. Radiožurnál Sport odvysílá zápas od 18.00 v přímém přenosu.",
+    "duvod": "vylouceno-tematem",
+    "kategorie": [
+      "cr"
+    ],
+    "posouzeni": null
+  },
+  {
+    "id": "k-bfc2c34dd56e8db1",
+    "zachyceno": "2026-09-20T16:02:35.486Z",
+    "publikovano": "2026-09-20T15:18:00.000Z",
+    "zdroj": {
+      "nazev": "Český rozhlas — domácí zprávy",
+      "url": "https://www.irozhlas.cz/zpravy-domov/zamecky-park-v-lipniku-nad-becvou-zdobi-nove-dvanact-soch-plastiky-vytvoril_2609201718_ntu",
+      "typ": "primary",
+      "primarni": true
+    },
+    "titulek": "Zámecký park v Lipníku nad Bečvou zdobí nově dvanáct soch. Plastiky vytvořil kovář Pavel Tasovský",
+    "shrnuti": "Samospráva Lipníku nad Bečvou koupila za milion korun soubor kovaných plastik s názvem Znamení zvěrokruhu. Zahrnuje dvanáct soch, které vyrobil umělecký kovář Pavel Tasovský. Vystavené jsou u historické konírny v lipnickém zámeckém parku.",
+    "duvod": "bez-skutku",
+    "kategorie": [],
+    "posouzeni": null
+  },
+  {
+    "id": "k-279188449d416130",
+    "zachyceno": "2026-09-20T16:02:35.487Z",
+    "publikovano": "2026-09-20T15:16:00.000Z",
+    "zdroj": {
+      "nazev": "Český rozhlas — domácí zprávy",
+      "url": "https://www.irozhlas.cz/veda-technologie/priroda/orangutani-zelvy-krajty-a-dalsi-pasovani-divokych-zvirat-v-indii-pribyva_2609201716_elev",
+      "typ": "primary",
+      "primarni": true
+    },
+    "titulek": "Orangutani, želvy, krajty a další. Případů pašování divokých zvířat v Indii přibývá",
+    "shrnuti": "Exotická zvířata se stále častěji objevují v Indii, což naznačuje, že se tato země stává významnou destinací pro nelegální obchod s volně žijícími zvířaty. Posledním nedávným případem je nález orangutanů, případů ale v posledních letech dramaticky narůstá. Informaci uvádí server Deutsche Welle (DW).",
+    "duvod": "bez-skutku",
+    "kategorie": [],
+    "posouzeni": null
+  },
+  {
     "id": "k-5387657573c2c581",
     "zachyceno": "2026-09-20T15:02:35.592Z",
     "publikovano": "2026-09-20T14:53:00.000Z",
@@ -119,6 +187,22 @@
     "kategorie": [
       "hranice"
     ],
+    "posouzeni": null
+  },
+  {
+    "id": "k-a66644df06871a75",
+    "zachyceno": "2026-09-20T16:02:35.531Z",
+    "publikovano": "2026-09-20T13:22:00.000Z",
+    "zdroj": {
+      "nazev": "ERR News (Estonsko)",
+      "url": "https://news.err.ee/1610143246/estonia-s-defense-agency-takes-datasel-dispute-to-swiss-arbitration",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Estonia's defense agency takes Datasel dispute to Swiss arbitration",
+    "shrnuti": "Estonia's Center for Defense Investments (RKIK) is fighting Datasel in arbitration in Switzerland over a terminated Ukraine ammunition deal, with legal costs hitting hundreds of thousands.",
+    "duvod": "bez-skutku",
+    "kategorie": [],
     "posouzeni": null
   },
   {
@@ -3502,6 +3586,22 @@
     "posouzeni": null
   },
   {
+    "id": "k-484334e0cf7f7053",
+    "zachyceno": "2026-09-20T16:02:35.738Z",
+    "publikovano": "2026-09-18T18:54:56.000Z",
+    "zdroj": {
+      "nazev": "Téma: evakuace (anglicky)",
+      "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxOQ2xXd2hHS1U1dzZkQmtROFo0RktSVDJVX1d2ZktEYzkxU291Z1ZoLW1ORDVGUTFSaDNRdm9JZDlIa1BaZEZoVHJkU01pVWlRZmRTYUdsclpFaUpWQWlYUU8xS2FiSlk2TEVFaUZ6dHU1ZzFEN2tDbDd3NHd6alNWdnNVRlgzLTN3SkZ6dkVldU1QcGtaWVJhZl9TdDV0TXR3MDNpXzlfVGNJblRsc29NNDQ4dXfSAboBQVVfeXFMTWFydS1pLTR0TEhnN1VndnRfZTJVazNlbnVpaGpZZFBLb3IycVhzUVdxQkJ6akozMXdRc3N6V0pnOW5GYVNoRDJJbkY3c0RpTDRYdU8yd0FES1gyREM4eG83R3lLQlZTRFktUFBJUG5hR184clg0OHFrVTY4UW1rTWgxX3E3RXcyTWR0V1E0aE9pajdJaEtVN0IzZDhmRkVFc3VzanViNGppdnZFZEl2eFY3N2VXc0FkZjBn?oc=5",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "US struggles to evacuate American personnel from facilities under fire in Iraq: Officials - ABC News - Breaking News, Latest News and Videos",
+    "shrnuti": "US struggles to evacuate American personnel from facilities under fire in Iraq: Officials ABC News - Breaking News, Latest News and Videos",
+    "duvod": "bez-skutku",
+    "kategorie": [],
+    "posouzeni": null
+  },
+  {
     "id": "k-4cbe372978b7b097",
     "zachyceno": "2026-09-19T08:00:22.084Z",
     "publikovano": "2026-09-18T18:23:00.000Z",
@@ -5294,6 +5394,24 @@
       "duvod": "Festival světel v parku, kultura",
       "kdy": "2026-09-19T11:03:33.710Z"
     }
+  },
+  {
+    "id": "k-e2248eb12a8b1924",
+    "zachyceno": "2026-09-20T16:02:35.731Z",
+    "publikovano": "2026-09-17T13:08:00.000Z",
+    "zdroj": {
+      "nazev": "Téma: nouzovy-stav (anglicky)",
+      "url": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxPbjZLajhpVHItVkVidV9qbmJGS0JhS1NDbURnTzduZk9aQU1peFVJakxSUkFWRC1JRk0wczQ1SEdTNEZNM3M4X0IycVFTOXpFa3FIdTdmaFJ3eUNlUzBxMHE5THBYbHJBV2FUbkVTZDVZeDdJdDJONWNRNTRmV185d1dFN1hnX2xTVksza25vN0VFTFFFcU9wbXZjemNYZ0VNZVhSeThpd1hEcHFHbHd5X3dFVEZPV21GTVRXVDNJQXlyVURHTnVBYk9lWFMxMWZQM05TMF85aw?oc=5",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "“A Reminder That AIDS Is Not Over”: Tropical Country Declares State Of Emergency - i24NEWS",
+    "shrnuti": "“A Reminder That AIDS Is Not Over”: Tropical Country Declares State Of Emergency i24NEWS",
+    "duvod": "bez-mista",
+    "kategorie": [
+      "pravo"
+    ],
+    "posouzeni": null
   },
   {
     "id": "k-8a14014c689dc352",
@@ -8525,6 +8643,22 @@
     }
   },
   {
+    "id": "k-8ce4f2c0d2bbfab6",
+    "zachyceno": "2026-09-20T16:02:35.518Z",
+    "publikovano": "2026-09-16T11:08:01.000Z",
+    "zdroj": {
+      "nazev": "BBC News — Europe",
+      "url": "https://www.bbc.co.uk/news/articles/ck0e3rnxev27o?at_medium=RSS&at_campaign=rss",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Carney's new love-in with EU has everything to do with Trump",
+    "shrnuti": "The Canadian PM is in Strasbourg this week seeking a \"unique alliance\" - and there is one clear catalyst.",
+    "duvod": "bez-skutku",
+    "kategorie": [],
+    "posouzeni": null
+  },
+  {
     "id": "k-91b91b254e7bccd1",
     "zachyceno": "2026-09-16T11:32:59.422Z",
     "publikovano": "2026-09-16T10:59:00.000Z",
@@ -10041,177 +10175,6 @@
     "posouzeni": {
       "podezreni": "zadne",
       "duvod": "Zemědělský trend s řepkou",
-      "kdy": "2026-09-19T13:05:21.142Z"
-    }
-  },
-  {
-    "id": "k-871932c71ecc5924",
-    "zachyceno": "2026-09-16T04:32:44.757Z",
-    "publikovano": "2026-09-16T04:10:00.000Z",
-    "zdroj": {
-      "nazev": "Český rozhlas — domácí zprávy",
-      "url": "https://www.irozhlas.cz/ekonomika/hypermonitor-banky-v-srpnu-poskytly-hypoteky-za-345-miliardy-o-15-procent_2609160610_cen",
-      "typ": "primary",
-      "primarni": true
-    },
-    "titulek": "Hypomonitor: Banky v srpnu poskytly hypotéky za 34,5 miliardy, o 15 procent meziměsíčně méně",
-    "shrnuti": "Banky a stavební spořitelny poskytly v srpnu hypoteční úvěry za 34,5 miliardy korun. Ve srovnání s loňským srpnem to znamená nárůst o čtyři procenta, proti červenci se ale objem hypoték snížil o 15 procent. Nové úvěry bez refinancování meziměsíčně klesly o 13 procent na 26,8 miliardy korun. Úrokové ",
-    "duvod": "vylouceno-tematem",
-    "kategorie": [],
-    "posouzeni": {
-      "podezreni": "zadne",
-      "duvod": "Statistika hypoték",
-      "kdy": "2026-09-19T13:05:21.142Z"
-    }
-  },
-  {
-    "id": "k-f0de1224ce6e3eba",
-    "zachyceno": "2026-09-16T04:02:54.211Z",
-    "publikovano": "2026-09-16T04:00:00.000Z",
-    "zdroj": {
-      "nazev": "iROZHLAS — zprávy",
-      "url": "https://www.irozhlas.cz/zpravy-domov/temer-kazdy-treti-pokus-o-otehotneni-probehl-na-babisovych-klinikach-cizinky_2609160600_vtk",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Téměř každý třetí pokus o otěhotnění proběhl na Babišových klinikách. Cizinky podstoupily víc cyklů než Češky",
-    "shrnuti": "Plánované změny v podmínkách umělého oplodnění umožní více ženám obrátit se na reprodukční kliniky. Mezi významné podnikatele na tomto trhu patří premiér Andrej Babiš (ANO). Radiožurnál na základě dat z Ústavu zdravotnických informací a statistiky (ÚZIS) za rok 2023 spočítal, jak velký je reálně vli",
-    "duvod": "bez-skutku",
-    "kategorie": [
-      "cr"
-    ],
-    "posouzeni": {
-      "podezreni": "zadne",
-      "duvod": "Zpráva o umělém oplodnění a klinikách",
-      "kdy": "2026-09-19T13:05:21.142Z"
-    }
-  },
-  {
-    "id": "k-feafa850a4ee795f",
-    "zachyceno": "2026-09-16T04:02:54.212Z",
-    "publikovano": "2026-09-16T04:00:00.000Z",
-    "zdroj": {
-      "nazev": "iROZHLAS — zprávy",
-      "url": "https://www.irozhlas.cz/zpravy-domov/poskozeni-20-kajaku-na-jizere-resi-policie-hladina-vody-behem-rozjeteho-zavodu_2609160600_vaa",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Poškození 20 kajaků na Jizeře řeší policie. Hladina vody během rozjetého závodu klesla o půl metru",
-    "shrnuti": "Policisté a inspektoři prověřují okolnosti poškození dvou desítek lodí při závodě kajaků na řece Jizeře v Benátkách nad Jizerou. Podle závodníků a trenérů někdo z majitelů elektráren úmyslně manipuloval s výškou vodní hladiny. Ta při závodě ve slalomu v polovině srpna klesla o 50 centimetrů.",
-    "duvod": "bez-skutku",
-    "kategorie": [
-      "vojsko"
-    ],
-    "posouzeni": {
-      "podezreni": "stredni",
-      "duvod": "Podezření na úmyslné poškození lodí, vyšetřuje policie",
-      "kdy": "2026-09-19T13:05:21.142Z"
-    }
-  },
-  {
-    "id": "k-b39ead9ad8ff4269",
-    "zachyceno": "2026-09-16T04:02:54.213Z",
-    "publikovano": "2026-09-16T04:00:00.000Z",
-    "zdroj": {
-      "nazev": "iROZHLAS — zprávy",
-      "url": "https://www.irozhlas.cz/zpravy-domov/armada-misto-dekonty-jak-bylo-s-jedy-na-sumave-a-proc-nakonec-babis-zastavil_2609160600_ako",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Armáda místo Dekonty. Jak to bylo s jedy na Šumavě a proč nakonec Babiš zastavil Červeného",
-    "shrnuti": "Jedy na Šumavě. Proč se o nich hádá současná vláda s minulou? A jak to je s vazbami Motoristů na sanační firmu Dekonta?",
-    "duvod": "bez-skutku",
-    "kategorie": [
-      "vojsko"
-    ],
-    "posouzeni": {
-      "podezreni": "stredni",
-      "duvod": "Kauza jedů na Šumavě, možná ekologická havárie",
-      "kdy": "2026-09-19T13:05:21.142Z"
-    }
-  },
-  {
-    "id": "k-ff065731ae035309",
-    "zachyceno": "2026-09-16T04:02:54.222Z",
-    "publikovano": "2026-09-16T04:00:00.000Z",
-    "zdroj": {
-      "nazev": "ČT24 — hlavní zprávy",
-      "url": "https://ct24.ceskatelevize.cz/clanek/domaci/velke-podniky-se-desi-zdrazovani-energii-muze-dojit-k-zavirani-provozu-377649",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Velké podniky se děsí zdražování energií. Může dojít k zavírání provozů",
-    "shrnuti": "Růst cen energií je pro českou ekonomiku špatnou zprávou. Některé velké podniky varují, že pokud bude energie zdražovat i nadále, budou muset uzavřít své provozy. Ministr průmyslu Karel Havlíček (ANO) České televizi řekl, že stát chystá opatření na pomoc. Jedná se třeba o plošné zastropování ceny el",
-    "duvod": "bez-skutku",
-    "kategorie": [],
-    "posouzeni": {
-      "podezreni": "zadne",
-      "duvod": "Ekonomický dopad zdražování energií",
-      "kdy": "2026-09-19T13:05:21.142Z"
-    }
-  },
-  {
-    "id": "k-e45bf0a0118feda2",
-    "zachyceno": "2026-09-16T04:02:54.507Z",
-    "publikovano": "2026-09-16T03:55:54.000Z",
-    "zdroj": {
-      "nazev": "Téma: krizove-vysilani (česky)",
-      "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxPdDVFWnNsYkFVZkhNUkNxZ3JuNW85VHp1S2J2NVMxdW5uUTB2dFZoUV92VjhsTHFZVDhQM2Raelk1TW5EUEp1bWtGelJjczJEQXNobVlzdHIzek9Fbm1COUpZUlpnc3d2SlhtRDM1cW5ZbWtxbXExcEZTTGg3a2c2VEdad25obFhoTHk1OEs1MF9GRmxrZEdQWmhFSkJ6TGo5b0E?oc=5",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Krizová zpráva do 13 minut, za 40 minut kontinuál. Rozhlas se chystá na pohromy - Médiář",
-    "shrnuti": "Krizová zpráva do 13 minut, za 40 minut kontinuál. Rozhlas se chystá na pohromy Médiář",
-    "duvod": "bez-skutku",
-    "kategorie": [
-      "cr"
-    ],
-    "posouzeni": {
-      "podezreni": "zadne",
-      "duvod": "Interní příprava rozhlasu na krizové vysílání",
-      "kdy": "2026-09-19T13:05:21.142Z"
-    }
-  },
-  {
-    "id": "k-436ed2cb25b5cf9d",
-    "zachyceno": "2026-09-16T04:02:54.199Z",
-    "publikovano": "2026-09-16T03:35:00.000Z",
-    "zdroj": {
-      "nazev": "Český rozhlas — domácí zprávy",
-      "url": "https://www.irozhlas.cz/zpravy-domov/nove-ucebny-i-telocvicna-blansko-po-rekonstrukci-strediska-nabizi-radu-krouzku_2609160535_vaa",
-      "typ": "primary",
-      "primarni": true
-    },
-    "titulek": "Nové učebny i tělocvična. Blansko po rekonstrukci střediska nabízí řadu kroužků, mezi nimi i robotiku",
-    "shrnuti": "Na přihlášení dětí do volnočasových aktivit zbývá posledních pár dní. Na jižní Moravě se nejrychleji plní sportovní a taneční lekce, ale také kroužky keramiky, chovatelství nebo programování. Děti v Blansku budou od října chodit na většinu aktivit včetně oblíbené robotiky nebo keramiky do učeben v n",
-    "duvod": "bez-skutku",
-    "kategorie": [],
-    "posouzeni": {
-      "podezreni": "zadne",
-      "duvod": "Rekonstrukce střediska volného času",
-      "kdy": "2026-09-19T13:05:21.142Z"
-    }
-  },
-  {
-    "id": "k-a684cbc6a16f91f8",
-    "zachyceno": "2026-09-16T03:32:58.452Z",
-    "publikovano": "2026-09-16T03:00:00.000Z",
-    "zdroj": {
-      "nazev": "Český rozhlas — domácí zprávy",
-      "url": "https://www.irozhlas.cz/zpravy-domov/jsou-skutecne-duleziti-rika-velitel-hlidkove-sluzby-v-chebu-nove-slouzi_2609160500_aha",
-      "typ": "primary",
-      "primarni": true
-    },
-    "titulek": "Jsou skutečně důležití, říká velitel hlídkové služby. V Chebu nově slouží asistenti prevence kriminality",
-    "shrnuti": "Pomáhají udržovat veřejný pořádek nebo například dohlížejí na bezpečnost dětí u škol nebo přechodů. I toto je práce asistentů prevence kriminality. Nově slouží také u městské policie v Chebu. Lidé je mohou potkat po celém městě. Jedno z míst, které často kontrolují, je například autobusové a vlakové",
-    "duvod": "bez-mista",
-    "kategorie": [
-      "hranice",
-      "vojsko"
-    ],
-    "posouzeni": {
-      "podezreni": "zadne",
-      "duvod": "Prevence kriminality, běžná policejní služba",
       "kdy": "2026-09-19T13:05:21.142Z"
     }
   }
