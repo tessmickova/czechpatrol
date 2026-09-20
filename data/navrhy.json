@@ -367,7 +367,7 @@
     ],
     "datumUdalosti": "2026-09-08T00:00:00Z",
     "datumZjisteni": "2026-09-08T00:00:00Z",
-    "aktualizovano": "2026-09-20T19:09:26.654Z",
+    "aktualizovano": "2026-09-20T21:05:45.406Z",
     "zavaznost": "Y2",
     "jistota": "stredni",
     "stav": "probiha",
@@ -375,22 +375,28 @@
     "puvodce": "neznamy",
     "druh": "pripad",
     "fakta": [
-      "Podle moldavské policie byl v Kišiněvě zadržen 49letý občan Ázerbájdžánu podezřelý z neoprávněného sběru informací pro zástupce ruských zvláštních služeb (Unimedia, Digi24).",
-      "Podle policie měl sledovat vojenské objekty v Moldavsku i americké cíle na moldavském území a byl vytipován k diverzním aktivitám v Moldavsku a na Ukrajině (Unimedia).",
-      "Podle Unimedia a OC Media byl při domovní prohlídce zajištěn mobil s kontakty na osobu, která se představovala jako pracovník FSB.",
-      "Podle UA.NEWS (cituje TV8) a Digi24 soud nařídil 30 dnů předběžné vazby; podle OC Media a UA.NEWS hrozí za neoprávněný sběr informací dva až pět let vězení."
+      "Podle moldavské policie (Generální policejní inspektorát, 8. 9. 2026) zadržel Inspektorát národních vyšetřování 49letého občana Ázerbájdžánu, který je podezřelý z neoprávněného sběru informací ve prospěch zástupců ruských zvláštních služeb.",
+      "Podle policie měl sledovat vojenské objekty v Moldavsku i americké objekty na moldavském území; byl mu zajištěn mobilní telefon s kontakty na osobu, která se vydávala za pracovníka FSB.",
+      "Podle policie mu soud nařídil 30 dnů předběžné vazby; za neoprávněný sběr informací hrozí podle policie 2 až 5 let vězení."
     ],
     "neznameho": [
-      "Přesné datum zadržení; zdroje uvádějí zprávu z 8. 9. 2026, ne datum zadržení, a do datumu události je dáno datum policejního sdělení.",
-      "Totožnost zadrženého, jeho úloha a to, zda šlo o skutečné přípravy sabotáže; jde o podezření, ne o rozsudek.",
-      "Web moldavské policie ani ministerstva vnitra jsem neotevřel; údaje jsou z médií citujících policejní sdělení.",
-      "Původní odkaz kandidáta (UA.NEWS přes Google News) jsem přímo neotevřel; otevřel jsem přímou adresu téhož článku na ua.news.",
-      "Datum publikace OC Media jsem z otevřené stránky nezjistil; uvedeno datum shodné s ostatními zdroji."
+      "Přesné datum zadržení; policie uvádí jen datum zveřejnění sdělení (8. 9. 2026, 14:11).",
+      "Totožnost zadrženého a to, zda šlo o skutečné přípravy sabotáže; jde o podezření, ne o rozsudek.",
+      "Policie mluví o osobě, která se vydávala za pracovníka FSB; nejde o oficiální připsání ruské službě.",
+      "Původní odkaz kandidáta (UA.NEWS přes Google News) jsem přímo neotevřel; otevřel jsem přímou adresu téhož článku na ua.news."
     ],
     "vyznam": "",
     "eskalacniSpousteče": [],
     "deeskalacniSignaly": [],
     "zdroje": [
+      {
+        "nazev": "Inspectoratul General al Poliției (Moldavsko) — Ofițerii de investigație au reținut o persoană suspectată de colectarea de informații pentru serviciile speciale ale Federației Ruse",
+        "url": "https://igp.gov.md/ro/politia-actiune/ofiterii-de-investigatie-au-retinut-o-persoana-suspectata-de-colectarea-de",
+        "typ": "primary",
+        "publikovano": "2026-09-08T00:00:00Z",
+        "primarni": true,
+        "jazyk": "ro"
+      },
       {
         "nazev": "UA.NEWS — An Azerbaijani national was arrested in Moldova on charges of spying for the FSB",
         "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxNcldZX2lkNUU0cEd3azFGVEgwRXNxLTVQeGVVWldOWjk1NGdIeWRyZFFISXRyOFU2NnZPSnYySXNwX1VySDdqaXhvQ1U1ZlEydzZMZjlsbkZHUUUyZG5lYlpfQXhwWjdndy00aGR1dHRQVXRPNDJJRWsxVDFDOVJEaDBNb1ppaW1WWnRnT0dsWFk3UzFG?oc=5",
