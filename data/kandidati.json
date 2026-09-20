@@ -11472,11 +11472,17 @@
       "fsb"
     ],
     "naliehave": null,
-    "stav": "ceka",
+    "stav": "vyrizen",
     "vyrez": {
       "text": "Google News",
       "stazeno": "2026-09-19T08:36:05.362Z",
       "stav": 200
+    },
+    "vyrizeni": {
+      "kdy": "2026-09-20T19:13:09.716Z",
+      "duvod": "zdroj-navrhu",
+      "patriK": null,
+      "poznamka": null
     }
   },
   {
@@ -11587,11 +11593,17 @@
       "critical infrastructure"
     ],
     "naliehave": null,
-    "stav": "ceka",
+    "stav": "vyrizen",
     "vyrez": {
       "text": "Google News",
       "stazeno": "2026-09-15T19:11:48.559Z",
       "stav": 200
+    },
+    "vyrizeni": {
+      "kdy": "2026-09-20T19:13:09.716Z",
+      "duvod": "zdroj-navrhu",
+      "patriK": null,
+      "poznamka": null
     }
   },
   {
@@ -11978,13 +11990,19 @@
       "border",
       "russia"
     ],
-    "stav": "ceka",
+    "stav": "vyrizen",
     "vyrez": {
       "text": "Estonia shuts border crossing after 2 Iranian nationals attempt entry from Russia | News | ERR\n{{noticeUi.heading[langCode]}}\n{{infoLink[langCode].label}}\n{{noticeUi.allowAllLabel[langCode]}}\n{{rewokeLabels[langCode]}}\nX !\nNews\nERR\n{{1788760080000 | amCalendar}} Updated: {{1788768420000 | amCalendar}}\nshare Facebook X (Twitter) e-mail\nLuhamaa border crossing in southeastern Estonia. Source: Mirjam Mõttus/ERR\nNews\nThe Police and Border Guard Board (PPA) said Sunday evening it temporarily closed a border crossing in southeast Estonia. The checkpoint has since been reopened.\nThe PPA said it made the move, at the Luhamaa checkpoint in V&otilde;ru County, after two Iranian nationals repeatedly tried to enter Estonia without grounds for stay.\n\"We closed the Luhamaa border crossing earlier than usual today. During the course of today (Sunday &ndash; ed.), two Iranian citizens have repeatedly been attempting to enter Estonia from Russia via the Luhamaa border crossing. However, they had no grounds for crossing the border, as both destroyed their travel documents immediately after arriving from Russian territory,\" the PPA announced.\nThe pair had continued to attempt to cross the border…",
       "stazeno": "2026-09-14T09:02:38.341Z",
       "stav": 200
     },
-    "naliehave": null
+    "naliehave": null,
+    "vyrizeni": {
+      "kdy": "2026-09-20T19:13:09.716Z",
+      "duvod": "zdroj-navrhu",
+      "patriK": null,
+      "poznamka": null
+    }
   },
   {
     "id": "k-7e249853102bdd05",
