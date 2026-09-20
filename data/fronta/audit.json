@@ -1,153 +1,153 @@
 {
-  "kdy": "2026-09-20T07:59:27.781Z",
+  "kdy": "2026-09-20T08:02:30.913Z",
   "stav": "ok",
   "poskytovatel": "anthropic",
   "posouzeno": 16,
   "neposouzeno": 0,
   "navrhu": 0,
-  "vyrizeno": 0,
-  "cekaDal": 19,
+  "vyrizeno": 9,
+  "cekaDal": 10,
   "rozhodnuti": [
     {
       "id": "k-873c3f78ff24394c",
-      "titulek": "Bělorusko přesunulo jednotky k hranicím s Polskem a Litvou",
-      "novaUdalost": true,
-      "duvod": "Nová zpráva o přesunu běloruských jednotek k hranicím s Polskem a Litvou, dosud nezachyceno.",
+      "titulek": "",
+      "novaUdalost": false,
+      "duvod": "Text je jen strojově vygenerovaný titulek bez dalších podrobností, nelze ověřit ani doložit fakta o přesunu jednotek.",
       "duplikatSlugu": null,
       "neznamySlug": null,
-      "zahozeno": "hlásí to jen jeden zdroj — druhý musí dohledat člověk"
+      "zahozeno": "není nová událost"
     },
     {
       "id": "k-b19ad52154b53d09",
-      "titulek": "Rusko: partyzáni Atesh tvrdí, že sabotovali elektřinu v továrně na raketové komponenty ve Voroněži",
+      "titulek": "Rusko: partyzánská skupina Atesh se přihlásila k sabotáži rozvodny u závodu VZPP-Sborka ve Voroněži",
       "novaUdalost": true,
-      "duvod": "Nová zpráva o sabotáži ukrajinské partyzánské skupiny Atesh v ruském Voroněži, dosud nezachyceno.",
+      "duvod": "Nová sabotážní akce proti ruské elektronické výrobě součástek pro rakety, dosud nezaznamenaná.",
       "duplikatSlugu": null,
       "neznamySlug": null,
       "zahozeno": "hlásí to jen jeden zdroj — druhý musí dohledat člověk"
     },
     {
       "id": "k-5c9f56c26a2c9155",
-      "titulek": "Nizozemsko: podezření na sabotáž narušilo železniční síť",
-      "novaUdalost": true,
-      "duvod": "Nová zpráva o podezřelé sabotáži na nizozemské železnici, dosud nezachyceno.",
+      "titulek": "",
+      "novaUdalost": false,
+      "duvod": "Text neobsahuje žádné konkrétní podrobnosti, jen obecné oznámení o podezření na sabotáž.",
       "duplikatSlugu": null,
       "neznamySlug": null,
-      "zahozeno": "hlásí to jen jeden zdroj — druhý musí dohledat člověk"
+      "zahozeno": "není nová událost"
     },
     {
       "id": "k-8e175046cef4bee6",
       "titulek": "Česko: vojenská policie zadržela tři lidi kvůli zakázkám v Ústřední vojenské nemocnici",
       "novaUdalost": true,
-      "duvod": "Nová zpráva o zadržení osob kvůli korupci při zakázkách ve vojenské nemocnici, dosud nezachyceno.",
+      "duvod": "Nová zpráva o zásahu vojenské policie proti korupci v ÚVN, dosud nezaznamenáno.",
       "duplikatSlugu": null,
       "neznamySlug": null,
       "zahozeno": "hlásí to jen jeden zdroj — druhý musí dohledat člověk"
     },
     {
       "id": "k-1d63585071b63a56",
-      "titulek": "Slovensko: vyšetřován plán žhářského útoku na továrnu na drony, podezřelý najat přes Telegram",
-      "novaUdalost": true,
-      "duvod": "Nová zpráva o vyšetřování plánu žhářského útoku na továrnu na drony na Slovensku, dosud nezachyceno.",
+      "titulek": "",
+      "novaUdalost": false,
+      "duvod": "Pouze titulek bez podrobností k údajnému plánu žhářství na slovenskou továrnu na drony, nelze doložit fakta.",
       "duplikatSlugu": null,
       "neznamySlug": null,
-      "zahozeno": "hlásí to jen jeden zdroj — druhý musí dohledat člověk"
+      "zahozeno": "není nová událost"
     },
     {
       "id": "k-ca385d8fe66280de",
-      "titulek": "Polsko: rozvědka vyšetřuje podezřelý požár skladu hraček jako možnou sabotáž",
-      "novaUdalost": true,
-      "duvod": "Nová zpráva o podezřelém požáru skladu hraček v Polsku vyšetřovaném jako možná sabotáž, dosud nezachyceno.",
+      "titulek": "",
+      "novaUdalost": false,
+      "duvod": "Text je jen titulek galerie bez podrobností o požáru skladu hraček v Polsku.",
       "duplikatSlugu": null,
       "neznamySlug": null,
-      "zahozeno": "hlásí to jen jeden zdroj — druhý musí dohledat člověk"
+      "zahozeno": "není nová událost"
     },
     {
       "id": "k-edcc63c9750c0683",
-      "titulek": "Británie: technická porucha řízení letového provozu zrušila přes 2000 letů",
+      "titulek": "Británie: technické problémy řízení letového provozu zrušily přes dva tisíce letů",
       "novaUdalost": true,
-      "duvod": "Nová zpráva o rozsáhlém výpadku řízení letového provozu ve Velké Británii, dosud nezachyceno.",
+      "duvod": "Nová událost - rozsáhlé technické problémy řízení letového provozu ve Velké Británii, dosud nezaznamenáno.",
       "duplikatSlugu": null,
       "neznamySlug": null,
       "zahozeno": "hlásí to jen jeden zdroj — druhý musí dohledat člověk"
     },
     {
       "id": "k-2946b37f4991d345",
-      "titulek": "Estonsko: obvinění mladiství z žhářských útoků na etnické podniky v Tallinnu",
+      "titulek": "Estonsko: mladiství obviněni z žhářských útoků na etnické podniky v Tallinnu",
       "novaUdalost": true,
-      "duvod": "Nová zpráva o obvinění mladistvých z žhářských útoků motivovaných nenávistí v Tallinnu, dosud nezachyceno.",
+      "duvod": "Nová zpráva o obvinění teenagerů z žhářských útoků motivovaných extremismem v Tallinnu, dosud nezaznamenáno.",
       "duplikatSlugu": null,
       "neznamySlug": null,
       "zahozeno": "hlásí to jen jeden zdroj — druhý musí dohledat člověk"
     },
     {
       "id": "k-77d8b5cf93ae00d3",
-      "titulek": "Rusko zadrželo moldavského občana obviněného ze střelby na důstojníka kosmických sil",
-      "novaUdalost": true,
-      "duvod": "Nová zpráva o zadržení moldavského občana v Rusku obviněného ze střelby na důstojníka, dosud nezachyceno.",
+      "titulek": "",
+      "novaUdalost": false,
+      "duvod": "Pouze titulek bez podrobností o zadržení moldavského občana v Rusku.",
       "duplikatSlugu": null,
       "neznamySlug": null,
-      "zahozeno": "hlásí to jen jeden zdroj — druhý musí dohledat člověk"
+      "zahozeno": "není nová událost"
     },
     {
       "id": "k-a2bd3d3b7a6c7200",
-      "titulek": "Moldavsko zadrželo ázerbájdžánského občana obviněného ze špionáže pro FSB",
+      "titulek": "Moldavsko: zadržen ázerbájdžánský občan obviněný ze špionáže pro FSB",
       "novaUdalost": true,
-      "duvod": "Nová zpráva o zadržení ázerbájdžánského občana v Moldavsku pro špionáž pro FSB, dosud nezachyceno.",
+      "duvod": "Nová zpráva o zatčení ázerbájdžánského občana v Moldavsku za špionáž pro FSB, dosud nezaznamenáno.",
       "duplikatSlugu": null,
       "neznamySlug": null,
       "zahozeno": "hlásí to jen jeden zdroj — druhý musí dohledat člověk"
     },
     {
       "id": "k-810c35a16354348a",
-      "titulek": "Polsko vzlétlo se stíhačkami během rozsáhlého ruského úderu na Ukrajinu",
-      "novaUdalost": true,
-      "duvod": "Nová zpráva o vzletu polských stíhaček během ruského úderu na Ukrajinu, dosud nezachyceno jako samostatná událost.",
+      "titulek": "",
+      "novaUdalost": false,
+      "duvod": "Text neobsahuje žádné podrobnosti kromě titulku, jde navíc o rutinní zvednutí polských stíhaček při ruském úderu na Ukrajinu.",
       "duplikatSlugu": null,
       "neznamySlug": null,
-      "zahozeno": "hlásí to jen jeden zdroj — druhý musí dohledat člověk"
+      "zahozeno": "není nová událost"
     },
     {
       "id": "k-bcde1eaa561bc489",
-      "titulek": "Německo: kybernetický útok na berlínskou městskou správu mohl zasáhnout data kritické infrastruktury",
+      "titulek": "Německo: kyberútok na berlínskou městskou správu mohl kompromitovat data o kritické infrastruktuře",
       "novaUdalost": true,
-      "duvod": "Nová zpráva o kybernetickém útoku na berlínskou městskou správu s možným dopadem na kritickou infrastrukturu, dosud nezachyceno.",
+      "duvod": "Nová zpráva o možném kompromitování dat kritické infrastruktury při kyberútoku na Berlín, dosud nezaznamenáno.",
       "duplikatSlugu": null,
       "neznamySlug": null,
       "zahozeno": "hlásí to jen jeden zdroj — druhý musí dohledat člověk"
     },
     {
       "id": "k-3ddf1e11e2ce180c",
-      "titulek": "Estonsko dočasně uzavřelo hraniční přechod po pokusu íránských občanů o vstup z Ruska",
+      "titulek": "Estonsko: dočasně uzavřen hraniční přechod po pokusu íránských občanů o vstup z Ruska",
       "novaUdalost": true,
-      "duvod": "Nová zpráva o dočasném uzavření hraničního přechodu v Estonsku, dosud nezachyceno.",
+      "duvod": "Nová zpráva o dočasném uzavření hraničního přechodu v Estonsku, dosud nezaznamenáno.",
       "duplikatSlugu": null,
       "neznamySlug": null,
       "zahozeno": "hlásí to jen jeden zdroj — druhý musí dohledat člověk"
     },
     {
       "id": "k-7e249853102bdd05",
-      "titulek": "Británie hlásí rušení GPS signálu u stovek letů, viní Rusko",
+      "titulek": "Británie: rušení GPS signálu narušilo stovky letů, Londýn investuje do odolného navigačního systému",
       "novaUdalost": true,
-      "duvod": "Nová zpráva o rušení GPS britských letů připisovaném Rusku, dosud nezachyceno.",
+      "duvod": "Nová zpráva o rušení GPS signálu britských letů, dosud nezaznamenáno.",
       "duplikatSlugu": null,
       "neznamySlug": null,
       "zahozeno": "hlásí to jen jeden zdroj — druhý musí dohledat člověk"
     },
     {
       "id": "k-5c0279c99bbbdd8e",
-      "titulek": "Lotyšsko odsoudilo dva ruské agenty za sabotáž",
+      "titulek": "Lotyšsko: soud odsoudil dva ruské agenty za sabotáž",
       "novaUdalost": true,
-      "duvod": "Nová zpráva o odsouzení dvou ruských agentů za sabotáž v Lotyšsku, dosud nezachyceno.",
+      "duvod": "Nová zpráva o odsouzení dvou ruských agentů za sabotáž v Lotyšsku, dosud nezaznamenáno.",
       "duplikatSlugu": null,
       "neznamySlug": null,
       "zahozeno": "hlásí to jen jeden zdroj — druhý musí dohledat člověk"
     },
     {
       "id": "k-3b566a7e6e8785c5",
-      "titulek": "Polsko vyšetřuje žhářský útok na továrnu na drony jako možnou ruskou sabotáž",
+      "titulek": "Polsko: žhářský útok na továrnu na drony vyšetřován jako podezřelá ruská sabotáž",
       "novaUdalost": true,
-      "duvod": "Nová zpráva o žhářském útoku na polskou továrnu na drony vyšetřovaném jako ruská sabotáž, dosud nezachyceno.",
+      "duvod": "Nová zpráva o žhářském útoku na polskou továrnu na drony vyšetřovaném jako ruská sabotáž, dosud nezaznamenáno.",
       "duplikatSlugu": null,
       "neznamySlug": null,
       "zahozeno": "hlásí to jen jeden zdroj — druhý musí dohledat člověk"
