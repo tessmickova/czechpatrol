@@ -126,15 +126,20 @@ const TEMATA = [
   Seznam je pročištěný podle měření, ne podle toho, jak vypadá. Ze 46
   kandidátů jich napoprvé odpovědělo 25; adresy, které vracely 404 nebo
   prázdno, se zkusily jinudy (kořen webu, doložený kanál RSS) a ty, které
-  drží robota od dveří natvrdo (403 — CERT Polska, KAPO, NKSC, litevské
-  ministerstvo obrany, DNSC, Rada EU), ze seznamu odešly. Mrtvý zdroj
-  v seznamu je horší než žádný: „z toho úřadu nic nepřišlo" pak znamená
-  „ten úřad mlčí", a přitom se tam nikdy nikdo nedostal.
+  drží robota od dveří natvrdo (403), ze seznamu odešly — stejně jako ty,
+  které nevrátily nic ani napodruhé z jiné adresy. Mrtvý zdroj v seznamu je
+  horší než žádný: „z toho úřadu nic nepřišlo" pak znamená „ten úřad mlčí",
+  a přitom se tam nikdy nikdo nedostal.
+
+  Čtyři nizozemské úřady tu zůstávají s výhradou: odpovídají, ale vyčte se
+  z nich jediná položka — stránky se skládají až v prohlížeči. Doložené
+  kanály RSS na nich nejsou, zkoušely se a vracely prázdno. Nizozemsko drží
+  hlavně ProRail, což u zásahu do železnice stejně není náhradní řešení,
+  ale ten správný zdroj.
 */
 const URADY: ZdrojUdalosti[] = [
   /* Mezinárodní a evropské */
   { klic: "nato-news", nazev: "NATO — novinky", url: "https://www.nato.int/cps/en/natohq/news.htm", jazyk: "en", primarni: true, typ: "primary" },
-  { klic: "europol", nazev: "Europol — newsroom", url: "https://www.europol.europa.eu/media-press/newsroom", jazyk: "en", primarni: true, typ: "primary" },
   { klic: "enisa", nazev: "ENISA — news", url: "https://www.enisa.europa.eu/news", jazyk: "en", primarni: true, typ: "primary" },
   { klic: "eu-komise", nazev: "Evropská komise — presscorner", url: "https://ec.europa.eu/commission/presscorner/api/rss?language=en", jazyk: "en", primarni: true, typ: "primary" },
 
@@ -154,7 +159,6 @@ const URADY: ZdrojUdalosti[] = [
 
   /* Německo */
   { klic: "bsi-de", nazev: "BSI — Presse", url: "https://www.bsi.bund.de/DE/Service-Navi/Presse/presse_node.html", jazyk: "en", primarni: true, typ: "primary" },
-  { klic: "bmi-de", nazev: "Spolkové ministerstvo vnitra — Pressemitteilungen", url: "https://www.bmi.bund.de/", jazyk: "en", primarni: true, typ: "primary" },
   { klic: "bundesregierung", nazev: "Spolková vláda — aktuality", url: "https://www.bundesregierung.de/breg-de/aktuelles", jazyk: "en", primarni: true, typ: "primary" },
   { klic: "gba-de", nazev: "Spolkový generální prokurátor — tisk", url: "https://www.generalbundesanwalt.de/", jazyk: "en", primarni: true, typ: "primary" },
 
@@ -163,10 +167,10 @@ const URADY: ZdrojUdalosti[] = [
   { klic: "abw-pl", nazev: "ABW — aktuality", url: "https://www.abw.gov.pl/pl/aktualnosci", jazyk: "en", primarni: true, typ: "primary" },
 
   /* Nizozemsko */
-  { klic: "rijksoverheid", nazev: "Nizozemská vláda — nieuws", url: "https://feeds.rijksoverheid.nl/nieuws.rss", jazyk: "en", primarni: true, typ: "primary" },
-  { klic: "politie-nl", nazev: "Nizozemská policie — nieuws", url: "https://www.politie.nl/nieuws/rss.xml", jazyk: "en", primarni: true, typ: "primary" },
-  { klic: "ncsc-nl", nazev: "NCSC Nizozemsko — actueel", url: "https://www.ncsc.nl/rss/actueel", jazyk: "en", primarni: true, typ: "primary" },
-  { klic: "nctv-nl", nazev: "NCTV — actueel", url: "https://www.nctv.nl/rss/actueel", jazyk: "en", primarni: true, typ: "primary" },
+  { klic: "rijksoverheid", nazev: "Nizozemská vláda — nieuws", url: "https://www.rijksoverheid.nl/actueel/nieuws", jazyk: "en", primarni: true, typ: "primary" },
+  { klic: "politie-nl", nazev: "Nizozemská policie — nieuws", url: "https://www.politie.nl/nieuws", jazyk: "en", primarni: true, typ: "primary" },
+  { klic: "ncsc-nl", nazev: "NCSC Nizozemsko — actueel", url: "https://www.ncsc.nl/actueel/nieuws", jazyk: "en", primarni: true, typ: "primary" },
+  { klic: "nctv-nl", nazev: "NCTV — actueel", url: "https://www.nctv.nl/actueel/nieuws", jazyk: "en", primarni: true, typ: "primary" },
   { klic: "prorail", nazev: "ProRail — nieuws", url: "https://www.prorail.nl/nieuws", jazyk: "en", primarni: true, typ: "primary" },
 
   /* Pobaltí */
@@ -176,7 +180,6 @@ const URADY: ZdrojUdalosti[] = [
 
   /* Severské státy */
   { klic: "msb-se", nazev: "MSB (Švédsko) — news", url: "https://www.msb.se/en/news/", jazyk: "en", primarni: true, typ: "primary" },
-  { klic: "sapo-se", nazev: "Säkerhetspolisen — news", url: "https://sakerhetspolisen.se/", jazyk: "en", primarni: true, typ: "primary" },
   { klic: "kyber-fi", nazev: "Kyberturvallisuuskeskus (Finsko)", url: "https://www.kyberturvallisuuskeskus.fi/en", jazyk: "en", primarni: true, typ: "primary" },
   { klic: "raja-fi", nazev: "Finská pohraniční stráž — current issues", url: "https://raja.fi/en", jazyk: "en", primarni: true, typ: "primary" },
   { klic: "nsm-no", nazev: "NSM (Norsko) — aktuelt", url: "https://nsm.no/aktuelt/", jazyk: "en", primarni: true, typ: "primary" },
@@ -193,7 +196,6 @@ const URADY: ZdrojUdalosti[] = [
 
   /* Británie */
   { klic: "ncsc-uk", nazev: "NCSC UK — news", url: "https://www.ncsc.gov.uk/news", jazyk: "en", primarni: true, typ: "primary" },
-  { klic: "govuk", nazev: "GOV.UK — news and communications", url: "https://www.gov.uk/government/announcements", jazyk: "en", primarni: true, typ: "primary" },
 ];
 
 /* Redakce. Referují o věci, neoznamují ji — proto nikdy `primarni`. */
