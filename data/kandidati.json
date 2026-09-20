@@ -1056,11 +1056,17 @@
       "russia"
     ],
     "naliehave": null,
-    "stav": "ceka",
+    "stav": "vyrizen",
     "vyrez": {
       "text": "Google News",
       "stazeno": "2026-09-20T07:04:07.134Z",
       "stav": 200
+    },
+    "vyrizeni": {
+      "kdy": "2026-09-20T07:44:20.271Z",
+      "duvod": "pokracovani",
+      "patriK": "us-590b687216",
+      "poznamka": null
     }
   },
   {
@@ -1277,11 +1283,17 @@
       "russia"
     ],
     "naliehave": null,
-    "stav": "ceka",
+    "stav": "vyrizen",
     "vyrez": {
       "text": "Google News",
       "stazeno": "2026-09-20T07:04:07.310Z",
       "stav": 200
+    },
+    "vyrizeni": {
+      "kdy": "2026-09-20T07:44:20.271Z",
+      "duvod": "pokracovani",
+      "patriK": "us-590b687216",
+      "poznamka": null
     }
   },
   {
@@ -4487,13 +4499,19 @@
       "nato",
       "border"
     ],
-    "stav": "ceka",
+    "stav": "vyrizen",
     "vyrez": {
       "text": "Google News",
       "stazeno": "2026-09-15T13:03:25.440Z",
       "stav": 200
     },
-    "naliehave": null
+    "naliehave": null,
+    "vyrizeni": {
+      "kdy": "2026-09-20T07:44:20.271Z",
+      "duvod": "pokracovani",
+      "patriK": "finsko-liutyi-2026",
+      "poznamka": null
+    }
   },
   {
     "id": "k-29e0c4955eb7d7e0",
@@ -4521,13 +4539,19 @@
       "dron",
       "nato"
     ],
-    "stav": "ceka",
+    "stav": "vyrizen",
     "vyrez": {
       "text": "Google News",
       "stazeno": "2026-09-15T00:02:52.163Z",
       "stav": 200
     },
-    "naliehave": null
+    "naliehave": null,
+    "vyrizeni": {
+      "kdy": "2026-09-20T07:44:20.271Z",
+      "duvod": "zdroj-navrhu",
+      "patriK": null,
+      "poznamka": null
+    }
   },
   {
     "id": "k-9bd0f18fb2713b00",
@@ -4557,13 +4581,19 @@
       "nato",
       "aliance"
     ],
-    "stav": "ceka",
+    "stav": "vyrizen",
     "vyrez": {
       "text": "Stíhačky NATO sestřelily nad Litvou dron — ČT24 — Česká televize\nŽivé vysílání\nTV program\nPočasí\nTeletext\nE-shop\nVše o ČT\nTV poplatky\nKontakty\nSpravovat účet\nOblíbené pořady\nRozkoukaná videa\nPřihlásit se do TV\nOdhlásit se\nStíhačky NATO sestřelily nad Litvou dron\nČTK\n, tkř\n15. 9. 2026 před 3 h hodinami | Zdroj: ČTK\nIlustrační foto (stíhačka F-16)\nZdroj: Reuters/Denis Balibouse\nStíhačky Severoatlantické aliance během noci na úterý sestřelily v litevském vzdušném prostoru dron, uvedl na sociální síti prezident země Gitanas Nausėda, který spojencům poděkoval za rychlou reakci. Prezident neupřesnil, odkud dron přiletěl ani komu patřil. Litevská média uvádějí, že pravděpodobně přiletěl z Běloruska a směřoval na západ. Kvůli narušení vzdušného prostoru se mírně zpozdilo několik civilních letů.\n„Dron, který právě vletěl do litevského vzdušného prostoru, byl zničen stíhačkami NATO. Děkuji spojencům za jejich rychlou reakci. Vzhledem k tomu, že Rusko zesiluje svou agresi proti Ukrajině, je taková pohotovost klíčová pro náš region. Společně s našimi spojenci v NATO bude Litva bránit svůj vzdušný prostor,“ napsal prezident Nauséda na sociální síti.\nDříve o sestřelení dronu stíhačkou NATO…",
       "stazeno": "2026-09-15T05:32:34.398Z",
       "stav": 200
     },
-    "naliehave": null
+    "naliehave": null,
+    "vyrizeni": {
+      "kdy": "2026-09-20T07:44:20.271Z",
+      "duvod": "navrh",
+      "patriK": null,
+      "poznamka": null
+    }
   },
   {
     "id": "k-887ad57154ca3675",
@@ -4592,11 +4622,17 @@
       "russia"
     ],
     "naliehave": null,
-    "stav": "ceka",
+    "stav": "vyrizen",
     "vyrez": {
       "text": "Google News",
       "stazeno": "2026-09-15T17:33:05.652Z",
       "stav": 200
+    },
+    "vyrizeni": {
+      "kdy": "2026-09-20T07:44:20.271Z",
+      "duvod": "zdroj-navrhu",
+      "patriK": null,
+      "poznamka": null
     }
   },
   {
@@ -4626,11 +4662,17 @@
       "russia"
     ],
     "naliehave": null,
-    "stav": "ceka",
+    "stav": "vyrizen",
     "vyrez": {
       "text": "Google News",
       "stazeno": "2026-09-15T17:33:05.830Z",
       "stav": 200
+    },
+    "vyrizeni": {
+      "kdy": "2026-09-20T07:44:20.271Z",
+      "duvod": "zdroj-navrhu",
+      "patriK": null,
+      "poznamka": null
     }
   },
   {
@@ -4662,13 +4704,19 @@
       "airspace",
       "nato"
     ],
-    "stav": "ceka",
+    "stav": "vyrizen",
     "vyrez": {
       "text": "Google News",
       "stazeno": "2026-09-14T22:00:28.811Z",
       "stav": 200
     },
-    "naliehave": null
+    "naliehave": null,
+    "vyrizeni": {
+      "kdy": "2026-09-20T07:44:20.271Z",
+      "duvod": "neudalost",
+      "patriK": null,
+      "poznamka": null
+    }
   },
   {
     "id": "k-2fcfe11a5ed51967",
@@ -4696,13 +4744,19 @@
       "dron",
       "nato"
     ],
-    "stav": "ceka",
+    "stav": "vyrizen",
     "vyrez": {
       "text": "Google News",
       "stazeno": "2026-09-14T23:02:41.907Z",
       "stav": 200
     },
-    "naliehave": null
+    "naliehave": null,
+    "vyrizeni": {
+      "kdy": "2026-09-20T07:44:20.271Z",
+      "duvod": "neudalost",
+      "patriK": null,
+      "poznamka": null
+    }
   },
   {
     "id": "k-a897677b4b076145",
@@ -4729,11 +4783,17 @@
       "obzalov"
     ],
     "naliehave": null,
-    "stav": "ceka",
+    "stav": "vyrizen",
     "vyrez": {
       "text": "Brit u soudu přiznal, že přes dvacet let omamoval a znásilňoval manželku — ČT24 — Česká televize\nŽivé vysílání\nTV program\nPočasí\nTeletext\nE-shop\nVše o ČT\nTV poplatky\nKontakty\nSpravovat účet\nOblíbené pořady\nRozkoukaná videa\nPřihlásit se do TV\nOdhlásit se\nBrit u soudu přiznal, že přes dvacet let omamoval a znásilňoval manželku\nČTK\n, noj\npřed 20 h hodinami | Zdroj: ČTK\nProtest před soudem v Manchesteru během soudního procesu, v němž je třináct mužů obviněno ze závažných sexuálních trestných činů\nZdroj: Reuters/Temilade Adelaja\nMuž v Británii více než dvacet let podával své manželce omamné látky a znásilňoval ji. Šedesátiletý Brit, jehož jméno nelze uvést, aby nebyla odhalena totožnost jeho manželky, se k tomu v pondělí přiznal před soudem. Obžalovaný se zároveň přiznal k šedesáti trestným činům sahajícím až do roku 2004, včetně podání látky s úmyslem omámit nebo znehybnit manželku, informovaly tiskové agentury.\nV nadcházejících týdnech před soudem stanou také další obžalovaní ve věku od 28 do 73 let, kteří jsou obviněni ze zneužívání ženy, zatímco byla pod vlivem drog v bezvědomí. Dvanáct z nich obvinění popírá, zatímco třináctý se přiznal ke spiknutí za účelem podání omamné látky a…",
       "stazeno": "2026-09-15T16:02:43.275Z",
       "stav": 200
+    },
+    "vyrizeni": {
+      "kdy": "2026-09-20T07:44:20.271Z",
+      "duvod": "neudalost",
+      "patriK": null,
+      "poznamka": null
     }
   },
   {
@@ -4797,11 +4857,17 @@
       "nato"
     ],
     "naliehave": null,
-    "stav": "ceka",
+    "stav": "vyrizen",
     "vyrez": {
       "text": "Google News",
       "stazeno": "2026-09-15T17:33:06.223Z",
       "stav": 200
+    },
+    "vyrizeni": {
+      "kdy": "2026-09-20T07:44:20.271Z",
+      "duvod": "neudalost",
+      "patriK": null,
+      "poznamka": null
     }
   },
   {
@@ -4831,11 +4897,17 @@
       "russia"
     ],
     "naliehave": null,
-    "stav": "ceka",
+    "stav": "vyrizen",
     "vyrez": {
       "text": "Google News",
       "stazeno": "2026-09-16T23:33:06.341Z",
       "stav": 200
+    },
+    "vyrizeni": {
+      "kdy": "2026-09-20T07:44:20.271Z",
+      "duvod": "pokracovani",
+      "patriK": "de-dae06bfd15",
+      "poznamka": null
     }
   },
   {
@@ -4865,11 +4937,17 @@
       "russia"
     ],
     "naliehave": null,
-    "stav": "ceka",
+    "stav": "vyrizen",
     "vyrez": {
       "text": "Google News",
       "stazeno": "2026-09-16T08:33:08.748Z",
       "stav": 200
+    },
+    "vyrizeni": {
+      "kdy": "2026-09-20T07:44:20.271Z",
+      "duvod": "pokracovani",
+      "patriK": "de-dae06bfd15",
+      "poznamka": null
     }
   },
   {
@@ -4902,11 +4980,17 @@
       "nato"
     ],
     "naliehave": null,
-    "stav": "ceka",
+    "stav": "vyrizen",
     "vyrez": {
       "text": "Google News",
       "stazeno": "2026-09-15T17:33:06.406Z",
       "stav": 200
+    },
+    "vyrizeni": {
+      "kdy": "2026-09-20T07:44:20.271Z",
+      "duvod": "neudalost",
+      "patriK": null,
+      "poznamka": null
     }
   },
   {
@@ -4936,11 +5020,17 @@
       "russia"
     ],
     "naliehave": null,
-    "stav": "ceka",
+    "stav": "vyrizen",
     "vyrez": {
       "text": "Google News",
       "stazeno": "2026-09-15T17:33:06.604Z",
       "stav": 200
+    },
+    "vyrizeni": {
+      "kdy": "2026-09-20T07:44:20.271Z",
+      "duvod": "neudalost",
+      "patriK": null,
+      "poznamka": null
     }
   },
   {
@@ -4970,11 +5060,17 @@
       "russia"
     ],
     "naliehave": null,
-    "stav": "ceka",
+    "stav": "vyrizen",
     "vyrez": {
       "text": "Google News",
       "stazeno": "2026-09-16T23:33:06.479Z",
       "stav": 200
+    },
+    "vyrizeni": {
+      "kdy": "2026-09-20T07:44:20.271Z",
+      "duvod": "pokracovani",
+      "patriK": "de-dae06bfd15",
+      "poznamka": null
     }
   },
   {
@@ -5007,13 +5103,19 @@
       "border",
       "russia"
     ],
-    "stav": "ceka",
+    "stav": "vyrizen",
     "vyrez": {
       "text": "EU leaders urge unity after Russian strike on train\nSkip to content\nSkip to main menu\nSkip to more DW sites\nIn focus\nBRICS German politics El Nino\nLatest audio Latest videos\nLive TV\nAdvertisement\nhttps://p.dw.com/p/5MZ5z\nTop EU diplomat Kaja Kallas was among those to call for unity after Russia's attack Image: Britta Pedersen/dpa/picture alliance Advertisement\nSeveral top EU politicians have called a Russian drone strike on a passenger train ​on Ukraine's border with Poland a bid by Moscow to intimidate Kyiv's allies that should be met with even more resolution.\nIn the incident, a drone hit the train's locomotive at a railway station in the Volyn region, some 2 kilometers (1.24 miles) from the border, shortly after a diplomatic ‌train carrying former British ​Prime ⁠Minister Boris Johnson and other ⁠European ​diplomats had been at the station.\nRussia carried out two drone strikes at the Ukraine-Poland border on Sunday Image: Sylwester Uchanski/REUTERS\nWhat did EU leaders say about the train attack?\n\"It [the attack] is clearly meant to scare Western countries from supporting Ukraine, from going to Ukraine to show support,\" the EU's foreign policy chief, Kaja Kallas, said.\n\"I ​think…",
       "stazeno": "2026-09-14T12:32:41.424Z",
       "stav": 200
     },
-    "naliehave": null
+    "naliehave": null,
+    "vyrizeni": {
+      "kdy": "2026-09-20T07:44:20.271Z",
+      "duvod": "neudalost",
+      "patriK": null,
+      "poznamka": null
+    }
   },
   {
     "id": "k-9aef057706085518",
@@ -5043,11 +5145,17 @@
       "russia"
     ],
     "naliehave": null,
-    "stav": "ceka",
+    "stav": "vyrizen",
     "vyrez": {
       "text": "Google News",
       "stazeno": "2026-09-15T17:33:06.785Z",
       "stav": 200
+    },
+    "vyrizeni": {
+      "kdy": "2026-09-20T07:44:20.271Z",
+      "duvod": "pokracovani",
+      "patriK": "de-dae06bfd15",
+      "poznamka": null
     }
   },
   {
@@ -5075,13 +5183,19 @@
       "sabotage",
       "russia"
     ],
-    "stav": "ceka",
+    "stav": "vyrizen",
     "vyrez": {
       "text": "Google News",
       "stazeno": "2026-09-14T18:02:48.479Z",
       "stav": 200
     },
-    "naliehave": null
+    "naliehave": null,
+    "vyrizeni": {
+      "kdy": "2026-09-20T07:44:20.271Z",
+      "duvod": "zdroj-navrhu",
+      "patriK": null,
+      "poznamka": null
+    }
   },
   {
     "id": "k-76b2d13810030cbd",
@@ -5143,11 +5257,17 @@
       "russia"
     ],
     "naliehave": null,
-    "stav": "ceka",
+    "stav": "vyrizen",
     "vyrez": {
       "text": "Google News",
       "stazeno": "2026-09-15T17:33:06.949Z",
       "stav": 200
+    },
+    "vyrizeni": {
+      "kdy": "2026-09-20T07:44:20.271Z",
+      "duvod": "zdroj-navrhu",
+      "patriK": null,
+      "poznamka": null
     }
   },
   {
@@ -5177,11 +5297,17 @@
       "russia"
     ],
     "naliehave": null,
-    "stav": "ceka",
+    "stav": "vyrizen",
     "vyrez": {
       "text": "Google News",
       "stazeno": "2026-09-15T17:33:07.121Z",
       "stav": 200
+    },
+    "vyrizeni": {
+      "kdy": "2026-09-20T07:44:20.271Z",
+      "duvod": "pokracovani",
+      "patriK": "de-dae06bfd15",
+      "poznamka": null
     }
   },
   {
@@ -5212,11 +5338,17 @@
       "russia"
     ],
     "naliehave": null,
-    "stav": "ceka",
+    "stav": "vyrizen",
     "vyrez": {
       "text": "Google News",
       "stazeno": "2026-09-15T17:33:07.298Z",
       "stav": 200
+    },
+    "vyrizeni": {
+      "kdy": "2026-09-20T07:44:20.271Z",
+      "duvod": "pokracovani",
+      "patriK": "de-dae06bfd15",
+      "poznamka": null
     }
   },
   {
@@ -5248,11 +5380,17 @@
       "russia"
     ],
     "naliehave": null,
-    "stav": "ceka",
+    "stav": "vyrizen",
     "vyrez": {
       "text": "Google News",
       "stazeno": "2026-09-15T17:33:07.481Z",
       "stav": 200
+    },
+    "vyrizeni": {
+      "kdy": "2026-09-20T07:44:20.271Z",
+      "duvod": "zdroj-navrhu",
+      "patriK": null,
+      "poznamka": null
     }
   },
   {
@@ -5278,13 +5416,19 @@
     "shody": [
       "sabotaz"
     ],
-    "stav": "ceka",
+    "stav": "vyrizen",
     "vyrez": {
       "text": "Google News",
       "stazeno": "2026-09-14T09:32:41.753Z",
       "stav": 200
     },
-    "naliehave": null
+    "naliehave": null,
+    "vyrizeni": {
+      "kdy": "2026-09-20T07:44:20.271Z",
+      "duvod": "navrh",
+      "patriK": null,
+      "poznamka": null
+    }
   },
   {
     "id": "k-b1f98b36e50301bb",
@@ -5312,14 +5456,20 @@
       "dron",
       "rusk"
     ],
-    "stav": "ceka",
+    "stav": "vyrizen",
     "vyrez": {
       "text": "",
       "stazeno": "2026-09-14T08:33:17.555Z",
       "stav": 403,
       "chyba": "HTTP 403"
     },
-    "naliehave": null
+    "naliehave": null,
+    "vyrizeni": {
+      "kdy": "2026-09-20T07:44:20.271Z",
+      "duvod": "neudalost",
+      "patriK": null,
+      "poznamka": null
+    }
   },
   {
     "id": "k-275a6574069863d6",
@@ -5342,13 +5492,19 @@
     "shody": [
       "hranic+uzavr"
     ],
-    "stav": "ceka",
+    "stav": "vyrizen",
     "vyrez": {
       "text": "Ropa a plyn výrazně zdražují po útocích hútíů na Saúdskou Arábii — ČT24 — Česká televize\nŽivé vysílání\nTV program\nPočasí\nTeletext\nE-shop\nVše o ČT\nTV poplatky\nKontakty\nSpravovat účet\nOblíbené pořady\nRozkoukaná videa\nPřihlásit se do TV\nOdhlásit se\nRopa a plyn výrazně zdražují po útocích hútíů na Saúdskou Arábii\nČTK\n, apm\n14. 9. 2026 před 3 m minutami | Zdroj: ČTK , ČT24\nRopné pole společnosti Saudi Aramco v Saúdské Arábii, ilustrační snímek\nZdroj: Reuters/Hamad I Mohammed\nCeny ropy na začátku týdne výrazně rostou po nových útocích hútíů na Saúdskou Arábii a po íránských útocích na lodě v Perském zálivu. Dál se zvýšily obavy o dodávky, které již dříve vyvolalo uzavření klíčového saúdskoarabského ropovodu. Severomořská ropa Brent je zpět nad 107 dolary za barel. Také cena plynu pro evropský trh reaguje na výpadky dodávek z Blízkého východu a přesáhla hranici 84 eur za megawatthodinu. Je tak nejvýše od roku 2022.\nBrent krátce před 07:30 SELČ přidával proti pátečnímu závěru zhruba 2,5 procenta a prodával se kolem 107,20 dolaru za barel. Americká lehká ropa West Texas Intermediate (WTI) vykazovala nárůst 2,55 procenta na 102,60 dolaru za barel.\n„Navazuje to na zesílení útoků na…",
       "stazeno": "2026-09-14T09:32:41.952Z",
       "stav": 200
     },
-    "naliehave": null
+    "naliehave": null,
+    "vyrizeni": {
+      "kdy": "2026-09-20T07:44:20.271Z",
+      "duvod": "neudalost",
+      "patriK": null,
+      "poznamka": null
+    }
   },
   {
     "id": "k-ad6c90ba3f81625b",
@@ -5379,11 +5535,17 @@
       "russia"
     ],
     "naliehave": null,
-    "stav": "ceka",
+    "stav": "vyrizen",
     "vyrez": {
       "text": "Google News",
       "stazeno": "2026-09-15T18:02:54.215Z",
       "stav": 200
+    },
+    "vyrizeni": {
+      "kdy": "2026-09-20T07:44:20.271Z",
+      "duvod": "zdroj-navrhu",
+      "patriK": null,
+      "poznamka": null
     }
   },
   {
@@ -5411,13 +5573,19 @@
       "sabotage",
       "russia"
     ],
-    "stav": "ceka",
+    "stav": "vyrizen",
     "vyrez": {
       "text": "Google News",
       "stazeno": "2026-09-14T06:02:39.218Z",
       "stav": 200
     },
-    "naliehave": null
+    "naliehave": null,
+    "vyrizeni": {
+      "kdy": "2026-09-20T07:44:20.271Z",
+      "duvod": "neudalost",
+      "patriK": null,
+      "poznamka": null
+    }
   },
   {
     "id": "k-2c0dce755d9fb21b",
@@ -5444,13 +5612,19 @@
       "sabotage",
       "russia"
     ],
-    "stav": "ceka",
+    "stav": "vyrizen",
     "vyrez": {
       "text": "Google News",
       "stazeno": "2026-09-14T06:02:39.336Z",
       "stav": 200
     },
-    "naliehave": null
+    "naliehave": null,
+    "vyrizeni": {
+      "kdy": "2026-09-20T07:44:20.271Z",
+      "duvod": "neudalost",
+      "patriK": null,
+      "poznamka": null
+    }
   },
   {
     "id": "k-15c37e3270fe42b3",
@@ -5478,13 +5652,19 @@
       "arson",
       "russia"
     ],
-    "stav": "ceka",
+    "stav": "vyrizen",
     "vyrez": {
       "text": "Google News",
       "stazeno": "2026-09-14T06:02:39.436Z",
       "stav": 200
     },
-    "naliehave": null
+    "naliehave": null,
+    "vyrizeni": {
+      "kdy": "2026-09-20T07:44:20.271Z",
+      "duvod": "neudalost",
+      "patriK": null,
+      "poznamka": null
+    }
   },
   {
     "id": "k-9f81099424eae60f",
@@ -5515,11 +5695,17 @@
       "nato"
     ],
     "naliehave": null,
-    "stav": "ceka",
+    "stav": "vyrizen",
     "vyrez": {
       "text": "Google News",
       "stazeno": "2026-09-15T18:02:54.348Z",
       "stav": 200
+    },
+    "vyrizeni": {
+      "kdy": "2026-09-20T07:44:20.271Z",
+      "duvod": "zdroj-navrhu",
+      "patriK": null,
+      "poznamka": null
     }
   },
   {
@@ -5553,13 +5739,19 @@
       "airspace",
       "russia"
     ],
-    "stav": "ceka",
+    "stav": "vyrizen",
     "vyrez": {
       "text": "Google News",
       "stazeno": "2026-09-14T06:02:39.622Z",
       "stav": 200
     },
-    "naliehave": null
+    "naliehave": null,
+    "vyrizeni": {
+      "kdy": "2026-09-20T07:44:20.271Z",
+      "duvod": "zdroj-navrhu",
+      "patriK": null,
+      "poznamka": null
+    }
   },
   {
     "id": "k-f226d03b4ff9c9ec",
@@ -5589,11 +5781,17 @@
       "rusk"
     ],
     "naliehave": null,
-    "stav": "ceka",
+    "stav": "vyrizen",
     "vyrez": {
       "text": "Google News",
       "stazeno": "2026-09-15T16:02:44.300Z",
       "stav": 200
+    },
+    "vyrizeni": {
+      "kdy": "2026-09-20T07:44:20.271Z",
+      "duvod": "neudalost",
+      "patriK": null,
+      "poznamka": null
     }
   },
   {
@@ -5624,11 +5822,17 @@
       "drone"
     ],
     "naliehave": null,
-    "stav": "ceka",
+    "stav": "vyrizen",
     "vyrez": {
       "text": "Google News",
       "stazeno": "2026-09-15T18:02:54.474Z",
       "stav": 200
+    },
+    "vyrizeni": {
+      "kdy": "2026-09-20T07:44:20.271Z",
+      "duvod": "navrh",
+      "patriK": null,
+      "poznamka": null
     }
   },
   {
@@ -5656,13 +5860,19 @@
       "sabotage",
       "russia"
     ],
-    "stav": "ceka",
+    "stav": "vyrizen",
     "vyrez": {
       "text": "Google News",
       "stazeno": "2026-09-14T06:02:39.728Z",
       "stav": 200
     },
-    "naliehave": null
+    "naliehave": null,
+    "vyrizeni": {
+      "kdy": "2026-09-20T07:44:20.271Z",
+      "duvod": "neudalost",
+      "patriK": null,
+      "poznamka": null
+    }
   },
   {
     "id": "k-4e62a68efdf2c876",
@@ -5695,11 +5905,17 @@
       "nato"
     ],
     "naliehave": null,
-    "stav": "ceka",
+    "stav": "vyrizen",
     "vyrez": {
       "text": "Google News",
       "stazeno": "2026-09-15T18:02:54.583Z",
       "stav": 200
+    },
+    "vyrizeni": {
+      "kdy": "2026-09-20T07:44:20.271Z",
+      "duvod": "zdroj-navrhu",
+      "patriK": null,
+      "poznamka": null
     }
   },
   {
@@ -5732,11 +5948,17 @@
       "nato"
     ],
     "naliehave": null,
-    "stav": "ceka",
+    "stav": "vyrizen",
     "vyrez": {
       "text": "Google News",
       "stazeno": "2026-09-15T18:02:54.717Z",
       "stav": 200
+    },
+    "vyrizeni": {
+      "kdy": "2026-09-20T07:44:20.271Z",
+      "duvod": "zdroj-navrhu",
+      "patriK": null,
+      "poznamka": null
     }
   },
   {
@@ -5768,11 +5990,17 @@
       "nato"
     ],
     "naliehave": null,
-    "stav": "ceka",
+    "stav": "vyrizen",
     "vyrez": {
       "text": "Google News",
       "stazeno": "2026-09-15T18:02:54.870Z",
       "stav": 200
+    },
+    "vyrizeni": {
+      "kdy": "2026-09-20T07:44:20.271Z",
+      "duvod": "zdroj-navrhu",
+      "patriK": null,
+      "poznamka": null
     }
   },
   {
@@ -5806,11 +6034,17 @@
       "nato"
     ],
     "naliehave": null,
-    "stav": "ceka",
+    "stav": "vyrizen",
     "vyrez": {
       "text": "Google News",
       "stazeno": "2026-09-15T18:02:54.992Z",
       "stav": 200
+    },
+    "vyrizeni": {
+      "kdy": "2026-09-20T07:44:20.271Z",
+      "duvod": "zdroj-navrhu",
+      "patriK": null,
+      "poznamka": null
     }
   },
   {
@@ -5840,13 +6074,19 @@
       "drone",
       "nato"
     ],
-    "stav": "ceka",
+    "stav": "vyrizen",
     "vyrez": {
       "text": "Google News",
       "stazeno": "2026-09-14T06:02:39.823Z",
       "stav": 200
     },
-    "naliehave": null
+    "naliehave": null,
+    "vyrizeni": {
+      "kdy": "2026-09-20T07:44:20.271Z",
+      "duvod": "zdroj-navrhu",
+      "patriK": null,
+      "poznamka": null
+    }
   },
   {
     "id": "k-daac5165dea7e152",
@@ -5877,11 +6117,17 @@
       "nato"
     ],
     "naliehave": null,
-    "stav": "ceka",
+    "stav": "vyrizen",
     "vyrez": {
       "text": "Google News",
       "stazeno": "2026-09-15T18:02:55.110Z",
       "stav": 200
+    },
+    "vyrizeni": {
+      "kdy": "2026-09-20T07:44:20.271Z",
+      "duvod": "zdroj-navrhu",
+      "patriK": null,
+      "poznamka": null
     }
   },
   {
@@ -5914,11 +6160,17 @@
       "nato"
     ],
     "naliehave": null,
-    "stav": "ceka",
+    "stav": "vyrizen",
     "vyrez": {
       "text": "Google News",
       "stazeno": "2026-09-15T18:02:55.281Z",
       "stav": 200
+    },
+    "vyrizeni": {
+      "kdy": "2026-09-20T07:44:20.271Z",
+      "duvod": "zdroj-navrhu",
+      "patriK": null,
+      "poznamka": null
     }
   },
   {
@@ -5947,13 +6199,19 @@
       "dron",
       "nato"
     ],
-    "stav": "ceka",
+    "stav": "vyrizen",
     "vyrez": {
       "text": "Google News",
       "stazeno": "2026-09-14T06:02:39.937Z",
       "stav": 200
     },
-    "naliehave": null
+    "naliehave": null,
+    "vyrizeni": {
+      "kdy": "2026-09-20T07:44:20.271Z",
+      "duvod": "navrh",
+      "patriK": null,
+      "poznamka": null
+    }
   },
   {
     "id": "k-a38f4d83ce5b6b23",
@@ -5982,13 +6240,19 @@
       "dron",
       "nato"
     ],
-    "stav": "ceka",
+    "stav": "vyrizen",
     "vyrez": {
       "text": "Google News",
       "stazeno": "2026-09-14T06:02:40.073Z",
       "stav": 200
     },
-    "naliehave": null
+    "naliehave": null,
+    "vyrizeni": {
+      "kdy": "2026-09-20T07:44:20.271Z",
+      "duvod": "neudalost",
+      "patriK": null,
+      "poznamka": null
+    }
   },
   {
     "id": "k-578fdd0976dd2bcc",
@@ -6019,14 +6283,20 @@
       "nato",
       "hranice"
     ],
-    "stav": "ceka",
+    "stav": "vyrizen",
     "vyrez": {
       "text": "",
       "stazeno": "2026-09-14T06:02:40.217Z",
       "stav": 403,
       "chyba": "HTTP 403"
     },
-    "naliehave": null
+    "naliehave": null,
+    "vyrizeni": {
+      "kdy": "2026-09-20T07:44:20.271Z",
+      "duvod": "neudalost",
+      "patriK": null,
+      "poznamka": null
+    }
   },
   {
     "id": "k-48b56662d5a57a85",
@@ -6054,13 +6324,19 @@
       "dron",
       "rusk"
     ],
-    "stav": "ceka",
+    "stav": "vyrizen",
     "vyrez": {
       "text": "Google News",
       "stazeno": "2026-09-14T06:02:40.254Z",
       "stav": 200
     },
-    "naliehave": null
+    "naliehave": null,
+    "vyrizeni": {
+      "kdy": "2026-09-20T07:44:20.271Z",
+      "duvod": "zdroj-navrhu",
+      "patriK": null,
+      "poznamka": null
+    }
   },
   {
     "id": "k-12ab0ca5ff90f09a",
@@ -6088,13 +6364,19 @@
       "fighter jet+scrambl",
       "russia"
     ],
-    "stav": "ceka",
+    "stav": "vyrizen",
     "vyrez": {
       "text": "Google News",
       "stazeno": "2026-09-14T06:02:40.371Z",
       "stav": 200
     },
-    "naliehave": null
+    "naliehave": null,
+    "vyrizeni": {
+      "kdy": "2026-09-20T07:44:20.271Z",
+      "duvod": "zdroj-navrhu",
+      "patriK": null,
+      "poznamka": null
+    }
   },
   {
     "id": "k-fa55100fb40635f8",
@@ -6122,13 +6404,19 @@
       "stihac+vyslal",
       "armada"
     ],
-    "stav": "ceka",
+    "stav": "vyrizen",
     "vyrez": {
       "text": "Google News",
       "stazeno": "2026-09-14T06:02:40.467Z",
       "stav": 200
     },
-    "naliehave": null
+    "naliehave": null,
+    "vyrizeni": {
+      "kdy": "2026-09-20T07:44:20.271Z",
+      "duvod": "zdroj-navrhu",
+      "patriK": null,
+      "poznamka": null
+    }
   },
   {
     "id": "k-31de033fc0b32894",
@@ -6159,13 +6447,19 @@
       "armada",
       "rusk"
     ],
-    "stav": "ceka",
+    "stav": "vyrizen",
     "vyrez": {
       "text": "Ruské drony útočily poblíž polské hranice, zasáhly vlak do Varšavy, uvádí Kyjev — ČT24 — Česká televize\nŽivé vysílání\nTV program\nPočasí\nTeletext\nE-shop\nVše o ČT\nTV poplatky\nKontakty\nSpravovat účet\nOblíbené pořady\nRozkoukaná videa\nPřihlásit se do TV\nOdhlásit se\nRuské drony útočily poblíž polské hranice, zasáhly vlak do Varšavy, uvádí Kyjev\nČTK\n, kma ,\ntkř\n13. 9. 2026 před 14 h hodinami | Zdroj: ČTK , Reuters , The Kyiv Independent , Ukrajinska pravda\nIlustrační snímek\nZdroj: Reuters/Thomas Peter\nRuský dron na západě Ukrajiny poblíž hranic s Polskem zasáhl lokomotivu osobního vlaku, oznámily v neděli ukrajinské dráhy. Díky včasné výstraze dle nich nebyl při náletu nikdo zabit či zraněn. Souprava jela z Kyjeva do Varšavy a ruský dron ji napadl poblíž hraničního přechodu Jahodyn–Dorohusk, kde již dříve ruský bezpilotní letoun zasáhl čerpací stanici, na které vzplály dva kamiony, informují média. Ukrajinská armáda oznámila, že zasáhla ropnou rafinerii v Krasnodarském kraji na jihu Ruska.\nKvůli ruským útokům u polské hranice svolal polský premiér Donald Tusk zvláštní poradu, které se kromě ministrů zúčastní také zástupci zpravodajských služeb, informovala polská média s odvoláním na…",
       "stazeno": "2026-09-14T06:06:59.245Z",
       "stav": 200
     },
-    "naliehave": null
+    "naliehave": null,
+    "vyrizeni": {
+      "kdy": "2026-09-20T07:44:20.271Z",
+      "duvod": "navrh",
+      "patriK": null,
+      "poznamka": null
+    }
   },
   {
     "id": "k-ef19317f2fb2fa4e",
@@ -6193,13 +6487,19 @@
       "dron",
       "rusk"
     ],
-    "stav": "ceka",
+    "stav": "vyrizen",
     "vyrez": {
       "text": "Google News",
       "stazeno": "2026-09-14T06:07:00.354Z",
       "stav": 200
     },
-    "naliehave": null
+    "naliehave": null,
+    "vyrizeni": {
+      "kdy": "2026-09-20T07:44:20.271Z",
+      "duvod": "neudalost",
+      "patriK": null,
+      "poznamka": null
+    }
   },
   {
     "id": "k-936871cfcd8743fd",
@@ -6230,11 +6530,17 @@
       "rusk"
     ],
     "naliehave": null,
-    "stav": "ceka",
+    "stav": "vyrizen",
     "vyrez": {
       "text": "Google News",
       "stazeno": "2026-09-16T11:24:58.388Z",
       "stav": 200
+    },
+    "vyrizeni": {
+      "kdy": "2026-09-20T07:44:20.271Z",
+      "duvod": "neudalost",
+      "patriK": null,
+      "poznamka": null
     }
   },
   {

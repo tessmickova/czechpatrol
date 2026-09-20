@@ -1491,5 +1491,558 @@
     "aiZpracovano": true,
     "lidskyOvereno": false,
     "archivniZaznam": false
+  },
+  {
+    "kam": "zaznam",
+    "pripravil": "audit",
+    "pripraveno": "2026-09-20T07:44:20.270Z",
+    "id": "i-2026-09-14-9bd0f18fb2",
+    "slug": "lt-9bd0f18fb2",
+    "titulek": "Litva: stíhačky NATO sestřelily dron nad litevským vzdušným prostorem",
+    "kratkyTitulek": "Litva: stíhačky NATO sestřelily dron nad litevským vzdušným prostorem",
+    "zeme": "Litva",
+    "kodZeme": "LT",
+    "kategorie": [
+      "drony",
+      "nato"
+    ],
+    "datumUdalosti": "2026-09-14T00:00:00Z",
+    "datumZjisteni": "2026-09-14T00:00:00Z",
+    "aktualizovano": "2026-09-20T07:44:20.270Z",
+    "zavaznost": "O2",
+    "jistota": "vysoka",
+    "stav": "bez-vysetrovani",
+    "atribuce": "neznama",
+    "puvodce": "neznamy",
+    "druh": "pripad",
+    "fakta": [
+      "Stíhačky NATO sestřelily v noci dron, který vletěl do litevského vzdušného prostoru",
+      "Prezident Nausėda poděkoval spojencům za rychlou reakci, původ dronu neupřesnil",
+      "Litevská média uvedla, že dron pravděpodobně přiletěl z Běloruska a mířil na západ",
+      "Kvůli incidentu se mírně zpozdilo několik civilních letů"
+    ],
+    "neznameho": [
+      "odkud přesně dron přiletěl",
+      "komu patřil"
+    ],
+    "vyznam": "",
+    "eskalacniSpousteče": [],
+    "deeskalacniSignaly": [],
+    "zdroje": [
+      {
+        "nazev": "ČT24 — hlavní zprávy — Stíhačky NATO sestřelily nad Litvou dron",
+        "url": "https://ct24.ceskatelevize.cz/clanek/svet/stihacky-nato-sestrelily-nad-litvou-dron-potvrdil-prezident-nauseda-377614",
+        "typ": "media",
+        "publikovano": "2026-09-14T00:00:00Z",
+        "primarni": false,
+        "jazyk": "cs"
+      },
+      {
+        "nazev": "Google News — dron vzdušný prostor — Stíhačky NATO sestřelily nad Litvou dron, potvrdil prezident Nauséda - ČT24",
+        "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxNRmhNVnRMYlpoREdHRmc1M3pLbTBKeUtOajZwNHgzTlhMLXcwblZ0dzVseGM3YnZxNk15NmRyY3BBTjE0MjBOTmRCYUpyY1NhaDVFbzEtR2h1MFE2NUUzcHdQald5UEljczdLOWlYNXNweWhNMlVXbEM2R0xleEZVR1FoZFRrWTZqcnM3RWlvVnliOERJQ2dHRnhBTVZPNTc3QjJtZlFoUmw5T1BFTmNqV2NrTWttLVk?oc=5",
+        "typ": "media",
+        "publikovano": "2026-09-14T00:00:00Z",
+        "primarni": false,
+        "jazyk": "cs"
+      },
+      {
+        "nazev": "Google News — drones airspace NATO — NATO fighter jets shot down a drone that violated Lithuania’s airspace - unn.ua",
+        "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxPanE5UEQtVmtGYUtCS0hocXZZQURsVjl1Vm9CcDd5TXBIV3lfMzZKSVh4bnV5SFQ3RlM1dmphSmd5UGxQaVVkSjFXLXZGVVVoV0o2Tmlpa2lZTEZzeFlfM3NsT2o2VEpFemZJZjdGSHd3c05tUWJwRUFnYnZmWWNkNkU2TW41YjctX3VQaC1rVU9jRG1KMjlJ0gGWAUFVX3lxTE1lb2lBVnU3c3dNZ2ZEZlFWaWdLRkNGbGJ1MmlvX1J1YWVvd2M5cXdjS2V6aGJMam5rOXNwVzg1LWhnTW1iV2FVbHNIQmdDd2gxQWVISEpzUXdPWnI1WWJaZTV6a1RSNGc2el9FT2YwcXJNT1hyLW40c1FkcTlleHlzMjJQbE9fTERKN2hVOXhuVDQzUDZtUQ?oc=5",
+        "typ": "media",
+        "publikovano": "2026-09-14T00:00:00Z",
+        "primarni": false,
+        "jazyk": "cs"
+      },
+      {
+        "nazev": "Google News — narušení vzdušného prostoru — Sestřel v Litvě: Dron pronikl až k hlavnímu městu, zasáhla stíhačka NATO - C",
+        "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxNMzB2dTAzX1pramNTYkxJQ2ZxZ1FhTkFpX1RBMEI4SFQyUmNjeEczSnYtaU5jMjF6bFNJWm40SFAyVmdaUk9scTZJdzBhWVg5LXlWZk9MRTVHMi1qMUR6Mzc1Yy1aTUpJSWpPeWpCWTNsQzBpejFiWGhzVy1YSXJPdnN5a1VFM2RjMTB1MVYtdVFFdHdydGhVYmktV0o0ZkRlZDUwR05KYw?oc=5",
+        "typ": "media",
+        "publikovano": "2026-09-14T00:00:00Z",
+        "primarni": false,
+        "jazyk": "cs"
+      },
+      {
+        "nazev": "Téma: letiste (česky) — NATO vyslalo stíhačku kvůli podezření na dron nad Litvou - natoaktual.cz",
+        "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxQaDN2OUQxbndJaFdRcjF2SndaRVVibF9LUThWRWtyc0cxXzJoU3pWUTFubHc5N2JsWV9LeXd6RDZseENGcXZ2bDQ4azNIUERva1c3cV9odlFTM3Q4cno1M1RRV3g4S21fMXpRRzhrSTV5R0NOUkFhRDA4Rk1EdTFTeV9BYmtneWhXLWMwUllXdWx6NkxWbFYwSmNwamtNNVZOWXNxLXdjWV9hMUI4OF9nUFB3ZHlHWjZsbHMtTg?oc=5",
+        "typ": "media",
+        "publikovano": "2026-09-14T00:00:00Z",
+        "primarni": false,
+        "jazyk": "cs"
+      },
+      {
+        "nazev": "Téma: vzdusna-obrana (anglicky) — NATO fighters shoot down drone over Lithuania after airspace incursion - aerotime.aero",
+        "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxOcG5jNm1lSWdsS0U1MmdwUkZ3ZjAxSFM5MjF3RGJzNFZCekpHanpCWkFCb1Ixd2lDRXE5TW9EY0Jyd0NpMTlrWnZjeXdKSjQ1am5Oc1U4Y3FyVGxHaV9oWlo1VmhfNC1MZjJVMXg3YkNaYVdwVlhCdlZrZjlkRzVXYzZROVhSTEtCRVHSAY8BQVVfeXFMUEVzcm1pbFkwV1Q3aDBSd0U4bWpOYWgxUF9qdkt5dWt3ZHpnR2F1eHR6T2JEWTVLQWRBY255YWFaaHMwSnI5aWk4dmk1WnVkdElwc0xoN3VhLVJGSFpxXzZLZ29COWZ4MC0xWGxoblYwSnh4SDVKV29GWk5FNUtUOWRVQjBiOGZwM05uLXVXd0U?oc=5",
+        "typ": "media",
+        "publikovano": "2026-09-14T00:00:00Z",
+        "primarni": false,
+        "jazyk": "cs"
+      }
+    ],
+    "souvisejici": [],
+    "historie": [
+      {
+        "kdy": "2026-09-14T00:00:00Z",
+        "text": "Zachyceno automatickým sběrem, posouzeno před zařazením do fronty.",
+        "novySignal": true
+      }
+    ],
+    "novy": true,
+    "zapocitanoTyden": "2026-09-14",
+    "aiZpracovano": true,
+    "lidskyOvereno": false,
+    "archivniZaznam": false
+  },
+  {
+    "kam": "zaznam",
+    "pripravil": "audit",
+    "pripraveno": "2026-09-20T07:44:20.270Z",
+    "id": "i-2026-09-14-0577b0e3a1",
+    "slug": "eu-0577b0e3a1",
+    "titulek": "Vyšetřování DW: sabotáže v EU řídil z Ruska kubánský učitel tance",
+    "kratkyTitulek": "Vyšetřování DW: sabotáže v EU řídil z Ruska kubánský učitel tance",
+    "zeme": "EU",
+    "kodZeme": "EU",
+    "kategorie": [
+      "sabotaz"
+    ],
+    "datumUdalosti": "2026-09-14T00:00:00Z",
+    "datumZjisteni": "2026-09-14T00:00:00Z",
+    "aktualizovano": "2026-09-20T07:44:20.270Z",
+    "zavaznost": "Y2",
+    "jistota": "stredni",
+    "stav": "bez-vysetrovani",
+    "atribuce": "neznama",
+    "puvodce": "neznamy",
+    "druh": "pripad",
+    "fakta": [
+      "Novinářské vyšetřování DW odhalilo síť tzv. jednorázových agentů řízenou z Ruska, kteří páchali sabotáže v evropských zemích",
+      "Kubánský instruktor tance usazený v Rusku podle vyšetřování koordinoval žhářské a sabotážní akce, mimo jiné v Rumunsku",
+      "Za zapálení cílů v Rumunsku bylo nabízeno až 3000 dolarů"
+    ],
+    "neznameho": [
+      "přímé napojení na ruské státní orgány u všech případů",
+      "rozsah sítě v dalších zemích",
+      "Datum události se z textu určit nedá. Uvedeno datum zveřejnění (2026-09-14) — ověřit."
+    ],
+    "vyznam": "",
+    "eskalacniSpousteče": [],
+    "deeskalacniSignaly": [],
+    "zdroje": [
+      {
+        "nazev": "Google News — sabotáž — Sabotáže v EU řídil kubánský učitel tance - voxpot.cz",
+        "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxQN2pYM1doX1hxaHRJclZOYlRTLXpvX3pGeTJNOThvZ1FIRUM5Qm91YllzWmNLc3RfUDQ1X0FDbXhvWUstUkdVUjZOcFc1MHFUdFZsVDBHSWVaSU5VVVFvZVJ5LUhHR3JrWEdfckMyZy0wUm9pQU1BV1VXN1FmVDJMSzEtbVkxQQ?oc=5",
+        "typ": "media",
+        "publikovano": "2026-09-14T00:00:00Z",
+        "primarni": false,
+        "jazyk": "cs"
+      },
+      {
+        "nazev": "Česko — sabotaz — Cuban Dance Instructor Sought for Ties to Russian Sabotage Network in Europe - CubaHeadlines",
+        "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE5WOFJjN1h4czJYYlJUUXA4WktvVk56Tjhjd1JPT3hRcGFocEQ1SVgwTGFuRW9rSE5zc3dBbEZuZWJxVjNUZFhRQ096TWI1b3VPNGVzZFQtYVA?oc=5",
+        "typ": "media",
+        "publikovano": "2026-09-14T00:00:00Z",
+        "primarni": false,
+        "jazyk": "cs"
+      },
+      {
+        "nazev": "Česko — sabotaz — They are looking for a Cuban dance instructor linked to a network of Russian sabotage in Europe - Cibe",
+        "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxOeHl4UlRHUGF4YjBwMXpaX2QtMnV6bkkySVZ3U0lGZDJtdmlSNWNydF9jUEkxYndpRlBOWmlGVmY4d01fa1pxWEFYVWY3MjJwYkhZb1NjUndRVERRMldkNWhuMXM5OEZfcnFJWHRtbmdEOEt0VjRDNklOcVh5SVJ6d1l3WUxrdUpVdEJaSW9KM1hVb08zb2VYY2hzSG5jSFVOdUFVLXFINnJFTkFhbTY1M1VzN1NEWTZv?oc=5",
+        "typ": "media",
+        "publikovano": "2026-09-14T00:00:00Z",
+        "primarni": false,
+        "jazyk": "cs"
+      },
+      {
+        "nazev": "Google News — sabotage Europe — DW: A Cuban dance instructor, recruited by the Russian intelligence services, coordinate",
+        "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxQSGM5R2ZTVzJOR1F3aFVHYloxN3V6amVxckdkUE1fSUxNT1lKYldEeWZ2WjNvN3loVFUyR2Z3U3FmRnAxR1RrVDQ2UVZvTEJ6UDRvS19ZQ1hBMGNBYnZjaHVzcHpqNTIxY0JUMWVDUDFrUk9kVTNtZ0tlQU92Q0JhTEZfNHRETHBPbUJGaFVrakNpVkhoZHFrZDZld05mRVVVUkZ4ZGZQWE5iWHpWNGE4UVUwVzJDVkpTOUVIUC1wSmg?oc=5",
+        "typ": "media",
+        "publikovano": "2026-09-14T00:00:00Z",
+        "primarni": false,
+        "jazyk": "cs"
+      },
+      {
+        "nazev": "Rumunsko — sabotaz — $3,000 to set fire to targets in Romania. How a Cuban dance teacher based in Russia coordinated sab",
+        "url": "https://news.google.com/rss/articles/CBMi9gFBVV95cUxQaWRJX2VRWnRxcFpyMVJIWFF5ZDd2dFdodzktemR1cXZYaFh0ME1pSEJ3RVFNNE9ucGRlUVdLX0t1dUgzY285Z3pUQm5yYl84VTg1YUhPTF9SZlFXSmZoa0tSeWZSWUV6YkJ2dVAxTVotSjE4UW13QVNGbExKcjBGRGROTUUxUUF0cjVXaWdsbm1YUnFUT1F6QTlDdG5qM3I5OVF3b1hQdjg0eEVaVXFJbEVwTWp2UUtVWFVLRGVld2VWajZwdTZveXN4TzVrb1UycmFxb1NYVUtvYXc3OGpKNjExMmtOOXFUNTdpSWF4RWJkUUlNN0E?oc=5",
+        "typ": "media",
+        "publikovano": "2026-09-14T00:00:00Z",
+        "primarni": false,
+        "jazyk": "cs"
+      },
+      {
+        "nazev": "Rumunsko — sabotaz — New cross-border investigation uncovers Russian-directed network of ‘disposable agents’ behind Euro",
+        "url": "https://news.google.com/rss/articles/CBMi5AFBVV95cUxPZ0Zhbkpsb1ZrMU1GS244djI1U01uZktDTVJDd2RmaVBSeldPRDRhM2RKWlZSeWptM2pMNWZNR1JFNGw2T3lzdkNhYXp6cHRZN1lDYWJuZ09QU1dsWVhET0NLVl9hN3Z5dEZUNXdOYWNfNHpjcVlmX3NiVXd2ZFdhdDRUQklGYmlxbkY1V1UwTFlIQ0t3R0YwUkxMS0ZCV2xHVS1BOExnNU1sRTFUZFNjd2RpWVRWOHlMOW1GVTlFRGM5eGZ0RkFkTjdqVWV6SlpHRzduMVA0aEtKdU5Nczd4cm02OWg?oc=5",
+        "typ": "media",
+        "publikovano": "2026-09-14T00:00:00Z",
+        "primarni": false,
+        "jazyk": "cs"
+      },
+      {
+        "nazev": "Google News — sabotage Europe — Cuban dance teacher ordered EU sabotage attacks from Russia - dw.com",
+        "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxPZEtXbUNwQXNjMk5jeFBpbUxXMTdNUjBvNWVwNTVzWlVBZWN6cnRSdE9qQzI4ekw3bFRlTTM5MjUybDBzLXNsWlh3dE1JZTBMRFRLNkJTOVlCS3lEX2IyaC0yQWhjWVJDUDE5elo1eGV6b291ZWNLd3h3UUFzTkFOcjBKRU5jcU85SHFXNGlwYnNBRV9UWW5r0gGXAUFVX3lxTE5Tc3dYdzFFR3JJMk9yNk92RzJZdUdIbXdGMjUwbXlKeWJETlJBVE5EVGhBMU1xdUJaSjJ4TXUzaW5OZEVLNFJLMzhLR01SVVJFWWRrbXIzN1lwUkF3b05LR3FhMFdXXzZNWnRGSHluZkJnNTd2ZHMzU1FtcDFBVVF4SVdfdjJBVnFNQzJpWkpzNGNlQl8td2M?oc=5",
+        "typ": "media",
+        "publikovano": "2026-09-14T00:00:00Z",
+        "primarni": false,
+        "jazyk": "cs"
+      },
+      {
+        "nazev": "Google News — sabotage Europe — DW investigation: Sabotage attacks in the EU for Russia - dw.com",
+        "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxOemVDUkJNeXJHQVl1ZkgtYWtkbFBsaXAyc2NZTnB2aGZoLVhYSDFGZWRUREplWGxXX2tsekZma3ZpSTlHcmplSmxQc3lWbHdWRTZoVDBtdzkzQlpzNVBoUWZTQWxHSEtvaVVlVGFCWm5RaHo0YmFVWHhoMFJhcWx5VUU2Z3ZNOXI2VmhEUXdBS3Y3Q2VVci13M1BUd1lwenJodDBQYWZOeEZUaE5vNDc5TTBvRUUyb0hxZ0RhaHM3SF9nRnBGM1E?oc=5",
+        "typ": "media",
+        "publikovano": "2026-09-14T00:00:00Z",
+        "primarni": false,
+        "jazyk": "cs"
+      },
+      {
+        "nazev": "Google News — sabotage Europe — DW News. . In 2024, several Latin Americans were caught committing sabotage and arson on",
+        "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxOdm5CdE1Ba3ZZcjlZX1B4a09XV1B4VXAwRVl1VDdnM0tHUVIxRzBYVVNOVXNfUFpuZlFOMFA4YkI3Ym50RVhURkQzekNpdFRBRVJPTlhQTVk3bGZqYWs3NTJkdG5YV2JtRDNZNi1wZlMzbXkxZHFCRjJGWUxxR3d2dEZnQ2RhdzBnNkswXzhGUXQyeDJ1NVRVUXFQRXpLalpseHdjMWhQWVpSTDBhT3o0VWdBVk04cWg1TUpIYVFxSQ?oc=5",
+        "typ": "media",
+        "publikovano": "2026-09-14T00:00:00Z",
+        "primarni": false,
+        "jazyk": "cs"
+      }
+    ],
+    "souvisejici": [],
+    "historie": [
+      {
+        "kdy": "2026-09-14T00:00:00Z",
+        "text": "Zachyceno automatickým sběrem, posouzeno před zařazením do fronty.",
+        "novySignal": true
+      }
+    ],
+    "novy": true,
+    "zapocitanoTyden": "2026-09-14",
+    "aiZpracovano": true,
+    "lidskyOvereno": false,
+    "archivniZaznam": false
+  },
+  {
+    "kam": "zaznam",
+    "pripravil": "audit",
+    "pripraveno": "2026-09-20T07:44:20.270Z",
+    "id": "i-2026-09-13-daec1ea3be",
+    "slug": "de-daec1ea3be",
+    "titulek": "Německo označilo hlavní podezřelé z dronového útoku na letiště Lipsko/Halle",
+    "kratkyTitulek": "Německo označilo hlavní podezřelé z dronového útoku na letiště Lipsko/Halle",
+    "zeme": "Německo",
+    "kodZeme": "DE",
+    "kategorie": [
+      "hybridni",
+      "drony"
+    ],
+    "datumUdalosti": "2026-09-13T00:00:00Z",
+    "datumZjisteni": "2026-09-13T00:00:00Z",
+    "aktualizovano": "2026-09-20T07:44:20.270Z",
+    "zavaznost": "O2",
+    "jistota": "stredni",
+    "stav": "bez-vysetrovani",
+    "atribuce": "neznama",
+    "puvodce": "neznamy",
+    "druh": "pripad",
+    "fakta": [
+      "Německé úřady označily hlavní podezřelé v souvislosti s dronovým útokem na letiště Lipsko/Halle",
+      "Podezřelý má být podle zpráv napojen na ruskou vojenskou rozvědku"
+    ],
+    "neznameho": [
+      "totožnost podezřelých",
+      "důkazy napojení na GRU",
+      "Datum události se z textu určit nedá. Uvedeno datum zveřejnění (2026-09-13) — ověřit."
+    ],
+    "vyznam": "",
+    "eskalacniSpousteče": [],
+    "deeskalacniSignaly": [],
+    "zdroje": [
+      {
+        "nazev": "Lotyšsko — sabotaz — Germany names main suspects in drone attack on Leipzig/Halle Airport - UA.NEWS",
+        "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxQLWxYX2xXXzBVdWVYbVdYeDRsM2JXSkdXMF9sOGlyQ25sdjZIVTJ0RFBfcnhiZHRpMkNkYnRBVWZPcS16d0U1OEZLTmlkYlNubWtxWEJ0S1ZaOGFrWThiVzNrZzB4cXViWHYxN0JmaU9JdkZ6QzhBYldTNGppdFBVaVUtdDJxYXVTUGR5Vk9tN3cwMVVQMGlkWjgxcEJMYmozLVdwUlhESVFkWTNPYTNleHYzM1ZzNzQ?oc=5",
+        "typ": "media",
+        "publikovano": "2026-09-13T00:00:00Z",
+        "primarni": false,
+        "jazyk": "cs"
+      },
+      {
+        "nazev": "Německo — sabotaz — Suspect in Leipzig airport sabotage reportedly linked to Russian military intelligence - theins.pres",
+        "url": "https://news.google.com/rss/articles/CBMiS0FVX3lxTFBRZ3dMMThTbDZfSHBjZFpNUkNXVnBUNXQxWExOVXFhbFR1dC1kbURxWmFOV2lvcHBiWDd1OE5vTFdheDhQNUs1c1VtUQ?oc=5",
+        "typ": "media",
+        "publikovano": "2026-09-14T00:00:00Z",
+        "primarni": false,
+        "jazyk": "cs"
+      }
+    ],
+    "souvisejici": [],
+    "historie": [
+      {
+        "kdy": "2026-09-13T00:00:00Z",
+        "text": "Zachyceno automatickým sběrem, posouzeno před zařazením do fronty.",
+        "novySignal": true
+      }
+    ],
+    "novy": true,
+    "zapocitanoTyden": "2026-09-13",
+    "aiZpracovano": true,
+    "lidskyOvereno": false,
+    "archivniZaznam": false
+  },
+  {
+    "kam": "zaznam",
+    "pripravil": "audit",
+    "pripraveno": "2026-09-20T07:44:20.270Z",
+    "id": "i-2026-09-13-4c43e0cf0f",
+    "slug": "lt-4c43e0cf0f",
+    "titulek": "Litva: letiště ve Vilniusu krátce uzavřeno kvůli domnělému dronu, šlo o hejno ptáků",
+    "kratkyTitulek": "Litva: letiště ve Vilniusu krátce uzavřeno kvůli domnělému dronu, šlo o hejno ptáků",
+    "zeme": "Litva",
+    "kodZeme": "LT",
+    "kategorie": [
+      "drony",
+      "nato"
+    ],
+    "datumUdalosti": "2026-09-13T00:00:00Z",
+    "datumZjisteni": "2026-09-13T00:00:00Z",
+    "aktualizovano": "2026-09-20T07:44:20.270Z",
+    "zavaznost": "G1",
+    "jistota": "vysoka",
+    "stav": "bez-vysetrovani",
+    "atribuce": "neznama",
+    "puvodce": null,
+    "druh": "reakce",
+    "fakta": [
+      "Letiště ve Vilniusu dočasně zastavilo provoz kvůli hlášení možného narušení vzdušného prostoru dronem",
+      "Kvůli podezření vzlétla stíhačka NATO",
+      "Výstraha byla po zhruba dvaceti minutách stažena, incident byl vyhodnocen jako hejno ptáků",
+      "V Polsku ve stejnou dobu preventivně vzlétly stíhačky"
+    ],
+    "neznameho": [],
+    "vyznam": "",
+    "eskalacniSpousteče": [],
+    "deeskalacniSignaly": [],
+    "zdroje": [
+      {
+        "nazev": "Google News — narušení vzdušného prostoru — Litva kvůli možnému dronu uzavřela letiště ve Vilniusu. Vzlétla stíhačka NAT",
+        "url": "https://news.google.com/rss/articles/CBMi4wFBVV95cUxNU0p6bHBvNDRrQnFKSUI2dUp6V3pEVUpKN2lxWkVTNDBOQV8xOC11TFZjLXVLeXhUSGJwNEI4MDJSUEhTaW9ZTkJEcjBQOExOMzlMdm13bWFWamVfNS1zOG5veldKOHVQM1V2Wm9xanlscW9VcHJBYTllUGxBQTNhSDI4cXFvaVFLSzJzUFg4ZWNtZ1kyZUljRnJDSG93TkRoa0VMbVo5a3BaRmdTNG5HRk9ScWpTM3ZOMXlldFBFSXhMWk1xd25vNUlBbmZEcDhEREhHLVF2QTA1OWpGcUpoUF9JVQ?oc=5",
+        "typ": "media",
+        "publikovano": "2026-09-13T00:00:00Z",
+        "primarni": false,
+        "jazyk": "cs"
+      },
+      {
+        "nazev": "Google News — dron vzdušný prostor — Kvůli dronovým útokům na čas zastavilo provoz letiště v Litvě. Vzlétla i stíhačka N",
+        "url": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxNUlhZMld4bE9GdFpRcVg1QThoTk5HUHRydzFHR1BUT0Q1ZFp0Ql9zUDJGaWd6SUZlaDB3S0RrcHQ1UXFmSmZzcUo0Yzh1U3pBR2xIaGJYZ090dWZBUkJ3WmpEcHdZX1dBNW5ZbUZQNG5DM181QmJNcENMV25QcjdlTm1mOFZiSk5jQWZFblNYMFhLX2tzRXRfdEVHRWs4aXlfeWRKclRBR1ozc2planJucTJsR09WNzlaNGdpak1ycnl2X2JiWTg4Vw?oc=5",
+        "typ": "media",
+        "publikovano": "2026-09-13T00:00:00Z",
+        "primarni": false,
+        "jazyk": "cs"
+      },
+      {
+        "nazev": "Téma: letiste (anglicky) — Vilnius Airport Closed & NATO Fighter Jets Scrambled After Birds Mistaken For A Drone - Simpl",
+        "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxQNFNlTFFFSm1UVjI3U0gtX1QyR0dGT0J5VEtaUzNlZU93OEJEbUdPMXZRLUVoN0ZNVGY0WW96Q3Zxc2ZpYjBLRU8tTFktcV9zMmlZSFFXTUFNVEhXa3ZKU2JLRlBESlkxMXlaTGptbXVCNGZnWDJ2NUNZZkMtd2swWHJNSGR1dFdV?oc=5",
+        "typ": "media",
+        "publikovano": "2026-09-13T00:00:00Z",
+        "primarni": false,
+        "jazyk": "cs"
+      },
+      {
+        "nazev": "Téma: vzdusna-obrana (anglicky) — Suspected drone alert briefly closes Vilnius Airport as NATO scrambles fighter jet - A",
+        "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE4teHduWVhLV1lqMFpIalVoVmlFX2pVY05sN2dOTEo2bUt5dHNjUW5GZWU5cFBtVktTNmlaTXlGYlpJOE5PZ1NrS3YzSTV6ZldOTlhZOQ?oc=5",
+        "typ": "media",
+        "publikovano": "2026-09-13T00:00:00Z",
+        "primarni": false,
+        "jazyk": "cs"
+      },
+      {
+        "nazev": "Litva — drony — Nato jet scrambled to Lithuania ‘drone threat’ - Newswav",
+        "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxQQVZyZnBVRGNfaVZrY2JXNlVKUjRFY0JaaF95c2JaRmI5SkxOUzFXRXhQbG4wOTdKLWd6U21UOEdVeVZqMWJGYTV0emdhOGdMdndOLWVJUk4xZDl6YkpvTGRvN0twSlpVampIek1wR2tTWmxWTGRxQXFZTUxoMUkzTXlZQ29tUGUxbWdmc0x3?oc=5",
+        "typ": "media",
+        "publikovano": "2026-09-13T00:00:00Z",
+        "primarni": false,
+        "jazyk": "cs"
+      },
+      {
+        "nazev": "Téma: vzdusna-obrana (anglicky) — Vilnius Airport closed and NATO fighter jets scrambled after a drone was spotted - صوت",
+        "url": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxOcGpRY1VTY1VlWDFBZmpVajViMzJCNXZrZXNXQ0JZTGdmU0MwamRDRks4S0Vhc0x3Y20zZ294ajdGWUxCSnR4X05zQ2FOMDNRVjVxY0pqT0lCZTNWNXhkQ2plYVNOWExYVnpFOXVabHo2WEhxTzNxRHdkTXM1SU00WVdpMkgwRkpXUWVlZnFraEhucDZYUGFZQ25UdXByNjh2a2hQOW9zeTZmT1N0MDdoQVgtVEtCZ25PZXdfWS1OWGZGQWFqY0wtbTdWdVpVUV9sWHc?oc=5",
+        "typ": "media",
+        "publikovano": "2026-09-13T00:00:00Z",
+        "primarni": false,
+        "jazyk": "cs"
+      },
+      {
+        "nazev": "Google News — drones airspace NATO — Nato jet scrambled to Lithuania ‘drone threat’ turns out to be flock of birds - The",
+        "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxOamw3ZzNEOWhjek01RlZ0OHNIVEFieXJWUzlnaG1VbjBSQXFSM3pna0NRckhCUjQ4S3NXRkN5SzVUZUlfUF9xcC16WTNGV0NWb3d6YTVWZGJ3emdMVHNuZ0xjMEdCQ3YtektoaVZ6LUZRTHZOUlJOVjNjcElRd3FvYldMaXQ0VjFiS3lMY21wTnJES2hoUnlxMXpJR2ppYVp3MjV0U214SVBJM1ZmSFE?oc=5",
+        "typ": "media",
+        "publikovano": "2026-09-13T00:00:00Z",
+        "primarni": false,
+        "jazyk": "cs"
+      },
+      {
+        "nazev": "Téma: letiste (anglicky) — Drone alert over Lithuania turns out to be flock of birds - as NATO jet scrambled - Sky News",
+        "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxQYXBxUE9JU3h2bFMtdU1Yak9DeTQ4VEs5cFpEc0VGS0l2aWs4NUdyNDVkNllBVnhMUFVqZU9PM3ZnZVlzZ3BZM0Z1ajVYVVd6cGQ5RTkyUGcwZVVobUlDcm1QbXJpQVNQVGs4VEs4UjlwTHZsS2puSHo5WGk5YllFWkp5ODB5TzE2ZlcwSmk1QzlFSjJQa2lheEhlV3F3dzlVeEczVl9CT0s0NjRyUGFOalRzX1RPQQ?oc=5",
+        "typ": "media",
+        "publikovano": "2026-09-13T00:00:00Z",
+        "primarni": false,
+        "jazyk": "cs"
+      },
+      {
+        "nazev": "Téma: vzdusna-obrana (anglicky) — Nato fighter jets scramble to intercept drone that was flock of birds - Metro.co.uk",
+        "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxOZ1AtakdLZ1NLUzRwYlhPdVhQVFNqdzJPbmZ4Ti1HVzVsS3FGR1A3NGdjMTZtajAxN21SWG1sVEo3dkNtcGo2RjdsOHprVUNXTS1pX2RtUzFqazVEMWQ4ZmNMQmFfQ2dGNzNub2U2eWhPWmtaR0laczhKODFRbDhrSkdwWkdHbUhac0xjWFp4WjYyeWNhZkNreFVEVjBJUnh2YlNZU1FTQmTSAa4BQVVfeXFMUDBsWEVLa1lhVTdNX0taTEJYN1paeTRKdFljSzBYMWp3Z1NWOHJMZXJzc0QzdTlUZ3VoQW5iNldTeGxKbTZQT2FqOGQwTUJZT05xZnlvRVVDZEx1U2U1UWE2WTR2ZXRLQUQ3QWJsS0pBTl9Udk5EX1VTODcwSWFYVmg4LV92REVPc0hob0U2QzBvdUxmcWJPazVab3BvaDc4Y19oc05IZ3dWaXVKekpB?oc=5",
+        "typ": "media",
+        "publikovano": "2026-09-13T00:00:00Z",
+        "primarni": false,
+        "jazyk": "cs"
+      },
+      {
+        "nazev": "Téma: letiste (anglicky) — Nato jet scrambled over drone scare at Lithuania airport, turns out to be birds - India Today",
+        "url": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxNanRISVNIa1BzcEdyZEN1UU5LRldKQlRtMmphU2FBMzRCZzRYZHFSWm1aeG1mUE5CVm5sOUxyakZXb1NVTFJZbnlzTGF6STFrNUhZY3Z4V3lvVFk0NHFpTzBkdGQtVkJaMTJUYi1QMzNQQmF6Xy1Gcl83d2g2MnZfQ1hQRmNaRFJSNzdaTlJ6UjhEVGV3QkpibzhjNHd3cDV3SlVQNllvS2JGNjl6bFV4c09Dc0NzQ0VvM1ZSd0xOZVpNVk5QVW5oTVRWcG9HSVFpc2fSAdcBQVVfeXFMTXJ4UXoyOEllTUZPcHdHb1VGTjN5cmpyR0p0Tlg4cmdPUDZ2QThfa2RnTU5PZTZNb3NCcGt1VDA3Rmo3OWs4LU1aZXRoZVc2Mi1VOUFZbjktLXptUV9aWGtDQ0pza2hOQjlCTy1HclpjOXBuSmxicDBOUGwxMzh5cGxEVVdDV1JZUE81SmxSaFp3NldaMjMxeWpUblMyYkpKNDhOVVRncTE0cER5QWJ5NjhQUjhMRjE4V3U1bDhIRHZMZXJwd19lWjh4SExsdTVhaDh4b3RGQ0U?oc=5",
+        "typ": "media",
+        "publikovano": "2026-09-14T00:00:00Z",
+        "primarni": false,
+        "jazyk": "cs"
+      },
+      {
+        "nazev": "Téma: vzdusna-obrana (anglicky) — Lithuania's 'Neurosis' Over Russian Drones: Jets Scramble for Birds - 조선일보",
+        "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxOeUJvZ2FMOWd5MFlpM21udm1QZVNRck9MMXJWQmduZkR0aDlRUktrMWRGSExMLXpSOFV3ZDJmV1REUHFVUTVtX0EyR3JFaWZZZFlnY290ZzBhdHAwMVJNNXFzak52bGEzLWFGVTBta2x2SjJKNWQwMWRaSl9EelllQ0lmNXU?oc=5",
+        "typ": "media",
+        "publikovano": "2026-09-14T00:00:00Z",
+        "primarni": false,
+        "jazyk": "cs"
+      }
+    ],
+    "souvisejici": [],
+    "historie": [
+      {
+        "kdy": "2026-09-13T00:00:00Z",
+        "text": "Zachyceno automatickým sběrem, posouzeno před zařazením do fronty.",
+        "novySignal": true
+      }
+    ],
+    "novy": true,
+    "zapocitanoTyden": "2026-09-13",
+    "aiZpracovano": true,
+    "lidskyOvereno": false,
+    "archivniZaznam": false
+  },
+  {
+    "kam": "zaznam",
+    "pripravil": "audit",
+    "pripraveno": "2026-09-20T07:44:20.270Z",
+    "id": "i-2026-09-13-31de033fc0",
+    "slug": "pl-31de033fc0",
+    "titulek": "Polsko: ruský dron zasáhl vlak u hranice s Ukrajinou, vyhlášen letecký poplach a vzlétly stíhačky",
+    "kratkyTitulek": "Polsko: ruský dron zasáhl vlak u hranice s Ukrajinou, vyhlášen letecký poplach a vzlétly stíhačky",
+    "zeme": "Polsko",
+    "kodZeme": "PL",
+    "kategorie": [
+      "drony",
+      "hranice",
+      "rusko"
+    ],
+    "datumUdalosti": "2026-09-13T00:00:00Z",
+    "datumZjisteni": "2026-09-13T00:00:00Z",
+    "aktualizovano": "2026-09-20T07:44:20.270Z",
+    "zavaznost": "O2",
+    "jistota": "vysoka",
+    "stav": "bez-vysetrovani",
+    "atribuce": "neznama",
+    "puvodce": "neznamy",
+    "druh": "pripad",
+    "fakta": [
+      "Ruský dron zasáhl lokomotivu osobního vlaku jedoucího z Kyjeva do Varšavy poblíž hraničního přechodu Jahodyn–Dorohusk",
+      "Nikdo nebyl zabit ani zraněn díky včasné výstraze",
+      "Polsko kvůli útokům vyhlásilo letecký poplach a vyslalo stíhačky, dočasně byla zastavena letiště",
+      "Polský premiér Tusk svolal zvláštní poradu s ministry a zpravodajskými službami",
+      "Představitelé EU včetně Kaji Kallasové označili útok za pokus zastrašit spojence Ukrajiny"
+    ],
+    "neznameho": [
+      "přesný počet a typ dronů",
+      "zda šlo o úmyslný cíl na vlak"
+    ],
+    "vyznam": "",
+    "eskalacniSpousteče": [],
+    "deeskalacniSignaly": [],
+    "zdroje": [
+      {
+        "nazev": "ČT24 — hlavní zprávy — Ruské drony útočily poblíž polské hranice, zasáhly vlak do Varšavy, uvádí Kyjev",
+        "url": "https://ct24.ceskatelevize.cz/clanek/svet/kyjev-zasahl-ropnou-rafinerii-v-krasnodarskem-kraji-uvadi-ukrajinska-armada-377532",
+        "typ": "media",
+        "publikovano": "2026-09-13T00:00:00Z",
+        "primarni": false,
+        "jazyk": "cs"
+      },
+      {
+        "nazev": "Deutsche Welle — Europe — EU leaders urge unity after Russian strike on train",
+        "url": "https://www.dw.com/en/eu-leaders-urge-unity-after-russian-strike-on-train/a-79259807?maca=en-rss-en-eu-2092-rdf",
+        "typ": "media",
+        "publikovano": "2026-09-14T00:00:00Z",
+        "primarni": false,
+        "jazyk": "cs"
+      },
+      {
+        "nazev": "Google News — letecký poplach — Rusko začalo útočiť koridorom na západ. V Poľsku bol letecký poplach, dron udrel na vlak",
+        "url": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxQVDdHaU1jMExUbEd2ZWVEaHdTVFU4RDZrLWdmUjZUemVLaGl2VDdiWVZBMU1uWklTbWNPbktKakRMOWdaSUxQT2Y1OXRFcUwyZ2N3dHN1Vl9XYm9WLUVraGRjNWN2TnJyeGtaY3RaR0hmV0ViSXBVRG9aV1NZemxIS29aNGkyZVh6bk1WS05qd0hzbUgxUWwycVhSbnFUczIzdlBKUlcxd3VVMG9tWFAtUHVPYXJVZXAtZGRSVlNZbHBUSjRoTGJwemZjbHhndWY4WXZNTGRn?oc=5",
+        "typ": "media",
+        "publikovano": "2026-09-13T00:00:00Z",
+        "primarni": false,
+        "jazyk": "cs"
+      },
+      {
+        "nazev": "Google News — Polsko vzdušný prostor — Poland Scrambles Fighter Jets Over Threat of Russian Air Strike - Around Prague",
+        "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxQcEpONnF5ZlhWeld0X2doRG1QRGZTb3BzV0EyeFBhdEdTUUJPdnRoUnRzZjBoakFFb2J0MVRUbHJwUHlFZGtKaUJ1bVppeExrWTlXVWNSLXZnaFBrTUJNVnUwOWJTMlN6bjY4WmZ6N2JUSl9iVGZOZXE4VmNlRTM4NUlEWHNiY1JRUk1DN2huZF9MN3RocU1vTTlqaw?oc=5",
+        "typ": "media",
+        "publikovano": "2026-09-13T00:00:00Z",
+        "primarni": false,
+        "jazyk": "cs"
+      },
+      {
+        "nazev": "Google News — letecký poplach — Poplach v Polsku: Armáda vyslala do vzduchu stíhačky, na východě zněly sirény - Deník.cz",
+        "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxNcWZGTGxkN3FRYnBSQWItR3cwbEtmUmRhMXRxYXNUOFhTTEFMVlNSWE1xRE1HZFl0dE1VR3g3Uk5TZkhLMHZuQ2lMRTNhbGMzckVrQnpmQ21Gbk5rUllzbVU4WEt6WmdnNmZSRWlQTk1iSm1od0NNUXQ2ZGR3eEJVSEZyRE1QVjBpTm9FM05nODZ5U1VYMm5vWUtlOVYxdW9UblBYYy1n?oc=5",
+        "typ": "media",
+        "publikovano": "2026-09-13T00:00:00Z",
+        "primarni": false,
+        "jazyk": "cs"
+      },
+      {
+        "nazev": "Google News — letecký poplach — Rusko začalo útočit koridorem na západ. V Polsku byl letecký poplach, dron udeřil na vla",
+        "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxPZ1VGaXo1Wkp2M0dTUmUxS2dqbDFZU2tGTEhTR05xS0hQUm5lTm1KeFJRdWR6S3lRYjN1QXNXeGsyQ1N0N0FqenJkeHRIc0IxbVJUck9scWJEZ053ekR3cEZaa1B6NzdVSHZ6X1R3dEJuT2R5Zzl1WVJ1UkZKa2MxRXZDSEF6UUNtYUhQc0Z6T2lLZzJCLTNQekVRWEgxcVVXZDRYNk1JTk82WWpqbVZLTGt3Q1p3YmdRSTV6Vg?oc=5",
+        "typ": "media",
+        "publikovano": "2026-09-13T00:00:00Z",
+        "primarni": false,
+        "jazyk": "cs"
+      },
+      {
+        "nazev": "Téma: vzdusna-obrana (česky) — Rusko a Ukrajina hlásí mrtvé a raněné po útocích, v Polsku vzlétly stíhačky - České novin",
+        "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxNWWxXNHlTUW1YdmpwN1VhWWVZQkZWc3FVY1pxMzNrem42SXRPaHM5Z1RmTzZPRHdNZ0dBUUttMFNLVWJ6emUxaEtGQ2xmRWJmZUQ5NUVjWk1FNjVPc2VOeHp3Ymk5cmxNSTdON3dBNUtUdzJqWGFfcHE1bnBaSkJUcktyb3Q0TWk2YTROWURNX3dyRmJlVTNKV05JYWlOY2t2N2dUaVUwa3dRTUhwWktFZGJULVNzX0U?oc=5",
+        "typ": "media",
+        "publikovano": "2026-09-13T00:00:00Z",
+        "primarni": false,
+        "jazyk": "cs"
+      },
+      {
+        "nazev": "iROZHLAS — zprávy — Kvůli dronovým útokům na čas zastavily provoz letiště Litva a Polsko. Vzlétla i stíhačka NATO",
+        "url": "https://www.irozhlas.cz/zpravy-svet/kvuli-dronovym-utokum-na-cas-zastavily-provoz-letiste-litva-a-polsko-vzletla-i_2609131346_med",
+        "typ": "media",
+        "publikovano": "2026-09-13T00:00:00Z",
+        "primarni": false,
+        "jazyk": "cs"
+      },
+      {
+        "nazev": "Google News — Polsko vzdušný prostor — Poland Scrambled Fighter Jets After Russian Attack on Ukraine, Airspace Violation",
+        "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTFBnc0dFVWVmalpvUHc5Zl9kUUtMbVFpeHRoLXdVVzZuS09RcEJLdUFJT1dGTEVWY3ZvSFV0TUVRaVJVY0g4Q2JRSWZTQTJ2SjZmOEhJWG5LNDBodnBERkVUZEhtam40OUJkMFdSNWFR?oc=5",
+        "typ": "media",
+        "publikovano": "2026-09-13T00:00:00Z",
+        "primarni": false,
+        "jazyk": "cs"
+      }
+    ],
+    "souvisejici": [],
+    "historie": [
+      {
+        "kdy": "2026-09-13T00:00:00Z",
+        "text": "Zachyceno automatickým sběrem, posouzeno před zařazením do fronty.",
+        "novySignal": true
+      }
+    ],
+    "novy": true,
+    "zapocitanoTyden": "2026-09-13",
+    "aiZpracovano": true,
+    "lidskyOvereno": false,
+    "archivniZaznam": false
   }
 ]
