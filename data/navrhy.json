@@ -2214,5 +2214,132 @@
     "aiZpracovano": true,
     "lidskyOvereno": false,
     "archivniZaznam": false
+  },
+  {
+    "kam": "zaznam",
+    "pripravil": "audit",
+    "pripraveno": "2026-09-20T07:57:42.752Z",
+    "id": "i-2026-09-07-52c149ed72",
+    "slug": "ua-52c149ed72",
+    "titulek": "NATO opakovaně zvedalo stíhačky nad Baltským regionem kvůli ruským letadlům",
+    "kratkyTitulek": "NATO opakovaně zvedalo stíhačky nad Baltským regionem kvůli ruským letadlům",
+    "zeme": "Ukrajina",
+    "kodZeme": "UA",
+    "kategorie": [
+      "drony",
+      "nato"
+    ],
+    "datumUdalosti": "2026-09-07T00:00:00Z",
+    "datumZjisteni": "2026-09-07T00:00:00Z",
+    "aktualizovano": "2026-09-20T07:57:42.752Z",
+    "zavaznost": "G2",
+    "jistota": "stredni",
+    "stav": "bez-vysetrovani",
+    "atribuce": "neznama",
+    "puvodce": null,
+    "druh": "reakce",
+    "fakta": [
+      "Stíhačky NATO byly během jednoho týdne několikrát vyslány nad Baltský region kvůli ruským letadlům"
+    ],
+    "neznameho": [
+      "konkrétní incidenty",
+      "Datum události se z textu určit nedá. Uvedeno datum zveřejnění (2026-09-07) — ověřit."
+    ],
+    "vyznam": "",
+    "eskalacniSpousteče": [],
+    "deeskalacniSignaly": [],
+    "zdroje": [
+      {
+        "nazev": "Téma: vzdusna-obrana (anglicky) — NATO jets scrambled multiple times over Baltic region in one week - The Kyiv Independe",
+        "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxOSlI4VENaa3RVb0VlQ0RoVzFBdmVSenpYME1ERVRGdEMxRi1TLXJOVERoTXlsSVI4WWVBZHhhSjN5bnZEemVWdGJLazRSN1Q0NU4tVVJXNml1VW5Zc1RkSVJoSkpjRkROUUZ0TVZ6aWlFUVpTUGtRTEp0cUYtVkEzNV9seVJPRm1SeWNSV011VUhMWGdsVUFJcFN3?oc=5",
+        "typ": "media",
+        "publikovano": "2026-09-07T00:00:00Z",
+        "primarni": false,
+        "jazyk": "cs"
+      },
+      {
+        "nazev": "Téma: vzdusna-obrana (anglicky) — NATO fighter jets were scrambled three times over Baltic states last week due to Russi",
+        "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxPeGx2RXpZM3cybHFBaFpFS0VhVTRkMlR3dVpJVFl3el9hMVg5cmFIa1BtMXJwSk9Wa3JJTTY3azVpancyMG90blNld3NnNnE1dFppalBRQ21YQy1fb3gwX2xfdHN5cU1ZcmJ1dXJhOXRmQjVwcjlGY0U5UlloMG5tMEk2bjY5TXdBX0lONEFZeFN2cy1NRW9aT2ZLM1pvRnRDWEwtS21GUzlLMmlOTXB1TFg0MEJLYXNS?oc=5",
+        "typ": "media",
+        "publikovano": "2026-09-07T00:00:00Z",
+        "primarni": false,
+        "jazyk": "cs"
+      }
+    ],
+    "souvisejici": [],
+    "historie": [
+      {
+        "kdy": "2026-09-07T00:00:00Z",
+        "text": "Zachyceno automatickým sběrem, posouzeno před zařazením do fronty.",
+        "novySignal": true
+      }
+    ],
+    "novy": true,
+    "zapocitanoTyden": "2026-09-07",
+    "aiZpracovano": true,
+    "lidskyOvereno": false,
+    "archivniZaznam": false
+  },
+  {
+    "kam": "zaznam",
+    "pripravil": "audit",
+    "pripraveno": "2026-09-20T07:57:42.752Z",
+    "id": "i-2026-09-06-bd956e0f9c",
+    "slug": "pl-bd956e0f9c",
+    "titulek": "Polsko: podezřelé narušení vzdušného prostoru způsobilo hejno ptáků",
+    "kratkyTitulek": "Polsko: podezřelé narušení vzdušného prostoru způsobilo hejno ptáků",
+    "zeme": "Polsko",
+    "kodZeme": "PL",
+    "kategorie": [
+      "drony"
+    ],
+    "datumUdalosti": "2026-09-06T00:00:00Z",
+    "datumZjisteni": "2026-09-06T00:00:00Z",
+    "aktualizovano": "2026-09-20T07:57:42.752Z",
+    "zavaznost": "G1",
+    "jistota": "vysoka",
+    "stav": "bez-vysetrovani",
+    "atribuce": "neznama",
+    "puvodce": null,
+    "druh": "reakce",
+    "fakta": [
+      "Polsko vyslalo letadla kvůli podezřelému narušení vzdušného prostoru",
+      "Polské úřady později uvedly, že šlo o hejno ptáků"
+    ],
+    "neznameho": [],
+    "vyznam": "",
+    "eskalacniSpousteče": [],
+    "deeskalacniSignaly": [],
+    "zdroje": [
+      {
+        "nazev": "Google News — Polsko bezpečnost — Poland says suspected airspace violation caused by bird flock - Global Banking & Finan",
+        "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxOX2kwRlJwUXlHOEk0RWswcGFrdGl2TmRPdG9sZW1Kb0dVTU9GbjZxMzdBZGxuWmEzbkJvVlMwWWZzUFJOZUhuQzY5a09zWENiTThTaVVZd3k0b3E4UURkLTFZUG85MFRhTlk0SHJ5bHVFY1dCYnk0dmRDYnh2OGthaEZvUE1BbndHWl9nYjFTbVFDcnpGOGdwT3hn?oc=5",
+        "typ": "media",
+        "publikovano": "2026-09-06T00:00:00Z",
+        "primarni": false,
+        "jazyk": "cs"
+      },
+      {
+        "nazev": "Google News — Polsko bezpečnost — Poland scrambles aircraft over suspected airspace breach - UK Defence Journal",
+        "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxQY1IySXVYZklOTDRJRDVBXzVjVno5M2JvS0pnUW5tVWRUU1E5R05VU2tHY1FIRHFSeXZLSjlVdkRjQ3llLTZpdGlyOXZVN3ZTUk8tem1BdE1MczVpelFEQWlWT3BaZ3JmOXNCcWVob2puU0FZbks5SVFicDlZbmhUQnp2RnN1YzlRcGloYkNwQnd4QWM?oc=5",
+        "typ": "media",
+        "publikovano": "2026-09-06T00:00:00Z",
+        "primarni": false,
+        "jazyk": "cs"
+      }
+    ],
+    "souvisejici": [],
+    "historie": [
+      {
+        "kdy": "2026-09-06T00:00:00Z",
+        "text": "Zachyceno automatickým sběrem, posouzeno před zařazením do fronty.",
+        "novySignal": true
+      }
+    ],
+    "novy": true,
+    "zapocitanoTyden": "2026-09-06",
+    "aiZpracovano": true,
+    "lidskyOvereno": false,
+    "archivniZaznam": false
   }
 ]

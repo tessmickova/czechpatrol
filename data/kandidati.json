@@ -10710,13 +10710,19 @@
       "zadrz",
       "rozvodna"
     ],
-    "stav": "ceka",
+    "stav": "vyrizen",
     "vyrez": {
       "text": "V Německu zadrželi muže podezřelého ze sabotáží na elektrických rozvodnách — ČT24 — Česká televize\nŽivé vysílání\nTV program\nPočasí\nTeletext\nE-shop\nVše o ČT\nTV poplatky\nKontakty\nSpravovat účet\nOblíbené pořady\nRozkoukaná videa\nPřihlásit se do TV\nOdhlásit se\nV Německu zadrželi muže podezřelého ze sabotáží na elektrických rozvodnách\nČTK\n, kak\n8. 9. 2026 ‌ ‌ | Zdroj: ČTK\nIlustrační snímek\nZdroj: Pixabay/Andrew Martin\nNěmecká policie zadržela 48letého muže podezřelého ze série sabotáží na elektrické síti na několika místech v Německu. Informovala o tom v úterý agentura DPA. Podle jejích informací muž vzbudil pozornost policistů poblíž západoněmecké elektrárny Weisweiler nedaleko Cách.\nServer deníku Frankfurter Allgemeine Zeitung napsal, že byl muž z Gevelsbergu v jižním Porúří zadržen při dopravní kontrole. Policie uvedla, že měl u sebe při zatýkání výbušná zařízení a policistům nekladl odpor.\nÚřady po muži pátraly několik dní. Podle úřadů se pokusil na několika místech ve spolkových zemích Severní Porýní-Vestfálsko, Braniborsko a Sasko s pomocí podomácku vyrobených raket vystřelit tenký drát přes vedení vysokého napětí a způsobit zkrat, píše DPA.\nNaposledy v pondělí bylo na drátech…",
       "stazeno": "2026-09-14T08:33:18.050Z",
       "stav": 200
     },
-    "naliehave": null
+    "naliehave": null,
+    "vyrizeni": {
+      "kdy": "2026-09-20T07:57:42.752Z",
+      "duvod": "pokracovani",
+      "patriK": "nemecko-rozvodny-zadrzeni-2026",
+      "poznamka": null
+    }
   },
   {
     "id": "k-2b418482c2b18ed7",
@@ -10745,11 +10751,17 @@
       "russia"
     ],
     "naliehave": null,
-    "stav": "ceka",
+    "stav": "vyrizen",
     "vyrez": {
       "text": "Google News",
       "stazeno": "2026-09-19T08:32:07.408Z",
       "stav": 200
+    },
+    "vyrizeni": {
+      "kdy": "2026-09-20T07:57:42.752Z",
+      "duvod": "pokracovani",
+      "patriK": "rumunsko-sri-zmarena-sabotaz-2026",
+      "poznamka": null
     }
   },
   {
@@ -10778,14 +10790,20 @@
       "sabotaz",
       "zadrz"
     ],
-    "stav": "ceka",
+    "stav": "vyrizen",
     "vyrez": {
       "text": "",
       "stazeno": "2026-09-14T08:33:19.103Z",
       "stav": 403,
       "chyba": "HTTP 403"
     },
-    "naliehave": null
+    "naliehave": null,
+    "vyrizeni": {
+      "kdy": "2026-09-20T07:57:42.752Z",
+      "duvod": "pokracovani",
+      "patriK": "nemecko-rozvodny-zadrzeni-2026",
+      "poznamka": null
+    }
   },
   {
     "id": "k-bc4a45fae5fbcbad",
@@ -10812,14 +10830,20 @@
       "vyhost",
       "rusk"
     ],
-    "stav": "ceka",
+    "stav": "vyrizen",
     "vyrez": {
       "text": "",
       "stazeno": "2026-09-14T08:33:19.385Z",
       "stav": 403,
       "chyba": "HTTP 403"
     },
-    "naliehave": null
+    "naliehave": null,
+    "vyrizeni": {
+      "kdy": "2026-09-20T07:57:42.752Z",
+      "duvod": "pokracovani",
+      "patriK": "madarsko-vyhosteni-ruskych-diplomatu-2026",
+      "poznamka": null
+    }
   },
   {
     "id": "k-c2520307996c8541",
@@ -10848,11 +10872,17 @@
       "rusk"
     ],
     "naliehave": null,
-    "stav": "ceka",
+    "stav": "vyrizen",
     "vyrez": {
       "text": "Google News",
       "stazeno": "2026-09-15T19:11:48.177Z",
       "stav": 200
+    },
+    "vyrizeni": {
+      "kdy": "2026-09-20T07:57:42.752Z",
+      "duvod": "pokracovani",
+      "patriK": "madarsko-vyhosteni-ruskych-diplomatu-2026",
+      "poznamka": null
     }
   },
   {
@@ -10880,13 +10910,19 @@
       "vyhost",
       "rusk"
     ],
-    "stav": "ceka",
+    "stav": "vyrizen",
     "vyrez": {
       "text": "Maďarsko vyhošťuje deset ruských diplomatů, Moskva slibuje odvetu — ČT24 — Česká televize\nŽivé vysílání\nTV program\nPočasí\nTeletext\nE-shop\nVše o ČT\nTV poplatky\nKontakty\nSpravovat účet\nOblíbené pořady\nRozkoukaná videa\nPřihlásit se do TV\nOdhlásit se\nMaďarsko vyhošťuje deset ruských diplomatů, Moskva slibuje odvetu\nČTK\n, den\n8. 9. 2026 8. 9. 2026 ‌ ‌ | Zdroj: ČTK\nŠéfka maďarské diplomacie Anita Orbánová\nZdroj: Zuma Press Wire/Shutterstock Editorial/Profimedia\nBudapešť vyhošťuje deset ruských diplomatů, kteří se podle maďarských úřadů podíleli na aktivitách odporujících pravidlům diplomatické práce. Na sociální síti X to oznámila šéfka diplomacie Anita Orbánová. Ruské ministerstvo zahraničí podle tiskových agentur slíbilo tvrdou odvetu, která bude Maďarsko bolet.\nÚřady podle Orbánové „vyhodnotily, že deset členů ruského zastupitelského úřadu se v Maďarsku podílelo na aktivitách, jež jsou podle Vídeňské úmluvy pro diplomaty nepřípustné“. „Maďarská strana proto vyzvala tyto osoby, aby opustily Maďarsko,“ napsala ministryně.\nPodotkla zároveň, že tento krok neznamená přerušení diplomatických vztahů s Moskvou. „Maďarsko má v úmyslu pokračovat v potřebném dialogu založeném na vzájemném…",
       "stazeno": "2026-09-14T08:33:19.494Z",
       "stav": 200
     },
-    "naliehave": null
+    "naliehave": null,
+    "vyrizeni": {
+      "kdy": "2026-09-20T07:57:42.752Z",
+      "duvod": "pokracovani",
+      "patriK": "madarsko-vyhosteni-ruskych-diplomatu-2026",
+      "poznamka": null
+    }
   },
   {
     "id": "k-f7dcf8d7a7770ba0",
@@ -10915,11 +10951,17 @@
       "russia"
     ],
     "naliehave": null,
-    "stav": "ceka",
+    "stav": "vyrizen",
     "vyrez": {
       "text": "Google News",
       "stazeno": "2026-09-15T19:11:48.302Z",
       "stav": 200
+    },
+    "vyrizeni": {
+      "kdy": "2026-09-20T07:57:42.752Z",
+      "duvod": "pokracovani",
+      "patriK": "rumunsko-sri-zmarena-sabotaz-2026",
+      "poznamka": null
     }
   },
   {
@@ -10949,11 +10991,17 @@
       "power grid"
     ],
     "naliehave": null,
-    "stav": "ceka",
+    "stav": "vyrizen",
     "vyrez": {
       "text": "Google News",
       "stazeno": "2026-09-19T08:36:05.208Z",
       "stav": 200
+    },
+    "vyrizeni": {
+      "kdy": "2026-09-20T07:57:42.752Z",
+      "duvod": "pokracovani",
+      "patriK": "nemecko-rozvodny-zadrzeni-2026",
+      "poznamka": null
     }
   },
   {
@@ -11016,11 +11064,17 @@
       "power grid"
     ],
     "naliehave": null,
-    "stav": "ceka",
+    "stav": "vyrizen",
     "vyrez": {
       "text": "Google News",
       "stazeno": "2026-09-15T19:11:48.429Z",
       "stav": 200
+    },
+    "vyrizeni": {
+      "kdy": "2026-09-20T07:57:42.752Z",
+      "duvod": "pokracovani",
+      "patriK": "nemecko-rozvodny-zadrzeni-2026",
+      "poznamka": null
     }
   },
   {
@@ -11119,11 +11173,17 @@
       "nato"
     ],
     "naliehave": null,
-    "stav": "ceka",
+    "stav": "vyrizen",
     "vyrez": {
       "text": "Google News",
       "stazeno": "2026-09-15T19:11:48.707Z",
       "stav": 200
+    },
+    "vyrizeni": {
+      "kdy": "2026-09-20T07:57:42.752Z",
+      "duvod": "navrh",
+      "patriK": null,
+      "poznamka": null
     }
   },
   {
@@ -11156,11 +11216,17 @@
       "russia"
     ],
     "naliehave": null,
-    "stav": "ceka",
+    "stav": "vyrizen",
     "vyrez": {
       "text": "Google News",
       "stazeno": "2026-09-15T19:32:54.543Z",
       "stav": 200
+    },
+    "vyrizeni": {
+      "kdy": "2026-09-20T07:57:42.752Z",
+      "duvod": "neudalost",
+      "patriK": null,
+      "poznamka": null
     }
   },
   {
@@ -11190,11 +11256,17 @@
       "policie"
     ],
     "naliehave": null,
-    "stav": "ceka",
+    "stav": "vyrizen",
     "vyrez": {
       "text": "Google News",
       "stazeno": "2026-09-15T19:32:54.697Z",
       "stav": 200
+    },
+    "vyrizeni": {
+      "kdy": "2026-09-20T07:57:42.752Z",
+      "duvod": "pokracovani",
+      "patriK": "nemecko-rozvodny-zadrzeni-2026",
+      "poznamka": null
     }
   },
   {
@@ -11224,11 +11296,17 @@
       "policie"
     ],
     "naliehave": null,
-    "stav": "ceka",
+    "stav": "vyrizen",
     "vyrez": {
       "text": "Google News",
       "stazeno": "2026-09-19T08:36:05.490Z",
       "stav": 200
+    },
+    "vyrizeni": {
+      "kdy": "2026-09-20T07:57:42.752Z",
+      "duvod": "pokracovani",
+      "patriK": "nemecko-rozvodny-zadrzeni-2026",
+      "poznamka": null
     }
   },
   {
@@ -11255,13 +11333,19 @@
       "cyberattack",
       "cyber"
     ],
-    "stav": "ceka",
+    "stav": "vyrizen",
     "vyrez": {
       "text": "Google News",
       "stazeno": "2026-09-14T08:33:20.598Z",
       "stav": 200
     },
-    "naliehave": null
+    "naliehave": null,
+    "vyrizeni": {
+      "kdy": "2026-09-20T07:57:42.752Z",
+      "duvod": "neudalost",
+      "patriK": null,
+      "poznamka": null
+    }
   },
   {
     "id": "k-a73116a3d549287f",
@@ -11289,13 +11373,19 @@
       "sabotaz",
       "rozvodna"
     ],
-    "stav": "ceka",
+    "stav": "vyrizen",
     "vyrez": {
       "text": "Policie na západě Německa podnikla v souvislosti se sabotážemi několik zásahů — ČT24 — Česká televize\nŽivé vysílání\nTV program\nPočasí\nTeletext\nE-shop\nVše o ČT\nTV poplatky\nKontakty\nSpravovat účet\nOblíbené pořady\nRozkoukaná videa\nPřihlásit se do TV\nOdhlásit se\nPolicie na západě Německa podnikla v souvislosti se sabotážemi několik zásahů\nČTK\n, den\n7. 9. 2026 7. 9. 2026 ‌ ‌ | Zdroj: ČTK , Bild\nIlustrační fotografie\nZdroj: Pexels/Michael Pointner\nPolicie u západoněmeckého Wuppertalu podnikla rozsáhlý zásah u elektrické stanice, odkud byl ohlášen pohyb podezřelého člověka. Nikoho ale nezadržela. Další zásahy provedla policie i na jiných místech v zemi, mimo jiné u elektrárny ve Weisweileru nedaleko Cách, kde u vysokonapěťového vedení nalezla několik výbušných zařízení, napsala agentura DPA. Německo v posledních dnech čelí sérii sabotáží v rozvodnách elektřiny.\nMluvčí policie v Kolíně nad Rýnem řekl, že zásah začal již dopoledne a že souvisí s pátráním. Podrobnosti ale sdělit odmítl. DPA připomněla, že německá policie několik dní pátrá po 48letém Danielovi V. z Gevelsbergu na západě Německa, kterého ministr vnitra Alexander Dobrindt označil za klimatického aktivistu. Ten se k sabotážím…",
       "stazeno": "2026-09-14T08:33:20.754Z",
       "stav": 200
     },
-    "naliehave": null
+    "naliehave": null,
+    "vyrizeni": {
+      "kdy": "2026-09-20T07:57:42.752Z",
+      "duvod": "pokracovani",
+      "patriK": "nemecko-rozvodny-zadrzeni-2026",
+      "poznamka": null
+    }
   },
   {
     "id": "k-54ce578844445299",
@@ -11324,11 +11414,17 @@
       "substation"
     ],
     "naliehave": null,
-    "stav": "ceka",
+    "stav": "vyrizen",
     "vyrez": {
       "text": "Google News",
       "stazeno": "2026-09-15T19:32:54.828Z",
       "stav": 200
+    },
+    "vyrizeni": {
+      "kdy": "2026-09-20T07:57:42.752Z",
+      "duvod": "neudalost",
+      "patriK": null,
+      "poznamka": null
     }
   },
   {
@@ -11356,13 +11452,19 @@
       "sabotage",
       "russia"
     ],
-    "stav": "ceka",
+    "stav": "vyrizen",
     "vyrez": {
       "text": "Google News",
       "stazeno": "2026-09-14T08:33:21.626Z",
       "stav": 200
     },
-    "naliehave": null
+    "naliehave": null,
+    "vyrizeni": {
+      "kdy": "2026-09-20T07:57:42.752Z",
+      "duvod": "neudalost",
+      "patriK": null,
+      "poznamka": null
+    }
   },
   {
     "id": "k-74af3ae247ae5439",
@@ -11387,14 +11489,20 @@
     "shody": [
       "sabotaz"
     ],
-    "stav": "ceka",
+    "stav": "vyrizen",
     "vyrez": {
       "text": "",
       "stazeno": "2026-09-14T09:02:38.300Z",
       "stav": 403,
       "chyba": "HTTP 403"
     },
-    "naliehave": null
+    "naliehave": null,
+    "vyrizeni": {
+      "kdy": "2026-09-20T07:57:42.752Z",
+      "duvod": "pokracovani",
+      "patriK": "nemecko-rozvodny-zadrzeni-2026",
+      "poznamka": null
+    }
   },
   {
     "id": "k-3ddf1e11e2ce180c",
@@ -11521,13 +11629,19 @@
       "airspace violation",
       "airspace"
     ],
-    "stav": "ceka",
+    "stav": "vyrizen",
     "vyrez": {
       "text": "Google News",
       "stazeno": "2026-09-14T09:02:38.694Z",
       "stav": 200
     },
-    "naliehave": null
+    "naliehave": null,
+    "vyrizeni": {
+      "kdy": "2026-09-20T07:57:42.752Z",
+      "duvod": "navrh",
+      "patriK": null,
+      "poznamka": null
+    }
   },
   {
     "id": "k-9e515e48b1671c46",
@@ -11553,13 +11667,19 @@
       "scrambl",
       "airspace"
     ],
-    "stav": "ceka",
+    "stav": "vyrizen",
     "vyrez": {
       "text": "Google News",
       "stazeno": "2026-09-14T09:02:38.815Z",
       "stav": 200
     },
-    "naliehave": null
+    "naliehave": null,
+    "vyrizeni": {
+      "kdy": "2026-09-20T07:57:42.752Z",
+      "duvod": "neudalost",
+      "patriK": null,
+      "poznamka": null
+    }
   },
   {
     "id": "k-89c9fba617bfd64b",
@@ -11591,13 +11711,19 @@
       "hybridni",
       "rusk"
     ],
-    "stav": "ceka",
+    "stav": "vyrizen",
     "vyrez": {
       "text": "Vinění Moskvy z útoku v Lipsku je začátkem skutečné války, vzkázal Lavrov Západu — ČT24 — Česká televize\nŽivé vysílání\nTV program\nPočasí\nTeletext\nE-shop\nVše o ČT\nTV poplatky\nKontakty\nSpravovat účet\nOblíbené pořady\nRozkoukaná videa\nPřihlásit se do TV\nOdhlásit se\nVinění Moskvy z útoku v Lipsku je začátkem skutečné války, vzkázal Lavrov Západu\nČTK\n, jol\n6. 9. 2026 ‌ ‌ | Zdroj: ČTK\nRuský ministr zahraničí Sergej Lavrov\nZdroj: Reuters/Ramil Sitdikov\nObvinění ze strany západních zemí, že se Moskva podílela na dronovém incidentu v Lipsku, jsou v podstatě začátkem skutečné války, prohlásil podle agentury Interfax ruský ministr zahraničí Sergej Lavrov. Německá vláda srpnový hybridní útok na východoněmecké letiště Lipsko/Halle přičítá Rusku, které to popírá. Zaměstnanec letiště poblíž ukrajinského letadla společnosti Antonov objevil 4. srpna dron s výbušninou, ale s nefunkční roznětkou.\n„Našli nějaký dron. Tvrdili, že se jednalo o ruský dron, ale nikdo se to neobtěžoval vyšetřit. To je v podstatě začátek skutečné války,“ řekl Lavrov v rozhovoru s ruskými médii.\nNěmecko v reakci na letištní incident rozhodlo mimo jiné o uzavření ruského generálního konzulátu v Bonnu a vypovězení smlouvy…",
       "stazeno": "2026-09-14T09:02:38.948Z",
       "stav": 200
     },
-    "naliehave": null
+    "naliehave": null,
+    "vyrizeni": {
+      "kdy": "2026-09-20T07:57:42.752Z",
+      "duvod": "pokracovani",
+      "patriK": "lavrov-lipsko-skutecna-valka-2026",
+      "poznamka": null
+    }
   },
   {
     "id": "k-b6d273f1b1497a55",
@@ -11629,14 +11755,20 @@
       "hybridni",
       "rusk"
     ],
-    "stav": "ceka",
+    "stav": "vyrizen",
     "vyrez": {
       "text": "",
       "stazeno": "2026-09-14T09:02:39.886Z",
       "stav": 403,
       "chyba": "HTTP 403"
     },
-    "naliehave": null
+    "naliehave": null,
+    "vyrizeni": {
+      "kdy": "2026-09-20T07:57:42.752Z",
+      "duvod": "pokracovani",
+      "patriK": "lavrov-lipsko-skutecna-valka-2026",
+      "poznamka": null
+    }
   },
   {
     "id": "k-a045f0a5cd8a11c6",
@@ -11661,13 +11793,19 @@
     "shody": [
       "obvin"
     ],
-    "stav": "ceka",
+    "stav": "vyrizen",
     "vyrez": {
       "text": "Google News",
       "stazeno": "2026-09-14T09:02:39.932Z",
       "stav": 200
     },
-    "naliehave": null
+    "naliehave": null,
+    "vyrizeni": {
+      "kdy": "2026-09-20T07:57:42.752Z",
+      "duvod": "pokracovani",
+      "patriK": "lavrov-lipsko-skutecna-valka-2026",
+      "poznamka": null
+    }
   },
   {
     "id": "k-c8a7438df26afc74",
@@ -11697,13 +11835,19 @@
       "drone",
       "russia"
     ],
-    "stav": "ceka",
+    "stav": "vyrizen",
     "vyrez": {
       "text": "Google News",
       "stazeno": "2026-09-14T09:02:40.065Z",
       "stav": 200
     },
-    "naliehave": null
+    "naliehave": null,
+    "vyrizeni": {
+      "kdy": "2026-09-20T07:57:42.752Z",
+      "duvod": "neudalost",
+      "patriK": null,
+      "poznamka": null
+    }
   },
   {
     "id": "k-be313ede18bcf6c0",
@@ -11732,11 +11876,17 @@
       "substation"
     ],
     "naliehave": null,
-    "stav": "ceka",
+    "stav": "vyrizen",
     "vyrez": {
       "text": "Google News",
       "stazeno": "2026-09-20T06:04:11.141Z",
       "stav": 200
+    },
+    "vyrizeni": {
+      "kdy": "2026-09-20T07:57:42.752Z",
+      "duvod": "pokracovani",
+      "patriK": "nemecko-rozvodny-zadrzeni-2026",
+      "poznamka": null
     }
   },
   {
@@ -11766,11 +11916,17 @@
       "russia"
     ],
     "naliehave": null,
-    "stav": "ceka",
+    "stav": "vyrizen",
     "vyrez": {
       "text": "Google News",
       "stazeno": "2026-09-20T06:04:11.305Z",
       "stav": 200
+    },
+    "vyrizeni": {
+      "kdy": "2026-09-20T07:57:42.752Z",
+      "duvod": "neudalost",
+      "patriK": null,
+      "poznamka": null
     }
   },
   {
@@ -11801,11 +11957,17 @@
       "power grid"
     ],
     "naliehave": null,
-    "stav": "ceka",
+    "stav": "vyrizen",
     "vyrez": {
       "text": "Google News",
       "stazeno": "2026-09-20T07:04:07.422Z",
       "stav": 200
+    },
+    "vyrizeni": {
+      "kdy": "2026-09-20T07:57:42.752Z",
+      "duvod": "pokracovani",
+      "patriK": "nemecko-rozvodny-zadrzeni-2026",
+      "poznamka": null
     }
   },
   {
@@ -11874,11 +12036,17 @@
       "russia"
     ],
     "naliehave": null,
-    "stav": "ceka",
+    "stav": "vyrizen",
     "vyrez": {
       "text": "Google News",
       "stazeno": "2026-09-20T07:04:07.667Z",
       "stav": 200
+    },
+    "vyrizeni": {
+      "kdy": "2026-09-20T07:57:42.752Z",
+      "duvod": "pokracovani",
+      "patriK": "nemecko-rozvodny-zadrzeni-2026",
+      "poznamka": null
     }
   }
 ]
