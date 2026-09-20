@@ -1,6 +1,17 @@
 /**
  * Denní audit fronty: co z nasbíraného je opravdu nová událost.
  *
+ * POZASTAVENO 20. 9. 2026 — tenhle nástroj se nespouští.
+ * --------------------------------------------------------
+ * Stojí na placeném volání modelu, a to je vypnuté: kredit došel a projekt
+ * na něj nemá. Frontu posuzuje externí ověřovatel Patrol, kterému se
+ * neúčtuje; zadání mu chystá `nastroje/zadani-pro-patrola.mjs` a doručuje
+ * běh „Fronta Patrolovi".
+ *
+ * Kód i testy tu zůstávají celé a funkční. Zpátky se to zapne dvěma kroky:
+ * MODEL_PRES_API=1 s klíčem v prostředí a obnovením běhu, který to volá.
+ * Nic dalšího se měnit nemusí.
+ *
  *   npm run audit            projde frontu a připraví návrhy
  *   npm run audit -- --sucho nic nezapíše, jen vypíše, co by udělal
  *

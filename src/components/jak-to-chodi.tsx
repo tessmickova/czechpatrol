@@ -28,7 +28,7 @@ const KROKY: Krok[] = [
   {
     cislo: "1",
     nadpis: "Sběr",
-    kdo: "automat, každých 6 hodin",
+    kdo: "automat, každou hodinu",
     co: "Přečte 111 zdrojů — zpravodajství, úřední kanály, agentury. Co projde sítem na slova a místa, uloží se do fronty kandidátů jako holý titulek s odkazem.",
     zastavi: "Zprávy bez vazby na bezpečnost nebo na sledované země se zahodí a důvod se zapíše.",
   },

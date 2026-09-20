@@ -16,7 +16,11 @@ afterEach(() => {
 });
 
 function nastav(env: Record<string, string | undefined>) {
-  for (const k of ["OPENAI_API_KEY", "ANTHROPIC_API_KEY", "POSKYTOVATEL_MODELU"]) delete process.env[k];
+  for (const k of ["OPENAI_API_KEY", "ANTHROPIC_API_KEY", "POSKYTOVATEL_MODELU", "MODEL_PRES_API"]) {
+    delete process.env[k];
+  }
+  // Volba poskytovatele se testuje s vědomě zapnutým API; vypínač má svůj blok níž.
+  process.env.MODEL_PRES_API = "1";
   for (const [k, v] of Object.entries(env)) if (v !== undefined) process.env[k] = v;
 }
 
@@ -45,6 +49,42 @@ describe("který poskytovatel se použije", () => {
     // Radši nic než tiché přepnutí na druhého poskytovatele, o kterém nikdo neví.
     nastav({ ANTHROPIC_API_KEY: "y", POSKYTOVATEL_MODELU: "openai" });
     expect(dostupnyPoskytovatel()).toBeNull();
+  });
+});
+
+/*
+  Vypínač placeného volání.
+
+  Kredit došel 20. 9. 2026 a ověřování převzal Patrol. Kdyby se klíč dostal
+  do prostředí jinudy — zapomenutý secret, lokální .env — nesmí začít
+  utrácet potichu. Proto se hlídá, že samotný klíč nestačí.
+*/
+describe("placené volání přes API", () => {
+  it("klíč bez vědomého zapnutí nestačí", () => {
+    nastav({ ANTHROPIC_API_KEY: "y" });
+    delete process.env.MODEL_PRES_API;
+    expect(dostupnyPoskytovatel()).toBeNull();
+  });
+
+  it("jiná hodnota než 1 API nezapne", () => {
+    nastav({ ANTHROPIC_API_KEY: "y", MODEL_PRES_API: "true" });
+    expect(dostupnyPoskytovatel()).toBeNull();
+  });
+
+  it("do žádného běhu se klíč nepředává", async () => {
+    /*
+      Vypínač v kódu je pojistka, ne hlavní opatření. Hlavní je, že klíč
+      v běhu vůbec není — jinak by stačilo jedno přehlédnutí v kódu.
+    */
+    const { readdir } = await import("node:fs/promises");
+    const slozka = new URL("../.github/workflows/", import.meta.url);
+    const soubory = await readdir(slozka);
+    for (const f of soubory.filter((x) => x.endsWith(".yml"))) {
+      const obsah = readFileSync(new URL(f, slozka), "utf-8");
+      expect(obsah, `${f} předává klíč k placenému modelu`).not.toMatch(
+        /^\s*(ANTHROPIC_API_KEY|OPENAI_API_KEY):/m,
+      );
+    }
   });
 });
 

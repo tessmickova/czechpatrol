@@ -1,0 +1,78 @@
+name: Fronta Patrolovi
+
+# Co to dělá
+# ----------
+# Srovná Patrolovi datové soubory s main a zapíše mu zadání z čekající fronty.
+#
+# Proč to vzniklo
+# ---------------
+# Frontu posuzoval denní audit modelem přes API. 20. 9. 2026 došel kredit
+# a placené volání se vyplo — tím se ale fronta přestala hýbat úplně.
+# Posuzovat umí i Patrol a neúčtuje se; chybělo jediné: říct mu, co má vzít.
+#
+# Druhá věc, kterou to řeší: na větev patrol/overovani se z main nikdy nic
+# nepřenášelo. Patrol tak pracoval nad frontou v podobě, v jaké byla naposledy
+# ručně slitá — 20. 9. se lišilo šestnáct datových souborů. Práce nad starými
+# daty není poloviční práce, je to práce k zahození.
+#
+# Na main se odsud nikdy nezapisuje. Opačný směr (jeho návrhy do main) obstarává
+# běh „Převzít práci od Patrola".
+
+on:
+  schedule:
+    # Po dvou hodinách. Skript sám nepřidá zadání, dokud předchozí čeká,
+    # takže častější běh jen dřív zaznamená, že je fronta prázdná.
+    - cron: "25 */2 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  # Společná skupina s ručním zadáním — dva zápisy do téhož souboru
+  # by si přepsaly výsledek.
+  group: pro-patrola
+  cancel-in-progress: false
+
+jobs:
+  predat:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          ref: patrol/overovani
+          fetch-depth: 0
+
+      - uses: actions/setup-node@v7
+        with:
+          node-version: "24"
+
+      # Balíčky se neinstalují: skript stojí jen na tom, co umí Node sám.
+      # Pro běh, který jen přepíše JSON, je `npm ci` zbytečná minuta.
+      - name: Srovnat data s main
+        run: |
+          set -u
+          git fetch origin main
+          git checkout origin/main -- data/
+          # Fronta zadání žije jen na téhle větvi. Kdyby ji přepsala verze
+          # z main, přišel by Patrol o to, co mu bylo zadáno a co odpověděl.
+          git checkout HEAD -- data/fronta/pro-patrola.json || true
+
+      - name: Sestavit zadání z fronty
+        run: node nastroje/zadani-pro-patrola.mjs
+
+      - name: Odeslat na větev
+        run: |
+          if [ -z "$(git status --porcelain data/)" ]; then
+            echo "Patrol má data i zadání aktuální."
+            exit 0
+          fi
+          git config user.name "fronta"
+          git config user.email "fronta@users.noreply.github.com"
+          git add data/
+          git commit -m "Fronta a data pro Patrola $(date -u +'%Y-%m-%d %H:%M UTC')"
+          for i in 1 2 3 4; do
+            git push origin HEAD:patrol/overovani && break
+            sleep $((2**i))
+            git pull --rebase origin patrol/overovani
+          done

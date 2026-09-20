@@ -24,7 +24,7 @@ const S = 168; // šířka bloku
 const V = 52; // výška bloku
 
 const UZLY: Uzel[] = [
-  { x: 16, y: 16, nadpis: "Sběr", popis: "111 zdrojů, po 6 h" },
+  { x: 16, y: 16, nadpis: "Sběr", popis: "111 zdrojů, po hodině" },
   { x: 16, y: 104, nadpis: "Kandidáti", popis: "holý titulek + odkaz" },
   { x: 16, y: 192, nadpis: "Posouzení", popis: "model / ověřovatel", brana: true },
   { x: 16, y: 280, nadpis: "Fronta návrhů", popis: "ve Správě, neveřejné" },

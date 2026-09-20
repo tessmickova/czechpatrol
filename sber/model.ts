@@ -16,7 +16,27 @@ import type { z } from "zod";
 
 export type Poskytovatel = "openai" | "anthropic";
 
+/*
+  Placené volání modelu je vypnuté.
+
+  20. 9. 2026 došel kredit a projekt na něj nemá. Ověřování dělá externí
+  agent Patrol, který běží na vlastním serveru a přes API se neúčtuje.
+
+  Klíče se proto do běhů vůbec nepředávají (viz .github/workflows). Tenhle
+  vypínač stojí navíc, a to schválně: kdyby se klíč do prostředí dostal
+  jinudy — zapomenutý secret, lokální .env, nová větev — nesmí začít utrácet
+  potichu. Zapnout to jde jedině vědomě, MODEL_PRES_API=1.
+
+  Nic tím nespadne. Celý modul je postavený tak, že „model není" je běžný
+  stav: sběr třídí podle klíčových slov, překlad nechá věty česky a fronta
+  kandidátů jde Patrolovi.
+*/
+export function presApiPovoleno(): boolean {
+  return process.env.MODEL_PRES_API === "1";
+}
+
 export function dostupnyPoskytovatel(): Poskytovatel | null {
+  if (!presApiPovoleno()) return null;
   const vynuceny = process.env.POSKYTOVATEL_MODELU?.trim().toLowerCase();
   if (vynuceny === "openai") return process.env.OPENAI_API_KEY ? "openai" : null;
   if (vynuceny === "anthropic") return process.env.ANTHROPIC_API_KEY ? "anthropic" : null;
