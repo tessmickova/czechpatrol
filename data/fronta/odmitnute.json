@@ -1,5 +1,53 @@
 [
   {
+    "id": "k-d764ff58063adee2",
+    "zachyceno": "2026-09-20T09:01:21.440Z",
+    "publikovano": "2026-09-20T08:54:00.000Z",
+    "zdroj": {
+      "nazev": "Český rozhlas — domácí zprávy",
+      "url": "https://www.irozhlas.cz/veda-technologie/priroda/kalhotky-si-z-nej-usil-uz-krtecek-modre-kvetouci-len-pestitele-vraceji-na-ceska_2609201054_bva",
+      "typ": "primary",
+      "primarni": true
+    },
+    "titulek": "Kalhotky si z něj ušil už Krteček. Modře kvetoucí len pěstitelé vracejí na česká pole, učí se ho zpracovávat",
+    "shrnuti": "Na bezmála dvou stovkách zahrad a políček po celém Česku letos modře vykvetl len přadný. Užitečná rostlina se na pole vrací třicet let poté, co tento dříve tradiční průmysl podlehl konkurenci a skončil. O návrat lnu se teď snaží zahradníci a drobní zemědělci. Sklidili první úrodu a společně se ve St",
+    "duvod": "bez-skutku",
+    "kategorie": [],
+    "posouzeni": null
+  },
+  {
+    "id": "k-ef98e0e3b0116bcf",
+    "zachyceno": "2026-09-20T09:01:21.441Z",
+    "publikovano": "2026-09-20T08:17:00.000Z",
+    "zdroj": {
+      "nazev": "Český rozhlas — domácí zprávy",
+      "url": "https://www.irozhlas.cz/zpravy-domov/pred-110-lety-znicila-desnou-protrzena-prehrada-pamatku-67-obeti-si-pripomneli_2609201017_ntu",
+      "typ": "primary",
+      "primarni": true
+    },
+    "titulek": "Před 110 lety zničila Desnou protržená přehrada. Památku 67 obětí si připomněli bohoslužbou",
+    "shrnuti": "Před 110 lety zemřelo v Desné v Jizerských horách 67 lidí při katastrofě, kdy se protrhla vodní přehrada. Dnes je místo s názvem Protržená přehrada vyhledávaným turistickým a pietním areálem. Při výročí této tragédie se tam v sobotu sešly stovky lidí.",
+    "duvod": "bez-skutku",
+    "kategorie": [],
+    "posouzeni": null
+  },
+  {
+    "id": "k-d5248b570b01de88",
+    "zachyceno": "2026-09-20T09:01:21.442Z",
+    "publikovano": "2026-09-20T08:14:00.000Z",
+    "zdroj": {
+      "nazev": "Český rozhlas — domácí zprávy",
+      "url": "https://www.irozhlas.cz/zpravy-svet/odolnosti-proti-zmene-klimatu-tento-napad-se-v-posledni-dobe-objevuje-stale_2609201014_ako",
+      "typ": "primary",
+      "primarni": true
+    },
+    "titulek": "Odolností proti změně klimatu? Tento nápad se v poslední době objevuje stále častěji",
+    "shrnuti": "Evropská unie představí v říjnu nový Rámec pro klimatickou odolnost unijních zemí včetně Evropského plánu pro vlny veder. V reakci na extrémně horké a suché léto s víc než 35 tisíci úmrtími navíc i s miliardovými materiálními škodami to tento týden řekla Ursula von der Leyenová. Předsedkyně Evropské",
+    "duvod": "bez-skutku",
+    "kategorie": [],
+    "posouzeni": null
+  },
+  {
     "id": "k-ca9834a1cb3cf275",
     "zachyceno": "2026-09-20T08:02:21.642Z",
     "publikovano": "2026-09-20T07:49:00.000Z",
@@ -43,6 +91,22 @@
     },
     "titulek": "Hindls: Potraviny jsou nášlapná mina. Dosud držely inflaci dole, teď ji mohou začít zvyšovat",
     "shrnuti": "Bankovní rada ČNB ve čtvrtek rozhodla o nastavení úrokových sazeb. „Inflační tlaky tu pořád jsou,“ říká ekonom Richard Hindls. Co by mohlo inflaci v příštích měsících nejvíce zvýšit? V pořadu Jak to vidí... také vysvětluje, jak si může Evropská unie uchovat konkurenceschopnost a nezávislost na Číně ",
+    "duvod": "bez-skutku",
+    "kategorie": [],
+    "posouzeni": null
+  },
+  {
+    "id": "k-f4d432c58288f849",
+    "zachyceno": "2026-09-20T09:01:21.527Z",
+    "publikovano": "2026-09-20T07:15:00.000Z",
+    "zdroj": {
+      "nazev": "ERR News (Estonsko)",
+      "url": "https://news.err.ee/1610142781/estonian-experts-say-social-media-should-be-improved-for-children-instead-of-banned",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Estonian experts say social media should be improved for children instead of banned",
+    "shrnuti": "The European Union is discussing a safe‑internet regulation that includes several restrictions planned for minors' use of social media. While EU plans propose setting a minimum age of 13, Estonian social scientists argue that blunt bans will not solve all problems and may even create new ones.",
     "duvod": "bez-skutku",
     "kategorie": [],
     "posouzeni": null
@@ -10321,95 +10385,6 @@
     "posouzeni": {
       "podezreni": "vysoke",
       "duvod": "dokument o síti věznic FSB s mučením na Krymu",
-      "kdy": "2026-09-19T13:05:21.142Z"
-    }
-  },
-  {
-    "id": "k-7dd710c283407b7e",
-    "zachyceno": "2026-09-15T16:32:52.209Z",
-    "publikovano": null,
-    "zdroj": {
-      "nazev": "The Kyiv Independent",
-      "url": "https://kyivindependent.com/russian-strikes-hit-2-major-ukrainian-steel-plants-killing-2-and-injuring-6/",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "September 12, 2026 Russian strikes hit 2 major Ukrainian steel plants, killing 2 and injuring 6",
-    "shrnuti": "",
-    "duvod": "bez-skutku",
-    "kategorie": [
-      "rusko"
-    ],
-    "posouzeni": {
-      "podezreni": "vysoke",
-      "duvod": "ruské útoky zabily 2 lidi na ukrajinských ocelárnách",
-      "kdy": "2026-09-19T13:05:21.142Z"
-    }
-  },
-  {
-    "id": "k-95ffed2d5a5bf195",
-    "zachyceno": "2026-09-15T16:32:52.208Z",
-    "publikovano": null,
-    "zdroj": {
-      "nazev": "The Kyiv Independent",
-      "url": "https://kyivindependent.com/nato-shoots-down-drone-over-lithuanian-airspace-that-flew-in-from-belarus/",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "September 15 NATO jets shoot down drone over Lithuanian airspace after it flew in from Belarus",
-    "shrnuti": "",
-    "duvod": "bez-skutku",
-    "kategorie": [
-      "drony",
-      "nato"
-    ],
-    "posouzeni": {
-      "podezreni": "vysoke",
-      "duvod": "NATO sestřelilo dron nad Litvou přiletěvší z Běloruska",
-      "kdy": "2026-09-19T13:05:21.142Z"
-    }
-  },
-  {
-    "id": "k-88506e3b41e07add",
-    "zachyceno": "2026-09-15T16:32:52.208Z",
-    "publikovano": null,
-    "zdroj": {
-      "nazev": "The Kyiv Independent",
-      "url": "https://kyivindependent.com/immoral-and-self-destructive-zelensky-blasts-eus-failure-to-renew-sanctions-on-russian-oligarchs/",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "September 12, 2026 &#x27;Immoral and self-destructive&#x27; — Zelensky blasts EU for considering lifting sanctions on Russian oligarchs",
-    "shrnuti": "",
-    "duvod": "bez-skutku",
-    "kategorie": [
-      "rusko"
-    ],
-    "posouzeni": {
-      "podezreni": "zadne",
-      "duvod": "politický spor o sankcích, diplomatické vyjádření",
-      "kdy": "2026-09-19T13:05:21.142Z"
-    }
-  },
-  {
-    "id": "k-7d3a984a5b455c37",
-    "zachyceno": "2026-09-15T16:32:52.207Z",
-    "publikovano": null,
-    "zdroj": {
-      "nazev": "The Kyiv Independent",
-      "url": "https://kyivindependent.com/breaking-trump-claims-ukraine-russia-agree-to-halt-strikes-on-energy-targets/",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "September 14 Trump claims Ukraine, Russia agree to halt strikes on energy targets, Kyiv unaware of deal",
-    "shrnuti": "",
-    "duvod": "bez-skutku",
-    "kategorie": [
-      "rusko"
-    ],
-    "posouzeni": {
-      "podezreni": "stredni",
-      "duvod": "tvrzení o dohodě zastavit útoky na energetiku, nejisté",
       "kdy": "2026-09-19T13:05:21.142Z"
     }
   }
