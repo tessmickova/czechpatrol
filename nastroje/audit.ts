@@ -61,6 +61,22 @@ const NARAZ = 60;
   okno širší a nastavuje se přes AUDIT_DNI.
 */
 const DNI = Math.min(60, Math.max(1, Number(process.env.AUDIT_DNI) || 4));
+/*
+  Pod tuhle velikost se dávka při nezdaru už nedělí.
+
+  Dělení má zachránit běh, ne ho rozdrobit na desítky dotazů. Když neprojde
+  ani osmička, je chyba jinde než v délce odpovědi a další půlení by jen
+  utrácelo model.
+*/
+const NEJMENSI_DAVKA = 8;
+/*
+  Strop odpovědi modelu.
+
+  16 000 nestačilo: 20. 9. 2026 se odpověď na šedesát kandidátů utnula
+  uprostřed řetězce (JSON skončil na pozici 4289) a běh přišel o všechno.
+  Strop je kvůli tomu dvojnásobný a navíc se dávka při nezdaru půlí.
+*/
+const STROP_ODPOVEDI = 32_000;
 
 interface Kandidat {
   id: string;
@@ -104,6 +120,8 @@ const Posouzeni = z.object({
     }),
   ),
 });
+
+type Polozka = z.infer<typeof Posouzeni>["polozky"][number];
 
 const POKYNY = [
   "Jsi pomocník bezpečnostního přehledu pro Česko. Posuzuješ zachycené zprávy a rozhoduješ, co je nová událost.",
@@ -177,6 +195,62 @@ export function zdrojeNavrhu(
     }));
 }
 
+/**
+ * Posouzení jedné dávky kandidátů; při nezdaru se dávka rozpůlí a zkusí znovu.
+ *
+ * Proč se vůbec dělí: šedesát kandidátů v jednom dotazu není náhoda — druhý
+ * zdroj vznikne jen tak, že se dvě zprávy o téže události potkají v jedné
+ * dávce. Jenže 20. 9. 2026 se odpověď do stropu nevešla, JSON se utnul
+ * uprostřed řetězce a běh přišel o celou šedesátku: fronta se nepohnula ani
+ * o jednu položku, přestože model běžel tři minuty.
+ *
+ * Půlení je kompromis, ne oprava párování: ztratí se nejvýš spojení uvnitř
+ * neúspěšné poloviny, ne výsledek celého běhu. Co se posoudit nepodařilo,
+ * se vrací jako počet — ve frontě to zůstává a v reportu je to vidět.
+ */
+export async function posudDavku(
+  davka: Kandidat[],
+  znameZaznamy: { slug: string; titulek: string }[],
+  /* Volání modelu se dá v testu podstrčit — dělení dávek se tak ověří bez API. */
+  zeptejSe: (z: Parameters<typeof strukturovane<{ polozky: Polozka[] }>>[0]) => Promise<{ polozky: Polozka[] } | null> = strukturovane,
+): Promise<{ polozky: Polozka[]; neposouzeno: number }> {
+  const odpoved = await zeptejSe({
+    system: POKYNY,
+    vstup: {
+      znameZaznamy,
+      kandidati: davka.map((k) => ({
+        id: k.id,
+        titulek: k.titulek,
+        shrnuti: k.shrnuti,
+        publikovano: k.publikovano,
+        zeme: k.zeme,
+        kodZeme: k.kodZeme,
+        zdroj: k.zdroj.nazev,
+        text: (k.vyrez?.text ?? "").slice(0, 2500),
+      })),
+    },
+    schema: Posouzeni,
+    ucel: `denní audit fronty (${davka.length} kandidátů)`,
+    maxTokens: STROP_ODPOVEDI,
+  });
+
+  if (odpoved) return { polozky: odpoved.polozky, neposouzeno: 0 };
+
+  if (davka.length <= NEJMENSI_DAVKA) {
+    console.log(`[audit] dávka ${davka.length} neprošla ani po zmenšení — zůstává ve frontě`);
+    return { polozky: [], neposouzeno: davka.length };
+  }
+
+  const pul = Math.ceil(davka.length / 2);
+  console.log(`[audit] dávka ${davka.length} neprošla, zkouší se po ${pul} a ${davka.length - pul}`);
+  const prvni = await posudDavku(davka.slice(0, pul), znameZaznamy, zeptejSe);
+  const druha = await posudDavku(davka.slice(pul), znameZaznamy, zeptejSe);
+  return {
+    polozky: [...prvni.polozky, ...druha.polozky],
+    neposouzeno: prvni.neposouzeno + druha.neposouzeno,
+  };
+}
+
 async function main() {
   const sucho = process.argv.includes("--sucho");
 
@@ -236,31 +310,17 @@ async function main() {
     return;
   }
 
-  const vysledek = await strukturovane({
-    system: POKYNY,
-    vstup: {
-      znameZaznamy: incidenty.slice(-40).map((i) => ({ slug: i.slug, titulek: i.titulek })),
-      kandidati: kPosouzeni.map((k) => ({
-        id: k.id,
-        titulek: k.titulek,
-        shrnuti: k.shrnuti,
-        publikovano: k.publikovano,
-        zeme: k.zeme,
-        kodZeme: k.kodZeme,
-        zdroj: k.zdroj.nazev,
-        text: (k.vyrez?.text ?? "").slice(0, 2500),
-      })),
-    },
-    schema: Posouzeni,
-    ucel: "denní audit fronty",
-    maxTokens: 16000,
-  });
+  const znameZaznamy = incidenty.slice(-40).map((i) => ({ slug: i.slug, titulek: i.titulek }));
+  const { polozky, neposouzeno } = await posudDavku(kPosouzeni, znameZaznamy);
 
-  if (!vysledek) {
+  if (!polozky.length) {
     /* Model je nastavený, ale nevrátil nic. To je porucha, ne klid. */
     console.log("[audit] MODEL SELHAL — volání nevrátilo výsledek");
-    zapisReport({ kdy: new Date().toISOString(), stav: "model-selhal", posouzeno: 0, navrhu: 0 });
+    zapisReport({ kdy: new Date().toISOString(), stav: "model-selhal", posouzeno: 0, navrhu: 0, neposouzeno });
     process.exit(4);
+  }
+  if (neposouzeno) {
+    console.log(`[audit] ${neposouzeno} kandidátů se posoudit nepodařilo, zůstávají ve frontě`);
   }
 
   const podleId = new Map(kPosouzeni.map((k) => [k.id, k]));
@@ -268,7 +328,7 @@ async function main() {
   const nove: unknown[] = [];
   const prehled: unknown[] = [];
 
-  for (const p of vysledek.polozky) {
+  for (const p of polozky) {
     const k = podleId.get(p.id);
     if (!k) continue;
 
@@ -372,7 +432,7 @@ async function main() {
     57 už bylo posouzeno.
   */
   const vyrizeno = new Map<string, { duvod: string; patriK: string | null }>();
-  for (const p2 of vysledek.polozky) {
+  for (const p2 of polozky) {
     const r = prehled.find((x) => (x as { id: string }).id === p2.id) as
       | { zahozeno: string | null; duplikatSlugu: string | null }
       | undefined;
@@ -407,7 +467,8 @@ async function main() {
     kdy: new Date().toISOString(),
     stav: "ok",
     poskytovatel,
-    posouzeno: vysledek.polozky.length,
+    posouzeno: polozky.length,
+    neposouzeno,
     navrhu: nove.length,
     vyrizeno: odepsano,
     cekaDal: kandidatiPoAuditu.filter((k) => k.stav === "ceka").length,
@@ -415,7 +476,7 @@ async function main() {
   };
 
   console.log(
-    `[audit] posouzeno ${vysledek.polozky.length}, nových návrhů ${nove.length}, z fronty odepsáno ${odepsano}`,
+    `[audit] posouzeno ${polozky.length}, nových návrhů ${nove.length}, z fronty odepsáno ${odepsano}`,
   );
   for (const r of prehled as { titulek: string; zahozeno: string | null; duvod: string; neznamySlug: string | null }[]) {
     console.log(`  ${r.zahozeno ? `— ${r.zahozeno}` : "NÁVRH"} · ${r.titulek.slice(0, 60)} — ${r.duvod.slice(0, 70)}`);

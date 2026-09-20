@@ -154,7 +154,16 @@ export async function strukturovane<T>({ system, vstup, schema, ucel, maxTokens 
     }
     return (odpoved.parsed_output as T) ?? null;
   } catch (e) {
-    console.log(`[model] ${ucel} selhalo: ${e instanceof Error ? e.message : e}`);
+    const text = e instanceof Error ? e.message : String(e);
+    /*
+      Useknutá odpověď se pozná podle toho, že JSON končí uprostřed. Bez téhle
+      věty to v logu vypadá jako rozbitý model — a hledá se chyba, která tam
+      není. Je to jen strop: odpověď se do maxTokens nevešla.
+    */
+    if (/parse structured output/i.test(text)) {
+      console.log(`[model] ${ucel}: odpověď se nevešla do stropu ${maxTokens} tokenů a utnula se`);
+    }
+    console.log(`[model] ${ucel} selhalo: ${text}`);
     return null;
   }
 }
