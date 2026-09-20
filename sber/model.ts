@@ -140,16 +140,34 @@ export async function strukturovane<T>({ system, vstup, schema, ucel, maxTokens 
     const bezEffortu = /^claude-(haiku|sonnet)-4-5/.test(model);
     const format = zodOutputFormat(schema);
 
-    const odpoved = await client.messages.parse({
+    /*
+      Streamovaně, i když nás průběžné kusy odpovědi nezajímají.
+
+      SDK odmítne nestreamované volání, u kterého odhadne dobu nad deset minut
+      — což je při stropu nad 21 333 tokenů vždycky. Chyba přitom nepřijde ze
+      serveru, ale hned z klienta, takže vypadá jako porucha modelu. Strop
+      potřebujeme vyšší: 20. 9. 2026 se odpověď do 16 000 tokenů nevešla
+      a utnula se uprostřed JSONu.
+    */
+    const proud = client.messages.stream({
       model,
       max_tokens: maxTokens,
       output_config: bezEffortu ? { format } : { effort: "low", format },
       system,
       messages: [{ role: "user", content: JSON.stringify(vstup) }],
     });
+    const odpoved = await proud.finalMessage();
 
     if (odpoved.stop_reason === "refusal") {
       console.log(`[model] ${ucel}: model odmítl odpovědět`);
+      return null;
+    }
+    /*
+      Useknutá odpověď se nesmí tvářit jako prázdný výsledek: volající by ji
+      vzal jako „model nic nenašel" a práce by se tiše zahodila.
+    */
+    if (odpoved.stop_reason === "max_tokens") {
+      console.log(`[model] ${ucel}: odpověď se nevešla do stropu ${maxTokens} tokenů a utnula se`);
       return null;
     }
     return (odpoved.parsed_output as T) ?? null;
