@@ -47,30 +47,41 @@ jobs:
         with:
           node-version: "24"
 
+      # Sloučením, ne kopírováním souborů.
+      #
+      # První pokus bral z main jen data/ — a spadl na tom, že skript, který
+      # zadání sestavuje, na téhle větvi ještě nebyl. Sloučení srovná obojí
+      # naráz a zachová, co žije jen tady: PATROL.md a frontu zadání.
+      #
+      # `-X theirs` znamená, že při rozporu vyhrává main. Je to správně:
+      # Patrolovy výsledky se z téhle větve odvážejí do main hned po každém
+      # jeho pushi, takže main je novější verze téhož.
+      #
       # Balíčky se neinstalují: skript stojí jen na tom, co umí Node sám.
-      # Pro běh, který jen přepíše JSON, je `npm ci` zbytečná minuta.
-      - name: Srovnat data s main
+      - name: Srovnat větev s main
         run: |
           set -u
           git fetch origin main
-          git checkout origin/main -- data/
-          # Fronta zadání žije jen na téhle větvi. Kdyby ji přepsala verze
-          # z main, přišel by Patrol o to, co mu bylo zadáno a co odpověděl.
-          git checkout HEAD -- data/fronta/pro-patrola.json || true
+          git config user.name "fronta"
+          git config user.email "fronta@users.noreply.github.com"
+          git merge --no-edit -X theirs origin/main
 
       - name: Sestavit zadání z fronty
         run: node nastroje/zadani-pro-patrola.mjs
 
       - name: Odeslat na větev
         run: |
-          if [ -z "$(git status --porcelain data/)" ]; then
+          set -u
+          if [ -n "$(git status --porcelain data/)" ]; then
+            git add data/
+            git commit -m "Zadání pro Patrola $(date -u +'%Y-%m-%d %H:%M UTC')"
+          fi
+          # Push i tehdy, když se zadání nepřidalo: samotné sloučení s main
+          # je změna, kvůli které tenhle běh existuje.
+          if git diff --quiet HEAD origin/patrol/overovani; then
             echo "Patrol má data i zadání aktuální."
             exit 0
           fi
-          git config user.name "fronta"
-          git config user.email "fronta@users.noreply.github.com"
-          git add data/
-          git commit -m "Fronta a data pro Patrola $(date -u +'%Y-%m-%d %H:%M UTC')"
           for i in 1 2 3 4; do
             git push origin HEAD:patrol/overovani && break
             sleep $((2**i))
