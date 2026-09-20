@@ -593,7 +593,7 @@
     ],
     "datumUdalosti": "2026-09-14T00:00:00Z",
     "datumZjisteni": "2026-09-15T00:00:00Z",
-    "aktualizovano": "2026-09-19T11:08:33.575Z",
+    "aktualizovano": "2026-09-20T18:18:25.682Z",
     "zavaznost": "Y1",
     "jistota": "stredni",
     "stav": "bez-vysetrovani",
@@ -601,16 +601,17 @@
     "puvodce": null,
     "druh": "pripad",
     "fakta": [
-      "Východně od jezera Steinhuder Meer u Hannoveru byly nalezeny části pravděpodobně zřícené bezpilotní letadla.",
+      "Východně od jezera Steinhuder Meer u Hannoveru byly nalezeny části pravděpodobně zřícené bezpilotní letadla; podle ZDF je stroj rozbitý na několik dílů, nešlo o komerčně dostupný dron, ale o objekt s vlastními součástkami, částečně z 3D tisku (ZDF, 18. 9. 2026).",
       "Zemský kriminální úřad Dolního Saska o nálezu ví od pondělí 14. 9. 2026; policejní akce s hledáním dalších částí proběhla v úterý 15. 9. 2026.",
-      "Podle úřadu nehrozí obyvatelstvu nebezpečí; jde o zajištění bezpečnosti, ne o trestní věc (t-online).",
-      "Podle t-online byly části nalezeny asi 800 m od vojenského letiště Wunstorf, ne na jeho pozemku."
+      "Podle úřadu nehrozí obyvatelstvu nebezpečí; věc vede zemský kriminální úřad jako zajištění bezpečnosti (Gefahrenabwehrvorgang). Podle ZDF spolkový žalobce v případu Wunstorf nevyšetřuje a jen zvažuje, zda existuje souvislost s incidentem na letišti Lipsko/Halle.",
+      "Podle ZDF nebyla zjištěna stopa výbušniny."
     ],
     "neznameho": [
-      "Kdo je vlastníkem nebo pilotem dronu, odkud pocházel a jakého byl typu.",
-      "Přesné datum a čas pádu; 14. 9. je datum, od kdy o nálezu ví úřad, ne doložené datum události.",
-      "Zda běží trestní řízení: t-online uvádí, že ne, Antenne Niedersachsen uvádí, že úřad vede vyšetřování.",
-      "Vzdálenost od letiště se liší: 800 m (t-online), asi 1 km (Ukrajinska Pravda podle Bildu).",
+      "Kdo je vlastníkem nebo pilotem dronu a odkud pocházel; zdroje označují stroj za vlastní konstrukci, žádný typ ani původ neuvádějí.",
+      "Přesné datum a čas pádu; 14. 9. je datum, od kdy o nálezu ví úřad, ne doložené datum události. ZDF uvádí, že stroj tam nejspíš ležel delší dobu.",
+      "Vzdálenost od letiště se liší: asi 800 m (t-online), asi 1 km (Ukrajinska Pravda podle Bildu), asi 2 km (ZDF).",
+      "Zda běží trestní řízení: t-online uvádí, že ne, Antenne Niedersachsen uvádí, že úřad vede vyšetřování; ZDF uvádí, že spolkový žalobce neermituje a věc prověřuje jen ve vztahu k Lipsku.",
+      "Souvislost s incidentem v Lipsku: ZDF ji jmenuje jako předmět prověřování, ruský špionážní pokus uvádí jen s odkazem na bezpečnostní kruhy; nepotvrzeno a nepřipisuje se.",
       "Vyjádření policie ani Bundeswehru jsem přímo neotevřel; původní odkaz kandidáta (Novinky.cz přes Google News) jsem přímo neotevřel, jen jeho převzetí na prahanadlani.cz."
     ],
     "vyznam": "",
@@ -630,6 +631,14 @@
         "url": "https://hannover.t-online.de/region/hannover/id_101437222/drohnenteile-nahe-bundeswehr-fliegerhorst-wunstorf-entdeckt-grosseinsatz.html",
         "typ": "media",
         "publikovano": "2026-09-16T00:00:00Z",
+        "primarni": false,
+        "jazyk": "de"
+      },
+      {
+        "nazev": "ZDFheute — Drohnenfund in Wunstorf: Ermittler prüfen Verbindung zu Leipzig",
+        "url": "https://www.zdfheute.de/politik/deutschland/bundeswehr-fliegerhorst-wunstorf-drohnenfund-bundesanwaltschaft-leipzig-100.html",
+        "typ": "media",
+        "publikovano": "2026-09-18T00:00:00Z",
         "primarni": false,
         "jazyk": "de"
       },
