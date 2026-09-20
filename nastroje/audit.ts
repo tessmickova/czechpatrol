@@ -450,6 +450,22 @@ async function main() {
     }
   }
 
+  /*
+    Kandidát, jehož odkaz už je zdrojem návrhu nebo zveřejněného záznamu,
+    z fronty taky odchází.
+
+    Bez tohohle kroku zůstal viset: z posuzování ho vyřadí filtr na známé
+    adresy, takže se o něm už nikdy nerozhodne — a ve frontě se přitom dál
+    tváří, že na někoho čeká. Po úklidovém běhu 20. 9. 2026 takhle zbyly tři.
+  */
+  const zaznamPodleUrl = new Map(incidenty.flatMap((i) => i.zdroje.map((z) => [z.url, i.slug] as const)));
+  for (const k of kandidati) {
+    if (k.stav !== "ceka" || vyrizeno.has(k.id)) continue;
+    const slug = zaznamPodleUrl.get(k.zdroj.url);
+    if (slug) vyrizeno.set(k.id, { duvod: "pokracovani", patriK: slug });
+    else if (uzNavrzene.has(k.zdroj.url)) vyrizeno.set(k.id, { duvod: "zdroj-navrhu", patriK: null });
+  }
+
   const kdyVyrizeno = new Date().toISOString();
   let odepsano = 0;
   const kandidatiPoAuditu = kandidati.map((k) => {
