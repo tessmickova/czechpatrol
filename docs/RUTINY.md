@@ -16,9 +16,26 @@ v datech. Kdo data měnit má, je audit a externí ověřovatel — ti přístup
 
 | adresa | co v ní je |
 |---|---|
-| `https://czechpatrol.pages.dev/fronta.json` | zachycené zprávy čekající na ověření: titulek, země, datum, zdroj |
-| `https://czechpatrol.pages.dev/stav.json` | co web tvrdí o situaci, kdy naposledy běžel sběr, z jakého commitu je |
+| `https://czechpatrol.pages.dev/rutina.json` | **tahle je pro rutiny.** Provoz, situace, nepotvrzené bez úředního zdroje, nejnovější zachycené. Necelé 3 kB. |
+| `https://czechpatrol.pages.dev/fronta.json` | úplnější fronta pro jiné odběratele, ~12 kB |
+| `https://czechpatrol.pages.dev/stav.json` | co web tvrdí o situaci; čte ho API upozornění a veze kvůli němu 60 záznamů (~25 kB) |
 | `https://czechpatrol.pages.dev/` | samotný web |
+
+### Proč vlastní adresa
+
+Rutina je jazykový model a stránka se mu předává jako text. Dlouhý text se
+ořízne a modelu zbude rozbitý JSON — ohlásí chybu, přestože server odpověděl
+správně. Běh se přitom zapíše jako úspěšný, takže to zvenčí vypadá jako vada
+rutiny.
+
+20. 9. 2026 se to stalo: k `fronta.json` přibyly nepotvrzené záznamy se všemi
+zdroji a soubor vyskočil z 9 na 74 kB (88 % tvořily adresy z Google News,
+dlouhé i přes čtyři sta znaků). Spolu se `stav.json` to bylo přes sto
+kilobajtů na jeden běh.
+
+`rutina.json` proto veze jen to, na co se rutina ptá, a jeho velikost hlídá
+test. Kdo bude chtít přidat pole, musí se vejít — nebo si založit vlastní
+adresu, jako to udělala rutina.
 
 Návrhy záznamů mezi nimi nejsou. Čekají na lidské schválení a do té doby
 nejsou tvrzením projektu — vystavit je veřejně by z rozdělané práce udělalo
