@@ -21,7 +21,7 @@ import { Aktuality } from "./aktuality";
 import { UrgentniUpozorneni } from "./urgentni";
 import { Odznak, RadekSeznamu, TeckaZavaznosti, Tlacitko } from "./ui";
 import { PavucinaHrozeb } from "./pavucina";
-import { KaruselZemi } from "./karusel-zemi";
+import { TabulkaZemi } from "./tabulka-zemi";
 import { useZiveHodiny } from "@/lib/cas-klient";
 import { SignalySiti } from "./signaly-siti";
 import { TipyKPriprave } from "./tipy";
@@ -539,26 +539,36 @@ export function Dashboard({
 
       {/* 2c — čím je tlak tvořený: pavučina typů hrozeb */}
       <div className="nalet mt-14 border-t border-linka pt-12 sm:mt-20 sm:pt-14">
+        {/*
+          Popisek říká, co data opravdu jsou. Dřív tu stálo „za 90 dní", jenže
+          osy se počítají jako nejvyšší úroveň ze všech záznamů od roku 2014 —
+          bez časového filtru. Popisek, který slibuje jiný výřez než graf
+          ukazuje, je horší než žádný.
+        */}
         <NadpisSekce
           stitek="Typy událostí"
           nadpis={t("Typy evidovaných událostí")}
-          popis="Podle typu za 90 dní. Prázdná osa = odtud záznam nemáme."
+          popis="Nejvyšší doložená úroveň v každé oblasti od roku 2014. Prázdné pole = odtud takový záznam nemáme."
         />
         {/*
-          Jeden karusel, ne tři obrazce ve dvou velikostech. Evropa je první
-          karta, Česko hned za ní — porovnávat se dají jen věci, které jsou
-          stejně velké a stojí vedle sebe.
+          Jedna pavučina a jedna tabulka, ne třináct pavučin v karuselu.
+
+          Pavučina ukazuje tvar tlaku pro Evropu jako celek — na to je tvar
+          dobrý. Země se porovnávají v tabulce vedle: řádek země, sloupec typ,
+          v buňce tečka a slovo. Třináct skoro stejných šestiúhelníků vedle
+          sebe porovnat nešlo; tabulka se čte jedním pohledem.
         */}
-        <KaruselZemi
-          prvni={
-            <PavucinaHrozeb
-              nadpis="Evropa jako celek"
-              popis={t("Všechny sledované země od roku 2014.")}
-              tlak={tlakEvropa}
-              odkaz={{ href: "/metodika/", text: "jak se hodnotí →" }}
-            />
-          }
-        />
+        <div className="grid gap-4 lg:grid-cols-[minmax(0,2fr)_minmax(0,3fr)]">
+          <PavucinaHrozeb
+            nadpis="Evropa jako celek"
+            popis={t("Všechny sledované země od roku 2014.")}
+            tlak={tlakEvropa}
+            odkaz={{ href: "/metodika/", text: "jak se hodnotí →" }}
+            velikostObrazce={260}
+            sPopisky
+          />
+          <TabulkaZemi />
+        </div>
       </div>
 
       {/*

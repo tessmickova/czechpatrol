@@ -77,13 +77,22 @@ export function PavucinaHrozeb({
   tlak,
   odkaz,
   vlajka,
+  velikostObrazce = 150,
+  sPopisky = false,
 }: {
   nadpis: string;
   popis: string;
   tlak: HybridniTlak;
   odkaz?: { href: string; text: string };
-  /** Vlajka před názvem — jen v karuselu zemí. */
+  /** Vlajka před názvem. */
   vlajka?: React.ReactNode;
+  /**
+   * Velikost obrazce a popisky os. Výchozí je malý bez popisků — pro stránku
+   * země, kde názvy stojí v rozpisu pod ním. Na přehledu je pavučina jediná
+   * a velká, tam popisky dávají smysl.
+   */
+  velikostObrazce?: number;
+  sPopisky?: boolean;
 }) {
   return (
     /*
@@ -91,7 +100,7 @@ export function PavucinaHrozeb({
       od obsahu by byla příliš. Karet je v karuselu třináct a třináct
       orámovaných desek vedle sebe je mřížka, ne přehled.
     */
-    <section aria-label={nadpis} className="h-full rounded-[18px] bg-plocha/60 p-3 sm:p-3.5">
+    <section aria-label={nadpis} className="h-full rounded-[22px] border border-linka2 bg-plocha p-4 sm:p-5">
       <div className="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1">
         <h3 className="text-vetsi font-bold leading-tight flex flex-wrap items-center gap-x-2 gap-y-1">
           {vlajka}
@@ -113,7 +122,9 @@ export function PavucinaHrozeb({
         i s úrovní slovy. Dvakrát totéž, z toho jednou ořezaně.
       */}
       <div className="mt-2">
-        <div className="flex justify-center"><RadarTlaku tlak={tlak} velikost={150} okraj={18} bezPopisku /></div>
+        <div className="flex justify-center">
+          <RadarTlaku tlak={tlak} velikost={velikostObrazce} okraj={sPopisky ? 40 : 18} bezPopisku={!sPopisky} />
+        </div>
         <Rozpis tlak={tlak} />
       </div>
     </section>
