@@ -977,7 +977,17 @@ export async function sbirejUdalosti(): Promise<{ novych: number; celkem: number
         */
         zeSite: s.z.typ === "social" ? { kdo: s.z.nazev, role: "profil na síti", sit: s.z.klic } : null,
         shody,
-        naliehave: naliehavost(text),
+        /*
+          Naléhavý signál jen u zprávy, u které víme, kdy vyšla.
+
+          Signál odchází bez schválení, do hodiny od zachycení. Zpráva
+          z výpisu na stránce úřadu ale datum nemusí mít — a pak je stejně
+          stará jako nová. 20. 9. 2026 se takhle do fronty dostalo hlášení
+          estonské policie z 5. 9. 2024; kdyby v něm stálo slovo „mobilizace",
+          odešlo by jako poplach. Bez data se proto zpráva do fronty dostane,
+          ale poplach z ní není.
+        */
+        naliehave: p.publikovano ? naliehavost(text) : null,
         stav: "ceka",
       });
       adresy.add(p.odkaz);

@@ -312,6 +312,23 @@ if (fs.existsSync(path.join(dirUi, "zdroj.json"))) {
 }
 
 /*
+  Záznam, u kterého se nedá zjistit, kdy se to stalo.
+
+  Sběr vytahuje zprávy i z obyčejných výpisů na stránkách úřadů a ty datum
+  vydání nemusí mít. Do 20. 9. 2026 se taková zpráva zapsala s datem
+  zachycení, takže na webu vypadala jako dnešní — a jednou takhle prošlo
+  hlášení estonské policie z roku 2024. Sběr teď datum z výpisu čte a co
+  nepřečte, nechává prázdné.
+
+  Tady se hlídá následek: záznam, jehož žádný zdroj nenese datum vydání,
+  má datum události odněkud, kde se nedá ověřit.
+*/
+for (const i of incidenty) {
+  if ((i.zdroje ?? []).some((z) => z.publikovano)) continue;
+  varovani.push(`${i.slug}: žádný zdroj nenese datum vydání — datum události se nedá ověřit`);
+}
+
+/*
   Zdroj, který se tváří jako úřední, ale adresa vede jinam.
 
   U automaticky zveřejněného záznamu je to chyba, ne poznámka: zveřejnil se

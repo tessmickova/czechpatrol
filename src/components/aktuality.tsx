@@ -6,8 +6,7 @@ import { kdyZjisteno, type Zaznam } from "@/lib/agregace";
 import { PASMA, UROVNE } from "@/lib/skala";
 import type { Kandidat } from "@/lib/typy";
 import { Ikona } from "./ikony";
-import { PanelNahledu, type Nahled } from "./nahled-radku";
-import { useState } from "react";
+import { PanelNahledu, useNahled, type Nahled } from "./nahled-radku";
 
 /*
   Aktuality vedle úvodu.
@@ -90,13 +89,13 @@ export function Aktuality({
     .sort((a, b) => (b.publikovano ?? b.zachyceno).localeCompare(a.publikovano ?? a.zachyceno))
     .slice(0, zachycenych);
 
-  const [nahled, setNahled] = useState<Nahled | null>(null);
+  const { nahled, kde, ukaz, skryj, pohyb } = useNahled();
 
   return (
     <aside
       aria-labelledby="aktuality-nadpis"
       className="relative flex h-full flex-col overflow-hidden rounded-[28px] border border-linka2 bg-plocha xl:absolute xl:inset-0"
-      onPointerLeave={() => setNahled(null)}
+      onPointerLeave={skryj}
     >
       {/*
         Hlavička stejná jako v úvodu vedle: červená tečka a štítek. Barva je
@@ -121,20 +120,21 @@ export function Aktuality({
           return (
             <li
               key={z.slug}
-              onPointerEnter={() => setNahled({
+              onPointerEnter={(e) => ukaz({
                 titulek: z.titulek,
                 radky: [datumPraha(kdyZjisteno(z)), z.zeme, `závažnost ${UROVNE[z.zavaznost].nazev.toLowerCase()}`],
                 poznamka: "Ověřený záznam. Klepnutím se otevře i se zdroji.",
-              })}
+              }, e)}
+              onPointerMove={pohyb}
             >
               <Link
                 href={`/udalosti/?u=${z.slug}`}
                 className="flex items-baseline gap-2.5 px-4 py-2 hover:bg-plocha2"
-                onFocus={() => setNahled({
+                onFocus={(e) => ukaz({
                   titulek: z.titulek,
                   radky: [datumPraha(kdyZjisteno(z)), z.zeme, `závažnost ${UROVNE[z.zavaznost].nazev.toLowerCase()}`],
                   poznamka: "Ověřený záznam. Klepnutím se otevře i se zdroji.",
-                })}
+                }, e.currentTarget.getBoundingClientRect() as unknown as { clientX: number; clientY: number })}
               >
                 <span aria-hidden className={`h-[6px] w-[6px] shrink-0 translate-y-[-1px] rounded-full ${t.tecka}`} />
                 <span className="flex min-w-0 flex-1 items-baseline gap-2">
@@ -149,9 +149,19 @@ export function Aktuality({
 
       {zachycene.length > 0 && (
         <>
-          <div className="border-y border-linka2 bg-plocha2/60 px-4 py-2">
-            <div className="stitek flex items-center gap-1.5">
-              <Ikona nazev="otaznik" velikost={12} tah={2} />
+          {/*
+            Předěl v barvách značky: černá plocha, bílý nadpis, červený pruh.
+
+            Pravidlo „barva je značka, ne plocha" (docs/ZNACKA.md) tím zůstává
+            celé — plocha se netónuje, rámeček není barevný a písmo taky ne.
+            Červená je jen šestipixelový pruh u kraje a ikona, obojí povolené.
+            Nadpis je bílý místo tlumeného, protože tohle je předěl, ne popisek:
+            odtud dolů přestává platit, že si za tím projekt stojí.
+          */}
+          <div className="relative border-y border-linka2 bg-plocha2/60 py-2 pl-4 pr-4">
+            <span aria-hidden className="absolute left-0 top-0 h-full w-[6px] bg-akcent" />
+            <div className="stitek flex items-center gap-1.5 text-inkoust">
+              <Ikona nazev="otaznik" velikost={12} tah={2} trida="text-akcent" />
               Zachyceno, neověřeno
             </div>
             {/*
@@ -165,18 +175,23 @@ export function Aktuality({
           </div>
           <ul className="divide-y divide-linka2">
             {zachycene.map((k) => (
-              <li key={k.id} onPointerEnter={() => setNahled(nahledKandidata(k))}>
+              <li key={k.id} onPointerEnter={(e) => ukaz(nahledKandidata(k), e)} onPointerMove={pohyb}>
                 <a
                   href={k.zdroj.url}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-baseline gap-2.5 px-4 py-2 hover:bg-plocha2"
-                  onFocus={() => setNahled(nahledKandidata(k))}
+                  onFocus={(e) => { const r = e.currentTarget.getBoundingClientRect(); ukaz(nahledKandidata(k), { clientX: r.right, clientY: r.top }); }}
                 >
                   <span aria-hidden className="h-[6px] w-[6px] shrink-0 translate-y-[-1px] rounded-full border border-linka" />
                   <span className="flex min-w-0 flex-1 items-baseline gap-2">
                     <span className="cislice shrink-0 text-mikro text-tlum2">
-                      {datumPraha(k.publikovano ?? k.zachyceno)}
+                      {/*
+                        Když zdroj datum neuvádí, nepíše se datum zachycení.
+                        Vypadalo by to jako dnešní zpráva — a 20. 9. 2026 se
+                        takhle tvářilo hlášení estonské policie z roku 2024.
+                      */}
+                      {k.publikovano ? datumPraha(k.publikovano) : "bez data"}
                       {/*
                         Zdroj se sem nevešel a nechybí: odkaz vede přímo na něj.
                         Naléhavost ano — ta mění, jestli to má člověk číst teď.
@@ -193,7 +208,7 @@ export function Aktuality({
       )}
       </div>
 
-      <PanelNahledu nahled={nahled} />
+      <PanelNahledu nahled={nahled} kde={kde} />
 
       <div className="mt-auto border-t border-linka2 px-4 py-2.5">
         <Link href="/udalosti/" className="stitek text-tlum2 transition-colors hover:text-inkoust">
