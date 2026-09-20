@@ -9350,6 +9350,43 @@
     }
   },
   {
+    "id": "k-bef4f10a91c9bb35",
+    "zachyceno": "2026-09-20T03:02:30.244Z",
+    "publikovano": "2026-09-08T15:26:44.000Z",
+    "zdroj": {
+      "nazev": "Rumunsko — sabotaz",
+      "url": "https://news.google.com/rss/articles/CBMi3AFBVV95cUxNcWlWS0RPclphZE03amZ5UkJGcU5oTTcyNXhmOUZfVDl0VHlGdFFQWElHNTJ0b1FTcUpDYlk3YXk1NmFrdFpSMFpMRjZoOGxSQnpvM01VRFVNMHp4ZFFqUmR0UnBpNXZWXzJaNk9QS1BHNXlobndfZW1YcEtoM3BvWnN5M0FQdkdxdEk4VEZFaHpSQV9DSk1QQ0YxSzc3R2paSkxmenVFdWd3S2wzSHhzU2YwUVpKRFQ0ZkVJVEM1R3BMWWhWaHdSY19KNlVhNk5qMXVsYmxGQ1phMlpY?oc=5",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "V Rumunsku zadržen podezřelý ruský špion, zmařen plán sabotáže vojenských základen",
+    "titulekPuvodni": "Suspected Russian spy captured in Romania; intel services foil plan to sabotage military bases and critical infrastructure - Universul.net",
+    "shrnuti": "Rumunské zpravodajské služby zadržely podezřelého ruského agenta a zmařily plán sabotáže vojenských základen a kritické infrastruktury.",
+    "kodZeme": "RO",
+    "zeme": "Rumunsko",
+    "kategorie": [
+      "zpravodajske",
+      "sabotaz",
+      "infrastruktura",
+      "rusko"
+    ],
+    "druhOdhad": "pripad",
+    "klasifikace": "model",
+    "zeSite": null,
+    "shody": [
+      "sabotage",
+      "critical infrastructure",
+      "russia"
+    ],
+    "naliehave": null,
+    "stav": "ceka",
+    "vyrez": {
+      "text": "Google News",
+      "stazeno": "2026-09-20T03:04:05.164Z",
+      "stav": 200
+    }
+  },
+  {
     "id": "k-e107629aa9db7d01",
     "zachyceno": "2026-09-15T16:32:52.599Z",
     "publikovano": "2026-09-08T15:17:00.000Z",
@@ -10949,40 +10986,5 @@
       "stav": 200
     },
     "naliehave": null
-  },
-  {
-    "id": "k-be313ede18bcf6c0",
-    "zachyceno": "2026-09-19T18:02:36.742Z",
-    "publikovano": "2026-09-04T17:46:22.000Z",
-    "zdroj": {
-      "nazev": "Téma: energetika (anglicky)",
-      "url": "https://news.google.com/rss/articles/CBMiS0FVX3lxTFBjMWNXZUQ1eUducXZNczBmYmxpRDgxd1pjaEpSX0NLRXZYWURxVkVVZHJVXzhIVlozY214UXEyZ0JLQllTcnpyQXd4OA?oc=5",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Německo vyšetřuje další pokus o sabotáž rozvodny",
-    "titulekPuvodni": "Germany investigates new attempted sabotage at power substation as police search for man who claimed responsibility for prior attacks - theins.press",
-    "shrnuti": "Policie pátrá po muži, který se přihlásil k odpovědnosti za předchozí útoky na energetickou infrastrukturu.",
-    "kodZeme": "DE",
-    "zeme": "Německo",
-    "kategorie": [
-      "sabotaz",
-      "infrastruktura",
-      "vysetrovani"
-    ],
-    "druhOdhad": "pripad",
-    "klasifikace": "model",
-    "zeSite": null,
-    "shody": [
-      "sabotage",
-      "substation"
-    ],
-    "naliehave": null,
-    "stav": "ceka",
-    "vyrez": {
-      "text": "Google News",
-      "stazeno": "2026-09-19T18:04:20.821Z",
-      "stav": 200
-    }
   }
 ]
