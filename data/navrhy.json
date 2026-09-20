@@ -2150,5 +2150,69 @@
     "aiZpracovano": true,
     "lidskyOvereno": false,
     "archivniZaznam": false
+  },
+  {
+    "kam": "zaznam",
+    "pripravil": "audit",
+    "pripraveno": "2026-09-20T07:54:19.262Z",
+    "id": "i-2026-09-16-5e0064da30",
+    "slug": "pl-5e0064da30",
+    "titulek": "Polsko: stíhačky vzlétly, letiště Lublin a Rzeszów dočasně zastavila provoz kvůli ruskému útoku na Ukrajinu",
+    "kratkyTitulek": "Polsko: stíhačky vzlétly, letiště Lublin a Rzeszów dočasně zastavila provoz kvůli ruskému útoku na Ukrajinu",
+    "zeme": "Polsko",
+    "kodZeme": "PL",
+    "kategorie": [
+      "drony",
+      "rusko"
+    ],
+    "datumUdalosti": "2026-09-16T00:00:00Z",
+    "datumZjisteni": "2026-09-16T00:00:00Z",
+    "aktualizovano": "2026-09-20T07:54:19.262Z",
+    "zavaznost": "Y1",
+    "jistota": "vysoka",
+    "stav": "bez-vysetrovani",
+    "atribuce": "neznama",
+    "puvodce": null,
+    "druh": "opatreni",
+    "fakta": [
+      "Polsko vyslalo stíhačky a dočasně zastavilo provoz letišť v Lublinu a Rzeszówě",
+      "Šlo o preventivní opatření kvůli ruskému dronovému útoku na Ukrajinu",
+      "V ukrajinské Volyňské oblasti platily letecké poplachy"
+    ],
+    "neznameho": [],
+    "vyznam": "",
+    "eskalacniSpousteče": [],
+    "deeskalacniSignaly": [],
+    "zdroje": [
+      {
+        "nazev": "The Kyiv Independent — Poland scrambles fighter jets, temporarily closes airports while Russian drones attack Ukraine.",
+        "url": "https://kyivindependent.com/poland-scrambles-fighter-jets-temporarily-closes-airports-while-russian-drones-attack-ukraine/",
+        "typ": "media",
+        "publikovano": "2026-09-16T00:00:00Z",
+        "primarni": false,
+        "jazyk": "cs"
+      },
+      {
+        "nazev": "Google News — narušení vzdušného prostoru — Ruské drony na ukrajinsko-polské hranici vyplašily i Litvu. Vzlétly stíhačky",
+        "url": "https://news.google.com/rss/articles/CBMi3gFBVV95cUxQTjByRWFBY0VMeHFFWUQ1X0NPTGdfNWZNNldid3laUWdNZ2RBeEtuQkZhRUpnbjlEU2s4ME1pUlZpa3lFa0psSkduOGcyUWp1dTVwdng4TEtqbF9WaFFoX3J1S3E2T0tFS1AtYklOMDI0TGdwT0dBbVBldXhHMzNhTnQ5UjUzdFItMUNyeG44ZGQ0YmR4QW1TVWJaX2gyX0FuX0NiZm9EQzYxaVEwQWlhQkNxVnhSdDkzemo5bDJpbi1ucFZRR1RyU2wyTkJSWlBScDljOVNaUFczNXp2Qmc?oc=5",
+        "typ": "media",
+        "publikovano": "2026-09-13T00:00:00Z",
+        "primarni": false,
+        "jazyk": "cs"
+      }
+    ],
+    "souvisejici": [],
+    "historie": [
+      {
+        "kdy": "2026-09-16T00:00:00Z",
+        "text": "Zachyceno automatickým sběrem, posouzeno před zařazením do fronty.",
+        "novySignal": true
+      }
+    ],
+    "novy": true,
+    "zapocitanoTyden": "2026-09-16",
+    "aiZpracovano": true,
+    "lidskyOvereno": false,
+    "archivniZaznam": false
   }
 ]
