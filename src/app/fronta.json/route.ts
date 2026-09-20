@@ -23,6 +23,34 @@ export const dynamic = "force-static";
  * jinak: dokud návrh čekal, vypadal web, jako by se nic nedělo. Ukazují se
  * proto obojí a zřetelně oddělené — stejně jako na webu.
  */
+/*
+  Stropy na velikost.
+
+  Tohle není úspora místa, ale podmínka funkčnosti. Soubor čte rutina —
+  jazykový model, kterému se stránka předává jako text. Když je dlouhá,
+  ořízne se a modelu zbude rozbitý JSON; rutina pak hlásí chybu, přestože
+  server odpověděl správně.
+
+  20. 9. 2026 se to stalo: k frontě přibyly nepotvrzené záznamy i se všemi
+  zdroji a soubor vyskočil z 9 kB na 74 kB. Zdroje z Google News mají adresu
+  přes čtyři sta znaků, takže 88 % souboru byly odkazy, které rutina
+  k ničemu nepotřebuje.
+*/
+const NEJVYS_ZACHYCENYCH = 60;
+const NEJVYS_NEPOTVRZENYCH = 40;
+
+/**
+ * Jeden zdroj na ukázku, ne všechny.
+ *
+ * Přednost má úřední; z ostatních ta nejkratší adresa, protože přesměrování
+ * přes agregátor je dlouhé a k ničemu — vede na tentýž článek.
+ */
+function ukazkovyZdroj(zdroje: { url: string; typ?: string; primarni?: boolean }[]) {
+  const uredni = zdroje.find((z) => z.typ === "primary" || z.primarni);
+  const vybrany = uredni ?? [...zdroje].sort((a, b) => a.url.length - b.url.length)[0];
+  return vybrany?.url ?? null;
+}
+
 export function GET() {
   const vse = kandidati();
 
@@ -47,7 +75,7 @@ export function GET() {
       Vnitřní údaje (klasifikace, shody na klíčová slova, důvody odmítnutí)
       sem nepatří — rutina je k práci nepotřebuje a ven nemají chodit.
     */
-    zachyceno: vse.slice(0, 300).map((k) => ({
+    zachyceno: vse.slice(0, NEJVYS_ZACHYCENYCH).map((k) => ({
       id: k.id,
       titulek: k.titulek,
       zeme: k.zeme ?? null,
@@ -60,7 +88,7 @@ export function GET() {
       Nepotvrzené záznamy. Rutina z nich pozná, kde chybí úřední zdroj —
       a to je přesně práce, kterou umí udělat: dohledat ho.
     */
-    nepotvrzeno: nepotvrzeneZaznamy().map((z) => ({
+    nepotvrzeno: nepotvrzeneZaznamy().slice(0, NEJVYS_NEPOTVRZENYCH).map((z) => ({
       id: z.id,
       titulek: z.titulek,
       zeme: z.zeme,
@@ -68,7 +96,9 @@ export function GET() {
       datumUdalosti: z.datumUdalosti,
       zavaznost: z.zavaznost,
       maUredniZdroj: z.zdroje.some((x) => x.typ === "primary" && Boolean(x.url)),
-      zdroje: z.zdroje.map((x) => ({ nazev: x.nazev, url: x.url, typ: x.typ })),
+      zdrojuCelkem: z.zdroje.length,
+      /* Jeden na ukázku. Celý seznam je u záznamu na webu. */
+      zdroj: ukazkovyZdroj(z.zdroje),
     })),
   });
 }
