@@ -93,10 +93,12 @@ export function PasZemi({ vse, kampane = [], ted = Date.now() }: { vse: Zaznam[]
           mezi incidenty, takže „incidenty" je přesné slovo. `whitespace-nowrap`
           drží řádku i na mobilu, kde se zbytek ořízne tečkami.
         */}
-        <p className="truncate whitespace-nowrap pt-2 text-center text-mikro text-tlum2">
-          Incidenty za posledních 90 dní
-          {celkem > 0 && <span className="text-tlum"> · celkem {celkem}</span>}
-        </p>
+        <div className="flex justify-center pt-2">
+          <p className="truncate whitespace-nowrap text-mikro text-tlum2">
+            Incidenty za posledních 90 dní
+            {celkem > 0 && <span className="text-tlum"> · celkem {celkem}</span>}
+          </p>
+        </div>
         <div className="flex items-center pb-1.5">
           <PasBeh>
             {polozky("")}

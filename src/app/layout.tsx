@@ -7,6 +7,8 @@ import { PostranniPanel } from "@/components/postranni-panel";
 import { RegistraceSW } from "@/components/pwa";
 import { Paticka } from "@/components/paticka";
 import { PruhPuvodu, UkazkaPruh } from "@/components/pruhy";
+import { StavKontrolyVedle } from "@/components/banner-stari-klient";
+import { posledniKontrola } from "@/lib/data";
 import { PruhVystrahy } from "@/components/vystraha";
 import { Znacka } from "@/components/znacka";
 import { SKRIPT_POHYBU } from "@/components/pohyb";
@@ -95,7 +97,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           vždycky), nevykreslí se vůbec nic.
         */}
         <PruhVystrahy />
-        <PruhPuvodu />
+        <PruhPuvodu vpravo={<StavKontrolyVedle zkontrolovano={posledniKontrola()} ted={Date.now()} />} />
         <UkazkaPruh />
         {/*
           Dialogy místo alert/confirm/prompt. Obaluje obsah, aby se na ně dalo

@@ -138,7 +138,7 @@ export function Aktuality({
               >
                 <span aria-hidden className={`h-[6px] w-[6px] shrink-0 translate-y-[-1px] rounded-full ${t.tecka}`} />
                 <span className="flex min-w-0 flex-1 items-baseline gap-2">
-                  <span className="cislice shrink-0 text-mikro text-tlum2">{datumPraha(kdyZjisteno(z))}</span>
+                  <span className="cislice w-[74px] shrink-0 text-mikro text-tlum2">{datumPraha(kdyZjisteno(z))}</span>
                   <span className="truncate text-male leading-snug text-inkoust">{z.kratkyTitulek || z.titulek}</span>
                 </span>
               </Link>
@@ -150,16 +150,13 @@ export function Aktuality({
       {zachycene.length > 0 && (
         <>
           {/*
-            Předěl v barvách značky: černá plocha, bílý nadpis, červený pruh.
+            Předěl: černá plocha, bílý nadpis, červená ikona. Bez pruhu u kraje —
+            vypadal jako výstraha, a tohle výstraha není.
 
-            Pravidlo „barva je značka, ne plocha" (docs/ZNACKA.md) tím zůstává
-            celé — plocha se netónuje, rámeček není barevný a písmo taky ne.
-            Červená je jen šestipixelový pruh u kraje a ikona, obojí povolené.
-            Nadpis je bílý místo tlumeného, protože tohle je předěl, ne popisek:
-            odtud dolů přestává platit, že si za tím projekt stojí.
+            Nadpis je bílý místo tlumeného schválně: tohle je předěl, ne popisek.
+            Odtud dolů přestává platit, že si za tím projekt stojí.
           */}
-          <div className="relative border-y border-linka2 bg-plocha2/60 py-2 pl-4 pr-4">
-            <span aria-hidden className="absolute left-0 top-0 h-full w-[6px] bg-akcent" />
+          <div className="border-y border-linka2 bg-plocha2/60 px-4 py-2">
             <div className="stitek flex items-center gap-1.5 text-inkoust">
               <Ikona nazev="otaznik" velikost={12} tah={2} trida="text-akcent" />
               Zachyceno, neověřeno
@@ -185,7 +182,11 @@ export function Aktuality({
                 >
                   <span aria-hidden className="h-[6px] w-[6px] shrink-0 translate-y-[-1px] rounded-full border border-linka" />
                   <span className="flex min-w-0 flex-1 items-baseline gap-2">
-                    <span className="cislice shrink-0 text-mikro text-tlum2">
+                    {/*
+                      Pevná šířka, aby titulky lícovaly. „Bez data" je kratší
+                      než datum a bez ní začínaly řádky v různých místech.
+                    */}
+                    <span className="cislice w-[74px] shrink-0 text-mikro text-tlum2">
                       {/*
                         Když zdroj datum neuvádí, nepíše se datum zachycení.
                         Vypadalo by to jako dnešní zpráva — a 20. 9. 2026 se

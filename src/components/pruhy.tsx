@@ -1,3 +1,4 @@
+import type { ReactNode } from "react";
 import Link from "next/link";
 import { JE_UKAZKA } from "@/config/web";
 import { Napoveda } from "./zaklad";
@@ -64,11 +65,17 @@ export function OdznakUkazky() {
   výstrahu. Delší vysvětlení patří do patičky a na stránku o projektu —
   tady stačí šest slov, aby si nespletl zdroj.
 */
-export function PruhPuvodu() {
+export function PruhPuvodu({ vpravo }: { vpravo?: ReactNode }) {
   return (
     <div className="border-b border-linka2 bg-plocha2/60">
-      <div className="mx-auto max-w-[1280px] px-4 py-1.5 text-drobne text-tlum2 sm:px-6">
-        Nezávislý projekt, ne úřední zdroj. V nouzi 112.
+      {/*
+        Vpravo stav kontroly. Dřív měl vlastní pruh hned pod tímhle — dvě
+        tenké linky nad sebou kvůli dvěma větám. Když je co hlásit, vlastní
+        pruh dostane zpátky; klid se vejde sem.
+      */}
+      <div className="mx-auto flex max-w-[1280px] flex-wrap items-center justify-between gap-x-4 gap-y-0.5 px-4 py-1.5 text-drobne text-tlum2 sm:px-6">
+        <span>Nezávislý projekt, ne úřední zdroj. V nouzi 112.</span>
+        {vpravo}
       </div>
     </div>
   );

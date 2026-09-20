@@ -153,7 +153,7 @@ export function CoJeNoveho({
                   Bez data se datum nepíše. Datum zachycení by se četlo jako
                   den události — a u staré zprávy z výpisu úřadu je to lež.
                 */}
-                <span className="cislice shrink-0 text-mikro text-tlum2">
+                <span className="cislice w-[74px] shrink-0 text-mikro text-tlum2">
                   {r.bezData ? "bez data" : datumPraha(r.kdy)}
                 </span>
                 {SLOVO[r.druh] && <span className="stitek shrink-0 text-tlum2">{SLOVO[r.druh]}</span>}
