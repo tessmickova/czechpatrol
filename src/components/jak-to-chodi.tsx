@@ -43,8 +43,15 @@ const KROKY: Krok[] = [
     cislo: "3",
     nadpis: "Fronta návrhů",
     kdo: "automaticky",
-    co: "Návrh se objeví ve Správě. Má lidskyOvereno: false, nepočítá se do statistik a na webu není vidět.",
+    co: "Návrh se objeví ve Správě a zároveň na webu v Událostech pod záložkou „Nepotvrzené“. Má lidskyOvereno: false a do žádného počtu ani hodnocení nevstupuje.",
     zastavi: "Kontrola dat a testy. Zdroj starší než událost, chybějící fakta nebo druhý zdroj se sem nedostanou.",
+  },
+  {
+    cislo: "3b",
+    nadpis: "Nepotvrzeno na webu",
+    kdo: "automaticky",
+    co: "Nepotvrzený záznam je vidět hned, zřetelně oddělený a označený. Ukazuje se proto, že se to ve světě už stalo — čekání na schválení není důvod, aby web vypadal, jako by byl klid.",
+    zastavi: "Nikam nevede a nic netvrdí: odkazuje ven na zdroje, nemá vlastní stránku a do počtů nevstupuje.",
   },
   {
     cislo: "4",
@@ -62,6 +69,11 @@ interface Cil {
 }
 
 const KAM: Cil[] = [
+  {
+    nazev: "Nepotvrzené na webu (Události → Nepotvrzené)",
+    podminka: "návrh čeká na člověka",
+    kdy: "Hned, jakmile návrh vznikne. Je u něj napsáno, co chybí — druhý zdroj, úřední zdroj, nebo jen schválení. Do počtů ani do hodnocení nevstupuje a nemá vlastní stránku.",
+  },
   {
     nazev: "Záznamy a počty na webu — schválené",
     podminka: "schválil člověk",

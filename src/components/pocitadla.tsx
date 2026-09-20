@@ -14,7 +14,7 @@ function denPraha(iso: string) {
   return new Intl.DateTimeFormat("en-CA", { timeZone: "Europe/Prague", year: "numeric", month: "2-digit", day: "2-digit" }).format(new Date(iso));
 }
 
-export function Pocitadla({ vse, neprosle, kandidati = [], ted = Date.now() }: { vse: Zaznam[]; neprosle: Nepotvrzene[]; kandidati?: Kandidat[]; ted?: number }) {
+export function Pocitadla({ vse, neprosle, kandidati = [], nepotvrzenych = 0, ted = Date.now() }: { vse: Zaznam[]; neprosle: Nepotvrzene[]; kandidati?: Kandidat[]; nepotvrzenych?: number; ted?: number }) {
   const dnes = denPraha(new Date(ted).toISOString());
   const p = vse.filter((i) => druh(i) === "pripad");
   const rok = dnes.slice(0, 4);
@@ -44,6 +44,12 @@ export function Pocitadla({ vse, neprosle, kandidati = [], ted = Date.now() }: {
         */}
         <span className="ml-auto text-mikro text-tlum2">
           + {zbytek} {sklon(zbytek, "navazující záznam", "navazující záznamy", "navazujících záznamů")} · {neprosle.length} neprošlo ověřením
+          {/*
+            Nepotvrzené patří k číslům nalevo jako výhrada: tolik zpráv je
+            zpracovaných a do počtů se nepočítají. Bez toho vypadá klidný
+            týden stejně jako týden, ve kterém se jen nestihlo schvalovat.
+          */}
+          {nepotvrzenych > 0 && <> · <span className="text-akcent">{nepotvrzenych} nepotvrzeno</span></>}
           · <span className="text-akcent">{kandidati.length} čeká na ověření</span> · stav k {datumPraha(new Date(ted).toISOString())}
         </span>
       </div>

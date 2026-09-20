@@ -1,5 +1,5 @@
 import { WEB } from "@/config/web";
-import { kandidati, posledniKontrola } from "@/lib/data";
+import { kandidati, nepotvrzeneZaznamy, posledniKontrola } from "@/lib/data";
 
 export const dynamic = "force-static";
 
@@ -17,9 +17,11 @@ export const dynamic = "force-static";
  * zprávy jsou titulky a odkazy z veřejných zdrojů a web je stejně ukazuje
  * v oddílu „Zachyceno, neověřeno".
  *
- * Co tu NENÍ a nebude: návrhy záznamů. Ty čekají na lidské schválení a do
- * té doby nejsou tvrzením projektu — vystavit je veřejně by z rozdělané
- * práce udělalo zprávu.
+ * Od 20. 9. 2026 jsou tu i nepotvrzené záznamy — návrhy, které čekají na
+ * schválení. Dřív tu nebyly schválně, s odůvodněním, že rozdělaná práce není
+ * tvrzení projektu. To pořád platí, jen se ukázalo, že mlčení je zavádějící
+ * jinak: dokud návrh čekal, vypadal web, jako by se nic nedělo. Ukazují se
+ * proto obojí a zřetelně oddělené — stejně jako na webu.
  */
 export function GET() {
   const vse = kandidati();
@@ -53,6 +55,20 @@ export function GET() {
       kategorie: k.kategorie ?? [],
       publikovano: k.publikovano ?? k.zachyceno,
       zdroj: { nazev: k.zdroj?.nazev ?? null, url: k.zdroj?.url ?? null },
+    })),
+    /*
+      Nepotvrzené záznamy. Rutina z nich pozná, kde chybí úřední zdroj —
+      a to je přesně práce, kterou umí udělat: dohledat ho.
+    */
+    nepotvrzeno: nepotvrzeneZaznamy().map((z) => ({
+      id: z.id,
+      titulek: z.titulek,
+      zeme: z.zeme,
+      kodZeme: z.kodZeme,
+      datumUdalosti: z.datumUdalosti,
+      zavaznost: z.zavaznost,
+      maUredniZdroj: z.zdroje.some((x) => x.typ === "primary" && Boolean(x.url)),
+      zdroje: z.zdroje.map((x) => ({ nazev: x.nazev, url: x.url, typ: x.typ })),
     })),
   });
 }
