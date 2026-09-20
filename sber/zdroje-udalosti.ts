@@ -102,20 +102,102 @@ const TEMATA = [
   Kanály redakcí a úřadů. Tyhle se nepočítají z matice — buď existují, nebo ne,
   a to se pozná jen tím, že se zkusí: `npm run sber:kanaly`.
 */
-const PRIME: ZdrojUdalosti[] = [
-  /*
-    Čtyři úřední zdroje. Do 15. 9. 2026 tu stály jako adresy RSS — a všechny
-    čtyři vracely 404 nebo prázdno. Sběr tak běžel bez jediného primárního
-    zdroje a nebylo to nikde vidět: „nula zpráv z úřadu" vypadá stejně jako
-    klid. Teď tu jsou adresy tiskových stránek, o kterých je ZMĚŘENO, že
-    odpovídají a jde z nich číst (běh Ověření zdrojů); sběr je přečte jako
-    stránku, když z nich nepřijde RSS.
-  */
+/*
+  Úřední kanály.
+
+  Do 15. 9. 2026 tu stály čtyři adresy RSS a všechny vracely 404 nebo prázdno.
+  Sběr běžel bez jediného primárního zdroje a nebylo to nikde vidět: „nula
+  zpráv z úřadu" vypadá stejně jako klid. Od té doby tu jsou adresy, o kterých
+  je ZMĚŘENO, že odpovídají (běh Ověření zdrojů); sběr je přečte jako stránku,
+  když z nich nepřijde RSS.
+
+  20. 9. 2026 se seznam rozšířil o zahraniční úřady. Důvod je měřitelný:
+  z 25 návrhů čekajících ve Správě neměl ani jeden úřední zdroj, takže
+  pravidlo pro automatické zveřejnění (dva nezávislé zdroje, aspoň jeden
+  úřední) nemohlo projít ani jednou. Nešlo o přísnost pravidla — šlo o to,
+  že úřední zdroj nebylo kde vzít. Zpráva o sabotáži na nizozemské železnici
+  měla dvanáct doložených zdrojů a všechny byly média.
+
+  Co sem patří: úřad, bezpečnostní služba, armáda, národní CERT, nebo
+  provozovatel infrastruktury, která je předmětem události — ten oznamuje
+  vlastní výpadek jako první ruka. Co sem nepatří: cokoli, co o věci
+  referuje. Redakce jsou o kus níž a `primarni: false`.
+*/
+const URADY: ZdrojUdalosti[] = [
+  /* Mezinárodní a evropské */
   { klic: "nato-news", nazev: "NATO — novinky", url: "https://www.nato.int/cps/en/natohq/news.htm", jazyk: "en", primarni: true, typ: "primary" },
+  { klic: "europol", nazev: "Europol — newsroom", url: "https://www.europol.europa.eu/newsroom", jazyk: "en", primarni: true, typ: "primary" },
+  { klic: "enisa", nazev: "ENISA — news", url: "https://www.enisa.europa.eu/news", jazyk: "en", primarni: true, typ: "primary" },
+  { klic: "eu-rada", nazev: "Rada EU — tiskové zprávy", url: "https://www.consilium.europa.eu/en/press/press-releases/", jazyk: "en", primarni: true, typ: "primary" },
+  { klic: "eu-komise", nazev: "Evropská komise — presscorner", url: "https://ec.europa.eu/commission/presscorner/home/en", jazyk: "en", primarni: true, typ: "primary" },
+
+  /* Česko */
   { klic: "policie-rss", nazev: "Policie ČR — aktuality", url: "https://www.policie.cz/", jazyk: "cs", primarni: true, typ: "primary" },
   { klic: "nukib-rss", nazev: "NÚKIB — aktuality", url: "https://nukib.gov.cz/cs/infoservis/aktuality/", jazyk: "cs", primarni: true, typ: "primary" },
   { klic: "vlada-rss", nazev: "Vláda ČR — tiskové zprávy", url: "https://vlada.gov.cz/cz/media-centrum/tiskove-zpravy/", jazyk: "cs", primarni: true, typ: "primary" },
-  { klic: "cro-rss", nazev: "Český rozhlas — domácí zprávy", url: "https://www.irozhlas.cz/rss/irozhlas/zpravy-domov", jazyk: "cs", primarni: true, typ: "primary" },
+  { klic: "mvcr", nazev: "Ministerstvo vnitra — tiskové zprávy", url: "https://www.mvcr.cz/clanek/tiskove-zpravy.aspx", jazyk: "cs", primarni: true, typ: "primary" },
+  { klic: "bis", nazev: "BIS — aktuality", url: "https://www.bis.cz/aktuality/", jazyk: "cs", primarni: true, typ: "primary" },
+  { klic: "hzscr", nazev: "Hasičský záchranný sbor — zpravodajství", url: "https://www.hzscr.cz/", jazyk: "cs", primarni: true, typ: "primary" },
+  /*
+    Provozovatelé sítí. Výpadek přenosové soustavy nebo zásah do železnice
+    oznamuje jejich správce dřív a přesněji než kdokoli jiný.
+  */
+  { klic: "ceps", nazev: "ČEPS — tiskové zprávy", url: "https://www.ceps.cz/cs/tiskove-zpravy", jazyk: "cs", primarni: true, typ: "primary" },
+  { klic: "sprava-zeleznic", nazev: "Správa železnic — pro média", url: "https://www.spravazeleznic.cz/o-nas/pro-media/tiskove-zpravy", jazyk: "cs", primarni: true, typ: "primary" },
+
+  /* Německo */
+  { klic: "bsi-de", nazev: "BSI — Presse", url: "https://www.bsi.bund.de/DE/Service-Navi/Presse/presse_node.html", jazyk: "en", primarni: true, typ: "primary" },
+  { klic: "bmi-de", nazev: "Spolkové ministerstvo vnitra — Pressemitteilungen", url: "https://www.bmi.bund.de/SharedDocs/pressemitteilungen/DE/pressemitteilungen-node.html", jazyk: "en", primarni: true, typ: "primary" },
+  { klic: "bundesregierung", nazev: "Spolková vláda — aktuality", url: "https://www.bundesregierung.de/breg-de/aktuelles", jazyk: "en", primarni: true, typ: "primary" },
+  { klic: "gba-de", nazev: "Spolkový generální prokurátor — tisk", url: "https://www.generalbundesanwalt.de/DE/Presse/Presse_node.html", jazyk: "en", primarni: true, typ: "primary" },
+
+  /* Polsko */
+  { klic: "cert-pl", nazev: "CERT Polska — aktuality", url: "https://cert.pl/posts/", jazyk: "en", primarni: true, typ: "primary" },
+  { klic: "mon-pl", nazev: "Ministerstvo obrany Polska — zprávy", url: "https://www.gov.pl/web/obrona-narodowa/wiadomosci", jazyk: "en", primarni: true, typ: "primary" },
+  { klic: "abw-pl", nazev: "ABW — aktuality", url: "https://www.abw.gov.pl/pl/aktualnosci", jazyk: "en", primarni: true, typ: "primary" },
+
+  /* Nizozemsko */
+  { klic: "rijksoverheid", nazev: "Nizozemská vláda — nieuws", url: "https://www.rijksoverheid.nl/actueel/nieuws", jazyk: "en", primarni: true, typ: "primary" },
+  { klic: "politie-nl", nazev: "Nizozemská policie — nieuws", url: "https://www.politie.nl/nieuws", jazyk: "en", primarni: true, typ: "primary" },
+  { klic: "ncsc-nl", nazev: "NCSC Nizozemsko — actueel", url: "https://www.ncsc.nl/actueel/nieuws", jazyk: "en", primarni: true, typ: "primary" },
+  { klic: "nctv-nl", nazev: "NCTV — actueel", url: "https://www.nctv.nl/actueel/nieuws", jazyk: "en", primarni: true, typ: "primary" },
+  { klic: "prorail", nazev: "ProRail — nieuws", url: "https://www.prorail.nl/nieuws", jazyk: "en", primarni: true, typ: "primary" },
+
+  /* Pobaltí */
+  { klic: "cert-lv", nazev: "CERT.LV — aktuality", url: "https://cert.lv/lv/incidenti-un-bridinajumi", jazyk: "en", primarni: true, typ: "primary" },
+  { klic: "ria-ee", nazev: "RIA (Estonsko) — news", url: "https://www.ria.ee/en/news", jazyk: "en", primarni: true, typ: "primary" },
+  { klic: "politsei-ee", nazev: "Estonská policie — news", url: "https://www.politsei.ee/en/news", jazyk: "en", primarni: true, typ: "primary" },
+  { klic: "kapo-ee", nazev: "KAPO (Estonsko) — news", url: "https://kapo.ee/en", jazyk: "en", primarni: true, typ: "primary" },
+  { klic: "nksc-lt", nazev: "NKSC (Litva) — naujienos", url: "https://www.nksc.lt/naujienos.html", jazyk: "en", primarni: true, typ: "primary" },
+  { klic: "kam-lt", nazev: "Ministerstvo obrany Litvy — news", url: "https://kam.lt/en/news/", jazyk: "en", primarni: true, typ: "primary" },
+
+  /* Severské státy */
+  { klic: "msb-se", nazev: "MSB (Švédsko) — news", url: "https://www.msb.se/en/news/", jazyk: "en", primarni: true, typ: "primary" },
+  { klic: "sapo-se", nazev: "Säkerhetspolisen — news", url: "https://sakerhetspolisen.se/en/news.html", jazyk: "en", primarni: true, typ: "primary" },
+  { klic: "kyber-fi", nazev: "Kyberturvallisuuskeskus (Finsko)", url: "https://www.kyberturvallisuuskeskus.fi/en/news", jazyk: "en", primarni: true, typ: "primary" },
+  { klic: "raja-fi", nazev: "Finská pohraniční stráž — current issues", url: "https://raja.fi/en/current-issues", jazyk: "en", primarni: true, typ: "primary" },
+  { klic: "nsm-no", nazev: "NSM (Norsko) — aktuelt", url: "https://nsm.no/aktuelt/", jazyk: "en", primarni: true, typ: "primary" },
+  { klic: "pst-no", nazev: "PST (Norsko) — články", url: "https://pst.no/alle-artikler/", jazyk: "en", primarni: true, typ: "primary" },
+  { klic: "pet-dk", nazev: "PET (Dánsko) — nyheder", url: "https://www.pet.dk/nyheder", jazyk: "en", primarni: true, typ: "primary" },
+  { klic: "forsvaret-dk", nazev: "Dánská armáda — nyheder", url: "https://www.forsvaret.dk/da/nyheder/", jazyk: "en", primarni: true, typ: "primary" },
+
+  /* Rumunsko a Moldavsko */
+  { klic: "dnsc-ro", nazev: "DNSC (Rumunsko)", url: "https://dnsc.ro/", jazyk: "en", primarni: true, typ: "primary" },
+  { klic: "mapn-ro", nazev: "Ministerstvo obrany Rumunska — comunicate", url: "https://www.mapn.ro/comunicate/", jazyk: "en", primarni: true, typ: "primary" },
+  { klic: "gov-md", nazev: "Vláda Moldavska — novinky", url: "https://gov.md/ro/rss", jazyk: "en", primarni: true, typ: "primary" },
+
+  /* Slovensko, Rakousko */
+  { klic: "sk-cert", nazev: "SK-CERT — aktuality", url: "https://www.sk-cert.sk/sk/aktuality/", jazyk: "cs", primarni: true, typ: "primary" },
+  { klic: "bmi-at", nazev: "Rakouské ministerstvo vnitra — news", url: "https://www.bmi.gv.at/news.aspx", jazyk: "en", primarni: true, typ: "primary" },
+
+  /* Británie */
+  { klic: "ncsc-uk", nazev: "NCSC UK — news", url: "https://www.ncsc.gov.uk/section/keep-up-to-date/all-reports", jazyk: "en", primarni: true, typ: "primary" },
+  { klic: "govuk", nazev: "GOV.UK — news and communications", url: "https://www.gov.uk/search/news-and-communications", jazyk: "en", primarni: true, typ: "primary" },
+];
+
+/* Redakce. Referují o věci, neoznamují ji — proto nikdy `primarni`. */
+const REDAKCE: ZdrojUdalosti[] = [
+  { klic: "cro-rss", nazev: "Český rozhlas — domácí zprávy", url: "https://www.irozhlas.cz/rss/irozhlas/zpravy-domov", jazyk: "cs", primarni: false, typ: "media" },
   { klic: "irozhlas", nazev: "iROZHLAS — zprávy", url: "https://www.irozhlas.cz/rss/irozhlas", jazyk: "cs", primarni: false, typ: "media" },
   { klic: "ct24", nazev: "ČT24 — hlavní zprávy", url: "https://ct24.ceskatelevize.cz/rss/hlavni-zpravy", jazyk: "cs", primarni: false, typ: "media" },
   { klic: "bbc-europe", nazev: "BBC News — Europe", url: "https://feeds.bbci.co.uk/news/world/europe/rss.xml", jazyk: "en", primarni: false, typ: "media" },
@@ -145,11 +227,17 @@ const PO_ZEMICH: ZdrojUdalosti[] = ZEME.filter((z) => z.blizke).flatMap((z) =>
   })),
 );
 
-export const ZDROJE_UDALOSTI: ZdrojUdalosti[] = [...PRIME, ...OBECNE, ...PO_ZEMICH];
+export const ZDROJE_UDALOSTI: ZdrojUdalosti[] = [...URADY, ...REDAKCE, ...OBECNE, ...PO_ZEMICH];
 
 /** Pro ověřovací běh a testy: z čeho se katalog skládá. */
 export const KATALOG = {
   ZEME,
   TEMATA,
-  pocty: { prime: PRIME.length, obecne: OBECNE.length, poZemich: PO_ZEMICH.length, celkem: PRIME.length + OBECNE.length + PO_ZEMICH.length },
+  pocty: {
+    urady: URADY.length,
+    redakce: REDAKCE.length,
+    obecne: OBECNE.length,
+    poZemich: PO_ZEMICH.length,
+    celkem: URADY.length + REDAKCE.length + OBECNE.length + PO_ZEMICH.length,
+  },
 };
