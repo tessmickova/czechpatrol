@@ -1,5 +1,59 @@
 [
   {
+    "id": "k-31023f510e651b21",
+    "zachyceno": "2026-09-20T14:02:30.385Z",
+    "publikovano": "2026-09-20T13:37:00.000Z",
+    "zdroj": {
+      "nazev": "Český rozhlas — domácí zprávy",
+      "url": "https://www.irozhlas.cz/zivotni-styl/spolecnost/pred-35-lety-turiste-v-alpach-objevili-ledoveho-muze-mysleli-ze-je-horolezec_2609201537_vsn",
+      "typ": "primary",
+      "primarni": true
+    },
+    "titulek": "Před 35 lety turisté v Alpách objevili ledového muže. Mysleli, že to je horolezec, ležel tam ale přes 5000 let",
+    "shrnuti": "Před 35 lety objevili turisté vysoko v Alpách tělo muže, který tam ležel přes pět tisíc let. Ledový muž Ötzi se od té doby stal jednou z nejslavnějších mumií světa. Vědci vědí, co měl před smrtí k jídlu, jakými nemocemi trpěl nebo jak pravděpodobně vypadal. Přesto dodnes netuší, kdo ho zabil a proč.",
+    "duvod": "bez-skutku",
+    "kategorie": [],
+    "posouzeni": null
+  },
+  {
+    "id": "k-b6706ea05bfd77a3",
+    "zachyceno": "2026-09-20T14:02:30.386Z",
+    "publikovano": "2026-09-20T13:25:00.000Z",
+    "zdroj": {
+      "nazev": "Český rozhlas — domácí zprávy",
+      "url": "https://www.irozhlas.cz/kultura/divadlo/pocta-tem-kteri-prekracuji-hranice-lidskych-moznosti-divadlo-f-x-saldy-uvadi_2609201525_bva",
+      "typ": "primary",
+      "primarni": true
+    },
+    "titulek": "‚Pocta těm, kteří překračují hranice lidských možností.‘ Divadlo F. X. Šaldy uvádí Cirkus Humberto",
+    "shrnuti": "Liberecké Divadlo F. X. Šaldy se v neděli večer promění v Cirkus Humberto. Půjde o první premiéru letošní sezony. Divákům představí život cirkusových umělců, akrobatů i tanečníků. A součástí hry budou také zvířata.",
+    "duvod": "bez-skutku",
+    "kategorie": [
+      "hranice"
+    ],
+    "posouzeni": null
+  },
+  {
+    "id": "k-7a181a8d42275518",
+    "zachyceno": "2026-09-20T14:02:30.387Z",
+    "publikovano": "2026-09-20T13:03:00.000Z",
+    "zdroj": {
+      "nazev": "Český rozhlas — domácí zprávy",
+      "url": "https://www.irozhlas.cz/zpravy-svet/prvni-volby-v-rusku-od-pocatku-invaze-sir-vzdy-dojdete-ke-konkretnimu-vysledku_2609201503_elev",
+      "typ": "primary",
+      "primarni": true
+    },
+    "titulek": "První volby v Rusku od počátku invaze. Šír: Vždy dojdete ke konkrétnímu výsledku, systém je pokřiven",
+    "shrnuti": "V Rusku se od pátku konají volby do Státní dumy, dolní komory ruského parlamentu, první od počátku ruské invaze na Ukrajinu v únoru 2022. Ukrajina od soboty vypustila na Rusko více než 1600 dronů, z toho 450 na Moskvu, řekl starosta metropole Sergej Sobyanin. Pro Radiožurnál odpovídal Jan Šír z Kate",
+    "duvod": "vylouceno-tematem",
+    "kategorie": [
+      "drony",
+      "rusko",
+      "cr"
+    ],
+    "posouzeni": null
+  },
+  {
     "id": "k-0ff9a401bcd605b5",
     "zachyceno": "2026-09-20T13:02:20.647Z",
     "publikovano": "2026-09-20T12:56:00.000Z",
@@ -298,6 +352,24 @@
     "duvod": "bez-skutku",
     "kategorie": [
       "vojsko"
+    ],
+    "posouzeni": null
+  },
+  {
+    "id": "k-5cf5fbfbedeee7a6",
+    "zachyceno": "2026-09-20T14:02:30.761Z",
+    "publikovano": "2026-09-20T10:23:07.000Z",
+    "zdroj": {
+      "nazev": "Česko — sabotaz",
+      "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxQdDB5N25hdXRVelZiVWRkd1o3c1Yzdk1zVmxTekhWZ2ctWEwteEtVY3dpOW5Ma1Q0OFdNbUxMaVk2TE0xb3ZjWmJoTmF4VHNCbXV5LTZBcl9hQ0N6VFdnckQzbFNwWFRIQmh5SEpMU0NJTm9ta3NrRHljYmJQYVVVQ0o3NFF6UHRyNjFUa1pMNExiZDhqU2JrajdhS05adTVYbWJnX0dCOHpKdTRERE5IU3JYZGo4LURpR0Z1M0FPNHJCQdIBwgFBVV95cUxQdDB5N25hdXRVelZiVWRkd1o3c1Yzdk1zVmxTekhWZ2ctWEwteEtVY3dpOW5Ma1Q0OFdNbUxMaVk2TE0xb3ZjWmJoTmF4VHNCbXV5LTZBcl9hQ0N6VFdnckQzbFNwWFRIQmh5SEpMU0NJTm9ta3NrRHljYmJQYVVVQ0o3NFF6UHRyNjFUa1pMNExiZDhqU2JrajdhS05adTVYbWJnX0dCOHpKdTRERE5IU3JYZGo4LURpR0Z1M0FPNHJCQQ?oc=5",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "From an offer on networks to sabotage: how they capture the so-called one-use agents - Demócrata",
+    "shrnuti": "From an offer on networks to sabotage: how they capture the so-called one-use agents Demócrata",
+    "duvod": "bez-mista",
+    "kategorie": [
+      "sabotaz"
     ],
     "posouzeni": null
   },
@@ -3595,6 +3667,24 @@
       "duvod": "Český vzdušný prostor, gripenové stíhačky, vzduchobraná",
       "kdy": "2026-09-19T10:03:46.805Z"
     }
+  },
+  {
+    "id": "k-5bffc5705ebcac9e",
+    "zachyceno": "2026-09-20T14:02:30.693Z",
+    "publikovano": "2026-09-18T14:59:00.000Z",
+    "zdroj": {
+      "nazev": "Téma: vzdusna-obrana (česky)",
+      "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxQS05zOEFwNVgycHZxbERBajAzUXZycFdKUTdwQm5feDczLTQtM2w2QjliY3J0RGhIeWhEeVRjTzhQTDRZLUtELVJyOVRKRXJnUzhVQnJyX2dCZmdHdXVuUVFXRTBxVkxTREhCMmMyZk5KaEM0dDRmYzBLWkFhbnZRLU90QXpyMmZtNXRmbUNxUlYzdFcwc0NHWTE1M2dCa0JkaC0wTlZDUl9uLUdqaEt0SlBKcmo1Nms?oc=5",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Ostrý start českých gripenů. Kvůli dronům na Ukrajině vzlétly k polské hranici - iDNES.cz",
+    "shrnuti": "Ostrý start českých gripenů. Kvůli dronům na Ukrajině vzlétly k polské hranici iDNES.cz",
+    "duvod": "bez-skutku",
+    "kategorie": [
+      "drony"
+    ],
+    "posouzeni": null
   },
   {
     "id": "k-45499b28f126b454",
@@ -10136,110 +10226,6 @@
     "posouzeni": {
       "podezreni": "stredni",
       "duvod": "Nouzový stav po povodních v USA",
-      "kdy": "2026-09-19T13:05:21.142Z"
-    }
-  },
-  {
-    "id": "k-928efef6600a72bb",
-    "zachyceno": "2026-09-16T03:32:58.852Z",
-    "publikovano": "2026-09-15T21:20:09.000Z",
-    "zdroj": {
-      "nazev": "Dánsko — sabotaz",
-      "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE43ZEZELUdZSUdjOXVqRXVLN1pRTmZoLTZCT3kxV2ZxUkVZR0otZ2JsOUlUOEs5LWx3cVZnUmtYcHRwS1FNM240NElZRHExR0FqdTFpTkZBcDlZanZvU0VLeW54X1Bwclcwb1h4ak1qVS0?oc=5",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "EU weighs tougher response to Russian hybrid attacks as Parliament prepares vote - EU Today",
-    "shrnuti": "EU weighs tougher response to Russian hybrid attacks as Parliament prepares vote EU Today",
-    "duvod": "bez-skutku",
-    "kategorie": [
-      "rusko"
-    ],
-    "posouzeni": {
-      "podezreni": "stredni",
-      "duvod": "EU řeší reakci na ruské hybridní útoky",
-      "kdy": "2026-09-19T13:05:21.142Z"
-    }
-  },
-  {
-    "id": "k-ae84b24c80931ce6",
-    "zachyceno": "2026-09-15T21:32:48.098Z",
-    "publikovano": "2026-09-15T21:19:00.000Z",
-    "zdroj": {
-      "nazev": "Český rozhlas — domácí zprávy",
-      "url": "https://www.irozhlas.cz/sport/ostatni-sporty/volejbal-mistrovstvi-evropy-cesko-italie_2609152319_kri",
-      "typ": "primary",
-      "primarni": true
-    },
-    "titulek": "Čeští volejbalisté poprvé na mistrovství Evropy ztratili, favorizovaným Italům podlehli 1:3 na sety",
-    "shrnuti": "Čeští volejbalisté na letošním mistrovství Evropy poprvé prohráli. Světovým šampionům Italům podlehli 1:3. Úvodní dějství sice díky takřka bezchybnému útoku vyhráli 25:23, ale pak domácí favorité před vyprodanou halou v Modeně zvýšili agresivitu a další tři sady získali v poměru 25:16 a dvakrát 25:2",
-    "duvod": "bez-skutku",
-    "kategorie": [],
-    "posouzeni": {
-      "podezreni": "zadne",
-      "duvod": "Sportovní zpráva o volejbale",
-      "kdy": "2026-09-19T13:05:21.142Z"
-    }
-  },
-  {
-    "id": "k-79df5d7cb8a9d1a5",
-    "zachyceno": "2026-09-15T21:32:48.099Z",
-    "publikovano": "2026-09-15T21:11:00.000Z",
-    "zdroj": {
-      "nazev": "Český rozhlas — domácí zprávy",
-      "url": "https://www.irozhlas.cz/kultura/hudba/macklemore-po-podpore-palestiny-konci-na-turne-se-sheeranem-majitele-stadionu-mu_2609152311_elev",
-      "typ": "primary",
-      "primarni": true
-    },
-    "titulek": "Macklemore po podpoře Palestiny končí na turné se Sheeranem. Majitelé stadionů mu zakázali vstup",
-    "shrnuti": "Americký rapper Macklemore nedokončí turné po USA, na kterém byl předskokanem anglického muzikanta Eda Sheerana. Majitelé koncertních sálů se rozhodli mu zakázat vstup. Na jednom z předchozích koncertů Macklemore žádal „svobodu Palestině“ a mluvil o „genocidě v Gaze“. Petice neziskové organizace Izr",
-    "duvod": "vylouceno-tematem",
-    "kategorie": [],
-    "posouzeni": {
-      "podezreni": "zadne",
-      "duvod": "Zrušení účasti rappera na turné",
-      "kdy": "2026-09-19T13:05:21.142Z"
-    }
-  },
-  {
-    "id": "k-528d19c2cb8f01fd",
-    "zachyceno": "2026-09-19T08:00:22.305Z",
-    "publikovano": "2026-09-15T21:00:00.000Z",
-    "zdroj": {
-      "nazev": "Téma: kyber (anglicky)",
-      "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxOWktsX0o4SThJOVVIdnAzZ25uenhJSXJSVy1xTXk3NXJmVEJmb05BSExEY292dFpjZFJNdUFWdkJmUWJ3UmNXc1ZFU1U1YlNXZmtLS1F1OXJ4eU0zWi0yakE0Zk5tcXl4bE1LS2dQM3djLVBMV1hZMGprU2VaSEpLa0FfdDFtUUF0dWE1Tk4yVUZGTUR3eDN0LUprMTdlNkhFZmZ4Ym9nMkM2NlI0MFVyZmMzM1ZSendmVjZYczlMT3IyQlhyVE9N0gHMAUFVX3lxTFBNNkVRTXVYa2J5OHlvU0trdkowNk9fS2YtYWVNTTBwMWM4OG5peGdwcHNHazVTczR0TWdiNnd3SERrS0hPQVZad3c5cmQ1aDE4RURFc1lEeml2aHB2Zm5QMmhnYW5wVTdpcGJhOWJnT3NZN3FfNXFnR2VDYXVOdTZiRG5VdEdYaUg1TkJxLWlUVWZ0YUtKLUVfVW14YVRIRlNFX1YxSDE1aXBxNWl4a3BvOFpqWTBQWTY4UlU0SzF2Q0owbzlhZHRzS3BBWQ?oc=5",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Sam Altman Is Selling Utilities the Cure for a Cyberattack His Own AI Caused - Crude Oil Prices Today | OilPrice.com",
-    "shrnuti": "Sam Altman Is Selling Utilities the Cure for a Cyberattack His Own AI Caused Crude Oil Prices Today | OilPrice.com",
-    "duvod": "bez-mista",
-    "kategorie": [
-      "kyber"
-    ],
-    "posouzeni": {
-      "podezreni": "stredni",
-      "duvod": "Zmínka o kybernetickém útoku způsobeném AI",
-      "kdy": "2026-09-19T13:05:21.142Z"
-    }
-  },
-  {
-    "id": "k-a4f6113110293f72",
-    "zachyceno": "2026-09-15T21:02:54.304Z",
-    "publikovano": "2026-09-15T20:57:00.000Z",
-    "zdroj": {
-      "nazev": "iROZHLAS — zprávy",
-      "url": "https://www.irozhlas.cz/veda-technologie/priroda/tani-ledovcu-v-himalaji-zrychluje-blizi-se-bodu-zlomu-vedci-volaji-po-zmene_2609152257_elev",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Tání ledovců v Himálaji zrychluje, blíží se bodu zlomu. Vědci volají po změně přístupu k turistům",
-    "shrnuti": "Rychlejší tání ledovců ohrožuje pohoří Himálaj. Vyplývá to podle britské BBC z nového výzkumu Systemiq. Výsledky studie přichází po devastujících povodních v Nepálu a Tibetu, při kterých zahynulo více než 1300 lidí. Neštěstí upozornilo na měnící se životní prostředí Himálaje a na nedostatečné monito",
-    "duvod": "bez-skutku",
-    "kategorie": [],
-    "posouzeni": {
-      "podezreni": "zadne",
-      "duvod": "Vědecká zpráva o tání ledovců",
       "kdy": "2026-09-19T13:05:21.142Z"
     }
   }
