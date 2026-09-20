@@ -1,5 +1,107 @@
 [
   {
+    "id": "k-04e5571bece3b529",
+    "zachyceno": "2026-09-20T06:02:32.200Z",
+    "publikovano": "2026-09-20T05:37:00.000Z",
+    "zdroj": {
+      "nazev": "Český rozhlas — domácí zprávy",
+      "url": "https://www.irozhlas.cz/veda-technologie/priroda/cesky-svaz-ochrancu-prirody-vyhlasil-rok-2026-rokem-horcu-v-krkonosich-roste-i_2609200737_kch",
+      "typ": "primary",
+      "primarni": true
+    },
+    "titulek": "Český svaz ochránců přírody vyhlásil rok 2026 Rokem hořců. V Krkonoších roste i kriticky ohrožený druh",
+    "shrnuti": "Český svaz ochránců přírody vyhlásil rok 2026 Rokem hořců a jejich menších příbuzných – hořečků. Cílem je upozornit na tyto krásné rostliny i některé jejich ohrožené druhy a také na možnosti ochrany a údržby míst, která obývají. Krkonoše navíc mají hořec dokonce ve svém znaku.",
+    "duvod": "bez-skutku",
+    "kategorie": [],
+    "posouzeni": {
+      "podezreni": "zadne",
+      "duvod": "Zpráva o ochraně přírody a rostlinách.",
+      "kdy": "2026-09-20T06:04:17.114Z"
+    }
+  },
+  {
+    "id": "k-7d408c2643a7772e",
+    "zachyceno": "2026-09-20T06:02:32.200Z",
+    "publikovano": "2026-09-20T05:17:00.000Z",
+    "zdroj": {
+      "nazev": "Český rozhlas — domácí zprávy",
+      "url": "https://www.irozhlas.cz/sport/tenis/jsou-presne-duvody-proc-jsme-tady-chteli-hrat-chvalil-lehecka-zaplnenou-halu_2609200717_mim",
+      "typ": "primary",
+      "primarni": true
+    },
+    "titulek": "To jsou přesně důvody, proč jsme tady chtěli hrát, chválil Lehečka zaplněnou halu, atmosféru i fanoušky",
+    "shrnuti": "Čeští tenisté si po roce znovu zahrají finálový turnaj Davisova poháru. Opět v závěrečném kvalifikačním kole porazili Spojené státy 3:2 na zápasy. Tentokrát to ale dokázali v domácích podmínkách. Rozhodující bod zajistil Jiří Lehečka.",
+    "duvod": "vylouceno-tematem",
+    "kategorie": [],
+    "posouzeni": {
+      "podezreni": "zadne",
+      "duvod": "Sportovní zpráva o tenise.",
+      "kdy": "2026-09-20T06:04:17.114Z"
+    }
+  },
+  {
+    "id": "k-db504bf39d4afb1b",
+    "zachyceno": "2026-09-20T06:02:32.202Z",
+    "publikovano": "2026-09-20T05:03:00.000Z",
+    "zdroj": {
+      "nazev": "Český rozhlas — domácí zprávy",
+      "url": "https://www.irozhlas.cz/zpravy-domov/pada-hodne-ale-je-zabava-v-plzni-ukazuji-ze-novy-cirkus-je-i-pro-seniory_2609200703_kma",
+      "typ": "primary",
+      "primarni": true
+    },
+    "titulek": "‚Padá to hodně, ale je to zábava.‘ V Plzni ukazují, že nový cirkus je i pro seniory",
+    "shrnuti": "Žonglování, balanční cvičení i jednoduchá akrobacie – to vše přizpůsobené seniorům. Plzeňské centrum nového cirkusu Cirkulárium spouští nový program Cirkus bez věku, který chce ukázat, že cirkusové disciplíny nemusí být jen o náročných výkonech. Ukázkovou lekci si mohli zájemci vyzkoušet v mezigener",
+    "duvod": "bez-skutku",
+    "kategorie": [],
+    "posouzeni": {
+      "podezreni": "zadne",
+      "duvod": "Kulturní/sociální akce pro seniory.",
+      "kdy": "2026-09-20T06:04:17.114Z"
+    }
+  },
+  {
+    "id": "k-2711db01f7c680f1",
+    "zachyceno": "2026-09-20T06:02:32.203Z",
+    "publikovano": "2026-09-20T05:01:00.000Z",
+    "zdroj": {
+      "nazev": "Český rozhlas — domácí zprávy",
+      "url": "https://www.irozhlas.cz/zpravy-svet/americka-armada-zabila-pri-utoku-v-karibiku-ctyri-osoby-lod-mela-byt-zapojena-do_2609200701_lhv",
+      "typ": "primary",
+      "primarni": true
+    },
+    "titulek": "Americká armáda zabila při útoku v Karibiku čtyři osoby. Loď měla být zapojená do obchodu s drogami",
+    "shrnuti": "Americká armáda oznámila, že v sobotu při útoku na plavidlo v Karibiku zabila čtyři osoby. Plavidlo bylo podle ní zapojeno do obchodu s drogami. S odkazem na sdělení armády na síti X o tom informovala agentura Reuters.",
+    "duvod": "bez-skutku",
+    "kategorie": [
+      "vojsko"
+    ],
+    "posouzeni": {
+      "podezreni": "vysoke",
+      "duvod": "Vojenský útok se čtyřmi mrtvými, i když mimo Evropu.",
+      "kdy": "2026-09-20T06:04:17.114Z"
+    }
+  },
+  {
+    "id": "k-38facc4151ff7721",
+    "zachyceno": "2026-09-20T06:02:32.204Z",
+    "publikovano": "2026-09-20T05:00:00.000Z",
+    "zdroj": {
+      "nazev": "Český rozhlas — domácí zprávy",
+      "url": "https://www.irozhlas.cz/veda-technologie/o-regulaci-ai-si-nemeli-telefonovat-trump-a-zuckerberg-jak-se-umela-inteligence_2609200700_vdv",
+      "typ": "primary",
+      "primarni": true
+    },
+    "titulek": "‚O regulaci AI by si neměli telefonovat Trump a Zuckerberg.‘ Jak se umělá inteligence řeší v USA, Číně a EU",
+    "shrnuti": "O nastavení pravidel užívání a vývoje umělé inteligence budou jednat vlády USA a Číny, tedy dvou zemí s nejpokročilejšími AI modely. Debatu o bezpečnosti AI dostala tento týden do médií varování amerických vývojářů, že umělá inteligence by bez kontroly mohla eventuálně zapříčinit vyhlazení lidstva. ",
+    "duvod": "bez-skutku",
+    "kategorie": [],
+    "posouzeni": {
+      "podezreni": "zadne",
+      "duvod": "Politický komentář o regulaci AI.",
+      "kdy": "2026-09-20T06:04:17.114Z"
+    }
+  },
+  {
     "id": "k-3c5f3f1f5ca66e99",
     "zachyceno": "2026-09-20T04:52:08.138Z",
     "publikovano": "2026-09-20T04:42:00.000Z",
@@ -3884,6 +3986,28 @@
       "podezreni": "vysoke",
       "duvod": "Rusko plánuje hybridní útoky drony a raketami na EU státy",
       "kdy": "2026-09-19T11:03:33.710Z"
+    }
+  },
+  {
+    "id": "k-456779263bb997cd",
+    "zachyceno": "2026-09-20T06:02:32.655Z",
+    "publikovano": "2026-09-17T15:10:00.000Z",
+    "zdroj": {
+      "nazev": "Německo — sabotaz",
+      "url": "https://news.google.com/rss/articles/CBMiygFBVV95cUxPMnNSYWFuZVAyYXh0eVpZYXBORnNnd19pck9OVlFTekxtQjBTSkNsQXZoN1FDLTJQbXhyb294elVJUTJWZ3MzNjZCbzVFaGVUZGtPQlF0MTc3UVRQS2l3em5UbHNuejJyRFB6dFhhWV80M1pqRFd6VHJkR2ljU0ZDZ2ZsaXlUQ2U1ZF9HNVk1dks3bG9wVTRKcThCS2tEZDItbVl1SnhOdVRTTmdWUnJqSlVZWHNjam5VUEoxMWtyaWQtOTJsSmoweDlR0gHGAUFVX3lxTFBqOXhjdkZJZ2FwMlFUYjV0OVlNb2pTMlRxdjQyQ0tIYmxVbTVWU2NIY3AwTjdUWmYtMk5DUXJPR1plOU5LZU5WTG9xYXhoZ2tmMTI5ampxUi1JWG1NS1FQU1gzVEpTa09HQmdFYmR0cHhDZEd4SVV2VnRjdXl5RkVLbWJuVFJuTE9DVEFtR2k4NDBYYnh1LUFRU2FrWXdOclpOajlIU3pXTlc5V1R4c3luOXRhMVVINzhTNl9Sb2tCS2ZjcHE1UQ?oc=5",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Russian Embassy network in Italy may have recruited saboteurs across Europe - The New Voice of Ukraine",
+    "shrnuti": "Russian Embassy network in Italy may have recruited saboteurs across Europe The New Voice of Ukraine",
+    "duvod": "bez-skutku",
+    "kategorie": [
+      "rusko"
+    ],
+    "posouzeni": {
+      "podezreni": "vysoke",
+      "duvod": "Zpráva o síti náboru sabotérů v Evropě.",
+      "kdy": "2026-09-20T06:04:17.114Z"
     }
   },
   {
@@ -10324,134 +10448,6 @@
     "posouzeni": {
       "podezreni": "vysoke",
       "duvod": "Útok na ruskou rafinerii a výrobnu dronů.",
-      "kdy": "2026-09-19T14:04:15.203Z"
-    }
-  },
-  {
-    "id": "k-1438647a3a815915",
-    "zachyceno": "2026-09-15T16:32:52.199Z",
-    "publikovano": null,
-    "zdroj": {
-      "nazev": "The Kyiv Independent",
-      "url": "https://kyivindependent.com/russia-suffers-over-300-000-military-casualties-in-ukraine-since-start-of-2026-general-staff-says/",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Russia suffers over 300,000 military losses in Ukraine since start of 2026, General Staff says.",
-    "shrnuti": "",
-    "duvod": "bez-skutku",
-    "kategorie": [
-      "rusko"
-    ],
-    "posouzeni": {
-      "podezreni": "stredni",
-      "duvod": "Zpráva o vojenských ztrátách, souvisí s válkou.",
-      "kdy": "2026-09-19T14:04:15.203Z"
-    }
-  },
-  {
-    "id": "k-6a3cb9aabb6207eb",
-    "zachyceno": "2026-09-15T16:32:52.199Z",
-    "publikovano": null,
-    "zdroj": {
-      "nazev": "The Kyiv Independent",
-      "url": "https://kyivindependent.com/what-to-expect-on-ukraine-in-the-eus-big-yearly-roundup/",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "What to expect on Ukraine in the EU&#x27;s big yearly roundup",
-    "shrnuti": "",
-    "duvod": "bez-skutku",
-    "kategorie": [],
-    "posouzeni": {
-      "podezreni": "zadne",
-      "duvod": "Shrnutí politiky EU, žádná konkrétní událost.",
-      "kdy": "2026-09-19T14:04:15.203Z"
-    }
-  },
-  {
-    "id": "k-f44acfbedecfaad1",
-    "zachyceno": "2026-09-15T16:32:52.198Z",
-    "publikovano": null,
-    "zdroj": {
-      "nazev": "The Kyiv Independent",
-      "url": "https://kyivindependent.com/eu-approves-115-million-to-turn-baltic-port-near-russia-into-nato-naval-hub/",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "EU approves $115 million to turn Baltic port near Russia into NATO naval hub.",
-    "shrnuti": "",
-    "duvod": "bez-skutku",
-    "kategorie": [
-      "nato",
-      "rusko"
-    ],
-    "posouzeni": {
-      "podezreni": "zadne",
-      "duvod": "Financování přístavu, ekonomicko-politická zpráva.",
-      "kdy": "2026-09-19T14:04:15.203Z"
-    }
-  },
-  {
-    "id": "k-3d2dde628090f5dd",
-    "zachyceno": "2026-09-15T16:32:52.197Z",
-    "publikovano": null,
-    "zdroj": {
-      "nazev": "The Kyiv Independent",
-      "url": "https://kyivindependent.com/partner-of-kolomoisky-charged-in-65-million-theft-scheme-at-ukrnafta/",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Partner of Kolomoisky charged in $65 million theft scheme at Ukrnafta.",
-    "shrnuti": "",
-    "duvod": "bez-skutku",
-    "kategorie": [],
-    "posouzeni": {
-      "podezreni": "zadne",
-      "duvod": "Korupční kauza, obvinění z krádeže, ne bezpečnostní incident.",
-      "kdy": "2026-09-19T14:04:15.203Z"
-    }
-  },
-  {
-    "id": "k-0c1f9fb99c124928",
-    "zachyceno": "2026-09-15T16:32:52.195Z",
-    "publikovano": null,
-    "zdroj": {
-      "nazev": "The Kyiv Independent",
-      "url": "https://kyivindependent.com/us-could-hit-putins-arctic-gas-empire-by-sanctioning-14-lng-tankers/",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "US could hit Putin&#x27;s Arctic gas empire by sanctioning 14 LNG tankers.",
-    "shrnuti": "",
-    "duvod": "bez-skutku",
-    "kategorie": [],
-    "posouzeni": {
-      "podezreni": "zadne",
-      "duvod": "Sankce na tankery, ekonomické opatření.",
-      "kdy": "2026-09-19T14:04:15.203Z"
-    }
-  },
-  {
-    "id": "k-4380da93089477ea",
-    "zachyceno": "2026-09-15T16:32:52.195Z",
-    "publikovano": null,
-    "zdroj": {
-      "nazev": "The Kyiv Independent",
-      "url": "https://kyivindependent.com/ukraine-tests-new-interceptor-against-russias-jet-powered-shahed-drones-zelensky-says/",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Ukraine has &#x27;successfully tested&#x27; new interceptor against Russian jet-powered drones, Zelensky says.",
-    "shrnuti": "",
-    "duvod": "bez-skutku",
-    "kategorie": [
-      "drony",
-      "rusko"
-    ],
-    "posouzeni": {
-      "podezreni": "stredni",
-      "duvod": "Test protidronové zbraně, souvisí s válkou.",
       "kdy": "2026-09-19T14:04:15.203Z"
     }
   }
