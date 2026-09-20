@@ -67,15 +67,35 @@ export function PasZemi({ vse, kampane = [], ted = Date.now() }: { vse: Zaznam[]
     );
   });
 
+  const celkem = zeme.reduce((n, z) => n + z.pocet, 0);
+
   return (
+    /*
+      Odsazení stejné jako u zbytku stránky (px-4 sm:px-6). Bez něj lišta
+      začínala u kraje okna, zatímco všechno pod ní o kus dál — vypadala
+      širší než web.
+    */
     <div className="pas-obal border-b border-linka bg-papir" aria-label="Země za posledních 90 dnů">
-      <div className="mx-auto flex max-w-[1280px] items-center">
-        <span className="stitek hidden shrink-0 border-r border-linka2 px-3 py-2 sm:block">90 dnů</span>
-        <PasBeh>
-          {polozky("")}
-          {/* druhá kopie jen kvůli plynulému běhu; čtečce se neoznamuje */}
-          <span aria-hidden className="contents">{polozky("-2")}</span>
-        </PasBeh>
+      <div className="mx-auto max-w-[1280px] px-4 sm:px-6">
+        {/*
+          Popisek nad řadou, ne vedle ní.
+
+          Dřív tu stálo jen „90 dnů" a vedle toho čísla. Z toho se nedalo
+          poznat, co ta čísla jsou — a na úzkém displeji se popisek skrýval
+          úplně, takže tam běžela řada čísel bez jakéhokoli vysvětlení.
+          Věta nad řadou se vejde vždycky a přečte se jako první.
+        */}
+        <p className="stitek pt-2 text-tlum2">
+          Incidenty a operace proti občanům za posledních 90 dní
+          {celkem > 0 && <span className="text-tlum"> · celkem {celkem}</span>}
+        </p>
+        <div className="flex items-center pb-1.5">
+          <PasBeh>
+            {polozky("")}
+            {/* druhá kopie jen kvůli plynulému běhu; čtečce se neoznamuje */}
+            <span aria-hidden className="contents">{polozky("-2")}</span>
+          </PasBeh>
+        </div>
       </div>
     </div>
   );

@@ -27,6 +27,7 @@ import { SignalySiti } from "./signaly-siti";
 import { TipyKPriprave } from "./tipy";
 import { PasZemi } from "./pas-zemi";
 import { Pocitadla } from "./pocitadla";
+import { CoJeNoveho } from "./co-je-noveho";
 import { Partneri, Sledovat } from "./sledovat";
 import { VyzvaTelegram } from "./vyzva-telegram";
 import { UdalostiKlient } from "./udalosti-klient";
@@ -341,14 +342,18 @@ export function Dashboard({
   */
   const zjisteni = novaZjisteni(vse, 8);
   const stitkyNovinek = new Map(zjisteni.map((z) => [z.zaznam.id, z.duvod]));
-  const coJeNoveho = [...posledniZmeny(8, vse), ...zjisteni.map((z) => z.zaznam)]
+  const coJeNoveho = [...posledniZmeny(24, vse), ...zjisteni.map((z) => z.zaznam)]
     .filter((z, i, pole) => pole.findIndex((x) => x.id === z.id) === i)
-    .sort((a, b) => kdyZjisteno(b).localeCompare(kdyZjisteno(a)))
-    .slice(0, 7);
-  /* Pět nejnovějších zachycených zpráv, které ještě nikdo neověřil. */
-  const cekajici = [...kandidati]
-    .sort((a, b) => (b.publikovano ?? b.zachyceno).localeCompare(a.publikovano ?? a.zachyceno))
-    .slice(0, 5);
+    .sort((a, b) => kdyZjisteno(b).localeCompare(kdyZjisteno(a)));
+  /*
+    Kolik řádků se do sloupce vejde.
+
+    Sloupec stojí vedle mřížky úředních stavů a dřív končil zhruba v její
+    půlce — vedle něj zůstávalo prázdné místo a vypadalo to jako chyba.
+    Číslo je změřené proti výšce mřížky; při jiném obsahu se seznam
+    jen zkrátí nebo o kus přesáhne, nic se nerozbije.
+  */
+  const pocetNovinek = 24;
   const stariCelkem = cerstvost(overeno, tedMs);
 
   const crHodnota = platiCr.length ? platiCr.map((p) => KRATCE_PRAVNI[p.klic] ?? p.nazev).join(", ") : naruseno.length ? "Narušeno" : sledujeme.length ? "Sledujeme" : "Bez omezení";
@@ -482,71 +487,13 @@ export function Dashboard({
           Teď je to jeden chronologický seznam a typ nese štítek u řádku.
           Kdo chce jen posuny ve vyšetřování, má vedle nadpisu filtr.
         */}
-        <section aria-label={t("Co je nového")} className="overflow-hidden rounded-[22px] border border-linka2 bg-plocha">
-          <div className="flex items-center justify-between gap-2 border-b border-linka2 px-4 py-2">
-            <span className="stitek">{t("Co je nového")}</span>
-            <Tlacitko kam="/udalosti/" varianta="tichy" velikost="s" ikonaVpravo="nahoru" trida="[&>svg:last-child]:rotate-90">{t("všechny")}</Tlacitko>
-          </div>
-          <ol className="divide-y divide-linka2">
-            {coJeNoveho.map((z) => (
-              <RadekSeznamu
-                key={z.id}
-                hustota="husta"
-                kam={`/incident/${z.slug}/`}
-                o={{
-                  datum: kdyZjisteno(z),
-                  tecka: <TeckaZavaznosti uroven={z.zavaznost} plna={druh(z) === "pripad"} velikost={8} />,
-                  kodZeme: z.kodZeme,
-                  zeme: z.zeme,
-                  cerstvost: kdyZjisteno(z),
-                  titulek: z.kratkyTitulek || z.titulek,
-                  // Štítek říká, jestli je to nová událost, nebo posun ve vyšetřování staré.
-                  meta: stitkyNovinek.has(z.id) ? [stitkyNovinek.get(z.id)] : undefined,
-                }}
-              />
-            ))}
-          </ol>
-          {/*
-            Poslední zachycené zprávy, které ještě nikdo neověřil.
-
-            Bez nich vypadal web mrtvě pokaždé, když pár dní nikdo nic
-            nezveřejnil: sběr mezitím zachytil desítky zpráv, ale „Co je
-            nového" ukazovalo poslední ověřený záznam starý dva dny. Ptát se
-            „kde jsou nové zprávy" bylo na místě — byly ve frontě a nikde je
-            nebylo vidět.
-
-            Jsou zřetelně oddělené a označené. Do počtů nevstupují a odkaz
-            vede na zdroj, ne na náš záznam — protože žádný ještě není.
-          */}
-          {cekajici.length > 0 && (
-            <div className="border-t border-linka2 px-4 py-3">
-              <div className="stitek mb-2 flex items-center gap-1.5 text-akcent">
-                <Ikona nazev="otaznik" velikost={11} tah={2} />
-                Zachyceno, čeká na ověření
-              </div>
-              <ul className="space-y-1.5">
-                {cekajici.map((k) => (
-                  <li key={k.id} className="flex gap-2 text-male leading-snug">
-                    <span className="cislice shrink-0 text-mikro text-tlum2">{datumPraha(k.publikovano ?? k.zachyceno)}</span>
-                    <a href={k.zdroj.url} target="_blank" rel="noopener noreferrer" className="min-w-0 text-tlum hover:text-inkoust">
-                      {k.titulek}
-                    </a>
-                  </li>
-                ))}
-              </ul>
-              <div className="mt-2">
-                <Tlacitko kam="/udalosti/?zalozka=cekajici" varianta="tichy" velikost="s">
-                  {t("všechno, co čeká na ověření")}
-                </Tlacitko>
-              </div>
-            </div>
-          )}
-          <div className="border-t border-linka2 px-4 py-2">
-            <Tlacitko kam="/udalosti/?overeni=potvrzeny-pachatel" varianta="tichy" velikost="s">
-              {t("jen posuny ve vyšetřování")}
-            </Tlacitko>
-          </div>
-        </section>
+        <CoJeNoveho
+          zaznamy={coJeNoveho}
+          nepotvrzene={nepotvrzene}
+          kandidati={kandidati}
+          stitky={stitkyNovinek}
+          pocet={pocetNovinek}
+        />
 
         {/*
           Signály z profilů představitelů a institucí. Zobrazí se jen tehdy,
