@@ -92,6 +92,62 @@ export function bezAdres(s: string): string {
  * takže zůstává prázdné a platí čas zachycení. Je to hrubé, ale zpráva
  * z úřadu má přijít i tehdy, když se úřadu rozbije kanál.
  */
+/*
+  Měsíce slovem, česky a anglicky. Úřední výpisy je používají častěji než
+  číselný tvar: „5. září 2024", „05 September 2024".
+*/
+const MESICE: Record<string, number> = {
+  ledna: 1, unora: 2, února: 2, brezna: 3, března: 3, dubna: 4, kvetna: 5, května: 5,
+  cervna: 6, června: 6, cervence: 7, července: 7, srpna: 8, zari: 9, září: 9,
+  rijna: 10, října: 10, listopadu: 11, prosince: 12,
+  january: 1, february: 2, march: 3, april: 4, may: 5, june: 6,
+  july: 7, august: 8, september: 9, october: 10, november: 11, december: 12,
+};
+
+/**
+ * Datum z kusu textu kolem odkazu.
+ *
+ * Proč to existuje: výpis na stránce úřadu nemá RSS a datum v něm stojí
+ * obvykle hned u titulku. Bez něj projde i několik let stará zpráva jako
+ * dnešní novinka — 20. 9. 2026 se tak do fronty dostalo hlášení estonské
+ * policie z 5. 9. 2024 a na webu se tvářilo jako zpráva toho dne.
+ *
+ * Hledá se první srozumitelný tvar. Co se nepodaří přečíst, vrací null —
+ * a s tím se dál zachází jako s neznámým datem, ne jako s dneškem.
+ */
+export function datumZTextu(text: string, dnes = new Date()): string | null {
+  const zkus = (r: number, m: number, d: number): string | null => {
+    if (m < 1 || m > 12 || d < 1 || d > 31) return null;
+    const t = new Date(Date.UTC(r, m - 1, d));
+    if (Number.isNaN(t.getTime())) return null;
+    /* Budoucí datum je překlep nebo něco jiného než datum vydání. */
+    if (t.getTime() > dnes.getTime() + 86_400_000) return null;
+    if (r < 1990) return null;
+    return t.toISOString();
+  };
+
+  const iso = text.match(/\b(20\d{2})-(\d{1,2})-(\d{1,2})\b/);
+  if (iso) { const v = zkus(+iso[1], +iso[2], +iso[3]); if (v) return v; }
+
+  /* 5. 9. 2024 i 05.09.2024 i 5/9/2024 — den první, jak se píše v Evropě. */
+  const den = text.match(/\b(\d{1,2})\s*[.\/]\s*(\d{1,2})\s*[.\/]\s*(20\d{2})\b/);
+  if (den) { const v = zkus(+den[3], +den[2], +den[1]); if (v) return v; }
+
+  const slovem = text.match(/\b(\d{1,2})\.?\s+([\p{L}]+)\s+(20\d{2})\b/u);
+  if (slovem) {
+    const m = MESICE[slovem[2].toLowerCase()];
+    if (m) { const v = zkus(+slovem[3], m, +slovem[1]); if (v) return v; }
+  }
+
+  const anglicky = text.match(/\b([\p{L}]+)\s+(\d{1,2}),?\s+(20\d{2})\b/u);
+  if (anglicky) {
+    const m = MESICE[anglicky[1].toLowerCase()];
+    if (m) { const v = zkus(+anglicky[3], m, +anglicky[2]); if (v) return v; }
+  }
+
+  return null;
+}
+
 export function polozkyZeStranky(html: string, zaklad: string, max = 40): Polozka[] {
   const out: Polozka[] = [];
   const videne = new Set<string>();
@@ -105,7 +161,12 @@ export function polozkyZeStranky(html: string, zaklad: string, max = 40): Polozk
     try { odkaz = new URL(href, zaklad).toString(); } catch { continue; }
     if (videne.has(odkaz)) continue;
     videne.add(odkaz);
-    out.push({ nadpis, odkaz, publikovano: null, shrnuti: "", zeStranky: true });
+    /*
+      Datum se hledá v okolí odkazu — na výpisech stojí těsně u titulku.
+      Okno je štědré na obě strany, protože pořadí se web od webu liší.
+    */
+    const kolem = odtaguj(html.slice(Math.max(0, (m.index ?? 0) - 400), (m.index ?? 0) + m[0].length + 400));
+    out.push({ nadpis, odkaz, publikovano: datumZTextu(kolem), shrnuti: "", zeStranky: true });
     if (out.length >= max) break;
   }
   return out;

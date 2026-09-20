@@ -1,12 +1,11 @@
 "use client";
 
 import Link from "next/link";
-import { useState } from "react";
 import { kdyZjisteno, type Zaznam } from "@/lib/agregace";
 import { datumPraha } from "@/lib/cas";
 import { PASMA, UROVNE } from "@/lib/skala";
 import type { Kandidat } from "@/lib/typy";
-import { PanelNahledu, type Nahled } from "./nahled-radku";
+import { PanelNahledu, useNahled, type Nahled } from "./nahled-radku";
 import { Tlacitko } from "./ui";
 
 /*
@@ -29,6 +28,8 @@ type Druh = "overeny" | "nepotvrzeny" | "zachyceny";
 interface Radek {
   klic: string;
   kdy: string;
+  /** Datum je jen odhad podle zachycení — zdroj žádné neuvedl. */
+  bezData?: boolean;
   druh: Druh;
   titulek: string;
   kam: string;
@@ -59,14 +60,14 @@ export function CoJeNoveho({
   stitky?: Map<string, string>;
   pocet?: number;
 }) {
-  const [nahled, setNahled] = useState<Nahled | null>(null);
+  const { nahled, kde, ukaz, skryj, pohyb } = useNahled();
 
   const zZaznamu = (z: Zaznam, druh: "overeny" | "nepotvrzeny"): Radek => ({
     klic: `${druh}-${z.id}`,
     kdy: kdyZjisteno(z),
     druh,
     titulek: z.kratkyTitulek || z.titulek,
-    kam: druh === "overeny" ? `/incident/${z.slug}/` : "/udalosti/?tab=nepotvrzene",
+    kam: druh === "overeny" ? `/incident/${z.slug}/` : `/nepotvrzeno/${z.id}/`,
     ven: false,
     zavaznost: z.zavaznost,
     stitek: stitky?.get(z.id),
@@ -75,7 +76,7 @@ export function CoJeNoveho({
       radky: [datumPraha(kdyZjisteno(z)), z.zeme, `závažnost ${UROVNE[z.zavaznost].nazev.toLowerCase()}`, `${z.zdroje.length} ${z.zdroje.length === 1 ? "zdroj" : "zdrojů"}`],
       poznamka: druh === "overeny"
         ? (stitky?.get(z.id) ?? "Ověřený záznam. Počítá se do statistik.")
-        : "Zpracováno, ale nikdo to zatím nepotvrdil. Do počtů nevstupuje.",
+        : "Zpracováno, ale nikdo to zatím nepotvrdil. Do počtů nevstupuje. Klepnutím se otevře i se zdroji.",
     },
   });
 
@@ -85,6 +86,7 @@ export function CoJeNoveho({
     ...kandidati.map((k) => ({
       klic: `zachyceny-${k.id}`,
       kdy: k.publikovano ?? k.zachyceno,
+      bezData: !k.publikovano,
       druh: "zachyceny" as const,
       titulek: k.titulek,
       kam: k.zdroj.url,
@@ -107,7 +109,7 @@ export function CoJeNoveho({
     <section
       aria-label="Co je nového"
       className="relative flex flex-col overflow-hidden rounded-[22px] border border-linka2 bg-plocha"
-      onPointerLeave={() => setNahled(null)}
+      onPointerLeave={skryj}
     >
       {/* Hlavička jako v úvodu: červená tečka a štítek. */}
       <div className="flex items-center justify-between gap-2 border-b border-linka2 px-4 py-2">
@@ -147,7 +149,13 @@ export function CoJeNoveho({
                 }`}
               />
               <span className="flex min-w-0 flex-1 items-baseline gap-2">
-                <span className="cislice shrink-0 text-mikro text-tlum2">{datumPraha(r.kdy)}</span>
+                {/*
+                  Bez data se datum nepíše. Datum zachycení by se četlo jako
+                  den události — a u staré zprávy z výpisu úřadu je to lež.
+                */}
+                <span className="cislice shrink-0 text-mikro text-tlum2">
+                  {r.bezData ? "bez data" : datumPraha(r.kdy)}
+                </span>
                 {SLOVO[r.druh] && <span className="stitek shrink-0 text-tlum2">{SLOVO[r.druh]}</span>}
                 <span className={`truncate text-male leading-snug ${r.druh === "overeny" ? "text-inkoust" : "text-tlum"}`}>
                   {r.titulek}
@@ -157,13 +165,13 @@ export function CoJeNoveho({
           );
           const trida = "flex items-baseline gap-2.5 px-4 py-2 hover:bg-plocha2";
           return (
-            <li key={r.klic} onPointerEnter={() => setNahled(r.nahled)}>
+            <li key={r.klic} onPointerEnter={(e) => ukaz(r.nahled, e)} onPointerMove={pohyb}>
               {r.ven ? (
-                <a href={r.kam} target="_blank" rel="noopener noreferrer" className={trida} onFocus={() => setNahled(r.nahled)}>
+                <a href={r.kam} target="_blank" rel="noopener noreferrer" className={trida} onFocus={(e) => { const b = e.currentTarget.getBoundingClientRect(); ukaz(r.nahled, { clientX: b.right, clientY: b.top }); }}>
                   {telo}
                 </a>
               ) : (
-                <Link href={r.kam} className={trida} onFocus={() => setNahled(r.nahled)}>
+                <Link href={r.kam} className={trida} onFocus={(e) => { const b = e.currentTarget.getBoundingClientRect(); ukaz(r.nahled, { clientX: b.right, clientY: b.top }); }}>
                   {telo}
                 </Link>
               )}
@@ -172,7 +180,7 @@ export function CoJeNoveho({
         })}
       </ol>
 
-      <PanelNahledu nahled={nahled} />
+      <PanelNahledu nahled={nahled} kde={kde} />
 
       <div className="mt-auto border-t border-linka2 px-4 py-2">
         <Tlacitko kam="/udalosti/?overeni=potvrzeny-pachatel" varianta="tichy" velikost="s">

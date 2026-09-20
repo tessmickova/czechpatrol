@@ -86,11 +86,15 @@ export function PasZemi({ vse, kampane = [], ted = Date.now() }: { vse: Zaznam[]
           Věta nad řadou se vejde vždycky a přečte se jako první.
         */}
         {/*
-          Běžné písmo, ne prostrkaný štítek. Se štítkem se věta na dvě řádky
-          lámala i na širokém displeji a nad lištou to vypadalo jako chyba.
+          Jedna řádka, na střed.
+
+          Věta se dvakrát lámala — nejdřív kvůli prostrkanému štítku, pak
+          kvůli délce. Krátit ji nic nestojí: kampaně se na celém webu počítají
+          mezi incidenty, takže „incidenty" je přesné slovo. `whitespace-nowrap`
+          drží řádku i na mobilu, kde se zbytek ořízne tečkami.
         */}
-        <p className="pt-2 text-mikro leading-snug text-tlum2">
-          Počet incidentů a operací proti občanům za posledních 90 dní
+        <p className="truncate whitespace-nowrap pt-2 text-center text-mikro text-tlum2">
+          Incidenty za posledních 90 dní
           {celkem > 0 && <span className="text-tlum"> · celkem {celkem}</span>}
         </p>
         <div className="flex items-center pb-1.5">

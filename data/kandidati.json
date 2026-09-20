@@ -165,11 +165,17 @@
       "gru"
     ],
     "naliehave": null,
-    "stav": "ceka",
+    "stav": "vyrizen",
     "vyrez": {
       "text": "A GRU military unit launched cyberattacks against Estonian authorities - News - Police and Border Guard Board\nA GRU military unit launched cyberattacks against Estonian authorities\n05. September 2024\nDuring joint operation Toy Soldier conducted in cooperation with 14 services from 10 states, the Estonian Internal Security Service identified that military unit 29155, which is under the command of the Main Directorate of the General Staff of the Armed Forces of the Russian Federation (GRU), acquired cyber capabilities and had been launching cyberattacks against both Ukraine as well as NATO and EU member states, including Estonia, since 2020.\nThe National Criminal Police conducted criminal proceedings under the direction of the Office of the Prosecutor General, and found that the same unit launched attacks against Estonian state authorities in 2020. The criminal proceedings helped to identify three GRU officers suspected of the attacks: Yuri Denisov, Nikolay Korchagin and Vitali Shevchenko.\n“Based on the suspicion, all three were serving in GRU’s military unit 29155 at the time of the attacks. We identified the first suspect and leads at the early stages of the investigation, and…",
       "stazeno": "2026-09-20T19:02:30.657Z",
       "stav": 200
+    },
+    "vyrizeni": {
+      "kdy": "2026-09-20T19:27:03.845Z",
+      "duvod": "neudalost-stara",
+      "patriK": null,
+      "poznamka": "Zpráva PPA z 5. 9. 2024 o kybernetických útocích jednotky GRU 29155; sběr ji vzal s dnešním datem, událost není z roku 2026."
     }
   },
   {
@@ -198,11 +204,17 @@
       "border"
     ],
     "naliehave": null,
-    "stav": "ceka",
+    "stav": "vyrizen",
     "vyrez": {
       "text": "Police to temporarily close Narva border crossing point from 30 April to 2 May for training exercise - News - Police and Border Guard Board\nPolice to temporarily close Narva border crossing point from 30 April to 2 May for training exercise\n21. March 2025\nThe East Prefecture, in cooperation with the Estonian Defence League, will conduct a joint exercise called KILP, during which the Narva border crossing point will be temporarily closed from April 30 to May 2. The border crossing point will reopen for regular operations on May 3.\nAccording to Eerik Purgel, Head of the Border Guard Bureau of the East Prefecture, the plans to temporarily close the Narva border crossing point are related to a long-planned exercise, as some of the activities are going to be carried out at the border crossing point. “We ask people to take this into account when planning their journeys – from April 30 to May 2, the Narva border crossing point will be temporarily closed, and it will not be possible to cross the border there. During this period, the border can be crossed at the Koidula and Luhamaa border crossing points, which are open 24/7 and allow for crossing by car as well,” he added.\nThe joint…",
       "stazeno": "2026-09-20T19:02:31.011Z",
       "stav": 200
+    },
+    "vyrizeni": {
+      "kdy": "2026-09-20T19:27:03.845Z",
+      "duvod": "neudalost-stara",
+      "patriK": null,
+      "poznamka": "Plánované cvičení KILP, uzavření Narvy 30. 4.–2. 5. 2025 (zpráva z 21. 3. 2025); staré a plánované, ne skutek."
     }
   },
   {
@@ -232,11 +244,17 @@
       "russia"
     ],
     "naliehave": null,
-    "stav": "ceka",
+    "stav": "vyrizen",
     "vyrez": {
       "text": "Google News",
       "stazeno": "2026-09-20T13:02:21.880Z",
       "stav": 200
+    },
+    "vyrizeni": {
+      "kdy": "2026-09-20T19:27:03.845Z",
+      "duvod": "duplicita",
+      "patriK": null,
+      "poznamka": "Týž případ jako i-2026-09-15-590b687216 (obvinění v USA); doplněn úřední zdroj DOJ."
     }
   },
   {
@@ -302,11 +320,17 @@
       "russia"
     ],
     "naliehave": null,
-    "stav": "ceka",
+    "stav": "vyrizen",
     "vyrez": {
       "text": "Russia claims cyberattacks on voting systems during parliamentary election\nRussia Russia claims cyberattacks on voting systems during parliamentary election\nSeptember 20, 2026 7:30 am • 2 min read\nPrefer on Google\nby Olena Goncharova\nCitizens cast their ballots at a polling station during the country's parliamentary elections in russian controlled city of Mariupol, on Sept. 19, 2026. The Sept. 18-20 vote will determine the ninth convocation of the State Duma, with parliamentary elections being held for the first time since the beginning of the full-scale invasion of Ukraine in February 2022. (Stringer/Anadolu via Getty Images)\nRussian authorities claimed on Sept. 19 that electronic voting systems and communications infrastructure had come under attack as the country entered the second day of its three-day parliamentary election.\nVoting for the 450-seat State Duma began on Sept. 18 and runs through Sept. 20. It is Russia&#x27;s first parliamentary election since Moscow launched its full-scale invasion of Ukraine in February 2022. The Kremlin-aligned United Russia party currently dominates the lower house of parliament.\nElla Pamfilova, head of Russia&#x27;s Central Election…",
       "stazeno": "2026-09-20T09:01:22.779Z",
       "stav": 200
+    },
+    "vyrizeni": {
+      "kdy": "2026-09-20T19:27:03.845Z",
+      "duvod": "neudalost",
+      "patriK": null,
+      "poznamka": "Ruské tvrzení o kyberútocích na volební systémy bez nezávislého potvrzení; původce nikdo nejmenuje."
     }
   },
   {
@@ -373,11 +397,17 @@
       "hranic+kontrol"
     ],
     "naliehave": null,
-    "stav": "ceka",
+    "stav": "vyrizen",
     "vyrez": {
       "text": "Google News",
       "stazeno": "2026-09-20T15:02:36.967Z",
       "stav": 200
+    },
+    "vyrizeni": {
+      "kdy": "2026-09-20T19:27:03.845Z",
+      "duvod": "neudalost-stara",
+      "patriK": null,
+      "poznamka": "Recyklovaný titulek ČT24 z 8. 12. 2023; aktuální prodloužení kontrol z 18. 8. 2026 je migrační opatření."
     }
   },
   {
@@ -1504,11 +1534,17 @@
       "russia"
     ],
     "naliehave": null,
-    "stav": "ceka",
+    "stav": "vyrizen",
     "vyrez": {
       "text": "Partisans claim sabotage at Russian plant producing missile components\nWar Partisans claim sabotage at Russian plant producing missile components\nSeptember 16, 2026 2:11 pm • 2 min read\nPrefer on Google\nby Polina Moroziuk\nA screenshot from a video published by the Atesh partisan group shows a fire at what the group says is an electrical substation supplying the VZPP-Sborka plant in Voronezh, Russia. (Atesh/Telegram)\nAn agent of Ukrainian partisan group Atesh sabotaged the power supply to an electronics plant in Russia&#x27;s Voronezh that produces components used in Kh-101 and Iskander-K missiles and Pantsir-S1 air defense systems, the group said on Sept. 16.\n\"Our agent, after a long study of the facility, detailed planning, and searching for weak points, managed to infiltrate an electrical substation near the VZPP-Sborka plant,\" Atesh said . \"After bypassing security, he destroyed the main distribution cabinet supplying the enterprise and safely left the city.\"\nAccording to the group, the sabotage caused a voltage surge and cut power to the plant&#x27;s workshops. Atesh claimed that restoring full electricity supplies took several weeks, disrupting deliveries of key electronic…",
       "stazeno": "2026-09-16T11:24:57.898Z",
       "stav": 200
+    },
+    "vyrizeni": {
+      "kdy": "2026-09-20T19:27:03.845Z",
+      "duvod": "neudalost",
+      "patriK": null,
+      "poznamka": "Tvrzení partyzánů Atesh, kterého se KI ani Kyiv Post nemohly ověřit."
     }
   },
   {
@@ -3812,13 +3848,19 @@
       "zadrz",
       "policie"
     ],
-    "stav": "ceka",
+    "stav": "vyrizen",
     "vyrez": {
       "text": "Vojenská policie zadržela tři lidi kvůli zakázkám v ÚVN — ČT24 — Česká televize\nŽivé vysílání\nTV program\nPočasí\nTeletext\nE-shop\nVše o ČT\nTV poplatky\nKontakty\nSpravovat účet\nOblíbené pořady\nRozkoukaná videa\nPřihlásit se do TV\nOdhlásit se\nVojenská policie zadržela tři lidi kvůli zakázkám v ÚVN\nČTK\n, mas ,\nden\n15. 9. 2026 před 5 m minutami | Zdroj: ČTK\nÚstřední vojenská nemocnice, hlavní vstup\nZdroj: ČTK/Markéta Vojtíková\nVojenská policie zadržela tři lidi v souvislosti s vyšetřováním rozsáhlé trestné činnosti při zadávání veřejných zakázek v Ústřední vojenské nemocnici v Praze (ÚVN). Mezi zadrženými jsou bývalí a současní náměstci nemocnice. Podle nemocnice se vyšetřování týká bývalého vedení.\n„Vojenští policisté provádí celkem jedenáct domovních prohlídek a zadrželi tři osoby, které působí či v minulosti působily ve funkci náměstků Ústřední vojenské nemocnice. Mezi zadrženými není žádný voják z povolání,“ uvedla před polednem policie. Případ podle její mluvčí Nikoly Rimkevič Hájkové dozoruje Obvodní státní zastupitelství pro Prahu 6.\n„Ústřední vojenská nemocnice - Vojenská fakultní nemocnice Praha sděluje, že dnešního dne poskytuje plnou součinnost k provádění úkonů Vojenské…",
       "stazeno": "2026-09-15T12:32:49.717Z",
       "stav": 200
     },
-    "naliehave": null
+    "naliehave": null,
+    "vyrizeni": {
+      "kdy": "2026-09-20T19:27:03.845Z",
+      "duvod": "neudalost",
+      "patriK": null,
+      "poznamka": "Korupční trestní věc kolem zakázek v ÚVN, bez bezpečnostního rozměru."
+    }
   },
   {
     "id": "k-fc349efe52a0cbbd",
@@ -7674,11 +7716,17 @@
       "explosion"
     ],
     "naliehave": null,
-    "stav": "ceka",
+    "stav": "vyrizen",
     "vyrez": {
       "text": "Google News",
       "stazeno": "2026-09-20T18:02:25.839Z",
       "stav": 200
+    },
+    "vyrizeni": {
+      "kdy": "2026-09-20T19:27:03.845Z",
+      "duvod": "duplicita",
+      "patriK": null,
+      "poznamka": "Už je zdrojem záznamu bulharsko-emco-pozar-skladu-munice-2026."
     }
   },
   {
@@ -9796,13 +9844,19 @@
       "kyberneticky utok",
       "kybernetick"
     ],
-    "stav": "ceka",
+    "stav": "vyrizen",
     "vyrez": {
       "text": "Britská letiště kvůli problémům řízení provozu zrušila přes dva tisíce letů — ČT24 — Česká televize\nŽivé vysílání\nTV program\nPočasí\nTeletext\nE-shop\nVše o ČT\nTV poplatky\nKontakty\nSpravovat účet\nOblíbené pořady\nRozkoukaná videa\nPřihlásit se do TV\nOdhlásit se\nBritská letiště kvůli problémům řízení provozu zrušila přes dva tisíce letů\nČTK\n, kak\n9. 9. 2026 9. 9. 2026 ‌ ‌ | Zdroj: ČTK\nZrušené lety na terminálu 5 letiště Heathrow v Londýně, 8. září 2026\nZdroj: ČT24\nBritská letiště ve středu opět zrušila či odložila stovky letů kvůli následkům technických problémů řízení letového provozu, které řeší od úterý. Ve dvou dnech bylo zrušeno přes 2000 letů, na letištích uvázly desítky tisíc pasažérů. Ministryně dopravy si ve středu předvolala šéfa dispečerské společnosti NATS a hodlá v projevu k poslancům potvrdit, že za problémy není kybernetický útoky, uvedl web stanice BBC.\nProblémy v systému pro zpracování letových údajů společnost NATS zaznamenala v úterý a do večera je podle prohlášení citovaného agenturou Reuters vyřešila.\nV úterý zrušila britská letiště celkem 1750 odletů a příletů, potíže ale přetrvávají do středy, kdy bylo zrušeno dalších 291 letů, citovala BBC firmu analyzující…",
       "stazeno": "2026-09-14T08:02:32.926Z",
       "stav": 200
     },
-    "naliehave": null
+    "naliehave": null,
+    "vyrizeni": {
+      "kdy": "2026-09-20T19:27:03.845Z",
+      "duvod": "neudalost",
+      "patriK": null,
+      "poznamka": "Technická závada NATS; NATS i ministryně kyberútok popřely."
+    }
   },
   {
     "id": "k-2946b37f4991d345",
@@ -9829,13 +9883,19 @@
       "arson",
       "charged with"
     ],
-    "stav": "ceka",
+    "stav": "vyrizen",
     "vyrez": {
       "text": "Teens charged in hate‑fueled arson attacks on ethnic-owned Tallinn food businesses | News | ERR\n{{noticeUi.heading[langCode]}}\n{{infoLink[langCode].label}}\n{{noticeUi.allowAllLabel[langCode]}}\n{{rewokeLabels[langCode]}}\nX !\nNews\nERR\n{{1788950160000 | amCalendar}}\nshare Facebook X (Twitter) e-mail\nThe kiosk on Akadeemia tee in the Mustamäe neighborhood of Tallinn, following the arson attack. Source: Istar Kebab FB\nNews\nA 16-year-old boy has been charged with multiple arson and assaults motivated by extremist views, with a 19-year-old also charged over a hammer attack.\nThe 16-year-old is charged with systematically setting fire, with the use of accelerants, to cars and restaurants, reportedly owned by people of color, and causing over &euro;82,000 in damages, the prosecutor's office said.\nThe prosecutor says evidence points toward the youth holding extremist views, including on Islam and on immigration, and the people and businesses targeted were maingly from the Bangladeshi, Pakistani and Nigerian communities.\nAccording to the indictment, the teenager repeatedly set fire to cars belonging to ethnic minority people, and also set fire to a kebab kiosk on Akadeemia tee in…",
       "stazeno": "2026-09-14T08:02:34.564Z",
       "stav": 200
     },
-    "naliehave": null
+    "naliehave": null,
+    "vyrizeni": {
+      "kdy": "2026-09-20T19:27:03.845Z",
+      "duvod": "neudalost",
+      "patriK": null,
+      "poznamka": "Podle titulku domácí trestný čin z nenávisti, ne bezpečnostní skutek; text jsem neotevřel."
+    }
   },
   {
     "id": "k-d7adfb7669c2ed81",
@@ -12031,11 +12091,17 @@
       "rusk"
     ],
     "naliehave": null,
-    "stav": "ceka",
+    "stav": "vyrizen",
     "vyrez": {
       "text": "Google News",
       "stazeno": "2026-09-15T19:32:54.961Z",
       "stav": 200
+    },
+    "vyrizeni": {
+      "kdy": "2026-09-20T19:27:03.845Z",
+      "duvod": "neudalost",
+      "patriK": null,
+      "poznamka": "Starší údaje z roku 2024 a oznámení plánu, ne skutek."
     }
   },
   {
@@ -12063,12 +12129,18 @@
       "sabotaz",
       "rusk"
     ],
-    "stav": "ceka",
+    "stav": "vyrizen",
     "vyrez": {
       "text": "Google News",
       "stazeno": "2026-09-14T09:02:38.580Z",
       "stav": 200
     },
-    "naliehave": null
+    "naliehave": null,
+    "vyrizeni": {
+      "kdy": "2026-09-20T19:27:03.845Z",
+      "duvod": "zamitnuto",
+      "patriK": null,
+      "poznamka": "Jediný původní zdroj (LSM/VDD), originál se nepodařilo otevřít; rozsudek z 20. 8. 2026 není pravomocný."
+    }
   }
 ]

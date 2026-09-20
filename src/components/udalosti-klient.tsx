@@ -594,6 +594,12 @@ function RadekNepotvrzeneho({ z }: { z: Zaznam }) {
   return (
     <RadekSeznamu
       varianta="holy"
+      /*
+        Vede na vlastní stránku, ne na /incident/. Adresa je součást sdělení:
+        záznam, za kterým projekt stojí, a zpráva, kterou nikdo nepotvrdil,
+        nemají bydlet na stejné ulici.
+      */
+      kam={`/nepotvrzeno/${z.id}/`}
       o={{
         datum: kdyZjisteno(z),
         tecka: <span aria-hidden className={`mt-[6px] h-[10px] w-[10px] shrink-0 rounded-full border border-dashed ${PASMA[UROVNE[z.zavaznost].pasmo].pruh.replace("bg-", "border-")}`} />,
