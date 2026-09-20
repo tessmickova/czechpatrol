@@ -16,6 +16,7 @@ import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { chybyVystrahy } from "./vystraha-pravidla.mjs";
+import { falesneUredni } from "./uredni-zdroj.mjs";
 
 const koren = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const cti = (f) => JSON.parse(fs.readFileSync(path.join(koren, "data", f), "utf-8"));
@@ -27,6 +28,8 @@ const pravni = cti("pravni-stav.json");
 const nato = cti("nato.json");
 const provoz = cti("provoz.json");
 const kandidati = fs.existsSync(path.join(koren, "data", "kandidati.json")) ? cti("kandidati.json") : [];
+/* Návrhy se na webu ukazují jako nepotvrzené, takže na ně smí mířit i oprava. */
+const navrhy = fs.existsSync(path.join(koren, "data", "navrhy.json")) ? cti("navrhy.json") : [];
 const svet = fs.existsSync(path.join(koren, "data", "svet.json")) ? cti("svet.json") : null;
 const overujeme = fs.existsSync(path.join(koren, "data", "overujeme.json")) ? cti("overujeme.json") : [];
 const vystrahy = fs.existsSync(path.join(koren, "data", "vystraha.json")) ? cti("vystraha.json") : { aktivni: null, archiv: [] };
@@ -122,7 +125,16 @@ for (const n of nepotvrzene) {
 }
 for (const o of opravy) {
   const cil = o.tykaSe;
-  const ok = slugy.has(cil) || cil === "metodika" || cil === "historicke-zaznamy" || (cil.startsWith("nepotvrzeno/") && nepotvrzene.some((n) => n.id === cil.slice(12)));
+  /*
+    Stažený záznam mezi zveřejněnými není, ale nezmizel — je z něj nepotvrzený
+    návrh a na webu je dál vidět. Oprava, která říká, proč byl stažen, na něj
+    musí smět ukázat; jinak by nešlo stažení vůbec zveřejnit.
+  */
+  const ok = slugy.has(cil)
+    || navrhy.some((n) => n.slug === cil)
+    || cil === "metodika"
+    || cil === "historicke-zaznamy"
+    || (cil.startsWith("nepotvrzeno/") && nepotvrzene.some((n) => n.id === cil.slice(12)));
   if (!ok) chyby.push(`oprava ${o.id}: neznámý cíl ${cil}`);
   if (!platneDatum(o.datum)) chyby.push(`oprava ${o.id}: neplatné datum`);
 }
@@ -296,6 +308,27 @@ if (fs.existsSync(path.join(dirUi, "zdroj.json"))) {
     const navic = Object.keys(slovnik).filter((k) => !zdrojVet.includes(k));
     if (chybi.length) varovani.push(`překlad ${j.kod}: chybí ${chybi.length} z ${zdrojVet.length} vět (zobrazí se česky)`);
     if (navic.length) varovani.push(`překlad ${j.kod}: ${navic.length} vět navíc, které už v kódu nejsou`);
+  }
+}
+
+/*
+  Zdroj, který se tváří jako úřední, ale adresa vede jinam.
+
+  U automaticky zveřejněného záznamu je to chyba, ne poznámka: zveřejnil se
+  právě proto, že u sebe úřední zdroj měl. Přesně takhle se 20. 9. 2026 na web
+  dostal dron v Rumunsku doložený zrcadlem tiskové zprávy na globalsecurity.org.
+
+  U záznamu, který četl člověk, je to varování — ten za obsah ručí sám a
+  seznam úředních domén nebude nikdy úplný.
+*/
+for (const i of incidenty) {
+  const falesne = falesneUredni(i.zdroje ?? []);
+  if (!falesne.length) continue;
+  const vypis = falesne.map((z) => z.url).join(", ");
+  if (i.overeni === "automaticke") {
+    chyby.push(`${i.slug}: zveřejněno automaticky na zdroj označený jako úřední, který úřední není — ${vypis}`);
+  } else {
+    varovani.push(`${i.slug}: zdroj označený jako úřední nevede na úřad — ${vypis}`);
   }
 }
 

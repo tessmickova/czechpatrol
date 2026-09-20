@@ -74,6 +74,16 @@ jobs:
             git status --porcelain data/
           fi
 
+      # Účetnictví fronty za ověřovatele.
+      #
+      # Zachycená zpráva, ze které se stal návrh, nemá dál stát ve frontě.
+      # Dřív to dělal denní audit; ten je vypnutý. Když to po ověřovateli
+      # nikdo neudělal, kontrola mu práci odmítla přijmout — a tři hotové
+      # návrhy zůstaly nezapsané, přestože byly v pořádku.
+      - name: Srovnat frontu kandidátů
+        if: steps.vzit.outputs.zmena == 'true'
+        run: npm run fronta:srovnej
+
       # Data z cizí větve projdou týmiž kontrolami jako cokoli jiného.
       # Kdyby návrh porušoval pravidla (jeden zdroj, chybějící lidské
       # ověření, zdroj starší než událost), nesmí se do main dostat.
