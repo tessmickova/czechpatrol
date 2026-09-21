@@ -1,3 +1,5 @@
+"use client";
+
 import Link from "next/link";
 import { druh, kdyZjisteno, pripady, type Zaznam } from "@/lib/agregace";
 import { PASMA, UROVNE } from "@/lib/skala";
@@ -5,6 +7,7 @@ import type { Kampan, Uroven } from "@/lib/typy";
 import { sklon, Vlajka } from "./zeme";
 import { PasBeh } from "./pas-beh-klient";
 import { PasPocitadel, type PolozkaPoctu } from "./pocitadla-zive";
+import { useZiveHodiny } from "@/lib/cas-klient";
 
 /*
   Běžící pás zemí nahoře.
@@ -20,7 +23,15 @@ import { PasPocitadel, type PolozkaPoctu } from "./pocitadla-zive";
   a čtenář by nevěděl, čemu věřit.
 */
 
-export function PasZemi({ vse, kampane = [], ted = Date.now() }: { vse: Zaznam[]; kampane?: Kampan[]; ted?: number }) {
+export function PasZemi({ vse, kampane = [], ted: tedSestaveni = Date.now() }: { vse: Zaznam[]; kampane?: Kampan[]; ted?: number }) {
+  /*
+    Živý čas, ne čas sestavení. Dlaždice dřív držely počty z posledního
+    sestavení webu, zatímco počítadla nad nimi si čas brala z prohlížeče —
+    záznam na hraně 90 dnů pak byl v jednom a chyběl ve druhém. Teď obojí
+    počítá z téhož času; při prvním vykreslení z času sestavení (aby se HTML
+    shodlo), po připojení z hodin návštěvníka.
+  */
+  const ted = useZiveHodiny(tedSestaveni);
   const dni90 = pripady(vse, { dni: 90, ted });
   const kampane90 = kampane.filter((k) => ted - new Date(k.odhaleno).getTime() <= 90 * 86_400_000);
   const kody = [...new Set([...dni90.map((i) => i.kodZeme), ...kampane90.flatMap((k) => k.kodyZemi), "CZ"])];

@@ -1,9 +1,9 @@
 "use client";
 
 import Link from "next/link";
-import { druh, kdyZjisteno, novaZjisteni, pachatelPotvrzen, podlePuvodce, podleZemi, posledniZmeny, pripady, uredniZdroj, vyber, type Zaznam } from "@/lib/agregace";
+import { druh, kdyZjisteno, pachatelPotvrzen, podlePuvodce, podleZemi, pripady, uredniZdroj, vyber, type Zaznam } from "@/lib/agregace";
 import { cerstvost, datumCasPraha, datumPraha, stariSlovy } from "@/lib/cas";
-import type { CelkovyStav, HybridniTlak, Kampan, Kandidat, NatoPolozka, Nepotvrzene, Overovana, PravniPolozka, ProvozniPolozka, TydenniHodnoceni, Uroven, Watchlist } from "@/lib/typy";
+import type { CelkovyStav, HybridniTlak, Kampan, Kandidat, NatoPolozka, Nepotvrzene, Overovana, PravniPolozka, ProvozniPolozka, Snimek, TydenniHodnoceni, Uroven, Watchlist } from "@/lib/typy";
 import { CenaPaliva } from "./palivo";
 import { stavPaliva, vetaOCene } from "@/lib/palivo";
 import { stavPravni, stavProvozu } from "@/lib/pokryti";
@@ -25,7 +25,7 @@ import { useZiveHodiny } from "@/lib/cas-klient";
 import { SignalySiti } from "./signaly-siti";
 import { TipyKPriprave } from "./tipy";
 import { PasZemi } from "./pas-zemi";
-import { CoJeNoveho } from "./co-je-noveho";
+import { CoSeZmenilo } from "./co-se-zmenilo";
 import { Partneri, Sledovat } from "./sledovat";
 import { VyzvaTelegram } from "./vyzva-telegram";
 import { Nahlaseni } from "./nahlaseni";
@@ -271,14 +271,16 @@ function Pruh({ nazev, n, max, barva, odkaz }: { nazev: React.ReactNode; n: numb
 }
 
 export function Dashboard({
-  stav, pravni, natoPolozky, provozPolozky, overeno, vse, neprosle, kandidati, nepotvrzene = [], tydny, watchlist, cr, crHistoricky, crPocet, hybridni, obcane, ted,
+  stav, pravni, natoPolozky, provozPolozky, overeno, vse, neprosle, kandidati, nepotvrzene = [], tydny, watchlist, crHistoricky, hybridni, obcane, ted, snimky = [],
   tlakEvropa, tlakCesko, veta, kampane, nazvyZemi, overovaneAktivni = [], overovaneUzavrene = [],
 }: {
   stav: CelkovyStav; pravni: PravniPolozka[]; natoPolozky: NatoPolozka[]; provozPolozky: ProvozniPolozka[];
   /** Čas sestavení. Klient z něj vychází, aby se první vykreslení shodlo. */
   ted: number;
   overeno: string | null; vse: Zaznam[]; neprosle: Nepotvrzene[]; kandidati: Kandidat[]; nepotvrzene?: Zaznam[]; tydny: TydenniHodnoceni[]; watchlist: Watchlist;
-  cr: Uroven | null; crHistoricky: Uroven | null; crPocet: { pripadu: number; kampani: number };
+  crHistoricky: Uroven | null;
+  /** Archiv snímků úředního stavu — z něj se čte, co se změnilo. */
+  snimky?: Snimek[];
   hybridni: Uroven | null; obcane: { uroven: Uroven; popis: string; neovereno: number };
   tlakEvropa: HybridniTlak; tlakCesko: HybridniTlak; veta: HlavniVeta;
   kampane: Kampan[]; nazvyZemi: Record<string, string>;
@@ -296,7 +298,12 @@ export function Dashboard({
   const d = stav.uroven ? UROVNE[stav.uroven] : null;
   const pasmo = stav.uroven ? PASMA[UROVNE[stav.uroven].pasmo] : null;
 
-  const dni90 = pripady(vse, { dni: 90 });
+  /*
+    Všechna okna se počítají z živého času (tedMs), ne z času sestavení.
+    Web se sestavuje jednou za pár hodin; číslo „za 90 dní" spočítané při
+    sestavení se od počítadel v liště, která si čas berou z prohlížeče,
+    rozcházelo o záznam na hraně okna. Proto stejný čas pro všechno.
+  */
   /*
     Číslo za 90 dní samo o sobě neřekne, jestli je to klid, nebo nejhorší
     čtvrtletí za dva roky. Proto se k němu počítá porovnání s průměrem —
@@ -310,6 +317,16 @@ export function Dashboard({
     #418 na úvodní straně, v událostech i v jazykových variantách.
   */
   const tedMs = useZiveHodiny(ted);
+  const dni90 = pripady(vse, { dni: 90, ted: tedMs });
+  /*
+    Situace v Česku za 90 dní: nejvyšší závažnost z případů a operací
+    proti občanům v okně. Dřív přicházela ze serveru s časem sestavení;
+    tady je z téhož živého času jako všechno ostatní.
+  */
+  const czKampane90 = kampane.filter((k) => k.kodyZemi.includes("CZ") && tedMs - new Date(k.odhaleno).getTime() <= 90 * 86_400_000);
+  const czUrovne: Uroven[] = [...dni90.filter((i) => i.kodZeme === "CZ").map((i) => i.zavaznost), ...czKampane90.map((k) => k.zavaznost)];
+  const cr: Uroven | null = czUrovne.length ? czUrovne.reduce((m, u) => (UROVNE[u].poradi > UROVNE[m].poradi ? u : m), czUrovne[0]) : null;
+  const crPocet = { pripadu: dni90.filter((i) => i.kodZeme === "CZ").length, kampani: czKampane90.length };
   const kampaneVOkne = (dni: number) => kampane.filter((k) => tedMs - new Date(k.odhaleno).getTime() <= dni * 86_400_000).length;
   const zapocitatelne90 = dni90.length + kampaneVOkne(90);
   const casyZapocitatelne = [
@@ -321,30 +338,12 @@ export function Dashboard({
   const cz = dni90.filter((i) => i.kodZeme === "CZ").length;
   const potvrzeno = dni90.filter(pachatelPotvrzen).length;
   const uredni = dni90.filter(uredniZdroj).length;
-  const rok = new Date().getUTCFullYear();
+  const rok = new Date(tedMs).getUTCFullYear();
   const letos = vyber(vse, { odRoku: rok });
   const zeme = podleZemi(letos).filter((z) => z.pripady > 0 || z.kodZeme === "CZ").slice(0, 6);
   const maxZeme = Math.max(1, ...zeme.map((z) => z.pripady));
   const puv = podlePuvodce(letos);
   const maxPuv = Math.max(1, ...puv.skupiny.map((s) => s.pocet));
-  /*
-    Co je nového = nové záznamy i posuny ve vyšetřování starých případů,
-    v jednom chronologickém seznamu. Štítek u řádku říká, o co jde.
-  */
-  const zjisteni = novaZjisteni(vse, 8);
-  const stitkyNovinek = new Map(zjisteni.map((z) => [z.zaznam.id, z.duvod]));
-  const coJeNoveho = [...posledniZmeny(24, vse), ...zjisteni.map((z) => z.zaznam)]
-    .filter((z, i, pole) => pole.findIndex((x) => x.id === z.id) === i)
-    .sort((a, b) => kdyZjisteno(b).localeCompare(kdyZjisteno(a)));
-  /*
-    Kolik řádků se do sloupce vejde.
-
-    Sloupec stojí vedle mřížky úředních stavů a dřív končil zhruba v její
-    půlce — vedle něj zůstávalo prázdné místo a vypadalo to jako chyba.
-    Číslo je změřené proti výšce mřížky; při jiném obsahu se seznam
-    jen zkrátí nebo o kus přesáhne, nic se nerozbije.
-  */
-  const pocetNovinek = 24;
   const stariCelkem = cerstvost(overeno, tedMs);
 
   const crHodnota = platiCr.length ? platiCr.map((p) => KRATCE_PRAVNI[p.klic] ?? p.nazev).join(", ") : naruseno.length ? "Narušeno" : sledujeme.length ? "Sledujeme" : "Bez omezení";
@@ -452,7 +451,8 @@ export function Dashboard({
           nadpis={t("Úřední stav v Česku")}
         />
       </div>
-      <div className="grid gap-4 lg:grid-cols-[minmax(0,1.35fr)_minmax(0,1fr)]">
+      {/* Stejný poměr a mezera jako v úvodu: tři pětiny mřížka, dvě pětiny sloupec. */}
+      <div className="grid gap-4 xl:grid-cols-[minmax(0,3fr)_minmax(0,2fr)] xl:gap-10">
         <section aria-label={t("Oficiální stavy")} id="opatreni" className="scroll-mt-[84px] space-y-4">
           {skupinyDlazdic.map((sk) => (
             <div key={sk.predpona} className="overflow-hidden rounded-[20px] border border-linka2 bg-plocha">
@@ -476,23 +476,15 @@ export function Dashboard({
         </section>
 
         {/*
-          Jeden seznam „Co je nového", ne dvě sekce vedle sebe.
+          Vedle mřížky stavů: co se změnilo, ne co se stalo.
 
-          Dřív stály na úvodu zvlášť „Poslední události" a zvlášť „Nová
-          zjištění". Čtenář tím dostal dvakrát tutéž otázku — co je nového —
-          rozdělenou podle toho, jestli jde o novou událost, nebo o posun ve
-          vyšetřování staré. To je naše vnitřní rozlišení, ne jeho.
-
-          Teď je to jeden chronologický seznam a typ nese štítek u řádku.
-          Kdo chce jen posuny ve vyšetřování, má vedle nadpisu filtr.
+          Dřív tu byl seznam nových událostí — třetí místo na úvodní straně
+          s touž otázkou. Události mají sloupec v úvodu a vlastní stránku.
+          Sem patří změny, které se dotknou života tady: úřední stavy,
+          cena paliva, opatření v Česku, u sousedů a v EU.
         */}
-        <CoJeNoveho
-          zaznamy={coJeNoveho}
-          nepotvrzene={nepotvrzene}
-          kandidati={kandidati}
-          stitky={stitkyNovinek}
-          pocet={pocetNovinek}
-        />
+        <div className="space-y-4">
+        <CoSeZmenilo zaznamy={vse} snimky={snimky} ted={tedMs} />
 
         {/*
           Signály z profilů představitelů a institucí. Zobrazí se jen tehdy,
@@ -505,7 +497,8 @@ export function Dashboard({
           se stalo, ale co s tím může člověk udělat dnes. Bez tipu se
           nevykreslí nic.
         */}
-        <TipyKPriprave ted={ted} />
+        <TipyKPriprave ted={tedMs} />
+        </div>
       </div>
 
       {/* 2b2 — manipulační kampaně: operace, ne události */}
