@@ -138,6 +138,41 @@
     }
   },
   {
+    "id": "k-9d23e9661869d0a4",
+    "zachyceno": "2026-09-21T12:02:50.647Z",
+    "publikovano": "2026-09-21T11:36:00.000Z",
+    "zdroj": {
+      "nazev": "Český rozhlas — domácí zprávy",
+      "url": "https://www.irozhlas.cz/zpravy-svet/rusko-utoky-ukrajina-nezletili-chudoba-vezni_2609211336_elev",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "‚Potřeboval jsem peníze.‘ Roste počet případů, kdy Rusko najímá mladé chudé Ukrajince na sabotáže",
+    "titulekPuvodni": "‚Potřeboval jsem peníze.‘ Roste počet případů, kdy Rusko najímá mladé chudé Ukrajince na sabotáže",
+    "shrnuti": "Rusko najímá zranitelné ukrajinské děti a mladistvé k útokům v jejich vlastní zemi. „Brigády“ za nízké částky nabízí útočící stát přes síť Telegram. „Potřeboval jsem peníze. Kdybych je nepotřeboval, vůbec bych to neudělal,“ řekl deníku The Washington Post sedmnáctiletý Maxym Paršyn, který si v nápra",
+    "kodZeme": "UA",
+    "zeme": "Ukrajina",
+    "kategorie": [
+      "sabotaz",
+      "rusko"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "sabotaz",
+      "rusk"
+    ],
+    "naliehave": null,
+    "stav": "ceka",
+    "vyrez": {
+      "text": "",
+      "stazeno": "2026-09-21T12:02:51.122Z",
+      "stav": 403,
+      "chyba": "HTTP 403"
+    }
+  },
+  {
     "id": "k-731452f523ef0c91",
     "zachyceno": "2026-09-21T09:02:52.670Z",
     "publikovano": null,
@@ -11707,6 +11742,40 @@
     }
   },
   {
+    "id": "k-77b020b9c7f0544b",
+    "zachyceno": "2026-09-21T12:02:51.042Z",
+    "publikovano": "2026-09-04T07:00:00.000Z",
+    "zdroj": {
+      "nazev": "Slovensko — sabotaz",
+      "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxPUDg0RC14a3NGcnZfeDZsZEY5aEFFbDhYM1lrNC1nWUVTLVJrQnREVzRwMWZ2a21LbDVCdVJzMExnb2dxWXAyRGNpSGdOS0t5eW96aTVqX0VzNzdKMGlGdXNGekVNY0MyWjFGQ1BZLXJKUWdaMlNDT3VUc1VZa1JwWkhGd0xtR213dEszRHo2WnRQZlc5NW5YRzJYenlaUl9fb0w3OGF0bXRCR2xMOGZuUEhncTZLNU1M?oc=5",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Europe Targeted by Spiralling Campaign of Sabotage and Russia is the Chief Suspect - Albanian Daily News",
+    "titulekPuvodni": "Europe Targeted by Spiralling Campaign of Sabotage and Russia is the Chief Suspect - Albanian Daily News",
+    "shrnuti": "Europe Targeted by Spiralling Campaign of Sabotage and Russia is the Chief Suspect Albanian Daily News",
+    "kodZeme": "RU",
+    "zeme": "Rusko",
+    "kategorie": [
+      "sabotaz",
+      "rusko"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "sabotage",
+      "russia"
+    ],
+    "naliehave": null,
+    "stav": "ceka",
+    "vyrez": {
+      "text": "Google News",
+      "stazeno": "2026-09-21T12:02:51.208Z",
+      "stav": 200
+    }
+  },
+  {
     "id": "k-51486cd393a5833b",
     "zachyceno": "2026-09-21T11:02:44.621Z",
     "publikovano": "2026-09-04T07:00:00.000Z",
@@ -12046,90 +12115,6 @@
       "duvod": "duplicita",
       "patriK": null,
       "poznamka": "Podle titulku týž skutek jako záznam dormagen-gohr (sabotáž rozvoden, pátrání po klimatickém aktivistovi, 4. 9. 2026); text zdroje jde otevřít jen přes Google News, proto usuzováno z titulku a záznamů."
-    }
-  },
-  {
-    "id": "k-5edbb94f41699106",
-    "zachyceno": "2026-09-20T20:03:06.376Z",
-    "publikovano": "2026-09-04T07:00:00.000Z",
-    "zdroj": {
-      "nazev": "Téma: energetika (anglicky)",
-      "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxQMFRTQjdrWEFQeG9JQk40NjAtVE1BVzdaZVFueDZac0Rja0pXM0NrZTllME5fSlhuWjJMMTVkMkJwLUk4akRoejlueVhLRTU1LUZRQTAzUFZxMkd2enpMLU5kRUthVU9CbHpUc3RpRUdLQlFlZTAySEVUX0U1WUR1Vl9JMzZac1k?oc=5",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Germany launches manhunt after spate of sabotage attacks on power grid - Yahoo News UK",
-    "titulekPuvodni": "Germany launches manhunt after spate of sabotage attacks on power grid - Yahoo News UK",
-    "shrnuti": "Germany launches manhunt after spate of sabotage attacks on power grid Yahoo News UK",
-    "kodZeme": "DE",
-    "zeme": "Německo",
-    "kategorie": [
-      "sabotaz",
-      "infrastruktura"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "zeSite": null,
-    "shody": [
-      "sabotage",
-      "power grid"
-    ],
-    "naliehave": null,
-    "stav": "vyrizen",
-    "vyrez": {
-      "text": "Google News",
-      "stazeno": "2026-09-20T20:03:07.549Z",
-      "stav": 200
-    },
-    "vyrizeni": {
-      "kdy": "2026-09-20T21:06:22.548Z",
-      "duvod": "duplicita",
-      "patriK": null,
-      "poznamka": "Podle titulku týž skutek jako záznam dormagen-gohr (sabotáž rozvoden, pátrání po klimatickém aktivistovi, 4. 9. 2026); text zdroje jde otevřít jen přes Google News, proto usuzováno z titulku a záznamů."
-    }
-  },
-  {
-    "id": "k-3b566a7e6e8785c5",
-    "zachyceno": "2026-09-20T20:03:06.554Z",
-    "publikovano": "2026-09-04T07:00:00.000Z",
-    "zdroj": {
-      "nazev": "Česko — sabotaz",
-      "url": "https://news.google.com/rss/articles/CBMiygFBVV95cUxNVloySms4Wm5TeElPcUJad2VPU1ZxU0pSVG9NRmU5MGtDMnVvRFJiX1Fid05VUHRKeEtIcjdOVlV3MWVRc0FxZlRIMkVCaXFkOWpUdVMxeW01aDRMQ09ZM0tXa0E5QnVHZ0FJUUozR0FNOU5BMEU2cVczME1xRlRCZF9qRWJaTWtWZ3NjSmtUSGktd0hhdXZXTWhwS0lxTHY1Yi1tVmtUaXJmUEFPT0thWlMzYzgzWmFxVm55RHpHT3FNOVdJVUFrcm93?oc=5",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Democracy Digest: Poland Investigates Arson of Drone Factory as Suspected Russian Sabotage - balkaninsight.com",
-    "titulekPuvodni": "Democracy Digest: Poland Investigates Arson of Drone Factory as Suspected Russian Sabotage - balkaninsight.com",
-    "shrnuti": "Democracy Digest: Poland Investigates Arson of Drone Factory as Suspected Russian Sabotage balkaninsight.com",
-    "kodZeme": "PL",
-    "zeme": "Polsko",
-    "kategorie": [
-      "sabotaz",
-      "drony",
-      "rusko"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "zeSite": null,
-    "shody": [
-      "sabotage",
-      "arson",
-      "dron",
-      "drone",
-      "russia"
-    ],
-    "naliehave": null,
-    "stav": "vyrizen",
-    "vyrez": {
-      "text": "Google News",
-      "stazeno": "2026-09-20T20:03:07.786Z",
-      "stav": 200
-    },
-    "vyrizeni": {
-      "kdy": "2026-09-20T21:06:22.548Z",
-      "duvod": "duplicita",
-      "patriK": null,
-      "poznamka": "Otevřen balkaninsight.com: jde o požár závodu WB Electronics ve Skarżysku-Kamiennej z 31. 8. 2026, který už je záznamem wb-electronics."
     }
   }
 ]
