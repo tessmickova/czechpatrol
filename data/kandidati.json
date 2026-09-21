@@ -12082,11 +12082,17 @@
       "irozhlas"
     ],
     "naliehave": null,
-    "stav": "ceka",
+    "stav": "vyrizen",
     "vyrez": {
       "text": "Google News",
       "stazeno": "2026-09-21T00:02:41.242Z",
       "stav": 200
+    },
+    "vyrizeni": {
+      "kdy": "2026-09-21T00:21:41.020Z",
+      "duvod": "neudalost",
+      "patriK": null,
+      "poznamka": "Otázky a odpovědi iROZHLAS o sabotážích v Německu jsou vysvětlující text bez nového skutku (rozhodnuto už v z-muaaq8nl; sběr zprávu po odepsání znovu zachytil)."
     }
   },
   {
@@ -12118,11 +12124,17 @@
       "power grid"
     ],
     "naliehave": null,
-    "stav": "ceka",
+    "stav": "vyrizen",
     "vyrez": {
       "text": "Google News",
       "stazeno": "2026-09-21T00:02:41.390Z",
       "stav": 200
+    },
+    "vyrizeni": {
+      "kdy": "2026-09-21T00:21:41.020Z",
+      "duvod": "duplicita",
+      "patriK": null,
+      "poznamka": "Euractiv, 3. 9. 2026, podle titulku dvojitý útok na rozvodny v Německu; týž skutek jako záznamy turnow-preilack a bergheim-rheidt (1. 9. 2026). Text jde otevřít jen přes Google News, proto usuzováno z titulku a záznamů."
     }
   },
   {
@@ -12154,11 +12166,17 @@
       "russia"
     ],
     "naliehave": null,
-    "stav": "ceka",
+    "stav": "vyrizen",
     "vyrez": {
       "text": "Google News",
       "stazeno": "2026-09-20T23:15:59.378Z",
       "stav": 200
+    },
+    "vyrizeni": {
+      "kdy": "2026-09-21T00:21:41.020Z",
+      "duvod": "neudalost",
+      "patriK": null,
+      "poznamka": "Report ICCT o 189 případech je analýza, ne skutek ani rozhodnutí (rozhodnuto už v z-muaaq8nl; sběr zprávu po odepsání znovu zachytil)."
     }
   }
 ]
