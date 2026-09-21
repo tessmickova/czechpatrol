@@ -40,7 +40,7 @@ export default function OProjektu() {
         </Odstavec>
         <Odstavec nadpis="Odkud jsou data">
           <p>Přednost mají orgány, které věc samy oznámily: policie, vlády, NATO, EU. Pak agentury a média. Sociální sítě samy o sobě nikdy nezvyšují hodnocení. Seznam všech zdrojů je na stránce <Link href="/zdroje/" className="odkaz">Zdroje</Link>, pravidla hodnocení v <Link href="/metodika/" className="odkaz">Metodice</Link> (revize {datumPraha(METODIKA_REVIDOVANA)}).</p>
-          <p>Sběr běží automaticky každou hodinu, ale nic nezveřejňuje — ukládá kandidáty ke kontrole. Hodnocení stanovuje člověk. Opravy jsou veřejné na stránce <Link href="/opravy/" className="odkaz">Opravy a historie</Link>.</p>
+          <p>Sběr běží automaticky každou hodinu, ale nic nezveřejňuje — ukládá kandidáty ke kontrole. Texty záznamů jsou AI shrnutí zdrojů, ne oficiální články; hodnocení stanovuje člověk. Přebírají se fakta, ne znění — každý záznam odkazuje na originál. Opravy jsou veřejné na stránce <Link href="/opravy/" className="odkaz">Opravy a historie</Link>.</p>
         </Odstavec>
         <Odstavec nadpis="Nezávislost a peníze">
           <p>Projekt nemá inzerci, sponzory ani placené umístění. Základní informace jsou a zůstanou zdarma. Provoz se dá podpořit dobrovolně na stránce <Link href="/podporit/" className="odkaz">Podpořit</Link>; co to stojí, je tam rozepsané.</p>

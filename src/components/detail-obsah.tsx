@@ -65,6 +65,8 @@ export function HlavickaDetailu({ i, velka = false }: { i: Incident; velka?: boo
         <span aria-hidden>·</span>
         <span className="inline-flex items-center gap-1.5"><Vlajka kod={i.kodZeme} /> {i.kodZeme === "CZ" ? "Česko" : i.zeme}{i.region ? `, ${i.region}` : ""}</span>
         {i.historicky && <><span aria-hidden>·</span><span>doplněno zpětně</span></>}
+        <span aria-hidden>·</span>
+        <span className="stitek text-tlum2">AI shrnutí</span>
       </div>
       {/*
         Na samostatné stránce detailu je název události hlavním nadpisem
@@ -124,7 +126,12 @@ export function DetailObsah({ i }: { i: Incident }) {
 
   return (
     <div className="space-y-7">
-      <Blok nadpis="Co se stalo" popis="Jen doložené skutečnosti. Každá je krytá zdrojem níže.">
+      {/*
+        Text záznamu je shrnutí, ne článek. Píše ho model z veřejných zdrojů
+        a čtenář to má vědět dřív, než začne číst — jinak se věty čtou jako
+        stanovisko projektu nebo přepis úředního textu, a ani jedno to není.
+      */}
+      <Blok nadpis="Co se stalo" popis="AI shrnutí veřejných zdrojů, ne oficiální článek ani stanovisko. Každý bod je krytý zdrojem níže.">
         <Seznam polozky={i.fakta} />
         <p className="mt-3 text-male text-tlum">
           {/*

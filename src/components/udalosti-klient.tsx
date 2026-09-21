@@ -30,6 +30,8 @@ import { sklon, Vlajka } from "./zeme";
 const OBDOBI = [
   { klic: "7d", nazev: "7 dní", dni: 7 },
   { klic: "30d", nazev: "30 dní", dni: 30 },
+  // Počítadlo „za 90 dní" v liště sem vede; bez tohohle okna vedlo na 30 dní.
+  { klic: "90d", nazev: "90 dní", dni: 90 },
   { klic: "letos", nazev: "Letos", dni: null },
   { klic: "vse", nazev: "Vše", dni: null },
 ] as const;

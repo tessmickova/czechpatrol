@@ -53,8 +53,10 @@ export default function PodminkyStranka() {
             <p>Automat, který data sbírá, může chybět nebo se zpozdit. Nikdy sám nepotvrzuje, že něco platí — jen to, že v úředních zdrojích nic nenašel. Před důležitým rozhodnutím ověřte stav u úřadů.</p>
           </Oddil>
 
-          <Oddil cislo="03" nadpis="Práce s AI">
-            <p>Část textů vzniká s pomocí umělé inteligence a je tak označená (štítek „AI-assisted“ na každé stránce). Celkovou úroveň, zařazení a zveřejnění událostí schvaluje člověk. Podrobnosti v <Link href="/metodika/" className="odkaz text-inkoust">metodice</Link>.</p>
+          <Oddil cislo="03" nadpis="Texty, AI a cizí práce">
+            <p>Popisy událostí jsou <b>AI shrnutí veřejných zdrojů</b> — ne oficiální články, ne stanoviska úřadů ani projektu. Jsou tak označené u každého záznamu a štítkem „AI-assisted“ na každé stránce. Celkovou úroveň, zařazení a zveřejnění událostí schvaluje člověk; podrobnosti v <Link href="/metodika/" className="odkaz text-inkoust">metodice</Link>.</p>
+            <p>Přebíráme fakta, ne znění. Články necitujeme v celku ani v dlouhých pasážích, u každého záznamu uvádíme zdroj jménem a odkazujeme na originál, fotografie ze zdrojů nepřebíráme. Kde zdroj automatizované čtení zakazuje, respektujeme to.</p>
+            <p>U lidí platí presumpce neviny a ochrana osobnosti. Dokud není pravomocný rozsudek, píšeme „obviněný“, „podezřelý“ nebo „podle policie“ — nikdy „pachatel“. Kdo se cítí záznamem dotčen, může požádat o opravu; opravy jsou veřejné na stránce <Link href="/opravy/" className="odkaz text-inkoust">Opravy</Link>.</p>
           </Oddil>
 
           <Oddil cislo="04" nadpis="Účet">

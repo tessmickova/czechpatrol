@@ -1,6 +1,5 @@
 "use client";
 
-import { datumCasPraha } from "@/lib/cas";
 import { PASMA, UROVNE } from "@/lib/skala";
 import type { CelkovyStav, Uroven } from "@/lib/typy";
 import type { HlavniVeta } from "@/lib/veta";
@@ -13,7 +12,13 @@ import { sklon } from "./zeme";
 import { useT } from "@/lib/i18n";
 
 /*
-  Hlavička přehledu: jedna věta, jeden velký budík, tři malé.
+  Hlavička přehledu: jedna věta, jeden velký budík, dva malé.
+
+  Bez vysvětlivek na ploše. Období budíku je součástí jeho štítku
+  („Situace v Česku · 90 dní"), počty a doplňky jsou v nápovědě po
+  najetí nebo klepnutí, provozní řádek s časem ověření je pryč (čas
+  kontroly je v liště nahoře). Na ploše zůstává jen to, co se dá přečíst
+  za tři vteřiny: věta, úroveň, trend, dvě slova na malých budících.
 
   Tohle je první obrazovka člověka, který se bojí. Platí tu proto přísnější
   pravidlo než jinde na webu: na plochu jde jen to, co takový člověk potřebuje
@@ -29,9 +34,9 @@ import { useT } from "@/lib/i18n";
 function Merak({
   nadpis, uroven, obdobi, popis, velikost = 112, vlastniSlovo, dodatek,
 }: {
-  nadpis: string; uroven: Uroven | null; obdobi: string; popis?: string; velikost?: number; vlastniSlovo?: string;
-  /** Doplněk jen do nápovědy. Na plochu budíku se nedostane. */
-  dodatek?: string;
+  nadpis: string; uroven: Uroven | null; obdobi: string; velikost?: number; vlastniSlovo?: string;
+  /** Popis i doplněk jdou jen do nápovědy. Na plochu budíku se nedostanou. */
+  popis?: string; dodatek?: string;
 }) {
   const t = useT();
   const pasmo = uroven ? PASMA[UROVNE[uroven].pasmo] : null;
@@ -40,6 +45,7 @@ function Merak({
       cele
       popis={
         <span className="block">
+          {popis && <span className="mb-1.5 block text-inkoust">{popis}</span>}
           {uroven ? <VykladUrovne uroven={uroven} /> : t("Za sledované období tu není jediný ověřený případ ani operace proti občanům.")}
           {dodatek && <span className="mt-1.5 block text-tlum2">{dodatek}</span>}
         </span>
@@ -54,8 +60,7 @@ function Merak({
         kde má kam se vejít.
       */}
       <span className="flex w-full flex-col items-center px-1.5 py-2.5 text-center sm:py-3">
-        <span className="stitek">{nadpis}</span>
-        <span className="mt-1 text-mikro leading-none text-tlum2">{obdobi}</span>
+        <span className="stitek whitespace-nowrap">{nadpis} <span className="text-tlum2">· {obdobi}</span></span>
         <span className="hidden sm:block">
           <ObloukovyMerak uroven={uroven} naNoci velikost={velikost} skrytPopisek />
         </span>
@@ -63,22 +68,19 @@ function Merak({
         <span className={`text-zaklad font-bold uppercase leading-tight tracking-[0.03em] sm:-mt-1 ${pasmo ? pasmo.text : vlastniSlovo ? "text-klid-text" : "text-tlum2"}`}>
           {vlastniSlovo ?? (uroven ? UROVNE[uroven].nazev : "bez hodnocení")}
         </span>
-        {popis && <span className="mt-1 block max-w-[15rem] text-mikro leading-snug text-tlum2">{popis}</span>}
       </span>
     </Napoveda>
   );
 }
 
 export function HeroDashboard({
-  stav, cr, crHistoricky, crPocet, obcane, overeno, veta, cisla,
+  stav, cr, crHistoricky, crPocet, obcane, veta,
 }: {
   stav: CelkovyStav; cr: Uroven | null; crHistoricky: Uroven | null;
   /** Kolik případů a kolik manipulačních operací v Česku za 90 dní. */
   crPocet: { pripadu: number; kampani: number };
   obcane: { uroven: Uroven; popis: string; neovereno: number };
-  overeno: string | null; veta: HlavniVeta;
-  /** Řádek s velkými čísly. Počítá se v prohlížeči, proto přichází zvenčí. */
-  cisla?: React.ReactNode;
+  veta: HlavniVeta;
 }) {
   const t = useT();
   /*
@@ -97,7 +99,7 @@ export function HeroDashboard({
   const d = stav.uroven ? UROVNE[stav.uroven] : null;
   const pasmo = stav.uroven ? PASMA[UROVNE[stav.uroven].pasmo] : null;
   return (
-    <section aria-label={t("Bezpečnostní aktivita")} className="paralax-deska">
+    <section aria-label={t("Bezpečnostní aktivita")} className="paralax-deska xl:flex xl:h-full xl:flex-col">
       {/*
         Bez rámečku. Úvod je začátek stránky, ne karta v ní — orámovaný
         vypadal jako jeden z panelů a soupeřil s aktualitami vedle. Vnitřní
@@ -116,19 +118,14 @@ export function HeroDashboard({
         </div>
         <h1 className="titul-sekce pb-3">{t("Bezpečnostní situace v Česku a okolí")}</h1>
       </div>
-      {/* Jedna věta, kterou má čtenář odnést, i kdyby dál nečetl. */}
-      <p className="uvodni-veta border-b border-linka2 pb-4 pt-3 sm:pb-5">
+      {/*
+        Jedna věta, kterou má čtenář odnést, i kdyby dál nečetl. Nic pod ní:
+        poznámka o neověřených položkách, která tu stála, je v Aktualitách
+        vedle — tam má vlastní oddíl a nemusí se vysvětlovat jednou větou.
+      */}
+      <p className="uvodni-veta max-w-[40rem] border-b border-linka2 pb-4 pt-3 sm:pb-5">
         <strong className="font-bold text-inkoust">{veta.cesko}</strong>{" "}
         <span className="text-tlum">{veta.evropa}</span>
-        {veta.neovereno > 0 && (
-          <span
-            className="mt-2 flex items-center gap-1.5 text-male text-tlum2"
-            title={`${veta.neovereno} ${sklon(veta.neovereno, "položka nemá", "položky nemají", "položek nemá")} ověření a do věty nevstupuje.`}
-          >
-            <Ikona nazev="otaznik" velikost={13} tah={1.9} />
-            {veta.neovereno} {sklon(veta.neovereno, "neověřená položka", "neověřené položky", "neověřených položek")}
-          </span>
-        )}
       </p>
 
       {/*
@@ -136,14 +133,35 @@ export function HeroDashboard({
         „auto" a roztáhne se podle nejširšího obsahu — dva budíky vedle sebe
         ho vyhnaly na 677 px a celý panel se na 390 px displeji ořízl vpravo.
       */}
-      <div className="grid grid-cols-[minmax(0,1fr)] gap-2 py-3 sm:py-3.5 lg:grid-cols-[minmax(0,1.05fr)_minmax(0,1.4fr)]">
+      {/*
+        Budíky u spodního okraje, když je sloupec vedle vyšší. Úvod má
+        tři věci pod sebou a vzduch mezi větou a budíky mu nevadí;
+        vzduch pod budíky vypadal jako chybějící obsah.
+      */}
+      <div className="grid grid-cols-[minmax(0,1fr)] gap-2 py-3 sm:py-3.5 xl:mt-auto xl:pb-6 lg:grid-cols-[minmax(0,1.05fr)_minmax(0,1.4fr)]">
         <div className="flex min-w-0 items-center gap-4 border-b border-linka2 pb-3 lg:border-b-0 lg:border-r lg:pb-0 lg:pr-4">
           <Napoveda popis={stav.uroven ? <VykladUrovne uroven={stav.uroven} /> : <span className="block">{t("Hodnocení zatím nebylo stanoveno.")}</span>}>
             <span className="block"><ObloukovyMerak uroven={stav.uroven} naNoci velikost={132} skrytPopisek /></span>
           </Napoveda>
           <div className="min-w-0">
-            <div className="stitek">{t("Hodnocení projektu · Evropa, dnes")}</div>
+            <div className="stitek whitespace-nowrap">{t("Evropa · dnes")}</div>
             <p className={`text-cislo-l font-bold leading-none ${pasmo ? pasmo.text : "text-tlum"}`}>{d ? d.nazev : "Nestanoveno"}</p>
+            {/*
+              Trend hned pod slovem, ne v provozním řádku na patě. Patří
+              k úrovni — je to její pohyb — a bez patičky nemá kam jinam.
+              Barvu nese šipka, slovo zůstává neutrální.
+            */}
+            {stav.trend === "nahoru" && (
+              <p className="mt-1.5 flex items-center gap-1 text-mikro font-semibold text-tlum">
+                <span className="text-stari"><Ikona nazev="nahoru" velikost={11} tah={2.2} /></span>{t("zhoršení za 7 dní")}
+              </p>
+            )}
+            {stav.trend === "dolu" && (
+              <p className="mt-1.5 flex items-center gap-1 text-mikro font-semibold text-tlum">
+                <span className="text-klid"><Ikona nazev="dolu" velikost={11} tah={2.2} /></span>{t("zlepšení za 7 dní")}
+              </p>
+            )}
+            {stav.trend === "beze-zmeny" && <p className="mt-1.5 text-mikro text-tlum2">{t("beze změny 7 dní")}</p>}
             {/*
               Číslo „6 z 10" je pryč. Vypadalo jako měření, ale je to jen jinak
               zapsané totéž slovo — a hlavně se dalo číst jako pravděpodobnost
@@ -165,7 +183,7 @@ export function HeroDashboard({
         */}
         <div className="grid min-w-0 grid-cols-2 divide-x divide-linka2">
           <Merak
-            nadpis={t("Situace v Česku")}
+            nadpis={t("Česko")}
             uroven={cr}
             obdobi="90 dní"
             popis={crPopis}
@@ -173,7 +191,7 @@ export function HeroDashboard({
             dodatek={crHistoricky ? `Nejvýš od roku 2014: ${UROVNE[crHistoricky].nazev.toLowerCase()}.` : undefined}
           />
           <Merak
-            nadpis={t("Dopad na běžný život")}
+            nadpis={t("Běžný život")}
             uroven={obcane.uroven}
             obdobi="teď"
             popis={obcane.uroven === "G1" ? "pohyb, nákupy i služby beze změny" : obcane.popis}
@@ -182,36 +200,6 @@ export function HeroDashboard({
         </div>
       </div>
 
-      {cisla}
-
-      {/*
-        Provozní řádek na patě karty.
-
-        Trend, čas ověření a počty stály dřív uprostřed úvodu, hned pod názvem
-        úrovně — pět různě dlouhých údajů v odstavci, každý jinou barvou.
-        Do prvního dojmu z toho šlo přečíst jen to, že je toho hodně. Čísla se
-        přesunula do pásu počítadel pod úvodem, kde mají všechny stejný tvar;
-        tady zůstává jen to, co se týká samotného hodnocení: kam se pohnulo
-        a kdy ho někdo naposled potvrdil. Mono písmem a potichu, jako údaj
-        na přístroji.
-      */}
-      <div className="flex flex-wrap items-center gap-x-4 gap-y-1 border-t border-linka2 py-2.5 text-mikro text-tlum2">
-        {/* Barvu nese šipka, slovo zůstává neutrální — jinak svítí celý řádek dvakrát. */}
-        {stav.trend === "nahoru" && (
-          <span className="flex items-center gap-1 font-semibold text-tlum">
-            <span className="text-stari"><Ikona nazev="nahoru" velikost={11} tah={2.2} /></span>
-            {t("zhoršení za 7 dní")}
-          </span>
-        )}
-        {stav.trend === "dolu" && (
-          <span className="flex items-center gap-1 font-semibold text-tlum">
-            <span className="text-klid"><Ikona nazev="dolu" velikost={11} tah={2.2} /></span>
-            {t("zlepšení za 7 dní")}
-          </span>
-        )}
-        {stav.trend === "beze-zmeny" && <span>{t("beze změny 7 dní")}</span>}
-        <span className="cislice">{overeno ? `ověřeno ${datumCasPraha(overeno)}` : "ověření neproběhlo"}</span>
-      </div>
     </section>
   );
 }

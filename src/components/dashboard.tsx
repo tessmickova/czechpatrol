@@ -16,7 +16,6 @@ import { HeroDashboard } from "./hero-dashboard";
 import { DlazdiceKampane } from "./kampane";
 import { NadpisSekce } from "./nadpisy";
 import { PruhOverujeme } from "./overujeme";
-import { CislaVUvodu, type PolozkaPoctu } from "./pocitadla-zive";
 import { Aktuality } from "./aktuality";
 import { UrgentniUpozorneni } from "./urgentni";
 import { Odznak, RadekSeznamu, TeckaZavaznosti, Tlacitko } from "./ui";
@@ -318,13 +317,6 @@ export function Dashboard({
     ...kampane.map((k) => k.odhaleno),
   ];
   const porovnani90 = porovnejSPrumerem(zapocitatelne90, prumerNaOkno(casyZapocitatelne, 90, tedMs));
-  // Do prohlížeče posíláme jen datum, příznak Česka a druh — počítadla si
-  // zbytek dopočítají sama. Kampaně jsou tu schválně: manipulační operace
-  // proti občanům je incident, i když nemá jedno místo a jeden okamžik.
-  const pocitadlaData: PolozkaPoctu[] = [
-    ...vse.filter((i) => druh(i) === "pripad").map((i) => ({ kdy: kdyZjisteno(i), cz: i.kodZeme === "CZ" })),
-    ...kampane.map((k) => ({ kdy: k.odhaleno, cz: k.kodyZemi.includes("CZ"), kampan: true })),
-  ];
   const zemi = new Set(dni90.map((i) => i.kodZeme)).size;
   const cz = dni90.filter((i) => i.kodZeme === "CZ").length;
   const potvrzeno = dni90.filter(pachatelPotvrzen).length;
@@ -399,7 +391,7 @@ export function Dashboard({
   void tydny;
   return (
     <>
-    <PasZemi vse={vse} kampane={kampane} />
+    <PasZemi vse={vse} kampane={kampane} ted={ted} />
     <div className="mx-auto max-w-[1280px] px-4 py-5 sm:px-6 sm:py-7">
       {/* Nad budíky: co se šíří a zatím není ověřené. Bez toho by
           závažná, ale nepotvrzená zpráva propadla úplně. */}
@@ -421,12 +413,14 @@ export function Dashboard({
         Na mobilu jsou pod sebou; třetinový sloupec na úzkém displeji není
         sloupec, jen úzký proužek.
       */}
-      <div className="grid gap-4 xl:grid-cols-[minmax(0,3fr)_minmax(0,2fr)]">
+      {/*
+        Mezera mezi úvodem a sloupcem je větší než jinde v mřížce (40 px
+        místo 16): úvod nemá rámeček, takže hranici mezi textem a kartou
+        vedle dělá jen vzduch — a 16 px vzduchu hranici neudělá.
+      */}
+      <div className="grid gap-4 xl:grid-cols-[minmax(0,3fr)_minmax(0,2fr)] xl:gap-10">
         <div className="min-w-0">
-          <HeroDashboard
-            stav={stav} cr={cr} crHistoricky={crHistoricky} crPocet={crPocet} obcane={obcane} overeno={overeno} veta={veta}
-            cisla={<CislaVUvodu polozky={pocitadlaData} ted={ted} zaznamuCelkem={vse.length} />}
-          />
+          <HeroDashboard stav={stav} cr={cr} crHistoricky={crHistoricky} crPocet={crPocet} obcane={obcane} veta={veta} />
         </div>
         {/*
           Sloupec smí být o kousek vyšší než úvod. Dřív byl přilepený
