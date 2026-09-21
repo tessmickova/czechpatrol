@@ -61,17 +61,13 @@ export interface SnimekSluzeb {
 /*
   Registr. Jen adresy, o kterých víme, že jsou stavové stránky Statuspage —
   nic se nehádá. Přidání služby = jeden záznam tady, nic jiného.
+
+  Signal tu není schválně: jeho status.signal.org na /api/v2/summary.json
+  nevrací JSON (ověřeno během sběru 21. 9. 2026), takže není Statuspage
+  a nemáme z čeho číst. WhatsApp a Telegram veřejnou stavovou stránku
+  nemají vůbec. U messengerů tak zbývají jen hlášení uživatelů.
 */
 export const SLUZBY: Sluzba[] = [
-  {
-    klic: "signal",
-    nazev: "Signal",
-    kategorie: "komunikace",
-    url: "https://status.signal.org/api/v2/summary.json",
-    odkaz: "https://status.signal.org/",
-    tyka: "komunikace",
-    proc: "Šifrovaný messenger, na který lidé přecházejí, když nevěří síti. Výpadek se pozná jako nedoručené zprávy.",
-  },
   {
     klic: "cloudflare",
     nazev: "Cloudflare",
@@ -80,6 +76,15 @@ export const SLUZBY: Sluzba[] = [
     odkaz: "https://www.cloudflarestatus.com/",
     tyka: "komunikace",
     proc: "Síť, přes kterou běží velká část českých i světových webů včetně tohoto. Jeho výpadek vypadá jako „nejde internet“, i když síť jede.",
+  },
+  {
+    klic: "zoom",
+    nazev: "Zoom",
+    kategorie: "komunikace",
+    url: "https://status.zoom.us/api/v2/summary.json",
+    odkaz: "https://status.zoom.us/",
+    tyka: null,
+    proc: "Videohovory, přes které v krizi jednají úřady, školy i firmy. Výpadek se pozná jako nepřipojitelné schůzky.",
   },
   {
     klic: "discord",

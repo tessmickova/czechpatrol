@@ -408,8 +408,8 @@ export const ZDROJE: RegistrZdroj[] = [
      vyhlášení právního stavu: zastavení dopravy, uzavření letiště nebo
      přechodu, radiační či meteorologická mimořádnost, plošné zdravotní
      opatření — a totéž z druhé strany hranice, protože kontroly zavádí
-     soused, ne my. Všechny s overenaAdresa: false, dokud je neověří
-     `npm run sber:zdroje`. */
+     soused, ne my. Adresy ověřil běh sběru na Actions 21. 9. 2026
+     (HTTP 200 s obsahem); jediné BMI Německa vrací 400 — viz u něj. */
   {
     klic: "md",
     nazev: "Ministerstvo dopravy ČR",
@@ -421,7 +421,7 @@ export const ZDROJE: RegistrZdroj[] = [
     klicova: ["uzavreni vzdusneho prostoru", "zastaveni provozu na", "omezeni nakladni dopravy"],
     sledovana: ["mimoradna udalost v doprave"],
     tyka: ["hranice", "bezny-zivot"],
-    overenaAdresa: false,
+    overenaAdresa: true,
   },
   {
     klic: "sprava-zeleznic",
@@ -434,7 +434,7 @@ export const ZDROJE: RegistrZdroj[] = [
     klicova: ["zastaveni provozu na trati", "prerusen provoz na", "zastaven provoz na"],
     sledovana: ["mimoradna udalost"],
     tyka: ["bezny-zivot"],
-    overenaAdresa: false,
+    overenaAdresa: true,
   },
   {
     klic: "letiste-praha",
@@ -447,7 +447,7 @@ export const ZDROJE: RegistrZdroj[] = [
     klicova: ["uzavreni letiste", "pozastaveni provozu letiste", "uzavreni vzdusneho prostoru"],
     sledovana: ["omezeni provozu letiste"],
     tyka: ["vycestovani", "bezny-zivot"],
-    overenaAdresa: false,
+    overenaAdresa: true,
   },
   {
     klic: "celni-sprava",
@@ -461,7 +461,7 @@ export const ZDROJE: RegistrZdroj[] = [
     klicova: ["uzavreni hranicniho prechodu", "obnoveni hranicnich kontrol"],
     sledovana: ["hranicni kontroly"],
     tyka: ["hranice"],
-    overenaAdresa: false,
+    overenaAdresa: true,
   },
   {
     klic: "sujb",
@@ -474,7 +474,7 @@ export const ZDROJE: RegistrZdroj[] = [
     klicova: ["radiacni mimoradna udalost", "vyhlaseni radiacni havarie", "radiacni havarie"],
     sledovana: ["radiacni situace"],
     tyka: ["elektrina", "bezny-zivot"],
-    overenaAdresa: false,
+    overenaAdresa: true,
   },
   {
     klic: "chmi",
@@ -487,7 +487,7 @@ export const ZDROJE: RegistrZdroj[] = [
     klicova: ["extremni nebezpeci", "vystraha nejvyssiho stupne"],
     sledovana: ["vysoke nebezpeci"],
     tyka: ["bezny-zivot"],
-    overenaAdresa: false,
+    overenaAdresa: true,
   },
   {
     klic: "mzd",
@@ -501,7 +501,7 @@ export const ZDROJE: RegistrZdroj[] = [
     klicova: ["vyhlaseni mimoradneho opatreni", "plosna karantena", "vyhlasilo mimoradne opatreni"],
     sledovana: ["mimoradne opatreni"],
     tyka: ["bezny-zivot"],
-    overenaAdresa: false,
+    overenaAdresa: true,
   },
   {
     klic: "bundespolizei",
@@ -514,7 +514,7 @@ export const ZDROJE: RegistrZdroj[] = [
     klicova: ["wiedereinfuhrung von grenzkontrollen", "grenzkontrollen an der grenze zu", "grenzkontrollen zur tschechischen"],
     sledovana: ["grenzkontrollen"],
     tyka: ["hranice", "vycestovani"],
-    overenaAdresa: false,
+    overenaAdresa: true,
   },
   {
     klic: "bmi-de",
@@ -527,6 +527,8 @@ export const ZDROJE: RegistrZdroj[] = [
     klicova: ["grenzkontrollen angeordnet", "wiedereinfuhrung von grenzkontrollen", "grenzkontrollen verlangert"],
     sledovana: ["binnengrenzkontrollen"],
     tyka: ["hranice", "vycestovani"],
+    /* Měřeno 21. 9. 2026 z Actions: hlavní adresa vrací HTTP 400 automatizovanému dotazu. */
+    ocekavaneBlokovani: "blokuje",
     overenaAdresa: false,
   },
   {
@@ -540,7 +542,7 @@ export const ZDROJE: RegistrZdroj[] = [
     klicova: ["grenzkontrollen verlangert", "grenzkontrollen zu tschechien", "einfuhrung von grenzkontrollen"],
     sledovana: ["grenzkontrollen"],
     tyka: ["hranice", "vycestovani"],
-    overenaAdresa: false,
+    overenaAdresa: true,
   },
   {
     klic: "straz-graniczna",
@@ -553,7 +555,7 @@ export const ZDROJE: RegistrZdroj[] = [
     klicova: ["przywrocenie kontroli granicznej", "kontrola graniczna na granicy z", "tymczasowe przywrocenie kontroli"],
     sledovana: ["kontrola graniczna"],
     tyka: ["hranice", "vycestovani"],
-    overenaAdresa: false,
+    overenaAdresa: true,
   },
   {
     klic: "minv-sk",
@@ -566,7 +568,7 @@ export const ZDROJE: RegistrZdroj[] = [
     klicova: ["obnovenie kontrol na hraniciach", "docasne kontroly na hraniciach", "kontroly na hranici s ceskou"],
     sledovana: ["hranicne kontroly"],
     tyka: ["hranice", "vycestovani"],
-    overenaAdresa: false,
+    overenaAdresa: true,
   },
 ];
 
