@@ -2,11 +2,14 @@
 
 import Link from "next/link";
 import { datumPraha } from "@/lib/cas";
-import { kdyZjisteno, type Zaznam } from "@/lib/agregace";
-import { PASMA, UROVNE } from "@/lib/skala";
+import { jistotaZobrazena, kdyZjisteno, type Zaznam } from "@/lib/agregace";
+import { PUVODCI } from "@/lib/kategorie";
+import { JISTOTY, PASMA, UROVNE } from "@/lib/skala";
 import type { Kandidat } from "@/lib/typy";
 import { Ikona } from "./ikony";
 import { PanelNahledu, useNahled, type Nahled } from "./nahled-radku";
+import { Tlacitko } from "./ui";
+import { Vlajka } from "./zeme";
 
 /*
   Aktuality vedle úvodu.
@@ -40,14 +43,61 @@ const NAZVY_NALEHAVOSTI: Record<string, string> = {
 };
 
 /*
-  Šest a šest je změřené, ne odhadnuté.
+  Čtyři a čtyři je změřené, ne odhadnuté.
 
-  Sloupec je v širokém rozvržení natažený přes výšku úvodu, takže počet
-  položek je daný tím, co se do ní vejde: dvanáct jednořádkových přesně,
-  třináctá by se ořízla. Kdyby úvod kvůli jinému obsahu zkrátil, ubere se
-  zdola — tedy nejstarší zachycená zpráva, což je ta nejméně podstatná.
-  Celý seznam je stejně jen ochutnávka; úplný je v Událostech.
+  Řádek má nejvýš dvě řádky titulku (56 px), takže se jich vedle úvodu
+  vejde míň než jednořádkových — ale titulek se dá přečíst bez najetí
+  myší. Čtyři a čtyři dávají sloupec zhruba o výšce úvodu; když jsou
+  titulky delší, přesáhne ho o pár desítek pixelů, což úvod bez rámečku
+  unese. Celý seznam je stejně jen ochutnávka; úplný je v Událostech.
 */
+
+/*
+  Titulek bez země na začátku.
+
+  Záznamy mají titulek ve tvaru „Nizozemsko: úmyslně umístěné trubky…".
+  V řádku, kde je vedle vlajka, je slovo navíc — zabírá místo, které
+  chybí titulku. Odstraní se ale jen tehdy, když předpona opravdu je
+  země záznamu; u „USA: obvinila pět osob…" se zemí Rusko zůstává, protože
+  by věta bez podmětu nedávala smysl.
+*/
+function bezZeme(titulek: string, zeme: string, kodZeme: string): string {
+  const predpony = [zeme, kodZeme === "CZ" ? "Česko" : "", kodZeme === "CZ" ? "ČR" : ""].filter(Boolean);
+  for (const z of predpony) {
+    if (titulek.toLowerCase().startsWith(`${z.toLowerCase()}:`)) {
+      const zbytek = titulek.slice(z.length + 1).trim();
+      return zbytek ? zbytek.charAt(0).toUpperCase() + zbytek.slice(1) : titulek;
+    }
+  }
+  return titulek;
+}
+
+/*
+  Náhled ověřeného záznamu: celý titulek a hodnocení v párech.
+
+  Řádek má dvě řádky a vlajku místo jména země, takže náhled musí doplnit
+  to, co řádek vynechal: celý titulek, jméno země a datum. Hodnocení
+  (závažnost, jistota, původce, zdroj) je tu proto, aby se dalo posoudit
+  bez prokliku, jestli záznam stojí za otevření.
+*/
+function nahledZaznamu(z: Zaznam): Nahled {
+  const jistota = jistotaZobrazena(z);
+  const uredni = z.zdroje.find((s) => s.primarni) ?? z.zdroje[0];
+  const zdroj = uredni
+    ? `${uredni.nazev.split(" — ")[0]}${z.zdroje.length > 1 ? ` +${z.zdroje.length - 1}` : ""}`
+    : "bez odkazu";
+  return {
+    titulek: z.titulek,
+    radky: [datumPraha(kdyZjisteno(z)), z.kodZeme === "CZ" ? "Česko" : z.zeme],
+    udaje: [
+      { popisek: "Závažnost", hodnota: UROVNE[z.zavaznost].nazev },
+      { popisek: "Jistota", hodnota: JISTOTY[jistota].nazev },
+      { popisek: "Původce", hodnota: z.puvodce ? PUVODCI[z.puvodce] : "neuvedeno" },
+      { popisek: "Zdroj", hodnota: zdroj },
+    ],
+    poznamka: "Ověřený záznam. Klepnutím se otevře i se zdroji.",
+  };
+}
 /*
   Náhled zachycené zprávy.
 
@@ -66,7 +116,7 @@ function nahledKandidata(k: Kandidat): Nahled {
   return {
     titulek: k.titulek,
     radky,
-    poznamka: "Zachyceno sběrem, nikdo to zatím neověřil. Klepnutím se otevře původní zdroj.",
+    poznamka: "Zachyceno ze zdroje, zatím neověřeno. Klepnutím se otevře původní zdroj.",
   };
 }
 
@@ -80,6 +130,8 @@ function nahledKandidata(k: Kandidat): Nahled {
 */
 interface Neoverene {
   klic: string;
+  kodZeme: string | null;
+  zeme: string | null;
   kdy: string;
   bezData: boolean;
   slovo: "nepotvrzeno" | "zachyceno";
@@ -94,8 +146,8 @@ export function Aktuality({
   zaznamy,
   kandidati,
   nepotvrzene = [],
-  overenych = 6,
-  neoverenych = 6,
+  overenych = 4,
+  neoverenych = 4,
 }: {
   zaznamy: Zaznam[];
   kandidati: Kandidat[];
@@ -118,21 +170,25 @@ export function Aktuality({
   const neoverene: Neoverene[] = [
     ...nepotvrzene.map((z): Neoverene => ({
       klic: `n-${z.id}`,
+      kodZeme: z.kodZeme,
+      zeme: z.kodZeme === "CZ" ? "Česko" : z.zeme,
       kdy: kdyZjisteno(z),
       bezData: false,
       slovo: "nepotvrzeno",
-      titulek: z.kratkyTitulek || z.titulek,
+      titulek: bezZeme(z.kratkyTitulek || z.titulek, z.zeme, z.kodZeme),
       kam: `/nepotvrzeno/${z.id}/`,
       ven: false,
       tecka: `border ${PASMA[UROVNE[z.zavaznost].pasmo].pruh.replace("bg-", "border-")}`,
       nahled: {
         titulek: z.titulek,
         radky: [datumPraha(kdyZjisteno(z)), z.zeme, `závažnost ${UROVNE[z.zavaznost].nazev.toLowerCase()}`, `${z.zdroje.length} ${z.zdroje.length === 1 ? "zdroj" : "zdrojů"}`],
-        poznamka: "Zpracováno, ale nikdo to zatím nepotvrdil. Do počtů nevstupuje. Klepnutím se otevře i se zdroji.",
+        poznamka: "Zpracováno, zatím bez potvrzení. Do počtů nevstupuje. Klepnutím se otevře i se zdroji.",
       },
     })),
     ...kandidati.map((k): Neoverene => ({
       klic: `k-${k.id}`,
+      kodZeme: k.kodZeme,
+      zeme: k.zeme,
       kdy: k.publikovano ?? k.zachyceno,
       bezData: !k.publikovano,
       slovo: "zachyceno",
@@ -151,7 +207,7 @@ export function Aktuality({
   return (
     <aside
       aria-labelledby="aktuality-nadpis"
-      className="relative flex h-full flex-col overflow-hidden rounded-[28px] border border-linka2 bg-plocha xl:absolute xl:inset-0"
+      className="relative flex h-full flex-col overflow-hidden rounded-[28px] border border-linka2 bg-plocha"
       onPointerLeave={skryj}
     >
       {/*
@@ -174,29 +230,34 @@ export function Aktuality({
       <ul className="divide-y divide-linka2">
         {posledni.map((z) => {
           const t = PASMA[UROVNE[z.zavaznost].pasmo];
+          const nahledZ = nahledZaznamu(z);
+          const zeme = z.kodZeme === "CZ" ? "Česko" : z.zeme;
           return (
-            <li
-              key={z.slug}
-              onPointerEnter={(e) => ukaz({
-                titulek: z.titulek,
-                radky: [datumPraha(kdyZjisteno(z)), z.zeme, `závažnost ${UROVNE[z.zavaznost].nazev.toLowerCase()}`],
-                poznamka: "Ověřený záznam. Klepnutím se otevře i se zdroji.",
-              }, e)}
-              onPointerMove={pohyb}
-            >
+            <li key={z.slug} onPointerEnter={(e) => ukaz(nahledZ, e)} onPointerMove={pohyb}>
+              {/*
+                Odkaz vede na vlastní stránku záznamu, ne na seznam s
+                otevřeným detailem: seznam detail otevírá jen v širokém
+                rozvržení a na mobilu by čtenář skončil u výpisu bez
+                záznamu, na který klepl.
+
+                Řádek: tečka závažnosti, vlajka, datum, titulek na dvě řádky.
+                Vlajka místo jména země — jméno je v titulku navíc a při
+                najetí ho řekne vlajka sama. Titulek se láme pod sebe, ne pod
+                datum: sloupce vlevo mají pevnou šířku.
+              */}
               <Link
-                href={`/udalosti/?u=${z.slug}`}
-                className="flex items-baseline gap-2.5 px-4 py-2 hover:bg-plocha2"
-                onFocus={(e) => ukaz({
-                  titulek: z.titulek,
-                  radky: [datumPraha(kdyZjisteno(z)), z.zeme, `závažnost ${UROVNE[z.zavaznost].nazev.toLowerCase()}`],
-                  poznamka: "Ověřený záznam. Klepnutím se otevře i se zdroji.",
-                }, e.currentTarget.getBoundingClientRect() as unknown as { clientX: number; clientY: number })}
+                href={`/incident/${z.slug}/`}
+                className="flex items-start gap-2.5 px-4 py-2 hover:bg-plocha2"
+                onFocus={(e) => {
+                  const b = e.currentTarget.getBoundingClientRect();
+                  ukaz(nahledZ, { clientX: b.right, clientY: b.top });
+                }}
               >
-                <span aria-hidden className={`h-[6px] w-[6px] shrink-0 translate-y-[-1px] rounded-full ${t.tecka}`} />
-                <span className="flex min-w-0 flex-1 items-baseline gap-2">
-                  <span className="cislice w-[80px] shrink-0 whitespace-nowrap text-mikro text-tlum2">{datumPraha(kdyZjisteno(z))}</span>
-                  <span className="truncate text-male leading-snug text-inkoust">{z.kratkyTitulek || z.titulek}</span>
+                <span aria-hidden className={`mt-[7px] h-[6px] w-[6px] shrink-0 rounded-full ${t.tecka}`} />
+                <span className="flex min-w-0 flex-1 items-start gap-2">
+                  <span className="shrink-0 leading-[20px]" title={zeme} aria-label={zeme}><Vlajka kod={z.kodZeme} /></span>
+                  <span className="cislice w-[80px] shrink-0 whitespace-nowrap pt-[3px] text-mikro text-tlum2">{datumPraha(kdyZjisteno(z))}</span>
+                  <span className="line-clamp-2 text-male leading-[20px] text-inkoust">{bezZeme(z.kratkyTitulek || z.titulek, z.zeme, z.kodZeme)}</span>
                 </span>
               </Link>
             </li>
@@ -228,21 +289,30 @@ export function Aktuality({
       {neoverene.length > 0 ? (
         <ul className="divide-y divide-linka2">
           {neoverene.map((r) => {
-            const trida = "flex items-baseline gap-2.5 px-4 py-2 hover:bg-plocha2";
+            const trida = "flex items-start gap-2.5 px-4 py-2 hover:bg-plocha2";
             const telo = (
               <>
-                <span aria-hidden className={`h-[6px] w-[6px] shrink-0 translate-y-[-1px] rounded-full ${r.tecka}`} />
-                <span className="flex min-w-0 flex-1 items-baseline gap-2">
+                <span aria-hidden className={`mt-[7px] h-[6px] w-[6px] shrink-0 rounded-full ${r.tecka}`} />
+                <span className="flex min-w-0 flex-1 items-start gap-2">
+                  {/*
+                    Vlajka jen tam, kde zemi známe; jinak prázdné místo stejné
+                    šířky, aby datum a titulek lícovaly s ověřenými řádky.
+                  */}
+                  <span className="w-[18px] shrink-0 leading-[20px]" title={r.zeme ?? undefined} aria-label={r.zeme ?? undefined}>
+                    {r.kodZeme ? <Vlajka kod={r.kodZeme} /> : null}
+                  </span>
                   {/*
                     Pevná šířka, aby titulky lícovaly. „Bez data" je kratší než
                     datum. A bez data se datum nepíše: datum zachycení by se četlo
                     jako den události — u staré zprávy z výpisu úřadu je to lež.
                   */}
-                  <span className="cislice w-[80px] shrink-0 whitespace-nowrap text-mikro text-tlum2">
+                  <span className="cislice w-[80px] shrink-0 whitespace-nowrap pt-[3px] text-mikro text-tlum2">
                     {r.bezData ? "bez data" : datumPraha(r.kdy)}
                   </span>
-                  <span className="stitek shrink-0 text-tlum2">{r.slovo}</span>
-                  <span className="truncate text-male leading-snug text-tlum">{r.titulek}</span>
+                  <span className="line-clamp-2 text-male leading-[20px] text-tlum">
+                    <span className="stitek mr-1.5 text-tlum2">{r.slovo}</span>
+                    {r.titulek}
+                  </span>
                 </span>
               </>
             );
@@ -274,10 +344,15 @@ export function Aktuality({
 
       <PanelNahledu nahled={nahled} kde={kde} />
 
+      {/*
+        Jediná cesta k archivu z úvodu. Seznam všech záznamů dřív stál i dole
+        na úvodní straně — podruhé totéž, co je tady a v Událostech. Tlačítko
+        ho nahrazuje.
+      */}
       <div className="mt-auto border-t border-linka2 px-4 py-2.5">
-        <Link href="/udalosti/" className="stitek inline-flex min-h-[32px] items-center text-tlum2 transition-colors hover:text-inkoust">
-          Všechny události →
-        </Link>
+        <Tlacitko kam="/udalosti/" varianta="obrys" velikost="s" ikonaVpravo="nahoru" trida="[&>svg:last-child]:rotate-90">
+          Všechny záznamy od 2014
+        </Tlacitko>
       </div>
     </aside>
   );

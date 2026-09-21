@@ -57,7 +57,7 @@ const KROKY: Krok[] = [
     cislo: "4",
     nadpis: "Zveřejnění",
     kdo: "automaticky, nebo vy ve Správě",
-    co: "Návrh se dvěma nezávislými zdroji, z nichž aspoň jeden je úřední, jde na web sám a je označený jako nečtený. Všechno ostatní čeká na vaše schválení — teprve tím se ze záznamu stane něco, za čím projekt stojí.",
+    co: "Návrh se dvěma nezávislými zdroji, z nichž aspoň jeden je úřední, jde na web sám a je označený jako zveřejněný bez redakčního posouzení. Všechno ostatní čeká na vaše schválení — teprve tím se ze záznamu stane něco, za čím projekt stojí.",
     zastavi: "Zamítnutý návrh jde do koše i s důvodem. Nemaže se, aby šlo poznat, že už jednou posuzován byl.",
   },
 ];
@@ -82,7 +82,7 @@ const KAM: Cil[] = [
   {
     nazev: "Záznamy a počty na webu — automatické",
     podminka: "dva nezávislé zdroje · aspoň jeden úřední",
-    kdy: "Zveřejní se samo, bez čekání na člověka. U záznamu je napsáno, že ho nikdo nečetl, a hodnocení projektu u něj není — jen doložená fakta a zdroje. Do počtů vstupuje.",
+    kdy: "Zveřejní se samo, bez čekání na člověka. U záznamu je napsáno, že vznikl ze zdrojů bez redakčního posouzení, a hodnocení projektu u něj není — jen doložená fakta a zdroje. Do počtů vstupuje.",
   },
   {
     nazev: "Právě ověřované",

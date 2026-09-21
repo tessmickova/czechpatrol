@@ -97,14 +97,19 @@ export function HeroDashboard({
   const d = stav.uroven ? UROVNE[stav.uroven] : null;
   const pasmo = stav.uroven ? PASMA[UROVNE[stav.uroven].pasmo] : null;
   return (
-    <section aria-label={t("Bezpečnostní aktivita")} className="sklo paralax-deska rounded-[28px]">
+    <section aria-label={t("Bezpečnostní aktivita")} className="paralax-deska">
+      {/*
+        Bez rámečku. Úvod je začátek stránky, ne karta v ní — orámovaný
+        vypadal jako jeden z panelů a soupeřil s aktualitami vedle. Vnitřní
+        dělicí linky zůstávají, jen se nezavírají do rámu.
+      */}
       {/*
         Hlavička úvodu ve stejném tvaru jako u každé jiné sekce: značka,
         štítek v barvě značky, nadpis v .titul-sekce. Dřív tu stál nadpis
         vlastního formátu (15px verzálkami, šedý) — vypadal jako popisek
         a čtenář z něj nepoznal, že je to nadpis stránky.
       */}
-      <div className="border-b border-linka2 px-5 pt-4 sm:px-7 sm:pt-5">
+      <div className="border-b border-linka2 pt-1 sm:pt-2">
         <div className="mb-2 flex items-center gap-2">
           <Znacka velikost={26} tmave />
           <span className="stitek-znacky">{t("Bezpečnostní přehled")}</span>
@@ -112,7 +117,7 @@ export function HeroDashboard({
         <h1 className="titul-sekce pb-3">{t("Bezpečnostní situace v Česku a okolí")}</h1>
       </div>
       {/* Jedna věta, kterou má čtenář odnést, i kdyby dál nečetl. */}
-      <p className="uvodni-veta border-b border-linka2 px-5 pb-4 pt-3 sm:px-7 sm:pb-5">
+      <p className="uvodni-veta border-b border-linka2 pb-4 pt-3 sm:pb-5">
         <strong className="font-bold text-inkoust">{veta.cesko}</strong>{" "}
         <span className="text-tlum">{veta.evropa}</span>
         {veta.neovereno > 0 && (
@@ -131,7 +136,7 @@ export function HeroDashboard({
         „auto" a roztáhne se podle nejširšího obsahu — dva budíky vedle sebe
         ho vyhnaly na 677 px a celý panel se na 390 px displeji ořízl vpravo.
       */}
-      <div className="grid grid-cols-[minmax(0,1fr)] gap-2 p-3 sm:p-3.5 lg:grid-cols-[minmax(0,1.05fr)_minmax(0,1.4fr)]">
+      <div className="grid grid-cols-[minmax(0,1fr)] gap-2 py-3 sm:py-3.5 lg:grid-cols-[minmax(0,1.05fr)_minmax(0,1.4fr)]">
         <div className="flex min-w-0 items-center gap-4 border-b border-linka2 pb-3 lg:border-b-0 lg:border-r lg:pb-0 lg:pr-4">
           <Napoveda popis={stav.uroven ? <VykladUrovne uroven={stav.uroven} /> : <span className="block">{t("Hodnocení zatím nebylo stanoveno.")}</span>}>
             <span className="block"><ObloukovyMerak uroven={stav.uroven} naNoci velikost={132} skrytPopisek /></span>
@@ -146,7 +151,7 @@ export function HeroDashboard({
               záznamu, kde je vedle ní vysvětlení.
             */}
             <p className="mt-2.5 flex flex-wrap gap-2">
-              <Tlacitko kam="#zaznamy" varianta="zvyrazneny" velikost="s" ikona="osa">{t("Všechny záznamy")}</Tlacitko>
+              <Tlacitko kam="/udalosti/" varianta="zvyrazneny" velikost="s" ikona="osa">{t("Všechny záznamy")}</Tlacitko>
               <Tlacitko kam="#sledovat" varianta="obrys" velikost="s" ikona="zvonek">{t("Sledovat změny")}</Tlacitko>
             </p>
           </div>
@@ -190,7 +195,7 @@ export function HeroDashboard({
         a kdy ho někdo naposled potvrdil. Mono písmem a potichu, jako údaj
         na přístroji.
       */}
-      <div className="flex flex-wrap items-center gap-x-4 gap-y-1 border-t border-linka2 px-5 py-2.5 text-mikro text-tlum2 sm:px-7">
+      <div className="flex flex-wrap items-center gap-x-4 gap-y-1 border-t border-linka2 py-2.5 text-mikro text-tlum2">
         {/* Barvu nese šipka, slovo zůstává neutrální — jinak svítí celý řádek dvakrát. */}
         {stav.trend === "nahoru" && (
           <span className="flex items-center gap-1 font-semibold text-tlum">

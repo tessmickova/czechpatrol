@@ -76,7 +76,7 @@ export function CoJeNoveho({
       radky: [datumPraha(kdyZjisteno(z)), z.zeme, `závažnost ${UROVNE[z.zavaznost].nazev.toLowerCase()}`, `${z.zdroje.length} ${z.zdroje.length === 1 ? "zdroj" : "zdrojů"}`],
       poznamka: druh === "overeny"
         ? (stitky?.get(z.id) ?? "Ověřený záznam. Počítá se do statistik.")
-        : "Zpracováno, ale nikdo to zatím nepotvrdil. Do počtů nevstupuje. Klepnutím se otevře i se zdroji.",
+        : "Zpracováno, zatím bez potvrzení. Do počtů nevstupuje. Klepnutím se otevře i se zdroji.",
     },
   });
 
@@ -98,7 +98,7 @@ export function CoJeNoveho({
           k.zeme ?? "země neurčena",
           k.zdroj.nazev,
         ],
-        poznamka: "Zachyceno sběrem, nikdo to zatím neověřil. Klepnutím se otevře původní zdroj.",
+        poznamka: "Zachyceno ze zdroje, zatím neověřeno. Klepnutím se otevře původní zdroj.",
       },
     })),
   ]

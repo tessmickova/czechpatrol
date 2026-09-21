@@ -164,20 +164,25 @@ export function DetailObsah({ i }: { i: Incident }) {
           <Link href="/#opatreni" className="odkaz">Oficiální opatření</Link>
         </p>
         {/*
-          Kdo záznam ověřil, musí být vidět.
+          Odkud záznam pochází, musí být vidět.
 
           Web dlouho sliboval, že všechno na něm prošlo člověkem. Od chvíle,
           kdy se dobře doložené záznamy zveřejňují samy, to neplatí — a mlčet
           o tom by znamenalo tvrdit čtenáři něco, co není pravda. Věta je
           proto u záznamu, ne schovaná v metodice.
+
+          Říká se to ale způsobem, jakým se mluví ke čtenáři, ne k sobě:
+          „nikdo z nás ho nečetl" je pravda z provozní porady, ne věta pro
+          veřejnost. Čtenář potřebuje vědět, na čem záznam stojí a čí
+          hodnocení u něj (ne)najde.
         */}
         {i.overeni === "automaticke" && (
           <div className="mt-3 rounded-[18px] border border-linka p-3.5">
-            <div className="stitek mb-1">Jak byl tenhle záznam ověřen</div>
+            <div className="stitek mb-1">Odkud tenhle záznam pochází</div>
             <p className="text-zaklad leading-relaxed text-tlum">
-              Zveřejnil se automaticky, protože stojí na dvou nezávislých zdrojích
-              a aspoň jeden z nich je úřední. <span className="text-inkoust">Nikdo z nás ho nečetl.</span>{" "}
-              Fakta i odkazy jsou přesně to, co uvádějí zdroje — hodnocení projektu u něj proto není.
+              Stojí na dvou nezávislých zdrojích, z nichž aspoň jeden je úřední, a zveřejnil se
+              na jejich základě bez redakčního posouzení. <span className="text-inkoust">Fakta i odkazy odpovídají tomu, co zdroje uvádějí.</span>{" "}
+              Vlastní hodnocení projektu u něj proto není.
             </p>
           </div>
         )}

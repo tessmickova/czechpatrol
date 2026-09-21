@@ -26,11 +26,10 @@ import { useZiveHodiny } from "@/lib/cas-klient";
 import { SignalySiti } from "./signaly-siti";
 import { TipyKPriprave } from "./tipy";
 import { PasZemi } from "./pas-zemi";
-import { Pocitadla } from "./pocitadla";
 import { CoJeNoveho } from "./co-je-noveho";
 import { Partneri, Sledovat } from "./sledovat";
 import { VyzvaTelegram } from "./vyzva-telegram";
-import { UdalostiKlient } from "./udalosti-klient";
+import { Nahlaseni } from "./nahlaseni";
 import { Napoveda } from "./zaklad";
 import { sklon, Vlajka } from "./zeme";
 import { useT } from "@/lib/i18n";
@@ -407,7 +406,11 @@ export function Dashboard({
       <PruhOverujeme aktivni={overovaneAktivni} uzavrene={overovaneUzavrene} ted={tedMs} />
 
       {/*
-        Úvod dvě třetiny, aktuality třetina.
+        Úvod tři pětiny, aktuality dvě pětiny.
+
+        Třetina byla na dvouřádkové titulky úzká: řádek s vlajkou a datem
+        nechal titulku ~200 px a lámal ho do tří řádků. Dvě pětiny stačí na
+        dvě řádky a úvod o 90 px užší nic neztrácí.
 
         Na titulce nebylo poznat, že projekt žije: ověřené záznamy přibývají
         po dnech, protože každý musí projít člověkem, a mezi nimi web vypadal
@@ -418,23 +421,25 @@ export function Dashboard({
         Na mobilu jsou pod sebou; třetinový sloupec na úzkém displeji není
         sloupec, jen úzký proužek.
       */}
-      <div className="grid gap-4 xl:grid-cols-3">
-        <div className="min-w-0 xl:col-span-2">
+      <div className="grid gap-4 xl:grid-cols-[minmax(0,3fr)_minmax(0,2fr)]">
+        <div className="min-w-0">
           <HeroDashboard
             stav={stav} cr={cr} crHistoricky={crHistoricky} crPocet={crPocet} obcane={obcane} overeno={overeno} veta={veta}
             cisla={<CislaVUvodu polozky={pocitadlaData} ted={ted} zaznamuCelkem={vse.length} />}
           />
         </div>
         {/*
-          Sloupec se nesmí roztahovat řádek. Absolutní umístění znamená, že
-          výšku řádku určuje jen úvodní panel — aktuality se mu přizpůsobí,
-          ne naopak. Bez toho vedle panelu vysokého 580 px stál sloupec
-          vysoký 920 px a pod úvodem zůstalo prázdné místo.
+          Sloupec smí být o kousek vyšší než úvod. Dřív byl přilepený
+          absolutně na výšku úvodu, protože jednořádkových položek se do ní
+          vešlo dvanáct a třináctá by se ořízla. Dvouřádkové řádky se ale do
+          výšky úvodu (545 px bez rámečku) nevejdou ani čtyři a čtyři —
+          a tři a tři už nejsou aktuality. Úvod bez rámečku prázdné místo
+          pod sebou unese; oříznutý poslední řádek pod tlačítkem ne.
 
           Zlom je až na 1280 px. Při 1024 px by měl sloupec jen ~310 px,
           titulky by se lámaly do čtyř řádků a nevešly by se ani čtyři.
         */}
-        <div className="min-w-0 xl:relative">
+        <div className="min-w-0">
           <Aktuality zaznamy={vse} kandidati={kandidati} nepotvrzene={nepotvrzene} />
         </div>
       </div>
@@ -578,19 +583,17 @@ export function Dashboard({
         statistiku. Čísla dávají smysl až nad seznamem, který si prohlédl,
         ne před ním.
       */}
-      {/* 4 — započítávání a úplný seznam */}
+      {/*
+        4 — úplný seznam tu už není.
+
+        Stál tu celý archiv s filtry — totéž, co je na stránce Události,
+        a k tomu potřetí to, co ukazují aktuality nahoře. Úvodní strana
+        na archiv odkazuje (tlačítko v aktualitách), sama ho nenese.
+        Zůstává jen to, co jinde není: možnost ohlásit, co chybí.
+      */}
       <div className="nalet mt-14 border-t border-linka pt-12 sm:mt-20 sm:pt-14">
-        <NadpisSekce
-          stitek="Archiv"
-          nadpis={t("Všechny záznamy od roku 2014")}
-          popis={t("Případy, jejich pokračování, opatření, prohlášení i to, co neprošlo ověřením.")}
-          akce={<Tlacitko kam="/udalosti/" varianta="obrys" velikost="s" ikonaVpravo="nahoru" trida="[&>svg:last-child]:rotate-90">{t("samostatná stránka")}</Tlacitko>}
-        />
+        <Nahlaseni />
       </div>
-      <div className="mb-5"><Pocitadla vse={vse} neprosle={neprosle} kandidati={kandidati} nepotvrzenych={nepotvrzene.length} /></div>
-      <section id="zaznamy" aria-label={t("Všechny záznamy")} className="scroll-mt-[84px] rounded-[22px] border border-linka2 bg-plocha p-4 sm:p-6">
-        <UdalostiKlient zaznamy={vse} neprosle={neprosle} kandidati={kandidati} nepotvrzene={nepotvrzene} />
-      </section>
 
       {/* 3 — čísla, kde, kdo */}
       <div className="nalet mt-14 border-t border-linka pt-12 sm:mt-20 sm:pt-14">
