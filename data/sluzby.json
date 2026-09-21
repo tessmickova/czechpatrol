@@ -1,11 +1,16 @@
 {
-  "aktualizovano": "2026-09-21T12:02:51.362Z",
+  "aktualizovano": "2026-09-21T12:45:30.584Z",
   "stavy": [
     {
       "klic": "cloudflare",
       "stav": "omezeni",
       "popis": "Minor Service Outage",
       "incidenty": [
+        {
+          "nazev": "Unable to start containers in Asia-Pacific",
+          "odkaz": "https://www.cloudflarestatus.com/incidents/rxmmx07ys7qg",
+          "aktualizovano": "2026-09-21T12:42:26.000Z"
+        },
         {
           "nazev": "Incorrect geo location for some Cloudflare WARP users",
           "odkaz": "https://www.cloudflarestatus.com/incidents/9g65dxfbcjln",
@@ -18,7 +23,7 @@
         "Arica, Chile - (ARI)",
         "Annaba, Algeria - (AAE)"
       ],
-      "zkontrolovano": "2026-09-21T12:02:51.362Z",
+      "zkontrolovano": "2026-09-21T12:45:30.584Z",
       "chyba": null
     },
     {
@@ -27,7 +32,7 @@
       "popis": "All Systems Operational",
       "incidenty": [],
       "postizene": [],
-      "zkontrolovano": "2026-09-21T12:02:51.362Z",
+      "zkontrolovano": "2026-09-21T12:45:30.584Z",
       "chyba": null
     },
     {
@@ -36,7 +41,7 @@
       "popis": "All Systems Operational",
       "incidenty": [],
       "postizene": [],
-      "zkontrolovano": "2026-09-21T12:02:51.362Z",
+      "zkontrolovano": "2026-09-21T12:45:30.584Z",
       "chyba": null
     }
   ]
