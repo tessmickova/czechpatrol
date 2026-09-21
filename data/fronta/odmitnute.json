@@ -1,5 +1,21 @@
 [
   {
+    "id": "k-3eca38e05c546a3b",
+    "zachyceno": "2026-09-21T20:00:59.666Z",
+    "publikovano": "2026-09-21T19:00:00.000Z",
+    "zdroj": {
+      "nazev": "Český rozhlas — domácí zprávy",
+      "url": "https://www.irozhlas.cz/zpravy-svet/argentinci-protestuji-vuci-hospodarske-politice-prezidenta-mileie-stale-vice_2609212100_ntu",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Argentinci protestují proti hospodářské politice prezidenta Mileie. Stále více lidí se potýká s chudobou",
+    "shrnuti": "Tisíce lidí vyšly do ulic argentinské metropole Buenos Aires protestovat proti hospodářské politice prezidenta Javiera Mileie. Především levicové organizace svolaly protestní pochod proti škrtům, které prezident zavedl.",
+    "duvod": "bez-skutku",
+    "kategorie": [],
+    "posouzeni": null
+  },
+  {
     "id": "k-947df19949b00ec3",
     "zachyceno": "2026-09-21T19:02:47.818Z",
     "publikovano": "2026-09-21T18:47:02.000Z",
@@ -453,6 +469,24 @@
     },
     "titulek": "California declares state of emergency ahead of El Niño season - ABC7 Los Angeles",
     "shrnuti": "California declares state of emergency ahead of El Niño season ABC7 Los Angeles",
+    "duvod": "bez-mista",
+    "kategorie": [
+      "pravo"
+    ],
+    "posouzeni": null
+  },
+  {
+    "id": "k-583c6478e9ab4145",
+    "zachyceno": "2026-09-21T20:00:59.888Z",
+    "publikovano": "2026-09-21T16:10:24.000Z",
+    "zdroj": {
+      "nazev": "Téma: nouzovy-stav (anglicky)",
+      "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxQbWdOb1hwWGVmN3FtOFJpT1BqMzNPUXFYc2FyV2pWR08xakp6VGpLbUIxNmZKVk9KYmRjRXh1Y3FUaWU3dmtBQTRzaUl2ejNoQWVOdWpMR1RyRjRsYnEwX2lwd1I4Vk5Pc1Boa1dVUHpJMExiVXZYdHl2dlctci0tRzVjS3VodEpLQm9tMmZZeFBTQ0JwN2JXTjB6RS1EU3AtcGJ1UkxSWC1IbGZHWUpvS252Q2hJbnROdmlrbGstUFFuUQ?oc=5",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "State of emergency declared for all of California ahead of strong El Niño forecast - KGET.com",
+    "shrnuti": "State of emergency declared for all of California ahead of strong El Niño forecast KGET.com",
     "duvod": "bez-mista",
     "kategorie": [
       "pravo"
@@ -9387,48 +9421,6 @@
     "posouzeni": {
       "podezreni": "zadne",
       "duvod": "Zvýšení mezd řidičů autobusů, pracovní politika",
-      "kdy": "2026-09-19T11:03:33.710Z"
-    }
-  },
-  {
-    "id": "k-2695a1a2df824919",
-    "zachyceno": "2026-09-19T08:00:22.151Z",
-    "publikovano": "2026-09-17T07:49:00.000Z",
-    "zdroj": {
-      "nazev": "ERR News (Estonsko)",
-      "url": "https://news.err.ee/1610140327/minister-welcomes-approval-of-lindsey-graham-sponsored-russia-sanctions-bill",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Minister welcomes approval of Lindsey Graham-sponsored Russia sanctions bill",
-    "shrnuti": "Foreign Minister Margus Tsahkna (Eesti 200) has heralded the US Congress's approval of a Russia sanctions bill targeting countries whichbuy Russian oil and gas.",
-    "duvod": "bez-skutku",
-    "kategorie": [
-      "rusko"
-    ],
-    "posouzeni": {
-      "podezreni": "stredni",
-      "duvod": "Ruské sankce, ale политический komentář, ne bezpečnostní incident",
-      "kdy": "2026-09-19T11:03:33.710Z"
-    }
-  },
-  {
-    "id": "k-686ab1da84bc0dcf",
-    "zachyceno": "2026-09-19T08:00:22.152Z",
-    "publikovano": "2026-09-17T07:20:00.000Z",
-    "zdroj": {
-      "nazev": "ERR News (Estonsko)",
-      "url": "https://news.err.ee/1610139829/high-prices-delay-estonia-s-fuel-replenishment-but-reserves-still-solid",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "High prices delay Estonia's fuel replenishment, but reserves still solid",
-    "shrnuti": "In March the Estonian Stockpiling Agency released about ten percent of its reserves to the market — mostly gasoline, with smaller amounts of diesel and aviation fuel. Currently there are no plans to buy back that fuel, as prices are high and such purchases could push them even higher.",
-    "duvod": "bez-skutku",
-    "kategorie": [],
-    "posouzeni": {
-      "podezreni": "zadne",
-      "duvod": "Hospodářská zpráva o palivových rezervách",
       "kdy": "2026-09-19T11:03:33.710Z"
     }
   }
