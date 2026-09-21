@@ -1,5 +1,5 @@
 {
-  "kdy": "2026-09-21T09:18:31.410Z",
+  "kdy": "2026-09-21T10:01:07.310Z",
   "zdroje": [
     {
       "klic": "e-sbirka",
@@ -132,9 +132,10 @@
     },
     {
       "klic": "sprava-zeleznic",
-      "ok": true,
-      "stav": 200,
-      "pocetPolozek": 0
+      "ok": false,
+      "stav": null,
+      "pocetPolozek": 0,
+      "chyba": "fetch failed"
     },
     {
       "klic": "letiste-praha",

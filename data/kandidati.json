@@ -11707,6 +11707,40 @@
     }
   },
   {
+    "id": "k-c5a14dcc78083a4f",
+    "zachyceno": "2026-09-21T10:02:38.337Z",
+    "publikovano": "2026-09-04T07:00:00.000Z",
+    "zdroj": {
+      "nazev": "Dánsko — sabotaz",
+      "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxPNjFYRkNzVDZTeEtYTzE4M1pPVnhTd192WEtLZk9Za19HUEhZSVVFS0paal9seXlOQ0VicEtLSmIwYUdGY0IwMGJtVGVGSVFqejRSWjE2cmMzamZ4Tjh0OEtybEt5SmFUa0FyTUNDMGRWaTJSbjJZVlhyZHpCakJKOU03VmVqcTdVUlhmVm01OA?oc=5",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "European allies sound alarm at more incidents of alleged Russian sabotage - ABC News & Headlines – Australian Broadcasting Corporation",
+    "titulekPuvodni": "European allies sound alarm at more incidents of alleged Russian sabotage - ABC News & Headlines – Australian Broadcasting Corporation",
+    "shrnuti": "European allies sound alarm at more incidents of alleged Russian sabotage ABC News & Headlines – Australian Broadcasting Corporation",
+    "kodZeme": "RU",
+    "zeme": "Rusko",
+    "kategorie": [
+      "sabotaz",
+      "rusko"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "sabotage",
+      "russia"
+    ],
+    "naliehave": null,
+    "stav": "ceka",
+    "vyrez": {
+      "text": "Google News",
+      "stazeno": "2026-09-21T10:02:38.376Z",
+      "stav": 200
+    }
+  },
+  {
     "id": "k-03688206f84b7da9",
     "zachyceno": "2026-09-21T09:20:04.127Z",
     "publikovano": "2026-09-04T07:00:00.000Z",
@@ -12102,46 +12136,6 @@
       "duvod": "neudalost",
       "patriK": null,
       "poznamka": "Souhrn o kampani ruských sabotáží v Evropě bez konkrétního skutku ani rozhodnutí (podle titulku)."
-    }
-  },
-  {
-    "id": "k-51486cd393a5833b",
-    "zachyceno": "2026-09-20T20:03:06.565Z",
-    "publikovano": "2026-09-04T07:00:00.000Z",
-    "zdroj": {
-      "nazev": "Slovensko — sabotaz",
-      "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxOOFExRkdoNGtuRklUcUZIVWNnT2F4VGlwQ25ZLXZ2UmZXMGFnNWpGUm5UdEFHNDBUWEI2OFUybDhtVUhzOU9sZnVYN05wcjMwRGJueEZUcEd5VFpFck9vN20wWW9mQWFueEVJYS1HNnYwTEZZUFRNTS12c1lYSlVxallPTlA2eFdz?oc=5",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Russia Intensifies Sabotage Campaign Across Europe – Report - TVC News",
-    "titulekPuvodni": "Russia Intensifies Sabotage Campaign Across Europe – Report - TVC News",
-    "shrnuti": "Russia Intensifies Sabotage Campaign Across Europe – Report TVC News",
-    "kodZeme": "RU",
-    "zeme": "Rusko",
-    "kategorie": [
-      "sabotaz",
-      "rusko"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "zeSite": null,
-    "shody": [
-      "sabotage",
-      "russia"
-    ],
-    "naliehave": null,
-    "stav": "vyrizen",
-    "vyrez": {
-      "text": "Google News",
-      "stazeno": "2026-09-20T20:03:08.088Z",
-      "stav": 200
-    },
-    "vyrizeni": {
-      "kdy": "2026-09-20T21:06:22.548Z",
-      "duvod": "neudalost",
-      "patriK": null,
-      "poznamka": "Souhrn/report o sabotážní kampani bez konkrétního skutku (podle titulku)."
     }
   }
 ]
