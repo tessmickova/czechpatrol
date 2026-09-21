@@ -1,16 +1,11 @@
 {
-  "aktualizovano": "2026-09-21T12:45:30.584Z",
+  "aktualizovano": "2026-09-21T19:02:48.064Z",
   "stavy": [
     {
       "klic": "cloudflare",
       "stav": "omezeni",
       "popis": "Minor Service Outage",
       "incidenty": [
-        {
-          "nazev": "Unable to start containers in Asia-Pacific",
-          "odkaz": "https://www.cloudflarestatus.com/incidents/rxmmx07ys7qg",
-          "aktualizovano": "2026-09-21T12:42:26.000Z"
-        },
         {
           "nazev": "Incorrect geo location for some Cloudflare WARP users",
           "odkaz": "https://www.cloudflarestatus.com/incidents/9g65dxfbcjln",
@@ -23,16 +18,27 @@
         "Arica, Chile - (ARI)",
         "Annaba, Algeria - (AAE)"
       ],
-      "zkontrolovano": "2026-09-21T12:45:30.584Z",
+      "zkontrolovano": "2026-09-21T19:02:48.064Z",
       "chyba": null
     },
     {
       "klic": "zoom",
-      "stav": "provoz",
-      "popis": "All Systems Operational",
-      "incidenty": [],
-      "postizene": [],
-      "zkontrolovano": "2026-09-21T12:45:30.584Z",
+      "stav": "omezeni",
+      "popis": "Partially Degraded Service",
+      "incidenty": [
+        {
+          "nazev": "Service Degradation Affecting Apple Login for Zoom Sign-in.",
+          "odkaz": "https://stspg.io/j90jkyg5gqz3",
+          "aktualizovano": "2026-09-21T11:17:47.211-07:00"
+        }
+      ],
+      "postizene": [
+        "Zoom Meetings",
+        "Zoom Phone",
+        "Zoom Meetings",
+        "Zoom Phone - EMEA"
+      ],
+      "zkontrolovano": "2026-09-21T19:02:48.064Z",
       "chyba": null
     },
     {
@@ -41,7 +47,7 @@
       "popis": "All Systems Operational",
       "incidenty": [],
       "postizene": [],
-      "zkontrolovano": "2026-09-21T12:45:30.584Z",
+      "zkontrolovano": "2026-09-21T19:02:48.064Z",
       "chyba": null
     }
   ]

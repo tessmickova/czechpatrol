@@ -2,7 +2,7 @@
 import fs from "node:fs";
 import path from "node:path";
 import { describe, expect, it } from "vitest";
-import { klicovaVeta, legendaTecek, pocetZdroju, pruhTecek, PUVODCI, radekPokryti, jeArchivni, radekData, rozdelZpravu, sestavPalivo, sestavSouhrn, sestavPrehledZachycenych, sestavSignal, sestavTest, sestavVystrahu, sestavZdroje, sestavZmenuStavu, sestavZpravu, vyberDoPrehledu, vyberNove, vyberPalivo, vyberSignaly, vyberVystrahu, vyberZmenyStavu, zahlavi, sestavVaznyNavrh, vyberVazneNavrhy } from "../nastroje/rozhlas.mjs";
+import { castDne, jeCesky, palivoDoPrehledu, sestavPrehledDne, sluzbyDoPrehledu, vyberNavrhyDoPrehledu, zmenyStavuZaDen, klicovaVeta, legendaTecek, pocetZdroju, pruhTecek, PUVODCI, radekPokryti, jeArchivni, radekData, rozdelZpravu, sestavPalivo, sestavSouhrn, sestavPrehledZachycenych, sestavSignal, sestavTest, sestavVystrahu, sestavZdroje, sestavZmenuStavu, sestavZpravu, vyberDoPrehledu, vyberNove, vyberPalivo, vyberSignaly, vyberVystrahu, vyberZmenyStavu, zahlavi, sestavVaznyNavrh, vyberVazneNavrhy } from "../nastroje/rozhlas.mjs";
 import { UROVNE, zDeseti } from "../src/lib/skala";
 import { PUVODCI as PUVODCI_WEB } from "../src/lib/kategorie";
 import type { Uroven } from "../src/lib/typy";
@@ -678,5 +678,90 @@ describe("vážné případy z úředního zdroje", () => {
     const z = sestavVaznyNavrh(navrh({}));
     expect(z).toContain("NEOVĚŘENO");
     expect(z).toContain("Záznam ještě neprošel lidskou kontrolou.");
+  });
+});
+
+describe("přehled dne — česky, dvakrát denně", () => {
+  const ted = Date.parse("2026-09-21T17:00:00Z");
+  const navrh = (n: Record<string, unknown>) => ({
+    kam: "zaznam", id: "i-1", titulek: "Litva: stíhačky sestřelily dron u Kaišiadorys", kratkyTitulek: "Litva: stíhačky sestřelily dron u Kaišiadorys",
+    datumUdalosti: "2026-09-15T00:00:00Z", pripraveno: "2026-09-19T11:00:00Z", zdroje: [{ url: "https://a", typ: "primary", primarni: true }, { url: "https://b", typ: "media" }], ...n,
+  });
+  const kandidat = (n: Record<string, unknown>) => ({ id: "k1", zachyceno: "2026-09-21T10:00:00Z", publikovano: "2026-09-21T10:00:00Z", titulek: "Rusové útočili v Záporoží. Zasáhli i školu", kodZeme: "UA", zeme: "Ukrajina", zdroj: { url: "https://z", nazev: "ČT24" }, ...n });
+
+  it("pozná český titulek a nepustí anglický, polský ani německý", () => {
+    expect(jeCesky("Rusové útočili v Záporoží. Zasáhli i školu")).toBe(true);
+    expect(jeCesky("A GRU military unit launched cyberattacks against Estonian authorities")).toBe(false);
+    expect(jeCesky("Straż Graniczna przywróciła kontrolę na granicy")).toBe(false);
+    expect(jeCesky("Bundespolizei führt Grenzkontrollen durch")).toBe(false);
+  });
+
+  it("ráno je do poledne UTC, večer potom", () => {
+    expect(castDne(Date.parse("2026-09-21T05:00:00Z"))).toBe("rano");
+    expect(castDne(Date.parse("2026-09-21T17:00:00Z"))).toBe("vecer");
+  });
+
+  it("cizojazyčné zachycené zprávy jen počítá, české vypisuje s odkazem", () => {
+    const text = sestavPrehledDne({ ted, kandidati: [kandidat({}), kandidat({ id: "k2", titulek: "A GRU military unit launched cyberattacks", kodZeme: "EE", zeme: "Estonsko" })] });
+    expect(text).toContain("Rusové útočili v Záporoží");
+    expect(text).not.toContain("GRU military unit");
+    expect(text).toContain("dalších 1 ze zahraničních zdrojů");
+    expect(text).toContain("Zachyceno sběrem za 24 h:</b> 2");
+    expect(text).toContain("přehled večer 21. 9. 2026");
+  });
+
+  it("nepotvrzený záznam nese datum události, odkaz na web, počet zdrojů a je označený", () => {
+    const text = sestavPrehledDne({ ted, navrhy: [navrh({})] });
+    expect(text).toContain("<b>Nepotvrzené záznamy</b>");
+    expect(text).toContain("15. 9. 2026 · <a href=\"https://czechpatrol.pages.dev/nepotvrzeno/i-1/\">");
+    expect(text).toContain("zdrojů 2, z toho úřední 1");
+    expect(text).toContain("Do počtů nevstupují");
+  });
+
+  it("návrh odejde jednou, jen s českým titulkem a jen do týdne od zpracování", () => {
+    const stav = { navrhy: { "i-2": { kdy: "x" } }, signaly: {} };
+    const vyber = vyberNavrhyDoPrehledu([
+      navrh({}),
+      navrh({ id: "i-2" }),
+      navrh({ id: "i-3", titulek: "Estonia ready to close border", kratkyTitulek: "Estonia ready to close border" }),
+      navrh({ id: "i-4", pripraveno: "2026-09-01T00:00:00Z" }),
+      navrh({ id: "i-5", kam: "overujeme" }),
+    ], stav, { ted });
+    expect(vyber.map((n) => n.id)).toEqual(["i-1"]);
+  });
+
+  it("bez změny stavu říká, co v Česku platí; se změnou ji vypíše", () => {
+    expect(sestavPrehledDne({ ted })).toContain("Žádná změna úředního stavu v Česku");
+    const text = sestavPrehledDne({ ted, zmeny: ["Hranice a doprava: běžný provoz → sledujeme"] });
+    expect(text).toContain("Úřední stav se změnil");
+    expect(text).toContain("• Hranice a doprava: běžný provoz → sledujeme");
+  });
+
+  it("změny stavu za den: bez počtu záznamů a bez změn pokrytí", () => {
+    const archiv = { snimky: [
+      { kdy: "2026-09-21T08:00:00Z", zmeny: ["zveřejněné události: 96 → 101", "Hranice a doprava: sledujeme → běžný provoz", "Palivo: bez ověřeného zdroje → běžný provoz"] },
+      { kdy: "2026-09-10T08:00:00Z", zmeny: ["Mobilizace: NE → ANO"] },
+    ] };
+    expect(zmenyStavuZaDen(archiv, { ted })).toEqual(["Hranice a doprava: sledujeme → běžný provoz"]);
+  });
+
+  it("cena paliva: změřená čísla a zdroj, jen když je týden čerstvý", () => {
+    const rada = { rada: [{ tyden: "2026-W37", konec: "2026-09-13", nafta: 47.39, benzin95: 43.71 }, { tyden: "2026-W38", konec: "2026-09-20", nafta: 48.37, benzin95: 44.4 }] };
+    const veta = palivoDoPrehledu(rada, { ted });
+    expect(veta).toContain("nafta 48,37 Kč (+0,98 za týden)");
+    expect(veta).toContain("benzin 95 44,40 Kč (+0,69)");
+    expect(veta).toContain("ČSÚ");
+    expect(veta).not.toMatch(/natank|poroste|bude dráž/i);
+    expect(palivoDoPrehledu(rada, { ted: Date.parse("2026-10-15T00:00:00Z") })).toBeNull();
+  });
+
+  it("služby se vypisují jen s hlášením provozovatele", () => {
+    expect(sluzbyDoPrehledu({ stavy: [{ klic: "zoom", stav: "provoz", incidenty: [] }] })).toEqual([]);
+    expect(sluzbyDoPrehledu({ stavy: [{ klic: "cloudflare", stav: "omezeni", incidenty: [{ nazev: "Partial outage" }] }] })).toEqual(["Cloudflare: omezení — Partial outage (stavová stránka provozovatele)"]);
+  });
+
+  it("přehled se vejde do jedné zprávy Telegramu", () => {
+    const text = sestavPrehledDne({ ted, navrhy: Array.from({ length: 5 }, (_, i) => navrh({ id: `i-${i}` })), kandidati: Array.from({ length: 30 }, (_, i) => kandidat({ id: `k${i}` })), zmeny: ["Hranice a doprava: běžný provoz → sledujeme"], palivo: "Palivo za litr: nafta 48,37 Kč (+0,98 za týden)", sluzby: ["Cloudflare: omezení (stavová stránka provozovatele)"] });
+    expect(text.length).toBeLessThan(4096);
   });
 });

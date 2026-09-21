@@ -7,7 +7,11 @@ on:
       - "data/incidenty.json"
       - "data/historie.json"
   schedule:
-    # Denní souhrn v 17:00 UTC = 19:00 letního / 18:00 zimního času.
+    # Přehled dne dvakrát: ráno v 5:00 UTC (7:00 letního / 6:00 zimního
+    # času) a večer v 17:00 UTC (19:00 / 18:00). Jeden večerní přehled
+    # nestačil — kdo se ráno ptá „co se přes noc stalo", dostal odpověď
+    # až v sedm večer.
+    - cron: "0 5 * * *"
     - cron: "0 17 * * *"
   workflow_dispatch:
     inputs:
@@ -23,6 +27,11 @@ on:
         type: choice
         options: ["spravci soukrome", "do verejneho kanalu"]
         default: "spravci soukrome"
+      prehled:
+        # Přehled dne mimo rozvrh — když je potřeba říct, co se děje, hned.
+        description: "Poslat přehled dne teď (místo okamžitých zpráv)"
+        type: boolean
+        default: false
 
 permissions:
   contents: write
@@ -58,11 +67,11 @@ jobs:
           fi
 
       - name: Okamžité zprávy (vážné případy, opatření, změny oficiálních stavů)
-        if: github.event_name != 'schedule'
+        if: github.event_name != 'schedule' && !(github.event_name == 'workflow_dispatch' && inputs.prehled)
         run: node nastroje/rozhlas.mjs --okamzite
 
-      - name: Denní souhrn
-        if: github.event_name == 'schedule'
+      - name: Přehled dne
+        if: github.event_name == 'schedule' || (github.event_name == 'workflow_dispatch' && inputs.prehled)
         run: node nastroje/rozhlas.mjs --souhrn
 
       - name: Uložit stav odeslaného
