@@ -27,7 +27,7 @@
           "jazyk": "cs"
         }
       ],
-      "zkontrolovano": "2026-09-21T08:01:08.969Z",
+      "zkontrolovano": "2026-09-21T09:01:14.289Z",
       "pokryti": "orientacni",
       "pokrytiDuvod": "přečteno vlada, psp, senat; žádný z nich není úplný seznam, zápor z nich neplyne"
     },
@@ -49,7 +49,7 @@
           "jazyk": "cs"
         }
       ],
-      "zkontrolovano": "2026-09-21T08:01:08.969Z",
+      "zkontrolovano": "2026-09-21T09:01:14.289Z",
       "pokryti": "orientacni",
       "pokrytiDuvod": "přečteno psp, senat; žádný z nich není úplný seznam, zápor z nich neplyne"
     },
@@ -79,7 +79,7 @@
           "jazyk": "cs"
         }
       ],
-      "zkontrolovano": "2026-09-21T08:01:08.969Z",
+      "zkontrolovano": "2026-09-21T09:01:14.289Z",
       "pokryti": "orientacni",
       "pokrytiDuvod": "přečteno vlada, army; žádný z nich není úplný seznam, zápor z nich neplyne"
     },
@@ -101,7 +101,7 @@
           "jazyk": "cs"
         }
       ],
-      "zkontrolovano": "2026-09-21T08:01:08.969Z",
+      "zkontrolovano": "2026-09-21T09:01:14.289Z",
       "pokryti": "orientacni",
       "pokrytiDuvod": "přečteno vlada, psp, mvcr; žádný z nich není úplný seznam, zápor z nich neplyne"
     },
@@ -123,9 +123,9 @@
           "jazyk": "cs"
         }
       ],
-      "zkontrolovano": "2026-09-21T08:01:08.969Z",
-      "pokryti": "orientacni",
-      "pokrytiDuvod": "přečteno mvcr, mzv; žádný z nich není úplný seznam, zápor z nich neplyne"
+      "zkontrolovano": "2026-09-21T09:01:14.289Z",
+      "pokryti": "nedostupne",
+      "pokrytiDuvod": "nepodařilo se přečíst: bmi-de"
     },
     {
       "klic": "hranice",
@@ -153,9 +153,9 @@
           "jazyk": "cs"
         }
       ],
-      "zkontrolovano": "2026-09-21T08:01:08.969Z",
-      "pokryti": "orientacni",
-      "pokrytiDuvod": "přečteno vlada, mvcr, policie; žádný z nich není úplný seznam, zápor z nich neplyne"
+      "zkontrolovano": "2026-09-21T09:01:14.289Z",
+      "pokryti": "nedostupne",
+      "pokrytiDuvod": "nepodařilo se přečíst: bmi-de"
     },
     {
       "klic": "schuze-parlamentu",
@@ -175,7 +175,7 @@
           "jazyk": "cs"
         }
       ],
-      "zkontrolovano": "2026-09-21T08:01:08.969Z",
+      "zkontrolovano": "2026-09-21T09:01:14.289Z",
       "pokryti": "orientacni",
       "pokrytiDuvod": "přečteno psp, senat; žádný z nich není úplný seznam, zápor z nich neplyne"
     }

@@ -138,6 +138,72 @@
     }
   },
   {
+    "id": "k-731452f523ef0c91",
+    "zachyceno": "2026-09-21T09:02:52.670Z",
+    "publikovano": null,
+    "zdroj": {
+      "nazev": "Policie ČR — aktuality",
+      "url": "https://www.policie.cz/narodni-protidrogova-centrala-skpv/v-nizozemsku-byl-zadrzen-cizinec-obvineny-v-pripadu-padrino-v-doprovodu-eskorty-priletel-do-prahy",
+      "typ": "primary",
+      "primarni": true
+    },
+    "titulek": "V Nizozemsku byl zadržen cizinec obviněný v případu Padrino, v doprovodu eskorty přiletěl do Prahy",
+    "titulekPuvodni": "V Nizozemsku byl zadržen cizinec obviněný v případu Padrino, v doprovodu eskorty přiletěl do Prahy",
+    "shrnuti": "",
+    "kodZeme": "CZ",
+    "zeme": "Česko",
+    "kategorie": [
+      "zpravodajske"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "zadrz",
+      "obvin"
+    ],
+    "naliehave": null,
+    "stav": "ceka",
+    "vyrez": {
+      "text": "Přeskočit na hlavní obsah Národní protidrogová centrála SKPV\nV Nizozemsku byl zadržen cizinec obviněný v případu Padrino, v doprovodu eskorty přiletěl do Prahy\nPublikováno : | Lucie Šmoldasová\nKoncem loňského a začátkem letošního roku kriminalisté Národní protidrogové centrály při akci s krycím názvem Padrino obvinili šest lidí z mezinárodní drogové trestné činnosti ve velkém rozsahu. Pět mužů zadrželi koncem loňského a začátkem letošního roku, na jednoho z cizinců soud v únoru vydal Evropský zatýkací rozkaz.\nHledaný muž byl v červenci 2026 zadržen v Nizozemsku, kde soud rozhodl o jeho vydání do České republiky. Na Letišti Václava Havla si ho koncem minulého týdne od eskorty z Oddělení doprovodu letadel ředitelství cizinecké policie převzali kriminalisté z Národní protidrogové centrály.\nKriminalisté mu kladou za vinu, že společně s organizátorem skupiny připravoval dovoz 120 kg kokainu z Jižní Ameriky do Evropy. Podle jejich zjištění měl kontakty na drogové kartely v Kolumbii, kde dlouhodobě přebýval.\nObvodní soud pro Prahu 7 rozhodl, že zadržený muž bude v České republice stíhán vazebně, stejně jako organizátor skupiny. Dalšímu z obviněných soud proměnil podmínečný trest na výkon…",
+      "stazeno": "2026-09-21T09:02:53.245Z",
+      "stav": 200
+    }
+  },
+  {
+    "id": "k-9f741d71ebdb46b2",
+    "zachyceno": "2026-09-21T09:02:52.867Z",
+    "publikovano": "2026-09-21T08:26:00.000Z",
+    "zdroj": {
+      "nazev": "Český rozhlas — domácí zprávy",
+      "url": "https://www.irozhlas.cz/zpravy-domov/exnamestek-hejtmana-unucka-odsouzen-za-ohybani-zakazek-dostal-podminku-a_2609211026_pik",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Exnáměstek hejtmana Unucka odsouzen za ohýbání zakázek. Dostal podmínku a peněžitý trest",
+    "titulekPuvodni": "Exnáměstek hejtmana Unucka odsouzen za ohýbání zakázek. Dostal podmínku a peněžitý trest",
+    "shrnuti": "Ostravský krajský soud schválil dohodu o vině a trestu pro bývalého náměstka moravskoslezského hejtmana Jakuba Unucku. Za účast v kauze, kde se za úplatky ohýbaly veřejné zakázky krajských organizací, odchází nakonec s podmíněným trestem vězení. Musí také zaplatit 2,5 milionu korun jako peněžitý tre",
+    "kodZeme": "CZ",
+    "zeme": "Česko",
+    "kategorie": [
+      "zpravodajske"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "obvin"
+    ],
+    "naliehave": null,
+    "stav": "ceka",
+    "vyrez": {
+      "text": "",
+      "stazeno": "2026-09-21T09:02:54.402Z",
+      "stav": 403,
+      "chyba": "HTTP 403"
+    }
+  },
+  {
     "id": "k-dc4140c8666dce93",
     "zachyceno": "2026-09-21T07:03:04.174Z",
     "publikovano": "2026-09-21T06:19:40.000Z",
@@ -12082,80 +12148,6 @@
       "duvod": "neudalost",
       "patriK": null,
       "poznamka": "Souhrnná zpráva o incidentech a varováních spojenců bez nového skutku (podle titulku)."
-    }
-  },
-  {
-    "id": "k-03688206f84b7da9",
-    "zachyceno": "2026-09-20T20:03:06.623Z",
-    "publikovano": "2026-09-04T07:00:00.000Z",
-    "zdroj": {
-      "nazev": "Rumunsko — sabotaz",
-      "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxQZzBfZXhkSGdUbThHeVkyZUhWZlExeFlkLWdvSThxYmVBWkJsSmVIZXdnS1hWNVJ5QWRQZEM0d09zNlJMWVo4THBmSHlaVzh1TjNSRUw5ZDBBRFl0dW1KQ1AwUlpTZGVaelgxRm4tMnpCV3AweG9Oa3k3dEItcnUzSTBGTmtxX3lJU2pnUHc0VklLNEllb1dtR09YQldFYlhqUk9iMmpNaw?oc=5",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Three Bulgarians Detained in Munich Amid Russian Sabotage Probe - Novinite.com",
-    "titulekPuvodni": "Three Bulgarians Detained in Munich Amid Russian Sabotage Probe - Novinite.com",
-    "shrnuti": "Three Bulgarians Detained in Munich Amid Russian Sabotage Probe Novinite.com",
-    "kodZeme": "DE",
-    "zeme": "Německo",
-    "kategorie": [
-      "sabotaz",
-      "rusko"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "zeSite": null,
-    "shody": [
-      "sabotage",
-      "russia"
-    ],
-    "naliehave": null,
-    "stav": "vyrizen",
-    "vyrez": {
-      "text": "Google News",
-      "stazeno": "2026-09-20T20:03:08.397Z",
-      "stav": 200
-    },
-    "vyrizeni": {
-      "kdy": "2026-09-20T21:06:22.548Z",
-      "duvod": "duplicita",
-      "patriK": null,
-      "poznamka": "Týž skutek jako záznam mnichov-rohde-schwarz (zápalný útok u Rohde & Schwarz a Helsing, noc na 3. 9. 2026). Novinite navíc uvádí třetího zadrženého, který není podezřelým; ruská stopa je jen v ARD a nepotvrzená."
-    }
-  },
-  {
-    "id": "k-b939805d929329ae",
-    "zachyceno": "2026-09-21T08:02:47.506Z",
-    "publikovano": "2026-09-03T07:00:00.000Z",
-    "zdroj": {
-      "nazev": "Téma: sabotaz (česky)",
-      "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxNenA3bUlDbVVudTZuM0MtblF0azRVLTc1OGx6YTg3Wm80QnVIbFJ3cnlVYVBJWnhkZDNmRlJKNm11SnZMYWYxT1Y1dm9uamFJSkF6X3RZSE1rSW14RFBPaHFDX0RWbHNlSFZDY3E5dVh3UmI4d1N1RE05Qm1BejdwbDlVUFFpVHNJZlh1V2lR?oc=5",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Nová sabotáž v Německu. K zapálení aut se přihlásili levicoví extremisté, policie zkoumá protiizraelský motiv - Echo24",
-    "titulekPuvodni": "Nová sabotáž v Německu. K zapálení aut se přihlásili levicoví extremisté, policie zkoumá protiizraelský motiv - Echo24",
-    "shrnuti": "Nová sabotáž v Německu. K zapálení aut se přihlásili levicoví extremisté, policie zkoumá protiizraelský motiv Echo24",
-    "kodZeme": "DE",
-    "zeme": "Německo",
-    "kategorie": [
-      "sabotaz",
-      "vojsko"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "zeSite": null,
-    "shody": [
-      "sabotaz",
-      "policie"
-    ],
-    "naliehave": null,
-    "stav": "ceka",
-    "vyrez": {
-      "text": "Google News",
-      "stazeno": "2026-09-21T08:02:47.767Z",
-      "stav": 200
     }
   }
 ]

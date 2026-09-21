@@ -1,5 +1,5 @@
 {
-  "kdy": "2026-09-21T08:01:08.969Z",
+  "kdy": "2026-09-21T09:01:14.289Z",
   "zdroje": [
     {
       "klic": "e-sbirka",
@@ -123,7 +123,80 @@
       "ok": true,
       "stav": 200,
       "pocetPolozek": 0
+    },
+    {
+      "klic": "md",
+      "ok": true,
+      "stav": 200,
+      "pocetPolozek": 0
+    },
+    {
+      "klic": "sprava-zeleznic",
+      "ok": true,
+      "stav": 200,
+      "pocetPolozek": 0
+    },
+    {
+      "klic": "letiste-praha",
+      "ok": true,
+      "stav": 200,
+      "pocetPolozek": 0
+    },
+    {
+      "klic": "celni-sprava",
+      "ok": true,
+      "stav": 200,
+      "pocetPolozek": 0
+    },
+    {
+      "klic": "sujb",
+      "ok": true,
+      "stav": 200,
+      "pocetPolozek": 0
+    },
+    {
+      "klic": "chmi",
+      "ok": true,
+      "stav": 200,
+      "pocetPolozek": 0
+    },
+    {
+      "klic": "mzd",
+      "ok": true,
+      "stav": 200,
+      "pocetPolozek": 0
+    },
+    {
+      "klic": "bundespolizei",
+      "ok": true,
+      "stav": 200,
+      "pocetPolozek": 0
+    },
+    {
+      "klic": "bmi-de",
+      "ok": false,
+      "stav": 400,
+      "pocetPolozek": 0,
+      "chyba": "HTTP 400"
+    },
+    {
+      "klic": "bmi-at",
+      "ok": true,
+      "stav": 200,
+      "pocetPolozek": 0
+    },
+    {
+      "klic": "straz-graniczna",
+      "ok": true,
+      "stav": 200,
+      "pocetPolozek": 0
+    },
+    {
+      "klic": "minv-sk",
+      "ok": true,
+      "stav": 200,
+      "pocetPolozek": 0
     }
   ],
-  "novychVeFronte": 0
+  "novychVeFronte": 2
 }
