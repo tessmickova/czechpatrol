@@ -350,7 +350,11 @@ export function Aktuality({
         ho nahrazuje.
       */}
       <div className="mt-auto border-t border-linka2 px-4 py-2.5">
-        <Tlacitko kam="/udalosti/" varianta="obrys" velikost="s" ikonaVpravo="nahoru" trida="[&>svg:last-child]:rotate-90">
+        {/*
+          Plná červená, stejná jako „Odebírat na Telegramu": je to jediná
+          cesta k archivu z úvodu a úvod sám žádné tlačítko na záznamy nemá.
+        */}
+        <Tlacitko kam="/udalosti/" varianta="plny" velikost="m" ikonaVpravo="nahoru" trida="[&>svg:last-child]:rotate-90">
           Všechny záznamy od 2014
         </Tlacitko>
       </div>

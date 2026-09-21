@@ -271,7 +271,7 @@ body {
 }
 /* Vodicí věta pod nadpisem: větší než běžný text, v barvě textu, ne šedá. */
 .uvodni-veta {
-  font-size: clamp(17px, 1.35vw, 20px);
+  font-size: clamp(17px, 1.5vw, 22px);
   line-height: 1.6;
   color: var(--color-inkoust);
   opacity: 0.9;

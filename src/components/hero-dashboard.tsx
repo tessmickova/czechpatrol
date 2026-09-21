@@ -32,7 +32,7 @@ import { useT } from "@/lib/i18n";
 */
 
 function Merak({
-  nadpis, uroven, obdobi, popis, velikost = 112, vlastniSlovo, dodatek,
+  nadpis, uroven, obdobi, popis, velikost = 136, vlastniSlovo, dodatek,
 }: {
   nadpis: string; uroven: Uroven | null; obdobi: string; velikost?: number; vlastniSlovo?: string;
   /** Popis i doplněk jdou jen do nápovědy. Na plochu budíku se nedostanou. */
@@ -111,6 +111,7 @@ export function HeroDashboard({
         vlastního formátu (15px verzálkami, šedý) — vypadal jako popisek
         a čtenář z něj nepoznal, že je to nadpis stránky.
       */}
+      <div>
       <div className="border-b border-linka2 pt-1 sm:pt-2">
         <div className="mb-2 flex items-center gap-2">
           <Znacka velikost={26} tmave />
@@ -127,6 +128,7 @@ export function HeroDashboard({
         <strong className="font-bold text-inkoust">{veta.cesko}</strong>{" "}
         <span className="text-tlum">{veta.evropa}</span>
       </p>
+      </div>
 
       {/*
         Sloupec s minimem 0. Bez toho má jediný sloupec na mobilu minimum
@@ -134,18 +136,20 @@ export function HeroDashboard({
         ho vyhnaly na 677 px a celý panel se na 390 px displeji ořízl vpravo.
       */}
       {/*
-        Budíky u spodního okraje, když je sloupec vedle vyšší. Úvod má
-        tři věci pod sebou a vzduch mezi větou a budíky mu nevadí;
-        vzduch pod budíky vypadal jako chybějící obsah.
+        Rozložení na výšku sloupce vedle: nadpis s větou drží pohromadě
+        nahoře, budíky se vystředí ve zbylém místě (my-auto ve sloupci).
+        Vzduch je tak nad budíky i pod nimi, ne v jednom kusu. Budíky jsou
+        větší než dřív ze stejného důvodu — úvod bez čísel a vysvětlivek
+        byl o 190 px nižší než aktuality a zbytek zel prázdnotou.
       */}
-      <div className="grid grid-cols-[minmax(0,1fr)] gap-2 py-3 sm:py-3.5 xl:mt-auto xl:pb-6 lg:grid-cols-[minmax(0,1.05fr)_minmax(0,1.4fr)]">
+      <div className="grid grid-cols-[minmax(0,1fr)] gap-2 py-3 sm:py-4 xl:my-auto lg:grid-cols-[minmax(0,1.05fr)_minmax(0,1.4fr)]">
         <div className="flex min-w-0 items-center gap-4 border-b border-linka2 pb-3 lg:border-b-0 lg:border-r lg:pb-0 lg:pr-4">
           <Napoveda popis={stav.uroven ? <VykladUrovne uroven={stav.uroven} /> : <span className="block">{t("Hodnocení zatím nebylo stanoveno.")}</span>}>
-            <span className="block"><ObloukovyMerak uroven={stav.uroven} naNoci velikost={132} skrytPopisek /></span>
+            <span className="block"><ObloukovyMerak uroven={stav.uroven} naNoci velikost={164} skrytPopisek /></span>
           </Napoveda>
           <div className="min-w-0">
             <div className="stitek whitespace-nowrap">{t("Evropa · dnes")}</div>
-            <p className={`text-cislo-l font-bold leading-none ${pasmo ? pasmo.text : "text-tlum"}`}>{d ? d.nazev : "Nestanoveno"}</p>
+            <p className={`text-cislo-l font-bold leading-none xl:text-cislo-xl ${pasmo ? pasmo.text : "text-tlum"}`}>{d ? d.nazev : "Nestanoveno"}</p>
             {/*
               Trend hned pod slovem, ne v provozním řádku na patě. Patří
               k úrovni — je to její pohyb — a bez patičky nemá kam jinam.
@@ -168,9 +172,9 @@ export function HeroDashboard({
               útoku, což není. Stupnice i s čísly zůstává v metodice a v detailu
               záznamu, kde je vedle ní vysvětlení.
             */}
-            <p className="mt-2.5 flex flex-wrap gap-2">
-              <Tlacitko kam="/udalosti/" varianta="zvyrazneny" velikost="s" ikona="osa">{t("Všechny záznamy")}</Tlacitko>
-              <Tlacitko kam="#sledovat" varianta="obrys" velikost="s" ikona="zvonek">{t("Sledovat změny")}</Tlacitko>
+            {/* Jedno tlačítko. Cesta k záznamům je v Aktualitách vedle, tady by byla podruhé. */}
+            <p className="mt-3">
+              <Tlacitko kam="#sledovat" varianta="obrys" velikost="s" ikona="zvonek" trida="whitespace-nowrap">{t("Sledovat změny")}</Tlacitko>
             </p>
           </div>
         </div>

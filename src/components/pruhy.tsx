@@ -59,11 +59,12 @@ export function OdznakUkazky() {
 }
 
 /*
-  Jedna věta nahoře: kdo tenhle web dělá.
+  Jedna věta úplně nahoře: kdo tenhle web dělá.
 
   Návštěvník, který sem přijde ve strachu, musí hned vědět, že nečte úřední
-  výstrahu. Delší vysvětlení patří do patičky a na stránku o projektu —
-  tady stačí šest slov, aby si nespletl zdroj.
+  výstrahu — proto je lišta nad menu, první věc na stránce. Delší vysvětlení
+  patří do patičky a na stránku o projektu; tady stačí jedna věta, aby si
+  nespletl zdroj, a vpravo stav poslední kontroly.
 */
 export function PruhPuvodu({ vpravo }: { vpravo?: ReactNode }) {
   return (
@@ -74,7 +75,7 @@ export function PruhPuvodu({ vpravo }: { vpravo?: ReactNode }) {
         pruh dostane zpátky; klid se vejde sem.
       */}
       <div className="mx-auto flex max-w-[1280px] flex-wrap items-center justify-between gap-x-4 gap-y-0.5 px-4 py-1.5 text-drobne text-tlum2 sm:px-6">
-        <span>Nezávislý projekt, ne úřední zdroj. V nouzi 112.</span>
+        <span>Nezávislý projekt pro sběr kritických událostí napříč internetem, ne úřední zdroj. V nouzi 112.</span>
         {vpravo}
       </div>
     </div>
