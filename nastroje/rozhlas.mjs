@@ -723,7 +723,7 @@ export function sestavSignal(k) {
     "",
     "Zachytil to automatický sběr. <b>Neověřil to zatím člověk</b> — není to potvrzené a do žádných počtů na webu to nevstupuje. Posíláme to proto, že u téhle věci je každá hodina znát.",
     "",
-    `${WEB}/udalosti/?zalozka=cekajici`,
+    `${WEB}/udalosti/?tab=cekajici`,
   );
   return radky.join("\n");
 }
@@ -760,7 +760,127 @@ export function sestavPrehledZachycenych(kandidati, { ted = Date.now() } = {}) {
   for (const k of kandidati) {
     radky.push(`• <a href="${esc(k.zdroj.url)}">${esc(zkrat(k.titulek, 120))}</a>${k.zeme ? ` — ${esc(k.zeme)}` : ""}`);
   }
-  radky.push("", `${WEB}/udalosti/?zalozka=cekajici`);
+  radky.push("", `${WEB}/udalosti/?tab=cekajici`);
+  return radky.join("\n");
+}
+
+/*
+  Přehled dne — česky, ráno a večer, vždycky.
+
+  Proč vznikl: do kanálu chodilo jen to, co prošlo ověřením. Když se pár dní
+  nic neověřilo, kanál mlčel — a večer přišel jediný „přehled zachycených"
+  s pěti titulky tak, jak je zdroje vydaly, tedy z větší části anglicky.
+  Odběratel se z toho nedozvěděl, co se děje, a ještě to četl v cizím jazyce.
+
+  Přehled dne skládá česky to, co web ví, i když nic nového neprošlo
+  ověřením:
+    1. co se změnilo — úřední stavy z archivu, cena paliva, služby,
+    2. nepotvrzené záznamy — zpracované ze zdrojů, s českým titulkem,
+       jasně označené, s odkazem na web,
+    3. co sběr zachytil — česky psané titulky jmenovitě, cizojazyčné jen
+       počtem s odkazem na frontu. Cizí titulek se nepřekládá, protože
+       překladač nemáme; posílat ho v originále je horší než ho spočítat.
+
+  Odchází dvakrát denně (ráno a večer); ověřené záznamy chodí dál zvlášť.
+*/
+const MAX_NAVRHU_V_PREHLEDU = 5;
+const MAX_CESKYCH_ZACHYCENYCH = 4;
+/** Návrh starší než týden už není novinka, i když ho nikdo neposlal. */
+const NAVRH_NEJVYS_DNI = 7;
+
+/** Text psaný česky? Hlídá se česká diakritika a vylučují se polské a německé znaky. */
+export function jeCesky(text) {
+  const t = String(text ?? "");
+  if (/[ěřůňťď]/i.test(t)) return true;
+  if (/[łąęśźż]/i.test(t) || /[äöüß]/i.test(t)) return false;
+  return /[áéíýúž]/i.test(t) && /\b(a|v|ve|na|se|je|z|ze|o|k|do|po|za|pro|při|u)\b/i.test(t);
+}
+
+/** Jméno části dne podle hodiny UTC: přehled v 5:00 UTC je ranní, v 17:00 večerní. */
+export function castDne(ted = Date.now()) {
+  return new Date(ted).getUTCHours() < 12 ? "rano" : "vecer";
+}
+
+export function vyberNavrhyDoPrehledu(navrhy, stav, { ted = Date.now() } = {}) {
+  const poslane = stav.navrhy ?? {};
+  const signaly = stav.signaly ?? {};
+  return (navrhy ?? [])
+    .filter((n) => (n.kam ?? "zaznam") === "zaznam" && n.id && !poslane[n.id] && !signaly[n.id])
+    .filter((n) => n.titulek && jeCesky(n.kratkyTitulek || n.titulek))
+    .filter((n) => n.pripraveno && ted - new Date(n.pripraveno).getTime() <= NAVRH_NEJVYS_DNI * 86_400_000)
+    .sort((a, b) => String(b.pripraveno).localeCompare(String(a.pripraveno)))
+    .slice(0, MAX_NAVRHU_V_PREHLEDU);
+}
+
+/** Změny úředního stavu za posledních 24 hodin — bez počtu záznamů a bez změn pokrytí. */
+export function zmenyStavuZaDen(archiv, { ted = Date.now(), hodin = 24 } = {}) {
+  const od = ted - hodin * 3_600_000;
+  return (archiv?.snimky ?? [])
+    .filter((s) => new Date(s.kdy).getTime() >= od)
+    .flatMap((s) => (s.zmeny ?? []).filter((z) => !/^(zveřejněné události|začátek archivu)/.test(z) && !/bez ověřeného zdroje|neověřeno/.test(z)));
+}
+
+/** Poslední týden cen, je-li čerstvý (šetření do sedmi dnů). Jinak nic — stará cena není novinka. */
+export function palivoDoPrehledu(palivo, { ted = Date.now() } = {}) {
+  const rada = (palivo?.rada ?? []).filter((t) => typeof t.nafta === "number" && typeof t.benzin95 === "number");
+  if (rada.length < 2) return null;
+  const t = rada[rada.length - 1], p = rada[rada.length - 2];
+  if (ted - new Date(`${t.konec}T12:00:00Z`).getTime() > 7 * 86_400_000) return null;
+  const kc = (n) => n.toFixed(2).replace(".", ",");
+  const roz = (n) => `${n > 0 ? "+" : n < 0 ? "−" : "±"}${kc(Math.abs(n))}`;
+  return `Palivo za litr: nafta ${kc(t.nafta)} Kč (${roz(t.nafta - p.nafta)} za týden), benzin 95 ${kc(t.benzin95)} Kč (${roz(t.benzin95 - p.benzin95)}) — ČSÚ, týden do ${datumCz(`${t.konec}T12:00:00Z`)}`;
+}
+
+function ctiSluzby() {
+  const soubor = path.join(koren, "data", "sluzby.json");
+  if (!fs.existsSync(soubor)) return null;
+  try { return JSON.parse(fs.readFileSync(soubor, "utf-8")); } catch { return null; }
+}
+
+/** Služby s hlášením provozovatele. V pořádku se nevypisují — ticho tu znamená ticho. */
+export function sluzbyDoPrehledu(snimek) {
+  const NAZVY = { cloudflare: "Cloudflare", zoom: "Zoom", discord: "Discord" };
+  return (snimek?.stavy ?? [])
+    .filter((s) => s.stav === "vypadek" || s.stav === "omezeni")
+    .map((s) => `${NAZVY[s.klic] ?? s.klic}: ${s.stav === "vypadek" ? "výpadek" : "omezení"}${s.incidenty?.[0]?.nazev ? ` — ${s.incidenty[0].nazev}` : ""} (stavová stránka provozovatele)`);
+}
+
+export function sestavPrehledDne({ ted = Date.now(), cast = castDne(ted), zmeny = [], palivo = null, sluzby = [], navrhy = [], kandidati = [], vydanoDnes = 0 } = {}) {
+  const od = ted - 24 * 3_600_000;
+  const zachycene = (kandidati ?? []).filter((k) => new Date(k.publikovano ?? k.zachyceno).getTime() >= od);
+  const ceskeVse = zachycene.filter((k) => jeCesky(k.titulek));
+  const ceske = ceskeVse.slice(0, MAX_CESKYCH_ZACHYCENYCH);
+  const cizich = zachycene.length - ceskeVse.length;
+  const kCesku = zachycene.filter((k) => k.kodZeme === "CZ").length;
+
+  const radky = [
+    `\u{1F4F0} <b>CzechPatrol · přehled ${cast === "rano" ? "ráno" : "večer"} ${datumCz(new Date(ted).toISOString())}</b>`,
+    "",
+  ];
+
+  /* Klíčová věta: co dnes platí v Česku. Bez ní by přehled začínal výčtem. */
+  radky.push(`<b>${zmeny.length ? "Úřední stav se změnil — viz níže." : "Žádná změna úředního stavu v Česku. Mobilizace ne, vycestování bez omezení, hranice v běžném režimu."}</b>`, "");
+
+  const coSeZmenilo = [...zmeny.map((z) => `• ${esc(z)}`), ...(palivo ? [`• ${esc(palivo)}`] : []), ...sluzby.map((x) => `• ${esc(x)}`)];
+  if (coSeZmenilo.length) radky.push("<b>Co se změnilo</b>", ...coSeZmenilo, "");
+
+  if (vydanoDnes > 0) radky.push(`<b>Ověřené záznamy dnes:</b> ${vydanoDnes} — odešly zvlášť výše.`, "");
+
+  if (navrhy.length) {
+    radky.push("<b>Nepotvrzené záznamy</b> — zpracované ze zdrojů, zatím bez potvrzení. Do počtů nevstupují.");
+    for (const n of navrhy) {
+      const uredni = (n.zdroje ?? []).filter((z) => z.primarni === true || z.typ === "primary").length;
+      /* Datum události, ne zpracování — jinak by se týden stará věc četla jako dnešní. */
+      const kdy = n.datumUdalosti ? `${datumCz(n.datumUdalosti)} · ` : "";
+      radky.push(`• ${kdy}<a href="${WEB}/nepotvrzeno/${esc(n.id)}/">${esc(zkrat(n.kratkyTitulek || n.titulek, 110))}</a> · zdrojů ${(n.zdroje ?? []).length}${uredni ? `, z toho úřední ${uredni}` : ""}`);
+    }
+    radky.push("");
+  }
+
+  radky.push(`<b>Zachyceno sběrem za 24 h:</b> ${zachycene.length} ${zachycene.length === 1 ? "zpráva" : zachycene.length < 5 ? "zprávy" : "zpráv"}${kCesku ? `, k Česku ${kCesku}` : ""}. Nic z toho zatím není ověřené.`);
+  for (const k of ceske) radky.push(`• <a href="${esc(k.zdroj.url)}">${esc(zkrat(k.titulek, 110))}</a>${k.zeme ? ` — ${esc(k.zeme)}` : ""}`);
+  if (cizich) radky.push(`• dalších ${cizich} ze zahraničních zdrojů v původním jazyce: ${WEB}/udalosti/?tab=cekajici`);
+  radky.push("", `Celý přehled: ${WEB}/`);
   return radky.join("\n");
 }
 
@@ -808,12 +928,12 @@ function ctiPalivo() {
 }
 
 function ctiStav() {
-  if (!fs.existsSync(STAV)) return { zaznamy: {}, snimky: {}, palivo: {}, vystrahy: {}, signaly: {}, tipy: {}, prehledy: {}, prvniBeh: null };
+  if (!fs.existsSync(STAV)) return { zaznamy: {}, snimky: {}, palivo: {}, vystrahy: {}, signaly: {}, tipy: {}, prehledy: {}, navrhy: {}, prvniBeh: null };
   try {
     const s = JSON.parse(fs.readFileSync(STAV, "utf-8"));
-    // Starší stav pole „palivo", „vystrahy" a „signaly" nemá; bez doplnění by první zápis spadl.
-    return { palivo: {}, vystrahy: {}, signaly: {}, tipy: {}, prehledy: {}, ...s };
-  } catch { return { zaznamy: {}, snimky: {}, palivo: {}, vystrahy: {}, signaly: {}, tipy: {}, prehledy: {}, prvniBeh: null }; }
+    // Starší stav pole „palivo", „vystrahy", „signaly" a „navrhy" nemá; bez doplnění by první zápis spadl.
+    return { palivo: {}, vystrahy: {}, signaly: {}, tipy: {}, prehledy: {}, navrhy: {}, ...s };
+  } catch { return { zaznamy: {}, snimky: {}, palivo: {}, vystrahy: {}, signaly: {}, tipy: {}, prehledy: {}, navrhy: {}, prvniBeh: null }; }
 }
 function zapisStav(s) {
   fs.mkdirSync(path.dirname(STAV), { recursive: true });
@@ -1120,19 +1240,31 @@ async function main() {
   }
 
   /*
-    Denní přehled zachyceného. Až úplně nakonec a jen v souhrnném režimu:
-    když ten den odešel ověřený záznam, kanál má co říct a přehled by byl
-    šum navíc. Když neodešlo nic, je to jediná zpráva, která ten den přijde —
-    a ta má říct pravdu: sběr běží, tohle zachytil, nikdo to zatím neověřil.
+    Přehled dne. Až úplně nakonec, v souhrnném režimu, vždycky — ráno
+    i večer, bez ohledu na to, co odešlo před ním. Kanál tak dvakrát denně
+    řekne česky, co se změnilo, co je nepotvrzené a co sběr zachytil;
+    ověřené záznamy, které odešly zvlášť, jen spočítá.
   */
   const den = new Date(ted).toISOString().slice(0, 10);
-  if (rezim === "souhrn" && !prvniBeh && !(stav.prehledy ?? {})[den] && odeslano === 0) {
-    const zachycene = vyberDoPrehledu(ctiKandidaty(), { ted });
-    if (zachycene.length) {
-      const v = await posli(sestavPrehledZachycenych(zachycene, { ted }), { nahled: false });
-      if (v.ok) { stav.prehledy[den] = { kdy: new Date(ted).toISOString(), polozek: zachycene.length }; odeslano++; }
-      else { selhalo++; console.log(`[rozhlas] přehled neodešel: ${v.chyba}`); }
-    }
+  const cast = castDne(ted);
+  const klicPrehledu = `${den}-${cast}`;
+  if (rezim === "souhrn" && !prvniBeh && !(stav.prehledy ?? {})[klicPrehledu]) {
+    const navrhyDoPrehledu = vyberNavrhyDoPrehledu(ctiNavrhy(), stav, { ted });
+    const text = sestavPrehledDne({
+      ted, cast,
+      zmeny: zmenyStavuZaDen(archiv, { ted }),
+      palivo: palivoDoPrehledu(palivo, { ted }),
+      sluzby: sluzbyDoPrehledu(ctiSluzby()),
+      navrhy: navrhyDoPrehledu,
+      kandidati: ctiKandidaty(),
+      vydanoDnes: davka.length,
+    });
+    const v = await posli(text, { nahled: false });
+    if (v.ok) {
+      stav.prehledy[klicPrehledu] = { kdy: new Date(ted).toISOString(), navrhu: navrhyDoPrehledu.length, messageId: v.messageId ?? null };
+      for (const n of navrhyDoPrehledu) stav.navrhy[n.id] = { kdy: new Date(ted).toISOString(), prehled: klicPrehledu };
+      odeslano++;
+    } else { selhalo++; console.log(`[rozhlas] přehled dne neodešel: ${v.chyba}`); }
   }
 
   if (prvniBeh) stav.prvniBeh = new Date(ted).toISOString();
