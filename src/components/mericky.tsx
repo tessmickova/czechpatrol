@@ -140,13 +140,19 @@ export function RadarTlaku({
     se — z „Vojenský střet" zbylo „ký střet". Rozšíření je levnější než
     zkracování názvů: zkratky na osách byly ta věc, kterou audit vytýkal.
 
+    Šířka se odvozuje od poloměru, ne od výšky plátna: při malém okraji
+    (velký obrazec na malém plátně) sahaly popisky dál, než pevný poměr
+    počítal, a z „Infrastruktura" zbylo „nfrastruktura". Rezerva odpovídá
+    nejdelšímu popisku v písmu 10,5 px s rozestupem 0,6.
+
     Bez popisků je plátno čtvercové: šířka navíc je jen místo pro text, a
     když text není, jen by obrazec zmenšila.
   */
-  const sirka = bezPopisku ? velikost : Math.round(velikost * 1.45);
+  const r = velikost / 2 - okraj;
+  const MISTO_NA_POPISEK = 104;
+  const sirka = bezPopisku ? velikost : Math.round(2 * (r * 1.26 + MISTO_NA_POPISEK));
   const cx = sirka / 2;
   const cy = velikost / 2;
-  const r = velikost / 2 - okraj;
   const n = osy.length;
 
   const uhel = (i: number) => (i * 2 * Math.PI) / n - Math.PI / 2;
