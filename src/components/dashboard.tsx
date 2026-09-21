@@ -217,8 +217,14 @@ function signalyKPolozkam(stavy: ZivyStav[]): Record<string, SignalSluzby[]> {
   for (const s of SLUZBY) {
     if (!s.tyka) continue;
     const st = stavy.find((x) => x.klic === s.klic);
-    if (!st || (st.stav !== "vypadek" && st.stav !== "omezeni")) continue;
-    (out[s.tyka] ??= []).push({ sluzba: s.nazev, stav: st.stav === "vypadek" ? "výpadek" : "omezení", kdy: st.zkontrolovano, zive: st.zive });
+    /*
+      Jen výpadek, ne omezení. Cloudflare hlásí „minor" skoro pořád —
+      první snímek nesl omezení kvůli Arice a Annabě. Kdyby se to psalo
+      k „Mobilní síť a internet" v Česku, byl by tam signál napořád
+      a skutečný výpadek by v něm zapadl.
+    */
+    if (!st || st.stav !== "vypadek") continue;
+    (out[s.tyka] ??= []).push({ sluzba: s.nazev, stav: "výpadek", kdy: st.zkontrolovano, zive: st.zive });
   }
   return out;
 }

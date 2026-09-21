@@ -54,7 +54,8 @@ export function StavSluzeb({ stavy, kdy }: { stavy: ZivyStav[]; kdy: string | nu
           const st = stavy.find((x) => x.klic === s.klic);
           const stav: StavSluzby = st?.stav ?? "nezjisteno";
           const incident = st?.incidenty[0] ?? null;
-          const sledovana = Boolean(s.tyka) && (stav === "vypadek" || stav === "omezeni");
+          /* Slovo „sledovaná" jen u výpadku — stejné pravidlo jako signál k položce mřížky. */
+          const sledovana = Boolean(s.tyka) && stav === "vypadek";
           const nahledSluzby = {
             titulek: `${s.nazev}: ${SLOVA_STAVU[stav]}${st?.popis ? ` — ${st.popis}` : ""}`,
             radky: [s.kategorie, st?.zkontrolovano ? `${st.zive ? "čteno naživo" : "snímek ze sběru"} ${casPraha(st.zkontrolovano)}` : "zatím nečteno"],
