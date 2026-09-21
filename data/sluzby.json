@@ -1,5 +1,5 @@
 {
-  "aktualizovano": "2026-09-21T18:03:03.412Z",
+  "aktualizovano": "2026-09-21T19:02:48.064Z",
   "stavy": [
     {
       "klic": "cloudflare",
@@ -15,20 +15,31 @@
       "postizene": [
         "Cloudflare Sites and Services",
         "Africa",
-        "Auckland, New Zealand - (AKL)",
-        "Arica, Chile - (ARI)"
+        "Arica, Chile - (ARI)",
+        "Annaba, Algeria - (AAE)"
       ],
-      "zkontrolovano": "2026-09-21T18:03:03.412Z",
+      "zkontrolovano": "2026-09-21T19:02:48.064Z",
       "chyba": null
     },
     {
       "klic": "zoom",
-      "stav": "nezjisteno",
-      "popis": null,
-      "incidenty": [],
-      "postizene": [],
-      "zkontrolovano": "2026-09-21T18:03:03.412Z",
-      "chyba": "neznámý indikátor „maintenance\""
+      "stav": "omezeni",
+      "popis": "Partially Degraded Service",
+      "incidenty": [
+        {
+          "nazev": "Service Degradation Affecting Apple Login for Zoom Sign-in.",
+          "odkaz": "https://stspg.io/j90jkyg5gqz3",
+          "aktualizovano": "2026-09-21T11:17:47.211-07:00"
+        }
+      ],
+      "postizene": [
+        "Zoom Meetings",
+        "Zoom Phone",
+        "Zoom Meetings",
+        "Zoom Phone - EMEA"
+      ],
+      "zkontrolovano": "2026-09-21T19:02:48.064Z",
+      "chyba": null
     },
     {
       "klic": "discord",
@@ -36,7 +47,7 @@
       "popis": "All Systems Operational",
       "incidenty": [],
       "postizene": [],
-      "zkontrolovano": "2026-09-21T18:03:03.412Z",
+      "zkontrolovano": "2026-09-21T19:02:48.064Z",
       "chyba": null
     }
   ]
