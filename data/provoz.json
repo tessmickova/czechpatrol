@@ -32,9 +32,9 @@
           "jazyk": "cs"
         }
       ],
-      "zkontrolovano": "2026-09-21T05:01:10.452Z",
+      "zkontrolovano": "2026-09-21T12:43:48.163Z",
       "pokryti": "orientacni",
-      "pokrytiDuvod": "přečteno mvcr, mzv; žádný z nich není úplný seznam, zápor z nich neplyne"
+      "pokrytiDuvod": "přečteno mvcr, mzv, letiste-praha, bundespolizei, bmi-at, straz-graniczna, minv-sk; žádný z nich není úplný seznam, zápor z nich neplyne"
     },
     {
       "klic": "hranice",
@@ -67,9 +67,9 @@
           "jazyk": "cs"
         }
       ],
-      "zkontrolovano": "2026-09-21T05:01:10.452Z",
+      "zkontrolovano": "2026-09-21T12:43:48.163Z",
       "pokryti": "orientacni",
-      "pokrytiDuvod": "přečteno vlada, mvcr, policie; žádný z nich není úplný seznam, zápor z nich neplyne"
+      "pokrytiDuvod": "přečteno vlada, mvcr, policie, md, celni-sprava, bundespolizei, bmi-at, straz-graniczna, minv-sk; žádný z nich není úplný seznam, zápor z nich neplyne"
     },
     {
       "klic": "palivo",
@@ -102,7 +102,7 @@
           "jazyk": "cs"
         }
       ],
-      "zkontrolovano": "2026-09-21T05:01:10.452Z",
+      "zkontrolovano": "2026-09-21T12:43:48.163Z",
       "pokryti": "orientacni",
       "pokrytiDuvod": "přečteno vlada, mpo; žádný z nich není úplný seznam, zápor z nich neplyne"
     },
@@ -137,9 +137,9 @@
           "jazyk": "cs"
         }
       ],
-      "zkontrolovano": "2026-09-21T05:01:10.452Z",
+      "zkontrolovano": "2026-09-21T12:43:48.163Z",
       "pokryti": "orientacni",
-      "pokrytiDuvod": "přečteno ceps, eru, ote, mpo; žádný z nich není úplný seznam, zápor z nich neplyne"
+      "pokrytiDuvod": "přečteno ceps, eru, ote, mpo, sujb; žádný z nich není úplný seznam, zápor z nich neplyne"
     },
     {
       "klic": "plyn",
@@ -163,7 +163,7 @@
           "jazyk": "cs"
         }
       ],
-      "zkontrolovano": "2026-09-21T05:01:10.452Z",
+      "zkontrolovano": "2026-09-21T12:43:48.163Z",
       "pokryti": "orientacni",
       "pokrytiDuvod": "přečteno eru, ote, mpo; žádný z nich není úplný seznam, zápor z nich neplyne"
     },
@@ -190,7 +190,7 @@
           "jazyk": "cs"
         }
       ],
-      "zkontrolovano": "2026-09-21T05:01:10.452Z",
+      "zkontrolovano": "2026-09-21T12:43:48.163Z",
       "pokryti": "orientacni",
       "pokrytiDuvod": "přečteno vlada, cnb; žádný z nich není úplný seznam, zápor z nich neplyne"
     },
@@ -225,7 +225,7 @@
           "jazyk": "cs"
         }
       ],
-      "zkontrolovano": "2026-09-21T05:01:10.452Z",
+      "zkontrolovano": "2026-09-21T12:43:48.163Z",
       "pokryti": "orientacni",
       "pokrytiDuvod": "přečteno ctu, nukib; žádný z nich není úplný seznam, zápor z nich neplyne"
     },
@@ -259,9 +259,9 @@
           "jazyk": "cs"
         }
       ],
-      "zkontrolovano": "2026-09-21T05:01:10.452Z",
+      "zkontrolovano": "2026-09-21T12:43:48.163Z",
       "pokryti": "orientacni",
-      "pokrytiDuvod": "přečteno vlada, hzs; žádný z nich není úplný seznam, zápor z nich neplyne"
+      "pokrytiDuvod": "přečteno vlada, hzs, md, sprava-zeleznic, letiste-praha, sujb, chmi, mzd; žádný z nich není úplný seznam, zápor z nich neplyne"
     }
   ],
   "zkontrolovano": "2026-09-15T06:31:32.570Z"

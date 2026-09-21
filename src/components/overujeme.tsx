@@ -161,13 +161,13 @@ export function PruhOverujeme({
                 <li key={o.slug} className="px-4 py-3">
                   <span className="flex flex-wrap items-center gap-2 text-drobne">
                     <Odznak ton={o.stav === "potvrzeno" ? "pozor" : "klid"} duraz="silny">
-                      {o.stav === "potvrzeno" ? "potvrdilo se" : o.stav === "vyvraceno" ? "vyvráceno" : "nikdo nepotvrdil"}
+                      {o.stav === "potvrzeno" ? "potvrdilo se" : o.stav === "vyvraceno" ? "vyvráceno" : "nepotvrzeno"}
                     </Odznak>
                     <span className="cislice text-tlum2">{datumCasPraha(o.zacalo)}</span>
                   </span>
                   <span className="mt-1 block text-zaklad leading-relaxed text-tlum">{o.coSeHlasi}</span>
                   <span className="mt-1 block text-male leading-relaxed text-tlum2">
-                    {o.jakDopadlo ?? (vyprselo ? "Uplynula lhůta a nikdo to nepotvrdil. Stáhli jsme to z přehledu." : "")}
+                    {o.jakDopadlo ?? (vyprselo ? "Uplynula lhůta bez potvrzení. Z přehledu jsme to stáhli." : "")}
                   </span>
                 </li>
               );

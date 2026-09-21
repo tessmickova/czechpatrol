@@ -1,6 +1,6 @@
 import { PruhKontroly } from "@/components/banner-stari-klient";
 import { Dashboard } from "@/components/dashboard";
-import { celkovyStav, hybridniTlak, incidenty, kampane, kandidati, nato, nazvyZemi, nepotvrzene, nepotvrzeneZaznamy, posledniKontrola, posledniOvereni, pravniStav, provoz, tlakCr, tydny, overovaneAktivni, overovaneUzavrene, pocetZemeObdobi, urovenObcanu, urovenZemeObdobi, watchlist } from "@/lib/data";
+import { archiv, celkovyStav, hybridniTlak, incidenty, kampane, kandidati, nato, nazvyZemi, nepotvrzene, nepotvrzeneZaznamy, posledniKontrola, posledniOvereni, pravniStav, provoz, tlakCr, tydny, overovaneAktivni, overovaneUzavrene, urovenObcanu, watchlist } from "@/lib/data";
 import { hlavniVeta } from "@/lib/veta";
 
 /**
@@ -31,9 +31,8 @@ export default function Prehled() {
         nepotvrzene={nepotvrzeneZaznamy()}
         tydny={tydny()}
         watchlist={watchlist()}
-        cr={urovenZemeObdobi("CZ", 90)}
         crHistoricky={tlakCr().celkem}
-        crPocet={pocetZemeObdobi("CZ", 90)}
+        snimky={archiv().snimky}
         hybridni={hybridniTlak().celkem}
         tlakEvropa={hybridniTlak()}
         tlakCesko={tlakCr()}

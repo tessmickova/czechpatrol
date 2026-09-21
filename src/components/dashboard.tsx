@@ -1,9 +1,9 @@
 "use client";
 
 import Link from "next/link";
-import { druh, kdyZjisteno, novaZjisteni, pachatelPotvrzen, podlePuvodce, podleZemi, posledniZmeny, pripady, uredniZdroj, vyber, type Zaznam } from "@/lib/agregace";
+import { druh, kdyZjisteno, pachatelPotvrzen, podlePuvodce, podleZemi, pripady, uredniZdroj, vyber, type Zaznam } from "@/lib/agregace";
 import { cerstvost, datumCasPraha, datumPraha, stariSlovy } from "@/lib/cas";
-import type { CelkovyStav, HybridniTlak, Kampan, Kandidat, NatoPolozka, Nepotvrzene, Overovana, PravniPolozka, ProvozniPolozka, TydenniHodnoceni, Uroven, Watchlist } from "@/lib/typy";
+import type { CelkovyStav, HybridniTlak, Kampan, Kandidat, NatoPolozka, Nepotvrzene, Overovana, PravniPolozka, ProvozniPolozka, Snimek, TydenniHodnoceni, Uroven, Watchlist } from "@/lib/typy";
 import { CenaPaliva } from "./palivo";
 import { stavPaliva, vetaOCene } from "@/lib/palivo";
 import { stavPravni, stavProvozu } from "@/lib/pokryti";
@@ -16,7 +16,6 @@ import { HeroDashboard } from "./hero-dashboard";
 import { DlazdiceKampane } from "./kampane";
 import { NadpisSekce } from "./nadpisy";
 import { PruhOverujeme } from "./overujeme";
-import { CislaVUvodu, type PolozkaPoctu } from "./pocitadla-zive";
 import { Aktuality } from "./aktuality";
 import { UrgentniUpozorneni } from "./urgentni";
 import { Odznak, RadekSeznamu, TeckaZavaznosti, Tlacitko } from "./ui";
@@ -26,11 +25,14 @@ import { useZiveHodiny } from "@/lib/cas-klient";
 import { SignalySiti } from "./signaly-siti";
 import { TipyKPriprave } from "./tipy";
 import { PasZemi } from "./pas-zemi";
-import { Pocitadla } from "./pocitadla";
-import { CoJeNoveho } from "./co-je-noveho";
+import { CoSeZmenilo } from "./co-se-zmenilo";
+import { StavSluzeb } from "./stav-sluzeb";
+import { snimekSluzeb, SLUZBY } from "@/lib/sluzby";
+import { useStavSluzeb, type ZivyStav } from "@/lib/sluzby-klient";
+import { casPraha } from "@/lib/cas";
 import { Partneri, Sledovat } from "./sledovat";
 import { VyzvaTelegram } from "./vyzva-telegram";
-import { UdalostiKlient } from "./udalosti-klient";
+import { Nahlaseni } from "./nahlaseni";
 import { Napoveda } from "./zaklad";
 import { sklon, Vlajka } from "./zeme";
 import { useT } from "@/lib/i18n";
@@ -200,7 +202,34 @@ function Stari({ cas, popisek, ted }: { cas: string | null; popisek: Dlazdice["p
   Stav nese slovo i barva, ne jen barva: kdo barvy nerozliší nebo si web
   vytiskne černobíle, přečte totéž.
 */
-function RadekStavu({ d, casSkupiny, ted }: { d: Dlazdice; casSkupiny: string | null; ted: number }) {
+/*
+  Signál od provozovatele k položce v mřížce.
+
+  Když Signal nebo Cloudflare hlásí výpadek, patří to k „Mobilní síť
+  a internet" — ale jako signál, ne jako stav. Úřední stav mění jen
+  kontrola zdrojů; stavová stránka firmy není úřad. Proto věta pod
+  názvem, se slovem „neověřeno", a ne přebarvená dlaždice.
+*/
+interface SignalSluzby { sluzba: string; stav: string; kdy: string | null; zive: boolean }
+
+function signalyKPolozkam(stavy: ZivyStav[]): Record<string, SignalSluzby[]> {
+  const out: Record<string, SignalSluzby[]> = {};
+  for (const s of SLUZBY) {
+    if (!s.tyka) continue;
+    const st = stavy.find((x) => x.klic === s.klic);
+    /*
+      Jen výpadek, ne omezení. Cloudflare hlásí „minor" skoro pořád —
+      první snímek nesl omezení kvůli Arice a Annabě. Kdyby se to psalo
+      k „Mobilní síť a internet" v Česku, byl by tam signál napořád
+      a skutečný výpadek by v něm zapadl.
+    */
+    if (!st || st.stav !== "vypadek") continue;
+    (out[s.tyka] ??= []).push({ sluzba: s.nazev, stav: "výpadek", kdy: st.zkontrolovano, zive: st.zive });
+  }
+  return out;
+}
+
+function RadekStavu({ d, casSkupiny, ted, signaly = [] }: { d: Dlazdice; casSkupiny: string | null; ted: number; signaly?: SignalSluzby[] }) {
   const t = TON[d.ton];
   // Čas se u řádku píše jen tehdy, když se liší od času celé skupiny.
   const vlastniCas = d.cas !== casSkupiny;
@@ -222,6 +251,12 @@ function RadekStavu({ d, casSkupiny, ted }: { d: Dlazdice; casSkupiny: string | 
           <span className="min-w-0 flex-1">
             <span className="block truncate text-male leading-tight text-tlum">{d.nazev}</span>
             <span className={`block text-zaklad font-bold leading-tight ${t.slovo}`}>{d.stav}</span>
+            {signaly.map((sg) => (
+              <span key={sg.sluzba} className="mt-0.5 flex items-center gap-1.5 text-mikro leading-snug text-tlum">
+                <span aria-hidden className="h-[5px] w-[5px] shrink-0 rounded-full bg-akcent" />
+                signál: {sg.sluzba} hlásí {sg.stav}{sg.kdy ? ` (${casPraha(sg.kdy)})` : ""} · neověřeno
+              </span>
+            ))}
           </span>
           {vlastniCas && <Stari cas={d.cas} popisek={d.popisekCasu} ted={ted} />}
           <Ikona nazev="dolu" velikost={13} tah={2} trida="shrink-0 text-tlum2 transition-transform group-open:rotate-180" />
@@ -273,14 +308,16 @@ function Pruh({ nazev, n, max, barva, odkaz }: { nazev: React.ReactNode; n: numb
 }
 
 export function Dashboard({
-  stav, pravni, natoPolozky, provozPolozky, overeno, vse, neprosle, kandidati, nepotvrzene = [], tydny, watchlist, cr, crHistoricky, crPocet, hybridni, obcane, ted,
+  stav, pravni, natoPolozky, provozPolozky, overeno, vse, neprosle, kandidati, nepotvrzene = [], tydny, watchlist, crHistoricky, hybridni, obcane, ted, snimky = [],
   tlakEvropa, tlakCesko, veta, kampane, nazvyZemi, overovaneAktivni = [], overovaneUzavrene = [],
 }: {
   stav: CelkovyStav; pravni: PravniPolozka[]; natoPolozky: NatoPolozka[]; provozPolozky: ProvozniPolozka[];
   /** Čas sestavení. Klient z něj vychází, aby se první vykreslení shodlo. */
   ted: number;
   overeno: string | null; vse: Zaznam[]; neprosle: Nepotvrzene[]; kandidati: Kandidat[]; nepotvrzene?: Zaznam[]; tydny: TydenniHodnoceni[]; watchlist: Watchlist;
-  cr: Uroven | null; crHistoricky: Uroven | null; crPocet: { pripadu: number; kampani: number };
+  crHistoricky: Uroven | null;
+  /** Archiv snímků úředního stavu — z něj se čte, co se změnilo. */
+  snimky?: Snimek[];
   hybridni: Uroven | null; obcane: { uroven: Uroven; popis: string; neovereno: number };
   tlakEvropa: HybridniTlak; tlakCesko: HybridniTlak; veta: HlavniVeta;
   kampane: Kampan[]; nazvyZemi: Record<string, string>;
@@ -298,7 +335,12 @@ export function Dashboard({
   const d = stav.uroven ? UROVNE[stav.uroven] : null;
   const pasmo = stav.uroven ? PASMA[UROVNE[stav.uroven].pasmo] : null;
 
-  const dni90 = pripady(vse, { dni: 90 });
+  /*
+    Všechna okna se počítají z živého času (tedMs), ne z času sestavení.
+    Web se sestavuje jednou za pár hodin; číslo „za 90 dní" spočítané při
+    sestavení se od počítadel v liště, která si čas berou z prohlížeče,
+    rozcházelo o záznam na hraně okna. Proto stejný čas pro všechno.
+  */
   /*
     Číslo za 90 dní samo o sobě neřekne, jestli je to klid, nebo nejhorší
     čtvrtletí za dva roky. Proto se k němu počítá porovnání s průměrem —
@@ -312,6 +354,19 @@ export function Dashboard({
     #418 na úvodní straně, v událostech i v jazykových variantách.
   */
   const tedMs = useZiveHodiny(ted);
+  const dni90 = pripady(vse, { dni: 90, ted: tedMs });
+  /* Stav služeb: snímek ze sběru, po připojení živé čtení stavových stránek. */
+  const sluzby = useStavSluzeb(snimekSluzeb());
+  const signalySluzeb = signalyKPolozkam(sluzby.stavy);
+  /*
+    Situace v Česku za 90 dní: nejvyšší závažnost z případů a operací
+    proti občanům v okně. Dřív přicházela ze serveru s časem sestavení;
+    tady je z téhož živého času jako všechno ostatní.
+  */
+  const czKampane90 = kampane.filter((k) => k.kodyZemi.includes("CZ") && tedMs - new Date(k.odhaleno).getTime() <= 90 * 86_400_000);
+  const czUrovne: Uroven[] = [...dni90.filter((i) => i.kodZeme === "CZ").map((i) => i.zavaznost), ...czKampane90.map((k) => k.zavaznost)];
+  const cr: Uroven | null = czUrovne.length ? czUrovne.reduce((m, u) => (UROVNE[u].poradi > UROVNE[m].poradi ? u : m), czUrovne[0]) : null;
+  const crPocet = { pripadu: dni90.filter((i) => i.kodZeme === "CZ").length, kampani: czKampane90.length };
   const kampaneVOkne = (dni: number) => kampane.filter((k) => tedMs - new Date(k.odhaleno).getTime() <= dni * 86_400_000).length;
   const zapocitatelne90 = dni90.length + kampaneVOkne(90);
   const casyZapocitatelne = [
@@ -319,41 +374,16 @@ export function Dashboard({
     ...kampane.map((k) => k.odhaleno),
   ];
   const porovnani90 = porovnejSPrumerem(zapocitatelne90, prumerNaOkno(casyZapocitatelne, 90, tedMs));
-  // Do prohlížeče posíláme jen datum, příznak Česka a druh — počítadla si
-  // zbytek dopočítají sama. Kampaně jsou tu schválně: manipulační operace
-  // proti občanům je incident, i když nemá jedno místo a jeden okamžik.
-  const pocitadlaData: PolozkaPoctu[] = [
-    ...vse.filter((i) => druh(i) === "pripad").map((i) => ({ kdy: kdyZjisteno(i), cz: i.kodZeme === "CZ" })),
-    ...kampane.map((k) => ({ kdy: k.odhaleno, cz: k.kodyZemi.includes("CZ"), kampan: true })),
-  ];
   const zemi = new Set(dni90.map((i) => i.kodZeme)).size;
   const cz = dni90.filter((i) => i.kodZeme === "CZ").length;
   const potvrzeno = dni90.filter(pachatelPotvrzen).length;
   const uredni = dni90.filter(uredniZdroj).length;
-  const rok = new Date().getUTCFullYear();
+  const rok = new Date(tedMs).getUTCFullYear();
   const letos = vyber(vse, { odRoku: rok });
   const zeme = podleZemi(letos).filter((z) => z.pripady > 0 || z.kodZeme === "CZ").slice(0, 6);
   const maxZeme = Math.max(1, ...zeme.map((z) => z.pripady));
   const puv = podlePuvodce(letos);
   const maxPuv = Math.max(1, ...puv.skupiny.map((s) => s.pocet));
-  /*
-    Co je nového = nové záznamy i posuny ve vyšetřování starých případů,
-    v jednom chronologickém seznamu. Štítek u řádku říká, o co jde.
-  */
-  const zjisteni = novaZjisteni(vse, 8);
-  const stitkyNovinek = new Map(zjisteni.map((z) => [z.zaznam.id, z.duvod]));
-  const coJeNoveho = [...posledniZmeny(24, vse), ...zjisteni.map((z) => z.zaznam)]
-    .filter((z, i, pole) => pole.findIndex((x) => x.id === z.id) === i)
-    .sort((a, b) => kdyZjisteno(b).localeCompare(kdyZjisteno(a)));
-  /*
-    Kolik řádků se do sloupce vejde.
-
-    Sloupec stojí vedle mřížky úředních stavů a dřív končil zhruba v její
-    půlce — vedle něj zůstávalo prázdné místo a vypadalo to jako chyba.
-    Číslo je změřené proti výšce mřížky; při jiném obsahu se seznam
-    jen zkrátí nebo o kus přesáhne, nic se nerozbije.
-  */
-  const pocetNovinek = 24;
   const stariCelkem = cerstvost(overeno, tedMs);
 
   const crHodnota = platiCr.length ? platiCr.map((p) => KRATCE_PRAVNI[p.klic] ?? p.nazev).join(", ") : naruseno.length ? "Narušeno" : sledujeme.length ? "Sledujeme" : "Bez omezení";
@@ -400,14 +430,18 @@ export function Dashboard({
   void tydny;
   return (
     <>
-    <PasZemi vse={vse} kampane={kampane} />
+    <PasZemi vse={vse} kampane={kampane} ted={ted} />
     <div className="mx-auto max-w-[1280px] px-4 py-5 sm:px-6 sm:py-7">
       {/* Nad budíky: co se šíří a zatím není ověřené. Bez toho by
           závažná, ale nepotvrzená zpráva propadla úplně. */}
       <PruhOverujeme aktivni={overovaneAktivni} uzavrene={overovaneUzavrene} ted={tedMs} />
 
       {/*
-        Úvod dvě třetiny, aktuality třetina.
+        Úvod tři pětiny, aktuality dvě pětiny.
+
+        Třetina byla na dvouřádkové titulky úzká: řádek s vlajkou a datem
+        nechal titulku ~200 px a lámal ho do tří řádků. Dvě pětiny stačí na
+        dvě řádky a úvod o 90 px užší nic neztrácí.
 
         Na titulce nebylo poznat, že projekt žije: ověřené záznamy přibývají
         po dnech, protože každý musí projít člověkem, a mezi nimi web vypadal
@@ -418,23 +452,27 @@ export function Dashboard({
         Na mobilu jsou pod sebou; třetinový sloupec na úzkém displeji není
         sloupec, jen úzký proužek.
       */}
-      <div className="grid gap-4 xl:grid-cols-3">
-        <div className="min-w-0 xl:col-span-2">
-          <HeroDashboard
-            stav={stav} cr={cr} crHistoricky={crHistoricky} crPocet={crPocet} obcane={obcane} overeno={overeno} veta={veta}
-            cisla={<CislaVUvodu polozky={pocitadlaData} ted={ted} zaznamuCelkem={vse.length} />}
-          />
+      {/*
+        Mezera mezi úvodem a sloupcem je větší než jinde v mřížce (40 px
+        místo 16): úvod nemá rámeček, takže hranici mezi textem a kartou
+        vedle dělá jen vzduch — a 16 px vzduchu hranici neudělá.
+      */}
+      <div className="grid gap-4 xl:grid-cols-[minmax(0,3fr)_minmax(0,2fr)] xl:gap-10">
+        <div className="min-w-0">
+          <HeroDashboard stav={stav} cr={cr} crHistoricky={crHistoricky} crPocet={crPocet} obcane={obcane} veta={veta} />
         </div>
         {/*
-          Sloupec se nesmí roztahovat řádek. Absolutní umístění znamená, že
-          výšku řádku určuje jen úvodní panel — aktuality se mu přizpůsobí,
-          ne naopak. Bez toho vedle panelu vysokého 580 px stál sloupec
-          vysoký 920 px a pod úvodem zůstalo prázdné místo.
+          Sloupec smí být o kousek vyšší než úvod. Dřív byl přilepený
+          absolutně na výšku úvodu, protože jednořádkových položek se do ní
+          vešlo dvanáct a třináctá by se ořízla. Dvouřádkové řádky se ale do
+          výšky úvodu (545 px bez rámečku) nevejdou ani čtyři a čtyři —
+          a tři a tři už nejsou aktuality. Úvod bez rámečku prázdné místo
+          pod sebou unese; oříznutý poslední řádek pod tlačítkem ne.
 
           Zlom je až na 1280 px. Při 1024 px by měl sloupec jen ~310 px,
           titulky by se lámaly do čtyř řádků a nevešly by se ani čtyři.
         */}
-        <div className="min-w-0 xl:relative">
+        <div className="min-w-0">
           <Aktuality zaznamy={vse} kandidati={kandidati} nepotvrzene={nepotvrzene} />
         </div>
       </div>
@@ -453,7 +491,8 @@ export function Dashboard({
           nadpis={t("Úřední stav v Česku")}
         />
       </div>
-      <div className="grid gap-4 lg:grid-cols-[minmax(0,1.35fr)_minmax(0,1fr)]">
+      {/* Stejný poměr a mezera jako v úvodu: tři pětiny mřížka, dvě pětiny sloupec. */}
+      <div className="grid gap-4 xl:grid-cols-[minmax(0,3fr)_minmax(0,2fr)] xl:gap-10">
         <section aria-label={t("Oficiální stavy")} id="opatreni" className="scroll-mt-[84px] space-y-4">
           {skupinyDlazdic.map((sk) => (
             <div key={sk.predpona} className="overflow-hidden rounded-[20px] border border-linka2 bg-plocha">
@@ -467,7 +506,7 @@ export function Dashboard({
                 <Stari cas={sk.cas} popisek={sk.popisekCasu} ted={tedMs} />
               </div>
               <ul className="sm:grid sm:grid-cols-2">
-                {sk.polozky.map((d) => <RadekStavu key={d.klic} d={d} casSkupiny={sk.cas} ted={tedMs} />)}
+                {sk.polozky.map((d) => <RadekStavu key={d.klic} d={d} casSkupiny={sk.cas} ted={tedMs} signaly={signalySluzeb[d.zdrojovaPolozka.klic] ?? []} />)}
               </ul>
             </div>
           ))}
@@ -477,23 +516,21 @@ export function Dashboard({
         </section>
 
         {/*
-          Jeden seznam „Co je nového", ne dvě sekce vedle sebe.
+          Vedle mřížky stavů: co se změnilo, ne co se stalo.
 
-          Dřív stály na úvodu zvlášť „Poslední události" a zvlášť „Nová
-          zjištění". Čtenář tím dostal dvakrát tutéž otázku — co je nového —
-          rozdělenou podle toho, jestli jde o novou událost, nebo o posun ve
-          vyšetřování staré. To je naše vnitřní rozlišení, ne jeho.
-
-          Teď je to jeden chronologický seznam a typ nese štítek u řádku.
-          Kdo chce jen posuny ve vyšetřování, má vedle nadpisu filtr.
+          Dřív tu byl seznam nových událostí — třetí místo na úvodní straně
+          s touž otázkou. Události mají sloupec v úvodu a vlastní stránku.
+          Sem patří změny, které se dotknou života tady: úřední stavy,
+          cena paliva, opatření v Česku, u sousedů a v EU.
         */}
-        <CoJeNoveho
-          zaznamy={coJeNoveho}
-          nepotvrzene={nepotvrzene}
-          kandidati={kandidati}
-          stitky={stitkyNovinek}
-          pocet={pocetNovinek}
-        />
+        <div className="space-y-4">
+        <CoSeZmenilo zaznamy={vse} snimky={snimky} ted={tedMs} />
+        {/*
+          Služby naživo hned pod tím, co se změnilo: „jde mi zavolat
+          a zaplatit?" je první otázka, když se něco děje, a odpověď
+          od provozovatelů je rychlejší než od úřadů.
+        */}
+        <StavSluzeb stavy={sluzby.stavy} kdy={sluzby.kdy} />
 
         {/*
           Signály z profilů představitelů a institucí. Zobrazí se jen tehdy,
@@ -506,7 +543,8 @@ export function Dashboard({
           se stalo, ale co s tím může člověk udělat dnes. Bez tipu se
           nevykreslí nic.
         */}
-        <TipyKPriprave ted={ted} />
+        <TipyKPriprave ted={tedMs} />
+        </div>
       </div>
 
       {/* 2b2 — manipulační kampaně: operace, ne události */}
@@ -578,19 +616,17 @@ export function Dashboard({
         statistiku. Čísla dávají smysl až nad seznamem, který si prohlédl,
         ne před ním.
       */}
-      {/* 4 — započítávání a úplný seznam */}
+      {/*
+        4 — úplný seznam tu už není.
+
+        Stál tu celý archiv s filtry — totéž, co je na stránce Události,
+        a k tomu potřetí to, co ukazují aktuality nahoře. Úvodní strana
+        na archiv odkazuje (tlačítko v aktualitách), sama ho nenese.
+        Zůstává jen to, co jinde není: možnost ohlásit, co chybí.
+      */}
       <div className="nalet mt-14 border-t border-linka pt-12 sm:mt-20 sm:pt-14">
-        <NadpisSekce
-          stitek="Archiv"
-          nadpis={t("Všechny záznamy od roku 2014")}
-          popis={t("Případy, jejich pokračování, opatření, prohlášení i to, co neprošlo ověřením.")}
-          akce={<Tlacitko kam="/udalosti/" varianta="obrys" velikost="s" ikonaVpravo="nahoru" trida="[&>svg:last-child]:rotate-90">{t("samostatná stránka")}</Tlacitko>}
-        />
+        <Nahlaseni />
       </div>
-      <div className="mb-5"><Pocitadla vse={vse} neprosle={neprosle} kandidati={kandidati} nepotvrzenych={nepotvrzene.length} /></div>
-      <section id="zaznamy" aria-label={t("Všechny záznamy")} className="scroll-mt-[84px] rounded-[22px] border border-linka2 bg-plocha p-4 sm:p-6">
-        <UdalostiKlient zaznamy={vse} neprosle={neprosle} kandidati={kandidati} nepotvrzene={nepotvrzene} />
-      </section>
 
       {/* 3 — čísla, kde, kdo */}
       <div className="nalet mt-14 border-t border-linka pt-12 sm:mt-20 sm:pt-14">

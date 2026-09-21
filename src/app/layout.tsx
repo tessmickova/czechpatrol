@@ -90,14 +90,15 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         >
           Přeskočit na obsah
         </a>
+        {/* Lišta původu je první věc na stránce, nad menu: kdo to píše a kdy naposled kontroloval. */}
+        <PruhPuvodu vpravo={<StavKontrolyVedle zkontrolovano={posledniKontrola()} ted={Date.now()} />} />
         <Navigace />
         {/*
-          Výstraha stojí nad vším ostatním — nad pruhem původu i nad obsahem.
-          Když platí, je to první věc na stránce; když neplatí (a to je skoro
-          vždycky), nevykreslí se vůbec nic.
+          Výstraha stojí nad obsahem, hned pod menu. Když platí, je to
+          první věc pod navigací; když neplatí (a to je skoro vždycky),
+          nevykreslí se vůbec nic.
         */}
         <PruhVystrahy />
-        <PruhPuvodu vpravo={<StavKontrolyVedle zkontrolovano={posledniKontrola()} ted={Date.now()} />} />
         <UkazkaPruh />
         {/*
           Dialogy místo alert/confirm/prompt. Obaluje obsah, aby se na ně dalo

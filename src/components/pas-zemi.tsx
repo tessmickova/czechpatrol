@@ -1,9 +1,13 @@
+"use client";
+
 import Link from "next/link";
-import { pripady, type Zaznam } from "@/lib/agregace";
+import { druh, kdyZjisteno, pripady, type Zaznam } from "@/lib/agregace";
 import { PASMA, UROVNE } from "@/lib/skala";
 import type { Kampan, Uroven } from "@/lib/typy";
 import { sklon, Vlajka } from "./zeme";
 import { PasBeh } from "./pas-beh-klient";
+import { PasPocitadel, type PolozkaPoctu } from "./pocitadla-zive";
+import { useZiveHodiny } from "@/lib/cas-klient";
 
 /*
   Běžící pás zemí nahoře.
@@ -19,7 +23,15 @@ import { PasBeh } from "./pas-beh-klient";
   a čtenář by nevěděl, čemu věřit.
 */
 
-export function PasZemi({ vse, kampane = [], ted = Date.now() }: { vse: Zaznam[]; kampane?: Kampan[]; ted?: number }) {
+export function PasZemi({ vse, kampane = [], ted: tedSestaveni = Date.now() }: { vse: Zaznam[]; kampane?: Kampan[]; ted?: number }) {
+  /*
+    Živý čas, ne čas sestavení. Dlaždice dřív držely počty z posledního
+    sestavení webu, zatímco počítadla nad nimi si čas brala z prohlížeče —
+    záznam na hraně 90 dnů pak byl v jednom a chyběl ve druhém. Teď obojí
+    počítá z téhož času; při prvním vykreslení z času sestavení (aby se HTML
+    shodlo), po připojení z hodin návštěvníka.
+  */
+  const ted = useZiveHodiny(tedSestaveni);
   const dni90 = pripady(vse, { dni: 90, ted });
   const kampane90 = kampane.filter((k) => ted - new Date(k.odhaleno).getTime() <= 90 * 86_400_000);
   const kody = [...new Set([...dni90.map((i) => i.kodZeme), ...kampane90.flatMap((k) => k.kodyZemi), "CZ"])];
@@ -67,7 +79,16 @@ export function PasZemi({ vse, kampane = [], ted = Date.now() }: { vse: Zaznam[]
     );
   });
 
-  const celkem = zeme.reduce((n, z) => n + z.pocet, 0);
+  /*
+    Do prohlížeče jde jen datum, příznak Česka a druh — počítadla si
+    zbytek dopočítají sama podle hodin návštěvníka. Kampaně jsou tu
+    schválně: operace proti občanům je incident, i když nemá jedno místo
+    a jeden okamžik. Stejný základ jako dlaždice pod tím.
+  */
+  const polozkyPoctu: PolozkaPoctu[] = [
+    ...vse.filter((i) => druh(i) === "pripad").map((i) => ({ kdy: kdyZjisteno(i), cz: i.kodZeme === "CZ" })),
+    ...kampane.map((k) => ({ kdy: k.odhaleno, cz: k.kodyZemi.includes("CZ"), kampan: true })),
+  ];
 
   return (
     /*
@@ -78,26 +99,15 @@ export function PasZemi({ vse, kampane = [], ted = Date.now() }: { vse: Zaznam[]
     <div className="pas-obal border-b border-linka bg-papir" aria-label="Země za posledních 90 dnů">
       <div className="mx-auto max-w-[1280px] px-4 sm:px-6">
         {/*
-          Popisek nad řadou, ne vedle ní.
+          Nad řadou zemí řádek počítadel místo popisku.
 
-          Dřív tu stálo jen „90 dnů" a vedle toho čísla. Z toho se nedalo
-          poznat, co ta čísla jsou — a na úzkém displeji se popisek skrýval
-          úplně, takže tam běžela řada čísel bez jakéhokoli vysvětlení.
-          Věta nad řadou se vejde vždycky a přečte se jako první.
+          Dřív tu stálo „Incidenty za posledních 90 dní · celkem 30" a čísla
+          po oknech byla v úvodu. Teď je tu obojí pohromadě: kolik a za jak
+          dlouho nahoře, kde dole. Řada dlaždic je za 90 dní — to říká
+          title každé dlaždice.
         */}
-        {/*
-          Jedna řádka, na střed.
-
-          Věta se dvakrát lámala — nejdřív kvůli prostrkanému štítku, pak
-          kvůli délce. Krátit ji nic nestojí: kampaně se na celém webu počítají
-          mezi incidenty, takže „incidenty" je přesné slovo. `whitespace-nowrap`
-          drží řádku i na mobilu, kde se zbytek ořízne tečkami.
-        */}
-        <div className="flex justify-center pt-2">
-          <p className="truncate whitespace-nowrap text-mikro text-tlum2">
-            Incidenty za posledních 90 dní
-            {celkem > 0 && <span className="text-tlum"> · celkem {celkem}</span>}
-          </p>
+        <div className="pt-1.5">
+          <PasPocitadel polozky={polozkyPoctu} ted={ted} />
         </div>
         <div className="flex items-center pb-1.5">
           <PasBeh>

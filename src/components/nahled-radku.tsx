@@ -1,6 +1,6 @@
 "use client";
 
-import { useCallback, useEffect, useState } from "react";
+import { Fragment, useCallback, useEffect, useState } from "react";
 
 /*
   Náhled řádku u kurzoru.
@@ -24,9 +24,15 @@ export interface Nahled {
   radky: string[];
   /** Věta navíc — čím zpráva je a co s ní bude. */
   poznamka?: string;
+  /**
+    Hodnocení záznamu v párech popisek–hodnota. Ověřený záznam má čtyři:
+    závažnost, jistotu, původce a zdroj. Zachycená zpráva nemá žádné —
+    hodnocení u ní neexistuje, a prázdná tabulka by tvrdila, že ano.
+  */
+  udaje?: { popisek: string; hodnota: string }[];
 }
 
-const SIRKA = 340;
+const SIRKA = 360;
 const OKRAJ = 12;
 
 /** Stav náhledu i obsluha myši na jednom místě, ať to seznamy nemusí řešit. */
@@ -67,8 +73,9 @@ export function PanelNahledu({ nahled, kde }: { nahled: Nahled | null; kde: { x:
   */
   const vpravo = kde.x + OKRAJ + SIRKA <= okno.w - OKRAJ;
   const x = vpravo ? kde.x + OKRAJ : Math.max(OKRAJ, kde.x - OKRAJ - SIRKA);
-  const dole = kde.y + 150 > okno.h;
-  const y = dole ? Math.max(OKRAJ, kde.y - 150) : kde.y + 18;
+  const vyska = nahled.udaje?.length ? 230 : 150;
+  const dole = kde.y + vyska > okno.h;
+  const y = dole ? Math.max(OKRAJ, kde.y - vyska) : kde.y + 18;
 
   return (
     <div
@@ -80,7 +87,17 @@ export function PanelNahledu({ nahled, kde }: { nahled: Nahled | null; kde: { x:
       {nahled.radky.length > 0 && (
         <p className="cislice mt-1.5 text-mikro leading-snug text-tlum2">{nahled.radky.join(" · ")}</p>
       )}
-      {nahled.poznamka && <p className="mt-1.5 text-drobne leading-snug text-tlum">{nahled.poznamka}</p>}
+      {nahled.udaje && nahled.udaje.length > 0 && (
+        <dl className="mt-2.5 grid grid-cols-[auto_minmax(0,1fr)] gap-x-3 gap-y-1 border-t border-linka2 pt-2.5 text-drobne leading-snug">
+          {nahled.udaje.map((u) => (
+            <Fragment key={u.popisek}>
+              <dt className="stitek text-tlum2">{u.popisek}</dt>
+              <dd className="truncate text-inkoust">{u.hodnota}</dd>
+            </Fragment>
+          ))}
+        </dl>
+      )}
+      {nahled.poznamka && <p className="mt-2 text-drobne leading-snug text-tlum">{nahled.poznamka}</p>}
     </div>
   );
 }

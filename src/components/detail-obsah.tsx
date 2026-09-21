@@ -65,6 +65,8 @@ export function HlavickaDetailu({ i, velka = false }: { i: Incident; velka?: boo
         <span aria-hidden>·</span>
         <span className="inline-flex items-center gap-1.5"><Vlajka kod={i.kodZeme} /> {i.kodZeme === "CZ" ? "Česko" : i.zeme}{i.region ? `, ${i.region}` : ""}</span>
         {i.historicky && <><span aria-hidden>·</span><span>doplněno zpětně</span></>}
+        <span aria-hidden>·</span>
+        <span className="stitek text-tlum2">AI shrnutí</span>
       </div>
       {/*
         Na samostatné stránce detailu je název události hlavním nadpisem
@@ -124,7 +126,12 @@ export function DetailObsah({ i }: { i: Incident }) {
 
   return (
     <div className="space-y-7">
-      <Blok nadpis="Co se stalo" popis="Jen doložené skutečnosti. Každá je krytá zdrojem níže.">
+      {/*
+        Text záznamu je shrnutí, ne článek. Píše ho model z veřejných zdrojů
+        a čtenář to má vědět dřív, než začne číst — jinak se věty čtou jako
+        stanovisko projektu nebo přepis úředního textu, a ani jedno to není.
+      */}
+      <Blok nadpis="Co se stalo" popis="AI shrnutí veřejných zdrojů, ne oficiální článek ani stanovisko. Každý bod je krytý zdrojem níže.">
         <Seznam polozky={i.fakta} />
         <p className="mt-3 text-male text-tlum">
           {/*
@@ -164,20 +171,25 @@ export function DetailObsah({ i }: { i: Incident }) {
           <Link href="/#opatreni" className="odkaz">Oficiální opatření</Link>
         </p>
         {/*
-          Kdo záznam ověřil, musí být vidět.
+          Odkud záznam pochází, musí být vidět.
 
           Web dlouho sliboval, že všechno na něm prošlo člověkem. Od chvíle,
           kdy se dobře doložené záznamy zveřejňují samy, to neplatí — a mlčet
           o tom by znamenalo tvrdit čtenáři něco, co není pravda. Věta je
           proto u záznamu, ne schovaná v metodice.
+
+          Říká se to ale způsobem, jakým se mluví ke čtenáři, ne k sobě:
+          „nikdo z nás ho nečetl" je pravda z provozní porady, ne věta pro
+          veřejnost. Čtenář potřebuje vědět, na čem záznam stojí a čí
+          hodnocení u něj (ne)najde.
         */}
         {i.overeni === "automaticke" && (
           <div className="mt-3 rounded-[18px] border border-linka p-3.5">
-            <div className="stitek mb-1">Jak byl tenhle záznam ověřen</div>
+            <div className="stitek mb-1">Odkud tenhle záznam pochází</div>
             <p className="text-zaklad leading-relaxed text-tlum">
-              Zveřejnil se automaticky, protože stojí na dvou nezávislých zdrojích
-              a aspoň jeden z nich je úřední. <span className="text-inkoust">Nikdo z nás ho nečetl.</span>{" "}
-              Fakta i odkazy jsou přesně to, co uvádějí zdroje — hodnocení projektu u něj proto není.
+              Stojí na dvou nezávislých zdrojích, z nichž aspoň jeden je úřední, a zveřejnil se
+              na jejich základě bez redakčního posouzení. <span className="text-inkoust">Fakta i odkazy odpovídají tomu, co zdroje uvádějí.</span>{" "}
+              Vlastní hodnocení projektu u něj proto není.
             </p>
           </div>
         )}

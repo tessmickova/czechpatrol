@@ -74,7 +74,7 @@ export default async function Stranka({ params }: { params: Promise<{ id: string
         co čte, dřív než to začne číst.
       */}
       <Sdeleni ton="akcent" ikona="otaznik" carkovane nadpis="Tohle CzechPatrol zatím netvrdí." trida="mb-6">
-        Zpráva je zpracovaná a má uvedené zdroje, ale nikdo z nás ji nepotvrdil. Do počtů, do hodnocení situace
+        Zpráva je zpracovaná jako AI shrnutí a má uvedené zdroje, ale zatím není potvrzená. Do počtů, do hodnocení situace
         ani do upozornění nevstupuje.{" "}
         {!dost
           ? "Chybí jí druhý nezávislý zdroj — bez něj se nezveřejní ani po schválení."

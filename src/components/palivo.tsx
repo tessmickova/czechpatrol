@@ -68,7 +68,7 @@ export function CenaPaliva() {
   const tyden = paliva[0].konec ?? "";
 
   return (
-    <section aria-label="Ceny pohonných hmot" className="mt-3 rounded-[18px] border border-linka2 bg-plocha px-4 py-3">
+    <section id="palivo" aria-label="Ceny pohonných hmot" className="mt-3 scroll-mt-[84px] rounded-[18px] border border-linka2 bg-plocha px-4 py-3">
       <div className="mb-1 flex items-center justify-between gap-3">
         <span className="stitek">Ceny pohonných hmot</span>
         <Napoveda

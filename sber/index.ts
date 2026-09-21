@@ -8,6 +8,7 @@ import type { Nalez, VysledekZdroje } from "./typy";
 import { lidskaZmena } from "../src/lib/archiv-text";
 import { sbirejUdalosti } from "./udalosti";
 import { sbirejPalivo } from "./palivo";
+import { sbirejSluzby } from "./sluzby";
 
 /**
  * Hodinový sběr.
@@ -242,6 +243,14 @@ async function main() {
     await sbirejPalivo();
   } catch (e) {
     console.log(`[sber] ceny paliv selhaly, ostatní pokračuje: ${e instanceof Error ? e.message : e}`);
+  }
+
+  /* ---------- stav služeb ---------- */
+  /* Tři stavové stránky, každý běh. Chyba čtení se zapíše k službě, sběr nepadá. */
+  try {
+    await sbirejSluzby();
+  } catch (e) {
+    console.log(`[sber] stav služeb selhal, ostatní pokračuje: ${e instanceof Error ? e.message : e}`);
   }
 
   /* ---------- archiv v čase ---------- */
