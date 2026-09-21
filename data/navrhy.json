@@ -599,5 +599,81 @@
     "aiZpracovano": true,
     "lidskyOvereno": false,
     "archivniZaznam": false
+  },
+  {
+    "kam": "zaznam",
+    "pripravil": "patrol",
+    "pripraveno": "2026-09-21T19:41:30.953Z",
+    "id": "i-2026-09-17-6815946632",
+    "slug": "md-6815946632",
+    "titulek": "Moldavsko: dron z Ukrajiny se asi dvě minuty pohyboval v moldavském vzdušném prostoru; ministerstvo obrany původ neuvádí",
+    "kratkyTitulek": "Moldavsko: dron z Ukrajiny se asi dvě minuty pohyboval v moldavském vzdušném prostoru; ministerstvo obrany původ neuvádí",
+    "zeme": "Moldavsko",
+    "kodZeme": "MD",
+    "kategorie": [
+      "drony"
+    ],
+    "datumUdalosti": "2026-09-17T00:00:00Z",
+    "datumZjisteni": "2026-09-17T00:00:00Z",
+    "aktualizovano": "2026-09-21T19:41:30.953Z",
+    "zavaznost": "Y1",
+    "jistota": "vysoka",
+    "stav": "bez-vysetrovani",
+    "atribuce": "neznama",
+    "puvodce": "neznamy",
+    "druh": "pripad",
+    "fakta": [
+      "Podle ministerstva obrany Moldavska (17. 9. 2026) vstoupil v 08:56 bez povolení do moldavského vzdušného prostoru dron od Biliaivky (Ukrajina) směrem k Tudoře a v 08:58 ho opustil u Palanky směrem k jezeru Davidove Liman na Ukrajině; zdržel se asi dvě minuty.",
+      "Podle ministerstva šlo o neidentifikovaný dron; jeho původ neuvádí a zprávu klade do souvislosti s ruskými útoky na Oděskou oblast téhož rána.",
+      "Podle ministerstva služba leteckých operací pokračuje v monitorování vzdušného prostoru; škody ani zraněné zpráva neuvádí."
+    ],
+    "neznameho": [
+      "Původ dronu: ministerstvo ho neuvádí, označení „ruský“ je jen z titulku Moldova 1 a nepřipisuje se.",
+      "Zda dron nesl výbušninu a jaký byl jeho cíl, zdroje neuvádějí.",
+      "Web ministerstva obrany army.md není v seznamu úředních domén, proto zde není označen jako úřední zdroj, ačkoli jde o původní sdělení ministerstva.",
+      "Původní odkaz kandidáta (Moldova 1 přes Google News) jsem přímo neotevřel."
+    ],
+    "vyznam": "",
+    "eskalacniSpousteče": [],
+    "deeskalacniSignaly": [],
+    "zdroje": [
+      {
+        "nazev": "Moldova 1 — Russian drone briefly breaches Moldovan airspace near Ukraine",
+        "url": "https://news.google.com/rss/articles/CBMiQEFVX3lxTE5wU3pCSlB2eWNRNFRXd2pCTWRaNUxvN2lsbndPUmpHT0xhNTNjbVliUlFQUmQ1VzRRQXZSMXpmOGo?oc=5",
+        "typ": "media",
+        "publikovano": "2026-09-17T00:00:00Z",
+        "primarni": false,
+        "jazyk": "en"
+      },
+      {
+        "nazev": "Ministerstvo obrany Moldavska — tisková informace o dronu v moldavském vzdušném prostoru (17. 9. 2026)",
+        "url": "https://army.md/en/press-releases/inform-14",
+        "typ": "primary",
+        "publikovano": "2026-09-17T00:00:00Z",
+        "primarni": false,
+        "jazyk": "en"
+      },
+      {
+        "nazev": "Radio Moldova — Spațiul aerian al R. Moldova, traversat de o dronă neidentificată în dimineața de 17 septembrie",
+        "url": "https://radiomoldova.md/p/85242/spatiul-aerian-al-r-moldova-traversat-de-o-drona-neidentificata-in-dimineata-de-17-septembrie",
+        "typ": "media",
+        "publikovano": "2026-09-17T00:00:00Z",
+        "primarni": false,
+        "jazyk": "ro"
+      }
+    ],
+    "souvisejici": [],
+    "historie": [
+      {
+        "kdy": "2026-09-17T00:00:00Z",
+        "text": "Zachyceno automatickým sběrem, druhý zdroj doložen před zařazením do fronty.",
+        "novySignal": true
+      }
+    ],
+    "novy": true,
+    "zapocitanoTyden": "2026-09-17",
+    "aiZpracovano": true,
+    "lidskyOvereno": false,
+    "archivniZaznam": false
   }
 ]
