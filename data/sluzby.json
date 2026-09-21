@@ -1,5 +1,5 @@
 {
-  "aktualizovano": "2026-09-21T15:02:41.050Z",
+  "aktualizovano": "2026-09-21T16:02:44.672Z",
   "stavy": [
     {
       "klic": "cloudflare",
@@ -15,19 +15,30 @@
       "postizene": [
         "Cloudflare Sites and Services",
         "Africa",
-        "Arica, Chile - (ARI)",
-        "Annaba, Algeria - (AAE)"
+        "Auckland, New Zealand - (AKL)",
+        "Arica, Chile - (ARI)"
       ],
-      "zkontrolovano": "2026-09-21T15:02:41.050Z",
+      "zkontrolovano": "2026-09-21T16:02:44.672Z",
       "chyba": null
     },
     {
       "klic": "zoom",
-      "stav": "provoz",
-      "popis": "All Systems Operational",
-      "incidenty": [],
-      "postizene": [],
-      "zkontrolovano": "2026-09-21T15:02:41.050Z",
+      "stav": "omezeni",
+      "popis": "Partially Degraded Service",
+      "incidenty": [
+        {
+          "nazev": "Service Degradation Affecting Zoom Virtual Agent and Zoom Contact Center in US region",
+          "odkaz": "https://stspg.io/zm28f1d8v6dt",
+          "aktualizovano": "2026-09-21T08:50:46.417-07:00"
+        }
+      ],
+      "postizene": [
+        "Zoom Phone",
+        "Chat Agent",
+        "AI Expert Assist",
+        "Zoom CX - NORTH AMERICA"
+      ],
+      "zkontrolovano": "2026-09-21T16:02:44.672Z",
       "chyba": null
     },
     {
@@ -36,7 +47,7 @@
       "popis": "All Systems Operational",
       "incidenty": [],
       "postizene": [],
-      "zkontrolovano": "2026-09-21T15:02:41.050Z",
+      "zkontrolovano": "2026-09-21T16:02:44.672Z",
       "chyba": null
     }
   ]

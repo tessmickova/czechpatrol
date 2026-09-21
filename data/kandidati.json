@@ -11772,6 +11772,40 @@
     }
   },
   {
+    "id": "k-bd9afcdf8863b740",
+    "zachyceno": "2026-09-21T16:02:44.217Z",
+    "publikovano": "2026-09-04T07:00:00.000Z",
+    "zdroj": {
+      "nazev": "Téma: energetika (anglicky)",
+      "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxNZzBQdjdQMjRhV0g0ZFptWDkxeGNmSVFTTV9JdzZBQ3dDQ0hrRXNTNVo3ZDktQWRqYUFIR0FzZHZFWE1sejJCMloza0tnRlJXVmQxMDNSem1mNzZZdEd3c1BfcHNXTXhoN0hlNDl2V0N0aHdZb3ZGVVp6ZXBSQzhWUlVmY29UdGZsLU1HOEhhZVVsNjRuaWhxWFV3c0I3eU9Sd2FyaDRUZTMyX2gt?oc=5",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "German Police Probe Fresh Attempts to Sabotage Power Grid - Bloomberg.com",
+    "titulekPuvodni": "German Police Probe Fresh Attempts to Sabotage Power Grid - Bloomberg.com",
+    "shrnuti": "German Police Probe Fresh Attempts to Sabotage Power Grid Bloomberg.com",
+    "kodZeme": "DE",
+    "zeme": "Německo",
+    "kategorie": [
+      "sabotaz",
+      "infrastruktura"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "sabotage",
+      "power grid"
+    ],
+    "naliehave": null,
+    "stav": "ceka",
+    "vyrez": {
+      "text": "Google News",
+      "stazeno": "2026-09-21T16:02:44.476Z",
+      "stav": 200
+    }
+  },
+  {
     "id": "k-431f0fede915d9e3",
     "zachyceno": "2026-09-21T15:02:40.615Z",
     "publikovano": "2026-09-04T07:00:00.000Z",
@@ -12114,46 +12148,6 @@
     "vyrez": {
       "text": "Google News",
       "stazeno": "2026-09-20T20:03:06.651Z",
-      "stav": 200
-    },
-    "vyrizeni": {
-      "kdy": "2026-09-20T21:06:22.548Z",
-      "duvod": "duplicita",
-      "patriK": null,
-      "poznamka": "Podle titulku týž skutek jako záznam dormagen-gohr (sabotáž rozvoden, pátrání po klimatickém aktivistovi, 4. 9. 2026); text zdroje jde otevřít jen přes Google News, proto usuzováno z titulku a záznamů."
-    }
-  },
-  {
-    "id": "k-4bf5735c13f09476",
-    "zachyceno": "2026-09-20T20:03:06.305Z",
-    "publikovano": "2026-09-04T07:00:00.000Z",
-    "zdroj": {
-      "nazev": "Téma: sabotaz (česky)",
-      "url": "https://news.google.com/rss/articles/CBMi7wFBVV95cUxQMzR4VEtoenFieVQ4dlhFYmtTTC11Wnlva1V3QnMtV0hjcWE4dndIYmlFcFlGWW1zRzRmNDNrM3V3WUdTMDJMSWRPV2NJVmdCSTc4bWxYMmlsdzdxdjJuc09LWWU1TlhTQmxBLUdBLVhnZ3JDLTJtWFZlWnVKUVV1ekJqb0tCYzdvd1B6LUgtOVEyVVlWMWt4N1BUTGhBLUJmLWg2QXhISlgtQXdWYjBOQzRINDNfNkFMSlc5QkFlN0xHWnZ5TVoxTmZ2d1R3RG1lUXVUYXpobFFhMENQRVU1WmtiQUd5ZVNUZkNMRi1kRQ?oc=5",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Další podezření na sabotáž v Německu. Policie našla zařízení mířící na elektrické vedení - Expres.cz",
-    "titulekPuvodni": "Další podezření na sabotáž v Německu. Policie našla zařízení mířící na elektrické vedení - Expres.cz",
-    "shrnuti": "Další podezření na sabotáž v Německu. Policie našla zařízení mířící na elektrické vedení Expres.cz",
-    "kodZeme": "DE",
-    "zeme": "Německo",
-    "kategorie": [
-      "sabotaz",
-      "vojsko"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "zeSite": null,
-    "shody": [
-      "sabotaz",
-      "policie"
-    ],
-    "naliehave": null,
-    "stav": "vyrizen",
-    "vyrez": {
-      "text": "Google News",
-      "stazeno": "2026-09-20T20:03:06.807Z",
       "stav": 200
     },
     "vyrizeni": {
