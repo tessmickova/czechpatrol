@@ -1,5 +1,91 @@
 [
   {
+    "id": "k-a60dabdc251657c6",
+    "zachyceno": "2026-09-21T09:20:03.745Z",
+    "publikovano": "2026-09-21T09:18:00.000Z",
+    "zdroj": {
+      "nazev": "ERR News (Estonsko)",
+      "url": "https://news.err.ee/1610143708/estonian-scientists-say-ai-development-should-be-slowed-down",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Estonian scientists say AI development should be slowed down",
+    "shrnuti": "Recent incidents involving AI systems acting autonomously have intensified calls for stronger oversight, with researchers warning that safeguards must keep pace as the technology becomes increasingly capable.",
+    "duvod": "bez-skutku",
+    "kategorie": [],
+    "posouzeni": null
+  },
+  {
+    "id": "k-045e32e5472a9e9a",
+    "zachyceno": "2026-09-21T09:20:03.746Z",
+    "publikovano": "2026-09-21T09:13:00.000Z",
+    "zdroj": {
+      "nazev": "ERR News (Estonsko)",
+      "url": "https://news.err.ee/1610143792/nato-general-baltic-states-now-much-better-defended-than-before",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "NATO general: Baltic states now much better defended than before",
+    "shrnuti": "Military security in the Baltic states has improved markedly since NATO developed a clear strategy and action plans, a senior NATO general said.",
+    "duvod": "bez-skutku",
+    "kategorie": [
+      "nato"
+    ],
+    "posouzeni": null
+  },
+  {
+    "id": "k-910a321b7d3c59a2",
+    "zachyceno": "2026-09-21T09:20:03.685Z",
+    "publikovano": "2026-09-21T09:11:00.000Z",
+    "zdroj": {
+      "nazev": "Český rozhlas — domácí zprávy",
+      "url": "https://www.irozhlas.cz/sport/hokej/hokej-extraliga-ledniho-hokeje-prochazka_2609211111_lbk",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Výborné výkony. Je jedno, jestli hrají doma nebo venku, chválí expert Procházka hokejisty Kladna",
+    "shrnuti": "Kladno potvrdilo povedený vstup do nového ročníku, když vyhrálo i třetí duel, tentokrát v Liberci 3:1. Dařilo se i Českým Budějovicím, které porazily Olomouc 3:2. „Tohle potom je umění trenéra, když dobře reaguje během zápasu, dokáže v tom zápase třeba obměnit útoky nebo prohodit jednoho, dva hráče,",
+    "duvod": "vylouceno-tematem",
+    "kategorie": [
+      "cr"
+    ],
+    "posouzeni": null
+  },
+  {
+    "id": "k-4a82ed63e17a8934",
+    "zachyceno": "2026-09-21T09:20:03.702Z",
+    "publikovano": "2026-09-21T09:03:51.000Z",
+    "zdroj": {
+      "nazev": "ČT24 — hlavní zprávy",
+      "url": "https://ct24.ceskatelevize.cz/clanek/veda/spolecnost-anthropic-zacala-provozovat-ai-biolaborator-chce-delat-vedu-bez-vedcu-377795",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Společnost Anthropic začala provozovat AI biolaboratoř. Chce dělat vědu bez vědců",
+    "shrnuti": "Americká společnost Anthropic, která patří mezi hlavní hráče v oblasti umělé inteligence (AI), začala provozovat biologickou laboratoř. Firma tak rozšiřuje své ambice z AI do světa farmaceutického výzkumu. Informovala o tom agentura Reuters s odvoláním na představitele podniku a zdroje obeznámené se",
+    "duvod": "bez-skutku",
+    "kategorie": [],
+    "posouzeni": null
+  },
+  {
+    "id": "k-869fda210e6b8aca",
+    "zachyceno": "2026-09-21T09:20:03.685Z",
+    "publikovano": "2026-09-21T09:00:00.000Z",
+    "zdroj": {
+      "nazev": "Český rozhlas — domácí zprávy",
+      "url": "https://www.irozhlas.cz/zpravy-svet/opozicni-jabloko-ziskalo-kresla-v-parlamentu-ruske-novgorodske-oblasti-smelo_2609211100_jho",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Opoziční Jabloko získalo křesla v parlamentu ruské Novgorodské oblasti. Smělo kandidovat pouze tam",
+    "shrnuti": "V ruské Novgorodské oblasti v regionálním parlamentu pravděpodobně zasednou zástupci opoziční strany Jabloko, která vystupuje proti ruské invazi na Ukrajině. Novgorodská oblast byla jediným regionem, kde tuto stranu do volebního klání připustili. Z voleb do dolní komory ruského federálního parlament",
+    "duvod": "vylouceno-tematem",
+    "kategorie": [
+      "rusko"
+    ],
+    "posouzeni": null
+  },
+  {
     "id": "k-dd9d2152bb790956",
     "zachyceno": "2026-09-21T09:02:52.875Z",
     "publikovano": "2026-09-21T08:56:00.000Z",
@@ -9756,116 +9842,6 @@
     "posouzeni": {
       "podezreni": "zadne",
       "duvod": "Diskuse o škrtech ve školní inkluzi.",
-      "kdy": "2026-09-19T12:05:22.436Z"
-    }
-  },
-  {
-    "id": "k-58c90d8e25bd1025",
-    "zachyceno": "2026-09-16T12:33:06.198Z",
-    "publikovano": "2026-09-16T12:15:00.000Z",
-    "zdroj": {
-      "nazev": "ERR News (Estonsko)",
-      "url": "https://news.err.ee/1610139571/study-copper-surfaces-can-help-render-public-spaces-safer-from-infection",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Study: Copper surfaces can help render public spaces safer from infection",
-    "shrnuti": "Several materials that effectively kill bacteria under laboratory conditions may not work as well in crowded spaces. Their effectiveness is reduced by repeated cleaning as well as changes in humidity, according to a doctoral dissertation defended at the University of Tartu.",
-    "duvod": "bez-skutku",
-    "kategorie": [],
-    "posouzeni": {
-      "podezreni": "zadne",
-      "duvod": "Vědecká studie o měděných površích.",
-      "kdy": "2026-09-19T12:05:22.436Z"
-    }
-  },
-  {
-    "id": "k-fa7c9a1948352856",
-    "zachyceno": "2026-09-16T12:33:06.125Z",
-    "publikovano": "2026-09-16T12:11:00.000Z",
-    "zdroj": {
-      "nazev": "Český rozhlas — domácí zprávy",
-      "url": "https://www.irozhlas.cz/zpravy-domov/turismus-promenuje-tvar-obci-na-brehu-lipenske-nadrze-dopada-na-podnikani-i_2609161411_bva",
-      "typ": "primary",
-      "primarni": true
-    },
-    "titulek": "Turismus proměňuje tvář obcí na břehu Lipenské nádrže. Dopadá na podnikání i životní prostředí",
-    "shrnuti": "Turismus zásadně proměňuje tvář obcí na břehu Lipenské nádrže. Týká se to například Frymburku na Českokrumlovsku. Tlaky developerů na budování rekreačních resortů se nelíbí místním podnikatelům. Bojí se odlivu zákazníků i pracovníků. Místní obyvatelé pak kritizují dopady na přírodu a život v obci.",
-    "duvod": "bez-skutku",
-    "kategorie": [],
-    "posouzeni": {
-      "podezreni": "zadne",
-      "duvod": "Turismus a dopady na obce u přehrady.",
-      "kdy": "2026-09-19T12:05:22.436Z"
-    }
-  },
-  {
-    "id": "k-ede006de8865e433",
-    "zachyceno": "2026-09-16T16:32:53.382Z",
-    "publikovano": "2026-09-16T12:06:29.000Z",
-    "zdroj": {
-      "nazev": "Téma: krizove-vysilani (česky)",
-      "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxOQXVwX0p6eUtTTnBMQXV3OWpKLUM3Q0hWellFbE9mWVE1d1VaOEdQdnpmbU5Pa1pLYmpEejhQcUZMd25nVkdPTkdkRGkyMzE0SklFT0NVZFppdU5xTUV5d294UzFzV04tV195eVp6N3BUbzhHblJqQzhZMzZpMmJ2UldYd3dlV3JsbHF1NXBIa3Zsb3RaTW94TWYtZ0pwWDVGUTVhcW96MmxVcjAtOUlkdlZXS1ZTeEZ3WHc?oc=5",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Nebýt zaskočen jako při covidu. Český rozhlas připravil 22 scénářů vysílání pro případ krizí - Deník N",
-    "shrnuti": "Nebýt zaskočen jako při covidu. Český rozhlas připravil 22 scénářů vysílání pro případ krizí Deník N",
-    "duvod": "bez-skutku",
-    "kategorie": [
-      "cr"
-    ],
-    "posouzeni": {
-      "podezreni": "zadne",
-      "duvod": "Příprava scénářů vysílání pro krize, ne konkrétní událost.",
-      "kdy": "2026-09-19T12:05:22.436Z"
-    }
-  },
-  {
-    "id": "k-6752e7550779a1d5",
-    "zachyceno": "2026-09-16T13:33:05.374Z",
-    "publikovano": "2026-09-16T12:04:00.000Z",
-    "zdroj": {
-      "nazev": "Deutsche Welle — Europe",
-      "url": "https://www.dw.com/en/poland-reaffirms-support-for-ukraine-after-drone-strikes/a-79291144?maca=en-rss-en-eu-2092-rdf",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Poland reaffirms support for Ukraine after drone strikes",
-    "shrnuti": "After Russia&apos;s recent drone attacks on targets close to the Ukraine-Poland border, Warsaw has doubled down on its support for Kyiv and pledged a \"nonprovocative but serious response\" to Moscow.",
-    "duvod": "bez-skutku",
-    "kategorie": [
-      "drony",
-      "hranice",
-      "rusko"
-    ],
-    "posouzeni": {
-      "podezreni": "vysoke",
-      "duvod": "Ruské dronové útoky poblíž polsko-ukrajinské hranice.",
-      "kdy": "2026-09-19T12:05:22.436Z"
-    }
-  },
-  {
-    "id": "k-ef8a6f8069637018",
-    "zachyceno": "2026-09-16T12:33:06.183Z",
-    "publikovano": "2026-09-16T12:04:00.000Z",
-    "zdroj": {
-      "nazev": "Deutsche Welle — Europe",
-      "url": "https://www.dw.com/en/poland-reiterates-ukraine-support-after-russia-drone-attacks/a-79291144?maca=en-rss-en-eu-2092-rdf",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Poland reiterates Ukraine support after Russia drone attacks",
-    "shrnuti": "After the recent Russian drone attacks on targets close to the Ukraine-Poland border, Warsaw has doubled down on its support for Kyiv and pledged a \"non-provocative but serious response\" to Moscow.",
-    "duvod": "bez-skutku",
-    "kategorie": [
-      "drony",
-      "hranice",
-      "rusko"
-    ],
-    "posouzeni": {
-      "podezreni": "vysoke",
-      "duvod": "Ruské dronové útoky u polské hranice, slíbená odpověď.",
       "kdy": "2026-09-19T12:05:22.436Z"
     }
   }

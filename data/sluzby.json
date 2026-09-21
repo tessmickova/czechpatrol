@@ -1,4 +1,43 @@
 {
-  "aktualizovano": null,
-  "stavy": []
+  "aktualizovano": "2026-09-21T09:20:04.327Z",
+  "stavy": [
+    {
+      "klic": "cloudflare",
+      "stav": "omezeni",
+      "popis": "Minor Service Outage",
+      "incidenty": [
+        {
+          "nazev": "Incorrect geo location for some Cloudflare WARP users",
+          "odkaz": "https://www.cloudflarestatus.com/incidents/9g65dxfbcjln",
+          "aktualizovano": "2026-09-01T08:29:56.000Z"
+        }
+      ],
+      "postizene": [
+        "Cloudflare Sites and Services",
+        "Africa",
+        "Arica, Chile - (ARI)",
+        "Annaba, Algeria - (AAE)"
+      ],
+      "zkontrolovano": "2026-09-21T09:20:04.327Z",
+      "chyba": null
+    },
+    {
+      "klic": "zoom",
+      "stav": "provoz",
+      "popis": "All Systems Operational",
+      "incidenty": [],
+      "postizene": [],
+      "zkontrolovano": "2026-09-21T09:20:04.327Z",
+      "chyba": null
+    },
+    {
+      "klic": "discord",
+      "stav": "provoz",
+      "popis": "All Systems Operational",
+      "incidenty": [],
+      "postizene": [],
+      "zkontrolovano": "2026-09-21T09:20:04.327Z",
+      "chyba": null
+    }
+  ]
 }
