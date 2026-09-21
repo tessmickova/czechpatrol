@@ -138,6 +138,43 @@
     }
   },
   {
+    "id": "k-a9214cb02055a283",
+    "zachyceno": "2026-09-21T06:03:02.361Z",
+    "publikovano": "2026-09-21T05:54:00.000Z",
+    "zdroj": {
+      "nazev": "Český rozhlas — domácí zprávy",
+      "url": "https://www.irozhlas.cz/zpravy-svet/online-zaporozi-v-plamenech-po-rozsahlem-ruskem-utoku-drony-tam-zranily-pet-lidi_2609210754_jho",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "ONLINE: Záporoží v plamenech po rozsáhlém ruském útoku. Drony tam zranily pět lidí",
+    "titulekPuvodni": "ONLINE: Záporoží v plamenech po rozsáhlém ruském útoku. Drony tam zranily pět lidí",
+    "shrnuti": "Rusko v noci na pondělí provedlo rozsáhlý útok na Záporoží, informovala Ukrajinská státní služba pro mimořádné události (DSNS). Zraněno je pět lidí, požár zachvátil kromě jiného budovu vysoké školy. Záchranáři také uvedli, že ze zasažených budov zachránili pět lidí a čtrnáct evakuovali. Psychologové",
+    "kodZeme": "UA",
+    "zeme": "Ukrajina",
+    "kategorie": [
+      "hybridni",
+      "drony",
+      "rusko"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "utok na",
+      "dron",
+      "rusk"
+    ],
+    "naliehave": null,
+    "stav": "ceka",
+    "vyrez": {
+      "text": "",
+      "stazeno": "2026-09-21T06:03:02.860Z",
+      "stav": 403,
+      "chyba": "HTTP 403"
+    }
+  },
+  {
     "id": "k-067e59f23929511d",
     "zachyceno": "2026-09-20T19:02:29.995Z",
     "publikovano": null,
@@ -12056,63 +12093,56 @@
     }
   },
   {
-    "id": "k-f44171bc8661754d",
-    "zachyceno": "2026-09-21T05:03:13.836Z",
+    "id": "k-b939805d929329ae",
+    "zachyceno": "2026-09-21T06:03:02.517Z",
     "publikovano": "2026-09-03T07:00:00.000Z",
     "zdroj": {
       "nazev": "Téma: sabotaz (česky)",
-      "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxPX0pSakZ5bERhbk9NbFo2ZHN6ckZoVy1VY0xmU1ZqenB0d0ZybGE4QkFpSnVDRmtXQmV2cElqZVk2cnRfSTFXVlJ2aFJ4VGM2ZW1YMlhmaUdtQ2NHZnJJMERwZHc5LVB1aDhfV3dQMkNPa0ZOQXhqMmpXWEU4YlBFTGdZZUNxTHhKYWN5eUdEdldRNzVCM0tyNDFWSWE3SE5vdGV5aWg3MG9UT2FSMXVKS1BOMm9uXzMyMlJrYU9JTThFdEJJc2NR?oc=5",
+      "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxNenA3bUlDbVVudTZuM0MtblF0azRVLTc1OGx6YTg3Wm80QnVIbFJ3cnlVYVBJWnhkZDNmRlJKNm11SnZMYWYxT1Y1dm9uamFJSkF6X3RZSE1rSW14RFBPaHFDX0RWbHNlSFZDY3E5dVh3UmI4d1N1RE05Qm1BejdwbDlVUFFpVHNJZlh1V2lR?oc=5",
       "typ": "media",
       "primarni": false
     },
-    "titulek": "OTÁZKY A ODPOVĚDI: Sabotáže v Německu. Co o nich víme a hrozí něco podobného i v Česku? - iROZHLAS",
-    "titulekPuvodni": "OTÁZKY A ODPOVĚDI: Sabotáže v Německu. Co o nich víme a hrozí něco podobného i v Česku? - iROZHLAS",
-    "shrnuti": "OTÁZKY A ODPOVĚDI: Sabotáže v Německu. Co o nich víme a hrozí něco podobného i v Česku? iROZHLAS",
-    "kodZeme": "CZ",
-    "zeme": "Česko",
+    "titulek": "Nová sabotáž v Německu. K zapálení aut se přihlásili levicoví extremisté, policie zkoumá protiizraelský motiv - echo24.cz",
+    "titulekPuvodni": "Nová sabotáž v Německu. K zapálení aut se přihlásili levicoví extremisté, policie zkoumá protiizraelský motiv - echo24.cz",
+    "shrnuti": "Nová sabotáž v Německu. K zapálení aut se přihlásili levicoví extremisté, policie zkoumá protiizraelský motiv echo24.cz",
+    "kodZeme": "DE",
+    "zeme": "Německo",
     "kategorie": [
       "sabotaz",
-      "cr"
+      "vojsko"
     ],
     "druhOdhad": "neurceno",
     "klasifikace": "pravidla",
     "zeSite": null,
     "shody": [
       "sabotaz",
-      "irozhlas"
+      "policie"
     ],
     "naliehave": null,
-    "stav": "vyrizen",
+    "stav": "ceka",
     "vyrez": {
       "text": "Google News",
-      "stazeno": "2026-09-21T05:03:14.177Z",
+      "stazeno": "2026-09-21T06:03:02.919Z",
       "stav": 200
-    },
-    "vyrizeni": {
-      "kdy": "2026-09-21T05:11:10.588Z",
-      "duvod": "neudalost",
-      "patriK": null,
-      "poznamka": "Otázky a odpovědi iROZHLAS o sabotážích v Německu jsou vysvětlující text bez nového skutku. Rozhodnuto už dříve; sběr zprávu po odepsání znovu zachytil."
     }
   },
   {
-    "id": "k-f56a0ce72a5b8f92",
-    "zachyceno": "2026-09-21T05:03:14.099Z",
+    "id": "k-092a0209d4a2ae68",
+    "zachyceno": "2026-09-21T06:03:02.824Z",
     "publikovano": "2026-09-03T07:00:00.000Z",
     "zdroj": {
-      "nazev": "Polsko — sabotaz",
-      "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxOdlY5b1d1T0pGblZaTTJGUDd5eVFhUEplT0NmRC1wS1B2OXRCTHNGOTcxdWgzcHZILWt4OGlUUDd2Rzg1X3BWT1pWRm1hNVREeXVjbC1Kd0U5SDc3TnV4NWgwVlRnQUxGMl9CcnlDZjdwZVJuakdCa2liR0pSc1R6Y2VvdHA4aEhHN0Z2c3lFN2VEajRHWGFIczNnVQ?oc=5",
+      "nazev": "Dánsko — spionaz",
+      "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxONkZSVkxza005QjYyNnkxZnB4djRUdUVnNXVpbUlqOFNBQUtLVElJa1NiT2VOSVBqaERzR1ExYnZudVNIQmFVNXZKY1dxcUloT1h4Y2h1Z3h2eUJjblBXbUZIaHNIS0lmdmM0UloyczZUVFlSQ3k2cmU3NUdYeWt0MV9zUmR2OGozSXc?oc=5",
       "typ": "media",
       "primarni": false
     },
-    "titulek": "ICCT confirms 189 Russia-linked sabotage cases in Europe - UA.NEWS",
-    "titulekPuvodni": "ICCT confirms 189 Russia-linked sabotage cases in Europe - UA.NEWS",
-    "shrnuti": "ICCT confirms 189 Russia-linked sabotage cases in Europe UA.NEWS",
-    "kodZeme": "RU",
-    "zeme": "Rusko",
+    "titulek": "Denmark's intelligence agency warns Russia 'actively' preparing acts of sabotage - Yahoo News Canada",
+    "titulekPuvodni": "Denmark's intelligence agency warns Russia 'actively' preparing acts of sabotage - Yahoo News Canada",
+    "shrnuti": "Denmark's intelligence agency warns Russia 'actively' preparing acts of sabotage Yahoo News Canada",
+    "kodZeme": "DK",
+    "zeme": "Dánsko",
     "kategorie": [
       "sabotaz",
-      "hybridni",
       "rusko"
     ],
     "druhOdhad": "neurceno",
@@ -12120,63 +12150,14 @@
     "zeSite": null,
     "shody": [
       "sabotage",
-      "russia-linked",
       "russia"
     ],
     "naliehave": null,
-    "stav": "vyrizen",
+    "stav": "ceka",
     "vyrez": {
       "text": "Google News",
-      "stazeno": "2026-09-21T05:03:14.298Z",
+      "stazeno": "2026-09-21T06:03:03.012Z",
       "stav": 200
-    },
-    "vyrizeni": {
-      "kdy": "2026-09-21T05:11:10.588Z",
-      "duvod": "neudalost",
-      "patriK": null,
-      "poznamka": "Report ICCT o 189 případech je analýza, ne skutek ani rozhodnutí. Rozhodnuto už dříve; sběr zprávu po odepsání znovu zachytil."
-    }
-  },
-  {
-    "id": "k-a5a91e67344f6b22",
-    "zachyceno": "2026-09-21T04:53:21.071Z",
-    "publikovano": "2026-09-03T07:00:00.000Z",
-    "zdroj": {
-      "nazev": "Téma: energetika (anglicky)",
-      "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxQX0dlb21RUFVyR012ZjY5YnNadVY0Y05PaF8zb3RRNGo4MVdZMElzOXZZTkEzQzNLS0RncWFOa0NkcHFqZWdqZUEzQzdQaGVtdWVad2lIaDQ4NW1NUGhiaGhXbmRrakpzeVlKdDhqRENHeWFJSTRfdDRBVTRkaGdTOF8xUnpWTlJITGc?oc=5",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Germany probes double sabotage attack on power grid - euractiv.com",
-    "titulekPuvodni": "Germany probes double sabotage attack on power grid - euractiv.com",
-    "shrnuti": "Germany probes double sabotage attack on power grid euractiv.com",
-    "kodZeme": "DE",
-    "zeme": "Německo",
-    "kategorie": [
-      "sabotaz",
-      "hybridni",
-      "infrastruktura"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "zeSite": null,
-    "shody": [
-      "sabotage",
-      "attack on",
-      "power grid"
-    ],
-    "naliehave": null,
-    "stav": "vyrizen",
-    "vyrez": {
-      "text": "Google News",
-      "stazeno": "2026-09-21T04:53:21.257Z",
-      "stav": 200
-    },
-    "vyrizeni": {
-      "kdy": "2026-09-21T05:11:10.588Z",
-      "duvod": "duplicita",
-      "patriK": null,
-      "poznamka": "Euractiv, 3. 9. 2026, podle titulku dvojitý útok na rozvodny v Německu; týž skutek jako záznamy turnow-preilack a bergheim-rheidt (1. 9. 2026). Text jde otevřít jen přes Google News, proto usuzováno z titulku a záznamů."
     }
   }
 ]
