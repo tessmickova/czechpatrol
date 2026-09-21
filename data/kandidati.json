@@ -164,12 +164,18 @@
       "policie"
     ],
     "naliehave": null,
-    "stav": "ceka",
+    "stav": "vyrizen",
     "vyrez": {
       "text": "",
       "stazeno": "2026-09-21T20:00:59.990Z",
       "stav": 403,
       "chyba": "HTTP 403"
+    },
+    "vyrizeni": {
+      "kdy": "2026-09-21T23:26:33.122Z",
+      "duvod": "neudalost",
+      "patriK": null,
+      "poznamka": "Střelba z pistole z okna bytu v Praze, zadržený pachatel, nikdo nezraněn; běžná trestná činnost bez bezpečnostního rozměru."
     }
   },
   {
@@ -202,12 +208,18 @@
       "rusk"
     ],
     "naliehave": null,
-    "stav": "ceka",
+    "stav": "vyrizen",
     "vyrez": {
       "text": "",
       "stazeno": "2026-09-21T20:01:00.096Z",
       "stav": 403,
       "chyba": "HTTP 403"
+    },
+    "vyrizeni": {
+      "kdy": "2026-09-21T23:26:33.122Z",
+      "duvod": "mimo-rozsah",
+      "patriK": null,
+      "poznamka": "Ruský útok na Mykolajivskou oblast (zahynul tříletý chlapec); uvnitř Ukrajiny, bez doloženého následku pro sledované země."
     }
   },
   {
@@ -235,11 +247,17 @@
       "state of emergency"
     ],
     "naliehave": null,
-    "stav": "ceka",
+    "stav": "vyrizen",
     "vyrez": {
       "text": "Google News",
       "stazeno": "2026-09-21T20:01:00.183Z",
       "stav": 200
+    },
+    "vyrizeni": {
+      "kdy": "2026-09-21T23:26:33.122Z",
+      "duvod": "neudalost",
+      "patriK": null,
+      "poznamka": "Kalifornie vyhlásila stav nouze před El Niñem; přírodní hrozba mimo sledované země, ne bezpečnostní událost."
     }
   },
   {
@@ -922,11 +940,17 @@
       "rusk"
     ],
     "naliehave": null,
-    "stav": "ceka",
+    "stav": "vyrizen",
     "vyrez": {
       "text": "Google News",
       "stazeno": "2026-09-21T21:02:47.657Z",
       "stav": 200
+    },
+    "vyrizeni": {
+      "kdy": "2026-09-21T23:26:33.122Z",
+      "duvod": "neudalost",
+      "patriK": null,
+      "poznamka": "Ruský útok na Ukrajinu (čtyři mrtví) a preventivní vzlety polských stíhaček bez narušení polského vzdušného prostoru; rutinní vzorec, uvnitř Ukrajiny bez následku pro sledované země."
     }
   },
   {
@@ -11980,11 +12004,17 @@
       "power grid"
     ],
     "naliehave": null,
-    "stav": "ceka",
+    "stav": "vyrizen",
     "vyrez": {
       "text": "Google News",
       "stazeno": "2026-09-21T23:02:47.915Z",
       "stav": 200
+    },
+    "vyrizeni": {
+      "kdy": "2026-09-21T23:26:33.122Z",
+      "duvod": "duplicita",
+      "patriK": null,
+      "poznamka": "France 24, 4. 9.: pátrání po klimatickém aktivistovi; pokrývají záznamy dormagen-gohr a nemecko-rozvodny-zadrzeni-2026 (zadržení 8. 9.). Rozhodnuto už dříve; sběr zprávu po odepsání znovu zachytil."
     }
   },
   {
@@ -12014,11 +12044,17 @@
       "substation"
     ],
     "naliehave": null,
-    "stav": "ceka",
+    "stav": "vyrizen",
     "vyrez": {
       "text": "Google News",
       "stazeno": "2026-09-21T23:02:48.032Z",
       "stav": 200
+    },
+    "vyrizeni": {
+      "kdy": "2026-09-21T23:26:33.122Z",
+      "duvod": "duplicita",
+      "patriK": null,
+      "poznamka": "Podle titulku týž skutek jako záznam dormagen-gohr (sabotáž rozvoden, pátrání po klimatickém aktivistovi, 4. 9. 2026); text zdroje jde otevřít jen přes Google News, proto usuzováno z titulku a záznamů. Rozhodnuto už dříve; sběr zprávu po odepsání znovu zachytil."
     }
   },
   {
@@ -12048,11 +12084,17 @@
       "power grid"
     ],
     "naliehave": null,
-    "stav": "ceka",
+    "stav": "vyrizen",
     "vyrez": {
       "text": "Google News",
       "stazeno": "2026-09-21T23:02:48.165Z",
       "stav": 200
+    },
+    "vyrizeni": {
+      "kdy": "2026-09-21T23:26:33.122Z",
+      "duvod": "duplicita",
+      "patriK": null,
+      "poznamka": "Podle titulku týž skutek jako záznam dormagen-gohr (sabotáž rozvoden, pátrání po klimatickém aktivistovi, 4. 9. 2026); text zdroje jde otevřít jen přes Google News, proto usuzováno z titulku a záznamů. Rozhodnuto už dříve; sběr zprávu po odepsání znovu zachytil."
     }
   },
   {
@@ -12086,11 +12128,17 @@
       "russia"
     ],
     "naliehave": null,
-    "stav": "ceka",
+    "stav": "vyrizen",
     "vyrez": {
       "text": "Google News",
       "stazeno": "2026-09-21T23:02:48.284Z",
       "stav": 200
+    },
+    "vyrizeni": {
+      "kdy": "2026-09-21T23:26:33.122Z",
+      "duvod": "duplicita",
+      "patriK": null,
+      "poznamka": "Otevřen balkaninsight.com: jde o požár závodu WB Electronics ve Skarżysku-Kamiennej z 31. 8. 2026, který už je záznamem wb-electronics. Rozhodnuto už dříve; sběr zprávu po odepsání znovu zachytil."
     }
   },
   {
@@ -12120,11 +12168,17 @@
       "russia"
     ],
     "naliehave": null,
-    "stav": "ceka",
+    "stav": "vyrizen",
     "vyrez": {
       "text": "Google News",
       "stazeno": "2026-09-21T23:02:48.397Z",
       "stav": 200
+    },
+    "vyrizeni": {
+      "kdy": "2026-09-21T23:26:33.122Z",
+      "duvod": "neudalost",
+      "patriK": null,
+      "poznamka": "Souhrn o kampani ruských sabotáží v Evropě bez konkrétního skutku ani rozhodnutí (podle titulku). Rozhodnuto už dříve; sběr zprávu po odepsání znovu zachytil."
     }
   }
 ]
