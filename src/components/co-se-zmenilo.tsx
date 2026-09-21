@@ -43,6 +43,8 @@ interface Radek {
   klic: string;
   kdy: string;
   druh: Druh;
+  /** Zhoršení: cena skočila nahoru, stav se zhoršil, přibylo opatření. */
+  zhorseni: boolean;
   kodZeme: string | null;
   zeme: string | null;
   text: string;
@@ -76,6 +78,7 @@ function zeSnimku(snimky: Snimek[]): Radek[] {
         klic: `stav-${s.kdy}-${i}`,
         kdy: s.kdy,
         druh: "stav",
+        zhorseni: /→ (sledujeme|narušeno|ANO|aktivováno|Zvýšená|Vysoká|Vážná)/u.test(z),
         kodZeme: "CZ",
         zeme: "Česko",
         text: z,
@@ -113,6 +116,7 @@ function zCen(ted: number): Radek[] {
       klic: `ceny-${t.tyden}`,
       kdy,
       druh: "ceny",
+      zhorseni: skok && (dNafta > 0 || dBenzin > 0),
       kodZeme: "CZ",
       zeme: "Česko",
       text: `Palivo za litr: ${cast("nafta")}, ${cast("benzin95")} za týden`,
@@ -145,6 +149,7 @@ function zOpatreni(zaznamy: Zaznam[]): Radek[] {
         klic: `opatreni-${z.id}`,
         kdy: kdyZjisteno(z),
         druh: "opatreni",
+        zhorseni: true,
         kodZeme: z.kodZeme,
         zeme,
         text: bez.charAt(0).toUpperCase() + bez.slice(1),
@@ -166,9 +171,14 @@ function zOpatreni(zaznamy: Zaznam[]): Radek[] {
 export function CoSeZmenilo({ zaznamy, snimky, ted }: { zaznamy: Zaznam[]; snimky: Snimek[]; ted: number }) {
   const { nahled, kde, ukaz, skryj, pohyb } = useNahled();
 
-  const radky = [...zeSnimku(snimky), ...zCen(ted), ...zOpatreni(zaznamy)]
-    .sort((a, b) => b.kdy.localeCompare(a.kdy))
-    .slice(0, NEJVYS);
+  const vsechny = [...zeSnimku(snimky), ...zCen(ted), ...zOpatreni(zaznamy)].sort((a, b) => b.kdy.localeCompare(a.kdy));
+  const radky = vsechny.slice(0, NEJVYS);
+  /*
+    Kolik signálů zhoršení za týden. Jedno číslo v hlavičce, aby bylo
+    poznat, jestli se řádky pod ním hromadí, nebo jen plynou. Červená
+    tečka jen když je nenulové — a slovo vždycky u ní.
+  */
+  const zhorseni7 = vsechny.filter((r) => r.zhorseni && ted - new Date(r.kdy).getTime() <= 7 * 86_400_000).length;
 
   const posledniKontrola = snimky.length ? snimky[snimky.length - 1].kdy : null;
   const zmenStavu = zeSnimku(snimky).filter((r) => ted - new Date(r.kdy).getTime() <= 90 * 86_400_000).length;
@@ -187,7 +197,10 @@ export function CoSeZmenilo({ zaznamy, snimky, ted }: { zaznamy: Zaznam[]; snimk
           </span>
           <h3 className="stitek">Co se změnilo</h3>
         </span>
-        <span className="text-mikro text-tlum2">Česko · hranice · sousedé</span>
+        <span className="flex items-center gap-1.5 text-mikro text-tlum2">
+          {zhorseni7 > 0 && <span aria-hidden className="h-[6px] w-[6px] rounded-full bg-akcent" />}
+          {zhorseni7 > 0 ? `${zhorseni7} ${zhorseni7 === 1 ? "zhoršení" : "zhoršení"} za 7 dní` : "za 7 dní bez zhoršení"}
+        </span>
       </div>
 
       {radky.length > 0 ? (

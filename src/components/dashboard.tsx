@@ -26,6 +26,10 @@ import { SignalySiti } from "./signaly-siti";
 import { TipyKPriprave } from "./tipy";
 import { PasZemi } from "./pas-zemi";
 import { CoSeZmenilo } from "./co-se-zmenilo";
+import { StavSluzeb } from "./stav-sluzeb";
+import { snimekSluzeb, SLUZBY } from "@/lib/sluzby";
+import { useStavSluzeb, type ZivyStav } from "@/lib/sluzby-klient";
+import { casPraha } from "@/lib/cas";
 import { Partneri, Sledovat } from "./sledovat";
 import { VyzvaTelegram } from "./vyzva-telegram";
 import { Nahlaseni } from "./nahlaseni";
@@ -198,7 +202,28 @@ function Stari({ cas, popisek, ted }: { cas: string | null; popisek: Dlazdice["p
   Stav nese slovo i barva, ne jen barva: kdo barvy nerozliší nebo si web
   vytiskne černobíle, přečte totéž.
 */
-function RadekStavu({ d, casSkupiny, ted }: { d: Dlazdice; casSkupiny: string | null; ted: number }) {
+/*
+  Signál od provozovatele k položce v mřížce.
+
+  Když Signal nebo Cloudflare hlásí výpadek, patří to k „Mobilní síť
+  a internet" — ale jako signál, ne jako stav. Úřední stav mění jen
+  kontrola zdrojů; stavová stránka firmy není úřad. Proto věta pod
+  názvem, se slovem „neověřeno", a ne přebarvená dlaždice.
+*/
+interface SignalSluzby { sluzba: string; stav: string; kdy: string | null; zive: boolean }
+
+function signalyKPolozkam(stavy: ZivyStav[]): Record<string, SignalSluzby[]> {
+  const out: Record<string, SignalSluzby[]> = {};
+  for (const s of SLUZBY) {
+    if (!s.tyka) continue;
+    const st = stavy.find((x) => x.klic === s.klic);
+    if (!st || (st.stav !== "vypadek" && st.stav !== "omezeni")) continue;
+    (out[s.tyka] ??= []).push({ sluzba: s.nazev, stav: st.stav === "vypadek" ? "výpadek" : "omezení", kdy: st.zkontrolovano, zive: st.zive });
+  }
+  return out;
+}
+
+function RadekStavu({ d, casSkupiny, ted, signaly = [] }: { d: Dlazdice; casSkupiny: string | null; ted: number; signaly?: SignalSluzby[] }) {
   const t = TON[d.ton];
   // Čas se u řádku píše jen tehdy, když se liší od času celé skupiny.
   const vlastniCas = d.cas !== casSkupiny;
@@ -220,6 +245,12 @@ function RadekStavu({ d, casSkupiny, ted }: { d: Dlazdice; casSkupiny: string | 
           <span className="min-w-0 flex-1">
             <span className="block truncate text-male leading-tight text-tlum">{d.nazev}</span>
             <span className={`block text-zaklad font-bold leading-tight ${t.slovo}`}>{d.stav}</span>
+            {signaly.map((sg) => (
+              <span key={sg.sluzba} className="mt-0.5 flex items-center gap-1.5 text-mikro leading-snug text-tlum">
+                <span aria-hidden className="h-[5px] w-[5px] shrink-0 rounded-full bg-akcent" />
+                signál: {sg.sluzba} hlásí {sg.stav}{sg.kdy ? ` (${casPraha(sg.kdy)})` : ""} · neověřeno
+              </span>
+            ))}
           </span>
           {vlastniCas && <Stari cas={d.cas} popisek={d.popisekCasu} ted={ted} />}
           <Ikona nazev="dolu" velikost={13} tah={2} trida="shrink-0 text-tlum2 transition-transform group-open:rotate-180" />
@@ -318,6 +349,9 @@ export function Dashboard({
   */
   const tedMs = useZiveHodiny(ted);
   const dni90 = pripady(vse, { dni: 90, ted: tedMs });
+  /* Stav služeb: snímek ze sběru, po připojení živé čtení stavových stránek. */
+  const sluzby = useStavSluzeb(snimekSluzeb());
+  const signalySluzeb = signalyKPolozkam(sluzby.stavy);
   /*
     Situace v Česku za 90 dní: nejvyšší závažnost z případů a operací
     proti občanům v okně. Dřív přicházela ze serveru s časem sestavení;
@@ -466,7 +500,7 @@ export function Dashboard({
                 <Stari cas={sk.cas} popisek={sk.popisekCasu} ted={tedMs} />
               </div>
               <ul className="sm:grid sm:grid-cols-2">
-                {sk.polozky.map((d) => <RadekStavu key={d.klic} d={d} casSkupiny={sk.cas} ted={tedMs} />)}
+                {sk.polozky.map((d) => <RadekStavu key={d.klic} d={d} casSkupiny={sk.cas} ted={tedMs} signaly={signalySluzeb[d.zdrojovaPolozka.klic] ?? []} />)}
               </ul>
             </div>
           ))}
@@ -485,6 +519,12 @@ export function Dashboard({
         */}
         <div className="space-y-4">
         <CoSeZmenilo zaznamy={vse} snimky={snimky} ted={tedMs} />
+        {/*
+          Služby naživo hned pod tím, co se změnilo: „jde mi zavolat
+          a zaplatit?" je první otázka, když se něco děje, a odpověď
+          od provozovatelů je rychlejší než od úřadů.
+        */}
+        <StavSluzeb stavy={sluzby.stavy} kdy={sluzby.kdy} />
 
         {/*
           Signály z profilů představitelů a institucí. Zobrazí se jen tehdy,
