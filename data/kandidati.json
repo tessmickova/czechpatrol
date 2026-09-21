@@ -11772,6 +11772,40 @@
     }
   },
   {
+    "id": "k-431f0fede915d9e3",
+    "zachyceno": "2026-09-21T15:02:40.615Z",
+    "publikovano": "2026-09-04T07:00:00.000Z",
+    "zdroj": {
+      "nazev": "Téma: energetika (anglicky)",
+      "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxQa0RLbmxiVTd1VnZzQm5MYVV0dm51X2xEaHhnNXVCX3pnNFE2Q1JxbjdmN3pyOVhqRGlOS0VrVjVad0k0ODg2Z2pCT2c1Nm8zSV93VzdfNUdzbHJIeDlKU3YyZndRYlFVR0NhQnJwbFBrZWNiVzhjZWdsWmI1UFJMTmZPY0NibEdPQkctVjNNRk9qRnFjb3FXSk1IZjEyeGRFVGVDVld4S1Y1TFMxdk53?oc=5",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Germany hunts climate activist suspected of power grid sabotage - France 24",
+    "titulekPuvodni": "Germany hunts climate activist suspected of power grid sabotage - France 24",
+    "shrnuti": "Germany hunts climate activist suspected of power grid sabotage France 24",
+    "kodZeme": "DE",
+    "zeme": "Německo",
+    "kategorie": [
+      "sabotaz",
+      "infrastruktura"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "sabotage",
+      "power grid"
+    ],
+    "naliehave": null,
+    "stav": "ceka",
+    "vyrez": {
+      "text": "Google News",
+      "stazeno": "2026-09-21T15:02:40.895Z",
+      "stav": 200
+    }
+  },
+  {
     "id": "k-be313ede18bcf6c0",
     "zachyceno": "2026-09-21T14:02:54.758Z",
     "publikovano": "2026-09-04T07:00:00.000Z",
@@ -12120,46 +12154,6 @@
     "vyrez": {
       "text": "Google News",
       "stazeno": "2026-09-20T20:03:06.807Z",
-      "stav": 200
-    },
-    "vyrizeni": {
-      "kdy": "2026-09-20T21:06:22.548Z",
-      "duvod": "duplicita",
-      "patriK": null,
-      "poznamka": "Podle titulku týž skutek jako záznam dormagen-gohr (sabotáž rozvoden, pátrání po klimatickém aktivistovi, 4. 9. 2026); text zdroje jde otevřít jen přes Google News, proto usuzováno z titulku a záznamů."
-    }
-  },
-  {
-    "id": "k-bd9afcdf8863b740",
-    "zachyceno": "2026-09-20T20:03:06.346Z",
-    "publikovano": "2026-09-04T07:00:00.000Z",
-    "zdroj": {
-      "nazev": "Téma: energetika (anglicky)",
-      "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxNZzBQdjdQMjRhV0g0ZFptWDkxeGNmSVFTTV9JdzZBQ3dDQ0hrRXNTNVo3ZDktQWRqYUFIR0FzZHZFWE1sejJCMloza0tnRlJXVmQxMDNSem1mNzZZdEd3c1BfcHNXTXhoN0hlNDl2V0N0aHdZb3ZGVVp6ZXBSQzhWUlVmY29UdGZsLU1HOEhhZVVsNjRuaWhxWFV3c0I3eU9Sd2FyaDRUZTMyX2gt?oc=5",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "German Police Probe Fresh Attempts to Sabotage Power Grid - Bloomberg.com",
-    "titulekPuvodni": "German Police Probe Fresh Attempts to Sabotage Power Grid - Bloomberg.com",
-    "shrnuti": "German Police Probe Fresh Attempts to Sabotage Power Grid Bloomberg.com",
-    "kodZeme": "DE",
-    "zeme": "Německo",
-    "kategorie": [
-      "sabotaz",
-      "infrastruktura"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "zeSite": null,
-    "shody": [
-      "sabotage",
-      "power grid"
-    ],
-    "naliehave": null,
-    "stav": "vyrizen",
-    "vyrez": {
-      "text": "Google News",
-      "stazeno": "2026-09-20T20:03:06.959Z",
       "stav": 200
     },
     "vyrizeni": {
