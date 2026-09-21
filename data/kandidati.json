@@ -11742,6 +11742,40 @@
     }
   },
   {
+    "id": "k-be313ede18bcf6c0",
+    "zachyceno": "2026-09-21T13:02:55.337Z",
+    "publikovano": "2026-09-04T07:00:00.000Z",
+    "zdroj": {
+      "nazev": "Téma: energetika (anglicky)",
+      "url": "https://news.google.com/rss/articles/CBMiS0FVX3lxTFBjMWNXZUQ1eUducXZNczBmYmxpRDgxd1pjaEpSX0NLRXZYWURxVkVVZHJVXzhIVlozY214UXEyZ0JLQllTcnpyQXd4OA?oc=5",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Germany investigates new attempted sabotage at power substation as police search for man who claimed responsibility for prior attacks - theins.press",
+    "titulekPuvodni": "Germany investigates new attempted sabotage at power substation as police search for man who claimed responsibility for prior attacks - theins.press",
+    "shrnuti": "Germany investigates new attempted sabotage at power substation as police search for man who claimed responsibility for prior attacks theins.press",
+    "kodZeme": "DE",
+    "zeme": "Německo",
+    "kategorie": [
+      "sabotaz",
+      "infrastruktura"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "sabotage",
+      "substation"
+    ],
+    "naliehave": null,
+    "stav": "ceka",
+    "vyrez": {
+      "text": "Google News",
+      "stazeno": "2026-09-21T13:02:55.614Z",
+      "stav": 200
+    }
+  },
+  {
     "id": "k-5edbb94f41699106",
     "zachyceno": "2026-09-21T12:45:30.042Z",
     "publikovano": "2026-09-04T07:00:00.000Z",
@@ -12067,46 +12101,6 @@
       "duvod": "duplicita",
       "patriK": null,
       "poznamka": "Podle titulku týž skutek jako záznam dormagen-gohr (sabotáž rozvoden, pátrání po klimatickém aktivistovi, 4. 9. 2026); text zdroje jde otevřít jen přes Google News, proto usuzováno z titulku a záznamů."
-    }
-  },
-  {
-    "id": "k-431f0fede915d9e3",
-    "zachyceno": "2026-09-20T20:03:06.348Z",
-    "publikovano": "2026-09-04T07:00:00.000Z",
-    "zdroj": {
-      "nazev": "Téma: energetika (anglicky)",
-      "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxQa0RLbmxiVTd1VnZzQm5MYVV0dm51X2xEaHhnNXVCX3pnNFE2Q1JxbjdmN3pyOVhqRGlOS0VrVjVad0k0ODg2Z2pCT2c1Nm8zSV93VzdfNUdzbHJIeDlKU3YyZndRYlFVR0NhQnJwbFBrZWNiVzhjZWdsWmI1UFJMTmZPY0NibEdPQkctVjNNRk9qRnFjb3FXSk1IZjEyeGRFVGVDVld4S1Y1TFMxdk53?oc=5",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Germany hunts climate activist suspected of power grid sabotage - France 24",
-    "titulekPuvodni": "Germany hunts climate activist suspected of power grid sabotage - France 24",
-    "shrnuti": "Germany hunts climate activist suspected of power grid sabotage France 24",
-    "kodZeme": "DE",
-    "zeme": "Německo",
-    "kategorie": [
-      "sabotaz",
-      "infrastruktura"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "zeSite": null,
-    "shody": [
-      "sabotage",
-      "power grid"
-    ],
-    "naliehave": null,
-    "stav": "vyrizen",
-    "vyrez": {
-      "text": "Google News",
-      "stazeno": "2026-09-20T20:03:07.112Z",
-      "stav": 200
-    },
-    "vyrizeni": {
-      "kdy": "2026-09-20T21:06:22.548Z",
-      "duvod": "duplicita",
-      "patriK": null,
-      "poznamka": "France 24, 4. 9.: pátrání po klimatickém aktivistovi; pokrývají záznamy dormagen-gohr a nemecko-rozvodny-zadrzeni-2026 (zadržení 8. 9.)."
     }
   }
 ]

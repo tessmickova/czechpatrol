@@ -1,5 +1,37 @@
 [
   {
+    "id": "k-17b7da01870aec09",
+    "zachyceno": "2026-09-21T13:02:55.111Z",
+    "publikovano": "2026-09-21T13:01:00.000Z",
+    "zdroj": {
+      "nazev": "Český rozhlas — domácí zprávy",
+      "url": "https://www.irozhlas.cz/zpravy-domov/stat-bude-opet-denne-stanovovat-maximalni-ceny-pohonnych-hmot-oznamilo_2609211501_ntu",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Stát bude opět denně stanovovat maximální ceny pohonných hmot, oznámilo ministerstvo",
+    "shrnuti": "Stát bude od 1. října opět denně stanovovat maximální ceny pohonných hmot, oznámilo ministerstvo financí. Marže obchodníků bude zastropována na 2,50 korun na litr paliva.",
+    "duvod": "vylouceno-tematem",
+    "kategorie": [],
+    "posouzeni": null
+  },
+  {
+    "id": "k-df9859033637da80",
+    "zachyceno": "2026-09-21T13:02:55.126Z",
+    "publikovano": "2026-09-21T12:48:23.000Z",
+    "zdroj": {
+      "nazev": "ČT24 — hlavní zprávy",
+      "url": "https://ct24.ceskatelevize.cz/clanek/svet/etiopsti-povstalci-se-spojili-chteji-svrhnout-vladu-377809",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Etiopští povstalci se spojili. Chtějí svrhnout vládu",
+    "shrnuti": "Sedm etiopských povstaleckých skupin, které bojují proti oficiálním silám v různých částech země, oznámilo, že vytvořily alianci s cílem svrhnout vládu v Addis Abebě, kterou vede nobelista Abiy Ahmed. V nejlidnatějších státech Oromii a Amharsku už roky zuří ozbrojený konflikt. Napětí roste i v Tigra",
+    "duvod": "bez-skutku",
+    "kategorie": [],
+    "posouzeni": null
+  },
+  {
     "id": "k-96fb6c30f4850715",
     "zachyceno": "2026-09-21T12:45:29.834Z",
     "publikovano": "2026-09-21T12:38:13.000Z",
@@ -4723,6 +4755,24 @@
     "shrnuti": "The military and government say the risk of conflict is growing, but we may not be mentally ready for it",
     "duvod": "bez-skutku",
     "kategorie": [],
+    "posouzeni": null
+  },
+  {
+    "id": "k-2525298ab91804e2",
+    "zachyceno": "2026-09-21T13:02:55.241Z",
+    "publikovano": "2026-09-19T08:29:00.000Z",
+    "zdroj": {
+      "nazev": "Téma: letiste (anglicky)",
+      "url": "https://news.google.com/rss/articles/CBMifEFVX3lxTE5KeTZEaHUwVXpUdTR5RnZQOXo3eFMxTzVWTWhCSHBGZUNEaWV1Nk5VMV8yenFiQjdwa3NsQ0NEaXc2ZXVmVEF6OU9NWm4xdmJCbHFzclRNQ1AtVmgyVFVMM1V2NGNlOW1qdV94M05YTm5MVFBNalNvbjB5QjI?oc=5",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Drone Sighting Temporarily Halts Flights at Washington Airport - SuaraGarut.ID",
+    "shrnuti": "Drone Sighting Temporarily Halts Flights at Washington Airport SuaraGarut.ID",
+    "duvod": "bez-skutku",
+    "kategorie": [
+      "drony"
+    ],
     "posouzeni": null
   },
   {
@@ -9647,70 +9697,6 @@
     "posouzeni": {
       "podezreni": "zadne",
       "duvod": "Rozhovor o televizní soutěži AZ-kvíz.",
-      "kdy": "2026-09-19T12:05:22.436Z"
-    }
-  },
-  {
-    "id": "k-dc0c400df2ab7de2",
-    "zachyceno": "2026-09-16T16:32:53.006Z",
-    "publikovano": "2026-09-16T16:21:00.000Z",
-    "zdroj": {
-      "nazev": "Český rozhlas — domácí zprávy",
-      "url": "https://www.irozhlas.cz/zpravy-domov/zastavena-doprava-u-ustecke-spolchemie-zachranari-tam-zasahovali-u-simulovaneho_2609161821_brz",
-      "typ": "primary",
-      "primarni": true
-    },
-    "titulek": "Zastavená doprava u ústecké Spolchemie. Záchranáři tam zasahovali u simulovaného úniku chloru",
-    "shrnuti": "Ve středu krátce po deváté hodině se v areálu ústecké Spolchemie rozezněla siréna a ohlašovala cvičný poplach kvůli simulované nebezpečné nehodě. Integrovaný záchranný systém si tak spolu s podnikovými a drážními hasiči vyzkoušel spolupráci v krizových situacích.",
-    "duvod": "bez-skutku",
-    "kategorie": [],
-    "posouzeni": {
-      "podezreni": "zadne",
-      "duvod": "Šlo o nahlášené cvičení záchranářů, ne skutečnou událost.",
-      "kdy": "2026-09-19T12:05:22.436Z"
-    }
-  },
-  {
-    "id": "k-2ec43ba2dcef7ac7",
-    "zachyceno": "2026-09-16T16:32:53.007Z",
-    "publikovano": "2026-09-16T16:18:00.000Z",
-    "zdroj": {
-      "nazev": "Český rozhlas — domácí zprávy",
-      "url": "https://www.irozhlas.cz/ekonomika/ceny-energii-se-budou-v-dohledne-dobe-zvysovat-na-vine-je-i-krize-v-hormuzu-zni_2609161818_cen",
-      "typ": "primary",
-      "primarni": true
-    },
-    "titulek": "Ceny energií se budou v dohledné době zvyšovat. Na vině je i krize v Hormuzu, zní od dodavatelů",
-    "shrnuti": "Předsedkyně Evropské komise Ursula von der Leyenová se ve své zprávě o stavu EU pokusila definovat svůj pohled na unijní priority. Zpráva zazněla v situaci, kdy svět čelí vysokým cenám paliv a energií. „Doufám, že krizové roky máme za sebou. Přesto nemůžeme být klidní,“ říká pro Český rozhlas Plus o",
-    "duvod": "bez-skutku",
-    "kategorie": [
-      "cr"
-    ],
-    "posouzeni": {
-      "podezreni": "zadne",
-      "duvod": "Jde o ekonomickou zprávu o cenách energií.",
-      "kdy": "2026-09-19T12:05:22.436Z"
-    }
-  },
-  {
-    "id": "k-ca7f7dc60f02fb42",
-    "zachyceno": "2026-09-16T16:32:53.032Z",
-    "publikovano": "2026-09-16T16:04:15.000Z",
-    "zdroj": {
-      "nazev": "ČT24 — hlavní zprávy",
-      "url": "https://ct24.ceskatelevize.cz/clanek/domaci/policie-proveruje-trestni-odpovednost-za-kontaminovanou-lokalitu-na-sumave-377683",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Policie prověřuje trestní odpovědnost za kontaminovanou lokalitu na Šumavě",
-    "shrnuti": "Policie přijala kvůli kontaminované šumavské lokalitě trestní oznámení. Věc prověřuje pro podezření z obecného ohrožení z nedbalosti a z poškození a ohrožení životního prostředí z nedbalosti. Armáda nasadila ve středu v kontaminované oblasti dvacet vojáků a speciální techniku.",
-    "duvod": "bez-mista",
-    "kategorie": [
-      "vojsko"
-    ],
-    "posouzeni": {
-      "podezreni": "stredni",
-      "duvod": "Kontaminace, nasazení armády – nejasný rozsah události.",
       "kdy": "2026-09-19T12:05:22.436Z"
     }
   }
