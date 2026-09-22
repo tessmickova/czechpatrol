@@ -138,6 +138,41 @@
     }
   },
   {
+    "id": "k-38f4e0d7a35836fc",
+    "zachyceno": "2026-09-22T16:56:38.333Z",
+    "publikovano": "2026-09-22T14:57:00.000Z",
+    "zdroj": {
+      "nazev": "Český rozhlas — domácí zprávy",
+      "url": "https://www.irozhlas.cz/zpravy-svet/za-protest-na-rudem-namesti-poslal-rusky-soud-cecha-na-13-dni-do-vezeni-mel_2609221657_jho",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Za protest na Rudém náměstí poslal ruský soud Čecha na 13 dní do vězení. Měl diskreditovat ruskou armádu",
+    "titulekPuvodni": "Za protest na Rudém náměstí poslal ruský soud Čecha na 13 dní do vězení. Měl diskreditovat ruskou armádu",
+    "shrnuti": "Soud v Moskvě poslal na 13 dní do vězení Čecha, který uspořádal protest u Leninova mauzolea na Rudém náměstí v Moskvě. Uvedly to v úterý agentury Interfax a TASS. Muž podle nich držel transparent, jehož cílem bylo diskreditovat ruskou armádu. České velvyslanectví v Moskvě poskytuje zadrženému českém",
+    "kodZeme": "CZ",
+    "zeme": "Česko",
+    "kategorie": [
+      "zpravodajske",
+      "rusko"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "zadrz",
+      "rusk"
+    ],
+    "naliehave": null,
+    "stav": "ceka",
+    "vyrez": {
+      "text": "",
+      "stazeno": "2026-09-22T16:56:38.848Z",
+      "stav": 403,
+      "chyba": "HTTP 403"
+    }
+  },
+  {
     "id": "k-918afac0a80ba98e",
     "zachyceno": "2026-09-22T16:02:41.945Z",
     "publikovano": "2026-09-22T14:36:34.000Z",
@@ -12119,46 +12154,6 @@
       "duvod": "zamitnuto",
       "patriK": null,
       "poznamka": "Jediný původní zdroj (LSM/VDD), originál se nepodařilo otevřít; rozsudek z 20. 8. 2026 není pravomocný."
-    }
-  },
-  {
-    "id": "k-3ca73a699ff84857",
-    "zachyceno": "2026-09-22T00:02:40.914Z",
-    "publikovano": "2026-09-05T09:37:22.000Z",
-    "zdroj": {
-      "nazev": "Téma: energetika (anglicky)",
-      "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxOb3VPdUhub19aYmhUTXZlV2lxSWlSLWprcWJVVlF4cGtWOWdJa1FUR05DM185bzB5bmpMaXF4TUJacFhXbDFpNWtqd2RhWUg2aTFqREREblNMSnRweXlyLVljUWl1SG9BY1lPcWdmcmtoMC1nSHJKc2VfZ2c0QS15ekk4dGktdHBUV0N6VWxKV0NlOUF5QnVybFd0VlMzeTNmN0Z4alZKQ1JmcVp2RU53?oc=5",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "German police probe fresh attempts to sabotage power grid - Luxembourg Times",
-    "titulekPuvodni": "German police probe fresh attempts to sabotage power grid - Luxembourg Times",
-    "shrnuti": "German police probe fresh attempts to sabotage power grid Luxembourg Times",
-    "kodZeme": "DE",
-    "zeme": "Německo",
-    "kategorie": [
-      "sabotaz",
-      "infrastruktura"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "zeSite": null,
-    "shody": [
-      "sabotage",
-      "power grid"
-    ],
-    "naliehave": null,
-    "stav": "vyrizen",
-    "vyrez": {
-      "text": "Google News",
-      "stazeno": "2026-09-22T00:02:41.121Z",
-      "stav": 200
-    },
-    "vyrizeni": {
-      "kdy": "2026-09-22T05:16:04.357Z",
-      "duvod": "duplicita",
-      "patriK": null,
-      "poznamka": "Luxembourg Times, 5. 9. 2026, podle titulku týž skutek jako záznam dormagen-gohr (nové pokusy o sabotáž rozvoden v Německu); text jde otevřít jen přes Google News, usuzováno z titulku a záznamů."
     }
   }
 ]
