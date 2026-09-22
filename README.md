@@ -166,7 +166,7 @@ jako mimořádné.
 Nad vším stojí Pravidlo č. 0 v `CLAUDE.md`: právo ČR a EU, žádná poplašná zpráva,
 a v bezpečnostních tématech jen to, co je doložené citací se zdrojem a řešené úředně.
 
-Podrobněji: `docs/PRAVNI-KONTROLA.md`, `docs/DATOVY-MODEL.md`, `docs/PROVOZ.md`, `docs/ZNACKA.md`, `docs/DALSI-ETAPA.md`, `docs/SITUACNI-MAPA-NAVRH.md` (návrh situační mapy ČR, fáze 0), `docs/DOPISY-POSKYTOVATELUM.md` (dopisy poskytovatelům dat), `docs/ODOLNOST-NAVRH.md` (tři úrovně a odolnost domácnosti).
+Podrobněji: `docs/PRAVNI-KONTROLA.md`, `docs/DATOVY-MODEL.md`, `docs/PROVOZ.md`, `docs/ZNACKA.md`, `docs/DALSI-ETAPA.md`, `docs/SITUACNI-MAPA-NAVRH.md` (návrh situační mapy ČR, fáze 0), `docs/DOPISY-POSKYTOVATELUM.md` (dopisy poskytovatelům dat), `docs/ODOLNOST-NAVRH.md` (tři úrovně a odolnost domácnosti), `docs/PREMIUM-NAVRH.md` (Premium MVP a kredit 150 Kč, návrh).
 
 ## Struktura
 
