@@ -93,7 +93,8 @@ export const SLEDOVANE_PROFILY: SledovanyProfil[] = [
     odkaz: "https://social.bund.de/@bmi",
     jazyk: "de",
     pravostDolozena: "https://social.bund.de/about",
-    overenaAdresa: false,
+    /* Ověřeno během „Ověření zdrojů" 22. 9. 2026: RSS odpovídá s obsahem. */
+    overenaAdresa: true,
   },
   {
     klic: "ec-mastodon",
@@ -106,7 +107,8 @@ export const SLEDOVANE_PROFILY: SledovanyProfil[] = [
     odkaz: "https://ec.social-network.europa.eu/@EUCommission",
     jazyk: "en",
     pravostDolozena: "https://ec.social-network.europa.eu/about",
-    overenaAdresa: false,
+    /* Ověřeno během „Ověření zdrojů" 22. 9. 2026: RSS odpovídá s obsahem. */
+    overenaAdresa: true,
   },
 ];
 
