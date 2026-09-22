@@ -7,7 +7,7 @@
 | Web (statický) | Cloudflare Pages, projekt `czechpatrol` | `.github/workflows/nasazeni.yml` po pushi na `main` a po úspěšném sběru |
 | Sběr dat | GitHub Actions, každou půlhodinu | `.github/workflows/sber.yml` → commit do `data/`. Kope do něj Cloudflare Worker; plánovač GitHubu je jen záloha jednou za tři hodiny |
 | API (účty, odběr, tipy, hlídač, Premium, žebříček) | Cloudflare Worker `czechpatrol-api` + D1 (migrace 0001–0007) | `.github/workflows/nasazeni-api.yml`. Nasazení prošlo 13. 9. 2026, worker běží — je to on, kdo spouští sběr a kdo hlídá jeho výpadky. Cron každých 10 min navíc kontroluje čekající platby (ztracený webhook) a odesílá frontu e-mailů |
-| Doména `czechpatrol.cz` | zóna na Cloudflare (aktivní od 22. 9. 2026 19:19), registrace u Forpsi | `.github/workflows/domena.yml` → `nastroje/domena.mjs`, stav v `data/fronta/domena.json`. Web zatím běží na `czechpatrol.pages.dev`; přepnutí viz část Doména |
+| Doména `czechpatrol.cz` | zóna na Cloudflare (aktivní od 22. 9. 2026 19:19), registrace u Forpsi | `.github/workflows/domena.yml` → `nastroje/domena.mjs`, stav v `data/fronta/domena.json`. Web běží na `czechpatrol.cz`, `czechpatrol.pages.dev` zůstává záložní vstup; viz část Doména |
 
 > Účty na webu jsou něco jiného než běžící worker. Aby je web nabízel, musí
 > být při jeho sestavení nastavená proměnná `API_URL` a tajemství
@@ -142,8 +142,8 @@ Variables) na svůj chat na Telegramu. Podrobně v `api/README.md`.
 
 Od 22. 9. 2026. Zóna je na Cloudflare (nameservery `mary.ns.cloudflare.com`
 a `zeus.ns.cloudflare.com`, aktivní od 19:19), doména je registrovaná
-u Forpsi. Web zatím běží na `czechpatrol.pages.dev`; na vlastní doménu se
-přepíná ve dvou krocích, které se nesmějí prohodit.
+u Forpsi. Web běží na `czechpatrol.cz`; přechod z `czechpatrol.pages.dev`
+měl dva kroky, které se nesměly prohodit.
 
 ### 1. Cloudflare — workflow Doména
 
@@ -174,7 +174,7 @@ Bez úpravy tokenu to jde i ručně v dashboardu: DNS → CNAME `czechpatrol.cz`
 ### 2. Kód — až doména odpovídá
 
 Teprve když `https://czechpatrol.cz/stav.json` vrací stav webu, přepnou se
-adresy v kódu. Větev `claude/domena-czechpatrol-cz` to má připravené:
+adresy v kódu. Udělalo to sloučení větve `claude/domena-czechpatrol-cz`:
 
 | Kde | Co |
 |---|---|
@@ -465,7 +465,7 @@ se to stalo a do souhrnu prošlo „Pachatel: undefined“.
 a na vyžádání. Zapisuje do repozitáře dva soubory, které plánované routine čtou
 místo toho, aby sáhly na síť:
 
-- `data/fronta/zivy-web.json` — dostupnost `czechpatrol.pages.dev`, commit, ze
+- `data/fronta/zivy-web.json` — dostupnost `czechpatrol.cz`, commit, ze
   kterého je živý build (bere se z `/stav.json`, pole `commit`, plněné
   z `GITHUB_SHA` při buildu), commit repozitáře a příznak `shodujeSe`, vedle
   toho `commituNavic` a `rozdilVObsahu`.
@@ -473,7 +473,7 @@ místo toho, aby sáhly na síť:
   a odkaz.
 
 **Proč to takhle je.** Routine běží v sandboxu za agentní proxy, která doménu
-`czechpatrol.pages.dev` blokuje na úrovni organizace (`connect_rejected —
+`czechpatrol.cz` (i starou `czechpatrol.pages.dev`) blokuje na úrovni organizace (`connect_rejected —
 organization policy`), a přístup na `api.github.com` se uděluje per session
 nástrojem `add_repo`, který routine k dispozici nemá. GitHub Actions ani jedno
 z těch omezení nemá, takže zjištění proběhne tam a routine ho jen přečte z gitu.

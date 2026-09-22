@@ -42,7 +42,7 @@ jobs:
       - name: Je vůbec co nasazovat?
         id: zmena
         env:
-          ADRESA: https://czechpatrol.pages.dev
+          ADRESA: https://czechpatrol.cz
           RUCNE: ${{ github.event_name }}
         run: |
           set -u

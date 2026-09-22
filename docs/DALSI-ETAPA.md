@@ -2,7 +2,7 @@
 
 ## Hned (týden)
 
-0. Doména `czechpatrol.cz`: tokenu Cloudflare přidat práva pro zónu (DNS Edit, Zone Settings Edit, Dynamic Redirect Edit), spustit workflow Doména, a až doména odpovídá, sloučit větev `claude/domena-czechpatrol-cz` a přepsat adresy v rutinách (`docs/PROVOZ.md`, část Doména).
+0. Doména `czechpatrol.cz`: přepsat adresy v rutinách v Claude na `czechpatrol.cz`; po přechodném období vyprázdnit `PUVOD_WEBU_DALSI` v `api/wrangler.toml` (`docs/PROVOZ.md`, část Doména).
 1. Doplnit práva tokenu Cloudflare (D1 Edit, Workers Scripts Edit) a nasadit API; pak nastavit `API_URL`.
 2. Vyplnit `PROVOZOVATEL`, `TIPY_MAIL`. Bez provozovatele nejde spustit účty (GDPR správce).
 3. Ověřit `data/nato.json` položku `vychodni-kridlo` proti zdroji.

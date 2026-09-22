@@ -8,8 +8,8 @@ export const WEB = {
   podtitul: "Bezpečnostní přehled ČR",
   popis:
     "Ověřené bezpečnostní události z Česka a Evropy, jejich kontext a možné další kroky — bez zbytečného strašení.",
-  /** Doplnit po nasazení na doménu. Používá se pro OpenGraph, sitemap a kanál. */
-  url: "https://czechpatrol.pages.dev",
+  /** Vlastní doména od září 2026; `czechpatrol.pages.dev` zůstává záložní vstup. Používá se pro OpenGraph, sitemap a kanál. */
+  url: "https://czechpatrol.cz",
   jazyk: "cs",
 } as const;
 

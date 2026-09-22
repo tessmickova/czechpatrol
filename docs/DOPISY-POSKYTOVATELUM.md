@@ -17,7 +17,7 @@ Tón všech dopisů: říct, kdo jsme, co přesně chceme, co nechceme, a nabíd
 
 Společné odstavce (vkládají se do každého dopisu):
 
-> **Kdo píše.** CzechPatrol (https://czechpatrol.pages.dev) je nezávislý
+> **Kdo píše.** CzechPatrol (https://czechpatrol.cz) je nezávislý
 > veřejný civilní situační přehled: agreguje ověřené informace o dostupnosti
 > základních služeb a o bezpečnostních událostech v Česku, u každého údaje
 > uvádí zdroj a čas. Není součástí státu ani IZS a takový dojem nevytváří.
@@ -293,7 +293,7 @@ legální cestu, a je v pořádku, když bude odpověď „ne“.
 
 Dear Downdetector / Ookla team,
 
-CzechPatrol (https://czechpatrol.pages.dev) is an independent, non-commercial
+CzechPatrol (https://czechpatrol.cz) is an independent, non-commercial
 public situational overview for the Czech Republic: it aggregates verified
 information about the availability of essential services and about security
 incidents, always with the source and time shown. It is not a government
@@ -327,7 +327,7 @@ rušení GNSS.
 
 Dear Flightradar24 team,
 
-CzechPatrol (https://czechpatrol.pages.dev) is an independent, non-commercial
+CzechPatrol (https://czechpatrol.cz) is an independent, non-commercial
 public situational overview for the Czech Republic. Operator: [DOPLNIT].
 
 We do not use your data and we do not scrape your site. We are asking one

@@ -20,7 +20,7 @@ import path from "node:path";
 import { fileURLToPath } from "node:url";
 
 const koren = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
-const WEB = "https://czechpatrol.pages.dev";
+const WEB = "https://czechpatrol.cz";
 const STAV = path.join(koren, "data", "fronta", "rozhlaseno.json");
 const MAX_ZPRAV_NA_BEH = 8;
 /** Při prvním spuštění se oznámí jen záznamy zjištěné v posledních dnech; starší se považují za oznámené. */

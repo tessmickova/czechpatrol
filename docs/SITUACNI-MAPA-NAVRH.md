@@ -609,7 +609,7 @@ liší.
 > Vážená paní, vážený pane,
 >
 > obracím se na Vás jako provozovatel projektu CzechPatrol
-> (https://czechpatrol.pages.dev), nezávislého veřejného civilního
+> (https://czechpatrol.cz), nezávislého veřejného civilního
 > situačního přehledu, který agreguje ověřené informace o dostupnosti
 > základních služeb a o bezpečnostních událostech v Česku. Projekt není
 > součástí žádného úřadu ani složky IZS a takový dojem nevytváří; u každého
@@ -640,7 +640,7 @@ liší.
 > agregát s označením „Zdroj: [distributor]“ a s časem aktualizace, a při
 > výpadku kanálu zobrazí „data nejsou dostupná“, nikdy „bez poruch“.
 >
-> Metodika projektu je veřejná (https://czechpatrol.pages.dev/metodika/),
+> Metodika projektu je veřejná (https://czechpatrol.cz/metodika/),
 > stejně jako kód. Rád/a doplním cokoli dalšího.
 >
 > S pozdravem
