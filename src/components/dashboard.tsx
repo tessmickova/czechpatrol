@@ -22,7 +22,7 @@ import { Odznak, RadekSeznamu, TeckaZavaznosti, Tlacitko } from "./ui";
 import { PavucinaHrozeb } from "./pavucina";
 import { TabulkaZemi } from "./tabulka-zemi";
 import { useZiveHodiny } from "@/lib/cas-klient";
-import { SignalySiti } from "./signaly-siti";
+import { ProfilySiti } from "./profily-siti";
 import { TipyKPriprave } from "./tipy";
 import { PasZemi } from "./pas-zemi";
 import { CoSeZmenilo } from "./co-se-zmenilo";
@@ -492,7 +492,13 @@ export function Dashboard({
         />
       </div>
       {/* Stejný poměr a mezera jako v úvodu: tři pětiny mřížka, dvě pětiny sloupec. */}
-      <div className="grid gap-4 xl:grid-cols-[minmax(0,3fr)_minmax(0,2fr)] xl:gap-10">
+      {/*
+        Jediný sloupec na mobilu s minimem 0. Bez toho má sloupec minimum
+        „auto" a roztáhne se podle nejširšího nezalomitelného obsahu —
+        profil s dlouhým jménem vyhnal celý sloupec na 422 px a boxy pod
+        ním se na 390 px displeji řízly vpravo.
+      */}
+      <div className="grid grid-cols-[minmax(0,1fr)] gap-4 xl:grid-cols-[minmax(0,3fr)_minmax(0,2fr)] xl:gap-10">
         <section aria-label={t("Oficiální stavy")} id="opatreni" className="scroll-mt-[84px] space-y-4">
           {skupinyDlazdic.map((sk) => (
             <div key={sk.predpona} className="overflow-hidden rounded-[20px] border border-linka2 bg-plocha">
@@ -523,7 +529,7 @@ export function Dashboard({
           Sem patří změny, které se dotknou života tady: úřední stavy,
           cena paliva, opatření v Česku, u sousedů a v EU.
         */}
-        <div className="space-y-4">
+        <div className="min-w-0 space-y-4">
         <CoSeZmenilo zaznamy={vse} snimky={snimky} ted={tedMs} />
         {/*
           Služby naživo hned pod tím, co se změnilo: „jde mi zavolat
@@ -533,11 +539,10 @@ export function Dashboard({
         <StavSluzeb stavy={sluzby.stavy} kdy={sluzby.kdy} />
 
         {/*
-          Signály z profilů představitelů a institucí. Zobrazí se jen tehdy,
-          když nějaké máme — prázdná sekce s nadpisem by tvrdila, že se nic
-          neděje, přitom by znamenala jen to, že profily zatím nesledujeme.
+          Profily úřadů a představitelů na sítích: které se čtou a co z nich
+          přišlo. Ukazuje se vždycky — i „čeká na ověření" je informace.
         */}
-        <SignalySiti />
+        <ProfilySiti kandidati={kandidati} />
         {/*
           Tipy k přípravě. Odpovídají na jinou otázku než zbytek webu: ne co
           se stalo, ale co s tím může člověk udělat dnes. Bez tipu se

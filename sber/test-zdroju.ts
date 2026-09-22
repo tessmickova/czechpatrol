@@ -1,6 +1,7 @@
 import { ctiHtml, stahni } from "./nacti";
 import { MIN_ZNAKU_OBSAHU } from "./rozhodovani";
 import { ZDROJE } from "./zdroje";
+import { SLEDOVANE_PROFILY } from "./socialni";
 
 /**
  * Ověří, že adresy v registru skutečně odpovídají — a že z nich jde něco číst.
@@ -56,6 +57,19 @@ async function main() {
     if (v.znacka === "OK") citelnych++;
     else if (v.znacka === "PRÁZDNÝ") prazdne.push(z.klic);
     else nedostupne.push(z.klic);
+  }
+
+  /*
+    Profily na sítích: stačí, že adresa odpovídá a vrací obsah. Pravost
+    účtu tím ověřená není — tu dokládá `pravostDolozena` a člověk.
+  */
+  if (SLEDOVANE_PROFILY.length) {
+    console.log("\nProfily na sítích (adresa odpovídá ≠ pravost doložena):");
+    for (const p of SLEDOVANE_PROFILY) {
+      const v = await zkusAdresu(p.url);
+      const poznamka = v.duvod ? `  (${v.duvod})` : "";
+      console.log(`${v.znacka.padEnd(8)}${String(v.stav ?? "---").padEnd(5)}${String(v.znaku).padStart(7)} znaků  ${p.klic.padEnd(16)} ${p.url}${p.overenaAdresa ? "" : "  [overenaAdresa: false]"}${poznamka}`);
+    }
   }
 
   console.log(`\nZdrojů ${ZDROJE.length}, čitelných ${citelnych}.`);

@@ -28,6 +28,17 @@ const ZAVAZNOSTI: { hodnota: MinZavaznost; nazev: string; popis: string }[] = [
 /** Stránka účtu — jediné místo, kde čtenář něco nastavuje. */
 export function UcetKlient() {
   const { ucet, dostupne, nacita, obnov } = useUcet();
+  /*
+    Kód drží rodič, ne přihlašovací karta.
+
+    Založení účtu vyvolá událost, na kterou useUcet znovu načte účet —
+    a v tu chvíli rodič vyměnil přihlašovací kartu za nastavení. Karta
+    s obnovovacím kódem zmizela dřív, než si ho kdo stihl opsat; na
+    iPhonu to vypadalo, že se stránka sama obnovila. Kód proto žije
+    tady a ukazuje se, dokud ho člověk nepotvrdí, ať je účet načtený,
+    nebo ne.
+  */
+  const [novyKod, setNovyKod] = useState<string | null>(null);
 
   if (!UCTY_ZAPNUTE) {
     return (
@@ -44,19 +55,50 @@ export function UcetKlient() {
     );
   }
 
+  if (novyKod) return <UlozKod kod={novyKod} po={() => { setNovyKod(null); obnov(); }} />;
   if (nacita) return <p className="text-zaklad text-tlum">Ověřuji přihlášení…</p>;
-  if (!ucet) return <Prihlaseni po={obnov} />;
+  if (!ucet) return <Prihlaseni po={obnov} naNovyKod={setNovyKod} />;
   return <Nastaveni ucet={ucet} dostupne={dostupne} obnov={obnov} />;
 }
 
 /* ---------- přihlášení a založení ---------- */
 
-function Prihlaseni({ po }: { po: () => void }) {
+/** Karta s obnovovacím kódem. Jediné místo, kde se kód kdy ukáže. */
+function UlozKod({ kod, po }: { kod: string; po: () => void }) {
+  const [potvrzeno, setPotvrzeno] = useState(false);
+  return (
+    <Karta odstin="pisek" className="p-6">
+      <div className="stitek mb-2">Jednou a naposledy</div>
+      <h2 className="podnadpis text-velke">Uložte si obnovovací kód</h2>
+      <p className="mt-3 max-w-[60ch] text-zaklad leading-relaxed text-tlum">
+        Účet nemá e-mail ani telefon, takže není kam poslat „zapomenuté heslo“. Tenhle kód je
+        jediná cesta k účtu z nového zařízení. Neuvidíte ho podruhé.
+      </p>
+      <div className="velke-cislo mt-5 select-all break-all rounded-[22px] border border-jantar/40 bg-noc/60 px-5 py-4 text-cislo tracking-[0.08em] text-jantar">
+        {kod}
+      </div>
+      <button
+        type="button"
+        onClick={() => navigator.clipboard?.writeText(kod)}
+        className={`${TLACITKO_TICHE} mt-4`}
+      >
+        Zkopírovat
+      </button>
+      <label className="mt-6 flex items-start gap-3 text-zaklad text-inkoust">
+        <input type="checkbox" checked={potvrzeno} onChange={(e) => setPotvrzeno(e.target.checked)} className="mt-1 h-4 w-4 accent-akcent" />
+        Kód mám uložený mimo tento prohlížeč.
+      </label>
+      <button type="button" disabled={!potvrzeno} onClick={po} className={`${TLACITKO_AKCENT} mt-5`}>
+        Pokračovat do účtu
+      </button>
+    </Karta>
+  );
+}
+
+function Prihlaseni({ po, naNovyKod }: { po: () => void; naNovyKod: (kod: string) => void }) {
   const [chyba, setChyba] = useState<string | null>(null);
   const [bezi, setBezi] = useState<"prihlaseni" | "registrace" | "obnova" | null>(null);
   const [kod, setKod] = useState("");
-  const [novyKod, setNovyKod] = useState<string | null>(null);
-  const [potvrzeno, setPotvrzeno] = useState(false);
   const umi = podporujePasskey();
 
   const spust = async (co: "prihlaseni" | "registrace" | "obnova") => {
@@ -66,7 +108,7 @@ function Prihlaseni({ po }: { po: () => void }) {
       if (co === "prihlaseni") await prihlasit();
       if (co === "registrace") {
         const v = await registrovat();
-        setNovyKod(v.obnovovaciKod);
+        naNovyKod(v.obnovovaciKod);
         return; // účet se ukáže až po potvrzení kódu
       }
       if (co === "obnova") await obnovit(kod);
@@ -77,36 +119,6 @@ function Prihlaseni({ po }: { po: () => void }) {
       setBezi(null);
     }
   };
-
-  if (novyKod) {
-    return (
-      <Karta odstin="pisek" className="p-6">
-        <div className="stitek mb-2">Jednou a naposledy</div>
-        <h2 className="podnadpis text-velke">Uložte si obnovovací kód</h2>
-        <p className="mt-3 max-w-[60ch] text-zaklad leading-relaxed text-tlum">
-          Účet nemá e-mail ani telefon, takže není kam poslat „zapomenuté heslo“. Tenhle kód je
-          jediná cesta k účtu z nového zařízení. Neuvidíte ho podruhé.
-        </p>
-        <div className="velke-cislo mt-5 select-all break-all rounded-[22px] border border-jantar/40 bg-noc/60 px-5 py-4 text-cislo tracking-[0.08em] text-jantar">
-          {novyKod}
-        </div>
-        <button
-          type="button"
-          onClick={() => navigator.clipboard?.writeText(novyKod)}
-          className={`${TLACITKO_TICHE} mt-4`}
-        >
-          Zkopírovat
-        </button>
-        <label className="mt-6 flex items-start gap-3 text-zaklad text-inkoust">
-          <input type="checkbox" checked={potvrzeno} onChange={(e) => setPotvrzeno(e.target.checked)} className="mt-1 h-4 w-4 accent-akcent" />
-          Kód mám uložený mimo tento prohlížeč.
-        </label>
-        <button type="button" disabled={!potvrzeno} onClick={() => { setNovyKod(null); po(); }} className={`${TLACITKO_AKCENT} mt-5`}>
-          Pokračovat do účtu
-        </button>
-      </Karta>
-    );
-  }
 
   return (
     <div className="grid gap-4 lg:grid-cols-2">

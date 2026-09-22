@@ -668,16 +668,18 @@ const NAZVY_SIGNALU = {
 
 
 /**
- * Vážné případy doložené i úředním zdrojem.
+ * Vážné případy doložené dvěma nezávislými zdroji.
  *
  * Výjimka z pravidla, že do kanálu jde jen schválené. Když je případ vážný
- * (O nebo R), stojí nejméně na dvou nezávislých zdrojích a aspoň jeden z nich
- * je úřední nebo primární, je čekání na schválení dražší než ta nejistota:
- * takhle doložená zpráva se schválením obvykle nezmění, jen se zdrží.
+ * (O nebo R) a stojí nejméně na dvou nezávislých zdrojích, je čekání na
+ * schválení dražší než ta nejistota. Úřední zdroj byl do 22. 9. 2026
+ * podmínkou; od té doby ne — kanál pak mlčel i u případů, o kterých psaly
+ * dvě redakce, jen úřad se ještě nevyjádřil. Ve zprávě se ale říká, jestli
+ * úřední zdroj je, nebo není: to je rozdíl, který čtenář má vidět.
  *
- * Na web se tím NIC nedostane. Záznam dál čeká ve frontě na člověka a zpráva
- * je označená jako neověřená — kanál dostane varování dřív, web pravdu
- * později.
+ * Na web se tím NIC nedostane mezi ověřené. Záznam dál čeká ve frontě
+ * na člověka a zpráva je označená jako neověřená — kanál dostane varování
+ * dřív, web pravdu později.
  */
 export function vyberVazneNavrhy(navrhy, stav, { ted = Date.now(), maxStari = 48 * 3_600_000 } = {}) {
   const poslane = stav.signaly ?? {};
@@ -685,7 +687,6 @@ export function vyberVazneNavrhy(navrhy, stav, { ted = Date.now(), maxStari = 48
     .filter((n) => (n.kam ?? "zaznam") === "zaznam" && !poslane[n.id])
     .filter((n) => /^[OR]/.test(n.zavaznost ?? ""))
     .filter((n) => (n.zdroje ?? []).length >= 2)
-    .filter((n) => (n.zdroje ?? []).some((z) => z.primarni === true || z.typ === "primary"))
     /* Stará událost není varování. Rozhoduje datum UDÁLOSTI, ne zápisu. */
     .filter((n) => n.datumUdalosti && ted - new Date(n.datumUdalosti).getTime() <= maxStari)
     .slice(0, MAX_SIGNALU_NA_BEH);
@@ -694,7 +695,7 @@ export function vyberVazneNavrhy(navrhy, stav, { ted = Date.now(), maxStari = 48
 export function sestavVaznyNavrh(n) {
   const uredni = (n.zdroje ?? []).filter((z) => z.primarni === true || z.typ === "primary");
   const radky = [
-    "\u26a0\ufe0f <b>NEOVĚŘENO — vážný případ z úředního zdroje</b>",
+    `\u26a0\ufe0f <b>NEOVĚŘENO — vážný případ ${uredni.length ? "z úředního zdroje" : "ze dvou nezávislých zdrojů, bez úředního"}</b>`,
     "",
     `<b>${esc(zkrat(n.kratkyTitulek || n.titulek, 90))}</b>`,
   ];
@@ -806,6 +807,8 @@ export function vyberNavrhyDoPrehledu(navrhy, stav, { ted = Date.now() } = {}) {
   const signaly = stav.signaly ?? {};
   return (navrhy ?? [])
     .filter((n) => (n.kam ?? "zaznam") === "zaznam" && n.id && !poslane[n.id] && !signaly[n.id])
+    /* Dva nezávislé zdroje. Jeden článek je zachycená zpráva, ne záznam k ohlášení. */
+    .filter((n) => (n.zdroje ?? []).length >= 2)
     .filter((n) => n.titulek && jeCesky(n.kratkyTitulek || n.titulek))
     .filter((n) => n.pripraveno && ted - new Date(n.pripraveno).getTime() <= NAVRH_NEJVYS_DNI * 86_400_000)
     .sort((a, b) => String(b.pripraveno).localeCompare(String(a.pripraveno)))
@@ -845,13 +848,39 @@ export function sluzbyDoPrehledu(snimek) {
     .map((s) => `${NAZVY[s.klic] ?? s.klic}: ${s.stav === "vypadek" ? "výpadek" : "omezení"}${s.incidenty?.[0]?.nazev ? ` — ${s.incidenty[0].nazev}` : ""} (stavová stránka provozovatele)`);
 }
 
-export function sestavPrehledDne({ ted = Date.now(), cast = castDne(ted), zmeny = [], palivo = null, sluzby = [], navrhy = [], kandidati = [], vydanoDnes = 0 } = {}) {
+/** Od jaké závažnosti je nepotvrzený záznam „kritický" pro čelo přehledu: O1 = 7 z 10. */
+const KRITICKE_OD = 7;
+const MAX_KRITICKYCH = 3;
+
+/** Řádek nepotvrzeného záznamu: datum události, odkaz na web, závažnost, počet zdrojů. */
+function radekNavrhu(n) {
+  const uredni = (n.zdroje ?? []).filter((z) => z.primarni === true || z.typ === "primary").length;
+  /* Datum události, ne zpracování — jinak by se týden stará věc četla jako dnešní. */
+  const kdy = n.datumUdalosti ? `${datumCz(n.datumUdalosti)} · ` : "";
+  const zav = n.zavaznost && Z_DESETI[n.zavaznost] ? ` · závažnost ${Z_DESETI[n.zavaznost]} z 10` : "";
+  return `• ${kdy}<a href="${WEB}/nepotvrzeno/${esc(n.id)}/">${esc(zkrat(n.kratkyTitulek || n.titulek, 110))}</a>${zav} · zdrojů ${(n.zdroje ?? []).length}${uredni ? `, z toho úřední ${uredni}` : ", bez úředního"}`;
+}
+
+/*
+  Pořadí přehledu: nejdřív to nejkritičtější, co sběr zachytil, pak ověřené,
+  pak neověřené. Kdo přehled jen přelétne, má nejzávažnější věc nahoře —
+  a hned u ní, jestli je ověřená, nebo ne.
+*/
+export function sestavPrehledDne({ ted = Date.now(), cast = castDne(ted), zmeny = [], palivo = null, sluzby = [], navrhy = [], overene = [], kandidati = [] } = {}) {
   const od = ted - 24 * 3_600_000;
   const zachycene = (kandidati ?? []).filter((k) => new Date(k.publikovano ?? k.zachyceno).getTime() >= od);
   const ceskeVse = zachycene.filter((k) => jeCesky(k.titulek));
   const ceske = ceskeVse.slice(0, MAX_CESKYCH_ZACHYCENYCH);
   const cizich = zachycene.length - ceskeVse.length;
   const kCesku = zachycene.filter((k) => k.kodZeme === "CZ").length;
+
+  /* Kritické = nepotvrzené záznamy od vysoké závažnosti, nejvýš tři, nejzávažnější první. */
+  const kriticke = [...navrhy]
+    .filter((n) => (Z_DESETI[n.zavaznost] ?? 0) >= KRITICKE_OD)
+    .sort((a, b) => (Z_DESETI[b.zavaznost] ?? 0) - (Z_DESETI[a.zavaznost] ?? 0))
+    .slice(0, MAX_KRITICKYCH);
+  const kritickeId = new Set(kriticke.map((n) => n.id));
+  const ostatniNavrhy = navrhy.filter((n) => !kritickeId.has(n.id));
 
   const radky = [
     `\u{1F4F0} <b>CzechPatrol · přehled ${cast === "rano" ? "ráno" : "večer"} ${datumCz(new Date(ted).toISOString())}</b>`,
@@ -864,20 +893,25 @@ export function sestavPrehledDne({ ted = Date.now(), cast = castDne(ted), zmeny 
   const coSeZmenilo = [...zmeny.map((z) => `• ${esc(z)}`), ...(palivo ? [`• ${esc(palivo)}`] : []), ...sluzby.map((x) => `• ${esc(x)}`)];
   if (coSeZmenilo.length) radky.push("<b>Co se změnilo</b>", ...coSeZmenilo, "");
 
-  if (vydanoDnes > 0) radky.push(`<b>Ověřené záznamy dnes:</b> ${vydanoDnes} — odešly zvlášť výše.`, "");
+  /* 1. nejkritičtější za sběr — neověřené, ale nahoře, protože závažnost nečeká na razítko */
+  radky.push("\u{1F534} <b>Nejkritičtější za sběr</b>" + (kriticke.length ? " — neověřeno, zpracované ze dvou zdrojů" : ""));
+  if (kriticke.length) for (const n of kriticke) radky.push(radekNavrhu(n));
+  else radky.push("• nic od vysoké závažnosti výš");
+  radky.push("");
 
-  if (navrhy.length) {
-    radky.push("<b>Nepotvrzené záznamy</b> — zpracované ze zdrojů, zatím bez potvrzení. Do počtů nevstupují.");
-    for (const n of navrhy) {
-      const uredni = (n.zdroje ?? []).filter((z) => z.primarni === true || z.typ === "primary").length;
-      /* Datum události, ne zpracování — jinak by se týden stará věc četla jako dnešní. */
-      const kdy = n.datumUdalosti ? `${datumCz(n.datumUdalosti)} · ` : "";
-      radky.push(`• ${kdy}<a href="${WEB}/nepotvrzeno/${esc(n.id)}/">${esc(zkrat(n.kratkyTitulek || n.titulek, 110))}</a> · zdrojů ${(n.zdroje ?? []).length}${uredni ? `, z toho úřední ${uredni}` : ""}`);
-    }
-    radky.push("");
+  /* 2. ověřené — to, za čím projekt stojí */
+  radky.push("✅ <b>Ověřené záznamy za 24 h</b>" + (overene.length ? "" : ": žádný"));
+  for (const i of overene) {
+    const kdy = i.datumUdalosti ? `${datumCz(i.datumUdalosti)} · ` : "";
+    const zav = Z_DESETI[i.zavaznost] ? ` · závažnost ${Z_DESETI[i.zavaznost]} z 10` : "";
+    radky.push(`• ${kdy}<a href="${WEB}/incident/${esc(i.slug)}/">${esc(zkrat(i.kratkyTitulek || i.titulek, 110))}</a>${zav}`);
   }
+  radky.push("");
 
-  radky.push(`<b>Zachyceno sběrem za 24 h:</b> ${zachycene.length} ${zachycene.length === 1 ? "zpráva" : zachycene.length < 5 ? "zprávy" : "zpráv"}${kCesku ? `, k Česku ${kCesku}` : ""}. Nic z toho zatím není ověřené.`);
+  /* 3. neověřené — zpracované záznamy a česky psané zachycené zprávy */
+  radky.push("⚪ <b>Neověřené</b> — zpracované ze zdrojů, zatím bez potvrzení. Do počtů nevstupují.");
+  for (const n of ostatniNavrhy) radky.push(radekNavrhu(n));
+  radky.push(`<b>Zachyceno sběrem za 24 h:</b> ${zachycene.length} ${zachycene.length === 1 ? "zpráva" : zachycene.length < 5 ? "zprávy" : "zpráv"}${kCesku ? `, k Česku ${kCesku}` : ""}.`);
   for (const k of ceske) radky.push(`• <a href="${esc(k.zdroj.url)}">${esc(zkrat(k.titulek, 110))}</a>${k.zeme ? ` — ${esc(k.zeme)}` : ""}`);
   if (cizich) radky.push(`• dalších ${cizich} ze zahraničních zdrojů v původním jazyce: ${WEB}/udalosti/?tab=cekajici`);
   radky.push("", `Celý přehled: ${WEB}/`);
@@ -1256,8 +1290,9 @@ async function main() {
       palivo: palivoDoPrehledu(palivo, { ted }),
       sluzby: sluzbyDoPrehledu(ctiSluzby()),
       navrhy: navrhyDoPrehledu,
+      /* Ověřené za 24 h podle data zjištění — i ty, co odešly zvlášť dřív. */
+      overene: zaznamy.filter((i) => (i.lidskyOvereno || i.overeni === "automaticke") && ted - new Date(kdyZjisteno(i)).getTime() <= 24 * 3_600_000).reverse(),
       kandidati: ctiKandidaty(),
-      vydanoDnes: davka.length,
     });
     const v = await posli(text, { nahled: false });
     if (v.ok) {

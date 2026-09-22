@@ -648,14 +648,16 @@ describe("vážné případy z úředního zdroje", () => {
     }
   });
 
-  it("bez úředního zdroje neprojde ani vážný případ", () => {
+  it("bez úředního zdroje projde vážný případ se dvěma nezávislými zdroji — a zpráva to řekne", () => {
     const bezUradu = navrh({
       zdroje: [
         { nazev: "Médium A", url: "https://a", primarni: false },
         { nazev: "Médium B", url: "https://b", primarni: false },
       ],
     });
-    expect(vyberVazneNavrhy([bezUradu], { signaly: {} }, { ted })).toHaveLength(0);
+    expect(vyberVazneNavrhy([bezUradu], { signaly: {} }, { ted })).toHaveLength(1);
+    expect(sestavVaznyNavrh(bezUradu)).toContain("ze dvou nezávislých zdrojů, bez úředního");
+    expect(sestavVaznyNavrh(navrh({}))).toContain("z úředního zdroje");
   });
 
   it("jediný zdroj neprojde, i když je úřední", () => {
@@ -712,10 +714,32 @@ describe("přehled dne — česky, dvakrát denně", () => {
 
   it("nepotvrzený záznam nese datum události, odkaz na web, počet zdrojů a je označený", () => {
     const text = sestavPrehledDne({ ted, navrhy: [navrh({})] });
-    expect(text).toContain("<b>Nepotvrzené záznamy</b>");
+    expect(text).toContain("<b>Neověřené</b>");
     expect(text).toContain("15. 9. 2026 · <a href=\"https://czechpatrol.pages.dev/nepotvrzeno/i-1/\">");
     expect(text).toContain("zdrojů 2, z toho úřední 1");
     expect(text).toContain("Do počtů nevstupují");
+  });
+
+  it("pořadí: nejkritičtější za sběr, pak ověřené, pak neověřené", () => {
+    const text = sestavPrehledDne({
+      ted,
+      navrhy: [navrh({ id: "i-o", zavaznost: "O2", titulek: "Polsko: útok na rozvodnu", kratkyTitulek: "Polsko: útok na rozvodnu" }), navrh({ id: "i-y", zavaznost: "Y1" })],
+      overene: [zaznam({ slug: "cz-1", titulek: "Česko: zadržen podezřelý", kratkyTitulek: "Česko: zadržen podezřelý", zavaznost: "Y2" })],
+    });
+    const iKrit = text.indexOf("Nejkritičtější za sběr"), iOver = text.indexOf("Ověřené záznamy za 24 h"), iNeov = text.indexOf("<b>Neověřené</b>");
+    expect(iKrit).toBeGreaterThan(-1);
+    expect(iOver).toBeGreaterThan(iKrit);
+    expect(iNeov).toBeGreaterThan(iOver);
+    expect(text.indexOf("Polsko: útok na rozvodnu")).toBeLessThan(iOver);
+    expect(text.split("Polsko: útok na rozvodnu").length).toBe(2);
+    expect(text.indexOf("/nepotvrzeno/i-y/")).toBeGreaterThan(iNeov);
+    expect(text).toContain("/incident/cz-1/");
+    expect(text).toContain("závažnost 8 z 10");
+  });
+
+  it("návrh s jediným zdrojem do přehledu nejde", () => {
+    const jeden = navrh({ id: "i-j", zdroje: [{ url: "https://a", typ: "media" }] });
+    expect(vyberNavrhyDoPrehledu([jeden], { navrhy: {}, signaly: {} }, { ted })).toHaveLength(0);
   });
 
   it("návrh odejde jednou, jen s českým titulkem a jen do týdne od zpracování", () => {

@@ -40,14 +40,22 @@ export function useNahled() {
   const [nahled, setNahled] = useState<Nahled | null>(null);
   const [kde, setKde] = useState<{ x: number; y: number } | null>(null);
 
-  const ukaz = useCallback((n: Nahled, e?: { clientX: number; clientY: number }) => {
+  /*
+    Jen myš. Na dotykovém displeji přijde pointerenter s prstem těsně před
+    klepnutím: náhled se ukázal, překryl řádek pod ním a než stránka
+    přešla dál, čtenář viděl blikat panel přes půl obrazovky. Prst se
+    nenajíždí — klepnutí je totéž rozhodnutí o krok dál.
+  */
+  const ukaz = useCallback((n: Nahled, e?: { clientX: number; clientY: number; pointerType?: string }) => {
+    if (e?.pointerType && e.pointerType !== "mouse") return;
     setNahled(n);
     if (e) setKde({ x: e.clientX, y: e.clientY });
   }, []);
   const skryj = useCallback(() => { setNahled(null); setKde(null); }, []);
 
   /* Posun myši v rámci řádku náhled táhne s sebou. */
-  const pohyb = useCallback((e: { clientX: number; clientY: number }) => {
+  const pohyb = useCallback((e: { clientX: number; clientY: number; pointerType?: string }) => {
+    if (e.pointerType && e.pointerType !== "mouse") return;
     setKde((p) => (p ? { x: e.clientX, y: e.clientY } : p));
   }, []);
 
@@ -81,7 +89,7 @@ export function PanelNahledu({ nahled, kde }: { nahled: Nahled | null; kde: { x:
     <div
       aria-hidden
       style={{ left: x, top: y, width: SIRKA }}
-      className="pointer-events-none fixed z-50 rounded-[16px] border border-linka bg-plocha2 px-3.5 py-3"
+      className="pointer-events-none fixed z-50 rounded-[16px] border border-linka bg-plocha2 px-3.5 py-3 [@media(hover:none)]:hidden"
     >
       <p className="text-male leading-snug text-inkoust">{nahled.titulek}</p>
       {nahled.radky.length > 0 && (

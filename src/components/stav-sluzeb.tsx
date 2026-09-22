@@ -99,7 +99,7 @@ export function StavSluzeb({ stavy, kdy }: { stavy: ZivyStav[]; kdy: string | nu
         vypadaly jako celý obraz.
       */}
       <div className="mt-auto flex flex-wrap items-center justify-between gap-2 border-t border-linka2 px-4 py-2">
-        <span className="text-mikro leading-snug text-tlum2">Stavové stránky provozovatelů. České sítě a banky je nemají — jejich úřední stav je v mřížce vedle.</span>
+        <span className="text-mikro leading-snug text-tlum2">Stavové stránky provozovatelů. České sítě a banky je nemají.</span>
         <Tlacitko kam="https://downdetector.cz/" nove varianta="tichy" velikost="s" ikonaVpravo="nahoru" trida="[&>svg:last-child]:rotate-45">hlášení uživatelů</Tlacitko>
       </div>
     </section>
