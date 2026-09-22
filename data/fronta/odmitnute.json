@@ -1,5 +1,21 @@
 [
   {
+    "id": "k-3d71046453594ed7",
+    "zachyceno": "2026-09-22T05:02:51.300Z",
+    "publikovano": "2026-09-22T04:53:00.000Z",
+    "zdroj": {
+      "nazev": "Český rozhlas — domácí zprávy",
+      "url": "https://www.irozhlas.cz/veda-technologie/priroda/ze-vymizely-vlastovky-a-jiricky-je-pro-me-docela-prekvapive-rika-o-letosnim_2609220653_dci",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Že vymizely vlaštovky a jiřičky, je pro mě docela překvapivé, říká o letošním tažení na jih ornitolog",
+    "shrnuti": "Na polích a u rybníků na Svitavsku se v těchto dnech shlukují hejna ptáků a chystají se na cestu na jih. Kachny nebo volavky se u vody dají stále potkat, vlaštovky, jiřičky a rorýsi už ale jen stěží.",
+    "duvod": "bez-skutku",
+    "kategorie": [],
+    "posouzeni": null
+  },
+  {
     "id": "k-01ad8eb829b21f87",
     "zachyceno": "2026-09-22T04:52:51.667Z",
     "publikovano": "2026-09-22T04:50:19.000Z",
@@ -9226,28 +9242,6 @@
     "posouzeni": {
       "podezreni": "zadne",
       "duvod": "Ruské rodičky v Brazílii, migrační trend",
-      "kdy": "2026-09-19T11:03:33.710Z"
-    }
-  },
-  {
-    "id": "k-96fb7620a10b85e4",
-    "zachyceno": "2026-09-19T08:00:22.435Z",
-    "publikovano": "2026-09-17T18:54:49.000Z",
-    "zdroj": {
-      "nazev": "Téma: nouzovy-stav (anglicky)",
-      "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxOY1hPLTNPVDEzV21oTEwyNHhiQVBFMVptYk9Ob2pUSVVlRlVVZGZUS2ktYWNBdzdGemp6Q3VLRE9IQmlUdHNxS2VKbWVWN0l1UzBYTTVFc25ZNXFONWluelY2Wk1pRWxFOXpRSmZ5RzF6d21OemZ5cEZRd1Z3YVItZHFOUnhYTU5NVG8wWVZUMjRsYkNsVkowT1lnWQ?oc=5",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Bolivian congress votes to extend state of emergency for 90 days - courthousenews.com",
-    "shrnuti": "Bolivian congress votes to extend state of emergency for 90 days courthousenews.com",
-    "duvod": "bez-mista",
-    "kategorie": [
-      "pravo"
-    ],
-    "posouzeni": {
-      "podezreni": "stredni",
-      "duvod": "Vyhlášení nouzového stavu, nejasný obsah",
       "kdy": "2026-09-19T11:03:33.710Z"
     }
   }
