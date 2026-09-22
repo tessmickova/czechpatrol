@@ -6,7 +6,7 @@
 |---|---|---|
 | Web (statický) | Cloudflare Pages, projekt `czechpatrol` | `.github/workflows/nasazeni.yml` po pushi na `main` a po úspěšném sběru |
 | Sběr dat | GitHub Actions, každou půlhodinu | `.github/workflows/sber.yml` → commit do `data/`. Kope do něj Cloudflare Worker; plánovač GitHubu je jen záloha jednou za tři hodiny |
-| API (účty, odběr, tipy, hlídač) | Cloudflare Worker `czechpatrol-api` + D1 | `.github/workflows/nasazeni-api.yml`. Nasazení prošlo 13. 9. 2026, worker běží — je to on, kdo spouští sběr a kdo hlídá jeho výpadky |
+| API (účty, odběr, tipy, hlídač, Premium, žebříček) | Cloudflare Worker `czechpatrol-api` + D1 (migrace 0001–0007) | `.github/workflows/nasazeni-api.yml`. Nasazení prošlo 13. 9. 2026, worker běží — je to on, kdo spouští sběr a kdo hlídá jeho výpadky. Cron každých 10 min navíc kontroluje čekající platby (ztracený webhook) a odesílá frontu e-mailů |
 
 > Účty na webu jsou něco jiného než běžící worker. Aby je web nabízel, musí
 > být při jeho sestavení nastavená proměnná `API_URL` a tajemství

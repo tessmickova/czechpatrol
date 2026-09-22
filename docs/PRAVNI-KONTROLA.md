@@ -26,6 +26,21 @@ Každý bod uvádí, *co* předpis chce, *jak* to systém řeší a *co zbývá*
 výslovném zadání uživatelem, smazat na jedno kliknutí (hotovo). Meta Cloud API
 navíc vyžaduje ověření Business účtu a šablony — smluvní vztah s Metou.
 
+### Nové osobní údaje od 22. 9. 2026 (Premium a žebříček)
+
+| Údaj | Kde | Základ | Kdo vidí | Uchování |
+|---|---|---|---|---|
+| e-mail u účtu (dobrovolný, pro kód kreditu) | `ucty.email_sifrovany`, šifrováno | souhlas | jen odesílání kódu; správce nevidí adresu | do smazání v účtu |
+| platba (částka, id u brány, stav) | `platby` | plnění smlouvy; účetní doklad | správce | 10 let (LEGAL REVIEW) |
+| kredit (otisk, maska, šifrovaný kód) | `kredity` | plnění smlouvy | správce vidí masku, člověk kód | 10 let |
+| profil domácnosti (jen Premium) | `hodnoceni`, šifrováno | plnění smlouvy | nikdo mimo účet (bez klíče nečitelné) | 5 posledních, do smazání |
+| záznam žebříčku (skóre, kraj, počet osob, přezdívka) | `zebricek` | souhlas (zařazení je volba) | přezdívka, skóre, datum, kraj veřejně | do odchodu; bez pohybu rok |
+| kontakt v žebříčku (e-mail, telefon), nepovinný | `zebricek`, šifrováno | souhlas | jen správce, čtení v auditu | s odchodem ze žebříčku |
+
+Stránka `/soukromi/` má odpovídající odstavce (oddíl 05 a Premium).
+Smazání účtu s platbou účet vyprázdní (bez osobních údajů) a doklad
+o platbě ponechá — čl. 17 odst. 3 písm. b GDPR (právní povinnost).
+
 ## 2. ePrivacy — § 89 odst. 3 zákona č. 127/2005 Sb.
 
 Web nepoužívá cookies. `localStorage` nese jen přihlašovací token a
@@ -76,6 +91,30 @@ Technická poznámka: web je statický, omezení běží v prohlížeči. Kdo ch
 tvrdé omezení, musí přesunout data hranic/dopravy do API a vydávat je jen
 přihlášeným s rolí.
 
+### Premium „Odolnější domácnost“ a kredit 150 Kč (kód od 22. 9. 2026, platby vypnuté)
+
+Kód existuje, ostrý provoz čeká na tento seznam. **LEGAL / CONSUMER LAW
+REVIEW REQUIRED** před zapnutím brány:
+
+- Smluvní strana u Comgate a v podmínkách = `PROVOZOVATEL`; bez něj se
+  platby nespouštějí (kód to vynucuje nepřímo: bez tajemství brány není
+  tlačítko).
+- Před platbou musí být na tlačítku a v podmínkách: cena 150 Kč, co
+  přesně se odemyká (seznam je v kódu jednou, `OBSAH_PREMIUM`), že
+  plnění začíná odemknutím (poučení o ztrátě práva odstoupit, § 1837
+  písm. l OZ), a **pravdivá věta o kreditu**: vázaný na účet, e-shop
+  zatím neběží, bez expirace (nebo s expirací uvedenou předem).
+- Kredit ≠ poukaz s neurčeným účelem: je vázaný na konkrétní platbu a
+  účet, auditovatelný (platba → kredit → e-mail → uplatnění/náhrada).
+  Daňové zacházení s vratkou ve formě kreditu: dotaz na účetní.
+- Refund: platba ACTIVE-kredit → automaticky zneplatnit kredit a
+  oprávnění; platba s už uplatněným kreditem → nic automaticky, příznak
+  k rozhodnutí (BUSINESS + LEGAL DECISION).
+- Veřejný engine: výpočty jsou v repozitáři, brána chrání službu
+  (uložení, plán, komunita, kredit), ne matematiku — buď to přiznat
+  v podmínkách, nebo přesunout do Workeru (rozhodnutí provozovatele).
+- Nikdy nezamykat bezpečnostní nález; test i pravidlo v kódu.
+
 ## 6. Přístupnost a další
 
 - Zákon č. 99/2019 Sb. o přístupnosti se na soukromý web nevztahuje; web
@@ -95,6 +134,8 @@ přihlášeným s rolí.
 5. Založit 2 správce, smazat `ADMIN_BOOTSTRAP_KOD`.
 6. Před WhatsAppem: Meta Business ověření, šablona, DPA Meta.
 7. Před placenou vrstvou: obchodní podmínky podle § 1820 OZ, podnikatelská identifikace, daně.
+8. Před Premium: viz část 5 (kredit, odstoupení, refund, veřejný engine); e-mailová služba s DPA a zpracováním v EU; DKIM/SPF na doméně odesílatele.
+9. Před žebříčkem s kontaktem: `KLIC_SIFROVANI` nastavený, text u polí a v `/soukromi/` sedí s tím, co správce s kontaktem dělá (jen pozvání do komunity, rozhoduje člověk).
 
 ## Právě ověřované zprávy a § 357 trestního zákoníku
 

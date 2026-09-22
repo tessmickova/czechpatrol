@@ -121,9 +121,27 @@ Odkazy na výbavu vedou na e-shop Čenich, až poběží naostro
 ## 6. Co je hotové, navržené, nestaví se
 
 **Běží (22. 9. 2026):** úrovně 1 a 2 podle tabulky; Odolnost domácnosti
-s redundancí, společným selháním, jedinými body selhání, horizonty,
-spotřebou vody a energie, „Co má teď největší smysl“, „Tohle nemohu
-vyřešit“, „Za 0 Kč“, export a tisk; přihlášení k pozvánce do komunity.
+s redundancí, společným selháním, jedinými body selhání, horizonty
+72 h – 60 dní, spotřebou vody (podle kraje) a energie ze spotřebičů,
+odhadem soláru, „Tohle nemohu vyřešit“, „Za 0 Kč“, export a tisk;
+přihlášení k pozvánce do komunity.
+
+**Rozdělení zdarma / Premium (22. 9. 2026, `docs/PREMIUM-NAVRH.md`):**
+audit je bez účtu; zdarma je souhrn s počty (v pořádku · slabin ·
+kritických · 72 h), **každý bezpečnostní nález** (nad nabídkou, nikdy za
+ní), rady za 0 Kč a tlačítko *Začít znovu*. Za jednorázovým odemknutím
+jsou horizonty, vydrže, energie a solár, „co vypne co“, nákupní seznam,
+plán ke stažení, uložení na server a komunita. Bez brány web nabídku
+ukazuje jako „připravujeme“.
+
+**Skóre a žebříček (22. 9. 2026):** `skore()` dává 0–100 (70 bodů zálohy
+podle důležitosti oblastí, 30 horizonty; oblasti „řeším jinak“ se
+nepočítají). Vysvětlivka říká, že je to orientační hra pro srovnání, ne
+hodnocení člověka. Žebříček je pro přihlášené anonymní účty: jeden
+záznam na účet, vygenerovaná přezdívka, veřejně jen přezdívka, skóre,
+datum a kraj. Nepřihlášený dostane otázku, jestli se chce anonymně
+přihlásit, nebo v žebříčku nebýt. Kontakt je nepovinný a jen pro
+pozvání do komunity.
 
 **Navržené, v pořadí:**
 
@@ -135,11 +153,14 @@ vyřešit“, „Za 0 Kč“, export a tisk; přihlášení k pozvánce do komun
 | 5 | Víc míst (domov, chata, práce) s porovnáním rozdílů bez verdiktu | až bude profil stabilní |
 | 6 | Komunita: schopnosti opt-in na úrovni obce/ORP, chat, WhatsApp skupina, spolupráce s obcemi | až bude komu psát a kdo moderuje |
 | 7 | Optimalizátor (rozpočet Kč a čas) nad stejným modelem; režim bez peněz je už teď | až bude dost dat o tom, co lidem chybí |
-| 8 | Synchronizace profilu přes účet, šifrovaně, jen na výslovné přání | dnes lokálně; sync je pohodlí, ne bezpečí |
+| 8 | Synchronizace profilu přes účet, šifrovaně, jen na výslovné přání | **hotovo jako součást Premium** (22. 9. 2026): profil se ukládá šifrovaně, 5 posledních, mazatelné |
 
-**Nestaví se:** veřejná mapa domácností, žebříčky připravenosti,
-notifikace strachem, streaky, loot-box mechaniky, skóre s procenty
-„pravděpodobnosti“, jakékoli vlastní zdravotní nebo chemické postupy.
+**Nestaví se:** veřejná mapa domácností, notifikace strachem, streaky,
+loot-box mechaniky, skóre s procenty „pravděpodobnosti“, jakékoli
+vlastní zdravotní nebo chemické postupy. *Žebříček* tu původně stál taky;
+rozhodnutí provozovatele 22. 9. 2026 ho zavedlo v podobě, která zásady
+drží: pseudonymní, na účtech, bez procent pravděpodobnosti, bez
+notifikací a s možností odejít jedním tlačítkem.
 
 ## 7. Pole profilu a proč
 
@@ -148,7 +169,9 @@ notifikace strachem, streaky, loot-box mechaniky, skóre s procenty
 | osob, zvirat | jmenovatel pro vodu | zařízení |
 | cesty po funkcích | jediný vstup pro redundanci a body selhání | zařízení |
 | zásoby (voda, užitková, jídlo dny, léky dny) | horizonty; léky jen jako dny, nikdy názvy ani dávky | zařízení |
-| energie (Wh kapacita, Wh/den, dobíjení) | vydrž energie a sejmutí závislosti přenosných zařízení | zařízení |
+| energie (Wh kapacita, spotřebiče s W a hodinami, dobíjení, solár Wp) | vydrž energie po režimech, odhad soláru, sejmutí závislosti přenosných zařízení | zařízení |
+| kontext (kraj, bydlení, sídlo, děti, senioři, závislý na péči, rodina v dosahu), vybavení (vysílačky, powerbanky) | zásoba vody podle kraje, cesty závislé na kontextu, váha nálezů | zařízení |
+| celý profil na serveru | jen s Premium, šifrovaně, na kontinuitu mezi zařízeními | D1, mazatelné |
 | nemohu (funkce → důvod) | kompenzace místo varování | zařízení |
 | — adresa, jména, diagnózy, konkrétní vybavení, ceny | nepotřebujeme; neukládají se | — |
 
