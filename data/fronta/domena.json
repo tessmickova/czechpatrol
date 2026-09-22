@@ -1,5 +1,5 @@
 {
-  "kontrolovano": "2026-09-22T17:38:42.197Z",
+  "kontrolovano": "2026-09-22T17:47:52.954Z",
   "domena": "czechpatrol.cz",
   "cil": "czechpatrol.pages.dev",
   "nasucho": false,
@@ -20,34 +20,79 @@
     "zalozeno": "2026-09-22T16:43:45.940043Z",
     "aktivovano": "2026-09-22T17:19:07.133775Z"
   },
-  "dns": null,
+  "dns": {
+    "odstraneno": [
+      {
+        "typ": "A",
+        "jmeno": "czechpatrol.cz",
+        "obsah": "81.2.196.19",
+        "proxy": true
+      },
+      {
+        "typ": "CNAME",
+        "jmeno": "*.czechpatrol.cz",
+        "obsah": "czechpatrol.cz",
+        "proxy": true
+      },
+      {
+        "typ": "CNAME",
+        "jmeno": "www.czechpatrol.cz",
+        "obsah": "czechpatrol.cz",
+        "proxy": true
+      }
+    ],
+    "zalozeno": [
+      {
+        "typ": "CNAME",
+        "jmeno": "czechpatrol.cz",
+        "obsah": "czechpatrol.pages.dev",
+        "proxy": true
+      },
+      {
+        "typ": "CNAME",
+        "jmeno": "www.czechpatrol.cz",
+        "obsah": "czechpatrol.pages.dev",
+        "proxy": true
+      }
+    ],
+    "ponechano": [],
+    "chyby": []
+  },
   "pages": {
     "domeny": [
       {
         "jmeno": "czechpatrol.cz",
-        "stav": "initializing",
+        "stav": "pending",
         "overeni": "pending",
-        "certifikat": "initializing",
-        "chyba": null
+        "certifikat": "pending",
+        "chyba": "CNAME record not set"
       },
       {
         "jmeno": "www.czechpatrol.cz",
-        "stav": "initializing",
+        "stav": "pending",
         "overeni": "pending",
-        "certifikat": "initializing",
-        "chyba": null
+        "certifikat": "pending",
+        "chyba": "CNAME record not set"
       }
     ],
-    "pridano": [
-      "czechpatrol.cz",
-      "www.czechpatrol.cz"
-    ],
+    "pridano": [],
     "chyby": []
   },
   "https": {},
   "presmerovaniWww": null,
+  "web": {
+    "adresa": "https://czechpatrol.cz/stav.json",
+    "http": 521,
+    "commit": null,
+    "generovano": null,
+    "chyba": null,
+    "www": {
+      "http": 521,
+      "konecnaAdresa": "https://www.czechpatrol.cz/",
+      "chyba": null
+    }
+  },
   "chybejiciPrava": [
-    "Zone · DNS · Edit",
     "Zone · Zone Settings · Edit",
     "Zone · Dynamic Redirect (Single Redirects) · Edit"
   ],
@@ -57,24 +102,36 @@
       "text": "active; nameservery Cloudflare: mary.ns.cloudflare.com, zeus.ns.cloudflare.com; původní: ns.forpsi.cz, ns.forpsi.it, ns.forpsi.net"
     },
     {
-      "krok": "právo",
-      "text": "token nesmí číst a měnit záznamy DNS — chybí Zone · DNS · Edit"
+      "krok": "dns",
+      "text": "záznamů 3: smazat 3, založit 2, nechat 0"
+    },
+    {
+      "krok": "dns",
+      "text": "mažu A czechpatrol.cz → 81.2.196.19"
+    },
+    {
+      "krok": "dns",
+      "text": "mažu CNAME *.czechpatrol.cz → czechpatrol.cz"
+    },
+    {
+      "krok": "dns",
+      "text": "mažu CNAME www.czechpatrol.cz → czechpatrol.cz"
+    },
+    {
+      "krok": "dns",
+      "text": "zakládám CNAME czechpatrol.cz → czechpatrol.pages.dev (proxy)"
+    },
+    {
+      "krok": "dns",
+      "text": "zakládám CNAME www.czechpatrol.cz → czechpatrol.pages.dev (proxy)"
     },
     {
       "krok": "pages",
-      "text": "přidávám vlastní doménu czechpatrol.cz"
+      "text": "czechpatrol.cz: pending, certifikát pending, CNAME record not set"
     },
     {
       "krok": "pages",
-      "text": "czechpatrol.cz: initializing, certifikát initializing"
-    },
-    {
-      "krok": "pages",
-      "text": "přidávám vlastní doménu www.czechpatrol.cz"
-    },
-    {
-      "krok": "pages",
-      "text": "www.czechpatrol.cz: initializing, certifikát initializing"
+      "text": "www.czechpatrol.cz: pending, certifikát pending, CNAME record not set"
     },
     {
       "krok": "právo",
@@ -83,8 +140,16 @@
     {
       "krok": "právo",
       "text": "token nesmí nastavit přesměrování www — chybí Zone · Dynamic Redirect (Single Redirects) · Edit"
+    },
+    {
+      "krok": "web",
+      "text": "https://czechpatrol.cz/stav.json: HTTP 521"
+    },
+    {
+      "krok": "www",
+      "text": "https://www.czechpatrol.cz/ → https://www.czechpatrol.cz/ (HTTP 521)"
     }
   ],
-  "poznamka": "Zóna je aktivní, DNS domény czechpatrol.cz řídí Cloudflare. Vlastní domény projektu Pages čekají: czechpatrol.cz (initializing), www.czechpatrol.cz (initializing). Aktivují se samy, jakmile bude zóna aktivní a záznamy DNS na místě. Tokenu CLOUDFLARE_API_TOKEN chybí práva: Zone · DNS · Edit; Zone · Zone Settings · Edit; Zone · Dynamic Redirect (Single Redirects) · Edit. Doplnit v Cloudflare → My Profile → API Tokens → Edit (u práv zóny vybrat czechpatrol.cz) a spustit znovu.",
+  "poznamka": "Zóna je aktivní, DNS domény czechpatrol.cz řídí Cloudflare. Odstraněné záznamy (stály webu v cestě): A czechpatrol.cz → 81.2.196.19; CNAME *.czechpatrol.cz → czechpatrol.cz; CNAME www.czechpatrol.cz → czechpatrol.cz. Založené záznamy: CNAME czechpatrol.cz → czechpatrol.pages.dev; CNAME www.czechpatrol.cz → czechpatrol.pages.dev. Vlastní domény projektu Pages čekají: czechpatrol.cz (pending), www.czechpatrol.cz (pending). Aktivují se samy, jakmile bude zóna aktivní a záznamy DNS na místě. Web na https://czechpatrol.cz zatím neodpovídá (HTTP 521); certifikát a aktivace domény v Pages ještě mohou běžet, spustit znovu za pár minut. Tokenu CLOUDFLARE_API_TOKEN chybí práva: Zone · Zone Settings · Edit; Zone · Dynamic Redirect (Single Redirects) · Edit. Doplnit v Cloudflare → My Profile → API Tokens → Edit (u práv zóny vybrat czechpatrol.cz) a spustit znovu.",
   "vysvetleni": "Zapsáno workflow Doména (nastroje/domena.mjs). Rutiny a session tenhle soubor jen čtou; na Cloudflare API ze sandboxu nedosáhnou. Nejnovější stav dá nový běh workflow."
 }
