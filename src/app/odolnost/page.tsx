@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { HlavickaStranky, Obsah } from "@/components/hlavicka";
 import { OdolnostKlient } from "@/components/odolnost-klient";
+import { Zebricek } from "@/components/zebricek-klient";
 
 export const metadata: Metadata = {
   title: "Odolnost domácnosti",
@@ -24,6 +25,8 @@ export default function Odolnost() {
       />
       <Obsah>
         <OdolnostKlient />
+        {/* Žebříček pod auditem: srovnání je až po vyplnění, ne důvod k vyplnění. */}
+        <Zebricek />
       </Obsah>
     </>
   );

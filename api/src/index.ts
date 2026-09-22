@@ -17,6 +17,7 @@ import * as patrol from "./patrol";
 import * as sprava from "./sprava";
 import * as tipy from "./tipy";
 import * as zajem from "./zajem";
+import * as zebricek from "./zebricek";
 import { synchronizuj, uklid } from "./synchronizace";
 import { nastavWebhook, webhook } from "./telegram";
 import type { Env } from "./typy";
@@ -75,6 +76,12 @@ const CESTY: [string, RegExp, Obsluha][] = [
   ["POST", /^\/zajem$/, (req, env) => zajem.prijmi(env, req)],
   ["POST", /^\/zajem\/odhlasit$/, (req, env) => zajem.odhlasit(env, req)],
   ["GET", /^\/sprava\/zajem$/, async (req, env) => zajem.prehled(env, await vyzadujPrihlaseni(env, req))],
+  // Žebříček připravenosti: veřejně přezdívka, skóre a datum; kontakt jen správci.
+  ["GET", /^\/zebricek$/, (_r, env) => zebricek.verejny(env)],
+  ["POST", /^\/zebricek$/, (req, env) => zebricek.prijmi(env, req)],
+  ["POST", /^\/zebricek\/smazat$/, (req, env) => zebricek.smaz(env, req)],
+  ["GET", /^\/sprava\/zebricek$/, async (req, env) => zebricek.prehled(env, await vyzadujPrihlaseni(env, req))],
+  ["PUT", /^\/sprava\/zebricek\/([\w-]+)$/, async (req, env, _u, id) => zebricek.vyrid(env, req, await vyzadujPrihlaseni(env, req), id)],
   ["GET", /^\/nastaveni-sberu$/, async (req, env) => nastaveni.proSber(env)],
   ["PUT", /^\/sprava\/nastaveni-ai$/, async (req, env) => nastaveni.uloz(env, req, await vyzadujPrihlaseni(env, req))],
   ["GET", /^\/sprava\/patrol$/, async (req, env) => patrol.seznam(env, await vyzadujPrihlaseni(env, req))],

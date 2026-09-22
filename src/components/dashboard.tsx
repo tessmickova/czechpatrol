@@ -1,15 +1,14 @@
 "use client";
 
 import Link from "next/link";
-import { druh, kdyZjisteno, pachatelPotvrzen, podlePuvodce, podleZemi, pripady, uredniZdroj, vyber, type Zaznam } from "@/lib/agregace";
-import { cerstvost, datumCasPraha, datumPraha, stariSlovy } from "@/lib/cas";
+import { pripady, type Zaznam } from "@/lib/agregace";
+import { cerstvost, datumCasPraha } from "@/lib/cas";
 import type { CelkovyStav, HybridniTlak, Kampan, Kandidat, NatoPolozka, Nepotvrzene, OficialniNastroj, Overovana, PravniPolozka, ProvozniPolozka, Snimek, TydenniHodnoceni, Uroven, Watchlist } from "@/lib/typy";
 import { CenaPaliva } from "./palivo";
 import { stavPaliva, vetaOCene } from "@/lib/palivo";
 import { stavPravni, stavProvozu } from "@/lib/pokryti";
 import { StavDetail } from "./stav-detail";
 import { PASMA, UROVNE } from "@/lib/skala";
-import { cislem, porovnejSPrumerem, prumerNaOkno } from "@/lib/porovnani";
 import type { HlavniVeta } from "@/lib/veta";
 import { Ikona, type NazevIkony } from "./ikony";
 import { HeroDashboard } from "./hero-dashboard";
@@ -17,10 +16,9 @@ import { DlazdiceKampane } from "./kampane";
 import { NadpisSekce } from "./nadpisy";
 import { PruhOverujeme } from "./overujeme";
 import { Aktuality } from "./aktuality";
-import { UrgentniUpozorneni } from "./urgentni";
-import { Odznak, RadekSeznamu, TeckaZavaznosti, Tlacitko } from "./ui";
-import { PavucinaHrozeb } from "./pavucina";
-import { TabulkaZemi } from "./tabulka-zemi";
+import { UrgentniPas } from "./urgentni";
+import { TriTemata } from "./tri-temata";
+import { Tlacitko } from "./ui";
 import { useZiveHodiny } from "@/lib/cas-klient";
 import { ProfilySiti } from "./profily-siti";
 import { PripravenostKarta } from "./pripravenost-klient";
@@ -34,8 +32,7 @@ import { casPraha } from "@/lib/cas";
 import { Partneri, Sledovat } from "./sledovat";
 import { VyzvaTelegram } from "./vyzva-telegram";
 import { Nahlaseni } from "./nahlaseni";
-import { Napoveda, Otaznik } from "./zaklad";
-import { sklon, Vlajka } from "./zeme";
+import { Napoveda } from "./zaklad";
 import { useT } from "@/lib/i18n";
 
 /*
@@ -288,25 +285,7 @@ function Hlavni({ nadpis, hodnota, ton, popis, overeno, napoveda, jiskra }: { na
   );
 }
 
-function Cislo({ n, slovo }: { n: number; slovo: string }) {
-  return (
-    <span className="flex flex-col rounded-[18px] border border-linka2 bg-plocha px-3 py-2">
-      <span className="cislice text-cislo font-bold leading-none text-inkoust">{n}</span>
-      <span className="mt-1 text-mikro leading-tight text-tlum">{slovo}</span>
-    </span>
-  );
-}
 
-function Pruh({ nazev, n, max, barva, odkaz }: { nazev: React.ReactNode; n: number; max: number; barva: string; odkaz?: string }) {
-  const telo = (
-    <>
-      <span className="flex w-[118px] shrink-0 items-center gap-1.5 truncate text-drobne text-inkoust">{nazev}</span>
-      <span className="h-[8px] flex-1 overflow-hidden rounded-full bg-linka2"><span className={`block h-full ${barva}`} style={{ width: `${max ? (n / max) * 100 : 0}%` }} /></span>
-      <span className="cislice w-6 shrink-0 text-right text-male font-bold text-inkoust">{n}</span>
-    </>
-  );
-  return odkaz ? <Link href={odkaz} className="flex min-h-[36px] items-center gap-2 hover:bg-plocha">{telo}</Link> : <span className="flex min-h-[36px] items-center gap-2">{telo}</span>;
-}
 
 export function Dashboard({
   stav, pravni, natoPolozky, provozPolozky, overeno, vse, neprosle, kandidati, nepotvrzene = [], tydny, watchlist, crHistoricky, hybridni, obcane, ted, snimky = [], nastroje = [],
@@ -370,23 +349,6 @@ export function Dashboard({
   const czUrovne: Uroven[] = [...dni90.filter((i) => i.kodZeme === "CZ").map((i) => i.zavaznost), ...czKampane90.map((k) => k.zavaznost)];
   const cr: Uroven | null = czUrovne.length ? czUrovne.reduce((m, u) => (UROVNE[u].poradi > UROVNE[m].poradi ? u : m), czUrovne[0]) : null;
   const crPocet = { pripadu: dni90.filter((i) => i.kodZeme === "CZ").length, kampani: czKampane90.length };
-  const kampaneVOkne = (dni: number) => kampane.filter((k) => tedMs - new Date(k.odhaleno).getTime() <= dni * 86_400_000).length;
-  const zapocitatelne90 = dni90.length + kampaneVOkne(90);
-  const casyZapocitatelne = [
-    ...vse.filter((i) => druh(i) === "pripad").map((i) => kdyZjisteno(i)),
-    ...kampane.map((k) => k.odhaleno),
-  ];
-  const porovnani90 = porovnejSPrumerem(zapocitatelne90, prumerNaOkno(casyZapocitatelne, 90, tedMs));
-  const zemi = new Set(dni90.map((i) => i.kodZeme)).size;
-  const cz = dni90.filter((i) => i.kodZeme === "CZ").length;
-  const potvrzeno = dni90.filter(pachatelPotvrzen).length;
-  const uredni = dni90.filter(uredniZdroj).length;
-  const rok = new Date(tedMs).getUTCFullYear();
-  const letos = vyber(vse, { odRoku: rok });
-  const zeme = podleZemi(letos).filter((z) => z.pripady > 0 || z.kodZeme === "CZ").slice(0, 6);
-  const maxZeme = Math.max(1, ...zeme.map((z) => z.pripady));
-  const puv = podlePuvodce(letos);
-  const maxPuv = Math.max(1, ...puv.skupiny.map((s) => s.pocet));
   const stariCelkem = cerstvost(overeno, tedMs);
 
   const crHodnota = platiCr.length ? platiCr.map((p) => KRATCE_PRAVNI[p.klic] ?? p.nazev).join(", ") : naruseno.length ? "Narušeno" : sledujeme.length ? "Sledujeme" : "Bez omezení";
@@ -462,7 +424,7 @@ export function Dashboard({
       */}
       <div className="grid gap-4 xl:grid-cols-[minmax(0,3fr)_minmax(0,2fr)] xl:gap-10">
         <div className="min-w-0">
-          <HeroDashboard stav={stav} cr={cr} crHistoricky={crHistoricky} crPocet={crPocet} obcane={obcane} veta={veta} />
+          <HeroDashboard stav={stav} cr={cr} crHistoricky={crHistoricky} crPocet={crPocet} obcane={obcane} veta={veta} pas={<UrgentniPas kandidati={kandidati} zkontrolovano={overeno} ted={tedMs} />} />
         </div>
         {/*
           Sloupec smí být o kousek vyšší než úvod. Dřív byl přilepený
@@ -481,11 +443,11 @@ export function Dashboard({
       </div>
 
       {/*
-        1b — urgentní upozornění na místě, kde byl rámeček s čísly. Čísla jsou
-        v úvodu, tady je odpověď na otázku, se kterou sem člověk chodí: děje se
-        právě teď něco, kvůli čemu bych měl něco dělat?
+        1b — tři témata webu (komunita, dotazník, upozornění) na místě, kde
+        stálo urgentní upozornění. To je teď kompaktní pás přímo v úvodu pod
+        hlavní větou: červený rámeček, když se něco děje, zelený, když ne.
       */}
-      <UrgentniUpozorneni kandidati={kandidati} zkontrolovano={overeno} ted={tedMs} />
+      <TriTemata />
 
       {/* 2 — mřížka stavů + poslední události */}
       <div className="nalet mt-14 sm:mt-20">
@@ -592,39 +554,7 @@ export function Dashboard({
         </div>
       )}
 
-      {/* 2c — čím je tlak tvořený: pavučina typů hrozeb */}
-      <div className="nalet mt-14 border-t border-linka pt-12 sm:mt-20 sm:pt-14">
-        {/*
-          Popisek říká, co data opravdu jsou. Dřív tu stálo „za 90 dní", jenže
-          osy se počítají jako nejvyšší úroveň ze všech záznamů od roku 2014 —
-          bez časového filtru. Popisek, který slibuje jiný výřez než graf
-          ukazuje, je horší než žádný.
-        */}
-        <NadpisSekce
-          stitek="Typy událostí"
-          nadpis={t("Typy evidovaných událostí")}
-          popis="Nejvyšší doložená úroveň v každé oblasti od roku 2014. Prázdné pole = odtud takový záznam nemáme."
-        />
-        {/*
-          Jedna pavučina a jedna tabulka, ne třináct pavučin v karuselu.
-
-          Pavučina ukazuje tvar tlaku pro Evropu jako celek — na to je tvar
-          dobrý. Země se porovnávají v tabulce vedle: řádek země, sloupec typ,
-          v buňce tečka a slovo. Třináct skoro stejných šestiúhelníků vedle
-          sebe porovnat nešlo; tabulka se čte jedním pohledem.
-        */}
-        <div className="grid gap-4 lg:grid-cols-[minmax(0,2fr)_minmax(0,3fr)]">
-          <PavucinaHrozeb
-            nadpis="Evropa jako celek"
-            popis={t("Všechny sledované země od roku 2014.")}
-            tlak={tlakEvropa}
-            odkaz={{ href: "/metodika/", text: "jak se hodnotí →" }}
-            velikostObrazce={260}
-            sPopisky
-          />
-          <TabulkaZemi />
-        </div>
-      </div>
+      {/* 2c — typy událostí jsou v Analýzách (první sekce). */}
 
       {/*
         Pořadí prohozeno: nejdřív seznam záznamů, pak čísla o něm.
@@ -645,57 +575,7 @@ export function Dashboard({
         <Nahlaseni />
       </div>
 
-      {/* 3 — čísla, kde, kdo */}
-      <div className="nalet mt-14 border-t border-linka pt-12 sm:mt-20 sm:pt-14">
-        <NadpisSekce
-          stitek={t("Čísla")}
-          nadpis={t("Kolik toho je, kde a kdo za tím stojí")}
-          popis={t("Počítají se jen skutečné události — ne jejich pokračování, opatření ani prohlášení.")}
-        />
-      </div>
-      <div className="grid gap-8 md:grid-cols-3">
-        <section aria-label={t("Posledních 90 dnů")}>
-          <div className="mb-1.5 flex items-center justify-between"><span className="flex items-center gap-1.5"><span className="stitek">{t("Posledních 90 dnů · incidenty")}</span><Otaznik popis={<span className="block">{uredni} z {dni90.length} případů má úřední zdroj. Počítají se případy a operace proti občanům. Aktualizace a prohlášení ne.</span>} /></span><Tlacitko kam="/udalosti/?obdobi=30d" varianta="tichy" velikost="s" ikonaVpravo="nahoru" trida="[&>svg:last-child]:rotate-90">detail</Tlacitko></div>
-          <div className="grid grid-cols-2 gap-1.5">
-            <Cislo n={zapocitatelne90} slovo={`za 90 dní · celkem ${casyZapocitatelne.length} od 2014`} />
-            <Cislo n={zemi} slovo={sklon(zemi, "země", "země", "zemí")} />
-            <Cislo n={cz + kampane.filter((k) => k.kodyZemi.includes("CZ")).length} slovo="v Česku od 2014" />
-            <Cislo n={potvrzeno} slovo="s potvrzeným pachatelem" />
-          </div>
-          {porovnani90 && (
-            <p className="mt-2 flex flex-wrap items-center gap-2 text-mikro text-tlum2">
-              <Odznak ton={porovnani90.smer === "vyssi" ? "pozor" : porovnani90.smer === "nizsi" ? "klid" : "neutral"} duraz="silny">
-                {porovnani90.slovo} než průměr
-              </Odznak>
-              <span>průměr posledních {porovnani90.zaLet} let je {cislem(porovnani90.prumer)} na čtvrtletí</span>
-            </p>
-          )}
-        </section>
-        <section aria-label="Kde">
-          <div className="mb-1.5 flex items-center justify-between"><span className="stitek">Kde · případy {rok}</span><Tlacitko kam="/zeme/" varianta="tichy" velikost="s" ikonaVpravo="nahoru" trida="[&>svg:last-child]:rotate-90">{t("všechny země")}</Tlacitko></div>
-          <ul className="space-y-0.5">
-            {zeme.map((z) => (
-              <li key={z.kodZeme}><Pruh nazev={<><Vlajka kod={z.kodZeme} /> {z.zeme}</>} n={z.pripady} max={maxZeme} barva={z.kodZeme === "CZ" ? "bg-akcent" : "bg-tlum2/70"} odkaz={`/zeme/${z.kodZeme.toLowerCase()}/`} /></li>
-            ))}
-          </ul>
-        </section>
-        <section aria-label="Kdo">
-          <div className="mb-1.5 flex items-center gap-1.5"><span className="stitek">Kdo · případy {rok}</span><Otaznik popis={<span className="block">První číslo a tmavší část pruhu: případy s potvrzeným původcem. Druhé číslo: všechny případy přisuzované skupině.</span>} /></div>
-          <ul className="space-y-0.5">
-            {puv.skupiny.map((s) => (
-              <li key={s.klic} className="flex min-h-[36px] items-center gap-2">
-                <span className="w-[118px] shrink-0 truncate text-drobne text-inkoust">{s.nazev}</span>
-                <span className="h-[8px] flex-1 overflow-hidden rounded-full bg-linka2">
-                  <span className="block h-full bg-tlum2/70" style={{ width: `${(s.pocet / maxPuv) * 100}%` }}>
-                    <span className="block h-full bg-oranz" style={{ width: `${s.pocet ? (s.potvrzeno / s.pocet) * 100 : 0}%` }} />
-                  </span>
-                </span>
-                <span className="cislice w-12 shrink-0 text-right text-male text-inkoust"><b className="font-bold">{s.potvrzeno}</b><span className="text-tlum2"> / {s.pocet}</span></span>
-              </li>
-            ))}
-          </ul>
-        </section>
-      </div>
+      {/* 3 — čísla „kolik, kde, kdo“ jsou v Analýzách. */}
 
       {/* 5 — sledovat a partneři */}
       <div className="nalet mt-14 border-t border-linka pt-12 sm:mt-20 sm:pt-14">

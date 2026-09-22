@@ -96,6 +96,7 @@ export default function SoukromiStranka() {
           <Oddil cislo="05" nadpis="E-mail pro souhrn a komunitu">
             <p>Na stránce <b>Zapojit se</b> můžete nechat e-mail, když chcete občasný souhrn, pozvánku do komunity, nebo chcete pomáhat. Uložíme <b>jen adresu</b>, co jste zaškrtli, čas a znění souhlasu a slovo, ze které stránky jste přišli. Nic jiného.</p>
             <p>Právní základ: souhlas (čl. 6 odst. 1 písm. a GDPR). Odvoláte ho odkazem v každém e-mailu nebo zprávou správci; adresu do 30 dnů smažeme. Adresu, které do roka nic nepřišlo, smažeme také.</p>
+            <p><b>Žebříček připravenosti</b> (stránka Odolnost domácnosti): když se do něj zařadíte, uložíme skóre, datum, kraj a počet osob (bez jmen), vygenerovanou přezdívku a <b>e-mail a telefon</b>. Veřejně je vidět jen přezdívka, skóre a datum. E-mail a telefon jsou uložené šifrovaně, vidí je pouze správce a slouží ke dvěma věcem: pozvání do komunity a upozornění na kritickou událost, o kterém rozhoduje člověk, ne automat. Právní základ: souhlas. Záznam smažeme na požádání a sami po roce bez kontaktu.</p>
             <p>Adresu nikomu nepředáváme, nepoužíváme ji k reklamě a neposíláme z ní nic, co jste si nevybrali. Souhrn zatím nevychází; dokud nevyjde, nic nepřijde.</p>
           </Oddil>
 

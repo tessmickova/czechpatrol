@@ -173,6 +173,7 @@ Variables) na svůj chat na Telegramu. Podrobně v `api/README.md`.
 | GitHub secrets + variables | `EMAIL_POSKYTOVATEL` (`resend` nebo `postmark`, variable), `EMAIL_API_KLIC` (secret), `EMAIL_ODESILATEL` (variable, např. `kredit@czechpatrol.cz`, s DKIM/SPF na doméně) | e-maily s kódem kreditu zůstávají ve frontě QUEUED; kód je vidět v účtu *(doplněno 22. 9. 2026)* |
 | GitHub secrets | `ESHOP_TOKEN` — serverový token, kterým e-shop volá `POST /kredity/overit` a `POST /kredity/uplatnit` | kredity se neuplatňují; web to říká („po spuštění e-shopu“) *(doplněno 22. 9. 2026)* |
 | GitHub secrets | `KOMUNITA_TELEGRAM_ODKAZ`, `KOMUNITA_WHATSAPP_ODKAZ` — pozvánky do skupiny a chatu pro Premium | v účtu je „pozvánky připravujeme“; odkazy nikdy nejdou do veřejného kódu webu *(doplněno 22. 9. 2026)* |
+| `src/config/web.ts` + secrets | žebříček připravenosti (`/odolnost/`) běží jen s uvedeným `PROVOZOVATEL` a s `KLIC_SIFROVANI` (kontakt se ukládá šifrovaně) | na webu je jen seznam a věta „zařazení připravujeme“; formulář s e-mailem a telefonem se neukáže *(doplněno 22. 9. 2026)* |
 | `src/config/web.ts` | `TIPY_MAIL` | formulář „Chybí tu událost“ odkazuje jen na GitHub |
 | `src/config/web.ts` | `BUY_ME_A_COFFEE_URL` | stránka Podpořit nemá tlačítko |
 | `src/config/web.ts` | `IZS_KONTAKT` | role partnera IZS se nepřijímá |
@@ -433,3 +434,23 @@ sekund. Obojí se stalo hned při prvních dvou bězích 13. 9. 2026.
 
 Když se poměry změní a routine na doménu dosáhne, soubory tím nepřestanou
 platit; jsou to jen zapsaná zjištění, ne náhrada ověření.
+
+
+## Žebříček připravenosti (doplněno 22. 9. 2026)
+
+Kdo vyplní audit na `/odolnost/` (aspoň tři oblasti), může se zařadit do
+žebříčku: skóre 0–100 (`skore()` v `src/lib/odolnost.ts`, 70 bodů zálohy,
+30 horizonty), datum, kraj, počet osob a **vygenerovaná** přezdívka
+(„Bdělý ježek 47“ — nikdy zadaná, aby v ní nebylo jméno). Veřejně
+(`GET /zebricek`) je vidět jen přezdívka, skóre, datum a kraj.
+
+Zařazení vyžaduje **e-mail a telefon**. Ukládají se šifrovaně
+(`KLIC_SIFROVANI`), čte je jen správce (`GET /sprava/zebricek`, každé
+čtení je v auditu) a slouží ke dvěma věcem, které web říká u formuláře a
+na stránce Soukromí: pozvání do komunity a upozornění na kritickou
+událost, o kterém rozhoduje člověk. **Sběr kontaktu bez této informace by
+byl v rozporu s čl. 13 GDPR** — proto se to na webu říká, i když to
+provozovatel původně nechtěl zmiňovat. Stejný e-mail = jeden záznam;
+nové vyplnění přepíše skóre a datum. Záznam bez kontaktu ze strany
+provozovatele (stav `novy`/`nezajem`) se po roce maže. Správce může
+záznam označit (`pozvan`, `clen`, `nezajem`) nebo smazat.

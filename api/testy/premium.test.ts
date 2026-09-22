@@ -176,3 +176,18 @@ describe("e-mail s kódem", () => {
     expect(platnyEmail("jana")).toBe(false);
   });
 });
+
+import { normalizujTelefon, novaPrezdivka, platnyTelefon } from "../src/zebricek";
+
+describe("žebříček", () => {
+  it("přezdívka je slovo, zvíře a číslo — nikdy zadaná", () => {
+    expect(novaPrezdivka(() => 0)).toBe("Bdělý ježek 10");
+    expect(novaPrezdivka()).toMatch(/^[A-ZÁ-Ž][a-zá-ž]+ [a-zá-ž]+ \d{2}$/);
+  });
+  it("telefon: české devítimístné i mezinárodní", () => {
+    expect(platnyTelefon("777 123 456")).toBe(true);
+    expect(platnyTelefon("+420 777 123 456")).toBe(true);
+    expect(platnyTelefon("12345")).toBe(false);
+    expect(normalizujTelefon("777 123 456")).toBe("+420777123456");
+  });
+});

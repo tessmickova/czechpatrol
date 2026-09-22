@@ -2,7 +2,8 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { HlavickaStranky } from "@/components/nadpisy";
 import { Ikona, type NazevIkony } from "@/components/ikony";
-import { incidenty, kampane, svet, tydny } from "@/lib/data";
+import { CislaKdeKdo, TypyUdalosti } from "@/components/cisla-kde-kdo";
+import { hybridniTlak, incidenty, kampane, svet, tydny } from "@/lib/data";
 import { sklon } from "@/components/zeme";
 
 export const metadata: Metadata = {
@@ -23,6 +24,7 @@ export default function Analyzy() {
   const tydnu = tydny().length;
   const aktoru = svet().aktori.length;
   const kampani = kampane().length;
+  const zemi = new Set(incidenty().map((i) => i.kodZeme)).size;
 
   const karty: { href: string; stitek: string; nadpis: string; popis: string; cislo: string; ikona: NazevIkony }[] = [
     {
@@ -32,6 +34,14 @@ export default function Analyzy() {
       popis: "Kolik případů přibylo po měsících a jak se měnilo hodnocení po týdnech. Víc záznamů může znamenat i to, že lépe hledáme.",
       cislo: `${tydnu} ${sklon(tydnu, "hodnocený týden", "hodnocené týdny", "hodnocených týdnů")} · ${zaznamu} ${sklon(zaznamu, "záznam", "záznamy", "záznamů")}`,
       ikona: "graf",
+    },
+    {
+      href: "/zeme/",
+      stitek: "Země",
+      nadpis: "Kde se to děje",
+      popis: "Každá sledovaná země zvlášť: počty, typy hrozeb, vyšetřování a kdy naposledy něco přibylo. Česko je vždy první.",
+      cislo: `${zemi} ${sklon(zemi, "sledovaná země", "sledované země", "sledovaných zemí")}`,
+      ikona: "mapa",
     },
     {
       href: "/svet/",
@@ -67,7 +77,20 @@ export default function Analyzy() {
         uvod="Přehled říká, co se stalo. Tady je, jak se to vyvíjí: v čase, podle aktérů a podle kampaní. Naše hodnocení je vždy označené jako hodnocení."
       />
 
-      <ul className="nalet mt-12 grid gap-3 sm:mt-16 sm:grid-cols-2">
+      {/*
+        Nejdřív data, pak rozcestník. Typy událostí a čísla „kolik, kde,
+        kdo“ byly na úvodní straně; úvod má odpovídat na „děje se něco?“,
+        rozbor patří sem, kde ho člověk hledá.
+      */}
+      <div className="mt-12 space-y-14 sm:mt-16 sm:space-y-20">
+        <TypyUdalosti tlakEvropa={hybridniTlak()} />
+        <CislaKdeKdo vse={incidenty()} kampane={kampane()} ted={Date.now()} />
+      </div>
+
+      <div className="mt-14 border-t border-linka pt-12 sm:mt-20 sm:pt-14">
+        <h2 className="podnadpis text-velke">Rozbory</h2>
+      </div>
+      <ul className="nalet mt-6 grid gap-3 sm:grid-cols-2">
         {karty.map((k) => (
           <li key={k.href}>
             <Link href={k.href} className="flex h-full flex-col gap-3 rounded-[28px] border border-linka2 bg-plocha p-6 transition-colors hover:border-akcent">

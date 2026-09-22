@@ -130,3 +130,31 @@ export function UrgentniUpozorneni({
     </section>
   );
 }
+
+/*
+  Kompaktní podoba pro úvod: jeden řádek v rámečku barvy stavu — červený,
+  když platí výstraha nebo sběr zachytil naléhavou zprávu, zelený, když
+  za posledních 48 hodin nic. Jediné místo na webu, kde má rámeček barvu:
+  tady barva nese odpověď na otázku „děje se něco?“ a čte se dřív než text.
+  Slovo a tečka jsou u toho vždycky — kdo barvy nerozliší, přečte totéž.
+*/
+export function UrgentniPas({ kandidati, zkontrolovano, ted = Date.now() }: { kandidati: Kandidat[]; zkontrolovano: string | null; ted?: number }) {
+  const v = vystraha();
+  const naliehave = naliehaveVOkne(kandidati, useZiveHodiny(ted));
+  const deje = Boolean(v) || naliehave.length > 0;
+  return (
+    <div className={`mt-3 flex flex-wrap items-center gap-x-3 gap-y-1.5 rounded-[14px] border px-3.5 py-2.5 ${deje ? "border-akcent/70" : "border-klid/60"}`} role="status" aria-label="Urgentní upozornění">
+      <span aria-hidden className={`h-[7px] w-[7px] shrink-0 rounded-full ${deje ? "bg-akcent" : "bg-klid"}`} />
+      <span className="min-w-0 flex-1 text-male leading-snug text-tlum">
+        {v ? (
+          <><b className="font-semibold text-inkoust">Platí: {v.nadpis}</b> <span className="cislice text-mikro text-tlum2">{datumCasPraha(v.kdy)}</span></>
+        ) : naliehave.length > 0 ? (
+          <><b className="font-semibold text-inkoust">Sběr zachytil {naliehave.length === 1 ? "naléhavou zprávu" : `${naliehave.length} naléhavé zprávy`}, čekají na ověření.</b> {NAZVY[naliehave[0].naliehave!.druh]}{naliehave[0].publikovano || naliehave[0].zachyceno ? ` · ${datumPraha(naliehave[0].publikovano ?? naliehave[0].zachyceno)}` : ""}</>
+        ) : (
+          <><b className="font-semibold text-inkoust">Teď nic urgentního.</b> Žádná mobilizace, krizové vysílání ani mimořádný stav za {OKNO_HODIN} h{zkontrolovano ? <span className="cislice text-mikro text-tlum2"> · zdroje čteny {datumCasPraha(zkontrolovano)}</span> : ""}</>
+        )}
+      </span>
+      <Link href="/odber/" className="stitek shrink-0 text-tlum2 transition-colors hover:text-inkoust">Jak se to dozvíte hned →</Link>
+    </div>
+  );
+}

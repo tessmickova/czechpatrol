@@ -47,6 +47,8 @@ export async function uklid(env: Env): Promise<void> {
     env.DB.prepare("DELETE FROM zajem WHERE stav = 'nepotvrzeno' AND vytvoreno < ?").bind(pred(365)),
     /* E-maily s kódem se drží rok (viz návrh Premium); platby a kredity 10 let jako doklad — ty se nemažou. */
     env.DB.prepare("DELETE FROM emaily WHERE vytvoreno < ?").bind(pred(365)),
+    /* Záznam v žebříčku, se kterým se rok nic nedělo, odchází i s kontaktem. */
+    env.DB.prepare("DELETE FROM zebricek WHERE vytvoreno < ? AND stav IN ('novy', 'nezajem')").bind(pred(365)),
     /* Účet s platbou zůstává kvůli dokladu (viz ja.smazUcet); ostatní neaktivní účty po dvou letech odcházejí. */
     env.DB.prepare("DELETE FROM ucty WHERE COALESCE(posledni_prihlaseni, vytvoreno) < ? AND role != 'admin' AND id NOT IN (SELECT ucet_id FROM platby) AND id NOT IN (SELECT ucet_id FROM kredity)").bind(pred(730)),
   ]);

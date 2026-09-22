@@ -10,8 +10,8 @@ import { PrepinacJazyku } from "./prepinac-jazyku";
 import { useT } from "@/lib/i18n";
 
 /*
-  Šest cílů. Vývoj, Aktéři a Manipulace stojí pod jedním rozcestníkem
-  Analýzy — jsou to tři odpovědi na tutéž otázku „co z toho plyne“ a
+  Pět cílů. Vývoj, Aktéři, Manipulace a Země stojí pod jedním rozcestníkem
+  Analýzy — jsou to odpovědi na tutéž otázku „co z toho plyne“ a
   v liště by se rozpadly do nesrozumitelného výčtu.
 
   Můj přehled v liště není: je to funkce po přihlášení a bydlí
@@ -21,7 +21,6 @@ export const HLAVNI = [
   { href: "/", label: "Přehled" },
   { href: "/udalosti/", label: "Události" },
   { href: "/manipulace/", label: "Manipulace" },
-  { href: "/zeme/", label: "Země" },
   { href: "/analyzy/", label: "Analýzy" },
   { href: "/pripravenost/", label: "Připravenost" },
 ];

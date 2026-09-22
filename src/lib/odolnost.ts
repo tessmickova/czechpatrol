@@ -554,6 +554,22 @@ export function pocty(s: Souhrn): { vPoradku: number; slabin: number; kritickych
   };
 }
 
+/**
+ * Skóre 0–100 pro srovnání v žebříčku. Orientační hra, ne doklad.
+ *
+ * Dvě části: 70 bodů za zálohy (každá oblast podle důležitosti, plný
+ * počet za tři nezávislé cesty), 30 bodů za horizonty (kolik z šesti je
+ * „připraveno“, půl bodu za „částečně“). Oblasti označené „řeším jinak“
+ * se nepočítají ani do jmenovatele. Prázdný dotazník = 0.
+ */
+export function skore(s: Souhrn): number {
+  const hodnocene = s.hodnoceni.filter((h) => !h.nemohu);
+  const vahaCelkem = hodnocene.reduce((a, h) => a + h.funkce.dulezitost, 0);
+  const zalohy = vahaCelkem ? hodnocene.reduce((a, h) => a + (h.funkce.dulezitost * h.redundance) / 3, 0) / vahaCelkem : 0;
+  const hor = s.horizonty.length ? s.horizonty.reduce((a, h) => a + (h.stav === "pripraveno" ? 1 : h.stav === "castecne" ? 0.5 : 0), 0) / s.horizonty.length : 0;
+  return Math.round(70 * zalohy + 30 * hor);
+}
+
 /** Lidský zápis doby: 47 min, 4 h 21 min, 1 d 7 h. */
 export function lidskaDoba(dni: number): string {
   if (!Number.isFinite(dni)) return "bez limitu kapacity";

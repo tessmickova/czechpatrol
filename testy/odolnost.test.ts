@@ -212,3 +212,16 @@ describe("zdarma: nálezy a počty", () => {
     expect(bezpecnostniNalezy(jinak, s2.hodnoceni).some((x) => x.klic === "bez-cesty-pitna-voda")).toBe(false);
   });
 });
+
+import { skore } from "../src/lib/odolnost";
+
+describe("skóre pro žebříček", () => {
+  it("prázdný profil 0, plné zálohy blízko 70+, vždy v rozsahu 0–100", () => {
+    expect(skore(souhrn(PRAZDNY_PROFIL))).toBe(0);
+    const vse: Record<string, string[]> = {};
+    for (const f of FUNKCE) vse[f.klic] = f.cesty.filter((c) => !c.kontext && !c.pocet).map((c) => c.klic);
+    const s = skore(souhrn({ ...PRAZDNY_PROFIL, cesty: vse, zasoby: { pitnaVodaL: 500, uzitkovaVodaL: 500, jidloDni: 90, lekyDni: 90 } }));
+    expect(s).toBeGreaterThanOrEqual(60);
+    expect(s).toBeLessThanOrEqual(100);
+  });
+});

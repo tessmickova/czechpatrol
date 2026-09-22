@@ -74,9 +74,11 @@ function Merak({
 }
 
 export function HeroDashboard({
-  stav, cr, crHistoricky, crPocet, obcane, veta,
+  stav, cr, crHistoricky, crPocet, obcane, veta, pas,
 }: {
   stav: CelkovyStav; cr: Uroven | null; crHistoricky: Uroven | null;
+  /** Kompaktní urgentní pás pod úvodní větou (viz urgentni.tsx). */
+  pas?: React.ReactNode;
   /** Kolik případů a kolik manipulačních operací v Česku za 90 dní. */
   crPocet: { pripadu: number; kampani: number };
   obcane: { uroven: Uroven; popis: string; neovereno: number };
@@ -128,6 +130,7 @@ export function HeroDashboard({
         <strong className="font-bold text-inkoust">{veta.cesko}</strong>{" "}
         <span className="text-tlum">{veta.evropa}</span>
       </p>
+      {pas}
       </div>
 
       {/*
