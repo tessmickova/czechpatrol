@@ -27,6 +27,23 @@ export interface Cesta {
   jak?: string;
   /** Potřebuje elektřinu, ale stačí vlastní zdroj (powerbanka, powerstation). */
   zVlastniEnergie?: boolean;
+  /** Obecný název věci, která cestu zajistí — bez značky a ceny. Z toho je seznam Co dokoupit. */
+  koupit?: string;
+  /** Cesta platí až od počtu kusů ve vybavení; „naOsobu“ = má jich být tolik co lidí. */
+  pocet?: { pole: string; min: number; naOsobu?: boolean };
+  /** Cesta plyne z kontextu domácnosti (např. rodina v dosahu), ne ze zaškrtnutí. */
+  kontext?: keyof Kontext;
+}
+
+/** Kontext domácnosti. Bez adresy: jen druh bydlení a sídla, počty a rodina v dosahu. */
+export interface Kontext {
+  bydleni: "byt" | "dum" | "";
+  sidlo: "mesto" | "venkov" | "";
+  deti: number;
+  seniori: number;
+  /** Někdo v domácnosti je závislý na péči, léku nebo přístroji (bez podrobností). */
+  zavislyNaPeci: boolean;
+  rodinaVDosahu: boolean;
 }
 
 export interface Funkce {
@@ -36,6 +53,7 @@ export interface Funkce {
   /** 3 = bez toho se nedá být, 2 = důležité, 1 = pohodlí. */
   dulezitost: number;
   sezona?: string;
+  ikona: string;
   zasoba?: { jednotka: string; naOsobuDen?: number; naZvireDen?: number; poznamka: string };
   cesty: Cesta[];
   nulaKc: string[];
@@ -45,7 +63,8 @@ export interface Funkce {
 export const FUNKCE = katalog.funkce as Funkce[];
 export const ZAVISLOSTI = katalog.zavislosti as Record<string, { nazev: string }>;
 export const VERZE_KATALOGU = katalog.verze;
-export const HORIZONTY_DNI = [1, 3, 7, 14, 30] as const;
+/* 72 hodin je základ, ne cíl; 24 hodin se nepočítá — je to málo. Konec u 45 a 60 dní. */
+export const HORIZONTY_DNI = [3, 7, 14, 30, 45, 60] as const;
 export type HorizontDni = (typeof HORIZONTY_DNI)[number];
 
 /** Co člověk zadává. Nic víc se neukládá — u každého pole je řečeno proč. */
@@ -61,6 +80,10 @@ export interface Profil {
   energie: { kapacitaWh: number; potrebaDenWh: number; dobijeni: boolean };
   /** Co člověk označil jako neřešitelné: klíč funkce → důvod. */
   nemohu: Record<string, string>;
+  /** Kontext domácnosti (rozšířené vstupy). */
+  kontext: Kontext;
+  /** Počty kusů vybavení, ze kterých se počítají cesty s „pocet“ (vysílačky…). null = nezadáno. */
+  vybaveni: Record<string, number | null>;
 }
 
 export const PRAZDNY_PROFIL: Profil = {
@@ -70,6 +93,8 @@ export const PRAZDNY_PROFIL: Profil = {
   zasoby: { pitnaVodaL: null, uzitkovaVodaL: null, jidloDni: null, lekyDni: null },
   energie: { kapacitaWh: 0, potrebaDenWh: 0, dobijeni: false },
   nemohu: {},
+  kontext: { bydleni: "", sidlo: "", deti: 0, seniori: 0, zavislyNaPeci: false, rodinaVDosahu: false },
+  vybaveni: {},
 };
 
 export const KLIC_ULOZISTE_ODOLNOSTI = "czechpatrol:odolnost:v1";
@@ -119,12 +144,32 @@ function nezavisle(cesty: Cesta[]): number {
   return nej;
 }
 
+/** Zaškrtnutá, nebo plynoucí z kontextu, nebo daná počtem kusů. */
+export function maCestu(c: Cesta, f: Funkce, profil: Profil, vybrane: Set<string>): boolean {
+  if (c.kontext) return Boolean(profil.kontext[c.kontext]);
+  if (c.pocet) {
+    const n = profil.vybaveni[c.pocet.pole];
+    return typeof n === "number" && n >= c.pocet.min;
+  }
+  return vybrane.has(c.klic);
+}
+
+/** Vysílačky pro dvojici stačí; „pro každého“ je lepší. Vrací větu k zobrazení, nebo null. */
+export function poznamkaKPoctu(c: Cesta, profil: Profil): string | null {
+  if (!c.pocet) return null;
+  const n = profil.vybaveni[c.pocet.pole];
+  if (typeof n !== "number") return `Zadejte počet kusů (od ${c.pocet.min}).`;
+  if (n < c.pocet.min) return `Máte ${n}; cesta platí od ${c.pocet.min} kusů.`;
+  if (c.pocet.naOsobu && n < profil.osob) return `Máte ${n} pro ${profil.osob} ${profil.osob < 5 ? "osoby" : "osob"}; ideálně pro každého, kdo se může pohybovat sám.`;
+  return null;
+}
+
 export function hodnotFunkci(f: Funkce, profil: Profil): HodnoceniFunkce {
   const vybrane = new Set(profil.cesty[f.klic] ?? []);
   /* Vlastní zdroj energie sejme závislost na síti u přenosných zařízení; pevná instalace ji má dál. */
   const vlastniEnergie = profil.energie.kapacitaWh > 0;
   const mam = f.cesty
-    .filter((c) => vybrane.has(c.klic))
+    .filter((c) => maCestu(c, f, profil, vybrane))
     .map((c) => (vlastniEnergie && c.zVlastniEnergie ? { ...c, zavislosti: c.zavislosti.filter((z) => z !== "elektrina") } : c));
   const pocty = new Map<string, number>();
   for (const c of mam) for (const z of c.zavislosti) pocty.set(z, (pocty.get(z) ?? 0) + 1);
@@ -220,6 +265,17 @@ export function horizonty(profil: Profil): Horizont[] {
 
 /* ---------- co mi ještě chybí ---------- */
 
+/** Věta o tom, koho se to v domácnosti týká — z kontextu, bez podrobností. */
+export function kohoSeTyka(profil: Profil): string {
+  const k = profil.kontext;
+  const casti: string[] = [];
+  if (k.deti > 0) casti.push(`${k.deti} ${k.deti === 1 ? "dítě" : k.deti < 5 ? "děti" : "dětí"}`);
+  if (k.seniori > 0) casti.push(`${k.seniori} ${k.seniori === 1 ? "senior" : k.seniori < 5 ? "senioři" : "seniorů"}`);
+  if (k.zavislyNaPeci) casti.push("někdo závislý na péči");
+  if (!casti.length) return "";
+  return ` V domácnosti: ${casti.join(", ")} — výpadek dopadá dřív a hůř.`;
+}
+
 export interface Doporuceni {
   druh: "kriticka-zavislost" | "bez-zalohy" | "spolecne-selhani" | "zasoba" | "kompenzace";
   nadpis: string;
@@ -268,7 +324,7 @@ export function coChybi(profil: Profil): Doporuceni[] {
       druh: "bez-zalohy",
       nadpis: h.redundance === 0 ? `${f.nazev}: žádná zaškrtnutá cesta` : `${f.nazev}: jediná cesta (${h.mam[0].nazev.toLowerCase()})`,
       proc: h.redundance === 0 ? "Bez cesty nevíme, jak by domácnost tuhle potřebu řešila." : "Když ta jedna cesta selže, není čím ji nahradit.",
-      zaklad: `Důležitost ${f.dulezitost} ze 3; potřeba: ${f.potreba}.`,
+      zaklad: `Důležitost ${f.dulezitost} ze 3; potřeba: ${f.potreba}.${kohoSeTyka(profil)}`,
       resi: [f.nazev],
       alternativy: kandidati.slice(0, 3).map((c) => `${c.nazev}${c.zadarmo ? " (0 Kč)" : ""}`),
       kdyNeni: "Když už máte cestu, kterou jsme v seznamu nenašli — zaškrtněte ji, nebo ji označte jako neřešitelnou.",
@@ -293,7 +349,7 @@ export function coChybi(profil: Profil): Doporuceni[] {
     });
   }
 
-  /* 4. Zásoby, které dojdou dřív než za 72 hodin. */
+  /* 4. Zásoby, které dojdou dřív než za 72 hodin — základ, pod který nejde jít. */
   const h72 = horizonty(profil).find((x) => x.dni === 3)!;
   for (const v of h72.dojde.slice(0, 1)) {
     vysledek.push({
@@ -324,6 +380,46 @@ export function coChybi(profil: Profil): Doporuceni[] {
   return vysledek.slice(0, 5);
 }
 
+/* ---------- co dokoupit ---------- */
+
+export interface Nakup {
+  funkce: string;
+  nazevFunkce: string;
+  polozka: string;
+  /** Proč právě tohle: jednou větou z modelu. */
+  proc: string;
+}
+
+/**
+ * Seznam věcí, které chybějící cesty zajistí. Jen u funkcí bez nezávislé
+ * zálohy, které člověk neoznačil jako neřešitelné. Věci bez značky a ceny;
+ * napřed u nejdůležitějších funkcí. Nikdy víc než osm — seznam na dva
+ * nákupy, ne katalog.
+ */
+export function coDokoupit(profil: Profil): Nakup[] {
+  const hod = FUNKCE.map((f) => hodnotFunkci(f, profil))
+    .filter((h) => h.redundance < 3 && !h.nemohu)
+    .sort((a, b) => b.funkce.dulezitost - a.funkce.dulezitost || a.redundance - b.redundance);
+  const videno = new Set<string>();
+  const vysledek: Nakup[] = [];
+  for (const h of hod) {
+    const vybrane = new Set(profil.cesty[h.funkce.klic] ?? []);
+    for (const c of h.funkce.cesty) {
+      if (!c.koupit || maCestu(c, h.funkce, profil, vybrane) || videno.has(c.koupit)) continue;
+      videno.add(c.koupit);
+      vysledek.push({
+        funkce: h.funkce.klic,
+        nazevFunkce: h.funkce.nazev,
+        polozka: c.koupit,
+        proc: h.redundance === 0 ? `${h.funkce.nazev}: zatím žádná cesta.` : h.redundance === 1 ? `${h.funkce.nazev}: jediná cesta, tohle přidá zálohu bez vnější závislosti.` : `${h.funkce.nazev}: zálohy sdílejí závislost, tohle je nezávislá.`,
+      });
+      if (vysledek.length >= 8) return vysledek;
+      break; // jedna věc na funkci a kolo; další kolo až po té nejdůležitější
+    }
+  }
+  return vysledek;
+}
+
 /* ---------- souhrn pro dashboard ---------- */
 
 export interface Souhrn {
@@ -332,6 +428,7 @@ export interface Souhrn {
   horizonty: Horizont[];
   vydrze: Vydrz[];
   doporuceni: Doporuceni[];
+  nakup: Nakup[];
   nejslabsi: HodnoceniFunkce | null;
   /** Kolik funkcí má aspoň dvě nezávislé cesty, z kolika. */
   vyreseno: { n: number; z: number };
@@ -347,6 +444,7 @@ export function souhrn(profil: Profil): Souhrn {
     horizonty: horizonty(profil),
     vydrze: vydrze(profil),
     doporuceni: coChybi(profil),
+    nakup: coDokoupit(profil),
     nejslabsi,
     vyreseno: { n: hodnoceni.filter((h) => h.redundance === 3).length, z: hodnoceni.length },
   };
@@ -376,6 +474,8 @@ export function nactiProfil(): Profil | null {
       zasoby: { ...PRAZDNY_PROFIL.zasoby, ...(p.zasoby ?? {}) },  // null zůstává null: nezadáno není nula
       energie: { ...PRAZDNY_PROFIL.energie, ...(p.energie ?? {}) },
       nemohu: p.nemohu && typeof p.nemohu === "object" ? p.nemohu : {},
+      kontext: { ...PRAZDNY_PROFIL.kontext, ...(p.kontext ?? {}) },
+      vybaveni: p.vybaveni && typeof p.vybaveni === "object" ? p.vybaveni : {},
     };
   } catch {
     return null;

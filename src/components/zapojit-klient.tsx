@@ -206,8 +206,8 @@ export function NavadeniZapojeni() {
 /** Karta s dalšími kroky po přihlášení. Stejný tón: co existuje, ne co musíte. */
 export function DalsiKroky() {
   return (
-    <div className="rounded-[22px] border border-akcent/40 bg-akcent/[0.07] p-5">
-      <div className="stitek mb-1 !text-akcent">Další kroky</div>
+    <div className="rounded-[22px] border border-linka2 bg-plocha p-5">
+      <div className="mb-1 flex items-center gap-2"><span aria-hidden className="h-[6px] w-[6px] rounded-full bg-akcent" /><span className="stitek">Další kroky</span></div>
       <p className="text-zaklad text-tlum">Účet je hotový. Co dál dává smysl — vyberte si, nic z toho není povinné.</p>
       <ul className="mt-3 space-y-2">
         {KANALY.telegram && (

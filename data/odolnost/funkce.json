@@ -1,6 +1,6 @@
 {
-  "_poznamka": "Katalog funkcí domácnosti pro odolnost. Model: potřeba → funkce → cesty (každá cesta má závislosti) → kompenzace. Deterministická data, žádný model. Texty jsou obecné a neobsahují zdravotní dávkování, úpravu vody ani zásahy do elektroinstalace — na to odkazují na oficiální postupy. Změna = nová verze. Cesta se „zVlastniEnergie“ potřebuje elektřinu, ale stačí jí vlastní zdroj (powerbanka, powerstation): má-li ho domácnost, závislost na síti u ní odpadá.",
-  "verze": "2026-09-22",
+  "_poznamka": "Katalog funkcí domácnosti pro odolnost. Model: potřeba → funkce → cesty (každá cesta má závislosti) → kompenzace. Deterministická data, žádný model. Texty jsou obecné a neobsahují zdravotní dávkování, úpravu vody ani zásahy do elektroinstalace — na to odkazují na oficiální postupy. Změna = nová verze. Cesta se „zVlastniEnergie“ potřebuje elektřinu, ale stačí jí vlastní zdroj (powerbanka, powerstation): má-li ho domácnost, závislost na síti u ní odpadá. Pole „koupit“ u cesty je obecný název věci (bez značky a ceny), která cestu zajistí; z něj se skládá seznam Co dokoupit. „pocet“ říká, ze kterého počtu ve vybavení se cesta počítá a od kolika kusů.",
+  "verze": "2026-09-23",
   "zavislosti": {
     "elektrina": {
       "nazev": "Elektřina ze sítě"
@@ -71,7 +71,16 @@
           "zavislosti": [],
           "zasoba": true,
           "zadarmo": true,
-          "jak": "Voda z kohoutku v čistých uzavřených nádobách, obměňovaná. Nestojí nic navíc."
+          "jak": "Voda z kohoutku v čistých uzavřených nádobách, obměňovaná. Nestojí nic navíc.",
+          "koupit": "nádoby na vodu s víkem (10–20 l)"
+        },
+        {
+          "klic": "uprava",
+          "nazev": "Filtr nebo prostředek na úpravu vody, používaný podle návodu výrobce a doporučení HZS",
+          "zavislosti": [],
+          "zadarmo": false,
+          "koupit": "filtr na vodu nebo prostředek na úpravu vody (podle výrobce)",
+          "poznamka": "Postup úpravy web nedává; řídí se návodem a oficiálním doporučením."
         },
         {
           "klic": "nahradni-zasobovani",
@@ -92,7 +101,8 @@
         "Bez místa na zásobu: menší nádoby na více místech (pod dřezem, ve skříni) místo jednoho velkého barelu.",
         "Bez vlastní studny: znát výdejní místa obce a mít čím vodu přinést (nádoby s víkem).",
         "Úprava vody z neověřeného zdroje jen podle oficiálních doporučení (HZS, hygienická stanice); web vlastní postup nedává."
-      ]
+      ],
+      "ikona": "voda"
     },
     {
       "klic": "hygiena",
@@ -127,13 +137,15 @@
           "nazev": "Zásoba užitkové vody (vana, sud, dešťová voda)",
           "zavislosti": [],
           "zasoba": true,
-          "zadarmo": true
+          "zadarmo": true,
+          "koupit": "sud nebo velké nádoby na užitkovou vodu"
         },
         {
           "klic": "suche-wc",
           "nazev": "Řešení WC bez vody (pytle, chemické nebo suché WC)",
           "zavislosti": [],
-          "zadarmo": false
+          "zadarmo": false,
+          "koupit": "pytle na WC a stahovací pásky, dezinfekce rukou"
         }
       ],
       "nulaKc": [
@@ -143,7 +155,8 @@
       "kompenzace": [
         "V bytě bez možnosti skladovat: pevné pytle a stahovací pásky na WC, vlhčené ubrousky a dezinfekce rukou nahradí část spotřeby vody.",
         "Hygiena je obvykle první limit — plánujte ji zvlášť od pití."
-      ]
+      ],
+      "ikona": "voda"
     },
     {
       "klic": "teplo",
@@ -189,7 +202,8 @@
           "klic": "jedna-mistnost",
           "nazev": "Plán jedné vytápěné místnosti a teplé vrstvy oblečení, spacáky, deky",
           "zavislosti": [],
-          "zadarmo": true
+          "zadarmo": true,
+          "koupit": "spacák nebo teplá deka pro každého člena"
         }
       ],
       "nulaKc": [
@@ -200,7 +214,8 @@
       "kompenzace": [
         "V bytě bez možnosti kamen: plán jedné místnosti, teplé vrstvy, spacák na každou osobu, a znát místo, kam se přesunout (rodina, obec).",
         "Spalovací topidla uvnitř jen ta, která jsou k tomu určená; jinak hrozí otrava oxidem uhelnatým — postupujte podle návodu výrobce a HZS."
-      ]
+      ],
+      "ikona": "plamen"
     },
     {
       "klic": "vareni",
@@ -228,7 +243,8 @@
           "klic": "kartuse",
           "nazev": "Vařič na kartuše nebo propan-butan s rezervou",
           "zavislosti": [],
-          "zadarmo": false
+          "zadarmo": false,
+          "koupit": "vařič na kartuše a zásoba kartuší"
         },
         {
           "klic": "kamna",
@@ -249,7 +265,8 @@
       ],
       "kompenzace": [
         "Bez vařiče: plánovat zásobu jídla bez vaření a teplé jídlo od sousedů nebo z obce."
-      ]
+      ],
+      "ikona": "plamen"
     },
     {
       "klic": "svetlo",
@@ -269,7 +286,8 @@
           "klic": "baterky",
           "nazev": "Svítilny a čelovky s náhradními bateriemi",
           "zavislosti": [],
-          "zadarmo": false
+          "zadarmo": false,
+          "koupit": "svítilna nebo čelovka a náhradní baterie pro každého"
         },
         {
           "klic": "dobijeci",
@@ -278,7 +296,8 @@
             "elektrina"
           ],
           "zadarmo": false,
-          "zVlastniEnergie": true
+          "zVlastniEnergie": true,
+          "koupit": "dobíjecí lampa"
         },
         {
           "klic": "svicky",
@@ -293,7 +312,8 @@
       ],
       "kompenzace": [
         "Světlo bývá vyřešené nejsnáz — pátý způsob osvětlení už odolnost nezvýší. Pozornost patří vodě a teplu."
-      ]
+      ],
+      "ikona": "svetlo"
     },
     {
       "klic": "komunikace",
@@ -323,6 +343,25 @@
           "zVlastniEnergie": true
         },
         {
+          "klic": "vysilacky",
+          "nazev": "Vysílačky (PMR) s náhradními bateriemi pro každou dvojici",
+          "zavislosti": [],
+          "zadarmo": false,
+          "koupit": "vysílačky PMR a náhradní baterie",
+          "pocet": {
+            "pole": "vysilacky",
+            "min": 2,
+            "naOsobu": true
+          }
+        },
+        {
+          "klic": "satelit",
+          "nazev": "Satelitní komunikátor nebo telefon",
+          "zavislosti": [],
+          "zadarmo": false,
+          "koupit": "satelitní komunikátor (nouzové zprávy bez sítě)"
+        },
+        {
           "klic": "pevna",
           "nazev": "Pevná linka nebo internetové volání",
           "zavislosti": [
@@ -342,16 +381,25 @@
           "nazev": "Domluva se sousedy, kdo komu dá vědět",
           "zavislosti": [],
           "zadarmo": true
+        },
+        {
+          "klic": "rodina-dosah",
+          "nazev": "Rodina nebo blízcí v pěší dostupnosti",
+          "zavislosti": [],
+          "zadarmo": true,
+          "kontext": "rodinaVDosahu"
         }
       ],
       "nulaKc": [
         "Domluvte v rodině: když nejde volat, kde a kdy se sejdeme a kdo se stará o koho.",
         "Napište si důležitá čísla na papír; telefon může být vybitý.",
-        "Tísňová volání 112 fungují i bez kreditu a přes cizí síť, pokud nějaká v dosahu je."
+        "Tísňová volání 112 fungují i bez kreditu a přes cizí síť, pokud nějaká v dosahu je.",
+        "Domluvte se s rodinou v dosahu, kdo za kým dojde pěšky, když nejde volat."
       ],
       "kompenzace": [
         "Bez druhého telefonu: domluvené místo setkání a papírové kontakty jsou nezávislé na síti."
-      ]
+      ],
+      "ikona": "komunikace"
     },
     {
       "klic": "informace",
@@ -382,7 +430,8 @@
           "klic": "radio-baterie",
           "nazev": "Rádio na baterie, kliku nebo v autě (Český rozhlas při krizi)",
           "zavislosti": [],
-          "zadarmo": false
+          "zadarmo": false,
+          "koupit": "rádio na baterie nebo kliku"
         },
         {
           "klic": "sireny-obec",
@@ -398,6 +447,13 @@
           "nazev": "Stažené offline informace (postupy, kontakty, mapy)",
           "zavislosti": [],
           "zadarmo": true
+        },
+        {
+          "klic": "mapa-papir",
+          "nazev": "Papírová mapa okolí a kraje",
+          "zavislosti": [],
+          "zadarmo": false,
+          "koupit": "papírová mapa okolí a kraje"
         }
       ],
       "nulaKc": [
@@ -407,7 +463,8 @@
       ],
       "kompenzace": [
         "Bez rádia: autorádio, soused s rádiem, rozhlas obce. Internet a mobilní data jsou jedna cesta, ne dvě — sdílejí síť i napájení."
-      ]
+      ],
+      "ikona": "radar"
     },
     {
       "klic": "zdravi",
@@ -436,7 +493,15 @@
           "klic": "lekarnicka",
           "nazev": "Lékárnička a někdo, kdo umí první pomoc",
           "zavislosti": [],
-          "zadarmo": false
+          "zadarmo": false,
+          "koupit": "lékárnička pro domácnost"
+        },
+        {
+          "klic": "kurz",
+          "nazev": "Někdo v domácnosti absolvoval kurz první pomoci",
+          "zavislosti": [],
+          "zadarmo": false,
+          "koupit": "kurz první pomoci (ČČK, HZS)"
         },
         {
           "klic": "zdravotni-zarizeni-napajeni",
@@ -446,6 +511,13 @@
           ],
           "zadarmo": false,
           "zVlastniEnergie": true
+        },
+        {
+          "klic": "rodina-dosah",
+          "nazev": "Rodina nebo blízcí v dosahu, kteří pomohou s péčí",
+          "zavislosti": [],
+          "zadarmo": true,
+          "kontext": "rodinaVDosahu"
         }
       ],
       "nulaKc": [
@@ -455,7 +527,8 @@
       ],
       "kompenzace": [
         "Zdravotní závislost na elektřině (přístroj) řešte s lékařem a výrobcem, ne podle webu; obec a IZS mají evidenci pro přednostní pomoc — zeptejte se."
-      ]
+      ],
+      "ikona": "srdce"
     },
     {
       "klic": "doprava",
@@ -470,6 +543,21 @@
             "palivo"
           ],
           "zadarmo": false
+        },
+        {
+          "klic": "elektromobil",
+          "nazev": "Elektromobil s nabitou baterií",
+          "zavislosti": [
+            "elektrina"
+          ],
+          "zadarmo": false
+        },
+        {
+          "klic": "palivo-rezerva",
+          "nazev": "Rezerva paliva skladovaná podle předpisů",
+          "zavislosti": [],
+          "zadarmo": false,
+          "koupit": "schválený kanystr a rezerva paliva (skladujte podle pravidel pro hořlaviny)"
         },
         {
           "klic": "mhd",
@@ -493,6 +581,15 @@
             "palivo"
           ],
           "zadarmo": true
+        },
+        {
+          "klic": "rodina-dosah",
+          "nazev": "Rodina nebo blízcí v dosahu s autem",
+          "zavislosti": [
+            "palivo"
+          ],
+          "zadarmo": true,
+          "kontext": "rodinaVDosahu"
         }
       ],
       "nulaKc": [
@@ -501,7 +598,8 @@
       ],
       "kompenzace": [
         "Bez auta: domluva s někým, kdo auto má, a plán, kam se dá dojít pěšky."
-      ]
+      ],
+      "ikona": "mapa"
     },
     {
       "klic": "finance",
@@ -538,7 +636,8 @@
       ],
       "kompenzace": [
         "Bez možnosti odkládat hotovost: zásoby na několik dní nahradí nutnost nakupovat."
-      ]
+      ],
+      "ikona": "banky"
     },
     {
       "klic": "potraviny",
@@ -590,7 +689,8 @@
       ],
       "kompenzace": [
         "Bez místa: zásoba v tom, co běžně jíte, ne ve speciálních balíčcích; stačí o jeden nákup víc."
-      ]
+      ],
+      "ikona": "jidlo"
     }
   ]
 }

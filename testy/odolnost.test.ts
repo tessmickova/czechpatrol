@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { bodySelhani, coChybi, FUNKCE, hodnotFunkci, horizonty, lidskaDoba, PRAZDNY_PROFIL, souhrn, vydrze, ZAVISLOSTI, type Profil } from "../src/lib/odolnost";
+import { bodySelhani, coChybi, coDokoupit, FUNKCE, hodnotFunkci, horizonty, lidskaDoba, PRAZDNY_PROFIL, souhrn, vydrze, ZAVISLOSTI, type Profil } from "../src/lib/odolnost";
 
 /*
   Model odolnosti je deterministický a musí dávat stejný výsledek pro
@@ -77,7 +77,32 @@ describe("horizonty a spotřeba", () => {
 
   it("nula litrů je nula dní, ne „nezadáno“", () => {
     const h = horizonty(profil({}, { osob: 1, zasoby: { pitnaVodaL: 0, uzitkovaVodaL: null, jidloDni: null, lekyDni: null } }));
-    expect(h.find((x) => x.dni === 1)!.stav).toBe("slabe");
+    expect(h.find((x) => x.dni === 3)!.stav).toBe("slabe");
+  });
+
+  it("horizonty začínají na 72 hodinách a končí u 60 dní", () => {
+    const dni = horizonty(profil({})).map((h) => h.dni);
+    expect(dni[0]).toBe(3);
+    expect(dni[dni.length - 1]).toBe(60);
+    expect(dni).not.toContain(1);
+    expect(dni).toContain(45);
+  });
+
+  it("vysílačky platí od dvou kusů; rodina v dosahu plyne z kontextu", () => {
+    const f = FUNKCE.find((x) => x.klic === "komunikace")!;
+    expect(hodnotFunkci(f, profil({}, { vybaveni: { vysilacky: 1 } })).mam.map((c) => c.klic)).not.toContain("vysilacky");
+    expect(hodnotFunkci(f, profil({}, { vybaveni: { vysilacky: 2 } })).mam.map((c) => c.klic)).toContain("vysilacky");
+    const s = hodnotFunkci(f, profil({ komunikace: ["mobil-a"] }, { kontext: { ...PRAZDNY_PROFIL.kontext, rodinaVDosahu: true } }));
+    expect(s.mam.map((c) => c.klic)).toContain("rodina-dosah");
+    expect(s.redundance).toBe(3);
+  });
+
+  it("co dokoupit: věci bez značky, nejdřív k nejdůležitější funkci, nejvýš osm", () => {
+    const n = coDokoupit(profil({}));
+    expect(n.length).toBeLessThanOrEqual(8);
+    expect(n[0].funkce).toMatch(/pitna-voda|teplo|komunikace|informace|zdravi|potraviny/);
+    for (const x of n) expect(x.polozka).not.toMatch(/Kč|\d+ ?Kč/);
+    expect(coDokoupit(profil({ "pitna-voda": ["vodovod", "zasoba"] })).some((x) => x.polozka.includes("nádoby na vodu"))).toBe(false);
   });
 
   it("vlastní zdroj energie sejme závislost telefonu na síti, pevný internet ji má dál", () => {

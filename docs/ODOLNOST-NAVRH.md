@@ -38,9 +38,10 @@ Z toho `src/lib/odolnost.ts` deterministicky počítá:
   bez vlastního zdroje energie).
 - **Jediný bod selhání**: závislost, jejíž výpadek vypne víc funkcí naráz
   („Výpadek elektřiny u vás vypne 4 funkce“).
-- **Horizonty** 24 h / 72 h / 7 / 14 / 30 dní z uložených zásob
-  s viditelnými předpoklady; „nezadáno“ není nula a nikdy neznamená
-  „připraveno“.
+- **Horizonty** 72 h / 7 / 14 / 30 / 45 / 60 dní z uložených zásob
+  s viditelnými předpoklady; 24 hodin se nepočítá (rozhodnutí provozovatele
+  23. 9. 2026: je to málo, základ je 72 hodin); „nezadáno“ není nula a nikdy
+  neznamená „připraveno“.
 - **Co má teď největší smysl**: nejvýš pět věcí, nejslabší důležitý
   článek dřív než další zlepšení nejsilnějšího (světlo s pěti způsoby se
   nenabízí). Každé doporučení má: proč to vidíte, na čem stojí, co řeší,
@@ -52,6 +53,14 @@ Z toho `src/lib/odolnost.ts` deterministicky počítá:
 - **Vlastní zdroj energie** (powerbanka, powerstation) sejme závislost
   na síti u přenosných zařízení; pevná instalace (kotel, pevný internet)
   ji má dál.
+- **Rozšířené vstupy pro pokročilé** (od 23. 9. 2026): bydlení a sídlo
+  bez adresy, děti a senioři, závislost na péči, rodina v dosahu (plyne z ní
+  cesta u spojení, dopravy a péče), počty vysílaček a powerbank. Vysílačky
+  se počítají od dvou kusů, ideálně pro každého.
+- **Co dokoupit**: obecné věci bez značky a ceny, ke každé funkci bez
+  nezávislé zálohy jedna, nejvýš osm. Odkazy do obchodů (náš e-shop, Rohlík,
+  Alza) se ukážou, až budou adresy v konfiguraci `ESHOP` a `OBCHODY`;
+  cizí obchody vedou na vyhledávání věci, ne na produkt.
 
 Bez skóre 0–100. Jedno číslo by tvrdilo přesnost, kterou model nemá;
 místo něj tři vysvětlitelná čísla (nezávislá záloha n z 11, kritické

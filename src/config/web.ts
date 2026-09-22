@@ -264,6 +264,17 @@ export const EMAIL_ODBER_BEZI = UCTY_ZAPNUTE && PROVOZOVATEL.nazev !== "";
  */
 export const ESHOP = "";
 
+/**
+ * Cizí obchody pro věci, které se nevyplatí mít v našem e-shopu (voda,
+ * baterie, trvanlivé potraviny). Prázdná adresa = tlačítko se neukáže.
+ * Odkaz vede na vyhledávání dané věci, ne na konkrétní produkt: web
+ * nedoporučuje značky ani ceny. `{q}` se nahradí názvem věci.
+ */
+export const OBCHODY: { klic: string; nazev: string; hledani: string }[] = [
+  { klic: "rohlik", nazev: "Rohlík", hledani: "" },
+  { klic: "alza", nazev: "Alza", hledani: "" },
+];
+
 /** Kam se hlásí složka IZS, která chce roli partnera. Prázdné = zatím nepřijímáme. */
 export const IZS_KONTAKT = "";
 
