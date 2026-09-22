@@ -1,4 +1,5 @@
 import katalog from "../../data/odolnost/funkce.json";
+import { spotrebaPoRezimech, type VybranySpotrebic } from "./energie";
 
 /*
   Odolnost domácnosti — deterministický model.
@@ -76,8 +77,13 @@ export interface Profil {
   cesty: Record<string, string[]>;
   /** Zásoby: voda v litrech, užitková voda v litrech, jídlo a léky ve dnech. null = nezadáno (není totéž co nula). */
   zasoby: { pitnaVodaL: number | null; uzitkovaVodaL: number | null; jidloDni: number | null; lekyDni: number | null };
-  /** Energie: kapacita vlastních zdrojů ve Wh a denní potřeba v nouzovém režimu ve Wh; dobíjení = solár, generátor, auto. */
-  energie: { kapacitaWh: number; potrebaDenWh: number; dobijeni: boolean };
+  /**
+   * Energie: kapacita vlastních zdrojů ve Wh, vybrané spotřebiče (z nich
+   * se počítá denní potřeba po režimech), dobíjení = solár, generátor,
+   * auto, a případný výkon panelů ve Wp. `potrebaDenWh` zůstává pro ruční
+   * zadání bez výběru spotřebičů.
+   */
+  energie: { kapacitaWh: number; potrebaDenWh: number; dobijeni: boolean; spotrebice?: VybranySpotrebic[]; solarWp?: number | null };
   /** Co člověk označil jako neřešitelné: klíč funkce → důvod. */
   nemohu: Record<string, string>;
   /** Kontext domácnosti (rozšířené vstupy). */
@@ -210,6 +216,12 @@ export interface Vydrz {
   predpoklad: string;
 }
 
+/** Denní potřeba: z vybraných spotřebičů (režim kritické a nutné), jinak ručně zadané číslo. */
+export function potrebaDenWh(en: Profil["energie"]): number {
+  if (en.spotrebice && en.spotrebice.length) return spotrebaPoRezimech(en.spotrebice).nutne;
+  return en.potrebaDenWh;
+}
+
 function dny(mnozstvi: number | null, naDen: number): number | null {
   if (mnozstvi === null || naDen <= 0) return null;
   return Math.floor((mnozstvi / naDen) * 10) / 10;
@@ -231,10 +243,10 @@ export function vydrze(profil: Profil): Vydrz[] {
     {
       klic: "energie",
       nazev: "Vlastní energie v nouzovém režimu",
-      dni: en.kapacitaWh > 0 && en.potrebaDenWh > 0 ? (en.dobijeni ? Infinity : dny(en.kapacitaWh, en.potrebaDenWh)) : null,
+      dni: en.kapacitaWh > 0 && potrebaDenWh(en) > 0 ? (en.dobijeni ? Infinity : dny(en.kapacitaWh * 0.85, potrebaDenWh(en))) : null,
       predpoklad: en.dobijeni
-        ? `Kapacita ${en.kapacitaWh} Wh, potřeba ${en.potrebaDenWh} Wh/den, s dobíjením — doba závisí na slunci nebo palivu, ne na kapacitě. Ztráty při nabíjení a vybíjení nejsou započtené.`
-        : `Kapacita ${en.kapacitaWh} Wh, potřeba ${en.potrebaDenWh} Wh/den, bez dobíjení. Skutečná doba bývá kratší o ztráty (obvykle desítky procent) a v zimě dál klesá.`,
+        ? `Kapacita ${en.kapacitaWh} Wh, potřeba ${potrebaDenWh(en)} Wh/den (kritické a nutné spotřebiče), s dobíjením — doba závisí na slunci nebo palivu, ne na kapacitě.`
+        : `Kapacita ${en.kapacitaWh} Wh, potřeba ${potrebaDenWh(en)} Wh/den (kritické a nutné spotřebiče), bez dobíjení, po odečtení 15 % ztrát. V zimě dál klesá.`,
     },
   ];
 }

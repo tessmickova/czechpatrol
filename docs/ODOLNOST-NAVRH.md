@@ -57,6 +57,15 @@ Z toho `src/lib/odolnost.ts` deterministicky počítá:
   bez adresy, děti a senioři, závislost na péči, rodina v dosahu (plyne z ní
   cesta u spojení, dopravy a péče), počty vysílaček a powerbank. Vysílačky
   se počítají od dvou kusů, ideálně pro každého.
+- **Energie ze spotřebičů** (23. 9. 2026): místo watthodin výběr spotřebičů
+  s předvoleným příkonem a hodinami (přepsatelné podle štítku) a prioritou;
+  tři režimy (jen kritické · kritické a nutné · vše), vydrž se ztrátami,
+  špička naráz, panely ve Wp podle roční doby a účinnosti, baterie na dny
+  bez slunce; slunečné hodiny jsou orientační, přesné dává PVGIS. Bez
+  značek — porovnává se se štítkem powerstation.
+- **Nové funkce**: WC a odpadní voda (kanalizace samospádem, tlaková,
+  domovní ČOV, septik, náhradní WC), chlazení jídla a léků, požár a otrava
+  plynem.
 - **Co dokoupit**: obecné věci bez značky a ceny, ke každé funkci bez
   nezávislé zálohy jedna, nejvýš osm. Odkazy do obchodů (náš e-shop, Rohlík,
   Alza) se ukážou, až budou adresy v konfiguraci `ESHOP` a `OBCHODY`;

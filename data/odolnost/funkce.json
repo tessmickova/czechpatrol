@@ -1,6 +1,6 @@
 {
   "_poznamka": "Katalog funkcí domácnosti pro odolnost. Model: potřeba → funkce → cesty (každá cesta má závislosti) → kompenzace. Deterministická data, žádný model. Texty jsou obecné a neobsahují zdravotní dávkování, úpravu vody ani zásahy do elektroinstalace — na to odkazují na oficiální postupy. Změna = nová verze. Cesta se „zVlastniEnergie“ potřebuje elektřinu, ale stačí jí vlastní zdroj (powerbanka, powerstation): má-li ho domácnost, závislost na síti u ní odpadá. Pole „koupit“ u cesty je obecný název věci (bez značky a ceny), která cestu zajistí; z něj se skládá seznam Co dokoupit. „pocet“ říká, ze kterého počtu ve vybavení se cesta počítá a od kolika kusů.",
-  "verze": "2026-09-23",
+  "verze": "2026-09-23b",
   "zavislosti": {
     "elektrina": {
       "nazev": "Elektřina ze sítě"
@@ -691,6 +691,174 @@
         "Bez místa: zásoba v tom, co běžně jíte, ne ve speciálních balíčcích; stačí o jeden nákup víc."
       ],
       "ikona": "jidlo"
+    },
+    {
+      "klic": "wc-odpad",
+      "nazev": "WC a odpadní voda",
+      "potreba": "odvést odpad, aby doma šlo zůstat",
+      "dulezitost": 2,
+      "ikona": "voda",
+      "cesty": [
+        {
+          "klic": "kanalizace-gravitacni",
+          "nazev": "Veřejná kanalizace samospádem",
+          "zavislosti": [
+            "externi-sluzba"
+          ],
+          "zadarmo": false,
+          "poznamka": "Při výpadku proudu obvykle teče dál; při zaplavení čistírny nebo záplavách může být zakázané vypouštět."
+        },
+        {
+          "klic": "kanalizace-tlakova",
+          "nazev": "Tlaková kanalizace nebo domovní čerpací šachta",
+          "zavislosti": [
+            "elektrina",
+            "externi-sluzba"
+          ],
+          "zadarmo": false,
+          "poznamka": "Bez elektřiny nečerpá; šachta se naplní během hodin."
+        },
+        {
+          "klic": "domovni-cov",
+          "nazev": "Domovní čistírna odpadních vod",
+          "zavislosti": [
+            "elektrina"
+          ],
+          "zadarmo": false,
+          "poznamka": "Dmychadlo potřebuje elektřinu; krátkodobě jde přerušit, dlouhodobě ne."
+        },
+        {
+          "klic": "septik",
+          "nazev": "Septik nebo jímka s vývozem",
+          "zavislosti": [
+            "externi-sluzba"
+          ],
+          "zadarmo": false,
+          "poznamka": "Nezávislé na elektřině, závislé na vývozu; znát objem a kdy byl naposledy vyvezen."
+        },
+        {
+          "klic": "suche-wc",
+          "nazev": "Náhradní WC bez vody (pytle a pásky, chemické nebo suché WC)",
+          "zavislosti": [],
+          "zadarmo": false,
+          "koupit": "pytle na WC se stahovacími pásky, případně suché WC"
+        },
+        {
+          "klic": "splachovani-uzitkovou",
+          "nazev": "Splachování užitkovou vodou z nádob",
+          "zavislosti": [],
+          "zadarmo": true
+        }
+      ],
+      "nulaKc": [
+        "Zjistěte, jaký typ kanalizace máte — s čerpadlem se bez proudu splachovat nesmí.",
+        "Mít doma pevné pytle a pásky; WC bez vody je první, co v bytě bez vody chybí.",
+        "Znát objem jímky a telefon na vývoz."
+      ],
+      "kompenzace": [
+        "V bytě s tlakovou kanalizací: pytle do mísy a pásky, hygiena rukou dezinfekcí; splachovat až po obnovení.",
+        "Bez místa na suché WC: pytle a kbelík s víkem, odpad ukládat venku v uzavřené nádobě."
+      ]
+    },
+    {
+      "klic": "chlazeni",
+      "nazev": "Chlazení jídla a léků",
+      "potreba": "udržet jídlo a některé léky v chladu",
+      "dulezitost": 2,
+      "ikona": "snih",
+      "cesty": [
+        {
+          "klic": "lednice",
+          "nazev": "Lednice a mrazák ze sítě",
+          "zavislosti": [
+            "elektrina"
+          ],
+          "zadarmo": false,
+          "zVlastniEnergie": true,
+          "poznamka": "Zavřená lednice udrží chlad hodiny, mrazák desítky hodin; s vlastním zdrojem déle."
+        },
+        {
+          "klic": "chladici-box",
+          "nazev": "Chladicí box s chladicími vložkami nebo ledem",
+          "zavislosti": [],
+          "zadarmo": false,
+          "koupit": "chladicí box a chladicí vložky"
+        },
+        {
+          "klic": "venkovni-chlad",
+          "nazev": "Chladné místo (sklep, venku v zimě)",
+          "zavislosti": [],
+          "zadarmo": true
+        },
+        {
+          "klic": "trvanlive",
+          "nazev": "Zásoba jídla, které chlazení nepotřebuje",
+          "zavislosti": [],
+          "zadarmo": true
+        }
+      ],
+      "nulaKc": [
+        "Při výpadku lednici neotvírat; mrazák nechat zavřený.",
+        "Zjistěte u lékaře, které léky chlad opravdu potřebují a jak dlouho vydrží bez něj."
+      ],
+      "kompenzace": [
+        "Bez boxu: nejdřív sníst, co se kazí; mražené jídlo po rozmrznutí uvařit, ne znovu mrazit."
+      ]
+    },
+    {
+      "klic": "pozar",
+      "nazev": "Požár a otrava plynem",
+      "potreba": "uhasit malý požár a poznat kouř nebo oxid uhelnatý včas",
+      "dulezitost": 3,
+      "ikona": "plamen",
+      "cesty": [
+        {
+          "klic": "hasici-pristroj",
+          "nazev": "Hasicí přístroj, který umíte použít",
+          "zavislosti": [],
+          "zadarmo": false,
+          "koupit": "hasicí přístroj do domácnosti (podle doporučení HZS)"
+        },
+        {
+          "klic": "hasici-rouska",
+          "nazev": "Hasicí rouška v kuchyni",
+          "zavislosti": [],
+          "zadarmo": false,
+          "koupit": "hasicí rouška"
+        },
+        {
+          "klic": "detektor-koure",
+          "nazev": "Detektor kouře s funkční baterií",
+          "zavislosti": [],
+          "zadarmo": false,
+          "koupit": "detektor kouře"
+        },
+        {
+          "klic": "detektor-co",
+          "nazev": "Detektor oxidu uhelnatého (při spalování uvnitř)",
+          "zavislosti": [],
+          "zadarmo": false,
+          "koupit": "detektor oxidu uhelnatého"
+        },
+        {
+          "klic": "hasici",
+          "nazev": "Hasiči v dosahu (150)",
+          "zavislosti": [
+            "externi-sluzba",
+            "mobilni-sit"
+          ],
+          "externi": true,
+          "zadarmo": true
+        }
+      ],
+      "nulaKc": [
+        "Vyzkoušet detektory tlačítkem a vyměnit baterie.",
+        "Vědět, kde je hlavní uzávěr plynu a jistič.",
+        "Náhradní vaření a topení uvnitř zvyšuje riziko: spalovat jen to, co je pro interiér určené, s větráním."
+      ],
+      "kompenzace": [
+        "V nájmu: přenosný detektor kouře a CO se lepí bez vrtání; hasicí rouška stojí málo a nezabere místo."
+      ]
     }
   ]
 }

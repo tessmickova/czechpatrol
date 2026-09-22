@@ -10,6 +10,7 @@ import {
   type Doporuceni, type HodnoceniFunkce, type Horizont, type Kontext, type Nakup, type Profil,
 } from "@/lib/odolnost";
 import { POLE, Popisek, TLACITKO_TICHE } from "./formulare";
+import { SolarniOdhad, VyberSpotrebicu } from "./energie-klient";
 import { Ikona, type NazevIkony } from "./ikony";
 import { Zamceno } from "./muj-prehled-klient";
 import { Sdeleni } from "./ui";
@@ -176,12 +177,15 @@ export function OdolnostKlient() {
             <Pocet id="od-uzitkova" nazev="Užitková voda (litry)" hodnota={p.zasoby.uzitkovaVodaL} onChange={(v) => uloz({ ...p, zasoby: { ...p.zasoby, uzitkovaVodaL: v } })} />
             <Pocet id="od-jidlo" nazev="Jídlo bez nákupu (dny pro všechny)" hodnota={p.zasoby.jidloDni} onChange={(v) => uloz({ ...p, zasoby: { ...p.zasoby, jidloDni: v } })} />
             <Pocet id="od-leky" nazev="Léky a pomůcky (dny, podle lékaře)" hodnota={p.zasoby.lekyDni} onChange={(v) => uloz({ ...p, zasoby: { ...p.zasoby, lekyDni: v } })} />
-            <Pocet id="od-kap" nazev="Vlastní zdroj energie (Wh)" hodnota={p.energie.kapacitaWh || null} onChange={(v) => uloz({ ...p, energie: { ...p.energie, kapacitaWh: v ?? 0 } })} poznamka="Powerstation, UPS, powerbanky dohromady." />
-            <Pocet id="od-potreba" nazev="Nouzová spotřeba za den (Wh)" hodnota={p.energie.potrebaDenWh || null} onChange={(v) => uloz({ ...p, energie: { ...p.energie, potrebaDenWh: v ?? 0 } })} poznamka="Ze štítků: W × hodin denně." />
+            <Pocet id="od-kap" nazev="Vlastní zdroj energie (Wh)" hodnota={p.energie.kapacitaWh || null} onChange={(v) => uloz({ ...p, energie: { ...p.energie, kapacitaWh: v ?? 0 } })} poznamka="Powerstation, UPS, powerbanky dohromady. Kapacita je na štítku." />
           </div>
           <div className="mt-2">
             <Prepnuti id="od-dobijeni" nazev="Umím zdroj dobíjet bez sítě" popis="solár, generátor, auto" hodnota={p.energie.dobijeni} onChange={(v) => uloz({ ...p, energie: { ...p.energie, dobijeni: v } })} />
           </div>
+        </Oddil>
+
+        <Oddil cislo="04" nadpis="Co budete potřebovat napájet" veta="Zaškrtněte, co za den bez proudu potřebujete, a u každé věci, jestli bez ní nejde fungovat. Příkon je předvyplněný, štítek má přednost.">
+          <VyberSpotrebicu vybrane={p.energie.spotrebice ?? []} onChange={(v) => uloz({ ...p, energie: { ...p.energie, spotrebice: v } })} />
         </Oddil>
       </div>
 
@@ -222,6 +226,12 @@ export function OdolnostKlient() {
               ))}
             </ul>
           </div>
+
+          {(p.energie.spotrebice?.length ?? 0) > 0 && (
+            <div className="mt-6 border-t border-linka2 pt-5">
+              <SolarniOdhad kapacitaWh={p.energie.kapacitaWh} spotrebice={p.energie.spotrebice ?? []} solarWp={p.energie.solarWp ?? null} onSolarWp={(v) => uloz({ ...p, energie: { ...p.energie, solarWp: v } })} />
+            </div>
+          )}
 
           <dl className="mt-6 grid grid-cols-3 gap-3 border-t border-linka2 pt-5">
             <div>
