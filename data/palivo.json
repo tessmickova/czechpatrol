@@ -1,5 +1,5 @@
 {
-  "aktualizovano": "2026-09-21T23:02:48.517Z",
+  "aktualizovano": "2026-09-22T11:03:05.239Z",
   "zdroj": {
     "nazev": "Český statistický úřad — průměrné spotřebitelské ceny pohonných hmot (týdenní šetření)",
     "url": "https://vdb.czso.cz/pll/eweb/cenyphm.data",
@@ -9,12 +9,6 @@
   "poznamka": "Řadu plní sběr běžící na GitHub Actions; v sandboxu rutiny jsou úřední domény nedostupné. Dokud řada není naplněná, na webu se o ceně nepíše nic — prázdná řada není nula.",
   "chyba": null,
   "rada": [
-    {
-      "tyden": "2018-W38",
-      "konec": "2018-09-23",
-      "nafta": 32.52,
-      "benzin95": 33.28
-    },
     {
       "tyden": "2018-W39",
       "konec": "2018-09-30",
@@ -2423,5 +2417,5 @@
     }
   ],
   "zprava": null,
-  "pokus": "2026-09-21T23:02:48.517Z"
+  "pokus": "2026-09-22T11:03:05.239Z"
 }

@@ -1,5 +1,5 @@
 {
-  "aktualizovano": "2026-09-22T10:02:50.781Z",
+  "aktualizovano": "2026-09-22T11:03:07.801Z",
   "stavy": [
     {
       "klic": "cloudflare",
@@ -7,9 +7,9 @@
       "popis": "Minor Service Outage",
       "incidenty": [
         {
-          "nazev": "Partial loss of analytics for Fedramp High customers",
+          "nazev": "Partial visibility of Workers and Durable Objects analytics for Fedramp High customers",
           "odkaz": "https://www.cloudflarestatus.com/incidents/dcmwvjwfyhjg",
-          "aktualizovano": "2026-09-22T09:36:11.000Z"
+          "aktualizovano": "2026-09-22T10:35:33.000Z"
         },
         {
           "nazev": "Incorrect geo location for some Cloudflare WARP users",
@@ -23,7 +23,7 @@
         "Africa",
         "Arica, Chile - (ARI)"
       ],
-      "zkontrolovano": "2026-09-22T10:02:50.781Z",
+      "zkontrolovano": "2026-09-22T11:03:07.801Z",
       "chyba": null
     },
     {
@@ -43,7 +43,7 @@
         "Zoom Phone - EMEA",
         "Zoom Phone - NORTH AMERICA"
       ],
-      "zkontrolovano": "2026-09-22T10:02:50.781Z",
+      "zkontrolovano": "2026-09-22T11:03:07.801Z",
       "chyba": null
     },
     {
@@ -52,7 +52,7 @@
       "popis": "All Systems Operational",
       "incidenty": [],
       "postizene": [],
-      "zkontrolovano": "2026-09-22T10:02:50.781Z",
+      "zkontrolovano": "2026-09-22T11:03:07.801Z",
       "chyba": null
     }
   ]
