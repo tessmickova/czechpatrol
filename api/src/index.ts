@@ -76,10 +76,11 @@ const CESTY: [string, RegExp, Obsluha][] = [
   ["POST", /^\/zajem$/, (req, env) => zajem.prijmi(env, req)],
   ["POST", /^\/zajem\/odhlasit$/, (req, env) => zajem.odhlasit(env, req)],
   ["GET", /^\/sprava\/zajem$/, async (req, env) => zajem.prehled(env, await vyzadujPrihlaseni(env, req))],
-  // Žebříček připravenosti: veřejně přezdívka, skóre a datum; kontakt jen správci.
+  // Žebříček připravenosti: veřejně přezdívka, skóre a datum; záznam patří přihlášenému účtu; kontakt jen správci.
   ["GET", /^\/zebricek$/, (_r, env) => zebricek.verejny(env)],
-  ["POST", /^\/zebricek$/, (req, env) => zebricek.prijmi(env, req)],
-  ["POST", /^\/zebricek\/smazat$/, (req, env) => zebricek.smaz(env, req)],
+  ["GET", /^\/ja\/zebricek$/, async (req, env) => zebricek.muj(env, await vyzadujPrihlaseni(env, req))],
+  ["PUT", /^\/ja\/zebricek$/, async (req, env) => zebricek.uloz(env, req, await vyzadujPrihlaseni(env, req))],
+  ["DELETE", /^\/ja\/zebricek$/, async (req, env) => zebricek.smaz(env, await vyzadujPrihlaseni(env, req))],
   ["GET", /^\/sprava\/zebricek$/, async (req, env) => zebricek.prehled(env, await vyzadujPrihlaseni(env, req))],
   ["PUT", /^\/sprava\/zebricek\/([\w-]+)$/, async (req, env, _u, id) => zebricek.vyrid(env, req, await vyzadujPrihlaseni(env, req), id)],
   ["GET", /^\/nastaveni-sberu$/, async (req, env) => nastaveni.proSber(env)],

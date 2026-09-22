@@ -438,19 +438,21 @@ platit; jsou to jen zapsaná zjištění, ne náhrada ověření.
 
 ## Žebříček připravenosti (doplněno 22. 9. 2026)
 
-Kdo vyplní audit na `/odolnost/` (aspoň tři oblasti), může se zařadit do
-žebříčku: skóre 0–100 (`skore()` v `src/lib/odolnost.ts`, 70 bodů zálohy,
-30 horizonty), datum, kraj, počet osob a **vygenerovaná** přezdívka
-(„Bdělý ježek 47“ — nikdy zadaná, aby v ní nebylo jméno). Veřejně
-(`GET /zebricek`) je vidět jen přezdívka, skóre, datum a kraj.
+Pro **přihlášené anonymní účty**. Kdo vyplní audit na `/odolnost/`
+(aspoň tři oblasti), může se zařadit: k účtu se uloží skóre 0–100
+(`skore()` v `src/lib/odolnost.ts`, 70 bodů zálohy, 30 horizonty),
+datum, kraj, počet osob a **vygenerovaná** přezdívka („Bdělý ježek 47“,
+nikdy zadaná). Jeden záznam na účet; nové vyplnění přepíše skóre a
+datum, přezdívka zůstává. Veřejně (`GET /zebricek`) je vidět jen
+přezdivka, skóre, datum a kraj. Nepřihlášený po vyplnění dostane otázku:
+přihlásit se anonymně, nebo v žebříčku nebýt (volba se pamatuje
+v zařízení).
 
-Zařazení vyžaduje **e-mail a telefon**. Ukládají se šifrovaně
-(`KLIC_SIFROVANI`), čte je jen správce (`GET /sprava/zebricek`, každé
-čtení je v auditu) a slouží ke dvěma věcem, které web říká u formuláře a
-na stránce Soukromí: pozvání do komunity a upozornění na kritickou
-událost, o kterém rozhoduje člověk. **Sběr kontaktu bez této informace by
-byl v rozporu s čl. 13 GDPR** — proto se to na webu říká, i když to
-provozovatel původně nechtěl zmiňovat. Stejný e-mail = jeden záznam;
-nové vyplnění přepíše skóre a datum. Záznam bez kontaktu ze strany
-provozovatele (stav `novy`/`nezajem`) se po roce maže. Správce může
-záznam označit (`pozvan`, `clen`, `nezajem`) nebo smazat.
+Kontakt (e-mail, telefon) je **nepovinný**, ukládá se šifrovaně
+(`KLIC_SIFROVANI`; bez klíče se pole nenabídnou), čte ho jen správce
+(`GET /sprava/zebricek`, čtení kontaktů je v auditu) a slouží k pozvání
+do komunity. Web to říká u polí a na stránce Soukromí (čl. 13 GDPR).
+„Odejít ze žebříčku“ smaže záznam i kontakt hned; smazání účtu také.
+Záznam bez pohybu ze strany provozovatele (stav `novy`/`nezajem`) se po
+roce maže. Migrace `0007` tabulku z `0006` staví znovu (byla nasazena
+prázdná).

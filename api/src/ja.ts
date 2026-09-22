@@ -85,6 +85,7 @@ export async function smazUcet(env: Env, ucet: Prihlaseny): Promise<Response> {
     env.DB.prepare("DELETE FROM fronta WHERE ucet_id = ?").bind(ucet.id),
     env.DB.prepare("DELETE FROM propojeni WHERE ucet_id = ?").bind(ucet.id),
     env.DB.prepare("DELETE FROM domacnosti WHERE ucet_id = ?").bind(ucet.id),
+    env.DB.prepare("DELETE FROM zebricek WHERE ucet_id = ?").bind(ucet.id),
     env.DB.prepare("DELETE FROM opravneni_spravcu WHERE ucet_id = ?").bind(ucet.id),
     env.DB.prepare("UPDATE opravneni SET stav = 'REVOKED', zruseno = ?, duvod_zruseni = 'účet smazán' WHERE ucet_id = ? AND stav = 'ACTIVE'").bind(kdy, ucet.id),
     env.DB.prepare("UPDATE ucty SET role = 'obcan', obnova_hash = NULL, nastaveni = ?, poznamka = NULL, nazev = NULL, email_sifrovany = NULL, email_souhlas_kdy = NULL, smazano = ? WHERE id = ?").bind(JSON.stringify(VYCHOZI_NASTAVENI), kdy, ucet.id),

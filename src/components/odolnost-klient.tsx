@@ -10,6 +10,7 @@ import {
   bezpecnostniNalezy, DUVODY_NEMOHU, doporucenaZasobaVody, kraj as krajProfilu, KRAJE_ODOLNOSTI, lidskaDoba, maCestu, nactiProfil, pocty, poznamkaKPoctu, PRAZDNY_PROFIL, souhrn, TRIDY_SRAZEK, ulozProfil, VERZE_KATALOGU, ZAVISLOSTI,
   type Doporuceni, type HodnoceniFunkce, type Horizont, type Kontext, type Nakup, type Profil,
 } from "@/lib/odolnost";
+import { useDialog } from "./dialog";
 import { POLE, Popisek, TLACITKO_TICHE } from "./formulare";
 import { SolarniOdhad, VyberSpotrebicu } from "./energie-klient";
 import { Ikona, type NazevIkony } from "./ikony";
@@ -92,6 +93,7 @@ export function OdolnostKlient() {
   const [pokrocile, setPokrocile] = useState(false);
   const [zeServeru, setZeServeru] = useState<string | null>(null);
   const casovac = useRef<number | null>(null);
+  const { potvrd } = useDialog();
 
   useEffect(() => {
     const n = nactiProfil();
@@ -168,6 +170,25 @@ export function OdolnostKlient() {
       <div className="min-w-0 space-y-8">
         {!ulozisteFunguje && (
           <Sdeleni ton="pozor" ikona="vykricnik">Úložiště prohlížeče nefunguje (soukromé okno?). Vše se počítá, ale po zavření stránky se to neuloží.</Sdeleni>
+        )}
+        {/* Začít znovu: nahoře, ať ho člověk najde dřív, než přepisuje dvacet polí. S potvrzením — smaže celý profil. */}
+        {vyplneno > 0 && (
+          <div className="flex items-center justify-between gap-3">
+            <p className="text-male text-tlum">Vyplněno {vyplneno} z {s.hodnoceni.length} oblastí.</p>
+            <button
+              type="button"
+              className={TLACITKO_TICHE}
+              onClick={async () => {
+                const ano = await potvrd({ nadpis: "Začít znovu?", text: "Smaže se celý vyplněný profil domácnosti v tomto zařízení" + (premium ? " i uložená kopie na serveru" : "") + ". Vrátit to nejde.", potvrdit: "Smazat a začít znovu", zrusit: "Nechat být" });
+                if (!ano) return;
+                uloz(PRAZDNY_PROFIL);
+                setPokrocile(false);
+                window.scrollTo({ top: 0, behavior: "smooth" });
+              }}
+            >
+              <Ikona nazev="krizek" velikost={13} tah={2.2} /> Začít znovu
+            </button>
+          </div>
         )}
 
         <Oddil cislo="01" nadpis="Kdo u vás bydlí" veta="Jen počty. Nic dalšího o lidech se neukládá.">
