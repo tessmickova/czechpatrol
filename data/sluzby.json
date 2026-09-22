@@ -1,5 +1,5 @@
 {
-  "aktualizovano": "2026-09-22T00:06:45.868Z",
+  "aktualizovano": "2026-09-22T01:02:37.899Z",
   "stavy": [
     {
       "klic": "cloudflare",
@@ -18,37 +18,26 @@
         "Africa",
         "Arica, Chile - (ARI)"
       ],
-      "zkontrolovano": "2026-09-22T00:06:45.868Z",
+      "zkontrolovano": "2026-09-22T01:02:37.899Z",
       "chyba": null
     },
     {
       "klic": "zoom",
-      "stav": "omezeni",
-      "popis": "Partially Degraded Service",
-      "incidenty": [
-        {
-          "nazev": "Service Degradation Affecting Apple Login for Zoom Sign-in.",
-          "odkaz": "https://stspg.io/j90jkyg5gqz3",
-          "aktualizovano": "2026-09-21T11:17:47.211-07:00"
-        }
-      ],
-      "postizene": [
-        "Zoom Meetings",
-        "Zoom Phone",
-        "Zoom Phone",
-        "Zoom Meetings"
-      ],
-      "zkontrolovano": "2026-09-22T00:06:45.868Z",
-      "chyba": null
+      "stav": "nezjisteno",
+      "popis": null,
+      "incidenty": [],
+      "postizene": [],
+      "zkontrolovano": "2026-09-22T01:02:37.899Z",
+      "chyba": "The operation was aborted due to timeout"
     },
     {
       "klic": "discord",
-      "stav": "provoz",
-      "popis": "All Systems Operational",
+      "stav": "nezjisteno",
+      "popis": null,
       "incidenty": [],
       "postizene": [],
-      "zkontrolovano": "2026-09-22T00:06:45.868Z",
-      "chyba": null
+      "zkontrolovano": "2026-09-22T01:02:37.899Z",
+      "chyba": "The operation was aborted due to timeout"
     }
   ]
 }
