@@ -116,8 +116,7 @@ export function ProfilySiti({ kandidati, maxPrispevku = 4 }: { kandidati: Kandid
         věty by tři profily vypadaly jako výběr, ne jako hranice.
       */}
       <p className="px-4 py-2.5 text-mikro leading-snug text-tlum2">
-        Čtou se jen účty úřadů a vládních představitelů s doloženou pravostí — Mastodon, Bluesky a veřejné kanály Telegramu.
-        Soukromé účty nikdy. Facebook a X veřejné čtení neumožňují.
+        Čteme jen ověřené účty úřadů a vládních představitelů. Soukromé účty nikdy. Facebook a X číst nejde.
       </p>
     </section>
   );

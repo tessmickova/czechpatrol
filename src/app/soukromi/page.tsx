@@ -118,17 +118,17 @@ export default function SoukromiStranka() {
           </Oddil>
 
           <Oddil cislo="08" nadpis="Vaše práva">
-            <p>Máte právo na přístup, opravu, výmaz, omezení zpracování, přenositelnost a námitku. Většinu vyřídíte sami v účtu: nastavení změníte, kanály odpojíte, účet smažete jedním tlačítkem — okamžitě a bez zálohy.</p>
-            <p>Protože účet neobsahuje nic, co by vás identifikovalo, umíme žádosti vyřídit jen z přihlášeného účtu — jinak nemáme jak poznat, že jde o vás.</p>
+            <p>Máte právo na přístup, opravu, výmaz, omezení, přenositelnost a námitku. Většinu vyřídíte sami v účtu. Účet smažete jedním tlačítkem, hned a bez zálohy.</p>
+            <p>Účet o vás nic neví. Žádosti proto vyřizujeme jen z přihlášeného účtu — jinak nepoznáme, že jste to vy.</p>
             <p>Stížnost můžete podat u Úřadu pro ochranu osobních údajů (uoou.gov.cz).</p>
           </Oddil>
 
           <Oddil cislo="09" nadpis="Cookies a úložiště prohlížeče">
-            <p>Web nepoužívá cookies. Ve vašem prohlížeči si ukládá jen přihlašovací token a případně předvolby zobrazení — to je technicky nezbytné pro službu, kterou jste si vyžádali, a souhlas se na to nevyžaduje.</p>
+            <p>Web nepoužívá cookies. V prohlížeči ukládá jen přihlášení a vaše předvolby. To je nutné pro službu, kterou chcete, a souhlas se nevyžaduje.</p>
           </Oddil>
 
           <Oddil cislo="10" nadpis="Automatizace a AI">
-            <p>Sběr dat z úředních zdrojů běží automaticky a část textů vzniká s pomocí AI. Celkovou úroveň a zařazení událostí stanovuje člověk. O vás jako uživateli žádné automatizované rozhodování ani profilování neprobíhá — nastavení upozornění jen filtruje zprávy podle toho, co jste si vybrali.</p>
+            <p>Sběr dat běží automaticky a část textů vzniká s pomocí AI. Hodnocení dělá člověk. O vás nic automaticky nerozhodujeme a neprofilujeme vás. Upozornění jen filtrují zprávy podle vašeho výběru.</p>
           </Oddil>
 
           <Oddil cislo="11" nadpis="Děti">
@@ -136,7 +136,7 @@ export default function SoukromiStranka() {
           </Oddil>
 
           <Oddil cislo="12" nadpis="Změny">
-            <p>Když se změní, co systém dělá, změní se i tahle stránka. Datum poslední revize je nahoře. Podstatnou změnu oznámíme v přehledu a přihlášeným v účtu.</p>
+            <p>Když se změní, co děláme, změní se i tahle stránka. Datum revize je nahoře. Velkou změnu oznámíme na přehledu a v účtu.</p>
             <p>Související: <Link href="/podminky/" className="odkaz text-inkoust">Podmínky použití</Link> · <Link href="/metodika/" className="odkaz text-inkoust">Metodika</Link></p>
           </Oddil>
         </div>

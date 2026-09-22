@@ -175,7 +175,7 @@ export default function Svet() {
           id="stret"
           stitek="Rozpory"
           nadpis="Kde se cíle střetávají"
-          popis="Stejné otázky, různé odpovědi. Postoje jsou zkrácené podle deklarací výše; pomlčka znamená, že se k tomu aktér nevyjadřuje nebo v tom nehraje roli."
+          popis="Stejné otázky, různé odpovědi. Pomlčka = aktér se k tomu nevyjadřuje nebo v tom nehraje roli."
         />
         <div className="overflow-x-auto rounded-[18px] border border-linka">
           <table className="w-full min-w-[980px] border-collapse text-left text-male">
@@ -232,7 +232,7 @@ export default function Svet() {
       <ZpusobyVUziti />
 
       <p className="mt-8 text-drobne leading-relaxed text-tlum2">
-        Tato stránka je analytická interpretace veřejných zdrojů, ne zpravodajský produkt státu ani předpověď. Aktualizuje ji ranní kontrola spolu s daty; každá změna je v <Link href="/opravy/" className="odkaz">historii oprav</Link>. Chyba nebo lepší zdroj? Napište přes <Link href="/o-projektu/" className="odkaz">O projektu</Link>.
+        Tahle stránka je náš rozbor veřejných zdrojů, ne úřední zpráva ani předpověď. Každá změna je v <Link href="/opravy/" className="odkaz">historii oprav</Link>. Chyba nebo lepší zdroj? Napište přes <Link href="/o-projektu/" className="odkaz">O projektu</Link>.
       </p>
     </div>
   );

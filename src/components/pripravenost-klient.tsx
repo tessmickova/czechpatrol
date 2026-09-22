@@ -152,9 +152,9 @@ export function PripravenostKlient({ nastroje }: { nastroje: OficialniNastroj[] 
                       </p>
                     )}
 
-                    <p className="mt-3 text-zaklad leading-relaxed text-tlum">{n.popis}</p>
+                    <p className="mt-3 max-w-[62ch] text-zaklad leading-relaxed text-tlum">{n.popis}</p>
 
-                    <dl className="mt-3 grid gap-x-6 gap-y-2 text-male sm:grid-cols-2">
+                    <dl className="mt-3 grid gap-x-6 gap-y-2 text-male sm:grid-cols-2 [&_dd]:max-w-[62ch] [&_dt]:max-w-[62ch]">
                       <div><dt className="stitek">K čemu je</dt><dd className="mt-0.5 text-tlum">{n.kCemu}</dd></div>
                       <div><dt className="stitek">Kdy mi pomůže</dt><dd className="mt-0.5 text-tlum">{n.kdyPomuze}</dd></div>
                       <div><dt className="stitek">Proč to mít</dt><dd className="mt-0.5 text-tlum">{n.procMit}</dd></div>

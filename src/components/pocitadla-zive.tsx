@@ -156,8 +156,7 @@ export function PocitadlaZeme({ polozky, ted, nazev }: { polozky: PolozkaPoctu[]
         <p className="mt-2.5 text-drobne text-tlum2">
           <Napoveda popis={
             <span className="block">
-              Případy a manipulační operace podle dne, kdy vyšly najevo. Počítá se v prohlížeči, takže
-              „dnes“ platí i mezi sestaveními webu.
+              Případy a operace proti občanům podle dne, kdy vyšly najevo. „Dnes“ počítá váš prohlížeč.
             </span>
           }>
             <span className="odkaz">Průměr za poslední dva roky: {cislem(o.porovnani.prumer)} na čtvrtletí.</span>

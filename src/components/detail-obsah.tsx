@@ -187,8 +187,7 @@ export function DetailObsah({ i }: { i: Incident }) {
           <div className="mt-3 rounded-[18px] border border-linka p-3.5">
             <div className="stitek mb-1">Odkud tenhle záznam pochází</div>
             <p className="text-zaklad leading-relaxed text-tlum">
-              Stojí na dvou nezávislých zdrojích, z nichž aspoň jeden je úřední, a zveřejnil se
-              na jejich základě bez redakčního posouzení. <span className="text-inkoust">Fakta i odkazy odpovídají tomu, co zdroje uvádějí.</span>{" "}
+              Má dva nezávislé zdroje, aspoň jeden úřední. Zveřejnil se na jejich základě, bez redakčního posouzení. <span className="text-inkoust">Fakta i odkazy odpovídají tomu, co zdroje uvádějí.</span>{" "}
               Vlastní hodnocení projektu u něj proto není.
             </p>
           </div>

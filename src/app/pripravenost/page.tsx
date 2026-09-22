@@ -14,7 +14,7 @@ export default function Pripravenost() {
       <HlavickaStranky
         stitek="Připravenost"
         nadpis="Jsem připraven/a?"
-        uvod="Stát a veřejné instituce už provozují nástroje, které v krizi pomohou. Tohle je jejich seznam a to, co si u nich nastavit dřív, než budou potřeba. Žádný z nich CzechPatrol nenahrazuje."
+        uvod="Stát už provozuje nástroje, které v krizi pomohou. Tady je seznam a co si u nich nastavit předem. CzechPatrol žádný z nich nenahrazuje."
       />
       <div className="mt-12 sm:mt-16" />
       <PripravenostKlient nastroje={oficialniNastroje()} />

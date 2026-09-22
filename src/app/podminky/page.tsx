@@ -37,30 +37,29 @@ export default function PodminkyStranka() {
         <Karta odstin="pisek" className="p-6">
           <div className="stitek mb-2">Nejdůležitější věta</div>
           <p className="text-vetsi leading-relaxed text-inkoust">
-            CzechPatrol není úřední zdroj ani varovný systém. V krizi se řiďte pokyny státních orgánů
-            a složek integrovaného záchranného systému, ne tímto webem.
+            CzechPatrol není úřad ani varovný systém. V krizi se řiďte pokyny úřadů a záchranných složek, ne tímto webem.
           </p>
         </Karta>
 
         <div className="mt-10">
           <Oddil cislo="01" nadpis="Co služba je">
             <p>Nezávislý analytický projekt. Sbírá veřejné informace z úředních zdrojů a důvěryhodných médií, řadí je do jednotné stupnice a ukazuje, co platí a co ne. Provozuje ho {PROVOZOVATEL.nazev ? <b>{PROVOZOVATEL.nazev}</b> : "soukromá osoba (identifikace bude doplněna se spuštěním účtů)"}.</p>
-            <p>Není součástí vlády ČR, Armády ČR, NATO, EU ani bezpečnostních složek. Hodnocení je analytická interpretace, ne oficiální stupeň, předpověď ani pokyn k jednání.</p>
+            <p>Není součástí vlády, armády, NATO, EU ani bezpečnostních složek. Hodnocení je náš rozbor, ne úřední stupeň, předpověď ani pokyn.</p>
           </Oddil>
 
           <Oddil cislo="02" nadpis="Co služba není">
-            <p>Web nedává doporučení typu „odjet / neodjet“, „vybrat hotovost“ ani jiné rady do osobního života. Ukazuje ověřený stav, spouštěče a to, co se zatím nestalo. Rozhodnutí je vaše.</p>
-            <p>Automat, který data sbírá, může chybět nebo se zpozdit. Nikdy sám nepotvrzuje, že něco platí — jen to, že v úředních zdrojích nic nenašel. Před důležitým rozhodnutím ověřte stav u úřadů.</p>
+            <p>Web neradí „odjet“, „vybrat hotovost“ ani nic podobného. Ukazuje ověřený stav a co se zatím nestalo. Rozhodnutí je vaše.</p>
+            <p>Sběr dat se může zpozdit nebo něco přehlédnout. Sám nikdy nepotvrdí, že něco platí. Před důležitým rozhodnutím se ptejte úřadů.</p>
           </Oddil>
 
           <Oddil cislo="03" nadpis="Texty, AI a cizí práce">
             <p>Popisy událostí jsou <b>AI shrnutí veřejných zdrojů</b> — ne oficiální články, ne stanoviska úřadů ani projektu. Jsou tak označené u každého záznamu a štítkem „AI-assisted“ na každé stránce. Celkovou úroveň, zařazení a zveřejnění událostí schvaluje člověk; podrobnosti v <Link href="/metodika/" className="odkaz text-inkoust">metodice</Link>.</p>
-            <p>Přebíráme fakta, ne znění. Články necitujeme v celku ani v dlouhých pasážích, u každého záznamu uvádíme zdroj jménem a odkazujeme na originál, fotografie ze zdrojů nepřebíráme. Kde zdroj automatizované čtení zakazuje, respektujeme to.</p>
-            <p>U lidí platí presumpce neviny a ochrana osobnosti. Dokud není pravomocný rozsudek, píšeme „obviněný“, „podezřelý“ nebo „podle policie“ — nikdy „pachatel“. Kdo se cítí záznamem dotčen, může požádat o opravu; opravy jsou veřejné na stránce <Link href="/opravy/" className="odkaz text-inkoust">Opravy</Link>.</p>
+            <p>Přebíráme fakta, ne znění. Články necitujeme v celku. U každého záznamu uvádíme zdroj a odkaz na originál. Fotografie nepřebíráme. Zákaz automatického čtení respektujeme.</p>
+            <p>Platí presumpce neviny. Bez rozsudku píšeme „obviněný“, „podezřelý“ nebo „podle policie“ — nikdy „pachatel“. O opravu může požádat každý; opravy jsou veřejné na stránce <Link href="/opravy/" className="odkaz text-inkoust">Opravy</Link>.</p>
           </Oddil>
 
           <Oddil cislo="04" nadpis="Účet">
-            <p>Účet je anonymní a bezplatný. Zřizuje se passkey; obnovovací kód dostanete jednou a je jen na vás ho uchovat — bez něj a bez zařízení s passkey se k účtu nedostanete a nemáme jak ho obnovit.</p>
+            <p>Účet je anonymní a zdarma. Přihlašuje se passkey. Obnovovací kód dostanete jen jednou — bez něj a bez zařízení se k účtu nedostanete a my ho obnovit neumíme.</p>
             <p>Účet nesmíte používat k obtěžování, k pokusům o průnik do systému ani k automatizovanému vytěžování služby. Takový účet můžeme zrušit.</p>
             <p>Účet i všechna data smažete sami v nastavení, okamžitě.</p>
           </Oddil>
@@ -71,7 +70,7 @@ export default function PodminkyStranka() {
           </Oddil>
 
           <Oddil cislo="06" nadpis="Zprávy partnerů IZS">
-            <p>Roli partnera přiděluje správce po ověření, že za účtem stojí skutečná složka integrovaného záchranného systému. Partner odpovídá za pravdivost a věcnost svých zpráv. Každá zpráva před odesláním projde schválením správce, který ji může bez udání důvodu vrátit.</p>
+            <p>Roli partnera dává správce po ověření, že jde o skutečnou záchrannou složku. Za pravdivost zpráv odpovídá partner. Každou zprávu před odesláním schvaluje správce a může ji vrátit.</p>
             <p>Zprávy partnerů jsou vždy označené jako <b>zpráva partnera IZS</b> se jménem složky. Nejde o úřední varování a nesmí se za něj vydávat.</p>
           </Oddil>
 
@@ -84,7 +83,7 @@ export default function PodminkyStranka() {
           </Oddil>
 
           <Oddil cislo="08" nadpis="Odpovědnost">
-            <p>Obsah poskytujeme tak, jak je, bez záruky úplnosti a aktuálnosti. Neodpovídáme za rozhodnutí, která na základě webu učiníte, ani za výpadky služby. Tím nejsou dotčena práva, která vám dává zákon a která nelze vyloučit.</p>
+            <p>Obsah je tak, jak je — bez záruky úplnosti a aktuálnosti. Neodpovídáme za vaše rozhodnutí ani za výpadky. Práva ze zákona tím nejsou dotčena.</p>
           </Oddil>
 
           <Oddil cislo="09" nadpis="Obsah a licence">
@@ -96,7 +95,7 @@ export default function PodminkyStranka() {
           </Oddil>
 
           <Oddil cislo="11" nadpis="Změny">
-            <p>Podmínky můžeme upravit; datum poslední revize je nahoře. Podstatnou změnu oznámíme v přehledu a přihlášeným v účtu. Používáním po změně s ní souhlasíte.</p>
+            <p>Podmínky můžeme změnit; datum revize je nahoře. Velkou změnu oznámíme na přehledu a v účtu. Používáním po změně s ní souhlasíte.</p>
           </Oddil>
         </div>
       </Obsah>

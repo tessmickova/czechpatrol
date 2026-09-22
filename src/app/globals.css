@@ -28,11 +28,16 @@
     velké, je nadpis a má vlastní třídu (.titul-strany, .titul-sekce,
     .titul-mensi).
   */
-  --text-mikro: 11.5px;     /* popisky v mono, odznaky */
-  --text-drobne: 12.5px;    /* doplňkový údaj pod obsahem */
-  --text-male: 13.5px;      /* text v kartách a seznamech */
-  --text-zaklad: 14.5px;    /* běžný text */
-  --text-vetsi: 17px;       /* vodicí věta, důraz */
+  /*
+    Zvětšeno 22. 9. 2026 o jeden až dva pixely na každém stupni. Menší
+    text se dal přečíst, ale ne pochopit slovo od slova ve stresu nebo
+    na telefonu venku. Nejmenší písmo na webu je 12,5 px.
+  */
+  --text-mikro: 12.5px;     /* popisky v mono, odznaky */
+  --text-drobne: 13.5px;    /* doplňkový údaj pod obsahem */
+  --text-male: 15px;        /* text v kartách a seznamech */
+  --text-zaklad: 16px;      /* běžný text */
+  --text-vetsi: 18px;       /* vodicí věta, důraz */
   --text-velke: 20px;       /* číslo v přehledu, nadpis karty */
   --text-cislo: 26px;       /* velké číslo v dlaždici */
   --text-cislo-l: 34px;     /* hlavní číslo nebo název stavu */
@@ -221,7 +226,7 @@ body {
 */
 .stitek {
   font-family: var(--font-mono);
-  font-size: 12px;
+  font-size: 12.5px;
   line-height: 1.2;
   letter-spacing: 0.06em;
   text-transform: uppercase;
@@ -230,7 +235,7 @@ body {
 }
 .stitek-tmavy {
   font-family: var(--font-mono);
-  font-size: 12px;
+  font-size: 12.5px;
   line-height: 1.2;
   letter-spacing: 0.08em;
   text-transform: uppercase;
@@ -286,14 +291,18 @@ body {
   — u člověka, který čte ve stresu, o to dřív. Platí na odstavce a odrážky,
   ne na tabulky a seznamy, kde je šířka daná obsahem.
 */
-p, li {
-  max-width: 72ch;
+/*
+  Strop 62 znaků na řádek (dřív 72). Delší řádek se čte hůř: oko ztrácí
+  začátek dalšího řádku. Platí i pro popisy v definičních seznamech.
+*/
+p, li, dd, dt, summary {
+  max-width: 62ch;
 }
-.bez-stropu, .bez-stropu p, .bez-stropu li { max-width: none; }
+.bez-stropu, .bez-stropu p, .bez-stropu li, .bez-stropu dd, .bez-stropu dt { max-width: none; }
 /* Štítek nad nadpisem nese barvu značky — je to část identity, ne popisek. */
 .stitek-znacky {
   font-family: var(--font-mono);
-  font-size: 11.5px;
+  font-size: 12.5px;
   font-weight: 600;
   line-height: 1;
   letter-spacing: 0.16em;

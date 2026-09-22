@@ -43,8 +43,7 @@ function Nenalezeno() {
       <div className="stitek mb-4">Událost</div>
       <h1 className="text-cislo-l font-bold sm:text-cislo-l">Tato událost tu není</h1>
       <p className="mx-auto mt-4 max-w-[34rem] text-zaklad leading-relaxed text-tlum">
-        Buď adresa neodpovídá žádnému záznamu, nebo zatím není zveřejněná žádná událost.
-        Zveřejňujeme pouze záznamy, které prošly kontrolou a mají uvedený zdroj.
+        Adresa neodpovídá žádnému záznamu. Zveřejňujeme jen záznamy po kontrole a se zdrojem.
       </p>
       <div className="mt-8 flex flex-wrap justify-center gap-2.5">
         <Link href="/udalosti/" className="rounded-[18px] border border-linka bg-plocha px-3 py-2 text-male font-medium transition-colors hover:border-inkoust">Všechny události</Link>

@@ -92,9 +92,7 @@ export function OdberPanel({ kompaktni = false }: { kompaktni?: boolean }) {
             čemu se tenhle web staví.
           */}
           <p className="mt-3 text-drobne leading-snug text-tlum">
-            U prvních pěti témat pošleme zprávu, i když ji zatím nikdo neověřil. Je označená,
-            vede na zdroj a do počtů na webu nevstupuje — mezi zachycením a ověřením jsou hodiny
-            a zrovna u těchhle věcí je to znát.
+            U pěti nejvážnějších témat pošleme zprávu hned, i neověřenou. Je tak označená a vede na zdroj. Tady rozhodují hodiny.
           </p>
           <p className="mt-3 text-drobne text-tlum2">Opakovanému odeslání téže změny se bráníme; postup je popsaný v metodice. Z kanálu se odhlásíte jeho opuštěním — nezakládá se žádný účet.</p>
         </div>

@@ -22,7 +22,7 @@ export default function Podporit() {
       <HlavickaStranky
         stitek="Podpora"
         nadpis="Web zdarma. Provoz ne."
-        uvod="Všechno, co se týká bezpečí, tedy události, opatření i zdroje, je a zůstane zdarma. Podpora je dobrovolná a platí se z ní provoz, ne inzerce."
+        uvod="Události, opatření i zdroje jsou a zůstanou zdarma. Podpora je dobrovolná a jde na provoz."
       />
 
       <section className="nalet mt-16 border-t border-linka pt-12 sm:mt-20">
@@ -50,8 +50,7 @@ export default function Podporit() {
           </a>
         ) : (
           <p className="mt-2 text-zaklad leading-relaxed text-tlum">
-            Platební adresa zatím není nastavená, takže tu není žádné tlačítko. Až bude, objeví se tady. Do té doby pomůže nejvíc
-             hlášení chyb a chybějících událostí.
+            Platba zatím není nastavená, proto tu chybí tlačítko. Nejvíc teď pomůže hlášení chyb a chybějících událostí.
           </p>
         )}
       </section>

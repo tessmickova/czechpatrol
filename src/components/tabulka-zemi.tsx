@@ -106,8 +106,7 @@ export function TabulkaZemi({ maxZemi = 12 }: { maxZemi?: number }) {
       </div>
 
       <p className="border-t border-linka2 px-4 py-2 text-mikro leading-snug text-tlum2">
-        Pomlčka = odtud takový záznam nemáme, ne že se nic nestalo. Přímé vojenské riziko se pro jednotlivé země
-        nehodnotí — je jen v pavučině Evropy.
+        Pomlčka = záznam nemáme, ne že se nic nestalo. Vojenské riziko hodnotíme jen pro Evropu jako celek.
       </p>
     </section>
   );

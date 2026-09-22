@@ -29,7 +29,7 @@ export default function Analyzy() {
       href: "/vyvoj/",
       stitek: "Vývoj",
       nadpis: "Jak se to měnilo v čase",
-      popis: "Kolik případů přibývalo měsíc po měsíci a jak se měnilo hodnocení po týdnech. Objem a závažnost zvlášť — rostoucí počet záznamů může znamenat i to, že jsme začali lépe hledat.",
+      popis: "Kolik případů přibylo po měsících a jak se měnilo hodnocení po týdnech. Víc záznamů může znamenat i to, že lépe hledáme.",
       cislo: `${tydnu} ${sklon(tydnu, "hodnocený týden", "hodnocené týdny", "hodnocených týdnů")} · ${zaznamu} ${sklon(zaznamu, "záznam", "záznamy", "záznamů")}`,
       ikona: "graf",
     },
@@ -64,7 +64,7 @@ export default function Analyzy() {
       <HlavickaStranky
         stitek="Analýzy"
         nadpis="Co z toho plyne"
-        uvod="Přehled a Události ukazují, co se stalo. Tady jsou rozbory nad týmiž daty: vývoj v čase, cíle aktérů a manipulační kampaně. Hodnocení projektu je všude označené jako hodnocení, ne jako fakt."
+        uvod="Přehled říká, co se stalo. Tady je, jak se to vyvíjí: v čase, podle aktérů a podle kampaní. Naše hodnocení je vždy označené jako hodnocení."
       />
 
       <ul className="nalet mt-12 grid gap-3 sm:mt-16 sm:grid-cols-2">

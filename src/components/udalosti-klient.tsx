@@ -318,15 +318,12 @@ export function UdalostiKlient({ zaznamy, neprosle, kandidati = [], nepotvrzene 
 
         {f.zalozka === "nepotvrzene" && (
           <Sdeleni ton="akcent" ikona="otaznik" carkovane nadpis="Stalo se to, ale my za to zatím neručíme." trida="mt-3">
-            Zpracované zprávy se zdroji, které ještě neprošly člověkem. Ukazujeme je proto, aby na webu bylo vidět,
-            co se ve světě děje, i když schválení chvíli trvá. Do počtů, hodnocení situace ani upozornění nevstupují.
-            Potvrdí se schválením — nebo samy, jakmile je doloží druhý nezávislý zdroj a aspoň jeden z nich je úřední.
+            Zpracované zprávy se zdroji, zatím bez potvrzení. Do počtů ani hodnocení nejdou. Potvrdí se schválením, nebo samy se dvěma zdroji včetně úředního.
           </Sdeleni>
         )}
         {f.zalozka === "cekajici" && (
           <Sdeleni ton="akcent" ikona="otaznik" carkovane nadpis="Tohle CzechPatrol netvrdí." trida="mt-3">
-            Jsou to zprávy, které hodinový sběr zachytil ve zdrojích a člověk je zatím neověřil. Do žádného počtu,
-            hodnocení ani upozornění nevstupují.
+            Zprávy, které sběr zachytil a nikdo zatím neověřil. Do počtů ani hodnocení nejdou.
           </Sdeleni>
         )}
         {f.zalozka === "neproslo" && (

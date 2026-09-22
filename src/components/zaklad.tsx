@@ -134,8 +134,7 @@ export function OdznakJistoty({ jistota }: { jistota: Jistota }) {
           </span>
           <span className="block">{j.popis}</span>
           <span className="block opacity-70">
-            Jistota je nezávislá na závažnosti. Věc může být velmi závažná a špatně
-            potvrzená — i naprosto potvrzená a málo závažná.
+            Jistota není závažnost. Věc může být závažná a špatně doložená, nebo doložená a málo závažná.
           </span>
         </span>
       }

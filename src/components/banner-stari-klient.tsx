@@ -47,7 +47,7 @@ function stav(zkontrolovano: string | null, nyni: number): { poplach: boolean; t
   if (hodin >= HODIN_DO_VYPADKU) {
     return {
       poplach: true,
-      text: `Sběr neběží. Zdroje naposledy čteny ${datumCasPraha(zkontrolovano)}, ${stariSlovy(zkontrolovano, nyni)}. Web ukazuje stav k tomu okamžiku, ne dnešní.`,
+      text: `Sběr neběží. Zdroje naposledy čteny ${datumCasPraha(zkontrolovano)} (${stariSlovy(zkontrolovano, nyni)}). Web ukazuje stav k té chvíli.`,
     };
   }
   return {

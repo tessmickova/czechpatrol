@@ -12,8 +12,7 @@ export function BetaPruh() {
           label="Co tento web je"
           popis={
             <span className="block">
-              Nezávislý projekt. Veřejné zdroje zpracovává automatizovaně a s pomocí AI.
-              Není to oficiální bezpečnostní varování.
+              Nezávislý projekt. Veřejné zdroje čte automat s pomocí AI. Není to úřední varování.
             </span>
           }
         >
