@@ -78,7 +78,7 @@ describe("doména: souhrn pro člověka", () => {
       zona: aktivni,
       pages: { domeny: [{ jmeno: DOMENA, stav: "active" }, { jmeno: WWW, stav: "active" }], chyby: [], pridano: [] },
     }).join(" ");
-    expect(text).toContain(`Web běží na https://${DOMENA}`);
+    expect(text).toContain("domény projektu Pages jsou aktivní");
   });
 
   it("domény v Pages, které ještě čekají, se vypíší jmenovitě", () => {
@@ -88,7 +88,7 @@ describe("doména: souhrn pro člověka", () => {
       pages: { domeny: [{ jmeno: DOMENA, stav: "pending" }, { jmeno: WWW, stav: "active" }], chyby: [], pridano: [] },
     }).join(" ");
     expect(text).toContain(`${DOMENA} (pending)`);
-    expect(text).not.toContain("Web běží");
+    expect(text).not.toContain("jsou aktivní");
   });
 
   it("odstraněné záznamy vypíše i s obsahem, aby šly vrátit", () => {

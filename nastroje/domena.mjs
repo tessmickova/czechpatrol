@@ -118,7 +118,7 @@ export function shrnuti(stav) {
     const cekaji = stav.pages.domeny.filter((d) => d.stav !== "active");
     if (stav.pages.chyby.length) radky.push(`Pages chyby: ${stav.pages.chyby.join("; ")}.`);
     if (cekaji.length) radky.push(`Vlastní domény projektu Pages čekají: ${cekaji.map((d) => `${d.jmeno} (${d.stav ?? "neznámý stav"})`).join(", ")}. Aktivují se samy, jakmile bude zóna aktivní a záznamy DNS na místě.`);
-    else if (stav.pages.domeny.length) radky.push(`Web běží na https://${stav.domena}. Zbývá přepnout adresy v kódu a v rutinách (docs/PROVOZ.md, část Doména).`);
+    else if (stav.pages.domeny.length) radky.push(`Vlastní domény projektu Pages jsou aktivní i s certifikátem.`);
   }
   if (stav.presmerovaniWww && stav.presmerovaniWww !== "nastaveno") radky.push(`Přesměrování www: ${stav.presmerovaniWww}.`);
   if (stav.web) {
