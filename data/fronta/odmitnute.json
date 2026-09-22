@@ -1,5 +1,23 @@
 [
   {
+    "id": "k-74cfd817cf98d609",
+    "zachyceno": "2026-09-22T23:38:12.089Z",
+    "publikovano": "2026-09-22T23:26:00.000Z",
+    "zdroj": {
+      "nazev": "Téma: nouzovy-stav (anglicky)",
+      "url": "https://news.google.com/rss/articles/CBMi5AFBVV95cUxNLWJQSXVRN3R6TTdGSmdSOXJFLVF4Q25iN3hibVJwamFOYW1SWWI2bXlYLURRb00wVTdPbEMyaGlvajBfQlBGcjRZTXJhaldXeWwzRS1FbFFWb2RRZ0oybUsweEFsVnRzbVViSktlNll6cGh1NnVRT01KUUF1S2RPZVhJZWo2dkhMdTNfaHcxTFd4QXlBUzAyU3FfNTBWR1Bjbk1vX3ZGenUzT2NpWklTZmRvZlpZbUFlYWU5YkowNDF6ckQ3SmxHTU00cHBlWklEb1lGOW0wWVJUVHNqdWpuOW9sdTc?oc=5",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "DeWine declares state of emergency for 19 counties after severe storms - 10TV",
+    "shrnuti": "DeWine declares state of emergency for 19 counties after severe storms 10TV",
+    "duvod": "bez-mista",
+    "kategorie": [
+      "pravo"
+    ],
+    "posouzeni": null
+  },
+  {
     "id": "k-f9af1518238539e0",
     "zachyceno": "2026-09-22T23:02:33.490Z",
     "publikovano": "2026-09-22T22:10:00.000Z",
@@ -189,6 +207,24 @@
     "shrnuti": "Premiéru v české fotbalové reprezentaci nezažívá jen nový trenér Španěl Santi Denia. Před zápasy Ligy národů, které začnou v sobotu proti Chorvatsku, se sešlo v národním týmu hned několik nováčků. A také jeden, který v Česku nikdy nehrál nejvyšší soutěž. Do zahraničí odešel Lukáš Ambros v roce 2020,",
     "duvod": "vylouceno-tematem",
     "kategorie": [],
+    "posouzeni": null
+  },
+  {
+    "id": "k-f8206db5be34871e",
+    "zachyceno": "2026-09-22T23:38:12.101Z",
+    "publikovano": "2026-09-22T19:37:38.000Z",
+    "zdroj": {
+      "nazev": "Téma: nouzovy-stav (anglicky)",
+      "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxOZEFLNFJtNU9tYWNzcmhXOGVuNW93U0Z5eDFRb2RtekJsWFVzOEVsVnZDblFQbUJ1bWtocWJ4Ym9nNXdaSUF5Y3U3VE5mdU1ockEwZHhlcUZNU0Fka3ZQaDk2QlNmN3RyWWZZTGZ5eEo0WElFLUFraU1jN3Y3V0l2bURxVWYtUmYyYjNob0F5MUhfY2p0RC1MMlJ0Y0ZBa1dDNnRtMkFjaUhWVW9XWVJISHlxWUpiTWZNYkJTa21uWGVndWY3LVQ4?oc=5",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Gov. Gavin Newsom declares state of emergency ahead of El Niño - kyma.com",
+    "shrnuti": "Gov. Gavin Newsom declares state of emergency ahead of El Niño kyma.com",
+    "duvod": "bez-mista",
+    "kategorie": [
+      "pravo"
+    ],
     "posouzeni": null
   },
   {
@@ -8501,46 +8537,6 @@
       "podezreni": "stredni",
       "duvod": "Zmiňuje vyhlášení nouzového stavu, kontext nejasný z titulku.",
       "kdy": "2026-09-20T04:53:42.342Z"
-    }
-  },
-  {
-    "id": "k-f100bf967a0f89e3",
-    "zachyceno": "2026-09-20T04:02:32.311Z",
-    "publikovano": "2026-09-20T03:35:00.000Z",
-    "zdroj": {
-      "nazev": "Český rozhlas — domácí zprávy",
-      "url": "https://www.irozhlas.cz/zivotni-styl/zdravi/na-kolinsku-se-testuje-aplikace-ktera-pomuze-odhalit-demenci-bylo-na-zpusob_2609200535_kma",
-      "typ": "primary",
-      "primarni": true
-    },
-    "titulek": "Na Kolínsku se testuje aplikace, která pomůže odhalit demenci. ‚Bylo to na způsob pexesa,‘ říká pacient",
-    "shrnuti": "Senioři ve 12 zařízeních po celé republice testují novou aplikaci, která sleduje změny jejich psychického i fyzického stavu, testuje paměť a pozornost. Do budoucna by mohla pomáhat s odhalováním Alzeimerovy choroby, Parkinsonovy nemoci nebo demence. Jedním z míst, kde aplikaci testují, je domov pro ",
-    "duvod": "bez-skutku",
-    "kategorie": [],
-    "posouzeni": {
-      "podezreni": "zadne",
-      "duvod": "Zpráva o zdravotnické aplikaci, nejde o bezpečnostní událost.",
-      "kdy": "2026-09-20T04:03:57.731Z"
-    }
-  },
-  {
-    "id": "k-6ede4e710d97abaa",
-    "zachyceno": "2026-09-20T04:02:32.313Z",
-    "publikovano": "2026-09-20T03:00:00.000Z",
-    "zdroj": {
-      "nazev": "Český rozhlas — domácí zprávy",
-      "url": "https://www.irozhlas.cz/zpravy-domov/zeman-podnet-uoou-hospitalizace-informace-zdravi-prezidenta-uvn_2609200500_tec",
-      "typ": "primary",
-      "primarni": true
-    },
-    "titulek": "V ÚVN si nastavili, co mohou říct o zdraví prezidenta. Nemocnici to po Zemanově podnětu nařídil úřad",
-    "shrnuti": "Ústřední vojenská nemocnice v Praze přijala nové vnitřní předpisy týkající se toho, jak informovat o zdravotním stavu prezidenta. Vedení tak reagovalo na rozhodnutí Úřadu pro ochranu osobních údajů, který na jaře upozornil nemocnici na nedostatky a nařídil jí vše napravit. Podnět dal úřadu před více",
-    "duvod": "bez-skutku",
-    "kategorie": [],
-    "posouzeni": {
-      "podezreni": "zadne",
-      "duvod": "Jde o administrativní záležitost, ne bezpečnostní událost.",
-      "kdy": "2026-09-20T04:03:57.731Z"
     }
   }
 ]
