@@ -164,12 +164,18 @@
       "policie"
     ],
     "naliehave": null,
-    "stav": "ceka",
+    "stav": "vyrizen",
     "vyrez": {
       "text": "",
       "stazeno": "2026-09-21T20:00:59.990Z",
       "stav": 403,
       "chyba": "HTTP 403"
+    },
+    "vyrizeni": {
+      "kdy": "2026-09-21T23:26:33.122Z",
+      "duvod": "neudalost",
+      "patriK": null,
+      "poznamka": "Střelba z pistole z okna bytu v Praze, zadržený pachatel, nikdo nezraněn; běžná trestná činnost bez bezpečnostního rozměru."
     }
   },
   {
@@ -202,12 +208,18 @@
       "rusk"
     ],
     "naliehave": null,
-    "stav": "ceka",
+    "stav": "vyrizen",
     "vyrez": {
       "text": "",
       "stazeno": "2026-09-21T20:01:00.096Z",
       "stav": 403,
       "chyba": "HTTP 403"
+    },
+    "vyrizeni": {
+      "kdy": "2026-09-21T23:26:33.122Z",
+      "duvod": "mimo-rozsah",
+      "patriK": null,
+      "poznamka": "Ruský útok na Mykolajivskou oblast (zahynul tříletý chlapec); uvnitř Ukrajiny, bez doloženého následku pro sledované země."
     }
   },
   {
@@ -235,11 +247,17 @@
       "state of emergency"
     ],
     "naliehave": null,
-    "stav": "ceka",
+    "stav": "vyrizen",
     "vyrez": {
       "text": "Google News",
       "stazeno": "2026-09-21T20:01:00.183Z",
       "stav": 200
+    },
+    "vyrizeni": {
+      "kdy": "2026-09-21T23:26:33.122Z",
+      "duvod": "neudalost",
+      "patriK": null,
+      "poznamka": "Kalifornie vyhlásila stav nouze před El Niñem; přírodní hrozba mimo sledované země, ne bezpečnostní událost."
     }
   },
   {
@@ -922,11 +940,17 @@
       "rusk"
     ],
     "naliehave": null,
-    "stav": "ceka",
+    "stav": "vyrizen",
     "vyrez": {
       "text": "Google News",
       "stazeno": "2026-09-21T21:02:47.657Z",
       "stav": 200
+    },
+    "vyrizeni": {
+      "kdy": "2026-09-21T23:26:33.122Z",
+      "duvod": "neudalost",
+      "patriK": null,
+      "poznamka": "Ruský útok na Ukrajinu (čtyři mrtví) a preventivní vzlety polských stíhaček bez narušení polského vzdušného prostoru; rutinní vzorec, uvnitř Ukrajiny bez následku pro sledované země."
     }
   },
   {
@@ -11954,8 +11978,42 @@
     }
   },
   {
+    "id": "k-3ca73a699ff84857",
+    "zachyceno": "2026-09-22T00:02:40.914Z",
+    "publikovano": "2026-09-05T09:37:22.000Z",
+    "zdroj": {
+      "nazev": "Téma: energetika (anglicky)",
+      "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxOb3VPdUhub19aYmhUTXZlV2lxSWlSLWprcWJVVlF4cGtWOWdJa1FUR05DM185bzB5bmpMaXF4TUJacFhXbDFpNWtqd2RhWUg2aTFqREREblNMSnRweXlyLVljUWl1SG9BY1lPcWdmcmtoMC1nSHJKc2VfZ2c0QS15ekk4dGktdHBUV0N6VWxKV0NlOUF5QnVybFd0VlMzeTNmN0Z4alZKQ1JmcVp2RU53?oc=5",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "German police probe fresh attempts to sabotage power grid - Luxembourg Times",
+    "titulekPuvodni": "German police probe fresh attempts to sabotage power grid - Luxembourg Times",
+    "shrnuti": "German police probe fresh attempts to sabotage power grid Luxembourg Times",
+    "kodZeme": "DE",
+    "zeme": "Německo",
+    "kategorie": [
+      "sabotaz",
+      "infrastruktura"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "sabotage",
+      "power grid"
+    ],
+    "naliehave": null,
+    "stav": "ceka",
+    "vyrez": {
+      "text": "Google News",
+      "stazeno": "2026-09-22T00:02:41.121Z",
+      "stav": 200
+    }
+  },
+  {
     "id": "k-431f0fede915d9e3",
-    "zachyceno": "2026-09-21T23:02:47.684Z",
+    "zachyceno": "2026-09-22T05:02:51.501Z",
     "publikovano": "2026-09-04T07:00:00.000Z",
     "zdroj": {
       "nazev": "Téma: energetika (anglicky)",
@@ -11983,13 +12041,13 @@
     "stav": "ceka",
     "vyrez": {
       "text": "Google News",
-      "stazeno": "2026-09-21T23:02:47.915Z",
+      "stazeno": "2026-09-22T05:02:51.802Z",
       "stav": 200
     }
   },
   {
     "id": "k-be313ede18bcf6c0",
-    "zachyceno": "2026-09-21T23:02:47.701Z",
+    "zachyceno": "2026-09-22T05:02:51.524Z",
     "publikovano": "2026-09-04T07:00:00.000Z",
     "zdroj": {
       "nazev": "Téma: energetika (anglicky)",
@@ -12017,13 +12075,13 @@
     "stav": "ceka",
     "vyrez": {
       "text": "Google News",
-      "stazeno": "2026-09-21T23:02:48.032Z",
+      "stazeno": "2026-09-22T05:02:51.905Z",
       "stav": 200
     }
   },
   {
     "id": "k-5edbb94f41699106",
-    "zachyceno": "2026-09-21T23:02:47.705Z",
+    "zachyceno": "2026-09-22T05:02:51.530Z",
     "publikovano": "2026-09-04T07:00:00.000Z",
     "zdroj": {
       "nazev": "Téma: energetika (anglicky)",
@@ -12051,13 +12109,13 @@
     "stav": "ceka",
     "vyrez": {
       "text": "Google News",
-      "stazeno": "2026-09-21T23:02:48.165Z",
+      "stazeno": "2026-09-22T05:02:52.022Z",
       "stav": 200
     }
   },
   {
     "id": "k-3b566a7e6e8785c5",
-    "zachyceno": "2026-09-21T23:02:47.839Z",
+    "zachyceno": "2026-09-22T05:02:51.713Z",
     "publikovano": "2026-09-04T07:00:00.000Z",
     "zdroj": {
       "nazev": "Česko — sabotaz",
@@ -12089,41 +12147,7 @@
     "stav": "ceka",
     "vyrez": {
       "text": "Google News",
-      "stazeno": "2026-09-21T23:02:48.284Z",
-      "stav": 200
-    }
-  },
-  {
-    "id": "k-77b020b9c7f0544b",
-    "zachyceno": "2026-09-21T23:02:47.846Z",
-    "publikovano": "2026-09-04T07:00:00.000Z",
-    "zdroj": {
-      "nazev": "Slovensko — sabotaz",
-      "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxPUDg0RC14a3NGcnZfeDZsZEY5aEFFbDhYM1lrNC1nWUVTLVJrQnREVzRwMWZ2a21LbDVCdVJzMExnb2dxWXAyRGNpSGdOS0t5eW96aTVqX0VzNzdKMGlGdXNGekVNY0MyWjFGQ1BZLXJKUWdaMlNDT3VUc1VZa1JwWkhGd0xtR213dEszRHo2WnRQZlc5NW5YRzJYenlaUl9fb0w3OGF0bXRCR2xMOGZuUEhncTZLNU1M?oc=5",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Europe Targeted by Spiralling Campaign of Sabotage and Russia is the Chief Suspect - Albanian Daily News",
-    "titulekPuvodni": "Europe Targeted by Spiralling Campaign of Sabotage and Russia is the Chief Suspect - Albanian Daily News",
-    "shrnuti": "Europe Targeted by Spiralling Campaign of Sabotage and Russia is the Chief Suspect Albanian Daily News",
-    "kodZeme": "RU",
-    "zeme": "Rusko",
-    "kategorie": [
-      "sabotaz",
-      "rusko"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "zeSite": null,
-    "shody": [
-      "sabotage",
-      "russia"
-    ],
-    "naliehave": null,
-    "stav": "ceka",
-    "vyrez": {
-      "text": "Google News",
-      "stazeno": "2026-09-21T23:02:48.397Z",
+      "stazeno": "2026-09-22T05:02:52.136Z",
       "stav": 200
     }
   }
