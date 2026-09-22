@@ -1,0 +1,90 @@
+{
+  "kontrolovano": "2026-09-22T17:38:42.197Z",
+  "domena": "czechpatrol.cz",
+  "cil": "czechpatrol.pages.dev",
+  "nasucho": false,
+  "zona": {
+    "nalezena": true,
+    "stav": "active",
+    "nameserveryCloudflare": [
+      "mary.ns.cloudflare.com",
+      "zeus.ns.cloudflare.com"
+    ],
+    "puvodniNameservery": [
+      "ns.forpsi.cz",
+      "ns.forpsi.it",
+      "ns.forpsi.net"
+    ],
+    "registrator": null,
+    "puvodniDnsHost": null,
+    "zalozeno": "2026-09-22T16:43:45.940043Z",
+    "aktivovano": "2026-09-22T17:19:07.133775Z"
+  },
+  "dns": null,
+  "pages": {
+    "domeny": [
+      {
+        "jmeno": "czechpatrol.cz",
+        "stav": "initializing",
+        "overeni": "pending",
+        "certifikat": "initializing",
+        "chyba": null
+      },
+      {
+        "jmeno": "www.czechpatrol.cz",
+        "stav": "initializing",
+        "overeni": "pending",
+        "certifikat": "initializing",
+        "chyba": null
+      }
+    ],
+    "pridano": [
+      "czechpatrol.cz",
+      "www.czechpatrol.cz"
+    ],
+    "chyby": []
+  },
+  "https": {},
+  "presmerovaniWww": null,
+  "chybejiciPrava": [
+    "Zone · DNS · Edit",
+    "Zone · Zone Settings · Edit",
+    "Zone · Dynamic Redirect (Single Redirects) · Edit"
+  ],
+  "kroky": [
+    {
+      "krok": "zóna",
+      "text": "active; nameservery Cloudflare: mary.ns.cloudflare.com, zeus.ns.cloudflare.com; původní: ns.forpsi.cz, ns.forpsi.it, ns.forpsi.net"
+    },
+    {
+      "krok": "právo",
+      "text": "token nesmí číst a měnit záznamy DNS — chybí Zone · DNS · Edit"
+    },
+    {
+      "krok": "pages",
+      "text": "přidávám vlastní doménu czechpatrol.cz"
+    },
+    {
+      "krok": "pages",
+      "text": "czechpatrol.cz: initializing, certifikát initializing"
+    },
+    {
+      "krok": "pages",
+      "text": "přidávám vlastní doménu www.czechpatrol.cz"
+    },
+    {
+      "krok": "pages",
+      "text": "www.czechpatrol.cz: initializing, certifikát initializing"
+    },
+    {
+      "krok": "právo",
+      "text": "token nesmí číst a měnit nastavení HTTPS zóny — chybí Zone · Zone Settings · Edit"
+    },
+    {
+      "krok": "právo",
+      "text": "token nesmí nastavit přesměrování www — chybí Zone · Dynamic Redirect (Single Redirects) · Edit"
+    }
+  ],
+  "poznamka": "Zóna je aktivní, DNS domény czechpatrol.cz řídí Cloudflare. Vlastní domény projektu Pages čekají: czechpatrol.cz (initializing), www.czechpatrol.cz (initializing). Aktivují se samy, jakmile bude zóna aktivní a záznamy DNS na místě. Tokenu CLOUDFLARE_API_TOKEN chybí práva: Zone · DNS · Edit; Zone · Zone Settings · Edit; Zone · Dynamic Redirect (Single Redirects) · Edit. Doplnit v Cloudflare → My Profile → API Tokens → Edit (u práv zóny vybrat czechpatrol.cz) a spustit znovu.",
+  "vysvetleni": "Zapsáno workflow Doména (nastroje/domena.mjs). Rutiny a session tenhle soubor jen čtou; na Cloudflare API ze sandboxu nedosáhnou. Nejnovější stav dá nový běh workflow."
+}
