@@ -1,5 +1,5 @@
 {
-  "aktualizovano": "2026-09-22T01:02:37.899Z",
+  "aktualizovano": "2026-09-22T02:02:39.565Z",
   "stavy": [
     {
       "klic": "cloudflare",
@@ -15,10 +15,10 @@
       "postizene": [
         "Cloudflare Sites and Services",
         "Amman, Jordan - (AMM)",
-        "Africa",
-        "Arica, Chile - (ARI)"
+        "Americana, Brazil - (QWJ)",
+        "Africa"
       ],
-      "zkontrolovano": "2026-09-22T01:02:37.899Z",
+      "zkontrolovano": "2026-09-22T02:02:39.565Z",
       "chyba": null
     },
     {
@@ -27,17 +27,17 @@
       "popis": null,
       "incidenty": [],
       "postizene": [],
-      "zkontrolovano": "2026-09-22T01:02:37.899Z",
-      "chyba": "The operation was aborted due to timeout"
+      "zkontrolovano": "2026-09-22T02:02:39.565Z",
+      "chyba": "neznámý indikátor „maintenance\""
     },
     {
       "klic": "discord",
-      "stav": "nezjisteno",
-      "popis": null,
+      "stav": "provoz",
+      "popis": "All Systems Operational",
       "incidenty": [],
       "postizene": [],
-      "zkontrolovano": "2026-09-22T01:02:37.899Z",
-      "chyba": "The operation was aborted due to timeout"
+      "zkontrolovano": "2026-09-22T02:02:39.565Z",
+      "chyba": null
     }
   ]
 }
