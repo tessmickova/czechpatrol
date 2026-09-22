@@ -107,7 +107,7 @@ export function Nahlaseni() {
                 <Ikona nazev="odeslat" velikost={14} tah={2} /> {odesila ? "Odesílám…" : UCTY_ZAPNUTE ? "Odeslat správci" : TIPY_MAIL ? "Odeslat e-mailem" : "Odeslat"}
               </button>
               {KOMUNITA.diskuse && (
-                <a href={KOMUNITA.diskuse} target="_blank" rel="noopener noreferrer" className="text-male text-tlum underline underline-offset-4 hover:text-inkoust">
+                <a href={KOMUNITA.diskuse} target="_blank" rel="nofollow noopener noreferrer" className="text-male text-tlum underline underline-offset-4 hover:text-inkoust">
                 </a>
               )}
             </div>

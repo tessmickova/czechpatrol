@@ -98,7 +98,7 @@ export function CenaPaliva() {
       )}
       <p className="mt-2 text-mikro leading-snug text-tlum2">
         Zdroj:{" "}
-        <a href={data.zdroj.url} rel="noopener noreferrer" target="_blank" className="underline hover:text-inkoust">
+        <a href={data.zdroj.url} rel="nofollow noopener noreferrer" target="_blank" className="underline hover:text-inkoust">
           {data.zdroj.nazev}
         </a>
         .

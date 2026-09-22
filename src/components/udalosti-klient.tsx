@@ -636,7 +636,7 @@ function RadekNepotvrzeneho({ z }: { z: Zaznam }) {
           <ul className="space-y-1 text-drobne">
             {z.zdroje.map((x) => (
               <li key={x.url}>
-                <a href={x.url} target="_blank" rel="noopener noreferrer" className="odkaz break-all">{x.nazev}</a>
+                <a href={x.url} target="_blank" rel="nofollow noopener noreferrer" className="odkaz break-all">{x.nazev}</a>
                 {x.typ === "primary" ? <span className="text-tlum2"> (úřední)</span> : null}
               </li>
             ))}
@@ -691,7 +691,7 @@ function RadekKandidata({ k }: { k: Kandidat }) {
         <div className="space-y-2 pt-1 text-zaklad leading-relaxed">
           {k.shrnuti && <p className="text-tlum">{k.shrnuti}</p>}
           {k.titulek !== k.titulekPuvodni && <p className="text-drobne text-tlum2">Původní titulek: {k.titulekPuvodni}</p>}
-          <p><a href={k.zdroj.url} target="_blank" rel="noopener noreferrer" className="odkaz break-all">{k.zdroj.url}</a></p>
+          <p><a href={k.zdroj.url} target="_blank" rel="nofollow noopener noreferrer" className="odkaz break-all">{k.zdroj.url}</a></p>
           <p className="text-drobne text-tlum2">Zachyceno {datumPraha(k.zachyceno)} hodinovým sběrem. Není to ověřený záznam: závažnost ani jistota nejsou stanovené a do počtů nevstupuje. Po lidské kontrole se buď stane záznamem, nebo po třech týdnech zmizí.</p>
         </div>
       }

@@ -52,7 +52,7 @@ export function KruhyKomunity({ onKlik }: { onKlik?: () => void }) {
         <a
           href={DISKUZE.url}
           target="_blank"
-          rel="noopener noreferrer"
+          rel="nofollow noopener noreferrer"
           className="mt-2.5 flex min-h-[44px] items-center gap-2.5 rounded-[18px] border border-akcent/50 bg-akcent/12 px-3 transition-colors hover:bg-akcent/20"
         >
           <span className="grid h-7 w-7 shrink-0 place-items-center rounded-full bg-akcent/20 text-akcent"><Ikona nazev="bublina" velikost={14} tah={1.9} /></span>

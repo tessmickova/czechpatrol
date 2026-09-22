@@ -66,7 +66,7 @@ export function ProfilySiti({ kandidati, maxPrispevku = 4 }: { kandidati: Kandid
                   const st = stavProfilu(p);
                   return (
                     <li key={p.klic}>
-                      <a href={p.odkaz} target="_blank" rel="noopener noreferrer" className="flex items-start gap-2.5 px-4 py-2 hover:bg-plocha2">
+                      <a href={p.odkaz} target="_blank" rel="nofollow noopener noreferrer" className="flex items-start gap-2.5 px-4 py-2 hover:bg-plocha2">
                         <span className="mt-[2px] shrink-0"><ZnackaKanalu znacka={p.sit as Znacka} velikost={16} /></span>
                         <span className="min-w-0 flex-1">
                           <span className="line-clamp-1 text-male leading-[20px] text-inkoust">{p.kdo}</span>
@@ -103,7 +103,7 @@ export function ProfilySiti({ kandidati, maxPrispevku = 4 }: { kandidati: Kandid
                     <span aria-hidden>·</span>
                     <span className="cislice shrink-0">{datumPraha(kdy)} {casPraha(kdy)}</span>
                   </div>
-                  <a href={k.zdroj.url} target="_blank" rel="noopener noreferrer" className="mt-1 block text-male leading-snug text-inkoust hover:text-akcent-svetla">{k.titulek}</a>
+                  <a href={k.zdroj.url} target="_blank" rel="nofollow noopener noreferrer" className="mt-1 block text-male leading-snug text-inkoust hover:text-akcent-svetla">{k.titulek}</a>
                 </li>
               );
             })}

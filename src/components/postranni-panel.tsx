@@ -191,7 +191,7 @@ export function PostranniPanel() {
               <a
                 href={KANALY.telegram}
                 target="_blank"
-                rel="noopener noreferrer"
+                rel="nofollow noopener noreferrer"
                 className="flex min-h-[60px] items-center gap-3 rounded-[18px] border border-akcent/55 bg-akcent/12 px-3.5 transition-colors hover:bg-akcent/20"
               >
                 <ZnackaKanalu znacka="telegram" velikost={30} />
@@ -213,7 +213,7 @@ export function PostranniPanel() {
                 return (
                   <li key={k.klic}>
                     {url ? (
-                      <a href={url} target="_blank" rel="noopener noreferrer" className="flex min-h-[58px] flex-col items-center justify-center gap-1 rounded-[18px] border border-linka px-1 text-center transition-colors hover:border-akcent">
+                      <a href={url} target="_blank" rel="nofollow noopener noreferrer" className="flex min-h-[58px] flex-col items-center justify-center gap-1 rounded-[18px] border border-linka px-1 text-center transition-colors hover:border-akcent">
                         <ZnackaKanalu znacka={k.klic} velikost={22} />
                         <span className="text-mikro font-semibold text-inkoust">{k.nazev}</span>
                       </a>
@@ -247,7 +247,7 @@ export function PostranniPanel() {
               <a
                 href={BUY_ME_A_COFFEE_URL}
                 target="_blank"
-                rel="noopener noreferrer"
+                rel="nofollow noopener noreferrer"
                 className="flex min-h-[52px] items-center gap-3 rounded-[18px] border border-jantar/50 bg-jantar/10 px-3.5 transition-colors hover:bg-jantar/18"
               >
                 <span className="grid h-9 w-9 shrink-0 place-items-center rounded-full bg-jantar/20 text-jantar"><Ikona nazev="kava" velikost={17} tah={1.9} /></span>
@@ -280,7 +280,7 @@ export function PostranniPanel() {
             <ul className="pb-2">
               {POMOCNIK.map((p) => (
                 <li key={p.url}>
-                  <a href={p.url} target="_blank" rel="noopener noreferrer" className="block px-4 py-2 hover:bg-plocha">
+                  <a href={p.url} target="_blank" rel="nofollow noopener noreferrer" className="block px-4 py-2 hover:bg-plocha">
                     <span className="block text-zaklad font-semibold text-inkoust">{p.nazev}</span>
                     <span className="block text-drobne leading-snug text-tlum">{p.popis}</span>
                   </a>

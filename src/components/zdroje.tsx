@@ -33,7 +33,7 @@ export function SeznamZdroju({ zdroje, husty = false }: { zdroje: (Zdroj | Kampa
             <a
               href={z.url}
               target="_blank"
-              rel="noopener noreferrer"
+              rel="nofollow noopener noreferrer"
               className="odkaz text-male font-medium"
             >
               {z.nazev}

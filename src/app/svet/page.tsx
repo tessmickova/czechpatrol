@@ -30,7 +30,7 @@ function Odkazy({ idx, aktor }: { idx: number[]; aktor: SvetAktor }) {
         const z = aktor.zdroje[i];
         if (!z) return null;
         return (
-          <a key={i} href={z.url} target="_blank" rel="noopener noreferrer" title={z.nazev} className="cislice text-mikro text-akcent hover:text-akcent-svetla">
+          <a key={i} href={z.url} target="_blank" rel="nofollow noopener noreferrer" title={z.nazev} className="cislice text-mikro text-akcent hover:text-akcent-svetla">
             [{i + 1}]
           </a>
         );
@@ -110,7 +110,7 @@ function Aktor({ a, stupne }: { a: SvetAktor; stupne: string[] }) {
             <li key={z.url} className="flex gap-2 text-male leading-snug">
               <span className="cislice shrink-0 text-tlum2">[{i + 1}]</span>
               <span className={`stitek-tmavy shrink-0 rounded-[12px] border px-1.5 py-[2px] ${TYPY_ZDROJU[z.typ].tridy}`}>{TYPY_ZDROJU[z.typ].znacka}</span>
-              <a href={z.url} target="_blank" rel="noopener noreferrer" className="odkaz min-w-0 break-words text-tlum">{z.nazev}</a>
+              <a href={z.url} target="_blank" rel="nofollow noopener noreferrer" className="odkaz min-w-0 break-words text-tlum">{z.nazev}</a>
             </li>
           ))}
         </ol>

@@ -22,7 +22,7 @@ export function OdberPanel({ kompaktni = false }: { kompaktni?: boolean }) {
           <span className="mt-0.5 grid h-9 w-9 shrink-0 place-items-center rounded-[12px] bg-akcent/15 text-akcent"><Ikona nazev="komunikace" velikost={16} tah={2} /></span>
           <span>
             {KANALY.telegram ? (
-              <a href={KANALY.telegram} target="_blank" rel="noopener noreferrer" className="text-zaklad font-semibold text-inkoust underline decoration-linka underline-offset-4 hover:decoration-inkoust">{DORUCOVANI.telegram.nazev}</a>
+              <a href={KANALY.telegram} target="_blank" rel="nofollow noopener noreferrer" className="text-zaklad font-semibold text-inkoust underline decoration-linka underline-offset-4 hover:decoration-inkoust">{DORUCOVANI.telegram.nazev}</a>
             ) : (
               <span className="text-zaklad font-semibold text-tlum">{DORUCOVANI.telegram.nazev}</span>
             )}
@@ -55,7 +55,7 @@ export function OdberPanel({ kompaktni = false }: { kompaktni?: boolean }) {
         {dalsi.map(([k, url]) => (
           <li key={k} className="flex gap-3">
             <span className="mt-0.5 grid h-9 w-9 shrink-0 place-items-center rounded-[12px] bg-akcent/15 text-akcent"><Ikona nazev="komunikace" velikost={16} tah={2} /></span>
-            <a href={url} target="_blank" rel="noopener noreferrer" className="text-zaklad font-semibold text-inkoust underline decoration-linka underline-offset-4 hover:decoration-inkoust">{k}</a>
+            <a href={url} target="_blank" rel="nofollow noopener noreferrer" className="text-zaklad font-semibold text-inkoust underline decoration-linka underline-offset-4 hover:decoration-inkoust">{k}</a>
           </li>
         ))}
       </ul>

@@ -735,6 +735,10 @@ export type StavNastroje = "k-overeni" | "overeno" | "obecne" | "neaktivni";
 export interface OficialniNastroj {
   id: string;
   nazev: string;
+  /** Ikona z vlastní sady (docs/ZNACKA.md) — doprovod názvu, nikdy sama. */
+  ikona: string;
+  /** Účel v nejvýš deseti slovech. Do karty na úvodu a do řádku seznamu. */
+  kratce: string;
   provozovatel: string;
   kategorie: KategorieNastroje;
   /** Co to je. Jedna dvě věty, bez hodnocení. */

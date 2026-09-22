@@ -323,7 +323,7 @@ export function Aktuality({
             return (
               <li key={r.klic} onPointerEnter={(e) => ukaz(r.nahled, e)} onPointerMove={pohyb}>
                 {r.ven ? (
-                  <a href={r.kam} target="_blank" rel="noopener noreferrer" className={trida} onFocus={naFokus}>{telo}</a>
+                  <a href={r.kam} target="_blank" rel="nofollow noopener noreferrer" className={trida} onFocus={naFokus}>{telo}</a>
                 ) : (
                   <Link href={r.kam} className={trida} onFocus={naFokus}>{telo}</Link>
                 )}

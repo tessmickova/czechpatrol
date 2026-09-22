@@ -8,8 +8,8 @@
     "kCemu": "Přivolání pomoci, když nevíte přesně, kde jste, nebo nemůžete mluvit.",
     "kdyPomuze": "Úraz nebo náhlá nevolnost v terénu, na cestě, v cizím městě.",
     "procMit": "Dispečink dostane polohu rovnou, nemusíte ji popisovat.",
-    "iosUrl": null,
-    "androidUrl": null,
+    "iosUrl": "https://apps.apple.com/cz/app/z%C3%A1chranka/id1071831457",
+    "androidUrl": "https://play.google.com/store/apps/details?id=com.medicalit.zachranka&hl=cs",
     "webUrl": "https://www.zachrankaapp.cz/",
     "oficialniZdroj": "https://www.zachrankaapp.cz/",
     "overeno": null,
@@ -24,8 +24,38 @@
     ],
     "stav": "k-overeni",
     "doporuceno": true,
-    "poznamka": "Odkazy do App Store a Google Play doplníme až po ověření na webu provozovatele.",
-    "adresaOverena": "2026-09-22"
+    "poznamka": "Odkazy do App Store a Google Play dodal provozovatel projektu 22. 9. 2026; provozovatele aplikace a nastavení ověřujeme na webu zachrankaapp.cz.",
+    "adresaOverena": "2026-09-22",
+    "ikona": "sirena",
+    "kratce": "Přivolání záchranné služby s odesláním polohy dispečinku."
+  },
+  {
+    "id": "horska-zachranna-sluzba-sk",
+    "nazev": "Horská záchranná služba (Slovensko)",
+    "provozovatel": "Horská záchranná služba, Slovenská republika",
+    "kategorie": "tisen",
+    "ikona": "sirena",
+    "kratce": "Přivolání horské záchranné služby na slovenských horách.",
+    "popis": "Oficiální aplikace slovenské Horské záchranné služby. Co přesně umí (odeslání polohy, tísňové volání), ověřujeme na webu provozovatele.",
+    "kCemu": "Přivolání pomoci na horách na Slovensku, kam Češi jezdí nejčastěji.",
+    "kdyPomuze": "Úraz nebo nouze v Tatrách a dalších slovenských horách.",
+    "procMit": "Na horách rozhoduje, jak rychle záchranáři zjistí, kde jste.",
+    "iosUrl": "https://apps.apple.com/cz/app/horsk%C3%A1-z%C3%A1chrann%C3%A1-slu%C5%BEba/id1519456092",
+    "androidUrl": "https://play.google.com/store/apps/details?id=hzs.sk.hzs",
+    "webUrl": "https://www.hzs.sk/",
+    "oficialniZdroj": "https://www.hzs.sk/",
+    "overeno": null,
+    "adresaOverena": null,
+    "dostupnost": "aplikace",
+    "coNastavit": [
+      "Nainstalovat před cestou na Slovensko a povolit přístup k poloze"
+    ],
+    "proKoho": [
+      "kdo jezdí na slovenské hory"
+    ],
+    "stav": "k-overeni",
+    "doporuceno": false,
+    "poznamka": "Odkazy do obchodů dodal provozovatel projektu 22. 9. 2026. Nedoporučuje se každému — počítá se do skóre jen tomu, kdo na Slovensko jezdí; proto do součtu nevstupuje."
   },
   {
     "id": "tisnove-linky",
@@ -51,7 +81,9 @@
     ],
     "stav": "k-overeni",
     "doporuceno": true,
-    "adresaOverena": "2026-09-22"
+    "adresaOverena": "2026-09-22",
+    "ikona": "telefon",
+    "kratce": "Čísla 112, 150, 155, 158 z každého telefonu."
   },
   {
     "id": "varovani-na-mobil",
@@ -77,7 +109,9 @@
     "stav": "k-overeni",
     "doporuceno": true,
     "poznamka": "Rozsah a stav zavedení v ČR ověřujeme u HZS ČR; do té doby platí jen to, že nouzová upozornění v telefonu nemají být vypnutá.",
-    "adresaOverena": "2026-09-22"
+    "adresaOverena": "2026-09-22",
+    "ikona": "zvonek",
+    "kratce": "Varovná zpráva na všechny telefony v ohrožené oblasti."
   },
   {
     "id": "vystrahy-chmu",
@@ -103,7 +137,9 @@
     ],
     "stav": "k-overeni",
     "doporuceno": true,
-    "adresaOverena": "2026-09-22"
+    "adresaOverena": "2026-09-22",
+    "ikona": "vystraha",
+    "kratce": "Výstrahy před nebezpečným počasím a povodněmi po krajích."
   },
   {
     "id": "drozd",
@@ -130,7 +166,9 @@
     "stav": "k-overeni",
     "doporuceno": true,
     "adresaOverena": "2026-09-22",
-    "poznamka": "Adresa drozd.mzv.cz na automatický dotaz 22. 9. 2026 neodpověděla; web ministerstva (mzv.gov.cz) ano. Registraci ověřte přímo na stránkách MZV."
+    "poznamka": "Adresa drozd.mzv.cz na automatický dotaz 22. 9. 2026 neodpověděla; web ministerstva (mzv.gov.cz) ano. Registraci ověřte přímo na stránkách MZV.",
+    "ikona": "pas",
+    "kratce": "Registrace cesty do zahraničí u ministerstva zahraničí."
   },
   {
     "id": "sireny-jsvv",
@@ -155,7 +193,9 @@
     ],
     "stav": "k-overeni",
     "doporuceno": true,
-    "adresaOverena": "2026-09-22"
+    "adresaOverena": "2026-09-22",
+    "ikona": "zvonek",
+    "kratce": "Sirény a hlášení: rozpoznat výstrahu od zkoušky."
   },
   {
     "id": "krizove-vysilani",
@@ -181,7 +221,9 @@
     ],
     "stav": "overeno",
     "doporuceno": true,
-    "adresaOverena": "2026-09-22"
+    "adresaOverena": "2026-09-22",
+    "ikona": "komunikace",
+    "kratce": "Úřední informace rádiem i bez internetu a elektřiny."
   },
   {
     "id": "kanal-obce",
@@ -206,6 +248,36 @@
     ],
     "stav": "obecne",
     "doporuceno": true,
-    "adresaOverena": null
+    "adresaOverena": null,
+    "ikona": "bublina",
+    "kratce": "Místní informace obce: uzavírky, odstávky, výzvy."
+  },
+  {
+    "id": "downdetector",
+    "nazev": "Downdetector",
+    "provozovatel": "Ookla (soukromá služba, není úřední zdroj)",
+    "kategorie": "krizove-informace",
+    "ikona": "graf",
+    "kratce": "Hlášení uživatelů o výpadcích služeb a sítí.",
+    "popis": "Sbírá hlášení uživatelů o výpadcích: operátoři, banky, sociální sítě, aplikace. Rychlý, ale neověřený obraz — ukazuje, že lidem něco nejde, ne proč.",
+    "kCemu": "Zjistit, jestli výpadek, který vidíte, mají i ostatní.",
+    "kdyPomuze": "Nejde zaplatit kartou, nejde se připojit, nedochází zprávy.",
+    "procMit": "Než volat operátorovi: hlášení ostatních naznačí, jestli je problém u vás, nebo u služby.",
+    "iosUrl": null,
+    "androidUrl": null,
+    "webUrl": "https://downdetector.cz/",
+    "oficialniZdroj": null,
+    "overeno": null,
+    "adresaOverena": null,
+    "dostupnost": "sluzba",
+    "coNastavit": [
+      "Uložit si adresu do záložek — v krizi se hledá špatně"
+    ],
+    "proKoho": [
+      "každý"
+    ],
+    "stav": "obecne",
+    "doporuceno": false,
+    "poznamka": "Není úřední zdroj: hlášení uživatelů nikdo neověřuje a CzechPatrol je nepřebírá do svých stavů."
   }
 ]

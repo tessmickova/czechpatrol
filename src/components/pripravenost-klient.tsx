@@ -4,8 +4,23 @@ import { useEffect, useState } from "react";
 import { datumPraha } from "@/lib/cas";
 import { NAZVY_KATEGORII, PORADI_KATEGORII, nactiOdpovedi, skorePripravenosti, ulozOdpovedi, vetaKeSkore, type Odpoved, type Odpovedi } from "@/lib/pripravenost";
 import type { OficialniNastroj } from "@/lib/typy";
-import { Ikona } from "./ikony";
-import { Odznak, Sdeleni } from "./ui";
+import { Ikona, type NazevIkony } from "./ikony";
+import { Odznak, Sdeleni, Tlacitko } from "./ui";
+
+/*
+  Odkazy ven jsou rel="nofollow": web neručí za cizí stránky a nepřenáší
+  jim váhu. Instalace v nejméně krocích: tlačítko do obchodu je hned
+  u názvu, a to nejdřív pro zařízení, ze kterého člověk čte.
+*/
+const VEN = "nofollow noopener noreferrer";
+
+function platforma(): "ios" | "android" | null {
+  if (typeof navigator === "undefined") return null;
+  const ua = navigator.userAgent;
+  if (/iPhone|iPad|iPod/i.test(ua)) return "ios";
+  if (/Android/i.test(ua)) return "android";
+  return null;
+}
 
 /*
   „Jsem připraven/a?" — průvodce oficiálními nástroji.
@@ -46,10 +61,12 @@ export function PripravenostKlient({ nastroje }: { nastroje: OficialniNastroj[] 
   const [odpovedi, setOdpovedi] = useState<Odpovedi>({});
   const [nacteno, setNacteno] = useState(false);
   const [ulozisteFunguje, setUlozisteFunguje] = useState(true);
+  const [zarizeni, setZarizeni] = useState<"ios" | "android" | null>(null);
 
   useEffect(() => {
     setOdpovedi(nactiOdpovedi());
     setNacteno(true);
+    setZarizeni(platforma());
   }, []);
 
   const odpovez = (id: string, o: Odpoved) => {
@@ -96,9 +113,13 @@ export function PripravenostKlient({ nastroje }: { nastroje: OficialniNastroj[] 
                 return (
                   <li key={n.id} className="rounded-[22px] border border-linka2 bg-plocha p-4 sm:p-5">
                     <div className="flex flex-wrap items-start justify-between gap-3">
-                      <div className="min-w-0">
-                        <h3 className="text-velke font-bold leading-tight text-inkoust">{n.nazev}</h3>
-                        <p className="mt-1 text-male text-tlum">{n.provozovatel} · {DOSTUPNOST[n.dostupnost]}</p>
+                      <div className="flex min-w-0 items-start gap-3">
+                        <span className="mt-[2px] grid h-9 w-9 shrink-0 place-items-center rounded-[12px] border border-linka2 text-tlum"><Ikona nazev={n.ikona as NazevIkony} velikost={18} tah={1.8} /></span>
+                        <span className="min-w-0">
+                          <h3 className="text-velke font-bold leading-tight text-inkoust">{n.nazev}</h3>
+                          <p className="mt-0.5 text-male text-inkoust">{n.kratce}</p>
+                          <p className="mt-0.5 text-drobne text-tlum2">{n.provozovatel} · {DOSTUPNOST[n.dostupnost]}</p>
+                        </span>
                       </div>
                       {/* Tři odpovědi jako přepínač. Barvu nese jen tečka u vybrané. */}
                       <div role="radiogroup" aria-label={`${n.nazev}: mám, nemám, nevím`} className="flex shrink-0 gap-1.5">
@@ -117,6 +138,19 @@ export function PripravenostKlient({ nastroje }: { nastroje: OficialniNastroj[] 
                         ))}
                       </div>
                     </div>
+
+                    {/* Instalace hned: jedno klepnutí do obchodu, nejdřív pro zařízení, ze kterého člověk čte. */}
+                    {(n.iosUrl || n.androidUrl) && (
+                      <p className="mt-3 flex flex-wrap gap-2">
+                        {(zarizeni === "android" ? [["android", n.androidUrl, "Nainstalovat pro Android"], ["ios", n.iosUrl, "Nainstalovat pro iPhone"]] : [["ios", n.iosUrl, "Nainstalovat pro iPhone"], ["android", n.androidUrl, "Nainstalovat pro Android"]])
+                          .filter(([, u]) => u)
+                          .map(([k, u, t], i) => (
+                            <a key={k as string} href={u as string} target="_blank" rel={VEN} className={`inline-flex min-h-[40px] items-center gap-2 rounded-full px-4 text-drobne font-semibold ${i === 0 ? "bg-akcent text-papir hover:bg-akcent-svetla" : "border border-linka text-inkoust hover:border-akcent"}`}>
+                              <Ikona nazev="instalace" velikost={14} tah={2} />{t as string}
+                            </a>
+                          ))}
+                      </p>
+                    )}
 
                     <p className="mt-3 text-zaklad leading-relaxed text-tlum">{n.popis}</p>
 
@@ -138,10 +172,8 @@ export function PripravenostKlient({ nastroje }: { nastroje: OficialniNastroj[] 
 
                     <div className="mt-3 flex flex-wrap items-center justify-between gap-x-4 gap-y-2 border-t border-linka2 pt-3">
                       <div className="flex flex-wrap items-center gap-x-3 gap-y-1">
-                        {n.iosUrl && <a href={n.iosUrl} target="_blank" rel="noopener noreferrer" className="odkaz text-drobne">iOS ↗</a>}
-                        {n.androidUrl && <a href={n.androidUrl} target="_blank" rel="noopener noreferrer" className="odkaz text-drobne">Android ↗</a>}
-                        {n.webUrl && <a href={n.webUrl} target="_blank" rel="noopener noreferrer" className="odkaz text-drobne">Web provozovatele ↗</a>}
-                        {n.oficialniZdroj && n.oficialniZdroj !== n.webUrl && <a href={n.oficialniZdroj} target="_blank" rel="noopener noreferrer" className="odkaz text-drobne">Oficiální informace ↗</a>}
+                        {n.webUrl && <a href={n.webUrl} target="_blank" rel={VEN} className="odkaz text-drobne">Web provozovatele ↗</a>}
+                        {n.oficialniZdroj && n.oficialniZdroj !== n.webUrl && <a href={n.oficialniZdroj} target="_blank" rel={VEN} className="odkaz text-drobne">Oficiální informace ↗</a>}
                         {!n.iosUrl && !n.androidUrl && n.dostupnost === "aplikace" && <span className="text-drobne text-tlum2">odkazy do obchodů: přes web provozovatele</span>}
                         {n.proKoho.map((p) => <Odznak key={p} ton="neutral">{p}</Odznak>)}
                       </div>
@@ -179,7 +211,7 @@ export function PripravenostKarta({ nastroje }: { nastroje: OficialniNastroj[] }
         <p className="text-male leading-snug text-tlum">
           {zacal ? vetaKeSkore(skore) : "Záchranka, tísňové linky, varování na mobil, výstrahy ČHMÚ, DROZD, sirény, krizové vysílání, kanál obce. Co z toho máte nastavené?"}
         </p>
-        <a href="/pripravenost/" className="odkaz mt-2 inline-flex min-h-[32px] items-center text-drobne">Projít průvodce →</a>
+        <Tlacitko kam="/pripravenost/" varianta="obrys" velikost="s" ikonaVpravo="nahoru" trida="mt-3 [&>svg:last-child]:rotate-90">Projít průvodce</Tlacitko>
       </div>
     </section>
   );

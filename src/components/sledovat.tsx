@@ -37,7 +37,7 @@ export function Sledovat() {
           return (
             <li key={k.klic}>
               {url ? (
-                <a href={url} target="_blank" rel="noopener noreferrer" className={`${KARTA} border-linka hover:border-akcent`}><ZnackaKanalu znacka={k.klic} velikost={26} /><span><span className="block text-male font-bold text-inkoust">{k.nazev}</span><span className="block text-mikro text-tlum">{k.popis}</span></span></a>
+                <a href={url} target="_blank" rel="nofollow noopener noreferrer" className={`${KARTA} border-linka hover:border-akcent`}><ZnackaKanalu znacka={k.klic} velikost={26} /><span><span className="block text-male font-bold text-inkoust">{k.nazev}</span><span className="block text-mikro text-tlum">{k.popis}</span></span></a>
               ) : (
                 <span className={`${KARTA} border-dashed border-linka opacity-80`}><ZnackaKanalu znacka={k.klic} velikost={26} tlumena /><span><span className="block text-male font-bold text-tlum">{k.nazev}</span><span className="block text-mikro text-tlum2">připravujeme</span></span></span>
               )}
@@ -47,7 +47,7 @@ export function Sledovat() {
       </ul>
       <div className="mt-2 grid gap-1.5 sm:grid-cols-3">
         {KOMUNITA.diskuse && (
-          <a href={KOMUNITA.diskuse} target="_blank" rel="noopener noreferrer" className={`${KARTA} border-linka hover:border-akcent`}>
+          <a href={KOMUNITA.diskuse} target="_blank" rel="nofollow noopener noreferrer" className={`${KARTA} border-linka hover:border-akcent`}>
             <span className="grid h-9 w-9 shrink-0 place-items-center rounded-[12px] bg-plocha2 text-akcent"><Ikona nazev="uzivatel" velikost={16} tah={2} /></span>
             <span><span className="block text-male font-bold text-inkoust">Diskuse a tipy</span><span className="block text-mikro text-tlum">chybí tu událost?</span></span>
           </a>
@@ -74,7 +74,7 @@ export function Partneri() {
         {mista.map((p, i) => (
           <li key={i}>
             {p ? (
-              <a href={p.url} target="_blank" rel="noopener noreferrer" className={`${KARTA} justify-center border-linka bg-plocha hover:border-akcent`}>
+              <a href={p.url} target="_blank" rel="nofollow noopener noreferrer" className={`${KARTA} justify-center border-linka bg-plocha hover:border-akcent`}>
                 <span className="text-center"><span className="block text-zaklad font-bold text-inkoust">{p.nazev}</span><span className="block text-mikro text-tlum">{p.popis}</span></span>
               </a>
             ) : (

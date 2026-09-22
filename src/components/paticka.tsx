@@ -66,7 +66,7 @@ export function Paticka() {
               {KOMUNITA.github && (
                 <>
                   {" · "}
-                  <a href={KOMUNITA.github} target="_blank" rel="noopener noreferrer" className="odkaz">{t("kód a data na GitHubu")}</a>
+                  <a href={KOMUNITA.github} target="_blank" rel="nofollow noopener noreferrer" className="odkaz">{t("kód a data na GitHubu")}</a>
                 </>
               )}
             </p>

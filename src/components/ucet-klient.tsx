@@ -329,7 +329,7 @@ function Nastaveni({
                 telegram ? (
                   <div className="mt-3 space-y-2 text-zaklad text-tlum">
                     <p>Otevřete bota a stiskněte <b className="font-semibold text-inkoust">Start</b>. Kód platí 15 minut.</p>
-                    <a href={telegram.odkaz} target="_blank" rel="noopener noreferrer" className={TLACITKO_AKCENT}>
+                    <a href={telegram.odkaz} target="_blank" rel="nofollow noopener noreferrer" className={TLACITKO_AKCENT}>
                       Otevřít Telegram
                     </a>
                     <p className="cislice text-male text-tlum2">nebo botovi pošlete: /start {telegram.kod}</p>

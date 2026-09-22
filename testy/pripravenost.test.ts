@@ -24,6 +24,8 @@ describe("katalog oficiálních nástrojů", () => {
       expect(n.provozovatel.length, n.id).toBeGreaterThan(3);
       expect(n.coNastavit.length, n.id).toBeGreaterThan(0);
       expect(JSON.stringify(n)).not.toContain("[DOPLNIT]");
+      expect(n.kratce.split(/\s+/).length, `${n.id}: kratce`).toBeLessThanOrEqual(10);
+      expect(n.ikona, n.id).toBeTruthy();
     }
   });
 
