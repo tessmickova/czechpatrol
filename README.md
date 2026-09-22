@@ -214,8 +214,8 @@ Statický export (`out/`) jde nasadit kamkoli. Postup pro Cloudflare Pages:
 
 1. propojit repozitář,
 2. build command `npm run build`, výstup `out`,
-3. vlastní doména: workflow **Doména** nastaví Cloudflare (`docs/PROVOZ.md`,
-   část Doména); `WEB.url` se přepíná až potom, co doména odpovídá.
+3. vlastní doména `czechpatrol.cz`: nastavuje ji workflow **Doména**
+   (`docs/PROVOZ.md`, část Doména); `WEB.url` na ni ukazuje.
 
 Hodinový sběr běží v GitHub Actions a commituje data; nasazení se tím spustí
 samo.
