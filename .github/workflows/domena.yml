@@ -1,0 +1,81 @@
+name: Doména
+
+# Co to dělá
+# ----------
+# Nastaví doménu czechpatrol.cz na Cloudflare přes API: záznamy DNS na projekt
+# Pages, vlastní domény projektu, HTTPS, přesměrování www — a zapíše stav do
+# data/fronta/domena.json. Vlastní práci dělá nastroje/domena.mjs; workflow je
+# tu jen proto, že token ke Cloudflare je v GitHub secrets a nikde jinde.
+#
+# Spouští se jen ručně. Je bezpečné ho pouštět opakovaně: co už je nastavené,
+# přeskočí, a nikdy nemaže nic, co nezná (podrobně v hlavičce skriptu).
+# Když tokenu chybí právo, krok vynechá, napíše které, a běh přesto projde —
+# stav se zapíše i tak, aby bylo vidět, co zbývá.
+#
+# Commit se dělá výchozím tokenem, který další workflow nespouští.
+
+on:
+  workflow_dispatch:
+    inputs:
+      nasucho:
+        description: "Jen vypsat, co by se udělalo (nic nemění, nic nezapisuje)"
+        type: boolean
+        default: false
+
+permissions:
+  contents: write
+
+concurrency:
+  group: domena
+  cancel-in-progress: false
+
+jobs:
+  nastavit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          ref: main
+
+      - uses: actions/setup-node@v7
+        with:
+          node-version: "24"
+
+      # Balíčky se neinstalují: skript stojí jen na tom, co umí Node sám.
+      # Vstup jde přes proměnnou prostředí, ne do textu příkazu.
+      - name: Nastavit doménu na Cloudflare
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          NASUCHO: ${{ inputs.nasucho }}
+        run: |
+          if [ "$NASUCHO" = "true" ]; then
+            node nastroje/domena.mjs --sucho
+          else
+            node nastroje/domena.mjs
+          fi
+
+      - name: Zapsat stav do repozitáře
+        if: ${{ inputs.nasucho != true }}
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/fronta/domena.json
+          if git diff --cached --quiet; then
+            echo "Beze změny."
+            exit 0
+          fi
+          git commit -m "Doména: stav nastavení na Cloudflare $(date -u +'%Y-%m-%d %H:%M UTC')"
+
+          # Mezitím mohl na main přibýt commit ze sběru; přebasovat a zkusit znovu.
+          for pokus in 1 2 3 4 5; do
+            if git push; then
+              echo "Odesláno na pokus $pokus."
+              exit 0
+            fi
+            sleep $((pokus * 5))
+            git fetch origin main || true
+            git rebase origin/main || { git rebase --abort || true; }
+          done
+          echo "::error::Stav domény se nepodařilo zapsat ani na pátý pokus."
+          exit 1

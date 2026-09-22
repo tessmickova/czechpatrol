@@ -64,3 +64,16 @@ node nastroje/test-nahledu.mjs   # ověří, že v náhledu fungují filtry a sm
 
 Snímky se ukládají do `/tmp/snap/`. Cestu k prohlížeči si skripty berou
 z `/opt/pw-browsers`; na jiném stroji ji upravte v hlavičce skriptu.
+
+## Doména
+
+```bash
+node nastroje/domena.mjs --sucho   # co by se na Cloudflare nastavilo
+node nastroje/domena.mjs           # nastaví a zapíše data/fronta/domena.json
+```
+
+Potřebuje `CLOUDFLARE_API_TOKEN` a `CLOUDFLARE_ACCOUNT_ID`; ty jsou jen
+v GitHub secrets, proto se skript spouští přes workflow **Doména**
+(Actions → Doména → Run workflow). Co dělá a co nikdy nedělá, je v jeho
+hlavičce; postup přechodu z `czechpatrol.pages.dev` na `czechpatrol.cz`
+je v `docs/PROVOZ.md`, část Doména.
