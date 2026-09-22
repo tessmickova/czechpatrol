@@ -176,3 +176,39 @@ describe("co mi ještě chybí", () => {
     expect(s.nejslabsi).not.toBeNull();
   });
 });
+
+/*
+  Hranice zdarma / Premium: bezpečnostní nálezy se nesmějí zamknout a
+  souhrn zdarma musí počítat ze stejného hodnocení jako podrobný plán.
+*/
+import { bezpecnostniNalezy, pocty } from "../src/lib/odolnost";
+
+describe("zdarma: nálezy a počty", () => {
+  it("prázdný profil: nic v pořádku, nic slabého, vše nehodnoceno", () => {
+    const s = souhrn(PRAZDNY_PROFIL);
+    const p = pocty(s);
+    expect(p.vPoradku).toBe(0);
+    expect(p.slabin).toBe(0);
+    expect(p.nehodnoceno).toBe(s.hodnoceni.length);
+  });
+
+  it("péče závislá na jediné cestě je nález; bez péče není", () => {
+    const zdravi = FUNKCE.find((f) => f.klic === "zdravi")!;
+    const cesta = zdravi.cesty.find((c) => c.zavislosti.includes("elektrina")) ?? zdravi.cesty[0];
+    const profil = { ...PRAZDNY_PROFIL, cesty: { zdravi: [cesta.klic] }, kontext: { ...PRAZDNY_PROFIL.kontext, zavislyNaPeci: true } };
+    const s = souhrn(profil);
+    const n = bezpecnostniNalezy(profil, s.hodnoceni);
+    if (cesta.zavislosti.length) expect(n.some((x) => x.klic === "pece-jedina-cesta")).toBe(true);
+    const bez = bezpecnostniNalezy({ ...profil, kontext: { ...profil.kontext, zavislyNaPeci: false } }, s.hodnoceni);
+    expect(bez.some((x) => x.klic === "pece-jedina-cesta")).toBe(false);
+  });
+
+  it("životně důležitá oblast bez cesty je nález, oblast „řešeno jinak“ ne", () => {
+    const s = souhrn(PRAZDNY_PROFIL);
+    const n = bezpecnostniNalezy(PRAZDNY_PROFIL, s.hodnoceni);
+    expect(n.some((x) => x.klic === "bez-cesty-pitna-voda")).toBe(true);
+    const jinak = { ...PRAZDNY_PROFIL, nemohu: { "pitna-voda": "jine" } };
+    const s2 = souhrn(jinak);
+    expect(bezpecnostniNalezy(jinak, s2.hodnoceni).some((x) => x.klic === "bez-cesty-pitna-voda")).toBe(false);
+  });
+});

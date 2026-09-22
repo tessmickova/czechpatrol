@@ -39,10 +39,11 @@ export const HLAVNI_STRANKY: { href: string; label: string; ikona: NazevIkony; p
 export const PO_PRIHLASENI: { href: string; label: string; ikona: NazevIkony; popis: string }[] = [
   { href: "/muj-prehled/", label: "Můj přehled", ikona: "terc", popis: "země a témata, která sledujete" },
   { href: "/ucet/#upozorneni", label: "Upozornění na míru", ikona: "zvonek", popis: "četnost, závažnost, tiché hodiny, kraj" },
-  { href: "/odolnost/", label: "Odolnost domácnosti", ikona: "stit", popis: "co u vás vypadne s čím, zálohy, zásoby na 3 až 30 dní" },
 ];
 
 export const DALSI_STRANKY = [
+  /* Audit je zdarma a bez účtu; podrobný plán je Premium — proto už ne mezi funkcemi po přihlášení. */
+  { href: "/odolnost/", label: "Odolnost domácnosti" },
   { href: "/zapojit-se/", label: "Zapojit se" },
   { href: "/vyvoj/", label: "Vývoj" },
   { href: "/svet/", label: "Aktéři a cíle" },

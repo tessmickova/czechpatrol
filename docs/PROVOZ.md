@@ -167,7 +167,12 @@ Variables) na svůj chat na Telegramu. Podrobně v `api/README.md`.
 | GitHub variables | `OPENAI_MODEL` *(nepovinné)* | model se vybere sám z toho, co účet nabízí — viz „Který model se použije“ |
 | GitHub secrets | `GH_TOKEN_SBER` — fine-grained token jen na `tessmickova/czechpatrol`, práva **Actions: Read and write** a **Metadata: Read** | sběr běží jen na plánovači GitHubu *(doplněno 13. 9. 2026)* |
 | GitHub secrets | `TELEGRAM_WEBHOOK_SECRET` + proměnná `TELEGRAM_BOT_JMENO` | webhook Telegramu se nenastaví — bot nepřijímá `/start` a `/stop`, odesílat umí |
-| `src/config/web.ts` | `PROVOZOVATEL.nazev`, `PROVOZOVATEL.kontakt` | stránky o projektu, soukromí a podmínkách říkají, že provozovatel není uveden |
+| `src/config/web.ts` | `PROVOZOVATEL.nazev`, `PROVOZOVATEL.kontakt` | stránky o projektu, soukromí a podmínkách říkají, že provozovatel není uveden; **platby a sběr e-mailů se bez uvedeného provozovatele nesmějí spustit** |
+| GitHub secrets | `KLIC_SIFROVANI` — 32 náhodných bajtů base64url (`openssl rand -base64 32 \| tr '+/' '-_' \| tr -d '='`) | Premium se nespustí: kódy kreditů a e-maily u účtů se ukládají šifrovaně a bez klíče se nic nezapíše *(doplněno 22. 9. 2026)* |
+| GitHub secrets + variables | `COMGATE_MERCHANT`, `COMGATE_SECRET` (secrets), `COMGATE_TEST` (variable, výchozí `true`) | web říká „odemknutí připravujeme“; `POST /platby/zacit` vrací 503. Webhook brány: `POST <API_URL>/platby/webhook/comgate` — nastavit v portálu Comgate *(doplněno 22. 9. 2026)* |
+| GitHub secrets + variables | `EMAIL_POSKYTOVATEL` (`resend` nebo `postmark`, variable), `EMAIL_API_KLIC` (secret), `EMAIL_ODESILATEL` (variable, např. `kredit@czechpatrol.cz`, s DKIM/SPF na doméně) | e-maily s kódem kreditu zůstávají ve frontě QUEUED; kód je vidět v účtu *(doplněno 22. 9. 2026)* |
+| GitHub secrets | `ESHOP_TOKEN` — serverový token, kterým e-shop volá `POST /kredity/overit` a `POST /kredity/uplatnit` | kredity se neuplatňují; web to říká („po spuštění e-shopu“) *(doplněno 22. 9. 2026)* |
+| GitHub secrets | `KOMUNITA_TELEGRAM_ODKAZ`, `KOMUNITA_WHATSAPP_ODKAZ` — pozvánky do skupiny a chatu pro Premium | v účtu je „pozvánky připravujeme“; odkazy nikdy nejdou do veřejného kódu webu *(doplněno 22. 9. 2026)* |
 | `src/config/web.ts` | `TIPY_MAIL` | formulář „Chybí tu událost“ odkazuje jen na GitHub |
 | `src/config/web.ts` | `BUY_ME_A_COFFEE_URL` | stránka Podpořit nemá tlačítko |
 | `src/config/web.ts` | `IZS_KONTAKT` | role partnera IZS se nepřijímá |

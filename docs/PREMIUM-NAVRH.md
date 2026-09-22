@@ -80,6 +80,7 @@ přiřadit oprávnění, kredit a výsledky.
 | audit domácnosti a **souhrn s počty**: kolik oblastí je v pořádku, kolik slabin, kolik kritických závislostí, stav 24 h / 72 h | jednotlivé body selhání a společná selhání s vysvětlením |
 | **každý bezpečnostní nález** (např. spalovací topidlo uvnitř bez určení, závislost zdravotního přístroje na síti) s odkazem na oficiální postup | horizonty 7 / 14 / 30 dní, rozpočet vody po účelech, rozpočet energie po režimech |
 | „Za 0 Kč“ (rady bez nákupu) | plán A/B/C, náhradní cesty po „Tohle nemohu použít“, scénáře, offline plán, historie |
+| | **přístup do komunity a chatu** (pozvánky do skupiny a chatu; odkazy jsou tajemství Workeru, ne veřejný kód) — doplněno 22. 9. 2026 na přání provozovatele |
 
 **REQUIRES DECISION:** včera nasazená stránka Odolnost dává celý engine
 zdarma přihlášeným. Návrh: nechat ji jako **audit + souhrn** (FREE) a
@@ -462,6 +463,38 @@ zůstává čitelný (stejné klíče).
   (cron), refund, e-mail selhání a opakování, tisk plánu na A4 černobíle,
   offline otevření plánu v letovém režimu.
 - Nikdy: falešný „úspěch“ jen z návratové stránky.
+
+---
+
+## Stav implementace (22. 9. 2026)
+
+Provozovatel návrh schválil opakovaným zadáním s doplněním „a přístup do
+komunity a chatu“. Nasazeno to, co nezávisí na otevřených rozhodnutích:
+
+| Hotovo | Kde |
+|---|---|
+| migrace `0005_platby.sql` (platby, platby_udalosti, opravneni s UNIQUE zdroj, kredity, kredit_uplatneni, emaily, opravneni_spravcu, e-mail u účtu, domacnosti, hodnoceni) | `api/migrace/` |
+| šifrování AES-GCM (`KLIC_SIFROVANI`), kód kreditu CP-XXXX-XXXX, otisk + maska + šifrovaný kód, náhrada, ruční kredit s právem, zneplatnění, uplatnění z e-shopu (podmíněný UPDATE + idempotency) | `api/src/sifrovani.ts`, `kredity.ts`, `prava.ts` |
+| oprávnění s původem, `maOpravneni()`, udělení a zrušení správcem, `/ja/opravneni` s pozvánkami do komunity jen pro Premium | `api/src/opravneni.ts` |
+| Comgate: založení, webhook s ověřením tajemství a autoritativním dotazem `/status`, dávka PAID, kontrola částky, cron pro ztracený webhook, refund s pravidlem ACTIVE → REVOKED / REDEEMED → příznak | `api/src/platby.ts` |
+| fronta e-mailů jako úloha po zápisu, 3 pokusy, adaptéry Resend a Postmark, „poslat znovu“ | `api/src/emaily.ts` |
+| uložení hodnocení na server šifrovaně (jen Premium), 5 posledních, smazání s účtem; účet s platbou se při smazání vyprázdní místo fyzického smazání (doklad) | `api/src/domacnost.ts`, `ja.ts` |
+| web: audit bez účtu, souhrn s počty a 72 h, bezpečnostní nálezy nad nabídkou, „Za 0 Kč“ zdarma; Premium: horizonty 7–60, vydrže, energie, „co vypne co“, nákup, plán, uložení na server; nabídka bez brány říká „připravujeme“ | `src/components/odolnost-klient.tsx`, `premium-klient.tsx` |
+| účet: Premium stav, e-mail (dobrovolný, šifrovaně), Moje kredity s kódem na kliknutí, komunita; návratová stránka `/odolnost/platba/` | `ucet-klient.tsx`, `src/app/odolnost/platba/` |
+| správa: platby (refund), kredity (náhradní kód, zneplatnění, ruční), oprávnění (dar, zrušení), e-maily (znovu), práva | `sprava-platby-klient.tsx` |
+| testy: kód, práva, oprávnění, stavový automat, dávka PAID dvakrát, nesedící částka, šifrování, obsah e-mailu; web: nálezy a počty | `api/testy/premium.test.ts`, `testy/odolnost.test.ts` |
+
+**Co zůstává otevřené (blokuje ostrý provoz, ne kód):** identita
+provozovatele (`PROVOZOVATEL`, smluvní strana u Comgate), právní kontrola
+textu o 150 Kč a podmínek kreditu, volba e-mailové služby (kód umí Resend
+i Postmark), rozhodnutí o veřejném enginu (přiznat v podmínkách vs.
+přesunout), skóre 0–100, expirace kreditu (nasazeno bez expirace). Do té
+doby web nabídku ukazuje jako „připravujeme“, protože v API chybí
+tajemství brány — to je záměr, ne chyba.
+
+**Nenasazeno z návrhu:** čerstvé passkey ověření před změnou e-mailu
+(dnes stačí přihlášení), plán A/B/C a pět scénářů (krok 4–5 roadmapy),
+uplatnění na straně e-shopu (krok 7).
 
 ---
 

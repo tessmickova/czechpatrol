@@ -12,6 +12,7 @@ import { JakToChodi } from "./jak-to-chodi";
 import { NavrhyKeSchvaleni } from "./navrhy-klient";
 import { OpravaZaznamu } from "./opravy-klient";
 import { OvladaniOverovani } from "./overovani-klient";
+import { SpravaPlateb } from "./sprava-platby-klient";
 import { Karta } from "./zaklad";
 
 interface UcetSprava {
@@ -308,6 +309,9 @@ export function SpravaKlient() {
           </table>
         </div>
       </Karta>
+
+      {/* Premium: platby, kredity, e-maily, práva — jen pro správce, každý zásah v auditu. */}
+      <SpravaPlateb />
 
       <Karta className="p-6">
         <div className="stitek mb-1">Audit</div>

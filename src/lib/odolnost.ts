@@ -510,6 +510,50 @@ export function souhrn(profil: Profil): Souhrn {
   };
 }
 
+/* ---------- zdarma vs. Premium ---------- */
+
+/**
+ * Bezpečnostní nálezy — vždy zdarma, i bez účtu, nad nabídkou Premium.
+ *
+ * Nález je něco, co může ohrozit zdraví nebo život, ne „slabina“: péče
+ * nebo přístroj závislý na jediné cestě, pitná voda nebo teplo bez
+ * jakékoli cesty, zdravotní funkce bez zálohy. Web u toho neradí
+ * medicínsky ani technicky; odkazuje na oficiální postupy (/pripravenost/).
+ */
+export interface BezpecnostniNalez { klic: string; nadpis: string; proc: string; funkce: string }
+
+const ZIVOTNE_DULEZITE = ["pitna-voda", "teplo", "zdravi", "komunikace"];
+
+export function bezpecnostniNalezy(profil: Profil, hodnoceni: HodnoceniFunkce[]): BezpecnostniNalez[] {
+  const n: BezpecnostniNalez[] = [];
+  for (const h of hodnoceni) {
+    if (h.nemohu) continue;
+    const f = h.funkce;
+    if (ZIVOTNE_DULEZITE.includes(f.klic) && h.redundance === 0) {
+      n.push({ klic: `bez-cesty-${f.klic}`, nadpis: `${f.nazev}: žádná cesta`, proc: `Pro ${f.nazev.toLowerCase()} není zaškrtnutá ani jedna cesta. Bez ní domácnost při výpadku nemá jak pokrýt základní potřebu.`, funkce: f.klic });
+    }
+    if (f.klic === "zdravi" && profil.kontext.zavislyNaPeci && h.redundance <= 1 && h.kriticke.length) {
+      n.push({ klic: "pece-jedina-cesta", nadpis: "Péče nebo přístroj závisí na jediné cestě", proc: `Někdo u vás je závislý na péči, léku nebo přístroji a zdraví má jedinou cestu, která stojí na ${h.kriticke.map((z) => ZAVISLOSTI[z]?.nazev.toLowerCase() ?? z).join(", ")}. Výpadek této závislosti je pro vás bezprostřední riziko; postup domluvte s lékařem a poskytovatelem přístroje.`, funkce: "zdravi" });
+    }
+    if (f.klic === "teplo" && h.redundance <= 1 && h.kriticke.includes("elektrina") && (profil.kontext.deti > 0 || profil.kontext.seniori > 0)) {
+      n.push({ klic: "teplo-deti-seniori", nadpis: "Teplo stojí jen na elektřině a doma jsou děti nebo senioři", proc: "Při delším výpadku elektřiny v zimě je podchlazení riziko nejdřív pro děti a seniory. Náhradní teplo nebo místo, kam jít, patří k prvním věcem k zařízení.", funkce: "teplo" });
+    }
+  }
+  return n;
+}
+
+/** Počty do souhrnu zdarma: kolik oblastí je v pořádku, kolik slabin, kolik kritických závislostí. */
+export function pocty(s: Souhrn): { vPoradku: number; slabin: number; kritickych: number; nehodnoceno: number; horizont72: StavHorizontu } {
+  const hodnocene = s.hodnoceni.filter((h) => !h.nemohu);
+  return {
+    vPoradku: hodnocene.filter((h) => h.redundance === 3).length,
+    slabin: hodnocene.filter((h) => h.mam.length > 0 && h.redundance < 3).length,
+    kritickych: s.body.filter((b) => b.vypne.length >= 2).length,
+    nehodnoceno: hodnocene.filter((h) => h.mam.length === 0).length,
+    horizont72: s.horizonty.find((h) => h.dni === 3)?.stav ?? "nehodnoceno",
+  };
+}
+
 /** Lidský zápis doby: 47 min, 4 h 21 min, 1 d 7 h. */
 export function lidskaDoba(dni: number): string {
   if (!Number.isFinite(dni)) return "bez limitu kapacity";

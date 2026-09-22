@@ -1,5 +1,11 @@
 import { novyKod, obnova, odhlasit, passkeyDokoncit, prihlaseniDokoncit, prihlaseniZacit, registraceDokoncit, registraceZacit, vyzadujPrihlaseni } from "./auth";
+import * as domacnost from "./domacnost";
 import { posliSplatne } from "./dorucovani";
+import * as emaily from "./emaily";
+import * as kredity from "./kredity";
+import * as opravneni from "./opravneni";
+import * as platby from "./platby";
+import * as prava from "./prava";
 import * as izs from "./izs";
 import * as ja from "./ja";
 import { ChybaHttp, json, povolenyPuvod, sCors } from "./pomocne";
@@ -81,6 +87,41 @@ const CESTY: [string, RegExp, Obsluha][] = [
   ["PUT", /^\/sprava\/tipy\/([\w-]+)$/, async (req, env, _u, id) => tipy.vyrid(env, req, await vyzadujPrihlaseni(env, req), id)],
 
   ["POST", /^\/telegram\/webhook$/, (req, env) => webhook(env, req)],
+
+  /*
+    Premium a kredity (docs/PREMIUM-NAVRH.md). Veřejná je jen cena a to,
+    jestli platby běží. Webhook brány nemá původ ani přihlášení — ověřuje
+    tajemství a stav si potvrzuje u brány sám.
+  */
+  ["GET", /^\/premium$/, (_r, env) => platby.verejne(env)],
+  ["POST", /^\/platby\/zacit$/, async (req, env) => platby.zacit(env, req, await vyzadujPrihlaseni(env, req))],
+  ["GET", /^\/ja\/platby\/([\w-]+)$/, async (req, env, _u, id) => platby.stav(env, await vyzadujPrihlaseni(env, req), id)],
+  ["POST", /^\/platby\/webhook\/comgate$/, (req, env) => platby.webhookComgate(env, req)],
+  ["GET", /^\/ja\/opravneni$/, async (req, env) => opravneni.moje(env, await vyzadujPrihlaseni(env, req))],
+  ["GET", /^\/ja\/kredity$/, async (req, env) => kredity.moje(env, await vyzadujPrihlaseni(env, req))],
+  ["POST", /^\/ja\/kredity\/([\w-]+)\/email$/, async (req, env, _u, id) => kredity.poslatZnovu(env, req, await vyzadujPrihlaseni(env, req), id)],
+  ["PUT", /^\/ja\/email$/, async (req, env) => emaily.ulozEmail(env, req, await vyzadujPrihlaseni(env, req))],
+  ["DELETE", /^\/ja\/email$/, async (req, env) => emaily.smazEmail(env, await vyzadujPrihlaseni(env, req))],
+  ["GET", /^\/ja\/hodnoceni$/, async (req, env) => domacnost.posledni(env, await vyzadujPrihlaseni(env, req))],
+  ["PUT", /^\/ja\/hodnoceni$/, async (req, env) => domacnost.uloz(env, req, await vyzadujPrihlaseni(env, req))],
+  ["DELETE", /^\/ja\/hodnoceni$/, async (req, env) => domacnost.smaz(env, await vyzadujPrihlaseni(env, req))],
+  // E-shop (serverový token): ověření a uplatnění kreditu.
+  ["POST", /^\/kredity\/overit$/, (req, env) => kredity.overit(env, req)],
+  ["POST", /^\/kredity\/uplatnit$/, (req, env) => kredity.uplatnit(env, req)],
+  // Správa: čtení, náhradní kód, ruční kredit, refund, e-maily znovu, práva.
+  ["GET", /^\/sprava\/platby$/, async (req, env) => platby.seznam(env, await vyzadujPrihlaseni(env, req))],
+  ["POST", /^\/sprava\/platby\/([\w-]+)\/refund$/, async (req, env, _u, id) => platby.refund(env, req, await vyzadujPrihlaseni(env, req), id)],
+  ["GET", /^\/sprava\/kredity$/, async (req, env) => kredity.seznam(env, await vyzadujPrihlaseni(env, req))],
+  ["POST", /^\/sprava\/kredity\/rucni$/, async (req, env) => kredity.rucni(env, req, await vyzadujPrihlaseni(env, req))],
+  ["POST", /^\/sprava\/kredity\/([\w-]+)\/nahradit$/, async (req, env, _u, id) => kredity.nahradit(env, req, await vyzadujPrihlaseni(env, req), id)],
+  ["POST", /^\/sprava\/kredity\/([\w-]+)\/zneplatnit$/, async (req, env, _u, id) => kredity.zneplatnit(env, req, await vyzadujPrihlaseni(env, req), id)],
+  ["GET", /^\/sprava\/opravneni$/, async (req, env) => opravneni.seznam(env, await vyzadujPrihlaseni(env, req))],
+  ["POST", /^\/sprava\/opravneni$/, async (req, env) => opravneni.udel(env, req, await vyzadujPrihlaseni(env, req))],
+  ["POST", /^\/sprava\/opravneni\/([\w-]+)\/zrusit$/, async (req, env, _u, id) => opravneni.zrus(env, req, await vyzadujPrihlaseni(env, req), id)],
+  ["GET", /^\/sprava\/emaily$/, async (req, env) => emaily.seznam(env, await vyzadujPrihlaseni(env, req))],
+  ["POST", /^\/sprava\/emaily\/([\w-]+)\/znovu$/, async (req, env, _u, id) => emaily.znovu(env, await vyzadujPrihlaseni(env, req), id)],
+  ["GET", /^\/sprava\/prava$/, async (req, env) => prava.seznam(env, await vyzadujPrihlaseni(env, req))],
+  ["PUT", /^\/sprava\/prava$/, async (req, env) => prava.nastav(env, req, await vyzadujPrihlaseni(env, req))],
 ];
 
 export default {
@@ -145,6 +186,20 @@ export default {
         }
         const d = await posliSplatne(env, env.PUVOD_WEBU);
         if (d.odeslano || d.selhalo) console.log(`[doručení] odesláno ${d.odeslano}, selhalo ${d.selhalo}`);
+
+        // Platby čekající na ztracený webhook a e-maily s kódy kreditu — obojí zvlášť, ať jedno neshodí druhé.
+        try {
+          const p = await platby.zkontrolujCekajici(env);
+          if (p.zmeneno) console.log(`[platby] dotázáno ${p.zkontrolovano}, změněno ${p.zmeneno}`);
+        } catch (e) {
+          console.error("[platby]", e);
+        }
+        try {
+          const m = await emaily.posliCekajici(env, env.PUVOD_WEBU);
+          if (m.odeslano || m.selhalo) console.log(`[e-maily] odesláno ${m.odeslano}, selhalo ${m.selhalo}, čeká ${m.ceka}`);
+        } catch (e) {
+          console.error("[e-maily]", e);
+        }
         await uklid(env);
       })(),
     );

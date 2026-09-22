@@ -45,6 +45,9 @@ export interface Ucet {
   nazev: string | null;
   /** Kolik passkey je k účtu přihlášených — kvůli varování před ztrátou přístupu. */
   passkeys: number;
+  /** Dobrovolný e-mail pro kód kreditu: jen „má / nemá“, adresa se sem nevrací. */
+  email?: boolean;
+  emailSouhlasKdy?: string | null;
 }
 
 /** Které doručovací kanály server právě umí. Kanál bez tokenu se nenabízí. */

@@ -44,7 +44,7 @@ export async function prihlaseny(env: Env, req: Request): Promise<Prihlaseny | n
   if (!auth?.startsWith("Bearer ")) return null;
   const hash = await sha256(auth.slice(7).trim());
   const r = await env.DB.prepare(
-    `SELECT u.id, u.role, u.nastaveni, u.nazev, s.expirace FROM relace s JOIN ucty u ON u.id = s.ucet_id WHERE s.hash = ?`,
+    `SELECT u.id, u.role, u.nastaveni, u.nazev, s.expirace FROM relace s JOIN ucty u ON u.id = s.ucet_id WHERE s.hash = ? AND u.smazano IS NULL`,
   ).bind(hash).first<{ id: string; role: Role; nastaveni: string; nazev: string | null; expirace: string }>();
   if (!r || new Date(r.expirace) < new Date()) return null;
   // Klouzavá platnost: kdo web používá, nemusí se přihlašovat znovu.
@@ -222,7 +222,7 @@ export async function novyKod(env: Env, ucet: Prihlaseny): Promise<Response> {
 /* ---------- veřejná podoba účtu ---------- */
 
 export async function verejnyUcet(env: Env, id: string) {
-  const u = await env.DB.prepare("SELECT id, role, vytvoreno, nastaveni, nazev FROM ucty WHERE id = ?").bind(id).first<RadekUctu>();
+  const u = await env.DB.prepare("SELECT id, role, vytvoreno, nastaveni, nazev, email_sifrovany, email_souhlas_kdy FROM ucty WHERE id = ?").bind(id).first<RadekUctu & { email_sifrovany: string | null; email_souhlas_kdy: string | null }>();
   if (!u) throw new ChybaHttp(404, "Účet neexistuje.");
   const kanaly = (await env.DB.prepare("SELECT druh FROM kanaly WHERE ucet_id = ?").bind(id).all<{ druh: string }>()).results.map((k) => k.druh);
   const pk = await env.DB.prepare("SELECT COUNT(*) AS n FROM passkeys WHERE ucet_id = ?").bind(id).first<{ n: number }>();
@@ -235,6 +235,9 @@ export async function verejnyUcet(env: Env, id: string) {
     whatsapp: kanaly.includes("whatsapp"),
     upozorneni: nastaveniZ(u),
     passkeys: pk?.n ?? 0,
+    /* Jen „má / nemá“ a kdy souhlasil; adresa se v přehledu účtu nevrací. */
+    email: Boolean(u.email_sifrovany),
+    emailSouhlasKdy: u.email_souhlas_kdy,
   };
 }
 

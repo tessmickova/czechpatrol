@@ -17,7 +17,33 @@ export interface Env {
   /* Kam hlídač hlásí, že sběr přestal běžet. Viz src/hlidac.ts. */
   SPRAVCE_CHAT?: string;
   TELEGRAM_KANAL?: string;
+  /* Premium a kredity — viz docs/PREMIUM-NAVRH.md. Bez klíče a brány se
+     platby nespouštějí a web říká „připravujeme“. Vše jsou tajemství Workeru. */
+  KLIC_SIFROVANI?: string;
+  COMGATE_MERCHANT?: string;
+  COMGATE_SECRET?: string;
+  /** "true" = testovací režim brány (výchozí, dokud není řečeno jinak). */
+  COMGATE_TEST?: string;
+  /** Odesílání e-mailů: "resend" nebo "postmark", klíč a adresa odesílatele. */
+  EMAIL_POSKYTOVATEL?: string;
+  EMAIL_API_KLIC?: string;
+  EMAIL_ODESILATEL?: string;
+  /** Serverový token e-shopu pro uplatnění kreditu. Bez něj se kredity neuplatňují. */
+  ESHOP_TOKEN?: string;
+  /** Pozvánky do komunity a chatu pro Premium — nikdy ve veřejném kódu webu. */
+  KOMUNITA_TELEGRAM_ODKAZ?: string;
+  KOMUNITA_WHATSAPP_ODKAZ?: string;
 }
+
+/**
+ * Produkty. Cena i kredit v haléřích (celá čísla). Jediné místo, kde je
+ * částka; web si ji čte z GET /premium, nikde ji neopisuje.
+ */
+export const PRODUKTY = {
+  "premium-odolnost": { nazev: "Odolnější domácnost — Premium", cenaHaleru: 15000, kreditHaleru: 15000, mena: "CZK" },
+} as const;
+export type Produkt = keyof typeof PRODUKTY;
+export const jeProdukt = (p: unknown): p is Produkt => typeof p === "string" && p in PRODUKTY;
 
 export type Role = "obcan" | "podporovatel" | "izs" | "admin";
 export const ROLE: Role[] = ["obcan", "podporovatel", "izs", "admin"];

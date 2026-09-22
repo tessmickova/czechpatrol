@@ -16,7 +16,12 @@ export type UdalostMereni =
   | "subscription_complete"
   | "feedback_submit"
   | "support_complete"
-  | "zapojeni_email";
+  | "zapojeni_email"
+  | "audit_complete"
+  | "premium_view"
+  | "premium_click"
+  | "payment_start"
+  | "payment_success";
 
 export const SLOVNIK_MERENI: Record<UdalostMereni, string> = {
   overview_view: "zobrazení přehledu",
@@ -28,6 +33,11 @@ export const SLOVNIK_MERENI: Record<UdalostMereni, string> = {
   feedback_submit: "odeslané hlášení nebo zpětná vazba",
   support_complete: "dokončená podpora projektu",
   zapojeni_email: "přidání e-mailu pro souhrn a komunitu",
+  audit_complete: "dokončený audit domácnosti (souhrn zobrazen)",
+  premium_view: "zobrazení nabídky Premium",
+  premium_click: "kliknutí na odemknutí Premium",
+  payment_start: "založení platby (přesměrování na bránu)",
+  payment_success: "potvrzené zaplacení (stav z API)",
 };
 
 const ADRESA = (process.env.NEXT_PUBLIC_MERENI_URL ?? "").replace(/\/$/, "");
