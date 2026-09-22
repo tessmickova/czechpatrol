@@ -236,11 +236,11 @@ export function DetailObsah({ i }: { i: Incident }) {
 
       <Blok nadpis="Co zůstává nejasné" popis="Stejně důležité jako fakta. Sem patří i tvrzení bez potvrzení.">
         <Seznam polozky={i.neznameho} tlumene />
-        {(i.eskalacniSpousteče.length > 0 || i.deeskalacniSignaly.length > 0) && (
+        {i.eskalacniSpousteče.length > 0 && (
           <details className="mt-3 group">
             <summary className="flex min-h-[44px] cursor-pointer items-center gap-2 text-male font-semibold text-tlum hover:text-inkoust">
               <Ikona nazev="dolu" velikost={13} tah={2} trida="transition-transform group-open:rotate-180" />
-              Co by hodnocení tohoto záznamu změnilo
+              Co by hodnocení tohoto záznamu zhoršilo
             </summary>
             <ul className="mt-2 space-y-2 pl-1">
               {i.eskalacniSpousteče.map((f, n) => (
@@ -248,15 +248,33 @@ export function DetailObsah({ i }: { i: Incident }) {
                   <span className="mt-[3px] shrink-0 text-stari-text2"><Ikona nazev="nahoru" velikost={12} tah={2} /></span>{f}
                 </li>
               ))}
-              {i.deeskalacniSignaly.map((f, n) => (
-                <li key={`d${n}`} className="flex gap-2.5 text-zaklad leading-relaxed text-tlum">
-                  <span className="mt-[3px] shrink-0 text-klid-text"><Ikona nazev="dolu" velikost={12} tah={2} /></span>{f}
-                </li>
-              ))}
             </ul>
           </details>
         )}
       </Blok>
+
+      {/*
+        Zlepšení stojí viditelně, ne ve sbaleném seznamu pod nejasnostmi.
+        Web má mluvit i o tom, co se zlepšilo a kdo to zařídil, stejně
+        nahlas jako o zhoršení; jinak vypadá, že se všechno jen kazí.
+      */}
+      {(i.deeskalacniSignaly.length > 0 || i.vykonal) && (
+        <Blok nadpis="Co situaci zlepšuje" popis="Doložené kroky a signály, které hodnocení drží dole nebo ho snižují.">
+          {i.vykonal && (
+            <p className="mb-2 flex gap-2.5 text-zaklad leading-relaxed text-inkoust">
+              <span className="mt-[3px] shrink-0 text-klid-text"><Ikona nazev="fajfka" velikost={13} tah={2.2} /></span>
+              <span>Provedl: <b className="font-semibold">{i.vykonal}</b></span>
+            </p>
+          )}
+          <ul className="space-y-2">
+            {i.deeskalacniSignaly.map((f, n) => (
+              <li key={`d${n}`} className="flex gap-2.5 text-zaklad leading-relaxed text-tlum">
+                <span className="mt-[3px] shrink-0 text-klid-text"><Ikona nazev="dolu" velikost={12} tah={2} /></span>{f}
+              </li>
+            ))}
+          </ul>
+        </Blok>
+      )}
 
       <Blok
         nadpis="Zdroje"

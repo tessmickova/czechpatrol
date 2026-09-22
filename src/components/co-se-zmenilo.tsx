@@ -6,6 +6,7 @@ import { lidskaZmena } from "@/lib/archiv-text";
 import { datumPraha } from "@/lib/cas";
 import { NAZVY_PALIV, radaCen, PRAH_SKOKU, type DruhPaliva } from "@/lib/palivo";
 import { PASMA, UROVNE } from "@/lib/skala";
+import { SLOVA_SMERU, smerCeny, smerZmeny, type SmerZmeny } from "@/lib/smer";
 import type { Snimek } from "@/lib/typy";
 import { PanelNahledu, useNahled, type Nahled } from "./nahled-radku";
 import { Tlacitko } from "./ui";
@@ -44,8 +45,8 @@ interface Radek {
   klic: string;
   kdy: string;
   druh: Druh;
-  /** Zhoršení: cena skočila nahoru, stav se zhoršil, přibylo opatření. */
-  zhorseni: boolean;
+  /** Zlepšení, zhoršení, nebo bez směru. Opatření je bez směru: je to krok státu, ne samo o sobě špatná zpráva. */
+  smer: SmerZmeny;
   kodZeme: string | null;
   zeme: string | null;
   text: string;
@@ -79,15 +80,16 @@ function zeSnimku(snimky: Snimek[]): Radek[] {
         klic: `stav-${s.kdy}-${i}`,
         kdy: s.kdy,
         druh: "stav",
-        zhorseni: /→ (sledujeme|narušeno|ANO|aktivováno|Zvýšená|Vysoká|Vážná)/u.test(z),
+        smer: smerZmeny(z),
         kodZeme: "CZ",
         zeme: "Česko",
         text: z,
         kam: "/vyvoj/",
-        tecka: "bg-akcent",
+        /* Zelená tečka pro zlepšení, červená pro zhoršení, šedá bez směru — barva jen jako tečka. */
+        tecka: smerZmeny(z) === "zlepseni" ? "bg-klid" : smerZmeny(z) === "zhorseni" ? "bg-akcent" : "bg-tlum2",
         nahled: {
           titulek: z,
-          radky: [datumPraha(s.kdy), "změna úředního stavu"],
+          radky: [datumPraha(s.kdy), `změna úředního stavu · ${SLOVA_SMERU[smerZmeny(z)]}`],
           poznamka: "Zapsáno při kontrole zdrojů. Celý archiv změn je na stránce Vývoj.",
         },
       })),
@@ -113,16 +115,18 @@ function zCen(ted: number): Radek[] {
     const dNafta = (t.nafta as number) - (p.nafta as number);
     const dBenzin = (t.benzin95 as number) - (p.benzin95 as number);
     const skok = Math.abs(dNafta) >= PRAH_SKOKU || Math.abs(dBenzin) >= PRAH_SKOKU;
+    /* Směr podle většího pohybu z obou paliv; pod prahem bez směru. */
+    const smer = smerCeny(Math.abs(dNafta) >= Math.abs(dBenzin) ? dNafta : dBenzin, PRAH_SKOKU);
     radky.push({
       klic: `ceny-${t.tyden}`,
       kdy,
       druh: "ceny",
-      zhorseni: skok && (dNafta > 0 || dBenzin > 0),
+      smer,
       kodZeme: "CZ",
       zeme: "Česko",
       text: `Palivo za litr: ${cast("nafta")}, ${cast("benzin95")} za týden`,
       kam: "#palivo",
-      tecka: skok ? "bg-pozor" : "bg-tlum2",
+      tecka: smer === "zhorseni" ? "bg-pozor" : smer === "zlepseni" ? "bg-klid" : "bg-tlum2",
       nahled: {
         titulek: `Průměrné ceny pohonných hmot, týden ${t.tyden} (do ${datumPraha(kdy)})`,
         radky: ["Český statistický úřad", "týdenní šetření"],
@@ -130,7 +134,7 @@ function zCen(ted: number): Radek[] {
           { popisek: "Nafta", hodnota: `${kc(t.nafta as number)} Kč/l · ${rozdil(dNafta)} za týden` },
           { popisek: "Benzin 95", hodnota: `${kc(t.benzin95 as number)} Kč/l · ${rozdil(dBenzin)} za týden` },
         ],
-        poznamka: skok ? "Pohyb nad půl koruny za týden. Změřená cena, ne výhled." : "Změřená cena, ne výhled.",
+        poznamka: skok ? `Pohyb nad půl koruny za týden (${SLOVA_SMERU[smer]}). Změřená cena, ne výhled.` : "Změřená cena, ne výhled.",
       },
     });
   }
@@ -150,7 +154,7 @@ function zOpatreni(zaznamy: Zaznam[]): Radek[] {
         klic: `opatreni-${z.id}`,
         kdy: kdyZjisteno(z),
         druh: "opatreni",
-        zhorseni: true,
+        smer: "neutral",
         kodZeme: z.kodZeme,
         zeme,
         text: bez.charAt(0).toUpperCase() + bez.slice(1),
@@ -160,6 +164,7 @@ function zOpatreni(zaznamy: Zaznam[]): Radek[] {
           titulek: z.titulek,
           radky: [datumPraha(kdyZjisteno(z)), zeme],
           udaje: [
+            ...(z.vykonal ? [{ popisek: "Provedl", hodnota: z.vykonal }] : []),
             { popisek: "Závažnost", hodnota: UROVNE[z.zavaznost].nazev },
             { popisek: "Zdroj", hodnota: z.zdroje[0] ? `${z.zdroje[0].nazev.split(" — ")[0]}${z.zdroje.length > 1 ? ` +${z.zdroje.length - 1}` : ""}` : "bez odkazu" },
           ],
@@ -175,11 +180,15 @@ export function CoSeZmenilo({ zaznamy, snimky, ted }: { zaznamy: Zaznam[]; snimk
   const vsechny = [...zeSnimku(snimky), ...zCen(ted), ...zOpatreni(zaznamy)].sort((a, b) => b.kdy.localeCompare(a.kdy));
   const radky = vsechny.slice(0, NEJVYS);
   /*
-    Kolik signálů zhoršení za týden. Jedno číslo v hlavičce, aby bylo
-    poznat, jestli se řádky pod ním hromadí, nebo jen plynou. Červená
-    tečka jen když je nenulové — a slovo vždycky u ní.
+    Týden v hlavičce: zlepšení, zhoršení i opatření, každé zvlášť. Dřív
+    tu stálo jen „N zhoršení“ a každé opatření se počítalo jako zhoršení —
+    sloupec pak vypadal, že se všechno jen kazí. Zelená a červená jen jako
+    tečky, slovo vždycky u nich.
   */
-  const zhorseni7 = vsechny.filter((r) => r.zhorseni && ted - new Date(r.kdy).getTime() <= 7 * 86_400_000).length;
+  const tyden = vsechny.filter((r) => ted - new Date(r.kdy).getTime() <= 7 * 86_400_000);
+  const zlepseni7 = tyden.filter((r) => r.smer === "zlepseni").length;
+  const zhorseni7 = tyden.filter((r) => r.smer === "zhorseni").length;
+  const opatreni7 = tyden.filter((r) => r.druh === "opatreni").length;
 
   const posledniKontrola = snimky.length ? snimky[snimky.length - 1].kdy : null;
   const zmenStavu = zeSnimku(snimky).filter((r) => ted - new Date(r.kdy).getTime() <= 90 * 86_400_000).length;
@@ -199,9 +208,11 @@ export function CoSeZmenilo({ zaznamy, snimky, ted }: { zaznamy: Zaznam[]; snimk
           <h3 className="stitek">Co se změnilo</h3>
           <Otaznik popis={<span className="block">{posledniKontrola ? `Úřední stavy kontrolovány ${datumPraha(posledniKontrola)}.` : "Bez záznamu o kontrole."}{posledniKontrola && zmenStavu === 0 ? " Za 90 dní beze změny." : ""}</span>} />
         </span>
-        <span className="flex items-center gap-1.5 text-mikro text-tlum2">
-          {zhorseni7 > 0 && <span aria-hidden className="h-[6px] w-[6px] rounded-full bg-akcent" />}
-          {zhorseni7 > 0 ? `${zhorseni7} ${zhorseni7 === 1 ? "zhoršení" : "zhoršení"} za 7 dní` : "za 7 dní bez zhoršení"}
+        <span className="flex flex-wrap items-center justify-end gap-x-2 gap-y-0.5 text-mikro text-tlum2">
+          {zlepseni7 > 0 && <span className="flex items-center gap-1"><span aria-hidden className="h-[6px] w-[6px] rounded-full bg-klid" />{zlepseni7} zlepšení</span>}
+          {zhorseni7 > 0 && <span className="flex items-center gap-1"><span aria-hidden className="h-[6px] w-[6px] rounded-full bg-akcent" />{zhorseni7} zhoršení</span>}
+          {opatreni7 > 0 && <span>{opatreni7} {opatreni7 === 1 ? "opatření" : "opatření"}</span>}
+          <span>{zlepseni7 + zhorseni7 + opatreni7 > 0 ? "za 7 dní" : "za 7 dní beze změny"}</span>
         </span>
       </div>
 

@@ -2,7 +2,8 @@
 import fs from "node:fs";
 import path from "node:path";
 import { describe, expect, it } from "vitest";
-import { castDne, jeCesky, palivoDoPrehledu, sestavPrehledDne, sluzbyDoPrehledu, vyberNavrhyDoPrehledu, zmenyStavuZaDen, klicovaVeta, legendaTecek, pocetZdroju, pruhTecek, PUVODCI, radekPokryti, jeArchivni, radekData, rozdelZpravu, sestavPalivo, sestavSouhrn, sestavPrehledZachycenych, sestavSignal, sestavTest, sestavVystrahu, sestavZdroje, sestavZmenuStavu, sestavZpravu, vyberDoPrehledu, vyberNove, vyberPalivo, vyberSignaly, vyberVystrahu, vyberZmenyStavu, zahlavi, sestavVaznyNavrh, vyberVazneNavrhy } from "../nastroje/rozhlas.mjs";
+import { castDne, jeCesky, palivoDoPrehledu, sestavPrehledDne, sluzbyDoPrehledu, vyberNavrhyDoPrehledu, zmenyStavuZaDen, klicovaVeta, legendaTecek, pocetZdroju, pruhTecek, PUVODCI, radekPokryti, jeArchivni, radekData, rozdelZpravu, sestavPalivo, sestavSouhrn, sestavPrehledZachycenych, sestavSignal, sestavTest, sestavVystrahu, sestavZdroje, sestavZmenuStavu, sestavZpravu, vyberDoPrehledu, vyberNove, vyberPalivo, vyberSignaly, vyberVystrahu, vyberZmenyStavu, zahlavi, sestavVaznyNavrh, vyberVazneNavrhy, smerZmeny } from "../nastroje/rozhlas.mjs";
+import { smerZmeny as smerZmenyWeb } from "../src/lib/smer";
 import { UROVNE, zDeseti } from "../src/lib/skala";
 import { PUVODCI as PUVODCI_WEB } from "../src/lib/kategorie";
 import type { Uroven } from "../src/lib/typy";
@@ -757,8 +758,8 @@ describe("přehled dne — česky, dvakrát denně", () => {
   it("bez změny stavu říká, co v Česku platí; se změnou ji vypíše", () => {
     expect(sestavPrehledDne({ ted })).toContain("Žádná změna úředního stavu v Česku");
     const text = sestavPrehledDne({ ted, zmeny: ["Hranice a doprava: běžný provoz → sledujeme"] });
-    expect(text).toContain("Úřední stav se změnil");
-    expect(text).toContain("• Hranice a doprava: běžný provoz → sledujeme");
+    expect(text).toMatch(/Úřední stav se (změnil|zhoršil)/);
+    expect(text).toContain("Hranice a doprava: běžný provoz → sledujeme");
   });
 
   it("změny stavu za den: bez počtu záznamů a bez změn pokrytí", () => {
@@ -787,5 +788,20 @@ describe("přehled dne — česky, dvakrát denně", () => {
   it("přehled se vejde do jedné zprávy Telegramu", () => {
     const text = sestavPrehledDne({ ted, navrhy: Array.from({ length: 5 }, (_, i) => navrh({ id: `i-${i}` })), kandidati: Array.from({ length: 30 }, (_, i) => kandidat({ id: `k${i}` })), zmeny: ["Hranice a doprava: běžný provoz → sledujeme"], palivo: "Palivo za litr: nafta 48,37 Kč (+0,98 za týden)", sluzby: ["Cloudflare: omezení (stavová stránka provozovatele)"] });
     expect(text.length).toBeLessThan(4096);
+  });
+});
+
+describe("směr změny v přehledu dne", () => {
+  it("skript i web určují směr stejně", () => {
+    for (const z of ["Palivo: narušeno → běžný provoz", "Mobilizace: NE → ANO", "Hodnocení: Vysoká → Zvýšená", "Palivo: bez ověřeného zdroje → běžný provoz"]) {
+      expect(smerZmeny(z)).toBe(smerZmenyWeb(z));
+    }
+  });
+
+  it("samotné zlepšení dá klíčovou větu o zlepšení a zelenou značku", () => {
+    const text = sestavPrehledDne({ ted: Date.parse("2026-09-23T05:00:00Z"), cast: "rano", zmeny: ["Palivo a čerpací stanice: narušeno → běžný provoz"] });
+    expect(text).toMatch(/Úřední stav se zlepšil \(1\)/);
+    expect(text).toMatch(/✅ Palivo/);
+    expect(text).not.toMatch(/zhoršil/);
   });
 });

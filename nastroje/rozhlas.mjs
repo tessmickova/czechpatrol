@@ -816,6 +816,26 @@ export function vyberNavrhyDoPrehledu(navrhy, stav, { ted = Date.now() } = {}) {
 }
 
 /** Změny úředního stavu za posledních 24 hodin — bez počtu záznamů a bez změn pokrytí. */
+/*
+  Směr změny — kopie pravidla ze src/lib/smer.ts (skript neumí načíst
+  TypeScript). Změna tam = změna tady; testy hlídají obojí.
+*/
+const STUPNICE_SMERU = [
+  { "běžný provoz": 0, sledujeme: 1, narušeno: 2 },
+  { NE: 0, ANO: 1 },
+  { neaktivní: 0, aktivováno: 1 },
+  { "Nízká": 0, "Mírně zvýšená": 1, "Střední": 2, "Zvýšená": 3, "Vysoká": 4, "Vážná": 5 },
+];
+export function smerZmeny(text) {
+  const m = String(text).trim().match(/^(.*?): (.+?) \u2192 (.+)$/u);
+  if (!m) return "neutral";
+  const od = m[2].trim(), do_ = m[3].trim();
+  for (const s of STUPNICE_SMERU) {
+    if (od in s && do_ in s) return s[do_] > s[od] ? "zhorseni" : s[do_] < s[od] ? "zlepseni" : "neutral";
+  }
+  return "neutral";
+}
+
 export function zmenyStavuZaDen(archiv, { ted = Date.now(), hodin = 24 } = {}) {
   const od = ted - hodin * 3_600_000;
   return (archiv?.snimky ?? [])
@@ -888,9 +908,20 @@ export function sestavPrehledDne({ ted = Date.now(), cast = castDne(ted), zmeny 
   ];
 
   /* Klíčová věta: co dnes platí v Česku. Bez ní by přehled začínal výčtem. */
-  radky.push(`<b>${zmeny.length ? "Úřední stav se změnil — viz níže." : "Žádná změna úředního stavu v Česku. Mobilizace ne, vycestování bez omezení, hranice v běžném režimu."}</b>`, "");
+  /* Zlepšení se říká stejně nahlas jako zhoršení — a jako první, když je jediné. */
+  const zlepseni = zmeny.filter((z) => smerZmeny(z) === "zlepseni").length;
+  const zhorseni = zmeny.filter((z) => smerZmeny(z) === "zhorseni").length;
+  const klic = !zmeny.length
+    ? "Žádná změna úředního stavu v Česku. Mobilizace ne, vycestování bez omezení, hranice v běžném režimu."
+    : zlepseni && !zhorseni
+      ? `Úřední stav se zlepšil (${zlepseni}) — viz níže.`
+      : zhorseni && !zlepseni
+        ? `Úřední stav se zhoršil (${zhorseni}) — viz níže.`
+        : `Úřední stav se změnil: ${zlepseni} zlepšení, ${zhorseni} zhoršení — viz níže.`;
+  radky.push(`<b>${klic}</b>`, "");
 
-  const coSeZmenilo = [...zmeny.map((z) => `• ${esc(z)}`), ...(palivo ? [`• ${esc(palivo)}`] : []), ...sluzby.map((x) => `• ${esc(x)}`)];
+  const znacka = (z) => (smerZmeny(z) === "zlepseni" ? "✅ " : smerZmeny(z) === "zhorseni" ? "⚠️ " : "");
+  const coSeZmenilo = [...zmeny.map((z) => `• ${znacka(z)}${esc(z)}`), ...(palivo ? [`• ${esc(palivo)}`] : []), ...sluzby.map((x) => `• ${esc(x)}`)];
   if (coSeZmenilo.length) radky.push("<b>Co se změnilo</b>", ...coSeZmenilo, "");
 
   /* 1. nejkritičtější za sběr — neověřené, ale nahoře, protože závažnost nečeká na razítko */

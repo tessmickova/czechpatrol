@@ -116,6 +116,13 @@ export interface Incident {
    * varování, analýza. Do počtu případů vstupují jen případy.
    */
   druh?: DruhZaznamu;
+  /**
+   * Kdo opatření provedl — orgán nebo instituce (Policie ČR, Armáda ČR,
+   * ČEZ Distribuce), nikdy jméno osoby. Jen u druhu „opatreni“; vyplňuje
+   * ověřovatel ze zdroje, nikdy odhadem. Web ho uvádí, protože zlepšení
+   * má mít jméno stejně jako zhoršení.
+   */
+  vykonal?: string;
   /** Slug případu, ke kterému aktualizace patří. */
   navazujeNa?: string;
   /** Co doloženě víme. Každá položka musí být krytá zdrojem. */
