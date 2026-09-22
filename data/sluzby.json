@@ -1,11 +1,16 @@
 {
-  "aktualizovano": "2026-09-22T14:02:42.179Z",
+  "aktualizovano": "2026-09-22T15:02:49.388Z",
   "stavy": [
     {
       "klic": "cloudflare",
       "stav": "omezeni",
       "popis": "Minor Service Outage",
       "incidenty": [
+        {
+          "nazev": "Elevated error rates for Stream Live LL-HLS",
+          "odkaz": "https://www.cloudflarestatus.com/incidents/pvvq3811tpyq",
+          "aktualizovano": "2026-09-22T14:44:18.000Z"
+        },
         {
           "nazev": "Incorrect geo location for some Cloudflare WARP users",
           "odkaz": "https://www.cloudflarestatus.com/incidents/9g65dxfbcjln",
@@ -18,7 +23,7 @@
         "Africa",
         "Arica, Chile - (ARI)"
       ],
-      "zkontrolovano": "2026-09-22T14:02:42.179Z",
+      "zkontrolovano": "2026-09-22T15:02:49.388Z",
       "chyba": null
     },
     {
@@ -38,7 +43,7 @@
         "Zoom Phone - EMEA",
         "Zoom Phone - NORTH AMERICA"
       ],
-      "zkontrolovano": "2026-09-22T14:02:42.179Z",
+      "zkontrolovano": "2026-09-22T15:02:49.388Z",
       "chyba": null
     },
     {
@@ -47,7 +52,7 @@
       "popis": "All Systems Operational",
       "incidenty": [],
       "postizene": [],
-      "zkontrolovano": "2026-09-22T14:02:42.179Z",
+      "zkontrolovano": "2026-09-22T15:02:49.388Z",
       "chyba": null
     }
   ]
