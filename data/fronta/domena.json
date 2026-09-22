@@ -1,5 +1,5 @@
 {
-  "kontrolovano": "2026-09-22T17:47:52.954Z",
+  "kontrolovano": "2026-09-22T17:49:03.865Z",
   "domena": "czechpatrol.cz",
   "cil": "czechpatrol.pages.dev",
   "nasucho": false,
@@ -21,27 +21,9 @@
     "aktivovano": "2026-09-22T17:19:07.133775Z"
   },
   "dns": {
-    "odstraneno": [
-      {
-        "typ": "A",
-        "jmeno": "czechpatrol.cz",
-        "obsah": "81.2.196.19",
-        "proxy": true
-      },
-      {
-        "typ": "CNAME",
-        "jmeno": "*.czechpatrol.cz",
-        "obsah": "czechpatrol.cz",
-        "proxy": true
-      },
-      {
-        "typ": "CNAME",
-        "jmeno": "www.czechpatrol.cz",
-        "obsah": "czechpatrol.cz",
-        "proxy": true
-      }
-    ],
-    "zalozeno": [
+    "odstraneno": [],
+    "zalozeno": [],
+    "ponechano": [
       {
         "typ": "CNAME",
         "jmeno": "czechpatrol.cz",
@@ -55,7 +37,6 @@
         "proxy": true
       }
     ],
-    "ponechano": [],
     "chyby": []
   },
   "pages": {
@@ -82,12 +63,12 @@
   "presmerovaniWww": null,
   "web": {
     "adresa": "https://czechpatrol.cz/stav.json",
-    "http": 521,
+    "http": 522,
     "commit": null,
     "generovano": null,
     "chyba": null,
     "www": {
-      "http": 521,
+      "http": 522,
       "konecnaAdresa": "https://www.czechpatrol.cz/",
       "chyba": null
     }
@@ -103,27 +84,7 @@
     },
     {
       "krok": "dns",
-      "text": "záznamů 3: smazat 3, založit 2, nechat 0"
-    },
-    {
-      "krok": "dns",
-      "text": "mažu A czechpatrol.cz → 81.2.196.19"
-    },
-    {
-      "krok": "dns",
-      "text": "mažu CNAME *.czechpatrol.cz → czechpatrol.cz"
-    },
-    {
-      "krok": "dns",
-      "text": "mažu CNAME www.czechpatrol.cz → czechpatrol.cz"
-    },
-    {
-      "krok": "dns",
-      "text": "zakládám CNAME czechpatrol.cz → czechpatrol.pages.dev (proxy)"
-    },
-    {
-      "krok": "dns",
-      "text": "zakládám CNAME www.czechpatrol.cz → czechpatrol.pages.dev (proxy)"
+      "text": "záznamů 2: smazat 0, založit 0, nechat 2"
     },
     {
       "krok": "pages",
@@ -143,13 +104,13 @@
     },
     {
       "krok": "web",
-      "text": "https://czechpatrol.cz/stav.json: HTTP 521"
+      "text": "https://czechpatrol.cz/stav.json: HTTP 522"
     },
     {
       "krok": "www",
-      "text": "https://www.czechpatrol.cz/ → https://www.czechpatrol.cz/ (HTTP 521)"
+      "text": "https://www.czechpatrol.cz/ → https://www.czechpatrol.cz/ (HTTP 522)"
     }
   ],
-  "poznamka": "Zóna je aktivní, DNS domény czechpatrol.cz řídí Cloudflare. Odstraněné záznamy (stály webu v cestě): A czechpatrol.cz → 81.2.196.19; CNAME *.czechpatrol.cz → czechpatrol.cz; CNAME www.czechpatrol.cz → czechpatrol.cz. Založené záznamy: CNAME czechpatrol.cz → czechpatrol.pages.dev; CNAME www.czechpatrol.cz → czechpatrol.pages.dev. Vlastní domény projektu Pages čekají: czechpatrol.cz (pending), www.czechpatrol.cz (pending). Aktivují se samy, jakmile bude zóna aktivní a záznamy DNS na místě. Web na https://czechpatrol.cz zatím neodpovídá (HTTP 521); certifikát a aktivace domény v Pages ještě mohou běžet, spustit znovu za pár minut. Tokenu CLOUDFLARE_API_TOKEN chybí práva: Zone · Zone Settings · Edit; Zone · Dynamic Redirect (Single Redirects) · Edit. Doplnit v Cloudflare → My Profile → API Tokens → Edit (u práv zóny vybrat czechpatrol.cz) a spustit znovu.",
+  "poznamka": "Zóna je aktivní, DNS domény czechpatrol.cz řídí Cloudflare. Vlastní domény projektu Pages čekají: czechpatrol.cz (pending), www.czechpatrol.cz (pending). Aktivují se samy, jakmile bude zóna aktivní a záznamy DNS na místě. Web na https://czechpatrol.cz zatím neodpovídá (HTTP 522); certifikát a aktivace domény v Pages ještě mohou běžet, spustit znovu za pár minut. Tokenu CLOUDFLARE_API_TOKEN chybí práva: Zone · Zone Settings · Edit; Zone · Dynamic Redirect (Single Redirects) · Edit. Doplnit v Cloudflare → My Profile → API Tokens → Edit (u práv zóny vybrat czechpatrol.cz) a spustit znovu.",
   "vysvetleni": "Zapsáno workflow Doména (nastroje/domena.mjs). Rutiny a session tenhle soubor jen čtou; na Cloudflare API ze sandboxu nedosáhnou. Nejnovější stav dá nový běh workflow."
 }
