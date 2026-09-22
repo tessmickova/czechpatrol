@@ -121,11 +121,46 @@ export function shrnuti(stav) {
     else if (stav.pages.domeny.length) radky.push(`Web běží na https://${stav.domena}. Zbývá přepnout adresy v kódu a v rutinách (docs/PROVOZ.md, část Doména).`);
   }
   if (stav.presmerovaniWww && stav.presmerovaniWww !== "nastaveno") radky.push(`Přesměrování www: ${stav.presmerovaniWww}.`);
+  if (stav.web) {
+    const w = stav.web;
+    if (w.http === 200 && w.commit) radky.push(`Web na https://${stav.domena} odpovídá (commit ${w.commit.slice(0, 7)}).`);
+    else if (w.http === 200) radky.push(`Na https://${stav.domena} odpovídá něco jiného než web (HTTP 200, ale bez stav.json) — nejspíš ještě parkovací stránka; záznamy DNS a aktivace v Pages se projeví za pár minut.`);
+    else radky.push(`Web na https://${stav.domena} zatím neodpovídá (${w.http ? `HTTP ${w.http}` : w.chyba ?? "bez odpovědi"}); certifikát a aktivace domény v Pages ještě mohou běžet, spustit znovu za pár minut.`);
+    if (w.www?.http === 200 && w.www.konecnaAdresa && !w.www.konecnaAdresa.startsWith(`https://${stav.domena}/`)) radky.push(`www zatím nepřesměrovává na holou doménu (skončí na ${w.www.konecnaAdresa}).`);
+  }
   if (stav.chybejiciPrava.length) radky.push(`Tokenu CLOUDFLARE_API_TOKEN chybí práva: ${stav.chybejiciPrava.join("; ")}. Doplnit v Cloudflare → My Profile → API Tokens → Edit (u práv zóny vybrat czechpatrol.cz) a spustit znovu.`);
   return radky;
 }
 
 const kratce = (z) => ({ typ: z.type, jmeno: z.name, obsah: z.content, proxy: Boolean(z.proxied) });
+
+/**
+ * Odpovídá na doméně opravdu web? Ptá se toho, co uvidí čtenář, ne Cloudflare
+ * API: stáhne stav.json z domény a z www. Z běžce GitHubu, kde doména není
+ * blokovaná; ze sandboxu by tenhle krok nešel.
+ */
+export async function overWeb(domena = DOMENA, www = WWW) {
+  const vysledek = { adresa: `https://${domena}/stav.json`, http: 0, commit: null, generovano: null, chyba: null, www: { http: 0, konecnaAdresa: null, chyba: null } };
+  try {
+    const r = await fetch(vysledek.adresa, { redirect: "follow", signal: AbortSignal.timeout(20_000), headers: { Accept: "application/json" } });
+    vysledek.http = r.status;
+    if (r.ok) {
+      const data = await r.json().catch(() => null);
+      vysledek.commit = data?.commit ?? null;
+      vysledek.generovano = data?.generovano ?? null;
+    }
+  } catch (e) {
+    vysledek.chyba = e instanceof Error ? e.message : String(e);
+  }
+  try {
+    const r = await fetch(`https://${www}/`, { redirect: "follow", signal: AbortSignal.timeout(20_000) });
+    vysledek.www.http = r.status;
+    vysledek.www.konecnaAdresa = r.url;
+  } catch (e) {
+    vysledek.www.chyba = e instanceof Error ? e.message : String(e);
+  }
+  return vysledek;
+}
 
 function klient(token) {
   return async (metoda, cesta, telo) => {
@@ -187,6 +222,7 @@ async function main() {
     pages: null,
     https: null,
     presmerovaniWww: null,
+    web: null,
     chybejiciPrava: [],
     kroky: [],
   };
@@ -351,6 +387,11 @@ async function main() {
       krok("www", stav.presmerovaniWww ?? "bez práva");
     }
   }
+
+  /* 6. A odpovídá na doméně web? Nezávisle na API — tak, jak to uvidí čtenář. */
+  stav.web = await overWeb();
+  krok("web", stav.web.commit ? `https://${DOMENA}/stav.json odpovídá, commit ${stav.web.commit.slice(0, 7)}` : `https://${DOMENA}/stav.json: ${stav.web.http ? `HTTP ${stav.web.http}` : stav.web.chyba}`);
+  krok("www", stav.web.www.konecnaAdresa ? `https://${WWW}/ → ${stav.web.www.konecnaAdresa} (HTTP ${stav.web.www.http})` : `https://${WWW}/: ${stav.web.www.chyba}`);
 
   return dokonci(stav, sucho);
 }

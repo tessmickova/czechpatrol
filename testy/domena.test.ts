@@ -96,6 +96,15 @@ describe("doména: souhrn pro člověka", () => {
     expect(text).toContain("A czechpatrol.cz → 81.2.196.19");
   });
 
+  it("web na doméně: odpovídá, parkuje, nebo neodpovídá", () => {
+    const web = (w) => shrnuti({ ...zaklad, zona: aktivni, web: { www: { http: 0, konecnaAdresa: null }, ...w } }).join(" ");
+    expect(web({ http: 200, commit: "abcdef0123" })).toContain("Web na https://czechpatrol.cz odpovídá (commit abcdef0)");
+    expect(web({ http: 200, commit: null })).toContain("něco jiného než web");
+    expect(web({ http: 0, commit: null, chyba: "fetch failed" })).toContain("fetch failed");
+    expect(web({ http: 200, commit: "abcdef0123", www: { http: 200, konecnaAdresa: "https://www.czechpatrol.cz/" } })).toContain("www zatím nepřesměrovává");
+    expect(web({ http: 200, commit: "abcdef0123", www: { http: 200, konecnaAdresa: "https://czechpatrol.cz/" } })).not.toContain("nepřesměrovává");
+  });
+
   it("chybějící práva vypíše jmenovitě", () => {
     const text = shrnuti({ ...zaklad, zona: aktivni, chybejiciPrava: ["Zone · DNS · Edit"] }).join(" ");
     expect(text).toContain("Zone · DNS · Edit");
