@@ -1,5 +1,5 @@
 {
-  "kdy": "2026-09-22T16:55:05.313Z",
+  "kdy": "2026-09-22T17:00:59.311Z",
   "zdroje": [
     {
       "klic": "e-sbirka",
@@ -70,10 +70,9 @@
     },
     {
       "klic": "ote",
-      "ok": false,
-      "stav": null,
-      "pocetPolozek": 0,
-      "chyba": "The operation was aborted due to timeout"
+      "ok": true,
+      "stav": 200,
+      "pocetPolozek": 0
     },
     {
       "klic": "sshr",
