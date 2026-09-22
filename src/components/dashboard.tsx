@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { druh, kdyZjisteno, pachatelPotvrzen, podlePuvodce, podleZemi, pripady, uredniZdroj, vyber, type Zaznam } from "@/lib/agregace";
 import { cerstvost, datumCasPraha, datumPraha, stariSlovy } from "@/lib/cas";
-import type { CelkovyStav, HybridniTlak, Kampan, Kandidat, NatoPolozka, Nepotvrzene, Overovana, PravniPolozka, ProvozniPolozka, Snimek, TydenniHodnoceni, Uroven, Watchlist } from "@/lib/typy";
+import type { CelkovyStav, HybridniTlak, Kampan, Kandidat, NatoPolozka, Nepotvrzene, OficialniNastroj, Overovana, PravniPolozka, ProvozniPolozka, Snimek, TydenniHodnoceni, Uroven, Watchlist } from "@/lib/typy";
 import { CenaPaliva } from "./palivo";
 import { stavPaliva, vetaOCene } from "@/lib/palivo";
 import { stavPravni, stavProvozu } from "@/lib/pokryti";
@@ -23,6 +23,7 @@ import { PavucinaHrozeb } from "./pavucina";
 import { TabulkaZemi } from "./tabulka-zemi";
 import { useZiveHodiny } from "@/lib/cas-klient";
 import { ProfilySiti } from "./profily-siti";
+import { PripravenostKarta } from "./pripravenost-klient";
 import { TipyKPriprave } from "./tipy";
 import { PasZemi } from "./pas-zemi";
 import { CoSeZmenilo } from "./co-se-zmenilo";
@@ -308,7 +309,7 @@ function Pruh({ nazev, n, max, barva, odkaz }: { nazev: React.ReactNode; n: numb
 }
 
 export function Dashboard({
-  stav, pravni, natoPolozky, provozPolozky, overeno, vse, neprosle, kandidati, nepotvrzene = [], tydny, watchlist, crHistoricky, hybridni, obcane, ted, snimky = [],
+  stav, pravni, natoPolozky, provozPolozky, overeno, vse, neprosle, kandidati, nepotvrzene = [], tydny, watchlist, crHistoricky, hybridni, obcane, ted, snimky = [], nastroje = [],
   tlakEvropa, tlakCesko, veta, kampane, nazvyZemi, overovaneAktivni = [], overovaneUzavrene = [],
 }: {
   stav: CelkovyStav; pravni: PravniPolozka[]; natoPolozky: NatoPolozka[]; provozPolozky: ProvozniPolozka[];
@@ -318,6 +319,8 @@ export function Dashboard({
   crHistoricky: Uroven | null;
   /** Archiv snímků úředního stavu — z něj se čte, co se změnilo. */
   snimky?: Snimek[];
+  /** Katalog oficiálních nástrojů pro kartu „Jsem připraven/a?". */
+  nastroje?: OficialniNastroj[];
   hybridni: Uroven | null; obcane: { uroven: Uroven; popis: string; neovereno: number };
   tlakEvropa: HybridniTlak; tlakCesko: HybridniTlak; veta: HlavniVeta;
   kampane: Kampan[]; nazvyZemi: Record<string, string>;
@@ -537,6 +540,8 @@ export function Dashboard({
           od provozovatelů je rychlejší než od úřadů.
         */}
         <StavSluzeb stavy={sluzby.stavy} kdy={sluzby.kdy} />
+        {/* Připravenost: co mít nastavené dřív, než se něco stane. Skóre je z odpovědí čtenáře v jeho prohlížeči. */}
+        <PripravenostKarta nastroje={nastroje} />
 
         {/*
           Profily úřadů a představitelů na sítích: které se čtou a co z nich

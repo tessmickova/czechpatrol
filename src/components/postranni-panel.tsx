@@ -28,6 +28,7 @@ export const HLAVNI_STRANKY: { href: string; label: string; ikona: NazevIkony; p
   { href: "/manipulace/", label: "Manipulace", ikona: "bublina", popis: "operace cílené na občany a co je u nich doložené" },
   { href: "/zeme/", label: "Země", ikona: "vlajka", popis: "přehled a počty pro každou sledovanou zemi" },
   { href: "/analyzy/", label: "Analýzy", ikona: "graf", popis: "vývoj v čase, cíle aktérů, metodika" },
+  { href: "/pripravenost/", label: "Jsem připraven/a?", ikona: "fajfka", popis: "oficiální nástroje a co si nastavit předem" },
   { href: "/muj-prehled/", label: "Můj přehled", ikona: "terc", popis: "země a témata, která sledujete" },
 ];
 

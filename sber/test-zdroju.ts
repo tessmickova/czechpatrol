@@ -2,6 +2,7 @@ import { ctiHtml, stahni } from "./nacti";
 import { MIN_ZNAKU_OBSAHU } from "./rozhodovani";
 import { ZDROJE } from "./zdroje";
 import { SLEDOVANE_PROFILY } from "./socialni";
+import nastroje from "../data/oficialni-nastroje.json";
 
 /**
  * Ověří, že adresy v registru skutečně odpovídají — a že z nich jde něco číst.
@@ -69,6 +70,16 @@ async function main() {
       const v = await zkusAdresu(p.url);
       const poznamka = v.duvod ? `  (${v.duvod})` : "";
       console.log(`${v.znacka.padEnd(8)}${String(v.stav ?? "---").padEnd(5)}${String(v.znaku).padStart(7)} znaků  ${p.klic.padEnd(16)} ${p.url}${p.overenaAdresa ? "" : "  [overenaAdresa: false]"}${poznamka}`);
+    }
+  }
+
+  /* Katalog oficiálních nástrojů: adresa provozovatele musí odpovídat. Existenci a provozovatele tím ověřenou nemáme — to je na člověku. */
+  const adresyNastroju = (nastroje as { id: string; webUrl: string | null; oficialniZdroj: string | null }[]).flatMap((n) => [...new Set([n.webUrl, n.oficialniZdroj].filter((u): u is string => Boolean(u)))].map((u) => ({ id: n.id, u })));
+  if (adresyNastroju.length) {
+    console.log("\nOficiální nástroje (adresa odpovídá ≠ informace ověřena):");
+    for (const { id, u } of adresyNastroju) {
+      const v = await zkusAdresu(u);
+      console.log(`${v.znacka.padEnd(8)}${String(v.stav ?? "---").padEnd(5)}${String(v.znaku).padStart(7)} znaků  ${id.padEnd(18)} ${u}${v.duvod ? `  (${v.duvod})` : ""}`);
     }
   }
 

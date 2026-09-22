@@ -1,5 +1,5 @@
 import { JE_UKAZKA } from "@/config/web";
-import type {
+import type { OficialniNastroj,
   Odmitnuty,
   Archiv, CelkovyStav, HybridniTlak, Incident, Kampan, Kandidat, Kategorie, NatoPolozka, Oprava, PravniStav,
   Nepotvrzene, Overovana, Provoz, Puvodce, RuskoStav, Svet, Tip, TydenniHodnoceni, Uroven, Vystraha, VystrahaSoubor, Watchlist,
@@ -14,6 +14,7 @@ import ostreNato from "../../data/nato.json";
 import ostryProvoz from "../../data/provoz.json";
 import souborVystrahy from "../../data/vystraha.json";
 import ostreTipy from "../../data/tipy.json";
+import ostreNastroje from "../../data/oficialni-nastroje.json";
 import ostryHybridni from "../../data/hybridni-tlak.json";
 import ostreTydny from "../../data/tydny.json";
 import ostreRusko from "../../data/rusko.json";
@@ -144,6 +145,10 @@ export function vystraha(): Vystraha | null {
  * Tipy k přípravě. Ven jde jen tip s doloženým zdrojem a s platností —
  * stejné pravidlo jako u záznamů. Nejnovější první.
  */
+export function oficialniNastroje(): OficialniNastroj[] {
+  return jako<OficialniNastroj[]>(ostreNastroje).filter((n) => n.stav !== "neaktivni");
+}
+
 export function tipy(ted = Date.now()): Tip[] {
   return jako<Tip[]>(ostreTipy)
     .filter((t) => (t.zdroje ?? []).some((z) => /^https?:\/\//.test(z.url ?? "")))

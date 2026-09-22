@@ -20,6 +20,7 @@ export const HLAVNI = [
   { href: "/manipulace/", label: "Manipulace" },
   { href: "/zeme/", label: "Země" },
   { href: "/analyzy/", label: "Analýzy" },
+  { href: "/pripravenost/", label: "Připravenost" },
   { href: "/muj-prehled/", label: "Můj přehled" },
 ];
 
@@ -66,7 +67,7 @@ export function Navigace() {
               key={o.href}
               href={o.href}
               aria-current={aktivni(o.href) ? "page" : undefined}
-              className={`rounded-full px-3.5 py-2 text-male font-semibold uppercase tracking-[0.06em] transition-colors ${
+              className={`whitespace-nowrap rounded-full px-3 py-2 text-male font-semibold uppercase tracking-[0.05em] transition-colors ${
                 aktivni(o.href) ? "bg-[rgb(255_255_255/0.12)] text-inkoust" : "text-tlum hover:bg-[rgb(255_255_255/0.07)] hover:text-inkoust"
               }`}
               style={{ fontFamily: "var(--font-mono)" }}

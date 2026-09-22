@@ -201,6 +201,40 @@ export function DetailObsah({ i }: { i: Incident }) {
         )}
       </Blok>
 
+      {/*
+        Dopad na Česko u zahraniční události a praktický dopad pro občana.
+        Obojí jen vyplněné: prázdná šablona by tvrdila, že jsme se dívali.
+      */}
+      {i.dopadNaCr && i.kodZeme !== "CZ" && (
+        <Blok nadpis="Dopad na Česko" popis={`Ověřeno ${datumPraha(i.dopadNaCr.overeno)}. Říká, co dnes doloženě platí — ne co by mohlo být.`}>
+          <p className="flex items-center gap-2 text-zaklad font-bold text-inkoust">
+            <span aria-hidden className={`h-[7px] w-[7px] shrink-0 rounded-full ${i.dopadNaCr.stav === "potvrzeny" ? "bg-akcent" : i.dopadNaCr.stav === "mozny" ? "bg-pozor" : "bg-klid"}`} />
+            {i.dopadNaCr.stav === "potvrzeny" ? "Potvrzený dopad" : i.dopadNaCr.stav === "mozny" ? "Možný dopad" : "Momentálně žádný"}
+          </p>
+          <dl className="mt-2 space-y-2 text-male">
+            <div><dt className="stitek">Proč je to relevantní</dt><dd className="mt-0.5 text-tlum">{i.dopadNaCr.procRelevantni}</dd></div>
+            <div><dt className="stitek">Co teď platí pro lidi v Česku</dt><dd className="mt-0.5 text-tlum">{i.dopadNaCr.dopad}</dd></div>
+            <div><dt className="stitek">Sledujeme</dt><dd className="mt-0.5 text-tlum">{i.dopadNaCr.sledujeme}</dd></div>
+          </dl>
+        </Blok>
+      )}
+
+      {i.praktickyDopad && (
+        <Blok nadpis="Co to znamená prakticky" popis={`Ověřeno ${datumPraha(i.praktickyDopad.overeno)}. Jen doložené body; kde údaj chybí, není tu.`}>
+          <dl className="grid gap-x-6 gap-y-3 text-male sm:grid-cols-2">
+            {i.praktickyDopad.coJePotvrzeno.length > 0 && <div><dt className="stitek">Co je potvrzeno</dt><dd className="mt-0.5 text-tlum"><ul className="list-disc pl-4">{i.praktickyDopad.coJePotvrzeno.map((x) => <li key={x}>{x}</li>)}</ul></dd></div>}
+            {(i.praktickyDopad.kde || i.praktickyDopad.odKdy) && <div><dt className="stitek">Kde a od kdy</dt><dd className="mt-0.5 text-tlum">{[i.praktickyDopad.kde, i.praktickyDopad.odKdy ? `od ${datumPraha(i.praktickyDopad.odKdy)}` : null].filter(Boolean).join(" · ")}</dd></div>}
+            {i.praktickyDopad.coMuzeBytOvlivneno.length > 0 && <div><dt className="stitek">Co může být ovlivněno</dt><dd className="mt-0.5 text-tlum"><ul className="list-disc pl-4">{i.praktickyDopad.coMuzeBytOvlivneno.map((x) => <li key={x}>{x}</li>)}</ul></dd></div>}
+            {i.praktickyDopad.coFunguje.length > 0 && <div><dt className="stitek">Co funguje</dt><dd className="mt-0.5 text-tlum"><ul className="list-disc pl-4">{i.praktickyDopad.coFunguje.map((x) => <li key={x}>{x}</li>)}</ul></dd></div>}
+            {i.praktickyDopad.coNefunguje.length > 0 && <div><dt className="stitek">Co nefunguje</dt><dd className="mt-0.5 text-tlum"><ul className="list-disc pl-4">{i.praktickyDopad.coNefunguje.map((x) => <li key={x}>{x}</li>)}</ul></dd></div>}
+            {i.praktickyDopad.coDoporucujeUrad.length > 0 && <div><dt className="stitek">Co doporučuje úřad nebo provozovatel</dt><dd className="mt-0.5 text-tlum"><ul className="list-disc pl-4">{i.praktickyDopad.coDoporucujeUrad.map((x) => <li key={x.url}><a href={x.url} target="_blank" rel="noopener noreferrer" className="odkaz">{x.kdo}</a>: {x.text}</li>)}</ul></dd></div>}
+            {i.praktickyDopad.coUdelat.length > 0 && <div><dt className="stitek">Co udělat</dt><dd className="mt-0.5 text-tlum"><ul className="list-disc pl-4">{i.praktickyDopad.coUdelat.map((x) => <li key={x}>{x}</li>)}</ul></dd></div>}
+            {i.praktickyDopad.coNedelat.length > 0 && <div><dt className="stitek">Co nedělat</dt><dd className="mt-0.5 text-tlum"><ul className="list-disc pl-4">{i.praktickyDopad.coNedelat.map((x) => <li key={x}>{x}</li>)}</ul></dd></div>}
+            {i.praktickyDopad.dalsiInfo.length > 0 && <div><dt className="stitek">Kde získat další informace</dt><dd className="mt-0.5 text-tlum"><ul className="list-disc pl-4">{i.praktickyDopad.dalsiInfo.map((x) => <li key={x.url}><a href={x.url} target="_blank" rel="noopener noreferrer" className="odkaz">{x.nazev}</a></li>)}</ul></dd></div>}
+          </dl>
+        </Blok>
+      )}
+
       <Blok nadpis="Co zůstává nejasné" popis="Stejně důležité jako fakta. Sem patří i tvrzení bez potvrzení.">
         <Seznam polozky={i.neznameho} tlumene />
         {(i.eskalacniSpousteče.length > 0 || i.deeskalacniSignaly.length > 0) && (

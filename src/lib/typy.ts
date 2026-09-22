@@ -131,6 +131,10 @@ export interface Incident {
   zdroje: Zdroj[];
   souvisejici: SouvisejiciVazba[];
   historie: ZaznamAktualizace[];
+  /** Jen vyplněné. Viz PraktickyDopad. */
+  praktickyDopad?: PraktickyDopad | null;
+  /** U událostí mimo ČR. Viz DopadNaCr. */
+  dopadNaCr?: DopadNaCr | null;
   /** Nový od poslední aktualizace webu. */
   novy: boolean;
   /** Do kterého týdne se počítá. Jedna událost = jeden signál. */
@@ -711,6 +715,92 @@ export interface VystrahaSoubor {
  * Každý tip stojí na doloženém zdroji. Bez zdroje se nezobrazí — tip bez
  * doložení je fáma s ikonou.
  */
+/*
+  Katalog oficiálních nástrojů (READY).
+
+  Co má člověk mít nainstalované nebo nastavené DŘÍV, než se něco stane:
+  Záchranka, tísňové linky, varování na mobil, výstrahy ČHMÚ, DROZD, sirény,
+  krizové vysílání, kanál obce. Každá položka říká, kdo ji provozuje, k čemu
+  je a co si nastavit — a kdy jsme informaci naposledy ověřili.
+
+  Co tu NENÍ: nic, co neexistuje, a nic, co CzechPatrol neumí zjistit.
+  Web nevidí, co má kdo v telefonu; odpověď „mám / nemám / nevím" dává
+  člověk sám a zůstává jen v jeho prohlížeči.
+*/
+export type KategorieNastroje = "tisen" | "pocasi" | "cestovani" | "mistni-varovani" | "zdravi" | "krizove-informace";
+export type DostupnostNastroje = "aplikace" | "sluzba" | "system";
+/** k-overeni = existence a provozovatel se ověřují; overeno = ověřeno k datu `overeno`; obecne = rada bez vnějšího tvrzení. */
+export type StavNastroje = "k-overeni" | "overeno" | "obecne" | "neaktivni";
+
+export interface OficialniNastroj {
+  id: string;
+  nazev: string;
+  provozovatel: string;
+  kategorie: KategorieNastroje;
+  /** Co to je. Jedna dvě věty, bez hodnocení. */
+  popis: string;
+  kCemu: string;
+  kdyPomuze: string;
+  procMit: string;
+  iosUrl: string | null;
+  androidUrl: string | null;
+  webUrl: string | null;
+  /** Odkaz na provozovatele nebo úřad, ze kterého informace pochází. */
+  oficialniZdroj: string | null;
+  /** Kdy jsme informaci naposledy ověřili proti zdroji. null = zatím ne. */
+  overeno: string | null;
+  dostupnost: DostupnostNastroje;
+  coNastavit: string[];
+  proKoho: string[];
+  stav: StavNastroje;
+  /** Počítá se do skóre připravenosti. Obecné rady ne. */
+  doporuceno: boolean;
+  /** Co u položky ještě není jisté. Zobrazuje se, aby to nevypadalo jako hotová věc. */
+  poznamka?: string;
+}
+
+/*
+  Praktický dopad události pro občana.
+
+  Nechceme jen „došlo k výpadku". Chceme: co je potvrzené, kde, od kdy,
+  co může být ovlivněné, co funguje a co ne, co doporučuje úřad, co udělat
+  a co nedělat, kde je další informace a kdy jsme to naposledy ověřili.
+  Pole je volitelné a ukazuje se JEN vyplněné — prázdná šablona by tvrdila,
+  že jsme se dívali, i když ne. Každý bod musí mít oporu ve zdrojích záznamu.
+*/
+export interface PraktickyDopad {
+  coJePotvrzeno: string[];
+  kde: string | null;
+  odKdy: string | null;
+  coMuzeBytOvlivneno: string[];
+  coFunguje: string[];
+  coNefunguje: string[];
+  /** Doporučení úřadu, obce nebo provozovatele — s tím, kdo to říká. */
+  coDoporucujeUrad: { kdo: string; text: string; url: string }[];
+  coUdelat: string[];
+  coNedelat: string[];
+  dalsiInfo: { nazev: string; url: string }[];
+  /** Kdy byl tenhle blok naposledy ověřen proti zdrojům. */
+  overeno: string;
+}
+
+/*
+  Dopad zahraniční události na Česko.
+
+  Zahraniční zpráva se nezveřejňuje proto, že je dramatická, ale proto, že
+  odpovídá: proč je to relevantní pro ČR, má to teď praktický dopad a co
+  sledujeme dál. Tři stupně, žádný odhad: „žádný" znamená, že v den
+  ověření nic doloženého neplatilo — ne že nikdy nebude.
+*/
+export interface DopadNaCr {
+  stav: "zadny" | "mozny" | "potvrzeny";
+  procRelevantni: string;
+  /** Co konkrétně teď platí pro lidi v Česku. U „žádný" věta, že nic. */
+  dopad: string;
+  sledujeme: string;
+  overeno: string;
+}
+
 export interface Tip {
   klic: string;
   /** Co se stalo nebo co existuje. Jedna věta. */

@@ -291,6 +291,29 @@ export default function Metodika() {
       </Sekce>
 
       <Obsah>
+        <Karta className="mb-4 p-5 sm:p-6">
+          <h2 className="podnadpis mb-3 text-vetsi">Co záměrně nezveřejňujeme</h2>
+          <div className="max-w-[46rem] space-y-3 text-male leading-relaxed text-tlum">
+            <p>
+              CzechPatrol má pomáhat lidem v Česku, ne dávat komukoli lepší obraz
+              o tom, kde a jak zasahují bezpečnostní složky. Proto se do dat
+              nezapisují souřadnice, pohyb ani rozmístění jednotek, počty
+              zasahujících, interní kontakty, neveřejná evakuační místa, zásoby
+              ani slabá místa infrastruktury — i když je někde jednotlivě najdete.
+              Veřejné neznamená bezpečné k seskupení.
+            </p>
+            <p>
+              U události stačí země a kraj. Kontrola dat souřadnice v textu
+              považuje za chybu a nasazení zastaví; popis pohybu jednotek
+              posuzuje člověk. Pravidla jsou sepsaná v dokumentaci projektu
+              (Bezpečnost obsahu) a platí i pro externího ověřovatele.
+            </p>
+            <p className="text-tlum2">
+              Co si naopak nastavit dřív, než se něco stane, je na stránce{" "}
+              <Link href="/pripravenost/" className="odkaz">Jsem připraven/a?</Link>.
+            </p>
+          </div>
+        </Karta>
         <Karta className="p-5 sm:p-6">
           <h2 className="podnadpis mb-3 text-vetsi">Role automatizace</h2>
           <div className="max-w-[46rem] space-y-3 text-male leading-relaxed text-tlum">
