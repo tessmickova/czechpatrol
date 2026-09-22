@@ -1,5 +1,71 @@
 [
   {
+    "id": "k-9153780a862f524d",
+    "zachyceno": "2026-09-22T04:02:36.341Z",
+    "publikovano": "2026-09-22T03:47:00.000Z",
+    "zdroj": {
+      "nazev": "Český rozhlas — domácí zprávy",
+      "url": "https://www.irozhlas.cz/veda-technologie/priroda/prerov-bude-neplanovane-zalesnovat-sucha-neprezilo-vic-nez-40-procent-mladych_2609220547_jkd",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Přerov bude neplánovaně zalesňovat. Sucha nepřežilo víc než 40 procent mladých stromků",
+    "shrnuti": "Mimořádnou dotaci milion korun uvolnila samospráva Přerova na neplánované zalesňování městských lesů. Konkrétně v polesích Svrčov a Staměřice, kde z jarní výsadby nepřežila parné počasí a sucho skoro polovina mladých stromků. Mimořádné zalesňování lesní dělníci zahájí do konce roku.",
+    "duvod": "vylouceno-tematem",
+    "kategorie": [],
+    "posouzeni": null
+  },
+  {
+    "id": "k-d9344c902002fe31",
+    "zachyceno": "2026-09-22T04:02:36.342Z",
+    "publikovano": "2026-09-22T03:32:00.000Z",
+    "zdroj": {
+      "nazev": "Český rozhlas — domácí zprávy",
+      "url": "https://www.irozhlas.cz/zpravy-domov/penize-jsou-misto-zatim-ne-na-nocleh-pro-bezdomovce-daji-teplice-670-tisic_2609220532_dci",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Peníze jsou, místo zatím ne. Na nocleh pro bezdomovce dají Teplice 670 tisíc, shodli se zastupitelé",
+    "shrnuti": "Tepličtí zastupitelé v pondělí 21. září odsouhlasili mimo jiné dotaci na provoz dočasné zimní noclehárny pro bezdomovce. Detaily jejího provozu však ještě město plánuje doladit. Mimoto se také jednalo o městské koncepci pěší dopravy nebo školství.",
+    "duvod": "vylouceno-tematem",
+    "kategorie": [],
+    "posouzeni": null
+  },
+  {
+    "id": "k-0b782c503fe53a7a",
+    "zachyceno": "2026-09-22T04:02:36.343Z",
+    "publikovano": "2026-09-22T03:14:00.000Z",
+    "zdroj": {
+      "nazev": "Český rozhlas — domácí zprávy",
+      "url": "https://www.irozhlas.cz/zivotni-styl/zdravi/drzeni-tela-nebo-ultrazvuk-tepen-budejovicti-se-mohli-nechat-zdarma-vysetrit-na_2609220514_dci",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Kontrola držení těla nebo ultrazvuk tepen. Budějovičtí se mohli nechat zdarma vyšetřit na náměstí",
+    "shrnuti": "Kontrola znamének, cholesterol nebo ultrazvuk tepen – o preventivní vyšetření byl v Českých Budějovicích velký zájem. Na náměstí Přemysla Otakara II. se kvůli některým z nich tvořily dlouhé fronty. Den jihočeského zdraví a prevence nabídl lidem zdarma také měření cukru a krevního tlaku nebo ukázky p",
+    "duvod": "bez-skutku",
+    "kategorie": [],
+    "posouzeni": null
+  },
+  {
+    "id": "k-2a86a07ea87cad11",
+    "zachyceno": "2026-09-22T04:02:36.344Z",
+    "publikovano": "2026-09-22T03:00:00.000Z",
+    "zdroj": {
+      "nazev": "Český rozhlas — domácí zprávy",
+      "url": "https://www.irozhlas.cz/zpravy-domov/dotace-pro-male-braly-i-velci-sebestyan-analyza-chyba-na-strane-statu_2609220500_tec",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Dotace byly pro malé, ale čerpali je i velcí. Šebestyán nařídil analýzu, podle níž chyboval stát, a ne podniky",
+    "shrnuti": "Před lety Podpůrný a garanční rolnický a lesnický fond vymohl peníze určené pro malé a střední podniky, které ale podle Evropské komise čerpaly v rozporu s pravidly i velké zemědělské kolosy. Další pak ze stejného důvodu získal zpět na začátku letošního roku. Co do počtu mezi nimi letos i před lety ",
+    "duvod": "vylouceno-tematem",
+    "kategorie": [
+      "cr"
+    ],
+    "posouzeni": null
+  },
+  {
     "id": "k-23a7da8b35544271",
     "zachyceno": "2026-09-22T02:02:38.932Z",
     "publikovano": "2026-09-22T01:33:12.000Z",
@@ -9205,97 +9271,6 @@
     "posouzeni": {
       "podezreni": "zadne",
       "duvod": "Debata kandidátů v komunálních volbách, běžná politika",
-      "kdy": "2026-09-19T11:03:33.710Z"
-    }
-  },
-  {
-    "id": "k-0a79e8179fe40379",
-    "zachyceno": "2026-09-19T08:00:22.049Z",
-    "publikovano": "2026-09-17T15:35:08.000Z",
-    "zdroj": {
-      "nazev": "ČT24 — hlavní zprávy",
-      "url": "https://ct24.ceskatelevize.cz/clanek/svet/tusk-rusko-podle-tajnych-sluzeb-chysta-hybridni-utoky-drony-a-raketami-na-spojence-ukrajiny-377730",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Tusk varuje před hybridními útoky Ruska, Babiš mluví o hybridní válce",
-    "shrnuti": "Rusko plánuje hybridní útoky s použitím dronů a raket na státy podporující Ukrajinu, včetně Polska, prohlásil s odkazem na tajné služby polský premiér Donald Tusk v projevu v Sejmu. Pozdní podzim a zima budou podle něho nejkritičtějším momentem v ruské válce proti Ukrajině. Český premiér Andrej Babi",
-    "duvod": "bez-skutku",
-    "kategorie": [
-      "drony",
-      "hybridni",
-      "rusko"
-    ],
-    "posouzeni": {
-      "podezreni": "vysoke",
-      "duvod": "Rusko plánuje hybridní útoky drony a raketami na EU státy",
-      "kdy": "2026-09-19T11:03:33.710Z"
-    }
-  },
-  {
-    "id": "k-456779263bb997cd",
-    "zachyceno": "2026-09-20T06:02:32.655Z",
-    "publikovano": "2026-09-17T15:10:00.000Z",
-    "zdroj": {
-      "nazev": "Německo — sabotaz",
-      "url": "https://news.google.com/rss/articles/CBMiygFBVV95cUxPMnNSYWFuZVAyYXh0eVpZYXBORnNnd19pck9OVlFTekxtQjBTSkNsQXZoN1FDLTJQbXhyb294elVJUTJWZ3MzNjZCbzVFaGVUZGtPQlF0MTc3UVRQS2l3em5UbHNuejJyRFB6dFhhWV80M1pqRFd6VHJkR2ljU0ZDZ2ZsaXlUQ2U1ZF9HNVk1dks3bG9wVTRKcThCS2tEZDItbVl1SnhOdVRTTmdWUnJqSlVZWHNjam5VUEoxMWtyaWQtOTJsSmoweDlR0gHGAUFVX3lxTFBqOXhjdkZJZ2FwMlFUYjV0OVlNb2pTMlRxdjQyQ0tIYmxVbTVWU2NIY3AwTjdUWmYtMk5DUXJPR1plOU5LZU5WTG9xYXhoZ2tmMTI5ampxUi1JWG1NS1FQU1gzVEpTa09HQmdFYmR0cHhDZEd4SVV2VnRjdXl5RkVLbWJuVFJuTE9DVEFtR2k4NDBYYnh1LUFRU2FrWXdOclpOajlIU3pXTlc5V1R4c3luOXRhMVVINzhTNl9Sb2tCS2ZjcHE1UQ?oc=5",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Russian Embassy network in Italy may have recruited saboteurs across Europe - The New Voice of Ukraine",
-    "shrnuti": "Russian Embassy network in Italy may have recruited saboteurs across Europe The New Voice of Ukraine",
-    "duvod": "bez-skutku",
-    "kategorie": [
-      "rusko"
-    ],
-    "posouzeni": {
-      "podezreni": "vysoke",
-      "duvod": "Zpráva o síti náboru sabotérů v Evropě.",
-      "kdy": "2026-09-20T06:04:17.114Z"
-    }
-  },
-  {
-    "id": "k-c304eb2e76864331",
-    "zachyceno": "2026-09-19T08:00:22.524Z",
-    "publikovano": "2026-09-17T15:10:00.000Z",
-    "zdroj": {
-      "nazev": "Německo — sabotaz",
-      "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxQajl4Y3ZGSWdhcDJRVGI1dDlZTW9qUzJUcXY0MkNLSGJsVW01VlNjSGNwME43VFpmLTJOQ1FyT0daZTlOS2VOVkxvcWF4aGdrZjEyOWpqcVItSVhtTUtRUFNYM1RKU2tPR0JnRWJkdHB4Q2RHeElVdlZ0Y3V5eUZFS21iblRSbkxPQ1RBbUdpODQwWGJ4dS1BUVNha1l3TnJaTmo5SFN6V05XOVdUeHN5bjl0YTFVSDc4UzZfUm9rQktmY3BxNVHSAcYBQVVfeXFMUGo5eGN2RklnYXAyUVRiNXQ5WU1valMyVHF2NDJDS0hibFVtNVZTY0hjcDBON1RaZi0yTkNRck9HWmU5TktlTlZMb3FheGhna2YxMjlqanFSLUlYbU1LUVBTWDNUSlNrT0dCZ0ViZHRweENkR3hJVXZWdGN1eXlGRUttYm5UUm5MT0NUQW1HaTg0MFhieHUtQVFTYWtZd05yWk5qOUhTeldOVzlXVHhzeW45dGExVUg3OFM2X1Jva0JLZmNwcTVR?oc=5",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Russian Embassy network in Italy may have recruited saboteurs across Europe - The New Voice of Ukraine",
-    "shrnuti": "Russian Embassy network in Italy may have recruited saboteurs across Europe The New Voice of Ukraine",
-    "duvod": "bez-skutku",
-    "kategorie": [
-      "rusko"
-    ],
-    "posouzeni": {
-      "podezreni": "vysoke",
-      "duvod": "Ruská ambasáda v Itálii verbuje sabotéry po Evropě",
-      "kdy": "2026-09-19T11:03:33.710Z"
-    }
-  },
-  {
-    "id": "k-5047629aa23e74e3",
-    "zachyceno": "2026-09-19T08:00:22.528Z",
-    "publikovano": "2026-09-17T15:01:00.000Z",
-    "zdroj": {
-      "nazev": "Rakousko — drony",
-      "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxPLUNmam14NTlYajE2STJTcHlYMGRyYXJiT2p1N1dadzhSdVlfNEZ6cDlvNkdMdzIxazB5ZEpzN3NoYWcxVkU2djVXaWM1NTJySjdJa3VWbVZ1YUdCdzZPVVV2TzA2TXpHOW8xVXg0Mk5RZDZUYldTT3BhVjlpM3BQZktFM1JXUlJGclVJZ1lqY1pvZGhSZDZvMlpNMUZqY1BJUVZDUQ?oc=5",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "NATO is shifting from air policing to a new ‘360-degree’ defense as drone and missile threats grow, official says - Business Insider",
-    "shrnuti": "NATO is shifting from air policing to a new ‘360-degree’ defense as drone and missile threats grow, official says Business Insider",
-    "duvod": "bez-skutku",
-    "kategorie": [
-      "drony",
-      "nato"
-    ],
-    "posouzeni": {
-      "podezreni": "vysoke",
-      "duvod": "NATO mění obranu kvůli rostoucím hrozbám dronů a raket",
       "kdy": "2026-09-19T11:03:33.710Z"
     }
   }
