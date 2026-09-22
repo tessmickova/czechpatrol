@@ -166,7 +166,7 @@ jako mimořádné.
 Nad vším stojí Pravidlo č. 0 v `CLAUDE.md`: právo ČR a EU, žádná poplašná zpráva,
 a v bezpečnostních tématech jen to, co je doložené citací se zdrojem a řešené úředně.
 
-Podrobněji: `docs/PRAVNI-KONTROLA.md`, `docs/DATOVY-MODEL.md`, `docs/PROVOZ.md`, `docs/ZNACKA.md`, `docs/DALSI-ETAPA.md`.
+Podrobněji: `docs/PRAVNI-KONTROLA.md`, `docs/DATOVY-MODEL.md`, `docs/PROVOZ.md`, `docs/ZNACKA.md`, `docs/DALSI-ETAPA.md`, `docs/SITUACNI-MAPA-NAVRH.md` (návrh situační mapy ČR, fáze 0).
 
 ## Struktura
 
