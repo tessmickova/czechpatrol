@@ -1,29 +1,40 @@
 "use client";
 
 import Link from "next/link";
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import { ESHOP, OBCHODY } from "@/config/web";
-import { useUcet } from "@/lib/ucet";
+import { api } from "@/lib/ucet";
+import { usePremium } from "@/lib/premium";
 import { zaznamejUdalost } from "@/lib/mereni";
 import {
-  DUVODY_NEMOHU, lidskaDoba, maCestu, nactiProfil, poznamkaKPoctu, PRAZDNY_PROFIL, souhrn, ulozProfil, VERZE_KATALOGU, ZAVISLOSTI,
+  bezpecnostniNalezy, DUVODY_NEMOHU, doporucenaZasobaVody, kraj as krajProfilu, KRAJE_ODOLNOSTI, lidskaDoba, maCestu, nactiProfil, pocty, poznamkaKPoctu, PRAZDNY_PROFIL, souhrn, TRIDY_SRAZEK, ulozProfil, VERZE_KATALOGU, ZAVISLOSTI,
   type Doporuceni, type HodnoceniFunkce, type Horizont, type Kontext, type Nakup, type Profil,
 } from "@/lib/odolnost";
-import { POLE, Popisek, TLACITKO_AKCENT, TLACITKO_TICHE } from "./formulare";
+import { useDialog } from "./dialog";
+import { POLE, Popisek, TLACITKO_TICHE } from "./formulare";
+import { SolarniOdhad, VyberSpotrebicu } from "./energie-klient";
 import { Ikona, type NazevIkony } from "./ikony";
-import { Zamceno } from "./muj-prehled-klient";
+import { KartaPremium } from "./premium-klient";
 import { Sdeleni } from "./ui";
 import { Otaznik } from "./zaklad";
 
 /*
-  Odolnost domácnosti — pro přihlášené.
+  Odolnost domácnosti — audit pro každého, podrobný plán jako Premium.
 
-  Všechno se počítá v prohlížeči z katalogu a z toho, co člověk zadal.
-  Profil zůstává v zařízení. Základ je 72 hodin; kratší horizont se
-  nepočítá, delší jdou až k 60 dnům. Vzhled drží zásady značky: barva
-  jen jako tečka vedle slova, žádné barevné písmo ani rámečky, jedna
-  červená pro hlavní akci. Žádné skóre v procentech — tři čísla, která
-  jdou vysvětlit, a horizonty.
+  Vlevo dotazník jako jeden souvislý formulář: nadpisy, vlasové linky,
+  žádná karta kolem každé otázky. Vpravo jeden panel s výsledky, který
+  se přepočítává při každém zaškrtnutí.
+
+  Hranice zdarma / Premium (docs/PREMIUM-NAVRH.md, část 3): souhrn
+  s počty, stav na 72 hodin, každý bezpečnostní nález a rady za 0 Kč
+  jsou zdarma i bez účtu. Za odemknutím jsou podrobnosti: horizonty
+  7–60 dní, vydrže, energie a solár, kritické závislosti, nákupní seznam,
+  plán ke stažení a uložení na server. Bezpečnostní nálezy jsou vždy nad
+  nabídkou, ne za ní.
+
+  Zásady značky: barva jen jako tečka vedle slova, žádné barevné písmo
+  ani rámečky, jedna červená pro hlavní věc. Profil zůstává v zařízení;
+  na server jde jen s Premium, šifrovaně, a jde smazat.
 */
 
 const SLOVA_REDUNDANCE: Record<0 | 1 | 2 | 3, string> = { 0: "bez cesty", 1: "jediná cesta", 2: "záloha, společné selhání", 3: "nezávislé cesty" };
@@ -31,36 +42,30 @@ const TECKA_REDUNDANCE: Record<0 | 1 | 2 | 3, string> = { 0: "bg-akcent", 1: "bg
 const SLOVA_HORIZONTU: Record<Horizont["stav"], string> = { pripraveno: "připraveno", castecne: "částečně", slabe: "slabé", nehodnoceno: "nehodnoceno" };
 const TECKA_HORIZONTU: Record<Horizont["stav"], string> = { pripraveno: "bg-klid", castecne: "bg-jantar", slabe: "bg-akcent", nehodnoceno: "bg-tlum2" };
 
-const KARTA = "rounded-[22px] border border-linka2 bg-plocha";
-
 function cislo(v: string): number | null {
   if (v.trim() === "") return null;
   const n = Number(v.replace(",", "."));
   return Number.isFinite(n) && n >= 0 ? n : null;
 }
-
 const horizontSlovo = (dni: number) => (dni === 3 ? "72 h" : `${dni} dní`);
 
-/** Jedna sekce vstupů: číslo kroku, název, jedna věta, obsah. */
-function Krok({ cislo: c, nadpis, veta, children }: { cislo: string; nadpis: string; veta: string; children: React.ReactNode }) {
+/** Oddíl dotazníku: nadpis, jedna věta, obsah. Bez rámečku — dělí ho linka. */
+function Oddil({ cislo: c, nadpis, veta, children }: { cislo: string; nadpis: string; veta?: string; children: React.ReactNode }) {
   return (
-    <section className={`${KARTA} p-5 sm:p-6`}>
-      <div className="flex items-start gap-3">
-        <span className="cislice mt-[2px] shrink-0 text-drobne text-tlum2">{c}</span>
-        <div className="min-w-0">
-          <h2 className="text-vetsi font-bold text-inkoust">{nadpis}</h2>
-          <p className="mt-1 text-male text-tlum">{veta}</p>
-        </div>
+    <section className="border-t border-linka2 pt-6 first:border-t-0 first:pt-0">
+      <div className="flex items-baseline gap-3">
+        <span className="cislice shrink-0 text-drobne text-tlum2">{c}</span>
+        <h2 className="text-vetsi font-bold text-inkoust">{nadpis}</h2>
       </div>
-      <div className="mt-5">{children}</div>
+      {veta && <p className="mt-1 pl-[2.1rem] text-male text-tlum">{veta}</p>}
+      <div className="mt-4 pl-0 sm:pl-[2.1rem]">{children}</div>
     </section>
   );
 }
 
-/** Přepínač ano/ne s popisem. Větší cíl, žádná barva mimo zaškrtnutí. */
 function Prepnuti({ id, nazev, popis, hodnota, onChange }: { id: string; nazev: string; popis?: string; hodnota: boolean; onChange: (v: boolean) => void }) {
   return (
-    <label htmlFor={id} className="flex min-h-[52px] cursor-pointer items-start gap-3 rounded-[16px] border border-linka px-3.5 py-3 hover:border-linka2">
+    <label htmlFor={id} className="flex min-h-[44px] cursor-pointer items-start gap-3 py-1.5">
       <input id={id} type="checkbox" checked={hodnota} onChange={(e) => onChange(e.target.checked)} className="mt-1 h-4 w-4 shrink-0 accent-akcent" />
       <span className="min-w-0">
         <span className="block text-male font-semibold text-inkoust">{nazev}</span>
@@ -81,12 +86,14 @@ function Pocet({ id, nazev, hodnota, onChange, poznamka }: { id: string; nazev: 
 }
 
 export function OdolnostKlient() {
-  const { ucet, nacita } = useUcet();
+  const { ucet, premium, nacita } = usePremium();
   const [p, setP] = useState<Profil>(PRAZDNY_PROFIL);
   const [nacteno, setNacteno] = useState(false);
   const [ulozisteFunguje, setUlozisteFunguje] = useState(true);
-  const [ukazDoporuceni, setUkazDoporuceni] = useState(false);
   const [pokrocile, setPokrocile] = useState(false);
+  const [zeServeru, setZeServeru] = useState<string | null>(null);
+  const casovac = useRef<number | null>(null);
+  const { potvrd } = useDialog();
 
   useEffect(() => {
     const n = nactiProfil();
@@ -94,14 +101,42 @@ export function OdolnostKlient() {
     setNacteno(true);
   }, []);
 
+  /*
+    Kontinuita pro Premium: když je v zařízení prázdný profil (nové
+    zařízení, vymazaný prohlížeč), stáhne se poslední uložené hodnocení.
+    Nikdy nepřepisuje to, co člověk v zařízení rozpracoval.
+  */
+  useEffect(() => {
+    if (!nacteno || nacita || !premium || !ucet) return;
+    const mistni = nactiProfil();
+    if (mistni && JSON.stringify(mistni) !== JSON.stringify(PRAZDNY_PROFIL)) return;
+    api<{ hodnoceni: { profil: Profil; vytvoreno: string } | null }>("/ja/hodnoceni")
+      .then((v) => { if (v.hodnoceni?.profil) { setP({ ...PRAZDNY_PROFIL, ...v.hodnoceni.profil }); ulozProfil({ ...PRAZDNY_PROFIL, ...v.hodnoceni.profil }); setZeServeru(v.hodnoceni.vytvoreno); } })
+      .catch(() => { /* bez uložení na serveru se prostě začíná od začátku */ });
+  }, [nacteno, nacita, premium, ucet]);
+
   const uloz = (nove: Profil) => {
     setP(nove);
     if (!ulozProfil(nove)) setUlozisteFunguje(false);
+    // Na server jen s Premium, s odstupem, ať každé zaškrtnutí neposílá požadavek.
+    if (premium && ucet) {
+      if (casovac.current) window.clearTimeout(casovac.current);
+      casovac.current = window.setTimeout(() => {
+        const sh = souhrn(nove);
+        api("/ja/hodnoceni", { method: "PUT", telo: { verzeKatalogu: VERZE_KATALOGU, profil: nove, vysledek: { horizonty: sh.horizonty.map((h) => ({ dni: h.dni, stav: h.stav })), body: sh.body.map((b) => ({ zavislost: b.zavislost, vypne: b.vypne.map((f) => f.klic) })) } } })
+          .then(() => setZeServeru(new Date().toISOString()))
+          .catch(() => { /* zůstává v zařízení; server to zkusí příště */ });
+      }, 2500);
+    }
   };
   const s = useMemo(() => souhrn(p), [p]);
+  const vyplneno = s.hodnoceni.filter((h) => h.mam.length > 0 || h.nemohu).length;
+  const hlaseno = useRef(false);
+  useEffect(() => {
+    // Jednou za návštěvu: audit má smysl od tří vyplněných oblastí.
+    if (vyplneno >= 3 && !hlaseno.current) { hlaseno.current = true; zaznamejUdalost("audit_complete"); }
+  }, [vyplneno]);
 
-  if (nacita) return <Sdeleni ikona="zamek">Ověřuji přihlášení…</Sdeleni>;
-  if (!ucet) return <Zamceno co="Odolnost domácnosti" />;
   if (!nacteno) return null;
 
   const prepniCestu = (funkce: string, cesta: string) => {
@@ -124,169 +159,354 @@ export function OdolnostKlient() {
     zaznamejUdalost("preference_save", { co: "odolnost-export" });
   };
 
-  const kriticke = s.body.filter((b) => b.vypne.length >= 2);
+  const pc = pocty(s);
+  // Nálezy až po třech vyplněných oblastech: prázdný dotazník není nález, jen prázdný dotazník.
+  const nalezy = vyplneno >= 3 ? bezpecnostniNalezy(p, s.hodnoceni) : [];
+  const zaridit = s.hodnoceni.filter((h) => h.mam.length > 0 && h.redundance < 3 && !h.nemohu).flatMap((h) => h.funkce.nulaKc.slice(0, 1).map((r) => ({ f: h.funkce.nazev, r }))).slice(0, 5);
 
   return (
-    <div className="space-y-6">
-      {!ulozisteFunguje && (
-        <Sdeleni ton="pozor" ikona="vykricnik">Úložiště prohlížeče nefunguje (soukromé okno?). Vše se počítá, ale po zavření stránky se to neuloží.</Sdeleni>
-      )}
-
-      {/* ---------- souhrn nahoře: horizonty a tři čísla ---------- */}
-      <section aria-label="Souhrn" className={`${KARTA} p-5 sm:p-6`}>
-        <div className="flex flex-wrap items-center justify-between gap-3">
-          <div className="flex items-center gap-1.5">
-            <span className="stitek">Horizont domácnosti</span>
-            <Otaznik popis={<span className="block">Plánovací horizont domácnosti: na kolik dní vystačí zadané zásoby při uvedených předpokladech. 72 hodin je základ, ne cíl. Není to předpověď, jak dlouho co vydrží ve státě.</span>} />
-          </div>
-          <span className="text-drobne text-tlum2">podle zadaných údajů</span>
-        </div>
-        <ol className="mt-4 grid grid-cols-3 gap-2 sm:grid-cols-6">
-          {s.horizonty.map((h) => (
-            <li key={h.dni} className="rounded-[16px] border border-linka px-3 py-3">
-              <span className="cislice block whitespace-nowrap text-vetsi font-bold leading-none text-inkoust sm:text-cislo">{horizontSlovo(h.dni)}</span>
-              <span className="mt-2 flex items-center gap-1.5 text-drobne text-tlum">
-                <span aria-hidden className={`h-[6px] w-[6px] shrink-0 rounded-full ${TECKA_HORIZONTU[h.stav]}`} />
-                {SLOVA_HORIZONTU[h.stav]}
-              </span>
-            </li>
-          ))}
-        </ol>
-        <dl className="mt-5 grid gap-4 border-t border-linka2 pt-5 sm:grid-cols-3">
-          <div>
-            <dt className="stitek">Nezávislá záloha</dt>
-            <dd className="cislice mt-1 text-cislo font-bold text-inkoust">{s.vyreseno.n} <span className="text-tlum2">/ {s.vyreseno.z}</span></dd>
-            <dd className="text-drobne text-tlum">funkcí s dvěma cestami, které nespadnou spolu</dd>
-          </div>
-          <div>
-            <dt className="stitek">Kritické závislosti</dt>
-            <dd className="cislice mt-1 text-cislo font-bold text-inkoust">{kriticke.length}</dd>
-            <dd className="text-drobne text-tlum">{kriticke.length ? kriticke.map((b) => b.nazev.toLowerCase()).join(", ") : "žádná závislost nevypíná víc funkcí naráz"}</dd>
-          </div>
-          <div>
-            <dt className="stitek">Nejslabší článek</dt>
-            <dd className="mt-1 text-vetsi font-bold text-inkoust">{s.nejslabsi ? s.nejslabsi.funkce.nazev : "—"}</dd>
-            <dd className="flex items-center gap-1.5 text-drobne text-tlum">{s.nejslabsi && <><span aria-hidden className={`h-[6px] w-[6px] rounded-full ${TECKA_REDUNDANCE[s.nejslabsi.redundance]}`} />{SLOVA_REDUNDANCE[s.nejslabsi.redundance]}</>}</dd>
-          </div>
-        </dl>
-      </section>
-
-      <div className="grid gap-6 lg:grid-cols-[minmax(0,1.35fr)_minmax(0,1fr)]">
-        {/* ---------- vstupy ---------- */}
-        <div className="min-w-0 space-y-5">
-          <Krok cislo="01" nadpis="Vaše domácnost" veta="Počty pro výpočet vody a jídla. Nic dalšího o lidech se neukládá.">
-            <div className="grid gap-4 sm:grid-cols-2">
-              <div><Popisek pro="od-osob">Kolik lidí</Popisek><input id="od-osob" type="number" min={0} className={`${POLE} cislice`} value={p.osob} onChange={(e) => uloz({ ...p, osob: Math.max(0, Number(e.target.value) || 0) })} /></div>
-              <div><Popisek pro="od-zvirat">Kolik zvířat, která pijí a jedí s vámi</Popisek><input id="od-zvirat" type="number" min={0} className={`${POLE} cislice`} value={p.zvirat} onChange={(e) => uloz({ ...p, zvirat: Math.max(0, Number(e.target.value) || 0) })} /></div>
-            </div>
-            <div className="mt-4 grid gap-2 sm:grid-cols-2">
-              <Prepnuti id="od-rodina" nazev="Rodina nebo blízcí v pěší dostupnosti" popis="počítá se jako cesta u spojení, dopravy a péče" hodnota={p.kontext.rodinaVDosahu} onChange={(v) => kontext({ rodinaVDosahu: v })} />
-              <Prepnuti id="od-pece" nazev="Někdo je závislý na péči, léku nebo přístroji" popis="bez podrobností; jen zvýší váhu doporučení" hodnota={p.kontext.zavislyNaPeci} onChange={(v) => kontext({ zavislyNaPeci: v })} />
-            </div>
-            <button type="button" onClick={() => setPokrocile((x) => !x)} aria-expanded={pokrocile} className="mt-4 flex min-h-[40px] items-center gap-2 text-male font-semibold text-tlum hover:text-inkoust">
-              <Ikona nazev="dolu" velikost={13} tah={2} trida={`transition-transform ${pokrocile ? "rotate-180" : ""}`} /> Rozšířené vstupy pro pokročilé
+    <div className="grid gap-10 lg:grid-cols-[minmax(0,1.25fr)_minmax(0,1fr)] lg:gap-12">
+      {/* ---------- dotazník ---------- */}
+      <div className="min-w-0 space-y-8">
+        {!ulozisteFunguje && (
+          <Sdeleni ton="pozor" ikona="vykricnik">Úložiště prohlížeče nefunguje (soukromé okno?). Vše se počítá, ale po zavření stránky se to neuloží.</Sdeleni>
+        )}
+        {/* Začít znovu: nahoře, ať ho člověk najde dřív, než přepisuje dvacet polí. S potvrzením — smaže celý profil. */}
+        {vyplneno > 0 && (
+          <div className="flex items-center justify-between gap-3">
+            <p className="text-male text-tlum">Vyplněno {vyplneno} z {s.hodnoceni.length} oblastí.</p>
+            <button
+              type="button"
+              className={TLACITKO_TICHE}
+              onClick={async () => {
+                const ano = await potvrd({ nadpis: "Začít znovu?", text: "Smaže se celý vyplněný profil domácnosti v tomto zařízení" + (premium ? " i uložená kopie na serveru" : "") + ". Vrátit to nejde.", potvrdit: "Smazat a začít znovu", zrusit: "Nechat být" });
+                if (!ano) return;
+                uloz(PRAZDNY_PROFIL);
+                setPokrocile(false);
+                window.scrollTo({ top: 0, behavior: "smooth" });
+              }}
+            >
+              <Ikona nazev="krizek" velikost={13} tah={2.2} /> Začít znovu
             </button>
-            {pokrocile && (
-              <div className="mt-3 grid gap-4 border-t border-linka2 pt-4 sm:grid-cols-2">
-                <div>
-                  <Popisek pro="od-bydleni">Bydlení</Popisek>
-                  <select id="od-bydleni" value={p.kontext.bydleni} onChange={(e) => kontext({ bydleni: e.target.value as Kontext["bydleni"] })} className={POLE}>
-                    <option value="">neuvedeno</option><option value="byt">byt</option><option value="dum">dům</option>
-                  </select>
-                </div>
-                <div>
-                  <Popisek pro="od-sidlo">Kde</Popisek>
-                  <select id="od-sidlo" value={p.kontext.sidlo} onChange={(e) => kontext({ sidlo: e.target.value as Kontext["sidlo"] })} className={POLE}>
-                    <option value="">neuvedeno</option><option value="mesto">město</option><option value="venkov">venkov nebo samota</option>
-                  </select>
-                  <p className="mt-1 text-drobne text-tlum2">Bez adresy. Jen aby rady seděly na byt, nebo dům, město, nebo venkov.</p>
-                </div>
-                <div><Popisek pro="od-deti">Z toho dětí</Popisek><input id="od-deti" type="number" min={0} className={`${POLE} cislice`} value={p.kontext.deti} onChange={(e) => kontext({ deti: Math.max(0, Number(e.target.value) || 0) })} /></div>
-                <div><Popisek pro="od-seniori">Z toho seniorů</Popisek><input id="od-seniori" type="number" min={0} className={`${POLE} cislice`} value={p.kontext.seniori} onChange={(e) => kontext({ seniori: Math.max(0, Number(e.target.value) || 0) })} /></div>
-                <Pocet id="od-vysilacky" nazev="Vysílačky (kusů)" hodnota={p.vybaveni.vysilacky ?? null} onChange={(v) => uloz({ ...p, vybaveni: { ...p.vybaveni, vysilacky: v } })} poznamka="Od dvou kusů se počítají jako cesta u spojení; ideálně pro každého, kdo se pohybuje sám." />
-                <Pocet id="od-powerbanky" nazev="Powerbanky (kusů)" hodnota={p.vybaveni.powerbanky ?? null} onChange={(v) => uloz({ ...p, vybaveni: { ...p.vybaveni, powerbanky: v } })} poznamka="Zatím jen evidence; do vydrže energie zadejte jejich kapacitu níž." />
-              </div>
-            )}
-          </Krok>
+          </div>
+        )}
 
-          <Krok cislo="02" nadpis="Jak u vás fungují základní věci" veta="U každé potřeby zaškrtněte cesty, které opravdu máte. Každá má pevné závislosti; z nich se počítá, co vypadne s čím.">
-            <ul className="space-y-2.5">
-              {s.hodnoceni.map((h) => <KartaFunkce key={h.funkce.klic} h={h} profil={p} naCestu={(c) => prepniCestu(h.funkce.klic, c)} naNemohu={(d) => nastavNemohu(h.funkce.klic, d)} />)}
-            </ul>
-          </Krok>
-
-          <Krok cislo="03" nadpis="Zásoby a energie" veta="Prázdné pole je „nevím“, ne nula. Předpoklady spotřeby jsou u výsledku a jdou přečíst.">
-            <div className="grid gap-4 sm:grid-cols-2">
-              <Pocet id="od-voda" nazev="Pitná voda uložená (litry)" hodnota={p.zasoby.pitnaVodaL} onChange={(v) => uloz({ ...p, zasoby: { ...p.zasoby, pitnaVodaL: v } })} />
-              <Pocet id="od-uzitkova" nazev="Užitková voda (litry)" hodnota={p.zasoby.uzitkovaVodaL} onChange={(v) => uloz({ ...p, zasoby: { ...p.zasoby, uzitkovaVodaL: v } })} />
-              <Pocet id="od-jidlo" nazev="Jídlo bez nákupu (dny pro celou domácnost)" hodnota={p.zasoby.jidloDni} onChange={(v) => uloz({ ...p, zasoby: { ...p.zasoby, jidloDni: v } })} />
-              <Pocet id="od-leky" nazev="Léky a pomůcky (dny, podle lékaře)" hodnota={p.zasoby.lekyDni} onChange={(v) => uloz({ ...p, zasoby: { ...p.zasoby, lekyDni: v } })} poznamka="Web dávky nepočítá." />
-              <Pocet id="od-kap" nazev="Vlastní zdroj energie: kapacita (Wh)" hodnota={p.energie.kapacitaWh || null} onChange={(v) => uloz({ ...p, energie: { ...p.energie, kapacitaWh: v ?? 0 } })} poznamka="Powerstation, UPS, powerbanky dohromady. Nemám = nechte prázdné." />
-              <Pocet id="od-potreba" nazev="Nouzová spotřeba za den (Wh)" hodnota={p.energie.potrebaDenWh || null} onChange={(v) => uloz({ ...p, energie: { ...p.energie, potrebaDenWh: v ?? 0 } })} poznamka="Ze štítků zařízení: W × hodin denně. Web hodnoty nedosazuje." />
-            </div>
-            <div className="mt-4">
-              <Prepnuti id="od-dobijeni" nazev="Umím zdroj dobíjet bez sítě" popis="solár, generátor, auto" hodnota={p.energie.dobijeni} onChange={(v) => uloz({ ...p, energie: { ...p.energie, dobijeni: v } })} />
-            </div>
-          </Krok>
-        </div>
-
-        {/* ---------- výsledky ---------- */}
-        <aside className="min-w-0 space-y-5 lg:sticky lg:top-[84px] lg:self-start">
-          <button type="button" onClick={() => { setUkazDoporuceni(true); zaznamejUdalost("filter_apply", { co: "odolnost-co-chybi" }); }} className={`${TLACITKO_AKCENT} w-full justify-center`}>
-            <Ikona nazev="lupa" velikost={15} tah={2} /> Co má teď největší smysl?
+        <Oddil cislo="01" nadpis="Kdo u vás bydlí" veta="Jen počty. Nic dalšího o lidech se neukládá.">
+          <div className="grid gap-4 sm:grid-cols-2">
+            <div><Popisek pro="od-osob">Lidí</Popisek><input id="od-osob" type="number" min={0} className={`${POLE} cislice`} value={p.osob} onChange={(e) => uloz({ ...p, osob: Math.max(0, Number(e.target.value) || 0) })} /></div>
+            <div><Popisek pro="od-zvirat">Zvířat, která pijí a jedí s vámi</Popisek><input id="od-zvirat" type="number" min={0} className={`${POLE} cislice`} value={p.zvirat} onChange={(e) => uloz({ ...p, zvirat: Math.max(0, Number(e.target.value) || 0) })} /></div>
+          </div>
+          <div className="mt-4">
+            <Popisek pro="od-kraj">Kraj</Popisek>
+            <select id="od-kraj" value={p.kontext.kraj} onChange={(e) => kontext({ kraj: e.target.value })} className={POLE}>
+              <option value="">neuvedeno</option>
+              {KRAJE_ODOLNOSTI.map((k) => <option key={k.klic} value={k.klic}>{k.nazev}</option>)}
+            </select>
+            <p className="mt-1 text-drobne text-tlum2">
+              {krajProfilu(p)
+                ? `${TRIDY_SRAZEK[krajProfilu(p)!.trida].nazev}: ${TRIDY_SRAZEK[krajProfilu(p)!.trida].popis}${krajProfilu(p)!.poznamka ? ` ${krajProfilu(p)!.poznamka}` : ""}`
+                : "Podle kraje se upraví doporučená zásoba vody: kde prší méně, je větší."}
+            </p>
+          </div>
+          <div className="mt-3 divide-y divide-linka2">
+            <Prepnuti id="od-rodina" nazev="Rodina nebo blízcí v pěší dostupnosti" popis="počítá se jako cesta u spojení, dopravy a péče" hodnota={p.kontext.rodinaVDosahu} onChange={(v) => kontext({ rodinaVDosahu: v })} />
+            <Prepnuti id="od-pece" nazev="Někdo je závislý na péči, léku nebo přístroji" popis="bez podrobností; jen zvýší váhu doporučení" hodnota={p.kontext.zavislyNaPeci} onChange={(v) => kontext({ zavislyNaPeci: v })} />
+          </div>
+          <button type="button" onClick={() => setPokrocile((x) => !x)} aria-expanded={pokrocile} className="mt-2 flex min-h-[40px] items-center gap-2 text-male font-semibold text-tlum hover:text-inkoust">
+            <Ikona nazev="dolu" velikost={13} tah={2} trida={`transition-transform ${pokrocile ? "rotate-180" : ""}`} /> Víc podrobností pro pokročilé
           </button>
+          {pokrocile && (
+            <div className="mt-2 grid gap-4 sm:grid-cols-2">
+              <div>
+                <Popisek pro="od-bydleni">Bydlení</Popisek>
+                <select id="od-bydleni" value={p.kontext.bydleni} onChange={(e) => kontext({ bydleni: e.target.value as Kontext["bydleni"] })} className={POLE}>
+                  <option value="">neuvedeno</option><option value="byt">byt</option><option value="dum">dům</option>
+                </select>
+              </div>
+              <div>
+                <Popisek pro="od-sidlo">Kde</Popisek>
+                <select id="od-sidlo" value={p.kontext.sidlo} onChange={(e) => kontext({ sidlo: e.target.value as Kontext["sidlo"] })} className={POLE}>
+                  <option value="">neuvedeno</option><option value="mesto">město</option><option value="venkov">venkov nebo samota</option>
+                </select>
+                <p className="mt-1 text-drobne text-tlum2">Bez adresy. Jen aby rady seděly.</p>
+              </div>
+              <div><Popisek pro="od-deti">Z toho dětí</Popisek><input id="od-deti" type="number" min={0} className={`${POLE} cislice`} value={p.kontext.deti} onChange={(e) => kontext({ deti: Math.max(0, Number(e.target.value) || 0) })} /></div>
+              <div><Popisek pro="od-seniori">Z toho seniorů</Popisek><input id="od-seniori" type="number" min={0} className={`${POLE} cislice`} value={p.kontext.seniori} onChange={(e) => kontext({ seniori: Math.max(0, Number(e.target.value) || 0) })} /></div>
+              <Pocet id="od-vysilacky" nazev="Vysílačky (kusů)" hodnota={p.vybaveni.vysilacky ?? null} onChange={(v) => uloz({ ...p, vybaveni: { ...p.vybaveni, vysilacky: v } })} poznamka="Od dvou kusů jsou cesta u spojení; ideálně pro každého, kdo chodí sám." />
+              <Pocet id="od-powerbanky" nazev="Powerbanky (kusů)" hodnota={p.vybaveni.powerbanky ?? null} onChange={(v) => uloz({ ...p, vybaveni: { ...p.vybaveni, powerbanky: v } })} poznamka="Kapacitu zadejte níž u energie." />
+            </div>
+          )}
+        </Oddil>
 
-          {ukazDoporuceni && (
-            <section aria-live="polite" className="space-y-3">
-              {s.doporuceni.length === 0 ? (
-                <Sdeleni ton="klid" ikona="fajfka" nadpis="Nic naléhavého.">Každá důležitá funkce má nezávislou zálohu a zásoby vydrží přes 72 hodin. Další zlepšení má menší přínos než otestovat, co máte.</Sdeleni>
-              ) : s.doporuceni.map((d, i) => <KartaDoporuceni key={i} d={d} poradi={i + 1} />)}
-            </section>
+        <Oddil cislo="02" nadpis="Jak u vás fungují základní věci" veta={`Rozklikněte a zaškrtněte, co opravdu máte. Vyplněno ${vyplneno} z ${s.hodnoceni.length}.`}>
+          <ul className="divide-y divide-linka2 border-y border-linka2">
+            {s.hodnoceni.map((h) => <RadekFunkce key={h.funkce.klic} h={h} profil={p} naCestu={(c) => prepniCestu(h.funkce.klic, c)} naNemohu={(d) => nastavNemohu(h.funkce.klic, d)} />)}
+          </ul>
+        </Oddil>
+
+        <Oddil cislo="03" nadpis="Co máte doma" veta="Prázdné pole je „nevím“, ne nula. Předpoklady spotřeby jsou u výsledku.">
+          <div className="grid gap-4 sm:grid-cols-2">
+            <Pocet id="od-voda" nazev="Pitná voda uložená (litry)" hodnota={p.zasoby.pitnaVodaL} onChange={(v) => uloz({ ...p, zasoby: { ...p.zasoby, pitnaVodaL: v } })} />
+            <Pocet id="od-uzitkova" nazev="Užitková voda (litry)" hodnota={p.zasoby.uzitkovaVodaL} onChange={(v) => uloz({ ...p, zasoby: { ...p.zasoby, uzitkovaVodaL: v } })} />
+            <Pocet id="od-jidlo" nazev="Jídlo bez nákupu (dny pro všechny)" hodnota={p.zasoby.jidloDni} onChange={(v) => uloz({ ...p, zasoby: { ...p.zasoby, jidloDni: v } })} />
+            <Pocet id="od-leky" nazev="Léky a pomůcky (dny, podle lékaře)" hodnota={p.zasoby.lekyDni} onChange={(v) => uloz({ ...p, zasoby: { ...p.zasoby, lekyDni: v } })} />
+            <Pocet id="od-kap" nazev="Vlastní zdroj energie (Wh)" hodnota={p.energie.kapacitaWh || null} onChange={(v) => uloz({ ...p, energie: { ...p.energie, kapacitaWh: v ?? 0 } })} poznamka="Powerstation, UPS, powerbanky dohromady. Kapacita je na štítku." />
+          </div>
+          <div className="mt-2">
+            <Prepnuti id="od-dobijeni" nazev="Umím zdroj dobíjet bez sítě" popis="solár, generátor, auto" hodnota={p.energie.dobijeni} onChange={(v) => uloz({ ...p, energie: { ...p.energie, dobijeni: v } })} />
+          </div>
+        </Oddil>
+
+        <Oddil cislo="04" nadpis="Co budete potřebovat napájet" veta="Zaškrtněte, co za den bez proudu potřebujete, a u každé věci, jestli bez ní nejde fungovat. Příkon je předvyplněný, štítek má přednost.">
+          <VyberSpotrebicu vybrane={p.energie.spotrebice ?? []} onChange={(v) => uloz({ ...p, energie: { ...p.energie, spotrebice: v } })} />
+        </Oddil>
+      </div>
+
+      {/* ---------- výsledky ---------- */}
+      <aside className="min-w-0 lg:sticky lg:top-[84px] lg:self-start">
+        <div className="sklo rounded-[26px] p-5 sm:p-6">
+          <div className="flex items-center gap-2">
+            <span aria-hidden className="h-[7px] w-[7px] rounded-full bg-akcent" />
+            <span className="stitek">Váš výsledek</span>
+            <span className="ml-auto text-drobne text-tlum2">přepočítává se průběžně</span>
+          </div>
+
+          {/* zdarma: souhrn s počty a stav na 72 hodin */}
+          <div className="mt-5">
+            <div className="flex items-center gap-1.5">
+              <span className="stitek">Souhrn auditu</span>
+              <Otaznik popis={<span className="block">Počty oblastí podle zaškrtnutých cest. „V pořádku“ = aspoň dvě nezávislé cesty. Kritická závislost = jedna věc, jejíž výpadek vypne dvě a víc oblastí.</span>} />
+            </div>
+            {vyplneno === 0 ? (
+              <p className="mt-2 text-male text-tlum">Zaškrtněte vlevo, jak u vás fungují základní věci. Souhrn se objeví tady.</p>
+            ) : (
+              <dl className="mt-3 grid grid-cols-2 gap-3 sm:grid-cols-4">
+                <div><dt className="stitek">V pořádku</dt><dd className="cislice mt-1 flex items-center gap-1.5 text-cislo font-bold leading-none text-inkoust"><span aria-hidden className="h-[6px] w-[6px] rounded-full bg-klid" />{pc.vPoradku}</dd></div>
+                <div><dt className="stitek">Slabin</dt><dd className="cislice mt-1 flex items-center gap-1.5 text-cislo font-bold leading-none text-inkoust"><span aria-hidden className="h-[6px] w-[6px] rounded-full bg-jantar" />{pc.slabin}</dd></div>
+                <div><dt className="stitek">Kritických</dt><dd className="cislice mt-1 flex items-center gap-1.5 text-cislo font-bold leading-none text-inkoust"><span aria-hidden className="h-[6px] w-[6px] rounded-full bg-akcent" />{pc.kritickych}</dd></div>
+                <div><dt className="stitek">72 h</dt><dd className="mt-1 flex items-center gap-1.5 text-male font-semibold leading-none text-inkoust"><span aria-hidden className={`h-[6px] w-[6px] rounded-full ${TECKA_HORIZONTU[pc.horizont72]}`} />{SLOVA_HORIZONTU[pc.horizont72]}</dd></div>
+              </dl>
+            )}
+            {vyplneno > 0 && pc.nehodnoceno > 0 && <p className="mt-2 text-drobne text-tlum2">{pc.nehodnoceno} {pc.nehodnoceno === 1 ? "oblast zatím bez odpovědi" : pc.nehodnoceno < 5 ? "oblasti zatím bez odpovědi" : "oblastí zatím bez odpovědi"}.</p>}
+          </div>
+
+          {/* zdarma, vždy nad nabídkou: bezpečnostní nálezy */}
+          {nalezy.length > 0 && (
+            <div className="mt-6 border-t border-linka2 pt-5">
+              <div className="flex items-center gap-1.5"><span className="stitek">Bezpečnostní nálezy</span><Otaznik popis={<span className="block">Věci, které mohou ohrozit zdraví. Jsou zdarma vždy a bez účtu. Web u nich neradí lékařsky ani technicky — odkazuje na oficiální postupy.</span>} /></div>
+              <ul className="mt-2 space-y-2">
+                {nalezy.map((n) => (
+                  <li key={n.klic} className="flex items-start gap-2">
+                    <span aria-hidden className="mt-[7px] h-[6px] w-[6px] shrink-0 rounded-full bg-akcent" />
+                    <span className="min-w-0"><span className="block text-male font-semibold text-inkoust">{n.nadpis}</span><span className="block text-drobne text-tlum">{n.proc}</span></span>
+                  </li>
+                ))}
+              </ul>
+              <p className="mt-2 text-drobne text-tlum2"><Link href="/pripravenost/" className="odkaz">Oficiální postupy a tísňová čísla</Link></p>
+            </div>
           )}
 
-          <SeznamNakupu nakup={s.nakup} />
+          {/* zdarma: rady bez nákupu */}
+          {zaridit.length > 0 && (
+            <div className="mt-6 border-t border-linka2 pt-5">
+              <div className="flex items-center gap-1.5">
+                <Ikona nazev="fajfka" velikost={14} tah={2.2} trida="text-akcent" />
+                <h2 className="text-zaklad font-bold text-inkoust">Zařídit, za 0 Kč</h2>
+              </div>
+              <ol className="mt-2 space-y-2">
+                {zaridit.map((x, i) => (
+                  <li key={i} className="flex gap-3">
+                    <span className="cislice mt-[2px] w-5 shrink-0 text-drobne text-tlum2">{i + 1}.</span>
+                    <span className="text-male text-tlum"><b className="font-semibold text-inkoust">{x.f}:</b> {x.r}</span>
+                  </li>
+                ))}
+              </ol>
+            </div>
+          )}
 
-          <section className={`${KARTA} p-5`}>
-            <div className="mb-2 flex items-center gap-1.5"><span className="stitek">Jak dlouho vydrží</span><Otaznik popis={<span className="block">Předpoklady jsou u každé položky. Skutečná spotřeba se liší; číslo je k plánování, ne k uklidnění.</span>} /></div>
-            <ul className="divide-y divide-linka2">
-              {s.vydrze.filter((v) => v.klic !== "energie" || p.energie.kapacitaWh > 0).map((v) => (
-                <li key={v.klic} className="flex items-center justify-between gap-3 py-2.5">
-                  <span className="flex items-center gap-1.5 text-male text-inkoust">{v.nazev}<Otaznik popis={<span className="block">{v.predpoklad}</span>} /></span>
-                  <span className="cislice shrink-0 text-male font-semibold text-inkoust">{v.dni === null ? <span className="font-normal text-tlum2">nezadáno</span> : lidskaDoba(v.dni)}</span>
-                </li>
-              ))}
-            </ul>
-          </section>
+          {premium ? (
+            <>
+              <div className="mt-6 border-t border-linka2 pt-5">
+                <div className="flex items-center gap-1.5">
+                  <span className="stitek">Na kolik dní jste připraveni</span>
+                  <Otaznik popis={<span className="block">Plánovací horizont domácnosti podle zadaných zásob a předpokladů. 72 hodin je základ, ne cíl. Není to předpověď, jak dlouho co vydrží ve státě.</span>} />
+                </div>
+                <ul className="mt-3 grid grid-cols-2 gap-x-6 gap-y-2 sm:grid-cols-3">
+                  {s.horizonty.map((h) => (
+                    <li key={h.dni} className="flex items-center gap-2 text-male">
+                      <span aria-hidden className={`h-[6px] w-[6px] shrink-0 rounded-full ${TECKA_HORIZONTU[h.stav]}`} />
+                      <span className="cislice whitespace-nowrap font-semibold text-inkoust">{horizontSlovo(h.dni)}</span>
+                      <span className="text-tlum">{SLOVA_HORIZONTU[h.stav]}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
 
-          <section className={`${KARTA} p-5`}>
-            <div className="stitek mb-2">Za 0 Kč</div>
-            <p className="text-male text-tlum">Co zvýší odolnost bez nákupu u funkcí, které zatím nemají nezávislou zálohu.</p>
-            <ul className="mt-3 space-y-2">
-              {s.hodnoceni.filter((h) => h.redundance < 3).flatMap((h) => h.funkce.nulaKc.slice(0, 1).map((r) => ({ f: h.funkce.nazev, r }))).slice(0, 6).map((x, i) => (
-                <li key={i} className="flex gap-2 text-male text-tlum"><Ikona nazev="fajfka" velikost={13} tah={2.2} trida="mt-1 shrink-0 text-klid-text" /><span><b className="font-semibold text-inkoust">{x.f}:</b> {x.r}</span></li>
-              ))}
-            </ul>
-          </section>
+              <div className="mt-6 border-t border-linka2 pt-5">
+                <div className="flex items-center gap-1.5"><span className="stitek">Jak dlouho vydrží</span><Otaznik popis={<span className="block">Předpoklady jsou u každé položky. Číslo je k plánování, ne k uklidnění.</span>} /></div>
+                {(() => { const d = doporucenaZasobaVody(p, 7); return (
+                  <p className="mt-2 flex items-center justify-between gap-3 py-1.5 text-male">
+                    <span className="flex items-center gap-1.5 text-tlum">Doporučená zásoba pitné vody na 7 dní<Otaznik popis={<span className="block">{d.predpoklad}</span>} /></span>
+                    <span className="cislice shrink-0 font-semibold text-inkoust">{d.litru} l{d.nasobek !== 1 ? <span className="font-normal text-tlum2"> · {krajProfilu(p)?.nazev}</span> : ""}</span>
+                  </p>
+                ); })()}
+                <ul className="mt-1 border-t border-linka2 pt-1">
+                  {s.vydrze.filter((v) => v.klic !== "energie" || p.energie.kapacitaWh > 0).map((v) => (
+                    <li key={v.klic} className="flex items-center justify-between gap-3 py-1.5">
+                      <span className="flex items-center gap-1.5 text-male text-tlum">{v.nazev}<Otaznik popis={<span className="block">{v.predpoklad}</span>} /></span>
+                      <span className="cislice shrink-0 text-male font-semibold text-inkoust">{v.dni === null ? <span className="font-normal text-tlum2">nezadáno</span> : lidskaDoba(v.dni)}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
 
-          <div className="flex flex-wrap items-center gap-2">
-            <button type="button" onClick={exportuj} className={TLACITKO_TICHE}><Ikona nazev="instalace" velikost={14} tah={2} /> Stáhnout plán (JSON)</button>
-            <button type="button" onClick={() => window.print()} className={TLACITKO_TICHE}><Ikona nazev="dokument" velikost={14} tah={2} /> Tisk</button>
-          </div>
-          <p className="text-drobne text-tlum2">Uloženo jen v tomto zařízení. Plán je váš i bez účtu. Katalog verze {VERZE_KATALOGU}. <Link href="/pripravenost/" className="odkaz">Oficiální nástroje a 72h základ</Link></p>
-        </aside>
-      </div>
+              {(p.energie.spotrebice?.length ?? 0) > 0 && (
+                <div className="mt-6 border-t border-linka2 pt-5">
+                  <SolarniOdhad kapacitaWh={p.energie.kapacitaWh} spotrebice={p.energie.spotrebice ?? []} solarWp={p.energie.solarWp ?? null} onSolarWp={(v) => uloz({ ...p, energie: { ...p.energie, solarWp: v } })} />
+                </div>
+              )}
+
+              <dl className="mt-6 grid grid-cols-3 gap-3 border-t border-linka2 pt-5">
+                <div>
+                  <dt className="stitek">Nezávislá záloha</dt>
+                  <dd className="cislice mt-1 text-cislo font-bold leading-none text-inkoust">{s.vyreseno.n}<span className="text-tlum2"> / {s.vyreseno.z}</span></dd>
+                </div>
+                <div>
+                  <dt className="stitek">Kritické závislosti</dt>
+                  <dd className="cislice mt-1 text-cislo font-bold leading-none text-inkoust">{s.body.filter((b) => b.vypne.length >= 2).length}</dd>
+                </div>
+                <div>
+                  <dt className="stitek">Nejslabší</dt>
+                  <dd className="mt-1 flex items-center gap-1.5 text-male font-semibold text-inkoust">
+                    {s.nejslabsi ? <><span aria-hidden className={`h-[6px] w-[6px] shrink-0 rounded-full ${TECKA_REDUNDANCE[s.nejslabsi.redundance]}`} />{s.nejslabsi.funkce.nazev}</> : "—"}
+                  </dd>
+                </div>
+              </dl>
+
+              {s.body.filter((b) => b.vypne.length >= 2).length > 0 && (
+                <div className="mt-6 border-t border-linka2 pt-5">
+                  <div className="flex items-center gap-1.5"><span className="stitek">Co vypne co</span><Otaznik popis={<span className="block">Závislost, jejíž výpadek vypne víc oblastí naráz, protože všechny jejich cesty na ní stojí.</span>} /></div>
+                  <ul className="mt-2 space-y-1.5">
+                    {s.body.filter((b) => b.vypne.length >= 2).slice(0, 5).map((b) => (
+                      <li key={b.zavislost} className="text-male"><b className="font-semibold text-inkoust">{b.nazev}</b> <span className="text-tlum">→ {b.vypne.map((f) => f.nazev.toLowerCase()).join(", ")}</span></li>
+                    ))}
+                  </ul>
+                </div>
+              )}
+
+              <div className="mt-6 border-t border-linka2 pt-5">
+                <CoUdelat doporuceni={s.doporuceni} nakup={s.nakup} />
+              </div>
+              <div className="mt-6 flex flex-wrap items-center gap-2 border-t border-linka2 pt-5">
+                <button type="button" onClick={exportuj} className={TLACITKO_TICHE}><Ikona nazev="instalace" velikost={14} tah={2} /> Stáhnout plán</button>
+                <button type="button" onClick={() => window.print()} className={TLACITKO_TICHE}><Ikona nazev="dokument" velikost={14} tah={2} /> Tisk</button>
+              </div>
+              <p className="mt-3 text-drobne text-tlum2">
+                {zeServeru ? `Uloženo v zařízení i na serveru (${new Date(zeServeru).toLocaleString("cs-CZ")}), šifrovaně; smazat jde v účtu.` : "Uloženo v tomto zařízení; na server se ukládá po každé změně."} Katalog {VERZE_KATALOGU}. <Link href="/pripravenost/" className="odkaz">Oficiální nástroje a 72h základ</Link>
+              </p>
+            </>
+          ) : (
+            <>
+              <div className="mt-6">
+                <KartaPremium vyplneno={vyplneno} />
+              </div>
+              <p className="mt-4 text-drobne text-tlum2">Uloženo jen v tomto zařízení, nikam se neposílá. Katalog {VERZE_KATALOGU}. <Link href="/pripravenost/" className="odkaz">Oficiální nástroje a 72h základ</Link></p>
+            </>
+          )}
+        </div>
+      </aside>
     </div>
   );
 }
 
-function KartaFunkce({ h, profil, naCestu, naNemohu }: { h: HodnoceniFunkce; profil: Profil; naCestu: (c: string) => void; naNemohu: (d: string) => void }) {
+/*
+  Co udělat: nahoře ve výsledku, protože kvůli tomu člověk vyplňuje.
+  Dva seznamy úkolů — dokoupit a zařídit (bez peněz) — a pod nimi
+  nejvýš tři vysvětlená doporučení. Kdo chce vědět proč, rozklikne.
+*/
+function CoUdelat({ doporuceni, nakup }: { doporuceni: Doporuceni[]; nakup: Nakup[] }) {
+  const obchody = OBCHODY.filter((o) => o.hledani);
+  const nic = !nakup.length && !doporuceni.length;
+  return (
+    <div>
+      <h2 className="text-velke font-bold text-inkoust">Co dokoupit</h2>
+      {nic ? (
+        <p className="mt-2 text-male text-tlum">Podle zaškrtnutého zatím nic. Doplňte zásoby vlevo, seznam se objeví tady.</p>
+      ) : (
+        <>
+          {nakup.length > 0 && (
+            <div className="mt-3">
+              <div className="flex items-center gap-1.5">
+                <Ikona nazev="plus" velikost={14} tah={2.2} trida="text-akcent" />
+                <h3 className="text-zaklad font-bold text-inkoust">Dokoupit</h3>
+                <Otaznik popis={<span className="block">Věci, které zajistí chybějící cestu u funkcí bez nezávislé zálohy. Bez značek a cen; ke každé funkci jedna. Co jste označili jako neřešitelné, tu není.</span>} />
+              </div>
+              <ol className="mt-2 space-y-2">
+                {nakup.map((n, i) => (
+                  <li key={n.polozka} className="flex gap-3">
+                    <span className="cislice mt-[2px] w-5 shrink-0 text-drobne text-tlum2">{i + 1}.</span>
+                    <span className="min-w-0">
+                      <span className="block text-zaklad font-semibold text-inkoust">{n.polozka}</span>
+                      <span className="block text-drobne text-tlum">{n.proc}</span>
+                      {(ESHOP || obchody.length > 0) && (
+                        <span className="mt-1.5 flex flex-wrap gap-1.5">
+                          {ESHOP && <a href={ESHOP} target="_blank" rel="nofollow noopener noreferrer" className="rounded-full border border-linka px-3 py-1 text-mikro font-semibold text-inkoust hover:border-akcent">Náš e-shop</a>}
+                          {obchody.map((o) => <a key={o.klic} href={o.hledani.replace("{q}", encodeURIComponent(n.polozka))} target="_blank" rel="nofollow noopener noreferrer" className="rounded-full border border-linka px-3 py-1 text-mikro font-semibold text-tlum hover:border-akcent hover:text-inkoust">{o.nazev}</a>)}
+                        </span>
+                      )}
+                    </span>
+                  </li>
+                ))}
+              </ol>
+              {!ESHOP && obchody.length === 0 && <p className="mt-2 text-drobne text-tlum2">Odkazy do obchodů doplníme, až poběží náš e-shop. Kredit z odemknutí tam uplatníte. Seznam funguje i bez nich.</p>}
+            </div>
+          )}
+
+          {doporuceni.length > 0 && (
+            <div className="mt-5">
+              <div className="flex items-center gap-1.5">
+                <Ikona nazev="lupa" velikost={14} tah={2.2} trida="text-akcent" />
+                <h3 className="text-zaklad font-bold text-inkoust">Proč právě tohle</h3>
+              </div>
+              <ul className="mt-2 space-y-2">
+                {doporuceni.slice(0, 3).map((d, i) => <RadekDoporuceni key={i} d={d} />)}
+              </ul>
+            </div>
+          )}
+        </>
+      )}
+    </div>
+  );
+}
+
+function RadekDoporuceni({ d }: { d: Doporuceni }) {
+  const [otevreno, setOtevreno] = useState(false);
+  return (
+    <li>
+      <button type="button" onClick={() => setOtevreno((x) => !x)} aria-expanded={otevreno} className="flex w-full items-start gap-2 text-left">
+        <Ikona nazev="dolu" velikost={12} tah={2} trida={`mt-[5px] shrink-0 text-tlum2 transition-transform ${otevreno ? "rotate-180" : ""}`} />
+        <span className="text-male font-semibold text-inkoust">{d.nadpis}</span>
+      </button>
+      {otevreno && (
+        <dl className="mt-1.5 space-y-1 pl-5 text-male">
+          <div><dt className="stitek inline">Proč:</dt> <dd className="inline text-tlum">{d.proc}</dd></div>
+          <div><dt className="stitek inline">Z čeho:</dt> <dd className="inline text-tlum">{d.zaklad}</dd></div>
+          {d.alternativy.length > 0 && <div><dt className="stitek">Možnosti:</dt><dd><ul className="mt-0.5 space-y-0.5 text-tlum">{d.alternativy.map((a) => <li key={a}>– {a}</li>)}</ul></dd></div>}
+          <div><dt className="stitek inline">Kdy ne:</dt> <dd className="inline text-tlum">{d.kdyNeni}</dd></div>
+        </dl>
+      )}
+    </li>
+  );
+}
+
+function RadekFunkce({ h, profil, naCestu, naNemohu }: { h: HodnoceniFunkce; profil: Profil; naCestu: (c: string) => void; naNemohu: (d: string) => void }) {
   const [otevreno, setOtevreno] = useState(false);
   const f = h.funkce;
   const vybrane = new Set(profil.cesty[f.klic] ?? []);
   const pocetCest = h.mam.length;
   return (
-    <li className="rounded-[18px] border border-linka bg-plocha">
-      <button type="button" onClick={() => setOtevreno((x) => !x)} aria-expanded={otevreno} className="flex w-full items-center gap-3 px-4 py-3 text-left">
+    <li>
+      <button type="button" onClick={() => setOtevreno((x) => !x)} aria-expanded={otevreno} className="flex min-h-[56px] w-full items-center gap-3 py-2.5 text-left hover:bg-plocha2/60">
         <span className="grid h-9 w-9 shrink-0 place-items-center rounded-[12px] bg-plocha2 text-akcent"><Ikona nazev={f.ikona as NazevIkony} velikost={17} tah={1.8} /></span>
         <span className="min-w-0 flex-1">
           <span className="block text-zaklad font-semibold text-inkoust">{f.nazev}</span>
@@ -299,18 +519,17 @@ function KartaFunkce({ h, profil, naCestu, naNemohu }: { h: HodnoceniFunkce; pro
         <Ikona nazev="dolu" velikost={13} tah={2} trida={`shrink-0 text-tlum2 transition-transform ${otevreno ? "rotate-180" : ""}`} />
       </button>
       {otevreno && (
-        <div className="border-t border-linka2 px-4 py-4">
+        <div className="pb-4 pl-0 sm:pl-12">
           <p className="text-male text-tlum">Potřeba: {f.potreba}.</p>
-          <ul className="mt-3 space-y-1.5">
+          <ul className="mt-2 space-y-1">
             {f.cesty.map((c) => {
-              const zKontextu = Boolean(c.kontext);
-              const zPoctu = Boolean(c.pocet);
+              const pevne = Boolean(c.kontext || c.pocet);
               const ma = maCestu(c, f, profil, vybrane);
               const pozn = poznamkaKPoctu(c, profil);
               return (
                 <li key={c.klic}>
-                  <label className={`flex items-start gap-3 rounded-[12px] px-2 py-2 ${zKontextu || zPoctu ? "" : "cursor-pointer hover:bg-plocha2"}`}>
-                    <input type="checkbox" checked={ma} disabled={zKontextu || zPoctu} onChange={() => naCestu(c.klic)} className="mt-1 h-4 w-4 accent-akcent disabled:opacity-60" />
+                  <label className={`flex items-start gap-3 py-1.5 ${pevne ? "" : "cursor-pointer"}`}>
+                    <input type="checkbox" checked={ma} disabled={pevne} onChange={() => naCestu(c.klic)} className="mt-1 h-4 w-4 accent-akcent disabled:opacity-60" />
                     <span className="min-w-0">
                       <span className="block text-male text-inkoust">
                         {c.nazev}
@@ -320,7 +539,7 @@ function KartaFunkce({ h, profil, naCestu, naNemohu }: { h: HodnoceniFunkce; pro
                       <span className="block text-drobne text-tlum2">
                         {c.zavislosti.length ? `závisí na: ${c.zavislosti.map((z) => ZAVISLOSTI[z]?.nazev.toLowerCase() ?? z).join(", ")}` : "bez vnější závislosti"}
                         {c.poznamka ? ` · ${c.poznamka}` : ""}
-                        {zKontextu ? " · podle přepínače v kroku 01" : ""}
+                        {c.kontext ? " · podle přepínače v kroku 01" : ""}
                         {pozn ? ` · ${pozn}` : ""}
                       </span>
                     </span>
@@ -330,9 +549,9 @@ function KartaFunkce({ h, profil, naCestu, naNemohu }: { h: HodnoceniFunkce; pro
             })}
           </ul>
           {h.spolecne.length > 0 && h.redundance === 2 && (
-            <p className="mt-3 flex items-start gap-2 text-drobne text-tlum"><span aria-hidden className="mt-[6px] h-[6px] w-[6px] shrink-0 rounded-full bg-jantar" />Vaše zálohy sdílejí závislost: {h.spolecne.map((z) => ZAVISLOSTI[z]?.nazev.toLowerCase() ?? z).join(", ")}. Když vypadne, vypadnou spolu.</p>
+            <p className="mt-2 flex items-start gap-2 text-drobne text-tlum"><span aria-hidden className="mt-[6px] h-[6px] w-[6px] shrink-0 rounded-full bg-jantar" />Vaše zálohy sdílejí závislost: {h.spolecne.map((z) => ZAVISLOSTI[z]?.nazev.toLowerCase() ?? z).join(", ")}. Když vypadne, vypadnou spolu.</p>
           )}
-          <div className="mt-4 flex flex-wrap items-center gap-2 border-t border-linka2 pt-4">
+          <div className="mt-3 flex flex-wrap items-center gap-2">
             <label className="text-male text-tlum" htmlFor={`nemohu-${f.klic}`}>Tohle nemohu vyřešit:</label>
             <select id={`nemohu-${f.klic}`} value={h.nemohu ?? ""} onChange={(e) => naNemohu(e.target.value)} className={`${POLE} !w-auto`}>
               <option value="">ne, řeším</option>
@@ -340,66 +559,12 @@ function KartaFunkce({ h, profil, naCestu, naNemohu }: { h: HodnoceniFunkce; pro
             </select>
           </div>
           {h.nemohu && (
-            <ul className="mt-3 space-y-1.5 rounded-[14px] border border-dashed border-linka px-3.5 py-3">
+            <ul className="mt-2 space-y-1 border-l-2 border-linka pl-3">
               {f.kompenzace.map((k) => <li key={k} className="text-male text-tlum">{k}</li>)}
             </ul>
           )}
         </div>
       )}
     </li>
-  );
-}
-
-function KartaDoporuceni({ d, poradi }: { d: Doporuceni; poradi: number }) {
-  return (
-    <article className={`${KARTA} p-4 sm:p-5`}>
-      <div className="flex items-start gap-3">
-        <span className="cislice grid h-7 w-7 shrink-0 place-items-center rounded-full bg-plocha2 text-male font-bold text-inkoust">{poradi}</span>
-        <div className="min-w-0">
-          <h3 className="text-zaklad font-bold text-inkoust">{d.nadpis}</h3>
-          <dl className="mt-2 space-y-1.5 text-male">
-            <div><dt className="stitek inline">Proč to vidíte:</dt> <dd className="inline text-tlum">{d.proc}</dd></div>
-            <div><dt className="stitek inline">Na čem to stojí:</dt> <dd className="inline text-tlum">{d.zaklad}</dd></div>
-            {d.alternativy.length > 0 && (
-              <div><dt className="stitek">Možnosti:</dt><dd><ul className="mt-1 space-y-1 text-tlum">{d.alternativy.map((a) => <li key={a} className="flex gap-2"><span aria-hidden className="mt-[8px] h-[5px] w-[5px] shrink-0 rounded-full bg-tlum2" />{a}</li>)}</ul></dd></div>
-            )}
-            <div><dt className="stitek inline">Kdy to není potřeba:</dt> <dd className="inline text-tlum">{d.kdyNeni}</dd></div>
-          </dl>
-        </div>
-      </div>
-    </article>
-  );
-}
-
-/*
-  Co dokoupit: obecné věci bez značky a ceny, ke každé funkci jedna. Odkazy
-  do obchodů se ukážou, až budou adresy v konfiguraci; do té doby seznam
-  slouží k nákupu kdekoli. Náš e-shop má přednost, cizí obchody jsou pro
-  věci, které se u nás nevyplatí držet.
-*/
-function SeznamNakupu({ nakup }: { nakup: Nakup[] }) {
-  const obchody = OBCHODY.filter((o) => o.hledani);
-  if (!nakup.length) return null;
-  return (
-    <section className={`${KARTA} p-5`}>
-      <div className="mb-2 flex items-center gap-1.5"><span className="stitek">Co dokoupit</span><Otaznik popis={<span className="block">Věci, které zajistí chybějící cestu u funkcí bez nezávislé zálohy. Bez značek a cen; ke každé funkci jedna. Co jste označili jako neřešitelné, tu není.</span>} /></div>
-      <ul className="divide-y divide-linka2">
-        {nakup.map((n) => (
-          <li key={n.polozka} className="py-2.5">
-            <span className="block text-male font-semibold text-inkoust">{n.polozka}</span>
-            <span className="block text-drobne text-tlum">{n.proc}</span>
-            {(ESHOP || obchody.length > 0) && (
-              <span className="mt-1.5 flex flex-wrap gap-1.5">
-                {ESHOP && <a href={ESHOP} target="_blank" rel="nofollow noopener noreferrer" className="rounded-full border border-linka px-3 py-1 text-mikro font-semibold text-inkoust hover:border-akcent">Náš e-shop</a>}
-                {obchody.map((o) => (
-                  <a key={o.klic} href={o.hledani.replace("{q}", encodeURIComponent(n.polozka))} target="_blank" rel="nofollow noopener noreferrer" className="rounded-full border border-linka px-3 py-1 text-mikro font-semibold text-tlum hover:border-akcent hover:text-inkoust">{o.nazev}</a>
-                ))}
-              </span>
-            )}
-          </li>
-        ))}
-      </ul>
-      {!ESHOP && obchody.length === 0 && <p className="mt-2 text-drobne text-tlum2">Odkazy do obchodů doplníme, až poběží náš e-shop. Seznam funguje i bez nich.</p>}
-    </section>
   );
 }

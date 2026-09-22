@@ -6,7 +6,7 @@
 |---|---|---|
 | Web (statický) | Cloudflare Pages, projekt `czechpatrol` | `.github/workflows/nasazeni.yml` po pushi na `main` a po úspěšném sběru |
 | Sběr dat | GitHub Actions, každou půlhodinu | `.github/workflows/sber.yml` → commit do `data/`. Kope do něj Cloudflare Worker; plánovač GitHubu je jen záloha jednou za tři hodiny |
-| API (účty, odběr, tipy, hlídač) | Cloudflare Worker `czechpatrol-api` + D1 | `.github/workflows/nasazeni-api.yml`. Nasazení prošlo 13. 9. 2026, worker běží — je to on, kdo spouští sběr a kdo hlídá jeho výpadky |
+| API (účty, odběr, tipy, hlídač, Premium, žebříček) | Cloudflare Worker `czechpatrol-api` + D1 (migrace 0001–0007) | `.github/workflows/nasazeni-api.yml`. Nasazení prošlo 13. 9. 2026, worker běží — je to on, kdo spouští sběr a kdo hlídá jeho výpadky. Cron každých 10 min navíc kontroluje čekající platby (ztracený webhook) a odesílá frontu e-mailů |
 
 > Účty na webu jsou něco jiného než běžící worker. Aby je web nabízel, musí
 > být při jeho sestavení nastavená proměnná `API_URL` a tajemství
@@ -167,7 +167,13 @@ Variables) na svůj chat na Telegramu. Podrobně v `api/README.md`.
 | GitHub variables | `OPENAI_MODEL` *(nepovinné)* | model se vybere sám z toho, co účet nabízí — viz „Který model se použije“ |
 | GitHub secrets | `GH_TOKEN_SBER` — fine-grained token jen na `tessmickova/czechpatrol`, práva **Actions: Read and write** a **Metadata: Read** | sběr běží jen na plánovači GitHubu *(doplněno 13. 9. 2026)* |
 | GitHub secrets | `TELEGRAM_WEBHOOK_SECRET` + proměnná `TELEGRAM_BOT_JMENO` | webhook Telegramu se nenastaví — bot nepřijímá `/start` a `/stop`, odesílat umí |
-| `src/config/web.ts` | `PROVOZOVATEL.nazev`, `PROVOZOVATEL.kontakt` | stránky o projektu, soukromí a podmínkách říkají, že provozovatel není uveden |
+| `src/config/web.ts` | `PROVOZOVATEL.nazev`, `PROVOZOVATEL.kontakt` | stránky o projektu, soukromí a podmínkách říkají, že provozovatel není uveden; **platby a sběr e-mailů se bez uvedeného provozovatele nesmějí spustit** |
+| GitHub secrets | `KLIC_SIFROVANI` — 32 náhodných bajtů base64url (`openssl rand -base64 32 \| tr '+/' '-_' \| tr -d '='`) | Premium se nespustí: kódy kreditů a e-maily u účtů se ukládají šifrovaně a bez klíče se nic nezapíše *(doplněno 22. 9. 2026)* |
+| GitHub secrets + variables | `COMGATE_MERCHANT`, `COMGATE_SECRET` (secrets), `COMGATE_TEST` (variable, výchozí `true`) | web říká „odemknutí připravujeme“; `POST /platby/zacit` vrací 503. Webhook brány: `POST <API_URL>/platby/webhook/comgate` — nastavit v portálu Comgate *(doplněno 22. 9. 2026)* |
+| GitHub secrets + variables | `EMAIL_POSKYTOVATEL` (`resend` nebo `postmark`, variable), `EMAIL_API_KLIC` (secret), `EMAIL_ODESILATEL` (variable, např. `kredit@czechpatrol.cz`, s DKIM/SPF na doméně) | e-maily s kódem kreditu zůstávají ve frontě QUEUED; kód je vidět v účtu *(doplněno 22. 9. 2026)* |
+| GitHub secrets | `ESHOP_TOKEN` — serverový token, kterým e-shop volá `POST /kredity/overit` a `POST /kredity/uplatnit` | kredity se neuplatňují; web to říká („po spuštění e-shopu“) *(doplněno 22. 9. 2026)* |
+| GitHub secrets | `KOMUNITA_TELEGRAM_ODKAZ`, `KOMUNITA_WHATSAPP_ODKAZ` — pozvánky do skupiny a chatu pro Premium | v účtu je „pozvánky připravujeme“; odkazy nikdy nejdou do veřejného kódu webu *(doplněno 22. 9. 2026)* |
+| `src/config/web.ts` + secrets | žebříček připravenosti (`/odolnost/`) běží jen s uvedeným `PROVOZOVATEL` a s `KLIC_SIFROVANI` (kontakt se ukládá šifrovaně) | na webu je jen seznam a věta „zařazení připravujeme“; formulář s e-mailem a telefonem se neukáže *(doplněno 22. 9. 2026)* |
 | `src/config/web.ts` | `TIPY_MAIL` | formulář „Chybí tu událost“ odkazuje jen na GitHub |
 | `src/config/web.ts` | `BUY_ME_A_COFFEE_URL` | stránka Podpořit nemá tlačítko |
 | `src/config/web.ts` | `IZS_KONTAKT` | role partnera IZS se nepřijímá |
@@ -428,3 +434,25 @@ sekund. Obojí se stalo hned při prvních dvou bězích 13. 9. 2026.
 
 Když se poměry změní a routine na doménu dosáhne, soubory tím nepřestanou
 platit; jsou to jen zapsaná zjištění, ne náhrada ověření.
+
+
+## Žebříček připravenosti (doplněno 22. 9. 2026)
+
+Pro **přihlášené anonymní účty**. Kdo vyplní audit na `/odolnost/`
+(aspoň tři oblasti), může se zařadit: k účtu se uloží skóre 0–100
+(`skore()` v `src/lib/odolnost.ts`, 70 bodů zálohy, 30 horizonty),
+datum, kraj, počet osob a **vygenerovaná** přezdívka („Bdělý ježek 47“,
+nikdy zadaná). Jeden záznam na účet; nové vyplnění přepíše skóre a
+datum, přezdívka zůstává. Veřejně (`GET /zebricek`) je vidět jen
+přezdivka, skóre, datum a kraj. Nepřihlášený po vyplnění dostane otázku:
+přihlásit se anonymně, nebo v žebříčku nebýt (volba se pamatuje
+v zařízení).
+
+Kontakt (e-mail, telefon) je **nepovinný**, ukládá se šifrovaně
+(`KLIC_SIFROVANI`; bez klíče se pole nenabídnou), čte ho jen správce
+(`GET /sprava/zebricek`, čtení kontaktů je v auditu) a slouží k pozvání
+do komunity. Web to říká u polí a na stránce Soukromí (čl. 13 GDPR).
+„Odejít ze žebříčku“ smaže záznam i kontakt hned; smazání účtu také.
+Záznam bez pohybu ze strany provozovatele (stav `novy`/`nezajem`) se po
+roce maže. Migrace `0007` tabulku z `0006` staví znovu (byla nasazena
+prázdná).

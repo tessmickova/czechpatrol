@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { bodySelhani, coChybi, coDokoupit, FUNKCE, hodnotFunkci, horizonty, lidskaDoba, PRAZDNY_PROFIL, souhrn, vydrze, ZAVISLOSTI, type Profil } from "../src/lib/odolnost";
+import { bodySelhani, coChybi, coDokoupit, doporucenaZasobaVody, KRAJE_ODOLNOSTI, TRIDY_SRAZEK, FUNKCE, hodnotFunkci, horizonty, lidskaDoba, PRAZDNY_PROFIL, souhrn, vydrze, ZAVISLOSTI, type Profil } from "../src/lib/odolnost";
 
 /*
   Model odolnosti je deterministický a musí dávat stejný výsledek pro
@@ -97,6 +97,23 @@ describe("horizonty a spotřeba", () => {
     expect(s.redundance).toBe(3);
   });
 
+  it("kraje: čtrnáct, každý se známou třídou; sušší kraj zvedne doporučenou rezervu vody", () => {
+    expect(KRAJE_ODOLNOSTI.length).toBe(14);
+    for (const k of KRAJE_ODOLNOSTI) expect(TRIDY_SRAZEK[k.trida], k.klic).toBeDefined();
+    const zaklad = doporucenaZasobaVody(profil({}, { osob: 2 }), 7);
+    const jm = doporucenaZasobaVody(profil({}, { osob: 2, kontext: { ...PRAZDNY_PROFIL.kontext, kraj: "jihomoravsky" } }), 7);
+    expect(zaklad.litru).toBe(42);
+    expect(jm.litru).toBe(Math.ceil(42 * TRIDY_SRAZEK.sussi.nasobekRezervy));
+    expect(jm.predpoklad).toMatch(/orientační/);
+    const lib = doporucenaZasobaVody(profil({}, { osob: 2, kontext: { ...PRAZDNY_PROFIL.kontext, kraj: "liberecky" } }), 7);
+    expect(lib.litru).toBe(42);
+  });
+
+  it("v sušším kraji přibude doporučení na vodu, když zásoba nekryje 7 dní", () => {
+    const d = coChybi(profil({ "pitna-voda": ["vodovod", "zasoba"] }, { osob: 2, zasoby: { pitnaVodaL: 30, uzitkovaVodaL: null, jidloDni: 10, lekyDni: null }, kontext: { ...PRAZDNY_PROFIL.kontext, kraj: "jihomoravsky" } }));
+    expect(d.some((x) => x.druh === "zasoba" && /Jihomoravský/.test(x.nadpis))).toBe(true);
+  });
+
   it("co dokoupit: věci bez značky, nejdřív k nejdůležitější funkci, nejvýš osm", () => {
     const n = coDokoupit(profil({}));
     expect(n.length).toBeLessThanOrEqual(8);
@@ -157,5 +174,54 @@ describe("co mi ještě chybí", () => {
     const s = souhrn(profil({ informace: ["internet", "radio-baterie"] }));
     expect(s.vyreseno.n).toBe(1);
     expect(s.nejslabsi).not.toBeNull();
+  });
+});
+
+/*
+  Hranice zdarma / Premium: bezpečnostní nálezy se nesmějí zamknout a
+  souhrn zdarma musí počítat ze stejného hodnocení jako podrobný plán.
+*/
+import { bezpecnostniNalezy, pocty } from "../src/lib/odolnost";
+
+describe("zdarma: nálezy a počty", () => {
+  it("prázdný profil: nic v pořádku, nic slabého, vše nehodnoceno", () => {
+    const s = souhrn(PRAZDNY_PROFIL);
+    const p = pocty(s);
+    expect(p.vPoradku).toBe(0);
+    expect(p.slabin).toBe(0);
+    expect(p.nehodnoceno).toBe(s.hodnoceni.length);
+  });
+
+  it("péče závislá na jediné cestě je nález; bez péče není", () => {
+    const zdravi = FUNKCE.find((f) => f.klic === "zdravi")!;
+    const cesta = zdravi.cesty.find((c) => c.zavislosti.includes("elektrina")) ?? zdravi.cesty[0];
+    const profil = { ...PRAZDNY_PROFIL, cesty: { zdravi: [cesta.klic] }, kontext: { ...PRAZDNY_PROFIL.kontext, zavislyNaPeci: true } };
+    const s = souhrn(profil);
+    const n = bezpecnostniNalezy(profil, s.hodnoceni);
+    if (cesta.zavislosti.length) expect(n.some((x) => x.klic === "pece-jedina-cesta")).toBe(true);
+    const bez = bezpecnostniNalezy({ ...profil, kontext: { ...profil.kontext, zavislyNaPeci: false } }, s.hodnoceni);
+    expect(bez.some((x) => x.klic === "pece-jedina-cesta")).toBe(false);
+  });
+
+  it("životně důležitá oblast bez cesty je nález, oblast „řešeno jinak“ ne", () => {
+    const s = souhrn(PRAZDNY_PROFIL);
+    const n = bezpecnostniNalezy(PRAZDNY_PROFIL, s.hodnoceni);
+    expect(n.some((x) => x.klic === "bez-cesty-pitna-voda")).toBe(true);
+    const jinak = { ...PRAZDNY_PROFIL, nemohu: { "pitna-voda": "jine" } };
+    const s2 = souhrn(jinak);
+    expect(bezpecnostniNalezy(jinak, s2.hodnoceni).some((x) => x.klic === "bez-cesty-pitna-voda")).toBe(false);
+  });
+});
+
+import { skore } from "../src/lib/odolnost";
+
+describe("skóre pro žebříček", () => {
+  it("prázdný profil 0, plné zálohy blízko 70+, vždy v rozsahu 0–100", () => {
+    expect(skore(souhrn(PRAZDNY_PROFIL))).toBe(0);
+    const vse: Record<string, string[]> = {};
+    for (const f of FUNKCE) vse[f.klic] = f.cesty.filter((c) => !c.kontext && !c.pocet).map((c) => c.klic);
+    const s = skore(souhrn({ ...PRAZDNY_PROFIL, cesty: vse, zasoby: { pitnaVodaL: 500, uzitkovaVodaL: 500, jidloDni: 90, lekyDni: 90 } }));
+    expect(s).toBeGreaterThanOrEqual(60);
+    expect(s).toBeLessThanOrEqual(100);
   });
 });

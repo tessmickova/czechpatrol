@@ -10,6 +10,7 @@ import { datum } from "@/lib/format";
 import { useDialog } from "./dialog";
 import { Hlaska, POLE, Popisek, Prepinac, TLACITKO_AKCENT, TLACITKO_TICHE, TLACITKO_VAROVNE, Volby } from "./formulare";
 import { Ikona } from "./ikony";
+import { PremiumVUctu } from "./premium-klient";
 import { Karta } from "./zaklad";
 import { DalsiKroky } from "./zapojit-klient";
 
@@ -375,10 +376,13 @@ function Nastaveni({
           </div>
         </Karta>
 
+        <PremiumVUctu maEmail={Boolean(ucet.email)} obnovUcet={obnov} />
+
         <Karta className="border-akcent/30 p-6">
           <div className="stitek mb-2 !text-akcent-svetla">Smazání</div>
           <p className="text-zaklad leading-relaxed text-tlum">
-            Smaže účet, passkeye, propojené kanály i nastavení. Hned a bez zálohy.
+            Smaže účet, passkeye, propojené kanály, e-mail, uložená hodnocení i nastavení. Hned a bez zálohy.
+            Jen u účtu s platbou zůstane doklad o platbě a kredit — bez čehokoli osobního.
           </p>
           <button type="button" disabled={mazu} onClick={smaz} className={`${TLACITKO_VAROVNE} mt-4`}>
             {mazu ? "Mažu…" : "Smazat účet"}

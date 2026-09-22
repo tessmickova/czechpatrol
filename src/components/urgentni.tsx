@@ -6,6 +6,7 @@ import { useZiveHodiny } from "@/lib/cas-klient";
 import { vystraha } from "@/lib/data";
 import type { Kandidat } from "@/lib/typy";
 import { Ikona } from "./ikony";
+import { Tlacitko } from "./ui";
 
 /*
   Urgentní upozornění.
@@ -128,5 +129,34 @@ export function UrgentniUpozorneni({
         </Link>
       </div>
     </section>
+  );
+}
+
+/*
+  Kompaktní podoba pro úvod: jeden řádek v rámečku barvy stavu — červený,
+  když platí výstraha nebo sběr zachytil naléhavou zprávu, zelený, když
+  za posledních 48 hodin nic. Jediné místo na webu, kde má rámeček barvu:
+  tady barva nese odpověď na otázku „děje se něco?“ a čte se dřív než text.
+  Slovo a tečka jsou u toho vždycky — kdo barvy nerozliší, přečte totéž.
+*/
+export function UrgentniPas({ kandidati, zkontrolovano, ted = Date.now() }: { kandidati: Kandidat[]; zkontrolovano: string | null; ted?: number }) {
+  const v = vystraha();
+  const naliehave = naliehaveVOkne(kandidati, useZiveHodiny(ted));
+  const deje = Boolean(v) || naliehave.length > 0;
+  return (
+    <div className={`flex flex-wrap items-center gap-x-4 gap-y-2 rounded-[18px] border px-4 py-3 ${deje ? "border-akcent/70" : "border-klid/60"}`} role="status" aria-label="Urgentní upozornění">
+      <span aria-hidden className={`h-[7px] w-[7px] shrink-0 rounded-full ${deje ? "bg-akcent" : "bg-klid"}`} />
+      {/* Minimální šířka textu: na úzkém displeji spadne tlačítko pod text, místo aby text mačkalo do sloupečku. */}
+      <span className="min-w-[14rem] flex-1 text-male leading-snug text-tlum">
+        {v ? (
+          <><b className="font-semibold text-inkoust">Platí: {v.nadpis}</b> <span className="cislice text-mikro text-tlum2">{datumCasPraha(v.kdy)}</span></>
+        ) : naliehave.length > 0 ? (
+          <><b className="font-semibold text-inkoust">Sběr zachytil {naliehave.length === 1 ? "naléhavou zprávu" : `${naliehave.length} naléhavé zprávy`}, čekají na ověření.</b> {NAZVY[naliehave[0].naliehave!.druh]}{naliehave[0].publikovano || naliehave[0].zachyceno ? ` · ${datumPraha(naliehave[0].publikovano ?? naliehave[0].zachyceno)}` : ""}</>
+        ) : (
+          <><b className="font-semibold text-inkoust">Teď nic urgentního.</b> Žádná mobilizace, krizové vysílání ani mimořádný stav za {OKNO_HODIN} h{zkontrolovano ? <span className="cislice text-mikro text-tlum2"> · zdroje čteny {datumCasPraha(zkontrolovano)}</span> : ""}</>
+        )}
+      </span>
+      <Tlacitko kam="/odber/" varianta="plny" velikost="s" ikonaVpravo="nahoru" trida="shrink-0 whitespace-nowrap [&>svg:last-child]:rotate-90">Jak se to dozvíte hned</Tlacitko>
+    </div>
   );
 }

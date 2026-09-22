@@ -61,8 +61,35 @@ export async function ulozWhatsapp(env: Env, req: Request, ucet: Prihlaseny): Pr
   return json({ ok: true });
 }
 
-/** Smazání účtu: hned, úplně, bez zálohy. Cizí klíče smažou zbytek. */
+/**
+ * Smazání účtu: hned, úplně, bez zálohy. Cizí klíče smažou zbytek.
+ *
+ * Výjimka: účet, u kterého je platba nebo kredit. Doklad o platbě se musí
+ * držet (účetnictví), a kredit odkazuje na účet. Takový účet se proto
+ * fyzicky nesmaže, ale vyprázdní: pryč jsou passkeye, relace, kanály,
+ * fronta, nastavení, e-mail i uložená hodnocení; zůstane jen identifikátor,
+ * platby a kredity, a účet se označí jako smazaný. Přihlásit se k němu
+ * už nejde.
+ */
 export async function smazUcet(env: Env, ucet: Prihlaseny): Promise<Response> {
-  await env.DB.prepare("DELETE FROM ucty WHERE id = ?").bind(ucet.id).run();
-  return json({ ok: true });
+  const doklad = await env.DB.prepare("SELECT (SELECT COUNT(*) FROM platby WHERE ucet_id = ?) + (SELECT COUNT(*) FROM kredity WHERE ucet_id = ?) AS n").bind(ucet.id, ucet.id).first<{ n: number }>();
+  if ((doklad?.n ?? 0) === 0) {
+    await env.DB.prepare("DELETE FROM ucty WHERE id = ?").bind(ucet.id).run();
+    return json({ ok: true });
+  }
+  const kdy = new Date().toISOString();
+  await env.DB.batch([
+    env.DB.prepare("DELETE FROM passkeys WHERE ucet_id = ?").bind(ucet.id),
+    env.DB.prepare("DELETE FROM relace WHERE ucet_id = ?").bind(ucet.id),
+    env.DB.prepare("DELETE FROM kanaly WHERE ucet_id = ?").bind(ucet.id),
+    env.DB.prepare("DELETE FROM fronta WHERE ucet_id = ?").bind(ucet.id),
+    env.DB.prepare("DELETE FROM propojeni WHERE ucet_id = ?").bind(ucet.id),
+    env.DB.prepare("DELETE FROM domacnosti WHERE ucet_id = ?").bind(ucet.id),
+    env.DB.prepare("DELETE FROM zebricek WHERE ucet_id = ?").bind(ucet.id),
+    env.DB.prepare("DELETE FROM opravneni_spravcu WHERE ucet_id = ?").bind(ucet.id),
+    env.DB.prepare("UPDATE opravneni SET stav = 'REVOKED', zruseno = ?, duvod_zruseni = 'účet smazán' WHERE ucet_id = ? AND stav = 'ACTIVE'").bind(kdy, ucet.id),
+    env.DB.prepare("UPDATE ucty SET role = 'obcan', obnova_hash = NULL, nastaveni = ?, poznamka = NULL, nazev = NULL, email_sifrovany = NULL, email_souhlas_kdy = NULL, smazano = ? WHERE id = ?").bind(JSON.stringify(VYCHOZI_NASTAVENI), kdy, ucet.id),
+    env.DB.prepare("INSERT INTO audit (kdy, kdo, co, cil) VALUES (?, ?, 'ACCOUNT_ERASED', ?)").bind(kdy, ucet.id, ucet.id),
+  ]);
+  return json({ ok: true, ponechano: "doklad o platbě" });
 }

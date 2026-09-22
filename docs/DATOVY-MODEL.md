@@ -108,6 +108,28 @@ Všechny počty jdou z `src/lib/agregace.ts`; komponenty nepočítají samy. Ka�
 
 `METODIKA_VERZE` a `METODIKA_REVIDOVANA` v `src/config/web.ts`. Změna verze se zapisuje do `data/opravy.json` s `druh: "metodika"`. Verze 2 (2026‑09‑06) mění jen názvy úrovní; prahy a stará hodnocení zůstávají, starší texty se převádějí `src/lib/archiv-text.ts`.
 
+## Data v API (Cloudflare D1)
+
+Vedle souborů v `data/` má projekt databázi jen pro to, co nemůže být
+veřejné: účty, doručování, Premium a žebříček. Web z ní nic nečte při
+buildu; klient se ptá API. Přehled tabulek a migrací je v `api/README.md`
+(část „Soukromí v kódu“), schéma v `api/migrace/`. Zásady:
+
+- **Peníze v celých haléřích** (`castka_haleru`, `hodnota_haleru`), nikdy
+  v desetinných číslech.
+- **Stavy jako řetězce s CHECK** (platba `CREATED → PENDING → PAID |
+  FAILED | CANCELLED`, `PAID → REFUNDED`; kredit `ACTIVE → REDEEMED |
+  REVOKED | REPLACED | EXPIRED`; oprávnění `ACTIVE | REVOKED | EXPIRED`).
+- **Idempotence v databázi, ne v hlavě:** `UNIQUE (provider,
+  provider_payment_id)`, `UNIQUE (zdroj_druh, zdroj_id)` u oprávnění,
+  `UNIQUE idempotency_key` u uplatnění, jeden záznam žebříčku na účet.
+- **Citlivé hodnoty šifrovaně** (AES-GCM, klíč mimo repozitář): kód
+  kreditu (+ otisk a poslední 4 znaky), e-mail u účtu, profil a výsledek
+  hodnocení, kontakt v žebříčku.
+- **Append-only:** `platby_udalosti` (surové webhooky), `audit`.
+- **Doby uchování** jsou v `api/src/synchronizace.ts` a odpovídají
+  stránce `/soukromi/`.
+
 ## Redakční tok
 
 1. Sběrač (`sber/`) běží každou hodinu, ověřuje oficiální opatření a ukládá kandidáty. **Nic nezveřejňuje.**

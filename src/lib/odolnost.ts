@@ -1,4 +1,6 @@
 import katalog from "../../data/odolnost/funkce.json";
+import krajeData from "../../data/odolnost/kraje.json";
+import { spotrebaPoRezimech, type VybranySpotrebic } from "./energie";
 
 /*
   Odolnost domácnosti — deterministický model.
@@ -35,8 +37,10 @@ export interface Cesta {
   kontext?: keyof Kontext;
 }
 
-/** Kontext domácnosti. Bez adresy: jen druh bydlení a sídla, počty a rodina v dosahu. */
+/** Kontext domácnosti. Bez adresy: kraj, druh bydlení a sídla, počty a rodina v dosahu. */
 export interface Kontext {
+  /** Klíč kraje z data/odolnost/kraje.json; "" = neuvedeno. */
+  kraj: string;
   bydleni: "byt" | "dum" | "";
   sidlo: "mesto" | "venkov" | "";
   deti: number;
@@ -65,6 +69,34 @@ export const ZAVISLOSTI = katalog.zavislosti as Record<string, { nazev: string }
 export const VERZE_KATALOGU = katalog.verze;
 /* 72 hodin je základ, ne cíl; 24 hodin se nepočítá — je to málo. Konec u 45 a 60 dní. */
 export const HORIZONTY_DNI = [3, 7, 14, 30, 45, 60] as const;
+
+/* ---------- kraj a srážky ---------- */
+
+export type TridaSrazek = "sussi" | "prumer" | "vlhci";
+export interface Kraj { klic: string; nazev: string; trida: TridaSrazek; srazkyMmRok: number | null; dniSeSrazkami: number | null; poznamka?: string }
+export const KRAJE_ODOLNOSTI = krajeData.kraje as Kraj[];
+export const TRIDY_SRAZEK = krajeData.tridy as Record<TridaSrazek, { nazev: string; nasobekRezervy: number; popis: string }>;
+export const ZDROJ_KRAJU = krajeData.zdroj;
+
+export function kraj(profil: Profil): Kraj | null {
+  return KRAJE_ODOLNOSTI.find((k) => k.klic === profil.kontext.kraj) ?? null;
+}
+
+/**
+ * Doporučená zásoba pitné vody na daný počet dní, v litrech. V sušším
+ * kraji o třetinu víc: studny v suchu klesají, dešťová voda je nejistá,
+ * náhradní zásobování je vytížené. Násobek je v kraje.json a jde přečíst.
+ */
+export function doporucenaZasobaVody(profil: Profil, dni: number): { litru: number; nasobek: number; trida: TridaSrazek | null; predpoklad: string } {
+  const voda = FUNKCE.find((f) => f.klic === "pitna-voda")!.zasoba!;
+  const naDen = Math.max(0, profil.osob) * (voda.naOsobuDen ?? 0) + Math.max(0, profil.zvirat) * (voda.naZvireDen ?? 0);
+  const k = kraj(profil);
+  const trida = k?.trida ?? null;
+  const nasobek = trida ? TRIDY_SRAZEK[trida].nasobekRezervy : 1;
+  const litru = Math.ceil(naDen * dni * nasobek);
+  const predpoklad = `${voda.naOsobuDen} l na osobu a den, ${voda.naZvireDen} l na zvíře, ${dni} dní${trida && nasobek !== 1 ? `, ×${nasobek} pro ${TRIDY_SRAZEK[trida].nazev}` : ""}. ${k ? `Zařazení kraje je orientační podle dlouhodobých srážkových poměrů; číselné průměry doplníme z ČHMÚ.` : "Kraj neuveden — platí základní rezerva."}`;
+  return { litru, nasobek, trida, predpoklad };
+}
 export type HorizontDni = (typeof HORIZONTY_DNI)[number];
 
 /** Co člověk zadává. Nic víc se neukládá — u každého pole je řečeno proč. */
@@ -76,8 +108,13 @@ export interface Profil {
   cesty: Record<string, string[]>;
   /** Zásoby: voda v litrech, užitková voda v litrech, jídlo a léky ve dnech. null = nezadáno (není totéž co nula). */
   zasoby: { pitnaVodaL: number | null; uzitkovaVodaL: number | null; jidloDni: number | null; lekyDni: number | null };
-  /** Energie: kapacita vlastních zdrojů ve Wh a denní potřeba v nouzovém režimu ve Wh; dobíjení = solár, generátor, auto. */
-  energie: { kapacitaWh: number; potrebaDenWh: number; dobijeni: boolean };
+  /**
+   * Energie: kapacita vlastních zdrojů ve Wh, vybrané spotřebiče (z nich
+   * se počítá denní potřeba po režimech), dobíjení = solár, generátor,
+   * auto, a případný výkon panelů ve Wp. `potrebaDenWh` zůstává pro ruční
+   * zadání bez výběru spotřebičů.
+   */
+  energie: { kapacitaWh: number; potrebaDenWh: number; dobijeni: boolean; spotrebice?: VybranySpotrebic[]; solarWp?: number | null };
   /** Co člověk označil jako neřešitelné: klíč funkce → důvod. */
   nemohu: Record<string, string>;
   /** Kontext domácnosti (rozšířené vstupy). */
@@ -93,7 +130,7 @@ export const PRAZDNY_PROFIL: Profil = {
   zasoby: { pitnaVodaL: null, uzitkovaVodaL: null, jidloDni: null, lekyDni: null },
   energie: { kapacitaWh: 0, potrebaDenWh: 0, dobijeni: false },
   nemohu: {},
-  kontext: { bydleni: "", sidlo: "", deti: 0, seniori: 0, zavislyNaPeci: false, rodinaVDosahu: false },
+  kontext: { kraj: "", bydleni: "", sidlo: "", deti: 0, seniori: 0, zavislyNaPeci: false, rodinaVDosahu: false },
   vybaveni: {},
 };
 
@@ -210,6 +247,12 @@ export interface Vydrz {
   predpoklad: string;
 }
 
+/** Denní potřeba: z vybraných spotřebičů (režim kritické a nutné), jinak ručně zadané číslo. */
+export function potrebaDenWh(en: Profil["energie"]): number {
+  if (en.spotrebice && en.spotrebice.length) return spotrebaPoRezimech(en.spotrebice).nutne;
+  return en.potrebaDenWh;
+}
+
 function dny(mnozstvi: number | null, naDen: number): number | null {
   if (mnozstvi === null || naDen <= 0) return null;
   return Math.floor((mnozstvi / naDen) * 10) / 10;
@@ -231,10 +274,10 @@ export function vydrze(profil: Profil): Vydrz[] {
     {
       klic: "energie",
       nazev: "Vlastní energie v nouzovém režimu",
-      dni: en.kapacitaWh > 0 && en.potrebaDenWh > 0 ? (en.dobijeni ? Infinity : dny(en.kapacitaWh, en.potrebaDenWh)) : null,
+      dni: en.kapacitaWh > 0 && potrebaDenWh(en) > 0 ? (en.dobijeni ? Infinity : dny(en.kapacitaWh * 0.85, potrebaDenWh(en))) : null,
       predpoklad: en.dobijeni
-        ? `Kapacita ${en.kapacitaWh} Wh, potřeba ${en.potrebaDenWh} Wh/den, s dobíjením — doba závisí na slunci nebo palivu, ne na kapacitě. Ztráty při nabíjení a vybíjení nejsou započtené.`
-        : `Kapacita ${en.kapacitaWh} Wh, potřeba ${en.potrebaDenWh} Wh/den, bez dobíjení. Skutečná doba bývá kratší o ztráty (obvykle desítky procent) a v zimě dál klesá.`,
+        ? `Kapacita ${en.kapacitaWh} Wh, potřeba ${potrebaDenWh(en)} Wh/den (kritické a nutné spotřebiče), s dobíjením — doba závisí na slunci nebo palivu, ne na kapacitě.`
+        : `Kapacita ${en.kapacitaWh} Wh, potřeba ${potrebaDenWh(en)} Wh/den (kritické a nutné spotřebiče), bez dobíjení, po odečtení 15 % ztrát. V zimě dál klesá.`,
     },
   ];
 }
@@ -363,6 +406,23 @@ export function coChybi(profil: Profil): Doporuceni[] {
     });
   }
 
+  /* 4b. Kraj: v sušší oblasti doporučená rezerva vody na 7 dní, když ji zadaná zásoba nekryje. */
+  const k = kraj(profil);
+  if (k && TRIDY_SRAZEK[k.trida].nasobekRezervy > 1 && profil.zasoby.pitnaVodaL !== null) {
+    const d = doporucenaZasobaVody(profil, 7);
+    if (profil.zasoby.pitnaVodaL < d.litru && !vysledek.some((x) => x.druh === "zasoba")) {
+      vysledek.push({
+        druh: "zasoba",
+        nadpis: `Pitná voda: pro ${k.nazev} kraj doporučujeme ${d.litru} l na 7 dní, máte ${profil.zasoby.pitnaVodaL} l`,
+        proc: TRIDY_SRAZEK[k.trida].popis,
+        zaklad: d.predpoklad,
+        resi: ["Pitná voda"],
+        alternativy: ["Doplnit nádoby a naplnit je z kohoutku, dokud teče.", "Znát výdejní místa obce pro náhradní zásobování.", "Oddělit pitnou a užitkovou vodu, aby pitná nešla na splachování."],
+        kdyNeni: "Když máte vlastní zdroj s ruční pumpou, který v suchu nevysychá.",
+      });
+    }
+  }
+
   /* 5. Kompenzace pro to, co člověk označil jako neřešitelné. */
   for (const h of hod.filter((h) => h.nemohu).slice(0, 1)) {
     vysledek.push({
@@ -450,6 +510,66 @@ export function souhrn(profil: Profil): Souhrn {
   };
 }
 
+/* ---------- zdarma vs. Premium ---------- */
+
+/**
+ * Bezpečnostní nálezy — vždy zdarma, i bez účtu, nad nabídkou Premium.
+ *
+ * Nález je něco, co může ohrozit zdraví nebo život, ne „slabina“: péče
+ * nebo přístroj závislý na jediné cestě, pitná voda nebo teplo bez
+ * jakékoli cesty, zdravotní funkce bez zálohy. Web u toho neradí
+ * medicínsky ani technicky; odkazuje na oficiální postupy (/pripravenost/).
+ */
+export interface BezpecnostniNalez { klic: string; nadpis: string; proc: string; funkce: string }
+
+const ZIVOTNE_DULEZITE = ["pitna-voda", "teplo", "zdravi", "komunikace"];
+
+export function bezpecnostniNalezy(profil: Profil, hodnoceni: HodnoceniFunkce[]): BezpecnostniNalez[] {
+  const n: BezpecnostniNalez[] = [];
+  for (const h of hodnoceni) {
+    if (h.nemohu) continue;
+    const f = h.funkce;
+    if (ZIVOTNE_DULEZITE.includes(f.klic) && h.redundance === 0) {
+      n.push({ klic: `bez-cesty-${f.klic}`, nadpis: `${f.nazev}: žádná cesta`, proc: `Pro ${f.nazev.toLowerCase()} není zaškrtnutá ani jedna cesta. Bez ní domácnost při výpadku nemá jak pokrýt základní potřebu.`, funkce: f.klic });
+    }
+    if (f.klic === "zdravi" && profil.kontext.zavislyNaPeci && h.redundance <= 1 && h.kriticke.length) {
+      n.push({ klic: "pece-jedina-cesta", nadpis: "Péče nebo přístroj závisí na jediné cestě", proc: `Někdo u vás je závislý na péči, léku nebo přístroji a zdraví má jedinou cestu, která stojí na ${h.kriticke.map((z) => ZAVISLOSTI[z]?.nazev.toLowerCase() ?? z).join(", ")}. Výpadek této závislosti je pro vás bezprostřední riziko; postup domluvte s lékařem a poskytovatelem přístroje.`, funkce: "zdravi" });
+    }
+    if (f.klic === "teplo" && h.redundance <= 1 && h.kriticke.includes("elektrina") && (profil.kontext.deti > 0 || profil.kontext.seniori > 0)) {
+      n.push({ klic: "teplo-deti-seniori", nadpis: "Teplo stojí jen na elektřině a doma jsou děti nebo senioři", proc: "Při delším výpadku elektřiny v zimě je podchlazení riziko nejdřív pro děti a seniory. Náhradní teplo nebo místo, kam jít, patří k prvním věcem k zařízení.", funkce: "teplo" });
+    }
+  }
+  return n;
+}
+
+/** Počty do souhrnu zdarma: kolik oblastí je v pořádku, kolik slabin, kolik kritických závislostí. */
+export function pocty(s: Souhrn): { vPoradku: number; slabin: number; kritickych: number; nehodnoceno: number; horizont72: StavHorizontu } {
+  const hodnocene = s.hodnoceni.filter((h) => !h.nemohu);
+  return {
+    vPoradku: hodnocene.filter((h) => h.redundance === 3).length,
+    slabin: hodnocene.filter((h) => h.mam.length > 0 && h.redundance < 3).length,
+    kritickych: s.body.filter((b) => b.vypne.length >= 2).length,
+    nehodnoceno: hodnocene.filter((h) => h.mam.length === 0).length,
+    horizont72: s.horizonty.find((h) => h.dni === 3)?.stav ?? "nehodnoceno",
+  };
+}
+
+/**
+ * Skóre 0–100 pro srovnání v žebříčku. Orientační hra, ne doklad.
+ *
+ * Dvě části: 70 bodů za zálohy (každá oblast podle důležitosti, plný
+ * počet za tři nezávislé cesty), 30 bodů za horizonty (kolik z šesti je
+ * „připraveno“, půl bodu za „částečně“). Oblasti označené „řeším jinak“
+ * se nepočítají ani do jmenovatele. Prázdný dotazník = 0.
+ */
+export function skore(s: Souhrn): number {
+  const hodnocene = s.hodnoceni.filter((h) => !h.nemohu);
+  const vahaCelkem = hodnocene.reduce((a, h) => a + h.funkce.dulezitost, 0);
+  const zalohy = vahaCelkem ? hodnocene.reduce((a, h) => a + (h.funkce.dulezitost * h.redundance) / 3, 0) / vahaCelkem : 0;
+  const hor = s.horizonty.length ? s.horizonty.reduce((a, h) => a + (h.stav === "pripraveno" ? 1 : h.stav === "castecne" ? 0.5 : 0), 0) / s.horizonty.length : 0;
+  return Math.round(70 * zalohy + 30 * hor);
+}
+
 /** Lidský zápis doby: 47 min, 4 h 21 min, 1 d 7 h. */
 export function lidskaDoba(dni: number): string {
   if (!Number.isFinite(dni)) return "bez limitu kapacity";
@@ -474,7 +594,7 @@ export function nactiProfil(): Profil | null {
       zasoby: { ...PRAZDNY_PROFIL.zasoby, ...(p.zasoby ?? {}) },  // null zůstává null: nezadáno není nula
       energie: { ...PRAZDNY_PROFIL.energie, ...(p.energie ?? {}) },
       nemohu: p.nemohu && typeof p.nemohu === "object" ? p.nemohu : {},
-      kontext: { ...PRAZDNY_PROFIL.kontext, ...(p.kontext ?? {}) },
+      kontext: { ...PRAZDNY_PROFIL.kontext, ...(p.kontext ?? {}) },  // kraj: "" u starších profilů
       vybaveni: p.vybaveni && typeof p.vybaveni === "object" ? p.vybaveni : {},
     };
   } catch {

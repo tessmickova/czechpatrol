@@ -105,9 +105,17 @@ které adresy skutečně odpovídají, a teprve pak se příznak přepne.
 
 ## Stránky
 
-Hlavní navigace má šest cílů: **Přehled** (`/`), **Události** (`/udalosti/`),
-**Manipulace** (`/manipulace/`), **Země** (`/zeme/`), **Analýzy** (`/analyzy/`)
-a **Můj přehled** (`/muj-prehled/`, předvolby jen v zařízení).
+Hlavní navigace má pět cílů: **Přehled** (`/`), **Události** (`/udalosti/`),
+**Manipulace** (`/manipulace/`), **Analýzy** (`/analyzy/`) a **Připravenost**
+(`/pripravenost/`). **Země** (`/zeme/`) a **Můj přehled** (`/muj-prehled/`,
+předvolby jen v zařízení) jsou v rozcestníku Analýz a v postranním panelu.
+
+**Přehled** (`/`) má nahoře úvod přes dva sloupce a aktuality v třetím, pod
+budíky kompaktní **urgentní pás** (zelený rámeček, když za 48 hodin nic;
+červený, když platí výstraha nebo sběr zachytil naléhavou zprávu) a pod ním
+tři desky ve stejné mřížce: komunita, dotazník odolnosti, upozornění.
+Typy událostí a čísla „kolik, kde, kdo“ jsou od 22. 9. 2026 první sekce
+Analýz, ne úvodu.
 
 Události mají filtry v adrese (`?tab=&zeme=&tema=&obdobi=&overeni=`) a detail
 v postranním panelu (`?u=slug`) nebo na `/incident/<slug>/`. Parametr `tab`
@@ -115,8 +123,9 @@ přepíná mezi třemi záložkami: `overene` (výchozí), `cekajici` (automatic
 čekající na ověření) a `neproslo` (vyvrácené a nedoložené). Starší odkazy
 `?overeni=automaticke` a `?overeni=neprosle` zůstávají funkční.
 
-Analýzy jsou rozcestník na **Vývoj** (`/vyvoj/`), **Aktéři a cíle** (`/svet/`),
-**Manipulace** a metodiku. Vedlejší stránky: zdroje, opravy (`/opravy/`,
+Analýzy začínají typy evidovaných událostí (pavučina a tabulka zemí) a čísly
+za 90 dní, pod tím je rozcestník na **Vývoj** (`/vyvoj/`), **Země**,
+**Aktéři a cíle** (`/svet/`), **Manipulace** a metodiku. Vedlejší stránky: zdroje, opravy (`/opravy/`,
 z `data/opravy.json`), o projektu, podpořit, odběr.
 Staré adresy (`/dnes`, `/trend`, `/osa`, `/cr`, `/nato`, `/tlak`, `/watchlist`,
 `/nepotvrzeno`, `/komunita`) přesměrovává `public/_redirects`.
@@ -166,7 +175,7 @@ jako mimořádné.
 Nad vším stojí Pravidlo č. 0 v `CLAUDE.md`: právo ČR a EU, žádná poplašná zpráva,
 a v bezpečnostních tématech jen to, co je doložené citací se zdrojem a řešené úředně.
 
-Podrobněji: `docs/PRAVNI-KONTROLA.md`, `docs/DATOVY-MODEL.md`, `docs/PROVOZ.md`, `docs/ZNACKA.md`, `docs/DALSI-ETAPA.md`, `docs/SITUACNI-MAPA-NAVRH.md` (návrh situační mapy ČR, fáze 0), `docs/DOPISY-POSKYTOVATELUM.md` (dopisy poskytovatelům dat), `docs/ODOLNOST-NAVRH.md` (tři úrovně a odolnost domácnosti), `docs/PREMIUM-NAVRH.md` (Premium MVP a kredit 150 Kč, návrh).
+Podrobněji: `docs/PRAVNI-KONTROLA.md`, `docs/DATOVY-MODEL.md`, `docs/PROVOZ.md`, `docs/ZNACKA.md`, `docs/DALSI-ETAPA.md`, `docs/SITUACNI-MAPA-NAVRH.md` (návrh situační mapy ČR, fáze 0), `docs/DOPISY-POSKYTOVATELUM.md` (dopisy poskytovatelům dat), `docs/ODOLNOST-NAVRH.md` (tři úrovně a odolnost domácnosti), `docs/PREMIUM-NAVRH.md` (Premium MVP a kredit 150 Kč, návrh a stav implementace), `api/README.md` (cesty, tajemství, tabulky).
 
 ## Struktura
 
@@ -225,6 +234,14 @@ s D1 (`api/`), viz [api/README.md](api/README.md).
   každý zásah je v auditu. Nikdo si roli nemění sám.
 - **Zdroj pravdy je web:** při buildu vydá `/stav.json`, API ho každých
   10 minut porovná s minulým a z rozdílu udělá zprávy. Nic víc netvrdí.
+- **Odolnost domácnosti** (`/odolnost/`) je audit bez účtu: souhrn s počty,
+  stav na 72 hodin, bezpečnostní nálezy a rady za 0 Kč zdarma; podrobný
+  plán je **Premium** (viz níže). Tlačítko *Začít znovu* smaže profil.
+- **Žebříček připravenosti** pod auditem: pro přihlášené anonymní účty,
+  jeden záznam na účet, vygenerovaná přezdívka, skóre 0–100 a datum
+  veřejně. Nepřihlášený dostane po vyplnění otázku, jestli se chce
+  anonymně přihlásit, nebo v žebříčku nebýt. Kontakt pro pozvání do
+  komunity je nepovinný, šifrovaný a jen pro správce.
 
 Bez proměnné `API_URL` v GitHubu se web sestaví bez účtů a všude říká, že se
 připravují. Adresa API se přidá jednou, ve `Settings → Variables`.
@@ -235,12 +252,24 @@ Web je PWA: manifest, ikony, service worker. Stránky se berou ze sítě a kopie
 zůstane jen pro čtení bez signálu; hashované soubory buildu z mezipaměti.
 Na mobilu je spodní lišta a postranní panel místo menu.
 
-## Placená vrstva
+## Placená vrstva a Premium
 
 `PLACENE.hraniceADoprava` v `src/config/web.ts` zakryje část „Hranice
 a doprava“ všem bez role podporovatele. Výchozí je vypnuto a doporučení
 projektu je nechat bezpečnostní informace volně — viz
 [docs/PRAVNI-KONTROLA.md](docs/PRAVNI-KONTROLA.md), část 5.
+
+**Premium „Odolnější domácnost“** (od 22. 9. 2026, `docs/PREMIUM-NAVRH.md`):
+jednorázové odemknutí podrobného plánu odolnosti za 150 Kč, celá částka se
+vrací jako kredit 150 Kč na výbavu v e-shopu (až poběží). Premium dává
+horizonty 7–60 dní, vydrže, rozpočet energie a solár, „co vypne co“,
+nákupní seznam, plán ke stažení, uložení profilu na server (šifrovaně)
+a přístup do komunity a chatu. Platba přes Comgate s webhookem, který se
+ověřuje u brány; kredit `CP-XXXX-XXXX` je v databázi jen jako otisk,
+maska a šifrovaný kód. **Bez tajemství brány a šifrovacího klíče se nic
+nespustí** a web říká „odemknutí připravujeme“ — cena i stav se čtou
+z API (`GET /premium`), web je neopisuje. Bezpečnostní nálezy jsou vždy
+zdarma a nad nabídkou.
 
 ## Právo
 
