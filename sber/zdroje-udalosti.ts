@@ -82,6 +82,7 @@ const TEMATA = [
   { klic: "kabely", cs: "poškozený podmořský kabel", en: "undersea cable damage Baltic", poZemich: false },
   { klic: "energetika", cs: "útok na rozvodnu nebo elektrárnu", en: "attack on power grid substation", poZemich: false },
   { klic: "kyber", cs: "kybernetický útok NÚKIB", en: "cyberattack critical infrastructure", poZemich: false },
+  { klic: "vypadek", cs: "plošný výpadek sítě internet mobilní operátor", en: "nationwide outage mobile network internet", poZemich: false },
   { klic: "spionaz", cs: "zadržen za špionáž pro Rusko", en: "arrested spying for Russia", poZemich: true },
   { klic: "diplomate", cs: "vyhoštění ruských diplomatů", en: "expelled Russian diplomats", poZemich: false },
   { klic: "hranice", cs: "kontroly na hranicích zavedeny", en: "border checks reintroduced", poZemich: true },

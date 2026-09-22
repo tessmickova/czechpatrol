@@ -84,6 +84,13 @@ jobs:
         if: steps.vzit.outputs.zmena == 'true'
         run: npm run fronta:srovnej
 
+      # Web i zadání pro ověřovatele slibují, že návrh se dvěma zdroji včetně
+      # úředního se zveřejní sám. Krok, který to dělá, tu do 22. 9. 2026 chyběl:
+      # dva takové návrhy (Moldavsko, Berlín) ležely ve frontě od 20. 9.
+      - name: Zveřejnit dobře doložené návrhy
+        if: steps.vzit.outputs.zmena == 'true'
+        run: npm run spravce -- zverejni
+
       # Data z cizí větve projdou týmiž kontrolami jako cokoli jiného.
       # Kdyby návrh porušoval pravidla (jeden zdroj, chybějící lidské
       # ověření, zdroj starší než událost), nesmí se do main dostat.

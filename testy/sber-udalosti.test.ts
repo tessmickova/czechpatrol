@@ -124,6 +124,23 @@ describe("důvod odmítnutí", () => {
     expect(duvodOdmitnuti("Poplach v Polsku: Armáda vyslala do vzduchu stíhačky")).toBeNull();
   });
 
+  /*
+    21. 9. 2026: výpadek O2 a Vodafonu se stovkami hlášení propadl sítem jako
+    „bez skutku". Plošný výpadek je skutek a zpráva o českém operátorovi je
+    z Česka i bez slova „Česko".
+  */
+  it("plošný výpadek sítí a služeb je skutek s místem", () => {
+    const t = "Některé služby jsou nedostupné. O2 i Vodafone se od rána potýkají s výpadky, stížností jsou stovky";
+    expect(duvodOdmitnuti(t)).toBeNull();
+    expect(odhadniTemata(t).kategorie).toContain("infrastruktura");
+    expect(odhadniZemi(t)?.kod).toBe("CZ");
+    expect(duvodOdmitnuti("Nationwide mobile network outage hits Poland, operator says")).toBeNull();
+  });
+
+  it("slovo „vypadá“ není výpadek", () => {
+    expect(duvodOdmitnuti("Situace v Polsku vypadá klidně, řekl ministr")).toBe("bez-skutku");
+  });
+
   it("relevantni a duvodOdmitnuti se nesmějí rozejít", () => {
     const vzorky = [
       "Russian drone violated Romanian airspace near Tulcea",
