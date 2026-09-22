@@ -30,34 +30,6 @@
     "kratce": "Přivolání záchranné služby s odesláním polohy dispečinku."
   },
   {
-    "id": "horska-zachranna-sluzba-sk",
-    "nazev": "Horská záchranná služba (Slovensko)",
-    "provozovatel": "Horská záchranná služba, Slovenská republika",
-    "kategorie": "tisen",
-    "ikona": "sirena",
-    "kratce": "Přivolání horské záchranné služby na slovenských horách.",
-    "popis": "Oficiální aplikace slovenské Horské záchranné služby. Co přesně umí (odeslání polohy, tísňové volání), ověřujeme na webu provozovatele.",
-    "kCemu": "Přivolání pomoci na horách na Slovensku, kam Češi jezdí nejčastěji.",
-    "kdyPomuze": "Úraz nebo nouze v Tatrách a dalších slovenských horách.",
-    "procMit": "Na horách rozhoduje, jak rychle záchranáři zjistí, kde jste.",
-    "iosUrl": "https://apps.apple.com/cz/app/horsk%C3%A1-z%C3%A1chrann%C3%A1-slu%C5%BEba/id1519456092",
-    "androidUrl": "https://play.google.com/store/apps/details?id=hzs.sk.hzs",
-    "webUrl": "https://www.hzs.sk/",
-    "oficialniZdroj": "https://www.hzs.sk/",
-    "overeno": null,
-    "adresaOverena": null,
-    "dostupnost": "aplikace",
-    "coNastavit": [
-      "Nainstalovat před cestou na Slovensko a povolit přístup k poloze"
-    ],
-    "proKoho": [
-      "kdo jezdí na slovenské hory"
-    ],
-    "stav": "k-overeni",
-    "doporuceno": false,
-    "poznamka": "Odkazy do obchodů dodal provozovatel projektu 22. 9. 2026. Nedoporučuje se každému — počítá se do skóre jen tomu, kdo na Slovensko jezdí; proto do součtu nevstupuje."
-  },
-  {
     "id": "tisnove-linky",
     "nazev": "Tísňová volání 112, 150, 155, 158",
     "provozovatel": "Hasičský záchranný sbor ČR (112), Policie ČR, zdravotnické záchranné služby",
