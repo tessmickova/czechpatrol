@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { KANALY, KOMUNITA, PARTNERI, UCTY_ZAPNUTE, WEB } from "@/config/web";
+import { EMAIL_ODBER_BEZI, KANALY, KOMUNITA, PARTNERI, WEB } from "@/config/web";
 import { Ikona } from "./ikony";
 import { ZnackaKanalu, type Znacka } from "./znacky";
 import { Tlacitko } from "./ui";
@@ -28,18 +28,14 @@ export function Sledovat() {
       <ul className="grid grid-cols-2 gap-1.5 sm:grid-cols-3 lg:grid-cols-6">
         <li><a href={`${WEB.url}/feed.xml`} className={`${KARTA} border-akcent/50 bg-akcent/10 hover:bg-akcent/20`}><ZnackaKanalu znacka="rss" velikost={26} /><span><span className="block text-male font-bold text-inkoust">RSS</span><span className="block text-mikro text-tlum">každá čtečka</span></span></a></li>
         <li>
-          {UCTY_ZAPNUTE ? (
-            <Link href="/ucet/" className={`${KARTA} border-akcent/50 bg-akcent/10 hover:bg-akcent/20`}><ZnackaKanalu znacka="email" velikost={26} /><span><span className="block text-male font-bold text-inkoust">Souhrn a upozornění</span><span className="block text-mikro text-tlum">týdně, nebo hned při změně</span></span></Link>
-          ) : (
-            <span className={`${KARTA} border-dashed border-linka opacity-80`}><ZnackaKanalu znacka="email" velikost={26} tlumena /><span><span className="block text-male font-bold text-tlum">E-mailový souhrn</span><span className="block text-mikro text-tlum2">připravujeme</span></span></span>
-          )}
+          <Link href="/zapojit-se/" className={`${KARTA} border-akcent/50 bg-akcent/10 hover:bg-akcent/20`}><ZnackaKanalu znacka="email" velikost={26} /><span><span className="block text-male font-bold text-inkoust">E-mail a komunita</span><span className="block text-mikro text-tlum">{EMAIL_ODBER_BEZI ? "souhrn a pozvánky" : "jak se zapojit"}</span></span></Link>
         </li>
         {KANALY_DEF.map((k) => {
           const url = KANALY[k.klic];
           return (
             <li key={k.klic}>
               {url ? (
-                <a href={url} target="_blank" rel="nofollow noopener noreferrer" className={`${KARTA} border-linka hover:border-akcent`}><ZnackaKanalu znacka={k.klic} velikost={26} /><span><span className="block text-male font-bold text-inkoust">{k.nazev}</span><span className="block text-mikro text-tlum">{k.popis}</span></span></a>
+                <a href={url} target="_blank" rel="nofollow noopener noreferrer" data-zapojeni={k.klic === "telegram" ? "telegram" : undefined} className={`${KARTA} border-linka hover:border-akcent`}><ZnackaKanalu znacka={k.klic} velikost={26} /><span><span className="block text-male font-bold text-inkoust">{k.nazev}</span><span className="block text-mikro text-tlum">{k.popis}</span></span></a>
               ) : (
                 <span className={`${KARTA} border-dashed border-linka opacity-80`}><ZnackaKanalu znacka={k.klic} velikost={26} tlumena /><span><span className="block text-male font-bold text-tlum">{k.nazev}</span><span className="block text-mikro text-tlum2">připravujeme</span></span></span>
               )}

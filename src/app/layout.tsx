@@ -4,6 +4,7 @@ import { ListaMobil } from "@/components/lista-mobil";
 import { Navigace } from "@/components/navigace";
 import { DialogProvider } from "@/components/dialog";
 import { PostranniPanel } from "@/components/postranni-panel";
+import { NavadeniZapojeni } from "@/components/zapojit-klient";
 import { RegistraceSW } from "@/components/pwa";
 import { Paticka } from "@/components/paticka";
 import { PruhPuvodu, UkazkaPruh } from "@/components/pruhy";
@@ -109,6 +110,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         </DialogProvider>
         <Paticka />
         <PostranniPanel />
+        <NavadeniZapojeni />
         <ListaMobil />
         <RegistraceSW />
         <script

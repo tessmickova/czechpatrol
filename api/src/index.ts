@@ -10,6 +10,7 @@ import * as navrhy from "./navrhy";
 import * as patrol from "./patrol";
 import * as sprava from "./sprava";
 import * as tipy from "./tipy";
+import * as zajem from "./zajem";
 import { synchronizuj, uklid } from "./synchronizace";
 import { nastavWebhook, webhook } from "./telegram";
 import type { Env } from "./typy";
@@ -64,6 +65,10 @@ const CESTY: [string, RegExp, Obsluha][] = [
   }],
 
   ["POST", /^\/tipy$/, (req, env) => tipy.prijmi(env, req)],
+  // Zájem o e-mail a komunitu: bez účtu, s brzdou; odhlášení tokenem z e-mailu.
+  ["POST", /^\/zajem$/, (req, env) => zajem.prijmi(env, req)],
+  ["POST", /^\/zajem\/odhlasit$/, (req, env) => zajem.odhlasit(env, req)],
+  ["GET", /^\/sprava\/zajem$/, async (req, env) => zajem.prehled(env, await vyzadujPrihlaseni(env, req))],
   ["GET", /^\/nastaveni-sberu$/, async (req, env) => nastaveni.proSber(env)],
   ["PUT", /^\/sprava\/nastaveni-ai$/, async (req, env) => nastaveni.uloz(env, req, await vyzadujPrihlaseni(env, req))],
   ["GET", /^\/sprava\/patrol$/, async (req, env) => patrol.seznam(env, await vyzadujPrihlaseni(env, req))],

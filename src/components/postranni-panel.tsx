@@ -42,6 +42,7 @@ export const PO_PRIHLASENI: { href: string; label: string; ikona: NazevIkony; po
 ];
 
 export const DALSI_STRANKY = [
+  { href: "/zapojit-se/", label: "Zapojit se" },
   { href: "/vyvoj/", label: "Vývoj" },
   { href: "/svet/", label: "Aktéři a cíle" },
   { href: "/metodika/", label: "Metodika" },
@@ -233,6 +234,7 @@ export function PostranniPanel() {
                 href={KANALY.telegram}
                 target="_blank"
                 rel="nofollow noopener noreferrer"
+                data-zapojeni="telegram"
                 className="flex min-h-[60px] items-center gap-3 rounded-[18px] border border-akcent/55 bg-akcent/12 px-3.5 transition-colors hover:bg-akcent/20"
               >
                 <ZnackaKanalu znacka="telegram" velikost={30} />

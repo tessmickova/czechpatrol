@@ -246,6 +246,16 @@ export const PROVOZOVATEL = {
   kontakt: "",
 } as const;
 
+/**
+ * Sběr e-mailů pro souhrn a pozvánky do komunity.
+ *
+ * Běží jen se dvěma věcmi: API (kam se adresa ukládá) a uvedeným
+ * správcem údajů. Bez správce se adresy nesbírají — čl. 13 GDPR chce, aby
+ * člověk věděl, komu adresu dává. Dokud je PROVOZOVATEL prázdný, web
+ * formulář neukáže a řekne, že odběr připravuje.
+ */
+export const EMAIL_ODBER_BEZI = UCTY_ZAPNUTE && PROVOZOVATEL.nazev !== "";
+
 /** Kam se hlásí složka IZS, která chce roli partnera. Prázdné = zatím nepřijímáme. */
 export const IZS_KONTAKT = "";
 

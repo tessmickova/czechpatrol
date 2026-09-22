@@ -11,7 +11,7 @@ import { useT } from "@/lib/i18n";
 const SLOUPCE: { nadpis: string; odkazy: [string, string][] }[] = [
   {
     nadpis: "Obsah",
-    odkazy: [["/", "Přehled"], ["/udalosti/", "Události"], ["/manipulace/", "Manipulace"], ["/zeme/", "Země"], ["/analyzy/", "Analýzy"], ["/muj-prehled/", "Můj přehled"], ["/odber/", "Odběr a RSS"]],
+    odkazy: [["/", "Přehled"], ["/udalosti/", "Události"], ["/manipulace/", "Manipulace"], ["/zeme/", "Země"], ["/analyzy/", "Analýzy"], ["/zapojit-se/", "Zapojit se"], ["/muj-prehled/", "Můj přehled"], ["/odber/", "Odběr a RSS"]],
   },
   {
     nadpis: "Důvěryhodnost",

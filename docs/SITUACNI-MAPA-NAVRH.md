@@ -48,10 +48,11 @@ vlastní krizové pokyny.
 
 ### Odchylky od preferované architektury v zadání a proč
 
-- **PostgreSQL + PostGIS: ano**, jako hostovaná databáze v EU regionu
-  (Neon nebo Supabase; obojí nabízí PostGIS). Cloudflare D1 (SQLite) na
-  prostorové dotazy a historii nestačí. **NEOVĚŘENO** je aktuální ceník a
-  dostupnost EU regionu u konkrétního poskytovatele — v části S je rozpětí.
+- **PostgreSQL + PostGIS: ano, Supabase** (rozhodnutí provozovatele
+  22. 9. 2026), projekt v EU regionu. Cloudflare D1 (SQLite) na prostorové
+  dotazy a historii nestačí. **NEOVĚŘENO** je aktuální ceník — v části S je
+  rozpětí. Účet zakládá provozovatel; klíče jdou jen do tajemství GitHubu
+  a Cloudflare.
 - **Redis: ne, nahrazeno Cloudflare KV a Cache API.** Plní tutéž roli
   (cache agregátů, rate limiting) bez vlastního serveru. Kdyby se projekt
   přesunul na vlastní VPS, Redis se doplní bez změny rozhraní.
@@ -283,6 +284,7 @@ prostředí je nešlo otevřít.
 | Osobní údaje | ne |
 | **Status** | **GREEN** (po přečtení licence na portálu) |
 | Doporučený způsob | výstrahy CAP každých 10 min; měření hodinově; do PostGIS s časem platnosti |
+| Co jde na veřejnou mapu | **jen výstrahy vysokého a extrémního stupně** (rozhodnutí provozovatele 22. 9. 2026). Nižší stupně a měření slouží jen interně jako kontrolní vrstva pro anomálie (část N). |
 | Poznámka | sběr už dnes čte https://www.chmi.cz/ jako zdroj `chmi` (HTTP 200) — jen HTML, ne data |
 
 #### Blesková data
@@ -581,7 +583,14 @@ Po přečtení podmínek na uvedené adrese (jeden člověk, jedno odpoledne):
 
 Odesílá provozovatel projektu (jméno a identita: **[DOPLNIT]** —
 `PROVOZOVATEL` v `src/config/web.ts` je dosud prázdné; bez něj se dopis
-neposílá). Jedna šablona, tři adresáti; odstavce v hranatých závorkách se
+neposílá). Plné znění všech dopisů: `docs/DOPISY-POSKYTOVATELUM.md`.
+
+Co je „identita provozovatele": ten, kdo web právně provozuje a odpovídá
+za osobní údaje (čl. 4 odst. 7 a čl. 13 GDPR). U jednotlivce stačí jméno a
+příjmení a kontaktní e-mail; u podnikající osoby nebo firmy název, IČO a
+sídlo; u spolku název, IČO a sídlo. Zapisuje se na jediné místo
+(`PROVOZOVATEL` v `src/config/web.ts`) a odtud jde do stránky Soukromí, do
+souhlasu s e-mailem a do dopisů. Jedna šablona, tři adresáti; odstavce v hranatých závorkách se
 liší.
 
 > **Věc: Žádost o agregovaná data o poruchách a odstávkách pro veřejný situační přehled CzechPatrol**
@@ -920,6 +929,10 @@ příčinu neuvede zdroj.
 | odchylka od baseline | (aktuální − medián) / IQR | ≥ 3 |
 
 ### Kontrolní vrstva počasí
+
+Na veřejné vrstvě POČASÍ jsou jen výstrahy vysokého a extrémního stupně.
+Pro kontrolu anomálií se interně používají všechny stupně i měření; ven
+z toho jde jen věta o korelaci, ne data.
 
 Když ČHMÚ ve stejném ORP a čase hlásí výstrahu (vítr, bouřky, námraza,
 sníh, povodeň) stupně ≥ nízký, skóre koncentrace a clusteru se násobí 0,5

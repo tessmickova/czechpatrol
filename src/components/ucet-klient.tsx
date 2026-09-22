@@ -11,6 +11,7 @@ import { useDialog } from "./dialog";
 import { Hlaska, POLE, Popisek, Prepinac, TLACITKO_AKCENT, TLACITKO_TICHE, TLACITKO_VAROVNE, Volby } from "./formulare";
 import { Ikona } from "./ikony";
 import { Karta } from "./zaklad";
+import { DalsiKroky } from "./zapojit-klient";
 
 const FREKVENCE: { hodnota: Frekvence; nazev: string; popis: string }[] = [
   { hodnota: "ihned", nazev: "Hned, cokoli důležitého", popis: "Bez čekání a bez omezení počtu. Když se něco změní, víte to první." },
@@ -250,6 +251,8 @@ function Nastaveni({
     <div className="grid gap-4 lg:grid-cols-[minmax(0,1fr)_minmax(0,1.6fr)]">
       {/* účet */}
       <div className="space-y-4">
+        {/* Hned po založení: co dalšího existuje. Nabídka, ne povinnost. */}
+        <DalsiKroky />
         <Karta odstin="modra" className="p-6">
           <div className="stitek mb-2 !text-akcent">Účet</div>
           <div className="podnadpis text-cislo text-akcent-svetla">{ROLE[ucet.role].nazev}</div>

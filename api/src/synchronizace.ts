@@ -42,6 +42,9 @@ export async function uklid(env: Env): Promise<void> {
     env.DB.prepare("DELETE FROM zpravy_izs WHERE vytvoreno < ?").bind(pred(365)),
     env.DB.prepare("DELETE FROM audit WHERE kdy < ?").bind(pred(365)),
     env.DB.prepare("DELETE FROM tipy WHERE vytvoreno < ?").bind(pred(365)),
+    /* Odhlášená adresa zmizí do 30 dnů; adresa, které do roka nic nepřišlo, také. */
+    env.DB.prepare("DELETE FROM zajem WHERE stav = 'odhlaseno' AND odhlaseno_kdy < ?").bind(pred(30)),
+    env.DB.prepare("DELETE FROM zajem WHERE stav = 'nepotvrzeno' AND vytvoreno < ?").bind(pred(365)),
     env.DB.prepare("DELETE FROM ucty WHERE COALESCE(posledni_prihlaseni, vytvoreno) < ? AND role != 'admin'").bind(pred(730)),
   ]);
 }

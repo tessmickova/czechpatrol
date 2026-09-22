@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   description: "Co o vás CzechPatrol ví, proč, jak dlouho a jak to smažete. Krátce a bez právničiny.",
 };
 
-const REVIZE = "2026-09-05";
+const REVIZE = "2026-09-22";
 
 function Oddil({ cislo, nadpis, children }: { cislo: string; nadpis: string; children: React.ReactNode }) {
   return (
@@ -93,23 +93,30 @@ export default function SoukromiStranka() {
             <p>Právní základ: plnění smlouvy (čl. 6 odst. 1 písm. b GDPR).</p>
           </Oddil>
 
-          <Oddil cislo="05" nadpis="Bezpečnost a audit">
+          <Oddil cislo="05" nadpis="E-mail pro souhrn a komunitu">
+            <p>Na stránce <b>Zapojit se</b> můžete nechat e-mail, když chcete občasný souhrn, pozvánku do komunity, nebo chcete pomáhat. Uložíme <b>jen adresu</b>, co jste zaškrtli, čas a znění souhlasu a slovo, ze které stránky jste přišli. Nic jiného.</p>
+            <p>Právní základ: souhlas (čl. 6 odst. 1 písm. a GDPR). Odvoláte ho odkazem v každém e-mailu nebo zprávou správci; adresu do 30 dnů smažeme. Adresu, které do roka nic nepřišlo, smažeme také.</p>
+            <p>Adresu nikomu nepředáváme, nepoužíváme ji k reklamě a neposíláme z ní nic, co jste si nevybrali. Souhrn zatím nevychází; dokud nevyjde, nic nepřijde.</p>
+          </Oddil>
+
+          <Oddil cislo="06" nadpis="Bezpečnost a audit">
             <p>U pokusů o přihlášení a založení účtu si na 24 hodin držíme <b>solený otisk IP adresy</b>, abychom zabrzdili automatizované útoky. Z otisku nejde IP adresu zpětně získat a po 24 hodinách zaniká. Právní základ: oprávněný zájem na bezpečnosti služby (čl. 6 odst. 1 písm. f GDPR).</p>
             <p>Zásahy správců (změna role, schválení zprávy) se zapisují do auditu s identifikátorem účtu správce. Uchováváme 12 měsíců.</p>
           </Oddil>
 
-          <Oddil cislo="06" nadpis="Jak dlouho">
+          <Oddil cislo="07" nadpis="Jak dlouho">
             <ul className="list-disc space-y-1 pl-5">
               <li>účet a nastavení: do smazání účtu; účet bez přihlášení 24 měsíců smažeme,</li>
               <li>propojovací kód Telegramu: 15 minut,</li>
               <li>přihlašovací token: 30 dní od posledního použití,</li>
               <li>otisk IP: 24 hodin,</li>
               <li>audit správců: 12 měsíců,</li>
+              <li>e-mail pro souhrn: do odvolání souhlasu, po odhlášení 30 dnů; bez jediného e-mailu nejvýš 12 měsíců,</li>
               <li>zprávy partnerů IZS: text zprávy 12 měsíců, doručení jen jako počet.</li>
             </ul>
           </Oddil>
 
-          <Oddil cislo="07" nadpis="Komu údaje předáváme">
+          <Oddil cislo="08" nadpis="Komu údaje předáváme">
             <ul className="list-disc space-y-1 pl-5">
               <li><b>Cloudflare, Inc.</b> — hosting webu, běh API a databáze. Zpracovatel; data mohou být zpracována i mimo EU na základě standardních smluvních doložek a rámce EU–US Data Privacy Framework.</li>
               <li><b>Telegram Messenger Inc.</b> a <b>Meta Platforms Ireland Ltd.</b> — jen pokud si kanál propojíte; doručují zprávy jako samostatní správci.</li>
@@ -117,25 +124,25 @@ export default function SoukromiStranka() {
             <p>Nikomu údaje neprodáváme a nepoužíváme je k reklamě.</p>
           </Oddil>
 
-          <Oddil cislo="08" nadpis="Vaše práva">
+          <Oddil cislo="09" nadpis="Vaše práva">
             <p>Máte právo na přístup, opravu, výmaz, omezení, přenositelnost a námitku. Většinu vyřídíte sami v účtu. Účet smažete jedním tlačítkem, hned a bez zálohy.</p>
             <p>Účet o vás nic neví. Žádosti proto vyřizujeme jen z přihlášeného účtu — jinak nepoznáme, že jste to vy.</p>
             <p>Stížnost můžete podat u Úřadu pro ochranu osobních údajů (uoou.gov.cz).</p>
           </Oddil>
 
-          <Oddil cislo="09" nadpis="Cookies a úložiště prohlížeče">
+          <Oddil cislo="10" nadpis="Cookies a úložiště prohlížeče">
             <p>Web nepoužívá cookies. V prohlížeči ukládá jen přihlášení a vaše předvolby. To je nutné pro službu, kterou chcete, a souhlas se nevyžaduje.</p>
           </Oddil>
 
-          <Oddil cislo="10" nadpis="Automatizace a AI">
+          <Oddil cislo="11" nadpis="Automatizace a AI">
             <p>Sběr dat běží automaticky a část textů vzniká s pomocí AI. Hodnocení dělá člověk. O vás nic automaticky nerozhodujeme a neprofilujeme vás. Upozornění jen filtrují zprávy podle vašeho výběru.</p>
           </Oddil>
 
-          <Oddil cislo="11" nadpis="Děti">
+          <Oddil cislo="12" nadpis="Děti">
             <p>Účet je určený osobám od 15 let. Mladší uživatele o zřízení účtu nežádáme a údaje o věku nesbíráme.</p>
           </Oddil>
 
-          <Oddil cislo="12" nadpis="Změny">
+          <Oddil cislo="13" nadpis="Změny">
             <p>Když se změní, co děláme, změní se i tahle stránka. Datum revize je nahoře. Velkou změnu oznámíme na přehledu a v účtu.</p>
             <p>Související: <Link href="/podminky/" className="odkaz text-inkoust">Podmínky použití</Link> · <Link href="/metodika/" className="odkaz text-inkoust">Metodika</Link></p>
           </Oddil>

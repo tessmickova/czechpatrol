@@ -15,7 +15,8 @@ export type UdalostMereni =
   | "preference_save"
   | "subscription_complete"
   | "feedback_submit"
-  | "support_complete";
+  | "support_complete"
+  | "zapojeni_email";
 
 export const SLOVNIK_MERENI: Record<UdalostMereni, string> = {
   overview_view: "zobrazení přehledu",
@@ -26,6 +27,7 @@ export const SLOVNIK_MERENI: Record<UdalostMereni, string> = {
   subscription_complete: "dokončený odběr",
   feedback_submit: "odeslané hlášení nebo zpětná vazba",
   support_complete: "dokončená podpora projektu",
+  zapojeni_email: "přidání e-mailu pro souhrn a komunitu",
 };
 
 const ADRESA = (process.env.NEXT_PUBLIC_MERENI_URL ?? "").replace(/\/$/, "");
