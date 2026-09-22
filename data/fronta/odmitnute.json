@@ -1,5 +1,39 @@
 [
   {
+    "id": "k-f9af1518238539e0",
+    "zachyceno": "2026-09-22T23:02:33.490Z",
+    "publikovano": "2026-09-22T22:10:00.000Z",
+    "zdroj": {
+      "nazev": "Český rozhlas — domácí zprávy",
+      "url": "https://www.irozhlas.cz/zpravy-domov/rozpocet-je-sestaven-zodpovedne-v-pristim-roce-snizime-schodek-o-dalsich-20_2609230010_cen",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Rozpočet je sestaven zodpovědně. V příštím roce snížíme schodek o dalších 20 miliard, tvrdí Šťastný",
+    "shrnuti": "„Stávající rozpočet Aleny Schillerové je sestaven zodpovědně. Je potřeba vědět, že tzv. mandatorní nebo kvazimandatorní výdaje jsou 97 procent celého rozpočtu,“ zdůrazňuje pro Radiožurnál předseda poslaneckého klubu Motoristů sobě a ministr pro sport, prevenci a zdraví Boris Šťastný. S jakými pocity",
+    "duvod": "vylouceno-tematem",
+    "kategorie": [
+      "cr"
+    ],
+    "posouzeni": null
+  },
+  {
+    "id": "k-ad06cc46193b7a59",
+    "zachyceno": "2026-09-22T23:02:33.789Z",
+    "publikovano": "2026-09-22T22:02:38.000Z",
+    "zdroj": {
+      "nazev": "Téma: nouzovy-stav (anglicky)",
+      "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxNbUlCVWs2dTRQVTVrdHlqWklBMVpHc0RDTXdkaXNFd3ZNbXNDazRiUTctVGdjbl8zZzItUjV0QS1tdm5rWWR4NGdtazdFVzU4djR3eUJIRlNqUW1pcTdNZ21uOVZ2ZlB0ZW02cW9kU2tSZkZfVXNWUXFYWDFyajZWd1BsZEJDLVJsdWdvQm92ZFFIZG1mcnJWQ08wOUpBcEVfUVlMRkFNWQ?oc=5",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Suisun City resumes public access to City Hall departments - Vallejo Times Herald",
+    "shrnuti": "Suisun City resumes public access to City Hall departments Vallejo Times Herald",
+    "duvod": "bez-skutku",
+    "kategorie": [],
+    "posouzeni": null
+  },
+  {
     "id": "k-58bbb19a6f3faf72",
     "zachyceno": "2026-09-22T22:02:34.117Z",
     "publikovano": "2026-09-22T21:30:00.000Z",
@@ -8507,44 +8541,6 @@
       "podezreni": "zadne",
       "duvod": "Jde o administrativní záležitost, ne bezpečnostní událost.",
       "kdy": "2026-09-20T04:03:57.731Z"
-    }
-  },
-  {
-    "id": "k-4f739bafcf531562",
-    "zachyceno": "2026-09-20T13:02:20.683Z",
-    "publikovano": "2026-09-19T23:00:27.000Z",
-    "zdroj": {
-      "nazev": "BBC News — Europe",
-      "url": "https://www.bbc.co.uk/news/articles/c63d7lexyym1o?at_medium=RSS&at_campaign=rss",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Nato welcomes Greenland deal as Trump says it will give US 'permanent security control'",
-    "shrnuti": "Denmark and the US have reached an agreement after months of threats from Donald Trump to annex the territory.",
-    "duvod": "bez-skutku",
-    "kategorie": [
-      "nato"
-    ],
-    "posouzeni": null
-  },
-  {
-    "id": "k-f0d0319b33a919d4",
-    "zachyceno": "2026-09-19T23:02:19.312Z",
-    "publikovano": "2026-09-19T22:10:00.000Z",
-    "zdroj": {
-      "nazev": "Český rozhlas — domácí zprávy",
-      "url": "https://www.irozhlas.cz/veda-technologie/vesmir/evropa-rada-vice-investovala-do-vesmiru-oproti-usa-ma-ale-petkrat-mene_2609200010_vsn",
-      "typ": "primary",
-      "primarni": true
-    },
-    "titulek": "Evropa by ráda více investovala do vesmíru. Oproti USA má ale pětkrát méně soukromých investic",
-    "shrnuti": "Evropa chce mít ve vesmíru větší slovo – čísla ale ukazují, že má co dohánět. Podle nové zprávy Organizace pro hospodářskou spolupráci a rozvoj míří do evropského vesmírného sektoru pětkrát méně soukromých investic než ve Spojených státech. Závod o to, kdo bude do vesmíru investovat nejvíc, ale v Ev",
-    "duvod": "bez-skutku",
-    "kategorie": [],
-    "posouzeni": {
-      "podezreni": "zadne",
-      "duvod": "Jde o ekonomické srovnání investic do vesmíru, žádná bezpečnostní událost.",
-      "kdy": "2026-09-19T23:03:54.001Z"
     }
   }
 ]
