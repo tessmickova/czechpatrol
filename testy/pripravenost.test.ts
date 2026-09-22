@@ -19,6 +19,7 @@ describe("katalog oficiálních nástrojů", () => {
   it("nic se nevydává za ověřené bez data; každá položka kromě obecné rady má oficiální zdroj", () => {
     for (const n of katalog) {
       if (n.stav === "overeno") expect(n.overeno, n.id).toMatch(/^\d{4}-\d{2}-\d{2}/);
+      if (n.adresaOverena) expect(n.adresaOverena, n.id).toMatch(/^\d{4}-\d{2}-\d{2}/);
       if (n.stav !== "obecne") expect(n.oficialniZdroj, n.id).toBeTruthy();
       expect(n.provozovatel.length, n.id).toBeGreaterThan(3);
       expect(n.coNastavit.length, n.id).toBeGreaterThan(0);

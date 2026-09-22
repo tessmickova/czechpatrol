@@ -14,11 +14,18 @@
     "oficialniZdroj": "https://www.zachrankaapp.cz/",
     "overeno": null,
     "dostupnost": "aplikace",
-    "coNastavit": ["Povolit aplikaci přístup k poloze", "Vyzkoušet, že tlačítko vidíte i ze zamčené obrazovky"],
-    "proKoho": ["každý", "kdo často cestuje nebo sportuje venku"],
+    "coNastavit": [
+      "Povolit aplikaci přístup k poloze",
+      "Vyzkoušet, že tlačítko vidíte i ze zamčené obrazovky"
+    ],
+    "proKoho": [
+      "každý",
+      "kdo často cestuje nebo sportuje venku"
+    ],
     "stav": "k-overeni",
     "doporuceno": true,
-    "poznamka": "Odkazy do App Store a Google Play doplníme až po ověření na webu provozovatele."
+    "poznamka": "Odkazy do App Store a Google Play doplníme až po ověření na webu provozovatele.",
+    "adresaOverena": "2026-09-22"
   },
   {
     "id": "tisnove-linky",
@@ -35,10 +42,16 @@
     "oficialniZdroj": "https://www.hzscr.cz/",
     "overeno": null,
     "dostupnost": "sluzba",
-    "coNastavit": ["Znát čísla a vědět, že 112 přijímá i volání v cizích jazycích", "Uložit tísňový kontakt (ICE) do telefonu"],
-    "proKoho": ["každý"],
+    "coNastavit": [
+      "Znát čísla a vědět, že 112 přijímá i volání v cizích jazycích",
+      "Uložit tísňový kontakt (ICE) do telefonu"
+    ],
+    "proKoho": [
+      "každý"
+    ],
     "stav": "k-overeni",
-    "doporuceno": true
+    "doporuceno": true,
+    "adresaOverena": "2026-09-22"
   },
   {
     "id": "varovani-na-mobil",
@@ -55,11 +68,16 @@
     "oficialniZdroj": "https://www.hzscr.cz/",
     "overeno": null,
     "dostupnost": "system",
-    "coNastavit": ["Zkontrolovat v nastavení telefonu, že jsou zapnutá nouzová (vládní) upozornění"],
-    "proKoho": ["každý s mobilním telefonem"],
+    "coNastavit": [
+      "Zkontrolovat v nastavení telefonu, že jsou zapnutá nouzová (vládní) upozornění"
+    ],
+    "proKoho": [
+      "každý s mobilním telefonem"
+    ],
     "stav": "k-overeni",
     "doporuceno": true,
-    "poznamka": "Rozsah a stav zavedení v ČR ověřujeme u HZS ČR; do té doby platí jen to, že nouzová upozornění v telefonu nemají být vypnutá."
+    "poznamka": "Rozsah a stav zavedení v ČR ověřujeme u HZS ČR; do té doby platí jen to, že nouzová upozornění v telefonu nemají být vypnutá.",
+    "adresaOverena": "2026-09-22"
   },
   {
     "id": "vystrahy-chmu",
@@ -76,10 +94,16 @@
     "oficialniZdroj": "https://www.chmi.cz/",
     "overeno": null,
     "dostupnost": "sluzba",
-    "coNastavit": ["Sledovat výstrahy pro svůj kraj"],
-    "proKoho": ["každý", "kdo jezdí autem nebo pracuje venku"],
+    "coNastavit": [
+      "Sledovat výstrahy pro svůj kraj"
+    ],
+    "proKoho": [
+      "každý",
+      "kdo jezdí autem nebo pracuje venku"
+    ],
     "stav": "k-overeni",
-    "doporuceno": true
+    "doporuceno": true,
+    "adresaOverena": "2026-09-22"
   },
   {
     "id": "drozd",
@@ -96,10 +120,17 @@
     "oficialniZdroj": "https://mzv.gov.cz/",
     "overeno": null,
     "dostupnost": "sluzba",
-    "coNastavit": ["Zaregistrovat cestu před odjezdem", "Uvést kontakt, na který může ministerstvo psát"],
-    "proKoho": ["kdo cestuje mimo ČR"],
+    "coNastavit": [
+      "Zaregistrovat cestu před odjezdem",
+      "Uvést kontakt, na který může ministerstvo psát"
+    ],
+    "proKoho": [
+      "kdo cestuje mimo ČR"
+    ],
     "stav": "k-overeni",
-    "doporuceno": true
+    "doporuceno": true,
+    "adresaOverena": "2026-09-22",
+    "poznamka": "Adresa drozd.mzv.cz na automatický dotaz 22. 9. 2026 neodpověděla; web ministerstva (mzv.gov.cz) ano. Registraci ověřte přímo na stránkách MZV."
   },
   {
     "id": "sireny-jsvv",
@@ -116,10 +147,15 @@
     "oficialniZdroj": "https://www.hzscr.cz/",
     "overeno": null,
     "dostupnost": "system",
-    "coNastavit": ["Vědět, co znamená kolísavý tón (všeobecná výstraha) a kde je nejbližší rozhlas"],
-    "proKoho": ["každý"],
+    "coNastavit": [
+      "Vědět, co znamená kolísavý tón (všeobecná výstraha) a kde je nejbližší rozhlas"
+    ],
+    "proKoho": [
+      "každý"
+    ],
     "stav": "k-overeni",
-    "doporuceno": true
+    "doporuceno": true,
+    "adresaOverena": "2026-09-22"
   },
   {
     "id": "krizove-vysilani",
@@ -136,10 +172,16 @@
     "oficialniZdroj": "https://digital.rozhlas.cz/v-cesku-probehnou-10-zari-historicky-prvni-testy-varovneho-systemu-asa-pro-dab-9642115",
     "overeno": "2026-09-15",
     "dostupnost": "sluzba",
-    "coNastavit": ["Mít rádio na baterie nebo v autě", "Vědět, které stanice ČRo v kraji naladíte"],
-    "proKoho": ["každá domácnost"],
+    "coNastavit": [
+      "Mít rádio na baterie nebo v autě",
+      "Vědět, které stanice ČRo v kraji naladíte"
+    ],
+    "proKoho": [
+      "každá domácnost"
+    ],
     "stav": "overeno",
-    "doporuceno": true
+    "doporuceno": true,
+    "adresaOverena": "2026-09-22"
   },
   {
     "id": "kanal-obce",
@@ -156,9 +198,14 @@
     "oficialniZdroj": null,
     "overeno": null,
     "dostupnost": "sluzba",
-    "coNastavit": ["Najít na webu obce, jak informuje občany, a přihlásit se"],
-    "proKoho": ["každý"],
+    "coNastavit": [
+      "Najít na webu obce, jak informuje občany, a přihlásit se"
+    ],
+    "proKoho": [
+      "každý"
+    ],
     "stav": "obecne",
-    "doporuceno": true
+    "doporuceno": true,
+    "adresaOverena": null
   }
 ]

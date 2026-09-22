@@ -30,10 +30,14 @@ const DOSTUPNOST: Record<OficialniNastroj["dostupnost"], string> = { aplikace: "
 function Stav({ n }: { n: OficialniNastroj }) {
   if (n.stav === "overeno" && n.overeno) return <span className="text-mikro text-tlum2">ověřeno {datumPraha(`${n.overeno}T12:00:00Z`)}</span>;
   if (n.stav === "obecne") return <span className="text-mikro text-tlum2">obecná rada</span>;
+  /* Dvě různé věci, dvě různá slova: adresa odpovídá ≠ informace ověřena. */
   return (
-    <span className="flex items-center gap-1.5 text-mikro text-tlum2">
-      <span aria-hidden className="h-[6px] w-[6px] rounded-full bg-pozor" />
-      informace čeká na ověření
+    <span className="flex flex-wrap items-center gap-x-3 gap-y-1 text-mikro text-tlum2">
+      {n.adresaOverena && <span>adresa odpovídá {datumPraha(`${n.adresaOverena}T12:00:00Z`)}</span>}
+      <span className="flex items-center gap-1.5">
+        <span aria-hidden className="h-[6px] w-[6px] rounded-full bg-pozor" />
+        informace čeká na ověření
+      </span>
     </span>
   );
 }

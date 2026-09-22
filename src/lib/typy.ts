@@ -749,6 +749,8 @@ export interface OficialniNastroj {
   oficialniZdroj: string | null;
   /** Kdy jsme informaci naposledy ověřili proti zdroji. null = zatím ne. */
   overeno: string | null;
+  /** Kdy naposledy odpověděla adresa provozovatele (běh „Ověření zdrojů"). Není to ověření obsahu. */
+  adresaOverena: string | null;
   dostupnost: DostupnostNastroje;
   coNastavit: string[];
   proKoho: string[];
