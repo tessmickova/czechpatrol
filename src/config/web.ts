@@ -256,6 +256,14 @@ export const PROVOZOVATEL = {
  */
 export const EMAIL_ODBER_BEZI = UCTY_ZAPNUTE && PROVOZOVATEL.nazev !== "";
 
+/**
+ * E-shop s výbavou (Čenich). Prázdná adresa = odkaz se nikde neukáže.
+ * Až poběží naostro, odkazy z Odolnosti a Připravenosti povedou na konkrétní
+ * funkci (voda, světlo…), ne na úvodní stránku; nikdy ne na „balíček",
+ * který by nahradil úvahu o závislostech.
+ */
+export const ESHOP = "";
+
 /** Kam se hlásí složka IZS, která chce roli partnera. Prázdné = zatím nepřijímáme. */
 export const IZS_KONTAKT = "";
 

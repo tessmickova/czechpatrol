@@ -77,7 +77,7 @@ export default function ZapojitSe() {
             cislo="03"
             ikona="uzivatel"
             nadpis="Účet pro víc"
-            popis="Účet je bez jména, e-mailu i telefonu — klíč v telefonu nebo počítači. Otevře Můj přehled (jen země a témata, která sledujete) a upozornění na míru: jak často, od jaké závažnosti, tiché hodiny, kraj."
+            popis="Účet je bez jména, e-mailu i telefonu — klíč v telefonu nebo počítači. Otevře Můj přehled (jen země a témata, která sledujete), upozornění na míru a Odolnost domácnosti: co u vás vypadne s čím, které zálohy selžou naráz a jak dlouho vydrží zásoby."
           >
             {UCTY_ZAPNUTE ? (
               <p className="flex flex-wrap items-center gap-3">

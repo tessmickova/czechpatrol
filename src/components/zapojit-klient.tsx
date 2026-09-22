@@ -227,6 +227,13 @@ export function DalsiKroky() {
           </Link>
         </li>
         <li>
+          <Link href="/odolnost/" className="flex min-h-[44px] items-center gap-3 rounded-[14px] border border-linka px-3 hover:border-akcent">
+            <span className="grid h-5 w-5 place-items-center text-akcent"><Ikona nazev="stit" velikost={17} tah={1.9} /></span>
+            <span className="min-w-0 flex-1 text-male"><b className="font-semibold text-inkoust">Odolnost domácnosti</b> <span className="text-tlum">— co u vás vypadne s čím a co má smysl řešit první</span></span>
+            <Ikona nazev="nahoru" velikost={12} tah={2} trida="shrink-0 rotate-90 text-tlum2" />
+          </Link>
+        </li>
+        <li>
           <Link href="/muj-prehled/" className="flex min-h-[44px] items-center gap-3 rounded-[14px] border border-linka px-3 hover:border-akcent">
             <span className="grid h-5 w-5 place-items-center text-akcent"><Ikona nazev="terc" velikost={17} tah={1.9} /></span>
             <span className="min-w-0 flex-1 text-male"><b className="font-semibold text-inkoust">Můj přehled</b> <span className="text-tlum">— jen země a témata, která sledujete</span></span>
