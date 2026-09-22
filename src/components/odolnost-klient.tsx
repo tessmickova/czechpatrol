@@ -194,9 +194,8 @@ export function OdolnostKlient() {
             <span className="ml-auto text-drobne text-tlum2">přepočítává se průběžně</span>
           </div>
 
-          <CoUdelat doporuceni={s.doporuceni} nakup={s.nakup} hodnoceni={s.hodnoceni} />
 
-          <div className="mt-6 border-t border-linka2 pt-5">
+          <div className="mt-5">
             <div className="flex items-center gap-1.5">
               <span className="stitek">Na kolik dní jste připraveni</span>
               <Otaznik popis={<span className="block">Plánovací horizont domácnosti podle zadaných zásob a předpokladů. 72 hodin je základ, ne cíl. Není to předpověď, jak dlouho co vydrží ve státě.</span>} />
@@ -207,6 +206,18 @@ export function OdolnostKlient() {
                   <span aria-hidden className={`h-[6px] w-[6px] shrink-0 rounded-full ${TECKA_HORIZONTU[h.stav]}`} />
                   <span className="cislice whitespace-nowrap font-semibold text-inkoust">{horizontSlovo(h.dni)}</span>
                   <span className="text-tlum">{SLOVA_HORIZONTU[h.stav]}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <div className="mt-6 border-t border-linka2 pt-5">
+            <div className="flex items-center gap-1.5"><span className="stitek">Jak dlouho vydrží</span><Otaznik popis={<span className="block">Předpoklady jsou u každé položky. Číslo je k plánování, ne k uklidnění.</span>} /></div>
+            <ul className="mt-2">
+              {s.vydrze.filter((v) => v.klic !== "energie" || p.energie.kapacitaWh > 0).map((v) => (
+                <li key={v.klic} className="flex items-center justify-between gap-3 py-1.5">
+                  <span className="flex items-center gap-1.5 text-male text-tlum">{v.nazev}<Otaznik popis={<span className="block">{v.predpoklad}</span>} /></span>
+                  <span className="cislice shrink-0 text-male font-semibold text-inkoust">{v.dni === null ? <span className="font-normal text-tlum2">nezadáno</span> : lidskaDoba(v.dni)}</span>
                 </li>
               ))}
             </ul>
@@ -230,17 +241,8 @@ export function OdolnostKlient() {
           </dl>
 
           <div className="mt-6 border-t border-linka2 pt-5">
-            <div className="flex items-center gap-1.5"><span className="stitek">Jak dlouho vydrží</span><Otaznik popis={<span className="block">Předpoklady jsou u každé položky. Číslo je k plánování, ne k uklidnění.</span>} /></div>
-            <ul className="mt-2">
-              {s.vydrze.filter((v) => v.klic !== "energie" || p.energie.kapacitaWh > 0).map((v) => (
-                <li key={v.klic} className="flex items-center justify-between gap-3 py-1.5">
-                  <span className="flex items-center gap-1.5 text-male text-tlum">{v.nazev}<Otaznik popis={<span className="block">{v.predpoklad}</span>} /></span>
-                  <span className="cislice shrink-0 text-male font-semibold text-inkoust">{v.dni === null ? <span className="font-normal text-tlum2">nezadáno</span> : lidskaDoba(v.dni)}</span>
-                </li>
-              ))}
-            </ul>
+          <CoUdelat doporuceni={s.doporuceni} nakup={s.nakup} hodnoceni={s.hodnoceni} />
           </div>
-
           <div className="mt-6 flex flex-wrap items-center gap-2 border-t border-linka2 pt-5">
             <button type="button" onClick={exportuj} className={TLACITKO_TICHE}><Ikona nazev="instalace" velikost={14} tah={2} /> Stáhnout plán</button>
             <button type="button" onClick={() => window.print()} className={TLACITKO_TICHE}><Ikona nazev="dokument" velikost={14} tah={2} /> Tisk</button>
@@ -262,7 +264,7 @@ function CoUdelat({ doporuceni, nakup, hodnoceni }: { doporuceni: Doporuceni[]; 
   const zaridit = hodnoceni.filter((h) => h.redundance < 3).flatMap((h) => h.funkce.nulaKc.slice(0, 1).map((r) => ({ f: h.funkce.nazev, r }))).slice(0, 5);
   const nic = !nakup.length && !zaridit.length && !doporuceni.length;
   return (
-    <div className="mt-4">
+    <div>
       <h2 className="text-velke font-bold text-inkoust">Co udělat teď</h2>
       {nic ? (
         <p className="mt-2 text-male text-tlum">Zaškrtněte vlevo, jak u vás fungují základní věci. Výsledek se objeví tady.</p>
