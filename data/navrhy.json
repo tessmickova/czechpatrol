@@ -420,5 +420,143 @@
     "aiZpracovano": true,
     "lidskyOvereno": false,
     "archivniZaznam": false
+  },
+  {
+    "kam": "zaznam",
+    "pripravil": "patrol",
+    "pripraveno": "2026-09-22T11:57:27.218Z",
+    "id": "i-2026-09-19-56205d5ac4",
+    "slug": "pl-56205d5ac4",
+    "titulek": "Polsko: ABW zadržela 17letého mladíka podezřelého z přípravy teroristického útoku na školu a mešitu v Siemianowicích Śląskich",
+    "kratkyTitulek": "Polsko: ABW zadržela 17letého mladíka podezřelého z přípravy teroristického útoku na školu a mešitu v Siemianowicích Śląskich",
+    "zeme": "Polsko",
+    "kodZeme": "PL",
+    "kategorie": [
+      "pravo",
+      "vysetrovani"
+    ],
+    "datumUdalosti": "2026-09-19T00:00:00Z",
+    "datumZjisteni": "2026-09-22T00:00:00Z",
+    "aktualizovano": "2026-09-22T11:57:27.218Z",
+    "zavaznost": "O1",
+    "jistota": "vysoka",
+    "stav": "obvineni",
+    "atribuce": "neznama",
+    "puvodce": "neznamy",
+    "druh": "pripad",
+    "fakta": [
+      "Podle ABW a prokuratury byl 17letý Paweł G. zadržen v Siemianowicích Śląskich; je obviněn z přípravy teroristického útoku, při kterém mělo zemřít mnoho osob, z účasti v organizované skupině se záměrem páchat teroristické činy a z propagace nacismu a fašismu.",
+      "Podle ABW plánoval útok na školu a mešitu, plánoval koupi zbraní, munice a vojenského vybavení a sbíral informace o teroristických skupinách.",
+      "Podle ABW se při domovní prohlídce našly nože, bajonet k samopalu AKM a materiály s fašistickou a nacistickou symbolikou.",
+      "Soud mladíka 20. 9. 2026 vzal na tři měsíce do vazby."
+    ],
+    "neznameho": [
+      "Přesné datum a čas zadržení; média uvádějí „v pátek“, zprávu ABW zveřejnila později.",
+      "Zda měl komplice; „organizovaná skupina“ je obvinění, ne prokázaný fakt.",
+      "Oficiální tiskovou zprávu ABW k tomuto případu jsem nenašel na konkrétní adrese; její výpis aktualit z 22. 9. 2026 nadpis potvrzuje, ale plný text jsem neotevřel."
+    ],
+    "vyznam": "",
+    "eskalacniSpousteče": [],
+    "deeskalacniSignaly": [],
+    "zdroje": [
+      {
+        "nazev": "iROZHLAS (ČTK) — 17letý mladík v Polsku měl připravovat teroristický útok. Kontrarozvědka ho zadržela",
+        "url": "https://www.irozhlas.cz/zpravy-svet/17lety-mladik-v-polsku-mel-pripravovat-teroristicky-utok-kontrarozvedka-ho_2609221212_raf",
+        "typ": "wire",
+        "primarni": false,
+        "jazyk": "cs"
+      },
+      {
+        "nazev": "Polsat News — Siemianowice Śląskie. Udaremniony zamach w Polsce. ABW zatrzymała 17-latka",
+        "url": "https://www.polsatnews.pl/wiadomosc/2026-09-22/abw-zatrzymala-17-letniego-polaka-planowal-zamach-terrorystyczny/",
+        "typ": "media",
+        "publikovano": "2026-09-22T00:00:00Z",
+        "primarni": false,
+        "jazyk": "pl"
+      }
+    ],
+    "souvisejici": [],
+    "historie": [
+      {
+        "kdy": "2026-09-19T00:00:00Z",
+        "text": "Zachyceno automatickým sběrem, druhý zdroj doložen před zařazením do fronty.",
+        "novySignal": true
+      }
+    ],
+    "novy": true,
+    "zapocitanoTyden": "2026-09-19",
+    "aiZpracovano": true,
+    "lidskyOvereno": false,
+    "archivniZaznam": false
+  },
+  {
+    "kam": "zaznam",
+    "pripravil": "patrol",
+    "pripraveno": "2026-09-22T11:57:27.218Z",
+    "id": "i-2026-08-15-005c23a0c4",
+    "slug": "ee-005c23a0c4",
+    "titulek": "Estonsko: tři lotyšští podezřelí ze žhářství u výrobce vojenské techniky Milrem Robotics byli vydáni z Lotyšska a vzati do vazby",
+    "kratkyTitulek": "Estonsko: tři lotyšští podezřelí ze žhářství u výrobce vojenské techniky Milrem Robotics byli vydáni z Lotyšska a vzati do vazby",
+    "zeme": "Estonsko",
+    "kodZeme": "EE",
+    "kategorie": [
+      "sabotaz",
+      "vysetrovani",
+      "infrastruktura"
+    ],
+    "datumUdalosti": "2026-08-15T00:00:00Z",
+    "datumZjisteni": "2026-09-22T00:00:00Z",
+    "aktualizovano": "2026-09-22T11:57:27.218Z",
+    "zavaznost": "O1",
+    "jistota": "vysoka",
+    "stav": "probiha",
+    "atribuce": "neznama",
+    "puvodce": "neznamy",
+    "druh": "pripad",
+    "fakta": [
+      "Podle estonské prokuratury vypukl v noci na sobotu 15. 8. 2026 v budově užívané firmou Milrem Robotics (výrobce dálkově řízené vojenské techniky nasazované na Ukrajině) v tallinnském Lasnamäe požár; podle prokuratury šlo o úmyslné žhářství.",
+      "Podle prokuratury byli tři lotyšští občané zadrženi v Lotyšsku a spolupráce s lotyšskými orgány vedla k jejich vydání do Estonska minulý týden.",
+      "Podle ERR státní žalobkyně Gardi Anderson uvedla, že jsou obviněni podle ustanovení o poškození a zničení majetku, což se může v průběhu vyšetřování změnit.",
+      "Podle ERR soudce Harjuského okresního soudu schválil jejich vzetí do vazby na základě důkazů a výslechů vedených Bezpečnostní policií (ISS/KAPO); vyšetřování zvažuje i to, zda šlo o sabotáž."
+    ],
+    "neznameho": [
+      "Zapojení Ruska: estonský premiér Kristen Michal podle ERR po incidentu uvedl, že stát prověřuje možnost ruského zapojení; jde o vyjádření premiéra, ne o prokázaný fakt, a nepřipisuje se.",
+      "Přesná totožnost a role tří podezřelých.",
+      "Zda obvinění zůstane jen u poškození majetku, nebo se rozšíří na sabotáž, prokuratura ještě neuzavřela."
+    ],
+    "vyznam": "",
+    "eskalacniSpousteče": [],
+    "deeskalacniSignaly": [],
+    "zdroje": [
+      {
+        "nazev": "ERR News (Estonsko) — 3 Latvian suspects in Milrem arson extradited to Estonia, remanded",
+        "url": "https://news.err.ee/1610144998/3-latvian-suspects-in-milrem-arson-extradited-to-estonia-remanded",
+        "typ": "media",
+        "publikovano": "2026-09-22T00:00:00Z",
+        "primarni": false,
+        "jazyk": "en"
+      },
+      {
+        "nazev": "Postimees — Milremi süütamine oli tahtlik, kolm kahtlusalust peeti Lätis kinni",
+        "url": "https://www.postimees.ee/8530520/milremi-suutamine-oli-tahtlik-kolm-kahtlusalust-peeti-latis-kinni",
+        "typ": "media",
+        "publikovano": "2026-08-19T00:00:00Z",
+        "primarni": false,
+        "jazyk": "et"
+      }
+    ],
+    "souvisejici": [],
+    "historie": [
+      {
+        "kdy": "2026-08-15T00:00:00Z",
+        "text": "Zachyceno automatickým sběrem, druhý zdroj doložen před zařazením do fronty.",
+        "novySignal": true
+      }
+    ],
+    "novy": true,
+    "zapocitanoTyden": "2026-08-15",
+    "aiZpracovano": true,
+    "lidskyOvereno": false,
+    "archivniZaznam": false
   }
 ]
