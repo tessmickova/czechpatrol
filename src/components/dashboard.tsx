@@ -422,8 +422,14 @@ export function Dashboard({
         místo 16): úvod nemá rámeček, takže hranici mezi textem a kartou
         vedle dělá jen vzduch — a 16 px vzduchu hranici neudělá.
       */}
-      <div className="grid gap-4 xl:grid-cols-[minmax(0,3fr)_minmax(0,2fr)] xl:gap-10">
-        <div className="min-w-0">
+      {/*
+        Stejná mřížka jako tři desky pod tím: tři sloupce, úvod přes dva,
+        aktuality přesně v třetím. Pravá hrana aktualit tak sedí na hraně
+        třetí desky. Titulky v aktualitách se kvůli tomu lámou do tří
+        řádků častěji než při dvou pětinách — je to vědomá cena za linie.
+      */}
+      <div className="grid gap-4 xl:grid-cols-3 xl:gap-10">
+        <div className="min-w-0 xl:col-span-2">
           <HeroDashboard stav={stav} cr={cr} crHistoricky={crHistoricky} crPocet={crPocet} obcane={obcane} veta={veta} pas={<UrgentniPas kandidati={kandidati} zkontrolovano={overeno} ted={tedMs} />} />
         </div>
         {/*
