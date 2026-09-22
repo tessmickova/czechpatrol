@@ -6,6 +6,7 @@ import { useZiveHodiny } from "@/lib/cas-klient";
 import { vystraha } from "@/lib/data";
 import type { Kandidat } from "@/lib/typy";
 import { Ikona } from "./ikony";
+import { Tlacitko } from "./ui";
 
 /*
   Urgentní upozornění.
@@ -143,9 +144,10 @@ export function UrgentniPas({ kandidati, zkontrolovano, ted = Date.now() }: { ka
   const naliehave = naliehaveVOkne(kandidati, useZiveHodiny(ted));
   const deje = Boolean(v) || naliehave.length > 0;
   return (
-    <div className={`mt-3 flex flex-wrap items-center gap-x-3 gap-y-1.5 rounded-[14px] border px-3.5 py-2.5 ${deje ? "border-akcent/70" : "border-klid/60"}`} role="status" aria-label="Urgentní upozornění">
+    <div className={`flex flex-wrap items-center gap-x-4 gap-y-2 rounded-[18px] border px-4 py-3 ${deje ? "border-akcent/70" : "border-klid/60"}`} role="status" aria-label="Urgentní upozornění">
       <span aria-hidden className={`h-[7px] w-[7px] shrink-0 rounded-full ${deje ? "bg-akcent" : "bg-klid"}`} />
-      <span className="min-w-0 flex-1 text-male leading-snug text-tlum">
+      {/* Minimální šířka textu: na úzkém displeji spadne tlačítko pod text, místo aby text mačkalo do sloupečku. */}
+      <span className="min-w-[14rem] flex-1 text-male leading-snug text-tlum">
         {v ? (
           <><b className="font-semibold text-inkoust">Platí: {v.nadpis}</b> <span className="cislice text-mikro text-tlum2">{datumCasPraha(v.kdy)}</span></>
         ) : naliehave.length > 0 ? (
@@ -154,7 +156,7 @@ export function UrgentniPas({ kandidati, zkontrolovano, ted = Date.now() }: { ka
           <><b className="font-semibold text-inkoust">Teď nic urgentního.</b> Žádná mobilizace, krizové vysílání ani mimořádný stav za {OKNO_HODIN} h{zkontrolovano ? <span className="cislice text-mikro text-tlum2"> · zdroje čteny {datumCasPraha(zkontrolovano)}</span> : ""}</>
         )}
       </span>
-      <Link href="/odber/" className="stitek shrink-0 text-tlum2 transition-colors hover:text-inkoust">Jak se to dozvíte hned →</Link>
+      <Tlacitko kam="/odber/" varianta="plny" velikost="s" ikonaVpravo="nahoru" trida="shrink-0 whitespace-nowrap [&>svg:last-child]:rotate-90">Jak se to dozvíte hned</Tlacitko>
     </div>
   );
 }

@@ -130,7 +130,6 @@ export function HeroDashboard({
         <strong className="font-bold text-inkoust">{veta.cesko}</strong>{" "}
         <span className="text-tlum">{veta.evropa}</span>
       </p>
-      {pas}
       </div>
 
       {/*
@@ -219,6 +218,8 @@ export function HeroDashboard({
         </div>
       </div>
 
+      {/* Urgentní pás až pod budíky: nejdřív stav, pak odpověď „děje se něco právě teď?“. */}
+      {pas && <div className="border-t border-linka2 pt-4">{pas}</div>}
     </section>
   );
 }

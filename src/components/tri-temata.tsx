@@ -92,14 +92,19 @@ const TEMATA: { href: string; stitek: string; nadpis: string; popis: string; akc
 
 export function TriTemata() {
   return (
-    <ul className="mt-6 grid gap-3 md:grid-cols-3" aria-label="Tři hlavní témata">
+    /*
+      Stejná mezera jako mezi úvodem a aktualitami nad tím (gap-4, od 1280 px
+      gap-10) a stejný rádius jako karta aktualit, ať desky sedí do linií
+      stránky a nevypadají jako cizí blok.
+    */
+    <ul className="mt-6 grid gap-4 md:grid-cols-3 xl:mt-8 xl:gap-10" aria-label="Tři hlavní témata">
       {TEMATA.map((t) => (
         <li key={t.nadpis} className="min-w-0">
-          <Link href={t.href} className="noc group relative block h-full overflow-hidden rounded-[22px] border border-linka transition-colors hover:border-akcent/60">
+          <Link href={t.href} className="noc group relative block h-full overflow-hidden rounded-[28px] border border-linka transition-colors hover:border-akcent/60">
             <span className={`pointer-events-none absolute inset-0 ${t.barva} opacity-[0.28] transition-opacity group-hover:opacity-[0.4]`}>{t.grafika}</span>
             {/* Tmavší překryv, ať text drží kontrast i tam, kde grafika prochází pod ním. */}
             <span aria-hidden className="pointer-events-none absolute inset-0 bg-[linear-gradient(180deg,rgb(0_0_0/0.15)_0%,rgb(0_0_0/0.62)_100%)]" />
-            <span className="relative flex h-full min-h-[210px] flex-col p-5">
+            <span className="relative flex h-full min-h-[220px] flex-col p-6">
               <span className="flex items-center gap-2">
                 <span aria-hidden className={`h-[7px] w-[7px] rounded-full ${t.barva === "text-akcent" ? "bg-akcent" : t.barva === "text-jantar" ? "bg-jantar" : "bg-klid"}`} />
                 <span className="stitek text-noc-tlum">{t.stitek}</span>
@@ -109,8 +114,11 @@ export function TriTemata() {
                 <span className="text-velke font-bold leading-tight text-noc-text">{t.nadpis}</span>
               </span>
               <span className="mt-2 text-male leading-relaxed text-noc-tlum">{t.popis}</span>
-              <span className="mt-auto flex items-center gap-1.5 pt-4 text-drobne font-bold uppercase tracking-[0.05em] text-noc-text">
-                {t.akce} <Ikona nazev="nahoru" velikost={12} tah={2.2} trida="rotate-90 text-akcent transition-transform group-hover:translate-x-0.5" />
+              {/* Tlačítko značky: obrysová pilulka na tmavé desce, uvnitř odkazu jako span (odkaz v odkazu nejde). */}
+              <span className="mt-auto pt-5">
+                <span className="inline-flex min-h-[36px] items-center gap-1.5 rounded-full border border-linka px-3.5 text-drobne font-bold text-noc-text transition-colors group-hover:border-akcent">
+                  {t.akce} <Ikona nazev="nahoru" velikost={12} tah={2} trida="shrink-0 rotate-90" />
+                </span>
               </span>
             </span>
           </Link>
