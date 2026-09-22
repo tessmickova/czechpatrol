@@ -557,6 +557,13 @@ export function Dashboard({
         </div>
       </div>
 
+      {/*
+        2a — tmavší deska s výzvou k odběru hned za úředním stavem: kdo si
+        právě přečetl, co platí, tady dostane cestu, jak se dozvědět změnu
+        dřív, než sem zase přijde. Dřív stála až za čísly.
+      */}
+      <div className="mt-14 sm:mt-20"><VyzvaTelegram /></div>
+
       {/* 2b2 — manipulační kampaně: operace, ne události */}
       {kampane.length > 0 && (
         <div className="nalet mt-14 border-t border-linka pt-12 sm:mt-20 sm:pt-14">
@@ -689,9 +696,6 @@ export function Dashboard({
           </ul>
         </section>
       </div>
-
-      {/* 3b — tmavší deska: jediné místo, kde web něco chce po čtenáři */}
-      <div className="mt-14 sm:mt-20"><VyzvaTelegram /></div>
 
       {/* 5 — sledovat a partneři */}
       <div className="nalet mt-14 border-t border-linka pt-12 sm:mt-20 sm:pt-14">
