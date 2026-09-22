@@ -43,16 +43,27 @@ vlastní krizové pokyny.
 | Prezentace | statický web, mapa, karty, náhledy, RSS | Next.js 16 `output: export`, Cloudflare Pages | beze změny + MapLibre GL JS jako klientská komponenta |
 | Veřejné API | normalizovaná, agregovaná data pro mapu a karty (JSON, GeoJSON, PMTiles) | částečně: `stav.json`, `fronta.json` generované při buildu | Cloudflare Worker `api/` (už existuje) + statické soubory na Pages/R2 s ETag |
 | Analytika | baseline, anomálie, kaskády, indexy | — | plánovaný krok v ingestu (Actions) nebo Worker cron; výsledky jako soubory |
-| Normalizace a provenance | sjednocení jednotek, geokód na okres/ORP, verzování | `sber/` (TypeScript, GitHub Actions každou hodinu) | beze změny principu; přibude PostGIS jako trvalé úložiště syrových a historických dat |
+| Normalizace a provenance | sjednocení jednotek, geokód na okres/ORP, verzování | `sber/` (TypeScript, GitHub Actions každou hodinu) | beze změny principu; trvalé úložiště normalizovaných a historických dat je Cloudflare D1 (už existuje pro účty), syrová stažení v R2 |
 | Ingest | čtení zdrojů podle registru, rate limit, zálohy | `sber/` | beze změny; každý zdroj má záznam v registru (část E) a stav GREEN dřív, než se čte |
 
 ### Odchylky od preferované architektury v zadání a proč
 
-- **PostgreSQL + PostGIS: ano, Supabase** (rozhodnutí provozovatele
-  22. 9. 2026), projekt v EU regionu. Cloudflare D1 (SQLite) na prostorové
-  dotazy a historii nestačí. **NEOVĚŘENO** je aktuální ceník — v části S je
-  rozpětí. Účet zakládá provozovatel; klíče jdou jen do tajemství GitHubu
-  a Cloudflare.
+- **Databáze: Cloudflare D1, ne PostgreSQL + PostGIS** (rozhodnutí
+  provozovatele 22. 9. 2026: žádný Supabase ani jiný cizí účet). D1 už
+  běží pro účty a Premium, migrace jdou z repozitáře přes GitHub Actions,
+  žádný další přístup není potřeba. Co tím projekt ztrácí a jak to řeší:
+  - **prostorové dotazy** (bod v polygonu, sousedství okresů) D1 neumí →
+    dělají se **při ingestu** v Node (Actions/Worker) nad hranicemi
+    z RÚIAN uloženými jako GeoJSON v R2, výsledek je jen kód území;
+    sousedství okresů je předpočítaná tabulka `uzemi_soused`;
+  - **objem**: D1 má strop na velikost databáze (**NEOVĚŘENO** aktuální
+    limit na zvoleném tarifu) → syrová stažení jdou do R2 (v D1 jen
+    otisk a odkaz), historie se drží agregovaná, podrobné položky
+    24 měsíců;
+  - **geometrie** nikdy v D1: hranice žijí jako PMTiles/GeoJSON na R2,
+    D1 zná jen kódy, názvy, nadřazené jednotky a počty obyvatel.
+  Kdyby prostorová analytika někdy přerostla tenhle model, je přechod na
+  PostGIS možný bez změny veřejného API (čte jen agregáty).
 - **Redis: ne, nahrazeno Cloudflare KV a Cache API.** Plní tutéž roli
   (cache agregátů, rate limiting) bez vlastního serveru. Kdyby se projekt
   přesunul na vlastní VPS, Redis se doplní bez změny rozhraní.
@@ -283,7 +294,7 @@ prostředí je nešlo otevřít.
 | Atribuce | „Zdroj: ČHMÚ“ |
 | Osobní údaje | ne |
 | **Status** | **GREEN** (po přečtení licence na portálu) |
-| Doporučený způsob | výstrahy CAP každých 10 min; měření hodinově; do PostGIS s časem platnosti |
+| Doporučený způsob | výstrahy CAP každých 10 min; měření hodinově; do D1 s časem platnosti (ORP přiřazené při ingestu) |
 | Co jde na veřejnou mapu | **jen výstrahy vysokého a extrémního stupně** (rozhodnutí provozovatele 22. 9. 2026). Nižší stupně a měření slouží jen interně jako kontrolní vrstva pro anomálie (část N). |
 | Poznámka | sběr už dnes čte https://www.chmi.cz/ jako zdroj `chmi` (HTTP 200) — jen HTML, ne data |
 
@@ -645,166 +656,183 @@ neexistuje.**
 
 ---
 
-## J. Databázové schéma (PostgreSQL + PostGIS)
+## J. Databázové schéma (Cloudflare D1 / SQLite)
 
 Jen tabulky potřebné pro fáze 1–3; kyber a kaskády přidají tabulky ve
-stejném duchu. Veřejné API nikdy nečte `raw_*` tabulky.
+stejném duchu. Veřejné API nikdy nečte `raw_*` tabulky. Stejné
+konvence jako dnešní `api/migrace/`: `TEXT` pro časy v ISO 8601 (UTC),
+`INTEGER` 0/1 místo boolean, JSON jako `TEXT`. Geometrie v D1 nikdy;
+hranice jsou na R2 (PMTiles pro mapu, GeoJSON pro ingest).
 
 ```sql
--- geografie (naplněno z RÚIAN, jednou měsíčně)
-create table uzemi (
-  kod            text primary key,          -- kód RÚIAN
-  druh           text not null check (druh in ('stat','kraj','okres','orp','obec')),
-  nazev          text not null,
-  nadrazene_kod  text references uzemi(kod),
-  obyvatel       integer,                   -- ČSÚ, k datu
-  geom           geometry(MultiPolygon, 4326) not null,
-  geom_zjednoduseno geometry(MultiPolygon, 4326),
-  platne_od      date not null,
-  zdroj_id       text not null references zdroj(id)
+-- geografie (naplněno z RÚIAN, jednou měsíčně; bez geometrie)
+CREATE TABLE uzemi (
+  kod            TEXT PRIMARY KEY,          -- kód RÚIAN
+  druh           TEXT NOT NULL CHECK (druh IN ('stat','kraj','okres','orp','obec')),
+  nazev          TEXT NOT NULL,
+  nadrazene_kod  TEXT REFERENCES uzemi(kod),
+  obyvatel       INTEGER,                   -- ČSÚ, k datu
+  hranice_r2     TEXT,                      -- klíč GeoJSON na R2 (jen kraj/okres/ORP)
+  platne_od      TEXT NOT NULL,
+  zdroj_id       TEXT NOT NULL REFERENCES zdroj(id)
 );
-create index on uzemi using gist (geom);
+CREATE INDEX uzemi_druh ON uzemi (druh, nadrazene_kod);
+
+-- sousedství okresů, předpočítané z hranic při měsíčním importu (náhrada za PostGIS touches)
+CREATE TABLE uzemi_soused (
+  kod            TEXT NOT NULL REFERENCES uzemi(kod),
+  soused_kod     TEXT NOT NULL REFERENCES uzemi(kod),
+  PRIMARY KEY (kod, soused_kod)
+);
 
 -- registr zdrojů (část E), stejný obsah jako data/registr-zdroju.json
-create table zdroj (
-  id             text primary key,
-  organizace     text not null,
-  url            text not null,
-  typ_dat        text not null,
-  licence        text,
-  status         text not null check (status in ('GREEN','YELLOW','RED')),
-  atribuce       text,
-  interval_s     integer,
-  rate_limit     text,
-  osobni_udaje   boolean not null default false,
-  citliva_data   boolean not null default false,
-  kontakt        text,
-  overeno_kdy    timestamptz,
-  overil         text
+CREATE TABLE zdroj (
+  id             TEXT PRIMARY KEY,
+  organizace     TEXT NOT NULL,
+  url            TEXT NOT NULL,
+  typ_dat        TEXT NOT NULL,
+  licence        TEXT,
+  status         TEXT NOT NULL CHECK (status IN ('GREEN','YELLOW','RED')),
+  atribuce       TEXT,
+  interval_s     INTEGER,
+  rate_limit     TEXT,
+  osobni_udaje   INTEGER NOT NULL DEFAULT 0,
+  citliva_data   INTEGER NOT NULL DEFAULT 0,
+  kontakt        TEXT,
+  overeno_kdy    TEXT,
+  overil         TEXT
 );
 
--- syrové stažení: nikdy se nemaže, nikdy se nemění
-create table raw_stazeni (
-  id             bigserial primary key,
-  zdroj_id       text not null references zdroj(id),
-  url            text not null,
-  ziskano        timestamptz not null default now(),
-  http_stav      integer,
-  hlavicky       jsonb,
-  telo_sha256    text not null,
-  telo           bytea,                     -- nebo odkaz do R2 při velikosti > 1 MB
-  parser_verze   text not null
+-- syrové stažení: nikdy se nemaže, nikdy se nemění; tělo je v R2, tady jen otisk a klíč
+CREATE TABLE raw_stazeni (
+  id             INTEGER PRIMARY KEY AUTOINCREMENT,
+  zdroj_id       TEXT NOT NULL REFERENCES zdroj(id),
+  url            TEXT NOT NULL,
+  ziskano        TEXT NOT NULL,
+  http_stav      INTEGER,
+  hlavicky       TEXT,                      -- JSON
+  telo_sha256    TEXT NOT NULL,
+  telo_r2        TEXT NOT NULL,             -- klíč objektu v R2 (raw/{zdroj}/{rok}/{sha256})
+  parser_verze   TEXT NOT NULL
 );
+CREATE INDEX raw_zdroj ON raw_stazeni (zdroj_id, ziskano);
 
 -- položka dostupnosti služby (elektřina, komunikace, doprava)
-create table vypadek (
-  id             uuid primary key,
-  zdroj_id       text not null references zdroj(id),
-  raw_id         bigint not null references raw_stazeni(id),
-  vrstva         text not null check (vrstva in ('elektrina','komunikace','doprava','kyber','pocasi')),
-  druh           text not null check (druh in ('neplanovana','planovana','omezeni','neznamo')),
-  uzemi_kod      text not null references uzemi(kod),   -- nejjemněji obec; veřejně se agreguje
-  zacatek        timestamptz not null,
-  odhad_konce    timestamptz,
-  konec          timestamptz,
-  dotcenych_mist integer,                   -- jen když zdroj uvádí
-  pricina_verejna text,                     -- doslovný text zdroje, nikdy náš odhad
-  publikovano    timestamptz,
-  ziskano        timestamptz not null,
-  hash_polozky   text not null,             -- dedup mezi běhy
-  unique (zdroj_id, hash_polozky)
+CREATE TABLE vypadek (
+  id             TEXT PRIMARY KEY,
+  zdroj_id       TEXT NOT NULL REFERENCES zdroj(id),
+  raw_id         INTEGER NOT NULL REFERENCES raw_stazeni(id),
+  vrstva         TEXT NOT NULL CHECK (vrstva IN ('elektrina','komunikace','doprava','kyber','pocasi')),
+  druh           TEXT NOT NULL CHECK (druh IN ('neplanovana','planovana','omezeni','neznamo')),
+  uzemi_kod      TEXT NOT NULL REFERENCES uzemi(kod),   -- nejjemněji obec (přiřazeno při ingestu); veřejně se agreguje
+  zacatek        TEXT NOT NULL,
+  odhad_konce    TEXT,
+  konec          TEXT,
+  dotcenych_mist INTEGER,                   -- jen když zdroj uvádí
+  pricina_verejna TEXT,                     -- doslovný text zdroje, nikdy náš odhad
+  publikovano    TEXT,
+  ziskano        TEXT NOT NULL,
+  hash_polozky   TEXT NOT NULL,             -- dedup mezi běhy
+  UNIQUE (zdroj_id, hash_polozky)
 );
-create index on vypadek (vrstva, zacatek desc);
-create index on vypadek (uzemi_kod, zacatek desc);
+CREATE INDEX vypadek_vrstva ON vypadek (vrstva, zacatek);
+CREATE INDEX vypadek_uzemi ON vypadek (uzemi_kod, zacatek);
 
--- historie změn položky (nikdy update bez řádku sem)
-create table vypadek_zmena (
-  id             bigserial primary key,
-  vypadek_id     uuid not null references vypadek(id),
-  kdy            timestamptz not null default now(),
-  pole           text not null,
-  stara          text,
-  nova           text,
-  raw_id         bigint references raw_stazeni(id),
-  poznamka       text
+-- historie změn položky (nikdy UPDATE bez řádku sem)
+CREATE TABLE vypadek_zmena (
+  id             INTEGER PRIMARY KEY AUTOINCREMENT,
+  vypadek_id     TEXT NOT NULL REFERENCES vypadek(id),
+  kdy            TEXT NOT NULL,
+  pole           TEXT NOT NULL,
+  stara          TEXT,
+  nova           TEXT,
+  raw_id         INTEGER REFERENCES raw_stazeni(id),
+  poznamka       TEXT
 );
 
 -- bezpečnostní událost (rozšíření dnešního incidenty.json; viz část L)
-create table udalost (
-  id             text primary key,
-  slug           text unique not null,
-  kategorie      text not null,             -- CYBER, SABOTAGE, ENERGY, TELECOM, TRANSPORT, GNSS, AIRSPACE, INFORMATION, OTHER
-  titulek        text not null,
-  popis          text not null,
-  uzemi_kod      text references uzemi(kod),   -- pro ČR okres/ORP; zahraničí: null + kod_zeme
-  kod_zeme       text not null,
-  cas_udalosti   timestamptz not null,
-  cas_zjisteni   timestamptz not null,
-  stav_overeni   text not null check (stav_overeni in ('OFFICIALLY_CONFIRMED','MULTIPLE_SOURCES','UNDER_INVESTIGATION','UNVERIFIED','RETRACTED')),
-  atribuce_kdo   text,                      -- orgán, který atribuci provedl; null = žádná
-  atribuce_text  text,                      -- doslovné znění
-  jistota        text not null check (jistota in ('nizka','stredni','vysoka','potvrzeno')),
-  naposledy_zkontrolovano timestamptz not null,
-  lidsky_overeno boolean not null default false,
-  aktualizovano  timestamptz not null
+CREATE TABLE udalost (
+  id             TEXT PRIMARY KEY,
+  slug           TEXT UNIQUE NOT NULL,
+  kategorie      TEXT NOT NULL,             -- CYBER, SABOTAGE, ENERGY, TELECOM, TRANSPORT, GNSS, AIRSPACE, INFORMATION, OTHER
+  titulek        TEXT NOT NULL,
+  popis          TEXT NOT NULL,
+  uzemi_kod      TEXT REFERENCES uzemi(kod),   -- pro ČR okres/ORP; zahraničí: NULL + kod_zeme
+  kod_zeme       TEXT NOT NULL,
+  cas_udalosti   TEXT NOT NULL,
+  cas_zjisteni   TEXT NOT NULL,
+  stav_overeni   TEXT NOT NULL CHECK (stav_overeni IN ('OFFICIALLY_CONFIRMED','MULTIPLE_SOURCES','UNDER_INVESTIGATION','UNVERIFIED','RETRACTED')),
+  atribuce_kdo   TEXT,                      -- orgán, který atribuci provedl; NULL = žádná
+  atribuce_text  TEXT,                      -- doslovné znění
+  jistota        TEXT NOT NULL CHECK (jistota IN ('nizka','stredni','vysoka','potvrzeno')),
+  naposledy_zkontrolovano TEXT NOT NULL,
+  lidsky_overeno INTEGER NOT NULL DEFAULT 0,
+  aktualizovano  TEXT NOT NULL
 );
 
-create table udalost_zdroj (
-  udalost_id     text not null references udalost(id),
-  zdroj_id       text references zdroj(id),
-  url            text not null,
-  organizace     text not null,
-  typ            text not null check (typ in ('primary','media','wire','social')),
-  uredni_adresa  boolean not null,          -- výsledek nastroje/uredni-zdroj.mjs
-  publikovano    timestamptz,
-  ziskano        timestamptz not null,
-  primary key (udalost_id, url)
+CREATE TABLE udalost_zdroj (
+  udalost_id     TEXT NOT NULL REFERENCES udalost(id),
+  zdroj_id       TEXT REFERENCES zdroj(id),
+  url            TEXT NOT NULL,
+  organizace     TEXT NOT NULL,
+  typ            TEXT NOT NULL CHECK (typ IN ('primary','media','wire','social')),
+  uredni_adresa  INTEGER NOT NULL,          -- výsledek nastroje/uredni-zdroj.mjs
+  publikovano    TEXT,
+  ziskano        TEXT NOT NULL,
+  PRIMARY KEY (udalost_id, url)
 );
 
-create table udalost_oprava (
-  id             bigserial primary key,
-  udalost_id     text not null references udalost(id),
-  kdy            timestamptz not null,
-  text           text not null,             -- „11:04 aktualizováno: …“
-  raw_id         bigint references raw_stazeni(id)
+CREATE TABLE udalost_oprava (
+  id             INTEGER PRIMARY KEY AUTOINCREMENT,
+  udalost_id     TEXT NOT NULL REFERENCES udalost(id),
+  kdy            TEXT NOT NULL,
+  text           TEXT NOT NULL,             -- „11:04 aktualizováno: …“
+  raw_id         INTEGER REFERENCES raw_stazeni(id)
 );
 
 -- meteorologický jev (kontrolní vrstva)
-create table meteo_jev (
-  id             bigserial primary key,
-  zdroj_id       text not null references zdroj(id),
-  raw_id         bigint not null references raw_stazeni(id),
-  druh           text not null,             -- vitr, bourka, blesky, snih_namraza, teplota, povoden
-  stupen         text,                      -- podle zdroje (ČHMÚ SIVS)
-  uzemi_kod      text not null references uzemi(kod),   -- ORP
-  od             timestamptz not null,
-  do_            timestamptz
+CREATE TABLE meteo_jev (
+  id             INTEGER PRIMARY KEY AUTOINCREMENT,
+  zdroj_id       TEXT NOT NULL REFERENCES zdroj(id),
+  raw_id         INTEGER NOT NULL REFERENCES raw_stazeni(id),
+  druh           TEXT NOT NULL,             -- vitr, bourka, blesky, snih_namraza, teplota, povoden
+  stupen         TEXT,                      -- podle zdroje (ČHMÚ SIVS)
+  uzemi_kod      TEXT NOT NULL REFERENCES uzemi(kod),   -- ORP
+  od             TEXT NOT NULL,
+  do_            TEXT
 );
+CREATE INDEX meteo_uzemi ON meteo_jev (uzemi_kod, od);
 
 -- agregáty pro web (přepočítávají se; veřejné API čte jen tohle)
-create table agregat_uzemi (
-  uzemi_kod      text not null references uzemi(kod),
-  vrstva         text not null,
-  okno           text not null,             -- 'ted','24h','7d','30d','90d','1y'
-  spocteno       timestamptz not null,
-  data           jsonb not null,            -- počty, mediány, P95, histogram, trend, baseline, čerstvost
-  primary key (uzemi_kod, vrstva, okno)
+CREATE TABLE agregat_uzemi (
+  uzemi_kod      TEXT NOT NULL REFERENCES uzemi(kod),
+  vrstva         TEXT NOT NULL,
+  okno           TEXT NOT NULL,             -- 'ted','24h','7d','30d','90d','1y'
+  spocteno       TEXT NOT NULL,
+  data           TEXT NOT NULL,             -- JSON: počty, mediány, P95, histogram, trend, baseline, čerstvost
+  PRIMARY KEY (uzemi_kod, vrstva, okno)
 );
 
 -- stav providerů (fail-safe, část 23)
-create table provider_stav (
-  zdroj_id       text primary key references zdroj(id),
-  posledni_ok    timestamptz,
-  posledni_pokus timestamptz not null,
-  stav           text not null check (stav in ('LIVE','DELAYED','UNKNOWN')),
-  zpozdeni_s     integer,
-  chyba          text
+CREATE TABLE provider_stav (
+  zdroj_id       TEXT PRIMARY KEY REFERENCES zdroj(id),
+  posledni_ok    TEXT,
+  posledni_pokus TEXT NOT NULL,
+  stav           TEXT NOT NULL CHECK (stav IN ('LIVE','DELAYED','UNKNOWN')),
+  zpozdeni_s     INTEGER,
+  chyba          TEXT
 );
 ```
 
-Zásady: `raw_*` je append-only; každá změna normalizované položky má řádek
-v `*_zmena`/`*_oprava`; veřejné soubory se generují z `agregat_uzemi`, ne
-z `vypadek` přímo; do `uzemi_kod` na veřejné vrstvě nikdy nejde obec.
+Zásady: `raw_*` je append-only (tělo v R2, v D1 otisk); každá změna
+normalizované položky má řádek v `*_zmena`/`*_oprava`; veřejné soubory
+se generují z `agregat_uzemi`, ne z `vypadek` přímo; do `uzemi_kod` na
+veřejné vrstvě nikdy nejde obec. Geokód (bod → obec/ORP) se počítá
+při ingestu v Node nad GeoJSON z R2, do D1 jde jen kód. Doby uchování:
+`vypadek`, `meteo_jev` 24 měsíců, `raw_stazeni` podle licence zdroje
+(výchozí 24 měsíců, tiskové zprávy 90 dní), agregáty bez omezení.
+Zálohy: D1 Time Travel (30 dní na placeném tarifu — **NEOVĚŘENO**) +
+měsíční export do R2.
 
 ---
 
@@ -923,7 +951,7 @@ příčinu neuvede zdroj.
 | Signál | Výpočet | Práh |
 |---|---|---|
 | časová koncentrace | počet nových položek v klouzavém okně 30 min / medián baseline | ≥ 2,5× a ≥ 5 položek |
-| geografický cluster | počet sousedních okresů (sdílená hranice z PostGIS) s koncentrací ve stejném okně | ≥ 3 |
+| geografický cluster | počet sousedních okresů (sdílená hranice z předpočítané tabulky `uzemi_soused`) s koncentrací ve stejném okně | ≥ 3 |
 | neobvyklé trvání | podíl aktivních položek nad P95 trvání za 90 dní | ≥ 20 % a ≥ 3 položky |
 | více služeb naráz | počet vrstev se zhoršením ve stejném okrese a okně (část 10) | ≥ 2 |
 | odchylka od baseline | (aktuální − medián) / IQR | ≥ 3 |
@@ -979,7 +1007,7 @@ data), audit log (existuje pro účty), secret management (existuje), rate
 limiting (API ano, doplnit pro veřejné cesty), WAF (Cloudflare, zapnout
 pravidla), API auth (token), validace vstupu (doplnit schémata), dependency
 scanning (doplnit Dependabot), CSP (doplnit v `_headers`), security headers
-(částečně v `_headers`, doplnit), backup (doplnit pro PostGIS), incident
+(částečně v `_headers`, doplnit), backup (D1 Time Travel + měsíční export do R2, doplnit workflow), incident
 response (doplnit dokument), monitoring (Actions + Cloudflare observability;
 doplnit upozornění na selhání ingestu).
 
@@ -993,11 +1021,11 @@ doplnit upozornění na selhání ingestu).
 | Minimalizace | veřejná mapa nikdy pod ORP; adresy z odstávek se neukládají | vynutit v normalizaci (validace odmítne řádek s adresou) |
 | Právní základ pro zpracování syrových dat obsahujících jména (tiskové zprávy policie) | oprávněný zájem, čl. 6 odst. 1 písm. f) | sepsat LIA; ukládat jen titulek a odkaz, ne celý text |
 | Doba uchování syrových dat | není stanovena | registr: podle licence; výchozí 24 měsíců, tiskové zprávy 90 dní |
-| Zpracovatelé | Cloudflare (DPA), nově Neon/Supabase | DPA + EU region + zápis v `/soukromi/` |
+| Zpracovatelé | jen Cloudflare (DPA; D1, R2, Workers, Pages) — žádný další zpracovatel dat | zápis v `/soukromi/`; ověřit umístění dat D1 (**NEOVĚŘENO**, D1 nemá výběr regionu jako Postgres) |
 | Analytika webu | žádná (viz `docs/PRAVNI-KONTROLA.md` část 2) | zůstat bez ní, nebo jen serverové počty bez identifikátorů |
 | Individuální domácnosti | nepublikovat | pravidlo v kódu + test |
 | Práva subjektů u dat z tiskových zpráv | žádost o výmaz jména z našeho textu | postup v `/soukromi/`; kontakt |
-| DPIA | zvážit znovu při zavedení PostGIS s adresními daty | krátké odůvodnění; při agregaci na ORP se DPIA nejeví jako povinná |
+| DPIA | zvážit znovu při zavedení položek s adresními daty v D1 | krátké odůvodnění; při agregaci na ORP se DPIA nejeví jako povinná |
 | Děti | beze změny | — |
 | Porušení zabezpečení | postup chybí | sepsat (72 h, ÚOOÚ) |
 
@@ -1027,7 +1055,7 @@ doplnit upozornění na selhání ingestu).
 |---|---|---|---|
 | **0** | Tento dokument; přečtení podmínek u GREEN* zdrojů; odeslání dopisů (část I) a dotazů (část H); založení `data/registr-zdroju.json`; doplnění `PROVOZOVATEL` | rozhodnutí provozovatele | 1–2 týdny (většina je čekání na odpovědi) |
 | **1** | Skutečná mapa ČR: RÚIAN → PMTiles; podklad OSM self-host; MapLibre v Přehledu; kraje/okresy/ORP; vrstva POČASÍ z ČHMÚ (výstrahy podle ORP); vrstva BEZPEČNOST z vlastních záznamů s doplněným okresem; stav providerů; metodika mapy | GREEN u ČÚZK, ČHMÚ, ČSÚ | 3–4 týdny |
-| **2** | ELEKTŘINA — jen zdroje s vyřešeným oprávněním; PostGIS; ingest 5–15 min; rozlišení neplánovaná/plánovaná; karta okresu | odpověď aspoň jednoho distributora | 3 týdny po získání dat |
+| **2** | ELEKTŘINA — jen zdroje s vyřešeným oprávněním; tabulky v D1 (část J), syrová data v R2; ingest 5–15 min; rozlišení neplánovaná/plánovaná; karta okresu | odpověď aspoň jednoho distributora | 3 týdny po získání dat |
 | **3** | Historie a analytika výpadků: okna 24 h – 1 rok, histogram, P95, „oproti normálu“ s vysvětlením baseline; stránka Historie výpadků | ≥ 6 týdnů dat z fáze 2 | 2–3 týdny |
 | **4** | KYBER (NÚKIB — po souhlasu s odběrem) + bezpečnostní události na mapě se stavy ověření; UNVERIFIED skryté | souhlas NÚKIB nebo jen citace | 2 týdny |
 | **5** | KOMUNIKACE (ČTÚ / IODA / Radar podle oprávnění), DOPRAVA (JSDI, Správa železnic) | registrace/souhlasy | 3 týdny |
@@ -1050,12 +1078,12 @@ zapsat do `docs/naklady.json`, až budou faktury.
 | Cloudflare Pages (web) | 0 Kč | 0 Kč | 0 Kč |
 | Cloudflare Workers + KV (API, cron) | 0 Kč (free) | ~125 Kč/měs. (Workers Paid, 5 USD) | ~125 Kč |
 | Cloudflare R2 (PMTiles ~2–4 GB, agregáty) | ~0–20 Kč | ~20–50 Kč | ~50–100 Kč |
-| PostgreSQL + PostGIS (Neon/Supabase, EU) | 0 Kč (free tier, jen registr a geografie) | ~450–650 Kč/měs. (placený tarif ~19–25 USD) | ~650–1 500 Kč |
+| Cloudflare D1 (databáze) | 0 Kč (free tier) | v ceně Workers Paid; nad zahrnutý objem řádky a úložiště zvlášť (**NEOVĚŘENO** aktuální ceník) | ~0–250 Kč |
 | GitHub Actions | 0 Kč (veřejný repozitář) | 0 Kč | 0 Kč, při 5min cronu zvážit Worker cron |
 | Doména | ~30 Kč | ~30 Kč | ~30 Kč |
 | Zálohy (R2 snapshoty) | 0 | ~20 Kč | ~50 Kč |
 | E-maily, WhatsApp (stávající) | 0–250 Kč | 0–250 Kč | 0–250 Kč |
-| **Celkem** | **~30–300 Kč/měs.** | **~650–1 100 Kč/měs.** | **~900–2 000 Kč/měs.** |
+| **Celkem** | **~30–300 Kč/měs.** | **~200–500 Kč/měs.** | **~300–800 Kč/měs.** |
 
 Lidská práce (ověřování, geokód záznamů, odpovědi providerům, opravy)
 v tabulce není a je největší položkou: odhad 5–10 h týdně ve fázi 2+.
@@ -1087,8 +1115,8 @@ v tabulce není a je největší položkou: odhad 5–10 h týdně ve fázi 2+.
    návrhy (22. 9. 2026). Zmírnění: druhý správce; automatické zveřejnění
    jen s úředním zdrojem (zavedeno 22. 9.); vše ostatní zůstává
    nepotvrzené a je tak označené.
-8. **Náklady na PostGIS a lidský čas** při růstu dat. Zmírnění: agregáty
-   jako soubory, syrová data v R2, ne v DB; měsíční přehled nákladů
+8. **Strop velikosti D1 a lidský čas** při růstu dat. Zmírnění: agregáty
+   jako soubory, syrová data v R2, ne v DB, podrobné položky jen 24 měsíců; měsíční přehled nákladů
    v `/podporit/`.
 9. **Výkon mapy na mobilu** (6 254 obcí se nesmí nikdy načíst naráz).
    Zmírnění: obce jen v textu, PMTiles s generalizací podle přiblížení,

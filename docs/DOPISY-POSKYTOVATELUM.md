@@ -365,7 +365,7 @@ do `data/registr-zdroju.json` (vznikne ve fázi 1). Odsud to nešlo.
 | ENTSO-E Transparency Platform | podmínky užití, registrace tokenu | https://transparency.entsoe.eu/ |
 | OpenSky Network | podmínky (nekomerční užití) | https://opensky-network.org/ |
 | gpsjam.org | licence, podmínky | https://gpsjam.org/ |
-| Supabase | region EU, DPA, ceník | https://supabase.com/ (účet zakládá provozovatel) |
+| Cloudflare D1 a R2 | DPA, umístění dat, limity velikosti a ceník (databáze zůstává u Cloudflare, žádný další zpracovatel) | https://developers.cloudflare.com/d1/ · https://developers.cloudflare.com/r2/ |
 
 ## Koho kontaktovat později (až bude co ukázat)
 
