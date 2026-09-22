@@ -207,9 +207,9 @@ Tři věci z toho nesmí nikdo ohnout:
 
 ## Pravidlo č. 4b — co nejde ověřit ze sandboxu, čti z repozitáře
 
-**Plánovaná routine nemá přístup na `czechpatrol.pages.dev` ani na
-`api.github.com`.** První blokuje agentní proxy na úrovni organizace, druhé
-se uděluje per session a routine si o to nemá čím říct. Není to chyba
+**Plánovaná routine nemá přístup na `czechpatrol.cz` (ani na starou adresu
+`czechpatrol.pages.dev`) ani na `api.github.com`.** První blokuje agentní
+proxy na úrovni organizace, druhé se uděluje per session a routine si o to nemá čím říct. Není to chyba
 routiny a nemá smysl to obcházet ani na to čekat.
 
 Obojí za ni zjišťuje workflow **Stav pro routines**
@@ -219,7 +219,7 @@ Obojí za ni zjišťuje workflow **Stav pro routines**
 | Soubor | Co v něm je | Místo čeho |
 |---|---|---|
 | `data/kandidati.json`, pole `vyrez` | začátek zdrojového článku jako text, se stavem a časem stažení | otevření zpravodajského webu |
-| `data/fronta/zivy-web.json` | dostupnost domény, commit živého buildu, commit repozitáře, `shodujeSe`, `commituNavic`, `rozdilVObsahu` | stažení `czechpatrol.pages.dev` |
+| `data/fronta/zivy-web.json` | dostupnost domény, commit živého buildu, commit repozitáře, `shodujeSe`, `commituNavic`, `rozdilVObsahu` | stažení `czechpatrol.cz` |
 | `data/fronta/behy.json` | posledních 30 běhů: workflow, závěr, SHA, čas, odkaz | volání `api.github.com` |
 
 **Postup pro routine:**

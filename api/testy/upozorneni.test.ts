@@ -6,12 +6,12 @@ import { VYCHOZI_NASTAVENI as VYCHOZI, type NovaZprava, type StavWebu } from "..
 const VYCHOZI_NASTAVENI = { ...VYCHOZI, frekvence: "ihned" as const };
 
 const zaklad: StavWebu = {
-  verze: 1, web: "https://czechpatrol.pages.dev", generovano: "2026-09-05T10:00:00Z", overeno: null,
+  verze: 1, web: "https://czechpatrol.cz", generovano: "2026-09-05T10:00:00Z", overeno: null,
   uroven: "Y2", nazev: "Střední", pasmo: "zluta", trend: "beze-zmeny", hybridni: "Y3", primy: "G2",
   pravni: { mobilizace: false, "valecny-stav": false, hranice: null },
   nato: { "clanek-4": false, "clanek-5": false },
   provoz: { palivo: "bezny", banky: "bez-zdroje" },
-  udalosti: [{ slug: "a", titulek: "A", zavaznost: "Y1", pasmo: "zluta", kategorie: ["sabotaze"], zeme: "Německo", kodZeme: "DE", datumUdalosti: "2026-09-01", datumZjisteni: null, aktualizovano: "2026-09-01", odkaz: "https://czechpatrol.pages.dev/incident/a/" }],
+  udalosti: [{ slug: "a", titulek: "A", zavaznost: "Y1", pasmo: "zluta", kategorie: ["sabotaze"], zeme: "Německo", kodZeme: "DE", datumUdalosti: "2026-09-01", datumZjisteni: null, aktualizovano: "2026-09-01", odkaz: "https://czechpatrol.cz/incident/a/" }],
 };
 
 describe("rozdíl stavů", () => {

@@ -104,6 +104,11 @@ PUVOD_WEBU=http://localhost:3000
 RP_ID=localhost
 ```
 
+Při přechodu webu na jinou doménu se do `PUVOD_WEBU_DALSI` ve `wrangler.toml`
+zapíše předchozí adresa (více jich oddělují čárky): web na ní dál smí volat
+API a passkeye, které tam vznikly, dál fungují — RP ID se bere podle adresy,
+ze které požadavek přišel. Po přechodu se proměnná vyprázdní.
+
 ## Cesty
 
 | Metoda a cesta | Kdo | Co |

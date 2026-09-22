@@ -2,7 +2,13 @@ name: Kontrola
 
 on:
   push:
-    branches: ["**"]
+    # Větev externího ověřovatele se schválně vynechává. Nese frontu kandidátů
+    # ještě nesrovnanou s jeho návrhy, takže test „nesplétají se se zachycenými
+    # zprávami" tam padá při každém jeho pushi a jen pálí minuty. Jeho data
+    # prochází touž kontrolou v „Převzít práci od Patrola" — až po srovnání
+    # fronty; změny kódu z té větve jdou přes pull request, a ten se tu
+    # kontroluje dál.
+    branches: ["**", "!patrol/overovani"]
   pull_request:
 
 jobs:

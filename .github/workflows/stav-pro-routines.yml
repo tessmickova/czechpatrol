@@ -3,7 +3,7 @@ name: Stav pro routines
 # Proč tenhle workflow existuje
 # -----------------------------
 # Plánované routine běží v sandboxu za agentní proxy, která blokuje doménu
-# czechpatrol.pages.dev, a GitHub API má dostupné jen po ručním přidělení
+# czechpatrol.cz, a GitHub API má dostupné jen po ručním přidělení
 # přístupu, o které si sama neumí říct. Nemohla proto ověřit, jestli na
 # doméně běží to, co je v repozitáři, ani jak dopadly poslední běhy.
 #
@@ -44,7 +44,7 @@ jobs:
 
       - name: Zjistit stav živého webu
         env:
-          ADRESA: https://czechpatrol.pages.dev
+          ADRESA: https://czechpatrol.cz
         run: |
           set -u
           mkdir -p data/fronta

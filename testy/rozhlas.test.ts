@@ -21,7 +21,7 @@ describe("rozhlas", () => {
     // Nadpis nese datum v závorce; řádek „země · případ · datum" pod ním zanikl.
     expect(z).toContain("🟠 Závažnost: 7 z 10 · vysoká\n<b>Titulek &lt;b&gt; (1. 9. 2026)</b>");
     expect(z).toContain("<b>Původce: zatím neurčen.</b>");
-    expect(z).toContain("https://czechpatrol.pages.dev/incident/x/");
+    expect(z).toContain("https://czechpatrol.cz/incident/x/");
   });
   it("okamžitě jdou jen vážné případy a opatření, zbytek do souhrnu; každý záznam jednou", () => {
     const ted = new Date("2026-09-06T12:00:00Z").getTime();
@@ -110,7 +110,7 @@ describe("rozhlas", () => {
     expect(z).toContain("<b>Nepotvrzeno:</b> Nevíme kdo.");
     // Patička říká, kdo zprávu vydal a kdy. Vnitřní označení záznamu v ní
     // není — čtenáři nic neříká a odkaz na záznam je o řádek výš.
-    expect(z).toContain("Všechna fakta, hodnocení a všechny zdroje: https://czechpatrol.pages.dev/incident/x/");
+    expect(z).toContain("Všechna fakta, hodnocení a všechny zdroje: https://czechpatrol.cz/incident/x/");
     expect(z.trimEnd().endsWith("CzechPatrol · aktualizováno 4. 9. 2026")).toBe(true);
     expect(z).not.toContain("záznam x");
   });
@@ -716,7 +716,7 @@ describe("přehled dne — česky, dvakrát denně", () => {
   it("nepotvrzený záznam nese datum události, odkaz na web, počet zdrojů a je označený", () => {
     const text = sestavPrehledDne({ ted, navrhy: [navrh({})] });
     expect(text).toContain("<b>Neověřené</b>");
-    expect(text).toContain("15. 9. 2026 · <a href=\"https://czechpatrol.pages.dev/nepotvrzeno/i-1/\">");
+    expect(text).toContain("15. 9. 2026 · <a href=\"https://czechpatrol.cz/nepotvrzeno/i-1/\">");
     expect(text).toContain("zdrojů 2, z toho úřední 1");
     expect(text).toContain("Do počtů nevstupují");
   });

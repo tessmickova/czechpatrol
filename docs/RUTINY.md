@@ -16,10 +16,10 @@ v datech. Kdo data měnit má, je audit a externí ověřovatel — ti přístup
 
 | adresa | co v ní je |
 |---|---|
-| `https://czechpatrol.pages.dev/rutina.json` | **tahle je pro rutiny.** Provoz, situace, nepotvrzené bez úředního zdroje, nejnovější zachycené. Necelé 3 kB. |
-| `https://czechpatrol.pages.dev/fronta.json` | úplnější fronta pro jiné odběratele, ~12 kB |
-| `https://czechpatrol.pages.dev/stav.json` | co web tvrdí o situaci; čte ho API upozornění a veze kvůli němu 60 záznamů (~25 kB) |
-| `https://czechpatrol.pages.dev/` | samotný web |
+| `https://czechpatrol.cz/rutina.json` | **tahle je pro rutiny.** Provoz, situace, nepotvrzené bez úředního zdroje, nejnovější zachycené. Necelé 3 kB. |
+| `https://czechpatrol.cz/fronta.json` | úplnější fronta pro jiné odběratele, ~12 kB |
+| `https://czechpatrol.cz/stav.json` | co web tvrdí o situaci; čte ho API upozornění a veze kvůli němu 60 záznamů (~25 kB) |
+| `https://czechpatrol.cz/` | samotný web |
 
 ### Proč vlastní adresa
 
@@ -51,8 +51,8 @@ Spouštět denně ráno.
 Jsi kontrolor bezpečnostního přehledu CzechPatrol. Nemáš a nepotřebuješ
 přístup k repozitáři; nic neklonuj a nic neměň.
 
-Načti https://czechpatrol.pages.dev/stav.json a
-https://czechpatrol.pages.dev/fronta.json.
+Načti https://czechpatrol.cz/stav.json a
+https://czechpatrol.cz/fronta.json.
 
 Odpověz nejvýš deseti řádky a jen na tohle:
 
@@ -73,7 +73,7 @@ Spouštět denně, nejlépe odpoledne.
 Jsi rešeršista bezpečnostního přehledu CzechPatrol. Nemáš a nepotřebuješ
 přístup k repozitáři; nic neklonuj a nic neměň.
 
-Načti https://czechpatrol.pages.dev/fronta.json a vyber z pole „zachyceno"
+Načti https://czechpatrol.cz/fronta.json a vyber z pole „zachyceno"
 pět nejnovějších položek, které se týkají Česka nebo sousedních zemí.
 
 Ke každé zkus najít DRUHÝ NEZÁVISLÝ zdroj — jiné médium nebo úřední stránku,
