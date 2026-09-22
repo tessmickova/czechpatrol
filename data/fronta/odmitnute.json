@@ -1,5 +1,53 @@
 [
   {
+    "id": "k-fb1fa65f3a86eccf",
+    "zachyceno": "2026-09-22T12:03:10.098Z",
+    "publikovano": "2026-09-22T11:52:00.000Z",
+    "zdroj": {
+      "nazev": "Český rozhlas — domácí zprávy",
+      "url": "https://www.irozhlas.cz/zpravy-domov/v-pardubicich-muze-byt-nova-ctvrt-pro-skoro-3-tisice-lidi-zastupitele-schvalili_2609221352_zko",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "V Pardubicích může být nová čtvrť pro skoro tři tisíce lidí. Zastupitelé schválili studii, místní ji kritizují",
+    "shrnuti": "Nová městská čtvrť až pro bezmála tři tisíce lidí může vzniknout v centru Pardubic. Zastupitelé na posledním jednání před komunálními volbami schválili studii, podle které se má v budoucnu výrazně proměnit území mezi Palackého třídou, ulicí K Polabinám a nábřežím Závodu míru. Část místních obyvatel ",
+    "duvod": "bez-skutku",
+    "kategorie": [],
+    "posouzeni": null
+  },
+  {
+    "id": "k-5edf93cabf1929af",
+    "zachyceno": "2026-09-22T12:03:10.100Z",
+    "publikovano": "2026-09-22T11:50:00.000Z",
+    "zdroj": {
+      "nazev": "Český rozhlas — domácí zprávy",
+      "url": "https://www.irozhlas.cz/zpravy-domov/nevhodne-a-nepatricne-ceska-advokatni-komora-podporila-soudcovskou-unii-proti_2609221350_raf",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "‚Nevhodné a nepatřičné.‘ Česká advokátní komora podpořila Soudcovskou unii proti Babišovým výrokům",
+    "shrnuti": "Česká advokátní komora (ČAK) se v úterý připojila ke kritice výroků premiéra Andreje Babiše (ANO) o justici. Označila je za nepatřičné a nevhodné. Profesní sdružení v tiskové zprávě uvedlo, že podle principů dělby moci nemá výkonná moc vstupovat do rozhodování moci soudní. Kritizování justice je pod",
+    "duvod": "bez-skutku",
+    "kategorie": [],
+    "posouzeni": null
+  },
+  {
+    "id": "k-758f2a7d8f1322b9",
+    "zachyceno": "2026-09-22T12:03:10.477Z",
+    "publikovano": "2026-09-22T11:45:44.000Z",
+    "zdroj": {
+      "nazev": "Téma: nouzovy-stav (anglicky)",
+      "url": "https://news.google.com/rss/articles/CBMickFVX3lxTE9yRmdBNE9HdFhLY3lmUU1ZOHlyZXRjaFFXSWxsblRNSm1yTUVCWmhSYy1YelJ1RkJvUERTRmN1cktPekhuSU5MVHBBc0p2YWJzZ1dmZ1AxVGRDUVBQeHM3c0p1N0NpQ3hIU1dSOS1mXzV5dw?oc=5",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "California Declares Statewide Emergency Ahead of Potentially Historic El Niño - Freedom For All Americans",
+    "shrnuti": "California Declares Statewide Emergency Ahead of Potentially Historic El Niño Freedom For All Americans",
+    "duvod": "bez-skutku",
+    "kategorie": [],
+    "posouzeni": null
+  },
+  {
     "id": "k-33166514a0aa789c",
     "zachyceno": "2026-09-22T11:35:26.867Z",
     "publikovano": "2026-09-22T11:34:30.000Z",
@@ -18,6 +66,24 @@
     "posouzeni": null
   },
   {
+    "id": "k-571f01946da33e05",
+    "zachyceno": "2026-09-22T12:03:10.315Z",
+    "publikovano": "2026-09-22T11:34:10.000Z",
+    "zdroj": {
+      "nazev": "Téma: kyber (anglicky)",
+      "url": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxQNllwNXVTcWRNaHJhSzhUSG5CWDBDNVVvMXdwaVM2QjQ5TG5lYWlCb3pCb21EUVNpR1ppeGUydWQ2a29uUl8wVzZERmtpMmstdUZWbFc2NHNrT2FKYWNTT20tVU5nRmVFQkJ2SE9TX0ZxMjBDUG9EZFhDc0E3RW1MMThXcVZZNkxRdjB1bEs5OHktOFNnVE9UTUVtekp6TnBLRUFqTUlwcTQ2N1ZOWC1FMzEyYTJYWlZXeV9SV2F5NHhYV1JHaGdEZVp6V1BwWjBpNlE?oc=5",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "CISA’s Cyber Storm X tests cybersecurity preparedness across transportation, water and wastewater sectors - Industrial Cyber",
+    "shrnuti": "CISA’s Cyber Storm X tests cybersecurity preparedness across transportation, water and wastewater sectors Industrial Cyber",
+    "duvod": "bez-skutku",
+    "kategorie": [
+      "kyber"
+    ],
+    "posouzeni": null
+  },
+  {
     "id": "k-f79a1e88f47e27ac",
     "zachyceno": "2026-09-22T11:35:26.733Z",
     "publikovano": "2026-09-22T11:32:00.000Z",
@@ -29,6 +95,22 @@
     },
     "titulek": "UK stars Take That to bring 'Dreamers' tour to Tartu next June",
     "shrnuti": "British boy band legends Take That are to appear in Estonia next summer as part of their \"Dreamers\" European tour, the group's first appearance here in over a decade.",
+    "duvod": "bez-skutku",
+    "kategorie": [],
+    "posouzeni": null
+  },
+  {
+    "id": "k-d275bd2ae1e1f000",
+    "zachyceno": "2026-09-22T12:03:10.101Z",
+    "publikovano": "2026-09-22T11:31:00.000Z",
+    "zdroj": {
+      "nazev": "Český rozhlas — domácí zprávy",
+      "url": "https://www.irozhlas.cz/zpravy-domov/pod-jednim-podnikem-olomoucky-kraj-schvalil-navrh-o-spolecne-sprave-ctyr_2609221331_brz",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Pod jedním podnikem. Olomoucký kraj schválil návrh o společné správě čtyř nemocnic se skupinou Agel",
+    "shrnuti": "Zastupitelé Olomouckého kraje schválili na svém pondělním jednání návrh dohody se soukromou zdravotnickou skupinou Agel. Její zástupci založí s hejtmanstvím společný podnik, který bude provozovat nemocnice v Přerově, Prostějově, Šternberku a Jeseníku. Dosavadní smlouvy platné od roku 2007 končí příš",
     "duvod": "bez-skutku",
     "kategorie": [],
     "posouzeni": null
@@ -349,6 +431,22 @@
     "kategorie": [
       "cr"
     ],
+    "posouzeni": null
+  },
+  {
+    "id": "k-bd408434091cac02",
+    "zachyceno": "2026-09-22T12:03:10.496Z",
+    "publikovano": "2026-09-22T09:39:41.000Z",
+    "zdroj": {
+      "nazev": "Česko — sabotaz",
+      "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxNU2tyaDBnOTJRU2J2RDRLcnZBSVNkMS1VdDU2VWVZQ3Ricy1GMmxHUGxDSW9VUWY1OFdHZkRkZGtsVmVDZTZfSVRENUMtRmZpV0o1dzRwNDBBLUZuM0E2UEFkN2NaOWR0b1FIczNuLWVoR2JOS0txemdBWW5lN2VrVjhXajBob0RQbGZnNnB4ZFlmQQ?oc=5",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "What JK Rowling’s Voldemort can teach us about Ukraine war - EUobserver",
+    "shrnuti": "What JK Rowling’s Voldemort can teach us about Ukraine war EUobserver",
+    "duvod": "bez-skutku",
+    "kategorie": [],
     "posouzeni": null
   },
   {
@@ -1292,6 +1390,26 @@
     },
     "titulek": "Lithuania plans key substation near Russia, fortified against explosive drones - The Straits Times",
     "shrnuti": "Lithuania plans key substation near Russia, fortified against explosive drones The Straits Times",
+    "duvod": "bez-skutku",
+    "kategorie": [
+      "drony",
+      "infrastruktura",
+      "rusko"
+    ],
+    "posouzeni": null
+  },
+  {
+    "id": "k-19c42d52052da5a5",
+    "zachyceno": "2026-09-22T12:03:10.276Z",
+    "publikovano": "2026-09-22T05:08:00.000Z",
+    "zdroj": {
+      "nazev": "Téma: energetika (anglicky)",
+      "url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxNc0xLY1M4Y0FuTlVPanc5NE9JaUowN2JDTm9ybHplU1hZcGRDcmhDc1JLcGJnX3J2b1RuT3pkR0QzR0dLMWRIRW1FangyRmNLRUhFR0kySXdTaUFfZ3I4WkVOb3RWU1d1UHNmZnprUTR6LXRaWFJtYmItOXotMkp0MWwxaXIyWnhBb2JHaVZxMDBCb0J1blhNbEI3WHRUZ2NzU2RTWEk1N001Z0ZqOXhLMF8yTWQ5ajdxTGpCQlh4TlgyN2Jf?oc=5",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "EXCLUSIVE: Lithuania plans key substation near Russia, fortified against explosive drones - Reuters",
+    "shrnuti": "EXCLUSIVE: Lithuania plans key substation near Russia, fortified against explosive drones Reuters",
     "duvod": "bez-skutku",
     "kategorie": [
       "drony",
@@ -8759,151 +8877,6 @@
     "posouzeni": {
       "podezreni": "zadne",
       "duvod": "Houbaření, sběr hub, příroda",
-      "kdy": "2026-09-19T10:03:46.805Z"
-    }
-  },
-  {
-    "id": "k-31b5facdfb49d716",
-    "zachyceno": "2026-09-19T08:00:22.004Z",
-    "publikovano": "2026-09-19T05:40:00.000Z",
-    "zdroj": {
-      "nazev": "Český rozhlas — domácí zprávy",
-      "url": "https://www.irozhlas.cz/sport/tenis/uzit-si-vyhru-v-naplnene-domaci-hale-je-uzasne-pocit-ktery-nelze-na-turnaji_2609190740_rej",
-      "typ": "primary",
-      "primarni": true
-    },
-    "titulek": "Užít si výhru v naplněné domácí hale je úžasné. Pocit, který nelze na turnaji zažít, pochvaluje si Lehečka",
-    "shrnuti": "Čeští tenisté hrají se Spojenými státy po úvodním dni nerozhodně 1:1. Jakub Menšík nejprve podlehl Learneru Tienovi, Jiří Lehečka pak porazil Bena Sheltona. I v sobotu se bude hrát před zaplněnými tribunami libeňské haly, kam se daviscupové utkání vrátilo po 13 letech.",
-    "duvod": "bez-skutku",
-    "kategorie": [],
-    "posouzeni": {
-      "podezreni": "zadne",
-      "duvod": "Tenis, Davis Cup, sport",
-      "kdy": "2026-09-19T10:03:46.805Z"
-    }
-  },
-  {
-    "id": "k-5995987fa49b389d",
-    "zachyceno": "2026-09-19T08:00:22.103Z",
-    "publikovano": "2026-09-19T05:23:00.000Z",
-    "zdroj": {
-      "nazev": "ERR News (Estonsko)",
-      "url": "https://news.err.ee/1610142178/justice-chancellor-challenges-estonia-s-new-retirement-age-system",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Justice chancellor challenges Estonia's new retirement age system",
-    "shrnuti": "Justice Chancellor Ülle Madise is questioning a new retirement age system that could mean people in Estonia born in the same year start receiving a pension at different times.",
-    "duvod": "bez-skutku",
-    "kategorie": [],
-    "posouzeni": {
-      "podezreni": "stredni",
-      "duvod": "Systém důchodového věku v Estonsku",
-      "kdy": "2026-09-19T10:03:46.805Z"
-    }
-  },
-  {
-    "id": "k-fc0a6372fb1d986b",
-    "zachyceno": "2026-09-19T08:00:22.007Z",
-    "publikovano": "2026-09-19T05:18:00.000Z",
-    "zdroj": {
-      "nazev": "Český rozhlas — domácí zprávy",
-      "url": "https://www.irozhlas.cz/kultura/film/v-prelouci-predaji-dabingove-ceny-frantiska-filipovskeho-zajemci-mohou-udalost_2609190718_tez",
-      "typ": "primary",
-      "primarni": true
-    },
-    "titulek": "V Přelouči předají dabingové ceny Františka Filipovského. Zájemci mohou událost sledovat živě",
-    "shrnuti": "V sobotu 19. září se v Přelouči uskuteční už 32. ročník Cen Františka Filipovského za dabing. Celá událost bude přenášena živě v iVysílání České televize. Návštěvníci města budou mít také možnost udílení sledovat na velkoplošné obrazovce na Masarykově náměstí. Porota letos vybírala ze 140 návrhů, na",
-    "duvod": "bez-skutku",
-    "kategorie": [],
-    "posouzeni": {
-      "podezreni": "zadne",
-      "duvod": "Ceny za dabing, filmová kultura",
-      "kdy": "2026-09-19T10:03:46.805Z"
-    }
-  },
-  {
-    "id": "k-8f0910b3e6134be5",
-    "zachyceno": "2026-09-19T08:00:22.104Z",
-    "publikovano": "2026-09-19T05:06:00.000Z",
-    "zdroj": {
-      "nazev": "ERR News (Estonsko)",
-      "url": "https://news.err.ee/1610142625/experts-russia-s-elections-have-no-impact-on-estonia",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Experts: Russia's elections have no impact on Estonia",
-    "shrnuti": "The pseudo‑elections that began in Russia on Friday do not directly affect Estonia, according to foreign‑policy experts Rainer Saks, Karmo Tüür and Marko Mihkelson. What is interesting, they noted, is how many Russian citizens living in Estonia will go vote for the State Duma.",
-    "duvod": "bez-skutku",
-    "kategorie": [
-      "rusko"
-    ],
-    "posouzeni": {
-      "podezreni": "zadne",
-      "duvod": "Ruské volby, bez příslušnosti k Česku",
-      "kdy": "2026-09-19T10:03:46.805Z"
-    }
-  },
-  {
-    "id": "k-ed7e3b1bc2ede3ac",
-    "zachyceno": "2026-09-19T08:00:22.009Z",
-    "publikovano": "2026-09-19T05:00:00.000Z",
-    "zdroj": {
-      "nazev": "Český rozhlas — domácí zprávy",
-      "url": "https://www.irozhlas.cz/zpravy-domov/vzacne-lokomotivy-se-na-kolejich-etcs-projedou-jen-tezko-benesovsky-festival-tak_2609190700_brz",
-      "typ": "primary",
-      "primarni": true
-    },
-    "titulek": "Vzácné lokomotivy se na kolejích ETCS projedou jen těžko. Benešovský festival tak pořádá poslední ročník",
-    "shrnuti": "Vzácné historické lokomotivy z Česka i zahraničí dorazily na 7. ročník Festivalu parních lokomotiv v Benešově. Divácky oblíbená akce je ale letos naposledy. Na trati z Prahy přes Benešov do Českých Budějovic bude od poloviny prosince letošního roku fungovat nový zabezpečovací systém ETCS, který parn",
-    "duvod": "bez-skutku",
-    "kategorie": [],
-    "posouzeni": {
-      "podezreni": "zadne",
-      "duvod": "Festival parních lokomotiv, kultura",
-      "kdy": "2026-09-19T10:03:46.805Z"
-    }
-  },
-  {
-    "id": "k-eb193e8cab8b4b7e",
-    "zachyceno": "2026-09-19T08:00:22.013Z",
-    "publikovano": "2026-09-19T04:57:00.000Z",
-    "zdroj": {
-      "nazev": "Český rozhlas — domácí zprávy",
-      "url": "https://www.irozhlas.cz/zpravy-svet/sebevrazedny-utok-v-pakistanu-zabil-nejmene-31-lidi-v-policejnim-arealu-se-stale_2609190657_ape",
-      "typ": "primary",
-      "primarni": true
-    },
-    "titulek": "Sebevražedný útok v Pákistánu zabil nejméně 31 lidí. V policejním areálu se stále skrývají ozbrojenci",
-    "shrnuti": "Na nejméně 31 vzrostl počet lidí, které zabil páteční sebevražedný útok s použitím silné bomby u mešity v policejním areálu na severozápadě Pákistánu. Informovala o tom v sobotu agentura AFP s odkazem na místního činitele policie, podle něhož utrpěla zranění stovka lidí. Dosud poslední zveřejněné úd",
-    "duvod": "bez-mista",
-    "kategorie": [
-      "sabotaz",
-      "vojsko"
-    ],
-    "posouzeni": {
-      "podezreni": "vysoke",
-      "duvod": "Sebevražedný útok v Pákistánu, 31 mrtvých",
-      "kdy": "2026-09-19T10:03:46.805Z"
-    }
-  },
-  {
-    "id": "k-8534af617122fe00",
-    "zachyceno": "2026-09-19T08:00:22.014Z",
-    "publikovano": "2026-09-19T04:41:00.000Z",
-    "zdroj": {
-      "nazev": "Český rozhlas — domácí zprávy",
-      "url": "https://www.irozhlas.cz/kultura/divadlo/komedie-volpone-jako-obraz-doby-mestske-divadlo-zlin-zahaji-sezonu-hrou-o_2609190641_tez",
-      "typ": "primary",
-      "primarni": true
-    },
-    "titulek": "Komedie Volpone jako obraz doby. Městské divadlo Zlín zahájí sezonu hrou o bohatém měšťanovi",
-    "shrnuti": "Městské divadlo Zlín zahájí v sobotu 19. září sezonu uvedením satirické komedie Volpone. Hra pojednává o bohatém benátském měšťanovi, který předstírá smrtelnou nemoc a s pomocí svého sluhy hledá údajného dědice. Příběh o chamtivosti a lidské hlouposti je podle tvůrců aktuální i po staletích.",
-    "duvod": "bez-skutku",
-    "kategorie": [],
-    "posouzeni": {
-      "podezreni": "zadne",
-      "duvod": "Divadelní představení, kultura",
       "kdy": "2026-09-19T10:03:46.805Z"
     }
   }
