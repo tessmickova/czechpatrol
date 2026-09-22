@@ -1,11 +1,16 @@
 {
-  "aktualizovano": "2026-09-22T02:02:39.565Z",
+  "aktualizovano": "2026-09-22T03:02:38.975Z",
   "stavy": [
     {
       "klic": "cloudflare",
       "stav": "omezeni",
       "popis": "Minor Service Outage",
       "incidenty": [
+        {
+          "nazev": "Network connectivity issues in LHR, London",
+          "odkaz": "https://www.cloudflarestatus.com/incidents/nhf2kr8q3nfw",
+          "aktualizovano": "2026-09-22T02:26:27.000Z"
+        },
         {
           "nazev": "Incorrect geo location for some Cloudflare WARP users",
           "odkaz": "https://www.cloudflarestatus.com/incidents/9g65dxfbcjln",
@@ -18,7 +23,7 @@
         "Americana, Brazil - (QWJ)",
         "Africa"
       ],
-      "zkontrolovano": "2026-09-22T02:02:39.565Z",
+      "zkontrolovano": "2026-09-22T03:02:38.975Z",
       "chyba": null
     },
     {
@@ -27,7 +32,7 @@
       "popis": null,
       "incidenty": [],
       "postizene": [],
-      "zkontrolovano": "2026-09-22T02:02:39.565Z",
+      "zkontrolovano": "2026-09-22T03:02:38.975Z",
       "chyba": "neznámý indikátor „maintenance\""
     },
     {
@@ -36,7 +41,7 @@
       "popis": "All Systems Operational",
       "incidenty": [],
       "postizene": [],
-      "zkontrolovano": "2026-09-22T02:02:39.565Z",
+      "zkontrolovano": "2026-09-22T03:02:38.975Z",
       "chyba": null
     }
   ]
