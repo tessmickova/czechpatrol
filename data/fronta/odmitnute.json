@@ -1,5 +1,23 @@
 [
   {
+    "id": "k-371f310d82154e1e",
+    "zachyceno": "2026-09-22T21:17:41.859Z",
+    "publikovano": "2026-09-22T21:03:49.000Z",
+    "zdroj": {
+      "nazev": "Téma: nouzovy-stav (anglicky)",
+      "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxQUFlQM2xWLTh3dW1qSHdHR0djTEhjUG14TkV1QWZLWUtBOW56MmhGaVJSTzBzX3YydmNUTzEtenQ5WTAzZHkzTmUwZ2ZhV09fRUxKODlJRXJ4Z2ZGb1dSQ3Q0OWN0QzhfMEtKR3dmYWd5OVRsZl96WDNkM18wWEtIaW80RQ?oc=5",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "California Declares State of Emergency Due to El Niño - SnowBrains",
+    "shrnuti": "California Declares State of Emergency Due to El Niño SnowBrains",
+    "duvod": "bez-mista",
+    "kategorie": [
+      "pravo"
+    ],
+    "posouzeni": null
+  },
+  {
     "id": "k-2d43a41489f51bba",
     "zachyceno": "2026-09-22T21:02:26.885Z",
     "publikovano": "2026-09-22T20:56:07.000Z",
@@ -8535,26 +8553,6 @@
       "podezreni": "zadne",
       "duvod": "Vědecký experiment o ledovcích a ovčí vlně, bez bezpečnostního obsahu.",
       "kdy": "2026-09-19T20:39:44.345Z"
-    }
-  },
-  {
-    "id": "k-d7b17a2ea99113a5",
-    "zachyceno": "2026-09-19T20:02:25.904Z",
-    "publikovano": "2026-09-19T19:45:00.000Z",
-    "zdroj": {
-      "nazev": "Český rozhlas — domácí zprávy",
-      "url": "https://www.irozhlas.cz/zpravy-svet/ve-spojenych-statech-vzrostl-pocet-detskych-otrav-drogami-problemem-jsou_2609192130_eml",
-      "typ": "primary",
-      "primarni": true
-    },
-    "titulek": "Ve Spojených státech vzrostl počet dětských otrav drogami. Problémem jsou obzvlášť konopné potraviny",
-    "shrnuti": "Malé děti poznávají svět tím, že se věcí dotýkají, ochutnávají je a strkají si je do úst. To může být nebezpečné, pokud zdánlivě obyčejný bonbón nebo sušenka obsahuje například konopí.",
-    "duvod": "bez-skutku",
-    "kategorie": [],
-    "posouzeni": {
-      "podezreni": "zadne",
-      "duvod": "Zdravotní téma, nejde o bezpečnostní událost.",
-      "kdy": "2026-09-19T20:03:56.706Z"
     }
   }
 ]
