@@ -626,5 +626,82 @@
     "aiZpracovano": true,
     "lidskyOvereno": false,
     "archivniZaznam": false
+  },
+  {
+    "kam": "zaznam",
+    "pripravil": "patrol",
+    "pripraveno": "2026-09-22T21:31:32.839Z",
+    "id": "i-2026-09-22-8f53dde77d",
+    "slug": "md-8f53dde77d",
+    "titulek": "Moldavsko: parlament schválil na 60 dní nouzový stav v energetickém a hydrologickém sektoru; platí od 26. září",
+    "kratkyTitulek": "Moldavsko: parlament schválil na 60 dní nouzový stav v energetickém a hydrologickém sektoru; platí od 26. září",
+    "zeme": "Moldavsko",
+    "kodZeme": "MD",
+    "kategorie": [
+      "infrastruktura",
+      "diplomacie"
+    ],
+    "datumUdalosti": "2026-09-22T00:00:00Z",
+    "datumZjisteni": "2026-09-22T00:00:00Z",
+    "aktualizovano": "2026-09-22T21:31:32.839Z",
+    "zavaznost": "Y2",
+    "jistota": "vysoka",
+    "stav": "neuvedeno",
+    "atribuce": "neznama",
+    "puvodce": null,
+    "druh": "opatreni",
+    "fakta": [
+      "Podle TVR Moldova a Moldova Live schválil moldavský parlament 22. 9. 2026 54 hlasy nouzový stav v energetickém a hydrologickém sektoru na 60 dní; platit začne 26. 9. 2026.",
+      "Podle TVR Moldova premiér Vasile Tofan zdůvodnil krok omezením vývozu plynu z Kataru kvůli válce v Zálivu a zničenými rafineriemi v souvislosti s válkou na Ukrajině; ministr energetiky varoval, že cena nafty by mohla přesáhnout 40 lei za litr.",
+      "Podle TVR Moldova ministr životního prostředí uvedl, že přítoky do přehrady jsou třikrát nižší než odtoky kvůli suchu.",
+      "Podle Moldova Live umožní nouzový stav Národní komisi pro krizové řízení zvláštní pravidla pro nákup, skladování a distribuci energetických zdrojů, přednostní dovoz, dočasné omezení vývozu ze strategických zásob a dočasné zásahy do cen, obchodních marží, spotřebních daní a poplatků."
+    ],
+    "neznameho": [
+      "Oficiální text usnesení parlamentu (parlament.md) jsem neotevřel, vrátil HTTP 403; údaje jsou z médií.",
+      "Jaký přímý dopad bude mít na domácnosti a firmy, zdroje konkrétně neuvádějí.",
+      "Vládní web (gov.md) k tomu zprávu nemá na otevřené stránce."
+    ],
+    "vyznam": "",
+    "eskalacniSpousteče": [],
+    "deeskalacniSignaly": [],
+    "zdroje": [
+      {
+        "nazev": "Téma: nouzovy-stav (anglicky)",
+        "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxQbDlyel9xWk1zcFBDSlNWZG5qMUEyQzVlUmZNYmlTM2NqVExtbzBVdXdDeXp4RlppVWE2SmctRkM4aVdSbzF0dEFfU28zdktqck9odkVhZHJSZ2JKVlV1VjhSSi1lNjMydGtpRDhGcjJId2xHVTR1aVBER2pDMU5PSktMdWVIVWhpdDdfYzc5cGJMZnhuY25POEpHT2hIWVpidTloNw?oc=5",
+        "typ": "media",
+        "publikovano": "2026-09-22T00:00:00Z",
+        "primarni": false,
+        "jazyk": "en"
+      },
+      {
+        "nazev": "Moldova Live — Moldova Declares 60-Day State of Emergency in Energy and Hydrological Sectors",
+        "url": "https://moldovalive.md/moldova-declares-60-day-state-of-emergency-in-energy-and-hydrological-sectors/",
+        "typ": "media",
+        "publikovano": "2026-09-22T00:00:00Z",
+        "primarni": false,
+        "jazyk": "en"
+      },
+      {
+        "nazev": "TVR Moldova — A fost aprobată starea de urgenţă pentru 60 de zile în sectoarele energetic şi hidrologic",
+        "url": "https://tvrmoldova.md/article/f23dcb2a7cc3a8c8/a-fost-aprobata-starea-de-urgenta-pentru-60-de-zile-in-sectoarele-energetic-si-hidrologic.html",
+        "typ": "media",
+        "publikovano": "2026-09-22T00:00:00Z",
+        "primarni": false,
+        "jazyk": "ro"
+      }
+    ],
+    "souvisejici": [],
+    "historie": [
+      {
+        "kdy": "2026-09-22T00:00:00Z",
+        "text": "Zachyceno automatickým sběrem, druhý zdroj doložen před zařazením do fronty.",
+        "novySignal": true
+      }
+    ],
+    "novy": true,
+    "zapocitanoTyden": "2026-09-22",
+    "aiZpracovano": true,
+    "lidskyOvereno": false,
+    "archivniZaznam": false
   }
 ]
