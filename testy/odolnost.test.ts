@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { bodySelhani, coChybi, coDokoupit, FUNKCE, hodnotFunkci, horizonty, lidskaDoba, PRAZDNY_PROFIL, souhrn, vydrze, ZAVISLOSTI, type Profil } from "../src/lib/odolnost";
+import { bodySelhani, coChybi, coDokoupit, doporucenaZasobaVody, KRAJE_ODOLNOSTI, TRIDY_SRAZEK, FUNKCE, hodnotFunkci, horizonty, lidskaDoba, PRAZDNY_PROFIL, souhrn, vydrze, ZAVISLOSTI, type Profil } from "../src/lib/odolnost";
 
 /*
   Model odolnosti je deterministický a musí dávat stejný výsledek pro
@@ -95,6 +95,23 @@ describe("horizonty a spotřeba", () => {
     const s = hodnotFunkci(f, profil({ komunikace: ["mobil-a"] }, { kontext: { ...PRAZDNY_PROFIL.kontext, rodinaVDosahu: true } }));
     expect(s.mam.map((c) => c.klic)).toContain("rodina-dosah");
     expect(s.redundance).toBe(3);
+  });
+
+  it("kraje: čtrnáct, každý se známou třídou; sušší kraj zvedne doporučenou rezervu vody", () => {
+    expect(KRAJE_ODOLNOSTI.length).toBe(14);
+    for (const k of KRAJE_ODOLNOSTI) expect(TRIDY_SRAZEK[k.trida], k.klic).toBeDefined();
+    const zaklad = doporucenaZasobaVody(profil({}, { osob: 2 }), 7);
+    const jm = doporucenaZasobaVody(profil({}, { osob: 2, kontext: { ...PRAZDNY_PROFIL.kontext, kraj: "jihomoravsky" } }), 7);
+    expect(zaklad.litru).toBe(42);
+    expect(jm.litru).toBe(Math.ceil(42 * TRIDY_SRAZEK.sussi.nasobekRezervy));
+    expect(jm.predpoklad).toMatch(/orientační/);
+    const lib = doporucenaZasobaVody(profil({}, { osob: 2, kontext: { ...PRAZDNY_PROFIL.kontext, kraj: "liberecky" } }), 7);
+    expect(lib.litru).toBe(42);
+  });
+
+  it("v sušším kraji přibude doporučení na vodu, když zásoba nekryje 7 dní", () => {
+    const d = coChybi(profil({ "pitna-voda": ["vodovod", "zasoba"] }, { osob: 2, zasoby: { pitnaVodaL: 30, uzitkovaVodaL: null, jidloDni: 10, lekyDni: null }, kontext: { ...PRAZDNY_PROFIL.kontext, kraj: "jihomoravsky" } }));
+    expect(d.some((x) => x.druh === "zasoba" && /Jihomoravský/.test(x.nadpis))).toBe(true);
   });
 
   it("co dokoupit: věci bez značky, nejdřív k nejdůležitější funkci, nejvýš osm", () => {

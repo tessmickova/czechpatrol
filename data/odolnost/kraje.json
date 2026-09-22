@@ -1,0 +1,30 @@
+{
+  "_poznamka": "Kraje podle dlouhodobých srážkových poměrů. Zařazení do tří tříd je ORIENTAČNÍ podle obecně známé geografie (srážkový stín Krušných hor a Polabí, jižní Morava jako nejsušší oblast, návětrné horské kraje jako nejvlhčí). Číselné průměry (mm/rok, počet dní se srážkami) se doplní z úřední řady ČHMÚ Územní srážky; dokud tam nejsou, web ukazuje jen třídu a říká, že je orientační. Nic z čísel se nevymýšlí.",
+  "zdroj": {
+    "nazev": "ČHMÚ — Územní srážky (dlouhodobé průměry po krajích)",
+    "url": "https://www.chmi.cz/historicka-data/pocasi/uzemni-srazky",
+    "overeno": false,
+    "poznamka": "Adresu je třeba otevřít a průměry opsat do polí `srazkyMmRok` a `dniSeSrazkami`; z tohoto prostředí nešlo."
+  },
+  "tridy": {
+    "sussi": { "nazev": "sušší oblast", "nasobekRezervy": 1.3, "popis": "Méně srážek a delší suchá období: studny v suchých letech klesají, dešťová voda je nejistá a náhradní zásobování obce bývá vytížené. Rezervu pitné vody plánujte o třetinu větší." },
+    "prumer": { "nazev": "běžné srážky", "nasobekRezervy": 1.0, "popis": "Srážky kolem celostátního průměru. Platí základní rezerva." },
+    "vlhci": { "nazev": "vlhčí oblast", "nasobekRezervy": 1.0, "popis": "Více srážek a sněhu: dešťová voda je spolehlivější zdroj užitkové vody, zato v zimě roste váha tepla a sjízdnosti cest." }
+  },
+  "kraje": [
+    { "klic": "praha", "nazev": "Hlavní město Praha", "trida": "sussi", "srazkyMmRok": null, "dniSeSrazkami": null },
+    { "klic": "stredocesky", "nazev": "Středočeský", "trida": "sussi", "srazkyMmRok": null, "dniSeSrazkami": null },
+    { "klic": "jihocesky", "nazev": "Jihočeský", "trida": "prumer", "srazkyMmRok": null, "dniSeSrazkami": null },
+    { "klic": "plzensky", "nazev": "Plzeňský", "trida": "prumer", "srazkyMmRok": null, "dniSeSrazkami": null },
+    { "klic": "karlovarsky", "nazev": "Karlovarský", "trida": "prumer", "srazkyMmRok": null, "dniSeSrazkami": null },
+    { "klic": "ustecky", "nazev": "Ústecký", "trida": "sussi", "srazkyMmRok": null, "dniSeSrazkami": null, "poznamka": "Srážkový stín Krušných hor; Žatecko a Lounsko patří k nejsušším místům Česka." },
+    { "klic": "liberecky", "nazev": "Liberecký", "trida": "vlhci", "srazkyMmRok": null, "dniSeSrazkami": null },
+    { "klic": "kralovehradecky", "nazev": "Královéhradecký", "trida": "prumer", "srazkyMmRok": null, "dniSeSrazkami": null },
+    { "klic": "pardubicky", "nazev": "Pardubický", "trida": "prumer", "srazkyMmRok": null, "dniSeSrazkami": null },
+    { "klic": "vysocina", "nazev": "Vysočina", "trida": "prumer", "srazkyMmRok": null, "dniSeSrazkami": null },
+    { "klic": "jihomoravsky", "nazev": "Jihomoravský", "trida": "sussi", "srazkyMmRok": null, "dniSeSrazkami": null, "poznamka": "Nejsušší kraj Česka; jižní Morava má opakovaně dlouhá období bez deště a klesající hladiny studní." },
+    { "klic": "olomoucky", "nazev": "Olomoucký", "trida": "prumer", "srazkyMmRok": null, "dniSeSrazkami": null },
+    { "klic": "zlinsky", "nazev": "Zlínský", "trida": "prumer", "srazkyMmRok": null, "dniSeSrazkami": null },
+    { "klic": "moravskoslezsky", "nazev": "Moravskoslezský", "trida": "vlhci", "srazkyMmRok": null, "dniSeSrazkami": null, "poznamka": "Beskydy patří k nejdeštivějším místům Česka; v zimě sníh a náledí." }
+  ]
+}

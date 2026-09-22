@@ -6,7 +6,7 @@ import { ESHOP, OBCHODY } from "@/config/web";
 import { useUcet } from "@/lib/ucet";
 import { zaznamejUdalost } from "@/lib/mereni";
 import {
-  DUVODY_NEMOHU, lidskaDoba, maCestu, nactiProfil, poznamkaKPoctu, PRAZDNY_PROFIL, souhrn, ulozProfil, VERZE_KATALOGU, ZAVISLOSTI,
+  DUVODY_NEMOHU, doporucenaZasobaVody, kraj as krajProfilu, KRAJE_ODOLNOSTI, lidskaDoba, maCestu, nactiProfil, poznamkaKPoctu, PRAZDNY_PROFIL, souhrn, TRIDY_SRAZEK, ulozProfil, VERZE_KATALOGU, ZAVISLOSTI,
   type Doporuceni, type HodnoceniFunkce, type Horizont, type Kontext, type Nakup, type Profil,
 } from "@/lib/odolnost";
 import { POLE, Popisek, TLACITKO_TICHE } from "./formulare";
@@ -135,6 +135,18 @@ export function OdolnostKlient() {
             <div><Popisek pro="od-osob">Lidí</Popisek><input id="od-osob" type="number" min={0} className={`${POLE} cislice`} value={p.osob} onChange={(e) => uloz({ ...p, osob: Math.max(0, Number(e.target.value) || 0) })} /></div>
             <div><Popisek pro="od-zvirat">Zvířat, která pijí a jedí s vámi</Popisek><input id="od-zvirat" type="number" min={0} className={`${POLE} cislice`} value={p.zvirat} onChange={(e) => uloz({ ...p, zvirat: Math.max(0, Number(e.target.value) || 0) })} /></div>
           </div>
+          <div className="mt-4">
+            <Popisek pro="od-kraj">Kraj</Popisek>
+            <select id="od-kraj" value={p.kontext.kraj} onChange={(e) => kontext({ kraj: e.target.value })} className={POLE}>
+              <option value="">neuvedeno</option>
+              {KRAJE_ODOLNOSTI.map((k) => <option key={k.klic} value={k.klic}>{k.nazev}</option>)}
+            </select>
+            <p className="mt-1 text-drobne text-tlum2">
+              {krajProfilu(p)
+                ? `${TRIDY_SRAZEK[krajProfilu(p)!.trida].nazev}: ${TRIDY_SRAZEK[krajProfilu(p)!.trida].popis}${krajProfilu(p)!.poznamka ? ` ${krajProfilu(p)!.poznamka}` : ""}`
+                : "Podle kraje se upraví doporučená zásoba vody: kde prší méně, je větší."}
+            </p>
+          </div>
           <div className="mt-3 divide-y divide-linka2">
             <Prepnuti id="od-rodina" nazev="Rodina nebo blízcí v pěší dostupnosti" popis="počítá se jako cesta u spojení, dopravy a péče" hodnota={p.kontext.rodinaVDosahu} onChange={(v) => kontext({ rodinaVDosahu: v })} />
             <Prepnuti id="od-pece" nazev="Někdo je závislý na péči, léku nebo přístroji" popis="bez podrobností; jen zvýší váhu doporučení" hodnota={p.kontext.zavislyNaPeci} onChange={(v) => kontext({ zavislyNaPeci: v })} />
@@ -217,7 +229,13 @@ export function OdolnostKlient() {
 
           <div className="mt-6 border-t border-linka2 pt-5">
             <div className="flex items-center gap-1.5"><span className="stitek">Jak dlouho vydrží</span><Otaznik popis={<span className="block">Předpoklady jsou u každé položky. Číslo je k plánování, ne k uklidnění.</span>} /></div>
-            <ul className="mt-2">
+            {(() => { const d = doporucenaZasobaVody(p, 7); return (
+              <p className="mt-2 flex items-center justify-between gap-3 py-1.5 text-male">
+                <span className="flex items-center gap-1.5 text-tlum">Doporučená zásoba pitné vody na 7 dní<Otaznik popis={<span className="block">{d.predpoklad}</span>} /></span>
+                <span className="cislice shrink-0 font-semibold text-inkoust">{d.litru} l{d.nasobek !== 1 ? <span className="font-normal text-tlum2"> · {krajProfilu(p)?.nazev}</span> : ""}</span>
+              </p>
+            ); })()}
+            <ul className="mt-1 border-t border-linka2 pt-1">
               {s.vydrze.filter((v) => v.klic !== "energie" || p.energie.kapacitaWh > 0).map((v) => (
                 <li key={v.klic} className="flex items-center justify-between gap-3 py-1.5">
                   <span className="flex items-center gap-1.5 text-male text-tlum">{v.nazev}<Otaznik popis={<span className="block">{v.predpoklad}</span>} /></span>

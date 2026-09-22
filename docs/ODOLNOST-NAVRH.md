@@ -63,6 +63,12 @@ Z toho `src/lib/odolnost.ts` deterministicky počítá:
   špička naráz, panely ve Wp podle roční doby a účinnosti, baterie na dny
   bez slunce; slunečné hodiny jsou orientační, přesné dává PVGIS. Bez
   značek — porovnává se se štítkem powerstation.
+- **Kraj a srážky** (23. 9. 2026): `data/odolnost/kraje.json` řadí 14 krajů
+  do tří tříd (sušší · běžné · vlhčí) podle dlouhodobých srážkových poměrů;
+  v sušším kraji je doporučená zásoba pitné vody o třetinu větší a při
+  nedostatku přibude doporučení. Zařazení je orientační; číselné průměry
+  (mm/rok, dny se srážkami) se doplní z řady ČHMÚ Územní srážky, adresa je
+  v souboru s `overeno: false`.
 - **Nové funkce**: WC a odpadní voda (kanalizace samospádem, tlaková,
   domovní ČOV, septik, náhradní WC), chlazení jídla a léků, požár a otrava
   plynem.

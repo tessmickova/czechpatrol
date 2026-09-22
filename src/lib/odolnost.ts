@@ -1,4 +1,5 @@
 import katalog from "../../data/odolnost/funkce.json";
+import krajeData from "../../data/odolnost/kraje.json";
 import { spotrebaPoRezimech, type VybranySpotrebic } from "./energie";
 
 /*
@@ -36,8 +37,10 @@ export interface Cesta {
   kontext?: keyof Kontext;
 }
 
-/** Kontext domácnosti. Bez adresy: jen druh bydlení a sídla, počty a rodina v dosahu. */
+/** Kontext domácnosti. Bez adresy: kraj, druh bydlení a sídla, počty a rodina v dosahu. */
 export interface Kontext {
+  /** Klíč kraje z data/odolnost/kraje.json; "" = neuvedeno. */
+  kraj: string;
   bydleni: "byt" | "dum" | "";
   sidlo: "mesto" | "venkov" | "";
   deti: number;
@@ -66,6 +69,34 @@ export const ZAVISLOSTI = katalog.zavislosti as Record<string, { nazev: string }
 export const VERZE_KATALOGU = katalog.verze;
 /* 72 hodin je základ, ne cíl; 24 hodin se nepočítá — je to málo. Konec u 45 a 60 dní. */
 export const HORIZONTY_DNI = [3, 7, 14, 30, 45, 60] as const;
+
+/* ---------- kraj a srážky ---------- */
+
+export type TridaSrazek = "sussi" | "prumer" | "vlhci";
+export interface Kraj { klic: string; nazev: string; trida: TridaSrazek; srazkyMmRok: number | null; dniSeSrazkami: number | null; poznamka?: string }
+export const KRAJE_ODOLNOSTI = krajeData.kraje as Kraj[];
+export const TRIDY_SRAZEK = krajeData.tridy as Record<TridaSrazek, { nazev: string; nasobekRezervy: number; popis: string }>;
+export const ZDROJ_KRAJU = krajeData.zdroj;
+
+export function kraj(profil: Profil): Kraj | null {
+  return KRAJE_ODOLNOSTI.find((k) => k.klic === profil.kontext.kraj) ?? null;
+}
+
+/**
+ * Doporučená zásoba pitné vody na daný počet dní, v litrech. V sušším
+ * kraji o třetinu víc: studny v suchu klesají, dešťová voda je nejistá,
+ * náhradní zásobování je vytížené. Násobek je v kraje.json a jde přečíst.
+ */
+export function doporucenaZasobaVody(profil: Profil, dni: number): { litru: number; nasobek: number; trida: TridaSrazek | null; predpoklad: string } {
+  const voda = FUNKCE.find((f) => f.klic === "pitna-voda")!.zasoba!;
+  const naDen = Math.max(0, profil.osob) * (voda.naOsobuDen ?? 0) + Math.max(0, profil.zvirat) * (voda.naZvireDen ?? 0);
+  const k = kraj(profil);
+  const trida = k?.trida ?? null;
+  const nasobek = trida ? TRIDY_SRAZEK[trida].nasobekRezervy : 1;
+  const litru = Math.ceil(naDen * dni * nasobek);
+  const predpoklad = `${voda.naOsobuDen} l na osobu a den, ${voda.naZvireDen} l na zvíře, ${dni} dní${trida && nasobek !== 1 ? `, ×${nasobek} pro ${TRIDY_SRAZEK[trida].nazev}` : ""}. ${k ? `Zařazení kraje je orientační podle dlouhodobých srážkových poměrů; číselné průměry doplníme z ČHMÚ.` : "Kraj neuveden — platí základní rezerva."}`;
+  return { litru, nasobek, trida, predpoklad };
+}
 export type HorizontDni = (typeof HORIZONTY_DNI)[number];
 
 /** Co člověk zadává. Nic víc se neukládá — u každého pole je řečeno proč. */
@@ -99,7 +130,7 @@ export const PRAZDNY_PROFIL: Profil = {
   zasoby: { pitnaVodaL: null, uzitkovaVodaL: null, jidloDni: null, lekyDni: null },
   energie: { kapacitaWh: 0, potrebaDenWh: 0, dobijeni: false },
   nemohu: {},
-  kontext: { bydleni: "", sidlo: "", deti: 0, seniori: 0, zavislyNaPeci: false, rodinaVDosahu: false },
+  kontext: { kraj: "", bydleni: "", sidlo: "", deti: 0, seniori: 0, zavislyNaPeci: false, rodinaVDosahu: false },
   vybaveni: {},
 };
 
@@ -375,6 +406,23 @@ export function coChybi(profil: Profil): Doporuceni[] {
     });
   }
 
+  /* 4b. Kraj: v sušší oblasti doporučená rezerva vody na 7 dní, když ji zadaná zásoba nekryje. */
+  const k = kraj(profil);
+  if (k && TRIDY_SRAZEK[k.trida].nasobekRezervy > 1 && profil.zasoby.pitnaVodaL !== null) {
+    const d = doporucenaZasobaVody(profil, 7);
+    if (profil.zasoby.pitnaVodaL < d.litru && !vysledek.some((x) => x.druh === "zasoba")) {
+      vysledek.push({
+        druh: "zasoba",
+        nadpis: `Pitná voda: pro ${k.nazev} kraj doporučujeme ${d.litru} l na 7 dní, máte ${profil.zasoby.pitnaVodaL} l`,
+        proc: TRIDY_SRAZEK[k.trida].popis,
+        zaklad: d.predpoklad,
+        resi: ["Pitná voda"],
+        alternativy: ["Doplnit nádoby a naplnit je z kohoutku, dokud teče.", "Znát výdejní místa obce pro náhradní zásobování.", "Oddělit pitnou a užitkovou vodu, aby pitná nešla na splachování."],
+        kdyNeni: "Když máte vlastní zdroj s ruční pumpou, který v suchu nevysychá.",
+      });
+    }
+  }
+
   /* 5. Kompenzace pro to, co člověk označil jako neřešitelné. */
   for (const h of hod.filter((h) => h.nemohu).slice(0, 1)) {
     vysledek.push({
@@ -486,7 +534,7 @@ export function nactiProfil(): Profil | null {
       zasoby: { ...PRAZDNY_PROFIL.zasoby, ...(p.zasoby ?? {}) },  // null zůstává null: nezadáno není nula
       energie: { ...PRAZDNY_PROFIL.energie, ...(p.energie ?? {}) },
       nemohu: p.nemohu && typeof p.nemohu === "object" ? p.nemohu : {},
-      kontext: { ...PRAZDNY_PROFIL.kontext, ...(p.kontext ?? {}) },
+      kontext: { ...PRAZDNY_PROFIL.kontext, ...(p.kontext ?? {}) },  // kraj: "" u starších profilů
       vybaveni: p.vybaveni && typeof p.vybaveni === "object" ? p.vybaveni : {},
     };
   } catch {
