@@ -14,6 +14,11 @@ enabled = true
 # Odkud smí web volat API (CORS) a pro který doménový název platí passkeye.
 PUVOD_WEBU = "https://czechpatrol.pages.dev"
 RP_ID = "czechpatrol.pages.dev"
+# Předchozí adresy webu během přechodu na vlastní doménu, oddělené čárkou.
+# Passkey platí jen pro doménu, na které vznikl; dokud je tu stará adresa,
+# lidé se z ní dál přihlásí a web na ní dál smí volat API. Po přechodu
+# vyprázdnit. Postup: docs/PROVOZ.md, část Doména.
+PUVOD_WEBU_DALSI = ""
 NAZEV_WEBU = "CzechPatrol"
 # Odkud API čte stav webu (generuje se při buildu webu).
 STAV_URL = "https://czechpatrol.pages.dev/stav.json"

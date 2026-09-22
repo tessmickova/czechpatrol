@@ -79,12 +79,37 @@ export async function telo<T>(req: Request): Promise<T> {
   }
 }
 
-/** Povolené původy: web samotný a lokální vývoj. Nic jiného API nevolá. */
+/**
+ * Adresy webu: hlavní (PUVOD_WEBU) a během přechodu na vlastní doménu i ty
+ * předchozí (PUVOD_WEBU_DALSI, více adres oddělených čárkou). Nic jiného API
+ * nevolá.
+ */
+export function povolenePuvody(env: Env): string[] {
+  return [env.PUVOD_WEBU, ...(env.PUVOD_WEBU_DALSI ?? "").split(",")]
+    .map((p) => p.trim().replace(/\/$/, ""))
+    .filter(Boolean);
+}
+
+/** Povolené původy: adresy webu a lokální vývoj. */
 export function povolenyPuvod(env: Env, origin: string | null): string | null {
   if (!origin) return null;
-  if (origin === env.PUVOD_WEBU) return origin;
+  if (povolenePuvody(env).includes(origin)) return origin;
   if (/^http:\/\/localhost(:\d+)?$/.test(origin)) return origin;
   return null;
+}
+
+/**
+ * Pro který doménový název platí passkey (RP ID) — podle původu požadavku.
+ *
+ * Passkey je uvázaný k doméně, na které vznikl. Během přechodu
+ * z czechpatrol.pages.dev na czechpatrol.cz běží web na obou adresách
+ * a každá má své passkeye; API proto musí vědět, ze které stránky člověk
+ * přichází, a podle toho výzvu vydat i ověřit. Hlavní adresa má RP ID
+ * z nastavení, ostatní jméno svého hostitele (pro localhost „localhost").
+ */
+export function rpIdProPuvod(env: Env, puvod: string | null): string {
+  if (!puvod || puvod === env.PUVOD_WEBU.replace(/\/$/, "")) return env.RP_ID;
+  return new URL(puvod).hostname;
 }
 
 export function sCors(odpoved: Response, puvod: string | null): Response {

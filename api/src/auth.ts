@@ -8,7 +8,7 @@ import {
   type RegistrationResponseJSON,
 } from "@simplewebauthn/server";
 import { omez } from "./limit";
-import { b64u, ChybaHttp, json, nahodnyToken, normalizujKod, novyObnovovaciKod, sha256, stejne, ted, telo, zaDni, zaMinut, zB64u } from "./pomocne";
+import { b64u, ChybaHttp, json, nahodnyToken, normalizujKod, novyObnovovaciKod, povolenyPuvod, rpIdProPuvod, sha256, stejne, ted, telo, zaDni, zaMinut, zB64u } from "./pomocne";
 import { VYCHOZI_NASTAVENI, type Env, type Nastaveni, type Prihlaseny, type RadekUctu, type Role } from "./typy";
 
 /*
@@ -19,6 +19,13 @@ import { VYCHOZI_NASTAVENI, type Env, type Nastaveni, type Prihlaseny, type Rade
 */
 
 const PLATNOST_RELACE_DNI = 30;
+
+/**
+ * Odkud člověk přichází — podle hlavičky Origin, ale jen z povolených adres.
+ * Bez hlavičky, nebo z nepovolené adresy, platí hlavní adresa webu; chování
+ * je pak stejné jako před přechodem na vlastní doménu.
+ */
+const puvodPozadavku = (env: Env, req: Request): string => povolenyPuvod(env, req.headers.get("Origin")) ?? env.PUVOD_WEBU;
 
 export function nastaveniZ(radek: Pick<RadekUctu, "nastaveni">): Nastaveni {
   try {
@@ -96,7 +103,7 @@ export async function registraceZacit(env: Env, req: Request, proUcet: string | 
   crypto.getRandomValues(userID);
   const moznosti = await generateRegistrationOptions({
     rpName: env.NAZEV_WEBU,
-    rpID: env.RP_ID,
+    rpID: rpIdProPuvod(env, puvodPozadavku(env, req)),
     userID,
     userName: `czechpatrol-${b64u(userID).slice(0, 6).toLowerCase()}`,
     userDisplayName: "CzechPatrol — anonymní účet",
@@ -112,13 +119,14 @@ async function overRegistraci(env: Env, req: Request, druh: "registrace" | "pass
   const { id, odpoved } = await telo<{ id: string; odpoved: RegistrationResponseJSON }>(req);
   if (!id || !odpoved) throw new ChybaHttp(400, "Chybí odpověď zařízení.");
   const { vyzva, ucetId } = await vyzvedniVyzvu(env, id, druh);
+  const puvod = puvodPozadavku(env, req);
   let v;
   try {
     v = await verifyRegistrationResponse({
       response: odpoved,
       expectedChallenge: vyzva,
-      expectedOrigin: env.PUVOD_WEBU,
-      expectedRPID: env.RP_ID,
+      expectedOrigin: puvod,
+      expectedRPID: rpIdProPuvod(env, puvod),
       requireUserVerification: false,
     });
   } catch (e) {
@@ -156,7 +164,7 @@ export async function passkeyDokoncit(env: Env, req: Request, ucet: Prihlaseny):
 
 export async function prihlaseniZacit(env: Env, req: Request): Promise<Response> {
   await omez(env, req, "prihlaseni", 20);
-  const moznosti = await generateAuthenticationOptions({ rpID: env.RP_ID, userVerification: "preferred", allowCredentials: [] });
+  const moznosti = await generateAuthenticationOptions({ rpID: rpIdProPuvod(env, puvodPozadavku(env, req)), userVerification: "preferred", allowCredentials: [] });
   const id = await ulozVyzvu(env, "prihlaseni", moznosti.challenge, null);
   return json({ id, moznosti });
 }
@@ -169,13 +177,14 @@ export async function prihlaseniDokoncit(env: Env, req: Request): Promise<Respon
     .bind(odpoved.id)
     .first<{ id: string; ucet_id: string; verejny_klic: string; pocitadlo: number; transporty: string | null }>();
   if (!pk) throw new ChybaHttp(400, "Tenhle passkey neznáme. Zkuste obnovovací kód.");
+  const puvod = puvodPozadavku(env, req);
   let v;
   try {
     v = await verifyAuthenticationResponse({
       response: odpoved,
       expectedChallenge: vyzva,
-      expectedOrigin: env.PUVOD_WEBU,
-      expectedRPID: env.RP_ID,
+      expectedOrigin: puvod,
+      expectedRPID: rpIdProPuvod(env, puvod),
       requireUserVerification: false,
       credential: {
         id: pk.id,

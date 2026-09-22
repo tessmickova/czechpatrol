@@ -2,6 +2,8 @@ export interface Env {
   DB: D1Database;
   PUVOD_WEBU: string;
   RP_ID: string;
+  /** Předchozí adresy webu během přechodu na vlastní doménu, oddělené čárkou. Viz pomocne.ts. */
+  PUVOD_WEBU_DALSI?: string;
   NAZEV_WEBU: string;
   STAV_URL: string;
   TELEGRAM_BOT_TOKEN?: string;
