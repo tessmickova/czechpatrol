@@ -1,5 +1,5 @@
 {
-  "aktualizovano": "2026-09-22T17:02:24.702Z",
+  "aktualizovano": "2026-09-22T18:02:32.320Z",
   "stavy": [
     {
       "klic": "cloudflare",
@@ -18,27 +18,21 @@
         "Africa",
         "Arica, Chile - (ARI)"
       ],
-      "zkontrolovano": "2026-09-22T17:02:24.702Z",
+      "zkontrolovano": "2026-09-22T18:02:32.320Z",
       "chyba": null
     },
     {
       "klic": "zoom",
       "stav": "omezeni",
       "popis": "Service Under Maintenance",
-      "incidenty": [
-        {
-          "nazev": "Service Degradation Affecting Apple Login for Zoom Sign-in.",
-          "odkaz": "https://stspg.io/j90jkyg5gqz3",
-          "aktualizovano": "2026-09-21T18:37:08.113-07:00"
-        }
-      ],
+      "incidenty": [],
       "postizene": [
         "Zoom Phone",
         "Zoom Phone",
         "Zoom Phone - EMEA",
         "Zoom Phone - NORTH AMERICA"
       ],
-      "zkontrolovano": "2026-09-22T17:02:24.702Z",
+      "zkontrolovano": "2026-09-22T18:02:32.320Z",
       "chyba": null
     },
     {
@@ -47,7 +41,7 @@
       "popis": "All Systems Operational",
       "incidenty": [],
       "postizene": [],
-      "zkontrolovano": "2026-09-22T17:02:24.702Z",
+      "zkontrolovano": "2026-09-22T18:02:32.320Z",
       "chyba": null
     }
   ]
