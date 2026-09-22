@@ -558,5 +558,73 @@
     "aiZpracovano": true,
     "lidskyOvereno": false,
     "archivniZaznam": false
+  },
+  {
+    "kam": "zaznam",
+    "pripravil": "patrol",
+    "pripraveno": "2026-09-22T17:06:08.435Z",
+    "id": "i-2026-09-20-918afac0a8",
+    "slug": "ru-918afac0a8",
+    "titulek": "Rusko: moskevský soud poslal českého občana na 13 dní do vězení za protest u Leninova mauzolea, MZV ČR mu poskytuje konzulární pomoc",
+    "kratkyTitulek": "Rusko: moskevský soud poslal českého občana na 13 dní do vězení za protest u Leninova mauzolea, MZV ČR mu poskytuje konzulární pomoc",
+    "zeme": "Rusko",
+    "kodZeme": "RU",
+    "kategorie": [
+      "pravo",
+      "rusko"
+    ],
+    "datumUdalosti": "2026-09-20T00:00:00Z",
+    "datumZjisteni": "2026-09-22T00:00:00Z",
+    "aktualizovano": "2026-09-22T17:06:08.435Z",
+    "zavaznost": "Y1",
+    "jistota": "vysoka",
+    "stav": "uzavreno",
+    "atribuce": "neznama",
+    "puvodce": "neznamy",
+    "druh": "pripad",
+    "fakta": [
+      "Podle ruských agentur Interfax a TASS a tiskové služby moskevského soudu protestoval český občan v neděli 20. 9. 2026 odpoledne u Leninova mauzolea na Rudém náměstí a držel transparent v angličtině, jehož cílem bylo „diskreditovat ozbrojené síly Ruské federace“.",
+      "Podle soudu byl odsouzen za diskreditaci činnosti ruské armády, porušení předpisů o pořádání protestních akcí a neuposlechnutí policie; dostal 13 dní vězení a dvě pokuty v celkové výši 60 000 rublů (asi 15 000 Kč).",
+      "Podle mluvčího českého ministerstva zahraničí Adama Čörgöa je velvyslanectví ČR v Moskvě s případem obeznámeno a poskytuje zadrženému konzulární pomoc od počátku."
+    ],
+    "neznameho": [
+      "Totožnost zadrženého a přesný text transparentu zdroje neuvádějí.",
+      "Zda bude čelit dalším krokům po propuštění.",
+      "Oficiální zdroj (tisková služba moskevského soudu) jsem neotevřel; údaje jsou z ČT24 a ČeskýchNovin/ČTK, které ji citují spolu s Interfaxem a TASS."
+    ],
+    "vyznam": "",
+    "eskalacniSpousteče": [],
+    "deeskalacniSignaly": [],
+    "zdroje": [
+      {
+        "nazev": "ČT24 — Ruský soud poslal do vězení Čecha za protiválečný protest, píší tamní média",
+        "url": "https://ct24.ceskatelevize.cz/clanek/svet/rusky-soud-poslal-do-vezeni-cecha-za-protivalecny-protest-pisi-tamni-media-377855",
+        "typ": "media",
+        "publikovano": "2026-09-22T00:00:00Z",
+        "primarni": false,
+        "jazyk": "cs"
+      },
+      {
+        "nazev": "ČeskéNoviny.cz (ČTK) — Ruský soud poslal na 13 dní do vězení Čecha za protest na Rudém náměstí",
+        "url": "https://www.ceskenoviny.cz/zpravy/rusky-soud-poslal-na-13-dni-do-vezeni-cecha-za-protest-na-rudem-namesti/2878028",
+        "typ": "wire",
+        "publikovano": "2026-09-22T00:00:00Z",
+        "primarni": false,
+        "jazyk": "cs"
+      }
+    ],
+    "souvisejici": [],
+    "historie": [
+      {
+        "kdy": "2026-09-20T00:00:00Z",
+        "text": "Zachyceno automatickým sběrem, druhý zdroj doložen před zařazením do fronty.",
+        "novySignal": true
+      }
+    ],
+    "novy": true,
+    "zapocitanoTyden": "2026-09-20",
+    "aiZpracovano": true,
+    "lidskyOvereno": false,
+    "archivniZaznam": false
   }
 ]

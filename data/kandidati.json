@@ -164,12 +164,18 @@
       "rusk"
     ],
     "naliehave": null,
-    "stav": "ceka",
+    "stav": "vyrizen",
     "vyrez": {
       "text": "",
       "stazeno": "2026-09-22T16:56:38.848Z",
       "stav": 403,
       "chyba": "HTTP 403"
+    },
+    "vyrizeni": {
+      "kdy": "2026-09-22T17:07:23.399Z",
+      "duvod": "navrh",
+      "patriK": null,
+      "poznamka": "Nová událost: Čech odsouzen ruským soudem na 13 dní za protest u Leninova mauzolea (i-2026-09-20-918afac0a8)."
     }
   },
   {
@@ -199,11 +205,17 @@
       "rusk"
     ],
     "naliehave": null,
-    "stav": "ceka",
+    "stav": "vyrizen",
     "vyrez": {
       "text": "Ruský soud poslal do vězení Čecha za protiválečný protest, píší tamní média — ČT24 — Česká televize\nŽivé vysílání\nTV program\nPočasí\nTeletext\nE-shop\nVše o ČT\nTV poplatky\nKontakty\nSpravovat účet\nOblíbené pořady\nRozkoukaná videa\nPřihlásit se do TV\nOdhlásit se\nRuský soud poslal do vězení Čecha za protiválečný protest, píší tamní média\nČTK\n, jch\n22. 9. 2026 před 17 m minutami | Zdroj: ČTK\nIlustrační snímek\nZdroj: Pexels/Sora Shimazaki\nRuský soud poslal na třináct dní do vězení českého občana, který uspořádal protest u Leninova mauzolea na Rudém náměstí v Moskvě. Uvedly to v úterý agentury Interfax a TASS, podle nichž muž držel transparent, jehož cílem bylo diskreditovat ruskou armádu. Soud mu vyměřil také dvě pokuty v celkové výši 60 tisíc rublů (kolem 15 tisíc korun). České velvyslanectví v Moskvě poskytuje zadrženému českému občanovi od počátku konzulární pomoc.\nPodle soudu muž v neděli odpoledne přišel k mauzoleu Vladimira Iljiče Lenina na Rudém náměstí a držel transparent s nápisem v angličtině, jehož cílem bylo diskreditovat ozbrojené síly Ruské federace, píše Interfax. Co na nápisu stálo, agentura neuvádí.\nRuští zákonodárci přijali krátce po ruské invazi na Ukrajinu v roce 2022…",
       "stazeno": "2026-09-22T16:02:42.238Z",
       "stav": 200
+    },
+    "vyrizeni": {
+      "kdy": "2026-09-22T17:07:23.399Z",
+      "duvod": "zdroj-navrhu",
+      "patriK": null,
+      "poznamka": null
     }
   },
   {
