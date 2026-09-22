@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { druh, kdyZjisteno, pachatelPotvrzen, podlePuvodce, podleZemi, pripady, uredniZdroj, vyber, type Zaznam } from "@/lib/agregace";
 import { cerstvost, datumCasPraha, datumPraha, stariSlovy } from "@/lib/cas";
-import type { CelkovyStav, HybridniTlak, Kampan, Kandidat, NatoPolozka, Nepotvrzene, Overovana, PravniPolozka, ProvozniPolozka, Snimek, TydenniHodnoceni, Uroven, Watchlist } from "@/lib/typy";
+import type { CelkovyStav, HybridniTlak, Kampan, Kandidat, NatoPolozka, Nepotvrzene, OficialniNastroj, Overovana, PravniPolozka, ProvozniPolozka, Snimek, TydenniHodnoceni, Uroven, Watchlist } from "@/lib/typy";
 import { CenaPaliva } from "./palivo";
 import { stavPaliva, vetaOCene } from "@/lib/palivo";
 import { stavPravni, stavProvozu } from "@/lib/pokryti";
@@ -22,7 +22,8 @@ import { Odznak, RadekSeznamu, TeckaZavaznosti, Tlacitko } from "./ui";
 import { PavucinaHrozeb } from "./pavucina";
 import { TabulkaZemi } from "./tabulka-zemi";
 import { useZiveHodiny } from "@/lib/cas-klient";
-import { SignalySiti } from "./signaly-siti";
+import { ProfilySiti } from "./profily-siti";
+import { PripravenostKarta } from "./pripravenost-klient";
 import { TipyKPriprave } from "./tipy";
 import { PasZemi } from "./pas-zemi";
 import { CoSeZmenilo } from "./co-se-zmenilo";
@@ -33,7 +34,7 @@ import { casPraha } from "@/lib/cas";
 import { Partneri, Sledovat } from "./sledovat";
 import { VyzvaTelegram } from "./vyzva-telegram";
 import { Nahlaseni } from "./nahlaseni";
-import { Napoveda } from "./zaklad";
+import { Napoveda, Otaznik } from "./zaklad";
 import { sklon, Vlajka } from "./zeme";
 import { useT } from "@/lib/i18n";
 
@@ -308,7 +309,7 @@ function Pruh({ nazev, n, max, barva, odkaz }: { nazev: React.ReactNode; n: numb
 }
 
 export function Dashboard({
-  stav, pravni, natoPolozky, provozPolozky, overeno, vse, neprosle, kandidati, nepotvrzene = [], tydny, watchlist, crHistoricky, hybridni, obcane, ted, snimky = [],
+  stav, pravni, natoPolozky, provozPolozky, overeno, vse, neprosle, kandidati, nepotvrzene = [], tydny, watchlist, crHistoricky, hybridni, obcane, ted, snimky = [], nastroje = [],
   tlakEvropa, tlakCesko, veta, kampane, nazvyZemi, overovaneAktivni = [], overovaneUzavrene = [],
 }: {
   stav: CelkovyStav; pravni: PravniPolozka[]; natoPolozky: NatoPolozka[]; provozPolozky: ProvozniPolozka[];
@@ -318,6 +319,8 @@ export function Dashboard({
   crHistoricky: Uroven | null;
   /** Archiv snímků úředního stavu — z něj se čte, co se změnilo. */
   snimky?: Snimek[];
+  /** Katalog oficiálních nástrojů pro kartu „Jsem připraven/a?". */
+  nastroje?: OficialniNastroj[];
   hybridni: Uroven | null; obcane: { uroven: Uroven; popis: string; neovereno: number };
   tlakEvropa: HybridniTlak; tlakCesko: HybridniTlak; veta: HlavniVeta;
   kampane: Kampan[]; nazvyZemi: Record<string, string>;
@@ -492,7 +495,13 @@ export function Dashboard({
         />
       </div>
       {/* Stejný poměr a mezera jako v úvodu: tři pětiny mřížka, dvě pětiny sloupec. */}
-      <div className="grid gap-4 xl:grid-cols-[minmax(0,3fr)_minmax(0,2fr)] xl:gap-10">
+      {/*
+        Jediný sloupec na mobilu s minimem 0. Bez toho má sloupec minimum
+        „auto" a roztáhne se podle nejširšího nezalomitelného obsahu —
+        profil s dlouhým jménem vyhnal celý sloupec na 422 px a boxy pod
+        ním se na 390 px displeji řízly vpravo.
+      */}
+      <div className="grid grid-cols-[minmax(0,1fr)] gap-4 xl:grid-cols-[minmax(0,3fr)_minmax(0,2fr)] xl:gap-10">
         <section aria-label={t("Oficiální stavy")} id="opatreni" className="scroll-mt-[84px] space-y-4">
           {skupinyDlazdic.map((sk) => (
             <div key={sk.predpona} className="overflow-hidden rounded-[20px] border border-linka2 bg-plocha">
@@ -523,7 +532,7 @@ export function Dashboard({
           Sem patří změny, které se dotknou života tady: úřední stavy,
           cena paliva, opatření v Česku, u sousedů a v EU.
         */}
-        <div className="space-y-4">
+        <div className="min-w-0 space-y-4">
         <CoSeZmenilo zaznamy={vse} snimky={snimky} ted={tedMs} />
         {/*
           Služby naživo hned pod tím, co se změnilo: „jde mi zavolat
@@ -531,13 +540,14 @@ export function Dashboard({
           od provozovatelů je rychlejší než od úřadů.
         */}
         <StavSluzeb stavy={sluzby.stavy} kdy={sluzby.kdy} />
+        {/* Připravenost: co mít nastavené dřív, než se něco stane. Skóre je z odpovědí čtenáře v jeho prohlížeči. */}
+        <PripravenostKarta nastroje={nastroje} />
 
         {/*
-          Signály z profilů představitelů a institucí. Zobrazí se jen tehdy,
-          když nějaké máme — prázdná sekce s nadpisem by tvrdila, že se nic
-          neděje, přitom by znamenala jen to, že profily zatím nesledujeme.
+          Profily úřadů a představitelů na sítích: které se čtou a co z nich
+          přišlo. Ukazuje se vždycky — i „čeká na ověření" je informace.
         */}
-        <SignalySiti />
+        <ProfilySiti kandidati={kandidati} />
         {/*
           Tipy k přípravě. Odpovídají na jinou otázku než zbytek webu: ne co
           se stalo, ale co s tím může člověk udělat dnes. Bez tipu se
@@ -638,7 +648,7 @@ export function Dashboard({
       </div>
       <div className="grid gap-8 md:grid-cols-3">
         <section aria-label={t("Posledních 90 dnů")}>
-          <div className="mb-1.5 flex items-center justify-between"><span className="stitek">{t("Posledních 90 dnů · incidenty")}</span><Tlacitko kam="/udalosti/?obdobi=30d" varianta="tichy" velikost="s" ikonaVpravo="nahoru" trida="[&>svg:last-child]:rotate-90">detail</Tlacitko></div>
+          <div className="mb-1.5 flex items-center justify-between"><span className="flex items-center gap-1.5"><span className="stitek">{t("Posledních 90 dnů · incidenty")}</span><Otaznik popis={<span className="block">{uredni} z {dni90.length} případů má úřední zdroj. Počítají se případy a operace proti občanům. Aktualizace a prohlášení ne.</span>} /></span><Tlacitko kam="/udalosti/?obdobi=30d" varianta="tichy" velikost="s" ikonaVpravo="nahoru" trida="[&>svg:last-child]:rotate-90">detail</Tlacitko></div>
           <div className="grid grid-cols-2 gap-1.5">
             <Cislo n={zapocitatelne90} slovo={`za 90 dní · celkem ${casyZapocitatelne.length} od 2014`} />
             <Cislo n={zemi} slovo={sklon(zemi, "země", "země", "zemí")} />
@@ -653,7 +663,6 @@ export function Dashboard({
               <span>průměr posledních {porovnani90.zaLet} let je {cislem(porovnani90.prumer)} na čtvrtletí</span>
             </p>
           )}
-          <p className="mt-1.5 text-mikro text-tlum2">{uredni} z {dni90.length} případů s úředním zdrojem. Počítají se případy a manipulační operace; aktualizace a prohlášení ne.</p>
         </section>
         <section aria-label="Kde">
           <div className="mb-1.5 flex items-center justify-between"><span className="stitek">Kde · případy {rok}</span><Tlacitko kam="/zeme/" varianta="tichy" velikost="s" ikonaVpravo="nahoru" trida="[&>svg:last-child]:rotate-90">{t("všechny země")}</Tlacitko></div>
@@ -664,7 +673,7 @@ export function Dashboard({
           </ul>
         </section>
         <section aria-label="Kdo">
-          <div className="mb-1.5 flex items-center justify-between"><span className="stitek">Kdo · případy {rok}</span><span className="text-mikro text-tlum2">potvrzeno / celkem</span></div>
+          <div className="mb-1.5 flex items-center gap-1.5"><span className="stitek">Kdo · případy {rok}</span><Otaznik popis={<span className="block">První číslo a tmavší část pruhu: případy s potvrzeným původcem. Druhé číslo: všechny případy přisuzované skupině.</span>} /></div>
           <ul className="space-y-0.5">
             {puv.skupiny.map((s) => (
               <li key={s.klic} className="flex min-h-[36px] items-center gap-2">

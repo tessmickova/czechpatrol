@@ -55,7 +55,7 @@ const ZALOZKY = [
   */
   { klic: "nepotvrzene", nazev: "Nepotvrzené", popis: "zpracované, čekají na schválení nebo úřední zdroj" },
   { klic: "cekajici", nazev: "Čeká na ověření", popis: "automatický sběr; do žádného počtu nevstupuje" },
-  { klic: "neproslo", nazev: "Neprošlo ověřením", popis: "vyvráceno nebo nedoloženo" },
+  { klic: "neproslo", nazev: "Neprošlo ověřením", popis: "vyvráceno nebo nedoloženo; do žádného počtu nevstupuje" },
 ] as const;
 type Zalozka = (typeof ZALOZKY)[number]["klic"];
 
@@ -318,15 +318,12 @@ export function UdalostiKlient({ zaznamy, neprosle, kandidati = [], nepotvrzene 
 
         {f.zalozka === "nepotvrzene" && (
           <Sdeleni ton="akcent" ikona="otaznik" carkovane nadpis="Stalo se to, ale my za to zatím neručíme." trida="mt-3">
-            Zpracované zprávy se zdroji, které ještě neprošly člověkem. Ukazujeme je proto, aby na webu bylo vidět,
-            co se ve světě děje, i když schválení chvíli trvá. Do počtů, hodnocení situace ani upozornění nevstupují.
-            Potvrdí se schválením — nebo samy, jakmile je doloží druhý nezávislý zdroj a aspoň jeden z nich je úřední.
+            Zpracované zprávy se zdroji, zatím bez potvrzení. Do počtů ani hodnocení nejdou. Potvrdí se schválením, nebo samy se dvěma zdroji včetně úředního.
           </Sdeleni>
         )}
         {f.zalozka === "cekajici" && (
           <Sdeleni ton="akcent" ikona="otaznik" carkovane nadpis="Tohle CzechPatrol netvrdí." trida="mt-3">
-            Jsou to zprávy, které hodinový sběr zachytil ve zdrojích a člověk je zatím neověřil. Do žádného počtu,
-            hodnocení ani upozornění nevstupují.
+            Zprávy, které sběr zachytil a nikdo zatím neověřil. Do počtů ani hodnocení nejdou.
           </Sdeleni>
         )}
         {f.zalozka === "neproslo" && (
@@ -569,7 +566,6 @@ function RadekNeprosle({ n }: { n: Nepotvrzene }) {
         <div className="space-y-3 pt-1 text-zaklad leading-relaxed">
           <div><div className="stitek mb-1">Co se původně zdálo</div><p className="text-tlum">{n.puvodne}</p></div>
           <div><div className="stitek mb-1">Co ověření ukázalo</div><p className="text-inkoust">{n.overeni}</p></div>
-          <p className="text-drobne text-tlum2">Do žádného počtu ani hodnocení nevstupuje.</p>
           <SeznamZdroju zdroje={n.zdroje} husty />
         </div>
       }
@@ -636,7 +632,7 @@ function RadekNepotvrzeneho({ z }: { z: Zaznam }) {
           <ul className="space-y-1 text-drobne">
             {z.zdroje.map((x) => (
               <li key={x.url}>
-                <a href={x.url} target="_blank" rel="noopener noreferrer" className="odkaz break-all">{x.nazev}</a>
+                <a href={x.url} target="_blank" rel="nofollow noopener noreferrer" className="odkaz break-all">{x.nazev}</a>
                 {x.typ === "primary" ? <span className="text-tlum2"> (úřední)</span> : null}
               </li>
             ))}
@@ -691,7 +687,7 @@ function RadekKandidata({ k }: { k: Kandidat }) {
         <div className="space-y-2 pt-1 text-zaklad leading-relaxed">
           {k.shrnuti && <p className="text-tlum">{k.shrnuti}</p>}
           {k.titulek !== k.titulekPuvodni && <p className="text-drobne text-tlum2">Původní titulek: {k.titulekPuvodni}</p>}
-          <p><a href={k.zdroj.url} target="_blank" rel="noopener noreferrer" className="odkaz break-all">{k.zdroj.url}</a></p>
+          <p><a href={k.zdroj.url} target="_blank" rel="nofollow noopener noreferrer" className="odkaz break-all">{k.zdroj.url}</a></p>
           <p className="text-drobne text-tlum2">Zachyceno {datumPraha(k.zachyceno)} hodinovým sběrem. Není to ověřený záznam: závažnost ani jistota nejsou stanovené a do počtů nevstupuje. Po lidské kontrole se buď stane záznamem, nebo po třech týdnech zmizí.</p>
         </div>
       }

@@ -2,7 +2,8 @@
 import fs from "node:fs";
 import path from "node:path";
 import { describe, expect, it } from "vitest";
-import { castDne, jeCesky, palivoDoPrehledu, sestavPrehledDne, sluzbyDoPrehledu, vyberNavrhyDoPrehledu, zmenyStavuZaDen, klicovaVeta, legendaTecek, pocetZdroju, pruhTecek, PUVODCI, radekPokryti, jeArchivni, radekData, rozdelZpravu, sestavPalivo, sestavSouhrn, sestavPrehledZachycenych, sestavSignal, sestavTest, sestavVystrahu, sestavZdroje, sestavZmenuStavu, sestavZpravu, vyberDoPrehledu, vyberNove, vyberPalivo, vyberSignaly, vyberVystrahu, vyberZmenyStavu, zahlavi, sestavVaznyNavrh, vyberVazneNavrhy } from "../nastroje/rozhlas.mjs";
+import { castDne, jeCesky, palivoDoPrehledu, sestavPrehledDne, sluzbyDoPrehledu, vyberNavrhyDoPrehledu, zmenyStavuZaDen, klicovaVeta, legendaTecek, pocetZdroju, pruhTecek, PUVODCI, radekPokryti, jeArchivni, radekData, rozdelZpravu, sestavPalivo, sestavSouhrn, sestavPrehledZachycenych, sestavSignal, sestavTest, sestavVystrahu, sestavZdroje, sestavZmenuStavu, sestavZpravu, vyberDoPrehledu, vyberNove, vyberPalivo, vyberSignaly, vyberVystrahu, vyberZmenyStavu, zahlavi, sestavVaznyNavrh, vyberVazneNavrhy, smerZmeny } from "../nastroje/rozhlas.mjs";
+import { smerZmeny as smerZmenyWeb } from "../src/lib/smer";
 import { UROVNE, zDeseti } from "../src/lib/skala";
 import { PUVODCI as PUVODCI_WEB } from "../src/lib/kategorie";
 import type { Uroven } from "../src/lib/typy";
@@ -648,14 +649,16 @@ describe("vážné případy z úředního zdroje", () => {
     }
   });
 
-  it("bez úředního zdroje neprojde ani vážný případ", () => {
+  it("bez úředního zdroje projde vážný případ se dvěma nezávislými zdroji — a zpráva to řekne", () => {
     const bezUradu = navrh({
       zdroje: [
         { nazev: "Médium A", url: "https://a", primarni: false },
         { nazev: "Médium B", url: "https://b", primarni: false },
       ],
     });
-    expect(vyberVazneNavrhy([bezUradu], { signaly: {} }, { ted })).toHaveLength(0);
+    expect(vyberVazneNavrhy([bezUradu], { signaly: {} }, { ted })).toHaveLength(1);
+    expect(sestavVaznyNavrh(bezUradu)).toContain("ze dvou nezávislých zdrojů, bez úředního");
+    expect(sestavVaznyNavrh(navrh({}))).toContain("z úředního zdroje");
   });
 
   it("jediný zdroj neprojde, i když je úřední", () => {
@@ -712,10 +715,32 @@ describe("přehled dne — česky, dvakrát denně", () => {
 
   it("nepotvrzený záznam nese datum události, odkaz na web, počet zdrojů a je označený", () => {
     const text = sestavPrehledDne({ ted, navrhy: [navrh({})] });
-    expect(text).toContain("<b>Nepotvrzené záznamy</b>");
+    expect(text).toContain("<b>Neověřené</b>");
     expect(text).toContain("15. 9. 2026 · <a href=\"https://czechpatrol.pages.dev/nepotvrzeno/i-1/\">");
     expect(text).toContain("zdrojů 2, z toho úřední 1");
     expect(text).toContain("Do počtů nevstupují");
+  });
+
+  it("pořadí: nejkritičtější za sběr, pak ověřené, pak neověřené", () => {
+    const text = sestavPrehledDne({
+      ted,
+      navrhy: [navrh({ id: "i-o", zavaznost: "O2", titulek: "Polsko: útok na rozvodnu", kratkyTitulek: "Polsko: útok na rozvodnu" }), navrh({ id: "i-y", zavaznost: "Y1" })],
+      overene: [zaznam({ slug: "cz-1", titulek: "Česko: zadržen podezřelý", kratkyTitulek: "Česko: zadržen podezřelý", zavaznost: "Y2" })],
+    });
+    const iKrit = text.indexOf("Nejkritičtější za sběr"), iOver = text.indexOf("Ověřené záznamy za 24 h"), iNeov = text.indexOf("<b>Neověřené</b>");
+    expect(iKrit).toBeGreaterThan(-1);
+    expect(iOver).toBeGreaterThan(iKrit);
+    expect(iNeov).toBeGreaterThan(iOver);
+    expect(text.indexOf("Polsko: útok na rozvodnu")).toBeLessThan(iOver);
+    expect(text.split("Polsko: útok na rozvodnu").length).toBe(2);
+    expect(text.indexOf("/nepotvrzeno/i-y/")).toBeGreaterThan(iNeov);
+    expect(text).toContain("/incident/cz-1/");
+    expect(text).toContain("závažnost 8 z 10");
+  });
+
+  it("návrh s jediným zdrojem do přehledu nejde", () => {
+    const jeden = navrh({ id: "i-j", zdroje: [{ url: "https://a", typ: "media" }] });
+    expect(vyberNavrhyDoPrehledu([jeden], { navrhy: {}, signaly: {} }, { ted })).toHaveLength(0);
   });
 
   it("návrh odejde jednou, jen s českým titulkem a jen do týdne od zpracování", () => {
@@ -733,8 +758,8 @@ describe("přehled dne — česky, dvakrát denně", () => {
   it("bez změny stavu říká, co v Česku platí; se změnou ji vypíše", () => {
     expect(sestavPrehledDne({ ted })).toContain("Žádná změna úředního stavu v Česku");
     const text = sestavPrehledDne({ ted, zmeny: ["Hranice a doprava: běžný provoz → sledujeme"] });
-    expect(text).toContain("Úřední stav se změnil");
-    expect(text).toContain("• Hranice a doprava: běžný provoz → sledujeme");
+    expect(text).toMatch(/Úřední stav se (změnil|zhoršil)/);
+    expect(text).toContain("Hranice a doprava: běžný provoz → sledujeme");
   });
 
   it("změny stavu za den: bez počtu záznamů a bez změn pokrytí", () => {
@@ -763,5 +788,20 @@ describe("přehled dne — česky, dvakrát denně", () => {
   it("přehled se vejde do jedné zprávy Telegramu", () => {
     const text = sestavPrehledDne({ ted, navrhy: Array.from({ length: 5 }, (_, i) => navrh({ id: `i-${i}` })), kandidati: Array.from({ length: 30 }, (_, i) => kandidat({ id: `k${i}` })), zmeny: ["Hranice a doprava: běžný provoz → sledujeme"], palivo: "Palivo za litr: nafta 48,37 Kč (+0,98 za týden)", sluzby: ["Cloudflare: omezení (stavová stránka provozovatele)"] });
     expect(text.length).toBeLessThan(4096);
+  });
+});
+
+describe("směr změny v přehledu dne", () => {
+  it("skript i web určují směr stejně", () => {
+    for (const z of ["Palivo: narušeno → běžný provoz", "Mobilizace: NE → ANO", "Hodnocení: Vysoká → Zvýšená", "Palivo: bez ověřeného zdroje → běžný provoz"]) {
+      expect(smerZmeny(z)).toBe(smerZmenyWeb(z));
+    }
+  });
+
+  it("samotné zlepšení dá klíčovou větu o zlepšení a zelenou značku", () => {
+    const text = sestavPrehledDne({ ted: Date.parse("2026-09-23T05:00:00Z"), cast: "rano", zmeny: ["Palivo a čerpací stanice: narušeno → běžný provoz"] });
+    expect(text).toMatch(/Úřední stav se zlepšil \(1\)/);
+    expect(text).toMatch(/✅ Palivo/);
+    expect(text).not.toMatch(/zhoršil/);
   });
 });

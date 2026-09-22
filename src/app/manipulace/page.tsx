@@ -31,7 +31,7 @@ export default function Manipulace() {
       <HlavickaStranky
         stitek="Manipulace"
         nadpis="Manipulace a útoky na občany"
-        uvod="Připravená operace, ne jeden nepovedený článek: podvržené dokumenty, weby vydávající se za redakce, profily vydávající se za úředníky i za diplomaty. U každé odpovídáme zvlášť na dvě otázky — co je z toho doložené, a kdo za tím stojí. Druhá odpověď bývá mnohem méně jistá než první a my to píšeme."
+        uvod="Podvržené dokumenty, falešné weby redakcí, profily vydávající se za úředníky. U každé kampaně odpovídáme zvlášť: co je doložené a kdo za tím stojí. To druhé bývá méně jisté — a píšeme to."
       />
 
       <section aria-label="Jak to čteme" className="nalet mt-10 grid gap-3 sm:mt-14 sm:grid-cols-3">
@@ -62,8 +62,7 @@ export default function Manipulace() {
           <ManipulaceKlient kampane={vse} nazvyZemi={nazvy} />
         ) : (
           <Sdeleni ikona="lupa">
-            Zatím nemáme rozebranou žádnou kampaň. Neznamená to, že žádná neběží — jen že jsme zatím žádnou nedoložili
-            tak, abychom ji mohli zveřejnit.
+            Zatím žádná rozebraná kampaň. Neznamená to, že žádná neběží — jen jsme ji ještě nedoložili.
           </Sdeleni>
         )}
       </div>
@@ -79,8 +78,7 @@ export default function Manipulace() {
       </div>
 
       <p className="mt-10 text-drobne leading-relaxed text-tlum2">
-        Kampaně se nepočítají mezi bezpečnostní případy — jsou to operace, ne události. Do hodnocení úrovně
-        ani do počtů na úvodní straně nevstupují.
+        Kampaně nejsou události. Do hodnocení ani do počtů na úvodu se nepočítají.
       </p>
     </div>
   );

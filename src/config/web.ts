@@ -246,6 +246,35 @@ export const PROVOZOVATEL = {
   kontakt: "",
 } as const;
 
+/**
+ * Sběr e-mailů pro souhrn a pozvánky do komunity.
+ *
+ * Běží jen se dvěma věcmi: API (kam se adresa ukládá) a uvedeným
+ * správcem údajů. Bez správce se adresy nesbírají — čl. 13 GDPR chce, aby
+ * člověk věděl, komu adresu dává. Dokud je PROVOZOVATEL prázdný, web
+ * formulář neukáže a řekne, že odběr připravuje.
+ */
+export const EMAIL_ODBER_BEZI = UCTY_ZAPNUTE && PROVOZOVATEL.nazev !== "";
+
+/**
+ * E-shop s výbavou (Čenich). Prázdná adresa = odkaz se nikde neukáže.
+ * Až poběží naostro, odkazy z Odolnosti a Připravenosti povedou na konkrétní
+ * funkci (voda, světlo…), ne na úvodní stránku; nikdy ne na „balíček",
+ * který by nahradil úvahu o závislostech.
+ */
+export const ESHOP = "";
+
+/**
+ * Cizí obchody pro věci, které se nevyplatí mít v našem e-shopu (voda,
+ * baterie, trvanlivé potraviny). Prázdná adresa = tlačítko se neukáže.
+ * Odkaz vede na vyhledávání dané věci, ne na konkrétní produkt: web
+ * nedoporučuje značky ani ceny. `{q}` se nahradí názvem věci.
+ */
+export const OBCHODY: { klic: string; nazev: string; hledani: string }[] = [
+  { klic: "rohlik", nazev: "Rohlík", hledani: "" },
+  { klic: "alza", nazev: "Alza", hledani: "" },
+];
+
 /** Kam se hlásí složka IZS, která chce roli partnera. Prázdné = zatím nepřijímáme. */
 export const IZS_KONTAKT = "";
 

@@ -113,15 +113,10 @@ export default function Metodika() {
             <h3 className="podnadpis mb-4 text-zaklad">Nezapočítáváme jako nový incident</h3>
             <Seznam polozky={NEZAPOCITAVAME} znak="−" barva="text-tlum2" />
             <p className="mt-5 border-t border-linka2 pt-4 text-male leading-relaxed text-tlum">
-              Nejsme zpravodajský web. Zajímá nás skutek, který mění bezpečnostní
-              situaci, a úřední rozhodnutí, které mění, co platí — ne to, co kdo
-              slíbil nebo se chystá projednat. Prohlášení zapisujeme jen tehdy,
-              když se váže ke konkrétnímu skutku, a vedeme ho odděleně jako reakci.
+              Nejsme zpravodajský web. Zapisujeme skutky a úřední rozhodnutí — ne sliby a plány. Prohlášení vedeme zvlášť jako reakci, a jen když se váže ke konkrétnímu skutku.
             </p>
             <p className="mt-3 text-drobne leading-relaxed text-tlum2">
-              Nové úřední vyšetřovací zjištění nebo atribuce staršího případu ale
-              novým signálem být může. Rozhoduje, jestli přibyl fakt — ne jestli
-              přibyl článek.
+              Nové úřední zjištění ke staršímu případu signál být může. Rozhoduje nový fakt, ne nový článek.
             </p>
           </Karta>
         </div>
@@ -188,12 +183,7 @@ export default function Metodika() {
             </table>
           </div>
           <p className="border-t border-linka px-5 py-3.5 text-mikro leading-relaxed text-tlum2">
-            Číslo „z 10“ je jen jinak zapsaná táž úroveň — pořadí na stupnici, aby se
-            hodnocení vešlo i do krátké zprávy. Stupnice má třináct stupňů a deset čísel,
-            takže sousední stupně se stejným názvem sdílí jedno číslo; liší se tím, co
-            znamenají. Není to pravděpodobnost.
-            Neuvádíme pravděpodobnost v procentech: věta „riziko války 63 %“ by
-            předstírala model, který nemáme — a čtenář by z ní vyvodil víc, než data unesou.
+            Číslo „z 10“ je táž úroveň zapsaná krátce, aby se vešla do zprávy. Stupnice má třináct stupňů a deset čísel, sousední stupně se stejným názvem sdílí číslo. Není to pravděpodobnost. Procenta neuvádíme: „riziko války 63 %“ by předstíralo model, který nemáme.
           </p>
         </Karta>
       </Sekce>
@@ -205,14 +195,10 @@ export default function Metodika() {
         <Karta className="p-5 sm:p-6">
           <div className="max-w-[46rem] space-y-3 text-male leading-relaxed text-tlum">
             <p>
-              Zbloudilý ukrajinský dron, který spadne v Lotyšsku, má původce Ukrajinu — i když ho z kurzu vychýlilo ruské rušení a
-              nikdo netvrdí úmysl. Ruská střela, která dopadne v Polsku, má původce Rusko. Útok Ukrajiny na ropovod v Rusku, který
-              zastaví dodávky do Maďarska, je záznam s původcem Ukrajina.
+              Ukrajinský dron, který spadne v Lotyšsku, má původce Ukrajinu — i bez úmyslu. Ruská střela v Polsku má původce Rusko. Útok Ukrajiny na ropovod, který zastaví dodávky do Maďarska, má původce Ukrajinu.
             </p>
             <p>
-              „Potvrzeno“ znamená oficiální závěr dotčeného státu nebo přihlášení původce. Odhad podle typu dronu je „nepotvrzená“
-              atribuce; když stát původ neuvede, je původce „neznámý“ a nic si nedomýšlíme. Přehled Kdo za tím stojí počítá všechny
-              strany stejným metrem.
+              „Potvrzeno“ = úřední závěr státu nebo přihlášení původce. Odhad podle typu dronu je „nepotvrzeno“. Když stát původ neuvede, je původce „neznámý“. Nic si nedomýšlíme a všechny strany měříme stejně.
             </p>
           </div>
         </Karta>
@@ -233,9 +219,7 @@ export default function Metodika() {
           <Karta className="p-5 sm:p-6">
             <div className="stitek mb-3">Jistota</div>
             <p className="text-male leading-relaxed text-tlum">
-              Jak dobře je věc doložená. Odpovídá na otázku „jak moc tomu můžeme věřit“.
-              Něco může být velmi závažné a špatně potvrzené — i naprosto potvrzené
-              a málo závažné.
+              Jak dobře je věc doložená — jak moc jí věřit. Věc může být závažná a špatně doložená, nebo doložená a málo závažná.
             </p>
           </Karta>
         </div>
@@ -291,22 +275,32 @@ export default function Metodika() {
       </Sekce>
 
       <Obsah>
+        <Karta className="mb-4 p-5 sm:p-6">
+          <h2 className="podnadpis mb-3 text-vetsi">Co záměrně nezveřejňujeme</h2>
+          <div className="max-w-[46rem] space-y-3 text-male leading-relaxed text-tlum">
+            <p>
+              Web má pomáhat lidem v Česku, ne ukazovat, kde a jak zasahují složky. Proto nezapisujeme souřadnice, pohyb jednotek, počty zasahujících, interní kontakty, evakuační místa, zásoby ani slabá místa infrastruktury. Veřejné neznamená bezpečné k seskupení.
+            </p>
+            <p>
+              U události stačí země a kraj. Souřadnice v textu zastaví nasazení; popis pohybu jednotek posoudí člověk. Pravidla platí i pro externího ověřovatele.
+            </p>
+            <p className="text-tlum2">
+              Co si naopak nastavit dřív, než se něco stane, je na stránce{" "}
+              <Link href="/pripravenost/" className="odkaz">Jsem připraven/a?</Link>.
+            </p>
+          </div>
+        </Karta>
         <Karta className="p-5 sm:p-6">
           <h2 className="podnadpis mb-3 text-vetsi">Role automatizace</h2>
           <div className="max-w-[46rem] space-y-3 text-male leading-relaxed text-tlum">
             <p>
-              Sběr běží automaticky každou hodinu. Automat ale nic nezveřejňuje: ukládá
-              kandidáty do fronty ke kontrole. Na web se dostane jen záznam, který prošel
-              lidskou kontrolou a má uvedený zdroj.
+              Sběr běží každou hodinu, ale nic nezveřejňuje — jen ukládá zprávy ke kontrole. Na web jde záznam se zdrojem po kontrole, nebo se dvěma zdroji včetně úředního.
             </p>
             <p>
-              Právní a institucionální stav se ověřuje proti úředním registrům. Pokud
-              ověření neproběhlo, web to napíše — hodnotu nedopočítává a nedoplňuje
-              z médií.
+              Úřední stavy ověřujeme proti úředním zdrojům. Když ověření neproběhlo, napíšeme to. Nic nedopočítáváme z médií.
             </p>
             <p className="text-tlum2">
-              Historie dat odpovídá historii repozitáře. Každá změna hodnoty je
-              samostatný záznam, takže je zpětně dohledatelné, co web kdy tvrdil.
+              Každá změna dat je uložená. Dá se dohledat, co web kdy tvrdil.
             </p>
           </div>
         </Karta>

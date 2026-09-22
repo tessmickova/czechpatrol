@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { DORUCOVANI, KANALY, KDY_UPOZORNENI, NEOVERENE_SIGNALY, UCTY_ZAPNUTE, WEB } from "@/config/web";
 import { Ikona } from "./ikony";
+import { Otaznik } from "./zaklad";
 
 /**
  * Odběr: jen to, co skutečně běží.
@@ -22,7 +23,7 @@ export function OdberPanel({ kompaktni = false }: { kompaktni?: boolean }) {
           <span className="mt-0.5 grid h-9 w-9 shrink-0 place-items-center rounded-[12px] bg-akcent/15 text-akcent"><Ikona nazev="komunikace" velikost={16} tah={2} /></span>
           <span>
             {KANALY.telegram ? (
-              <a href={KANALY.telegram} target="_blank" rel="noopener noreferrer" className="text-zaklad font-semibold text-inkoust underline decoration-linka underline-offset-4 hover:decoration-inkoust">{DORUCOVANI.telegram.nazev}</a>
+              <a href={KANALY.telegram} target="_blank" rel="nofollow noopener noreferrer" className="text-zaklad font-semibold text-inkoust underline decoration-linka underline-offset-4 hover:decoration-inkoust">{DORUCOVANI.telegram.nazev}</a>
             ) : (
               <span className="text-zaklad font-semibold text-tlum">{DORUCOVANI.telegram.nazev}</span>
             )}
@@ -55,13 +56,13 @@ export function OdberPanel({ kompaktni = false }: { kompaktni?: boolean }) {
         {dalsi.map(([k, url]) => (
           <li key={k} className="flex gap-3">
             <span className="mt-0.5 grid h-9 w-9 shrink-0 place-items-center rounded-[12px] bg-akcent/15 text-akcent"><Ikona nazev="komunikace" velikost={16} tah={2} /></span>
-            <a href={url} target="_blank" rel="noopener noreferrer" className="text-zaklad font-semibold text-inkoust underline decoration-linka underline-offset-4 hover:decoration-inkoust">{k}</a>
+            <a href={url} target="_blank" rel="nofollow noopener noreferrer" className="text-zaklad font-semibold text-inkoust underline decoration-linka underline-offset-4 hover:decoration-inkoust">{k}</a>
           </li>
         ))}
       </ul>
       {!kompaktni && (
         <div className="rounded-[18px] border border-linka2 bg-plocha p-4">
-          <div className="stitek mb-2">Kdy přijde okamžité upozornění</div>
+          <div className="mb-2 flex items-center gap-1.5"><span className="stitek">Kdy přijde okamžité upozornění</span><Otaznik popis={<span className="block">U pěti nejvážnějších témat pošleme zprávu hned, i neověřenou. Je tak označená a vede na zdroj. Opakovanému odeslání téže změny se bráníme; postup je v metodice. Z kanálu se odhlásíte jeho opuštěním, žádný účet se nezakládá.</span>} /></div>
           <ul className="space-y-1.5">
             {KDY_UPOZORNENI.map((k) => {
               /* Mimořádná výstraha je jiná kategorie než běžná změna stavu — i v seznamu. */
@@ -91,12 +92,6 @@ export function OdberPanel({ kompaktni = false }: { kompaktni?: boolean }) {
             a proč. Bez toho by první takový signál vypadal jako to, proti
             čemu se tenhle web staví.
           */}
-          <p className="mt-3 text-drobne leading-snug text-tlum">
-            U prvních pěti témat pošleme zprávu, i když ji zatím nikdo neověřil. Je označená,
-            vede na zdroj a do počtů na webu nevstupuje — mezi zachycením a ověřením jsou hodiny
-            a zrovna u těchhle věcí je to znát.
-          </p>
-          <p className="mt-3 text-drobne text-tlum2">Opakovanému odeslání téže změny se bráníme; postup je popsaný v metodice. Z kanálu se odhlásíte jeho opuštěním — nezakládá se žádný účet.</p>
         </div>
       )}
     </div>

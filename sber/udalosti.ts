@@ -169,6 +169,29 @@ const AKTY: { kategorie: string; slova: string[] }[] = [
     "poskozena rozvodna", "utok na rozvodnu", "prerusena dodavka", "zastavena dodavka",
     "undersea cable damage", "subsea cable cut", "cable damaged", "poskozeny podmorsky kabel",
   ] },
+  /*
+    Plošný výpadek sítí a služeb.
+
+    Doplněno 22. 9. 2026: 21. 9. ráno hlásily stovky lidí výpadky O2 a Vodafonu
+    (internet, televize) a iROZHLAS o tom psal v 9:02 — síto zprávu zahodilo
+    jako „bez skutku", protože se v ní nestřílí, nic nepadá a nikdo nikoho
+    nezadržel. Přitom je to přesně to, co si člověk v Česku ověřuje jako první,
+    když se něco děje: jde zavolat, zaplatit, připojit se?
+
+    Výpadek je skutek — něco přestalo fungovat — a příčina se do něj nepíše.
+    Zachycení neznamená, že za tím někdo stojí; to smí říct až ověření
+    a záznam nese původce „neznámý", dokud provozovatel nebo úřad neřekne víc.
+    Kmen „vypad" tu schválně není: trefil by „vypadá" v každé druhé větě.
+  */
+  { kategorie: "infrastruktura", slova: [
+    "vypadek site", "vypadek siti", "vypadky site", "vypadky siti", "vypadek sluzeb", "vypadky sluzeb",
+    "vypadek internetu", "vypadek mobilni site", "vypadek signalu", "vypadek plateb", "vypadek platebnich",
+    "potykaji s vypadky", "potyka s vypadky", "hlasi vypadek", "hlasi vypadky", "rozsahly vypadek", "plosny vypadek",
+    "sluzby jsou nedostupne", "nedostupne sluzby", "nefunguje internet", "nejde internet", "bez signalu",
+    "nefunguji platby", "nejdou platby", "nefunguje internetove bankovnictvi",
+    "network outage", "service outage", "internet outage", "mobile network down", "nationwide outage",
+    "widespread outage", "major outage", "payment outage", "banking outage",
+  ] },
   { kategorie: "zpravodajske", slova: [
     // Kmeny bez koncovky, aby čeština fungovala: „obvin“ najde obviněn i obvinilo.
     "zadrz", "zatc", "obvin", "obzalov", "odsoud", "arrested", "charged with", "indicted",
@@ -430,7 +453,15 @@ const ZEME: { kod: string; nazev: string; slova: string[]; presna?: string[] }[]
       „cesti" je tam navíc kvůli češtině: v množném čísle se k mění na t
       („čeští vojáci"), a to kmen s tolerancí koncovky nedožene.
     */
-    slova: ["czech", "cesk", "cesti", "policie cr", "praha", "praze", "prahou", "prahy", "prague", "brno", "brne", "ostrav", "strakova akademie", "kramarova vila"], presna: ["cr"] },
+    slova: ["czech", "cesk", "cesti", "policie cr", "praha", "praze", "prahou", "prahy", "prague", "brno", "brne", "ostrav", "strakova akademie", "kramarova vila",
+      /*
+        Provozovatelé českých sítí. „O2 i Vodafone se od rána potýkají s výpadky"
+        je česká zpráva bez jediného slova o Česku, a síto ji proto shodilo jako
+        „bez místa". CETIN a Výpadky24 jsou jen české; O2 je i v Británii
+        a Německu, ale v české zprávě znamená prakticky vždy českého operátora —
+        a zachycení není zveřejnění, místo ještě ověří člověk.
+      */
+      "cetin", "vypadky24"], presna: ["cr", "o2"] },
   { kod: "SK", nazev: "Slovensko", slova: ["slovak", "slovensk", "bratislav", "kosic"] },
   { kod: "PL", nazev: "Polsko", slova: ["poland", "polish", "polsk", "polac", "warsaw", "varsav", "rzeszow", "gdansk"] },
   { kod: "DE", nazev: "Německo", slova: ["germany", "german", "nemeck", "berlin", "hamburg", "leipzig", "munich", "mnichov", "bundeswehr"] },

@@ -142,14 +142,26 @@ export function HeroDashboard({
         větší než dřív ze stejného důvodu — úvod bez čísel a vysvětlivek
         byl o 190 px nižší než aktuality a zbytek zel prázdnotou.
       */}
-      <div className="grid grid-cols-[minmax(0,1fr)] gap-2 py-3 sm:py-4 xl:my-auto lg:grid-cols-[minmax(0,1.05fr)_minmax(0,1.4fr)]">
+      {/*
+        Poměr sloupců 1.25 : 1.2. Vedle aktualit má úvod na 1280 px jen
+        715 px; při 1.05 : 1.4 zbylo na slovo u velkého budíku 129 px a
+        „Zvýšená" se lámala uprostřed slova. Dvěma malým budíkům stačí
+        po 175 px — oblouk má 136 px a štítek se vejde.
+      */}
+      <div className="grid grid-cols-[minmax(0,1fr)] gap-2 py-3 sm:py-4 xl:my-auto lg:grid-cols-[minmax(0,1.25fr)_minmax(0,1.2fr)]">
         <div className="flex min-w-0 items-center gap-4 border-b border-linka2 pb-3 lg:border-b-0 lg:border-r lg:pb-0 lg:pr-4">
           <Napoveda popis={stav.uroven ? <VykladUrovne uroven={stav.uroven} /> : <span className="block">{t("Hodnocení zatím nebylo stanoveno.")}</span>}>
             <span className="block"><ObloukovyMerak uroven={stav.uroven} naNoci velikost={164} skrytPopisek /></span>
           </Napoveda>
           <div className="min-w-0">
             <div className="stitek whitespace-nowrap">{t("Evropa · dnes")}</div>
-            <p className={`text-cislo-l font-bold leading-none xl:text-cislo-xl ${pasmo ? pasmo.text : "text-tlum"}`}>{d ? d.nazev : "Nestanoveno"}</p>
+            {/*
+              Velikost podle délky slova. „Zvýšená" ve 44 px měřila 179 px a
+              přetékala přes dělicí linku do vedlejšího budíku. Slovo nad osm
+              znaků („Nestanoveno", „Mírně zvýšená") jde o stupeň menší a smí
+              se zalomit jen mezi slovy, nikdy uprostřed slova.
+            */}
+            <p className={`${(d ? d.nazev : "Nestanoveno").length > 8 ? "text-cislo" : "text-cislo-l"} font-bold leading-[0.95] [overflow-wrap:normal] ${pasmo ? pasmo.text : "text-tlum"}`}>{d ? d.nazev : "Nestanoveno"}</p>
             {/*
               Trend hned pod slovem, ne v provozním řádku na patě. Patří
               k úrovni — je to její pohyb — a bez patičky nemá kam jinam.

@@ -2,7 +2,7 @@
  * Značky kanálů. Zjednodušené tvary v barvách značek — poznatelné na první
  * pohled, bez načítání cizích obrázků.
  */
-export type Znacka = "rss" | "telegram" | "whatsapp" | "signal" | "bluesky" | "email";
+export type Znacka = "rss" | "telegram" | "whatsapp" | "signal" | "bluesky" | "mastodon" | "email";
 
 const BARVY: Record<Znacka, string> = {
   rss: "#f5a623",
@@ -10,6 +10,7 @@ const BARVY: Record<Znacka, string> = {
   whatsapp: "#25d366",
   signal: "#3a76f0",
   bluesky: "#0085ff",
+  mastodon: "#6364ff",
   email: "#e8484f",
 };
 
@@ -36,6 +37,14 @@ export function ZnackaKanalu({ znacka, velikost = 28, tlumena = false }: { znack
         <svg {...spolecne}>
           <circle cx="12" cy="12" r="10.5" fill="none" stroke={b} strokeWidth="2" strokeDasharray="4 2.2" />
           <circle cx="12" cy="12" r="6.5" fill={b} />
+        </svg>
+      );
+    case "mastodon":
+      return (
+        <svg {...spolecne}>
+          <rect x="1" y="1" width="22" height="22" rx="6" fill={b} />
+          {/* Zjednodušené „M" v bublině — tvar, ne kopie loga. */}
+          <path d="M6.5 16.5V9.2c0-1.6 1.1-2.7 2.6-2.7 1 0 1.8.5 2.3 1.4l.6 1.1.6-1.1c.5-.9 1.3-1.4 2.3-1.4 1.5 0 2.6 1.1 2.6 2.7v4.3h-2.1V9.6c0-.6-.3-1-.9-1-.5 0-.9.4-1.2 1l-1.3 2.4-1.3-2.4c-.3-.6-.7-1-1.2-1-.6 0-.9.4-.9 1v6.9H6.5z" fill="#fff" />
         </svg>
       );
     case "bluesky":

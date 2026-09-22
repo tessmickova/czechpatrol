@@ -184,7 +184,7 @@ export function NavrhyKeSchvaleni() {
                   {n.zdroje.map((z) => (
                     <li key={z.url ?? z.nazev ?? Math.random().toString()}>
                       {z.url ? (
-                        <a href={z.url} target="_blank" rel="noopener noreferrer" className="break-all text-male text-tlum underline underline-offset-4 hover:text-inkoust">
+                        <a href={z.url} target="_blank" rel="nofollow noopener noreferrer" className="break-all text-male text-tlum underline underline-offset-4 hover:text-inkoust">
                           {z.nazev ?? z.url}
                         </a>
                       ) : (

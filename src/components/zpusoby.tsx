@@ -122,13 +122,11 @@ export function ZpusobyVUziti() {
         id="zpusoby"
         stitek="Způsoby"
         nadpis="Čím se to doloženě dělá"
-        popis={`Doložené případy za posledních ${OKNO_DNI} dní u každého způsobu jednání, poměřené s dvouletým průměrem. Řadí se podle toho, co se děje teď a hodně.`}
+        popis={`Doložené případy za ${OKNO_DNI} dní u každého způsobu, proti průměru za dva roky. Nahoře je to, co se děje teď a hodně. Jen skutečné případy se zdrojem. „Úředně přisouzeno“ = stát nebo EU to oficiálně řekly; podezření se nepočítá. Kde je dat málo, tabulka to přizná.`}
       />
 
       <Sdeleni ton="pozor" ikona="vykricnik" nadpis="Tohle není předpověď.">
-        Je to záznam toho, co se stalo — ne odhad toho, co přijde, a ne hodnocení, jestli je někdo připraven zaútočit.
-        Takové tvrzení nemáme z čeho doložit, takže ho nepíšeme. Vysoký počet znamená, že se ten způsob hodně používal,
-        nic víc.
+        Záznam toho, co se stalo — ne odhad, co přijde. Vysoké číslo znamená jen, že se ten způsob hodně používal.
       </Sdeleni>
 
       <ol className="mt-5 overflow-hidden rounded-[22px] border border-linka2 bg-plocha">
@@ -137,11 +135,6 @@ export function ZpusobyVUziti() {
         ))}
       </ol>
 
-      <p className="mt-3 text-drobne leading-relaxed text-tlum2">
-        Počítají se jen skutečné případy se zdrojem, ne prohlášení, reakce ani opatření. „Úředně přisouzeno“ znamená
-        formální atribuci státu nebo EU — podezření, byť silné, se nepočítá. Kde je průměru málo dat, tabulka to přizná
-        místo toho, aby číslo dopočítala.
-      </p>
     </section>
   );
 }

@@ -250,7 +250,7 @@ export function SpravaKlient() {
                   <span className="stitek">{datumCas(x.vytvoreno)}</span>
                 </div>
                 <p className="whitespace-pre-wrap text-zaklad leading-relaxed text-inkoust">{x.popis}</p>
-                {x.odkaz && <a href={x.odkaz} target="_blank" rel="noopener noreferrer" className="mt-2 block break-all text-male text-akcent underline underline-offset-4">{x.odkaz}</a>}
+                {x.odkaz && <a href={x.odkaz} target="_blank" rel="nofollow noopener noreferrer" className="mt-2 block break-all text-male text-akcent underline underline-offset-4">{x.odkaz}</a>}
                 {(x.jmeno || x.email || x.telefon) && (
                   <p className="mt-2 text-male text-tlum">Kontakt: {[x.jmeno, x.email, x.telefon].filter(Boolean).join(" · ")}</p>
                 )}

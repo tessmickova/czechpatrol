@@ -55,7 +55,6 @@ export function GrafMesicuPripadu({
           })}
         </svg>
       </div>
-      <p className="mt-2 text-drobne text-tlum2">Sloupec = počet jedinečných případů podle data zjištění · šrafovaně = období bez plného monitoringu (hodnota chybí, není nula).</p>
     </div>
   );
 }

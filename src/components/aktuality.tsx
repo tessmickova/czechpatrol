@@ -6,9 +6,9 @@ import { jistotaZobrazena, kdyZjisteno, type Zaznam } from "@/lib/agregace";
 import { PUVODCI } from "@/lib/kategorie";
 import { JISTOTY, PASMA, UROVNE } from "@/lib/skala";
 import type { Kandidat } from "@/lib/typy";
-import { Ikona } from "./ikony";
 import { PanelNahledu, useNahled, type Nahled } from "./nahled-radku";
 import { Tlacitko } from "./ui";
+import { Otaznik } from "./zaklad";
 import { Vlajka } from "./zeme";
 
 /*
@@ -273,18 +273,15 @@ export function Aktuality({
         Odtud dolů přestává platit, že si za tím projekt stojí.
       */}
       <div className="border-y border-linka2 bg-plocha2/60 px-4 py-2">
-        <div className="stitek flex items-center gap-1.5 text-inkoust">
-          <Ikona nazev="otaznik" velikost={12} tah={2} trida="text-akcent" />
-          Neověřeno
-        </div>
         {/*
-          Tahle věta tu musí být. Bez ní čte člověk seznam pod ověřenými
-          záznamy jako jejich pokračování — a to by z neověřené zprávy
-          udělalo tvrzení projektu.
+          Věta o tom, co neověřené znamená, je za puntíkem. Na ploše stála
+          jako šedý popisek pod nadpisem — a čtenář ji přeskakoval stejně.
+          Puntík je v barvě značky, takže je vidět, že tu vysvětlení je.
         */}
-        <p className="mt-1 text-mikro leading-snug text-tlum2">
-          Zpracované, ale nepotvrzené záznamy a zprávy zachycené sběrem. Do počtů ani do hodnocení nevstupují.
-        </p>
+        <div className="stitek flex items-center gap-1.5 text-inkoust">
+          Neověřeno
+          <Otaznik label="Co znamená neověřeno" popis={<span className="block">Zpracované, ale nepotvrzené záznamy a zprávy zachycené sběrem. Do počtů ani do hodnocení nevstupují.</span>} />
+        </div>
       </div>
       {neoverene.length > 0 ? (
         <ul className="divide-y divide-linka2">
@@ -323,7 +320,7 @@ export function Aktuality({
             return (
               <li key={r.klic} onPointerEnter={(e) => ukaz(r.nahled, e)} onPointerMove={pohyb}>
                 {r.ven ? (
-                  <a href={r.kam} target="_blank" rel="noopener noreferrer" className={trida} onFocus={naFokus}>{telo}</a>
+                  <a href={r.kam} target="_blank" rel="nofollow noopener noreferrer" className={trida} onFocus={naFokus}>{telo}</a>
                 ) : (
                   <Link href={r.kam} className={trida} onFocus={naFokus}>{telo}</Link>
                 )}

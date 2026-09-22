@@ -13,6 +13,9 @@ import { useT } from "@/lib/i18n";
   Šest cílů. Vývoj, Aktéři a Manipulace stojí pod jedním rozcestníkem
   Analýzy — jsou to tři odpovědi na tutéž otázku „co z toho plyne“ a
   v liště by se rozpadly do nesrozumitelného výčtu.
+
+  Můj přehled v liště není: je to funkce po přihlášení a bydlí
+  v postranním menu vedle nastavení upozornění.
 */
 export const HLAVNI = [
   { href: "/", label: "Přehled" },
@@ -20,7 +23,7 @@ export const HLAVNI = [
   { href: "/manipulace/", label: "Manipulace" },
   { href: "/zeme/", label: "Země" },
   { href: "/analyzy/", label: "Analýzy" },
-  { href: "/muj-prehled/", label: "Můj přehled" },
+  { href: "/pripravenost/", label: "Připravenost" },
 ];
 
 export function Navigace() {
@@ -60,13 +63,20 @@ export function Navigace() {
           „CzechPatrol". Pod 1024 px vede nabídka přes tlačítko menu, které
           je na liště pořád.
         */}
-        <nav aria-label={t("Hlavní")} className="hidden items-center gap-1 lg:flex">
+        {/*
+          Dvě velikosti podle šířky. Sedm položek s větším písmem se na
+          1024–1279 px nevejde vedle značky a přepínače jazyka: nabídka
+          přetekla doleva přes štítek BETA. Do 1280 px je proto písmo menší
+          a bez mezer, tlačítko Podpořit vede jen přes menu; od 1280 px je
+          všechno ve velikosti, kterou má zbytek webu.
+        */}
+        <nav aria-label={t("Hlavní")} className="hidden items-center lg:flex xl:gap-1">
           {HLAVNI.map((o) => (
             <Odkaz
               key={o.href}
               href={o.href}
               aria-current={aktivni(o.href) ? "page" : undefined}
-              className={`rounded-full px-3.5 py-2 text-male font-semibold uppercase tracking-[0.06em] transition-colors ${
+              className={`whitespace-nowrap rounded-full px-1.5 py-2 text-mikro font-semibold uppercase tracking-[0.05em] transition-colors xl:px-2.5 xl:text-drobne ${
                 aktivni(o.href) ? "bg-[rgb(255_255_255/0.12)] text-inkoust" : "text-tlum hover:bg-[rgb(255_255_255/0.07)] hover:text-inkoust"
               }`}
               style={{ fontFamily: "var(--font-mono)" }}
@@ -81,7 +91,7 @@ export function Navigace() {
           <Odkaz
             href="/podporit/"
             // Jediná plná plocha v hlavičce: na tmavém podkladu papír, po najetí červená.
-            className="hidden rounded-full bg-inkoust px-5 py-2.5 text-drobne font-semibold uppercase tracking-[0.06em] text-papir transition-colors hover:bg-akcent hover:text-papir lg:inline-block"
+            className="hidden rounded-full bg-inkoust px-5 py-2.5 text-drobne font-semibold uppercase tracking-[0.06em] text-papir transition-colors hover:bg-akcent hover:text-papir xl:inline-block"
             style={{ fontFamily: "var(--font-mono)" }}
           >
             Podpořit

@@ -75,7 +75,7 @@ export function StavDetail({
           /* Odkazy s výškou na prst: na mobilu se na ně klepe, ne kliká. */
           <span className="flex flex-wrap gap-x-3">
             {p.zdroje.map((z) => (
-              <a key={z.klic} href={z.url} target="_blank" rel="noopener noreferrer" className="odkaz inline-flex min-h-[32px] items-center">
+              <a key={z.klic} href={z.url} target="_blank" rel="nofollow noopener noreferrer" className="odkaz inline-flex min-h-[32px] items-center">
                 {z.nazev} ↗
               </a>
             ))}

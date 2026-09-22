@@ -11,7 +11,7 @@ import { useT } from "@/lib/i18n";
 const SLOUPCE: { nadpis: string; odkazy: [string, string][] }[] = [
   {
     nadpis: "Obsah",
-    odkazy: [["/", "Přehled"], ["/udalosti/", "Události"], ["/manipulace/", "Manipulace"], ["/zeme/", "Země"], ["/analyzy/", "Analýzy"], ["/muj-prehled/", "Můj přehled"], ["/odber/", "Odběr a RSS"]],
+    odkazy: [["/", "Přehled"], ["/udalosti/", "Události"], ["/manipulace/", "Manipulace"], ["/zeme/", "Země"], ["/analyzy/", "Analýzy"], ["/zapojit-se/", "Zapojit se"], ["/muj-prehled/", "Můj přehled"], ["/odber/", "Odběr a RSS"]],
   },
   {
     nadpis: "Důvěryhodnost",
@@ -66,7 +66,7 @@ export function Paticka() {
               {KOMUNITA.github && (
                 <>
                   {" · "}
-                  <a href={KOMUNITA.github} target="_blank" rel="noopener noreferrer" className="odkaz">{t("kód a data na GitHubu")}</a>
+                  <a href={KOMUNITA.github} target="_blank" rel="nofollow noopener noreferrer" className="odkaz">{t("kód a data na GitHubu")}</a>
                 </>
               )}
             </p>

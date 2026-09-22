@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { HlavickaStranky } from "@/components/nadpisy";
+import { Otaznik } from "@/components/zaklad";
 import Link from "next/link";
 import { BUY_ME_A_COFFEE_URL, KOMUNITA } from "@/config/web";
 import naklady from "../../../docs/naklady.json";
@@ -22,11 +23,11 @@ export default function Podporit() {
       <HlavickaStranky
         stitek="Podpora"
         nadpis="Web zdarma. Provoz ne."
-        uvod="Všechno, co se týká bezpečí, tedy události, opatření i zdroje, je a zůstane zdarma. Podpora je dobrovolná a platí se z ní provoz, ne inzerce."
+        uvod="Události, opatření i zdroje jsou a zůstanou zdarma. Podpora je dobrovolná a jde na provoz."
       />
 
       <section className="nalet mt-16 border-t border-linka pt-12 sm:mt-20">
-        <h2 className="titul-mensi">Co provoz stojí</h2>
+        <h2 className="titul-mensi">Co provoz stojí{"\u00A0"}<Otaznik popis={<span className="block">Lidská práce (ověřování, hodnocení, opravy) v tabulce není. Dělá se zdarma.</span>} /></h2>
         <p className="mt-1 text-male text-tlum">Odhad podle ceníků služeb k {naklady.aktualizovano}. Skutečné faktury se doplní, až budou.</p>
         <table className="mt-3 w-full text-left text-zaklad">
           <tbody>
@@ -39,19 +40,17 @@ export default function Podporit() {
             <tr><td className="py-2 font-semibold text-inkoust">Měsíčně celkem</td><td className="cislice py-2 text-right font-bold text-inkoust">{celkem} Kč</td></tr>
           </tbody>
         </table>
-        <p className="mt-2 text-drobne text-tlum2">Lidská práce (ověřování, hodnocení, opravy) v tabulce není — dělá se zdarma. Vstupy jsou v souboru docs/naklady.json.</p>
       </section>
 
       <section className="nalet mt-14 border-t border-linka pt-10">
         <h2 className="titul-mensi">Jak podpořit</h2>
         {BUY_ME_A_COFFEE_URL ? (
-          <a href={BUY_ME_A_COFFEE_URL} target="_blank" rel="noopener noreferrer" className="mt-3 inline-flex min-h-[44px] items-center rounded-[18px] border border-akcent/60 bg-akcent/15 px-5 text-zaklad font-bold text-akcent-svetla hover:bg-akcent/25">
+          <a href={BUY_ME_A_COFFEE_URL} target="_blank" rel="nofollow noopener noreferrer" className="mt-3 inline-flex min-h-[44px] items-center rounded-[18px] border border-akcent/60 bg-akcent/15 px-5 text-zaklad font-bold text-akcent-svetla hover:bg-akcent/25">
             Jednorázově přispět
           </a>
         ) : (
           <p className="mt-2 text-zaklad leading-relaxed text-tlum">
-            Platební adresa zatím není nastavená, takže tu není žádné tlačítko. Až bude, objeví se tady. Do té doby pomůže nejvíc
-             hlášení chyb a chybějících událostí.
+            Platba zatím není nastavená, proto tu chybí tlačítko. Nejvíc teď pomůže hlášení chyb a chybějících událostí.
           </p>
         )}
       </section>

@@ -21,7 +21,7 @@ export default function Zeme() {
       <HlavickaStranky
         stitek="Země"
         nadpis="Kde se to děje"
-        uvod={`Každá sledovaná země má vlastní přehled: počty případů, typy hrozeb a posuny ve vyšetřování. Dohromady evidujeme ${celkem} případů. Česko uvádíme vždy první, i když v něm nic není.`}
+        uvod={`Každá země má vlastní přehled: počty, typy hrozeb, vyšetřování. Celkem ${celkem} případů. Česko je vždy první.`}
       />
 
       <ul className="nalet mt-12 grid gap-3 sm:mt-16 sm:grid-cols-2 lg:grid-cols-3">
@@ -59,8 +59,7 @@ export default function Zeme() {
       </ul>
 
       <p className="mt-8 text-male leading-relaxed text-tlum2">
-        Počítají se jen případy, tedy skutečné události. Pokračování případu, úřední opatření ani prohlášení
-        číslo nezvyšují. Země bez záznamu neznamená klid — znamená, že jsme odtud nic nedoložili.
+        Počítají se jen skutečné události. Pokračování, opatření a prohlášení ne. Země bez záznamu neznamená klid — jen jsme odtud nic nedoložili.
       </p>
     </div>
   );

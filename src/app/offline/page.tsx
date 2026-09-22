@@ -13,8 +13,7 @@ export default function Offline() {
       </span>
       <h1 className="nadpis mt-6 text-cislo-l">Bez připojení</h1>
       <p className="mt-4 text-vetsi leading-relaxed text-tlum">
-        Tahle stránka není uložená pro čtení bez sítě. Přehled, který jste už otevřeli, je
-        k dispozici — poslední ověřený stav platí, dokud ho nepřepíše nový.
+        Tahle stránka není uložená pro čtení bez sítě. Přehled, který jste už otevřeli, funguje — platí poslední ověřený stav.
       </p>
       <Link href="/" className="mt-8 inline-flex items-center gap-2 rounded-full border border-akcent/60 bg-akcent/15 px-5 py-3 text-zaklad font-bold uppercase tracking-[0.05em] text-akcent-svetla">
         Zpět na přehled

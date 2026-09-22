@@ -3,6 +3,7 @@ import { podleZemi, pripady } from "@/lib/agregace";
 import { incidenty, tlakZeme } from "@/lib/data";
 import { PASMA, UROVNE } from "@/lib/skala";
 import { Vlajka } from "./zeme";
+import { Otaznik } from "./zaklad";
 
 /*
   Typy událostí po zemích — tabulka místo karuselu pavučin.
@@ -38,8 +39,7 @@ export function TabulkaZemi({ maxZemi = 12 }: { maxZemi?: number }) {
   return (
     <section aria-label="Typy událostí po zemích" className="flex h-full flex-col overflow-hidden rounded-[22px] border border-linka2 bg-plocha">
       <div className="flex items-center justify-between gap-3 border-b border-linka2 px-4 py-2.5">
-        <span className="stitek">Podle zemí</span>
-        <span className="text-mikro text-tlum2">nejvyšší doložená úroveň od roku 2014</span>
+        <span className="flex items-center gap-1.5"><span className="stitek">Podle zemí</span><Otaznik popis={<span className="block">Nejvyšší doložená úroveň od roku 2014. Pomlčka = záznam nemáme, ne že se nic nestalo. Vojenské riziko hodnotíme jen pro Evropu jako celek.</span>} /></span>
       </div>
 
       {/*
@@ -105,10 +105,6 @@ export function TabulkaZemi({ maxZemi = 12 }: { maxZemi?: number }) {
         </table>
       </div>
 
-      <p className="border-t border-linka2 px-4 py-2 text-mikro leading-snug text-tlum2">
-        Pomlčka = odtud takový záznam nemáme, ne že se nic nestalo. Přímé vojenské riziko se pro jednotlivé země
-        nehodnotí — je jen v pavučině Evropy.
-      </p>
     </section>
   );
 }

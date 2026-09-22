@@ -30,7 +30,7 @@ function Odkazy({ idx, aktor }: { idx: number[]; aktor: SvetAktor }) {
         const z = aktor.zdroje[i];
         if (!z) return null;
         return (
-          <a key={i} href={z.url} target="_blank" rel="noopener noreferrer" title={z.nazev} className="cislice text-mikro text-akcent hover:text-akcent-svetla">
+          <a key={i} href={z.url} target="_blank" rel="nofollow noopener noreferrer" title={z.nazev} className="cislice text-mikro text-akcent hover:text-akcent-svetla">
             [{i + 1}]
           </a>
         );
@@ -110,7 +110,7 @@ function Aktor({ a, stupne }: { a: SvetAktor; stupne: string[] }) {
             <li key={z.url} className="flex gap-2 text-male leading-snug">
               <span className="cislice shrink-0 text-tlum2">[{i + 1}]</span>
               <span className={`stitek-tmavy shrink-0 rounded-[12px] border px-1.5 py-[2px] ${TYPY_ZDROJU[z.typ].tridy}`}>{TYPY_ZDROJU[z.typ].znacka}</span>
-              <a href={z.url} target="_blank" rel="noopener noreferrer" className="odkaz min-w-0 break-words text-tlum">{z.nazev}</a>
+              <a href={z.url} target="_blank" rel="nofollow noopener noreferrer" className="odkaz min-w-0 break-words text-tlum">{z.nazev}</a>
             </li>
           ))}
         </ol>
@@ -175,7 +175,7 @@ export default function Svet() {
           id="stret"
           stitek="Rozpory"
           nadpis="Kde se cíle střetávají"
-          popis="Stejné otázky, různé odpovědi. Postoje jsou zkrácené podle deklarací výše; pomlčka znamená, že se k tomu aktér nevyjadřuje nebo v tom nehraje roli."
+          popis="Stejné otázky, různé odpovědi. Pomlčka = aktér se k tomu nevyjadřuje nebo v tom nehraje roli."
         />
         <div className="overflow-x-auto rounded-[18px] border border-linka">
           <table className="w-full min-w-[980px] border-collapse text-left text-male">
@@ -232,7 +232,7 @@ export default function Svet() {
       <ZpusobyVUziti />
 
       <p className="mt-8 text-drobne leading-relaxed text-tlum2">
-        Tato stránka je analytická interpretace veřejných zdrojů, ne zpravodajský produkt státu ani předpověď. Aktualizuje ji ranní kontrola spolu s daty; každá změna je v <Link href="/opravy/" className="odkaz">historii oprav</Link>. Chyba nebo lepší zdroj? Napište přes <Link href="/o-projektu/" className="odkaz">O projektu</Link>.
+        Tahle stránka je náš rozbor veřejných zdrojů, ne úřední zpráva ani předpověď. Každá změna je v <Link href="/opravy/" className="odkaz">historii oprav</Link>. Chyba nebo lepší zdroj? Napište přes <Link href="/o-projektu/" className="odkaz">O projektu</Link>.
       </p>
     </div>
   );

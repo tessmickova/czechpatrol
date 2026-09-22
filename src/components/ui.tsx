@@ -113,7 +113,7 @@ export function Tlacitko({
   );
   if (!kam) return <button type="button" onClick={onKlik} className={tridy}>{obsah}</button>;
   if (nove || kam.startsWith("http") || kam.endsWith(".xml")) {
-    return <a href={kam} target={nove ? "_blank" : undefined} rel={nove ? "noopener noreferrer" : undefined} className={tridy}>{obsah}</a>;
+    return <a href={kam} target={nove ? "_blank" : undefined} rel={nove ? "nofollow noopener noreferrer" : undefined} className={tridy}>{obsah}</a>;
   }
   return <Link href={kam} onClick={onKlik} className={tridy}>{obsah}</Link>;
 }

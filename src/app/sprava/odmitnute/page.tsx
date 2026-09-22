@@ -44,7 +44,7 @@ function Radek({ o }: { o: Odmitnuty }) {
       <a
         href={o.zdroj.url}
         target="_blank"
-        rel="noopener noreferrer"
+        rel="nofollow noopener noreferrer"
         className="mt-1.5 block text-zaklad font-semibold leading-snug text-inkoust hover:underline"
       >
         {o.titulek}

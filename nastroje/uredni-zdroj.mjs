@@ -78,6 +78,8 @@ const UREDNI_DOMENY = new Set([
   "pet.dk", "forsvaret.dk", "cfcs.dk",
   // Rumunsko, Moldavsko, Bulharsko
   "mapn.ro", "dnsc.ro", "gov.md", "presidency.ro",
+  /* Ministerstvo obrany Moldavska má web mimo gov.md; tiskové zprávy o dronech vydává tam. */
+  "army.md",
   // Rakousko
   "bundesheer.at",
   // Mezinárodní

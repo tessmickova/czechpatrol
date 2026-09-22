@@ -41,16 +41,19 @@ export function VyzvaTelegram() {
           </p>
           <p className="mt-5 flex flex-wrap items-center gap-2.5">
             {url ? (
-              <Tlacitko kam={url} nove varianta="plny" velikost="l">
-                <ZnackaKanalu znacka="telegram" velikost={20} />
-                Odebírat na Telegramu
-              </Tlacitko>
+              <span data-zapojeni="telegram" className="contents">
+                <Tlacitko kam={url} nove varianta="plny" velikost="l">
+                  <ZnackaKanalu znacka="telegram" velikost={20} />
+                  Odebírat na Telegramu
+                </Tlacitko>
+              </span>
             ) : (
               <span className="inline-flex min-h-[48px] items-center gap-2.5 rounded-full border border-dashed border-linka px-6 text-zaklad font-semibold text-noc-tlum">
                 <ZnackaKanalu znacka="telegram" velikost={20} tlumena /> Telegram připravujeme
               </span>
             )}
             <Tlacitko kam="/feed.xml" varianta="obrys" velikost="l" naTmavem ikona="rss">RSS do čtečky</Tlacitko>
+            <Tlacitko kam="/zapojit-se/" varianta="obrys" velikost="l" naTmavem ikona="uzivatel">Další způsoby zapojení</Tlacitko>
             <Tlacitko kam="/odber/" varianta="tichy" velikost="l" trida="!font-normal text-noc-tlum hover:bg-[rgb(255_255_255/0.06)] hover:text-noc-text">
               kdy přesně upozornění chodí
             </Tlacitko>

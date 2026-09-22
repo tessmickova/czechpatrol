@@ -115,6 +115,8 @@ const STUPEN: Record<string, StavSluzby> = {
   minor: "omezeni",
   major: "vypadek",
   critical: "vypadek",
+  /* Plánovaná údržba: služba může být omezená, ale není to výpadek. Zoom ji hlásil 22. 9. 2026 a panel ukazoval „bez údaje". */
+  maintenance: "omezeni",
 };
 
 /** Přečte summary.json. Cokoli nečekaného vrátí jako „bez údaje" s důvodem, nikdy jako provoz. */

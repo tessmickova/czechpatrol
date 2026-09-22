@@ -2,6 +2,7 @@ import Link from "next/link";
 import { DISKUZE, KANALY } from "@/config/web";
 import { Ikona } from "./ikony";
 import { Znacka } from "./znacka";
+import { Otaznik } from "./zaklad";
 
 /*
   Komunita jako kolečka.
@@ -52,7 +53,7 @@ export function KruhyKomunity({ onKlik }: { onKlik?: () => void }) {
         <a
           href={DISKUZE.url}
           target="_blank"
-          rel="noopener noreferrer"
+          rel="nofollow noopener noreferrer"
           className="mt-2.5 flex min-h-[44px] items-center gap-2.5 rounded-[18px] border border-akcent/50 bg-akcent/12 px-3 transition-colors hover:bg-akcent/20"
         >
           <span className="grid h-7 w-7 shrink-0 place-items-center rounded-full bg-akcent/20 text-akcent"><Ikona nazev="bublina" velikost={14} tah={1.9} /></span>
@@ -66,8 +67,8 @@ export function KruhyKomunity({ onKlik }: { onKlik?: () => void }) {
         </p>
       )}
 
-      <p className="mt-2 text-drobne leading-relaxed text-tlum2">
-        Kolečka jsou značky míst, ne skuteční lidé. Fotky ani jména odběratelů nezveřejňujeme.{" "}
+      <p className="mt-2 flex items-center gap-1.5 text-drobne text-tlum2">
+        <Otaznik popis={<span className="block">Kolečka jsou značky míst, ne skuteční lidé. Fotky ani jména odběratelů nezveřejňujeme.</span>} />
         <Link href="/o-projektu/" onClick={onKlik} className="odkaz">Kdo za projektem stojí →</Link>
       </p>
     </div>

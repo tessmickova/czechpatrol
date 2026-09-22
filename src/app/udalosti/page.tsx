@@ -14,7 +14,7 @@ export default function Udalosti() {
       <HlavickaStranky
         stitek="Události"
         nadpis="Co se stalo a odkud to víme"
-        uvod="Případy, jejich pokračování, úřední opatření a prohlášení. U každého záznamu je zdroj. Jedna událost se počítá jednou, i když o ní vyjde deset článků."
+        uvod="Případy, jejich pokračování, opatření a prohlášení. Každý záznam má zdroj. Jedna událost = jeden záznam, i když o ní vyjde deset článků."
       />
       <div className="mt-12 sm:mt-16" />
       <UdalostiKlient zaznamy={incidenty()} neprosle={nepotvrzene()} kandidati={kandidati()} nepotvrzene={nepotvrzeneZaznamy()} />

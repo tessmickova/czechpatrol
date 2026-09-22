@@ -28,10 +28,22 @@ export const HLAVNI_STRANKY: { href: string; label: string; ikona: NazevIkony; p
   { href: "/manipulace/", label: "Manipulace", ikona: "bublina", popis: "operace cílené na občany a co je u nich doložené" },
   { href: "/zeme/", label: "Země", ikona: "vlajka", popis: "přehled a počty pro každou sledovanou zemi" },
   { href: "/analyzy/", label: "Analýzy", ikona: "graf", popis: "vývoj v čase, cíle aktérů, metodika" },
+  { href: "/pripravenost/", label: "Jsem připraven/a?", ikona: "fajfka", popis: "oficiální nástroje a co si nastavit předem" },
+];
+
+/*
+  Funkce po přihlášení. Nepřihlášený je vidí zašedlé se zámkem v barvě
+  značky — ví, že existují a co k nim potřebuje. Řádek ho vede na
+  přihlášení, ne na stránku, která by mu bez účtu nic neukázala.
+*/
+export const PO_PRIHLASENI: { href: string; label: string; ikona: NazevIkony; popis: string }[] = [
   { href: "/muj-prehled/", label: "Můj přehled", ikona: "terc", popis: "země a témata, která sledujete" },
+  { href: "/ucet/#upozorneni", label: "Upozornění na míru", ikona: "zvonek", popis: "četnost, závažnost, tiché hodiny, kraj" },
+  { href: "/odolnost/", label: "Odolnost domácnosti", ikona: "stit", popis: "co u vás vypadne s čím, zálohy, zásoby na 3 až 30 dní" },
 ];
 
 export const DALSI_STRANKY = [
+  { href: "/zapojit-se/", label: "Zapojit se" },
   { href: "/vyvoj/", label: "Vývoj" },
   { href: "/svet/", label: "Aktéři a cíle" },
   { href: "/metodika/", label: "Metodika" },
@@ -130,6 +142,38 @@ export function PostranniPanel() {
             </ul>
           </nav>
 
+          {/* funkce po přihlášení */}
+          <section aria-label="Po přihlášení" className="border-t border-linka py-2">
+            <div className="stitek px-4 pb-1 pt-2">Po přihlášení</div>
+            <ul>
+              {PO_PRIHLASENI.map((o) =>
+                ucet ? (
+                  <li key={o.href}>
+                    <Link href={o.href} onClick={zavri} className={RADEK}>
+                      <span className="grid h-9 w-9 shrink-0 place-items-center rounded-[12px] bg-plocha2 text-akcent"><Ikona nazev={o.ikona} velikost={17} tah={1.8} /></span>
+                      <span className="min-w-0 flex-1">
+                        <span className="block font-semibold">{o.label}</span>
+                        <span className="block text-drobne text-tlum">{o.popis}</span>
+                      </span>
+                      <Ikona nazev="nahoru" velikost={13} tah={2} trida="shrink-0 rotate-90 text-tlum2" />
+                    </Link>
+                  </li>
+                ) : (
+                  <li key={o.href}>
+                    <Link href="/ucet/" onClick={zavri} className={RADEK} aria-label={`${o.label} — vyžaduje přihlášení`}>
+                      <span className="grid h-9 w-9 shrink-0 place-items-center rounded-[12px] bg-plocha2 text-tlum2"><Ikona nazev={o.ikona} velikost={17} tah={1.8} /></span>
+                      <span className="min-w-0 flex-1">
+                        <span className="block font-semibold text-tlum">{o.label}</span>
+                        <span className="block text-drobne text-tlum2">{UCTY_ZAPNUTE ? "vyžaduje přihlášení" : "účty připravujeme"}</span>
+                      </span>
+                      <span className="shrink-0 text-akcent"><Ikona nazev="zamek" velikost={16} tah={2} /></span>
+                    </Link>
+                  </li>
+                ),
+              )}
+            </ul>
+          </section>
+
           {/* účet */}
           <section aria-label="Účet" className="border-t border-linka py-2">
             <div className="stitek px-4 pb-1 pt-2">Účet</div>
@@ -190,7 +234,8 @@ export function PostranniPanel() {
               <a
                 href={KANALY.telegram}
                 target="_blank"
-                rel="noopener noreferrer"
+                rel="nofollow noopener noreferrer"
+                data-zapojeni="telegram"
                 className="flex min-h-[60px] items-center gap-3 rounded-[18px] border border-akcent/55 bg-akcent/12 px-3.5 transition-colors hover:bg-akcent/20"
               >
                 <ZnackaKanalu znacka="telegram" velikost={30} />
@@ -212,7 +257,7 @@ export function PostranniPanel() {
                 return (
                   <li key={k.klic}>
                     {url ? (
-                      <a href={url} target="_blank" rel="noopener noreferrer" className="flex min-h-[58px] flex-col items-center justify-center gap-1 rounded-[18px] border border-linka px-1 text-center transition-colors hover:border-akcent">
+                      <a href={url} target="_blank" rel="nofollow noopener noreferrer" className="flex min-h-[58px] flex-col items-center justify-center gap-1 rounded-[18px] border border-linka px-1 text-center transition-colors hover:border-akcent">
                         <ZnackaKanalu znacka={k.klic} velikost={22} />
                         <span className="text-mikro font-semibold text-inkoust">{k.nazev}</span>
                       </a>
@@ -246,7 +291,7 @@ export function PostranniPanel() {
               <a
                 href={BUY_ME_A_COFFEE_URL}
                 target="_blank"
-                rel="noopener noreferrer"
+                rel="nofollow noopener noreferrer"
                 className="flex min-h-[52px] items-center gap-3 rounded-[18px] border border-jantar/50 bg-jantar/10 px-3.5 transition-colors hover:bg-jantar/18"
               >
                 <span className="grid h-9 w-9 shrink-0 place-items-center rounded-full bg-jantar/20 text-jantar"><Ikona nazev="kava" velikost={17} tah={1.9} /></span>
@@ -279,7 +324,7 @@ export function PostranniPanel() {
             <ul className="pb-2">
               {POMOCNIK.map((p) => (
                 <li key={p.url}>
-                  <a href={p.url} target="_blank" rel="noopener noreferrer" className="block px-4 py-2 hover:bg-plocha">
+                  <a href={p.url} target="_blank" rel="nofollow noopener noreferrer" className="block px-4 py-2 hover:bg-plocha">
                     <span className="block text-zaklad font-semibold text-inkoust">{p.nazev}</span>
                     <span className="block text-drobne leading-snug text-tlum">{p.popis}</span>
                   </a>

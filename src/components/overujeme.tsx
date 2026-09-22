@@ -142,8 +142,7 @@ export function PruhOverujeme({
             {ziveKarty.map((o) => <Karta key={o.slug} o={o} ted={cas} />)}
           </div>
           <Sdeleni ton="neutral" ikona="vaha" trida="mt-2.5">
-            Tohle nejsou naše zjištění a do žádného počtu ani hodnocení na téhle stránce nevstupují. Neposíláme je
-            ani do kanálů. Uvádíme je proto, že mlčet o něčem, co se šíří, je horší než napsat, co o tom doopravdy víme.
+            Nejsou to naše zjištění. Do počtů, hodnocení ani do kanálů nejdou. Píšeme je, protože mlčet o tom, co se šíří, je horší než říct, co víme.
           </Sdeleni>
         </>
       )}

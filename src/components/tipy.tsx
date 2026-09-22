@@ -50,7 +50,7 @@ export function TipyKPriprave({ ted = Date.now() }: { ted?: number }) {
             <p className="mt-1 text-male leading-snug text-tlum">{x.text}</p>
             <p className="mt-1 flex flex-wrap gap-x-3 gap-y-1">
               {x.zdroje.map((z) => (
-                <a key={z.url} href={z.url} target="_blank" rel="noopener noreferrer" className="odkaz text-drobne text-tlum2">
+                <a key={z.url} href={z.url} target="_blank" rel="nofollow noopener noreferrer" className="odkaz text-drobne text-tlum2">
                   {z.nazev} ↗
                 </a>
               ))}

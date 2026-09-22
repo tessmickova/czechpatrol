@@ -73,8 +73,7 @@ export function Nahlaseni() {
         <form onSubmit={odesli} className="sklo mt-4 w-full max-w-[720px] rounded-[18px] p-5 sm:p-6">
           <div className="stitek mb-1 !text-akcent">Hlášení události</div>
           <p className="mb-4 text-zaklad leading-relaxed text-tlum">
-            Nejlepší je odkaz na úřední zdroj — policii, vládu, NATO, EU. Bez zdroje záznam nezveřejníme, ale rádi ho dohledáme.
-            Kontakt je dobrovolný; použijeme ho jen na doptání a po roce smažeme.
+            Nejlepší je odkaz na úřad: policie, vláda, NATO, EU. Bez zdroje záznam nezveřejníme, ale dohledáme ho. Kontakt je dobrovolný, po roce ho smažeme.
           </p>
           <div className="space-y-4">
             <div>
@@ -107,7 +106,7 @@ export function Nahlaseni() {
                 <Ikona nazev="odeslat" velikost={14} tah={2} /> {odesila ? "Odesílám…" : UCTY_ZAPNUTE ? "Odeslat správci" : TIPY_MAIL ? "Odeslat e-mailem" : "Odeslat"}
               </button>
               {KOMUNITA.diskuse && (
-                <a href={KOMUNITA.diskuse} target="_blank" rel="noopener noreferrer" className="text-male text-tlum underline underline-offset-4 hover:text-inkoust">
+                <a href={KOMUNITA.diskuse} target="_blank" rel="nofollow noopener noreferrer" className="text-male text-tlum underline underline-offset-4 hover:text-inkoust">
                 </a>
               )}
             </div>

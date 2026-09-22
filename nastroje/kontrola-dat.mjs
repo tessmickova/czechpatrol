@@ -17,6 +17,7 @@ import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { chybyVystrahy } from "./vystraha-pravidla.mjs";
 import { falesneUredni } from "./uredni-zdroj.mjs";
+import { zkontrolujZaznam } from "./bezpecnost-obsahu.mjs";
 
 const koren = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const cti = (f) => JSON.parse(fs.readFileSync(path.join(koren, "data", f), "utf-8"));
@@ -34,6 +35,7 @@ const svet = fs.existsSync(path.join(koren, "data", "svet.json")) ? cti("svet.js
 const overujeme = fs.existsSync(path.join(koren, "data", "overujeme.json")) ? cti("overujeme.json") : [];
 const vystrahy = fs.existsSync(path.join(koren, "data", "vystraha.json")) ? cti("vystraha.json") : { aktivni: null, archiv: [] };
 const tipy = fs.existsSync(path.join(koren, "data", "tipy.json")) ? cti("tipy.json") : [];
+const nastroje = fs.existsSync(path.join(koren, "data", "oficialni-nastroje.json")) ? cti("oficialni-nastroje.json") : [];
 
 const chyby = [];
 const varovani = [];
@@ -351,6 +353,45 @@ for (const i of incidenty) {
 
 // výstup
 const shrnuti = `záznamů ${incidenty.length} (případů ${pripady.length}, aktualizací ${incidenty.filter((i) => druh(i) === "aktualizace").length}, opatření ${incidenty.filter((i) => druh(i) === "opatreni").length}, reakcí ${incidenty.filter((i) => druh(i) === "reakce").length}), neprošlých ${nepotvrzene.length}, oprav ${opravy.length}, kandidátů ${kandidati.length}, ověřovaných ${overujeme.length}`;
+/* ---------- praktický dopad a dopad na ČR: jen vyplněné a doložené ---------- */
+const https = (u) => typeof u === "string" && /^https:\/\//.test(u);
+for (const z of [...incidenty, ...navrhy]) {
+  const d = z.praktickyDopad;
+  if (d) {
+    if (!platneDatum(d.overeno)) chyby.push(`${z.slug ?? z.id}: praktickyDopad bez platného data ověření`);
+    for (const x of d.dalsiInfo ?? []) if (!https(x?.url)) chyby.push(`${z.slug ?? z.id}: praktickyDopad.dalsiInfo bez https adresy`);
+    for (const x of d.coDoporucujeUrad ?? []) if (!x?.kdo || !https(x?.url)) chyby.push(`${z.slug ?? z.id}: doporučení úřadu bez jména nebo odkazu`);
+    const neco = ["coJePotvrzeno", "coMuzeBytOvlivneno", "coFunguje", "coNefunguje", "coUdelat", "coNedelat"].some((k) => (d[k] ?? []).length);
+    if (!neco) chyby.push(`${z.slug ?? z.id}: praktickyDopad je prázdná šablona — buď vyplnit, nebo pole vynechat`);
+  }
+  const c = z.dopadNaCr;
+  if (c) {
+    if (!["zadny", "mozny", "potvrzeny"].includes(c.stav)) chyby.push(`${z.slug ?? z.id}: dopadNaCr.stav mimo číselník`);
+    if (!platneDatum(c.overeno)) chyby.push(`${z.slug ?? z.id}: dopadNaCr bez platného data ověření`);
+    if (!c.procRelevantni || !c.dopad || !c.sledujeme) chyby.push(`${z.slug ?? z.id}: dopadNaCr má prázdnou část`);
+    if (z.kodZeme === "CZ") varovani.push(`${z.slug ?? z.id}: dopadNaCr u události v Česku — pole je pro zahraniční`);
+  }
+}
+
+/* ---------- bezpečnost obsahu: souřadnice, pohyb jednotek, přístupy ---------- */
+for (const z of [...incidenty, ...navrhy, ...nepotvrzene]) {
+  for (const n of zkontrolujZaznam(z)) {
+    const zprava = `${z.slug ?? z.id}: ${n.proc} („${n.ukazka}…“)`;
+    if (n.zavaznost === "chyba") chyby.push(zprava); else varovani.push(zprava);
+  }
+}
+
+/* ---------- katalog oficiálních nástrojů ---------- */
+for (const n of nastroje) {
+  for (const k of ["iosUrl", "androidUrl", "webUrl", "oficialniZdroj"]) if (n[k] != null && !https(n[k])) chyby.push(`nástroj ${n.id}: ${k} není https`);
+  if (n.iosUrl && !/^https:\/\/apps\.apple\.com\//.test(n.iosUrl)) chyby.push(`nástroj ${n.id}: iosUrl nevede na App Store`);
+  if (n.androidUrl && !/^https:\/\/play\.google\.com\//.test(n.androidUrl)) chyby.push(`nástroj ${n.id}: androidUrl nevede na Google Play`);
+  if (n.overeno != null && !platneDatum(n.overeno)) chyby.push(`nástroj ${n.id}: overeno není datum`);
+  if (n.stav === "overeno" && !n.overeno) chyby.push(`nástroj ${n.id}: stav „overeno“ bez data ověření`);
+  if (n.stav !== "obecne" && !n.oficialniZdroj) chyby.push(`nástroj ${n.id}: chybí oficiální zdroj`);
+  if (/\[DOPLNIT\]/.test(JSON.stringify(n))) chyby.push(`nástroj ${n.id}: zástupný text`);
+}
+
 console.log(`Kontrola dat: ${shrnuti}`);
 for (const v of varovani) console.log(`  varování: ${v}`);
 for (const c of chyby) console.log(`  CHYBA: ${c}`);

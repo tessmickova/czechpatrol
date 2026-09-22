@@ -25,7 +25,7 @@ export default function IzsStranka() {
         stitek="Partner IZS"
         ikona="sirena"
         nadpis="Zprávy záchranných složek přímo čtenářům"
-        popis="CzechPatrol umí doručit zprávu ověřené složky integrovaného záchranného systému lidem, kteří o ni stojí. Není to náhrada úředního varování — je to jeden kanál navíc."
+        popis="Ověřená složka záchranného systému může přes CzechPatrol poslat zprávu lidem, kteří o ni stojí. Je to kanál navíc, ne úřední varování."
       />
       <Obsah>
         <div className="mb-10">
@@ -52,7 +52,7 @@ export default function IzsStranka() {
             <div className="stitek mb-2">Co to není</div>
             <h2 className="podnadpis text-velke">Ne úřední varování</h2>
             <ul className="mt-3 space-y-2 text-zaklad leading-relaxed text-tlum">
-              <li>Oficiální varování obyvatel běží přes jednotný systém varování a vyrozumění (sirény, státní SMS, veřejnoprávní média). CzechPatrol ho nenahrazuje a nikdy se za něj nevydává.</li>
+              <li>Úřední varování jde přes sirény, státní SMS a veřejná média. CzechPatrol je nenahrazuje.</li>
               <li>Zpráva partnera nese jméno složky a označení „zpráva partnera IZS“. Neobsahuje hodnocení situace ani rady typu „odjet / neodjet“.</li>
               <li>Šíření poplašné zprávy je trestný čin. Proto každou zprávu před odesláním čte člověk.</li>
             </ul>
@@ -61,8 +61,7 @@ export default function IzsStranka() {
             <div className="stitek mb-2">Pro složky</div>
             <h2 className="podnadpis text-velke">Jak získat roli partnera</h2>
             <p className="mt-3 text-zaklad leading-relaxed text-tlum">
-              Založte si anonymní účet a napište nám z úřední adresy vaší složky. Ověříme, že
-              adresa patří složce, a roli přidělíme k účtu, jehož identifikátor nám pošlete.
+              Založte si anonymní účet. Napište nám z úřední adresy své složky a pošlete číslo účtu. Adresu ověříme a roli přidělíme.
             </p>
             {IZS_KONTAKT ? (
               <a href={`mailto:${IZS_KONTAKT}`} className="mt-4 inline-flex items-center gap-2 text-zaklad font-semibold text-akcent hover:text-akcent-svetla">
