@@ -4,7 +4,7 @@ import { OdolnostKlient } from "@/components/odolnost-klient";
 
 export const metadata: Metadata = {
   title: "Odolnost domácnosti",
-  description: "Pro přihlášené: co u vás vypadne s čím, které zálohy sdílejí stejné selhání, jak dlouho vydrží zásoby a co má teď největší smysl. Bez nákupního seznamu.",
+  description: "Pro přihlášené: za pět minut zjistíte, co u vás vypadne s čím, jak dlouho vydrží zásoby, co dokoupit a co zařídit. Zůstává jen ve vašem zařízení.",
   robots: { index: false },
 };
 
@@ -14,8 +14,8 @@ export default function Odolnost() {
       <HlavickaStranky
         stitek="Odolnost domácnosti"
         ikona="terc"
-        nadpis="Nejde o víc věcí. Jde o to, aby jedna porucha nevypnula všechno."
-        popis="Zaškrtněte, jak u vás fungují voda, teplo, spojení a další. Web spočítá, co na čem stojí, kde dvě zálohy selžou naráz a co má teď největší smysl. Vše zůstává jen ve vašem zařízení."
+        nadpis="Zjistěte za pět minut, jak je vaše domácnost připravená"
+        popis="Zaškrtněte, jak u vás fungují voda, teplo a spojení. Hned uvidíte, co vypadne s čím, co dokoupit a co zařídit. Zůstává jen ve vašem zařízení, nikam se neposílá."
       />
       <Obsah>
         <OdolnostKlient />
