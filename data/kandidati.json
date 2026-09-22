@@ -138,6 +138,39 @@
     }
   },
   {
+    "id": "k-3603dbd8de149aa5",
+    "zachyceno": "2026-09-22T20:02:26.802Z",
+    "publikovano": "2026-09-22T19:18:00.000Z",
+    "zdroj": {
+      "nazev": "Český rozhlas — domácí zprávy",
+      "url": "https://www.irozhlas.cz/zpravy-domov/z-vietnamu-pres-cesko-do-nemecka-13-prevadecu-budou-soudit-v-litomericich_2609222118_jar",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Z Vietnamu přes Česko do Německa. 13 převaděčů budou soudit v Litoměřicích, Teplicím nestačí prostory",
+    "titulekPuvodni": "Z Vietnamu přes Česko do Německa. 13 převaděčů budou soudit v Litoměřicích, Teplicím nestačí prostory",
+    "shrnuti": "Členům třináctičlenné skupiny převaděčů hrozí trest dvou až osmi let vězení. Kauzu ilegálního převozu migrantů z jihovýchodní Asie přes Česko do Německa začal projednávat Okresní soud v Teplicích. Policisté zatýkali v Ústeckém a Středočeském kraji a také v Praze. Kvůli velkému množství obžalovaných ",
+    "kodZeme": "CZ",
+    "zeme": "Česko",
+    "kategorie": [
+      "zpravodajske"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "obzalov"
+    ],
+    "naliehave": null,
+    "stav": "ceka",
+    "vyrez": {
+      "text": "",
+      "stazeno": "2026-09-22T20:02:27.331Z",
+      "stav": 403,
+      "chyba": "HTTP 403"
+    }
+  },
+  {
     "id": "k-8f53dde77d2adcba",
     "zachyceno": "2026-09-22T19:02:28.981Z",
     "publikovano": "2026-09-22T18:33:43.000Z",
@@ -12106,44 +12139,6 @@
       "kdy": "2026-09-20T07:57:42.752Z",
       "duvod": "neudalost",
       "patriK": null,
-      "poznamka": null
-    }
-  },
-  {
-    "id": "k-74af3ae247ae5439",
-    "zachyceno": "2026-09-07T10:06:21.723Z",
-    "publikovano": "2026-09-07T08:41:00.000Z",
-    "zdroj": {
-      "nazev": "iROZHLAS — zprávy",
-      "url": "https://www.irozhlas.cz/zpravy-svet/nemecka-policie-vysetruje-pozar-elektricke-stanice-v-berline-u-dalsi-rozvodny_2609071041_ntu",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Německá policie vyšetřuje požár elektrické stanice v Berlíně. U další rozvodny odhalila prostřižený plot",
-    "titulekPuvodni": "Německá policie vyšetřuje požár elektrické stanice v Berlíně. U další rozvodny odhalila prostřižený plot",
-    "shrnuti": "Německá policie vyšetřuje noční požár elektrické stanice v centru Berlína, na západě Německa odhalila u rozvodny prostřižený plot. S odvoláním na své zdroje o tom v pondělí informoval bulvární list Bild. Německo minulý týden zaznamenalo několik útoků na rozvodny elektřiny, které úřady vyšetřují jako",
-    "kodZeme": "DE",
-    "zeme": "Německo",
-    "kategorie": [
-      "vojsko"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "shody": [
-      "sabotaz"
-    ],
-    "stav": "vyrizen",
-    "vyrez": {
-      "text": "",
-      "stazeno": "2026-09-14T09:02:38.300Z",
-      "stav": 403,
-      "chyba": "HTTP 403"
-    },
-    "naliehave": null,
-    "vyrizeni": {
-      "kdy": "2026-09-20T07:57:42.752Z",
-      "duvod": "pokracovani",
-      "patriK": "nemecko-rozvodny-zadrzeni-2026",
       "poznamka": null
     }
   }

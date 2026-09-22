@@ -1,11 +1,16 @@
 {
-  "aktualizovano": "2026-09-22T19:02:29.540Z",
+  "aktualizovano": "2026-09-22T20:02:27.410Z",
   "stavy": [
     {
       "klic": "cloudflare",
       "stav": "omezeni",
       "popis": "Minor Service Outage",
       "incidenty": [
+        {
+          "nazev": "Cloudflare One Clients are incorrectly challenged on some sites",
+          "odkaz": "https://www.cloudflarestatus.com/incidents/tl0vrgjy99r0",
+          "aktualizovano": "2026-09-22T19:23:17.000Z"
+        },
         {
           "nazev": "Incorrect geo location for some Cloudflare WARP users",
           "odkaz": "https://www.cloudflarestatus.com/incidents/9g65dxfbcjln",
@@ -18,7 +23,7 @@
         "Africa",
         "Arica, Chile - (ARI)"
       ],
-      "zkontrolovano": "2026-09-22T19:02:29.540Z",
+      "zkontrolovano": "2026-09-22T20:02:27.410Z",
       "chyba": null
     },
     {
@@ -32,7 +37,7 @@
         "Zoom Phone - EMEA",
         "Zoom Phone - NORTH AMERICA"
       ],
-      "zkontrolovano": "2026-09-22T19:02:29.540Z",
+      "zkontrolovano": "2026-09-22T20:02:27.410Z",
       "chyba": null
     },
     {
@@ -41,7 +46,7 @@
       "popis": "All Systems Operational",
       "incidenty": [],
       "postizene": [],
-      "zkontrolovano": "2026-09-22T19:02:29.540Z",
+      "zkontrolovano": "2026-09-22T20:02:27.410Z",
       "chyba": null
     }
   ]
