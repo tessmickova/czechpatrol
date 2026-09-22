@@ -10,6 +10,7 @@ import type { Snimek } from "@/lib/typy";
 import { PanelNahledu, useNahled, type Nahled } from "./nahled-radku";
 import { Tlacitko } from "./ui";
 import { Vlajka } from "./zeme";
+import { Otaznik } from "./zaklad";
 
 /*
   Co se změnilo — v Česku, na hranicích a u sousedů.
@@ -196,6 +197,7 @@ export function CoSeZmenilo({ zaznamy, snimky, ted }: { zaznamy: Zaznam[]; snimk
             <span className="h-[6px] w-[6px] rounded-full bg-akcent" />
           </span>
           <h3 className="stitek">Co se změnilo</h3>
+          <Otaznik popis={<span className="block">{posledniKontrola ? `Úřední stavy kontrolovány ${datumPraha(posledniKontrola)}.` : "Bez záznamu o kontrole."}{posledniKontrola && zmenStavu === 0 ? " Za 90 dní beze změny." : ""}</span>} />
         </span>
         <span className="flex items-center gap-1.5 text-mikro text-tlum2">
           {zhorseni7 > 0 && <span aria-hidden className="h-[6px] w-[6px] rounded-full bg-akcent" />}
@@ -234,16 +236,8 @@ export function CoSeZmenilo({ zaznamy, snimky, ted }: { zaznamy: Zaznam[]; snimk
 
       <PanelNahledu nahled={nahled} kde={kde} />
 
-      {/*
-        Patička říká, co se kontrolovalo a co z toho vyšlo. „Žádná změna
-        úředního stavu" je informace, kterou čtenář hledá — ale jen když je
-        u ní, kdy naposled někdo koukal.
-      */}
-      <div className="mt-auto flex flex-wrap items-center justify-between gap-2 border-t border-linka2 px-4 py-2">
-        <span className="text-mikro text-tlum2">
-          {posledniKontrola ? `Úřední stavy kontrolovány ${datumPraha(posledniKontrola)}` : "Bez záznamu o kontrole"}
-          {posledniKontrola && zmenStavu === 0 ? " · za 90 dní beze změny" : ""}
-        </span>
+      {/* Kdy se stavy kontrolovaly, říká puntík u nadpisu; patička nese jen cestu dál. */}
+      <div className="mt-auto flex items-center justify-end border-t border-linka2 px-4 py-2">
         <Tlacitko kam="/vyvoj/" varianta="tichy" velikost="s" ikonaVpravo="nahoru" trida="[&>svg:last-child]:rotate-90">celý vývoj</Tlacitko>
       </div>
     </section>

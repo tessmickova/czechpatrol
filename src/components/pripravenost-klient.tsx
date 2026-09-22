@@ -6,6 +6,7 @@ import { NAZVY_KATEGORII, PORADI_KATEGORII, nactiOdpovedi, skorePripravenosti, u
 import type { OficialniNastroj } from "@/lib/typy";
 import { Ikona, type NazevIkony } from "./ikony";
 import { Odznak, Sdeleni, Tlacitko } from "./ui";
+import { Otaznik } from "./zaklad";
 
 /*
   Odkazy ven jsou rel="nofollow": web neručí za cizí stránky a nepřenáší
@@ -83,7 +84,7 @@ export function PripravenostKlient({ nastroje }: { nastroje: OficialniNastroj[] 
       <section aria-label="Digitální připravenost" className="rounded-[22px] border border-linka2 bg-plocha p-5 sm:p-6">
         <div className="flex flex-wrap items-end justify-between gap-4">
           <div>
-            <div className="stitek">Digitální připravenost</div>
+            <div className="flex items-center gap-1.5"><span className="stitek">Digitální připravenost</span><Otaznik popis={<span className="block">Počítá se jen z vašich odpovědí. Web nevidí, co máte v telefonu, a odpovědi zůstávají v tomto prohlížeči.</span>} /></div>
             <div className="mt-1 flex items-baseline gap-2">
               <span className="cislice text-cislo-xl font-bold leading-none text-inkoust">{nacteno && Object.keys(odpovedi).length > 0 ? skore.mam : "–"}</span>
               <span className="cislice text-cislo text-tlum2">/ {skore.celkem}</span>
@@ -91,9 +92,6 @@ export function PripravenostKlient({ nastroje }: { nastroje: OficialniNastroj[] 
             {/* Před první odpovědí se skóre nepočítá: „0 z 8, u 8 nevíte" by vypadalo jako výsledek. */}
             <p className="mt-2 text-male text-tlum">{!nacteno ? "Odpovědi se načítají z tohoto zařízení." : Object.keys(odpovedi).length === 0 ? "Zatím bez odpovědí. U každé položky níže zvolte mám, nemám nebo nevím." : vetaKeSkore(skore)}</p>
           </div>
-          <p className="max-w-[34ch] text-mikro leading-snug text-tlum2">
-            Počítá se jen z vašich odpovědí. Web nevidí, co máte v telefonu, a odpovědi zůstávají v tomto prohlížeči.
-          </p>
         </div>
         {!ulozisteFunguje && (
           <div className="mt-4"><Sdeleni ton="neutral" ikona="info">Prohlížeč neumožnil odpovědi uložit — po obnovení stránky zmizí.</Sdeleni></div>

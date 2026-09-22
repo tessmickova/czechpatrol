@@ -55,7 +55,7 @@ const ZALOZKY = [
   */
   { klic: "nepotvrzene", nazev: "Nepotvrzené", popis: "zpracované, čekají na schválení nebo úřední zdroj" },
   { klic: "cekajici", nazev: "Čeká na ověření", popis: "automatický sběr; do žádného počtu nevstupuje" },
-  { klic: "neproslo", nazev: "Neprošlo ověřením", popis: "vyvráceno nebo nedoloženo" },
+  { klic: "neproslo", nazev: "Neprošlo ověřením", popis: "vyvráceno nebo nedoloženo; do žádného počtu nevstupuje" },
 ] as const;
 type Zalozka = (typeof ZALOZKY)[number]["klic"];
 
@@ -566,7 +566,6 @@ function RadekNeprosle({ n }: { n: Nepotvrzene }) {
         <div className="space-y-3 pt-1 text-zaklad leading-relaxed">
           <div><div className="stitek mb-1">Co se původně zdálo</div><p className="text-tlum">{n.puvodne}</p></div>
           <div><div className="stitek mb-1">Co ověření ukázalo</div><p className="text-inkoust">{n.overeni}</p></div>
-          <p className="text-drobne text-tlum2">Do žádného počtu ani hodnocení nevstupuje.</p>
           <SeznamZdroju zdroje={n.zdroje} husty />
         </div>
       }

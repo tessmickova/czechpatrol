@@ -2,6 +2,7 @@ import { SLEDOVANE_PROFILY, type SledovanyProfil } from "../../sber/socialni";
 import { casPraha, datumPraha } from "@/lib/cas";
 import type { Kandidat } from "@/lib/typy";
 import { Sdeleni } from "./ui";
+import { Otaznik } from "./zaklad";
 import { ZnackaKanalu, type Znacka } from "./znacky";
 
 /*
@@ -48,6 +49,7 @@ export function ProfilySiti({ kandidati, maxPrispevku = 4 }: { kandidati: Kandid
             <span className="h-[6px] w-[6px] rounded-full bg-akcent" />
           </span>
           <h3 className="stitek">Profily na sítích</h3>
+          <Otaznik popis={<span className="block">Čteme jen ověřené účty úřadů a vládních představitelů. Soukromé účty nikdy. Facebook a X číst nejde.</span>} />
         </span>
         <span className="text-mikro text-tlum2">{ctenych ? `čte se ${ctenych} z ${SLEDOVANE_PROFILY.length}` : "zatím se nečte žádný"}</span>
       </div>
@@ -111,13 +113,6 @@ export function ProfilySiti({ kandidati, maxPrispevku = 4 }: { kandidati: Kandid
         </>
       )}
 
-      {/*
-        Pravidlo, které box drží, se říká nahlas: co se čte a co ne. Bez
-        věty by tři profily vypadaly jako výběr, ne jako hranice.
-      */}
-      <p className="px-4 py-2.5 text-mikro leading-snug text-tlum2">
-        Čteme jen ověřené účty úřadů a vládních představitelů. Soukromé účty nikdy. Facebook a X číst nejde.
-      </p>
     </section>
   );
 }

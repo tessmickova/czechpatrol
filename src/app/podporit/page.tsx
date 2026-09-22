@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { HlavickaStranky } from "@/components/nadpisy";
+import { Otaznik } from "@/components/zaklad";
 import Link from "next/link";
 import { BUY_ME_A_COFFEE_URL, KOMUNITA } from "@/config/web";
 import naklady from "../../../docs/naklady.json";
@@ -26,7 +27,7 @@ export default function Podporit() {
       />
 
       <section className="nalet mt-16 border-t border-linka pt-12 sm:mt-20">
-        <h2 className="titul-mensi">Co provoz stojí</h2>
+        <h2 className="titul-mensi">Co provoz stojí{"\u00A0"}<Otaznik popis={<span className="block">Lidská práce (ověřování, hodnocení, opravy) v tabulce není. Dělá se zdarma.</span>} /></h2>
         <p className="mt-1 text-male text-tlum">Odhad podle ceníků služeb k {naklady.aktualizovano}. Skutečné faktury se doplní, až budou.</p>
         <table className="mt-3 w-full text-left text-zaklad">
           <tbody>
@@ -39,7 +40,6 @@ export default function Podporit() {
             <tr><td className="py-2 font-semibold text-inkoust">Měsíčně celkem</td><td className="cislice py-2 text-right font-bold text-inkoust">{celkem} Kč</td></tr>
           </tbody>
         </table>
-        <p className="mt-2 text-drobne text-tlum2">Lidská práce (ověřování, hodnocení, opravy) v tabulce není — dělá se zdarma. Vstupy jsou v souboru docs/naklady.json.</p>
       </section>
 
       <section className="nalet mt-14 border-t border-linka pt-10">

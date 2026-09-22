@@ -5,7 +5,7 @@ import { incidenty } from "@/lib/data";
 
 export const metadata: Metadata = {
   title: "Můj přehled",
-  description: "Sledované země a témata a uložené události. Vše uložené jen v tomto zařízení, bez účtu a bez polohy.",
+  description: "Sledované země a témata a uložené události. Pro přihlášené; výběr zůstává jen v tomto zařízení, bez polohy.",
 };
 
 export default function MujPrehled() {
@@ -14,7 +14,7 @@ export default function MujPrehled() {
       <HlavickaStranky
         stitek="Můj přehled"
         nadpis="Vyberte si, co chcete vidět první"
-        uvod="Uloží se to jen ve vašem zařízení. Bez účtu, bez polohy, bez e-mailu."
+        uvod="Jen pro přihlášené. Výběr se ukládá ve vašem zařízení, bez polohy a bez e-mailu."
       />
       <div className="mt-12 sm:mt-16" />
       <MujPrehledKlient zaznamy={incidenty()} />

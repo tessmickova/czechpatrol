@@ -29,7 +29,16 @@ export const HLAVNI_STRANKY: { href: string; label: string; ikona: NazevIkony; p
   { href: "/zeme/", label: "Země", ikona: "vlajka", popis: "přehled a počty pro každou sledovanou zemi" },
   { href: "/analyzy/", label: "Analýzy", ikona: "graf", popis: "vývoj v čase, cíle aktérů, metodika" },
   { href: "/pripravenost/", label: "Jsem připraven/a?", ikona: "fajfka", popis: "oficiální nástroje a co si nastavit předem" },
+];
+
+/*
+  Funkce po přihlášení. Nepřihlášený je vidí zašedlé se zámkem v barvě
+  značky — ví, že existují a co k nim potřebuje. Řádek ho vede na
+  přihlášení, ne na stránku, která by mu bez účtu nic neukázala.
+*/
+export const PO_PRIHLASENI: { href: string; label: string; ikona: NazevIkony; popis: string }[] = [
   { href: "/muj-prehled/", label: "Můj přehled", ikona: "terc", popis: "země a témata, která sledujete" },
+  { href: "/ucet/#upozorneni", label: "Upozornění na míru", ikona: "zvonek", popis: "četnost, závažnost, tiché hodiny, kraj" },
 ];
 
 export const DALSI_STRANKY = [
@@ -130,6 +139,38 @@ export function PostranniPanel() {
               ))}
             </ul>
           </nav>
+
+          {/* funkce po přihlášení */}
+          <section aria-label="Po přihlášení" className="border-t border-linka py-2">
+            <div className="stitek px-4 pb-1 pt-2">Po přihlášení</div>
+            <ul>
+              {PO_PRIHLASENI.map((o) =>
+                ucet ? (
+                  <li key={o.href}>
+                    <Link href={o.href} onClick={zavri} className={RADEK}>
+                      <span className="grid h-9 w-9 shrink-0 place-items-center rounded-[12px] bg-plocha2 text-akcent"><Ikona nazev={o.ikona} velikost={17} tah={1.8} /></span>
+                      <span className="min-w-0 flex-1">
+                        <span className="block font-semibold">{o.label}</span>
+                        <span className="block text-drobne text-tlum">{o.popis}</span>
+                      </span>
+                      <Ikona nazev="nahoru" velikost={13} tah={2} trida="shrink-0 rotate-90 text-tlum2" />
+                    </Link>
+                  </li>
+                ) : (
+                  <li key={o.href}>
+                    <Link href="/ucet/" onClick={zavri} className={RADEK} aria-label={`${o.label} — vyžaduje přihlášení`}>
+                      <span className="grid h-9 w-9 shrink-0 place-items-center rounded-[12px] bg-plocha2 text-tlum2"><Ikona nazev={o.ikona} velikost={17} tah={1.8} /></span>
+                      <span className="min-w-0 flex-1">
+                        <span className="block font-semibold text-tlum">{o.label}</span>
+                        <span className="block text-drobne text-tlum2">{UCTY_ZAPNUTE ? "vyžaduje přihlášení" : "účty připravujeme"}</span>
+                      </span>
+                      <span className="shrink-0 text-akcent"><Ikona nazev="zamek" velikost={16} tah={2} /></span>
+                    </Link>
+                  </li>
+                ),
+              )}
+            </ul>
+          </section>
 
           {/* účet */}
           <section aria-label="Účet" className="border-t border-linka py-2">

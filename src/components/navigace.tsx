@@ -13,6 +13,9 @@ import { useT } from "@/lib/i18n";
   Šest cílů. Vývoj, Aktéři a Manipulace stojí pod jedním rozcestníkem
   Analýzy — jsou to tři odpovědi na tutéž otázku „co z toho plyne“ a
   v liště by se rozpadly do nesrozumitelného výčtu.
+
+  Můj přehled v liště není: je to funkce po přihlášení a bydlí
+  v postranním menu vedle nastavení upozornění.
 */
 export const HLAVNI = [
   { href: "/", label: "Přehled" },
@@ -21,7 +24,6 @@ export const HLAVNI = [
   { href: "/zeme/", label: "Země" },
   { href: "/analyzy/", label: "Analýzy" },
   { href: "/pripravenost/", label: "Připravenost" },
-  { href: "/muj-prehled/", label: "Můj přehled" },
 ];
 
 export function Navigace() {

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { HlavickaStranky, NadpisSekce } from "@/components/nadpisy";
+import { Otaznik } from "@/components/zaklad";
 import { GrafMesicuPripadu } from "@/components/graf-mesicu-pripadu";
 import { GrafTrendu, TabulkaTydnu } from "@/components/trend";
 import { sklon, Vlajka } from "@/components/zeme";
@@ -55,11 +56,11 @@ export default function Vyvoj() {
           id="objem"
           stitek="Kolik toho je"
           nadpis="Případy po měsících"
-          popis={<>Počítá se den, kdy věc vyšla najevo. Aktualizace, opatření a prohlášení se nepočítají. Plný monitoring běží od {prvniPlny ? prvniPlny.split("-").reverse().join("/") : "—"}; starší záznamy jsme doplnili zpětně, proto jsou ty měsíce šrafované.</>}
+          popis={<>Počítá se den, kdy věc vyšla najevo. Aktualizace, opatření a prohlášení se nepočítají. Plný monitoring běží od {prvniPlny ? prvniPlny.split("-").reverse().join("/") : "—"}; starší záznamy jsme doplnili zpětně, proto jsou ty měsíce šrafované (hodnota chybí, není nula). Sloupec = počet jedinečných případů podle data zjištění.</>}
         />
         <GrafMesicuPripadu rada={rada} hodnoceni={hodnoceni} />
         <details className="mt-3">
-          <summary className="min-h-[36px] cursor-pointer text-male font-semibold text-tlum hover:text-inkoust">Stejná data jako tabulka po letech</summary>
+          <summary className="min-h-[36px] cursor-pointer text-male font-semibold text-tlum hover:text-inkoust">Stejná data jako tabulka po letech <Otaznik popis={<span className="block">Roky 2010–2013: žádný záznam, který by prošel ověřením. Neznamená to, že se nic nestalo.</span>} /></summary>
           <table className="mt-2 w-full max-w-[420px] text-left text-male">
             <thead><tr className="border-b border-linka"><th className="stitek py-1.5 font-medium">Rok</th><th className="stitek py-1.5 text-right font-medium">Případů</th><th className="stitek py-1.5 text-right font-medium">Pokrytí</th></tr></thead>
             <tbody>
@@ -72,7 +73,6 @@ export default function Vyvoj() {
               ))}
             </tbody>
           </table>
-          <p className="mt-2 text-drobne text-tlum2">Roky 2010–2013: žádný záznam, který by prošel ověřením. Neznamená to, že se nic nestalo.</p>
         </details>
       </section>
 
@@ -149,7 +149,7 @@ export default function Vyvoj() {
             </table>
           </div>
           <div>
-            <div className="stitek mb-2">Kdo za případy stojí</div>
+            <div className="mb-2 flex items-center gap-1.5"><span className="stitek">Kdo za případy stojí</span><Otaznik popis={<span className="block">Do hodnocení projektu tento rozpad nevstupuje.</span>} /></div>
             <ul className="divide-y divide-linka2 border-y border-linka2">
               {puv.skupiny.map((s) => (
                 <li key={s.klic} className="py-2 text-zaklad">
@@ -163,7 +163,6 @@ export default function Vyvoj() {
                 </li>
               ))}
             </ul>
-            <p className="mt-2 text-drobne text-tlum2">Do hodnocení projektu tento rozpad nevstupuje.</p>
           </div>
         </div>
       </section>

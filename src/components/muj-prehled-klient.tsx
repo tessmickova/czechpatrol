@@ -8,16 +8,41 @@ import { KATEGORIE, PORADI_KATEGORII } from "@/lib/kategorie";
 import { zaznamejUdalost } from "@/lib/mereni";
 import { UROVNE } from "@/lib/skala";
 import type { Kategorie } from "@/lib/typy";
+import { UCTY_ZAPNUTE } from "@/config/web";
+import { useUcet } from "@/lib/ucet";
 import { Ikona } from "./ikony";
+import { Sdeleni, Tlacitko } from "./ui";
 import { Vlajka } from "./zeme";
 
 /*
-  Můj přehled — předvolby jen v tomto zařízení.
+  Můj přehled — funkce po přihlášení, předvolby jen v tomto zařízení.
 
-  Uloženo v localStorage, nikam se neposílá. Bez polohy: web nepotřebuje
-  vědět, kde jste, aby ukázal, co sledujete. Když úložiště nefunguje
-  (soukromé okno), stránka to řekne a funguje bez ukládání.
+  Stránka se otevře jen přihlášenému. Výběr se přesto ukládá do
+  localStorage a nikam se neposílá: účet slouží jako klíč ke dveřím, ne
+  jako místo, kam by se posílalo, co kdo sleduje. Bez polohy: web
+  nepotřebuje vědět, kde jste, aby ukázal, co sledujete. Když úložiště
+  nefunguje (soukromé okno), stránka to řekne a funguje bez ukládání.
 */
+
+/** Co vidí nepřihlášený místo obsahu: zámek, jedna věta, cesta k přihlášení. */
+export function Zamceno({ co }: { co: string }) {
+  return (
+    <div className="rounded-[22px] border border-linka2 bg-plocha p-5 sm:p-6">
+      <div className="flex items-start gap-3">
+        <span className="grid h-10 w-10 shrink-0 place-items-center rounded-[12px] bg-akcent/15 text-akcent"><Ikona nazev="zamek" velikost={18} tah={2} /></span>
+        <div className="min-w-0">
+          <p className="text-vetsi font-bold text-inkoust">{co} je pro přihlášené</p>
+          <p className="mt-1 text-male text-tlum">
+            {UCTY_ZAPNUTE ? "Účet je bez jména a e-mailu, passkey v zařízení. Založení trvá minutu." : "Účty zatím neběží. Až poběží, otevře se tu."}
+          </p>
+          {UCTY_ZAPNUTE && (
+            <p className="mt-3"><Tlacitko kam="/ucet/" varianta="plny" velikost="m" ikona="zamek">Přihlásit nebo založit účet</Tlacitko></p>
+          )}
+        </div>
+      </div>
+    </div>
+  );
+}
 
 const KLIC = "czechpatrol:muj-prehled:v1";
 
@@ -45,6 +70,7 @@ export function jeUlozeno(slug: string): boolean {
 }
 
 export function MujPrehledKlient({ zaznamy }: { zaznamy: Zaznam[] }) {
+  const { ucet, nacita } = useUcet();
   const [p, setP] = useState<Predvolby>(VYCHOZI);
   const [ulozisteFunguje, setUlozisteFunguje] = useState(true);
   const [nacteno, setNacteno] = useState(false);
@@ -84,6 +110,10 @@ export function MujPrehledKlient({ zaznamy }: { zaznamy: Zaznam[] }) {
 
   const prepni = <T extends string>(pole: T[], h: T) => (pole.includes(h) ? pole.filter((x) => x !== h) : [...pole, h]);
   const cip = (aktivni: boolean) => `inline-flex min-h-[40px] items-center gap-1.5 rounded-[12px] border px-3 text-male font-semibold transition-colors ${aktivni ? "border-akcent/60 bg-akcent/15 text-akcent-svetla" : "border-linka text-tlum hover:border-akcent/50 hover:text-inkoust"}`;
+
+  /* Až po všech hoocích: pořadí hooků se nesmí měnit podle stavu přihlášení. */
+  if (nacita) return <Sdeleni ikona="zamek">Ověřuji přihlášení…</Sdeleni>;
+  if (!ucet) return <Zamceno co="Můj přehled" />;
 
   return (
     <div className="grid gap-10 lg:grid-cols-[minmax(0,1fr)_360px]">
@@ -179,6 +209,7 @@ export function MujPrehledKlient({ zaznamy }: { zaznamy: Zaznam[] }) {
 
 /** Tlačítko na stránce události. */
 export function UlozitUdalost({ slug }: { slug: string }) {
+  const { ucet, nacita } = useUcet();
   const [ulozeno, setUlozeno] = useState(false);
   const [nacteno, setNacteno] = useState(false);
   useEffect(() => { setUlozeno(jeUlozeno(slug)); setNacteno(true); }, [slug]);
@@ -188,10 +219,37 @@ export function UlozitUdalost({ slug }: { slug: string }) {
     try { localStorage.setItem(KLIC, JSON.stringify(nove)); zaznamejUdalost("preference_save", { slug }); } catch { /* bez úložiště jen pro tuto stránku */ }
     setUlozeno(nove.ulozene.includes(slug));
   };
-  if (!nacteno) return null;
+  if (!nacteno || nacita) return null;
+  /* Bez účtu se neukládá — tlačítko to říká zámkem a vede na přihlášení. */
+  if (!ucet) {
+    return (
+      <Link href="/ucet/" className="inline-flex min-h-[40px] items-center gap-1.5 rounded-[12px] border border-linka px-3 text-male font-semibold text-tlum2 hover:border-akcent hover:text-inkoust">
+        <span className="text-akcent"><Ikona nazev="zamek" velikost={13} tah={2.2} /></span> Uložit do Mého přehledu · po přihlášení
+      </Link>
+    );
+  }
   return (
     <button type="button" onClick={prepni} aria-pressed={ulozeno} className="inline-flex min-h-[40px] items-center gap-1.5 rounded-[12px] border border-linka px-3 text-male font-semibold text-tlum hover:border-akcent hover:text-inkoust">
       <Ikona nazev={ulozeno ? "fajfka" : "plus"} velikost={12} tah={2.4} /> {ulozeno ? "Uloženo v Mém přehledu" : "Uložit do Mého přehledu"}
     </button>
+  );
+}
+
+/**
+ * Karta Můj přehled v sekci Sledovat. Bez přihlášení je zašedlá, se zámkem
+ * v barvě značky a vede na přihlášení; po přihlášení je to běžný odkaz.
+ */
+export function KartaMujPrehled({ trida }: { trida: string }) {
+  const { ucet, nacita } = useUcet();
+  const zamceno = nacita || !ucet;
+  return (
+    <Link href={zamceno ? "/ucet/" : "/muj-prehled/"} className={`${trida} ${zamceno ? "border-linka hover:border-akcent/60" : "border-linka hover:border-akcent"}`} aria-label={zamceno ? "Můj přehled — vyžaduje přihlášení" : undefined}>
+      <span className={`grid h-9 w-9 shrink-0 place-items-center rounded-[12px] bg-plocha2 ${zamceno ? "text-tlum2" : "text-akcent"}`}><Ikona nazev="terc" velikost={16} tah={2} /></span>
+      <span className="min-w-0 flex-1">
+        <span className={`block text-male font-bold ${zamceno ? "text-tlum" : "text-inkoust"}`}>Můj přehled</span>
+        <span className={`block text-mikro ${zamceno ? "text-tlum2" : "text-tlum"}`}>{zamceno ? (UCTY_ZAPNUTE ? "po přihlášení" : "účty připravujeme") : "jen země a témata, která sledujete"}</span>
+      </span>
+      {zamceno && <span className="shrink-0 text-akcent"><Ikona nazev="zamek" velikost={15} tah={2} /></span>}
+    </Link>
   );
 }

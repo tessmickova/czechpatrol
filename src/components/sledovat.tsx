@@ -3,6 +3,8 @@ import { KANALY, KOMUNITA, PARTNERI, UCTY_ZAPNUTE, WEB } from "@/config/web";
 import { Ikona } from "./ikony";
 import { ZnackaKanalu, type Znacka } from "./znacky";
 import { Tlacitko } from "./ui";
+import { Otaznik } from "./zaklad";
+import { KartaMujPrehled } from "./muj-prehled-klient";
 
 /*
   Výzvy k akci: kam dál, kde nás sledovat, s kým spolupracujeme.
@@ -52,10 +54,7 @@ export function Sledovat() {
             <span><span className="block text-male font-bold text-inkoust">Diskuse a tipy</span><span className="block text-mikro text-tlum">chybí tu událost?</span></span>
           </a>
         )}
-        <Link href="/muj-prehled/" className={`${KARTA} border-linka hover:border-akcent`}>
-          <span className="grid h-9 w-9 shrink-0 place-items-center rounded-[12px] bg-plocha2 text-akcent"><Ikona nazev="terc" velikost={16} tah={2} /></span>
-          <span><span className="block text-male font-bold text-inkoust">Můj přehled</span><span className="block text-mikro text-tlum">jen země a témata, která sledujete</span></span>
-        </Link>
+        <KartaMujPrehled trida={KARTA} />
         <Link href="/podporit/" className={`${KARTA} border-linka hover:border-akcent`}>
           <span className="grid h-9 w-9 shrink-0 place-items-center rounded-[12px] bg-plocha2 text-akcent"><Ikona nazev="srdce" velikost={16} tah={2} /></span>
           <span><span className="block text-male font-bold text-inkoust">Podpořit provoz</span><span className="block text-mikro text-tlum">bez inzerce, náklady veřejně</span></span>
@@ -69,7 +68,7 @@ export function Partneri() {
   const mista = [0, 1, 2].map((i) => PARTNERI[i] ?? null);
   return (
     <section aria-label="Ve spolupráci s">
-      <div className="mb-1.5 flex items-center justify-between"><span className="stitek">Ve spolupráci s</span><span className="text-mikro text-tlum2">partnerství nemění hodnocení ani data</span></div>
+      <div className="mb-1.5 flex items-center gap-1.5"><span className="stitek">Ve spolupráci s</span><Otaznik popis={<span className="block">Partnerství nemění hodnocení ani data.</span>} /></div>
       <ul className="grid grid-cols-3 gap-1.5">
         {mista.map((p, i) => (
           <li key={i}>

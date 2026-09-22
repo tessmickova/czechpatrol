@@ -5,7 +5,7 @@ import { JISTOTY } from "@/lib/skala";
 import type { Jistota, Kampan, ZasazenySubjekt } from "@/lib/typy";
 import { Ikona, type NazevIkony } from "./ikony";
 import { Odznak, OdznakZavaznosti, Sdeleni, type Ton } from "./ui";
-import { Napoveda } from "./zaklad";
+import { Napoveda, Otaznik } from "./zaklad";
 import { SeznamZdroju } from "./zdroje";
 import { sklon, Vlajka } from "./zeme";
 
@@ -168,7 +168,6 @@ export function KartaKampane({ k, nazvyZemi }: { k: Kampan; nazvyZemi: Record<st
           <span className="grid h-7 w-7 shrink-0 place-items-center rounded-full bg-plocha2 text-akcent"><Ikona nazev="zebrik" velikost={14} tah={1.9} /></span>
           Jakými způsoby
         </h4>
-        <p className="mt-1 pl-9 text-drobne text-tlum2">Klikněte na způsob a uvidíte, kde jinde v Evropě ho použili.</p>
         <MetodyKampane metody={k.metody} />
       </div>
 
@@ -194,8 +193,9 @@ export function KartaKampane({ k, nazvyZemi }: { k: Kampan; nazvyZemi: Record<st
         </div>
       )}
 
-      {/* Dva štítky, dvě nezávislé otázky. Vedle sebe schválně. */}
+      {/* Dva štítky, dvě nezávislé otázky. Vedle sebe schválně; že spolu nesouvisí, říká puntík. */}
       <div className="border-b border-linka2 p-5 sm:p-6">
+        <div className="mb-2 flex items-center gap-1.5"><span className="stitek">Dvě otázky zvlášť</span><Otaznik popis={<span className="block">Obě odpovědi jsou na sobě nezávislé. Že je něco prokazatelně podvrh, samo o sobě neříká nic o tom, kdo ho vyrobil.</span>} /></div>
         <div className="grid gap-2.5 sm:grid-cols-2">
           <StitekJistoty
             otazka="Je zásah doložený?"
@@ -210,9 +210,6 @@ export function KartaKampane({ k, nazvyZemi }: { k: Kampan; nazvyZemi: Record<st
             duvod={k.puvodce.duvod}
           />
         </div>
-        <p className="mt-2.5 text-drobne leading-relaxed text-tlum2">
-          Obě odpovědi jsou na sobě nezávislé. Že je něco prokazatelně podvrh, samo o sobě neříká nic o tom, kdo ho vyrobil.
-        </p>
       </div>
 
       <div className="space-y-4 p-5 sm:p-6">
@@ -224,8 +221,8 @@ export function KartaKampane({ k, nazvyZemi }: { k: Kampan; nazvyZemi: Record<st
           <h4 className="flex items-center gap-2 text-zaklad font-bold text-inkoust">
             <span className="grid h-7 w-7 shrink-0 place-items-center rounded-full bg-plocha2 text-akcent"><Ikona nazev="terc" velikost={14} tah={1.9} /></span>
             Čemu to mělo posloužit
+            <Otaznik popis={<span className="block">Hodnocení projektu, ne doložený fakt. Označeno schválně.</span>} />
           </h4>
-          <p className="mt-1 pl-9 text-drobne text-tlum2">Hodnocení projektu, ne doložený fakt. Označeno schválně.</p>
           <p className="mt-2 rounded-[18px] border border-dashed border-linka bg-plocha2 px-4 py-3 text-zaklad leading-relaxed text-tlum sm:ml-9">{k.ucel}</p>
         </section>
 
@@ -310,6 +307,10 @@ export function TabulkaZemiKampani({
   const max = Math.max(...radky.map((r) => r.pocet));
   return (
     <div className="overflow-hidden rounded-[22px] border border-linka2 bg-plocha">
+      <div className="flex items-center gap-1.5 border-b border-linka2 px-4 py-2.5 sm:px-5">
+        <span className="stitek">Kolik rozebraných kampaní míří na kterou zemi</span>
+        <Otaznik popis={<span className="block">Počítají se jen kampaně, které jsme rozebrali — ne všechno, co kde koluje. Jedna kampaň může mířit na několik zemí naráz a u každé se počítá, proto je součet vyšší než {celkem} {sklon(celkem, "rozebraná kampaň", "rozebrané kampaně", "rozebraných kampaní")}.</span>} />
+      </div>
       <ul className="divide-y divide-linka2">
         {radky.map((r) => (
           <li key={r.kodZeme}>
@@ -325,10 +326,6 @@ export function TabulkaZemiKampani({
           </li>
         ))}
       </ul>
-      <p className="border-t border-linka2 px-4 py-3 text-drobne leading-relaxed text-tlum2 sm:px-5">
-        Počítají se jen kampaně, které jsme rozebrali — ne všechno, co kde koluje. Jedna kampaň může mířit
-        na několik zemí naráz a u každé se počítá, proto je součet vyšší než {celkem} {sklon(celkem, "rozebraná kampaň", "rozebrané kampaně", "rozebraných kampaní")}.
-      </p>
     </div>
   );
 }

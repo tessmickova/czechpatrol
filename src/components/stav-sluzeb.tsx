@@ -4,6 +4,7 @@ import { casPraha } from "@/lib/cas";
 import { SLOVA_STAVU, SLUZBY, type StavSluzby } from "@/lib/sluzby";
 import type { ZivyStav } from "@/lib/sluzby-klient";
 import { Ikona } from "./ikony";
+import { Otaznik } from "./zaklad";
 import { PanelNahledu, useNahled } from "./nahled-radku";
 
 /* Odkazy ven: nofollow, web za cizí stránky neručí. */
@@ -43,6 +44,7 @@ export function StavSluzeb({ stavy, kdy }: { stavy: ZivyStav[]; kdy: string | nu
             <span className="h-[6px] w-[6px] rounded-full bg-akcent" />
           </span>
           <h3 className="stitek">Služby naživo</h3>
+          <Otaznik popis={<span className="block">Stavové stránky provozovatelů. České sítě a banky je nemají.</span>} />
         </span>
         {/* Co číslo znamená, říká slovo; červená tečka jen když je co hlásit. */}
         <span className="flex items-center gap-1.5 text-mikro text-tlum2">
@@ -106,7 +108,7 @@ export function StavSluzeb({ stavy, kdy }: { stavy: ZivyStav[]; kdy: string | nu
         české sítě a banky je to jediný rychlý obraz, který existuje.
         Zůstává ale mimo seznam stavů — hlášení uživatelů nikdo neověřuje.
       */}
-      <a href="https://downdetector.cz/" target="_blank" rel={VEN} className="flex items-start gap-2.5 border-t border-linka2 px-4 py-2.5 hover:bg-plocha2">
+      <a href="https://downdetector.cz/" target="_blank" rel={VEN} className="mt-auto flex items-start gap-2.5 border-t border-linka2 px-4 py-2.5 hover:bg-plocha2">
         <span className="mt-[1px] grid h-7 w-7 shrink-0 place-items-center rounded-[9px] border border-linka2 text-tlum"><Ikona nazev="graf" velikost={14} tah={1.8} /></span>
         <span className="min-w-0 flex-1">
           <span className="block text-male font-semibold leading-[20px] text-inkoust">Downdetector</span>
@@ -114,9 +116,6 @@ export function StavSluzeb({ stavy, kdy }: { stavy: ZivyStav[]; kdy: string | nu
         </span>
         <Ikona nazev="nahoru" velikost={13} tah={2} trida="mt-1 shrink-0 rotate-45 text-tlum2" />
       </a>
-      <div className="mt-auto border-t border-linka2 px-4 py-2">
-        <span className="text-mikro leading-snug text-tlum2">Stavové stránky provozovatelů. České sítě a banky je nemají.</span>
-      </div>
     </section>
   );
 }

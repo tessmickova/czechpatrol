@@ -34,7 +34,7 @@ import { casPraha } from "@/lib/cas";
 import { Partneri, Sledovat } from "./sledovat";
 import { VyzvaTelegram } from "./vyzva-telegram";
 import { Nahlaseni } from "./nahlaseni";
-import { Napoveda } from "./zaklad";
+import { Napoveda, Otaznik } from "./zaklad";
 import { sklon, Vlajka } from "./zeme";
 import { useT } from "@/lib/i18n";
 
@@ -648,7 +648,7 @@ export function Dashboard({
       </div>
       <div className="grid gap-8 md:grid-cols-3">
         <section aria-label={t("Posledních 90 dnů")}>
-          <div className="mb-1.5 flex items-center justify-between"><span className="stitek">{t("Posledních 90 dnů · incidenty")}</span><Tlacitko kam="/udalosti/?obdobi=30d" varianta="tichy" velikost="s" ikonaVpravo="nahoru" trida="[&>svg:last-child]:rotate-90">detail</Tlacitko></div>
+          <div className="mb-1.5 flex items-center justify-between"><span className="flex items-center gap-1.5"><span className="stitek">{t("Posledních 90 dnů · incidenty")}</span><Otaznik popis={<span className="block">{uredni} z {dni90.length} případů má úřední zdroj. Počítají se případy a operace proti občanům. Aktualizace a prohlášení ne.</span>} /></span><Tlacitko kam="/udalosti/?obdobi=30d" varianta="tichy" velikost="s" ikonaVpravo="nahoru" trida="[&>svg:last-child]:rotate-90">detail</Tlacitko></div>
           <div className="grid grid-cols-2 gap-1.5">
             <Cislo n={zapocitatelne90} slovo={`za 90 dní · celkem ${casyZapocitatelne.length} od 2014`} />
             <Cislo n={zemi} slovo={sklon(zemi, "země", "země", "zemí")} />
@@ -663,7 +663,6 @@ export function Dashboard({
               <span>průměr posledních {porovnani90.zaLet} let je {cislem(porovnani90.prumer)} na čtvrtletí</span>
             </p>
           )}
-          <p className="mt-1.5 text-mikro text-tlum2">{uredni} z {dni90.length} případů s úředním zdrojem. Počítají se případy a manipulační operace; aktualizace a prohlášení ne.</p>
         </section>
         <section aria-label="Kde">
           <div className="mb-1.5 flex items-center justify-between"><span className="stitek">Kde · případy {rok}</span><Tlacitko kam="/zeme/" varianta="tichy" velikost="s" ikonaVpravo="nahoru" trida="[&>svg:last-child]:rotate-90">{t("všechny země")}</Tlacitko></div>
@@ -674,7 +673,7 @@ export function Dashboard({
           </ul>
         </section>
         <section aria-label="Kdo">
-          <div className="mb-1.5 flex items-center justify-between"><span className="stitek">Kdo · případy {rok}</span><span className="text-mikro text-tlum2">potvrzeno / celkem</span></div>
+          <div className="mb-1.5 flex items-center gap-1.5"><span className="stitek">Kdo · případy {rok}</span><Otaznik popis={<span className="block">První číslo a tmavší část pruhu: případy s potvrzeným původcem. Druhé číslo: všechny případy přisuzované skupině.</span>} /></div>
           <ul className="space-y-0.5">
             {puv.skupiny.map((s) => (
               <li key={s.klic} className="flex min-h-[36px] items-center gap-2">
