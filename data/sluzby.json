@@ -1,5 +1,5 @@
 {
-  "aktualizovano": "2026-09-22T04:02:37.510Z",
+  "aktualizovano": "2026-09-22T04:52:52.497Z",
   "stavy": [
     {
       "klic": "cloudflare",
@@ -14,11 +14,11 @@
       ],
       "postizene": [
         "Cloudflare Sites and Services",
-        "Amman, Jordan - (AMM)",
         "Americana, Brazil - (QWJ)",
-        "Africa"
+        "Africa",
+        "Arica, Chile - (ARI)"
       ],
-      "zkontrolovano": "2026-09-22T04:02:37.510Z",
+      "zkontrolovano": "2026-09-22T04:52:52.497Z",
       "chyba": null
     },
     {
@@ -27,7 +27,7 @@
       "popis": null,
       "incidenty": [],
       "postizene": [],
-      "zkontrolovano": "2026-09-22T04:02:37.510Z",
+      "zkontrolovano": "2026-09-22T04:52:52.497Z",
       "chyba": "neznámý indikátor „maintenance\""
     },
     {
@@ -36,7 +36,7 @@
       "popis": "All Systems Operational",
       "incidenty": [],
       "postizene": [],
-      "zkontrolovano": "2026-09-22T04:02:37.510Z",
+      "zkontrolovano": "2026-09-22T04:52:52.497Z",
       "chyba": null
     }
   ]
