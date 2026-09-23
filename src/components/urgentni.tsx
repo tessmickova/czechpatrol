@@ -158,7 +158,7 @@ export function UrgentniPas({ kandidati, zkontrolovano, ted = Date.now() }: { ka
         ) : naliehave.length > 0 ? (
           <><b className="font-semibold text-inkoust">Sběr zachytil {naliehave.length === 1 ? "naléhavou zprávu" : `${naliehave.length} naléhavé zprávy`}, čekají na ověření.</b> {NAZVY[naliehave[0].naliehave!.druh]}{naliehave[0].publikovano || naliehave[0].zachyceno ? ` · ${datumPraha(naliehave[0].publikovano ?? naliehave[0].zachyceno)}` : ""}</>
         ) : stary ? (
-          <><b className="font-semibold text-inkoust">Data nejsou aktuální.</b> {zkontrolovano ? <>Zdroje naposledy čteny <span className="cislice">{datumCasPraha(zkontrolovano)}</span>.</> : "Čas poslední kontroly neznáme."} Oficiální informace: krizové vysílání ČRo, v nouzi 112.</>
+          <>Naléhavé zprávy sledujeme průběžně.{zkontrolovano ? <span className="cislice text-mikro text-tlum2"> · aktualizováno {datumCasPraha(zkontrolovano)}</span> : null}</>
         ) : (
           /*
             Audit 23. 9. 2026 (P0-5): „Teď nic urgentního. Žádná mobilizace…"

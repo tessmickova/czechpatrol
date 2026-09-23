@@ -52,6 +52,7 @@ export function naText(html: string): string {
     .replace(/&gt;/g, ">")
     .replace(/&quot;/g, '"')
     .replace(/&#(\d+);/g, (_, c: string) => String.fromCharCode(Number(c)))
+    .replace(/&#x([0-9a-f]+);/gi, (_, h: string) => String.fromCodePoint(parseInt(h, 16)))
     .replace(/[ \t]+/g, " ")
     // Mezery kolem konce řádku: otvírací značka po </p> nechává mezeru navíc.
     .replace(/[ \t]*\n[ \t]*/g, "\n")
