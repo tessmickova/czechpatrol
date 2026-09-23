@@ -4,7 +4,8 @@ import { HlavickaStranky, Obsah } from "@/components/hlavicka";
 import { Ikona, type NazevIkony } from "@/components/ikony";
 import { IzsKlient } from "@/components/izs-klient";
 import { Karta } from "@/components/zaklad";
-import { IZS_KONTAKT } from "@/config/web";
+import { Presmerovani } from "@/components/presmerovani";
+import { IZS_KONTAKT, SPUSTENO } from "@/config/web";
 
 export const metadata: Metadata = {
   title: "Partner IZS",
@@ -19,6 +20,8 @@ const KROKY: { ikona: NazevIkony; nadpis: string; popis: string }[] = [
 ];
 
 export default function IzsStranka() {
+  // Spolupráce se složkami IZS zatím nemáme — stránka by slibovala něco, co neexistuje.
+  if (!SPUSTENO.izs) return <Presmerovani kam="/" co="Spolupráci se složkami IZS zatím nenabízíme" />;
   return (
     <>
       <HlavickaStranky

@@ -1,4 +1,3 @@
-import { PruhKontroly } from "@/components/banner-stari-klient";
 import { Dashboard } from "@/components/dashboard";
 import { archiv, celkovyStav, oficialniNastroje, hybridniTlak, incidenty, kampane, kandidati, nato, nazvyZemi, nepotvrzene, nepotvrzeneZaznamy, posledniKontrola, posledniOvereni, pravniStav, provoz, tlakCr, tydny, overovaneAktivni, overovaneUzavrene, urovenObcanu, watchlist } from "@/lib/data";
 import { hlavniVeta } from "@/lib/veta";
@@ -17,7 +16,6 @@ export default function Prehled() {
   const ted = Date.now();
   return (
     <>
-      <PruhKontroly zkontrolovano={posledniKontrola()} ted={ted} />
       <Dashboard
         ted={ted}
         stav={celkovyStav()}
@@ -38,7 +36,7 @@ export default function Prehled() {
         tlakEvropa={hybridniTlak()}
         tlakCesko={tlakCr()}
         obcane={urovenObcanu()}
-        veta={hlavniVeta(pravniStav().polozky, provoz().polozky, hybridniTlak().celkem)}
+        veta={hlavniVeta(pravniStav().polozky, provoz().polozky, celkovyStav().uroven)}
         kampane={kampane()}
         nazvyZemi={nazvyZemi()}
         overovaneAktivni={overovaneAktivni()}

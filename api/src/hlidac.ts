@@ -22,6 +22,7 @@
   Nic z toho není povinné: bez nastavených chatů hlídač jen píše do logu.
 */
 import { posliTelegram } from "./dorucovani";
+import { behyMesice, KADENCE, odmitnuty, PRIDEL_MINUT, spocitejSpotrebu, vyberKadenci, type Beh } from "./minuty";
 import type { Env } from "./typy";
 
 /** Po kolika hodinách bez úspěšného sběru se ozve správci. */
@@ -36,6 +37,11 @@ export interface StavSberu {
   posledniUspech: string | null;
   /** Kolik z posledních běhů skončilo chybou. */
   chybnych: number;
+  /**
+   * Poslední tři běhy GitHub odmítl spustit (chyba do 15 s, bez výpisu).
+   * Typicky došlé minuty. Hlásí se hned, ne po třech hodinách.
+   */
+  odmitaSe?: boolean;
 }
 
 /** Přečte z GitHubu, jak dopadly poslední běhy sběru. */
@@ -54,13 +60,15 @@ export async function stavSberu(env: Env): Promise<StavSberu | null> {
     },
   );
   if (!r.ok) return null;
-  const data = (await r.json()) as { workflow_runs?: { conclusion: string | null; run_started_at: string }[] };
+  const data = (await r.json()) as { workflow_runs?: Beh[] };
   const behy = data.workflow_runs ?? [];
   if (!behy.length) return null;
   const uspech = behy.find((b) => b.conclusion === "success");
+  const dokoncene = behy.filter((b) => b.conclusion !== null);
   return {
     posledniUspech: uspech ? uspech.run_started_at : null,
     chybnych: behy.filter((b) => b.conclusion === "failure").length,
+    odmitaSe: dokoncene.length >= 3 && dokoncene.slice(0, 3).every(odmitnuty),
   };
 }
 
@@ -80,7 +88,7 @@ export function coOhlasit(
   */
   const od = stav.posledniUspech ? new Date(stav.posledniUspech).getTime() : ted - PRAH_KANAL_H * 3_600_000;
   const hodin = (ted - od) / 3_600_000;
-  if (hodin < PRAH_SPRAVCE_H) return { komu: [], hodin };
+  if (hodin < PRAH_SPRAVCE_H && !stav.odmitaSe) return { komu: [], hodin };
 
   // Hlásí se znovu, ne pořád. Budík, který zvoní každých deset minut, se vypne.
   if (posledniHlaseni && ted - new Date(posledniHlaseni).getTime() < OPAKOVAT_PO_H * 3_600_000) {
@@ -112,7 +120,9 @@ function zprava(hodin: number, stav: StavSberu, proKanal: boolean): string {
     `Poslední úspěšný běh: ${kdy} (před ${Math.round(hodin)} h).`,
     `Z posledních běhů skončilo chybou: ${stav.chybnych}.`,
     "",
-    "Pokud běhy padají během několika sekund a bez výpisu, došly minuty GitHub Actions (Settings → Billing).",
+    stav.odmitaSe
+      ? "GitHub poslední tři běhy ODMÍTL spustit (skončily do 15 s bez výpisu). Téměř jistě došly minuty GitHub Actions nebo neprošla platba: https://github.com/settings/billing"
+      : "Pokud běhy padají během několika sekund a bez výpisu, došly minuty GitHub Actions (Settings → Billing).",
   ].join("\n");
 }
 
@@ -138,4 +148,53 @@ export async function zkontrolujSber(env: Env, ted: number): Promise<{ ohlaseno:
     .bind(kdy, kdy)
     .run();
   return { ohlaseno, hodin: rozhodnuti.hodin };
+}
+
+/*
+  Spotřeba minut: přepočet jednou za 6 h (stránkování historie běhů stojí
+  až 25 požadavků), výsledek v D1. Kadenci sběru z něj čte kopniDoSberu.
+*/
+const PREPOCET_H = 6;
+
+export async function kadenceSberu(env: Env): Promise<number> {
+  const r = await env.DB.prepare("SELECT hodnota FROM stav WHERE klic = 'minuty'").first<{ hodnota: string }>();
+  try {
+    const k = r ? (JSON.parse(r.hodnota) as { kadence?: number }).kadence : undefined;
+    return k && (KADENCE as readonly number[]).includes(k) ? k : KADENCE[0];
+  } catch {
+    return KADENCE[0];
+  }
+}
+
+export async function hlidejMinuty(env: Env, ted: number): Promise<{ kadence: number; podil: number } | null> {
+  if (!env.GH_TOKEN_SBER || !env.SBER_REPO) return null;
+  const ulozeno = await env.DB.prepare("SELECT hodnota FROM stav WHERE klic = 'minuty'").first<{ hodnota: string }>();
+  const minule = ulozeno ? (JSON.parse(ulozeno.hodnota) as { kdy: string; kadence: number; varovano: number; mesic: string }) : null;
+  if (minule && ted - new Date(minule.kdy).getTime() < PREPOCET_H * 3_600_000) return null;
+
+  const behy = await behyMesice(env.GH_TOKEN_SBER, env.SBER_REPO, ted);
+  if (!behy.length) return null;
+  const s = spocitejSpotrebu(behy, ted);
+  const kadence = vyberKadenci(s, ted);
+  const mesic = new Date(ted).toISOString().slice(0, 7);
+  const varovano = minule?.mesic === mesic ? minule.varovano : 0;
+  const prah = s.podil >= 0.9 ? 90 : s.podil >= 0.7 ? 70 : 0;
+
+  if (env.SPRAVCE_CHAT && (prah > varovano || (minule && kadence !== minule.kadence))) {
+    await posliTelegram(env, env.SPRAVCE_CHAT, [
+      "<b>Hlídač: minuty GitHub Actions</b>",
+      "",
+      `Tento měsíc spotřebováno odhadem ${s.minut} z ${PRIDEL_MINUT} minut (${Math.round(s.podil * 100)} %).`,
+      `Při dnešním tempu na konci měsíce: ${s.naKonciMesice} minut.`,
+      kadence > KADENCE[0]
+        ? `Aby sběr nestál, sbírá se teď jednou za ${kadence} minut místo za ${KADENCE[0]}. Trvalé řešení: rozpočet v https://github.com/settings/billing nebo nasazování přes Cloudflare Pages (docs/PROVOZ.md, 2b).`
+        : "Sbírá se v plné kadenci.",
+    ].join("\n"));
+  }
+
+  const kdy = new Date(ted).toISOString();
+  await env.DB.prepare("INSERT OR REPLACE INTO stav (klic, hodnota, aktualizovano) VALUES ('minuty', ?, ?)")
+    .bind(JSON.stringify({ kdy, kadence, varovano: Math.max(varovano, prah), mesic, minut: s.minut, naKonciMesice: s.naKonciMesice }), kdy)
+    .run();
+  return { kadence, podil: s.podil };
 }

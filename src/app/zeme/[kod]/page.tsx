@@ -1,12 +1,13 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { druh, kdyZjisteno, podleZemi } from "@/lib/agregace";
-import { incidenty, kampane, kampaneZeme, nazvyZemi, tlakZeme } from "@/lib/data";
+import { incidenty, kampane, kampaneZeme, nazvyZemi, opatreniZeme, tlakZeme } from "@/lib/data";
 import { UROVNE } from "@/lib/skala";
 import { HlavickaStranky } from "@/components/nadpisy";
 import type { PolozkaPoctu } from "@/components/pocitadla-zive";
 import { ZemePrehled } from "@/components/zeme-prehled";
 import { Vlajka } from "@/components/zeme";
+import { ZemeOpatreni } from "@/components/zeme-opatreni";
 
 export const dynamicParams = false;
 
@@ -85,6 +86,7 @@ export default async function StrankaZeme({ params }: { params: Promise<{ kod: s
         kampane={kampaneTeto}
         nazvyZemi={nazvyZemi()}
       />
+      <ZemeOpatreni {...opatreniZeme(z.kod)} />
     </div>
   );
 }

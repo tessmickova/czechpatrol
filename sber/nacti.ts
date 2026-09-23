@@ -3,6 +3,17 @@ import type { Polozka } from "./typy";
 const CASOVY_LIMIT = 20_000;
 const AGENT = "bezpecnostni-prehled/0.1 (nezavisly monitorovaci projekt)";
 
+/**
+ * Stažení, které respektuje robots.txt. Zakázaná adresa vrátí stav 999
+ * a důvod v těle — sběr ji pak vede jako nedostupnou, s důvodem, ne tiše.
+ */
+export async function stahniSeSvolenim(url: string, pokusu = 3): Promise<{ stav: number; telo: string }> {
+  const { smiStahnout } = await import("./robots");
+  const svoleni = await smiStahnout(url, (u) => stahni(u, 1));
+  if (!svoleni.smi) return { stav: 999, telo: svoleni.proc ?? "robots.txt nepovoluje" };
+  return stahni(url, pokusu);
+}
+
 /** Stažení s časovým limitem a opakováním. Síť selhává, sběr kvůli tomu padat nemá. */
 export async function stahni(url: string, pokusu = 3): Promise<{ stav: number; telo: string }> {
   let posledni: unknown;
@@ -30,7 +41,10 @@ function odtaguj(s: string): string {
       .replace(/<!--[\s\S]*?-->/g, " ")
       .replace(/<!\[CDATA\[([\s\S]*?)\]\]>/g, "$1")
       .replace(/&amp;/g, "&").replace(/&lt;/g, "<").replace(/&gt;/g, ">")
-      .replace(/&quot;/g, '"').replace(/&#39;/g, "'").replace(/&nbsp;/g, " ");
+      .replace(/&quot;/g, '"').replace(/&#39;/g, "'").replace(/&nbsp;/g, " ")
+      // Číselné entity (&#x27; &#8217; …): Reuters a Google News je v titulcích posílají a na webu zůstávaly vypsané.
+      .replace(/&#x([0-9a-f]+);/gi, (_, h: string) => String.fromCodePoint(parseInt(h, 16)))
+      .replace(/&#(\d+);/g, (_, d: string) => String.fromCodePoint(Number(d)));
   /*
     Dvakrát, a pokaždé nejdřív rozkódovat a teprve pak odstranit značky.
 

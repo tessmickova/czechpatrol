@@ -81,7 +81,7 @@ for (const i of incidenty) {
     }
   }
   if (d === "pripad" && !sUrl) varovani.push(`${i.slug}: případ bez zdroje s URL${i.archivniZaznam ? " (označen jako archivní)" : ""}`);
-  if (!i.lidskyOvereno) varovani.push(`${i.slug}: neprošel lidskou kontrolou — na webu se nezobrazí`);
+  if (!i.lidskyOvereno && !i.overeni) varovani.push(`${i.slug}: neprošel lidskou kontrolou — na webu se nezobrazí`);
   for (const z of i.zdroje ?? []) if (z.url && !/^https?:\/\//.test(z.url)) chyby.push(`${i.slug}: zdroj „${z.nazev}“ má neplatnou adresu`);
 
   /*
@@ -348,6 +348,41 @@ for (const i of incidenty) {
     chyby.push(`${i.slug}: zveřejněno automaticky na zdroj označený jako úřední, který úřední není — ${vypis}`);
   } else {
     varovani.push(`${i.slug}: zdroj označený jako úřední nevede na úřad — ${vypis}`);
+  }
+}
+
+/*
+  Záznam zveřejněný jako neověřený úředně (rozhodnutí provozovatelky
+  23. 9. 2026). Stojí jen na redakcích, takže nesmí vypadat jistěji, než je:
+  dvě nezávislé redakce (dvě různé domény), jistota nejvýš střední a žádné
+  hodnocení projektu. Jinak by se z neověřené zprávy stal tichý fakt.
+*/
+for (const i of incidenty) {
+  if (i.overeni !== "neovereno") continue;
+  const domeny = new Set((i.zdroje ?? []).map((z) => { try { return new URL(z.url).hostname.replace(/^www\./, ""); } catch { return null; } }).filter((d) => d && d !== "news.google.com"));
+  if (domeny.size < 2) chyby.push(`${i.slug}: neověřený záznam potřebuje aspoň dvě nezávislé redakce (různé domény), má ${domeny.size}`);
+  if (i.jistota === "potvrzeno" || i.jistota === "vysoka") chyby.push(`${i.slug}: neověřený záznam nesmí mít jistotu „${i.jistota}“`);
+  if (i.vyznam) chyby.push(`${i.slug}: neověřený záznam nesmí nést hodnocení projektu`);
+  if (i.lidskyOvereno) chyby.push(`${i.slug}: neověřený záznam nemůže být zároveň lidsky ověřený`);
+  if (i.atribuce === "oficialni") chyby.push(`${i.slug}: neověřený záznam nemůže mít úřední atribuci`);
+}
+
+/*
+  Opatření zemí (data/opatreni-zemi.json). Stav „ano", „částečně" i „ne" je
+  tvrzení o státu, a tak bez odkazu na zdroj neprojde. „ne" navíc říká, že
+  země opatření NEMÁ — to smí stát jen na výslovném zdroji, jinak je to
+  „nedohledáno" (null).
+*/
+if (fs.existsSync(path.join(koren, "data", "opatreni-zemi.json"))) {
+  const op = cti("opatreni-zemi.json");
+  const klice = new Set(op.opatreni.map((o) => o.klic));
+  for (const [kod, polozky] of Object.entries(op.zeme)) {
+    for (const p of polozky) {
+      const kde = `opatření ${kod}/${p.klic}`;
+      if (!klice.has(p.klic)) chyby.push(`${kde}: opatření mimo výčet`);
+      if (p.stav !== null && !/^https:\/\//.test(p.zdroj?.url ?? "")) chyby.push(`${kde}: stav „${p.stav}" bez https zdroje`);
+      if (p.stav !== null && !p.popis) chyby.push(`${kde}: stav bez popisu`);
+    }
   }
 }
 

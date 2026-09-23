@@ -1,4 +1,4 @@
-import { stahni } from "./nacti";
+import { stahniSeSvolenim } from "./nacti";
 
 /*
   Výřez ze zdrojového článku.
@@ -52,6 +52,7 @@ export function naText(html: string): string {
     .replace(/&gt;/g, ">")
     .replace(/&quot;/g, '"')
     .replace(/&#(\d+);/g, (_, c: string) => String.fromCharCode(Number(c)))
+    .replace(/&#x([0-9a-f]+);/gi, (_, h: string) => String.fromCodePoint(parseInt(h, 16)))
     .replace(/[ \t]+/g, " ")
     // Mezery kolem konce řádku: otvírací značka po </p> nechává mezeru navíc.
     .replace(/[ \t]*\n[ \t]*/g, "\n")
@@ -68,7 +69,8 @@ export function naText(html: string): string {
 export async function vyrezZeStranky(url: string): Promise<VyrezZdroje> {
   const kdy = new Date().toISOString();
   try {
-    const { stav, telo } = await stahni(url, 2);
+    const { stav, telo } = await stahniSeSvolenim(url, 2);
+    if (stav === 999) return { text: "", stazeno: kdy, stav, chyba: telo };
     if (stav >= 400) return { text: "", stazeno: kdy, stav, chyba: `HTTP ${stav}` };
 
     const text = naText(telo);

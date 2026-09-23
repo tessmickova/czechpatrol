@@ -28,7 +28,7 @@ export default function OProjektu() {
       <HlavickaStranky
         stitek="O projektu"
         nadpis="Kdo to píše a podle čeho"
-        uvod={<>{WEB.nazev} je nezávislý a nekomerční přehled bezpečnostních událostí a úředních opatření, která se mohou dotknout lidí v Česku. Není to úřední zdroj, varovný systém ani předpověď.</>}
+        uvod={<>{WEB.nazev} je nezávislý přehled bez inzerce — bezpečnostních událostí a úředních opatření, která se mohou dotknout lidí v Česku. Není to úřední zdroj, varovný systém ani předpověď.</>}
       />
       <div className="mt-16 space-y-12 sm:mt-20">
         <Odstavec nadpis="Co web dělá">
@@ -40,7 +40,7 @@ export default function OProjektu() {
         </Odstavec>
         <Odstavec nadpis="Odkud jsou data">
           <p>Přednost mají úřady: policie, vlády, NATO, EU. Pak agentury a média. Sociální sítě samy hodnocení nezvyšují. Všechny zdroje jsou na stránce <Link href="/zdroje/" className="odkaz">Zdroje</Link>, pravidla hodnocení v <Link href="/metodika/" className="odkaz">Metodice</Link> (revize {datumPraha(METODIKA_REVIDOVANA)}).</p>
-          <p>Sběr běží každou hodinu, ale sám nic nezveřejňuje. Texty jsou AI shrnutí zdrojů, ne články. Hodnocení dělá člověk. Přebíráme fakta, ne znění, a odkazujeme na originál. Opravy jsou na stránce <Link href="/opravy/" className="odkaz">Opravy a historie</Link>.</p>
+          <p>Sběr běží každou hodinu. Záznam se zveřejní sám jen tehdy, když ho potvrzují dva nezávislé zdroje a jeden z nich je úřední; válečně významné zprávy jen ze dvou médií vycházejí označené jako <strong>neověřené</strong> a do hodnocení se nepočítají. Ostatní čeká na kontrolu. Texty jsou AI shrnutí zdrojů, ne články. Celkové hodnocení se počítá automaticky podle pravidel v Metodice, nejvýš den stará data. Přebíráme fakta, ne znění, a odkazujeme na originál. Opravy jsou na stránce <Link href="/opravy/" className="odkaz">Opravy a historie</Link>.</p>
         </Odstavec>
         <Odstavec nadpis="Nezávislost a peníze">
           <p>Bez inzerce a sponzorů. Základ je a zůstane zdarma. Podpořit provoz jde dobrovolně na stránce <Link href="/podporit/" className="odkaz">Podpořit</Link>; co to stojí, je tam rozepsané.</p>

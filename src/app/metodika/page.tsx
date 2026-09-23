@@ -126,6 +126,12 @@ export default function Metodika() {
         nadpis="Baseline a změna vzorce"
         popis="Bez baseline by každá jednotlivá událost vypadala jako zhoršení."
       >
+        <Karta className="mb-5 p-5 sm:p-6">
+          <h3 className="podnadpis mb-2 text-zaklad">Jak vzniká celkové hodnocení</h3>
+          <p className="max-w-[46rem] text-male leading-relaxed text-tlum">
+            Počítá ho automat při každém sběru, nejvýš den staré. Bere ověřené případy za 14 dní a vezme jejich střední závažnost; případy mimo Česko o stupeň níž. Neověřené zprávy nevstupují. Trend porovnává poslední týden s předchozím.
+          </p>
+        </Karta>
         <Karta className="p-5 sm:p-6">
           <p className="mb-5 max-w-[46rem] text-male leading-relaxed text-tlum">
             Některé jevy mají dlouhodobě nenulové pozadí. Například běžné jednotlivé

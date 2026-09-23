@@ -1,0 +1,2114 @@
+{
+  "aktualizovano": "2026-09-23",
+  "poznamka": "Doložené kroky mají zdroj. Nedohledáno neznamená, že opatření země nemá — jen že jsme ho k datu nedoložili.",
+  "opatreni": [
+    {
+      "klic": "branna",
+      "nazev": "Branná povinnost"
+    },
+    {
+      "klic": "zalohy",
+      "nazev": "Rozšíření záloh"
+    },
+    {
+      "klic": "vydaje",
+      "nazev": "Výdaje na obranu"
+    },
+    {
+      "klic": "ottawa",
+      "nazev": "Vystoupení z Ottawské úmluvy o minách"
+    },
+    {
+      "klic": "hranice",
+      "nazev": "Opevnění hranice s Ruskem či Běloruskem"
+    },
+    {
+      "klic": "prirucka",
+      "nazev": "Příručka připravenosti pro domácnosti"
+    },
+    {
+      "klic": "kryty",
+      "nazev": "Program krytů pro obyvatele"
+    },
+    {
+      "klic": "drony",
+      "nazev": "Protidronová obrana"
+    },
+    {
+      "klic": "infrastruktura",
+      "nazev": "Ochrana kritické infrastruktury"
+    },
+    {
+      "klic": "diplomate",
+      "nazev": "Omezení ruských diplomatů"
+    },
+    {
+      "klic": "jaderne",
+      "nazev": "Jaderné odstrašení spojenců"
+    },
+    {
+      "klic": "war_book",
+      "nazev": "Vládní válečné plánování (War Book)"
+    },
+    {
+      "klic": "zasoby_72h",
+      "nazev": "Doporučené zásoby na 72 hodin"
+    }
+  ],
+  "zeme": {
+    "CZ": [
+      {
+        "klic": "branna",
+        "stav": null,
+        "popis": null,
+        "datum": null,
+        "zdroj": null
+      },
+      {
+        "klic": "zalohy",
+        "stav": null,
+        "popis": null,
+        "datum": null,
+        "zdroj": null
+      },
+      {
+        "klic": "vydaje",
+        "stav": "castecne",
+        "popis": "Rozpočet na 2026 počítá s obrannými výdaji kolem 1,7–1,8 % HDP; premiér Babiš uvedl, že ČR k cíli 3,5 % HDP do 2035 nesměřuje.",
+        "datum": "2026-02-26",
+        "zdroj": {
+          "nazev": "Brno Daily — Czech Republic Is Not Aiming To Spend 3.5% on Defence, Says Babis",
+          "url": "https://brnodaily.com/2026/02/26/news/politics/czech-republic-is-not-aiming-to-spend-3-5-on-defence-says-babis/",
+          "typ": "media"
+        }
+      },
+      {
+        "klic": "ottawa",
+        "stav": null,
+        "popis": null,
+        "datum": null,
+        "zdroj": null
+      },
+      {
+        "klic": "hranice",
+        "stav": null,
+        "popis": "Země nesousedí s Ruskem ani Běloruskem.",
+        "datum": null,
+        "zdroj": null,
+        "nerelevantni": true
+      },
+      {
+        "klic": "prirucka",
+        "stav": "ano",
+        "popis": "Ministerstvo vnitra v listopadu 2025 rozeslalo 5,2 mil. domácností příručku „72 hodin – Jak se připravit na krizové situace a společně je zvládnout“.",
+        "datum": "2025-11",
+        "zdroj": {
+          "nazev": "Ministerstvo vnitra / HZS ČR — 72 hodin",
+          "url": "https://www.72h.gov.cz/en/72-hours",
+          "typ": "primary"
+        }
+      },
+      {
+        "klic": "kryty",
+        "stav": "castecne",
+        "popis": "ČR má necelých 1 600 stálých úkrytů pro asi 310 000 osob; HZS uvádí, že jejich počet je nedostatečný a klesá, proto roste význam improvizovaných úkrytů.",
+        "datum": "2026-03",
+        "zdroj": {
+          "nazev": "HZS ČR — HZS Libereckého kraje: Nejčastější dotazy k ukrytí obyvatelstva",
+          "url": "https://hzscr.gov.cz/clanek/informacni-servis-zpravodajstvi-2026-brezen-nejcastejsi-dotazy-k-ukryti-obyvatelstva.aspx",
+          "typ": "primary"
+        }
+      },
+      {
+        "klic": "drony",
+        "stav": "castecne",
+        "popis": "Ministerstva vnitra a dopravy předložila do připomínkového řízení návrh zákona, který má umožnit zneškodnit drony ohrožující kritickou infrastrukturu.",
+        "datum": null,
+        "zdroj": {
+          "nazev": "UNITED24 Media — Czechia Moves to Legalize Shooting Down Threatening Drones Near Critical Infrastructure",
+          "url": "https://united24media.com/war-in-ukraine/czechia-moves-to-legalize-shooting-down-threatening-drones-near-critical-infrastructure-20989",
+          "typ": "media"
+        }
+      },
+      {
+        "klic": "infrastruktura",
+        "stav": "ano",
+        "popis": "Zákon č. 266/2025 Sb. o kritické infrastruktuře transponuje směrnici CER a je účinný od 19. 8. 2025.",
+        "datum": "2025-08-19",
+        "zdroj": {
+          "nazev": "Právní prostor — Zákon o kritické infrastruktuře",
+          "url": "https://www.pravniprostor.cz/zmeny-v-legislative/vyslo-ve-sbirce-zakonu/zakon-o-kriticke-infrastrukture",
+          "typ": "media"
+        }
+      },
+      {
+        "klic": "diplomate",
+        "stav": null,
+        "popis": null,
+        "datum": null,
+        "zdroj": null
+      },
+      {
+        "klic": "jaderne",
+        "stav": null,
+        "popis": null,
+        "datum": null,
+        "zdroj": null
+      }
+    ],
+    "SK": [
+      {
+        "klic": "branna",
+        "stav": null,
+        "popis": null,
+        "datum": null,
+        "zdroj": null
+      },
+      {
+        "klic": "zalohy",
+        "stav": null,
+        "popis": null,
+        "datum": null,
+        "zdroj": null
+      },
+      {
+        "klic": "vydaje",
+        "stav": "ano",
+        "popis": "Slovensko má v roce 2026 vydat na obranu 2,02 % HDP a vláda plánuje postupné zvýšení na 3,5 % HDP do roku 2034.",
+        "datum": "2034",
+        "zdroj": {
+          "nazev": "STVR Rádio RSI — Slovakia to Keep Defence Spending Above 2%",
+          "url": "https://enrsi.stvr.sk/articles/news/452297/slovakia-to-keep-defence-spending-above-2",
+          "typ": "media"
+        }
+      },
+      {
+        "klic": "ottawa",
+        "stav": null,
+        "popis": null,
+        "datum": null,
+        "zdroj": null
+      },
+      {
+        "klic": "hranice",
+        "stav": null,
+        "popis": "Země nesousedí s Ruskem ani Běloruskem.",
+        "datum": null,
+        "zdroj": null,
+        "nerelevantni": true
+      },
+      {
+        "klic": "prirucka",
+        "stav": "ano",
+        "popis": "Ministerstvo vnitra SR vydalo brožuru „Čo robiť v prípade krízy alebo ozbrojeného konfliktu“.",
+        "datum": "2025",
+        "zdroj": {
+          "nazev": "Ministerstvo vnútra SR — Čo robiť v prípade krízy alebo ozbrojeného konfliktu",
+          "url": "https://www.minv.sk/?co-robit-v-pripade-krizy-alebo-ozbrojeneho-konfliktu=",
+          "typ": "primary"
+        }
+      },
+      {
+        "klic": "kryty",
+        "stav": "castecne",
+        "popis": "Ministr vnitra oznámil v květnu 2025 audit přes 1 500 krytů CO, většinou v nevyhovujícím stavu; cílem je kryt pro 30 % obyvatel do roku 2040.",
+        "datum": "2025-05",
+        "zdroj": {
+          "nazev": "France 24 (AFP) — Slovakia revamps bunkers with Ukraine war uncomfortably close",
+          "url": "https://www.france24.com/en/live-news/20260217-slovakia-revamps-bunkers-with-ukraine-war-uncomfortably-close",
+          "typ": "wire"
+        }
+      },
+      {
+        "klic": "drony",
+        "stav": "castecne",
+        "popis": "Ministr obrany Kaliňák po incidentu v Polsku prosazuje urychlený nákup protidronových prostředků; připravují se kontrakty na pasivní radary a letouny L-39 Skyfox.",
+        "datum": "2025-09",
+        "zdroj": {
+          "nazev": "The Slovak Spectator — Slovak defence minister pushes anti-drone purchases despite expert doubts",
+          "url": "https://spectator.sme.sk/business/c/slovak-defence-minister-pushes-anti-drone-purchases-despite-expert-doubts",
+          "typ": "media"
+        }
+      },
+      {
+        "klic": "infrastruktura",
+        "stav": "ano",
+        "popis": "Podle přehledu Wavestone patřila země k 9. 1. 2026 mezi státy, které schválily transpozici směrnice CER o odolnosti kritických subjektů.",
+        "datum": "2026-01",
+        "zdroj": {
+          "nazev": "Wavestone — CER Directive: where does Europe stand on critical infrastructure resilience?",
+          "url": "https://www.wavestone.com/en/insight/critical-infrastructure-cybersecurity-cer-directive/",
+          "typ": "media"
+        }
+      },
+      {
+        "klic": "diplomate",
+        "stav": null,
+        "popis": null,
+        "datum": null,
+        "zdroj": null
+      },
+      {
+        "klic": "jaderne",
+        "stav": null,
+        "popis": null,
+        "datum": null,
+        "zdroj": null
+      }
+    ],
+    "PL": [
+      {
+        "klic": "branna",
+        "stav": null,
+        "popis": null,
+        "datum": null,
+        "zdroj": null
+      },
+      {
+        "klic": "zalohy",
+        "stav": null,
+        "popis": null,
+        "datum": null,
+        "zdroj": null
+      },
+      {
+        "klic": "vydaje",
+        "stav": "ano",
+        "popis": "Návrh rozpočtu na rok 2026 zvyšuje obranné výdaje na 4,8 % HDP, nejvíce v NATO.",
+        "datum": "2026",
+        "zdroj": {
+          "nazev": "Notes From Poland — Poland plans record defence spending of 4.8% GDP in 2026 budget",
+          "url": "https://notesfrompoland.com/2025/08/29/poland-plans-record-defence-spending-of-4-8-gdp-in-2026-budget-along-with-lower-deficit/",
+          "typ": "media"
+        }
+      },
+      {
+        "klic": "ottawa",
+        "stav": "ano",
+        "popis": "Polsko oznámilo odstoupení v srpnu 2025 a z Ottawské úmluvy formálně vystoupilo 20. 2. 2026.",
+        "datum": "2026-02-20",
+        "zdroj": {
+          "nazev": "CBC News — Poland formally withdraws from Ottawa Convention on landmines",
+          "url": "https://www.cbc.ca/news/world/poland-ottawa-convention-landmines-9.7098794",
+          "typ": "media"
+        }
+      },
+      {
+        "klic": "hranice",
+        "stav": "ano",
+        "popis": "Program Tarcza Wschód (Východní štít) za více než 10 mld. zł na léta 2024–2028 opevňuje hranici s Běloruskem a Kaliningradskou oblastí.",
+        "datum": "2024-05-18",
+        "zdroj": {
+          "nazev": "East Shield (MON) — About the Programme",
+          "url": "https://tarczawschod.wp.mil.pl/en/about-the-programme/",
+          "typ": "primary"
+        }
+      },
+      {
+        "klic": "prirucka",
+        "stav": "ano",
+        "popis": "Vláda zveřejnila v srpnu 2025 „Poradnik bezpieczeństwa“ a rozesílá 17 mil. tištěných výtisků všem domácnostem do 31. 1. 2026.",
+        "datum": "2025-08",
+        "zdroj": {
+          "nazev": "Notes From Poland — Government sends safety handbook to every household in Poland",
+          "url": "https://notesfrompoland.com/2026/01/12/government-sends-safety-handbook-to-every-household-in-poland/",
+          "typ": "media"
+        }
+      },
+      {
+        "klic": "kryty",
+        "stav": "ano",
+        "popis": "Zákon o ochraně obyvatelstva a civilní obraně z 5. 12. 2024 (účinný od 1. 1. 2025) ukládá evidenci úkrytů a od 2026 úkryty v nové bytové výstavbě.",
+        "datum": "2024-12-05",
+        "zdroj": {
+          "nazev": "ISAP Sejm — Ustawa z dnia 5 grudnia 2024 r. o ochronie ludności i obronie cywilnej",
+          "url": "https://isap.sejm.gov.pl/isap.nsf/DocDetails.xsp?id=WDU20240001907",
+          "typ": "primary"
+        }
+      },
+      {
+        "klic": "drony",
+        "stav": "ano",
+        "popis": "Polsko 30. 1. 2026 podepsalo smlouvu za asi 15 mld. zł netto na protidronový systém SAN (18 bateriových modulů).",
+        "datum": "2026-01-30",
+        "zdroj": {
+          "nazev": "Notes From Poland — Poland signs contract for anti-drone system in wake of Russian incursions",
+          "url": "https://notesfrompoland.com/2026/01/30/poland-signs-contract-for-anti-drone-system-in-wake-of-russian-incursions/",
+          "typ": "media"
+        }
+      },
+      {
+        "klic": "infrastruktura",
+        "stav": null,
+        "popis": null,
+        "datum": null,
+        "zdroj": null
+      },
+      {
+        "klic": "diplomate",
+        "stav": null,
+        "popis": null,
+        "datum": null,
+        "zdroj": null
+      },
+      {
+        "klic": "jaderne",
+        "stav": null,
+        "popis": null,
+        "datum": null,
+        "zdroj": null
+      }
+    ],
+    "DE": [
+      {
+        "klic": "branna",
+        "stav": "castecne",
+        "popis": "Zákon o modernizaci vojenské služby (Bundestag 5. 12. 2025) od 1. 1. 2026 zavádí povinný dotazník a odvod pro mladé muže, služba sama zůstává dobrovolná.",
+        "datum": "2026-01-01",
+        "zdroj": {
+          "nazev": "Deutschland.de — Bundestag approves law for new military service",
+          "url": "https://www.deutschland.de/en/news/bundestag-approves-law-for-new-military-service",
+          "typ": "media"
+        }
+      },
+      {
+        "klic": "zalohy",
+        "stav": "ano",
+        "popis": "Hlavním účelem nové vojenské služby je budování záloh; do roku 2035 má mít bundeswehr přes 260 000 aktivních vojáků a 200 000 záložníků.",
+        "datum": "2025-12-05",
+        "zdroj": {
+          "nazev": "GlobalSecurity (Bundesregierung) — New attractive military service plan passed",
+          "url": "https://www.globalsecurity.org/wmd/library/news/germany/2025/germany-251205-de-fedgov01.htm",
+          "typ": "primary"
+        }
+      },
+      {
+        "klic": "vydaje",
+        "stav": "ano",
+        "popis": "Podle IISS dosahují německé obranné výdaje v roce 2026 asi 2,6 % HDP a oficiální plány je mají zvýšit na přibližně 3,5 % HDP do roku 2029.",
+        "datum": "2029",
+        "zdroj": {
+          "nazev": "IISS — Capability Vignette: Germany's Growing Defence Budget",
+          "url": "https://www.iiss.org/publications/strategic-dossiers/the-defence-of-europe-in-a-new-era-an-assessment/capability-vignette-germanys-growing-defence-budget/",
+          "typ": "media"
+        }
+      },
+      {
+        "klic": "ottawa",
+        "stav": null,
+        "popis": null,
+        "datum": null,
+        "zdroj": null
+      },
+      {
+        "klic": "hranice",
+        "stav": null,
+        "popis": "Země nesousedí s Ruskem ani Běloruskem.",
+        "datum": null,
+        "zdroj": null,
+        "nerelevantni": true
+      },
+      {
+        "klic": "prirucka",
+        "stav": "ano",
+        "popis": "BBK představil 13. 10. 2025 zcela přepracovanou příručku „Vorsorgen für Krisen und Katastrophen“.",
+        "datum": "2025-10-13",
+        "zdroj": {
+          "nazev": "BBK — Neuer BBK-Ratgeber gibt Orientierung in unsicheren Zeiten",
+          "url": "https://www.bbk.bund.de/SharedDocs/Pressemitteilungen/DE/2025/10/pm-13-neuer-ratgeber.html",
+          "typ": "primary"
+        }
+      },
+      {
+        "klic": "kryty",
+        "stav": "castecne",
+        "popis": "BBK připravuje národní koncept úkrytů a jejich soupis; Německo má jen 579 veřejných krytů pro asi 480 000 lidí a do 2029 chce do civilní ochrany investovat 10 mld. eur.",
+        "datum": "2024-11",
+        "zdroj": {
+          "nazev": "The Local — 'Bunker list': What we know so far about Germany's emergency shelter plan",
+          "url": "https://www.thelocal.de/20241127/bunker-list-what-we-know-so-far-about-germanys-emergency-shelter-plan",
+          "typ": "media"
+        }
+      },
+      {
+        "klic": "drony",
+        "stav": "ano",
+        "popis": "Bundestag 26. 2. 2026 schválil novelu zákona o bezpečnosti letectví, která umožňuje nasadit bundeswehr k obraně proti dronům; účinnost 6. 3. 2026.",
+        "datum": "2026-02-26",
+        "zdroj": {
+          "nazev": "Deutscher Bundestag — Luftsicherheitsgesetz für eine bessere Abwehr von Drohnen geändert",
+          "url": "https://www.bundestag.de/dokumente/textarchiv/2026/kw09-de-luftsicherheitsgesetz-1140448",
+          "typ": "primary"
+        }
+      },
+      {
+        "klic": "infrastruktura",
+        "stav": "ano",
+        "popis": "Bundestag 29. 1. 2026 schválil KRITIS-Dachgesetz, který transponuje směrnici CER a poprvé zavádí jednotné požadavky na fyzickou ochranu kritických zařízení.",
+        "datum": "2026-01-29",
+        "zdroj": {
+          "nazev": "Deutscher Bundestag — Bundestag beschließt Gesetz zur Stärkung kritischer Anlagen",
+          "url": "https://www.bundestag.de/dokumente/textarchiv/2026/kw05-de-kritische-infrastruktur-1137002",
+          "typ": "primary"
+        }
+      },
+      {
+        "klic": "diplomate",
+        "stav": null,
+        "popis": null,
+        "datum": null,
+        "zdroj": null
+      },
+      {
+        "klic": "jaderne",
+        "stav": null,
+        "popis": null,
+        "datum": null,
+        "zdroj": null
+      }
+    ],
+    "AT": [
+      {
+        "klic": "branna",
+        "stav": null,
+        "popis": null,
+        "datum": null,
+        "zdroj": null
+      },
+      {
+        "klic": "zalohy",
+        "stav": null,
+        "popis": null,
+        "datum": null,
+        "zdroj": null
+      },
+      {
+        "klic": "vydaje",
+        "stav": "castecne",
+        "popis": "Neutrální Rakousko zvyšuje rozpočet na obranu na 5,184 mld. eur v roce 2026 s politickým cílem 2 % HDP do roku 2032.",
+        "datum": "2032",
+        "zdroj": {
+          "nazev": "Militär Aktuell — Austrian Armed Forces: budget continues to grow in 2025 and 2026",
+          "url": "https://militaeraktuell.at/en/austrian-armed-forces-budget-continues-to-grow-in-2025-and-2026/",
+          "typ": "media"
+        }
+      },
+      {
+        "klic": "ottawa",
+        "stav": null,
+        "popis": null,
+        "datum": null,
+        "zdroj": null
+      },
+      {
+        "klic": "hranice",
+        "stav": null,
+        "popis": "Země nesousedí s Ruskem ani Běloruskem.",
+        "datum": null,
+        "zdroj": null,
+        "nerelevantni": true
+      },
+      {
+        "klic": "prirucka",
+        "stav": "castecne",
+        "popis": "Stát informuje o sebeochraně na portálu oesterreich.gv.at a brožury (např. „Krisenfester Haushalt“) vydávají zemské svazy civilní ochrany; celostátní rozeslání domácnostem nedohledáno.",
+        "datum": "2026-02-16",
+        "zdroj": {
+          "nazev": "oesterreich.gv.at — Allgemeines zum Selbstschutz im Katastrophenfall",
+          "url": "https://www.oesterreich.gv.at/de/themen/notfaelle_unfaelle_und_kriminalitaet/katastrophenfaelle/1/Seite.29500328",
+          "typ": "primary"
+        }
+      },
+      {
+        "klic": "kryty",
+        "stav": null,
+        "popis": "Kryty jsou podle médií k dispozici pro méně než 3 % obyvatel; celostátní krytový program nedohledán.",
+        "datum": null,
+        "zdroj": {
+          "nazev": "profil — Ob Atomunfall oder Blackout, im Ernstfall gibt es kaum Schutzräume",
+          "url": "https://www.profil.at/oesterreich/zivilschutz-bunker-innenministerium-atom-bomben-katastrophe/403164063",
+          "typ": "media"
+        }
+      },
+      {
+        "klic": "drony",
+        "stav": "ano",
+        "popis": "Rakouský spolkový armáda nakupuje 36 protidronových systémů Skyranger s dodávkami od 2026 a buduje v Salcburku centrum elektronické obrany proti dronům.",
+        "datum": "2026-02-20",
+        "zdroj": {
+          "nazev": "OTS / Bundesheer — Modernisierung der bodengebundenen Luftabwehr und Drohnenabwehr des Bundesheeres",
+          "url": "https://www.ots.at/presseaussendung/OTS_20260220_OTS0087/bundesheer-modernisierung-der-bodengebundenen-luftabwehr-und-drohnenabwehr-des-bundesheeres",
+          "typ": "primary"
+        }
+      },
+      {
+        "klic": "infrastruktura",
+        "stav": "ano",
+        "popis": "Podle přehledu Wavestone patřila země k 9. 1. 2026 mezi státy, které schválily transpozici směrnice CER o odolnosti kritických subjektů.",
+        "datum": "2026-01",
+        "zdroj": {
+          "nazev": "Wavestone — CER Directive: where does Europe stand on critical infrastructure resilience?",
+          "url": "https://www.wavestone.com/en/insight/critical-infrastructure-cybersecurity-cer-directive/",
+          "typ": "media"
+        }
+      },
+      {
+        "klic": "diplomate",
+        "stav": null,
+        "popis": null,
+        "datum": null,
+        "zdroj": null
+      },
+      {
+        "klic": "jaderne",
+        "stav": null,
+        "popis": null,
+        "datum": null,
+        "zdroj": null
+      }
+    ],
+    "LT": [
+      {
+        "klic": "branna",
+        "stav": "ano",
+        "popis": "Litva obnovila povinnou službu v roce 2015; nový zákon od 1. 1. 2026 počítá s povoláním asi 5 000 branců na devítiměsíční službu a omezuje odklady.",
+        "datum": "2026-01-01",
+        "zdroj": {
+          "nazev": "LRT — Nine key changes coming into effect in Lithuania in 2026",
+          "url": "https://www.lrt.lt/en/news-in-english/19/2794135/nine-key-changes-coming-into-effect-in-lithuania-in-2026",
+          "typ": "media"
+        }
+      },
+      {
+        "klic": "zalohy",
+        "stav": "ano",
+        "popis": "Od roku 2026 se doba služby v záloze prodlužuje z deseti na patnáct let.",
+        "datum": "2026-01-01",
+        "zdroj": {
+          "nazev": "LRT — Nine key changes coming into effect in Lithuania in 2026",
+          "url": "https://www.lrt.lt/en/news-in-english/19/2794135/nine-key-changes-coming-into-effect-in-lithuania-in-2026",
+          "typ": "media"
+        }
+      },
+      {
+        "klic": "vydaje",
+        "stav": "ano",
+        "popis": "Seimas schválil na rok 2026 rekordní obranný rozpočet 4,79 mld. eur, tj. 5,38 % HDP.",
+        "datum": "2026",
+        "zdroj": {
+          "nazev": "LR Krašto apsaugos ministerija — The Seimas approves record defence budget of EUR 4.79 billion or 5.38 % of GDP in 2026",
+          "url": "https://kam.lt/en/the-seimas-approves-record-defence-budget-of-eur-4-79-billion-or-5-38-of-gdp-in-2026/",
+          "typ": "primary"
+        }
+      },
+      {
+        "klic": "ottawa",
+        "stav": "ano",
+        "popis": "Litva uložila listinu o odstoupení u OSN 27. 6. 2025 a vystoupení nabylo účinnosti 27. 12. 2025.",
+        "datum": "2025-12-27",
+        "zdroj": {
+          "nazev": "Human Rights Watch — Five European States Withdraw from Mine Ban Treaty",
+          "url": "https://www.hrw.org/news/2025/07/01/five-european-states-withdraw-from-mine-ban-treaty",
+          "typ": "media"
+        }
+      },
+      {
+        "klic": "hranice",
+        "stav": "ano",
+        "popis": "Vláda 12. 8. 2026 schválila změny plánu obranných opevnění na hranici s Běloruskem a Kaliningradem včetně protimobilitního pásu do konce roku 2029.",
+        "datum": "2026-08-12",
+        "zdroj": {
+          "nazev": "European Pravda — Lithuania builds new defence line along border with Russia and Belarus",
+          "url": "https://www.eurointegration.com.ua/eng/news/2026/08/12/7243388/",
+          "typ": "media"
+        }
+      },
+      {
+        "klic": "prirucka",
+        "stav": "ano",
+        "popis": "Ministerstvo obrany vydalo pro všechny obyvatele příručku „Jei krizė arba karas: kaip elgtis?“ (Co dělat, když přijde krize nebo válka).",
+        "datum": null,
+        "zdroj": {
+          "nazev": "Ministry of National Defence of Lithuania — If war or crisis comes: what should I do (PDF)",
+          "url": "https://civil-protection-knowledge-network.europa.eu/system/files/2025-12/if-war-or-crisis-comes-what-should-i-do.pdf",
+          "typ": "primary"
+        }
+      },
+      {
+        "klic": "kryty",
+        "stav": "castecne",
+        "popis": "Existující úkryty pojmou podle hasičské služby asi 30 % obyvatel; obce vybírají a značí místa kolektivní ochrany.",
+        "datum": null,
+        "zdroj": {
+          "nazev": "LRT — Lithuania preps its bomb shelter network – what you should know",
+          "url": "https://www.lrt.lt/en/news-in-english/19/2672539/lithuania-preps-its-bomb-shelter-network-what-you-should-know",
+          "typ": "media"
+        }
+      },
+      {
+        "klic": "drony",
+        "stav": "ano",
+        "popis": "Seimas 23. 9. 2025 novelizoval zákony tak, aby armáda mohla sestřelit jakýkoli dron narušující vzdušný prostor, s účinností od října 2025.",
+        "datum": "2025-09-23",
+        "zdroj": {
+          "nazev": "U.S. News (Reuters) — Lithuania Authorises Army to Shoot Down Drones Violating Its Airspace",
+          "url": "https://www.usnews.com/news/world/articles/2025-09-23/lithuania-authorises-army-to-shoot-down-drones-violating-its-airspace",
+          "typ": "wire"
+        }
+      },
+      {
+        "klic": "infrastruktura",
+        "stav": "ano",
+        "popis": "Podle přehledu Wavestone patřila země k 9. 1. 2026 mezi státy, které schválily transpozici směrnice CER o odolnosti kritických subjektů.",
+        "datum": "2026-01",
+        "zdroj": {
+          "nazev": "Wavestone — CER Directive: where does Europe stand on critical infrastructure resilience?",
+          "url": "https://www.wavestone.com/en/insight/critical-infrastructure-cybersecurity-cer-directive/",
+          "typ": "media"
+        }
+      },
+      {
+        "klic": "diplomate",
+        "stav": null,
+        "popis": null,
+        "datum": null,
+        "zdroj": null
+      },
+      {
+        "klic": "jaderne",
+        "stav": null,
+        "popis": null,
+        "datum": null,
+        "zdroj": null
+      }
+    ],
+    "LV": [
+      {
+        "klic": "branna",
+        "stav": "ano",
+        "popis": "Saeima 5. 4. 2023 schválila zákon o státní obranné službě a obnovila povinnou službu pro muže 18–27 let (11 měsíců); ženy mohou dobrovolně.",
+        "datum": "2023-04-05",
+        "zdroj": {
+          "nazev": "LSM — Compulsory military service to be re-introduced in Latvia",
+          "url": "https://eng.lsm.lv/article/society/defense/05.04.2023-compulsory-military-service-to-be-re-introduced-in-latvia.a503763/",
+          "typ": "media"
+        }
+      },
+      {
+        "klic": "zalohy",
+        "stav": null,
+        "popis": null,
+        "datum": null,
+        "zdroj": null
+      },
+      {
+        "klic": "vydaje",
+        "stav": "ano",
+        "popis": "Obranný rozpočet 2026 činí 2,16 mld. eur (4,91 % HDP); novela zákona z 26. 3. 2026 ukládá od roku 2027 nejméně 5 % HDP ročně.",
+        "datum": "2026-03-26",
+        "zdroj": {
+          "nazev": "LSM — Saeima sets Latvia's defence spending at minimum 5% of GDP from 2027",
+          "url": "https://eng.lsm.lv/article/politics/saeima/26.03.2026-saeima-sets-latvias-defence-spending-at-minimum-5-of-gdp-from-2027.a640514/",
+          "typ": "media"
+        }
+      },
+      {
+        "klic": "ottawa",
+        "stav": "ano",
+        "popis": "Lotyšsko uložilo listinu o odstoupení u OSN 27. 6. 2025 a vystoupení nabylo účinnosti 27. 12. 2025.",
+        "datum": "2025-12-27",
+        "zdroj": {
+          "nazev": "Human Rights Watch — Five European States Withdraw from Mine Ban Treaty",
+          "url": "https://www.hrw.org/news/2025/07/01/five-european-states-withdraw-from-mine-ban-treaty",
+          "typ": "media"
+        }
+      },
+      {
+        "klic": "hranice",
+        "stav": "ano",
+        "popis": "Lotyšsko schválilo plán protimobilitního opevnění východní hranice za 303 mil. eur na pět let jako součást Baltské obranné linie.",
+        "datum": "2024-03",
+        "zdroj": {
+          "nazev": "Aizsardzības ministrija — Eastern border counter-mobility plan approved by Latvia, EUR 303 million",
+          "url": "https://www.mod.gov.lv/en/news/eastern-border-counter-mobility-plan-approved-latvia-eur-303-million-be-invested-strengthening",
+          "typ": "primary"
+        }
+      },
+      {
+        "klic": "prirucka",
+        "stav": "ano",
+        "popis": "Ministerstvo obrany vydalo v dubnu 2024 aktualizovanou brožuru „72 hodin – Kā rīkoties krīzes gadījumā“.",
+        "datum": "2024-04",
+        "zdroj": {
+          "nazev": "Aizsardzības ministrija — What to do in case of a crisis, updated edition 2024 (PDF)",
+          "url": "https://www.mod.gov.lv/sites/mod/files/document/72H%20buklets_ENG_WEB_2024.pdf",
+          "typ": "primary"
+        }
+      },
+      {
+        "klic": "kryty",
+        "stav": "ano",
+        "popis": "Saeima 5. 6. 2025 přijala úpravu krytů; od 1. 1. 2027 bude jejich výstavba povinná u řady nových budov.",
+        "datum": "2025-06-05",
+        "zdroj": {
+          "nazev": "LSM — Saeima adopts bomb shelter regulation in Latvia",
+          "url": "https://eng.lsm.lv/article/politics/saeima/05.06.2025-saeima-adopts-bomb-shelter-regulation-in-latvia.a601975/",
+          "typ": "media"
+        }
+      },
+      {
+        "klic": "drony",
+        "stav": "ano",
+        "popis": "Novela policejního zákona z března 2025 dala policii právo nebezpečné drony přistát nebo sestřelit; armáda a pohraniční stráž toto právo již mají.",
+        "datum": "2025-03-27",
+        "zdroj": {
+          "nazev": "LSM — Latvian police given the right to down dangerous drones",
+          "url": "https://eng.lsm.lv/article/society/crime/27.03.2025-latvian-police-given-the-right-to-down-dangerous-drones.a593203/",
+          "typ": "media"
+        }
+      },
+      {
+        "klic": "infrastruktura",
+        "stav": "ano",
+        "popis": "Podle přehledu Wavestone patřila země k 9. 1. 2026 mezi státy, které schválily transpozici směrnice CER o odolnosti kritických subjektů.",
+        "datum": "2026-01",
+        "zdroj": {
+          "nazev": "Wavestone — CER Directive: where does Europe stand on critical infrastructure resilience?",
+          "url": "https://www.wavestone.com/en/insight/critical-infrastructure-cybersecurity-cer-directive/",
+          "typ": "media"
+        }
+      },
+      {
+        "klic": "diplomate",
+        "stav": null,
+        "popis": null,
+        "datum": null,
+        "zdroj": null
+      },
+      {
+        "klic": "jaderne",
+        "stav": null,
+        "popis": null,
+        "datum": null,
+        "zdroj": null
+      }
+    ],
+    "EE": [
+      {
+        "klic": "branna",
+        "stav": "ano",
+        "popis": "Estonsko má povinnou vojenskou službu v délce 8 nebo 11 měsíců, od roku 2027 prodlouženou na 12 měsíců; ženy mohou nastoupit dobrovolně.",
+        "datum": "2027",
+        "zdroj": {
+          "nazev": "Kaitseressursside Amet — Conscription",
+          "url": "https://kra.ee/en/conscription/",
+          "typ": "primary"
+        }
+      },
+      {
+        "klic": "zalohy",
+        "stav": null,
+        "popis": null,
+        "datum": null,
+        "zdroj": null
+      },
+      {
+        "klic": "vydaje",
+        "stav": "ano",
+        "popis": "Státní rozpočet 2026 zvyšuje obranné výdaje na 5,4 % HDP podle kritérií NATO.",
+        "datum": "2026",
+        "zdroj": {
+          "nazev": "Eesti Vabariigi Valitsus — Government approved the 2026 state budget",
+          "url": "https://valitsus.ee/en/news/government-approved-2026-state-budget",
+          "typ": "primary"
+        }
+      },
+      {
+        "klic": "ottawa",
+        "stav": "ano",
+        "popis": "Estonsko uložilo listinu o odstoupení u OSN 27. 6. 2025 a vystoupení nabylo účinnosti 27. 12. 2025.",
+        "datum": "2025-12-27",
+        "zdroj": {
+          "nazev": "Human Rights Watch — Five European States Withdraw from Mine Ban Treaty",
+          "url": "https://www.hrw.org/news/2025/07/01/five-european-states-withdraw-from-mine-ban-treaty",
+          "typ": "media"
+        }
+      },
+      {
+        "klic": "hranice",
+        "stav": "ano",
+        "popis": "V rámci Baltské obranné linie (schválené 19. 1. 2024) staví Estonsko 600 bunkrů a 40 km protitankových překážek s dokončením do konce 2027.",
+        "datum": "2024-01-19",
+        "zdroj": {
+          "nazev": "Riigi Kaitseinvesteeringute Keskus — Baltic Defence Line",
+          "url": "https://www.kaitseinvesteeringud.ee/en/baltic-defence-line/",
+          "typ": "primary"
+        }
+      },
+      {
+        "klic": "prirucka",
+        "stav": "ano",
+        "popis": "Záchranná služba rozeslala od 30. 4. do konce června 2024 příručku pro krize 581 000 domácnostem (kampaň „Ole valmis!“).",
+        "datum": "2024-04-30",
+        "zdroj": {
+          "nazev": "Kriis.ee — Crisis Management Guides to Reach Nearly 600,000 Estonian Homes",
+          "url": "https://www.kriis.ee/en/news/crisis-management-guides-reach-nearly-600000-estonian-homes",
+          "typ": "primary"
+        }
+      },
+      {
+        "klic": "kryty",
+        "stav": "ano",
+        "popis": "Riigikogu přijal zákon o posílení civilní ochrany; od 1. 7. 2026 musí mít vybrané nové budovy veřejné nebo neveřejné úkryty.",
+        "datum": "2026-07-01",
+        "zdroj": {
+          "nazev": "Riigikogu — The Riigikogu passed an Act strengthening civil protection",
+          "url": "https://www.riigikogu.ee/en/press-releases/plenary-assembly/the-riigikogu-passed-an-act-strengthening-civil-protection/",
+          "typ": "primary"
+        }
+      },
+      {
+        "klic": "drony",
+        "stav": "castecne",
+        "popis": "Vláda v dubnu 2026 schválila a předložila Riigikogu návrh zákona rozšiřující pravomoci policie, armády a provozovatelů kritické infrastruktury proti dronům.",
+        "datum": "2026-04",
+        "zdroj": {
+          "nazev": "Eesti Vabariigi Valitsus — Prime Minister Michal: new drone threats also require new rules",
+          "url": "https://valitsus.ee/en/news/prime-minister-michal-new-drone-threats-also-require-new-rules",
+          "typ": "primary"
+        }
+      },
+      {
+        "klic": "infrastruktura",
+        "stav": "ano",
+        "popis": "Podle přehledu Wavestone patřila země k 9. 1. 2026 mezi státy, které schválily transpozici směrnice CER o odolnosti kritických subjektů.",
+        "datum": "2026-01",
+        "zdroj": {
+          "nazev": "Wavestone — CER Directive: where does Europe stand on critical infrastructure resilience?",
+          "url": "https://www.wavestone.com/en/insight/critical-infrastructure-cybersecurity-cer-directive/",
+          "typ": "media"
+        }
+      },
+      {
+        "klic": "diplomate",
+        "stav": null,
+        "popis": null,
+        "datum": null,
+        "zdroj": null
+      },
+      {
+        "klic": "jaderne",
+        "stav": null,
+        "popis": null,
+        "datum": null,
+        "zdroj": null
+      }
+    ],
+    "FI": [
+      {
+        "klic": "branna",
+        "stav": null,
+        "popis": null,
+        "datum": null,
+        "zdroj": null
+      },
+      {
+        "klic": "zalohy",
+        "stav": "ano",
+        "popis": "Horní věková hranice zálohy byla zvýšena z 60 na 65 let s účinností od 1. 1. 2026; počet záložníků má do roku 2031 dosáhnout jednoho milionu.",
+        "datum": "2026-01-01",
+        "zdroj": {
+          "nazev": "Finnish Government — Finland to raise reservist age limit to 65 years as of 2026",
+          "url": "https://valtioneuvosto.fi/en/-/236553176/finland-to-raise-reservist-age-limit-to-65-years-as-of-2026",
+          "typ": "primary"
+        }
+      },
+      {
+        "klic": "vydaje",
+        "stav": "castecne",
+        "popis": "Vláda rozhodla zvýšit výdaje na obranu na nejméně 3 % HDP do roku 2029; oficiální závazek k 3,5 % s datem jsem v primárním zdroji neověřil.",
+        "datum": "2029",
+        "zdroj": {
+          "nazev": "Finnish Government — Finland to raise defence spending to at least three percent of GDP",
+          "url": "https://valtioneuvosto.fi/en/-/236553176/finland-to-raise-defence-spending-to-at-least-three-percent-of-gdp",
+          "typ": "primary"
+        }
+      },
+      {
+        "klic": "ottawa",
+        "stav": "ano",
+        "popis": "Finsko oznámilo odstoupení 10. 7. 2025 a vystoupení z Ottawské úmluvy nabylo účinnosti 10. 1. 2026.",
+        "datum": "2026-01-10",
+        "zdroj": {
+          "nazev": "Finnish Government — Finland's withdrawal from Ottawa Convention to take effect",
+          "url": "https://valtioneuvosto.fi/en/-/236553176/finland-s-withdrawal-from-ottawa-convention-to-take-effect",
+          "typ": "primary"
+        }
+      },
+      {
+        "klic": "hranice",
+        "stav": "ano",
+        "popis": "Finská pohraniční stráž dokončila 200 km bariérového plotu na hranici s Ruskem za 356 mil. eur.",
+        "datum": "2026-09",
+        "zdroj": {
+          "nazev": "The Finnish Border Guard — The eastern border fence is completed",
+          "url": "https://raja.fi/en/-/the-eastern-border-fence-is-completed",
+          "typ": "primary"
+        }
+      },
+      {
+        "klic": "prirucka",
+        "stav": "ano",
+        "popis": "Ministerstvo vnitra zveřejnilo v listopadu 2024 na Suomi.fi průvodce „Varautuminen häiriötilanteisiin ja kriiseihin“.",
+        "datum": "2024-11",
+        "zdroj": {
+          "nazev": "Finnish Government — New guide instructs people how to prepare for incidents and crises in Finland",
+          "url": "https://valtioneuvosto.fi/en/-/1410869/new-guide-instructs-people-how-to-prepare-for-incidents-and-crises-in-finland",
+          "typ": "primary"
+        }
+      },
+      {
+        "klic": "kryty",
+        "stav": "ano",
+        "popis": "Finsko má asi 50 500 krytů civilní obrany pro zhruba 4,8 milionu lidí.",
+        "datum": null,
+        "zdroj": {
+          "nazev": "Ministry of the Interior — Finland has civil defence shelters for about 4.8 million people",
+          "url": "https://intermin.fi/en/-/finland-has-civil-defence-shelters-for-about-4.8-million-people",
+          "typ": "primary"
+        }
+      },
+      {
+        "klic": "drony",
+        "stav": "castecne",
+        "popis": "Vláda předložila parlamentu návrh rozšiřující pravomoci policie zasahovat proti dronům a dalším bezpilotním prostředkům včetně rušení a použití zbraně.",
+        "datum": null,
+        "zdroj": {
+          "nazev": "Yle News — Police to get more powers to take down drones",
+          "url": "https://yle.fi/a/74-20246405",
+          "typ": "media"
+        }
+      },
+      {
+        "klic": "infrastruktura",
+        "stav": "ano",
+        "popis": "Podle přehledu Wavestone patřila země k 9. 1. 2026 mezi státy, které schválily transpozici směrnice CER o odolnosti kritických subjektů.",
+        "datum": "2026-01",
+        "zdroj": {
+          "nazev": "Wavestone — CER Directive: where does Europe stand on critical infrastructure resilience?",
+          "url": "https://www.wavestone.com/en/insight/critical-infrastructure-cybersecurity-cer-directive/",
+          "typ": "media"
+        }
+      },
+      {
+        "klic": "diplomate",
+        "stav": null,
+        "popis": null,
+        "datum": null,
+        "zdroj": null
+      },
+      {
+        "klic": "jaderne",
+        "stav": null,
+        "popis": null,
+        "datum": null,
+        "zdroj": null
+      }
+    ],
+    "NO": [
+      {
+        "klic": "branna",
+        "stav": "ano",
+        "popis": "Norsko zákonem z října 2014 zavedlo od roku 2015 všeobecnou brannou povinnost pro muže i ženy jako první země NATO.",
+        "datum": "2015-01",
+        "zdroj": {
+          "nazev": "Forsvaret — Universal Conscription",
+          "url": "https://www.forsvaret.no/en/news/archive/universal-conscription",
+          "typ": "primary"
+        }
+      },
+      {
+        "klic": "zalohy",
+        "stav": null,
+        "popis": null,
+        "datum": null,
+        "zdroj": null
+      },
+      {
+        "klic": "vydaje",
+        "stav": "ano",
+        "popis": "Obranný rozpočet 2026 činí asi 180 mld. NOK; podle ministra obrany je Norsko na cestě k cíli NATO 3,5 % HDP do roku 2035.",
+        "datum": "2035",
+        "zdroj": {
+          "nazev": "High North News — The Norwegian Government Proposes Defense Budget Increase of NOK 4,2 Billion in 2026",
+          "url": "https://en.highnorthnews.com/politics/the-norwegian-government-proposes-defense-budget-increase-of-nok-42-billion-in-2026/181227",
+          "typ": "media"
+        }
+      },
+      {
+        "klic": "ottawa",
+        "stav": null,
+        "popis": null,
+        "datum": null,
+        "zdroj": null
+      },
+      {
+        "klic": "hranice",
+        "stav": "castecne",
+        "popis": "Norsko od května 2025 staví plot na exponovaných úsecích hranice s Ruskem včetně přechodu Storskog a posiluje senzorový dohled.",
+        "datum": "2025-05",
+        "zdroj": {
+          "nazev": "The Barents Observer — Preparing for trouble, Norway erects fence at exposed border sections",
+          "url": "https://www.thebarentsobserver.com/news/preparing-for-trouble-norway-erects-fence-at-exposed-border-sectionsnbsp/430550",
+          "typ": "media"
+        }
+      },
+      {
+        "klic": "prirucka",
+        "stav": "ano",
+        "popis": "DSB na podzim 2024 rozeslalo všem domácnostem novou brožuru o sebepřipravenosti; doporučená doba soběstačnosti se prodloužila na týden.",
+        "datum": "2024",
+        "zdroj": {
+          "nazev": "DSB — Self-preparedness",
+          "url": "https://www.dsb.no/en/risk-vulnerability-and-preparedness/Total-Defence/Self-preparedness/",
+          "typ": "primary"
+        }
+      },
+      {
+        "klic": "kryty",
+        "stav": "castecne",
+        "popis": "Bílá kniha o totální připravenosti z 10. 1. 2025 navrhuje obnovit povinnost krytů v nových budovách (zrušenou 1998); dnes asi 18 600 krytů pro necelou polovinu obyvatel.",
+        "datum": "2025-01-10",
+        "zdroj": {
+          "nazev": "Regjeringen — White paper on total preparedness: Prepared for crisis and war",
+          "url": "https://www.regjeringen.no/en/whats-new/white-paper-on-total-preparedness-prepared-for-crisis-or-war/id3082581",
+          "typ": "primary"
+        }
+      },
+      {
+        "klic": "drony",
+        "stav": "ano",
+        "popis": "Norské letectvo uvedlo v srpnu 2026 do služby první vyhrazený protidronový systém na základně stíhaček F-35.",
+        "datum": "2026-08-27",
+        "zdroj": {
+          "nazev": "The Defense Post — Norway Begins Operating First Dedicated Counter-Drone System",
+          "url": "https://thedefensepost.com/2026/08/27/norway-counter-drone-system/",
+          "typ": "media"
+        }
+      },
+      {
+        "klic": "infrastruktura",
+        "stav": null,
+        "popis": null,
+        "datum": null,
+        "zdroj": null
+      },
+      {
+        "klic": "diplomate",
+        "stav": null,
+        "popis": null,
+        "datum": null,
+        "zdroj": null
+      },
+      {
+        "klic": "jaderne",
+        "stav": null,
+        "popis": null,
+        "datum": null,
+        "zdroj": null
+      }
+    ],
+    "SE": [
+      {
+        "klic": "branna",
+        "stav": "ano",
+        "popis": "Švédsko má aktivní brannou povinnost; vláda navrhla prodloužení základní služby a rozšíření pohotovostní služby.",
+        "datum": null,
+        "zdroj": {
+          "nazev": "Nordic Defence Sector — Government Proposes Extended Conscription and Expanded Readiness Service",
+          "url": "https://nordicdefencesector.com/en/article/the-government-proposes-extended-military-service-and-expanded-readiness-duty",
+          "typ": "media"
+        }
+      },
+      {
+        "klic": "zalohy",
+        "stav": "castecne",
+        "popis": "Vládou ustavené vyšetřování navrhlo zvýšit horní věkovou hranici pro povolání bývalých důstojníků ze 47 na 70 let; schválení zákona parlamentem nebylo ověřeno.",
+        "datum": "2025-07-14",
+        "zdroj": {
+          "nazev": "The Defense Post — Sweden Mulls Calling up 70-Year-Old Officers for Military Service",
+          "url": "https://thedefensepost.com/2025/07/15/sweden-70-age-military-service/",
+          "typ": "media"
+        }
+      },
+      {
+        "klic": "vydaje",
+        "stav": "ano",
+        "popis": "Vláda 26. 3. 2025 oznámila zvýšení výdajů na obranu na zhruba 3,5 % HDP do roku 2030; po summitu NATO v Haagu uvedla posun cíle až na rok 2032.",
+        "datum": "2025-03-26",
+        "zdroj": {
+          "nazev": "Breaking Defense — Sweden targets $30B increase in defense spending, to hit 3.5% of GDP by 2030",
+          "url": "https://breakingdefense.com/2025/03/sweden-targets-30b-increase-in-defense-spending-to-hit-3-5-of-gdp-by-2030/",
+          "typ": "media"
+        }
+      },
+      {
+        "klic": "ottawa",
+        "stav": "ne",
+        "popis": "Švédsko z Ottawské úmluvy nevystoupilo; v parlamentu se však objevily výzvy k odstoupení (stav k 4/2026).",
+        "datum": "2026-04",
+        "zdroj": {
+          "nazev": "ICRC Law & Policy blog — Why Nordic governments must uphold the global ban on anti-personnel mines",
+          "url": "https://blogs.icrc.org/law-and-policy/2026/04/02/why-nordic-governments-must-uphold-the-global-ban-on-anti-personnel-mines/",
+          "typ": "media"
+        }
+      },
+      {
+        "klic": "hranice",
+        "stav": null,
+        "popis": "Země nesousedí s Ruskem ani Běloruskem.",
+        "datum": null,
+        "zdroj": null,
+        "nerelevantni": true
+      },
+      {
+        "klic": "prirucka",
+        "stav": "ano",
+        "popis": "Aktualizovaná brožura „Om krisen eller kriget kommer“ byla od 18. 11. 2024 rozeslána všem domácnostem (přes 5 milionů výtisků).",
+        "datum": "2024-11-18",
+        "zdroj": {
+          "nazev": "MSB — Om krisen eller kriget kommer (PDF)",
+          "url": "https://rib.msb.se/filer/pdf/30828.pdf",
+          "typ": "primary"
+        }
+      },
+      {
+        "klic": "kryty",
+        "stav": "ano",
+        "popis": "Švédsko investuje 100 milionů SEK do kontroly a modernizace civilních krytů (asi 64 000 krytů pro zhruba 7 milionů lidí).",
+        "datum": "2025-04-01",
+        "zdroj": {
+          "nazev": "The Local Sweden — Sweden to give its defence shelters a 100 million kronor makeover",
+          "url": "https://www.thelocal.se/20250401/sweden-to-give-its-defence-shelters-a-100-million-kronor-makeover/",
+          "typ": "media"
+        }
+      },
+      {
+        "klic": "drony",
+        "stav": "ano",
+        "popis": "Švédsko vyčlenilo 3,5 mld. SEK na protidronové systémy na roky 2026–2028 a armáda buduje mobilní protidronové jednotky.",
+        "datum": "2026-01-12",
+        "zdroj": {
+          "nazev": "Defense News — Swedish military to pump forces, money into mobile drone-defense units",
+          "url": "https://www.defensenews.com/global/europe/2026/01/12/swedish-military-to-pump-forces-money-into-mobile-drone-defense-units/",
+          "typ": "media"
+        }
+      },
+      {
+        "klic": "infrastruktura",
+        "stav": "castecne",
+        "popis": "Vláda předložila v červenci 2026 návrh zákona o odolnosti kritických subjektů (transpozice směrnice CER, prop. 2025/26:303) s účinností od 1. 1. 2027.",
+        "datum": "2026-07",
+        "zdroj": {
+          "nazev": "Regeringen.se — En ny lag för ökad motståndskraft hos kritiska verksamhetsutövare (prop. 2025/26:303)",
+          "url": "https://www.regeringen.se/rattsliga-dokument/proposition/2026/07/prop.-202526303",
+          "typ": "primary"
+        }
+      },
+      {
+        "klic": "diplomate",
+        "stav": "ano",
+        "popis": "Švédsko v dubnu 2023 vyhostilo pět zaměstnanců ruského velvyslanectví podezřelých ze špionáže.",
+        "datum": "2023-04-25",
+        "zdroj": {
+          "nazev": "Anadolu Agency — Sweden expels 5 Russian diplomats: Foreign Ministry",
+          "url": "https://www.aa.com.tr/en/europe/sweden-expels-5-russian-diplomats-foreign-ministry/2881344",
+          "typ": "media"
+        }
+      },
+      {
+        "klic": "jaderne",
+        "stav": "ano",
+        "popis": "Švédsko patří k zemím, které přistoupily na dialog o francouzském „předsunutém odstrašení“ vyhlášeném Macronem 2. 3. 2026.",
+        "datum": "2026-07",
+        "zdroj": {
+          "nazev": "CSS ETH Zürich — Europe’s Changing Nuclear Landscape: French Forward Deterrence",
+          "url": "https://css.ethz.ch/en/center/CSS-news/2026/07/europes-changing-nuclear-landscape-french-forward-deterrence.html",
+          "typ": "media"
+        }
+      }
+    ],
+    "DK": [
+      {
+        "klic": "branna",
+        "stav": "ano",
+        "popis": "Parlament 11. 6. 2025 jednomyslně rozšířil brannou povinnost na ženy (18leté od 1. 7. 2025) a služba se prodlužuje na 11 měsíců.",
+        "datum": "2025-06-11",
+        "zdroj": {
+          "nazev": "CNN — Denmark to conscript women for military service",
+          "url": "https://www.cnn.com/2025/07/02/europe/denmark-expands-conscription-women-scli-intl",
+          "typ": "media"
+        }
+      },
+      {
+        "klic": "zalohy",
+        "stav": null,
+        "popis": null,
+        "datum": null,
+        "zdroj": null
+      },
+      {
+        "klic": "vydaje",
+        "stav": "ano",
+        "popis": "Dohoda z února 2025 (Akcelerační fond 50 mld. DKK) zajišťuje výdaje na obranu přes 3 % HDP v letech 2025 a 2026.",
+        "datum": "2025-02",
+        "zdroj": {
+          "nazev": "Forsvarsministeriet — Agreement putting Denmark at more than 3 pct. of GDP allocated for defence in 2025 and 2026",
+          "url": "https://www.fmn.dk/en/news/2025/agreement-putting-denmark-at-more-than-3-pct.-of-gdp-allocated-for-defence-in-2025-and-2026",
+          "typ": "primary"
+        }
+      },
+      {
+        "klic": "ottawa",
+        "stav": "ne",
+        "popis": "Dánsko z Ottawské úmluvy nevystoupilo; v parlamentu se objevily výzvy k odstoupení (stav k 4/2026).",
+        "datum": "2026-04",
+        "zdroj": {
+          "nazev": "ICRC Law & Policy blog — Why Nordic governments must uphold the global ban on anti-personnel mines",
+          "url": "https://blogs.icrc.org/law-and-policy/2026/04/02/why-nordic-governments-must-uphold-the-global-ban-on-anti-personnel-mines/",
+          "typ": "media"
+        }
+      },
+      {
+        "klic": "hranice",
+        "stav": null,
+        "popis": "Země nesousedí s Ruskem ani Běloruskem.",
+        "datum": null,
+        "zdroj": null,
+        "nerelevantni": true
+      },
+      {
+        "klic": "prirucka",
+        "stav": "ano",
+        "popis": "Agentura pro krizové řízení vydala v létě 2024 doporučení „Forberedt på kriser“ – domácnosti mají zvládnout 3 dny (mj. 9 l vody na osobu).",
+        "datum": "2024-06-17",
+        "zdroj": {
+          "nazev": "Beredskabsstyrelsen — Prepared for crises",
+          "url": "https://www.brs.dk/en/prepared/",
+          "typ": "primary"
+        }
+      },
+      {
+        "klic": "kryty",
+        "stav": "castecne",
+        "popis": "Vláda a obce se v květnu 2025 dohodly na společné revizi kapacity a stavu krytů (kapacita cca 3,6 mil. míst).",
+        "datum": "2025-05-30",
+        "zdroj": {
+          "nazev": "The Local Denmark — Danish authorities to review state of country’s bomb shelters",
+          "url": "https://www.thelocal.dk/20250530/danish-authorities-to-review-state-of-countrys-bomb-shelters",
+          "typ": "media"
+        }
+      },
+      {
+        "klic": "drony",
+        "stav": "castecne",
+        "popis": "Po incidentech se drony v září 2025 schválil finanční výbor parlamentu urychlený nákup protidronových prostředků; zákon umožňující sestřel provozovatelům infrastruktury byl jen ohlášen.",
+        "datum": "2025-09",
+        "zdroj": {
+          "nazev": "Nordic Defence Sector — Denmark purchases additional drones and counter-drone systems",
+          "url": "https://nordicdefencesector.com/en/article/denmark-buys-more-drones-and-anti-drone-systems",
+          "typ": "media"
+        }
+      },
+      {
+        "klic": "infrastruktura",
+        "stav": "ano",
+        "popis": "Zákon o odolnosti kritických subjektů (transpozice směrnice CER) nabyl účinnosti 1. 7. 2025.",
+        "datum": "2025-07-01",
+        "zdroj": {
+          "nazev": "Plesner — Denmark introduces CER Act to strengthen resilience of critical entities",
+          "url": "https://plesner.com/en/news/denmark-introduces-cer-act-strengthen-resilience-critical-entities",
+          "typ": "media"
+        }
+      },
+      {
+        "klic": "diplomate",
+        "stav": "ano",
+        "popis": "Dánsko 5. 4. 2022 vyhostilo 15 ruských zpravodajců registrovaných jako diplomaté.",
+        "datum": "2022-04-05",
+        "zdroj": {
+          "nazev": "The Local Denmark — Denmark expels 15 Russian diplomats accused of spying",
+          "url": "https://www.thelocal.dk/20220405/denmark-expels-15-russian-diplomats-accused-of-spying/",
+          "typ": "media"
+        }
+      },
+      {
+        "klic": "jaderne",
+        "stav": "ano",
+        "popis": "Dánsko patří k zemím, které přistoupily na dialog o francouzském „předsunutém odstrašení“ (projev Macrona 2. 3. 2026).",
+        "datum": "2026-07",
+        "zdroj": {
+          "nazev": "CSS ETH Zürich — Europe’s Changing Nuclear Landscape: French Forward Deterrence",
+          "url": "https://css.ethz.ch/en/center/CSS-news/2026/07/europes-changing-nuclear-landscape-french-forward-deterrence.html",
+          "typ": "media"
+        }
+      }
+    ],
+    "RO": [
+      {
+        "klic": "branna",
+        "stav": "castecne",
+        "popis": "Zákon o dobrovolné čtyřměsíční vojenské službě pro muže i ženy 18–35 let byl vyhlášen ve Sbírce 9. 1. 2026; povinná služba zavedena není.",
+        "datum": "2026-01-09",
+        "zdroj": {
+          "nazev": "The Romania Journal — Volunteer Military Service Law Promulgated",
+          "url": "https://www.romaniajournal.ro/politics/volunteer-military-service-law-promulgated/",
+          "typ": "media"
+        }
+      },
+      {
+        "klic": "zalohy",
+        "stav": "ano",
+        "popis": "Cílem zákona o dobrovolné službě je omladit dobrovolnou zálohu (průměrný věk 47–48 let); absolventi jsou zařazeni do zálohy.",
+        "datum": "2026-01-09",
+        "zdroj": {
+          "nazev": "The Romania Journal — Volunteer Military Service Law Promulgated",
+          "url": "https://www.romaniajournal.ro/politics/volunteer-military-service-law-promulgated/",
+          "typ": "media"
+        }
+      },
+      {
+        "klic": "vydaje",
+        "stav": "ano",
+        "popis": "Prezident Nicușor Dan v červnu 2025 oznámil zvýšení z 2,5 % HDP (2025) na 3,5 % HDP do roku 2030 v rámci haagského závazku 5 %.",
+        "datum": "2025-06",
+        "zdroj": {
+          "nazev": "Romania Insider — Romania adheres to 5%-of-GDP defence spending target",
+          "url": "https://www.romania-insider.com/romania-defence-budget-june-2025",
+          "typ": "media"
+        }
+      },
+      {
+        "klic": "ottawa",
+        "stav": null,
+        "popis": null,
+        "datum": null,
+        "zdroj": null
+      },
+      {
+        "klic": "hranice",
+        "stav": null,
+        "popis": "Země nesousedí s Ruskem ani Běloruskem.",
+        "datum": null,
+        "zdroj": null,
+        "nerelevantni": true
+      },
+      {
+        "klic": "prirucka",
+        "stav": "castecne",
+        "popis": "Stát provozuje národní přípravnou platformu fiipregatit.ro (DSU); v srpnu 2025 spustil s UNICEF osvětová videa pro dospívající.",
+        "datum": "2025-08",
+        "zdroj": {
+          "nazev": "UNICEF Romania — Joint initiative by DSU and UNICEF: animations dedicated to preparing adolescents for emergency situations",
+          "url": "https://www.unicef.org/romania/press-releases/joint-initiative-dsu-and-unicef-animations-dedicated-preparing-adolescents-emergency",
+          "typ": "primary"
+        }
+      },
+      {
+        "klic": "kryty",
+        "stav": "castecne",
+        "popis": "IGSU zveřejňuje stav a seznam krytů civilní ochrany (stav k 6/2026); nařízení vlády výslovně zahrnulo stanice metra mezi stavby s povinnými kryty.",
+        "datum": "2026-06",
+        "zdroj": {
+          "nazev": "IGSU — Situația adăposturilor de protecție civilă",
+          "url": "https://igsu.ro/adaposturi-de-protectie-civila",
+          "typ": "primary"
+        }
+      },
+      {
+        "klic": "drony",
+        "stav": "ano",
+        "popis": "Zákon umožňující armádě sestřelit nebo zneškodnit drony narušující vzdušný prostor schválil parlament v únoru 2025 a vstoupil v platnost 19. 5. 2025.",
+        "datum": "2025-05-19",
+        "zdroj": {
+          "nazev": "Romania Insider — Romania enacts law allowing military to down unauthorized drones",
+          "url": "https://www.romania-insider.com/romania-enacts-law-down-drones-may-2025",
+          "typ": "media"
+        }
+      },
+      {
+        "klic": "infrastruktura",
+        "stav": null,
+        "popis": null,
+        "datum": null,
+        "zdroj": null
+      },
+      {
+        "klic": "diplomate",
+        "stav": "ano",
+        "popis": "Rumunsko v roce 2023 vyhostilo 40 zaměstnanců ruského velvyslanectví; 29. 5. 2026 po dopadu dronu v Galați zavřelo ruský generální konzulát v Konstanci a vyhostilo konzula.",
+        "datum": "2026-05-29",
+        "zdroj": {
+          "nazev": "Meduza — Romania closes Russia’s consulate general in Constanta after Russian drone crashes on residential building",
+          "url": "https://meduza.io/en/news/2026/05/29/romania-closes-russia-s-consulate-general-in-constanta-after-russian-drone-crashes-on-residential-building",
+          "typ": "media"
+        }
+      },
+      {
+        "klic": "jaderne",
+        "stav": null,
+        "popis": null,
+        "datum": null,
+        "zdroj": null
+      }
+    ],
+    "MD": [
+      {
+        "klic": "branna",
+        "stav": "ano",
+        "popis": "Povinná vojenská služba trvá; ministerstvo obrany připravuje nová zdravotní kritéria před odvodem v říjnu–prosinci 2026.",
+        "datum": "2026",
+        "zdroj": {
+          "nazev": "Logos Press — Moldova proposes new medical criteria for military service eligibility",
+          "url": "https://logos-pres.md/en/news/the-ministry-of-defense-is-proposing-to-review-the-criteria-for-fitness-for-military-service/",
+          "typ": "media"
+        }
+      },
+      {
+        "klic": "zalohy",
+        "stav": "castecne",
+        "popis": "Návrh zákona počítá s povinným až 42denním výcvikem pro muže do 55 let (zatím jen návrh).",
+        "datum": null,
+        "zdroj": {
+          "nazev": "Mezha — Moldova proposes mandatory 42 day military training for men up to 55",
+          "url": "https://mezha.net/eng/bukvy/cf837735_moldova_proposes_mandatory/",
+          "typ": "media"
+        }
+      },
+      {
+        "klic": "vydaje",
+        "stav": "ano",
+        "popis": "Moldavsko (mimo NATO) plánuje zvýšit výdaje na obranu z asi 0,6 % na 1 % HDP do roku 2030 (program 2026–2030, 10,6 mld. lei); vojenská strategie 2025–2035 počítá s postupným růstem k 1,5 % HDP.",
+        "datum": "2026",
+        "zdroj": {
+          "nazev": "Logos Press — Moldova to raise defence spending to 1% of GDP by 2030",
+          "url": "https://logos-pres.md/en/news/defense-spending-will-increase/",
+          "typ": "media"
+        }
+      },
+      {
+        "klic": "ottawa",
+        "stav": null,
+        "popis": null,
+        "datum": null,
+        "zdroj": null
+      },
+      {
+        "klic": "hranice",
+        "stav": null,
+        "popis": "Země nesousedí s Ruskem ani Běloruskem.",
+        "datum": null,
+        "zdroj": null,
+        "nerelevantni": true
+      },
+      {
+        "klic": "prirucka",
+        "stav": null,
+        "popis": null,
+        "datum": null,
+        "zdroj": null
+      },
+      {
+        "klic": "kryty",
+        "stav": null,
+        "popis": null,
+        "datum": null,
+        "zdroj": null
+      },
+      {
+        "klic": "drony",
+        "stav": "ano",
+        "popis": "Rada EU 13. 7. 2026 schválila 120 mil. EUR z Evropského mírového nástroje na protivzdušnou obranu Moldavska včetně systémů detekce a zachycení dronů.",
+        "datum": "2026-07-13",
+        "zdroj": {
+          "nazev": "Radio Moldova — Moldova upgrades air defense with €120M EU support",
+          "url": "https://radiomoldova.md/p/81092/moldova-upgrades-air-defense-with-120m-eu-support",
+          "typ": "media"
+        }
+      },
+      {
+        "klic": "infrastruktura",
+        "stav": null,
+        "popis": null,
+        "datum": null,
+        "zdroj": null
+      },
+      {
+        "klic": "diplomate",
+        "stav": "ano",
+        "popis": "Moldavsko v červenci 2023 vyhostilo 45 ruských diplomatů a zaměstnanců, další vyhoštění následovala v letech 2024 a 2025 (tři 31. 3. 2025).",
+        "datum": "2023-07-26",
+        "zdroj": {
+          "nazev": "The Moscow Times — Moldova Expels 45 Russian Diplomats, Embassy Staff",
+          "url": "https://www.themoscowtimes.com/2023/07/26/moldova-expels-45-russian-diplomats-embassy-staff-a81973",
+          "typ": "media"
+        }
+      },
+      {
+        "klic": "jaderne",
+        "stav": null,
+        "popis": null,
+        "datum": null,
+        "zdroj": null
+      }
+    ],
+    "HU": [
+      {
+        "klic": "branna",
+        "stav": "ne",
+        "popis": "Branná povinnost je v Maďarsku v míru pozastavena od listopadu 2004; lze ji aktivovat jen ve zvláštním právním řádu.",
+        "datum": "2004-11",
+        "zdroj": {
+          "nazev": "Daily News Hungary — Is Conscription Returning to Europe? What It Means for the EU and Hungary",
+          "url": "https://dailynewshungary.com/conscription-returning-europe-eu-hungary/",
+          "typ": "media"
+        }
+      },
+      {
+        "klic": "zalohy",
+        "stav": null,
+        "popis": null,
+        "datum": null,
+        "zdroj": null
+      },
+      {
+        "klic": "vydaje",
+        "stav": "ano",
+        "popis": "Premiér Péter Magyar na summitu NATO v Ankaře oznámil zvýšení výdajů na obranu na 5 % HDP do roku 2035.",
+        "datum": "2026",
+        "zdroj": {
+          "nazev": "The Budapest Times — Magyar pledges 5% of GDP for defence — and a clean break from Orbán's NATO drift",
+          "url": "https://www.budapesttimes.hu/diplomacy/magyar-pledges-5-of-gdp-for-defence-and-a-clean-break-from-orbans-nato-drift/",
+          "typ": "media"
+        }
+      },
+      {
+        "klic": "ottawa",
+        "stav": null,
+        "popis": null,
+        "datum": null,
+        "zdroj": null
+      },
+      {
+        "klic": "hranice",
+        "stav": null,
+        "popis": "Země nesousedí s Ruskem ani Běloruskem.",
+        "datum": null,
+        "zdroj": null,
+        "nerelevantni": true
+      },
+      {
+        "klic": "prirucka",
+        "stav": null,
+        "popis": null,
+        "datum": null,
+        "zdroj": null
+      },
+      {
+        "klic": "kryty",
+        "stav": null,
+        "popis": null,
+        "datum": null,
+        "zdroj": null
+      },
+      {
+        "klic": "drony",
+        "stav": "castecne",
+        "popis": "Maďarská armáda při cvičení Adaptive Hussars 2025 testovala protidronové „koridory“.",
+        "datum": "2025-10-06",
+        "zdroj": {
+          "nazev": "The Defense Post — Hungary Tests Anti-Drone ‘Corridors’ in Largest Modern Military Drills",
+          "url": "https://thedefensepost.com/2025/10/06/hungary-anti-drone-corridors/",
+          "typ": "media"
+        }
+      },
+      {
+        "klic": "infrastruktura",
+        "stav": null,
+        "popis": null,
+        "datum": null,
+        "zdroj": null
+      },
+      {
+        "klic": "diplomate",
+        "stav": "ano",
+        "popis": "Vláda Pétera Magyara 8. 9. 2026 vyhostila 10 ruských diplomatů – první taková vyhoštění od roku 2022.",
+        "datum": "2026-09-08",
+        "zdroj": {
+          "nazev": "Euronews — Hungary expels 10 Russian diplomats for 'unacceptable activities'",
+          "url": "https://www.euronews.com/my-europe/2026/09/08/hungary-expels-10-russian-diplomats-for-unacceptable-activities",
+          "typ": "media"
+        }
+      },
+      {
+        "klic": "jaderne",
+        "stav": null,
+        "popis": null,
+        "datum": null,
+        "zdroj": null
+      }
+    ],
+    "NL": [
+      {
+        "klic": "branna",
+        "stav": null,
+        "popis": null,
+        "datum": null,
+        "zdroj": null
+      },
+      {
+        "klic": "zalohy",
+        "stav": null,
+        "popis": null,
+        "datum": null,
+        "zdroj": null
+      },
+      {
+        "klic": "vydaje",
+        "stav": "ano",
+        "popis": "Nizozemsko se zavázalo k 3,5 % HDP na obranu (plus 1,5 % na související výdaje) do roku 2035.",
+        "datum": null,
+        "zdroj": {
+          "nazev": "UNITED24 Media — New Dutch Government Sets 3.5% GDP Defense Spending Target",
+          "url": "https://united24media.com/latest-news/new-dutch-government-sets-35-gdp-defense-spending-target-reinforces-full-support-for-ukraine-15512",
+          "typ": "media"
+        }
+      },
+      {
+        "klic": "ottawa",
+        "stav": null,
+        "popis": null,
+        "datum": null,
+        "zdroj": null
+      },
+      {
+        "klic": "hranice",
+        "stav": null,
+        "popis": "Země nesousedí s Ruskem ani Běloruskem.",
+        "datum": null,
+        "zdroj": null,
+        "nerelevantni": true
+      },
+      {
+        "klic": "prirucka",
+        "stav": null,
+        "popis": null,
+        "datum": null,
+        "zdroj": null
+      },
+      {
+        "klic": "kryty",
+        "stav": null,
+        "popis": null,
+        "datum": null,
+        "zdroj": null
+      },
+      {
+        "klic": "drony",
+        "stav": null,
+        "popis": null,
+        "datum": null,
+        "zdroj": null
+      },
+      {
+        "klic": "infrastruktura",
+        "stav": null,
+        "popis": null,
+        "datum": null,
+        "zdroj": null
+      },
+      {
+        "klic": "diplomate",
+        "stav": null,
+        "popis": null,
+        "datum": null,
+        "zdroj": null
+      },
+      {
+        "klic": "jaderne",
+        "stav": "ano",
+        "popis": "Nizozemsko patří k zemím, které přistoupily na dialog o francouzském „předsunutém odstrašení“ (projev Macrona 2. 3. 2026).",
+        "datum": "2026-07",
+        "zdroj": {
+          "nazev": "CSS ETH Zürich — Europe’s Changing Nuclear Landscape: French Forward Deterrence",
+          "url": "https://css.ethz.ch/en/center/CSS-news/2026/07/europes-changing-nuclear-landscape-french-forward-deterrence.html",
+          "typ": "media"
+        }
+      }
+    ],
+    "BE": [
+      {
+        "klic": "branna",
+        "stav": null,
+        "popis": null,
+        "datum": null,
+        "zdroj": null
+      },
+      {
+        "klic": "zalohy",
+        "stav": null,
+        "popis": null,
+        "datum": null,
+        "zdroj": null
+      },
+      {
+        "klic": "vydaje",
+        "stav": "castecne",
+        "popis": "Belgie v roce 2025 dosáhla 2 % HDP a chce je držet do roku 2029, s dlouhodobým plánem k cíli 3,5 %.",
+        "datum": "2026-07-08",
+        "zdroj": {
+          "nazev": "VRT NWS — Belgium to keep defence spending at 2% of GDP till 2029, commitment to roadmap to 3.5%",
+          "url": "https://www.vrt.be/vrtnws/en/2026/07/08/belgium-to-keep-defence-spending-at-2-of-gdp-till-2029-commitm/",
+          "typ": "media"
+        }
+      },
+      {
+        "klic": "ottawa",
+        "stav": null,
+        "popis": null,
+        "datum": null,
+        "zdroj": null
+      },
+      {
+        "klic": "hranice",
+        "stav": null,
+        "popis": "Země nesousedí s Ruskem ani Běloruskem.",
+        "datum": null,
+        "zdroj": null,
+        "nerelevantni": true
+      },
+      {
+        "klic": "prirucka",
+        "stav": null,
+        "popis": null,
+        "datum": null,
+        "zdroj": null
+      },
+      {
+        "klic": "kryty",
+        "stav": null,
+        "popis": null,
+        "datum": null,
+        "zdroj": null
+      },
+      {
+        "klic": "drony",
+        "stav": null,
+        "popis": null,
+        "datum": null,
+        "zdroj": null
+      },
+      {
+        "klic": "infrastruktura",
+        "stav": null,
+        "popis": null,
+        "datum": null,
+        "zdroj": null
+      },
+      {
+        "klic": "diplomate",
+        "stav": null,
+        "popis": null,
+        "datum": null,
+        "zdroj": null
+      },
+      {
+        "klic": "jaderne",
+        "stav": "ano",
+        "popis": "Belgie patří k zemím, které přistoupily na dialog o francouzském „předsunutém odstrašení“ (projev Macrona 2. 3. 2026).",
+        "datum": "2026-07",
+        "zdroj": {
+          "nazev": "CSS ETH Zürich — Europe’s Changing Nuclear Landscape: French Forward Deterrence",
+          "url": "https://css.ethz.ch/en/center/CSS-news/2026/07/europes-changing-nuclear-landscape-french-forward-deterrence.html",
+          "typ": "media"
+        }
+      }
+    ],
+    "FR": [
+      {
+        "klic": "branna",
+        "stav": null,
+        "popis": null,
+        "datum": null,
+        "zdroj": null
+      },
+      {
+        "klic": "zalohy",
+        "stav": null,
+        "popis": null,
+        "datum": null,
+        "zdroj": null
+      },
+      {
+        "klic": "vydaje",
+        "stav": "castecne",
+        "popis": "Macron oznámil zvýšení rozpočtu obrany na 64 mld. EUR v roce 2027 (asi 2,6 % HDP); aktualizovaný zákon z dubna 2026 počítá s 76,3 mld. EUR do konce dekády; Francie podepsala haagský závazek 3,5 % do 2035.",
+        "datum": "2025-07",
+        "zdroj": {
+          "nazev": "Breaking Defense — France to raise military spending to $75B in 2027, three years earlier than planned",
+          "url": "https://breakingdefense.com/2025/07/france-to-raise-military-spending-to-75b-in-2027-three-years-earlier-than-planned/",
+          "typ": "media"
+        }
+      },
+      {
+        "klic": "ottawa",
+        "stav": null,
+        "popis": null,
+        "datum": null,
+        "zdroj": null
+      },
+      {
+        "klic": "hranice",
+        "stav": null,
+        "popis": "Země nesousedí s Ruskem ani Běloruskem.",
+        "datum": null,
+        "zdroj": null,
+        "nerelevantni": true
+      },
+      {
+        "klic": "prirucka",
+        "stav": null,
+        "popis": null,
+        "datum": null,
+        "zdroj": null
+      },
+      {
+        "klic": "kryty",
+        "stav": null,
+        "popis": null,
+        "datum": null,
+        "zdroj": null
+      },
+      {
+        "klic": "drony",
+        "stav": null,
+        "popis": null,
+        "datum": null,
+        "zdroj": null
+      },
+      {
+        "klic": "infrastruktura",
+        "stav": null,
+        "popis": null,
+        "datum": null,
+        "zdroj": null
+      },
+      {
+        "klic": "diplomate",
+        "stav": null,
+        "popis": null,
+        "datum": null,
+        "zdroj": null
+      },
+      {
+        "klic": "jaderne",
+        "stav": "ano",
+        "popis": "Prezident Macron 2. 3. 2026 na základně Île-Longue vyhlásil „předsunuté odstrašení“ s dialogem s evropskými partnery a možným dočasným rozmístěním jaderně schopných letounů u spojenců.",
+        "datum": "2026-03-02",
+        "zdroj": {
+          "nazev": "Ambassade de France aux États-Unis — Speech by the President of the Republic on France’s nuclear deterrence",
+          "url": "https://us.diplomatie.gouv.fr/en/speech-president-republic-frances-nuclear-deterrence",
+          "typ": "primary"
+        }
+      }
+    ],
+    "GB": [
+      {
+        "klic": "branna",
+        "stav": null,
+        "popis": null,
+        "datum": null,
+        "zdroj": null
+      },
+      {
+        "klic": "zalohy",
+        "stav": null,
+        "popis": null,
+        "datum": null,
+        "zdroj": null
+      },
+      {
+        "klic": "vydaje",
+        "stav": "ano",
+        "popis": "Vláda slíbila 2,5 % HDP do 2027 (2,6 % včetně zpravodajských služeb) a na summitu NATO 2025 se zavázala k 3,5 % HDP do roku 2035.",
+        "datum": "2025-06",
+        "zdroj": {
+          "nazev": "House of Commons Library — UK to spend 2.5% of gross domestic product on defence by 2027",
+          "url": "https://commonslibrary.parliament.uk/uk-to-spend-2-5-of-gross-domestic-product-on-defence-by-2027/",
+          "typ": "primary"
+        }
+      },
+      {
+        "klic": "ottawa",
+        "stav": null,
+        "popis": null,
+        "datum": null,
+        "zdroj": null
+      },
+      {
+        "klic": "hranice",
+        "stav": null,
+        "popis": "Země nesousedí s Ruskem ani Běloruskem.",
+        "datum": null,
+        "zdroj": null,
+        "nerelevantni": true
+      },
+      {
+        "klic": "prirucka",
+        "stav": null,
+        "popis": null,
+        "datum": null,
+        "zdroj": null
+      },
+      {
+        "klic": "kryty",
+        "stav": null,
+        "popis": null,
+        "datum": null,
+        "zdroj": null
+      },
+      {
+        "klic": "drony",
+        "stav": null,
+        "popis": null,
+        "datum": null,
+        "zdroj": null
+      },
+      {
+        "klic": "infrastruktura",
+        "stav": null,
+        "popis": null,
+        "datum": null,
+        "zdroj": null
+      },
+      {
+        "klic": "diplomate",
+        "stav": null,
+        "popis": null,
+        "datum": null,
+        "zdroj": null
+      },
+      {
+        "klic": "jaderne",
+        "stav": null,
+        "popis": null,
+        "datum": null,
+        "zdroj": null
+      },
+      {
+        "klic": "war_book",
+        "stav": null,
+        "popis": null,
+        "datum": null,
+        "zdroj": null
+      }
+    ],
+    "BG": [
+      {
+        "klic": "branna",
+        "stav": null,
+        "popis": null,
+        "datum": null,
+        "zdroj": null
+      },
+      {
+        "klic": "zalohy",
+        "stav": null,
+        "popis": null,
+        "datum": null,
+        "zdroj": null
+      },
+      {
+        "klic": "vydaje",
+        "stav": "ano",
+        "popis": "Vláda 10. 6. 2026 schválila národní plán zvýšení výdajů na obranu na 5 % HDP do 2035 (z toho min. 3,5 % na jádrovou obranu); v letech 2026–2028 se čeká 2,15–2,65 % HDP.",
+        "datum": "2026-06-10",
+        "zdroj": {
+          "nazev": "BTA — Government Approves Plan to Raise Defence Spending to 5% of GDP by 2035",
+          "url": "https://www.bta.bg/en/news/bulgaria/1144591-government-approves-plan-to-raise-defence-spending-to-5-of-gdp-by-2035",
+          "typ": "wire"
+        }
+      },
+      {
+        "klic": "ottawa",
+        "stav": null,
+        "popis": null,
+        "datum": null,
+        "zdroj": null
+      },
+      {
+        "klic": "hranice",
+        "stav": null,
+        "popis": "Země nesousedí s Ruskem ani Běloruskem.",
+        "datum": null,
+        "zdroj": null,
+        "nerelevantni": true
+      },
+      {
+        "klic": "prirucka",
+        "stav": null,
+        "popis": null,
+        "datum": null,
+        "zdroj": null
+      },
+      {
+        "klic": "kryty",
+        "stav": null,
+        "popis": null,
+        "datum": null,
+        "zdroj": null
+      },
+      {
+        "klic": "drony",
+        "stav": null,
+        "popis": null,
+        "datum": null,
+        "zdroj": null
+      },
+      {
+        "klic": "infrastruktura",
+        "stav": null,
+        "popis": null,
+        "datum": null,
+        "zdroj": null
+      },
+      {
+        "klic": "diplomate",
+        "stav": null,
+        "popis": null,
+        "datum": null,
+        "zdroj": null
+      },
+      {
+        "klic": "jaderne",
+        "stav": null,
+        "popis": null,
+        "datum": null,
+        "zdroj": null
+      }
+    ],
+    "EU": [
+      {
+        "klic": "zasoby_72h",
+        "stav": "ano",
+        "popis": "Strategie Unie připravenosti (26. 3. 2025) doporučuje obyvatelům mít zásoby na nejméně 72 hodin soběstačnosti.",
+        "datum": "2025-03-26",
+        "zdroj": {
+          "nazev": "Euronews — Brussels ask EU citizens to put together a 72-hour emergency kit to face crises",
+          "url": "https://www.euronews.com/my-europe/2025/03/26/brussels-ask-eu-citizens-to-put-together-a-72-hour-emergency-kit-to-face-crises",
+          "typ": "media"
+        }
+      }
+    ]
+  }
+}

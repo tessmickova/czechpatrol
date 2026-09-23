@@ -71,7 +71,7 @@ const TEMATA: { href: string; stitek: string; nadpis: string; popis: string; akc
     stitek: "Dotazník",
     nadpis: "Jak dobře jste připraveni?",
     popis: EMAIL_ODBER_BEZI
-      ? "Pětiminutový rychlodotazník odolnosti vaší domácnosti v krizi. Porovnejte se s ostatními v žebříčku."
+      ? "Pětiminutový rychlodotazník odolnosti vaší domácnosti v krizi. Souhrn a bezpečnostní nálezy hned, bez účtu."
       : "Pětiminutový rychlodotazník odolnosti vaší domácnosti v krizi. Souhrn a bezpečnostní nálezy hned, bez účtu.",
     akce: "Vyplnit za 5 minut",
     ikona: "stit",

@@ -2,7 +2,7 @@
 
 import { Odkaz } from "./odkaz";
 import { PrepinacMotivu, PrepinacPohybu } from "./pohyb";
-import { KOMUNITA, METODIKA_REVIDOVANA, WEB } from "@/config/web";
+import { KOMUNITA, METODIKA_REVIDOVANA, WEB, SPUSTENO } from "@/config/web";
 import { datum } from "@/lib/format";
 import { Logo } from "./znacka";
 import { JAZYKY } from "@/lib/jazyky";
@@ -19,7 +19,7 @@ const SLOUPCE: { nadpis: string; odkazy: [string, string][] }[] = [
   },
   {
     nadpis: "Projekt",
-    odkazy: [["/podporit/", "Podpořit"], ["/ucet/", "Účet"], ["/izs/", "Pro záchranné složky"], ["/soukromi/", "Soukromí"], ["/podminky/", "Podmínky"]],
+    odkazy: [["/podporit/", "Podpořit"], ["/ucet/", "Účet"], ...(SPUSTENO.izs ? [["/izs/", "Pro záchranné složky"] as [string, string]] : []), ["/soukromi/", "Soukromí"], ["/podminky/", "Podmínky"]],
   },
 ];
 

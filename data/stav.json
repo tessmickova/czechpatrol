@@ -1,13 +1,13 @@
 {
-  "aktualizovano": "2026-09-05T00:00:00Z",
+  "aktualizovano": "2026-09-23T16:30:56.886Z",
   "uroven": "YO",
-  "trend": "nahoru",
-  "trendPopis": "",
-  "shrnuti": "Hodnocení je zvýšené kvůli kumulaci hybridních, sabotážních a atribučních signálů v Evropě — především oficiální německé atribuci útoku na Leipzig/Halle Rusku, kterou podpořily i české služby. Nejde o důkaz bezprostředního vojenského útoku na NATO.",
+  "trend": "dolu",
+  "trendPopis": "Posledních 7 dní: 3 případy (součet závažnosti 11.5). Týden předtím: 10 případů (59.2).",
+  "shrnuti": "Spočteno z ověřených případů za posledních 14 dní (13 případů) v 11 zemích. Úroveň je jejich střední závažnost z pohledu Česka, jediná událost ji nezvedne. Je to měření, ne předpověď.",
   "noveSignaly": {
-    "celkem": 5,
-    "vysoke": 4,
-    "stredni": 1,
-    "kriticke": 0
+    "celkem": 3,
+    "kriticke": 0,
+    "vysoke": 0,
+    "stredni": 3
   }
 }

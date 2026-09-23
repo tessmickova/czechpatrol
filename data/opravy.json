@@ -102,5 +102,45 @@
     "druh": "doplneni-zdroju",
     "co": "Za rok 2026 web evidoval jen ruské a neznámé původce a chyběly incidenty s ukrajinským původcem i několik ruských: zbloudilé ukrajinské drony v Litvě, Finsku, Lotyšsku (Rēzekne, pád vlády) a Bulharsku, útoky na ropovod Družba a na tankery stínové flotily ve Středomoří, spor o Družbu 2026, obžaloba za Nord Stream, ruská střela v Polsku 30. 7. 2026 a dva sestřely dronů nad Lotyšskem.",
     "proc": "Původce se určuje stejně pro všechny strany podle zjištění dotčeného státu, ne podle toho, kdo je v konfliktu na které straně. Doplněno 12 záznamů se zdroji; kde stát původ neuvedl, je původce neznámý, kde ho jen odhaduje podle typu dronu, je atribuce nepotvrzená."
+  },
+  {
+    "id": "o-2026-09-23-svalbard-nato-zabranilo-naciku",
+    "datum": "2026-09-23",
+    "tykaSe": "svalbard-nato-zabranilo-naciku-prerezani-kabelu-2026",
+    "druh": "oprava-dat",
+    "co": "Titulek uvádí zdroj tvrzení; jistota vysoká → střední; doplněno, že 10. 9. je datum zprávy, ne události.",
+    "proc": "Původní titulek: „Arktida: britské, norské a americké síly zastavily ruské ponorky, které u Špicberk nacvičovaly přerušení podmořských kabelů“ podával tvrzení anonymních zdrojů jako fakt. Nalezeno auditem 23. 9. 2026."
+  },
+  {
+    "id": "o-2026-09-23-moldavsko-dron-uzavrel-vzdusny",
+    "datum": "2026-09-23",
+    "tykaSe": "moldavsko-dron-uzavrel-vzdusny-prostor-2026",
+    "druh": "oprava-dat",
+    "co": "Titulek už netvrdí „ruský dron“; uvádí, co zjistila policie (odpovídá typu Geran).",
+    "proc": "Původní titulek: „Moldavsko uzavřelo vzdušný prostor kvůli ruskému dronu; zdrželo to i letadlo s ukrajinským prezidentem“. Policie původ neuvedla. Nalezeno auditem 23. 9. 2026."
+  },
+  {
+    "id": "o-2026-09-23-us-590b687216",
+    "datum": "2026-09-23",
+    "tykaSe": "us-590b687216",
+    "druh": "oprava-dat",
+    "co": "Opravena země (USA místo „Rusko“), závažnost O3 → Y3, jistota potvrzeno → vysoká; titulek říká, že jde o tvrzení obžaloby.",
+    "proc": "Původní titulek: „USA: obvinila pět osob z ruské sabotážní a atentátnické sítě“. Obžaloba není rozsudek a O3 („hranice přímého střetu“) neodpovídalo obvinění v USA. Nalezeno auditem 23. 9. 2026."
+  },
+  {
+    "id": "o-2026-09-23-znovu-ro-8097dca796",
+    "datum": "2026-09-23",
+    "tykaSe": "ro-8097dca796",
+    "druh": "oprava-dat",
+    "co": "Záznam se 20. 9. 2026 znovu zveřejnil poté, co byl doložen skutečným úředním zdrojem (originál tiskové zprávy na mapn.ro). Zápis o stažení z téhož dne tím přestal platit.",
+    "proc": "Oprava z 20. 9. tvrdila, že se záznam do počtů nezapočítává; po doložení se znovu započítává. Nesoulad našel audit 23. 9. 2026."
+  },
+  {
+    "id": "o-2026-09-23-znovu-us-590b687216",
+    "datum": "2026-09-23",
+    "tykaSe": "us-590b687216",
+    "druh": "oprava-dat",
+    "co": "Záznam se 20. 9. 2026 znovu zveřejnil poté, co byl doložen skutečným úředním zdrojem (tisková zpráva ministerstva spravedlnosti USA na justice.gov). Zápis o stažení z téhož dne tím přestal platit.",
+    "proc": "Oprava z 20. 9. tvrdila, že se záznam do počtů nezapočítává; po doložení se znovu započítává. Nesoulad našel audit 23. 9. 2026."
   }
 ]

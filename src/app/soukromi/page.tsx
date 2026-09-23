@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { HlavickaStranky, Obsah } from "@/components/hlavicka";
 import { Karta } from "@/components/zaklad";
-import { PROVOZOVATEL, WEB } from "@/config/web";
+import { KONTAKTY_PRIJIMAME, PROVOZOVATEL, WEB } from "@/config/web";
 
 export const metadata: Metadata = {
   title: "Soukromí",
@@ -39,6 +39,17 @@ export default function SoukromiStranka() {
         doplnek={<span className="stitek !text-noc-tlum">Platí od {REVIZE}</span>}
       />
       <Obsah>
+        {/*
+          Dokud chybí provozovatel, server kontakty a platby odmítá
+          (api/src/osobni-udaje.ts). Stránka to musí říct nahoře, jinak
+          by popisovala zpracování, které neprobíhá.
+        */}
+        {!KONTAKTY_PRIJIMAME && (
+          <Karta odstin="pisek" className="mb-4 p-5">
+            <div className="stitek mb-2">Teď</div>
+            <p className="text-zaklad leading-relaxed text-tlum">Dokud tu není uvedený provozovatel, <b>nepřijímáme e-maily, jména, telefony ani platby</b> — server je odmítne. Premium a žebříček nejsou spuštěné. Hlášení chybějící události přijímáme anonymně: uložíme jen text a odkaz; proti spamu počítáme pokusy podle soleného otisku IP, ne podle adresy samotné.</p>
+          </Karta>
+        )}
         <div className="grid gap-4 md:grid-cols-3">
           <Karta odstin="zelena" className="p-5">
             <div className="stitek mb-2">Čtení webu</div>
@@ -46,7 +57,7 @@ export default function SoukromiStranka() {
           </Karta>
           <Karta odstin="modra" className="p-5">
             <div className="stitek mb-2 !text-akcent">Účet</div>
-            <p className="text-zaklad leading-relaxed text-tlum">Náhodný identifikátor, veřejná část passkey, vaše nastavení. Bez jména, e-mailu a telefonu.</p>
+            <p className="text-zaklad leading-relaxed text-tlum">Náhodný identifikátor, veřejná část passkey, vaše nastavení. Jméno ani telefon po vás nechceme; e-mail jen tehdy, když ho k účtu sami přidáte.</p>
           </Karta>
           <Karta odstin="pisek" className="p-5">
             <div className="stitek mb-2">Kanály</div>
@@ -126,7 +137,7 @@ export default function SoukromiStranka() {
           </Oddil>
 
           <Oddil cislo="09" nadpis="Vaše práva">
-            <p>Máte právo na přístup, opravu, výmaz, omezení, přenositelnost a námitku. Většinu vyřídíte sami v účtu. Účet smažete jedním tlačítkem, hned a bez zálohy.</p>
+            <p>Máte právo na přístup, opravu, výmaz, omezení, přenositelnost a námitku. Většinu vyřídíte sami v účtu. Účet smažete jedním tlačítkem, hned. Ze záloh databáze u Cloudflare zmizí nejpozději do 30 dnů.</p>
             <p>Účet o vás nic neví. Žádosti proto vyřizujeme jen z přihlášeného účtu — jinak nepoznáme, že jste to vy.</p>
             <p>Stížnost můžete podat u Úřadu pro ochranu osobních údajů (uoou.gov.cz).</p>
           </Oddil>
@@ -136,7 +147,7 @@ export default function SoukromiStranka() {
           </Oddil>
 
           <Oddil cislo="11" nadpis="Automatizace a AI">
-            <p>Sběr dat běží automaticky a část textů vzniká s pomocí AI. Hodnocení dělá člověk. O vás nic automaticky nerozhodujeme a neprofilujeme vás. Upozornění jen filtrují zprávy podle vašeho výběru.</p>
+            <p>Sběr dat běží automaticky, část textů vzniká s pomocí AI a celkové hodnocení se počítá automaticky podle zveřejněné Metodiky. O vás nic automaticky nerozhodujeme a neprofilujeme vás. Upozornění jen filtrují zprávy podle vašeho výběru.</p>
           </Oddil>
 
           <Oddil cislo="12" nadpis="Děti">

@@ -196,6 +196,24 @@ export const UCTY_ZAPNUTE = API_URL !== "";
  * Pozn.: web je statický, takže omezení platí v prohlížeči. Kdo by chtěl
  * data doopravdy schovat, musel by je přesunout do API.
  */
+/*
+  Co je spuštěné pro veřejnost (audit 23. 9. 2026, „launch web není roadmapa").
+
+  Funkce, které nejsou hotové nebo nemají právní základ, se na webu
+  nenabízejí. Kód zůstává, zapne se tady, až bude hotové:
+  - premium:  platby a Premium — až budou obchodní podmínky, poučení
+              o odstoupení a uvedený provozovatel (LEGAL REVIEW),
+  - komunita: WhatsApp skupina, slevy, VIP — nic z toho zatím neexistuje,
+  - izs:      zprávy partnerů IZS — žádný partner zatím není,
+  - zebricek: srovnání s ostatními — připravenost není soutěž.
+*/
+export const SPUSTENO = {
+  premium: false,
+  komunita: false,
+  izs: false,
+  zebricek: false,
+} as const;
+
 export const PLACENE = {
   hraniceADoprava: false,
 } as const;
@@ -254,6 +272,13 @@ export const PROVOZOVATEL = {
  * člověk věděl, komu adresu dává. Dokud je PROVOZOVATEL prázdný, web
  * formulář neukáže a řekne, že odběr připravuje.
  */
+/**
+ * Smí web přijímat e-maily, jména a telefony? Jen s uvedeným provozovatelem
+ * (správce údajů podle GDPR). Server má vlastní pojistku OSOBNI_UDAJE,
+ * tohle jen skryje pole, která by stejně skončila odmítnutím.
+ */
+export const KONTAKTY_PRIJIMAME = PROVOZOVATEL.nazev !== "";
+
 export const EMAIL_ODBER_BEZI = UCTY_ZAPNUTE && PROVOZOVATEL.nazev !== "";
 
 /**

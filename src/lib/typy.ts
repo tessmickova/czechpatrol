@@ -157,11 +157,18 @@ export interface Incident {
    * `automaticke` — zveřejnilo se samo, protože stojí na dvou nezávislých
    *   zdrojích a aspoň jeden z nich je úřední. Nikdo to nečetl.
    *
+   * `neovereno` — válečně relevantní událost (narušení pravidel protivníkem,
+   *   sabotáž, dron, ozbrojený incident) doložená aspoň dvěma nezávislými
+   *   redakcemi, ale bez úředního zdroje. Zveřejňuje se s jistotou nejvýš
+   *   střední a bez hodnocení projektu. Rozhodla o tom provozovatelka
+   *   23. 9. 2026: mlčet o sestřeleném dronu jen proto, že litevské
+   *   ministerstvo nemá čitelný web, je horší než ho ukázat jako neověřený.
+   *
    * Musí to být u záznamu VIDĚT. Web dlouho sliboval, že všechno na něm
    * prošlo člověkem; jakmile to přestane platit, je jediná poctivá cesta
    * napsat u každého záznamu, jak to u něj je.
    */
-  overeni?: "lidske" | "automaticke";
+  overeni?: "lidske" | "automaticke" | "neovereno";
   /**
    * Záznam přenesený z dřívějšího monitoringu. Odkaz na primární zdroj u něj
    * zatím není doplněný — web to musí přiznat, ne to zamlčet.
@@ -825,4 +832,30 @@ export interface Tip {
   zdroje: Zdroj[];
   /** Kdy tip zmizí z přehledu. null = platí, dokud ho někdo nesundá. */
   platiDo: string | null;
+}
+
+/* ---------------- opatření zemí ---------------- */
+
+/**
+ * Jedno opatření z pevného výčtu u jedné země.
+ *
+ * `stav` null = nedohledáno. Neznamená „nemá": jen že jsme to k datu
+ * nedoložili. „ne" smí stát jen tam, kde zdroj výslovně říká, že země
+ * opatření nemá.
+ */
+export interface OpatreniZeme {
+  klic: string;
+  stav: "ano" | "castecne" | "ne" | null;
+  popis: string | null;
+  datum: string | null;
+  zdroj: { nazev: string; url: string; typ: string } | null;
+  /** Opatření se na zemi nevztahuje (např. opevnění hranice u země bez hranice s Ruskem). */
+  nerelevantni?: boolean;
+}
+
+export interface OpatreniZemi {
+  aktualizovano: string;
+  poznamka: string;
+  opatreni: { klic: string; nazev: string }[];
+  zeme: Record<string, OpatreniZeme[]>;
 }

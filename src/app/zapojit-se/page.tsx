@@ -6,7 +6,7 @@ import { Nahlaseni } from "@/components/nahlaseni";
 import { Tlacitko } from "@/components/ui";
 import { ZajemFormular } from "@/components/zapojit-klient";
 import { ZnackaKanalu } from "@/components/znacky";
-import { DORUCOVANI, EMAIL_ODBER_BEZI, KANALY, UCTY_ZAPNUTE } from "@/config/web";
+import { DORUCOVANI, EMAIL_ODBER_BEZI, KANALY, KONTAKTY_PRIJIMAME, SPUSTENO, UCTY_ZAPNUTE } from "@/config/web";
 
 export const metadata: Metadata = {
   title: "Zapojit se",
@@ -43,7 +43,7 @@ export default function ZapojitSe() {
         ikona="zvonek"
         stitek="Zapojit se"
         nadpis="Dozvědět se dřív. A pomoct, aby to fungovalo i pro ostatní."
-        popis="Čtyři možnosti, každá stojí sama. Většině lidí stačí první. Nic z toho není povinné a všechno jde kdykoli zrušit."
+        popis="Každá možnost stojí sama. Většině lidí stačí první. Nic z toho není povinné a všechno jde kdykoli zrušit."
       />
       <Obsah>
         <div className="max-w-[900px]">
@@ -61,20 +61,26 @@ export default function ZapojitSe() {
             <p className="mt-3 text-male text-tlum">Kanál je jen pro čtení. Nevidíme, kdo ho odebírá, a nic po vás nechce.</p>
           </Krok>
 
+          {/*
+            E-mail a pozvánka do komunity jen s uvedeným provozovatelem —
+            bez něj nemáme komu svěřit adresy (server je stejně odmítne).
+          */}
+          {KONTAKTY_PRIJIMAME && (
           <Krok
             cislo="02"
             ikona="komunikace"
-            nadpis="Souhrn e-mailem a pozvánka do komunity"
-            popis="Občas napíšeme, co se změnilo a co chystáme. Až otevřeme chat a skupinu na WhatsAppu, pošleme pozvánku první těm, kdo o ni stojí. Jediné, co uložíme, je vaše adresa."
+            nadpis={SPUSTENO.komunita ? "Souhrn e-mailem a pozvánka do komunity" : "Souhrn e-mailem"}
+            popis="Občas napíšeme, co se změnilo. Jediné, co uložíme, je vaše adresa."
           >
             <ZajemFormular zdroj="zapojit-se" />
             {!EMAIL_ODBER_BEZI && (
               <p className="mt-3 text-male text-tlum">Souhrn zatím nevychází. Až bude, napíšeme to sem první.</p>
             )}
           </Krok>
+          )}
 
           <Krok
-            cislo="03"
+            cislo={KONTAKTY_PRIJIMAME ? "03" : "02"}
             ikona="uzivatel"
             nadpis="Účet pro víc"
             popis="Účet je bez jména, e-mailu i telefonu — klíč v telefonu nebo počítači. Otevře Můj přehled (jen země a témata, která sledujete), upozornění na míru a Odolnost domácnosti: co u vás vypadne s čím, které zálohy selžou naráz a jak dlouho vydrží zásoby."
@@ -90,7 +96,7 @@ export default function ZapojitSe() {
           </Krok>
 
           <Krok
-            cislo="04"
+            cislo={KONTAKTY_PRIJIMAME ? "04" : "03"}
             ikona="lupa"
             nadpis="Pomoct s tím, co víte"
             popis="Nejcennější jsou zprávy z regionu a odkazy na úřední zdroje: policie, obec, hasiči, provozovatel. Bez zdroje nic nezveřejníme, ale dohledáme ho. Kontakt je dobrovolný."
@@ -98,8 +104,14 @@ export default function ZapojitSe() {
             <Nahlaseni />
           </Krok>
 
+          {/*
+            Sliby o adresách a plány komunity jen tehdy, když platí:
+            bez provozovatele adresy nebereme, komunita zatím neběží.
+          */}
+          {(KONTAKTY_PRIJIMAME || SPUSTENO.komunita) && (
           <section className="border-t border-linka py-8">
             <div className="grid gap-6 md:grid-cols-2">
+              {KONTAKTY_PRIJIMAME && (
               <div>
                 <div className="stitek mb-2">Co slibujeme</div>
                 <ul className="space-y-2 text-zaklad text-tlum">
@@ -109,6 +121,8 @@ export default function ZapojitSe() {
                   <li className="flex gap-2"><Ikona nazev="fajfka" velikost={14} tah={2.2} trida="mt-1 shrink-0 text-klid-text" /> Každá zpráva má zdroj, na který se dá kliknout.</li>
                 </ul>
               </div>
+              )}
+              {SPUSTENO.komunita && (
               <div>
                 <div className="stitek mb-2">Co chystáme</div>
                 <ul className="space-y-2 text-zaklad text-tlum">
@@ -118,8 +132,10 @@ export default function ZapojitSe() {
                 </ul>
                 <p className="mt-3 text-male text-tlum">Nic z toho ještě neběží. Kdo si nechá poslat pozvánku, dozví se to první.</p>
               </div>
+              )}
             </div>
           </section>
+          )}
         </div>
       </Obsah>
     </>

@@ -134,7 +134,7 @@ interface Neoverene {
   zeme: string | null;
   kdy: string;
   bezData: boolean;
-  slovo: "nepotvrzeno" | "zachyceno";
+  slovo: "nepotvrzeno" | "zachyceno" | "neověřeno";
   titulek: string;
   kam: string;
   ven: boolean;
@@ -155,9 +155,15 @@ export function Aktuality({
   overenych?: number;
   neoverenych?: number;
 }) {
-  const posledni = [...zaznamy]
-    .sort((a, b) => kdyZjisteno(b).localeCompare(kdyZjisteno(a)))
-    .slice(0, overenych);
+  /*
+    Horní seznam jen ověřené (23. 9. 2026). Záznamy zveřejněné jako
+    „neověřeno úředně“ patří pod předěl k ostatnímu neověřenému —
+    nad ním by se četly jako věc, za kterou si projekt stojí.
+  */
+  const jeNeovereny = (z: Zaznam) => z.overeni === "neovereno";
+  const overeneVse = [...zaznamy]
+    .filter((z) => !jeNeovereny(z))
+    .sort((a, b) => kdyZjisteno(b).localeCompare(kdyZjisteno(a)));
 
   /*
     Nepotvrzené a zachycené dohromady, nejnovější první.
@@ -168,6 +174,19 @@ export function Aktuality({
     to bylo o krok dál: zpracované, ale nepotvrzené.
   */
   const neoverene: Neoverene[] = [
+    ...zaznamy.filter(jeNeovereny).map((z): Neoverene => ({
+      klic: `u-${z.slug}`,
+      kodZeme: z.kodZeme,
+      zeme: z.kodZeme === "CZ" ? "Česko" : z.zeme,
+      kdy: kdyZjisteno(z),
+      bezData: false,
+      slovo: "neověřeno",
+      titulek: bezZeme(z.kratkyTitulek || z.titulek, z.zeme, z.kodZeme),
+      kam: `/incident/${z.slug}/`,
+      ven: false,
+      tecka: `border ${PASMA[UROVNE[z.zavaznost].pasmo].pruh.replace("bg-", "border-")}`,
+      nahled: { ...nahledZaznamu(z), poznamka: "Zveřejněno jako neověřené úředně: jen z médií. Do počtů ani hodnocení nevstupuje." },
+    })),
     ...nepotvrzene.map((z): Neoverene => ({
       klic: `n-${z.id}`,
       kodZeme: z.kodZeme,
@@ -201,6 +220,12 @@ export function Aktuality({
   ]
     .sort((a, b) => b.kdy.localeCompare(a.kdy))
     .slice(0, neoverenych);
+
+  /*
+    Když nic neověřeného není, předěl ani věta „nic nečeká“ se neukazují
+    a místo po nich zaplní další ověřené záznamy (rozhodnutí 23. 9. 2026).
+  */
+  const posledni = overeneVse.slice(0, neoverene.length ? overenych : overenych + neoverenych);
 
   const { nahled, kde, ukaz, skryj, pohyb } = useNahled();
 
@@ -265,6 +290,8 @@ export function Aktuality({
         })}
       </ul>
 
+      {neoverene.length > 0 && (
+      <>
       {/*
         Předěl: černá plocha, bílý nadpis, červená ikona. Bez pruhu u kraje —
         vypadal jako výstraha, a tohle výstraha není.
@@ -283,7 +310,6 @@ export function Aktuality({
           <Otaznik label="Co znamená neověřeno" popis={<span className="block">Zpracované, ale nepotvrzené záznamy a zprávy zachycené sběrem. Do počtů ani do hodnocení nevstupují.</span>} />
         </div>
       </div>
-      {neoverene.length > 0 ? (
         <ul className="divide-y divide-linka2">
           {neoverene.map((r) => {
             const trida = "flex items-start gap-2.5 px-4 py-2 hover:bg-plocha2";
@@ -328,14 +354,7 @@ export function Aktuality({
             );
           })}
         </ul>
-      ) : (
-        /*
-          Prázdný stav se píše, ne skrývá. Zmizelý blok vypadá jako chyba
-          rozvržení; věta říká, že je to dobrá zpráva.
-        */
-        <p className="px-4 py-3 text-male leading-snug text-tlum2">
-          Právě nic nečeká na ověření. Všechno zachycené je posouzené.
-        </p>
+      </>
       )}
       </div>
 

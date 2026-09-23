@@ -1,5 +1,5 @@
 {
-  "aktualizovano": "2026-09-23T00:02:30.619Z",
+  "aktualizovano": "2026-09-23T18:02:45.666Z",
   "stavy": [
     {
       "klic": "cloudflare",
@@ -7,23 +7,28 @@
       "popis": "Minor Service Outage",
       "incidenty": [
         {
-          "nazev": "Cloudflare One Clients are incorrectly challenged on some sites",
-          "odkaz": "https://www.cloudflarestatus.com/incidents/tl0vrgjy99r0",
-          "aktualizovano": "2026-09-22T19:23:17.373Z"
+          "nazev": "Elevated Errors with any / all in http_response_cache_settings",
+          "odkaz": "https://www.cloudflarestatus.com/incidents/f8wg5htd3zz4",
+          "aktualizovano": "2026-09-23T15:55:51.000Z"
         },
         {
-          "nazev": "Incorrect geo location for some Cloudflare WARP users",
-          "odkaz": "https://www.cloudflarestatus.com/incidents/9g65dxfbcjln",
-          "aktualizovano": "2026-09-01T08:29:56.953Z"
+          "nazev": "Intermittent authentication errors for API and R2",
+          "odkaz": "https://www.cloudflarestatus.com/incidents/jg6ys8sbd6ny",
+          "aktualizovano": "2026-09-23T09:08:53.000Z"
+        },
+        {
+          "nazev": "Cloudflare One Clients are incorrectly challenged on some sites",
+          "odkaz": "https://www.cloudflarestatus.com/incidents/tl0vrgjy99r0",
+          "aktualizovano": "2026-09-23T11:02:41.000Z"
         }
       ],
       "postizene": [
         "Cloudflare Sites and Services",
         "Africa",
         "Arica, Chile - (ARI)",
-        "Baghdad, Iraq - (BGW)"
+        "Algiers, Algeria - (ALG)"
       ],
-      "zkontrolovano": "2026-09-23T00:02:30.619Z",
+      "zkontrolovano": "2026-09-23T18:02:45.666Z",
       "chyba": null
     },
     {
@@ -33,11 +38,9 @@
       "incidenty": [],
       "postizene": [
         "Zoom Phone",
-        "Zoom Phone",
-        "Zoom Phone - EMEA",
-        "Zoom Phone - NORTH AMERICA"
+        "Zoom Phone - EMEA"
       ],
-      "zkontrolovano": "2026-09-23T00:02:30.619Z",
+      "zkontrolovano": "2026-09-23T18:02:45.666Z",
       "chyba": null
     },
     {
@@ -46,7 +49,7 @@
       "popis": "All Systems Operational",
       "incidenty": [],
       "postizene": [],
-      "zkontrolovano": "2026-09-23T00:02:30.619Z",
+      "zkontrolovano": "2026-09-23T18:02:45.666Z",
       "chyba": null
     }
   ]

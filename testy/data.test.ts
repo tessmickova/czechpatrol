@@ -21,6 +21,19 @@ describe("produkční data", () => {
 
       if (i.lidskyOvereno) continue;
 
+      /*
+        Třetí cesta od 23. 9. 2026 (rozhodnutí provozovatelky): válečně
+        relevantní událost jen z redakcí, viditelně „neověřeno úředně".
+        Musí mít dvě různé redakce, nejvýš střední jistotu a žádné hodnocení.
+      */
+      if (i.overeni === "neovereno") {
+        const domeny = new Set(i.zdroje.map((z) => { try { return new URL(z.url).hostname.replace(/^www\./, ""); } catch { return ""; } }).filter((d) => d && d !== "news.google.com"));
+        expect(domeny.size, `${i.slug}: neověřený záznam chce dvě nezávislé redakce`).toBeGreaterThanOrEqual(2);
+        expect(["potvrzeno", "vysoka"], `${i.slug}: neověřený záznam s příliš vysokou jistotou`).not.toContain(i.jistota);
+        expect(i.vyznam ?? "", `${i.slug}: neověřený záznam nesmí nést hodnocení`).toBe("");
+        continue;
+      }
+
       expect(i.overeni, `událost ${i.slug} není označená, jak byla ověřena`).toBe("automaticke");
       expect(i.zdroje.length, `${i.slug}: automatické zveřejnění chce dva zdroje`).toBeGreaterThanOrEqual(2);
       expect(

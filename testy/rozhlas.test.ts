@@ -498,7 +498,8 @@ describe("neověřené signály do kanálu", () => {
       — a přesně takové případy tenhle web dokumentuje u jiných.
     */
     const z = sestavSignal(signal("k-1", 1));
-    expect(z.startsWith("⚠️ <b>NEOVĚŘENO")).toBe(true);
+    // Od 23. 9. 2026 jde signál jen správci do soukromého chatu, nikdy do veřejného kanálu.
+    expect(z.startsWith("⚠️ <b>Jen pro správce")).toBe(true);
     expect(z).toContain("Neověřil to zatím člověk");
     expect(z).toContain("https://www.irozhlas.cz/x");
   });
@@ -656,9 +657,14 @@ describe("vážné případy z úředního zdroje", () => {
         { nazev: "Médium B", url: "https://b", primarni: false },
       ],
     });
-    expect(vyberVazneNavrhy([bezUradu], { signaly: {} }, { ted })).toHaveLength(1);
-    expect(sestavVaznyNavrh(bezUradu)).toContain("ze dvou nezávislých zdrojů, bez úředního");
-    expect(sestavVaznyNavrh(navrh({}))).toContain("z úředního zdroje");
+    // Od 23. 9. 2026 (audit B-02): bez úředního zdroje podle adresy do veřejného kanálu nic.
+    expect(vyberVazneNavrhy([bezUradu], { signaly: {} }, { ted })).toHaveLength(0);
+    // Příznak „primarni" nestačí, rozhoduje adresa (mirror tiskové zprávy neprojde).
+    const mirror = navrh({ zdroje: [{ nazev: "Mirror", url: "https://www.globalsecurity.org/x", primarni: true }, { nazev: "ČTK", url: "https://ctk.cz/b" }] });
+    expect(vyberVazneNavrhy([mirror], { signaly: {} }, { ted })).toHaveLength(0);
+    const sUradem = navrh({ zdroje: [{ nazev: "Policie ČR", url: "https://www.policie.cz/clanek/x", primarni: true }, { nazev: "ČT24", url: "https://ct24.ceskatelevize.cz/y" }] });
+    expect(vyberVazneNavrhy([sUradem], { signaly: {} }, { ted })).toHaveLength(1);
+    expect(sestavVaznyNavrh(sUradem)).toContain("oznámil úřad");
   });
 
   it("jediný zdroj neprojde, i když je úřední", () => {
@@ -679,8 +685,8 @@ describe("vážné případy z úředního zdroje", () => {
   it("zpráva říká, že to ještě neprošlo člověkem", () => {
     /* Bez téhle věty by se dala číst jako zveřejněný záznam. */
     const z = sestavVaznyNavrh(navrh({}));
-    expect(z).toContain("NEOVĚŘENO");
-    expect(z).toContain("Záznam ještě neprošel lidskou kontrolou.");
+    expect(z).toContain("zpracováno automaticky");
+    expect(z).toContain("Hodnocení projektu u něj zatím není.");
   });
 });
 
@@ -756,8 +762,13 @@ describe("přehled dne — česky, dvakrát denně", () => {
   });
 
   it("bez změny stavu říká, co v Česku platí; se změnou ji vypíše", () => {
-    expect(sestavPrehledDne({ ted })).toContain("Žádná změna úředního stavu v Česku");
-    const text = sestavPrehledDne({ ted, zmeny: ["Hranice a doprava: běžný provoz → sledujeme"] });
+    const cerstvy = new Date(ted - 3_600_000).toISOString();
+    expect(sestavPrehledDne({ ted, posledniSber: cerstvy })).toContain("nenašli žádnou změnu stavu v Česku");
+    // Nic, co nevíme: žádné „mobilizace ne" natvrdo.
+    expect(sestavPrehledDne({ ted, posledniSber: cerstvy })).not.toContain("Mobilizace ne");
+    // Stará data se řeknou nahlas.
+    expect(sestavPrehledDne({ ted, posledniSber: new Date(ted - 13 * 3_600_000).toISOString() })).toContain("Data nejsou aktuální");
+    const text = sestavPrehledDne({ ted, posledniSber: cerstvy, zmeny: ["Hranice a doprava: běžný provoz → sledujeme"] });
     expect(text).toMatch(/Úřední stav se (změnil|zhoršil)/);
     expect(text).toContain("Hranice a doprava: běžný provoz → sledujeme");
   });
@@ -799,9 +810,21 @@ describe("směr změny v přehledu dne", () => {
   });
 
   it("samotné zlepšení dá klíčovou větu o zlepšení a zelenou značku", () => {
-    const text = sestavPrehledDne({ ted: Date.parse("2026-09-23T05:00:00Z"), cast: "rano", zmeny: ["Palivo a čerpací stanice: narušeno → běžný provoz"] });
+    const text = sestavPrehledDne({ ted: Date.parse("2026-09-23T05:00:00Z"), posledniSber: "2026-09-23T04:30:00Z", cast: "rano", zmeny: ["Palivo a čerpací stanice: narušeno → běžný provoz"] });
     expect(text).toMatch(/Úřední stav se zlepšil \(1\)/);
     expect(text).toMatch(/✅ Palivo/);
     expect(text).not.toMatch(/zhoršil/);
+  });
+});
+
+describe("doposlání tiše zapamatovaného záznamu", () => {
+  it("záznam s doposlat: true odejde i přes stáří a první běh", async () => {
+    const { vyberNove } = await import("../nastroje/rozhlas.mjs");
+    const ted = Date.parse("2026-09-23T17:00:00Z");
+    const i = { id: "x", lidskyOvereno: true, druh: "pripad", zavaznost: "Y1", datumUdalosti: "2026-08-31T00:00:00Z", datumZjisteni: "2026-08-31T00:00:00Z", historie: [], kategorie: [] };
+    const stav = { prvniBeh: "2026-09-06T00:00:00Z", zaznamy: { x: { kdy: "2026-09-06T00:00:00Z", historie: 0, ticho: true, doposlat: true } } };
+    expect(vyberNove([i], stav, { rezim: "souhrn", ted }).map((v: { i: { id: string } }) => v.i.id)).toEqual(["x"]);
+    const bez = { prvniBeh: "2026-09-06T00:00:00Z", zaznamy: { x: { kdy: "2026-09-06T00:00:00Z", historie: 0, ticho: true } } };
+    expect(vyberNove([i], bez, { rezim: "souhrn", ted })).toEqual([]);
   });
 });

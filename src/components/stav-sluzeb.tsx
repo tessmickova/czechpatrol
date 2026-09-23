@@ -31,14 +31,15 @@ const TECKA: Record<StavSluzby, string> = {
   nezjisteno: "border border-linka",
 };
 
-export function StavSluzeb({ stavy, kdy }: { stavy: ZivyStav[]; kdy: string | null }) {
+export function StavSluzeb({ stavy, kdy, vnoreny = false }: { stavy: ZivyStav[]; kdy: string | null; vnoreny?: boolean }) {
   const { nahled, kde, ukaz, skryj, pohyb } = useNahled();
   const zive = stavy.some((s) => s.zive);
   const vypadky = stavy.filter((s) => s.stav === "vypadek" || s.stav === "omezeni").length;
 
   return (
-    <section aria-label="Služby naživo" className="relative flex flex-col overflow-hidden rounded-[22px] border border-linka2 bg-plocha" onPointerLeave={skryj}>
-      <div className="flex items-center justify-between gap-2 border-b border-linka2 px-4 py-3">
+    <section aria-label="Služby naživo" className={`relative flex flex-col overflow-hidden ${vnoreny ? "" : "rounded-[22px] border border-linka2 bg-plocha"}`} onPointerLeave={skryj}>
+      {/* Vnořená varianta: hlavičku a souhrn nese rozklikávací oblast na úvodní straně. */}
+      {!vnoreny && <div className="flex items-center justify-between gap-2 border-b border-linka2 px-4 py-3">
         <span className="flex items-center gap-2">
           <span aria-hidden className="grid h-[18px] w-[18px] shrink-0 place-items-center rounded-full border border-akcent/50">
             <span className="h-[6px] w-[6px] rounded-full bg-akcent" />
@@ -52,7 +53,7 @@ export function StavSluzeb({ stavy, kdy }: { stavy: ZivyStav[]; kdy: string | nu
           {vypadky > 0 ? `${vypadky} ${vypadky === 1 ? "hlášení" : "hlášení"}` : "bez hlášení"}
           {kdy ? ` · ${zive ? "čteno" : "snímek"} ${casPraha(kdy)}` : ""}
         </span>
-      </div>
+      </div>}
 
       <ul className="divide-y divide-linka2">
         {SLUZBY.map((s) => {

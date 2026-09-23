@@ -580,6 +580,88 @@ function zverejniAutomaticky() {
   for (const n of kZverejneni) console.log(`  + ${n.slug} (${n.zdroje.length} zdrojů)`);
 }
 
+/*
+  Zveřejnění válečně relevantních návrhů jako neověřených úředně.
+
+  Rozhodnutí provozovatelky z 23. 9. 2026: návrh, kterému chybí jen úřední
+  zdroj, se nemá donekonečna točit ve frontě, když jde o válečně relevantní
+  věc — narušení pravidel ze strany protivníka (dron, střela, sabotáž,
+  špionáž pro Rusko, ozbrojený incident) nebo naopak doložené zlepšení vztahů.
+  Zveřejní se, ale viditelně jako „neověřeno úředně", s jistotou nejvýš
+  střední a bez hodnocení projektu.
+
+  Co sem nepatří, i když to má dva zdroje: běžná trestná činnost, terorismus
+  bez vazby na stát protivníka, domácí politika, soudní spory občanů
+  v zahraničí. Ty dál čekají na úřední zdroj nebo na člověka.
+
+  Podmínky: dvě nezávislé redakce (dvě různé domény, Google News se nepočítá)
+  a aspoň jedno fakt.
+*/
+const VALECNE_KATEGORIE = new Set(["drony", "sabotaz", "hybridni", "nato", "vojsko"]);
+const PROTIVNICI = new Set(["rusko", "belorusko"]);
+const RUSKO_V_TEXTU = /\b(rus|russia|kreml|kremlin|gru|fsb|bělorus|belarus)/i;
+
+export function valecneRelevantni(n) {
+  const kat = new Set(n.kategorie ?? []);
+  if ([...kat].some((k) => VALECNE_KATEGORIE.has(k))) return true;
+  if (PROTIVNICI.has(n.puvodce)) return true;
+  /*
+    Špionáž se počítá jen s vazbou na protivníka — čínský špion v Praze ani
+    teroristický plán sedmnáctiletého v Polsku sem nepatří. Diplomacie se
+    tu nepočítá vůbec: jestli jde o odvetu, nebo o zlepšení vztahů, pravidlo
+    na klíčových slovech nepozná, a tak to zůstává na člověku.
+  */
+  const text = [n.titulek, n.kratkyTitulek, ...(n.fakta ?? [])].join(" ");
+  return kat.has("zpravodajske") && RUSKO_V_TEXTU.test(text);
+}
+
+export function nezavisleRedakce(zdroje) {
+  const domeny = new Set();
+  for (const z of zdroje ?? []) {
+    try {
+      const d = new URL(z.url).hostname.replace(/^www\./, "");
+      if (d !== "news.google.com") domeny.add(d);
+    } catch { /* neplatná adresa se nepočítá */ }
+  }
+  return domeny.size;
+}
+
+function zverejniNeoverene() {
+  const navrhy = cti("data/navrhy.json", []);
+  const inc = cti("data/incidenty.json", []);
+  const jiz = new Set(inc.map((x) => x.id));
+
+  const kZverejneni = navrhy.filter((n) =>
+    (n.kam ?? "zaznam") === "zaznam" && !jiz.has(n.id) && (n.fakta ?? []).length > 0 &&
+    nezavisleRedakce(n.zdroje) >= 2 && !maUredniZdroj(n.zdroje ?? []) && valecneRelevantni(n));
+  if (!kZverejneni.length) {
+    console.log("Nic válečně relevantního k zveřejnění jako neověřené.");
+    return;
+  }
+
+  const ted = new Date().toISOString();
+  for (const n of kZverejneni) {
+    const { kam: _k, pripravil: _p, pripraveno: _q, preverit: _r, ...zaznam } = n;
+    zaznam.lidskyOvereno = false;
+    zaznam.overeni = "neovereno";
+    if (zaznam.jistota === "potvrzeno" || zaznam.jistota === "vysoka") zaznam.jistota = "stredni";
+    if ((zaznam.druh ?? "pripad") === "pripad" && !zaznam.puvodce) zaznam.puvodce = "neznamy";
+    zaznam.vyznam = "";
+    zaznam.aktualizovano = ted;
+    zaznam.historie = [
+      ...(zaznam.historie ?? []),
+      { kdy: ted, text: "Zveřejněno jako neověřené úředně: dvě nezávislé redakce, úřad zatím nepotvrdil.", novySignal: false },
+    ];
+    inc.push(zaznam);
+  }
+
+  const zbytek = navrhy.filter((n) => !kZverejneni.some((z) => z.id === n.id));
+  fs.writeFileSync(path.join(koren, "data/incidenty.json"), `${JSON.stringify(inc, null, 2)}\n`);
+  fs.writeFileSync(path.join(koren, "data/navrhy.json"), `${JSON.stringify(zbytek, null, 2)}\n`);
+  console.log(`Zveřejněno jako neověřené: ${kZverejneni.length}. Ve frontě zůstává ${zbytek.length}.`);
+  for (const n of kZverejneni) console.log(`  + ${n.slug} (${nezavisleRedakce(n.zdroje)} redakcí)`);
+}
+
 const prikaz = process.argv[2];
 const arg = process.argv.slice(3);
 
@@ -592,7 +674,7 @@ else if (prikaz === "znovu") znovu(arg[0], arg.slice(1).join(" "));
 else if (prikaz === "uprav") uprav(arg[0], arg.slice(1).join(" "));
 else if (prikaz === "uprav-zaznam") upravZaznam(arg[0], arg.slice(1).join(" "));
 else if (prikaz === "stahni") stahniZaznam(arg[0], arg.slice(1).join(" "));
-else if (prikaz === "zverejni") zverejniAutomaticky();
+else if (prikaz === "zverejni") { zverejniAutomaticky(); zverejniNeoverene(); }
 else if (prikaz === "tip") tip(arg[0]);
 else if (prikaz === "prijmi") {
   /* Delegace na stávající nástroj: kostru záznamu už umí a umí ji dobře. */

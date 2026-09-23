@@ -9,7 +9,7 @@ import * as prava from "./prava";
 import * as izs from "./izs";
 import * as ja from "./ja";
 import { ChybaHttp, json, povolenyPuvod, sCors } from "./pomocne";
-import { zkontrolujSber } from "./hlidac";
+import { hlidejMinuty, kadenceSberu, zkontrolujSber } from "./hlidac";
 import { kopniDoSberu } from "./sber";
 import * as nastaveni from "./nastaveni";
 import * as navrhy from "./navrhy";
@@ -166,7 +166,8 @@ export default {
         // Sběr dat kope worker, protože plánovač GitHubu běhy zahazuje.
         // Selhání sběru nesmí shodit rozesílání upozornění, proto zvlášť.
         try {
-          const b = await kopniDoSberu(env, udalost.scheduledTime);
+          const kadence = await kadenceSberu(env).catch(() => 60);
+          const b = await kopniDoSberu(env, udalost.scheduledTime, kadence);
           if (b.spusteno) console.log("[sběr] spuštěn");
           else if (b.duvod && b.duvod !== "není čas") console.warn(`[sběr] nespuštěn — ${b.duvod}`);
         } catch (e) {
@@ -184,6 +185,13 @@ export default {
           if (h?.ohlaseno.length) console.warn(`[hlídač] ohlášeno ${h.ohlaseno.join(", ")} — ${Math.round(h.hodin)} h bez sběru`);
         } catch (e) {
           console.error("[hlídač]", e);
+        }
+
+        try {
+          const m = await hlidejMinuty(env, udalost.scheduledTime);
+          if (m) console.log(`[minuty] ${Math.round(m.podil * 100)} % přídělu, sběr každých ${m.kadence} min`);
+        } catch (e) {
+          console.error("[minuty]", e);
         }
 
         try {

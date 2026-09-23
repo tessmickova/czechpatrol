@@ -1,7 +1,7 @@
 "use client";
 
 import { useZiveHodiny } from "@/lib/cas-klient";
-import { casPraha, cerstvost, datumCasPraha, stariSlovy } from "@/lib/cas";
+import { cerstvost, datumCasPraha } from "@/lib/cas";
 import { Ikona } from "./ikony";
 
 /*
@@ -26,108 +26,42 @@ import { Ikona } from "./ikony";
 */
 
 /** Za jak dlouho po poslední kontrole se z ticha stane přiznaný výpadek. */
-const HODIN_DO_VYPADKU = 12;
+/*
+  5 h od 23. 9. 2026 (dřív 12). Sběr běží každou hodinu; i když ho hlídač
+  minut zpomalí na nejvýš 4 h, 5 h bez čtení je výpadek, ne klid. Dvanáct
+  hodin znamenalo, že web půl dne tvrdil čerstvý stav.
+*/
+export const HODIN_DO_VYPADKU = 5;
 
 /*
-  Stav kontroly jako údaj, ne jako pruh.
+  Stav kontroly jako drobný údaj, nikdy jako poplašný pruh.
 
-  Vzniklo z toho, že nad úvodem stály dva pruhy pod sebou: „Nezávislý projekt,
-  ne úřední zdroj" a pod ním „Zkontrolováno 20:01 · bez nálezu". Dvě tenké
-  linky kvůli dvěma větám. Klidný stav se proto vejde na konec prvního pruhu;
-  vlastní pruh dostane, teprve když je co hlásit.
+  23. 9. 2026 rozhodnutí provozovatelky: velký pruh „Sběr neběží… web
+  ukazuje stav k tomu okamžiku, ne dnešní" na stránku nepatří, ani když
+  sběr opravdu stojí. Čtenáři stačí vědět, kdy byla data naposledy
+  aktualizovaná — drobně, u pruhu o původu. Výpadek hlásí hlídač
+  správkyni do soukromého chatu (api/src/hlidac.ts), ne čtenářům.
+
+  Poctivost zůstává jinde: po HODIN_DO_VYPADKU hodinách zmizí zelený
+  „klid" v úvodu (urgentni.tsx, budíky), takže stará data se za klid
+  nevydávají.
 */
-function stav(zkontrolovano: string | null, nyni: number): { poplach: boolean; text: string } {
+function text(zkontrolovano: string | null, nyni: number): string | null {
   const c = cerstvost(zkontrolovano, nyni, "provoz");
-  if (c === "budoucnost") {
-    return { poplach: true, text: "Chybný čas u části podkladů — údaj o poslední kontrole je z budoucnosti." };
-  }
-  if (!zkontrolovano || c === "nezname") return { poplach: true, text: "Aktuálnost zatím neověřena." };
-
+  if (!zkontrolovano || c === "nezname" || c === "budoucnost") return null;
   const hodin = (nyni - new Date(zkontrolovano).getTime()) / 3_600_000;
-  if (hodin >= HODIN_DO_VYPADKU) {
-    return {
-      poplach: true,
-      text: `Sběr neběží. Zdroje naposledy čteny ${datumCasPraha(zkontrolovano)} (${stariSlovy(zkontrolovano, nyni)}). Web ukazuje stav k té chvíli.`,
-    };
-  }
-  return {
-    poplach: false,
-    text: hodin < 6
-      ? `Zkontrolováno ${casPraha(zkontrolovano)} · bez nálezu`
-      : `Zdroje naposledy čteny ${datumCasPraha(zkontrolovano)} · ${stariSlovy(zkontrolovano, nyni)}`,
-  };
+  return hodin >= 0 ? `Aktualizováno ${datumCasPraha(zkontrolovano)}` : null;
 }
 
-/**
- * Klidný stav na konec pruhu o původu. Když je poplach, nevykreslí nic —
- * na to je pruh vlastní, aby se přes něj nedalo přehlédnout.
- */
+/** Drobný údaj na konec pruhu o původu. */
 export function StavKontrolyVedle({ zkontrolovano, ted }: { zkontrolovano: string | null; ted: number }) {
   const nyni = useZiveHodiny(ted);
-  const s = stav(zkontrolovano, nyni);
-  if (s.poplach) return null;
+  const t = text(zkontrolovano, nyni);
+  if (!t) return null;
   return (
     <span className="flex items-center gap-1.5 text-tlum2">
       <Ikona nazev="info" velikost={12} tah={2} trida="shrink-0" />
-      {s.text}
+      {t}
     </span>
-  );
-}
-
-export function PruhKontroly({ zkontrolovano, ted }: { zkontrolovano: string | null; ted: number }) {
-  const nyni = useZiveHodiny(ted);
-  const c = cerstvost(zkontrolovano, nyni, "provoz");
-
-  if (c === "budoucnost") {
-    return <Pruh poplach text="Chybný čas u části podkladů — údaj o poslední kontrole je z budoucnosti." />;
-  }
-  if (!zkontrolovano || c === "nezname") {
-    return <Pruh poplach text="Aktuálnost zatím neověřena." />;
-  }
-
-  const hodin = (nyni - new Date(zkontrolovano).getTime()) / 3_600_000;
-
-  /*
-    Výpadek se pojmenuje výpadkem. „Aktuálnost neověřena" je pravda, ale zní
-    jako drobná výhrada k jinak funkčnímu webu — ne jako to, co to je: web
-    ukazuje starý stav a nová zpráva se na něj nedostane.
-  */
-  if (hodin >= HODIN_DO_VYPADKU) {
-    return (
-      <Pruh
-        poplach
-        text={`Sběr neběží. Zdroje naposledy čteny ${datumCasPraha(zkontrolovano)}, ${stariSlovy(zkontrolovano, nyni)}. Web ukazuje stav k tomu okamžiku, ne dnešní.`}
-      />
-    );
-  }
-
-  /*
-    Do dvanácti hodin se nic nezdůrazňuje. Sběr běží po půlhodinách, takže
-    pár hodin bez nové zprávy je běžný klid, ne porucha — a oranžový pruh
-    nad každou stránkou by za týden zevšedněl natolik, že by ho nikdo
-    nepřečetl ani ve chvíli, kdy bude znamenat výpadek.
-  */
-  /*
-    Klid nemá vlastní pruh. Stojí vpravo v pruhu o původu (StavKontrolyVedle) —
-    dvě tenké linky nad sebou kvůli dvěma větám byly zbytečné.
-  */
-  return null;
-}
-
-function Pruh({ text, poplach = false }: { text: string; poplach?: boolean }) {
-  return (
-    <div
-      role="status"
-      className={poplach ? "border-b border-stari/40 bg-stari/10" : "border-b border-linka2 bg-plocha"}
-    >
-      <div
-        className={`mx-auto flex max-w-[1280px] items-start gap-2.5 px-4 py-2.5 text-zaklad sm:px-6 ${
-          poplach ? "text-stari-text" : "text-tlum"
-        }`}
-      >
-        <Ikona nazev={poplach ? "vystraha" : "info"} velikost={16} tah={2} trida="mt-[2px] shrink-0" />
-        <span>{text}</span>
-      </div>
-    </div>
   );
 }

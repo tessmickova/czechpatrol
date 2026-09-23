@@ -1,5 +1,5 @@
 import { JE_UKAZKA } from "@/config/web";
-import type { OficialniNastroj,
+import type { OficialniNastroj, PravniPolozka, ProvozniPolozka, OpatreniZeme, OpatreniZemi,
   Odmitnuty,
   Archiv, CelkovyStav, HybridniTlak, Incident, Kampan, Kandidat, Kategorie, NatoPolozka, Oprava, PravniStav,
   Nepotvrzene, Overovana, Provoz, Puvodce, RuskoStav, Svet, Tip, TydenniHodnoceni, Uroven, Vystraha, VystrahaSoubor, Watchlist,
@@ -29,6 +29,7 @@ import ostreKampane from "../../data/kampane.json";
 import ostreOverujeme from "../../data/overujeme.json";
 import ostreOdmitnute from "../../data/fronta/odmitnute.json";
 import ostreNavrhy from "../../data/navrhy.json";
+import ostraOpatreni from "../../data/opatreni-zemi.json";
 
 import ukazkoveIncidenty from "../../data/ukazka/incidenty.json";
 import ukazkovyStav from "../../data/ukazka/stav.json";
@@ -61,7 +62,7 @@ const jako = <T,>(x: unknown): T => x as T;
 export function incidenty(): SUkazkou<Incident>[] {
   // Na produkci se zobrazují jen záznamy, které prošly lidskou kontrolou.
   /* Zveřejněné je to, co prošlo člověkem, nebo co je doložené dvěma zdroji včetně úředního. */
-  const ostre = jako<Incident[]>(ostreIncidenty).filter((i) => i.lidskyOvereno || i.overeni === "automaticke");
+  const ostre = jako<Incident[]>(ostreIncidenty).filter((i) => i.lidskyOvereno || i.overeni === "automaticke" || i.overeni === "neovereno");
   const ukazkove = JE_UKAZKA
     ? jako<Incident[]>(ukazkoveIncidenty).map((i) => ({ ...i, ukazka: true }))
     : [];
@@ -388,17 +389,44 @@ export function pocetZemeObdobi(kodZeme: string, dni = 90): { pripadu: number; k
  * Mimořádný právní stav = vážná; narušená služba = vysoká; sledovaná = střední;
  * nic z toho = nízká. Neověřené položky do výsledku nevstupují, ale hlásí se.
  */
-export function urovenObcanu(): { uroven: Uroven; popis: string; neovereno: number } {
-  const pr = pravniStav().polozky;
-  const pv = provoz().polozky;
+/*
+  Audit 23. 9. 2026 (P0-5, P0-7):
+  - Běžný život NESMÍ používat výklad bezpečnostní škály. Dřív jakékoli
+    opatření (i povodňový nouzový stav) ukázalo R1 „probíhá ozbrojený
+    incident s účastí NATO nebo ČR". Teď má vlastní slova a výklad.
+  - Zelené „Bez omezení" jen tehdy, když je aspoň něco VĚCNĚ ověřené.
+    Když máme jen orientační kontrolu (overeno: null u všech položek),
+    je to „nic nenalezeno" v neutrální barvě — nevíme, ne klid.
+*/
+export interface StavObcanu {
+  uroven: Uroven;
+  slovo: string;
+  popis: string;
+  neovereno: number;
+  /** Neutrální barva: nemáme doklad, jen jsme nic nenašli. */
+  neutralni: boolean;
+}
+
+export function urovenObcanu(): StavObcanu {
+  return stavObcanuZ(pravniStav().polozky, provoz().polozky);
+}
+
+/** Čistá část výpočtu — kvůli testům (audit P0-5, P0-7). */
+export function stavObcanuZ(
+  pr: Pick<PravniPolozka, "nazev" | "plati" | "overeno">[],
+  pv: Pick<ProvozniPolozka, "nazev" | "stav" | "overeno">[],
+): StavObcanu {
   const neovereno = pr.filter((p) => p.plati === null).length + pv.filter((p) => p.stav === "bez-zdroje").length;
   const plati = pr.filter((p) => p.plati === true);
-  if (plati.length) return { uroven: "R1", popis: `platí: ${plati.map((p) => p.nazev.toLowerCase()).join(", ")}`, neovereno };
+  if (plati.length) return { uroven: "R1", slovo: "Platí opatření", popis: `Úředně platí: ${plati.map((p) => p.nazev.toLowerCase()).join(", ")}. Podrobnosti a pokyny úřadů níže v Úředním stavu.`, neovereno, neutralni: false };
   const narusene = pv.filter((p) => p.stav === "narusen");
-  if (narusene.length) return { uroven: "O1", popis: `narušeno: ${narusene.map((p) => p.nazev.toLowerCase()).join(", ")}`, neovereno };
+  if (narusene.length) return { uroven: "O1", slovo: "Narušeno", popis: `Narušeno: ${narusene.map((p) => p.nazev.toLowerCase()).join(", ")}.`, neovereno, neutralni: false };
   const sledovane = pv.filter((p) => p.stav === "sledujeme");
-  if (sledovane.length) return { uroven: "Y1", popis: `sledujeme: ${sledovane.map((p) => p.nazev.toLowerCase()).join(", ")}`, neovereno };
-  return { uroven: "G1", popis: "bez omezení, bez mobilizace, bez mimořádných nařízení", neovereno };
+  if (sledovane.length) return { uroven: "Y1", slovo: "Sledujeme", popis: `Sledujeme: ${sledovane.map((p) => p.nazev.toLowerCase()).join(", ")}.`, neovereno, neutralni: false };
+  const vecneOvereno = pr.some((p) => p.overeno) || pv.some((p) => p.overeno);
+  return vecneOvereno
+    ? { uroven: "G1", slovo: "Bez omezení", popis: "Úřední zdroje neuvádějí žádné omezení ani mimořádné opatření.", neovereno, neutralni: false }
+    : { uroven: "G1", slovo: "Nic nenalezeno", popis: "V kontrolovaných zdrojích jsme nenašli vyhlášené omezení ani mimořádné opatření. Úplný úřední seznam zatím nečteme, proto to není potvrzený klid.", neovereno, neutralni: true };
 }
 
 /** Měsíční řada od roku 2013. Měsíce bez doloženého záznamu jsou prázdné. */
@@ -691,4 +719,14 @@ export function klidoveBody(): string[] {
 /** Vyhýbáme se kruhovému importu stupnice do datové vrstvy. */
 function jeZelena(u: Uroven): boolean {
   return u === "G1" || u === "G2" || u === "G3";
+}
+
+/** Opatření jedné země z pevného výčtu. Prázdné, když zemi nemáme prošlou. */
+export function opatreniZeme(kod: string): { nazvy: Record<string, string>; polozky: OpatreniZeme[]; aktualizovano: string } {
+  const d = ostraOpatreni as unknown as OpatreniZemi;
+  return {
+    nazvy: Object.fromEntries(d.opatreni.map((o) => [o.klic, o.nazev])),
+    polozky: d.zeme[kod] ?? [],
+    aktualizovano: d.aktualizovano,
+  };
 }

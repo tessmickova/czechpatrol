@@ -58,7 +58,7 @@ function Cena({ s }: { s: StavPaliva }) {
   );
 }
 
-export function CenaPaliva() {
+export function CenaPaliva({ vnoreny = false }: { vnoreny?: boolean } = {}) {
   const data = radaCen();
   const paliva = stavPaliv().filter((s) => s.cena !== null);
   // Bez změřené řady se nepíše nic. Ani „zatím nevíme" — to patří k dlaždici.
@@ -68,8 +68,8 @@ export function CenaPaliva() {
   const tyden = paliva[0].konec ?? "";
 
   return (
-    <section id="palivo" aria-label="Ceny pohonných hmot" className="mt-3 scroll-mt-[84px] rounded-[18px] border border-linka2 bg-plocha px-4 py-3">
-      <div className="mb-1 flex items-center justify-between gap-3">
+    <section id="palivo" aria-label="Ceny pohonných hmot" className={vnoreny ? "scroll-mt-[84px] px-4 py-3" : "mt-3 scroll-mt-[84px] rounded-[18px] border border-linka2 bg-plocha px-4 py-3"}>
+      <div className={`mb-1 flex items-center justify-between gap-3 ${vnoreny ? "hidden" : ""}`}>
         <span className="stitek">Ceny pohonných hmot</span>
         <Napoveda
           popis={

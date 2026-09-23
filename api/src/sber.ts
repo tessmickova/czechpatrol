@@ -47,8 +47,9 @@ export interface VysledekSberu {
 }
 
 /** Spustí workflow sběru přes GitHub API. Nic nečeká, jen předá štafetu. */
-export async function kopniDoSberu(env: Env, cas: number): Promise<VysledekSberu> {
-  if (!maSeSbirat(cas)) return { spusteno: false, duvod: "není čas" };
+export async function kopniDoSberu(env: Env, cas: number, kazdychMinut = KAZDYCH_MINUT): Promise<VysledekSberu> {
+  // Kadenci může hlídač minut prodloužit, aby příděl vydržel do konce měsíce (api/src/minuty.ts).
+  if (!maSeSbirat(cas, kazdychMinut)) return { spusteno: false, duvod: "není čas" };
 
   // Bez tokenu se nic neděje a nic to nerozbije — sběr pak jede jen na
   // GitHubím plánovači, tedy jako dřív.

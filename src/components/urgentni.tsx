@@ -1,5 +1,7 @@
 "use client";
 
+import { HODIN_DO_VYPADKU } from "./banner-stari-klient";
+
 import Link from "next/link";
 import { datumCasPraha, datumPraha } from "@/lib/cas";
 import { useZiveHodiny } from "@/lib/cas-klient";
@@ -143,17 +145,27 @@ export function UrgentniPas({ kandidati, zkontrolovano, ted = Date.now() }: { ka
   const v = vystraha();
   const naliehave = naliehaveVOkne(kandidati, useZiveHodiny(ted));
   const deje = Boolean(v) || naliehave.length > 0;
+  const nyni = useZiveHodiny(ted);
+  /* Stará data nejsou klid: bez zelené, když sběr dlouho neběžel. */
+  const stary = !zkontrolovano || nyni - new Date(zkontrolovano).getTime() > HODIN_DO_VYPADKU * 3_600_000;
   return (
-    <div className={`flex flex-wrap items-center gap-x-4 gap-y-2 rounded-[18px] border px-4 py-3 ${deje ? "border-akcent/70" : "border-klid/60"}`} role="status" aria-label="Urgentní upozornění">
-      <span aria-hidden className={`h-[7px] w-[7px] shrink-0 rounded-full ${deje ? "bg-akcent" : "bg-klid"}`} />
+    <div className={`flex flex-wrap items-center gap-x-4 gap-y-2 rounded-[18px] border px-4 py-3 ${deje ? "border-akcent/70" : stary ? "border-linka" : "border-klid/60"}`} role="status" aria-label="Urgentní upozornění">
+      <span aria-hidden className={`h-[7px] w-[7px] shrink-0 rounded-full ${deje ? "bg-akcent" : stary ? "bg-tlum2" : "bg-klid"}`} />
       {/* Minimální šířka textu: na úzkém displeji spadne tlačítko pod text, místo aby text mačkalo do sloupečku. */}
       <span className="min-w-[14rem] flex-1 text-male leading-snug text-tlum">
         {v ? (
           <><b className="font-semibold text-inkoust">Platí: {v.nadpis}</b> <span className="cislice text-mikro text-tlum2">{datumCasPraha(v.kdy)}</span></>
         ) : naliehave.length > 0 ? (
           <><b className="font-semibold text-inkoust">Sběr zachytil {naliehave.length === 1 ? "naléhavou zprávu" : `${naliehave.length} naléhavé zprávy`}, čekají na ověření.</b> {NAZVY[naliehave[0].naliehave!.druh]}{naliehave[0].publikovano || naliehave[0].zachyceno ? ` · ${datumPraha(naliehave[0].publikovano ?? naliehave[0].zachyceno)}` : ""}</>
+        ) : stary ? (
+          <>Naléhavé zprávy sledujeme průběžně.{zkontrolovano ? <span className="cislice text-mikro text-tlum2"> · aktualizováno {datumCasPraha(zkontrolovano)}</span> : null}</>
         ) : (
-          <><b className="font-semibold text-inkoust">Teď nic urgentního.</b> Žádná mobilizace, krizové vysílání ani mimořádný stav za {OKNO_HODIN} h{zkontrolovano ? <span className="cislice text-mikro text-tlum2"> · zdroje čteny {datumCasPraha(zkontrolovano)}</span> : ""}</>
+          /*
+            Audit 23. 9. 2026 (P0-5): „Teď nic urgentního. Žádná mobilizace…"
+            tvrdilo zápor bez dokladu a bez času. Teď jen to, co víme,
+            a vždy s časem kontroly.
+          */
+          <><b className="font-semibold text-inkoust">V kontrolovaných zdrojích nic naléhavého.</b> Za {OKNO_HODIN} h jsme nenašli vyhlášení mobilizace, krizové vysílání ani mimořádný stav.{zkontrolovano ? <span className="cislice text-mikro text-tlum2"> · zdroje čteny {datumCasPraha(zkontrolovano)}</span> : <span className="text-mikro text-tlum2"> · čas kontroly neznámý</span>}</>
         )}
       </span>
       <Tlacitko kam="/odber/" varianta="plny" velikost="s" ikonaVpravo="nahoru" trida="shrink-0 whitespace-nowrap [&>svg:last-child]:rotate-90">Jak se to dozvíte hned</Tlacitko>

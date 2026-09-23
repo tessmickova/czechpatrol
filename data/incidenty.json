@@ -3375,7 +3375,7 @@
     ],
     "datumUdalosti": "2024-06-05T00:00:00Z",
     "datumZjisteni": "2025-06-09T00:00:00Z",
-    "aktualizovano": "2025-06-09T00:00:00Z",
+    "aktualizovano": "2026-09-23T14:30:00Z",
     "zavaznost": "O1",
     "jistota": "potvrzeno",
     "stav": "uzavreno",
@@ -3383,7 +3383,8 @@
     "fakta": [
       "V noci na 5. června 2024 zapálil šestadvacetiletý kolumbijský občan tři autobusy v depu dopravního podniku na Klíčově.",
       "Městský soud v Praze ho 9. června 2025 odsoudil za teroristický útok k osmi letům vězení; pokyny dostával přes Telegram za slíbenou odměnu. Plánoval další útok.",
-      "Premiér Fiala útok označil za pravděpodobnou součást ruské hybridní války; soud státní zadání neurčoval."
+      "Premiér Fiala útok označil za pravděpodobnou součást ruské hybridní války; soud státní zadání neurčoval.",
+      "Americké ministerstvo spravedlnosti 15. září 2026 zveřejnilo obžalobu pěti členů sítě napojené na ruské zpravodajské služby; podle ní jeden z obžalovaných, kubánský občan Oemis Durruthy, kolem června 2024 koordinoval útok v Praze. Časově to odpovídá útoku na depo Klíčov; jde o tvrzení obžaloby, ne o prokázaný skutek."
     ],
     "neznameho": [
       "Kdo pachatele přes Telegram řídil, nebylo soudně určeno."
@@ -3407,9 +3408,23 @@
         "publikovano": "2024-08-07T00:00:00Z",
         "primarni": false,
         "jazyk": "cs"
+      },
+      {
+        "nazev": "U.S. DOJ, SDNY — Members Of Russian Intelligence Services Network Charged With Conspiring To Finance Terrorism And Commit Murder For Hire In The United States",
+        "url": "https://www.justice.gov/usao-sdny/pr/members-russian-intelligence-services-network-charged-conspiring-finance-terrorism-and",
+        "typ": "primary",
+        "publikovano": "2026-09-15T00:00:00Z",
+        "primarni": true,
+        "jazyk": "en"
       }
     ],
-    "souvisejici": [],
+    "souvisejici": [
+      {
+        "incidentId": "i-2026-09-15-590b687216",
+        "potvrzena": false,
+        "popis": "Obžaloba v USA z 15. 9. 2026 zmiňuje koordinaci útoku v Praze v červnu 2024."
+      }
+    ],
     "historie": [
       {
         "kdy": "2024-06-05T00:00:00Z",
@@ -3419,6 +3434,11 @@
       {
         "kdy": "2025-06-09T00:00:00Z",
         "text": "Rozsudek Městského soudu v Praze.",
+        "novySignal": true
+      },
+      {
+        "kdy": "2026-09-23T14:30:00Z",
+        "text": "Doplněno: obžaloba v USA z 15. 9. 2026 zmiňuje koordinaci útoku v Praze v červnu 2024.",
         "novySignal": true
       }
     ],
@@ -6733,7 +6753,7 @@
   {
     "id": "i-2026-09-10-svalbard-kabely",
     "slug": "svalbard-nato-zabranilo-naciku-prerezani-kabelu-2026",
-    "titulek": "Arktida: britské, norské a americké síly zastavily ruské ponorky, které u Špicberk nacvičovaly přerušení podmořských kabelů",
+    "titulek": "Arktida: podle Reuters a dvou nejmenovaných západních představitelů zastavily spojenecké síly u Špicberk ruské ponorky při nácviku přerušení podmořských kabelů",
     "kratkyTitulek": "Špicberky: NATO zastavilo ruské ponorky u kabelů",
     "zeme": "Norsko",
     "kodZeme": "NO",
@@ -6747,7 +6767,7 @@
     "datumZjisteni": "2026-09-10T00:00:00Z",
     "aktualizovano": "2026-09-11T11:00:00Z",
     "zavaznost": "O1",
-    "jistota": "vysoka",
+    "jistota": "stredni",
     "stav": "bez-vysetrovani",
     "atribuce": "nepotvrzena",
     "puvodce": "rusko",
@@ -6762,7 +6782,8 @@
     "neznameho": [
       "Přesné datum akce. Reuters uvádí jen jaro 2026; den ani týden zveřejněn nebyl, proto ho zde neuvádíme.",
       "Jak přesně měl popisovaný prostředek fungovat a zda už byl někde nasazen.",
-      "Zda některá ze zúčastněných vlád akci potvrdí na záznam. Zatím o ní mluvili jen nejmenovaní představitelé."
+      "Zda některá ze zúčastněných vlád akci potvrdí na záznam. Zatím o ní mluvili jen nejmenovaní představitelé.",
+      "Přesné datum události Reuters neuvádí (akce proběhla podle zdroje na jaře); 10. 9. 2026 je datum zveřejnění zprávy."
     ],
     "vyznam": "Zmařený nácvik, ne škoda. Podstatné je, na co mířil: kabely ke Špicberkám nesou data z pozemní satelitní stanice, na které závisí i civilní a vědecký provoz. Tohle je hodnocení projektu, ne doložený fakt.",
     "eskalacniSpousteče": [
@@ -6825,6 +6846,11 @@
         "kdy": "2026-09-15T06:45:00Z",
         "text": "Upřesněn krátký titulek. „Zmařený nácvik na kabely\" nepojmenovával doložené jednání a přisuzoval záměr přerušit kabely jako fakt; podle Reuters jde o vyjádření dvou západních představitelů. Titulek teď popisuje, co je doložené: spojenci plavidla zastavili u kabelů.",
         "novySignal": false
+      },
+      {
+        "kdy": "2026-09-23T15:30:00Z",
+        "text": "Opraveno: titulek uvádí, že jde o tvrzení nejmenovaných zdrojů Reuters; jistota střední.",
+        "novySignal": false
       }
     ],
     "novy": true,
@@ -6835,7 +6861,7 @@
   {
     "id": "i-2026-09-08-moldavsko-dron",
     "slug": "moldavsko-dron-uzavrel-vzdusny-prostor-2026",
-    "titulek": "Moldavsko uzavřelo vzdušný prostor kvůli ruskému dronu; zdrželo to i letadlo s ukrajinským prezidentem",
+    "titulek": "Moldavsko uzavřelo vzdušný prostor kvůli dronu, který podle policie odpovídá typu Geran; zdrželo to i letadlo s ukrajinským prezidentem",
     "kratkyTitulek": "Moldavsko: dron uzavřel vzdušný prostor",
     "zeme": "Moldavsko",
     "kodZeme": "MD",
@@ -6908,6 +6934,11 @@
       {
         "kdy": "2026-09-15T06:10:00Z",
         "text": "Oprava: jako úřední doklad byl u záznamu veden dokument norské vlády, který je ale z 13. 2. 2025 a tuhle událost nepopisuje. Zdroj byl odebrán, tvrzení o norském odsouzení staženo a připsání odpovědnosti sníženo z úředního na vyšetřované. Samotná událost zůstává doložena zpravodajstvím BBC, CNN a NBC.",
+        "novySignal": false
+      },
+      {
+        "kdy": "2026-09-23T15:30:00Z",
+        "text": "Opraveno: titulek netvrdí „ruský dron“, uvádí zjištění policie (typ Geran).",
         "novySignal": false
       }
     ],
@@ -7328,7 +7359,13 @@
         "jazyk": "en"
       }
     ],
-    "souvisejici": [],
+    "souvisejici": [
+      {
+        "incidentId": "i-2026-08-10-65bb83cb23",
+        "potvrzena": false,
+        "popis": "Srpnový výbuch v areálu EMCO u Belice; souvislost se prověřuje."
+      }
+    ],
     "historie": [
       {
         "kdy": "2026-09-12T00:00:00Z",
@@ -7969,9 +8006,9 @@
   {
     "id": "i-2026-09-15-590b687216",
     "slug": "us-590b687216",
-    "titulek": "USA: obvinila pět osob z ruské sabotážní a atentátnické sítě",
-    "kratkyTitulek": "USA: obvinila pět osob z ruské sabotážní a atentátnické sítě",
-    "zeme": "Rusko",
+    "titulek": "USA: obžaloba pěti osob, podle níž šlo o síť napojenou na ruské zpravodajské služby, která chystala sabotáže a vraždu na objednávku",
+    "kratkyTitulek": "USA: obžaloba sítě napojené podle žalobců na ruské služby",
+    "zeme": "USA",
     "kodZeme": "US",
     "kategorie": [
       "sabotaz",
@@ -7980,8 +8017,8 @@
     "datumUdalosti": "2026-09-15T00:00:00Z",
     "datumZjisteni": "2026-09-16T00:00:00Z",
     "aktualizovano": "2026-09-20T19:16:27.999Z",
-    "zavaznost": "O3",
-    "jistota": "potvrzeno",
+    "zavaznost": "Y3",
+    "jistota": "vysoka",
     "stav": "bez-vysetrovani",
     "atribuce": "neznama",
     "puvodce": "neznamy",
@@ -8042,7 +8079,13 @@
         "jazyk": "cs"
       }
     ],
-    "souvisejici": [],
+    "souvisejici": [
+      {
+        "incidentId": "h20",
+        "potvrzena": false,
+        "popis": "Žhářský útok na autobusy v depu Klíčov (červen 2024)."
+      }
+    ],
     "historie": [
       {
         "kdy": "2026-09-15T00:00:00Z",
@@ -8062,6 +8105,11 @@
       {
         "kdy": "2026-09-20T19:16:27.999Z",
         "text": "Zveřejněno automaticky: dva nezávislé zdroje, z toho úřední. Bez lidské kontroly.",
+        "novySignal": false
+      },
+      {
+        "kdy": "2026-09-23T15:30:00Z",
+        "text": "Opraveno: země USA (dřív chybně „Rusko“), závažnost Y3 místo O3, jistota vysoká místo potvrzeno, titulek uvádí tvrzení jako tvrzení obžaloby.",
         "novySignal": false
       }
     ],
@@ -8335,5 +8383,1835 @@
     "lidskyOvereno": false,
     "archivniZaznam": false,
     "overeni": "automaticke"
+  },
+  {
+    "id": "i-2026-09-15-7693865f77",
+    "slug": "lt-7693865f77",
+    "titulek": "Litva: italské Eurofightery NATO sestřelily nad okresem Kaišiadorys dron, který podle LRT vletěl z Běloruska",
+    "kratkyTitulek": "Litva: italské Eurofightery NATO sestřelily nad okresem Kaišiadorys dron, který podle LRT vletěl z Běloruska",
+    "zeme": "Litva",
+    "kodZeme": "LT",
+    "kategorie": [
+      "drony",
+      "nato"
+    ],
+    "datumUdalosti": "2026-09-15T00:00:00Z",
+    "datumZjisteni": "2026-09-16T00:00:00Z",
+    "aktualizovano": "2026-09-23T14:41:27.096Z",
+    "zavaznost": "Y2",
+    "jistota": "stredni",
+    "stav": "bez-vysetrovani",
+    "atribuce": "neznama",
+    "puvodce": "neznamy",
+    "druh": "pripad",
+    "fakta": [
+      "V noci na 15. září 2026 sestřelily dva italské Eurofightery z mise Baltic Air Policing (základna Šiauliai) dron u vsi Pratkūnai v okrese Kaišiadorys, poblíž vodní elektrárny Kruonis (LRT).",
+      "Dron podle LRT nejspíš vletěl z Běloruska a asi půl hodiny se pohyboval v litevském vzdušném prostoru.",
+      "Podle LRT litevský ministr obrany potvrdil, že dron nesl výbušné zařízení.",
+      "Prezident Nausėda 16. září po zasedání Státní obranné rady uvedl, že šlo „nejpravděpodobněji“ o ruský dron typu Gerbera mířící na Ukrajinu, který byl vychýlen z kurzu ukrajinskými prostředky elektronického boje.",
+      "Podle NPR a LRT šlo o první dron sestřelený nad územím Litvy."
+    ],
+    "neznameho": [
+      "Původ a určení dronu nepotvrdilo žádné vyšetřování; prezidentova formulace je „nejpravděpodobněji“.",
+      "LRT v jednom článku uvádí, že není jasné, zda šlo o bojový dron.",
+      "Přesný čas sestřelu: ANSA uvádí pozdě večer v pondělí 14. 9., LRT brzy v úterý 15. 9.",
+      "Primární úřední stránku (litevské ministerstvo obrany, armáda, italské ministerstvo obrany) jsem neotevřel; vše je z médií citujících úředníky."
+    ],
+    "vyznam": "",
+    "eskalacniSpousteče": [],
+    "deeskalacniSignaly": [],
+    "zdroje": [
+      {
+        "nazev": "LRT English (Litva) — Nausėda: drone shot down over Lithuania was Russian Gerbera headed for Ukraine",
+        "url": "https://www.lrt.lt/en/news-in-english/19/3054232/nauseda-drone-shot-down-over-lithuania-was-russian-gerbera-headed-for-ukraine",
+        "typ": "media",
+        "publikovano": "2026-09-16T00:00:00Z",
+        "primarni": false,
+        "jazyk": "en"
+      },
+      {
+        "nazev": "LRT English (Litva) — NATO jets shoot down drone that entered Lithuanian airspace",
+        "url": "https://www.lrt.lt/en/news-in-english/19/3053032/nato-jets-shoot-down-drone-that-entered-lithuanian-airspace",
+        "typ": "media",
+        "publikovano": "2026-09-15T00:00:00Z",
+        "primarni": false,
+        "jazyk": "en"
+      },
+      {
+        "nazev": "ANSA — Italian fighters take out suspected Russian drone over Lithuania",
+        "url": "https://www.ansa.it/english/news/general_news/2026/09/15/italian-fighters-take-out-suspected-russian-drone-over-lithuania_42d71572-9a37-49c6-a4e9-1143fea38019.html",
+        "typ": "wire",
+        "publikovano": "2026-09-15T00:00:00Z",
+        "primarni": false,
+        "jazyk": "en"
+      },
+      {
+        "nazev": "NPR — NATO jets shoot down a drone in Lithuanian airspace",
+        "url": "https://www.npr.org/2026/09/15/g-s1-143284/nato-jets-down-drone-in-lithuanian-airspace",
+        "typ": "media",
+        "primarni": false
+      }
+    ],
+    "souvisejici": [],
+    "historie": [
+      {
+        "kdy": "2026-09-15T00:00:00Z",
+        "text": "Zachyceno automatickým sběrem, druhý nezávislý zdroj doložen při ověření.",
+        "novySignal": true
+      },
+      {
+        "kdy": "2026-09-23T14:41:27.096Z",
+        "text": "Zveřejněno jako neověřené úředně: dvě nezávislé redakce, úřad zatím nepotvrdil.",
+        "novySignal": false
+      }
+    ],
+    "novy": true,
+    "zapocitanoTyden": "2026-09-15",
+    "aiZpracovano": true,
+    "lidskyOvereno": false,
+    "archivniZaznam": false,
+    "overeni": "neovereno"
+  },
+  {
+    "id": "i-2026-09-15-42a895b81b",
+    "slug": "ee-42a895b81b",
+    "titulek": "Estonsko: prokuratura uzavřela dohodu o vině s Olegem Bessedinem, obviněným z činnosti proti státu ve prospěch Ruska; navržený trest je sedm let",
+    "kratkyTitulek": "Estonsko: prokuratura uzavřela dohodu o vině s Olegem Bessedinem, obviněným z činnosti proti státu ve prospěch Ruska; navržený trest je sedm let",
+    "zeme": "Estonsko",
+    "kodZeme": "EE",
+    "kategorie": [
+      "zpravodajske",
+      "rusko",
+      "pravo"
+    ],
+    "datumUdalosti": "2026-09-15T00:00:00Z",
+    "datumZjisteni": "2026-09-16T00:00:00Z",
+    "aktualizovano": "2026-09-23T14:41:27.096Z",
+    "zavaznost": "Y2",
+    "jistota": "stredni",
+    "stav": "obvineni",
+    "atribuce": "neznama",
+    "puvodce": "neznamy",
+    "druh": "pripad",
+    "fakta": [
+      "Proces začal 15. září 2026 u okresního soudu v Harju a v den zahájení byla uzavřena dohoda o vině (ERR, MKE citující BNS).",
+      "Podle vedoucího státního zástupce Taavi Perna se obžalovaný s ruskými státními institucemi podílel na vlivových aktivitách proti Estonsku šířením propagandy a dezinformací.",
+      "Dohoda počítá se sedmi lety nepodmíněného vězení a s konfiskací více než 73 000 eur.",
+      "Soud o schválení dohody rozhodne 28. září 2026 (ERR)."
+    ],
+    "neznameho": [
+      "Zda soud dohodu schválí; do 28. 9. 2026 nejde o odsouzení.",
+      "Úřední tisková zpráva estonské prokuratury nebyla otevřena; údaje jsou z médií citujících prokurátora a obě média čerpají z téhož prohlášení.",
+      "Rok zadržení obžalovaného se v otevřených textech liší nebo chybí; neuvádí se."
+    ],
+    "vyznam": "",
+    "eskalacniSpousteče": [],
+    "deeskalacniSignaly": [],
+    "zdroje": [
+      {
+        "nazev": "ERR News — Crimes against the Estonian state plea deal: Defendant faces 7 years in prison",
+        "url": "https://news.err.ee/1610138830/crimes-against-the-estonian-state-plea-deal-defendant-faces-7-years-in-prison",
+        "typ": "media",
+        "publikovano": "2026-09-16T00:00:00Z",
+        "primarni": false,
+        "jazyk": "en"
+      },
+      {
+        "nazev": "MKE (cituje BNS) — Oleg Besedin sõlmis prokuratuuriga kokkuleppe",
+        "url": "https://www.mke.ee/et/uudised-et/oleg-besedin-solmis-prokuratuuriga-kokkuleppe/",
+        "typ": "media",
+        "publikovano": "2026-09-16T00:00:00Z",
+        "primarni": false,
+        "jazyk": "et"
+      }
+    ],
+    "souvisejici": [],
+    "historie": [
+      {
+        "kdy": "2026-09-15T00:00:00Z",
+        "text": "Zachyceno automatickým sběrem, druhý nezávislý zdroj doložen při ověření.",
+        "novySignal": true
+      },
+      {
+        "kdy": "2026-09-23T14:41:27.096Z",
+        "text": "Zveřejněno jako neověřené úředně: dvě nezávislé redakce, úřad zatím nepotvrdil.",
+        "novySignal": false
+      }
+    ],
+    "novy": true,
+    "zapocitanoTyden": "2026-09-15",
+    "aiZpracovano": true,
+    "lidskyOvereno": false,
+    "archivniZaznam": false,
+    "overeni": "neovereno"
+  },
+  {
+    "id": "i-2026-09-14-246402d611",
+    "slug": "de-246402d611",
+    "titulek": "Německo: u vojenského letiště Wunstorf u Hannoveru našla policie trosky dronu, původ zatím není znám",
+    "kratkyTitulek": "Německo: u vojenského letiště Wunstorf u Hannoveru našla policie trosky dronu, původ zatím není znám",
+    "zeme": "Německo",
+    "kodZeme": "DE",
+    "kategorie": [
+      "drony"
+    ],
+    "datumUdalosti": "2026-09-14T00:00:00Z",
+    "datumZjisteni": "2026-09-15T00:00:00Z",
+    "aktualizovano": "2026-09-23T14:41:27.096Z",
+    "zavaznost": "Y1",
+    "jistota": "stredni",
+    "stav": "bez-vysetrovani",
+    "atribuce": "neznama",
+    "puvodce": "neznamy",
+    "druh": "pripad",
+    "fakta": [
+      "Východně od jezera Steinhuder Meer u Hannoveru byly nalezeny části pravděpodobně zřícené bezpilotní letadla; podle ZDF je stroj rozbitý na několik dílů, nešlo o komerčně dostupný dron, ale o objekt s vlastními součástkami, částečně z 3D tisku (ZDF, 18. 9. 2026).",
+      "Zemský kriminální úřad Dolního Saska o nálezu ví od pondělí 14. 9. 2026; policejní akce s hledáním dalších částí proběhla v úterý 15. 9. 2026.",
+      "Podle úřadu nehrozí obyvatelstvu nebezpečí; věc vede zemský kriminální úřad jako zajištění bezpečnosti (Gefahrenabwehrvorgang). Podle ZDF spolkový žalobce v případu Wunstorf nevyšetřuje a jen zvažuje, zda existuje souvislost s incidentem na letišti Lipsko/Halle.",
+      "Podle ZDF (kolem 18. 9. 2026) nebyla u nálezu zjištěna stopa výbušniny. Deník Süddeutsche Zeitung s NDR a WDR 22. 9. 2026 s odvoláním na bezpečnostní kruhy uvedly, že pár metrů od místa nálezu se našla podezřelá látka, zřejmě výbušnina, a že případ převzaly spolková prokuratura a spolková kriminální policie (t-online, 22. 9. 2026)."
+    ],
+    "neznameho": [
+      "Kdo je vlastníkem nebo pilotem dronu a odkud pocházel; zdroje označují stroj za vlastní konstrukci, žádný typ ani původ neuvádějí.",
+      "Přesné datum a čas pádu; 14. 9. je datum, od kdy o nálezu ví úřad, ne doložené datum události. ZDF uvádí, že stroj tam nejspíš ležel delší dobu.",
+      "Vzdálenost od letiště se liší: asi 800 m (t-online), asi 1 km (Ukrajinska Pravda podle Bildu), asi 2 km (ZDF).",
+      "Zda běží trestní řízení: t-online uvádí, že ne, Antenne Niedersachsen uvádí, že úřad vede vyšetřování; ZDF uvádí, že spolkový žalobce neermituje a věc prověřuje jen ve vztahu k Lipsku.",
+      "Souvislost s incidentem v Lipsku: ZDF ji jmenuje jako předmět prověřování, ruský špionážní pokus uvádí jen s odkazem na bezpečnostní kruhy; nepotvrzeno a nepřipisuje se.",
+      "Vyjádření policie ani Bundeswehru jsem přímo neotevřel; původní odkaz kandidáta (Novinky.cz přes Google News) jsem přímo neotevřel, jen jeho převzetí na prahanadlani.cz.",
+      "Zprávy si odporují: kolem 18. 9. spolková prokuratura podle ZDF nevyšetřovala a stopa výbušniny nebyla; 22. 9. média s odvoláním na nejmenované bezpečnostní kruhy píší o výbušnině a převzetí případu spolkovou prokuraturou. Úředně to k 23. 9. 2026 potvrzeno nebylo."
+    ],
+    "vyznam": "",
+    "eskalacniSpousteče": [],
+    "deeskalacniSignaly": [],
+    "zdroje": [
+      {
+        "nazev": "Antenne Niedersachsen — Polizei im Großeinsatz: Drohne nahe Steinhuder Meer abgestürzt",
+        "url": "https://www.antenne.com/niedersachsen/nachrichten/regional/Polizei-im-Gro%C3%9Feinsatz-Drohne-nahe-Steinhuder-Meer-abgest%C3%BCrzt-id1721572.html",
+        "typ": "media",
+        "publikovano": "2026-09-15T00:00:00Z",
+        "primarni": false,
+        "jazyk": "de"
+      },
+      {
+        "nazev": "t-online (Hannover) — Drohnenteile nahe Fliegerhorst Wunstorf entdeckt",
+        "url": "https://hannover.t-online.de/region/hannover/id_101437222/drohnenteile-nahe-bundeswehr-fliegerhorst-wunstorf-entdeckt-grosseinsatz.html",
+        "typ": "media",
+        "publikovano": "2026-09-16T00:00:00Z",
+        "primarni": false,
+        "jazyk": "de"
+      },
+      {
+        "nazev": "ZDFheute — Drohnenfund in Wunstorf: Ermittler prüfen Verbindung zu Leipzig",
+        "url": "https://www.zdfheute.de/politik/deutschland/bundeswehr-fliegerhorst-wunstorf-drohnenfund-bundesanwaltschaft-leipzig-100.html",
+        "typ": "media",
+        "publikovano": "2026-09-18T00:00:00Z",
+        "primarni": false,
+        "jazyk": "de"
+      },
+      {
+        "nazev": "Novinky.cz — Nedaleko letiště německé armády se zřítil dron",
+        "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxPVktFd0NmQm1LakVYYlpqUDROczZ6NGotM3VlazhTZm9TQXFCRUVfQlZZSFFucnFBTU1nVVRjbE5DTXVHVkIwNGgxOWtPa3kwYUxyNlhqLWFmX0Y2a09vcWo3RFBUVlB2ZkZRVklBWkd4M3RwcWxjbEZiZWRFa3YxMG9yU094Y2VGVVNvZm1IZFpwbC1XbGNiT3M1b0xmckg0Z2NOWU5B?oc=5",
+        "typ": "media",
+        "publikovano": "2026-09-15T00:00:00Z",
+        "primarni": false,
+        "jazyk": "cs"
+      },
+      {
+        "nazev": "t-online — Wunstorf: Sprengstoff nach Bundeswehr-Fliegerhorst gefunden",
+        "url": "https://www.t-online.de/nachrichten/deutschland/innenpolitik/id_101447700/wunstorf-sprengstoff-nach-bundeswehr-fliegerhorst-gefunden-anschlag-.html",
+        "typ": "media",
+        "primarni": false
+      }
+    ],
+    "souvisejici": [],
+    "historie": [
+      {
+        "kdy": "2026-09-14T00:00:00Z",
+        "text": "Zachyceno automatickým sběrem, druhý nezávislý zdroj doložen při ověření.",
+        "novySignal": true
+      },
+      {
+        "kdy": "2026-09-23T14:41:27.096Z",
+        "text": "Zveřejněno jako neověřené úředně: dvě nezávislé redakce, úřad zatím nepotvrdil.",
+        "novySignal": false
+      },
+      {
+        "kdy": "2026-09-23T14:30:00Z",
+        "text": "Doplněno: zprávy z 22. 9. o nálezu podezřelé látky a převzetí případu spolkovou prokuraturou; úředně nepotvrzeno.",
+        "novySignal": false
+      }
+    ],
+    "novy": true,
+    "zapocitanoTyden": "2026-09-14",
+    "aiZpracovano": true,
+    "lidskyOvereno": false,
+    "archivniZaznam": false,
+    "overeni": "neovereno"
+  },
+  {
+    "id": "i-2026-08-15-005c23a0c4",
+    "slug": "ee-005c23a0c4",
+    "titulek": "Estonsko: tři lotyšští podezřelí ze žhářství u výrobce vojenské techniky Milrem Robotics byli vydáni z Lotyšska a vzati do vazby",
+    "kratkyTitulek": "Estonsko: tři lotyšští podezřelí ze žhářství u výrobce vojenské techniky Milrem Robotics byli vydáni z Lotyšska a vzati do vazby",
+    "zeme": "Estonsko",
+    "kodZeme": "EE",
+    "kategorie": [
+      "sabotaz",
+      "vysetrovani",
+      "infrastruktura"
+    ],
+    "datumUdalosti": "2026-08-15T00:00:00Z",
+    "datumZjisteni": "2026-09-22T00:00:00Z",
+    "aktualizovano": "2026-09-23T14:41:27.096Z",
+    "zavaznost": "O1",
+    "jistota": "stredni",
+    "stav": "probiha",
+    "atribuce": "neznama",
+    "puvodce": "neznamy",
+    "druh": "pripad",
+    "fakta": [
+      "Podle estonské prokuratury vypukl v noci na sobotu 15. 8. 2026 v budově užívané firmou Milrem Robotics (výrobce dálkově řízené vojenské techniky nasazované na Ukrajině) v tallinnském Lasnamäe požár; podle prokuratury šlo o úmyslné žhářství.",
+      "Podle prokuratury byli tři lotyšští občané zadrženi v Lotyšsku a spolupráce s lotyšskými orgány vedla k jejich vydání do Estonska minulý týden.",
+      "Podle ERR státní žalobkyně Gardi Anderson uvedla, že jsou obviněni podle ustanovení o poškození a zničení majetku, což se může v průběhu vyšetřování změnit.",
+      "Podle ERR soudce Harjuského okresního soudu schválil jejich vzetí do vazby na základě důkazů a výslechů vedených Bezpečnostní policií (ISS/KAPO); vyšetřování zvažuje i to, zda šlo o sabotáž."
+    ],
+    "neznameho": [
+      "Zapojení Ruska: estonský premiér Kristen Michal podle ERR po incidentu uvedl, že stát prověřuje možnost ruského zapojení; jde o vyjádření premiéra, ne o prokázaný fakt, a nepřipisuje se.",
+      "Přesná totožnost a role tří podezřelých.",
+      "Zda obvinění zůstane jen u poškození majetku, nebo se rozšíří na sabotáž, prokuratura ještě neuzavřela."
+    ],
+    "vyznam": "",
+    "eskalacniSpousteče": [],
+    "deeskalacniSignaly": [],
+    "zdroje": [
+      {
+        "nazev": "ERR News (Estonsko) — 3 Latvian suspects in Milrem arson extradited to Estonia, remanded",
+        "url": "https://news.err.ee/1610144998/3-latvian-suspects-in-milrem-arson-extradited-to-estonia-remanded",
+        "typ": "media",
+        "publikovano": "2026-09-22T00:00:00Z",
+        "primarni": false,
+        "jazyk": "en"
+      },
+      {
+        "nazev": "Postimees — Milremi süütamine oli tahtlik, kolm kahtlusalust peeti Lätis kinni",
+        "url": "https://www.postimees.ee/8530520/milremi-suutamine-oli-tahtlik-kolm-kahtlusalust-peeti-latis-kinni",
+        "typ": "media",
+        "publikovano": "2026-08-19T00:00:00Z",
+        "primarni": false,
+        "jazyk": "et"
+      }
+    ],
+    "souvisejici": [],
+    "historie": [
+      {
+        "kdy": "2026-08-15T00:00:00Z",
+        "text": "Zachyceno automatickým sběrem, druhý zdroj doložen před zařazením do fronty.",
+        "novySignal": true
+      },
+      {
+        "kdy": "2026-09-23T14:41:27.096Z",
+        "text": "Zveřejněno jako neověřené úředně: dvě nezávislé redakce, úřad zatím nepotvrdil.",
+        "novySignal": false
+      }
+    ],
+    "novy": true,
+    "zapocitanoTyden": "2026-08-15",
+    "aiZpracovano": true,
+    "lidskyOvereno": false,
+    "archivniZaznam": false,
+    "overeni": "neovereno"
+  },
+  {
+    "id": "i-2026-09-01-4a8e8295b2",
+    "slug": "ro-4a8e8295b2",
+    "titulek": "Rumunsko: na poli u obce Viișoara v župě Vaslui ležel poškozený dron s výbušnou náloží; pyrotechnici SRI ji na místě zničili",
+    "kratkyTitulek": "Rumunsko: dron s náloží u Viișoary",
+    "zeme": "Rumunsko",
+    "kodZeme": "RO",
+    "kategorie": [
+      "drony"
+    ],
+    "datumUdalosti": "2026-09-01T00:00:00Z",
+    "datumZjisteni": "2026-09-01T00:00:00Z",
+    "aktualizovano": "2026-09-23T14:30:00Z",
+    "zavaznost": "Y2",
+    "jistota": "stredni",
+    "stav": "probiha",
+    "atribuce": "neznama",
+    "puvodce": "neznamy",
+    "druh": "pripad",
+    "fakta": [
+      "Místní obyvatel ráno 1. 9. 2026 našel poškozený dron na poli u obce Viișoara (župa Vaslui), asi 30 km od hranice s Moldavskem.",
+      "Policie byla o nálezu informována v 10:15; oblast uzavřela policie a četnictvo.",
+      "Dron nesl výbušnou nálož; pyrotechnici tajné služby SRI ji na místě řízeně zničili (odpálili).",
+      "Věc převzalo státní zastupitelství při Odvolacím soudu v Iași."
+    ],
+    "neznameho": [
+      "Oficiální určení původu (ruský dron) ve výsledcích nezaznělo; slovo 'ruský' je jen v adrese (slug) článku Adevărul.",
+      "Typ dronu.",
+      "Úřední sdělení se nepodařilo otevřít; údaje jsou z redakcí, které úřady citují."
+    ],
+    "vyznam": "",
+    "eskalacniSpousteče": [],
+    "deeskalacniSignaly": [],
+    "zdroje": [
+      {
+        "nazev": "Știrile ProTV — Dronă găsită prăbușită pe un câmp din Viișoara, județul Vaslui. Aparatul de zbor ar avea explozibil",
+        "url": "https://stirileprotv.ro/stiri/actualitate/drona-gasita-prabusita-pe-un-camp-din-vaslui-politia-si-procurorii-au-deschis-o-ancheta.html",
+        "typ": "media",
+        "publikovano": "2026-09-01T00:00:00Z",
+        "primarni": false,
+        "jazyk": "ro"
+      },
+      {
+        "nazev": "Martor Incomod — Vaslui: Drona găsită pe un câmp în comuna Viișoara, lângă granița cu Moldova, a fost detonată",
+        "url": "https://www.martorincomod.ro/vaslui-drona-gasita-pe-un-camp-in-comuna-viisoara-langa-granita-cu-moldova-a-fost-detonata/",
+        "typ": "media",
+        "primarni": false,
+        "jazyk": "ro"
+      },
+      {
+        "nazev": "B1TV — Dronă cu explozibil în Vaslui, detonată de SRI",
+        "url": "https://www.b1tv.ro/eveniment/drona-cu-explozibil-in-vaslui-detonata-de-sri-1725559.html",
+        "typ": "media",
+        "primarni": false,
+        "jazyk": "ro"
+      },
+      {
+        "nazev": "Romania Insider — Damaged drone reportedly found in field in eastern Romania",
+        "url": "https://www.romania-insider.com/drone-found-field-vaslui-sept-2026",
+        "typ": "media",
+        "publikovano": "2026-09-01T00:00:00Z",
+        "primarni": false,
+        "jazyk": "en"
+      },
+      {
+        "nazev": "Ukrainska Pravda — Drone carrying explosives found in Romania near border with Moldova",
+        "url": "https://www.pravda.com.ua/eng/news/2026/09/01/8051347/",
+        "typ": "media",
+        "publikovano": "2026-09-01T00:00:00Z",
+        "primarni": false,
+        "jazyk": "en"
+      }
+    ],
+    "souvisejici": [],
+    "historie": [
+      {
+        "kdy": "2026-09-23T14:30:00Z",
+        "text": "Zapsáno podle tipu z veřejného přehledu (Facebook, T. Zdechovský), ověřeno proti redakcím; úředně nepotvrzeno.",
+        "novySignal": true
+      }
+    ],
+    "novy": true,
+    "zapocitanoTyden": "2026-09-01",
+    "aiZpracovano": true,
+    "lidskyOvereno": false,
+    "archivniZaznam": false,
+    "overeni": "neovereno"
+  },
+  {
+    "id": "i-2026-08-30-41d14a3d41",
+    "slug": "pl-41d14a3d41",
+    "titulek": "Polsko: požár zasáhl lublinský závod JFG Composites, subdodavatele letecké výroby; prokuratura vyšetřuje, premiér Tusk mluví o žhářství nejspíš na objednávku Ruska",
+    "kratkyTitulek": "Polsko: požár v závodě JFG Composites",
+    "zeme": "Polsko",
+    "kodZeme": "PL",
+    "kategorie": [
+      "sabotaz",
+      "vysetrovani"
+    ],
+    "datumUdalosti": "2026-08-30T00:00:00Z",
+    "datumZjisteni": "2026-08-30T00:00:00Z",
+    "aktualizovano": "2026-09-23T14:30:00Z",
+    "zavaznost": "Y3",
+    "jistota": "stredni",
+    "stav": "probiha",
+    "atribuce": "nepotvrzena",
+    "puvodce": "neznamy",
+    "druh": "pripad",
+    "fakta": [
+      "Požár zasáhl provozovnu firmy JFG Composites v ulici Kasprowicza v Lublinu; firma vyrábí kompozitní díly pro letectví a je subdodavatelem skupiny Leonardo (PZL-Świdnik).",
+      "Požár zasáhl zhruba 2 000 m², hasilo jej asi 60 hasičů přibližně sedm hodin.",
+      "Škodu státní zastupitelství vyčíslilo zhruba na 21 mil. zł (asi 5 mil. eur).",
+      "Vyšetřování vede Okresní státní zastupitelství v Lublinu; podle Notes from Poland jde o paragrafy o činnosti pro cizí zpravodajskou službu a o teroristickém trestném činu.",
+      "Premiér Tusk podle titulku Notes from Poland z 2. 9. 2026 řekl, že šlo 'nepochybně' o žhářství, které nejspíš objednalo Rusko."
+    ],
+    "neznameho": [
+      "Oficiální prokázání ruské objednávky; vyšetřovatelé podle Lublin112 a Porządek zvažují i technickou závadu nebo samovznícení.",
+      "Datum 30. 8. vychází ze souhrnu výsledků vyhledávání k polským článkům, primární text se nepodařilo stáhnout."
+    ],
+    "vyznam": "",
+    "eskalacniSpousteče": [],
+    "deeskalacniSignaly": [],
+    "zdroje": [
+      {
+        "nazev": "Prokuratura Okręgowa w Lublinie (gov.pl) — Śledztwo w sprawie pożaru na terenie zakładu JFG Composites przy ul. Kasprowicza w Lublinie",
+        "url": "https://www.gov.pl/web/po-lublin/sledztwo-w-sprawie-pozaru-na-terenie-zakladu-jfg-composites-przy-ul-kasprowicza-w-lublinie",
+        "typ": "primary",
+        "primarni": true,
+        "jazyk": "pl"
+      },
+      {
+        "nazev": "Notes From Poland — Polish drone plant fire “undoubtedly” arson and likely ordered by Russia, says Tusk",
+        "url": "https://notesfrompoland.com/2026/09/02/polish-drone-plant-fire-undoubtedly-arson-and-likely-ordered-by-russia-says-tusk/",
+        "typ": "media",
+        "publikovano": "2026-09-02T00:00:00Z",
+        "primarni": false,
+        "jazyk": "en"
+      },
+      {
+        "nazev": "Defence24 — Miliony euro strat po pożarze. Prokuratura wszczyna śledztwo",
+        "url": "https://defence24.pl/przemysl/miliony-euro-strat-po-pozarze-prokuratura-wszczyna-sledztwo",
+        "typ": "media",
+        "primarni": false,
+        "jazyk": "pl"
+      },
+      {
+        "nazev": "Lublin112 — Pożar hali JFG Composites w Lublinie. Śledczy badają kilka możliwych przyczyn",
+        "url": "https://www.lublin112.pl/pozar-hali-jfg-composites-w-lublinie-sledczy-badaja-kilka-mozliwych-przyczyn/",
+        "typ": "media",
+        "primarni": false,
+        "jazyk": "pl"
+      },
+      {
+        "nazev": "Brussels Signal — Poland suspects sabotage behind fires at plants linked to drone production",
+        "url": "https://brusselssignal.eu/2026/09/poland-suspects-sabotage-behind-fires-at-plants-linked-to-drone-production/",
+        "typ": "media",
+        "primarni": false,
+        "jazyk": "en"
+      }
+    ],
+    "souvisejici": [
+      {
+        "incidentId": "a14",
+        "potvrzena": false,
+        "popis": "Požár v závodě na drony WB Electronics ve stejných dnech; oba případy zmínil premiér Tusk."
+      }
+    ],
+    "historie": [
+      {
+        "kdy": "2026-09-23T14:30:00Z",
+        "text": "Zapsáno podle tipu z veřejného přehledu (Facebook, T. Zdechovský), ověřeno proti redakcím; úředně nepotvrzeno.",
+        "novySignal": true
+      }
+    ],
+    "novy": true,
+    "zapocitanoTyden": "2026-08-30",
+    "aiZpracovano": true,
+    "lidskyOvereno": false,
+    "archivniZaznam": false,
+    "overeni": "neovereno"
+  },
+  {
+    "id": "i-2026-09-08-8ef4b18c23",
+    "slug": "ro-8ef4b18c23",
+    "titulek": "Rumunsko: letiště Iași dočasně zastavilo lety po výstraze RO-ALERT, když radar ministerstva obrany zachytil vzdušný cíl u města Roman",
+    "kratkyTitulek": "Rumunsko: letiště Iași zastavilo lety kvůli dronu",
+    "zeme": "Rumunsko",
+    "kodZeme": "RO",
+    "kategorie": [
+      "drony"
+    ],
+    "datumUdalosti": "2026-09-08T00:00:00Z",
+    "datumZjisteni": "2026-09-08T00:00:00Z",
+    "aktualizovano": "2026-09-23T14:30:00Z",
+    "zavaznost": "Y1",
+    "jistota": "stredni",
+    "stav": "bez-vysetrovani",
+    "atribuce": "neznama",
+    "druh": "opatreni",
+    "vykonal": "Mezinárodní letiště Iași",
+    "fakta": [
+      "Mezinárodní letiště Iași dočasně zastavilo všechny lety po výstraze RO-ALERT; potvrdil to ředitel letiště Romeo Vatră.",
+      "Radar ministerstva obrany zachytil v úterý v 16:47 vzdušný cíl 18 km severně od města Roman.",
+      "Výstraha RO-Alert před možným pádem objektů platila pro župy Iași, Vaslui, Neamț a Suceava, s výzvou dodržovat ochranná opatření 90 minut.",
+      "Podle ředitele letiště nebyl zrušen žádný let."
+    ],
+    "neznameho": [
+      "Oficiální určení původu dronu (ruský) ve výsledcích nezaznělo.",
+      "Přesná délka přerušení provozu.",
+      "Úřední sdělení se nepodařilo otevřít; údaje jsou z redakcí, které úřady citují."
+    ],
+    "vyznam": "",
+    "eskalacniSpousteče": [],
+    "deeskalacniSignaly": [],
+    "zdroje": [
+      {
+        "nazev": "AGERPRES — Flights at Iasi International Airport suspended after RO-ALERT incoming drone warning",
+        "url": "https://agerpres.ro/english/2026/09/08/flights-at-iasi-international-airport-suspended-after-ro-alert-incoming-drone-warning--1591767",
+        "typ": "wire",
+        "publikovano": "2026-09-08T00:00:00Z",
+        "primarni": false,
+        "jazyk": "en"
+      },
+      {
+        "nazev": "AGERPRES — Zborurile de pe Aeroportul Internațional Iași, suspendate după mesajul RO-ALERT privind detectarea unei drone",
+        "url": "https://agerpres.ro/social/2026/09/08/zborurile-de-pe-aeroportul-international-iasi-suspendate-dupa-mesajul-ro-alert-privind-detectarea-un--1591762",
+        "typ": "wire",
+        "publikovano": "2026-09-08T00:00:00Z",
+        "primarni": false,
+        "jazyk": "ro"
+      },
+      {
+        "nazev": "Realitatea — RO‑Alert de dronă în județele Iași, Vaslui, Neamț și Suceava. Aeroportul Internațional Iași a suspendat zborurile",
+        "url": "https://www.realitatea.net/stiri/actualitate/roalert-de-drona-la-iasi-aeroportul-international-a-suspendat-zborurile-pljf6c",
+        "typ": "media",
+        "primarni": false,
+        "jazyk": "ro"
+      }
+    ],
+    "souvisejici": [],
+    "historie": [
+      {
+        "kdy": "2026-09-23T14:30:00Z",
+        "text": "Zapsáno podle tipu z veřejného přehledu (Facebook, T. Zdechovský), ověřeno proti redakcím; úředně nepotvrzeno.",
+        "novySignal": true
+      }
+    ],
+    "novy": true,
+    "zapocitanoTyden": "2026-09-08",
+    "aiZpracovano": true,
+    "lidskyOvereno": false,
+    "archivniZaznam": false,
+    "overeni": "neovereno"
+  },
+  {
+    "id": "i-2026-09-10-0d81589740",
+    "slug": "pl-0d81589740",
+    "titulek": "Polsko: premiér Tusk oznámil, že polské a ukrajinské služby v noci na 10. září odvrátily hrozbu pro jeden z hraničních přechodů s Ukrajinou",
+    "kratkyTitulek": "Polsko: odvrácená hrozba pro hraniční přechod",
+    "zeme": "Polsko",
+    "kodZeme": "PL",
+    "kategorie": [
+      "hranice",
+      "vysetrovani"
+    ],
+    "datumUdalosti": "2026-09-10T00:00:00Z",
+    "datumZjisteni": "2026-09-10T00:00:00Z",
+    "aktualizovano": "2026-09-23T14:30:00Z",
+    "zavaznost": "Y2",
+    "jistota": "stredni",
+    "stav": "probiha",
+    "atribuce": "neznama",
+    "puvodce": "neznamy",
+    "druh": "pripad",
+    "fakta": [
+      "Premiér Donald Tusk oznámil, že v noci z 9. na 10. 9. 2026 se díky spolupráci polských a ukrajinských služeb podařilo odvrátit přímou hrozbu pro jeden z hraničních přechodů s Ukrajinou.",
+      "Tusk neřekl, o který přechod šlo, ani jaká byla povaha a zdroj hrozby.",
+      "Ve stejné době Rusko útočilo drony u polské hranice; dron zasáhl čerpací stanici asi 2 km od přechodu Dorohusk-Jahodyn na ukrajinské straně."
+    ],
+    "neznameho": [
+      "Místo, charakter plánovaného útoku a pachatelé; že šlo o 'ruský' útok, uvádějí média (UA.NEWS, RBC-Ukraine), ne doslovná Tuskova citace, kterou jsem viděl.",
+      "Úřední sdělení se nepodařilo otevřít; údaje jsou z redakcí, které úřady citují."
+    ],
+    "vyznam": "",
+    "eskalacniSpousteče": [],
+    "deeskalacniSignaly": [],
+    "zdroje": [
+      {
+        "nazev": "UA.NEWS — Tusk said an attack on a border crossing with Ukraine had been prevented",
+        "url": "https://ua.news/en/war-vs-rf/tusk-zaiaviv-pro-zapobigannia-atatsi-na-punkt-propusku-na-kordoni-z-ukrayinoiu",
+        "typ": "media",
+        "primarni": false,
+        "jazyk": "en"
+      },
+      {
+        "nazev": "Dziennik Narodowy — Służby udaremniły zagrożenie na granicy. Tusk nie ujawnia szczegółów",
+        "url": "https://dzienniknarodowy.pl/sluzby-udaremnily-zagrozenie-na-granicy/",
+        "typ": "media",
+        "primarni": false,
+        "jazyk": "pl"
+      },
+      {
+        "nazev": "wMeritum — Udaremniono atak? Tusk z niepokojącym komunikatem. \"Mieliśmy zapowiedź\"",
+        "url": "https://wmeritum.pl/atak-tusk-przejscie-graniczne-zapowiedz/439858",
+        "typ": "media",
+        "primarni": false,
+        "jazyk": "pl"
+      },
+      {
+        "nazev": "RBC-Ukraine — Poland expects Russian attacks on border crossings with Ukraine, Tusk says",
+        "url": "https://newsukraine.rbc.ua/news/tusk-poland-expects-russian-attacks-on-border-1789061523.html",
+        "typ": "media",
+        "primarni": false,
+        "jazyk": "en"
+      }
+    ],
+    "souvisejici": [],
+    "historie": [
+      {
+        "kdy": "2026-09-23T14:30:00Z",
+        "text": "Zapsáno podle tipu z veřejného přehledu (Facebook, T. Zdechovský), ověřeno proti redakcím; úředně nepotvrzeno.",
+        "novySignal": true
+      }
+    ],
+    "novy": true,
+    "zapocitanoTyden": "2026-09-10",
+    "aiZpracovano": true,
+    "lidskyOvereno": false,
+    "archivniZaznam": false,
+    "overeni": "neovereno"
+  },
+  {
+    "id": "i-2026-09-10-1c8339e0b9",
+    "slug": "ro-1c8339e0b9",
+    "titulek": "Rumunsko: pyrotechnici námořnictva zneškodnili trosky dronu na pláži Capu Midia u Konstancy; výbušninu podle ministerstva obrany neobsahovaly",
+    "kratkyTitulek": "Rumunsko: trosky dronu na pláži Capu Midia",
+    "zeme": "Rumunsko",
+    "kodZeme": "RO",
+    "kategorie": [
+      "drony"
+    ],
+    "datumUdalosti": "2026-09-10T00:00:00Z",
+    "datumZjisteni": "2026-09-10T00:00:00Z",
+    "aktualizovano": "2026-09-23T14:30:00Z",
+    "zavaznost": "Y1",
+    "jistota": "stredni",
+    "stav": "bez-vysetrovani",
+    "atribuce": "neznama",
+    "puvodce": "neznamy",
+    "druh": "pripad",
+    "fakta": [
+      "Turisté nahlásili 9. 9. kolem 20:00 trosky dronu na pláži Capu Midia u obce Corbu (Konstanca); kvůli tmě byla oblast uzavřena a zásah odložen.",
+      "Pyrotechnici námořnictva (EOD) trosky 10. 9. kolem 9:30 prověřili a na místě zneškodnili; podle ministerstva obrany neobsahovaly výbušninu.",
+      "Capu Midia je podle zdrojů vojenský výcvikový prostor."
+    ],
+    "neznameho": [
+      "Že šlo o ruský průzkumný dron: typ ani původ ministerstvo podle nalezených zdrojů neuvedlo.",
+      "Samostatný nález 'u vojenské základny' a zničení ozbrojeného dronu na místě 10. 9. jsem nedoložil; trosky z Capu Midia výbušninu neměly.",
+      "Úřední sdělení se nepodařilo otevřít; údaje jsou z redakcí, které úřady citují."
+    ],
+    "vyznam": "",
+    "eskalacniSpousteče": [],
+    "deeskalacniSignaly": [],
+    "zdroje": [
+      {
+        "nazev": "AGERPRES — MApN: Fragmente de dronă, neutralizate în zona plajei de la Capu Midia",
+        "url": "https://agerpres.ro/social/2026/09/10/mapn-fragmente-de-drona-neutralizate-in-zona-plajei-de-la-capu-midia--1592279",
+        "typ": "wire",
+        "publikovano": "2026-09-10T00:00:00Z",
+        "primarni": false,
+        "jazyk": "ro"
+      },
+      {
+        "nazev": "Gazeta de Sud — MApN: Fragmente de dronă, neutralizate în zona plajei de la Capu Midia",
+        "url": "https://www.gds.ro/Actualitate/2026-09-10/mapn-fragmente-de-drona-neutralizate-in-zona-plajei-de-la-capu-midia/",
+        "typ": "media",
+        "publikovano": "2026-09-10T00:00:00Z",
+        "primarni": false,
+        "jazyk": "ro"
+      },
+      {
+        "nazev": "European Pravda — Drone wreckage found on beach in Romania",
+        "url": "https://www.eurointegration.com.ua/eng/news/2026/09/10/7245206/",
+        "typ": "media",
+        "publikovano": "2026-09-10T00:00:00Z",
+        "primarni": false,
+        "jazyk": "en"
+      },
+      {
+        "nazev": "Mediafax — Drone fragments found on romanian beach. The military neutralized them",
+        "url": "https://www.mediafax.ro/english/drone-fragments-found-on-romanian-beach-the-military-neutralized-them-23804932",
+        "typ": "media",
+        "primarni": false,
+        "jazyk": "en"
+      }
+    ],
+    "souvisejici": [],
+    "historie": [
+      {
+        "kdy": "2026-09-23T14:30:00Z",
+        "text": "Zapsáno podle tipu z veřejného přehledu (Facebook, T. Zdechovský), ověřeno proti redakcím; úředně nepotvrzeno.",
+        "novySignal": true
+      }
+    ],
+    "novy": true,
+    "zapocitanoTyden": "2026-09-10",
+    "aiZpracovano": true,
+    "lidskyOvereno": false,
+    "archivniZaznam": false,
+    "overeni": "neovereno"
+  },
+  {
+    "id": "i-2026-09-11-8c2cb86834",
+    "slug": "ro-8c2cb86834",
+    "titulek": "Rumunsko: na pobřeží v župě Tulcea a v Černém moři se 11. září našly trosky několika dronů, část s nevybuchlou náloží zničenou na místě",
+    "kratkyTitulek": "Rumunsko: trosky dronů na pobřeží a v moři",
+    "zeme": "Rumunsko",
+    "kodZeme": "RO",
+    "kategorie": [
+      "drony"
+    ],
+    "datumUdalosti": "2026-09-11T00:00:00Z",
+    "datumZjisteni": "2026-09-11T00:00:00Z",
+    "aktualizovano": "2026-09-23T14:30:00Z",
+    "zavaznost": "Y2",
+    "jistota": "stredni",
+    "stav": "bez-vysetrovani",
+    "atribuce": "neznama",
+    "puvodce": "neznamy",
+    "druh": "pripad",
+    "fakta": [
+      "Ministerstvo obrany 11. 9. 2026 oznámilo nálezy a zneškodnění trosek několika dronů v župě Tulcea, v Černém moři a severně od Konstancy.",
+      "Kolem 16:00 zahlédla posádka civilní nákladní lodi v Černém moři dva kusy dronu; vylovil je hlídkový člun pobřežní stráže a podle zdrojů neobsahovaly výbušninu.",
+      "Kolem 13:30 se na pláži u Chilia Veche (Tulcea) našly dva díly dronu bez bojové hlavice.",
+      "V 15:18 našla pohraniční policie u Perișoru dva další díly; jeden obsahoval nevybuchlou nálož, která byla na místě zneškodněna.",
+      "V 17:55 našel tým EOD u Edighiol-Periboina zbytky čtyř dronů, mezi nimi stíhací (interceptorový) dron s výbušninou."
+    ],
+    "neznameho": [
+      "Tři kusy nalezené pobřežní stráží: zdroje uvádějí dva kusy, vylovené hlídkou pobřežní stráže.",
+      "Oficiální určení původu (ruský).",
+      "Úřední sdělení se nepodařilo otevřít; údaje jsou z redakcí, které úřady citují."
+    ],
+    "vyznam": "",
+    "eskalacniSpousteče": [],
+    "deeskalacniSignaly": [],
+    "zdroje": [
+      {
+        "nazev": "Kyiv Post — Romania Finds Drone Debris and Active Warhead Along Black Sea Coast",
+        "url": "https://www.kyivpost.com/post/84345",
+        "typ": "media",
+        "primarni": false,
+        "jazyk": "en"
+      },
+      {
+        "nazev": "PressAlert — MApN: Mai multe fragmente de drone aeriene, unele cu încărcătură explozivă, găsite pe litoral",
+        "url": "https://www.pressalert.ro/2026/09/mapn-mai-multe-fragmente-de-drone-aeriene-unele-cu-incarcatura-exploziva-gasite-pe-litoral/",
+        "typ": "media",
+        "primarni": false,
+        "jazyk": "ro"
+      },
+      {
+        "nazev": "Monitorul de Galați — Cel puţin 10 fragmente şi resturi de drone, descoperite într-o singură zi în România",
+        "url": "https://www.monitoruldegalati.ro/eveniment/cel-putin-10-fragmente-si-resturi-de-drone-descoperite-intr-o-singura-zi-in-romania-avioane-militare-survoleaza-si-deasupra-galatiului.html",
+        "typ": "media",
+        "primarni": false,
+        "jazyk": "ro"
+      },
+      {
+        "nazev": "Inkorr — Romania Neutralizes 10 Military Drones Armed with Explosives on Black Sea Coast",
+        "url": "https://inkorr.com/en/u-rumunii-zneskodili-ulamki-desati-vijskovih-droniv-iz-vibuhivkou-na-uzberezzi-cornogo-mora-346390",
+        "typ": "media",
+        "primarni": false,
+        "jazyk": "en"
+      }
+    ],
+    "souvisejici": [],
+    "historie": [
+      {
+        "kdy": "2026-09-23T14:30:00Z",
+        "text": "Zapsáno podle tipu z veřejného přehledu (Facebook, T. Zdechovský), ověřeno proti redakcím; úředně nepotvrzeno.",
+        "novySignal": true
+      }
+    ],
+    "novy": true,
+    "zapocitanoTyden": "2026-09-11",
+    "aiZpracovano": true,
+    "lidskyOvereno": false,
+    "archivniZaznam": false,
+    "overeni": "neovereno"
+  },
+  {
+    "id": "i-2026-09-14-1a64ea48c6",
+    "slug": "pl-1a64ea48c6",
+    "titulek": "Polsko: námořnictvo vytáhlo z Baltu u Rusinowa vojenský dron s ostrou hlavicí; prokuratura ho předběžně určila jako ruský Gerbera 2",
+    "kratkyTitulek": "Polsko: dron s hlavicí v Baltu u Rusinowa",
+    "zeme": "Polsko",
+    "kodZeme": "PL",
+    "kategorie": [
+      "drony",
+      "rusko"
+    ],
+    "datumUdalosti": "2026-09-14T00:00:00Z",
+    "datumZjisteni": "2026-09-14T00:00:00Z",
+    "aktualizovano": "2026-09-23T14:30:00Z",
+    "zavaznost": "Y2",
+    "jistota": "stredni",
+    "stav": "probiha",
+    "atribuce": "vysetrovana",
+    "puvodce": "neznamy",
+    "druh": "pripad",
+    "fakta": [
+      "Hlídka polského námořnictva 14. 9. 2026 spatřila v Baltském moři u pláže v Rusinowu (u Jarosławce) vojenský dron a vytáhla ho z vody.",
+      "Dron nesl ostrou tříštivo-trhavou hlavici s rozbuškou; pyrotechnici ji oddělili a v úterý večer (15. 9.) zničili na pláži.",
+      "Státní zastupitelství dron předběžně určilo jako ruský Gerbera 2."
+    ],
+    "neznameho": [
+      "Odkud dron vzlétl, jakou trasou letěl a k čemu měl sloužit; vyšetřovatelé to zatím nezjistili.",
+      "Úřední sdělení se nepodařilo otevřít; údaje jsou z redakcí, které úřady citují."
+    ],
+    "vyznam": "",
+    "eskalacniSpousteče": [],
+    "deeskalacniSignaly": [],
+    "zdroje": [
+      {
+        "nazev": "TVP World — ‘Russian drone’ found off Poland’s Baltic Sea was carrying warhead",
+        "url": "https://tvpworld.com/95412376/explosive-warhead-found-on-suspected-russian-drone-recovered-off-polands-baltic-sea-near-rusinowo",
+        "typ": "media",
+        "primarni": false,
+        "jazyk": "en"
+      },
+      {
+        "nazev": "TVP World — Suspected Russian military drone found on Poland’s Baltic coast",
+        "url": "https://tvpworld.com/95378110/suspected-russian-military-drone-found-on-polands-baltic-coast",
+        "typ": "media",
+        "primarni": false,
+        "jazyk": "en"
+      },
+      {
+        "nazev": "UNITED24 Media — Russian Drone Found on Polish Beach Carried Live Explosive Warhead, Prosecutors Confirm",
+        "url": "https://united24media.com/world/russian-drone-found-on-polish-beach-carried-live-explosive-warhead-prosecutors-confirm-22602",
+        "typ": "media",
+        "primarni": false,
+        "jazyk": "en"
+      },
+      {
+        "nazev": "DroneXL — Russian Drone Off Poland Carried a Live Warhead. Its Route Is Unknown",
+        "url": "https://dronexl.co/2026/09/16/poland-gerbera-drone-live-warhead-rusinowo/",
+        "typ": "media",
+        "publikovano": "2026-09-16T00:00:00Z",
+        "primarni": false,
+        "jazyk": "en"
+      }
+    ],
+    "souvisejici": [],
+    "historie": [
+      {
+        "kdy": "2026-09-23T14:30:00Z",
+        "text": "Zapsáno podle tipu z veřejného přehledu (Facebook, T. Zdechovský), ověřeno proti redakcím; úředně nepotvrzeno.",
+        "novySignal": true
+      }
+    ],
+    "novy": true,
+    "zapocitanoTyden": "2026-09-14",
+    "aiZpracovano": true,
+    "lidskyOvereno": false,
+    "archivniZaznam": false,
+    "overeni": "neovereno"
+  },
+  {
+    "id": "i-2026-09-14-a3c89678c7",
+    "slug": "md-a3c89678c7",
+    "titulek": "Moldavsko: dva drony bez povolení vstoupily do moldavského vzdušného prostoru u Palanky a Cioburciu během ruských útoků na Oděskou oblast",
+    "kratkyTitulek": "Moldavsko: dva drony u Palanky a Cioburciu",
+    "zeme": "Moldavsko",
+    "kodZeme": "MD",
+    "kategorie": [
+      "drony"
+    ],
+    "datumUdalosti": "2026-09-14T00:00:00Z",
+    "datumZjisteni": "2026-09-14T00:00:00Z",
+    "aktualizovano": "2026-09-23T14:30:00Z",
+    "zavaznost": "Y1",
+    "jistota": "stredni",
+    "stav": "bez-vysetrovani",
+    "atribuce": "neznama",
+    "puvodce": "neznamy",
+    "druh": "pripad",
+    "fakta": [
+      "Ráno 14. 9. 2026 vstoupily bez povolení do moldavského vzdušného prostoru dva drony, během ruských útoků na Oděskou oblast.",
+      "Drony byly zachyceny u obce Palanca (okres Ștefan Vodă) a u obcí Cioburciu a Pervomaisc na levém břehu Dněstru.",
+      "Druhý dron překročil hranici v 11:09 u Cioburciu, prostor opustil u ukrajinské obce Kučurhan a zamířil ke Stepove.",
+      "Narušení potvrdila moldavská pohraniční policie i ukrajinská Státní pohraniční služba."
+    ],
+    "neznameho": [
+      "Oficiální určení původu: moldavská veřejnoprávní Moldova 1 drony v titulku označuje za ruské, v úředním textu jsem to neviděl.",
+      "Úřední sdělení se nepodařilo otevřít; údaje jsou z redakcí, které úřady citují."
+    ],
+    "vyznam": "",
+    "eskalacniSpousteče": [],
+    "deeskalacniSignaly": [],
+    "zdroje": [
+      {
+        "nazev": "Moldova 1 — Russian drones detected in Moldova's airspace: Two at Palanca and Cioburciu",
+        "url": "https://moldova1.md/p/85298/russian-drones-detected-in-moldova-s-airspace-two-at-palanca-and-cioburciu",
+        "typ": "media",
+        "primarni": false,
+        "jazyk": "en"
+      },
+      {
+        "nazev": "Radio Moldova — Two drones illegally entered Moldova's airspace, one over Palanca",
+        "url": "https://radiomoldova.md/p/85043/two-drones-illegally-entered-moldova-s-airspace-one-over-palanca",
+        "typ": "media",
+        "primarni": false,
+        "jazyk": "en"
+      },
+      {
+        "nazev": "Mezha — Moldova Reports Two Drone Airspace Violations During Russian Attack on Ukraine",
+        "url": "https://mezha.net/eng/news/c1fec6fb_moldova_reports_two/",
+        "typ": "media",
+        "primarni": false,
+        "jazyk": "en"
+      }
+    ],
+    "souvisejici": [],
+    "historie": [
+      {
+        "kdy": "2026-09-23T14:30:00Z",
+        "text": "Zapsáno podle tipu z veřejného přehledu (Facebook, T. Zdechovský), ověřeno proti redakcím; úředně nepotvrzeno.",
+        "novySignal": true
+      }
+    ],
+    "novy": true,
+    "zapocitanoTyden": "2026-09-14",
+    "aiZpracovano": true,
+    "lidskyOvereno": false,
+    "archivniZaznam": false,
+    "overeni": "neovereno"
+  },
+  {
+    "id": "i-2026-09-14-540223fa5a",
+    "slug": "dk-540223fa5a",
+    "titulek": "Dánsko: ruská fregata vypálila v mezinárodních vodách u Gedseru dvě světlice směrem k dánskému vojenskému vrtulníku; Kodaň si předvolala ruského velvyslance",
+    "kratkyTitulek": "Dánsko: ruská fregata a světlice k vrtulníku",
+    "zeme": "Dánsko",
+    "kodZeme": "DK",
+    "kategorie": [
+      "hybridni",
+      "rusko"
+    ],
+    "datumUdalosti": "2026-09-14T00:00:00Z",
+    "datumZjisteni": "2026-09-14T00:00:00Z",
+    "aktualizovano": "2026-09-23T14:30:00Z",
+    "zavaznost": "Y2",
+    "jistota": "stredni",
+    "stav": "bez-vysetrovani",
+    "atribuce": "nepotvrzena",
+    "puvodce": "rusko",
+    "druh": "pripad",
+    "fakta": [
+      "Ruská fregata vypálila v pondělí 14. 9. 2026 v mezinárodních vodách u Gedseru dvě světlice směrem k dánskému vojenskému vrtulníku Fennec; oznámily to dánské ozbrojené síly.",
+      "Vrtulník fregatu rutinně fotografoval; jedna světlice prolétla ve vzdálenosti několika metrů, bez varování a bez rádiového spojení.",
+      "Nikdo nebyl zraněn a vrtulník nebyl poškozen.",
+      "Ministr obrany Jeppe Bruus to označil za vážné a za 'velmi neprofesionální námořní chování'; ministr zahraničí Lars Løkke Rasmussen si předvolal ruského velvyslance.",
+      "Ruský velvyslanec Vladimir Barbin dánskou verzi zpochybnil a tvrdil, že dánské vrtulníky opakovaně prováděly u ruských lodí 'nebezpečné manévry'."
+    ],
+    "neznameho": [
+      "Jméno fregaty.",
+      "Úřední sdělení se nepodařilo otevřít; údaje jsou z redakcí, které úřady citují."
+    ],
+    "vyznam": "",
+    "eskalacniSpousteče": [],
+    "deeskalacniSignaly": [],
+    "zdroje": [
+      {
+        "nazev": "U.S. News (Reuters) — Russian Frigate Fires Flares Towards Danish Military Helicopter",
+        "url": "https://www.usnews.com/news/world/articles/2026-09-15/russian-frigate-fires-flares-towards-danish-military-helicopter-denmark-says",
+        "typ": "wire",
+        "publikovano": "2026-09-15T00:00:00Z",
+        "primarni": false,
+        "jazyk": "en"
+      },
+      {
+        "nazev": "The Copenhagen Post — Russian frigate fires flares near Danish military helicopter in international waters",
+        "url": "https://cphpost.dk/2026-09-15/news/round-up/russian-frigate-fires-flares-near-danish-military-helicopter-in-international-waters/",
+        "typ": "media",
+        "publikovano": "2026-09-15T00:00:00Z",
+        "primarni": false,
+        "jazyk": "en"
+      },
+      {
+        "nazev": "Army Recognition — Russian frigate fires warning flares at Danish Fennec helicopter during Baltic Sea surveillance",
+        "url": "https://www.armyrecognition.com/news/navy-news/2026/russian-frigate-fires-flares-at-danish-helicopter-gedser",
+        "typ": "media",
+        "primarni": false,
+        "jazyk": "en"
+      }
+    ],
+    "souvisejici": [],
+    "historie": [
+      {
+        "kdy": "2026-09-23T14:30:00Z",
+        "text": "Zapsáno podle tipu z veřejného přehledu (Facebook, T. Zdechovský), ověřeno proti redakcím; úředně nepotvrzeno.",
+        "novySignal": true
+      }
+    ],
+    "novy": true,
+    "zapocitanoTyden": "2026-09-14",
+    "aiZpracovano": true,
+    "lidskyOvereno": false,
+    "archivniZaznam": false,
+    "overeni": "neovereno"
+  },
+  {
+    "id": "i-2026-09-16-6b49cd44c3",
+    "slug": "pl-6b49cd44c3",
+    "titulek": "Polsko: letiště Lublin a Rzeszów přerušila 16. září asi na 40 minut provoz, armáda vyslala letadla kvůli ruským dronům nad západní Ukrajinou",
+    "kratkyTitulek": "Polsko: letiště Lublin a Rzeszów zastavena 16. 9.",
+    "zeme": "Polsko",
+    "kodZeme": "PL",
+    "kategorie": [
+      "drony",
+      "nato"
+    ],
+    "datumUdalosti": "2026-09-16T00:00:00Z",
+    "datumZjisteni": "2026-09-16T00:00:00Z",
+    "aktualizovano": "2026-09-23T14:30:00Z",
+    "zavaznost": "Y1",
+    "jistota": "stredni",
+    "stav": "bez-vysetrovani",
+    "atribuce": "neznama",
+    "druh": "opatreni",
+    "vykonal": "Operační velitelství polských ozbrojených sil",
+    "fakta": [
+      "Ráno 16. 9. 2026 zastavilo Polsko provoz letišť Rzeszów a Lublin kvůli ruskému leteckému útoku na západ Ukrajiny.",
+      "Operační velitelství kolem 8:00 oznámilo vzlet polských letadel a nejvyšší pohotovost pozemní protivzdušné obrany kvůli ruským útočným dronům na západě Ukrajiny.",
+      "Krátce po 8:00 byla vyhlášena výstraha před leteckým útokem pro části Podkarpatského a Lublinského vojvodství, včetně oblastí u Přemyšlu, Rzeszowa a Lublinu.",
+      "Provoz letišť se obnovil asi po 40 minutách; žádné letiště zasaženo nebylo."
+    ],
+    "neznameho": [
+      "Délka výstrahy 30 minut: zdroje uvádějí asi 40 minut, a to u přerušení provozu letišť.",
+      "Přesný čas: jeden souhrn uvádí pozastavení letů agenturou PANSA v 7:00, jiný vzlet letadel kolem 8:00.",
+      "Úřední sdělení se nepodařilo otevřít; údaje jsou z redakcí, které úřady citují."
+    ],
+    "vyznam": "",
+    "eskalacniSpousteče": [],
+    "deeskalacniSignaly": [],
+    "zdroje": [
+      {
+        "nazev": "European Pravda — Poland scrambles jets and closes airports in Lublin and Rzeszów due to Russian attacks on Ukraine's west",
+        "url": "https://www.eurointegration.com.ua/eng/news/2026/09/16/7245569/",
+        "typ": "media",
+        "publikovano": "2026-09-16T00:00:00Z",
+        "primarni": false,
+        "jazyk": "en"
+      },
+      {
+        "nazev": "Kyiv Independent — Poland scrambles fighter jets, temporarily closes airports while Russian drones attack Ukraine",
+        "url": "https://kyivindependent.com/poland-scrambles-fighter-jets-temporarily-closes-airports-while-russian-drones-attack-ukraine/",
+        "typ": "media",
+        "primarni": false,
+        "jazyk": "en"
+      },
+      {
+        "nazev": "NCZAS.INFO — Polskie wojsko poderwało samoloty. Lotniska w Rzeszowie i Lublinie zamknięte. Alerty dla mieszkańców dwóch województw",
+        "url": "https://nczas.info/2026/09/16/polskie-wojsko-poderwalo-samoloty-lotniska-w-rzeszowie-i-lublinie-zamkniete-alerty-dla-mieszkancow-dwoch-wojewodztw/",
+        "typ": "media",
+        "publikovano": "2026-09-16T00:00:00Z",
+        "primarni": false,
+        "jazyk": "pl"
+      }
+    ],
+    "souvisejici": [],
+    "historie": [
+      {
+        "kdy": "2026-09-23T14:30:00Z",
+        "text": "Zapsáno podle tipu z veřejného přehledu (Facebook, T. Zdechovský), ověřeno proti redakcím; úředně nepotvrzeno.",
+        "novySignal": true
+      }
+    ],
+    "novy": true,
+    "zapocitanoTyden": "2026-09-16",
+    "aiZpracovano": true,
+    "lidskyOvereno": false,
+    "archivniZaznam": false,
+    "overeni": "neovereno"
+  },
+  {
+    "id": "i-2026-09-17-370fbaab92",
+    "slug": "pl-370fbaab92",
+    "titulek": "Polsko: letiště Lublin a Rzeszów 17. září znovu dočasně přerušila provoz, na východě země zněly sirény kvůli ruskému útoku na Ukrajinu",
+    "kratkyTitulek": "Polsko: letiště Lublin a Rzeszów zastavena 17. 9.",
+    "zeme": "Polsko",
+    "kodZeme": "PL",
+    "kategorie": [
+      "drony",
+      "nato"
+    ],
+    "datumUdalosti": "2026-09-17T00:00:00Z",
+    "datumZjisteni": "2026-09-17T00:00:00Z",
+    "aktualizovano": "2026-09-23T14:30:00Z",
+    "zavaznost": "Y1",
+    "jistota": "stredni",
+    "stav": "bez-vysetrovani",
+    "atribuce": "neznama",
+    "druh": "opatreni",
+    "vykonal": "Operační velitelství polských ozbrojených sil",
+    "fakta": [
+      "Obyvatelé Podkarpatského a Lublinského vojvodství dostali 17. 9. 2026 výstrahu RCB kvůli ruskému leteckému útoku na Ukrajinu; v Lublinu a Rzeszowě zněly sirény.",
+      "Letiště Lublin a Rzeszów dočasně zastavila provoz, aby měla vojenská letadla volnost pohybu.",
+      "Asi po 30 minutách stíhačky misi ukončily; narušení vzdušného prostoru nebylo zjištěno. Letiště se vrátila k běžnému provozu."
+    ],
+    "neznameho": [
+      "Úřední sdělení se nepodařilo otevřít; údaje jsou z redakcí, které úřady citují."
+    ],
+    "vyznam": "",
+    "eskalacniSpousteče": [],
+    "deeskalacniSignaly": [],
+    "zdroje": [
+      {
+        "nazev": "Radio Zachód — Alert dla Lubelszczyzny i Podkarpacia. Lotniska w Lublinie i Rzeszowie czasowo wstrzymały operacje lotnicze",
+        "url": "https://zachod.pl/1554527/alert-dla-lubelszczyzny-i-podkarpacia-lotniska-w-lublinie-i-rzeszowie-czasowo-wstrzymaly-operacje-lotnicze/",
+        "typ": "media",
+        "publikovano": "2026-09-17T00:00:00Z",
+        "primarni": false,
+        "jazyk": "pl"
+      },
+      {
+        "nazev": "Euronews — Air raid siren sounded for residents of eastern Poland",
+        "url": "https://www.euronews.com/2026/09/17/air-raid-siren-sounded-for-residents-of-eastern-poland",
+        "typ": "media",
+        "publikovano": "2026-09-17T00:00:00Z",
+        "primarni": false,
+        "jazyk": "en"
+      },
+      {
+        "nazev": "Ukrainska Pravda — Polish airports suspend operations for second day running amid Russian drone attacks on Ukraine",
+        "url": "https://www.pravda.com.ua/eng/news/2026/09/17/8053931/",
+        "typ": "media",
+        "publikovano": "2026-09-17T00:00:00Z",
+        "primarni": false,
+        "jazyk": "en"
+      }
+    ],
+    "souvisejici": [],
+    "historie": [
+      {
+        "kdy": "2026-09-23T14:30:00Z",
+        "text": "Zapsáno podle tipu z veřejného přehledu (Facebook, T. Zdechovský), ověřeno proti redakcím; úředně nepotvrzeno.",
+        "novySignal": true
+      }
+    ],
+    "novy": true,
+    "zapocitanoTyden": "2026-09-17",
+    "aiZpracovano": true,
+    "lidskyOvereno": false,
+    "archivniZaznam": false,
+    "overeni": "neovereno"
+  },
+  {
+    "id": "i-2026-09-18-322f3ce370",
+    "slug": "pl-322f3ce370",
+    "titulek": "Polsko: letiště Lublin a Rzeszów 18. září třetí den po sobě přerušila provoz kvůli ruským útokům na Ukrajinu",
+    "kratkyTitulek": "Polsko: letiště Lublin a Rzeszów zastavena 18. 9.",
+    "zeme": "Polsko",
+    "kodZeme": "PL",
+    "kategorie": [
+      "drony",
+      "nato"
+    ],
+    "datumUdalosti": "2026-09-18T00:00:00Z",
+    "datumZjisteni": "2026-09-18T00:00:00Z",
+    "aktualizovano": "2026-09-23T14:30:00Z",
+    "zavaznost": "Y1",
+    "jistota": "stredni",
+    "stav": "bez-vysetrovani",
+    "atribuce": "neznama",
+    "druh": "opatreni",
+    "vykonal": "Operační velitelství polských ozbrojených sil",
+    "fakta": [
+      "Ráno 18. 9. 2026 zastavila letiště Rzeszów a Lublin provoz kvůli ruským útokům na Ukrajinu, třetí den po sobě.",
+      "Důvodem byla potřeba zajistit volnost pohybu vojenských letadel; Operační velitelství vyslalo pohotovostní dvojice stíhaček a zvýšilo pohotovost protivzdušné obrany.",
+      "Po 9. hodině letiště provoz obnovila."
+    ],
+    "neznameho": [
+      "Úřední sdělení se nepodařilo otevřít; údaje jsou z redakcí, které úřady citují."
+    ],
+    "vyznam": "",
+    "eskalacniSpousteče": [],
+    "deeskalacniSignaly": [],
+    "zdroje": [
+      {
+        "nazev": "European Pravda — Rzeszów and Lublin airports suspend operations for third consecutive day amid Russian attacks on Ukraine",
+        "url": "https://www.eurointegration.com.ua/eng/news/2026/09/18/7245748/",
+        "typ": "media",
+        "publikovano": "2026-09-18T00:00:00Z",
+        "primarni": false,
+        "jazyk": "en"
+      },
+      {
+        "nazev": "Goniec — Lotniska w Lublinie i Rzeszowie wstrzymały loty. Jest komunikat PAŻP i Dowództwa Operacyjnego",
+        "url": "https://goniec.pl/zamkniete-niebo-nad-wschodem-polski-siodme-wstrzymanie-lotow-w-miesiacu-ki-wwi-180926",
+        "typ": "media",
+        "publikovano": "2026-09-18T00:00:00Z",
+        "primarni": false,
+        "jazyk": "pl"
+      },
+      {
+        "nazev": "dlapilota.pl — PANSA: lotniska w Lublinie i Rzeszowie wznowiły operacje lotnicze",
+        "url": "https://dlapilota.pl/wiadomosci/pansa-lotniska-w-lublinie-i-rzeszowie-wznowily-operacje-lotnicze",
+        "typ": "media",
+        "primarni": false,
+        "jazyk": "pl"
+      }
+    ],
+    "souvisejici": [],
+    "historie": [
+      {
+        "kdy": "2026-09-23T14:30:00Z",
+        "text": "Zapsáno podle tipu z veřejného přehledu (Facebook, T. Zdechovský), ověřeno proti redakcím; úředně nepotvrzeno.",
+        "novySignal": true
+      }
+    ],
+    "novy": true,
+    "zapocitanoTyden": "2026-09-18",
+    "aiZpracovano": true,
+    "lidskyOvereno": false,
+    "archivniZaznam": false,
+    "overeni": "neovereno"
+  },
+  {
+    "id": "i-2026-09-16-d57e3f7bc7",
+    "slug": "sk-d57e3f7bc7",
+    "titulek": "Slovensko: v muniční továrně ZVS Holding ve Snině (skupina MSM) vypukl požár; podle firmy vznikl při rekonstrukci střechy",
+    "kratkyTitulek": "Slovensko: požár v muniční továrně ve Snině",
+    "zeme": "Slovensko",
+    "kodZeme": "SK",
+    "kategorie": [
+      "infrastruktura"
+    ],
+    "datumUdalosti": "2026-09-16T00:00:00Z",
+    "datumZjisteni": "2026-09-16T00:00:00Z",
+    "aktualizovano": "2026-09-23T14:30:00Z",
+    "zavaznost": "Y1",
+    "jistota": "stredni",
+    "stav": "bez-vysetrovani",
+    "atribuce": "neznama",
+    "puvodce": "neznamy",
+    "druh": "pripad",
+    "fakta": [
+      "Ve středu 16. 9. 2026 vypukl požár v závodě ZVS Holding ve Snině; ZVS vyrábí munici a patří do skupiny MSM Group (CSG).",
+      "Požár byl zjištěn ve 12:00; podle mluvčího MSM Group vznikl na střeše budovy při rekonstrukci, kterou prováděla externí firma.",
+      "Zaměstnanci byli evakuováni a nikdo nebyl zraněn; požár byl zhruba po dvou hodinách pod kontrolou.",
+      "Úřady vyzvaly obyvatele Sniny, aby nevětrali, nezapínali klimatizaci a nepřibližovali se k místu.",
+      "Výroba se zastavila; CSG podle zdrojů nečeká narušení dodávek."
+    ],
+    "neznameho": [
+      "Zahájení vyšetřování (policejního či trestního) jsem ve výsledcích nenašel.",
+      "Podezření ze sabotáže ve výsledcích nezaznělo; firma uvádí jako místo vzniku rekonstrukci střechy.",
+      "Úřední sdělení se nepodařilo otevřít; údaje jsou z redakcí, které úřady citují."
+    ],
+    "vyznam": "",
+    "eskalacniSpousteče": [],
+    "deeskalacniSignaly": [],
+    "zdroje": [
+      {
+        "nazev": "Militarnyi — Fire Breaks Out at ZVS Holding Ammo Production Facility in Slovakia",
+        "url": "https://militarnyi.com/en/news/fire-breaks-out-at-zvs-holding-ammo-production-facility-in-slovakia/",
+        "typ": "media",
+        "primarni": false,
+        "jazyk": "en"
+      },
+      {
+        "nazev": "Global Banking & Finance — CSG says fire at Slovak ammunition body plant broke out during re[novation]",
+        "url": "https://www.globalbankingandfinance.com/csg-fire-slovak-ammunition-body-plant-broke-out/",
+        "typ": "media",
+        "primarni": false,
+        "jazyk": "en"
+      },
+      {
+        "nazev": "Censor.NET — A munitions factory has caught fire in Slovakia",
+        "url": "https://censor.net/en/news/4023767/a-munitions-factory-has-caught-fire-in-slovakia",
+        "typ": "media",
+        "primarni": false,
+        "jazyk": "en"
+      },
+      {
+        "nazev": "KNEWS.MEDIA — Fire Breaks Out at Slovak Munitions Manufacturing Facility",
+        "url": "https://knews.media/2026/09/16/fire-breaks-out-at-slovak-munitions-manufacturing-facility/",
+        "typ": "media",
+        "publikovano": "2026-09-16T00:00:00Z",
+        "primarni": false,
+        "jazyk": "en"
+      }
+    ],
+    "souvisejici": [],
+    "historie": [
+      {
+        "kdy": "2026-09-23T14:30:00Z",
+        "text": "Zapsáno podle tipu z veřejného přehledu (Facebook, T. Zdechovský), ověřeno proti redakcím; úředně nepotvrzeno.",
+        "novySignal": true
+      }
+    ],
+    "novy": true,
+    "zapocitanoTyden": "2026-09-16",
+    "aiZpracovano": true,
+    "lidskyOvereno": false,
+    "archivniZaznam": false,
+    "overeni": "neovereno"
+  },
+  {
+    "id": "i-2026-09-18-ab0ccb636e",
+    "slug": "md-ab0ccb636e",
+    "titulek": "Moldavsko: u obce Colonița na okraji Kišiněva se zřítil bezpilotní letoun s proudovým motorem; ministerstvo zahraničí incident odsoudilo",
+    "kratkyTitulek": "Moldavsko: proudový dron u Kišiněva",
+    "zeme": "Moldavsko",
+    "kodZeme": "MD",
+    "kategorie": [
+      "drony"
+    ],
+    "datumUdalosti": "2026-09-18T00:00:00Z",
+    "datumZjisteni": "2026-09-18T00:00:00Z",
+    "aktualizovano": "2026-09-23T14:30:00Z",
+    "zavaznost": "Y2",
+    "jistota": "stredni",
+    "stav": "probiha",
+    "atribuce": "neznama",
+    "puvodce": "neznamy",
+    "druh": "pripad",
+    "fakta": [
+      "18. 9. 2026 kolem 4:20 slyšeli obyvatelé obce Colonița (necelé 2 km od Kišiněva) silný výbuch.",
+      "Policejní pyrotechnici určili, že nalezené díly (včetně motoru), rozeseté v okruhu asi 100 m, patří bezpilotnímu letounu s proudovým (turbojet) motorem.",
+      "Na troskách byly podle Militarnyi ruské nápisy.",
+      "Moldavské ministerstvo obrany podle zdrojů té noci narušení vzdušného prostoru nezaznamenalo.",
+      "Ministerstvo zahraničí incident odsoudilo jako nepovolený průnik do vzdušného prostoru a jako další důsledek ruské agresivní války proti Ukrajině."
+    ],
+    "neznameho": [
+      "Že šlo o ruskou raketu dlouhého doletu: zdroje mluví o proudovém dronu.",
+      "Úřední sdělení se nepodařilo otevřít; údaje jsou z redakcí, které úřady citují."
+    ],
+    "vyznam": "",
+    "eskalacniSpousteče": [],
+    "deeskalacniSignaly": [],
+    "zdroje": [
+      {
+        "nazev": "Moldpres — MAE condamnă incidentul produs în apropierea localității Colonița: „O nouă consecință a războiului de agresiune al Federației Ruse împotriva Ucrainei”",
+        "url": "https://www.moldpres.md/rom/politica/mae-condamna-incidentul-produs-in-apropierea-localitatii-colonita-o-noua-consecinta-a-razboiului-de-agresiune-al-federatiei-ruse-impotriva-ucrainei",
+        "typ": "wire",
+        "publikovano": "2026-09-18T00:00:00Z",
+        "primarni": false,
+        "jazyk": "ro"
+      },
+      {
+        "nazev": "European Pravda — Drone debris found near Moldovan capital",
+        "url": "https://www.eurointegration.com.ua/eng/news/2026/09/18/7245778/",
+        "typ": "media",
+        "publikovano": "2026-09-18T00:00:00Z",
+        "primarni": false,
+        "jazyk": "en"
+      },
+      {
+        "nazev": "Militarnyi — Russian Jet Drone Crashes in a Suburb of Chisinau",
+        "url": "https://militarnyi.com/en/news/russian-jet-drone-crashes-suburb-chisinau/",
+        "typ": "media",
+        "primarni": false,
+        "jazyk": "en"
+      },
+      {
+        "nazev": "Radio Moldova — Moldova's security is jeopardized by Russia's war in Ukraine, MFA",
+        "url": "https://radiomoldova.md/p/85391/moldova-s-security-is-jeopardized-by-russia-s-war-in-ukraine-mfa",
+        "typ": "media",
+        "primarni": false,
+        "jazyk": "en"
+      }
+    ],
+    "souvisejici": [],
+    "historie": [
+      {
+        "kdy": "2026-09-23T14:30:00Z",
+        "text": "Zapsáno podle tipu z veřejného přehledu (Facebook, T. Zdechovský), ověřeno proti redakcím; úředně nepotvrzeno.",
+        "novySignal": true
+      }
+    ],
+    "novy": true,
+    "zapocitanoTyden": "2026-09-18",
+    "aiZpracovano": true,
+    "lidskyOvereno": false,
+    "archivniZaznam": false,
+    "overeni": "neovereno"
+  },
+  {
+    "id": "i-2026-09-18-f859661837",
+    "slug": "lu-f859661837",
+    "titulek": "Lucembursko: jediné mezinárodní letiště země zastavilo na noc provoz kvůli nepovoleným dronům nad areálem; původ dronů není znám",
+    "kratkyTitulek": "Lucembursko: drony zastavily letiště",
+    "zeme": "Lucembursko",
+    "kodZeme": "LU",
+    "kategorie": [
+      "drony"
+    ],
+    "datumUdalosti": "2026-09-18T00:00:00Z",
+    "datumZjisteni": "2026-09-18T00:00:00Z",
+    "aktualizovano": "2026-09-23T14:30:00Z",
+    "zavaznost": "Y2",
+    "jistota": "stredni",
+    "stav": "probiha",
+    "atribuce": "neznama",
+    "puvodce": "neznamy",
+    "druh": "pripad",
+    "fakta": [
+      "Jediné mezinárodní letiště Lucemburska zastavilo 18. 9. 2026 kolem 21:00 preventivně letový provoz kvůli nepovoleným dronům.",
+      "Drony byly zachyceny nejprve u letiště a pak přímo nad ním; šlo o více než jeden stroj.",
+      "Přilétající let z Londýna byl odkloněn do Lutychu; provoz se obnovil v časných ranních hodinách 19. 9.",
+      "Letiště uvedlo, že nemá informace o původu dronů ani o tom, kdo je řídil."
+    ],
+    "neznameho": [
+      "Původ a provozovatel dronů.",
+      "Úřední sdělení se nepodařilo otevřít; údaje jsou z redakcí, které úřady citují."
+    ],
+    "vyznam": "",
+    "eskalacniSpousteče": [],
+    "deeskalacniSignaly": [],
+    "zdroje": [
+      {
+        "nazev": "Euronews — Operations resume at Luxembourg airport after 'unauthorised' drones halt flights",
+        "url": "https://www.euronews.com/my-europe/2026/09/19/operations-resume-at-luxembourg-airport-after-unauthorised-drones-halt-flights",
+        "typ": "media",
+        "publikovano": "2026-09-19T00:00:00Z",
+        "primarni": false,
+        "jazyk": "en"
+      },
+      {
+        "nazev": "Kyiv Post — Luxembourg Airport Halts Flights Over Unauthorized Drones",
+        "url": "https://www.kyivpost.com/post/84901",
+        "typ": "media",
+        "primarni": false,
+        "jazyk": "en"
+      },
+      {
+        "nazev": "Meduza — Luxembourg’s only airport halted flights for hours after ‘unauthorized drones’ were detected overhead",
+        "url": "https://meduza.io/en/news/2026/09/20/luxembourg-s-only-airport-halted-flights-for-hours-after-unauthorized-drones-were-detected-overhead",
+        "typ": "media",
+        "publikovano": "2026-09-20T00:00:00Z",
+        "primarni": false,
+        "jazyk": "en"
+      }
+    ],
+    "souvisejici": [],
+    "historie": [
+      {
+        "kdy": "2026-09-23T14:30:00Z",
+        "text": "Zapsáno podle tipu z veřejného přehledu (Facebook, T. Zdechovský), ověřeno proti redakcím; úředně nepotvrzeno.",
+        "novySignal": true
+      }
+    ],
+    "novy": true,
+    "zapocitanoTyden": "2026-09-18",
+    "aiZpracovano": true,
+    "lidskyOvereno": false,
+    "archivniZaznam": false,
+    "overeni": "neovereno"
+  },
+  {
+    "id": "i-2026-09-19-444ebe893e",
+    "slug": "md-444ebe893e",
+    "titulek": "Moldavsko: pohraniční policie hlásila několik neidentifikovaných letadel nad východní hranicí; objekt spadl na ukrajinské straně u obce Troitske",
+    "kratkyTitulek": "Moldavsko: neidentifikované drony u východní hranice",
+    "zeme": "Moldavsko",
+    "kodZeme": "MD",
+    "kategorie": [
+      "drony"
+    ],
+    "datumUdalosti": "2026-09-19T00:00:00Z",
+    "datumZjisteni": "2026-09-19T00:00:00Z",
+    "aktualizovano": "2026-09-23T14:30:00Z",
+    "zavaznost": "Y1",
+    "jistota": "stredni",
+    "stav": "bez-vysetrovani",
+    "atribuce": "neznama",
+    "puvodce": "neznamy",
+    "druh": "pripad",
+    "fakta": [
+      "Ráno 19. 9. 2026 hlásily hlídky moldavské pohraniční policie několik neidentifikovaných letadel ve vzdušném prostoru v obvodu Východního regionálního ředitelství.",
+      "Dvě letěla směrem Olănești–Čistovodnoje; další bylo spatřeno nad obcí Căplani ze směru od Crocmaz a prostor opustilo směrem Căplani–Krutojarivka.",
+      "V 5:19 informovala ukrajinská strana, že asi 1,5–2 km od hranice za obcí Troitske padal objekt, který začal hořet.",
+      "Na moldavském území se trosky ani místo výbuchu nenašly; ukrajinská strana našla místo výbuchu a neidentifikované úlomky na ukrajinském území asi 1,2 km od hranice."
+    ],
+    "neznameho": [
+      "Že šlo o ruské drony: zdroje mluví o neidentifikovaných letadlech.",
+      "Narušení u Palanky 19. 9.: nalezené zprávy o Palance mají nejasné datum.",
+      "Úřední sdělení se nepodařilo otevřít; údaje jsou z redakcí, které úřady citují."
+    ],
+    "vyznam": "",
+    "eskalacniSpousteče": [],
+    "deeskalacniSignaly": [],
+    "zdroje": [
+      {
+        "nazev": "Radio Moldova — Drones flew over Căplani and Olănești near the eastern border",
+        "url": "https://radiomoldova.md/p/85393/drones-flew-over-caplani-and-olanesti-near-the-eastern-border",
+        "typ": "media",
+        "primarni": false,
+        "jazyk": "en"
+      },
+      {
+        "nazev": "Ukrinform — Moldova’s Border Police report drone incursions into airspace overnight",
+        "url": "https://www.ukrinform.net/rubric-ato/4165747-moldovas-border-police-report-drone-incursions-into-airspace-overnight.html",
+        "typ": "media",
+        "primarni": false,
+        "jazyk": "en"
+      },
+      {
+        "nazev": "Inkorr — Multiple Unknown Drones Detected Violating Moldova’s Airspace Overnight",
+        "url": "https://inkorr.com/en/u-nic-proti-19-veresna-v-moldovi-zafiksuvali-kilka-nevidomih-bezpilotnikiv-z-porusennam-kordonu-347352",
+        "typ": "media",
+        "primarni": false,
+        "jazyk": "en"
+      },
+      {
+        "nazev": "Mezha — Moldova detects unknown drones violating airspace as object falls near border",
+        "url": "https://mezha.net/eng/news/49de45ef_moldova_detects_unknown/",
+        "typ": "media",
+        "primarni": false,
+        "jazyk": "en"
+      }
+    ],
+    "souvisejici": [],
+    "historie": [
+      {
+        "kdy": "2026-09-23T14:30:00Z",
+        "text": "Zapsáno podle tipu z veřejného přehledu (Facebook, T. Zdechovský), ověřeno proti redakcím; úředně nepotvrzeno.",
+        "novySignal": true
+      }
+    ],
+    "novy": true,
+    "zapocitanoTyden": "2026-09-19",
+    "aiZpracovano": true,
+    "lidskyOvereno": false,
+    "archivniZaznam": false,
+    "overeni": "neovereno"
+  },
+  {
+    "id": "i-2026-09-20-e2cae248d2",
+    "slug": "md-e2cae248d2",
+    "titulek": "Moldavsko: obyvatelé okresů Orhei a Călărași hlásili letoun připomínající dron a záblesk na obloze; policie stopy dopadu nenašla, ministerstvo zahraničí přelet odsoudilo",
+    "kratkyTitulek": "Moldavsko: podezřelý přelet nad Orhei a Călărași",
+    "zeme": "Moldavsko",
+    "kodZeme": "MD",
+    "kategorie": [
+      "drony"
+    ],
+    "datumUdalosti": "2026-09-20T00:00:00Z",
+    "datumZjisteni": "2026-09-20T00:00:00Z",
+    "aktualizovano": "2026-09-23T14:30:00Z",
+    "zavaznost": "Y1",
+    "jistota": "nizka",
+    "stav": "bez-vysetrovani",
+    "atribuce": "neznama",
+    "puvodce": "neznamy",
+    "druh": "pripad",
+    "fakta": [
+      "V neděli 20. 9. 2026 kolem 1:50 oznámil obyvatel obce Berezlogi (okres Orhei) policii letoun připomínající dron.",
+      "Asi o 10 minut později ohlásil obyvatel obce Dereneu (okres Călărași) jasný záblesk na obloze a výbuch.",
+      "Policie oblasti prohledala a nenašla trosky, stopy dopadu ani požár, které by potvrzovaly výbuch na zemi nebo pád objektu.",
+      "Ministerstvo zahraničí důrazně odsoudilo nepovolený přelet letounu připomínajícího dron nad oblastí Berezlogi a Dereneu."
+    ],
+    "neznameho": [
+      "Dvě narušení ruskými drony: zdroje popisují jeden podezřelý přelet a jeden záblesk s výbuchem ve vzduchu.",
+      "Odhadované místo dopadu: podle policie nebyly nalezeny žádné stopy.",
+      "Původ: UNITED24 uvádí, že původ zůstává neznámý.",
+      "Úřední sdělení se nepodařilo otevřít; údaje jsou z redakcí, které úřady citují."
+    ],
+    "vyznam": "",
+    "eskalacniSpousteče": [],
+    "deeskalacniSignaly": [],
+    "zdroje": [
+      {
+        "nazev": "Moldpres — Moldovan Foreign Affairs Ministry condemns reported aerial incident in two central districts",
+        "url": "https://www.moldpres.md/eng/politics/moldovan-foreign-affairs-ministry-condemns-reported-aerial-incident-in-two-central-districts",
+        "typ": "wire",
+        "publikovano": "2026-09-20T00:00:00Z",
+        "primarni": false,
+        "jazyk": "en"
+      },
+      {
+        "nazev": "Radio Moldova — Moldova investigates night sky flashes and drone reports",
+        "url": "https://radiomoldova.md/p/85453/moldova-investigates-night-sky-flashes-and-drone-reports",
+        "typ": "media",
+        "primarni": false,
+        "jazyk": "en"
+      },
+      {
+        "nazev": "Anadolu/aNews — Moldova condemns ‘unauthorized’ drone-like aircraft flying over its territory",
+        "url": "https://www.anews.com.tr/world/2026/09/20/moldova-condemns-unauthorized-drone-like-aircraft-flying-over-its-territory",
+        "typ": "media",
+        "publikovano": "2026-09-20T00:00:00Z",
+        "primarni": false,
+        "jazyk": "en"
+      },
+      {
+        "nazev": "UNITED24 Media — Moldova Reports Drone-Like Objects and Explosion, but Their Origin Remains Unknown",
+        "url": "https://united24media.com/world/moldova-reports-suspicious-drone-like-objects-and-explosion-heres-what-we-know-22701",
+        "typ": "media",
+        "primarni": false,
+        "jazyk": "en"
+      }
+    ],
+    "souvisejici": [],
+    "historie": [
+      {
+        "kdy": "2026-09-23T14:30:00Z",
+        "text": "Zapsáno podle tipu z veřejného přehledu (Facebook, T. Zdechovský), ověřeno proti redakcím; úředně nepotvrzeno.",
+        "novySignal": true
+      }
+    ],
+    "novy": true,
+    "zapocitanoTyden": "2026-09-20",
+    "aiZpracovano": true,
+    "lidskyOvereno": false,
+    "archivniZaznam": false,
+    "overeni": "neovereno"
+  },
+  {
+    "id": "i-2026-09-20-d2de0ee486",
+    "slug": "ro-d2de0ee486",
+    "titulek": "Rumunsko: potápěči námořnictva vylovili v rumunské výlučné ekonomické zóně Černého moře tři úlomky dronu, které nahlásily obchodní lodě",
+    "kratkyTitulek": "Rumunsko: tři úlomky dronu v Černém moři",
+    "zeme": "Rumunsko",
+    "kodZeme": "RO",
+    "kategorie": [
+      "drony"
+    ],
+    "datumUdalosti": "2026-09-20T00:00:00Z",
+    "datumZjisteni": "2026-09-20T00:00:00Z",
+    "aktualizovano": "2026-09-23T14:30:00Z",
+    "zavaznost": "Y1",
+    "jistota": "stredni",
+    "stav": "bez-vysetrovani",
+    "atribuce": "neznama",
+    "puvodce": "neznamy",
+    "druh": "pripad",
+    "fakta": [
+      "Námořní koordinační centrum 20. 9. 2026 informovalo ministerstvo obrany a systém SCOMAR o předmětech plujících na třech místech v Černém moři ve výlučné ekonomické zóně Rumunska; nahlásily je obchodní lodě.",
+      "Bojoví potápěči EOD rumunského námořnictva vyplouli lodí ministerstva vnitra a na všech třech místech vylovili po jednom úlomku dronu, celkem tři.",
+      "Jeden úlomek ležel asi 37 námořních mil od Konstancy; třetí vylovili kolem 19:00 asi 33 námořních mil od Konstancy, na místě, které nahlásila posádka lodi Campos Tide.",
+      "Žádný úlomek nepředstavoval pyrotechnické riziko; kvůli nálezům nebyla vydána varování pro plavbu."
+    ],
+    "neznameho": [
+      "Že šlo o ruský dron: ministerstvo původ podle nalezených zdrojů neuvedlo.",
+      "Formulace 'v plavebních koridorech': zdroje mluví o předmětech hlášených obchodními loděmi.",
+      "Úřední sdělení se nepodařilo otevřít; údaje jsou z redakcí, které úřady citují."
+    ],
+    "vyznam": "",
+    "eskalacniSpousteče": [],
+    "deeskalacniSignaly": [],
+    "zdroje": [
+      {
+        "nazev": "AGERPRES (převzatá tisková zpráva MApN) — Comunicat de presă - Ministerul Apărării Naționale",
+        "url": "https://agerpres.ro/comunicate/2026/09/20/comunicat-de-presa---ministerul-apararii-nationale--1595294",
+        "typ": "wire",
+        "publikovano": "2026-09-20T00:00:00Z",
+        "primarni": false,
+        "jazyk": "ro"
+      },
+      {
+        "nazev": "BURSA.RO — MApN: Trei fragmente de dronă, recuperate de scafandri militari în Marea Neagră, în Zona Economică Exclusivă a României",
+        "url": "https://www.bursa.ro/mapn-trei-fragmente-de-drona-recuperate-de-scafandri-militari-in-marea-neagra-in-zona-economica-exclusiva-a-romaniei-00423065",
+        "typ": "media",
+        "publikovano": "2026-09-20T00:00:00Z",
+        "primarni": false,
+        "jazyk": "ro"
+      },
+      {
+        "nazev": "Digi24 — Fragmente de dronă au fost găsite în trei locuri diferite din Marea Neagră, în Zona Exclusiv Economică a României",
+        "url": "https://www.digi24.ro/stiri/fragmente-de-drona-au-fost-gasite-in-trei-locuri-diferite-din-marea-neagra-in-zona-exclusiv-economica-a-romaniei-anuntul-mapn-3956163",
+        "typ": "media",
+        "primarni": false,
+        "jazyk": "ro"
+      },
+      {
+        "nazev": "News.ro — MApN: Obiecte plutitoare în derivă, în trei locaţii diferite în Marea Neagră...",
+        "url": "https://www.news.ro/social/mapn-obiecte-plutitoare-deriva-trei-locatii-diferite-marea-neagra-zona-exclusiv-economica-romaniei-semnalate-nave-comerciale-scafandri-lupta-au-recuperat-multe-fragmente-drona-prezentau-risc-1922402420002026092022764468",
+        "typ": "media",
+        "publikovano": "2026-09-20T00:00:00Z",
+        "primarni": false,
+        "jazyk": "ro"
+      }
+    ],
+    "souvisejici": [],
+    "historie": [
+      {
+        "kdy": "2026-09-23T14:30:00Z",
+        "text": "Zapsáno podle tipu z veřejného přehledu (Facebook, T. Zdechovský), ověřeno proti redakcím; úředně nepotvrzeno.",
+        "novySignal": true
+      }
+    ],
+    "novy": true,
+    "zapocitanoTyden": "2026-09-20",
+    "aiZpracovano": true,
+    "lidskyOvereno": false,
+    "archivniZaznam": false,
+    "overeni": "neovereno"
+  },
+  {
+    "id": "i-2026-08-10-65bb83cb23",
+    "slug": "bg-65bb83cb23",
+    "titulek": "Bulharsko: výbuch a požár ve skladu munice zbrojovky EMCO u obce Belica; vyšetřovatelé prověřují i úmyslné založení požáru",
+    "kratkyTitulek": "Bulharsko: výbuch ve skladu EMCO u Belice",
+    "zeme": "Bulharsko",
+    "kodZeme": "BG",
+    "kategorie": [
+      "sabotaz",
+      "vysetrovani"
+    ],
+    "datumUdalosti": "2026-08-10T00:00:00Z",
+    "datumZjisteni": "2026-08-10T00:00:00Z",
+    "aktualizovano": "2026-09-23T14:30:00Z",
+    "zavaznost": "Y3",
+    "jistota": "stredni",
+    "stav": "probiha",
+    "atribuce": "vysetrovana",
+    "puvodce": "neznamy",
+    "druh": "pripad",
+    "fakta": [
+      "10. 8. 2026 došlo k výbuchu a požáru ve skladovém objektu zbrojovky EMCO u obce Belica; evakuováno bylo asi 300 lidí, bez obětí a zraněných.",
+      "Kolem 11. hodiny začal hořet kamion, který do areálu vezl palivo; oheň se rozšířil na sklad munice a ten vybuchl.",
+      "EMCO vyloučila lidskou chybu; vyšetřovatelé zvažují mimo jiné úmyslné nebo náhodné vnesení zdroje ohně či zápalného zařízení.",
+      "Do 500 m od areálu byl na sedm dní vyhlášen částečný stav katastrofy.",
+      "12. 9. 2026 hořelo a vybuchovalo i skladiště munice EMCO u obce Careva Livada; ministr vnitra Ivan Demerdžiev řekl, že se prověřuje možná sabotáž i souvislost s požárem v srpnu. Vnější zásah nevyloučil, ale poukázal i na nedostatky ve skladování a zabezpečení."
+    ],
+    "neznameho": [
+      "Oficiální závěr o sabotáži nebo o ruské účasti; zatím jde jen o jednu z prověřovaných verzí.",
+      "Úřední sdělení se nepodařilo otevřít; údaje jsou z redakcí, které úřady citují."
+    ],
+    "vyznam": "",
+    "eskalacniSpousteče": [],
+    "deeskalacniSignaly": [],
+    "zdroje": [
+      {
+        "nazev": "U.S. News (Reuters) — Explosion Hits Another EMCO Weapons Site in Bulgaria; Probe Underway",
+        "url": "https://www.usnews.com/news/world/articles/2026-09-12/explosion-hits-another-weapons-site-in-bulgaria",
+        "typ": "wire",
+        "publikovano": "2026-09-12T00:00:00Z",
+        "primarni": false,
+        "jazyk": "en"
+      },
+      {
+        "nazev": "BTA — All Possible Causes of Explosions at Ammunition Plant Investigated, BG-ALERT Activated Due to Ammunition Disposal On Site",
+        "url": "https://www.bta.bg/en/news/bulgaria/1184424-all-possible-causes-of-explosions-at-ammunition-plant-investigated-bg-alert-act",
+        "typ": "wire",
+        "primarni": false,
+        "jazyk": "en"
+      },
+      {
+        "nazev": "BTA — Defence Company EMCO Rules Out Human Error in Ammunition Plant Warehouse Fire",
+        "url": "https://www.bta.bg/en/news/bulgaria/1182831-defence-company-emco-rules-out-human-error-in-ammunition-plant-warehouse-fire",
+        "typ": "wire",
+        "primarni": false,
+        "jazyk": "en"
+      },
+      {
+        "nazev": "BTA — Partial State of Disaster Declared Within 500 M of EMCO Ammunition Plant Near Belitsa",
+        "url": "https://www.bta.bg/en/news/bulgaria/1184984-partial-state-of-disaster-declared-within-500-m-of-emco-ammunition-plant-near-be",
+        "typ": "wire",
+        "primarni": false,
+        "jazyk": "en"
+      },
+      {
+        "nazev": "LIGA.net — Explosions at the Emco plant in Bulgaria on August 10 – what is known",
+        "url": "https://news.liga.net/en/world/news/explosions-occurred-at-an-ammunition-plant-in-bulgaria",
+        "typ": "media",
+        "primarni": false,
+        "jazyk": "en"
+      }
+    ],
+    "souvisejici": [
+      {
+        "incidentId": "i-2026-09-12-bulharsko-emco-pozar",
+        "potvrzena": false,
+        "popis": "Druhý výbuch ve skladu téže firmy 12. 9. 2026; souvislost se prověřuje."
+      }
+    ],
+    "historie": [
+      {
+        "kdy": "2026-09-23T14:30:00Z",
+        "text": "Zapsáno podle tipu z veřejného přehledu (Facebook, T. Zdechovský), ověřeno proti redakcím; úředně nepotvrzeno.",
+        "novySignal": true
+      }
+    ],
+    "novy": true,
+    "zapocitanoTyden": "2026-08-10",
+    "aiZpracovano": true,
+    "lidskyOvereno": false,
+    "archivniZaznam": false,
+    "overeni": "neovereno"
   }
 ]

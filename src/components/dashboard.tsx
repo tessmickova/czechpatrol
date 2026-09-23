@@ -2,10 +2,11 @@
 
 import Link from "next/link";
 import { pripady, type Zaznam } from "@/lib/agregace";
-import { cerstvost, datumCasPraha } from "@/lib/cas";
+import { cerstvost, datumCasPraha, datumPraha } from "@/lib/cas";
+import type { StavObcanu } from "@/lib/data";
 import type { CelkovyStav, HybridniTlak, Kampan, Kandidat, NatoPolozka, Nepotvrzene, OficialniNastroj, Overovana, PravniPolozka, ProvozniPolozka, Snimek, TydenniHodnoceni, Uroven, Watchlist } from "@/lib/typy";
 import { CenaPaliva } from "./palivo";
-import { stavPaliva, vetaOCene } from "@/lib/palivo";
+import { stavPaliv, stavPaliva, vetaOCene } from "@/lib/palivo";
 import { stavPravni, stavProvozu } from "@/lib/pokryti";
 import { StavDetail } from "./stav-detail";
 import { PASMA, UROVNE } from "@/lib/skala";
@@ -14,22 +15,20 @@ import { Ikona, type NazevIkony } from "./ikony";
 import { HeroDashboard } from "./hero-dashboard";
 import { DlazdiceKampane } from "./kampane";
 import { NadpisSekce } from "./nadpisy";
-import { PruhOverujeme } from "./overujeme";
+import { Partneri, Sledovat } from "./sledovat";
 import { Aktuality } from "./aktuality";
 import { UrgentniPas } from "./urgentni";
 import { TriTemata } from "./tri-temata";
 import { Tlacitko } from "./ui";
 import { useZiveHodiny } from "@/lib/cas-klient";
-import { ProfilySiti } from "./profily-siti";
 import { PripravenostKarta } from "./pripravenost-klient";
 import { TipyKPriprave } from "./tipy";
 import { PasZemi } from "./pas-zemi";
 import { CoSeZmenilo } from "./co-se-zmenilo";
 import { StavSluzeb } from "./stav-sluzeb";
-import { snimekSluzeb, SLUZBY } from "@/lib/sluzby";
+import { snimekSluzeb, SLOVA_STAVU, SLUZBY, type StavSluzby } from "@/lib/sluzby";
 import { useStavSluzeb, type ZivyStav } from "@/lib/sluzby-klient";
 import { casPraha } from "@/lib/cas";
-import { Partneri, Sledovat } from "./sledovat";
 import { VyzvaTelegram } from "./vyzva-telegram";
 import { Nahlaseni } from "./nahlaseni";
 import { Napoveda } from "./zaklad";
@@ -287,6 +286,64 @@ function Hlavni({ nadpis, hodnota, ton, popis, overeno, napoveda, jiskra }: { na
 
 
 
+/*
+  Souhrn oblasti: kolik z kolika sledovaných položek je v jakém stavu.
+
+  Hlavička skupiny dřív nesla jen čas. Kdo přišel zjistit „je něco
+  vyhlášeno?", musel přečíst dvacet řádků. Teď to řekne jedna věta
+  a paleta teček — jedna tečka za každou sledovanou položku, nic se
+  nezamlčí a nic se nesčítá do dojmu. Nula je taky informace: „0 z 7
+  platí" je přesně ta věta, kvůli které sem lidé chodí.
+*/
+const SLOVA_TONU: Record<Ton, string> = { plati: "platí", pozor: "sledujeme", klid: "v normálu", nedolozeno: "nedoloženo", nevime: "neověřeno" };
+const PORADI_TONU: Ton[] = ["plati", "pozor", "klid", "nedolozeno", "nevime"];
+
+function souhrnTonu(tony: Ton[], hlavni = "platí", slova: Partial<Record<Ton, string>> = {}): string {
+  const pocet = (t: Ton) => tony.filter((x) => x === t).length;
+  const casti = [`${pocet("plati")} z ${tony.length} ${hlavni}`];
+  for (const t of PORADI_TONU.slice(1)) if (pocet(t)) casti.push(`${pocet(t)} ${slova[t] ?? SLOVA_TONU[t]}`);
+  return casti.join(" · ");
+}
+
+function Paleta({ polozky }: { polozky: { nazev: string; tecka: string; slovo: string }[] }) {
+  return (
+    <span className="flex flex-wrap items-center gap-[5px]" role="img" aria-label={polozky.map((p) => `${p.nazev}: ${p.slovo}`).join(", ")}>
+      {polozky.map((p) => (
+        <span key={p.nazev} title={`${p.nazev}: ${p.slovo}`} className={`h-[9px] w-[9px] rounded-[3px] ${p.tecka}`} />
+      ))}
+    </span>
+  );
+}
+
+/*
+  Rozklikávací oblast pod výpisem sledovaných faktorů.
+
+  Služby naživo a ceny paliva měly vlastní boxy vedle mřížky a vypadaly
+  jako samostatné sekce, ne jako další sledované oblasti. Teď jsou pod
+  mřížkou ve stejné stavbě jako Právní stav, NATO a Běžný život: v náhledu
+  souhrn přes VŠECHNY sledované položky a paleta, detail po rozkliknutí.
+*/
+function RozbalovaciOblast({ nazev, souhrn, paleta, poznamka, children }: {
+  nazev: string; souhrn: string; paleta: { nazev: string; tecka: string; slovo: string }[]; poznamka?: string; children: React.ReactNode;
+}) {
+  return (
+    <details className="group overflow-hidden rounded-[20px] border border-linka2 bg-plocha">
+      <summary className="flex min-h-[64px] cursor-pointer list-none items-center gap-3 px-3 py-2.5 hover:bg-plocha2">
+        <span className="min-w-0 flex-1">
+          <span className="stitek block">{nazev}</span>
+          <span className="mt-1 block text-male font-semibold leading-snug text-inkoust">{souhrn}</span>
+          {poznamka && <span className="mt-0.5 block text-mikro leading-snug text-tlum2">{poznamka}</span>}
+        </span>
+        <Paleta polozky={paleta} />
+        <Ikona nazev="dolu" velikost={13} tah={2} trida="shrink-0 text-tlum2 transition-transform group-open:rotate-180" />
+      </summary>
+      <div className="border-t border-linka2">{children}</div>
+    </details>
+  );
+}
+
+const TECKA_SLUZBY: Record<StavSluzby, string> = { provoz: "bg-klid", omezeni: "bg-pozor", vypadek: "bg-akcent", nezjisteno: "border border-linka" };
+
 export function Dashboard({
   stav, pravni, natoPolozky, provozPolozky, overeno, vse, neprosle, kandidati, nepotvrzene = [], tydny, watchlist, crHistoricky, hybridni, obcane, ted, snimky = [], nastroje = [],
   tlakEvropa, tlakCesko, veta, kampane, nazvyZemi, overovaneAktivni = [], overovaneUzavrene = [],
@@ -300,7 +357,7 @@ export function Dashboard({
   snimky?: Snimek[];
   /** Katalog oficiálních nástrojů pro kartu „Jsem připraven/a?". */
   nastroje?: OficialniNastroj[];
-  hybridni: Uroven | null; obcane: { uroven: Uroven; popis: string; neovereno: number };
+  hybridni: Uroven | null; obcane: StavObcanu;
   tlakEvropa: HybridniTlak; tlakCesko: HybridniTlak; veta: HlavniVeta;
   kampane: Kampan[]; nazvyZemi: Record<string, string>;
   /** Zprávy, které se šíří a zatím nejsou ověřené. Do počtů nevstupují. */
@@ -340,6 +397,26 @@ export function Dashboard({
   /* Stav služeb: snímek ze sběru, po připojení živé čtení stavových stránek. */
   const sluzby = useStavSluzeb(snimekSluzeb());
   const signalySluzeb = signalyKPolozkam(sluzby.stavy);
+  /*
+    Potíže za posledních 24 h: služba, která teď neběží naplno, nebo měla
+    incident aktualizovaný během dne. Jen aktuální stav by v noci po
+    ranním výpadku tvrdil „bez potíží".
+  */
+  const souhrnSluzeb = (() => {
+    const den = tedMs - 86_400_000;
+    const stavy = SLUZBY.map((sl) => sluzby.stavy.find((x) => x.klic === sl.klic));
+    const potize = stavy.filter((st) => st && (st.stav === "vypadek" || st.stav === "omezeni" || st.incidenty.some((i) => i.aktualizovano && new Date(i.aktualizovano).getTime() >= den))).length;
+    const pocet = (k: StavSluzby) => stavy.filter((st) => (st?.stav ?? "nezjisteno") === k).length;
+    const casti = [`${potize} z ${SLUZBY.length} sledovaných služeb mělo za 24 h potíže`];
+    if (pocet("vypadek")) casti.push(`${pocet("vypadek")} výpadek`);
+    if (pocet("omezeni")) casti.push(`${pocet("omezeni")} omezení`);
+    if (pocet("nezjisteno")) casti.push(`${pocet("nezjisteno")} nezjištěno`);
+    return {
+      veta: casti.join(" · "),
+      poznamka: `Stavové stránky provozovatelů${sluzby.kdy ? `, ${sluzby.stavy.some((x) => x.zive) ? "čteno" : "snímek"} ${casPraha(sluzby.kdy)}` : ""}. České sítě a banky je nemají — viz Downdetector v detailu.`,
+    };
+  })();
+  const paliva = stavPaliv().filter((p) => p.cena !== null);
   /*
     Situace v Česku za 90 dní: nejvyšší závažnost z případů a operací
     proti občanům v okně. Dřív přicházela ze serveru s časem sestavení;
@@ -397,9 +474,7 @@ export function Dashboard({
     <>
     <PasZemi vse={vse} kampane={kampane} ted={ted} />
     <div className="mx-auto max-w-[1280px] px-4 py-5 sm:px-6 sm:py-7">
-      {/* Nad budíky: co se šíří a zatím není ověřené. Bez toho by
-          závažná, ale nepotvrzená zpráva propadla úplně. */}
-      <PruhOverujeme aktivni={overovaneAktivni} uzavrene={overovaneUzavrene} ted={tedMs} />
+      {/* „Právě ověřujeme“ na úvodní stranu nepatří (rozhodnutí 23. 9. 2026). */}
 
       {/*
         Úvod tři pětiny, aktuality dvě pětiny.
@@ -479,8 +554,16 @@ export function Dashboard({
                 která má čas jiný, si ho vypíše sama.
               */}
               <div className="flex items-center justify-between gap-3 border-b border-linka2 px-3 py-2">
-                <span className="stitek">{sk.nazev}</span>
-                <Stari cas={sk.cas} popisek={sk.popisekCasu} ted={tedMs} />
+                <span className="min-w-0">
+                  <span className="stitek block">{sk.nazev}</span>
+                  <span className="mt-0.5 block text-male font-semibold leading-snug text-inkoust">
+                    {souhrnTonu(sk.polozky.map((d) => d.ton), sk.predpona === "n" ? "aktivní" : sk.predpona === "v" ? "narušeno" : "platí", sk.predpona === "v" ? { nedolozeno: "bez hlášení" } : {})}
+                  </span>
+                </span>
+                <span className="flex shrink-0 items-center gap-3">
+                  <span className="hidden sm:block"><Paleta polozky={sk.polozky.map((d) => ({ nazev: d.nazev, tecka: TON[d.ton].tecka, slovo: d.stav }))} /></span>
+                  <Stari cas={sk.cas} popisek={sk.popisekCasu} ted={tedMs} />
+                </span>
               </div>
               <ul className="sm:grid sm:grid-cols-2">
                 {sk.polozky.map((d) => <RadekStavu key={d.klic} d={d} casSkupiny={sk.cas} ted={tedMs} signaly={signalySluzeb[d.zdrojovaPolozka.klic] ?? []} />)}
@@ -488,8 +571,30 @@ export function Dashboard({
             </div>
           ))}
 
+          {/* Služby naživo: souhrn přes všechny sledované služby, ne výběr. */}
+          <RozbalovaciOblast
+            nazev="Služby naživo"
+            souhrn={souhrnSluzeb.veta}
+            poznamka={souhrnSluzeb.poznamka}
+            paleta={SLUZBY.map((sl) => {
+              const st = sluzby.stavy.find((x) => x.klic === sl.klic)?.stav ?? "nezjisteno";
+              return { nazev: sl.nazev, tecka: TECKA_SLUZBY[st], slovo: SLOVA_STAVU[st] };
+            })}
+          >
+            <StavSluzeb stavy={sluzby.stavy} kdy={sluzby.kdy} vnoreny />
+          </RozbalovaciOblast>
+
           {/* Cena paliva: měřená řada ČSÚ. Nic o tom, kam ceny půjdou dál. */}
-          <CenaPaliva />
+          {paliva.length > 0 && (
+            <RozbalovaciOblast
+              nazev="Ceny pohonných hmot"
+              souhrn={paliva.map((p) => `${p.nazev} ${p.cena!.toFixed(2).replace(".", ",")} Kč/l${p.zaTyden ? ` (${p.zaTyden > 0 ? "+" : "−"}${Math.abs(p.zaTyden).toFixed(2).replace(".", ",")})` : ""}`).join(" · ")}
+              poznamka={`Týdenní šetření ČSÚ${paliva[0].konec ? `, týden do ${datumPraha(paliva[0].konec)}` : ""}. ${paliva.filter((p) => p.skok).length} z ${paliva.length} s neobvyklým týdenním pohybem. Měření, ne předpověď.`}
+              paleta={paliva.map((p) => ({ nazev: p.nazev, tecka: p.skok ? "bg-pozor" : "bg-klid", slovo: p.skok ? "neobvyklý pohyb" : "běžný pohyb" }))}
+            >
+              <CenaPaliva vnoreny />
+            </RozbalovaciOblast>
+          )}
         </section>
 
         {/*
@@ -502,20 +607,11 @@ export function Dashboard({
         */}
         <div className="min-w-0 space-y-4">
         <CoSeZmenilo zaznamy={vse} snimky={snimky} ted={tedMs} />
-        {/*
-          Služby naživo hned pod tím, co se změnilo: „jde mi zavolat
-          a zaplatit?" je první otázka, když se něco děje, a odpověď
-          od provozovatelů je rychlejší než od úřadů.
-        */}
-        <StavSluzeb stavy={sluzby.stavy} kdy={sluzby.kdy} />
+
         {/* Připravenost: co mít nastavené dřív, než se něco stane. Skóre je z odpovědí čtenáře v jeho prohlížeči. */}
         <PripravenostKarta nastroje={nastroje} />
 
-        {/*
-          Profily úřadů a představitelů na sítích: které se čtou a co z nich
-          přišlo. Ukazuje se vždycky — i „čeká na ověření" je informace.
-        */}
-        <ProfilySiti kandidati={kandidati} />
+
         {/*
           Tipy k přípravě. Odpovídají na jinou otázku než zbytek webu: ne co
           se stalo, ale co s tím může člověk udělat dnes. Bez tipu se
