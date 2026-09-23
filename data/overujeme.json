@@ -1,1 +1,54 @@
-[]
+[
+  {
+    "id": "o-2026-09-18-ru-mobilizace",
+    "slug": "ru-priprava-mobilizace-2026-09",
+    "coSeHlasi": "Ukrajinské zpravodajské služby tvrdí, že Rusko připravuje další vlnu mobilizace: 600 tisíc lidí v letech 2026 a 2027. Rozhodnutí podle nich může padnout po ruských volbách do Státní dumy (18.–20. září 2026).",
+    "kodZeme": "RU",
+    "zeme": "Rusko",
+    "zacalo": "2026-09-23T16:00:00Z",
+    "overenoNaposledy": "2026-09-23T16:00:00Z",
+    "uzavritDo": "2026-09-30T16:00:00Z",
+    "kdoHlasi": [
+      {
+        "nazev": "Kancelář prezidenta Ukrajiny — briefing ukrajinských zpravodajských služeb HUR a SZRU (27. 8. 2026)",
+        "url": "https://www.president.gov.ua/en/news/pidgotovka-novoyi-hvili-mobilizaciyi-v-rosiyi-brif-vid-gur-m-106137",
+        "typ": "primary",
+        "primarni": true
+      },
+      {
+        "nazev": "Euronews — Russia plans to mobilise 600,000 troops this year and next, Ukraine says",
+        "url": "https://www.euronews.com/2026/08/28/russia-plans-to-mobilise-600000-troops-this-year-and-next-ukraine-says",
+        "typ": "media",
+        "primarni": false
+      },
+      {
+        "nazev": "Ukrajinska pravda — Russia preparing to mobilise 600,000 in new wave, Ukrainian intelligence services say",
+        "url": "https://www.pravda.com.ua/eng/news/2026/08/27/8050533/",
+        "typ": "media",
+        "primarni": false
+      },
+      {
+        "nazev": "Kyiv Post — Russia Preparing New Mobilization Wave of 600,000, Ukrainian Intelligence Says",
+        "url": "https://www.kyivpost.com/post/83224",
+        "typ": "media",
+        "primarni": false
+      }
+    ],
+    "coJsmeOverili": [
+      "Tvrzení skutečně zveřejnila Kancelář prezidenta Ukrajiny 27. 8. 2026 jako briefing ukrajinských zpravodajských služeb; převzaly ho Euronews, Ukrajinska pravda a další. Pochází tedy od strany konfliktu.",
+      "Nezávislý Institut pro studium války (ISW) 27. 8. a 1. 9. 2026 uvedl, že ruské ministerstvo obrany připravuje podmínky pro rychlejší povolávání, ale že to neznamená, že Putin o mobilizaci rozhodl.",
+      "K 23. 9. 2026 jsme žádné vyhlášení mobilizace po volbách nenašli; ruská i nezávislá média píší jen o obavách a spekulacích.",
+      "Zpráva z 9. 9. 2026 o „statisících rozeslaných mobilizačních rozkazů“ se týká vložek do vojenských knížek, které mají platit až pro případ vyhlášení mobilizace. Nejde o povolání; počet je odhad a původní zdroj se nepodařilo dohledat."
+    ],
+    "coRikajiUrady": [
+      "Ruské úřady mobilizaci nevyhlásily. Mluvčí Kremlu Dmitrij Peskov zprávy 25. 8. označil za vymyšlené a prezident Putin 1. 9. za „úplný nesmysl“ (The Moscow Times, 2. 9. 2026: https://www.themoscowtimes.com/2026/09/02/complete-nonsense-putin-dismisses-mobilization-rumors-a93621).",
+      "Popírání samo nic nedokládá: předseda obranného výboru Dumy Andrej Kartapolov popíral mobilizaci i 20. 9. 2022, den před jejím vyhlášením.",
+      "V Česku z toho neplyne žádné opatření. Mobilizace v Rusku není vyhlášením čehokoli v České republice a na úřední stavy sledované tímto webem nemá vliv."
+    ],
+    "kdybyPlatilo": "Kdyby Rusko novou mobilizaci vyhlásilo, byl by to doložitelný úřední krok a tento web by ho zaznamenal jako událost, ne jako tvrzení. Sám o sobě by neznamenal rozšíření války mimo Ukrajinu ani nic, co by se přímo dotklo života v Česku; znamenal by, že Rusko doplňuje ztráty a počítá s delším vedením války.",
+    "coDelatTed": "Nic měnit nemusíte. Je to tvrzení jedné strany konfliktu, ne vyhlášené opatření. Když Rusko mobilizaci vyhlásí, najdete ji tu jako záznam.",
+    "stav": "overujeme",
+    "lidskyOvereno": true,
+    "zarazil": "provozovatelka (rozhodnutí 23. 9. 2026)"
+  }
+]

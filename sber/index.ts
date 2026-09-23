@@ -7,6 +7,7 @@ import { ZDROJE } from "./zdroje";
 import type { Nalez, VysledekZdroje } from "./typy";
 import { lidskaZmena } from "../src/lib/archiv-text";
 import { sbirejUdalosti } from "./udalosti";
+import { uzavriOverovane } from "./overujeme";
 import { sbirejPalivo } from "./palivo";
 import { sbirejSluzby } from "./sluzby";
 
@@ -231,6 +232,14 @@ async function main() {
     } catch (e) {
       console.log(`[sber] sběr událostí selhal, ostatní pokračuje: ${e instanceof Error ? e.message : e}`);
     }
+  }
+
+  /* ---------- „Právě ověřujeme“: uzavření po lhůtě ---------- */
+  try {
+    const n = uzavriOverovane();
+    if (n) console.log(`[sber] ověřované: ${n} po lhůtě uzavřeno jako „nikdo nepotvrdil“`);
+  } catch (e) {
+    console.log(`[sber] uzavření ověřovaných selhalo: ${e instanceof Error ? e.message : e}`);
   }
 
   /* ---------- ceny pohonných hmot ---------- */

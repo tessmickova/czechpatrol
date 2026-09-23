@@ -903,7 +903,7 @@ async function doplnModelem(nove: Kandidat[]): Promise<Kandidat[]> {
 
   const POKYNY = [
     "Třídíš zprávy pro český bezpečnostní přehled. Relevantní jsou jen SKUTEČNÉ události z Evropy: sabotáže, žhářství, útoky na infrastrukturu, narušení vzdušného prostoru, kybernetické útoky s dopadem, zatčení agentů, oficiální atribuce, kroky NATO/EU/vlád, mimořádná právní opatření.",
-    "Nerelevantní: komentáře, analýzy bez nové skutečnosti, sport, kultura, obecná politika, válka na Ukrajině mimo dopad na NATO/EU, stará událost bez nového faktu.",
+    "Nerelevantní: komentáře, analýzy bez nové skutečnosti, sport, kultura, obecná politika, běžné denní údery na Ukrajině bez dopadu na NATO/EU, stará událost bez nového faktu. Z války na Ukrajině je relevantní jen neobvyklé: výrazný postup fronty, vpád nebo útok z nového směru (Bělorusko, Podněstří, nové pobřeží), první použití nového druhu zbraně, úder na jadernou elektrárnu.",
     "Pro relevantní napiš věcný český titulek (co se stalo, kde), jednu větu shrnutí bez hodnocení, kód země ISO-2 místa události (EU pro instituce EU, null neurčeno), český název země, oblasti z: cr, nato, hybridni, sabotaz, infrastruktura, drony, hranice, pravo, rusko, diplomacie, kyber, vysetrovani, zpravodajske; druhOdhad: pripad = reálná událost, opatreni = oficiální krok státu/aliance, reakce = prohlášení/varování, neurceno.",
     "Nic si nedomýšlej. Když zpráva neříká zemi, dej null. Vrať každé id přesně jednou.",
   ].join(" ");
