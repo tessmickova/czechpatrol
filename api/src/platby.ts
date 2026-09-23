@@ -3,6 +3,7 @@ import { pripravVydani } from "./kredity";
 import { omez } from "./limit";
 import { maOpravneni, pripravUdeleni } from "./opravneni";
 import { ChybaHttp, json, sha256, stejne, ted, telo } from "./pomocne";
+import { osobniUdajePovoleny } from "./osobni-udaje";
 import { vyzadujPravo } from "./prava";
 import { sifrovaniNastaveno } from "./sifrovani";
 import { jeProdukt, PRODUKTY, type Env, type Prihlaseny, type Produkt } from "./typy";
@@ -33,7 +34,9 @@ const DOTAZ_PO_MIN = 10;
 const DOTAZ_DO_DNI = 7;
 
 export function bezi(env: Env): boolean {
-  return Boolean(env.COMGATE_MERCHANT && env.COMGATE_SECRET) && sifrovaniNastaveno(env);
+  // Platit bez uvedeného prodávajícího (provozovatele) nejde: chybí identifikace,
+  // podmínky i poučení o odstoupení (audit P0-15). Jeden klíč brány to nezapne.
+  return Boolean(env.COMGATE_MERCHANT && env.COMGATE_SECRET) && sifrovaniNastaveno(env) && osobniUdajePovoleny(env);
 }
 const testovaci = (env: Env) => env.COMGATE_TEST !== "false";
 

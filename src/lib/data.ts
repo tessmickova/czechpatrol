@@ -1,5 +1,5 @@
 import { JE_UKAZKA } from "@/config/web";
-import type { OficialniNastroj, OpatreniZeme, OpatreniZemi,
+import type { OficialniNastroj, PravniPolozka, ProvozniPolozka, OpatreniZeme, OpatreniZemi,
   Odmitnuty,
   Archiv, CelkovyStav, HybridniTlak, Incident, Kampan, Kandidat, Kategorie, NatoPolozka, Oprava, PravniStav,
   Nepotvrzene, Overovana, Provoz, Puvodce, RuskoStav, Svet, Tip, TydenniHodnoceni, Uroven, Vystraha, VystrahaSoubor, Watchlist,
@@ -408,8 +408,14 @@ export interface StavObcanu {
 }
 
 export function urovenObcanu(): StavObcanu {
-  const pr = pravniStav().polozky;
-  const pv = provoz().polozky;
+  return stavObcanuZ(pravniStav().polozky, provoz().polozky);
+}
+
+/** Čistá část výpočtu — kvůli testům (audit P0-5, P0-7). */
+export function stavObcanuZ(
+  pr: Pick<PravniPolozka, "nazev" | "plati" | "overeno">[],
+  pv: Pick<ProvozniPolozka, "nazev" | "stav" | "overeno">[],
+): StavObcanu {
   const neovereno = pr.filter((p) => p.plati === null).length + pv.filter((p) => p.stav === "bez-zdroje").length;
   const plati = pr.filter((p) => p.plati === true);
   if (plati.length) return { uroven: "R1", slovo: "Platí opatření", popis: `Úředně platí: ${plati.map((p) => p.nazev.toLowerCase()).join(", ")}. Podrobnosti a pokyny úřadů níže v Úředním stavu.`, neovereno, neutralni: false };

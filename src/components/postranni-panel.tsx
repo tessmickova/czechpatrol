@@ -252,8 +252,13 @@ export function PostranniPanel() {
                 <span className="text-male text-tlum">Telegram — připravujeme</span>
               </span>
             )}
+            {/*
+              Jen kanály, které opravdu běží. Mřížka s šedými dlaždicemi
+              „připravujeme“ slibovala sítě, které nemáme.
+            */}
+            {KANALY_PANEL.some((k) => k.klic !== "telegram" && KANALY[k.klic]) && (
             <ul className="mt-2 grid grid-cols-3 gap-1.5">
-              {KANALY_PANEL.filter((k) => k.klic !== "telegram").map((k) => {
+              {KANALY_PANEL.filter((k) => k.klic !== "telegram" && KANALY[k.klic]).map((k) => {
                 const url = KANALY[k.klic];
                 return (
                   <li key={k.klic}>
@@ -273,17 +278,20 @@ export function PostranniPanel() {
                 );
               })}
             </ul>
+            )}
             <div className="mt-1.5 flex items-center justify-between gap-3 text-male">
               <Tlacitko kam="/feed.xml" varianta="tichy" velikost="s" ikona="rss" trida="!text-akcent hover:!text-akcent-svetla">RSS — odběr ve čtečce</Tlacitko>
               <Link href="/odber/" onClick={zavri} className="text-tlum hover:text-inkoust">jak to funguje →</Link>
             </div>
           </section>
 
-          {/* komunita */}
-          <section aria-label="Komunita" className="border-t border-linka px-4 py-3">
-            <div className="stitek mb-2">Komunita</div>
-            <KruhyKomunity onKlik={zavri} />
-          </section>
+          {/* komunita — až poběží */}
+          {SPUSTENO.komunita && (
+            <section aria-label="Komunita" className="border-t border-linka px-4 py-3">
+              <div className="stitek mb-2">Komunita</div>
+              <KruhyKomunity onKlik={zavri} />
+            </section>
+          )}
 
           {/* podpora a aplikace */}
           <section aria-label="Podpora a aplikace" className="border-t border-linka px-4 py-3">
@@ -306,7 +314,7 @@ export function PostranniPanel() {
                 <span className="grid h-9 w-9 shrink-0 place-items-center rounded-full bg-plocha2 text-jantar"><Ikona nazev="kava" velikost={17} tah={1.9} /></span>
                 <span className="min-w-0 flex-1">
                   <span className="block text-zaklad font-bold text-inkoust">Podpořit provoz</span>
-                  <span className="block text-drobne text-tlum">přímý příspěvek zatím připravujeme</span>
+                  <span className="block text-drobne text-tlum">co provoz stojí a jak pomoct</span>
                 </span>
               </Link>
             )}
