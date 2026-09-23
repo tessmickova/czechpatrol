@@ -149,9 +149,12 @@ jobs:
         if: steps.zmena.outputs.zmena == 'true'
         run: npm test
 
+      # Sestavení stahuje písma z Google Fonts. 22. 9. 2026 (nasazení č. 580)
+      # spadlo jen proto, že se stažení písma nepovedlo — kód byl v pořádku.
+      # Jeden další pokus po půl minutě; chyba v kódu spadne i napodruhé.
       - name: Sestavení
         if: steps.zmena.outputs.zmena == 'true'
-        run: npm run build
+        run: npm run build || { echo "::warning::Sestavení selhalo, zkouším znovu za 30 s (např. nedostupná písma)"; sleep 30; npm run build; }
         env:
           NEXT_PUBLIC_API_URL: ${{ vars.API_URL }}
 
