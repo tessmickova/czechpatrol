@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
-import { BUY_ME_A_COFFEE_URL, DISKUZE, KANALY, POMOCNIK, TISNOVA, UCTY_ZAPNUTE, WEB } from "@/config/web";
+import { BUY_ME_A_COFFEE_URL, DISKUZE, KANALY, POMOCNIK, TISNOVA, UCTY_ZAPNUTE, WEB, SPUSTENO } from "@/config/web";
 import { odhlasit, ROLE, useUcet } from "@/lib/ucet";
 import { Ikona, type NazevIkony } from "./ikony";
 import { TlacitkoInstalace } from "./pwa";
@@ -51,7 +51,7 @@ export const DALSI_STRANKY = [
   { href: "/zdroje/", label: "Zdroje" },
   { href: "/opravy/", label: "Opravy a historie" },
   { href: "/o-projektu/", label: "O projektu" },
-  { href: "/izs/", label: "Pro záchranné složky" },
+  ...(SPUSTENO.izs ? [{ href: "/izs/", label: "Pro záchranné složky" }] : []),
   { href: "/soukromi/", label: "Soukromí" },
   { href: "/podminky/", label: "Podmínky" },
 ];

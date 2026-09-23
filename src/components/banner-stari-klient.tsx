@@ -26,7 +26,12 @@ import { Ikona } from "./ikony";
 */
 
 /** Za jak dlouho po poslední kontrole se z ticha stane přiznaný výpadek. */
-const HODIN_DO_VYPADKU = 12;
+/*
+  5 h od 23. 9. 2026 (dřív 12). Sběr běží každou hodinu; i když ho hlídač
+  minut zpomalí na nejvýš 4 h, 5 h bez čtení je výpadek, ne klid. Dvanáct
+  hodin znamenalo, že web půl dne tvrdil čerstvý stav.
+*/
+export const HODIN_DO_VYPADKU = 5;
 
 /*
   Stav kontroly jako údaj, ne jako pruh.
@@ -53,7 +58,7 @@ function stav(zkontrolovano: string | null, nyni: number): { poplach: boolean; t
   return {
     poplach: false,
     text: hodin < 6
-      ? `Zkontrolováno ${casPraha(zkontrolovano)} · bez nálezu`
+      ? `Zdroje čteny ${casPraha(zkontrolovano)} · nic nového nenalezeno`
       : `Zdroje naposledy čteny ${datumCasPraha(zkontrolovano)} · ${stariSlovy(zkontrolovano, nyni)}`,
   };
 }

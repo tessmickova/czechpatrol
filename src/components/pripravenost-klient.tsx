@@ -275,14 +275,14 @@ export function PripravenostKlient({ nastroje }: { nastroje: OficialniNastroj[] 
 }
 
 /** Malá karta na úvodní straně: skóre a odkaz. Bez odpovědí ukáže jen počet položek. */
-export function PripravenostKarta({ nastroje }: { nastroje: OficialniNastroj[] }) {
+export function PripravenostKarta({ nastroje, vnoreny = false }: { nastroje: OficialniNastroj[]; vnoreny?: boolean }) {
   const [odpovedi, setOdpovedi] = useState<Odpovedi | null>(null);
   useEffect(() => { setOdpovedi(nactiOdpovedi()); }, []);
   const skore = skorePripravenosti(nastroje, odpovedi ?? {});
   const zacal = odpovedi && Object.keys(odpovedi).length > 0;
   return (
-    <section aria-label="Jsem připraven?" className="rounded-[22px] border border-linka2 bg-plocha">
-      <div className="flex items-center justify-between gap-2 border-b border-linka2 px-4 py-3">
+    <section aria-label="Jsem připraven?" className={vnoreny ? "" : "rounded-[22px] border border-linka2 bg-plocha"}>
+      <div className={`flex items-center justify-between gap-2 border-b border-linka2 px-4 py-3 ${vnoreny ? "hidden" : ""}`}>
         <span className="flex items-center gap-2">
           <span aria-hidden className="grid h-[18px] w-[18px] shrink-0 place-items-center rounded-full border border-akcent/50">
             <span className="h-[6px] w-[6px] rounded-full bg-akcent" />

@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { useEffect, useState } from "react";
-import { KRAJE, UCTY_ZAPNUTE, WEB } from "@/config/web";
+import { KRAJE, UCTY_ZAPNUTE, WEB, SPUSTENO } from "@/config/web";
 import { KATEGORIE, PORADI_KATEGORII } from "@/lib/kategorie";
 import { obnovit, podporujePasskey, pridatPasskey, prihlasit, registrovat } from "@/lib/passkey";
 import { api, odhlasit, ROLE, ulozToken, useUcet, VYCHOZI_UPOZORNENI, type Frekvence, type MinZavaznost, type NastaveniUpozorneni } from "@/lib/ucet";
@@ -162,14 +162,14 @@ function Prihlaseni({ po, naNovyKod }: { po: () => void; naNovyKod: (kod: string
         </form>
       </Karta>
 
-      <div className="lg:col-span-2">
+      {SPUSTENO.izs && <div className="lg:col-span-2">
         <Hlaska typ="info">
           Nováčci mají jeden bonus navíc: ověřené záchranné složky mohou přes CzechPatrol
           poslat zprávu přímo vám — třeba o uzavírce nebo evakuaci ve vašem kraji.
           Vždy je označená jako zpráva partnera, nikdy se nevydává za úřední varování.{" "}
           <Link href="/izs/" className="odkaz font-semibold text-inkoust">Jak to funguje</Link>
         </Hlaska>
-      </div>
+      </div>}
     </div>
   );
 }
@@ -376,7 +376,7 @@ function Nastaveni({
           </div>
         </Karta>
 
-        <PremiumVUctu maEmail={Boolean(ucet.email)} obnovUcet={obnov} />
+        {SPUSTENO.premium && <PremiumVUctu maEmail={Boolean(ucet.email)} obnovUcet={obnov} />}
 
         <Karta className="border-akcent/30 p-6">
           <div className="stitek mb-2 !text-akcent-svetla">Smazání</div>
@@ -429,13 +429,13 @@ function Nastaveni({
                 <p className="col-span-2 text-male text-tlum2">Vážné změny tiché hodiny nerespektují. Ostatní počkají do rána.</p>
               </div>
             )}
-            <Prepinac
+            {SPUSTENO.izs && <Prepinac
               zapnuto={n.zpravyIzs}
               onChange={(zpravyIzs) => setN({ ...n, zpravyIzs })}
               nazev="Zprávy partnerů IZS"
               popis="Schválené zprávy ověřených záchranných složek. Označené vždy jako zpráva partnera."
-            />
-            {n.zpravyIzs && (
+            />}
+            {SPUSTENO.izs && n.zpravyIzs && (
               <div className="rounded-[22px] border border-linka p-4">
                 <Popisek pro="kraj">Můj kraj (pro krajské zprávy partnerů)</Popisek>
                 <select id="kraj" value={n.kraj ?? ""} onChange={(e) => setN({ ...n, kraj: e.target.value || null })} className={POLE}>

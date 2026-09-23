@@ -8,7 +8,7 @@ import { NavadeniZapojeni } from "@/components/zapojit-klient";
 import { RegistraceSW } from "@/components/pwa";
 import { Paticka } from "@/components/paticka";
 import { PruhPuvodu, UkazkaPruh } from "@/components/pruhy";
-import { StavKontrolyVedle } from "@/components/banner-stari-klient";
+import { PruhKontroly, StavKontrolyVedle } from "@/components/banner-stari-klient";
 import { posledniKontrola } from "@/lib/data";
 import { PruhVystrahy } from "@/components/vystraha";
 import { Znacka } from "@/components/znacka";
@@ -106,6 +106,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           sáhnout odkudkoli ze stránky.
         */}
         <DialogProvider>
+          {/* Pruh o zastaralých datech na KAŽDÉ stránce, ne jen na úvodní (audit 23. 9. 2026, P0-18). */}
+          <PruhKontroly zkontrolovano={posledniKontrola()} ted={Date.now()} />
           <main id="obsah" className="pb-[calc(60px+env(safe-area-inset-bottom))] md:pb-0">{children}</main>
         </DialogProvider>
         <Paticka />

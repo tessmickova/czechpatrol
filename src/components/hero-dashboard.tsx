@@ -1,5 +1,6 @@
 "use client";
 
+import type { StavObcanu } from "@/lib/data";
 import { PASMA, UROVNE } from "@/lib/skala";
 import type { CelkovyStav, Uroven } from "@/lib/typy";
 import type { HlavniVeta } from "@/lib/veta";
@@ -32,21 +33,25 @@ import { useT } from "@/lib/i18n";
 */
 
 function Merak({
-  nadpis, uroven, obdobi, popis, velikost = 136, vlastniSlovo, dodatek,
+  nadpis, uroven, obdobi, popis, velikost = 136, vlastniSlovo, dodatek, bezVykladu = false, neutralni = false,
 }: {
   nadpis: string; uroven: Uroven | null; obdobi: string; velikost?: number; vlastniSlovo?: string;
+  /** Neukazovat výklad bezpečnostní škály (u běžného života by lhal). */
+  bezVykladu?: boolean;
+  /** Šedě místo barvy pásma: nemáme doklad. */
+  neutralni?: boolean;
   /** Popis i doplněk jdou jen do nápovědy. Na plochu budíku se nedostanou. */
   popis?: string; dodatek?: string;
 }) {
   const t = useT();
-  const pasmo = uroven ? PASMA[UROVNE[uroven].pasmo] : null;
+  const pasmo = uroven && !neutralni ? PASMA[UROVNE[uroven].pasmo] : null;
   return (
     <Napoveda
       cele
       popis={
         <span className="block">
           {popis && <span className="mb-1.5 block text-inkoust">{popis}</span>}
-          {uroven ? <VykladUrovne uroven={uroven} /> : t("Za sledované období tu není jediný ověřený případ ani operace proti občanům.")}
+          {bezVykladu ? null : uroven ? <VykladUrovne uroven={uroven} /> : t("Za sledované období tu není jediný ověřený případ ani operace proti občanům.")}
           {dodatek && <span className="mt-1.5 block text-tlum2">{dodatek}</span>}
         </span>
       }
@@ -65,7 +70,7 @@ function Merak({
           <ObloukovyMerak uroven={uroven} naNoci velikost={velikost} skrytPopisek />
         </span>
         <span aria-hidden className={`mt-2 mb-1 h-[7px] w-[7px] rounded-full sm:hidden ${pasmo ? pasmo.tecka : "bg-klid"}`} />
-        <span className={`text-zaklad font-bold uppercase leading-tight tracking-[0.03em] sm:-mt-1 ${pasmo ? pasmo.text : vlastniSlovo ? "text-klid-text" : "text-tlum2"}`}>
+        <span className={`text-zaklad font-bold uppercase leading-tight tracking-[0.03em] sm:-mt-1 ${pasmo ? pasmo.text : vlastniSlovo && !neutralni ? "text-klid-text" : "text-tlum2"}`}>
           {vlastniSlovo ?? (uroven ? UROVNE[uroven].nazev : "bez hodnocení")}
         </span>
       </span>
@@ -81,7 +86,7 @@ export function HeroDashboard({
   pas?: React.ReactNode;
   /** Kolik případů a kolik manipulačních operací v Česku za 90 dní. */
   crPocet: { pripadu: number; kampani: number };
-  obcane: { uroven: Uroven; popis: string; neovereno: number };
+  obcane: StavObcanu;
   veta: HlavniVeta;
 }) {
   const t = useT();
@@ -212,8 +217,10 @@ export function HeroDashboard({
             nadpis={t("Běžný život")}
             uroven={obcane.uroven}
             obdobi="teď"
-            popis={obcane.uroven === "G1" ? "pohyb, nákupy i služby beze změny" : obcane.popis}
-            vlastniSlovo={obcane.uroven === "G1" ? "Bez omezení" : undefined}
+            popis={obcane.popis}
+            vlastniSlovo={obcane.slovo}
+            bezVykladu
+            neutralni={obcane.neutralni}
           />
         </div>
       </div>

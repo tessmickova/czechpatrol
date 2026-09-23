@@ -70,15 +70,21 @@ export function hlavniVeta(
   const evropaVeta =
     pasmo === null
       ? "Hodnocení pro Evropu zatím nebylo stanoveno."
+      /*
+        Audit 23. 9. 2026 (P0-8): věta i budík berou TUTÉŽ úroveň — automatické
+        hodnocení ze stav.json. Dřív věta brala ruční hybridni-tlak.json z 5. 9.
+        a říkala „vysoká", zatímco budík vedle „Zvýšená". A měří se intenzita
+        doložených událostí, ne hrozba ani předpověď.
+      */
       : pasmo === "zelena"
-        ? "V Evropě je aktivita na běžné úrovni."
+        ? "V Evropě evidujeme sledované bezpečnostní události v běžné míře."
         : pasmo === "zluta"
-          ? "V Evropě ale sledujeme zvýšenou hybridní aktivitu."
+          ? "V Evropě evidujeme mírně zvýšenou intenzitu sledovaných bezpečnostních událostí."
           : pasmo === "prechod"
-            ? "V Evropě ale sledujeme výrazně zvýšenou hybridní aktivitu."
+            ? "V Evropě evidujeme zvýšenou intenzitu sledovaných bezpečnostních událostí. Nejde o předpověď."
             : pasmo === "oranzova"
-              ? "V Evropě je hybridní aktivita vysoká a týká se i sousedních zemí."
-              : "V Evropě je situace vážná a mění se rychle.";
+              ? "V Evropě evidujeme vysokou intenzitu sledovaných bezpečnostních událostí. Nejde o předpověď."
+              : "V Evropě evidujeme velmi vysokou intenzitu sledovaných bezpečnostních událostí. Nejde o předpověď.";
 
   return { cesko, evropa: evropaVeta, neovereno };
 }

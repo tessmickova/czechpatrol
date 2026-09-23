@@ -196,6 +196,24 @@ export const UCTY_ZAPNUTE = API_URL !== "";
  * Pozn.: web je statický, takže omezení platí v prohlížeči. Kdo by chtěl
  * data doopravdy schovat, musel by je přesunout do API.
  */
+/*
+  Co je spuštěné pro veřejnost (audit 23. 9. 2026, „launch web není roadmapa").
+
+  Funkce, které nejsou hotové nebo nemají právní základ, se na webu
+  nenabízejí. Kód zůstává, zapne se tady, až bude hotové:
+  - premium:  platby a Premium — až budou obchodní podmínky, poučení
+              o odstoupení a uvedený provozovatel (LEGAL REVIEW),
+  - komunita: WhatsApp skupina, slevy, VIP — nic z toho zatím neexistuje,
+  - izs:      zprávy partnerů IZS — žádný partner zatím není,
+  - zebricek: srovnání s ostatními — připravenost není soutěž.
+*/
+export const SPUSTENO = {
+  premium: false,
+  komunita: false,
+  izs: false,
+  zebricek: false,
+} as const;
+
 export const PLACENE = {
   hraniceADoprava: false,
 } as const;

@@ -6753,7 +6753,7 @@
   {
     "id": "i-2026-09-10-svalbard-kabely",
     "slug": "svalbard-nato-zabranilo-naciku-prerezani-kabelu-2026",
-    "titulek": "Arktida: britské, norské a americké síly zastavily ruské ponorky, které u Špicberk nacvičovaly přerušení podmořských kabelů",
+    "titulek": "Arktida: podle Reuters a dvou nejmenovaných západních představitelů zastavily spojenecké síly u Špicberk ruské ponorky při nácviku přerušení podmořských kabelů",
     "kratkyTitulek": "Špicberky: NATO zastavilo ruské ponorky u kabelů",
     "zeme": "Norsko",
     "kodZeme": "NO",
@@ -6767,7 +6767,7 @@
     "datumZjisteni": "2026-09-10T00:00:00Z",
     "aktualizovano": "2026-09-11T11:00:00Z",
     "zavaznost": "O1",
-    "jistota": "vysoka",
+    "jistota": "stredni",
     "stav": "bez-vysetrovani",
     "atribuce": "nepotvrzena",
     "puvodce": "rusko",
@@ -6782,7 +6782,8 @@
     "neznameho": [
       "Přesné datum akce. Reuters uvádí jen jaro 2026; den ani týden zveřejněn nebyl, proto ho zde neuvádíme.",
       "Jak přesně měl popisovaný prostředek fungovat a zda už byl někde nasazen.",
-      "Zda některá ze zúčastněných vlád akci potvrdí na záznam. Zatím o ní mluvili jen nejmenovaní představitelé."
+      "Zda některá ze zúčastněných vlád akci potvrdí na záznam. Zatím o ní mluvili jen nejmenovaní představitelé.",
+      "Přesné datum události Reuters neuvádí (akce proběhla podle zdroje na jaře); 10. 9. 2026 je datum zveřejnění zprávy."
     ],
     "vyznam": "Zmařený nácvik, ne škoda. Podstatné je, na co mířil: kabely ke Špicberkám nesou data z pozemní satelitní stanice, na které závisí i civilní a vědecký provoz. Tohle je hodnocení projektu, ne doložený fakt.",
     "eskalacniSpousteče": [
@@ -6845,6 +6846,11 @@
         "kdy": "2026-09-15T06:45:00Z",
         "text": "Upřesněn krátký titulek. „Zmařený nácvik na kabely\" nepojmenovával doložené jednání a přisuzoval záměr přerušit kabely jako fakt; podle Reuters jde o vyjádření dvou západních představitelů. Titulek teď popisuje, co je doložené: spojenci plavidla zastavili u kabelů.",
         "novySignal": false
+      },
+      {
+        "kdy": "2026-09-23T15:30:00Z",
+        "text": "Opraveno: titulek uvádí, že jde o tvrzení nejmenovaných zdrojů Reuters; jistota střední.",
+        "novySignal": false
       }
     ],
     "novy": true,
@@ -6855,7 +6861,7 @@
   {
     "id": "i-2026-09-08-moldavsko-dron",
     "slug": "moldavsko-dron-uzavrel-vzdusny-prostor-2026",
-    "titulek": "Moldavsko uzavřelo vzdušný prostor kvůli ruskému dronu; zdrželo to i letadlo s ukrajinským prezidentem",
+    "titulek": "Moldavsko uzavřelo vzdušný prostor kvůli dronu, který podle policie odpovídá typu Geran; zdrželo to i letadlo s ukrajinským prezidentem",
     "kratkyTitulek": "Moldavsko: dron uzavřel vzdušný prostor",
     "zeme": "Moldavsko",
     "kodZeme": "MD",
@@ -6928,6 +6934,11 @@
       {
         "kdy": "2026-09-15T06:10:00Z",
         "text": "Oprava: jako úřední doklad byl u záznamu veden dokument norské vlády, který je ale z 13. 2. 2025 a tuhle událost nepopisuje. Zdroj byl odebrán, tvrzení o norském odsouzení staženo a připsání odpovědnosti sníženo z úředního na vyšetřované. Samotná událost zůstává doložena zpravodajstvím BBC, CNN a NBC.",
+        "novySignal": false
+      },
+      {
+        "kdy": "2026-09-23T15:30:00Z",
+        "text": "Opraveno: titulek netvrdí „ruský dron“, uvádí zjištění policie (typ Geran).",
         "novySignal": false
       }
     ],
@@ -7995,9 +8006,9 @@
   {
     "id": "i-2026-09-15-590b687216",
     "slug": "us-590b687216",
-    "titulek": "USA: obvinila pět osob z ruské sabotážní a atentátnické sítě",
-    "kratkyTitulek": "USA: obvinila pět osob z ruské sabotážní a atentátnické sítě",
-    "zeme": "Rusko",
+    "titulek": "USA: obžaloba pěti osob, podle níž šlo o síť napojenou na ruské zpravodajské služby, která chystala sabotáže a vraždu na objednávku",
+    "kratkyTitulek": "USA: obžaloba sítě napojené podle žalobců na ruské služby",
+    "zeme": "USA",
     "kodZeme": "US",
     "kategorie": [
       "sabotaz",
@@ -8006,8 +8017,8 @@
     "datumUdalosti": "2026-09-15T00:00:00Z",
     "datumZjisteni": "2026-09-16T00:00:00Z",
     "aktualizovano": "2026-09-20T19:16:27.999Z",
-    "zavaznost": "O3",
-    "jistota": "potvrzeno",
+    "zavaznost": "Y3",
+    "jistota": "vysoka",
     "stav": "bez-vysetrovani",
     "atribuce": "neznama",
     "puvodce": "neznamy",
@@ -8094,6 +8105,11 @@
       {
         "kdy": "2026-09-20T19:16:27.999Z",
         "text": "Zveřejněno automaticky: dva nezávislé zdroje, z toho úřední. Bez lidské kontroly.",
+        "novySignal": false
+      },
+      {
+        "kdy": "2026-09-23T15:30:00Z",
+        "text": "Opraveno: země USA (dřív chybně „Rusko“), závažnost Y3 místo O3, jistota vysoká místo potvrzeno, titulek uvádí tvrzení jako tvrzení obžaloby.",
         "novySignal": false
       }
     ],

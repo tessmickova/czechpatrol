@@ -389,17 +389,38 @@ export function pocetZemeObdobi(kodZeme: string, dni = 90): { pripadu: number; k
  * Mimořádný právní stav = vážná; narušená služba = vysoká; sledovaná = střední;
  * nic z toho = nízká. Neověřené položky do výsledku nevstupují, ale hlásí se.
  */
-export function urovenObcanu(): { uroven: Uroven; popis: string; neovereno: number } {
+/*
+  Audit 23. 9. 2026 (P0-5, P0-7):
+  - Běžný život NESMÍ používat výklad bezpečnostní škály. Dřív jakékoli
+    opatření (i povodňový nouzový stav) ukázalo R1 „probíhá ozbrojený
+    incident s účastí NATO nebo ČR". Teď má vlastní slova a výklad.
+  - Zelené „Bez omezení" jen tehdy, když je aspoň něco VĚCNĚ ověřené.
+    Když máme jen orientační kontrolu (overeno: null u všech položek),
+    je to „nic nenalezeno" v neutrální barvě — nevíme, ne klid.
+*/
+export interface StavObcanu {
+  uroven: Uroven;
+  slovo: string;
+  popis: string;
+  neovereno: number;
+  /** Neutrální barva: nemáme doklad, jen jsme nic nenašli. */
+  neutralni: boolean;
+}
+
+export function urovenObcanu(): StavObcanu {
   const pr = pravniStav().polozky;
   const pv = provoz().polozky;
   const neovereno = pr.filter((p) => p.plati === null).length + pv.filter((p) => p.stav === "bez-zdroje").length;
   const plati = pr.filter((p) => p.plati === true);
-  if (plati.length) return { uroven: "R1", popis: `platí: ${plati.map((p) => p.nazev.toLowerCase()).join(", ")}`, neovereno };
+  if (plati.length) return { uroven: "R1", slovo: "Platí opatření", popis: `Úředně platí: ${plati.map((p) => p.nazev.toLowerCase()).join(", ")}. Podrobnosti a pokyny úřadů níže v Úředním stavu.`, neovereno, neutralni: false };
   const narusene = pv.filter((p) => p.stav === "narusen");
-  if (narusene.length) return { uroven: "O1", popis: `narušeno: ${narusene.map((p) => p.nazev.toLowerCase()).join(", ")}`, neovereno };
+  if (narusene.length) return { uroven: "O1", slovo: "Narušeno", popis: `Narušeno: ${narusene.map((p) => p.nazev.toLowerCase()).join(", ")}.`, neovereno, neutralni: false };
   const sledovane = pv.filter((p) => p.stav === "sledujeme");
-  if (sledovane.length) return { uroven: "Y1", popis: `sledujeme: ${sledovane.map((p) => p.nazev.toLowerCase()).join(", ")}`, neovereno };
-  return { uroven: "G1", popis: "bez omezení, bez mobilizace, bez mimořádných nařízení", neovereno };
+  if (sledovane.length) return { uroven: "Y1", slovo: "Sledujeme", popis: `Sledujeme: ${sledovane.map((p) => p.nazev.toLowerCase()).join(", ")}.`, neovereno, neutralni: false };
+  const vecneOvereno = pr.some((p) => p.overeno) || pv.some((p) => p.overeno);
+  return vecneOvereno
+    ? { uroven: "G1", slovo: "Bez omezení", popis: "Úřední zdroje neuvádějí žádné omezení ani mimořádné opatření.", neovereno, neutralni: false }
+    : { uroven: "G1", slovo: "Nic nenalezeno", popis: "V kontrolovaných zdrojích jsme nenašli vyhlášené omezení ani mimořádné opatření. Úplný úřední seznam zatím nečteme, proto to není potvrzený klid.", neovereno, neutralni: true };
 }
 
 /** Měsíční řada od roku 2013. Měsíce bez doloženého záznamu jsou prázdné. */

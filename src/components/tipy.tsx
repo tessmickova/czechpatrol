@@ -28,13 +28,13 @@ export function TipyKPripraveNadpis() {
   );
 }
 
-export function TipyKPriprave({ ted = Date.now() }: { ted?: number }) {
+export function TipyKPriprave({ ted = Date.now(), vnoreny = false }: { ted?: number; vnoreny?: boolean }) {
   const t = tipy(ted);
   if (!t.length) return null;
 
   return (
-    <section aria-labelledby="tipy-nadpis" className="rounded-[18px] border border-linka2 bg-plocha px-3 py-2.5">
-      <div className="mb-2 flex items-center justify-between gap-3">
+    <section aria-labelledby="tipy-nadpis" className={vnoreny ? "px-4 py-3" : "rounded-[18px] border border-linka2 bg-plocha px-3 py-2.5"}>
+      <div className={`mb-2 flex items-center justify-between gap-3 ${vnoreny ? "sr-only" : ""}`}>
         <h3 id="tipy-nadpis" className="stitek flex items-center gap-1.5">
           <Ikona nazev="fajfka" velikost={12} tah={2} />
           Tipy k přípravě

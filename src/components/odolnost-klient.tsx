@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { useEffect, useMemo, useRef, useState } from "react";
-import { ESHOP, OBCHODY } from "@/config/web";
+import { ESHOP, OBCHODY, SPUSTENO } from "@/config/web";
 import { api } from "@/lib/ucet";
 import { usePremium } from "@/lib/premium";
 import { zaznamejUdalost } from "@/lib/mereni";
@@ -408,7 +408,7 @@ export function OdolnostKlient() {
           ) : (
             <>
               <div className="mt-6">
-                <KartaPremium vyplneno={vyplneno} />
+                {SPUSTENO.premium && <KartaPremium vyplneno={vyplneno} />}
               </div>
               <p className="mt-4 text-drobne text-tlum2">Uloženo jen v tomto zařízení, nikam se neposílá. Katalog {VERZE_KATALOGU}. <Link href="/pripravenost/" className="odkaz">Oficiální nástroje a 72h základ</Link></p>
             </>
@@ -458,7 +458,7 @@ function CoUdelat({ doporuceni, nakup }: { doporuceni: Doporuceni[]; nakup: Naku
                   </li>
                 ))}
               </ol>
-              {!ESHOP && obchody.length === 0 && <p className="mt-2 text-drobne text-tlum2">Odkazy do obchodů doplníme, až poběží náš e-shop. Kredit z odemknutí tam uplatníte. Seznam funguje i bez nich.</p>}
+              {!ESHOP && obchody.length === 0 && <p className="mt-2 text-drobne text-tlum2">Seznam funguje i bez odkazů do obchodů.</p>}
             </div>
           )}
 

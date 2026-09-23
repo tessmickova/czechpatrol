@@ -174,7 +174,19 @@ function zOpatreni(zaznamy: Zaznam[]): Radek[] {
     });
 }
 
-export function CoSeZmenilo({ zaznamy, snimky, ted }: { zaznamy: Zaznam[]; snimky: Snimek[]; ted: number }) {
+/** Souhrn za 7 dní pro náhled rozklikávací oblasti na úvodní straně. */
+export function souhrnZmen(zaznamy: Zaznam[], snimky: Snimek[], ted: number) {
+  const vsechny = [...zeSnimku(snimky), ...zCen(ted), ...zOpatreni(zaznamy)].sort((a, b) => b.kdy.localeCompare(a.kdy));
+  const tyden = vsechny.filter((r) => ted - new Date(r.kdy).getTime() <= 7 * 86_400_000);
+  return {
+    zlepseni: tyden.filter((r) => r.smer === "zlepseni").length,
+    zhorseni: tyden.filter((r) => r.smer === "zhorseni").length,
+    opatreni: tyden.filter((r) => r.druh === "opatreni").length,
+    paleta: tyden.slice(0, 16).map((r) => ({ nazev: r.text, tecka: r.tecka, slovo: SLOVO[r.druh] })),
+  };
+}
+
+export function CoSeZmenilo({ zaznamy, snimky, ted, vnoreny = false }: { zaznamy: Zaznam[]; snimky: Snimek[]; ted: number; vnoreny?: boolean }) {
   const { nahled, kde, ukaz, skryj, pohyb } = useNahled();
 
   const vsechny = [...zeSnimku(snimky), ...zCen(ted), ...zOpatreni(zaznamy)].sort((a, b) => b.kdy.localeCompare(a.kdy));
@@ -196,11 +208,11 @@ export function CoSeZmenilo({ zaznamy, snimky, ted }: { zaznamy: Zaznam[]; snimk
   return (
     <section
       aria-label="Co se změnilo"
-      className="relative flex flex-col overflow-hidden rounded-[22px] border border-linka2 bg-plocha"
+      className={`relative flex flex-col overflow-hidden ${vnoreny ? "" : "rounded-[22px] border border-linka2 bg-plocha"}`}
       onPointerLeave={skryj}
     >
-      {/* Hlavička jako v Aktualitách: červená tečka a štítek. */}
-      <div className="flex items-center justify-between gap-2 border-b border-linka2 px-4 py-3">
+      {/* Hlavička jako v Aktualitách: červená tečka a štítek. Ve vnořené variantě ji nese rozklikávací oblast. */}
+      <div className={`flex items-center justify-between gap-2 border-b border-linka2 px-4 py-3 ${vnoreny ? "hidden" : ""}`}>
         <span className="flex items-center gap-2">
           <span aria-hidden className="grid h-[18px] w-[18px] shrink-0 place-items-center rounded-full border border-akcent/50">
             <span className="h-[6px] w-[6px] rounded-full bg-akcent" />

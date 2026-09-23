@@ -23,16 +23,17 @@ import { useZiveHodiny } from "@/lib/cas-klient";
 import { PripravenostKarta } from "./pripravenost-klient";
 import { TipyKPriprave } from "./tipy";
 import { PasZemi } from "./pas-zemi";
-import { CoSeZmenilo } from "./co-se-zmenilo";
+import { CoSeZmenilo, souhrnZmen } from "./co-se-zmenilo";
 import { StavSluzeb } from "./stav-sluzeb";
 import { snimekSluzeb, SLOVA_STAVU, SLUZBY, type StavSluzby } from "@/lib/sluzby";
 import { useStavSluzeb, type ZivyStav } from "@/lib/sluzby-klient";
+import { tipy as vsechnyTipy } from "@/lib/data";
 import { casPraha } from "@/lib/cas";
-import { Partneri, Sledovat } from "./sledovat";
 import { VyzvaTelegram } from "./vyzva-telegram";
 import { Nahlaseni } from "./nahlaseni";
 import { Napoveda } from "./zaklad";
 import { useT } from "@/lib/i18n";
+import type { StavObcanu } from "@/lib/data";
 
 /*
   Dashboard. Jedna obrazovka, žádné odstavce.
@@ -334,7 +335,7 @@ function RozbalovaciOblast({ nazev, souhrn, paleta, poznamka, children }: {
           <span className="mt-1 block text-male font-semibold leading-snug text-inkoust">{souhrn}</span>
           {poznamka && <span className="mt-0.5 block text-mikro leading-snug text-tlum2">{poznamka}</span>}
         </span>
-        <Paleta polozky={paleta} />
+        {paleta.length > 0 && <Paleta polozky={paleta} />}
         <Ikona nazev="dolu" velikost={13} tah={2} trida="shrink-0 text-tlum2 transition-transform group-open:rotate-180" />
       </summary>
       <div className="border-t border-linka2">{children}</div>
@@ -357,7 +358,7 @@ export function Dashboard({
   snimky?: Snimek[];
   /** Katalog oficiálních nástrojů pro kartu „Jsem připraven/a?". */
   nastroje?: OficialniNastroj[];
-  hybridni: Uroven | null; obcane: { uroven: Uroven; popis: string; neovereno: number };
+  hybridni: Uroven | null; obcane: StavObcanu;
   tlakEvropa: HybridniTlak; tlakCesko: HybridniTlak; veta: HlavniVeta;
   kampane: Kampan[]; nazvyZemi: Record<string, string>;
   /** Zprávy, které se šíří a zatím nejsou ověřené. Do počtů nevstupují. */
@@ -417,6 +418,8 @@ export function Dashboard({
     };
   })();
   const paliva = stavPaliv().filter((p) => p.cena !== null);
+  const zmeny = souhrnZmen(vse, snimky, tedMs);
+  const tipyNahled = vsechnyTipy(tedMs);
   /*
     Situace v Česku za 90 dní: nejvyšší závažnost z případů a operací
     proti občanům v okně. Dřív přicházela ze serveru s časem sestavení;
@@ -428,14 +431,7 @@ export function Dashboard({
   const crPocet = { pripadu: dni90.filter((i) => i.kodZeme === "CZ").length, kampani: czKampane90.length };
   const stariCelkem = cerstvost(overeno, tedMs);
 
-  const crHodnota = platiCr.length ? platiCr.map((p) => KRATCE_PRAVNI[p.klic] ?? p.nazev).join(", ") : naruseno.length ? "Narušeno" : sledujeme.length ? "Sledujeme" : "Bez omezení";
-  const crTon: Ton = platiCr.length ? "plati" : naruseno.length ? "plati" : sledujeme.length ? "pozor" : neovereneCr === pravni.length ? "nevime" : "klid";
-  const crPopis = platiCr.length
-    ? `Platí: ${platiCr.map((p) => (KRATCE_PRAVNI[p.klic] ?? p.nazev).toLowerCase()).join(", ")}`
-    : `Mobilizace ne · vycestování bez omezení · hranice běžně${neovereneCr ? ` · ${neovereneCr} neověřeno` : ""}`;
-
-  const natoHodnota = natoAktivni.length ? natoAktivni.map((p) => KRATCE_NATO[p.klic] ?? p.nazev).join(", ") : cl4?.aktivni === null && cl5?.aktivni === null ? "Neověřeno" : "Bez aktivace";
-  const natoTon: Ton = natoAktivni.length ? "plati" : cl4?.aktivni === null && cl5?.aktivni === null ? "nevime" : "klid";
+  /* Dřív tu byly dlaždice „Bez omezení / Bez aktivace“ — nikde se nevykreslovaly a tvrdily klid bez dokladu (audit 23. 9. 2026). */
 
   /*
     Dlaždice se počítají jednou a ukazují se VŠECHNY.
@@ -546,7 +542,12 @@ export function Dashboard({
         profil s dlouhým jménem vyhnal celý sloupec na 422 px a boxy pod
         ním se na 390 px displeji řízly vpravo.
       */}
-      <div className="grid grid-cols-[minmax(0,1fr)] gap-4 xl:grid-cols-[minmax(0,3fr)_minmax(0,2fr)] xl:gap-10">
+      {/*
+        Jeden sloupec. Od 23. 9. 2026 nemá nic vlastní box vedle mřížky:
+        Co se změnilo, služby, palivo, připravenost i tipy jsou rozklikávací
+        oblasti pod výpisem sledovaných faktorů, se souhrnem v náhledu.
+      */}
+      <div className="grid grid-cols-[minmax(0,1fr)] gap-4">
         <section aria-label={t("Oficiální stavy")} id="opatreni" className="scroll-mt-[84px] space-y-4">
           {skupinyDlazdic.map((sk) => (
             <div key={sk.predpona} className="overflow-hidden rounded-[20px] border border-linka2 bg-plocha">
@@ -597,30 +598,39 @@ export function Dashboard({
               <CenaPaliva vnoreny />
             </RozbalovaciOblast>
           )}
+
+          <RozbalovaciOblast
+            nazev="Co se změnilo"
+            souhrn={zmeny.zlepseni + zmeny.zhorseni + zmeny.opatreni
+              ? `Za 7 dní: ${[zmeny.zhorseni && `${zmeny.zhorseni} zhoršení`, zmeny.zlepseni && `${zmeny.zlepseni} zlepšení`, zmeny.opatreni && `${zmeny.opatreni} opatření`].filter(Boolean).join(" · ")}`
+              : "Za 7 dní beze změny úředních stavů, cen paliva i opatření"}
+            poznamka="Změny úředních stavů, cen paliva a opatření v Česku, u sousedů a v EU."
+            paleta={zmeny.paleta}
+          >
+            <CoSeZmenilo zaznamy={vse} snimky={snimky} ted={tedMs} vnoreny />
+          </RozbalovaciOblast>
+
+          <RozbalovaciOblast
+            nazev="Jsem připraven/a?"
+            souhrn={`${nastroje.filter((n) => n.doporuceno).length} doporučených oficiálních služeb a dotazník připravenosti`}
+            poznamka="Záchranka, varování na mobil, výstrahy ČHMÚ, sirény, krizové vysílání, lékárnička, typy událostí."
+            paleta={[]}
+          >
+            <div className="py-1"><PripravenostKarta nastroje={nastroje} vnoreny /></div>
+          </RozbalovaciOblast>
+
+          {tipyNahled.length > 0 && (
+            <RozbalovaciOblast
+              nazev="Tipy k přípravě"
+              souhrn={`${tipyNahled.length} ${tipyNahled.length === 1 ? "tip" : tipyNahled.length < 5 ? "tipy" : "tipů"} · nejnovější: ${tipyNahled[0].nadpis}`}
+              paleta={[]}
+            >
+              <TipyKPriprave ted={tedMs} vnoreny />
+            </RozbalovaciOblast>
+          )}
         </section>
 
-        {/*
-          Vedle mřížky stavů: co se změnilo, ne co se stalo.
 
-          Dřív tu byl seznam nových událostí — třetí místo na úvodní straně
-          s touž otázkou. Události mají sloupec v úvodu a vlastní stránku.
-          Sem patří změny, které se dotknou života tady: úřední stavy,
-          cena paliva, opatření v Česku, u sousedů a v EU.
-        */}
-        <div className="min-w-0 space-y-4">
-        <CoSeZmenilo zaznamy={vse} snimky={snimky} ted={tedMs} />
-
-        {/* Připravenost: co mít nastavené dřív, než se něco stane. Skóre je z odpovědí čtenáře v jeho prohlížeči. */}
-        <PripravenostKarta nastroje={nastroje} />
-
-
-        {/*
-          Tipy k přípravě. Odpovídají na jinou otázku než zbytek webu: ne co
-          se stalo, ale co s tím může člověk udělat dnes. Bez tipu se
-          nevykreslí nic.
-        */}
-        <TipyKPriprave ted={tedMs} />
-        </div>
       </div>
 
       {/*
@@ -681,17 +691,12 @@ export function Dashboard({
 
       {/* 3 — čísla „kolik, kde, kdo“ jsou v Analýzách. */}
 
-      {/* 5 — sledovat a partneři */}
-      <div className="nalet mt-14 border-t border-linka pt-12 sm:mt-20 sm:pt-14">
-        <NadpisSekce
-          stitek={t("Odběr")}
-          nadpis={t("Jak se to dozvíte, aniž byste sem chodili")}
-          popis={t("Kanály, čtečka nebo vlastní přehled. Nic z toho po vás nechce jméno ani e-mail.")}
-        />
-        <Sledovat />
-      </div>
-      <div className="mt-12 sm:mt-16"><Partneri /></div>
-
+      {/*
+        5 — kanály a partneři tu nejsou. Mřížka WhatsApp/Signal/Bluesky
+        s nápisem „připravujeme“ a prázdné sloty partnerů slibovaly něco,
+        co neexistuje. Telegram je ve výzvě výš, RSS a odběr v řádku níž,
+        úplný seznam na /odber/.
+      */}
       {/* 6 — sbalené: proč, co by změnilo, odběr */}
       <div className="mt-14 grid gap-3 border-t border-linka pt-12 sm:mt-20 sm:pt-14 md:grid-cols-3">
         <details className="group rounded-[18px] border border-linka2 bg-plocha">
