@@ -1,5 +1,23 @@
 [
   {
+    "id": "k-8bf0a05de56bf9cb",
+    "zachyceno": "2026-09-23T01:02:32.884Z",
+    "publikovano": "2026-09-23T00:54:00.000Z",
+    "zdroj": {
+      "nazev": "Téma: nouzovy-stav (anglicky)",
+      "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxNUDA3T3duS3Y0UENWM1c2TFJwSm9fZk9mR21nQXVINU1OaFhRZW9oeGptRDVGVzlwcFZKeGdQWHRYNVZ1YklISUViOWpIc21jZUhuRTltd19YZEMtbVlXZmpheVl2OWlhZmdtLXZyNHJISmVlSmYyMjc0cG15ZVR5Y3F5aGsxbkIxUWRxWHdFU21WcDJLc1h6LVdOaGY4anNibW9JcTZMbnlIYk9NamQwcnVnZi1TQQ?oc=5",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "State of Emergency declared after Ohio flooding & latest on traffic death of 12-year-old - WSAZ",
+    "shrnuti": "State of Emergency declared after Ohio flooding & latest on traffic death of 12-year-old WSAZ",
+    "duvod": "bez-mista",
+    "kategorie": [
+      "pravo"
+    ],
+    "posouzeni": null
+  },
+  {
     "id": "k-2d63fee475451e79",
     "zachyceno": "2026-09-23T00:02:30.436Z",
     "publikovano": "2026-09-22T23:31:04.000Z",
@@ -378,6 +396,27 @@
     "duvod": "vylouceno-tematem",
     "kategorie": [
       "cr"
+    ],
+    "posouzeni": null
+  },
+  {
+    "id": "k-d7bb5cf78fcceb4c",
+    "zachyceno": "2026-09-23T01:02:32.728Z",
+    "publikovano": "2026-09-22T18:09:09.000Z",
+    "zdroj": {
+      "nazev": "Téma: energetika (anglicky)",
+      "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTE5obzJKMkNQR1kxei1laHJwdXotRHVVSExTQlltalhiU2JpdlFESmxENjEzb3daaW9uLVZBZGFYQktCcXlwT1lWVEhwSE44eTZvcm1ad0VoaU9rT19zbThYYUNOWDAzM0lSSVpuV3R2alZvLTNSMGc?oc=5",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Lithuania spends heavily to fortify border substation against Russian drone 'false flag' attacks - finance.biggo.com",
+    "shrnuti": "Lithuania spends heavily to fortify border substation against Russian drone 'false flag' attacks finance.biggo.com",
+    "duvod": "bez-skutku",
+    "kategorie": [
+      "drony",
+      "infrastruktura",
+      "hranice",
+      "rusko"
     ],
     "posouzeni": null
   },
@@ -4134,6 +4173,24 @@
     "shrnuti": "Hudba, filmy, cestování. I to jsou věci, které stojí za zvýšeným zájmem středoškoláků o výuku španělštiny. V Olomouckém kraji při průzkumu na středních školách zjistili, že právě španělština se dostala v zájmu studentů před jiné cizí jazyky.",
     "duvod": "vylouceno-tematem",
     "kategorie": [],
+    "posouzeni": null
+  },
+  {
+    "id": "k-52f3cbf37b553b0a",
+    "zachyceno": "2026-09-23T01:02:32.930Z",
+    "publikovano": "2026-09-21T18:15:00.000Z",
+    "zdroj": {
+      "nazev": "Téma: nouzovy-stav (anglicky)",
+      "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxQQ0JKNkhYVmdvTlg1dHg0QlYybXBPTXQzNHlzTzc4VlRJd3JmYmYyeGhxSmtTd1ZBdmZVdk5XSkpFTGxVNC10a29fa3gwSXNhRmdWY1A3TVZ3ZUtvaF83bG4yOXQ2eTlNNXZqQ2RDbF82M2xickVsVDhld1NPaktmM1l6UXBFbnZNU1dza0lDay03bkFULUxZRVBmcUU4MkNVRGJNLTBtRlVMTHM3MHNfMjNLbGYwTE1l?oc=5",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Newsom declares California state of emergency ahead of historic El Niño - ABC10",
+    "shrnuti": "Newsom declares California state of emergency ahead of historic El Niño ABC10",
+    "duvod": "bez-mista",
+    "kategorie": [
+      "pravo"
+    ],
     "posouzeni": null
   },
   {
@@ -8470,68 +8527,6 @@
     "posouzeni": {
       "podezreni": "zadne",
       "duvod": "Kulturní oslava výročí města, žádná bezpečnostní událost.",
-      "kdy": "2026-09-20T04:53:42.342Z"
-    }
-  },
-  {
-    "id": "k-2c84156499146178",
-    "zachyceno": "2026-09-20T04:52:08.139Z",
-    "publikovano": "2026-09-20T04:29:00.000Z",
-    "zdroj": {
-      "nazev": "Český rozhlas — domácí zprávy",
-      "url": "https://www.irozhlas.cz/komentare/rusum-maji-zajistit-pokoreni-ukrajiny-ostatky-svetcu_2609200629_cen",
-      "typ": "primary",
-      "primarni": true
-    },
-    "titulek": "Rusům mají zajistit pokoření Ukrajiny ostatky světců",
-    "shrnuti": "Začnu obšírnou citací z Putinova oblíbeného bulvárního listu Komsomolskaja pravda. „Poutníci se k chrámu Krista Spasitele začali scházet od šesti ráno, ačkoli se dveře katedrály otevírají až v osm. Zpočátku se fronta nezdála kritická, v chrámu je přece jen hodně místa. Ale už v devět ráno se dlouhý ",
-    "duvod": "bez-skutku",
-    "kategorie": [],
-    "posouzeni": {
-      "podezreni": "zadne",
-      "duvod": "Náboženská reportáž o ostatcích, komentář, ne bezpečnostní událost.",
-      "kdy": "2026-09-20T04:53:42.342Z"
-    }
-  },
-  {
-    "id": "k-f4bb95fdc9150080",
-    "zachyceno": "2026-09-20T04:52:08.139Z",
-    "publikovano": "2026-09-20T04:00:00.000Z",
-    "zdroj": {
-      "nazev": "Český rozhlas — domácí zprávy",
-      "url": "https://www.irozhlas.cz/zpravy-domov/nerealna-cisla-ceska-narodni-banka-hrozi-pojistovne-vzp-pokutou-6-milionu-korun_2609200600_nel",
-      "typ": "primary",
-      "primarni": true
-    },
-    "titulek": "‚Nereálná čísla.‘ Česká národní banka hrozí Pojišťovně VZP pokutou 6 milionů korun za prohřešky z dob covidu",
-    "shrnuti": "Pojišťovně VZP, dceřiné společnosti Všeobecné zdravotní pojišťovny, hrozí několikamilionová pokuta. Během covidu se podle nepravomocných závěrů České národní banky dopustila pěti přestupků. Do dokumentu mohla redakce nahlédnout. Povinné ručení například neměla nastaveno udržitelným způsobem a stavěl",
-    "duvod": "bez-skutku",
-    "kategorie": [],
-    "posouzeni": {
-      "podezreni": "zadne",
-      "duvod": "Finanční pokuta pojišťovně, ekonomická záležitost.",
-      "kdy": "2026-09-20T04:53:42.342Z"
-    }
-  },
-  {
-    "id": "k-d84e473668e6edfa",
-    "zachyceno": "2026-09-20T04:52:08.140Z",
-    "publikovano": "2026-09-20T04:00:00.000Z",
-    "zdroj": {
-      "nazev": "Český rozhlas — domácí zprávy",
-      "url": "https://www.irozhlas.cz/zpravy-domov/na-50-dobrovolniku-uklizelo-horske-louky-na-radhosti-aby-tady-bylo-pestro-rika_2609200600_kma",
-      "typ": "primary",
-      "primarni": true
-    },
-    "titulek": "Na 50 dobrovolníků uklízelo horské louky na Radhošti. ‚Aby tady bylo pestro,‘ říká ochránce přírody",
-    "shrnuti": "Kancelářské židle vyměnili za hrábě a vidle. Padesát dobrovolníků z pivovaru tradičně pomáhá uklízet horské louky na Radhošti v Beskydech. Spolu s ochránci přírody ze spolku Salamandr z Rožnova pod Radhoštěm hrabali a odklízeli posečenou trávu, aby na loukách zůstalo místo pro vzácné beskydské rostl",
-    "duvod": "bez-skutku",
-    "kategorie": [
-      "cr"
-    ],
-    "posouzeni": {
-      "podezreni": "zadne",
-      "duvod": "Dobrovolnická úklidová akce v přírodě, bez bezpečnostního obsahu.",
       "kdy": "2026-09-20T04:53:42.342Z"
     }
   }
