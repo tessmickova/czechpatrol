@@ -366,6 +366,25 @@ for (const i of incidenty) {
   if (i.lidskyOvereno) chyby.push(`${i.slug}: neověřený záznam nemůže být zároveň lidsky ověřený`);
 }
 
+/*
+  Opatření zemí (data/opatreni-zemi.json). Stav „ano", „částečně" i „ne" je
+  tvrzení o státu, a tak bez odkazu na zdroj neprojde. „ne" navíc říká, že
+  země opatření NEMÁ — to smí stát jen na výslovném zdroji, jinak je to
+  „nedohledáno" (null).
+*/
+if (fs.existsSync(path.join(koren, "data", "opatreni-zemi.json"))) {
+  const op = cti("opatreni-zemi.json");
+  const klice = new Set(op.opatreni.map((o) => o.klic));
+  for (const [kod, polozky] of Object.entries(op.zeme)) {
+    for (const p of polozky) {
+      const kde = `opatření ${kod}/${p.klic}`;
+      if (!klice.has(p.klic)) chyby.push(`${kde}: opatření mimo výčet`);
+      if (p.stav !== null && !/^https:\/\//.test(p.zdroj?.url ?? "")) chyby.push(`${kde}: stav „${p.stav}" bez https zdroje`);
+      if (p.stav !== null && !p.popis) chyby.push(`${kde}: stav bez popisu`);
+    }
+  }
+}
+
 // výstup
 const shrnuti = `záznamů ${incidenty.length} (případů ${pripady.length}, aktualizací ${incidenty.filter((i) => druh(i) === "aktualizace").length}, opatření ${incidenty.filter((i) => druh(i) === "opatreni").length}, reakcí ${incidenty.filter((i) => druh(i) === "reakce").length}), neprošlých ${nepotvrzene.length}, oprav ${opravy.length}, kandidátů ${kandidati.length}, ověřovaných ${overujeme.length}`;
 /* ---------- praktický dopad a dopad na ČR: jen vyplněné a doložené ---------- */

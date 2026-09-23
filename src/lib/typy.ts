@@ -833,3 +833,29 @@ export interface Tip {
   /** Kdy tip zmizí z přehledu. null = platí, dokud ho někdo nesundá. */
   platiDo: string | null;
 }
+
+/* ---------------- opatření zemí ---------------- */
+
+/**
+ * Jedno opatření z pevného výčtu u jedné země.
+ *
+ * `stav` null = nedohledáno. Neznamená „nemá": jen že jsme to k datu
+ * nedoložili. „ne" smí stát jen tam, kde zdroj výslovně říká, že země
+ * opatření nemá.
+ */
+export interface OpatreniZeme {
+  klic: string;
+  stav: "ano" | "castecne" | "ne" | null;
+  popis: string | null;
+  datum: string | null;
+  zdroj: { nazev: string; url: string; typ: string } | null;
+  /** Opatření se na zemi nevztahuje (např. opevnění hranice u země bez hranice s Ruskem). */
+  nerelevantni?: boolean;
+}
+
+export interface OpatreniZemi {
+  aktualizovano: string;
+  poznamka: string;
+  opatreni: { klic: string; nazev: string }[];
+  zeme: Record<string, OpatreniZeme[]>;
+}

@@ -1,5 +1,5 @@
 import { JE_UKAZKA } from "@/config/web";
-import type { OficialniNastroj,
+import type { OficialniNastroj, OpatreniZeme, OpatreniZemi,
   Odmitnuty,
   Archiv, CelkovyStav, HybridniTlak, Incident, Kampan, Kandidat, Kategorie, NatoPolozka, Oprava, PravniStav,
   Nepotvrzene, Overovana, Provoz, Puvodce, RuskoStav, Svet, Tip, TydenniHodnoceni, Uroven, Vystraha, VystrahaSoubor, Watchlist,
@@ -29,6 +29,7 @@ import ostreKampane from "../../data/kampane.json";
 import ostreOverujeme from "../../data/overujeme.json";
 import ostreOdmitnute from "../../data/fronta/odmitnute.json";
 import ostreNavrhy from "../../data/navrhy.json";
+import ostraOpatreni from "../../data/opatreni-zemi.json";
 
 import ukazkoveIncidenty from "../../data/ukazka/incidenty.json";
 import ukazkovyStav from "../../data/ukazka/stav.json";
@@ -691,4 +692,14 @@ export function klidoveBody(): string[] {
 /** Vyhýbáme se kruhovému importu stupnice do datové vrstvy. */
 function jeZelena(u: Uroven): boolean {
   return u === "G1" || u === "G2" || u === "G3";
+}
+
+/** Opatření jedné země z pevného výčtu. Prázdné, když zemi nemáme prošlou. */
+export function opatreniZeme(kod: string): { nazvy: Record<string, string>; polozky: OpatreniZeme[]; aktualizovano: string } {
+  const d = ostraOpatreni as unknown as OpatreniZemi;
+  return {
+    nazvy: Object.fromEntries(d.opatreni.map((o) => [o.klic, o.nazev])),
+    polozky: d.zeme[kod] ?? [],
+    aktualizovano: d.aktualizovano,
+  };
 }
