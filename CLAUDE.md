@@ -188,6 +188,14 @@ nestalo.
 Když se relevantní zdroj nepodaří stáhnout, zápor se nepotvrzuje a datum
 ověření se nezapisuje.
 
+**Výjimka — celkové hodnocení (`data/stav.json`) počítá automat.** Rozhodla
+tak provozovatelka 23. 9. 2026: hodnocení nesmí být starší než jeden den
+a nestanovuje ho člověk. Počítá se v hodinovém sběru (`sber/hodnoceni.ts`)
+jen ze zveřejněných a ověřených případů za 14 dní, pravidlem, které jde
+přepočítat ručně; záznamy „neověřeno úředně" do něj nevstupují. Když sběr
+den neproběhl, trend se nepočítá. Ruční přepis `stav.json` se při dalším
+běhu přepíše.
+
 ## Pravidlo č. 4a — nic se nezahazuje, ale nic se ani nepřeklápí samo
 
 Síto na klíčová slova nikdy nepozná vážnou zprávu s mizerným titulkem. Co

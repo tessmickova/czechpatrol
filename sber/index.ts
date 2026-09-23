@@ -8,6 +8,7 @@ import type { Nalez, VysledekZdroje } from "./typy";
 import { lidskaZmena } from "../src/lib/archiv-text";
 import { sbirejUdalosti } from "./udalosti";
 import { uzavriOverovane } from "./overujeme";
+import { aktualizujStav } from "./hodnoceni";
 import { sbirejPalivo } from "./palivo";
 import { sbirejSluzby } from "./sluzby";
 
@@ -284,6 +285,14 @@ async function main() {
     JSON.stringify({ kdy: TED, zdroje: vysledky, novychVeFronte: nove.length }, null, 2) + "\n",
     "utf-8",
   );
+
+  /* ---------- celkové hodnocení: počítá automat, nejvýš den staré ---------- */
+  try {
+    const { zmena, stav } = aktualizujStav();
+    if (zmena) console.log(`[sber] celkové hodnocení přepočteno: ${stav.uroven}, trend ${stav.trend ?? "nepočítán"}`);
+  } catch (e) {
+    console.log(`[sber] přepočet celkového hodnocení selhal: ${e instanceof Error ? e.message : e}`);
+  }
 
   console.log(`[sber] nových položek ve frontě: ${nove.length}`);
   if (nedostupne.length) {
