@@ -65,6 +65,8 @@ const ZEME = [
   { kod: "FR", cs: "Francie", en: "France", blizke: false },
   { kod: "GB", cs: "Británie", en: "United Kingdom", blizke: false },
   { kod: "BG", cs: "Bulharsko", en: "Bulgaria", blizke: false },
+  /* Doplněno 23. 9. 2026: drony zastavily 18. 9. lucemburské letiště a sběr o tom nevěděl. */
+  { kod: "LU", cs: "Lucembursko", en: "Luxembourg", blizke: false },
 ] as const;
 
 /*
@@ -97,6 +99,16 @@ const TEMATA = [
   { klic: "krizove-vysilani", cs: "Český rozhlas mimořádné vysílání krizové", en: "emergency broadcast public radio", poZemich: false },
   { klic: "evakuace", cs: "evakuace personálu ambasády", en: "embassy staff evacuation ordered", poZemich: false },
   { klic: "manipulace", cs: "dezinformační kampaň podvržený dokument", en: "disinformation campaign forged document", poZemich: false },
+  /*
+    Doplněno 23. 9. 2026 podle toho, co v září propadlo (přehled 1.–20. 9.):
+    trosky dronů v Rumunsku a Polsku, přerušený provoz letišť Lublin, Rzeszów
+    a Lucemburk, požár muniční továrny ve Snině, ruská fregata a světlice
+    u Dánska. Trosky a letiště po zemích — u nich na místě záleží nejvíc.
+  */
+  { klic: "trosky", cs: "nalezeny trosky dronu", en: "drone debris found", poZemich: true },
+  { klic: "letiste-dron", cs: "letiště přerušilo provoz kvůli dronům", en: "airport suspends flights drones", poZemich: true },
+  { klic: "zbrojovka", cs: "požár výbuch muniční továrna zbrojovka", en: "fire explosion ammunition factory", poZemich: false },
+  { klic: "valecna-lod", cs: "ruská válečná loď incident vrtulník", en: "Russian warship incident navy helicopter", poZemich: false },
 ] as const;
 
 /*
@@ -195,6 +207,41 @@ const URADY: ZdrojUdalosti[] = [
   { klic: "sk-cert", nazev: "SK-CERT — aktuality", url: "https://www.sk-cert.sk/sk/aktuality/", jazyk: "cs", primarni: true, typ: "primary" },
   { klic: "bmi-at", nazev: "Rakouské ministerstvo vnitra — news", url: "https://www.bmi.gv.at/news.aspx", jazyk: "en", primarni: true, typ: "primary" },
 
+  /*
+    Doplněno 23. 9. 2026. Moldavsko, Rumunsko, Lucembursko a Slovensko neměly
+    žádný úřední kanál (nebo jen titulní stránku ministerstva obrany) — proto
+    z nich v září nepřišla ani jedna úřední zpráva o dronech nad Moldavskem,
+    troskách v Rumunsku či lucemburském letišti. Adresy jsou kořeny webů
+    úřadů, které se o těch událostech doloženě vyjadřovaly; zda odpovídají
+    a co z nich jde přečíst, změří běh Ověření zdrojů. Všechny se stahují
+    jen se svolením robots.txt (sber/robots.ts).
+  */
+  /* Moldavsko */
+  { klic: "army-md", nazev: "Ministerstvo obrany Moldavska", url: "https://www.army.md/", jazyk: "en", primarni: true, typ: "primary" },
+  { klic: "politia-frontiera-md", nazev: "Pohraniční policie Moldavska", url: "https://www.border.gov.md/", jazyk: "en", primarni: true, typ: "primary" },
+  { klic: "igp-md", nazev: "Generální inspektorát policie Moldavska", url: "https://www.igp.gov.md/", jazyk: "en", primarni: true, typ: "primary" },
+  { klic: "mae-md", nazev: "Ministerstvo zahraničí Moldavska", url: "https://www.mae.gov.md/", jazyk: "en", primarni: true, typ: "primary" },
+  /* Rumunsko — námořnictvo a pohraniční policie hlásí nálezy trosek první */
+  { klic: "navy-ro", nazev: "Námořnictvo Rumunska", url: "https://www.navy.ro/", jazyk: "en", primarni: true, typ: "primary" },
+  { klic: "politia-frontiera-ro", nazev: "Pohraniční policie Rumunska", url: "https://www.politiadefrontiera.ro/", jazyk: "en", primarni: true, typ: "primary" },
+  /* Polsko — přerušení provozu letišť oznamuje řízení letového provozu */
+  { klic: "pansa-pl", nazev: "PAŻP — polské řízení letového provozu", url: "https://www.pansa.pl/", jazyk: "en", primarni: true, typ: "primary" },
+  { klic: "sg-pl", nazev: "Polská pohraniční stráž", url: "https://www.strazgraniczna.pl/", jazyk: "en", primarni: true, typ: "primary" },
+  { klic: "premier-pl", nazev: "Kancelář předsedy vlády Polska", url: "https://www.gov.pl/web/premier", jazyk: "en", primarni: true, typ: "primary" },
+  /*
+    Německo — policie a zemské kriminální úřady vydávají zprávy přes
+    Presseportal. Je to distribuce jako mynewsdesk.com, proto ne `primarni`:
+    úřední zdroj je až stránka policie samotné (polizei-nds.de apod.).
+  */
+  { klic: "presseportal-policie", nazev: "Presseportal — zprávy policie (Blaulicht)", url: "https://www.presseportal.de/rss/polizei.rss2", jazyk: "en", primarni: false, typ: "wire" },
+  /* Dánsko, Lucembursko, Slovensko, Bulharsko */
+  { klic: "politi-kbh", nazev: "Kodaňská policie", url: "https://politi.dk/koebenhavns-politi", jazyk: "en", primarni: true, typ: "primary" },
+  { klic: "police-lu", nazev: "Lucemburská policie", url: "https://police.public.lu/", jazyk: "en", primarni: true, typ: "primary" },
+  { klic: "letiste-lu", nazev: "Letiště Lucemburk (provozovatel)", url: "https://www.lux-airport.lu/", jazyk: "en", primarni: true, typ: "primary" },
+  { klic: "minv-sk", nazev: "Ministerstvo vnitra SR — tiskové zprávy", url: "https://www.minv.sk/", jazyk: "cs", primarni: true, typ: "primary" },
+  { klic: "mosr-sk", nazev: "Ministerstvo obrany SR", url: "https://www.mosr.sk/", jazyk: "cs", primarni: true, typ: "primary" },
+  { klic: "mvr-bg", nazev: "Ministerstvo vnitra Bulharska", url: "https://www.mvr.bg/", jazyk: "en", primarni: true, typ: "primary" },
+
   /* Británie */
   { klic: "ncsc-uk", nazev: "NCSC UK — news", url: "https://www.ncsc.gov.uk/news", jazyk: "en", primarni: true, typ: "primary" },
 ];
@@ -211,6 +258,16 @@ const REDAKCE: ZdrojUdalosti[] = [
   /* LRT i Kyiv Independent vracely 404; jejich adresy se zkusí jako stránky. */
   { klic: "lrt-en", nazev: "LRT English (Litva)", url: "https://www.lrt.lt/en/news-in-english", jazyk: "en", primarni: false, typ: "media" },
   { klic: "kyiv-independent", nazev: "The Kyiv Independent", url: "https://kyivindependent.com/", jazyk: "en", primarni: false, typ: "media" },
+  /* Doplněno 23. 9. 2026: národní redakce a agentury zemí, odkud v září zprávy chyběly. */
+  { klic: "moldpres", nazev: "Moldpres (státní agentura Moldavska)", url: "https://www.moldpres.md/", jazyk: "en", primarni: false, typ: "wire" },
+  { klic: "radio-moldova", nazev: "Radio Moldova", url: "https://radiomoldova.md/", jazyk: "en", primarni: false, typ: "media" },
+  { klic: "agerpres", nazev: "AGERPRES (státní agentura Rumunska)", url: "https://agerpres.ro/english", jazyk: "en", primarni: false, typ: "wire" },
+  { klic: "notes-from-poland", nazev: "Notes from Poland", url: "https://notesfrompoland.com/feed/", jazyk: "en", primarni: false, typ: "media" },
+  { klic: "tvp-world", nazev: "TVP World (Polsko)", url: "https://tvpworld.com/", jazyk: "en", primarni: false, typ: "media" },
+  { klic: "dr-dk", nazev: "DR Nyheder (Dánsko)", url: "https://www.dr.dk/nyheder", jazyk: "en", primarni: false, typ: "media" },
+  { klic: "rtl-today", nazev: "RTL Today (Lucembursko)", url: "https://today.rtl.lu/", jazyk: "en", primarni: false, typ: "media" },
+  { klic: "tasr", nazev: "TASR (Slovensko)", url: "https://www.tasr.sk/", jazyk: "cs", primarni: false, typ: "wire" },
+  { klic: "bta", nazev: "BTA (státní agentura Bulharska)", url: "https://www.bta.bg/en", jazyk: "en", primarni: false, typ: "wire" },
 ];
 
 /** Obecné dotazy — jeden česky, jeden anglicky ke každému tématu. */

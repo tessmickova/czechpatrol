@@ -80,6 +80,15 @@ const UREDNI_DOMENY = new Set([
   "mapn.ro", "dnsc.ro", "gov.md", "presidency.ro",
   /* Ministerstvo obrany Moldavska má web mimo gov.md; tiskové zprávy o dronech vydává tam. */
   "army.md",
+  /*
+    Doplněno 23. 9. 2026 spolu s kanály sběru: úřady, které v září samy
+    oznamovaly drony, trosky a přerušení letového provozu. gov.md už výš
+    pokrývá pohraniční policii, policii i ministerstvo zahraničí Moldavska.
+  */
+  "navy.ro", "politiadefrontiera.ro", "igsu.ro",
+  "pansa.pl", "strazgraniczna.pl",
+  "politi.dk", "police.public.lu", "lux-airport.lu",
+  "minv.sk", "mosr.sk", "mvr.bg",
   // Rakousko
   "bundesheer.at",
   // Mezinárodní

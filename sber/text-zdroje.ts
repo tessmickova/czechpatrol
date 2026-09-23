@@ -1,4 +1,4 @@
-import { stahni } from "./nacti";
+import { stahniSeSvolenim } from "./nacti";
 
 /*
   Výřez ze zdrojového článku.
@@ -68,7 +68,8 @@ export function naText(html: string): string {
 export async function vyrezZeStranky(url: string): Promise<VyrezZdroje> {
   const kdy = new Date().toISOString();
   try {
-    const { stav, telo } = await stahni(url, 2);
+    const { stav, telo } = await stahniSeSvolenim(url, 2);
+    if (stav === 999) return { text: "", stazeno: kdy, stav, chyba: telo };
     if (stav >= 400) return { text: "", stazeno: kdy, stav, chyba: `HTTP ${stav}` };
 
     const text = naText(telo);

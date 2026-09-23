@@ -3,6 +3,17 @@ import type { Polozka } from "./typy";
 const CASOVY_LIMIT = 20_000;
 const AGENT = "bezpecnostni-prehled/0.1 (nezavisly monitorovaci projekt)";
 
+/**
+ * Stažení, které respektuje robots.txt. Zakázaná adresa vrátí stav 999
+ * a důvod v těle — sběr ji pak vede jako nedostupnou, s důvodem, ne tiše.
+ */
+export async function stahniSeSvolenim(url: string, pokusu = 3): Promise<{ stav: number; telo: string }> {
+  const { smiStahnout } = await import("./robots");
+  const svoleni = await smiStahnout(url, (u) => stahni(u, 1));
+  if (!svoleni.smi) return { stav: 999, telo: svoleni.proc ?? "robots.txt nepovoluje" };
+  return stahni(url, pokusu);
+}
+
 /** Stažení s časovým limitem a opakováním. Síť selhává, sběr kvůli tomu padat nemá. */
 export async function stahni(url: string, pokusu = 3): Promise<{ stav: number; telo: string }> {
   let posledni: unknown;

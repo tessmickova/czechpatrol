@@ -1,7 +1,7 @@
 import { createHash } from "node:crypto";
 import fs from "node:fs";
 import path from "node:path";
-import { ctiRss, normalizuj, polozkyZeStranky, stahni } from "./nacti";
+import { ctiRss, normalizuj, polozkyZeStranky, stahni, stahniSeSvolenim } from "./nacti";
 import { ZDROJE_UDALOSTI, type ZdrojUdalosti } from "./zdroje-udalosti";
 import { dostupnyPoskytovatel, strukturovane } from "./model";
 import { vyrezZeStranky, type VyrezZdroje } from "./text-zdroje";
@@ -856,7 +856,8 @@ async function poDavkach<T, R>(polozky: T[], kolik: number, f: (x: T) => Promise
 
 async function stahniZdroj(z: ZdrojUdalosti) {
   try {
-    const { stav, telo } = await stahni(z.url, 2);
+    const { stav, telo } = await stahniSeSvolenim(z.url, 2);
+    if (stav === 999) return { z, ok: false, polozky: [], chyba: telo };
     if (stav >= 400) return { z, ok: false, polozky: [], chyba: `HTTP ${stav}` };
     const polozky = ctiRss(telo);
     /*
