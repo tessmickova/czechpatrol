@@ -1,5 +1,53 @@
 [
   {
+    "id": "k-cc04efe74d834a0b",
+    "zachyceno": "2026-09-23T21:30:12.379Z",
+    "publikovano": "2026-09-23T21:12:00.000Z",
+    "zdroj": {
+      "nazev": "Český rozhlas — domácí zprávy",
+      "url": "https://www.irozhlas.cz/zpravy-domov/hlasovani-o-neduvere-upozorni-na-problemy-vlady-veri-safrova-zverina-jen-utlumi_2609232312_adn",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Hlasování o nedůvěře upozorní na problémy vlády, věří Šafrová. Zvěřina: Jen utlumí zájem voličů",
+    "shrnuti": "Opozice chce ještě do říjnových voleb vyvolat další hlasování Sněmovny o vyslovení nedůvěry kabinetu Andreje Babiše (ANO). Argumentuje tím, že koalice neplní programové prohlášení a premiér nevyřešil svůj střet zájmů. „Hlasování je způsob, jak na sebe upozornit,“ tvrdí v pořadu Pro a proti komentáto",
+    "duvod": "vylouceno-tematem",
+    "kategorie": [],
+    "posouzeni": null
+  },
+  {
+    "id": "k-b0f5a3d553833ffa",
+    "zachyceno": "2026-09-23T21:30:11.959Z",
+    "publikovano": "2026-09-23T21:05:39.000Z",
+    "zdroj": {
+      "nazev": "Evropská komise — presscorner",
+      "url": "https://ec.europa.eu/commission/presscorner/detail/en/statement_26_1961",
+      "typ": "primary",
+      "primarni": true
+    },
+    "titulek": "Statement by Commissioner Lahbib on behalf of EU Member States on the 75th Anniversary of the 1951 Convention on the Status of Refugees",
+    "shrnuti": "European Commission Statement New York, 23 Sep 2026 Seventy-five years on, the Refugee Convention continues to safeguard millions of lives, ensuring people escaping persecution can access protection and rights. A...",
+    "duvod": "bez-skutku",
+    "kategorie": [],
+    "posouzeni": null
+  },
+  {
+    "id": "k-64e24e64e8ecfcf7",
+    "zachyceno": "2026-09-23T21:30:11.960Z",
+    "publikovano": "2026-09-23T21:02:53.000Z",
+    "zdroj": {
+      "nazev": "Evropská komise — presscorner",
+      "url": "https://ec.europa.eu/commission/presscorner/detail/en/speech_26_1960",
+      "typ": "primary",
+      "primarni": true
+    },
+    "titulek": "Speech by Commissioner Lahbib at the Call to Action for the Children of Gaza and the West Bank",
+    "shrnuti": "European Commission Speech New York, 23 Sep 2026 A kite. A piece of fabric on a string, held in a child's hand, dancing in the wind. The simplest toy. The simplest joy of an ordinary childhood. But in Gaza tod...",
+    "duvod": "bez-skutku",
+    "kategorie": [],
+    "posouzeni": null
+  },
+  {
     "id": "k-f2690936652cfa4e",
     "zachyceno": "2026-09-23T21:02:49.840Z",
     "publikovano": "2026-09-23T20:43:39.000Z",
@@ -11,6 +59,38 @@
     },
     "titulek": "Weinstein dostal v opakovaném procesu 15 let",
     "shrnuti": "Soud v New Yorku ve středu v opakovaném procesu uložil někdejšímu hollywoodskému producentovi Harveymu Weinsteinovi 15 let vězení za sexuální napadení televizní produkční v roce 2006. Informovala o tom agentura AP. V roce 2024 soud původní odsouzení z roku 2020 zrušil a nařídil nový proces. Čtyřiase",
+    "duvod": "bez-skutku",
+    "kategorie": [],
+    "posouzeni": null
+  },
+  {
+    "id": "k-7784c0498af57e7f",
+    "zachyceno": "2026-09-23T21:30:12.307Z",
+    "publikovano": "2026-09-23T20:37:47.000Z",
+    "zdroj": {
+      "nazev": "Presseportal — zprávy policie (Blaulicht)",
+      "url": "https://www.presseportal.de/blaulicht/pm/169620/6357940",
+      "typ": "wire",
+      "primarni": false
+    },
+    "titulek": "POL Schwaben Nord: Behördenübergreifende Schwerpunktkontrollen",
+    "shrnuti": "Augsburg (ots) - Stadtgebiet - Am Mittwoch (23.09.2026), in der Zeit von 16.00 Uhr bis 22.00 Uhr, führte das Polizeipräsidium Schwaben Nord gemeinsam mit dem Zoll und der Stadt Augsburg behördenübergreifende Kontrollen in Augsburg durch. An der ...",
+    "duvod": "bez-skutku",
+    "kategorie": [],
+    "posouzeni": null
+  },
+  {
+    "id": "k-1770f6c17f0af8b8",
+    "zachyceno": "2026-09-23T21:30:12.308Z",
+    "publikovano": "2026-09-23T20:33:01.000Z",
+    "zdroj": {
+      "nazev": "Presseportal — zprávy policie (Blaulicht)",
+      "url": "https://www.presseportal.de/blaulicht/pm/130424/6357939",
+      "typ": "wire",
+      "primarni": false
+    },
+    "titulek": "FW Gangelt: Steigende Einsatzzahlen und ganz viel Engagement",
+    "shrnuti": "Gangelt (ots) - Stolz und Anerkennung prägten das diesjährige Treffen der Feuerwehr Gangelt. Rund 150 Feuerwehrleute fanden sich auf Einladung des Bürgermeisters Guido Willems in der Birgdener Mehrzweckhalle ein, um das vergangene Jahre Revue ...",
     "duvod": "bez-skutku",
     "kategorie": [],
     "posouzeni": null
@@ -8323,92 +8403,6 @@
     "duvod": "vylouceno-tematem",
     "kategorie": [
       "rusko"
-    ],
-    "posouzeni": null
-  },
-  {
-    "id": "k-3cfeef91bed0ac0a",
-    "zachyceno": "2026-09-21T12:45:30.176Z",
-    "publikovano": "2026-09-21T08:50:00.000Z",
-    "zdroj": {
-      "nazev": "Téma: nouzovy-stav (anglicky)",
-      "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxOcm1LYjg0cFJNektpRmNPV0hfeWVfX1lQdUFpc01LSkw3M0M3LXUtd2djMVdvVWllWHQ3YzduRHBkd0UwdWJ0ZUE1a05oT1oyTHBaNzJITC0yeHlXQ3MyOGwzeDdfU1FhNDZrbEpuNi00bXVFQ0JxQ1VMX1Z5V0IwNnpoSTJzNTRmNkNFajhNSnIwVERMbHlqemdmVmhOM1lWZUoxNGtsN2ZXMnFnWDczcGJDdUNHcGZnZE1QSjVUQdIBxAFBVV95cUxNRy1NTFQwc21IQ29sT0R1ZUEzMUVpb2d3cnFjbVVnSDFwT3VZeG5oMWtDSVNka0NMeWRjSmlrMWpHNGQ5XzRLeGE3NjdXTFhJenpjWDliZElRY3d6aUZOdE8xVDE4eXBIX3drbXRuMHMtSVFFaENNWVRQT01oRU1pZVBZT09ud25wMmh6bTZ6Ylo4STFkeThSZktWNmxYd2NQT25IOXhMRGw0YnpxeGMwUllpLTVya05aVURkeEgybGNNVnM1?oc=5",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Colombia wildfire: State of emergency declared, red alert issued as flames rage - WION",
-    "shrnuti": "Colombia wildfire: State of emergency declared, red alert issued as flames rage WION",
-    "duvod": "bez-mista",
-    "kategorie": [
-      "pravo"
-    ],
-    "posouzeni": null
-  },
-  {
-    "id": "k-6f732f78efe15ec3",
-    "zachyceno": "2026-09-21T09:02:52.864Z",
-    "publikovano": "2026-09-21T08:44:00.000Z",
-    "zdroj": {
-      "nazev": "Český rozhlas — domácí zprávy",
-      "url": "https://www.irozhlas.cz/zpravy-domov/louny-prodlouzily-sber-bioodpadu-od-dubna-ho-obyvatele-vytridili-temer-ctyri_2609211044_lhv",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Louny prodloužily sběr bioodpadu. Od dubna ho obyvatelé vytřídili téměř čtyři tuny",
-    "shrnuti": "V Lounech na konci dubna začali s pilotním projektem sběru bioodpadu na sídlišti Kpt. Nálepky. Od té doby tam obyvatelé vytřídili téměř čtyři tuny bioodpadu. Původně půlroční pilotní projekt teď město prodloužilo až do dubna příštího roku.",
-    "duvod": "bez-skutku",
-    "kategorie": [],
-    "posouzeni": null
-  },
-  {
-    "id": "k-88f6eec31ff29ad2",
-    "zachyceno": "2026-09-21T09:02:53.206Z",
-    "publikovano": "2026-09-21T08:38:00.000Z",
-    "zdroj": {
-      "nazev": "Lotyšsko — sabotaz",
-      "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxNZC1zVmhibGlWLWVVa2ZjcmhlMHZSME9fNU1xd0lkUWlJRG5PUEMycjRVUl8zZS02MjZuRS1LSWpxQmlwanJlYXhKZEJRRTlNcnVQZ0xyWEFRdUtfUzdqcHVIcVdieTN2T2MtM21IekZSeTc3SDhvOW1JcXcyeS0weUpHWUJ5SHQ2dTVxZldScFE3VGtWMEx1UE5peEdBNzFvUWZMZ3NNYjY4UlJVazNMaW14TTE4cnhYVVd5eEJVSXFFUdIBvgFBVV95cUxOY3ZhbjNPR0prWFpER1FaNVpOLWtfOWIxMlk2T1BzVV9fNFI4YnVIX3F1cW8yM1cxakU3a3RUT2xtU1NYOVg5a1lMc3dCUkZwMUFMNHhzdlE4azE3eUJFNm5KOTlrVmsya3kyV1BUdHRjdTRtZFlhb0V0RlFJWmNPd0VDd0MyTUJWNW9hVS1LY0JrM1ItZDVHOWtVU3RndVR0SkQzTW51akVPWjJJSFl5X0ZJR2prd0VsREplWl93?oc=5",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Czech, Latvian and Swedish intelligence chiefs assess growing Russian threat - The New Voice of Ukraine",
-    "shrnuti": "Czech, Latvian and Swedish intelligence chiefs assess growing Russian threat The New Voice of Ukraine",
-    "duvod": "bez-skutku",
-    "kategorie": [
-      "rusko"
-    ],
-    "posouzeni": null
-  },
-  {
-    "id": "k-541e0a663f4b1064",
-    "zachyceno": "2026-09-21T09:02:52.917Z",
-    "publikovano": "2026-09-21T08:36:00.000Z",
-    "zdroj": {
-      "nazev": "ERR News (Estonsko)",
-      "url": "https://news.err.ee/1610143702/retailers-people-are-buying-less-fuel-each-time-they-fill-up",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Retailers: People are buying less fuel each time they fill up",
-    "shrnuti": "Fuel retailers' data shows that drivers are buying significantly smaller amounts of fuel at a time in the hope that prices will come back down. Fuel retailers, however, say prices are likely to remain high for some time.",
-    "duvod": "bez-skutku",
-    "kategorie": [],
-    "posouzeni": null
-  },
-  {
-    "id": "k-4c93254de6efc724",
-    "zachyceno": "2026-09-21T09:02:53.155Z",
-    "publikovano": "2026-09-21T08:17:00.000Z",
-    "zdroj": {
-      "nazev": "Téma: krizove-vysilani (česky)",
-      "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxPS0xnYk14Sk5WdXQxcXgwaDZ3Q2dJdmhHbEwtQWcwbEJWcVNDc0JscVVOQlQxcUsxMGZGX2FvelpXaV9OTk44WWQ0anU1LUJWMkJNNzNsQ21nbHk2azBENU1JeTUyT1dmNjdVZzZPQ19JNlZuRjZGM1JJSmhGTVJ5RGRkcE1xLUdVNmsxRW9IdmozRjJUTFZPU0IwLTdHZUp4eUNmRFhEUkZJd1lncGNSRGlCWUR2cTM2TngtdA?oc=5",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Český rozhlas: Memorandum o krizovém vysílání se složkami IZS - ParlamentniListy.cz",
-    "shrnuti": "Český rozhlas: Memorandum o krizovém vysílání se složkami IZS ParlamentniListy.cz",
-    "duvod": "bez-skutku",
-    "kategorie": [
-      "cr"
     ],
     "posouzeni": null
   }
