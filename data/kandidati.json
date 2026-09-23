@@ -162,12 +162,18 @@
       "obzalov"
     ],
     "naliehave": null,
-    "stav": "ceka",
+    "stav": "vyrizen",
     "vyrez": {
       "text": "",
       "stazeno": "2026-09-22T20:02:27.331Z",
       "stav": 403,
       "chyba": "HTTP 403"
+    },
+    "vyrizeni": {
+      "kdy": "2026-09-22T21:33:27.577Z",
+      "duvod": "neudalost",
+      "patriK": null,
+      "poznamka": "Soud s 13 převaděči lidí z Vietnamu přes Česko do Německa v Litoměřicích; mezinárodní převaděčství, mimo výčet skutků v pravidle č. 1 (sabotáž, špionáž, útok na infrastrukturu apod.)."
     }
   },
   {
@@ -195,11 +201,17 @@
       "state of emergency"
     ],
     "naliehave": null,
-    "stav": "ceka",
+    "stav": "vyrizen",
     "vyrez": {
       "text": "Google News",
       "stazeno": "2026-09-22T19:02:29.082Z",
       "stav": 200
+    },
+    "vyrizeni": {
+      "kdy": "2026-09-22T21:33:27.577Z",
+      "duvod": "zdroj-navrhu",
+      "patriK": null,
+      "poznamka": null
     }
   },
   {
@@ -670,11 +682,17 @@
       "network outage"
     ],
     "naliehave": null,
-    "stav": "ceka",
+    "stav": "vyrizen",
     "vyrez": {
       "text": "Google News",
       "stazeno": "2026-09-22T19:02:29.254Z",
       "stav": 200
+    },
+    "vyrizeni": {
+      "kdy": "2026-09-22T21:33:27.577Z",
+      "duvod": "neudalost",
+      "patriK": null,
+      "poznamka": "Výpadek internetu O2 v ČR (anglický přetisk zprávy již dříve rozhodnuté jako neudalost); technická porucha bez potvrzeného kybernetického útoku."
     }
   },
   {
@@ -2297,11 +2315,17 @@
       "russia"
     ],
     "naliehave": null,
-    "stav": "ceka",
+    "stav": "vyrizen",
     "vyrez": {
       "text": "Google News",
       "stazeno": "2026-09-22T19:02:29.398Z",
       "stav": 200
+    },
+    "vyrizeni": {
+      "kdy": "2026-09-22T21:33:27.577Z",
+      "duvod": "duplicita",
+      "patriK": null,
+      "poznamka": "Radio Moldova, 16. 9., týž případ jako záznam us-590b687216 (obvinění pěti osob v USA); doplněn úřední zdroj justice.gov."
     }
   },
   {
