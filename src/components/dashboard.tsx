@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { pripady, type Zaznam } from "@/lib/agregace";
 import { cerstvost, datumCasPraha, datumPraha } from "@/lib/cas";
+import type { StavObcanu } from "@/lib/data";
 import type { CelkovyStav, HybridniTlak, Kampan, Kandidat, NatoPolozka, Nepotvrzene, OficialniNastroj, Overovana, PravniPolozka, ProvozniPolozka, Snimek, TydenniHodnoceni, Uroven, Watchlist } from "@/lib/typy";
 import { CenaPaliva } from "./palivo";
 import { stavPaliv, stavPaliva, vetaOCene } from "@/lib/palivo";
@@ -23,17 +24,15 @@ import { useZiveHodiny } from "@/lib/cas-klient";
 import { PripravenostKarta } from "./pripravenost-klient";
 import { TipyKPriprave } from "./tipy";
 import { PasZemi } from "./pas-zemi";
-import { CoSeZmenilo, souhrnZmen } from "./co-se-zmenilo";
+import { CoSeZmenilo } from "./co-se-zmenilo";
 import { StavSluzeb } from "./stav-sluzeb";
 import { snimekSluzeb, SLOVA_STAVU, SLUZBY, type StavSluzby } from "@/lib/sluzby";
 import { useStavSluzeb, type ZivyStav } from "@/lib/sluzby-klient";
-import { tipy as vsechnyTipy } from "@/lib/data";
 import { casPraha } from "@/lib/cas";
 import { VyzvaTelegram } from "./vyzva-telegram";
 import { Nahlaseni } from "./nahlaseni";
 import { Napoveda } from "./zaklad";
 import { useT } from "@/lib/i18n";
-import type { StavObcanu } from "@/lib/data";
 
 /*
   Dashboard. Jedna obrazovka, žádné odstavce.
@@ -335,7 +334,7 @@ function RozbalovaciOblast({ nazev, souhrn, paleta, poznamka, children }: {
           <span className="mt-1 block text-male font-semibold leading-snug text-inkoust">{souhrn}</span>
           {poznamka && <span className="mt-0.5 block text-mikro leading-snug text-tlum2">{poznamka}</span>}
         </span>
-        {paleta.length > 0 && <Paleta polozky={paleta} />}
+        <Paleta polozky={paleta} />
         <Ikona nazev="dolu" velikost={13} tah={2} trida="shrink-0 text-tlum2 transition-transform group-open:rotate-180" />
       </summary>
       <div className="border-t border-linka2">{children}</div>
@@ -418,8 +417,6 @@ export function Dashboard({
     };
   })();
   const paliva = stavPaliv().filter((p) => p.cena !== null);
-  const zmeny = souhrnZmen(vse, snimky, tedMs);
-  const tipyNahled = vsechnyTipy(tedMs);
   /*
     Situace v Česku za 90 dní: nejvyšší závažnost z případů a operací
     proti občanům v okně. Dřív přicházela ze serveru s časem sestavení;
@@ -431,7 +428,14 @@ export function Dashboard({
   const crPocet = { pripadu: dni90.filter((i) => i.kodZeme === "CZ").length, kampani: czKampane90.length };
   const stariCelkem = cerstvost(overeno, tedMs);
 
-  /* Dřív tu byly dlaždice „Bez omezení / Bez aktivace“ — nikde se nevykreslovaly a tvrdily klid bez dokladu (audit 23. 9. 2026). */
+  const crHodnota = platiCr.length ? platiCr.map((p) => KRATCE_PRAVNI[p.klic] ?? p.nazev).join(", ") : naruseno.length ? "Narušeno" : sledujeme.length ? "Sledujeme" : "Bez omezení";
+  const crTon: Ton = platiCr.length ? "plati" : naruseno.length ? "plati" : sledujeme.length ? "pozor" : neovereneCr === pravni.length ? "nevime" : "klid";
+  const crPopis = platiCr.length
+    ? `Platí: ${platiCr.map((p) => (KRATCE_PRAVNI[p.klic] ?? p.nazev).toLowerCase()).join(", ")}`
+    : `Mobilizace ne · vycestování bez omezení · hranice běžně${neovereneCr ? ` · ${neovereneCr} neověřeno` : ""}`;
+
+  const natoHodnota = natoAktivni.length ? natoAktivni.map((p) => KRATCE_NATO[p.klic] ?? p.nazev).join(", ") : cl4?.aktivni === null && cl5?.aktivni === null ? "Neověřeno" : "Bez aktivace";
+  const natoTon: Ton = natoAktivni.length ? "plati" : cl4?.aktivni === null && cl5?.aktivni === null ? "nevime" : "klid";
 
   /*
     Dlaždice se počítají jednou a ukazují se VŠECHNY.
@@ -470,6 +474,9 @@ export function Dashboard({
     <>
     <PasZemi vse={vse} kampane={kampane} ted={ted} />
     <div className="mx-auto max-w-[1280px] px-4 py-5 sm:px-6 sm:py-7">
+      {/* Nad budíky: co se šíří a zatím není ověřené. Bez toho by
+          závažná, ale nepotvrzená zpráva propadla úplně. */}
+      <PruhOverujeme aktivni={overovaneAktivni} uzavrene={overovaneUzavrene} ted={tedMs} />
 
       {/*
         Úvod tři pětiny, aktuality dvě pětiny.
@@ -532,13 +539,6 @@ export function Dashboard({
           nadpis={t("Úřední stav v Česku")}
         />
       </div>
-      {/*
-        Ověřujeme: co se šíří a zatím není ověřené. Dřív stálo nad budíky
-        a na mobilu zabralo celou první obrazovku — nepotvrzená zpráva
-        tak byla vidět dřív a víc než ověřený stav. Teď až pod ním.
-      */}
-      <div className="mt-8"><PruhOverujeme aktivni={overovaneAktivni} uzavrene={overovaneUzavrene} ted={tedMs} /></div>
-
       {/* Stejný poměr a mezera jako v úvodu: tři pětiny mřížka, dvě pětiny sloupec. */}
       {/*
         Jediný sloupec na mobilu s minimem 0. Bez toho má sloupec minimum
@@ -546,12 +546,7 @@ export function Dashboard({
         profil s dlouhým jménem vyhnal celý sloupec na 422 px a boxy pod
         ním se na 390 px displeji řízly vpravo.
       */}
-      {/*
-        Jeden sloupec. Od 23. 9. 2026 nemá nic vlastní box vedle mřížky:
-        Co se změnilo, služby, palivo, připravenost i tipy jsou rozklikávací
-        oblasti pod výpisem sledovaných faktorů, se souhrnem v náhledu.
-      */}
-      <div className="grid grid-cols-[minmax(0,1fr)] gap-4">
+      <div className="grid grid-cols-[minmax(0,1fr)] gap-4 xl:grid-cols-[minmax(0,3fr)_minmax(0,2fr)] xl:gap-10">
         <section aria-label={t("Oficiální stavy")} id="opatreni" className="scroll-mt-[84px] space-y-4">
           {skupinyDlazdic.map((sk) => (
             <div key={sk.predpona} className="overflow-hidden rounded-[20px] border border-linka2 bg-plocha">
@@ -602,39 +597,30 @@ export function Dashboard({
               <CenaPaliva vnoreny />
             </RozbalovaciOblast>
           )}
-
-          <RozbalovaciOblast
-            nazev="Co se změnilo"
-            souhrn={zmeny.zlepseni + zmeny.zhorseni + zmeny.opatreni
-              ? `Za 7 dní: ${[zmeny.zhorseni && `${zmeny.zhorseni} zhoršení`, zmeny.zlepseni && `${zmeny.zlepseni} zlepšení`, zmeny.opatreni && `${zmeny.opatreni} opatření`].filter(Boolean).join(" · ")}`
-              : "Za 7 dní beze změny úředních stavů, cen paliva i opatření"}
-            poznamka="Změny úředních stavů, cen paliva a opatření v Česku, u sousedů a v EU."
-            paleta={zmeny.paleta}
-          >
-            <CoSeZmenilo zaznamy={vse} snimky={snimky} ted={tedMs} vnoreny />
-          </RozbalovaciOblast>
-
-          <RozbalovaciOblast
-            nazev="Jsem připraven/a?"
-            souhrn={`${nastroje.filter((n) => n.doporuceno).length} doporučených oficiálních služeb a dotazník připravenosti`}
-            poznamka="Záchranka, varování na mobil, výstrahy ČHMÚ, sirény, krizové vysílání, lékárnička, typy událostí."
-            paleta={[]}
-          >
-            <div className="py-1"><PripravenostKarta nastroje={nastroje} vnoreny /></div>
-          </RozbalovaciOblast>
-
-          {tipyNahled.length > 0 && (
-            <RozbalovaciOblast
-              nazev="Tipy k přípravě"
-              souhrn={`${tipyNahled.length} ${tipyNahled.length === 1 ? "tip" : tipyNahled.length < 5 ? "tipy" : "tipů"} · nejnovější: ${tipyNahled[0].nadpis}`}
-              paleta={[]}
-            >
-              <TipyKPriprave ted={tedMs} vnoreny />
-            </RozbalovaciOblast>
-          )}
         </section>
 
+        {/*
+          Vedle mřížky stavů: co se změnilo, ne co se stalo.
 
+          Dřív tu byl seznam nových událostí — třetí místo na úvodní straně
+          s touž otázkou. Události mají sloupec v úvodu a vlastní stránku.
+          Sem patří změny, které se dotknou života tady: úřední stavy,
+          cena paliva, opatření v Česku, u sousedů a v EU.
+        */}
+        <div className="min-w-0 space-y-4">
+        <CoSeZmenilo zaznamy={vse} snimky={snimky} ted={tedMs} />
+
+        {/* Připravenost: co mít nastavené dřív, než se něco stane. Skóre je z odpovědí čtenáře v jeho prohlížeči. */}
+        <PripravenostKarta nastroje={nastroje} />
+
+
+        {/*
+          Tipy k přípravě. Odpovídají na jinou otázku než zbytek webu: ne co
+          se stalo, ale co s tím může člověk udělat dnes. Bez tipu se
+          nevykreslí nic.
+        */}
+        <TipyKPriprave ted={tedMs} />
+        </div>
       </div>
 
       {/*
@@ -696,10 +682,8 @@ export function Dashboard({
       {/* 3 — čísla „kolik, kde, kdo“ jsou v Analýzách. */}
 
       {/*
-        5 — kanály a partneři tu nejsou. Mřížka WhatsApp/Signal/Bluesky
-        s nápisem „připravujeme“ a prázdné sloty partnerů slibovaly něco,
-        co neexistuje. Telegram je ve výzvě výš, RSS a odběr v řádku níž,
-        úplný seznam na /odber/.
+        5 — kanály a partneři tu nejsou (rozhodnutí 23. 9. 2026): mřížka
+        WhatsApp/Signal/Bluesky „připravujeme“ a prázdné sloty partnerů.
       */}
       {/* 6 — sbalené: proč, co by změnilo, odběr */}
       <div className="mt-14 grid gap-3 border-t border-linka pt-12 sm:mt-20 sm:pt-14 md:grid-cols-3">
