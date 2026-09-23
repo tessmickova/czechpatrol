@@ -1,5 +1,5 @@
 {
-  "aktualizovano": "2026-09-23T18:02:45.666Z",
+  "aktualizovano": "2026-09-23T19:02:47.742Z",
   "stavy": [
     {
       "klic": "cloudflare",
@@ -7,9 +7,9 @@
       "popis": "Minor Service Outage",
       "incidenty": [
         {
-          "nazev": "Elevated Errors with any / all in http_response_cache_settings",
-          "odkaz": "https://www.cloudflarestatus.com/incidents/f8wg5htd3zz4",
-          "aktualizovano": "2026-09-23T15:55:51.000Z"
+          "nazev": "Network Performance Degradation — Asia-Pacific",
+          "odkaz": "https://www.cloudflarestatus.com/incidents/8wmvkv5jkf15",
+          "aktualizovano": "2026-09-23T18:44:55.000Z"
         },
         {
           "nazev": "Intermittent authentication errors for API and R2",
@@ -28,7 +28,7 @@
         "Arica, Chile - (ARI)",
         "Algiers, Algeria - (ALG)"
       ],
-      "zkontrolovano": "2026-09-23T18:02:45.666Z",
+      "zkontrolovano": "2026-09-23T19:02:47.742Z",
       "chyba": null
     },
     {
@@ -40,7 +40,7 @@
         "Zoom Phone",
         "Zoom Phone - EMEA"
       ],
-      "zkontrolovano": "2026-09-23T18:02:45.666Z",
+      "zkontrolovano": "2026-09-23T19:02:47.742Z",
       "chyba": null
     },
     {
@@ -49,7 +49,7 @@
       "popis": "All Systems Operational",
       "incidenty": [],
       "postizene": [],
-      "zkontrolovano": "2026-09-23T18:02:45.666Z",
+      "zkontrolovano": "2026-09-23T19:02:47.742Z",
       "chyba": null
     }
   ]
