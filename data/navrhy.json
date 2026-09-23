@@ -1,1 +1,141 @@
-[]
+[
+  {
+    "kam": "zaznam",
+    "pripravil": "patrol",
+    "pripraveno": "2026-09-23T18:32:52.407Z",
+    "id": "i-2026-09-23-d6a13634e0",
+    "slug": "pl-d6a13634e0",
+    "titulek": "Polsko: ruský vojenský vrtulník Mi-8 na 42 sekund narušil polský vzdušný prostor u Braniewa poblíž Kaliningradu",
+    "kratkyTitulek": "Polsko: ruský vojenský vrtulník Mi-8 na 42 sekund narušil polský vzdušný prostor u Braniewa poblíž Kaliningradu",
+    "zeme": "Polsko",
+    "kodZeme": "PL",
+    "kategorie": [
+      "nato",
+      "hranice",
+      "rusko"
+    ],
+    "datumUdalosti": "2026-09-23T00:00:00Z",
+    "datumZjisteni": "2026-09-23T00:00:00Z",
+    "aktualizovano": "2026-09-23T18:32:52.407Z",
+    "zavaznost": "O2",
+    "jistota": "vysoka",
+    "stav": "bez-vysetrovani",
+    "atribuce": "neznama",
+    "puvodce": "neznamy",
+    "druh": "pripad",
+    "fakta": [
+      "Podle polského operačního velitelství ozbrojených sil narušil 23. 9. 2026 kolem 11:08 místního času ruský vojenský vrtulník Mi-8 letící od Kaliningradu polský vzdušný prostor severně od Braniewa.",
+      "Podle operačního velitelství vnikl vrtulník do polského vzdušného prostoru do hloubky asi 300 metrů a zůstal tam 42 sekund.",
+      "Podle operačního velitelství (citováno Kyiv Independent) polské stíhačky byly uvedeny do pohotovosti a pozemní síly do stavu pohotovosti; velitelství uvedlo, že „povaha incidentu naznačuje, že Rusko znovu testuje připravenost naší protivzdušné obrany“.",
+      "Podle Notes from Poland jde o první veřejně oznámený případ, kdy ruský vojenský vrtulník překročil pozemní hranici Polska; dřívější případy se týkaly letadel nad teritoriálními vodami Baltu a dronů."
+    ],
+    "neznameho": [
+      "Rusko se k incidentu podle obou zdrojů nevyjádřilo.",
+      "Zda šlo o záměrný test, nebo navigační chybu, velitelství neuvádí; formulace o „testování“ je jeho hodnocení, ne prokázaný záměr.",
+      "Přímé oficiální prohlášení bylo zveřejněno na síti X polského operačního velitelství; jeho vlastní web (gov.pl/web/dowodztwo-operacyjne) jsem znovu nenašel s tímto textem."
+    ],
+    "vyznam": "",
+    "eskalacniSpousteče": [],
+    "deeskalacniSignaly": [],
+    "zdroje": [
+      {
+        "nazev": "The Kyiv Independent — Russian Mi-8 helicopter violates Polish airspace near Kaliningrad, Poland says",
+        "url": "https://kyivindependent.com/russian-mi-8-helicopter-violates-polish-airspace-near-kaliningrad-poland-says/",
+        "typ": "media",
+        "publikovano": "2026-09-23T00:00:00Z",
+        "primarni": false,
+        "jazyk": "en"
+      },
+      {
+        "nazev": "Notes from Poland — Russian military helicopter violates Polish airspace",
+        "url": "https://notesfrompoland.com/2026/09/23/russian-military-helicopter-violates-polish-airspace/",
+        "typ": "media",
+        "publikovano": "2026-09-23T00:00:00Z",
+        "primarni": false,
+        "jazyk": "en"
+      }
+    ],
+    "souvisejici": [],
+    "historie": [
+      {
+        "kdy": "2026-09-23T00:00:00Z",
+        "text": "Zachyceno automatickým sběrem, druhý zdroj doložen před zařazením do fronty.",
+        "novySignal": true
+      }
+    ],
+    "novy": true,
+    "zapocitanoTyden": "2026-09-23",
+    "aiZpracovano": true,
+    "lidskyOvereno": false,
+    "archivniZaznam": false
+  },
+  {
+    "kam": "zaznam",
+    "pripravil": "patrol",
+    "pripraveno": "2026-09-23T18:32:52.407Z",
+    "id": "i-2026-09-22-c21454328d",
+    "slug": "ro-c21454328d",
+    "titulek": "Rumunsko: radar zachytil vzdušný cíl u ukrajinského Vylkove poblíž hranice, vzlétly dva F-16, rumunský vzdušný prostor nebyl narušen",
+    "kratkyTitulek": "Rumunsko: radar zachytil vzdušný cíl u ukrajinského Vylkove poblíž hranice, vzlétly dva F-16, rumunský vzdušný prostor nebyl narušen",
+    "zeme": "Rumunsko",
+    "kodZeme": "RO",
+    "kategorie": [
+      "nato",
+      "hranice",
+      "drony"
+    ],
+    "datumUdalosti": "2026-09-22T00:00:00Z",
+    "datumZjisteni": "2026-09-23T00:00:00Z",
+    "aktualizovano": "2026-09-23T18:32:52.407Z",
+    "zavaznost": "Y1",
+    "jistota": "vysoka",
+    "stav": "bez-vysetrovani",
+    "atribuce": "neznama",
+    "puvodce": "neznamy",
+    "druh": "pripad",
+    "fakta": [
+      "Podle rumunského ministerstva obrany (MApN) zachytil 22. 9. 2026 radarový systém vzdušný cíl severovýchodně od ukrajinského Vylkove poblíž rumunské hranice.",
+      "Podle MApN byla v 23:35 obyvatelům severu Tulčeského kraje odeslána zpráva RO-Alert; alarm skončil ve 00:36.",
+      "Podle MApN vzlétly na monitorování situace dva F-16 rumunského letectva z 86. letecké základny Borcea.",
+      "Podle MApN nebylo hlášeno žádné narušení rumunského vzdušného prostoru."
+    ],
+    "neznameho": [
+      "Původ a typ vzdušného cíle MApN neuvádí.",
+      "Přesný důvod, proč byl cíl vyhodnocen jako hrozba pro Tulčeský kraj, zdroje dál nerozvádějí."
+    ],
+    "vyznam": "",
+    "eskalacniSpousteče": [],
+    "deeskalacniSignaly": [],
+    "zdroje": [
+      {
+        "nazev": "AGERPRES (státní agentura Rumunska) — Defence Ministry: Aerial target detected near Romanian border; two F-16s scrambled to monitor situation",
+        "url": "https://agerpres.ro/english/2026/09/23/defence-ministry-aerial-target-detected-near-romanian-border-two-f-16s-scrambled-to-monitor-situatio--1596052",
+        "typ": "media",
+        "publikovano": "2026-09-23T00:00:00Z",
+        "primarni": false,
+        "jazyk": "en"
+      },
+      {
+        "nazev": "Radio România Constanța — MApN: O țintă aeriană a fost detectată în apropierea graniței cu România",
+        "url": "https://www.radioconstanta.ro/2026/09/23/mapn-o-tinta-aeriana-a-fost-detectata-in-apropierea-granitei-cu-romania-populatia-din-nordul-judetului-tulcea-alertata-prin-mesaj-ro-alert/",
+        "typ": "media",
+        "publikovano": "2026-09-23T00:00:00Z",
+        "primarni": false,
+        "jazyk": "ro"
+      }
+    ],
+    "souvisejici": [],
+    "historie": [
+      {
+        "kdy": "2026-09-22T00:00:00Z",
+        "text": "Zachyceno automatickým sběrem, druhý zdroj doložen před zařazením do fronty.",
+        "novySignal": true
+      }
+    ],
+    "novy": true,
+    "zapocitanoTyden": "2026-09-22",
+    "aiZpracovano": true,
+    "lidskyOvereno": false,
+    "archivniZaznam": false
+  }
+]
