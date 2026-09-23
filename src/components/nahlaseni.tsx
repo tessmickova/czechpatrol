@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { API_URL, KOMUNITA, TIPY_MAIL, UCTY_ZAPNUTE } from "@/config/web";
+import { API_URL, KOMUNITA, KONTAKTY_PRIJIMAME, TIPY_MAIL, UCTY_ZAPNUTE } from "@/config/web";
 import { Hlaska, POLE, Popisek, TLACITKO_AKCENT, TLACITKO_TICHE } from "./formulare";
 import { Ikona } from "./ikony";
 
@@ -49,7 +49,7 @@ export function Nahlaseni() {
       });
       const data = (await r.json().catch(() => ({}))) as { chyba?: string };
       if (!r.ok) throw new Error(data.chyba ?? "Nepovedlo se odeslat.");
-      setStav({ typ: "ok", text: "Díky. Hlášení máme, správce ho projde. Pokud jste nechali kontakt, ozveme se jen v případě dotazu." });
+      setStav({ typ: "ok", text: KONTAKTY_PRIJIMAME ? "Díky. Hlášení máme, správce ho projde. Pokud jste nechali kontakt, ozveme se jen v případě dotazu." : "Díky. Hlášení máme, správce ho projde." });
       setPopis(""); setOdkaz(""); setJmeno(""); setEmail(""); setTelefon("");
     } catch (err) {
       setStav({ typ: "chyba", text: err instanceof Error ? err.message : "Nepovedlo se odeslat." });
@@ -73,7 +73,7 @@ export function Nahlaseni() {
         <form onSubmit={odesli} className="sklo mt-4 w-full max-w-[720px] rounded-[18px] p-5 sm:p-6">
           <div className="stitek mb-1 !text-akcent">Hlášení události</div>
           <p className="mb-4 text-zaklad leading-relaxed text-tlum">
-            Nejlepší je odkaz na úřad: policie, vláda, NATO, EU. Bez zdroje záznam nezveřejníme, ale dohledáme ho. Kontakt je dobrovolný, po roce ho smažeme.
+            Nejlepší je odkaz na úřad: policie, vláda, NATO, EU. Bez zdroje záznam nezveřejníme, ale dohledáme ho.{KONTAKTY_PRIJIMAME ? " Kontakt je dobrovolný, po roce ho smažeme." : " Hlášení je anonymní — kontakt zatím nepřijímáme."}
           </p>
           <div className="space-y-4">
             <div>
@@ -84,6 +84,7 @@ export function Nahlaseni() {
               <Popisek pro="tip-odkaz">Odkaz na oficiální web</Popisek>
               <input id="tip-odkaz" type="url" value={odkaz} onChange={(e) => setOdkaz(e.target.value)} className={POLE} placeholder="https://" />
             </div>
+            {KONTAKTY_PRIJIMAME && (
             <div className="grid gap-4 sm:grid-cols-3">
               <div>
                 <Popisek pro="tip-jmeno">Jméno (nepovinné)</Popisek>
@@ -98,6 +99,7 @@ export function Nahlaseni() {
                 <input id="tip-telefon" type="tel" value={telefon} onChange={(e) => setTelefon(e.target.value)} className={`${POLE} cislice`} autoComplete="tel" />
               </div>
             </div>
+            )}
             {/* past na roboty — lidé pole nevidí */}
             <input tabIndex={-1} autoComplete="off" value={past} onChange={(e) => setPast(e.target.value)} className="hidden" aria-hidden />
             {stav && <Hlaska typ={stav.typ}>{stav.text}</Hlaska>}

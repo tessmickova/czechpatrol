@@ -136,7 +136,7 @@ export default function SoukromiStranka() {
           </Oddil>
 
           <Oddil cislo="11" nadpis="Automatizace a AI">
-            <p>Sběr dat běží automaticky a část textů vzniká s pomocí AI. Hodnocení dělá člověk. O vás nic automaticky nerozhodujeme a neprofilujeme vás. Upozornění jen filtrují zprávy podle vašeho výběru.</p>
+            <p>Sběr dat běží automaticky, část textů vzniká s pomocí AI a celkové hodnocení se počítá automaticky podle zveřejněné Metodiky. O vás nic automaticky nerozhodujeme a neprofilujeme vás. Upozornění jen filtrují zprávy podle vašeho výběru.</p>
           </Oddil>
 
           <Oddil cislo="12" nadpis="Děti">

@@ -470,9 +470,6 @@ export function Dashboard({
     <>
     <PasZemi vse={vse} kampane={kampane} ted={ted} />
     <div className="mx-auto max-w-[1280px] px-4 py-5 sm:px-6 sm:py-7">
-      {/* Nad budíky: co se šíří a zatím není ověřené. Bez toho by
-          závažná, ale nepotvrzená zpráva propadla úplně. */}
-      <PruhOverujeme aktivni={overovaneAktivni} uzavrene={overovaneUzavrene} ted={tedMs} />
 
       {/*
         Úvod tři pětiny, aktuality dvě pětiny.
@@ -535,6 +532,13 @@ export function Dashboard({
           nadpis={t("Úřední stav v Česku")}
         />
       </div>
+      {/*
+        Ověřujeme: co se šíří a zatím není ověřené. Dřív stálo nad budíky
+        a na mobilu zabralo celou první obrazovku — nepotvrzená zpráva
+        tak byla vidět dřív a víc než ověřený stav. Teď až pod ním.
+      */}
+      <div className="mt-8"><PruhOverujeme aktivni={overovaneAktivni} uzavrene={overovaneUzavrene} ted={tedMs} /></div>
+
       {/* Stejný poměr a mezera jako v úvodu: tři pětiny mřížka, dvě pětiny sloupec. */}
       {/*
         Jediný sloupec na mobilu s minimem 0. Bez toho má sloupec minimum

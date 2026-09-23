@@ -1,5 +1,6 @@
 import { omez } from "./limit";
 import { ChybaHttp, json, nahodnyToken, ted, telo } from "./pomocne";
+import { vyzadujOsobniUdaje } from "./osobni-udaje";
 import type { Env, Prihlaseny } from "./typy";
 
 /*
@@ -42,6 +43,7 @@ export async function prijmi(env: Env, req: Request): Promise<Response> {
   const t = await telo<{ email?: string; zajmy?: unknown; zdroj?: string; souhlas?: boolean; past?: string }>(req);
   // Skryté pole „past" vyplňují jen roboti.
   if (t.past) return json({ ok: true });
+  vyzadujOsobniUdaje(env);
   const email = (t.email ?? "").trim().toLowerCase();
   if (!platnyEmail(email)) throw new ChybaHttp(400, "Zadejte prosím platný e-mail.");
   if (t.souhlas !== true) throw new ChybaHttp(400, "Bez souhlasu e-mail neuložíme.");

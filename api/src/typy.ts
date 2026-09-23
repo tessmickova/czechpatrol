@@ -18,6 +18,8 @@ export interface Env {
   SBER_WORKFLOW?: string;
   /* Kam hlídač hlásí, že sběr přestal běžet. Viz src/hlidac.ts. */
   SPRAVCE_CHAT?: string;
+  /** "ano" = smí se ukládat e-maily a kontakty. Viz src/osobni-udaje.ts. */
+  OSOBNI_UDAJE?: string;
   TELEGRAM_KANAL?: string;
   /* Premium a kredity — viz docs/PREMIUM-NAVRH.md. Bez klíče a brány se
      platby nespouštějí a web říká „připravujeme“. Vše jsou tajemství Workeru. */

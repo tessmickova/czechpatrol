@@ -1,4 +1,5 @@
 import { ChybaHttp, json, sha256, ted, telo } from "./pomocne";
+import { vyzadujOsobniUdaje } from "./osobni-udaje";
 import { vyzadujPravo } from "./prava";
 import { desifruj, sifrovaniNastaveno, zasifruj } from "./sifrovani";
 import type { Env, Prihlaseny } from "./typy";
@@ -42,6 +43,7 @@ export async function emailUctu(env: Env, ucetId: string): Promise<string | null
 }
 
 export async function ulozEmail(env: Env, req: Request, ucet: Prihlaseny): Promise<Response> {
+  vyzadujOsobniUdaje(env);
   if (!sifrovaniNastaveno(env)) throw new ChybaHttp(503, "Ukládání e-mailu zatím není zapnuté.");
   const { email, souhlas } = await telo<{ email?: string; souhlas?: boolean }>(req);
   const e = (email ?? "").trim().toLowerCase();

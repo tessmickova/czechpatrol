@@ -272,6 +272,13 @@ export const PROVOZOVATEL = {
  * člověk věděl, komu adresu dává. Dokud je PROVOZOVATEL prázdný, web
  * formulář neukáže a řekne, že odběr připravuje.
  */
+/**
+ * Smí web přijímat e-maily, jména a telefony? Jen s uvedeným provozovatelem
+ * (správce údajů podle GDPR). Server má vlastní pojistku OSOBNI_UDAJE,
+ * tohle jen skryje pole, která by stejně skončila odmítnutím.
+ */
+export const KONTAKTY_PRIJIMAME = PROVOZOVATEL.nazev !== "";
+
 export const EMAIL_ODBER_BEZI = UCTY_ZAPNUTE && PROVOZOVATEL.nazev !== "";
 
 /**

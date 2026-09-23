@@ -1,4 +1,5 @@
 import { omez } from "./limit";
+import { osobniUdajePovoleny } from "./osobni-udaje";
 import { ChybaHttp, json, ted, telo } from "./pomocne";
 import type { Env, Prihlaseny } from "./typy";
 
@@ -17,10 +18,12 @@ export async function prijmi(env: Env, req: Request): Promise<Response> {
   const popis = (t.popis ?? "").trim();
   if (popis.length < 20) throw new ChybaHttp(400, "Popište prosím, co chybí — aspoň pár vět.");
   const ořež = (s: string | undefined, n: number) => (s ?? "").trim().slice(0, n) || null;
+  // Hlášení samo o sobě osobní údaj není; kontakt k němu ano — bez provozovatele ho zahodíme.
+  const kontakt = osobniUdajePovoleny(env);
   const odkaz = ořež(t.odkaz, MAX.odkaz);
   if (odkaz && !/^https?:\/\//.test(odkaz)) throw new ChybaHttp(400, "Odkaz musí začínat http:// nebo https://.");
   await env.DB.prepare("INSERT INTO tipy (id, vytvoreno, popis, odkaz, jmeno, email, telefon) VALUES (?, ?, ?, ?, ?, ?, ?)")
-    .bind(crypto.randomUUID(), ted(), popis.slice(0, MAX.popis), odkaz, ořež(t.jmeno, MAX.jmeno), ořež(t.email, MAX.email), ořež(t.telefon, MAX.telefon))
+    .bind(crypto.randomUUID(), ted(), popis.slice(0, MAX.popis), odkaz, kontakt ? ořež(t.jmeno, MAX.jmeno) : null, kontakt ? ořež(t.email, MAX.email) : null, kontakt ? ořež(t.telefon, MAX.telefon) : null)
     .run();
   return json({ ok: true }, 201);
 }
