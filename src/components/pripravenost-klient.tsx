@@ -209,7 +209,7 @@ export function PripravenostKarta({ nastroje }: { nastroje: OficialniNastroj[] }
         <p className="text-male leading-snug text-tlum">
           {zacal ? vetaKeSkore(skore) : "Záchranka, tísňové linky, varování na mobil, výstrahy ČHMÚ, DROZD, sirény, krizové vysílání, kanál obce. Co z toho máte nastavené?"}
         </p>
-        <Tlacitko kam="/pripravenost/" varianta="obrys" velikost="s" ikonaVpravo="nahoru" trida="mt-3 [&>svg:last-child]:rotate-90">Projít průvodce</Tlacitko>
+        <Tlacitko kam="/pripravenost/" varianta="plny" velikost="s" ikonaVpravo="nahoru" trida="mt-3 [&>svg:last-child]:rotate-90">Projít průvodce</Tlacitko>
       </div>
     </section>
   );
