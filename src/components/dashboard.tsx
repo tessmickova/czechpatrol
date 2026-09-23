@@ -15,7 +15,7 @@ import { Ikona, type NazevIkony } from "./ikony";
 import { HeroDashboard } from "./hero-dashboard";
 import { DlazdiceKampane } from "./kampane";
 import { NadpisSekce } from "./nadpisy";
-import { PruhOverujeme } from "./overujeme";
+import { Partneri, Sledovat } from "./sledovat";
 import { Aktuality } from "./aktuality";
 import { UrgentniPas } from "./urgentni";
 import { TriTemata } from "./tri-temata";
@@ -474,9 +474,7 @@ export function Dashboard({
     <>
     <PasZemi vse={vse} kampane={kampane} ted={ted} />
     <div className="mx-auto max-w-[1280px] px-4 py-5 sm:px-6 sm:py-7">
-      {/* Nad budíky: co se šíří a zatím není ověřené. Bez toho by
-          závažná, ale nepotvrzená zpráva propadla úplně. */}
-      <PruhOverujeme aktivni={overovaneAktivni} uzavrene={overovaneUzavrene} ted={tedMs} />
+      {/* „Právě ověřujeme“ na úvodní stranu nepatří (rozhodnutí 23. 9. 2026). */}
 
       {/*
         Úvod tři pětiny, aktuality dvě pětiny.
@@ -681,10 +679,17 @@ export function Dashboard({
 
       {/* 3 — čísla „kolik, kde, kdo“ jsou v Analýzách. */}
 
-      {/*
-        5 — kanály a partneři tu nejsou (rozhodnutí 23. 9. 2026): mřížka
-        WhatsApp/Signal/Bluesky „připravujeme“ a prázdné sloty partnerů.
-      */}
+      {/* 5 — sledovat a partneři */}
+      <div className="nalet mt-14 border-t border-linka pt-12 sm:mt-20 sm:pt-14">
+        <NadpisSekce
+          stitek={t("Odběr")}
+          nadpis={t("Jak se to dozvíte, aniž byste sem chodili")}
+          popis={t("Kanály, čtečka nebo vlastní přehled. Nic z toho po vás nechce jméno ani e-mail.")}
+        />
+        <Sledovat />
+      </div>
+      <div className="mt-12 sm:mt-16"><Partneri /></div>
+
       {/* 6 — sbalené: proč, co by změnilo, odběr */}
       <div className="mt-14 grid gap-3 border-t border-linka pt-12 sm:mt-20 sm:pt-14 md:grid-cols-3">
         <details className="group rounded-[18px] border border-linka2 bg-plocha">

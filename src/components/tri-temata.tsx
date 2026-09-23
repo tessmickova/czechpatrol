@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { EMAIL_ODBER_BEZI, SPUSTENO } from "@/config/web";
+import { EMAIL_ODBER_BEZI } from "@/config/web";
 import { Ikona, type NazevIkony } from "./ikony";
 
 /*
@@ -98,7 +98,7 @@ export function TriTemata() {
       stránky a nevypadají jako cizí blok.
     */
     <ul className="mt-6 grid gap-4 md:grid-cols-3 xl:mt-8 xl:gap-10" aria-label="Tři hlavní témata">
-      {TEMATA.filter((t) => SPUSTENO.komunita || t.stitek !== "Komunita").map((t) => (
+      {TEMATA.map((t) => (
         <li key={t.nadpis} className="min-w-0">
           <Link href={t.href} className="noc group relative block h-full overflow-hidden rounded-[28px] border border-linka transition-colors hover:border-akcent/60">
             <span className={`pointer-events-none absolute inset-0 ${t.barva} opacity-[0.28] transition-opacity group-hover:opacity-[0.4]`}>{t.grafika}</span>
