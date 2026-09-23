@@ -403,7 +403,12 @@ async function main() {
       datumZjisteni: `${kdyZachyceno}T00:00:00Z`,
       aktualizovano: new Date().toISOString(),
       zavaznost: p.zavaznost,
-      jistota: p.jistota,
+      /*
+        Bez úředního zdroje nejvýš „střední". Model dával „potvrzeno" i návrhům,
+        které stály jen na médiích (Patrol to hlásil 19. 9. 2026) — a pravidlo
+        č. 0 bod 3 říká, že bez úředního doložení se stav jako platný neoznačí.
+      */
+      jistota: zdroje.some((z) => z.primarni) || p.jistota === "nizka" || p.jistota === "stredni" ? p.jistota : "stredni",
       stav: "bez-vysetrovani",
       atribuce: "neznama",
       /*
