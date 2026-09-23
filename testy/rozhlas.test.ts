@@ -805,3 +805,15 @@ describe("směr změny v přehledu dne", () => {
     expect(text).not.toMatch(/zhoršil/);
   });
 });
+
+describe("doposlání tiše zapamatovaného záznamu", () => {
+  it("záznam s doposlat: true odejde i přes stáří a první běh", async () => {
+    const { vyberNove } = await import("../nastroje/rozhlas.mjs");
+    const ted = Date.parse("2026-09-23T17:00:00Z");
+    const i = { id: "x", lidskyOvereno: true, druh: "pripad", zavaznost: "Y1", datumUdalosti: "2026-08-31T00:00:00Z", datumZjisteni: "2026-08-31T00:00:00Z", historie: [], kategorie: [] };
+    const stav = { prvniBeh: "2026-09-06T00:00:00Z", zaznamy: { x: { kdy: "2026-09-06T00:00:00Z", historie: 0, ticho: true, doposlat: true } } };
+    expect(vyberNove([i], stav, { rezim: "souhrn", ted }).map((v: { i: { id: string } }) => v.i.id)).toEqual(["x"]);
+    const bez = { prvniBeh: "2026-09-06T00:00:00Z", zaznamy: { x: { kdy: "2026-09-06T00:00:00Z", historie: 0, ticho: true } } };
+    expect(vyberNove([i], bez, { rezim: "souhrn", ted })).toEqual([]);
+  });
+});

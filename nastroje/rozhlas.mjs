@@ -1018,7 +1018,15 @@ export function vyberNove(zaznamy, stav, { rezim, ted = Date.now() }) {
     if (!i.lidskyOvereno) continue;
     const d = druh(i);
     const historie = i.historie?.length ?? 0;
-    const z = stav.zaznamy[i.id];
+    /*
+      Doposlání. Záznam, který se při prvním běhu nebo kvůli stáří jen tiše
+      zapamatoval, jde odeslat dodatečně: stačí u něj ve stavu nastavit
+      `doposlat: true`. Odejde v nejbližším běhu s ostatními a pak se zapíše
+      jako odeslaný. Tak se 23. 9. 2026 doposílaly WB Electronics a Porvoo,
+      které se 6. 9. při prvním spuštění kanálu jen zapamatovaly.
+    */
+    const doposlat = stav.zaznamy[i.id]?.doposlat === true;
+    const z = doposlat ? undefined : stav.zaznamy[i.id];
     const zjisteno = new Date(kdyZjisteno(i)).getTime();
     /*
       Zpětně doplněná osa a staré události nejsou novinka: jen se zapamatují,
@@ -1029,7 +1037,7 @@ export function vyberNove(zaznamy, stav, { rezim, ted = Date.now() }) {
       Nové zjištění k takovému případu novinka je; přijde příště jako
       aktualizace, protože záznam už budeme mít zapamatovaný.
     */
-    if (!z && (jeArchivni(i, ted) || zjisteno < hraniceStari || (prvni && zjisteno < hranicePrvni))) {
+    if (!z && !doposlat && (jeArchivni(i, ted) || zjisteno < hraniceStari || (prvni && zjisteno < hranicePrvni))) {
       stav.zaznamy[i.id] = { kdy: new Date(ted).toISOString(), historie, ticho: true };
       continue;
     }
