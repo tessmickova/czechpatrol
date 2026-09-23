@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { datumPraha } from "@/lib/cas";
-import { NAZVY_KATEGORII, PORADI_KATEGORII, nactiOdpovedi, skorePripravenosti, ulozOdpovedi, vetaKeSkore, type Odpoved, type Odpovedi } from "@/lib/pripravenost";
+import { LEKARNICKA, NAZVY_KATEGORII, PORADI_KATEGORII, UDALOSTI, nactiOdpovedi, skorePripravenosti, souhrnOtazek, ulozOdpovedi, vetaKeSkore, type Odpoved, type Odpovedi, type OtazkaDotazniku } from "@/lib/pripravenost";
 import type { OficialniNastroj } from "@/lib/typy";
 import { Ikona, type NazevIkony } from "./ikony";
 import { Odznak, Sdeleni, Tlacitko } from "./ui";
@@ -58,6 +58,84 @@ function Stav({ n }: { n: OficialniNastroj }) {
   );
 }
 
+/*
+  Zelená fajfka v kolečku: celá část je vyplněná. Znamená „odpověděli
+  jste na všechno", ne „jste připraveni" — i „nemám" je vyplněná odpověď.
+*/
+function Hotovo({ hotovo }: { hotovo: boolean }) {
+  if (!hotovo) return <span aria-hidden className="h-7 w-7 shrink-0 rounded-full border border-dashed border-linka" />;
+  return (
+    <span className="grid h-7 w-7 shrink-0 place-items-center rounded-full bg-klid text-papir shadow-[0_0_0_4px_rgba(52,199,120,0.15)]" title="Vyplněno">
+      <Ikona nazev="fajfka" velikost={15} tah={2.6} />
+      <span className="sr-only">vyplněno</span>
+    </span>
+  );
+}
+
+/*
+  Rozklikávací část dotazníku.
+
+  Dřív byly všechny kategorie rozbalené pod sebou a stránka se rolovala
+  dlouho. Teď je v náhledu jen název, kolik je zodpovězeno a fajfka;
+  vyplňuje se jen to, co člověk otevře.
+*/
+function CastDotazniku({ nazev, ids, odpovedi, popis, children }: { nazev: string; ids: string[]; odpovedi: Odpovedi; popis?: string; children: React.ReactNode }) {
+  const s = souhrnOtazek(ids, odpovedi);
+  return (
+    <details className="group rounded-[22px] border border-linka2 bg-plocha">
+      <summary className="flex min-h-[64px] cursor-pointer list-none items-center gap-3 px-4 py-3 sm:px-5">
+        <Hotovo hotovo={s.hotovo} />
+        <span className="min-w-0 flex-1">
+          <span className="block text-velke font-bold leading-tight text-inkoust">{nazev}</span>
+          <span className="mt-0.5 block text-drobne text-tlum2">
+            {s.zodpovezeno ? `${s.zodpovezeno} z ${s.celkem} zodpovězeno · ${s.mam} mám` : `${s.celkem} ${s.celkem === 1 ? "otázka" : s.celkem < 5 ? "otázky" : "otázek"}`}
+            {popis ? ` · ${popis}` : ""}
+          </span>
+        </span>
+        <Ikona nazev="dolu" velikost={14} tah={2} trida="shrink-0 text-tlum2 transition-transform group-open:rotate-180" />
+      </summary>
+      <div className="border-t border-linka2 p-3 sm:p-4">{children}</div>
+    </details>
+  );
+}
+
+function Prepinac({ id, nazev, odpovedi, odpovez }: { id: string; nazev: string; odpovedi: Odpovedi; odpovez: (id: string, o: Odpoved) => void }) {
+  const o = odpovedi[id];
+  return (
+    <div role="radiogroup" aria-label={`${nazev}: mám, nemám, nevím`} className="flex shrink-0 gap-1.5">
+      {ODPOVEDI.map((x) => (
+        <button
+          key={x.klic}
+          type="button"
+          role="radio"
+          aria-checked={o === x.klic}
+          onClick={() => odpovez(id, x.klic)}
+          className={`inline-flex min-h-[36px] items-center gap-1.5 rounded-full border px-3 text-drobne ${o === x.klic ? "border-inkoust text-inkoust" : "border-linka text-tlum hover:border-akcent"}`}
+        >
+          <span aria-hidden className={`h-[6px] w-[6px] rounded-full ${o === x.klic ? (x.klic === "mam" ? "bg-klid" : x.klic === "nemam" ? "bg-akcent" : "bg-pozor") : "border border-linka"}`} />
+          {x.znak} {x.slovo}
+        </button>
+      ))}
+    </div>
+  );
+}
+
+function SeznamOtazek({ otazky, odpovedi, odpovez }: { otazky: OtazkaDotazniku[]; odpovedi: Odpovedi; odpovez: (id: string, o: Odpoved) => void }) {
+  return (
+    <ul className="bez-stropu divide-y divide-linka2">
+      {otazky.map((q) => (
+        <li key={q.id} className="flex flex-wrap items-center justify-between gap-3 px-1 py-2.5">
+          <span className="min-w-0">
+            <span className="block text-zaklad font-semibold text-inkoust">{q.nazev}</span>
+            {q.upresneni && <span className="block text-drobne text-tlum2">{q.upresneni}</span>}
+          </span>
+          <Prepinac id={q.id} nazev={q.nazev} odpovedi={odpovedi} odpovez={odpovez} />
+        </li>
+      ))}
+    </ul>
+  );
+}
+
 export function PripravenostKlient({ nastroje }: { nastroje: OficialniNastroj[] }) {
   const [odpovedi, setOdpovedi] = useState<Odpovedi>({});
   const [nacteno, setNacteno] = useState(false);
@@ -77,6 +155,8 @@ export function PripravenostKlient({ nastroje }: { nastroje: OficialniNastroj[] 
   };
 
   const skore = skorePripravenosti(nastroje, odpovedi);
+  // Skóre nástrojů se počítá jen z odpovědí u nástrojů — vyplněná lékárnička ho nesmí „zapnout".
+  const odpovezenoNastroju = nastroje.some((n) => odpovedi[n.id]);
 
   return (
     <div className="space-y-8">
@@ -86,11 +166,11 @@ export function PripravenostKlient({ nastroje }: { nastroje: OficialniNastroj[] 
           <div>
             <div className="flex items-center gap-1.5"><span className="stitek">Digitální připravenost</span><Otaznik popis={<span className="block">Počítá se jen z vašich odpovědí. Web nevidí, co máte v telefonu, a odpovědi zůstávají v tomto prohlížeči.</span>} /></div>
             <div className="mt-1 flex items-baseline gap-2">
-              <span className="cislice text-cislo-xl font-bold leading-none text-inkoust">{nacteno && Object.keys(odpovedi).length > 0 ? skore.mam : "–"}</span>
+              <span className="cislice text-cislo-xl font-bold leading-none text-inkoust">{nacteno && odpovezenoNastroju ? skore.mam : "–"}</span>
               <span className="cislice text-cislo text-tlum2">/ {skore.celkem}</span>
             </div>
             {/* Před první odpovědí se skóre nepočítá: „0 z 8, u 8 nevíte" by vypadalo jako výsledek. */}
-            <p className="mt-2 text-male text-tlum">{!nacteno ? "Odpovědi se načítají z tohoto zařízení." : Object.keys(odpovedi).length === 0 ? "Zatím bez odpovědí. U každé položky níže zvolte mám, nemám nebo nevím." : vetaKeSkore(skore)}</p>
+            <p className="mt-2 text-male text-tlum">{!nacteno ? "Odpovědi se načítají z tohoto zařízení." : !odpovezenoNastroju ? "Zatím bez odpovědí. U každé položky níže zvolte mám, nemám nebo nevím." : vetaKeSkore(skore)}</p>
           </div>
         </div>
         {!ulozisteFunguje && (
@@ -98,16 +178,15 @@ export function PripravenostKlient({ nastroje }: { nastroje: OficialniNastroj[] 
         )}
       </section>
 
+      <div className="space-y-3">
       {PORADI_KATEGORII.map((kat) => {
         const polozky = nastroje.filter((n) => n.kategorie === kat);
         if (!polozky.length) return null;
         return (
-          <section key={kat} aria-label={NAZVY_KATEGORII[kat]}>
-            <h2 className="stitek mb-3">{NAZVY_KATEGORII[kat]}</h2>
+          <CastDotazniku key={kat} nazev={NAZVY_KATEGORII[kat]} ids={polozky.map((n) => n.id)} odpovedi={odpovedi}>
             {/* bez-stropu: karta je seznam údajů, ne odstavec — strop 72ch na li tu nemá co dělat */}
             <ol className="bez-stropu space-y-3">
               {polozky.map((n) => {
-                const o = odpovedi[n.id];
                 return (
                   <li key={n.id} className="rounded-[22px] border border-linka2 bg-plocha p-4 sm:p-5">
                     <div className="flex flex-wrap items-start justify-between gap-3">
@@ -120,21 +199,7 @@ export function PripravenostKlient({ nastroje }: { nastroje: OficialniNastroj[] 
                         </span>
                       </div>
                       {/* Tři odpovědi jako přepínač. Barvu nese jen tečka u vybrané. */}
-                      <div role="radiogroup" aria-label={`${n.nazev}: mám, nemám, nevím`} className="flex shrink-0 gap-1.5">
-                        {ODPOVEDI.map((x) => (
-                          <button
-                            key={x.klic}
-                            type="button"
-                            role="radio"
-                            aria-checked={o === x.klic}
-                            onClick={() => odpovez(n.id, x.klic)}
-                            className={`inline-flex min-h-[36px] items-center gap-1.5 rounded-full border px-3 text-drobne ${o === x.klic ? "border-inkoust text-inkoust" : "border-linka text-tlum hover:border-akcent"}`}
-                          >
-                            <span aria-hidden className={`h-[6px] w-[6px] rounded-full ${o === x.klic ? (x.klic === "mam" ? "bg-klid" : x.klic === "nemam" ? "bg-akcent" : "bg-pozor") : "border border-linka"}`} />
-                            {x.znak} {x.slovo}
-                          </button>
-                        ))}
-                      </div>
+                      <Prepinac id={n.id} nazev={n.nazev} odpovedi={odpovedi} odpovez={odpovez} />
                     </div>
 
                     {/* Instalace hned: jedno klepnutí do obchodu, nejdřív pro zařízení, ze kterého člověk čte. */}
@@ -181,9 +246,30 @@ export function PripravenostKlient({ nastroje }: { nastroje: OficialniNastroj[] 
                 );
               })}
             </ol>
-          </section>
+          </CastDotazniku>
         );
       })}
+      </div>
+
+      {/* Lékárnička: na které oblasti je domácnost připravená. */}
+      <section aria-label="Lékárnička" className="space-y-3 pt-4">
+        <h2 className="titul-mensi">Lékárnička</h2>
+        <p className="max-w-[62ch] text-male text-tlum">Na které oblasti jste připraveni. Složení lékárničky probírejte s lékárníkem nebo lékařem — web zdravotní rady nedává.</p>
+        <CastDotazniku nazev="Lékárnička doma" ids={LEKARNICKA.map((q) => q.id)} odpovedi={odpovedi}>
+          <SeznamOtazek otazky={LEKARNICKA} odpovedi={odpovedi} odpovez={odpovez} />
+        </CastDotazniku>
+      </section>
+
+      {/* Typy událostí: na co je domácnost připravená. */}
+      <section aria-label="Typy událostí" className="space-y-3 pt-4">
+        <h2 className="titul-mensi">Na které události jste připraveni</h2>
+        <p className="max-w-[62ch] text-male text-tlum">
+          Víte, co dělat, a máte k tomu doma, co je potřeba? Oficiální rady pro domácnosti: <a href="https://72h.gov.cz/" target="_blank" rel={VEN} className="odkaz">72h.gov.cz ↗</a>
+        </p>
+        <CastDotazniku nazev="Události, nehody a útoky" ids={UDALOSTI.map((q) => q.id)} odpovedi={odpovedi}>
+          <SeznamOtazek otazky={UDALOSTI} odpovedi={odpovedi} odpovez={odpovez} />
+        </CastDotazniku>
+      </section>
     </div>
   );
 }
