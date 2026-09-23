@@ -18,6 +18,7 @@
 import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
+import { maUredniZdroj } from "./uredni-zdroj.mjs";
 
 const koren = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const WEB = "https://czechpatrol.cz";
@@ -687,15 +688,30 @@ export function vyberVazneNavrhy(navrhy, stav, { ted = Date.now(), maxStari = 48
     .filter((n) => (n.kam ?? "zaznam") === "zaznam" && !poslane[n.id])
     .filter((n) => /^[OR]/.test(n.zavaznost ?? ""))
     .filter((n) => (n.zdroje ?? []).length >= 2)
+    /*
+      Od 23. 9. 2026 (audit, B-02): do veřejného kanálu jen s úředním zdrojem
+      podle ADRESY (seznam úředních domén), ne podle toho, co o sobě zdroj
+      napsal — a se dvěma různými doménami. Provozovatelka nemá čas každou
+      zprávu číst; pravidlo proto musí být takové, aby ji číst nemusela.
+    */
+    .filter((n) => maUredniZdroj(n.zdroje ?? []) && domen(n.zdroje) >= 2)
     /* Stará událost není varování. Rozhoduje datum UDÁLOSTI, ne zápisu. */
     .filter((n) => n.datumUdalosti && ted - new Date(n.datumUdalosti).getTime() <= maxStari)
     .slice(0, MAX_SIGNALU_NA_BEH);
 }
 
+function domen(zdroje) {
+  const d = new Set();
+  for (const z of zdroje ?? []) {
+    try { const h = new URL(z.url).hostname.replace(/^www\./, ""); if (h !== "news.google.com") d.add(h); } catch { /* neplatná adresa se nepočítá */ }
+  }
+  return d.size;
+}
+
 export function sestavVaznyNavrh(n) {
-  const uredni = (n.zdroje ?? []).filter((z) => z.primarni === true || z.typ === "primary");
+  const uredni = (n.zdroje ?? []).filter((z) => maUredniZdroj([z]));
   const radky = [
-    `\u26a0\ufe0f <b>NEOVĚŘENO — vážný případ ${uredni.length ? "z úředního zdroje" : "ze dvou nezávislých zdrojů, bez úředního"}</b>`,
+    "\u26a0\ufe0f <b>Vážný případ — oznámil úřad, zpracováno automaticky</b>",
     "",
     `<b>${esc(zkrat(n.kratkyTitulek || n.titulek, 90))}</b>`,
   ];
@@ -706,7 +722,7 @@ export function sestavVaznyNavrh(n) {
     `Zdroje: ${(n.zdroje ?? []).length}, z toho úřední ${uredni.length}`,
     ...(n.zdroje ?? []).slice(0, 3).map((z) => `• <a href="${esc(z.url)}">${esc(zkrat(z.nazev, 110))}</a>`),
     "",
-    "Záznam ještě neprošel lidskou kontrolou. Na web se dostane až po ní.",
+    "Stojí na úředním zdroji a dalším nezávislém zdroji. Hodnocení projektu u něj zatím není.",
     `CzechPatrol · ${datumCz(new Date().toISOString())}`,
   );
   return radky.join("\n");
@@ -715,7 +731,7 @@ export function sestavVaznyNavrh(n) {
 export function sestavSignal(k) {
   const co = NAZVY_SIGNALU[k.naliehave?.druh] ?? "sledovaná událost";
   /* Prázdné řádky jsou tu schválně — na telefonu se ta zpráva musí dát přelétnout. */
-  const radky = ["\u26a0\ufe0f <b>NEOVĚŘENO — signál ke kontrole</b>", "", `<b>${esc(k.titulek)}</b>`];
+  const radky = ["\u26a0\ufe0f <b>Jen pro správce — neověřený signál</b>", "", `<b>${esc(k.titulek)}</b>`];
   if (k.shrnuti) radky.push(esc(zkrat(k.shrnuti, 220)));
   radky.push(
     "",
@@ -886,7 +902,7 @@ function radekNavrhu(n) {
   pak neověřené. Kdo přehled jen přelétne, má nejzávažnější věc nahoře —
   a hned u ní, jestli je ověřená, nebo ne.
 */
-export function sestavPrehledDne({ ted = Date.now(), cast = castDne(ted), zmeny = [], palivo = null, sluzby = [], navrhy = [], overene = [], kandidati = [] } = {}) {
+export function sestavPrehledDne({ ted = Date.now(), cast = castDne(ted), zmeny = [], palivo = null, sluzby = [], navrhy = [], overene = [], kandidati = [], posledniSber = null } = {}) {
   const od = ted - 24 * 3_600_000;
   const zachycene = (kandidati ?? []).filter((k) => new Date(k.publikovano ?? k.zachyceno).getTime() >= od);
   const ceskeVse = zachycene.filter((k) => jeCesky(k.titulek));
@@ -911,8 +927,16 @@ export function sestavPrehledDne({ ted = Date.now(), cast = castDne(ted), zmeny 
   /* Zlepšení se říká stejně nahlas jako zhoršení — a jako první, když je jediné. */
   const zlepseni = zmeny.filter((z) => smerZmeny(z) === "zlepseni").length;
   const zhorseni = zmeny.filter((z) => smerZmeny(z) === "zhorseni").length;
-  const klic = !zmeny.length
-    ? "Žádná změna úředního stavu v Česku. Mobilizace ne, vycestování bez omezení, hranice v běžném režimu."
+  /*
+    Dřív tu natvrdo stálo „Mobilizace ne, vycestování bez omezení, hranice
+    v běžném režimu" — i když sběr stál a úřední seznam nečteme úplně
+    (audit 23. 9. 2026). Teď jen to, co víme: žádnou změnu jsme nenašli.
+  */
+  const stary = !posledniSber || ted - new Date(posledniSber).getTime() > 3 * 3_600_000;
+  const klic = stary
+    ? `⚠️ Data nejsou aktuální — poslední kontrola zdrojů ${posledniSber ? datumCz(posledniSber) : "neznámo kdy"}. Oficiální informace: krizové vysílání ČRo, 112.`
+    : !zmeny.length
+    ? "V kontrolovaných úředních zdrojích jsme nenašli žádnou změnu stavu v Česku."
     : zlepseni && !zhorseni
       ? `Úřední stav se zlepšil (${zlepseni}) — viz níže.`
       : zhorseni && !zlepseni
@@ -1015,7 +1039,8 @@ export function vyberNove(zaznamy, stav, { rezim, ted = Date.now() }) {
   const hraniceStari = ted - NEJSTARSI_DNI * 86_400_000;
   const vybrane = [];
   for (const i of zaznamy) {
-    if (!i.lidskyOvereno) continue;
+    /* Automaticky zveřejněné (dva zdroje, úřední podle adresy) jdou jako ostatní; „neověřeno úředně" ne. */
+    if (!i.lidskyOvereno && i.overeni !== "automaticke") continue;
     const d = druh(i);
     const historie = i.historie?.length ?? 0;
     /*
@@ -1218,7 +1243,13 @@ async function main() {
   if (rezim === "okamzite") {
     for (const k of vyberSignaly(ctiKandidaty(), stav, { ted })) {
       if (prvniBeh) { stav.signaly[k.id] = { kdy: new Date(ted).toISOString(), ticho: true }; continue; }
-      const v = await posli(sestavSignal(k), { nahled: false });
+      /*
+        Od 23. 9. 2026 (audit, B-01): neověřený signál z jediného titulku
+        NIKDY do veřejného kanálu — jen správci do soukromého chatu. Titulek
+        „Kreml popřel mobilizaci" by jinak odešel jako poplach (§ 357 TZ).
+        Když se věc potvrdí úředně, odejde do kanálu řádnou cestou.
+      */
+      const v = await posli(sestavSignal(k), { nahled: false, komu: "spravce" });
       if (v.ok) { stav.signaly[k.id] = { kdy: new Date(ted).toISOString(), messageId: v.messageId ?? null }; odeslano++; }
       else { selhalo++; console.log(`[rozhlas] signál neodešel: ${v.chyba}`); }
     }
@@ -1332,6 +1363,7 @@ async function main() {
       /* Ověřené za 24 h podle data zjištění — i ty, co odešly zvlášť dřív. */
       overene: zaznamy.filter((i) => (i.lidskyOvereno || i.overeni === "automaticke") && ted - new Date(kdyZjisteno(i)).getTime() <= 24 * 3_600_000).reverse(),
       kandidati: ctiKandidaty(),
+      posledniSber: (() => { try { return JSON.parse(fs.readFileSync(path.join(koren, "data", "fronta", "posledni-beh.json"), "utf-8")).kdy ?? null; } catch { return null; } })(),
     });
     const v = await posli(text, { nahled: false });
     if (v.ok) {

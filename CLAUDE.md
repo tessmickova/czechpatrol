@@ -273,6 +273,25 @@ z něj. Platí u toho tři věci:
 - **Ukládá se citace, ne článek.** Strop 1200 znaků, vždy vedle odkazu na
   originál — autorské právo je součástí pravidla č. 0.
 
+## Pravidlo č. 4c — co smí automat bez člověka (od 23. 9. 2026)
+
+Provozovatelka nemá čas každou zprávu číst. Pravidla proto musí být taková,
+aby číst nemusela — a aby automat nemohl říct víc, než dokládá adresa zdroje.
+
+| Kam | Co tam smí automaticky | Co nikdy |
+|---|---|---|
+| web, řádný záznam (`automaticke`) | dva nezávislé zdroje, aspoň jeden úřední **podle adresy** (`nastroje/uredni-zdroj.mjs`) | příznak `primarni` bez úřední adresy |
+| web, „neověřeno úředně“ (`neovereno`) | válečně relevantní událost ze dvou různých redakcí; jistota nejvýš střední, bez hodnocení, **bez úřední atribuce, mimo počty a celkovou úroveň** | cokoli z jediného zdroje |
+| veřejný Telegram | ověřené záznamy (člověk nebo `automaticke`), vážné případy jen s úředním zdrojem podle adresy, přehled dne bez tvrzení, která nemáme doložená; při datech starších 3 h věta „data nejsou aktuální“ | neověřený signál z titulku, „neověřeno úředně“, „mobilizace ne“ natvrdo |
+| soukromý chat správce | neověřené naléhavé signály, výpadky sběru, spotřeba minut | — |
+
+**Patrol (externí ověřovatel) navrhuje, nerozhoduje.** Z jeho větve se
+v hodinovém sběru přebírají jen `data/navrhy.json` a odpovědi v
+`data/fronta/pro-patrola.json`, sloučením po id (`nastroje/prevzit-od-patrola.mjs`).
+Návrh od Patrola nikdy není lidsky ověřený a bez úřední adresy nemá jistotu
+„potvrzeno“ ani úřední atribuci. Žádný workflow se nesmí spouštět pushem na
+jeho větev — GitHub by bral definici workflow z ní.
+
 ## Pravidlo č. 5 — zdrojový kód patří na GitHub
 
 Každá dokončená změna se commitne a hned nahraje.

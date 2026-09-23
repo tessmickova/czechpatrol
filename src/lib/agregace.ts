@@ -74,7 +74,13 @@ export function vyber(vse: Zaznam[], f: Filtr = {}): Zaznam[] {
 }
 
 /** Případy = jedna reálná událost. Aktualizace se do počtu nepočítají. */
-export const pripady = (vse: Zaznam[] = incidenty(), f: Filtr = {}) => vyber(vse, { ...f, druhy: ["pripad"] });
+/*
+  Záznam „neověřeno úředně“ (overeni: "neovereno") je na webu vidět, ale do
+  počtů, grafů ani porovnání nevstupuje — pravidlo č. 0, bod 4: neověřené
+  do počtů nevstupuje. Audit 23. 9. 2026 našel 19 takových v počtu za 90 dní.
+*/
+export const pocitaSe = (i: Zaznam) => (i as Incident).overeni !== "neovereno";
+export const pripady = (vse: Zaznam[] = incidenty(), f: Filtr = {}) => vyber(vse, { ...f, druhy: ["pripad"] }).filter(pocitaSe);
 
 /** Aktualizace k případu (nové zjištění, atribuce, obvinění). */
 export const aktualizaceK = (slug: string, vse: Zaznam[] = incidenty()) =>
@@ -95,6 +101,8 @@ export function aktivniHrozby(vse: Zaznam[] = incidenty(), ted = Date.now()) {
 export interface Pocty {
   mnozina: string;
   celkem: number;
+  /** Záznamy „neověřeno úředně“: jsou na webu, do počtů nevstupují. */
+  neovereno: number;
   pripady: number;
   aktualizace: number;
   opatreni: number;
@@ -105,14 +113,17 @@ export interface Pocty {
 
 /** Počty s deklarovanou množinou — text množiny jde do rozhraní vedle čísla. */
 export function pocty(vse: Zaznam[], mnozina: string): Pocty {
-  const p = vse.filter((i) => druh(i) === "pripad");
+  const pocitane = vse.filter(pocitaSe);
+  const p = pocitane.filter((i) => druh(i) === "pripad");
   return {
     mnozina,
-    celkem: vse.length,
+    /* Celkem = to, co se počítá. Neověřené úředně jsou zvlášť, ať čísla nekecají. */
+    celkem: pocitane.length,
+    neovereno: vse.length - pocitane.length,
     pripady: p.length,
-    aktualizace: vse.filter((i) => druh(i) === "aktualizace").length,
-    opatreni: vse.filter((i) => druh(i) === "opatreni").length,
-    reakce: vse.filter((i) => druh(i) === "reakce").length,
+    aktualizace: pocitane.filter((i) => druh(i) === "aktualizace").length,
+    opatreni: pocitane.filter((i) => druh(i) === "opatreni").length,
+    reakce: pocitane.filter((i) => druh(i) === "reakce").length,
     pripadyPotvrzenyPachatel: p.filter(pachatelPotvrzen).length,
     pripadyNedolozene: p.filter((i) => !dolozeno(i)).length,
   };
@@ -120,7 +131,7 @@ export function pocty(vse: Zaznam[], mnozina: string): Pocty {
 
 /** Rozpad případů podle původce. Aktualizace a reakce nevstupují. */
 export function podlePuvodce(vse: Zaznam[]) {
-  const p = vse.filter((i) => druh(i) === "pripad");
+  const p = vse.filter((i) => druh(i) === "pripad" && pocitaSe(i));
   const skupiny: { klic: Puvodce; nazev: string }[] = [
     { klic: "rusko", nazev: "Rusko" },
     { klic: "ukrajina", nazev: "Ukrajina" },
@@ -154,7 +165,7 @@ export function podleZemi(vse: Zaznam[]) {
   }
   if (!mapa.has("CZ")) mapa.set("CZ", { kodZeme: "CZ", zeme: "Česko", zaznamy: [] });
   const radky = [...mapa.values()].map((z) => {
-    const p = z.zaznamy.filter((i) => druh(i) === "pripad");
+    const p = z.zaznamy.filter((i) => druh(i) === "pripad" && pocitaSe(i));
     const nej = [...z.zaznamy].sort((a, b) => UROVNE[b.zavaznost].poradi - UROVNE[a.zavaznost].poradi)[0] ?? null;
     const kategorie = new Set<Kategorie>();
     for (const i of z.zaznamy) for (const k of i.kategorie) kategorie.add(k);

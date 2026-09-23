@@ -364,6 +364,7 @@ for (const i of incidenty) {
   if (i.jistota === "potvrzeno" || i.jistota === "vysoka") chyby.push(`${i.slug}: neověřený záznam nesmí mít jistotu „${i.jistota}“`);
   if (i.vyznam) chyby.push(`${i.slug}: neověřený záznam nesmí nést hodnocení projektu`);
   if (i.lidskyOvereno) chyby.push(`${i.slug}: neověřený záznam nemůže být zároveň lidsky ověřený`);
+  if (i.atribuce === "oficialni") chyby.push(`${i.slug}: neověřený záznam nemůže mít úřední atribuci`);
 }
 
 /*

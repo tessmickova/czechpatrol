@@ -15,9 +15,10 @@ name: Převzít práci od Patrola
 # a čte ho člověk. Bez tohohle omezení by šlo automatickým převzetím propašovat
 # do main i změnu testů, která hlídá lidské ověření.
 
+# Od 23. 9. 2026 se NEspouští pushem na Patrolovu větev: GitHub by bral
+# definici workflow z té větve a Patrol by si ji mohl přepsat. Převzetí dělá
+# hodinový sběr (sber.yml). Tady zůstává jen ruční spuštění z main.
 on:
-  push:
-    branches: [patrol/overovani]
   workflow_dispatch:
 
 permissions:
@@ -30,6 +31,7 @@ concurrency:
 
 jobs:
   prevzit:
+    if: github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
     env:
       TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
@@ -55,24 +57,12 @@ jobs:
       - if: steps.moduly.outputs.cache-hit != 'true'
         run: npm ci --no-audit --fund=false
 
-      - name: Vzít jen data
+      - name: Vzít jen návrhy a odpovědi (sloučení po id)
         id: vzit
         run: |
-          set -u
-          git fetch origin patrol/overovani
-          # Jen datové soubory. Všechno ostatní z té větve se ignoruje.
-          git checkout origin/patrol/overovani -- data/ || true
-          # PATROL.md je pracovní příkaz pro ověřovatele, na main nepatří.
-          git reset -q HEAD -- PATROL.md 2>/dev/null || true
-          git checkout -q -- PATROL.md 2>/dev/null || true
-          rm -f PATROL.md
-          if [ -z "$(git status --porcelain data/)" ]; then
-            echo "zmena=false" >> "$GITHUB_OUTPUT"
-            echo "Žádná nová data."
-          else
-            echo "zmena=true" >> "$GITHUB_OUTPUT"
-            git status --porcelain data/
-          fi
+          git fetch -q origin patrol/overovani:refs/remotes/origin/patrol/overovani
+          node nastroje/prevzit-od-patrola.mjs
+          if [ -z "$(git status --porcelain data/)" ]; then echo "zmena=false" >> "$GITHUB_OUTPUT"; else echo "zmena=true" >> "$GITHUB_OUTPUT"; fi
 
       # Účetnictví fronty za ověřovatele.
       #

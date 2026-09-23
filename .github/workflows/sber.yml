@@ -71,6 +71,18 @@ jobs:
       # Co tím sběr ztrácí: model vyřazoval nerelevantní zprávy, překládal
       # titulky a dával druhé čtení odmítnutým. Do fronty proto chodí víc
       # šumu — a to je viditelná cena, ne skrytá porucha.
+      # Práce externího ověřovatele Patrola. Dřív ji přebíral samostatný
+      # workflow spouštěný pushem na Patrolovu větev — a GitHub pak bral
+      # definici workflow z té větve, takže si ji Patrol mohl přepsat
+      # (audit 23. 9. 2026). Teď se přebírá tady, z main, jen sloučením
+      # návrhů a odpovědí po id (nastroje/prevzit-od-patrola.mjs).
+      - name: Převzít návrhy od Patrola
+        run: |
+          git fetch -q origin patrol/overovani:refs/remotes/origin/patrol/overovani || echo "Větev Patrola nedostupná."
+          node nastroje/prevzit-od-patrola.mjs
+          npm run fronta:srovnej
+          npm run spravce -- zverejni
+
       - name: Sběr z veřejných zdrojů
         run: npm run sber
 
