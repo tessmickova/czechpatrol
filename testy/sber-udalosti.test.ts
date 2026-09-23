@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { duvodOdmitnuti, kandidatId, obsahujeSlovo, odhadniTemata, odhadniZemi, otisk, relevantni } from "../sber/udalosti";
+import { aktualizujPamet, duvodOdmitnuti, kandidatId, obsahujeSlovo, odhadniTemata, odhadniZemi, otisk, relevantni } from "../sber/udalosti";
 import { normalizuj, ocistiText, polozkyZeStranky } from "../sber/nacti";
 
 describe("automatický sběr událostí — pravidla", () => {
@@ -331,5 +331,60 @@ describe("české tvary jako místo", () => {
   it("sídlo moci stačí jako místo", () => {
     expect(odhadniZemi("Jednání v Elysejském paláci potrvá dvě hodiny")?.kod).toBe("FR");
     expect(odhadniZemi("Downing Street svolala poradu")?.kod).toBe("GB");
+  });
+});
+
+describe("síto nesmí zahodit skutečné události ze září 2026", () => {
+  /*
+    Titulky, které síto do 23. 9. 2026 zahodilo nebo vůbec nezachytilo, i když
+    šlo o přesně ty události, kvůli kterým sběr běží.
+  */
+  const musiProjit = [
+    "Unauthorized Drones Disrupt Operations at Luxembourg Airport - Dronelife",
+    "Lotnisko w Rzeszowie: Poland suspends flights at Lublin and Rzeszów airports over Russian drone attack",
+    "Romanian Coast Guard found three pieces of drone debris in the Black Sea",
+    "Rumunské námořnictvo vylovilo trosky ruských dronů v rumunské výlučné ekonomické zóně",
+    "Požár v muniční továrně MSM Group na Slovensku, polícia začala vyšetřovanie",
+    "Fire breaks out at Slovak ammunition plant of MSM Group",
+    "Russian frigate fired two flares towards Danish military helicopter",
+    "Russian drone violated Moldovan airspace near Cioburciu",
+  ];
+  for (const t of musiProjit) {
+    it(t, () => expect(duvodOdmitnuti(t)).toBeNull());
+  }
+
+  it("samotné letiště bez dronu a bez přerušení provozu je doprava, ne událost", () => {
+    expect(duvodOdmitnuti("Letiště v Lucemburku otevřelo nový terminál")).not.toBeNull();
+    expect(duvodOdmitnuti("Drone show at Luxembourg airport celebrates anniversary")).not.toBeNull();
+  });
+
+  it("Lucembursko je místo", () => {
+    expect(odhadniZemi("Drones disrupt Luxembourg airport")?.kod).toBe("LU");
+  });
+});
+
+describe("paměť rozhodnutých zpráv", () => {
+  const k = (url: string, stav: string, titulek = "Titulek zprávy o dronu nad letištěm v Lucemburku") =>
+    ({ zdroj: { url }, titulek, titulekPuvodni: titulek, stav, vyrizeni: stav === "ceka" ? null : { kdy: "2026-09-20T10:00:00Z", duvod: "neudalost" } });
+
+  it("rozhodnutý kandidát se zapamatuje, čekající ne", () => {
+    const p = aktualizujPamet([], [k("https://a", "vyrizen"), k("https://b", "ceka")], Date.parse("2026-09-23T00:00:00Z"));
+    expect(p.map((v) => v.url)).toEqual(["https://a"]);
+    expect(p[0].duvod).toBe("neudalost");
+  });
+
+  it("paměť přežije, že kandidát z fronty odejde, a zapomíná až po 60 dnech", () => {
+    const p1 = aktualizujPamet([], [k("https://a", "vyrizen")], Date.parse("2026-09-23T00:00:00Z"));
+    const p2 = aktualizujPamet(p1, [], Date.parse("2026-10-30T00:00:00Z"));
+    expect(p2.map((v) => v.url)).toEqual(["https://a"]);
+    const p3 = aktualizujPamet(p1, [], Date.parse("2026-11-30T00:00:00Z"));
+    expect(p3).toEqual([]);
+  });
+});
+
+describe("vyloučená témata nesmí trefit cizí slovo", () => {
+  it("„daně“ nejsou „Danish“", () => {
+    expect(duvodOdmitnuti("Danish police arrested man suspected of sabotage in Copenhagen")).toBeNull();
+    expect(duvodOdmitnuti("Vláda schválila daně a sabotáž rozpočtu v Praze")).toBe("vylouceno-tematem");
   });
 });

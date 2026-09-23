@@ -68,6 +68,21 @@ const SOUBOR_ODMITNUTYCH = path.join(KOREN, "fronta", "odmitnute.json");
 const DNI_ZPET = 21;
 const MAX_KANDIDATU = 300;
 /*
+  Paměť rozhodnutých zpráv.
+
+  Do 23. 9. 2026 se rozhodnutá zpráva vracela: kandidát se stavem „vyrizen"
+  zůstával v kandidati.json jen do chvíle, než ho ze stropu fronty vytlačily
+  novější zprávy. Pak o něm sběr nevěděl nic, Google News ho v okně 21 dní
+  nabídl znovu a do fronty přišel jako nový „ceka". Patrol tak tytéž
+  zprávy rozhodoval den co den (viz jeho odpovědi z 21.–22. 9.).
+
+  Poplachové systémy to řeší pamětí „už viděno", která žije déle než okno
+  sběru. Tady je to týž princip: adresa a otisk titulku každé rozhodnuté
+  zprávy se drží DNI_PAMETI dní, i když kandidát z fronty odejde.
+*/
+const SOUBOR_VYRIZENYCH = path.join(KOREN, "fronta", "vyrizene.json");
+const DNI_PAMETI = 60;
+/*
   Kolik článků se za běh stáhne kvůli výřezu. Strop je tu proto, že běh nemá
   trvat věčnost a redakce nemají být zbytečně zatěžované; nedotažení se dohoní
   příští běh, protože se doplňuje jen to, co chybí.
@@ -277,7 +292,7 @@ const AKTY: { kategorie: string; slova: string[] }[] = [
  * neobsahuje souvislou frázi „cvičení na hranici“, a hledání celých frází to
  * proto minulo. Stačí, když se v textu potkají slova z obou sloupců.
  */
-const AKTY_KOMBINACE: { kategorie: string; a: string[]; b: string[] }[] = [
+const AKTY_KOMBINACE: { kategorie: string; a: string[]; b: string[]; c?: string[] }[] = [
   {
     /*
       Svolání mimořádného jednání o bezpečnosti, ať už jsou slova v jakémkoli
@@ -328,6 +343,64 @@ const AKTY_KOMBINACE: { kategorie: string; a: string[]; b: string[] }[] = [
     a: ["dron", "drone", "uav", "bezpilotn"],
     b: ["zritil", "spadl", "havaroval", "nalezen", "nalezli", "naslo", "patraji", "patrala",
       "dopadl", "zasahl", "crashed", "crashes", "fell", "recovered"],
+  },
+  {
+    /*
+      Dron, kvůli kterému stojí letiště.
+
+      Doplněno 23. 9. 2026: „Unauthorized Drones Disrupt Operations at
+      Luxembourg Airport" síto zahodilo jako „bez skutku" — fráze „airport
+      closed" a „uzavření letiště" se netrefily, protože se píše „disrupt",
+      „suspended", „přerušen provoz". Stejně propadala polská letiště Lublin
+      a Rzeszów, která 9., 16., 17. a 18. 9. přerušila provoz kvůli ruským
+      dronům nad Ukrajinou. Dron i letiště musí být obojí, samo „letiště"
+      je každodenní doprava.
+    */
+    kategorie: "drony",
+    a: ["dron", "drone", "uav", "bezpilotn"],
+    b: ["letist", "airport", "flights", "lety", "letovy provoz", "leteckeho provozu", "leteckou dopravu", "air traffic"],
+    c: ["disrupt", "suspend", "halt", "closed", "closure", "divert", "uzavr", "prerus", "pozastav", "zastav", "omez", "stopped"],
+  },
+  {
+    /*
+      Nalezené trosky dronu nebo střely.
+
+      Doplněno 23. 9. 2026: rumunská pobřežní stráž a námořnictvo 11. a 20. 9.
+      vylovily trosky ruských dronů, civilista našel 1. 9. trosky ozbrojeného
+      dronu — nic z toho síto nezachytilo, protože „trosky" nejsou „spadl"
+      ani „sestřelen". Nález trosek je doklad, že dron na území byl.
+    */
+    kategorie: "drony",
+    a: ["debris", "wreckage", "fragment", "trosk", "ulomk", "remains of"],
+    b: ["dron", "drone", "uav", "bezpilotn", "missile", "strel", "raket", "geran", "shahed", "gerbera"],
+  },
+  {
+    /*
+      Požár nebo výbuch ve zbrojovce a skladu munice.
+
+      Doplněno 23. 9. 2026: požár v muniční továrně MSM Group na Slovensku
+      (16. 9.) propadl sítem úplně. „Požár" v seznamu skutků není schválně —
+      hoří každý den a bez bezpečnostního rozměru. Ve zbrojovce, která
+      dodává na Ukrajinu, je ale požár přesně ten vzorec, který se v Evropě
+      od roku 2024 opakuje (EMCO, WB Electronics). Proto jen ve dvojici.
+    */
+    kategorie: "sabotaz",
+    a: ["pozar", "hori", "vzplal", "fire", "blaze", "explosion", "vybuch", "explod"],
+    b: ["zbrojovk", "munic", "ammunition", "munitions", "arms factory", "arms plant", "weapons plant",
+      "weapons factory", "defence plant", "defense plant", "zbrojni", "vojensky sklad", "military depot", "arms depot"],
+  },
+  {
+    /*
+      Incident s válečnou lodí nebo ponorkou.
+
+      Doplněno 23. 9. 2026: ruská fregata 14. 9. vypálila dvě světlice směrem
+      k dánskému vojenskému vrtulníku. Loď a akce musí být obojí — samotná
+      „fregata" je i zpráva o nákupu techniky.
+    */
+    kategorie: "hybridni",
+    a: ["fregat", "frigate", "warship", "valecna lod", "valecne lodi", "corvette", "korvet", "submarine", "ponork", "destroyer", "torpedoborec"],
+    b: ["flare", "svetlic", "fired", "vystrelil", "vypalil", "harass", "obtezov", "narusil", "violat", "territorial waters",
+      "teritorialni vody", "vrtulnik", "helicopter", "sledoval", "shadowed", "zabranil", "prevented"],
   },
   {
     // „Vzlétly polské stíhačky“ — mezi slovy stojí přívlastek, takže se to
@@ -408,15 +481,29 @@ const KONTEXT: { kategorie: string; slova: string[] }[] = [
  */
 const VYLOUCIT = [
   // sport, kultura, spotřeba
-  "fotbal", "football", "hokej", "hockey", "liga", "zapas", "gol", "film", "koncert", "concert",
-  "recept", "recipe", "horoskop", "celebrity", "smartphone", "sleva", "sale",
+  "fotbal", "football", "hokej", "hockey", "zapas", "film", "koncert", "concert",
+  "recept", "recipe", "horoskop", "celebrity", "smartphone", "sleva",
   // domácí politika a ekonomika
   "ceny pohonnych hmot", "pohonnych hmot", "benzin", "nafta zdrazila", "duchod", "duchodu", "duchodova reforma",
-  "rozpocet", "rozpoctu", "dane", "dani", "inflace", "mzdy", "platy", "dotace",
+  "rozpocet", "rozpoctu", "inflace", "dotace",
   "koalice", "opozice", "snemovna", "volby", "volebni", "kampan", "ministr financi",
   "skolstvi", "zdravotnictvi", "pojistovna", "hypoteky", "akcie", "burza", "kurz koruny",
   // předpovědi počasí a nehody bez bezpečnostního rozměru
   "pocasi", "predpoved pocasi", "dopravni nehoda", "srazka aut",
+];
+
+/*
+  Krátká slova vyloučených témat se smějí trefit jen celá.
+
+  Do 23. 9. 2026 byla v seznamu výš „dane" a „dani" (daně) s povolenou
+  koncovkou — a trefovaly se do „Danish" a „Danes". Každá anglická zpráva
+  o Dánsku tak padala jako domácí politika, včetně ruské fregaty, která
+  14. 9. vypálila světlice k dánskému vrtulníku. „gol" sedělo na „Golf"
+  i „Golan", „sale" na „Salem", „liga" na „ligament". Je to týž případ jako
+  „bis" v „Babiš" a „oslo" v „došlo".
+*/
+const VYLOUCIT_PRESNE = [
+  "dane", "dani", "danemi", "mzdy", "platy", "gol", "goly", "liga", "ligy", "lize", "sale",
 ];
 
 /*
@@ -476,6 +563,7 @@ const ZEME: { kod: string; nazev: string; slova: string[]; presna?: string[] }[]
   { kod: "DK", nazev: "Dánsko", slova: ["denmark", "danish", "dansk", "copenhagen", "kodan"] },
   { kod: "NL", nazev: "Nizozemsko", slova: ["netherlands", "dutch", "nizozem", "amsterdam", "hague", "haag"] },
   { kod: "BE", nazev: "Belgie", slova: ["belgium", "belgian", "belgi", "brussels", "brusel"] },
+  { kod: "LU", nazev: "Lucembursko", slova: ["luxembourg", "luxemburg", "lucembur", "findel"] },
   { kod: "FR", nazev: "Francie", slova: ["france", "french", "francie", "francouz", "paris", "pariz", "elysee", "elysejsk"] },
   { kod: "GB", nazev: "Spojené království", slova: ["britain", "british", "united kingdom", "britsk", "britani", "velka britanie", "london", "londyn", "downing street"], presna: ["uk"] },
   { kod: "RO", nazev: "Rumunsko", slova: ["romania", "rumunsk", "bucharest", "bukurest"] },
@@ -706,7 +794,12 @@ export function odhadniTemata(text: string): { kategorie: string[]; shody: strin
   for (const k of AKTY_KOMBINACE) {
     const prvni = k.a.find((w) => obsahujeSlovo(t, w));
     const druhy = k.b.find((w) => obsahujeSlovo(t, w));
-    if (prvni && druhy) { kategorie.push(k.kategorie); shody.push(`${prvni}+${druhy}`); akty.push(`${prvni}+${druhy}`); }
+    // Třetí sloupec je nepovinný: u letiště nestačí dron a letiště, musí se i něco zastavit.
+    const treti = k.c ? k.c.find((w) => obsahujeSlovo(t, w)) : "";
+    if (prvni && druhy && treti !== undefined) {
+      const shoda = [prvni, druhy, treti].filter(Boolean).join("+");
+      kategorie.push(k.kategorie); shody.push(shoda); akty.push(shoda);
+    }
   }
   for (const skupina of KONTEXT) {
     const s = skupina.slova.filter((w) => obsahujeSlovo(t, w));
@@ -733,7 +826,7 @@ export function relevantni(text: string): boolean {
  */
 export function duvodOdmitnuti(text: string): DuvodOdmitnuti | null {
   const t = normalizuj(text);
-  if (VYLOUCIT.some((w) => obsahujeSlovo(t, w))) return "vylouceno-tematem";
+  if (VYLOUCIT.some((w) => obsahujeSlovo(t, w)) || VYLOUCIT_PRESNE.some((w) => obsahujeToken(t, w))) return "vylouceno-tematem";
   const { akty, kategorie } = odhadniTemata(text);
   if (!akty.length) return "bez-skutku";
   // Skutek bez místa je půlka informace. Alianční kontext místo nahradí.
@@ -849,6 +942,33 @@ async function doplnModelem(nove: Kandidat[]): Promise<Kandidat[]> {
   return vystup;
 }
 
+interface Vyrizeny { url: string; otisk: string; kdy: string; duvod: string | null }
+
+function ctiVyrizene(): Vyrizeny[] {
+  if (!fs.existsSync(SOUBOR_VYRIZENYCH)) return [];
+  try {
+    return JSON.parse(fs.readFileSync(SOUBOR_VYRIZENYCH, "utf-8")) as Vyrizeny[];
+  } catch {
+    return [];
+  }
+}
+
+/** Doplní paměť o kandidáty, o kterých už někdo rozhodl, a zapomene nejstarší. */
+export function aktualizujPamet(pamet: Vyrizeny[], kandidati: { zdroj: { url: string }; titulekPuvodni?: string; titulek: string; stav: string; vyrizeni?: { kdy?: string; duvod?: string } | null }[], ted = Date.now()): Vyrizeny[] {
+  const podleUrl = new Map(pamet.map((v) => [v.url, v]));
+  for (const k of kandidati) {
+    if (k.stav === "ceka" || podleUrl.has(k.zdroj.url)) continue;
+    podleUrl.set(k.zdroj.url, {
+      url: k.zdroj.url,
+      otisk: otisk(k.titulekPuvodni ?? k.titulek),
+      kdy: k.vyrizeni?.kdy ?? new Date(ted).toISOString(),
+      duvod: k.vyrizeni?.duvod ?? null,
+    });
+  }
+  const hranice = ted - DNI_PAMETI * 86_400_000;
+  return [...podleUrl.values()].filter((v) => new Date(v.kdy).getTime() >= hranice);
+}
+
 function ctiOdmitnute(): Odmitnuty[] {
   if (!fs.existsSync(SOUBOR_ODMITNUTYCH)) return [];
   try {
@@ -943,8 +1063,9 @@ export async function sbirejUdalosti(): Promise<{ novych: number; celkem: number
   const stare = ctiKandidaty();
   const zname = znameZIncidentu();
   const hranice = Date.now() - DNI_ZPET * 86_400_000;
-  const adresy = new Set(stare.map((k) => k.zdroj.url));
-  const otisky = new Set(stare.map((k) => otisk(k.titulekPuvodni)));
+  const pamet = aktualizujPamet(ctiVyrizene(), stare as unknown as Parameters<typeof aktualizujPamet>[1]);
+  const adresy = new Set([...stare.map((k) => k.zdroj.url), ...pamet.map((v) => v.url)]);
+  const otisky = new Set([...stare.map((k) => otisk(k.titulekPuvodni)), ...pamet.map((v) => v.otisk)]);
 
   const stareOdmitnute = ctiOdmitnute();
   const znameOdmitnute = new Set(stareOdmitnute.map((o) => o.zdroj.url));
@@ -1033,8 +1154,14 @@ export async function sbirejUdalosti(): Promise<{ novych: number; celkem: number
     Strop fronty. Naléhavé napřed — kdyby se fronta zaplnila běžnými zprávami,
     vytlačila by z ní zrovna tu jednu, kvůli které tu celý sběr je.
   */
+  /*
+    Čekající mají přednost před rozhodnutými: strop fronty nesmí vytlačit
+    nerozhodnutou zprávu kvůli té, o které už někdo rozhodl. Rozhodnuté
+    stejně drží paměť (vyrizene.json), takže se nevrátí.
+  */
+  const ceka = (k: Kandidat) => ((k as { stav: string }).stav === "ceka" ? 1 : 0);
   const vse = [...doplnene, ...zivi]
-    .sort((a, b) => (b.naliehave ? 1 : 0) - (a.naliehave ? 1 : 0) || (b.publikovano ?? b.zachyceno).localeCompare(a.publikovano ?? a.zachyceno))
+    .sort((a, b) => ceka(b) - ceka(a) || (b.naliehave ? 1 : 0) - (a.naliehave ? 1 : 0) || (b.publikovano ?? b.zachyceno).localeCompare(a.publikovano ?? a.zachyceno))
     .slice(0, MAX_KANDIDATU);
   /*
     Výřezy ze zdrojů. Tohle je ta část, kvůli které sběr vůbec k něčemu je:
@@ -1048,6 +1175,8 @@ export async function sbirejUdalosti(): Promise<{ novych: number; celkem: number
   const sVyrezem = vse.filter((k) => k.vyrez?.text).length;
 
   fs.writeFileSync(SOUBOR, JSON.stringify(vse, null, 2) + "\n", "utf-8");
+  fs.mkdirSync(path.dirname(SOUBOR_VYRIZENYCH), { recursive: true });
+  fs.writeFileSync(SOUBOR_VYRIZENYCH, JSON.stringify(aktualizujPamet(pamet, vse as unknown as Parameters<typeof aktualizujPamet>[1]), null, 2) + "\n", "utf-8");
 
   /*
     Odmítnuté: krátká paměť a pevný strop. Je to pracovní přehled pro člověka,

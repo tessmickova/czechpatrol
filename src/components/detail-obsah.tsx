@@ -192,6 +192,15 @@ export function DetailObsah({ i }: { i: Incident }) {
             </p>
           </div>
         )}
+        {i.overeni === "neovereno" && (
+          <div className="mt-3 rounded-[18px] border border-linka p-3.5">
+            <div className="stitek mb-1">Neověřeno úředně</div>
+            <p className="text-zaklad leading-relaxed text-tlum">
+              Píší o tom aspoň dvě nezávislé redakce, úřad to zatím nepotvrdil. <span className="text-inkoust">Fakta odpovídají tomu, co zdroje uvádějí.</span>{" "}
+              Vlastní hodnocení projektu u něj proto není.
+            </p>
+          </div>
+        )}
         {i.vyznam && (
           <div className="mt-3 rounded-[18px] border border-linka2 bg-plocha p-3.5">
             <div className="stitek mb-1">Hodnocení projektu — proč to sledujeme</div>
