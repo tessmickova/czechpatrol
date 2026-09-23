@@ -1,16 +1,11 @@
 {
-  "aktualizovano": "2026-09-23T01:02:33.065Z",
+  "aktualizovano": "2026-09-23T02:02:25.953Z",
   "stavy": [
     {
       "klic": "cloudflare",
       "stav": "omezeni",
       "popis": "Minor Service Outage",
       "incidenty": [
-        {
-          "nazev": "Issues with 1.1.1.1 for Families",
-          "odkaz": "https://www.cloudflarestatus.com/incidents/rcjbfb0lyn65",
-          "aktualizovano": "2026-09-23T00:55:34.000Z"
-        },
         {
           "nazev": "Cloudflare One Clients are incorrectly challenged on some sites",
           "odkaz": "https://www.cloudflarestatus.com/incidents/tl0vrgjy99r0",
@@ -26,23 +21,29 @@
         "Cloudflare Sites and Services",
         "Africa",
         "Arica, Chile - (ARI)",
-        "Baghdad, Iraq - (BGW)"
+        "Algiers, Algeria - (ALG)"
       ],
-      "zkontrolovano": "2026-09-23T01:02:33.065Z",
+      "zkontrolovano": "2026-09-23T02:02:25.953Z",
       "chyba": null
     },
     {
       "klic": "zoom",
       "stav": "omezeni",
       "popis": "Service Under Maintenance",
-      "incidenty": [],
+      "incidenty": [
+        {
+          "nazev": "Service Degradation Affecting Zoom Tasks in US Region.",
+          "odkaz": "https://stspg.io/99jd3fpqyn4j",
+          "aktualizovano": "2026-09-22T18:55:36.935-07:00"
+        }
+      ],
       "postizene": [
         "Zoom Phone",
         "Zoom Phone",
         "Zoom Phone - EMEA",
         "Zoom Phone - NORTH AMERICA"
       ],
-      "zkontrolovano": "2026-09-23T01:02:33.065Z",
+      "zkontrolovano": "2026-09-23T02:02:25.953Z",
       "chyba": null
     },
     {
@@ -51,7 +52,7 @@
       "popis": "All Systems Operational",
       "incidenty": [],
       "postizene": [],
-      "zkontrolovano": "2026-09-23T01:02:33.065Z",
+      "zkontrolovano": "2026-09-23T02:02:25.953Z",
       "chyba": null
     }
   ]
