@@ -1,5 +1,5 @@
 {
-  "aktualizovano": "2026-09-23T02:02:25.953Z",
+  "aktualizovano": "2026-09-23T16:30:56.381Z",
   "stavy": [
     {
       "klic": "cloudflare",
@@ -7,14 +7,19 @@
       "popis": "Minor Service Outage",
       "incidenty": [
         {
-          "nazev": "Cloudflare One Clients are incorrectly challenged on some sites",
-          "odkaz": "https://www.cloudflarestatus.com/incidents/tl0vrgjy99r0",
-          "aktualizovano": "2026-09-22T19:23:17.000Z"
+          "nazev": "Elevated Errors with any / all in http_response_cache_settings",
+          "odkaz": "https://www.cloudflarestatus.com/incidents/f8wg5htd3zz4",
+          "aktualizovano": "2026-09-23T15:55:51.000Z"
         },
         {
-          "nazev": "Incorrect geo location for some Cloudflare WARP users",
-          "odkaz": "https://www.cloudflarestatus.com/incidents/9g65dxfbcjln",
-          "aktualizovano": "2026-09-01T08:29:56.000Z"
+          "nazev": "Intermittent authentication errors for API and R2",
+          "odkaz": "https://www.cloudflarestatus.com/incidents/jg6ys8sbd6ny",
+          "aktualizovano": "2026-09-23T09:08:53.000Z"
+        },
+        {
+          "nazev": "Cloudflare One Clients are incorrectly challenged on some sites",
+          "odkaz": "https://www.cloudflarestatus.com/incidents/tl0vrgjy99r0",
+          "aktualizovano": "2026-09-23T11:02:41.000Z"
         }
       ],
       "postizene": [
@@ -23,27 +28,19 @@
         "Arica, Chile - (ARI)",
         "Algiers, Algeria - (ALG)"
       ],
-      "zkontrolovano": "2026-09-23T02:02:25.953Z",
+      "zkontrolovano": "2026-09-23T16:30:56.381Z",
       "chyba": null
     },
     {
       "klic": "zoom",
       "stav": "omezeni",
       "popis": "Service Under Maintenance",
-      "incidenty": [
-        {
-          "nazev": "Service Degradation Affecting Zoom Tasks in US Region.",
-          "odkaz": "https://stspg.io/99jd3fpqyn4j",
-          "aktualizovano": "2026-09-22T18:55:36.935-07:00"
-        }
-      ],
+      "incidenty": [],
       "postizene": [
         "Zoom Phone",
-        "Zoom Phone",
-        "Zoom Phone - EMEA",
-        "Zoom Phone - NORTH AMERICA"
+        "Zoom Phone - EMEA"
       ],
-      "zkontrolovano": "2026-09-23T02:02:25.953Z",
+      "zkontrolovano": "2026-09-23T16:30:56.381Z",
       "chyba": null
     },
     {
@@ -52,7 +49,7 @@
       "popis": "All Systems Operational",
       "incidenty": [],
       "postizene": [],
-      "zkontrolovano": "2026-09-23T02:02:25.953Z",
+      "zkontrolovano": "2026-09-23T16:30:56.381Z",
       "chyba": null
     }
   ]
