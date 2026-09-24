@@ -71,7 +71,7 @@ export function ZemePrehled({
       <div className="nalet mt-14 sm:mt-20">
         <NadpisBloku
           nadpis="Čím je tlak tvořený"
-          popis={`Osy podle všech zveřejněných záznamů se zemí ${kodZeme} od roku 2014. Prázdná osa znamená, že takový záznam nemáme — ne že se nic nestalo.`}
+          popis={`Osy podle všech zveřejněných záznamů se zemí ${kodZeme} od roku 2014. Prázdná osa znamená, že takový záznam není doložený — ne že se nic nestalo.`}
         />
         <div className="grid gap-4 lg:grid-cols-[minmax(0,1fr)_minmax(0,1fr)] lg:gap-x-12">
           <PavucinaHrozeb
@@ -152,7 +152,7 @@ export function ZemePrehled({
           </SeznamPolozek>
         ) : (
           <Sdeleni ikona="lupa">
-            Pro tuhle zemi zatím nemáme žádný ověřený záznam. Neznamená to, že se tam nic nestalo — jen že jsme nic nedoložili.
+            Pro tuhle zemi zatím není žádný doložený záznam. Neznamená to, že se tam nic nestalo.
           </Sdeleni>
         )}
       </div>

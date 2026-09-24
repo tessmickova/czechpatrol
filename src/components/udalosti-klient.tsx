@@ -318,8 +318,8 @@ export function UdalostiKlient({ zaznamy, neprosle, kandidati = [], nepotvrzene 
         </div>
 
         {f.zalozka === "nepotvrzene" && (
-          <Sdeleni ton="akcent" ikona="otaznik" carkovane nadpis="Stalo se to, ale my za to zatím neručíme." trida="mt-3">
-            Zpracované zprávy se zdroji, zatím bez potvrzení. Do počtů ani hodnocení nejdou. Potvrdí se schválením, nebo samy se dvěma zdroji včetně úředního.
+          <Sdeleni ton="akcent" ikona="otaznik" carkovane nadpis="Zprávy čekají na druhý nezávislý nebo úřední zdroj." trida="mt-3">
+            Zpracované zprávy se zdroji. Do počtů ani hodnocení nevstupují; zveřejní se schválením, nebo samy se dvěma zdroji včetně úředního.
           </Sdeleni>
         )}
         {f.zalozka === "cekajici" && (

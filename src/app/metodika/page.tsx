@@ -262,7 +262,7 @@ export default function Metodika() {
           <h3 className="podnadpis mb-4 text-zaklad">Jak přebíráme zprávy</h3>
           <Seznam
             polozky={[
-              "Nejsme novináři: shromažďujeme zdroje, zasazujeme je do kontextu a upozorňujeme na kritické události. Novinářskou etiku přesto dodržujeme.",
+              "Shromažďujeme zdroje, zasazujeme je do kontextu a upozorňujeme na kritické události. Držíme se novinářské etiky.",
               "Souhrny pomáhá psát AI. Smí zkrátit, nesmí nic přidat: žádné nové tvrzení, závěr ani souvislost, kterou zdroj neuvádí. Věta, kterou nejde dohledat ve zdroji, se smaže.",
               "Každé tvrzení má původce. Podezřelý zůstává podezřelým, obviněný není pachatel, dokud soud nerozhodne.",
               "O všech stranách píšeme věcně a s úctou. Žádné nálepky, žádné výzvy, nikoho neprovokujeme.",
@@ -290,7 +290,7 @@ export default function Metodika() {
                   fakt: "Doloženo zdrojem uvedeným u záznamu.",
                   odhad: "Analytická interpretace dostupných informací. Není to fakt ani předpověď.",
                   scenar: "Možnost, nikoli předpověď. Nemusí nastat a nemusí následovat v uvedeném pořadí.",
-                  nepotvrzeno: "Informace existuje, ale nemáme dost důkazů. Sama o sobě nezvyšuje hodnocení.",
+                  nepotvrzeno: "Informace existuje, ale zatím bez dostatečného doložení. Sama o sobě nezvyšuje hodnocení.",
                 }[t]}
               </p>
             </Karta>

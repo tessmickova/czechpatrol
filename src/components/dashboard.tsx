@@ -251,7 +251,7 @@ function RadekStavu({ d, casSkupiny, ted, signaly = [], tvar = "radek" }: { d: D
               <span className="block truncate text-drobne leading-tight text-tlum">{d.nazev}</span>
               <span className={`mt-0.5 flex items-center gap-1.5 text-male font-bold leading-tight ${t.slovo}`}><span aria-hidden className={`h-[7px] w-[7px] shrink-0 rounded-full ${t.tecka}`} />{d.stav}</span>
               {signaly.map((sg) => (
-                <span key={sg.sluzba} className="mt-0.5 block text-mikro leading-snug text-tlum">signál: {sg.sluzba} hlásí {sg.stav} · neověřeno</span>
+                <span key={sg.sluzba} className="mt-0.5 block text-mikro leading-snug text-tlum">signál: {sg.sluzba} hlásí {sg.stav} · provozovatel</span>
               ))}
             </span>
             <Ikona nazev="dolu" velikost={12} tah={2} trida="shrink-0 text-tlum2 transition-transform group-open:rotate-180" />
@@ -284,7 +284,7 @@ function RadekStavu({ d, casSkupiny, ted, signaly = [], tvar = "radek" }: { d: D
             {signaly.map((sg) => (
               <span key={sg.sluzba} className="mt-0.5 flex items-center gap-1.5 text-mikro leading-snug text-tlum">
                 <span aria-hidden className="h-[5px] w-[5px] shrink-0 rounded-full bg-akcent" />
-                signál: {sg.sluzba} hlásí {sg.stav}{sg.kdy ? ` (${casPraha(sg.kdy)})` : ""} · neověřeno
+                signál: {sg.sluzba} hlásí {sg.stav}{sg.kdy ? ` (${casPraha(sg.kdy)})` : ""} · provozovatel
               </span>
             ))}
           </span>
@@ -351,7 +351,7 @@ function Hlavni({ nadpis, hodnota, ton, popis, overeno, napoveda, jiskra }: { na
   nezamlčí a nic se nesčítá do dojmu. Nula je taky informace: „0 z 7
   platí" je přesně ta věta, kvůli které sem lidé chodí.
 */
-const SLOVA_TONU: Record<Ton, string> = { plati: "platí", pozor: "sledujeme", klid: "v normálu", nedolozeno: "nedoloženo", nevime: "neověřeno" };
+const SLOVA_TONU: Record<Ton, string> = { plati: "platí", pozor: "sledujeme", klid: "v normálu", nedolozeno: "nedoloženo", nevime: "bez údaje" };
 const PORADI_TONU: Ton[] = ["plati", "pozor", "klid", "nedolozeno", "nevime"];
 
 function souhrnTonu(tony: Ton[], hlavni = "platí", slova: Partial<Record<Ton, string>> = {}): string {
@@ -494,7 +494,7 @@ export function Dashboard({
   const crTon: Ton = platiCr.length ? "plati" : naruseno.length ? "plati" : sledujeme.length ? "pozor" : neovereneCr === pravni.length ? "nevime" : "klid";
   const crPopis = platiCr.length
     ? `Platí: ${platiCr.map((p) => (KRATCE_PRAVNI[p.klic] ?? p.nazev).toLowerCase()).join(", ")}`
-    : `Mobilizace ne · vycestování bez omezení · hranice běžně${neovereneCr ? ` · ${neovereneCr} neověřeno` : ""}`;
+    : `Mobilizace ne · vycestování bez omezení · hranice běžně${neovereneCr ? ` · ${neovereneCr} bez údaje` : ""}`;
 
   const natoHodnota = natoAktivni.length ? natoAktivni.map((p) => KRATCE_NATO[p.klic] ?? p.nazev).join(", ") : cl4?.aktivni === null && cl5?.aktivni === null ? "Neověřeno" : "Bez aktivace";
   const natoTon: Ton = natoAktivni.length ? "plati" : cl4?.aktivni === null && cl5?.aktivni === null ? "nevime" : "klid";

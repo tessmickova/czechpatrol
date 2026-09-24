@@ -67,7 +67,7 @@ export function ZemeOpatreni({ polozky, nazvy, aktualizovano }: {
           )}
           {nevime.length > 0 && (
             <>
-              <h4 className="stitek mt-5">Nedohledáno — nevíme, ne „nemá“</h4>
+              <h4 className="stitek mt-5">Nedohledáno — bez dokladu, ne „nemá“</h4>
               <p className="mt-2 text-male leading-relaxed text-tlum">
                 {nevime.map((p) => nazvy[p.klic] ?? p.klic).join(" · ")}
               </p>

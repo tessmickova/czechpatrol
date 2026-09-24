@@ -61,7 +61,7 @@ export default function PodminkyStranka() {
           </Oddil>
 
           <Oddil cislo="04" nadpis="Účet">
-            <p>Účet je anonymní a zdarma. Přihlašuje se passkey. Obnovovací kód dostanete jen jednou — bez něj a bez zařízení se k účtu nedostanete a my ho obnovit neumíme.</p>
+            <p>Účet je anonymní a zdarma. Přihlašuje se passkey. Obnovovací kód dostanete jen jednou — bez něj a bez zařízení se k účtu nedostanete; obnovit ho nelze, protože neukládáme nic, z čeho by šel odvodit.</p>
             <p>Účet nesmíte používat k obtěžování, k pokusům o průnik do systému ani k automatizovanému vytěžování služby. Takový účet můžeme zrušit.</p>
             <p>Účet i všechna data smažete sami v nastavení, okamžitě.</p>
           </Oddil>

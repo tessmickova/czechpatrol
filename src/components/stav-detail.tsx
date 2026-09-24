@@ -81,7 +81,7 @@ export function StavDetail({
             ))}
           </span>
         ) : (
-          "Přímý úřední zdroj k téhle položce zatím nemáme."
+          "K téhle položce zatím není přímý úřední zdroj."
         )}
       </Radek>
 

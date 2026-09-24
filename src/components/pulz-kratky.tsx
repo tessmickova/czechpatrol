@@ -20,7 +20,7 @@ export function PulzKratky({ pulz, ted }: { pulz: Pulz; ted: number }) {
           {!stoji && <span className="pulz-kruh absolute inline-flex h-full w-full rounded-full bg-klid opacity-60" />}
           <span className={`relative inline-flex h-2 w-2 rounded-full ${stoji ? "bg-tlum2" : "bg-klid"}`} />
         </span>
-        {stoji ? "Hlídka stojí" : "Hlídka běží"}
+        {stoji ? "Hlídka" : "Hlídka běží"}
       </span>
       <span className="cislice">{kdy}</span>
       {pulz.zdrojuCelkem > 0 && <span className="cislice">{pulz.zdrojuOk}/{pulz.zdrojuCelkem} zdrojů</span>}

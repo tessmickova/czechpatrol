@@ -33,7 +33,7 @@ export function Zamceno({ co }: { co: string }) {
         <div className="min-w-0">
           <p className="text-vetsi font-bold text-inkoust">{co} je pro přihlášené</p>
           <p className="mt-1 text-male text-tlum">
-            {UCTY_ZAPNUTE ? "Účet je bez jména a e-mailu, passkey v zařízení. Založení trvá minutu." : "Účty zatím neběží. Až poběží, otevře se tu."}
+            {UCTY_ZAPNUTE ? "Účet je bez jména a e-mailu, passkey v zařízení. Založení trvá minutu." : "Účty připravujeme. Otevřou se tady."}
           </p>
           {UCTY_ZAPNUTE && (
             <p className="mt-3"><Tlacitko kam="/ucet/" varianta="plny" velikost="m" ikona="zamek">Přihlásit nebo založit účet</Tlacitko></p>

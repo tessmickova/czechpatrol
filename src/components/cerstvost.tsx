@@ -5,7 +5,7 @@ const VZHLED: Record<Cerstvost, { slovo: string; tridy: string; ikona: NazevIkon
   cerstve: { slovo: "ověřeno", tridy: "text-klid-text", ikona: "fajfka" },
   starsi: { slovo: "starší ověření", tridy: "text-pozor-text", ikona: "hodiny" },
   zastarale: { slovo: "zastaralé", tridy: "text-stari-text2", ikona: "vystraha" },
-  nezname: { slovo: "neověřeno", tridy: "text-tlum2", ikona: "info" },
+  nezname: { slovo: "bez údaje", tridy: "text-tlum2", ikona: "info" },
   // Čas z budoucnosti je chyba dat nebo hodin. Zelená by z ní udělala ověření.
   budoucnost: { slovo: "čas z budoucnosti", tridy: "text-stari-text2", ikona: "vystraha" },
 };

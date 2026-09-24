@@ -72,7 +72,7 @@ export default async function StrankaZeme({ params }: { params: Promise<{ kod: s
         uvod={
           uroven
             ? `Nejvyšší úroveň, kterou tu od roku 2014 evidujeme, je ${uroven.nazev.toLowerCase()}. Není to stav k dnešku — vychází ze všech zveřejněných záznamů této země, ne z odhadu.`
-            : "Pro tuhle zemi zatím nemáme žádný ověřený záznam. Neznamená to, že se nic nestalo — jen že jsme nic nedoložili."
+            : "Pro tuhle zemi zatím není žádný doložený záznam. Neznamená to, že se nic nestalo."
         }
       />
       <div id="zaznamy" className="scroll-mt-[84px]" />

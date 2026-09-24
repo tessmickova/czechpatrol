@@ -57,7 +57,7 @@ export function stavNalehavosti(kandidati: Kandidat[], zkontrolovano: string | n
   const n = naliehaveVOkne(kandidati, ted);
   if (n.length) return { ton: "deje", text: n.length === 1 ? "Naléhavá zpráva čeká na ověření" : `${n.length} naléhavé zprávy čekají na ověření`, dodatek: NAZVY[n[0].naliehave!.druh] };
   const stary = !zkontrolovano || ted - new Date(zkontrolovano).getTime() > HODIN_DO_VYPADKU * 3_600_000;
-  if (stary) return { ton: "stary", text: "Bez čerstvé kontroly", dodatek: zkontrolovano ? `naposledy ${datumCasPraha(zkontrolovano)}` : null };
+  if (stary) { const h = zkontrolovano ? Math.round((ted - new Date(zkontrolovano).getTime()) / 3_600_000) : null; return { ton: "stary", text: h === null ? "Kontrola zdrojů" : `Poslední kontrola před ${h} h`, dodatek: zkontrolovano ? datumCasPraha(zkontrolovano) : null }; }
   return { ton: "klid", text: `Nic naléhavého za ${OKNO_HODIN} h`, dodatek: "žádná mobilizace, krizové vysílání ani mimořádný stav" };
 }
 

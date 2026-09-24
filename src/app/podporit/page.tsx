@@ -30,7 +30,7 @@ export default function Podporit() {
         <h2 className="titul-mensi">Co provoz stojí{"\u00A0"}<Otaznik popis={<span className="block">Tabulka zatím zachycuje jen služby s veřejným ceníkem. Práce lidí a zpracování zpráv modelem v ní nejsou.</span>} /></h2>
         <p className="mt-1 text-male text-tlum">Odhad podle ceníků služeb k {naklady.aktualizovano}. Skutečné faktury se doplní, až budou.</p>
         <p className="mt-2 rounded-[14px] border border-dashed border-jantar/55 bg-jantar/[0.06] px-4 py-3 text-male leading-relaxed text-tlum">
-          <b className="font-semibold text-inkoust">Částka je podhodnocená.</b> Nezahrnuje zpracování zpráv AI modelem (třídění, souhrny, překlady každou hodinu), placené minuty GitHubu ani práci dvou lidí, kteří web spravují. Skutečné měsíční náklady jsou výrazně vyšší; doplníme je, jakmile budou z faktur.
+          <b className="font-semibold text-inkoust">Částka zahrnuje služby a nástroje AI.</b> Práce dvou lidí, kteří web ověřují, spravují a vyvíjejí, se doplní po sečtení hodin; skutečné faktury nahradí odhady, jakmile budou.
         </p>
         <table className="mt-3 w-full text-left text-zaklad">
           <tbody>
@@ -53,7 +53,7 @@ export default function Podporit() {
           </a>
         ) : (
           <p className="mt-2 text-zaklad leading-relaxed text-tlum">
-            Platba zatím není nastavená, proto tu chybí tlačítko. Nejvíc teď pomůže hlášení chyb a chybějících událostí.
+            Možnost přispět připravujeme. Nejvíc teď pomůže hlášení chyb a chybějících událostí.
           </p>
         )}
       </section>

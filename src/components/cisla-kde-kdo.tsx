@@ -48,7 +48,7 @@ export function TypyUdalosti({ tlakEvropa }: { tlakEvropa: HybridniTlak }) {
       <NadpisSekce
         stitek="Typy událostí"
         nadpis={t("Typy evidovaných událostí")}
-        popis="Nejvyšší doložená úroveň v každé oblasti od roku 2014. Prázdné pole = odtud takový záznam nemáme."
+        popis="Nejvyšší doložená úroveň v každé oblasti od roku 2014. Prázdné pole = odtud žádný doložený záznam."
       />
       <div className="grid gap-4 lg:grid-cols-[minmax(0,2fr)_minmax(0,3fr)] lg:gap-x-12">
         <PavucinaHrozeb

@@ -16,8 +16,8 @@ import { Vlajka } from "./zeme";
 
 /*
   Aktuality ve dvou sloupcích bez rámečku (24. 9. 2026, podle zadání):
-  vlevo „Doloženo zdroji“ (dva nezávislé nebo úřední zdroje — ručně nic
-  neověřujeme, jen víme, co zdroje říkají), vpravo „Signály z médií“. Každý sloupec ukáže osm řádků a po
+  vlevo „Doloženo zdroji“ (dva nezávislé nebo úřední zdroje), vpravo
+  „Signály z médií“. Každý sloupec ukáže osm řádků a po
   kliknutí dalších osm.
 
   Řádek má pevnou výšku, aby n-tý řádek vlevo začínal i končil na stejné
@@ -172,7 +172,7 @@ export function AktualitySloupce({ zaznamy, nepotvrzene = [], kandidati = [], te
     <section aria-labelledby="aktuality-nadpis">
       <h2 id="aktuality-nadpis" className="sr-only">Aktuality</h2>
       <div className="grid gap-10 md:grid-cols-2 md:gap-x-14">
-        <Sloupec ted={ted} nadpis="Doloženo zdroji" ikona="fajfka" ton="klid" radky={overene} prazdne="Zatím žádný doložený záznam." napoveda="Záznamy se dvěma nezávislými nebo úředními zdroji. Říkáme, co zdroje uvádějí; co je za tím, nevíme."
+        <Sloupec ted={ted} nadpis="Doloženo zdroji" ikona="fajfka" ton="klid" radky={overene} prazdne="Zatím žádný doložený záznam." napoveda="Záznamy doložené dvěma nezávislými nebo úředními zdroji. Každé tvrzení má původce."
           paticka={<Tlacitko kam="/udalosti/" varianta="tichy" velikost="s" ikonaVpravo="nahoru" trida="[&>svg:last-child]:rotate-90">všechny záznamy od 2014</Tlacitko>} />
         <Sloupec ted={ted} nadpis="Signály z médií" ikona="otaznik" ton="pozor" radky={neoverene} prazdne="Právě žádný nový signál." napoveda="Zachycené zprávy bez úředního nebo druhého nezávislého zdroje. Do počtů ani hodnocení nevstupují."
           paticka={cizich > 0 ? <Link href="/udalosti/?tab=cekajici" className="text-drobne text-tlum2 hover:text-tlum">+ {cizich} v cizím jazyce ve frontě →</Link> : <span className="text-drobne text-tlum2">Do počtů ani hodnocení nevstupují.</span>} />

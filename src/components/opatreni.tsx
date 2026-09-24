@@ -24,7 +24,7 @@ const VZHLED: Record<Stav, { slovo: string; tridy: string; ikona: NazevIkony }> 
   narusen: { slovo: "narušeno", tridy: "border-linka bg-plocha2 text-inkoust", ikona: "vystraha" },
   sledujeme: { slovo: "sledujeme", tridy: "border-linka bg-plocha2 text-tlum", ikona: "oko" },
   neplati: { slovo: "není vyhlášeno", tridy: "border-linka text-tlum", ikona: "fajfka" },
-  neovereno: { slovo: "neověřeno", tridy: "border-dashed border-linka text-tlum2", ikona: "info" },
+  neovereno: { slovo: "bez údaje", tridy: "border-dashed border-linka text-tlum2", ikona: "info" },
 };
 
 const VETY_PRAVNI: Record<string, { co: string; ano: string; ne: string }> = {

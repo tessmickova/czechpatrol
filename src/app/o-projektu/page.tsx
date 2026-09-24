@@ -35,7 +35,7 @@ export default function OProjektu() {
       <div className="mt-16 space-y-12 sm:mt-20">
         <Odstavec nadpis="Co web dělá">
           <p>Sbírá veřejné informace o sabotážích, dronech, kybernetických útocích a reakcích států. Každý záznam má zdroj, datum události, datum zjištění, závažnost a jistotu.</p>
-          <p>Dnes je zveřejněno {p.pripady} případů, {p.aktualizace} aktualizací, {p.opatreni} opatření a {p.reakce} prohlášení nebo reakcí; {n} záznamů ověřením neprošlo a je vedeno odděleně.</p>
+          <p>Dnes je zveřejněno {p.pripady} případů, {p.aktualizace} aktualizací, {p.opatreni} opatření a {p.reakce} prohlášení nebo reakcí; {n} záznamů je bez dokladu a vedeno odděleně.</p>
         </Odstavec>
         <Odstavec nadpis="Co web nedělá">
           <p>Neradí, jestli odjet. Nepočítá pravděpodobnost války. Nezveřejňuje nic bez zdroje. Nezjišťuje vaši polohu.</p>
@@ -47,9 +47,9 @@ export default function OProjektu() {
         <Odstavec nadpis="Nezávislost a peníze">
           <p>Bez inzerce a sponzorů. Základ je a zůstane zdarma. Podpořit provoz jde dobrovolně na stránce <Link href="/podporit/" className="odkaz">Podpořit</Link>; co to stojí, je tam rozepsané.</p>
         </Odstavec>
-        <Odstavec nadpis="Co zatím není hotové">
+        <Odstavec nadpis="Co připravujeme">
           <ul className="list-disc space-y-1 pl-5">
-            <li>Účty, týdenní souhrn a upozornění: {UCTY_ZAPNUTE ? "běží" : "kód existuje, služba zatím neběží"}.</li>
+            <li>Účty, týdenní souhrn a upozornění: {UCTY_ZAPNUTE ? "běží" : "připravujeme"}.</li>
             {/*
               Tohle tvrzení bylo v rozporu se skutečností i s vlastním úvodem
               webu: telegramový kanál běží a nabízí se. Věta se teď skládá

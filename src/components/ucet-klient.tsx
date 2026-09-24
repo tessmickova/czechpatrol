@@ -129,7 +129,7 @@ function Prihlaseni({ po, naNovyKod }: { po: () => void; naNovyKod: (kod: string
         <h2 className="podnadpis text-velke">Bez jména, bez hesla</h2>
         <p className="mt-3 text-zaklad leading-relaxed text-tlum">
           Účet je jen klíč v tomhle zařízení — otisk, obličej nebo PIN. Nesbíráme jméno,
-          e-mail ani telefon. Ani my nevíme, kdo jste.
+          e-mail ani telefon. Vaši identitu neukládáme.
         </p>
         {!umi && <div className="mt-4"><Hlaska typ="info">Tenhle prohlížeč passkey neumí. Zkuste aktuální Chrome, Safari nebo Firefox.</Hlaska></div>}
         <div className="mt-5 grid gap-2">
