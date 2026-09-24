@@ -1,6 +1,12 @@
 "use client";
 
 import { HlavickaWidgetu, IkonaKruh } from "./widgety";
+import { AktualitySloupce } from "./aktuality-sloupce";
+import { Znacka } from "./znacka";
+import { SidebarUvodu } from "./sidebar-uvodu";
+import { PulzSberu } from "./pulz-sberu";
+import type { Pulz } from "@/lib/pulz";
+import { UVOD_V2 } from "@/config/web";
 import Link from "next/link";
 import { pripady, type Zaznam } from "@/lib/agregace";
 import { cerstvost, datumCasPraha, datumPraha } from "@/lib/cas";
@@ -353,7 +359,7 @@ const TECKA_SLUZBY: Record<StavSluzby, string> = { provoz: "bg-klid", omezeni: "
 
 export function Dashboard({
   stav, pravni, natoPolozky, provozPolozky, overeno, vse, neprosle, kandidati, nepotvrzene = [], tydny, watchlist, crHistoricky, hybridni, obcane, ted, snimky = [], nastroje = [],
-  tlakEvropa, tlakCesko, veta, kampane, nazvyZemi, overovaneAktivni = [], overovaneUzavrene = [], priprava,
+  tlakEvropa, tlakCesko, veta, kampane, nazvyZemi, overovaneAktivni = [], overovaneUzavrene = [], priprava, pulz,
 }: {
   stav: CelkovyStav; pravni: PravniPolozka[]; natoPolozky: NatoPolozka[]; provozPolozky: ProvozniPolozka[];
   /** Čas sestavení. Klient z něj vychází, aby se první vykreslení shodlo. */
@@ -371,6 +377,7 @@ export function Dashboard({
   overovaneAktivni?: Overovana[];
   overovaneUzavrene?: Overovana[];
   priprava?: DataPripravy;
+  pulz?: Pulz;
 }) {
   const t = useT();
   const platiCr = pravni.filter((p) => p.plati === true);
@@ -481,7 +488,34 @@ export function Dashboard({
   return (
     <>
     <PasZemi vse={vse} kampane={kampane} ted={ted} />
+    {UVOD_V2 && pulz && <PulzSberu pulz={pulz} ted={tedMs} />}
     <div className="mx-auto max-w-[1280px] px-4 py-5 sm:px-6 sm:py-7">
+      {/*
+        Úvod v2: na mobilu úvodní věta, ciferníky, pak zprávy. Na počítači
+        zprávy vlevo přes obě řady, sloupec vpravo. UVOD_V2=false vrátí
+        původní úvod níž.
+      */}
+      {UVOD_V2 ? (
+        <div className="grid gap-8 lg:grid-cols-[minmax(0,2fr)_minmax(0,1fr)] lg:grid-rows-[auto_1fr] lg:gap-x-10 lg:gap-y-6">
+          <div className="min-w-0">
+            <div className="mb-2 flex items-center gap-2">
+              <Znacka velikost={26} tmave />
+              <span className="stitek-znacky">{t("Bezpečnostní přehled")}</span>
+            </div>
+            <h1 className="titul-sekce">{t("Bezpečnostní situace v Česku a okolí")}</h1>
+            <p className="uvodni-veta mt-3 max-w-[46rem]">
+              <strong className="font-bold text-inkoust">{veta.cesko}</strong>{" "}
+              <span className="text-tlum">{veta.evropa}</span>
+            </p>
+            <div className="mt-4"><UrgentniPas kandidati={kandidati} zkontrolovano={overeno} ted={tedMs} /></div>
+          </div>
+          <div className="order-3 min-w-0 lg:order-none lg:col-start-1 lg:row-start-2"><AktualitySloupce zaznamy={vse} nepotvrzene={nepotvrzene} kandidati={kandidati} /></div>
+          <div className="order-2 min-w-0 lg:order-none lg:col-start-2 lg:row-span-2 lg:row-start-1">
+          <SidebarUvodu stav={stav} cr={cr} crHistoricky={crHistoricky} crPocet={crPocet} obcane={obcane} veta={veta} pulz={pulz} priprava={priprava} vse={vse} kampane={kampane} ted={tedMs} />
+          </div>
+        </div>
+      ) : (
+      <>
 
       {/*
         Úvod tři pětiny, aktuality dvě pětiny.
@@ -529,9 +563,11 @@ export function Dashboard({
           <Aktuality zaznamy={vse} kandidati={kandidati} nepotvrzene={nepotvrzene} />
         </div>
       </div>
+      </>
+      )}
 
       {/* Tři věci pro domácnost podle doložených hrozeb (24. 9. 2026). */}
-      {priprava && <div className="mt-5"><PripravitTed priprava={priprava} /></div>}
+      {!UVOD_V2 && priprava && <div className="mt-5"><PripravitTed priprava={priprava} /></div>}
 
       {/*
         „Právě ověřujeme“ jako malý souhrn pod úvodem (24. 9. 2026). Velké

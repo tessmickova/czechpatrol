@@ -3,13 +3,47 @@
   "aktualizovano": "2026-09-22",
   "mena": "Kč",
   "polozky": [
-    { "nazev": "Hosting statického webu (Cloudflare Pages)", "mesicneKc": 0, "poznamka": "bezplatný tarif" },
-    { "nazev": "API, databáze a fronta (Cloudflare Workers, D1)", "mesicneKc": 0, "poznamka": "bezplatný tarif do limitu; placený tarif cca 125 Kč/měs. při překročení" },
-    { "nazev": "Doména", "mesicneKc": 30, "poznamka": "czechpatrol.cz u Forpsi od září 2026; odhad podle veřejného ceníku .cz, upřesnit podle faktury" },
-    { "nazev": "Sběr dat (GitHub Actions, každou hodinu)", "mesicneKc": 0, "poznamka": "v limitu bezplatných minut veřejného repozitáře" },
-    { "nazev": "Odesílání e-mailů", "mesicneKc": 0, "poznamka": "zatím nespuštěno; při spuštění cca 0–250 Kč/měs. podle objemu" }
+    {
+      "nazev": "Hosting statického webu (Cloudflare Pages)",
+      "mesicneKc": 0,
+      "poznamka": "bezplatný tarif"
+    },
+    {
+      "nazev": "API, databáze a fronta (Cloudflare Workers, D1)",
+      "mesicneKc": 0,
+      "poznamka": "bezplatný tarif do limitu; placený tarif cca 125 Kč/měs. při překročení"
+    },
+    {
+      "nazev": "Doména",
+      "mesicneKc": 30,
+      "poznamka": "czechpatrol.cz u Forpsi od září 2026; odhad podle veřejného ceníku .cz, upřesnit podle faktury"
+    },
+    {
+      "nazev": "Sběr dat (GitHub Actions, každou hodinu)",
+      "mesicneKc": 0,
+      "poznamka": "v limitu bezplatných minut veřejného repozitáře"
+    },
+    {
+      "nazev": "Odesílání e-mailů",
+      "mesicneKc": 0,
+      "poznamka": "zatím nespuštěno; při spuštění cca 0–250 Kč/měs. podle objemu"
+    },
+    {
+      "nazev": "Zpracování zpráv AI modelem (třídění, souhrny, překlady)",
+      "mesicneKc": 0,
+      "poznamka": "[DOPLNIT] podle vyúčtování Anthropic; zatím nevyčísleno, není nula"
+    },
+    {
+      "nazev": "Práce dvou lidí (ověřování, správa, vývoj)",
+      "mesicneKc": 0,
+      "poznamka": "[DOPLNIT] hodiny týdně; zatím nevyčísleno, není nula"
+    }
   ],
-  "plus": { "mesicneKc": 79, "rocneKc": 790, "poznamka": "pracovní hypotéza, neověřená" },
+  "plus": {
+    "mesicneKc": 79,
+    "rocneKc": 790,
+    "poznamka": "pracovní hypotéza, neověřená"
+  },
   "scenare": {
     "_poznamka": "Pro nástroj nastroje/naklady.mjs: kolik podporovatelů pokryje daný měsíční náklad.",
     "prumernyPrispevekKc": 100

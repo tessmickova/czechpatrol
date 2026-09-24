@@ -27,8 +27,11 @@ export default function Podporit() {
       />
 
       <section className="nalet mt-16 border-t border-linka pt-12 sm:mt-20">
-        <h2 className="titul-mensi">Co provoz stojí{"\u00A0"}<Otaznik popis={<span className="block">Lidská práce (ověřování, hodnocení, opravy) v tabulce není. Dělá se zdarma.</span>} /></h2>
+        <h2 className="titul-mensi">Co provoz stojí{"\u00A0"}<Otaznik popis={<span className="block">Tabulka zatím zachycuje jen služby s veřejným ceníkem. Práce lidí a zpracování zpráv modelem v ní nejsou.</span>} /></h2>
         <p className="mt-1 text-male text-tlum">Odhad podle ceníků služeb k {naklady.aktualizovano}. Skutečné faktury se doplní, až budou.</p>
+        <p className="mt-2 rounded-[14px] border border-dashed border-jantar/55 bg-jantar/[0.06] px-4 py-3 text-male leading-relaxed text-tlum">
+          <b className="font-semibold text-inkoust">Částka je podhodnocená.</b> Nezahrnuje zpracování zpráv AI modelem (třídění, souhrny, překlady každou hodinu), placené minuty GitHubu ani práci dvou lidí, kteří web spravují. Skutečné měsíční náklady jsou výrazně vyšší; doplníme je, jakmile budou z faktur.
+        </p>
         <table className="mt-3 w-full text-left text-zaklad">
           <tbody>
             {polozky.map((x) => (
