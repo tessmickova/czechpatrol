@@ -17,7 +17,7 @@ import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { chybyVystrahy } from "./vystraha-pravidla.mjs";
 import { falesneUredni } from "./uredni-zdroj.mjs";
-import { jeSankcionovane, nalepkyVTextu } from "./zasady-textu.mjs";
+import { jeJenProjev, jeSankcionovane, nalepkyVTextu } from "./zasady-textu.mjs";
 import { zkontrolujZaznam } from "./bezpecnost-obsahu.mjs";
 import { chybySouhrnu } from "./souhrn-situace.mjs";
 
@@ -450,6 +450,9 @@ for (const n of nastroje) {
   if (n.stav !== "obecne" && !n.oficialniZdroj) chyby.push(`nástroj ${n.id}: chybí oficiální zdroj`);
   if (/\[DOPLNIT\]/.test(JSON.stringify(n))) chyby.push(`nástroj ${n.id}: zástupný text`);
 }
+
+/* ---------- řeči bez skutku ve frontě ---------- */
+for (const k of kandidati) if (k.stav === "ceka" && jeJenProjev(k.titulek)) varovani.push(`kandidát ${k.id}: jen projev bez rozhodnutí — odepsat („${String(k.titulek).slice(0, 60)}…“)`);
 
 /* ---------- souhrn situace pod nadpisem ---------- */
 if (fs.existsSync(path.join(koren, "data", "souhrn-situace.json"))) {

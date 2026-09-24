@@ -8,7 +8,7 @@ import { vyrezZeStranky, type VyrezZdroje } from "./text-zdroje";
 import { ctenaProfily } from "./socialni";
 import { ctiProfil } from "./cteni-socialni";
 import type { Polozka } from "./typy";
-import { jeSankcionovane, POKYNY_TEXTU } from "../nastroje/zasady-textu.mjs";
+import { jeJenProjev, jeSankcionovane, POKYNY_TEXTU } from "../nastroje/zasady-textu.mjs";
 
 /*
   Automatický sběr událostí.
@@ -108,7 +108,7 @@ const DNI_ODMITNUTYCH = 7;
 /** Strop pro jeden běh, aby posouzení modelem nemohlo utéct do nákladů. */
 const MAX_POSUZOVANYCH = 120;
 
-export type DuvodOdmitnuti = "vylouceno-tematem" | "bez-skutku" | "bez-mista";
+export type DuvodOdmitnuti = "vylouceno-tematem" | "bez-skutku" | "bez-mista" | "jen-projev";
 
 export interface Odmitnuty {
   id: string;
@@ -1090,7 +1090,8 @@ export async function sbirejUdalosti(): Promise<{ novych: number; celkem: number
       if (jeSankcionovane(p.odkaz)) continue;
       if (p.publikovano && new Date(p.publikovano).getTime() < hranice) continue;
       const text = `${p.nadpis} ${p.shrnuti}`;
-      const duvod = duvodOdmitnuti(text);
+      // Řeči politiků bez rozhodnutí nejsou událost (24. 9. 2026): posuzuje se titulek.
+      const duvod = duvodOdmitnuti(text) ?? (jeJenProjev(p.nadpis) ? "jen-projev" : null);
       if (duvod) {
         /*
           Nic se nezahazuje: odmítnuté jde do přehledu pro člověka. S jednou

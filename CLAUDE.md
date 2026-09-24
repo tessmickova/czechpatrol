@@ -373,6 +373,17 @@ ukazují.
 Upozornění „AI-assisted / pracovní verze“ **není omluvenka** pro nepodložené
 tvrzení.
 
+### Řeči bez skutku nejsou událost (24. 9. 2026)
+
+Projev, výzva, varování nebo komentář politika či instituce — prezident
+v OSN, ministr v rozhovoru, rezoluce bez závaznosti — se nezařazuje, dokud
+z něj neplyne konkrétní bezpečnostní následek, změna nebo rozhodnutí
+(vyhlášení stavu, zákaz, nasazení, uzavření, sankce, zadržení). Sběr takové
+titulky odkládá s důvodem `jen-projev` (`nastroje/zasady-textu.mjs`,
+`jeJenProjev`), úvod je do sloupce signálů nepouští a Patrol je odepisuje.
+Důvod: web měří, co se stalo, ne co kdo řekl; řeči politiků ho dělají
+stranickým a nudným zároveň.
+
 ## Pravidlo č. 7 — archiv nesmí mystifikovat
 
 Snímek se zapisuje jen při změně. Nikdy nehlas změnu, kterou čtenář nemůže

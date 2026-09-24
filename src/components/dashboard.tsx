@@ -554,7 +554,8 @@ export function Dashboard({
           </div>
           <div className="order-3 min-w-0 lg:order-none lg:col-start-1 lg:row-start-2"><AktualitySloupce zaznamy={vse} nepotvrzene={nepotvrzene} kandidati={kandidati} /></div>
           <div className="order-2 min-w-0 lg:order-none lg:col-start-2 lg:row-span-2 lg:row-start-1">
-          <SidebarUvodu stav={stav} cr={cr} crHistoricky={crHistoricky} crPocet={crPocet} obcane={obcane} pulz={pulz} priprava={priprava} vse={vse} kampane={kampane} kandidati={kandidati} zkontrolovano={overeno} overovane={overovaneAktivni} ted={tedMs} />
+          <SidebarUvodu stav={stav} cr={cr} crHistoricky={crHistoricky} crPocet={crPocet} obcane={obcane} pulz={pulz} priprava={priprava} vse={vse} kampane={kampane} kandidati={kandidati} zkontrolovano={overeno} overovane={overovaneAktivni} ted={tedMs}
+            tipy={<MiniBox nazev="Tipy k přípravě" ikona="fajfka" ton="klid" souhrn={tipyNahled.length ? tipyNahled[0].nadpis : "Zatím bez tipu"}><TipyKPriprave ted={tedMs} vnoreny /></MiniBox>} />
           </div>
         </div>
       ) : (
@@ -690,9 +691,6 @@ export function Dashboard({
               <CenaPaliva vnoreny />
             </section>
           )}
-          <MiniBox nazev="Tipy k přípravě" ikona="fajfka" ton="klid" souhrn={tipyNahled.length ? tipyNahled[0].nadpis : "Zatím bez tipu"}>
-            <TipyKPriprave ted={tedMs} vnoreny />
-          </MiniBox>
         </aside>
       </div>
 

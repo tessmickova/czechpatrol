@@ -47,9 +47,9 @@ function Maly({ nadpis, obdobi, uroven, slovo, neutralni, popis, dodatek, graf }
   );
 }
 
-export function SidebarUvodu({ stav, cr, crHistoricky, crPocet, obcane, pulz, priprava, vse, kampane, kandidati, zkontrolovano, overovane = [], ted }: {
+export function SidebarUvodu({ stav, cr, crHistoricky, crPocet, obcane, pulz, priprava, vse, kampane, kandidati, zkontrolovano, overovane = [], ted, tipy }: {
   stav: CelkovyStav; cr: Uroven | null; crHistoricky: Uroven | null; crPocet: { pripadu: number; kampani: number }; obcane: StavObcanu;
-  pulz?: Pulz; priprava?: DataPripravy; vse: Zaznam[]; kampane: Kampan[]; kandidati: Kandidat[]; zkontrolovano: string | null; overovane?: Overovana[]; ted: number;
+  pulz?: Pulz; priprava?: DataPripravy; vse: Zaznam[]; kampane: Kampan[]; kandidati: Kandidat[]; zkontrolovano: string | null; overovane?: Overovana[]; ted: number; /** Box Tipy k přípravě — stojí před „AI radí“ (24. 9. 2026). */ tipy?: React.ReactNode;
 }) {
   /* Naléhavé zprávy chytá sběr, tak se čerstvost měří jeho posledním průchodem, ne ručním ověřením. */
   const kontrola = pulz?.kdy ?? zkontrolovano;
@@ -82,7 +82,7 @@ export function SidebarUvodu({ stav, cr, crHistoricky, crPocet, obcane, pulz, pr
       <div className="grid grid-cols-2 gap-3">
         <Napoveda cele popis={<span className="block">{nal.dodatek && <span className="mb-1.5 block text-inkoust">{nal.dodatek}</span>}{pulz && <span className="block text-tlum2">Za 24 h: {pulz.zachyceno24} zachyceno, {pulz.overeno24} ověřeno, {pulz.zdrojuOk} z {pulz.zdrojuCelkem} zdrojů odpovědělo.</span>}{kontrola && <span className="mt-1.5 block text-tlum2">Zdroje čteny {casPraha(kontrola)}.</span>}</span>}>
           <span role="status" aria-label="Souhrn situace" className={`flex min-h-[92px] w-full flex-col justify-between rounded-[22px] border px-4 py-3 text-left ${nal.ton === "deje" ? "border-akcent/70 bg-akcent/[0.05]" : nal.ton === "klid" ? "border-klid/60 bg-klid/[0.05]" : "border-linka bg-plocha2/40"}`}>
-            <span className="flex items-center gap-2 text-mikro font-semibold text-tlum"><Ikona nazev="info" velikost={12} tah={2} /> Souhrn situace</span>
+            <span className="nadpis-boxu flex items-center gap-2"><Ikona nazev="info" velikost={13} tah={2} trida="text-tlum" /> Souhrn situace</span>
             <span className="flex items-start gap-2 text-male font-bold leading-snug text-inkoust">
               <span aria-hidden className={`mt-[6px] h-[7px] w-[7px] shrink-0 rounded-full ${nal.ton === "deje" ? "bg-akcent" : nal.ton === "klid" ? "bg-klid" : "bg-tlum2"}`} />
               <span>{nal.text}</span>
@@ -91,7 +91,7 @@ export function SidebarUvodu({ stav, cr, crHistoricky, crPocet, obcane, pulz, pr
         </Napoveda>
         <Napoveda cele popis={overovane.length ? <span className="block">{overovane.slice(0, 3).map((o) => <span key={o.slug} className="mb-1.5 block"><b className="font-semibold text-inkoust">{o.coSeHlasi}</b>{o.coRikajiUrady[0] && <span className="block text-tlum2">Úřady: {o.coRikajiUrady[0]}</span>}</span>)}<span className="block text-tlum2">Nepotvrzené zprávy. Do počtů ani hodnocení nevstupují.</span></span> : <span className="block">Žádná zpráva teď nečeká na posouzení.</span>}>
           <span aria-label="Právě ověřujeme" className="flex min-h-[92px] w-full flex-col justify-between rounded-[22px] border border-dashed border-jantar/55 bg-jantar/[0.06] px-4 py-3 text-left">
-            <span className="flex items-center justify-between gap-2 text-mikro font-semibold text-tlum"><span className="flex items-center gap-2"><Ikona nazev="otaznik" velikost={12} tah={2} /> Právě ověřujeme</span><span className="cislice text-tlum2">{overovane.length}</span></span>
+            <span className="flex items-center justify-between gap-2"><span className="nadpis-boxu flex items-center gap-2"><Ikona nazev="otaznik" velikost={13} tah={2} trida="text-tlum" /> Právě ověřujeme</span><span className="cislice text-tlum2">{overovane.length}</span></span>
             <span className="line-clamp-2 text-male font-bold leading-snug text-inkoust">{overovane[0] ? overovane[0].coSeHlasi : "Nic v hodnocení"}</span>
           </span>
         </Napoveda>
@@ -133,6 +133,8 @@ export function SidebarUvodu({ stav, cr, crHistoricky, crPocet, obcane, pulz, pr
           <p className="mt-2 px-1 text-mikro text-tlum2">Případy a operace proti občanům v Evropě. <Link href="/metodika/" className="odkaz">Jak se hodnotí</Link>.</p>
         </div>
       </section>
+
+      {tipy}
 
       {/* Připravenost */}
       <section className="overflow-hidden rounded-[22px] bg-plocha">

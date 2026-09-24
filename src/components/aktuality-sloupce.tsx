@@ -5,6 +5,7 @@ import { useState } from "react";
 import { datumCasPraha } from "@/lib/cas";
 import { kdyZjisteno, type Zaznam } from "@/lib/agregace";
 import { jeCesky } from "@/lib/jazyk";
+import { jeJenProjev } from "../../nastroje/zasady-textu.mjs";
 import { KATEGORIE } from "@/lib/kategorie";
 import { JISTOTY, PASMA, UROVNE } from "@/lib/skala";
 import type { Kandidat, Kategorie } from "@/lib/typy";
@@ -110,7 +111,7 @@ function Sloupec({ nadpis, ikona, ton, radky, prazdne, paticka, ted, napoveda }:
   return (
     <div className="min-w-0">
       <div className="flex h-[34px] items-center justify-between gap-3">
-        <span className="flex items-center gap-2"><IkonaKruh ikona={ikona} ton={ton} velikost="s" /><h3 className="text-male font-bold leading-none tracking-[-0.01em] text-inkoust">{nadpis}</h3>{napoveda && <Otaznik popis={<span className="block">{napoveda}</span>} />}</span>
+        <span className="flex items-center gap-2"><IkonaKruh ikona={ikona} ton={ton} velikost="s" /><h3 className="nadpis-boxu">{nadpis}</h3>{napoveda && <Otaznik popis={<span className="block">{napoveda}</span>} />}</span>
         <span className="cislice text-mikro text-tlum2">{radky.length}</span>
       </div>
       {videt.length ? (
@@ -162,7 +163,7 @@ export function AktualitySloupce({ zaznamy, nepotvrzene = [], kandidati = [], te
   const neoverene: Radek[] = [
     ...zaznamy.filter((z) => z.overeni === "neovereno").map((z) => zZaznamu(z, `u-${z.slug}`, `/incident/${z.slug}/`, "jen média", "bg-jantar")),
     ...nepotvrzene.map((z) => zZaznamu(z, `n-${z.id}`, `/nepotvrzeno/${z.id}/`, "nepotvrzeno", "bg-jantar")),
-    ...kandidati.filter((k) => jeCesky(k.titulek)).map((k): Radek => ({
+    ...kandidati.filter((k) => jeCesky(k.titulek) && !jeJenProjev(k.titulek)).map((k): Radek => ({
       klic: `k-${k.id}`, kam: k.zdroj.url, ven: true, kodZeme: k.kodZeme, zeme: k.zeme, kdy: k.publikovano, titulek: k.titulek, stitek: "zachyceno", pruh: "bg-tlum2",
       zavaznost: null, jistota: null, kategorie: k.kategorie.map((c) => KATEGORIE[c as Kategorie]?.nazev ?? c), text: k.shrnuti || null, textPopis: "Zachyceno", zdroj: { nazev: k.zdroj.nazev, url: k.zdroj.url },
     })),
