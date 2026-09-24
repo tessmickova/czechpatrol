@@ -109,6 +109,9 @@ const TEMATA = [
   { klic: "letiste-dron", cs: "letiště přerušilo provoz kvůli dronům", en: "airport suspends flights drones", poZemich: true },
   { klic: "zbrojovka", cs: "požár výbuch muniční továrna zbrojovka", en: "fire explosion ammunition factory", poZemich: false },
   { klic: "valecna-lod", cs: "ruská válečná loď incident vrtulník", en: "Russian warship incident navy helicopter", poZemich: false },
+  /* Doplněno 24. 9. 2026: dron, který se zřítil a explodoval (Rumunsko), a varování před útoky dronů z lodí. */
+  { klic: "dron-exploze", cs: "dron se zřítil explodoval", en: "drone crashed exploded", poZemich: true },
+  { klic: "drony-lode", cs: "Rusko připravuje útoky drony z lodí kontejner", en: "Russia drones containers ships attack Europe warning", poZemich: false },
 ] as const;
 
 /*
@@ -251,6 +254,17 @@ const REDAKCE: ZdrojUdalosti[] = [
   { klic: "cro-rss", nazev: "Český rozhlas — domácí zprávy", url: "https://www.irozhlas.cz/rss/irozhlas/zpravy-domov", jazyk: "cs", primarni: false, typ: "media" },
   { klic: "irozhlas", nazev: "iROZHLAS — zprávy", url: "https://www.irozhlas.cz/rss/irozhlas", jazyk: "cs", primarni: false, typ: "media" },
   { klic: "ct24", nazev: "ČT24 — hlavní zprávy", url: "https://ct24.ceskatelevize.cz/rss/hlavni-zpravy", jazyk: "cs", primarni: false, typ: "media" },
+  /*
+    Doplněno 24. 9. 2026: dvě zprávy z Novinek (dron v Rumunsku, plán útoků
+    dronů z kontejnerů podle španělského listu) sběr neměl. České redakce
+    s vlastním kanálem RSS; co nevrátí RSS, přečte se jako stránka.
+  */
+  { klic: "novinky", nazev: "Novinky.cz", url: "https://www.novinky.cz/rss", jazyk: "cs", primarni: false, typ: "media" },
+  { klic: "seznam-zpravy", nazev: "Seznam Zprávy", url: "https://www.seznamzpravy.cz/rss", jazyk: "cs", primarni: false, typ: "media" },
+  { klic: "idnes", nazev: "iDNES.cz — zpravodajství", url: "https://servis.idnes.cz/rss.aspx?c=zpravodaj", jazyk: "cs", primarni: false, typ: "media" },
+  { klic: "ctk", nazev: "ČTK — České noviny", url: "https://www.ceskenoviny.cz/sluzby/rss/zpravy.php", jazyk: "cs", primarni: false, typ: "wire" },
+  { klic: "aktualne", nazev: "Aktuálně.cz", url: "https://www.aktualne.cz/rss/", jazyk: "cs", primarni: false, typ: "media" },
+  { klic: "denikn", nazev: "Deník N", url: "https://denikn.cz/feed/", jazyk: "cs", primarni: false, typ: "media" },
   { klic: "bbc-europe", nazev: "BBC News — Europe", url: "https://feeds.bbci.co.uk/news/world/europe/rss.xml", jazyk: "en", primarni: false, typ: "media" },
   { klic: "dw-europe", nazev: "Deutsche Welle — Europe", url: "https://rss.dw.com/rdf/rss-en-eu", jazyk: "en", primarni: false, typ: "media" },
   { klic: "yle-en", nazev: "Yle News (Finsko)", url: "https://yle.fi/rss/t/18-205950/en", jazyk: "en", primarni: false, typ: "media" },

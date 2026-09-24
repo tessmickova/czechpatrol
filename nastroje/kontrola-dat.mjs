@@ -451,6 +451,9 @@ for (const n of nastroje) {
   if (/\[DOPLNIT\]/.test(JSON.stringify(n))) chyby.push(`nástroj ${n.id}: zástupný text`);
 }
 
+/* ---------- ověřované: podstata do nadpisu ---------- */
+for (const o of overujeme) if (o.stav === "overujeme" && !o.kratce) varovani.push(`ověřujeme ${o.id}: chybí kratce (podstata do nadpisu boxu)`);
+
 /* ---------- řeči bez skutku ve frontě ---------- */
 for (const k of kandidati) if (k.stav === "ceka" && jeJenProjev(k.titulek)) varovani.push(`kandidát ${k.id}: jen projev bez rozhodnutí — odepsat („${String(k.titulek).slice(0, 60)}…“)`);
 

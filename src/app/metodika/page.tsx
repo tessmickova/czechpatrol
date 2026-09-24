@@ -318,7 +318,7 @@ export default function Metodika() {
           <h2 className="podnadpis mb-3 text-vetsi">Role automatizace</h2>
           <div className="max-w-[46rem] space-y-3 text-male leading-relaxed text-tlum">
             <p>
-              Sběr běží každou hodinu, ale nic nezveřejňuje — jen ukládá zprávy ke kontrole. Na web jde záznam se zdrojem po kontrole, nebo se dvěma zdroji včetně úředního.
+              Sběr běží každých 30 minut, ale nic nezveřejňuje — jen ukládá zprávy ke kontrole. Na web jde záznam se zdrojem po kontrole, nebo se dvěma zdroji včetně úředního.
             </p>
             <p>
               Úřední stavy ověřujeme proti úředním zdrojům. Když ověření neproběhlo, napíšeme to. Nic nedopočítáváme z médií.

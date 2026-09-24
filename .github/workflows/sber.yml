@@ -1,4 +1,4 @@
-name: Hodinový sběr dat
+name: Sběr dat (každých 30 minut)
 
 on:
   schedule:
@@ -25,7 +25,9 @@ on:
     # z měsíčního přídělu minut — a ten už jednou došel (17. 9. v 08:03,
     # kdy přestalo běžet všechno). Tři hodiny jsou kompromis, který se
     # do přídělu vejde.
-    - cron: "17 */3 * * *"
+    # Každých 30 minut (24. 9. 2026, dřív každé 3 hodiny): repozitář je veřejný,
+    # minuty se neúčtují; nasazuje se jen když se data změnila.
+    - cron: "7,37 * * * *"
   # Tudy chodí kopnutí z workeru.
   workflow_dispatch:
 

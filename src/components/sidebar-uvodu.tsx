@@ -89,10 +89,10 @@ export function SidebarUvodu({ stav, cr, crHistoricky, crPocet, obcane, pulz, pr
             </span>
           </span>
         </Napoveda>
-        <Napoveda cele popis={overovane.length ? <span className="block">{overovane.slice(0, 3).map((o) => <span key={o.slug} className="mb-1.5 block"><b className="font-semibold text-inkoust">{o.coSeHlasi}</b>{o.coRikajiUrady[0] && <span className="block text-tlum2">Úřady: {o.coRikajiUrady[0]}</span>}</span>)}<span className="block text-tlum2">Nepotvrzené zprávy. Do počtů ani hodnocení nevstupují.</span></span> : <span className="block">Žádná zpráva teď nečeká na posouzení.</span>}>
+        <Napoveda cele popis={overovane.length ? <span className="block">{overovane.slice(0, 3).map((o) => <span key={o.slug} className="mb-1.5 block"><b className="font-semibold text-inkoust">{o.kratce ?? o.coSeHlasi}</b><span className="block">{o.coSeHlasi}</span>{o.coRikajiUrady[0] && <span className="block text-tlum2">Úřady: {o.coRikajiUrady[0]}</span>}</span>)}<span className="block text-tlum2">Nepotvrzené zprávy. Do počtů ani hodnocení nevstupují.</span></span> : <span className="block">Žádná zpráva teď nečeká na posouzení.</span>}>
           <span aria-label="Právě ověřujeme" className="flex min-h-[92px] w-full flex-col justify-between rounded-[22px] border border-dashed border-jantar/55 bg-jantar/[0.06] px-4 py-3 text-left">
             <span className="flex items-center justify-between gap-2"><span className="nadpis-boxu flex items-center gap-2"><Ikona nazev="otaznik" velikost={13} tah={2} trida="text-tlum" /> Právě ověřujeme</span><span className="cislice text-tlum2">{overovane.length}</span></span>
-            <span className="line-clamp-2 text-male font-bold leading-snug text-inkoust">{overovane[0] ? overovane[0].coSeHlasi : "Nic v hodnocení"}</span>
+            <span className="line-clamp-2 text-male font-bold leading-snug text-inkoust">{overovane[0] ? overovane[0].kratce ?? overovane[0].coSeHlasi : "Nic v hodnocení"}</span>
           </span>
         </Napoveda>
       </div>
@@ -144,7 +144,7 @@ export function SidebarUvodu({ stav, cr, crHistoricky, crPocet, obcane, pulz, pr
             {priprava.polozky.map((p, i) => (
               <li key={p.klic}>
                 <Link href={`/odolnost/?seznam=${p.seznam}&zvyrazni=${p.klic}`} className="group flex items-start gap-3 px-4 py-2.5 hover:bg-plocha2">
-                  <span className="cislice mt-[1px] text-velke font-bold leading-none text-akcent">{i + 1}</span>
+                  <span className="cislice mt-[1px] text-velke font-bold leading-none text-tlum">{i + 1}</span>
                   <span className="min-w-0 flex-1">
                     <span className="block text-male font-bold leading-snug text-inkoust">{p.nazev}</span>
                     <span className="block text-mikro text-tlum2">{NAZVY_HROZEB[p.hrozba]}</span>

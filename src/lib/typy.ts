@@ -617,6 +617,8 @@ export interface Overovana {
   slug: string;
   /** Co se hlásí. Vždy s uvedením, že jde o tvrzení někoho jiného. */
   coSeHlasi: string;
+  /** Podstata jednou větou do nadpisu boxu: co se tvrdí a kdo, bez úvodních slov. */
+  kratce?: string;
   kodZeme: string;
   zeme: string;
   /** Kdy jsme to zařadili mezi ověřované. */

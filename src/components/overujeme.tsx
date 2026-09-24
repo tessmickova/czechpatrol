@@ -212,7 +212,7 @@ export function SouhrnOverujeme({ aktivni, ted, vnoreny = false }: { aktivni: Ov
                 <summary className="flex cursor-pointer list-none items-start gap-2.5 px-4 py-2.5 hover:bg-jantar/[0.05]">
                   <span className="mt-[2px] shrink-0"><Vlajka kod={o.kodZeme} /></span>
                   <span className="min-w-0 flex-1">
-                    <span className="line-clamp-2 text-male leading-snug text-inkoust">{o.coSeHlasi}</span>
+                    <span className="line-clamp-2 text-male font-semibold leading-snug text-inkoust">{o.kratce ?? o.coSeHlasi}</span>
                     {o.coRikajiUrady[0] && (
                       <span className="mt-0.5 line-clamp-1 text-drobne text-tlum">
                         <b className="font-semibold text-klid-text">Úřady:</b> {o.coRikajiUrady[0]}
