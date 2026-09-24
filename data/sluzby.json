@@ -1,5 +1,5 @@
 {
-  "aktualizovano": "2026-09-24T20:03:29.327Z",
+  "aktualizovano": "2026-09-24T21:03:27.364Z",
   "stavy": [
     {
       "klic": "cloudflare",
@@ -7,9 +7,9 @@
       "popis": "Minor Service Outage",
       "incidenty": [
         {
-          "nazev": "Delays Starting Cloudflare Workers Builds",
-          "odkaz": "https://www.cloudflarestatus.com/incidents/dwfzz0bwhmsq",
-          "aktualizovano": "2026-09-24T19:54:48.000Z"
+          "nazev": "Intermittent 500 errors for backend services on Replicate",
+          "odkaz": "https://www.cloudflarestatus.com/incidents/2x4qt2q2ds9x",
+          "aktualizovano": "2026-09-24T20:40:47.000Z"
         },
         {
           "nazev": "Browser isolation session data sync issues",
@@ -28,25 +28,22 @@
         "Arica, Chile - (ARI)",
         "Algiers, Algeria - (ALG)"
       ],
-      "zkontrolovano": "2026-09-24T20:03:29.327Z",
+      "zkontrolovano": "2026-09-24T21:03:27.364Z",
       "chyba": null
     },
     {
       "klic": "zoom",
-      "stav": "omezeni",
-      "popis": "Partially Degraded Service",
+      "stav": "provoz",
+      "popis": "All Systems Operational",
       "incidenty": [
         {
           "nazev": "Service Degradation Affecting Live Transcription Services.",
           "odkaz": "https://stspg.io/m8bvpzdcvcjd",
-          "aktualizovano": "2026-09-24T09:32:34.245-07:00"
+          "aktualizovano": "2026-09-24T13:22:27.298-07:00"
         }
       ],
-      "postizene": [
-        "Live Transcription",
-        "Zoom Meetings"
-      ],
-      "zkontrolovano": "2026-09-24T20:03:29.327Z",
+      "postizene": [],
+      "zkontrolovano": "2026-09-24T21:03:27.364Z",
       "chyba": null
     },
     {
@@ -55,7 +52,7 @@
       "popis": "All Systems Operational",
       "incidenty": [],
       "postizene": [],
-      "zkontrolovano": "2026-09-24T20:03:29.327Z",
+      "zkontrolovano": "2026-09-24T21:03:27.364Z",
       "chyba": null
     }
   ]
