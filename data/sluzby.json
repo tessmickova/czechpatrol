@@ -1,5 +1,5 @@
 {
-  "aktualizovano": "2026-09-24T21:47:20.003Z",
+  "aktualizovano": "2026-09-24T22:03:54.537Z",
   "stavy": [
     {
       "klic": "cloudflare",
@@ -28,22 +28,16 @@
         "Arica, Chile - (ARI)",
         "Algiers, Algeria - (ALG)"
       ],
-      "zkontrolovano": "2026-09-24T21:47:20.003Z",
+      "zkontrolovano": "2026-09-24T22:03:54.537Z",
       "chyba": null
     },
     {
       "klic": "zoom",
       "stav": "provoz",
       "popis": "All Systems Operational",
-      "incidenty": [
-        {
-          "nazev": "Service Degradation Affecting Live Transcription Services.",
-          "odkaz": "https://stspg.io/m8bvpzdcvcjd",
-          "aktualizovano": "2026-09-24T13:22:27.298-07:00"
-        }
-      ],
+      "incidenty": [],
       "postizene": [],
-      "zkontrolovano": "2026-09-24T21:47:20.003Z",
+      "zkontrolovano": "2026-09-24T22:03:54.537Z",
       "chyba": null
     },
     {
@@ -52,7 +46,7 @@
       "popis": "All Systems Operational",
       "incidenty": [],
       "postizene": [],
-      "zkontrolovano": "2026-09-24T21:47:20.003Z",
+      "zkontrolovano": "2026-09-24T22:03:54.537Z",
       "chyba": null
     }
   ]

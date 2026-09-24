@@ -1,5 +1,5 @@
 {
-  "kdy": "2026-09-24T21:45:14.983Z",
+  "kdy": "2026-09-24T22:01:10.904Z",
   "zdroje": [
     {
       "klic": "e-sbirka",
@@ -76,9 +76,10 @@
     },
     {
       "klic": "sshr",
-      "ok": true,
-      "stav": 200,
-      "pocetPolozek": 0
+      "ok": false,
+      "stav": 403,
+      "pocetPolozek": 0,
+      "chyba": "HTTP 403"
     },
     {
       "klic": "mpo",
@@ -143,9 +144,10 @@
     },
     {
       "klic": "celni-sprava",
-      "ok": true,
-      "stav": 200,
-      "pocetPolozek": 0
+      "ok": false,
+      "stav": 503,
+      "pocetPolozek": 0,
+      "chyba": "HTTP 503"
     },
     {
       "klic": "sujb",
@@ -167,10 +169,9 @@
     },
     {
       "klic": "bundespolizei",
-      "ok": false,
-      "stav": null,
-      "pocetPolozek": 0,
-      "chyba": "fetch failed"
+      "ok": true,
+      "stav": 200,
+      "pocetPolozek": 0
     },
     {
       "klic": "bmi-de",
