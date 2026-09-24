@@ -631,7 +631,8 @@ export function Dashboard({
       <div className="nalet mt-12 sm:mt-16">
         <NadpisSekce stitek={t("Co právě platí")} ikona="vaha" nadpis={t("Úřední stav v Česku")} />
       </div>
-      <div className="grid gap-6 xl:grid-cols-[minmax(0,3fr)_minmax(0,2fr)] xl:gap-10">
+      <div className="grid gap-8 lg:grid-cols-[minmax(0,2fr)_minmax(0,1fr)] lg:gap-x-14">
+        <div className="min-w-0">
         <section aria-label={t("Oficiální stavy")} id="opatreni" className="scroll-mt-[84px] overflow-hidden rounded-[22px] bg-plocha">
           {skupinyDlazdic.map((sk, i) => {
             const dlazdice = (d: Dlazdice) => <RadekStavu key={d.klic} d={d} casSkupiny={sk.cas} ted={tedMs} signaly={signalySluzeb[d.zdrojovaPolozka.klic] ?? []} tvar="dlazdice" />;
@@ -659,27 +660,41 @@ export function Dashboard({
             );
           })}
         </section>
-        <div className="min-w-0">
-          <CoSeZmenilo zaznamy={vse} snimky={snimky} ted={tedMs} osa />
+          <div className="mt-6"><CoSeZmenilo zaznamy={vse} snimky={snimky} ted={tedMs} osa /></div>
         </div>
-      </div>
 
-      {/* Sledujeme dál: čtyři mini boxy, každý na rozkliknutí. */}
-      <div className="nalet mt-12 sm:mt-16">
-        <NadpisSekce stitek="Sledujeme dál" ikona="oko" nadpis="Služby, ceny, ověřované zprávy a tipy" />
-      </div>
-      <div className="grid gap-3 md:grid-cols-3">
-        <MiniBox nazev="Služby naživo" ikona="komunikace" souhrn={souhrnSluzeb.veta} paleta={SLUZBY.map((sl) => { const st = sluzby.stavy.find((x) => x.klic === sl.klic)?.stav ?? "nezjisteno"; return { nazev: sl.nazev, tecka: TECKA_SLUZBY[st], slovo: SLOVA_STAVU[st] }; })}>
-          <StavSluzeb stavy={sluzby.stavy} kdy={sluzby.kdy} vnoreny />
-        </MiniBox>
-        {paliva.length > 0 && (
-          <MiniBox nazev="Ceny pohonných hmot" ikona="palivo" souhrn={paliva.map((p) => `${p.nazev} ${p.cena!.toFixed(2).replace(".", ",")} Kč/l${p.zaTyden ? ` (${p.zaTyden > 0 ? "+" : "−"}${Math.abs(p.zaTyden).toFixed(2).replace(".", ",")})` : ""}`).join(" · ")} paleta={paliva.map((p) => ({ nazev: p.nazev, tecka: p.skok ? "bg-pozor" : "bg-klid", slovo: p.skok ? "neobvyklý pohyb" : "běžný pohyb" }))}>
-            <CenaPaliva vnoreny />
+        {/* Postranní sloupec stejné šířky jako nahoře: dodávky a služby, výpadky provozovatelů, ceny paliv, tipy. */}
+        <aside aria-label="Dodávky, služby a ceny" className="min-w-0 space-y-4">
+          <section className="overflow-hidden rounded-[22px] bg-plocha">
+            <HlavickaWidgetu ikona="elektrina" nazev="Dodávky a služby" meta={<span>{naruseno.length ? `${naruseno.length} narušeno` : sledujeme.length ? `${sledujeme.length} sledujeme` : "vše běžně"}</span>} napoveda={<span className="block">Elektřina, plyn, spojení, banky, paliva a další podle úředních a provozních zdrojů. Narušené a sledované napřed.</span>} />
+            <ul className="px-3 pb-3">
+              {[...naruseno, ...sledujeme, ...provozPolozky.filter((p) => p.stav !== "narusen" && p.stav !== "sledujeme")].slice(0, 8).map((p) => (
+                <li key={p.klic}>
+                  <Napoveda cele popis={<span className="block"><span className="block text-inkoust">{p.hodnota}</span>{p.detail && <span className="mt-1 block text-tlum2">{p.detail}</span>}</span>}>
+                    <span className="flex min-h-[36px] w-full items-center gap-2.5 rounded-[10px] px-2 text-left hover:bg-plocha2/60">
+                      <span aria-hidden className={`h-[7px] w-[7px] shrink-0 rounded-full ${p.stav === "narusen" ? "bg-akcent" : p.stav === "sledujeme" ? "bg-pozor" : p.stav === "bez-zdroje" ? "bg-tlum2" : "bg-klid"}`} />
+                      <span className="min-w-0 flex-1 truncate text-male text-inkoust">{p.nazev}</span>
+                      <span className="shrink-0 text-mikro text-tlum2">{p.stav === "narusen" ? "narušeno" : p.stav === "sledujeme" ? "sledujeme" : p.stav === "bez-zdroje" ? "bez zdroje" : "běžně"}</span>
+                    </span>
+                  </Napoveda>
+                </li>
+              ))}
+            </ul>
+          </section>
+          <section className="overflow-hidden rounded-[22px] bg-plocha">
+            <HlavickaWidgetu ikona="komunikace" nazev="Výpadky provozovatelů" meta={<span>{(() => { const n = sluzby.stavy.filter((x) => x.stav === "vypadek" || x.stav === "omezeni").length; return n ? `${n} hlášení` : "bez hlášení"; })()}</span>} napoveda={<span className="block">Stavové stránky provozovatelů čtené naživo. Signál, ne úřední stav.</span>} />
+            <StavSluzeb stavy={sluzby.stavy} kdy={sluzby.kdy} vnoreny />
+          </section>
+          {paliva.length > 0 && (
+            <section className="overflow-hidden rounded-[22px] bg-plocha">
+              <HlavickaWidgetu ikona="palivo" nazev="Ceny pohonných hmot" meta={<span>{paliva.some((p) => p.skok) ? "neobvyklý pohyb" : "běžný pohyb"}</span>} napoveda={<span className="block">Průměrné ceny z týdenního šetření ČSÚ. Měření, ne předpověď.</span>} />
+              <CenaPaliva vnoreny />
+            </section>
+          )}
+          <MiniBox nazev="Tipy k přípravě" ikona="fajfka" ton="klid" souhrn={tipyNahled.length ? tipyNahled[0].nadpis : "Zatím bez tipu"}>
+            <TipyKPriprave ted={tedMs} vnoreny />
           </MiniBox>
-        )}
-        <MiniBox nazev="Tipy k přípravě" ikona="fajfka" ton="klid" souhrn={tipyNahled.length ? tipyNahled[0].nadpis : "Zatím bez tipu"}>
-          <TipyKPriprave ted={tedMs} vnoreny />
-        </MiniBox>
+        </aside>
       </div>
 
       {/* Manipulace: karusel jako dřív. */}

@@ -15,7 +15,6 @@ import { ObloukovyMerak } from "./mericky";
 import { Cara, poDnech, Sloupky } from "./mikrograf";
 import { Tlacitko } from "./ui";
 import { stavNalehavosti } from "./urgentni";
-import { SouhrnOverujeme } from "./overujeme";
 import { HlavickaWidgetu } from "./widgety";
 import { Napoveda, VykladUrovne } from "./zaklad";
 import { ZnackaKanalu } from "./znacky";
@@ -80,25 +79,24 @@ export function SidebarUvodu({ stav, cr, crHistoricky, crPocet, obcane, pulz, pr
         {!podpora && <Tlacitko kam="/podporit/" varianta="obrys" velikost="s" ikona="kava">Podpořit provoz</Tlacitko>}
       </div>
 
-      {/* Souhrn situace — jediná karta s barevným rámečkem: barva odpovídá na „děje se něco?“ */}
-      <section role="status" aria-label="Souhrn situace" className={`overflow-hidden rounded-[22px] border ${nal.ton === "deje" ? "border-akcent/70 bg-akcent/[0.05]" : nal.ton === "klid" ? "border-klid/60 bg-klid/[0.05]" : "border-linka bg-plocha2/40"}`}>
-        <HlavickaWidgetu ikona="info" nazev="Souhrn situace" ton={nal.ton === "deje" ? "akcent" : nal.ton === "klid" ? "klid" : "neutral"} meta={kontrola ? <span className="cislice">čteno {casPraha(kontrola)}</span> : undefined} />
-        <div className="px-4 py-3">
-          <p className="flex items-start gap-2 text-male font-semibold leading-snug text-inkoust">
-            <span aria-hidden className={`mt-[6px] h-[7px] w-[7px] shrink-0 rounded-full ${nal.ton === "deje" ? "bg-akcent" : nal.ton === "klid" ? "bg-klid" : "bg-tlum2"}`} />
-            <span>{nal.text}{nal.dodatek && <span className="block text-mikro font-normal text-tlum2">{nal.dodatek}</span>}</span>
-          </p>
-          {pulz && <p className="cislice mt-2 text-mikro text-tlum2">24 h: {pulz.zachyceno24} zachyceno · {pulz.overeno24} ověřeno{pulz.zdrojuCelkem ? ` · ${pulz.zdrojuOk}/${pulz.zdrojuCelkem} zdrojů` : ""}</p>}
-        </div>
-      </section>
-
-      {/* Právě ověřujeme — nejaktuálnější hrozby v hodnocení, hned pod souhrnem. */}
-      {overovane.length > 0 && (
-        <section className="overflow-hidden rounded-[22px] border border-dashed border-jantar/55 bg-jantar/[0.06]">
-          <HlavickaWidgetu ikona="otaznik" ton="pozor" nazev="Právě ověřujeme" meta={<span>{overovane.length} · nevstupují do hodnocení</span>} />
-          <SouhrnOverujeme aktivni={overovane} ted={ted} vnoreny />
-        </section>
-      )}
+      {/* Souhrn situace a Právě ověřujeme vedle sebe: jedna řádka, zbytek po najetí (24. 9. 2026). */}
+      <div className="grid grid-cols-2 gap-3">
+        <Napoveda cele popis={<span className="block">{nal.dodatek && <span className="mb-1.5 block text-inkoust">{nal.dodatek}</span>}{pulz && <span className="block text-tlum2">Za 24 h: {pulz.zachyceno24} zachyceno, {pulz.overeno24} ověřeno, {pulz.zdrojuOk} z {pulz.zdrojuCelkem} zdrojů odpovědělo.</span>}{kontrola && <span className="mt-1.5 block text-tlum2">Zdroje čteny {casPraha(kontrola)}.</span>}</span>}>
+          <span role="status" aria-label="Souhrn situace" className={`flex min-h-[92px] w-full flex-col justify-between rounded-[22px] border px-4 py-3 text-left ${nal.ton === "deje" ? "border-akcent/70 bg-akcent/[0.05]" : nal.ton === "klid" ? "border-klid/60 bg-klid/[0.05]" : "border-linka bg-plocha2/40"}`}>
+            <span className="flex items-center gap-2 text-mikro font-semibold text-tlum"><Ikona nazev="info" velikost={12} tah={2} /> Souhrn situace</span>
+            <span className="flex items-start gap-2 text-male font-bold leading-snug text-inkoust">
+              <span aria-hidden className={`mt-[6px] h-[7px] w-[7px] shrink-0 rounded-full ${nal.ton === "deje" ? "bg-akcent" : nal.ton === "klid" ? "bg-klid" : "bg-tlum2"}`} />
+              <span>{nal.text}</span>
+            </span>
+          </span>
+        </Napoveda>
+        <Napoveda cele popis={overovane.length ? <span className="block">{overovane.slice(0, 3).map((o) => <span key={o.slug} className="mb-1.5 block"><b className="font-semibold text-inkoust">{o.coSeHlasi}</b>{o.coRikajiUrady[0] && <span className="block text-tlum2">Úřady: {o.coRikajiUrady[0]}</span>}</span>)}<span className="block text-tlum2">Nepotvrzené zprávy. Do počtů ani hodnocení nevstupují.</span></span> : <span className="block">Žádná zpráva teď nečeká na posouzení.</span>}>
+          <span aria-label="Právě ověřujeme" className="flex min-h-[92px] w-full flex-col justify-between rounded-[22px] border border-dashed border-jantar/55 bg-jantar/[0.06] px-4 py-3 text-left">
+            <span className="flex items-center justify-between gap-2 text-mikro font-semibold text-tlum"><span className="flex items-center gap-2"><Ikona nazev="otaznik" velikost={12} tah={2} /> Právě ověřujeme</span><span className="cislice text-tlum2">{overovane.length}</span></span>
+            <span className="line-clamp-2 text-male font-bold leading-snug text-inkoust">{overovane[0] ? overovane[0].coSeHlasi : "Nic v hodnocení"}</span>
+          </span>
+        </Napoveda>
+      </div>
 
       {/* Situace teď */}
       <section className="overflow-hidden rounded-[22px] bg-plocha">
