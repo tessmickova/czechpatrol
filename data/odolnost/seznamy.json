@@ -1,6 +1,6 @@
 {
-  "_poznamka": "Tři seznamy k přípravě domácnosti. „72h“ vychází z doporučení HZS ČR pro zásoby a evakuační zavazadlo; „rozsireny“ je rozšířený seznam z praxe komunit připravenosti; „ai“ jsou tipy projektu pro běžný život, sepsané s pomocí AI a označené tak. Každá položka má hrozby, na které odpovídá — podle nich se počítá karta „Připravit teď“ (src/lib/priprava.ts). Množství jsou orientační, ne úřední norma.",
-  "verze": "2026-09-24",
+  "_poznamka": "Čtyři seznamy k přípravě domácnosti. „72h“ vychází z doporučení HZS ČR pro zásoby a evakuační zavazadlo; „rozsireny“ je rozšířený seznam z praxe komunit připravenosti; „pokrocile“ jsou triky nad rámec seznamů pro výpadky elektřiny, vody, teplé vody, WC a tepla v bytě i domě, sepsané s pomocí AI a označené tak; „ai“ jsou tipy projektu pro běžný život, také s pomocí AI. Každá položka má hrozby, na které odpovídá — podle nich se počítá karta „Připravit teď“ (src/lib/priprava.ts) — a oblast kalkulačky (funkce), do které patří. Množství jsou orientační, ne úřední norma. Nic z toho není zdravotní, chemický ani elektrikářský postup; kde by byl potřeba, odkazuje se na výrobce, lékaře nebo HZS.",
+  "verze": "2026-09-24b",
   "hrozby": {
     "elektrina": "výpadek elektřiny",
     "voda": "výpadek vody",
@@ -206,12 +206,12 @@
         {
           "klic": "power-station",
           "nazev": "Bateriová stanice nebo solární panel",
-          "popis": "Lednice, router, zdravotní přístroj na hodiny až dny.",
+          "popis": "Lednice, router, zdravotní přístroj na hodiny až dny. Kapacitu ve Wh zadejte v kalkulačce, spočítá vydrž.",
           "hrozby": [
             "elektrina",
             "zdravi"
           ],
-          "funkce": "svetlo"
+          "funkce": null
         },
         {
           "klic": "vysilacky",
@@ -225,7 +225,7 @@
         {
           "klic": "radio-dab",
           "nazev": "Rádio s DAB+ i FM",
-          "popis": "Varování ASA jde od 2026 i digitálně; FM zůstává záloha.",
+          "popis": "Varovný systém ASA se v DAB od září 2026 teprve testuje; FM zůstává základ a rádio má umět obojí.",
           "hrozby": [
             "informace"
           ],
@@ -309,6 +309,201 @@
             "voda"
           ],
           "funkce": "wc-odpad"
+        }
+      ]
+    },
+    "pokrocile": {
+      "nazev": "Pro pokročilé",
+      "popis": "Nad rámec seznamů: triky pro výpadek elektřiny, vody, teplé vody, WC a tepla v bytě i domě. Sepsáno s pomocí AI; nic z toho nenahrazuje pokyny úřadů, výrobce ani lékaře.",
+      "zdroj": null,
+      "polozky": [
+        {
+          "klic": "bojler-zasoba",
+          "nazev": "Bojler jako zásoba užitkové vody",
+          "mnozstvi": "desítky litrů",
+          "popis": "Po výpadku vodovodu zůstává voda v ohřívači. Vypnout ohřev, nechat vychladnout, vypustit spodním ventilem; jen na mytí a splachování, ne k pití.",
+          "hrozby": [
+            "voda"
+          ],
+          "funkce": "hygiena"
+        },
+        {
+          "klic": "tlakova-stanice",
+          "nazev": "Vím, jestli má dům čerpací stanici vody",
+          "popis": "Ve vyšších patrech bez proudu neteče ani voda. Pak platí totéž co při výpadku vodovodu: nádoby naplnit hned, dokud teče.",
+          "hrozby": [
+            "voda",
+            "elektrina"
+          ],
+          "funkce": "pitna-voda"
+        },
+        {
+          "klic": "kanalizace-bez-proudu",
+          "nazev": "Vím, co dělá kanalizace bez proudu",
+          "popis": "Tlaková kanalizace a domovní čistírna bez elektřiny nečerpají; při zpětném vzdutí nesplachovat, jinak odpad vyteče v nejnižších bytech.",
+          "hrozby": [
+            "voda",
+            "elektrina"
+          ],
+          "funkce": "wc-odpad"
+        },
+        {
+          "klic": "suchy-zachod-oddelene",
+          "nazev": "Suchý záchod: moč zvlášť, stolici zasypat",
+          "popis": "Kbelík s víkem, pevný pytel, stelivo, piliny nebo kočkolit. Oddělení moči a zasypání po každém použití zbaví zápachu na dny.",
+          "hrozby": [
+            "voda"
+          ],
+          "funkce": "wc-odpad"
+        },
+        {
+          "klic": "myti-z-lavoru",
+          "nazev": "Mytí z lavoru",
+          "popis": "Pár litrů teplé vody z vařiče, po částech od hlavy dolů, žínka místo sprchy. Solární sprcha (černý vak) ohřeje vodu na slunci zadarmo.",
+          "hrozby": [
+            "voda",
+            "elektrina",
+            "teplo"
+          ],
+          "funkce": "hygiena"
+        },
+        {
+          "klic": "stan-v-mistnosti",
+          "nazev": "Stan nebo baldachýn v místnosti",
+          "popis": "Malý uzavřený prostor vyhřeje teplo těla. Spací kout u vnitřní zdi, ne u okna; dveře nevytápěných místností zavřít.",
+          "hrozby": [
+            "teplo",
+            "elektrina"
+          ],
+          "funkce": "teplo"
+        },
+        {
+          "klic": "ohrat-cloveka",
+          "nazev": "Ohřát člověka, ne místnost",
+          "popis": "Ohřívací láhev do spacáku, elektrická deka nebo vyhřívaná podložka ze zdroje: zlomek spotřeby přímotopu, který powerstation neutáhne.",
+          "hrozby": [
+            "teplo",
+            "elektrina"
+          ],
+          "funkce": "teplo"
+        },
+        {
+          "klic": "termohrnec",
+          "nazev": "Dovaření v dekách",
+          "popis": "Přivést k varu, hrnec s pokličkou zabalit do dek nebo peřiny a nechat hodinu dojít. Rýže, luštěniny, guláš; šetří kartuše i dřevo.",
+          "hrozby": [
+            "elektrina",
+            "teplo"
+          ],
+          "funkce": "vareni"
+        },
+        {
+          "klic": "kartuse-v-mrazu",
+          "nazev": "Kartuše v mrazu netlačí",
+          "popis": "Butan pod nulou nevaří. V zimě propan-butanová směs, nebo kartuši před vařením zahřát v kapse u těla, nikdy plamenem.",
+          "hrozby": [
+            "teplo",
+            "elektrina"
+          ],
+          "funkce": "vareni"
+        },
+        {
+          "klic": "solarni-lampy",
+          "nazev": "Solární zahradní lampy na okně",
+          "popis": "Přes den nabít na parapetu, večer svítí hodiny; nejlevnější světlo bez baterií na výměnu.",
+          "hrozby": [
+            "elektrina"
+          ],
+          "funkce": "svetlo"
+        },
+        {
+          "klic": "lahev-lampa",
+          "nazev": "Čelovka a láhev s vodou = lampa",
+          "popis": "Bodové světlo přiložené k průhledné láhvi s vodou rozptýlí světlo do celé místnosti.",
+          "hrozby": [
+            "elektrina"
+          ],
+          "funkce": "svetlo"
+        },
+        {
+          "klic": "mince-v-mrazaku",
+          "nazev": "Mince na kelímku ledu v mrazáku",
+          "popis": "Zmrazit kelímek vody, položit minci navrch. Když je po výpadku u dna, obsah rozmrzl a znovu zmrzl; jídlo nejíst.",
+          "hrozby": [
+            "elektrina"
+          ],
+          "funkce": "chlazeni"
+        },
+        {
+          "klic": "leky-v-chladu",
+          "nazev": "Léky, které potřebují chlad",
+          "popis": "Zeptat se lékaře, jak dlouho vydrží mimo lednici; chladicí pouzdro nebo box s vložkami na cestu i na výpadek.",
+          "hrozby": [
+            "zdravi",
+            "elektrina"
+          ],
+          "funkce": "zdravi"
+        },
+        {
+          "klic": "telefon-usporne",
+          "nazev": "Telefon na dny: data vypnout, SMS místo hovoru",
+          "popis": "Úsporný režim, vypnutá data a letadlový režim v noci prodlouží baterii na dny; při přetížené síti projde SMS dřív než hovor.",
+          "hrozby": [
+            "komunikace",
+            "elektrina"
+          ],
+          "funkce": "komunikace"
+        },
+        {
+          "klic": "baterie-v-teple",
+          "nazev": "Powerbanka a telefon v mrazu u těla",
+          "popis": "Baterie v chladu ztrácí kapacitu a vypíná se; v kapse u těla vydrží.",
+          "hrozby": [
+            "komunikace",
+            "elektrina",
+            "teplo"
+          ],
+          "funkce": "komunikace"
+        },
+        {
+          "klic": "auto-jako-zdroj",
+          "nazev": "Auto jako nabíječka a rádio",
+          "popis": "Z 12V zásuvky nabijete telefon i powerbanku, autorádio chytí krizové vysílání. Motor běžet jen venku, nikdy v garáži.",
+          "hrozby": [
+            "elektrina",
+            "komunikace",
+            "informace"
+          ],
+          "funkce": "komunikace"
+        },
+        {
+          "klic": "uzavery",
+          "nazev": "Umím zavřít vodu, plyn a jistič",
+          "popis": "Každý dospělý v domácnosti ví, kde jsou hlavní uzávěry a hlavní jistič; štítek s polohou u dveří.",
+          "hrozby": [
+            "pozar",
+            "voda"
+          ],
+          "funkce": "pozar"
+        },
+        {
+          "klic": "jedna-stranka",
+          "nazev": "Jedna vytištěná stránka na lednici",
+          "popis": "Tísňová čísla, kontakty, frekvence rozhlasu, místo setkání, kde jsou uzávěry. Funguje s vybitým telefonem.",
+          "hrozby": [
+            "informace",
+            "komunikace"
+          ],
+          "funkce": "informace"
+        },
+        {
+          "klic": "zkusebni-vecer",
+          "nazev": "Zkušební večer bez proudu",
+          "popis": "Shodit hlavní jistič na dvě hodiny večer, lednici nechat zavřenou. Co chybělo, jde na seznam; bezpečnější než zjistit to naostro.",
+          "hrozby": [
+            "elektrina"
+          ],
+          "funkce": null
         }
       ]
     },

@@ -1,11 +1,33 @@
 import { describe, expect, it } from "vitest";
-import { pripravitTed, seznamy, tlakHrozeb } from "../src/lib/priprava";
+import { FUNKCE } from "../src/lib/odolnost";
+import { NAZVY_HROZEB, pripravitTed, seznamy, SEZNAMY_S_AI, tlakHrozeb } from "../src/lib/priprava";
 
 describe("Připravit teď", () => {
-  it("seznamy mají tři části a každá položka odpovídá na aspoň jednu hrozbu", () => {
+  it("seznamy mají čtyři části; každá položka odpovídá na známou hrozbu a míří na známou oblast kalkulačky", () => {
     const s = seznamy();
-    expect(s.map((x) => x.klic)).toEqual(["72h", "rozsireny", "ai"]);
-    for (const x of s) for (const p of x.polozky) expect(p.hrozby.length).toBeGreaterThan(0);
+    expect(s.map((x) => x.klic)).toEqual(["72h", "rozsireny", "pokrocile", "ai"]);
+    const klice = new Set<string>();
+    for (const x of s) {
+      for (const p of x.polozky) {
+        expect(p.hrozby.length, `${x.klic}/${p.klic}`).toBeGreaterThan(0);
+        for (const h of p.hrozby) expect(NAZVY_HROZEB[h], `${x.klic}/${p.klic}: ${h}`).toBeDefined();
+        if (p.funkce) expect(FUNKCE.some((f) => f.klic === p.funkce), `${x.klic}/${p.klic}: ${p.funkce}`).toBe(true);
+        expect(klice.has(p.klic), `duplicitní klíč ${p.klic}`).toBe(false);
+        klice.add(p.klic);
+      }
+    }
+  });
+
+  it("seznamy sepsané s pomocí AI to říkají v popisu (AI Act, čl. 50)", () => {
+    for (const x of seznamy()) {
+      if (SEZNAMY_S_AI.includes(x.klic)) expect(x.popis, x.klic).toMatch(/AI/);
+    }
+    expect(SEZNAMY_S_AI).toContain("pokrocile");
+  });
+
+  it("tipy pro pokročilé nedávají zdravotní, chemické ani elektrikářské postupy", () => {
+    const text = JSON.stringify(seznamy().find((x) => x.klic === "pokrocile")!.polozky);
+    expect(text).not.toMatch(/dávk|mg\b|chlor|savo|jodov|rozvaděč|přepoj|zapojit generátor/i);
   });
   it("tlak je seřazený a informace jsou vždy v základu", () => {
     const t = tlakHrozeb();

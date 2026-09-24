@@ -2,12 +2,13 @@
 
 import { useEffect, useState } from "react";
 import { FUNKCE } from "@/lib/odolnost";
-import { NAZVY_HROZEB, seznamy, VERZE_SEZNAMU, type KlicSeznamu } from "@/lib/priprava";
+import { NAZVY_HROZEB, seznamy, SEZNAMY_S_AI, VERZE_SEZNAMU, type KlicSeznamu } from "@/lib/priprava";
 import { Ikona } from "./ikony";
 import { Sdeleni } from "./ui";
 
 /*
-  Seznamy zásob s odškrtáváním (24. 9. 2026): 72 hodin, rozšířený, AI tipy.
+  Seznamy zásob s odškrtáváním (24. 9. 2026): 72 hodin, rozšířený, pro
+  pokročilé, AI tipy. Seznamy sepsané s pomocí AI to říkají nahoře.
   Co je zaškrtnuté, zůstává v tomhle zařízení (localStorage), nikam se
   neposílá. Položka z karty „Připravit teď“ se zvýrazní a přiroluje.
 */
@@ -43,7 +44,7 @@ export function SeznamyZasob({ seznam, zvyrazni }: { seznam: KlicSeznamu; zvyraz
         </div>
         <p className="cislice text-male text-tlum"><b className="text-inkoust">{hotovo}</b> z {s.polozky.length} máte</p>
       </div>
-      {seznam === "ai" && (
+      {SEZNAMY_S_AI.includes(seznam) && (
         <Sdeleni ton="neutral" ikona="info" trida="mt-4">Tipy projektu sepsané s pomocí AI, ne úřední doporučení. Když si nejste jistí, platí pokyny úřadů a zdravý rozum.</Sdeleni>
       )}
       <ol className="mt-4 overflow-hidden rounded-[22px] bg-plocha">

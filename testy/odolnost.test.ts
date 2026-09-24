@@ -147,6 +147,69 @@ describe("horizonty a spotřeba", () => {
     expect(lidskaDoba(0.18)).toBe("4 h 19 min");
     expect(lidskaDoba(1.29)).toBe("1 d 7 h");
   });
+
+  it("bez údaje o vodě nebo jídle není 72 h „připraveno“, i když zadané vydrží", () => {
+    const jenVoda = horizonty(profil({}, { osob: 1, zasoby: { pitnaVodaL: 30, uzitkovaVodaL: null, jidloDni: null, lekyDni: null } }));
+    expect(jenVoda.find((x) => x.dni === 3)!.stav).toBe("nehodnoceno");
+    const obe = horizonty(profil({}, { osob: 1, zasoby: { pitnaVodaL: 30, uzitkovaVodaL: null, jidloDni: 10, lekyDni: null } }));
+    expect(obe.find((x) => x.dni === 3)!.stav).toBe("pripraveno");
+  });
+
+  it("vlastní zdroj sejme závislost lednice a přístroje až od kapacity z katalogu; telefonu stačí cokoli", () => {
+    const chlazeni = FUNKCE.find((x) => x.klic === "chlazeni")!;
+    const komunikace = FUNKCE.find((x) => x.klic === "komunikace")!;
+    const en = (kapacitaWh: number) => ({ energie: { kapacitaWh, potrebaDenWh: 0, dobijeni: false } });
+    expect(hodnotFunkci(chlazeni, profil({ chlazeni: ["lednice"] }, en(37))).kriticke).toContain("elektrina");
+    expect(hodnotFunkci(chlazeni, profil({ chlazeni: ["lednice"] }, en(1000))).kriticke).not.toContain("elektrina");
+    expect(hodnotFunkci(komunikace, profil({ komunikace: ["mobil-a"] }, en(37))).kriticke).not.toContain("elektrina");
+    const pece = profil({ zdravi: ["zdravotni-zarizeni-napajeni"] }, { ...en(37), kontext: { ...PRAZDNY_PROFIL.kontext, zavislyNaPeci: true } });
+    expect(bezpecnostniNalezy(pece, souhrn(pece).hodnoceni).some((n) => n.klic === "pece-jedina-cesta")).toBe(true);
+  });
+
+  it("v bytě se nenabízejí kamna, gril ani kanystr; zaškrtnout je jde dál", () => {
+    const byt = profil({}, { kontext: { ...PRAZDNY_PROFIL.kontext, bydleni: "byt", sidlo: "mesto" } });
+    const proDum = new Set(FUNKCE.flatMap((f) => f.cesty.filter((c) => c.bydleni === "dum" && c.koupit).map((c) => c.koupit!)));
+    expect(proDum.size).toBeGreaterThan(0);
+    const nazvyProDum = FUNKCE.flatMap((f) => f.cesty.filter((c) => c.bydleni === "dum").map((c) => c.nazev));
+    for (const n of coDokoupit(byt)) expect(proDum.has(n.polozka), n.polozka).toBe(false);
+    for (const d of coChybi(byt)) for (const a of d.alternativy) for (const nazev of nazvyProDum) expect(a.includes(nazev), `${d.nadpis}: ${a}`).toBe(false);
+    /* Teplo jen ze sítě: záloha se společným selháním; bez elektřiny zbývají kamna a jedna místnost — kamna jen v domě. */
+    const teplo = { teplo: ["elektricke", "plynove", "dalkove"] };
+    const spolecne = (kontext: Partial<Profil["kontext"]>) => coChybi(profil(teplo, { kontext: { ...PRAZDNY_PROFIL.kontext, ...kontext } })).find((d) => d.druh === "spolecne-selhani" && d.funkce === "teplo")!;
+    expect(spolecne({ bydleni: "dum" }).alternativy.some((a) => a.startsWith("Kamna"))).toBe(true);
+    expect(spolecne({ bydleni: "byt" }).alternativy.some((a) => a.startsWith("Kamna"))).toBe(false);
+    expect(spolecne({}).alternativy.some((a) => a.startsWith("Kamna"))).toBe(true);
+    const zaskrtnuto = hodnotFunkci(FUNKCE.find((x) => x.klic === "vareni")!, profil({ vareni: ["kamna"] }, { kontext: byt.kontext }));
+    expect(zaskrtnuto.mam.map((c) => c.klic)).toContain("kamna");
+  });
+
+  it("co dokoupit neopakuje stejnou věc u dvou oblastí (pytle na WC jen jednou)", () => {
+    const polozky = coDokoupit(profil({})).map((n) => n.polozka);
+    expect(new Set(polozky).size).toBe(polozky.length);
+    expect(FUNKCE.find((f) => f.klic === "hygiena")!.cesty.some((c) => c.klic === "suche-wc")).toBe(false);
+  });
+
+  it("rodina v pěší dostupnosti není auto: u dopravy z přepínače cesta neplyne", () => {
+    const doprava = FUNKCE.find((x) => x.klic === "doprava")!;
+    expect(doprava.cesty.some((c) => c.kontext)).toBe(false);
+    const h = hodnotFunkci(doprava, profil({}, { kontext: { ...PRAZDNY_PROFIL.kontext, rodinaVDosahu: true } }));
+    expect(h.mam).toEqual([]);
+  });
+
+  it("energie s kapacitou, ale bez spotřebičů, řekne, co chybí, místo „nezadáno“", () => {
+    const v = vydrze(profil({}, { energie: { kapacitaWh: 500, potrebaDenWh: 0, dobijeni: false } }));
+    const e = v.find((x) => x.klic === "energie")!;
+    expect(e.dni).toBeNull();
+    expect(e.predpoklad).toMatch(/kroku 04/);
+  });
+
+  it("zásoba pod 72 h radí podle toho, co dochází: u léků ne vodu z kohoutku", () => {
+    const d = coChybi(profil({ "pitna-voda": ["vodovod", "zasoba"] }, { osob: 1, zasoby: { pitnaVodaL: 30, uzitkovaVodaL: null, jidloDni: 10, lekyDni: 1 } }));
+    const leky = d.find((x) => x.druh === "zasoba");
+    expect(leky?.nadpis).toMatch(/Léky/);
+    expect(leky!.alternativy.join(" ")).not.toMatch(/kohoutku/);
+    expect(leky!.alternativy.join(" ")).toMatch(/lékaře/);
+  });
 });
 
 describe("co mi ještě chybí", () => {
@@ -207,6 +270,7 @@ describe("zdarma: nálezy a počty", () => {
     const s = souhrn(PRAZDNY_PROFIL);
     const n = bezpecnostniNalezy(PRAZDNY_PROFIL, s.hodnoceni);
     expect(n.some((x) => x.klic === "bez-cesty-pitna-voda")).toBe(true);
+    expect(n.some((x) => x.klic === "bez-cesty-potraviny")).toBe(true);
     const jinak = { ...PRAZDNY_PROFIL, nemohu: { "pitna-voda": "jine" } };
     const s2 = souhrn(jinak);
     expect(bezpecnostniNalezy(jinak, s2.hodnoceni).some((x) => x.klic === "bez-cesty-pitna-voda")).toBe(false);

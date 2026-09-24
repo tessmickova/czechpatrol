@@ -41,7 +41,9 @@ Z toho `src/lib/odolnost.ts` deterministicky počítá:
 - **Horizonty** 72 h / 7 / 14 / 30 / 45 / 60 dní z uložených zásob
   s viditelnými předpoklady; 24 hodin se nepočítá (rozhodnutí provozovatele
   23. 9. 2026: je to málo, základ je 72 hodin); „nezadáno“ není nula a nikdy
-  neznamená „připraveno“.
+  neznamená „připraveno“ — od 24. 9. 2026 to platí i pro horizont jako
+  celek: dokud chybí údaj o vodě nebo jídle, je „nehodnoceno“, ne
+  „připraveno“ (léky a energie chybět smějí, ne každý je potřebuje).
 - **Co má teď největší smysl**: nejvýš pět věcí, nejslabší důležitý
   článek dřív než další zlepšení nejsilnějšího (světlo s pěti způsoby se
   nenabízí). Každé doporučení má: proč to vidíte, na čem stojí, co řeší,
@@ -52,11 +54,18 @@ Z toho `src/lib/odolnost.ts` deterministicky počítá:
 - **Za 0 Kč**: rady bez nákupu u funkcí bez nezávislé zálohy.
 - **Vlastní zdroj energie** (powerbanka, powerstation) sejme závislost
   na síti u přenosných zařízení; pevná instalace (kotel, pevný internet)
-  ji má dál.
+  ji má dál. Žravé věci (lednice, zdravotnický přístroj) až od kapacity
+  `minWh` z katalogu (od 24. 9. 2026): powerbanka nabije telefon, lednici
+  ne — bez prahu dělalo 37 Wh z lednice cestu „bez vnější závislosti“.
 - **Rozšířené vstupy pro pokročilé** (od 23. 9. 2026): bydlení a sídlo
   bez adresy, děti a senioři, závislost na péči, rodina v dosahu (plyne z ní
-  cesta u spojení, dopravy a péče), počty vysílaček a powerbank. Vysílačky
-  se počítají od dvou kusů, ideálně pro každého.
+  cesta u spojení a péče; u dopravy ne — pěší dostupnost neznamená auto,
+  to se zaškrtává jako domluva), počty vysílaček a powerbank. Vysílačky
+  se počítají od dvou kusů, ideálně pro každého. Bydlení a sídlo od
+  24. 9. 2026 model opravdu používá: cesty označené v katalogu `bydleni`
+  / `sidlo` (kamna, studna, septik, gril, kanystr, MHD) se v možnostech
+  a v nákupu nenabízejí tam, kam nesedí; zaškrtnout je jde vždy. Počet
+  powerbank bez zadané kapacity vyvolá u pole kapacity výzvu.
 - **Energie ze spotřebičů** (23. 9. 2026): místo watthodin výběr spotřebičů
   s předvoleným příkonem a hodinami (přepsatelné podle štítku) a prioritou;
   tři režimy (jen kritické · kritické a nutné · vše), vydrž se ztrátami,
@@ -71,7 +80,12 @@ Z toho `src/lib/odolnost.ts` deterministicky počítá:
   v souboru s `overeno: false`.
 - **Nové funkce**: WC a odpadní voda (kanalizace samospádem, tlaková,
   domovní ČOV, septik, náhradní WC), chlazení jídla a léků, požár a otrava
-  plynem.
+  plynem. Suché WC je jen tady; hygiena (24. 9. 2026) má místo něj mytí
+  bez tekoucí vody, bojler jako zásobu užitkové vody a ohřev vody na mytí
+  bez sítě. Vaření má gril venku, světlo solární lampy; rady za 0 Kč
+  u každé oblasti doplněné o triky pro výpadek elektřiny, vody, teplé vody,
+  WC a tepla (stan v místnosti, dovaření v dekách, mince v mrazáku,
+  čerpací stanice domu, zpětné vzdutí kanalizace).
 - **Co dokoupit**: obecné věci bez značky a ceny, ke každé funkci bez
   nezávislé zálohy jedna, nejvýš osm. Odkazy do obchodů (náš e-shop, Rohlík,
   Alza) se ukážou, až budou adresy v konfiguraci `ESHOP` a `OBCHODY`;
@@ -132,7 +146,10 @@ kritických · 72 h), **každý bezpečnostní nález** (nad nabídkou, nikdy za
 ní), rady za 0 Kč a tlačítko *Začít znovu*. Za jednorázovým odemknutím
 jsou horizonty, vydrže, energie a solár, „co vypne co“, nákupní seznam,
 plán ke stažení, uložení na server a komunita. Bez brány web nabídku
-ukazuje jako „připravujeme“.
+ukazuje jako „připravujeme“. **Dokud Premium neběží** (`SPUSTENO.premium`
+= false, stav 24. 9. 2026), brána neexistuje a podrobnosti vidí každý:
+jinak by se dotazník ptal na zásoby a spotřebiče a nic z nich neukázal.
+Uložení na server zůstává jen s Premium.
 
 **Skóre a žebříček (22. 9. 2026):** `skore()` dává 0–100 (70 bodů zálohy
 podle důležitosti oblastí, 30 horizonty; oblasti „řeším jinak“ se
@@ -161,6 +178,20 @@ vlastní zdravotní nebo chemické postupy. *Žebříček* tu původně stál ta
 rozhodnutí provozovatele 22. 9. 2026 ho zavedlo v podobě, která zásady
 drží: pseudonymní, na účtech, bez procent pravděpodobnosti, bez
 notifikací a s možností odejít jedním tlačítkem.
+
+### Seznamy zásob (24. 9. 2026)
+
+`data/odolnost/seznamy.json`, čtyři seznamy s odškrtáváním na `/odolnost/`:
+**72 hodin** (podle HZS), **Rozšířený** (praxe komunit), **Pro pokročilé**
+(triky nad rámec seznamů pro výpadek elektřiny, vody, teplé vody, WC
+a tepla v bytě i domě: bojler jako zásoba, čerpací stanice domu, kanalizace
+bez proudu, suchý záchod s oddělenou močí, mytí z lavoru, stan v místnosti,
+ohřát člověka, ne místnost, dovaření v dekách, kartuše v mrazu, solární
+lampy, mince v mrazáku, léky v chladu, telefon na dny, auto jako zdroj,
+uzávěry, vytištěná stránka, zkušební večer bez proudu) a **AI tipy**.
+Poslední dva jsou sepsané s pomocí AI a stránka to u nich říká (AI Act,
+čl. 50). Žádný z nich nedává zdravotní, chemický ani elektrikářský postup.
+Karta „Připravit teď“ z nich vybírá s vahou 1,25 · 1 · 0,6 · 0,7.
 
 ## 7. Pole profilu a proč
 

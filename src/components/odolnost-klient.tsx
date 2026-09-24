@@ -32,6 +32,11 @@ import { Otaznik } from "./zaklad";
   plán ke stažení a uložení na server. Bezpečnostní nálezy jsou vždy nad
   nabídkou, ne za ní.
 
+  Dokud Premium neběží (SPUSTENO.premium), brána neexistuje a podrobnosti
+  vidí každý: jinak by se dotazník ptal na zásoby a spotřebiče a nic
+  z nich neukázal, a nabídka „odemknout“ by nebyla kde. Uložení na server
+  zůstává jen s Premium.
+
   Zásady značky: barva jen jako tečka vedle slova, žádné barevné písmo
   ani rámečky, jedna červená pro hlavní věc. Profil zůstává v zařízení;
   na server jde jen s Premium, šifrovaně, a jde smazat.
@@ -162,7 +167,19 @@ export function OdolnostKlient() {
   const pc = pocty(s);
   // Nálezy až po třech vyplněných oblastech: prázdný dotazník není nález, jen prázdný dotazník.
   const nalezy = vyplneno >= 3 ? bezpecnostniNalezy(p, s.hodnoceni) : [];
-  const zaridit = s.hodnoceni.filter((h) => h.mam.length > 0 && h.redundance < 3 && !h.nemohu).flatMap((h) => h.funkce.nulaKc.slice(0, 1).map((r) => ({ f: h.funkce.nazev, r }))).slice(0, 5);
+  /*
+    Rady za 0 Kč: napřed oblasti, které člověk vyplnil a mají slabinu, pak
+    oblasti bez jediné cesty (potřebují je nejvíc, ale jen od tří vyplněných
+    oblastí — prázdný dotazník není důvod k radám). Uvnitř podle důležitosti.
+  */
+  const zaridit = s.hodnoceni
+    .filter((h) => (h.mam.length > 0 || vyplneno >= 3) && h.redundance < 3 && !h.nemohu)
+    .sort((a, b) => Number(b.mam.length > 0) - Number(a.mam.length > 0) || b.funkce.dulezitost - a.funkce.dulezitost || a.redundance - b.redundance)
+    .flatMap((h) => h.funkce.nulaKc.slice(0, 1).map((r) => ({ f: h.funkce.nazev, r })))
+    .slice(0, 5);
+  // Bez brány není co zamykat: podrobnosti vidí každý, dokud Premium neběží.
+  const plnyVysledek = premium || !SPUSTENO.premium;
+  const powerbanek = p.vybaveni.powerbanky ?? 0;
 
   return (
     <div className="grid gap-10 lg:grid-cols-[minmax(0,1.25fr)_minmax(0,1fr)] lg:gap-12">
@@ -209,7 +226,7 @@ export function OdolnostKlient() {
             </p>
           </div>
           <div className="mt-3">
-            <Prepnuti id="od-rodina" nazev="Rodina nebo blízcí v pěší dostupnosti" popis="počítá se jako cesta u spojení, dopravy a péče" hodnota={p.kontext.rodinaVDosahu} onChange={(v) => kontext({ rodinaVDosahu: v })} />
+            <Prepnuti id="od-rodina" nazev="Rodina nebo blízcí v pěší dostupnosti" popis="počítá se jako cesta u spojení a péče; auto rodiny zaškrtněte u dopravy" hodnota={p.kontext.rodinaVDosahu} onChange={(v) => kontext({ rodinaVDosahu: v })} />
             <Prepnuti id="od-pece" nazev="Někdo je závislý na péči, léku nebo přístroji" popis="bez podrobností; jen zvýší váhu doporučení" hodnota={p.kontext.zavislyNaPeci} onChange={(v) => kontext({ zavislyNaPeci: v })} />
           </div>
           <button type="button" onClick={() => setPokrocile((x) => !x)} aria-expanded={pokrocile} className="mt-2 flex min-h-[40px] items-center gap-2 text-male font-semibold text-tlum hover:text-inkoust">
@@ -250,7 +267,7 @@ export function OdolnostKlient() {
             <Pocet id="od-uzitkova" nazev="Užitková voda (litry)" hodnota={p.zasoby.uzitkovaVodaL} onChange={(v) => uloz({ ...p, zasoby: { ...p.zasoby, uzitkovaVodaL: v } })} />
             <Pocet id="od-jidlo" nazev="Jídlo bez nákupu (dny pro všechny)" hodnota={p.zasoby.jidloDni} onChange={(v) => uloz({ ...p, zasoby: { ...p.zasoby, jidloDni: v } })} />
             <Pocet id="od-leky" nazev="Léky a pomůcky (dny, podle lékaře)" hodnota={p.zasoby.lekyDni} onChange={(v) => uloz({ ...p, zasoby: { ...p.zasoby, lekyDni: v } })} />
-            <Pocet id="od-kap" nazev="Vlastní zdroj energie (Wh)" hodnota={p.energie.kapacitaWh || null} onChange={(v) => uloz({ ...p, energie: { ...p.energie, kapacitaWh: v ?? 0 } })} poznamka="Powerstation, UPS, powerbanky dohromady. Kapacita je na štítku." />
+            <Pocet id="od-kap" nazev="Vlastní zdroj energie (Wh)" hodnota={p.energie.kapacitaWh || null} onChange={(v) => uloz({ ...p, energie: { ...p.energie, kapacitaWh: v ?? 0 } })} poznamka={powerbanek > 0 && !p.energie.kapacitaWh ? `Máte ${powerbanek} ${powerbanek === 1 ? "powerbanku" : powerbanek < 5 ? "powerbanky" : "powerbanek"}, ale kapacita chybí; bez ní se nepočítají. Sečtěte Wh ze štítků (mAh × 3,7 ÷ 1000).` : "Powerstation, UPS, powerbanky dohromady. Kapacita je na štítku."} />
           </div>
           <div className="mt-2">
             <Prepnuti id="od-dobijeni" nazev="Umím zdroj dobíjet bez sítě" popis="solár, generátor, auto" hodnota={p.energie.dobijeni} onChange={(v) => uloz({ ...p, energie: { ...p.energie, dobijeni: v } })} />
@@ -324,12 +341,12 @@ export function OdolnostKlient() {
             </div>
           )}
 
-          {premium ? (
+          {plnyVysledek ? (
             <>
               <div className="mt-6 pt-5">
                 <div className="flex items-center gap-1.5">
                   <span className="nadpis-boxu">Na kolik dní jste připraveni</span>
-                  <Otaznik popis={<span className="block">Plánovací horizont domácnosti podle zadaných zásob a předpokladů. 72 hodin je základ, ne cíl. Není to předpověď, jak dlouho co vydrží ve státě.</span>} />
+                  <Otaznik popis={<span className="block">Plánovací horizont domácnosti podle zadaných zásob a předpokladů. 72 hodin je základ, ne cíl. Bez údaje o vodě a jídle je horizont nehodnocený, ne připravený. Není to předpověď, jak dlouho co vydrží ve státě.</span>} />
                 </div>
                 <ul className="mt-3 grid grid-cols-2 gap-x-6 gap-y-2 sm:grid-cols-3">
                   {s.horizonty.map((h) => (
@@ -402,7 +419,7 @@ export function OdolnostKlient() {
                 <button type="button" onClick={() => window.print()} className={TLACITKO_TICHE}><Ikona nazev="dokument" velikost={14} tah={2} /> Tisk</button>
               </div>
               <p className="mt-3 text-drobne text-tlum2">
-                {zeServeru ? `Uloženo v zařízení i na serveru (${new Date(zeServeru).toLocaleString("cs-CZ")}), šifrovaně; smazat jde v účtu.` : "Uloženo v tomto zařízení; na server se ukládá po každé změně."} Katalog {VERZE_KATALOGU}. <Link href="/pripravenost/" className="odkaz">Oficiální nástroje a 72h základ</Link>
+                {!premium ? "Uloženo jen v tomto zařízení, nikam se neposílá." : zeServeru ? `Uloženo v zařízení i na serveru (${new Date(zeServeru).toLocaleString("cs-CZ")}), šifrovaně; smazat jde v účtu.` : "Uloženo v tomto zařízení; na server se ukládá po každé změně."} Katalog {VERZE_KATALOGU}. <Link href="/pripravenost/" className="odkaz">Oficiální nástroje a 72h základ</Link>
               </p>
             </>
           ) : (
@@ -539,6 +556,8 @@ function RadekFunkce({ h, profil, naCestu, naNemohu }: { h: HodnoceniFunkce; pro
                       <span className="block text-drobne text-tlum2">
                         {c.zavislosti.length ? `závisí na: ${c.zavislosti.map((z) => ZAVISLOSTI[z]?.nazev.toLowerCase() ?? z).join(", ")}` : "bez vnější závislosti"}
                         {c.poznamka ? ` · ${c.poznamka}` : ""}
+                        {c.zVlastniEnergie && !c.minWh ? " · s vlastním zdrojem energie (krok 03) bez závislosti na síti" : ""}
+                        {c.bydleni === "dum" ? " · obvykle dům" : c.bydleni === "byt" ? " · obvykle byt" : c.sidlo === "mesto" ? " · obvykle město" : c.sidlo === "venkov" ? " · obvykle venkov" : ""}
                         {c.kontext ? " · podle přepínače v kroku 01" : ""}
                         {pozn ? ` · ${pozn}` : ""}
                       </span>

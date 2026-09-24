@@ -42,15 +42,19 @@ export const SPOTREBICE: Spotrebic[] = [
   { klic: "notebook", nazev: "Notebook", w: 50, hodin: 4, priorita: "pohodli" },
   { klic: "zdravotnicky", nazev: "Zdravotnický přístroj (např. přístroj na spaní)", w: 40, hodin: 8, priorita: "kriticke", poznamka: "Příkon vezměte ze štítku nebo od výrobce; tady je jen zástupná hodnota." },
   { klic: "cerpadlo-studna", nazev: "Čerpadlo studny", w: 800, hodin: 0.5, priorita: "kriticke", poznamka: "Špička při startu bývá vyšší; zdroj musí zvládnout rozběh." },
+  { klic: "cerpadlo-kanalizace", nazev: "Čerpadlo domovní kanalizační šachty", w: 600, hodin: 0.3, priorita: "kriticke", poznamka: "Bez něj se v domě s tlakovou kanalizací nesmí splachovat; špička při rozběhu." },
   { klic: "kotel", nazev: "Plynový kotel (řízení a oběhové čerpadlo)", w: 100, hodin: 8, priorita: "kriticke", poznamka: "Samotný kotel; bez elektřiny většina kotlů nespustí." },
   { klic: "obehove-cerpadlo", nazev: "Oběhové čerpadlo topení (kamna, krb s výměníkem)", w: 60, hodin: 10, priorita: "kriticke" },
   { klic: "konvice", nazev: "Rychlovarná konvice", w: 2000, hodin: 0.25, priorita: "pohodli", poznamka: "Velký příkon na krátko; ne každý zdroj ho utáhne." },
   { klic: "varic", nazev: "Elektrický vařič nebo deska (jedna plotýnka)", w: 1500, hodin: 0.5, priorita: "nutne", poznamka: "Na vaření je plynový vařič úspornější než powerstation." },
   { klic: "mikrovlnka", nazev: "Mikrovlnná trouba", w: 1000, hodin: 0.25, priorita: "pohodli" },
   { klic: "tv", nazev: "Televize", w: 80, hodin: 3, priorita: "pohodli" },
+  { klic: "ventilator", nazev: "Ventilátor", w: 40, hodin: 8, priorita: "pohodli", poznamka: "V létě levná ochrana před vedrem; klimatizace je mimo možnosti přenosného zdroje." },
   { klic: "kamera", nazev: "Kamera nebo alarm", w: 10, hodin: 24, priorita: "pohodli" },
   { klic: "primotop", nazev: "Elektrický přímotop", w: 1500, hodin: 4, priorita: "pohodli", poznamka: "Na topení powerstation obvykle nestačí; počítejte s ní jen krátce." },
+  { klic: "elektricka-deka", nazev: "Elektrická deka nebo vyhřívaná podložka", w: 60, hodin: 8, priorita: "nutne", poznamka: "Ohřívá člověka, ne místnost: zlomek spotřeby přímotopu, a ten zlomek zdroj utáhne." },
   { klic: "tepelne-cerpadlo", nazev: "Tepelné čerpadlo", w: 2000, hodin: 8, priorita: "nutne", poznamka: "Obvykle mimo možnosti přenosného zdroje; spíš důvod pro jinou cestu k teplu." },
+  { klic: "bojler", nazev: "Elektrický bojler nebo průtokový ohřívač", w: 2000, hodin: 1, priorita: "pohodli", poznamka: "Obvykle mimo možnosti přenosného zdroje; teplou vodu na mytí ohřejte na vařiči nebo kamnech." },
 ];
 
 /** Uložený výběr: klíč předvolby (nebo vlastní) a přepsané hodnoty. */

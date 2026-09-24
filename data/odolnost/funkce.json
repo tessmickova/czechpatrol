@@ -1,6 +1,6 @@
 {
-  "_poznamka": "Katalog funkcí domácnosti pro odolnost. Model: potřeba → funkce → cesty (každá cesta má závislosti) → kompenzace. Deterministická data, žádný model. Texty jsou obecné a neobsahují zdravotní dávkování, úpravu vody ani zásahy do elektroinstalace — na to odkazují na oficiální postupy. Změna = nová verze. Cesta se „zVlastniEnergie“ potřebuje elektřinu, ale stačí jí vlastní zdroj (powerbanka, powerstation): má-li ho domácnost, závislost na síti u ní odpadá. Pole „koupit“ u cesty je obecný název věci (bez značky a ceny), která cestu zajistí; z něj se skládá seznam Co dokoupit. „pocet“ říká, ze kterého počtu ve vybavení se cesta počítá a od kolika kusů.",
-  "verze": "2026-09-23b",
+  "_poznamka": "Katalog funkcí domácnosti pro odolnost. Model: potřeba → funkce → cesty (každá cesta má závislosti) → kompenzace. Deterministická data, žádný model. Texty jsou obecné a neobsahují zdravotní dávkování, úpravu vody ani zásahy do elektroinstalace — na to odkazují na oficiální postupy. Změna = nová verze. Cesta se „zVlastniEnergie“ potřebuje elektřinu, ale stačí jí vlastní zdroj (powerbanka, powerstation): má-li ho domácnost, závislost na síti u ní odpadá. Pole „koupit“ u cesty je obecný název věci (bez značky a ceny), která cestu zajistí; z něj se skládá seznam Co dokoupit. „pocet“ říká, ze kterého počtu ve vybavení se cesta počítá a od kolika kusů. „minWh“ u cesty se „zVlastniEnergie“: vlastní zdroj sejme závislost na síti až od téhle kapacity ve Wh (powerbanka lednici neutáhne); bez „minWh“ stačí jakýkoli vlastní zdroj. „bydleni“ / „sidlo“ u cesty říká, kde cesta obvykle dává smysl (dům, město): v nabídce „co dokoupit“ a v možnostech se cesty, které do zadaného bydlení nesedí, nenabízejí — zaškrtnout je jde vždy.",
+  "verze": "2026-09-24",
   "zavislosti": {
     "elektrina": {
       "nazev": "Elektřina ze sítě"
@@ -57,13 +57,15 @@
           "zavislosti": [
             "elektrina"
           ],
-          "zadarmo": false
+          "zadarmo": false,
+          "bydleni": "dum"
         },
         {
           "klic": "studna-rucni",
           "nazev": "Studna nebo zdroj s ruční pumpou",
           "zavislosti": [],
-          "zadarmo": false
+          "zadarmo": false,
+          "bydleni": "dum"
         },
         {
           "klic": "zasoba",
@@ -95,19 +97,21 @@
       "nulaKc": [
         "Mějte doma čisté uzavíratelné nádoby a vědět, kde jsou; naplnit je z kohoutku trvá minuty.",
         "Zjistěte, kde je hlavní uzávěr vody v bytě nebo domě a kdo další ho umí zavřít.",
-        "Zjistěte na webu obce, jak funguje náhradní zásobování vodou (kde by stály cisterny)."
+        "Zjistěte na webu obce, jak funguje náhradní zásobování vodou (kde by stály cisterny).",
+        "Zjistěte, jestli má váš dům domovní čerpací (tlakovou) stanici: vyšší patra jsou pak bez vody i při výpadku elektřiny, ne jen vodovodu."
       ],
       "kompenzace": [
         "Bez místa na zásobu: menší nádoby na více místech (pod dřezem, ve skříni) místo jednoho velkého barelu.",
         "Bez vlastní studny: znát výdejní místa obce a mít čím vodu přinést (nádoby s víkem).",
-        "Úprava vody z neověřeného zdroje jen podle oficiálních doporučení (HZS, hygienická stanice); web vlastní postup nedává."
+        "Úprava vody z neověřeného zdroje jen podle oficiálních doporučení (HZS, hygienická stanice); web vlastní postup nedává.",
+        "Ve vyšších patrech bytového domu s čerpací stanicí počítejte s výpadkem vody i při výpadku proudu; zásoba v nádobách je pak jediná cesta, která na ničem nestojí."
       ],
       "ikona": "voda"
     },
     {
       "klic": "hygiena",
       "nazev": "Voda na hygienu a WC",
-      "potreba": "mýt se, splachovat, uklízet",
+      "potreba": "mýt se, splachovat, uklízet, mít teplou vodu na mytí",
       "dulezitost": 2,
       "zasoba": {
         "jednotka": "l",
@@ -130,7 +134,8 @@
           "zavislosti": [
             "elektrina"
           ],
-          "zadarmo": false
+          "zadarmo": false,
+          "bydleni": "dum"
         },
         {
           "klic": "uzitkova-zasoba",
@@ -141,19 +146,36 @@
           "koupit": "sud nebo velké nádoby na užitkovou vodu"
         },
         {
-          "klic": "suche-wc",
-          "nazev": "Řešení WC bez vody (pytle, chemické nebo suché WC)",
+          "klic": "myti-bez-vody",
+          "nazev": "Mytí bez tekoucí vody (vlhčené ubrousky, suchý šampon, dezinfekce rukou)",
           "zavislosti": [],
           "zadarmo": false,
-          "koupit": "pytle na WC a stahovací pásky, dezinfekce rukou"
+          "koupit": "vlhčené ubrousky, suchý šampon a dezinfekce rukou"
+        },
+        {
+          "klic": "bojler",
+          "nazev": "Zásobník teplé vody (bojler) jako nouzová zásoba užitkové vody",
+          "zavislosti": [],
+          "zadarmo": true,
+          "poznamka": "Před vypuštěním vypnout ohřev (jistič nebo plyn) a nechat vychladnout; vypouští se výpustným ventilem nebo hadicí u spodní části. Voda je užitková, ne pitná."
+        },
+        {
+          "klic": "ohrev-vody",
+          "nazev": "Ohřev vody na mytí bez sítě (vařič, kamna, solární sprcha)",
+          "zavislosti": [],
+          "zadarmo": false,
+          "koupit": "solární sprcha (černý vak) nebo velký hrnec na ohřev vody",
+          "poznamka": "Na umytí celého těla z lavoru stačí pár litrů teplé vody."
         }
       ],
       "nulaKc": [
         "Při hlášeném riziku výpadku napustit vanu nebo velké nádoby užitkovou vodou.",
-        "Mít oddělené nádoby na pitnou a užitkovou vodu a označené."
+        "Mít oddělené nádoby na pitnou a užitkovou vodu a označené.",
+        "Mytí z lavoru: pár litrů teplé vody, mýt se po částech od hlavy dolů, žínka místo sprchy.",
+        "Bojler drží desítky litrů užitkové vody i po výpadku vodovodu; zjistěte, kde má výpustný ventil."
       ],
       "kompenzace": [
-        "V bytě bez možnosti skladovat: pevné pytle a stahovací pásky na WC, vlhčené ubrousky a dezinfekce rukou nahradí část spotřeby vody.",
+        "V bytě bez možnosti skladovat: vlhčené ubrousky, suchý šampon a dezinfekce rukou nahradí část spotřeby vody; WC řešte v oblasti „WC a odpadní voda“.",
         "Hygiena je obvykle první limit — plánujte ji zvlášť od pití."
       ],
       "ikona": "voda"
@@ -196,7 +218,8 @@
           "klic": "tuha-paliva",
           "nazev": "Kamna nebo krb na dřevo či uhlí se zásobou paliva",
           "zavislosti": [],
-          "zadarmo": false
+          "zadarmo": false,
+          "bydleni": "dum"
         },
         {
           "klic": "jedna-mistnost",
@@ -209,11 +232,15 @@
       "nulaKc": [
         "Vyberte místnost, kterou lze nejlépe udržet teplou (malá, bez velkých oken), a plán, jak se do ní přesunout.",
         "Spočítejte deky a spacáky pro každého člena domácnosti.",
-        "Zjistěte, jestli váš kotel běží bez elektřiny; většina ne."
+        "Zjistěte, jestli váš kotel běží bez elektřiny; většina ne.",
+        "Stan nebo baldachýn postavený v místnosti: malý uzavřený prostor se vyhřeje teplem těla; spací kout u vnitřní zdi, ne u okna.",
+        "Ohřát člověka, ne místnost: ohřívací láhev (PET láhev s teplou vodou) do spacáku nebo elektrická deka berou zlomek energie přímotopu.",
+        "Zavřít dveře nevytápěných místností, zatáhnout závěsy, spáry oken utěsnit dekou nebo ručníkem: nejvíc tepla odchází okny."
       ],
       "kompenzace": [
         "V bytě bez možnosti kamen: plán jedné místnosti, teplé vrstvy, spacák na každou osobu, a znát místo, kam se přesunout (rodina, obec).",
-        "Spalovací topidla uvnitř jen ta, která jsou k tomu určená; jinak hrozí otrava oxidem uhelnatým — postupujte podle návodu výrobce a HZS."
+        "Spalovací topidla uvnitř jen ta, která jsou k tomu určená; jinak hrozí otrava oxidem uhelnatým — postupujte podle návodu výrobce a HZS.",
+        "Spát ve dvou nebo s dětmi pod jednou dekou; čepice na spaní, suché ponožky, vrstvy volně, ne natěsno."
       ],
       "ikona": "plamen"
     },
@@ -250,7 +277,17 @@
           "klic": "kamna",
           "nazev": "Kamna na tuhá paliva s plotnou",
           "zavislosti": [],
-          "zadarmo": false
+          "zadarmo": false,
+          "bydleni": "dum"
+        },
+        {
+          "klic": "gril-venku",
+          "nazev": "Gril nebo ohniště venku se zásobou dřevěného uhlí nebo dřeva (nikdy uvnitř)",
+          "zavislosti": [],
+          "zadarmo": false,
+          "bydleni": "dum",
+          "koupit": "dřevěné uhlí nebo dřevo na venkovní vaření",
+          "poznamka": "Uvnitř ani na balkoně ne: oxid uhelnatý a požár."
         },
         {
           "klic": "bez-vareni",
@@ -261,7 +298,10 @@
       ],
       "nulaKc": [
         "Mít v zásobě několik dní jídla, které se dá jíst bez vaření.",
-        "Vařič, který máte, jednou vyzkoušet a vědět, kolik kartuší zbývá."
+        "Vařič, který máte, jednou vyzkoušet a vědět, kolik kartuší zbývá.",
+        "Dovaření v dekách: jídlo přivést k varu, hrnec s pokličkou zabalit do dek nebo peřiny a nechat hodinu dojít; šetří palivo i kartuše.",
+        "Jídla, kterým stačí horká voda: kuskus, instantní nudle, ovesné vločky, polévky z pytlíku. Kartuše vydrží déle.",
+        "Kartuše s butanem v mrazu netlačí: v zimě vařič na propan-butanovou směs, nebo kartuši před vařením zahřát v kapse u těla, nikdy plamenem."
       ],
       "kompenzace": [
         "Bez vařiče: plánovat zásobu jídla bez vaření a teplé jídlo od sousedů nebo z obce."
@@ -300,6 +340,13 @@
           "koupit": "dobíjecí lampa"
         },
         {
+          "klic": "solarni-lampy",
+          "nazev": "Solární lampy (zahradní nebo kempingové), nabíjené přes den na okně",
+          "zavislosti": [],
+          "zadarmo": false,
+          "koupit": "solární zahradní lampa nebo solární kempingová svítilna"
+        },
+        {
           "klic": "svicky",
           "nazev": "Svíčky a zápalky (jen pod dohledem)",
           "zavislosti": [],
@@ -308,7 +355,8 @@
       ],
       "nulaKc": [
         "Dát svítilnu na pevné místo u vchodu, aby ji našel každý i potmě.",
-        "Vyzkoušet, zda baterky svítí, a mít je odděleně od zařízení."
+        "Vyzkoušet, zda baterky svítí, a mít je odděleně od zařízení.",
+        "Čelovka přiložená k průhledné láhvi s vodou rozptýlí světlo do celé místnosti; svítilna postavená ke stropu dělá totéž."
       ],
       "kompenzace": [
         "Světlo bývá vyřešené nejsnáz — pátý způsob osvětlení už odolnost nezvýší. Pozornost patří vodě a teplu."
@@ -394,7 +442,9 @@
         "Domluvte v rodině: když nejde volat, kde a kdy se sejdeme a kdo se stará o koho.",
         "Napište si důležitá čísla na papír; telefon může být vybitý.",
         "Tísňová volání 112 fungují i bez kreditu a přes cizí síť, pokud nějaká v dosahu je.",
-        "Domluvte se s rodinou v dosahu, kdo za kým dojde pěšky, když nejde volat."
+        "Domluvte se s rodinou v dosahu, kdo za kým dojde pěšky, když nejde volat.",
+        "Při přetížené síti posílat SMS, ne volat; v telefonu vypnout data a zapnout úsporný režim, baterie vydrží dny.",
+        "Powerbanku a telefon v mrazu nosit u těla: baterie v chladu ztrácí kapacitu."
       ],
       "kompenzace": [
         "Bez druhého telefonu: domluvené místo setkání a papírové kontakty jsou nezávislé na síti."
@@ -459,7 +509,8 @@
       "nulaKc": [
         "Zjistěte, na jaké frekvenci u vás hraje Český rozhlas, a jestli máte rádio, které nepotřebuje síť (auto, baterky).",
         "Uložte si offline postupy a kontakty z oficiálních zdrojů do telefonu (viz Připravenost).",
-        "Zjistěte, jak vaše obec informuje: rozhlas, SMS, aplikace."
+        "Zjistěte, jak vaše obec informuje: rozhlas, SMS, aplikace.",
+        "Vytiskněte jednu stránku: tísňová čísla, kontakty, frekvence rozhlasu, místo setkání, kde jsou uzávěry — a dejte ji na lednici."
       ],
       "kompenzace": [
         "Bez rádia: autorádio, soused s rádiem, rozhlas obce. Internet a mobilní data jsou jedna cesta, ne dvě — sdílejí síť i napájení."
@@ -510,7 +561,9 @@
             "elektrina"
           ],
           "zadarmo": false,
-          "zVlastniEnergie": true
+          "zVlastniEnergie": true,
+          "minWh": 300,
+          "poznamka": "Závislost na síti odpadá až od vlastního zdroje aspoň 300 Wh (kapacita v kroku 03); potřebný příkon určí štítek přístroje a výrobce."
         },
         {
           "klic": "rodina-dosah",
@@ -523,7 +576,8 @@
       "nulaKc": [
         "Sepište, kdo v domácnosti jaké léky nebo pomůcky potřebuje a kde jsou.",
         "Zjistěte u lékaře, zda lze mít rezervu na víc dní a jak se léky skladují.",
-        "Kurz první pomoci (ČČK, HZS) je levnější než cokoli z vybavení."
+        "Kurz první pomoci (ČČK, HZS) je levnější než cokoli z vybavení.",
+        "Léky, které potřebují chlad: zeptejte se lékaře, jak dlouho vydrží mimo lednici, a mějte chladicí pouzdro nebo box."
       ],
       "kompenzace": [
         "Zdravotní závislost na elektřině (přístroj) řešte s lékařem a výrobcem, ne podle webu; obec a IZS mají evidenci pro přednostní pomoc — zeptejte se."
@@ -557,7 +611,8 @@
           "nazev": "Rezerva paliva skladovaná podle předpisů",
           "zavislosti": [],
           "zadarmo": false,
-          "koupit": "schválený kanystr a rezerva paliva (skladujte podle pravidel pro hořlaviny)"
+          "koupit": "schválený kanystr a rezerva paliva (skladujte podle pravidel pro hořlaviny)",
+          "bydleni": "dum"
         },
         {
           "klic": "mhd",
@@ -566,7 +621,8 @@
             "externi-sluzba",
             "elektrina"
           ],
-          "zadarmo": false
+          "zadarmo": false,
+          "sidlo": "mesto"
         },
         {
           "klic": "kolo",
@@ -581,15 +637,6 @@
             "palivo"
           ],
           "zadarmo": true
-        },
-        {
-          "klic": "rodina-dosah",
-          "nazev": "Rodina nebo blízcí v dosahu s autem",
-          "zavislosti": [
-            "palivo"
-          ],
-          "zadarmo": true,
-          "kontext": "rodinaVDosahu"
         }
       ],
       "nulaKc": [
@@ -685,7 +732,8 @@
       "nulaKc": [
         "Sepište, co doma je a na kolik dní to je; často je to víc, než si myslíte.",
         "Zavést pravidlo „starší dopředu“ a zásobu běžně jíst a doplňovat.",
-        "Mít otvírák, který nepotřebuje elektřinu."
+        "Mít otvírák, který nepotřebuje elektřinu.",
+        "Pořadí spotřeby při výpadku: nejdřív lednice, pak mrazák, nakonec trvanlivé zásoby."
       ],
       "kompenzace": [
         "Bez místa: zásoba v tom, co běžně jíte, ne ve speciálních balíčcích; stačí o jeden nákup víc."
@@ -725,7 +773,8 @@
             "elektrina"
           ],
           "zadarmo": false,
-          "poznamka": "Dmychadlo potřebuje elektřinu; krátkodobě jde přerušit, dlouhodobě ne."
+          "poznamka": "Dmychadlo potřebuje elektřinu; krátkodobě jde přerušit, dlouhodobě ne.",
+          "bydleni": "dum"
         },
         {
           "klic": "septik",
@@ -734,7 +783,8 @@
             "externi-sluzba"
           ],
           "zadarmo": false,
-          "poznamka": "Nezávislé na elektřině, závislé na vývozu; znát objem a kdy byl naposledy vyvezen."
+          "poznamka": "Nezávislé na elektřině, závislé na vývozu; znát objem a kdy byl naposledy vyvezen.",
+          "bydleni": "dum"
         },
         {
           "klic": "suche-wc",
@@ -753,11 +803,13 @@
       "nulaKc": [
         "Zjistěte, jaký typ kanalizace máte — s čerpadlem se bez proudu splachovat nesmí.",
         "Mít doma pevné pytle a pásky; WC bez vody je první, co v bytě bez vody chybí.",
-        "Znát objem jímky a telefon na vývoz."
+        "Znát objem jímky a telefon na vývoz.",
+        "Kbelík s víkem, pevný pytel a stelivo, piliny nebo kočkolit: suchý záchod za pár korun; po každém použití zasypat, pak nezapáchá."
       ],
       "kompenzace": [
         "V bytě s tlakovou kanalizací: pytle do mísy a pásky, hygiena rukou dezinfekcí; splachovat až po obnovení.",
-        "Bez místa na suché WC: pytle a kbelík s víkem, odpad ukládat venku v uzavřené nádobě."
+        "Bez místa na suché WC: pytle a kbelík s víkem, odpad ukládat venku v uzavřené nádobě.",
+        "Ve vyšších patrech bytového domu při zpětném vzdutí kanalizace (zaplavená čistírna, přečerpávání bez proudu) nesplachovat: odpad se vrací do nejnižších bytů."
       ]
     },
     {
@@ -775,7 +827,8 @@
           ],
           "zadarmo": false,
           "zVlastniEnergie": true,
-          "poznamka": "Zavřená lednice udrží chlad hodiny, mrazák desítky hodin; s vlastním zdrojem déle."
+          "poznamka": "Zavřená lednice udrží chlad hodiny, mrazák desítky hodin; s vlastním zdrojem déle. Závislost na síti odpadá až od vlastního zdroje aspoň 500 Wh (zhruba půl dne provozu podle předvolby 45 W).",
+          "minWh": 500
         },
         {
           "klic": "chladici-box",
@@ -799,7 +852,9 @@
       ],
       "nulaKc": [
         "Při výpadku lednici neotvírat; mrazák nechat zavřený.",
-        "Zjistěte u lékaře, které léky chlad opravdu potřebují a jak dlouho vydrží bez něj."
+        "Zjistěte u lékaře, které léky chlad opravdu potřebují a jak dlouho vydrží bez něj.",
+        "Mince na kelímku zmrzlé vody v mrazáku: když je po výpadku u dna, obsah rozmrzl a znovu zmrzl.",
+        "Lahve s vodou do prázdných míst v mrazáku i lednici: plný prostor drží chlad déle a po rozmrznutí je to zásoba vody."
       ],
       "kompenzace": [
         "Bez boxu: nejdřív sníst, co se kazí; mražené jídlo po rozmrznutí uvařit, ne znovu mrazit."
@@ -854,7 +909,8 @@
       "nulaKc": [
         "Vyzkoušet detektory tlačítkem a vyměnit baterie.",
         "Vědět, kde je hlavní uzávěr plynu a jistič.",
-        "Náhradní vaření a topení uvnitř zvyšuje riziko: spalovat jen to, co je pro interiér určené, s větráním."
+        "Náhradní vaření a topení uvnitř zvyšuje riziko: spalovat jen to, co je pro interiér určené, s větráním.",
+        "Zavřít hlavní uzávěr vody a plynu a shodit jistič má umět každý dospělý v domácnosti; štítek s polohou u dveří."
       ],
       "kompenzace": [
         "V nájmu: přenosný detektor kouře a CO se lepí bez vrtání; hasicí rouška stojí málo a nezabere místo."

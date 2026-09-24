@@ -27,13 +27,15 @@ export interface PolozkaSeznamu {
   funkce: string | null;
 }
 export interface Seznam { klic: KlicSeznamu; nazev: string; popis: string; zdroj: { nazev: string; url: string } | null; polozky: PolozkaSeznamu[] }
-export type KlicSeznamu = "72h" | "rozsireny" | "ai";
+export type KlicSeznamu = "72h" | "rozsireny" | "pokrocile" | "ai";
 
 const DATA = seznamyData as unknown as { verze: string; hrozby: Record<Hrozba, string>; seznamy: Record<KlicSeznamu, Omit<Seznam, "klic">> };
 
 export const NAZVY_HROZEB = DATA.hrozby;
 export const VERZE_SEZNAMU = DATA.verze;
-export const PORADI_SEZNAMU: KlicSeznamu[] = ["72h", "rozsireny", "ai"];
+export const PORADI_SEZNAMU: KlicSeznamu[] = ["72h", "rozsireny", "pokrocile", "ai"];
+/** Seznamy sepsané s pomocí AI: stránka je tak označí (AI Act, čl. 50). */
+export const SEZNAMY_S_AI: KlicSeznamu[] = ["pokrocile", "ai"];
 
 export function seznamy(): Seznam[] {
   return PORADI_SEZNAMU.map((k) => ({ klic: k, ...DATA.seznamy[k] }));
@@ -141,9 +143,9 @@ export function pripravitTed(ted = Date.now()): PripravitTed {
       const nej = [...p.hrozby].sort((a, b) => (podle.get(b)?.skore ?? 0) - (podle.get(a)?.skore ?? 0))[0];
       const t = podle.get(nej);
       if (!t) continue;
-      /* Součet tlaku přes hrozby položky; základní seznam má přednost, tipy jen s velkým tlakem. */
+      /* Součet tlaku přes hrozby položky; základní seznam má přednost, tipy jen s velkým tlakem, triky pro pokročilé až po nich. */
       const soucet = p.hrozby.reduce((a, h) => a + (podle.get(h)?.skore ?? 0), 0);
-      const vaha = s.klic === "72h" ? 1.25 : s.klic === "rozsireny" ? 1 : 0.7;
+      const vaha = s.klic === "72h" ? 1.25 : s.klic === "rozsireny" ? 1 : s.klic === "ai" ? 0.7 : 0.6;
       kandidati.push({ ...p, seznam: s.klic, hrozba: nej, duvod: t.duvody[0] ?? NAZVY_HROZEB[nej], skore: Math.round(soucet * vaha * 10) / 10 });
     }
   }

@@ -301,6 +301,24 @@ export function PripravenostKlient({ nastroje }: { nastroje: OficialniNastroj[] 
                 })}
               </ul>
             )}
+            {/* Lékárnička a události: nejsou ve skóre (nejsou to služby státu), ale odpovědi nesmí zmizet — člověk je vyplnil. */}
+            {nacteno && (
+              <div className="mt-5">
+                <div className="flex items-center gap-1.5"><span className="nadpis-boxu">Lékárnička a události</span><Otaznik popis={<span className="block">Do skóre nevstupují: nejsou to služby státu, ale vaše vlastní odpovědi. Tady je jen, co jste si odpověděli.</span>} /></div>
+                <ul className="mt-1">
+                  {kroky.filter((k) => k.druh === "otazky").map((k) => {
+                    const so = souhrnOtazek(k.ids, odpovedi);
+                    const i = kroky.indexOf(k);
+                    return (
+                      <li key={k.klic} className="flex flex-wrap items-center justify-between gap-2 py-2">
+                        <span className="text-male text-inkoust">{k.nazev} <span className="cislice text-drobne text-tlum2">{so.zodpovezeno ? `${so.mam} z ${so.celkem} máte` : "bez odpovědí"}</span></span>
+                        <button type="button" onClick={() => jdi(i)} className="text-drobne font-semibold text-tlum hover:text-akcent">upravit →</button>
+                      </li>
+                    );
+                  })}
+                </ul>
+              </div>
+            )}
             <div className="mt-5 flex flex-wrap gap-2">
               <Tlacitko kam="/odolnost/" varianta="plny" velikost="m" ikona="terc">Kalkulačka odolnosti</Tlacitko>
               <Tlacitko kam="/" varianta="obrys" velikost="m">Zpět na přehled</Tlacitko>
