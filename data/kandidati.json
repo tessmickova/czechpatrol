@@ -120,6 +120,38 @@
     }
   },
   {
+    "id": "k-1d8899d37ffbab06",
+    "zachyceno": "2026-09-24T14:11:31.738Z",
+    "publikovano": "2026-09-24T13:53:18.000Z",
+    "zdroj": {
+      "nazev": "ANSA (Itálie, anglicky)",
+      "url": "https://www.ansa.it/english/news/politics/2026/09/24/riccardo-bossi-arrested-must-serve-5-years-and-9-months_ba96a498-5bdd-4feb-a71b-8bb18a5dd00f.html",
+      "typ": "wire",
+      "primarni": false
+    },
+    "titulek": "Riccardo Bossi arrested, must serve 5 years and 9 months",
+    "titulekPuvodni": "Riccardo Bossi arrested, must serve 5 years and 9 months",
+    "shrnuti": "(ANSA) - ROME, 24 SET - Riccardo Bossi, the eldest son of late Northern League founder Umberto Bossi, was arrested Wednesday in Busto Arsizio (Varese) following a cumulative sentencing order totaling 5 years and 9 months. The order, signed by Busto Arsizio Prosecutor Carlo Nocerino, was executed by ",
+    "kodZeme": "IT",
+    "zeme": "Itálie",
+    "kategorie": [
+      "zpravodajske"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "arrested"
+    ],
+    "naliehave": null,
+    "stav": "ceka",
+    "vyrez": {
+      "text": "Riccardo Bossi arrested, must serve 5 years and 9 months - Politics - Ansa.it\nSe hai scelto di non accettare i cookie di profilazione e tracciamento, puoi aderire all&rsquo;abbonamento \"Consentless\" a un costo molto accessibile, oppure scegliere un altro abbonamento per accedere ad ANSA.it.\nTi invitiamo a leggere le Condizioni Generali di Servizio , la Cookie Policy e l' Informativa Privacy .\nABBONAMENTO CONSENTLESS\nPuoi leggere tutti i titoli di ANSA.it e 10 contenuti ogni 30 giorni a &euro;16,99/anno\nServizio equivalente a quello accessibile prestando il consenso ai cookie di profilazione pubblicitaria e tracciamento\nDurata annuale (senza rinnovo automatico)\nUn pop-up ti avvertir&agrave; che hai raggiunto i contenuti consentiti in 30 giorni (potrai continuare a vedere tutti i titoli del sito, ma per aprire altri contenuti dovrai attendere il successivo periodo di 30 giorni)\nPubblicit&agrave; presente ma non profilata o gestibile mediante il pannello delle preferenze\nIscrizione alle Newsletter tematiche curate dalle redazioni ANSA.\nALTRI ABBONAMENTI\nPer accedere senza limiti a tutti i contenuti di ANSA.it\nScegli il piano di abbonamento pi&ugrave; adatto alle tue esigenze.\nSe hai…",
+      "stazeno": "2026-09-24T14:11:32.655Z",
+      "stav": 200
+    }
+  },
+  {
     "id": "k-a6f73207f51223be",
     "zachyceno": "2026-09-24T14:04:01.403Z",
     "publikovano": "2026-09-24T13:34:01.000Z",
@@ -11690,49 +11722,6 @@
       "kdy": "2026-09-20T07:48:17.187Z",
       "duvod": "pokracovani",
       "patriK": "moldavsko-dron-uzavrel-vzdusny-prostor-2026",
-      "poznamka": null
-    }
-  },
-  {
-    "id": "k-68ef713a1b87c050",
-    "zachyceno": "2026-09-10T09:33:26.921Z",
-    "publikovano": "2026-09-10T09:15:00.000Z",
-    "zdroj": {
-      "nazev": "Google News — sabotage Europe",
-      "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxNcjhSWm9mWXJrV09nRmVSVGpYYU5ja3VGZWVaSDdCUnJMTjBZMUlYUkpsYUZITmxwQ19pUXZKZE5ZN3hSZjBIR29aT3VVLUR1d1R1X3MwejROYkZkOExxeDV1OFUyaGpEOWgxOGxPVC04cWtLRzduRkZJTURaLXEzU2dkdnpndmhWeEpHZVJuR1h4WjFJRXpV?oc=5",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "NATO Allies Foil Suspected Russian Plot to Sabotage Undersea Cables - Modern Diplomacy",
-    "titulekPuvodni": "NATO Allies Foil Suspected Russian Plot to Sabotage Undersea Cables - Modern Diplomacy",
-    "shrnuti": "NATO Allies Foil Suspec",
-    "kodZeme": "RU",
-    "zeme": "Rusko",
-    "kategorie": [
-      "sabotaz",
-      "infrastruktura",
-      "nato",
-      "rusko"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "shody": [
-      "sabotage",
-      "undersea cable",
-      "nato",
-      "russia"
-    ],
-    "stav": "vyrizen",
-    "vyrez": {
-      "text": "Google News",
-      "stazeno": "2026-09-14T07:02:32.745Z",
-      "stav": 200
-    },
-    "naliehave": null,
-    "vyrizeni": {
-      "kdy": "2026-09-20T07:48:17.187Z",
-      "duvod": "pokracovani",
-      "patriK": "svalbard-nato-zabranilo-naciku-prerezani-kabelu-2026",
       "poznamka": null
     }
   }
