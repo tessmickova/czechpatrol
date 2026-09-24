@@ -1,5 +1,5 @@
 {
-  "aktualizovano": "2026-09-24T11:03:54.828Z",
+  "aktualizovano": "2026-09-24T12:04:54.306Z",
   "stavy": [
     {
       "klic": "cloudflare",
@@ -9,17 +9,17 @@
         {
           "nazev": "Network Performance Degradation — Asia-Pacific",
           "odkaz": "https://www.cloudflarestatus.com/incidents/8wmvkv5jkf15",
-          "aktualizovano": "2026-09-23T18:44:55.596Z"
+          "aktualizovano": "2026-09-23T18:44:55.000Z"
         },
         {
           "nazev": "Cloudflare One Clients are incorrectly challenged on some sites",
           "odkaz": "https://www.cloudflarestatus.com/incidents/tl0vrgjy99r0",
-          "aktualizovano": "2026-09-23T11:02:41.673Z"
+          "aktualizovano": "2026-09-23T11:02:41.000Z"
         },
         {
           "nazev": "Incorrect geo location for some Cloudflare WARP users",
           "odkaz": "https://www.cloudflarestatus.com/incidents/9g65dxfbcjln",
-          "aktualizovano": "2026-09-01T08:29:56.953Z"
+          "aktualizovano": "2026-09-01T08:29:56.000Z"
         }
       ],
       "postizene": [
@@ -28,16 +28,27 @@
         "Arica, Chile - (ARI)",
         "Algiers, Algeria - (ALG)"
       ],
-      "zkontrolovano": "2026-09-24T11:03:54.828Z",
+      "zkontrolovano": "2026-09-24T12:04:54.306Z",
       "chyba": null
     },
     {
       "klic": "zoom",
-      "stav": "provoz",
-      "popis": "All Systems Operational",
-      "incidenty": [],
-      "postizene": [],
-      "zkontrolovano": "2026-09-24T11:03:54.828Z",
+      "stav": "omezeni",
+      "popis": "Partially Degraded Service",
+      "incidenty": [
+        {
+          "nazev": "Service Degradation Affecting Zoom Phone and Zoom Contact Center Inbound calls in India",
+          "odkaz": "https://stspg.io/q2m1jkbvr4dg",
+          "aktualizovano": "2026-09-24T04:19:15.170-07:00"
+        }
+      ],
+      "postizene": [
+        "Calling (Inbound/Outbound)",
+        "Voice (Inbound/Outbound)",
+        "Zoom CX - APAC",
+        "Zoom Phone - APAC"
+      ],
+      "zkontrolovano": "2026-09-24T12:04:54.306Z",
       "chyba": null
     },
     {
@@ -46,7 +57,7 @@
       "popis": "All Systems Operational",
       "incidenty": [],
       "postizene": [],
-      "zkontrolovano": "2026-09-24T11:03:54.828Z",
+      "zkontrolovano": "2026-09-24T12:04:54.306Z",
       "chyba": null
     }
   ]
