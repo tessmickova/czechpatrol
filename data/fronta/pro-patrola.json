@@ -3426,7 +3426,7 @@
     "id": "z-mufsu6fx",
     "zadano": "2026-09-24T17:21:50.109Z",
     "zadal": "fronta",
-    "stav": "ceka",
+    "stav": "hotovo",
     "seznam": [
       {
         "druh": "navrh",
@@ -3669,6 +3669,250 @@
         "url": "https://www.ukrinform.net/rubric-ato/4167553-russian-attack-damages-120yearold-st-pokrovsky-church-in-kyiv.html"
       }
     ],
-    "zadani": "Seznam k vyřízení: 40 položek. Projdi ho celý.\n\nU KAŽDÉ položky musí po tobě zůstat stopa v datech — buď zápis, nebo\nodepsání s důvodem. Položka, ke které nic nenapíšeš, se počítá jako\nnevyřízená a vrátí se ti v dalším zadání.\n\nPravidla jsou v PATROL.md na tvé větvi a nemění se. Nejčastěji to padá na:\ndva nezávislé zdroje vždycky, datum události není datum článku, původce až\npo úředním závěru, [DOPLNIT] se nenahrazuje odhadem.\n\nZÁSADY TEXTU (od 24. 9. 2026, CLAUDE.md pravidlo č. 0.5 a 0.6)\n\n- Shrnuj jen to, co zdroj říká. Žádné nové tvrzení, závěr, motiv ani číslo.\n- Nezesiluj: podezřelý zůstane podezřelý, „údajně“ a „podle …“ zůstanou.\n- Každé tvrzení s původcem; tvrzení strany konfliktu jako její tvrzení.\n- Typ prostředku není původce: dron ruského typu mohl vyslat kdokoli, dron\n  ukrajinského typu mohla přesměrovat obrana nebo rušení. Původce jen\n  z úředního závěru nebo přihlášení; do té doby „nepotvrzený“ a napiš,\n  co víme (typ, směr letu) a kdo co tvrdí.\n- Zdroje neřaď podle země ani spektra: nejblíž věci je orgán, který ji\n  vyšetřuje nebo provozuje, pak potvrzení z druhé strany.\n- Věcně a s úctou ke všem: žádné nálepky ani hanlivé přezdívky.\n- Žádná jména soukromých osob, pohyby jednotek, podrobnosti vyšetřování\n  nad rámec oznámení úřadu ani návody.\n- Média ze sankčního seznamu EU (RT, Sputnik, RIA Novosti…) nejsou zdroj.\n- Projev, výzva, varování ani komentář politika či instituce (OSN, prezident,\n  ministr) není událost. Zapisuje se jen konkrétní bezpečnostní následek,\n  změna nebo rozhodnutí (vyhlášení, zákaz, nasazení, uzavření, sankce).\n  Řeč bez skutku odepiš jako „jen projev“.\n\nROZSAH — válka v Rusku a na Ukrajině\n\nPtal ses na to dvakrát, tak ať je to napsané a neptáš se potřetí. Pravidlo\nplyne z naší vlastní metodiky, oddíl o původci: „Útok Ukrajiny na ropovod\nv Rusku, který zastaví dodávky do Maďarska, je záznam.\" Rozhoduje tedy\ndoložený následek pro země, které sledujeme — ne to, kde se to stalo.\n\n- Úder uvnitř Ruska nebo Ukrajiny BEZ doloženého následku pro sledované\n  země je mimo rozsah. Zapiš `rozhodnuti: \"mimo-rozsah\"` a důvod.\n- VÝJIMKA (rozhodnutí provozovatelky 23. 9. 2026): zapisuje se i to, co na\n  Ukrajině NENÍ běžné — výrazný postup fronty (obsazení krajského města,\n  prolomení obrany v šíři desítek km), vpád nebo útok z NOVÉHO směru\n  (z Běloruska, z Podněstří, přes Černé moře na nové pobřeží), první\n  použití nového druhu zbraně, úder na jadernou elektrárnu. Denní údery\n  dronů a raket na ukrajinská města běžné jsou a zůstávají mimo rozsah.\n\nVÁLEČNĚ RELEVANTNÍ NÁVRHY SE ZVEŘEJŇUJÍ I BEZ ÚŘADU\n\nOd 23. 9. 2026: návrh o narušení pravidel ze strany protivníka (dron,\nstřela, sabotáž, špionáž pro Rusko, incident s válečnou lodí) nebo\no doloženém zlepšení vztahů se zveřejní jako „neověřeno úředně\", jakmile\nmá dvě nezávislé redakce (dvě různé domény). Běžná trestná činnost,\nterorismus bez vazby na stát, domácí politika a soudní spory občanů\nv zahraničí sem nepatří — ty dál čekají na úřední zdroj.\n- Týž úder S doloženým následkem (zastavené dodávky, zasažená evropská\n  firma, uzavřený vzdušný prostor, zbloudilý dron přes hranici) je záznam\n  jako každý jiný.\n\nNení to hodnocení té války. Je to hranice projektu: bezpečnostní situace\nv Česku a okolí. Kdybychom sem brali průběh bojů, utopí se v něm to, kvůli\nčemu sem lidé chodí.\n\nBEZPEČNOST OBSAHU — co do záznamu nepatří, i když to zdroj napsal\n\nCzechPatrol je pro civilisty, ne pro toho, kdo chce vědět, kde zasahují\nsložky. Do fakt ani nejasností nezapisuj: souřadnice GPS (stačí kraj nebo\nokres), pohyb, trasy a rozmístění jednotek či hlídek, počty zasahujících,\ninterní kontakty, neveřejná evakuační místa, zásoby, kapacity a slabá\nmísta infrastruktury, technické detaily využitelné k útoku. Kontrola dat\nsouřadnice a přístupové údaje zastaví jako chybu; pohyb jednotek hlásí\njako varování k posouzení. Když si nejsi jistý, jestli údaj civilista\npotřebuje, vynech ho — „provoz omezen\" stačí.\n\nZLEPŠENÍ A KDO JE ZAŘÍDIL\n\nWeb nemá být jen výčet zhoršení. Když stát, obec nebo provozovatel něco\nudělá a doloženě to pomůže, má to být vidět stejně nahlas jako incident.\nProto u druhu „opatreni“ vyplň pole `vykonal`: orgán nebo instituce, která\nkrok provedla (Policie ČR, Armáda ČR, ČEZ Distribuce, obec Dobrá) — nikdy\njméno osoby. A když opatření nebo jiný krok situaci prokazatelně zlepšil\n(provoz obnoven, hranice otevřena, výstraha odvolána), zapiš to do\n`deeskalacniSignaly` se zdrojem. Web z toho dělá blok „Co situaci\nzlepšuje“. Nevymýšlej: bez zdroje o zlepšení ani slovo.\n\nDOPAD NA ČESKO u zahraniční události\n\nU návrhu s kodZeme jiným než CZ vyplň pole `dopadNaCr`: `stav` (zadny |\nmozny | potvrzeny), `procRelevantni` (proč to sledujeme), `dopad` (co\ndnes doloženě platí pro lidi v Česku — u „zadny\" věta, že nic), `sledujeme`\n(co by to změnilo) a `overeno` (datum). Stav „mozny\" nebo „potvrzeny\" musí\nmít oporu ve zdrojích záznamu; jinak je to „zadny\". Zahraniční zpráva se\nnezveřejňuje proto, že je dramatická, ale proto, že na tyhle otázky\nodpovídá.\n\nA) 5 NÁVRHŮ BEZ ÚŘEDNÍHO ZDROJE — dohledej ho\n\nTyhle jsou zpracované a na webu už jsou vidět jako nepotvrzené. Chybí jim\ndruhý doklad z první ruky: úřad, policie, armáda, národní CERT nebo\nprovozovatel zasažené infrastruktury. S ním se záznam zveřejní sám.\n\nSběr od 20. 9. 2026 čte 35 úředních kanálů — vlády, ministerstva vnitra\na obrany, bezpečnostní služby, CERTy a policie sledovaných zemí, k tomu\nNATO, ENISA, Evropskou komisi a provozovatele sítí (ČEPS, Správa železnic,\nProRail). Seznam je v sber/zdroje-udalosti.ts v poli URADY. Hledej nejdřív\ntam; u nizozemské železnice je správný zdroj ProRail, ne médium.\n\nKdyž je u návrhu titulek cizojazyčný, přelož ho česky. Model, který to\ndělal při sběru, je od 20. 9. 2026 vypnutý.\n\nPOZOR na to, na čem se to už jednou zlomilo: úřední zdroj je odkaz NA ÚŘAD.\nZrcadlo tiskové zprávy (globalsecurity.org), distribuce (mynewsdesk.com)\nani veřejnoprávní vysílatel (irozhlas.cz) úřední zdroj nejsou. Kvůli tomu\nse 20. 9. musely stáhnout z webu dva záznamy, které se zveřejnily samy.\n\n 1. i-2026-09-16-114787e14f · 2026-09-16 · Rusko · Rusko: FSB zavedla dočasná omezení pohybu v okresech Kingisepp a Slantsy u hranice s Estonskem; estonští představitelé nevylučují souvislost s mobilizací [vráceno už 1×]\n    https://kyivindependent.com/russia-imposes-restrictions-near-estonian-border-amid-mobilization-concerns/\n 2. i-2026-09-24-e10e235c5f · 2026-09-24 · Česko · Česko: gripeny z Pardubic v noci na rozkaz NATO znovu hlídkovaly nad polským vzdušným prostorem, zásah nebyl nutný\n    https://www.irozhlas.cz/zpravy-domov/rozkaz-prisel-z-nato-ceske-gripeny-v-noci-opet-vzletly-chranit-polsky-vzdusny_2609241036_aru\n 3. i-2026-09-24-36b06b7fd8 · 2026-09-24 · Moldavsko · Moldavsko: dron s kamerou, pravděpodobně ruský typ Gerbera, dopadl a explodoval u vesnice Cernița v okrese Florești\n    https://www.ukrinform.net/rubric-ato/4167545-drone-that-crashed-in-moldova-identified-as-russian-gerbera.html\n 4. i-2026-09-23-240a0f841d · 2026-09-23 · Polsko · Polsko: požár poškodil rozvodnu a generátor pozemní stanice služby Starlink ve Woli Krobowské; ABW a CBŚP prověřují podezření na sabotáž\n    https://www.irozhlas.cz/zpravy-svet/polsko-ma-v-souvislosti-s-pozarem-u-stanice-sluzby-starlink-podezreni-na-sabotaz_2609241047_elev\n 5. i-2026-09-23-b8e950bae3 · 2026-09-23 · Německo · Německo: spatření dronu na 45 minut uzavřelo obě ranveje letiště Berlín-Brandenburg, policie pilota ani stroj nenašla\n    https://meduza.io/en/news/2026/09/23/drone-sighting-briefly-closes-berlin-brandenburg-airport-s-runways-controllers-recorded-28-drones-there-in-the-first-half-of-2026\n\nB) 35 NEPOSOUZENÝCH ZACHYCENÝCH ZPRÁV\n\nRozhodni, co je nová událost a co ne. U toho, co ne, napiš proč —\ntichý zápor vypadá zvenčí stejně jako porucha.\n\nTITULEK PIŠ ČESKY. Tohle je nové: do 20. 9. 2026 překládal cizojazyčné\ntitulky model při sběru, jenže placené volání je vypnuté. Od té doby jdou\nna web anglicky, což je na české stránce vidět na první pohled. Překlad je\nteď na tobě — věcně, co se stalo a kde, bez ozdob.\n\nDATUM UDÁLOSTI URČI Z TEXTU. Zachycená zpráva nese datum vydání zdroje,\na když ho zdroj neuvádí, datum, kdy si toho sběr všiml — takže dnešní.\nNa webu pak vypadají všechny zprávy jako dnešní, přestože se staly dřív.\nDo datumUdalosti patří den, kdy se to stalo. Když se z textu určit nedá,\nnech ho prázdný a napiš to do neznameho; nehádej podle data článku.\n\n 1. k-377fddbcc5f0343d · 2026-09-23 · Polsko · Poland says Russian military helicopter violated its airspace [vráceno už 1×]\n    https://meduza.io/en/news/2026/09/23/poland-says-russian-military-helicopter-violated-its-airspace\n 2. k-300872f1bfb42045 · 2026-09-23 · Polsko · Polský vzdušný prostor narušil ruský vojenský vrtulník, uvedla armáda [vráceno už 1×]\n    https://www.ceskenoviny.cz/zpravy/polsky-vzdusny-prostor-narusil-rusky-vojensky-vrtulnik-uvedla-armada/2878394?utm_source=rss&utm_medium=feed\n 3. k-bb66567f1a1a3b0c · 2026-09-24 · Ukrajina · Injury toll in Russian attack on Kyiv rises to nine, two people killed\n    https://www.ukrinform.net/rubric-ato/4167719-injury-toll-in-russian-attack-on-kyiv-rises-to-nine-two-people-killed.html\n 4. k-ee8ff7c6bf7d8071 · 2026-09-24 · Dánsko · Ruské hybridní útoky budou častější a s většími následky, varují Dánové\n    https://www.novinky.cz/clanek/zahranicni-evropa-ruske-hybridni-utoky-budou-castejsi-a-s-vetsimi-nasledky-varuji-danove-40599386\n 5. k-16ae3baef293817a · 2026-09-24 · Polsko · Russia could attack a Nato country within months, Danish intelligence says\n    https://www.theguardian.com/world/2026/sep/24/russia-could-attack-a-nato-country-within-months-danish-intelligence-says\n 6. k-15d045e73e34ba3f · 2026-09-24 · Polsko · Ukrainian suspect arrested after fatal stabbing at Polish abbey\n    https://www.euronews.com/2026/09/24/ukrainian-suspect-arrested-after-fatal-stabbing-at-polish-abbey\n 7. k-ade5b2f7674b4742 · 2026-09-24 · Ukrajina · Ukrenergo expects no power outages on Friday\n    https://www.ukrinform.net/rubric-economy/4167686-ukrenergo-expects-no-power-outages-on-friday.html\n 8. k-e6f2bafbf60acd38 · 2026-09-24 · Ukrajina · Nearly 230-kg warhead: Unexploded ballistic missile neutralized in Kyiv\n    https://www.ukrinform.net/rubric-ato/4167681-nearly-230kg-warhead-unexploded-ballistic-missile-neutralized-in-kyiv.html\n 9. k-88416b2d9742fe5c · 2026-09-24 · Německo · Chorváti vydali Nemecku Ukrajinca podozrivého zo sabotáže Nord Stream\n    https://www.teraz.sk/zahranicie/chorvati-vydali-nemecku-ukrajinca-podoz/994767-clanok.html\n10. k-af6839c1fd7da621 · 2026-09-24 · Polsko · „Rzecz w tym”: Politycy bawią się w to, kto jest bardziej prorosyjski\n    https://www.rp.pl/kraj/art45186561-rzecz-w-tym-politycy-bawia-sie-w-to-kto-jest-bardziej-prorosyjski\n11. k-75cfe960ec044cc4 · 2026-09-24 · Polsko · Starlink ground station catches fire near Warsaw. Polish security services suspect Russian sabotage.\n    https://meduza.io/en/news/2026/09/24/starlink-ground-station-catches-fire-near-warsaw-polish-security-services-suspect-russian-sabotage\n12. k-e8cb04ceb8431707 · 2026-09-24 · Německo · Chorvátsko vydá Nemecku potápača podozrivého z účasti na sabotáži plynovodov Nord Stream\n    https://www.aktuality.sk/clanok/3y8Hzrb/chorvatsko-vyda-nemecku-potapaca-podozriveho-z-ucasti-na-sabotazi-plynovodov-nord-stream/\n13. k-68602d14fdcc4363 · 2026-09-24 · Polsko · Ukrajinec pobodal v polském klášteře duchovní, jeden zemřel\n    https://www.novinky.cz/clanek/zahranicni-evropa-ukrajinec-pobodal-v-polskem-klastere-duchovni-jeden-zemrel-40599419\n14. k-5db0223ea6696ec1 · 2026-09-24 · Německo · Konec Ruského domu v Berlíně: Jak to vypadá uvnitř údajné bašty ruských agentů\n    https://denikn.cz/2190830/konec-ruskeho-domu-v-berline-jak-to-vypada-uvnitr-udajne-basty-ruskych-agentu/\n15. k-1d8899d37ffbab06 · 2026-09-24 · Itálie · Riccardo Bossi arrested, must serve 5 years and 9 months\n    https://www.ansa.it/english/news/politics/2026/09/24/riccardo-bossi-arrested-must-serve-5-years-and-9-months_ba96a498-5bdd-4feb-a71b-8bb1"
+    "zadani": "Seznam k vyřízení: 40 položek. Projdi ho celý.\n\nU KAŽDÉ položky musí po tobě zůstat stopa v datech — buď zápis, nebo\nodepsání s důvodem. Položka, ke které nic nenapíšeš, se počítá jako\nnevyřízená a vrátí se ti v dalším zadání.\n\nPravidla jsou v PATROL.md na tvé větvi a nemění se. Nejčastěji to padá na:\ndva nezávislé zdroje vždycky, datum události není datum článku, původce až\npo úředním závěru, [DOPLNIT] se nenahrazuje odhadem.\n\nZÁSADY TEXTU (od 24. 9. 2026, CLAUDE.md pravidlo č. 0.5 a 0.6)\n\n- Shrnuj jen to, co zdroj říká. Žádné nové tvrzení, závěr, motiv ani číslo.\n- Nezesiluj: podezřelý zůstane podezřelý, „údajně“ a „podle …“ zůstanou.\n- Každé tvrzení s původcem; tvrzení strany konfliktu jako její tvrzení.\n- Typ prostředku není původce: dron ruského typu mohl vyslat kdokoli, dron\n  ukrajinského typu mohla přesměrovat obrana nebo rušení. Původce jen\n  z úředního závěru nebo přihlášení; do té doby „nepotvrzený“ a napiš,\n  co víme (typ, směr letu) a kdo co tvrdí.\n- Zdroje neřaď podle země ani spektra: nejblíž věci je orgán, který ji\n  vyšetřuje nebo provozuje, pak potvrzení z druhé strany.\n- Věcně a s úctou ke všem: žádné nálepky ani hanlivé přezdívky.\n- Žádná jména soukromých osob, pohyby jednotek, podrobnosti vyšetřování\n  nad rámec oznámení úřadu ani návody.\n- Média ze sankčního seznamu EU (RT, Sputnik, RIA Novosti…) nejsou zdroj.\n- Projev, výzva, varování ani komentář politika či instituce (OSN, prezident,\n  ministr) není událost. Zapisuje se jen konkrétní bezpečnostní následek,\n  změna nebo rozhodnutí (vyhlášení, zákaz, nasazení, uzavření, sankce).\n  Řeč bez skutku odepiš jako „jen projev“.\n\nROZSAH — válka v Rusku a na Ukrajině\n\nPtal ses na to dvakrát, tak ať je to napsané a neptáš se potřetí. Pravidlo\nplyne z naší vlastní metodiky, oddíl o původci: „Útok Ukrajiny na ropovod\nv Rusku, který zastaví dodávky do Maďarska, je záznam.\" Rozhoduje tedy\ndoložený následek pro země, které sledujeme — ne to, kde se to stalo.\n\n- Úder uvnitř Ruska nebo Ukrajiny BEZ doloženého následku pro sledované\n  země je mimo rozsah. Zapiš `rozhodnuti: \"mimo-rozsah\"` a důvod.\n- VÝJIMKA (rozhodnutí provozovatelky 23. 9. 2026): zapisuje se i to, co na\n  Ukrajině NENÍ běžné — výrazný postup fronty (obsazení krajského města,\n  prolomení obrany v šíři desítek km), vpád nebo útok z NOVÉHO směru\n  (z Běloruska, z Podněstří, přes Černé moře na nové pobřeží), první\n  použití nového druhu zbraně, úder na jadernou elektrárnu. Denní údery\n  dronů a raket na ukrajinská města běžné jsou a zůstávají mimo rozsah.\n\nVÁLEČNĚ RELEVANTNÍ NÁVRHY SE ZVEŘEJŇUJÍ I BEZ ÚŘADU\n\nOd 23. 9. 2026: návrh o narušení pravidel ze strany protivníka (dron,\nstřela, sabotáž, špionáž pro Rusko, incident s válečnou lodí) nebo\no doloženém zlepšení vztahů se zveřejní jako „neověřeno úředně\", jakmile\nmá dvě nezávislé redakce (dvě různé domény). Běžná trestná činnost,\nterorismus bez vazby na stát, domácí politika a soudní spory občanů\nv zahraničí sem nepatří — ty dál čekají na úřední zdroj.\n- Týž úder S doloženým následkem (zastavené dodávky, zasažená evropská\n  firma, uzavřený vzdušný prostor, zbloudilý dron přes hranici) je záznam\n  jako každý jiný.\n\nNení to hodnocení té války. Je to hranice projektu: bezpečnostní situace\nv Česku a okolí. Kdybychom sem brali průběh bojů, utopí se v něm to, kvůli\nčemu sem lidé chodí.\n\nBEZPEČNOST OBSAHU — co do záznamu nepatří, i když to zdroj napsal\n\nCzechPatrol je pro civilisty, ne pro toho, kdo chce vědět, kde zasahují\nsložky. Do fakt ani nejasností nezapisuj: souřadnice GPS (stačí kraj nebo\nokres), pohyb, trasy a rozmístění jednotek či hlídek, počty zasahujících,\ninterní kontakty, neveřejná evakuační místa, zásoby, kapacity a slabá\nmísta infrastruktury, technické detaily využitelné k útoku. Kontrola dat\nsouřadnice a přístupové údaje zastaví jako chybu; pohyb jednotek hlásí\njako varování k posouzení. Když si nejsi jistý, jestli údaj civilista\npotřebuje, vynech ho — „provoz omezen\" stačí.\n\nZLEPŠENÍ A KDO JE ZAŘÍDIL\n\nWeb nemá být jen výčet zhoršení. Když stát, obec nebo provozovatel něco\nudělá a doloženě to pomůže, má to být vidět stejně nahlas jako incident.\nProto u druhu „opatreni“ vyplň pole `vykonal`: orgán nebo instituce, která\nkrok provedla (Policie ČR, Armáda ČR, ČEZ Distribuce, obec Dobrá) — nikdy\njméno osoby. A když opatření nebo jiný krok situaci prokazatelně zlepšil\n(provoz obnoven, hranice otevřena, výstraha odvolána), zapiš to do\n`deeskalacniSignaly` se zdrojem. Web z toho dělá blok „Co situaci\nzlepšuje“. Nevymýšlej: bez zdroje o zlepšení ani slovo.\n\nDOPAD NA ČESKO u zahraniční události\n\nU návrhu s kodZeme jiným než CZ vyplň pole `dopadNaCr`: `stav` (zadny |\nmozny | potvrzeny), `procRelevantni` (proč to sledujeme), `dopad` (co\ndnes doloženě platí pro lidi v Česku — u „zadny\" věta, že nic), `sledujeme`\n(co by to změnilo) a `overeno` (datum). Stav „mozny\" nebo „potvrzeny\" musí\nmít oporu ve zdrojích záznamu; jinak je to „zadny\". Zahraniční zpráva se\nnezveřejňuje proto, že je dramatická, ale proto, že na tyhle otázky\nodpovídá.\n\nA) 5 NÁVRHŮ BEZ ÚŘEDNÍHO ZDROJE — dohledej ho\n\nTyhle jsou zpracované a na webu už jsou vidět jako nepotvrzené. Chybí jim\ndruhý doklad z první ruky: úřad, policie, armáda, národní CERT nebo\nprovozovatel zasažené infrastruktury. S ním se záznam zveřejní sám.\n\nSběr od 20. 9. 2026 čte 35 úředních kanálů — vlády, ministerstva vnitra\na obrany, bezpečnostní služby, CERTy a policie sledovaných zemí, k tomu\nNATO, ENISA, Evropskou komisi a provozovatele sítí (ČEPS, Správa železnic,\nProRail). Seznam je v sber/zdroje-udalosti.ts v poli URADY. Hledej nejdřív\ntam; u nizozemské železnice je správný zdroj ProRail, ne médium.\n\nKdyž je u návrhu titulek cizojazyčný, přelož ho česky. Model, který to\ndělal při sběru, je od 20. 9. 2026 vypnutý.\n\nPOZOR na to, na čem se to už jednou zlomilo: úřední zdroj je odkaz NA ÚŘAD.\nZrcadlo tiskové zprávy (globalsecurity.org), distribuce (mynewsdesk.com)\nani veřejnoprávní vysílatel (irozhlas.cz) úřední zdroj nejsou. Kvůli tomu\nse 20. 9. musely stáhnout z webu dva záznamy, které se zveřejnily samy.\n\n 1. i-2026-09-16-114787e14f · 2026-09-16 · Rusko · Rusko: FSB zavedla dočasná omezení pohybu v okresech Kingisepp a Slantsy u hranice s Estonskem; estonští představitelé nevylučují souvislost s mobilizací [vráceno už 1×]\n    https://kyivindependent.com/russia-imposes-restrictions-near-estonian-border-amid-mobilization-concerns/\n 2. i-2026-09-24-e10e235c5f · 2026-09-24 · Česko · Česko: gripeny z Pardubic v noci na rozkaz NATO znovu hlídkovaly nad polským vzdušným prostorem, zásah nebyl nutný\n    https://www.irozhlas.cz/zpravy-domov/rozkaz-prisel-z-nato-ceske-gripeny-v-noci-opet-vzletly-chranit-polsky-vzdusny_2609241036_aru\n 3. i-2026-09-24-36b06b7fd8 · 2026-09-24 · Moldavsko · Moldavsko: dron s kamerou, pravděpodobně ruský typ Gerbera, dopadl a explodoval u vesnice Cernița v okrese Florești\n    https://www.ukrinform.net/rubric-ato/4167545-drone-that-crashed-in-moldova-identified-as-russian-gerbera.html\n 4. i-2026-09-23-240a0f841d · 2026-09-23 · Polsko · Polsko: požár poškodil rozvodnu a generátor pozemní stanice služby Starlink ve Woli Krobowské; ABW a CBŚP prověřují podezření na sabotáž\n    https://www.irozhlas.cz/zpravy-svet/polsko-ma-v-souvislosti-s-pozarem-u-stanice-sluzby-starlink-podezreni-na-sabotaz_2609241047_elev\n 5. i-2026-09-23-b8e950bae3 · 2026-09-23 · Německo · Německo: spatření dronu na 45 minut uzavřelo obě ranveje letiště Berlín-Brandenburg, policie pilota ani stroj nenašla\n    https://meduza.io/en/news/2026/09/23/drone-sighting-briefly-closes-berlin-brandenburg-airport-s-runways-controllers-recorded-28-drones-there-in-the-first-half-of-2026\n\nB) 35 NEPOSOUZENÝCH ZACHYCENÝCH ZPRÁV\n\nRozhodni, co je nová událost a co ne. U toho, co ne, napiš proč —\ntichý zápor vypadá zvenčí stejně jako porucha.\n\nTITULEK PIŠ ČESKY. Tohle je nové: do 20. 9. 2026 překládal cizojazyčné\ntitulky model při sběru, jenže placené volání je vypnuté. Od té doby jdou\nna web anglicky, což je na české stránce vidět na první pohled. Překlad je\nteď na tobě — věcně, co se stalo a kde, bez ozdob.\n\nDATUM UDÁLOSTI URČI Z TEXTU. Zachycená zpráva nese datum vydání zdroje,\na když ho zdroj neuvádí, datum, kdy si toho sběr všiml — takže dnešní.\nNa webu pak vypadají všechny zprávy jako dnešní, přestože se staly dřív.\nDo datumUdalosti patří den, kdy se to stalo. Když se z textu určit nedá,\nnech ho prázdný a napiš to do neznameho; nehádej podle data článku.\n\n 1. k-377fddbcc5f0343d · 2026-09-23 · Polsko · Poland says Russian military helicopter violated its airspace [vráceno už 1×]\n    https://meduza.io/en/news/2026/09/23/poland-says-russian-military-helicopter-violated-its-airspace\n 2. k-300872f1bfb42045 · 2026-09-23 · Polsko · Polský vzdušný prostor narušil ruský vojenský vrtulník, uvedla armáda [vráceno už 1×]\n    https://www.ceskenoviny.cz/zpravy/polsky-vzdusny-prostor-narusil-rusky-vojensky-vrtulnik-uvedla-armada/2878394?utm_source=rss&utm_medium=feed\n 3. k-bb66567f1a1a3b0c · 2026-09-24 · Ukrajina · Injury toll in Russian attack on Kyiv rises to nine, two people killed\n    https://www.ukrinform.net/rubric-ato/4167719-injury-toll-in-russian-attack-on-kyiv-rises-to-nine-two-people-killed.html\n 4. k-ee8ff7c6bf7d8071 · 2026-09-24 · Dánsko · Ruské hybridní útoky budou častější a s většími následky, varují Dánové\n    https://www.novinky.cz/clanek/zahranicni-evropa-ruske-hybridni-utoky-budou-castejsi-a-s-vetsimi-nasledky-varuji-danove-40599386\n 5. k-16ae3baef293817a · 2026-09-24 · Polsko · Russia could attack a Nato country within months, Danish intelligence says\n    https://www.theguardian.com/world/2026/sep/24/russia-could-attack-a-nato-country-within-months-danish-intelligence-says\n 6. k-15d045e73e34ba3f · 2026-09-24 · Polsko · Ukrainian suspect arrested after fatal stabbing at Polish abbey\n    https://www.euronews.com/2026/09/24/ukrainian-suspect-arrested-after-fatal-stabbing-at-polish-abbey\n 7. k-ade5b2f7674b4742 · 2026-09-24 · Ukrajina · Ukrenergo expects no power outages on Friday\n    https://www.ukrinform.net/rubric-economy/4167686-ukrenergo-expects-no-power-outages-on-friday.html\n 8. k-e6f2bafbf60acd38 · 2026-09-24 · Ukrajina · Nearly 230-kg warhead: Unexploded ballistic missile neutralized in Kyiv\n    https://www.ukrinform.net/rubric-ato/4167681-nearly-230kg-warhead-unexploded-ballistic-missile-neutralized-in-kyiv.html\n 9. k-88416b2d9742fe5c · 2026-09-24 · Německo · Chorváti vydali Nemecku Ukrajinca podozrivého zo sabotáže Nord Stream\n    https://www.teraz.sk/zahranicie/chorvati-vydali-nemecku-ukrajinca-podoz/994767-clanok.html\n10. k-af6839c1fd7da621 · 2026-09-24 · Polsko · „Rzecz w tym”: Politycy bawią się w to, kto jest bardziej prorosyjski\n    https://www.rp.pl/kraj/art45186561-rzecz-w-tym-politycy-bawia-sie-w-to-kto-jest-bardziej-prorosyjski\n11. k-75cfe960ec044cc4 · 2026-09-24 · Polsko · Starlink ground station catches fire near Warsaw. Polish security services suspect Russian sabotage.\n    https://meduza.io/en/news/2026/09/24/starlink-ground-station-catches-fire-near-warsaw-polish-security-services-suspect-russian-sabotage\n12. k-e8cb04ceb8431707 · 2026-09-24 · Německo · Chorvátsko vydá Nemecku potápača podozrivého z účasti na sabotáži plynovodov Nord Stream\n    https://www.aktuality.sk/clanok/3y8Hzrb/chorvatsko-vyda-nemecku-potapaca-podozriveho-z-ucasti-na-sabotazi-plynovodov-nord-stream/\n13. k-68602d14fdcc4363 · 2026-09-24 · Polsko · Ukrajinec pobodal v polském klášteře duchovní, jeden zemřel\n    https://www.novinky.cz/clanek/zahranicni-evropa-ukrajinec-pobodal-v-polskem-klastere-duchovni-jeden-zemrel-40599419\n14. k-5db0223ea6696ec1 · 2026-09-24 · Německo · Konec Ruského domu v Berlíně: Jak to vypadá uvnitř údajné bašty ruských agentů\n    https://denikn.cz/2190830/konec-ruskeho-domu-v-berline-jak-to-vypada-uvnitr-udajne-basty-ruskych-agentu/\n15. k-1d8899d37ffbab06 · 2026-09-24 · Itálie · Riccardo Bossi arrested, must serve 5 years and 9 months\n    https://www.ansa.it/english/news/politics/2026/09/24/riccardo-bossi-arrested-must-serve-5-years-and-9-months_ba96a498-5bdd-4feb-a71b-8bb1",
+    "rozhodnuti": [
+      {
+        "id": "i-2026-09-16-114787e14f",
+        "druh": "navrh",
+        "rozhodnuti": "ponechano-bez-uredniho-zdroje",
+        "duvod": "Beze změny."
+      },
+      {
+        "id": "i-2026-09-24-e10e235c5f",
+        "druh": "navrh",
+        "rozhodnuti": "jiz-zverejneno",
+        "duvod": "Tenhle návrh je už na webu zveřejněný jako „neověřeno úředně“ (overeni=neovereno), ale zůstal duplicitně i v data/navrhy.json na mé větvi — stejná chyba v pořadí kroků jako 24. 9. dřív. Odstranil jsem duplicitu z navrhy.json."
+      },
+      {
+        "id": "i-2026-09-24-36b06b7fd8",
+        "druh": "navrh",
+        "rozhodnuti": "jiz-zverejneno",
+        "duvod": "Tenhle návrh je už na webu zveřejněný jako „neověřeno úředně“ (overeni=neovereno), ale zůstal duplicitně i v data/navrhy.json na mé větvi — stejná chyba v pořadí kroků jako 24. 9. dřív. Odstranil jsem duplicitu z navrhy.json."
+      },
+      {
+        "id": "i-2026-09-23-240a0f841d",
+        "druh": "navrh",
+        "rozhodnuti": "jiz-zverejneno",
+        "duvod": "Tenhle návrh je už na webu zveřejněný jako „neověřeno úředně“ (overeni=neovereno), ale zůstal duplicitně i v data/navrhy.json na mé větvi — stejná chyba v pořadí kroků jako 24. 9. dřív. Odstranil jsem duplicitu z navrhy.json."
+      },
+      {
+        "id": "i-2026-09-23-b8e950bae3",
+        "druh": "navrh",
+        "rozhodnuti": "jiz-zverejneno",
+        "duvod": "Tenhle návrh je už na webu zveřejněný jako „neověřeno úředně“ (overeni=neovereno), ale zůstal duplicitně i v data/navrhy.json na mé větvi — stejná chyba v pořadí kroků jako 24. 9. dřív. Odstranil jsem duplicitu z navrhy.json."
+      },
+      {
+        "id": "k-377fddbcc5f0343d",
+        "druh": "kandidat",
+        "rozhodnuti": "duplicita",
+        "duvod": "Táž událost jako už zveřejněný záznam o vrtulníku Mi-8 (i-2026-09-23-d6a13634e0). Rozhodnuto už dříve."
+      },
+      {
+        "id": "k-300872f1bfb42045",
+        "druh": "kandidat",
+        "rozhodnuti": "duplicita",
+        "duvod": "Táž událost, viz výše. Rozhodnuto už dříve."
+      },
+      {
+        "id": "k-bb66567f1a1a3b0c",
+        "druh": "kandidat",
+        "rozhodnuti": "mimo-rozsah",
+        "duvod": "Aktualizace počtu obětí ruského útoku na Kyjev; uvnitř Ukrajiny, bez doloženého následku pro sledované země."
+      },
+      {
+        "id": "k-15d045e73e34ba3f",
+        "druh": "kandidat",
+        "rozhodnuti": "neudalost",
+        "duvod": "Táž událost jako klášterní útok v Jarosławi, rozhodnuto už dříve jako neudalost (motiv neznámý, presumpce neviny)."
+      },
+      {
+        "id": "k-ade5b2f7674b4742",
+        "druh": "kandidat",
+        "rozhodnuti": "neudalost",
+        "duvod": "Ukrenergo očekává, že v pátek nedojde k výpadkům elektřiny; zpráva o tom, že se něco nestane, ne o skutku."
+      },
+      {
+        "id": "k-e6f2bafbf60acd38",
+        "druh": "kandidat",
+        "rozhodnuti": "mimo-rozsah",
+        "duvod": "Nevybuchlá balistická střela zneškodněna v Kyjevě; uvnitř Ukrajiny, bez doloženého následku pro sledované země."
+      },
+      {
+        "id": "k-af6839c1fd7da621",
+        "druh": "kandidat",
+        "rozhodnuti": "neudalost",
+        "duvod": "Polský komentář o politické rétorice stran; názorový text, ne zpráva o události."
+      },
+      {
+        "id": "k-75cfe960ec044cc4",
+        "druh": "kandidat",
+        "rozhodnuti": "duplicita",
+        "duvod": "Táž událost jako nový návrh i-2026-09-23-240a0f841d (požár u polské stanice Starlink)."
+      },
+      {
+        "id": "k-68602d14fdcc4363",
+        "druh": "kandidat",
+        "rozhodnuti": "neudalost",
+        "duvod": "Táž událost jako klášterní útok v Jarosławi, rozhodnuto už dříve."
+      },
+      {
+        "id": "k-5db0223ea6696ec1",
+        "druh": "kandidat",
+        "rozhodnuti": "neudalost",
+        "duvod": "Reportáž o zavření „Ruského domu“ v Berlíně; popisný text bez nového rozhodnutí nebo skutku k dnešnímu dni."
+      },
+      {
+        "id": "k-1d8899d37ffbab06",
+        "druh": "kandidat",
+        "rozhodnuti": "neudalost",
+        "duvod": "Italský politik Riccardo Bossi odsouzen; domácí italská trestní věc bez vazby na rozsah projektu."
+      },
+      {
+        "id": "k-3effb647ee1353d3",
+        "druh": "kandidat",
+        "rozhodnuti": "duplicita",
+        "duvod": "Táž událost jako i-2026-09-23-240a0f841d (Starlink); polský vicepremiér o hybridní válce je už v návrhu."
+      },
+      {
+        "id": "k-b63fb65a58c9888a",
+        "druh": "kandidat",
+        "rozhodnuti": "neudalost",
+        "duvod": "Rodina íránských dvojčat žádá OSN o pomoc; nesouvisí s rozsahem projektu (Rusko/hybridní hrozby v Evropě)."
+      },
+      {
+        "id": "k-3f375e0ccbb39c4a",
+        "druh": "kandidat",
+        "rozhodnuti": "neudalost",
+        "duvod": "Táž událost jako klášterní útok v Jarosławi (Slovenský popis: dva kněží zemřeli, jiné číslo obětí než ostatní zdroje), rozhodnuto už dříve jako neudalost — motiv útočníka není znám."
+      },
+      {
+        "id": "k-78d22f2d3fe318c1",
+        "druh": "kandidat",
+        "rozhodnuti": "neudalost",
+        "duvod": "Polský ústavní soud a spor o nové soudce; domácí politika, mimo rozsah projektu."
+      },
+      {
+        "id": "k-392a8afe1f809cb0",
+        "druh": "kandidat",
+        "rozhodnuti": "duplicita",
+        "duvod": "Táž událost jako i-2026-09-23-240a0f841d (Starlink)."
+      },
+      {
+        "id": "k-11c80445ed35ec69",
+        "druh": "kandidat",
+        "rozhodnuti": "neudalost",
+        "duvod": "Německo vyšetřuje 105letého bývalého dozorce z nacistického tábora; historická válečná zločinnost z 2. světové války, ne současná hybridní hrozba."
+      },
+      {
+        "id": "k-9943fce2ef971771",
+        "druh": "kandidat",
+        "rozhodnuti": "neudalost",
+        "duvod": "Lotyšsko vyšle až 20 vojáků k odminování v Hormuzském průlivu; vojenská mise mimo sledovaný rozsah (Rusko/Bělorusko/hybridní hrozby v Evropě)."
+      },
+      {
+        "id": "k-2d4166d57ebf756d",
+        "druh": "kandidat",
+        "rozhodnuti": "neudalost",
+        "duvod": "Obvinění úředníci v pražské korupční kauze propuštěni; domácí korupční věc bez bezpečnostního rozměru."
+      },
+      {
+        "id": "k-e76d6ddcaa485553",
+        "druh": "kandidat",
+        "rozhodnuti": "mimo-rozsah",
+        "duvod": "Ruský útok na Žytomyrskou oblast, poškozené domy a vedení; uvnitř Ukrajiny, bez doloženého následku pro sledované země."
+      },
+      {
+        "id": "k-984a8089413c0902",
+        "druh": "kandidat",
+        "rozhodnuti": "neudalost",
+        "duvod": "Bezpečnostní opatření k papežově návštěvě Francie; rutinní ochranná akce, ne bezpečnostní hrozba."
+      },
+      {
+        "id": "k-923ffca2a455a278",
+        "druh": "kandidat",
+        "rozhodnuti": "duplicita",
+        "duvod": "Táž událost jako i-2026-09-23-240a0f841d (Starlink, Polsko tvrdí sabotáž)."
+      },
+      {
+        "id": "k-47360730502ab034",
+        "druh": "kandidat",
+        "rozhodnuti": "mimo-rozsah",
+        "duvod": "Muž zemřel v krytu při útoku na Ukrajinu; uvnitř Ukrajiny, bez doloženého následku pro sledované země."
+      },
+      {
+        "id": "k-fe001a4316d892be",
+        "druh": "kandidat",
+        "rozhodnuti": "duplicita",
+        "duvod": "Táž událost jako i-2026-09-23-240a0f841d (Starlink)."
+      },
+      {
+        "id": "k-9cc23a6ef99ad6c6",
+        "druh": "kandidat",
+        "rozhodnuti": "neudalost",
+        "duvod": "Táž historická věc jako výše (105letý dozorce), rozhodnuto už dříve."
+      },
+      {
+        "id": "k-dfe9ecc56fddf992",
+        "druh": "kandidat",
+        "rozhodnuti": "mimo-rozsah",
+        "duvod": "Ruský útok poškodil 120 let starý kostel v Kyjevě; uvnitř Ukrajiny, bez doloženého následku pro sledované země."
+      },
+      {
+        "id": "k-16ae3baef293817a",
+        "druh": "kandidat",
+        "rozhodnuti": "neudalost",
+        "duvod": "Dánská vojenská rozvědka (FE/DDIS) varovala, že hybridní útoky nabudou na intenzitě a že existuje „nízké, ale rostoucí riziko“ omezeného útoku na NATO v příštích měsících. Je to prognóza budoucnosti, ne doložený skutek; pravidlo č. 3c projektu výslovně zakazuje měřit či zaznamenávat pravděpodobnost budoucího útoku, i v náznaku. Konkrétní minulé incidenty, které zpráva zmiňuje (Lipsko, německé letadlo s municí, světlice ruské fregaty), jsou už jinde zaznamenané samostatně."
+      },
+      {
+        "id": "k-ee8ff7c6bf7d8071",
+        "druh": "kandidat",
+        "rozhodnuti": "duplicita",
+        "duvod": "Táž zpráva (Novinky.cz) jako výše; stejný důvod — prognóza, ne skutek."
+      },
+      {
+        "id": "k-40ebce19b873b8b0",
+        "druh": "kandidat",
+        "rozhodnuti": "mimo-rozsah",
+        "duvod": "Guvernér Krasnodarského kraje vyhlásil nouzový stav kvůli ukrajinským úderům na přístavy a export obilí (retroaktivně od 12. 8. 2026); jde o vnitroruský dopad (přebytky neprodaného obilí, tlak na ceny v Rusku), zdroj nezmiňuje doložený dopad na ceny nebo dodávky do sledovaných zemí."
+      },
+      {
+        "id": "k-a6f73207f51223be",
+        "druh": "kandidat",
+        "rozhodnuti": "neudalost",
+        "duvod": "Lotyšský parlament schválil hraniční kontroly zásilek obilí kvůli podezření na obcházení pravidel (i u ukrajinského, i u ruského/běloruského obilí); jde o obchodně-celní opatření proti podvodům, ne o narušení pravidel protivníkem ani o zlepšení vztahů ve smyslu válečného rozsahu."
+      },
+      {
+        "id": "k-bf89afba3a2c403d",
+        "druh": "kandidat",
+        "rozhodnuti": "mimo-rozsah",
+        "duvod": "Ruský útok na energetickou a hraniční infrastrukturu v Černovické oblasti (čtyři drony, tři sestřeleny, čtvrtý mířil k rumunské Suceavě); podle Ukrinformu bez obětí a poškození, žádný zdroj nedokládá skutečný dopad na Rumunsko nebo Moldavsko — jen že dron „mířil“ tím směrem."
+      },
+      {
+        "id": "k-aa438bb2cd4bf830",
+        "druh": "kandidat",
+        "rozhodnuti": "navrh",
+        "duvod": "Nová událost: chorvatský soud schválil vydání dalšího podezřelého v kauze Nord Stream (Volodymyr Žuravlov) do Německa (i-2026-09-18-aa438bb2cd)."
+      },
+      {
+        "id": "k-88416b2d9742fe5c",
+        "druh": "kandidat",
+        "rozhodnuti": "duplicita",
+        "duvod": "Táž událost, sloučeno do i-2026-09-18-aa438bb2cd."
+      },
+      {
+        "id": "k-e8cb04ceb8431707",
+        "druh": "kandidat",
+        "rozhodnuti": "duplicita",
+        "duvod": "Táž událost, sloučeno do i-2026-09-18-aa438bb2cd."
+      },
+      {
+        "id": "k-2f2f9a0d8a5804fe",
+        "druh": "kandidat",
+        "rozhodnuti": "neudalost",
+        "duvod": "Tvrzení, že Rusko připravuje útok na jeden ze tří středomořských států drony ukrytými v lodním kontejneru; jde o nedoloženou spekulaci o budoucím záměru, ne o skutek. Pravidlo č. 3c a č. 0 projektu takový obsah vylučují — nezveřejňuje se nic, co by mohlo vyvolat obavu z ohrožení bez doložení."
+      }
+    ],
+    "hotovo": "2026-09-24T17:31:23.274Z",
+    "odpoved": "Jeden nový návrh: Nord Stream — chorvatský soud schválil vydání dalšího podezřelého (Volodymyr Žuravlov, jiná osoba než už obžalovaný Kuzněcov) do Německa (i-2026-09-18-aa438bb2cd; Ukrainska Pravda a TASR/teraz.sk). Pět starých návrhů beze změny. Dánskou zprávu o riziku útoku na NATO v příštích měsících a slovenské tvrzení o chystaném ruském útoku na středomořský stát jsem nezapsal: jde o prognózy budoucnosti, a pravidlo č. 3c a č. 0 projektu zakazuje měřit či šířit pravděpodobnost budoucího útoku, i v náznaku. Krasnodarský nouzový stav a hraniční kontroly obilí v Lotyšsku jsou mimo rozsah/neudalost (vnitroruský dopad, resp. celní opatření proti podvodům). Útok na Černovickou oblast je mimo rozsah — bez dokladu skutečného dopadu na Rumunsko. Zbytek jsou duplicity (Starlink, vrtulník Mi-8, klášterní útok) a věci mimo tematický rozsah (papežova návštěva, italský politik, německý nacistický dozorce, pražská korupce)."
   }
 ]
