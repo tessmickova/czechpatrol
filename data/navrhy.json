@@ -66,5 +66,309 @@
     "aiZpracovano": true,
     "lidskyOvereno": false,
     "archivniZaznam": false
+  },
+  {
+    "kam": "zaznam",
+    "pripravil": "patrol",
+    "pripraveno": "2026-09-24T12:02:20.184Z",
+    "id": "i-2026-09-24-e10e235c5f",
+    "slug": "cz-e10e235c5f",
+    "titulek": "Česko: gripeny z Pardubic v noci na rozkaz NATO znovu hlídkovaly nad polským vzdušným prostorem, zásah nebyl nutný",
+    "kratkyTitulek": "Česko: gripeny z Pardubic v noci na rozkaz NATO znovu hlídkovaly nad polským vzdušným prostorem, zásah nebyl nutný",
+    "zeme": "Česko",
+    "kodZeme": "CZ",
+    "kategorie": [
+      "nato",
+      "cr"
+    ],
+    "datumUdalosti": "2026-09-24T00:00:00Z",
+    "datumZjisteni": "2026-09-24T00:00:00Z",
+    "aktualizovano": "2026-09-24T12:02:20.184Z",
+    "zavaznost": "Y1",
+    "jistota": "vysoka",
+    "stav": "bez-vysetrovani",
+    "atribuce": "neznama",
+    "puvodce": null,
+    "druh": "opatreni",
+    "fakta": [
+      "Podle armády ČR (citováno ČeskéNoviny/ČTK) vzlétly stíhačky JAS-39 Gripen v noci na 24. 9. 2026 na rozkaz NATO jako součást integrované protivzdušné a protiraketové obrany aliance.",
+      "Podle armády prováděly letouny hlídkování ve vzdušném prostoru s připraveností reagovat na možné hrozby nad Polskem.",
+      "Podle armády nebylo nutné použít sílu; po splnění úkolu se gripeny bezpečně vrátily na základnu v Pardubicích.",
+      "Podle Novinky.cz proběhla podobná mise i minulý týden (18. 9. 2026), kdy gripeny monitorovaly prostor u východní hranice Polska kvůli ruským dronům nad západní Ukrajinou."
+    ],
+    "neznameho": [
+      "Přesný čas vzletu a délku hlídky zdroje neuvádějí.",
+      "Co konkrétně misi vyvolalo tentokrát, zdroje neuvádějí — jen že šlo o alianční rozkaz.",
+      "Přímé vyjádření armády jsem četl přes ČeskéNoviny a Novinky, ne z vlastního účtu armády na síti X.",
+      "Odkaz kandidáta (irozhlas.cz) vrátil při otevření HTTP 403; do zdrojů patří kvůli deduplikaci, obsah jsem z něj neověřil."
+    ],
+    "vyznam": "",
+    "eskalacniSpousteče": [],
+    "deeskalacniSignaly": [],
+    "zdroje": [
+      {
+        "nazev": "Český rozhlas — Rozkaz přišel z NATO. České gripeny v noci opět vzlétly chránit polský vzdušný prostor",
+        "url": "https://www.irozhlas.cz/zpravy-domov/rozkaz-prisel-z-nato-ceske-gripeny-v-noci-opet-vzletly-chranit-polsky-vzdusny_2609241036_aru",
+        "typ": "media",
+        "publikovano": "2026-09-24T00:00:00Z",
+        "primarni": false,
+        "jazyk": "cs"
+      },
+      {
+        "nazev": "ČeskéNoviny.cz (ČTK) — České gripeny v noci na rozkaz NATO opět střežily nebe nad Polskem",
+        "url": "https://www.ceskenoviny.cz/zpravy/ceske-gripeny-v-noci-na-rozkaz-nato-opet-strezily-nebe-nad-polskem/2878729?utm_source=rss&utm_medium=feed",
+        "typ": "wire",
+        "publikovano": "2026-09-24T00:00:00Z",
+        "primarni": false,
+        "jazyk": "cs"
+      },
+      {
+        "nazev": "Novinky.cz — České gripeny v noci letěly nad Polsko",
+        "url": "https://www.novinky.cz/clanek/domaci-ceske-gripeny-v-noci-letely-nad-polsko-40599291",
+        "typ": "media",
+        "publikovano": "2026-09-24T00:00:00Z",
+        "primarni": false,
+        "jazyk": "cs"
+      }
+    ],
+    "souvisejici": [],
+    "historie": [
+      {
+        "kdy": "2026-09-24T00:00:00Z",
+        "text": "Zachyceno automatickým sběrem, druhý zdroj doložen před zařazením do fronty.",
+        "novySignal": true
+      }
+    ],
+    "novy": true,
+    "zapocitanoTyden": "2026-09-24",
+    "aiZpracovano": true,
+    "lidskyOvereno": false,
+    "archivniZaznam": false
+  },
+  {
+    "kam": "zaznam",
+    "pripravil": "patrol",
+    "pripraveno": "2026-09-24T12:03:50.398Z",
+    "id": "i-2026-09-24-36b06b7fd8",
+    "slug": "md-36b06b7fd8",
+    "titulek": "Moldavsko: dron s kamerou, pravděpodobně ruský typ Gerbera, dopadl a explodoval u vesnice Cernița v okrese Florești",
+    "kratkyTitulek": "Moldavsko: dron s kamerou, pravděpodobně ruský typ Gerbera, dopadl a explodoval u vesnice Cernița v okrese Florești",
+    "zeme": "Moldavsko",
+    "kodZeme": "MD",
+    "kategorie": [
+      "drony",
+      "rusko",
+      "hranice"
+    ],
+    "datumUdalosti": "2026-09-24T00:00:00Z",
+    "datumZjisteni": "2026-09-24T00:00:00Z",
+    "aktualizovano": "2026-09-24T12:03:50.398Z",
+    "zavaznost": "Y2",
+    "jistota": "stredni",
+    "stav": "probiha",
+    "atribuce": "neznama",
+    "puvodce": "neznamy",
+    "druh": "pripad",
+    "fakta": [
+      "Podle prezidentky Moldavska Maii Sandu vstoupily ráno 24. 9. 2026 do moldavského vzdušného prostoru čtyři drony během ruského útoku na Ukrajinu; podle ní nejméně jeden explodoval na severu země.",
+      "Podle moldavské policie šlo o zařízení s palubní kamerou, které nejspíš narazilo do stromu, spadlo na zem a explodovalo u vesnice Cernița v okrese Florești; podle předběžných zjištění nebyl nikdo zraněn.",
+      "Podle expertů technicko-pyrotechnické jednotky moldavské policie odpovídá nalezený dron znakům typu Gerbera používaného Ruskem; přesný model a výrobce se podle policie ještě ověřují.",
+      "Podle Ukrainska Pravda jde o první dron s vestavěnou kamerou nalezený v Moldavsku."
+    ],
+    "neznameho": [
+      "Konečné potvrzení typu a výrobce dronu policie ještě neuzavřela.",
+      "Rozsah škod ani přesné trasy všech čtyř dronů, o kterých mluví prezidentka Sandu, zdroje neuvádějí.",
+      "Zda šlo o záměrný útok na moldavské území, nebo o zbloudilý prostředek z útoku na Ukrajinu, nikdo z citovaných nerozlišuje.",
+      "Oficiální sdělení moldavské armády (army.md) jsem nenašel; zdroje jsou média a příspěvek prezidentky na síti X."
+    ],
+    "vyznam": "",
+    "eskalacniSpousteče": [],
+    "deeskalacniSignaly": [],
+    "zdroje": [
+      {
+        "nazev": "Ukrinform — Drone that crashed in Moldova identified as Russian Gerbera",
+        "url": "https://www.ukrinform.net/rubric-ato/4167545-drone-that-crashed-in-moldova-identified-as-russian-gerbera.html",
+        "typ": "media",
+        "publikovano": "2026-09-24T00:00:00Z",
+        "primarni": false,
+        "jazyk": "en"
+      },
+      {
+        "nazev": "Ukrainska Pravda — Drone wreckage with camera found in Moldova, likely Russian Gerbera – photos",
+        "url": "https://www.pravda.com.ua/eng/news/2026/09/24/8054871/",
+        "typ": "media",
+        "publikovano": "2026-09-24T00:00:00Z",
+        "primarni": false,
+        "jazyk": "en"
+      },
+      {
+        "nazev": "Ukrainska Pravda — Moldovan President Sandu: Russian drone explodes in Moldova during attack on Ukraine",
+        "url": "https://www.pravda.com.ua/eng/news/2026/09/24/8054858/",
+        "typ": "media",
+        "publikovano": "2026-09-24T00:00:00Z",
+        "primarni": false,
+        "jazyk": "en"
+      }
+    ],
+    "souvisejici": [],
+    "historie": [
+      {
+        "kdy": "2026-09-24T00:00:00Z",
+        "text": "Zachyceno automatickým sběrem, druhý zdroj doložen před zařazením do fronty.",
+        "novySignal": true
+      }
+    ],
+    "novy": true,
+    "zapocitanoTyden": "2026-09-24",
+    "aiZpracovano": true,
+    "lidskyOvereno": false,
+    "archivniZaznam": false
+  },
+  {
+    "kam": "zaznam",
+    "pripravil": "patrol",
+    "pripraveno": "2026-09-24T12:03:50.398Z",
+    "id": "i-2026-09-23-240a0f841d",
+    "slug": "pl-240a0f841d",
+    "titulek": "Polsko: požár poškodil rozvodnu a generátor pozemní stanice služby Starlink ve Woli Krobowské; ABW a CBŚP prověřují podezření na sabotáž",
+    "kratkyTitulek": "Polsko: požár poškodil rozvodnu a generátor pozemní stanice služby Starlink ve Woli Krobowské; ABW a CBŚP prověřují podezření na sabotáž",
+    "zeme": "Polsko",
+    "kodZeme": "PL",
+    "kategorie": [
+      "sabotaz",
+      "infrastruktura",
+      "vysetrovani"
+    ],
+    "datumUdalosti": "2026-09-23T00:00:00Z",
+    "datumZjisteni": "2026-09-24T00:00:00Z",
+    "aktualizovano": "2026-09-24T12:03:50.398Z",
+    "zavaznost": "O1",
+    "jistota": "stredni",
+    "stav": "probiha",
+    "atribuce": "neznama",
+    "puvodce": "neznamy",
+    "druh": "pripad",
+    "fakta": [
+      "Podle space24.pl a euronews.pl vypukl 23. 9. 2026 kolem 21:07 požár u pozemní stanice služby Starlink ve Woli Krobowské na Mazovsku; hasiči zasahovali od 21:00 třemi jednotkami, nikdo nebyl zraněn.",
+      "Podle obou zdrojů zasáhl požár rozvodnu a generátor napájení stanice; hasiči podle space24.pl na místě zaznamenali stopy žhářství.",
+      "Podle místopředsedy vlády Krzysztofa Gawkowského (euronews.pl) „nelze vyloučit sabotážní akci“ a jde podle něj o „další prvek hybridní války“; zdůraznil význam stanice pro telekomunikační bezpečnost Polska a pro internetové připojení na Ukrajině.",
+      "Podle mluvčího tajných služeb Jacka Dobrzyńského (euronews.pl) „ne všechna žhářství, ne všechny havárie jsou diverzní akty“; podle něj se zvažuje víc verzí od úmyslného zapálení po zkrat — jde o rozpor s vyjádřením vicepremiéra, ne o jednu verzi.",
+      "Podle obou zdrojů případ vyšetřují policie, Agentura vnitřní bezpečnosti (ABW) a Centrální vyšetřovací úřad policie (CBŚP)."
+    ],
+    "neznameho": [
+      "Zda šlo o žhářství, nebo o technickou závadu — vyšetřování podle mluvčího tajných služeb obě možnosti zvažuje.",
+      "Kdo by za případnou sabotáží stál; žádný zdroj původce nejmenuje.",
+      "Původní odkaz kandidáta (irozhlas.cz) jsem přímo neotevřel, vrátil HTTP 403."
+    ],
+    "vyznam": "",
+    "eskalacniSpousteče": [],
+    "deeskalacniSignaly": [],
+    "zdroje": [
+      {
+        "nazev": "Český rozhlas — Polsko má v souvislosti s požárem u stanice služby Starlink podezření na sabotáž",
+        "url": "https://www.irozhlas.cz/zpravy-svet/polsko-ma-v-souvislosti-s-pozarem-u-stanice-sluzby-starlink-podezreni-na-sabotaz_2609241047_elev",
+        "typ": "media",
+        "publikovano": "2026-09-24T00:00:00Z",
+        "primarni": false,
+        "jazyk": "cs"
+      },
+      {
+        "nazev": "space24.pl — Pożar stacji bazowej Starlink na Mazowszu. Służby badają sprawę",
+        "url": "https://space24.pl/satelity/komunikacja/pozar-stacji-bazowej-starlink-na-mazowszu-sluzby-badaja-sprawe",
+        "typ": "media",
+        "publikovano": "2026-09-24T00:00:00Z",
+        "primarni": false,
+        "jazyk": "pl"
+      },
+      {
+        "nazev": "Euronews.pl — Ogień przy stacji Starlink na Mazowszu. Wicepremier: nie można wykluczyć sabotażu",
+        "url": "https://pl.euronews.com/2026/09/24/ogien-przy-stacji-starlink-na-mazowszu-wicepremier-nie-mozna-wykluczyc-akcji-sabotazowej",
+        "typ": "media",
+        "publikovano": "2026-09-24T00:00:00Z",
+        "primarni": false,
+        "jazyk": "pl"
+      }
+    ],
+    "souvisejici": [],
+    "historie": [
+      {
+        "kdy": "2026-09-23T00:00:00Z",
+        "text": "Zachyceno automatickým sběrem, druhý zdroj doložen před zařazením do fronty.",
+        "novySignal": true
+      }
+    ],
+    "novy": true,
+    "zapocitanoTyden": "2026-09-23",
+    "aiZpracovano": true,
+    "lidskyOvereno": false,
+    "archivniZaznam": false
+  },
+  {
+    "kam": "zaznam",
+    "pripravil": "patrol",
+    "pripraveno": "2026-09-24T12:03:50.398Z",
+    "id": "i-2026-09-23-b8e950bae3",
+    "slug": "de-b8e950bae3",
+    "titulek": "Německo: spatření dronu na 45 minut uzavřelo obě ranveje letiště Berlín-Brandenburg, policie pilota ani stroj nenašla",
+    "kratkyTitulek": "Německo: spatření dronu na 45 minut uzavřelo obě ranveje letiště Berlín-Brandenburg, policie pilota ani stroj nenašla",
+    "zeme": "Německo",
+    "kodZeme": "DE",
+    "kategorie": [
+      "drony",
+      "infrastruktura"
+    ],
+    "datumUdalosti": "2026-09-23T00:00:00Z",
+    "datumZjisteni": "2026-09-23T00:00:00Z",
+    "aktualizovano": "2026-09-24T12:03:50.398Z",
+    "zavaznost": "Y1",
+    "jistota": "stredni",
+    "stav": "neuvedeno",
+    "atribuce": "neznama",
+    "puvodce": "neznamy",
+    "druh": "pripad",
+    "fakta": [
+      "Podle t-online (cituje Deutsche Flugsicherung) byl 23. 9. 2026 ve 20:00 spatřen dron u letiště Berlín-Brandenburg; ve 20:20 uzavřela Deutsche Flugsicherung nejprve severní a poté i jižní ranvej pro starty a přistání.",
+      "Podle t-online byla uzávěra zrušena ve 21:05, po 45 minutách přerušení provozu; podle Bild.de byla dvě letadla přesměrována do Drážďan.",
+      "Podle Meduzy (cituje dpa) zaznamenala řídicí věž letiště Schönefeld v první polovině roku 2026 celkem 28 spatření dronů, výrazně víc než jiná německá letiště.",
+      "Podle t-online se spolková policie druhý den ráno dronem ani pilotem nezabývala — pátrání nenašlo žádný stroj."
+    ],
+    "neznameho": [
+      "Kdo dron ovládal a odkud, zdroje neuvádějí.",
+      "Zda mělo spatření souvislost s jinými incidenty s drony v Německu; žádný zdroj souvislost netvrdí."
+    ],
+    "vyznam": "",
+    "eskalacniSpousteče": [],
+    "deeskalacniSignaly": [],
+    "zdroje": [
+      {
+        "nazev": "Meduza (anglicky) — Drone sighting briefly closes Berlin Brandenburg Airport's runways",
+        "url": "https://meduza.io/en/news/2026/09/23/drone-sighting-briefly-closes-berlin-brandenburg-airport-s-runways-controllers-recorded-28-drones-there-in-the-first-half-of-2026",
+        "typ": "media",
+        "publikovano": "2026-09-23T00:00:00Z",
+        "primarni": false,
+        "jazyk": "en"
+      },
+      {
+        "nazev": "t-online — Berlin: Drohnenalarm am Flughafen BER – Luftraum zeitweise gesperrt",
+        "url": "https://www.t-online.de/nachrichten/panorama/id_101449736/berlin-drohnenalarm-am-flughafen-ber-luftraum-zeitweise-gesperrt.html",
+        "typ": "media",
+        "publikovano": "2026-09-23T00:00:00Z",
+        "primarni": false,
+        "jazyk": "de"
+      }
+    ],
+    "souvisejici": [],
+    "historie": [
+      {
+        "kdy": "2026-09-23T00:00:00Z",
+        "text": "Zachyceno automatickým sběrem, druhý zdroj doložen před zařazením do fronty.",
+        "novySignal": true
+      }
+    ],
+    "novy": true,
+    "zapocitanoTyden": "2026-09-23",
+    "aiZpracovano": true,
+    "lidskyOvereno": false,
+    "archivniZaznam": false
   }
 ]
