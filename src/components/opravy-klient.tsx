@@ -116,7 +116,7 @@ export function OpravaZaznamu() {
               <h3 className="text-male leading-snug text-inkoust">{z.titulek ?? slug}</h3>
 
               {otevreno ? (
-                <div className="mt-3 border-t border-linka2 pt-3">
+                <div className="mt-3 pt-3">
                   <div className="grid gap-2">
                     {POLE_OPRAV.map((f) => (
                       <label key={f.klic} className="block">

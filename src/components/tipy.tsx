@@ -34,9 +34,9 @@ export function TipyKPriprave({ ted = Date.now(), vnoreny = false }: { ted?: num
   if (!t.length) return null;
 
   return (
-    <section aria-labelledby="tipy-nadpis" className={vnoreny ? "px-4 py-3" : "overflow-hidden rounded-[22px] border border-linka2 bg-plocha"}>
+    <section aria-labelledby="tipy-nadpis" className={vnoreny ? "px-4 py-3" : "overflow-hidden rounded-[22px] bg-plocha"}>
       {vnoreny ? <h3 id="tipy-nadpis" className="sr-only">Tipy k přípravě</h3> : <HlavickaWidgetu ikona="fajfka" nazev="Tipy k přípravě" id="tipy-nadpis" ton="klid" meta={<span className="cislice">{t.length}</span>} />}
-      <ul className={`divide-y divide-linka2 ${vnoreny ? "" : "px-4 py-3"}`}>
+      <ul className={`${vnoreny ? "" : "px-4 py-3"}`}>
         {t.map((x) => (
           <li key={x.klic} className="py-2.5 first:pt-0 last:pb-0">
             <div className="flex flex-wrap items-baseline gap-x-2.5 gap-y-1">

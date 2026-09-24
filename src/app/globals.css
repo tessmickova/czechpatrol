@@ -224,6 +224,16 @@ body {
   je tu jen na krátká návěští — nikdy ne na větu. Váha 600 místo 500: ve
   světlém režimu bylo prostrkané mono při 500 příliš slabé.
 */
+/* Nadpis karty nebo boxu: stejné písmo jako ostatní nadpisy (24. 9. 2026), ne mono štítek. */
+.nadpis-boxu {
+  font-family: var(--font-sans);
+  font-size: 15px;
+  line-height: 1.2;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  color: var(--color-inkoust);
+}
+
 .stitek {
   font-family: var(--font-mono);
   font-size: 12.5px;

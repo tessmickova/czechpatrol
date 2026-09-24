@@ -33,7 +33,7 @@ const DUVODY: Record<Odmitnuty["duvod"], string> = {
 
 function Radek({ o }: { o: Odmitnuty }) {
   return (
-    <li className="border-b border-linka2 px-4 py-3.5 last:border-b-0 sm:px-5">
+    <li className="px-4 py-3.5 last:border-b-0 sm:px-5">
       <div className="flex flex-wrap items-center gap-x-2.5 gap-y-1.5">
         <span className="font-mono text-mikro text-tlum2">{datumCas(o.publikovano ?? o.zachyceno)}</span>
         <Odznak ton="neutral">{DUVODY[o.duvod]}</Odznak>
@@ -70,13 +70,13 @@ function Radek({ o }: { o: Odmitnuty }) {
 function Skupina({ nadpis, popis, polozky, otevreno = false }: { nadpis: string; popis: string; polozky: Odmitnuty[]; otevreno?: boolean }) {
   if (!polozky.length) return null;
   return (
-    <details open={otevreno} className="mt-6 overflow-hidden rounded-[22px] border border-linka2 bg-plocha">
+    <details open={otevreno} className="mt-6 overflow-hidden rounded-[22px] bg-plocha">
       <summary className="cursor-pointer list-none px-4 py-3.5 sm:px-5">
         <span className="text-zaklad font-semibold text-inkoust">{nadpis}</span>
         <span className="ml-2 font-mono text-male text-tlum2">{polozky.length}</span>
         <span className="mt-0.5 block text-drobne text-tlum2">{popis}</span>
       </summary>
-      <ol className="border-t border-linka2">
+      <ol>
         {polozky.map((o) => (
           <Radek key={o.id} o={o} />
         ))}

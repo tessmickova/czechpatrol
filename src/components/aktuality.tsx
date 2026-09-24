@@ -266,7 +266,7 @@ export function Aktuality({
   return (
     <aside
       aria-labelledby="aktuality-nadpis"
-      className="relative flex h-full flex-col overflow-hidden rounded-[22px] border border-linka2 bg-plocha"
+      className="relative flex h-full flex-col overflow-hidden rounded-[22px] bg-plocha"
       onPointerLeave={skryj}
     >
       <HlavickaWidgetu ikona="radar" nazev="Aktuality" id="aktuality-nadpis" jako="h2" meta={<span className="cislice">{posledni.length} ověřených{neoverene.length ? ` · ${neoverene.length} neověřených` : ""}</span>} />
@@ -277,7 +277,7 @@ export function Aktuality({
         vypadl ze zaobleného rámu pryč.
       */}
       <div className="flex min-h-0 flex-1 flex-col overflow-hidden">
-      <ul className="divide-y divide-linka2">
+      <ul>
         {posledni.map((z) => {
           const t = PASMA[UROVNE[z.zavaznost].pasmo];
           const nahledZ = nahledZaznamu(z);
@@ -334,7 +334,7 @@ export function Aktuality({
           <Otaznik label="Co znamená neověřeno" popis={<span className="block">Zpracované, ale nepotvrzené záznamy a zprávy zachycené sběrem. Do počtů ani do hodnocení nevstupují.</span>} />
         </div>
       </div>
-        <ul className="divide-y divide-linka2">
+        <ul>
           {neoverene.map((r) => {
             const trida = "flex items-start gap-2.5 px-4 py-2 hover:bg-plocha2";
             const telo = (
@@ -367,7 +367,7 @@ export function Aktuality({
       </>
       )}
       {cizojazycnych > 0 && (
-        <Link href="/udalosti/?tab=cekajici" className="block border-t border-linka2 px-4 py-2 text-drobne text-tlum2 hover:bg-plocha2 hover:text-tlum">
+        <Link href="/udalosti/?tab=cekajici" className="block px-4 py-2 text-drobne text-tlum2 hover:bg-plocha2 hover:text-tlum">
           + {cizojazycnych} {cizojazycnych === 1 ? "zachycená zpráva v cizím jazyce" : cizojazycnych < 5 ? "zachycené zprávy v cizím jazyce" : "zachycených zpráv v cizím jazyce"} ve frontě →
         </Link>
       )}
@@ -380,7 +380,7 @@ export function Aktuality({
         na úvodní straně — podruhé totéž, co je tady a v Událostech. Tlačítko
         ho nahrazuje.
       */}
-      <div className="mt-auto border-t border-linka2 px-4 py-2.5">
+      <div className="mt-auto px-4 py-2.5">
         {/*
           Plná červená, stejná jako „Odebírat na Telegramu": je to jediná
           cesta k archivu z úvodu a úvod sám žádné tlačítko na záznamy nemá.

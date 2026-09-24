@@ -105,7 +105,7 @@ export function OvladaniOverovani() {
       {hlaska && <Hlaska typ={hlaska.typ}>{hlaska.text}</Hlaska>}
 
       {ai && (
-        <div className="mt-4 border-t border-linka2 pt-4">
+        <div className="mt-4 pt-4">
           <div className="flex flex-wrap items-center gap-2">
             <button type="button" disabled={ceka} onClick={() => uloz({ zapnuto: !ai.zapnuto })} className={ai.zapnuto ? TLACITKO_TICHE : TLACITKO_AKCENT}>
               {ai.zapnuto ? "Vypnout posuzování" : "Zapnout posuzování"}
@@ -143,7 +143,7 @@ export function OvladaniOverovani() {
         </div>
       )}
 
-      <div className="mt-5 border-t border-linka2 pt-4">
+      <div className="mt-5 pt-4">
         <div className="stitek mb-1">Zadání pro externího ověřovatele</div>
         <p className="mb-2 text-mikro leading-snug text-tlum2">
           Napište, co má ověřit. Zapíše se mu to do fronty na jeho větev; sám si ji
@@ -169,7 +169,7 @@ export function OvladaniOverovani() {
           položek to znamená, že to nedělá.
         */}
         {fronta.length > 0 && (
-          <ul className="mt-4 space-y-2 border-t border-linka2 pt-4">
+          <ul className="mt-4 space-y-2 pt-4">
             {fronta.map((z) => (
               <li key={z.id} className="rounded-[18px] border border-linka p-3.5">
                 <div className="mb-1 flex flex-wrap items-center justify-between gap-2">

@@ -37,8 +37,8 @@ export function TabulkaZemi({ maxZemi = 12 }: { maxZemi?: number }) {
   if (!zeme.length) return null;
 
   return (
-    <section aria-label="Typy událostí po zemích" className="flex h-full flex-col overflow-hidden rounded-[22px] border border-linka2 bg-plocha">
-      <div className="flex items-center justify-between gap-3 border-b border-linka2 px-4 py-2.5">
+    <section aria-label="Typy událostí po zemích" className="flex h-full flex-col overflow-hidden rounded-[22px] bg-plocha">
+      <div className="flex items-center justify-between gap-3 px-4 py-2.5">
         <span className="flex items-center gap-1.5"><span className="stitek">Podle zemí</span><Otaznik popis={<span className="block">Nejvyšší doložená úroveň od roku 2014. Pomlčka = záznam nemáme, ne že se nic nestalo. Vojenské riziko hodnotíme jen pro Evropu jako celek.</span>} /></span>
       </div>
 

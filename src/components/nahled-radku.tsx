@@ -96,7 +96,7 @@ export function PanelNahledu({ nahled, kde }: { nahled: Nahled | null; kde: { x:
         <p className="cislice mt-1.5 text-mikro leading-snug text-tlum2">{nahled.radky.join(" · ")}</p>
       )}
       {nahled.udaje && nahled.udaje.length > 0 && (
-        <dl className="mt-2.5 grid grid-cols-[auto_minmax(0,1fr)] gap-x-3 gap-y-1 border-t border-linka2 pt-2.5 text-drobne leading-snug">
+        <dl className="mt-2.5 grid grid-cols-[auto_minmax(0,1fr)] gap-x-3 gap-y-1 pt-2.5 text-drobne leading-snug">
           {nahled.udaje.map((u) => (
             <Fragment key={u.popisek}>
               <dt className="stitek text-tlum2">{u.popisek}</dt>

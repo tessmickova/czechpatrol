@@ -23,7 +23,7 @@ import { sklon, Vlajka } from "./zeme";
 
 function Cislo({ n, slovo }: { n: number; slovo: string }) {
   return (
-    <span className="flex flex-col rounded-[18px] border border-linka2 bg-plocha px-3 py-2">
+    <span className="flex flex-col rounded-[18px] bg-plocha px-3 py-2">
       <span className="cislice text-cislo font-bold leading-none text-inkoust">{n}</span>
       <span className="mt-1 text-mikro leading-tight text-tlum">{slovo}</span>
     </span>
@@ -50,7 +50,7 @@ export function TypyUdalosti({ tlakEvropa }: { tlakEvropa: HybridniTlak }) {
         nadpis={t("Typy evidovaných událostí")}
         popis="Nejvyšší doložená úroveň v každé oblasti od roku 2014. Prázdné pole = odtud takový záznam nemáme."
       />
-      <div className="grid gap-4 lg:grid-cols-[minmax(0,2fr)_minmax(0,3fr)]">
+      <div className="grid gap-4 lg:grid-cols-[minmax(0,2fr)_minmax(0,3fr)] lg:gap-x-12">
         <PavucinaHrozeb
           nadpis="Evropa jako celek"
           popis={t("Všechny sledované země od roku 2014.")}
@@ -110,7 +110,7 @@ export function CislaKdeKdo({ vse, kampane, ted }: { vse: Zaznam[]; kampane: Kam
           )}
         </section>
         <section aria-label="Kde">
-          <div className="mb-1.5 flex items-center justify-between"><span className="stitek">Kde · případy {rok}</span><Tlacitko kam="/zeme/" varianta="tichy" velikost="s" ikonaVpravo="nahoru" trida="[&>svg:last-child]:rotate-90">{t("všechny země")}</Tlacitko></div>
+          <div className="mb-1.5 flex items-center justify-between"><span className="nadpis-boxu">Kde · případy {rok}</span><Tlacitko kam="/zeme/" varianta="tichy" velikost="s" ikonaVpravo="nahoru" trida="[&>svg:last-child]:rotate-90">{t("všechny země")}</Tlacitko></div>
           <ul className="space-y-0.5">
             {zeme.map((z) => (
               <li key={z.kodZeme}><Pruh nazev={<><Vlajka kod={z.kodZeme} /> {z.zeme}</>} n={z.pripady} max={maxZeme} barva={z.kodZeme === "CZ" ? "bg-akcent" : "bg-tlum2/70"} odkaz={`/zeme/${z.kodZeme.toLowerCase()}/`} /></li>
@@ -118,7 +118,7 @@ export function CislaKdeKdo({ vse, kampane, ted }: { vse: Zaznam[]; kampane: Kam
           </ul>
         </section>
         <section aria-label="Kdo">
-          <div className="mb-1.5 flex items-center gap-1.5"><span className="stitek">Kdo · případy {rok}</span><Otaznik popis={<span className="block">První číslo a tmavší část pruhu: případy s potvrzeným původcem. Druhé číslo: všechny případy přisuzované skupině.</span>} /></div>
+          <div className="mb-1.5 flex items-center gap-1.5"><span className="nadpis-boxu">Kdo · případy {rok}</span><Otaznik popis={<span className="block">První číslo a tmavší část pruhu: případy s potvrzeným původcem. Druhé číslo: všechny případy přisuzované skupině.</span>} /></div>
           <ul className="space-y-0.5">
             {puv.skupiny.map((s) => (
               <li key={s.klic} className="flex min-h-[36px] items-center gap-2">

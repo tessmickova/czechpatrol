@@ -63,7 +63,7 @@ export function PrepinacJazyku({ trida = "" }: { trida?: string }) {
       {otevreno && (
         <div
           role="menu"
-          className="absolute right-0 z-50 mt-2 max-h-[70vh] w-[230px] overflow-y-auto rounded-[18px] border border-linka2 bg-plocha p-2 shadow-lg"
+          className="absolute right-0 z-50 mt-2 max-h-[70vh] w-[230px] overflow-y-auto rounded-[18px] bg-plocha p-2 shadow-lg"
         >
           <Link
             href={holaCesta}
@@ -77,7 +77,7 @@ export function PrepinacJazyku({ trida = "" }: { trida?: string }) {
             Čeština
             <span className="block text-mikro text-tlum2">závazné znění</span>
           </Link>
-          <div className="my-1 border-t border-linka2" />
+          <div className="my-1" />
           {JAZYKY.map((j) => (
             <Link
               key={j.kod}

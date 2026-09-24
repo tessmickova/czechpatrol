@@ -82,7 +82,7 @@ function Prepinac({ id, nazev, odpovedi, odpovez }: { id: string; nazev: string;
 
 function SeznamOtazek({ otazky, odpovedi, odpovez }: { otazky: OtazkaDotazniku[]; odpovedi: Odpovedi; odpovez: (id: string, o: Odpoved) => void }) {
   return (
-    <ul className="bez-stropu divide-y divide-linka2">
+    <ul className="bez-stropu">
       {otazky.map((q) => (
         <li key={q.id} className="flex flex-wrap items-center justify-between gap-3 px-1 py-2.5">
           <span className="min-w-0">
@@ -110,7 +110,7 @@ type Krok =
 
 function KartaNastroje({ n, odpovedi, odpovez, zarizeni }: { n: OficialniNastroj; odpovedi: Odpovedi; odpovez: (id: string, o: Odpoved) => void; zarizeni: "ios" | "android" | null }) {
   return (
-    <li className="rounded-[22px] border border-linka2 bg-plocha p-4 sm:p-5">
+    <li className="rounded-[22px] bg-plocha p-4 sm:p-5">
       <div className="flex flex-wrap items-start justify-between gap-3">
         <div className="flex min-w-0 items-start gap-3">
           <span className="mt-[2px] grid h-9 w-9 shrink-0 place-items-center rounded-[12px] border border-linka2 text-tlum"><Ikona nazev={n.ikona as NazevIkony} velikost={18} tah={1.8} /></span>
@@ -159,7 +159,7 @@ function KartaNastroje({ n, odpovedi, odpovez, zarizeni }: { n: OficialniNastroj
         )}
       </details>
 
-      <div className="mt-3 flex flex-wrap items-center justify-between gap-x-4 gap-y-2 border-t border-linka2 pt-3">
+      <div className="mt-3 flex flex-wrap items-center justify-between gap-x-4 gap-y-2 pt-3">
         <div className="flex flex-wrap items-center gap-x-3 gap-y-1">
           {n.webUrl && <a href={n.webUrl} target="_blank" rel={VEN} className="odkaz text-drobne">Web provozovatele ↗</a>}
           {n.oficialniZdroj && n.oficialniZdroj !== n.webUrl && <a href={n.oficialniZdroj} target="_blank" rel={VEN} className="odkaz text-drobne">Oficiální informace ↗</a>}
@@ -221,9 +221,9 @@ export function PripravenostKlient({ nastroje }: { nastroje: OficialniNastroj[] 
   return (
     <div className="space-y-6">
       {/* Pruh postupu: tečka za každý krok, hotové zelené, aktuální s obrysem. Kliknutím se dá skočit kamkoli. */}
-      <nav aria-label="Kroky průvodce" className="rounded-[22px] border border-linka2 bg-plocha px-4 py-3 sm:px-5">
+      <nav aria-label="Kroky průvodce" className="rounded-[22px] bg-plocha px-4 py-3 sm:px-5">
         <div className="flex flex-wrap items-center justify-between gap-x-4 gap-y-1">
-          <span className="stitek">Krok {krok + 1} z {kroky.length} · {aktualni.nazev}</span>
+          <span className="nadpis-boxu">Krok {krok + 1} z {kroky.length} · {aktualni.nazev}</span>
           <span className="cislice text-mikro text-tlum2">{nacteno ? `${zodpovezenoCelkem} z ${otazekCelkem} zodpovězeno` : ""}</span>
         </div>
         <div className="mt-2 h-1.5 overflow-hidden rounded-full bg-plocha2">
@@ -262,12 +262,12 @@ export function PripravenostKlient({ nastroje }: { nastroje: OficialniNastroj[] 
         {aktualni.druh === "otazky" && (
           <>
             <p className="max-w-[62ch] text-male text-tlum">{aktualni.uvod}</p>
-            <div className="rounded-[22px] border border-linka2 bg-plocha p-3 sm:p-4"><SeznamOtazek otazky={aktualni.otazky} odpovedi={odpovedi} odpovez={odpovez} /></div>
+            <div className="rounded-[22px] bg-plocha p-3 sm:p-4"><SeznamOtazek otazky={aktualni.otazky} odpovedi={odpovedi} odpovez={odpovez} /></div>
           </>
         )}
         {aktualni.druh === "vysledek" && (
-          <div className="rounded-[22px] border border-linka2 bg-plocha p-5 sm:p-6">
-            <div className="flex items-center gap-1.5"><span className="stitek">Digitální připravenost</span><Otaznik popis={<span className="block">Počítá se jen z vašich odpovědí. Web nevidí, co máte v telefonu, a odpovědi zůstávají v tomto prohlížeči.</span>} /></div>
+          <div className="rounded-[22px] bg-plocha p-5 sm:p-6">
+            <div className="flex items-center gap-1.5"><span className="nadpis-boxu">Digitální připravenost</span><Otaznik popis={<span className="block">Počítá se jen z vašich odpovědí. Web nevidí, co máte v telefonu, a odpovědi zůstávají v tomto prohlížeči.</span>} /></div>
             <div className="mt-1 flex items-baseline gap-2">
               <span className="cislice text-cislo-xl font-bold leading-none text-inkoust">{nacteno && odpovezenoNastroju ? skore.mam : "–"}</span>
               <span className="cislice text-cislo text-tlum2">/ {skore.celkem}</span>
@@ -275,7 +275,7 @@ export function PripravenostKlient({ nastroje }: { nastroje: OficialniNastroj[] 
             {/* Před první odpovědí se skóre nepočítá: „0 z 8, u 8 nevíte" by vypadalo jako výsledek. */}
             <p className="mt-2 max-w-[62ch] text-male text-tlum">{!nacteno ? "Odpovědi se načítají z tohoto zařízení." : !odpovezenoNastroju ? "Zatím bez odpovědí. Projděte kroky a u každé položky zvolte mám, nemám nebo nevím." : vetaKeSkore(skore)}</p>
             {nacteno && (skore.chybi.length > 0 || skore.nevim.length > 0) && (
-              <ul className="mt-4 divide-y divide-linka2 border-t border-linka2">
+              <ul className="mt-4">
                 {[...skore.chybi, ...skore.nevim].map((id) => {
                   const n = nastroje.find((x) => x.id === id);
                   if (!n) return null;
@@ -298,7 +298,7 @@ export function PripravenostKlient({ nastroje }: { nastroje: OficialniNastroj[] 
       </section>
 
       {/* Ovládání kroků */}
-      <div className="flex items-center justify-between gap-3 border-t border-linka2 pt-4">
+      <div className="flex items-center justify-between gap-3 pt-4">
         <button type="button" onClick={() => jdi(krok - 1)} disabled={krok === 0} className="inline-flex min-h-[44px] items-center gap-1.5 rounded-full border border-linka px-4 text-male font-semibold text-inkoust hover:border-akcent disabled:opacity-40 disabled:hover:border-linka">
           <Ikona nazev="nahoru" velikost={12} tah={2} trida="-rotate-90" /> Zpět
         </button>
@@ -320,7 +320,7 @@ export function PripravenostKarta({ nastroje, vnoreny = false }: { nastroje: Ofi
   const skore = skorePripravenosti(nastroje, odpovedi ?? {});
   const zacal = odpovedi && Object.keys(odpovedi).length > 0;
   return (
-    <section aria-label="Jsem připraven?" className={vnoreny ? "" : "overflow-hidden rounded-[22px] border border-linka2 bg-plocha"}>
+    <section aria-label="Jsem připraven?" className={vnoreny ? "" : "overflow-hidden rounded-[22px] bg-plocha"}>
       {!vnoreny && <HlavickaWidgetu ikona="stit" nazev="Jsem připraven/a?" meta={<span className="cislice">{zacal ? `${skore.mam} / ${skore.celkem}` : `${skore.celkem} doporučených služeb`}</span>} />}
       <div className="px-4 py-3">
         <p className="text-male leading-snug text-tlum">

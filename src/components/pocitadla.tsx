@@ -27,9 +27,9 @@ export function Pocitadla({ vse, neprosle, kandidati = [], nepotvrzenych = 0, te
   ];
   const zbytek = vse.length - p.length;
   return (
-    <section aria-label="Započítávání" className="rounded-[18px] border border-linka2 bg-plocha px-3 py-2.5">
+    <section aria-label="Započítávání" className="rounded-[18px] bg-plocha px-3 py-2.5">
       <div className="flex flex-wrap items-center gap-x-4 gap-y-1">
-        <span className="stitek">Započítané případy</span>
+        <span className="nadpis-boxu">Započítané případy</span>
         {okna.map((o) => (
           <span key={o.nazev} className="flex items-baseline gap-1.5">
             <span className="cislice text-velke font-bold leading-none text-inkoust">{o.n}</span>

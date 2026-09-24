@@ -127,5 +127,5 @@ export function NadpisBloku({
 
 /** Prázdné místo mezi sekcemi. Jedna hodnota pro celý web, ne odhad v každé stránce. */
 export function Oddech({ deleni = false }: { deleni?: boolean }) {
-  return <div aria-hidden className={`h-14 sm:h-20 ${deleni ? "border-b border-linka2" : ""}`} />;
+  return <div aria-hidden className={`h-14 sm:h-20 ${deleni ? "" : ""}`} />;
 }

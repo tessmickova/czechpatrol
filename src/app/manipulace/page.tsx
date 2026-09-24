@@ -40,7 +40,7 @@ export default function Manipulace() {
           { ikona: "otaznik" as const, nadpis: "Co netvrdíme", text: "Že za operací stojí konkrétní stát. Dokud to veřejně nedoloží úřad, vedeme to jako podezření — i když na to ukazuje všechno." },
           { ikona: "vaha" as const, nadpis: "Proč odděleně", text: "Doložený zásah a doložený původce jsou dvě různé věci. Kdo je slije do jedné věty, tvrdí víc, než má." },
         ].map((b) => (
-          <div key={b.nadpis} className="rounded-[22px] border border-linka2 bg-plocha p-5">
+          <div key={b.nadpis} className="rounded-[22px] bg-plocha p-5">
             <span className="grid h-9 w-9 place-items-center rounded-full bg-plocha2 text-akcent"><Ikona nazev={b.ikona} velikost={17} tah={1.9} /></span>
             <h2 className="mt-3 text-zaklad font-bold text-inkoust">{b.nadpis}</h2>
             <p className="mt-1.5 text-zaklad leading-relaxed text-tlum">{b.text}</p>
@@ -48,7 +48,7 @@ export default function Manipulace() {
         ))}
       </section>
 
-      <div className="nalet mt-14 border-t border-linka pt-12 sm:mt-20 sm:pt-14">
+      <div className="nalet mt-14 sm:mt-20">
         <NadpisSekce
           stitek="Rozbory"
           nadpis={vse.length ? `${vse.length} ${sklon(vse.length, "rozebraná kampaň", "rozebrané kampaně", "rozebraných kampaní")}` : "Zatím bez rozboru"}
@@ -67,7 +67,7 @@ export default function Manipulace() {
         )}
       </div>
 
-      <div className="nalet mt-14 border-t border-linka pt-12 sm:mt-20 sm:pt-14">
+      <div className="nalet mt-14 sm:mt-20">
         <NadpisSekce
           stitek="Podle zemí"
           nadpis="Na koho to mířilo"

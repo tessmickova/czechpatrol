@@ -81,7 +81,7 @@ export function ManipulaceKlient({
 
   return (
     <>
-      <div className="space-y-1.5 border-b border-linka2 pb-3" role="group" aria-label="Filtr operací">
+      <div className="space-y-1.5 pb-3" role="group" aria-label="Filtr operací">
         <div className="flex flex-wrap items-center gap-1">
           <span className="stitek mr-1 w-[62px] shrink-0">Země</span>
           <button type="button" onClick={() => zmen({ zeme: null })} className={cip(f.zeme === null)}>Vše</button>

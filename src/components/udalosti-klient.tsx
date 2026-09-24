@@ -46,7 +46,7 @@ type Obdobi = (typeof OBDOBI)[number]["klic"];
   záložky se musí otevřít vědomě.
 */
 const ZALOZKY = [
-  { klic: "overene", nazev: "Ověřené záznamy", popis: "prošly lidskou kontrolou a počítají se" },
+  { klic: "overene", nazev: "Doložené záznamy", popis: "dva nezávislé nebo úřední zdroje, schválené k zveřejnění; počítají se" },
   /*
     Nepotvrzené stojí mezi ověřenými a zachycenými schválně. Je to zpracovaná
     zpráva se zdroji — víc než holý titulek ze sběru, míň než záznam, za
@@ -54,8 +54,8 @@ const ZALOZKY = [
     by se tím nafoukl a druhý zlehčil.
   */
   { klic: "nepotvrzene", nazev: "Nepotvrzené", popis: "zpracované, čekají na schválení nebo úřední zdroj" },
-  { klic: "cekajici", nazev: "Čeká na ověření", popis: "automatický sběr; do žádného počtu nevstupuje" },
-  { klic: "neproslo", nazev: "Neprošlo ověřením", popis: "vyvráceno nebo nedoloženo; do žádného počtu nevstupuje" },
+  { klic: "cekajici", nazev: "Čeká na posouzení", popis: "automatický sběr; do žádného počtu nevstupuje" },
+  { klic: "neproslo", nazev: "Nedoloženo", popis: "vyvráceno nebo bez dokladu; do žádného počtu nevstupuje" },
 ] as const;
 type Zalozka = (typeof ZALOZKY)[number]["klic"];
 
@@ -285,7 +285,7 @@ export function UdalostiKlient({ zaznamy, neprosle, kandidati = [], nepotvrzene 
   const pripadu = vysledek.filter((r) => r.typ === "zaznam" && druh(r.z) === "pripad").length;
 
   return (
-    <div className={`grid gap-8 ${siroky && otevreny ? "lg:grid-cols-[minmax(0,1fr)_minmax(380px,44%)]" : ""}`}>
+    <div className={`grid gap-8 ${siroky && otevreny ? "lg:grid-cols-[minmax(0,1fr)_minmax(380px,44%)] lg:gap-x-12" : ""}`}>
       <div className="min-w-0">
         {/* záložky — co se vlastně ukazuje */}
         {/* Na mobilu posuvný řádek, ne čtyři záložky pod sebou (revize 24. 9. 2026). */}
@@ -334,7 +334,7 @@ export function UdalostiKlient({ zaznamy, neprosle, kandidati = [], nepotvrzene 
         )}
 
         {/* filtry — kompaktně; na jedné řádce to, co lidé mění nejčastěji */}
-        <div className="mt-3 space-y-1.5 border-b border-linka2 pb-3" role="group" aria-label="Filtry">
+        <div className="mt-3 space-y-1.5 pb-3" role="group" aria-label="Filtry">
           <div className="flex flex-wrap items-center gap-1">
             <span className="stitek mr-1 w-[62px] shrink-0">Období</span>
             {OBDOBI.map((o) => <Cip key={o.klic} aktivni={f.obdobi === o.klic} onClick={() => zmen({ obdobi: o.klic })}>{o.nazev}</Cip>)}
@@ -352,7 +352,7 @@ export function UdalostiKlient({ zaznamy, neprosle, kandidati = [], nepotvrzene 
           </div>
 
           {(pokrocile || maPokrocile) && (
-            <div className="space-y-1.5 border-t border-linka2 pt-2">
+            <div className="space-y-1.5 pt-2">
               <div className="flex flex-wrap items-center gap-1">
                 <span className="stitek mr-1 w-[62px] shrink-0">Země</span>
                 <Cip aktivni={f.zeme === null} onClick={() => zmen({ zeme: null })}>Vše</Cip>
@@ -418,7 +418,7 @@ export function UdalostiKlient({ zaznamy, neprosle, kandidati = [], nepotvrzene 
           {vysledek.length === 0
             ? "Žádný záznam neodpovídá filtru."
             : f.zalozka === "overene"
-              ? `${vysledek.length} ${sklon(vysledek.length, "ověřený záznam", "ověřené záznamy", "ověřených záznamů")} · z toho ${pripadu} ${sklon(pripadu, "případ", "případy", "případů")} · řazeno podle data zjištění`
+              ? `${vysledek.length} ${sklon(vysledek.length, "doložený záznam", "doložené záznamy", "doložených záznamů")} · z toho ${pripadu} ${sklon(pripadu, "případ", "případy", "případů")} · řazeno podle data zjištění`
               : f.zalozka === "nepotvrzene"
                 ? `${vysledek.length} ${sklon(vysledek.length, "nepotvrzený záznam", "nepotvrzené záznamy", "nepotvrzených záznamů")} · do počtů nevstupují · řazeno podle data`
                 : `${vysledek.length} ${sklon(vysledek.length, "položka", "položky", "položek")} · řazeno podle data`}

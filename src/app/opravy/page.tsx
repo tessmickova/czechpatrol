@@ -35,7 +35,7 @@ export default function Opravy() {
       </ol>
       <h2 className="titul-mensi mt-14">Seznam oprav</h2>
       {seznam.length ? (
-        <ol className="mt-3 divide-y divide-linka2 border-y border-linka2">
+        <ol className="mt-3 border-y border-linka2">
           {seznam.map((o) => {
             const i = incident(o.tykaSe);
             return (

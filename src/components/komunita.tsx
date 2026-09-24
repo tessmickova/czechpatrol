@@ -23,7 +23,7 @@ export function KruhyKomunity({ onKlik }: { onKlik?: () => void }) {
   const diskuzeBezi = Boolean(DISKUZE.url);
 
   return (
-    <div className="rounded-[18px] border border-linka2 bg-plocha p-3.5">
+    <div className="rounded-[18px] bg-plocha p-3.5">
       <div className="flex items-center gap-3">
         <span aria-hidden className="flex shrink-0 -space-x-2.5">
           {Array.from({ length: mistCelkem }, (_, i) =>

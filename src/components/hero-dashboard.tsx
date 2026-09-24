@@ -119,7 +119,7 @@ export function HeroDashboard({
         a čtenář z něj nepoznal, že je to nadpis stránky.
       */}
       <div>
-      <div className="border-b border-linka2 pt-1 sm:pt-2">
+      <div className="pt-1 sm:pt-2">
         <div className="mb-2 flex items-center gap-2">
           <Znacka velikost={26} tmave />
           <span className="stitek-znacky">{t("Bezpečnostní přehled")}</span>
@@ -131,7 +131,7 @@ export function HeroDashboard({
         poznámka o neověřených položkách, která tu stála, je v Aktualitách
         vedle — tam má vlastní oddíl a nemusí se vysvětlovat jednou větou.
       */}
-      <p className="uvodni-veta max-w-[40rem] border-b border-linka2 pb-4 pt-3 sm:pb-5">
+      <p className="uvodni-veta max-w-[40rem] pb-4 pt-3 sm:pb-5">
         <strong className="font-bold text-inkoust">{veta.cesko}</strong>{" "}
         <span className="text-tlum">{veta.evropa}</span>
       </p>
@@ -156,7 +156,7 @@ export function HeroDashboard({
         po 175 px — oblouk má 136 px a štítek se vejde.
       */}
       <div className="grid grid-cols-[minmax(0,1fr)] gap-2 py-3 sm:py-4 xl:my-auto lg:grid-cols-[minmax(0,1.25fr)_minmax(0,1.2fr)]">
-        <div className="flex min-w-0 items-center gap-4 border-b border-linka2 pb-3 lg:border-b-0 lg:border-r lg:pb-0 lg:pr-4">
+        <div className="flex min-w-0 items-center gap-4 pb-3 lg:border-b-0 lg:border-r lg:pb-0 lg:pr-4">
           <Napoveda popis={stav.uroven ? <VykladUrovne uroven={stav.uroven} /> : <span className="block">{t("Hodnocení zatím nebylo stanoveno.")}</span>}>
             <span className="block"><ObloukovyMerak uroven={stav.uroven} naNoci velikost={164} skrytPopisek /></span>
           </Napoveda>
@@ -226,7 +226,7 @@ export function HeroDashboard({
       </div>
 
       {/* Urgentní pás až pod budíky: nejdřív stav, pak odpověď „děje se něco právě teď?“. */}
-      {pas && <div className="border-t border-linka2 pt-4">{pas}</div>}
+      {pas && <div className="pt-4">{pas}</div>}
     </section>
   );
 }

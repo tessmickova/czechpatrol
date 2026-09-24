@@ -42,13 +42,13 @@ export function ProfilySiti({ kandidati, maxPrispevku = 4 }: { kandidati: Kandid
   const ctenych = SLEDOVANE_PROFILY.filter((p) => p.pravostDolozena && p.overenaAdresa).length;
 
   return (
-    <section aria-label="Profily úřadů a představitelů" className="overflow-hidden rounded-[22px] border border-linka2 bg-plocha">
-      <div className="flex items-center justify-between gap-2 border-b border-linka2 px-4 py-3">
+    <section aria-label="Profily úřadů a představitelů" className="overflow-hidden rounded-[22px] bg-plocha">
+      <div className="flex items-center justify-between gap-2 px-4 py-3">
         <span className="flex items-center gap-2">
           <span aria-hidden className="grid h-[18px] w-[18px] shrink-0 place-items-center rounded-full border border-akcent/50">
             <span className="h-[6px] w-[6px] rounded-full bg-akcent" />
           </span>
-          <h3 className="stitek">Profily na sítích</h3>
+          <h3 className="nadpis-boxu">Profily na sítích</h3>
           <Otaznik popis={<span className="block">Čteme jen ověřené účty úřadů a vládních představitelů. Soukromé účty nikdy. Facebook a X číst nejde.</span>} />
         </span>
         <span className="text-mikro text-tlum2">{ctenych ? `čte se ${ctenych} z ${SLEDOVANE_PROFILY.length}` : "zatím se nečte žádný"}</span>
@@ -57,13 +57,13 @@ export function ProfilySiti({ kandidati, maxPrispevku = 4 }: { kandidati: Kandid
       {SKUPINY.map((sk) => {
         const profily = SLEDOVANE_PROFILY.filter((p) => p.skupina === sk.klic);
         return (
-          <div key={sk.klic} className="border-b border-linka2">
+          <div key={sk.klic} className="contents">
             <div className="flex items-center justify-between px-4 pt-2.5 pb-1">
               <span className="stitek text-tlum2">{sk.nazev}</span>
               <span className="text-mikro text-tlum2">{profily.length ? `${profily.length}` : "žádný"}</span>
             </div>
             {profily.length ? (
-              <ul className="divide-y divide-linka2">
+              <ul>
                 {profily.map((p) => {
                   const st = stavProfilu(p);
                   return (
@@ -95,7 +95,7 @@ export function ProfilySiti({ kandidati, maxPrispevku = 4 }: { kandidati: Kandid
           <div className="px-4 pt-3">
             <Sdeleni ton="neutral" ikona="info">Příspěvek na profilu je signál, ne doklad. Do počtů nevstupuje a závažnost nezvyšuje.</Sdeleni>
           </div>
-          <ol className="divide-y divide-linka2">
+          <ol>
             {prispevky.map((k) => {
               const kdy = k.publikovano ?? k.zachyceno;
               return (

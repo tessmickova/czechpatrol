@@ -46,7 +46,7 @@ export function SeznamyZasob({ seznam, zvyrazni }: { seznam: KlicSeznamu; zvyraz
       {seznam === "ai" && (
         <Sdeleni ton="neutral" ikona="info" trida="mt-4">Tipy projektu sepsané s pomocí AI, ne úřední doporučení. Když si nejste jistí, platí pokyny úřadů a zdravý rozum.</Sdeleni>
       )}
-      <ol className="mt-4 divide-y divide-linka2 overflow-hidden rounded-[22px] border border-linka2 bg-plocha">
+      <ol className="mt-4 overflow-hidden rounded-[22px] bg-plocha">
         {s.polozky.map((p) => {
           const je = Boolean(mam[p.klic]);
           const zv = zvyrazni === p.klic;

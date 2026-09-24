@@ -216,7 +216,7 @@ export function DetailObsah({ i }: { i: Incident }) {
           </div>
         )}
         {i.vyznam && (
-          <div className="mt-3 rounded-[18px] border border-linka2 bg-plocha p-3.5">
+          <div className="mt-3 rounded-[18px] bg-plocha p-3.5">
             <div className="stitek mb-1">Hodnocení projektu — proč to sledujeme</div>
             <p className="text-zaklad leading-relaxed text-tlum">{i.vyznam}</p>
           </div>

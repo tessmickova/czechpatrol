@@ -90,8 +90,8 @@ export function UrgentniUpozorneni({
   const naliehave = naliehaveVOkne(kandidati, useZiveHodiny(ted));
 
   return (
-    <section aria-labelledby="urgentni-nadpis" className="mt-4 overflow-hidden rounded-[20px] border border-linka2 bg-plocha">
-      <div className="flex flex-wrap items-center justify-between gap-x-4 gap-y-1 border-b border-linka2 px-4 py-2.5">
+    <section aria-labelledby="urgentni-nadpis" className="mt-4 overflow-hidden rounded-[20px] bg-plocha">
+      <div className="flex flex-wrap items-center justify-between gap-x-4 gap-y-1 px-4 py-2.5">
         <h2 id="urgentni-nadpis" className="stitek flex items-center gap-1.5">
           <Ikona nazev="sirena" velikost={12} tah={2} />
           Urgentní upozornění
@@ -140,7 +140,7 @@ export function UrgentniUpozorneni({
         </div>
       )}
 
-      <div className="border-t border-linka2 px-4 py-2">
+      <div className="px-4 py-2">
         <Link href="/odber/" className="stitek inline-flex min-h-[32px] items-center text-tlum2 transition-colors hover:text-inkoust">
           Jak se to dozvíte hned →
         </Link>

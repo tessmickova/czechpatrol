@@ -17,7 +17,7 @@ export function OdberPanel({ kompaktni = false }: { kompaktni?: boolean }) {
   // Telegram má vlastní řádek výš; tady zbývají případné další sítě.
   const dalsi = Object.entries(KANALY).filter(([k, url]) => k !== "email" && k !== "telegram" && url);
   return (
-    <div className={`grid gap-6 ${kompaktni ? "" : "lg:grid-cols-[minmax(0,1.3fr)_minmax(0,1fr)]"}`}>
+    <div className={`grid gap-6 ${kompaktni ? "" : "lg:grid-cols-[minmax(0,1.3fr)_minmax(0,1fr)] lg:gap-x-12"}`}>
       <ul className="space-y-3">
         <li className="flex gap-3">
           <span className="mt-0.5 grid h-9 w-9 shrink-0 place-items-center rounded-[12px] bg-akcent/15 text-akcent"><Ikona nazev="komunikace" velikost={16} tah={2} /></span>
@@ -61,8 +61,8 @@ export function OdberPanel({ kompaktni = false }: { kompaktni?: boolean }) {
         ))}
       </ul>
       {!kompaktni && (
-        <div className="rounded-[18px] border border-linka2 bg-plocha p-4">
-          <div className="mb-2 flex items-center gap-1.5"><span className="stitek">Kdy přijde okamžité upozornění</span><Otaznik popis={<span className="block">U pěti nejvážnějších témat pošleme zprávu hned, i neověřenou. Je tak označená a vede na zdroj. Opakovanému odeslání téže změny se bráníme; postup je v metodice. Z kanálu se odhlásíte jeho opuštěním, žádný účet se nezakládá.</span>} /></div>
+        <div className="rounded-[18px] bg-plocha p-4">
+          <div className="mb-2 flex items-center gap-1.5"><span className="nadpis-boxu">Kdy přijde okamžité upozornění</span><Otaznik popis={<span className="block">U pěti nejvážnějších témat pošleme zprávu hned, i neověřenou. Je tak označená a vede na zdroj. Opakovanému odeslání téže změny se bráníme; postup je v metodice. Z kanálu se odhlásíte jeho opuštěním, žádný účet se nezakládá.</span>} /></div>
           <ul className="space-y-1.5">
             {KDY_UPOZORNENI.map((k) => {
               /* Mimořádná výstraha je jiná kategorie než běžná změna stavu — i v seznamu. */

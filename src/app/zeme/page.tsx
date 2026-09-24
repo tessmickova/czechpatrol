@@ -31,7 +31,7 @@ export default function Zeme() {
             <li key={z.kodZeme}>
               <Link
                 href={`/zeme/${z.kodZeme.toLowerCase()}/`}
-                className="flex h-full flex-col gap-3 rounded-[22px] border border-linka2 bg-plocha p-5 transition-colors hover:border-akcent"
+                className="flex h-full flex-col gap-3 rounded-[22px] bg-plocha p-5 transition-colors hover:border-akcent"
               >
                 <span className="flex items-center gap-2.5">
                   <Vlajka kod={z.kodZeme} />

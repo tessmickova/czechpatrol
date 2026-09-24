@@ -7,7 +7,7 @@ import { SidebarUvodu } from "./sidebar-uvodu";
 import type { Pulz } from "@/lib/pulz";
 import type { SouhrnSituace } from "@/lib/souhrn-situace";
 import { VetaSituace } from "./veta-situace";
-import { KANALY, UVOD_V2 } from "@/config/web";
+import { UVOD_V2 } from "@/config/web";
 import Link from "next/link";
 import { pripady, type Zaznam } from "@/lib/agregace";
 import { cerstvost, datumCasPraha, datumPraha } from "@/lib/cas";
@@ -31,7 +31,6 @@ import { Aktuality } from "./aktuality";
 import { UrgentniPas } from "./urgentni";
 import { TriTemata } from "./tri-temata";
 import { Tlacitko } from "./ui";
-import { ZnackaKanalu } from "./znacky";
 import { useZiveHodiny } from "@/lib/cas-klient";
 import { PripravenostKarta } from "./pripravenost-klient";
 import { TipyKPriprave } from "./tipy";
@@ -310,7 +309,7 @@ function MiniBox({ nazev, ikona, souhrn, paleta, ton = "akcent", children }: { n
       <summary className="flex min-h-[64px] cursor-pointer list-none items-center gap-3 px-4 py-2.5 hover:bg-plocha2">
         <IkonaKruh ikona={ikona} ton={ton} velikost="s" />
         <span className="min-w-0 flex-1">
-          <span className="stitek block">{nazev}</span>
+          <span className="nadpis-boxu block">{nazev}</span>
           <span className="mt-0.5 line-clamp-2 block text-male font-semibold leading-snug text-inkoust">{souhrn}</span>
         </span>
         {paleta && paleta.length > 0 && <span className="hidden sm:block"><Paleta polozky={paleta} /></span>}
@@ -328,7 +327,7 @@ function Hlavni({ nadpis, hodnota, ton, popis, overeno, napoveda, jiskra }: { na
     <Napoveda cele popis={napoveda}>
       <span className={`flex min-h-[112px] w-full flex-col justify-between rounded-[18px] border p-4 text-left ${t ? t.dlazdice : "border-transparent bg-plocha2/60"}`}>
         <span className="flex items-center justify-between gap-2">
-          <span className="stitek">{nadpis}</span>
+          <span className="nadpis-boxu">{nadpis}</span>
           <Stari cas={overeno} popisek="kontrolováno" ted={Date.parse(overeno ?? "") || 0} />
         </span>
         <span className="mt-2 flex items-end justify-between gap-3">
@@ -388,14 +387,14 @@ function RozbalovaciOblast({ nazev, ikona, souhrn, paleta, poznamka, children }:
       <summary className="flex min-h-[64px] cursor-pointer list-none items-center gap-3 px-4 py-2.5 hover:bg-plocha2">
         <IkonaKruh ikona={ikona} velikost="s" />
         <span className="min-w-0 flex-1">
-          <span className="stitek block">{nazev}</span>
+          <span className="nadpis-boxu block">{nazev}</span>
           <span className="mt-1 block text-male font-semibold leading-snug text-inkoust">{souhrn}</span>
           {poznamka && <span className="mt-0.5 block text-mikro leading-snug text-tlum2">{poznamka}</span>}
         </span>
         <Paleta polozky={paleta} />
         <Ikona nazev="dolu" velikost={13} tah={2} trida="shrink-0 text-tlum2 transition-transform group-open:rotate-180" />
       </summary>
-      <div className="border-t border-linka2">{children}</div>
+      <div className="contents">{children}</div>
     </details>
   );
 }
@@ -551,7 +550,7 @@ export function Dashboard({
             <h1 className="titul-sekce">{t("Bezpečnostní situace v Česku a okolí")}</h1>
             <VetaSituace souhrn={souhrn ?? { veta: null, aktualizovano: null, podklady: [] }} veta={veta} kontrola={pulz?.kdy ?? overeno} ted={tedMs} />
             {/* Stav naléhavosti nese postranní Souhrn situace; tady jen cesta k upozornění. */}
-            {KANALY.telegram && <div className="mt-4"><Tlacitko kam={KANALY.telegram} nove varianta="plny" velikost="m"><ZnackaKanalu znacka="telegram" velikost={16} /> Přihlásit upozornění</Tlacitko></div>}
+            <div className="mt-4"><Tlacitko kam="/odber/" varianta="plny" velikost="m" ikona="zvonek">Přihlásit upozornění</Tlacitko></div>
           </div>
           <div className="order-3 min-w-0 lg:order-none lg:col-start-1 lg:row-start-2"><AktualitySloupce zaznamy={vse} nepotvrzene={nepotvrzene} kandidati={kandidati} /></div>
           <div className="order-2 min-w-0 lg:order-none lg:col-start-2 lg:row-span-2 lg:row-start-1">
@@ -723,11 +722,11 @@ export function Dashboard({
         <div className="mt-6 grid gap-3 md:grid-cols-2">
           <details className="group rounded-[22px] bg-plocha">
             <summary className="flex min-h-[44px] cursor-pointer items-center justify-between px-4 text-male font-semibold text-inkoust">Proč je hodnocení {d ? d.nazev.toLowerCase() : "takové"}<Ikona nazev="dolu" velikost={12} tah={2} trida="text-tlum2 transition-transform group-open:rotate-180" /></summary>
-            <p className="border-t border-linka2 px-4 py-3 text-male leading-relaxed text-tlum">{stav.shrnuti || "Bez zdůvodnění."} <Link href="/metodika/" className="odkaz">Metodika</Link></p>
+            <p className="px-4 py-3 text-male leading-relaxed text-tlum">{stav.shrnuti || "Bez zdůvodnění."} <Link href="/metodika/" className="odkaz">Metodika</Link></p>
           </details>
           <details className="group rounded-[22px] bg-plocha">
             <summary className="flex min-h-[44px] cursor-pointer items-center justify-between px-4 text-male font-semibold text-inkoust">Co by hodnocení zhoršilo<Ikona nazev="dolu" velikost={12} tah={2} trida="text-tlum2 transition-transform group-open:rotate-180" /></summary>
-            <ol className="space-y-1 border-t border-linka2 px-4 py-3 text-male leading-snug text-tlum">
+            <ol className="space-y-1 px-4 py-3 text-male leading-snug text-tlum">
               {watchlist.eskalacni.map((e) => <li key={e.cislo} className="flex gap-2"><span className="cislice text-tlum2">{e.cislo}</span>{e.nazev}</li>)}
             </ol>
           </details>
@@ -751,7 +750,7 @@ export function Dashboard({
         profil s dlouhým jménem vyhnal celý sloupec na 422 px a boxy pod
         ním se na 390 px displeji řízly vpravo.
       */}
-      <div className="grid grid-cols-[minmax(0,1fr)] gap-4 xl:grid-cols-[minmax(0,3fr)_minmax(0,2fr)] xl:gap-10">
+      <div className="grid grid-cols-[minmax(0,1fr)] gap-4 xl:grid-cols-[minmax(0,3fr)_minmax(0,2fr)] xl:gap-14">
         <section aria-label={t("Oficiální stavy")} id="opatreni" className="scroll-mt-[84px] space-y-4">
           {skupinyDlazdic.map((sk) => (
             <div key={sk.predpona} className="overflow-hidden rounded-[22px] bg-plocha">
@@ -792,7 +791,7 @@ export function Dashboard({
                           <span>dalších {klidne.length} v klidu</span>
                           <Ikona nazev="dolu" velikost={12} tah={2} trida="text-tlum2 transition-transform group-open:rotate-180" />
                         </summary>
-                        <ul className="border-t border-linka2">{klidne.map(radek)}</ul>
+                        <ul>{klidne.map(radek)}</ul>
                       </details>
                     )}
                   </>
@@ -867,7 +866,7 @@ export function Dashboard({
 
       {/* 2b2 — manipulační kampaně: operace, ne události */}
       {kampane.length > 0 && (
-        <div className="nalet mt-14 border-t border-linka pt-12 sm:mt-20 sm:pt-14">
+        <div className="nalet mt-14 sm:mt-20">
           <NadpisSekce
             stitek="Manipulace"
             ikona="bublina"
@@ -911,14 +910,14 @@ export function Dashboard({
         na archiv odkazuje (tlačítko v aktualitách), sama ho nenese.
         Zůstává jen to, co jinde není: možnost ohlásit, co chybí.
       */}
-      <div className="nalet mt-14 border-t border-linka pt-12 sm:mt-20 sm:pt-14">
+      <div className="nalet mt-14 sm:mt-20">
         <Nahlaseni />
       </div>
 
       {/* 3 — čísla „kolik, kde, kdo“ jsou v Analýzách. */}
 
       {/* 5 — sledovat a partneři */}
-      <div className="nalet mt-14 border-t border-linka pt-12 sm:mt-20 sm:pt-14">
+      <div className="nalet mt-14 sm:mt-20">
         <NadpisSekce
           stitek={t("Odběr")}
           ikona="zvonek"
@@ -930,14 +929,14 @@ export function Dashboard({
       <div className="mt-12 sm:mt-16"><Partneri /></div>
 
       {/* 6 — sbalené: proč, co by změnilo, odběr */}
-      <div className="mt-14 grid gap-3 border-t border-linka pt-12 sm:mt-20 sm:pt-14 md:grid-cols-3">
+      <div className="mt-14 grid gap-3 sm:mt-20 md:grid-cols-3">
         <details className="group rounded-[18px] bg-plocha">
           <summary className="flex min-h-[40px] cursor-pointer items-center justify-between px-3 text-male font-semibold text-inkoust">Proč je hodnocení {d ? d.nazev.toLowerCase() : "takové"}<Ikona nazev="dolu" velikost={12} tah={2} trida="text-tlum2 transition-transform group-open:rotate-180" /></summary>
-          <p className="border-t border-linka2 px-3 py-2.5 text-male leading-relaxed text-tlum">{stav.shrnuti || "Bez zdůvodnění."} <Link href="/metodika/" className="odkaz">Metodika</Link></p>
+          <p className="px-3 py-2.5 text-male leading-relaxed text-tlum">{stav.shrnuti || "Bez zdůvodnění."} <Link href="/metodika/" className="odkaz">Metodika</Link></p>
         </details>
         <details className="group rounded-[18px] bg-plocha">
           <summary className="flex min-h-[40px] cursor-pointer items-center justify-between px-3 text-male font-semibold text-inkoust">Co by hodnocení zhoršilo<Ikona nazev="dolu" velikost={12} tah={2} trida="text-tlum2 transition-transform group-open:rotate-180" /></summary>
-          <ol className="space-y-1 border-t border-linka2 px-3 py-2.5 text-male leading-snug text-tlum">
+          <ol className="space-y-1 px-3 py-2.5 text-male leading-snug text-tlum">
             {watchlist.eskalacni.map((e) => <li key={e.cislo} className="flex gap-2"><span className="cislice text-tlum2">{e.cislo}</span>{e.nazev}</li>)}
           </ol>
         </details>

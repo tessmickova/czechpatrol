@@ -52,7 +52,7 @@ const horizontSlovo = (dni: number) => (dni === 3 ? "72 h" : `${dni} dní`);
 /** Oddíl dotazníku: nadpis, jedna věta, obsah. Bez rámečku — dělí ho linka. */
 function Oddil({ cislo: c, nadpis, veta, children }: { cislo: string; nadpis: string; veta?: string; children: React.ReactNode }) {
   return (
-    <section className="border-t border-linka2 pt-6 first:border-t-0 first:pt-0">
+    <section className="pt-6 first:border-t-0 first:pt-0">
       <div className="flex items-baseline gap-3">
         <span className="cislice shrink-0 text-drobne text-tlum2">{c}</span>
         <h2 className="text-vetsi font-bold text-inkoust">{nadpis}</h2>
@@ -208,7 +208,7 @@ export function OdolnostKlient() {
                 : "Podle kraje se upraví doporučená zásoba vody: kde prší méně, je větší."}
             </p>
           </div>
-          <div className="mt-3 divide-y divide-linka2">
+          <div className="mt-3">
             <Prepnuti id="od-rodina" nazev="Rodina nebo blízcí v pěší dostupnosti" popis="počítá se jako cesta u spojení, dopravy a péče" hodnota={p.kontext.rodinaVDosahu} onChange={(v) => kontext({ rodinaVDosahu: v })} />
             <Prepnuti id="od-pece" nazev="Někdo je závislý na péči, léku nebo přístroji" popis="bez podrobností; jen zvýší váhu doporučení" hodnota={p.kontext.zavislyNaPeci} onChange={(v) => kontext({ zavislyNaPeci: v })} />
           </div>
@@ -239,7 +239,7 @@ export function OdolnostKlient() {
         </Oddil>
 
         <Oddil cislo="02" nadpis="Jak u vás fungují základní věci" veta={`Rozklikněte a zaškrtněte, co opravdu máte. Vyplněno ${vyplneno} z ${s.hodnoceni.length}.`}>
-          <ul className="divide-y divide-linka2 border-y border-linka2">
+          <ul className="border-y border-linka2">
             {s.hodnoceni.map((h) => <RadekFunkce key={h.funkce.klic} h={h} profil={p} naCestu={(c) => prepniCestu(h.funkce.klic, c)} naNemohu={(d) => nastavNemohu(h.funkce.klic, d)} />)}
           </ul>
         </Oddil>
@@ -267,14 +267,14 @@ export function OdolnostKlient() {
         <div className="sklo rounded-[26px] p-5 sm:p-6">
           <div className="flex items-center gap-2">
             <span aria-hidden className="h-[7px] w-[7px] rounded-full bg-akcent" />
-            <span className="stitek">Váš výsledek</span>
+            <span className="nadpis-boxu">Váš výsledek</span>
             <span className="ml-auto text-drobne text-tlum2">přepočítává se průběžně</span>
           </div>
 
           {/* zdarma: souhrn s počty a stav na 72 hodin */}
           <div className="mt-5">
             <div className="flex items-center gap-1.5">
-              <span className="stitek">Souhrn auditu</span>
+              <span className="nadpis-boxu">Souhrn auditu</span>
               <Otaznik popis={<span className="block">Počty oblastí podle zaškrtnutých cest. „V pořádku“ = aspoň dvě nezávislé cesty. Kritická závislost = jedna věc, jejíž výpadek vypne dvě a víc oblastí.</span>} />
             </div>
             {vyplneno === 0 ? (
@@ -292,8 +292,8 @@ export function OdolnostKlient() {
 
           {/* zdarma, vždy nad nabídkou: bezpečnostní nálezy */}
           {nalezy.length > 0 && (
-            <div className="mt-6 border-t border-linka2 pt-5">
-              <div className="flex items-center gap-1.5"><span className="stitek">Bezpečnostní nálezy</span><Otaznik popis={<span className="block">Věci, které mohou ohrozit zdraví. Jsou zdarma vždy a bez účtu. Web u nich neradí lékařsky ani technicky — odkazuje na oficiální postupy.</span>} /></div>
+            <div className="mt-6 pt-5">
+              <div className="flex items-center gap-1.5"><span className="nadpis-boxu">Bezpečnostní nálezy</span><Otaznik popis={<span className="block">Věci, které mohou ohrozit zdraví. Jsou zdarma vždy a bez účtu. Web u nich neradí lékařsky ani technicky — odkazuje na oficiální postupy.</span>} /></div>
               <ul className="mt-2 space-y-2">
                 {nalezy.map((n) => (
                   <li key={n.klic} className="flex items-start gap-2">
@@ -308,7 +308,7 @@ export function OdolnostKlient() {
 
           {/* zdarma: rady bez nákupu */}
           {zaridit.length > 0 && (
-            <div className="mt-6 border-t border-linka2 pt-5">
+            <div className="mt-6 pt-5">
               <div className="flex items-center gap-1.5">
                 <Ikona nazev="fajfka" velikost={14} tah={2.2} trida="text-akcent" />
                 <h2 className="text-zaklad font-bold text-inkoust">Zařídit, za 0 Kč</h2>
@@ -326,9 +326,9 @@ export function OdolnostKlient() {
 
           {premium ? (
             <>
-              <div className="mt-6 border-t border-linka2 pt-5">
+              <div className="mt-6 pt-5">
                 <div className="flex items-center gap-1.5">
-                  <span className="stitek">Na kolik dní jste připraveni</span>
+                  <span className="nadpis-boxu">Na kolik dní jste připraveni</span>
                   <Otaznik popis={<span className="block">Plánovací horizont domácnosti podle zadaných zásob a předpokladů. 72 hodin je základ, ne cíl. Není to předpověď, jak dlouho co vydrží ve státě.</span>} />
                 </div>
                 <ul className="mt-3 grid grid-cols-2 gap-x-6 gap-y-2 sm:grid-cols-3">
@@ -342,15 +342,15 @@ export function OdolnostKlient() {
                 </ul>
               </div>
 
-              <div className="mt-6 border-t border-linka2 pt-5">
-                <div className="flex items-center gap-1.5"><span className="stitek">Jak dlouho vydrží</span><Otaznik popis={<span className="block">Předpoklady jsou u každé položky. Číslo je k plánování, ne k uklidnění.</span>} /></div>
+              <div className="mt-6 pt-5">
+                <div className="flex items-center gap-1.5"><span className="nadpis-boxu">Jak dlouho vydrží</span><Otaznik popis={<span className="block">Předpoklady jsou u každé položky. Číslo je k plánování, ne k uklidnění.</span>} /></div>
                 {(() => { const d = doporucenaZasobaVody(p, 7); return (
                   <p className="mt-2 flex items-center justify-between gap-3 py-1.5 text-male">
                     <span className="flex items-center gap-1.5 text-tlum">Doporučená zásoba pitné vody na 7 dní<Otaznik popis={<span className="block">{d.predpoklad}</span>} /></span>
                     <span className="cislice shrink-0 font-semibold text-inkoust">{d.litru} l{d.nasobek !== 1 ? <span className="font-normal text-tlum2"> · {krajProfilu(p)?.nazev}</span> : ""}</span>
                   </p>
                 ); })()}
-                <ul className="mt-1 border-t border-linka2 pt-1">
+                <ul className="mt-1 pt-1">
                   {s.vydrze.filter((v) => v.klic !== "energie" || p.energie.kapacitaWh > 0).map((v) => (
                     <li key={v.klic} className="flex items-center justify-between gap-3 py-1.5">
                       <span className="flex items-center gap-1.5 text-male text-tlum">{v.nazev}<Otaznik popis={<span className="block">{v.predpoklad}</span>} /></span>
@@ -361,12 +361,12 @@ export function OdolnostKlient() {
               </div>
 
               {(p.energie.spotrebice?.length ?? 0) > 0 && (
-                <div className="mt-6 border-t border-linka2 pt-5">
+                <div className="mt-6 pt-5">
                   <SolarniOdhad kapacitaWh={p.energie.kapacitaWh} spotrebice={p.energie.spotrebice ?? []} solarWp={p.energie.solarWp ?? null} onSolarWp={(v) => uloz({ ...p, energie: { ...p.energie, solarWp: v } })} />
                 </div>
               )}
 
-              <dl className="mt-6 grid grid-cols-3 gap-3 border-t border-linka2 pt-5">
+              <dl className="mt-6 grid grid-cols-3 gap-3 pt-5">
                 <div>
                   <dt className="stitek">Nezávislá záloha</dt>
                   <dd className="cislice mt-1 text-cislo font-bold leading-none text-inkoust">{s.vyreseno.n}<span className="text-tlum2"> / {s.vyreseno.z}</span></dd>
@@ -384,8 +384,8 @@ export function OdolnostKlient() {
               </dl>
 
               {s.body.filter((b) => b.vypne.length >= 2).length > 0 && (
-                <div className="mt-6 border-t border-linka2 pt-5">
-                  <div className="flex items-center gap-1.5"><span className="stitek">Co vypne co</span><Otaznik popis={<span className="block">Závislost, jejíž výpadek vypne víc oblastí naráz, protože všechny jejich cesty na ní stojí.</span>} /></div>
+                <div className="mt-6 pt-5">
+                  <div className="flex items-center gap-1.5"><span className="nadpis-boxu">Co vypne co</span><Otaznik popis={<span className="block">Závislost, jejíž výpadek vypne víc oblastí naráz, protože všechny jejich cesty na ní stojí.</span>} /></div>
                   <ul className="mt-2 space-y-1.5">
                     {s.body.filter((b) => b.vypne.length >= 2).slice(0, 5).map((b) => (
                       <li key={b.zavislost} className="text-male"><b className="font-semibold text-inkoust">{b.nazev}</b> <span className="text-tlum">→ {b.vypne.map((f) => f.nazev.toLowerCase()).join(", ")}</span></li>
@@ -394,10 +394,10 @@ export function OdolnostKlient() {
                 </div>
               )}
 
-              <div className="mt-6 border-t border-linka2 pt-5">
+              <div className="mt-6 pt-5">
                 <CoUdelat doporuceni={s.doporuceni} nakup={s.nakup} />
               </div>
-              <div className="mt-6 flex flex-wrap items-center gap-2 border-t border-linka2 pt-5">
+              <div className="mt-6 flex flex-wrap items-center gap-2 pt-5">
                 <button type="button" onClick={exportuj} className={TLACITKO_TICHE}><Ikona nazev="instalace" velikost={14} tah={2} /> Stáhnout plán</button>
                 <button type="button" onClick={() => window.print()} className={TLACITKO_TICHE}><Ikona nazev="dokument" velikost={14} tah={2} /> Tisk</button>
               </div>

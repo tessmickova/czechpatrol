@@ -235,7 +235,7 @@ export function CoSeZmenilo({ zaznamy, snimky, ted, vnoreny = false, osa = false
   return (
     <section
       aria-label="Co se změnilo"
-      className={`relative flex flex-col overflow-hidden ${vnoreny ? "" : "rounded-[22px] border border-linka2 bg-plocha"}`}
+      className={`relative flex flex-col overflow-hidden ${vnoreny ? "" : "rounded-[22px] bg-plocha"}`}
       onPointerLeave={skryj}
     >
       {!vnoreny && (
@@ -255,7 +255,7 @@ export function CoSeZmenilo({ zaznamy, snimky, ted, vnoreny = false, osa = false
       )}
 
       {radky.length > 0 ? (
-        <ol className={osa ? "relative ml-[22px] mr-3 my-3 border-l border-linka2" : "divide-y divide-linka2"}>
+        <ol className={osa ? "relative ml-[22px] mr-3 my-3 border-l border-linka2" : ""}>
           {radky.map((r) => (
             <li key={r.klic} className={osa ? "relative" : undefined} onPointerEnter={(e) => ukaz(r.nahled, e)} onPointerMove={pohyb}>
               <Link
@@ -287,7 +287,7 @@ export function CoSeZmenilo({ zaznamy, snimky, ted, vnoreny = false, osa = false
       <PanelNahledu nahled={nahled} kde={kde} />
 
       {/* Kdy se stavy kontrolovaly, říká puntík u nadpisu; patička nese jen cestu dál. */}
-      <div className="mt-auto flex items-center justify-end border-t border-linka2 px-4 py-2">
+      <div className="mt-auto flex items-center justify-end px-4 py-2">
         <Tlacitko kam="/vyvoj/" varianta="tichy" velikost="s" ikonaVpravo="nahoru" trida="[&>svg:last-child]:rotate-90">celý vývoj</Tlacitko>
       </div>
     </section>

@@ -114,7 +114,7 @@ export default function Metodika() {
           <Karta className="p-5 sm:p-6">
             <h3 className="podnadpis mb-4 text-zaklad">Nezapočítáváme jako nový incident</h3>
             <Seznam polozky={NEZAPOCITAVAME} znak="−" barva="text-tlum2" />
-            <p className="mt-5 border-t border-linka2 pt-4 text-male leading-relaxed text-tlum">
+            <p className="mt-5 pt-4 text-male leading-relaxed text-tlum">
               Nejsme zpravodajský web. Zapisujeme skutky a úřední rozhodnutí — ne sliby a plány. Prohlášení vedeme zvlášť jako reakci, a jen když se váže ke konkrétnímu skutku.
             </p>
             <p className="mt-3 text-drobne leading-relaxed text-tlum2">
@@ -248,7 +248,7 @@ export default function Metodika() {
                 </li>
               ))}
             </ul>
-            <p className="mt-5 border-t border-linka2 pt-4 text-drobne leading-relaxed text-tlum2">
+            <p className="mt-5 pt-4 text-drobne leading-relaxed text-tlum2">
               Budoucí scénář se nikdy nepíše jako jistota.
             </p>
           </Karta>

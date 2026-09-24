@@ -39,11 +39,11 @@ export function KontrolaPokryti() {
         const moje = radky.filter((r) => r.skupina === sk);
         if (!moje.length) return null;
         return (
-          <div key={sk} className="overflow-hidden rounded-[20px] border border-linka2 bg-plocha">
-            <div className="stitek border-b border-linka2 px-3 py-2">{sk}</div>
+          <div key={sk} className="overflow-hidden rounded-[20px] bg-plocha">
+            <div className="stitek px-3 py-2">{sk}</div>
             <ul>
               {moje.map((r) => (
-                <li key={`${sk}-${r.klic}`} className="border-b border-linka2 px-3 py-2.5 last:border-b-0">
+                <li key={`${sk}-${r.klic}`} className="px-3 py-2.5 last:border-b-0">
                   <div className="flex flex-wrap items-baseline justify-between gap-x-3 gap-y-1">
                     <span className="text-zaklad font-semibold text-inkoust">{r.nazev}</span>
                     <Odznak ton={TON_STUPNE[r.stupen]}>{STUPNE[r.stupen].nazev.toLowerCase()}</Odznak>

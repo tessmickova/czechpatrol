@@ -38,7 +38,7 @@ export function VyberSpotrebicu({ vybrane, onChange }: { vybrane: VybranySpotreb
 
   return (
     <div>
-      <ul className="divide-y divide-linka2 border-y border-linka2">
+      <ul className="border-y border-linka2">
         {SPOTREBICE.map((p) => {
           const s = mapa.get(p.klic);
           return (
@@ -73,7 +73,7 @@ export function VyberSpotrebicu({ vybrane, onChange }: { vybrane: VybranySpotreb
       </div>
 
       {vybrane.length > 0 && (
-        <dl className="mt-4 grid grid-cols-3 gap-3 border-t border-linka2 pt-4">
+        <dl className="mt-4 grid grid-cols-3 gap-3 pt-4">
           {(Object.keys(REZIMY) as Rezim[]).map((r) => (
             <div key={r}>
               <dt className="stitek">{REZIMY[r]}</dt>
@@ -127,7 +127,7 @@ export function SolarniOdhad({ kapacitaWh, spotrebice, solarWp, onSolarWp }: { k
   return (
     <div>
       <div className="flex items-center gap-1.5">
-        <span className="stitek">Energie a solár</span>
+        <span className="nadpis-boxu">Energie a solár</span>
         <Otaznik popis={<span className="block">Panely: denní potřeba ÷ (slunečné hodiny × účinnost). Slunečné hodiny jsou orientační pro střední Evropu; přesné pro vaše místo dá nástroj PVGIS Evropské komise. Účinnost {Math.round(ucinnost * 100)} % zahrnuje sklon, teplotu a regulátor. Výsledek porovnejte s údaji „max. solární vstup“ a „kapacita“ na štítku powerstation.</span>} />
       </div>
 

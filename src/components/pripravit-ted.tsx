@@ -21,7 +21,7 @@ export function PripravitTed({ priprava }: { priprava: Data }) {
         napoveda={<span className="block">Tři věci pro domácnost podle tlaku doložených událostí za 30 dní, narušených služeb a platných opatření. Přepočítává se po každém sběru. Není to předpověď ani úřední pokyn.</span>}
         meta={<span className="cislice">přepočítáno {datumCasPraha(priprava.prepocitano)}</span>}
       />
-      <ol className="grid divide-y divide-linka2 sm:grid-cols-3 sm:divide-x sm:divide-y-0">
+      <ol className="grid sm:grid-cols-3 sm:divide-x sm:divide-y-0">
         {priprava.polozky.map((p, i) => (
           <li key={p.klic} className="min-w-0">
             <Link href={`/odolnost/?seznam=${p.seznam}&zvyrazni=${p.klic}`} className="group flex h-full items-start gap-3 px-4 py-3 hover:bg-plocha2">

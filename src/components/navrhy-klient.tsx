@@ -168,7 +168,7 @@ export function NavrhyKeSchvaleni() {
                 kvůli čemu se návrh nemá odklepnout.
               */}
               {n.neznameho.length > 0 && (
-                <div className="mt-3 border-t border-linka2 pt-3">
+                <div className="mt-3 pt-3">
                   <div className="stitek mb-1">Co doložené není</div>
                   <ul className="space-y-1">
                     {n.neznameho.map((x) => (
@@ -178,7 +178,7 @@ export function NavrhyKeSchvaleni() {
                 </div>
               )}
 
-              <div className="mt-3 border-t border-linka2 pt-3">
+              <div className="mt-3 pt-3">
                 <div className="stitek mb-1">Zdroje ({n.zdroje.length})</div>
                 <ul className="space-y-1">
                   {n.zdroje.map((z) => (
@@ -199,7 +199,7 @@ export function NavrhyKeSchvaleni() {
                 Co se stane po schválení. Bez téhle věty se kliká naslepo —
                 a u zprávy, která jde odběratelům do telefonu, je to málo.
               */}
-              <p className="mt-3 border-t border-linka2 pt-3 text-male leading-snug text-tlum">
+              <p className="mt-3 pt-3 text-male leading-snug text-tlum">
                 {kamOdejde(n).vysvetleni}
               </p>
 
@@ -211,7 +211,7 @@ export function NavrhyKeSchvaleni() {
               )}
 
               {upravuje === id && (
-                <div className="mt-3 border-t border-linka2 pt-3">
+                <div className="mt-3 pt-3">
                   <div className="stitek mb-2">Úprava před zveřejněním</div>
                   {/*
                     Zdroje ani historie se tu needitují. O ověření rozhoduje

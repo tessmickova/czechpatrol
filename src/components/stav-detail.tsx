@@ -48,7 +48,7 @@ export function StavDetail({
   const p = pokrytiPolozky(polozka, skupina);
 
   return (
-    <dl className="grid gap-3 border-t border-linka2 px-3 py-3">
+    <dl className="grid gap-3 px-3 py-3">
       <Radek popisek="Co to je">{vysvetleni}</Radek>
 
       {/*

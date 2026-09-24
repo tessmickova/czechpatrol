@@ -52,7 +52,7 @@ export function PasZemi({ vse, kampane = [], ted: tedSestaveni = Date.now() }: {
         key={`${z.kod}${sufix}`}
         href={`/zeme/${z.kod.toLowerCase()}/`}
         title={`${z.nazev}: ${z.pocet} ${sklon(z.pocet, "incident", "incidenty", "incidentů")} za 90 dnů${z.kampani ? ` (z toho ${z.kampani} ${sklon(z.kampani, "operace proti občanům", "operace proti občanům", "operací proti občanům")})` : ""}${z.nej ? `, nejvyšší závažnost ${UROVNE[z.nej].nazev}` : ""}`}
-        className="mx-1 inline-flex h-[34px] shrink-0 items-center gap-2 rounded-[12px] border border-linka2 bg-plocha px-2.5 text-drobne hover:bg-plocha2"
+        className="mx-1 inline-flex h-[34px] shrink-0 items-center gap-2 rounded-[12px] bg-plocha px-2.5 text-drobne hover:bg-plocha2"
       >
         <Vlajka kod={z.kod} />
         <span className="font-semibold text-inkoust">{z.nazev}</span>

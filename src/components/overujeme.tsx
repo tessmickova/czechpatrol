@@ -97,7 +97,7 @@ function Karta({ o, ted }: { o: Overovana; ted: number }) {
         </section>
 
         {/* Poslední slovo má vždycky pokyn, ne tvrzení. */}
-        <p className="flex items-start gap-2.5 rounded-[18px] border border-linka2 bg-plocha px-4 py-3">
+        <p className="flex items-start gap-2.5 rounded-[18px] bg-plocha px-4 py-3">
           <span className="mt-[1px] grid h-[22px] w-[22px] shrink-0 place-items-center rounded-full text-klid-text">
             <Ikona nazev="stit" velikost={15} tah={2} />
           </span>
@@ -149,12 +149,12 @@ export function PruhOverujeme({
       )}
 
       {vsechnyUzavrene.length > 0 && (
-        <details className="group mt-2.5 overflow-hidden rounded-[18px] border border-linka2 bg-plocha">
+        <details className="group mt-2.5 overflow-hidden rounded-[18px] bg-plocha">
           <summary className="flex min-h-[44px] cursor-pointer list-none items-center justify-between gap-3 px-4 text-male font-semibold text-inkoust hover:bg-plocha2">
             <span>Jak dopadly starší ověřované zprávy ({vsechnyUzavrene.length})</span>
             <Ikona nazev="dolu" velikost={13} tah={2} trida="text-tlum2 transition-transform group-open:rotate-180" />
           </summary>
-          <ul className="divide-y divide-linka2 border-t border-linka2">
+          <ul>
             {vsechnyUzavrene.map((o) => {
               const vyprselo = o.stav === "overujeme";
               return (
@@ -203,7 +203,7 @@ export function SouhrnOverujeme({ aktivni, ted, vnoreny = false }: { aktivni: Ov
   return (
     <section aria-label="Právě ověřujeme" className={vnoreny ? "" : "overflow-hidden rounded-[22px] border border-dashed border-jantar/55 bg-jantar/[0.06]"}>
       {!vnoreny && <HlavickaWidgetu ikona="otaznik" ton="pozor" nazev="Právě ověřujeme" meta="nepotvrzené zprávy · nevstupují do hodnocení" />}
-      <ul className="divide-y divide-dashed divide-jantar/25">
+      <ul>
         {zive.map((o) => {
           const lhuta = zbyva(o.uzavritDo, cas);
           return (

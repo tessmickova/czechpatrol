@@ -249,7 +249,7 @@ function Nastaveni({
   const zadnyKanal = !ucet.telegram && !ucet.whatsapp;
 
   return (
-    <div className="grid gap-4 lg:grid-cols-[minmax(0,1fr)_minmax(0,1.6fr)]">
+    <div className="grid gap-4 lg:grid-cols-[minmax(0,1fr)_minmax(0,1.6fr)] lg:gap-x-12">
       {/* účet */}
       <div className="space-y-4">
         {/* Hned po založení: co dalšího existuje. Nabídka, ne povinnost. */}

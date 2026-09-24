@@ -98,7 +98,7 @@ export default function Vyvoj() {
           popis="Z archivu: kdy se změnilo hodnocení, právní stav nebo stav NATO. Zapisujeme jen skutečnou změnu, ne každý den znovu."
         />
         {zmenyArchivu.length ? (
-          <ol className="divide-y divide-linka2 border-y border-linka2">
+          <ol className="border-y border-linka2">
             {zmenyArchivu.map((s) => (
               <li key={s.kdy} className="flex gap-4 py-2.5 text-zaklad">
                 <span className="cislice w-[92px] shrink-0 text-male text-tlum">{datumPraha(s.kdy)}</span>
@@ -119,7 +119,7 @@ export default function Vyvoj() {
           nadpis="Kde se to dělo a kdo za tím stojí"
           popis={<>{p.pripady} {sklon(p.pripady, "případ", "případy", "případů")}, {p.aktualizace} {sklon(p.aktualizace, "aktualizace", "aktualizace", "aktualizací")}, {p.opatreni} opatření a {p.reakce} {sklon(p.reakce, "reakce", "reakce", "reakcí")}. Česko uvádíme vždy první, i když v něm nic není.</>}
         />
-        <div className="grid gap-8 md:grid-cols-[minmax(0,1.4fr)_minmax(0,1fr)]">
+        <div className="grid gap-8 md:grid-cols-[minmax(0,1.4fr)_minmax(0,1fr)] md:gap-x-12">
           <div className="overflow-x-auto">
             <table className="w-full min-w-[520px] text-left text-male">
               <thead>
@@ -150,7 +150,7 @@ export default function Vyvoj() {
           </div>
           <div>
             <div className="mb-2 flex items-center gap-1.5"><span className="stitek">Kdo za případy stojí</span><Otaznik popis={<span className="block">Do hodnocení projektu tento rozpad nevstupuje.</span>} /></div>
-            <ul className="divide-y divide-linka2 border-y border-linka2">
+            <ul className="border-y border-linka2">
               {puv.skupiny.map((s) => (
                 <li key={s.klic} className="py-2 text-zaklad">
                   <div className="flex items-center gap-3">

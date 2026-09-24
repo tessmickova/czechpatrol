@@ -37,14 +37,14 @@ export function StavSluzeb({ stavy, kdy, vnoreny = false }: { stavy: ZivyStav[];
   const vypadky = stavy.filter((s) => s.stav === "vypadek" || s.stav === "omezeni").length;
 
   return (
-    <section aria-label="Služby naživo" className={`relative flex flex-col overflow-hidden ${vnoreny ? "" : "rounded-[22px] border border-linka2 bg-plocha"}`} onPointerLeave={skryj}>
+    <section aria-label="Služby naživo" className={`relative flex flex-col overflow-hidden ${vnoreny ? "" : "rounded-[22px] bg-plocha"}`} onPointerLeave={skryj}>
       {/* Vnořená varianta: hlavičku a souhrn nese rozklikávací oblast na úvodní straně. */}
-      {!vnoreny && <div className="flex items-center justify-between gap-2 border-b border-linka2 px-4 py-3">
+      {!vnoreny && <div className="flex items-center justify-between gap-2 px-4 py-3">
         <span className="flex items-center gap-2">
           <span aria-hidden className="grid h-[18px] w-[18px] shrink-0 place-items-center rounded-full border border-akcent/50">
             <span className="h-[6px] w-[6px] rounded-full bg-akcent" />
           </span>
-          <h3 className="stitek">Služby naživo</h3>
+          <h3 className="nadpis-boxu">Služby naživo</h3>
           <Otaznik popis={<span className="block">Stavové stránky provozovatelů. České sítě a banky je nemají.</span>} />
         </span>
         {/* Co číslo znamená, říká slovo; červená tečka jen když je co hlásit. */}
@@ -55,7 +55,7 @@ export function StavSluzeb({ stavy, kdy, vnoreny = false }: { stavy: ZivyStav[];
         </span>
       </div>}
 
-      <ul className="divide-y divide-linka2">
+      <ul>
         {SLUZBY.map((s) => {
           const st = stavy.find((x) => x.klic === s.klic);
           const stav: StavSluzby = st?.stav ?? "nezjisteno";
@@ -109,7 +109,7 @@ export function StavSluzeb({ stavy, kdy, vnoreny = false }: { stavy: ZivyStav[];
         české sítě a banky je to jediný rychlý obraz, který existuje.
         Zůstává ale mimo seznam stavů — hlášení uživatelů nikdo neověřuje.
       */}
-      <a href="https://downdetector.cz/" target="_blank" rel={VEN} className="mt-auto flex items-start gap-2.5 border-t border-linka2 px-4 py-2.5 hover:bg-plocha2">
+      <a href="https://downdetector.cz/" target="_blank" rel={VEN} className="mt-auto flex items-start gap-2.5 px-4 py-2.5 hover:bg-plocha2">
         <span className="mt-[1px] grid h-7 w-7 shrink-0 place-items-center rounded-[9px] border border-linka2 text-tlum"><Ikona nazev="graf" velikost={14} tah={1.8} /></span>
         <span className="min-w-0 flex-1">
           <span className="block text-male font-semibold leading-[20px] text-inkoust">Downdetector</span>

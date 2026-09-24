@@ -100,7 +100,7 @@ export function PavucinaHrozeb({
       od obsahu by byla příliš. Karet je v karuselu třináct a třináct
       orámovaných desek vedle sebe je mřížka, ne přehled.
     */
-    <section aria-label={nadpis} className="h-full rounded-[22px] border border-linka2 bg-plocha p-4 sm:p-5">
+    <section aria-label={nadpis} className="h-full rounded-[22px] bg-plocha p-4 sm:p-5">
       <div className="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1">
         <h3 className="text-vetsi font-bold leading-tight flex flex-wrap items-center gap-x-2 gap-y-1">
           {vlajka}
