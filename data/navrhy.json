@@ -1,1 +1,70 @@
-[]
+[
+  {
+    "kam": "zaznam",
+    "pripravil": "patrol",
+    "pripraveno": "2026-09-24T05:06:47.067Z",
+    "id": "i-2026-09-16-114787e14f",
+    "slug": "ru-114787e14f",
+    "titulek": "Rusko: FSB zavedla dočasná omezení pohybu v okresech Kingisepp a Slantsy u hranice s Estonskem; estonští představitelé nevylučují souvislost s mobilizací",
+    "kratkyTitulek": "Rusko: FSB zavedla dočasná omezení pohybu v okresech Kingisepp a Slantsy u hranice s Estonskem; estonští představitelé nevylučují souvislost s mobilizací",
+    "zeme": "Rusko",
+    "kodZeme": "RU",
+    "kategorie": [
+      "hranice",
+      "rusko"
+    ],
+    "datumUdalosti": "2026-09-16T00:00:00Z",
+    "datumZjisteni": "2026-09-24T00:00:00Z",
+    "aktualizovano": "2026-09-24T05:06:47.067Z",
+    "zavaznost": "Y1",
+    "jistota": "stredni",
+    "stav": "neuvedeno",
+    "atribuce": "neznama",
+    "puvodce": null,
+    "druh": "opatreni",
+    "fakta": [
+      "Podle ruské FSB (pohraniční správa pro Petrohrad a Leningradskou oblast) platí od 16. do 26. 9. 2026 v okresech Kingisepp a Slantsy u hranice s Estonskem zákaz nočního pohybu mimo obydlené oblasti v pětikilometrovém pruhu podél hranice, zákaz plavby malých plavidel na části řeky Narvy a zákaz lovu a nošení zbraní v pohraničním pásmu.",
+      "Podle FSB je účelem opatření „zabránit porušování pohraničních a migračních předpisů“ a „ochránit vodní biologické zdroje“.",
+      "Podle estonského pohraničního zástupce Andrise Viltsina (ERR) o opatření Estonsko předem nedostalo oznámení; označil je za „ne rutinní, ale ani nijak zvlášť výjimečné“ a uvedl, že Rusko má v pohraničí běžně přísnější režim než Estonsko.",
+      "Podle estonského ministra vnitra Igora Tara (ERR) nelze vyloučit souvislost s plánovanou mobilizací; jde o jeho spekulaci, kterou žádný zdroj nepotvrzuje jako fakt."
+    ],
+    "neznameho": [
+      "Zda má opatření nějakou souvislost s mobilizací, s termínem ruských parlamentních voleb, nebo s opevňováním narvského břehu; estonští představitelé to sami neumí rozlišit.",
+      "Přímé oficiální sdělení FSB jsem neotevřel; údaje jsou z ERR a Kyiv Independent, které ho citují."
+    ],
+    "vyznam": "",
+    "eskalacniSpousteče": [],
+    "deeskalacniSignaly": [],
+    "zdroje": [
+      {
+        "nazev": "The Kyiv Independent — Russia imposes restrictions near Estonian border amid mobilization concerns",
+        "url": "https://kyivindependent.com/russia-imposes-restrictions-near-estonian-border-amid-mobilization-concerns/",
+        "typ": "media",
+        "publikovano": "2026-09-22T00:00:00Z",
+        "primarni": false,
+        "jazyk": "en"
+      },
+      {
+        "nazev": "ERR News (Estonsko) — Russia imposes temporary movement restrictions on other side of Estonian border",
+        "url": "https://news.err.ee/1610144281/russia-imposes-temporary-movement-restrictions-on-other-side-of-estonian-border",
+        "typ": "media",
+        "publikovano": "2026-09-21T00:00:00Z",
+        "primarni": false,
+        "jazyk": "en"
+      }
+    ],
+    "souvisejici": [],
+    "historie": [
+      {
+        "kdy": "2026-09-16T00:00:00Z",
+        "text": "Zachyceno automatickým sběrem, druhý zdroj doložen před zařazením do fronty.",
+        "novySignal": true
+      }
+    ],
+    "novy": true,
+    "zapocitanoTyden": "2026-09-16",
+    "aiZpracovano": true,
+    "lidskyOvereno": false,
+    "archivniZaznam": false
+  }
+]
