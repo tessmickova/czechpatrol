@@ -45,7 +45,7 @@ export default function OProjektu() {
           <p>Sběr běží každých 30 minut a web se přestaví do několika minut po každé změně dat. Záznam se zveřejní sám jen tehdy, když ho potvrzují dva nezávislé zdroje a jeden z nich je úřední; válečně významné zprávy jen ze dvou médií vycházejí označené jako <strong>neověřené</strong> a do hodnocení se nepočítají. Ostatní čeká na kontrolu. Texty jsou AI shrnutí zdrojů, ne články. Celkové hodnocení se počítá automaticky podle pravidel v Metodice, nejvýš den stará data. Přebíráme fakta, ne znění, a odkazujeme na originál. Opravy jsou na stránce <Link href="/opravy/" className="odkaz">Opravy a historie</Link>.</p>
         </Odstavec>
         <Odstavec nadpis="Nezávislost a peníze">
-          <p>Bez inzerce a sponzorů. Základ je a zůstane zdarma. Podpořit provoz jde dobrovolně na stránce <Link href="/podporit/" className="odkaz">Podpořit</Link>; co to stojí, je tam rozepsané.</p>
+          <p>Bez inzerce a sponzorů. Základ je a zůstane zdarma. Podpořit provoz jde dobrovolně na stránce <Link href="/podporit/" className="odkaz">Podpořit</Link>.</p>
         </Odstavec>
         <Odstavec nadpis="Co připravujeme">
           <ul className="list-disc space-y-1 pl-5">
