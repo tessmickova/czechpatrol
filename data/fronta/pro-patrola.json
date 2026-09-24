@@ -2928,5 +2928,254 @@
     ],
     "hotovo": "2026-09-24T05:07:04.842Z",
     "odpoved": "Nový návrh: Rusko — FSB zavedla dočasná omezení pohybu v okresech Kingisepp a Slantsy u hranice s Estonskem (16.–26. 9.); zdroje Kyiv Independent a ERR. Estonský ministr vnitra nevylučuje souvislost s mobilizací, ale je to výslovně jeho spekulace, ne fakt, tak to i formuluji. Kyjev je mimo rozsah (uvnitř Ukrajiny). Zbylých 9 zpráv jsem rozhodl už dříve, vrací se opakovaně."
+  },
+  {
+    "id": "z-mufhb20y",
+    "zadano": "2026-09-24T11:59:02.146Z",
+    "zadal": "fronta",
+    "stav": "ceka",
+    "seznam": [
+      {
+        "druh": "navrh",
+        "id": "i-2026-09-16-114787e14f",
+        "popis": "2026-09-16 · Rusko · Rusko: FSB zavedla dočasná omezení pohybu v okresech Kingisepp a Slantsy u hranice s Estonskem; estonští představitelé nevylučují souvislost s mobilizací",
+        "url": "https://kyivindependent.com/russia-imposes-restrictions-near-estonian-border-amid-mobilization-concerns/"
+      },
+      {
+        "druh": "kandidat",
+        "id": "k-377fddbcc5f0343d",
+        "popis": "2026-09-23 · Polsko · Poland says Russian military helicopter violated its airspace",
+        "url": "https://meduza.io/en/news/2026/09/23/poland-says-russian-military-helicopter-violated-its-airspace"
+      },
+      {
+        "druh": "kandidat",
+        "id": "k-300872f1bfb42045",
+        "popis": "2026-09-23 · Polsko · Polský vzdušný prostor narušil ruský vojenský vrtulník, uvedla armáda",
+        "url": "https://www.ceskenoviny.cz/zpravy/polsky-vzdusny-prostor-narusil-rusky-vojensky-vrtulnik-uvedla-armada/2878394?utm_source=rss&utm_medium=feed"
+      },
+      {
+        "druh": "kandidat",
+        "id": "k-6cab24d5fdec8416",
+        "popis": "2026-09-24 · Polsko · Útočník během mše pobodal několik lidí v polském klášteře, jeden muž zemřel",
+        "url": "https://www.idnes.cz/zpravy/zahranicni/polsko-klaster-jaroslaw-utok-nozem-ukrajinec.A260924_123913_zahranicni_kha#utm_source=rss&utm_medium=feed&utm_campaign=zpravodaj&utm_content=main"
+      },
+      {
+        "druh": "kandidat",
+        "id": "k-5be91759bf22db31",
+        "popis": "2026-09-24 · Norsko · Obmedzte správy, prijmite, že svet nie je bezpečné miesto. Politici častejšie používajú slovo vojna, čo robiť, ak máte obavy? (anketa)",
+        "url": "https://dennikn.sk/5580554/obmedzte-spravy-prijmite-ze-svet-nie-je-bezpecne-miesto-politici-castejsie-pouzivaju-slovo-vojna-co-robit-ak-mate-obavy-anketa/"
+      },
+      {
+        "druh": "kandidat",
+        "id": "k-36b06b7fd8ffb120",
+        "popis": "2026-09-24 · Moldavsko · Drone that crashed in Moldova identified as Russian Gerbera",
+        "url": "https://www.ukrinform.net/rubric-ato/4167545-drone-that-crashed-in-moldova-identified-as-russian-gerbera.html"
+      },
+      {
+        "druh": "kandidat",
+        "id": "k-ae577e6ce12b8763",
+        "popis": "2026-09-24 · Polsko · Na jihovýchodě Polska muž zaútočil na lidi v klášteře, jeden z nich zemřel",
+        "url": "https://www.ceskenoviny.cz/zpravy/na-jihovychode-polska-muz-zautocil-na-lidi-v-klastere-jeden-z-nich-zemrel/2878832?utm_source=rss&utm_medium=feed"
+      },
+      {
+        "druh": "kandidat",
+        "id": "k-f24a0a49817c2556",
+        "popis": "2026-09-24 · Ukrajina · Russians destroy jewellery company in Kyiv – video",
+        "url": "https://www.pravda.com.ua/eng/news/2026/09/24/8054882/"
+      },
+      {
+        "druh": "kandidat",
+        "id": "k-3edb18635747f80b",
+        "popis": "2026-09-24 · Polsko · Poland scrambles military aircraft twice in morning over Russian strikes on Ukraine",
+        "url": "https://www.ukrinform.net/rubric-ato/4167505-poland-scrambles-military-aircraft-twice-in-morning-over-russian-strikes-on-ukraine.html"
+      },
+      {
+        "druh": "kandidat",
+        "id": "k-ab5253219f0f07d5",
+        "popis": "2026-09-24 · Ukrajina · Bavme se o bezpečnostní situaci v Evropě, žádá Rakušan Babiše, ať svolá strany",
+        "url": "https://www.idnes.cz/zpravy/domaci/bavme-se-o-bezpecnostni-situaci-v-evrope-zada-rakusan-babise-at-svola-strany.A260924_111626_domaci_kop#utm_source=rss&utm_medium=feed&utm_campaign=zpravodaj&utm_content=main"
+      },
+      {
+        "druh": "kandidat",
+        "id": "k-0935d9dbf269659c",
+        "popis": "2026-09-24 · Moldavsko · Drone wreckage with camera found in Moldova, likely Russian Gerbera – photos",
+        "url": "https://www.pravda.com.ua/eng/news/2026/09/24/8054871/"
+      },
+      {
+        "druh": "kandidat",
+        "id": "k-240a0f841d4b6e62",
+        "popis": "2026-09-24 · Polsko · Polsko má v souvislosti s požárem u stanice služby Starlink podezření na sabotáž",
+        "url": "https://www.irozhlas.cz/zpravy-svet/polsko-ma-v-souvislosti-s-pozarem-u-stanice-sluzby-starlink-podezreni-na-sabotaz_2609241047_elev"
+      },
+      {
+        "druh": "kandidat",
+        "id": "k-2e607159df147d00",
+        "popis": "2026-09-24 · Ukrajina · Ruský útok na farmu v Charkovskej oblasti zabil šesť ľudí. Obeťami boli farmári",
+        "url": "https://www.aktuality.sk/clanok/ssl7rhu/rusky-utok-na-farmu-v-charkovskej-oblasti-zabil-sest-ludi-obetami-boli-farmari/"
+      },
+      {
+        "druh": "kandidat",
+        "id": "k-bf380367c8e565f6",
+        "popis": "2026-09-24 · Ukrajina · Při ruském útoku na farmu v Charkovské oblasti zemřelo sedm lidí",
+        "url": "https://www.novinky.cz/clanek/valka-na-ukrajine-pri-ruskem-utoku-na-farmu-v-charkovske-oblasti-zemrelo-sedm-lidi-40599295"
+      },
+      {
+        "druh": "kandidat",
+        "id": "k-9fed664a7adc2c05",
+        "popis": "2026-09-24 · Ukrajina · Belarus Claims It Foiled ‘Sabotage’ Plot Targeting Russia",
+        "url": "https://www.themoscowtimes.com/2026/09/24/belarus-claims-it-foiled-sabotage-plot-targeting-russia-a93785"
+      },
+      {
+        "druh": "kandidat",
+        "id": "k-e10e235c5f9e06d5",
+        "popis": "2026-09-24 · Česko · Rozkaz přišel z NATO. České gripeny v noci opět vzlétly chránit polský vzdušný prostor",
+        "url": "https://www.irozhlas.cz/zpravy-domov/rozkaz-prisel-z-nato-ceske-gripeny-v-noci-opet-vzletly-chranit-polsky-vzdusny_2609241036_aru"
+      },
+      {
+        "druh": "kandidat",
+        "id": "k-1db214bc98915ac2",
+        "popis": "2026-09-24 · Česko · České gripeny v noci letěly nad Polsko",
+        "url": "https://www.novinky.cz/clanek/domaci-ceske-gripeny-v-noci-letely-nad-polsko-40599291"
+      },
+      {
+        "druh": "kandidat",
+        "id": "k-c575a656c9fd309a",
+        "popis": "2026-09-24 · Ukrajina · Iskander-M missile debris found in Kyiv following Russian attack and removed by bomb disposal experts",
+        "url": "https://www.pravda.com.ua/eng/news/2026/09/24/8054866/"
+      },
+      {
+        "druh": "kandidat",
+        "id": "k-387172716b3ef124",
+        "popis": "2026-09-24 · Česko · České gripeny v noci na rozkaz NATO opět střežily nebe nad Polskem",
+        "url": "https://www.ceskenoviny.cz/zpravy/ceske-gripeny-v-noci-na-rozkaz-nato-opet-strezily-nebe-nad-polskem/2878729?utm_source=rss&utm_medium=feed"
+      },
+      {
+        "druh": "kandidat",
+        "id": "k-bde1c5c1a80f0c1a",
+        "popis": "2026-09-24 · Česko · NATO opět povolalo české gripeny nad Polsko. V noci letouny vzlétly z Pardubic",
+        "url": "https://www.idnes.cz/zpravy/domaci/ceske-gripeny-opet-v-noci-vzletly-z-pardubic-nad-polsko.A260924_101121_domaci_vank#utm_source=rss&utm_medium=feed&utm_campaign=zpravodaj&utm_content=main"
+      },
+      {
+        "druh": "kandidat",
+        "id": "k-c161e2dd6113d9a6",
+        "popis": "2026-09-24 · Rusko · Seven killed, 12 injured in Russian attack on farm in Kharkiv region",
+        "url": "https://www.ukrinform.net/rubric-ato/4167463-seven-killed-12-injured-in-russian-attack-on-farm-in-kharkiv-region.html"
+      },
+      {
+        "druh": "kandidat",
+        "id": "k-51baf56897b1fe8e",
+        "popis": "2026-09-24 · Rusko · Bad weather leaves consumers without power in more than 600 settlements – Ukrenergo",
+        "url": "https://www.ukrinform.net/rubric-economy/4167457-bad-weather-leaves-consumers-without-power-in-more-than-600-settlements-ukrenergo.html"
+      },
+      {
+        "druh": "kandidat",
+        "id": "k-b676acd3a2a617c5",
+        "popis": "2026-09-24 · EU · EU must 'act now' over Trump's attack on ICC, MEP Chloé Ridel says",
+        "url": "https://www.euronews.com/video/2026/09/24/eu-must-act-now-over-trumps-attack-on-icc-mep-chloe-ridel-says"
+      },
+      {
+        "druh": "kandidat",
+        "id": "k-0932e6dd766e044b",
+        "popis": "2026-09-24 · Ukrajina · Russian attack damages Kyiv maternity hospital as baby boy is born in shelter",
+        "url": "https://www.pravda.com.ua/eng/news/2026/09/24/8054860/"
+      },
+      {
+        "druh": "kandidat",
+        "id": "k-d056222db4b4845a",
+        "popis": "2026-09-24 · Ukrajina · Ukrainian drones strike Russia’s Rostov region and Krasnodar Krai, damaging oil depot and industrial facility",
+        "url": "https://meduza.io/en/news/2026/09/24/ukrainian-drones-strike-russia-s-rostov-region-and-krasnodar-krai-damaging-oil-depot-and-industrial-facility"
+      },
+      {
+        "druh": "kandidat",
+        "id": "k-99e07212208b8aa0",
+        "popis": "2026-09-24 · Moldavsko · Moldovan President Sandu says drone exploded in Moldova during Russian attack on Ukraine",
+        "url": "https://www.pravda.com.ua/eng/news/2026/09/24/8054858/"
+      },
+      {
+        "druh": "kandidat",
+        "id": "k-ae59a8d0d812f1a1",
+        "popis": "2026-09-24 · Ukrajina · Ukrajina hlásí po ruských útocích nejméně osm mrtvých",
+        "url": "https://ct24.ceskatelevize.cz/clanek/svet/ukrajina-hlasi-po-ruskych-utocich-nejmene-osm-mrtvych-377905"
+      },
+      {
+        "druh": "kandidat",
+        "id": "k-896a4a922418f034",
+        "popis": "2026-09-24 · Ukrajina · Russians launch massive attack on civilian infrastructure in Odesa region, two injured",
+        "url": "https://www.ukrinform.net/rubric-ato/4167427-russians-launch-massive-attack-on-civilian-infrastructure-in-odesa-region-two-injured.html"
+      },
+      {
+        "druh": "kandidat",
+        "id": "k-0e596b4c09c87f4f",
+        "popis": "2026-09-24 · Rusko · Russian forces strike farm in Kharkiv Oblast with Banderol drone missile: six killed, 12 injured – photos",
+        "url": "https://www.pravda.com.ua/eng/news/2026/09/24/8054852/"
+      },
+      {
+        "druh": "kandidat",
+        "id": "k-657eff7f92375ced",
+        "popis": "2026-09-24 · Rusko · Russian forces attack Khmelnytskyi: drone damages residential building",
+        "url": "https://www.pravda.com.ua/eng/news/2026/09/24/8054847/"
+      },
+      {
+        "druh": "kandidat",
+        "id": "k-7cad1ae0560368d2",
+        "popis": "2026-09-24 · Slovensko · Robert Fico mluví o článku 5. Zbláznil se?",
+        "url": "https://www.seznamzpravy.cz/clanek/zahranicni-robert-fico-mluvi-o-clanku-5-zblaznil-se-316036"
+      },
+      {
+        "druh": "kandidat",
+        "id": "k-db2b220c1019476e",
+        "popis": "2026-09-24 · Ukrajina · Ruské rakety v Kyjevě zabily dva lidi. Na agresora se dost netlačí, reaguje Zelenskyj",
+        "url": "https://www.idnes.cz/zpravy/zahranicni/rusko-rakety-utok-kyjev-ukrajina-zelenskyj-mrtvi.A260924_065850_zahranicni_lupr#utm_source=rss&utm_medium=feed&utm_campaign=zpravodaj&utm_content=main"
+      },
+      {
+        "druh": "kandidat",
+        "id": "k-0905a734d0f40d9e",
+        "popis": "2026-09-24 · Ukrajina · Massive missile attack on Kyiv: 2 killed, at least 8 injured, fires and damage reported in three districts",
+        "url": "https://www.ukrinform.net/rubric-ato/4167407-massive-missile-attack-on-kyiv-2-killed-at-least-8-injured-fires-and-damage-reported-in-three-districts.html"
+      },
+      {
+        "druh": "kandidat",
+        "id": "k-a39991150daa091a",
+        "popis": "2026-09-24 · Ukrajina · Russian forces attack Odesa overnight, damaging hospital and shopping centre – photos",
+        "url": "https://www.pravda.com.ua/eng/news/2026/09/24/8054838/"
+      },
+      {
+        "druh": "kandidat",
+        "id": "k-3b2bc217d32c8cb8",
+        "popis": "2026-09-24 · Ukrajina · ONLINE: ‚Výbuchy v Kyjevě, zůstaňte v krytech.‘ Ruské rakety zabily dva lidi, další tři zranily",
+        "url": "https://www.irozhlas.cz/zpravy-svet/online-vybuchy-v-kyjeve-zustante-v-krytech-ruske-rakety-zabily-dva-lidi-dalsi_2609240638_bva"
+      },
+      {
+        "druh": "kandidat",
+        "id": "k-860ff93bcff5a9e7",
+        "popis": "2026-09-24 · Ukrajina · Rusko zasáhlo zemědělský podnik v Charkovské oblasti, zahynulo šest lidí",
+        "url": "https://www.ceskenoviny.cz/zpravy/rusko-zasahlo-zemedelsky-podnik-v-charkovske-oblasti-zahynulo-sest-lidi/2878648?utm_source=rss&utm_medium=feed"
+      },
+      {
+        "druh": "kandidat",
+        "id": "k-fb93db0fd395fdb3",
+        "popis": "2026-09-24 · Ukrajina · Ruské rakety v Kyjevě zabily dva lidi, šest mrtvých po útoku na zemědělský podnik",
+        "url": "https://www.ceskenoviny.cz/zpravy/ruske-rakety-v-kyjeve-zabily-dva-lidi-sest-mrtvych-po-utoku-na-zemedelsky-podnik/2878648?utm_source=rss&utm_medium=feed"
+      },
+      {
+        "druh": "kandidat",
+        "id": "k-b8e950bae3ac4fea",
+        "popis": "2026-09-23 · Německo · Drone sighting briefly closes Berlin Brandenburg Airport’s runways. Controllers recorded 28 drones there in the first half of 2026.",
+        "url": "https://meduza.io/en/news/2026/09/23/drone-sighting-briefly-closes-berlin-brandenburg-airport-s-runways-controllers-recorded-28-drones-there-in-the-first-half-of-2026"
+      },
+      {
+        "druh": "kandidat",
+        "id": "k-8f2f4842e8bbf47e",
+        "popis": "2026-09-23 · Rusko · Explosions, smoke reported near oil refinery in Russia's Bashkortostan.",
+        "url": "https://kyivindependent.com/explosions-smoke-reported-near-oil-refinery-in-russias-bashkortostan/"
+      },
+      {
+        "druh": "kandidat",
+        "id": "k-1483725156c5ca20",
+        "popis": "2026-09-23 · Bělorusko · ‘I was literally in prison.’ Owner of Lady Gaga fan account with 480,000 followers returns as reports identify him as a Belarusian protest prisoner.",
+        "url": "https://meduza.io/en/news/2026/09/23/i-was-literally-in-prison-owner-of-lady-gaga-fan-account-with-480-000-followers-returns-as-reports-identify-him-as-a-belarusian-protest-prisoner"
+      }
+    ],
+    "zadani": "Seznam k vyřízení: 40 položek. Projdi ho celý.\n\nU KAŽDÉ položky musí po tobě zůstat stopa v datech — buď zápis, nebo\nodepsání s důvodem. Položka, ke které nic nenapíšeš, se počítá jako\nnevyřízená a vrátí se ti v dalším zadání.\n\nPravidla jsou v PATROL.md na tvé větvi a nemění se. Nejčastěji to padá na:\ndva nezávislé zdroje vždycky, datum události není datum článku, původce až\npo úředním závěru, [DOPLNIT] se nenahrazuje odhadem.\n\nZÁSADY TEXTU (od 24. 9. 2026, CLAUDE.md pravidlo č. 0.5 a 0.6)\n\n- Shrnuj jen to, co zdroj říká. Žádné nové tvrzení, závěr, motiv ani číslo.\n- Nezesiluj: podezřelý zůstane podezřelý, „údajně“ a „podle …“ zůstanou.\n- Každé tvrzení s původcem; tvrzení strany konfliktu jako její tvrzení.\n- Typ prostředku není původce: dron ruského typu mohl vyslat kdokoli, dron\n  ukrajinského typu mohla přesměrovat obrana nebo rušení. Původce jen\n  z úředního závěru nebo přihlášení; do té doby „nepotvrzený“ a napiš,\n  co víme (typ, směr letu) a kdo co tvrdí.\n- Zdroje neřaď podle země ani spektra: nejblíž věci je orgán, který ji\n  vyšetřuje nebo provozuje, pak potvrzení z druhé strany.\n- Věcně a s úctou ke všem: žádné nálepky ani hanlivé přezdívky.\n- Žádná jména soukromých osob, pohyby jednotek, podrobnosti vyšetřování\n  nad rámec oznámení úřadu ani návody.\n- Média ze sankčního seznamu EU (RT, Sputnik, RIA Novosti…) nejsou zdroj.\n- Projev, výzva, varování ani komentář politika či instituce (OSN, prezident,\n  ministr) není událost. Zapisuje se jen konkrétní bezpečnostní následek,\n  změna nebo rozhodnutí (vyhlášení, zákaz, nasazení, uzavření, sankce).\n  Řeč bez skutku odepiš jako „jen projev“.\n\nROZSAH — válka v Rusku a na Ukrajině\n\nPtal ses na to dvakrát, tak ať je to napsané a neptáš se potřetí. Pravidlo\nplyne z naší vlastní metodiky, oddíl o původci: „Útok Ukrajiny na ropovod\nv Rusku, který zastaví dodávky do Maďarska, je záznam.\" Rozhoduje tedy\ndoložený následek pro země, které sledujeme — ne to, kde se to stalo.\n\n- Úder uvnitř Ruska nebo Ukrajiny BEZ doloženého následku pro sledované\n  země je mimo rozsah. Zapiš `rozhodnuti: \"mimo-rozsah\"` a důvod.\n- VÝJIMKA (rozhodnutí provozovatelky 23. 9. 2026): zapisuje se i to, co na\n  Ukrajině NENÍ běžné — výrazný postup fronty (obsazení krajského města,\n  prolomení obrany v šíři desítek km), vpád nebo útok z NOVÉHO směru\n  (z Běloruska, z Podněstří, přes Černé moře na nové pobřeží), první\n  použití nového druhu zbraně, úder na jadernou elektrárnu. Denní údery\n  dronů a raket na ukrajinská města běžné jsou a zůstávají mimo rozsah.\n\nVÁLEČNĚ RELEVANTNÍ NÁVRHY SE ZVEŘEJŇUJÍ I BEZ ÚŘADU\n\nOd 23. 9. 2026: návrh o narušení pravidel ze strany protivníka (dron,\nstřela, sabotáž, špionáž pro Rusko, incident s válečnou lodí) nebo\no doloženém zlepšení vztahů se zveřejní jako „neověřeno úředně\", jakmile\nmá dvě nezávislé redakce (dvě různé domény). Běžná trestná činnost,\nterorismus bez vazby na stát, domácí politika a soudní spory občanů\nv zahraničí sem nepatří — ty dál čekají na úřední zdroj.\n- Týž úder S doloženým následkem (zastavené dodávky, zasažená evropská\n  firma, uzavřený vzdušný prostor, zbloudilý dron přes hranici) je záznam\n  jako každý jiný.\n\nNení to hodnocení té války. Je to hranice projektu: bezpečnostní situace\nv Česku a okolí. Kdybychom sem brali průběh bojů, utopí se v něm to, kvůli\nčemu sem lidé chodí.\n\nBEZPEČNOST OBSAHU — co do záznamu nepatří, i když to zdroj napsal\n\nCzechPatrol je pro civilisty, ne pro toho, kdo chce vědět, kde zasahují\nsložky. Do fakt ani nejasností nezapisuj: souřadnice GPS (stačí kraj nebo\nokres), pohyb, trasy a rozmístění jednotek či hlídek, počty zasahujících,\ninterní kontakty, neveřejná evakuační místa, zásoby, kapacity a slabá\nmísta infrastruktury, technické detaily využitelné k útoku. Kontrola dat\nsouřadnice a přístupové údaje zastaví jako chybu; pohyb jednotek hlásí\njako varování k posouzení. Když si nejsi jistý, jestli údaj civilista\npotřebuje, vynech ho — „provoz omezen\" stačí.\n\nZLEPŠENÍ A KDO JE ZAŘÍDIL\n\nWeb nemá být jen výčet zhoršení. Když stát, obec nebo provozovatel něco\nudělá a doloženě to pomůže, má to být vidět stejně nahlas jako incident.\nProto u druhu „opatreni“ vyplň pole `vykonal`: orgán nebo instituce, která\nkrok provedla (Policie ČR, Armáda ČR, ČEZ Distribuce, obec Dobrá) — nikdy\njméno osoby. A když opatření nebo jiný krok situaci prokazatelně zlepšil\n(provoz obnoven, hranice otevřena, výstraha odvolána), zapiš to do\n`deeskalacniSignaly` se zdrojem. Web z toho dělá blok „Co situaci\nzlepšuje“. Nevymýšlej: bez zdroje o zlepšení ani slovo.\n\nDOPAD NA ČESKO u zahraniční události\n\nU návrhu s kodZeme jiným než CZ vyplň pole `dopadNaCr`: `stav` (zadny |\nmozny | potvrzeny), `procRelevantni` (proč to sledujeme), `dopad` (co\ndnes doloženě platí pro lidi v Česku — u „zadny\" věta, že nic), `sledujeme`\n(co by to změnilo) a `overeno` (datum). Stav „mozny\" nebo „potvrzeny\" musí\nmít oporu ve zdrojích záznamu; jinak je to „zadny\". Zahraniční zpráva se\nnezveřejňuje proto, že je dramatická, ale proto, že na tyhle otázky\nodpovídá.\n\nA) 1 NÁVRHŮ BEZ ÚŘEDNÍHO ZDROJE — dohledej ho\n\nTyhle jsou zpracované a na webu už jsou vidět jako nepotvrzené. Chybí jim\ndruhý doklad z první ruky: úřad, policie, armáda, národní CERT nebo\nprovozovatel zasažené infrastruktury. S ním se záznam zveřejní sám.\n\nSběr od 20. 9. 2026 čte 35 úředních kanálů — vlády, ministerstva vnitra\na obrany, bezpečnostní služby, CERTy a policie sledovaných zemí, k tomu\nNATO, ENISA, Evropskou komisi a provozovatele sítí (ČEPS, Správa železnic,\nProRail). Seznam je v sber/zdroje-udalosti.ts v poli URADY. Hledej nejdřív\ntam; u nizozemské železnice je správný zdroj ProRail, ne médium.\n\nKdyž je u návrhu titulek cizojazyčný, přelož ho česky. Model, který to\ndělal při sběru, je od 20. 9. 2026 vypnutý.\n\nPOZOR na to, na čem se to už jednou zlomilo: úřední zdroj je odkaz NA ÚŘAD.\nZrcadlo tiskové zprávy (globalsecurity.org), distribuce (mynewsdesk.com)\nani veřejnoprávní vysílatel (irozhlas.cz) úřední zdroj nejsou. Kvůli tomu\nse 20. 9. musely stáhnout z webu dva záznamy, které se zveřejnily samy.\n\n 1. i-2026-09-16-114787e14f · 2026-09-16 · Rusko · Rusko: FSB zavedla dočasná omezení pohybu v okresech Kingisepp a Slantsy u hranice s Estonskem; estonští představitelé nevylučují souvislost s mobilizací\n    https://kyivindependent.com/russia-imposes-restrictions-near-estonian-border-amid-mobilization-concerns/\n\nB) 39 NEPOSOUZENÝCH ZACHYCENÝCH ZPRÁV\n\nRozhodni, co je nová událost a co ne. U toho, co ne, napiš proč —\ntichý zápor vypadá zvenčí stejně jako porucha.\n\nTITULEK PIŠ ČESKY. Tohle je nové: do 20. 9. 2026 překládal cizojazyčné\ntitulky model při sběru, jenže placené volání je vypnuté. Od té doby jdou\nna web anglicky, což je na české stránce vidět na první pohled. Překlad je\nteď na tobě — věcně, co se stalo a kde, bez ozdob.\n\nDATUM UDÁLOSTI URČI Z TEXTU. Zachycená zpráva nese datum vydání zdroje,\na když ho zdroj neuvádí, datum, kdy si toho sběr všiml — takže dnešní.\nNa webu pak vypadají všechny zprávy jako dnešní, přestože se staly dřív.\nDo datumUdalosti patří den, kdy se to stalo. Když se z textu určit nedá,\nnech ho prázdný a napiš to do neznameho; nehádej podle data článku.\n\n 1. k-377fddbcc5f0343d · 2026-09-23 · Polsko · Poland says Russian military helicopter violated its airspace\n    https://meduza.io/en/news/2026/09/23/poland-says-russian-military-helicopter-violated-its-airspace\n 2. k-300872f1bfb42045 · 2026-09-23 · Polsko · Polský vzdušný prostor narušil ruský vojenský vrtulník, uvedla armáda\n    https://www.ceskenoviny.cz/zpravy/polsky-vzdusny-prostor-narusil-rusky-vojensky-vrtulnik-uvedla-armada/2878394?utm_source=rss&utm_medium=feed\n 3. k-6cab24d5fdec8416 · 2026-09-24 · Polsko · Útočník během mše pobodal několik lidí v polském klášteře, jeden muž zemřel\n    https://www.idnes.cz/zpravy/zahranicni/polsko-klaster-jaroslaw-utok-nozem-ukrajinec.A260924_123913_zahranicni_kha#utm_source=rss&utm_medium=feed&utm_campaign=zpravodaj&utm_content=main\n 4. k-5be91759bf22db31 · 2026-09-24 · Norsko · Obmedzte správy, prijmite, že svet nie je bezpečné miesto. Politici častejšie používajú slovo vojna, čo robiť, ak máte obavy? (anketa)\n    https://dennikn.sk/5580554/obmedzte-spravy-prijmite-ze-svet-nie-je-bezpecne-miesto-politici-castejsie-pouzivaju-slovo-vojna-co-robit-ak-mate-obavy-anketa/\n 5. k-36b06b7fd8ffb120 · 2026-09-24 · Moldavsko · Drone that crashed in Moldova identified as Russian Gerbera\n    https://www.ukrinform.net/rubric-ato/4167545-drone-that-crashed-in-moldova-identified-as-russian-gerbera.html\n 6. k-ae577e6ce12b8763 · 2026-09-24 · Polsko · Na jihovýchodě Polska muž zaútočil na lidi v klášteře, jeden z nich zemřel\n    https://www.ceskenoviny.cz/zpravy/na-jihovychode-polska-muz-zautocil-na-lidi-v-klastere-jeden-z-nich-zemrel/2878832?utm_source=rss&utm_medium=feed\n 7. k-f24a0a49817c2556 · 2026-09-24 · Ukrajina · Russians destroy jewellery company in Kyiv – video\n    https://www.pravda.com.ua/eng/news/2026/09/24/8054882/\n 8. k-3edb18635747f80b · 2026-09-24 · Polsko · Poland scrambles military aircraft twice in morning over Russian strikes on Ukraine\n    https://www.ukrinform.net/rubric-ato/4167505-poland-scrambles-military-aircraft-twice-in-morning-over-russian-strikes-on-ukraine.html\n 9. k-ab5253219f0f07d5 · 2026-09-24 · Ukrajina · Bavme se o bezpečnostní situaci v Evropě, žádá Rakušan Babiše, ať svolá strany\n    https://www.idnes.cz/zpravy/domaci/bavme-se-o-bezpecnostni-situaci-v-evrope-zada-rakusan-babise-at-svola-strany.A260924_111626_domaci_kop#utm_source=rss&utm_medium=feed&utm_campaign=zpravodaj&utm_content=main\n10. k-0935d9dbf269659c · 2026-09-24 · Moldavsko · Drone wreckage with camera found in Moldova, likely Russian Gerbera – photos\n    https://www.pravda.com.ua/eng/news/2026/09/24/8054871/\n11. k-240a0f841d4b6e62 · 2026-09-24 · Polsko · Polsko má v souvislosti s požárem u stanice služby Starlink podezření na sabotáž\n    https://www.irozhlas.cz/zpravy-svet/polsko-ma-v-souvislosti-s-pozarem-u-stanice-sluzby-starlink-podezreni-na-sabotaz_2609241047_elev\n12. k-2e607159df147d00 · 2026-09-24 · Ukrajina · Ruský útok na farmu v Charkovskej oblasti zabil šesť ľudí. Obeťami boli farmári\n    https://www.aktuality.sk/clanok/ssl7rhu/rusky-utok-na-farmu-v-charkovskej-oblasti-zabil-sest-ludi-obetami-boli-farmari/\n13. k-bf380367c8e565f6 · 2026-09-24 · Ukrajina · Při ruském útoku na farmu v Charkovské oblasti zemřelo sedm lidí\n    https://www.novinky.cz/clanek/valka-na-ukrajine-pri-ruskem-utoku-na-farmu-v-charkovske-oblasti-zemrelo-sedm-lidi-40599295\n14. k-9fed664a7adc2c05 · 2026-09-24 · Ukrajina · Belarus Claims It Foiled ‘Sabotage’ Plot Targeting Russia\n    https://www.themoscowtimes.com/2026/09/24/belarus-claims-it-foiled-sabotage-plot-targeting-russia-a93785\n15. k-e10e235c5f9e06d5 · 2026-09-24 · Česko · Rozkaz přišel z NATO. České gripeny v noci opět vzlétly chránit polský vzdušný prostor\n    https://www.irozhlas.cz/zpravy-domov/rozkaz-prisel-z-nato-ceske-gripeny-v-noci-opet-vzletly-chranit-polsky-vzdusny_2609241036_aru\n16. k-1db214bc98915ac2 · 2026-09-24 · Česko · České gripeny v noci letěly nad Polsko\n    https://www.novinky.cz/clanek/domaci-ceske-gripeny-v-noci-letely-nad-polsko-40599291\n17. k-c575a656c9fd309a · 2026-09-24 · Ukrajina · Iskander-M missile debris found in Kyiv following Russian attack and removed by bomb disposal experts\n    https://www.pravda.com.ua/eng/news/2026/09/24/8054866/\n18. k-387172716b3ef124 · 2026-09-24 · Česko · České gripeny v noci na rozkaz NATO opět střežily nebe nad Polskem\n    https://www.ceskenoviny.cz/zpravy/ceske-gripeny-v-noci-na-rozkaz-nato-opet-strezily-nebe-nad-polskem/2878729?utm_source=rss&utm_medium=feed\n19. k-bde1c5c1a80f0c1a · 2026-09-24 · Česko · NATO opět povolalo české gripeny nad Polsko. V noci letouny vzlétly z Pardubic\n    https://www.idnes.cz/zpravy/domaci/ceske-gripeny-opet-v-noci-vzletly-z-pardubic-nad-polsko.A260924_101121_domaci_vank#utm_source=rss&utm_medium=feed&utm_campaign=zpravodaj&utm_content=main\n20. k-c161e2dd6113d9a6 · 2026-09-24 · Rusko · Seven killed, 12 injured in Russian attack on farm"
   }
 ]
