@@ -384,6 +384,25 @@ titulky odkládá s důvodem `jen-projev` (`nastroje/zasady-textu.mjs`,
 Důvod: web měří, co se stalo, ne co kdo řekl; řeči politiků ho dělají
 stranickým a nudným zároveň.
 
+### Prostředek, odesílatel, úmysl — tři vrstvy původce (24. 9. 2026)
+
+Typ nebo výroba prostředku není původce. Dron ruského typu mohl vyslat
+kdokoli, dron ukrajinského typu mohla přesměrovat obrana, rušení nebo
+porucha. Původce určuje jen úřední závěr vyšetřování, mezinárodní
+organizace nebo přihlášení; do té doby „nepotvrzený“ s uvedením, co víme
+(typ, směr letu, radarová stopa) a kdo co tvrdí. Úmysl (záměr, omyl,
+zbloudilý) se zapisuje zvlášť a jen podle vyšetřování. Odpovědnost za
+následek pro sledované země nese odesílatel i bez úmyslu.
+
+### Důvěryhodnost zdrojů podle kritérií, ne podle zeměpisu (24. 9. 2026)
+
+Pořadí: (1) orgán, který věc sám vyšetřuje nebo provozuje, v kterékoli
+zemi; (2) nezávislé potvrzení z druhé strany; (3) redakce a agentury
+podle toho, jak dokládají (zdroje, autoři, opravy), ne odkud jsou;
+(4) jedna redakce = signál; (5) sociální sítě = signál. Žádný seznam
+„západních agentur“ v metodice ani v textech: působil jako stranění.
+Sankční seznam EU se dodržuje z právního důvodu, ne jako hodnocení.
+
 ## Pravidlo č. 7 — archiv nesmí mystifikovat
 
 Snímek se zapisuje jen při změně. Nikdy nehlas změnu, kterou čtenář nemůže

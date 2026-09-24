@@ -22,7 +22,7 @@ export const HEROHERO_URL = "";
 
 /** Verze a datum poslední revize metodiky. Změna verze = zápis do /opravy/. */
 export const METODIKA_VERZE = "2";
-export const METODIKA_REVIDOVANA = "2026-09-06";
+export const METODIKA_REVIDOVANA = "2026-09-24";
 
 /**
  * Odběrové kanály.
