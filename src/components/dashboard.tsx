@@ -660,7 +660,7 @@ export function Dashboard({
             );
           })}
         </section>
-          <div className="mt-6"><CoSeZmenilo zaznamy={vse} snimky={snimky} ted={tedMs} osa /></div>
+          <div className="mt-6 max-lg:[&_ol>li:nth-child(n+4)]:hidden"><CoSeZmenilo zaznamy={vse} snimky={snimky} ted={tedMs} osa /></div>
         </div>
 
         {/* Postranní sloupec stejné šířky jako nahoře: dodávky a služby, výpadky provozovatelů, ceny paliv, tipy. */}
@@ -669,7 +669,7 @@ export function Dashboard({
             <HlavickaWidgetu ikona="elektrina" nazev="Dodávky a služby" meta={<span>{naruseno.length ? `${naruseno.length} narušeno` : sledujeme.length ? `${sledujeme.length} sledujeme` : "vše běžně"}</span>} napoveda={<span className="block">Elektřina, plyn, spojení, banky, paliva a další podle úředních a provozních zdrojů. Narušené a sledované napřed.</span>} />
             <ul className="px-3 pb-3">
               {[...naruseno, ...sledujeme, ...provozPolozky.filter((p) => p.stav !== "narusen" && p.stav !== "sledujeme")].slice(0, 8).map((p) => (
-                <li key={p.klic}>
+                <li key={p.klic} className={p.stav === "bezny" ? "max-lg:hidden" : ""}>
                   <Napoveda cele popis={<span className="block"><span className="block text-inkoust">{p.hodnota}</span>{p.detail && <span className="mt-1 block text-tlum2">{p.detail}</span>}</span>}>
                     <span className="flex min-h-[36px] w-full items-center gap-2.5 rounded-[10px] px-2 text-left hover:bg-plocha2/60">
                       <span aria-hidden className={`h-[7px] w-[7px] shrink-0 rounded-full ${p.stav === "narusen" ? "bg-akcent" : p.stav === "sledujeme" ? "bg-pozor" : p.stav === "bez-zdroje" ? "bg-tlum2" : "bg-klid"}`} />
@@ -681,12 +681,12 @@ export function Dashboard({
               ))}
             </ul>
           </section>
-          <section className="overflow-hidden rounded-[22px] bg-plocha">
+          <section className="overflow-hidden rounded-[22px] bg-plocha max-lg:hidden">
             <HlavickaWidgetu ikona="komunikace" nazev="Výpadky provozovatelů" meta={<span>{(() => { const n = sluzby.stavy.filter((x) => x.stav === "vypadek" || x.stav === "omezeni").length; return n ? `${n} hlášení` : "bez hlášení"; })()}</span>} napoveda={<span className="block">Stavové stránky provozovatelů čtené naživo. Signál, ne úřední stav.</span>} />
             <StavSluzeb stavy={sluzby.stavy} kdy={sluzby.kdy} vnoreny />
           </section>
           {paliva.length > 0 && (
-            <section className="overflow-hidden rounded-[22px] bg-plocha">
+            <section className="overflow-hidden rounded-[22px] bg-plocha max-lg:hidden">
               <HlavickaWidgetu ikona="palivo" nazev="Ceny pohonných hmot" meta={<span>{paliva.some((p) => p.skok) ? "neobvyklý pohyb" : "běžný pohyb"}</span>} napoveda={<span className="block">Průměrné ceny z týdenního šetření ČSÚ. Měření, ne předpověď.</span>} />
               <CenaPaliva vnoreny />
             </section>
@@ -717,7 +717,7 @@ export function Dashboard({
         <NadpisSekce stitek="Zapojit se" ikona="zvonek" nadpis={t("Jak se to dozvíte, aniž byste sem chodili")} popis={t("Kanály, čtečka nebo vlastní přehled. Nic z toho po vás nechce jméno ani e-mail.")} />
         <TriTemata />
         <div className="mt-6"><Nahlaseni /></div>
-        <div className="mt-6 grid gap-3 md:grid-cols-2">
+        <div className="mt-6 grid gap-3 md:grid-cols-2 max-lg:hidden">
           <details className="group rounded-[22px] bg-plocha">
             <summary className="flex min-h-[44px] cursor-pointer items-center justify-between px-4 text-male font-semibold text-inkoust">Proč je hodnocení {d ? d.nazev.toLowerCase() : "takové"}<Ikona nazev="dolu" velikost={12} tah={2} trida="text-tlum2 transition-transform group-open:rotate-180" /></summary>
             <p className="px-4 py-3 text-male leading-relaxed text-tlum">{stav.shrnuti || "Bez zdůvodnění."} <Link href="/metodika/" className="odkaz">Metodika</Link></p>

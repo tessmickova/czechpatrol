@@ -122,7 +122,7 @@ export function SidebarUvodu({ stav, cr, crHistoricky, crPocet, obcane, pulz, pr
             <Maly nadpis={t("Běžný život")} obdobi="teď" uroven={obcane.uroven} slovo={obcane.slovo} neutralni={obcane.neutralni} popis={obcane.popis}
               graf={<span>{obcane.neovereno ? `${obcane.neovereno} bez údaje` : "vše zkontrolováno"}</span>} />
           </div>
-          <div className="mt-3 grid grid-cols-4 gap-2">
+          <div className="mt-3 grid grid-cols-4 gap-2 max-lg:hidden">
             {[["dnes", soucet(1)], ["7 dní", soucet(7)], ["30 dní", soucet(30)], ["90 dní", soucet(90)]].map(([n, v]) => (
               <span key={n} className="rounded-[14px] bg-plocha2/60 px-2 py-2 text-center">
                 <span className="cislice block text-velke font-bold leading-none text-inkoust">{v}</span>
@@ -130,11 +130,12 @@ export function SidebarUvodu({ stav, cr, crHistoricky, crPocet, obcane, pulz, pr
               </span>
             ))}
           </div>
-          <p className="mt-2 px-1 text-mikro text-tlum2">Případy a operace proti občanům v Evropě. <Link href="/metodika/" className="odkaz">Jak se hodnotí</Link>.</p>
+          <p className="mt-2 px-1 text-mikro text-tlum2 max-lg:hidden">Případy a operace proti občanům v Evropě. <Link href="/metodika/" className="odkaz">Jak se hodnotí</Link>.</p>
         </div>
       </section>
 
-      {tipy}
+      {/* Tipy jen na počítači: na mobilu je to další box navíc. */}
+      {tipy && <div className="max-lg:hidden">{tipy}</div>}
 
       {/* Připravenost */}
       <section className="overflow-hidden rounded-[22px] bg-plocha">

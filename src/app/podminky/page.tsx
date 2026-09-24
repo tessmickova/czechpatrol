@@ -50,7 +50,6 @@ export default function PodminkyStranka() {
           </Oddil>
 
           <Oddil cislo="02" nadpis="Co služba není">
-            <p>Web neradí „odjet“, „vybrat hotovost“ ani nic podobného. Ukazuje ověřený stav a co se zatím nestalo. Rozhodnutí je vaše.</p>
             <p>Sběr dat se může zpozdit nebo něco přehlédnout. Sám nikdy nepotvrdí, že něco platí. Před důležitým rozhodnutím se ptejte úřadů.</p>
           </Oddil>
 

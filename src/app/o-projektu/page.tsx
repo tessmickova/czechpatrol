@@ -38,7 +38,7 @@ export default function OProjektu() {
           <p>Dnes je zveřejněno {p.pripady} případů, {p.aktualizace} aktualizací, {p.opatreni} opatření a {p.reakce} prohlášení nebo reakcí; {n} záznamů je bez dokladu a vedeno odděleně.</p>
         </Odstavec>
         <Odstavec nadpis="Co web nedělá">
-          <p>Neradí, jestli odjet. Nepočítá pravděpodobnost války. Nezveřejňuje nic bez zdroje. Nezjišťuje vaši polohu.</p>
+          <p>Nepočítá pravděpodobnost války. Nezveřejňuje nic bez zdroje. Nezjišťuje vaši polohu.</p>
         </Odstavec>
         <Odstavec nadpis="Odkud jsou data">
           <p>Přednost má orgán, který věc sám vyšetřuje nebo provozuje, v kterékoli zemi; pak nezávislé potvrzení z druhé strany; redakce podle toho, jak dokládají, ne odkud jsou. Sociální sítě samy hodnocení nezvyšují. Všechny zdroje jsou na stránce <Link href="/zdroje/" className="odkaz">Zdroje</Link>, pravidla hodnocení v <Link href="/metodika/" className="odkaz">Metodice</Link> (revize {datumPraha(METODIKA_REVIDOVANA)}).</p>

@@ -5,7 +5,6 @@ import { PrepinacMotivu, PrepinacPohybu } from "./pohyb";
 import { KOMUNITA, METODIKA_REVIDOVANA, WEB, SPUSTENO } from "@/config/web";
 import { datum } from "@/lib/format";
 import { Logo } from "./znacka";
-import { JAZYKY } from "@/lib/jazyky";
 import { useT } from "@/lib/i18n";
 
 const SLOUPCE: { nadpis: string; odkazy: [string, string][] }[] = [
@@ -15,7 +14,7 @@ const SLOUPCE: { nadpis: string; odkazy: [string, string][] }[] = [
   },
   {
     nadpis: "Důvěryhodnost",
-    odkazy: [["/metodika/", "Metodika"], ["/zdroje/", "Zdroje"], ["/opravy/", "Opravy a historie"], ["/vyvoj/", "Vývoj"], ["/svet/", "Aktéři a cíle"], ["/o-projektu/", "O projektu"]],
+    odkazy: [["/metodika/", "Metodika"], ["/zdroje/", "Zdroje"], ["/vyvoj/", "Vývoj"], ["/svet/", "Aktéři a cíle"], ["/o-projektu/", "O projektu"]],
   },
   {
     nadpis: "Projekt",
@@ -27,24 +26,6 @@ const SLOUPCE: { nadpis: string; odkazy: [string, string][] }[] = [
   Jazyky v patičce. Nejsou v hlavní navigaci schválně: český web zůstává tím
   hlavním a přepínač je rozcestník pro čtenáře odjinud, ne rovnocenná větev.
 */
-function Jazyky() {
-  const t = useT();
-  return (
-    <nav aria-label={t("Jazyky")} className="mt-8 border-t border-white/10 pt-6">
-      <div className="stitek-tmavy mb-3 text-noc-tlum/70">{t("Jiné jazyky")} / Other languages</div>
-      {/* Každý odkaz aspoň 36 px vysoký: na mobilu se míří prstem, ne kurzorem. */}
-      <ul className="flex flex-wrap gap-x-4 text-male">
-        {JAZYKY.map((j) => (
-          <li key={j.kod}>
-            <Odkaz href={`/${j.kod}/`} hrefLang={j.kod} className="inline-flex min-h-[36px] items-center text-noc-tlum transition-colors hover:text-noc-text">
-              {j.nazev}
-            </Odkaz>
-          </li>
-        ))}
-      </ul>
-    </nav>
-  );
-}
 
 export function Paticka() {
   const t = useT();
@@ -58,7 +39,7 @@ export function Paticka() {
         <div className="grid gap-10 md:grid-cols-[minmax(0,1.4fr)_repeat(3,minmax(0,1fr))]">
           <div>
             <Logo velikost={32} pismo={17} tmave />
-            <p className="mt-3 max-w-[38ch] text-zaklad leading-relaxed text-noc-tlum">
+            <p className="mt-3 max-w-[38ch] text-zaklad leading-relaxed text-noc-tlum max-md:hidden">
               {t("Nezávislý AI projekt: sběr, ověřování a vyhodnocení bezpečnostních událostí a změn, které mohou mít dopad na lidi v Česku. Shrnutí píše AI, zveřejňuje člověk. Není to úřední zdroj ani varovný systém. V nouzi volejte 112.")}
             </p>
             <p className="mt-3 text-male text-noc-tlum/80">
@@ -90,7 +71,6 @@ export function Paticka() {
           <PrepinacMotivu />
           <PrepinacPohybu />
         </div>
-        <Jazyky />
       </div>
       </div>
     </footer>

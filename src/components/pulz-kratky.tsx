@@ -22,8 +22,8 @@ export function PulzKratky({ pulz, ted }: { pulz: Pulz; ted: number }) {
         {stoji ? "Hlídka" : "Hlídka běží"}
       </span>
       <span className="cislice">{kdy}</span>
-      {pulz.zdrojuCelkem > 0 && <span className="cislice">{pulz.zdrojuOk}/{pulz.zdrojuCelkem} zdrojů</span>}
-      <span className="cislice">{pulz.zachyceno24} nových / 24 h</span>
+      {pulz.zdrojuCelkem > 0 && <span className="cislice max-sm:hidden">{pulz.zdrojuOk}/{pulz.zdrojuCelkem} zdrojů</span>}
+      <span className="cislice max-sm:hidden">{pulz.zachyceno24} nových / 24 h</span>
     </span>
   );
 }

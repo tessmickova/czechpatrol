@@ -115,7 +115,7 @@ function Sloupec({ nadpis, ikona, ton, radky, prazdne, paticka, ted, napoveda }:
         <span className="cislice text-mikro text-tlum2">{radky.length}</span>
       </div>
       {videt.length ? (
-        <ul className="mt-1">
+        <ul className="mt-1 max-md:[&>li:nth-child(n+6)]:hidden">
           {videt.map((r) => {
             const otevreno = otevreny === r.klic;
             return (

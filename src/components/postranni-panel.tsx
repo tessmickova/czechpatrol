@@ -49,7 +49,6 @@ export const DALSI_STRANKY = [
   { href: "/svet/", label: "Aktéři a cíle" },
   { href: "/metodika/", label: "Metodika" },
   { href: "/zdroje/", label: "Zdroje" },
-  { href: "/opravy/", label: "Opravy a historie" },
   { href: "/o-projektu/", label: "O projektu" },
   ...(SPUSTENO.izs ? [{ href: "/izs/", label: "Pro záchranné složky" }] : []),
   { href: "/soukromi/", label: "Soukromí" },

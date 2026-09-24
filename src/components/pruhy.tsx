@@ -74,7 +74,7 @@ export function PruhPuvodu({ vpravo }: { vpravo?: ReactNode }) {
         pruh dostane zpátky; klid se vejde sem.
       */}
       <div className="mx-auto flex max-w-[1280px] flex-wrap items-center justify-between gap-x-4 gap-y-0.5 px-4 py-1.5 text-drobne text-tlum2 sm:px-6">
-        <span>Nezávislý AI projekt: sběr a vyhodnocení bezpečnostních událostí napříč internetem, ne úřední zdroj. V nouzi 112.</span>
+        <span className="max-sm:hidden">Nezávislý AI projekt: sběr a vyhodnocení bezpečnostních událostí napříč internetem, ne úřední zdroj. V nouzi 112.</span><span className="sm:hidden">AI projekt · ne úřední zdroj · v nouzi 112</span>
         {vpravo}
       </div>
     </div>

@@ -320,7 +320,7 @@ export function DetailObsah({ i }: { i: Incident }) {
           <p className="text-zaklad text-tlum2">Beze změn od zveřejnění.</p>
         )}
         <p className="mt-3 text-drobne text-tlum2">
-          Zveřejněno {datumCasPraha(i.aktualizovano)} · <Link href="/opravy/" className="odkaz">všechny opravy</Link>
+          Zveřejněno {datumCasPraha(i.aktualizovano)}
         </p>
       </Blok>
     </div>
