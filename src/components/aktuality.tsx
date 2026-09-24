@@ -142,6 +142,32 @@ interface Neoverene {
   nahled: Nahled;
 }
 
+/*
+  Datum nad vlajkou, drobně (24. 9. 2026 na přání provozovatelky).
+
+  Dřív stálo datum vedle vlajky v pevném sloupci 80 px a titulku zbývalo
+  málo místa. Teď je levý sloupec úzký: nahoře krátké datum (rok jen
+  u loňských a starších), pod ním vlajka. Bez data se píše pomlčka —
+  datum zachycení by se četlo jako den události.
+*/
+function kratkeDatum(iso: string): string {
+  const [den, mesic, rok = ""] = datumPraha(iso).split(".").map((x) => x.trim());
+  return rok === String(new Date().getFullYear()) ? `${den}. ${mesic}.` : `${den}. ${mesic}. ${rok.slice(-2)}`;
+}
+
+function SloupecKdy({ kdy, zeme, kodZeme }: { kdy: string | null; zeme: string | null; kodZeme: string | null }) {
+  return (
+    <span className="flex w-[34px] shrink-0 flex-col items-center gap-[3px] pt-[2px]">
+      <span className="cislice whitespace-nowrap text-[10px] leading-none text-tlum2" title={kdy ? datumPraha(kdy) : "bez data"}>
+        {kdy ? kratkeDatum(kdy) : "—"}
+      </span>
+      <span className="h-[14px] leading-none" title={zeme ?? undefined} aria-label={zeme ?? undefined}>
+        {kodZeme ? <Vlajka kod={kodZeme} /> : null}
+      </span>
+    </span>
+  );
+}
+
 export function Aktuality({
   zaznamy,
   kandidati,
@@ -280,8 +306,7 @@ export function Aktuality({
               >
                 <span aria-hidden className={`mt-[7px] h-[6px] w-[6px] shrink-0 rounded-full ${t.tecka}`} />
                 <span className="flex min-w-0 flex-1 items-start gap-2">
-                  <span className="shrink-0 leading-[20px]" title={zeme} aria-label={zeme}><Vlajka kod={z.kodZeme} /></span>
-                  <span className="cislice w-[80px] shrink-0 whitespace-nowrap pt-[3px] text-mikro text-tlum2">{datumPraha(kdyZjisteno(z))}</span>
+                  <SloupecKdy kdy={kdyZjisteno(z)} zeme={zeme} kodZeme={z.kodZeme} />
                   <span className="line-clamp-2 text-male leading-[20px] text-inkoust">{bezZeme(z.kratkyTitulek || z.titulek, z.zeme, z.kodZeme)}</span>
                 </span>
               </Link>
@@ -317,21 +342,7 @@ export function Aktuality({
               <>
                 <span aria-hidden className={`mt-[7px] h-[6px] w-[6px] shrink-0 rounded-full ${r.tecka}`} />
                 <span className="flex min-w-0 flex-1 items-start gap-2">
-                  {/*
-                    Vlajka jen tam, kde zemi známe; jinak prázdné místo stejné
-                    šířky, aby datum a titulek lícovaly s ověřenými řádky.
-                  */}
-                  <span className="w-[18px] shrink-0 leading-[20px]" title={r.zeme ?? undefined} aria-label={r.zeme ?? undefined}>
-                    {r.kodZeme ? <Vlajka kod={r.kodZeme} /> : null}
-                  </span>
-                  {/*
-                    Pevná šířka, aby titulky lícovaly. „Bez data" je kratší než
-                    datum. A bez data se datum nepíše: datum zachycení by se četlo
-                    jako den události — u staré zprávy z výpisu úřadu je to lež.
-                  */}
-                  <span className="cislice w-[80px] shrink-0 whitespace-nowrap pt-[3px] text-mikro text-tlum2">
-                    {r.bezData ? "bez data" : datumPraha(r.kdy)}
-                  </span>
+                  <SloupecKdy kdy={r.bezData ? null : r.kdy} zeme={r.zeme} kodZeme={r.kodZeme} />
                   <span className="line-clamp-2 text-male leading-[20px] text-tlum">
                     <span className="stitek mr-1.5 text-tlum2">{r.slovo}</span>
                     {r.titulek}

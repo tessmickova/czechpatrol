@@ -15,6 +15,7 @@ import { Ikona, type NazevIkony } from "./ikony";
 import { HeroDashboard } from "./hero-dashboard";
 import { DlazdiceKampane } from "./kampane";
 import { NadpisSekce } from "./nadpisy";
+import { SouhrnOverujeme } from "./overujeme";
 import { Partneri, Sledovat } from "./sledovat";
 import { Aktuality } from "./aktuality";
 import { UrgentniPas } from "./urgentni";
@@ -474,7 +475,6 @@ export function Dashboard({
     <>
     <PasZemi vse={vse} kampane={kampane} ted={ted} />
     <div className="mx-auto max-w-[1280px] px-4 py-5 sm:px-6 sm:py-7">
-      {/* „Právě ověřujeme“ na úvodní stranu nepatří (rozhodnutí 23. 9. 2026). */}
 
       {/*
         Úvod tři pětiny, aktuality dvě pětiny.
@@ -522,6 +522,15 @@ export function Dashboard({
           <Aktuality zaznamy={vse} kandidati={kandidati} nepotvrzene={nepotvrzene} />
         </div>
       </div>
+
+      {/*
+        „Právě ověřujeme“ jako malý souhrn pod úvodem (24. 9. 2026). Velké
+        karty nad budíky zabíraly celou obrazovku; tady je jeden řádek na
+        zprávu a zbytek na rozkliknutí.
+      */}
+      {overovaneAktivni.length > 0 && (
+        <div className="mt-5 xl:max-w-[60%]"><SouhrnOverujeme aktivni={overovaneAktivni} ted={tedMs} /></div>
+      )}
 
       {/*
         1b — tři témata webu (komunita, dotazník, upozornění) na místě, kde

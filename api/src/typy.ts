@@ -20,6 +20,8 @@ export interface Env {
   SPRAVCE_CHAT?: string;
   /** "ano" = smí se ukládat e-maily a kontakty. Viz src/osobni-udaje.ts. */
   OSOBNI_UDAJE?: string;
+  /** "ano" = smí se spustit platba. Bez toho platby neběží ani s klíči brány. */
+  PLATBY?: string;
   TELEGRAM_KANAL?: string;
   /* Premium a kredity — viz docs/PREMIUM-NAVRH.md. Bez klíče a brány se
      platby nespouštějí a web říká „připravujeme“. Vše jsou tajemství Workeru. */

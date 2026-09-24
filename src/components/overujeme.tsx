@@ -177,3 +177,80 @@ export function PruhOverujeme({
     </section>
   );
 }
+
+/*
+  Malý souhrn „Právě ověřujeme“ pro úvodní stranu (24. 9. 2026).
+
+  Velké karty (PruhOverujeme) zabíraly na úvodu celou obrazovku. Tady je
+  z každé ověřované zprávy jen jeden řádek: co se hlásí a co k tomu říkají
+  úřady. Zbytek je na rozkliknutí. Rámeček je čárkovaný a jantarový — stejný
+  jazyk jako velké karty — aby se to nedalo splést s ověřeným obsahem.
+
+  Zdroje se vypisují jen jménem média (před pomlčkou), ne cizojazyčným
+  titulkem článku: souhrn má být česky.
+*/
+export function SouhrnOverujeme({ aktivni, ted }: { aktivni: Overovana[]; ted: number }) {
+  const [cas, setCas] = useState(ted);
+  useEffect(() => {
+    setCas(Date.now());
+    const t = setInterval(() => setCas(Date.now()), 60_000);
+    return () => clearInterval(t);
+  }, []);
+  const zive = aktivni.filter((o) => new Date(o.uzavritDo).getTime() > cas);
+  if (!zive.length) return null;
+
+  return (
+    <section aria-label="Právě ověřujeme" className="rounded-[18px] border border-dashed border-jantar/55 bg-jantar/[0.06]">
+      <div className="flex flex-wrap items-center gap-x-2.5 gap-y-1 px-4 pt-3">
+        <Odznak ton="pozor" duraz="silny" ikona="otaznik">Právě ověřujeme</Odznak>
+        <span className="text-drobne text-tlum2">nepotvrzené zprávy · nevstupují do hodnocení</span>
+      </div>
+      <ul className="divide-y divide-dashed divide-jantar/25">
+        {zive.map((o) => {
+          const lhuta = zbyva(o.uzavritDo, cas);
+          return (
+            <li key={o.slug}>
+              <details className="group">
+                <summary className="flex cursor-pointer list-none items-start gap-2.5 px-4 py-2.5 hover:bg-jantar/[0.05]">
+                  <span className="mt-[2px] shrink-0"><Vlajka kod={o.kodZeme} /></span>
+                  <span className="min-w-0 flex-1">
+                    <span className="line-clamp-2 text-male leading-snug text-inkoust">{o.coSeHlasi}</span>
+                    {o.coRikajiUrady[0] && (
+                      <span className="mt-0.5 line-clamp-1 text-drobne text-tlum">
+                        <b className="font-semibold text-klid-text">Úřady:</b> {o.coRikajiUrady[0]}
+                      </span>
+                    )}
+                  </span>
+                  <Ikona nazev="dolu" velikost={12} tah={2} trida="mt-1 shrink-0 text-tlum2 transition-transform group-open:rotate-180" />
+                </summary>
+                <div className="space-y-2 px-4 pb-3 pl-[42px] text-drobne leading-relaxed text-tlum">
+                  {o.coRikajiUrady.length > 1 && (
+                    <p><b className="font-semibold text-inkoust">Co říkají úřady:</b> {o.coRikajiUrady.slice(1).join(" ")}</p>
+                  )}
+                  {o.coJsmeOverili.length > 0 && (
+                    <p><b className="font-semibold text-inkoust">Co jsme zjistili:</b> {o.coJsmeOverili.slice(0, 2).join(" ")}</p>
+                  )}
+                  <p>
+                    <b className="font-semibold text-inkoust">Kdo to uvádí:</b>{" "}
+                    {o.kdoHlasi.map((z, i) => (
+                      <span key={z.url}>
+                        {i > 0 && ", "}
+                        <a href={z.url} target="_blank" rel="nofollow noopener noreferrer" className="underline decoration-linka underline-offset-2 hover:text-inkoust">
+                          {z.nazev.split(" — ")[0]}
+                        </a>
+                      </span>
+                    ))}
+                  </p>
+                  <p className="text-inkoust"><b className="font-semibold">Co dělat:</b> {o.coDelatTed}</p>
+                  <p className="cislice text-tlum2">
+                    prověřeno {datumCasPraha(o.overenoNaposledy)}{lhuta ? ` · ${lhuta}` : ""}
+                  </p>
+                </div>
+              </details>
+            </li>
+          );
+        })}
+      </ul>
+    </section>
+  );
+}

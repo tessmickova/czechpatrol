@@ -10358,5 +10358,93 @@
     "lidskyOvereno": false,
     "archivniZaznam": false,
     "overeni": "neovereno"
+  },
+  {
+    "id": "i-2026-09-16-rusko-omezeni-hranice-estonsko",
+    "slug": "rusko-omezeni-pohybu-u-hranice-s-estonskem-2026",
+    "titulek": "Rusko: pohraniční správa FSB omezila od 16. do 26. září pohyb v pětikilometrovém pásmu u hranice s Estonskem u Narvy; v noci se mimo obce nesmí zdržovat nikdo",
+    "kratkyTitulek": "Rusko: omezení pohybu u hranice s Estonskem",
+    "zeme": "Rusko",
+    "kodZeme": "RU",
+    "kategorie": [
+      "hranice",
+      "rusko",
+      "nato"
+    ],
+    "datumUdalosti": "2026-09-16T00:00:00Z",
+    "datumZjisteni": "2026-09-21T00:00:00Z",
+    "aktualizovano": "2026-09-24T06:30:00Z",
+    "zavaznost": "Y1",
+    "jistota": "vysoka",
+    "stav": "neuvedeno",
+    "atribuce": "oficialni",
+    "puvodce": null,
+    "druh": "opatreni",
+    "fakta": [
+      "Pohraniční správa FSB pro Petrohrad a Leningradskou oblast oznámila, že od 16. do 26. září 2026 platí v pohraničí Kingiseppského a Slancevského okresu opatření „k předcházení přestupkům v pohraniční a migrační oblasti a k ochraně vodních biologických zdrojů“.",
+      "Na řece Narvě (úsek od říčky Bolšaja Čerjomucha po Krjušu) je zakázáno zdržovat se na břehu a plout na malých plavidlech.",
+      "V pětikilometrovém pásmu podél hranice je v noci zakázáno zdržovat se a pohybovat se mimo obce, a to i ve vozidlech; zakázán je i hon a pohyb se zbraní.",
+      "Estonská policie a pohraniční stráž (PPA) o chystaných omezeních věděla dopředu, ruská strana jí je ale sama neoznámila. Podle estonského pohraničního zmocněnce Andrise Viltsina nejde o běžnou praxi, ale ani o nic bezprecedentního.",
+      "Estonský ministr vnitra Igor Taro uvedl, že úroveň ohrožení se nemění a Estonsko svůj režim na hranici neupravuje."
+    ],
+    "neznameho": [
+      "Proč Rusko omezení zavedlo právě teď; oficiální zdůvodnění je obecné (prevence přestupků, ochrana ryb).",
+      "Zda omezení souvisí s cvičením nebo přesuny vojsk; nikdo to nedoložil.",
+      "Sociální sítě omezení popisují jako „zákaz vycházení“ a tvrdí, že je estonští pohraničníci označili za neobvyklá. Úřední znění i estonská PPA to popisují střídměji — viz fakta."
+    ],
+    "eskalacniSpousteče": [
+      "Prodloužení omezení po 26. září nebo jeho rozšíření na další okresy.",
+      "Doložené přesuny vojsk v pohraničním pásmu."
+    ],
+    "deeskalacniSignaly": [
+      "Ukončení omezení 26. září bez dalších kroků."
+    ],
+    "zdroje": [
+      {
+        "nazev": "Pohraniční správa FSB pro Petrohrad a Leningradskou oblast — oznámení (zveřejněno na webu obce Pustomeržskoje)",
+        "url": "https://pustomerzhskoe-r41.gosweb.gosuslugi.ru/dlya-zhiteley/novosti-i-reportazhi/novosti_729.html",
+        "typ": "primary",
+        "publikovano": null,
+        "primarni": true,
+        "jazyk": "ru"
+      },
+      {
+        "nazev": "ERR News — Russia imposes temporary movement restrictions on other side of Estonian border",
+        "url": "https://news.err.ee/1610144281/russia-imposes-temporary-movement-restrictions-on-other-side-of-estonian-border",
+        "typ": "media",
+        "publikovano": "2026-09-21T00:00:00Z",
+        "primarni": false,
+        "jazyk": "en"
+      },
+      {
+        "nazev": "The Moscow Times (rusky) — ФСБ ввела комендантский час на границе с Эстонией",
+        "url": "https://ru.themoscowtimes.com/2026/09/21/fsb-vvela-komendantskii-chas-na-granitse-s-estoniei-a206615",
+        "typ": "media",
+        "publikovano": "2026-09-21T00:00:00Z",
+        "primarni": false,
+        "jazyk": "ru"
+      },
+      {
+        "nazev": "Novaja gazeta Evropa — Россия ввела новые ограничения на передвижение у границы с Эстонией",
+        "url": "https://novayagazeta.eu/articles/2026/09/22/rossiia-vvela-novye-ogranicheniia-na-peredvizhenie-u-granitsy-s-estoniei",
+        "typ": "media",
+        "publikovano": "2026-09-22T00:00:00Z",
+        "primarni": false,
+        "jazyk": "ru"
+      }
+    ],
+    "souvisejici": [],
+    "historie": [
+      {
+        "kdy": "2026-09-24T06:30:00Z",
+        "text": "Zapsáno po ověření příspěvku ze sociálních sítí proti úřednímu oznámení FSB a zpravodajství ERR.",
+        "novySignal": true
+      }
+    ],
+    "novy": true,
+    "aiZpracovano": true,
+    "lidskyOvereno": false,
+    "overeni": "automaticke",
+    "vyznam": ""
   }
 ]

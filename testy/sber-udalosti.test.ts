@@ -388,3 +388,14 @@ describe("vyloučená témata nesmí trefit cizí slovo", () => {
     expect(duvodOdmitnuti("Vláda schválila daně a sabotáž rozpočtu v Praze")).toBe("vylouceno-tematem");
   });
 });
+
+describe("omezení pohybu u hranice", () => {
+  // ERR 21. 9. 2026 — sběr to zahodil jako „bez skutku“.
+  it("úřední omezení pohybu u hranice je skutek", () => {
+    const t = "Russia imposes temporary movement restrictions on other side of Estonian border. Russia's Federal Security Service (FSB) has imposed temporary movement restrictions in two districts across the border from Estonia.";
+    expect(duvodOdmitnuti(t)).toBeNull();
+  });
+  it("zákaz vycházení u hranice česky", () => {
+    expect(duvodOdmitnuti("Rusko zavedlo zákaz vycházení v okresech u hranice s Estonskem")).toBeNull();
+  });
+});

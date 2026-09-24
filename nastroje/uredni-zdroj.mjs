@@ -38,6 +38,8 @@ const UREDNI_KONCOVKY = [
   ".parliament.uk",
   ".belgium.be",
   ".admin.ch",
+  /* Státní platforma, na které ruské obce a úřady vedou weby (gosweb). Doklad toho, co ruský úřad vyhlásil — ne toho, že je to pravda. */
+  ".gosweb.gosuslugi.ru",
 ];
 
 /*

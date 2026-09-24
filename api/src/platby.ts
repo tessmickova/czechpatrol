@@ -34,9 +34,10 @@ const DOTAZ_PO_MIN = 10;
 const DOTAZ_DO_DNI = 7;
 
 export function bezi(env: Env): boolean {
-  // Platit bez uvedeného prodávajícího (provozovatele) nejde: chybí identifikace,
-  // podmínky i poučení o odstoupení (audit P0-15). Jeden klíč brány to nezapne.
-  return Boolean(env.COMGATE_MERCHANT && env.COMGATE_SECRET) && sifrovaniNastaveno(env) && osobniUdajePovoleny(env);
+  // Platby mají vlastní vypínač PLATBY = "ano" (24. 9. 2026: provozovatel je
+  // uvedený, ale platby se spustí až po jeho další změně). Nestačí klíč brány
+  // ani povolené osobní údaje — chybí podmínky a poučení o odstoupení (P0-15).
+  return env.PLATBY === "ano" && Boolean(env.COMGATE_MERCHANT && env.COMGATE_SECRET) && sifrovaniNastaveno(env) && osobniUdajePovoleny(env);
 }
 const testovaci = (env: Env) => env.COMGATE_TEST !== "false";
 

@@ -255,6 +255,22 @@ export default function Metodika() {
             <Seznam polozky={PREFEROVANE} znak="✓" barva="text-[#7fdcac]" />
           </Karta>
         </div>
+        {/* Pravidla č. 0.5 a 0.6 v CLAUDE.md, veřejně a stručně (24. 9. 2026). */}
+        <Karta className="mt-5 p-5 sm:p-6">
+          <h3 className="podnadpis mb-4 text-zaklad">Jak přebíráme zprávy</h3>
+          <Seznam
+            polozky={[
+              "Nejsme novináři: shromažďujeme zdroje, zasazujeme je do kontextu a upozorňujeme na kritické události. Novinářskou etiku přesto dodržujeme.",
+              "Souhrny pomáhá psát AI. Smí zkrátit, nesmí nic přidat: žádné nové tvrzení, závěr ani souvislost, kterou zdroj neuvádí. Věta, kterou nejde dohledat ve zdroji, se smaže.",
+              "Každé tvrzení má původce. Podezřelý zůstává podezřelým, obviněný není pachatel, dokud soud nerozhodne.",
+              "O všech stranách píšeme věcně a s úctou. Žádné nálepky, žádné výzvy, nikoho neprovokujeme.",
+              "Nezveřejňujeme pohyby jednotek, podrobnosti vyšetřování nad rámec oznámení úřadu, osobní údaje ani návody.",
+              "Média ze sankčního seznamu EU nepoužíváme jako zdroj.",
+            ]}
+            znak="✓"
+            barva="text-[#7fdcac]"
+          />
+        </Karta>
       </Sekce>
 
       <Sekce

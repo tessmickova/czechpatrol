@@ -259,10 +259,17 @@ export const TISNOVA = [
  * Provozovatel — správce osobních údajů. Dokud je prázdné, stránky
  * o soukromí a podmínkách to řeknou na rovinu; nic se nevymýšlí.
  */
-export const PROVOZOVATEL = {
-  nazev: "",
+export const PROVOZOVATEL: { nazev: string; ico: string; kontakt: string } = {
+  /* Doplněno 24. 9. 2026 podle provozovatelky. Kontakt zatím nedodán — nevymýšlí se. */
+  nazev: "Vítězslav Miček",
+  ico: "07347219",
   kontakt: "",
-} as const;
+};
+
+/** „Vítězslav Miček, IČO 07347219“ — jednotná podoba pro stránky. */
+export const PROVOZOVATEL_TEXT = PROVOZOVATEL.nazev
+  ? `${PROVOZOVATEL.nazev}${PROVOZOVATEL.ico ? `, IČO ${PROVOZOVATEL.ico}` : ""}`
+  : "";
 
 /**
  * Sběr e-mailů pro souhrn a pozvánky do komunity.
@@ -277,9 +284,13 @@ export const PROVOZOVATEL = {
  * (správce údajů podle GDPR). Server má vlastní pojistku OSOBNI_UDAJE,
  * tohle jen skryje pole, která by stejně skončila odmítnutím.
  */
-export const KONTAKTY_PRIJIMAME = PROVOZOVATEL.nazev !== "";
+/*
+  Bez kontaktu na správce se údaje nesbírají: čl. 13 GDPR chce, aby člověk
+  věděl, kam se obrátit kvůli výmazu nebo námitce. Jméno a IČO nestačí.
+*/
+export const KONTAKTY_PRIJIMAME = PROVOZOVATEL.nazev !== "" && PROVOZOVATEL.kontakt !== "";
 
-export const EMAIL_ODBER_BEZI = UCTY_ZAPNUTE && PROVOZOVATEL.nazev !== "";
+export const EMAIL_ODBER_BEZI = UCTY_ZAPNUTE && KONTAKTY_PRIJIMAME;
 
 /**
  * E-shop s výbavou (Čenich). Prázdná adresa = odkaz se nikde neukáže.

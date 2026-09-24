@@ -96,6 +96,67 @@ Dál platí bez výjimky:
 - Zařadit položku smí **jen člověk**. Automat sem nedává nic, viz
   pravidlo č. 4.
 
+### 5. AI smí zkrátit, nesmí nic přidat (od 24. 9. 2026)
+
+Platí pro **každý** text na webu, v Telegramu i v jiných kanálech, pro nové
+i staré záznamy, pro souhrny od modelu, od Patrola i od člověka.
+
+Souhrn cizí zprávy je legální převzetí faktu: vlastními slovy, zkráceně,
+s odkazem na zdroj (viz autorské právo výš). **Nesmí ale vzniknout nové
+tvrzení**, které ve zdroji není, ani posun významu. Konkrétně:
+
+- **Nic se nepřidává.** Žádný závěr, souvislost, motiv, příčina ani číslo,
+  které zdroj neuvádí. Souvislost mezi dvěma událostmi se napíše, jen když
+  ji někdo jmenovitě tvrdí — a jako jeho tvrzení.
+- **Nic se nezesiluje.** „Podezřelý“ zůstane podezřelý, „údajně“ zůstane,
+  „podle policie“ zůstane. Obviněný není pachatel, dokud ho soud
+  pravomocně neodsoudí (presumpce neviny, čl. 40 Listiny). Titulek
+  nesmí být silnější než text zdroje.
+- **Každé tvrzení má původce.** Kdo co řekl, se píše jmenovitě („podle
+  estonské pohraniční stráže“). Co tvrdí strana sporu nebo konfliktu, je
+  vždy označené jako její tvrzení.
+- **O konkrétních lidech jen to, co doložil úřad nebo soud.** Jméno
+  soukromé osoby se neuvádí, pokud ho neuvedl úřad sám; nic, co by šlo
+  vyložit jako pomluvu (§ 184 trestního zákoníku) nebo zásah do osobnosti
+  (§ 81 a násl. občanského zákoníku).
+- **Citace je doslovná** a v uvozovkách, nebo se vůbec nepoužije.
+- **Když si zdroje odporují**, napíše se rozpor, ne jedna verze.
+- **Oprava je veřejná.** Chybu opravujeme hned a zapíšeme ji do Oprav.
+
+Když model nebo člověk vyrobí větu, kterou nejde dohledat ve zdroji,
+věta se smaže — ne přeformuluje.
+
+### 6. S úctou, bez provokací, podle novinářské etiky (od 24. 9. 2026)
+
+Nejsme novináři: shromažďujeme zdroje, zasazujeme je do kontextu a
+upozorňujeme na kritické události. Pravidla novinářské etiky (Etický
+kodex Syndikátu novinářů ČR) ale dodržujeme, jako bychom jimi byli.
+Web se nesmí dostat do hledáčku policie ani jiných orgánů — tuzemských
+ani zahraničních — kvůli tomu, co a jak píše. Proto:
+
+- **Věcný, klidný tón o všech.** Žádné nadávky, hanlivé přezdívky ani
+  nálepky o státech, národech, skupinách ani lidech („okupanti“,
+  „teroristé“, „zrádci“…). Pojmenování jako „teroristická organizace“ jen
+  tehdy, když je to úřední označení, a s uvedením, kdo ho vydal.
+- **Nikoho neprovokujeme a k ničemu nevyzýváme.** Žádné výzvy k jednání
+  proti komukoli, žádné schvalování ani zlehčování trestných činů
+  (§ 365 trestního zákoníku), nic, co by šlo vyložit jako podněcování
+  k nenávisti (§ 355, § 356 trestního zákoníku).
+- **Nic, co by ohrozilo lidi nebo zásah.** Nezveřejňujeme polohu a pohyb
+  jednotek, policejní postupy ani podrobnosti vyšetřování nad rámec toho,
+  co úřad sám oznámil. Žádné osobní údaje příslušníků složek, obětí,
+  svědků ani dětí.
+- **Žádné návody.** Jak sabotáž, útok nebo zbraň funguje, se nepíše.
+- **Sankcionovaná média se nepoužívají jako zdroj.** Obsah médií na
+  sankčním seznamu EU (nařízení Rady 833/2014, čl. 2f — např. RT,
+  Sputnik) se nepřebírá ani neodkazuje. Co tvrdí, se uvede podle jiného
+  média, které o tom píše. Kontrola dat to hlídá jako chybu.
+- **Práva všech stran.** Ke každé straně sporu se přistupuje stejně:
+  co tvrdí, kdo to tvrdí, co k tomu říkají úřady.
+
+Když si nejsme jistí, jestli věta obstojí, **nevydá se** a založí se
+otázka pro člověka.
+
 ## Pravidlo č. 1 — nejsme zpravodajství
 
 **Na web patří jen to, co mění bezpečnostní situaci, nebo doložený a konkrétní

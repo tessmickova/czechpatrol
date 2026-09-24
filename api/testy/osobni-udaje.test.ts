@@ -35,3 +35,12 @@ describe("osobní údaje bez provozovatele", () => {
     expect(radek.slice(4)).toEqual([null, null, null]);
   });
 });
+
+describe("platby", () => {
+  it("neběží ani s klíči brány a povolenými údaji, dokud není PLATBY=ano", async () => {
+    const { bezi } = await import("../src/platby");
+    const zaklad = { COMGATE_MERCHANT: "m", COMGATE_SECRET: "s", KLIC_SIFROVANI: "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA", OSOBNI_UDAJE: "ano" };
+    expect(bezi(zaklad as unknown as Env)).toBe(false);
+    expect(bezi({ ...zaklad, PLATBY: "ano" } as unknown as Env)).toBe(true);
+  });
+});

@@ -17,6 +17,7 @@ import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { chybyVystrahy } from "./vystraha-pravidla.mjs";
 import { falesneUredni } from "./uredni-zdroj.mjs";
+import { jeSankcionovane, nalepkyVTextu } from "./zasady-textu.mjs";
 import { zkontrolujZaznam } from "./bezpecnost-obsahu.mjs";
 
 const koren = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
@@ -382,6 +383,28 @@ if (fs.existsSync(path.join(koren, "data", "opatreni-zemi.json"))) {
       if (!klice.has(p.klic)) chyby.push(`${kde}: opatření mimo výčet`);
       if (p.stav !== null && !/^https:\/\//.test(p.zdroj?.url ?? "")) chyby.push(`${kde}: stav „${p.stav}" bez https zdroje`);
       if (p.stav !== null && !p.popis) chyby.push(`${kde}: stav bez popisu`);
+    }
+  }
+}
+
+/* ---------- zásady textu (CLAUDE.md, pravidlo č. 0.5 a 0.6) ---------- */
+{
+  const kolekce = [
+    ["záznam", incidenty, (x) => x.slug, (x) => x.zdroje],
+    ["neprošlý", nepotvrzene, (x) => x.id, (x) => x.zdroje],
+    ["návrh", navrhy, (x) => x.id ?? x.slug, (x) => x.zdroje],
+    ["ověřujeme", overujeme, (x) => x.slug, (x) => x.kdoHlasi],
+    ["kandidát", kandidati, (x) => x.id, (x) => (x.zdroj ? [x.zdroj] : [])],
+  ];
+  for (const [co, seznam, klic, zdroje] of kolekce) {
+    for (const x of seznam ?? []) {
+      for (const z of zdroje(x) ?? []) {
+        if (jeSankcionovane(z?.url)) chyby.push(`${co} ${klic(x)}: zdroj ze sankčního seznamu EU (${z.url}) — uveďte to podle jiného média`);
+      }
+      if (co === "kandidát") continue;
+      const text = [x.titulek, x.kratkyTitulek, x.coSeHlasi, ...(x.fakta ?? []), ...(x.neznameho ?? []), x.vyznam].filter(Boolean).join(" ");
+      const n = nalepkyVTextu(text);
+      if (n.length) varovani.push(`${co} ${klic(x)}: hanlivá nálepka (${n.join(", ")}) — jen jako doslovná citace s původcem, jinak přepsat`);
     }
   }
 }

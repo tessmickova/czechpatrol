@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { HlavickaStranky, Obsah } from "@/components/hlavicka";
 import { Karta } from "@/components/zaklad";
-import { PLACENE, PROVOZOVATEL } from "@/config/web";
+import { PLACENE, PROVOZOVATEL, PROVOZOVATEL_TEXT } from "@/config/web";
 
 export const metadata: Metadata = {
   title: "Podmínky použití",
@@ -43,7 +43,7 @@ export default function PodminkyStranka() {
 
         <div className="mt-10">
           <Oddil cislo="01" nadpis="Co služba je">
-            <p>Nezávislý analytický projekt. Sbírá veřejné informace z úředních zdrojů a důvěryhodných médií, řadí je do jednotné stupnice a ukazuje, co platí a co ne. Provozuje ho {PROVOZOVATEL.nazev ? <b>{PROVOZOVATEL.nazev}</b> : "soukromá osoba (identifikace bude doplněna se spuštěním účtů)"}.</p>
+            <p>Nezávislý analytický projekt. Sbírá veřejné informace z úředních zdrojů a důvěryhodných médií, řadí je do jednotné stupnice a ukazuje, co platí a co ne. Provozuje ho {PROVOZOVATEL.nazev ? <b>{PROVOZOVATEL_TEXT}</b> : "soukromá osoba (identifikace bude doplněna se spuštěním účtů)"}.</p>
             <p>Není součástí vlády, armády, NATO, EU ani bezpečnostních složek. Hodnocení je náš rozbor, ne úřední stupeň, předpověď ani pokyn.</p>
           </Oddil>
 

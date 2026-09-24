@@ -8,6 +8,7 @@ import { vyrezZeStranky, type VyrezZdroje } from "./text-zdroje";
 import { ctenaProfily } from "./socialni";
 import { ctiProfil } from "./cteni-socialni";
 import type { Polozka } from "./typy";
+import { jeSankcionovane, POKYNY_TEXTU } from "../nastroje/zasady-textu.mjs";
 
 /*
   Automatický sběr událostí.
@@ -313,7 +314,13 @@ const AKTY_KOMBINACE: { kategorie: string; a: string[]; b: string[]; c?: string[
   {
     kategorie: "hranice",
     a: ["hranic", "border", "prechod"],
-    b: ["kontrol", "cviceni", "uzavr", "vojak", "vojaci", "armad", "celnic", "zaloh", "checks", "closed", "exercise", "troops", "soldiers"],
+    /*
+      Omezení pohybu a zákaz vycházení doplněny 24. 9. 2026: „Russia imposes
+      temporary movement restrictions on other side of Estonian border“ (ERR,
+      21. 9.) spadlo jako „bez skutku“, i když šlo o úřední opatření FSB.
+    */
+    b: ["kontrol", "cviceni", "uzavr", "vojak", "vojaci", "armad", "celnic", "zaloh", "checks", "closed", "exercise", "troops", "soldiers",
+        "restrict", "omezeni pohybu", "omezila pohyb", "omezil pohyb", "curfew", "zakaz vychazeni", "zakaz pohybu", "komendantsk", "ограничен"],
   },
   {
     /*
@@ -907,6 +914,8 @@ async function doplnModelem(nove: Kandidat[]): Promise<Kandidat[]> {
     "Nerelevantní: komentáře, analýzy bez nové skutečnosti, sport, kultura, obecná politika, běžné denní údery na Ukrajině bez dopadu na NATO/EU, stará událost bez nového faktu. Z války na Ukrajině je relevantní jen neobvyklé: výrazný postup fronty, vpád nebo útok z nového směru (Bělorusko, Podněstří, nové pobřeží), první použití nového druhu zbraně, úder na jadernou elektrárnu.",
     "Pro relevantní napiš věcný český titulek (co se stalo, kde), jednu větu shrnutí bez hodnocení, kód země ISO-2 místa události (EU pro instituce EU, null neurčeno), český název země, oblasti z: cr, nato, hybridni, sabotaz, infrastruktura, drony, hranice, pravo, rusko, diplomacie, kyber, vysetrovani, zpravodajske; druhOdhad: pripad = reálná událost, opatreni = oficiální krok státu/aliance, reakce = prohlášení/varování, neurceno.",
     "Nic si nedomýšlej. Když zpráva neříká zemi, dej null. Vrať každé id přesně jednou.",
+    // Pravidla č. 0.5 a 0.6 v CLAUDE.md: shrnout, nic nepřidat, s úctou ke všem.
+    POKYNY_TEXTU,
   ].join(" ");
 
   const vystup: Kandidat[] = [];
@@ -1077,6 +1086,8 @@ export async function sbirejUdalosti(): Promise<{ novych: number; celkem: number
     if (!s.ok) continue;
     for (const p of s.polozky) {
       if (!p.odkaz || adresy.has(p.odkaz) || zname.adresy.has(p.odkaz)) continue;
+      // Média ze sankčního seznamu EU se nepřebírají ani neodkazují (CLAUDE.md, pravidlo č. 0.6).
+      if (jeSankcionovane(p.odkaz)) continue;
       if (p.publikovano && new Date(p.publikovano).getTime() < hranice) continue;
       const text = `${p.nadpis} ${p.shrnuti}`;
       const duvod = duvodOdmitnuti(text);
