@@ -277,7 +277,7 @@ if (fs.existsSync(cestaOdmitnutych)) {
       if (!o.id || !o.titulek || !o.zdroj?.url) { chyby.push(`${kde}: chybí id, titulek nebo odkaz`); continue; }
       if (adresy.has(o.zdroj.url)) chyby.push(`${kde}: stejná adresa je v přehledu dvakrát`);
       adresy.add(o.zdroj.url);
-      if (!["vylouceno-tematem", "bez-skutku", "bez-mista"].includes(o.duvod)) {
+      if (!["vylouceno-tematem", "bez-skutku", "bez-mista", "jen-projev"].includes(o.duvod)) {
         chyby.push(`${kde}: neznámý důvod odmítnutí „${o.duvod}“`);
       }
       if (o.posouzeni && !["vysoke", "stredni", "zadne"].includes(o.posouzeni.podezreni)) {
