@@ -74,7 +74,18 @@ export function HlavickaDetailu({ i, velka = false }: { i: Incident; velka?: boo
         Dřív to byl H2 vždycky a stránka detailu neměla H1 vůbec.
       */}
       {velka ? (
-        <h1 className="mt-2 text-cislo font-bold leading-tight text-inkoust sm:text-cislo-l">{i.titulek}</h1>
+        <>
+        {/*
+          Krátký titulek jako H1, celá věta jako podtitulek (revize 24. 9. 2026).
+          Dřív byl H1 celá věta — na mobilu šest řádků tučného písma, než
+          se čtenář dostal k datům. Krátký titulek říká, o co jde; věta
+          pod ním říká přesně co, kde a kdy.
+        */}
+        <h1 className="mt-2 text-cislo font-bold leading-tight text-inkoust sm:text-cislo-l">{i.kratkyTitulek || i.titulek}</h1>
+        {i.kratkyTitulek && i.kratkyTitulek !== i.titulek && (
+          <p className="mt-2 max-w-[70ch] text-vetsi leading-relaxed text-tlum">{i.titulek}</p>
+        )}
+        </>
       ) : (
         <h2 className="mt-2 text-velke font-bold leading-tight text-inkoust">{i.titulek}</h2>
       )}
@@ -147,6 +158,8 @@ export function DetailObsah({ i }: { i: Incident }) {
         </p>
       </Blok>
 
+      {/* Prázdná sekce se nezobrazuje (revize 24. 9. 2026): „žádná aktualizace“ zabírala místo a nic neříkala. */}
+      {aktualizace.length > 0 && (
       <Blok nadpis="Co je nového" popis="Nová zjištění k témuž případu. Aktualizace není nový útok.">
         {aktualizace.length ? (
           <ol className="space-y-2.5">
@@ -161,6 +174,7 @@ export function DetailObsah({ i }: { i: Incident }) {
           <p className="text-zaklad text-tlum2">Žádná navazující aktualizace zatím není zveřejněná.</p>
         )}
       </Blok>
+      )}
 
       <Blok nadpis="Dopad na občany ČR" popis="Co z toho plyne pro běžný život v Česku.">
         <p className="text-zaklad leading-relaxed text-tlum">

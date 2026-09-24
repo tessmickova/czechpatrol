@@ -222,8 +222,10 @@ export function UlozitUdalost({ slug }: { slug: string }) {
   if (!nacteno || nacita) return null;
   /* Bez účtu se neukládá — tlačítko to říká zámkem a vede na přihlášení. */
   if (!ucet) {
+    // Bez účtové služby se tlačítko neukazuje vůbec — mrtvá výzva pod titulkem (revize 24. 9. 2026).
+    if (!UCTY_ZAPNUTE) return null;
     return (
-      <Link href="/ucet/" className="inline-flex min-h-[40px] items-center gap-1.5 rounded-[12px] border border-linka px-3 text-male font-semibold text-tlum2 hover:border-akcent hover:text-inkoust">
+      <Link href="/ucet/" className="inline-flex min-h-[36px] items-center gap-1.5 rounded-full px-2.5 text-drobne font-semibold text-tlum2 hover:bg-plocha2 hover:text-inkoust">
         <span className="text-akcent"><Ikona nazev="zamek" velikost={13} tah={2.2} /></span> Uložit do Mého přehledu · po přihlášení
       </Link>
     );
