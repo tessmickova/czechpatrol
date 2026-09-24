@@ -1,5 +1,5 @@
 {
-  "aktualizovano": "2026-09-24T13:04:17.438Z",
+  "aktualizovano": "2026-09-24T14:04:08.325Z",
   "stavy": [
     {
       "klic": "cloudflare",
@@ -28,27 +28,16 @@
         "Arica, Chile - (ARI)",
         "Algiers, Algeria - (ALG)"
       ],
-      "zkontrolovano": "2026-09-24T13:04:17.438Z",
+      "zkontrolovano": "2026-09-24T14:04:08.325Z",
       "chyba": null
     },
     {
       "klic": "zoom",
-      "stav": "omezeni",
-      "popis": "Partially Degraded Service",
-      "incidenty": [
-        {
-          "nazev": "Service Degradation Affecting Zoom Phone and Zoom Contact Center Inbound calls in India",
-          "odkaz": "https://stspg.io/q2m1jkbvr4dg",
-          "aktualizovano": "2026-09-24T05:07:52.249-07:00"
-        }
-      ],
-      "postizene": [
-        "Calling (Inbound/Outbound)",
-        "Voice (Inbound/Outbound)",
-        "Zoom CX - APAC",
-        "Zoom Phone - APAC"
-      ],
-      "zkontrolovano": "2026-09-24T13:04:17.438Z",
+      "stav": "provoz",
+      "popis": "All Systems Operational",
+      "incidenty": [],
+      "postizene": [],
+      "zkontrolovano": "2026-09-24T14:04:08.325Z",
       "chyba": null
     },
     {
@@ -57,7 +46,7 @@
       "popis": "All Systems Operational",
       "incidenty": [],
       "postizene": [],
-      "zkontrolovano": "2026-09-24T13:04:17.438Z",
+      "zkontrolovano": "2026-09-24T14:04:08.325Z",
       "chyba": null
     }
   ]
