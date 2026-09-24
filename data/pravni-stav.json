@@ -27,7 +27,7 @@
           "jazyk": "cs"
         }
       ],
-      "zkontrolovano": "2026-09-24T07:01:25.349Z",
+      "zkontrolovano": "2026-09-24T08:01:34.224Z",
       "pokryti": "orientacni",
       "pokrytiDuvod": "přečteno vlada, psp, senat; žádný z nich není úplný seznam, zápor z nich neplyne"
     },
@@ -49,7 +49,7 @@
           "jazyk": "cs"
         }
       ],
-      "zkontrolovano": "2026-09-24T07:01:25.349Z",
+      "zkontrolovano": "2026-09-24T08:01:34.224Z",
       "pokryti": "orientacni",
       "pokrytiDuvod": "přečteno psp, senat; žádný z nich není úplný seznam, zápor z nich neplyne"
     },
@@ -79,7 +79,7 @@
           "jazyk": "cs"
         }
       ],
-      "zkontrolovano": "2026-09-24T07:01:25.349Z",
+      "zkontrolovano": "2026-09-24T08:01:34.224Z",
       "pokryti": "orientacni",
       "pokrytiDuvod": "přečteno vlada, army; žádný z nich není úplný seznam, zápor z nich neplyne"
     },
@@ -101,7 +101,7 @@
           "jazyk": "cs"
         }
       ],
-      "zkontrolovano": "2026-09-24T07:01:25.349Z",
+      "zkontrolovano": "2026-09-24T08:01:34.224Z",
       "pokryti": "orientacni",
       "pokrytiDuvod": "přečteno vlada, psp, mvcr; žádný z nich není úplný seznam, zápor z nich neplyne"
     },
@@ -123,9 +123,9 @@
           "jazyk": "cs"
         }
       ],
-      "zkontrolovano": "2026-09-24T07:01:25.349Z",
-      "pokryti": "orientacni",
-      "pokrytiDuvod": "přečteno mvcr, mzv, letiste-praha, bundespolizei, bmi-at, straz-graniczna, minv-sk; žádný z nich není úplný seznam, zápor z nich neplyne"
+      "zkontrolovano": "2026-09-24T08:01:34.224Z",
+      "pokryti": "nedostupne",
+      "pokrytiDuvod": "nepodařilo se přečíst: bundespolizei"
     },
     {
       "klic": "hranice",
@@ -153,9 +153,9 @@
           "jazyk": "cs"
         }
       ],
-      "zkontrolovano": "2026-09-24T07:01:25.349Z",
-      "pokryti": "orientacni",
-      "pokrytiDuvod": "přečteno vlada, mvcr, policie, md, celni-sprava, bundespolizei, bmi-at, straz-graniczna, minv-sk; žádný z nich není úplný seznam, zápor z nich neplyne"
+      "zkontrolovano": "2026-09-24T08:01:34.224Z",
+      "pokryti": "nedostupne",
+      "pokrytiDuvod": "nepodařilo se přečíst: bundespolizei"
     },
     {
       "klic": "schuze-parlamentu",
@@ -175,7 +175,7 @@
           "jazyk": "cs"
         }
       ],
-      "zkontrolovano": "2026-09-24T07:01:25.349Z",
+      "zkontrolovano": "2026-09-24T08:01:34.224Z",
       "pokryti": "orientacni",
       "pokrytiDuvod": "přečteno psp, senat; žádný z nich není úplný seznam, zápor z nich neplyne"
     }
