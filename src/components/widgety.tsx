@@ -18,11 +18,11 @@ import { Otaznik } from "./zaklad";
 export type TonWidgetu = "akcent" | "klid" | "pozor" | "neutral";
 
 const TON: Record<TonWidgetu, { kruh: string; ramecek: string }> = {
-  /* Kroužek u ikony je vždy neutrální (24. 9. 2026): barvu nese jen tečka stavu a rámeček neověřeného, ne hlavička. */
-  akcent: { kruh: "bg-plocha2 text-tlum", ramecek: "border-transparent bg-plocha" },
-  klid: { kruh: "bg-plocha2 text-tlum", ramecek: "border-transparent bg-plocha" },
-  pozor: { kruh: "bg-plocha2 text-tlum", ramecek: "border-dashed border-jantar/55 bg-jantar/[0.06]" },
-  neutral: { kruh: "bg-plocha2 text-tlum", ramecek: "border-transparent bg-plocha" },
+  /* Kroužek u ikony je vždy v barvě akcentu (24. 9. 2026): stejný znak jako u štítku „Bezpečnostní přehled“; stav nese tečka, ne hlavička. */
+  akcent: { kruh: "bg-akcent/15 text-akcent", ramecek: "border-transparent bg-plocha" },
+  klid: { kruh: "bg-akcent/15 text-akcent", ramecek: "border-transparent bg-plocha" },
+  pozor: { kruh: "bg-akcent/15 text-akcent", ramecek: "border-dashed border-jantar/55 bg-jantar/[0.06]" },
+  neutral: { kruh: "bg-akcent/15 text-akcent", ramecek: "border-transparent bg-plocha" },
 };
 
 /** Rámeček karty. Vždy 22 px, vždy stejná linka; tón jen u neověřeného. */
