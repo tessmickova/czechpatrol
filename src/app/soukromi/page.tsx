@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { HlavickaStranky, Obsah } from "@/components/hlavicka";
 import { Karta } from "@/components/zaklad";
-import { KONTAKTY_PRIJIMAME, PROVOZOVATEL, WEB } from "@/config/web";
+import { KONTAKTY_PRIJIMAME, PROVOZOVATEL, PROVOZOVATEL_TEXT, WEB } from "@/config/web";
 
 export const metadata: Metadata = {
   title: "Soukromí",
@@ -47,7 +47,7 @@ export default function SoukromiStranka() {
         {!KONTAKTY_PRIJIMAME && (
           <Karta odstin="pisek" className="mb-4 p-5">
             <div className="stitek mb-2">Teď</div>
-            <p className="text-zaklad leading-relaxed text-tlum">Dokud tu není uvedený provozovatel, <b>nepřijímáme e-maily, jména, telefony ani platby</b> — server je odmítne. Premium a žebříček nejsou spuštěné. Hlášení chybějící události přijímáme anonymně: uložíme jen text a odkaz; proti spamu počítáme pokusy podle soleného otisku IP, ne podle adresy samotné.</p>
+            <p className="text-zaklad leading-relaxed text-tlum">Dokud tu není uvedený kontakt na správce údajů, <b>nepřijímáme e-maily, jména ani telefony</b>. <b>Platby web nepřijímá vůbec</b> — server je odmítne. Premium a žebříček nejsou spuštěné. Hlášení chybějící události přijímáme anonymně: uložíme jen text a odkaz; proti spamu počítáme pokusy podle soleného otisku IP, ne podle adresy samotné.</p>
           </Karta>
         )}
         <div className="grid gap-4 md:grid-cols-3">
@@ -68,7 +68,7 @@ export default function SoukromiStranka() {
         <div className="mt-10">
           <Oddil cislo="01" nadpis="Kdo údaje spravuje">
             {PROVOZOVATEL.nazev ? (
-              <p>Správcem osobních údajů je <b>{PROVOZOVATEL.nazev}</b>{PROVOZOVATEL.kontakt ? <>, kontakt: <b>{PROVOZOVATEL.kontakt}</b></> : null}.</p>
+              <p>Správcem osobních údajů je <b>{PROVOZOVATEL_TEXT}</b>{PROVOZOVATEL.kontakt ? <>, kontakt: <b>{PROVOZOVATEL.kontakt}</b></> : <>. Kontakt pro uplatnění práv doplníme; do té doby web osobní údaje nesbírá</>}.</p>
             ) : (
               <p>Správce osobních údajů a kontakt na něj zveřejníme nejpozději se spuštěním účtů. Do té doby web žádné údaje k uživatelům neukládá.</p>
             )}

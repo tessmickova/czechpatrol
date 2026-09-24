@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { HlavickaStranky } from "@/components/nadpisy";
 import Link from "next/link";
-import { DORUCOVANI, KANALY, KOMUNITA, METODIKA_REVIDOVANA, PROVOZOVATEL, UCTY_ZAPNUTE, WEB } from "@/config/web";
+import { DORUCOVANI, KANALY, KOMUNITA, METODIKA_REVIDOVANA, PROVOZOVATEL, PROVOZOVATEL_TEXT, UCTY_ZAPNUTE, WEB } from "@/config/web";
 import { datumPraha } from "@/lib/cas";
 import { pocty } from "@/lib/agregace";
 import { incidenty, nepotvrzene } from "@/lib/data";
@@ -63,7 +63,7 @@ export default function OProjektu() {
         <Odstavec nadpis="Kdo za tím stojí">
           <p>
             {PROVOZOVATEL.nazev
-              ? `Provozovatel: ${PROVOZOVATEL.nazev}${PROVOZOVATEL.kontakt ? `, kontakt ${PROVOZOVATEL.kontakt}` : ""}.`
+              ? `Provozovatel: ${PROVOZOVATEL_TEXT}${PROVOZOVATEL.kontakt ? `, kontakt ${PROVOZOVATEL.kontakt}` : ""}.`
               : "Provozovatel zatím není v nastavení webu vyplněn — do jeho doplnění tu nic nevymýšlíme. Kód i data jsou veřejné."}
           </p>
           <p>
