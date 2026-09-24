@@ -11011,5 +11011,79 @@
     "lidskyOvereno": false,
     "archivniZaznam": false,
     "overeni": "neovereno"
+  },
+  {
+    "id": "i-2026-09-18-aa438bb2cd",
+    "slug": "de-aa438bb2cd",
+    "titulek": "Nord Stream: chorvatský soud schválil vydání dalšího podezřelého, Volodymyra Žuravlova, do Německa",
+    "kratkyTitulek": "Nord Stream: chorvatský soud schválil vydání dalšího podezřelého, Volodymyra Žuravlova, do Německa",
+    "zeme": "Německo",
+    "kodZeme": "DE",
+    "kategorie": [
+      "sabotaz",
+      "vysetrovani",
+      "infrastruktura"
+    ],
+    "datumUdalosti": "2026-09-18T00:00:00Z",
+    "datumZjisteni": "2026-09-24T00:00:00Z",
+    "aktualizovano": "2026-09-24T18:01:16.475Z",
+    "zavaznost": "Y2",
+    "jistota": "stredni",
+    "stav": "probiha",
+    "atribuce": "neznama",
+    "puvodce": null,
+    "druh": "aktualizace",
+    "fakta": [
+      "Podle Ukrainska Pravda a TASR/teraz.sk zadrželo chorvatské úřady 19. srpna 2026 v Pule na základě evropského zatykače ukrajinského občana Volodymyra Žuravlova.",
+      "Podle obou zdrojů schválil Okresní soud v Pule 18. 9. 2026 jeho vydání do Německa; podle Ukrainska Pravda ho po nabytí právní moci rozhodnutí předá chorvatské ministerstvo vnitra německým úřadům.",
+      "Podle TASR/teraz.sk je podle německé prokuratury podezřelý z účasti jako jeden z potápačů na sabotáži plynovodů Nord Stream 1 a 2 na konci září 2022.",
+      "Podle obou zdrojů jde o jinou osobu než dříve obžalovaný Serhij Kuzněcov, který je od léta 2025 (zadržen v Itálii) ve vazbě v Německu.",
+      "Podle Ukrainska Pravda označil Žuravlovův ukrajinský právník Mykola Katerynčuk rozhodnutí za „zaujaté a politické“ a oznámil odvolání; obviněný vinu odmítá."
+    ],
+    "neznameho": [
+      "Zda se odvolání podaří a zda k vydání skutečně dojde.",
+      "Přesná role, kterou má Žuravlov v sabotáži hrát, mimo označení „potápač“.",
+      "Chorvatský oficiální zdroj (soud, ministerstvo vnitra) jsem neotevřel; údaje jsou z ukrajinských a slovenských médií."
+    ],
+    "vyznam": "",
+    "eskalacniSpousteče": [],
+    "deeskalacniSignaly": [],
+    "zdroje": [
+      {
+        "nazev": "Ukrainska Pravda (anglicky) — Nord Stream case: Croatian court approves extradition of Ukrainian Zhuravlov to Germany",
+        "url": "https://www.pravda.com.ua/eng/news/2026/09/24/8054896/",
+        "typ": "media",
+        "publikovano": "2026-09-24T00:00:00Z",
+        "primarni": false,
+        "jazyk": "en"
+      },
+      {
+        "nazev": "TASR (přes teraz.sk) — Chorváti vydali Nemecku Ukrajinca podozrivého zo sabotáže Nord Stream",
+        "url": "https://www.teraz.sk/zahranicie/chorvati-vydali-nemecku-ukrajinca-podoz/994767-clanok.html",
+        "typ": "wire",
+        "publikovano": "2026-09-24T00:00:00Z",
+        "primarni": false,
+        "jazyk": "sk"
+      }
+    ],
+    "souvisejici": [],
+    "historie": [
+      {
+        "kdy": "2026-09-18T00:00:00Z",
+        "text": "Zachyceno automatickým sběrem, druhý zdroj doložen před zařazením do fronty.",
+        "novySignal": true
+      },
+      {
+        "kdy": "2026-09-24T18:01:16.475Z",
+        "text": "Zveřejněno jako neověřené úředně: dvě nezávislé redakce, úřad zatím nepotvrdil.",
+        "novySignal": false
+      }
+    ],
+    "novy": true,
+    "zapocitanoTyden": "2026-09-18",
+    "aiZpracovano": true,
+    "lidskyOvereno": false,
+    "archivniZaznam": false,
+    "overeni": "neovereno"
   }
 ]
