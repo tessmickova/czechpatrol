@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { datumPraha } from "@/lib/cas";
 import { jistotaZobrazena, kdyZjisteno, type Zaznam } from "@/lib/agregace";
+import { jeCesky } from "@/lib/jazyk";
 import { PUVODCI } from "@/lib/kategorie";
 import { JISTOTY, PASMA, UROVNE } from "@/lib/skala";
 import type { Kandidat } from "@/lib/typy";
@@ -157,8 +158,8 @@ function kratkeDatum(iso: string): string {
 
 function SloupecKdy({ kdy, zeme, kodZeme }: { kdy: string | null; zeme: string | null; kodZeme: string | null }) {
   return (
-    <span className="flex w-[34px] shrink-0 flex-col items-center gap-[3px] pt-[2px]">
-      <span className="cislice whitespace-nowrap text-[10px] leading-none text-tlum2" title={kdy ? datumPraha(kdy) : "bez data"}>
+    <span className="flex w-[40px] shrink-0 flex-col items-center gap-[3px] pt-[2px]">
+      <span className="cislice whitespace-nowrap text-mikro leading-none text-tlum2" title={kdy ? datumPraha(kdy) : "bez data"}>
         {kdy ? kratkeDatum(kdy) : "—"}
       </span>
       <span className="h-[14px] leading-none" title={zeme ?? undefined} aria-label={zeme ?? undefined}>
@@ -230,7 +231,12 @@ export function Aktuality({
         poznamka: "Zpracováno, zatím bez potvrzení. Do počtů nevstupuje. Klepnutím se otevře i se zdroji.",
       },
     })),
-    ...kandidati.map((k): Neoverene => ({
+    /*
+      Jen česky psané zachycené zprávy (revize 24. 9. 2026). Anglický titulek
+      v českém sloupci působil jako nedodělek a čtenář bez angličtiny ho
+      přeskočil. Cizojazyčné se jen spočítají a vedou do fronty.
+    */
+    ...kandidati.filter((k) => jeCesky(k.titulek)).map((k): Neoverene => ({
       klic: `k-${k.id}`,
       kodZeme: k.kodZeme,
       zeme: k.zeme,
@@ -252,6 +258,7 @@ export function Aktuality({
     a místo po nich zaplní další ověřené záznamy (rozhodnutí 23. 9. 2026).
   */
   const posledni = overeneVse.slice(0, neoverene.length ? overenych : overenych + neoverenych);
+  const cizojazycnych = kandidati.filter((k) => !jeCesky(k.titulek)).length;
 
   const { nahled, kde, ukaz, skryj, pohyb } = useNahled();
 
@@ -366,6 +373,11 @@ export function Aktuality({
           })}
         </ul>
       </>
+      )}
+      {cizojazycnych > 0 && (
+        <Link href="/udalosti/?tab=cekajici" className="block border-t border-linka2 px-4 py-2 text-drobne text-tlum2 hover:bg-plocha2 hover:text-tlum">
+          + {cizojazycnych} {cizojazycnych === 1 ? "zachycená zpráva v cizím jazyce" : cizojazycnych < 5 ? "zachycené zprávy v cizím jazyce" : "zachycených zpráv v cizím jazyce"} ve frontě →
+        </Link>
       )}
       </div>
 

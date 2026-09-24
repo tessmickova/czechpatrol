@@ -30,7 +30,6 @@ import { StavSluzeb } from "./stav-sluzeb";
 import { snimekSluzeb, SLOVA_STAVU, SLUZBY, type StavSluzby } from "@/lib/sluzby";
 import { useStavSluzeb, type ZivyStav } from "@/lib/sluzby-klient";
 import { casPraha } from "@/lib/cas";
-import { VyzvaTelegram } from "./vyzva-telegram";
 import { Nahlaseni } from "./nahlaseni";
 import { Napoveda } from "./zaklad";
 import { useT } from "@/lib/i18n";
@@ -532,12 +531,6 @@ export function Dashboard({
         <div className="mt-5 xl:max-w-[60%]"><SouhrnOverujeme aktivni={overovaneAktivni} ted={tedMs} /></div>
       )}
 
-      {/*
-        1b — tři témata webu (komunita, dotazník, upozornění) na místě, kde
-        stálo urgentní upozornění. To je teď kompaktní pás přímo v úvodu pod
-        hlavní větou: červený rámeček, když se něco děje, zelený, když ne.
-      */}
-      <TriTemata />
 
       {/* 2 — mřížka stavů + poslední události */}
       <div className="nalet mt-14 sm:mt-20">
@@ -574,9 +567,33 @@ export function Dashboard({
                   <Stari cas={sk.cas} popisek={sk.popisekCasu} ted={tedMs} />
                 </span>
               </div>
-              <ul className="sm:grid sm:grid-cols-2">
-                {sk.polozky.map((d) => <RadekStavu key={d.klic} d={d} casSkupiny={sk.cas} ted={tedMs} signaly={signalySluzeb[d.zdrojovaPolozka.klic] ?? []} />)}
-              </ul>
+              {/*
+                Na počítači všechny řádky ve dvou sloupcích. Na mobilu jen
+                klíčové položky a ty, které se odchylují od klidu; zbytek za
+                „dalších N v klidu“ (revize 24. 9. 2026: dvacet řádků
+                „nedoloženo“ pod sebou zabralo 1 100 px). Souhrn skupiny
+                v hlavičce platí pro všechny, i pro sbalené.
+              */}
+              {(() => {
+                const radek = (d: Dlazdice) => <RadekStavu key={d.klic} d={d} casSkupiny={sk.cas} ted={tedMs} signaly={signalySluzeb[d.zdrojovaPolozka.klic] ?? []} />;
+                const zvlastni = sk.polozky.filter((d) => KLICOVE.includes(d.klic) || d.ton === "plati" || d.ton === "pozor" || d.ton === "nevime" || (signalySluzeb[d.zdrojovaPolozka.klic] ?? []).length > 0);
+                const klidne = sk.polozky.filter((d) => !zvlastni.includes(d));
+                return (
+                  <>
+                    <ul className="hidden sm:grid sm:grid-cols-2">{sk.polozky.map(radek)}</ul>
+                    <ul className="sm:hidden">{zvlastni.map(radek)}</ul>
+                    {klidne.length > 0 && (
+                      <details className="group sm:hidden">
+                        <summary className="flex min-h-[44px] cursor-pointer list-none items-center justify-between gap-2 px-3 text-drobne font-semibold text-tlum hover:bg-plocha2">
+                          <span>dalších {klidne.length} v klidu</span>
+                          <Ikona nazev="dolu" velikost={12} tah={2} trida="text-tlum2 transition-transform group-open:rotate-180" />
+                        </summary>
+                        <ul className="border-t border-linka2">{klidne.map(radek)}</ul>
+                      </details>
+                    )}
+                  </>
+                );
+              })()}
             </div>
           ))}
 
@@ -635,7 +652,12 @@ export function Dashboard({
         právě přečetl, co platí, tady dostane cestu, jak se dozvědět změnu
         dřív, než sem zase přijde. Dřív stála až za čísly.
       */}
-      <div className="mt-14 sm:mt-20"><VyzvaTelegram /></div>
+      {/*
+        Tři témata (komunita, dotazník, upozornění) až pod úředním stavem,
+        jako kompaktní dlaždice. Sekce „Urgentní upozornění“ tu už není:
+        Telegram nabízí pás v úvodu a sekce Odběr níž (revize 24. 9. 2026).
+      */}
+      <div className="mt-10 sm:mt-12"><TriTemata /></div>
 
       {/* 2b2 — manipulační kampaně: operace, ne události */}
       {kampane.length > 0 && (

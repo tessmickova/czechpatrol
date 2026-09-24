@@ -631,3 +631,11 @@ input[type="range"] { accent-color: var(--color-akcent); }
   .neni-tisk { display: none !important; }
   body { background: #fff; color: #000; }
 }
+
+/*
+  Plná červená tlačítka ve světlém režimu (revize 24. 9. 2026).
+  Bílý text na akcentu #e8484f má 3,8:1; na akcent-tmava #c1272d 5,8:1.
+  V tmavém režimu je na tlačítku tmavý text (5,1:1), tam se nic nemění.
+*/
+:root[data-motiv="svetly"] .bg-akcent.text-papir { background-color: var(--color-akcent-tmava); }
+:root[data-motiv="svetly"] .bg-akcent.text-papir:hover { background-color: var(--color-akcent); }

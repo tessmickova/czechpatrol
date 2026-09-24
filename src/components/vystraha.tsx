@@ -94,7 +94,7 @@ export function PruhVystrahy() {
               href={telegram}
               target="_blank"
               rel="nofollow noopener noreferrer"
-              className="inline-flex items-center gap-2 rounded-full bg-akcent px-4 py-2 text-zaklad font-semibold text-white transition-opacity hover:opacity-90"
+              className="inline-flex items-center gap-2 rounded-full bg-akcent px-4 py-2 text-zaklad font-semibold text-papir transition-opacity hover:opacity-90"
             >
               <Ikona nazev="zvonek" velikost={15} />
               Odebírat na Telegramu

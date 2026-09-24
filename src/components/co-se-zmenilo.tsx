@@ -53,6 +53,32 @@ interface Radek {
   kam: string;
   tecka: string;
   nahled: Nahled;
+  /** Kolik stejných položek po sobě se do řádku sloučilo (revize 24. 9. 2026). */
+  pocet?: number;
+}
+
+/*
+  Stejná změna několik dní po sobě je jeden řádek, ne tři.
+
+  „Letiště Lublin a Rzeszów zastavena“ stálo v seznamu 16., 17. i 18. 9.
+  jako tři samostatné řádky; čtenář viděl tři události, byla jedna
+  opakovaná. Slučují se jen sousední položky se stejným textem, druhem
+  a zemí; řádek nese nejnovější datum a počet.
+*/
+function sloucOpakovani(radky: Radek[]): Radek[] {
+  const out: Radek[] = [];
+  for (const r of radky) {
+    const p = out[out.length - 1];
+    if (p && p.druh === r.druh && p.kodZeme === r.kodZeme && p.text === r.text) {
+      const n = (p.pocet ?? 1) + 1;
+      out[out.length - 1] = {
+        ...p,
+        pocet: n,
+        nahled: { ...p.nahled, radky: [`${n}× po sobě, ${datumPraha(r.kdy)} – ${datumPraha(p.kdy)}`, ...p.nahled.radky.slice(1)] },
+      };
+    } else out.push({ ...r });
+  }
+  return out;
 }
 
 const SLOVO: Record<Druh, string> = { stav: "stav", ceny: "ceny", opatreni: "opatření" };
@@ -176,7 +202,7 @@ function zOpatreni(zaznamy: Zaznam[]): Radek[] {
 
 /** Souhrn za 7 dní pro náhled rozklikávací oblasti na úvodní straně. */
 export function souhrnZmen(zaznamy: Zaznam[], snimky: Snimek[], ted: number) {
-  const vsechny = [...zeSnimku(snimky), ...zCen(ted), ...zOpatreni(zaznamy)].sort((a, b) => b.kdy.localeCompare(a.kdy));
+  const vsechny = sloucOpakovani([...zeSnimku(snimky), ...zCen(ted), ...zOpatreni(zaznamy)].sort((a, b) => b.kdy.localeCompare(a.kdy)));
   const tyden = vsechny.filter((r) => ted - new Date(r.kdy).getTime() <= 7 * 86_400_000);
   return {
     zlepseni: tyden.filter((r) => r.smer === "zlepseni").length,
@@ -189,7 +215,7 @@ export function souhrnZmen(zaznamy: Zaznam[], snimky: Snimek[], ted: number) {
 export function CoSeZmenilo({ zaznamy, snimky, ted, vnoreny = false }: { zaznamy: Zaznam[]; snimky: Snimek[]; ted: number; vnoreny?: boolean }) {
   const { nahled, kde, ukaz, skryj, pohyb } = useNahled();
 
-  const vsechny = [...zeSnimku(snimky), ...zCen(ted), ...zOpatreni(zaznamy)].sort((a, b) => b.kdy.localeCompare(a.kdy));
+  const vsechny = sloucOpakovani([...zeSnimku(snimky), ...zCen(ted), ...zOpatreni(zaznamy)].sort((a, b) => b.kdy.localeCompare(a.kdy)));
   const radky = vsechny.slice(0, NEJVYS);
   /*
     Týden v hlavičce: zlepšení, zhoršení i opatření, každé zvlášť. Dřív
@@ -246,6 +272,7 @@ export function CoSeZmenilo({ zaznamy, snimky, ted, vnoreny = false }: { zaznamy
                   <span className="line-clamp-2 text-male leading-[20px] text-inkoust">
                     <span className="stitek mr-1.5 text-tlum2">{SLOVO[r.druh]}</span>
                     {r.text}
+                    {r.pocet && r.pocet > 1 ? <span className="cislice ml-1.5 text-mikro text-tlum2">{r.pocet}×</span> : null}
                   </span>
                 </span>
               </Link>
