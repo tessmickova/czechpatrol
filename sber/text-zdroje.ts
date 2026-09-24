@@ -51,6 +51,7 @@ export function naText(html: string): string {
     .replace(/&lt;/g, "<")
     .replace(/&gt;/g, ">")
     .replace(/&quot;/g, '"')
+    .replace(/&apos;/g, "'")
     .replace(/&#(\d+);/g, (_, c: string) => String.fromCharCode(Number(c)))
     .replace(/&#x([0-9a-f]+);/gi, (_, h: string) => String.fromCodePoint(parseInt(h, 16)))
     .replace(/[ \t]+/g, " ")

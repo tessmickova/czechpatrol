@@ -313,7 +313,13 @@ const AKTY_KOMBINACE: { kategorie: string; a: string[]; b: string[]; c?: string[
   {
     kategorie: "hranice",
     a: ["hranic", "border", "prechod"],
-    b: ["kontrol", "cviceni", "uzavr", "vojak", "vojaci", "armad", "celnic", "zaloh", "checks", "closed", "exercise", "troops", "soldiers"],
+    /*
+      Omezení pohybu a zákaz vycházení doplněny 24. 9. 2026: „Russia imposes
+      temporary movement restrictions on other side of Estonian border“ (ERR,
+      21. 9.) spadlo jako „bez skutku“, i když šlo o úřední opatření FSB.
+    */
+    b: ["kontrol", "cviceni", "uzavr", "vojak", "vojaci", "armad", "celnic", "zaloh", "checks", "closed", "exercise", "troops", "soldiers",
+        "restrict", "omezeni pohybu", "omezila pohyb", "omezil pohyb", "curfew", "zakaz vychazeni", "zakaz pohybu", "komendantsk", "ограничен"],
   },
   {
     /*

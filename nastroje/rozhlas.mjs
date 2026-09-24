@@ -19,6 +19,7 @@ import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { maUredniZdroj } from "./uredni-zdroj.mjs";
+import { NAZVY_SPEKTRA, radekSpektra, spektrumKandidata } from "./spektrum-medii.mjs";
 
 const koren = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const WEB = "https://czechpatrol.cz";
@@ -396,6 +397,7 @@ export function sestavZpravu(i, { aktualizace = false, souhrn = false } = {}) {
       esc(zkrat(i.titulek, 200)),
       jeArchivni(i) ? "Archivní záznam — událost se nestala teď." : null,
       [pachatel, celkem ? `Zdroje: ${celkem} (úřady ${uredni})` : null].filter(Boolean).join(" · "),
+      radekSpektra(i.zdroje),
       odkaz,
     );
     return radky.filter((r) => r !== null).join("\n");
@@ -436,6 +438,9 @@ export function sestavZpravu(i, { aktualizace = false, souhrn = false } = {}) {
   if (pachatel) radky.push(pachatel);
   if (stav && stav !== "Neuvedeno") radky.push(`<b>Stav:</b> ${stav.toLowerCase()}`);
   radky.push(...radekPokryti(i));
+  // Drobně, kde se to píše: úřad, západní, ruská státní… (spektrum-medii.mjs).
+  const spektrum = radekSpektra(i.zdroje);
+  if (spektrum) radky.push(spektrum);
 
   radky.push("", `Všechna fakta, hodnocení a všechny zdroje: ${odkaz}`);
   if (d === "opatreni" || dulezitePro(i)) radky.push(`Úřední opatření platná v ČR: ${WEB}/#opatreni`);
@@ -721,6 +726,7 @@ export function sestavVaznyNavrh(n) {
     "",
     `Zdroje: ${(n.zdroje ?? []).length}, z toho úřední ${uredni.length}`,
     ...(n.zdroje ?? []).slice(0, 3).map((z) => `• <a href="${esc(z.url)}">${esc(zkrat(z.nazev, 110))}</a>`),
+    ...[radekSpektra(n.zdroje)].filter(Boolean),
     "",
     "Stojí na úředním zdroji a dalším nezávislém zdroji. Hodnocení projektu u něj zatím není.",
     `CzechPatrol · ${datumCz(new Date().toISOString())}`,
@@ -736,7 +742,7 @@ export function sestavSignal(k) {
   radky.push(
     "",
     `Téma: ${esc(co)}${k.zeme ? ` · ${esc(k.zeme)}` : ""}`,
-    `Zdroj: <a href="${esc(k.zdroj.url)}">${esc(k.zdroj.nazev)}</a>`,
+    `Zdroj: <a href="${esc(k.zdroj.url)}">${esc(k.zdroj.nazev)}</a> <i>(${NAZVY_SPEKTRA[spektrumKandidata(k)]})</i>`,
     "",
     "Zachytil to automatický sběr. <b>Neověřil to zatím člověk</b> — není to potvrzené a do žádných počtů na webu to nevstupuje. Posíláme to proto, že u téhle věci je každá hodina znát.",
     "",
@@ -775,7 +781,7 @@ export function sestavPrehledZachycenych(kandidati, { ted = Date.now() } = {}) {
     "",
   ];
   for (const k of kandidati) {
-    radky.push(`• <a href="${esc(k.zdroj.url)}">${esc(zkrat(k.titulek, 120))}</a>${k.zeme ? ` — ${esc(k.zeme)}` : ""}`);
+    radky.push(`• <a href="${esc(k.zdroj.url)}">${esc(zkrat(k.titulek, 120))}</a>${k.zeme ? ` — ${esc(k.zeme)}` : ""} <i>(${NAZVY_SPEKTRA[spektrumKandidata(k)]})</i>`);
   }
   radky.push("", `${WEB}/udalosti/?tab=cekajici`);
   return radky.join("\n");
@@ -894,7 +900,8 @@ function radekNavrhu(n) {
   /* Datum události, ne zpracování — jinak by se týden stará věc četla jako dnešní. */
   const kdy = n.datumUdalosti ? `${datumCz(n.datumUdalosti)} · ` : "";
   const zav = n.zavaznost && Z_DESETI[n.zavaznost] ? ` · závažnost ${Z_DESETI[n.zavaznost]} z 10` : "";
-  return `• ${kdy}<a href="${WEB}/nepotvrzeno/${esc(n.id)}/">${esc(zkrat(n.kratkyTitulek || n.titulek, 110))}</a>${zav} · zdrojů ${(n.zdroje ?? []).length}${uredni ? `, z toho úřední ${uredni}` : ", bez úředního"}`;
+  const spektrum = radekSpektra(n.zdroje);
+  return `• ${kdy}<a href="${WEB}/nepotvrzeno/${esc(n.id)}/">${esc(zkrat(n.kratkyTitulek || n.titulek, 110))}</a>${zav} · zdrojů ${(n.zdroje ?? []).length}${uredni ? `, z toho úřední ${uredni}` : ", bez úředního"}${spektrum ? `\n   ${spektrum}` : ""}`;
 }
 
 /*
@@ -959,7 +966,8 @@ export function sestavPrehledDne({ ted = Date.now(), cast = castDne(ted), zmeny 
   for (const i of overene) {
     const kdy = i.datumUdalosti ? `${datumCz(i.datumUdalosti)} · ` : "";
     const zav = Z_DESETI[i.zavaznost] ? ` · závažnost ${Z_DESETI[i.zavaznost]} z 10` : "";
-    radky.push(`• ${kdy}<a href="${WEB}/incident/${esc(i.slug)}/">${esc(zkrat(i.kratkyTitulek || i.titulek, 110))}</a>${zav}`);
+    const spektrum = radekSpektra(i.zdroje);
+    radky.push(`• ${kdy}<a href="${WEB}/incident/${esc(i.slug)}/">${esc(zkrat(i.kratkyTitulek || i.titulek, 110))}</a>${zav}${spektrum ? `\n   ${spektrum}` : ""}`);
   }
   radky.push("");
 
@@ -967,7 +975,7 @@ export function sestavPrehledDne({ ted = Date.now(), cast = castDne(ted), zmeny 
   radky.push("⚪ <b>Neověřené</b> — zpracované ze zdrojů, zatím bez potvrzení. Do počtů nevstupují.");
   for (const n of ostatniNavrhy) radky.push(radekNavrhu(n));
   radky.push(`<b>Zachyceno sběrem za 24 h:</b> ${zachycene.length} ${zachycene.length === 1 ? "zpráva" : zachycene.length < 5 ? "zprávy" : "zpráv"}${kCesku ? `, k Česku ${kCesku}` : ""}.`);
-  for (const k of ceske) radky.push(`• <a href="${esc(k.zdroj.url)}">${esc(zkrat(k.titulek, 110))}</a>${k.zeme ? ` — ${esc(k.zeme)}` : ""}`);
+  for (const k of ceske) radky.push(`• <a href="${esc(k.zdroj.url)}">${esc(zkrat(k.titulek, 110))}</a>${k.zeme ? ` — ${esc(k.zeme)}` : ""} <i>(${NAZVY_SPEKTRA[spektrumKandidata(k)]})</i>`);
   if (cizich) radky.push(`• dalších ${cizich} ze zahraničních zdrojů v původním jazyce: ${WEB}/udalosti/?tab=cekajici`);
   radky.push("", `Celý přehled: ${WEB}/`);
   return radky.join("\n");

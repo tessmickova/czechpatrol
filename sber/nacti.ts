@@ -41,7 +41,8 @@ function odtaguj(s: string): string {
       .replace(/<!--[\s\S]*?-->/g, " ")
       .replace(/<!\[CDATA\[([\s\S]*?)\]\]>/g, "$1")
       .replace(/&amp;/g, "&").replace(/&lt;/g, "<").replace(/&gt;/g, ">")
-      .replace(/&quot;/g, '"').replace(/&#39;/g, "'").replace(/&nbsp;/g, " ")
+      .replace(/&quot;/g, '"').replace(/&#39;/g, "'").replace(/&apos;/g, "'").replace(/&nbsp;/g, " ")
+      .replace(/&[lr]squo;/g, "'").replace(/&[lr]dquo;/g, '"').replace(/&ndash;/g, "–").replace(/&mdash;/g, "—").replace(/&hellip;/g, "…")
       // Číselné entity (&#x27; &#8217; …): Reuters a Google News je v titulcích posílají a na webu zůstávaly vypsané.
       .replace(/&#x([0-9a-f]+);/gi, (_, h: string) => String.fromCodePoint(parseInt(h, 16)))
       .replace(/&#(\d+);/g, (_, d: string) => String.fromCodePoint(Number(d)));
