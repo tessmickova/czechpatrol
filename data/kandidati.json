@@ -82,6 +82,38 @@
     }
   },
   {
+    "id": "k-21b0cbe091627ca6",
+    "zachyceno": "2026-09-24T21:47:17.685Z",
+    "publikovano": "2026-09-24T21:20:36.000Z",
+    "zdroj": {
+      "nazev": "The Guardian — World",
+      "url": "https://www.theguardian.com/uk-news/2026/sep/24/police-arrest-far-right-activist-daniel-thomas-after-dinghy-slashed-channel",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Far-right activist Daniel Thomas charged over alleged dinghy slashing in Channel",
+    "titulekPuvodni": "Far-right activist Daniel Thomas charged over alleged dinghy slashing in Channel",
+    "shrnuti": "Thirty-seven-year-old charged with one count of criminal damage and failing to disclose his phone pin to police The far-right agitator and anti-migrant activist Daniel Thomas has been charged with criminal damage and failing to disclose his phone pin to police following an incident in the Channel on",
+    "kodZeme": "FR",
+    "zeme": "Francie",
+    "kategorie": [
+      "zpravodajske"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "charged with"
+    ],
+    "naliehave": null,
+    "stav": "ceka",
+    "vyrez": {
+      "text": "Far-right activist Daniel Thomas charged over alleged dinghy slashing in Channel | UK news | The Guardian\nSkip to main content Skip to navigation\nThe far-right activist Daniel Thomas in London this month. He has been remanded in custody to appear at Basingstoke magistrates court on Friday. Photograph: Carl Court/Getty Images\nView image in fullscreen\nThe far-right activist Daniel Thomas in London this month. He has been remanded in custody to appear at Basingstoke magistrates court on Friday. Photograph: Carl Court/Getty Images\nFar-right activist Daniel Thomas charged over alleged dinghy slashing in Channel\nThirty-seven-year-old charged with one count of criminal damage and failing to disclose his phone pin to police\nThe far-right agitator and anti-migrant activist Daniel Thomas has been charged with criminal damage and failing to disclose his phone pin to police following an incident in the Channel on Tuesday, where he allegedly slashed a dinghy while a French rescuer was on board.\nThomas, 37, of no fixed abode, has been charged with one count of criminal damage along with an offence under section 53 of the Regulation of Investigatory Powers Act 2000 (Ripa), for allegedly failing…",
+      "stazeno": "2026-09-24T21:47:19.830Z",
+      "stav": 200
+    }
+  },
+  {
     "id": "k-9a900c60e2c499e9",
     "zachyceno": "2026-09-24T20:03:22.886Z",
     "publikovano": "2026-09-24T19:36:00.000Z",
@@ -11530,49 +11562,6 @@
       "kdy": "2026-09-20T07:48:17.187Z",
       "duvod": "neudalost",
       "patriK": null,
-      "poznamka": null
-    }
-  },
-  {
-    "id": "k-aca1a294723f9f38",
-    "zachyceno": "2026-09-11T09:30:21.130Z",
-    "publikovano": "2026-09-11T06:57:39.000Z",
-    "zdroj": {
-      "nazev": "Google News — sabotage Europe",
-      "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxOYWRpNlpzRS1JbGE1bDFxbjlQN3ZpVUcyc3pGZUoxbUUwQ20wcXA2NmtjYlNyeFZwUEV1VkdaYjdXc1NDUHNJRllaYThFWlBYRlBSV0x6OXdnNmxpN2g1S2FSYmtLTmdyVDdjNkRSd2ppblIyc0pqalJVb29YLWhPMW54ZjV1aVFsWXcxZDk0ZUV2Y0xsUk1TdXVILUhHYnUtV2U3eVlhWjVTM0czYXc?oc=5",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Nato allies say they foiled Russian subsea cable sabotage plot - BreakingNews.ie",
-    "titulekPuvodni": "Nato allies say they foiled Russian subsea cable sabotage plot - BreakingNews.ie",
-    "shrnuti": "",
-    "kodZeme": "RU",
-    "zeme": "Rusko",
-    "kategorie": [
-      "sabotaz",
-      "infrastruktura",
-      "nato",
-      "rusko"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "shody": [
-      "sabotage",
-      "subsea cable",
-      "nato",
-      "russia"
-    ],
-    "stav": "vyrizen",
-    "vyrez": {
-      "text": "Google News",
-      "stazeno": "2026-09-14T06:32:37.001Z",
-      "stav": 200
-    },
-    "naliehave": null,
-    "vyrizeni": {
-      "kdy": "2026-09-20T07:48:17.187Z",
-      "duvod": "pokracovani",
-      "patriK": "svalbard-nato-zabranilo-naciku-prerezani-kabelu-2026",
       "poznamka": null
     }
   }
