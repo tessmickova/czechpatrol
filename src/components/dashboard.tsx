@@ -5,6 +5,8 @@ import { AktualitySloupce } from "./aktuality-sloupce";
 import { Znacka } from "./znacka";
 import { SidebarUvodu } from "./sidebar-uvodu";
 import type { Pulz } from "@/lib/pulz";
+import type { SouhrnSituace } from "@/lib/souhrn-situace";
+import { VetaSituace } from "./veta-situace";
 import { KANALY, UVOD_V2 } from "@/config/web";
 import Link from "next/link";
 import { pripady, type Zaznam } from "@/lib/agregace";
@@ -403,7 +405,7 @@ const TECKA_SLUZBY: Record<StavSluzby, string> = { provoz: "bg-klid", omezeni: "
 
 export function Dashboard({
   stav, pravni, natoPolozky, provozPolozky, overeno, vse, neprosle, kandidati, nepotvrzene = [], tydny, watchlist, crHistoricky, hybridni, obcane, ted, snimky = [], nastroje = [],
-  tlakEvropa, tlakCesko, veta, kampane, nazvyZemi, overovaneAktivni = [], overovaneUzavrene = [], priprava, pulz,
+  tlakEvropa, tlakCesko, veta, kampane, nazvyZemi, overovaneAktivni = [], overovaneUzavrene = [], priprava, pulz, souhrn,
 }: {
   stav: CelkovyStav; pravni: PravniPolozka[]; natoPolozky: NatoPolozka[]; provozPolozky: ProvozniPolozka[];
   /** Čas sestavení. Klient z něj vychází, aby se první vykreslení shodlo. */
@@ -422,6 +424,8 @@ export function Dashboard({
   overovaneUzavrene?: Overovana[];
   priprava?: DataPripravy;
   pulz?: Pulz;
+  /** Věta pod nadpisem od ověřovatele (AI shrnutí); prázdná = věta z úředního stavu. */
+  souhrn?: SouhrnSituace;
 }) {
   const t = useT();
   const platiCr = pravni.filter((p) => p.plati === true);
@@ -547,10 +551,7 @@ export function Dashboard({
               <span className="stitek-znacky">{t("Bezpečnostní přehled")}</span>
             </div>
             <h1 className="titul-sekce">{t("Bezpečnostní situace v Česku a okolí")}</h1>
-            <p className="uvodni-veta mt-3 max-w-[46rem]">
-              <strong className="font-bold text-inkoust">{veta.cesko}</strong>{" "}
-              <span className="text-tlum">{veta.evropa}</span>
-            </p>
+            <VetaSituace souhrn={souhrn ?? { veta: null, aktualizovano: null, podklady: [] }} veta={veta} kontrola={pulz?.kdy ?? overeno} ted={tedMs} />
             {/* Stav naléhavosti nese postranní Souhrn situace; tady jen cesta k upozornění. */}
             {KANALY.telegram && <div className="mt-4"><Tlacitko kam={KANALY.telegram} nove varianta="plny" velikost="m"><ZnackaKanalu znacka="telegram" velikost={16} /> Přihlásit upozornění</Tlacitko></div>}
           </div>

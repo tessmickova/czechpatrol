@@ -19,6 +19,7 @@ import { chybyVystrahy } from "./vystraha-pravidla.mjs";
 import { falesneUredni } from "./uredni-zdroj.mjs";
 import { jeSankcionovane, nalepkyVTextu } from "./zasady-textu.mjs";
 import { zkontrolujZaznam } from "./bezpecnost-obsahu.mjs";
+import { chybySouhrnu } from "./souhrn-situace.mjs";
 
 const koren = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const cti = (f) => JSON.parse(fs.readFileSync(path.join(koren, "data", f), "utf-8"));
@@ -448,6 +449,14 @@ for (const n of nastroje) {
   if (n.stav === "overeno" && !n.overeno) chyby.push(`nástroj ${n.id}: stav „overeno“ bez data ověření`);
   if (n.stav !== "obecne" && !n.oficialniZdroj) chyby.push(`nástroj ${n.id}: chybí oficiální zdroj`);
   if (/\[DOPLNIT\]/.test(JSON.stringify(n))) chyby.push(`nástroj ${n.id}: zástupný text`);
+}
+
+/* ---------- souhrn situace pod nadpisem ---------- */
+if (fs.existsSync(path.join(koren, "data", "souhrn-situace.json"))) {
+  const souhrn = cti("souhrn-situace.json");
+  for (const c of chybySouhrnu(souhrn)) chyby.push(`souhrn situace: ${c}`);
+  const idZaznamu = new Set(incidenty.map((i) => i.id));
+  for (const id of souhrn.podklady ?? []) if (!idZaznamu.has(id)) varovani.push(`souhrn situace: podklad ${id} není zveřejněný záznam`);
 }
 
 console.log(`Kontrola dat: ${shrnuti}`);

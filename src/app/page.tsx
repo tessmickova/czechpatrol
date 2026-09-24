@@ -2,6 +2,7 @@ import { Dashboard } from "@/components/dashboard";
 import { archiv, celkovyStav, oficialniNastroje, hybridniTlak, incidenty, kampane, kandidati, nato, nazvyZemi, nepotvrzene, nepotvrzeneZaznamy, posledniKontrola, posledniOvereni, pravniStav, provoz, tlakCr, tydny, overovaneAktivni, overovaneUzavrene, urovenObcanu, watchlist } from "@/lib/data";
 import { pripravitTed } from "@/lib/priprava";
 import { pulz } from "@/lib/pulz";
+import { souhrnSituace } from "@/lib/souhrn-situace";
 import type { Incident } from "@/lib/typy";
 
 /*
@@ -41,6 +42,7 @@ export default function Prehled() {
         neprosle={nepotvrzene()}
         priprava={pripravitTed()}
         pulz={pulz()}
+        souhrn={souhrnSituace(ted)}
         kandidati={kandidati().filter((k) => k.naliehave || Date.now() - new Date(k.publikovano ?? k.zachyceno).getTime() <= 72 * 3_600_000)}
         nepotvrzene={nepotvrzeneZaznamy()}
         tydny={tydny()}

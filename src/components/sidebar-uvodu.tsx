@@ -71,6 +71,16 @@ export function SidebarUvodu({ stav, cr, crHistoricky, crPocet, obcane, pulz, pr
 
   return (
     <aside aria-label="Stav a příprava" className="space-y-4">
+      {/* Podpora a odběr — první, podle zadání 24. 9. 2026 */}
+      <section className="overflow-hidden rounded-[22px] border border-linka2 bg-plocha">
+        <HlavickaWidgetu ikona="srdce" nazev="Podpořit a sledovat" ton="neutral" />
+        <div className="flex flex-wrap gap-2 px-4 py-3">
+          {KANALY.telegram && <Tlacitko kam={KANALY.telegram} nove varianta="obrys" velikost="s"><ZnackaKanalu znacka="telegram" velikost={16} /> Telegram</Tlacitko>}
+          {BUY_ME_A_COFFEE_URL && <Tlacitko kam={BUY_ME_A_COFFEE_URL} nove varianta="obrys" velikost="s" ikona="kava">Buy me a coffee</Tlacitko>}
+          {HEROHERO_URL && <Tlacitko kam={HEROHERO_URL} nove varianta="obrys" velikost="s" ikona="srdce">Herohero</Tlacitko>}
+          {!podpora && <Tlacitko kam="/podporit/" varianta="obrys" velikost="s" ikona="kava">Podpořit provoz</Tlacitko>}
+        </div>
+      </section>
       {/* Situace teď */}
       <section className="overflow-hidden rounded-[22px] border border-linka2 bg-plocha">
         <HlavickaWidgetu ikona="radar" nazev="Situace teď" meta={<span className="cislice">{soucet(14)} {sklon(soucet(14), "případ", "případy", "případů")} za 14 dní</span>} />
@@ -145,16 +155,6 @@ export function SidebarUvodu({ stav, cr, crHistoricky, crPocet, obcane, pulz, pr
         </div>
       </section>
 
-      {/* Podpora a odběr */}
-      <section className="overflow-hidden rounded-[22px] border border-linka2 bg-plocha">
-        <HlavickaWidgetu ikona="srdce" nazev="Podpořit a sledovat" ton="neutral" />
-        <div className="flex flex-wrap gap-2 px-4 py-3">
-          {KANALY.telegram && <Tlacitko kam={KANALY.telegram} nove varianta="obrys" velikost="s"><ZnackaKanalu znacka="telegram" velikost={16} /> Telegram</Tlacitko>}
-          {BUY_ME_A_COFFEE_URL && <Tlacitko kam={BUY_ME_A_COFFEE_URL} nove varianta="obrys" velikost="s" ikona="kava">Buy me a coffee</Tlacitko>}
-          {HEROHERO_URL && <Tlacitko kam={HEROHERO_URL} nove varianta="obrys" velikost="s" ikona="srdce">Herohero</Tlacitko>}
-          {!podpora && <Tlacitko kam="/podporit/" varianta="obrys" velikost="s" ikona="kava">Podpořit provoz</Tlacitko>}
-        </div>
-      </section>
     </aside>
   );
 }

@@ -1,6 +1,6 @@
 {
   "_poznamka": "Provozní náklady jako editovatelné vstupy. Ceny jsou odhady podle veřejných ceníků, ne faktury. Upravit tady, nikde jinde.",
-  "aktualizovano": "2026-09-22",
+  "aktualizovano": "2026-09-24",
   "mena": "Kč",
   "polozky": [
     {
@@ -29,9 +29,9 @@
       "poznamka": "zatím nespuštěno; při spuštění cca 0–250 Kč/měs. podle objemu"
     },
     {
-      "nazev": "Zpracování zpráv AI modelem (třídění, souhrny, překlady)",
-      "mesicneKc": 0,
-      "poznamka": "[DOPLNIT] podle vyúčtování Anthropic; zatím nevyčísleno, není nula"
+      "nazev": "Nástroje AI (předplatné Claude a ChatGPT Plus)",
+      "mesicneKc": 3500,
+      "poznamka": "údaj provozovatele 24. 9. 2026: cca 3 500 Kč/měs. za předplatné; placené volání API je od 20. 9. 2026 vypnuté"
     },
     {
       "nazev": "Práce dvou lidí (ověřování, správa, vývoj)",

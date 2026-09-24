@@ -29,6 +29,7 @@
  */
 import fs from "node:fs";
 import path from "node:path";
+import { jeCerstvy, POKYNY_SOUHRNU } from "./souhrn-situace.mjs";
 import { maUredniZdroj } from "./uredni-zdroj.mjs";
 
 const koren = path.resolve(path.dirname(new URL(import.meta.url).pathname), "..");
@@ -189,8 +190,16 @@ const seznam = [
   ...ceka.filter((p) => !nedodelekId.has(p.id)),
 ].slice(0, NEJVYS);
 
-if (!seznam.length) {
-  console.log("[zadani] není co zadat: fronta je prázdná a každý návrh má úřední zdroj.");
+/*
+  Souhrn situace (oddíl C) se žádá vždy. Když je fronta prázdná, vzniká
+  zadání jen kvůli němu — ale jen když ta na webu už není čerstvá, jinak
+  by Patrol přepisoval větu každou hodinu.
+*/
+const souhrnNaWebu = fs.existsSync(cesta("data/souhrn-situace.json")) ? JSON.parse(fs.readFileSync(cesta("data/souhrn-situace.json"), "utf-8")) : null;
+const souhrnStary = !jeCerstvy(souhrnNaWebu, Date.now() - 6 * 3_600_000);
+
+if (!seznam.length && !souhrnStary) {
+  console.log("[zadani] není co zadat: fronta je prázdná, každý návrh má úřední zdroj a souhrn situace je čerstvý.");
   if (!sucho) fs.writeFileSync(cesta("data/fronta/pro-patrola.json"), `${JSON.stringify(ocistena, null, 2)}\n`);
   process.exit(0);
 }
@@ -339,6 +348,8 @@ if (kandidatiVSeznamu.length) {
     ...kandidatiVSeznamu.map(poradi),
   );
 }
+
+casti.push("", POKYNY_SOUHRNU);
 
 casti.push(
   "",

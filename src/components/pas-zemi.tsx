@@ -6,7 +6,6 @@ import { PASMA, UROVNE } from "@/lib/skala";
 import type { Kampan, Uroven } from "@/lib/typy";
 import { sklon, Vlajka } from "./zeme";
 import { PasBeh } from "./pas-beh-klient";
-import { PasPocitadel, type PolozkaPoctu } from "./pocitadla-zive";
 import { useZiveHodiny } from "@/lib/cas-klient";
 
 /*
@@ -79,17 +78,6 @@ export function PasZemi({ vse, kampane = [], ted: tedSestaveni = Date.now() }: {
     );
   });
 
-  /*
-    Do prohlížeče jde jen datum, příznak Česka a druh — počítadla si
-    zbytek dopočítají sama podle hodin návštěvníka. Kampaně jsou tu
-    schválně: operace proti občanům je incident, i když nemá jedno místo
-    a jeden okamžik. Stejný základ jako dlaždice pod tím.
-  */
-  const polozkyPoctu: PolozkaPoctu[] = [
-    ...vse.filter((i) => druh(i) === "pripad").map((i) => ({ kdy: kdyZjisteno(i), cz: i.kodZeme === "CZ" })),
-    ...kampane.map((k) => ({ kdy: k.odhaleno, cz: k.kodyZemi.includes("CZ"), kampan: true })),
-  ];
-
   return (
     /*
       Odsazení stejné jako u zbytku stránky (px-4 sm:px-6). Bez něj lišta
@@ -98,18 +86,8 @@ export function PasZemi({ vse, kampane = [], ted: tedSestaveni = Date.now() }: {
     */
     <div className="pas-obal pas-okraj border-b border-linka bg-papir" aria-label="Země za posledních 90 dnů">
       <div className="mx-auto max-w-[1280px] px-4 sm:px-6">
-        {/*
-          Nad řadou zemí řádek počítadel místo popisku.
-
-          Dřív tu stálo „Incidenty za posledních 90 dní · celkem 30" a čísla
-          po oknech byla v úvodu. Teď je tu obojí pohromadě: kolik a za jak
-          dlouho nahoře, kde dole. Řada dlaždic je za 90 dní — to říká
-          title každé dlaždice.
-        */}
-        <div className="pt-1.5">
-          <PasPocitadel polozky={polozkyPoctu} ted={ted} />
-        </div>
-        <div className="flex items-center pb-1.5">
+        {/* Řádek počítadel (dnes / 7 / 30 / 90 dní) tu byl do 24. 9. 2026; čísla má karta „Situace teď“. */}
+        <div className="flex items-center py-1.5">
           <PasBeh>
             {polozky("")}
             {/* druhá kopie jen kvůli plynulému běhu; čtečce se neoznamuje */}
