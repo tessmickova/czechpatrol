@@ -20,8 +20,8 @@ import { ZnackaKanalu } from "./znacky";
 import { sklon } from "./zeme";
 
 /*
-  Postranní sloupec úvodu (24. 9. 2026, podle zadání): ciferníky, tlačítka
-  k připravenosti, malý souhrn situace a podpora. Každý ciferník nese stav,
+  Postranní sloupec úvodu (24. 9. 2026, podle zadání): situace teď, tlačítka
+  k připravenosti, malý souhrn situace a podpora. Každý ukazatel nese stav,
   pohyb (mikrograf) a období, ať je vidět, že web měří i v klidu.
 */
 function seskup(hodnoty: number[], kusu: number): number[] {
@@ -67,9 +67,9 @@ export function SidebarUvodu({ stav, cr, crHistoricky, crPocet, obcane, veta, pu
 
   return (
     <aside aria-label="Stav a příprava" className="space-y-4">
-      {/* Ciferníky */}
+      {/* Situace teď */}
       <section className="overflow-hidden rounded-[22px] border border-linka2 bg-plocha">
-        <HlavickaWidgetu ikona="radar" nazev="Ciferníky" meta={<span className="cislice">{soucet(14)} {sklon(soucet(14), "případ", "případy", "případů")} za 14 dní</span>} />
+        <HlavickaWidgetu ikona="radar" nazev="Situace teď" meta={<span className="cislice">{soucet(14)} {sklon(soucet(14), "případ", "případy", "případů")} za 14 dní</span>} />
         <div className="p-3">
           <div className="flex items-center gap-3 rounded-[14px] bg-plocha2/60 px-3 py-2.5">
             <Napoveda popis={stav.uroven ? <VykladUrovne uroven={stav.uroven} /> : <span className="block">{t("Hodnocení zatím nebylo stanoveno.")}</span>}>
@@ -111,6 +111,18 @@ export function SidebarUvodu({ stav, cr, crHistoricky, crPocet, obcane, veta, pu
           <strong className="font-semibold text-inkoust">{veta.cesko}</strong> {veta.evropa}
           {pulz && <span className="mt-1.5 block text-drobne text-tlum2">Za 24 h: {pulz.zachyceno24} zachyceno, {pulz.overeno24} ověřeno.</span>}
         </p>
+        {pulz && pulz.zdroje.length > 0 && (
+          <details className="border-t border-linka2 px-4 py-2 text-drobne text-tlum2">
+            <summary className="cursor-pointer select-none hover:text-tlum">Zdroje posledního průchodu{pulz.zdrojuOk < pulz.zdrojuCelkem ? ` · ${pulz.zdrojuCelkem - pulz.zdrojuOk} neodpovědělo` : ""}</summary>
+            <ul className="mt-1.5 flex flex-wrap gap-x-2 gap-y-1">
+              {pulz.zdroje.map((z) => (
+                <li key={z.klic} className="flex items-center gap-1 font-mono" title={z.ok ? "odpověděl" : `neodpověděl${z.stav ? ` (${z.stav})` : ""}`}>
+                  <span aria-hidden className={`h-1.5 w-1.5 rounded-full ${z.ok ? "bg-klid" : "bg-jantar"}`} />{z.klic}
+                </li>
+              ))}
+            </ul>
+          </details>
+        )}
       </section>
 
       {/* Připravenost */}

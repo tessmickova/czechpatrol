@@ -4,7 +4,6 @@ import { HlavickaWidgetu, IkonaKruh } from "./widgety";
 import { AktualitySloupce } from "./aktuality-sloupce";
 import { Znacka } from "./znacka";
 import { SidebarUvodu } from "./sidebar-uvodu";
-import { PulzSberu } from "./pulz-sberu";
 import type { Pulz } from "@/lib/pulz";
 import { UVOD_V2 } from "@/config/web";
 import Link from "next/link";
@@ -533,7 +532,6 @@ export function Dashboard({
   return (
     <>
     <PasZemi vse={vse} kampane={kampane} ted={ted} />
-    {UVOD_V2 && pulz && <PulzSberu pulz={pulz} ted={tedMs} />}
     <div className="mx-auto max-w-[1280px] px-4 py-5 sm:px-6 sm:py-7">
       {/*
         Úvod v2: na mobilu úvodní věta, ciferníky, pak zprávy. Na počítači

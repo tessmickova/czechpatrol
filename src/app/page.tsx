@@ -11,7 +11,8 @@ import type { Incident } from "@/lib/typy";
   pole se vyprázdní, takže nic nespadne, když by po nich někdo sáhl.
 */
 function odlehci<T extends Incident>(i: T): T {
-  return { ...i, fakta: [], neznameho: [], historie: [], eskalacniSpousteče: [], deeskalacniSignaly: [], souvisejici: [], vyznam: "" };
+  /* První fakt a první neznámá zůstávají: úvod je ukazuje po rozbalení řádku aktualit. */
+  return { ...i, fakta: i.fakta.slice(0, 1), neznameho: i.neznameho.slice(0, 1), historie: [], eskalacniSpousteče: [], deeskalacniSignaly: [], souvisejici: [], vyznam: "" };
 }
 import { hlavniVeta } from "@/lib/veta";
 
