@@ -96,7 +96,7 @@ export function PasZemi({ vse, kampane = [], ted: tedSestaveni = Date.now() }: {
       začínala u kraje okna, zatímco všechno pod ní o kus dál — vypadala
       širší než web.
     */
-    <div className="pas-obal border-b border-linka bg-papir" aria-label="Země za posledních 90 dnů">
+    <div className="pas-obal pas-okraj border-b border-linka bg-papir" aria-label="Země za posledních 90 dnů">
       <div className="mx-auto max-w-[1280px] px-4 sm:px-6">
         {/*
           Nad řadou zemí řádek počítadel místo popisku.

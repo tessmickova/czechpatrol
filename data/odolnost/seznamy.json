@@ -1,0 +1,438 @@
+{
+  "_poznamka": "Tři seznamy k přípravě domácnosti. „72h“ vychází z doporučení HZS ČR pro zásoby a evakuační zavazadlo; „rozsireny“ je rozšířený seznam z praxe komunit připravenosti; „ai“ jsou tipy projektu pro běžný život, sepsané s pomocí AI a označené tak. Každá položka má hrozby, na které odpovídá — podle nich se počítá karta „Připravit teď“ (src/lib/priprava.ts). Množství jsou orientační, ne úřední norma.",
+  "verze": "2026-09-24",
+  "hrozby": {
+    "elektrina": "výpadek elektřiny",
+    "voda": "výpadek vody",
+    "teplo": "výpadek tepla",
+    "komunikace": "výpadek spojení",
+    "informace": "výpadek informací a dezinformace",
+    "doprava": "omezení dopravy a paliva",
+    "zdravi": "zdravotní nouze",
+    "hotovost": "výpadek plateb",
+    "evakuace": "evakuace nebo omezení pohybu",
+    "pozar": "požár a únik plynu"
+  },
+  "seznamy": {
+    "72h": {
+      "nazev": "72 hodin",
+      "popis": "Základ, se kterým domácnost zvládne tři dny bez běžných služeb. Vychází z doporučení HZS ČR.",
+      "zdroj": {
+        "nazev": "HZS ČR — ochrana obyvatelstva",
+        "url": "https://www.hzscr.cz/"
+      },
+      "polozky": [
+        {
+          "klic": "voda-3-dny",
+          "nazev": "Pitná voda na 3 dny",
+          "mnozstvi": "3 l na osobu a den",
+          "popis": "Balená nebo ve vymytých PET lahvích, obměňovat po půl roce.",
+          "hrozby": [
+            "voda",
+            "elektrina"
+          ],
+          "funkce": "pitna-voda"
+        },
+        {
+          "klic": "jidlo-3-dny",
+          "nazev": "Trvanlivé jídlo na 3 dny",
+          "mnozstvi": "bez vaření a bez chlazení",
+          "popis": "Konzervy, sušenky, ořechy, tyčinky; otvírák.",
+          "hrozby": [
+            "elektrina",
+            "doprava"
+          ],
+          "funkce": "potraviny"
+        },
+        {
+          "klic": "leky-lekarnicka",
+          "nazev": "Léky na týden a lékárnička",
+          "popis": "Vlastní léky s rezervou, obvazy, náplasti, dezinfekce, léky proti horečce.",
+          "hrozby": [
+            "zdravi",
+            "doprava"
+          ],
+          "funkce": "zdravi"
+        },
+        {
+          "klic": "radio-baterie",
+          "nazev": "Rádio na baterie nebo kliku",
+          "popis": "Krizové vysílání Českého rozhlasu jde i bez sítě a internetu.",
+          "hrozby": [
+            "informace",
+            "elektrina",
+            "komunikace"
+          ],
+          "funkce": "informace"
+        },
+        {
+          "klic": "svetlo",
+          "nazev": "Baterka a náhradní baterie",
+          "popis": "Čelovka nechá volné ruce; svíčky jen s dozorem.",
+          "hrozby": [
+            "elektrina"
+          ],
+          "funkce": "svetlo"
+        },
+        {
+          "klic": "powerbanka",
+          "nazev": "Nabitá powerbanka a kabely",
+          "mnozstvi": "aspoň 10 000 mAh",
+          "popis": "Mobil vydrží dny, když se nabíjí jen na zprávy.",
+          "hrozby": [
+            "elektrina",
+            "komunikace",
+            "informace"
+          ],
+          "funkce": "komunikace"
+        },
+        {
+          "klic": "hotovost",
+          "nazev": "Hotovost v malých bankovkách",
+          "mnozstvi": "na pár dní nákupů",
+          "popis": "Při výpadku plateb terminály a bankomaty nejedou.",
+          "hrozby": [
+            "hotovost",
+            "elektrina"
+          ],
+          "funkce": "finance"
+        },
+        {
+          "klic": "doklady",
+          "nazev": "Doklady a kopie na jednom místě",
+          "popis": "Občanka, pas, kartička pojišťovny, klíče; kopie i v telefonu offline.",
+          "hrozby": [
+            "evakuace"
+          ],
+          "funkce": null
+        },
+        {
+          "klic": "hygiena",
+          "nazev": "Hygiena a toaletní potřeby",
+          "popis": "Vlhčené ubrousky, toaletní papír, pytle na odpad, dezinfekce rukou.",
+          "hrozby": [
+            "voda"
+          ],
+          "funkce": "hygiena"
+        },
+        {
+          "klic": "teplo-obleceni",
+          "nazev": "Teplé oblečení a deka",
+          "popis": "Vrstvení a jedna vytápěná místnost šetří teplo.",
+          "hrozby": [
+            "teplo",
+            "elektrina"
+          ],
+          "funkce": "teplo"
+        },
+        {
+          "klic": "evakuacni-zavazadlo",
+          "nazev": "Evakuační zavazadlo",
+          "popis": "Batoh s výše uvedeným na 1–2 dny, připravený u dveří.",
+          "hrozby": [
+            "evakuace",
+            "pozar"
+          ],
+          "funkce": null
+        },
+        {
+          "klic": "plan-kontakt",
+          "nazev": "Domluvené místo setkání a kontakt",
+          "popis": "Kde se sejdete, když nejde síť, a kdo mimo město je spojka.",
+          "hrozby": [
+            "komunikace",
+            "evakuace"
+          ],
+          "funkce": "komunikace"
+        },
+        {
+          "klic": "sireny-znam",
+          "nazev": "Vím, co znamenají sirény a kde je úkryt",
+          "popis": "Kolísavý tón 140 s = všeobecná výstraha; pak zapnout rádio.",
+          "hrozby": [
+            "informace",
+            "evakuace"
+          ],
+          "funkce": "informace"
+        },
+        {
+          "klic": "detektor-hasici",
+          "nazev": "Detektor kouře a hasicí sprej",
+          "popis": "Při svíčkách a vařičích doma stoupá riziko požáru.",
+          "hrozby": [
+            "pozar",
+            "elektrina"
+          ],
+          "funkce": "pozar"
+        }
+      ]
+    },
+    "rozsireny": {
+      "nazev": "Rozšířený",
+      "popis": "Nad rámec tří dnů: na týden až měsíc. Z praxe komunit připravenosti; vybírejte podle vlastní situace.",
+      "zdroj": null,
+      "polozky": [
+        {
+          "klic": "voda-14-dni",
+          "nazev": "Voda na 14 dní a filtr",
+          "mnozstvi": "kanystry 20 l, filtr nebo tablety",
+          "popis": "Užitková voda zvlášť od pitné; filtr řeší i studnu a potok.",
+          "hrozby": [
+            "voda",
+            "elektrina"
+          ],
+          "funkce": "pitna-voda"
+        },
+        {
+          "klic": "jidlo-14-dni",
+          "nazev": "Jídlo na 14 dní v rotaci",
+          "popis": "Co jíte běžně, jen víc: rýže, luštěniny, konzervy, olej, sůl. Spotřebovávat a doplňovat.",
+          "hrozby": [
+            "doprava",
+            "elektrina"
+          ],
+          "funkce": "potraviny"
+        },
+        {
+          "klic": "varic",
+          "nazev": "Vařič na kartuše a zásoba kartuší",
+          "popis": "Vařit jde i při výpadku plynu a elektřiny; větrat.",
+          "hrozby": [
+            "elektrina",
+            "teplo"
+          ],
+          "funkce": "vareni"
+        },
+        {
+          "klic": "power-station",
+          "nazev": "Bateriová stanice nebo solární panel",
+          "popis": "Lednice, router, zdravotní přístroj na hodiny až dny.",
+          "hrozby": [
+            "elektrina",
+            "zdravi"
+          ],
+          "funkce": "svetlo"
+        },
+        {
+          "klic": "vysilacky",
+          "nazev": "PMR vysílačky pro rodinu",
+          "popis": "Bez sítě na kilometry; domluvit kanál předem.",
+          "hrozby": [
+            "komunikace"
+          ],
+          "funkce": "komunikace"
+        },
+        {
+          "klic": "radio-dab",
+          "nazev": "Rádio s DAB+ i FM",
+          "popis": "Varování ASA jde od 2026 i digitálně; FM zůstává záloha.",
+          "hrozby": [
+            "informace"
+          ],
+          "funkce": "informace"
+        },
+        {
+          "klic": "leky-30",
+          "nazev": "Léky na 30 dní",
+          "popis": "Domluvit s lékařem předpis na delší období.",
+          "hrozby": [
+            "zdravi",
+            "doprava"
+          ],
+          "funkce": "zdravi"
+        },
+        {
+          "klic": "palivo-rezerva",
+          "nazev": "Kanystr paliva a nádrž nad polovinou",
+          "popis": "Kanystr skladovat bezpečně mimo byt; pravidlo poloviny nádrže.",
+          "hrozby": [
+            "doprava",
+            "evakuace"
+          ],
+          "funkce": "doprava"
+        },
+        {
+          "klic": "mapy-papir",
+          "nazev": "Papírové mapy a vytištěné kontakty",
+          "popis": "Navigace bez signálu a čísla, když je mobil vybitý.",
+          "hrozby": [
+            "komunikace",
+            "evakuace",
+            "informace"
+          ],
+          "funkce": "informace"
+        },
+        {
+          "klic": "spacaky",
+          "nazev": "Spacáky a izolace jedné místnosti",
+          "popis": "Přežít mráz v bytě bez topení: jedna místnost, okna zakrytá.",
+          "hrozby": [
+            "teplo"
+          ],
+          "funkce": "teplo"
+        },
+        {
+          "klic": "co-detektor",
+          "nazev": "Detektor CO a hasicí přístroj",
+          "popis": "Vařiče a nouzové topení uvnitř zabíjejí oxidem uhelnatým.",
+          "hrozby": [
+            "pozar",
+            "teplo"
+          ],
+          "funkce": "pozar"
+        },
+        {
+          "klic": "hotovost-vetsi",
+          "nazev": "Hotovost na měsíc",
+          "popis": "Rozdělená na víc míst; drobné bankovky.",
+          "hrozby": [
+            "hotovost"
+          ],
+          "funkce": "finance"
+        },
+        {
+          "klic": "sousedi",
+          "nazev": "Domluva se sousedy",
+          "popis": "Kdo má studnu, kdo auto, kdo umí první pomoc.",
+          "hrozby": [
+            "komunikace",
+            "zdravi",
+            "voda"
+          ],
+          "funkce": "komunikace"
+        },
+        {
+          "klic": "suche-wc",
+          "nazev": "Náhradní WC a pytle",
+          "popis": "Bez vody nejde splachovat; kbelík, pytle, stelivo.",
+          "hrozby": [
+            "voda"
+          ],
+          "funkce": "wc-odpad"
+        }
+      ]
+    },
+    "ai": {
+      "nazev": "AI tipy",
+      "popis": "Vychytávky pro běžný život, sepsané s pomocí AI. Tipy projektu, ne úřední doporučení — zdravý rozum má přednost.",
+      "zdroj": null,
+      "polozky": [
+        {
+          "klic": "vana",
+          "nazev": "Při výstraze napustit vanu",
+          "popis": "150 litrů užitkové vody na splachování a mytí během minut.",
+          "hrozby": [
+            "voda"
+          ],
+          "funkce": "hygiena"
+        },
+        {
+          "klic": "mrazak-lahve",
+          "nazev": "Lahve s vodou do prázdných míst v mrazáku",
+          "popis": "Plný mrazák drží chlad déle a po rozmrznutí je to zásoba vody.",
+          "hrozby": [
+            "elektrina",
+            "voda"
+          ],
+          "funkce": "chlazeni"
+        },
+        {
+          "klic": "nedele-nabijeni",
+          "nazev": "Powerbanku nabíjet každou neděli",
+          "popis": "Jedna pevná připomínka; vybitá powerbanka je jen závaží.",
+          "hrozby": [
+            "elektrina",
+            "komunikace"
+          ],
+          "funkce": "komunikace"
+        },
+        {
+          "klic": "screenshoty",
+          "nazev": "Screenshoty čísel a adres v telefonu",
+          "popis": "Fungují bez signálu: lékař, škola, pojišťovna, mapa okolí.",
+          "hrozby": [
+            "komunikace",
+            "informace"
+          ],
+          "funkce": "informace"
+        },
+        {
+          "klic": "kabel-v-kabatu",
+          "nazev": "Kabel a malá powerbanka v kabátu",
+          "popis": "Nejčastěji chybí to, co je doma v šuplíku.",
+          "hrozby": [
+            "komunikace"
+          ],
+          "funkce": "komunikace"
+        },
+        {
+          "klic": "obalka-v-knize",
+          "nazev": "Hotovost v obálce mimo peněženku",
+          "popis": "Ztráta peněženky nebo výpadek terminálu nezruší nákup.",
+          "hrozby": [
+            "hotovost"
+          ],
+          "funkce": "finance"
+        },
+        {
+          "klic": "nadrz-polovina",
+          "nazev": "Tankovat při polovině nádrže",
+          "popis": "Fronty u pump vznikají do hodiny od zprávy; kdo má půl nádrže, nestojí.",
+          "hrozby": [
+            "doprava",
+            "evakuace"
+          ],
+          "funkce": "doprava"
+        },
+        {
+          "klic": "jedno-misto",
+          "nazev": "Jedno místo setkání, jeden vzdálený kontakt",
+          "popis": "Při přetížené síti projde SMS příbuznému mimo město dřív než hovor sousedovi.",
+          "hrozby": [
+            "komunikace",
+            "evakuace"
+          ],
+          "funkce": "komunikace"
+        },
+        {
+          "klic": "radio-v-aute",
+          "nazev": "Autorádio jako záložní rádio",
+          "popis": "Krizové vysílání ČRo chytíte v autě, i když doma rádio nemáte.",
+          "hrozby": [
+            "informace",
+            "elektrina"
+          ],
+          "funkce": "informace"
+        },
+        {
+          "klic": "leky-tyden-dopredu",
+          "nazev": "Vyzvedávat léky týden před koncem",
+          "popis": "Rezerva vzniká sama, bez hromadění.",
+          "hrozby": [
+            "zdravi"
+          ],
+          "funkce": "zdravi"
+        },
+        {
+          "klic": "termoska",
+          "nazev": "Termoska a horká voda předem",
+          "popis": "Při hlášeném výpadku uvařit vodu do termosek: čaj, kojenecká výživa, mytí.",
+          "hrozby": [
+            "elektrina",
+            "teplo"
+          ],
+          "funkce": "vareni"
+        },
+        {
+          "klic": "zdroj-overit",
+          "nazev": "Před sdílením zprávy najít úřední zdroj",
+          "popis": "Policie, HZS, ČRo, obec. Když ho není, počkat. Tenhle web to dělá za vás.",
+          "hrozby": [
+            "informace"
+          ],
+          "funkce": "informace"
+        }
+      ]
+    }
+  }
+}

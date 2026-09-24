@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { ObsahStranky } from "@/components/obsah-stranky";
 import { HlavickaStranky, Obsah } from "@/components/hlavicka";
 import { Karta } from "@/components/zaklad";
 import { KONTAKTY_PRIJIMAME, PROVOZOVATEL, PROVOZOVATEL_TEXT, WEB } from "@/config/web";
@@ -38,6 +39,7 @@ export default function SoukromiStranka() {
         popis="Web se dá číst bez účtu a bez sledování. Účet je anonymní. Tady je přesně, co se ukládá, proč, na jak dlouho a jak to smažete."
         doplnek={<span className="stitek !text-noc-tlum">Platí od {REVIZE}</span>}
       />
+      <ObsahStranky />
       <Obsah>
         {/*
           Dokud chybí provozovatel, server kontakty a platby odmítá

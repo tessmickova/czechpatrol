@@ -171,6 +171,41 @@ export function KartaKampane({ k, nazvyZemi }: { k: Kampan; nazvyZemi: Record<st
         <MetodyKampane metody={k.metody} />
       </div>
 
+      {/* Dva štítky, dvě nezávislé otázky. Vedle sebe schválně; že spolu nesouvisí, říká puntík. */}
+      <div className="border-b border-linka2 p-5 sm:p-6">
+        <div className="mb-2 flex items-center gap-1.5"><span className="stitek">Dvě otázky zvlášť</span><Otaznik popis={<span className="block">Obě odpovědi jsou na sobě nezávislé. Že je něco prokazatelně podvrh, samo o sobě neříká nic o tom, kdo ho vyrobil.</span>} /></div>
+        <div className="grid gap-2.5 sm:grid-cols-2">
+          <StitekJistoty
+            otazka="Je zásah doložený?"
+            odpoved={k.jistotaManipulace === "potvrzeno" || k.jistotaManipulace === "vysoka" ? "Ano, doloženo" : k.jistotaManipulace === "stredni" ? "Zatím jen pravděpodobně" : "Zatím sporné"}
+            jistota={k.jistotaManipulace}
+            duvod={k.duvodManipulace}
+          />
+          <StitekJistoty
+            otazka="Kdo za tím stojí?"
+            odpoved={k.puvodce.koho ? (k.puvodce.jistota === "potvrzeno" || k.puvodce.jistota === "vysoka" ? k.puvodce.koho : `${k.puvodce.koho} — zatím jen podezření`) : "Neznámý"}
+            jistota={k.puvodce.jistota}
+            duvod={k.puvodce.duvod}
+          />
+        </div>
+      </div>
+
+      {/*
+        Celý rozbor na rozkliknutí (revize 24. 9. 2026). Stránka Manipulace
+        měla na mobilu 24 700 px, protože každá kampaň stála rozbalená
+        v šesti částech. Nahoře zůstává, co potřebuje čtenář k rozhodnutí:
+        kdo, kdy, jak, a dvě odpovědi. Zbytek je pod „Celý rozbor“.
+      */}
+      <details className="group">
+        <summary className="flex min-h-[52px] cursor-pointer list-none items-center justify-between gap-3 px-5 py-3 text-zaklad font-bold text-inkoust hover:bg-plocha2 sm:px-6">
+          <span className="flex items-center gap-2">
+            <span className="grid h-7 w-7 shrink-0 place-items-center rounded-full bg-plocha2 text-akcent"><Ikona nazev="dokument" velikost={14} tah={1.9} /></span>
+            Celý rozbor v šesti částech
+            <span className="cislice text-drobne font-normal text-tlum2">· zdroje {k.zdroje.length}</span>
+          </span>
+          <Ikona nazev="dolu" velikost={13} tah={2} trida="shrink-0 text-tlum2 transition-transform group-open:rotate-180" />
+        </summary>
+        <div className="border-t border-linka2">
       {/* Koho to zasáhlo nebo čí jméno bylo zneužito. */}
       {k.zasazeni.length > 0 && (
         <div className="border-b border-linka2 p-5 sm:p-6">
@@ -192,25 +227,6 @@ export function KartaKampane({ k, nazvyZemi }: { k: Kampan; nazvyZemi: Record<st
           </ul>
         </div>
       )}
-
-      {/* Dva štítky, dvě nezávislé otázky. Vedle sebe schválně; že spolu nesouvisí, říká puntík. */}
-      <div className="border-b border-linka2 p-5 sm:p-6">
-        <div className="mb-2 flex items-center gap-1.5"><span className="stitek">Dvě otázky zvlášť</span><Otaznik popis={<span className="block">Obě odpovědi jsou na sobě nezávislé. Že je něco prokazatelně podvrh, samo o sobě neříká nic o tom, kdo ho vyrobil.</span>} /></div>
-        <div className="grid gap-2.5 sm:grid-cols-2">
-          <StitekJistoty
-            otazka="Je zásah doložený?"
-            odpoved={k.jistotaManipulace === "potvrzeno" || k.jistotaManipulace === "vysoka" ? "Ano, doloženo" : k.jistotaManipulace === "stredni" ? "Zatím jen pravděpodobně" : "Zatím sporné"}
-            jistota={k.jistotaManipulace}
-            duvod={k.duvodManipulace}
-          />
-          <StitekJistoty
-            otazka="Kdo za tím stojí?"
-            odpoved={k.puvodce.koho ? (k.puvodce.jistota === "potvrzeno" || k.puvodce.jistota === "vysoka" ? k.puvodce.koho : `${k.puvodce.koho} — zatím jen podezření`) : "Neznámý"}
-            jistota={k.puvodce.jistota}
-            duvod={k.puvodce.duvod}
-          />
-        </div>
-      </div>
 
       <div className="space-y-4 p-5 sm:p-6">
         {CASTI.slice(0, 4).map((c) => (
@@ -239,6 +255,8 @@ export function KartaKampane({ k, nazvyZemi }: { k: Kampan; nazvyZemi: Record<st
           <div className="mt-2.5 sm:pl-9"><SeznamZdroju zdroje={k.zdroje} /></div>
         </section>
       </div>
+        </div>
+      </details>
     </article>
   );
 }

@@ -614,6 +614,8 @@ html, body { overflow-x: clip; }
 }
 
 .pas-scroll { scrollbar-width: none; }
+/* Náznak, že řádek pokračuje: pravý okraj se ztrácí do pozadí (revize 24. 9. 2026). */
+.pas-okraj { mask-image: linear-gradient(to right, black calc(100% - 36px), transparent); -webkit-mask-image: linear-gradient(to right, black calc(100% - 36px), transparent); }
 .pas-scroll::-webkit-scrollbar { display: none; }
 details > summary { list-style: none; cursor: pointer; }
 details > summary::-webkit-details-marker { display: none; }

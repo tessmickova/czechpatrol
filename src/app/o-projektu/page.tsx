@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { ObsahStranky } from "@/components/obsah-stranky";
 import { HlavickaStranky } from "@/components/nadpisy";
 import Link from "next/link";
 import { DORUCOVANI, KANALY, KOMUNITA, METODIKA_REVIDOVANA, PROVOZOVATEL, PROVOZOVATEL_TEXT, UCTY_ZAPNUTE, WEB } from "@/config/web";
@@ -30,6 +31,7 @@ export default function OProjektu() {
         nadpis="Kdo to píše a podle čeho"
         uvod={<>{WEB.nazev} je nezávislý přehled bez inzerce — bezpečnostních událostí a úředních opatření, která se mohou dotknout lidí v Česku. Není to úřední zdroj, varovný systém ani předpověď.</>}
       />
+      <ObsahStranky />
       <div className="mt-16 space-y-12 sm:mt-20">
         <Odstavec nadpis="Co web dělá">
           <p>Sbírá veřejné informace o sabotážích, dronech, kybernetických útocích a reakcích států. Každý záznam má zdroj, datum události, datum zjištění, závažnost a jistotu.</p>

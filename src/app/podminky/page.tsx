@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { ObsahStranky } from "@/components/obsah-stranky";
 import { HlavickaStranky, Obsah } from "@/components/hlavicka";
 import { Karta } from "@/components/zaklad";
 import { PLACENE, PROVOZOVATEL, PROVOZOVATEL_TEXT } from "@/config/web";
@@ -33,6 +34,7 @@ export default function PodminkyStranka() {
         popis="Krátké, protože služba je jednoduchá: ukazuje ověřený stav, nedává rady a nic nepředstírá."
         doplnek={<span className="stitek !text-noc-tlum">Platí od {REVIZE}</span>}
       />
+      <ObsahStranky />
       <Obsah>
         <Karta odstin="pisek" className="p-6">
           <div className="stitek mb-2">Nejdůležitější věta</div>

@@ -47,7 +47,7 @@ export function TabulkaZemi({ maxZemi = 12 }: { maxZemi?: number }) {
         390 px nevejde a zkracovat slova úrovní na zkratky by bylo horší než
         rolovat: slovo je tu to hlavní sdělení.
       */}
-      <div className="pas-scroll min-h-0 flex-1 overflow-x-auto">
+      <div className="pas-scroll pas-okraj min-h-0 flex-1 overflow-x-auto">
         <table className="w-full min-w-[640px] border-collapse text-male">
           <thead>
             <tr className="border-b border-linka2">

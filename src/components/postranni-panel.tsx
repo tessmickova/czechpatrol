@@ -144,6 +144,8 @@ export function PostranniPanel() {
           </nav>
 
           {/* funkce po přihlášení */}
+          {/* Bez účtové služby se sekce neukazuje: slibovala „účty připravujeme“ se zámky (revize 24. 9. 2026). */}
+          {UCTY_ZAPNUTE && (
           <section aria-label="Po přihlášení" className="border-t border-linka py-2">
             <div className="stitek px-4 pb-1 pt-2">Po přihlášení</div>
             <ul>
@@ -174,6 +176,7 @@ export function PostranniPanel() {
               )}
             </ul>
           </section>
+          )}
 
           {/* účet */}
           <section aria-label="Účet" className="border-t border-linka py-2">

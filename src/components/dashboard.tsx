@@ -16,6 +16,8 @@ import { HeroDashboard } from "./hero-dashboard";
 import { DlazdiceKampane } from "./kampane";
 import { NadpisSekce } from "./nadpisy";
 import { SouhrnOverujeme } from "./overujeme";
+import { PripravitTed } from "./pripravit-ted";
+import type { PripravitTed as DataPripravy } from "@/lib/priprava";
 import { Partneri, Sledovat } from "./sledovat";
 import { Aktuality } from "./aktuality";
 import { UrgentniPas } from "./urgentni";
@@ -346,7 +348,7 @@ const TECKA_SLUZBY: Record<StavSluzby, string> = { provoz: "bg-klid", omezeni: "
 
 export function Dashboard({
   stav, pravni, natoPolozky, provozPolozky, overeno, vse, neprosle, kandidati, nepotvrzene = [], tydny, watchlist, crHistoricky, hybridni, obcane, ted, snimky = [], nastroje = [],
-  tlakEvropa, tlakCesko, veta, kampane, nazvyZemi, overovaneAktivni = [], overovaneUzavrene = [],
+  tlakEvropa, tlakCesko, veta, kampane, nazvyZemi, overovaneAktivni = [], overovaneUzavrene = [], priprava,
 }: {
   stav: CelkovyStav; pravni: PravniPolozka[]; natoPolozky: NatoPolozka[]; provozPolozky: ProvozniPolozka[];
   /** Čas sestavení. Klient z něj vychází, aby se první vykreslení shodlo. */
@@ -363,6 +365,7 @@ export function Dashboard({
   /** Zprávy, které se šíří a zatím nejsou ověřené. Do počtů nevstupují. */
   overovaneAktivni?: Overovana[];
   overovaneUzavrene?: Overovana[];
+  priprava?: DataPripravy;
 }) {
   const t = useT();
   const platiCr = pravni.filter((p) => p.plati === true);
@@ -521,6 +524,9 @@ export function Dashboard({
           <Aktuality zaznamy={vse} kandidati={kandidati} nepotvrzene={nepotvrzene} />
         </div>
       </div>
+
+      {/* Tři věci pro domácnost podle doložených hrozeb (24. 9. 2026). */}
+      {priprava && <div className="mt-5"><PripravitTed priprava={priprava} /></div>}
 
       {/*
         „Právě ověřujeme“ jako malý souhrn pod úvodem (24. 9. 2026). Velké

@@ -21,6 +21,7 @@ export const HLAVNI = [
   { href: "/", label: "Přehled" },
   { href: "/udalosti/", label: "Události" },
   { href: "/manipulace/", label: "Manipulace" },
+  { href: "/zeme/", label: "Země" },
   { href: "/analyzy/", label: "Analýzy" },
   { href: "/pripravenost/", label: "Připravenost" },
 ];

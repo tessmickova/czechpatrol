@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { ObsahStranky } from "@/components/obsah-stranky";
 import { HlavickaStranky, Obsah } from "@/components/hlavicka";
 import { Karta, OdznakTypu, Sekce } from "@/components/zaklad";
 import { METODIKA_REVIDOVANA, METODIKA_VERZE } from "@/config/web";
@@ -102,6 +103,7 @@ export default function Metodika() {
           </div>
         }
       />
+      <ObsahStranky />
 
       <Sekce nadpis="Co započítáváme jako nový signál" prvni>
         <div className="grid gap-5 lg:grid-cols-2">
