@@ -1,5 +1,5 @@
 {
-  "aktualizovano": "2026-09-24T16:03:21.442Z",
+  "aktualizovano": "2026-09-24T17:03:36.255Z",
   "stavy": [
     {
       "klic": "cloudflare",
@@ -24,11 +24,11 @@
       ],
       "postizene": [
         "Cloudflare Sites and Services",
-        "Accra, Ghana - (ACC)",
         "Africa",
-        "Access"
+        "Access",
+        "Arica, Chile - (ARI)"
       ],
-      "zkontrolovano": "2026-09-24T16:03:21.442Z",
+      "zkontrolovano": "2026-09-24T17:03:36.255Z",
       "chyba": null
     },
     {
@@ -39,14 +39,14 @@
         {
           "nazev": "Service Degradation Affecting Live Transcription Services.",
           "odkaz": "https://stspg.io/m8bvpzdcvcjd",
-          "aktualizovano": "2026-09-24T08:47:39.986-07:00"
+          "aktualizovano": "2026-09-24T09:32:34.245-07:00"
         }
       ],
       "postizene": [
         "Live Transcription",
         "Zoom Meetings"
       ],
-      "zkontrolovano": "2026-09-24T16:03:21.442Z",
+      "zkontrolovano": "2026-09-24T17:03:36.255Z",
       "chyba": null
     },
     {
@@ -55,7 +55,7 @@
       "popis": "All Systems Operational",
       "incidenty": [],
       "postizene": [],
-      "zkontrolovano": "2026-09-24T16:03:21.442Z",
+      "zkontrolovano": "2026-09-24T17:03:36.255Z",
       "chyba": null
     }
   ]
