@@ -190,7 +190,7 @@ export function PruhOverujeme({
   Zdroje se vypisují jen jménem média (před pomlčkou), ne cizojazyčným
   titulkem článku: souhrn má být česky.
 */
-export function SouhrnOverujeme({ aktivni, ted }: { aktivni: Overovana[]; ted: number }) {
+export function SouhrnOverujeme({ aktivni, ted, vnoreny = false }: { aktivni: Overovana[]; ted: number; vnoreny?: boolean }) {
   const [cas, setCas] = useState(ted);
   useEffect(() => {
     setCas(Date.now());
@@ -201,8 +201,8 @@ export function SouhrnOverujeme({ aktivni, ted }: { aktivni: Overovana[]; ted: n
   if (!zive.length) return null;
 
   return (
-    <section aria-label="Právě ověřujeme" className="overflow-hidden rounded-[22px] border border-dashed border-jantar/55 bg-jantar/[0.06]">
-      <HlavickaWidgetu ikona="otaznik" ton="pozor" nazev="Právě ověřujeme" meta="nepotvrzené zprávy · nevstupují do hodnocení" />
+    <section aria-label="Právě ověřujeme" className={vnoreny ? "" : "overflow-hidden rounded-[22px] border border-dashed border-jantar/55 bg-jantar/[0.06]"}>
+      {!vnoreny && <HlavickaWidgetu ikona="otaznik" ton="pozor" nazev="Právě ověřujeme" meta="nepotvrzené zprávy · nevstupují do hodnocení" />}
       <ul className="divide-y divide-dashed divide-jantar/25">
         {zive.map((o) => {
           const lhuta = zbyva(o.uzavritDo, cas);

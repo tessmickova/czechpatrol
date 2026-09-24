@@ -5,7 +5,7 @@ import type { ReactNode } from "react";
 /** Jednotné ovládací prvky formulářů — jeden vzhled napříč účtem, IZS i správou. */
 
 export const TLACITKO =
-  "inline-flex items-center justify-center gap-2 rounded-full border px-4 py-2.5 text-zaklad font-bold uppercase tracking-[0.05em] transition-all disabled:cursor-not-allowed disabled:opacity-50";
+  "inline-flex min-h-[44px] items-center justify-center gap-2 rounded-full border px-5 text-zaklad font-bold transition-all disabled:cursor-not-allowed disabled:opacity-50";
 export const TLACITKO_AKCENT = `${TLACITKO} border-akcent/60 bg-akcent/15 text-akcent-svetla  hover:bg-akcent/25`;
 export const TLACITKO_TICHE = `${TLACITKO} border-linka text-inkoust hover:border-akcent/60`;
 export const TLACITKO_VAROVNE = `${TLACITKO} border-akcent/50 text-akcent-svetla hover:bg-akcent/10`;

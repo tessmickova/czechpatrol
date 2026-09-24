@@ -213,11 +213,11 @@ export function souhrnZmen(zaznamy: Zaznam[], snimky: Snimek[], ted: number) {
   };
 }
 
-export function CoSeZmenilo({ zaznamy, snimky, ted, vnoreny = false }: { zaznamy: Zaznam[]; snimky: Snimek[]; ted: number; vnoreny?: boolean }) {
+export function CoSeZmenilo({ zaznamy, snimky, ted, vnoreny = false, osa = false }: { zaznamy: Zaznam[]; snimky: Snimek[]; ted: number; vnoreny?: boolean; /** Svislá časová osa místo tabulky, šest položek (úvod v2). */ osa?: boolean }) {
   const { nahled, kde, ukaz, skryj, pohyb } = useNahled();
 
   const vsechny = sloucOpakovani([...zeSnimku(snimky), ...zCen(ted), ...zOpatreni(zaznamy)].sort((a, b) => b.kdy.localeCompare(a.kdy)));
-  const radky = vsechny.slice(0, NEJVYS);
+  const radky = vsechny.slice(0, osa ? 6 : NEJVYS);
   /*
     Týden v hlavičce: zlepšení, zhoršení i opatření, každé zvlášť. Dřív
     tu stálo jen „N zhoršení“ a každé opatření se počítalo jako zhoršení —
@@ -255,15 +255,15 @@ export function CoSeZmenilo({ zaznamy, snimky, ted, vnoreny = false }: { zaznamy
       )}
 
       {radky.length > 0 ? (
-        <ol className="divide-y divide-linka2">
+        <ol className={osa ? "relative ml-[22px] mr-3 my-3 border-l border-linka2" : "divide-y divide-linka2"}>
           {radky.map((r) => (
-            <li key={r.klic} onPointerEnter={(e) => ukaz(r.nahled, e)} onPointerMove={pohyb}>
+            <li key={r.klic} className={osa ? "relative" : undefined} onPointerEnter={(e) => ukaz(r.nahled, e)} onPointerMove={pohyb}>
               <Link
                 href={r.kam}
-                className="flex items-start gap-2.5 px-4 py-2 hover:bg-plocha2"
+                className={osa ? "flex items-start gap-2.5 py-2 pl-4 pr-2 hover:bg-plocha2" : "flex items-start gap-2.5 px-4 py-2 hover:bg-plocha2"}
                 onFocus={(e) => { const b = e.currentTarget.getBoundingClientRect(); ukaz(r.nahled, { clientX: b.right, clientY: b.top }); }}
               >
-                <span aria-hidden className={`mt-[7px] h-[6px] w-[6px] shrink-0 rounded-full ${r.tecka}`} />
+                <span aria-hidden className={osa ? `absolute -left-[5px] top-[15px] h-[9px] w-[9px] rounded-full ring-2 ring-plocha ${r.tecka}` : `mt-[7px] h-[6px] w-[6px] shrink-0 rounded-full ${r.tecka}`} />
                 <span className="flex min-w-0 flex-1 items-start gap-2">
                   <span className="w-[18px] shrink-0 leading-[20px]" title={r.zeme ?? undefined} aria-label={r.zeme ?? undefined}>
                     {r.kodZeme ? <Vlajka kod={r.kodZeme} /> : null}

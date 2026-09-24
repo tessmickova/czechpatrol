@@ -33,6 +33,7 @@ import { Tlacitko } from "./ui";
 import { useZiveHodiny } from "@/lib/cas-klient";
 import { PripravenostKarta } from "./pripravenost-klient";
 import { TipyKPriprave } from "./tipy";
+import { tipy as vsechnyTipy } from "@/lib/data";
 import { PasZemi } from "./pas-zemi";
 import { CoSeZmenilo } from "./co-se-zmenilo";
 import { StavSluzeb } from "./stav-sluzeb";
@@ -238,8 +239,28 @@ function signalyKPolozkam(stavy: ZivyStav[]): Record<string, SignalSluzby[]> {
   return out;
 }
 
-function RadekStavu({ d, casSkupiny, ted, signaly = [] }: { d: Dlazdice; casSkupiny: string | null; ted: number; signaly?: SignalSluzby[] }) {
+function RadekStavu({ d, casSkupiny, ted, signaly = [], tvar = "radek" }: { d: Dlazdice; casSkupiny: string | null; ted: number; signaly?: SignalSluzby[]; /** dlaždice = úvod v2: kostka v mřížce místo řádku */ tvar?: "radek" | "dlazdice" }) {
   const t = TON[d.ton];
+  if (tvar === "dlazdice") {
+    return (
+      <li className={`rounded-[14px] has-[details[open]]:col-span-full ${zvyraznitDlazdici(d.ton) ? t.dlazdice : "bg-plocha2/60"}`}>
+        <details className="group">
+          <summary className="flex min-h-[64px] cursor-pointer list-none items-center gap-2.5 px-3 py-2.5 text-left hover:bg-plocha2">
+            <span className="hidden h-8 w-8 shrink-0 place-items-center rounded-full bg-plocha text-tlum sm:grid"><Ikona nazev={d.ikona} velikost={15} tah={1.8} /></span>
+            <span className="min-w-0 flex-1">
+              <span className="block truncate text-drobne leading-tight text-tlum">{d.nazev}</span>
+              <span className={`mt-0.5 flex items-center gap-1.5 text-male font-bold leading-tight ${t.slovo}`}><span aria-hidden className={`h-[7px] w-[7px] shrink-0 rounded-full ${t.tecka}`} />{d.stav}</span>
+              {signaly.map((sg) => (
+                <span key={sg.sluzba} className="mt-0.5 block text-mikro leading-snug text-tlum">signál: {sg.sluzba} hlásí {sg.stav} · neověřeno</span>
+              ))}
+            </span>
+            <Ikona nazev="dolu" velikost={12} tah={2} trida="shrink-0 text-tlum2 transition-transform group-open:rotate-180" />
+          </summary>
+          <StavDetail polozka={d.zdrojovaPolozka} skupina={d.skupina} vysvetleni={d.vysvetleni} stavVysvetleni={d.stavVysvetleni} coByZmenilo={d.coByZmenilo} />
+        </details>
+      </li>
+    );
+  }
   // Čas se u řádku píše jen tehdy, když se liší od času celé skupiny.
   const vlastniCas = d.cas !== casSkupiny;
   const zvyraznit = d.ton === "plati" || d.ton === "pozor";
@@ -273,6 +294,29 @@ function RadekStavu({ d, casSkupiny, ted, signaly = [] }: { d: Dlazdice; casSkup
         <StavDetail polozka={d.zdrojovaPolozka} skupina={d.skupina} vysvetleni={d.vysvetleni} stavVysvetleni={d.stavVysvetleni} coByZmenilo={d.coByZmenilo} />
       </details>
     </li>
+  );
+}
+
+const zvyraznitDlazdici = (ton: Ton) => ton === "plati" || ton === "pozor";
+
+/*
+  Mini box (úvod v2): jedna řádka s ikonou, názvem, souhrnem a paletou;
+  po rozkliknutí se roztáhne přes celou šířku řady a ukáže obsah.
+*/
+function MiniBox({ nazev, ikona, souhrn, paleta, ton = "akcent", children }: { nazev: string; ikona: NazevIkony; souhrn: string; paleta?: { nazev: string; tecka: string; slovo: string }[]; ton?: "akcent" | "klid" | "pozor" | "neutral"; children: React.ReactNode }) {
+  return (
+    <details className={`group overflow-hidden rounded-[22px] border bg-plocha [&[open]]:col-span-full ${ton === "pozor" ? "border-dashed border-jantar/55 bg-jantar/[0.06]" : "border-linka2"}`}>
+      <summary className="flex min-h-[64px] cursor-pointer list-none items-center gap-3 px-4 py-2.5 hover:bg-plocha2">
+        <IkonaKruh ikona={ikona} ton={ton} velikost="s" />
+        <span className="min-w-0 flex-1">
+          <span className="stitek block">{nazev}</span>
+          <span className="mt-0.5 line-clamp-2 block text-male font-semibold leading-snug text-inkoust">{souhrn}</span>
+        </span>
+        {paleta && paleta.length > 0 && <span className="hidden sm:block"><Paleta polozky={paleta} /></span>}
+        <Ikona nazev="dolu" velikost={13} tah={2} trida="shrink-0 text-tlum2 transition-transform group-open:rotate-180" />
+      </summary>
+      <div className="border-t border-linka2">{children}</div>
+    </details>
   );
 }
 
@@ -432,6 +476,7 @@ export function Dashboard({
     };
   })();
   const paliva = stavPaliv().filter((p) => p.cena !== null);
+  const tipyNahled = vsechnyTipy(tedMs);
   /*
     Situace v Česku za 90 dní: nejvyšší závažnost z případů a operací
     proti občanům v okně. Dřív přicházela ze serveru s časem sestavení;
@@ -579,6 +624,107 @@ export function Dashboard({
       )}
 
 
+      {UVOD_V2 ? (
+      <>
+      {/* ===== ÚVOD V2 — spodní část (24. 9. 2026) ===== */}
+
+      {/* Úřední stav: jedna karta, dlaždice; v klidu jen klíčové, zbytek za „všech N“. */}
+      <div className="nalet mt-12 sm:mt-16">
+        <NadpisSekce stitek={t("Co právě platí")} ikona="vaha" nadpis={t("Úřední stav v Česku")} />
+      </div>
+      <div className="grid gap-6 xl:grid-cols-[minmax(0,3fr)_minmax(0,2fr)] xl:gap-10">
+        <section aria-label={t("Oficiální stavy")} id="opatreni" className="scroll-mt-[84px] overflow-hidden rounded-[22px] border border-linka2 bg-plocha">
+          {skupinyDlazdic.map((sk, i) => {
+            const dlazdice = (d: Dlazdice) => <RadekStavu key={d.klic} d={d} casSkupiny={sk.cas} ted={tedMs} signaly={signalySluzeb[d.zdrojovaPolozka.klic] ?? []} tvar="dlazdice" />;
+            const zvlastni = sk.polozky.filter((d) => KLICOVE.includes(d.klic) || d.ton === "plati" || d.ton === "pozor" || d.ton === "nevime" || (signalySluzeb[d.zdrojovaPolozka.klic] ?? []).length > 0);
+            const klidne = sk.polozky.filter((d) => !zvlastni.includes(d));
+            return (
+              <div key={sk.predpona} className={i ? "border-t border-linka2" : ""}>
+                <HlavickaWidgetu
+                  ikona={IKONY_SKUPIN[sk.predpona] ?? "stit"}
+                  nazev={sk.nazev}
+                  podtitul={souhrnTonu(sk.polozky.map((d) => d.ton), sk.predpona === "n" ? "aktivní" : sk.predpona === "v" ? "narušeno" : "platí", sk.predpona === "v" ? { nedolozeno: "bez hlášení" } : {})}
+                  meta={<span className="flex items-center gap-3"><span className="hidden sm:block"><Paleta polozky={sk.polozky.map((d) => ({ nazev: d.nazev, tecka: TON[d.ton].tecka, slovo: d.stav }))} /></span><Stari cas={sk.cas} popisek={sk.popisekCasu} ted={tedMs} /></span>}
+                />
+                <ul className="grid grid-cols-2 gap-2 p-3 lg:grid-cols-3">{zvlastni.map(dlazdice)}</ul>
+                {klidne.length > 0 && (
+                  <details className="group">
+                    <summary className="flex min-h-[40px] cursor-pointer list-none items-center justify-between gap-2 px-4 text-drobne font-semibold text-tlum hover:bg-plocha2">
+                      <span>všech {sk.polozky.length} · dalších {klidne.length} v klidu</span>
+                      <Ikona nazev="dolu" velikost={12} tah={2} trida="text-tlum2 transition-transform group-open:rotate-180" />
+                    </summary>
+                    <ul className="grid grid-cols-2 gap-2 px-3 pb-3 lg:grid-cols-3">{klidne.map(dlazdice)}</ul>
+                  </details>
+                )}
+              </div>
+            );
+          })}
+        </section>
+        <div className="min-w-0">
+          <CoSeZmenilo zaznamy={vse} snimky={snimky} ted={tedMs} osa />
+        </div>
+      </div>
+
+      {/* Sledujeme dál: čtyři mini boxy, každý na rozkliknutí. */}
+      <div className="nalet mt-12 sm:mt-16">
+        <NadpisSekce stitek="Sledujeme dál" ikona="oko" nadpis="Služby, ceny, ověřované zprávy a tipy" />
+      </div>
+      <div className="grid gap-3 md:grid-cols-2 xl:grid-cols-4">
+        <MiniBox nazev="Služby naživo" ikona="komunikace" souhrn={souhrnSluzeb.veta} paleta={SLUZBY.map((sl) => { const st = sluzby.stavy.find((x) => x.klic === sl.klic)?.stav ?? "nezjisteno"; return { nazev: sl.nazev, tecka: TECKA_SLUZBY[st], slovo: SLOVA_STAVU[st] }; })}>
+          <StavSluzeb stavy={sluzby.stavy} kdy={sluzby.kdy} vnoreny />
+        </MiniBox>
+        {paliva.length > 0 && (
+          <MiniBox nazev="Ceny pohonných hmot" ikona="palivo" souhrn={paliva.map((p) => `${p.nazev} ${p.cena!.toFixed(2).replace(".", ",")} Kč/l${p.zaTyden ? ` (${p.zaTyden > 0 ? "+" : "−"}${Math.abs(p.zaTyden).toFixed(2).replace(".", ",")})` : ""}`).join(" · ")} paleta={paliva.map((p) => ({ nazev: p.nazev, tecka: p.skok ? "bg-pozor" : "bg-klid", slovo: p.skok ? "neobvyklý pohyb" : "běžný pohyb" }))}>
+            <CenaPaliva vnoreny />
+          </MiniBox>
+        )}
+        <MiniBox nazev="Právě ověřujeme" ikona="otaznik" ton="pozor" souhrn={overovaneAktivni.length ? `${overovaneAktivni.length} ${overovaneAktivni.length === 1 ? "nepotvrzená zpráva" : overovaneAktivni.length < 5 ? "nepotvrzené zprávy" : "nepotvrzených zpráv"} · nevstupují do hodnocení` : "Právě nic neověřujeme"}>
+          {overovaneAktivni.length ? <SouhrnOverujeme aktivni={overovaneAktivni} ted={tedMs} vnoreny /> : <p className="px-4 py-3 text-male text-tlum2">Žádná zpráva zatím nečeká na ověření.</p>}
+        </MiniBox>
+        <MiniBox nazev="Tipy k přípravě" ikona="fajfka" ton="klid" souhrn={tipyNahled.length ? tipyNahled[0].nadpis : "Zatím bez tipu"}>
+          <TipyKPriprave ted={tedMs} vnoreny />
+        </MiniBox>
+      </div>
+
+      {/* Manipulace: karusel jako dřív. */}
+      {kampane.length > 0 && (
+        <div className="nalet mt-12 sm:mt-16">
+          <NadpisSekce
+            stitek="Manipulace"
+            ikona="bublina"
+            nadpis={t("Manipulace a útoky na občany")}
+            popis="Podvržené dokumenty, weby a profily vydávající se za někoho jiného."
+            akce={<Tlacitko kam="/manipulace/" varianta="obrys" velikost="s" ikonaVpravo="nahoru" trida="[&>svg:last-child]:rotate-90">{t("všechny rozbory")}</Tlacitko>}
+          />
+          <div className="pas-scroll pas-okraj -mx-4 flex snap-x snap-mandatory gap-3 overflow-x-auto px-4 pb-2 sm:mx-0 sm:px-0" role="list" aria-label={t("Manipulace a útoky na občany")}>
+            {kampane.slice(0, 8).map((k) => (
+              <div key={k.slug} role="listitem" className="w-[min(82vw,360px)] shrink-0 snap-start"><DlazdiceKampane k={k} nazvyZemi={nazvyZemi} /></div>
+            ))}
+          </div>
+        </div>
+      )}
+
+      {/* Zapojit se: tři dlaždice, hlášení, dvě otázky k hodnocení. */}
+      <div className="nalet mt-12 border-t border-linka pt-10 sm:mt-16 sm:pt-12">
+        <NadpisSekce stitek="Zapojit se" ikona="zvonek" nadpis={t("Jak se to dozvíte, aniž byste sem chodili")} popis={t("Kanály, čtečka nebo vlastní přehled. Nic z toho po vás nechce jméno ani e-mail.")} />
+        <TriTemata />
+        <div className="mt-6"><Nahlaseni /></div>
+        <div className="mt-6 grid gap-3 md:grid-cols-2">
+          <details className="group rounded-[22px] border border-linka2 bg-plocha">
+            <summary className="flex min-h-[44px] cursor-pointer items-center justify-between px-4 text-male font-semibold text-inkoust">Proč je hodnocení {d ? d.nazev.toLowerCase() : "takové"}<Ikona nazev="dolu" velikost={12} tah={2} trida="text-tlum2 transition-transform group-open:rotate-180" /></summary>
+            <p className="border-t border-linka2 px-4 py-3 text-male leading-relaxed text-tlum">{stav.shrnuti || "Bez zdůvodnění."} <Link href="/metodika/" className="odkaz">Metodika</Link></p>
+          </details>
+          <details className="group rounded-[22px] border border-linka2 bg-plocha">
+            <summary className="flex min-h-[44px] cursor-pointer items-center justify-between px-4 text-male font-semibold text-inkoust">Co by hodnocení zhoršilo<Ikona nazev="dolu" velikost={12} tah={2} trida="text-tlum2 transition-transform group-open:rotate-180" /></summary>
+            <ol className="space-y-1 border-t border-linka2 px-4 py-3 text-male leading-snug text-tlum">
+              {watchlist.eskalacni.map((e) => <li key={e.cislo} className="flex gap-2"><span className="cislice text-tlum2">{e.cislo}</span>{e.nazev}</li>)}
+            </ol>
+          </details>
+        </div>
+      </div>
+      </>
+      ) : (
+      <>
       {/* 2 — mřížka stavů + poslední události */}
       <div className="nalet mt-14 sm:mt-20">
         <NadpisSekce
@@ -792,6 +938,8 @@ export function Dashboard({
           </span>
         </div>
       </div>
+      </>
+      )}
     </div>
     </>
   );
