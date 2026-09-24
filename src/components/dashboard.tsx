@@ -555,7 +555,7 @@ export function Dashboard({
           </div>
           <div className="order-3 min-w-0 lg:order-none lg:col-start-1 lg:row-start-2"><AktualitySloupce zaznamy={vse} nepotvrzene={nepotvrzene} kandidati={kandidati} /></div>
           <div className="order-2 min-w-0 lg:order-none lg:col-start-2 lg:row-span-2 lg:row-start-1">
-          <SidebarUvodu stav={stav} cr={cr} crHistoricky={crHistoricky} crPocet={crPocet} obcane={obcane} pulz={pulz} priprava={priprava} vse={vse} kampane={kampane} kandidati={kandidati} zkontrolovano={overeno} ted={tedMs} />
+          <SidebarUvodu stav={stav} cr={cr} crHistoricky={crHistoricky} crPocet={crPocet} obcane={obcane} pulz={pulz} priprava={priprava} vse={vse} kampane={kampane} kandidati={kandidati} zkontrolovano={overeno} overovane={overovaneAktivni} ted={tedMs} />
           </div>
         </div>
       ) : (
@@ -618,7 +618,7 @@ export function Dashboard({
         karty nad budíky zabíraly celou obrazovku; tady je jeden řádek na
         zprávu a zbytek na rozkliknutí.
       */}
-      {overovaneAktivni.length > 0 && (
+      {!UVOD_V2 && overovaneAktivni.length > 0 && (
         <div className="mt-5 xl:max-w-[60%]"><SouhrnOverujeme aktivni={overovaneAktivni} ted={tedMs} /></div>
       )}
 
@@ -668,7 +668,7 @@ export function Dashboard({
       <div className="nalet mt-12 sm:mt-16">
         <NadpisSekce stitek="Sledujeme dál" ikona="oko" nadpis="Služby, ceny, ověřované zprávy a tipy" />
       </div>
-      <div className="grid gap-3 md:grid-cols-2 xl:grid-cols-4">
+      <div className="grid gap-3 md:grid-cols-3">
         <MiniBox nazev="Služby naživo" ikona="komunikace" souhrn={souhrnSluzeb.veta} paleta={SLUZBY.map((sl) => { const st = sluzby.stavy.find((x) => x.klic === sl.klic)?.stav ?? "nezjisteno"; return { nazev: sl.nazev, tecka: TECKA_SLUZBY[st], slovo: SLOVA_STAVU[st] }; })}>
           <StavSluzeb stavy={sluzby.stavy} kdy={sluzby.kdy} vnoreny />
         </MiniBox>
@@ -677,9 +677,6 @@ export function Dashboard({
             <CenaPaliva vnoreny />
           </MiniBox>
         )}
-        <MiniBox nazev="Právě ověřujeme" ikona="otaznik" ton="pozor" souhrn={overovaneAktivni.length ? `${overovaneAktivni.length} ${overovaneAktivni.length === 1 ? "nepotvrzená zpráva" : overovaneAktivni.length < 5 ? "nepotvrzené zprávy" : "nepotvrzených zpráv"} · nevstupují do hodnocení` : "Právě nic neověřujeme"}>
-          {overovaneAktivni.length ? <SouhrnOverujeme aktivni={overovaneAktivni} ted={tedMs} vnoreny /> : <p className="px-4 py-3 text-male text-tlum2">Žádná zpráva zatím nečeká na ověření.</p>}
-        </MiniBox>
         <MiniBox nazev="Tipy k přípravě" ikona="fajfka" ton="klid" souhrn={tipyNahled.length ? tipyNahled[0].nadpis : "Zatím bez tipu"}>
           <TipyKPriprave ted={tedMs} vnoreny />
         </MiniBox>

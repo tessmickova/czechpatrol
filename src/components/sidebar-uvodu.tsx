@@ -6,7 +6,7 @@ import { kdyZjisteno, type Zaznam } from "@/lib/agregace";
 import { NAZVY_HROZEB, type PripravitTed as DataPripravy } from "@/lib/priprava";
 import type { Pulz } from "@/lib/pulz";
 import { PASMA, UROVNE } from "@/lib/skala";
-import type { CelkovyStav, Kampan, Kandidat, Uroven } from "@/lib/typy";
+import type { CelkovyStav, Kampan, Kandidat, Overovana, Uroven } from "@/lib/typy";
 import { casPraha } from "@/lib/cas";
 import { useT } from "@/lib/i18n";
 import { BUY_ME_A_COFFEE_URL, HEROHERO_URL, KANALY } from "@/config/web";
@@ -15,6 +15,7 @@ import { ObloukovyMerak } from "./mericky";
 import { Cara, poDnech, Sloupky } from "./mikrograf";
 import { Tlacitko } from "./ui";
 import { stavNalehavosti } from "./urgentni";
+import { SouhrnOverujeme } from "./overujeme";
 import { HlavickaWidgetu } from "./widgety";
 import { Napoveda, VykladUrovne } from "./zaklad";
 import { ZnackaKanalu } from "./znacky";
@@ -48,9 +49,9 @@ function Maly({ nadpis, obdobi, uroven, slovo, neutralni, popis, dodatek, graf }
   );
 }
 
-export function SidebarUvodu({ stav, cr, crHistoricky, crPocet, obcane, pulz, priprava, vse, kampane, kandidati, zkontrolovano, ted }: {
+export function SidebarUvodu({ stav, cr, crHistoricky, crPocet, obcane, pulz, priprava, vse, kampane, kandidati, zkontrolovano, overovane = [], ted }: {
   stav: CelkovyStav; cr: Uroven | null; crHistoricky: Uroven | null; crPocet: { pripadu: number; kampani: number }; obcane: StavObcanu;
-  pulz?: Pulz; priprava?: DataPripravy; vse: Zaznam[]; kampane: Kampan[]; kandidati: Kandidat[]; zkontrolovano: string | null; ted: number;
+  pulz?: Pulz; priprava?: DataPripravy; vse: Zaznam[]; kampane: Kampan[]; kandidati: Kandidat[]; zkontrolovano: string | null; overovane?: Overovana[]; ted: number;
 }) {
   /* Naléhavé zprávy chytá sběr, tak se čerstvost měří jeho posledním průchodem, ne ručním ověřením. */
   const kontrola = pulz?.kdy ?? zkontrolovano;
@@ -71,16 +72,34 @@ export function SidebarUvodu({ stav, cr, crHistoricky, crPocet, obcane, pulz, pr
 
   return (
     <aside aria-label="Stav a příprava" className="space-y-4">
-      {/* Podpora a odběr — první, podle zadání 24. 9. 2026 */}
-      <section className="overflow-hidden rounded-[22px] bg-plocha">
-        <HlavickaWidgetu ikona="srdce" nazev="Podpořit a sledovat" ton="neutral" />
-        <div className="flex flex-wrap gap-2 px-4 py-3">
-          {KANALY.telegram && <Tlacitko kam={KANALY.telegram} nove varianta="obrys" velikost="s"><ZnackaKanalu znacka="telegram" velikost={16} /> Telegram</Tlacitko>}
-          {BUY_ME_A_COFFEE_URL && <Tlacitko kam={BUY_ME_A_COFFEE_URL} nove varianta="obrys" velikost="s" ikona="kava">Buy me a coffee</Tlacitko>}
-          {HEROHERO_URL && <Tlacitko kam={HEROHERO_URL} nove varianta="obrys" velikost="s" ikona="srdce">Herohero</Tlacitko>}
-          {!podpora && <Tlacitko kam="/podporit/" varianta="obrys" velikost="s" ikona="kava">Podpořit provoz</Tlacitko>}
+      {/* Podpora a odběr — první, bez rámečku, zarovnané s kartami pod tím (24. 9. 2026). */}
+      <div className="flex flex-wrap items-center gap-2 px-1">
+        {KANALY.telegram && <Tlacitko kam={KANALY.telegram} nove varianta="obrys" velikost="s"><ZnackaKanalu znacka="telegram" velikost={16} /> Telegram</Tlacitko>}
+        {BUY_ME_A_COFFEE_URL && <Tlacitko kam={BUY_ME_A_COFFEE_URL} nove varianta="obrys" velikost="s" ikona="kava">Buy me a coffee</Tlacitko>}
+        {HEROHERO_URL && <Tlacitko kam={HEROHERO_URL} nove varianta="obrys" velikost="s" ikona="srdce">Herohero</Tlacitko>}
+        {!podpora && <Tlacitko kam="/podporit/" varianta="obrys" velikost="s" ikona="kava">Podpořit provoz</Tlacitko>}
+      </div>
+
+      {/* Souhrn situace — jediná karta s barevným rámečkem: barva odpovídá na „děje se něco?“ */}
+      <section role="status" aria-label="Souhrn situace" className={`overflow-hidden rounded-[22px] border ${nal.ton === "deje" ? "border-akcent/70 bg-akcent/[0.05]" : nal.ton === "klid" ? "border-klid/60 bg-klid/[0.05]" : "border-linka bg-plocha2/40"}`}>
+        <HlavickaWidgetu ikona="info" nazev="Souhrn situace" ton={nal.ton === "deje" ? "akcent" : nal.ton === "klid" ? "klid" : "neutral"} meta={kontrola ? <span className="cislice">čteno {casPraha(kontrola)}</span> : undefined} />
+        <div className="px-4 py-3">
+          <p className="flex items-start gap-2 text-male font-semibold leading-snug text-inkoust">
+            <span aria-hidden className={`mt-[6px] h-[7px] w-[7px] shrink-0 rounded-full ${nal.ton === "deje" ? "bg-akcent" : nal.ton === "klid" ? "bg-klid" : "bg-tlum2"}`} />
+            <span>{nal.text}{nal.dodatek && <span className="block text-mikro font-normal text-tlum2">{nal.dodatek}</span>}</span>
+          </p>
+          {pulz && <p className="cislice mt-2 text-mikro text-tlum2">24 h: {pulz.zachyceno24} zachyceno · {pulz.overeno24} ověřeno{pulz.zdrojuCelkem ? ` · ${pulz.zdrojuOk}/${pulz.zdrojuCelkem} zdrojů` : ""}</p>}
         </div>
       </section>
+
+      {/* Právě ověřujeme — nejaktuálnější hrozby v hodnocení, hned pod souhrnem. */}
+      {overovane.length > 0 && (
+        <section className="overflow-hidden rounded-[22px] border border-dashed border-jantar/55 bg-jantar/[0.06]">
+          <HlavickaWidgetu ikona="otaznik" ton="pozor" nazev="Právě ověřujeme" meta={<span>{overovane.length} · nevstupují do hodnocení</span>} />
+          <SouhrnOverujeme aktivni={overovane} ted={ted} vnoreny />
+        </section>
+      )}
+
       {/* Situace teď */}
       <section className="overflow-hidden rounded-[22px] bg-plocha">
         <HlavickaWidgetu ikona="radar" nazev="Situace teď" meta={<span className="cislice">{soucet(14)} {sklon(soucet(14), "případ", "případy", "případů")} za 14 dní</span>} />
@@ -115,18 +134,6 @@ export function SidebarUvodu({ stav, cr, crHistoricky, crPocet, obcane, pulz, pr
             ))}
           </div>
           <p className="mt-2 px-1 text-mikro text-tlum2">Případy a operace proti občanům v Evropě. <Link href="/metodika/" className="odkaz">Jak se hodnotí</Link>.</p>
-        </div>
-      </section>
-
-      {/* Souhrn situace — jediná karta s barevným rámečkem: barva odpovídá na „děje se něco?“ */}
-      <section role="status" aria-label="Souhrn situace" className={`overflow-hidden rounded-[22px] border ${nal.ton === "deje" ? "border-akcent/70 bg-akcent/[0.05]" : nal.ton === "klid" ? "border-klid/60 bg-klid/[0.05]" : "border-linka bg-plocha2/40"}`}>
-        <HlavickaWidgetu ikona="info" nazev="Souhrn situace" ton={nal.ton === "deje" ? "akcent" : nal.ton === "klid" ? "klid" : "neutral"} meta={kontrola ? <span className="cislice">čteno {casPraha(kontrola)}</span> : undefined} />
-        <div className="px-4 py-3">
-          <p className="flex items-start gap-2 text-male font-semibold leading-snug text-inkoust">
-            <span aria-hidden className={`mt-[6px] h-[7px] w-[7px] shrink-0 rounded-full ${nal.ton === "deje" ? "bg-akcent" : nal.ton === "klid" ? "bg-klid" : "bg-tlum2"}`} />
-            <span>{nal.text}{nal.dodatek && <span className="block text-mikro font-normal text-tlum2">{nal.dodatek}</span>}</span>
-          </p>
-          {pulz && <p className="cislice mt-2 text-mikro text-tlum2">24 h: {pulz.zachyceno24} zachyceno · {pulz.overeno24} ověřeno{pulz.zdrojuCelkem ? ` · ${pulz.zdrojuOk}/${pulz.zdrojuCelkem} zdrojů` : ""}</p>}
         </div>
       </section>
 
