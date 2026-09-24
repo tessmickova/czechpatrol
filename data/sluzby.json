@@ -1,11 +1,16 @@
 {
-  "aktualizovano": "2026-09-24T15:03:02.676Z",
+  "aktualizovano": "2026-09-24T16:03:21.442Z",
   "stavy": [
     {
       "klic": "cloudflare",
       "stav": "omezeni",
       "popis": "Minor Service Outage",
       "incidenty": [
+        {
+          "nazev": "Cloudflare Access updates delayed",
+          "odkaz": "https://www.cloudflarestatus.com/incidents/xbgbb80yw0jh",
+          "aktualizovano": "2026-09-24T15:31:57.000Z"
+        },
         {
           "nazev": "Network Performance Degradation — Asia-Pacific",
           "odkaz": "https://www.cloudflarestatus.com/incidents/8wmvkv5jkf15",
@@ -15,29 +20,33 @@
           "nazev": "Cloudflare One Clients are incorrectly challenged on some sites",
           "odkaz": "https://www.cloudflarestatus.com/incidents/tl0vrgjy99r0",
           "aktualizovano": "2026-09-23T11:02:41.000Z"
-        },
-        {
-          "nazev": "Incorrect geo location for some Cloudflare WARP users",
-          "odkaz": "https://www.cloudflarestatus.com/incidents/9g65dxfbcjln",
-          "aktualizovano": "2026-09-01T08:29:56.000Z"
         }
       ],
       "postizene": [
         "Cloudflare Sites and Services",
+        "Accra, Ghana - (ACC)",
         "Africa",
-        "Arica, Chile - (ARI)",
-        "Algiers, Algeria - (ALG)"
+        "Access"
       ],
-      "zkontrolovano": "2026-09-24T15:03:02.676Z",
+      "zkontrolovano": "2026-09-24T16:03:21.442Z",
       "chyba": null
     },
     {
       "klic": "zoom",
-      "stav": "provoz",
-      "popis": "All Systems Operational",
-      "incidenty": [],
-      "postizene": [],
-      "zkontrolovano": "2026-09-24T15:03:02.676Z",
+      "stav": "omezeni",
+      "popis": "Partially Degraded Service",
+      "incidenty": [
+        {
+          "nazev": "Service Degradation Affecting Live Transcription Services.",
+          "odkaz": "https://stspg.io/m8bvpzdcvcjd",
+          "aktualizovano": "2026-09-24T08:47:39.986-07:00"
+        }
+      ],
+      "postizene": [
+        "Live Transcription",
+        "Zoom Meetings"
+      ],
+      "zkontrolovano": "2026-09-24T16:03:21.442Z",
       "chyba": null
     },
     {
@@ -46,7 +55,7 @@
       "popis": "All Systems Operational",
       "incidenty": [],
       "postizene": [],
-      "zkontrolovano": "2026-09-24T15:03:02.676Z",
+      "zkontrolovano": "2026-09-24T16:03:21.442Z",
       "chyba": null
     }
   ]
