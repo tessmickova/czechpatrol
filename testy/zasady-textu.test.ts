@@ -26,6 +26,7 @@ describe("zásady textu", () => {
     expect(jeJenProjev("Prezident vyhlásil nouzový stav, uvedl úřad vlády")).toBe(false);
     expect(jeJenProjev("Litva uzavřela hranici s Běloruskem")).toBe(false);
     expect(jeJenProjev("Polish PM said the government banned drone flights near the border")).toBe(false);
+    expect(jeJenProjev("Bavme se o bezpečnostní situaci v Evropě, žádá Rakušan Babiše, ať svolá strany")).toBe(true);
     expect(jeJenProjev("")).toBe(false);
   });
 });

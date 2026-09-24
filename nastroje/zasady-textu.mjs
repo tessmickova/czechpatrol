@@ -59,7 +59,8 @@ const SLOVESA_RECI = [
   "řekl", "řekla", "uvedl", "uvedla", "prohlásil", "prohlásila", "připomněl", "připomněla", "vyzval", "vyzvala",
   "varoval", "varovala", "apeloval", "kritizoval", "míní", "tvrdí", "podle prezidenta", "podle premiéra", "podle ministra",
   "v projevu", "v rozhovoru", "na valném shromáždění", "v osn", "v komentáři", "označil", "zdůraznil", "vzkázal", "sdělil",
-  "said", "says", "urged", "warned", "called on", "told", "stated", "in speech", "remarks", "slammed", "blasted", "criticized", "criticised",
+  "žádá", "žádal", "žádala", "vyzývá", "apeluje", "navrhuje", "chce, aby", "vzkazuje", "míní, že", "komentoval", "reagoval", "reaguje",
+  "said", "says", "urged", "warned", "called on", "calls on", "calls for", "demands", "told", "stated", "in speech", "remarks", "slammed", "blasted", "criticized", "criticised", "reacts",
 ];
 const SLOVESA_CINU = [
   "vyhlásil", "vyhlásila", "vyhlášen", "schválil", "schválila", "schválen", "rozhodl", "rozhodla", "rozhodnut", "zavedl", "zavedla", "zaveden",

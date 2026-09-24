@@ -163,7 +163,12 @@ export function AktualitySloupce({ zaznamy, nepotvrzene = [], kandidati = [], te
   const neoverene: Radek[] = [
     ...zaznamy.filter((z) => z.overeni === "neovereno").map((z) => zZaznamu(z, `u-${z.slug}`, `/incident/${z.slug}/`, "jen média", "bg-jantar")),
     ...nepotvrzene.map((z) => zZaznamu(z, `n-${z.id}`, `/nepotvrzeno/${z.id}/`, "nepotvrzeno", "bg-jantar")),
-    ...kandidati.filter((k) => jeCesky(k.titulek) && !jeJenProjev(k.titulek)).map((k): Radek => ({
+    /*
+      Údery uvnitř Ukrajiny a Ruska bez doloženého následku pro sledované
+      země jsou mimo rozsah (CLAUDE.md, rozsah války); na úvod jdou jen
+      naléhavé. Zbytek posoudí ověřovatel ve frontě.
+    */
+    ...kandidati.filter((k) => jeCesky(k.titulek) && !jeJenProjev(k.titulek) && (k.naliehave || (k.kodZeme !== "UA" && k.kodZeme !== "RU"))).map((k): Radek => ({
       klic: `k-${k.id}`, kam: k.zdroj.url, ven: true, kodZeme: k.kodZeme, zeme: k.zeme, kdy: k.publikovano, titulek: k.titulek, stitek: "zachyceno", pruh: "bg-tlum2",
       zavaznost: null, jistota: null, kategorie: k.kategorie.map((c) => KATEGORIE[c as Kategorie]?.nazev ?? c), text: k.shrnuti || null, textPopis: "Zachyceno", zdroj: { nazev: k.zdroj.nazev, url: k.zdroj.url },
     })),
