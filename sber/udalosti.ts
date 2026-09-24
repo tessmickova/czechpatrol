@@ -169,6 +169,21 @@ const AKTY: { kategorie: string; slova: string[] }[] = [
     zveřejnění: kandidát jde do fronty a člověk rozhodne. Takový záznam patří
     do druhu „opatreni“, ne „pripad“, aby nenafukoval počty incidentů.
   */
+  /*
+    Varování před KONKRÉTNÍMI útoky (rozhodnutí provozovatelky 24. 9. 2026).
+    Zpráva „Rusko připravuje útoky drony z kontejnerů na lodích proti
+    státům ve Středomoří“ (El Mundo podle amerických služeb, Novinky)
+    spadla jako „bez-skutku“, protože příprava není čin. Jenže varování
+    státu, tajné služby nebo úřadu před konkrétním útokem je pro čtenáře
+    to podstatné — zachytí se a člověk rozhodne. Obecné řeči („hrozba
+    roste“) sem nepatří: slova níž chtějí útok a přípravu, ne náladu.
+  */
+  { kategorie: "hybridni", slova: [
+    "pripravuje utok", "pripravuje utoky", "pripravuje nove utoky", "planuje utok", "planuje utoky", "chysta utok", "chysta utoky",
+    "preparing attack", "preparing attacks", "preparing new attacks", "plans attack", "plans attacks", "planning attack", "planning attacks",
+    "plotting attack", "plotting attacks", "plot to attack", "warned of attack", "warns of attack", "warning of attack", "intelligence warns",
+    "varovaly pred utok", "varovala pred utok", "varoval pred utok", "varuje pred utok", "tajne sluzby varuj",
+  ] },
   { kategorie: "drony", slova: [
     "scrambl", "preventivni vzlet",
     "uzavrel vzdusny prostor", "uzavreni vzdusneho prostoru", "uzavrela vzdusny prostor",

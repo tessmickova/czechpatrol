@@ -398,4 +398,10 @@ describe("omezení pohybu u hranice", () => {
   it("zákaz vycházení u hranice česky", () => {
     expect(duvodOdmitnuti("Rusko zavedlo zákaz vycházení v okresech u hranice s Estonskem")).toBeNull();
   });
+
+  it("varování před konkrétním útokem je skutek, obecná nálada ne (24. 9. 2026)", () => {
+    expect(relevantni("Rusko připravuje útoky na tři středomořské státy. Použijí drony ukryté v kontejneru na lodi, píše španělský list")).toBe(true);
+    expect(relevantni("US intelligence warns Russia is preparing drone attacks on Mediterranean states from container ships")).toBe(true);
+    expect(relevantni("Hrozba ze strany Ruska podle analytiků roste")).toBe(false);
+  });
 });
