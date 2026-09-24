@@ -1,5 +1,4 @@
-import fs from "node:fs";
-import path from "node:path";
+import posledniBeh from "../../data/fronta/posledni-beh.json";
 import { incidenty, kandidati } from "./data";
 
 /*
@@ -24,10 +23,7 @@ export interface Pulz {
 
 export function pulz(ted = Date.now()): Pulz {
   const od = ted - 86_400_000;
-  let beh: { kdy?: string; zdroje?: { klic: string; ok: boolean; stav?: number | null }[] } = {};
-  try {
-    beh = JSON.parse(fs.readFileSync(path.join(process.cwd(), "data", "fronta", "posledni-beh.json"), "utf-8"));
-  } catch { /* bez záznamu o běhu se ukáže jen to, co víme z dat */ }
+  const beh = posledniBeh as { kdy?: string; zdroje?: { klic: string; ok: boolean; stav?: number | null }[] };
   const zdroje = (beh.zdroje ?? []).map((z) => ({ klic: z.klic, ok: Boolean(z.ok), stav: z.stav ?? null }));
   return {
     kdy: beh.kdy ?? null,
