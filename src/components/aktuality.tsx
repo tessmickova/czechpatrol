@@ -1,8 +1,10 @@
 "use client";
 
+import { HlavickaWidgetu } from "./widgety";
 import Link from "next/link";
 import { datumPraha } from "@/lib/cas";
 import { jistotaZobrazena, kdyZjisteno, type Zaznam } from "@/lib/agregace";
+import { jeCesky } from "@/lib/jazyk";
 import { PUVODCI } from "@/lib/kategorie";
 import { JISTOTY, PASMA, UROVNE } from "@/lib/skala";
 import type { Kandidat } from "@/lib/typy";
@@ -157,8 +159,8 @@ function kratkeDatum(iso: string): string {
 
 function SloupecKdy({ kdy, zeme, kodZeme }: { kdy: string | null; zeme: string | null; kodZeme: string | null }) {
   return (
-    <span className="flex w-[34px] shrink-0 flex-col items-center gap-[3px] pt-[2px]">
-      <span className="cislice whitespace-nowrap text-[10px] leading-none text-tlum2" title={kdy ? datumPraha(kdy) : "bez data"}>
+    <span className="flex w-[40px] shrink-0 flex-col items-center gap-[3px] pt-[2px]">
+      <span className="cislice whitespace-nowrap text-mikro leading-none text-tlum2" title={kdy ? datumPraha(kdy) : "bez data"}>
         {kdy ? kratkeDatum(kdy) : "—"}
       </span>
       <span className="h-[14px] leading-none" title={zeme ?? undefined} aria-label={zeme ?? undefined}>
@@ -230,7 +232,12 @@ export function Aktuality({
         poznamka: "Zpracováno, zatím bez potvrzení. Do počtů nevstupuje. Klepnutím se otevře i se zdroji.",
       },
     })),
-    ...kandidati.map((k): Neoverene => ({
+    /*
+      Jen česky psané zachycené zprávy (revize 24. 9. 2026). Anglický titulek
+      v českém sloupci působil jako nedodělek a čtenář bez angličtiny ho
+      přeskočil. Cizojazyčné se jen spočítají a vedou do fronty.
+    */
+    ...kandidati.filter((k) => jeCesky(k.titulek)).map((k): Neoverene => ({
       klic: `k-${k.id}`,
       kodZeme: k.kodZeme,
       zeme: k.zeme,
@@ -252,25 +259,17 @@ export function Aktuality({
     a místo po nich zaplní další ověřené záznamy (rozhodnutí 23. 9. 2026).
   */
   const posledni = overeneVse.slice(0, neoverene.length ? overenych : overenych + neoverenych);
+  const cizojazycnych = kandidati.filter((k) => !jeCesky(k.titulek)).length;
 
   const { nahled, kde, ukaz, skryj, pohyb } = useNahled();
 
   return (
     <aside
       aria-labelledby="aktuality-nadpis"
-      className="relative flex h-full flex-col overflow-hidden rounded-[28px] border border-linka2 bg-plocha"
+      className="relative flex h-full flex-col overflow-hidden rounded-[22px] bg-plocha"
       onPointerLeave={skryj}
     >
-      {/*
-        Hlavička stejná jako v úvodu vedle: červená tečka a štítek. Barva je
-        značka, ne plocha — jedna tečka do 8 px, nic víc (docs/ZNACKA.md).
-      */}
-      <div className="flex items-center gap-2 border-b border-linka2 px-4 py-3">
-        <span aria-hidden className="grid h-[18px] w-[18px] shrink-0 place-items-center rounded-full border border-akcent/50">
-          <span className="h-[6px] w-[6px] rounded-full bg-akcent" />
-        </span>
-        <h2 id="aktuality-nadpis" className="stitek">Aktuality</h2>
-      </div>
+      <HlavickaWidgetu ikona="radar" nazev="Aktuality" id="aktuality-nadpis" jako="h2" meta={<span className="cislice">{posledni.length} ověřených{neoverene.length ? ` · ${neoverene.length} neověřených` : ""}</span>} />
 
       {/*
         Pojistka pro dny, kdy je zachyceného víc: zkrátí se seznam, ne patička.
@@ -278,7 +277,7 @@ export function Aktuality({
         vypadl ze zaobleného rámu pryč.
       */}
       <div className="flex min-h-0 flex-1 flex-col overflow-hidden">
-      <ul className="divide-y divide-linka2">
+      <ul>
         {posledni.map((z) => {
           const t = PASMA[UROVNE[z.zavaznost].pasmo];
           const nahledZ = nahledZaznamu(z);
@@ -335,7 +334,7 @@ export function Aktuality({
           <Otaznik label="Co znamená neověřeno" popis={<span className="block">Zpracované, ale nepotvrzené záznamy a zprávy zachycené sběrem. Do počtů ani do hodnocení nevstupují.</span>} />
         </div>
       </div>
-        <ul className="divide-y divide-linka2">
+        <ul>
           {neoverene.map((r) => {
             const trida = "flex items-start gap-2.5 px-4 py-2 hover:bg-plocha2";
             const telo = (
@@ -367,6 +366,11 @@ export function Aktuality({
         </ul>
       </>
       )}
+      {cizojazycnych > 0 && (
+        <Link href="/udalosti/?tab=cekajici" className="block px-4 py-2 text-drobne text-tlum2 hover:bg-plocha2 hover:text-tlum">
+          + {cizojazycnych} {cizojazycnych === 1 ? "zachycená zpráva v cizím jazyce" : cizojazycnych < 5 ? "zachycené zprávy v cizím jazyce" : "zachycených zpráv v cizím jazyce"} ve frontě →
+        </Link>
+      )}
       </div>
 
       <PanelNahledu nahled={nahled} kde={kde} />
@@ -376,7 +380,7 @@ export function Aktuality({
         na úvodní straně — podruhé totéž, co je tady a v Událostech. Tlačítko
         ho nahrazuje.
       */}
-      <div className="mt-auto border-t border-linka2 px-4 py-2.5">
+      <div className="mt-auto px-4 py-2.5">
         {/*
           Plná červená, stejná jako „Odebírat na Telegramu": je to jediná
           cesta k archivu z úvodu a úvod sám žádné tlačítko na záznamy nemá.

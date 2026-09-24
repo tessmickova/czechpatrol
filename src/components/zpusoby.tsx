@@ -60,7 +60,7 @@ function Radek({ z }: { z: ZpusobVUziti }) {
   const ton = z.stav === "prave-probiha" ? "vazne" : z.stav === "aktivni" ? "pozor" : "neutral";
 
   return (
-    <li className="grid gap-3 border-b border-linka2 px-4 py-4 last:border-b-0 sm:grid-cols-[minmax(0,1fr)_auto] sm:px-5">
+    <li className="grid gap-3 px-4 py-4 last:border-b-0 sm:grid-cols-[minmax(0,1fr)_auto] sm:px-5">
       <div className="min-w-0">
         <div className="flex flex-wrap items-center gap-x-2.5 gap-y-1.5">
           <span className="text-zaklad font-semibold text-inkoust">{z.nazev}</span>
@@ -129,7 +129,7 @@ export function ZpusobyVUziti() {
         Záznam toho, co se stalo — ne odhad, co přijde. Vysoké číslo znamená jen, že se ten způsob hodně používal.
       </Sdeleni>
 
-      <ol className="mt-5 overflow-hidden rounded-[22px] border border-linka2 bg-plocha">
+      <ol className="mt-5 overflow-hidden rounded-[22px] bg-plocha">
         {radky.map((z) => (
           <Radek key={z.klic} z={z} />
         ))}

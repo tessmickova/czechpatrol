@@ -117,7 +117,7 @@ export function KartaUdalosti({
           <summary
             className={`flex items-center justify-between border-t ${t.ramecek} px-5 py-3.5 pl-6 text-male font-medium transition-colors hover:bg-inkoust/[0.03]`}
           >
-            <span>Fakta, zdroje a co nevíme</span>
+            <span>Fakta, zdroje a co není potvrzeno</span>
             <Ikona nazev="dolu" velikost={14} tah={1.8} trida="transition-transform group-open/d:rotate-180" />
           </summary>
           <div className={`border-t ${t.ramecek} px-5 pb-6 pl-6 pt-5`}>
@@ -144,7 +144,7 @@ export function ObsahUdalosti({ incident }: { incident: Incident }) {
         </ul>
       </Blok>
 
-      <Blok typ="nepotvrzeno" nadpis="Co nevíme">
+      <Blok typ="nepotvrzeno" nadpis="Co není potvrzeno">
         <ul className="space-y-2.5">
           {incident.neznameho.map((f, i) => (
             <li key={i} className="flex gap-3 text-zaklad leading-relaxed text-tlum">

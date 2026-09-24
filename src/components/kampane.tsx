@@ -80,7 +80,7 @@ function StitekJistoty({ otazka, odpoved, jistota, duvod }: { otazka: string; od
 function Cast({ nadpis, popis, ikona, body }: { nadpis: string; popis: string; ikona: NazevIkony; body: string[] }) {
   if (!body.length) return null;
   return (
-    <section className="border-t border-linka2 pt-4">
+    <section className="pt-4">
       <h4 className="flex items-center gap-2 text-zaklad font-bold text-inkoust">
         <span className="grid h-7 w-7 shrink-0 place-items-center rounded-full bg-plocha2 text-akcent"><Ikona nazev={ikona} velikost={14} tah={1.9} /></span>
         {nadpis}
@@ -138,8 +138,8 @@ export function MetodyKampane({ metody, odkazovat = true }: { metody: string[]; 
 
 export function KartaKampane({ k, nazvyZemi }: { k: Kampan; nazvyZemi: Record<string, string> }) {
   return (
-    <article id={k.slug} className="scroll-mt-[84px] overflow-hidden rounded-[28px] border border-linka2 bg-plocha">
-      <header className="border-b border-linka2 p-5 sm:p-6">
+    <article id={k.slug} className="scroll-mt-[84px] overflow-hidden rounded-[28px] bg-plocha">
+      <header className="p-5 sm:p-6">
         <div className="flex flex-wrap items-center gap-x-3 gap-y-1.5 text-drobne text-tlum">
           <span className="flex items-center gap-1.5">
             {k.kodyZemi.map((kod) => <Vlajka key={kod} kod={kod} />)}
@@ -163,7 +163,7 @@ export function KartaKampane({ k, nazvyZemi }: { k: Kampan; nazvyZemi: Record<st
       </header>
 
       {/* Použité metody — hned pod hlavičkou, protože podle nich se porovnává. */}
-      <div className="border-b border-linka2 p-5 sm:p-6">
+      <div className="p-5 sm:p-6">
         <h4 className="flex items-center gap-2 text-zaklad font-bold text-inkoust">
           <span className="grid h-7 w-7 shrink-0 place-items-center rounded-full bg-plocha2 text-akcent"><Ikona nazev="zebrik" velikost={14} tah={1.9} /></span>
           Jakými způsoby
@@ -171,31 +171,9 @@ export function KartaKampane({ k, nazvyZemi }: { k: Kampan; nazvyZemi: Record<st
         <MetodyKampane metody={k.metody} />
       </div>
 
-      {/* Koho to zasáhlo nebo čí jméno bylo zneužito. */}
-      {k.zasazeni.length > 0 && (
-        <div className="border-b border-linka2 p-5 sm:p-6">
-          <h4 className="flex items-center gap-2 text-zaklad font-bold text-inkoust">
-            <span className="grid h-7 w-7 shrink-0 place-items-center rounded-full bg-plocha2 text-akcent"><Ikona nazev="terc" velikost={14} tah={1.9} /></span>
-            Kdo byl zasažen nebo zneužit
-          </h4>
-          <ul className="mt-2.5 grid gap-2 sm:grid-cols-2 sm:pl-9">
-            {k.zasazeni.map((z) => (
-              <li key={z.nazev} className="rounded-[18px] border border-linka2 bg-plocha2 px-3.5 py-3">
-                <span className="flex items-center gap-2">
-                  <span className="grid h-6 w-6 shrink-0 place-items-center rounded-full bg-plocha text-tlum2"><Ikona nazev={DRUH_SUBJEKTU[z.druh].ikona} velikost={12} tah={1.9} /></span>
-                  <span className="text-zaklad font-bold leading-tight text-inkoust">{z.nazev}</span>
-                  <Odznak ton="neutral" trida="ml-auto">{DRUH_SUBJEKTU[z.druh].nazev}</Odznak>
-                </span>
-                <span className="mt-1.5 block text-male leading-relaxed text-tlum">{z.jak}</span>
-              </li>
-            ))}
-          </ul>
-        </div>
-      )}
-
       {/* Dva štítky, dvě nezávislé otázky. Vedle sebe schválně; že spolu nesouvisí, říká puntík. */}
-      <div className="border-b border-linka2 p-5 sm:p-6">
-        <div className="mb-2 flex items-center gap-1.5"><span className="stitek">Dvě otázky zvlášť</span><Otaznik popis={<span className="block">Obě odpovědi jsou na sobě nezávislé. Že je něco prokazatelně podvrh, samo o sobě neříká nic o tom, kdo ho vyrobil.</span>} /></div>
+      <div className="p-5 sm:p-6">
+        <div className="mb-2 flex items-center gap-1.5"><span className="nadpis-boxu">Dvě otázky zvlášť</span><Otaznik popis={<span className="block">Obě odpovědi jsou na sobě nezávislé. Že je něco prokazatelně podvrh, samo o sobě neříká nic o tom, kdo ho vyrobil.</span>} /></div>
         <div className="grid gap-2.5 sm:grid-cols-2">
           <StitekJistoty
             otazka="Je zásah doložený?"
@@ -212,12 +190,50 @@ export function KartaKampane({ k, nazvyZemi }: { k: Kampan; nazvyZemi: Record<st
         </div>
       </div>
 
+      {/*
+        Celý rozbor na rozkliknutí (revize 24. 9. 2026). Stránka Manipulace
+        měla na mobilu 24 700 px, protože každá kampaň stála rozbalená
+        v šesti částech. Nahoře zůstává, co potřebuje čtenář k rozhodnutí:
+        kdo, kdy, jak, a dvě odpovědi. Zbytek je pod „Celý rozbor“.
+      */}
+      <details className="group">
+        <summary className="flex min-h-[52px] cursor-pointer list-none items-center justify-between gap-3 px-5 py-3 text-zaklad font-bold text-inkoust hover:bg-plocha2 sm:px-6">
+          <span className="flex items-center gap-2">
+            <span className="grid h-7 w-7 shrink-0 place-items-center rounded-full bg-plocha2 text-akcent"><Ikona nazev="dokument" velikost={14} tah={1.9} /></span>
+            Celý rozbor v šesti částech
+            <span className="cislice text-drobne font-normal text-tlum2">· zdroje {k.zdroje.length}</span>
+          </span>
+          <Ikona nazev="dolu" velikost={13} tah={2} trida="shrink-0 text-tlum2 transition-transform group-open:rotate-180" />
+        </summary>
+        <div className="contents">
+      {/* Koho to zasáhlo nebo čí jméno bylo zneužito. */}
+      {k.zasazeni.length > 0 && (
+        <div className="p-5 sm:p-6">
+          <h4 className="flex items-center gap-2 text-zaklad font-bold text-inkoust">
+            <span className="grid h-7 w-7 shrink-0 place-items-center rounded-full bg-plocha2 text-akcent"><Ikona nazev="terc" velikost={14} tah={1.9} /></span>
+            Kdo byl zasažen nebo zneužit
+          </h4>
+          <ul className="mt-2.5 grid gap-2 sm:grid-cols-2 sm:pl-9">
+            {k.zasazeni.map((z) => (
+              <li key={z.nazev} className="rounded-[18px] bg-plocha2 px-3.5 py-3">
+                <span className="flex items-center gap-2">
+                  <span className="grid h-6 w-6 shrink-0 place-items-center rounded-full bg-plocha text-tlum2"><Ikona nazev={DRUH_SUBJEKTU[z.druh].ikona} velikost={12} tah={1.9} /></span>
+                  <span className="text-zaklad font-bold leading-tight text-inkoust">{z.nazev}</span>
+                  <Odznak ton="neutral" trida="ml-auto">{DRUH_SUBJEKTU[z.druh].nazev}</Odznak>
+                </span>
+                <span className="mt-1.5 block text-male leading-relaxed text-tlum">{z.jak}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+      )}
+
       <div className="space-y-4 p-5 sm:p-6">
         {CASTI.slice(0, 4).map((c) => (
           <Cast key={c.nadpis} nadpis={c.nadpis} popis={c.popis} ikona={c.ikona} body={k[c.klic] as string[]} />
         ))}
 
-        <section className="border-t border-linka2 pt-4">
+        <section className="pt-4">
           <h4 className="flex items-center gap-2 text-zaklad font-bold text-inkoust">
             <span className="grid h-7 w-7 shrink-0 place-items-center rounded-full bg-plocha2 text-akcent"><Ikona nazev="terc" velikost={14} tah={1.9} /></span>
             Čemu to mělo posloužit
@@ -228,7 +244,7 @@ export function KartaKampane({ k, nazvyZemi }: { k: Kampan; nazvyZemi: Record<st
 
         <Cast nadpis={CASTI[4].nadpis} popis={CASTI[4].popis} ikona={CASTI[4].ikona} body={k.coByPotvrdilo} />
 
-        <section className="border-t border-linka2 pt-4">
+        <section className="pt-4">
           <h4 className="flex items-center gap-2 text-zaklad font-bold text-inkoust">
             <span className="grid h-7 w-7 shrink-0 place-items-center rounded-full bg-plocha2 text-akcent"><Ikona nazev="dokument" velikost={14} tah={1.9} /></span>
             Zdroje ({k.zdroje.length})
@@ -239,6 +255,8 @@ export function KartaKampane({ k, nazvyZemi }: { k: Kampan; nazvyZemi: Record<st
           <div className="mt-2.5 sm:pl-9"><SeznamZdroju zdroje={k.zdroje} /></div>
         </section>
       </div>
+        </div>
+      </details>
     </article>
   );
 }
@@ -248,7 +266,7 @@ export function DlazdiceKampane({ k, nazvyZemi, siroka = false }: { k: Kampan; n
   return (
     <Link
       href={`/manipulace/#${k.slug}`}
-      className={`flex h-full flex-col gap-3 rounded-[22px] border border-linka2 bg-plocha p-5 transition-colors hover:border-akcent ${siroka ? "sm:grid sm:grid-cols-[minmax(0,1.6fr)_minmax(0,1fr)] sm:items-center sm:gap-x-8 sm:p-6" : ""}`}
+      className={`flex h-full flex-col gap-3 rounded-[22px] bg-plocha p-5 transition-colors hover:border-akcent ${siroka ? "sm:grid sm:grid-cols-[minmax(0,1.6fr)_minmax(0,1fr)] sm:items-center sm:gap-x-8 sm:p-6" : ""}`}
     >
       <span className={`flex flex-wrap items-center gap-x-2.5 gap-y-1 text-drobne text-tlum ${siroka ? "sm:col-start-1" : ""}`}>
         {k.kodyZemi.map((kod) => <Vlajka key={kod} kod={kod} />)}
@@ -269,7 +287,7 @@ export function DlazdiceKampane({ k, nazvyZemi, siroka = false }: { k: Kampan; n
           výstraze, ne výčtu použitých postupů.
         */}
         {k.metody.filter((m): m is Metoda => m in METODY).slice(0, 3).map((m) => (
-          <span key={m} className="inline-flex rounded-full border border-linka2 bg-plocha2 px-2.5 py-1 text-mikro font-semibold text-tlum">
+          <span key={m} className="inline-flex rounded-full bg-plocha2 px-2.5 py-1 text-mikro font-semibold text-tlum">
             {METODY[m].nazev}
           </span>
         ))}
@@ -306,12 +324,12 @@ export function TabulkaZemiKampani({
   }
   const max = Math.max(...radky.map((r) => r.pocet));
   return (
-    <div className="overflow-hidden rounded-[22px] border border-linka2 bg-plocha">
-      <div className="flex items-center gap-1.5 border-b border-linka2 px-4 py-2.5 sm:px-5">
-        <span className="stitek">Kolik rozebraných kampaní míří na kterou zemi</span>
+    <div className="overflow-hidden rounded-[22px] bg-plocha">
+      <div className="flex items-center gap-1.5 px-4 py-2.5 sm:px-5">
+        <span className="nadpis-boxu">Kolik rozebraných kampaní míří na kterou zemi</span>
         <Otaznik popis={<span className="block">Počítají se jen kampaně, které jsme rozebrali — ne všechno, co kde koluje. Jedna kampaň může mířit na několik zemí naráz a u každé se počítá, proto je součet vyšší než {celkem} {sklon(celkem, "rozebraná kampaň", "rozebrané kampaně", "rozebraných kampaní")}.</span>} />
       </div>
-      <ul className="divide-y divide-linka2">
+      <ul>
         {radky.map((r) => (
           <li key={r.kodZeme}>
             <Link href={`/zeme/${r.kodZeme.toLowerCase()}/`} className="flex min-h-[52px] items-center gap-3 px-4 py-2.5 transition-colors hover:bg-plocha2 sm:px-5">

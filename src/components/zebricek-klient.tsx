@@ -107,7 +107,7 @@ export function Zebricek() {
   const zmena = muj !== null && moje !== null && muj.skore !== moje;
 
   return (
-    <section className="mt-14 border-t border-linka2 pt-8" aria-labelledby="zebricek-nadpis">
+    <section className="mt-14 pt-8" aria-labelledby="zebricek-nadpis">
       <div className="grid gap-8 lg:grid-cols-[minmax(0,1fr)_minmax(0,1fr)] lg:gap-12">
         <div className="min-w-0">
           <div className="flex items-center gap-1.5">
@@ -178,13 +178,13 @@ export function Zebricek() {
 
         <div className="min-w-0">
           <div className="flex items-center justify-between gap-3">
-            <h3 className="stitek">Žebříček</h3>
+            <h3 className="nadpis-boxu">Žebříček</h3>
             {data && <span className="cislice text-drobne text-tlum2">{data.pocet} {data.pocet === 1 ? "záznam" : data.pocet < 5 ? "záznamy" : "záznamů"}</span>}
           </div>
           {!data || data.zaznamy.length === 0 ? (
             <p className="mt-2 text-male text-tlum2">{data ? "Zatím prázdný. Buďte první." : UCTY_ZAPNUTE ? "Žebříček se nepodařilo načíst." : "Žebříček připravujeme."}</p>
           ) : (
-            <ol className="mt-2 divide-y divide-linka2">
+            <ol className="mt-2">
               {data.zaznamy.map((z, i) => (
                 <li key={`${z.prezdivka}-${z.datum}-${i}`} className={`flex items-center gap-3 py-2 text-male ${muj && z.prezdivka === muj.prezdivka ? "font-semibold" : ""}`}>
                   <span className="cislice w-6 shrink-0 text-drobne text-tlum2">{i + 1}.</span>

@@ -137,11 +137,11 @@ export default function Svet() {
       </div>
 
       {/* rychlý přehled */}
-      <section aria-label="Přehled aktérů" className="nalet mt-12 sm:mt-16">
+      <section aria-label="Přehled aktérů" className="nalet mt-16 sm:mt-24">
         <ul className="grid gap-1.5 sm:grid-cols-2 lg:grid-cols-4">
           {s.aktori.map((a) => (
             <li key={a.klic}>
-              <a href={`#${a.klic}`} className="flex min-h-[56px] items-center gap-3 rounded-[18px] border border-linka2 bg-plocha px-3 py-2 hover:border-akcent">
+              <a href={`#${a.klic}`} className="flex min-h-[56px] items-center gap-3 rounded-[18px] bg-plocha px-3 py-2 hover:border-akcent">
                 <span className="shrink-0">{a.kod ? <Vlajka kod={a.kod} /> : <Ikona nazev="globus" velikost={16} tah={1.8} trida="text-akcent" />}</span>
                 <span className="min-w-0 flex-1">
                   <span className="block truncate text-zaklad font-semibold text-inkoust">{a.nazev}</span>
@@ -212,7 +212,7 @@ export default function Svet() {
           nadpis="Co by obrázek změnilo"
           popis="Signály, které by hodnocení posunuly. Šipka říká kterým směrem."
         />
-        <ul className="divide-y divide-linka2 border-y border-linka2">
+        <ul className="border-y border-linka2">
           {s.sledovat.map((x) => (
             <li key={x.text} className="flex items-start gap-3 py-2.5 text-zaklad leading-relaxed text-inkoust">
               <span className={`mt-[3px] shrink-0 ${x.smer === "nahoru" ? "text-stari-text2" : x.smer === "dolu" ? "text-klid-text" : "text-tlum2"}`}>

@@ -140,7 +140,7 @@ export function PocitadlaZeme({ polozky, ted, nazev }: { polozky: PolozkaPoctu[]
   const o = spocitejOkna(polozky, useZiveHodiny(ted));
   return (
     <section aria-label={`Kolik incidentů přibylo — ${nazev}`} className="mt-10">
-      <div className="grid grid-cols-3 divide-x divide-y divide-linka2 overflow-hidden rounded-[20px] border border-linka2 bg-plocha sm:flex sm:divide-y-0">
+      <div className="grid grid-cols-3 divide-x overflow-hidden rounded-[20px] bg-plocha sm:flex sm:divide-y-0">
         <Cislo n={o.dnes} popis="dnes" odkaz="#zaznamy" zvyraznit />
         <Cislo n={o.tyden} popis="za 7 dní" odkaz="#zaznamy" />
         <Cislo n={o.mesic} popis="za 30 dní" odkaz="#zaznamy" />

@@ -4,6 +4,7 @@ import { TabulkaZemiKampani } from "@/components/kampane";
 import { ManipulaceKlient } from "@/components/manipulace-klient";
 import { HlavickaStranky, NadpisSekce } from "@/components/nadpisy";
 import { Ikona } from "@/components/ikony";
+import { SidebarWebu } from "@/components/sidebar-webu";
 import { Sdeleni, Tlacitko } from "@/components/ui";
 import { sklon } from "@/components/zeme";
 import { kampane, kampanePodleZemi, nazvyZemi } from "@/lib/data";
@@ -34,21 +35,9 @@ export default function Manipulace() {
         uvod="Podvržené dokumenty, falešné weby redakcí, profily vydávající se za úředníky. U každé kampaně odpovídáme zvlášť: co je doložené a kdo za tím stojí. To druhé bývá méně jisté — a píšeme to."
       />
 
-      <section aria-label="Jak to čteme" className="nalet mt-10 grid gap-3 sm:mt-14 sm:grid-cols-3">
-        {[
-          { ikona: "fajfka" as const, nadpis: "Co tvrdíme", text: "Jen to, co je doložené odkazem, na který se dá kliknout. Podvržený dokument se pozná z obsahu a technických stop." },
-          { ikona: "otaznik" as const, nadpis: "Co netvrdíme", text: "Že za operací stojí konkrétní stát. Dokud to veřejně nedoloží úřad, vedeme to jako podezření — i když na to ukazuje všechno." },
-          { ikona: "vaha" as const, nadpis: "Proč odděleně", text: "Doložený zásah a doložený původce jsou dvě různé věci. Kdo je slije do jedné věty, tvrdí víc, než má." },
-        ].map((b) => (
-          <div key={b.nadpis} className="rounded-[22px] border border-linka2 bg-plocha p-5">
-            <span className="grid h-9 w-9 place-items-center rounded-full bg-plocha2 text-akcent"><Ikona nazev={b.ikona} velikost={17} tah={1.9} /></span>
-            <h2 className="mt-3 text-zaklad font-bold text-inkoust">{b.nadpis}</h2>
-            <p className="mt-1.5 text-zaklad leading-relaxed text-tlum">{b.text}</p>
-          </div>
-        ))}
-      </section>
-
-      <div className="nalet mt-14 border-t border-linka pt-12 sm:mt-20 sm:pt-14">
+      <div className="grid gap-10 lg:grid-cols-[minmax(0,2fr)_minmax(0,1fr)] lg:gap-x-16">
+        <div className="min-w-0">
+      <div className="nalet mt-16 sm:mt-24">
         <NadpisSekce
           stitek="Rozbory"
           nadpis={vse.length ? `${vse.length} ${sklon(vse.length, "rozebraná kampaň", "rozebrané kampaně", "rozebraných kampaní")}` : "Zatím bez rozboru"}
@@ -67,7 +56,7 @@ export default function Manipulace() {
         )}
       </div>
 
-      <div className="nalet mt-14 border-t border-linka pt-12 sm:mt-20 sm:pt-14">
+      <div className="nalet mt-16 sm:mt-24">
         <NadpisSekce
           stitek="Podle zemí"
           nadpis="Na koho to mířilo"
@@ -80,6 +69,24 @@ export default function Manipulace() {
       <p className="mt-10 text-drobne leading-relaxed text-tlum2">
         Kampaně nejsou události. Do hodnocení ani do počtů na úvodu se nepočítají.
       </p>
+        </div>
+        <SidebarWebu />
+      </div>
+
+      <section aria-label="Jak to čteme" className="nalet mt-16 grid gap-3 sm:mt-24 sm:grid-cols-3">
+        {[
+          { ikona: "fajfka" as const, nadpis: "Co tvrdíme", text: "Jen to, co je doložené odkazem, na který se dá kliknout. Podvržený dokument se pozná z obsahu a technických stop." },
+          { ikona: "otaznik" as const, nadpis: "Co netvrdíme", text: "Že za operací stojí konkrétní stát. Dokud to veřejně nedoloží úřad, vedeme to jako podezření — i když na to ukazuje všechno." },
+          { ikona: "vaha" as const, nadpis: "Proč odděleně", text: "Doložený zásah a doložený původce jsou dvě různé věci. Kdo je slije do jedné věty, tvrdí víc, než má." },
+        ].map((b) => (
+          <div key={b.nadpis} className="rounded-[22px] bg-plocha p-5">
+            <span className="grid h-9 w-9 place-items-center rounded-full bg-plocha2 text-akcent"><Ikona nazev={b.ikona} velikost={17} tah={1.9} /></span>
+            <h2 className="mt-3 text-zaklad font-bold text-inkoust">{b.nadpis}</h2>
+            <p className="mt-1.5 text-zaklad leading-relaxed text-tlum">{b.text}</p>
+          </div>
+        ))}
+      </section>
+
     </div>
   );
 }

@@ -37,8 +37,8 @@ export function TabulkaZemi({ maxZemi = 12 }: { maxZemi?: number }) {
   if (!zeme.length) return null;
 
   return (
-    <section aria-label="Typy událostí po zemích" className="flex h-full flex-col overflow-hidden rounded-[22px] border border-linka2 bg-plocha">
-      <div className="flex items-center justify-between gap-3 border-b border-linka2 px-4 py-2.5">
+    <section aria-label="Typy událostí po zemích" className="flex h-full flex-col overflow-hidden rounded-[22px] bg-plocha">
+      <div className="flex items-center justify-between gap-3 px-4 py-2.5">
         <span className="flex items-center gap-1.5"><span className="stitek">Podle zemí</span><Otaznik popis={<span className="block">Nejvyšší doložená úroveň od roku 2014. Pomlčka = záznam nemáme, ne že se nic nestalo. Vojenské riziko hodnotíme jen pro Evropu jako celek.</span>} /></span>
       </div>
 
@@ -47,7 +47,7 @@ export function TabulkaZemi({ maxZemi = 12 }: { maxZemi?: number }) {
         390 px nevejde a zkracovat slova úrovní na zkratky by bylo horší než
         rolovat: slovo je tu to hlavní sdělení.
       */}
-      <div className="pas-scroll min-h-0 flex-1 overflow-x-auto">
+      <div className="pas-scroll pas-okraj min-h-0 flex-1 overflow-x-auto">
         <table className="w-full min-w-[640px] border-collapse text-male">
           <thead>
             <tr className="border-b border-linka2">

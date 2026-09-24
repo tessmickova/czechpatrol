@@ -12,7 +12,7 @@ import Vyvoj from "@/app/vyvoj/page";
 import Svet from "@/app/svet/page";
 import MujPrehled from "@/app/muj-prehled/page";
 import OProjektu from "@/app/o-projektu/page";
-import Opravy from "@/app/opravy/page";
+import Opravy from "@/app/sprava/opravy/page";
 import Podporit from "@/app/podporit/page";
 import Metodika from "@/app/metodika/page";
 import Zdroje from "@/app/zdroje/page";
@@ -41,7 +41,7 @@ const CESTY: Record<string, () => React.JSX.Element> = {
   "/svet/": Svet,
   "/muj-prehled/": MujPrehled,
   "/o-projektu/": OProjektu,
-  "/opravy/": Opravy,
+  "/sprava/opravy/": Opravy,
   "/podporit/": Podporit,
   "/metodika/": Metodika,
   "/zdroje/": Zdroje,

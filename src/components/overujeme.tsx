@@ -1,5 +1,6 @@
 "use client";
 
+import { HlavickaWidgetu } from "./widgety";
 import { useEffect, useState } from "react";
 import { datumCasPraha } from "@/lib/cas";
 import type { Overovana } from "@/lib/typy";
@@ -96,7 +97,7 @@ function Karta({ o, ted }: { o: Overovana; ted: number }) {
         </section>
 
         {/* Poslední slovo má vždycky pokyn, ne tvrzení. */}
-        <p className="flex items-start gap-2.5 rounded-[18px] border border-linka2 bg-plocha px-4 py-3">
+        <p className="flex items-start gap-2.5 rounded-[18px] bg-plocha px-4 py-3">
           <span className="mt-[1px] grid h-[22px] w-[22px] shrink-0 place-items-center rounded-full text-klid-text">
             <Ikona nazev="stit" velikost={15} tah={2} />
           </span>
@@ -148,12 +149,12 @@ export function PruhOverujeme({
       )}
 
       {vsechnyUzavrene.length > 0 && (
-        <details className="group mt-2.5 overflow-hidden rounded-[18px] border border-linka2 bg-plocha">
+        <details className="group mt-2.5 overflow-hidden rounded-[18px] bg-plocha">
           <summary className="flex min-h-[44px] cursor-pointer list-none items-center justify-between gap-3 px-4 text-male font-semibold text-inkoust hover:bg-plocha2">
             <span>Jak dopadly starší ověřované zprávy ({vsechnyUzavrene.length})</span>
             <Ikona nazev="dolu" velikost={13} tah={2} trida="text-tlum2 transition-transform group-open:rotate-180" />
           </summary>
-          <ul className="divide-y divide-linka2 border-t border-linka2">
+          <ul>
             {vsechnyUzavrene.map((o) => {
               const vyprselo = o.stav === "overujeme";
               return (
@@ -189,7 +190,7 @@ export function PruhOverujeme({
   Zdroje se vypisují jen jménem média (před pomlčkou), ne cizojazyčným
   titulkem článku: souhrn má být česky.
 */
-export function SouhrnOverujeme({ aktivni, ted }: { aktivni: Overovana[]; ted: number }) {
+export function SouhrnOverujeme({ aktivni, ted, vnoreny = false }: { aktivni: Overovana[]; ted: number; vnoreny?: boolean }) {
   const [cas, setCas] = useState(ted);
   useEffect(() => {
     setCas(Date.now());
@@ -200,12 +201,9 @@ export function SouhrnOverujeme({ aktivni, ted }: { aktivni: Overovana[]; ted: n
   if (!zive.length) return null;
 
   return (
-    <section aria-label="Právě ověřujeme" className="rounded-[18px] border border-dashed border-jantar/55 bg-jantar/[0.06]">
-      <div className="flex flex-wrap items-center gap-x-2.5 gap-y-1 px-4 pt-3">
-        <Odznak ton="pozor" duraz="silny" ikona="otaznik">Právě ověřujeme</Odznak>
-        <span className="text-drobne text-tlum2">nepotvrzené zprávy · nevstupují do hodnocení</span>
-      </div>
-      <ul className="divide-y divide-dashed divide-jantar/25">
+    <section aria-label="Právě ověřujeme" className={vnoreny ? "" : "overflow-hidden rounded-[22px] border border-dashed border-jantar/55 bg-jantar/[0.06]"}>
+      {!vnoreny && <HlavickaWidgetu ikona="otaznik" ton="pozor" nazev="Právě ověřujeme" meta="nepotvrzené zprávy · nevstupují do hodnocení" />}
+      <ul>
         {zive.map((o) => {
           const lhuta = zbyva(o.uzavritDo, cas);
           return (
@@ -214,7 +212,7 @@ export function SouhrnOverujeme({ aktivni, ted }: { aktivni: Overovana[]; ted: n
                 <summary className="flex cursor-pointer list-none items-start gap-2.5 px-4 py-2.5 hover:bg-jantar/[0.05]">
                   <span className="mt-[2px] shrink-0"><Vlajka kod={o.kodZeme} /></span>
                   <span className="min-w-0 flex-1">
-                    <span className="line-clamp-2 text-male leading-snug text-inkoust">{o.coSeHlasi}</span>
+                    <span className="line-clamp-2 text-male font-semibold leading-snug text-inkoust">{o.kratce ?? o.coSeHlasi}</span>
                     {o.coRikajiUrady[0] && (
                       <span className="mt-0.5 line-clamp-1 text-drobne text-tlum">
                         <b className="font-semibold text-klid-text">Úřady:</b> {o.coRikajiUrady[0]}

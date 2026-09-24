@@ -28,7 +28,7 @@ const KROKY: Krok[] = [
   {
     cislo: "1",
     nadpis: "Sběr",
-    kdo: "automat, každou hodinu",
+    kdo: "automat, každých 30 minut",
     co: "Přečte 111 zdrojů — zpravodajství, úřední kanály, agentury. Co projde sítem na slova a místa, uloží se do fronty kandidátů jako holý titulek s odkazem.",
     zastavi: "Zprávy bez vazby na bezpečnost nebo na sledované země se zahodí a důvod se zapíše.",
   },
@@ -135,7 +135,7 @@ export function JakToChodi() {
       </button>
 
       {otevreno && (
-        <div className="mt-5 border-t border-linka2 pt-5">
+        <div className="mt-5 pt-5">
           {/*
             Schéma nahoře, popis pod ním. Opakovaná otázka nebyla „jaké jsou
             kroky", ale „kde to uvázlo" — na to odpovídá tvar, ne seznam.
@@ -169,7 +169,7 @@ export function JakToChodi() {
             ))}
           </ol>
 
-          <div className="mt-6 border-t border-linka2 pt-5">
+          <div className="mt-6 pt-5">
             <div className="stitek mb-3">Kam co jde po schválení</div>
             <ul className="space-y-3">
               {KAM.map((c) => (
@@ -188,7 +188,7 @@ export function JakToChodi() {
             Nejčastější nedorozumění: „ověřovatel to projel, proč to není
             vidět?“ Patří sem, ne do e-mailu.
           */}
-          <div className="mt-6 border-t border-linka2 pt-5">
+          <div className="mt-6 pt-5">
             <div className="stitek mb-2">Když něco není vidět</div>
             <ul className="space-y-2 text-male leading-snug text-tlum">
               <li>

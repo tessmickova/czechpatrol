@@ -16,7 +16,7 @@ export function Rozbalovac({
         aria-expanded={otevreno}
         className={`inline-flex items-center gap-1.5 rounded-full border px-3.5 py-1.5 text-drobne font-bold uppercase tracking-[0.05em] transition-colors ${
           otevreno
-            ? "border-akcent bg-akcent text-noc"
+            ? "border-akcent bg-akcent text-papir"
             : akcent
               ? "border-stari/60 bg-stari/15 text-stari-text hover:bg-stari/25"
               : "border-akcent/60 bg-akcent/15 text-akcent-svetla hover:bg-akcent/25"

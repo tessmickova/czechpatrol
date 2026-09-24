@@ -1,6 +1,6 @@
 "use client";
 
-import Link from "next/link";
+import type Link from "next/link";
 import { useContextJazyka } from "@/lib/i18n";
 
 /*
@@ -11,16 +11,22 @@ import { useContextJazyka } from "@/lib/i18n";
 
   Vnější adresy, kotvy a soubory se nechávají být — jazyková předpona patří
   jen našim vnitřním stránkám.
+
+  Od 24. 9. 2026 je to obyčejný <a>, ne Link z Next.js. Web se nasazuje
+  každou půlhodinu a soubory buildu se s každým nasazením přejmenují;
+  otevřená stránka pak při klientském přechodu sahala po souborech, které
+  už na serveru nebyly, a „Události“ z menu se neotevřely. Plné načtení
+  statické stránky je rychlé a vždycky sedí k tomu, co je nasazené.
 */
 export function Odkaz({
   href,
   children,
   ...zbytek
-}: { href: string } & Omit<React.ComponentProps<typeof Link>, "href">) {
+}: { href: string } & Omit<React.ComponentProps<typeof Link>, "href" | "prefetch" | "replace" | "scroll" | "shallow" | "locale" | "legacyBehavior">) {
   const { odkaz } = useContextJazyka();
   return (
-    <Link href={odkaz(href)} {...zbytek}>
+    <a href={odkaz(href)} {...(zbytek as React.ComponentProps<"a">)}>
       {children}
-    </Link>
+    </a>
   );
 }

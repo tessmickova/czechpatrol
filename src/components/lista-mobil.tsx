@@ -9,7 +9,8 @@ import { useT } from "@/lib/i18n";
 const POLOZKY: { href: string; label: string; ikona: NazevIkony }[] = [
   { href: "/", label: "Přehled", ikona: "radar" },
   { href: "/udalosti/", label: "Události", ikona: "osa" },
-  { href: "/manipulace/", label: "Manipulace", ikona: "bublina" },
+  /* Připravenost místo Manipulace (revize 24. 9. 2026): je to hlavní akce webu; Manipulace zůstává v liště nahoře a v menu. */
+  { href: "/pripravenost/", label: "Připravenost", ikona: "stit" },
   { href: "/analyzy/", label: "Analýzy", ikona: "graf" },
 ];
 

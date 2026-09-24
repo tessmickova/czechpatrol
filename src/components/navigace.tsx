@@ -6,7 +6,6 @@ import { WEB } from "@/config/web";
 import { Ikona } from "./ikony";
 import { otevriPanel } from "./postranni-panel";
 import { Logo } from "./znacka";
-import { PrepinacJazyku } from "./prepinac-jazyku";
 import { useT } from "@/lib/i18n";
 
 /*
@@ -21,6 +20,7 @@ export const HLAVNI = [
   { href: "/", label: "Přehled" },
   { href: "/udalosti/", label: "Události" },
   { href: "/manipulace/", label: "Manipulace" },
+  { href: "/zeme/", label: "Země" },
   { href: "/analyzy/", label: "Analýzy" },
   { href: "/pripravenost/", label: "Připravenost" },
 ];
@@ -86,7 +86,6 @@ export function Navigace() {
         </nav>
 
         <div className="flex shrink-0 items-center gap-1 sm:gap-2">
-          <PrepinacJazyku />
           <Odkaz
             href="/podporit/"
             // Jediná plná plocha v hlavičce: na tmavém podkladu papír, po najetí červená.

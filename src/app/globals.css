@@ -73,10 +73,11 @@
     nešlo udělat světlý režim: zelená čitelná na černé je na bílé skoro
     neviditelná. Teď je stačí předefinovat na jednom místě.
   */
-  --color-klid: #5cbf8a;
-  --color-klid-text: #8fd6ae;
-  --color-pozor: #d9b24c;
-  --color-pozor-text: #e6c977;
+  /* Zelená a jantar tlumené, ať ladí s červenou akcentu (24. 9. 2026). */
+  --color-klid: #4f9a74;
+  --color-klid-text: #86bda0;
+  --color-pozor: #c9a352;
+  --color-pozor-text: #d8ba78;
   --color-stari: #e08a3c;
   --color-stari-text: #eaa96b;
   --color-stari-text2: #f0996e;
@@ -88,7 +89,7 @@
   --color-akcent: #e8484f;
   --color-akcent-tmava: #c1272d;
   --color-akcent-svetla: #f2848a;
-  --color-jantar: #d9b24c;
+  --color-jantar: #c9a352;
 
   /* tónované plochy */
   --color-mycka: rgb(232 72 79 / 0.1);
@@ -141,8 +142,8 @@
   --color-akcent-tmava: #8e1a1f;
   --color-akcent-svetla: #a51f25;
 
-  --color-klid: #1d7a4c;
-  --color-klid-text: #14613b;
+  --color-klid: #1f6b46;
+  --color-klid-text: #175636;
   --color-pozor: #8a6100;
   --color-pozor-text: #6f4e00;
   --color-stari: #9a5200;
@@ -224,6 +225,21 @@ body {
   je tu jen na krátká návěští — nikdy ne na větu. Váha 600 místo 500: ve
   světlém režimu bylo prostrkané mono při 500 příliš slabé.
 */
+/*
+  Nadpis karty, boxu nebo kategorie (24. 9. 2026, podle zadání): stejný
+  formát jako štítek „Bezpečnostní přehled“ nad hlavním nadpisem — mono,
+  verzálky, barva akcentu, vedle ikona v kroužku. Jeden formát pro
+  všechny h3 napříč webem.
+*/
+.nadpis-boxu {
+  font-family: var(--font-mono);
+  font-size: 12.5px;
+  font-weight: 600;
+  line-height: 1.2;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-akcent);
+}
 .stitek {
   font-family: var(--font-mono);
   font-size: 12.5px;
@@ -311,7 +327,7 @@ p, li, dd, dt, summary {
 }
 .podnadpis {
   font-weight: 700;
-  letter-spacing: 0;
+  letter-spacing: -0.02em; /* stejný řez jako nadpisy boxů (24. 9. 2026) */
   line-height: 1.2;
   text-wrap: balance;
 }
@@ -614,6 +630,8 @@ html, body { overflow-x: clip; }
 }
 
 .pas-scroll { scrollbar-width: none; }
+/* Náznak, že řádek pokračuje: pravý okraj se ztrácí do pozadí (revize 24. 9. 2026). */
+.pas-okraj { mask-image: linear-gradient(to right, black calc(100% - 36px), transparent); -webkit-mask-image: linear-gradient(to right, black calc(100% - 36px), transparent); }
 .pas-scroll::-webkit-scrollbar { display: none; }
 details > summary { list-style: none; cursor: pointer; }
 details > summary::-webkit-details-marker { display: none; }
@@ -631,3 +649,20 @@ input[type="range"] { accent-color: var(--color-akcent); }
   .neni-tisk { display: none !important; }
   body { background: #fff; color: #000; }
 }
+
+/*
+  Plná červená tlačítka ve světlém režimu (revize 24. 9. 2026).
+  Bílý text na akcentu #e8484f má 3,8:1; na akcent-tmava #c1272d 5,8:1.
+  V tmavém režimu je na tlačítku tmavý text (5,1:1), tam se nic nemění.
+*/
+:root[data-motiv="svetly"] .bg-akcent.text-papir { background-color: var(--color-akcent-tmava); }
+:root[data-motiv="svetly"] .bg-akcent.text-papir:hover { background-color: var(--color-akcent); }
+
+/* Pulz hlídky: jemné vlnění tečky; při „méně pohybu“ stojí. */
+/* Poskočení po zaškrtnutí (24. 9. 2026): krátké, bez pohybu při omezení pohybu. */
+@keyframes pop { 0% { transform: scale(0.85); } 60% { transform: scale(1.08); } 100% { transform: scale(1); } }
+.pop { animation: pop 0.32s ease-out; }
+@media (prefers-reduced-motion: reduce) { .pop { animation: none; } }
+@keyframes pulz-kruh { 0% { transform: scale(1); opacity: 0.6; } 100% { transform: scale(2.4); opacity: 0; } }
+.pulz-kruh { animation: pulz-kruh 2.4s ease-out infinite; }
+@media (prefers-reduced-motion: reduce) { .pulz-kruh { animation: none; opacity: 0; } }

@@ -17,8 +17,9 @@ import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { chybyVystrahy } from "./vystraha-pravidla.mjs";
 import { falesneUredni } from "./uredni-zdroj.mjs";
-import { jeSankcionovane, nalepkyVTextu } from "./zasady-textu.mjs";
+import { jeJenProjev, jeSankcionovane, nalepkyVTextu } from "./zasady-textu.mjs";
 import { zkontrolujZaznam } from "./bezpecnost-obsahu.mjs";
+import { chybySouhrnu } from "./souhrn-situace.mjs";
 
 const koren = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const cti = (f) => JSON.parse(fs.readFileSync(path.join(koren, "data", f), "utf-8"));
@@ -276,7 +277,7 @@ if (fs.existsSync(cestaOdmitnutych)) {
       if (!o.id || !o.titulek || !o.zdroj?.url) { chyby.push(`${kde}: chybí id, titulek nebo odkaz`); continue; }
       if (adresy.has(o.zdroj.url)) chyby.push(`${kde}: stejná adresa je v přehledu dvakrát`);
       adresy.add(o.zdroj.url);
-      if (!["vylouceno-tematem", "bez-skutku", "bez-mista"].includes(o.duvod)) {
+      if (!["vylouceno-tematem", "bez-skutku", "bez-mista", "jen-projev"].includes(o.duvod)) {
         chyby.push(`${kde}: neznámý důvod odmítnutí „${o.duvod}“`);
       }
       if (o.posouzeni && !["vysoke", "stredni", "zadne"].includes(o.posouzeni.podezreni)) {
@@ -448,6 +449,20 @@ for (const n of nastroje) {
   if (n.stav === "overeno" && !n.overeno) chyby.push(`nástroj ${n.id}: stav „overeno“ bez data ověření`);
   if (n.stav !== "obecne" && !n.oficialniZdroj) chyby.push(`nástroj ${n.id}: chybí oficiální zdroj`);
   if (/\[DOPLNIT\]/.test(JSON.stringify(n))) chyby.push(`nástroj ${n.id}: zástupný text`);
+}
+
+/* ---------- ověřované: podstata do nadpisu ---------- */
+for (const o of overujeme) if (o.stav === "overujeme" && !o.kratce) varovani.push(`ověřujeme ${o.id}: chybí kratce (podstata do nadpisu boxu)`);
+
+/* ---------- řeči bez skutku ve frontě ---------- */
+for (const k of kandidati) if (k.stav === "ceka" && jeJenProjev(k.titulek)) varovani.push(`kandidát ${k.id}: jen projev bez rozhodnutí — odepsat („${String(k.titulek).slice(0, 60)}…“)`);
+
+/* ---------- souhrn situace pod nadpisem ---------- */
+if (fs.existsSync(path.join(koren, "data", "souhrn-situace.json"))) {
+  const souhrn = cti("souhrn-situace.json");
+  for (const c of chybySouhrnu(souhrn)) chyby.push(`souhrn situace: ${c}`);
+  const idZaznamu = new Set(incidenty.map((i) => i.id));
+  for (const id of souhrn.podklady ?? []) if (!idZaznamu.has(id)) varovani.push(`souhrn situace: podklad ${id} není zveřejněný záznam`);
 }
 
 console.log(`Kontrola dat: ${shrnuti}`);

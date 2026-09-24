@@ -12,9 +12,11 @@
  *   bere definici workflow Z TÉ VĚTVE: Patrol si ho mohl přepsat a spustit
  *   vlastní kód s právem zápisu. Převzetí teď dělá hodinový sběr z main.
  *
- * Co se přebírá: jen dva soubory a jen sloučením po id —
- *   data/navrhy.json          návrhy (nové a upravené), vyčištěné,
- *   data/fronta/pro-patrola.json  odpovědi k zadáním, která už v main jsou.
+ * Co se přebírá: jen tři soubory —
+ *   data/navrhy.json          návrhy (nové a upravené), vyčištěné, sloučením po id,
+ *   data/fronta/pro-patrola.json  odpovědi k zadáním, která už v main jsou, po id,
+ *   data/souhrn-situace.json  věta pod nadpis, jen když je novější a projde
+ *                             pravidly v souhrn-situace.mjs (od 24. 9. 2026).
  * Nic jiného se z větve nečte. Nic se nemaže.
  */
 import { execFileSync } from "node:child_process";
@@ -22,13 +24,14 @@ import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { maUredniZdroj } from "./uredni-zdroj.mjs";
+import { chybySouhrnu } from "./souhrn-situace.mjs";
 
 const koren = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const VETEV = "origin/patrol/overovani";
 
 function zVetve(soubor) {
   try {
-    return JSON.parse(execFileSync("git", ["show", `${VETEV}:${soubor}`], { cwd: koren, encoding: "utf-8", maxBuffer: 64 * 1024 * 1024 }));
+    return JSON.parse(execFileSync("git", ["show", `${VETEV}:${soubor}`], { cwd: koren, encoding: "utf-8", maxBuffer: 64 * 1024 * 1024, stdio: ["ignore", "pipe", "ignore"] }));
   } catch {
     return null;
   }
@@ -73,6 +76,31 @@ export function sloucitNavrhy(mainNavrhy, patrolNavrhy, { zverejnene = new Set()
 }
 
 /** Odpovědi Patrola jen k zadáním, která v main existují. Nová zadání si Patrol vytvořit nesmí. */
+/**
+ * Věta pod nadpis od Patrola. Vrátí nový obsah souboru, nebo null, když se
+ * nic nepřebírá: chybí, není novější než ta v main, nebo neprošla pravidly.
+ * Patrol nemůže větu smazat — prázdnou (veta: null) nepřebíráme; stará se
+ * z webu stáhne sama po lhůtě platnosti.
+ */
+export function prevzitSouhrn(mainSouhrn, patrolSouhrn, ted = Date.now()) {
+  if (!patrolSouhrn || typeof patrolSouhrn !== "object" || !patrolSouhrn.veta) return null;
+  const chyby = chybySouhrnu(patrolSouhrn, ted);
+  if (chyby.length) {
+    console.log(`[patrol] souhrn situace se nepřebírá: ${chyby.join("; ")}`);
+    return null;
+  }
+  const novejsi = !mainSouhrn?.aktualizovano || new Date(patrolSouhrn.aktualizovano).getTime() > new Date(mainSouhrn.aktualizovano).getTime();
+  if (!novejsi) return null;
+  console.log(`[patrol] souhrn situace převzat (${patrolSouhrn.aktualizovano})`);
+  return {
+    _poznamka: mainSouhrn?._poznamka,
+    veta: patrolSouhrn.veta.trim(),
+    aktualizovano: patrolSouhrn.aktualizovano,
+    napsal: "patrol",
+    podklady: patrolSouhrn.podklady.map(String),
+  };
+}
+
 export function sloucitZadani(mainZadani, patrolZadani) {
   const jeho = new Map((patrolZadani ?? []).filter((z) => z && typeof z.id === "string").map((z) => [z.id, z]));
   let zmen = 0;
@@ -92,7 +120,8 @@ if (process.argv[1] && fileURLToPath(import.meta.url) === path.resolve(process.a
   const nacisto = process.argv.includes("--nacisto");
   const patrolNavrhy = zVetve("data/navrhy.json");
   const patrolZadani = zVetve("data/fronta/pro-patrola.json");
-  if (!patrolNavrhy && !patrolZadani) {
+  const patrolSouhrn = zVetve("data/souhrn-situace.json");
+  if (!patrolNavrhy && !patrolZadani && !patrolSouhrn) {
     console.log("[patrol] větev nedostupná nebo bez dat, nic se nepřebírá");
     process.exit(0);
   }
@@ -102,8 +131,10 @@ if (process.argv[1] && fileURLToPath(import.meta.url) === path.resolve(process.a
   const n = sloucitNavrhy(cti("data/navrhy.json", []), patrolNavrhy ?? [], { zverejnene, zamitnute });
   const z = sloucitZadani(cti("data/fronta/pro-patrola.json", []), patrolZadani ?? []);
   console.log(`[patrol] návrhů nových ${n.novych}, upravených ${n.upravenych}; odpovědí k zadáním ${z.zmen}`);
+  const souhrn = prevzitSouhrn(cti("data/souhrn-situace.json", { veta: null }), patrolSouhrn);
   if (!nacisto) {
     if (n.novych || n.upravenych) fs.writeFileSync(path.join(koren, "data/navrhy.json"), `${JSON.stringify(n.navrhy, null, 2)}\n`);
     if (z.zmen) fs.writeFileSync(path.join(koren, "data/fronta/pro-patrola.json"), `${JSON.stringify(z.zadani, null, 2)}\n`);
+    if (souhrn) fs.writeFileSync(path.join(koren, "data/souhrn-situace.json"), `${JSON.stringify(souhrn, null, 2)}\n`);
   }
 }

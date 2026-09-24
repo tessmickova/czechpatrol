@@ -17,10 +17,12 @@ export const WEB = {
  * Podpora projektu. Dokud je prázdné, tlačítko se nikde nezobrazí.
  */
 export const BUY_ME_A_COFFEE_URL = "";
+/** Herohero — prázdné = tlačítko se neukáže. */
+export const HEROHERO_URL = "";
 
 /** Verze a datum poslední revize metodiky. Změna verze = zápis do /opravy/. */
 export const METODIKA_VERZE = "2";
-export const METODIKA_REVIDOVANA = "2026-09-06";
+export const METODIKA_REVIDOVANA = "2026-09-24";
 
 /**
  * Odběrové kanály.
@@ -207,6 +209,13 @@ export const UCTY_ZAPNUTE = API_URL !== "";
   - izs:      zprávy partnerů IZS — žádný partner zatím není,
   - zebricek: srovnání s ostatními — připravenost není soutěž.
 */
+/**
+ * Úvod v2 (24. 9. 2026): pulz hlídky, deska stavu, karusel aktualit.
+ * false = původní úvod (tři budíky vlevo, sloupec aktualit vpravo).
+ * Návrat je jen tenhle přepínač; staré komponenty zůstávají v kódu.
+ */
+export const UVOD_V2 = true;
+
 export const SPUSTENO = {
   premium: false,
   komunita: false,

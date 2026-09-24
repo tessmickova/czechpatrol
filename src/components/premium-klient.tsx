@@ -68,10 +68,10 @@ export function KartaPremium({ vyplneno }: { vyplneno: number }) {
   };
 
   return (
-    <div className="border-t border-linka2 pt-5">
+    <div className="pt-5">
       <div className="flex items-center gap-2">
         <span aria-hidden className="h-[7px] w-[7px] rounded-full bg-akcent" />
-        <span className="stitek">Premium</span>
+        <span className="nadpis-boxu">Premium</span>
       </div>
       <h2 className="mt-2 text-velke font-bold text-inkoust">Chcete vidět, kde přesně může vaše domácnost selhat?</h2>
       <ul className="mt-3 space-y-1">
@@ -181,7 +181,7 @@ export function PremiumVUctu({ maEmail, obnovUcet }: { maEmail: boolean; obnovUc
             {opravneni.filter((o) => o.platne).map((o) => `${o.druh === "dar" ? "uděleno správcem" : "jednorázové odemknutí"} od ${datumCas(o.platneOd)}${o.platneDo ? ` do ${datumCas(o.platneDo)}` : ""}`).join(" · ")}
           </p>
           <p className="mt-3"><Link href="/odolnost/" className={TLACITKO_TICHE}><Ikona nazev="stit" velikost={15} tah={1.9} /> Otevřít odolnost domácnosti</Link></p>
-          <div className="mt-5 border-t border-linka2 pt-4">
+          <div className="mt-5 pt-4">
             <div className="stitek mb-2">Komunita a chat</div>
             {komunita?.telegram || komunita?.whatsapp ? (
               <div className="flex flex-wrap gap-2">
@@ -203,7 +203,7 @@ export function PremiumVUctu({ maEmail, obnovUcet }: { maEmail: boolean; obnovUc
       )}
 
       {/* e-mail */}
-      <div className="mt-5 border-t border-linka2 pt-4">
+      <div className="mt-5 pt-4">
         <div className="stitek mb-2">E-mail pro kód kreditu</div>
         {maEmail ? (
           <p className="text-male text-tlum">Uložený. Používá se jen k zaslání kódu kreditu. <button type="button" onClick={smazEmail} className="underline underline-offset-4 hover:text-inkoust">Smazat</button></p>
@@ -223,12 +223,12 @@ export function PremiumVUctu({ maEmail, obnovUcet }: { maEmail: boolean; obnovUc
       </div>
 
       {/* kredity */}
-      <div className="mt-5 border-t border-linka2 pt-4">
+      <div className="mt-5 pt-4">
         <div className="stitek mb-2">Moje kredity</div>
         {kredity.length === 0 ? (
           <p className="text-male text-tlum">Zatím žádný. Kredit vzniká po zaplacení odemknutí.</p>
         ) : (
-          <ul className="divide-y divide-linka2">
+          <ul>
             {kredity.map((k) => (
               <li key={k.id} className="py-3">
                 <div className="flex flex-wrap items-center gap-x-3 gap-y-1">

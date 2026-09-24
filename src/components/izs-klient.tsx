@@ -73,7 +73,7 @@ export function IzsKlient() {
   };
 
   return (
-    <div className="grid gap-4 lg:grid-cols-[minmax(0,1.2fr)_minmax(0,1fr)]">
+    <div className="grid gap-4 lg:grid-cols-[minmax(0,1.2fr)_minmax(0,1fr)] lg:gap-x-16">
       <Karta odstin="modra" className="p-6">
         <div className="stitek mb-2 !text-akcent">Nová zpráva partnera</div>
         <h2 className="podnadpis text-velke">Co mají čtenáři vědět</h2>

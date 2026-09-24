@@ -24,7 +24,7 @@ const VZHLED: Record<Stav, { slovo: string; tridy: string; ikona: NazevIkony }> 
   narusen: { slovo: "narušeno", tridy: "border-linka bg-plocha2 text-inkoust", ikona: "vystraha" },
   sledujeme: { slovo: "sledujeme", tridy: "border-linka bg-plocha2 text-tlum", ikona: "oko" },
   neplati: { slovo: "není vyhlášeno", tridy: "border-linka text-tlum", ikona: "fajfka" },
-  neovereno: { slovo: "neověřeno", tridy: "border-dashed border-linka text-tlum2", ikona: "info" },
+  neovereno: { slovo: "bez údaje", tridy: "border-dashed border-linka text-tlum2", ikona: "info" },
 };
 
 const VETY_PRAVNI: Record<string, { co: string; ano: string; ne: string }> = {
@@ -53,7 +53,7 @@ function Radek({
   return (
     <li>
       <details className="group">
-        <summary className="flex min-h-[44px] cursor-pointer flex-wrap items-center gap-x-3 gap-y-1 border-b border-linka2 py-2.5 hover:bg-plocha">
+        <summary className="flex min-h-[44px] cursor-pointer flex-wrap items-center gap-x-3 gap-y-1 py-2.5 hover:bg-plocha">
           <span className="min-w-[200px] flex-1 text-zaklad leading-snug">
             <span className="font-semibold text-inkoust">{co}</span>
             <span className="text-tlum">: {hodnota}</span>
@@ -68,7 +68,7 @@ function Radek({
             <span aria-hidden className="text-tlum2 transition-transform group-open:rotate-180"><Ikona nazev="dolu" velikost={13} tah={2} /></span>
           </span>
         </summary>
-        <div className="space-y-3 border-b border-linka2 py-3 pl-1 text-zaklad leading-relaxed text-tlum">
+        <div className="space-y-3 py-3 pl-1 text-zaklad leading-relaxed text-tlum">
           <p>{vysvetleni}</p>
           {prvni && prvni.length > 0 && (
             <div>
@@ -89,7 +89,7 @@ export function Opatreni({
   return (
     <div className="grid gap-8 lg:grid-cols-2">
       <div>
-        <h3 className="stitek mb-1">Oficiální opatření v ČR a NATO</h3>
+        <h3 className="nadpis-boxu mb-1">Oficiální opatření v ČR a NATO</h3>
         <p className="mb-2 text-male text-tlum">Právní stav podle úředních sbírek a oznámení. Změna nenastává sama od sebe — vyhlašuje ji vláda, Parlament nebo Aliance.</p>
         <ul>
           {pravni.map((p) => {
@@ -107,7 +107,7 @@ export function Opatreni({
         </ul>
       </div>
       <div>
-        <h3 className="stitek mb-1">Dopad na běžný život</h3>
+        <h3 className="nadpis-boxu mb-1">Dopad na běžný život</h3>
         <p className="mb-2 text-male text-tlum">Služby, kterých by se změna dotkla. Kde chybí veřejný zdroj, je to napsané — nedopočítáváme.</p>
         <ul>
           {provoz.map((p) => (

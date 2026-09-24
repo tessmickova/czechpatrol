@@ -17,3 +17,23 @@
 /nepotvrzeno     /udalosti/?overeni=neprosle 301
 /komunita/       /o-projektu/               301
 /komunita        /o-projektu/               301
+
+# Cizojazyčné větve zrušeny 24. 9. 2026 — jen čeština.
+/en/*  /  301
+/de/*  /  301
+/pl/*  /  301
+/sk/*  /  301
+/uk/*  /  301
+/lt/*  /  301
+/lv/*  /  301
+/et/*  /  301
+/fi/*  /  301
+/sv/*  /  301
+/nb/*  /  301
+/da/*  /  301
+/ro/*  /  301
+/bg/*  /  301
+/hu/*  /  301
+# Opravy dat jen ve správě.
+/opravy/  /sprava/opravy/  301
+/opravy   /sprava/opravy/  301

@@ -1,3 +1,5 @@
+import { IkonaKruh } from "./widgety";
+import type { NazevIkony } from "./ikony";
 import type { ReactNode } from "react";
 import { Znacka } from "./znacka";
 import { Otaznik } from "./zaklad";
@@ -48,9 +50,12 @@ export function NadpisSekce({
   popis,
   akce,
   znacka = true,
+  ikona,
 }: {
   id?: string;
   stitek?: string;
+  /** Ikona v kroužku místo značky: sekce dostane vlastní znak (revize 24. 9. 2026). */
+  ikona?: NazevIkony;
   nadpis: ReactNode;
   popis?: ReactNode;
   akce?: ReactNode;
@@ -61,7 +66,7 @@ export function NadpisSekce({
       <div className="max-w-[46rem]">
         {stitek && (
           <div className="mb-3.5 flex items-center gap-2">
-            {znacka && <Znacka velikost={28} tmave />}
+            {ikona ? <IkonaKruh ikona={ikona} /> : znacka && <Znacka velikost={28} tmave />}
             <span className="stitek-znacky">{stitek}</span>
           </div>
         )}
@@ -122,5 +127,5 @@ export function NadpisBloku({
 
 /** Prázdné místo mezi sekcemi. Jedna hodnota pro celý web, ne odhad v každé stránce. */
 export function Oddech({ deleni = false }: { deleni?: boolean }) {
-  return <div aria-hidden className={`h-14 sm:h-20 ${deleni ? "border-b border-linka2" : ""}`} />;
+  return <div aria-hidden className={`h-14 sm:h-20 ${deleni ? "" : ""}`} />;
 }

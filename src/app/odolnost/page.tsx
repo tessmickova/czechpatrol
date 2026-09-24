@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { HlavickaStranky, Obsah } from "@/components/hlavicka";
-import { OdolnostKlient } from "@/components/odolnost-klient";
+import { OdolnostPrepinac } from "@/components/odolnost-prepinac";
 import { Zebricek } from "@/components/zebricek-klient";
 import { SPUSTENO } from "@/config/web";
 
@@ -26,7 +26,7 @@ export default function Odolnost() {
         }
       />
       <Obsah>
-        <OdolnostKlient />
+        <OdolnostPrepinac />
         {/* Žebříček pod auditem: srovnání je až po vyplnění, ne důvod k vyplnění. */}
         {SPUSTENO.zebricek && <Zebricek />}
       </Obsah>

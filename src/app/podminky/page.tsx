@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { ObsahStranky } from "@/components/obsah-stranky";
 import { HlavickaStranky, Obsah } from "@/components/hlavicka";
 import { Karta } from "@/components/zaklad";
 import { PLACENE, PROVOZOVATEL, PROVOZOVATEL_TEXT } from "@/config/web";
@@ -33,6 +34,7 @@ export default function PodminkyStranka() {
         popis="Krátké, protože služba je jednoduchá: ukazuje ověřený stav, nedává rady a nic nepředstírá."
         doplnek={<span className="stitek !text-noc-tlum">Platí od {REVIZE}</span>}
       />
+      <ObsahStranky />
       <Obsah>
         <Karta odstin="pisek" className="p-6">
           <div className="stitek mb-2">Nejdůležitější věta</div>
@@ -48,7 +50,6 @@ export default function PodminkyStranka() {
           </Oddil>
 
           <Oddil cislo="02" nadpis="Co služba není">
-            <p>Web neradí „odjet“, „vybrat hotovost“ ani nic podobného. Ukazuje ověřený stav a co se zatím nestalo. Rozhodnutí je vaše.</p>
             <p>Sběr dat se může zpozdit nebo něco přehlédnout. Sám nikdy nepotvrdí, že něco platí. Před důležitým rozhodnutím se ptejte úřadů.</p>
           </Oddil>
 
@@ -59,7 +60,7 @@ export default function PodminkyStranka() {
           </Oddil>
 
           <Oddil cislo="04" nadpis="Účet">
-            <p>Účet je anonymní a zdarma. Přihlašuje se passkey. Obnovovací kód dostanete jen jednou — bez něj a bez zařízení se k účtu nedostanete a my ho obnovit neumíme.</p>
+            <p>Účet je anonymní a zdarma. Přihlašuje se passkey. Obnovovací kód dostanete jen jednou — bez něj a bez zařízení se k účtu nedostanete; obnovit ho nelze, protože neukládáme nic, z čeho by šel odvodit.</p>
             <p>Účet nesmíte používat k obtěžování, k pokusům o průnik do systému ani k automatizovanému vytěžování služby. Takový účet můžeme zrušit.</p>
             <p>Účet i všechna data smažete sami v nastavení, okamžitě.</p>
           </Oddil>

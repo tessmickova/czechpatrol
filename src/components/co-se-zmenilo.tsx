@@ -1,5 +1,6 @@
 "use client";
 
+import { HlavickaWidgetu } from "./widgety";
 import Link from "next/link";
 import { druh, kdyZjisteno, type Zaznam } from "@/lib/agregace";
 import { lidskaZmena } from "@/lib/archiv-text";
@@ -53,6 +54,32 @@ interface Radek {
   kam: string;
   tecka: string;
   nahled: Nahled;
+  /** Kolik stejných položek po sobě se do řádku sloučilo (revize 24. 9. 2026). */
+  pocet?: number;
+}
+
+/*
+  Stejná změna několik dní po sobě je jeden řádek, ne tři.
+
+  „Letiště Lublin a Rzeszów zastavena“ stálo v seznamu 16., 17. i 18. 9.
+  jako tři samostatné řádky; čtenář viděl tři události, byla jedna
+  opakovaná. Slučují se jen sousední položky se stejným textem, druhem
+  a zemí; řádek nese nejnovější datum a počet.
+*/
+function sloucOpakovani(radky: Radek[]): Radek[] {
+  const out: Radek[] = [];
+  for (const r of radky) {
+    const p = out[out.length - 1];
+    if (p && p.druh === r.druh && p.kodZeme === r.kodZeme && p.text === r.text) {
+      const n = (p.pocet ?? 1) + 1;
+      out[out.length - 1] = {
+        ...p,
+        pocet: n,
+        nahled: { ...p.nahled, radky: [`${n}× po sobě, ${datumPraha(r.kdy)} – ${datumPraha(p.kdy)}`, ...p.nahled.radky.slice(1)] },
+      };
+    } else out.push({ ...r });
+  }
+  return out;
 }
 
 const SLOVO: Record<Druh, string> = { stav: "stav", ceny: "ceny", opatreni: "opatření" };
@@ -176,7 +203,7 @@ function zOpatreni(zaznamy: Zaznam[]): Radek[] {
 
 /** Souhrn za 7 dní pro náhled rozklikávací oblasti na úvodní straně. */
 export function souhrnZmen(zaznamy: Zaznam[], snimky: Snimek[], ted: number) {
-  const vsechny = [...zeSnimku(snimky), ...zCen(ted), ...zOpatreni(zaznamy)].sort((a, b) => b.kdy.localeCompare(a.kdy));
+  const vsechny = sloucOpakovani([...zeSnimku(snimky), ...zCen(ted), ...zOpatreni(zaznamy)].sort((a, b) => b.kdy.localeCompare(a.kdy)));
   const tyden = vsechny.filter((r) => ted - new Date(r.kdy).getTime() <= 7 * 86_400_000);
   return {
     zlepseni: tyden.filter((r) => r.smer === "zlepseni").length,
@@ -186,11 +213,11 @@ export function souhrnZmen(zaznamy: Zaznam[], snimky: Snimek[], ted: number) {
   };
 }
 
-export function CoSeZmenilo({ zaznamy, snimky, ted, vnoreny = false }: { zaznamy: Zaznam[]; snimky: Snimek[]; ted: number; vnoreny?: boolean }) {
+export function CoSeZmenilo({ zaznamy, snimky, ted, vnoreny = false, osa = false }: { zaznamy: Zaznam[]; snimky: Snimek[]; ted: number; vnoreny?: boolean; /** Svislá časová osa místo tabulky, šest položek (úvod v2). */ osa?: boolean }) {
   const { nahled, kde, ukaz, skryj, pohyb } = useNahled();
 
-  const vsechny = [...zeSnimku(snimky), ...zCen(ted), ...zOpatreni(zaznamy)].sort((a, b) => b.kdy.localeCompare(a.kdy));
-  const radky = vsechny.slice(0, NEJVYS);
+  const vsechny = sloucOpakovani([...zeSnimku(snimky), ...zCen(ted), ...zOpatreni(zaznamy)].sort((a, b) => b.kdy.localeCompare(a.kdy)));
+  const radky = vsechny.slice(0, osa ? 6 : NEJVYS);
   /*
     Týden v hlavičce: zlepšení, zhoršení i opatření, každé zvlášť. Dřív
     tu stálo jen „N zhoršení“ a každé opatření se počítalo jako zhoršení —
@@ -208,36 +235,35 @@ export function CoSeZmenilo({ zaznamy, snimky, ted, vnoreny = false }: { zaznamy
   return (
     <section
       aria-label="Co se změnilo"
-      className={`relative flex flex-col overflow-hidden ${vnoreny ? "" : "rounded-[22px] border border-linka2 bg-plocha"}`}
+      className={`relative flex flex-col overflow-hidden ${vnoreny ? "" : "rounded-[22px] bg-plocha"}`}
       onPointerLeave={skryj}
     >
-      {/* Hlavička jako v Aktualitách: červená tečka a štítek. Ve vnořené variantě ji nese rozklikávací oblast. */}
-      <div className={`flex items-center justify-between gap-2 border-b border-linka2 px-4 py-3 ${vnoreny ? "hidden" : ""}`}>
-        <span className="flex items-center gap-2">
-          <span aria-hidden className="grid h-[18px] w-[18px] shrink-0 place-items-center rounded-full border border-akcent/50">
-            <span className="h-[6px] w-[6px] rounded-full bg-akcent" />
-          </span>
-          <h3 className="stitek">Co se změnilo</h3>
-          <Otaznik popis={<span className="block">{posledniKontrola ? `Úřední stavy kontrolovány ${datumPraha(posledniKontrola)}.` : "Bez záznamu o kontrole."}{posledniKontrola && zmenStavu === 0 ? " Za 90 dní beze změny." : ""}</span>} />
-        </span>
-        <span className="flex flex-wrap items-center justify-end gap-x-2 gap-y-0.5 text-mikro text-tlum2">
-          {zlepseni7 > 0 && <span className="flex items-center gap-1"><span aria-hidden className="h-[6px] w-[6px] rounded-full bg-klid" />{zlepseni7} zlepšení</span>}
-          {zhorseni7 > 0 && <span className="flex items-center gap-1"><span aria-hidden className="h-[6px] w-[6px] rounded-full bg-akcent" />{zhorseni7} zhoršení</span>}
-          {opatreni7 > 0 && <span>{opatreni7} {opatreni7 === 1 ? "opatření" : "opatření"}</span>}
-          <span>{zlepseni7 + zhorseni7 + opatreni7 > 0 ? "za 7 dní" : "za 7 dní beze změny"}</span>
-        </span>
-      </div>
+      {!vnoreny && (
+        <HlavickaWidgetu
+          ikona="osa"
+          nazev="Co se změnilo"
+          napoveda={<span className="block">{posledniKontrola ? `Úřední stavy kontrolovány ${datumPraha(posledniKontrola)}.` : "Bez záznamu o kontrole."}{posledniKontrola && zmenStavu === 0 ? " Za 90 dní beze změny." : ""}</span>}
+          meta={
+            <span className="flex flex-wrap items-center justify-end gap-x-2 gap-y-0.5">
+              {zlepseni7 > 0 && <span className="flex items-center gap-1"><span aria-hidden className="h-[6px] w-[6px] rounded-full bg-klid" />{zlepseni7} zlepšení</span>}
+              {zhorseni7 > 0 && <span className="flex items-center gap-1"><span aria-hidden className="h-[6px] w-[6px] rounded-full bg-akcent" />{zhorseni7} zhoršení</span>}
+              {opatreni7 > 0 && <span>{opatreni7} opatření</span>}
+              <span>{zlepseni7 + zhorseni7 + opatreni7 > 0 ? "za 7 dní" : "za 7 dní beze změny"}</span>
+            </span>
+          }
+        />
+      )}
 
       {radky.length > 0 ? (
-        <ol className="divide-y divide-linka2">
+        <ol className={osa ? "relative ml-[22px] mr-3 my-3 border-l border-linka2" : ""}>
           {radky.map((r) => (
-            <li key={r.klic} onPointerEnter={(e) => ukaz(r.nahled, e)} onPointerMove={pohyb}>
+            <li key={r.klic} className={osa ? "relative" : undefined} onPointerEnter={(e) => ukaz(r.nahled, e)} onPointerMove={pohyb}>
               <Link
                 href={r.kam}
-                className="flex items-start gap-2.5 px-4 py-2 hover:bg-plocha2"
+                className={osa ? "flex items-start gap-2.5 py-2 pl-4 pr-2 hover:bg-plocha2" : "flex items-start gap-2.5 px-4 py-2 hover:bg-plocha2"}
                 onFocus={(e) => { const b = e.currentTarget.getBoundingClientRect(); ukaz(r.nahled, { clientX: b.right, clientY: b.top }); }}
               >
-                <span aria-hidden className={`mt-[7px] h-[6px] w-[6px] shrink-0 rounded-full ${r.tecka}`} />
+                <span aria-hidden className={osa ? `absolute -left-[5px] top-[15px] h-[9px] w-[9px] rounded-full ring-2 ring-plocha ${r.tecka}` : `mt-[7px] h-[6px] w-[6px] shrink-0 rounded-full ${r.tecka}`} />
                 <span className="flex min-w-0 flex-1 items-start gap-2">
                   <span className="w-[18px] shrink-0 leading-[20px]" title={r.zeme ?? undefined} aria-label={r.zeme ?? undefined}>
                     {r.kodZeme ? <Vlajka kod={r.kodZeme} /> : null}
@@ -246,6 +272,7 @@ export function CoSeZmenilo({ zaznamy, snimky, ted, vnoreny = false }: { zaznamy
                   <span className="line-clamp-2 text-male leading-[20px] text-inkoust">
                     <span className="stitek mr-1.5 text-tlum2">{SLOVO[r.druh]}</span>
                     {r.text}
+                    {r.pocet && r.pocet > 1 ? <span className="cislice ml-1.5 text-mikro text-tlum2">{r.pocet}×</span> : null}
                   </span>
                 </span>
               </Link>
@@ -260,7 +287,7 @@ export function CoSeZmenilo({ zaznamy, snimky, ted, vnoreny = false }: { zaznamy
       <PanelNahledu nahled={nahled} kde={kde} />
 
       {/* Kdy se stavy kontrolovaly, říká puntík u nadpisu; patička nese jen cestu dál. */}
-      <div className="mt-auto flex items-center justify-end border-t border-linka2 px-4 py-2">
+      <div className="mt-auto flex items-center justify-end px-4 py-2">
         <Tlacitko kam="/vyvoj/" varianta="tichy" velikost="s" ikonaVpravo="nahoru" trida="[&>svg:last-child]:rotate-90">celý vývoj</Tlacitko>
       </div>
     </section>

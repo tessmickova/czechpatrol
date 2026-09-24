@@ -68,18 +68,18 @@ export function ZemePrehled({
     <>
       <PocitadlaZeme polozky={polozky} ted={ted} nazev={nazev} />
 
-      <div className="nalet mt-14 border-t border-linka pt-12 sm:mt-20 sm:pt-14">
+      <div className="nalet mt-16 sm:mt-24">
         <NadpisBloku
           nadpis="Čím je tlak tvořený"
-          popis={`Osy podle všech zveřejněných záznamů se zemí ${kodZeme} od roku 2014. Prázdná osa znamená, že takový záznam nemáme — ne že se nic nestalo.`}
+          popis={`Osy podle všech zveřejněných záznamů se zemí ${kodZeme} od roku 2014. Prázdná osa znamená, že takový záznam není doložený — ne že se nic nestalo.`}
         />
-        <div className="grid gap-4 lg:grid-cols-[minmax(0,1fr)_minmax(0,1fr)]">
+        <div className="grid gap-4 lg:grid-cols-[minmax(0,1fr)_minmax(0,1fr)] lg:gap-x-16">
           <PavucinaHrozeb
             nadpis={nazev}
             popis="Nejvyšší úroveň v každé oblasti od roku 2014, ne stav k dnešku."
             tlak={tlak}
           />
-          <section aria-label="Souhrn" className="rounded-[22px] border border-linka2 bg-plocha p-5 sm:p-6">
+          <section aria-label="Souhrn" className="rounded-[22px] bg-plocha p-5 sm:p-6">
             <h3 className="titul-mensi">Co o tom víme</h3>
             <dl className="mt-4 grid grid-cols-2 gap-x-5 gap-y-4 text-zaklad">
               <div>
@@ -100,7 +100,7 @@ export function ZemePrehled({
               </div>
             </dl>
             {kategorie.length > 0 && (
-              <div className="mt-5 border-t border-linka2 pt-4">
+              <div className="mt-5 pt-4">
                 <div className="stitek mb-2.5">Oblasti, které se tu objevily</div>
                 <ul className="flex flex-wrap gap-2">
                   {kategorie.map((k) => (
@@ -121,7 +121,7 @@ export function ZemePrehled({
       </div>
 
       {kampane.length > 0 && (
-        <div className="nalet mt-14 border-t border-linka pt-12 sm:mt-20 sm:pt-14">
+        <div className="nalet mt-16 sm:mt-24">
           <NadpisBloku
             nadpis="Manipulace a útoky mířené sem"
             popis="Připravené operace cílené na občany této země. Nepočítají se mezi případy — je to operace, ne událost."
@@ -134,13 +134,13 @@ export function ZemePrehled({
       )}
 
       {zjisteni.length > 0 && (
-        <div className="nalet mt-14 border-t border-linka pt-12 sm:mt-20 sm:pt-14">
+        <div className="nalet mt-16 sm:mt-24">
           <NadpisBloku nadpis="Nová zjištění" popis="Posuny ve vyšetřování: obvinění, rozsudky, úředně potvrzený pachatel." />
           <NovaZjisteni polozky={zjisteni} />
         </div>
       )}
 
-      <div className="nalet mt-14 border-t border-linka pt-12 sm:mt-20 sm:pt-14">
+      <div className="nalet mt-16 sm:mt-24">
         <NadpisBloku
           nadpis="Všechny záznamy"
           popis="Od nejnovějšího. Případy, jejich pokračování, úřední opatření i prohlášení."
@@ -152,7 +152,7 @@ export function ZemePrehled({
           </SeznamPolozek>
         ) : (
           <Sdeleni ikona="lupa">
-            Pro tuhle zemi zatím nemáme žádný ověřený záznam. Neznamená to, že se tam nic nestalo — jen že jsme nic nedoložili.
+            Pro tuhle zemi zatím není žádný doložený záznam. Neznamená to, že se tam nic nestalo.
           </Sdeleni>
         )}
       </div>

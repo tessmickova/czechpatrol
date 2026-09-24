@@ -8,7 +8,7 @@ import { vyrezZeStranky, type VyrezZdroje } from "./text-zdroje";
 import { ctenaProfily } from "./socialni";
 import { ctiProfil } from "./cteni-socialni";
 import type { Polozka } from "./typy";
-import { jeSankcionovane, POKYNY_TEXTU } from "../nastroje/zasady-textu.mjs";
+import { jeJenProjev, jeSankcionovane, POKYNY_TEXTU } from "../nastroje/zasady-textu.mjs";
 
 /*
   Automatický sběr událostí.
@@ -108,7 +108,7 @@ const DNI_ODMITNUTYCH = 7;
 /** Strop pro jeden běh, aby posouzení modelem nemohlo utéct do nákladů. */
 const MAX_POSUZOVANYCH = 120;
 
-export type DuvodOdmitnuti = "vylouceno-tematem" | "bez-skutku" | "bez-mista";
+export type DuvodOdmitnuti = "vylouceno-tematem" | "bez-skutku" | "bez-mista" | "jen-projev";
 
 export interface Odmitnuty {
   id: string;
@@ -169,6 +169,21 @@ const AKTY: { kategorie: string; slova: string[] }[] = [
     zveřejnění: kandidát jde do fronty a člověk rozhodne. Takový záznam patří
     do druhu „opatreni“, ne „pripad“, aby nenafukoval počty incidentů.
   */
+  /*
+    Varování před KONKRÉTNÍMI útoky (rozhodnutí provozovatelky 24. 9. 2026).
+    Zpráva „Rusko připravuje útoky drony z kontejnerů na lodích proti
+    státům ve Středomoří“ (El Mundo podle amerických služeb, Novinky)
+    spadla jako „bez-skutku“, protože příprava není čin. Jenže varování
+    státu, tajné služby nebo úřadu před konkrétním útokem je pro čtenáře
+    to podstatné — zachytí se a člověk rozhodne. Obecné řeči („hrozba
+    roste“) sem nepatří: slova níž chtějí útok a přípravu, ne náladu.
+  */
+  { kategorie: "hybridni", slova: [
+    "pripravuje utok", "pripravuje utoky", "pripravuje nove utoky", "planuje utok", "planuje utoky", "chysta utok", "chysta utoky",
+    "preparing attack", "preparing attacks", "preparing new attacks", "plans attack", "plans attacks", "planning attack", "planning attacks",
+    "plotting attack", "plotting attacks", "plot to attack", "warned of attack", "warns of attack", "warning of attack", "intelligence warns",
+    "varovaly pred utok", "varovala pred utok", "varoval pred utok", "varuje pred utok", "tajne sluzby varuj",
+  ] },
   { kategorie: "drony", slova: [
     "scrambl", "preventivni vzlet",
     "uzavrel vzdusny prostor", "uzavreni vzdusneho prostoru", "uzavrela vzdusny prostor",
@@ -1090,7 +1105,8 @@ export async function sbirejUdalosti(): Promise<{ novych: number; celkem: number
       if (jeSankcionovane(p.odkaz)) continue;
       if (p.publikovano && new Date(p.publikovano).getTime() < hranice) continue;
       const text = `${p.nadpis} ${p.shrnuti}`;
-      const duvod = duvodOdmitnuti(text);
+      // Řeči politiků bez rozhodnutí nejsou událost (24. 9. 2026): posuzuje se titulek.
+      const duvod = duvodOdmitnuti(text) ?? (jeJenProjev(p.nadpis) ? "jen-projev" : null);
       if (duvod) {
         /*
           Nic se nezahazuje: odmítnuté jde do přehledu pro člověka. S jednou

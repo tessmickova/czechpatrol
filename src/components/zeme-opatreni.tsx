@@ -22,13 +22,13 @@ export function ZemeOpatreni({ polozky, nazvy, aktualizovano }: {
   const nevime = polozky.filter((p) => p.stav === null && !p.nerelevantni);
 
   return (
-    <div className="nalet mt-14 border-t border-linka pt-12 sm:mt-20 sm:pt-14">
+    <div className="nalet mt-16 sm:mt-24">
       <NadpisBloku
         nadpis="Opatření"
         popis={`Doložené kroky a co z pevného výčtu chybí. Stav k ${datum(aktualizovano)}.`}
       />
       <div className="grid gap-4 lg:grid-cols-2">
-        <section aria-label="Přijatá opatření" className="rounded-[22px] border border-linka2 bg-plocha p-5 sm:p-6">
+        <section aria-label="Přijatá opatření" className="rounded-[22px] bg-plocha p-5 sm:p-6">
           <h3 className="titul-mensi">Přijato</h3>
           {prijata.length ? (
             <ul className="mt-4 space-y-3.5">
@@ -49,7 +49,7 @@ export function ZemeOpatreni({ polozky, nazvy, aktualizovano }: {
             <p className="mt-4 text-male text-tlum">Nic z výčtu jsme zatím nedoložili.</p>
           )}
         </section>
-        <section aria-label="Chybějící opatření" className="rounded-[22px] border border-linka2 bg-plocha p-5 sm:p-6">
+        <section aria-label="Chybějící opatření" className="rounded-[22px] bg-plocha p-5 sm:p-6">
           <h3 className="titul-mensi">Chybí</h3>
           <p className="stitek mt-1">Hodnocení projektu podle pevného výčtu</p>
           {chybi.length > 0 && (
@@ -67,7 +67,7 @@ export function ZemeOpatreni({ polozky, nazvy, aktualizovano }: {
           )}
           {nevime.length > 0 && (
             <>
-              <h4 className="stitek mt-5">Nedohledáno — nevíme, ne „nemá“</h4>
+              <h4 className="stitek mt-5">Nedohledáno — bez dokladu, ne „nemá“</h4>
               <p className="mt-2 text-male leading-relaxed text-tlum">
                 {nevime.map((p) => nazvy[p.klic] ?? p.klic).join(" · ")}
               </p>

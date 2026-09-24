@@ -273,7 +273,7 @@ function TeloRadku({ o, hustota }: { o: ObsahRadku; hustota: "husta" | "normalni
 /** Obal seznamu. `karta` = ohraničená deska, `holy` = řádky jen s linkou. */
 export function SeznamPolozek({ varianta = "karta", children }: { varianta?: "karta" | "holy"; children: ReactNode }) {
   return (
-    <ol className={varianta === "karta" ? "divide-y divide-linka2 overflow-hidden rounded-[22px] border border-linka2 bg-plocha" : ""}>
+    <ol className={varianta === "karta" ? "overflow-hidden rounded-[22px] bg-plocha" : ""}>
       {children}
     </ol>
   );
@@ -294,12 +294,12 @@ export function RadekSeznamu({
   const husta = hustota === "husta";
   const zaklad = `flex w-full items-start gap-2.5 text-left transition-colors hover:bg-plocha2 ${
     husta ? "px-3 py-1.5" : varianta === "karta" ? "px-4 py-3 sm:px-5" : "py-2.5"
-  } ${aktivni ? "bg-plocha2" : ""} ${varianta === "holy" ? "border-b border-linka2" : ""}`;
+  } ${aktivni ? "bg-plocha2" : ""} ${varianta === "holy" ? "" : ""}`;
 
   if (detail) {
     return (
       <li>
-        <details className={`group ${varianta === "holy" ? "border-b border-linka2" : ""}`}>
+        <details className={`group ${varianta === "holy" ? "" : ""}`}>
           <summary className={`${zaklad} cursor-pointer list-none ${varianta === "holy" ? "border-b-0" : ""}`}>
             <TeloRadku o={o} hustota={hustota} />
             <Ikona nazev="dolu" velikost={13} tah={2} trida="mt-1.5 shrink-0 text-tlum2 transition-transform group-open:rotate-180" />

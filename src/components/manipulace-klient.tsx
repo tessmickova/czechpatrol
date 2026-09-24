@@ -1,10 +1,10 @@
 "use client";
 
-import { useCallback, useEffect, useState } from "react";
+import { useCallback, useEffect, useState, useRef } from "react";
 import { METODY, PORADI_METOD, type Metoda } from "@/lib/metody";
 import type { Kampan } from "@/lib/typy";
 import { ctiDotaz, sledujDotaz, zapisDotaz } from "@/lib/url-stav";
-import { KartaKampane } from "./kampane";
+import { DlazdiceKampane, KartaKampane } from "./kampane";
 import { Ikona } from "./ikony";
 import { Odznak, Sdeleni, Tlacitko } from "./ui";
 import { sklon, Vlajka } from "./zeme";
@@ -45,6 +45,11 @@ export function ManipulaceKlient({
 }: {
   kampane: Kampan[]; nazvyZemi: Record<string, string>;
 }) {
+  /* Otevřený rozbor: z kotvy v adrese (#slug), jinak nic. */
+  const [otevreny, setOtevreny] = useState<string | null>(null);
+  const rozborRef = useRef<HTMLDivElement>(null);
+  useEffect(() => { const h = decodeURIComponent(location.hash.slice(1)); if (h) setOtevreny(h); }, []);
+  useEffect(() => { if (otevreny) rozborRef.current?.scrollIntoView({ behavior: "smooth", block: "start" }); }, [otevreny]);
   const [f, setF] = useState<Filtr>({ zeme: null, metoda: null });
   useEffect(() => {
     const nacti = () => setF(zAdresy(ctiDotaz()));
@@ -81,7 +86,7 @@ export function ManipulaceKlient({
 
   return (
     <>
-      <div className="space-y-1.5 border-b border-linka2 pb-3" role="group" aria-label="Filtr operací">
+      <div className="space-y-1.5 pb-3" role="group" aria-label="Filtr operací">
         <div className="flex flex-wrap items-center gap-1">
           <span className="stitek mr-1 w-[62px] shrink-0">Země</span>
           <button type="button" onClick={() => zmen({ zeme: null })} className={cip(f.zeme === null)}>Vše</button>
@@ -132,8 +137,25 @@ export function ManipulaceKlient({
       </p>
 
       {vysledek.length ? (
-        <div className="space-y-5">
-          {vysledek.map((k) => <KartaKampane key={k.slug} k={k} nazvyZemi={nazvyZemi} />)}
+        <div>
+          {/*
+            Malé dlaždice ve dvou sloupcích, rozbor se otevře pod nimi na
+            klepnutí (24. 9. 2026, podle zadání) — stránka se neroztahuje
+            šesti rozbory pod sebou a přepínání mezi kampaněmi je rychlé.
+          */}
+          <div className="grid gap-3 sm:grid-cols-2" role="list">
+            {vysledek.map((k) => (
+              <div key={k.slug} role="listitem" className={`rounded-[22px] transition-shadow ${otevreny === k.slug ? "ring-1 ring-akcent/60" : ""}`}
+                onClickCapture={(e) => { e.preventDefault(); setOtevreny((o) => (o === k.slug ? null : k.slug)); }}>
+                <DlazdiceKampane k={k} nazvyZemi={nazvyZemi} />
+              </div>
+            ))}
+          </div>
+          {otevreny && vysledek.some((k) => k.slug === otevreny) && (
+            <div id={otevreny} ref={rozborRef} className="pop mt-6 scroll-mt-[84px]">
+              <KartaKampane k={vysledek.find((k) => k.slug === otevreny)!} nazvyZemi={nazvyZemi} />
+            </div>
+          )}
         </div>
       ) : (
         <Sdeleni ikona="lupa">

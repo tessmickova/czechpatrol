@@ -8,8 +8,8 @@ import { NavadeniZapojeni } from "@/components/zapojit-klient";
 import { RegistraceSW } from "@/components/pwa";
 import { Paticka } from "@/components/paticka";
 import { PruhPuvodu, UkazkaPruh } from "@/components/pruhy";
-import { StavKontrolyVedle } from "@/components/banner-stari-klient";
-import { posledniKontrola } from "@/lib/data";
+import { PulzKratky } from "@/components/pulz-kratky";
+import { pulz } from "@/lib/pulz";
 import { PruhVystrahy } from "@/components/vystraha";
 import { Znacka } from "@/components/znacka";
 import { SKRIPT_POHYBU } from "@/components/pohyb";
@@ -92,7 +92,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           Přeskočit na obsah
         </a>
         {/* Lišta původu je první věc na stránce, nad menu: kdo to píše a kdy naposled kontroloval. */}
-        <PruhPuvodu vpravo={<StavKontrolyVedle zkontrolovano={posledniKontrola()} ted={Date.now()} />} />
+        <PruhPuvodu vpravo={<PulzKratky pulz={pulz()} ted={Date.now()} />} />
         <Navigace />
         {/*
           Výstraha stojí nad obsahem, hned pod menu. Když platí, je to
@@ -106,7 +106,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           sáhnout odkudkoli ze stránky.
         */}
         <DialogProvider>
-          <main id="obsah" className="pb-[calc(60px+env(safe-area-inset-bottom))] md:pb-0">{children}</main>
+          <main id="obsah" className="pt-3 pb-[calc(60px+env(safe-area-inset-bottom))] sm:pt-5 md:pb-0">{children}</main>
         </DialogProvider>
         <Paticka />
         <PostranniPanel />

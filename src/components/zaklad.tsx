@@ -176,7 +176,7 @@ const TYPY: Record<TypObsahu, { nazev: string; popis: string; tridy: string }> =
   },
   nepotvrzeno: {
     nazev: "Nepotvrzeno",
-    popis: "Informace existuje, ale nemáme dost důkazů. Nezvyšuje sama o sobě hodnocení.",
+    popis: "Informace existuje, ale zatím bez dostatečného doložení. Nezvyšuje sama o sobě hodnocení.",
     tridy: "border-jantar/40 bg-jantar/10 text-jantar",
   },
 };
@@ -289,7 +289,7 @@ export function Neovereno({ kratke = false }: { kratke?: boolean }) {
   return (
     <span className="inline-flex items-center gap-1.5 text-male font-medium text-tlum2">
       <span aria-hidden className="inline-block h-[7px] w-[7px] rounded-full border border-linka" />
-      {kratke ? "neověřeno" : "Zatím neověřeno"}
+      {kratke ? "bez údaje" : "Zatím bez údaje"}
     </span>
   );
 }

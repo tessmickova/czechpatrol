@@ -320,7 +320,7 @@ export function SpravaKlient() {
         <h2 className="podnadpis mb-4 text-velke">Kdo co změnil</h2>
         <ul className="space-y-1.5 text-male">
           {audit.map((a) => (
-            <li key={a.id} className="flex flex-wrap gap-x-3 border-b border-linka2 py-1.5">
+            <li key={a.id} className="flex flex-wrap gap-x-3 py-1.5">
               <span className="cislice text-tlum2">{datumCas(a.kdy)}</span>
               <span className="cislice text-tlum">#{a.kdo.slice(0, 8)}</span>
               <span className="text-inkoust">{a.co}</span>

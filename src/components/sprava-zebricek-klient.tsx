@@ -50,7 +50,7 @@ export function SpravaZebricku() {
       <p className="mt-2 text-male text-tlum">Kontakt je tu jen k pozvání do komunity; čtení této stránky s kontakty je v auditu. Veřejně je vidět přezdívka, skóre, datum a kraj.</p>
       {hlaska && <div className="mt-3"><Hlaska typ={hlaska.typ}>{hlaska.text}</Hlaska></div>}
       {zaznamy.length > 0 && (
-        <ul className="mt-4 divide-y divide-linka2">
+        <ul className="mt-4">
           {zaznamy.map((z) => (
             <li key={z.id} className="py-3">
               <div className="flex flex-wrap items-center gap-x-3 gap-y-1 text-male">

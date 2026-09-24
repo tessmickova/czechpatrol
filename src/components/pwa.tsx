@@ -20,6 +20,25 @@ export function RegistraceSW() {
   }, []);
 
   useEffect(() => {
+    /*
+      Po nasazení se soubory buildu přejmenují a otevřená stránka může při
+      přechodu sáhnout po souboru, který už neexistuje. Místo prázdné
+      stránky se jednou obnoví na aktuální adresu (jen jednou, ať se to
+      netočí).
+    */
+    const naChybu = (e: ErrorEvent | PromiseRejectionEvent) => {
+      const zprava = String(("reason" in e ? e.reason?.message ?? e.reason : e.message) ?? "");
+      if (!/ChunkLoadError|Loading chunk|Failed to fetch dynamically imported module|Importing a module script failed/i.test(zprava)) return;
+      if (sessionStorage.getItem("cp:obnoveno") === location.href) return;
+      try { sessionStorage.setItem("cp:obnoveno", location.href); } catch { /* bez úložiště se obnoví i tak */ }
+      location.reload();
+    };
+    addEventListener("error", naChybu);
+    addEventListener("unhandledrejection", naChybu);
+    return () => { removeEventListener("error", naChybu); removeEventListener("unhandledrejection", naChybu); };
+  }, []);
+
+  useEffect(() => {
     if (!("serviceWorker" in navigator)) return;
     if (location.protocol !== "https:") return;
     if (document.documentElement.dataset.nahled === "1") return;

@@ -74,7 +74,7 @@ export default function ZapojitSe() {
           >
             <ZajemFormular zdroj="zapojit-se" />
             {!EMAIL_ODBER_BEZI && (
-              <p className="mt-3 text-male text-tlum">Souhrn zatím nevychází. Až bude, napíšeme to sem první.</p>
+              <p className="mt-3 text-male text-tlum">Souhrn připravujeme; první ho dostanete sem.</p>
             )}
           </Krok>
           )}

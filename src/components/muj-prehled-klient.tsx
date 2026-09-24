@@ -27,13 +27,13 @@ import { Vlajka } from "./zeme";
 /** Co vidí nepřihlášený místo obsahu: zámek, jedna věta, cesta k přihlášení. */
 export function Zamceno({ co }: { co: string }) {
   return (
-    <div className="rounded-[22px] border border-linka2 bg-plocha p-5 sm:p-6">
+    <div className="rounded-[22px] bg-plocha p-5 sm:p-6">
       <div className="flex items-start gap-3">
         <span className="grid h-10 w-10 shrink-0 place-items-center rounded-[12px] bg-akcent/15 text-akcent"><Ikona nazev="zamek" velikost={18} tah={2} /></span>
         <div className="min-w-0">
           <p className="text-vetsi font-bold text-inkoust">{co} je pro přihlášené</p>
           <p className="mt-1 text-male text-tlum">
-            {UCTY_ZAPNUTE ? "Účet je bez jména a e-mailu, passkey v zařízení. Založení trvá minutu." : "Účty zatím neběží. Až poběží, otevře se tu."}
+            {UCTY_ZAPNUTE ? "Účet je bez jména a e-mailu, passkey v zařízení. Založení trvá minutu." : "Účty připravujeme. Otevřou se tady."}
           </p>
           {UCTY_ZAPNUTE && (
             <p className="mt-3"><Tlacitko kam="/ucet/" varianta="plny" velikost="m" ikona="zamek">Přihlásit nebo založit účet</Tlacitko></p>
@@ -116,7 +116,7 @@ export function MujPrehledKlient({ zaznamy }: { zaznamy: Zaznam[] }) {
   if (!ucet) return <Zamceno co="Můj přehled" />;
 
   return (
-    <div className="grid gap-10 lg:grid-cols-[minmax(0,1fr)_360px]">
+    <div className="grid gap-10 lg:grid-cols-[minmax(0,1fr)_360px] lg:gap-x-16">
       <div className="min-w-0 space-y-8">
         <p role="status" className="inline-flex items-center gap-2 rounded-[12px] border border-linka bg-plocha px-3 py-2 text-male text-tlum">
           <Ikona nazev="zamek" velikost={13} tah={2} />
@@ -157,7 +157,7 @@ export function MujPrehledKlient({ zaznamy }: { zaznamy: Zaznam[] }) {
           {!nacteno ? null : !maVyber ? (
             <p className="mt-2 text-zaklad text-tlum">Zatím nic nesledujete. Vyberte zemi nebo téma výše.</p>
           ) : vybrane.length ? (
-            <ol className="mt-3 divide-y divide-linka2 border-y border-linka2">
+            <ol className="mt-3 border-y border-linka2">
               {vybrane.map((z) => (
                 <li key={z.id}>
                   <Link href={`/incident/${z.slug}/`} className="flex min-h-[44px] items-center gap-3 py-2 hover:bg-plocha">
@@ -222,8 +222,10 @@ export function UlozitUdalost({ slug }: { slug: string }) {
   if (!nacteno || nacita) return null;
   /* Bez účtu se neukládá — tlačítko to říká zámkem a vede na přihlášení. */
   if (!ucet) {
+    // Bez účtové služby se tlačítko neukazuje vůbec — mrtvá výzva pod titulkem (revize 24. 9. 2026).
+    if (!UCTY_ZAPNUTE) return null;
     return (
-      <Link href="/ucet/" className="inline-flex min-h-[40px] items-center gap-1.5 rounded-[12px] border border-linka px-3 text-male font-semibold text-tlum2 hover:border-akcent hover:text-inkoust">
+      <Link href="/ucet/" className="inline-flex min-h-[36px] items-center gap-1.5 rounded-full px-2.5 text-drobne font-semibold text-tlum2 hover:bg-plocha2 hover:text-inkoust">
         <span className="text-akcent"><Ikona nazev="zamek" velikost={13} tah={2.2} /></span> Uložit do Mého přehledu · po přihlášení
       </Link>
     );

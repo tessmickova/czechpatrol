@@ -95,7 +95,7 @@ export function GrafSouvislosti({
         </svg>
       </div>
 
-      <ul className="mt-5 space-y-2.5 border-t border-linka2 pt-4">
+      <ul className="mt-5 space-y-2.5 pt-4">
         {souvisejici.map((s) => (
           <li key={s.incident.id} className="flex flex-wrap items-baseline gap-x-2.5 gap-y-1">
             <span

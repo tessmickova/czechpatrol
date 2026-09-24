@@ -93,7 +93,7 @@ export default function Analyzy() {
       <ul className="nalet mt-6 grid gap-3 sm:grid-cols-2">
         {karty.map((k) => (
           <li key={k.href}>
-            <Link href={k.href} className="flex h-full flex-col gap-3 rounded-[28px] border border-linka2 bg-plocha p-6 transition-colors hover:border-akcent">
+            <Link href={k.href} className="flex h-full flex-col gap-3 rounded-[28px] bg-plocha p-6 transition-colors hover:border-akcent">
               <span className="flex items-center gap-2.5">
                 <span className="grid h-10 w-10 place-items-center rounded-full bg-plocha2 text-akcent"><Ikona nazev={k.ikona} velikost={19} tah={1.8} /></span>
                 <span className="stitek-znacky">{k.stitek}</span>

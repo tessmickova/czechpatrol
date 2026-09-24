@@ -25,23 +25,12 @@ export interface Jazyk {
   duvod: string;
 }
 
-export const JAZYKY: Jazyk[] = [
-  { kod: "en", nazev: "English", cesky: "angličtina", duvod: "dorozumívací jazyk napříč regionem" },
-  { kod: "de", nazev: "Deutsch", cesky: "němčina", duvod: "Německo a Rakousko" },
-  { kod: "pl", nazev: "Polski", cesky: "polština", duvod: "Polsko" },
-  { kod: "sk", nazev: "Slovenčina", cesky: "slovenština", duvod: "Slovensko" },
-  { kod: "uk", nazev: "Українська", cesky: "ukrajinština", duvod: "Ukrajina" },
-  { kod: "lt", nazev: "Lietuvių", cesky: "litevština", duvod: "Litva" },
-  { kod: "lv", nazev: "Latviešu", cesky: "lotyština", duvod: "Lotyšsko" },
-  { kod: "et", nazev: "Eesti", cesky: "estonština", duvod: "Estonsko" },
-  { kod: "fi", nazev: "Suomi", cesky: "finština", duvod: "Finsko" },
-  { kod: "sv", nazev: "Svenska", cesky: "švédština", duvod: "Švédsko" },
-  { kod: "nb", nazev: "Norsk", cesky: "norština", duvod: "Norsko" },
-  { kod: "da", nazev: "Dansk", cesky: "dánština", duvod: "Dánsko" },
-  { kod: "ro", nazev: "Română", cesky: "rumunština", duvod: "Rumunsko a Moldavsko" },
-  { kod: "bg", nazev: "Български", cesky: "bulharština", duvod: "Bulharsko" },
-  { kod: "hu", nazev: "Magyar", cesky: "maďarština", duvod: "Maďarsko" },
-];
+/*
+  Od 24. 9. 2026 jen čeština (rozhodnutí provozovatelky). Seznam je prázdný,
+  cizojazyčné větve se nesestavují; staré adresy /en/… vedou přes _redirects
+  na české znění. Typ a pomocné funkce zůstávají, ať se dá jazyk vrátit.
+*/
+export const JAZYKY: Jazyk[] = [];
 
 export const KODY_JAZYKU = JAZYKY.map((j) => j.kod);
 

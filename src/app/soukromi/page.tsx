@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { ObsahStranky } from "@/components/obsah-stranky";
 import { HlavickaStranky, Obsah } from "@/components/hlavicka";
 import { Karta } from "@/components/zaklad";
 import { KONTAKTY_PRIJIMAME, PROVOZOVATEL, PROVOZOVATEL_TEXT, WEB } from "@/config/web";
@@ -38,6 +39,7 @@ export default function SoukromiStranka() {
         popis="Web se dá číst bez účtu a bez sledování. Účet je anonymní. Tady je přesně, co se ukládá, proč, na jak dlouho a jak to smažete."
         doplnek={<span className="stitek !text-noc-tlum">Platí od {REVIZE}</span>}
       />
+      <ObsahStranky />
       <Obsah>
         {/*
           Dokud chybí provozovatel, server kontakty a platby odmítá
@@ -108,7 +110,7 @@ export default function SoukromiStranka() {
             <p>Na stránce <b>Zapojit se</b> můžete nechat e-mail, když chcete občasný souhrn, pozvánku do komunity, nebo chcete pomáhat. Uložíme <b>jen adresu</b>, co jste zaškrtli, čas a znění souhlasu a slovo, ze které stránky jste přišli. Nic jiného.</p>
             <p>Právní základ: souhlas (čl. 6 odst. 1 písm. a GDPR). Odvoláte ho odkazem v každém e-mailu nebo zprávou správci; adresu do 30 dnů smažeme. Adresu, které do roka nic nepřišlo, smažeme také.</p>
             <p><b>Žebříček připravenosti</b> (stránka Odolnost domácnosti) je pro přihlášené anonymní účty: k účtu se uloží skóre, datum, kraj a počet osob (bez jmen) a vygenerovaná přezdívka. Veřejně je vidět jen přezdívka, skóre, datum a kraj. Kontakt (e-mail a telefon) je <b>nepovinný</b>: pokud ho necháte, uloží se šifrovaně, vidí ho pouze správce a slouží k pozvání do komunity. Právní základ: souhlas. Ze žebříčku odejdete jedním tlačítkem, záznam i kontakt zmizí hned; sami mažeme záznamy bez pohybu po roce.</p>
-            <p>Adresu nikomu nepředáváme, nepoužíváme ji k reklamě a neposíláme z ní nic, co jste si nevybrali. Souhrn zatím nevychází; dokud nevyjde, nic nepřijde.</p>
+            <p>Adresu nikomu nepředáváme, nepoužíváme ji k reklamě a neposíláme z ní nic, co jste si nevybrali. Souhrn připravujeme; do jeho spuštění nic neposíláme.</p>
           </Oddil>
 
           <Oddil cislo="06" nadpis="Bezpečnost a audit">

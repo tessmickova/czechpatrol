@@ -46,6 +46,21 @@ const NAZVY = {
 */
 const OKNO_HODIN = 48;
 
+/**
+ * Stav naléhavosti pro postranní souhrn (úvod v2): jedno slovo, jedna barva.
+ * Táž logika jako pás níž — výstraha, naléhavá zachycená zpráva, stará
+ * data (žádná zelená bez čerstvé kontroly), jinak klid.
+ */
+export function stavNalehavosti(kandidati: Kandidat[], zkontrolovano: string | null, ted: number): { ton: "deje" | "stary" | "klid"; text: string; dodatek: string | null } {
+  const v = vystraha();
+  if (v) return { ton: "deje", text: `Platí: ${v.nadpis}`, dodatek: datumCasPraha(v.kdy) };
+  const n = naliehaveVOkne(kandidati, ted);
+  if (n.length) return { ton: "deje", text: n.length === 1 ? "Naléhavá zpráva čeká na ověření" : `${n.length} naléhavé zprávy čekají na ověření`, dodatek: NAZVY[n[0].naliehave!.druh] };
+  const stary = !zkontrolovano || ted - new Date(zkontrolovano).getTime() > HODIN_DO_VYPADKU * 3_600_000;
+  if (stary) { const h = zkontrolovano ? Math.round((ted - new Date(zkontrolovano).getTime()) / 3_600_000) : null; return { ton: "stary", text: h === null ? "Kontrola zdrojů" : `Poslední kontrola před ${h} h`, dodatek: zkontrolovano ? datumCasPraha(zkontrolovano) : null }; }
+  return { ton: "klid", text: `Nic naléhavého za ${OKNO_HODIN} h`, dodatek: "žádná mobilizace, krizové vysílání ani mimořádný stav" };
+}
+
 /** Naléhavé zachycené zprávy uvnitř okna, nejnovější první. Nejvýš tři. */
 export function naliehaveVOkne(kandidati: Kandidat[], ted: number) {
   return kandidati
@@ -75,8 +90,8 @@ export function UrgentniUpozorneni({
   const naliehave = naliehaveVOkne(kandidati, useZiveHodiny(ted));
 
   return (
-    <section aria-labelledby="urgentni-nadpis" className="mt-4 overflow-hidden rounded-[20px] border border-linka2 bg-plocha">
-      <div className="flex flex-wrap items-center justify-between gap-x-4 gap-y-1 border-b border-linka2 px-4 py-2.5">
+    <section aria-labelledby="urgentni-nadpis" className="mt-4 overflow-hidden rounded-[20px] bg-plocha">
+      <div className="flex flex-wrap items-center justify-between gap-x-4 gap-y-1 px-4 py-2.5">
         <h2 id="urgentni-nadpis" className="stitek flex items-center gap-1.5">
           <Ikona nazev="sirena" velikost={12} tah={2} />
           Urgentní upozornění
@@ -125,7 +140,7 @@ export function UrgentniUpozorneni({
         </div>
       )}
 
-      <div className="border-t border-linka2 px-4 py-2">
+      <div className="px-4 py-2">
         <Link href="/odber/" className="stitek inline-flex min-h-[32px] items-center text-tlum2 transition-colors hover:text-inkoust">
           Jak se to dozvíte hned →
         </Link>
@@ -149,7 +164,7 @@ export function UrgentniPas({ kandidati, zkontrolovano, ted = Date.now() }: { ka
   /* Stará data nejsou klid: bez zelené, když sběr dlouho neběžel. */
   const stary = !zkontrolovano || nyni - new Date(zkontrolovano).getTime() > HODIN_DO_VYPADKU * 3_600_000;
   return (
-    <div className={`flex flex-wrap items-center gap-x-4 gap-y-2 rounded-[18px] border px-4 py-3 ${deje ? "border-akcent/70" : stary ? "border-linka" : "border-klid/60"}`} role="status" aria-label="Urgentní upozornění">
+    <div className={`flex flex-wrap items-center gap-x-4 gap-y-2 rounded-[22px] border px-4 py-3 ${deje ? "border-akcent/70" : stary ? "border-linka" : "border-klid/60"}`} role="status" aria-label="Urgentní upozornění">
       <span aria-hidden className={`h-[7px] w-[7px] shrink-0 rounded-full ${deje ? "bg-akcent" : stary ? "bg-tlum2" : "bg-klid"}`} />
       {/* Minimální šířka textu: na úzkém displeji spadne tlačítko pod text, místo aby text mačkalo do sloupečku. */}
       <span className="min-w-[14rem] flex-1 text-male leading-snug text-tlum">

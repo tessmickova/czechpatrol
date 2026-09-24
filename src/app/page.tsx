@@ -1,5 +1,11 @@
 import { Dashboard } from "@/components/dashboard";
 import { archiv, celkovyStav, oficialniNastroje, hybridniTlak, incidenty, kampane, kandidati, nato, nazvyZemi, nepotvrzene, nepotvrzeneZaznamy, posledniKontrola, posledniOvereni, pravniStav, provoz, tlakCr, tydny, overovaneAktivni, overovaneUzavrene, urovenObcanu, watchlist } from "@/lib/data";
+import { pripravitTed } from "@/lib/priprava";
+import { odlehci } from "@/lib/odlehci";
+import { pulz } from "@/lib/pulz";
+import { souhrnSituace } from "@/lib/souhrn-situace";
+import type { Incident } from "@/lib/typy";
+
 import { hlavniVeta } from "@/lib/veta";
 
 /**
@@ -23,9 +29,12 @@ export default function Prehled() {
         natoPolozky={nato().polozky}
         provozPolozky={provoz().polozky}
         overeno={posledniOvereni()}
-        vse={incidenty()}
+        vse={incidenty().map(odlehci)}
         neprosle={nepotvrzene()}
-        kandidati={kandidati()}
+        priprava={pripravitTed()}
+        pulz={pulz()}
+        souhrn={souhrnSituace(ted)}
+        kandidati={kandidati().filter((k) => k.naliehave || Date.now() - new Date(k.publikovano ?? k.zachyceno).getTime() <= 72 * 3_600_000)}
         nepotvrzene={nepotvrzeneZaznamy()}
         tydny={tydny()}
         watchlist={watchlist()}

@@ -46,7 +46,7 @@ type Obdobi = (typeof OBDOBI)[number]["klic"];
   záložky se musí otevřít vědomě.
 */
 const ZALOZKY = [
-  { klic: "overene", nazev: "Ověřené záznamy", popis: "prošly lidskou kontrolou a počítají se" },
+  { klic: "overene", nazev: "Doložené záznamy", popis: "dva nezávislé nebo úřední zdroje, schválené k zveřejnění; počítají se" },
   /*
     Nepotvrzené stojí mezi ověřenými a zachycenými schválně. Je to zpracovaná
     zpráva se zdroji — víc než holý titulek ze sběru, míň než záznam, za
@@ -54,8 +54,8 @@ const ZALOZKY = [
     by se tím nafoukl a druhý zlehčil.
   */
   { klic: "nepotvrzene", nazev: "Nepotvrzené", popis: "zpracované, čekají na schválení nebo úřední zdroj" },
-  { klic: "cekajici", nazev: "Čeká na ověření", popis: "automatický sběr; do žádného počtu nevstupuje" },
-  { klic: "neproslo", nazev: "Neprošlo ověřením", popis: "vyvráceno nebo nedoloženo; do žádného počtu nevstupuje" },
+  { klic: "cekajici", nazev: "Čeká na posouzení", popis: "automatický sběr; do žádného počtu nevstupuje" },
+  { klic: "neproslo", nazev: "Nedoloženo", popis: "vyvráceno nebo bez dokladu; do žádného počtu nevstupuje" },
 ] as const;
 type Zalozka = (typeof ZALOZKY)[number]["klic"];
 
@@ -285,10 +285,11 @@ export function UdalostiKlient({ zaznamy, neprosle, kandidati = [], nepotvrzene 
   const pripadu = vysledek.filter((r) => r.typ === "zaznam" && druh(r.z) === "pripad").length;
 
   return (
-    <div className={`grid gap-8 ${siroky && otevreny ? "lg:grid-cols-[minmax(0,1fr)_minmax(380px,44%)]" : ""}`}>
+    <div className={`grid gap-8 ${siroky && otevreny ? "lg:grid-cols-[minmax(0,1fr)_minmax(380px,44%)] lg:gap-x-16" : ""}`}>
       <div className="min-w-0">
         {/* záložky — co se vlastně ukazuje */}
-        <div role="tablist" aria-label="Co zobrazit" className="flex flex-wrap gap-1.5">
+        {/* Na mobilu posuvný řádek, ne čtyři záložky pod sebou (revize 24. 9. 2026). */}
+        <div role="tablist" aria-label="Co zobrazit" className="pas-scroll -mx-4 flex gap-1.5 overflow-x-auto px-4 sm:mx-0 sm:flex-wrap sm:px-0">
           {ZALOZKY.map((z) => {
             const n = z.klic === "overene" ? zaznamy.length
               : z.klic === "nepotvrzene" ? nepotvrzene.length
@@ -302,7 +303,7 @@ export function UdalostiKlient({ zaznamy, neprosle, kandidati = [], nepotvrzene 
                 role="tab"
                 aria-selected={akt}
                 onClick={() => zmen({ zalozka: z.klic })}
-                className={`flex min-h-[46px] flex-col justify-center rounded-[18px] border px-3.5 py-1.5 text-left transition-colors ${
+                className={`flex min-h-[44px] shrink-0 flex-col justify-center rounded-[18px] border px-3.5 py-1.5 text-left transition-colors sm:min-h-[46px] ${
                   akt ? "border-akcent/60 bg-akcent/15 text-inkoust" : "border-transparent text-tlum hover:bg-plocha2 hover:text-inkoust"
                 }`}
               >
@@ -310,15 +311,15 @@ export function UdalostiKlient({ zaznamy, neprosle, kandidati = [], nepotvrzene 
                   {z.nazev}
                   <span className={`cislice rounded-full px-1.5 py-[1px] text-mikro ${akt ? "bg-akcent/25 text-akcent-svetla" : "bg-plocha2 text-tlum2"}`}>{n}</span>
                 </span>
-                <span className="text-mikro leading-tight text-tlum2">{z.popis}</span>
+                <span className="hidden text-mikro leading-tight text-tlum2 sm:block">{z.popis}</span>
               </button>
             );
           })}
         </div>
 
         {f.zalozka === "nepotvrzene" && (
-          <Sdeleni ton="akcent" ikona="otaznik" carkovane nadpis="Stalo se to, ale my za to zatím neručíme." trida="mt-3">
-            Zpracované zprávy se zdroji, zatím bez potvrzení. Do počtů ani hodnocení nejdou. Potvrdí se schválením, nebo samy se dvěma zdroji včetně úředního.
+          <Sdeleni ton="akcent" ikona="otaznik" carkovane nadpis="Zprávy čekají na druhý nezávislý nebo úřední zdroj." trida="mt-3">
+            Zpracované zprávy se zdroji. Do počtů ani hodnocení nevstupují; zveřejní se schválením, nebo samy se dvěma zdroji včetně úředního.
           </Sdeleni>
         )}
         {f.zalozka === "cekajici" && (
@@ -333,7 +334,7 @@ export function UdalostiKlient({ zaznamy, neprosle, kandidati = [], nepotvrzene 
         )}
 
         {/* filtry — kompaktně; na jedné řádce to, co lidé mění nejčastěji */}
-        <div className="mt-3 space-y-1.5 border-b border-linka2 pb-3" role="group" aria-label="Filtry">
+        <div className="mt-3 space-y-1.5 pb-3" role="group" aria-label="Filtry">
           <div className="flex flex-wrap items-center gap-1">
             <span className="stitek mr-1 w-[62px] shrink-0">Období</span>
             {OBDOBI.map((o) => <Cip key={o.klic} aktivni={f.obdobi === o.klic} onClick={() => zmen({ obdobi: o.klic })}>{o.nazev}</Cip>)}
@@ -351,7 +352,7 @@ export function UdalostiKlient({ zaznamy, neprosle, kandidati = [], nepotvrzene 
           </div>
 
           {(pokrocile || maPokrocile) && (
-            <div className="space-y-1.5 border-t border-linka2 pt-2">
+            <div className="space-y-1.5 pt-2">
               <div className="flex flex-wrap items-center gap-1">
                 <span className="stitek mr-1 w-[62px] shrink-0">Země</span>
                 <Cip aktivni={f.zeme === null} onClick={() => zmen({ zeme: null })}>Vše</Cip>
@@ -417,7 +418,7 @@ export function UdalostiKlient({ zaznamy, neprosle, kandidati = [], nepotvrzene 
           {vysledek.length === 0
             ? "Žádný záznam neodpovídá filtru."
             : f.zalozka === "overene"
-              ? `${vysledek.length} ${sklon(vysledek.length, "ověřený záznam", "ověřené záznamy", "ověřených záznamů")} · z toho ${pripadu} ${sklon(pripadu, "případ", "případy", "případů")} · řazeno podle data zjištění`
+              ? `${vysledek.length} ${sklon(vysledek.length, "doložený záznam", "doložené záznamy", "doložených záznamů")} · z toho ${pripadu} ${sklon(pripadu, "případ", "případy", "případů")} · řazeno podle data zjištění`
               : f.zalozka === "nepotvrzene"
                 ? `${vysledek.length} ${sklon(vysledek.length, "nepotvrzený záznam", "nepotvrzené záznamy", "nepotvrzených záznamů")} · do počtů nevstupují · řazeno podle data`
                 : `${vysledek.length} ${sklon(vysledek.length, "položka", "položky", "položek")} · řazeno podle data`}
@@ -520,30 +521,29 @@ function RadekZaznamu({ z, otevreny, onOtevri, siroky }: { z: Zaznam; otevreny: 
         titulek: <span className={otevreny ? "text-akcent-svetla" : undefined}>{z.titulek}</span>,
         znacky: (
           /*
-            Čtyři údaje, podle kterých se pozná, jestli se dá záznamu věřit.
-            Dřív to byly stejně vypadající pilulky v řadě a splývaly.
+            Čtyři údaje, podle kterých se pozná, jestli se dá záznamu věřit —
+            jako jeden řádek (revize 24. 9. 2026). Čtyři bloky s popiskem
+            a hodnotou pod sebou dělaly ze záznamu na mobilu 330 px. Plné
+            popisky jsou na stránce záznamu.
           */
-          <RadaUdaju>
-            {dr === "pripad" && <UdajZavaznosti uroven={z.zavaznost} />}
-            <Udaj popisek="Jistota informace" hodnota={JISTOTY[jistota].nazev} ton={dobraInfo ? "dobry" : "neutral"} />
+          <span className="mt-1.5 flex flex-wrap items-center gap-x-1.5 gap-y-1 text-drobne leading-snug text-tlum">
             {dr === "pripad" && (
-              <Udaj
-                popisek="Původce"
-                ton={pachatel ? "dobry" : z.puvodce ? "pozor" : "neutral"}
-                hodnota={
-                  <>
-                    {z.puvodce ? PUVODCE_NAZVY[z.puvodce] : "neznámý"}
-                    {z.puvodce && !pachatel && <span className="font-normal text-tlum"> — dosud nepotvrzeno</span>}
-                  </>
-                }
-              />
+              <span className="flex items-center gap-1.5 font-semibold text-inkoust">
+                <span aria-hidden className={`h-[7px] w-[7px] rounded-full ${PASMA[UROVNE[z.zavaznost].pasmo].tecka}`} />
+                {UROVNE[z.zavaznost].nazev}
+              </span>
             )}
-            <Udaj
-              popisek="Zdroj"
-              hodnota={uredniZdroj(z) ? "úřední" : "média"}
-              ton={uredniZdroj(z) ? "dobry" : "neutral"}
-            />
-          </RadaUdaju>
+            {dr === "pripad" && <span aria-hidden className="text-tlum2">·</span>}
+            <span>jistota <b className={`font-semibold ${dobraInfo ? "text-klid-text" : "text-inkoust"}`}>{JISTOTY[jistota].nazev.toLowerCase()}</b></span>
+            {dr === "pripad" && (
+              <>
+                <span aria-hidden className="text-tlum2">·</span>
+                <span>původce <b className={`font-semibold ${pachatel ? "text-klid-text" : "text-inkoust"}`}>{z.puvodce ? PUVODCE_NAZVY[z.puvodce].toLowerCase() : "neznámý"}</b>{z.puvodce && !pachatel ? " (nepotvrzeno)" : ""}</span>
+              </>
+            )}
+            <span aria-hidden className="text-tlum2">·</span>
+            <span className={uredniZdroj(z) ? "font-semibold text-klid-text" : ""}>{uredniZdroj(z) ? "úřední zdroj" : "média"}</span>
+          </span>
         ),
       }}
     />

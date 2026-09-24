@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { ObsahStranky } from "@/components/obsah-stranky";
 import { HlavickaStranky } from "@/components/nadpisy";
 import Link from "next/link";
 import { DORUCOVANI, KANALY, KOMUNITA, METODIKA_REVIDOVANA, PROVOZOVATEL, PROVOZOVATEL_TEXT, UCTY_ZAPNUTE, WEB } from "@/config/web";
@@ -30,24 +31,25 @@ export default function OProjektu() {
         nadpis="Kdo to píše a podle čeho"
         uvod={<>{WEB.nazev} je nezávislý přehled bez inzerce — bezpečnostních událostí a úředních opatření, která se mohou dotknout lidí v Česku. Není to úřední zdroj, varovný systém ani předpověď.</>}
       />
+      <ObsahStranky />
       <div className="mt-16 space-y-12 sm:mt-20">
         <Odstavec nadpis="Co web dělá">
           <p>Sbírá veřejné informace o sabotážích, dronech, kybernetických útocích a reakcích států. Každý záznam má zdroj, datum události, datum zjištění, závažnost a jistotu.</p>
-          <p>Dnes je zveřejněno {p.pripady} případů, {p.aktualizace} aktualizací, {p.opatreni} opatření a {p.reakce} prohlášení nebo reakcí; {n} záznamů ověřením neprošlo a je vedeno odděleně.</p>
+          <p>Dnes je zveřejněno {p.pripady} případů, {p.aktualizace} aktualizací, {p.opatreni} opatření a {p.reakce} prohlášení nebo reakcí; {n} záznamů je bez dokladu a vedeno odděleně.</p>
         </Odstavec>
         <Odstavec nadpis="Co web nedělá">
-          <p>Neradí, jestli odjet. Nepočítá pravděpodobnost války. Nezveřejňuje nic bez zdroje. Nezjišťuje vaši polohu.</p>
+          <p>Nepočítá pravděpodobnost války. Nezveřejňuje nic bez zdroje. Nezjišťuje vaši polohu.</p>
         </Odstavec>
         <Odstavec nadpis="Odkud jsou data">
-          <p>Přednost mají úřady: policie, vlády, NATO, EU. Pak agentury a média. Sociální sítě samy hodnocení nezvyšují. Všechny zdroje jsou na stránce <Link href="/zdroje/" className="odkaz">Zdroje</Link>, pravidla hodnocení v <Link href="/metodika/" className="odkaz">Metodice</Link> (revize {datumPraha(METODIKA_REVIDOVANA)}).</p>
-          <p>Sběr běží každou hodinu. Záznam se zveřejní sám jen tehdy, když ho potvrzují dva nezávislé zdroje a jeden z nich je úřední; válečně významné zprávy jen ze dvou médií vycházejí označené jako <strong>neověřené</strong> a do hodnocení se nepočítají. Ostatní čeká na kontrolu. Texty jsou AI shrnutí zdrojů, ne články. Celkové hodnocení se počítá automaticky podle pravidel v Metodice, nejvýš den stará data. Přebíráme fakta, ne znění, a odkazujeme na originál. Opravy jsou na stránce <Link href="/opravy/" className="odkaz">Opravy a historie</Link>.</p>
+          <p>Přednost má orgán, který věc sám vyšetřuje nebo provozuje, v kterékoli zemi; pak nezávislé potvrzení z druhé strany; redakce podle toho, jak dokládají, ne odkud jsou. Sociální sítě samy hodnocení nezvyšují. Všechny zdroje jsou na stránce <Link href="/zdroje/" className="odkaz">Zdroje</Link>, pravidla hodnocení v <Link href="/metodika/" className="odkaz">Metodice</Link> (revize {datumPraha(METODIKA_REVIDOVANA)}).</p>
+          <p>Sběr běží každých 30 minut a web se přestaví do několika minut po každé změně dat. Záznam se zveřejní sám jen tehdy, když ho potvrzují dva nezávislé zdroje a jeden z nich je úřední; válečně významné zprávy jen ze dvou médií vycházejí označené jako <strong>neověřené</strong> a do hodnocení se nepočítají. Ostatní čeká na kontrolu. Texty jsou AI shrnutí zdrojů, ne články. Celkové hodnocení se počítá automaticky podle pravidel v Metodice, nejvýš den stará data. Přebíráme fakta, ne znění, a odkazujeme na originál. Opravy jsou na stránce <Link href="/opravy/" className="odkaz">Opravy a historie</Link>.</p>
         </Odstavec>
         <Odstavec nadpis="Nezávislost a peníze">
-          <p>Bez inzerce a sponzorů. Základ je a zůstane zdarma. Podpořit provoz jde dobrovolně na stránce <Link href="/podporit/" className="odkaz">Podpořit</Link>; co to stojí, je tam rozepsané.</p>
+          <p>Bez inzerce a sponzorů. Základ je a zůstane zdarma. Podpořit provoz jde dobrovolně na stránce <Link href="/podporit/" className="odkaz">Podpořit</Link>.</p>
         </Odstavec>
-        <Odstavec nadpis="Co zatím není hotové">
+        <Odstavec nadpis="Co připravujeme">
           <ul className="list-disc space-y-1 pl-5">
-            <li>Účty, týdenní souhrn a upozornění: {UCTY_ZAPNUTE ? "běží" : "kód existuje, služba zatím neběží"}.</li>
+            <li>Účty, týdenní souhrn a upozornění: {UCTY_ZAPNUTE ? "běží" : "připravujeme"}.</li>
             {/*
               Tohle tvrzení bylo v rozporu se skutečností i s vlastním úvodem
               webu: telegramový kanál běží a nabízí se. Věta se teď skládá

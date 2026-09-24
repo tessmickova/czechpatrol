@@ -101,7 +101,7 @@ export function SpravaPlateb() {
         </p>
         {kRozhodnuti.length > 0 && <div className="mt-3"><Hlaska typ="info">{kRozhodnuti.length} {kRozhodnuti.length === 1 ? "platba vyžaduje" : "platby vyžadují"} rozhodnutí (refund při uplatněném kreditu nebo nesedící částka).</Hlaska></div>}
         {platby.length === 0 ? <p className="mt-3 text-male text-tlum2">Zatím žádná platba.</p> : (
-          <ul className="mt-3 divide-y divide-linka2">
+          <ul className="mt-3">
             {platby.map((p) => (
               <li key={p.id} className="flex flex-wrap items-center gap-x-3 gap-y-1 py-2.5 text-male">
                 <span className="cislice text-tlum2">{id8(p.id)}</span>
@@ -119,7 +119,7 @@ export function SpravaPlateb() {
       <Karta className="p-6">
         <h2 className="podnadpis text-velke">Kredity</h2>
         {kredity.length === 0 ? <p className="mt-3 text-male text-tlum2">Zatím žádný kredit.</p> : (
-          <ul className="mt-3 divide-y divide-linka2">
+          <ul className="mt-3">
             {kredity.map((k) => (
               <li key={k.id} className="flex flex-wrap items-center gap-x-3 gap-y-1 py-2.5 text-male">
                 <code className="cislice text-inkoust">{k.maska}</code>
@@ -136,7 +136,7 @@ export function SpravaPlateb() {
             ))}
           </ul>
         )}
-        <div className="mt-5 border-t border-linka2 pt-4">
+        <div className="mt-5 pt-4">
           <div className="stitek mb-2">Ruční kredit (jen s právem kredity.vydat_rucne)</div>
           <div className="grid gap-3 sm:grid-cols-[1fr_120px_1fr_auto] sm:items-end">
             <div><Popisek pro="rk-ucet">Účet (celé id)</Popisek><input id="rk-ucet" className={`${POLE} cislice`} value={rucni.ucetId} onChange={(e) => setRucni({ ...rucni, ucetId: e.target.value })} /></div>
@@ -154,7 +154,7 @@ export function SpravaPlateb() {
       <Karta className="p-6">
         <h2 className="podnadpis text-velke">Oprávnění</h2>
         {opravneni.length === 0 ? <p className="mt-3 text-male text-tlum2">Zatím žádné.</p> : (
-          <ul className="mt-3 divide-y divide-linka2">
+          <ul className="mt-3">
             {opravneni.map((o) => (
               <li key={o.id} className="flex flex-wrap items-center gap-x-3 gap-y-1 py-2.5 text-male">
                 <span className="cislice text-tlum2">{id8(o.ucet_id)}</span>
@@ -167,7 +167,7 @@ export function SpravaPlateb() {
             ))}
           </ul>
         )}
-        <div className="mt-5 border-t border-linka2 pt-4">
+        <div className="mt-5 pt-4">
           <div className="stitek mb-2">Udělit Premium bez platby (dar, náhrada za technický problém)</div>
           <div className="grid gap-3 sm:grid-cols-[1fr_1fr_auto] sm:items-end">
             <div><Popisek pro="op-ucet">Účet (celé id)</Popisek><input id="op-ucet" className={`${POLE} cislice`} value={dar.ucetId} onChange={(e) => setDar({ ...dar, ucetId: e.target.value })} /></div>
@@ -180,7 +180,7 @@ export function SpravaPlateb() {
       <Karta className="p-6">
         <h2 className="podnadpis text-velke">E-maily s kódy</h2>
         {emaily.length === 0 ? <p className="mt-3 text-male text-tlum2">Fronta je prázdná.</p> : (
-          <ul className="mt-3 divide-y divide-linka2">
+          <ul className="mt-3">
             {emaily.map((e) => (
               <li key={e.id} className="flex flex-wrap items-center gap-x-3 gap-y-1 py-2.5 text-male">
                 <span className="text-inkoust">{e.druh}</span>
@@ -197,7 +197,7 @@ export function SpravaPlateb() {
         <h2 className="podnadpis text-velke">Práva správců</h2>
         <p className="mt-2 text-male text-tlum">Běžná práva (číst platby, náhradní kód, e-mail znovu, audit) má správce z role. Vydat kredit bez platby smí jen ten, komu to jiný správce udělil.</p>
         {prava.length > 0 && (
-          <ul className="mt-3 divide-y divide-linka2">
+          <ul className="mt-3">
             {prava.map((r) => (
               <li key={`${r.ucet_id}-${r.pravo}`} className="flex flex-wrap items-center gap-x-3 gap-y-1 py-2 text-male">
                 <span className="cislice text-tlum2">{id8(r.ucet_id)}</span><span className="text-inkoust">{r.pravo}</span><span className="text-tlum2">udělil {id8(r.udelil)} · {datumCas(r.kdy)}</span>

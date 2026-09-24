@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { ObsahStranky } from "@/components/obsah-stranky";
 import { HlavickaStranky, Obsah } from "@/components/hlavicka";
 import { Karta, OdznakTypu, Sekce } from "@/components/zaklad";
 import { METODIKA_REVIDOVANA, METODIKA_VERZE } from "@/config/web";
@@ -102,6 +103,7 @@ export default function Metodika() {
           </div>
         }
       />
+      <ObsahStranky />
 
       <Sekce nadpis="Co započítáváme jako nový signál" prvni>
         <div className="grid gap-5 lg:grid-cols-2">
@@ -112,7 +114,7 @@ export default function Metodika() {
           <Karta className="p-5 sm:p-6">
             <h3 className="podnadpis mb-4 text-zaklad">Nezapočítáváme jako nový incident</h3>
             <Seznam polozky={NEZAPOCITAVAME} znak="−" barva="text-tlum2" />
-            <p className="mt-5 border-t border-linka2 pt-4 text-male leading-relaxed text-tlum">
+            <p className="mt-5 pt-4 text-male leading-relaxed text-tlum">
               Nejsme zpravodajský web. Zapisujeme skutky a úřední rozhodnutí — ne sliby a plány. Prohlášení vedeme zvlášť jako reakci, a jen když se váže ke konkrétnímu skutku.
             </p>
             <p className="mt-3 text-drobne leading-relaxed text-tlum2">
@@ -196,15 +198,23 @@ export default function Metodika() {
 
       <Sekce
         nadpis="Původce se určuje stejně pro všechny"
-        popis="Rusko, Ukrajina, jiný stát, domácí pachatel, neznámý. Rozhoduje zjištění dotčeného státu, ne to, na čí straně kdo stojí."
+        popis="Rusko, Ukrajina, jiný stát, domácí pachatel, neznámý. Rozhoduje závěr vyšetřování dotčeného státu, ne typ prostředku a ne to, na čí straně kdo stojí."
       >
         <Karta className="p-5 sm:p-6">
           <div className="max-w-[46rem] space-y-3 text-male leading-relaxed text-tlum">
             <p>
-              Ukrajinský dron, který spadne v Lotyšsku, má původce Ukrajinu — i bez úmyslu. Ruská střela v Polsku má původce Rusko. Útok Ukrajiny na ropovod, který zastaví dodávky do Maďarska, má původce Ukrajinu.
+              U každého incidentu rozlišujeme tři různé věci, které se v médiích běžně slévají do jedné věty:
+            </p>
+            <ol className="list-decimal space-y-2 pl-5">
+              <li><b className="font-semibold text-inkoust">Prostředek</b> — čí výroby nebo typu je dron, střela či nástroj. To je fakt o věci, ne o viníkovi: dron ruského typu mohl vyslat kdokoli, kdo ho má, a dron ukrajinského typu mohla přesměrovat protivzdušná obrana, rušení nebo porucha.</li>
+              <li><b className="font-semibold text-inkoust">Odesílatel</b> — kdo prostředek vyslal nebo čin provedl. Určuje ho vyšetřování dotčeného státu, mezinárodní organizace nebo přihlášení pachatele. Dokud takový závěr není, je původce „nepotvrzený“ a u záznamu stojí, kdo co tvrdí a o co se to opírá (typ prostředku, směr letu, radarová stopa).</li>
+              <li><b className="font-semibold text-inkoust">Úmysl</b> — záměr, omyl, nebo zbloudilý prostředek. Odpovědnost za následek nese odesílatel i bez úmyslu, ale úmysl se zapisuje zvlášť a jen podle vyšetřování.</li>
+            </ol>
+            <p>
+              Příklady: dron ukrajinského typu, který spadne v Lotyšsku, má prostředek „ukrajinský“, původce „nepotvrzený“, dokud lotyšské úřady neřeknou, kdo ho vyslal a proč se odchýlil. Střela ruského typu v Polsku má původce Rusko až po závěru polských úřadů nebo NATO, do té doby stojí u záznamu „ruského typu, původce se vyšetřuje“. Útok na ropovod, který zastaví dodávky do Maďarska, je záznam kvůli následku pro sledovanou zemi; původce se i tady zapíše až podle vyšetřování nebo přihlášení.
             </p>
             <p>
-              „Potvrzeno“ = úřední závěr státu nebo přihlášení původce. Odhad podle typu dronu je „nepotvrzeno“. Když stát původ neuvede, je původce „neznámý“. Nic si nedomýšlíme a všechny strany měříme stejně.
+              „Potvrzeno“ = úřední závěr státu, mezinárodní organizace nebo přihlášení původce. Odhad podle typu prostředku je vždy „nepotvrzeno“. Když stát původ neuvede, je původce „neznámý“. Stejný metr platí pro Rusko, Ukrajinu i kohokoli dalšího.
             </p>
           </div>
         </Karta>
@@ -246,7 +256,7 @@ export default function Metodika() {
                 </li>
               ))}
             </ul>
-            <p className="mt-5 border-t border-linka2 pt-4 text-drobne leading-relaxed text-tlum2">
+            <p className="mt-5 pt-4 text-drobne leading-relaxed text-tlum2">
               Budoucí scénář se nikdy nepíše jako jistota.
             </p>
           </Karta>
@@ -260,7 +270,7 @@ export default function Metodika() {
           <h3 className="podnadpis mb-4 text-zaklad">Jak přebíráme zprávy</h3>
           <Seznam
             polozky={[
-              "Nejsme novináři: shromažďujeme zdroje, zasazujeme je do kontextu a upozorňujeme na kritické události. Novinářskou etiku přesto dodržujeme.",
+              "Shromažďujeme zdroje, zasazujeme je do kontextu a upozorňujeme na kritické události. Držíme se novinářské etiky.",
               "Souhrny pomáhá psát AI. Smí zkrátit, nesmí nic přidat: žádné nové tvrzení, závěr ani souvislost, kterou zdroj neuvádí. Věta, kterou nejde dohledat ve zdroji, se smaže.",
               "Každé tvrzení má původce. Podezřelý zůstává podezřelým, obviněný není pachatel, dokud soud nerozhodne.",
               "O všech stranách píšeme věcně a s úctou. Žádné nálepky, žádné výzvy, nikoho neprovokujeme.",
@@ -288,7 +298,7 @@ export default function Metodika() {
                   fakt: "Doloženo zdrojem uvedeným u záznamu.",
                   odhad: "Analytická interpretace dostupných informací. Není to fakt ani předpověď.",
                   scenar: "Možnost, nikoli předpověď. Nemusí nastat a nemusí následovat v uvedeném pořadí.",
-                  nepotvrzeno: "Informace existuje, ale nemáme dost důkazů. Sama o sobě nezvyšuje hodnocení.",
+                  nepotvrzeno: "Informace existuje, ale zatím bez dostatečného doložení. Sama o sobě nezvyšuje hodnocení.",
                 }[t]}
               </p>
             </Karta>
@@ -316,7 +326,7 @@ export default function Metodika() {
           <h2 className="podnadpis mb-3 text-vetsi">Role automatizace</h2>
           <div className="max-w-[46rem] space-y-3 text-male leading-relaxed text-tlum">
             <p>
-              Sběr běží každou hodinu, ale nic nezveřejňuje — jen ukládá zprávy ke kontrole. Na web jde záznam se zdrojem po kontrole, nebo se dvěma zdroji včetně úředního.
+              Sběr běží každých 30 minut, ale nic nezveřejňuje — jen ukládá zprávy ke kontrole. Na web jde záznam se zdrojem po kontrole, nebo se dvěma zdroji včetně úředního.
             </p>
             <p>
               Úřední stavy ověřujeme proti úředním zdrojům. Když ověření neproběhlo, napíšeme to. Nic nedopočítáváme z médií.
