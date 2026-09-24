@@ -101,19 +101,23 @@ export function SidebarUvodu({ stav, cr, crHistoricky, crPocet, obcane, pulz, pr
       <section className="overflow-hidden rounded-[22px] bg-plocha">
         <HlavickaWidgetu ikona="radar" nazev="Situace teď" meta={<span className="cislice">{soucet(14)} {sklon(soucet(14), "případ", "případy", "případů")} za 14 dní</span>} />
         <div className="p-3">
-          <div className="flex items-center gap-3 rounded-[14px] bg-plocha2/60 px-3 py-2.5">
+          {/*
+            Budík u levého kraje, slovo a trend u pravého, mezi nimi volno:
+            v úzkém sloupci se obojí mačkalo k sobě a zbytek boxu zel prázdný.
+          */}
+          <div className="flex items-center justify-between gap-5 rounded-[14px] bg-plocha2/60 px-4 py-3">
             <Napoveda popis={stav.uroven ? <VykladUrovne uroven={stav.uroven} /> : <span className="block">{t("Hodnocení zatím nebylo stanoveno.")}</span>}>
               <span className="block"><ObloukovyMerak uroven={stav.uroven} naNoci velikost={112} skrytPopisek /></span>
             </Napoveda>
-            <div className="min-w-0 flex-1">
+            <div className="min-w-0 text-right">
               <div className="whitespace-nowrap text-mikro font-semibold text-tlum">{t("Evropa · dnes")}</div>
               <p className={`text-velke font-bold leading-tight [overflow-wrap:normal] ${pasmo ? pasmo.text : "text-tlum"}`}>{d ? d.nazev : "Nestanoveno"}</p>
-              <p className="mt-0.5 flex items-center gap-1 text-mikro font-semibold text-tlum">
+              <p className="mt-0.5 flex items-center justify-end gap-1 whitespace-nowrap text-mikro font-semibold text-tlum">
                 {stav.trend === "nahoru" && <><span className="text-stari"><Ikona nazev="nahoru" velikost={11} tah={2.2} /></span>{t("zhoršení za 7 dní")}</>}
                 {stav.trend === "dolu" && <><span className="text-klid"><Ikona nazev="dolu" velikost={11} tah={2.2} /></span>{t("zlepšení za 7 dní")}</>}
                 {stav.trend === "beze-zmeny" && <span className="text-tlum2">{t("beze změny 7 dní")}</span>}
               </p>
-              <div className={`mt-1.5 ${pasmo ? pasmo.text : "text-tlum"}`}><Cara hodnoty={d14} sirka={120} vyska={24} popis={`Případy po dnech za 14 dní: ${d14.join(", ")}`} /></div>
+              <div className={`mt-2 flex justify-end ${pasmo ? pasmo.text : "text-tlum"}`}><Cara hodnoty={d14} sirka={120} vyska={24} popis={`Případy po dnech za 14 dní: ${d14.join(", ")}`} /></div>
             </div>
           </div>
           <div className="mt-3 grid grid-cols-2 gap-3">
