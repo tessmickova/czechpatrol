@@ -5,7 +5,7 @@ import { AktualitySloupce } from "./aktuality-sloupce";
 import { Znacka } from "./znacka";
 import { SidebarUvodu } from "./sidebar-uvodu";
 import type { Pulz } from "@/lib/pulz";
-import { UVOD_V2 } from "@/config/web";
+import { KANALY, UVOD_V2 } from "@/config/web";
 import Link from "next/link";
 import { pripady, type Zaznam } from "@/lib/agregace";
 import { cerstvost, datumCasPraha, datumPraha } from "@/lib/cas";
@@ -29,6 +29,7 @@ import { Aktuality } from "./aktuality";
 import { UrgentniPas } from "./urgentni";
 import { TriTemata } from "./tri-temata";
 import { Tlacitko } from "./ui";
+import { ZnackaKanalu } from "./znacky";
 import { useZiveHodiny } from "@/lib/cas-klient";
 import { PripravenostKarta } from "./pripravenost-klient";
 import { TipyKPriprave } from "./tipy";
@@ -550,11 +551,12 @@ export function Dashboard({
               <strong className="font-bold text-inkoust">{veta.cesko}</strong>{" "}
               <span className="text-tlum">{veta.evropa}</span>
             </p>
-            <div className="mt-4"><UrgentniPas kandidati={kandidati} zkontrolovano={overeno} ted={tedMs} /></div>
+            {/* Stav naléhavosti nese postranní Souhrn situace; tady jen cesta k upozornění. */}
+            {KANALY.telegram && <div className="mt-4"><Tlacitko kam={KANALY.telegram} nove varianta="plny" velikost="m"><ZnackaKanalu znacka="telegram" velikost={16} /> Přihlásit upozornění</Tlacitko></div>}
           </div>
           <div className="order-3 min-w-0 lg:order-none lg:col-start-1 lg:row-start-2"><AktualitySloupce zaznamy={vse} nepotvrzene={nepotvrzene} kandidati={kandidati} /></div>
           <div className="order-2 min-w-0 lg:order-none lg:col-start-2 lg:row-span-2 lg:row-start-1">
-          <SidebarUvodu stav={stav} cr={cr} crHistoricky={crHistoricky} crPocet={crPocet} obcane={obcane} veta={veta} pulz={pulz} priprava={priprava} vse={vse} kampane={kampane} ted={tedMs} />
+          <SidebarUvodu stav={stav} cr={cr} crHistoricky={crHistoricky} crPocet={crPocet} obcane={obcane} pulz={pulz} priprava={priprava} vse={vse} kampane={kampane} kandidati={kandidati} zkontrolovano={overeno} ted={tedMs} />
           </div>
         </div>
       ) : (

@@ -6,14 +6,15 @@ import { kdyZjisteno, type Zaznam } from "@/lib/agregace";
 import { NAZVY_HROZEB, type PripravitTed as DataPripravy } from "@/lib/priprava";
 import type { Pulz } from "@/lib/pulz";
 import { PASMA, UROVNE } from "@/lib/skala";
-import type { CelkovyStav, Kampan, Uroven } from "@/lib/typy";
-import type { HlavniVeta } from "@/lib/veta";
+import type { CelkovyStav, Kampan, Kandidat, Uroven } from "@/lib/typy";
+import { casPraha } from "@/lib/cas";
 import { useT } from "@/lib/i18n";
 import { BUY_ME_A_COFFEE_URL, HEROHERO_URL, KANALY } from "@/config/web";
 import { Ikona } from "./ikony";
 import { ObloukovyMerak } from "./mericky";
 import { Cara, poDnech, Sloupky } from "./mikrograf";
 import { Tlacitko } from "./ui";
+import { stavNalehavosti } from "./urgentni";
 import { HlavickaWidgetu } from "./widgety";
 import { Napoveda, VykladUrovne } from "./zaklad";
 import { ZnackaKanalu } from "./znacky";
@@ -47,10 +48,13 @@ function Maly({ nadpis, obdobi, uroven, slovo, neutralni, popis, dodatek, graf }
   );
 }
 
-export function SidebarUvodu({ stav, cr, crHistoricky, crPocet, obcane, veta, pulz, priprava, vse, kampane, ted }: {
-  stav: CelkovyStav; cr: Uroven | null; crHistoricky: Uroven | null; crPocet: { pripadu: number; kampani: number }; obcane: StavObcanu; veta: HlavniVeta;
-  pulz?: Pulz; priprava?: DataPripravy; vse: Zaznam[]; kampane: Kampan[]; ted: number;
+export function SidebarUvodu({ stav, cr, crHistoricky, crPocet, obcane, pulz, priprava, vse, kampane, kandidati, zkontrolovano, ted }: {
+  stav: CelkovyStav; cr: Uroven | null; crHistoricky: Uroven | null; crPocet: { pripadu: number; kampani: number }; obcane: StavObcanu;
+  pulz?: Pulz; priprava?: DataPripravy; vse: Zaznam[]; kampane: Kampan[]; kandidati: Kandidat[]; zkontrolovano: string | null; ted: number;
 }) {
+  /* Naléhavé zprávy chytá sběr, tak se čerstvost měří jeho posledním průchodem, ne ručním ověřením. */
+  const kontrola = pulz?.kdy ?? zkontrolovano;
+  const nal = stavNalehavosti(kandidati, kontrola, ted);
   const t = useT();
   const d = stav.uroven ? UROVNE[stav.uroven] : null;
   const pasmo = stav.uroven ? PASMA[UROVNE[stav.uroven].pasmo] : null;
@@ -104,25 +108,16 @@ export function SidebarUvodu({ stav, cr, crHistoricky, crPocet, obcane, veta, pu
         </div>
       </section>
 
-      {/* Souhrn situace */}
-      <section className="overflow-hidden rounded-[22px] border border-linka2 bg-plocha">
-        <HlavickaWidgetu ikona="info" nazev="Souhrn situace" meta={pulz?.kdy ? <span className="cislice">{pulz.zdrojuOk} z {pulz.zdrojuCelkem} zdrojů</span> : undefined} />
-        <p className="px-4 py-3 text-male leading-relaxed text-tlum">
-          <strong className="font-semibold text-inkoust">{veta.cesko}</strong> {veta.evropa}
-          {pulz && <span className="mt-1.5 block text-drobne text-tlum2">Za 24 h: {pulz.zachyceno24} zachyceno, {pulz.overeno24} ověřeno.</span>}
-        </p>
-        {pulz && pulz.zdroje.length > 0 && (
-          <details className="border-t border-linka2 px-4 py-2 text-drobne text-tlum2">
-            <summary className="cursor-pointer select-none hover:text-tlum">Zdroje posledního průchodu{pulz.zdrojuOk < pulz.zdrojuCelkem ? ` · ${pulz.zdrojuCelkem - pulz.zdrojuOk} neodpovědělo` : ""}</summary>
-            <ul className="mt-1.5 flex flex-wrap gap-x-2 gap-y-1">
-              {pulz.zdroje.map((z) => (
-                <li key={z.klic} className="flex items-center gap-1 font-mono" title={z.ok ? "odpověděl" : `neodpověděl${z.stav ? ` (${z.stav})` : ""}`}>
-                  <span aria-hidden className={`h-1.5 w-1.5 rounded-full ${z.ok ? "bg-klid" : "bg-jantar"}`} />{z.klic}
-                </li>
-              ))}
-            </ul>
-          </details>
-        )}
+      {/* Souhrn situace — jediná karta s barevným rámečkem: barva odpovídá na „děje se něco?“ */}
+      <section role="status" aria-label="Souhrn situace" className={`overflow-hidden rounded-[22px] border ${nal.ton === "deje" ? "border-akcent/70 bg-akcent/[0.05]" : nal.ton === "klid" ? "border-klid/60 bg-klid/[0.05]" : "border-linka bg-plocha2/40"}`}>
+        <HlavickaWidgetu ikona="info" nazev="Souhrn situace" ton={nal.ton === "deje" ? "akcent" : nal.ton === "klid" ? "klid" : "neutral"} meta={kontrola ? <span className="cislice">čteno {casPraha(kontrola)}</span> : undefined} />
+        <div className="px-4 py-3">
+          <p className="flex items-start gap-2 text-male font-semibold leading-snug text-inkoust">
+            <span aria-hidden className={`mt-[6px] h-[7px] w-[7px] shrink-0 rounded-full ${nal.ton === "deje" ? "bg-akcent" : nal.ton === "klid" ? "bg-klid" : "bg-tlum2"}`} />
+            <span>{nal.text}{nal.dodatek && <span className="block text-mikro font-normal text-tlum2">{nal.dodatek}</span>}</span>
+          </p>
+          {pulz && <p className="cislice mt-2 text-mikro text-tlum2">24 h: {pulz.zachyceno24} zachyceno · {pulz.overeno24} ověřeno{pulz.zdrojuCelkem ? ` · ${pulz.zdrojuOk}/${pulz.zdrojuCelkem} zdrojů` : ""}</p>}
+        </div>
       </section>
 
       {/* Připravenost */}

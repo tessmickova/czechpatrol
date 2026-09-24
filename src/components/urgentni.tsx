@@ -46,6 +46,21 @@ const NAZVY = {
 */
 const OKNO_HODIN = 48;
 
+/**
+ * Stav naléhavosti pro postranní souhrn (úvod v2): jedno slovo, jedna barva.
+ * Táž logika jako pás níž — výstraha, naléhavá zachycená zpráva, stará
+ * data (žádná zelená bez čerstvé kontroly), jinak klid.
+ */
+export function stavNalehavosti(kandidati: Kandidat[], zkontrolovano: string | null, ted: number): { ton: "deje" | "stary" | "klid"; text: string; dodatek: string | null } {
+  const v = vystraha();
+  if (v) return { ton: "deje", text: `Platí: ${v.nadpis}`, dodatek: datumCasPraha(v.kdy) };
+  const n = naliehaveVOkne(kandidati, ted);
+  if (n.length) return { ton: "deje", text: n.length === 1 ? "Naléhavá zpráva čeká na ověření" : `${n.length} naléhavé zprávy čekají na ověření`, dodatek: NAZVY[n[0].naliehave!.druh] };
+  const stary = !zkontrolovano || ted - new Date(zkontrolovano).getTime() > HODIN_DO_VYPADKU * 3_600_000;
+  if (stary) return { ton: "stary", text: "Bez čerstvé kontroly", dodatek: zkontrolovano ? `naposledy ${datumCasPraha(zkontrolovano)}` : null };
+  return { ton: "klid", text: `Nic naléhavého za ${OKNO_HODIN} h`, dodatek: "žádná mobilizace, krizové vysílání ani mimořádný stav" };
+}
+
 /** Naléhavé zachycené zprávy uvnitř okna, nejnovější první. Nejvýš tři. */
 export function naliehaveVOkne(kandidati: Kandidat[], ted: number) {
   return kandidati
