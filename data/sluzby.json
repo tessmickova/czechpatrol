@@ -1,5 +1,5 @@
 {
-  "aktualizovano": "2026-09-24T22:03:54.537Z",
+  "aktualizovano": "2026-09-24T23:03:21.329Z",
   "stavy": [
     {
       "klic": "cloudflare",
@@ -7,19 +7,19 @@
       "popis": "Minor Service Outage",
       "incidenty": [
         {
-          "nazev": "Intermittent 500 errors for backend services on Replicate",
-          "odkaz": "https://www.cloudflarestatus.com/incidents/2x4qt2q2ds9x",
-          "aktualizovano": "2026-09-24T20:40:47.000Z"
-        },
-        {
-          "nazev": "Browser isolation session data sync issues",
-          "odkaz": "https://www.cloudflarestatus.com/incidents/mltthh0jxxpz",
-          "aktualizovano": "2026-09-24T17:28:20.000Z"
-        },
-        {
           "nazev": "Network Performance Degradation — Asia-Pacific",
           "odkaz": "https://www.cloudflarestatus.com/incidents/8wmvkv5jkf15",
           "aktualizovano": "2026-09-23T18:44:55.000Z"
+        },
+        {
+          "nazev": "Cloudflare One Clients are incorrectly challenged on some sites",
+          "odkaz": "https://www.cloudflarestatus.com/incidents/tl0vrgjy99r0",
+          "aktualizovano": "2026-09-23T11:02:41.000Z"
+        },
+        {
+          "nazev": "Incorrect geo location for some Cloudflare WARP users",
+          "odkaz": "https://www.cloudflarestatus.com/incidents/9g65dxfbcjln",
+          "aktualizovano": "2026-09-01T08:29:56.000Z"
         }
       ],
       "postizene": [
@@ -28,7 +28,7 @@
         "Arica, Chile - (ARI)",
         "Algiers, Algeria - (ALG)"
       ],
-      "zkontrolovano": "2026-09-24T22:03:54.537Z",
+      "zkontrolovano": "2026-09-24T23:03:21.329Z",
       "chyba": null
     },
     {
@@ -37,7 +37,7 @@
       "popis": "All Systems Operational",
       "incidenty": [],
       "postizene": [],
-      "zkontrolovano": "2026-09-24T22:03:54.537Z",
+      "zkontrolovano": "2026-09-24T23:03:21.329Z",
       "chyba": null
     },
     {
@@ -46,7 +46,7 @@
       "popis": "All Systems Operational",
       "incidenty": [],
       "postizene": [],
-      "zkontrolovano": "2026-09-24T22:03:54.537Z",
+      "zkontrolovano": "2026-09-24T23:03:21.329Z",
       "chyba": null
     }
   ]
