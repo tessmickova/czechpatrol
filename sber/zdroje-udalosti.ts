@@ -20,7 +20,8 @@ export interface ZdrojUdalosti {
   klic: string;
   nazev: string;
   url: string;
-  jazyk: "cs" | "en";
+  /* Jazyk kanálu. Síto zná slova česky a anglicky; u ostatních jazyků chytí jen to, co se píše stejně (dron, sabotaż, NATO). */
+  jazyk: "cs" | "en" | "sk" | "pl" | "de" | "fr" | "it" | "es" | "ro" | "hu" | "nl" | "sv" | "no" | "fi";
   /** Úřad nebo instituce, která věc sama oznamuje. */
   primarni: boolean;
   /*
@@ -282,6 +283,58 @@ const REDAKCE: ZdrojUdalosti[] = [
   { klic: "rtl-today", nazev: "RTL Today (Lucembursko)", url: "https://today.rtl.lu/", jazyk: "en", primarni: false, typ: "media" },
   { klic: "tasr", nazev: "TASR (Slovensko)", url: "https://www.tasr.sk/", jazyk: "cs", primarni: false, typ: "wire" },
   { klic: "bta", nazev: "BTA (státní agentura Bulharska)", url: "https://www.bta.bg/en", jazyk: "en", primarni: false, typ: "wire" },
+  /*
+    Doplněno 24. 9. 2026 (zadání provozovatelky): deníky zemí Evropy a
+    relevantního okolí. Přednost mají anglické mutace a jazyky, ve kterých
+    síto pozná slova (slovenština, polština); u němčiny, francouzštiny a
+    dalších chytí jen mezinárodní výrazy. Kanál, který nevrátí RSS, se
+    přečte jako stránka; kanál, který neodpovídá, ukáže kontrola zdrojů.
+  */
+  /* celoevropské a světové redakce */
+  { klic: "guardian-world", nazev: "The Guardian — World", url: "https://www.theguardian.com/world/rss", jazyk: "en", primarni: false, typ: "media" },
+  { klic: "politico-eu", nazev: "Politico Europe", url: "https://www.politico.eu/feed/", jazyk: "en", primarni: false, typ: "media" },
+  { klic: "euractiv", nazev: "Euractiv", url: "https://www.euractiv.com/feed/", jazyk: "en", primarni: false, typ: "media" },
+  { klic: "france24-en", nazev: "France 24 (anglicky)", url: "https://www.france24.com/en/rss", jazyk: "en", primarni: false, typ: "media" },
+  { klic: "euronews", nazev: "Euronews", url: "https://www.euronews.com/rss", jazyk: "en", primarni: false, typ: "media" },
+  /* Německo, Rakousko, Švýcarsko */
+  { klic: "tagesschau", nazev: "Tagesschau (Německo)", url: "https://www.tagesschau.de/index~rss2.xml", jazyk: "de", primarni: false, typ: "media" },
+  { klic: "spiegel-int", nazev: "Der Spiegel International", url: "https://www.spiegel.de/international/index.rss", jazyk: "en", primarni: false, typ: "media" },
+  { klic: "orf", nazev: "ORF News (Rakousko)", url: "https://rss.orf.at/news.xml", jazyk: "de", primarni: false, typ: "media" },
+  { klic: "derstandard", nazev: "Der Standard (Rakousko)", url: "https://www.derstandard.at/rss", jazyk: "de", primarni: false, typ: "media" },
+  { klic: "nzz", nazev: "NZZ (Švýcarsko)", url: "https://www.nzz.ch/recent.rss", jazyk: "de", primarni: false, typ: "media" },
+  /* Slovensko, Polsko, Maďarsko */
+  { klic: "sme", nazev: "SME (Slovensko)", url: "https://www.sme.sk/rss", jazyk: "sk", primarni: false, typ: "media" },
+  { klic: "dennikn-sk", nazev: "Denník N (Slovensko)", url: "https://dennikn.sk/feed", jazyk: "sk", primarni: false, typ: "media" },
+  { klic: "aktuality-sk", nazev: "Aktuality.sk", url: "https://www.aktuality.sk/rss/", jazyk: "sk", primarni: false, typ: "media" },
+  { klic: "tvn24", nazev: "TVN24 (Polsko)", url: "https://tvn24.pl/najnowsze.xml", jazyk: "pl", primarni: false, typ: "media" },
+  { klic: "rp-pl", nazev: "Rzeczpospolita (Polsko)", url: "https://www.rp.pl/rss_main", jazyk: "pl", primarni: false, typ: "media" },
+  { klic: "telex", nazev: "Telex (Maďarsko)", url: "https://telex.hu/rss", jazyk: "hu", primarni: false, typ: "media" },
+  { klic: "hvg", nazev: "HVG (Maďarsko)", url: "https://hvg.hu/rss", jazyk: "hu", primarni: false, typ: "media" },
+  /* Pobaltí a sever */
+  { klic: "postimees-en", nazev: "Postimees (Estonsko, anglicky)", url: "https://news.postimees.ee/rss", jazyk: "en", primarni: false, typ: "media" },
+  { klic: "lsm-en", nazev: "LSM (Lotyšsko, anglicky)", url: "https://eng.lsm.lv/rss/", jazyk: "en", primarni: false, typ: "media" },
+  { klic: "hs-fi", nazev: "Helsingin Sanomat (Finsko)", url: "https://www.hs.fi/rss/tuoreimmat.xml", jazyk: "fi", primarni: false, typ: "media" },
+  { klic: "svt", nazev: "SVT Nyheter (Švédsko)", url: "https://www.svt.se/nyheter/rss.xml", jazyk: "sv", primarni: false, typ: "media" },
+  { klic: "nrk", nazev: "NRK (Norsko)", url: "https://www.nrk.no/toppsaker.rss", jazyk: "no", primarni: false, typ: "media" },
+  /* Benelux, Francie, jih */
+  { klic: "nos", nazev: "NOS Nieuws (Nizozemsko)", url: "https://feeds.nos.nl/nosnieuwsalgemeen", jazyk: "nl", primarni: false, typ: "media" },
+  { klic: "vrt", nazev: "VRT NWS (Belgie)", url: "https://www.vrt.be/vrtnws/nl.rss.articles.xml", jazyk: "nl", primarni: false, typ: "media" },
+  { klic: "lemonde", nazev: "Le Monde (Francie)", url: "https://www.lemonde.fr/rss/une.xml", jazyk: "fr", primarni: false, typ: "media" },
+  { klic: "ansa-en", nazev: "ANSA (Itálie, anglicky)", url: "https://www.ansa.it/english/news/english_nr_rss.xml", jazyk: "en", primarni: false, typ: "wire" },
+  { klic: "repubblica", nazev: "la Repubblica (Itálie)", url: "https://www.repubblica.it/rss/homepage/rss2.0.xml", jazyk: "it", primarni: false, typ: "media" },
+  { klic: "elpais-en", nazev: "El País (Španělsko, anglicky)", url: "https://feeds.elpais.com/mrss-s/pages/ep/site/english.elpais.com/portada", jazyk: "en", primarni: false, typ: "media" },
+  { klic: "elmundo", nazev: "El Mundo (Španělsko)", url: "https://e00-elmundo.uecdn.es/elmundo/rss/portada.xml", jazyk: "es", primarni: false, typ: "media" },
+  { klic: "kathimerini-en", nazev: "Kathimerini (Řecko, anglicky)", url: "https://www.ekathimerini.com/feed/", jazyk: "en", primarni: false, typ: "media" },
+  { klic: "balkan-insight", nazev: "Balkan Insight", url: "https://balkaninsight.com/feed/", jazyk: "en", primarni: false, typ: "media" },
+  /* Rumunsko, Moldavsko, Ukrajina, ruská nezávislá média */
+  { klic: "digi24", nazev: "Digi24 (Rumunsko)", url: "https://www.digi24.ro/rss", jazyk: "ro", primarni: false, typ: "media" },
+  { klic: "g4media", nazev: "G4Media (Rumunsko)", url: "https://www.g4media.ro/feed", jazyk: "ro", primarni: false, typ: "media" },
+  { klic: "romania-insider", nazev: "Romania Insider", url: "https://www.romania-insider.com/rss", jazyk: "en", primarni: false, typ: "media" },
+  { klic: "newsmaker-md", nazev: "NewsMaker (Moldavsko)", url: "https://newsmaker.md/feed", jazyk: "ro", primarni: false, typ: "media" },
+  { klic: "ukrinform-en", nazev: "Ukrinform (anglicky)", url: "https://www.ukrinform.net/rss/block-lastnews", jazyk: "en", primarni: false, typ: "wire" },
+  { klic: "pravda-ua-en", nazev: "Ukrainska Pravda (anglicky)", url: "https://www.pravda.com.ua/eng/rss/", jazyk: "en", primarni: false, typ: "media" },
+  { klic: "meduza-en", nazev: "Meduza (anglicky)", url: "https://meduza.io/rss/en/all", jazyk: "en", primarni: false, typ: "media" },
+  { klic: "moscow-times", nazev: "The Moscow Times", url: "https://www.themoscowtimes.com/rss/news", jazyk: "en", primarni: false, typ: "media" },
 ];
 
 /** Obecné dotazy — jeden česky, jeden anglicky ke každému tématu. */

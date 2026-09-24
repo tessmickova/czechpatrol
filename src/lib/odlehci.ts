@@ -9,8 +9,3 @@ export function odlehci<T extends Incident>(i: T): T {
   /* První fakt a první neznámá zůstávají: úvod je ukazuje po rozbalení řádku aktualit. */
   return { ...i, fakta: i.fakta.slice(0, 1), neznameho: i.neznameho.slice(0, 1), historie: [], eskalacniSpousteče: [], deeskalacniSignaly: [], souvisejici: [], vyznam: "" };
 }
-
-/** Pro běžící pás zemí na každé stránce: jen země, data, závažnost a druh. */
-export function proPas<T extends Incident>(i: T): T {
-  return { ...odlehci(i), fakta: [], neznameho: [], titulek: "", kratkyTitulek: "", zdroje: [] };
-}
