@@ -1,3 +1,4 @@
+import { HlavickaWidgetu } from "./widgety";
 import { datumPraha } from "@/lib/cas";
 import { tipy } from "@/lib/data";
 import { Ikona } from "./ikony";
@@ -33,14 +34,9 @@ export function TipyKPriprave({ ted = Date.now(), vnoreny = false }: { ted?: num
   if (!t.length) return null;
 
   return (
-    <section aria-labelledby="tipy-nadpis" className={vnoreny ? "px-4 py-3" : "rounded-[18px] border border-linka2 bg-plocha px-3 py-2.5"}>
-      <div className={`mb-2 flex items-center justify-between gap-3 ${vnoreny ? "sr-only" : ""}`}>
-        <h3 id="tipy-nadpis" className="stitek flex items-center gap-1.5">
-          <Ikona nazev="fajfka" velikost={12} tah={2} />
-          Tipy k přípravě
-        </h3>
-      </div>
-      <ul className="divide-y divide-linka2">
+    <section aria-labelledby="tipy-nadpis" className={vnoreny ? "px-4 py-3" : "overflow-hidden rounded-[22px] border border-linka2 bg-plocha"}>
+      {vnoreny ? <h3 id="tipy-nadpis" className="sr-only">Tipy k přípravě</h3> : <HlavickaWidgetu ikona="fajfka" nazev="Tipy k přípravě" id="tipy-nadpis" ton="klid" meta={<span className="cislice">{t.length}</span>} />}
+      <ul className={`divide-y divide-linka2 ${vnoreny ? "" : "px-4 py-3"}`}>
         {t.map((x) => (
           <li key={x.klic} className="py-2.5 first:pt-0 last:pb-0">
             <div className="flex flex-wrap items-baseline gap-x-2.5 gap-y-1">

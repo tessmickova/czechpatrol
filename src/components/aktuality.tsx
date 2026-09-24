@@ -1,5 +1,6 @@
 "use client";
 
+import { HlavickaWidgetu } from "./widgety";
 import Link from "next/link";
 import { datumPraha } from "@/lib/cas";
 import { jistotaZobrazena, kdyZjisteno, type Zaznam } from "@/lib/agregace";
@@ -265,19 +266,10 @@ export function Aktuality({
   return (
     <aside
       aria-labelledby="aktuality-nadpis"
-      className="relative flex h-full flex-col overflow-hidden rounded-[28px] border border-linka2 bg-plocha"
+      className="relative flex h-full flex-col overflow-hidden rounded-[22px] border border-linka2 bg-plocha"
       onPointerLeave={skryj}
     >
-      {/*
-        Hlavička stejná jako v úvodu vedle: červená tečka a štítek. Barva je
-        značka, ne plocha — jedna tečka do 8 px, nic víc (docs/ZNACKA.md).
-      */}
-      <div className="flex items-center gap-2 border-b border-linka2 px-4 py-3">
-        <span aria-hidden className="grid h-[18px] w-[18px] shrink-0 place-items-center rounded-full border border-akcent/50">
-          <span className="h-[6px] w-[6px] rounded-full bg-akcent" />
-        </span>
-        <h2 id="aktuality-nadpis" className="stitek">Aktuality</h2>
-      </div>
+      <HlavickaWidgetu ikona="radar" nazev="Aktuality" id="aktuality-nadpis" jako="h2" meta={<span className="cislice">{posledni.length} ověřených{neoverene.length ? ` · ${neoverene.length} neověřených` : ""}</span>} />
 
       {/*
         Pojistka pro dny, kdy je zachyceného víc: zkrátí se seznam, ne patička.

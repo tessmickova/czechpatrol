@@ -23,7 +23,7 @@ export function TriTemata() {
     <ul className="grid gap-3 sm:grid-cols-3" aria-label="Tři hlavní témata">
       {TEMATA.map((t) => (
         <li key={t.nadpis} className="min-w-0">
-          <Link href={t.href} className="group flex min-h-[68px] items-center gap-3 rounded-[18px] border border-linka bg-plocha px-4 py-3 transition-colors hover:border-akcent/60">
+          <Link href={t.href} className="group flex min-h-[68px] items-center gap-3 rounded-[22px] border border-linka2 bg-plocha px-4 py-3 transition-colors hover:border-akcent/60">
             <span className={`grid h-9 w-9 shrink-0 place-items-center rounded-full bg-plocha2 ${t.barva}`}><Ikona nazev={t.ikona} velikost={16} tah={1.9} /></span>
             <span className="min-w-0 flex-1">
               <span className="flex items-center gap-1.5">

@@ -1,5 +1,6 @@
 "use client";
 
+import { HlavickaWidgetu } from "./widgety";
 import { useEffect, useState } from "react";
 import { datumPraha } from "@/lib/cas";
 import { LEKARNICKA, NAZVY_KATEGORII, PORADI_KATEGORII, UDALOSTI, nactiOdpovedi, skorePripravenosti, souhrnOtazek, ulozOdpovedi, vetaKeSkore, type Odpoved, type Odpovedi, type OtazkaDotazniku } from "@/lib/pripravenost";
@@ -281,16 +282,8 @@ export function PripravenostKarta({ nastroje, vnoreny = false }: { nastroje: Ofi
   const skore = skorePripravenosti(nastroje, odpovedi ?? {});
   const zacal = odpovedi && Object.keys(odpovedi).length > 0;
   return (
-    <section aria-label="Jsem připraven?" className={vnoreny ? "" : "rounded-[22px] border border-linka2 bg-plocha"}>
-      <div className={`flex items-center justify-between gap-2 border-b border-linka2 px-4 py-3 ${vnoreny ? "hidden" : ""}`}>
-        <span className="flex items-center gap-2">
-          <span aria-hidden className="grid h-[18px] w-[18px] shrink-0 place-items-center rounded-full border border-akcent/50">
-            <span className="h-[6px] w-[6px] rounded-full bg-akcent" />
-          </span>
-          <h3 className="stitek">Jsem připraven/a?</h3>
-        </span>
-        <span className="cislice text-mikro text-tlum2">{zacal ? `${skore.mam} / ${skore.celkem}` : `${skore.celkem} doporučených služeb`}</span>
-      </div>
+    <section aria-label="Jsem připraven?" className={vnoreny ? "" : "overflow-hidden rounded-[22px] border border-linka2 bg-plocha"}>
+      {!vnoreny && <HlavickaWidgetu ikona="stit" nazev="Jsem připraven/a?" meta={<span className="cislice">{zacal ? `${skore.mam} / ${skore.celkem}` : `${skore.celkem} doporučených služeb`}</span>} />}
       <div className="px-4 py-3">
         <p className="text-male leading-snug text-tlum">
           {zacal ? vetaKeSkore(skore) : "Záchranka, tísňové linky, varování na mobil, výstrahy ČHMÚ, DROZD, sirény, krizové vysílání, kanál obce. Co z toho máte nastavené?"}

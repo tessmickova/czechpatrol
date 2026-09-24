@@ -2,7 +2,7 @@ import Link from "next/link";
 import { datumCasPraha } from "@/lib/cas";
 import { NAZVY_HROZEB, type PripravitTed as Data } from "@/lib/priprava";
 import { Ikona } from "./ikony";
-import { Otaznik } from "./zaklad";
+import { HlavickaWidgetu, PatickaWidgetu } from "./widgety";
 
 /*
   Karta „Připravit teď“ (24. 9. 2026): tři věci pro domácnost podle toho,
@@ -15,14 +15,12 @@ export function PripravitTed({ priprava }: { priprava: Data }) {
   const hlavni = priprava.hrozby.slice(0, 3);
   return (
     <section aria-label="Připravit teď" className="overflow-hidden rounded-[22px] border border-linka2 bg-plocha">
-      <div className="flex flex-wrap items-center justify-between gap-x-3 gap-y-1 border-b border-linka2 px-4 py-2.5">
-        <span className="flex items-center gap-2">
-          <span className="grid h-6 w-6 place-items-center rounded-full bg-akcent/15 text-akcent"><Ikona nazev="stit" velikost={13} tah={2} /></span>
-          <span className="stitek">Připravit teď</span>
-          <Otaznik label="Jak se to počítá" popis={<span className="block">Tři věci pro domácnost podle tlaku doložených událostí za 30 dní, narušených služeb a platných opatření. Přepočítává se po každém sběru. Není to předpověď ani úřední pokyn.</span>} />
-        </span>
-        <span className="cislice text-mikro text-tlum2">přepočítáno {datumCasPraha(priprava.prepocitano)}</span>
-      </div>
+      <HlavickaWidgetu
+        ikona="stit"
+        nazev="Připravit teď"
+        napoveda={<span className="block">Tři věci pro domácnost podle tlaku doložených událostí za 30 dní, narušených služeb a platných opatření. Přepočítává se po každém sběru. Není to předpověď ani úřední pokyn.</span>}
+        meta={<span className="cislice">přepočítáno {datumCasPraha(priprava.prepocitano)}</span>}
+      />
       <ol className="grid divide-y divide-linka2 sm:grid-cols-3 sm:divide-x sm:divide-y-0">
         {priprava.polozky.map((p, i) => (
           <li key={p.klic} className="min-w-0">
@@ -40,12 +38,9 @@ export function PripravitTed({ priprava }: { priprava: Data }) {
           </li>
         ))}
       </ol>
-      <div className="flex flex-wrap items-center justify-between gap-x-3 gap-y-1 border-t border-linka2 px-4 py-2 text-mikro text-tlum2">
-        <span>
-          Největší tlak: {hlavni.map((h) => NAZVY_HROZEB[h.klic]).join(", ")}. Z doložených záznamů, ne z předpovědi.
-        </span>
-        <Link href="/odolnost/?seznam=72h" className="whitespace-nowrap font-semibold text-tlum hover:text-inkoust">celý seznam a kalkulačka →</Link>
-      </div>
+      <PatickaWidgetu akce={<Link href="/odolnost/?seznam=72h" className="whitespace-nowrap font-semibold text-tlum hover:text-inkoust">celý seznam a kalkulačka →</Link>}>
+        Největší tlak: {hlavni.map((h) => NAZVY_HROZEB[h.klic]).join(", ")}. Z doložených záznamů, ne z předpovědi.
+      </PatickaWidgetu>
     </section>
   );
 }

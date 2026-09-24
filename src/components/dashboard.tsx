@@ -1,5 +1,6 @@
 "use client";
 
+import { HlavickaWidgetu, IkonaKruh } from "./widgety";
 import Link from "next/link";
 import { pripady, type Zaznam } from "@/lib/agregace";
 import { cerstvost, datumCasPraha, datumPraha } from "@/lib/cas";
@@ -84,6 +85,9 @@ const KLICOVE = ["p-mobilizace", "p-nouzovy-stav", "p-vycestovani", "p-hranice",
   Tři skupiny stavů. NATO a Evropská unie jsou dvě různé věci — do jedné
   dlaždice se slévat nesmějí, protože každá rozhoduje o něčem jiném.
 */
+/* Ikona skupiny v hlavičce widgetu: váhy pro právo, glóbus pro NATO, člověk pro běžný život. */
+const IKONY_SKUPIN: Record<string, NazevIkony> = { p: "vaha", n: "globus", v: "uzivatel" };
+
 const SKUPINY = [
   { predpona: "p", nazev: "Právní stav" },
   { predpona: "n", nazev: "NATO" },
@@ -325,12 +329,13 @@ function Paleta({ polozky }: { polozky: { nazev: string; tecka: string; slovo: s
   mřížkou ve stejné stavbě jako Právní stav, NATO a Běžný život: v náhledu
   souhrn přes VŠECHNY sledované položky a paleta, detail po rozkliknutí.
 */
-function RozbalovaciOblast({ nazev, souhrn, paleta, poznamka, children }: {
-  nazev: string; souhrn: string; paleta: { nazev: string; tecka: string; slovo: string }[]; poznamka?: string; children: React.ReactNode;
+function RozbalovaciOblast({ nazev, ikona, souhrn, paleta, poznamka, children }: {
+  nazev: string; ikona: NazevIkony; souhrn: string; paleta: { nazev: string; tecka: string; slovo: string }[]; poznamka?: string; children: React.ReactNode;
 }) {
   return (
-    <details className="group overflow-hidden rounded-[20px] border border-linka2 bg-plocha">
-      <summary className="flex min-h-[64px] cursor-pointer list-none items-center gap-3 px-3 py-2.5 hover:bg-plocha2">
+    <details className="group overflow-hidden rounded-[22px] border border-linka2 bg-plocha">
+      <summary className="flex min-h-[64px] cursor-pointer list-none items-center gap-3 px-4 py-2.5 hover:bg-plocha2">
+        <IkonaKruh ikona={ikona} velikost="s" />
         <span className="min-w-0 flex-1">
           <span className="stitek block">{nazev}</span>
           <span className="mt-1 block text-male font-semibold leading-snug text-inkoust">{souhrn}</span>
@@ -542,6 +547,7 @@ export function Dashboard({
       <div className="nalet mt-14 sm:mt-20">
         <NadpisSekce
           stitek={t("Co právě platí")}
+          ikona="vaha"
           nadpis={t("Úřední stav v Česku")}
         />
       </div>
@@ -555,24 +561,23 @@ export function Dashboard({
       <div className="grid grid-cols-[minmax(0,1fr)] gap-4 xl:grid-cols-[minmax(0,3fr)_minmax(0,2fr)] xl:gap-10">
         <section aria-label={t("Oficiální stavy")} id="opatreni" className="scroll-mt-[84px] space-y-4">
           {skupinyDlazdic.map((sk) => (
-            <div key={sk.predpona} className="overflow-hidden rounded-[20px] border border-linka2 bg-plocha">
+            <div key={sk.predpona} className="overflow-hidden rounded-[22px] border border-linka2 bg-plocha">
               {/*
                 Čas kontroly stojí v hlavičce skupiny, ne u každého řádku.
                 Dvacet stejných časových razítek pod sebou je šum; položka,
                 která má čas jiný, si ho vypíše sama.
               */}
-              <div className="flex items-center justify-between gap-3 border-b border-linka2 px-3 py-2">
-                <span className="min-w-0">
-                  <span className="stitek block">{sk.nazev}</span>
-                  <span className="mt-0.5 block text-male font-semibold leading-snug text-inkoust">
-                    {souhrnTonu(sk.polozky.map((d) => d.ton), sk.predpona === "n" ? "aktivní" : sk.predpona === "v" ? "narušeno" : "platí", sk.predpona === "v" ? { nedolozeno: "bez hlášení" } : {})}
+              <HlavickaWidgetu
+                ikona={IKONY_SKUPIN[sk.predpona] ?? "stit"}
+                nazev={sk.nazev}
+                podtitul={souhrnTonu(sk.polozky.map((d) => d.ton), sk.predpona === "n" ? "aktivní" : sk.predpona === "v" ? "narušeno" : "platí", sk.predpona === "v" ? { nedolozeno: "bez hlášení" } : {})}
+                meta={
+                  <span className="flex items-center gap-3">
+                    <span className="hidden sm:block"><Paleta polozky={sk.polozky.map((d) => ({ nazev: d.nazev, tecka: TON[d.ton].tecka, slovo: d.stav }))} /></span>
+                    <Stari cas={sk.cas} popisek={sk.popisekCasu} ted={tedMs} />
                   </span>
-                </span>
-                <span className="flex shrink-0 items-center gap-3">
-                  <span className="hidden sm:block"><Paleta polozky={sk.polozky.map((d) => ({ nazev: d.nazev, tecka: TON[d.ton].tecka, slovo: d.stav }))} /></span>
-                  <Stari cas={sk.cas} popisek={sk.popisekCasu} ted={tedMs} />
-                </span>
-              </div>
+                }
+              />
               {/*
                 Na počítači všechny řádky ve dvou sloupcích. Na mobilu jen
                 klíčové položky a ty, které se odchylují od klidu; zbytek za
@@ -606,6 +611,7 @@ export function Dashboard({
           {/* Služby naživo: souhrn přes všechny sledované služby, ne výběr. */}
           <RozbalovaciOblast
             nazev="Služby naživo"
+            ikona="komunikace"
             souhrn={souhrnSluzeb.veta}
             poznamka={souhrnSluzeb.poznamka}
             paleta={SLUZBY.map((sl) => {
@@ -620,6 +626,7 @@ export function Dashboard({
           {paliva.length > 0 && (
             <RozbalovaciOblast
               nazev="Ceny pohonných hmot"
+              ikona="palivo"
               souhrn={paliva.map((p) => `${p.nazev} ${p.cena!.toFixed(2).replace(".", ",")} Kč/l${p.zaTyden ? ` (${p.zaTyden > 0 ? "+" : "−"}${Math.abs(p.zaTyden).toFixed(2).replace(".", ",")})` : ""}`).join(" · ")}
               poznamka={`Týdenní šetření ČSÚ${paliva[0].konec ? `, týden do ${datumPraha(paliva[0].konec)}` : ""}. ${paliva.filter((p) => p.skok).length} z ${paliva.length} s neobvyklým týdenním pohybem. Měření, ne předpověď.`}
               paleta={paliva.map((p) => ({ nazev: p.nazev, tecka: p.skok ? "bg-pozor" : "bg-klid", slovo: p.skok ? "neobvyklý pohyb" : "běžný pohyb" }))}
@@ -670,6 +677,7 @@ export function Dashboard({
         <div className="nalet mt-14 border-t border-linka pt-12 sm:mt-20 sm:pt-14">
           <NadpisSekce
             stitek="Manipulace"
+            ikona="bublina"
             nadpis={t("Manipulace a útoky na občany")}
             popis="Podvržené dokumenty, weby a profily vydávající se za někoho jiného."
             akce={<Tlacitko kam="/manipulace/" varianta="obrys" velikost="s" ikonaVpravo="nahoru" trida="[&>svg:last-child]:rotate-90">{t("všechny rozbory")}</Tlacitko>}
@@ -720,6 +728,7 @@ export function Dashboard({
       <div className="nalet mt-14 border-t border-linka pt-12 sm:mt-20 sm:pt-14">
         <NadpisSekce
           stitek={t("Odběr")}
+          ikona="zvonek"
           nadpis={t("Jak se to dozvíte, aniž byste sem chodili")}
           popis={t("Kanály, čtečka nebo vlastní přehled. Nic z toho po vás nechce jméno ani e-mail.")}
         />

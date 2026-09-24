@@ -1,5 +1,6 @@
 "use client";
 
+import { HlavickaWidgetu } from "./widgety";
 import { useEffect, useState } from "react";
 import { datumCasPraha } from "@/lib/cas";
 import type { Overovana } from "@/lib/typy";
@@ -200,11 +201,8 @@ export function SouhrnOverujeme({ aktivni, ted }: { aktivni: Overovana[]; ted: n
   if (!zive.length) return null;
 
   return (
-    <section aria-label="Právě ověřujeme" className="rounded-[18px] border border-dashed border-jantar/55 bg-jantar/[0.06]">
-      <div className="flex flex-wrap items-center gap-x-2.5 gap-y-1 px-4 pt-3">
-        <Odznak ton="pozor" duraz="silny" ikona="otaznik">Právě ověřujeme</Odznak>
-        <span className="text-drobne text-tlum2">nepotvrzené zprávy · nevstupují do hodnocení</span>
-      </div>
+    <section aria-label="Právě ověřujeme" className="overflow-hidden rounded-[22px] border border-dashed border-jantar/55 bg-jantar/[0.06]">
+      <HlavickaWidgetu ikona="otaznik" ton="pozor" nazev="Právě ověřujeme" meta="nepotvrzené zprávy · nevstupují do hodnocení" />
       <ul className="divide-y divide-dashed divide-jantar/25">
         {zive.map((o) => {
           const lhuta = zbyva(o.uzavritDo, cas);

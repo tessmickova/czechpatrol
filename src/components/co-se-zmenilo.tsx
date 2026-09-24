@@ -1,5 +1,6 @@
 "use client";
 
+import { HlavickaWidgetu } from "./widgety";
 import Link from "next/link";
 import { druh, kdyZjisteno, type Zaznam } from "@/lib/agregace";
 import { lidskaZmena } from "@/lib/archiv-text";
@@ -237,22 +238,21 @@ export function CoSeZmenilo({ zaznamy, snimky, ted, vnoreny = false }: { zaznamy
       className={`relative flex flex-col overflow-hidden ${vnoreny ? "" : "rounded-[22px] border border-linka2 bg-plocha"}`}
       onPointerLeave={skryj}
     >
-      {/* Hlavička jako v Aktualitách: červená tečka a štítek. Ve vnořené variantě ji nese rozklikávací oblast. */}
-      <div className={`flex items-center justify-between gap-2 border-b border-linka2 px-4 py-3 ${vnoreny ? "hidden" : ""}`}>
-        <span className="flex items-center gap-2">
-          <span aria-hidden className="grid h-[18px] w-[18px] shrink-0 place-items-center rounded-full border border-akcent/50">
-            <span className="h-[6px] w-[6px] rounded-full bg-akcent" />
-          </span>
-          <h3 className="stitek">Co se změnilo</h3>
-          <Otaznik popis={<span className="block">{posledniKontrola ? `Úřední stavy kontrolovány ${datumPraha(posledniKontrola)}.` : "Bez záznamu o kontrole."}{posledniKontrola && zmenStavu === 0 ? " Za 90 dní beze změny." : ""}</span>} />
-        </span>
-        <span className="flex flex-wrap items-center justify-end gap-x-2 gap-y-0.5 text-mikro text-tlum2">
-          {zlepseni7 > 0 && <span className="flex items-center gap-1"><span aria-hidden className="h-[6px] w-[6px] rounded-full bg-klid" />{zlepseni7} zlepšení</span>}
-          {zhorseni7 > 0 && <span className="flex items-center gap-1"><span aria-hidden className="h-[6px] w-[6px] rounded-full bg-akcent" />{zhorseni7} zhoršení</span>}
-          {opatreni7 > 0 && <span>{opatreni7} {opatreni7 === 1 ? "opatření" : "opatření"}</span>}
-          <span>{zlepseni7 + zhorseni7 + opatreni7 > 0 ? "za 7 dní" : "za 7 dní beze změny"}</span>
-        </span>
-      </div>
+      {!vnoreny && (
+        <HlavickaWidgetu
+          ikona="osa"
+          nazev="Co se změnilo"
+          napoveda={<span className="block">{posledniKontrola ? `Úřední stavy kontrolovány ${datumPraha(posledniKontrola)}.` : "Bez záznamu o kontrole."}{posledniKontrola && zmenStavu === 0 ? " Za 90 dní beze změny." : ""}</span>}
+          meta={
+            <span className="flex flex-wrap items-center justify-end gap-x-2 gap-y-0.5">
+              {zlepseni7 > 0 && <span className="flex items-center gap-1"><span aria-hidden className="h-[6px] w-[6px] rounded-full bg-klid" />{zlepseni7} zlepšení</span>}
+              {zhorseni7 > 0 && <span className="flex items-center gap-1"><span aria-hidden className="h-[6px] w-[6px] rounded-full bg-akcent" />{zhorseni7} zhoršení</span>}
+              {opatreni7 > 0 && <span>{opatreni7} opatření</span>}
+              <span>{zlepseni7 + zhorseni7 + opatreni7 > 0 ? "za 7 dní" : "za 7 dní beze změny"}</span>
+            </span>
+          }
+        />
+      )}
 
       {radky.length > 0 ? (
         <ol className="divide-y divide-linka2">

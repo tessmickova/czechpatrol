@@ -149,7 +149,7 @@ export function UrgentniPas({ kandidati, zkontrolovano, ted = Date.now() }: { ka
   /* Stará data nejsou klid: bez zelené, když sběr dlouho neběžel. */
   const stary = !zkontrolovano || nyni - new Date(zkontrolovano).getTime() > HODIN_DO_VYPADKU * 3_600_000;
   return (
-    <div className={`flex flex-wrap items-center gap-x-4 gap-y-2 rounded-[18px] border px-4 py-3 ${deje ? "border-akcent/70" : stary ? "border-linka" : "border-klid/60"}`} role="status" aria-label="Urgentní upozornění">
+    <div className={`flex flex-wrap items-center gap-x-4 gap-y-2 rounded-[22px] border px-4 py-3 ${deje ? "border-akcent/70" : stary ? "border-linka" : "border-klid/60"}`} role="status" aria-label="Urgentní upozornění">
       <span aria-hidden className={`h-[7px] w-[7px] shrink-0 rounded-full ${deje ? "bg-akcent" : stary ? "bg-tlum2" : "bg-klid"}`} />
       {/* Minimální šířka textu: na úzkém displeji spadne tlačítko pod text, místo aby text mačkalo do sloupečku. */}
       <span className="min-w-[14rem] flex-1 text-male leading-snug text-tlum">
