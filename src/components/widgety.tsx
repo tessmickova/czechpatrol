@@ -5,9 +5,10 @@ import { Otaznik } from "./zaklad";
 /*
   Widgety — jednotná stavebnice karet (revize 24. 9. 2026).
 
-  Každý blok s daty na webu má stejnou kostru: rámeček 22 px, hlavička
-  44 px s ikonou v kroužku, štítkem a údajem vpravo, tělo, volitelná
-  patička. Dřív měla každá karta vlastní hlavičku (tečka, ikona, nic),
+  Každý blok s daty na webu má stejnou kostru: plocha se zaoblením 22 px
+  bez rámečku a bez oddělovacích čar (od 24. 9. 2026), hlavička s ikonou
+  v kroužku, nadpisem stejným písmem jako ostatní nadpisy a údajem
+  vpravo, tělo, volitelná patička. Dřív měla každá karta vlastní hlavičku (tečka, ikona, nic),
   vlastní rádius (18/20/22/28) a vlastní odsazení. Tady je to na jednom
   místě; komponenty jen dodávají obsah.
 
@@ -17,10 +18,10 @@ import { Otaznik } from "./zaklad";
 export type TonWidgetu = "akcent" | "klid" | "pozor" | "neutral";
 
 const TON: Record<TonWidgetu, { kruh: string; ramecek: string }> = {
-  akcent: { kruh: "bg-akcent/15 text-akcent", ramecek: "border-linka2 bg-plocha" },
-  klid: { kruh: "bg-klid/15 text-klid-text", ramecek: "border-linka2 bg-plocha" },
+  akcent: { kruh: "bg-akcent/15 text-akcent", ramecek: "border-transparent bg-plocha" },
+  klid: { kruh: "bg-klid/15 text-klid-text", ramecek: "border-transparent bg-plocha" },
   pozor: { kruh: "bg-jantar/20 text-jantar", ramecek: "border-dashed border-jantar/55 bg-jantar/[0.06]" },
-  neutral: { kruh: "bg-plocha2 text-tlum", ramecek: "border-linka2 bg-plocha" },
+  neutral: { kruh: "bg-plocha2 text-tlum", ramecek: "border-transparent bg-plocha" },
 };
 
 /** Rámeček karty. Vždy 22 px, vždy stejná linka; tón jen u neověřeného. */
@@ -33,12 +34,12 @@ export function HlavickaWidgetu({ ikona, nazev, id, jako: Jako = "h3", napoveda,
   ikona: NazevIkony; nazev: ReactNode; id?: string; jako?: "h2" | "h3" | "span"; napoveda?: ReactNode; meta?: ReactNode; akce?: ReactNode; podtitul?: ReactNode; ton?: TonWidgetu;
 }) {
   return (
-    <div className={`border-b px-4 py-2 ${ton === "pozor" ? "border-dashed border-jantar/35" : "border-linka2"}`}>
+    <div className="px-4 pb-1 pt-3">
       {/* Štítek se nikdy nezkracuje; údaj vpravo se zalomí, když je místa málo. */}
       <div className="flex min-h-[28px] items-center justify-between gap-3">
         <span className="flex shrink-0 items-center gap-2">
           <span aria-hidden className={`grid h-6 w-6 shrink-0 place-items-center rounded-full ${TON[ton].kruh}`}><Ikona nazev={ikona} velikost={13} tah={2} /></span>
-          <Jako id={id} className="stitek whitespace-nowrap">{nazev}</Jako>
+          <Jako id={id} className="whitespace-nowrap text-male font-bold leading-none tracking-[-0.01em] text-inkoust">{nazev}</Jako>
           {napoveda && <Otaznik popis={napoveda} />}
         </span>
         {(meta || akce) && (
@@ -56,7 +57,7 @@ export function HlavickaWidgetu({ ikona, nazev, id, jako: Jako = "h3", napoveda,
 /** Patička: drobný text vlevo, odkaz vpravo. */
 export function PatickaWidgetu({ children, akce }: { children?: ReactNode; akce?: ReactNode }) {
   return (
-    <div className="flex flex-wrap items-center justify-between gap-x-3 gap-y-1 border-t border-linka2 px-4 py-2 text-mikro text-tlum2">
+    <div className="flex flex-wrap items-center justify-between gap-x-3 gap-y-1 px-4 pb-3 pt-1 text-mikro text-tlum2">
       <span>{children}</span>
       {akce}
     </div>

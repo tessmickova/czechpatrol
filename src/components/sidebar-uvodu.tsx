@@ -37,7 +37,7 @@ function Maly({ nadpis, obdobi, uroven, slovo, neutralni, popis, dodatek, graf }
   return (
     <Napoveda cele popis={<span className="block">{popis && <span className="mb-1.5 block text-inkoust">{popis}</span>}{uroven && !neutralni ? <VykladUrovne uroven={uroven} /> : null}{dodatek && <span className="mt-1.5 block text-tlum2">{dodatek}</span>}</span>}>
       <span className="flex w-full flex-col rounded-[14px] bg-plocha2/60 px-3 py-2.5 text-left">
-        <span className="stitek whitespace-nowrap">{nadpis} <span className="text-tlum2">· {obdobi}</span></span>
+        <span className="whitespace-nowrap text-mikro font-semibold text-tlum">{nadpis} <span className="font-normal text-tlum2">· {obdobi}</span></span>
         <span className="mt-1.5 flex items-center gap-2">
           <span aria-hidden className={`h-[8px] w-[8px] shrink-0 rounded-full ${pasmo ? pasmo.tecka : neutralni ? "bg-tlum2" : "bg-klid"}`} />
           <span className={`text-zaklad font-bold leading-tight ${pasmo ? pasmo.text : neutralni ? "text-tlum" : "text-klid-text"}`}>{slovo ?? (uroven ? UROVNE[uroven].nazev : "Bez incidentu")}</span>
@@ -72,7 +72,7 @@ export function SidebarUvodu({ stav, cr, crHistoricky, crPocet, obcane, pulz, pr
   return (
     <aside aria-label="Stav a příprava" className="space-y-4">
       {/* Podpora a odběr — první, podle zadání 24. 9. 2026 */}
-      <section className="overflow-hidden rounded-[22px] border border-linka2 bg-plocha">
+      <section className="overflow-hidden rounded-[22px] bg-plocha">
         <HlavickaWidgetu ikona="srdce" nazev="Podpořit a sledovat" ton="neutral" />
         <div className="flex flex-wrap gap-2 px-4 py-3">
           {KANALY.telegram && <Tlacitko kam={KANALY.telegram} nove varianta="obrys" velikost="s"><ZnackaKanalu znacka="telegram" velikost={16} /> Telegram</Tlacitko>}
@@ -82,7 +82,7 @@ export function SidebarUvodu({ stav, cr, crHistoricky, crPocet, obcane, pulz, pr
         </div>
       </section>
       {/* Situace teď */}
-      <section className="overflow-hidden rounded-[22px] border border-linka2 bg-plocha">
+      <section className="overflow-hidden rounded-[22px] bg-plocha">
         <HlavickaWidgetu ikona="radar" nazev="Situace teď" meta={<span className="cislice">{soucet(14)} {sklon(soucet(14), "případ", "případy", "případů")} za 14 dní</span>} />
         <div className="p-3">
           <div className="flex items-center gap-3 rounded-[14px] bg-plocha2/60 px-3 py-2.5">
@@ -90,7 +90,7 @@ export function SidebarUvodu({ stav, cr, crHistoricky, crPocet, obcane, pulz, pr
               <span className="block"><ObloukovyMerak uroven={stav.uroven} naNoci velikost={112} skrytPopisek /></span>
             </Napoveda>
             <div className="min-w-0 flex-1">
-              <div className="stitek whitespace-nowrap">{t("Evropa · dnes")}</div>
+              <div className="whitespace-nowrap text-mikro font-semibold text-tlum">{t("Evropa · dnes")}</div>
               <p className={`text-velke font-bold leading-tight [overflow-wrap:normal] ${pasmo ? pasmo.text : "text-tlum"}`}>{d ? d.nazev : "Nestanoveno"}</p>
               <p className="mt-0.5 flex items-center gap-1 text-mikro font-semibold text-tlum">
                 {stav.trend === "nahoru" && <><span className="text-stari"><Ikona nazev="nahoru" velikost={11} tah={2.2} /></span>{t("zhoršení za 7 dní")}</>}
@@ -131,10 +131,10 @@ export function SidebarUvodu({ stav, cr, crHistoricky, crPocet, obcane, pulz, pr
       </section>
 
       {/* Připravenost */}
-      <section className="overflow-hidden rounded-[22px] border border-linka2 bg-plocha">
-        <HlavickaWidgetu ikona="stit" nazev="Připravit teď" napoveda={<span className="block">Podle tlaku doložených událostí za 30 dní, narušených služeb a platných opatření. Není to předpověď.</span>} />
+      <section className="overflow-hidden rounded-[22px] bg-plocha">
+        <HlavickaWidgetu ikona="stit" nazev="AI radí dle aktuální situace" napoveda={<span className="block">Tři věci pro domácnost, které AI vybírá podle tlaku doložených událostí za 30 dní, narušených služeb a platných opatření. Není to předpověď ani úřední doporučení.</span>} />
         {priprava && priprava.polozky.length > 0 && (
-          <ol className="divide-y divide-linka2">
+          <ol>
             {priprava.polozky.map((p, i) => (
               <li key={p.klic}>
                 <Link href={`/odolnost/?seznam=${p.seznam}&zvyrazni=${p.klic}`} className="group flex items-start gap-3 px-4 py-2.5 hover:bg-plocha2">
@@ -149,7 +149,7 @@ export function SidebarUvodu({ stav, cr, crHistoricky, crPocet, obcane, pulz, pr
             ))}
           </ol>
         )}
-        <div className="flex flex-wrap gap-2 border-t border-linka2 px-4 py-3">
+        <div className="flex flex-wrap gap-2 px-4 pb-4 pt-2">
           <Tlacitko kam="/pripravenost/" varianta="plny" velikost="s" ikona="stit">Projít průvodce</Tlacitko>
           <Tlacitko kam="/odolnost/" varianta="obrys" velikost="s" ikona="terc">Kalkulačka odolnosti</Tlacitko>
         </div>

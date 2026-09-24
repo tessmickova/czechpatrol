@@ -77,7 +77,7 @@ function zZaznamu(z: Zaznam, klic: string, kam: string, stitek: Radek["stitek"],
 
 function Rozbaleni({ r }: { r: Radek }) {
   return (
-    <div className="mb-2 ml-[37px] rounded-[12px] border border-linka2 bg-plocha2/50 px-3 py-2.5 text-drobne">
+    <div className="mb-2 ml-[37px] rounded-[12px] bg-plocha2/70 px-3 py-2.5 text-drobne">
       <p className="text-male font-semibold leading-snug text-inkoust">{r.titulek}</p>
       <p className="mt-1 flex flex-wrap gap-x-2 gap-y-0.5 text-mikro text-tlum2">
         {r.zeme && <span>{r.zeme}</span>}
@@ -107,12 +107,12 @@ function Sloupec({ nadpis, ikona, ton, radky, prazdne, paticka, ted }: { nadpis:
   const videt = radky.slice(0, limit);
   return (
     <div className="min-w-0">
-      <div className="flex h-[34px] items-center justify-between gap-3 border-b border-linka">
-        <span className="flex items-center gap-2"><IkonaKruh ikona={ikona} ton={ton} velikost="s" /><h3 className="stitek">{nadpis}</h3></span>
+      <div className="flex h-[34px] items-center justify-between gap-3">
+        <span className="flex items-center gap-2"><IkonaKruh ikona={ikona} ton={ton} velikost="s" /><h3 className="text-male font-bold leading-none tracking-[-0.01em] text-inkoust">{nadpis}</h3></span>
         <span className="cislice text-mikro text-tlum2">{radky.length}</span>
       </div>
       {videt.length ? (
-        <ul className="divide-y divide-linka2">
+        <ul className="mt-1">
           {videt.map((r) => {
             const otevreno = otevreny === r.klic;
             return (
@@ -169,7 +169,7 @@ export function AktualitySloupce({ zaznamy, nepotvrzene = [], kandidati = [], te
   return (
     <section aria-labelledby="aktuality-nadpis">
       <h2 id="aktuality-nadpis" className="sr-only">Aktuality</h2>
-      <div className="grid gap-8 md:grid-cols-2 md:gap-10">
+      <div className="grid gap-10 md:grid-cols-2 md:gap-x-14">
         <Sloupec ted={ted} nadpis="Ověřené" ikona="fajfka" ton="klid" radky={overene} prazdne="Zatím žádný ověřený záznam."
           paticka={<Tlacitko kam="/udalosti/" varianta="tichy" velikost="s" ikonaVpravo="nahoru" trida="[&>svg:last-child]:rotate-90">všechny záznamy od 2014</Tlacitko>} />
         <Sloupec ted={ted} nadpis="Neověřené" ikona="otaznik" ton="pozor" radky={neoverene} prazdne="Právě nic nečeká na ověření."

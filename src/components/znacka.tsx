@@ -134,6 +134,16 @@ export function Logo({
           beta
         </span>
       )}
+      {/* AI: web sbírá a shrnuje s pomocí AI. Stejná pilulka, tlumenější, ať nesoupeří s BETA. */}
+      {beta && (
+        <span
+          className="shrink-0 rounded-full border border-tlum2/60 px-[6px] py-[2px] font-mono font-semibold uppercase leading-none tracking-[0.12em] text-tlum"
+          style={{ fontSize: Math.max(10, Math.round(pismo * 0.48)) }}
+          title="Projekt s pomocí AI: sběr, třídění a shrnutí"
+        >
+          AI
+        </span>
+      )}
     </span>
   );
 }

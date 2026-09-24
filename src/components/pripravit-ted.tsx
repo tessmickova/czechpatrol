@@ -14,10 +14,10 @@ export function PripravitTed({ priprava }: { priprava: Data }) {
   if (!priprava.polozky.length) return null;
   const hlavni = priprava.hrozby.slice(0, 3);
   return (
-    <section aria-label="Připravit teď" className="overflow-hidden rounded-[22px] border border-linka2 bg-plocha">
+    <section aria-label="Připravit teď" className="overflow-hidden rounded-[22px] bg-plocha">
       <HlavickaWidgetu
         ikona="stit"
-        nazev="Připravit teď"
+        nazev="AI radí dle aktuální situace"
         napoveda={<span className="block">Tři věci pro domácnost podle tlaku doložených událostí za 30 dní, narušených služeb a platných opatření. Přepočítává se po každém sběru. Není to předpověď ani úřední pokyn.</span>}
         meta={<span className="cislice">přepočítáno {datumCasPraha(priprava.prepocitano)}</span>}
       />

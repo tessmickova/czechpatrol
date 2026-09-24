@@ -84,7 +84,7 @@ export function PasZemi({ vse, kampane = [], ted: tedSestaveni = Date.now() }: {
       začínala u kraje okna, zatímco všechno pod ní o kus dál — vypadala
       širší než web.
     */
-    <div className="pas-obal pas-okraj border-b border-linka bg-papir" aria-label="Země za posledních 90 dnů">
+    <div className="pas-obal pas-okraj bg-papir" aria-label="Země za posledních 90 dnů">
       <div className="mx-auto max-w-[1280px] px-4 sm:px-6">
         {/* Řádek počítadel (dnes / 7 / 30 / 90 dní) tu byl do 24. 9. 2026; čísla má karta „Situace teď“. */}
         <div className="flex items-center py-1.5">

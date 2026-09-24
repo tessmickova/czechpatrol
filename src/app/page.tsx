@@ -1,20 +1,11 @@
 import { Dashboard } from "@/components/dashboard";
 import { archiv, celkovyStav, oficialniNastroje, hybridniTlak, incidenty, kampane, kandidati, nato, nazvyZemi, nepotvrzene, nepotvrzeneZaznamy, posledniKontrola, posledniOvereni, pravniStav, provoz, tlakCr, tydny, overovaneAktivni, overovaneUzavrene, urovenObcanu, watchlist } from "@/lib/data";
 import { pripravitTed } from "@/lib/priprava";
+import { odlehci } from "@/lib/odlehci";
 import { pulz } from "@/lib/pulz";
 import { souhrnSituace } from "@/lib/souhrn-situace";
 import type { Incident } from "@/lib/typy";
 
-/*
-  Úvod dostává záznamy bez podrobností (revize 24. 9. 2026). Fakta, nejasnosti,
-  historie a hodnocení každého ze 140 záznamů dělaly z úvodní stránky 700 kB
-  HTML, přitom je nic na úvodu nečte — jsou na stránce záznamu. Typ zůstává,
-  pole se vyprázdní, takže nic nespadne, když by po nich někdo sáhl.
-*/
-function odlehci<T extends Incident>(i: T): T {
-  /* První fakt a první neznámá zůstávají: úvod je ukazuje po rozbalení řádku aktualit. */
-  return { ...i, fakta: i.fakta.slice(0, 1), neznameho: i.neznameho.slice(0, 1), historie: [], eskalacniSpousteče: [], deeskalacniSignaly: [], souvisejici: [], vyznam: "" };
-}
 import { hlavniVeta } from "@/lib/veta";
 
 /**

@@ -10,6 +10,9 @@ import { Paticka } from "@/components/paticka";
 import { PruhPuvodu, UkazkaPruh } from "@/components/pruhy";
 import { PulzKratky } from "@/components/pulz-kratky";
 import { pulz } from "@/lib/pulz";
+import { incidenty, kampane } from "@/lib/data";
+import { proPas } from "@/lib/odlehci";
+import { PasZemi } from "@/components/pas-zemi";
 import { PruhVystrahy } from "@/components/vystraha";
 import { Znacka } from "@/components/znacka";
 import { SKRIPT_POHYBU } from "@/components/pohyb";
@@ -93,6 +96,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         </a>
         {/* Lišta původu je první věc na stránce, nad menu: kdo to píše a kdy naposled kontroloval. */}
         <PruhPuvodu vpravo={<PulzKratky pulz={pulz()} ted={Date.now()} />} />
+        {/* Běžící pás zemí mezi lištou původu a menu (24. 9. 2026, podle zadání) — na každé stránce. */}
+        <PasZemi vse={incidenty().map(proPas)} kampane={kampane()} ted={Date.now()} />
         <Navigace />
         {/*
           Výstraha stojí nad obsahem, hned pod menu. Když platí, je to
@@ -106,7 +111,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           sáhnout odkudkoli ze stránky.
         */}
         <DialogProvider>
-          <main id="obsah" className="pb-[calc(60px+env(safe-area-inset-bottom))] md:pb-0">{children}</main>
+          <main id="obsah" className="pt-3 pb-[calc(60px+env(safe-area-inset-bottom))] sm:pt-5 md:pb-0">{children}</main>
         </DialogProvider>
         <Paticka />
         <PostranniPanel />

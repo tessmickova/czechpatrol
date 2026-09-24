@@ -59,7 +59,7 @@ export function Paticka() {
           <div>
             <Logo velikost={32} pismo={17} tmave />
             <p className="mt-3 max-w-[38ch] text-zaklad leading-relaxed text-noc-tlum">
-              {t("Nezávislý přehled bezpečnostních událostí a změn, které mohou mít dopad na lidi v Česku. Není to úřední zdroj ani varovný systém. V nouzi volejte 112.")}
+              {t("Nezávislý AI projekt: sběr, ověřování a vyhodnocení bezpečnostních událostí a změn, které mohou mít dopad na lidi v Česku. Shrnutí píše AI, zveřejňuje člověk. Není to úřední zdroj ani varovný systém. V nouzi volejte 112.")}
             </p>
             <p className="mt-3 text-male text-noc-tlum/80">
               {t("Metodika revidována")} {datum(METODIKA_REVIDOVANA)}
