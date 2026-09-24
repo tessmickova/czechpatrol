@@ -68,12 +68,12 @@ export function ZemePrehled({
     <>
       <PocitadlaZeme polozky={polozky} ted={ted} nazev={nazev} />
 
-      <div className="nalet mt-14 sm:mt-20">
+      <div className="nalet mt-16 sm:mt-24">
         <NadpisBloku
           nadpis="Čím je tlak tvořený"
           popis={`Osy podle všech zveřejněných záznamů se zemí ${kodZeme} od roku 2014. Prázdná osa znamená, že takový záznam není doložený — ne že se nic nestalo.`}
         />
-        <div className="grid gap-4 lg:grid-cols-[minmax(0,1fr)_minmax(0,1fr)] lg:gap-x-12">
+        <div className="grid gap-4 lg:grid-cols-[minmax(0,1fr)_minmax(0,1fr)] lg:gap-x-16">
           <PavucinaHrozeb
             nadpis={nazev}
             popis="Nejvyšší úroveň v každé oblasti od roku 2014, ne stav k dnešku."
@@ -121,7 +121,7 @@ export function ZemePrehled({
       </div>
 
       {kampane.length > 0 && (
-        <div className="nalet mt-14 sm:mt-20">
+        <div className="nalet mt-16 sm:mt-24">
           <NadpisBloku
             nadpis="Manipulace a útoky mířené sem"
             popis="Připravené operace cílené na občany této země. Nepočítají se mezi případy — je to operace, ne událost."
@@ -134,13 +134,13 @@ export function ZemePrehled({
       )}
 
       {zjisteni.length > 0 && (
-        <div className="nalet mt-14 sm:mt-20">
+        <div className="nalet mt-16 sm:mt-24">
           <NadpisBloku nadpis="Nová zjištění" popis="Posuny ve vyšetřování: obvinění, rozsudky, úředně potvrzený pachatel." />
           <NovaZjisteni polozky={zjisteni} />
         </div>
       )}
 
-      <div className="nalet mt-14 sm:mt-20">
+      <div className="nalet mt-16 sm:mt-24">
         <NadpisBloku
           nadpis="Všechny záznamy"
           popis="Od nejnovějšího. Případy, jejich pokračování, úřední opatření i prohlášení."

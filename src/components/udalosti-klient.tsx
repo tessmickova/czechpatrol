@@ -285,7 +285,7 @@ export function UdalostiKlient({ zaznamy, neprosle, kandidati = [], nepotvrzene 
   const pripadu = vysledek.filter((r) => r.typ === "zaznam" && druh(r.z) === "pripad").length;
 
   return (
-    <div className={`grid gap-8 ${siroky && otevreny ? "lg:grid-cols-[minmax(0,1fr)_minmax(380px,44%)] lg:gap-x-12" : ""}`}>
+    <div className={`grid gap-8 ${siroky && otevreny ? "lg:grid-cols-[minmax(0,1fr)_minmax(380px,44%)] lg:gap-x-16" : ""}`}>
       <div className="min-w-0">
         {/* záložky — co se vlastně ukazuje */}
         {/* Na mobilu posuvný řádek, ne čtyři záložky pod sebou (revize 24. 9. 2026). */}

@@ -116,7 +116,7 @@ export function MujPrehledKlient({ zaznamy }: { zaznamy: Zaznam[] }) {
   if (!ucet) return <Zamceno co="Můj přehled" />;
 
   return (
-    <div className="grid gap-10 lg:grid-cols-[minmax(0,1fr)_360px] lg:gap-x-14">
+    <div className="grid gap-10 lg:grid-cols-[minmax(0,1fr)_360px] lg:gap-x-16">
       <div className="min-w-0 space-y-8">
         <p role="status" className="inline-flex items-center gap-2 rounded-[12px] border border-linka bg-plocha px-3 py-2 text-male text-tlum">
           <Ikona nazev="zamek" velikost={13} tah={2} />

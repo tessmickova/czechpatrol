@@ -541,7 +541,7 @@ export function Dashboard({
         původní úvod níž.
       */}
       {UVOD_V2 ? (
-        <div className="grid gap-8 lg:grid-cols-[minmax(0,2fr)_minmax(0,1fr)] lg:grid-rows-[auto_1fr] lg:gap-x-14 lg:gap-y-8">
+        <div className="grid gap-8 lg:grid-cols-[minmax(0,2fr)_minmax(0,1fr)] lg:grid-rows-[auto_1fr] lg:gap-x-16 lg:gap-y-8">
           <div className="min-w-0">
             <div className="mb-2 flex items-center gap-2">
               <Znacka velikost={26} tmave />
@@ -628,10 +628,10 @@ export function Dashboard({
       {/* ===== ÚVOD V2 — spodní část (24. 9. 2026) ===== */}
 
       {/* Úřední stav: jedna karta, dlaždice; v klidu jen klíčové, zbytek za „všech N“. */}
-      <div className="nalet mt-12 sm:mt-16">
+      <div className="nalet mt-16 sm:mt-24">
         <NadpisSekce stitek={t("Co právě platí")} ikona="vaha" nadpis={t("Úřední stav v Česku")} />
       </div>
-      <div className="grid gap-8 lg:grid-cols-[minmax(0,2fr)_minmax(0,1fr)] lg:gap-x-14">
+      <div className="grid gap-8 lg:grid-cols-[minmax(0,2fr)_minmax(0,1fr)] lg:gap-x-16">
         <div className="min-w-0">
         <section aria-label={t("Oficiální stavy")} id="opatreni" className="scroll-mt-[84px] overflow-hidden rounded-[22px] bg-plocha">
           {skupinyDlazdic.map((sk, i) => {
@@ -696,7 +696,7 @@ export function Dashboard({
 
       {/* Manipulace: karusel jako dřív. */}
       {kampane.length > 0 && (
-        <div className="nalet mt-12 sm:mt-16">
+        <div className="nalet mt-16 sm:mt-24">
           <NadpisSekce
             stitek="Manipulace"
             ikona="bublina"
@@ -713,7 +713,7 @@ export function Dashboard({
       )}
 
       {/* Zapojit se: tři dlaždice, hlášení, dvě otázky k hodnocení. */}
-      <div className="nalet mt-14 sm:mt-20">
+      <div className="nalet mt-16 sm:mt-24">
         <NadpisSekce stitek="Zapojit se" ikona="zvonek" nadpis={t("Jak se to dozvíte, aniž byste sem chodili")} popis={t("Kanály, čtečka nebo vlastní přehled. Nic z toho po vás nechce jméno ani e-mail.")} />
         <TriTemata />
         <div className="mt-6"><Nahlaseni /></div>
@@ -734,7 +734,7 @@ export function Dashboard({
       ) : (
       <>
       {/* 2 — mřížka stavů + poslední události */}
-      <div className="nalet mt-14 sm:mt-20">
+      <div className="nalet mt-16 sm:mt-24">
         <NadpisSekce
           stitek={t("Co právě platí")}
           ikona="vaha"
@@ -864,7 +864,7 @@ export function Dashboard({
 
       {/* 2b2 — manipulační kampaně: operace, ne události */}
       {kampane.length > 0 && (
-        <div className="nalet mt-14 sm:mt-20">
+        <div className="nalet mt-16 sm:mt-24">
           <NadpisSekce
             stitek="Manipulace"
             ikona="bublina"
@@ -908,14 +908,14 @@ export function Dashboard({
         na archiv odkazuje (tlačítko v aktualitách), sama ho nenese.
         Zůstává jen to, co jinde není: možnost ohlásit, co chybí.
       */}
-      <div className="nalet mt-14 sm:mt-20">
+      <div className="nalet mt-16 sm:mt-24">
         <Nahlaseni />
       </div>
 
       {/* 3 — čísla „kolik, kde, kdo“ jsou v Analýzách. */}
 
       {/* 5 — sledovat a partneři */}
-      <div className="nalet mt-14 sm:mt-20">
+      <div className="nalet mt-16 sm:mt-24">
         <NadpisSekce
           stitek={t("Odběr")}
           ikona="zvonek"
@@ -927,7 +927,7 @@ export function Dashboard({
       <div className="mt-12 sm:mt-16"><Partneri /></div>
 
       {/* 6 — sbalené: proč, co by změnilo, odběr */}
-      <div className="mt-14 grid gap-3 sm:mt-20 md:grid-cols-3">
+      <div className="mt-16 grid gap-3 sm:mt-24 md:grid-cols-3">
         <details className="group rounded-[18px] bg-plocha">
           <summary className="flex min-h-[40px] cursor-pointer items-center justify-between px-3 text-male font-semibold text-inkoust">Proč je hodnocení {d ? d.nazev.toLowerCase() : "takové"}<Ikona nazev="dolu" velikost={12} tah={2} trida="text-tlum2 transition-transform group-open:rotate-180" /></summary>
           <p className="px-3 py-2.5 text-male leading-relaxed text-tlum">{stav.shrnuti || "Bez zdůvodnění."} <Link href="/metodika/" className="odkaz">Metodika</Link></p>

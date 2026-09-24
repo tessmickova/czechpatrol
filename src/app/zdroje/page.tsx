@@ -31,7 +31,7 @@ export default function Zdroje() {
         <div className="mb-10">
           <KontrolaPokryti />
         </div>
-        <div className="grid gap-5 lg:grid-cols-[minmax(0,1fr)_minmax(0,1.5fr)] lg:gap-x-12">
+        <div className="grid gap-5 lg:grid-cols-[minmax(0,1fr)_minmax(0,1.5fr)] lg:gap-x-16">
           <Karta className="h-fit p-5 sm:p-6">
             <h2 className="podnadpis mb-4 text-vetsi">Pořadí důvěryhodnosti</h2>
             <ol className="space-y-2.5">

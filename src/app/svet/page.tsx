@@ -137,7 +137,7 @@ export default function Svet() {
       </div>
 
       {/* rychlý přehled */}
-      <section aria-label="Přehled aktérů" className="nalet mt-12 sm:mt-16">
+      <section aria-label="Přehled aktérů" className="nalet mt-16 sm:mt-24">
         <ul className="grid gap-1.5 sm:grid-cols-2 lg:grid-cols-4">
           {s.aktori.map((a) => (
             <li key={a.klic}>

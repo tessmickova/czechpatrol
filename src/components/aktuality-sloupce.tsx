@@ -177,7 +177,7 @@ export function AktualitySloupce({ zaznamy, nepotvrzene = [], kandidati = [], te
   return (
     <section aria-labelledby="aktuality-nadpis">
       <h2 id="aktuality-nadpis" className="sr-only">Aktuality</h2>
-      <div className="grid gap-10 md:grid-cols-2 md:gap-x-14">
+      <div className="grid gap-10 md:grid-cols-2 md:gap-x-16">
         <Sloupec ted={ted} nadpis="Doloženo zdroji" ikona="fajfka" ton="klid" radky={overene} prazdne="Zatím žádný doložený záznam." napoveda="Záznamy doložené dvěma nezávislými nebo úředními zdroji. Každé tvrzení má původce."
           paticka={<Tlacitko kam="/udalosti/" varianta="tichy" velikost="s" ikonaVpravo="nahoru" trida="[&>svg:last-child]:rotate-90">všechny záznamy od 2014</Tlacitko>} />
         <Sloupec ted={ted} nadpis="Signály z médií" ikona="otaznik" ton="pozor" radky={neoverene} prazdne="Právě žádný nový signál." napoveda="Zachycené zprávy bez úředního nebo druhého nezávislého zdroje. Do počtů ani hodnocení nevstupují."

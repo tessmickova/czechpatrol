@@ -22,7 +22,7 @@ export function ZemeOpatreni({ polozky, nazvy, aktualizovano }: {
   const nevime = polozky.filter((p) => p.stav === null && !p.nerelevantni);
 
   return (
-    <div className="nalet mt-14 sm:mt-20">
+    <div className="nalet mt-16 sm:mt-24">
       <NadpisBloku
         nadpis="Opatření"
         popis={`Doložené kroky a co z pevného výčtu chybí. Stav k ${datum(aktualizovano)}.`}

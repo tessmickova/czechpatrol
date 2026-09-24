@@ -70,7 +70,7 @@ function Prepinac({ id, nazev, odpovedi, odpovez }: { id: string; nazev: string;
           role="radio"
           aria-checked={o === x.klic}
           onClick={() => odpovez(id, x.klic)}
-          className={`inline-flex min-h-[36px] items-center gap-1.5 rounded-full border px-3 text-drobne ${o === x.klic ? "border-inkoust text-inkoust" : "border-linka text-tlum hover:border-akcent"}`}
+          className={`inline-flex min-h-[32px] items-center gap-1.5 rounded-full border px-2.5 text-mikro font-semibold transition-colors ${o === x.klic ? (x.klic === "mam" ? "pop border-klid/70 bg-klid/15 text-klid-text" : "pop border-inkoust text-inkoust") : "border-linka text-tlum hover:border-akcent"}`}
         >
           <span aria-hidden className={`h-[6px] w-[6px] rounded-full ${o === x.klic ? (x.klic === "mam" ? "bg-klid" : x.klic === "nemam" ? "bg-akcent" : "bg-pozor") : "border border-linka"}`} />
           {x.znak} {x.slovo}
@@ -84,10 +84,11 @@ function SeznamOtazek({ otazky, odpovedi, odpovez }: { otazky: OtazkaDotazniku[]
   return (
     <ul className="bez-stropu">
       {otazky.map((q) => (
-        <li key={q.id} className="flex flex-wrap items-center justify-between gap-3 px-1 py-2.5">
-          <span className="min-w-0">
-            <span className="block text-zaklad font-semibold text-inkoust">{q.nazev}</span>
-            {q.upresneni && <span className="block text-drobne text-tlum2">{q.upresneni}</span>}
+        <li key={q.id} className={`flex flex-wrap items-center justify-between gap-3 rounded-[10px] px-2 py-2 ${odpovedi[q.id] === "mam" ? "bg-klid/[0.07]" : ""}`}>
+          <span className="flex min-w-0 items-center gap-2">
+            {odpovedi[q.id] === "mam" && <span className="pop grid h-5 w-5 shrink-0 place-items-center rounded-full bg-klid text-papir"><Ikona nazev="fajfka" velikost={11} tah={3} /></span>}
+            <span className="min-w-0"><span className="block text-male font-semibold text-inkoust">{q.nazev}</span>
+            {q.upresneni && <span className="block text-drobne text-tlum2">{q.upresneni}</span>}</span>
           </span>
           <Prepinac id={q.id} nazev={q.nazev} odpovedi={odpovedi} odpovez={odpovez} />
         </li>
@@ -110,12 +111,12 @@ type Krok =
 
 function KartaNastroje({ n, odpovedi, odpovez, zarizeni }: { n: OficialniNastroj; odpovedi: Odpovedi; odpovez: (id: string, o: Odpoved) => void; zarizeni: "ios" | "android" | null }) {
   return (
-    <li className="rounded-[22px] bg-plocha p-4 sm:p-5">
+    <li className={`rounded-[18px] bg-plocha p-3 transition-colors sm:p-4 ${odpovedi[n.id] === "mam" ? "ring-1 ring-klid/40" : ""}`}>
       <div className="flex flex-wrap items-start justify-between gap-3">
         <div className="flex min-w-0 items-start gap-3">
-          <span className="mt-[2px] grid h-9 w-9 shrink-0 place-items-center rounded-[12px] border border-linka2 text-tlum"><Ikona nazev={n.ikona as NazevIkony} velikost={18} tah={1.8} /></span>
+          <span className={`mt-[2px] grid h-8 w-8 shrink-0 place-items-center rounded-[10px] ${odpovedi[n.id] === "mam" ? "pop bg-klid/15 text-klid-text" : "bg-plocha2 text-tlum"}`}>{odpovedi[n.id] === "mam" ? <Ikona nazev="fajfka" velikost={15} tah={2.6} /> : <Ikona nazev={n.ikona as NazevIkony} velikost={16} tah={1.8} />}</span>
           <span className="min-w-0">
-            <h3 className="text-velke font-bold leading-tight text-inkoust">{n.nazev}</h3>
+            <h3 className="text-zaklad font-bold leading-tight text-inkoust">{n.nazev}</h3>
             <p className="mt-0.5 text-male text-inkoust">{n.kratce}</p>
             <p className="mt-0.5 text-drobne text-tlum2">{n.provozovatel} · {DOSTUPNOST[n.dostupnost]}</p>
           </span>
@@ -224,11 +225,14 @@ export function PripravenostKlient({ nastroje }: { nastroje: OficialniNastroj[] 
       <nav aria-label="Kroky průvodce" className="rounded-[22px] bg-plocha px-4 py-3 sm:px-5">
         <div className="flex flex-wrap items-center justify-between gap-x-4 gap-y-1">
           <span className="nadpis-boxu">Krok {krok + 1} z {kroky.length} · {aktualni.nazev}</span>
-          <span className="cislice text-mikro text-tlum2">{nacteno ? `${zodpovezenoCelkem} z ${otazekCelkem} zodpovězeno` : ""}</span>
+          <span className="cislice text-mikro text-tlum2">{nacteno ? `${zodpovezenoCelkem} z ${otazekCelkem} · ${Object.values(odpovedi).filter((o) => o === "mam").length}× mám` : ""}</span>
         </div>
-        <div className="mt-2 h-1.5 overflow-hidden rounded-full bg-plocha2">
-          <div className="h-full rounded-full bg-akcent transition-[width]" style={{ width: `${Math.round(((krok + 1) / kroky.length) * 100)}%` }} />
+        <div className="mt-2 h-2 overflow-hidden rounded-full bg-plocha2">
+          <div className="h-full rounded-full bg-klid transition-[width] duration-500" style={{ width: `${otazekCelkem ? Math.round((zodpovezenoCelkem / otazekCelkem) * 100) : 0}%` }} />
         </div>
+        {aktualni.druh !== "vysledek" && souhrnOtazek(aktualni.ids, odpovedi).hotovo && (
+          <p className="pop mt-2 flex items-center gap-2 text-drobne font-semibold text-klid-text"><Ikona nazev="fajfka" velikost={13} tah={2.6} /> {aktualni.nazev}: hotovo. Další krok je připravený.</p>
+        )}
         <ol className="pas-scroll mt-3 flex gap-1.5 overflow-x-auto">
           {kroky.map((k, i) => {
             const s = k.druh === "vysledek" ? null : souhrnOtazek(k.ids, odpovedi);
@@ -268,9 +272,17 @@ export function PripravenostKlient({ nastroje }: { nastroje: OficialniNastroj[] 
         {aktualni.druh === "vysledek" && (
           <div className="rounded-[22px] bg-plocha p-5 sm:p-6">
             <div className="flex items-center gap-1.5"><span className="nadpis-boxu">Digitální připravenost</span><Otaznik popis={<span className="block">Počítá se jen z vašich odpovědí. Web nevidí, co máte v telefonu, a odpovědi zůstávají v tomto prohlížeči.</span>} /></div>
-            <div className="mt-1 flex items-baseline gap-2">
-              <span className="cislice text-cislo-xl font-bold leading-none text-inkoust">{nacteno && odpovezenoNastroju ? skore.mam : "–"}</span>
-              <span className="cislice text-cislo text-tlum2">/ {skore.celkem}</span>
+            <div className="mt-3 flex items-center gap-5">
+              {(() => { const podil = nacteno && odpovezenoNastroju && skore.celkem ? skore.mam / skore.celkem : 0; const r = 34; const o = 2 * Math.PI * r; return (
+                <svg width="92" height="92" viewBox="0 0 92 92" aria-hidden className="pop shrink-0 -rotate-90">
+                  <circle cx="46" cy="46" r={r} fill="none" stroke="var(--color-plocha2)" strokeWidth="9" />
+                  <circle cx="46" cy="46" r={r} fill="none" stroke="var(--color-klid)" strokeWidth="9" strokeLinecap="round" strokeDasharray={o} strokeDashoffset={o * (1 - podil)} style={{ transition: "stroke-dashoffset 700ms ease-out" }} />
+                </svg>
+              ); })()}
+              <div className="flex items-baseline gap-2">
+                <span className="cislice text-cislo-xl font-bold leading-none text-inkoust">{nacteno && odpovezenoNastroju ? skore.mam : "–"}</span>
+                <span className="cislice text-cislo text-tlum2">/ {skore.celkem}</span>
+              </div>
             </div>
             {/* Před první odpovědí se skóre nepočítá: „0 z 8, u 8 nevíte" by vypadalo jako výsledek. */}
             <p className="mt-2 max-w-[62ch] text-male text-tlum">{!nacteno ? "Odpovědi se načítají z tohoto zařízení." : !odpovezenoNastroju ? "Zatím bez odpovědí. Projděte kroky a u každé položky zvolte mám, nemám nebo nevím." : vetaKeSkore(skore)}</p>

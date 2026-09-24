@@ -119,7 +119,7 @@ export default function Vyvoj() {
           nadpis="Kde se to dělo a kdo za tím stojí"
           popis={<>{p.pripady} {sklon(p.pripady, "případ", "případy", "případů")}, {p.aktualizace} {sklon(p.aktualizace, "aktualizace", "aktualizace", "aktualizací")}, {p.opatreni} opatření a {p.reakce} {sklon(p.reakce, "reakce", "reakce", "reakcí")}. Česko uvádíme vždy první, i když v něm nic není.</>}
         />
-        <div className="grid gap-8 md:grid-cols-[minmax(0,1.4fr)_minmax(0,1fr)] md:gap-x-12">
+        <div className="grid gap-8 md:grid-cols-[minmax(0,1.4fr)_minmax(0,1fr)] md:gap-x-16">
           <div className="overflow-x-auto">
             <table className="w-full min-w-[520px] text-left text-male">
               <thead>

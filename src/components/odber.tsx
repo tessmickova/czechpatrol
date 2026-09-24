@@ -17,7 +17,7 @@ export function OdberPanel({ kompaktni = false }: { kompaktni?: boolean }) {
   // Telegram má vlastní řádek výš; tady zbývají případné další sítě.
   const dalsi = Object.entries(KANALY).filter(([k, url]) => k !== "email" && k !== "telegram" && url);
   return (
-    <div className={`grid gap-6 ${kompaktni ? "" : "lg:grid-cols-[minmax(0,1.3fr)_minmax(0,1fr)] lg:gap-x-12"}`}>
+    <div className={`grid gap-6 ${kompaktni ? "" : "lg:grid-cols-[minmax(0,1.3fr)_minmax(0,1fr)] lg:gap-x-16"}`}>
       <ul className="space-y-3">
         <li className="flex gap-3">
           <span className="mt-0.5 grid h-9 w-9 shrink-0 place-items-center rounded-[12px] bg-akcent/15 text-akcent"><Ikona nazev="komunikace" velikost={16} tah={2} /></span>
