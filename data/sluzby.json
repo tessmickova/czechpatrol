@@ -1,5 +1,5 @@
 {
-  "aktualizovano": "2026-09-24T18:03:04.201Z",
+  "aktualizovano": "2026-09-24T18:39:00.650Z",
   "stavy": [
     {
       "klic": "cloudflare",
@@ -17,18 +17,18 @@
           "aktualizovano": "2026-09-24T17:28:20.000Z"
         },
         {
-          "nazev": "Cloudflare Access updates delayed",
-          "odkaz": "https://www.cloudflarestatus.com/incidents/xbgbb80yw0jh",
-          "aktualizovano": "2026-09-24T15:31:57.000Z"
+          "nazev": "Network Performance Degradation — Asia-Pacific",
+          "odkaz": "https://www.cloudflarestatus.com/incidents/8wmvkv5jkf15",
+          "aktualizovano": "2026-09-23T18:44:55.000Z"
         }
       ],
       "postizene": [
         "Cloudflare Sites and Services",
         "Africa",
-        "Access",
-        "Arica, Chile - (ARI)"
+        "Arica, Chile - (ARI)",
+        "Algiers, Algeria - (ALG)"
       ],
-      "zkontrolovano": "2026-09-24T18:03:04.201Z",
+      "zkontrolovano": "2026-09-24T18:39:00.650Z",
       "chyba": null
     },
     {
@@ -46,7 +46,7 @@
         "Live Transcription",
         "Zoom Meetings"
       ],
-      "zkontrolovano": "2026-09-24T18:03:04.201Z",
+      "zkontrolovano": "2026-09-24T18:39:00.650Z",
       "chyba": null
     },
     {
@@ -55,7 +55,7 @@
       "popis": "All Systems Operational",
       "incidenty": [],
       "postizene": [],
-      "zkontrolovano": "2026-09-24T18:03:04.201Z",
+      "zkontrolovano": "2026-09-24T18:39:00.650Z",
       "chyba": null
     }
   ]
