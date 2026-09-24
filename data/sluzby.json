@@ -1,5 +1,5 @@
 {
-  "aktualizovano": "2026-09-24T01:02:26.660Z",
+  "aktualizovano": "2026-09-24T02:02:52.540Z",
   "stavy": [
     {
       "klic": "cloudflare",
@@ -24,31 +24,23 @@
       ],
       "postizene": [
         "Cloudflare Sites and Services",
+        "Amman, Jordan - (AMM)",
         "Africa",
-        "Arica, Chile - (ARI)",
-        "Algiers, Algeria - (ALG)"
+        "Arica, Chile - (ARI)"
       ],
-      "zkontrolovano": "2026-09-24T01:02:26.660Z",
+      "zkontrolovano": "2026-09-24T02:02:52.540Z",
       "chyba": null
     },
     {
       "klic": "zoom",
       "stav": "omezeni",
-      "popis": "Partially Degraded Service",
-      "incidenty": [
-        {
-          "nazev": "Service Degradation Affecting Live Transcription Services.",
-          "odkaz": "https://stspg.io/yl9ts716fxkg",
-          "aktualizovano": "2026-09-23T17:32:02.491-07:00"
-        }
-      ],
+      "popis": "Service Under Maintenance",
+      "incidenty": [],
       "postizene": [
         "Zoom Phone",
-        "Live Transcription",
-        "Zoom Meetings",
         "Zoom Phone - EMEA"
       ],
-      "zkontrolovano": "2026-09-24T01:02:26.660Z",
+      "zkontrolovano": "2026-09-24T02:02:52.540Z",
       "chyba": null
     },
     {
@@ -57,7 +49,7 @@
       "popis": "All Systems Operational",
       "incidenty": [],
       "postizene": [],
-      "zkontrolovano": "2026-09-24T01:02:26.660Z",
+      "zkontrolovano": "2026-09-24T02:02:52.540Z",
       "chyba": null
     }
   ]

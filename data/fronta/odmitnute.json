@@ -1,5 +1,37 @@
 [
   {
+    "id": "k-f3620d5efa71c72e",
+    "zachyceno": "2026-09-24T02:02:52.184Z",
+    "publikovano": "2026-09-24T00:35:17.000Z",
+    "zdroj": {
+      "nazev": "Presseportal — zprávy policie (Blaulicht)",
+      "url": "https://www.presseportal.de/blaulicht/pm/57621/6357951",
+      "typ": "wire",
+      "primarni": false
+    },
+    "titulek": "POL-HI: Brand eines leerstehenden Wohnhauses",
+    "shrnuti": "Hildesheim (ots) - Giesen (tko) Am 23.09.2026, gegen 20.05 Uhr, kam es in Giesen in der Straße Schöne Aussicht zum Brand eines leerstehenden Wohnhauses. Beim Eintreffen der ersten Einsatzkräfte schlugen bereits Flammen aus dem Dach. Nach ...",
+    "duvod": "bez-skutku",
+    "kategorie": [],
+    "posouzeni": null
+  },
+  {
+    "id": "k-80c85c90e85b44e8",
+    "zachyceno": "2026-09-24T02:02:52.185Z",
+    "publikovano": "2026-09-24T00:34:06.000Z",
+    "zdroj": {
+      "nazev": "Presseportal — zprávy policie (Blaulicht)",
+      "url": "https://www.presseportal.de/blaulicht/pm/57621/6357950",
+      "typ": "wire",
+      "primarni": false
+    },
+    "titulek": "POL-HI: Sachbeschädigung an PKW - Zeugen gesucht",
+    "shrnuti": "Hildesheim (ots) - Sarstedt - Giften (tko) Am 23.09.2026, in der Zeit von 17.45 Uhr bis 21.50 Uhr, parkte ein 30-Jähriger aus Algermissen seinen PKW Skoda am Sportplatz in Giften. In dieser Zeit zerstach ein bisher unbekannter Täter die ...",
+    "duvod": "bez-skutku",
+    "kategorie": [],
+    "posouzeni": null
+  },
+  {
     "id": "k-81dcbe07af5d3ca3",
     "zachyceno": "2026-09-24T01:02:26.243Z",
     "publikovano": "2026-09-24T00:32:06.000Z",
@@ -8366,38 +8398,6 @@
     "kategorie": [
       "cr"
     ],
-    "posouzeni": null
-  },
-  {
-    "id": "k-3befb388dd58bcfa",
-    "zachyceno": "2026-09-21T10:02:37.882Z",
-    "publikovano": "2026-09-21T09:52:00.000Z",
-    "zdroj": {
-      "nazev": "Český rozhlas — domácí zprávy",
-      "url": "https://www.irozhlas.cz/zpravy-domov/nemocnicim-v-jiznich-cechach-po-lete-chybi-krev-ve-strakonicich-proto-otevreli_2609211152_kch",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Strakonické nemocnici po létě chybí krev. K dárcovství vyzvala policisty i maturanty",
-    "shrnuti": "Krevní zásoby po letních měsících potřebují doplnit a zdravotníci chtějí mít dostatečnou rezervu i před podzimní sezonou viróz. Ve Strakonicích proto mimořádně otevřeli odběrové centrum. Darovat přišli i policisté, kteří se k odběru připojili jako skupina.",
-    "duvod": "bez-skutku",
-    "kategorie": [],
-    "posouzeni": null
-  },
-  {
-    "id": "k-640d17ae43f6b062",
-    "zachyceno": "2026-09-21T10:02:37.901Z",
-    "publikovano": "2026-09-21T09:50:52.000Z",
-    "zdroj": {
-      "nazev": "ČT24 — hlavní zprávy",
-      "url": "https://ct24.ceskatelevize.cz/clanek/svet/rozpocet-na-rok-2027-rust-zadluzeni-schodek-nezamestnanost-jaka-je-ekonomicka-situace-ve-377799",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Rozpočet na rok 2027: růst, zadlužení, schodek, nezaměstnanost… Jaká je ekonomická situace ve Francii?",
-    "shrnuti": "Pouhých několik měsíců před prezidentskými volbami se rozbíhají rozpočtová jednání na pozadí stagnující ekonomiky a hospodářského poklesu ve Francii, kde všechny ukazatele signalizují problém.",
-    "duvod": "vylouceno-tematem",
-    "kategorie": [],
     "posouzeni": null
   }
 ]
