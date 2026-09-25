@@ -11378,5 +11378,98 @@
     "lidskyOvereno": false,
     "archivniZaznam": false,
     "overeni": "neovereno"
+  },
+  {
+    "id": "i-2026-09-25-putin-pobalti-mensiny",
+    "slug": "ru-putin-pobalti-mensiny-2026-09-25",
+    "titulek": "Rusko: Putin tvrdí, že pobaltské státy porušují práva ruskojazyčných obyvatel a Moskva odpovídá „humanitárními prostředky“; zároveň řekl, že se Rusko nepřipravuje ke střetu s Evropou",
+    "kratkyTitulek": "Putin: Pobaltí podle něj porušuje práva ruskojazyčných obyvatel, střet s Evropou prý Rusko nechystá",
+    "zeme": "Rusko",
+    "kodZeme": "RU",
+    "kategorie": [
+      "hybridni",
+      "rusko"
+    ],
+    "datumUdalosti": "2026-09-25T00:00:00Z",
+    "datumZjisteni": "2026-09-25T17:18:00Z",
+    "aktualizovano": "2026-09-25T19:51:38.957Z",
+    "zavaznost": "Y1",
+    "jistota": "stredni",
+    "stav": "neuvedeno",
+    "atribuce": "neznama",
+    "puvodce": null,
+    "druh": "reakce",
+    "fakta": [
+      "Podle agentury Interfax, kterou citují ČTK, Novinky.cz a iDNES.cz, ruský prezident Vladimir Putin v pátek 25. 9. 2026 prohlásil, že se Rusko nepřipravuje k žádnému střetu s Evropou.",
+      "Podle týchž zdrojů Putin zároveň řekl, že Rusko ví o tom, že pobaltské republiky porušují práva ruskojazyčných obyvatel, a že Moskva na to odpovídá humanitárními prostředky.",
+      "Ukrajinská pravda výrok shrnuje stejně: Putin tvrdí, že rusky mluvící obyvatelé v pobaltských státech čelí porušování práv, a popírá, že by Rusko chystalo vojenskou akci proti Evropě."
+    ],
+    "neznameho": [
+      "Co Putin myslí „humanitárními prostředky“; zdroje to nerozvádějí.",
+      "Reakce vlád Estonska, Lotyšska a Litvy; v záznamu zatím nejsou doložené."
+    ],
+    "vyznam": "",
+    "eskalacniSpousteče": [],
+    "deeskalacniSignaly": [],
+    "souvisejici": [],
+    "zdroje": [
+      {
+        "nazev": "Novinky.cz — Putin: V Pobaltí se porušují práva ruských menšin",
+        "url": "https://www.novinky.cz/clanek/valka-na-ukrajine-putin-pobaltske-staty-porusuji-prava-ruskojazycnych-obcanu-stret-s-evropou-ale-rusko-nechysta-40599666",
+        "typ": "media",
+        "publikovano": "2026-09-25T17:18:20Z",
+        "primarni": false,
+        "jazyk": "cs"
+      },
+      {
+        "nazev": "ČTK — Rusko podle Putina nechystá střet s Evropou",
+        "url": "https://www.ceskenoviny.cz/zpravy/rusko-podle-putina-nechysta-stret-s-evropou/2879495",
+        "typ": "media",
+        "publikovano": "2026-09-25T17:45:00Z",
+        "primarni": false,
+        "jazyk": "cs"
+      },
+      {
+        "nazev": "iDNES.cz — Pobaltí utiskuje ruskojazyčnou menšinu, reagujeme jen humanitárně, řekl Putin",
+        "url": "https://www.idnes.cz/zpravy/zahranicni/rusko-putin-stret-s-evropou-pobalti-porusovani-prava-rusove.A260925_192204_zahranicni_sahu",
+        "typ": "media",
+        "publikovano": "2026-09-25T17:58:00Z",
+        "primarni": false,
+        "jazyk": "cs"
+      },
+      {
+        "nazev": "Ukrajinská pravda — Putin claims Russian speakers' rights are violated in Baltic states",
+        "url": "https://www.pravda.com.ua/eng/news/2026/09/25/8055099/",
+        "typ": "media",
+        "publikovano": "2026-09-25T18:33:00Z",
+        "primarni": false,
+        "jazyk": "en"
+      }
+    ],
+    "historie": [
+      {
+        "kdy": "2026-09-25T19:02:00Z",
+        "text": "Zachyceno sběrem z pěti redakcí; do 25. 9. spadlo do odmítnutých jako řeč bez skutku, pravidlo upraveno (výroky vedení Ruska o sledovaných zemích se zachytí).",
+        "novySignal": true
+      },
+      {
+        "kdy": "2026-09-25T19:51:38.957Z",
+        "text": "Zveřejněno jako neověřené úředně: dvě nezávislé redakce, úřad zatím nepotvrdil.",
+        "novySignal": false
+      }
+    ],
+    "novy": true,
+    "zapocitanoTyden": "2026-09-25",
+    "aiZpracovano": true,
+    "lidskyOvereno": false,
+    "archivniZaznam": false,
+    "dopadNaCr": {
+      "stav": "zadny",
+      "procRelevantni": "Výrok hlavy Ruska o členských státech NATO a EU.",
+      "dopad": "Pro lidi v Česku dnes z výroku neplyne žádné omezení.",
+      "sledujeme": "Reakce pobaltských vlád a NATO; zda Rusko ohlásí konkrétní kroky.",
+      "overeno": "2026-09-25"
+    },
+    "overeni": "neovereno"
   }
 ]

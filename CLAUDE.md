@@ -406,6 +406,13 @@ titulky odkládá s důvodem `jen-projev` (`nastroje/zasady-textu.mjs`,
 Důvod: web měří, co se stalo, ne co kdo řekl; řeči politiků ho dělají
 stranickým a nudným zároveň.
 
+**Výjimka (25. 9. 2026):** výroky vedení Ruska nebo Běloruska o sledovaných
+zemích (hrozby, „ochrana krajanů“, „porušování práv ruských menšin“ v Pobaltí)
+se zachytí a zapisují jako druh „reakce“. Je to signál pro čtenáře, ne řeč
+domácí politiky. Hodnocení nezvyšuje. Zadržení a obvinění se zachytí jen
+s bezpečnostním kontextem (špionáž, sabotáž, Rusko, zbraně…), ne celníci
+se zbožím.
+
 ### Prostředek, odesílatel, úmysl — tři vrstvy původce (24. 9. 2026)
 
 Typ nebo výroba prostředku není původce. Dron ruského typu mohl vyslat

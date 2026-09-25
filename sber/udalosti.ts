@@ -225,7 +225,7 @@ const AKTY: { kategorie: string; slova: string[] }[] = [
   ] },
   { kategorie: "zpravodajske", slova: [
     // Kmeny bez koncovky, aby čeština fungovala: „obvin“ najde obviněn i obvinilo.
-    "zadrz", "zatc", "obvin", "obzalov", "odsoud", "arrested", "charged with", "indicted",
+    /* Zadržení a obvinění samotné už nestačí (25. 9. 2026: celníci zadrželi kebab) — jsou v kombinacích níž. */
     "vyhost", "expelled diplomat", "odhalena sit", "spy network", "spionazni sit",
   ] },
   { kategorie: "pravo", slova: [
@@ -309,6 +309,34 @@ const AKTY: { kategorie: string; slova: string[] }[] = [
  * proto minulo. Stačí, když se v textu potkají slova z obou sloupců.
  */
 const AKTY_KOMBINACE: { kategorie: string; a: string[]; b: string[]; c?: string[] }[] = [
+  {
+    /*
+      Zadržení, obvinění, odsouzení — jen s bezpečnostním kontextem
+      (25. 9. 2026). Dřív stačilo samotné „zadržel“, a tak prošla zpráva, že
+      ostravští celníci zadrželi stovky kilogramů kebabu.
+    */
+    kategorie: "zpravodajske",
+    a: ["zadrz", "zatc", "obvin", "obzalov", "odsoud", "arrested", "charged with", "indicted", "detained", "convicted"],
+    b: ["spion", "spy", "espionage", "sabot", "rusk", "russia", "belarus", "belorus", "gru", "fsb", "dron", "drone", "terror",
+      "vybusn", "explosive", "zbran", "weapon", "vlastizrad", "velezrad", "treason", "hybrid", "kyber", "cyber", "zpravodajsk",
+      "intelligence", "cizi moc", "foreign power", "zhar", "arson", "infrastruktur", "zeleznic", "railway", "kabel", "cable"],
+  },
+  {
+    /*
+      Výroky vedení Ruska a Běloruska o sledovaných zemích (25. 9. 2026):
+      „v Pobaltí se porušují práva ruských menšin“, hrozby, „odpověď“. Nejsou
+      to řeči politiků ve smyslu pravidla o projevech — rétorika o
+      „ochraně krajanů“ a hrozby hlavy státu vůči zemím NATO jsou signál,
+      který má čtenář vidět. Druh záznamu „reakce“; hodnocení nezvyšuje.
+    */
+    kategorie: "hybridni",
+    a: ["putin", "kreml", "kremlin", "lavrov", "medvedev", "peskov", "lukasenk", "lukashenk", "sojgu", "shoigu", "zacharov", "zakharova"],
+    b: ["pobalt", "baltic", "eston", "lotys", "latvi", "litv", "lithuan", "polsk", "poland", "polish", "finsk", "finland", "moldav",
+      "nato", "evrop", "europ", "cesk", "czech", "nemeck", "german", "rumun", "romania", "skandin", "svedsk", "sweden"],
+    c: ["mensin", "minorit", "krajan", "compatriot", "russian speak", "russian-speak", "rusky mluv", "ruskojazyc", "rusky hovor",
+      "prava", "rights", "genocid", "nacis", "nazi", "diskrimin", "utlak", "utisk", "oppress", "ohroz", "threat", "vyhruz",
+      "odpoved", "response", "respond", "uder", "strike", "jadern", "nuclear", "valk", "war", "stret", "konflikt", "conflict"],
+  },
   {
     /*
       Svolání mimořádného jednání o bezpečnosti, ať už jsou slova v jakémkoli

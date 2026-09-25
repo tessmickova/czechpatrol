@@ -1,6 +1,7 @@
 // @ts-nocheck — prostý ES modul, test hlídá chování
 import { describe, expect, it } from "vitest";
 import { sloucitNavrhy, sloucitZadani, vycistiNavrh } from "../nastroje/prevzit-od-patrola.mjs";
+import { platneNoveZadani } from "../nastroje/prevzit-od-patrola.mjs";
 
 const media = [{ url: "https://www.idnes.cz/a" }, { url: "https://www.seznamzpravy.cz/b" }];
 
@@ -31,3 +32,18 @@ describe("převzetí od Patrola", () => {
     expect(r.zadani).toEqual([{ id: "z1", stav: "hotovo", odpoved: "ok", zadani: "x" }]);
   });
 });
+
+describe("nová zadání z Patrolovy větve (25. 9. 2026)", () => {
+  const nove = { id: "z-abc123", zadal: "fronta", stav: "hotovo", zadano: "2026-09-25T18:44:00Z", seznam: [{ id: "k-1", druh: "kandidat" }], rozhodnuti: [{ id: "k-1", druh: "kandidat", rozhodnuti: "neudalost" }] };
+  it("přebere zadání, které v main chybí, i s rozhodnutím", () => {
+    const { zadani, zmen } = sloucitZadani([], [nove]);
+    expect(zmen).toBe(1);
+    expect(zadani[0].rozhodnuti).toHaveLength(1);
+  });
+  it("nepřebere zadání, které nevypadá jako od fronty, ani rozhodnutí mimo seznam", () => {
+    expect(platneNoveZadani({ ...nove, zadal: "patrol" })).toBe(false);
+    expect(platneNoveZadani({ ...nove, id: "cokoli" })).toBe(false);
+    expect(platneNoveZadani({ ...nove, rozhodnuti: [{ id: "k-cizi", druh: "kandidat", rozhodnuti: "neudalost" }] })).toBe(false);
+  });
+});
+
