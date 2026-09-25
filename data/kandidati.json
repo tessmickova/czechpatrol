@@ -114,6 +114,38 @@
     }
   },
   {
+    "id": "k-0fe8515edd9b5c4b",
+    "zachyceno": "2026-09-25T01:03:00.551Z",
+    "publikovano": "2026-09-24T23:00:00.000Z",
+    "zdroj": {
+      "nazev": "la Repubblica (Itálie)",
+      "url": "https://www.repubblica.it/sport/volley/2026/09/25/news/volley_italia_europei_de_giorgi-425605909/",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Il volley fa flop, sotto esame finisce De Giorgi",
+    "titulekPuvodni": "Il volley fa flop, sotto esame finisce De Giorgi",
+    "shrnuti": "A Milano via alle Finals europee senza l’Italia il ct ha un contratto fino al 2028 ma dovrà spiegare i blackout azzurri per arrivare a Los Angeles",
+    "kodZeme": "IT",
+    "zeme": "Itálie",
+    "kategorie": [
+      "infrastruktura"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "blackout"
+    ],
+    "naliehave": null,
+    "stav": "ceka",
+    "vyrez": {
+      "text": "Il volley fa flop, sotto esame finisce De Giorgi - la Repubblica\n\r\n\r\n\r\nAbbonati\nScarica l'app\nMenu\nCerca\nNotifiche\nAbbonati\nAbbonati\nEdicola\nRedazione\nScriveteci\nSport\n25 Settembre 2026 alle 01:00\n2 minuti di lettura\nAbbonati per leggere anche\nLeggi i commenti\nMartedì 15/9\nMercoledì 16/9\nGiovedì 17/9\nVenerdì 18/9\nSabato 19/9\nDomenica 20/9\nMercoledì 23/9\nGiovedì 24/9\nVenerdì 25/9\nSabato 26/9\nDomenica 27/9\nLunedì 28/9\nMartedì 29/9\nMercoledì 30/9\nGiovedì 1/10\nVenerdì 2/10\nSabato 3/10\nDomenica 4/10\nCALCIO - COPPA ITALIA\n18:00\nGenoa - Südtirol\n1 - 0\n21:00\nFiorentina - Pisa\n3 - 0\nCALCIO - LA LIGA\n19:00\nRayo Vallecano - Espanyol\n2 - 1\n20:00\nAlaves - Valencia\n0 - 1\n21:30\nElche - R. Madrid\n2 - 3\nCALCIO - EREDIVISIE\n20:00\nAjax - Willem II\n5 - 1\nCALCIO - EUROPA LEAGUE\n18:45\nArarat-Armenia - Sparta Prague\n1 - 4\n18:45\nOmonia Nicosia - Celta\n1 - 0\n21:00\nRSC Anderlecht - Lione\n1 - 2\n21:00\nH Be'er Sheva - Dinamo Zagabria\n0 - 0\n21:00\nOlympiakos - Jagiellonia Bialystok\n2 - 1\n21:00\nBayer L. - Celje\n2 - 0\n21:00\nSK Puntigamer Sturm Graz - Rennes\n0 - 0\n21:00\nSunderland - AZ\n1 - 0\n21:00\nMilan - Benfica\n0 - 2\nCALCIO - LA LIGA\n19:00\nA. Madrid - Osasuna\n4 - 0\n19:00\nRC Deportivo - Siviglia\n0 -…",
+      "stazeno": "2026-09-25T01:03:01.090Z",
+      "stav": 200
+    }
+  },
+  {
     "id": "k-21b0cbe091627ca6",
     "zachyceno": "2026-09-24T21:47:17.685Z",
     "publikovano": "2026-09-24T21:20:36.000Z",
@@ -11517,44 +11549,6 @@
     },
     "vyrizeni": {
       "kdy": "2026-09-20T08:02:30.912Z",
-      "duvod": "neudalost",
-      "patriK": null,
-      "poznamka": null
-    }
-  },
-  {
-    "id": "k-befe72a348550000",
-    "zachyceno": "2026-09-11T18:21:45.036Z",
-    "publikovano": "2026-09-11T15:24:00.000Z",
-    "zdroj": {
-      "nazev": "iROZHLAS — zprávy",
-      "url": "https://www.irozhlas.cz/zpravy-svet/tri-hongkongsti-aktiviste-dostali-az-sedm-let-vezeni-za-akce-pripominajici_2609111724_elev",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Tři hongkongští aktivisté dostali až sedm let vězení za akce připomínající masakr na Tchien-an-men",
-    "titulekPuvodni": "Tři hongkongští aktivisté dostali až sedm let vězení za akce připomínající masakr na Tchien-an-men",
-    "shrnuti": "Čínský soud v Hongkongu v pátek vynesl tresty v rozpětí pět až sedm let vězení pro tři aktivisty, kteří řadu let organizovali vzpomínkové akce připomínající masakr na pekingském náměstí Tchien-an-men (náměstí Nebeského klidu) v roce 1989. Informovala o tom agentura AP. Evropská unie verdikt odsoudil",
-    "kodZeme": "EU",
-    "zeme": "EU",
-    "kategorie": [
-      "zpravodajske"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "shody": [
-      "odsoud"
-    ],
-    "stav": "vyrizen",
-    "vyrez": {
-      "text": "",
-      "stazeno": "2026-09-14T06:32:36.832Z",
-      "stav": 403,
-      "chyba": "HTTP 403"
-    },
-    "naliehave": null,
-    "vyrizeni": {
-      "kdy": "2026-09-20T07:48:17.187Z",
       "duvod": "neudalost",
       "patriK": null,
       "poznamka": null

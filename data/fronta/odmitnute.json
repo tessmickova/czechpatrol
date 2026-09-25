@@ -1,5 +1,55 @@
 [
   {
+    "id": "k-3b5388aa548d177b",
+    "zachyceno": "2026-09-25T01:03:00.362Z",
+    "publikovano": "2026-09-25T00:57:58.000Z",
+    "zdroj": {
+      "nazev": "NOS Nieuws (Nizozemsko)",
+      "url": "https://nos.nl/l/2632413",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Handen af van Internationaal Strafhof, waarschuwt Jetten bij VN",
+    "shrnuti": "Premier Jetten heeft in een toespraak bij de Verenigde Naties uitgehaald naar de Amerikaanse president Trump en zijn taal over het Internationaal Strafhof. \"Handen af van het hof en alle andere instituties die de internationale rechtsorde beschermen\", zei Jetten bij de Algemene Vergadering van de VN",
+    "duvod": "bez-skutku",
+    "kategorie": [],
+    "posouzeni": null
+  },
+  {
+    "id": "k-a503fcb7549ade52",
+    "zachyceno": "2026-09-25T01:02:59.910Z",
+    "publikovano": "2026-09-25T00:41:35.000Z",
+    "zdroj": {
+      "nazev": "NZZ (Švýcarsko)",
+      "url": "https://www.nzz.ch/fotografie/xi-jinping-reist-mit-seinem-machtapparat-fuer-einen-dreitaegigen-staatsbesuch-in-die-usa-die-bilder-ld.10025219",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "BILDSTRECKE - Donald Trump empfängt Xi Jinping beim Weissen Haus – die Bilder des historischen Staatsbesuchs",
+    "shrnuti": "US-Präsident Donald Trump hat seinen chinesischen Amtskollegen Xi Jinping im Weissen Haus empfangen. Das historische Treffen in Bildern.",
+    "duvod": "bez-skutku",
+    "kategorie": [],
+    "posouzeni": null
+  },
+  {
+    "id": "k-768f3192290ed9cc",
+    "zachyceno": "2026-09-25T01:03:00.975Z",
+    "publikovano": "2026-09-25T00:37:00.000Z",
+    "zdroj": {
+      "nazev": "Ukrinform (anglicky)",
+      "url": "https://www.ukrinform.net/rubric-polytics/4167610-estonia-imposes-its-own-sanctions-on-two-russian-oligarchs-removed-from-eu-sanctions-list.html",
+      "typ": "wire",
+      "primarni": false
+    },
+    "titulek": "Estonia imposes its own sanctions on two Russian oligarchs removed from EU sanctions list",
+    "shrnuti": "Estonia is imposing national sanctions on two Russian oligarchs — Alisher Usmanov and Mikhail Fridman — who were removed from the European Union's sanctions list this week.",
+    "duvod": "bez-skutku",
+    "kategorie": [
+      "rusko"
+    ],
+    "posouzeni": null
+  },
+  {
     "id": "k-2b3c18475d133066",
     "zachyceno": "2026-09-25T00:25:54.111Z",
     "publikovano": "2026-09-25T00:21:51.000Z",
@@ -130,6 +180,22 @@
     "posouzeni": null
   },
   {
+    "id": "k-8c874916ce02ce80",
+    "zachyceno": "2026-09-25T01:02:59.128Z",
+    "publikovano": "2026-09-25T00:04:09.000Z",
+    "zdroj": {
+      "nazev": "Presseportal — zprávy policie (Blaulicht)",
+      "url": "https://www.presseportal.de/blaulicht/pm/126723/6358714",
+      "typ": "wire",
+      "primarni": false
+    },
+    "titulek": "LPI-NDH: Wem gehört der EScooter? Zeugen und Eigentümer gesucht!",
+    "shrnuti": "Bad Frankenhausen (ots) - Am 24.09.2026, 19:00 Uhr beabsichtigte die Polizei einen EScooter-Fahrer in Bad Frankenhausen zu kontrollieren. Dieser flüchtete allerdings in der Straße Am Wallgraben vor der Polizei und mißachtete die Anhaltezeichen. ...",
+    "duvod": "bez-skutku",
+    "kategorie": [],
+    "posouzeni": null
+  },
+  {
     "id": "k-bc97f3519f536fbe",
     "zachyceno": "2026-09-25T00:25:54.342Z",
     "publikovano": "2026-09-25T00:02:20.000Z",
@@ -141,6 +207,22 @@
     },
     "titulek": "L’Arabie saoudite intercepte six missiles balistiques tirés depuis le Yémen ; Téhéran nie dicter aux houthistes leur conduite",
     "shrnuti": "Le président iranien, Massoud Pezeshkian, a assuré que les houthistes étaient « responsables de leurs propres actes » et « ne [recevaient] pas de directives » de l’Iran, tout en admettant avoir des contacts avec eux.",
+    "duvod": "bez-skutku",
+    "kategorie": [],
+    "posouzeni": null
+  },
+  {
+    "id": "k-aa5e22233459b641",
+    "zachyceno": "2026-09-25T01:03:00.542Z",
+    "publikovano": "2026-09-25T00:00:00.000Z",
+    "zdroj": {
+      "nazev": "la Repubblica (Itálie)",
+      "url": "https://www.repubblica.it/spettacoli/cinema/2026/09/25/news/fausto_brizzi_intervista_quasi_vera_silvia_salis-425605395/",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Fausto Brizzi: “Gli uomini sono cambiati, restano esempi micidiali di chi non vede la rivoluzione”",
+    "shrnuti": "I social e la difficoltà di distinguere il vero dal falso, il femminismo e la polemica sulle gonne, il rapporto con la moglie e “quella volta in cui su un pass trovai scritto Fausto Salis”. Il regista torna in sala con “Quasi Vera”: “L’intelligenza artificiale è uno tsunami che stiamo guardando dall",
     "duvod": "bez-skutku",
     "kategorie": [],
     "posouzeni": null
@@ -273,6 +355,24 @@
     "shrnuti": "The Third Army Corps has become the first Ukrainian military unit to deploy unmanned ground vehicles (UGVs) for mine clearance and support of assault operations as part of the offensive Operation Vivaldi.",
     "duvod": "bez-skutku",
     "kategorie": [],
+    "posouzeni": null
+  },
+  {
+    "id": "k-725fd91fee5e206c",
+    "zachyceno": "2026-09-25T01:02:59.632Z",
+    "publikovano": "2026-09-24T23:28:26.000Z",
+    "zdroj": {
+      "nazev": "The Guardian — World",
+      "url": "https://www.theguardian.com/us-news/2026/sep/24/netanyahu-un-protests",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Netanyahu’s speech at UN spurs protests in New York City: ‘Let Gaza live’",
+    "shrnuti": "Actor Susan Sarandon, whistleblower Chelsea Manning and comedian Caleb Hearon are detained by NYPD More than 100 people were arrested outside the United Nations’ headquarters in New York City on Thursday as Benjamin Netanyahu addressed the general assembly, a speech that also prompted dozens of UN d",
+    "duvod": "bez-mista",
+    "kategorie": [
+      "zpravodajske"
+    ],
     "posouzeni": null
   },
   {
@@ -433,6 +533,134 @@
     },
     "titulek": "UK food and drink trade deficit largest since 2000 at £21bn",
     "shrnuti": "Industry leaders call on government to protect homegrown produce in the interest of national security The gap between Britain’s food and drink exports and imports has neared its highest this century, as a combination of Brexit, war in the Middle East and US tariffs dented deliveries overseas while i",
+    "duvod": "bez-skutku",
+    "kategorie": [],
+    "posouzeni": null
+  },
+  {
+    "id": "k-2cfe588a09bc3eee",
+    "zachyceno": "2026-09-25T01:03:00.547Z",
+    "publikovano": "2026-09-24T23:00:00.000Z",
+    "zdroj": {
+      "nazev": "la Repubblica (Itálie)",
+      "url": "https://www.repubblica.it/politica/2026/09/25/news/primarie_schlein_in_vantaggio_elettori_bocciano_gazebo-425606117/",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Primarie, Schlein in vantaggio ma gli elettori bocciano i gazebo",
+    "shrnuti": "Per un sondaggio Youtrend la segretaria dem sarebbe in testa. Conte: “Per il tavolo sul programma stiamo aspettando gli alleati\"",
+    "duvod": "bez-skutku",
+    "kategorie": [],
+    "posouzeni": null
+  },
+  {
+    "id": "k-4755735620827a0d",
+    "zachyceno": "2026-09-25T01:03:00.548Z",
+    "publikovano": "2026-09-24T23:00:00.000Z",
+    "zdroj": {
+      "nazev": "la Repubblica (Itálie)",
+      "url": "https://www.repubblica.it/politica/2026/09/25/news/mastella_centro_unito_margherita_primarie_intervista-425606120/",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Mastella: “Basta con i capricci, ai centrini dico: uniamoci e facciamo la Margherita 5.0”",
+    "shrnuti": "“Onorato e Magi contro Renzi? La smettessero. E il centrosinistra eviti i gazebo”",
+    "duvod": "bez-skutku",
+    "kategorie": [],
+    "posouzeni": null
+  },
+  {
+    "id": "k-1b48e2119bef53b9",
+    "zachyceno": "2026-09-25T01:03:00.548Z",
+    "publikovano": "2026-09-24T23:00:00.000Z",
+    "zdroj": {
+      "nazev": "la Repubblica (Itálie)",
+      "url": "https://www.repubblica.it/esteri/2026/09/25/news/netanyahu_discorso_onu_gaza_guerra_iran_usa-425605979/",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Netanyahu sfida l’Onu: “A Gaza nessun genocidio, abbiamo evitato il nostro”",
+    "shrnuti": "In un aula semivuota per la protesta di molte delegazioni, il premier israeliano rivendica la risposta al 7 ottobre e attacca i nemici: Sinwar, Khamenei, Erdogan e pure Mamdani",
+    "duvod": "bez-skutku",
+    "kategorie": [],
+    "posouzeni": null
+  },
+  {
+    "id": "k-c21f2a4223e59c1f",
+    "zachyceno": "2026-09-25T01:03:00.549Z",
+    "publikovano": "2026-09-24T23:00:00.000Z",
+    "zdroj": {
+      "nazev": "la Repubblica (Itálie)",
+      "url": "https://www.repubblica.it/cultura/2026/09/25/news/gli_angeli_del_fango_che_salvarono_i_libri-425605820/",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Gli angeli del fango che salvarono i libri",
+    "shrnuti": "A sessant’anni dall’alluvione di Firenze una mostra fotografica a Roma documenta l’impegno di un’intera generazione",
+    "duvod": "bez-skutku",
+    "kategorie": [],
+    "posouzeni": null
+  },
+  {
+    "id": "k-0272701999a4244f",
+    "zachyceno": "2026-09-25T01:03:00.552Z",
+    "publikovano": "2026-09-24T23:00:00.000Z",
+    "zdroj": {
+      "nazev": "la Repubblica (Itálie)",
+      "url": "https://www.repubblica.it/esteri/2026/09/25/news/basta_armi_taiwan_strategia_pechino_usa-425605952/",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "“Basta armi a Taiwan”, la strategia di Pechino per chiudere i conti",
+    "shrnuti": "Oggi in programma la visita agli archivi nazionali dove entrambi potranno visionare documenti sul rapporto tra i due Paesi",
+    "duvod": "bez-skutku",
+    "kategorie": [],
+    "posouzeni": null
+  },
+  {
+    "id": "k-7779f3ddd04c9fcf",
+    "zachyceno": "2026-09-25T01:03:00.553Z",
+    "publikovano": "2026-09-24T23:00:00.000Z",
+    "zdroj": {
+      "nazev": "la Repubblica (Itálie)",
+      "url": "https://www.repubblica.it/esteri/2026/09/25/news/ex_consigliere_obama_evan_medeiros_pronto_scambio_sostegno_taiwan_usa_aiuti_iran_cina-425605955/",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "L’ex consigliere di Obama: “Pronto lo scambio tra sostegno a Taipei e gli aiuti a Teheran”",
+    "shrnuti": "Evan Medeiros: “Il rischio è che gli Usa perdano credibilità con Corea e Giappone. Proprio come vuole Pechino”",
+    "duvod": "bez-skutku",
+    "kategorie": [],
+    "posouzeni": null
+  },
+  {
+    "id": "k-95c57a7cd7a6e0bc",
+    "zachyceno": "2026-09-25T01:03:00.554Z",
+    "publikovano": "2026-09-24T23:00:00.000Z",
+    "zdroj": {
+      "nazev": "la Repubblica (Itálie)",
+      "url": "https://www.repubblica.it/esteri/2026/09/25/news/melania_trump_elogio_comunismo_slovenia_infanzia_bellissima-425605933/",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Melania Trump e l’elogio del comunismo: “Ho avuto un’infanzia bellissima”",
+    "shrnuti": "La first lady americana sui suoi anni in Slovenia: “Certo, dovevo stare attenta a certe cose e non ero libera come qui, ma onestamente, non mi è mai mancato nulla”",
+    "duvod": "bez-skutku",
+    "kategorie": [],
+    "posouzeni": null
+  },
+  {
+    "id": "k-ac0c66437e7ce938",
+    "zachyceno": "2026-09-25T01:03:00.554Z",
+    "publikovano": "2026-09-24T23:00:00.000Z",
+    "zdroj": {
+      "nazev": "la Repubblica (Itálie)",
+      "url": "https://www.repubblica.it/esteri/2026/09/25/news/europa_paesi_golfo_alleanza_futuro-425606056/",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Europa e Paesi del Golfo, alleanza per il futuro: “È urgente accelerare”",
+    "shrnuti": "I rapporti tra le due regioni, cruciali dopo la guerra in Iran, sono stati al centro dello Europe Gulf Forum di New York. Tra i protagonisti Blair, al Thani, Mitsotakis e, in video, Meloni",
     "duvod": "bez-skutku",
     "kategorie": [],
     "posouzeni": null
@@ -1218,6 +1446,38 @@
     "posouzeni": null
   },
   {
+    "id": "k-64fe1390b0a469f5",
+    "zachyceno": "2026-09-25T01:03:00.555Z",
+    "publikovano": "2026-09-24T22:01:00.000Z",
+    "zdroj": {
+      "nazev": "la Repubblica (Itálie)",
+      "url": "https://www.repubblica.it/cronaca/2026/09/25/news/dating_app_crisi_tinder_hinge_bumble_passioni_lettura-425606099/",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "“Dimmi cosa leggi”: come cambiano le app d’incontri",
+    "shrnuti": "La strategia punta a portare le interazioni fuori dallo schermo e a delegare all’IA la scelta tra migliaia di potenziali partner",
+    "duvod": "bez-skutku",
+    "kategorie": [],
+    "posouzeni": null
+  },
+  {
+    "id": "k-e7426c7ef72126d8",
+    "zachyceno": "2026-09-25T01:03:00.556Z",
+    "publikovano": "2026-09-24T22:01:00.000Z",
+    "zdroj": {
+      "nazev": "la Repubblica (Itálie)",
+      "url": "https://www.repubblica.it/sport/calcio/nazionale/2026/09/25/news/malago_incontra_giorgetti_figc_commissariamento-425605999/",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Malagò incontra il nemico Giorgetti: riunione sul futuro della Federcalcio",
+    "shrnuti": "Il n.1 della Figc ha visto il ministro dell’Economia. Sul tavolo anche le questione del commissariamento",
+    "duvod": "bez-skutku",
+    "kategorie": [],
+    "posouzeni": null
+  },
+  {
     "id": "k-abed4a35eb29225d",
     "zachyceno": "2026-09-24T22:03:52.798Z",
     "publikovano": "2026-09-24T22:01:00.000Z",
@@ -1263,6 +1523,22 @@
     },
     "titulek": "Lo que un presidente diría sobre Maricarmen",
     "shrnuti": "\"Pocas cosas son más peligrosas que sustituir el Estado de derecho por la reactividad emocional\" Leer",
+    "duvod": "bez-skutku",
+    "kategorie": [],
+    "posouzeni": null
+  },
+  {
+    "id": "k-9c6603844285c59b",
+    "zachyceno": "2026-09-25T01:03:00.557Z",
+    "publikovano": "2026-09-24T22:00:00.000Z",
+    "zdroj": {
+      "nazev": "la Repubblica (Itálie)",
+      "url": "https://www.repubblica.it/esteri/2026/09/25/news/cassif_escluso_dalle_elezioni_vogliono_spaventare_gli_elettori_arabi_la_corte_ci_dara_ragione-425605505/",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Cassif, escluso dalle elezioni: “Vogliono spaventare gli elettori arabi, la Corte ci darà ragione”",
+    "shrnuti": "Israele, il deputato del partito della sinistra radicale Hadash commenta la decisione della Commissione elettorale di squalificare le liste arabe dalla consultazione del 27 ottobre: “Vorrebbero che il 20% del Paese non andasse a votare”",
     "duvod": "bez-skutku",
     "kategorie": [],
     "posouzeni": null
@@ -2368,6 +2644,22 @@
     "titulek": "Film Ewy Ewart z prestiżową nagrodą",
     "shrnuti": "Film Ewy Ewart \"Do ostatniego oddechu\" został nagrodzony podczas festiwalu Cannes Corporate Media & TV Awards 2026. Dokument Ewart doceniony został Srebrnym Delfinem.",
     "duvod": "vylouceno-tematem",
+    "kategorie": [],
+    "posouzeni": null
+  },
+  {
+    "id": "k-3c569c1d3ab1a0b5",
+    "zachyceno": "2026-09-25T01:03:00.558Z",
+    "publikovano": "2026-09-24T20:40:49.000Z",
+    "zdroj": {
+      "nazev": "la Repubblica (Itálie)",
+      "url": "https://www.repubblica.it/sport/calcio/nazionale/2026/09/24/news/mancini_italia_belgio_nations-425606059/",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Il battesimo di Mancini: cancellare il passato con l’Italia dei ragazzi",
+    "shrnuti": "Alle 20.45 contro il Belgio all’Olimpico si inaugura la seconda stagione del ct che fuggì in Arabia: “Io, emozionato da giorni”",
+    "duvod": "bez-skutku",
     "kategorie": [],
     "posouzeni": null
   },
@@ -7855,301 +8147,6 @@
     },
     "titulek": "A mesterséges intelligenciáról tárgyal Hszi Csin-ping és Donald Trump a Fehér Házban",
     "shrnuti": "Az amerikai elnök szerint mindketten sokat tettek a két ország kapcsolatáért.",
-    "duvod": "bez-skutku",
-    "kategorie": [],
-    "posouzeni": null
-  },
-  {
-    "id": "k-1d0bed74c73ba0c1",
-    "zachyceno": "2026-09-24T18:03:00.709Z",
-    "publikovano": "2026-09-24T17:33:31.000Z",
-    "zdroj": {
-      "nazev": "Digi24 (Rumunsko)",
-      "url": "https://www.digi24.ro/stiri/externe/mapamond/80-de-tari-cer-restabilirea-libertatii-de-navigatie-in-golf-iranul-si-rebelii-houthi-acuzati-ca-perturba-transportul-maritim-global-3963305",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "80 de țări cer restabilirea libertății de navigație în Golf. Iranul și rebelii houthi, acuzați că perturbă transportul maritim global",
-    "shrnuti": "O coaliție formată din 80 de țări a cerut joi restabilirea imediată a libertății de navigație în Golf și a condamnat atacurile atribuite Iranului și rebelilor houthi din Yemen, pe fondul tensiunilor care afectează unele dintre cele mai importante rute maritime pentru comerțul mondial.",
-    "duvod": "bez-skutku",
-    "kategorie": [],
-    "posouzeni": null
-  },
-  {
-    "id": "k-bdc53e1b501c6102",
-    "zachyceno": "2026-09-24T18:02:59.237Z",
-    "publikovano": "2026-09-24T17:30:49.000Z",
-    "zdroj": {
-      "nazev": "Euronews",
-      "url": "https://www.euronews.com/2026/09/24/rutte-says-putin-is-in-a-bad-place-as-he-reassures-nato-allies-amid-threat-reports",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Rutte says Putin is in a 'bad place' as he reassures NATO allies amid threat reports",
-    "shrnuti": "NATO chief Mark Rutte said the alliance was prepared to respond to Russian hybrid attacks against European countries following fresh warnings from Danish intelligence. Meanwhile, US Defence Secretary Pete Hegseth urged European allies to take greater responsibility for their own defence.",
-    "duvod": "bez-skutku",
-    "kategorie": [
-      "nato",
-      "rusko"
-    ],
-    "posouzeni": null
-  },
-  {
-    "id": "k-03fdefbef2f584aa",
-    "zachyceno": "2026-09-24T18:02:59.619Z",
-    "publikovano": "2026-09-24T17:30:44.000Z",
-    "zdroj": {
-      "nazev": "SME (Slovensko)",
-      "url": "https://www.sme.sk/domov/c/poslanci-uzavreli-den-diskusiou-k-statnemu-zaverecnemu-uctu-za-rok-2025?utm_source=rss&utm_medium=feed&utm_campaign=www-rss",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Poslanci uzavreli deň diskusiou k štátnemu záverečnému účtu za rok 2025",
-    "shrnuti": "Verejné financie vlani hospodárili so schodkom šesť miliárd eur.",
-    "duvod": "bez-skutku",
-    "kategorie": [],
-    "posouzeni": null
-  },
-  {
-    "id": "k-0d48fb518d01dd9a",
-    "zachyceno": "2026-09-24T18:02:59.644Z",
-    "publikovano": "2026-09-24T17:30:39.000Z",
-    "zdroj": {
-      "nazev": "Aktuality.sk",
-      "url": "https://www.aktuality.sk/clanok/QqwKkSM/preco-slovakom-nerastu-platy-na-rovinu-s-martinom-hostakom/",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Prečo Slovákom nerastú platy? NA ROVINU s Martinom Hoštákom",
-    "shrnuti": "Podnikatelia netušia, ako budú vyzerať zákony od januára, a tak si nevedia naplánovať ani zamestnávanie či zvyšovanie miezd. Príkladom je transakčná daň, ktorú Robert Fico sľúbil zrušiť, ale nakoniec to neurobí, no zmení ju zatiaľ neznámym spôsobom. Martin Hošták z Republikovej únie zamestnávateľov ",
-    "duvod": "vylouceno-tematem",
-    "kategorie": [],
-    "posouzeni": null
-  },
-  {
-    "id": "k-ddcaaff887919c92",
-    "zachyceno": "2026-09-24T18:02:59.645Z",
-    "publikovano": "2026-09-24T17:30:25.000Z",
-    "zdroj": {
-      "nazev": "Aktuality.sk",
-      "url": "https://www.aktuality.sk/clanok/DVVBvVR/ruska-hrozba-v-stredomori-pad-hlasu-aj-boj-o-tesco-denny-vyber/",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Ruská hrozba v Stredomorí, pád Hlasu aj boj o Tesco (denný výber)",
-    "shrnuti": "Spor o MiGy sa končí výsledkom, ktorý sa vládnym politikom nepáči. Avizujú zásah do fungovania generálnej prokuratúry.",
-    "duvod": "bez-skutku",
-    "kategorie": [
-      "rusko"
-    ],
-    "posouzeni": null
-  },
-  {
-    "id": "k-43133c5af2f5eb14",
-    "zachyceno": "2026-09-24T18:03:01.162Z",
-    "publikovano": "2026-09-24T17:30:01.000Z",
-    "zdroj": {
-      "nazev": "NewsMaker (Moldavsko)",
-      "url": "https://newsmaker.md/ru/villa-hercza-ministerstvo-kultury-provedet-obshestvennye-konsultaczii-posle-predlojeniya-sozdat-muzei-jenshin-v-iskusstve",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Вилла Херца: Министерство культуры проведет общественные консультации после предложения создать Музей женщин в искусстве",
-    "shrnuti": "Власти Молдовы разрабатывают предпроектное технико-экономическое обоснование для реставрации вилл Херца и Клигмана в Кишиневе при поддержке Франции. Национальный художественный музей Молдовы, который управляет зданиями, намерен создать в вилле Клигмана музей, посвященный художнику Михаю Греку. Будущ",
-    "duvod": "bez-skutku",
-    "kategorie": [],
-    "posouzeni": null
-  },
-  {
-    "id": "k-3b527fdec7489961",
-    "zachyceno": "2026-09-24T18:03:01.171Z",
-    "publikovano": "2026-09-24T17:30:00.000Z",
-    "zdroj": {
-      "nazev": "Ukrinform (anglicky)",
-      "url": "https://www.ukrinform.net/rubric-polytics/4167728-trump-and-xi-hold-talks-at-white-house.html",
-      "typ": "wire",
-      "primarni": false
-    },
-    "titulek": "Trump and Xi hold talks at White House",
-    "shrnuti": "U.S. President Donald Trump and Chinese President Xi Jinping began an expanded bilateral meeting at the White House on Thursday.",
-    "duvod": "bez-skutku",
-    "kategorie": [],
-    "posouzeni": null
-  },
-  {
-    "id": "k-ea84c509d5e3cf3f",
-    "zachyceno": "2026-09-24T18:03:00.597Z",
-    "publikovano": "2026-09-24T17:29:21.000Z",
-    "zdroj": {
-      "nazev": "El País (Španělsko, anglicky)",
-      "url": "https://english.elpais.com/international/2026-09-24/xi-jinping-speaking-to-trump-at-the-white-house-the-interests-of-china-and-the-us-are-deeply-intertwined.html",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Xi Jinping, speaking to Trump at the White House: ‘The interests of China and the US are deeply intertwined’",
-    "shrnuti": "The two leaders displayed harmony during a state visit, with the debate over AI serving as a backdrop. ‘We have a truly great friendship’ said the Republican",
-    "duvod": "bez-skutku",
-    "kategorie": [],
-    "posouzeni": null
-  },
-  {
-    "id": "k-4b5965fa5b7c41f4",
-    "zachyceno": "2026-09-24T18:03:01.193Z",
-    "publikovano": "2026-09-24T17:29:00.000Z",
-    "zdroj": {
-      "nazev": "Ukrainska Pravda (anglicky)",
-      "url": "https://www.pravda.com.ua/eng/news/2026/09/24/8054938/",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Zelenskyy announces agreement on Patriot interceptor missiles for Ukraine",
-    "shrnuti": "Volodymyr Zelenskyy announced a key agreement on a package of Patriot air defence missiles for Ukraine, keeping the supplying partner unnamed.",
-    "duvod": "bez-skutku",
-    "kategorie": [],
-    "posouzeni": null
-  },
-  {
-    "id": "k-d58f56223ceedf3c",
-    "zachyceno": "2026-09-24T18:02:58.438Z",
-    "publikovano": "2026-09-24T17:28:11.000Z",
-    "zdroj": {
-      "nazev": "Presseportal — zprávy policie (Blaulicht)",
-      "url": "https://www.presseportal.de/blaulicht/pm/117698/6358684",
-      "typ": "wire",
-      "primarni": false
-    },
-    "titulek": "POL-PDTR: Dreister Diebstahl eines E-Bikes vom Fahrradträger",
-    "shrnuti": "Schweich (ots) - Am Dienstag, 22.09.2026 kam es in Schweich auf dem Parkplatz nahe der Campinganlage Fährturm zum Diebstahl eines E-Bikes. Dieses befand sich auf einem Fahrradträger eines PKW. Zwischen 11:15 Uhr und 12:10 Uhr schnitten ein oder ...",
-    "duvod": "bez-skutku",
-    "kategorie": [],
-    "posouzeni": null
-  },
-  {
-    "id": "k-7f01964bddea7a51",
-    "zachyceno": "2026-09-24T18:02:59.188Z",
-    "publikovano": "2026-09-24T17:26:26.000Z",
-    "zdroj": {
-      "nazev": "The Guardian — World",
-      "url": "https://www.theguardian.com/technology/2026/sep/24/construction-largest-supercomputer-delayed",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Launch of UK’s ‘largest AI supercomputer’ delayed by power supply problems",
-    "shrnuti": "Datacentre hailed by government was supposed to start operating next year but may be held back into mid-2030s A huge datacentre project hailed by the UK government will miss its launch date next year and could be delayed into the mid-2030s. The site in Loughton, Essex, was described as the country’s",
-    "duvod": "bez-skutku",
-    "kategorie": [],
-    "posouzeni": null
-  },
-  {
-    "id": "k-f18a6d1e171f57d9",
-    "zachyceno": "2026-09-24T18:02:59.646Z",
-    "publikovano": "2026-09-24T17:25:46.000Z",
-    "zdroj": {
-      "nazev": "Aktuality.sk",
-      "url": "https://www.aktuality.sk/clanok/xr2RgPo/martin-estocak-predstavil-program-pre-presov-kampan-stavia-na-kontrole-mestskych-financii/",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Martin Eštočák predstavil program pre Prešov, kampaň stavia na kontrole mestských financií",
-    "shrnuti": "Martin Eštočák vstupuje do boja o Prešov s programom postaveným na šiestich kľúčových oblastiach. Prvým krokom má byť audit peňazí a mestských záväzkov.",
-    "duvod": "vylouceno-tematem",
-    "kategorie": [],
-    "posouzeni": null
-  },
-  {
-    "id": "k-bc32c1efa1a6659c",
-    "zachyceno": "2026-09-24T18:02:59.200Z",
-    "publikovano": "2026-09-24T17:25:28.000Z",
-    "zdroj": {
-      "nazev": "Politico Europe",
-      "url": "https://www.politico.eu/article/4-takeaways-politico-interview-france-president-candidate-marine-le-pen-jean-luc-melenchon-gabriel-attal/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "4 takeaways from POLITICO’s interviews with French presidential candidates Le Pen, Mélenchon, Attal",
-    "shrnuti": "The three politicians vying to succeed Emmanuel Macron spoke at the first-ever Playbook Paris Live on Thursday.",
-    "duvod": "bez-skutku",
-    "kategorie": [],
-    "posouzeni": null
-  },
-  {
-    "id": "k-9d35bd197502803b",
-    "zachyceno": "2026-09-24T18:02:59.620Z",
-    "publikovano": "2026-09-24T17:25:11.000Z",
-    "zdroj": {
-      "nazev": "SME (Slovensko)",
-      "url": "https://www.sme.sk/svet/c/spojene-arabske-emiraty-pozastavuju-lety-iranskych-leteckych-spolocnosti?utm_source=rss&utm_medium=feed&utm_campaign=www-rss",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Spojené arabské emiráty pozastavujú lety iránskych leteckých spoločností",
-    "shrnuti": "Rozhodnutie bolo prijaté na základe sankcií USA uvalených na iránske letecké spoločnosti.",
-    "duvod": "bez-skutku",
-    "kategorie": [],
-    "posouzeni": null
-  },
-  {
-    "id": "k-185a442d0fe39e8b",
-    "zachyceno": "2026-09-24T18:02:58.655Z",
-    "publikovano": "2026-09-24T17:25:00.000Z",
-    "zdroj": {
-      "nazev": "Seznam Zprávy",
-      "url": "https://www.seznamzpravy.cz/clanek/domaci-politika-pavel-mluvil-na-univerzite-v-nebrasce-rusko-zkousi-kam-az-muze-zajit-316152",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Pavel mluvil na univerzitě v Nebrasce. „Rusko zkouší, kam až může zajít“",
-    "shrnuti": "Petr Pavel věnuje poslední den své zahraniční cesty americkému středozápadu a místní silné české komunitě. V debatě se studenty University of Nebraska–Lincoln apeloval na podporu Ukrajiny.",
-    "duvod": "bez-skutku",
-    "kategorie": [
-      "rusko"
-    ],
-    "posouzeni": null
-  },
-  {
-    "id": "k-898335da1542e385",
-    "zachyceno": "2026-09-24T18:02:59.756Z",
-    "publikovano": "2026-09-24T17:24:16.000Z",
-    "zdroj": {
-      "nazev": "HVG (Maďarsko)",
-      "url": "https://hvg.hu/elet/20260924_reisz-gabor-foldszint-film-premier-nemzeti-filmintezet",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "„Ez nem egy átlagos ház, ez az egész ország” – Reisz Gábor Földszint című filmjének bemutatóján jártunk",
-    "shrnuti": "Reisz Gábor negyedik nagyjátékfilmjét szeptemberben a Velencei Filmfesztiválon mutatták be, október 1-től pedig a magyar mozik is játsszák.",
-    "duvod": "vylouceno-tematem",
-    "kategorie": [],
-    "posouzeni": null
-  },
-  {
-    "id": "k-95119e96fee97f0a",
-    "zachyceno": "2026-09-24T18:02:58.550Z",
-    "publikovano": "2026-09-24T17:24:00.000Z",
-    "zdroj": {
-      "nazev": "Český rozhlas — domácí zprávy",
-      "url": "https://www.irozhlas.cz/zpravy-domov/severni-terasy-se-nakonec-mohly-otevrit-hradec-kralove-je-chce-opravovat-na_2609241924_kch",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Severní terasy by se nakonec mohly otevřít. Hradec Králové je chce opravovat na etapy",
-    "shrnuti": "Hradec Králové by chtěl zchátralé historické Severní terasy v centru města opravit postupně po částech, uvedla radnice. Loni město ukončilo od roku 2012 chystaný projekt celkové opravy teras a přilehlých Žižkových sadů. Učinilo tak poté, co se mu nepodařilo najít projektanta rekonstrukce za odhadova",
-    "duvod": "vylouceno-tematem",
-    "kategorie": [],
-    "posouzeni": null
-  },
-  {
-    "id": "k-b70d1d51315a7f17",
-    "zachyceno": "2026-09-24T18:02:58.627Z",
-    "publikovano": "2026-09-24T17:22:38.000Z",
-    "zdroj": {
-      "nazev": "Novinky.cz",
-      "url": "https://www.novinky.cz/clanek/domaci-zpravy-stredocesky-kraj-voda-z-vodojemu-odolena-voda-se-nesmi-pit-ani-pouzivat-k-vareni-obsahuje-prilis-olova-40599453",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Voda z vodojemu Odolena Voda se nesmí pít ani používat k vaření. Obsahuje příliš olova",
-    "shrnuti": "Rozbory vody v obcích zásobovaných z vodojemu Odolena Voda odhalily nadlimitní koncentrace olova. Provozovatel vodovodu proto ve čtvrtek upozornil SMS zprávou obyvatele, aby vodu až do odvolání nepili ani ji nepoužívali k vaření. Omezení se týká také lokality Zahájí. Zatím není jasné, kdy bude omeze",
     "duvod": "bez-skutku",
     "kategorie": [],
     "posouzeni": null
