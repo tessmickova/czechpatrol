@@ -1,11 +1,16 @@
 {
-  "aktualizovano": "2026-09-25T00:03:25.363Z",
+  "aktualizovano": "2026-09-25T00:25:54.936Z",
   "stavy": [
     {
       "klic": "cloudflare",
       "stav": "omezeni",
       "popis": "Minor Service Outage",
       "incidenty": [
+        {
+          "nazev": "Workflows stuck in Queued state",
+          "odkaz": "https://www.cloudflarestatus.com/incidents/gv29fd076q2t",
+          "aktualizovano": "2026-09-25T00:03:24.000Z"
+        },
         {
           "nazev": "Network Performance Degradation — Asia-Pacific",
           "odkaz": "https://www.cloudflarestatus.com/incidents/8wmvkv5jkf15",
@@ -15,11 +20,6 @@
           "nazev": "Cloudflare One Clients are incorrectly challenged on some sites",
           "odkaz": "https://www.cloudflarestatus.com/incidents/tl0vrgjy99r0",
           "aktualizovano": "2026-09-23T11:02:41.000Z"
-        },
-        {
-          "nazev": "Incorrect geo location for some Cloudflare WARP users",
-          "odkaz": "https://www.cloudflarestatus.com/incidents/9g65dxfbcjln",
-          "aktualizovano": "2026-09-01T08:29:56.000Z"
         }
       ],
       "postizene": [
@@ -28,7 +28,7 @@
         "Africa",
         "Arica, Chile - (ARI)"
       ],
-      "zkontrolovano": "2026-09-25T00:03:25.363Z",
+      "zkontrolovano": "2026-09-25T00:25:54.936Z",
       "chyba": null
     },
     {
@@ -37,7 +37,7 @@
       "popis": "All Systems Operational",
       "incidenty": [],
       "postizene": [],
-      "zkontrolovano": "2026-09-25T00:03:25.363Z",
+      "zkontrolovano": "2026-09-25T00:25:54.936Z",
       "chyba": null
     },
     {
@@ -46,7 +46,7 @@
       "popis": "All Systems Operational",
       "incidenty": [],
       "postizene": [],
-      "zkontrolovano": "2026-09-25T00:03:25.363Z",
+      "zkontrolovano": "2026-09-25T00:25:54.936Z",
       "chyba": null
     }
   ]
