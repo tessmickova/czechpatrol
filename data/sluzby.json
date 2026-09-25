@@ -1,5 +1,5 @@
 {
-  "aktualizovano": "2026-09-25T22:02:32.451Z",
+  "aktualizovano": "2026-09-25T22:44:35.097Z",
   "stavy": [
     {
       "klic": "cloudflare",
@@ -28,7 +28,7 @@
         "Arica, Chile - (ARI)",
         "Baghdad, Iraq - (BGW)"
       ],
-      "zkontrolovano": "2026-09-25T22:02:32.451Z",
+      "zkontrolovano": "2026-09-25T22:44:35.097Z",
       "chyba": null
     },
     {
@@ -37,21 +37,21 @@
       "popis": "Partially Degraded Service",
       "incidenty": [
         {
+          "nazev": "Service Degradation Affecting Customer Using Polycom Devices Going Offline",
+          "odkaz": "https://stspg.io/4cpggx38p4g2",
+          "aktualizovano": "2026-09-25T15:31:59.960-07:00"
+        },
+        {
           "nazev": "An unintended pop-up message appear for users in US and Europe regions during initial invocation of Zoom AI’s Catch Me Up feature",
           "odkaz": "https://stspg.io/hg6t0sj5dqpg",
           "aktualizovano": "2026-09-25T14:17:09.499-07:00"
-        },
-        {
-          "nazev": "Service Degradation Affecting Customer Using Polycom Devices Going Offline",
-          "odkaz": "https://stspg.io/4cpggx38p4g2",
-          "aktualizovano": "2026-09-25T13:20:04.688-07:00"
         }
       ],
       "postizene": [
         "Devices (Softphones/Deskphones)",
         "Zoom Phone - Global"
       ],
-      "zkontrolovano": "2026-09-25T22:02:32.451Z",
+      "zkontrolovano": "2026-09-25T22:44:35.097Z",
       "chyba": null
     },
     {
@@ -60,7 +60,7 @@
       "popis": "All Systems Operational",
       "incidenty": [],
       "postizene": [],
-      "zkontrolovano": "2026-09-25T22:02:32.451Z",
+      "zkontrolovano": "2026-09-25T22:44:35.097Z",
       "chyba": null
     }
   ]

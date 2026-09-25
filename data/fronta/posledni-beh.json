@@ -1,5 +1,5 @@
 {
-  "kdy": "2026-09-25T22:00:27.918Z",
+  "kdy": "2026-09-25T22:42:46.506Z",
   "zdroje": [
     {
       "klic": "e-sbirka",
@@ -95,10 +95,9 @@
     },
     {
       "klic": "ctu",
-      "ok": false,
-      "stav": 403,
-      "pocetPolozek": 0,
-      "chyba": "HTTP 403"
+      "ok": true,
+      "stav": 200,
+      "pocetPolozek": 0
     },
     {
       "klic": "nukib",
