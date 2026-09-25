@@ -135,5 +135,73 @@
     "aiZpracovano": true,
     "lidskyOvereno": false,
     "archivniZaznam": false
+  },
+  {
+    "kam": "zaznam",
+    "pripravil": "patrol",
+    "pripraveno": "2026-09-25T23:27:28.526Z",
+    "id": "i-2026-09-25-4fd791e56c",
+    "slug": "ru-4fd791e56c",
+    "titulek": "Putin na fóru v Petrohradě popřel přípravu vojenské akce proti Evropě a tvrdí, že jsou porušována práva rusky mluvících v Pobaltí",
+    "kratkyTitulek": "Putin na fóru v Petrohradě popřel přípravu vojenské akce proti Evropě a tvrdí, že jsou porušována práva rusky mluvících v Pobaltí",
+    "zeme": "Rusko",
+    "kodZeme": "RU",
+    "kategorie": [
+      "rusko",
+      "diplomacie"
+    ],
+    "datumUdalosti": "2026-09-25T00:00:00Z",
+    "datumZjisteni": "2026-09-25T00:00:00Z",
+    "aktualizovano": "2026-09-25T23:27:28.526Z",
+    "zavaznost": "Y1",
+    "jistota": "vysoka",
+    "stav": "neuvedeno",
+    "atribuce": "neznama",
+    "puvodce": null,
+    "druh": "reakce",
+    "fakta": [
+      "Podle Meduzy a Ukrainska Pravda (obě 25. 9. 2026) prohlásil Vladimir Putin na Mezinárodním fóru Sjednocené kultury v Petrohradě: „Nepřipravujeme se na žádnou vojenskou akci proti Evropě. Nemáme takové plány.“",
+      "Podle Putina (Meduza) evropské země samy „eskalují napětí a zapojují se do provokací“; podle Ukrainska Pravda charakterizoval evropská varování před ruskou hrozbou jako záměrné zkreslování.",
+      "Podle Putina (Meduza, Ukrainska Pravda) jsou v pobaltských státech porušována práva rusky mluvícího obyvatelstva a Rusko na to reaguje „humanitárními opatřeními v rámci mezinárodního práva“.",
+      "Podle Meduzy obvinil Putin Kyjev ze zhroucení mírových jednání s tvrzením, že Ukrajina v den hlasování (ruských voleb) zaútočila na Moskvu více než 1600 drony a zasáhla volební místnosti; toto tvrzení není nezávisle ověřeno."
+    ],
+    "neznameho": [
+      "Žádné z Putinových tvrzení (porušování práv rusky mluvících, počty dronů, viník zhroucení jednání) není nezávisle ověřeno; jde o jeho vlastní rétoriku, ne o zjištěný fakt.",
+      "Zda a jaká konkrétní „humanitární opatření“ Rusko podniká, řeč neupřesňuje."
+    ],
+    "vyznam": "",
+    "eskalacniSpousteče": [],
+    "deeskalacniSignaly": [],
+    "zdroje": [
+      {
+        "nazev": "Meduza (anglicky) — Putin says Russia will not attack Europe and blames Ukraine for the breakdown in peace talks",
+        "url": "https://meduza.io/en/feature/2026/09/26/putin-says-russia-will-not-attack-europe-and-blames-ukraine-for-the-breakdown-in-peace-talks",
+        "typ": "media",
+        "publikovano": "2026-09-25T00:00:00Z",
+        "primarni": false,
+        "jazyk": "en"
+      },
+      {
+        "nazev": "Ukrainska Pravda (anglicky) — Putin claims Russian speakers' rights are violated in Baltic states but says Russia is not preparing for war in Europe",
+        "url": "https://www.pravda.com.ua/eng/news/2026/09/25/8055099/",
+        "typ": "media",
+        "publikovano": "2026-09-25T00:00:00Z",
+        "primarni": false,
+        "jazyk": "en"
+      }
+    ],
+    "souvisejici": [],
+    "historie": [
+      {
+        "kdy": "2026-09-25T00:00:00Z",
+        "text": "Zachyceno automatickým sběrem, druhý zdroj doložen před zařazením do fronty.",
+        "novySignal": true
+      }
+    ],
+    "novy": true,
+    "zapocitanoTyden": "2026-09-25",
+    "aiZpracovano": true,
+    "lidskyOvereno": false,
+    "archivniZaznam": false
   }
 ]
