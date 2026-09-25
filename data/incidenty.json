@@ -11077,6 +11077,11 @@
         "kdy": "2026-09-24T18:01:16.475Z",
         "text": "Zveřejněno jako neověřené úředně: dvě nezávislé redakce, úřad zatím nepotvrdil.",
         "novySignal": false
+      },
+      {
+        "kdy": "2026-09-25T16:30:00Z",
+        "text": "Oprava dat: záznam byl zveřejněn jako aktualizace bez odkazu na případ; doplněn odkaz na případ.",
+        "novySignal": false
       }
     ],
     "novy": true,
@@ -11084,7 +11089,8 @@
     "aiZpracovano": true,
     "lidskyOvereno": false,
     "archivniZaznam": false,
-    "overeni": "neovereno"
+    "overeni": "neovereno",
+    "navazujeNa": "nord-stream-2022"
   },
   {
     "id": "i-2026-09-24-8e1738bf2f",

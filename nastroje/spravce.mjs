@@ -550,7 +550,8 @@ function zverejniAutomaticky() {
   const inc = cti("data/incidenty.json", []);
   const jiz = new Set(inc.map((x) => x.id));
 
-  const kZverejneni = navrhy.filter((n) => dobreDolozeny(n) && !jiz.has(n.id));
+  const slugy = new Set(inc.map((x) => x.slug));
+  const kZverejneni = navrhy.filter((n) => dobreDolozeny(n) && !jiz.has(n.id) && (n.druh !== "aktualizace" || slugy.has(n.navazujeNa)));
   if (!kZverejneni.length) {
     console.log(`Nic dobře doloženého k zveřejnění. Ve frontě zůstává ${navrhy.length}.`);
     return;
@@ -631,9 +632,12 @@ function zverejniNeoverene() {
   const inc = cti("data/incidenty.json", []);
   const jiz = new Set(inc.map((x) => x.id));
 
+  /* Aktualizace bez existujícího případu shodí kontrolu dat (25. 9. 2026) — zůstane ve frontě, dokud ji člověk nenaváže. */
+  const slugy = new Set(inc.map((x) => x.slug));
   const kZverejneni = navrhy.filter((n) =>
     (n.kam ?? "zaznam") === "zaznam" && !jiz.has(n.id) && (n.fakta ?? []).length > 0 &&
-    nezavisleRedakce(n.zdroje) >= 2 && !maUredniZdroj(n.zdroje ?? []) && valecneRelevantni(n));
+    nezavisleRedakce(n.zdroje) >= 2 && !maUredniZdroj(n.zdroje ?? []) && valecneRelevantni(n) &&
+    (n.druh !== "aktualizace" || slugy.has(n.navazujeNa)));
   if (!kZverejneni.length) {
     console.log("Nic válečně relevantního k zveřejnění jako neověřené.");
     return;
