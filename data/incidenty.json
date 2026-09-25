@@ -11077,6 +11077,11 @@
         "kdy": "2026-09-24T18:01:16.475Z",
         "text": "Zveřejněno jako neověřené úředně: dvě nezávislé redakce, úřad zatím nepotvrdil.",
         "novySignal": false
+      },
+      {
+        "kdy": "2026-09-25T16:30:00Z",
+        "text": "Oprava dat: záznam byl zveřejněn jako aktualizace bez odkazu na případ; doplněn odkaz na případ.",
+        "novySignal": false
       }
     ],
     "novy": true,
@@ -11084,7 +11089,8 @@
     "aiZpracovano": true,
     "lidskyOvereno": false,
     "archivniZaznam": false,
-    "overeni": "neovereno"
+    "overeni": "neovereno",
+    "navazujeNa": "nord-stream-2022"
   },
   {
     "id": "i-2026-09-24-8e1738bf2f",
@@ -11154,6 +11160,148 @@
     ],
     "novy": true,
     "zapocitanoTyden": "2026-09-24",
+    "aiZpracovano": true,
+    "lidskyOvereno": false,
+    "archivniZaznam": false,
+    "overeni": "neovereno"
+  },
+  {
+    "id": "i-2026-09-25-c803520dcf",
+    "slug": "fi-c803520dcf",
+    "titulek": "Finsko a Švédsko poprvé společně vyslaly stíhačky k identifikaci ruských vojenských letadel nad Finským zálivem",
+    "kratkyTitulek": "Finsko a Švédsko poprvé společně vyslaly stíhačky k identifikaci ruských vojenských letadel nad Finským zálivem",
+    "zeme": "Finsko",
+    "kodZeme": "FI",
+    "kategorie": [
+      "nato",
+      "hranice"
+    ],
+    "datumUdalosti": "2026-09-25T00:00:00Z",
+    "datumZjisteni": "2026-09-25T00:00:00Z",
+    "aktualizovano": "2026-09-25T15:01:33.278Z",
+    "zavaznost": "Y1",
+    "jistota": "stredni",
+    "stav": "bez-vysetrovani",
+    "atribuce": "neznama",
+    "puvodce": null,
+    "druh": "opatreni",
+    "fakta": [
+      "Podle finských vzdušných sil identifikovaly ve čtvrtek finsko-švédské stíhačky v pohotovosti (Quick Reaction Alert) ruská vojenská letadla — dopravní Tu-134, stíhačky MiG-31 a Su-30 — v mezinárodním vzdušném prostoru nad Finským zálivem.",
+      "Podle Euronews šlo o první společnou identifikační misi finského a švédského letectva.",
+      "Podle švédského premiéra Ulfa Kristerssona (příspěvek na síti X) „Baltské moře nikdy nebylo tak zranitelné jako teď, ale zároveň nikdy nebylo tak dobře chráněné jako právě teď“."
+    ],
+    "neznameho": [
+      "Zda ruská letadla narušila vzdušný prostor Finska nebo Švédska; zdroje mluví jen o mezinárodním prostoru.",
+      "Přesný počet a trasu ruských letadel, mimo tři zmíněné typy.",
+      "Oficiální tiskovou zprávu finského letectva (puolustusvoimat.fi) jsem neotevřel; údaje jsou z médií, která ji citují."
+    ],
+    "vyznam": "",
+    "eskalacniSpousteče": [],
+    "deeskalacniSignaly": [],
+    "zdroje": [
+      {
+        "nazev": "Euronews — Finland and Sweden scramble Quick Reaction Alert jets to intercept Russian aircraft",
+        "url": "https://www.euronews.com/2026/09/25/finland-and-sweden-scramble-quick-reaction-alert-jets-to-intercept-russian-aircraft",
+        "typ": "media",
+        "publikovano": "2026-09-25T00:00:00Z",
+        "primarni": false,
+        "jazyk": "en"
+      },
+      {
+        "nazev": "Novinky.cz — Nad Finským zálivem se objevily ruské vojenské letouny. Vzlétly švédské a finské stíhačky",
+        "url": "https://www.novinky.cz/clanek/zahranicni-evropa-nad-finskym-zalivem-se-objevily-ruske-vojenske-letouny-vzletly-svedske-a-finske-stihacky-40599488",
+        "typ": "media",
+        "publikovano": "2026-09-25T00:00:00Z",
+        "primarni": false,
+        "jazyk": "cs"
+      }
+    ],
+    "souvisejici": [],
+    "historie": [
+      {
+        "kdy": "2026-09-25T00:00:00Z",
+        "text": "Zachyceno automatickým sběrem, druhý zdroj doložen před zařazením do fronty.",
+        "novySignal": true
+      },
+      {
+        "kdy": "2026-09-25T15:01:33.278Z",
+        "text": "Zveřejněno jako neověřené úředně: dvě nezávislé redakce, úřad zatím nepotvrdil.",
+        "novySignal": false
+      }
+    ],
+    "novy": true,
+    "zapocitanoTyden": "2026-09-25",
+    "aiZpracovano": true,
+    "lidskyOvereno": false,
+    "archivniZaznam": false,
+    "overeni": "neovereno"
+  },
+  {
+    "id": "i-2026-09-25-a3d693fe26",
+    "slug": "pl-a3d693fe26",
+    "titulek": "Polsko: ministr obrany oznámil zjednodušení postupu pro sestřelování narušitelů vzdušného prostoru, nebude už nutná vizuální identifikace",
+    "kratkyTitulek": "Polsko: ministr obrany oznámil zjednodušení postupu pro sestřelování narušitelů vzdušného prostoru, nebude už nutná vizuální identifikace",
+    "zeme": "Polsko",
+    "kodZeme": "PL",
+    "kategorie": [
+      "nato",
+      "hranice"
+    ],
+    "datumUdalosti": "2026-09-25T00:00:00Z",
+    "datumZjisteni": "2026-09-25T00:00:00Z",
+    "aktualizovano": "2026-09-25T15:01:33.278Z",
+    "zavaznost": "Y2",
+    "jistota": "stredni",
+    "stav": "neuvedeno",
+    "atribuce": "neznama",
+    "puvodce": null,
+    "druh": "opatreni",
+    "fakta": [
+      "Podle polského ministra obrany Cezaryho Tomczyka se mění postup identifikace narušitelů vzdušného prostoru: místo nutné vizuální identifikace bude stačit „pozitivní identifikace“ na základě radarových dat, pokud objekt vstoupí do bezletové zóny.",
+      "Podle Tomczyka byla upravena i procedura pro protiraketový systém Patriot — velitel může použití předem schválit hned po informaci o odpálení nepřátelské rakety.",
+      "Podle Tomczyka jde o reakci na nedávné incidenty spojené s hrozbami z Ruska."
+    ],
+    "neznameho": [
+      "Zda jde o formální právní nástroj (zákon, nařízení), nebo jen o změnu vnitřních postupů armády; zdroj to nespecifikuje.",
+      "Přesné datum, od kdy změna platí; defence24.pl a Novinky.cz uvádí vyjádření z 24.–25. 9., ne datum účinnosti.",
+      "Oficiální vyjádření ministerstva obrany (gov.pl) jsem neotevřel; údaje jsou z Novinky.cz, které ho cituje."
+    ],
+    "vyznam": "",
+    "eskalacniSpousteče": [],
+    "deeskalacniSignaly": [],
+    "zdroje": [
+      {
+        "nazev": "Novinky.cz — Polsko zjednoduší sestřelování narušitelů vzdušného prostoru",
+        "url": "https://www.novinky.cz/clanek/stalo-se-polsko-zjednodusi-sestrelovani-narusitelu-vzdusneho-prostoru-40599549",
+        "typ": "media",
+        "publikovano": "2026-09-25T00:00:00Z",
+        "primarni": false,
+        "jazyk": "cs"
+      },
+      {
+        "nazev": "defence24.pl — Nowe procedury dla polskich myśliwców",
+        "url": "https://defence24.pl/sily-zbrojne/nowe-procedury-dla-polskich-mysliwcow",
+        "typ": "media",
+        "publikovano": "2026-09-24T00:00:00Z",
+        "primarni": false,
+        "jazyk": "pl"
+      }
+    ],
+    "souvisejici": [],
+    "historie": [
+      {
+        "kdy": "2026-09-25T00:00:00Z",
+        "text": "Zachyceno automatickým sběrem, druhý zdroj doložen před zařazením do fronty.",
+        "novySignal": true
+      },
+      {
+        "kdy": "2026-09-25T15:01:33.278Z",
+        "text": "Zveřejněno jako neověřené úředně: dvě nezávislé redakce, úřad zatím nepotvrdil.",
+        "novySignal": false
+      }
+    ],
+    "novy": true,
+    "zapocitanoTyden": "2026-09-25",
     "aiZpracovano": true,
     "lidskyOvereno": false,
     "archivniZaznam": false,

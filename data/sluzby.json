@@ -1,16 +1,11 @@
 {
-  "aktualizovano": "2026-09-25T13:03:29.751Z",
+  "aktualizovano": "2026-09-25T18:02:27.495Z",
   "stavy": [
     {
       "klic": "cloudflare",
       "stav": "omezeni",
       "popis": "Minor Service Outage",
       "incidenty": [
-        {
-          "nazev": "Issues with Durable Objects",
-          "odkaz": "https://www.cloudflarestatus.com/incidents/gv29fd076q2t",
-          "aktualizovano": "2026-09-25T08:48:52.000Z"
-        },
         {
           "nazev": "Network Performance Degradation — Asia-Pacific",
           "odkaz": "https://www.cloudflarestatus.com/incidents/8wmvkv5jkf15",
@@ -20,6 +15,11 @@
           "nazev": "Cloudflare One Clients are incorrectly challenged on some sites",
           "odkaz": "https://www.cloudflarestatus.com/incidents/tl0vrgjy99r0",
           "aktualizovano": "2026-09-23T11:02:41.000Z"
+        },
+        {
+          "nazev": "Incorrect geo location for some Cloudflare WARP users",
+          "odkaz": "https://www.cloudflarestatus.com/incidents/9g65dxfbcjln",
+          "aktualizovano": "2026-09-01T08:29:56.000Z"
         }
       ],
       "postizene": [
@@ -28,25 +28,27 @@
         "Arica, Chile - (ARI)",
         "Algiers, Algeria - (ALG)"
       ],
-      "zkontrolovano": "2026-09-25T13:03:29.751Z",
+      "zkontrolovano": "2026-09-25T18:02:27.495Z",
       "chyba": null
     },
     {
       "klic": "zoom",
-      "stav": "omezeni",
-      "popis": "Service Under Maintenance",
+      "stav": "provoz",
+      "popis": "All Systems Operational",
       "incidenty": [
+        {
+          "nazev": "Service Degradation Affecting Customer Using Polycom Devices Going Offline",
+          "odkaz": "https://stspg.io/4cpggx38p4g2",
+          "aktualizovano": "2026-09-25T10:47:17.764-07:00"
+        },
         {
           "nazev": "An unintended pop-up message appear for users in US and Europe regions during initial invocation of Zoom AI’s Catch Me Up feature",
           "odkaz": "https://stspg.io/hg6t0sj5dqpg",
-          "aktualizovano": "2026-09-25T04:03:35.262-07:00"
+          "aktualizovano": "2026-09-25T08:49:45.153-07:00"
         }
       ],
-      "postizene": [
-        "Zoom Phone",
-        "Zoom Phone - APAC"
-      ],
-      "zkontrolovano": "2026-09-25T13:03:29.751Z",
+      "postizene": [],
+      "zkontrolovano": "2026-09-25T18:02:27.495Z",
       "chyba": null
     },
     {
@@ -55,7 +57,7 @@
       "popis": "All Systems Operational",
       "incidenty": [],
       "postizene": [],
-      "zkontrolovano": "2026-09-25T13:03:29.751Z",
+      "zkontrolovano": "2026-09-25T18:02:27.495Z",
       "chyba": null
     }
   ]
