@@ -1,5 +1,5 @@
 {
-  "aktualizovano": "2026-09-25T00:25:54.936Z",
+  "aktualizovano": "2026-09-25T07:03:08.067Z",
   "stavy": [
     {
       "klic": "cloudflare",
@@ -7,9 +7,9 @@
       "popis": "Minor Service Outage",
       "incidenty": [
         {
-          "nazev": "Workflows stuck in Queued state",
+          "nazev": "Issues with Durable Objects",
           "odkaz": "https://www.cloudflarestatus.com/incidents/gv29fd076q2t",
-          "aktualizovano": "2026-09-25T00:03:24.000Z"
+          "aktualizovano": "2026-09-25T02:32:19.000Z"
         },
         {
           "nazev": "Network Performance Degradation — Asia-Pacific",
@@ -24,11 +24,11 @@
       ],
       "postizene": [
         "Cloudflare Sites and Services",
-        "Amman, Jordan - (AMM)",
         "Africa",
-        "Arica, Chile - (ARI)"
+        "Arica, Chile - (ARI)",
+        "Algiers, Algeria - (ALG)"
       ],
-      "zkontrolovano": "2026-09-25T00:25:54.936Z",
+      "zkontrolovano": "2026-09-25T07:03:08.067Z",
       "chyba": null
     },
     {
@@ -37,7 +37,7 @@
       "popis": "All Systems Operational",
       "incidenty": [],
       "postizene": [],
-      "zkontrolovano": "2026-09-25T00:25:54.936Z",
+      "zkontrolovano": "2026-09-25T07:03:08.067Z",
       "chyba": null
     },
     {
@@ -46,7 +46,7 @@
       "popis": "All Systems Operational",
       "incidenty": [],
       "postizene": [],
-      "zkontrolovano": "2026-09-25T00:25:54.936Z",
+      "zkontrolovano": "2026-09-25T07:03:08.067Z",
       "chyba": null
     }
   ]
