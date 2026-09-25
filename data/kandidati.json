@@ -82,6 +82,76 @@
     }
   },
   {
+    "id": "k-054b41702d1f6b1b",
+    "zachyceno": "2026-09-25T06:04:18.007Z",
+    "publikovano": "2026-09-25T05:50:00.000Z",
+    "zdroj": {
+      "nazev": "Ukrinform (anglicky)",
+      "url": "https://www.ukrinform.net/rubric-ato/4167799-apartment-building-damaged-in-russian-drone-attack-on-kyiv.html",
+      "typ": "wire",
+      "primarni": false
+    },
+    "titulek": "Apartment building damaged in Russian drone attack on Kyiv",
+    "titulekPuvodni": "Apartment building damaged in Russian drone attack on Kyiv",
+    "shrnuti": "A residential building was damaged in Kyiv’s Pecherskyi district as a result of a Russian drone attack in the morning of September 25.",
+    "kodZeme": "UA",
+    "zeme": "Ukrajina",
+    "kategorie": [
+      "hybridni",
+      "drony",
+      "rusko"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "attack on",
+      "dron",
+      "drone",
+      "russia"
+    ],
+    "naliehave": null,
+    "stav": "ceka",
+    "vyrez": {
+      "text": "Apartment building damaged in Russian drone attack on Kyiv\n\r\nSubscription\nNewsletters\nPhotobank\nUkrinform - Ukrainian National News Agency\nFounded in 1918\nFriday, 25 September 2026, 09:04\nWar\nEconomy\nSports\nMore ☰\nContacts\nEng\nУкр\nEng\nEsp\nDeu\nعربي\nFra\n日本語\nPol\n&times;\nAll topics\nWar\nRecovery of Ukraine\nPolitics\nEconomy\nFact checks\nDefense\nSociety and Culture\nSports\nCrime\nAccidents and Emergencies\nAgency\nInformation on Agency\nOur Contacts\nSubscribtion Terms\nOur Services\nPrivacy policy and personal data protection\nAdditional\nPublications\nInterviews\nPhoto\nVideo\nLongreads\nReleases\nServices\nSubscription\nNewsletters\nPhotobank\n\r\n\r\n\r\nA residential building was damaged in Kyiv&rsquo;s Pecherskyi district as a result of a Russian drone attack in the morning of September 25.\nAs reported by Ukrinform, the Kyiv City Military Administration said this on Telegram .\n\r\n\r\nAccording to preliminary information, a residential building in the Pecherskyi district was damaged after a UAV crashed onto it, the statement said.\n\r\n\r\nAs Kyiv Mayor Vitalii Klitschko noted , a Russian drone struck a high-rise residential building at the level of the seventh to tenth floors.\n\r\n\r\nEmergency services are on their way…",
+      "stazeno": "2026-09-25T06:04:18.168Z",
+      "stav": 200
+    }
+  },
+  {
+    "id": "k-36ec61d451665235",
+    "zachyceno": "2026-09-25T06:04:16.493Z",
+    "publikovano": "2026-09-25T05:30:24.000Z",
+    "zdroj": {
+      "nazev": "Denník N (Slovensko)",
+      "url": "https://dennikn.sk/5582960/rano-s-nhl-hlavaj-prisiel-do-toronta-nalozil-si-najtazsie-cinky-a-prekvapil-spoluhraca-ake-su-jeho-sance-na-nhl/",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Ráno s NHL: Hlavaj prišiel do Toronta, naložil si najťažšie činky a prekvapil spoluhráča. Aké sú jeho šance na NHL",
+    "titulekPuvodni": "Ráno s NHL: Hlavaj prišiel do Toronta, naložil si najťažšie činky a prekvapil spoluhráča. Aké sú jeho šance na NHL",
+    "shrnuti": "Toronto Maple Leafs poslalo Samuela Hlavaja na farmu. Nič iné sa ani nedalo čakať, Slovák je v klubovej hierarchii brankárom číslo štyri, čiže dvojkou tímu Toronto Marlies v AHL. Počas predsezónnej prípravy sa pre brankára miesto v NHL vybojovať nedá, no dá sa počas nej zaujať, čo sa Hlavajovi podar",
+    "kodZeme": "SK",
+    "zeme": "Slovensko",
+    "kategorie": [
+      "sabotaz"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "naloz"
+    ],
+    "naliehave": null,
+    "stav": "ceka",
+    "vyrez": {
+      "text": "",
+      "stazeno": "2026-09-25T06:04:18.978Z",
+      "stav": 403,
+      "chyba": "HTTP 403"
+    }
+  },
+  {
     "id": "k-3b72f3cc91bd684d",
     "zachyceno": "2026-09-25T05:03:46.287Z",
     "publikovano": "2026-09-25T04:57:00.000Z",
@@ -185,6 +255,40 @@
     }
   },
   {
+    "id": "k-e55b2a7d84b8949b",
+    "zachyceno": "2026-09-25T06:04:18.037Z",
+    "publikovano": "2026-09-25T03:23:00.000Z",
+    "zdroj": {
+      "nazev": "Ukrainska Pravda (anglicky)",
+      "url": "https://www.pravda.com.ua/eng/news/2026/09/25/8054970/",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Explosions heard in Russia's Ulyanovsk and Perm: factory and oil refinery targeted – photos, videos",
+    "titulekPuvodni": "Explosions heard in Russia's Ulyanovsk and Perm: factory and oil refinery targeted – photos, videos",
+    "shrnuti": "Explosions were heard in Ulyanovsk and Perm overnight, with the Iskra plant and Lukoil's Perm oil refinery coming under attack.",
+    "kodZeme": "RU",
+    "zeme": "Rusko",
+    "kategorie": [
+      "sabotaz",
+      "rusko"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "explosion",
+      "russia"
+    ],
+    "naliehave": null,
+    "stav": "ceka",
+    "vyrez": {
+      "text": "Explosions reported at defence plant and oil refinery in Russia | Ukrainska Pravda\nFire at the oil refinery in Perm. Photo: Exilenova+\nExplosions were heard in the Russian cities of Ulyanovsk and Perm on the night of 24-25 September. A factory and an oil refinery have come under attack.\nSource: Exilenova+ Telegram channel\nDetails: Eyewitnesses reported that the Iskra plant in Ulyanovsk, part of the Russia Almaz-Antey Corporation which is involved in the production of weapons and air defence systems, was hit.\nAdvertisement:\n\r\n\r\n\r\n\r\n\r\nThe plant is directly involved in import substitution programmes for Russia's defence industry and aerospace sector.\nThe company had also previously expanded its production capacity by opening a new large-scale facility for the manufacture of digital units and microwave modules for radar systems.\nMeanwhile, Lukoil's Perm oil refinery was hit. The facility processes more than 13 million tonnes of oil every year, making it one of Russia's largest oil refineries. It produces a wide range of petroleum products, including petrol, diesel and jet fuel.\nBackground: Drones attacked the temporarily occupied city of Luhansk on the night of 24-25 September,…",
+      "stazeno": "2026-09-25T06:04:19.182Z",
+      "stav": 200
+    }
+  },
+  {
     "id": "k-a1004cc94494c60f",
     "zachyceno": "2026-09-25T04:03:06.619Z",
     "publikovano": "2026-09-25T03:23:00.000Z",
@@ -213,6 +317,43 @@
     "vyrez": {
       "text": "Vrah 36leté matky z Prahy dostal původně za předchozí vraždy 25 let. Soud trest snížil o deset - Novinky\nZobrazení snímku 1 z 0\nzáhlaví\nHlavní obsah\nVrah 36leté matky z Prahy dostal původně za předchozí vraždy 25 let. Soud trest snížil o deset\nMartina Jedlánková\n5:26\nChcete-li článek poslouchat, přihlaste se\neBook\nSdílet\nDnes 25. 9., 5:23\nMichal Šťastný obviněný z vraždy 36leté ženy z Prahy se dopustil brutálních vražd v roce 2002 už ve svých 18 letech, kdy zabil adoptivní rodiče své tehdejší přítelkyně. Přestože to původně vypadalo na jasný případ, u soudu došlo k mnoha zvratům. Soud ho poslal na 25 let za mříže, ale vyšší instance mu snížila trest na 15 let. Na svobodu se tak dostal před devíti lety a vraždil znovu.\nFoto: Profimedia.cz\nMichal Šťastný (19 let) v době první vraždy\nČlánek\nDne 9. března roku 2002 se policie vydala do vily v Běchovicích. Čtyřiapadesátiletá Hana Kalvodová, která zde i se svým dvaašedesátiletým manželem Ladislavem Kalvodou žila, se již čtvrtý den neukázala v práci. Policisté se proto vydali celou situaci prověřit.\nManžele policisté nalezli v prvním patře jejich domu mrtvé. Ladislav byl zavražděn čtrnácti bodnými ranami. Jeho manželka Hana…",
       "stazeno": "2026-09-25T04:03:08.897Z",
+      "stav": 200
+    }
+  },
+  {
+    "id": "k-958b263defbf0088",
+    "zachyceno": "2026-09-25T06:04:18.040Z",
+    "publikovano": "2026-09-25T02:24:00.000Z",
+    "zdroj": {
+      "nazev": "Ukrainska Pravda (anglicky)",
+      "url": "https://www.pravda.com.ua/eng/news/2026/09/25/8054968/",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Russian forces attack Kyiv: one injured and high-rise building damaged – photos, video",
+    "titulekPuvodni": "Russian forces attack Kyiv: one injured and high-rise building damaged – photos, video",
+    "shrnuti": "A Russian drone attack on Kyiv overnight injured one person and damaged buildings in the Solomianskyi and Podilskyi districts, with several fires reported.",
+    "kodZeme": "UA",
+    "zeme": "Ukrajina",
+    "kategorie": [
+      "hybridni",
+      "drony",
+      "rusko"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "attack on",
+      "dron",
+      "drone",
+      "russia"
+    ],
+    "naliehave": null,
+    "stav": "ceka",
+    "vyrez": {
+      "text": "Russian drone attack damages residential and non-residential buildings in Kyiv | Ukrainska Pravda\nWithered sunflower flower. Photo: State Emergency Service of Ukraine in Kyiv\nOne person has been injured in a Russian UAV attack on the city of Kyiv on the night of 24-25 September when debris fell onto a 25-storey residential building in the Solomianskyi district.\nSource: Kyiv Mayor Vitali Klitschko\nQuote: \"A UAV has fallen onto a non-residential building in the Solomianskyi district. There is currently a missile threat in the capital.\"\nAdvertisement:\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nUpdate: Kyiv City Military Administration reported that debris had fallen onto a 25-storey residential building in the Solomianskyi district. (As of 07:26, the State Emergency Service had not mentioned any damage to the residential building.)\n\r\n\r\n\r\nA rescue worker\n\r\n\r\n\r\nPhoto: State Emergency Service of Ukraine in Kyiv\r\n\r\n\r\n\r\nRussian forces damaged a non-residential building in the Podilskyi district. The State Emergency Service of Ukraine in Kyiv later added that a six-storey non-residential building had caught fire on the ground and first floors.\n\r\n\r\n\r\nRescue workers\n\r\n\r\n\r\nPhoto: State Emergency…",
+      "stazeno": "2026-09-25T06:04:19.310Z",
       "stav": 200
     }
   },
@@ -11362,165 +11503,6 @@
       "kdy": "2026-09-20T07:48:17.187Z",
       "duvod": "pokracovani",
       "patriK": "francie-vykolejeni-vlaku-cleon-2026",
-      "poznamka": null
-    }
-  },
-  {
-    "id": "k-703701dacf79a784",
-    "zachyceno": "2026-09-15T16:32:52.308Z",
-    "publikovano": "2026-09-12T08:48:48.000Z",
-    "zdroj": {
-      "nazev": "Téma: zeleznice (anglicky)",
-      "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxPejlQbHFIamN4XzNLTGtGajgtUXpXa2hTLXdGMUc0b3J5VVRNWUJXblNXZTZBUktIZnluSGFYRDdhWmRTOFMxOFFLRF9PeEw0dXk4U1Nfd3NQcUZHTnVwYzFlbzNWbHl0OGhQbUJNWXAtUzFRaWNJTFdXSTYybjhxUlFKVXUzXzItRXBzYzhwMEFibVNJRmJkWHJDcEs0VUdjcmhCRnR6UEw5Sjg0?oc=5",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "French police suspect Normandy train derailment was result of sabotage - France 24",
-    "titulekPuvodni": "French police suspect Normandy train derailment was result of sabotage - France 24",
-    "shrnuti": "French police suspect Normandy train derailment was result of sabotage France 24",
-    "kodZeme": "FR",
-    "zeme": "Francie",
-    "kategorie": [
-      "sabotaz"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "zeSite": null,
-    "shody": [
-      "sabotage",
-      "derailment"
-    ],
-    "naliehave": null,
-    "stav": "vyrizen",
-    "vyrez": {
-      "text": "Google News",
-      "stazeno": "2026-09-15T18:32:59.561Z",
-      "stav": 200
-    },
-    "vyrizeni": {
-      "kdy": "2026-09-20T07:48:17.187Z",
-      "duvod": "pokracovani",
-      "patriK": "francie-vykolejeni-vlaku-cleon-2026",
-      "poznamka": null
-    }
-  },
-  {
-    "id": "k-da67344ccaaf0b52",
-    "zachyceno": "2026-09-12T09:10:43.197Z",
-    "publikovano": "2026-09-12T08:18:00.000Z",
-    "zdroj": {
-      "nazev": "Google News — sabotage Europe",
-      "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxQd0FkMHNkZC1GN1ZvQlRpWkEyWnFTY2stb1VaS25OcEphMG1nZ0xYeXJURjcxTk5MSjhIR2JaRzlCbkpfV3pWNFpKX3ZWS0EwX3dxU3RmeFRkbm8zYUZPRGVLdEtpa3dlQWxYa3hrX3ZpTXNfNGtTOTVtbEUybGN4X0g1R0JNUjJvbzNITjI5TUttUXNySGQxa3lhOHVua29OT1dXYUh0VWR4UGI4YlNqVA?oc=5",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Not every incident is Russian sabotage. But it suits the defence sector to say so - EUobserver",
-    "titulekPuvodni": "Not every incident is Russian sabotage. But it suits the defence sector to say so - EUobserver",
-    "shrnuti": "",
-    "kodZeme": "RU",
-    "zeme": "Rusko",
-    "kategorie": [
-      "sabotaz",
-      "rusko"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "shody": [
-      "sabotage",
-      "russia"
-    ],
-    "stav": "vyrizen",
-    "vyrez": {
-      "text": "Google News",
-      "stazeno": "2026-09-14T06:07:01.792Z",
-      "stav": 200
-    },
-    "naliehave": null,
-    "vyrizeni": {
-      "kdy": "2026-09-20T07:48:17.187Z",
-      "duvod": "neudalost",
-      "patriK": null,
-      "poznamka": null
-    }
-  },
-  {
-    "id": "k-06fadafd7744894f",
-    "zachyceno": "2026-09-20T18:02:24.985Z",
-    "publikovano": "2026-09-12T07:00:00.000Z",
-    "zdroj": {
-      "nazev": "Česko — sabotaz",
-      "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxQeENxQ0VwcUhEdTlRTHJONjNlREE3eDVERV9fWjk0dWdZdGIzeURjMDlrYVlXdkJObF9NN0VzMEtocHFXU1AyenAyWEJwRzZTRElZOWk1amc1ZFRWV19MNGlaT29xa1dNSTV3TkFxUU1TdXBiOV9wNGt5RWlyUXFOVktyeUluM2c3MGlsNkotdy03QU8wcmlBTi1Yc0JuZHI4V3k2ZmZsNnhJZ01MNm1CdzBLcDVmdw?oc=5",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Explosion at Bulgarian ammunition depot supplying Ukraine sparks massive fire, sabotage probe - The Kyiv Independent",
-    "titulekPuvodni": "Explosion at Bulgarian ammunition depot supplying Ukraine sparks massive fire, sabotage probe - The Kyiv Independent",
-    "shrnuti": "Explosion at Bulgarian ammunition depot supplying Ukraine sparks massive fire, sabotage probe The Kyiv Independent",
-    "kodZeme": "BG",
-    "zeme": "Bulharsko",
-    "kategorie": [
-      "sabotaz"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "zeSite": null,
-    "shody": [
-      "sabotage",
-      "explosion"
-    ],
-    "naliehave": null,
-    "stav": "vyrizen",
-    "vyrez": {
-      "text": "Google News",
-      "stazeno": "2026-09-20T18:02:25.839Z",
-      "stav": 200
-    },
-    "vyrizeni": {
-      "kdy": "2026-09-20T19:27:03.845Z",
-      "duvod": "duplicita",
-      "patriK": null,
-      "poznamka": "Už je zdrojem záznamu bulharsko-emco-pozar-skladu-munice-2026."
-    }
-  },
-  {
-    "id": "k-b694cf5e827b3765",
-    "zachyceno": "2026-09-13T11:32:29.641Z",
-    "publikovano": "2026-09-12T06:27:00.000Z",
-    "zdroj": {
-      "nazev": "Deutsche Welle — Europe",
-      "url": "https://www.dw.com/en/russia-s-drone-war-comes-to-moldova-and-romania/a-79239591?maca=en-rss-en-eu-2092-rdf",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Russia's drone war comes to Moldova and Romania",
-    "titulekPuvodni": "Russia's drone war comes to Moldova and Romania",
-    "shrnuti": "Incursions by Russian drones into Moldovan and Romanian airspace are increasingly common. This week the Ukrainian president's plane was stopped from taking off from Chisinau. Observers suspect the attacks are deliberate.",
-    "kodZeme": "RO",
-    "zeme": "Rumunsko",
-    "kategorie": [
-      "drony",
-      "rusko"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "shody": [
-      "incursion+airspace",
-      "dron",
-      "drone",
-      "airspace",
-      "russia"
-    ],
-    "stav": "vyrizen",
-    "vyrez": {
-      "text": "Russia's drone war comes to Moldova and Romania\nSkip to content\nSkip to main menu\nSkip to more DW sites\nIn focus\nBRICS German politics El Nino\nLatest audio Latest videos\nLive TV\nAdvertisement\nhttps://p.dw.com/p/5MTpv\nA Russian drone struck the border crossing of Starokozache between Ukraine and Moldova on the night of September 8 Image: OdeskaODA/Telegram Advertisement\nFor Ukrainians, Russia's air war has been a bitter, bloody reality for years. People in Ukraine are being  killed every day by missiles, bombs, and drones . But the country's central and southeastern European neighbors have also found themselves affected, albeit on a smaller scale: Missiles and drones sometimes invade their air space, and occasionally even crash on their territory.\nNow the Russian drone war is coming dangerously close to two of Ukraine's neighbors: Romania and the Republic of Moldova , where drone incidents are now an almost daily occurrence. The drones often explode, leaving people injured, and there have also been recent attacks on Ukrainian checkpoints at the Moldovan and Romanian borders.\nThe attacks have now escalated to such a degree that many observers believe they can no longer be…",
-      "stazeno": "2026-09-14T06:07:01.939Z",
-      "stav": 200
-    },
-    "naliehave": null,
-    "vyrizeni": {
-      "kdy": "2026-09-20T07:48:17.187Z",
-      "duvod": "pokracovani",
-      "patriK": "moldavsko-dron-uzavrel-vzdusny-prostor-2026",
       "poznamka": null
     }
   }
