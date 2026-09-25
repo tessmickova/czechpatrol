@@ -9,6 +9,7 @@ import { ctenaProfily } from "./socialni";
 import { ctiProfil } from "./cteni-socialni";
 import type { Polozka } from "./typy";
 import { jeJenProjev, jeSankcionovane, POKYNY_TEXTU } from "../nastroje/zasady-textu.mjs";
+import { klicAdresy } from "../nastroje/klic-adresy.mjs";
 
 /*
   Automatický sběr událostí.
@@ -926,7 +927,8 @@ async function stahniZdroj(z: ZdrojUdalosti) {
 function znameZIncidentu(): { adresy: Set<string>; otisky: Set<string> } {
   const inc = JSON.parse(fs.readFileSync(path.join(KOREN, "incidenty.json"), "utf-8")) as { titulek: string; zdroje: { url: string }[] }[];
   return {
-    adresy: new Set(inc.flatMap((i) => i.zdroje.map((s) => s.url)).filter(Boolean)),
+    // Klíč adresy, ne přesný text: RSS přidává k odkazům utm_… a kotvy (viz nastroje/klic-adresy.mjs).
+    adresy: new Set(inc.flatMap((i) => i.zdroje.map((s) => klicAdresy(s.url))).filter(Boolean)),
     otisky: new Set(inc.map((i) => otisk(i.titulek))),
   };
 }
@@ -1128,7 +1130,7 @@ export async function sbirejUdalosti(): Promise<{ novych: number; celkem: number
   for (const s of [...stazene, ...zeSiti]) {
     if (!s.ok) continue;
     for (const p of s.polozky) {
-      if (!p.odkaz || adresy.has(p.odkaz) || zname.adresy.has(p.odkaz)) continue;
+      if (!p.odkaz || adresy.has(p.odkaz) || zname.adresy.has(klicAdresy(p.odkaz))) continue;
       // Média ze sankčního seznamu EU se nepřebírají ani neodkazují (CLAUDE.md, pravidlo č. 0.6).
       if (jeSankcionovane(p.odkaz)) continue;
       if (p.publikovano && new Date(p.publikovano).getTime() < hranice) continue;
@@ -1205,7 +1207,7 @@ export async function sbirejUdalosti(): Promise<{ novych: number; celkem: number
 
   const doplnene = await doplnModelem(nove);
   // Staří kandidáti odcházejí, když jsou starší než okno nebo už byli zveřejněni jako záznam.
-  const zivi = stare.filter((k) => new Date(k.publikovano ?? k.zachyceno).getTime() >= hranice && !zname.adresy.has(k.zdroj.url) && !zname.otisky.has(otisk(k.titulek)));
+  const zivi = stare.filter((k) => new Date(k.publikovano ?? k.zachyceno).getTime() >= hranice && !zname.adresy.has(klicAdresy(k.zdroj.url)) && !zname.otisky.has(otisk(k.titulek)));
   /*
     Strop fronty. Naléhavé napřed — kdyby se fronta zaplnila běžnými zprávami,
     vytlačila by z ní zrovna tu jednu, kvůli které tu celý sběr je.
@@ -1241,7 +1243,7 @@ export async function sbirejUdalosti(): Promise<{ novych: number; celkem: number
   */
   const hraniceOdmitnutych = Date.now() - DNI_ODMITNUTYCH * 86_400_000;
   const zbyvajici = stareOdmitnute.filter(
-    (o) => new Date(o.publikovano ?? o.zachyceno).getTime() >= hraniceOdmitnutych && !zname.adresy.has(o.zdroj.url),
+    (o) => new Date(o.publikovano ?? o.zachyceno).getTime() >= hraniceOdmitnutych && !zname.adresy.has(klicAdresy(o.zdroj.url)),
   );
   const vseOdmitnute = [...noveOdmitnute, ...zbyvajici]
     .sort((a, b) => (b.publikovano ?? b.zachyceno).localeCompare(a.publikovano ?? a.zachyceno))

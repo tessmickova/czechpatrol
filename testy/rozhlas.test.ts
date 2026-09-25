@@ -2,7 +2,7 @@
 import fs from "node:fs";
 import path from "node:path";
 import { describe, expect, it } from "vitest";
-import { castDne, jeCesky, palivoDoPrehledu, sestavPrehledDne, sluzbyDoPrehledu, vyberNavrhyDoPrehledu, zmenyStavuZaDen, klicovaVeta, legendaTecek, pocetZdroju, pruhTecek, PUVODCI, radekPokryti, jeArchivni, radekData, rozdelZpravu, sestavPalivo, sestavSouhrn, sestavPrehledZachycenych, sestavSignal, sestavTest, sestavVystrahu, sestavZdroje, sestavZmenuStavu, sestavZpravu, vyberDoPrehledu, vyberNove, vyberPalivo, vyberSignaly, vyberVystrahu, vyberZmenyStavu, zahlavi, sestavVaznyNavrh, vyberVazneNavrhy, smerZmeny } from "../nastroje/rozhlas.mjs";
+import { castDne, jeCesky, palivoDoPrehledu, sestavPrehledDne, sluzbyDoPrehledu, vyberNavrhyDoPrehledu, zmenyStavuZaDen, klicovaVeta, legendaTecek, pocetZdroju, pruhTecek, PUVODCI, radekPokryti, jeArchivni, radekData, rozdelZpravu, sestavPalivo, sestavSouhrn, sestavPrehledZachycenych, sestavSignal, sestavTest, sestavVystrahu, sestavZdroje, sestavZmenuStavu, sestavZpravu, vyberDoPrehledu, vyberNove, vyberPalivo, vyberSignaly, vyberVystrahu, vyberZmenyStavu, zahlavi, sestavVaznyNavrh, vyberVazneNavrhy, smerZmeny, sestavMimoradnou } from "../nastroje/rozhlas.mjs";
 import { smerZmeny as smerZmenyWeb } from "../src/lib/smer";
 import { UROVNE, zDeseti } from "../src/lib/skala";
 import { PUVODCI as PUVODCI_WEB } from "../src/lib/kategorie";
@@ -826,5 +826,20 @@ describe("doposlání tiše zapamatovaného záznamu", () => {
     expect(vyberNove([i], stav, { rezim: "souhrn", ted }).map((v: { i: { id: string } }) => v.i.id)).toEqual(["x"]);
     const bez = { prvniBeh: "2026-09-06T00:00:00Z", zaznamy: { x: { kdy: "2026-09-06T00:00:00Z", historie: 0, ticho: true } } };
     expect(vyberNove([i], bez, { rezim: "souhrn", ted })).toEqual([]);
+  });
+});
+
+describe("mimořádná zpráva", () => {
+  const i = zaznam({ druh: "reakce", puvodce: undefined, kodZeme: "RU", zeme: "Rusko", lidskyOvereno: false, overeni: "neovereno", fakta: ["První fakt.", "Druhý fakt."] });
+  it("nese označení, upozornění na neověřenost a obě fakta", () => {
+    const t = sestavMimoradnou(i);
+    expect(t.split("\n")[0]).toContain("MIMOŘÁDNÁ ZPRÁVA");
+    expect(t).toContain("Úředně neověřeno");
+    expect(t).toContain("První fakt.");
+    expect(t).toContain("Druhý fakt.");
+  });
+  it("u prohlášení netvrdí, že jde o dění v zemi mluvčího", () => {
+    expect(klicovaVeta(i)).toContain("zaznělo v Rusku");
+    expect(klicovaVeta(i)).not.toContain("k dění");
   });
 });

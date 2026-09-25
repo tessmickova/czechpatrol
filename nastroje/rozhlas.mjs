@@ -254,7 +254,12 @@ export function klicovaVeta(i) {
   if (naUzemiCr(i)) return `Záznam se týká území České republiky. ${nic}`;
   if (nato) return `Záznam se týká NATO jako celku. ${nic}`;
   const misto = kde
-    ? `${d === "reakce" ? "Jde o vyjádření k dění" : "Událost nastala"} ${kde}, nikoli v České republice.`
+    /*
+      U prohlášení je země ta, kde výrok zazněl — ne místo, o kterém mluví.
+      Dřív tu stálo „vyjádření k dění v Rusku“ i u Putinova výroku o
+      Pobaltí (25. 9. 2026), což obsah zprávy popíralo.
+    */
+    ? (d === "reakce" ? `Jde o vyjádření, které zaznělo ${kde}.` : `Událost nastala ${kde}, nikoli v České republice.`)
     /* Týž tvar i pro zemi, která ve slovníku chybí — ať zpráva nezní pokaždé jinak. */
     : `Událost nastala v zemi ${i.zeme}, nikoli v České republice.`;
   // Událost mimo ČR, která se Česka přesto týká: řekne se obojí, ne jen jedno.
@@ -346,7 +351,7 @@ export function sestavZdroje(i) {
  */
 export { PUVODCI };
 
-export function sestavZpravu(i, { aktualizace = false, souhrn = false } = {}) {
+export function sestavZpravu(i, { aktualizace = false, souhrn = false, faktu = 1 } = {}) {
   const d = druh(i);
   const kde = i.kodZeme === "CZ" ? "Česko" : i.zeme;
   const odkaz = `${WEB}/incident/${i.slug}/`;
@@ -417,8 +422,8 @@ export function sestavZpravu(i, { aktualizace = false, souhrn = false } = {}) {
 
   // Co se stalo: u aktualizace to nové, jinak první doložený fakt. Jedna věta.
   const nove = aktualizace && i.historie?.length ? i.historie[i.historie.length - 1].text : null;
-  const jadro = nove ?? i.fakta?.[0] ?? i.titulek;
-  radky.push("", `${aktualizace ? "<b>Co je nového:</b> " : ""}${esc(zkrat(jadro, 280))}`);
+  const jadra = nove ? [nove] : i.fakta?.length ? i.fakta.slice(0, faktu) : [i.titulek];
+  radky.push("", `${aktualizace ? "<b>Co je nového:</b> " : ""}${jadra.map((j) => esc(zkrat(j, 280))).join("\n\n")}`);
 
   // Co potvrzené není. Jedna věta, ale povinně — viz pravidlo č. 6.
   const nejisté = i.neznameho?.[0];
@@ -448,6 +453,29 @@ export function sestavZpravu(i, { aktualizace = false, souhrn = false } = {}) {
   // nepatří — čtenáři nic neříká a odkaz na záznam je o řádek výš.
   radky.push(`CzechPatrol · aktualizováno ${datumCz(i.aktualizovano ?? kdyZjisteno(i))}`);
   return radky.join("\n");
+}
+
+/**
+ * Mimořádná zpráva — výjimka, kterou spouští jen správce ručně.
+ *
+ * Do kanálu jinak jde jen lidsky ověřené. Výjimkou jsou záznamy, které
+ * správce vědomě pošle hned, třeba výrok ruského vedení o sledovaných
+ * zemích (25. 9. 2026 Putin o Pobaltí): čekat na úřední ověření by u
+ * výroku nemělo smysl, protože úřad ho nepotvrdí ani nevyvrátí.
+ * Text stojí na stejném sestavení jako běžná zpráva; navíc nese označení
+ * a u neověřeného záznamu řádek, že vychází z médií — čtenář musí vědět,
+ * na čem zpráva stojí.
+ */
+export function sestavMimoradnou(i) {
+  const uredne = i.lidskyOvereno || i.overeni === "automaticke";
+  // Mimořádná zpráva nese dvě doložená fakta: u výroku bývá podstata ve dvou větách.
+  const [prvni, ...zbytek] = sestavZpravu(i, { faktu: 2 }).split("\n");
+  return [
+    "❗ <b>MIMOŘÁDNÁ ZPRÁVA</b>",
+    prvni,
+    ...(uredne ? [] : ["<i>Úředně neověřeno — vychází ze shodných zpráv více médií.</i>"]),
+    ...zbytek,
+  ].join("\n");
 }
 
 /**
@@ -1203,6 +1231,35 @@ async function main() {
     const v = await posli(text, { komu });
     console.log(v.ok ? `test odeslán (${komu})` : `test selhal (${komu}): ${v.chyba}`);
     process.exit(v.ok ? 0 : 1);
+  }
+  const iMimoradne = arg.indexOf("--mimoradne");
+  if (iMimoradne !== -1) {
+    /*
+      Jednorázově a jen jednou: stav si pamatuje, co odešlo mimořádně, takže
+      opakované spuštění (nebo dvojklik v Actions) nepošle zprávu dvakrát.
+      Záznam se zároveň zapíše mezi odeslané, aby ho běžný rozhlas po
+      pozdějším ověření neposlal znovu jako novinku.
+    */
+    const slug = arg[iMimoradne + 1];
+    const i = zaznamy.find((z) => z.slug === slug);
+    if (!i) { console.error(`[rozhlas] mimořádná: záznam „${slug}" není zveřejněný`); process.exit(1); }
+    if (!process.env.TELEGRAM_BOT_TOKEN && !nacisto) { console.error("[rozhlas] CHYBÍ TELEGRAM_BOT_TOKEN — nic se neodeslalo"); process.exit(1); }
+    const stav = ctiStav();
+    stav.mimoradne ??= {};
+    if (stav.mimoradne[i.id]) { console.log(`[rozhlas] mimořádná k „${slug}" už odešla ${stav.mimoradne[i.id].kdy}`); return; }
+    let ok = true, messageId = null;
+    for (const [n, dil] of rozdelZpravu(sestavMimoradnou(i)).entries()) {
+      const v = await posli(dil, { nahled: n === 0 });
+      if (!v.ok) { ok = false; console.error(`[rozhlas] mimořádná neodešla: ${v.chyba}`); break; }
+      messageId ??= v.messageId ?? null;
+    }
+    if (!ok) process.exit(1);
+    const kdy = new Date().toISOString();
+    stav.mimoradne[i.id] = { kdy, slug, messageId };
+    stav.zaznamy[i.id] ??= { kdy, historie: i.historie?.length ?? 0, mimoradne: true };
+    if (!nacisto) zapisStav(stav);
+    console.log(`[rozhlas] mimořádná zpráva odeslána: ${slug}`);
+    return;
   }
   if (!process.env.TELEGRAM_BOT_TOKEN && !nacisto) {
     /*

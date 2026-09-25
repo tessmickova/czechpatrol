@@ -20,6 +20,7 @@ import { falesneUredni } from "./uredni-zdroj.mjs";
 import { jeJenProjev, jeSankcionovane, nalepkyVTextu } from "./zasady-textu.mjs";
 import { zkontrolujZaznam } from "./bezpecnost-obsahu.mjs";
 import { chybySouhrnu } from "./souhrn-situace.mjs";
+import { klicAdresy } from "./klic-adresy.mjs";
 
 const koren = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const cti = (f) => JSON.parse(fs.readFileSync(path.join(koren, "data", f), "utf-8"));
@@ -144,14 +145,14 @@ for (const o of opravy) {
 }
 
 // 2b. kandidáti: adresa, datum, žádná shoda s už zveřejněným záznamem
-const adresyZaznamu = new Set(incidenty.flatMap((i) => (i.zdroje ?? []).map((z) => z.url)));
+const adresyZaznamu = new Set(incidenty.flatMap((i) => (i.zdroje ?? []).map((z) => klicAdresy(z.url))));
 const idKandidatu = new Set();
 for (const k of kandidati) {
   if (idKandidatu.has(k.id)) chyby.push(`kandidát ${k.id}: duplicitní id`);
   idKandidatu.add(k.id);
   if (!/^https?:\/\//.test(k.zdroj?.url ?? "")) chyby.push(`kandidát ${k.id}: neplatná adresa zdroje`);
   if (!platneDatum(k.zachyceno)) chyby.push(`kandidát ${k.id}: neplatné datum zachycení`);
-  if (adresyZaznamu.has(k.zdroj?.url)) varovani.push(`kandidát ${k.id}: stejná adresa jako zveřejněný záznam — sběr ho příště odloží`);
+  if (adresyZaznamu.has(klicAdresy(k.zdroj?.url))) varovani.push(`kandidát ${k.id}: stejná adresa jako zveřejněný záznam — sběr ho příště odloží`);
   if (k.stav !== "ceka" && k.stav !== "vyrizen") chyby.push(`kandidát ${k.id}: neznámý stav ${k.stav}`);
   if (k.stav === "vyrizen" && !k.vyrizeni?.duvod) chyby.push(`kandidát ${k.id}: vyřízený bez důvodu`);
 }
@@ -284,7 +285,7 @@ if (fs.existsSync(cestaOdmitnutych)) {
         chyby.push(`${kde}: neznámá míra podezření „${o.posouzeni.podezreni}“`);
       }
       // Odmítnutá zpráva nikdy nesmí být zároveň zveřejněným záznamem.
-      if (adresyZaznamu.has(o.zdroj.url)) chyby.push(`${kde}: tahle adresa už je zveřejněný záznam`);
+      if (adresyZaznamu.has(klicAdresy(o.zdroj.url))) chyby.push(`${kde}: tahle adresa už je zveřejněný záznam`);
     }
     const vazne = odmitnute.filter((o) => o.posouzeni?.podezreni === "vysoke").length;
     if (vazne) varovani.push(`odmítnutých označených jako vážné: ${vazne} — projít ve správě`);
