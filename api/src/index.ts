@@ -17,6 +17,7 @@ import * as patrol from "./patrol";
 import * as sprava from "./sprava";
 import * as tipy from "./tipy";
 import * as zajem from "./zajem";
+import * as mereni from "./mereni";
 import * as zebricek from "./zebricek";
 import { synchronizuj, uklid } from "./synchronizace";
 import { nastavWebhook, webhook } from "./telegram";
@@ -56,6 +57,9 @@ const CESTY: [string, RegExp, Obsluha][] = [
   ["POST", /^\/sprava\/zpravy\/([\w-]+)\/schvalit$/, async (req, env, _u, id) => izs.rozhodni(env, req, await vyzadujPrihlaseni(env, req), id, "schvalit")],
   ["POST", /^\/sprava\/zpravy\/([\w-]+)\/zamitnout$/, async (req, env, _u, id) => izs.rozhodni(env, req, await vyzadujPrihlaseni(env, req), id, "zamitnout")],
 
+  // Měření návštěvnosti bez identifikace: příjem je veřejný (jen z povoleného původu), souhrn jen pro správce.
+  ["POST", /^\/mereni$/, (req, env) => mereni.prijmi(env, req)],
+  ["GET", /^\/sprava\/mereni$/, async (req, env, url) => mereni.souhrn(env, url, await vyzadujPrihlaseni(env, req))],
   ["GET", /^\/sprava\/ucty$/, async (req, env) => sprava.ucty(env, await vyzadujPrihlaseni(env, req))],
   ["PUT", /^\/sprava\/ucty\/([\w-]+)\/role$/, async (req, env, _u, id) => sprava.zmenRoli(env, req, await vyzadujPrihlaseni(env, req), id)],
   ["GET", /^\/sprava\/audit$/, async (req, env) => sprava.audit(env, await vyzadujPrihlaseni(env, req))],

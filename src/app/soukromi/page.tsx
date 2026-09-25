@@ -78,7 +78,8 @@ export default function SoukromiStranka() {
           </Oddil>
 
           <Oddil cislo="02" nadpis="Čtení bez účtu">
-            <p>Při pouhém čtení neukládáme nic, co by vás identifikovalo. Nepoužíváme cookies pro sledování ani měření návštěvnosti.</p>
+            <p>Při pouhém čtení neukládáme nic, co by vás identifikovalo. Nepoužíváme cookies pro sledování.</p>
+            <p>Návštěvnost měříme bez identifikace: prohlížeč pošle jen název stránky, odkud jste přišli (jen druh: vyhledávač, síť, jiný web), druh zařízení, na co jste klikli a hrubou polohu myši v mřížce 20 × 20. Ukládají se jen součty po dnech. Žádná IP adresa, žádný identifikátor, žádné cookies, žádné spojování stránek do cesty jednoho člověka. Prohlížeč s nastavením Do Not Track nebo Global Privacy Control neposílá nic.</p>
             <p>Poskytovatel hostingu (Cloudflare) zpracovává při doručení stránky vaši IP adresu — je to technicky nutné a děje se to v roli zpracovatele. Do naší databáze se IP adresy nezapisují.</p>
             <p>Když si web přidáte na plochu, prohlížeč si u sebe uloží kopii stránek pro čtení bez signálu. To je jen ve vašem zařízení.</p>
           </Oddil>
@@ -145,7 +146,7 @@ export default function SoukromiStranka() {
           </Oddil>
 
           <Oddil cislo="10" nadpis="Cookies a úložiště prohlížeče">
-            <p>Web nepoužívá cookies. V prohlížeči ukládá jen přihlášení a vaše předvolby. To je nutné pro službu, kterou chcete, a souhlas se nevyžaduje.</p>
+            <p>Web nepoužívá cookies. V prohlížeči ukládá jen přihlášení a vaše předvolby. To je nutné pro službu, kterou chcete, a souhlas se nevyžaduje. Měření návštěvnosti nic v prohlížeči neukládá.</p>
           </Oddil>
 
           <Oddil cislo="11" nadpis="Automatizace a AI">
