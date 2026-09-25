@@ -1,5 +1,5 @@
 {
-  "aktualizovano": "2026-09-25T07:03:08.067Z",
+  "aktualizovano": "2026-09-25T13:03:29.751Z",
   "stavy": [
     {
       "klic": "cloudflare",
@@ -9,12 +9,12 @@
         {
           "nazev": "Issues with Durable Objects",
           "odkaz": "https://www.cloudflarestatus.com/incidents/gv29fd076q2t",
-          "aktualizovano": "2026-09-25T02:32:19.000Z"
+          "aktualizovano": "2026-09-25T08:48:52.000Z"
         },
         {
           "nazev": "Network Performance Degradation — Asia-Pacific",
           "odkaz": "https://www.cloudflarestatus.com/incidents/8wmvkv5jkf15",
-          "aktualizovano": "2026-09-23T18:44:55.000Z"
+          "aktualizovano": "2026-09-25T08:50:56.000Z"
         },
         {
           "nazev": "Cloudflare One Clients are incorrectly challenged on some sites",
@@ -28,16 +28,25 @@
         "Arica, Chile - (ARI)",
         "Algiers, Algeria - (ALG)"
       ],
-      "zkontrolovano": "2026-09-25T07:03:08.067Z",
+      "zkontrolovano": "2026-09-25T13:03:29.751Z",
       "chyba": null
     },
     {
       "klic": "zoom",
-      "stav": "provoz",
-      "popis": "All Systems Operational",
-      "incidenty": [],
-      "postizene": [],
-      "zkontrolovano": "2026-09-25T07:03:08.067Z",
+      "stav": "omezeni",
+      "popis": "Service Under Maintenance",
+      "incidenty": [
+        {
+          "nazev": "An unintended pop-up message appear for users in US and Europe regions during initial invocation of Zoom AI’s Catch Me Up feature",
+          "odkaz": "https://stspg.io/hg6t0sj5dqpg",
+          "aktualizovano": "2026-09-25T04:03:35.262-07:00"
+        }
+      ],
+      "postizene": [
+        "Zoom Phone",
+        "Zoom Phone - APAC"
+      ],
+      "zkontrolovano": "2026-09-25T13:03:29.751Z",
       "chyba": null
     },
     {
@@ -46,7 +55,7 @@
       "popis": "All Systems Operational",
       "incidenty": [],
       "postizene": [],
-      "zkontrolovano": "2026-09-25T07:03:08.067Z",
+      "zkontrolovano": "2026-09-25T13:03:29.751Z",
       "chyba": null
     }
   ]

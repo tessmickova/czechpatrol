@@ -11085,5 +11085,78 @@
     "lidskyOvereno": false,
     "archivniZaznam": false,
     "overeni": "neovereno"
+  },
+  {
+    "id": "i-2026-09-24-8e1738bf2f",
+    "slug": "md-8e1738bf2f",
+    "titulek": "Moldavsko: dron s označením Geran-4 dopadl a explodoval u vesnice Cotiujeni v okrese Briceni, asi 1,7 km od hranice s Ukrajinou",
+    "kratkyTitulek": "Moldavsko: dron s označením Geran-4 dopadl a explodoval u vesnice Cotiujeni v okrese Briceni, asi 1,7 km od hranice s Ukrajinou",
+    "zeme": "Moldavsko",
+    "kodZeme": "MD",
+    "kategorie": [
+      "drony",
+      "rusko",
+      "hranice"
+    ],
+    "datumUdalosti": "2026-09-24T00:00:00Z",
+    "datumZjisteni": "2026-09-25T00:00:00Z",
+    "aktualizovano": "2026-09-25T09:01:32.655Z",
+    "zavaznost": "Y2",
+    "jistota": "stredni",
+    "stav": "probiha",
+    "atribuce": "neznama",
+    "puvodce": "neznamy",
+    "druh": "pripad",
+    "fakta": [
+      "Podle moldavské policie (Generální policejní inspektorát) explodoval 24. 9. 2026 večer v extravilánu vesnice Cotiujeni v okrese Briceni, asi 1,7 km od hranice s Ukrajinou, letoun asi 10 metrů nad zemí po nárazu do stromů.",
+      "Podle policie a hraniční policie nalezli na místě trosky s označením „ГЕРАНЬ 4“ (Geran-4), částečně poškozený proudový motor, díly křídel se servomotory a klapkami a elektronické součástky.",
+      "Podle policie poškodil tlak výbuchu stromy v okruhu asi 25 metrů; oběti ani zranění nebyly hlášeny.",
+      "Podle TVR Moldova šlo o jeden ze čtyř incidentů téhož dne — další drony explodovaly u vesnice Cernița v okrese Florești a u Camenky v podněsterském regionu, čtvrtý výbuch byl slyšet u Vadul Rașcova."
+    ],
+    "neznameho": [
+      "Zda šlo o záměrný cíl, nebo o zbloudilý prostředek z ruského útoku na Ukrajinu, policie neuvádí.",
+      "Přesný čas exploze zdroje uvádějí jen jako „večer“.",
+      "Oficiální stránku moldavské policie (igp.gov.md) jsem k tomuto konkrétnímu incidentu nenašel; údaje jsou z rumunských a moldavských médií, která ji citují."
+    ],
+    "vyznam": "",
+    "eskalacniSpousteče": [],
+    "deeskalacniSignaly": [],
+    "zdroje": [
+      {
+        "nazev": "Digi24 (Rumunsko) — Dronă Geran-4 prăbușită în Republica Moldova: ce au descoperit autoritățile după explozie",
+        "url": "https://www.digi24.ro/stiri/externe/moldova/o-noua-drona-geran-4-prabusita-in-republica-moldova-ce-au-descoperit-autoritatile-dupa-explozie-3963841",
+        "typ": "media",
+        "publikovano": "2026-09-25T00:00:00Z",
+        "primarni": false,
+        "jazyk": "ro"
+      },
+      {
+        "nazev": "TVR Moldova — Explozia din Cotiujeni: Poliția a găsit fragmente marcate „Geran-4” și un motor turbo-reactiv",
+        "url": "https://tvrmoldova.md/article/6395707e9031c8f1/explozia-din-cotiujeni-politia-a-gasit-fragmente-marcate-geran-4-si-un-motor-turbo-reactiv.html",
+        "typ": "media",
+        "publikovano": "2026-09-25T00:00:00Z",
+        "primarni": false,
+        "jazyk": "ro"
+      }
+    ],
+    "souvisejici": [],
+    "historie": [
+      {
+        "kdy": "2026-09-24T00:00:00Z",
+        "text": "Zachyceno automatickým sběrem, druhý zdroj doložen před zařazením do fronty.",
+        "novySignal": true
+      },
+      {
+        "kdy": "2026-09-25T09:01:32.655Z",
+        "text": "Zveřejněno jako neověřené úředně: dvě nezávislé redakce, úřad zatím nepotvrdil.",
+        "novySignal": false
+      }
+    ],
+    "novy": true,
+    "zapocitanoTyden": "2026-09-24",
+    "aiZpracovano": true,
+    "lidskyOvereno": false,
+    "archivniZaznam": false,
+    "overeni": "neovereno"
   }
 ]
