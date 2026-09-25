@@ -1,5 +1,5 @@
 {
-  "aktualizovano": "2026-09-25T09:03:25.780Z",
+  "aktualizovano": "2026-09-25T10:03:34.973Z",
   "stavy": [
     {
       "klic": "cloudflare",
@@ -28,16 +28,22 @@
         "Arica, Chile - (ARI)",
         "Algiers, Algeria - (ALG)"
       ],
-      "zkontrolovano": "2026-09-25T09:03:25.780Z",
+      "zkontrolovano": "2026-09-25T10:03:34.973Z",
       "chyba": null
     },
     {
       "klic": "zoom",
       "stav": "provoz",
       "popis": "All Systems Operational",
-      "incidenty": [],
+      "incidenty": [
+        {
+          "nazev": "An unintended pop-up message appear for users in US region during initial invocation of Zoom AI’s Catch Me Up feature",
+          "odkaz": "https://stspg.io/hg6t0sj5dqpg",
+          "aktualizovano": "2026-09-25T02:30:04.824-07:00"
+        }
+      ],
       "postizene": [],
-      "zkontrolovano": "2026-09-25T09:03:25.780Z",
+      "zkontrolovano": "2026-09-25T10:03:34.973Z",
       "chyba": null
     },
     {
@@ -46,7 +52,7 @@
       "popis": "All Systems Operational",
       "incidenty": [],
       "postizene": [],
-      "zkontrolovano": "2026-09-25T09:03:25.780Z",
+      "zkontrolovano": "2026-09-25T10:03:34.973Z",
       "chyba": null
     }
   ]
