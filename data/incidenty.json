@@ -11306,5 +11306,77 @@
     "lidskyOvereno": false,
     "archivniZaznam": false,
     "overeni": "neovereno"
+  },
+  {
+    "id": "i-2026-09-25-fb2149996b",
+    "slug": "lt-fb2149996b",
+    "titulek": "Litva a Polsko společně připravují plán evakuace civilistů přes hranici, klíčovou roli má Suwalský koridor",
+    "kratkyTitulek": "Litva a Polsko společně připravují plán evakuace civilistů přes hranici, klíčovou roli má Suwalský koridor",
+    "zeme": "Litva",
+    "kodZeme": "LT",
+    "kategorie": [
+      "nato",
+      "hranice"
+    ],
+    "datumUdalosti": "2026-09-25T00:00:00Z",
+    "datumZjisteni": "2026-09-25T00:00:00Z",
+    "aktualizovano": "2026-09-25T19:00:31.899Z",
+    "zavaznost": "Y1",
+    "jistota": "stredni",
+    "stav": "neuvedeno",
+    "atribuce": "neznama",
+    "puvodce": null,
+    "druh": "opatreni",
+    "fakta": [
+      "Podle Vilmantase Vitkauskase, šéfa litevského národního centra pro zvládání krizí (Seznam Zprávy), zástupci Litvy a Polska společně vyhodnocují infrastrukturu na hranicích, logistické kapacity a možnosti přeshraniční dopravy pro plán evakuace civilistů; konečná podoba plánu vznikne až po dohodě na podrobnostech.",
+      "Podle polského ministra obrany Władysława Kosiniaka-Kamysze (LRT, 23. 9.) „Poland will help. Poles will help, state institutions will help“; zmínil polské zkušenosti s přijetím ukrajinských uprchlíků po únoru 2022.",
+      "Podle LRT Litva schválila vlastní evakuační plán už v červenci 2026 a očekává, že asi 75 % civilistů by se evakuovalo samostatně.",
+      "Podle Seznam Zpráv hraje v plánu klíčovou roli Suwalský koridor mezi Polskem a Běloruskem."
+    ],
+    "neznameho": [
+      "Zda a kdy vznikne finální společná dohoda; zatím jde o přípravnou fázi.",
+      "Konkrétní scénář, pro který se plán připravuje — zdroje mluví obecně o obavách z Ruska, ne o konkrétní hrozbě.",
+      "Oficiální vyjádření obou vlád (gov.pl, vlada.lt) jsem neotevřel; údaje jsou z médií, která citují jmenované představitele."
+    ],
+    "vyznam": "",
+    "eskalacniSpousteče": [],
+    "deeskalacniSignaly": [],
+    "zdroje": [
+      {
+        "nazev": "Seznam Zprávy — Litva s Polskem připravují plány pro evakuaci civilistů přes hranici",
+        "url": "https://www.seznamzpravy.cz/clanek/zahranicni-litva-s-polskem-pripravuji-plany-pro-evakuaci-civilistu-pres-hranici-316235",
+        "typ": "media",
+        "publikovano": "2026-09-25T00:00:00Z",
+        "primarni": false,
+        "jazyk": "cs"
+      },
+      {
+        "nazev": "LRT English (Litva) — Poland would help evacuate civilians from Lithuania, says Warsaw",
+        "url": "https://www.lrt.lt/en/news-in-english/19/3061100/poland-would-help-evacuate-civilians-from-lithuania-says-warsaw",
+        "typ": "media",
+        "publikovano": "2026-09-23T00:00:00Z",
+        "primarni": false,
+        "jazyk": "en"
+      }
+    ],
+    "souvisejici": [],
+    "historie": [
+      {
+        "kdy": "2026-09-25T00:00:00Z",
+        "text": "Zachyceno automatickým sběrem, druhý zdroj doložen před zařazením do fronty.",
+        "novySignal": true
+      },
+      {
+        "kdy": "2026-09-25T19:00:31.899Z",
+        "text": "Zveřejněno jako neověřené úředně: dvě nezávislé redakce, úřad zatím nepotvrdil.",
+        "novySignal": false
+      }
+    ],
+    "novy": true,
+    "zapocitanoTyden": "2026-09-25",
+    "aiZpracovano": true,
+    "lidskyOvereno": false,
+    "archivniZaznam": false,
+    "overeni": "neovereno"
   }
 ]
