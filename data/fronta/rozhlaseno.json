@@ -664,6 +664,11 @@
       "kdy": "2026-09-24T04:29:25.335Z",
       "historie": 1,
       "messageId": 43
+    },
+    "i-2026-09-25-putin-pobalti-mensiny": {
+      "kdy": "2026-09-25T20:09:24.414Z",
+      "historie": 2,
+      "mimoradne": true
     }
   },
   "snimky": {
@@ -672,5 +677,12 @@
       "ticho": true
     }
   },
-  "prvniBeh": "2026-09-06T16:40:33.477Z"
+  "prvniBeh": "2026-09-06T16:40:33.477Z",
+  "mimoradne": {
+    "i-2026-09-25-putin-pobalti-mensiny": {
+      "kdy": "2026-09-25T20:09:24.414Z",
+      "slug": "ru-putin-pobalti-mensiny-2026-09-25",
+      "messageId": 48
+    }
+  }
 }
