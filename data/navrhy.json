@@ -70,55 +70,56 @@
   {
     "kam": "zaznam",
     "pripravil": "patrol",
-    "pripraveno": "2026-09-25T14:02:30.977Z",
-    "id": "i-2026-09-25-c803520dcf",
-    "slug": "fi-c803520dcf",
-    "titulek": "Finsko a Švédsko poprvé společně vyslaly stíhačky k identifikaci ruských vojenských letadel nad Finským zálivem",
-    "kratkyTitulek": "Finsko a Švédsko poprvé společně vyslaly stíhačky k identifikaci ruských vojenských letadel nad Finským zálivem",
-    "zeme": "Finsko",
-    "kodZeme": "FI",
+    "pripraveno": "2026-09-25T18:47:29.996Z",
+    "id": "i-2026-09-25-f6c68bbeaa",
+    "slug": "lt-f6c68bbeaa",
+    "titulek": "Litva: kyberútok na archivní informační systém ministerstva vnitra (EPEKIS), únik dat nepotvrzen",
+    "kratkyTitulek": "Litva: kyberútok na archivní informační systém ministerstva vnitra (EPEKIS), únik dat nepotvrzen",
+    "zeme": "Litva",
+    "kodZeme": "LT",
     "kategorie": [
-      "nato",
-      "hranice"
+      "kyber"
     ],
     "datumUdalosti": "2026-09-25T00:00:00Z",
     "datumZjisteni": "2026-09-25T00:00:00Z",
-    "aktualizovano": "2026-09-25T14:02:30.977Z",
+    "aktualizovano": "2026-09-25T18:47:29.996Z",
     "zavaznost": "Y1",
     "jistota": "vysoka",
-    "stav": "bez-vysetrovani",
+    "stav": "probiha",
     "atribuce": "neznama",
-    "puvodce": null,
-    "druh": "opatreni",
+    "puvodce": "neznamy",
+    "druh": "pripad",
     "fakta": [
-      "Podle finských vzdušných sil identifikovaly ve čtvrtek finsko-švédské stíhačky v pohotovosti (Quick Reaction Alert) ruská vojenská letadla — dopravní Tu-134, stíhačky MiG-31 a Su-30 — v mezinárodním vzdušném prostoru nad Finským zálivem.",
-      "Podle Euronews šlo o první společnou identifikační misi finského a švédského letectva.",
-      "Podle švédského premiéra Ulfa Kristerssona (příspěvek na síti X) „Baltské moře nikdy nebylo tak zranitelné jako teď, ale zároveň nikdy nebylo tak dobře chráněné jako právě teď“."
+      "Podle litevského ministerstva vnitra získali útočníci neoprávněný přístup do systému EPEKIS, archivu dat o cizincích žádajících o litevské občanství, který se aktivně nepoužívá od roku 2018.",
+      "Podle ministerstva „nově zavedená bezpečnostní opatření umožnila útok detekovat a zabránit jeho šíření“; data obsahují především jména cizinců bez identifikačních čísel.",
+      "Podle ministerstva „v současnosti neexistuje důkaz, že by útočníci data stahovali“.",
+      "Podle ministra vnitra Martynase Katelinase byl nařízen bezpečnostní přezkum všech informačních systémů; incident byl nahlášen policii, Státnímu inspektorátu ochrany údajů a Národnímu centru kybernetické bezpečnosti.",
+      "Podle ministerstva nelze vyloučit použití umělé inteligence při útoku; podezřelého ministerstvo nejmenovalo."
     ],
     "neznameho": [
-      "Zda ruská letadla narušila vzdušný prostor Finska nebo Švédska; zdroje mluví jen o mezinárodním prostoru.",
-      "Přesný počet a trasu ruských letadel, mimo tři zmíněné typy.",
-      "Oficiální tiskovou zprávu finského letectva (puolustusvoimat.fi) jsem neotevřel; údaje jsou z médií, která ji citují."
+      "Kdo za útokem stojí, ministerstvo neuvedlo.",
+      "Rozsah skutečně vygenerovaných souborů a to, zda k nim útočníci měli přístup nad rámec pouhého vstupu.",
+      "Oficiální tiskovou zprávu ministerstva (vrm.lt) jsem neotevřel; údaje jsou z Ukrinformu a LRT, které ji citují."
     ],
     "vyznam": "",
     "eskalacniSpousteče": [],
     "deeskalacniSignaly": [],
     "zdroje": [
       {
-        "nazev": "Euronews — Finland and Sweden scramble Quick Reaction Alert jets to intercept Russian aircraft",
-        "url": "https://www.euronews.com/2026/09/25/finland-and-sweden-scramble-quick-reaction-alert-jets-to-intercept-russian-aircraft",
+        "nazev": "Ukrinform (anglicky) — Lithuania's Interior Ministry reports cyberattack on its information system",
+        "url": "https://www.ukrinform.net/rubric-polytics/4168103-lithuanias-interior-ministry-reports-cyberattack-on-its-information-system.html",
         "typ": "media",
         "publikovano": "2026-09-25T00:00:00Z",
         "primarni": false,
         "jazyk": "en"
       },
       {
-        "nazev": "Novinky.cz — Nad Finským zálivem se objevily ruské vojenské letouny. Vzlétly švédské a finské stíhačky",
-        "url": "https://www.novinky.cz/clanek/zahranicni-evropa-nad-finskym-zalivem-se-objevily-ruske-vojenske-letouny-vzletly-svedske-a-finske-stihacky-40599488",
+        "nazev": "LRT English (Litva) — Lithuania's Interior Ministry reports cyberattack on archived information system",
+        "url": "https://www.lrt.lt/en/news-in-english/19/3063337/lithuania-s-interior-ministry-reports-cyberattack-on-archived-information-system",
         "typ": "media",
         "publikovano": "2026-09-25T00:00:00Z",
         "primarni": false,
-        "jazyk": "cs"
+        "jazyk": "en"
       }
     ],
     "souvisejici": [],
@@ -138,55 +139,56 @@
   {
     "kam": "zaznam",
     "pripravil": "patrol",
-    "pripraveno": "2026-09-25T14:02:30.977Z",
-    "id": "i-2026-09-25-a3d693fe26",
-    "slug": "pl-a3d693fe26",
-    "titulek": "Polsko: ministr obrany oznámil zjednodušení postupu pro sestřelování narušitelů vzdušného prostoru, nebude už nutná vizuální identifikace",
-    "kratkyTitulek": "Polsko: ministr obrany oznámil zjednodušení postupu pro sestřelování narušitelů vzdušného prostoru, nebude už nutná vizuální identifikace",
-    "zeme": "Polsko",
-    "kodZeme": "PL",
+    "pripraveno": "2026-09-25T18:47:29.996Z",
+    "id": "i-2026-09-25-fb2149996b",
+    "slug": "lt-fb2149996b",
+    "titulek": "Litva a Polsko společně připravují plán evakuace civilistů přes hranici, klíčovou roli má Suwalský koridor",
+    "kratkyTitulek": "Litva a Polsko společně připravují plán evakuace civilistů přes hranici, klíčovou roli má Suwalský koridor",
+    "zeme": "Litva",
+    "kodZeme": "LT",
     "kategorie": [
       "nato",
       "hranice"
     ],
     "datumUdalosti": "2026-09-25T00:00:00Z",
     "datumZjisteni": "2026-09-25T00:00:00Z",
-    "aktualizovano": "2026-09-25T14:02:30.977Z",
-    "zavaznost": "Y2",
+    "aktualizovano": "2026-09-25T18:47:29.996Z",
+    "zavaznost": "Y1",
     "jistota": "stredni",
     "stav": "neuvedeno",
     "atribuce": "neznama",
     "puvodce": null,
     "druh": "opatreni",
     "fakta": [
-      "Podle polského ministra obrany Cezaryho Tomczyka se mění postup identifikace narušitelů vzdušného prostoru: místo nutné vizuální identifikace bude stačit „pozitivní identifikace“ na základě radarových dat, pokud objekt vstoupí do bezletové zóny.",
-      "Podle Tomczyka byla upravena i procedura pro protiraketový systém Patriot — velitel může použití předem schválit hned po informaci o odpálení nepřátelské rakety.",
-      "Podle Tomczyka jde o reakci na nedávné incidenty spojené s hrozbami z Ruska."
+      "Podle Vilmantase Vitkauskase, šéfa litevského národního centra pro zvládání krizí (Seznam Zprávy), zástupci Litvy a Polska společně vyhodnocují infrastrukturu na hranicích, logistické kapacity a možnosti přeshraniční dopravy pro plán evakuace civilistů; konečná podoba plánu vznikne až po dohodě na podrobnostech.",
+      "Podle polského ministra obrany Władysława Kosiniaka-Kamysze (LRT, 23. 9.) „Poland will help. Poles will help, state institutions will help“; zmínil polské zkušenosti s přijetím ukrajinských uprchlíků po únoru 2022.",
+      "Podle LRT Litva schválila vlastní evakuační plán už v červenci 2026 a očekává, že asi 75 % civilistů by se evakuovalo samostatně.",
+      "Podle Seznam Zpráv hraje v plánu klíčovou roli Suwalský koridor mezi Polskem a Běloruskem."
     ],
     "neznameho": [
-      "Zda jde o formální právní nástroj (zákon, nařízení), nebo jen o změnu vnitřních postupů armády; zdroj to nespecifikuje.",
-      "Přesné datum, od kdy změna platí; defence24.pl a Novinky.cz uvádí vyjádření z 24.–25. 9., ne datum účinnosti.",
-      "Oficiální vyjádření ministerstva obrany (gov.pl) jsem neotevřel; údaje jsou z Novinky.cz, které ho cituje."
+      "Zda a kdy vznikne finální společná dohoda; zatím jde o přípravnou fázi.",
+      "Konkrétní scénář, pro který se plán připravuje — zdroje mluví obecně o obavách z Ruska, ne o konkrétní hrozbě.",
+      "Oficiální vyjádření obou vlád (gov.pl, vlada.lt) jsem neotevřel; údaje jsou z médií, která citují jmenované představitele."
     ],
     "vyznam": "",
     "eskalacniSpousteče": [],
     "deeskalacniSignaly": [],
     "zdroje": [
       {
-        "nazev": "Novinky.cz — Polsko zjednoduší sestřelování narušitelů vzdušného prostoru",
-        "url": "https://www.novinky.cz/clanek/stalo-se-polsko-zjednodusi-sestrelovani-narusitelu-vzdusneho-prostoru-40599549",
+        "nazev": "Seznam Zprávy — Litva s Polskem připravují plány pro evakuaci civilistů přes hranici",
+        "url": "https://www.seznamzpravy.cz/clanek/zahranicni-litva-s-polskem-pripravuji-plany-pro-evakuaci-civilistu-pres-hranici-316235",
         "typ": "media",
         "publikovano": "2026-09-25T00:00:00Z",
         "primarni": false,
         "jazyk": "cs"
       },
       {
-        "nazev": "defence24.pl — Nowe procedury dla polskich myśliwców",
-        "url": "https://defence24.pl/sily-zbrojne/nowe-procedury-dla-polskich-mysliwcow",
+        "nazev": "LRT English (Litva) — Poland would help evacuate civilians from Lithuania, says Warsaw",
+        "url": "https://www.lrt.lt/en/news-in-english/19/3061100/poland-would-help-evacuate-civilians-from-lithuania-says-warsaw",
         "typ": "media",
-        "publikovano": "2026-09-24T00:00:00Z",
+        "publikovano": "2026-09-23T00:00:00Z",
         "primarni": false,
-        "jazyk": "pl"
+        "jazyk": "en"
       }
     ],
     "souvisejici": [],
