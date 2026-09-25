@@ -1,5 +1,5 @@
 {
-  "kdy": "2026-09-25T19:27:48.727Z",
+  "kdy": "2026-09-25T19:45:04.122Z",
   "zdroje": [
     {
       "klic": "e-sbirka",
@@ -64,9 +64,10 @@
     },
     {
       "klic": "eru",
-      "ok": true,
-      "stav": 200,
-      "pocetPolozek": 0
+      "ok": false,
+      "stav": null,
+      "pocetPolozek": 0,
+      "chyba": "fetch failed"
     },
     {
       "klic": "ote",
@@ -168,10 +169,9 @@
     },
     {
       "klic": "bundespolizei",
-      "ok": false,
-      "stav": null,
-      "pocetPolozek": 0,
-      "chyba": "fetch failed"
+      "ok": true,
+      "stav": 200,
+      "pocetPolozek": 0
     },
     {
       "klic": "bmi-de",
