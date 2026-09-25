@@ -341,3 +341,13 @@ export const TIPY_MAIL = "";
  * ukazují se tři volné rámečky — žádné vymyšlené logo ani název.
  */
 export const PARTNERI: { nazev: string; url: string; popis: string }[] = [];
+
+/*
+  Analytika třetích stran (25. 9. 2026): Microsoft Clarity (teplotní mapy,
+  záznamy relací) a PostHog (události, trychtýře). Obě nastavují cookies,
+  proto běží JEN po výslovném souhlasu v liště souhlasu (souhlas-analytika).
+  PostHog se zapne, až bude v prostředí nasazení NEXT_PUBLIC_POSTHOG_KEY.
+*/
+export const CLARITY_ID = "ynyq48l9eb";
+export const POSTHOG_KEY = process.env.NEXT_PUBLIC_POSTHOG_KEY ?? "";
+export const POSTHOG_HOST = process.env.NEXT_PUBLIC_POSTHOG_HOST || "https://eu.i.posthog.com";

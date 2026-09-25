@@ -101,9 +101,37 @@ export function prevzitSouhrn(mainSouhrn, patrolSouhrn, ted = Date.now()) {
   };
 }
 
+/*
+  Nová zadání z Patrolovy větve (25. 9. 2026).
+
+  Zadání vznikají na Patrolově větvi (workflow Fronta Patrolovi), ne v main.
+  Dřív se odsud přebíraly jen odpovědi k zadáním, která už v main byla — a
+  nová tam nikdy nebyla. Od 23. 9. se tak do main nedostalo jediné Patrolovo
+  rozhodnutí o zachycených zprávách a fronta rostla (159 čekajících).
+
+  Teď se přebere i zadání, které v main chybí, ale jen když vypadá jako
+  zadání od fronty: id z-…, zadal „fronta“, seznam položek, a rozhodnutí se
+  týkají jen položek z toho seznamu. Rozhodnutí nic nezveřejní; jen odepíše
+  zachycenou zprávu s důvodem (srovnej-frontu.mjs).
+*/
+export function platneNoveZadani(z) {
+  if (!z || typeof z !== "object") return false;
+  if (typeof z.id !== "string" || !/^z-[a-z0-9]+$/.test(z.id)) return false;
+  if (z.zadal !== "fronta" || !Array.isArray(z.seznam)) return false;
+  const ids = new Set(z.seznam.map((p) => p?.id).filter(Boolean));
+  return (z.rozhodnuti ?? []).every((r) => r && ids.has(r.id));
+}
+
 export function sloucitZadani(mainZadani, patrolZadani) {
   const jeho = new Map((patrolZadani ?? []).filter((z) => z && typeof z.id === "string").map((z) => [z.id, z]));
+  const znama = new Set(mainZadani.map((z) => z.id));
   let zmen = 0;
+  const nova = [];
+  for (const z of patrolZadani ?? []) {
+    if (znama.has(z?.id) || !platneNoveZadani(z)) continue;
+    nova.push({ id: z.id, zadano: z.zadano, zadal: "fronta", stav: ["ceka", "hotovo", "odmitnuto", "nedokonceno", "propadlo"].includes(z.stav) ? z.stav : "ceka", seznam: z.seznam, zadani: String(z.zadani ?? "").slice(0, 12000), rozhodnuti: z.rozhodnuti ?? [], hotovo: z.hotovo, odpoved: typeof z.odpoved === "string" ? z.odpoved.slice(0, 8000) : undefined });
+    zmen++;
+  }
   const vysledek = mainZadani.map((z) => {
     const p = jeho.get(z.id);
     if (!p) return z;
@@ -113,7 +141,8 @@ export function sloucitZadani(mainZadani, patrolZadani) {
     if (JSON.stringify(nove) !== JSON.stringify(z)) zmen++;
     return nove;
   });
-  return { zadani: vysledek, zmen };
+  /* Jen posledních 30 zadání: starší rozhodnutí už jsou provedená. */
+  return { zadani: [...vysledek, ...nova].slice(-30), zmen };
 }
 
 if (process.argv[1] && fileURLToPath(import.meta.url) === path.resolve(process.argv[1])) {

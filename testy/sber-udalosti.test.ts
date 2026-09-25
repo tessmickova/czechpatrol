@@ -404,4 +404,13 @@ describe("omezení pohybu u hranice", () => {
     expect(relevantni("US intelligence warns Russia is preparing drone attacks on Mediterranean states from container ships")).toBe(true);
     expect(relevantni("Hrozba ze strany Ruska podle analytiků roste")).toBe(false);
   });
+
+  it("zadržení bez bezpečnostního kontextu neprojde, se špionáží ano (25. 9. 2026)", () => {
+    expect(relevantni("Celníci z Ostravy zadrželi stovky kilogramů kebabu. Řidič je převážel bez chlazení")).toBe(false);
+    expect(relevantni("Polská policie zadržela muže podezřelého ze špionáže pro Rusko")).toBe(true);
+  });
+  it("výrok vedení Ruska o Pobaltí se zachytí (25. 9. 2026)", () => {
+    expect(relevantni("Putin: V Pobaltí se porušují práva ruských menšin")).toBe(true);
+    expect(relevantni("Putin claims Russian speakers' rights are violated in Baltic states")).toBe(true);
+  });
 });

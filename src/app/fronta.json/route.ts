@@ -51,10 +51,31 @@ function ukazkovyZdroj(zdroje: { url: string; typ?: string; primarni?: boolean }
   return vybrany?.url ?? null;
 }
 
+/*
+  Strop se hlídá i za běhu (25. 9. 2026): když dlouhé titulky nebo adresy
+  přetáhnou 22 kB, ubírá se od nejstarších zachycených zpráv, dokud se
+  soubor nevejde. Dřív stačil pevný počet — pak jeden běh sběru s delšími
+  titulky přetáhl strop o 0,1 kB, spadl test a web se přestal nasazovat.
+*/
+const CIL_BAJTU = 22 * 1024;
+
 export function GET() {
   const vse = kandidati();
+  const telo = sestav(vse);
+  let text = JSON.stringify(telo);
+  while (text.length > CIL_BAJTU && telo.zachyceno.length > 10) {
+    telo.zachyceno.pop();
+    text = JSON.stringify(telo);
+  }
+  while (text.length > CIL_BAJTU && telo.nepotvrzeno.length > 5) {
+    telo.nepotvrzeno.pop();
+    text = JSON.stringify(telo);
+  }
+  return new Response(text, { headers: { "Content-Type": "application/json" } });
+}
 
-  return Response.json({
+function sestav(vse: ReturnType<typeof kandidati>) {
+  return {
     verze: 1,
     web: WEB.url,
     generovano: new Date().toISOString(),
@@ -100,5 +121,5 @@ export function GET() {
       /* Jeden na ukázku. Celý seznam je u záznamu na webu. */
       zdroj: ukazkovyZdroj(z.zdroje),
     })),
-  });
+  };
 }

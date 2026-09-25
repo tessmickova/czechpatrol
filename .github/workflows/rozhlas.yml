@@ -32,6 +32,12 @@ on:
         description: "Poslat přehled dne teď (místo okamžitých zpráv)"
         type: boolean
         default: false
+      mimoradne:
+        # Výjimka z pravidla „do kanálu jen ověřené": správce vědomě pošle
+        # jeden zveřejněný záznam hned. Stav hlídá, aby odešel jen jednou.
+        description: "Mimořádná zpráva: slug zveřejněného záznamu (jinak prázdné)"
+        type: string
+        default: ""
 
 permissions:
   contents: write
@@ -66,8 +72,19 @@ jobs:
             node nastroje/rozhlas.mjs --test --test-spravce
           fi
 
+      - name: Mimořádná zpráva
+        if: github.event_name == 'workflow_dispatch' && inputs.mimoradne != ''
+        env:
+          SLUG: ${{ inputs.mimoradne }}
+        run: |
+          # Slug přichází zvenčí — kontroluje se tvar, a do příkazu jde jen proměnná.
+          if ! printf '%s' "$SLUG" | grep -Eq '^[a-z0-9-]{3,120}$'; then
+            echo "Neplatný slug."; exit 1
+          fi
+          node nastroje/rozhlas.mjs --mimoradne "$SLUG"
+
       - name: Okamžité zprávy (vážné případy, opatření, změny oficiálních stavů)
-        if: github.event_name != 'schedule' && !(github.event_name == 'workflow_dispatch' && inputs.prehled)
+        if: github.event_name != 'schedule' && !(github.event_name == 'workflow_dispatch' && (inputs.prehled || inputs.mimoradne != ''))
         run: node nastroje/rozhlas.mjs --okamzite
 
       - name: Přehled dne

@@ -2,6 +2,7 @@
 
 import { Odkaz } from "./odkaz";
 import { PrepinacMotivu, PrepinacPohybu } from "./pohyb";
+import { OdkazNastaveniAnalytiky } from "./souhlas-analytika";
 import { KOMUNITA, METODIKA_REVIDOVANA, WEB, SPUSTENO } from "@/config/web";
 import { datum } from "@/lib/format";
 import { Logo } from "./znacka";
@@ -70,6 +71,7 @@ export function Paticka() {
         <div className="mt-8 flex flex-wrap items-start gap-x-10 gap-y-5 border-t border-white/10 pt-5">
           <PrepinacMotivu />
           <PrepinacPohybu />
+          <OdkazNastaveniAnalytiky trida="odkaz text-male text-noc-tlum" />
         </div>
       </div>
       </div>

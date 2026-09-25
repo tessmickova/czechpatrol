@@ -88,6 +88,14 @@ jobs:
       - name: Sběr z veřejných zdrojů
         run: npm run sber
 
+      # Strážce dat (25. 9. 2026): kontrola PŘED uložením. Když data
+      # neprojdou, vrátí se nejdřív automatické zveřejnění, pak celý běh —
+      # web zůstane na poslední dobré verzi místo toho, aby stál. Správce
+      # dostane zprávu (krok Upozornit správce na konci).
+      - name: Strážce dat
+        id: strazce
+        run: node nastroje/strazce-dat.mjs
+
       - name: Nahrát změny dat
         id: zmena
         run: |
@@ -159,9 +167,14 @@ jobs:
         if: steps.zmena.outputs.zmena == 'true'
         run: npm run kontrola:data
 
+      # Testy ve sběru nezastaví nasazení (25. 9. 2026): v kódu je hlídá
+      # Kontrola při každém pushi, tady by spadnutí jen zastavilo web kvůli
+      # datům, která už prošla strážcem. Selhání dostane správce na Telegram.
       - name: Testy
+        id: testy
         if: steps.zmena.outputs.zmena == 'true'
-        run: npm test
+        continue-on-error: true
+        run: npm test 2>&1 | tee .strazce-testy.log; exit ${PIPESTATUS[0]}
 
       # Sestavení stahuje písma z Google Fonts. 22. 9. 2026 (nasazení č. 580)
       # spadlo jen proto, že se stažení písma nepovedlo — kód byl v pořádku.
@@ -171,6 +184,8 @@ jobs:
         run: npm run build || { echo "::warning::Sestavení selhalo, zkouším znovu za 30 s (např. nedostupná písma)"; sleep 30; npm run build; }
         env:
           NEXT_PUBLIC_API_URL: ${{ vars.API_URL }}
+          NEXT_PUBLIC_POSTHOG_KEY: ${{ vars.POSTHOG_KEY }}
+          NEXT_PUBLIC_POSTHOG_HOST: ${{ vars.POSTHOG_HOST }}
 
       - name: Nasazení na Cloudflare Pages
         if: steps.zmena.outputs.zmena == 'true'
@@ -179,3 +194,39 @@ jobs:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
           command: pages deploy out --project-name=czechpatrol --branch=main --commit-dirty=true
+
+      # ---------------------------------------------------------------
+      # Upozornění správci: zpráva strážce, spadlé testy nebo spadlý běh.
+      # Stejná zpráva nejvýš jednou za 6 hodin (otisk v mezipaměti).
+      # ---------------------------------------------------------------
+      - name: Mezipaměť upozornění
+        if: always()
+        uses: actions/cache/restore@v4
+        with:
+          path: .strazce/posledni.json
+          key: strazce-${{ github.run_id }}
+          restore-keys: strazce-
+
+      - name: Upozornit správce
+        if: always()
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          SPRAVCE_CHAT: ${{ vars.SPRAVCE_CHAT }}
+          TESTY: ${{ steps.testy.outcome }}
+          BEH: ${{ job.status }}
+        run: |
+          mkdir -p .strazce
+          if [ "$TESTY" = "failure" ]; then
+            { echo "Testy ve sběru neprošly (web se přesto nasadil):"; grep -E "FAIL|AssertionError" .strazce-testy.log | head -6; } >> .strazce/zprava.txt
+          fi
+          if [ "$BEH" = "failure" ]; then
+            echo "Běh sběru spadl — web se nepřestavil. Podívejte se na log." >> .strazce/zprava.txt
+          fi
+          node nastroje/upozorni-spravce.mjs
+
+      - name: Uložit mezipaměť upozornění
+        if: always()
+        uses: actions/cache/save@v4
+        with:
+          path: .strazce/posledni.json
+          key: strazce-${{ github.run_id }}

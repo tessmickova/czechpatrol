@@ -17,3 +17,18 @@ Prvek se jmenuje podle `data-mereni`, jinak podle textu odkazu nebo tlačítka.
 Chcete-li tlačítko sledovat pod stálým názvem, dejte mu `data-mereni="…"`.
 Teplotní mapa je přibližná: svisle se měří výška celé stránky, ta se mění
 s obsahem; rám pod mřížkou je jen pro orientaci.
+
+## Analytika třetích stran (od 25. 9. 2026)
+
+Microsoft Clarity (ID `ynyq48l9eb`) a PostHog běží **jen po souhlasu** v liště
+`src/components/souhlas-analytika.tsx`; volba je v `localStorage` pod
+`cp:analytika`, změna odkazem „Nastavení analytiky“ v patičce. Global Privacy
+Control = odmítnuto. Ve správě a náhledu se nespouští.
+
+- Clarity: vkládací kód z konzole Clarity, spouští se až po „Povolit“, se
+  signálem `consentv2`.
+- PostHog: knihovna `posthog-js`, zapne se, až bude v proměnných nasazení
+  `NEXT_PUBLIC_POSTHOG_KEY` (a volitelně `NEXT_PUBLIC_POSTHOG_HOST`, výchozí
+  EU `https://eu.i.posthog.com`). Průvodce `npx @posthog/wizard` se nepoužil:
+  je interaktivní a vyžaduje přihlášení do účtu PostHog.
+- Zásady soukromí (`/soukromi/#analytika`) obojí popisují; revize 25. 9. 2026.

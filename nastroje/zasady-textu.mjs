@@ -73,10 +73,20 @@ const SLOVESA_CINU = [
 ];
 function normal(t) { return (t ?? "").toLowerCase().normalize("NFC"); }
 
+/*
+  Výjimka (25. 9. 2026): výrok vedení Ruska nebo Běloruska o sledovaných
+  zemích není „jen projev“. Hrozby a rétorika o „ochraně krajanů“ vůči
+  zemím NATO jsou signál, který čtenář má vidět (Putin o ruských menšinách
+  v Pobaltí). Politici sledovaných zemí dál spadají pod pravidlo.
+*/
+const VEDENI_PROTIVNIKA = /putin|kreml|kremlin|lavrov|medvěděv|medvedev|peskov|lukašenk|lukashenk|šojgu|shoigu|zacharov|zakharova/;
+const SLEDOVANE = /pobalt|baltic|eston|lotyš|latvi|litv|lithuan|polsk|poland|polish|finsk|finland|moldav|nato|evrop|europ|česk|czech|německ|german|rumun|romania|švédsk|sweden/;
+
 /** Titulek je jen řeč (projev, výzva, varování) bez činu. */
 export function jeJenProjev(titulek) {
   const t = normal(titulek);
   if (!t) return false;
+  if (VEDENI_PROTIVNIKA.test(t) && SLEDOVANE.test(t)) return false;
   const rec = SLOVESA_RECI.some((s) => t.includes(s));
   if (!rec) return false;
   return !SLOVESA_CINU.some((s) => t.includes(s));

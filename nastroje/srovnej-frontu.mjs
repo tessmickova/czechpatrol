@@ -32,6 +32,7 @@
  */
 import fs from "node:fs";
 import path from "node:path";
+import { klicAdresy } from "./klic-adresy.mjs";
 
 const koren = path.resolve(path.dirname(new URL(import.meta.url).pathname), "..");
 const cesta = (...c) => path.join(koren, ...c);
@@ -67,20 +68,21 @@ for (const z of Array.isArray(zadani) ? zadani : []) {
 }
 
 /* Záznam vyhrává nad návrhem: když je věc zveřejněná, je to pokračování. */
-const zaznamPodleUrl = new Map(incidenty.flatMap((i) => (i.zdroje ?? []).map((z) => [z.url, i.slug])));
-const navrhoveUrl = new Set(navrhy.flatMap((n) => (n.zdroje ?? []).map((z) => z.url)));
+/* Porovnává se klíč adresy, ne přesný text — viz klic-adresy.mjs. */
+const zaznamPodleUrl = new Map(incidenty.flatMap((i) => (i.zdroje ?? []).map((z) => [klicAdresy(z.url), i.slug])));
+const navrhoveUrl = new Set(navrhy.flatMap((n) => (n.zdroje ?? []).map((z) => klicAdresy(z.url))));
 
 const kdy = new Date().toISOString();
 let odepsano = 0;
 let zRozhodnuti = 0;
 const vysledek = kandidati.map((k) => {
   if (k.stav !== "ceka") return k;
-  const slug = zaznamPodleUrl.get(k.zdroj?.url);
+  const slug = zaznamPodleUrl.get(klicAdresy(k.zdroj?.url));
   if (slug) {
     odepsano++;
     return { ...k, stav: "vyrizen", vyrizeni: { kdy, duvod: "pokracovani", patriK: slug, poznamka: null } };
   }
-  if (navrhoveUrl.has(k.zdroj?.url)) {
+  if (navrhoveUrl.has(klicAdresy(k.zdroj?.url))) {
     odepsano++;
     return { ...k, stav: "vyrizen", vyrizeni: { kdy, duvod: "zdroj-navrhu", patriK: null, poznamka: null } };
   }
