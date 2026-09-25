@@ -82,6 +82,39 @@
     }
   },
   {
+    "id": "k-2104a1f9e12ea437",
+    "zachyceno": "2026-09-25T16:03:51.707Z",
+    "publikovano": null,
+    "zdroj": {
+      "nazev": "LRT English (Litva)",
+      "url": "https://www.lrt.lt/en/news-in-english/19/3063337/lithuania-s-interior-ministry-reports-cyberattack-on-archived-information-system",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Lithuania’s Interior Ministry reports cyberattack on archived information system",
+    "titulekPuvodni": "Lithuania’s Interior Ministry reports cyberattack on archived information system",
+    "shrnuti": "",
+    "kodZeme": "LT",
+    "zeme": "Litva",
+    "kategorie": [
+      "kyber"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "cyberattack",
+      "cyber"
+    ],
+    "naliehave": null,
+    "stav": "ceka",
+    "vyrez": {
+      "text": "Lithuania’s Interior Ministry reports cyberattack on archived information system - LRT\n\r\n\r\n\r\nNaujienų srautas\nNews\n1 h ago\nRare 17th-century wall paintings restored at Lithuania’s Siesikai Castle\nNews\n2 h ago\nLithuania’s Interior Ministry reports cyberattack on archived information system\nNews\n3 h ago\nLithuania and Philippines agree to coordinate labour migration\nNews\n4 h ago\nPM urges Lithuanian banks to prepare for payments during national mobilisation\nNews\n5 h ago\nSuspect in Alytus football player’s stabbing will not be charged due to insanity\nNews\n7 h ago\nEC says it is ‘carefully assessing’ Baltic request for €500 million in drone defences\nNews\n8 h ago\nLithuania launches largest annual mobilisation drills, tests wartime supply system\nNews\n9 h ago\nLithuania signs cooperation deal with US defence tech firm Mach Industries\nNews\n11 h ago\nLRT English Newsletter: America is back, for now\nNews\n1 d ago\nLithuania to let Belarusians apply for residence permits in Armenia, Georgia\nNews\n1 d ago\nDenmark issues warning over ‘low but growing risk’ of limited Russian attack\nNews\n1 d ago\nLithuanian PM suggests cutting public transport fares to offset fuel costs\nNews\n1 d ago\nVilnius streetworks…",
+      "stazeno": "2026-09-25T16:03:54.015Z",
+      "stav": 200
+    }
+  },
+  {
     "id": "k-7de64765fa694bc0",
     "zachyceno": "2026-09-25T15:03:23.000Z",
     "publikovano": "2026-09-25T14:48:14.000Z",
@@ -11174,47 +11207,6 @@
     "vyrizeni": {
       "kdy": "2026-09-20T07:44:20.271Z",
       "duvod": "navrh",
-      "patriK": null,
-      "poznamka": null
-    }
-  },
-  {
-    "id": "k-b1f98b36e50301bb",
-    "zachyceno": "2026-09-14T08:33:17.497Z",
-    "publikovano": "2026-09-14T08:04:00.000Z",
-    "zdroj": {
-      "nazev": "iROZHLAS — zprávy",
-      "url": "https://www.irozhlas.cz/zpravy-svet/online-rusko-zasahlo-navadenou-leteckou-bombou-izjum-zraneni-jsou-tri-lide_2609141004_raf",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "ONLINE: Rusko zasáhlo naváděnou leteckou bombou Izjum. Zranění jsou tři lidé, včetně malého dítěte",
-    "titulekPuvodni": "ONLINE: Rusko zasáhlo naváděnou leteckou bombou Izjum. Zranění jsou tři lidé, včetně malého dítěte",
-    "shrnuti": "Rusko v noci na pondělí zasáhlo naváděnou leteckou bombou východoukrajinský Izjum, kde utrpěli zranění tři lidé, včetně dvouměsíčního dítěte. Na síti Telegram to oznámil náčelník správy Charkovské oblasti Oleh Syněhubov. Ještě v neděli ruské útoky v ukrajinské Dněpropetrovské oblasti zranily čtyři l",
-    "kodZeme": "UA",
-    "zeme": "Ukrajina",
-    "kategorie": [
-      "sabotaz",
-      "rusko"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "shody": [
-      "bomb",
-      "dron",
-      "rusk"
-    ],
-    "stav": "vyrizen",
-    "vyrez": {
-      "text": "",
-      "stazeno": "2026-09-14T08:33:17.555Z",
-      "stav": 403,
-      "chyba": "HTTP 403"
-    },
-    "naliehave": null,
-    "vyrizeni": {
-      "kdy": "2026-09-20T07:44:20.271Z",
-      "duvod": "neudalost",
       "patriK": null,
       "poznamka": null
     }
