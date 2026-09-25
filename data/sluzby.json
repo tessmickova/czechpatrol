@@ -1,5 +1,5 @@
 {
-  "aktualizovano": "2026-09-25T02:03:01.013Z",
+  "aktualizovano": "2026-09-25T03:03:26.621Z",
   "stavy": [
     {
       "klic": "cloudflare",
@@ -7,9 +7,9 @@
       "popis": "Minor Service Outage",
       "incidenty": [
         {
-          "nazev": "Workflows stuck in Queued state",
+          "nazev": "Issues with Durable Objects",
           "odkaz": "https://www.cloudflarestatus.com/incidents/gv29fd076q2t",
-          "aktualizovano": "2026-09-25T01:31:54.000Z"
+          "aktualizovano": "2026-09-25T02:32:19.000Z"
         },
         {
           "nazev": "Network Performance Degradation — Asia-Pacific",
@@ -28,7 +28,7 @@
         "Arica, Chile - (ARI)",
         "Algiers, Algeria - (ALG)"
       ],
-      "zkontrolovano": "2026-09-25T02:03:01.013Z",
+      "zkontrolovano": "2026-09-25T03:03:26.621Z",
       "chyba": null
     },
     {
@@ -40,7 +40,7 @@
         "Download Center & Clients",
         "Zoom Website"
       ],
-      "zkontrolovano": "2026-09-25T02:03:01.013Z",
+      "zkontrolovano": "2026-09-25T03:03:26.621Z",
       "chyba": null
     },
     {
@@ -49,7 +49,7 @@
       "popis": "All Systems Operational",
       "incidenty": [],
       "postizene": [],
-      "zkontrolovano": "2026-09-25T02:03:01.013Z",
+      "zkontrolovano": "2026-09-25T03:03:26.621Z",
       "chyba": null
     }
   ]
