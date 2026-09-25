@@ -171,6 +171,8 @@ jobs:
         run: npm run build || { echo "::warning::Sestavení selhalo, zkouším znovu za 30 s (např. nedostupná písma)"; sleep 30; npm run build; }
         env:
           NEXT_PUBLIC_API_URL: ${{ vars.API_URL }}
+          NEXT_PUBLIC_POSTHOG_KEY: ${{ vars.POSTHOG_KEY }}
+          NEXT_PUBLIC_POSTHOG_HOST: ${{ vars.POSTHOG_HOST }}
 
       - name: Nasazení na Cloudflare Pages
         if: steps.zmena.outputs.zmena == 'true'

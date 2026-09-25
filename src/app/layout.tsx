@@ -7,6 +7,7 @@ import { PostranniPanel } from "@/components/postranni-panel";
 import { NavadeniZapojeni } from "@/components/zapojit-klient";
 import { RegistraceSW } from "@/components/pwa";
 import { Mereni } from "@/components/mereni";
+import { SouhlasAnalytika } from "@/components/souhlas-analytika";
 import { Paticka } from "@/components/paticka";
 import { PruhPuvodu, UkazkaPruh } from "@/components/pruhy";
 import { PulzKratky } from "@/components/pulz-kratky";
@@ -115,6 +116,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <ListaMobil />
         <RegistraceSW />
         <Mereni />
+        <SouhlasAnalytika />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{

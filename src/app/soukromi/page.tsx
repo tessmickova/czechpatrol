@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   description: "Co o vás CzechPatrol ví, proč, jak dlouho a jak to smažete. Krátce a bez právničiny.",
 };
 
-const REVIZE = "2026-09-22";
+const REVIZE = "2026-09-25";
 
 function Oddil({ cislo, nadpis, children }: { cislo: string; nadpis: string; children: React.ReactNode }) {
   return (
@@ -36,7 +36,7 @@ export default function SoukromiStranka() {
         stitek="Soukromí"
         ikona="zamek"
         nadpis="Co o vás víme. Skoro nic."
-        popis="Web se dá číst bez účtu a bez sledování. Účet je anonymní. Tady je přesně, co se ukládá, proč, na jak dlouho a jak to smažete."
+        popis="Web se dá číst bez účtu a bez sledování; analytika třetích stran běží jen s vaším souhlasem. Účet je anonymní. Tady je přesně, co se ukládá, proč, na jak dlouho a jak to smažete."
         doplnek={<span className="stitek !text-noc-tlum">Platí od {REVIZE}</span>}
       />
       <ObsahStranky />
@@ -55,7 +55,7 @@ export default function SoukromiStranka() {
         <div className="grid gap-4 md:grid-cols-3">
           <Karta odstin="zelena" className="p-5">
             <div className="stitek mb-2">Čtení webu</div>
-            <p className="text-zaklad leading-relaxed text-tlum">Žádné sledovací cookies, žádná analytika třetích stran, žádný účet. Nic se neukládá k vám.</p>
+            <p className="text-zaklad leading-relaxed text-tlum">Bez souhlasu žádné sledovací cookies ani analytika třetích stran, žádný účet. Nic se neukládá k vám.</p>
           </Karta>
           <Karta odstin="modra" className="p-5">
             <div className="stitek mb-2 !text-akcent">Účet</div>
@@ -146,7 +146,8 @@ export default function SoukromiStranka() {
           </Oddil>
 
           <Oddil cislo="10" nadpis="Cookies a úložiště prohlížeče">
-            <p>Web nepoužívá cookies. V prohlížeči ukládá jen přihlášení a vaše předvolby. To je nutné pro službu, kterou chcete, a souhlas se nevyžaduje. Měření návštěvnosti nic v prohlížeči neukládá.</p>
+            <p>Bez vašeho souhlasu web nepoužívá cookies. V prohlížeči ukládá jen přihlášení a vaše předvolby. To je nutné pro službu, kterou chcete, a souhlas se nevyžaduje. Vlastní měření návštěvnosti nic v prohlížeči neukládá.</p>
+            <p id="analytika" className="scroll-mt-[84px]"><b>Analytika třetích stran — jen se souhlasem.</b> Když v liště dole zvolíte „Povolit“, spustí se Microsoft Clarity (Microsoft Corporation; teplotní mapy a záznam průchodu stránkou, vstupní pole jsou maskovaná) a PostHog (PostHog Inc., data v EU; zobrazení stránek a kliknutí). Oba ukládají cookies a zpracovávají technické údaje o zařízení a IP adresu jako zpracovatelé. Právní základ je váš souhlas; odvoláte ho odkazem „Nastavení analytiky“ v patičce a volbou „Odmítnout“. Bez souhlasu ani s nastaveným Global Privacy Control se nic z toho nespustí.</p>
           </Oddil>
 
           <Oddil cislo="11" nadpis="Automatizace a AI">
