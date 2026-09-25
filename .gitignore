@@ -9,3 +9,7 @@ next-env.d.ts
 nahled.html
 .wrangler/
 api/.dev.vars
+
+# Stav strážce sběru (jen pro běh a mezipaměť workflow)
+.strazce/
+.strazce-testy.log

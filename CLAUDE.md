@@ -157,6 +157,28 @@ ani zahraničních — kvůli tomu, co a jak píše. Proto:
 Když si nejsme jistí, jestli věta obstojí, **nevydá se** a založí se
 otázka pro člověka.
 
+## Pravidlo č. 0.7 — každá chyba se opraví u kořene, aby se neopakovala
+
+Když narazíš na chybu (spadlý sběr, nasazení, test, špatná data, rozbitá
+stránka), nestačí ji obejít nebo opravit jednou ručně. Vždycky:
+
+1. **Najdi příčinu**, ne příznak: proč to mohlo vzniknout a proč to nikdo
+   nezachytil dřív.
+2. **Oprav ji tak, aby se nemohla vrátit**: pojistka v kódu (validace,
+   automatické zkrácení, odmítnutí vstupu), test, který by ji chytil, nebo
+   pravidlo v zadání pro automat. Ruční oprava dat je jen první krok.
+3. **Zajisti, aby chyba nezastavila web**: chyba v jednom záznamu nesmí
+   shodit sběr ani nasazení; vrátí se ten záznam, ne celý provoz.
+4. **Zapiš to**: do commitu proč, do komentáře u pojistky datum a co se
+   stalo, do předávacího dokumentu, pokud to mění provoz.
+
+Příklady z 24.–25. 9. 2026: nový důvod odmítnutí `jen-projev` neznala
+kontrola dat → doplněn a kontrola se píše spolu s důvodem; automat
+zveřejnil aktualizaci bez případu → obě cesty zveřejnění ji teď nepustí;
+veřejná fronta přetáhla strop → zkracuje se sama; obecně → **strážce dat**
+ve sběru (`nastroje/strazce-dat.mjs`) vrátí chybná data místo zastavení
+webu a správce dostane zprávu (`nastroje/upozorni-spravce.mjs`).
+
 ## Pravidlo č. 1 — nejsme zpravodajství
 
 **Na web patří jen to, co mění bezpečnostní situaci, nebo doložený a konkrétní
