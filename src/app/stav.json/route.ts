@@ -32,6 +32,8 @@ export function GET() {
     nazev: stav.uroven ? UROVNE[stav.uroven].nazev : null,
     pasmo: stav.uroven ? UROVNE[stav.uroven].pasmo : null,
     trend: stav.trend,
+    /* Úroveň zvednutá mimořádným signálem redakce: spočtená úroveň a důvod, ať to strojový odběratel neplete s měřením. */
+    mimoradny: stav.mimoradny ? { zakladni: stav.mimoradny.zakladni, kratce: stav.mimoradny.kratce, platiDo: stav.mimoradny.platiDo } : null,
     hybridni: hybrid.celkem,
     primy: primy?.uroven ?? null,
     pravni: Object.fromEntries(pravniStav().polozky.map((p) => [p.klic, p.plati])),
