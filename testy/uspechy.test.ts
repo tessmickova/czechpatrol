@@ -47,13 +47,16 @@ describe("úspěchy složek — Česko a Evropa", () => {
     ], TED, bez);
     expect(u.map((x) => x.slug)).toEqual(["cz"]);
   });
-  it("filtr oblasti dělí Česko, ostatní Evropu a zbytek světa", () => {
+  it("filtr oblasti: Česko, V4, ostatní Evropa, zbytek jen pod Vše", () => {
     expect(vOblasti({ kodZeme: "CZ" }, "cr")).toBe(true);
+    expect(vOblasti({ kodZeme: "CZ" }, "v4")).toBe(false);
     expect(vOblasti({ kodZeme: "CZ" }, "evropa")).toBe(false);
-    expect(vOblasti({ kodZeme: "PL" }, "evropa")).toBe(true);
-    expect(vOblasti({ kodZeme: "PL" }, "cr")).toBe(false);
-    expect(vOblasti({ kodZeme: "PL" }, "vse")).toBe(true);
-    // Mimoevropský stát jen pod „Vše“.
+    for (const k of ["SK", "PL", "HU"]) {
+      expect(vOblasti({ kodZeme: k }, "v4")).toBe(true);
+      expect(vOblasti({ kodZeme: k }, "evropa")).toBe(false);
+    }
+    expect(vOblasti({ kodZeme: "DE" }, "evropa")).toBe(true);
+    expect(vOblasti({ kodZeme: "DE" }, "v4")).toBe(false);
     expect(vOblasti({ kodZeme: "US" }, "evropa")).toBe(false);
     expect(vOblasti({ kodZeme: "US" }, "vse")).toBe(true);
   });

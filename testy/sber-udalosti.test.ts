@@ -414,3 +414,15 @@ describe("omezení pohybu u hranice", () => {
     expect(relevantni("Putin claims Russian speakers' rights are violated in Baltic states")).toBe(true);
   });
 });
+
+describe("scénář zabrání území země NATO (26. 9. 2026)", () => {
+  it("Deník N o scénáři zabrání východu Pobaltí se zachytí", () => {
+    expect(duvodOdmitnuti("Rusové mohou zkusit zabrat území na východě Pobaltí. Scénář z tajných jednání potvrzuje i prezident Pavel")).toBeNull();
+    expect(duvodOdmitnuti("Zdroje potvrdily, že se na tajném jednání probíral scénář obsazení některého z východních území Estonska nebo Lotyšska.")).toBeNull();
+  });
+  it("dějiny a obecné řeči neprojdou", () => {
+    expect(duvodOdmitnuti("Ve stínu pádu Francie: Sovětská okupace Pobaltí změnila mapu Evropy")).not.toBeNull();
+    expect(duvodOdmitnuti("Před 30 lety se pobaltské státy svobodně nadechly, Jelcin schválil stažení vojsk")).not.toBeNull();
+    expect(duvodOdmitnuti("Obsazení hotelů v Estonsku letos rekordní")).not.toBeNull();
+  });
+});

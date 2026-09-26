@@ -13,14 +13,14 @@ import { Vlajka } from "./zeme";
   a dotáhly. Jen z ověřených záznamů (src/lib/uspechy.ts), každá položka
   vede na záznam se zdroji. Konečný výčet: tři na kartu, nic se nedočítá.
 
-  Filtr Česko / Evropa (26. 9. 2026): oblast se volí první, typy složek se
+  Filtr Česko / V4 / Evropa (26. 9. 2026): oblast se volí první, typy složek se
   pak nabízejí jen ty, které v ní něco mají — prázdná záložka by klamala.
 */
 
 const NA_KARTU = 3;
 
 export function UspechySlozek({ uspechy }: { uspechy: Uspech[] }) {
-  const [oblast, setOblast] = useState<Oblast>("vse");
+  const [oblast, setOblast] = useState<Oblast>("cr");
   const [volba, setVybrano] = useState<Slozka | "vse">("vse");
   if (!uspechy.length) return null;
   const vOblast = uspechy.filter((u) => vOblasti(u, oblast));
@@ -28,8 +28,8 @@ export function UspechySlozek({ uspechy }: { uspechy: Uspech[] }) {
   // Typ, který ve zvolené oblasti nic nemá, se nedrží — jinak by karta zůstala prázdná.
   const vybrano = typy.some((t) => t.klic === volba) ? volba : "vse";
   const vyber = vybrano === "vse" ? vOblast : vOblast.filter((u) => u.slozka === vybrano);
-  const popis = vybrano !== "vse" ? SLOZKY.find((s) => s.klic === vybrano)!.popis : oblast === "cr" ? "Nejnovější z Česka." : oblast === "evropa" ? "Nejnovější z Evropy." : "Nejnovější ze všech složek.";
-  const pocet = oblast === "cr" ? `${vOblast.length} z Česka` : oblast === "evropa" ? `${vOblast.length} za půl roku` : `${vOblast.length} celkem`;
+  const popis = vybrano !== "vse" ? SLOZKY.find((s) => s.klic === vybrano)!.popis : { cr: "Nejnovější z Česka.", v4: "Slovensko, Polsko, Maďarsko.", evropa: "Ostatní evropské země.", vse: "Nejnovější ze všech zemí." }[oblast];
+  const pocet = oblast === "cr" ? `${vOblast.length} z Česka` : oblast === "vse" ? `${vOblast.length} celkem` : `${vOblast.length} za půl roku`;
 
   return (
     <section aria-labelledby="uspechy-nadpis" className="overflow-hidden rounded-[22px] bg-plocha">
@@ -38,10 +38,10 @@ export function UspechySlozek({ uspechy }: { uspechy: Uspech[] }) {
         id="uspechy-nadpis"
         nazev="Úspěchy složek"
         ton="klid"
-        napoveda={<span className="block">Co bezpečnostní složky odvrátily, odhalily nebo dotáhly k soudu — v našich tématech (sabotáže, špionáž, drony, kyber). Evropa = ostatní evropské země za posledního půl roku; úspěchy mimo Evropu (třeba obžaloba v USA) jsou jen pod „Vše“. Česko = všechny naše ověřené záznamy bez ohledu na stáří, protože takových případů je málo; datum je u každého. Jen z ověřených záznamů; každý vede na zdroje.</span>}
+        napoveda={<span className="block">Co bezpečnostní složky odvrátily, odhalily nebo dotáhly k soudu — v našich tématech (sabotáže, špionáž, drony, kyber). Nejdřív Česko — všechny naše ověřené záznamy bez ohledu na stáří, protože takových případů je málo; datum je u každého. Pak V4 (Slovensko, Polsko, Maďarsko) a ostatní Evropa za posledního půl roku. Úspěchy mimo Evropu (třeba obžaloba v USA) jsou jen pod „Vše“. Jen z ověřených záznamů; každý vede na zdroje.</span>}
       />
       {/* Vlastní řádek, ne v hlavičce: na mobilu by přepínač přetekl přes nadpis. */}
-      <div role="radiogroup" aria-label="Oblast" className="mx-3 mb-2 grid grid-cols-3 rounded-full border border-linka p-0.5 lg:inline-grid">
+      <div role="radiogroup" aria-label="Oblast" className="mx-3 mb-2 grid grid-cols-4 rounded-full border border-linka p-0.5 lg:inline-grid">
         {OBLASTI.map((o) => (
           <button
             key={o.klic}
