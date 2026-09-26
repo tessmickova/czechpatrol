@@ -1,5 +1,104 @@
 [
   {
+    "id": "k-b0ebd1da9c8bffad",
+    "zachyceno": "2026-09-26T09:03:12.592Z",
+    "publikovano": "2026-09-26T08:26:36.000Z",
+    "zdroj": {
+      "nazev": "Denník N (Slovensko)",
+      "url": "https://dennikn.sk/5585474/velvyslankyna-eu-v-kyjive-z-vybuchov-mavam-uzkosti-nikam-vsak-nejdeme-a-na-tazku-zimu-sa-pripravujeme/",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Veľvyslankyňa EÚ v Kyjive: Z výbuchov mávam úzkosti. Nikam však nejdeme a na ťažkú zimu sa pripravujeme",
+    "titulekPuvodni": "Veľvyslankyňa EÚ v Kyjive: Z výbuchov mávam úzkosti. Nikam však nejdeme a na ťažkú zimu sa pripravujeme",
+    "shrnuti": "Ukrajinci chcú mier zo všetkého najviac, na Putina však funguje len jazyk sily, hovorí európska ambasádorka Katarína Mathernová.",
+    "kodZeme": "EU",
+    "zeme": "EU",
+    "kategorie": [
+      "sabotaz"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "vybuch"
+    ],
+    "naliehave": null,
+    "stav": "ceka",
+    "vyrez": {
+      "text": "",
+      "stazeno": "2026-09-26T09:03:14.422Z",
+      "stav": 403,
+      "chyba": "HTTP 403"
+    }
+  },
+  {
+    "id": "k-04afb45a89df5987",
+    "zachyceno": "2026-09-26T09:03:12.610Z",
+    "publikovano": "2026-09-26T08:21:49.000Z",
+    "zdroj": {
+      "nazev": "Aktuality.sk",
+      "url": "https://www.aktuality.sk/clanok/tFe8mQM/atenami-otriasol-vybuch-zachranari-nasli-telo-po-americkych-a-britskych-turistoch-stale-patraju/",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Aténami otriasol výbuch. Záchranári našli telo, po amerických a britských turistoch stále pátrajú",
+    "titulekPuvodni": "Aténami otriasol výbuch. Záchranári našli telo, po amerických a britských turistoch stále pátrajú",
+    "shrnuti": "Výbuch pravdepodobne spôsobený únikom plynu zničil dom v srdci Plaky pod Akropolou. Záchranári našli jedno telo a pokračujú v hľadaní piatich nezvestných.",
+    "kodZeme": "GB",
+    "zeme": "Spojené království",
+    "kategorie": [
+      "sabotaz"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "vybuch"
+    ],
+    "naliehave": null,
+    "stav": "ceka",
+    "vyrez": {
+      "text": "Aténami otriasol výbuch. Záchranári našli telo, po amerických a britských turistoch stále pátrajú | Aktuality.sk\nAktuality\nŠport\nDiva\nNajmama\nŽivé\nRecepty\nDobrú chuť\nSlovník\n11 °C -\nBratislava\nsobota 26. 9.\n26. 9.\nEdita\nSvet dnes 26. Sep 2026 o 10:21\n1 min. čítania\nPridať do Google\nAténami otriasol výbuch. Záchranári našli telo, po amerických a britských turistoch stále pátrajú\n4 fotky v galérii\nČiastočné zrútenie budovy po výbuchu v gréckych Aténach. Zdroj: reuters\nTASR\nAktuality.sk\nUložiť článok\nVýbuch pravdepodobne spôsobený únikom plynu zničil dom v srdci Plaky pod Akropolou. Záchranári našli jedno telo a pokračujú v hľadaní piatich nezvestných.\nPo piatkovom výbuchu a následnom zrútení budovy v aténskej turistickej štvrti Plaka našli v sobotu v troskách telo. Grécki záchranári pátrajú po ďalších nezvestných, informuje TASR podľa správ agentúr AFP a ANA.\nObeťou je pravdepodobne americká turistka, ktorá bola spolu s manželom a ďalším párom ubytovaná v apartmáne na prvom poschodí. Nezvestných je naďalej päť ľudí. Príčinou výbuchu bol podľa úradov pravdepodobne únik plynu.\nAténami otriasol výbuch. Záchranári našli telo, po amerických a britských turistoch stále…",
+      "stazeno": "2026-09-26T09:03:14.556Z",
+      "stav": 200
+    }
+  },
+  {
+    "id": "k-298f832a23e259ed",
+    "zachyceno": "2026-09-26T09:03:14.294Z",
+    "publikovano": "2026-09-26T07:54:00.000Z",
+    "zdroj": {
+      "nazev": "Ukrainska Pravda (anglicky)",
+      "url": "https://www.pravda.com.ua/eng/news/2026/09/26/8055134/",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Russian attack damages lorries on road in Odesa Oblast, injures three",
+    "titulekPuvodni": "Russian attack damages lorries on road in Odesa Oblast, injures three",
+    "shrnuti": "Three lorries have been damaged and three people have been injured in a Russian attack on a road in Odesa Oblast.",
+    "kodZeme": "UA",
+    "zeme": "Ukrajina",
+    "kategorie": [
+      "hybridni",
+      "rusko"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "attack on",
+      "russia"
+    ],
+    "naliehave": null,
+    "stav": "ceka",
+    "vyrez": {
+      "text": "Russian attack damages lorries on road in Odesa Oblast, injures three | Ukrainska Pravda\nPhoto: Odesa Oblast Military Administration\nThree lorries have been damaged and three people have been injured in a Russian attack on a road in Odesa Oblast.\nSource: Odesa Oblast Military Administration\nDetails: One of the damaged vehicles caught fire.\nAdvertisement:\n\r\n\r\n\r\n\r\n\r\nEmergency teams are currently dealing with the aftermath of the attack.\nBackground: One person was injured in a morning attack by Russia on the city of Kyiv on 26 September, with fires also reported in the Solomianskyi and Obolonskyi districts.\nSubscribe on Patreon to back our journalism long-term.\nOdesa Oblast\ndrones\nAdvertisement:\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nOdesa Oblast\nRussian drone strikes energy workers' vehicle in Odesa Oblast, killing one person and injuring another – photos\nRussian morning attack on Odesa: 2 killed, 2 injured– photos, video\nRussian strikes on warehouses in Odesa Oblast cause major fires, killing 1 and injuring 2 – photos\nLatest news\nAdvertisement:\n\r\n\r\n\r\nAdvertisement:",
+      "stazeno": "2026-09-26T09:03:15.564Z",
+      "stav": 200
+    }
+  },
+  {
     "id": "k-f3b14c4087a19ca5",
     "zachyceno": "2026-09-26T08:02:58.610Z",
     "publikovano": "2026-09-26T07:17:00.000Z",
@@ -11920,130 +12019,6 @@
       "stazeno": "2026-09-15T17:03:07.796Z",
       "stav": 200
     },
-    "vyrizeni": {
-      "kdy": "2026-09-19T19:56:38.778Z",
-      "duvod": "zdroj-navrhu",
-      "patriK": null,
-      "poznamka": null
-    }
-  },
-  {
-    "id": "k-cb629a576d99afc4",
-    "zachyceno": "2026-09-15T16:32:52.300Z",
-    "publikovano": "2026-09-15T07:53:16.000Z",
-    "zdroj": {
-      "nazev": "Téma: zeleznice (anglicky)",
-      "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxOMkRoUzhVYkRIZGNVU0UxeHBhTDZWR3A5MFlEUzlwb3dSUlhISDNmZmp6NFhZZENrYWp6VFhYeDJadkxxWmVaeTBzekUyUlpnZzhuQU9feVFwdWM2ZjlBMWpaMk9ycGJhdGtTRmFqQzNXNlhDM19WZUd6SnJJSTZQUUx1SVNoWGxQX2JrOVFlcEF2MkFWWGVCZGVYeW4yUE1kOFM0MFUweXlQbWNa?oc=5",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Multiple simultaneous acts of sabotage on Dutch railways - RailFreight.com",
-    "titulekPuvodni": "Multiple simultaneous acts of sabotage on Dutch railways - RailFreight.com",
-    "shrnuti": "Multiple simultaneous acts of sabotage on Dutch railways RailFreight.com",
-    "kodZeme": "NL",
-    "zeme": "Nizozemsko",
-    "kategorie": [
-      "sabotaz",
-      "infrastruktura"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "zeSite": null,
-    "shody": [
-      "sabotage",
-      "railway"
-    ],
-    "naliehave": null,
-    "stav": "vyrizen",
-    "vyrez": {
-      "text": "Google News",
-      "stazeno": "2026-09-15T17:03:07.949Z",
-      "stav": 200
-    },
-    "vyrizeni": {
-      "kdy": "2026-09-19T19:56:38.778Z",
-      "duvod": "zdroj-navrhu",
-      "patriK": null,
-      "poznamka": null
-    }
-  },
-  {
-    "id": "k-28e3b669c8504277",
-    "zachyceno": "2026-09-15T12:32:49.229Z",
-    "publikovano": "2026-09-15T07:44:22.000Z",
-    "zdroj": {
-      "nazev": "Google News — Polsko vzdušný prostor",
-      "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxNMHVPZU5UampRalJlelJTLXhFSzg4eVNVM3NackZNdllBWlZzVC1nT3lwNmtxcUowanJ3N2NodlpkUVk0azI0VzZDLXFua05OWkpyMkh5aEtyZVlxS1k4RmZnZDFWVnNpdlVYandFMk1tb0FnT1Q1cTJjT0MzbmxOZF9DZktmTnlsVTExMGxsOFltWEc2c2tF?oc=5",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Romania, Poland scramble fighter jets over drone incidents - The Sofia Globe",
-    "titulekPuvodni": "Romania, Poland scramble fighter jets over drone incidents - The Sofia Globe",
-    "shrnuti": "Romania, Poland scrambl",
-    "kodZeme": "PL",
-    "zeme": "Polsko",
-    "kategorie": [
-      "drony"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "zeSite": null,
-    "shody": [
-      "scrambl",
-      "fighter jet+scrambl",
-      "dron",
-      "drone"
-    ],
-    "stav": "vyrizen",
-    "vyrez": {
-      "text": "Google News",
-      "stazeno": "2026-09-15T12:32:51.334Z",
-      "stav": 200
-    },
-    "naliehave": null,
-    "vyrizeni": {
-      "kdy": "2026-09-19T19:56:38.778Z",
-      "duvod": "zdroj-navrhu",
-      "patriK": null,
-      "poznamka": null
-    }
-  },
-  {
-    "id": "k-87e3e3e4ef081d01",
-    "zachyceno": "2026-09-15T12:32:49.230Z",
-    "publikovano": "2026-09-15T07:34:12.000Z",
-    "zdroj": {
-      "nazev": "Google News — Polsko vzdušný prostor",
-      "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxPYkpwZndMeE1fZ1JOODlVQzI1b3lVNDNqdVhvWVFNOVo5dXRSb21CQk81aG1jNmkyMk1RSmVmVW56cXZseU1CcFVtVzlMWjlGMy00eTNGRHB6WllLYU5ubDd5Tm9zOHlaeEhwZm56MldxQVl0emIzbXVTVnkzRDQ5Sjk0Y0Q2M01KekdWa3F0SmtmdkJyUDlHQjlTRUhQa0dMVndnMzBPMDhpUQ?oc=5",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Poland and Romania scrambled fighter jets in response to Russian drones over Ukraine - UA.NEWS",
-    "titulekPuvodni": "Poland and Romania scrambled fighter jets in response to Russian drones over Ukraine - UA.NEWS",
-    "shrnuti": "",
-    "kodZeme": "PL",
-    "zeme": "Polsko",
-    "kategorie": [
-      "drony",
-      "rusko"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "zeSite": null,
-    "shody": [
-      "scrambl",
-      "fighter jet+scrambl",
-      "dron",
-      "drone",
-      "russia"
-    ],
-    "stav": "vyrizen",
-    "vyrez": {
-      "text": "Google News",
-      "stazeno": "2026-09-15T12:32:51.469Z",
-      "stav": 200
-    },
-    "naliehave": null,
     "vyrizeni": {
       "kdy": "2026-09-19T19:56:38.778Z",
       "duvod": "zdroj-navrhu",
