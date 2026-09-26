@@ -175,6 +175,42 @@
     }
   },
   {
+    "id": "k-8afe6d95073582d6",
+    "zachyceno": "2026-09-26T19:33:39.703Z",
+    "publikovano": "2026-09-26T16:40:00.000Z",
+    "zdroj": {
+      "nazev": "Rzeczpospolita (Polsko)",
+      "url": "https://www.rp.pl/wojsko/art45195141-niepokojace-slowa-putina-analityk-wojskowy-szykuje-cos-spektakularnego",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Niepokojące słowa Putina. Analityk wojskowy: Szykuje coś spektakularnego",
+    "titulekPuvodni": "Niepokojące słowa Putina. Analityk wojskowy: Szykuje coś spektakularnego",
+    "shrnuti": "Zdaniem analityka wojskowego ppłk. Macieja Korowaja Rosja zamierza rzucić wyzwanie państwom NATO, doprowadzając do konfliktu egzystencjalnego. W rozmowie z Onetem ekspert ocenia, że w reakcji na ewentualną odpowiedź Sojuszu Moskwa może sięgnąć po szantaż. Wskazuje przy tym, że najbardziej narażona n",
+    "kodZeme": "EE",
+    "zeme": "Estonsko",
+    "kategorie": [
+      "hybridni",
+      "nato",
+      "rusko"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "putin+eston+konflikt",
+      "nato",
+      "kreml"
+    ],
+    "naliehave": null,
+    "stav": "ceka",
+    "vyrez": {
+      "text": "Wypowiedź Putina o rosyjskojęzycznych. Analityk: To państwo NATO jest najbardziej zagrożone - rp.pl\nReklama\nWydarzenia\nKraj\nWojsko\nNiepokojące słowa Putina. Analityk wojskowy: Szykuje coś spektakularnego\nZdaniem analityka wojskowego ppłk. Macieja Korowaja Rosja zamierza rzucić wyzwanie państwom NATO, doprowadzając do konfliktu egzystencjalnego. W rozmowie z Onetem ekspert ocenia, że w reakcji na ewentualną odpowiedź Sojuszu Moskwa może sięgnąć po szantaż. Wskazuje przy tym, że najbardziej narażona na prowokacje ze strony Kremla jest Estonia.\nAktualizacja:\n26.09.2026 21:32\nPublikacja:\n26.09.2026 18:40\nUstaw „Rzeczpospolitą” jako swoje ulubione źródło informacji w Google\nPrzywódca Rosji Władimir Putin\nFoto: REUTERS/Anastasia Barashkova\nAda Michalak\nSygnały, iż Rosja – chcąc rozstrzygnąć na swoją korzyść wojnę na Ukrainie – zamierza eskalować działania przeciwko państwom NATO, pojawiają się od wiosny tego roku. O możliwości takiej informują zachodnie wywiady, sygnalizują ją też przywódcy państw Zachodu. Eskalacja nie musi mieć formy regularnych działań zbrojnych, bardziej prawdopodobne jest zaostrzenie wojny hybrydowej, zintensyfikowanie cyberataków czy zwiększenie liczby aktów…",
+      "stazeno": "2026-09-26T19:33:41.573Z",
+      "stav": 200
+    }
+  },
+  {
     "id": "k-f56093564ae90914",
     "zachyceno": "2026-09-26T18:03:26.687Z",
     "publikovano": "2026-09-26T16:21:00.000Z",
@@ -12094,48 +12130,6 @@
     "vyrizeni": {
       "kdy": "2026-09-20T07:48:17.187Z",
       "duvod": "neudalost",
-      "patriK": null,
-      "poznamka": null
-    }
-  },
-  {
-    "id": "k-41f016ed9e3a9bcc",
-    "zachyceno": "2026-09-15T14:32:50.348Z",
-    "publikovano": "2026-09-15T14:26:39.000Z",
-    "zdroj": {
-      "nazev": "Google News — sabotáž",
-      "url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxOUTBTY193Q3JQcEFIVTRoYjMyTkVDb2tUSkVWeHFoUkF0Z0NCR0RiWjhtRWVXTURHQjRzamtQYm1RU2taOWpYX1BvSzFBM25fRVR2SWFIdlh4NHM5THJySGZWNUs4di1PX1Bzb0IzdmVIeHRFM3VVU0N1eVhrOGFqOElvTWlGRDJMSGJ4VnZucVJWNUU1QmlHN3JZM3k3d3VfRVhTT21tTEFHdmRpY0lEaFlXTjY3bDB2TDFxT3FveHV4S25S?oc=5",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Kubánský lektor tance organizoval z Ruska sabotáže v zemích EU - natoaktual.cz",
-    "titulekPuvodni": "Kubánský lektor tance organizoval z Ruska sabotáže v zemích EU - natoaktual.cz",
-    "shrnuti": "",
-    "kodZeme": "EU",
-    "zeme": "EU",
-    "kategorie": [
-      "sabotaz",
-      "nato",
-      "rusko"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "zeSite": null,
-    "shody": [
-      "sabotaz",
-      "nato",
-      "rusk"
-    ],
-    "stav": "vyrizen",
-    "vyrez": {
-      "text": "Google News",
-      "stazeno": "2026-09-15T14:32:50.396Z",
-      "stav": 200
-    },
-    "naliehave": null,
-    "vyrizeni": {
-      "kdy": "2026-09-19T19:56:38.778Z",
-      "duvod": "navrh",
       "patriK": null,
       "poznamka": null
     }
