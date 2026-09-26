@@ -1,7 +1,7 @@
 import { Dashboard } from "@/components/dashboard";
 import { archiv, celkovyStav, oficialniNastroje, hybridniTlak, incidenty, kampane, kandidati, nato, nazvyZemi, nepotvrzene, nepotvrzeneZaznamy, posledniKontrola, posledniOvereni, pravniStav, provoz, tlakCr, tydny, overovaneAktivni, overovaneUzavrene, urovenObcanu, watchlist } from "@/lib/data";
-import { pripravitTed } from "@/lib/priprava";
-import { odlehci } from "@/lib/odlehci";
+import { pripravitTed } from "@/lib/priprava-ted";
+import { odlehciProUvod } from "@/lib/odlehci";
 import { pulz } from "@/lib/pulz";
 import { souhrnSituace } from "@/lib/souhrn-situace";
 import { KONFIGURACE_CERSTVOSTI, snimekPrehledu } from "@/lib/prehled/data";
@@ -32,7 +32,7 @@ export default function Prehled() {
         natoPolozky={nato().polozky}
         provozPolozky={provoz().polozky}
         overeno={posledniOvereni()}
-        vse={incidenty().map(odlehci)}
+        vse={incidenty().map((i) => odlehciProUvod(i, ted))}
         neprosle={nepotvrzene()}
         priprava={pripravitTed()}
         pulz={pulz()}

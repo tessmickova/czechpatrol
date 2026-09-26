@@ -1,6 +1,6 @@
 import { HlavickaWidgetu } from "./widgety";
 import { datumPraha } from "@/lib/cas";
-import { tipy } from "@/lib/data";
+import { tipy } from "@/lib/data-lehka";
 import { Ikona } from "./ikony";
 
 /*

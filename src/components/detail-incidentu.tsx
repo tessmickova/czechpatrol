@@ -3,7 +3,7 @@ import { GrafSouvislosti } from "@/components/graf-souvislosti";
 import { DetailObsah, HlavickaDetailu } from "@/components/detail-obsah";
 import { UlozitUdalost } from "@/components/muj-prehled-klient";
 import { OdznakUkazky } from "@/components/pruhy";
-import { incident, incidenty } from "@/lib/data";
+import { incident, incidenty, opravy } from "@/lib/data";
 
 /**
  * Samostatná stránka události. Stejný obsah jako panel na stránce
@@ -29,8 +29,8 @@ export function DetailIncidentu({ slug }: { slug: string }) {
         <UlozitUdalost slug={i.slug} />
       </div>
       {i.ukazka && <div className="mb-3"><OdznakUkazky /></div>}
-      <HlavickaDetailu i={i} velka />
-      <div className="mt-8"><DetailObsah i={i} /></div>
+      <HlavickaDetailu i={i} vse={incidenty()} velka />
+      <div className="mt-8"><DetailObsah i={i} vse={incidenty()} opravy={opravy()} /></div>
       {souvisejici.length > 0 && <div className="mt-10 overflow-x-auto"><GrafSouvislosti stred={i} souvisejici={souvisejici} /></div>}
     </article>
   );

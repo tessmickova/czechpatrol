@@ -1,4 +1,3 @@
-import { incidenty, nepotvrzene } from "./data";
 import { PORADI_KATEGORII } from "./kategorie";
 import { UROVNE } from "./skala";
 import type { DruhZaznamu, Incident, Kategorie, Nepotvrzene, Puvodce, Uroven } from "./typy";
@@ -80,21 +79,21 @@ export function vyber(vse: Zaznam[], f: Filtr = {}): Zaznam[] {
   do počtů nevstupuje. Audit 23. 9. 2026 našel 19 takových v počtu za 90 dní.
 */
 export const pocitaSe = (i: Zaznam) => (i as Incident).overeni !== "neovereno";
-export const pripady = (vse: Zaznam[] = incidenty(), f: Filtr = {}) => vyber(vse, { ...f, druhy: ["pripad"] }).filter(pocitaSe);
+export const pripady = (vse: Zaznam[], f: Filtr = {}) => vyber(vse, { ...f, druhy: ["pripad"] }).filter(pocitaSe);
 
 /** Aktualizace k případu (nové zjištění, atribuce, obvinění). */
-export const aktualizaceK = (slug: string, vse: Zaznam[] = incidenty()) =>
+export const aktualizaceK = (slug: string, vse: Zaznam[]) =>
   vse.filter((i) => druh(i) === "aktualizace" && i.navazujeNa === slug).sort((a, b) => kdyZjisteno(a).localeCompare(kdyZjisteno(b)));
 
 /** Rodič aktualizace. */
-export const pripadK = (i: Incident, vse: Zaznam[] = incidenty()) =>
+export const pripadK = (i: Incident, vse: Zaznam[]) =>
   i.navazujeNa ? vse.find((x) => x.slug === i.navazujeNa) ?? null : null;
 
 /**
  * Aktivní hrozby: případy z posledních 90 dnů, které nejsou vyvrácené.
  * Vyvrácené a nepotvrzené záznamy jsou dohledatelné jinde, tady nejsou nikdy.
  */
-export function aktivniHrozby(vse: Zaznam[] = incidenty(), ted = Date.now()) {
+export function aktivniHrozby(vse: Zaznam[], ted = Date.now()) {
   return pripady(vse, { dni: 90, ted });
 }
 
@@ -198,7 +197,7 @@ export function podleZemi(vse: Zaznam[]) {
  * Není to seznam nových událostí; je to odpověď na otázku „co se dozvědělo
  * o tom, co se stalo dřív“.
  */
-export function novaZjisteni(vse: Zaznam[] = incidenty(), pocet = 8): { zaznam: Zaznam; duvod: string }[] {
+export function novaZjisteni(vse: Zaznam[], pocet = 8): { zaznam: Zaznam; duvod: string }[] {
   const duvodK = (i: Zaznam): string | null => {
     const d = druh(i);
     if (d === "aktualizace") return "nové zjištění k případu";
@@ -217,7 +216,7 @@ export function novaZjisteni(vse: Zaznam[] = incidenty(), pocet = 8): { zaznam: 
     .slice(0, pocet);
 }
 
-export function posledniZmeny(pocet = 5, vse: Zaznam[] = incidenty(), ted = Date.now()): Zaznam[] {
+export function posledniZmeny(pocet = 5, vse: Zaznam[], ted = Date.now()): Zaznam[] {
   const dulezite = vyber(vse, { druhy: ["pripad", "aktualizace", "opatreni"], dni: 30, ted });
   const serazene = [...dulezite].sort((a, b) => kdyZjisteno(b).localeCompare(kdyZjisteno(a)));
   if (serazene.length >= pocet) return serazene.slice(0, pocet);
@@ -226,14 +225,13 @@ export function posledniZmeny(pocet = 5, vse: Zaznam[] = incidenty(), ted = Date
 }
 
 /** Vyvrácené a nepotvrzené — dohledatelné, nikdy v aktivních hrozbách. */
-export const neprosle = (): Nepotvrzene[] => nepotvrzene();
 
 /**
  * Jedinečné případy po měsících podle data zjištění. To je objem sledování,
  * ne závažnost — ta je zvlášť. Měsíce bez záznamu jsou 0 jen tam, kde
  * monitoring prokazatelně běžel (od 7/2026); dřív je hodnota null.
  */
-export function pripadyPoMesicich(vse: Zaznam[] = incidenty(), odMesice = "2014-01", plnePokrytiOd = "2026-07") {
+export function pripadyPoMesicich(vse: Zaznam[], odMesice = "2014-01", plnePokrytiOd = "2026-07") {
   const p = pripady(vse);
   const pocty = new Map<string, number>();
   for (const i of p) {

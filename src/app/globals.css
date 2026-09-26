@@ -668,3 +668,7 @@ input[type="range"] { accent-color: var(--color-akcent); }
 @keyframes pulz-kruh { 0% { transform: scale(1); opacity: 0.6; } 100% { transform: scale(2.4); opacity: 0; } }
 .pulz-kruh { animation: pulz-kruh 2.4s ease-out infinite; }
 @media (prefers-reduced-motion: reduce) { .pulz-kruh { animation: none; opacity: 0; } }
+
+/* Lišta souhlasu: v HTML vždy, vidět jen s <html data-souhlas="ptat"> (src/lib/souhlas-skript.ts). */
+.souhlas-lista { display: none; }
+html[data-souhlas="ptat"] .souhlas-lista { display: block; }

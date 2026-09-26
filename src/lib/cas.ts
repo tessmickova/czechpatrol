@@ -35,10 +35,18 @@ export function datumCasPraha(iso: string): string {
   return `${c.d}. ${c.m}. ${c.y} · ${String(c.h).padStart(2, "0")}:${String(c.mi).padStart(2, "0")}`;
 }
 
+/*
+  Formátovače se vytvářejí jednou (26. 9. 2026, výkon). Nový
+  Intl.DateTimeFormat pro každé datum stál při načtení úvodu na telefonu
+  přes 300 ms — datum má každý z desítek řádků.
+*/
+let formatCasti: Intl.DateTimeFormat | null = null;
+let formatHodin: Intl.DateTimeFormat | null = null;
+
 function casti(d: Date) {
-  const f = new Intl.DateTimeFormat("en-GB", {
+  const f = (formatCasti ??= new Intl.DateTimeFormat("en-GB", {
     timeZone: ZONA, hour12: false, year: "numeric", month: "numeric", day: "numeric", hour: "2-digit", minute: "2-digit",
-  });
+  }));
   const c: Record<string, string> = {};
   for (const p of f.formatToParts(d)) c[p.type] = p.value;
   return { y: +c.year, m: +c.month, d: +c.day, h: +c.hour % 24, mi: +c.minute };
@@ -112,7 +120,7 @@ export function stariSlovy(iso: string | null | undefined, ted = Date.now()): st
 export function casPraha(iso: string): string {
   const d = new Date(iso);
   if (Number.isNaN(d.getTime())) return "";
-  return new Intl.DateTimeFormat("cs-CZ", { timeZone: ZONA, hour12: false, hour: "2-digit", minute: "2-digit" }).format(d);
+  return (formatHodin ??= new Intl.DateTimeFormat("cs-CZ", { timeZone: ZONA, hour12: false, hour: "2-digit", minute: "2-digit" })).format(d);
 }
 
 /**

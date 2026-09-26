@@ -1,6 +1,5 @@
 import { ZDROJE } from "../../sber/zdroje";
 import type { RegistrZdroj } from "../../sber/typy";
-import { nato, pravniStav, provoz } from "./data";
 import type { NatoPolozka, Pokryti, PravniPolozka, ProvozniPolozka } from "./typy";
 
 /*
@@ -117,17 +116,8 @@ export function pokrytiPolozky(
   };
 }
 
-/** Celá kontrola pro stránku Zdroje. Pořadí je stejné jako na přehledu. */
-export function kontrolaPokryti(): PokrytiPolozky[] {
-  return [
-    ...pravniStav().polozky.map((p) => pokrytiPolozky(p, "Právní stav")),
-    ...nato().polozky.map((p) => pokrytiPolozky(p, "NATO")),
-    ...provoz().polozky.map((p) => pokrytiPolozky(p, "Běžný život")),
-  ];
-}
-
 /** Souhrn do jedné věty. Čísla, ne dojmy. */
-export function souhrnPokryti(radky = kontrolaPokryti()) {
+export function souhrnPokryti(radky: PokrytiPolozky[]) {
   const podle = (s: StupenPokryti) => radky.filter((r) => r.stupen === s).length;
   return {
     celkem: radky.length,

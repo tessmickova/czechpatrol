@@ -7,7 +7,7 @@ import { datumPraha } from "@/lib/cas";
 import { KATEGORIE, PORADI_KATEGORII } from "@/lib/kategorie";
 import { zaznamejUdalost } from "@/lib/mereni";
 import { JISTOTY, PASMA, tokeny, UROVNE } from "@/lib/skala";
-import type { DruhZaznamu, Kandidat, Kategorie, Nepotvrzene, Pasmo } from "@/lib/typy";
+import type { DruhZaznamu, Kandidat, Kategorie, Nepotvrzene, Oprava, Pasmo } from "@/lib/typy";
 import { ctiDotaz, sledujDotaz, zapisDotaz } from "@/lib/url-stav";
 import { DetailObsah, HlavickaDetailu } from "./detail-obsah";
 import { Ikona } from "./ikony";
@@ -184,7 +184,7 @@ type Radek =
   | { typ: "neproslo"; kdy: string; n: Nepotvrzene }
   | { typ: "kandidat"; kdy: string; k: Kandidat };
 
-export function UdalostiKlient({ zaznamy, neprosle, kandidati = [], nepotvrzene = [] }: { zaznamy: Zaznam[]; neprosle: Nepotvrzene[]; kandidati?: Kandidat[]; nepotvrzene?: Zaznam[] }) {
+export function UdalostiKlient({ zaznamy, neprosle, kandidati = [], nepotvrzene = [], opravy = [] }: { zaznamy: Zaznam[]; neprosle: Nepotvrzene[]; kandidati?: Kandidat[]; nepotvrzene?: Zaznam[]; opravy?: Oprava[] }) {
   const [f, zmen] = useFiltrVAdrese();
   const siroky = useSiroky();
   const [pokrocile, setPokrocile] = useState(false);
@@ -475,8 +475,8 @@ export function UdalostiKlient({ zaznamy, neprosle, kandidati = [], nepotvrzene 
               <Ikona nazev="krizek" velikost={16} tah={2} />
             </button>
           </div>
-          <HlavickaDetailu i={otevreny} />
-          <div className="mt-5"><DetailObsah i={otevreny} /></div>
+          <HlavickaDetailu i={otevreny} vse={zaznamy} />
+          <div className="mt-5"><DetailObsah i={otevreny} vse={zaznamy} opravy={opravy} /></div>
         </aside>
       )}
     </div>

@@ -15,6 +15,7 @@ import { pulz } from "@/lib/pulz";
 import { PruhVystrahy } from "@/components/vystraha";
 import { Znacka } from "@/components/znacka";
 import { SKRIPT_POHYBU } from "@/components/pohyb";
+import { SKRIPT_SOUHLASU } from "@/lib/souhlas-skript";
 import { WEB } from "@/config/web";
 import "./globals.css";
 
@@ -77,8 +78,16 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <head>
         {/* Volba pohybu se nastaví před vykreslením, ať nic neproblikne. */}
         <script dangerouslySetInnerHTML={{ __html: SKRIPT_POHYBU }} />
+        <script dangerouslySetInnerHTML={{ __html: SKRIPT_SOUHLASU }} />
       </head>
       <body className="min-h-dvh">
+        {/*
+          Lišta souhlasu hned na začátku těla (26. 9. 2026): je připnutá dole,
+          takže na pořadí v HTML vizuálně nezáleží — ale na konci dlouhé
+          stránky se vykreslila až po celém HTML a jako největší text na
+          obrazovce z ní byl pozdní LCP.
+        */}
+        <SouhlasAnalytika />
         {/*
           Pozadí, které se hýbe pomaleji než obsah. Je to jen ozdoba: leží pod
           vším, nedá se na ně kliknout a čtečka ho nevidí. Bez podpory
@@ -120,7 +129,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <ListaMobil />
         <RegistraceSW />
         <Mereni />
-        <SouhlasAnalytika />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{

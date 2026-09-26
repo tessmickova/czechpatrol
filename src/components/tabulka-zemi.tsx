@@ -1,7 +1,6 @@
 import Link from "next/link";
-import { podleZemi, pripady } from "@/lib/agregace";
-import { incidenty, tlakZeme } from "@/lib/data";
 import { PASMA, UROVNE } from "@/lib/skala";
+import type { Uroven } from "@/lib/typy";
 import { Vlajka } from "./zeme";
 import { Otaznik } from "./zaklad";
 
@@ -30,10 +29,14 @@ const SLOUPCE: { klic: string; nazev: string }[] = [
   { klic: "infrastruktura", nazev: "Infrastruktura" },
 ];
 
-export function TabulkaZemi({ maxZemi = 12 }: { maxZemi?: number }) {
-  const zeme = podleZemi(pripady(incidenty()))
-    .filter((z) => z.pripady > 0)
-    .slice(0, maxZemi);
+/*
+  Řádky počítá server (tabulka-zemi-data.ts) a sem jdou hotové (26. 9. 2026):
+  tabulka se vykresluje uvnitř klientské komponenty a dokud si data brala
+  sama, jel do prohlížeče celý datový modul webu.
+*/
+export interface RadekTabulkyZemi { kodZeme: string; zeme: string; pripady: number; podle: Record<string, Uroven | null> }
+
+export function TabulkaZemi({ zeme }: { zeme: RadekTabulkyZemi[] }) {
   if (!zeme.length) return null;
 
   return (
@@ -66,8 +69,6 @@ export function TabulkaZemi({ maxZemi = 12 }: { maxZemi?: number }) {
           </thead>
           <tbody className="divide-y divide-linka2">
             {zeme.map((z) => {
-              const tlak = tlakZeme(z.kodZeme);
-              const podle = new Map(tlak.podkategorie.map((o) => [o.klic, o.uroven]));
               return (
                 <tr key={z.kodZeme}>
                   <th scope="row" className="sticky left-0 z-10 bg-plocha px-4 py-2 text-left font-semibold text-inkoust">
@@ -78,7 +79,7 @@ export function TabulkaZemi({ maxZemi = 12 }: { maxZemi?: number }) {
                     </Link>
                   </th>
                   {SLOUPCE.map((s) => {
-                    const u = podle.get(s.klic) ?? null;
+                    const u = z.podle[s.klic] ?? null;
                     const t = u ? PASMA[UROVNE[u].pasmo] : null;
                     return (
                       <td key={s.klic} className="px-3 py-2">

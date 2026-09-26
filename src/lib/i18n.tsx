@@ -3,21 +3,6 @@
 import { createContext, useCallback, useContext, useMemo } from "react";
 import { usePathname } from "next/navigation";
 import { KODY_JAZYKU } from "./jazyky";
-import en from "../../data/preklady/ui/en.json";
-import de from "../../data/preklady/ui/de.json";
-import pl from "../../data/preklady/ui/pl.json";
-import sk from "../../data/preklady/ui/sk.json";
-import uk from "../../data/preklady/ui/uk.json";
-import lt from "../../data/preklady/ui/lt.json";
-import lv from "../../data/preklady/ui/lv.json";
-import et from "../../data/preklady/ui/et.json";
-import fi from "../../data/preklady/ui/fi.json";
-import sv from "../../data/preklady/ui/sv.json";
-import nb from "../../data/preklady/ui/nb.json";
-import da from "../../data/preklady/ui/da.json";
-import ro from "../../data/preklady/ui/ro.json";
-import bg from "../../data/preklady/ui/bg.json";
-import hu from "../../data/preklady/ui/hu.json";
 
 /*
   Překlad rozhraní.
@@ -41,12 +26,13 @@ import hu from "../../data/preklady/ui/hu.json";
 type Slovnik = Record<string, string>;
 
 /*
-  Statické importy, ne dynamická cesta: sestavení pak ví, co do buildu patří,
-  a chybějící soubor zastaví build místo toho, aby se projevil až na webu.
+  Slovníky cizích jazyků se nenačítají (26. 9. 2026). Web je od 24. 9.
+  jen česky (KODY_JAZYKU je prázdné), ale 15 slovníků (68 kB) dál jelo
+  v každé stránce do telefonu. t() vrací českou větu; soubory v
+  data/preklady/ui zůstávají pro případný návrat jazyků — pak se sem
+  vrátí statické importy.
 */
-const SLOVNIK: Record<string, Slovnik> = {
-  en, de, pl, sk, uk, lt, lv, et, fi, sv, nb, da, ro, bg, hu,
-};
+const SLOVNIK: Record<string, Slovnik> = {};
 
 export const VYCHOZI_JAZYK = "cs";
 

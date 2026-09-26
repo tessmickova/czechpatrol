@@ -1,11 +1,12 @@
 import { pripady } from "@/lib/agregace";
 import { celkovyStav, incidenty, kampane, kandidati, overovaneAktivni, posledniOvereni, tipy as vsechnyTipy, tlakCr, urovenObcanu } from "@/lib/data";
 import { odlehci } from "@/lib/odlehci";
-import { pripravitTed } from "@/lib/priprava";
+import { pripravitTed } from "@/lib/priprava-ted";
 import { pulz } from "@/lib/pulz";
 import { UROVNE } from "@/lib/skala";
 import type { Uroven } from "@/lib/typy";
 import { MiniBox } from "./mini-box";
+import { casyProPanel } from "@/lib/casy-panelu";
 import { SidebarUvodu } from "./sidebar-uvodu";
 import { TipyKPriprave } from "./tipy";
 
@@ -33,8 +34,7 @@ export function SidebarWebu() {
       obcane={urovenObcanu()}
       pulz={pulz()}
       priprava={pripravitTed()}
-      vse={vse}
-      kampane={kamp}
+      {...casyProPanel(vse, kamp)}
       kandidati={kandidati().filter((k) => k.naliehave || ted - new Date(k.publikovano ?? k.zachyceno).getTime() <= 72 * 3_600_000)}
       zkontrolovano={posledniOvereni()}
       overovane={overovaneAktivni()}

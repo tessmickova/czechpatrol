@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import { CLARITY_ID, POSTHOG_HOST, POSTHOG_KEY } from "@/config/web";
 
 /*
@@ -16,7 +16,7 @@ import { CLARITY_ID, POSTHOG_HOST, POSTHOG_KEY } from "@/config/web";
   Vlastní měření (komponenta Mereni) je jiná věc: bez cookies a bez
   identifikace, souhlas nepotřebuje.
 */
-const KLIC = "cp:analytika";
+import { KLIC_SOUHLASU as KLIC } from "@/lib/souhlas-skript";
 type Volba = "ano" | "ne" | null;
 
 function nactiVolbu(): Volba {
@@ -63,32 +63,36 @@ export function otevriNastaveniAnalytiky() {
   window.dispatchEvent(new Event("cp:analytika-nastaveni"));
 }
 
-export function SouhlasAnalytika() {
-  const [otevreno, setOtevreno] = useState(false);
+/*
+  Lišta je vždy v HTML; ukazuje ji atribut <html data-souhlas="ptat">, který
+  nastaví skript v <head> ještě před vykreslením (src/lib/souhlas-skript.ts).
+  React ji jen zavírá a znovu otevírá — nečeká se na něj.
+*/
+const otevri = (ano: boolean) => {
+  if (ano) document.documentElement.dataset.souhlas = "ptat";
+  else delete document.documentElement.dataset.souhlas;
+};
 
+export function SouhlasAnalytika() {
   useEffect(() => {
     if (location.pathname.startsWith("/sprava")) return;
     if (document.documentElement.dataset.nahled === "1") return;
-    const gpc = (navigator as Navigator & { globalPrivacyControl?: boolean }).globalPrivacyControl;
-    const v = nactiVolbu();
-    if (v === "ano") spustAnalytiku();
-    else if (v === null && !gpc) setOtevreno(true);
-    const znovu = () => setOtevreno(true);
+    if (nactiVolbu() === "ano") spustAnalytiku();
+    const znovu = () => otevri(true);
     window.addEventListener("cp:analytika-nastaveni", znovu);
     return () => window.removeEventListener("cp:analytika-nastaveni", znovu);
   }, []);
 
-  if (!otevreno) return null;
   const rozhodni = (v: "ano" | "ne") => {
     const predtim = nactiVolbu();
     ulozVolbu(v);
-    setOtevreno(false);
+    otevri(false);
     if (v === "ano") spustAnalytiku();
     // Odvolání souhlasu po spuštění: skripty už běží, čistý stav až po obnovení.
     else if (predtim === "ano") location.reload();
   };
   return (
-    <div role="dialog" aria-label="Souhlas s analytikou" className="fixed inset-x-0 bottom-[calc(60px+env(safe-area-inset-bottom))] z-[75] px-3 md:bottom-4">
+    <div role="dialog" aria-label="Souhlas s analytikou" className="souhlas-lista fixed inset-x-0 bottom-[calc(60px+env(safe-area-inset-bottom))] z-[75] px-3 md:bottom-4">
       <div className="mx-auto flex max-w-[680px] flex-wrap items-center gap-3 rounded-[18px] border border-linka bg-plocha px-4 py-3 shadow-[0_12px_40px_rgb(0_0_0/0.35)]">
         <p className="min-w-[16rem] flex-1 text-male leading-snug text-tlum">
           Smíme měřit, jak se web používá (Microsoft Clarity, PostHog)? Pomáhá nám to zlepšovat přehlednost. Ukládá to cookies; bez souhlasu nic z toho neběží. <a href="/soukromi/#analytika" className="odkaz">Podrobnosti</a>

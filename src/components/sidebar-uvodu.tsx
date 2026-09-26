@@ -2,11 +2,10 @@
 
 import Link from "next/link";
 import type { StavObcanu } from "@/lib/data";
-import { kdyZjisteno, type Zaznam } from "@/lib/agregace";
 import { NAZVY_HROZEB, type PripravitTed as DataPripravy } from "@/lib/priprava";
 import type { Pulz } from "@/lib/pulz";
 import { PASMA, UROVNE } from "@/lib/skala";
-import type { CelkovyStav, Kampan, Kandidat, Overovana, Uroven } from "@/lib/typy";
+import type { CelkovyStav, Kandidat, Overovana, Uroven } from "@/lib/typy";
 import { casPraha } from "@/lib/cas";
 import { useT } from "@/lib/i18n";
 import { BUY_ME_A_COFFEE_URL, HEROHERO_URL } from "@/config/web";
@@ -50,9 +49,9 @@ function Maly({ nadpis, obdobi, uroven, slovo, neutralni, popis, dodatek, graf }
   );
 }
 
-export function SidebarUvodu({ stav, cr, crHistoricky, crPocet, obcane, pulz, priprava, vse, kampane, kandidati, zkontrolovano, overovane = [], ted, tipy }: {
+export function SidebarUvodu({ stav, cr, crHistoricky, crPocet, obcane, pulz, priprava, casy, casyCz, kandidati, zkontrolovano, overovane = [], ted, tipy }: {
   stav: CelkovyStav; cr: Uroven | null; crHistoricky: Uroven | null; crPocet: { pripadu: number; kampani: number }; obcane: StavObcanu;
-  pulz?: Pulz; priprava?: DataPripravy; vse: Zaznam[]; kampane: Kampan[]; kandidati: Kandidat[]; zkontrolovano: string | null; overovane?: Overovana[]; ted: number; /** Box Tipy k přípravě — stojí před „AI radí“ (24. 9. 2026). */ tipy?: React.ReactNode;
+  pulz?: Pulz; priprava?: DataPripravy; casy: string[]; casyCz: string[]; kandidati: Kandidat[]; zkontrolovano: string | null; overovane?: Overovana[]; ted: number; /** Box Tipy k přípravě — stojí před „AI radí“ (24. 9. 2026). */ tipy?: React.ReactNode;
 }) {
   /* Naléhavé zprávy chytá sběr, tak se čerstvost měří jeho posledním průchodem, ne ručním ověřením. */
   const kontrola = pulz?.kdy ?? zkontrolovano;
@@ -60,8 +59,6 @@ export function SidebarUvodu({ stav, cr, crHistoricky, crPocet, obcane, pulz, pr
   const t = useT();
   const d = stav.uroven ? UROVNE[stav.uroven] : null;
   const pasmo = stav.uroven ? PASMA[UROVNE[stav.uroven].pasmo] : null;
-  const casy = [...vse.filter((z) => (z.druh ?? "pripad") === "pripad").map((z) => kdyZjisteno(z)), ...kampane.map((k) => k.odhaleno)];
-  const casyCz = [...vse.filter((z) => (z.druh ?? "pripad") === "pripad" && z.kodZeme === "CZ").map((z) => kdyZjisteno(z)), ...kampane.filter((k) => k.kodyZemi.includes("CZ")).map((k) => k.odhaleno)];
   const d90 = poDnech(casy, 90, ted);
   const d14 = d90.slice(-14);
   const soucet = (n: number) => d90.slice(-n).reduce((a, b) => a + b, 0);

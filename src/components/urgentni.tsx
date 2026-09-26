@@ -5,7 +5,7 @@ import { HODIN_DO_VYPADKU } from "./banner-stari-klient";
 import Link from "next/link";
 import { datumCasPraha, datumPraha } from "@/lib/cas";
 import { useZiveHodiny } from "@/lib/cas-klient";
-import { vystraha } from "@/lib/data";
+import { vystraha } from "@/lib/data-lehka";
 import type { Kandidat } from "@/lib/typy";
 import { Ikona } from "./ikony";
 import { Tlacitko } from "./ui";
