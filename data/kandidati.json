@@ -1,5 +1,72 @@
 [
   {
+    "id": "k-8c41fc0151064ec0",
+    "zachyceno": "2026-09-26T21:03:17.359Z",
+    "publikovano": null,
+    "zdroj": {
+      "nazev": "DR Nyheder (Dánsko)",
+      "url": "https://www.dr.dk/nyheder/kultur/rusland-har-bombet-over-13-millioner-boeger-til-aske-i-ukraine-paa-blot-maaneder",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Rusland har bombet over 13 millioner bøger til aske i Ukraine på blot to måneder",
+    "titulekPuvodni": "Rusland har bombet over 13 millioner bøger til aske i Ukraine på blot to måneder",
+    "shrnuti": "",
+    "kodZeme": "UA",
+    "zeme": "Ukrajina",
+    "kategorie": [
+      "sabotaz"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "bomb"
+    ],
+    "naliehave": null,
+    "stav": "ceka",
+    "vyrez": {
+      "text": "Rusland har bombet over 13 millioner bøger til aske i Ukraine på blot to måneder | Kultur | DR Gå til indhold\nNavigation\nDR's hovedindgange\nDR.DK DRTV DR LYD\nGå til forsiden\nSektionens indgange\nKultur\nMusik\nFILM & SERIER\nBØGER\nHISTORIE\nLog ind\nSektionens indgange\nKultur\nMusik\nFILM & SERIER\nBØGER\nHISTORIE\nKrigen i Ukraine\nSe tema\nRussiske droner ramte dette boglager i Kharkiv i august.\nLÆS OP\nORDBOG TEKST\nAf\nSilas Bay Nielsen\nI dag kl. 21:36\nUkraines bogbranche står over for et kollaps, efter russiske angreb i sensommeren har ødelagt flere lagre med bøger.\nSådan lyder det i mediet Fortune , der skriver, at over 13 millioner ukrainske bøger er blevet ødelagt på blot to måneder i løbet af sommeren. Det er sket under russiske bombeangreb.\nNew York Times skriver , at tallet ligger på 15 millioner, hvis man tæller de seneste måneder med. Ifølge Artem Bidenko, der er leder den ukrainske brancheforening for forlag, svarer det til halvdelen af den ukrainske bogproduktion på et helt år.\n- Det er en bevidst strategi for Rusland, fordi de ved, at vores kultur er det, der får os til at føle os modstandsdygtige. Det er, hvad der får os til at føle os som ejere af vores land, siger den ukrainske…",
+      "stazeno": "2026-09-26T21:03:19.161Z",
+      "stav": 200
+    }
+  },
+  {
+    "id": "k-092f3c5ed2339ed7",
+    "zachyceno": "2026-09-26T21:03:19.043Z",
+    "publikovano": "2026-09-26T19:57:00.000Z",
+    "zdroj": {
+      "nazev": "Ukrinform (anglicky)",
+      "url": "https://www.ukrinform.net/rubric-ato/4168409-drone-debris-falls-onto-preschool-grounds-in-kyiv.html",
+      "typ": "wire",
+      "primarni": false
+    },
+    "titulek": "Drone debris falls onto preschool grounds in Kyiv",
+    "titulekPuvodni": "Drone debris falls onto preschool grounds in Kyiv",
+    "shrnuti": "In Kyiv’s Svyatoshynskyi District, drone debris fell onto the grounds of a preschool.",
+    "kodZeme": "UA",
+    "zeme": "Ukrajina",
+    "kategorie": [
+      "drony"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "dron+fell",
+      "debris+dron",
+      "dron",
+      "drone"
+    ],
+    "naliehave": null,
+    "stav": "ceka",
+    "vyrez": {
+      "text": "Drone debris falls onto preschool grounds in Kyiv\n\r\nSubscription\nNewsletters\nPhotobank\nUkrinform - Ukrainian National News Agency\nFounded in 1918\nSunday, 27 September 2026, 00:03\nWar\nEconomy\nSports\nMore ☰\nContacts\nEng\nУкр\nEng\nEsp\nDeu\nعربي\nFra\n日本語\nPol\n&times;\nAll topics\nWar\nRecovery of Ukraine\nPolitics\nEconomy\nFact checks\nDefense\nSociety and Culture\nSports\nCrime\nAccidents and Emergencies\nAgency\nInformation on Agency\nOur Contacts\nSubscribtion Terms\nOur Services\nPrivacy policy and personal data protection\nAdditional\nPublications\nInterviews\nPhoto\nVideo\nLongreads\nReleases\nServices\nSubscription\nNewsletters\nPhotobank\n\r\n\r\n\r\nIn Kyiv&rsquo;s Svyatoshynskyi District, drone debris fell onto the grounds of a preschool.\nAccording to Ukrinform, Kyiv Mayor Vitali Klitschko reported this on Telegram .\n\r\n\r\n\r\n\r\n\r\n\r\n&ldquo;In the Svyatoshynsky District, debris fell onto the grounds of a preschool. No fire,&rdquo; the message reads.\n\r\n\r\n\r\n\r\n\r\n\r\nPreliminary reports indicate no damage.\n\r\n\r\n\r\n\r\n\r\n\r\nA short time later, the mayor added : &ldquo;In the Solomyanskyi district, a non-residential building was reportedly hit. There is smoke.&rdquo;\n\r\n\r\n\r\n\r\n\r\n\r\nRead also: Russian drone strikes office building in…",
+      "stazeno": "2026-09-26T21:03:19.374Z",
+      "stav": 200
+    }
+  },
+  {
     "id": "k-f569d7c381cddb54",
     "zachyceno": "2026-09-26T19:21:20.007Z",
     "publikovano": "2026-09-26T18:27:00.000Z",
@@ -12049,86 +12116,6 @@
     },
     "vyrizeni": {
       "kdy": "2026-09-19T19:10:07.226Z",
-      "duvod": "neudalost",
-      "patriK": null,
-      "poznamka": null
-    }
-  },
-  {
-    "id": "k-1737f095efdffe4f",
-    "zachyceno": "2026-09-19T08:00:22.477Z",
-    "publikovano": "2026-09-15T16:11:59.000Z",
-    "zdroj": {
-      "nazev": "Téma: krizove-vysilani (česky)",
-      "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxOWTZtVVJHNUwzTUN5emVkZjRKWU5QNFNxTWRzYzF5V1ljZHh5TExBcE9VSXYtMmc3Z1RIaFFTU05CYmpZbVJfMl93aHB4TmxybFA1R0hhRVhQZ0pmRGFMQVM2RURwdTE5S1pya1NMMks1Rld1bElSN09vemNITXNHdXBBcG53WXJ2MUFDdW9EMTVfQ2Rxc0VuNEV0c1JObjhLVi1sUkFwRnZ0NDZCRnJEUmZtWmVaTHhCSXBScUJOU3o1c3RPcWtr?oc=5",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Český rozhlas posiluje krizové vysílání. Spojí síly s hasiči, policií a záchranáři - mam.cz",
-    "titulekPuvodni": "Český rozhlas posiluje krizové vysílání. Spojí síly s hasiči, policií a záchranáři - mam.cz",
-    "shrnuti": "Český rozhlas posiluje krizové vysílání. Spojí síly s hasiči, policií a záchranáři mam.cz",
-    "kodZeme": "CZ",
-    "zeme": "Česko",
-    "kategorie": [
-      "cr"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "zeSite": null,
-    "shody": [
-      "krizove vysilani",
-      "cesky rozhlas",
-      "rozhlas"
-    ],
-    "naliehave": null,
-    "stav": "vyrizen",
-    "vyrez": {
-      "text": "Google News",
-      "stazeno": "2026-09-19T08:32:06.716Z",
-      "stav": 200
-    },
-    "vyrizeni": {
-      "kdy": "2026-09-19T19:10:07.226Z",
-      "duvod": "neudalost",
-      "patriK": null,
-      "poznamka": null
-    }
-  },
-  {
-    "id": "k-d8de71f85e08e810",
-    "zachyceno": "2026-09-15T19:02:55.127Z",
-    "publikovano": "2026-09-15T15:07:03.000Z",
-    "zdroj": {
-      "nazev": "Téma: sabotaz (anglicky)",
-      "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxQcjQyLW5NMURCUzdqai1pai02M0p6MkFEQXE1S3ExaDZ3dGRVeE02bXZacUJuNF9BYnA2TWUtR3R1WnhrRkxCVlM4bEJWNmNhWkpXQTdPQko5SW1ENzZ6VUhoT1hFQzFaTzE5T1FuRlhJSnBEM0phdzFWcmp5aHIwUlpmZEdsUDFQbmxzQm90RXBqZy05aWZJOWc4SXU?oc=5",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Russian spies ‘recruiting UK teenagers’ to carry out acts of violence and sabotage - The i Paper",
-    "titulekPuvodni": "Russian spies ‘recruiting UK teenagers’ to carry out acts of violence and sabotage - The i Paper",
-    "shrnuti": "Russian spies ‘recruiting UK teenagers’ to carry out acts of violence and sabotage The i Paper",
-    "kodZeme": "GB",
-    "zeme": "Spojené království",
-    "kategorie": [
-      "sabotaz",
-      "rusko"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "zeSite": null,
-    "shody": [
-      "sabotage",
-      "russia"
-    ],
-    "naliehave": null,
-    "stav": "vyrizen",
-    "vyrez": {
-      "text": "Google News",
-      "stazeno": "2026-09-15T19:02:55.284Z",
-      "stav": 200
-    },
-    "vyrizeni": {
-      "kdy": "2026-09-20T07:48:17.187Z",
       "duvod": "neudalost",
       "patriK": null,
       "poznamka": null

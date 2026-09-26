@@ -1,5 +1,977 @@
 [
   {
+    "id": "k-a6512feae289109b",
+    "zachyceno": "2026-09-26T21:03:18.412Z",
+    "publikovano": "2026-09-26T21:00:56.000Z",
+    "zdroj": {
+      "nazev": "NOS Nieuws (Nizozemsko)",
+      "url": "https://nos.nl/l/2632671",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Hoe Frankrijk lagere inkomens helpt aan een elektrische auto",
+    "shrnuti": "Met een steunplan voor tweedehands elektrische auto's wil Nederland elektrisch rijden toegankelijker maken. In Frankrijk bestaat al iets vergelijkbaars: mensen met een lager inkomen kunnen aanspraak maken op 'leasing social', een sociaal leaseplan voor elektrische auto's. Voor wie aan de voorwaarden",
+    "duvod": "bez-skutku",
+    "kategorie": [],
+    "posouzeni": null
+  },
+  {
+    "id": "k-72727e6d10b1d020",
+    "zachyceno": "2026-09-26T21:03:17.838Z",
+    "publikovano": "2026-09-26T20:56:22.000Z",
+    "zdroj": {
+      "nazev": "NZZ (Švýcarsko)",
+      "url": "https://www.nzz.ch/sport/nations-league-souveraener-auftakt-der-schweiz-gegen-nordmazedonien-ld.10025649",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Nations League: Souveräner Auftakt der Schweiz gegen Nordmazedonien",
+    "shrnuti": "Das Schweizer Nationalteam überzeugt beim ersten Auftritt nach der WM. In Nordmazedonien gewinnt die Mannschaft von Trainer Murat Yakin zum Auftakt der Nations League 3:0.",
+    "duvod": "bez-skutku",
+    "kategorie": [],
+    "posouzeni": null
+  },
+  {
+    "id": "k-20f4e9ff2f796232",
+    "zachyceno": "2026-09-26T21:03:17.346Z",
+    "publikovano": "2026-09-26T20:56:08.000Z",
+    "zdroj": {
+      "nazev": "Notes from Poland",
+      "url": "https://notesfrompoland.com/2026/09/26/russia-condemns-polish-citys-barbaric-removal-of-monument-of-gratitude-to-the-red-army/",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Russia condemns Polish city’s “barbaric” removal of Monument of Gratitude to the Red Army",
+    "shrnuti": "The fate of the monument has been subject to a long-running legal and political battle in Rzeszów.",
+    "duvod": "bez-skutku",
+    "kategorie": [
+      "rusko"
+    ],
+    "posouzeni": null
+  },
+  {
+    "id": "k-8545ed601b6045a9",
+    "zachyceno": "2026-09-26T21:03:17.658Z",
+    "publikovano": "2026-09-26T20:54:18.000Z",
+    "zdroj": {
+      "nazev": "ORF News (Rakousko)",
+      "url": "https://orf.at/stories/3443359/",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Mike-Leigh-Film gewinnt bei Filmfestival San Sebastian",
+    "shrnuti": "",
+    "duvod": "vylouceno-tematem",
+    "kategorie": [],
+    "posouzeni": null
+  },
+  {
+    "id": "k-b584e2f1f2860d41",
+    "zachyceno": "2026-09-26T21:03:18.085Z",
+    "publikovano": "2026-09-26T20:53:00.000Z",
+    "zdroj": {
+      "nazev": "Helsingin Sanomat (Finsko)",
+      "url": "https://www.hs.fi/suomi/art-2000012302587.html",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Poliisi | Poliisilla parhaillaan väkivalta­tehtävä Naantalin kylpylän alueella",
+    "shrnuti": "Poliisi kertoo tilanteesta lisää heti, kun se on mahdollista.",
+    "duvod": "bez-skutku",
+    "kategorie": [],
+    "posouzeni": null
+  },
+  {
+    "id": "k-2193b1f24c486821",
+    "zachyceno": "2026-09-26T21:03:18.772Z",
+    "publikovano": "2026-09-26T20:46:05.000Z",
+    "zdroj": {
+      "nazev": "Digi24 (Rumunsko)",
+      "url": "https://www.digi24.ro/stiri/externe/rusia/totul-arde-val-de-atacuri-aeriene-intre-rusia-si-ucraina-cel-putin-16-oameni-au-murit-avertisment-din-partea-onu-3966119",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "„Totul arde”. Val de atacuri aeriene între Rusia și Ucraina: cel puțin 16 oameni au murit. Avertisment din partea ONU",
+    "shrnuti": "Cel puțin 16 persoane au fost ucise în ultimele 24 de ore, pe fondul schimbului de lovituri mortale cu drone și rachete între Rusia și Ucraina, au declarat sâmbătă autoritățile din ambele țări, citate de France24. ONU a avertizat asupra creșterii numărului de victime civile, pe măsură ce Kievul și M",
+    "duvod": "bez-skutku",
+    "kategorie": [
+      "drony"
+    ],
+    "posouzeni": null
+  },
+  {
+    "id": "k-2bf16760949ad54d",
+    "zachyceno": "2026-09-26T21:03:17.084Z",
+    "publikovano": "2026-09-26T20:45:00.000Z",
+    "zdroj": {
+      "nazev": "ČTK — České noviny",
+      "url": "https://www.ceskenoviny.cz/zpravy/cesti-fotbaliste-v-premiere-pod-deniou-prohrali-s-chorvaty/2786040?utm_source=rss&utm_medium=feed",
+      "typ": "wire",
+      "primarni": false
+    },
+    "titulek": "Čeští fotbalisté v premiéře pod Deniou prohráli s Chorvaty",
+    "shrnuti": "Praha - Čeští fotbaloví reprezentanti v úvodním utkání nového ročníku Ligy národů prohráli s Chorvatskem 1:2 a nevyšla jim premiéra pod španělským trenérem Santim Deniou. Všechny branky padly v Edenu...",
+    "duvod": "vylouceno-tematem",
+    "kategorie": [],
+    "posouzeni": null
+  },
+  {
+    "id": "k-48e267303acef5d7",
+    "zachyceno": "2026-09-26T21:03:19.032Z",
+    "publikovano": "2026-09-26T20:44:52.000Z",
+    "zdroj": {
+      "nazev": "NewsMaker (Moldavsko)",
+      "url": "https://newsmaker.md/ru/sbornaya-moldovy-proigrala-slovakii-v-pervom-matche-ligi-naczii",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Сборная Молдовы проиграла Словакии в первом матче Лиги наций",
+    "shrnuti": "Сборная Молдовы 26 сентября проиграла на выезде сборной Словакии в первом матче нового розыгрыша Лиги наций УЕФА. Встреча прошла на стадионе «Татран» в Прешове и завершилась со счетом 2:0. Оба гола сборная Словакии забила в первом тайме. На 32-й минуте счет открыл Иван Шранц, а на 40-й минуте Ондрей",
+    "duvod": "bez-skutku",
+    "kategorie": [],
+    "posouzeni": null
+  },
+  {
+    "id": "k-4efba894a26509c2",
+    "zachyceno": "2026-09-26T21:03:18.773Z",
+    "publikovano": "2026-09-26T20:44:39.000Z",
+    "zdroj": {
+      "nazev": "Digi24 (Rumunsko)",
+      "url": "https://www.digi24.ro/stiri/sport/fotbal/irlanda-a-decis-sa-joace-meciul-cu-israel-dar-jucatorii-pregatesc-gesturi-simbolice-pentru-victimele-din-gaza-3966133",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Irlanda a decis să joace meciul cu Israel, dar jucătorii pregătesc gesturi simbolice pentru victimele din Gaza",
+    "shrnuti": "Jucătorii naţionalei Irlandei intenţionează să poarte banderole negre „în semn de omagiu pentru toate victimele conflictului din Gaza” la meciul de duminică, din Liga Naţiunilor, împotriva Israelului, care se va disputa în Ungaria, după ce s-a confirmat că partida va avea loc, relatează BBC.",
+    "duvod": "vylouceno-tematem",
+    "kategorie": [],
+    "posouzeni": null
+  },
+  {
+    "id": "k-afc583e39c820caa",
+    "zachyceno": "2026-09-26T21:03:18.754Z",
+    "publikovano": "2026-09-26T20:37:51.000Z",
+    "zdroj": {
+      "nazev": "El Mundo (Španělsko)",
+      "url": "https://www.elmundo.es/deportes/tenis/2026/09/26/6ab82cb1fdddff235b8b4573.html",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Alcaraz, un maestro en la Laver Cup: \"Hablo mucho y no sé si ayudo a mi compañero\"",
+    "shrnuti": "El murciano se ha convertido en una figura clave en el banquillo de Europa, pendiente de sus compañeros, analizando los partidos y repartiendo lecciones: \"Disfruto dando consejos\" Leer",
+    "duvod": "bez-skutku",
+    "kategorie": [],
+    "posouzeni": null
+  },
+  {
+    "id": "k-8f5a1ffdc2f3c4a7",
+    "zachyceno": "2026-09-26T21:03:17.916Z",
+    "publikovano": "2026-09-26T20:36:49.000Z",
+    "zdroj": {
+      "nazev": "Telex (Maďarsko)",
+      "url": "https://telex.hu/belfold/2026/09/26/gajdos-laszlo-allatvedelem-orokbefogadas-szabalyozasa-menhelyek",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Gajdos László: Az a cél, hogy minél több állat kerüljön jó és biztonságos otthonba",
+    "shrnuti": "A jelenlegi örökbefogadási rendszer felelős jelentkezők számára is gyakran teljesíthetetlen vagy aránytalan feltételeket szab, ez pedig azt jelzi, hogy valami rosszul működik – reagált a miniszter Kormos Anett standupos kritikus posztjára.",
+    "duvod": "bez-skutku",
+    "kategorie": [],
+    "posouzeni": null
+  },
+  {
+    "id": "k-045d0c22df29cca1",
+    "zachyceno": "2026-09-26T21:03:19.040Z",
+    "publikovano": "2026-09-26T20:34:00.000Z",
+    "zdroj": {
+      "nazev": "Ukrinform (anglicky)",
+      "url": "https://www.ukrinform.net/rubric-polytics/4168411-zelensky-russians-are-not-currently-preparing-to-end-war.html",
+      "typ": "wire",
+      "primarni": false
+    },
+    "titulek": "Zelensky: Russians are not currently preparing to end war",
+    "shrnuti": "In an evening video address, President Volodymyr Zelensky stated that the Russians are not currently preparing to end the war.",
+    "duvod": "bez-skutku",
+    "kategorie": [
+      "rusko"
+    ],
+    "posouzeni": null
+  },
+  {
+    "id": "k-7c8a49c79e12bd5e",
+    "zachyceno": "2026-09-26T21:03:17.889Z",
+    "publikovano": "2026-09-26T20:32:12.000Z",
+    "zdroj": {
+      "nazev": "TVN24 (Polsko)",
+      "url": "https://tvn24.pl/kultura-i-styl/51-fpff-w-gdyni-lista-laureatow-zlote-lwy-dla-filmu-przez-sciane-st9252681?source=rss",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "51. FPFF w Gdyni. Złote Lwy dla filmu \"Przez ścianę\"",
+    "shrnuti": "Zakończył się 51. Festiwal Polskich Filmów Fabularnych w Gdyni. Najważniejszą nagrodę Konkursu Głównego - Złote Lwy - otrzymał film \"Przez ścianę\" w reżyserii Macieja Sobieszczańskiego. Srebrne Lwy zdobył film \"Powiedz mi, co czujesz\" Łukasza Rondudy.",
+    "duvod": "vylouceno-tematem",
+    "kategorie": [],
+    "posouzeni": null
+  },
+  {
+    "id": "k-dca17f91b9250ce2",
+    "zachyceno": "2026-09-26T21:03:17.659Z",
+    "publikovano": "2026-09-26T20:28:44.000Z",
+    "zdroj": {
+      "nazev": "ORF News (Rakousko)",
+      "url": "https://orf.at/stories/3443357/",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Boeing meldet Softwarefehler bei 737 Max",
+    "shrnuti": "",
+    "duvod": "bez-skutku",
+    "kategorie": [],
+    "posouzeni": null
+  },
+  {
+    "id": "k-ab4c0cb9a607a290",
+    "zachyceno": "2026-09-26T21:03:17.503Z",
+    "publikovano": "2026-09-26T20:28:37.000Z",
+    "zdroj": {
+      "nazev": "France 24 (anglicky)",
+      "url": "https://www.france24.com/en/france/20260926-pope-leo-xiv-celebrates-open-air-mass-in-front-of-800-000-people-in-central-paris",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Pope Leo XIV celebrates open-air Mass in front of 800,000 people in central Paris",
+    "shrnuti": "More than 800,000 people filled the streets of central Paris to hear Pope Leo XIV say Mass on Saturday, according to Vatican estimates. The pontiff rounded out the second day of his four-day apostolic visit to France by praying at the Grotto of Massabielle in Lourdes, a renowned pilgrimage site for ",
+    "duvod": "bez-skutku",
+    "kategorie": [],
+    "posouzeni": null
+  },
+  {
+    "id": "k-bc5feb9d8353635d",
+    "zachyceno": "2026-09-26T21:03:16.949Z",
+    "publikovano": "2026-09-26T20:18:00.000Z",
+    "zdroj": {
+      "nazev": "Český rozhlas — domácí zprávy",
+      "url": "https://www.irozhlas.cz/zpravy-domov/23-vzorku-v-poradku-jeden-s-nadlimitnim-obsahem-olova-obce-u-odolene-vody-dal_2609262218_mst",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "23 vzorků v pořádku, jeden s nadlimitním obsahem olova. Obce u Odolene Vody dál nemají pitnou vodu",
+    "shrnuti": "Sobotní ranní rozbor vody z horního vodojemu v Odoleně Vodě obsahoval více než čtyřnásobek limitu pro obsah olova. Další dva pozdější odběry na stejném místě už limit splnily. Vodárny v sobotu provedly celkem 24 odběrů na několika místech vodovodní soustavy, 23 z nich limitu pro obsah olova vyhovělo",
+    "duvod": "bez-skutku",
+    "kategorie": [],
+    "posouzeni": null
+  },
+  {
+    "id": "k-7fd24e76224d0425",
+    "zachyceno": "2026-09-26T21:03:17.525Z",
+    "publikovano": "2026-09-26T20:15:56.000Z",
+    "zdroj": {
+      "nazev": "Euronews",
+      "url": "https://www.euronews.com/2026/09/26/pope-leo-arrives-in-lourdes-for-second-leg-of-france-visit-after-historic-paris-crowds",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Pope Leo arrives in Lourdes for Second Leg of France visit after historic Paris crowds",
+    "shrnuti": "Leo opened his pilgrimage in Lourdes with a prayer at the Grotto of the Apparitions, the site where Catholics believe the Virgin Mary appeared to Bernadette Soubirous in 1858 and one of the faith's most-visited shrines.",
+    "duvod": "bez-skutku",
+    "kategorie": [],
+    "posouzeni": null
+  },
+  {
+    "id": "k-c54c40f636330cdd",
+    "zachyceno": "2026-09-26T21:03:17.589Z",
+    "publikovano": "2026-09-26T20:13:30.000Z",
+    "zdroj": {
+      "nazev": "Tagesschau (Německo)",
+      "url": "https://www.tagesschau.de/tagesthemen/video-1656098.html",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Papst Leo XIV. feiert Messe in Paris",
+    "shrnuti": "Papst Leo XIV. feiert Messe in Paris",
+    "duvod": "bez-skutku",
+    "kategorie": [],
+    "posouzeni": null
+  },
+  {
+    "id": "k-b11b61bcf8f044ba",
+    "zachyceno": "2026-09-26T21:03:17.696Z",
+    "publikovano": "2026-09-26T20:12:39.000Z",
+    "zdroj": {
+      "nazev": "Der Standard (Rakousko)",
+      "url": "https://www.derstandard.at/story/3000000341508/eishockey-sieg-f252r-haie-niederlage-f252r-caps-in-ice-liga?ref=rss",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Sieg für Haie, Niederlage für Caps in Eishockeyliga",
+    "shrnuti": "Innsbruck schlug Fehervar 2:0, Caps unterlagen Mailand nach Fehlstart 2:6",
+    "duvod": "bez-skutku",
+    "kategorie": [],
+    "posouzeni": null
+  },
+  {
+    "id": "k-cf2c0bfb7046f017",
+    "zachyceno": "2026-09-26T21:03:17.588Z",
+    "publikovano": "2026-09-26T20:12:09.000Z",
+    "zdroj": {
+      "nazev": "Tagesschau (Německo)",
+      "url": "https://www.tagesschau.de/tagesthemen/video-1656102.html",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Schweizer Volksabstimmung über ein Verbot von Sanktionen gegen Russland",
+    "shrnuti": "Schweizer Volksabstimmung über ein Verbot von Sanktionen gegen Russland",
+    "duvod": "bez-skutku",
+    "kategorie": [],
+    "posouzeni": null
+  },
+  {
+    "id": "k-dd443d3d6afb0efe",
+    "zachyceno": "2026-09-26T21:03:19.022Z",
+    "publikovano": "2026-09-26T20:10:30.000Z",
+    "zdroj": {
+      "nazev": "G4Media (Rumunsko)",
+      "url": "https://www.g4media.ro/oana-gheorghiu-mesaj-dupa-desemnarea-la-ministerul-sanatatii-cele-mai-importante-lectii-despre-sistemul-de-sanatate-din-romania-le-am-invatat-pe-holurile-spitalelor.html",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Oana Gheorghiu, mesaj după desemnarea la Ministerul Sănătății: ”Cele mai importante lecții despre sistemul de sănătate din România le-am învățat pe holurile spitalelor”",
+    "shrnuti": "Vicepremierul Oana Gheorghiu a transmis un mesaj după desemnarea de către premierul desemnat Siegfried Mureșan pentru a prelua portofoliul Sănătății: ”Cele mai importante lecții despre sistemul de sănătate din România le-am învățat pe holurile spitalelor” își începe postarea pe Facebook Oana Gheorgh",
+    "duvod": "bez-skutku",
+    "kategorie": [],
+    "posouzeni": null
+  },
+  {
+    "id": "k-3540c0330362da91",
+    "zachyceno": "2026-09-26T21:03:17.587Z",
+    "publikovano": "2026-09-26T20:10:13.000Z",
+    "zdroj": {
+      "nazev": "Tagesschau (Německo)",
+      "url": "https://www.tagesschau.de/tagesthemen/video-1656096.html",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Demonstrationen in mehreren Städten gegen die Reformpläne der Bundesregierung",
+    "shrnuti": "Demonstrationen in mehreren Städten gegen die Reformpläne der Bundesregierung",
+    "duvod": "bez-skutku",
+    "kategorie": [],
+    "posouzeni": null
+  },
+  {
+    "id": "k-c5f3bfe802d35499",
+    "zachyceno": "2026-09-26T21:03:17.615Z",
+    "publikovano": "2026-09-26T20:10:07.000Z",
+    "zdroj": {
+      "nazev": "Tagesschau (Německo)",
+      "url": "https://www.tagesschau.de/tagesthemen/tt-12874.html",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "tagesthemen",
+    "shrnuti": "tagesthemen",
+    "duvod": "bez-skutku",
+    "kategorie": [],
+    "posouzeni": null
+  },
+  {
+    "id": "k-5975b726c04d23d9",
+    "zachyceno": "2026-09-26T21:03:17.586Z",
+    "publikovano": "2026-09-26T20:08:32.000Z",
+    "zdroj": {
+      "nazev": "Tagesschau (Německo)",
+      "url": "https://www.tagesschau.de/tagesthemen/video-1656100.html",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Johann Wadephul, Bundesaußenminister, über das Treffen mit Russlands Außenminister Lawrow",
+    "shrnuti": "Johann Wadephul, Bundesaußenminister, über das Treffen mit Russlands Außenminister Lawrow",
+    "duvod": "bez-skutku",
+    "kategorie": [],
+    "posouzeni": null
+  },
+  {
+    "id": "k-7f506e39874e40de",
+    "zachyceno": "2026-09-26T21:03:17.010Z",
+    "publikovano": "2026-09-26T20:05:00.000Z",
+    "zdroj": {
+      "nazev": "Novinky.cz",
+      "url": "https://www.novinky.cz/clanek/kultura-tv-streaming-prvni-dojmy-kamarad-varuje-aneb-jak-je-dulezite-mit-verejnopravni-media-40599509",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "První dojmy: Kamarád varuje aneb Jak je důležité mít veřejnoprávní média",
+    "shrnuti": "Příběh, ze kterého mrazí, a nejen rodiče. Příběh, který se stal a může se stát kdykoli znovu. Aby se podobné příběhy zneužívání dětí nestávaly, je třeba o nich mluvit, psát i točit filmy. Televizní seriál Kamarád z dílny České televize připomene, jak jednoduše se může stát to, o čem mnozí říkají, že",
+    "duvod": "vylouceno-tematem",
+    "kategorie": [],
+    "posouzeni": null
+  },
+  {
+    "id": "k-b95527af0e8668a9",
+    "zachyceno": "2026-09-26T21:03:17.085Z",
+    "publikovano": "2026-09-26T20:05:00.000Z",
+    "zdroj": {
+      "nazev": "ČTK — České noviny",
+      "url": "https://www.ceskenoviny.cz/zpravy/ranni-vzorek-vody-v-odolene-vode-prekrocil-limit-olova-dalsi-vyhovely-limitu/2879079?utm_source=rss&utm_medium=feed",
+      "typ": "wire",
+      "primarni": false
+    },
+    "titulek": "Ranní vzorek vody v Odoleně Vodě překročil limit olova, další vyhověly limitu",
+    "shrnuti": "Odolena Voda (u Prahy) - Dnešní ranní rozbor vody z horního vodojemu v Odoleně Vodě obsahoval více než čtyřnásobek limitu pro obsah olova. Další dva pozdější odběry na stejném místě už limit splnily....",
+    "duvod": "bez-skutku",
+    "kategorie": [],
+    "posouzeni": null
+  },
+  {
+    "id": "k-5a19e5dd7e1a1313",
+    "zachyceno": "2026-09-26T21:03:16.951Z",
+    "publikovano": "2026-09-26T20:04:00.000Z",
+    "zdroj": {
+      "nazev": "Český rozhlas — domácí zprávy",
+      "url": "https://www.irozhlas.cz/sport/ostatni-sporty/dve-zlate-medaile-na-zaver-evropskeho-sampionatu-novak-a-kneblova-ovladli-zavod_2609262204_rej",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Dvě zlaté medaile na závěr evropského šampionátu. Novák a Kneblová ovládli závod v kayakcrossu",
+    "shrnuti": "Mistrovství Evropy ve vodním slalomu v Ivree mělo v českém podání zlatou dvojtečku. Kayakcross vyhráli Tereza Kneblová a Matyáš Novák. Do finále se probojoval i obhájce titulu Jakub Krejčí, který skončil čtvrtý. Česká výprava v Itálii získala sedm medailí, z toho pět v individuálních závodech.",
+    "duvod": "bez-skutku",
+    "kategorie": [],
+    "posouzeni": null
+  },
+  {
+    "id": "k-fb45271d539309e7",
+    "zachyceno": "2026-09-26T21:03:17.059Z",
+    "publikovano": "2026-09-26T20:04:00.000Z",
+    "zdroj": {
+      "nazev": "iDNES.cz — zpravodajství",
+      "url": "https://www.idnes.cz/zpravy/domaci/ranni-vzorek-v-odolene-vode-prekrocil-limit-olova-ctyrnasobne.A260926_220337_domaci_air#utm_source=rss&utm_medium=feed&utm_campaign=zpravodaj&utm_content=main",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Voda v Odoleně Vodě zůstává nepitná, limit olova překročil čtyřnásobně",
+    "shrnuti": "Ranní rozbor vody z horního vodojemu v Odoleně Vodě prokázal více než čtyřnásobné překročení limitu olova, přestože následné odběry už vyhověly a z 24 dnešních testů limit nesplnil jen jeden, voda však nadále není pitná pro 12 obcí s asi 15 tisíci obyvateli.",
+    "duvod": "bez-skutku",
+    "kategorie": [],
+    "posouzeni": null
+  },
+  {
+    "id": "k-11ea550cb026cc88",
+    "zachyceno": "2026-09-26T21:03:17.009Z",
+    "publikovano": "2026-09-26T20:03:59.000Z",
+    "zdroj": {
+      "nazev": "Novinky.cz",
+      "url": "https://www.novinky.cz/clanek/domaci-voda-v-odolene-vode-stale-neni-pitna-40599718",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Vzorek vody v Odoleně Vodě ráno překročil limit čtyřikrát, v podezření je stará skládka",
+    "shrnuti": "Sobotní ranní vzorek z horního vodojemu v Odoleně Vodě obsahoval 41,1 mikrogramu olova na litr při limitu deset mikrogramů. Další dva odběry na stejném místě provedené během dne už vyhověly. Z celkem 24 sobotních vzorků překročil povolenou hodnotu jediný. Voda přesto zůstává nepitná. Podle vodáren m",
+    "duvod": "bez-skutku",
+    "kategorie": [],
+    "posouzeni": null
+  },
+  {
+    "id": "k-2a0718115bfbeccc",
+    "zachyceno": "2026-09-26T21:03:18.440Z",
+    "publikovano": "2026-09-26T20:03:15.000Z",
+    "zdroj": {
+      "nazev": "VRT NWS (Belgie)",
+      "url": "https://www.vrt.be/vrtnws/nl/2026/09/26/spanje-protesten-maricarmen-woningmarkt.rss.xml",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Opnieuw tienduizenden Spanjaarden op straat uit steun voor uitgezette Maricarmen (87), die gezicht is geworden van wooncrisis",
+    "shrnuti": "In Madrid en andere Spaanse steden zijn tienduizenden mensen op straat gekomen om te protesteren tegen uithuiszettingen en torenhoge huurprijzen. Aanleiding voor de demonstraties is de uitzetting van de 87-jarige Maricarmen Abascal, die voor veel Spanjaarden het gezicht van de wooncrisis is geworden",
+    "duvod": "bez-skutku",
+    "kategorie": [],
+    "posouzeni": null
+  },
+  {
+    "id": "k-208294cedf384e27",
+    "zachyceno": "2026-09-26T21:03:17.962Z",
+    "publikovano": "2026-09-26T20:02:21.000Z",
+    "zdroj": {
+      "nazev": "HVG (Maďarsko)",
+      "url": "https://hvg.hu/itthon/20260926_titokban-orban-viktor-is-orszagjarasba-kezdett",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Titokban Orbán Viktor is országjárásba kezdett",
+    "shrnuti": "De nem úgy.",
+    "duvod": "bez-skutku",
+    "kategorie": [],
+    "posouzeni": null
+  },
+  {
+    "id": "k-67e9fc54e6b0f864",
+    "zachyceno": "2026-09-26T21:03:17.584Z",
+    "publikovano": "2026-09-26T20:00:58.000Z",
+    "zdroj": {
+      "nazev": "Tagesschau (Německo)",
+      "url": "https://www.tagesschau.de/tagesthemen/video-1656084.html",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Die Meinung von Dirk Walsdorff, RBB, zur Entscheidung über den Olympia-Bewerber",
+    "shrnuti": "Die Meinung von Dirk Walsdorff, RBB, zur Entscheidung über den Olympia-Bewerber",
+    "duvod": "bez-skutku",
+    "kategorie": [],
+    "posouzeni": null
+  },
+  {
+    "id": "k-2f5901c1ed8ea791",
+    "zachyceno": "2026-09-26T21:03:18.801Z",
+    "publikovano": "2026-09-26T20:00:52.000Z",
+    "zdroj": {
+      "nazev": "Digi24 (Rumunsko)",
+      "url": "https://www.digi24.ro/stiri/actualitate/politica/traian-basescu-reactie-ironica-la-criticii-lui-siegfried-muresan-cum-sa-pui-un-premier-care-o-sa-inceapa-iar-cu-statul-de-drept-3965737",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Traian Băsescu, reacție ironică la criticii lui Siegfried Mureșan: „Cum să pui un premier care o să înceapă iar cu statul de drept?”",
+    "shrnuti": "Traian Băsescu a avut câteva ironii la adresa celor care l-au criticat pe Siegfried Mureșan. Înțepătură la adresa lui Marcel Ciolacu, pe contul său de Facebook fostul președinte a spus că un adevărat premier ar trebui „pe cât se poate să nu aibă diplomă de bac”, profilul european al lui Mureșan fiin",
+    "duvod": "bez-skutku",
+    "kategorie": [],
+    "posouzeni": null
+  },
+  {
+    "id": "k-3632a5abeb09c16d",
+    "zachyceno": "2026-09-26T21:03:17.455Z",
+    "publikovano": "2026-09-26T20:00:45.000Z",
+    "zdroj": {
+      "nazev": "The Guardian — World",
+      "url": "https://www.theguardian.com/australia-news/2026/sep/27/australia-private-colleges-discount-deregistered-management-diploma-visa-crackdown-immigration-ntwnfb",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Private colleges around Australia offering last-minute discounts for diploma allegedly ‘misused by shonks’",
+    "shrnuti": "Federal government to deregister graduate diploma of management in October over fears it was being used by ‘non-genuine’ students to remain in country Get our breaking news email , free app or daily news podcast Private colleges are offering discounts to rush students into a diploma the federal gove",
+    "duvod": "bez-skutku",
+    "kategorie": [],
+    "posouzeni": null
+  },
+  {
+    "id": "k-0ef0008192d6f008",
+    "zachyceno": "2026-09-26T21:03:17.457Z",
+    "publikovano": "2026-09-26T20:00:45.000Z",
+    "zdroj": {
+      "nazev": "The Guardian — World",
+      "url": "https://www.theguardian.com/australia-news/2026/sep/27/palestinian-careers-adviser-who-was-allegedly-told-to-stop-wearing-keffiyeh-at-sydney-school-sues-for-racial-discrimination-ntwnfb",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Palestinian careers adviser who was allegedly told to stop wearing keffiyeh at Sydney school sues for racial discrimination",
+    "shrnuti": "Wasim El-Haj alleges NSW government school ordered him to stop wearing symbolic garment as it ‘may cause discord’ Get our breaking news email , free app or daily news podcast A Palestinian careers adviser who was allegedly directed to stop wearing a keffiyeh at a Sydney government school because it ",
+    "duvod": "bez-skutku",
+    "kategorie": [],
+    "posouzeni": null
+  },
+  {
+    "id": "k-d606b6e7f18a9c8c",
+    "zachyceno": "2026-09-26T21:03:17.583Z",
+    "publikovano": "2026-09-26T19:59:30.000Z",
+    "zdroj": {
+      "nazev": "Tagesschau (Německo)",
+      "url": "https://www.tagesschau.de/tagesthemen/video-1656082.html",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Robert Kempe, SWR, über die deutsche Bewerbung für Olympia",
+    "shrnuti": "Robert Kempe, SWR, über die deutsche Bewerbung für Olympia",
+    "duvod": "bez-skutku",
+    "kategorie": [],
+    "posouzeni": null
+  },
+  {
+    "id": "k-368368d9e7fb6e40",
+    "zachyceno": "2026-09-26T21:03:17.690Z",
+    "publikovano": "2026-09-26T19:58:02.000Z",
+    "zdroj": {
+      "nazev": "Der Standard (Rakousko)",
+      "url": "https://www.derstandard.at/story/3000000341507/kuba-kritisiert-us-milit228randrohung-trump-deal-m246glich?ref=rss",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Kuba kritisiert US-Militärandrohung, Trump sieht Möglichkeit für Deal",
+    "shrnuti": "Außenminister Rodríguez sprach bei der UN-Generaldebatte über die dramatischen humanitären Folgen der US-Blockade. Trump glaubt eigenen Angaben nach an eine Einigung",
+    "duvod": "bez-skutku",
+    "kategorie": [],
+    "posouzeni": null
+  },
+  {
+    "id": "k-326c4d1bee7522d0",
+    "zachyceno": "2026-09-26T21:03:17.660Z",
+    "publikovano": "2026-09-26T19:58:00.000Z",
+    "zdroj": {
+      "nazev": "ORF News (Rakousko)",
+      "url": "https://orf.at/stories/3443356/",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Kuba kritisiert US-Druck und drohenden Militäreinsatz",
+    "shrnuti": "",
+    "duvod": "bez-skutku",
+    "kategorie": [],
+    "posouzeni": null
+  },
+  {
+    "id": "k-3e2a5049cee46a3c",
+    "zachyceno": "2026-09-26T21:03:17.582Z",
+    "publikovano": "2026-09-26T19:57:32.000Z",
+    "zdroj": {
+      "nazev": "Tagesschau (Německo)",
+      "url": "https://www.tagesschau.de/tagesthemen/video-1656080.html",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "München wird deutsche Bewerberstadt für die Olympischen Spiele",
+    "shrnuti": "München wird deutsche Bewerberstadt für die Olympischen Spiele",
+    "duvod": "bez-skutku",
+    "kategorie": [],
+    "posouzeni": null
+  },
+  {
+    "id": "k-0620f87b9749689b",
+    "zachyceno": "2026-09-26T21:03:19.024Z",
+    "publikovano": "2026-09-26T19:57:13.000Z",
+    "zdroj": {
+      "nazev": "G4Media (Rumunsko)",
+      "url": "https://www.g4media.ro/cum-au-supravietuit-in-razboi-locuitorii-dintr-un-mic-sat-pescaresc-din-vietnam-unul-dintre-cele-mai-bombardate-locuri-de-pe-planeta.html",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Cum au supraviețuit în război locuitorii dintr-un mic sat pescăresc din Vietnam, unul dintre cele mai bombardate locuri de pe planetă",
+    "shrnuti": "În timpul războiului din Vietnam, satul Vịnh Mốc a fost lovit de aproximativ 9.000 de tone de explozibili. Localnicii au construit însă un complex subteran ingenios, în care sute de oameni au supraviețuit ani întregi bombardamentelor, transmite CNN citat de Mediafax. Înainte de 1965, Vịnh Mốc era un",
+    "duvod": "bez-mista",
+    "kategorie": [
+      "sabotaz"
+    ],
+    "posouzeni": null
+  },
+  {
+    "id": "k-c138396f5a240563",
+    "zachyceno": "2026-09-26T21:03:17.963Z",
+    "publikovano": "2026-09-26T19:56:13.000Z",
+    "zdroj": {
+      "nazev": "HVG (Maďarsko)",
+      "url": "https://hvg.hu/sport/20260926_damir-redzic-magyar-valogatott-serules",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Megsérült a magyar válogatott támadója, kikerült a keretből",
+    "shrnuti": "Már el is hagyta az edzőtábort.",
+    "duvod": "bez-skutku",
+    "kategorie": [],
+    "posouzeni": null
+  },
+  {
+    "id": "k-a83c5e774ac1189b",
+    "zachyceno": "2026-09-26T21:03:17.490Z",
+    "publikovano": "2026-09-26T19:54:54.000Z",
+    "zdroj": {
+      "nazev": "The Guardian — World",
+      "url": "https://www.theguardian.com/us-news/2026/sep/26/chesley-sullenberger-national-aviation-hall-of-fame",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "‘Miracle on the Hudson’ pilot Chesly Sullenberger inducted into US Aviation Hall of Fame",
+    "shrnuti": "Sullenberger landed a disabled passenger plane safely in the Hudson River in 2009 without any loss of life Capt Chesley “Sully” Sullenberger III – the pilot known for safely landing a US Airways flight in New York City’s Hudson River during a 2009 emergency – has been inducted into the US’s National",
+    "duvod": "bez-skutku",
+    "kategorie": [],
+    "posouzeni": null
+  },
+  {
+    "id": "k-2b169e4e3bdf5e4c",
+    "zachyceno": "2026-09-26T21:03:17.839Z",
+    "publikovano": "2026-09-26T19:50:33.000Z",
+    "zdroj": {
+      "nazev": "NZZ (Švýcarsko)",
+      "url": "https://www.nzz.ch/feuilleton/mengele-in-kloten-quasi-unmoeglich-deutsche-experten-schuetteln-die-koepfe-ueber-schweizer-nazi-aufregung-ld.10024902",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "«Mengele in Kloten? Quasi unmöglich»: Deutsche Experten schütteln den Kopf über Schweizer Nazi-Aufregung",
+    "shrnuti": "Seit der hiesige Nachrichtendienst ein Dossier veröffentlicht hat, kennt der Trubel keine Grenzen. Zeit für eine Ernüchterung.",
+    "duvod": "bez-skutku",
+    "kategorie": [],
+    "posouzeni": null
+  },
+  {
+    "id": "k-87fd68272fb1e1d0",
+    "zachyceno": "2026-09-26T21:03:17.903Z",
+    "publikovano": "2026-09-26T19:50:16.000Z",
+    "zdroj": {
+      "nazev": "Rzeczpospolita (Polsko)",
+      "url": "https://moto.rp.pl/tu-i-teraz/art45195341-96-letni-sobieslaw-zasada-dojechal-do-mety-w-argentynie-59-lat-temu-wygral-ten-rajd",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "96-letni Sobiesław Zasada dojechał do mety w Argentynie. 59 lat temu wygrał ten rajd",
+    "shrnuti": "3351 km, sześć etapów i kilka dni za kierownicą Porsche 911 Dakar. Sobiesław Zasada w wieku 96 lat ukończył Gran Premio Argentino Histórico, wracając na drogi, na których w 1967 roku odniósł jedno z największych zwycięstw w historii polskiego motorsportu. Argentyńczycy nadal pamiętają „Latającego Po",
+    "duvod": "bez-skutku",
+    "kategorie": [],
+    "posouzeni": null
+  },
+  {
+    "id": "k-d729b0519885b0a3",
+    "zachyceno": "2026-09-26T21:03:17.890Z",
+    "publikovano": "2026-09-26T19:50:08.000Z",
+    "zdroj": {
+      "nazev": "TVN24 (Polsko)",
+      "url": "https://tvn24.pl/rzeszow/jaroslaw-apel-poszkodowanego-ksiedza-zlo-musimy-zwyciezyc-miloscia-i-przebaczeniem-st9256944?source=rss",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Apel poszkodowanego księdza. \"Zło musimy zwyciężyć miłością i przebaczeniem\"",
+    "shrnuti": "Kilkaset osób przemaszerowało w ciszy w Jarosławiu na Podkarpaciu, aby uczcić pamięć zabitego w czwartek księdza. - Zło, które się wydarzyło w naszym opactwie, musimy zwyciężyć miłością i przebaczeniem - powiedział ksiądz, który został ranny w ataku.",
+    "duvod": "bez-skutku",
+    "kategorie": [],
+    "posouzeni": null
+  },
+  {
+    "id": "k-30eafbee2247e011",
+    "zachyceno": "2026-09-26T21:03:18.296Z",
+    "publikovano": "2026-09-26T19:49:54.000Z",
+    "zdroj": {
+      "nazev": "NRK (Norsko)",
+      "url": "https://www.nrk.no/tromsogfinnmark/xl/idrettspsykolog-har-forska-pa-korfor-kvinnelege-fotballspelarar-gir-seg-1.18026485",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Fotballfantasien",
+    "shrnuti": "Kvinnelege fotballspelarar legg opp langt tidlegare enn menn. No er det forska på kva som kan vere grunnen – og kva som kan hindre det.",
+    "duvod": "vylouceno-tematem",
+    "kategorie": [
+      "zpravodajske"
+    ],
+    "posouzeni": null
+  },
+  {
+    "id": "k-9e6da717b0799d3f",
+    "zachyceno": "2026-09-26T21:03:17.841Z",
+    "publikovano": "2026-09-26T19:48:56.000Z",
+    "zdroj": {
+      "nazev": "NZZ (Švýcarsko)",
+      "url": "https://www.nzz.ch/wirtschaft/ruscafe-statt-nescafe-nestle-droht-in-russland-das-danone-drehbuch-ld.10025029",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Putins Günstlinge sprechen bereits in Nestlés Namen: Dem Schweizer Konzern droht in Russland das Danone-Drehbuch",
+    "shrnuti": "Durch die von Wladimir Putin angeordnete Zwangsverwaltung hat Nestlé die Kontrolle über ihre russische Tochtergesellschaft verloren. Nun soll der Bund helfen, in Moskau das Schlimmste zu verhindern.",
+    "duvod": "bez-skutku",
+    "kategorie": [],
+    "posouzeni": null
+  },
+  {
+    "id": "k-3521ebf8567aa81d",
+    "zachyceno": "2026-09-26T21:03:16.847Z",
+    "publikovano": "2026-09-26T19:48:22.000Z",
+    "zdroj": {
+      "nazev": "Presseportal — zprávy policie (Blaulicht)",
+      "url": "https://www.presseportal.de/blaulicht/pm/117686/6359615",
+      "typ": "wire",
+      "primarni": false
+    },
+    "titulek": "POL-PDLD: Schwerer Verkehrsunfall auf der B9, Höhe Rülzheim Nord, in Fahrtrichtung Karlsruhe",
+    "shrnuti": "B9 Rülzheim (ots) - In den frühen Abendstunden kam es gegen 18:50 Uhr auf der B9, Höhe Rülzheim Nord, in Fahrtrichtung Karlsruhe zu einem Verkehrsunfall mit einer schwerverletzten Person. Die B9 ist aufgrund der laufenden Unfallaufnahme derzeit ...",
+    "duvod": "bez-skutku",
+    "kategorie": [],
+    "posouzeni": null
+  },
+  {
+    "id": "k-565bd03c961ad68e",
+    "zachyceno": "2026-09-26T21:03:17.526Z",
+    "publikovano": "2026-09-26T19:48:15.000Z",
+    "zdroj": {
+      "nazev": "Euronews",
+      "url": "https://www.euronews.com/2026/09/26/azerbaijan-marks-its-remembrance-day-looking-forward-to-a-future-of-peace",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Azerbaijan marks its Remembrance Day looking forward to a future of peace",
+    "shrnuti": "Azerbaijan observes its annual Remembrance Day by honouring its soldiers fallen in 2020, but also building on six years of peace for post-war recovery, new opportunities and regional normalisation.",
+    "duvod": "bez-skutku",
+    "kategorie": [],
+    "posouzeni": null
+  },
+  {
+    "id": "k-b6875ab9b200331b",
+    "zachyceno": "2026-09-26T21:03:17.842Z",
+    "publikovano": "2026-09-26T19:48:05.000Z",
+    "zdroj": {
+      "nazev": "NZZ (Švýcarsko)",
+      "url": "https://www.nzz.ch/wirtschaft/jetzt-erfasst-die-ki-entlassungswelle-die-grosskonzerne-ld.10025077",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Der Fall Sunrise lässt aufhorchen: Erfasst die KI-Entlassungswelle die Grosskonzerne?",
+    "shrnuti": "Der Telekomkonzern macht tiefe Einschnitte. Experten befürchten, dass dieses Beispiel Schule mache, gerade bei Banken und Versicherungen.",
+    "duvod": "bez-skutku",
+    "kategorie": [],
+    "posouzeni": null
+  },
+  {
+    "id": "k-ed20a748ddfecffd",
+    "zachyceno": "2026-09-26T21:03:19.043Z",
+    "publikovano": "2026-09-26T19:48:00.000Z",
+    "zdroj": {
+      "nazev": "Ukrinform (anglicky)",
+      "url": "https://www.ukrinform.net/rubric-ato/4168414-russian-attacks-in-kyiv-injure-seven-people-over-course-of-day.html",
+      "typ": "wire",
+      "primarni": false
+    },
+    "titulek": "Russian attacks in Kyiv injure seven people over course of day",
+    "shrnuti": "In Kyiv, seven people have been injured since the start of the day as a result of Russian airstrikes.",
+    "duvod": "bez-skutku",
+    "kategorie": [
+      "rusko"
+    ],
+    "posouzeni": null
+  },
+  {
+    "id": "k-a1fc2472d7d06619",
+    "zachyceno": "2026-09-26T21:03:18.757Z",
+    "publikovano": "2026-09-26T19:47:41.000Z",
+    "zdroj": {
+      "nazev": "El Mundo (Španělsko)",
+      "url": "https://www.elmundo.es/cultura/cine/2026/09/26/6ab7e1dae9cf4adc618b4575.html",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Mike Leigh entrega una obra maestra a la Concha de Oro del Festival de San Sebastián",
+    "shrnuti": "El director británico, que ha declarado que \"probablemente\" deje el cine, acapara el palmarés con tres premios a Tender Loving Care, una delicada y furiosa a la vez reivindicación de la compasión, de los cuidados y de lo público. Javier Cámara logra el de mejor intérprete de reparto Leer",
+    "duvod": "bez-skutku",
+    "kategorie": [],
+    "posouzeni": null
+  },
+  {
+    "id": "k-e75234ba6cb2fd42",
+    "zachyceno": "2026-09-26T21:03:17.843Z",
+    "publikovano": "2026-09-26T19:47:20.000Z",
+    "zdroj": {
+      "nazev": "NZZ (Švýcarsko)",
+      "url": "https://www.nzz.ch/schweiz/2260-franken-fuer-einen-eingriff-von-10-minuten-die-neuen-arzttarife-heizen-die-kosten-an-und-belohnen-die-falschen-ld.10025454",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "2260 Franken für einen Eingriff von 10 Minuten: Die neuen Arzttarife heizen die Kosten an und belohnen die Falschen",
+    "shrnuti": "Der neue Arzttarif wird wohl den Kostendeckel sprengen. Auch weil die Spezialärzte damit mehr abrechnen als erwartet.",
+    "duvod": "bez-skutku",
+    "kategorie": [],
+    "posouzeni": null
+  },
+  {
+    "id": "k-5a04b351784dc0f2",
+    "zachyceno": "2026-09-26T21:03:16.848Z",
+    "publikovano": "2026-09-26T19:45:30.000Z",
+    "zdroj": {
+      "nazev": "Presseportal — zprávy policie (Blaulicht)",
+      "url": "https://www.presseportal.de/blaulicht/pm/171463/6359614",
+      "typ": "wire",
+      "primarni": false
+    },
+    "titulek": "FW Mainz: Größerer Einsatz der Feuerwehr und des Katastrophenschutzes in der Universitätsmedizin Mainz",
+    "shrnuti": "Mainz (ots) - Die Feuerwehr Mainz wurde um 16.50 Uhr am heutigen Samstagabend durch eine automatische Brandmeldeanlage zur Universitätsmedizin alarmiert. Durch einen technischen Defekt kam es zu einem Schmorbrand an einem Bauteil im Bereich der ...",
+    "duvod": "bez-skutku",
+    "kategorie": [],
+    "posouzeni": null
+  },
+  {
+    "id": "k-9ca06dd1ce0fa340",
+    "zachyceno": "2026-09-26T21:03:17.661Z",
+    "publikovano": "2026-09-26T19:45:05.000Z",
+    "zdroj": {
+      "nazev": "ORF News (Rakousko)",
+      "url": "https://orf.at/stories/3443354/",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Saudi-Arabien: Straße von Hormus muss gebührenfrei bleiben",
+    "shrnuti": "",
+    "duvod": "bez-skutku",
+    "kategorie": [],
+    "posouzeni": null
+  },
+  {
+    "id": "k-d23a9649df5a1272",
+    "zachyceno": "2026-09-26T21:03:17.844Z",
+    "publikovano": "2026-09-26T19:45:00.000Z",
+    "zdroj": {
+      "nazev": "NZZ (Švýcarsko)",
+      "url": "https://www.nzz.ch/wirtschaft/nach-der-schlappe-im-staenderat-das-ubs-lager-plant-einen-neuen-kompromiss-die-boerse-wettet-auf-einen-wegzug-ld.10025596",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Nach der Schlappe im Ständerat: Das UBS-Lager plant einen neuen Kompromiss – die Börse wettet auf einen Wegzug",
+    "shrnuti": "Bürgerliche Nationalräte nehmen einen weiteren Anlauf im Streit um das Eigenkapital. Sie kritisieren die «unverhältnismässigen Mehrkosten» für die Grossbank.",
+    "duvod": "bez-skutku",
+    "kategorie": [],
+    "posouzeni": null
+  },
+  {
+    "id": "k-25e6a19abc1080e8",
+    "zachyceno": "2026-09-26T21:03:17.845Z",
+    "publikovano": "2026-09-26T19:45:00.000Z",
+    "zdroj": {
+      "nazev": "NZZ (Švýcarsko)",
+      "url": "https://www.nzz.ch/schweiz/trotz-fix-preis-debakel-fliessen-milliarden-in-die-aufruestung-ist-der-naechste-flop-nur-eine-frage-der-zeit-ld.10025182",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Trotz Fixpreisdebakel fliessen Milliarden in die Aufrüstung: Ist der nächste Flop nur eine Frage der Zeit?",
+    "shrnuti": "Jene, die das Drama um den Kauf des F-35 aufgearbeitet haben, rechnen fest damit, dass das Verteidigungsdepartement bald wieder strauchelt. Und der ehemalige Chef der Finanzkontrolle bringt eine Strafuntersuchung ins Spiel.",
+    "duvod": "bez-skutku",
+    "kategorie": [],
+    "posouzeni": null
+  },
+  {
+    "id": "k-7b202f6269201160",
+    "zachyceno": "2026-09-26T21:03:18.774Z",
+    "publikovano": "2026-09-26T19:42:10.000Z",
+    "zdroj": {
+      "nazev": "Digi24 (Rumunsko)",
+      "url": "https://www.digi24.ro/stiri/externe/ue/alegeti-femei-respectabile-in-fuste-lungi-declaratiile-lui-antonio-tajani-au-ajuns-subiect-de-meme-uri-in-presa-internationala-3966083",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "„Alegeți femei respectabile în fuste lungi”. Declarațiile lui Antonio Tajani au ajuns subiect de meme-uri în presa internațională",
+    "shrnuti": "Ministrul italian de Externe, Antonio Tajani, a declanșat un val de reacții după ce a spus că, pentru căsătorie, ar prefera o femeie „serioasă” și „de încredere”, sugerând inclusiv criteriul fustei lungi. Opoziția a protestat în Parlament purtând fuste, sindicatele și reprezentanții Bisericii Catoli",
+    "duvod": "bez-skutku",
+    "kategorie": [],
+    "posouzeni": null
+  },
+  {
+    "id": "k-1245580c22828340",
+    "zachyceno": "2026-09-26T21:03:17.060Z",
+    "publikovano": "2026-09-26T19:36:00.000Z",
+    "zdroj": {
+      "nazev": "iDNES.cz — zpravodajství",
+      "url": "https://www.idnes.cz/zpravy/zahranicni/usa-donald-trump-air-force-one-letadlo-cnn-bily-dum.A260926_124836_zahranicni_kha#utm_source=rss&utm_medium=feed&utm_campaign=zpravodaj&utm_content=main",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Trump dál bojuje s novináři. Stanici CNN nepustí na palubu Air Force One",
+    "shrnuti": "Bílý dům nevpustí zpravodajskou televizi CNN na palubu prezidentského letounu Air Force One během sobotní cesty prezidenta Donalda Trumpa. Podle agentury AP naznačil další restrikce vůči části médií po zrušení některých akreditací do sídla prezidenta.",
+    "duvod": "bez-skutku",
+    "kategorie": [],
+    "posouzeni": null
+  },
+  {
+    "id": "k-b7e34ba1b43dd306",
+    "zachyceno": "2026-09-26T21:03:18.776Z",
+    "publikovano": "2026-09-26T19:35:17.000Z",
+    "zdroj": {
+      "nazev": "Digi24 (Rumunsko)",
+      "url": "https://www.digi24.ro/stiri/actualitate/evenimente/masina-in-flacari-pe-dn1-imagini-cu-soferul-care-cere-ajutor-dar-minute-in-sir-nu-opreste-nimeni-3966095",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Mașină în flăcări pe DN1. Imagini cu șoferul care cere ajutor, dar minute în șir nu oprește nimeni",
+    "shrnuti": "O mașină a fost cuprinsă de flăcări pe DN1, iar șoferul a tras pe dreapta și a încercat să stingă singur incendiul. Imaginile surprind momentul în care bărbatul le face semne celorlalți participanți la trafic și le cere ajutorul, însă mai multe mașini trec pe lângă el fără să oprească. În cele din u",
+    "duvod": "bez-skutku",
+    "kategorie": [],
+    "posouzeni": null
+  },
+  {
     "id": "k-6185f3e643326f77",
     "zachyceno": "2026-09-26T19:33:41.375Z",
     "publikovano": "2026-09-26T19:31:30.000Z",
@@ -15,6 +987,22 @@
     "kategorie": [
       "drony"
     ],
+    "posouzeni": null
+  },
+  {
+    "id": "k-88e7d96b73ad0882",
+    "zachyceno": "2026-09-26T21:03:17.869Z",
+    "publikovano": "2026-09-26T19:29:22.000Z",
+    "zdroj": {
+      "nazev": "Denník N (Slovensko)",
+      "url": "https://dennikn.sk/5570850/z-ruiny-nad-banskou-stiavnicou-urobili-miesto-pre-turistov-aj-umelcov-teraz-maju-obavy-o-buducnost/",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Z ruiny nad Banskou Štiavnicou urobili miesto pre turistov aj umelcov. Teraz majú obavy o budúcnosť",
+    "shrnuti": "Banská Štiavnica bude rozhodovať o tom, aká bude budúcnosť kultúrno-turistického centra Hájovňa. Kultúrno-turistické centrum v sedle Červená studňa nad Banskou Štiavnicou Hájovňa nie je taká všeobecne známa ako tamojšia Kalvária, napriek tomu si za takmer desať rokov vybudovala miesto na turisticko-",
+    "duvod": "bez-skutku",
+    "kategorie": [],
     "posouzeni": null
   },
   {
@@ -135,6 +1123,22 @@
     "posouzeni": null
   },
   {
+    "id": "k-bef714f4b81d36cc",
+    "zachyceno": "2026-09-26T21:03:18.297Z",
+    "publikovano": "2026-09-26T19:20:51.000Z",
+    "zdroj": {
+      "nazev": "NRK (Norsko)",
+      "url": "https://www.nrk.no/ostfold/elg-loper-pa-e6-1.18037684",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Elg løper på E6",
+    "shrnuti": "Politiet har mottatt melding om at en elg løper på E6 fra Halmstadkrysset i retning Sarpsborg. – Vi jobber med å sperre av E6 sånn at elgen slipper å bli påkjørt, forteller operasjonsleder Atle Vesttorp klokken 21.30. Elgen beveger seg for øyeblikket mellom Moss og Rygge.",
+    "duvod": "bez-skutku",
+    "kategorie": [],
+    "posouzeni": null
+  },
+  {
     "id": "k-ea1eaf71b7cf4a56",
     "zachyceno": "2026-09-26T19:33:39.245Z",
     "publikovano": "2026-09-26T19:20:49.000Z",
@@ -146,6 +1150,22 @@
     },
     "titulek": "tagesschau in 100 Sekunden",
     "shrnuti": "tagesschau in 100 Sekunden",
+    "duvod": "bez-skutku",
+    "kategorie": [],
+    "posouzeni": null
+  },
+  {
+    "id": "k-26c5727a4f4a8e3b",
+    "zachyceno": "2026-09-26T21:03:18.653Z",
+    "publikovano": "2026-09-26T19:18:00.000Z",
+    "zdroj": {
+      "nazev": "la Repubblica (Itálie)",
+      "url": "https://www.repubblica.it/esteri/2026/09/27/news/papa_leone_in_francia_alla_messa_in_piazza_a_parigi_tutti_aspiranti_presidenti-425609805/",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Papa Leone in Francia, alla messa in piazza a Parigi tutti (o quasi) gli aspiranti presidenti",
+    "shrnuti": "Macron assente in ossequio alla separazione tra Stato e Chiesa, i big della destra e del centro fanno a gara per mettersi in mostra",
     "duvod": "bez-skutku",
     "kategorie": [],
     "posouzeni": null
@@ -178,6 +1198,22 @@
     },
     "titulek": "Inspiradísima Puerta del Príncipe de Pablo Aguado, rey de la cadencia en Sevilla",
     "shrnuti": "El torero sevillano vuelve a conquistar la gloria de la Maestranza, siete años después de aquella esférica tarde de 2019, con un lote de Jandilla de ensueño Leer",
+    "duvod": "bez-skutku",
+    "kategorie": [],
+    "posouzeni": null
+  },
+  {
+    "id": "k-f3b258deebea6a37",
+    "zachyceno": "2026-09-26T21:03:16.850Z",
+    "publikovano": "2026-09-26T19:15:47.000Z",
+    "zdroj": {
+      "nazev": "Presseportal — zprávy policie (Blaulicht)",
+      "url": "https://www.presseportal.de/blaulicht/pm/120429/6359613",
+      "typ": "wire",
+      "primarni": false
+    },
+    "titulek": "FW Witten: Folgemeldung: Dachstuhlbrand in Witten",
+    "shrnuti": "Witten (ots) - Die Löschmaßnahmen am Heuweg dauern weiterhin an. Die Feuerwehr ist derzeit mit zwei Drehleitern, dem Teleskopmast der Feuerwehr Dortmund sowie zahlreichen weiteren Einsatzfahrzeugen vor Ort. Aufgrund der einsetzenden Dunkelheit ...",
     "duvod": "bez-skutku",
     "kategorie": [],
     "posouzeni": null
@@ -244,6 +1280,22 @@
     },
     "titulek": "Serghei Lavrov atacă Europa de la tribuna ONU: Rusia își va atinge obiectivele în Ucraina „indiferent de circumstanțe”",
     "shrnuti": "Ministrul rus de Externe, Serghei Lavrov, a acuzat sâmbătă Europa, de la tribuna Adunării Generale a ONU, că încearcă să împiedice negocierile de pace pentru Ucraina despre care susține că sunt dorite de administrația Trump. Șeful diplomației ruse a afirmat totodată că Moscova își va atinge obiectiv",
+    "duvod": "bez-skutku",
+    "kategorie": [],
+    "posouzeni": null
+  },
+  {
+    "id": "k-bc9d7d10dc29215a",
+    "zachyceno": "2026-09-26T21:03:17.905Z",
+    "publikovano": "2026-09-26T19:11:00.000Z",
+    "zdroj": {
+      "nazev": "Rzeczpospolita (Polsko)",
+      "url": "https://sport.rp.pl/zuzel/art45195301-bartosz-zmarzlik-zdetronizowany-robert-lambert-zwyciezca-grand-prix-2026",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Bartosz Zmarzlik zdetronizowany. Robert Lambert zwycięzcą Grand Prix 2026",
+    "shrnuti": "Robert Lambert wygrał finałową rundę Speedway Grand Prix w Toruniu i wywalczył złoty medal indywidualnych mistrzostw świata. Tytuł odebrał Bartoszowi Zmarzlikowi, który w końcowej klasyfikacji stracił do Brytyjczyka tylko dwa punkty.",
     "duvod": "bez-skutku",
     "kategorie": [],
     "posouzeni": null
@@ -509,6 +1561,22 @@
     "posouzeni": null
   },
   {
+    "id": "k-3f49ff8f1fd8ec99",
+    "zachyceno": "2026-09-26T21:03:18.497Z",
+    "publikovano": "2026-09-26T18:41:25.000Z",
+    "zdroj": {
+      "nazev": "Le Monde (Francie)",
+      "url": "https://www.lemonde.fr/sport/article/2026/09/26/triathlon-un-deuxieme-titre-mondial-pour-cassandre-beaugrand-deux-ans-apres-son-triomphe-a-paris-2024_6783509_3242.html",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Triathlon : un deuxième titre mondial pour Cassandre Beaugrand, deux ans après son triomphe à Paris 2024",
+    "shrnuti": "La triathlète française, médaillée d’or olympique aux Jeux olympiques de Paris, s’est adjugé son deuxième titre de championne du monde, samedi à Pontevedra (Espagne), à l’issue d’une dernière manche maîtrisée.",
+    "duvod": "bez-skutku",
+    "kategorie": [],
+    "posouzeni": null
+  },
+  {
     "id": "k-53363f8cb4200f8a",
     "zachyceno": "2026-09-26T19:21:16.930Z",
     "publikovano": "2026-09-26T18:41:00.000Z",
@@ -664,6 +1732,22 @@
     },
     "titulek": "Ruotsin vaalit | Vaalivilppi­epäily vaikeuttaa vasemmisto­hallituksen syntyä entisestään",
     "shrnuti": "Tapaus voi johtaa vielä uusintavaaliin Taalainmaalla.",
+    "duvod": "bez-skutku",
+    "kategorie": [],
+    "posouzeni": null
+  },
+  {
+    "id": "k-b856ff3431290778",
+    "zachyceno": "2026-09-26T21:03:18.498Z",
+    "publikovano": "2026-09-26T18:30:26.000Z",
+    "zdroj": {
+      "nazev": "Le Monde (Francie)",
+      "url": "https://www.lemonde.fr/sport/article/2026/09/26/kylian-mbappe-souffre-d-une-hyperextension-du-genou-gauche-apres-sa-blessure-lors-de-turquie-france_6783508_3242.html",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Kylian Mbappé souffre d’une « hyperextension du genou gauche » après sa blessure lors de Turquie-France",
+    "shrnuti": "Le capitaine français s’est blessé, vendredi, en inscrivant l’unique but de la victoire des Bleus face aux Turcs, et a regagné son club. Samedi, le Real Madrid a confirmé sa blessure, sans préciser la durée de l’absence de sa star.",
     "duvod": "bez-skutku",
     "kategorie": [],
     "posouzeni": null
@@ -1261,6 +2345,22 @@
     "posouzeni": null
   },
   {
+    "id": "k-10773deb710e97a6",
+    "zachyceno": "2026-09-26T21:03:19.026Z",
+    "publikovano": "2026-09-26T18:00:37.000Z",
+    "zdroj": {
+      "nazev": "G4Media (Rumunsko)",
+      "url": "https://www.g4media.ro/update-planul-rosu-dezactivat-in-judetul-sibiu-12-persoane-au-ajuns-la-spital-acuzand-simptome-de-toxiinfectie-alimentara-intr-un-salon-de-evenimente-din-avrig.html",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "UPDATE Planul Roșu, dezactivat în județul Sibiu: 12 persoane au ajuns la spital, acuzând simptome de toxiinfecție alimentară într-un salon de evenimente din Avrig",
+    "shrnuti": "Planul Roșu de Intervenție a fost activat, sâmbătă seară, în Sibiu, după ce mai multe persoane aflate la o sală de evenimente din orașul Avrig au acuzat simptome specifice unei posibile toxiinfecții alimentare, transmite Mediafax. UPDATE 22:12 Planul Roșu de Intervenție a fost dezactivat. Au fost ev",
+    "duvod": "bez-skutku",
+    "kategorie": [],
+    "posouzeni": null
+  },
+  {
     "id": "k-db59dc0e0d889d88",
     "zachyceno": "2026-09-26T18:03:26.631Z",
     "publikovano": "2026-09-26T18:00:37.000Z",
@@ -1438,6 +2538,22 @@
     "titulek": "Fotbalisté nastoupí při Deniově premiéře s dvěma nováčky",
     "shrnuti": "Praha - Nový trenér české fotbalové reprezentace Santi Denia nasadil do večerního úvodního utkání Ligy národů proti Chorvatsku dva nováčky, první start za národní A-mužstvo si při premiéře španělského...",
     "duvod": "vylouceno-tematem",
+    "kategorie": [],
+    "posouzeni": null
+  },
+  {
+    "id": "k-03364d400da3ef95",
+    "zachyceno": "2026-09-26T21:03:18.181Z",
+    "publikovano": "2026-09-26T17:55:43.000Z",
+    "zdroj": {
+      "nazev": "SVT Nyheter (Švédsko)",
+      "url": "https://www.svt.se/nyheter/lokalt/dalarna/drunkningslarm-fran-vikasjon-utanfor-falun",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Drunkningstillbud utanför Falun – man svårt skadad",
+    "shrnuti": "En person vårdas på sjukhus för svåra skador efter ett drunkningslarm från Vikavägen, vid norra Vikasjön. Ytterligare en person ska ha varit inblandad men är oskadd.",
+    "duvod": "bez-skutku",
     "kategorie": [],
     "posouzeni": null
   },
@@ -3155,6 +4271,22 @@
     "posouzeni": null
   },
   {
+    "id": "k-63eb463de6b63c9f",
+    "zachyceno": "2026-09-26T21:03:18.492Z",
+    "publikovano": "2026-09-26T16:28:19.000Z",
+    "zdroj": {
+      "nazev": "Le Monde (Francie)",
+      "url": "https://www.lemonde.fr/international/article/2026/09/26/une-puissante-tempete-s-abat-sur-le-nord-est-des-etats-unis-des-inondations-considerables-redoutees-par-les-autorites_6783308_3210.html",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Une puissante tempête s’abat sur le nord-est des Etats-Unis, des « inondations considérables » redoutées par les autorités",
+    "shrnuti": "Des centaines de vols annulés, des dizaines de milliers de foyers privés d’électricité et des vagues géantes attendues… La tempête pourrait entraîner de graves inondations côtières, selon les autorités.",
+    "duvod": "bez-skutku",
+    "kategorie": [],
+    "posouzeni": null
+  },
+  {
     "id": "k-bd61e9f5aa4c9be6",
     "zachyceno": "2026-09-26T16:32:49.477Z",
     "publikovano": "2026-09-26T16:28:01.000Z",
@@ -3949,6 +5081,22 @@
     },
     "titulek": "Traktoriáda na Přerovsku: převrátili se i s vlečkou, skončili v nemocnici",
     "shrnuti": "Nedaleko areálu v přerovské části Dluhonice, kde lidé sledovali populární závody traktorů, se v sobotu odpoledne převrátila vlečka traktoru. Zranilo se deset lidí. Skončili v nemocnici, všichni ale vyvázli jen s lehkými zraněními.",
+    "duvod": "bez-skutku",
+    "kategorie": [],
+    "posouzeni": null
+  },
+  {
+    "id": "k-48068275ff012468",
+    "zachyceno": "2026-09-26T21:03:18.656Z",
+    "publikovano": "2026-09-26T15:58:36.000Z",
+    "zdroj": {
+      "nazev": "la Repubblica (Itálie)",
+      "url": "https://bari.repubblica.it/cronaca/2026/09/26/news/e_morto_luca_turi_fotografo_vlora_bari_agenzia-425609432/",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Addio a Luca Turi, il fotografo della Vlora: “Il suo obiettivo ha attraversato decenni di storia”",
+    "shrnuti": "Con la sua agenzia fotografica ha documento i grandi eventi di Bari e della Puglia ma anche i grandi rivolgimenti e poi la rinascita dei Paesi dei Balcani. Aveva 82 anni",
     "duvod": "bez-skutku",
     "kategorie": [],
     "posouzeni": null
@@ -6042,6 +7190,22 @@
     "posouzeni": null
   },
   {
+    "id": "k-f59751718d7827d2",
+    "zachyceno": "2026-09-26T21:03:18.755Z",
+    "publikovano": "2026-09-26T14:43:39.000Z",
+    "zdroj": {
+      "nazev": "El Mundo (Španělsko)",
+      "url": "https://www.elmundo.es/internacional/2026/09/26/6ab7c589e4d4d8b43c8b4583.html",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "El Papa insta a 700.000 fieles en París a combatir la \"sequedad espiritual\"",
+    "shrnuti": "La ausencia de Macron y la presencia de Le Pen y Bardella dieron un contenido político a la liturgia Leer",
+    "duvod": "bez-skutku",
+    "kategorie": [],
+    "posouzeni": null
+  },
+  {
     "id": "k-71d9f1b518a97c1f",
     "zachyceno": "2026-09-26T15:03:20.757Z",
     "publikovano": "2026-09-26T14:43:22.000Z",
@@ -6975,1176 +8139,6 @@
     },
     "titulek": "München ist deutscher Kandidat für Olympische Sommerspiele",
     "shrnuti": "Die bayerische Landeshauptstadt setzte sich bei der Mitgliederversammlung des Deutschen Olympischen Sportbunds gegen Köln-Rhein-Ruhr durch. Ziel ist ein Event 2036, 2040 oder 2044",
-    "duvod": "bez-skutku",
-    "kategorie": [],
-    "posouzeni": null
-  },
-  {
-    "id": "k-1e8d554566ba6118",
-    "zachyceno": "2026-09-26T16:14:05.047Z",
-    "publikovano": "2026-09-26T14:17:55.000Z",
-    "zdroj": {
-      "nazev": "G4Media (Rumunsko)",
-      "url": "https://www.g4media.ro/sexul-dupa-50-de-ani-testarea-si-discutiile-cu-partenerul-sunt-esentiale-pentru-reducerea-riscurilor.html",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Sexul după 50 de ani: testarea și discuțiile cu partenerul sunt esențiale pentru reducerea riscurilor",
-    "shrnuti": "Viața sexuală nu se încheie odată cu înaintarea în vârstă, însă după 50 de ani există câteva aspecte legate de sănătatea sexuală care nu ar trebui ignorate. Riscul unei sarcini scade considerabil, iar după menopauză concepția naturală nu mai este posibilă, însă infecțiile cu transmitere sexuală rămâ",
-    "duvod": "bez-skutku",
-    "kategorie": [],
-    "posouzeni": null
-  },
-  {
-    "id": "k-b22809946bd07e46",
-    "zachyceno": "2026-09-26T15:03:18.852Z",
-    "publikovano": "2026-09-26T14:17:16.000Z",
-    "zdroj": {
-      "nazev": "Presseportal — zprávy policie (Blaulicht)",
-      "url": "https://www.presseportal.de/blaulicht/pm/117697/6359575",
-      "typ": "wire",
-      "primarni": false
-    },
-    "titulek": "POL-PDWIL: Gewässerverunreinigung durch eingeleitete Farbe",
-    "shrnuti": "Kirchweiler (ots) - Am heutigen Samstagmorgen, 26.09.2026, wurde der Polizei Daun durch einen Fußgänger mitgeteilt, dass größere Mengen an umweltschädlichen Stoffen in den \"Kirchweilerbach\" in Kirchweiler eingeleitet wurden. Nach ersten ...",
-    "duvod": "bez-skutku",
-    "kategorie": [],
-    "posouzeni": null
-  },
-  {
-    "id": "k-e1b059b29d8d323a",
-    "zachyceno": "2026-09-26T15:03:20.694Z",
-    "publikovano": "2026-09-26T14:17:07.000Z",
-    "zdroj": {
-      "nazev": "VRT NWS (Belgie)",
-      "url": "https://www.vrt.be/vrtnws/nl/2026/09/26/zulte-firtelbrug-volledig-december-oversteken.rss.xml",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "'Firtelbrug' over de Leie in Zulte is compleet, brug moet eind december open",
-    "shrnuti": "De nieuwe fiets- en voetgangersbrug over de Leie in Zulte is compleet. Een drijvende bok plaatste zaterdagochtend het laatste onderdeel van de zogenoemde Firtelbrug, een stalen constructie van 52,3 meter lang en ongeveer 100 ton zwaar. Nu volgt de afwerking. De brug zal ten vroegste eind december to",
-    "duvod": "bez-skutku",
-    "kategorie": [],
-    "posouzeni": null
-  },
-  {
-    "id": "k-d401bebc5c8f54b4",
-    "zachyceno": "2026-09-26T15:03:20.696Z",
-    "publikovano": "2026-09-26T14:16:58.000Z",
-    "zdroj": {
-      "nazev": "VRT NWS (Belgie)",
-      "url": "https://www.vrt.be/vrtnws/nl/2026/09/26/stepbestuurder-ernstig-gewond-na-val-in-beek-in-wolvertem.rss.xml",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Stepbestuurder ernstig gewond na val in beek in Wolvertem",
-    "shrnuti": "Een 34-jarige man uit Schaarbeek is zaterdagmiddag met zijn elektrische step in een beek beland langs de Van Hoorickweg in Wolvertem (Meise). \"De man kwam met zijn hoofd op een steen terecht en lag vervolgens enkele tientallen seconden met zijn aangezicht in het water\", zegt de politie.",
-    "duvod": "bez-skutku",
-    "kategorie": [],
-    "posouzeni": null
-  },
-  {
-    "id": "k-4536d92470c70772",
-    "zachyceno": "2026-09-26T15:03:21.094Z",
-    "publikovano": "2026-09-26T14:16:10.000Z",
-    "zdroj": {
-      "nazev": "Digi24 (Rumunsko)",
-      "url": "https://www.digi24.ro/digistoria/digistoria-cele-mai-importante-evenimente-petrecute-pe-26-septembrie-3-3965829",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Digistoria - cele mai importante evenimente petrecute pe 26 septembrie",
-    "shrnuti": "Digistoria - cele mai importante evenimente petrecute pe 26 septembrie",
-    "duvod": "bez-skutku",
-    "kategorie": [],
-    "posouzeni": null
-  },
-  {
-    "id": "k-c47aeb2d61973989",
-    "zachyceno": "2026-09-26T15:03:20.025Z",
-    "publikovano": "2026-09-26T14:15:24.000Z",
-    "zdroj": {
-      "nazev": "Rzeczpospolita (Polsko)",
-      "url": "https://www.rp.pl/polityka/art45194991-putin-zaproszony-na-szczyt-g20-palac-prezydencki-nam-sie-to-nie-podoba",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Putin zaproszony na szczyt G20. Pałac Prezydencki: Nam się to nie podoba",
-    "shrnuti": "Zaproszenie Władimira Putina na grudniowy szczyt G20 w USA wywołało burzę. Jak przekazał szef Biura Polityki Międzynarodowej Marcin Przydacz, Polska krytycznie ocenia tę decyzję, jednak prezydent Karol Nawrocki nie odwoła swojego wyjazdu do Miami. Obecność na tym forum pozostaje bowiem kluczowa z pu",
-    "duvod": "bez-skutku",
-    "kategorie": [
-      "zpravodajske"
-    ],
-    "posouzeni": null
-  },
-  {
-    "id": "k-31af5476641cbc2a",
-    "zachyceno": "2026-09-26T15:03:20.102Z",
-    "publikovano": "2026-09-26T14:14:26.000Z",
-    "zdroj": {
-      "nazev": "HVG (Maďarsko)",
-      "url": "https://hvg.hu/itthon/20260926_hun-ren-vezetok-valtas-vegkielegites",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Több tízmilliós végkielégítést kérhetnek a HUN-REN vezetői, nem tudnak megállapodni a kormánnyal",
-    "shrnuti": "Május óta húzódik a vezetőváltás a kutatóhálózat élén.",
-    "duvod": "bez-skutku",
-    "kategorie": [],
-    "posouzeni": null
-  },
-  {
-    "id": "k-7f239d82830cdfd6",
-    "zachyceno": "2026-09-26T15:03:18.854Z",
-    "publikovano": "2026-09-26T14:13:53.000Z",
-    "zdroj": {
-      "nazev": "Presseportal — zprávy policie (Blaulicht)",
-      "url": "https://www.presseportal.de/blaulicht/pm/117697/6359574",
-      "typ": "wire",
-      "primarni": false
-    },
-    "titulek": "POL-PDWIL: Diebstahl aus PKW",
-    "shrnuti": "Daun (ots) - Am heutigen Morgen, 26.09.2026, wurde gegen 09:35 Uhr bei einem PKW, welcher in Daun auf dem Parkplatz in der Friedhofstraße, nahe des dortigen Friedhofs, abgestellt war, die Beifahrerseite eingeschlagen. Anschließend griffen der oder ...",
-    "duvod": "bez-skutku",
-    "kategorie": [],
-    "posouzeni": null
-  },
-  {
-    "id": "k-12b4d92eb6eb760f",
-    "zachyceno": "2026-09-26T15:03:21.428Z",
-    "publikovano": "2026-09-26T14:11:48.000Z",
-    "zdroj": {
-      "nazev": "NewsMaker (Moldavsko)",
-      "url": "https://newsmaker.md/ru/live-premer-ministr-vasile-tofan-vystupaet-na-genassamblee-oon",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "(LIVE) Премьер-министр Василе Тофан выступает на Генассамблее ООН",
-    "shrnuti": "Премьер-министр Молдовы Василе Тофан 26 сентября выступает с речью на пленарном заседании Генеральной Ассамблеи ООН в Нью-Йорке. В этот же день на трибуне Генассамблеи ООН выступают представители Китая, Индии, Германии, России, Сингапура и ОАЭ. The post (LIVE) Премьер-министр Василе Тофан выступает ",
-    "duvod": "bez-skutku",
-    "kategorie": [],
-    "posouzeni": null
-  },
-  {
-    "id": "k-bd0ecf0c1e01e7b4",
-    "zachyceno": "2026-09-26T15:03:20.014Z",
-    "publikovano": "2026-09-26T14:11:34.000Z",
-    "zdroj": {
-      "nazev": "Aktuality.sk",
-      "url": "https://www.aktuality.sk/clanok/ZV5Qxhi/donald-trump-odmietol-iranske-primerie-po-volbach-podla-medii-ocakava-obnovenie-bombardovania-iranu/",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Donald Trump odmietol iránske prímerie, po voľbách podľa médií očakáva obnovenie bombardovania Iránu",
-    "shrnuti": "Wall Street Journal opisuje, ako Trump odmietol iránske prímerie a viaže mier na povolebný vývoj v USA. V hre je jadrový program aj bezpečnosť Hormuzu.",
-    "duvod": "bez-mista",
-    "kategorie": [
-      "sabotaz"
-    ],
-    "posouzeni": null
-  },
-  {
-    "id": "k-e2062c8cab22cb7d",
-    "zachyceno": "2026-09-26T15:03:19.607Z",
-    "publikovano": "2026-09-26T14:10:20.000Z",
-    "zdroj": {
-      "nazev": "Euronews",
-      "url": "https://www.euronews.com/2026/09/26/trump-reportedly-rejects-iranian-plan-to-reopen-strait-of-hormuz",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Trump reportedly rejects Iranian plan to reopen Strait of Hormuz",
-    "shrnuti": "\"If the necessary conditions are met, the strait can be reopened, and normal maritime traffic can resume within seven days,\" Iranian Foreign Minister Abbas Araghchi said on Friday.",
-    "duvod": "bez-skutku",
-    "kategorie": [],
-    "posouzeni": null
-  },
-  {
-    "id": "k-3a6da1155289f816",
-    "zachyceno": "2026-09-26T15:03:19.568Z",
-    "publikovano": "2026-09-26T14:10:05.000Z",
-    "zdroj": {
-      "nazev": "The Guardian — World",
-      "url": "https://www.theguardian.com/us-news/2026/sep/26/pennsylvania-measles-outbreak-spreads",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Pennsylvania measles outbreak spreads, with 55 new cases reported since Wednesday",
-    "shrnuti": "173 people hospitalized and four deaths in state so far, with less than 1% of those infected having been vaccinated The Pennsylvania department of health (DOH) announced on Friday that 55 new measles cases had been reported in the state since Wednesday, with officials continuing efforts to contain a",
-    "duvod": "bez-skutku",
-    "kategorie": [],
-    "posouzeni": null
-  },
-  {
-    "id": "k-44d25c4d5ef729ba",
-    "zachyceno": "2026-09-26T15:03:18.941Z",
-    "publikovano": "2026-09-26T14:10:00.000Z",
-    "zdroj": {
-      "nazev": "Český rozhlas — domácí zprávy",
-      "url": "https://www.irozhlas.cz/zpravy-svet/trasy-ktere-byly-nedavno-bezpecne-uz-dnes-nejsou-ustupujici-ledovce-meni-teren-v_2609261610_mst",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Trasy, které byly nedávno bezpečné, už dnes nejsou. Ustupující ledovce mění terén v Alpách",
-    "shrnuti": "Přes 2700 nehod zaznamenali letos v létě záchranáři v rakouských Alpách. To je zhruba o 400 víc, než bývá obvyklé. Vyplývá to z nové bilance rakouského Kuratoria pro bezpečnost v Alpách. Výrazně přibylo třeba pádů do ledovcových trhlin. Alpské spolky upozorňují, že svou roli hrají i rychle se měnící",
-    "duvod": "bez-skutku",
-    "kategorie": [],
-    "posouzeni": null
-  },
-  {
-    "id": "k-ad4a632d280832ac",
-    "zachyceno": "2026-09-26T19:21:18.252Z",
-    "publikovano": "2026-09-26T14:09:30.000Z",
-    "zdroj": {
-      "nazev": "TVN24 (Polsko)",
-      "url": "https://tvn24.pl/tvnmeteo/prognoza/pogoda-w-polsce-czeka-nas-prawdziwe-babie-lato-na-ile-stopni-mozemy-liczyc-st9256809?source=rss",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Czeka nas prawdziwe babie lato. Na ile stopni możemy liczyć",
-    "shrnuti": "W najbliższych dniach pogodę w Polsce będzie kształtować klin wyżu Arno. Z południowego zachodu do Europy napłynie ciepłe i suche powietrze pochodzenia zwrotnikowego, dzięki czemu w kolejnych dniach wartości na termometrach rzędu 20 stopni Celsjusza staną się normą - ale nie w każdej części kraju.",
-    "duvod": "bez-skutku",
-    "kategorie": [],
-    "posouzeni": null
-  },
-  {
-    "id": "k-a4eeb4628483cfa8",
-    "zachyceno": "2026-09-26T15:03:19.788Z",
-    "publikovano": "2026-09-26T14:09:17.000Z",
-    "zdroj": {
-      "nazev": "Der Standard (Rakousko)",
-      "url": "https://www.derstandard.at/story/3000000338322/wie-himmelsphaenomene-die-geschichte-der-menschheit-lenkten?ref=rss",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Wie Himmelsphänomene die Geschichte der Menschheit lenkten",
-    "shrnuti": "Astronomische Beobachtungen prägten Grabarchitekturen sowie Weltreligionen. Sie führten von komplexen Kalendersystemen bis zu ausgereiften Navigationswerkzeugen",
-    "duvod": "bez-skutku",
-    "kategorie": [],
-    "posouzeni": null
-  },
-  {
-    "id": "k-43727082906d1887",
-    "zachyceno": "2026-09-26T15:03:20.026Z",
-    "publikovano": "2026-09-26T14:08:41.000Z",
-    "zdroj": {
-      "nazev": "Rzeczpospolita (Polsko)",
-      "url": "https://www.rp.pl/przestepczosc/art45194911-notowany-w-niemczech-niepozadany-w-czechach-kim-jest-ihor-m-zabojca-z-jaroslawia",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Notowany w Niemczech, niepożądany w Czechach. Kim jest Ihor M., zabójca z Jarosławia",
-    "shrnuti": "Prześwietliliśmy losy Ukraińca, który w opactwie nożem zabił księdza, a innych poranił. Już wcześniej sprawiał kłopoty, przez które trafił do baz służb sąsiednich krajów",
-    "duvod": "bez-skutku",
-    "kategorie": [],
-    "posouzeni": null
-  },
-  {
-    "id": "k-24daa4d95eaad7ec",
-    "zachyceno": "2026-09-26T15:03:18.967Z",
-    "publikovano": "2026-09-26T14:08:12.000Z",
-    "zdroj": {
-      "nazev": "ČT24 — hlavní zprávy",
-      "url": "https://ct24.ceskatelevize.cz/clanek/svet/protestujici-v-madridu-kritizovali-vladu-kvuli-ceute-377984",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Protestující v Madridu kritizovali vládu kvůli Ceutě",
-    "shrnuti": "V Madridu protestovaly tisíce lidí proti vládnímu řešení červencového hromadného příchodu běženců do španělské exklávy Ceuta na severu Afriky. Levicový kabinet také demonstrující obviňovali z toho, že nechrání hranice, a požadovali předčasné parlamentní volby, napsala agentura AFP. Podle zástupce vl",
-    "duvod": "vylouceno-tematem",
-    "kategorie": [
-      "hranice"
-    ],
-    "posouzeni": null
-  },
-  {
-    "id": "k-f0c0ab18d6421e87",
-    "zachyceno": "2026-09-26T15:03:18.943Z",
-    "publikovano": "2026-09-26T14:06:00.000Z",
-    "zdroj": {
-      "nazev": "Český rozhlas — domácí zprávy",
-      "url": "https://www.irozhlas.cz/zpravy-domov/decin-nehoda-vykolejeni-nakladni-vlak-zeleznicni-koridor_2609261606_jkd",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "V Děčíně vykolejil vagon nákladního vlaku. Provoz na koridoru směrem k hranici se zastavil",
-    "shrnuti": "V Děčíně vykolejil v sobotu odpoledne jeden vagon nákladního vlaku. Provoz na železničním koridoru směrem na státní hranici se kvůli nehodě zastavil. Médiím to oznámil mluvčí Správy železnic David Kabele. Podle informací na webu Českých drah se nepodařilo zajistit náhradní autobusovou dopravu, ale p",
-    "duvod": "bez-skutku",
-    "kategorie": [
-      "infrastruktura"
-    ],
-    "posouzeni": null
-  },
-  {
-    "id": "k-e6caeb879bf4377f",
-    "zachyceno": "2026-09-26T15:03:20.260Z",
-    "publikovano": "2026-09-26T14:06:00.000Z",
-    "zdroj": {
-      "nazev": "Helsingin Sanomat (Finsko)",
-      "url": "https://www.hs.fi/popkulttuuri/art-2000012297677.html",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Televisioarvio | Huippu­matemaatikosta eko­terroristiksi muuttuneen Ted Kaczynskin tarina halutaan kertoa yhä uudelleen",
-    "shrnuti": "Netflixin draamaelokuvassa nuori Ted Kaczynski radikalisoituu.",
-    "duvod": "bez-skutku",
-    "kategorie": [],
-    "posouzeni": null
-  },
-  {
-    "id": "k-f5dd3995627cb739",
-    "zachyceno": "2026-09-26T15:03:20.940Z",
-    "publikovano": "2026-09-26T14:05:45.000Z",
-    "zdroj": {
-      "nazev": "la Repubblica (Itálie)",
-      "url": "https://www.repubblica.it/politica/2026/09/26/news/matilde_siracusano_fi_vannacci_foto_nuda_ia_intervista-425609252/",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Siracusano, sottosegretaria FI: \"Vannacci mi ha spogliata con l'IA. Che viltà, lo denuncio\"",
-    "shrnuti": "L’esponente di Forza Italia “senza parole” per il post dell’ex generale sulla campagna elettorale a Reggio. Tajani: \"Volgare e inaccettabile”",
-    "duvod": "bez-skutku",
-    "kategorie": [],
-    "posouzeni": null
-  },
-  {
-    "id": "k-005b4113b4762420",
-    "zachyceno": "2026-09-26T15:03:19.263Z",
-    "publikovano": "2026-09-26T14:05:00.000Z",
-    "zdroj": {
-      "nazev": "ERR News (Estonsko)",
-      "url": "https://news.err.ee/1610149246/eesti-ai-trainers-risk-pay-cuts-if-participant-feedback-falls-short",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Eesti.ai trainers risk pay cuts if participant feedback falls short",
-    "shrnuti": "A service provider teaching artificial intelligence under Eesti.ai may not receive the full fee agreed in the contract. The Government Office may pay only half the price or not pay it at all if participant feedback from the training falls below the required level or if too few participants provide f",
-    "duvod": "bez-skutku",
-    "kategorie": [],
-    "posouzeni": null
-  },
-  {
-    "id": "k-59f0aa8001f6e8d3",
-    "zachyceno": "2026-09-26T15:03:19.075Z",
-    "publikovano": "2026-09-26T14:04:00.000Z",
-    "zdroj": {
-      "nazev": "iDNES.cz — zpravodajství",
-      "url": "https://www.idnes.cz/zpravy/domaci/jak-by-cesko-zilo-bez-vody-zacne-to-zakazem-bazenu-skonci-vodou-na-pridel.A260907_125509_domaci_wall#utm_source=rss&utm_medium=feed&utm_campaign=zpravodaj&utm_content=main",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Jak by Česko žilo bez vody? Začne to zákazem bazénů, skončí vodou na příděl",
-    "shrnuti": "Dlouhodobá sucha a vysychající koryta řek ukazují, že voda přestává být v Česku samozřejmostí. Pro řešení nedostatku vody však existují přesně připravené scénáře: začínají omezeními pro průmysl a zemědělství a dopadnou i na domácnosti, naopak energetiku naruší jen částečně. Jaká omezení zemi čekají,",
-    "duvod": "bez-skutku",
-    "kategorie": [],
-    "posouzeni": null
-  },
-  {
-    "id": "k-47323b41c309080c",
-    "zachyceno": "2026-09-26T15:03:20.755Z",
-    "publikovano": "2026-09-26T14:03:55.000Z",
-    "zdroj": {
-      "nazev": "Le Monde (Francie)",
-      "url": "https://www.lemonde.fr/international/live/2026/09/26/en-direct-guerre-en-ukraine-si-les-russes-ont-choisi-de-rendre-leurs-frappes-encore-plus-brutales-le-monde-doit-choisir-des-reponses-plus-fortes-affirme-volodymyr-zelensky_6777944_3210.html",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "EN DIRECT, guerre en Ukraine : « Si les Russes ont choisi de rendre leurs frappes encore plus brutales, le monde doit choisir des réponses plus fortes », affirme Volodymyr Zelensky",
-    "shrnuti": "Le président ukrainien a demandé samedi à Antonio Costa, président du Conseil européen, et à Ursula von der Leyen, présidente de la Commission européenne, d’adopter de nouvelles sanctions européennes contre la Russie.",
-    "duvod": "bez-skutku",
-    "kategorie": [],
-    "posouzeni": null
-  },
-  {
-    "id": "k-b67502e7fc27f235",
-    "zachyceno": "2026-09-26T15:03:20.103Z",
-    "publikovano": "2026-09-26T14:03:00.000Z",
-    "zdroj": {
-      "nazev": "HVG (Maďarsko)",
-      "url": "https://hvg.hu/tudomany/20260926_onallosodo-gemini-feltores-ai",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Önállósította magát a Gemini, az AI feltörte három cég biztonsági rendszerét is",
-    "shrnuti": "A Google megerősítette, hogy mesterséges intelligenciája, a Gemini bizonyos fokig önállósította magát, és három valódi céget is feltört egy hónapokkal ezelőtti kiberbiztonsági teszt során. Anyagi kár ugyan nem keletkezett, az esetnek azonban komoly tanulságai lehetnek.",
-    "duvod": "bez-skutku",
-    "kategorie": [],
-    "posouzeni": null
-  },
-  {
-    "id": "k-4cda96f82b89f11a",
-    "zachyceno": "2026-09-26T15:03:21.461Z",
-    "publikovano": "2026-09-26T14:03:00.000Z",
-    "zdroj": {
-      "nazev": "Ukrainska Pravda (anglicky)",
-      "url": "https://www.pravda.com.ua/eng/news/2026/09/26/8055173/",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Russians kill woman and 17-year-old girl in Dnipropetrovsk Oblast, child among injured",
-    "shrnuti": "A Russian airstrike on Dnipropetrovsk Oblast's Synelnykove district has killed a 17-year-old girl and a 59-year-old woman, and injured two other people, including a child",
-    "duvod": "bez-skutku",
-    "kategorie": [
-      "rusko"
-    ],
-    "posouzeni": null
-  },
-  {
-    "id": "k-5bccebcd6a30f64c",
-    "zachyceno": "2026-09-26T19:21:18.253Z",
-    "publikovano": "2026-09-26T14:01:38.000Z",
-    "zdroj": {
-      "nazev": "TVN24 (Polsko)",
-      "url": "https://tvn24.pl/tvnwarszawa/okolice/piaseczno-trzy-centra-danych-w-jednej-gminie-ekspert-moga-konkurowac-o-wode-i-energie-st9251400?source=rss",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Trzy centra danych w jednej gminie? Ekspert: mogą konkurować o wodę i energię",
-    "shrnuti": "W podwarszawskim Piasecznie powstaje centrum danych. Kolejne dwa w pobliżu mają decyzje środowiskowe. Mieszkańcy obawiają się o wodę i hałas, a ekspert ostrzega przed innym problemem. Ogromne zapotrzebowanie serwerowni na prąd może w przyszłości wstrzymywać inne inwestycje.",
-    "duvod": "bez-skutku",
-    "kategorie": [],
-    "posouzeni": null
-  },
-  {
-    "id": "k-cd15da9eecf8b5f7",
-    "zachyceno": "2026-09-26T15:03:20.764Z",
-    "publikovano": "2026-09-26T14:01:29.000Z",
-    "zdroj": {
-      "nazev": "ANSA (Itálie, anglicky)",
-      "url": "https://www.ansa.it/english/news/news_from_embassies/2026/09/26/gin-italy-in-nairobi-jazz-and-tastings-to-promote-the-sistema-italia_29ed7b3a-515d-4ea7-a4c7-10e7ad7c47b2.html",
-      "typ": "wire",
-      "primarni": false
-    },
-    "titulek": "Gin Italy in Nairobi: Jazz and Tastings to Promote the “Sistema Italia”",
-    "shrnuti": "(ANSA) - NAIROBI, 26 SET - The Italian Ambassador to Kenya, Vincenzo Del Monaco, opened the event “Gin Italy – distilled notes from Italy” in Nairobi, an evening designed to combine culture, tastings, music, regional promotion, and economic relations to highlight the value of Italian gin and promote",
-    "duvod": "bez-skutku",
-    "kategorie": [],
-    "posouzeni": null
-  },
-  {
-    "id": "k-de0034cfa582eca0",
-    "zachyceno": "2026-09-26T15:03:20.697Z",
-    "publikovano": "2026-09-26T14:01:16.000Z",
-    "zdroj": {
-      "nazev": "VRT NWS (Belgie)",
-      "url": "https://www.vrt.be/vrtnws/nl/2026/09/26/ontbijt-nieuwkomers-herentals.rss.xml",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Herentals verwelkomt 150 nieuwe inwoners met ontbijt en wandeling: \"Iedereen is hier supervriendelijk\"",
-    "shrnuti": "Herentals heeft zijn nieuwe inwoners verwelkomd met een brunch in cultureel centrum 't Schaliken. Ongeveer 150 mensen die het afgelopen jaar naar de stad verhuisden, schreven zich in. Daarna volgde een historische wandeling door het centrum.",
-    "duvod": "bez-skutku",
-    "kategorie": [],
-    "posouzeni": null
-  },
-  {
-    "id": "k-43a517a245f1d66f",
-    "zachyceno": "2026-09-26T19:21:18.255Z",
-    "publikovano": "2026-09-26T14:01:02.000Z",
-    "zdroj": {
-      "nazev": "TVN24 (Polsko)",
-      "url": "https://tvn24.pl/lodz/radomsko-odmowili-mu-sprzedazy-alkoholu-wyciagnal-noz-st9256716?source=rss",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Odmówili mu sprzedaży alkoholu, wyciągnął nóż",
-    "shrnuti": "Po tym, jak odmówiono mu sprzedaży alkoholu, miał wyjść ze sklepu z nożem. Do policji wpłynęło zgłoszenie, że stwarza zagrożenie, dlatego został zatrzymany.",
-    "duvod": "bez-skutku",
-    "kategorie": [],
-    "posouzeni": null
-  },
-  {
-    "id": "k-c7e2ee6e8c68da2b",
-    "zachyceno": "2026-09-26T15:03:19.760Z",
-    "publikovano": "2026-09-26T14:00:39.000Z",
-    "zdroj": {
-      "nazev": "ORF News (Rakousko)",
-      "url": "https://orf.at/stories/3443320/",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Bauer für stärkere staatliche Aufsicht",
-    "shrnuti": "Integrationsministerin Claudia Bauer (ÖVP) spricht sich für eine stärkere staatliche Aufsicht über den konfessionellen Religionsunterricht aus. „Uns geht es darum, dass wir mehr Mitspracherecht haben und mehr Kontrolle darüber, was im Unterricht vermittelt wird und von wem das vermittelt wird“, sagt",
-    "duvod": "bez-skutku",
-    "kategorie": [],
-    "posouzeni": null
-  },
-  {
-    "id": "k-54d8939435265b11",
-    "zachyceno": "2026-09-26T15:03:19.041Z",
-    "publikovano": "2026-09-26T14:00:00.000Z",
-    "zdroj": {
-      "nazev": "Seznam Zprávy",
-      "url": "https://www.seznamzpravy.cz/clanek/zahranicni-stala-zelenskemu-po-boku-ted-ho-ma-za-diktatora-kyjev-na-ni-uvalil-sankce-316108",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Stála Zelenskému po boku, teď ho má za diktátora. Kyjev na ni uvalil sankce",
-    "shrnuti": "Zelenskyj si ji vybral z tisíců uchazečů a dva roky patřila k lidem v jeho bezprostředním okolí. Dnes o něm Julija Mendelová mluví jako o překážce míru a sama tvrdí, že dává hlas nevyslyšeným Ukrajincům.",
-    "duvod": "bez-skutku",
-    "kategorie": [],
-    "posouzeni": null
-  },
-  {
-    "id": "k-09b1f72d3ad4eb5b",
-    "zachyceno": "2026-09-26T15:03:19.798Z",
-    "publikovano": "2026-09-26T14:00:00.000Z",
-    "zdroj": {
-      "nazev": "Der Standard (Rakousko)",
-      "url": "https://www.derstandard.at/story/3000000340819/tempelhupfen-durch-himmel-und-hoelle?ref=rss",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Tempelhupfen durch Himmel und Hölle",
-    "shrnuti": "Mit dem Tempelhupfen erobern Spielende den öffentlichen Raum der Stadt, für die Kirche war das hüpfende Treiben über Jahrhunderte eher ein Ärgernis",
-    "duvod": "bez-skutku",
-    "kategorie": [],
-    "posouzeni": null
-  },
-  {
-    "id": "k-9b322e0feadab023",
-    "zachyceno": "2026-09-26T15:03:18.855Z",
-    "publikovano": "2026-09-26T13:59:43.000Z",
-    "zdroj": {
-      "nazev": "Presseportal — zprávy policie (Blaulicht)",
-      "url": "https://www.presseportal.de/blaulicht/pm/117709/6359573",
-      "typ": "wire",
-      "primarni": false
-    },
-    "titulek": "POL-PDNR: 38-jähriger Fahrzeugführer unter der Einwirkung harter Betäubungsmittel",
-    "shrnuti": "Altenkirchen (ots) - Am 26.09.2026 gegen 14:15 Uhr konnten Polizeibeamte der Polizeiinspektion Altenkirchen einen 38-Jährigen E-Scooter Fahrer anhalten und einer allgemeinen Verkehrskontrolle unterziehen. Während der Kontrolle konnten ...",
-    "duvod": "bez-skutku",
-    "kategorie": [],
-    "posouzeni": null
-  },
-  {
-    "id": "k-b2a266404fbc67df",
-    "zachyceno": "2026-09-26T15:03:19.017Z",
-    "publikovano": "2026-09-26T13:59:28.000Z",
-    "zdroj": {
-      "nazev": "Novinky.cz",
-      "url": "https://www.novinky.cz/clanek/domaci-foto-novy-usek-d35-lide-se-tam-prohaneli-na-kole-nebo-bruslich-40599699",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "FOTO: Otevřel se nový úsek D35. Lidé se tam proháněli na kole nebo bruslích",
-    "shrnuti": "Ředitelství silnic a dálnic umožnilo během soboty od 10 do 16 hodin, aby se lidé prošli či projeli po novém úseku dálnice D35 mezi Sadovou a Plotištěm nedaleko Hradce Králové. Úsek se bude podle plánu otevírat již tento rok, ale než bude vše hotové, tak si čerstvý asfalt vyzkoušeli lidé na kolech, b",
-    "duvod": "bez-skutku",
-    "kategorie": [],
-    "posouzeni": null
-  },
-  {
-    "id": "k-474b1338da4e248a",
-    "zachyceno": "2026-09-26T15:03:21.430Z",
-    "publikovano": "2026-09-26T13:58:20.000Z",
-    "zdroj": {
-      "nazev": "NewsMaker (Moldavsko)",
-      "url": "https://newsmaker.md/ru/gagauzskaia-narodnaya-partiya-vydvinula-ivana-kylchika-kandidatom-v-bashkany-avtonomii",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Гагаузская Народная партия выдвинула Ивана Кыльчика кандидатом в башканы автономии",
-    "shrnuti": "Гагаузская Народная партия выдвинула заместителя председателя формирования Ивана Кыльчика кандидатом на пост башкана Гагаузии. Об этом 26 сентября сообщил в соцсетях лидер партии Николай Дудогло. В партии назвали Кыльчика «народным кандидатом», охарактеризовав его как «простого, порядочного человека",
-    "duvod": "bez-skutku",
-    "kategorie": [],
-    "posouzeni": null
-  },
-  {
-    "id": "k-ed415a320182676d",
-    "zachyceno": "2026-09-26T19:21:18.257Z",
-    "publikovano": "2026-09-26T13:57:42.000Z",
-    "zdroj": {
-      "nazev": "TVN24 (Polsko)",
-      "url": "https://tvn24.pl/biznes/ze-swiata/poklosie-szczytu-absolutnie-nie-ostygnie-st9256205?source=rss",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Pokłosie szczytu. \"Absolutnie nie ostygnie\"",
-    "shrnuti": "Szczyt z udziałem przywódcy Chin Xi Jinpinga i prezydenta USA Donalda Trumpa nie rozwiązał strukturalnych problemów w relacjach tych krajów. Co więcej, ujawnił rozdźwięk w podejściu mocarstw do sztucznej inteligencji (AI) - uważa analityk Qiheng Chen.",
-    "duvod": "bez-skutku",
-    "kategorie": [],
-    "posouzeni": null
-  },
-  {
-    "id": "k-27032496dde6c823",
-    "zachyceno": "2026-09-26T15:03:20.942Z",
-    "publikovano": "2026-09-26T13:56:27.000Z",
-    "zdroj": {
-      "nazev": "la Repubblica (Itálie)",
-      "url": "https://www.repubblica.it/sport/formulauno/2026/09/26/news/f1_gp_baku_2026_vince_russell_ferrari_antonelli-425609244/",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Russell vince a Baku davanti a Verstappen. Antonelli da 16° a 5°, Ferrari giù dal podio",
-    "shrnuti": "Il pilota della Mercedes guida dal primo all’ultimo metro, il compagno di squadra leader del mondiale rimonta e limita i danni in classifica. Leclerc quarto, Hamilton sesto",
-    "duvod": "bez-skutku",
-    "kategorie": [],
-    "posouzeni": null
-  },
-  {
-    "id": "k-9786beba0a25661a",
-    "zachyceno": "2026-09-26T16:14:05.049Z",
-    "publikovano": "2026-09-26T13:55:34.000Z",
-    "zdroj": {
-      "nazev": "G4Media (Rumunsko)",
-      "url": "https://www.g4media.ro/mm6-maison-margiela-primavara-vara-2027-hainele-nu-mai-stau-acolo-unde-ar-trebui-si-s-ar-putea-sa-fie-urmatorul-mare-trend.html",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "MM6 Maison Margiela primăvară-vară 2027: Hainele nu mai stau acolo unde ar trebui / Și s-ar putea să fie următorul mare trend",
-    "shrnuti": "Un tricou devine fustă, o cămașă coboară pe corp până când nu mai știm exact dacă este top sau rochie, iar pantalonii își pierd funcția inițială. Pentru Spring/Summer 2027, MM6 Maison Margiela pornește de la hainele pe care le avem deja în garderobă și schimbă un singur lucru esențial: locul în care",
-    "duvod": "bez-skutku",
-    "kategorie": [],
-    "posouzeni": null
-  },
-  {
-    "id": "k-5af38a28dc61beb3",
-    "zachyceno": "2026-09-26T15:03:19.969Z",
-    "publikovano": "2026-09-26T13:54:21.000Z",
-    "zdroj": {
-      "nazev": "NZZ (Švýcarsko)",
-      "url": "https://www.nzz.ch/panorama/geraet-die-ki-ausser-kontrolle-die-wichtigsten-fragen-und-antworten-zur-debatte-um-die-sicherheit-der-kuenstlichen-intelligenz-ld.10023872",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "DIE NEUESTEN ENTWICKLUNGEN - Sicherheit von KI: USA und China richten Kommunikationskanal ein für KI-Notfälle – und nennen KI neu «Superintelligenz»",
-    "shrnuti": "Führende Köpfe grosser KI-Firmen wollen die Entwicklung der künstlichen Intelligenz bremsen. Worum geht es genau? Und wie ernst muss man ihre Bedenken nehmen?",
-    "duvod": "bez-skutku",
-    "kategorie": [],
-    "posouzeni": null
-  },
-  {
-    "id": "k-6b837ae2f13014df",
-    "zachyceno": "2026-09-26T15:03:19.993Z",
-    "publikovano": "2026-09-26T13:54:21.000Z",
-    "zdroj": {
-      "nazev": "SME (Slovensko)",
-      "url": "https://www.sme.sk/svet/c/princ-harry-tvrdi-ze-jeho-deti-su-v-novej-skole-stastne?utm_source=rss&utm_medium=feed&utm_campaign=www-rss",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Princ Harry tvrdí, že jeho deti sú v novej škole šťastné",
-    "shrnuti": "Do Británie sa vrátili minulý mesiac.",
-    "duvod": "bez-skutku",
-    "kategorie": [],
-    "posouzeni": null
-  },
-  {
-    "id": "k-53dba284d3ba6627",
-    "zachyceno": "2026-09-26T16:32:48.948Z",
-    "publikovano": "2026-09-26T13:54:08.000Z",
-    "zdroj": {
-      "nazev": "Tagesschau (Německo)",
-      "url": "https://www.tagesschau.de/inland/innenpolitik/sozialreformen-proteste-dgb-100.html",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Zehntausende protestieren in mehreren Städten gegen Sozialreformen",
-    "shrnuti": "Zehntausende Menschen haben gegen die Sozialpolitik der Bundesregierung protestiert. Dazu aufgerufen hatte der Deutsche Gewerkschaftsbund. Die Regierungspläne gingen zu Lasten der Arbeitnehmer, so DGB-Chefin Fahimi.",
-    "duvod": "bez-skutku",
-    "kategorie": [],
-    "posouzeni": null
-  },
-  {
-    "id": "k-550418a2ba1dfe24",
-    "zachyceno": "2026-09-26T15:03:20.698Z",
-    "publikovano": "2026-09-26T13:53:20.000Z",
-    "zdroj": {
-      "nazev": "VRT NWS (Belgie)",
-      "url": "https://www.vrt.be/vrtnws/nl/2026/09/26/woonproject-met-koffiebar-in-diest.rss.xml",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Bewoners met beperking baten mee koffiebar uit in woonproject in Diest",
-    "shrnuti": "Aan de Hasseltsestraat in Diest heeft Villa 84 de deuren geopend, een woonproject voor 14 personen met een beperking van zorgorganisatie Het Balanske in Tielt-Winge. In het huis is ook een koffiebar ingericht, waar de bewoners van Villa 84 mee kunnen helpen.",
-    "duvod": "bez-skutku",
-    "kategorie": [],
-    "posouzeni": null
-  },
-  {
-    "id": "k-22430b621ae79502",
-    "zachyceno": "2026-09-26T15:03:20.700Z",
-    "publikovano": "2026-09-26T13:53:06.000Z",
-    "zdroj": {
-      "nazev": "VRT NWS (Belgie)",
-      "url": "https://www.vrt.be/vrtnws/nl/2026/09/25/wat-als-je-partner-je-dagenlang-negeert.rss.xml",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "\"Het verandert uiteindelijk niets\": wat als je door je partner genegeerd wordt?",
-    "shrnuti": "\"Wanneer mijn ex-partner zijn zin niet kreeg, negeerde hij me soms 2 weken lang. Boodschappen gaf hij via de kinderen door.\" Zo getuigt een luisteraar in 'De Wereld van Sofie' op Radio 1. Over dat 'negeren' valt veel te zeggen. En belangrijker: \"Het verandert uiteindelijk niets\", zegt relatietherape",
-    "duvod": "bez-skutku",
-    "kategorie": [],
-    "posouzeni": null
-  },
-  {
-    "id": "k-71378e87274deb40",
-    "zachyceno": "2026-09-26T15:03:19.018Z",
-    "publikovano": "2026-09-26T13:51:16.000Z",
-    "zdroj": {
-      "nazev": "Novinky.cz",
-      "url": "https://www.novinky.cz/clanek/vtipy-pravda-o-macinkovi-a-pavlovi-v-new-yorku-jen-pro-otrle-40599698",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Pravda o Macinkovi a Pavlovi v New Yorku. Jen pro otrlé",
-    "shrnuti": "",
-    "duvod": "bez-skutku",
-    "kategorie": [],
-    "posouzeni": null
-  },
-  {
-    "id": "k-266677699a2f595f",
-    "zachyceno": "2026-09-26T15:03:18.856Z",
-    "publikovano": "2026-09-26T13:50:29.000Z",
-    "zdroj": {
-      "nazev": "Presseportal — zprávy policie (Blaulicht)",
-      "url": "https://www.presseportal.de/blaulicht/pm/138081/6359572",
-      "typ": "wire",
-      "primarni": false
-    },
-    "titulek": "PP Ravensburg: Meldung aus dem Landkreis Ravensburg",
-    "shrnuti": "Ravensburg (ots) - Schlier / Unterankenreute Pedelec-Fahrerin erleidet schwere Verletzungen Am Samstagmittag, um 12:05 Uhr kam es in Unterankenreute zu einem folgenschweren Verkehrsunfall. Nach bisherigen polizeilichen Erkenntnissen befuhr eine ...",
-    "duvod": "bez-skutku",
-    "kategorie": [],
-    "posouzeni": null
-  },
-  {
-    "id": "k-0f568de21a12481f",
-    "zachyceno": "2026-09-26T15:03:18.858Z",
-    "publikovano": "2026-09-26T13:49:34.000Z",
-    "zdroj": {
-      "nazev": "Presseportal — zprávy policie (Blaulicht)",
-      "url": "https://www.presseportal.de/blaulicht/pm/117710/6359571",
-      "typ": "wire",
-      "primarni": false
-    },
-    "titulek": "POL-PDMT: Verkehrsunfallflucht",
-    "shrnuti": "Höhr-Grenzhausen (ots) - Am Samstag, dem 26.09.2026, kam es auf dem Parkplatz der Westerwaldarkaden zu einer Verkehrsunfallflucht. Der Unfallverursacher streifte beim Ein-oder Ausparken, den parkenden Pkw des Geschädigten. Anschließend verließ ...",
-    "duvod": "bez-skutku",
-    "kategorie": [],
-    "posouzeni": null
-  },
-  {
-    "id": "k-5882f634828237e8",
-    "zachyceno": "2026-09-26T15:03:20.702Z",
-    "publikovano": "2026-09-26T13:49:19.000Z",
-    "zdroj": {
-      "nazev": "VRT NWS (Belgie)",
-      "url": "https://www.vrt.be/vrtnws/nl/2026/09/26/internationale-artiesten-showcase-bloemstukken-in-alden-biesen.rss.xml",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Féerie Florale in Alden Biesen toont bloemstukken van floristen uit binnen- en buitenland: \"Een beetje magisch\"",
-    "shrnuti": "Liefhebbers van bloemen kunnen dit weekend terecht in Alden Biesen. Daar worden verschillende bloemstukken getoond van floristen uit binnen- en buitenland. Er zijn ook verschillende workshops, demonstraties en het BK bloemschikken voor junioren.",
-    "duvod": "bez-skutku",
-    "kategorie": [],
-    "posouzeni": null
-  },
-  {
-    "id": "k-16c8b1a4c7c284a8",
-    "zachyceno": "2026-09-26T15:03:21.097Z",
-    "publikovano": "2026-09-26T13:48:58.000Z",
-    "zdroj": {
-      "nazev": "Digi24 (Rumunsko)",
-      "url": "https://www.digi24.ro/stiri/externe/rusia/suntem-carne-de-tun-cum-ajung-latino-americanii-recrutati-de-rusia-pe-frontul-din-ucraina-comandantii-stiu-ca-te-trimit-la-moarte-3965777",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "„Suntem carne de tun”. Cum ajung latino-americanii recrutați de Rusia pe frontul din Ucraina: „Comandanții știu că te trimit la moarte”",
-    "shrnuti": "Rusia își extinde recrutarea de militari străini în America Latină, iar mărturiile unor recruți și ale familiilor acestora arată cum promisiunile unor câștiguri mari se pot transforma într-un drum către frontul din Ucraina. Un peruan care a fost rănit într-un asalt și a reușit să fugă dintr-un spita",
-    "duvod": "bez-skutku",
-    "kategorie": [],
-    "posouzeni": null
-  },
-  {
-    "id": "k-b42788dfe1f40221",
-    "zachyceno": "2026-09-26T15:03:20.015Z",
-    "publikovano": "2026-09-26T13:47:43.000Z",
-    "zdroj": {
-      "nazev": "Aktuality.sk",
-      "url": "https://www.aktuality.sk/clanok/XGi5zfE/polsky-prezident-potvrdil-ucast-na-summite-g20-v-miami-napriek-napatiu-kvoli-pozvanke-pre-putina/",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Poľský prezident potvrdil účasť na summite G20 v Miami, napriek napätiu kvôli pozvánke pre Putina",
-    "shrnuti": "Poľsko nesúhlasí s tým, že Donald Trump pozval Vladimira Putina na summit G20 v Miami. Prezident Karol Nawrocki napriek tomu príde a bude presadzovať izoláciu Ruska.",
-    "duvod": "bez-skutku",
-    "kategorie": [
-      "rusko"
-    ],
-    "posouzeni": null
-  },
-  {
-    "id": "k-726c92606fbafe40",
-    "zachyceno": "2026-09-26T15:03:19.077Z",
-    "publikovano": "2026-09-26T13:47:00.000Z",
-    "zdroj": {
-      "nazev": "iDNES.cz — zpravodajství",
-      "url": "https://www.idnes.cz/zpravy/zahranicni/guatemala-prehistoricka-ryba-kostlin-tropicky-zachrana.A260926_140155_zahranicni_kha#utm_source=rss&utm_medium=feed&utm_campaign=zpravodaj&utm_content=main",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Vypadá jako torpédo s čelistí aligátora. V Guatemale zachraňují prehistorickou rybu",
-    "shrnuti": "Ochránci přírody vypustili do volné přírody v jižní Guatemale stovky mladých kostlínů tropických, ryb připomínajících protáhlým tělem torpédo a čelistí aligátora. Kostlína tropického, latinsky Atractosteus tropicus, známého také pod názvem tropický gar, vědci považují za prehistorickou rybu. Podle n",
-    "duvod": "bez-skutku",
-    "kategorie": [],
-    "posouzeni": null
-  },
-  {
-    "id": "k-07ad63b6c61541dc",
-    "zachyceno": "2026-09-26T15:03:20.104Z",
-    "publikovano": "2026-09-26T13:45:09.000Z",
-    "zdroj": {
-      "nazev": "HVG (Maďarsko)",
-      "url": "https://hvg.hu/cegauto/20260926_oriasi-izgalmak-videon-a-dramai-befuto-george-russell-nyerte-az-azeri-nagydijat",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Videón a drámai befutó – George Russell nyerte az Azeri Nagydíjat",
-    "shrnuti": "Valamivel kevesebb mint két tizedmásodperc döntött Russell és Verstappen között.",
-    "duvod": "bez-skutku",
-    "kategorie": [],
-    "posouzeni": null
-  },
-  {
-    "id": "k-df6bc7171d1777d9",
-    "zachyceno": "2026-09-26T15:03:19.045Z",
-    "publikovano": "2026-09-26T13:45:00.000Z",
-    "zdroj": {
-      "nazev": "Seznam Zprávy",
-      "url": "https://www.seznamzpravy.cz/clanek/nazory-komentare-pod-carou-nareci-a-male-jazyky-potrebuji-podporu-ne-vysmech-316239",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Nářečí a malé jazyky potřebují podporu, ne výsměch",
-    "shrnuti": "Po celém světě slábnou a mizí malé jazyky i regionální dialekty. Je to dlouhodobý proces, který se ještě zrychlil po nástupu AI. Společnost a kultura je kvůli tomu zase o něco chudší a rozhodně to není přirozený jev.",
-    "duvod": "bez-skutku",
-    "kategorie": [],
-    "posouzeni": null
-  },
-  {
-    "id": "k-90ea36efdce6776f",
-    "zachyceno": "2026-09-26T15:03:20.261Z",
-    "publikovano": "2026-09-26T13:45:00.000Z",
-    "zdroj": {
-      "nazev": "Helsingin Sanomat (Finsko)",
-      "url": "https://www.hs.fi/mielipide/art-2000012291708.html",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Oikeusvaltio | Perustuslakivaliokunta ei ole kumileimasin",
-    "shrnuti": "Jos perustuslakivaliokunnan tehtävä olisi vain vahvistaa asiantuntijoiden enemmistön kanta, mihin valiokuntaa edes tarvittaisiin?",
-    "duvod": "bez-skutku",
-    "kategorie": [],
-    "posouzeni": null
-  },
-  {
-    "id": "k-6e13435e35d93043",
-    "zachyceno": "2026-09-26T15:03:19.099Z",
-    "publikovano": "2026-09-26T13:44:00.000Z",
-    "zdroj": {
-      "nazev": "ČTK — České noviny",
-      "url": "https://www.ceskenoviny.cz/zpravy/eurorando-v-bozim-daru-zakoncily-tisice-turistu-zbude-po-nich-srdce-z-kamenu/2879728?utm_source=rss&utm_medium=feed",
-      "typ": "wire",
-      "primarni": false
-    },
-    "titulek": "Eurorando v Božím Daru zakončily tisíce turistů, zbude po nich srdce z kamenů",
-    "shrnuti": "Boží Dar (Karlovarsko ) - Odhalením mohyly z kamenů ve tvaru srdce dnes vyvrcholil na Božím Daru evropský festival pěší turistiky Eurorando 2026. Na setkání účastníků a následný pochod přes hranici do...",
-    "duvod": "bez-skutku",
-    "kategorie": [],
-    "posouzeni": null
-  },
-  {
-    "id": "k-0096215b07297548",
-    "zachyceno": "2026-09-26T15:03:20.742Z",
-    "publikovano": "2026-09-26T13:42:51.000Z",
-    "zdroj": {
-      "nazev": "Le Monde (Francie)",
-      "url": "https://www.lemonde.fr/societe/live/2026/09/26/en-direct-visite-du-pape-a-paris-aucun-de-nous-n-est-un-numero-sur-une-carte-d-identite-ni-un-matricule-mais-une-personne-unique-affirme-leon-xiv-lors-d-une-messe-a-la-concorde_6782008_3224.html",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "EN DIRECT, visite du pape à Paris : lors de sa messe à la Concorde, Léon XIV s’est adressé à une jeunesse en quête de sens et a mis en garde contre le « vide intérieur »",
-    "shrnuti": "Léon XIV a effectué samedi matin un déplacement consacré à l’immigration et visité l’Institut catholique de Paris, parfois surnommé « la Catho », avant de descendre les Champs-Elysées en papamobile. Il a ensuite rejoint la place de la Concorde où, selon le Vatican, 700 000 personnes étaient présente",
-    "duvod": "bez-skutku",
-    "kategorie": [],
-    "posouzeni": null
-  },
-  {
-    "id": "k-439c34d22827793a",
-    "zachyceno": "2026-09-26T15:03:18.859Z",
-    "publikovano": "2026-09-26T13:42:17.000Z",
-    "zdroj": {
-      "nazev": "Presseportal — zprávy policie (Blaulicht)",
-      "url": "https://www.presseportal.de/blaulicht/pm/126724/6359569",
-      "typ": "wire",
-      "primarni": false
-    },
-    "titulek": "LPI-SLF: Nicht zugelassenes Wohnmobil",
-    "shrnuti": "Crispendorf (ots) - Am Samstag, den 26.09.2026 gegen 11:15 Uhr kontrollierten Beamte der PI Saale-Orla in Crispendorf ein Wohnmobil. Hierbei fiel den Beamten auf, dass an dem Wohnmobil zwei unterschiedliche Kennzeichen angebracht waren. Eines ...",
-    "duvod": "bez-skutku",
-    "kategorie": [],
-    "posouzeni": null
-  },
-  {
-    "id": "k-b4b1eda8277ef11a",
-    "zachyceno": "2026-09-26T15:03:19.020Z",
-    "publikovano": "2026-09-26T13:42:08.000Z",
-    "zdroj": {
-      "nazev": "Novinky.cz",
-      "url": "https://www.novinky.cz/clanek/krimi-posilal-zpravy-cekal-pred-domem-muz-z-plzenska-hrozil-smrti-lekarce-i-zdravotnici-40599689",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Posílal zprávy, čekal před domem. Muž z Plzeňska hrozil smrtí lékařce i zdravotnici",
-    "shrnuti": "Ve vazbě skončil pětačtyřicetiletý muž z Plzeňska. Kriminalisté ho obvinili z nebezpečného vyhrožování. Podle vyšetřovatelů posílal lékařce a zdravotnici desítky zpráv, v nichž jim nadával a hrozil smrtí. Na jednu z poškozených dokonce čekal před domem a slovně na ni útočil.",
-    "duvod": "bez-skutku",
-    "kategorie": [],
-    "posouzeni": null
-  },
-  {
-    "id": "k-5927f69b84b86ca7",
-    "zachyceno": "2026-09-26T15:03:21.099Z",
-    "publikovano": "2026-09-26T13:41:39.000Z",
-    "zdroj": {
-      "nazev": "Digi24 (Rumunsko)",
-      "url": "https://www.digi24.ro/stiri/actualitate/politica/calendarul-investirii-guvernului-muresan-cand-au-loc-audierile-ministrilor-si-votul-in-parlament-3965773",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Calendarul învestirii Guvernului Mureșan. Când au loc audierile miniștrilor și votul în Parlament",
-    "shrnuti": "Audierile miniștrilor propuși în Guvernul Mureșan se vor desfășura luni și marți, 28 și 29 septembrie, în comisiile parlamentare de specialitate. Luni, audierile vor începe la ora 14.00 și se vor încheia la ora 20.00, iar marți vor fi reluate de la ora 10.00 până la ora 20.00. Şedinţa comună a Camer",
-    "duvod": "bez-skutku",
-    "kategorie": [],
-    "posouzeni": null
-  },
-  {
-    "id": "k-d5de77de95d8fd16",
-    "zachyceno": "2026-09-26T15:03:20.704Z",
-    "publikovano": "2026-09-26T13:41:13.000Z",
-    "zdroj": {
-      "nazev": "VRT NWS (Belgie)",
-      "url": "https://www.vrt.be/vrtnws/nl/2026/09/26/na-verbod-op-toegang-tot-witte-huis-cnn-mag-niet-meevliegen-met.rss.xml",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Na verboden toegang tot Witte Huis: CNN mag niet meevliegen met Air Force One",
-    "shrnuti": "Het Amerikaanse nieuwsmedium CNN heeft geen toegang gekregen om mee te vliegen naar Tennessee op Air Force One, het vliegtuig van president Donald Trump. Die beslissing volgt nadat de president de toegangspassen van CNN, Politico en MS NOW tot het Witte Huis had afgenomen, al is dat op bevel van een",
-    "duvod": "bez-skutku",
-    "kategorie": [],
-    "posouzeni": null
-  },
-  {
-    "id": "k-98906797307c0178",
-    "zachyceno": "2026-09-26T15:03:20.106Z",
-    "publikovano": "2026-09-26T13:41:04.000Z",
-    "zdroj": {
-      "nazev": "HVG (Maďarsko)",
-      "url": "https://hvg.hu/itthon/20260926_schummer-orsolya-szavazas-csezy-erzsebet-fidesz-hazbizottsag-boka-janos",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Összehívná a Fidesz a Házbizottságot a gyanús parlamenti gombnyomás miatt",
-    "shrnuti": "Kedd óta nyomasztja a fideszes képviselőket a kihágás.",
-    "duvod": "bez-skutku",
-    "kategorie": [],
-    "posouzeni": null
-  },
-  {
-    "id": "k-b8a9537dfbc156b2",
-    "zachyceno": "2026-09-26T15:03:19.392Z",
-    "publikovano": "2026-09-26T13:40:41.000Z",
-    "zdroj": {
-      "nazev": "Notes from Poland",
-      "url": "https://notesfrompoland.com/2026/09/26/polish-president-doesnt-like-trump-inviting-putin-to-g20-but-will-still-attend-summit/",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Polish president “doesn’t like” Trump inviting Putin to G20 but will still attend summit",
-    "shrnuti": "\"If it were up to us, Russia should be isolated in all international forums,\" says President Nawrocki's chief foreign policy aide.",
-    "duvod": "bez-skutku",
-    "kategorie": [
-      "rusko"
-    ],
-    "posouzeni": null
-  },
-  {
-    "id": "k-5a0d5a057be19f83",
-    "zachyceno": "2026-09-26T15:03:18.861Z",
-    "publikovano": "2026-09-26T13:40:01.000Z",
-    "zdroj": {
-      "nazev": "Presseportal — zprávy policie (Blaulicht)",
-      "url": "https://www.presseportal.de/blaulicht/pm/117703/6359568",
-      "typ": "wire",
-      "primarni": false
-    },
-    "titulek": "POL-PDKH: Polizei kontrolliert Schulweg - mehrere Kinder nicht angeschnallt",
-    "shrnuti": "Winzenheim (Bad Kreuznach) (ots) - Am Freitagmorgen, 25. September 2026, führte die Polizei in der Zeit von 07:30 Uhr bis 08:00 Uhr im Bereich der Grundschule und des Kindergartens in der Lindelstraße in Bad Kreuznach-Winzenheim eine ...",
-    "duvod": "bez-skutku",
-    "kategorie": [
-      "zpravodajske"
-    ],
-    "posouzeni": null
-  },
-  {
-    "id": "k-a3767cd653d1c085",
-    "zachyceno": "2026-09-26T15:03:18.944Z",
-    "publikovano": "2026-09-26T13:40:00.000Z",
-    "zdroj": {
-      "nazev": "Český rozhlas — domácí zprávy",
-      "url": "https://www.irozhlas.cz/sport/fotbal/luka-modric-reprezentace-fotbal-liga-narodu-uefa-chorvatsko-fotbal_2609261128_ssi",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Jednačtyřicetiletý Modrić povede Chorvaty proti české reprezentaci. ‚Je to top všech topů,‘ říká Macek",
-    "shrnuti": "České fotbalisty čeká premiéra pod vedením nového trenéra, Španěla Santiho Denii. V sobotu večer (20.45) v Edenu nastoupí na úvod elitní skupiny Ligy národů proti Chorvatsku, ve kterém pokračuje i po čtyřicítce hvězdný Luka Modrić, který si v létě zahrál už na pátém mistrovství světa.",
-    "duvod": "vylouceno-tematem",
-    "kategorie": [],
-    "posouzeni": null
-  },
-  {
-    "id": "k-ae6cbb3314b65e91",
-    "zachyceno": "2026-09-26T19:21:18.259Z",
-    "publikovano": "2026-09-26T13:38:58.000Z",
-    "zdroj": {
-      "nazev": "TVN24 (Polsko)",
-      "url": "https://tvn24.pl/tvnwarszawa/praga-polnoc/warszawa-zbiorka-zoledzi-i-orzechow-dla-zwierzat-z-zoo-st9256523?source=rss",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Zoo ogłasza wielką zbiórkę dla zwierząt. I nie chodzi o pieniądze",
-    "shrnuti": "Stołeczne zoo ogłosiło coroczną zbiórkę dla swoich podopiecznych. Prosi o konkretne dary, które mają urozmaicić dietę zwierząt. To żołędzie, orzechy włoskie i orzechy laskowe. Do uzbierania są setki kilogramów przysmaków.",
-    "duvod": "bez-skutku",
-    "kategorie": [],
-    "posouzeni": null
-  },
-  {
-    "id": "k-6ebde9ffaf29bfa9",
-    "zachyceno": "2026-09-26T15:03:18.862Z",
-    "publikovano": "2026-09-26T13:37:21.000Z",
-    "zdroj": {
-      "nazev": "Presseportal — zprávy policie (Blaulicht)",
-      "url": "https://www.presseportal.de/blaulicht/pm/57929/6359567",
-      "typ": "wire",
-      "primarni": false
-    },
-    "titulek": "POL-NOM: Coffee with a Cop zieht Bilanz Initiatoren bedanken sich bei über 600 Bürgerinnen und Bürgern in diesem Jahr für die rege Anteilnahme und positiven Zusprüchen an diesem Format",
-    "shrnuti": "Einbeck (ots) - Einbeck (Kr.) 26.09.2026; 10:20 Uhr - 14:00 Uhr Am Samstag, den 26.09.2026, suchten bei herrlichstem Herbstwetter wieder unzählig viele Bürgerinnen und Bürger der Stadt Einbeck und Touristen den Marktplatz auf, um mit ihrer ...",
-    "duvod": "bez-skutku",
-    "kategorie": [],
-    "posouzeni": null
-  },
-  {
-    "id": "k-182be95c45db0095",
-    "zachyceno": "2026-09-26T15:03:21.441Z",
-    "publikovano": "2026-09-26T13:37:00.000Z",
-    "zdroj": {
-      "nazev": "Ukrinform (anglicky)",
-      "url": "https://www.ukrinform.net/rubric-society/4168315-cases-of-people-starving-to-death-reported-in-occupied-oleshky-journalist.html",
-      "typ": "wire",
-      "primarni": false
-    },
-    "titulek": "Cases of people starving to death reported in occupied Oleshky — journalist",
-    "shrnuti": "There have been cases of people starving to death in the occupied city of Oleshky in Kherson region.",
-    "duvod": "bez-skutku",
-    "kategorie": [],
-    "posouzeni": null
-  },
-  {
-    "id": "k-4002e69a6ee1edd4",
-    "zachyceno": "2026-09-26T19:21:18.260Z",
-    "publikovano": "2026-09-26T13:35:43.000Z",
-    "zdroj": {
-      "nazev": "TVN24 (Polsko)",
-      "url": "https://tvn24.pl/opole/opole-wypadek-w-centrum-miasta-potracona-piesza-st9256501?source=rss",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Zderzyły się dwa samochody, do szpitala trafiła piesza",
-    "shrnuti": "Dwa samochody osobowe zderzyły się w centrum Opola. Kierowcy i pasażerowie wyszli ze zdarzenia bez szwanku, ale poszkodowana została jedna z osób idących chodnikiem.",
-    "duvod": "bez-skutku",
-    "kategorie": [],
-    "posouzeni": null
-  },
-  {
-    "id": "k-9f523ea37253605a",
-    "zachyceno": "2026-09-26T15:03:19.570Z",
-    "publikovano": "2026-09-26T13:35:26.000Z",
-    "zdroj": {
-      "nazev": "The Guardian — World",
-      "url": "https://www.theguardian.com/us-news/2026/sep/26/noreaster-north-east-us",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Power outages and flooded roads as major storm bears down on US north-east",
-    "shrnuti": "Thousands already without without power as New Jersey, Massachusetts, Delaware and New York brace for nor’easter More than 70,000 customers were without electricity in the north-eastern US on Saturday, a major sign of a powerful storm known as a nor’easter that was expected to create dangerous condi",
-    "duvod": "bez-mista",
-    "kategorie": [
-      "infrastruktura"
-    ],
-    "posouzeni": null
-  },
-  {
-    "id": "k-fc77a519279f9f8f",
-    "zachyceno": "2026-09-26T15:03:20.029Z",
-    "publikovano": "2026-09-26T13:34:00.000Z",
-    "zdroj": {
-      "nazev": "Rzeczpospolita (Polsko)",
-      "url": "https://www.rp.pl/plus-minus/art45184001-one-piece-w-5-minut-szybka-rozgrywka-i-presja-czasu",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "„One Piece w 5 minut”. Szybka rozgrywka i presja czasu",
-    "shrnuti": "„One Piece w 5 minut” przypomina, jak bardzo szkodliwy bywa pośpiech.",
-    "duvod": "bez-skutku",
-    "kategorie": [],
-    "posouzeni": null
-  },
-  {
-    "id": "k-437e961f4f308bc7",
-    "zachyceno": "2026-09-26T15:03:18.864Z",
-    "publikovano": "2026-09-26T13:32:01.000Z",
-    "zdroj": {
-      "nazev": "Presseportal — zprávy policie (Blaulicht)",
-      "url": "https://www.presseportal.de/blaulicht/pm/117679/6359566",
-      "typ": "wire",
-      "primarni": false
-    },
-    "titulek": "POL-PDKL: CSD Lautre: Polizei zieht positive Bilanz",
-    "shrnuti": "Kaiserslautern (ots) - Bereits zum zweiten Mal fand in der Innenstadt der \"CSD Lautre\" statt. Auftaktveranstaltung war um 12 Uhr eine Kundgebung mit anschließendem Aufzug. Hiernach fand eine allgemeine Veranstaltung statt, welche voraussichtlich ...",
-    "duvod": "bez-skutku",
-    "kategorie": [],
-    "posouzeni": null
-  },
-  {
-    "id": "k-7b85e024a9b1ddf1",
-    "zachyceno": "2026-09-26T13:33:52.349Z",
-    "publikovano": "2026-09-26T13:31:12.000Z",
-    "zdroj": {
-      "nazev": "HVG (Maďarsko)",
-      "url": "https://hvg.hu/tudomany/20260926_az-openai-mesterseges-intelligenciaja-privat-felhasznaloi-kepeket-toltott-fel-online-platformokra",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Az OpenAI mesterséges intelligenciája privát felhasználói képeket töltött fel online platformokra",
-    "shrnuti": "Újabb nem tervezett műveleteket hajtott végre az AI.",
-    "duvod": "bez-skutku",
-    "kategorie": [],
-    "posouzeni": null
-  },
-  {
-    "id": "k-41adacffbb217197",
-    "zachyceno": "2026-09-26T13:33:52.184Z",
-    "publikovano": "2026-09-26T13:30:25.000Z",
-    "zdroj": {
-      "nazev": "SME (Slovensko)",
-      "url": "https://www.sme.sk/domov/c/demokrati-maju-dalsi-mandat-na-rokovania-o-moznej-predvolebnej-koalicii-s-ps?utm_source=rss&utm_medium=feed&utm_campaign=www-rss",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Demokrati majú ďalší mandát na rokovania o možnej predvolebnej koalícii s PS",
-    "shrnuti": "Ťažko povedať, ako sa to skončí, uviedol Naď.",
     "duvod": "bez-skutku",
     "kategorie": [],
     "posouzeni": null
