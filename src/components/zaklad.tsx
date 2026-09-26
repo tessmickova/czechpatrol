@@ -13,10 +13,10 @@ import type { Jistota, Uroven } from "@/lib/typy";
  * starat o to, co běží na serveru a co v prohlížeči.
  */
 export function Napoveda({
-  children, popis, vpravo = false, label = "Co to znamená?", cele = false, nahoru = false,
-}: { children: ReactNode; popis: ReactNode; vpravo?: boolean; label?: string; /** Spouštěč vyplní celou šířku (dlaždice). */ cele?: boolean; /** Bublina nad spouštěčem (spodek karty). */ nahoru?: boolean }) {
+  children, popis, vpravo = false, label = "Co to znamená?", cele = false, nahoru = false, plna = false,
+}: { children: ReactNode; popis: ReactNode; vpravo?: boolean; label?: string; /** Spouštěč vyplní celou šířku (dlaždice). */ cele?: boolean; /** Bublina nad spouštěčem (spodek karty). */ nahoru?: boolean; /** I celou výšku buňky mřížky. */ plna?: boolean }) {
   return (
-    <ObalNapovedy popis={popis} vpravo={vpravo} label={label} cele={cele} nahoru={nahoru}>
+    <ObalNapovedy popis={popis} vpravo={vpravo} label={label} cele={cele} nahoru={nahoru} plna={plna}>
       {children}
     </ObalNapovedy>
   );

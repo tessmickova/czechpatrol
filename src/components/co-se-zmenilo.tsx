@@ -213,11 +213,11 @@ export function souhrnZmen(zaznamy: Zaznam[], snimky: Snimek[], ted: number) {
   };
 }
 
-export function CoSeZmenilo({ zaznamy, snimky, ted, vnoreny = false, osa = false }: { zaznamy: Zaznam[]; snimky: Snimek[]; ted: number; vnoreny?: boolean; /** Svislá časová osa místo tabulky, šest položek (úvod v2). */ osa?: boolean }) {
+export function CoSeZmenilo({ zaznamy, snimky, ted, vnoreny = false, osa = false, log = false }: { zaznamy: Zaznam[]; snimky: Snimek[]; ted: number; vnoreny?: boolean; /** Svislá časová osa místo tabulky, šest položek (úvod v2). */ osa?: boolean; /** Nízký posuvný log s delší historií (úvod, 26. 9. 2026). */ log?: boolean }) {
   const { nahled, kde, ukaz, skryj, pohyb } = useNahled();
 
   const vsechny = sloucOpakovani([...zeSnimku(snimky), ...zCen(ted), ...zOpatreni(zaznamy)].sort((a, b) => b.kdy.localeCompare(a.kdy)));
-  const radky = vsechny.slice(0, osa ? 6 : NEJVYS);
+  const radky = vsechny.slice(0, log ? 30 : osa ? 6 : NEJVYS);
   /*
     Týden v hlavičce: zlepšení, zhoršení i opatření, každé zvlášť. Dřív
     tu stálo jen „N zhoršení“ a každé opatření se počítalo jako zhoršení —
@@ -255,6 +255,8 @@ export function CoSeZmenilo({ zaznamy, snimky, ted, vnoreny = false, osa = false
       )}
 
       {radky.length > 0 ? (
+        <div className={log ? "max-h-[232px] overflow-y-auto overscroll-contain" : ""}>
+        {/* Posouvá se obal, ne seznam — jinak by posuvník ořízl tečky časové osy vlevo. */}
         <ol className={osa ? "relative ml-[22px] mr-3 my-3 border-l border-linka2" : ""}>
           {radky.map((r) => (
             <li key={r.klic} className={osa ? "relative" : undefined} onPointerEnter={(e) => ukaz(r.nahled, e)} onPointerMove={pohyb}>
@@ -279,6 +281,7 @@ export function CoSeZmenilo({ zaznamy, snimky, ted, vnoreny = false, osa = false
             </li>
           ))}
         </ol>
+        </div>
       ) : (
         /* Prázdný stav se píše, ne skrývá — prázdný rámeček vypadá jako chyba. */
         <p className="px-4 py-3 text-male leading-snug text-tlum2">Za posledních 90 dní se v úředních stavech, cenách paliva ani opatřeních nic nezměnilo.</p>
