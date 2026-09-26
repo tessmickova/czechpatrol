@@ -1,5 +1,43 @@
 [
   {
+    "id": "k-9c3d6b47cddf2f52",
+    "zachyceno": "2026-09-26T12:03:30.244Z",
+    "publikovano": "2026-09-26T11:47:06.000Z",
+    "zdroj": {
+      "nazev": "SME (Slovensko)",
+      "url": "https://www.sme.sk/svet/c/horiace-zbrojovky-aj-vybusne-drony-sabotaze-mali-pripravovat-zo-slovenska-agentov-casto-chrania-ambasady?utm_source=rss&utm_medium=feed&utm_campaign=www-rss",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Horiace zbrojovky aj výbušné drony. Sabotáže mali pripravovať zo Slovenska, agentov často chránia ambasády",
+    "titulekPuvodni": "Horiace zbrojovky aj výbušné drony. Sabotáže mali pripravovať zo Slovenska, agentov často chránia ambasády",
+    "shrnuti": "Slovensko povolilo ruskej ambasáde návrat vojenského pridelenca.",
+    "kodZeme": "SK",
+    "zeme": "Slovensko",
+    "kategorie": [
+      "sabotaz",
+      "drony",
+      "rusko"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "sabotaz",
+      "hori+zbrojovk",
+      "dron",
+      "rusk"
+    ],
+    "naliehave": null,
+    "stav": "ceka",
+    "vyrez": {
+      "text": "",
+      "stazeno": "2026-09-26T12:03:32.293Z",
+      "stav": 403,
+      "chyba": "HTTP 403"
+    }
+  },
+  {
     "id": "k-96e885c38713422a",
     "zachyceno": "2026-09-26T11:45:23.204Z",
     "publikovano": null,
@@ -12036,49 +12074,6 @@
       "stazeno": "2026-09-15T20:32:51.370Z",
       "stav": 200
     },
-    "vyrizeni": {
-      "kdy": "2026-09-19T19:56:38.778Z",
-      "duvod": "zdroj-navrhu",
-      "patriK": null,
-      "poznamka": null
-    }
-  },
-  {
-    "id": "k-42cc75a028d45cd4",
-    "zachyceno": "2026-09-15T12:32:49.227Z",
-    "publikovano": "2026-09-15T10:19:00.000Z",
-    "zdroj": {
-      "nazev": "Google News — Polsko vzdušný prostor",
-      "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxQVTIxV0xIaERSVVRQMlFSbi1LNk13aFRUczh5Mi0wVldvZG01aTVnMVRqalJORXdVdWkyckdWb0l0WndxMWRkNUFsU2NYTGNvLUdFakJvWEdtSlRQdmsxLUJJcjhtVDU1U3MxX2lPbGREb2d0R3dabVQwTzZHSFM0UDBCUFY3V1lJRU8zYm1rMVVjQS1IXzVtNmt2OE9jeG5Od0E?oc=5",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Fighter jets launched over Poland after Russian drone attack on Ukraine - The Independent",
-    "titulekPuvodni": "Fighter jets launched over Poland after Russian drone attack on Ukraine - The Independent",
-    "shrnuti": "Fighter",
-    "kodZeme": "PL",
-    "zeme": "Polsko",
-    "kategorie": [
-      "hybridni",
-      "drony",
-      "rusko"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "zeSite": null,
-    "shody": [
-      "attack on",
-      "dron",
-      "drone",
-      "russia"
-    ],
-    "stav": "vyrizen",
-    "vyrez": {
-      "text": "Google News",
-      "stazeno": "2026-09-15T12:32:49.433Z",
-      "stav": 200
-    },
-    "naliehave": null,
     "vyrizeni": {
       "kdy": "2026-09-19T19:56:38.778Z",
       "duvod": "zdroj-navrhu",
