@@ -15,7 +15,7 @@ import { useEffect, useId, useRef, useState, type ReactNode } from "react";
   aby vysvětlivka fungovala i bez JavaScriptu.
 */
 export function ObalNapovedy({
-  children, popis, vpravo = false, label = "Co to znamená?", cele = false,
+  children, popis, vpravo = false, label = "Co to znamená?", cele = false, nahoru = false,
 }: {
   children: ReactNode;
   popis: ReactNode;
@@ -23,6 +23,8 @@ export function ObalNapovedy({
   label?: string;
   /** Spouštěč vyplní celou šířku (dlaždice). */
   cele?: boolean;
+  /** Bublina nad spouštěčem — pro spouštěče na spodku karty, která ořezává obsah. */
+  nahoru?: boolean;
 }) {
   const [otevreno, setOtevreno] = useState(false);
   const [jeKod, setJeKod] = useState(false);
@@ -85,7 +87,7 @@ export function ObalNapovedy({
       >
         {children}
       </button>
-      <span id={id} role="tooltip" className={`napoveda ${vpravo ? "napoveda-vpravo" : ""}`}>
+      <span id={id} role="tooltip" className={`napoveda ${vpravo ? "napoveda-vpravo" : ""} ${nahoru ? "napoveda-nahoru" : ""}`}>
         {popis}
       </span>
     </span>

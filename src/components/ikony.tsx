@@ -14,7 +14,7 @@ export type NazevIkony =
   | "uzivatel" | "zvonek" | "kava" | "telefon" | "sirena" | "zamek" | "srdce" | "menu" | "instalace" | "odeslat"
   | "info" | "plus" | "minus" | "vykricnik" | "otaznik" | "mapa" | "lupa" | "rss"
   | "obalka" | "bublina"
-  | "voda" | "plamen" | "svetlo" | "jidlo" | "snih";
+  | "voda" | "plamen" | "svetlo" | "jidlo" | "snih" | "pizza";
 
 const TVARY: Record<NazevIkony, string> = {
   radar:
@@ -81,6 +81,8 @@ const TVARY: Record<NazevIkony, string> = {
   plamen: "M12 3.5c1 3 4 4.5 4 8.5a4 4 0 0 1-8 0c0-1.5.5-2.5 1.2-3.4.3 1.2 1 1.9 1.8 2.2.2-2.5.4-5.3 1-7.3z M12 20.5c-3.3 0-6-2.2-6-5.5",
   svetlo: "M12 3.5a5.5 5.5 0 0 0-3 10.1v2.9h6v-2.9a5.5 5.5 0 0 0-3-10.1z M10 19.5h4 M12 3.5V2",
   jidlo: "M7 3.5v7a2 2 0 0 0 2 2v9 M5.5 3.5v5 M8.5 3.5v5 M16.5 3.5c-1.5 1-2.5 3-2.5 5.5s1 3 2.5 3v9.5",
+  // Dílek pizzy: kůrka nahoře, špička dole, tři kousky salámu.
+  pizza: "M3.5 6.2C9 3.3 15 3.3 20.5 6.2L12 21.2z M5.2 9.2c4.4-2 9.2-2 13.6 0 M9.6 11.6h.01 M14.2 12.8h.01 M11.8 16.2h.01",
   snih: "M12 3v18 M4.2 7.5l15.6 9 M4.2 16.5l15.6-9 M12 3l-2.5 2.5M12 3l2.5 2.5 M12 21l-2.5-2.5M12 21l2.5-2.5 M4.2 7.5l3.4-.9M4.2 7.5l.9 3.4 M19.8 16.5l-3.4.9M19.8 16.5l-.9-3.4",
 };
 

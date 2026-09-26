@@ -3,6 +3,7 @@ import { MIN_ZNAKU_OBSAHU } from "./rozhodovani";
 import { ZDROJE } from "./zdroje";
 import { SLEDOVANE_PROFILY } from "./socialni";
 import nastroje from "../data/oficialni-nastroje.json";
+import { OFFLINE_MAPY, PIZZA_INDEX } from "../src/config/odkazy-ven";
 
 /**
  * Ověří, že adresy v registru skutečně odpovídají — a že z nich jde něco číst.
@@ -84,6 +85,13 @@ async function main() {
   }
 
   await zkusVystrahyChmi();
+
+  // Doporučené odkazy ven (src/config/odkazy-ven.ts): vedou pořád tam, kam tvrdíme?
+  console.log("\nOdkazy ven (offline mapy, Pizza index):");
+  for (const u of [...OFFLINE_MAPY.flatMap((m) => [m.android, m.ios]), PIZZA_INDEX.url]) {
+    const v = await zkusAdresu(u);
+    console.log(`${v.znacka.padEnd(8)}${String(v.stav ?? "---").padEnd(5)}${String(v.znaku).padStart(7)} znaků  ${u}${v.duvod ? `  (${v.duvod})` : ""}`);
+  }
 
   console.log(`\nZdrojů ${ZDROJE.length}, čitelných ${citelnych}.`);
   if (prazdne.length) console.log(`Odpovídají, ale nejde z nich číst: ${prazdne.join(", ")}.`);
