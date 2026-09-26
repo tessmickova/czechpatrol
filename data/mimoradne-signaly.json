@@ -1,14 +1,4 @@
 {
   "_poznamka": "Mimořádné signály vyhodnocené redakcí. Každý zvedne celkové hodnocení nejvýš o jeden stupeň (i když jich platí víc), jen po dobu platnosti (nejvýš 14 dní) a web u hodnocení vždy řekne proč. Zapisuje jen provozovatelka. Pravidlo č. 4, výjimka b, v CLAUDE.md.",
-  "signaly": [
-    {
-      "id": "putin-pobalti-mensiny-2026-09-25",
-      "zaznam": "ru-putin-pobalti-mensiny-2026-09-25",
-      "vyhodnoceno": "2026-09-26T00:00:00Z",
-      "platiDo": "2026-10-09T23:59:59Z",
-      "kratce": "Putin: Pobaltí podle něj porušuje práva ruskojazyčných obyvatel",
-      "proc": "Ruský prezident 25. 9. 2026 prohlásil, že pobaltské státy porušují práva ruskojazyčných obyvatel. Tvrzení o ochraně ruskojazyčného obyvatelstva použilo Rusko v letech 2014 a 2022 k odůvodnění vojenských kroků proti Ukrajině. Proto tenhle výrok hodnotíme jako mimořádný signál a celkové hodnocení zvyšujeme o jeden stupeň.",
-      "mez": "Hodnotíme to my, ne úřady. Výrok je tvrzení, ne doložený fakt, a nemusí být pravdivý. Není to předpověď a neznamená to bezprostřední ohrožení Česka."
-    }
-  ]
+  "signaly": []
 }

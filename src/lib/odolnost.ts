@@ -1,5 +1,9 @@
 import katalog from "../../data/odolnost/funkce.json";
 import krajeData from "../../data/odolnost/kraje.json";
+import potravinyData from "../../data/odolnost/potraviny.json";
+
+export interface Potravina { klic: string; nazev: string; jednotka: "kg" | "l"; gramu: number; na100: { kcal: number; bilkoviny: number; tuky: number; sacharidy: number } }
+export const POTRAVINY = potravinyData as unknown as { potreba: { kcal: number; bilkoviny: number; tuky: number; sacharidy: number; zdroj: { nazev: string; url: string } }; zdrojHodnot: { nazev: string; url: string }; polozky: Potravina[] };
 import { spotrebaPoRezimech, type VybranySpotrebic } from "./energie";
 
 /*
@@ -107,7 +111,7 @@ export interface Profil {
   /** Které cesty domácnost má, po funkcích. */
   cesty: Record<string, string[]>;
   /** Zásoby: voda v litrech, užitková voda v litrech, jídlo a léky ve dnech. null = nezadáno (není totéž co nula). */
-  zasoby: { pitnaVodaL: number | null; uzitkovaVodaL: number | null; jidloDni: number | null; lekyDni: number | null };
+  zasoby: { pitnaVodaL: number | null; uzitkovaVodaL: number | null; jidloDni: number | null; lekyDni: number | null; /** Jídlo podrobně: množství podle data/odolnost/potraviny.json (kg nebo l). */ potraviny?: Record<string, number> };
   /**
    * Energie: kapacita vlastních zdrojů ve Wh, vybrané spotřebiče (z nich
    * se počítá denní potřeba po režimech), dobíjení = solár, generátor,
@@ -258,6 +262,34 @@ function dny(mnozstvi: number | null, naDen: number): number | null {
   return Math.floor((mnozstvi / naDen) * 10) / 10;
 }
 
+/*
+  Jídlo podrobně (26. 9. 2026, na přání provozovatelky): kolik dní vydrží
+  energie, bílkoviny, tuky a sacharidy ze zásob. Potřeba na osobu a den
+  = referenční hodnota příjmu EU (2 000 kcal, 50 g, 70 g, 260 g); děti
+  počítáme jako dospělé — raději rezerva než podhodnocení. Hodnoty
+  potravin orientační (USDA), přesné na obalu.
+*/
+export interface Zivina { klic: "kcal" | "bilkoviny" | "tuky" | "sacharidy"; nazev: string; jednotka: string; mame: number; naDen: number; dni: number | null }
+
+export function rozpisJidla(profil: Profil): { zivin: Zivina[]; nejdriv: Zivina | null } | null {
+  const mnozstvi = profil.zasoby.potraviny ?? {};
+  const zadano = POTRAVINY.polozky.filter((x) => (mnozstvi[x.klic] ?? 0) > 0);
+  if (!zadano.length) return null;
+  const osob = Math.max(1, profil.osob);
+  const soucet = { kcal: 0, bilkoviny: 0, tuky: 0, sacharidy: 0 };
+  for (const x of zadano) {
+    const g = mnozstvi[x.klic] * x.gramu;
+    for (const k of Object.keys(soucet) as (keyof typeof soucet)[]) soucet[k] += (g / 100) * x.na100[k];
+  }
+  const NAZVY: Record<Zivina["klic"], [string, string]> = { kcal: ["Energie", "kcal"], bilkoviny: ["Bílkoviny", "g"], tuky: ["Tuky", "g"], sacharidy: ["Sacharidy", "g"] };
+  const zivin: Zivina[] = (["kcal", "bilkoviny", "tuky", "sacharidy"] as const).map((k) => {
+    const naDen = osob * POTRAVINY.potreba[k];
+    return { klic: k, nazev: NAZVY[k][0], jednotka: NAZVY[k][1], mame: soucet[k], naDen, dni: dny(soucet[k], naDen) };
+  });
+  const nejdriv = zivin.filter((z) => z.dni !== null).sort((a, b) => (a.dni as number) - (b.dni as number))[0] ?? null;
+  return { zivin, nejdriv };
+}
+
 export function vydrze(profil: Profil): Vydrz[] {
   const voda = FUNKCE.find((f) => f.klic === "pitna-voda")!.zasoba!;
   const hyg = FUNKCE.find((f) => f.klic === "hygiena")!.zasoba!;
@@ -269,7 +301,13 @@ export function vydrze(profil: Profil): Vydrz[] {
   return [
     { klic: "pitna-voda", nazev: "Pitná voda", dni: dny(profil.zasoby.pitnaVodaL, vodaDen), predpoklad: `${voda.naOsobuDen} l na osobu a den, ${voda.naZvireDen} l na zvíře; ${osob} ${osob === 1 ? "osoba" : osob < 5 ? "osoby" : "osob"}${zvirat ? `, ${zvirat} zvíř.` : ""}. ${voda.poznamka}` },
     { klic: "hygiena", nazev: "Užitková voda", dni: dny(profil.zasoby.uzitkovaVodaL, hygDen), predpoklad: `${hyg.naOsobuDen} l na osobu a den. ${hyg.poznamka}` },
-    { klic: "potraviny", nazev: "Jídlo", dni: profil.zasoby.jidloDni, predpoklad: "Dny podle vašeho odhadu pro celou domácnost bez nákupu." },
+    (() => {
+      /* Rozpis podle zásob má přednost před odhadem ve dnech: je z čísel, ne z pocitu. */
+      const r = rozpisJidla(profil);
+      return r
+        ? { klic: "potraviny", nazev: "Jídlo (energie)", dni: r.zivin.find((z) => z.klic === "kcal")!.dni, predpoklad: `Spočítáno ze zásob: ${Math.round(r.zivin[0].mame)} kcal, potřeba ${r.zivin[0].naDen} kcal za den (${osob} × ${POTRAVINY.potreba.kcal} kcal, referenční hodnota EU). Rozpis bílkovin, tuků a sacharidů je pod tím.` }
+        : { klic: "potraviny", nazev: "Jídlo", dni: profil.zasoby.jidloDni, predpoklad: "Dny podle vašeho odhadu pro celou domácnost bez nákupu. Přesněji: vyplňte zásoby v „Jídlo podrobně“." };
+    })(),
     { klic: "zdravi", nazev: "Léky a pomůcky", dni: profil.zasoby.lekyDni, predpoklad: "Dny podle toho, co vám řekl lékař. Web dávky nepočítá." },
     {
       klic: "energie",

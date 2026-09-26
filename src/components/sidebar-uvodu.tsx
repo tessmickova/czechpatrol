@@ -20,6 +20,7 @@ import { HlavickaWidgetu, IkonaKruh } from "./widgety";
 import { Napoveda, VykladUrovne } from "./zaklad";
 import { MimoradnySignalPoznamka } from "./mimoradny-signal";
 import { sklon } from "./zeme";
+import { Podobnost2022 } from "./podobnost-2022";
 
 /*
   Postranní sloupec úvodu (24. 9. 2026, podle zadání): situace teď, tlačítka
@@ -153,6 +154,8 @@ export function SidebarUvodu({ stav, cr, crHistoricky, crPocet, obcane, pulz, pr
           <a href={PIZZA_INDEX.url} target="_blank" rel={VEN} className="odkaz text-mikro">otevřít ↗</a>
         </span>
       </section>
+
+      <Podobnost2022 />
 
       {/* Tipy jen na počítači: na mobilu je to další box navíc. */}
       {tipy && <div className="max-lg:hidden">{tipy}</div>}
