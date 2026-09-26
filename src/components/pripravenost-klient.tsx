@@ -1,6 +1,7 @@
 "use client";
 
 import { HlavickaWidgetu } from "./widgety";
+import { jeRadio, TipAsa } from "./tip-asa";
 import { useEffect, useState } from "react";
 import { datumPraha } from "@/lib/cas";
 import { BEZ_SIGNALU, LEKARNICKA, ODBERY, NAZVY_KATEGORII, PORADI_KATEGORII, UDALOSTI, ZMINKY, nactiOdpovedi, nastrojeDoPruvodce, skorePripravenosti, souhrnOtazek, ulozOdpovedi, vetaKeSkore, type Odpoved, type Odpovedi, type OtazkaDotazniku } from "@/lib/pripravenost";
@@ -103,6 +104,7 @@ function SeznamOtazek({ otazky, odpovedi, odpovez }: { otazky: OtazkaDotazniku[]
             <span className={`block text-male font-semibold leading-snug ${odpovedi[q.id] === "mam" ? "text-tlum" : "text-inkoust"}`}>{q.nazev}</span>
             {q.upresneni && <span className="block text-drobne leading-snug text-tlum2">{q.upresneni}</span>}
             {q.aplikace && <Aplikace a={q.aplikace} />}
+            {jeRadio(q.nazev) && <TipAsa />}
             {q.odkaz && (q.odkaz.url.startsWith("/")
               ? <a href={q.odkaz.url} className="odkaz mt-0.5 inline-block text-drobne text-tlum2">{q.odkaz.nazev} →</a>
               : <a href={q.odkaz.url} target="_blank" rel={VEN} className="odkaz mt-0.5 inline-block text-drobne text-tlum2">Zdroj: {q.odkaz.nazev} ↗</a>)}

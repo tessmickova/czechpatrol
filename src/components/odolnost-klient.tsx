@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import { jeRadio, TipAsa } from "./tip-asa";
 import { useEffect, useMemo, useRef, useState } from "react";
 import { ESHOP, OBCHODY, SPUSTENO } from "@/config/web";
 import { api } from "@/lib/ucet";
@@ -448,6 +449,7 @@ function CoUdelat({ doporuceni, nakup }: { doporuceni: Doporuceni[]; nakup: Naku
                     <span className="min-w-0">
                       <span className="block text-zaklad font-semibold text-inkoust">{n.polozka}</span>
                       <span className="block text-drobne text-tlum">{n.proc}</span>
+                      {jeRadio(n.polozka) && <TipAsa />}
                       {(ESHOP || obchody.length > 0) && (
                         <span className="mt-1.5 flex flex-wrap gap-1.5">
                           {ESHOP && <a href={ESHOP} target="_blank" rel="nofollow noopener noreferrer" className="rounded-full border border-linka px-3 py-1 text-mikro font-semibold text-inkoust hover:border-akcent">Náš e-shop</a>}
@@ -542,6 +544,7 @@ function RadekFunkce({ h, profil, naCestu, naNemohu }: { h: HodnoceniFunkce; pro
                         {c.kontext ? " · podle přepínače v kroku 01" : ""}
                         {pozn ? ` · ${pozn}` : ""}
                       </span>
+                      {jeRadio(c.nazev) && <TipAsa />}
                     </span>
                   </label>
                 </li>
