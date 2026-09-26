@@ -325,6 +325,12 @@ function Nastaveni({
                   <span className="stitek-tmavy rounded-full border border-linka px-2 py-1 text-tlum2">připravujeme</span>
                 ) : null}
               </div>
+              {/* Jak to funguje — dřív nebylo jasné, proč se nikde nezadává telefon (26. 9. 2026). */}
+              {!ucet.telegram && (
+                <p className="mt-2 text-male leading-relaxed text-tlum2">
+                  Telefon nezadáváte. Klepnete na <b className="font-semibold text-inkoust">Propojit Telegram</b>, otevře se náš bot s jednorázovým kódem a stisknete <b className="font-semibold text-inkoust">Start</b>. Bot pak zná jen vaše telegramové ID — číslo ani jméno nám Telegram nepředá.
+                </p>
+              )}
               {ucet.telegram ? (
                 <button type="button" onClick={odpojTelegram} className="mt-3 text-male text-tlum underline underline-offset-4 hover:text-inkoust">
                   Odpojit
@@ -379,7 +385,7 @@ function Nastaveni({
                   <p className="mt-2 text-male text-tlum2">Číslo jde kdykoli smazat. Jediný údaj, který u WhatsAppu bez čísla nejde obejít.</p>
                 </div>
               ) : (
-                <p className="mt-2 text-male text-tlum">Vyžaduje schválení Meta Business. Až bude, přibude tady pole na číslo.</p>
+                <p className="mt-2 text-male text-tlum">Tady by bylo potřeba zadat telefonní číslo — WhatsApp jinak doručit neumí. Kanál čeká na schválení Meta Business; do té doby je jednodušší Telegram, který číslo nepotřebuje.</p>
               )}
             </div>
           </div>

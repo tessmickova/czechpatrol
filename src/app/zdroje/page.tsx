@@ -3,6 +3,8 @@ import { HlavickaStranky, Obsah } from "@/components/hlavicka";
 import { SeznamZdroju } from "@/components/zdroje";
 import { Karta } from "@/components/zaklad";
 import { vsechnyZdroje } from "@/lib/data";
+import { TYPY_ZDROJU } from "@/lib/kategorie";
+import type { TypZdroje } from "@/lib/typy";
 import { KontrolaPokryti } from "@/components/kontrola-pokryti";
 
 export const metadata: Metadata = {
@@ -29,6 +31,7 @@ const ZASADY_ZDROJU = [
 ];
 
 export default function Zdroje() {
+  const zdroje = vsechnyZdroje();
   return (
     <>
       <HlavickaStranky
@@ -61,7 +64,29 @@ export default function Zdroje() {
 
           <Karta className="p-5 sm:p-6">
             <h2 className="podnadpis mb-4 text-vetsi">Použité zdroje</h2>
-            <SeznamZdroju zdroje={vsechnyZdroje()} />
+            {/*
+              Seskupeno podle typu a sbalené (26. 9. 2026): jeden seznam přes
+              460 zdrojů byl na telefonu 67 obrazovek dlouhý. Počty jsou vidět
+              hned, jednotlivé zdroje po rozbalení.
+            */}
+            <div className="space-y-2">
+              {(Object.keys(TYPY_ZDROJU) as TypZdroje[]).map((typ) => {
+                const z = zdroje.filter((x) => x.typ === typ);
+                if (!z.length) return null;
+                return (
+                  <details key={typ} className="group rounded-[16px] border border-linka">
+                    <summary className="flex min-h-[48px] cursor-pointer list-none items-center justify-between gap-3 px-4 text-male font-semibold text-inkoust">
+                      <span>{TYPY_ZDROJU[typ].znacka} <span className="cislice font-normal text-tlum2">· {z.length}</span></span>
+                      <span aria-hidden className="text-tlum2 transition-transform group-open:rotate-180">▾</span>
+                    </summary>
+                    <div className="px-4 pb-4">
+                      <p className="mb-3 text-mikro text-tlum2">{TYPY_ZDROJU[typ].popis}</p>
+                      <SeznamZdroju zdroje={z} husty />
+                    </div>
+                  </details>
+                );
+              })}
+            </div>
           </Karta>
         </div>
       </Obsah>
