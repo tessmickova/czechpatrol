@@ -225,3 +225,24 @@ describe("skóre pro žebříček", () => {
     expect(s).toBeLessThanOrEqual(100);
   });
 });
+
+describe("jídlo podrobně — kolik vydrží živiny (26. 9. 2026)", () => {
+  it("1 kg rýže pro 1 osobu: energie 1,8 dne, tuky dojdou nejdřív", async () => {
+    const { PRAZDNY_PROFIL, rozpisJidla, vydrze } = await import("../src/lib/odolnost");
+    const p = { ...PRAZDNY_PROFIL, osob: 1, zasoby: { ...PRAZDNY_PROFIL.zasoby, potraviny: { ryze: 1 } } };
+    const r = rozpisJidla(p)!;
+    const z = Object.fromEntries(r.zivin.map((x) => [x.klic, x.dni]));
+    expect(z.kcal).toBe(1.8);      // 3 650 kcal / 2 000
+    expect(z.bilkoviny).toBe(1.4); // 71 g / 50 g
+    expect(z.tuky).toBe(0.1);      // 7 g / 70 g
+    expect(z.sacharidy).toBe(3);   // 800 g / 260 g
+    expect(r.nejdriv?.klic).toBe("tuky");
+    expect(vydrze(p).find((v) => v.klic === "potraviny")?.dni).toBe(1.8);
+  });
+  it("bez zadaných potravin platí odhad ve dnech", async () => {
+    const { PRAZDNY_PROFIL, rozpisJidla, vydrze } = await import("../src/lib/odolnost");
+    const p = { ...PRAZDNY_PROFIL, osob: 2, zasoby: { ...PRAZDNY_PROFIL.zasoby, jidloDni: 5 } };
+    expect(rozpisJidla(p)).toBeNull();
+    expect(vydrze(p).find((v) => v.klic === "potraviny")?.dni).toBe(5);
+  });
+});

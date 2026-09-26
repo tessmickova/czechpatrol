@@ -303,7 +303,7 @@ export function PripravenostKlient({ nastroje }: { nastroje: OficialniNastroj[] 
             <a href="/odolnost/" className="group mt-6 block rounded-[22px] border-2 border-akcent bg-akcent/[0.06] p-5 transition-colors hover:bg-akcent/10 sm:p-6">
               <span className="flex items-center gap-2 text-akcent"><Ikona nazev="terc" velikost={20} tah={1.9} /><span className="nadpis-boxu !text-akcent">Další krok</span></span>
               <span className="mt-2 block text-cislo font-bold leading-tight text-inkoust">Vyzkoušejte i kalkulačku odolnosti</span>
-              <span className="mt-1.5 block max-w-[56ch] text-zaklad text-tlum">Řekne vám, jak dlouho dokážete vydržet bez proudu, vody a obchodů — a co doplnit nejdřív.</span>
+              <span className="mt-1.5 block max-w-[56ch] text-zaklad text-tlum">Řekne vám, jak dlouho vydržíte bez proudu a obchodů — s vodou, jídlem i podle bílkovin, tuků a sacharidů — a co doplnit nejdřív.</span>
               <span className="mt-4 inline-flex min-h-[48px] items-center gap-2 rounded-full bg-akcent px-6 text-zaklad font-semibold text-papir group-hover:bg-akcent-svetla">Spustit kalkulačku <Ikona nazev="nahoru" velikost={13} tah={2} trida="rotate-90" /></span>
             </a>
             <div className="mt-3"><Tlacitko kam="/" varianta="obrys" velikost="m">Zpět na přehled</Tlacitko></div>

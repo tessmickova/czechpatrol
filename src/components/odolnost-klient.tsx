@@ -10,6 +10,7 @@ import { zaznamejUdalost } from "@/lib/mereni";
 import {
   bezpecnostniNalezy, DUVODY_NEMOHU, doporucenaZasobaVody, kraj as krajProfilu, KRAJE_ODOLNOSTI, lidskaDoba, maCestu, nactiProfil, pocty, poznamkaKPoctu, PRAZDNY_PROFIL, souhrn, TRIDY_SRAZEK, ulozProfil, VERZE_KATALOGU, ZAVISLOSTI,
   type Doporuceni, type HodnoceniFunkce, type Horizont, type Kontext, type Nakup, type Profil,
+  POTRAVINY, rozpisJidla,
 } from "@/lib/odolnost";
 import { useDialog } from "./dialog";
 import { POLE, Popisek, TLACITKO_TICHE } from "./formulare";
@@ -82,6 +83,17 @@ function Pocet({ id, nazev, hodnota, onChange, poznamka }: { id: string; nazev: 
       <Popisek pro={id}>{nazev}</Popisek>
       <input id={id} inputMode="numeric" className={`${POLE} cislice`} value={hodnota ?? ""} onChange={(e) => onChange(cislo(e.target.value))} placeholder="nevím" />
       {poznamka && <p className="mt-1 text-drobne text-tlum2">{poznamka}</p>}
+    </div>
+  );
+}
+
+/** Číslo s desetinnou čárkou (1,5 kg): text se drží lokálně, jinak by „1,“ skočilo zpět na „1“. */
+function PocetDesetinny({ id, nazev, hodnota, onChange }: { id: string; nazev: string; hodnota: number | null; onChange: (v: number | null) => void }) {
+  const [text, setText] = useState(hodnota === null ? "" : String(hodnota).replace(".", ","));
+  return (
+    <div>
+      <Popisek pro={id}>{nazev}</Popisek>
+      <input id={id} inputMode="decimal" className={`${POLE} cislice`} value={text} onChange={(e) => { setText(e.target.value); onChange(cislo(e.target.value)); }} placeholder="nemám" />
     </div>
   );
 }
@@ -253,6 +265,20 @@ export function OdolnostKlient() {
             <Pocet id="od-leky" nazev="Léky a pomůcky (dny, podle lékaře)" hodnota={p.zasoby.lekyDni} onChange={(v) => uloz({ ...p, zasoby: { ...p.zasoby, lekyDni: v } })} />
             <Pocet id="od-kap" nazev="Vlastní zdroj energie (Wh)" hodnota={p.energie.kapacitaWh || null} onChange={(v) => uloz({ ...p, energie: { ...p.energie, kapacitaWh: v ?? 0 } })} poznamka="Powerstation, UPS, powerbanky dohromady. Kapacita je na štítku." />
           </div>
+          {/* Jídlo podrobně (26. 9. 2026): z množství zásob se spočítá, kolik dní vydrží energie, bílkoviny, tuky a sacharidy. */}
+          <details className="group mt-4 rounded-[16px] border border-linka px-4 py-3" open={Boolean(Object.keys(p.zasoby.potraviny ?? {}).length)}>
+            <summary className="flex min-h-[40px] cursor-pointer items-center justify-between gap-3 text-male font-semibold text-inkoust">
+              Jídlo podrobně — kolik vydrží bílkoviny, tuky a sacharidy
+              <Ikona nazev="dolu" velikost={13} tah={2} trida="shrink-0 text-tlum2 transition-transform group-open:rotate-180" />
+            </summary>
+            <p className="mt-1 text-drobne leading-snug text-tlum2">Zadejte, kolik čeho máte doma. Hodnoty na 100 g jsou orientační ({POTRAVINY.zdrojHodnot.nazev}); přesné najdete v tabulce na obalu. Prázdné pole = nemám.</p>
+            <div className="mt-3 grid gap-4 sm:grid-cols-2">
+              {POTRAVINY.polozky.map((x) => (
+                <PocetDesetinny key={x.klic} id={`od-pot-${x.klic}`} nazev={`${x.nazev} (${x.jednotka})`} hodnota={p.zasoby.potraviny?.[x.klic] ?? null}
+                  onChange={(v) => { const pot = { ...(p.zasoby.potraviny ?? {}) }; if (v && v > 0) pot[x.klic] = v; else delete pot[x.klic]; uloz({ ...p, zasoby: { ...p.zasoby, potraviny: pot } }); }} />
+              ))}
+            </div>
+          </details>
           <div className="mt-2">
             <Prepnuti id="od-dobijeni" nazev="Umím zdroj dobíjet bez sítě" popis="solár, generátor, auto" hodnota={p.energie.dobijeni} onChange={(v) => uloz({ ...p, energie: { ...p.energie, dobijeni: v } })} />
           </div>
@@ -325,6 +351,42 @@ export function OdolnostKlient() {
             </div>
           )}
 
+          {/*
+            „Jak dlouho vydrží“ pro všechny, ne jen Premium (26. 9. 2026): je to
+            hlavní odpověď kalkulačky a Premium zatím neběží — nikdo ji neviděl.
+          */}
+          <div className="mt-6 pt-5">
+            <div className="flex items-center gap-1.5"><span className="nadpis-boxu">Jak dlouho vydrží</span><Otaznik popis={<span className="block">Předpoklady jsou u každé položky. Číslo je k plánování, ne k uklidnění.</span>} /></div>
+            {(() => { const d = doporucenaZasobaVody(p, 7); return (
+              <p className="mt-2 flex items-center justify-between gap-3 py-1.5 text-male">
+                <span className="flex items-center gap-1.5 text-tlum">Doporučená zásoba pitné vody na 7 dní<Otaznik popis={<span className="block">{d.predpoklad}</span>} /></span>
+                <span className="cislice shrink-0 font-semibold text-inkoust">{d.litru} l{d.nasobek !== 1 ? <span className="font-normal text-tlum2"> · {krajProfilu(p)?.nazev}</span> : ""}</span>
+              </p>
+            ); })()}
+            <ul className="mt-1 pt-1">
+              {s.vydrze.filter((v) => v.klic !== "energie" || p.energie.kapacitaWh > 0).map((v) => (
+                <li key={v.klic} className="flex items-center justify-between gap-3 py-1.5">
+                  <span className="flex items-center gap-1.5 text-male text-tlum">{v.nazev}<Otaznik popis={<span className="block">{v.predpoklad}</span>} /></span>
+                  <span className="cislice shrink-0 text-male font-semibold text-inkoust">{v.dni === null ? <span className="font-normal text-tlum2">nezadáno</span> : lidskaDoba(v.dni)}</span>
+                </li>
+              ))}
+            </ul>
+            {(() => { const r = rozpisJidla(p); if (!r) return null; return (
+              <div className="mt-2 rounded-[14px] bg-plocha2/60 px-3 py-2">
+                <div className="flex items-center gap-1.5 text-drobne font-semibold text-tlum">Jídlo podle živin<Otaznik popis={<span className="block">Potřeba na osobu a den podle referenční hodnoty EU: {POTRAVINY.potreba.kcal} kcal, bílkoviny {POTRAVINY.potreba.bilkoviny} g, tuky {POTRAVINY.potreba.tuky} g, sacharidy {POTRAVINY.potreba.sacharidy} g ({POTRAVINY.potreba.zdroj.nazev}). Děti počítáme jako dospělé. Hodnoty potravin orientační ({POTRAVINY.zdrojHodnot.nazev}).</span>} /></div>
+                <ul>
+                  {r.zivin.map((z) => (
+                    <li key={z.klic} className="flex items-center justify-between gap-3 py-1 text-male">
+                      <span className="text-tlum">{z.nazev} <span className="cislice text-drobne text-tlum2">{Math.round(z.mame).toLocaleString("cs-CZ")} {z.jednotka} · {z.naDen.toLocaleString("cs-CZ")} {z.jednotka}/den</span></span>
+                      <span className={`cislice shrink-0 font-semibold ${r.nejdriv?.klic === z.klic ? "text-akcent" : "text-inkoust"}`}>{z.dni === null ? "—" : lidskaDoba(z.dni)}</span>
+                    </li>
+                  ))}
+                </ul>
+                {r.nejdriv && r.nejdriv.klic !== "kcal" && <p className="mt-1 text-drobne leading-snug text-tlum2">Nejdřív dojdou {r.nejdriv.nazev.toLowerCase()} — doplňte potraviny, které jich mají víc.</p>}
+              </div>
+            ); })()}
+          </div>
+
           {premium ? (
             <>
               <div className="mt-6 pt-5">
@@ -338,24 +400,6 @@ export function OdolnostKlient() {
                       <span aria-hidden className={`h-[6px] w-[6px] shrink-0 rounded-full ${TECKA_HORIZONTU[h.stav]}`} />
                       <span className="cislice whitespace-nowrap font-semibold text-inkoust">{horizontSlovo(h.dni)}</span>
                       <span className="text-tlum">{SLOVA_HORIZONTU[h.stav]}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-
-              <div className="mt-6 pt-5">
-                <div className="flex items-center gap-1.5"><span className="nadpis-boxu">Jak dlouho vydrží</span><Otaznik popis={<span className="block">Předpoklady jsou u každé položky. Číslo je k plánování, ne k uklidnění.</span>} /></div>
-                {(() => { const d = doporucenaZasobaVody(p, 7); return (
-                  <p className="mt-2 flex items-center justify-between gap-3 py-1.5 text-male">
-                    <span className="flex items-center gap-1.5 text-tlum">Doporučená zásoba pitné vody na 7 dní<Otaznik popis={<span className="block">{d.predpoklad}</span>} /></span>
-                    <span className="cislice shrink-0 font-semibold text-inkoust">{d.litru} l{d.nasobek !== 1 ? <span className="font-normal text-tlum2"> · {krajProfilu(p)?.nazev}</span> : ""}</span>
-                  </p>
-                ); })()}
-                <ul className="mt-1 pt-1">
-                  {s.vydrze.filter((v) => v.klic !== "energie" || p.energie.kapacitaWh > 0).map((v) => (
-                    <li key={v.klic} className="flex items-center justify-between gap-3 py-1.5">
-                      <span className="flex items-center gap-1.5 text-male text-tlum">{v.nazev}<Otaznik popis={<span className="block">{v.predpoklad}</span>} /></span>
-                      <span className="cislice shrink-0 text-male font-semibold text-inkoust">{v.dni === null ? <span className="font-normal text-tlum2">nezadáno</span> : lidskaDoba(v.dni)}</span>
                     </li>
                   ))}
                 </ul>
