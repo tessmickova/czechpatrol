@@ -133,6 +133,9 @@ export default function Metodika() {
           <p className="max-w-[46rem] text-male leading-relaxed text-tlum">
             Počítá ho automat při každém sběru, nejvýš den staré. Bere ověřené případy za 14 dní a vezme jejich střední závažnost; případy mimo Česko o stupeň níž. Neověřené zprávy nevstupují. Trend porovnává poslední týden s předchozím.
           </p>
+          <p className="mt-2 max-w-[46rem] text-male leading-relaxed text-tlum">
+            Výjimkou je <b className="font-semibold text-inkoust">mimořádný signál</b>, který vyhodnotíme sami — například výrok, jaký v minulosti předcházel vojenským krokům. Zvedne hodnocení nejvýš o jeden stupeň a nejvýš na 14 dní. U hodnocení je pak vždy vidět, proč, a jaká by úroveň byla bez něj.
+          </p>
         </Karta>
         <Karta className="p-5 sm:p-6">
           <p className="mb-5 max-w-[46rem] text-male leading-relaxed text-tlum">

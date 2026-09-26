@@ -1,7 +1,7 @@
 import fs from "node:fs";
 import path from "node:path";
 import { UROVNE } from "../src/lib/skala";
-import type { CelkovyStav, Incident, Uroven } from "../src/lib/typy";
+import type { CelkovyStav, Incident, MimoradnySignal, Uroven } from "../src/lib/typy";
 
 /*
   Celkové hodnocení počítá automat.
@@ -37,6 +37,27 @@ import type { CelkovyStav, Incident, Uroven } from "../src/lib/typy";
     a aspoň o 3 body míň = dolů, jinak beze změny.
 */
 
+/*
+  Mimořádný signál vyhodnocený redakcí (rozhodnutí provozovatelky 26. 9. 2026).
+
+  Medián z ověřených případů nezachytí výrok, který sám nic nezničil, ale
+  v minulosti předcházel válce — Putinovo tvrzení z 25. 9. 2026, že Pobaltí
+  porušuje práva ruskojazyčných obyvatel, stejné jako před útoky na Ukrajinu
+  v letech 2014 a 2022. Takový signál smí zapsat jen provozovatelka do
+  data/mimoradne-signaly.json a pojistky drží výjimku malou:
+
+  - zvedá nejvýš o JEDEN stupeň, i když platí signálů víc,
+  - platí jen do `platiDo`, nejvýš 14 dní (hlídá kontrola dat); pak se
+    hodnocení samo vrátí na spočtenou úroveň,
+  - stav nese i spočtenou úroveň a důvod, a web je u hodnocení ukáže —
+    čtenář vždy vidí, že jde o naše vyhodnocení a že výrok nemusí být pravdivý.
+*/
+export function platneSignaly(signaly: MimoradnySignal[], ted = Date.now()): MimoradnySignal[] {
+  return signaly
+    .filter((s) => new Date(s.vyhodnoceno).getTime() <= ted && ted <= new Date(s.platiDo).getTime())
+    .sort((a, b) => b.vyhodnoceno.localeCompare(a.vyhodnoceno));
+}
+
 const OKNO_DNI = 14;
 const DEN = 86_400_000;
 
@@ -61,7 +82,7 @@ const pripadu = (n: number) => `${n} ${n === 1 ? "případ" : n >= 2 && n <= 4 ?
   z nedostupných zdrojů se nepotvrzuje (pravidlo č. 4). 23. 9. 2026 by
   jinak web ukázal „trend dolů" jen proto, že sběr stál.
 */
-export function spocitejStav(incidenty: Incident[], ted = Date.now(), posledniSber: string | null = null): CelkovyStav {
+export function spocitejStav(incidenty: Incident[], ted = Date.now(), posledniSber: string | null = null, signaly: MimoradnySignal[] = []): CelkovyStav {
   const platne = incidenty.filter(vstupujeDoHodnoceni);
   const vOkne = platne.filter((i) => kdy(i) > ted - OKNO_DNI * DEN && kdy(i) <= ted);
   const tyden = vOkne.filter((i) => kdy(i) > ted - 7 * DEN);
@@ -69,7 +90,9 @@ export function spocitejStav(incidenty: Incident[], ted = Date.now(), posledniSb
 
   const upravene = vOkne.map((i) => Math.max(1, cislo(i.zavaznost) - (i.kodZeme === "CZ" ? 0 : 1))).sort((a, b) => a - b);
   const poradi = !upravene.length ? cislo("G2") : upravene.length < 3 ? upravene[0] : upravene[Math.floor((upravene.length - 1) / 2)];
-  const uroven = PORADI[poradi - 1];
+  const zakladni = PORADI[poradi - 1];
+  const signal = platneSignaly(signaly, ted)[0] ?? null;
+  const uroven = signal ? PORADI[Math.min(PORADI.length, poradi + 1) - 1] : zakladni;
 
   const soucet = (xs: Incident[]) => Math.round(xs.reduce((s, i) => s + zDeseti(i.zavaznost), 0) * 10) / 10;
   const s1 = soucet(tyden);
@@ -99,8 +122,11 @@ export function spocitejStav(incidenty: Incident[], ted = Date.now(), posledniSb
     trendPopis: sberStoji
       ? "Sběr dat den neproběhl, trend se proto nepočítá."
       : `Posledních 7 dní: ${pripadu(tyden.length)} (součet závažnosti ${s1}). Týden předtím: ${pripadu(predtim.length)} (${s0}).`,
-    shrnuti,
+    shrnuti: signal ? `${shrnuti} Teď o jeden stupeň výš kvůli mimořádnému signálu, který jsme vyhodnotili sami: ${signal.kratce}.` : shrnuti,
     noveSignaly,
+    mimoradny: signal
+      ? { zakladni, kratce: signal.kratce, proc: signal.proc, mez: signal.mez, zaznam: signal.zaznam ?? null, platiDo: signal.platiDo }
+      : null,
   };
 }
 
@@ -115,7 +141,11 @@ export function aktualizujStav(koren = path.join(process.cwd(), "data"), ted = D
   const stary = fs.existsSync(soubor) ? (JSON.parse(fs.readFileSync(soubor, "utf-8")) as CelkovyStav) : null;
   const beh = path.join(koren, "fronta", "posledni-beh.json");
   const posledniSber = fs.existsSync(beh) ? ((JSON.parse(fs.readFileSync(beh, "utf-8")) as { kdy?: string }).kdy ?? null) : null;
-  const novy = spocitejStav(incidenty, ted, posledniSber);
+  const souborSignalu = path.join(koren, "mimoradne-signaly.json");
+  /* Poškozený soubor signálů nesmí zastavit přepočet — hodnocení pak jde bez něj. */
+  let signaly: MimoradnySignal[] = [];
+  try { if (fs.existsSync(souborSignalu)) signaly = (JSON.parse(fs.readFileSync(souborSignalu, "utf-8")) as { signaly?: MimoradnySignal[] }).signaly ?? []; } catch { signaly = []; }
+  const novy = spocitejStav(incidenty, ted, posledniSber, signaly);
   const bezCasu = (s: CelkovyStav | null) => (s ? JSON.stringify({ ...s, aktualizovano: null }) : "");
   const stari = stary?.aktualizovano ? ted - new Date(stary.aktualizovano).getTime() : Infinity;
   if (bezCasu(stary) === bezCasu(novy) && stari < 20 * 3_600_000) return { zmena: false, stav: stary! };

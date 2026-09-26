@@ -41,3 +41,29 @@ describe("automatické celkové hodnocení", () => {
     expect(s.trend).toBe("nahoru");
   });
 });
+
+describe("mimořádný signál redakce", () => {
+  const signal = (od: number, doDni: number) => ({
+    id: "s", zaznam: null, kratce: "k", proc: "p", mez: "m",
+    vyhodnoceno: new Date(TED - od * 864e5).toISOString(), platiDo: new Date(TED + doDni * 864e5).toISOString(),
+  });
+  const pripady = [z("Y3", 1), z("Y3", 2), z("Y3", 3)]; // v zahraničí → Y2
+
+  it("zvedne hodnocení o jeden stupeň a nese spočtenou úroveň", () => {
+    const s = spocitejStav(pripady, TED, beh, [signal(1, 10)]);
+    expect(s.uroven).toBe("Y3");
+    expect(s.mimoradny?.zakladni).toBe("Y2");
+  });
+  it("víc signálů zvedá pořád jen o jeden stupeň", () => {
+    expect(spocitejStav(pripady, TED, beh, [signal(1, 10), signal(2, 10)]).uroven).toBe("Y3");
+  });
+  it("po platnosti se hodnocení samo vrátí", () => {
+    const s = spocitejStav(pripady, TED, beh, [signal(15, -1)]);
+    expect(s.uroven).toBe("Y2");
+    expect(s.mimoradny).toBeNull();
+  });
+  it("nad nejvyšší úroveň nejde", () => {
+    const r = [z("R3", 1, "CZ"), z("R3", 2, "CZ"), z("R3", 3, "CZ")];
+    expect(spocitejStav(r, TED, beh, [signal(1, 10)]).uroven).toBe("R3");
+  });
+});

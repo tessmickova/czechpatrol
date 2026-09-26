@@ -17,6 +17,7 @@ import { Tlacitko } from "./ui";
 import { stavNalehavosti } from "./urgentni";
 import { HlavickaWidgetu, IkonaKruh } from "./widgety";
 import { Napoveda, VykladUrovne } from "./zaklad";
+import { MimoradnySignalPoznamka } from "./mimoradny-signal";
 import { sklon } from "./zeme";
 
 /*
@@ -110,12 +111,13 @@ export function SidebarUvodu({ stav, cr, crHistoricky, crPocet, obcane, pulz, pr
               <p className={`text-velke font-bold leading-tight [overflow-wrap:normal] ${pasmo ? pasmo.text : "text-tlum"}`}>{d ? d.nazev : "Nestanoveno"}</p>
               <p className="mt-0.5 flex items-center gap-1 text-mikro font-semibold text-tlum">
                 {stav.trend === "nahoru" && <><span className="text-stari"><Ikona nazev="nahoru" velikost={11} tah={2.2} /></span>{t("zhoršení za 7 dní")}</>}
-                {stav.trend === "dolu" && <><span className="text-klid"><Ikona nazev="dolu" velikost={11} tah={2.2} /></span>{t("zlepšení za 7 dní")}</>}
+                {stav.trend === "dolu" && !stav.mimoradny && <><span className="text-klid"><Ikona nazev="dolu" velikost={11} tah={2.2} /></span>{t("zlepšení za 7 dní")}</>}
                 {stav.trend === "beze-zmeny" && <span className="text-tlum2">{t("beze změny 7 dní")}</span>}
               </p>
               <div className={`mt-1.5 ${pasmo ? pasmo.text : "text-tlum"}`}><Cara hodnoty={d14} sirka={120} vyska={24} popis={`Případy po dnech za 14 dní: ${d14.join(", ")}`} /></div>
             </div>
           </div>
+          <MimoradnySignalPoznamka stav={stav} className="mt-2" />
           <div className="mt-3 grid grid-cols-2 gap-3">
             <Maly nadpis={t("Česko")} obdobi="90 dní" uroven={cr} slovo={cr ? undefined : "Bez incidentu"} popis={crPopis} dodatek={crHistoricky ? `Nejvýš od roku 2014: ${UROVNE[crHistoricky].nazev.toLowerCase()}.` : undefined}
               graf={<><span className="text-tlum"><Sloupky hodnoty={seskup(cz90, 12)} sirka={56} vyska={18} popis="Případy v Česku po týdnech" /></span><span>{cz90.reduce((a, b) => a + b, 0)} za 90 dní</span></>} />

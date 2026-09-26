@@ -11,6 +11,7 @@ import { Napoveda, VykladUrovne } from "./zaklad";
 import { Tlacitko } from "./ui";
 import { sklon } from "./zeme";
 import { useT } from "@/lib/i18n";
+import { MimoradnySignalPoznamka } from "./mimoradny-signal";
 
 /*
   Hlavička přehledu: jedna věta, jeden velký budík, dva malé.
@@ -179,7 +180,8 @@ export function HeroDashboard({
                 <span className="text-stari"><Ikona nazev="nahoru" velikost={11} tah={2.2} /></span>{t("zhoršení za 7 dní")}
               </p>
             )}
-            {stav.trend === "dolu" && (
+            {/* „Zlepšení" vedle úrovně zvednuté mimořádným signálem by si odporovalo; vysvětlí to poznámka níž. */}
+            {stav.trend === "dolu" && !stav.mimoradny && (
               <p className="mt-1.5 flex items-center gap-1 text-mikro font-semibold text-tlum">
                 <span className="text-klid"><Ikona nazev="dolu" velikost={11} tah={2.2} /></span>{t("zlepšení za 7 dní")}
               </p>
@@ -192,6 +194,7 @@ export function HeroDashboard({
               záznamu, kde je vedle ní vysvětlení.
             */}
             {/* Jedno tlačítko. Cesta k záznamům je v Aktualitách vedle, tady by byla podruhé. */}
+            <MimoradnySignalPoznamka stav={stav} className="mt-2" />
             <p className="mt-3">
               <Tlacitko kam="#sledovat" varianta="obrys" velikost="s" ikona="zvonek" trida="whitespace-nowrap">{t("Sledovat změny")}</Tlacitko>
             </p>

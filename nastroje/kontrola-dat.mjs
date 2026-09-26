@@ -466,6 +466,22 @@ if (fs.existsSync(path.join(koren, "data", "souhrn-situace.json"))) {
   for (const id of souhrn.podklady ?? []) if (!idZaznamu.has(id)) varovani.push(`souhrn situace: podklad ${id} není zveřejněný záznam`);
 }
 
+/* ---------- mimořádné signály redakce (pravidlo č. 4, výjimka b) ---------- */
+/* Pojistky, aby výjimka zůstala malá: nejvýš 14 dní, doložený záznam, povinně řečené meze. */
+if (fs.existsSync(path.join(koren, "data", "mimoradne-signaly.json"))) {
+  const slugyZaznamu = new Set(incidenty.map((i) => i.slug));
+  for (const sg of cti("mimoradne-signaly.json").signaly ?? []) {
+    const kde = `mimořádný signál ${sg.id ?? "?"}`;
+    if (!sg.id || !sg.kratce || !sg.proc || !sg.mez) { chyby.push(`${kde}: chybí id, kratce, proc nebo mez`); continue; }
+    if (!platneDatum(sg.vyhodnoceno) || !platneDatum(sg.platiDo)) { chyby.push(`${kde}: neplatné datum`); continue; }
+    const dni = (new Date(sg.platiDo).getTime() - new Date(sg.vyhodnoceno).getTime()) / 86_400_000;
+    if (dni <= 0 || dni > 14) chyby.push(`${kde}: platnost musí být 0–14 dní (je ${dni.toFixed(1)})`);
+    if (sg.zaznam && !slugyZaznamu.has(sg.zaznam)) chyby.push(`${kde}: záznam ${sg.zaznam} není zveřejněný`);
+    if (!/nemusí být pravdiv|neověřen/i.test(sg.mez)) chyby.push(`${kde}: mez musí říct, že tvrzení nemusí být pravdivé`);
+    if (!/není to předpověď/i.test(sg.mez)) chyby.push(`${kde}: mez musí říct, že nejde o předpověď (pravidlo č. 3c)`);
+  }
+}
+
 console.log(`Kontrola dat: ${shrnuti}`);
 for (const v of varovani) console.log(`  varování: ${v}`);
 for (const c of chyby) console.log(`  CHYBA: ${c}`);

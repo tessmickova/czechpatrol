@@ -1,13 +1,21 @@
 {
-  "aktualizovano": "2026-09-26T00:02:28.529Z",
-  "uroven": "Y2",
+  "aktualizovano": "2026-09-26T04:42:34.745Z",
+  "uroven": "Y3",
   "trend": "dolu",
   "trendPopis": "Posledních 7 dní: 0 případů (součet závažnosti 0). Týden předtím: 7 případů (34.5).",
-  "shrnuti": "Spočteno z ověřených případů za posledních 14 dní (7 případů) v 6 zemích. Úroveň je jejich střední závažnost z pohledu Česka, jediná událost ji nezvedne. Je to měření, ne předpověď.",
+  "shrnuti": "Spočteno z ověřených případů za posledních 14 dní (7 případů) v 6 zemích. Úroveň je jejich střední závažnost z pohledu Česka, jediná událost ji nezvedne. Je to měření, ne předpověď. Teď o jeden stupeň výš kvůli mimořádnému signálu, který jsme vyhodnotili sami: Putin: Pobaltí podle něj porušuje práva ruskojazyčných obyvatel.",
   "noveSignaly": {
     "celkem": 0,
     "kriticke": 0,
     "vysoke": 0,
     "stredni": 0
+  },
+  "mimoradny": {
+    "zakladni": "Y2",
+    "kratce": "Putin: Pobaltí podle něj porušuje práva ruskojazyčných obyvatel",
+    "proc": "Ruský prezident 25. 9. 2026 prohlásil, že pobaltské státy porušují práva ruskojazyčných obyvatel. Tvrzení o ochraně ruskojazyčného obyvatelstva použilo Rusko v letech 2014 a 2022 k odůvodnění vojenských kroků proti Ukrajině. Proto tenhle výrok hodnotíme jako mimořádný signál a celkové hodnocení zvyšujeme o jeden stupeň.",
+    "mez": "Hodnotíme to my, ne úřady. Výrok je tvrzení, ne doložený fakt, a nemusí být pravdivý. Není to předpověď a neznamená to bezprostřední ohrožení Česka.",
+    "zaznam": "ru-putin-pobalti-mensiny-2026-09-25",
+    "platiDo": "2026-10-09T23:59:59Z"
   }
 }

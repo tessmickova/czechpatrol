@@ -279,6 +279,15 @@ přepočítat ručně; záznamy „neověřeno úředně" do něj nevstupují. K
 den neproběhl, trend se nepočítá. Ruční přepis `stav.json` se při dalším
 běhu přepíše.
 
+**Výjimka b — mimořádný signál vyhodnocený redakcí.** Rozhodla tak
+provozovatelka 26. 9. 2026 u Putinova výroku o Pobaltí (tvrzení o ochraně
+ruskojazyčných obyvatel předcházelo útokům na Ukrajinu v letech 2014
+a 2022). Signál zapisuje jen provozovatelka do `data/mimoradne-signaly.json`.
+Zvedá hodnocení **nejvýš o jeden stupeň**, platí **nejvýš 14 dní** a web
+u hodnocení vždy řekne, že jde o naše vyhodnocení, že výrok nemusí být
+pravdivý a jaká by úroveň byla bez něj. Předpověď to není a psát se tak
+nesmí (pravidlo č. 3c). Hlídá to `nastroje/kontrola-dat.mjs`.
+
 ## Pravidlo č. 4a — nic se nezahazuje, ale nic se ani nepřeklápí samo
 
 Síto na klíčová slova nikdy nepozná vážnou zprávu s mizerným titulkem. Co

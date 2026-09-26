@@ -322,6 +322,22 @@ export interface CelkovyStav {
   shrnuti: string;
   /** Kolik nových signálů přibylo od poslední aktualizace. */
   noveSignaly: { celkem: number; vysoke: number; stredni: number; kriticke: number };
+  /**
+   * Mimořádný signál vyhodnocený redakcí (data/mimoradne-signaly.json).
+   * Když platí, `uroven` je o jeden stupeň nad `zakladni` — spočtenou z případů.
+   */
+  mimoradny?: { zakladni: Uroven; kratce: string; proc: string; mez: string; zaznam: string | null; platiDo: string } | null;
+}
+
+/** Položka data/mimoradne-signaly.json. */
+export interface MimoradnySignal {
+  id: string;
+  zaznam: string | null;
+  vyhodnoceno: string;
+  platiDo: string;
+  kratce: string;
+  proc: string;
+  mez: string;
 }
 
 /* ---------------- archiv v čase ---------------- */
