@@ -1,5 +1,39 @@
 [
   {
+    "id": "k-b51ed3e5df922403",
+    "zachyceno": "2026-09-26T02:02:19.631Z",
+    "publikovano": "2026-09-26T00:42:00.000Z",
+    "zdroj": {
+      "nazev": "Ukrinform (anglicky)",
+      "url": "https://www.ukrinform.net/rubric-ato/4167857-moldova-finds-fragments-of-another-drone-marked-geran4.html",
+      "typ": "wire",
+      "primarni": false
+    },
+    "titulek": "Moldova finds fragments of another drone marked Geran-4",
+    "titulekPuvodni": "Moldova finds fragments of another drone marked Geran-4",
+    "shrnuti": "Moldovan police found Geran-4 markings on some components of a drone discovered in the Briceni district on the evening of Thursday, September 24.",
+    "kodZeme": "MD",
+    "zeme": "Moldavsko",
+    "kategorie": [
+      "drony"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "fragment+dron",
+      "dron",
+      "drone"
+    ],
+    "naliehave": null,
+    "stav": "ceka",
+    "vyrez": {
+      "text": "Moldova finds fragments of another drone marked Geran-4\n\r\nSubscription\nNewsletters\nPhotobank\nUkrinform - Ukrainian National News Agency\nFounded in 1918\nSaturday, 26 September 2026, 05:02\nWar\nEconomy\nSports\nMore ☰\nContacts\nEng\nУкр\nEng\nEsp\nDeu\nعربي\nFra\n日本語\nPol\n&times;\nAll topics\nWar\nRecovery of Ukraine\nPolitics\nEconomy\nFact checks\nDefense\nSociety and Culture\nSports\nCrime\nAccidents and Emergencies\nAgency\nInformation on Agency\nOur Contacts\nSubscribtion Terms\nOur Services\nPrivacy policy and personal data protection\nAdditional\nPublications\nInterviews\nPhoto\nVideo\nLongreads\nReleases\nServices\nSubscription\nNewsletters\nPhotobank\n\r\n\r\n\r\nMoldovan police found Geran-4 markings on some components of a drone discovered in the Briceni district on the evening of Thursday, September 24.\nAccording to Ukrinform, NewsMaker stated this in an article.\n\r\n\r\nAccording to law enforcement officials, the drone exploded outside the residential area of the village of Cotiujeni in Briceni district at an altitude of 10 meters after colliding with trees. The blast wave damaged trees within a radius of approximately 25 meters.\n\r\n\r\nEmergency services found fragments of a fiberglass body, electronic components, cables…",
+      "stazeno": "2026-09-26T02:02:19.778Z",
+      "stav": 200
+    }
+  },
+  {
     "id": "k-ec2d7715fd646d29",
     "zachyceno": "2026-09-26T00:02:26.991Z",
     "publikovano": "2026-09-25T23:25:00.000Z",
@@ -12051,48 +12085,6 @@
     "vyrez": {
       "text": "Google News",
       "stazeno": "2026-09-15T06:02:45.216Z",
-      "stav": 200
-    },
-    "naliehave": null,
-    "vyrizeni": {
-      "kdy": "2026-09-19T19:56:38.778Z",
-      "duvod": "zdroj-navrhu",
-      "patriK": null,
-      "poznamka": null
-    }
-  },
-  {
-    "id": "k-36620d6356152f1c",
-    "zachyceno": "2026-09-15T04:02:38.573Z",
-    "publikovano": "2026-09-15T03:39:00.000Z",
-    "zdroj": {
-      "nazev": "Google News — drones airspace NATO",
-      "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxOMFZoZkwzV18xemh3Zm1UeVdoNk03c3d4TVBIQWd6b1JZY2s2NWEwc3hCTlBsMVIzZGZjcmcwVEFBcnJjeWp1bzVBNnQ4VFIyTFFZbnZqMGx3T0NsQWpsM20zQnFaUVRodE5YODY3Q0Y1LUU3OHNYYnc5UUN5UVBZWE1qa0I2MjVmMF9IYUpwSHpicVYzNE8yWDNmRWc5T0wyYzczcmxuYnRrLXlH?oc=5",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Nato jets shoot down drone violating Lithuania’s airspace - The Guardian",
-    "titulekPuvodni": "Nato jets shoot down drone violating Lithuania’s airspace - The Guardian",
-    "shrnuti": "",
-    "kodZeme": "LT",
-    "zeme": "Litva",
-    "kategorie": [
-      "drony",
-      "nato"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "shody": [
-      "violat+airspace",
-      "dron",
-      "drone",
-      "airspace",
-      "nato"
-    ],
-    "stav": "vyrizen",
-    "vyrez": {
-      "text": "Google News",
-      "stazeno": "2026-09-15T04:02:38.617Z",
       "stav": 200
     },
     "naliehave": null,
