@@ -1,5 +1,44 @@
 [
   {
+    "id": "k-5cbfc12dcb14fda3",
+    "zachyceno": "2026-09-26T06:34:19.901Z",
+    "publikovano": "2026-09-26T06:23:16.000Z",
+    "zdroj": {
+      "nazev": "SME (Slovensko)",
+      "url": "https://www.sme.sk/svet/c/v-nemecku-zadrzali-osoby-napojene-na-rusku-vojensku-rozviedku-skupina-posobila-zo-slovenska?utm_source=rss&utm_medium=feed&utm_campaign=www-rss",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "V Nemecku zadržali osoby napojené na ruskú vojenskú rozviedku, skupina pôsobila zo Slovenska",
+    "titulekPuvodni": "V Nemecku zadržali osoby napojené na ruskú vojenskú rozviedku, skupina pôsobila zo Slovenska",
+    "shrnuti": "Dvojica údajne plánovala aj prekazený útok na dronový závod Skyeton pri Prešove.",
+    "kodZeme": "SK",
+    "zeme": "Slovensko",
+    "kategorie": [
+      "hybridni",
+      "zpravodajske",
+      "drony",
+      "rusko"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "utok na",
+      "zadrz+rusk",
+      "dron",
+      "rusk"
+    ],
+    "naliehave": null,
+    "stav": "ceka",
+    "vyrez": {
+      "text": "",
+      "stazeno": "2026-09-26T06:34:21.774Z",
+      "stav": 403,
+      "chyba": "HTTP 403"
+    }
+  },
+  {
     "id": "k-3b25aa2dbb37cef8",
     "zachyceno": "2026-09-26T06:10:45.271Z",
     "publikovano": "2026-09-26T05:59:00.000Z",
@@ -12043,46 +12082,6 @@
     "vyrizeni": {
       "kdy": "2026-09-19T19:56:38.778Z",
       "duvod": "navrh",
-      "patriK": null,
-      "poznamka": null
-    }
-  },
-  {
-    "id": "k-78ea89905c91bdb6",
-    "zachyceno": "2026-09-15T06:02:44.951Z",
-    "publikovano": "2026-09-15T05:55:16.000Z",
-    "zdroj": {
-      "nazev": "Google News — sabotage Europe",
-      "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxQRDRiSk1zTGFzalVzWFc5WjUwZy1KMXJGNHc4dmoyZUxOM2NuRlZIb0JhUU5yQVdxU0JuazQtbWZENFMxUXdVVmdBd0drTlNBcjRQc2NzU2tWYlBRQlNWcEdyaHNSSUNiZV96VXNTNFg3OGktM1BWZzc1cXlSRDRaWk5nbFdrTG16dHdoeUVPb1pmN0hualdDaQ?oc=5",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Arson, sabotage and 'disposable agents': How Russia is waging a covert war across Europe - RBC-Ukraine",
-    "titulekPuvodni": "Arson, sabotage and 'disposable agents': How Russia is waging a covert war across Europe - RBC-Ukraine",
-    "shrnuti": "Arson, sabotage and '",
-    "kodZeme": "UA",
-    "zeme": "Ukrajina",
-    "kategorie": [
-      "sabotaz",
-      "rusko"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "shody": [
-      "sabotage",
-      "arson",
-      "russia"
-    ],
-    "stav": "vyrizen",
-    "vyrez": {
-      "text": "Google News",
-      "stazeno": "2026-09-15T06:02:45.027Z",
-      "stav": 200
-    },
-    "naliehave": null,
-    "vyrizeni": {
-      "kdy": "2026-09-19T19:56:38.778Z",
-      "duvod": "neudalost",
       "patriK": null,
       "poznamka": null
     }
