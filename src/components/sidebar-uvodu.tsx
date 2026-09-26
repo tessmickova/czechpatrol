@@ -10,6 +10,7 @@ import type { CelkovyStav, Kampan, Kandidat, Overovana, Uroven } from "@/lib/typ
 import { casPraha } from "@/lib/cas";
 import { useT } from "@/lib/i18n";
 import { BUY_ME_A_COFFEE_URL, HEROHERO_URL } from "@/config/web";
+import { PIZZA_INDEX, VEN } from "@/config/odkazy-ven";
 import { Ikona } from "./ikony";
 import { ObloukovyMerak } from "./mericky";
 import { Cara, poDnech, Sloupky } from "./mikrograf";
@@ -133,6 +134,17 @@ export function SidebarUvodu({ stav, cr, crHistoricky, crPocet, obcane, pulz, pr
             ))}
           </div>
           <p className="mt-2 px-1 text-mikro text-tlum2 max-lg:hidden">Případy a operace proti občanům v Evropě. <Link href="/metodika/" className="odkaz">Jak se hodnotí</Link>.</p>
+          {/* Pizza index: kuriozita z otevřených zdrojů, jasně oddělená od našeho měření (26. 9. 2026). */}
+          <div className="mt-2 flex items-center gap-2 px-1 text-mikro text-tlum">
+            {/* Spouštěč na začátku řádku: bublina začne u levého okraje karty a vejde se. */}
+            <Napoveda popis={<span className="block">{PIZZA_INDEX.popis}</span>} label="Co je Pizza index" nahoru>
+              <span className="inline-flex cursor-help items-center gap-1.5 text-inkoust">
+                <Ikona nazev="pizza" velikost={15} tah={1.8} />
+                <span className="underline decoration-dotted underline-offset-4">Pizza index</span>
+              </span>
+            </Napoveda>
+            <a href={PIZZA_INDEX.url} target="_blank" rel={VEN} className="odkaz">otevřít ↗</a>
+          </div>
         </div>
       </section>
 
