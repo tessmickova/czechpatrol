@@ -40,7 +40,7 @@ function Maly({ nadpis, obdobi, uroven, slovo, neutralni, popis, dodatek, graf }
         <span className="whitespace-nowrap text-mikro font-semibold text-tlum">{nadpis} <span className="font-normal text-tlum2">· {obdobi}</span></span>
         <span className="mt-1.5 flex items-center gap-2">
           <span aria-hidden className={`h-[8px] w-[8px] shrink-0 rounded-full ${pasmo ? pasmo.tecka : neutralni ? "bg-tlum2" : "bg-klid"}`} />
-          <span className={`text-zaklad font-bold leading-tight ${pasmo ? pasmo.text : neutralni ? "text-tlum" : "text-klid-text"}`}>{slovo ?? (uroven ? UROVNE[uroven].nazev : "Bez incidentu")}</span>
+          <span className={`text-zaklad font-bold leading-tight ${pasmo ? pasmo.text : neutralni ? "text-tlum" : "text-klid-text"}`}>{slovo ?? (uroven ? UROVNE[uroven].nazev : "Bez záznamu")}</span>
         </span>
         {graf && <span className="mt-1.5 flex items-end justify-between gap-2 text-mikro text-tlum2">{graf}</span>}
       </span>
@@ -82,10 +82,10 @@ export function SidebarUvodu({ stav, cr, crHistoricky, crPocet, obcane, pulz, pr
       {/* Souhrn situace a Právě ověřujeme vedle sebe: jedna řádka, zbytek po najetí (24. 9. 2026). */}
       <div className="grid grid-cols-2 gap-3">
         <Napoveda cele popis={<span className="block">{nal.dodatek && <span className="mb-1.5 block text-inkoust">{nal.dodatek}</span>}{pulz && <span className="block text-tlum2">Za 24 h: {pulz.zachyceno24} zachyceno, {pulz.overeno24} ověřeno, {pulz.zdrojuOk} z {pulz.zdrojuCelkem} zdrojů odpovědělo.</span>}{kontrola && <span className="mt-1.5 block text-tlum2">Zdroje čteny {casPraha(kontrola)}.</span>}</span>}>
-          <span role="status" aria-label="Souhrn situace" className={`flex min-h-[92px] w-full flex-col justify-between rounded-[22px] border px-4 py-3 text-left ${nal.ton === "deje" ? "border-akcent/70 bg-akcent/[0.05]" : nal.ton === "klid" ? "border-klid/60 bg-klid/[0.05]" : "border-linka bg-plocha2/40"}`}>
+          <span role="status" aria-label="Souhrn situace" className={`flex min-h-[92px] w-full flex-col justify-between rounded-[22px] border px-4 py-3 text-left ${nal.ton === "deje" ? "border-akcent/70 bg-akcent/[0.05]" : nal.ton === "klid" ? "border-linka bg-plocha2/40" : "border-linka bg-plocha2/40"}`}>
             <span className="nadpis-boxu flex items-center gap-2"><IkonaKruh ikona="info" velikost="s" /> Souhrn situace</span>
             <span className="flex items-start gap-2 text-male font-bold leading-snug text-inkoust">
-              <span aria-hidden className={`mt-[6px] h-[7px] w-[7px] shrink-0 rounded-full ${nal.ton === "deje" ? "bg-akcent" : nal.ton === "klid" ? "bg-klid" : "bg-tlum2"}`} />
+              <span aria-hidden className={`mt-[6px] h-[7px] w-[7px] shrink-0 rounded-full ${nal.ton === "deje" ? "bg-akcent" : nal.ton === "klid" ? "bg-tlum2" : "bg-tlum2"}`} />
               <span>{nal.text}</span>
             </span>
           </span>
@@ -119,10 +119,10 @@ export function SidebarUvodu({ stav, cr, crHistoricky, crPocet, obcane, pulz, pr
           </div>
           <MimoradnySignalPoznamka stav={stav} className="mt-2" />
           <div className="mt-3 grid grid-cols-2 gap-3">
-            <Maly nadpis={t("Česko")} obdobi="90 dní" uroven={cr} slovo={cr ? undefined : "Bez incidentu"} popis={crPopis} dodatek={crHistoricky ? `Nejvýš od roku 2014: ${UROVNE[crHistoricky].nazev.toLowerCase()}.` : undefined}
+            <Maly nadpis={t("Česko")} obdobi="90 dní" uroven={cr} slovo={cr ? undefined : "Bez záznamu"} neutralni={!cr} popis={crPopis} dodatek={crHistoricky ? `Nejvýš od roku 2014: ${UROVNE[crHistoricky].nazev.toLowerCase()}.` : undefined}
               graf={<><span className="text-tlum"><Sloupky hodnoty={seskup(cz90, 12)} sirka={56} vyska={18} popis="Případy v Česku po týdnech" /></span><span>{cz90.reduce((a, b) => a + b, 0)} za 90 dní</span></>} />
             <Maly nadpis={t("Běžný život")} obdobi="teď" uroven={obcane.uroven} slovo={obcane.slovo} neutralni={obcane.neutralni} popis={obcane.popis}
-              graf={<span>{obcane.neovereno ? `${obcane.neovereno} bez údaje` : "vše zkontrolováno"}</span>} />
+              graf={<span>{obcane.neovereno ? `${obcane.neovereno} bez údaje` : "orientační kontrola"}</span>} />
           </div>
           <div className="mt-3 grid grid-cols-4 gap-2 max-lg:hidden">
             {[["dnes", soucet(1)], ["7 dní", soucet(7)], ["30 dní", soucet(30)], ["90 dní", soucet(90)]].map(([n, v]) => (

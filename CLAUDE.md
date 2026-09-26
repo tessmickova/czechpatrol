@@ -288,6 +288,14 @@ u hodnocení vždy řekne, že jde o naše vyhodnocení, že výrok nemusí být
 pravdivý a jaká by úroveň byla bez něj. Předpověď to není a psát se tak
 nesmí (pravidlo č. 3c). Hlídá to `nastroje/kontrola-dat.mjs`.
 
+**Rychlý přehled (26. 9. 2026, `docs/RYCHLY-PREHLED.md`).** Z toho, že
+jsme nic nenašli, neplyne, že nic není — texty to říkají v nadpisu, ne
+v drobném písmu. Pokyn obyvatelům jen doslova z originálu vydavatele;
+naše hodnocení ani AI nikdy nevyvolá okamžité upozornění. Čerstvost se
+počítá od posledního ÚSPĚCHU zdroje podle `data/cerstvost-zdroju.json`,
+v prohlížeči se skutečným časem. Technický výpadek není bezpečnostní
+poplach. Zakázané věty hlídá test (`ZAKAZANE_FORMULACE`).
+
 ## Pravidlo č. 4a — nic se nezahazuje, ale nic se ani nepřeklápí samo
 
 Síto na klíčová slova nikdy nepozná vážnou zprávu s mizerným titulkem. Co

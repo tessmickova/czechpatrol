@@ -59,9 +59,14 @@ export const DORUCOVANI = {
     bezi: true,
     nazev: "Telegram",
     /** Co do kanálu opravdu chodí. Nesmí slibovat víc, než workflow dělá. */
-    rozsah: "Mimořádná výstraha a vážné případy odcházejí hned. U pěti nejzávažnějších témat posíláme i neověřený signál — vždy označený, s odkazem na zdroj. Ostatní ověřené záznamy jednou denně v souhrnu; v den, kdy žádný není, přijde místo něj přehled toho, co sběr zachytil, a tipy k přípravě.",
+    /*
+      26. 9. 2026 opraveno podle kódu: neověřené signály pěti témat chodí jen
+      správci (rozhlas.mjs, komu: "spravce"), ne do kanálu. Veřejně jdou jen
+      vážné neověřené návrhy se dvěma nezávislými zdroji, označené.
+    */
+    rozsah: "Mimořádná výstraha a vážné ověřené případy odcházejí průběžně. Vážnou neověřenou zprávu pošleme jen se dvěma nezávislými zdroji a vždy označenou jako neověřenou. Ostatní ověřené záznamy v přehledu dne. Doručení zaručit neumíme: kanál závisí na běhu našeho sběru i na Telegramu.",
     /** Podle .github/workflows/rozhlas.yml. Změna workflow = změna téhle věty. */
-    kadence: "průběžně u vážných, denní souhrn v 19:00 (v zimě v 18:00)",
+    kadence: "průběžně u vážných, přehled dne v 7:00 a 19:00 (v zimě v 6:00 a 18:00)",
   },
   rss: {
     bezi: true,

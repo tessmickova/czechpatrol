@@ -466,6 +466,40 @@ if (fs.existsSync(path.join(koren, "data", "souhrn-situace.json"))) {
   for (const id of souhrn.podklady ?? []) if (!idZaznamu.has(id)) varovani.push(`souhrn situace: podklad ${id} není zveřejněný záznam`);
 }
 
+/* ---------- Rychlý přehled: meze čerstvosti a nová pole (26. 9. 2026) ---------- */
+{
+  const k = cti("cerstvost-zdroju.json");
+  const beh = fs.existsSync(path.join(koren, "data", "fronta", "posledni-beh.json")) ? cti("fronta/posledni-beh.json") : null;
+  const zname = new Set((beh?.zdroje ?? []).map((z) => z.klic));
+  if (!(k.beh?.zpozdenoPoMin < k.beh?.nelzePotvrditPoMin)) chyby.push("cerstvost-zdroju: beh.zpozdenoPoMin musí být menší než nelzePotvrditPoMin");
+  if (!k.skupiny?.some((sk) => sk.zasadni)) chyby.push("cerstvost-zdroju: žádná skupina není zásadní — hlavní souhrn by neměl z čeho vycházet");
+  const videne = new Set();
+  for (const sk of k.skupiny ?? []) {
+    if (!(sk.zpozdenoPoMin < sk.nedostupnePoMin)) chyby.push(`cerstvost-zdroju/${sk.klic}: zpozdenoPoMin musí být menší než nedostupnePoMin`);
+    if (!sk.proc) chyby.push(`cerstvost-zdroju/${sk.klic}: chybí zdůvodnění mezí (proc)`);
+    for (const z of sk.zdroje ?? []) {
+      if (videne.has(z)) chyby.push(`cerstvost-zdroju: zdroj ${z} je ve dvou skupinách`);
+      videne.add(z);
+      if (zname.size && !zname.has(z)) varovani.push(`cerstvost-zdroju: zdroj ${z} sběr nezná — v přehledu bude „nedostupný“`);
+    }
+  }
+  for (const z of zname) if (!videne.has(z)) varovani.push(`cerstvost-zdroju: zdroj ${z} není v žádné skupině — přehled ho neukáže`);
+
+  const KRAJE = new Set(["Hlavní město Praha", "Středočeský", "Jihočeský", "Plzeňský", "Karlovarský", "Ústecký", "Liberecký", "Královéhradecký", "Pardubický", "Vysočina", "Jihomoravský", "Olomoucký", "Zlínský", "Moravskoslezský"]);
+  const vs = cti("vystraha.json");
+  for (const v of [vs.aktivni, ...(vs.archiv ?? [])].filter(Boolean)) {
+    const kde = `výstraha ${v.klic}`;
+    if (v.vydavatel && !/^https:\/\//.test(v.originalUrl ?? "")) chyby.push(`${kde}: vydavatel bez odkazu na originál — jako oficiální se nesmí ukázat`);
+    if (v.pokyn && !v.vydavatel) chyby.push(`${kde}: pokyn bez vydavatele — pokyn smí být jen doslova z originálu`);
+    for (const kraj of v.uzemi?.kraje ?? []) if (!KRAJE.has(kraj)) chyby.push(`${kde}: neznámý kraj „${kraj}“`);
+    if (v.platiOd && v.platiDo && v.platiOd > v.platiDo) chyby.push(`${kde}: platiOd je po platiDo`);
+  }
+  for (const n of cti("nepotvrzeno.json")) {
+    const o = n.oznacenoUradem;
+    if (o && (!o.vydavatel || !/^https:\/\//.test(o.url ?? "") || !platneDatum(o.kdy))) chyby.push(`nepotvrzeno/${n.id}: označení úřadem bez vydavatele, odkazu nebo data`);
+  }
+}
+
 /* ---------- mimořádné signály redakce (pravidlo č. 4, výjimka b) ---------- */
 /* Pojistky, aby výjimka zůstala malá: nejvýš 14 dní, doložený záznam, povinně řečené meze. */
 if (fs.existsSync(path.join(koren, "data", "mimoradne-signaly.json"))) {

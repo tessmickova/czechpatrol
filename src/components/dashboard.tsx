@@ -7,6 +7,9 @@ import { SidebarUvodu } from "./sidebar-uvodu";
 import type { Pulz } from "@/lib/pulz";
 import type { SouhrnSituace } from "@/lib/souhrn-situace";
 import { VetaSituace } from "./veta-situace";
+import { RychlyPrehled } from "./rychly-prehled";
+import type { KonfiguraceCerstvosti } from "@/lib/prehled/model";
+import type { SnimekPrehledu } from "@/lib/prehled/typy";
 import { UVOD_V2 } from "@/config/web";
 import Link from "next/link";
 import { pripady, type Zaznam } from "@/lib/agregace";
@@ -403,7 +406,7 @@ const TECKA_SLUZBY: Record<StavSluzby, string> = { provoz: "bg-klid", omezeni: "
 
 export function Dashboard({
   stav, pravni, natoPolozky, provozPolozky, overeno, vse, neprosle, kandidati, nepotvrzene = [], tydny, watchlist, crHistoricky, hybridni, obcane, ted, snimky = [], nastroje = [],
-  tlakEvropa, tlakCesko, veta, kampane, nazvyZemi, overovaneAktivni = [], overovaneUzavrene = [], priprava, pulz, souhrn,
+  tlakEvropa, tlakCesko, veta, kampane, nazvyZemi, overovaneAktivni = [], overovaneUzavrene = [], priprava, pulz, souhrn, prehled,
 }: {
   stav: CelkovyStav; pravni: PravniPolozka[]; natoPolozky: NatoPolozka[]; provozPolozky: ProvozniPolozka[];
   /** Čas sestavení. Klient z něj vychází, aby se první vykreslení shodlo. */
@@ -424,6 +427,8 @@ export function Dashboard({
   pulz?: Pulz;
   /** Věta pod nadpisem od ověřovatele (AI shrnutí); prázdná = věta z úředního stavu. */
   souhrn?: SouhrnSituace;
+  /** Rychlý přehled: snímek zdrojů a informací + meze čerstvosti (src/lib/prehled). */
+  prehled?: { snimek: SnimekPrehledu; konfigurace: KonfiguraceCerstvosti };
 }) {
   const t = useT();
   const platiCr = pravni.filter((p) => p.plati === true);
@@ -548,11 +553,19 @@ export function Dashboard({
               <span className="stitek-znacky">{t("Bezpečnostní přehled")}</span>
             </div>
             <h1 className="titul-sekce">{t("Bezpečnostní situace v Česku a okolí")}</h1>
-            <VetaSituace souhrn={souhrn ?? { veta: null, aktualizovano: null, podklady: [] }} veta={veta} kontrola={pulz?.kdy ?? overeno} ted={tedMs} />
-            {/* Stav naléhavosti nese postranní Souhrn situace; tady jen cesta k upozornění. */}
-            <div className="mt-4"><Tlacitko kam="/odber/" varianta="plny" velikost="m" ikona="zvonek">Přihlásit upozornění</Tlacitko></div>
+            {/*
+              Rychlý přehled (26. 9. 2026) nahrazuje větu z úředního stavu.
+              Ta tvrdila „v kontrolovaných zdrojích žádné celostátní omezení“
+              bez ohledu na to, jestli sběr běží — přehled to říká i s časem
+              kontroly a stavem zdrojů. Shrnutí ověřovatele zůstává, jen když je.
+            */}
+            {souhrn?.veta && <VetaSituace souhrn={souhrn} veta={veta} kontrola={pulz?.kdy ?? overeno} ted={tedMs} />}
+            {prehled
+              ? <RychlyPrehled snimek={prehled.snimek} konfigurace={prehled.konfigurace} ted={ted} />
+              : <VetaSituace souhrn={souhrn ?? { veta: null, aktualizovano: null, podklady: [] }} veta={veta} kontrola={pulz?.kdy ?? overeno} ted={tedMs} />}
+            <div className="mt-4"><Tlacitko kam="/odber/" varianta="obrys" velikost="m" ikona="zvonek">Odběr zpráv</Tlacitko></div>
           </div>
-          <div className="order-3 min-w-0 lg:order-none lg:col-start-1 lg:row-start-2"><AktualitySloupce zaznamy={vse} nepotvrzene={nepotvrzene} kandidati={kandidati} /></div>
+          <div id="podrobny-monitoring" className="order-3 min-w-0 scroll-mt-20 lg:order-none lg:col-start-1 lg:row-start-2"><AktualitySloupce zaznamy={vse} nepotvrzene={nepotvrzene} kandidati={kandidati} /></div>
           <div className="order-2 min-w-0 lg:order-none lg:col-start-2 lg:row-span-2 lg:row-start-1">
           <SidebarUvodu stav={stav} cr={cr} crHistoricky={crHistoricky} crPocet={crPocet} obcane={obcane} pulz={pulz} priprava={priprava} vse={vse} kampane={kampane} kandidati={kandidati} zkontrolovano={overeno} overovane={overovaneAktivni} ted={tedMs}
             tipy={<MiniBox nazev="Tipy k přípravě" ikona="fajfka" ton="klid" souhrn={tipyNahled.length ? tipyNahled[0].nadpis : "Zatím bez tipu"}><TipyKPriprave ted={tedMs} vnoreny /></MiniBox>} />
@@ -666,7 +679,7 @@ export function Dashboard({
         {/* Postranní sloupec stejné šířky jako nahoře: dodávky a služby, výpadky provozovatelů, ceny paliv, tipy. */}
         <aside aria-label="Dodávky, služby a ceny" className="min-w-0 space-y-4">
           <section className="overflow-hidden rounded-[22px] bg-plocha">
-            <HlavickaWidgetu ikona="elektrina" nazev="Dodávky a služby" meta={<span>{naruseno.length ? `${naruseno.length} narušeno` : sledujeme.length ? `${sledujeme.length} sledujeme` : "vše běžně"}</span>} napoveda={<span className="block">Elektřina, plyn, spojení, banky, paliva a další podle úředních a provozních zdrojů. Narušené a sledované napřed.</span>} />
+            <HlavickaWidgetu ikona="elektrina" nazev="Dodávky a služby" meta={<span>{naruseno.length ? `${naruseno.length} narušeno` : sledujeme.length ? `${sledujeme.length} sledujeme` : "bez hlášených potíží"}</span>} napoveda={<span className="block">Elektřina, plyn, spojení, banky, paliva a další podle úředních a provozních zdrojů. Narušené a sledované napřed.</span>} />
             <ul className="px-3 pb-3">
               {[...naruseno, ...sledujeme, ...provozPolozky.filter((p) => p.stav !== "narusen" && p.stav !== "sledujeme")].slice(0, 8).map((p) => (
                 <li key={p.klic} className={p.stav === "bezny" ? "max-lg:hidden" : ""}>

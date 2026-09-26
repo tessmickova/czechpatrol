@@ -37,6 +37,9 @@ self.addEventListener("fetch", (u) => {
   if (request.method !== "GET") return;
   const url = new URL(request.url);
   if (url.origin !== self.location.origin) return;
+  // Snímek Rychlého přehledu jde vždy rovnou na síť a nikam se neukládá:
+  // kopie z cache by po výpadku sběru vypadala jako čerstvá odpověď.
+  if (url.pathname === "/prehled.json") return;
 
   if (url.pathname.startsWith("/_next/static/")) {
     u.respondWith(
