@@ -16,7 +16,7 @@ export function Vlajka({ kod, velka = false }: { kod: string; velka?: boolean })
     ? String.fromCodePoint(...[...k].map((c) => 0x1f1e6 + c.charCodeAt(0) - 65))
     : k === "EU" ? "🇪🇺" : "🏳️";
   return (
-    <span aria-label={k} title={k} className={`inline-block shrink-0 ${velka ? "text-cislo leading-none" : "text-vetsi leading-none"}`}>
+    <span role="img" aria-label={k} className={`inline-block shrink-0 ${velka ? "text-cislo leading-none" : "text-vetsi leading-none"}`}>
       {emoji}
     </span>
   );

@@ -69,12 +69,13 @@ export function TabulkaZemi({ maxZemi = 12 }: { maxZemi?: number }) {
               const tlak = tlakZeme(z.kodZeme);
               const podle = new Map(tlak.podkategorie.map((o) => [o.klic, o.uroven]));
               return (
-                <tr key={z.kodZeme} className="hover:bg-plocha2">
+                <tr key={z.kodZeme}>
                   <th scope="row" className="sticky left-0 z-10 bg-plocha px-4 py-2 text-left font-semibold text-inkoust">
-                    <span className="flex items-center gap-2 whitespace-nowrap">
+                    {/* Odkaz i na názvu: řádek se při najetí zvýrazní a klepnutí na zemi nedělalo nic (audit mrtvých kliků 26. 9. 2026). */}
+                    <Link href={`/zeme/${z.kodZeme.toLowerCase()}/`} className="flex min-h-[32px] items-center gap-2 whitespace-nowrap hover:text-akcent">
                       <Vlajka kod={z.kodZeme} />
                       {z.zeme}
-                    </span>
+                    </Link>
                   </th>
                   {SLOUPCE.map((s) => {
                     const u = podle.get(s.klic) ?? null;

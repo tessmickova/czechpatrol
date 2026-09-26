@@ -21,6 +21,15 @@ export const BUY_ME_A_COFFEE_URL = "";
 export const HEROHERO_URL = "";
 
 /** Verze a datum poslední revize metodiky. Změna verze = zápis do /opravy/. */
+/*
+  Jak často běží sběr — jediné místo pro texty na webu (26. 9. 2026).
+  Web do té doby na šesti místech tvrdil „každých 30 minut“, ale worker
+  spouští sběr nejdřív po 60 minutách a při nedostatku minut až po 240
+  (api/src/minuty.ts, KADENCE). Test testy/texty-kadence.test.ts hlídá,
+  aby se „30 minut“ nevrátilo.
+*/
+export const SBER_JAK_CASTO = "zhruba jednou za hodinu";
+
 export const METODIKA_VERZE = "2";
 export const METODIKA_REVIDOVANA = "2026-09-24";
 
