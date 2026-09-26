@@ -266,6 +266,14 @@ const REDAKCE: ZdrojUdalosti[] = [
   { klic: "ctk", nazev: "ČTK — České noviny", url: "https://www.ceskenoviny.cz/sluzby/rss/zpravy.php", jazyk: "cs", primarni: false, typ: "wire" },
   { klic: "aktualne", nazev: "Aktuálně.cz", url: "https://www.aktualne.cz/rss/", jazyk: "cs", primarni: false, typ: "media" },
   { klic: "denikn", nazev: "Deník N", url: "https://denikn.cz/feed/", jazyk: "cs", primarni: false, typ: "media" },
+  /*
+    Doplněno 26. 9. 2026 na přání provozovatelky: jeden menší, nezávislý
+    zdroj mimo velké redakce. CZ Defence je odborný magazín o armádě,
+    obraně a bezpečnosti — píše o našich tématech, ne o domácích
+    politických šarvátkách. Kanál RSS se z vývojového prostředí ověřit
+    nedal (blokovaná síť), proto titulní stránka: sběr ji čte jako stránku.
+  */
+  { klic: "czdefence", nazev: "CZ Defence", url: "https://www.czdefence.cz/", jazyk: "cs", primarni: false, typ: "media" },
   { klic: "bbc-europe", nazev: "BBC News — Europe", url: "https://feeds.bbci.co.uk/news/world/europe/rss.xml", jazyk: "en", primarni: false, typ: "media" },
   { klic: "dw-europe", nazev: "Deutsche Welle — Europe", url: "https://rss.dw.com/rdf/rss-en-eu", jazyk: "en", primarni: false, typ: "media" },
   { klic: "yle-en", nazev: "Yle News (Finsko)", url: "https://yle.fi/rss/t/18-205950/en", jazyk: "en", primarni: false, typ: "media" },

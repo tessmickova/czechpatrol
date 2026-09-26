@@ -168,8 +168,9 @@ export function AktualitySloupce({ zaznamy, nepotvrzene = [], kandidati = [], te
       země jsou mimo rozsah (CLAUDE.md, rozsah války); na úvod jdou jen
       naléhavé. Zbytek posoudí ověřovatel ve frontě.
     */
+    // Bez času vydání (ručně zapsané, když redakce čas neuvede) platí čas zachycení — jinak by zpráva spadla na konec seznamu.
     ...kandidati.filter((k) => jeCesky(k.titulek) && !jeJenProjev(k.titulek) && (k.naliehave || (k.kodZeme !== "UA" && k.kodZeme !== "RU"))).map((k): Radek => ({
-      klic: `k-${k.id}`, kam: k.zdroj.url, ven: true, kodZeme: k.kodZeme, zeme: k.zeme, kdy: k.publikovano, titulek: k.titulek, stitek: "zachyceno", pruh: "bg-tlum2",
+      klic: `k-${k.id}`, kam: k.zdroj.url, ven: true, kodZeme: k.kodZeme, zeme: k.zeme, kdy: k.publikovano ?? k.zachyceno, titulek: k.titulek, stitek: "zachyceno", pruh: "bg-tlum2",
       zavaznost: null, jistota: null, kategorie: k.kategorie.map((c) => KATEGORIE[c as Kategorie]?.nazev ?? c), text: k.shrnuti || null, textPopis: "Zachyceno", zdroj: { nazev: k.zdroj.nazev, url: k.zdroj.url },
     })),
   ].sort(serad).slice(0, 40);

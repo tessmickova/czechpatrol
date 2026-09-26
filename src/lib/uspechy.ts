@@ -47,26 +47,34 @@ const PRAVIDLA: [Slozka, RegExp][] = [
   ["policie", /polic|police|žalob|zalob|zastupitel|prokur|soud|odsou[zd]|convict|zatk|zadrž|zadrz|obvin|obžal|arrest|charged|indict/i],
 ];
 
-export type Oblast = "vse" | "cr" | "evropa";
+/*
+  Pořadí podle blízkosti (rozhodnutí provozovatelky 26. 9. 2026): nejdřív
+  Česko, pak V4 (Slovensko, Polsko, Maďarsko), pak ostatní Evropa. Karta
+  otevírá Česko; „Vše“ je poslední a řadí podle data.
+*/
+export type Oblast = "cr" | "v4" | "evropa" | "vse";
 
 export const OBLASTI: { klic: Oblast; nazev: string }[] = [
-  { klic: "vse", nazev: "Vše" },
   { klic: "cr", nazev: "Česko" },
+  { klic: "v4", nazev: "V4" },
   { klic: "evropa", nazev: "Evropa" },
+  { klic: "vse", nazev: "Vše" },
 ];
 
+const V4 = new Set(["SK", "PL", "HU"]);
+
 /*
-  Evropské státy kromě Česka (a „EU“ pro celounijní kroky). Seznam, ne
-  „všechno kromě CZ“: obžaloba v USA by jinak ve filtru „Evropa“ klamala.
-  Co tu není, se ukáže jen pod „Vše“. Rusko a Bělorusko vyřadí už výběr.
+  Ostatní evropské státy (a „EU“ pro celounijní kroky). Seznam, ne „všechno
+  ostatní“: obžaloba v USA by jinak ve filtru „Evropa“ klamala. Co tu není,
+  se ukáže jen pod „Vše“. Rusko a Bělorusko vyřadí už výběr.
 */
 const EVROPA = new Set([
-  "AL", "AD", "AT", "BA", "BE", "BG", "CH", "CY", "DE", "DK", "EE", "ES", "EU", "FI", "FR", "GB", "GR", "HR", "HU", "IE", "IS",
-  "IT", "LI", "LT", "LU", "LV", "MC", "MD", "ME", "MK", "MT", "NL", "NO", "PL", "PT", "RO", "RS", "SE", "SI", "SK", "SM", "UA", "VA", "XK",
+  "AL", "AD", "AT", "BA", "BE", "BG", "CH", "CY", "DE", "DK", "EE", "ES", "EU", "FI", "FR", "GB", "GR", "HR", "IE", "IS",
+  "IT", "LI", "LT", "LU", "LV", "MC", "MD", "ME", "MK", "MT", "NL", "NO", "PT", "RO", "RS", "SE", "SI", "SM", "UA", "VA", "XK",
 ]);
 
 export const vOblasti = (u: Pick<Uspech, "kodZeme">, o: Oblast) =>
-  o === "vse" || (o === "cr" ? u.kodZeme === "CZ" : EVROPA.has(u.kodZeme));
+  o === "vse" || (o === "cr" ? u.kodZeme === "CZ" : o === "v4" ? V4.has(u.kodZeme) : EVROPA.has(u.kodZeme));
 
 export interface Uspech {
   slug: string;

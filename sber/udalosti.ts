@@ -340,6 +340,27 @@ const AKTY_KOMBINACE: { kategorie: string; a: string[]; b: string[]; c?: string[
   },
   {
     /*
+      Scénář zabrání území země NATO nebo souseda (26. 9. 2026). Deník N:
+      „Rusové mohou zkusit zabrat území na východě Pobaltí. Scénář z tajných
+      jednání potvrzuje i prezident Pavel“ — síto zprávu zahodilo jako „bez
+      skutku“, protože scénář není čin. Jenže je to stejná třída jako
+      varování státu před konkrétním útokem (výš) a čtenář ji má vidět.
+
+      Tři sloupce, aby neprošly dějiny („sovětská okupace Pobaltí“) ani
+      obecné řeči: zabrání/vpad + cílová země + výhled nebo státní zdroj.
+      „Okupace“ tu schválně není — skoro vždy jde o minulost.
+    */
+    kategorie: "nato",
+    a: ["zabrat uzemi", "zabrat cast", "zabrani uzemi", "zabor uzemi", "obsadit", "obsazeni", "vpad", "invaz", "anexe", "anektovat",
+      "seize territory", "seize part", "seizing territory", "incursion", "invade", "invasion", "land grab"],
+    b: ["pobalt", "baltic", "eston", "lotys", "latvi", "litv", "lithuan", "polsk", "poland", "finsk", "finland", "moldav", "narv", "latgal",
+      "suwal", "nato"],
+    c: ["scenar", "scenario", "mohou zkusit", "muze zkusit", "mohl by", "mohli by", "could", "may attempt", "might", "hrozi", "hrozba",
+      "pripravuj", "planuj", "chyst", "preparing", "planning", "varuj", "varoval", "warn", "tajn", "zpravodaj", "intelligence",
+      "prezident", "president", "ministr", "minister", "nacelnik", "general", "vlada", "government", "zdroje", "sources"],
+  },
+  {
+    /*
       Svolání mimořádného jednání o bezpečnosti, ať už jsou slova v jakémkoli
       pořadí: „svolává na pátek předsedy stran kvůli bezpečnostní situaci",
       „mimořádné jednání vlády o obraně", „convened party leaders on security".
