@@ -696,7 +696,9 @@ export function Dashboard({
             );
           })}
         </section>
-          <div className="mt-6 max-lg:[&_ol>li:nth-child(n+4)]:hidden"><CoSeZmenilo zaznamy={vse} snimky={snimky} ted={tedMs} osa /></div>
+          {/* Úspěchy složek pod úředním stavem, „Co se změnilo“ až pod nimi jako nízký posuvný log (26. 9. 2026). */}
+          <div className="mt-6"><UspechySlozek uspechy={uspechy} /></div>
+          <div className="mt-6"><CoSeZmenilo zaznamy={vse} snimky={snimky} ted={tedMs} osa log /></div>
         </div>
 
         {/* Postranní sloupec stejné šířky jako nahoře: dodávky a služby, výpadky provozovatelů, ceny paliv, tipy. */}
@@ -721,8 +723,6 @@ export function Dashboard({
             <HlavickaWidgetu ikona="komunikace" nazev="Výpadky provozovatelů" meta={<span>{(() => { const n = sluzby.stavy.filter((x) => x.stav === "vypadek" || x.stav === "omezeni").length; return n ? `${n} hlášení` : "bez hlášení"; })()}</span>} napoveda={<span className="block">Stavové stránky provozovatelů čtené naživo. Signál, ne úřední stav.</span>} />
             <StavSluzeb stavy={sluzby.stavy} kdy={sluzby.kdy} vnoreny />
           </section>
-          {/* Úspěchy složek nad cenami paliv (26. 9. 2026) — i na mobilu. */}
-          <UspechySlozek uspechy={uspechy} />
           {paliva.length > 0 && (
             <section className="overflow-hidden rounded-[22px] bg-plocha max-lg:hidden">
               <HlavickaWidgetu ikona="palivo" nazev="Ceny pohonných hmot" meta={<span>{paliva.some((p) => p.skok) ? "neobvyklý pohyb" : "běžný pohyb"}</span>} napoveda={<span className="block">Průměrné ceny z týdenního šetření ČSÚ. Měření, ne předpověď.</span>} />

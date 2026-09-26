@@ -37,14 +37,14 @@ function seskup(hodnoty: number[], kusu: number): number[] {
 function Maly({ nadpis, obdobi, uroven, slovo, neutralni, popis, dodatek, graf }: { nadpis: string; obdobi: string; uroven: Uroven | null; slovo?: string; neutralni?: boolean; popis?: string; dodatek?: string; graf?: React.ReactNode }) {
   const pasmo = uroven && !neutralni ? PASMA[UROVNE[uroven].pasmo] : null;
   return (
-    <Napoveda cele popis={<span className="block">{popis && <span className="mb-1.5 block text-inkoust">{popis}</span>}{uroven && !neutralni ? <VykladUrovne uroven={uroven} /> : null}{dodatek && <span className="mt-1.5 block text-tlum2">{dodatek}</span>}</span>}>
-      <span className="flex w-full flex-col rounded-[14px] bg-plocha2/60 px-3 py-2.5 text-left">
+    <Napoveda cele plna popis={<span className="block">{popis && <span className="mb-1.5 block text-inkoust">{popis}</span>}{uroven && !neutralni ? <VykladUrovne uroven={uroven} /> : null}{dodatek && <span className="mt-1.5 block text-tlum2">{dodatek}</span>}</span>}>
+      <span className="flex h-full w-full flex-col rounded-[14px] bg-plocha2/60 px-3 py-2.5 text-left">
         <span className="whitespace-nowrap text-mikro font-semibold text-tlum">{nadpis} <span className="font-normal text-tlum2">· {obdobi}</span></span>
         <span className="mt-1.5 flex items-center gap-2">
           <span aria-hidden className={`h-[8px] w-[8px] shrink-0 rounded-full ${pasmo ? pasmo.tecka : neutralni ? "bg-tlum2" : "bg-klid"}`} />
           <span className={`text-zaklad font-bold leading-tight ${pasmo ? pasmo.text : neutralni ? "text-tlum" : "text-klid-text"}`}>{slovo ?? (uroven ? UROVNE[uroven].nazev : "Bez záznamu")}</span>
         </span>
-        {graf && <span className="mt-1.5 flex items-end justify-between gap-2 text-mikro text-tlum2">{graf}</span>}
+        {graf && <span className="mt-auto flex min-h-[22px] items-end justify-between gap-2 pt-1.5 text-mikro text-tlum2">{graf}</span>}
       </span>
     </Napoveda>
   );
@@ -82,21 +82,22 @@ export function SidebarUvodu({ stav, cr, crHistoricky, crPocet, obcane, pulz, pr
         {!podpora && <Tlacitko kam="/podporit/" varianta="obrys" velikost="s" ikona="kava">Podpořit provoz</Tlacitko>}
       </div>
 
-      {/* Souhrn situace a Právě ověřujeme vedle sebe: jedna řádka, zbytek po najetí (24. 9. 2026). */}
+      {/*
+        Souhrn situace a Právě ověřujeme vedle sebe (24. 9. 2026). 26. 9.: stejná
+        stavba i výška — nadpis nahoře na jedné lince, text pod ním na nejvýš tři
+        řádky; tón nese rámeček, ne různé rozložení.
+      */}
       <div className="grid grid-cols-2 gap-3">
-        <Napoveda cele popis={<span className="block">{nal.dodatek && <span className="mb-1.5 block text-inkoust">{nal.dodatek}</span>}{pulz && <span className="block text-tlum2">Za 24 h: {pulz.zachyceno24} zachyceno, {pulz.overeno24} ověřeno, {pulz.zdrojuOk} z {pulz.zdrojuCelkem} zdrojů odpovědělo.</span>}{kontrola && <span className="mt-1.5 block text-tlum2">Zdroje čteny {casPraha(kontrola)}.</span>}</span>}>
-          <span role="status" aria-label="Souhrn situace" className={`flex min-h-[92px] w-full flex-col justify-between rounded-[22px] border px-4 py-3 text-left ${nal.ton === "deje" ? "border-akcent/70 bg-akcent/[0.05]" : nal.ton === "klid" ? "border-linka bg-plocha2/40" : "border-linka bg-plocha2/40"}`}>
-            <span className="nadpis-boxu flex items-center gap-2"><IkonaKruh ikona="info" velikost="s" /> Souhrn situace</span>
-            <span className="flex items-start gap-2 text-male font-bold leading-snug text-inkoust">
-              <span aria-hidden className={`mt-[6px] h-[7px] w-[7px] shrink-0 rounded-full ${nal.ton === "deje" ? "bg-akcent" : nal.ton === "klid" ? "bg-tlum2" : "bg-tlum2"}`} />
-              <span>{nal.text}</span>
-            </span>
+        <Napoveda cele plna popis={<span className="block">{nal.dodatek && <span className="mb-1.5 block text-inkoust">{nal.dodatek}</span>}{pulz && <span className="block text-tlum2">Za 24 h: {pulz.zachyceno24} zachyceno, {pulz.overeno24} ověřeno, {pulz.zdrojuOk} z {pulz.zdrojuCelkem} zdrojů odpovědělo.</span>}{kontrola && <span className="mt-1.5 block text-tlum2">Zdroje čteny {casPraha(kontrola)}.</span>}</span>}>
+          <span role="status" aria-label="Souhrn situace" className={`flex h-full min-h-[118px] w-full flex-col rounded-[22px] border px-3.5 py-3 text-left ${nal.ton === "deje" ? "border-akcent/70 bg-akcent/[0.05]" : "border-linka bg-plocha2/40"}`}>
+            <span className="flex min-h-[34px] items-center gap-2"><IkonaKruh ikona="info" velikost="s" /><span className="nadpis-boxu leading-tight">Souhrn situace</span></span>
+            <span className="mt-2 line-clamp-3 text-male font-bold leading-snug text-inkoust">{nal.text}</span>
           </span>
         </Napoveda>
-        <Napoveda cele popis={overovane.length ? <span className="block">{overovane.slice(0, 3).map((o) => <span key={o.slug} className="mb-1.5 block"><b className="font-semibold text-inkoust">{o.kratce ?? o.coSeHlasi}</b><span className="block">{o.coSeHlasi}</span>{o.coRikajiUrady[0] && <span className="block text-tlum2">Úřady: {o.coRikajiUrady[0]}</span>}</span>)}<span className="block text-tlum2">Nepotvrzené zprávy. Do počtů ani hodnocení nevstupují.</span></span> : <span className="block">Žádná zpráva teď nečeká na posouzení.</span>}>
-          <span aria-label="Právě ověřujeme" className="flex min-h-[92px] w-full flex-col justify-between rounded-[22px] border border-dashed border-jantar/55 bg-jantar/[0.06] px-4 py-3 text-left">
-            <span className="flex items-center justify-between gap-2"><span className="nadpis-boxu flex items-center gap-2"><IkonaKruh ikona="otaznik" velikost="s" /> Právě ověřujeme</span><span className="cislice text-tlum2">{overovane.length}</span></span>
-            <span className="line-clamp-2 text-male font-bold leading-snug text-inkoust">{overovane[0] ? overovane[0].kratce ?? overovane[0].coSeHlasi : "Nic v hodnocení"}</span>
+        <Napoveda cele plna popis={overovane.length ? <span className="block">{overovane.slice(0, 3).map((o) => <span key={o.slug} className="mb-1.5 block"><b className="font-semibold text-inkoust">{o.kratce ?? o.coSeHlasi}</b><span className="block">{o.coSeHlasi}</span>{o.coRikajiUrady[0] && <span className="block text-tlum2">Úřady: {o.coRikajiUrady[0]}</span>}</span>)}<span className="block text-tlum2">Nepotvrzené zprávy. Do počtů ani hodnocení nevstupují.</span></span> : <span className="block">Žádná zpráva teď nečeká na posouzení.</span>}>
+          <span aria-label="Právě ověřujeme" className="flex h-full min-h-[118px] w-full flex-col rounded-[22px] border border-dashed border-jantar/55 bg-jantar/[0.06] px-3.5 py-3 text-left">
+            <span className="flex min-h-[34px] items-center gap-2"><IkonaKruh ikona="otaznik" velikost="s" /><span className="nadpis-boxu min-w-0 flex-1 leading-tight">Právě ověřujeme</span><span className="cislice text-tlum2">{overovane.length}</span></span>
+            <span className="mt-2 line-clamp-3 text-male font-bold leading-snug text-inkoust">{overovane[0] ? overovane[0].kratce ?? overovane[0].coSeHlasi : "Nic v hodnocení"}</span>
           </span>
         </Napoveda>
       </div>
@@ -127,29 +128,32 @@ export function SidebarUvodu({ stav, cr, crHistoricky, crPocet, obcane, pulz, pr
             <Maly nadpis={t("Běžný život")} obdobi="teď" uroven={obcane.uroven} slovo={obcane.slovo} neutralni={obcane.neutralni} popis={obcane.popis}
               graf={<span>{obcane.neovereno ? `${obcane.neovereno} bez údaje` : "orientační kontrola"}</span>} />
           </div>
-          <div className="mt-3 grid grid-cols-4 gap-2 max-lg:hidden">
+          {/* Čísla v jednom pruhu, ne čtyři krabičky (26. 9. 2026). */}
+          <div className="mt-3 grid grid-cols-4 divide-x divide-linka/60 rounded-[14px] bg-plocha2/60 py-2 max-lg:hidden">
             {[["dnes", soucet(1)], ["7 dní", soucet(7)], ["30 dní", soucet(30)], ["90 dní", soucet(90)]].map(([n, v]) => (
-              <span key={n} className="rounded-[14px] bg-plocha2/60 px-2 py-2 text-center">
-                <span className="cislice block text-velke font-bold leading-none text-inkoust">{v}</span>
+              <span key={n} className="text-center">
+                <span className="cislice block text-zaklad font-bold leading-none text-inkoust">{v}</span>
                 <span className="mt-1 block text-mikro text-tlum2">{n}</span>
               </span>
             ))}
           </div>
           <p className="mt-2 px-1 text-mikro text-tlum2 max-lg:hidden">Případy a operace proti občanům v Evropě. <Link href="/metodika/" className="odkaz">Jak se hodnotí</Link>.</p>
-          {/* Pizza index: kuriozita z otevřených zdrojů, jasně oddělená od našeho měření (26. 9. 2026). */}
-          <div className="mt-2 flex items-center gap-2 px-1 text-mikro text-tlum">
-            {/* Spouštěč na začátku řádku: bublina začne u levého okraje karty a vejde se. */}
-            <Napoveda popis={<span className="block">{PIZZA_INDEX.popis}<span className="mt-1.5 block text-tlum2">{pizza.uroven ? `Stupeň ${pizza.uroven} z 5 na jejich stupnici (5 je nejnižší)${pizza.popis ? `, „${pizza.popis}“` : ""}. ` : "Aktuální hodnotu teď nemáme. "}{popisCasu(pizza, ted)}</span></span>} label="Co je Pizza index" nahoru>
-              <span className="inline-flex cursor-help items-center gap-1.5 text-inkoust">
-                <Ikona nazev="pizza" velikost={15} tah={1.8} />
-                <span className="underline decoration-dotted underline-offset-4">Pizza index</span>
-                {/* Jedno slovo stavu; bez čerstvého údaje „nezjištěno“, nikdy domyšlený klid. */}
-                <span className={`rounded-full border px-1.5 py-0.5 text-mikro ${pizza.aktualni ? "border-linka text-inkoust" : "border-dashed border-linka text-tlum2"}`}>{pizza.slovo}{pizza.uroven ? ` · ${pizza.uroven}/5` : ""}</span>
-              </span>
-            </Napoveda>
-            <a href={PIZZA_INDEX.url} target="_blank" rel={VEN} className="odkaz">otevřít ↗</a>
-          </div>
         </div>
+      </section>
+
+      {/* Pizza index ve vlastním boxu pod Situací teď — kuriozita, ne součást našeho měření (26. 9. 2026). */}
+      <section aria-label="Pizza index" className="flex items-center justify-between gap-3 rounded-[22px] bg-plocha px-4 py-3 text-male">
+        <Napoveda popis={<span className="block">{PIZZA_INDEX.popis}<span className="mt-1.5 block text-tlum2">{pizza.uroven ? `Stupeň ${pizza.uroven} z 5 na jejich stupnici (5 je nejnižší)${pizza.popis ? `, „${pizza.popis}“` : ""}. ` : "Aktuální hodnotu teď nemáme. "}{popisCasu(pizza, ted)}</span></span>} label="Co je Pizza index" nahoru>
+          <span className="inline-flex cursor-help items-center gap-2 text-inkoust">
+            <Ikona nazev="pizza" velikost={17} tah={1.8} />
+            <span className="font-semibold underline decoration-dotted underline-offset-4">Pizza index</span>
+          </span>
+        </Napoveda>
+        <span className="flex items-center gap-3">
+          {/* Jedno slovo stavu; bez čerstvého údaje „nezjištěno“, nikdy domyšlený klid. */}
+          <span className={`rounded-full border px-2 py-0.5 text-mikro ${pizza.aktualni ? "border-linka text-inkoust" : "border-dashed border-linka text-tlum2"}`}>{pizza.slovo}{pizza.uroven ? ` · ${pizza.uroven}/5` : ""}</span>
+          <a href={PIZZA_INDEX.url} target="_blank" rel={VEN} className="odkaz text-mikro">otevřít ↗</a>
+        </span>
       </section>
 
       {/* Tipy jen na počítači: na mobilu je to další box navíc. */}
