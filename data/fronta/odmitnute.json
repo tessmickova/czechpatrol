@@ -1,5 +1,69 @@
 [
   {
+    "id": "k-aea73bb8844410a9",
+    "zachyceno": "2026-09-26T00:02:25.523Z",
+    "publikovano": "2026-09-25T23:54:00.000Z",
+    "zdroj": {
+      "nazev": "Helsingin Sanomat (Finsko)",
+      "url": "https://www.hs.fi/tiede/art-2000012301385.html",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Pohjois-Amerikka | Tutkijat löysivät uuden merihämähäkin, jolla on punaiset silmät ja karvaiset jalat",
+    "shrnuti": "Kanadalaiset tutkijat löysivät kaksi uutta merihämähäkkilajia Pohjois-Amerikasta Tyyneltämereltä.",
+    "duvod": "bez-skutku",
+    "kategorie": [],
+    "posouzeni": null
+  },
+  {
+    "id": "k-08279ace8ea85045",
+    "zachyceno": "2026-09-26T00:02:25.989Z",
+    "publikovano": "2026-09-25T23:48:10.000Z",
+    "zdroj": {
+      "nazev": "NOS Nieuws (Nizozemsko)",
+      "url": "https://nos.nl/l/2632548",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Iran: Straat van Hormuz binnen zeven dagen heropend als aan voorwaarden wordt voldaan",
+    "shrnuti": "De Iraanse minister van Buitenlandse Zaken zegt dat Iran de VS een deal heeft voorgesteld waarbij de Straat van Hormuz binnen een week weer open kan en \"de normale scheepvaart weer kan worden hersteld\". Minister Araghchi is in New York voor de Algemene Vergadering van de Verenigde Naties. Daar zei h",
+    "duvod": "bez-skutku",
+    "kategorie": [],
+    "posouzeni": null
+  },
+  {
+    "id": "k-d7545f2cb2c1b64a",
+    "zachyceno": "2026-09-26T00:02:26.109Z",
+    "publikovano": "2026-09-25T23:26:34.000Z",
+    "zdroj": {
+      "nazev": "Le Monde (Francie)",
+      "url": "https://www.lemonde.fr/economie/article/2026/09/26/ia-la-mise-a-l-ecart-d-anthropic-par-le-pentagone-confirmee-par-la-justice_6782773_3234.html",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "IA : la mise à l’écart d’Anthropic par le Pentagone confirmée par la justice",
+    "shrnuti": "La cour d’appel de Washington a jugé conforme, vendredi, la mise à l’index de la start-up d’intelligence artificielle qui avait refusé, en février, de laisser l’armée américaine utiliser sans restriction son modèle, Claude.",
+    "duvod": "bez-skutku",
+    "kategorie": [],
+    "posouzeni": null
+  },
+  {
+    "id": "k-f667dfa362804355",
+    "zachyceno": "2026-09-26T00:02:26.327Z",
+    "publikovano": "2026-09-25T23:00:00.000Z",
+    "zdroj": {
+      "nazev": "la Repubblica (Itálie)",
+      "url": "https://www.repubblica.it/dossier/economia/affari-e-finanza-live-digitalizzazione-2026/2026/09/26/news/l_italia_digitale_dopo_i_fondi_pnrr_torna_af_live-425607798/",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "L’Italia digitale dopo i fondi Pnrr: torna A&F Live",
+    "shrnuti": "Lunedì a Milano il talk di Affari&Finanza dedicato all’impatto delle nuove tecnologie sulle imprese e le Pa e alle strategie future. Qui il programma e la registrazione",
+    "duvod": "bez-skutku",
+    "kategorie": [],
+    "posouzeni": null
+  },
+  {
     "id": "k-0d8af2ed91ff65df",
     "zachyceno": "2026-09-25T23:02:21.777Z",
     "publikovano": "2026-09-25T23:00:00.000Z",
@@ -192,6 +256,38 @@
     "posouzeni": null
   },
   {
+    "id": "k-ce0c4faa92e1315b",
+    "zachyceno": "2026-09-26T00:02:24.691Z",
+    "publikovano": "2026-09-25T22:57:51.000Z",
+    "zdroj": {
+      "nazev": "The Guardian — World",
+      "url": "https://www.theguardian.com/us-news/2026/sep/25/new-york-city-arrests-mole-people",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Two people arrested in New York City for allegedly climbing out of manhole",
+    "shrnuti": "Kevin Rodriguez and Samuel Reveron were booked after reports of ‘mole people’ emerging from sewers across city Two people have been arrested for allegedly emerging from manholes across New York City . Police reportedly suspect them of searching for valuables that had been washed into the storm drain",
+    "duvod": "bez-skutku",
+    "kategorie": [],
+    "posouzeni": null
+  },
+  {
+    "id": "k-60d0dad0b0418891",
+    "zachyceno": "2026-09-26T00:02:24.693Z",
+    "publikovano": "2026-09-25T22:55:19.000Z",
+    "zdroj": {
+      "nazev": "The Guardian — World",
+      "url": "https://www.theguardian.com/technology/2026/sep/25/openai-agents-leaked-53-images-chatgpt",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "OpenAI says agents leaked 53 images from ChatGPT users in latest example of rogue activity",
+    "shrnuti": "Disclosure reveals ⁠new area of privacy risk for the company and illustrates ​how difficult it is to inventory unauthorized activity tied to its agents Two ⁠months after OpenAI disclosed the accidental hacking of Hugging Face, the ChatGPT maker is still working to understand the full scope of its ro",
+    "duvod": "bez-skutku",
+    "kategorie": [],
+    "posouzeni": null
+  },
+  {
     "id": "k-4b3a1edc3d58b353",
     "zachyceno": "2026-09-25T23:02:22.365Z",
     "publikovano": "2026-09-25T22:53:15.000Z",
@@ -203,6 +299,22 @@
     },
     "titulek": "Au Brésil, Lula interdit les paris sportifs en ligne à quelques jours de la présidentielle, dénonçant une « maladie » qui gagne les foyers",
     "shrnuti": "Alors que la campagne entre dans sa dernière ligne droite avant le premier tour du 4 octobre, le sujet des paris en ligne est devenu un enjeu pour le président sortant, qui dénonce une source d’endettement massif pour les familles.",
+    "duvod": "bez-skutku",
+    "kategorie": [],
+    "posouzeni": null
+  },
+  {
+    "id": "k-508f1e476eb1b302",
+    "zachyceno": "2026-09-26T00:02:23.878Z",
+    "publikovano": "2026-09-25T22:42:07.000Z",
+    "zdroj": {
+      "nazev": "Presseportal — zprávy policie (Blaulicht)",
+      "url": "https://www.presseportal.de/blaulicht/pm/4969/6359426",
+      "typ": "wire",
+      "primarni": false
+    },
+    "titulek": "POL-DADI: Schwerer Verkehrsunfall mit Personenschaden auf der B42 - Gemarkung Weiterstadt",
+    "shrnuti": "Weiterstadt (ots) - Am 25.09.2026 um 20:31 Uhr ereignete sich ein schwerer Verkehrsunfall auf der Bundesstraße 42, Gemarkung Weiterstadt in Fahrtrichtung Groß-Gerau. Nach ersten Erkenntnissen könnte eine 43-jährige Frau aus Weiterstadt die B 42 ...",
     "duvod": "bez-skutku",
     "kategorie": [],
     "posouzeni": null
@@ -235,6 +347,22 @@
     },
     "titulek": "Supreme court blocks Trump-backed Missouri congressional map from use in midterms",
     "shrnuti": "Court puts end to long-running legal dispute as it rules Republican-friendly map cannot be used in November The supreme court on Friday turned away an attempt to use a new Missouri congressional map backed by Donald Trump, putting an end to a long-running legal dispute as absentee voting is under wa",
+    "duvod": "bez-skutku",
+    "kategorie": [],
+    "posouzeni": null
+  },
+  {
+    "id": "k-d1241eee0e1c0a19",
+    "zachyceno": "2026-09-26T00:02:23.880Z",
+    "publikovano": "2026-09-25T22:32:23.000Z",
+    "zdroj": {
+      "nazev": "Presseportal — zprávy policie (Blaulicht)",
+      "url": "https://www.presseportal.de/blaulicht/pm/138422/6359425",
+      "typ": "wire",
+      "primarni": false
+    },
+    "titulek": "POL-VK: Rücknahme der Öffentlichkeitsfahndung und Löschung aller personenbezogener Daten sowie des Lichtbilds",
+    "shrnuti": "Völklingen/Homburg (ots) - Die am 18.September 2026 um 18:59 Uhr veröffentliche Fahndung nach dem Vermissten Mihai D aus Völklingen kann zurückgenommen werden. Der Vermisste wurde am 26.09.2026 wohlbehalten aufgegriffen und zur medizinischen ...",
     "duvod": "bez-skutku",
     "kategorie": [],
     "posouzeni": null
@@ -283,6 +411,22 @@
     },
     "titulek": "U2 speelt op de school waar het precies 50 jaar geleden begon",
     "shrnuti": "De Ierse band U2 heeft vrijdag een optreden gegeven op de school waar de band 50 jaar geleden begon. Op het schoolplein van de Mount Temple Comprehensive School in Dublin speelde de band zeven nummers, waaronder With or Without You . De band werd precies vijftig jaar geleden opgericht, nadat de toen",
+    "duvod": "bez-skutku",
+    "kategorie": [],
+    "posouzeni": null
+  },
+  {
+    "id": "k-5e1a9e5006e63aeb",
+    "zachyceno": "2026-09-26T00:02:26.107Z",
+    "publikovano": "2026-09-25T22:28:13.000Z",
+    "zdroj": {
+      "nazev": "Le Monde (Francie)",
+      "url": "https://www.lemonde.fr/sport/article/2026/09/26/volley-les-bleus-nouvelle-generation-se-hissent-en-finale-de-l-euro-ou-ils-retrouveront-la-pologne_6782707_3242.html",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Volley : les Bleus nouvelle génération se hissent en finale de l’Euro, où ils retrouveront la Pologne",
+    "shrnuti": "L’équipe de France masculine de volley s’est imposée, vendredi à Milan (Italie), face à la Finlande (3-1) en demi-finale. L’équipe tricolore affrontera les Polonais, samedi pour le titre, comme lors de la finale des JO de Paris 2024.",
     "duvod": "bez-skutku",
     "kategorie": [],
     "posouzeni": null
@@ -8007,154 +8151,6 @@
     },
     "titulek": "Wien bleibt beim Gas-Ausstieg bis 2040 – hilft das neue Klimagesetz dabei?",
     "shrnuti": "Wien unterzeichnet Greenpeace-Deklaration für einen Ausstieg aus Gas in Städten. Um das zu schaffen, fordert die Stadt weitere Gesetzesanpassungen, unter anderem Regelungen für den Tausch von Gasheizungen im Bestand",
-    "duvod": "bez-skutku",
-    "kategorie": [],
-    "posouzeni": null
-  },
-  {
-    "id": "k-e79ad7345b79a9c3",
-    "zachyceno": "2026-09-25T17:02:50.645Z",
-    "publikovano": "2026-09-25T16:30:00.000Z",
-    "zdroj": {
-      "nazev": "Der Standard (Rakousko)",
-      "url": "https://www.derstandard.at/story/3000000341362/fuer-mehr-energiesicherheit-finanz-foerdert-kleine-netz-und-stromspeicherbetreiber?ref=rss",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Für mehr Energiesicherheit: Finanz fördert kleine Netz- und Stromspeicherbetreiber",
-    "shrnuti": "Vorteile, die bislang nur für große Anlagen galten, weitet Markus Marterbauers (SPÖ) Finanzministerium auf kleine und mittlere Unternehmen aus. Bis zu zwei Milliarden Euro sind vorgesehen",
-    "duvod": "bez-skutku",
-    "kategorie": [],
-    "posouzeni": null
-  },
-  {
-    "id": "k-7b7632670fa224ac",
-    "zachyceno": "2026-09-25T17:02:50.841Z",
-    "publikovano": "2026-09-25T16:30:00.000Z",
-    "zdroj": {
-      "nazev": "HVG (Maďarsko)",
-      "url": "https://hvg.hu/360/20260925_hvg-kulturalis-ajanlo-orkeny-szinhaz-esterhazy-irodalmi-dij-oasis-balvanyos-levente-kuntur-balazs-tandori-dezso",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "„Úgy döntöttem, világhírű leszek” – érzéki rock-documentary az Oasisról",
-    "shrnuti": "Az Esterházy Irodalmi Díj átadója, Tandori Dezső ismerős és ismeretlen popkulturális műfordításai, érzelmeket és történelmi tapasztalatokat hordozni képes megtört vonal. Ez a HVG kulturális ajánlója.",
-    "duvod": "bez-skutku",
-    "kategorie": [],
-    "posouzeni": null
-  },
-  {
-    "id": "k-4d41a8b583eebe12",
-    "zachyceno": "2026-09-25T17:02:50.723Z",
-    "publikovano": "2026-09-25T16:29:37.000Z",
-    "zdroj": {
-      "nazev": "NZZ (Švýcarsko)",
-      "url": "https://www.nzz.ch/wissenschaft/ebola-ausbruch-in-zentralafrika-mehr-als-300-ebola-tote-in-kongo-erster-fall-in-frankreich-nachgewiesen-ld.10007509",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "DIE NEUESTEN ENTWICKLUNGEN - Ebola-Ausbruch in Zentralafrika: Mpox-Fall im Ebola-Gebiet von Bunia bestätigt",
-    "shrnuti": "Die Weltgesundheitsorganisation (WHO) hat den Gesundheitsnotstand ausgerufen. Die Infektionszahlen steigen weiterhin an. Hier sind die wichtigsten Antworten zum Ebola-Virus zu finden.",
-    "duvod": "bez-skutku",
-    "kategorie": [],
-    "posouzeni": null
-  },
-  {
-    "id": "k-c35f7d2a3faae7c4",
-    "zachyceno": "2026-09-25T17:02:50.842Z",
-    "publikovano": "2026-09-25T16:29:21.000Z",
-    "zdroj": {
-      "nazev": "HVG (Maďarsko)",
-      "url": "https://hvg.hu/itthon/20260925_fulke-nemeth-andras-oroszorszag-ukrajna-ebx",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Simán lehet, hogy az oroszok megpróbálnak magyar kormánytagokat is beszervezni – Fülke",
-    "shrnuti": "Hogy lett a Kárpáti Nyolcakból Kárpáti Hetek, és hogyan lehetnének újra nyolcan? Mit tanított a magyar kommentdiplomácia az ukránoknak? Mire kapott valójában felhatalmazást Putyin a múlt hétvégi választásokon? Jöhet választás Ukrajnában? És mekkora az esélye annak, hogy Oroszország nemcsak kóstolgat",
-    "duvod": "bez-skutku",
-    "kategorie": [
-      "nato"
-    ],
-    "posouzeni": null
-  },
-  {
-    "id": "k-07fdd0c9227f81b2",
-    "zachyceno": "2026-09-25T17:02:50.781Z",
-    "publikovano": "2026-09-25T16:28:30.000Z",
-    "zdroj": {
-      "nazev": "Rzeczpospolita (Polsko)",
-      "url": "https://www.rp.pl/biznes/art45193731-agnieszka-palys-bez-dobrej-edukacji-nie-bedziemy-mieli-startupow-i-dobrze-dzialajacych-firm",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Agnieszka Pałys: Bez dobrej edukacji nie będziemy mieli startupów i dobrze działających firm",
-    "shrnuti": "Edukacja ma kluczowe znaczenie nie tylko dla szkół i uczniów, ale także dla przyszłości gospodarki. Dlatego Wrocławski Park Technologiczny wspiera nauczycieli i rodziców, a przedsiębiorcom ułatwia dostęp do instytucji oferujących im wsparcie – mówi Agnieszka Pałys, dyrektor pionu organizacyjnego i p",
-    "duvod": "bez-skutku",
-    "kategorie": [],
-    "posouzeni": null
-  },
-  {
-    "id": "k-5b748830badb01df",
-    "zachyceno": "2026-09-25T17:02:50.725Z",
-    "publikovano": "2026-09-25T16:27:56.000Z",
-    "zdroj": {
-      "nazev": "NZZ (Švýcarsko)",
-      "url": "https://www.nzz.ch/schweiz/der-bund-erhoeht-die-integrationsfoerderung-um-54-millionen-franken-das-sei-nur-moderat-grummeln-die-kantone-ld.10025494",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Der Bund erhöht die Integrationsförderung um 5,4 Millionen Franken. Das sei nur «moderat», grummeln die Kantone",
-    "shrnuti": "Der Asylminister reagiert auf die hohe Belastung im Asylwesen und unterstützt die Kantone mit zusätzlichen Geldern.",
-    "duvod": "bez-skutku",
-    "kategorie": [
-      "zpravodajske"
-    ],
-    "posouzeni": null
-  },
-  {
-    "id": "k-1a7d0cbcf138e5e1",
-    "zachyceno": "2026-09-25T17:02:50.782Z",
-    "publikovano": "2026-09-25T16:27:51.000Z",
-    "zdroj": {
-      "nazev": "Rzeczpospolita (Polsko)",
-      "url": "https://www.rp.pl/gospodarka/art45193421-rosyjskie-firmy-nie-inwestuja-nie-wiedza-co-bedzie-jutro",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Rosyjskie firmy nie inwestują. Nie wiedzą co będzie jutro",
-    "shrnuti": "Pomimo żądań Władimira Putina o pilne rozpoczęcie nowego „cyklu inwestycyjnego”, rosyjska gospodarka zakończy rok z najgłębszym spadkiem inwestycji od 11 lat. Inwestowanie w Rosji to dziś czyste szaleństwo.",
-    "duvod": "bez-skutku",
-    "kategorie": [],
-    "posouzeni": null
-  },
-  {
-    "id": "k-2f3f21a1d41857c1",
-    "zachyceno": "2026-09-25T17:02:51.323Z",
-    "publikovano": "2026-09-25T16:27:51.000Z",
-    "zdroj": {
-      "nazev": "Le Monde (Francie)",
-      "url": "https://www.lemonde.fr/international/live/2026/09/25/en-direct-guerre-en-ukraine-les-attaques-russes-sur-kiev-ont-tue-au-moins-sept-personnes-vendredi-selon-le-maire-de-la-ville_6777944_3210.html",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "EN DIRECT, guerre en Ukraine : les attaques russes sur Kiev ont tué au moins sept personnes vendredi, selon le maire de la ville",
-    "shrnuti": "Quarante-six personnes ont aussi été blessées dans la capitale ukrainienne, d’après le nouveau bilan communiqué par Vitali Klitschko.",
-    "duvod": "bez-skutku",
-    "kategorie": [],
-    "posouzeni": null
-  },
-  {
-    "id": "k-05e22efcf2b9ec3b",
-    "zachyceno": "2026-09-25T17:02:49.908Z",
-    "publikovano": "2026-09-25T16:27:00.000Z",
-    "zdroj": {
-      "nazev": "Český rozhlas — domácí zprávy",
-      "url": "https://www.irozhlas.cz/zpravy-svet/kvuli-tezbe-uhli-se-reka-bilina-prevedla-do-potrubi-povodi-ohre-ji-chce-dostat_2609251827_kch",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Kvůli těžbě uhlí se řeka Bílina převedla do potrubí. Povodí Ohře ji chce dostat zpět do koryta",
-    "shrnuti": "Povodí Ohře na Mostecku vrací řeku Bílinu z potrubí do vodního koryta. Před zhruba čtyřiceti lety zničilo její přirozený tok dobývání uhlí. Těžaři ji proto na více než dvoukilometrovém úseku uzavřeli do čtyř potrubí. Těžba na místě už skončila a řeka se teď může vrátit zpět do krajiny. Pomáhá při to",
     "duvod": "bez-skutku",
     "kategorie": [],
     "posouzeni": null
