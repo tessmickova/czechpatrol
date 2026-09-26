@@ -96,7 +96,7 @@ export function HeroDashboard({
     opak: za devadesát dní tu nic nebylo. Napsat to rovnou je informace,
     kterou čtenář hledá — a je to jediná dobrá zpráva na celém budíku.
   */
-  const crSlovo = cr ? undefined : "Bez incidentu";
+  const crSlovo = cr ? undefined : "Bez záznamu";
   // Období stojí nad budíkem, tak se v popisu neopakuje.
   const crPopis = cr
     ? [

@@ -17,10 +17,17 @@ export async function synchronizuj(env: Env): Promise<{ zprav: number; zasazeni:
 
   // Stejný build webu = nic nového; šetří to databázi.
   if (stary && stary.generovano === novy.generovano) return { zprav: 0, zasazeni: 0 };
+  /*
+    Starší build, než jaký už známe (kopie z CDN, pozdě doručená odpověď):
+    rozdíl by běžel pozpátku a z „platí“ by udělal „ukončeno“. Ignoruje se
+    a uložený stav zůstává.
+  */
+  if (stary && novy.generovano < stary.generovano) return { zprav: 0, zasazeni: 0 };
 
-  const zpravy = rozdilStavu(stary, novy);
+  const zpravy = rozdilStavu(stary, novy, Date.now());
   let zasazeni = 0;
-  for (const z of zpravy) zasazeni += await rozesli(env, z);
+  // Pevné id ze stálého klíče: opakované zpracování téhož rozdílu nic nezdvojí (INSERT OR IGNORE).
+  for (const z of zpravy) zasazeni += await rozesli(env, z, z.klic ? `zmena:${z.klic}` : undefined);
 
   await env.DB.prepare("INSERT OR REPLACE INTO stav (klic, hodnota, aktualizovano) VALUES ('web', ?, ?)")
     .bind(JSON.stringify(novy), new Date().toISOString())

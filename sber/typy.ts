@@ -104,4 +104,9 @@ export interface VysledekZdroje {
   stav: number | null;
   pocetPolozek: number;
   chyba?: string;
+  /**
+   * ok = odpověď s očekávaným obsahem; obsah = HTTP 200, ale prázdná nebo
+   * cizí stránka (src/lib/prehled/model.ts vysledekPokusu); chyba = HTTP/síť.
+   */
+  vysledek?: "ok" | "chyba" | "obsah";
 }

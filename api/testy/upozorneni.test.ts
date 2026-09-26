@@ -28,8 +28,8 @@ describe("rozdíl stavů", () => {
     expect(z[0]).toMatchObject({ druh: "pravni", zavaznost: "kriticka", titulek: "Mobilizace" });
   });
   it("nová událost nese kategorie a závažnost podle pásma", () => {
-    const novy = { ...zaklad, udalosti: [{ ...zaklad.udalosti[0], slug: "b", titulek: "B", pasmo: "oranzova", kategorie: ["kyber"] }, ...zaklad.udalosti] };
-    const z = rozdilStavu(zaklad, novy);
+    const novy = { ...zaklad, udalosti: [{ ...zaklad.udalosti[0], slug: "b", titulek: "B", pasmo: "oranzova", kategorie: ["kyber"], datumZjisteni: "2026-09-05T09:00:00Z" }, ...zaklad.udalosti] };
+    const z = rozdilStavu(zaklad, novy, Date.parse("2026-09-05T12:00:00Z"));
     expect(z).toHaveLength(1);
     expect(z[0]).toMatchObject({ druh: "udalost", zavaznost: "vysoka", kategorie: ["kyber"] });
   });
@@ -39,9 +39,38 @@ describe("rozdíl stavů", () => {
     expect(z).toHaveLength(1);
     expect(z[0]).toMatchObject({ druh: "provoz", zavaznost: "vysoka" });
   });
-  it("změna úrovně do červené je kritická", () => {
+  it("změna našeho hodnocení je analýza s nízkou závažností, i do červené (26. 9. 2026)", () => {
     const novy = { ...zaklad, uroven: "R1", nazev: "Kritická", pasmo: "cervena" };
-    expect(rozdilStavu(zaklad, novy)[0]).toMatchObject({ druh: "uroven", zavaznost: "kriticka" });
+    const z = rozdilStavu(zaklad, novy)[0];
+    expect(z).toMatchObject({ druh: "uroven", zavaznost: "nizka" });
+    expect(z.text).toContain("Není to výstraha ani pokyn");
+  });
+});
+
+describe("zastaralý, pozdní a opakovaný stav", () => {
+  const TED = Date.parse("2026-09-05T12:00:00Z");
+  const platiMobilizace = { ...zaklad, pravni: { ...zaklad.pravni, mobilizace: true } };
+  it("„Ukončeno“ se neodvodí ze stavu, jehož sběr je starší než 5 h", () => {
+    const novy = { ...zaklad, generovano: "2026-09-05T11:00:00Z", beh: "2026-09-05T05:00:00Z" };
+    expect(rozdilStavu(platiMobilizace, novy, TED)).toEqual([]);
+  });
+  it("s čerstvým sběrem se ukončení pošle", () => {
+    const novy = { ...zaklad, generovano: "2026-09-05T11:00:00Z", beh: "2026-09-05T11:00:00Z" };
+    expect(rozdilStavu(platiMobilizace, novy, TED)[0]).toMatchObject({ druh: "pravni", text: expect.stringContaining("Ukončeno") });
+  });
+  it("vyhlášení se pošle i ze starého stavu — zmeškat ho je horší než opozdit", () => {
+    const novy = { ...platiMobilizace, generovano: "2026-09-05T11:00:00Z", beh: "2026-09-05T01:00:00Z" };
+    expect(rozdilStavu(zaklad, novy, TED)).toHaveLength(1);
+  });
+  it("po obnovení se nepošle dávka dávno zjištěných událostí", () => {
+    const stara = { ...zaklad.udalosti[0], slug: "stara", datumZjisteni: "2026-09-03T10:00:00Z" };
+    const nova = { ...zaklad.udalosti[0], slug: "nova", datumZjisteni: "2026-09-05T10:00:00Z" };
+    const z = rozdilStavu(zaklad, { ...zaklad, udalosti: [stara, nova, ...zaklad.udalosti] }, TED);
+    expect(z.map((x) => x.klic)).toEqual(["udalost:nova"]);
+  });
+  it("týž rozdíl dává týž klíč — opakované zpracování nic nezdvojí", () => {
+    const novy = { ...platiMobilizace, generovano: "2026-09-05T11:00:00Z" };
+    expect(rozdilStavu(zaklad, novy, TED)[0].klic).toBe(rozdilStavu(zaklad, novy, TED)[0].klic);
   });
 });
 
@@ -59,10 +88,16 @@ describe("plánování", () => {
     expect(naplanuj(zprava(), VYCHOZI_NASTAVENI, poledne)).toEqual(poledne);
     expect(naplanuj(zprava({ zavaznost: "stredni" }), VYCHOZI_NASTAVENI, poledne)).toBeNull();
   });
-  it("jen kritické: vysoká nejde, kritická hned", () => {
+  it("jen kritické: vysoká nejde, kritická oficiální hned, kritická naše událost ne", () => {
     const n = { ...VYCHOZI_NASTAVENI, frekvence: "jen-kriticke" as const };
     expect(naplanuj(zprava(), n, poledne)).toBeNull();
-    expect(naplanuj(zprava({ zavaznost: "kriticka" }), n, poledne)).toEqual(poledne);
+    expect(naplanuj(zprava({ druh: "pravni", kategorie: null, zavaznost: "kriticka" }), n, poledne)).toEqual(poledne);
+    expect(naplanuj(zprava({ zavaznost: "kriticka" }), n, poledne)).toBeNull();
+  });
+  it("naše analýza (změna hodnocení) jde jen do souhrnu, nikdy hned", () => {
+    const u = zprava({ druh: "uroven", zavaznost: "nizka", kategorie: null });
+    expect(naplanuj(u, VYCHOZI_NASTAVENI, poledne)?.toISOString()).toBe("2026-09-05T16:00:00.000Z");
+    expect(naplanuj(u, { ...VYCHOZI_NASTAVENI, frekvence: "jen-kriticke" }, poledne)).toBeNull();
   });
   it("oblasti filtrují události, ne stavové zprávy", () => {
     const n = { ...VYCHOZI_NASTAVENI, oblasti: ["kyber"] };
@@ -74,7 +109,9 @@ describe("plánování", () => {
     const n = { ...VYCHOZI_NASTAVENI, ticho: { od: "22:00", do: "07:00" } };
     expect(vTichu(noc, n.ticho)).toBe(true);
     expect(naplanuj(zprava(), n, noc)).toEqual(zPrahy(2026, 9, 6, 7, 0));
-    expect(naplanuj(zprava({ zavaznost: "kriticka" }), n, noc)).toEqual(noc);
+    expect(naplanuj(zprava({ druh: "nato", kategorie: null, zavaznost: "kriticka" }), n, noc)).toEqual(noc);
+    // Naše kritická událost nikoho nevzbudí — přijde ráno.
+    expect(naplanuj(zprava({ zavaznost: "kriticka" }), n, noc)).toEqual(zPrahy(2026, 9, 6, 7, 0));
     expect(konecTicha(noc, n.ticho!).toISOString()).toBe("2026-09-06T05:00:00.000Z");
   });
   it("denní souhrn míří na 18:00 pražského času", () => {

@@ -1,6 +1,7 @@
 import { WEB } from "@/config/web";
 import { celkovyStav, hybridniTlak, incidenty, nato, posledniOvereni, pravniStav, provoz } from "@/lib/data";
 import { UROVNE } from "@/lib/skala";
+import posledniBeh from "../../../data/fronta/posledni-beh.json";
 
 export const dynamic = "force-static";
 
@@ -28,6 +29,8 @@ export function GET() {
     */
     commit: process.env.GITHUB_SHA ?? null,
     overeno: posledniOvereni(),
+    /* Kdy začal poslední běh sběru. API podle něj pozná zastaralý stav a nevyvodí z něj „ukončeno“. */
+    beh: (posledniBeh as { kdy?: string }).kdy ?? null,
     uroven: stav.uroven,
     nazev: stav.uroven ? UROVNE[stav.uroven].nazev : null,
     pasmo: stav.uroven ? UROVNE[stav.uroven].pasmo : null,

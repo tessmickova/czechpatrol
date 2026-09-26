@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { coOhlasit, OPAKOVAT_PO_H, PRAH_KANAL_H, PRAH_SPRAVCE_H, type StavSberu } from "../src/hlidac";
+import { coObnovit, coOhlasit, ctiNahlaseno, OPAKOVAT_PO_H, PRAH_KANAL_H, PRAH_SPRAVCE_H, type StavSberu } from "../src/hlidac";
 
 /*
   Hlídač se v praxi spustí jednou za měsíc a nejde si ho vyzkoušet „až to
@@ -42,5 +42,24 @@ describe("hlídač sběru", () => {
   it("bez jediného úspěchu v historii výpadek nepodcení", () => {
     /* Přesnější údaj nemáme; mlčet kvůli tomu by byla ta nejhorší volba. */
     expect(coOhlasit(stav(null, 20), ted, null).komu).toEqual(["spravce", "kanal"]);
+  });
+});
+
+describe("obnovení sběru (26. 9. 2026)", () => {
+  const vypadekOhlasen = { kdy: pred(2), komu: ["spravce", "kanal"] as ("spravce" | "kanal")[] };
+  it("po obnovení to řekne právě těm, kdo slyšeli o výpadku", () => {
+    expect(coObnovit(stav(0.5), ted, vypadekOhlasen)).toEqual(["spravce", "kanal"]);
+    expect(coObnovit(stav(0.5), ted, { ...vypadekOhlasen, komu: ["spravce"] })).toEqual(["spravce"]);
+  });
+  it("bez předchozího hlášení se o obnovení nic neposílá", () => {
+    expect(coObnovit(stav(0.5), ted, null)).toEqual([]);
+  });
+  it("úspěch starší než hlášení výpadku není obnovení", () => {
+    expect(coObnovit(stav(2.5), ted, { kdy: pred(1), komu: ["spravce"] })).toEqual([]);
+  });
+  it("starý zápis (jen čas) se čte jako hlášení správci i kanálu", () => {
+    expect(ctiNahlaseno("2026-09-18T01:00:00.000Z")).toEqual({ kdy: "2026-09-18T01:00:00.000Z", komu: ["spravce", "kanal"] });
+    expect(ctiNahlaseno(JSON.stringify(vypadekOhlasen))).toEqual(vypadekOhlasen);
+    expect(ctiNahlaseno(null)).toBeNull();
   });
 });

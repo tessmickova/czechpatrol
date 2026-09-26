@@ -969,7 +969,8 @@ export function sestavPrehledDne({ ted = Date.now(), cast = castDne(ted), zmeny 
   */
   const stary = !posledniSber || ted - new Date(posledniSber).getTime() > 3 * 3_600_000;
   const klic = stary
-    ? `⚠️ Data nejsou aktuální — poslední kontrola zdrojů ${posledniSber ? datumCz(posledniSber) : "neznámo kdy"}. Oficiální informace: krizové vysílání ČRo, 112.`
+    /* Technická věta, ne poplach (26. 9. 2026): bez výstražného znaku a s tím, že o bezpečnosti nic neříká. */
+    ? `Údaje nejsou čerstvé — poslední úspěšná kontrola zdrojů ${posledniSber ? datumCz(posledniSber) : "neznámo kdy"}. O bezpečnostní situaci to nic neříká; oficiální informace dávají HZS, ČHMÚ, obec a policie, v nouzi 112.`
     : !zmeny.length
     ? "V kontrolovaných úředních zdrojích jsme nenašli žádnou změnu stavu v Česku."
     : zlepseni && !zhorseni

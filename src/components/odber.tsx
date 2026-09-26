@@ -62,7 +62,7 @@ export function OdberPanel({ kompaktni = false }: { kompaktni?: boolean }) {
       </ul>
       {!kompaktni && (
         <div className="rounded-[18px] bg-plocha p-4">
-          <div className="mb-2 flex items-center gap-1.5"><span className="nadpis-boxu">Kdy přijde okamžité upozornění</span><Otaznik popis={<span className="block">U pěti nejvážnějších témat pošleme zprávu hned, i neověřenou. Je tak označená a vede na zdroj. Opakovanému odeslání téže změny se bráníme; postup je v metodice. Z kanálu se odhlásíte jeho opuštěním, žádný účet se nezakládá.</span>} /></div>
+          <div className="mb-2 flex items-center gap-1.5"><span className="nadpis-boxu">Kdy přijde okamžité upozornění</span><Otaznik popis={<span className="block">Vážnou neověřenou zprávu pošleme jen se dvěma nezávislými zdroji, označenou a s odkazem na zdroj. Opakovanému odeslání téže změny se bráníme; postup je v metodice. Doručení zaručit neumíme — při přímém ohrožení se řiďte pokyny HZS, obce a policie. Z kanálu se odhlásíte jeho opuštěním, žádný účet se nezakládá.</span>} /></div>
           <ul className="space-y-1.5">
             {KDY_UPOZORNENI.map((k) => {
               /* Mimořádná výstraha je jiná kategorie než běžná změna stavu — i v seznamu. */

@@ -407,6 +407,11 @@ export interface Nepotvrzene {
   /** Co ověření ukázalo. */
   overeni: string;
   zdroje: Zdroj[];
+  /**
+   * Úřad výslovně označil zprávu za nepravdivou nebo poplašnou (§ 357 TZ).
+   * Jen s odkazem na jeho vyjádření; bez něj jde o „vyvraceno“ naším ověřením.
+   */
+  oznacenoUradem?: { vydavatel: string; url: string; kdy: string; oznaceni: "nepravdiva" | "poplasna" };
 }
 
 /* ---------------- opravy ---------------- */
@@ -725,13 +730,39 @@ export interface Vystraha {
   coToNeznamena: string[];
   /** Kdy výstrahu sundat, pokud se nic nezmění. null = do rozhodnutí člověka. */
   platiDo: string | null;
+  /*
+    Pole pro Rychlý přehled (26. 9. 2026). Volitelná, aby starší zápisy
+    zůstaly platné — jenže bez vydavatele a odkazu na originál se výstraha
+    v přehledu NEVYDÁVÁ za oficiální: ukáže se jako naše ověřená zpráva.
+  */
+  /** Kdo informaci vydal (HZS ČR, ČHMÚ, vláda…). Jen je-li to úřad. */
+  vydavatel?: string;
+  /** Odkaz na originál u vydavatele. */
+  originalUrl?: string;
+  /** Kdy ji vydavatel vydal. */
+  vydano?: string;
+  /** Začátek platnosti podle vydavatele. */
+  platiOd?: string;
+  /** Územní působnost podle vydavatele; chybí = nelze určit. */
+  uzemi?: import("./prehled/typy").Uzemi;
+  /** Pokyn obyvatelstvu DOSLOVA z originálu. Chybí = v originále není. */
+  pokyn?: string;
+  /** Je `text` znění vydavatele, nebo naše shrnutí? Výchozí: naše shrnutí. */
+  textJe?: "zneni-vydavatele" | "shrnuti-cp";
+  /** Kdy vydavatel vydal opravu (změnu rozsahu, znění). */
+  opraveno?: string;
 }
 
 export interface VystrahaSoubor {
   /** null = žádná výstraha neplatí a na webu není žádný pruh. */
   aktivni: Vystraha | null;
   /** Co kdy platilo. Výstraha nikdy nezmizí beze stopy. */
-  archiv: (Vystraha & { sundano: string; procSundano: string })[];
+  archiv: (Vystraha & {
+    sundano: string;
+    procSundano: string;
+    /** Jak skončila: vydavatel ji odvolal, vypršela, nebo ji nahradila nová. Chybí = ukončena. */
+    zpusob?: "odvolano" | "vyprselo" | "nahrazeno";
+  })[];
 }
 
 /* ---------------- tipy k přípravě ---------------- */

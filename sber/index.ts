@@ -2,7 +2,7 @@ import { dostupnyPoskytovatel } from "./model";
 import fs from "node:fs";
 import path from "node:path";
 import { ctiHtml, ctiRss, stahni } from "./nacti";
-import { rozhodni, type Stazeno } from "./rozhodovani";
+import { MIN_ZNAKU_OBSAHU, rozhodni, type Stazeno } from "./rozhodovani";
 import { ZDROJE } from "./zdroje";
 import type { Nalez, VysledekZdroje } from "./typy";
 import { lidskaZmena } from "../src/lib/archiv-text";
@@ -11,6 +11,7 @@ import { uzavriOverovane } from "./overujeme";
 import { aktualizujStav } from "./hodnoceni";
 import { sbirejPalivo } from "./palivo";
 import { sbirejSluzby } from "./sluzby";
+import { slucStavZdroju, vysledekPokusu } from "../src/lib/prehled/model";
 
 /**
  * Hodinový sběr.
@@ -107,6 +108,7 @@ async function main() {
     stav: s.stav,
     pocetPolozek: s.polozky.length,
     chyba: s.chyba,
+    vysledek: vysledekPokusu({ ok: s.ok, format: s.zdroj.format, polozek: s.polozky.length, znaku: s.text.length }, MIN_ZNAKU_OBSAHU),
   }));
   const blokujici = new Set(ZDROJE.filter((z) => z.ocekavaneBlokovani).map((z) => z.klic));
   const nedostupne = vysledky.filter((v) => !v.ok && !blokujici.has(v.klic));
@@ -285,6 +287,21 @@ async function main() {
     JSON.stringify({ kdy: TED, zdroje: vysledky, novychVeFronte: nove.length }, null, 2) + "\n",
     "utf-8",
   );
+
+  /*
+    Trvalý stav zdrojů pro Rychlý přehled. posledni-beh.json se každým
+    během přepíše, takže z něj nešlo poznat, kdy zdroj naposledy OPRAVDU
+    odpověděl. Tady se to drží přes běhy; sloučení je monotonní, takže
+    pozdě dokončený starší běh nepřepíše novější výsledek.
+  */
+  try {
+    const souborStavu = path.join(FRONTA, "zdroje-stav.json");
+    const stary = fs.existsSync(souborStavu) ? JSON.parse(fs.readFileSync(souborStavu, "utf-8")) : {};
+    const novyStav = slucStavZdroju(stary, vysledky.map((v) => ({ klic: v.klic, vysledek: v.vysledek ?? (v.ok ? "ok" : "chyba"), chyba: v.chyba ?? null })), TED);
+    fs.writeFileSync(souborStavu, JSON.stringify(novyStav, null, 2) + "\n", "utf-8");
+  } catch (e) {
+    console.log(`[sber] stav zdrojů se nezapsal, ostatní pokračuje: ${e instanceof Error ? e.message : e}`);
+  }
 
   /* ---------- celkové hodnocení: počítá automat, nejvýš den staré ---------- */
   try {

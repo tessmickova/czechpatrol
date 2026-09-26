@@ -58,7 +58,13 @@ export function stavNalehavosti(kandidati: Kandidat[], zkontrolovano: string | n
   if (n.length) return { ton: "deje", text: n.length === 1 ? "Naléhavá zpráva čeká na ověření" : `${n.length} naléhavé zprávy čekají na ověření`, dodatek: NAZVY[n[0].naliehave!.druh] };
   const stary = !zkontrolovano || ted - new Date(zkontrolovano).getTime() > HODIN_DO_VYPADKU * 3_600_000;
   if (stary) { const h = zkontrolovano ? Math.round((ted - new Date(zkontrolovano).getTime()) / 3_600_000) : null; return { ton: "stary", text: h === null ? "Kontrola zdrojů" : `Poslední kontrola před ${h} h`, dodatek: zkontrolovano ? datumCasPraha(zkontrolovano) : null }; }
-  return { ton: "klid", text: `Nic naléhavého za ${OKNO_HODIN} h`, dodatek: "žádná mobilizace, krizové vysílání ani mimořádný stav" };
+  /*
+    26. 9. 2026: dřív „Nic naléhavého za 48 h — žádná mobilizace, krizové
+    vysílání ani mimořádný stav“, zeleně. Tvrdilo to víc, než sběr ví:
+    čte média a titulní stránky úřadů, ne výstražné systémy. Teď to říká
+    jen to, co je pravda — náš sběr nic nezachytil — a barvu nemá.
+  */
+  return { ton: "klid", text: `Náš sběr nezachytil naléhavou zprávu · ${OKNO_HODIN} h`, dodatek: "Týká se zpráv, které sběr zachytil. Úřední výstrahy a stav zdrojů jsou v Rychlém přehledu." };
 }
 
 /** Naléhavé zachycené zprávy uvnitř okna, nejnovější první. Nejvýš tři. */
@@ -134,7 +140,7 @@ export function UrgentniUpozorneni({
         <div className="flex flex-wrap items-center gap-x-3 gap-y-1 px-4 py-3">
           <span aria-hidden className="h-[7px] w-[7px] shrink-0 rounded-full bg-klid" />
           <p className="text-male text-tlum">
-            <b className="text-inkoust">Teď nic urgentního.</b> Ve sledovaných zdrojích není za posledních
+            <b className="text-inkoust">Sběr nezachytil nic naléhavého.</b> Ve sledovaných zdrojích není za posledních
             {" "}{OKNO_HODIN} hodin vyhlášená mobilizace, krizové vysílání ani mimořádný právní stav.
           </p>
         </div>
@@ -180,7 +186,7 @@ export function UrgentniPas({ kandidati, zkontrolovano, ted = Date.now() }: { ka
             tvrdilo zápor bez dokladu a bez času. Teď jen to, co víme,
             a vždy s časem kontroly.
           */
-          <><b className="font-semibold text-inkoust">V kontrolovaných zdrojích nic naléhavého.</b> Za {OKNO_HODIN} h jsme nenašli vyhlášení mobilizace, krizové vysílání ani mimořádný stav.{zkontrolovano ? <span className="cislice text-mikro text-tlum2"> · zdroje čteny {datumCasPraha(zkontrolovano)}</span> : <span className="text-mikro text-tlum2"> · čas kontroly neznámý</span>}</>
+          <><b className="font-semibold text-inkoust">Náš sběr nezachytil nic naléhavého.</b> Za {OKNO_HODIN} h jsme nenašli vyhlášení mobilizace, krizové vysílání ani mimořádný stav.{zkontrolovano ? <span className="cislice text-mikro text-tlum2"> · zdroje čteny {datumCasPraha(zkontrolovano)}</span> : <span className="text-mikro text-tlum2"> · čas kontroly neznámý</span>}</>
         )}
       </span>
       <Tlacitko kam="/odber/" varianta="plny" velikost="s" ikonaVpravo="nahoru" trida="shrink-0 whitespace-nowrap [&>svg:last-child]:rotate-90">Jak se to dozvíte hned</Tlacitko>
