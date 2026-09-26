@@ -1,5 +1,76 @@
 [
   {
+    "id": "k-f569d7c381cddb54",
+    "zachyceno": "2026-09-26T19:21:20.007Z",
+    "publikovano": "2026-09-26T18:27:00.000Z",
+    "zdroj": {
+      "nazev": "Ukrainska Pravda (anglicky)",
+      "url": "https://www.pravda.com.ua/eng/news/2026/09/26/8055186/",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Drone strikes or falling debris reported in three Kyiv districts",
+    "titulekPuvodni": "Drone strikes or falling debris reported in three Kyiv districts",
+    "shrnuti": "Russian drone strikes or falling debris from intercepted drones were reported in three districts of Kyiv on the evening of 26 September.",
+    "kodZeme": "UA",
+    "zeme": "Ukrajina",
+    "kategorie": [
+      "drony",
+      "rusko"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "debris+dron",
+      "dron",
+      "drone",
+      "russia"
+    ],
+    "naliehave": null,
+    "stav": "ceka",
+    "vyrez": {
+      "text": "Drone strikes or falling debris reported in three Kyiv districts | Ukrainska Pravda\nA drone. Stock photo: Getty Images\nRussian drone strikes or falling debris from intercepted drones were reported in three districts of Kyiv on the evening of 26 September.\nSource: Kyiv Mayor Vitali Klitschko\nQuote: \"A drone has struck an office building in the Shevchenkivskyi district. Early reports indicate there is no fire.\nAdvertisement:\n\r\n\r\n\r\n\r\n\r\nEmergency services are heading to the scene.\"\nDetails: Klitschko added that debris had fallen in the grounds of a preschool in the Sviatoshynskyi district. There was no fire and, according to the latest reports, no damage.\nUpdate: At 21:21, Klitschko reported that a non-residential building in the Solomianskyi district has apparently been hit, with smoke seen at the site. Emergency services are heading there.\nThe mayor also said that seven people have been injured as a result of Russian attacks on the capital on 26 September. Medics provided them with outpatient treatment.\nYour support on Patreon helps us keep the news free and accessible.\nKyiv\ndrones\nAdvertisement:\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nKyiv\nRussia attacks Kyiv with drones: four people…",
+      "stazeno": "2026-09-26T19:21:20.158Z",
+      "stav": 200
+    }
+  },
+  {
+    "id": "k-a90ccfc515e7d38d",
+    "zachyceno": "2026-09-26T19:21:16.845Z",
+    "publikovano": "2026-09-26T18:01:00.000Z",
+    "zdroj": {
+      "nazev": "Český rozhlas — domácí zprávy",
+      "url": "https://www.irozhlas.cz/zpravy-svet/online-evropa-mari-plany-na-mir-na-ukrajine-rusko-svych-cilu-dosahne-rekl-lavrov_2609262001_mst",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "ONLINE: Evropa maří plány na mír na Ukrajině. Rusko svých cílů dosáhne, řekl Lavrov v OSN",
+    "titulekPuvodni": "ONLINE: Evropa maří plány na mír na Ukrajině. Rusko svých cílů dosáhne, řekl Lavrov v OSN",
+    "shrnuti": "Ruský ministr zahraničí Sergej Lavrov v sobotním projevu na Valném shromáždění OSN v New Yorku obvinil Evropu, že systematicky brání mírovým plánům pro Ukrajinu, což je podle něj v rozporu s postojem Spojených států. Dodal, že Rusko dosáhne svých vojenských cílů na Ukrajině „bez ohledu na okolnosti“",
+    "kodZeme": "UA",
+    "zeme": "Ukrajina",
+    "kategorie": [
+      "zpravodajske",
+      "rusko"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "obvin+rusk",
+      "rusk"
+    ],
+    "naliehave": null,
+    "stav": "ceka",
+    "vyrez": {
+      "text": "",
+      "stazeno": "2026-09-26T19:21:20.180Z",
+      "stav": 403,
+      "chyba": "HTTP 403"
+    }
+  },
+  {
     "id": "k-f95a4c21aaef9e2c",
     "zachyceno": "2026-09-26T18:03:23.764Z",
     "publikovano": "2026-09-26T17:34:00.000Z",
@@ -12065,86 +12136,6 @@
     "vyrizeni": {
       "kdy": "2026-09-19T19:56:38.778Z",
       "duvod": "navrh",
-      "patriK": null,
-      "poznamka": null
-    }
-  },
-  {
-    "id": "k-c5869c9253078660",
-    "zachyceno": "2026-09-15T15:15:50.876Z",
-    "publikovano": "2026-09-15T14:26:00.000Z",
-    "zdroj": {
-      "nazev": "Google News — sabotage Europe",
-      "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxOdW1vaVNsTUR5Mk51TGcwMVRXTzVjM05rcXFTRUt4VjIyazR1dFRZUEdVZi03Q0tJOFBuQ0prT1NGcHBiY1cwOWhsSFlkWEhobW81dWR2djdIc3pSQjdsTnc5SHZYenY3cnhmUzNybHZZdnJwVGJGT0dyV2hWNWxCNFR2UFFLajdOSE9qTWdZMG5MSk01aFoxMldzeW1BWE1nNkhzVkxGVEVNTWl0eWNDQmJMNNIBuAFBVV95cUxOT2Zta2NSMVU0a0ltclF5RUdzWWc5VmhpYmRHYWpnMkVmM1VyQmVhY2F4ckpxTlJUbHZUM1o1ejNDVjBBTDlLcVRwWkJxU295OFlkTEpZcVNSekxaM0I4b0UtXzI0dGctVGgzcFR2b0c5dDdoa0pZYWxQci05VDhmaXZzZUVVNjRzajNJVGwtWE1qT3NoazBmc0dvajBpMTVDLVBTcFpGRUF4SGRxdlZUZFJCQVctV19V?oc=5",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Cuban salsa teacher in Russia recruited agents for sabotage across EU, DW finds - Hromadske",
-    "titulekPuvodni": "Cuban salsa teacher in Russia recruited agents for sabotage across EU, DW finds - Hromadske",
-    "shrnuti": "",
-    "kodZeme": "EU",
-    "zeme": "EU",
-    "kategorie": [
-      "sabotaz",
-      "rusko"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "zeSite": null,
-    "shody": [
-      "sabotage",
-      "russia"
-    ],
-    "stav": "vyrizen",
-    "vyrez": {
-      "text": "Google News",
-      "stazeno": "2026-09-15T15:15:50.957Z",
-      "stav": 200
-    },
-    "naliehave": null,
-    "vyrizeni": {
-      "kdy": "2026-09-19T19:56:38.778Z",
-      "duvod": "zdroj-navrhu",
-      "patriK": null,
-      "poznamka": null
-    }
-  },
-  {
-    "id": "k-1cd1d18080b1a27f",
-    "zachyceno": "2026-09-15T16:32:52.272Z",
-    "publikovano": "2026-09-15T14:23:55.000Z",
-    "zdroj": {
-      "nazev": "Téma: sabotaz (anglicky)",
-      "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxPTXVBZUVUYW50bjFwcTNJVzFuXzNSd0xlSVpCUjdETjdmeE1zcnBmV1ExSnpSZ2RUTGkyM2VGNjdGVnZMeE9PZDZKNEZjRjlRZEdZSmt2Q05iczkwcVMyNDEydVI1djBSNUQyakRucWdsMk80ZzFHRlhLblBxTVZZcU84M09fbkl0Vjl2dlVQZWFLZTNxX3c?oc=5",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "How a Cuban dance teacher aided Russian sabotage in EU - dw.com",
-    "titulekPuvodni": "How a Cuban dance teacher aided Russian sabotage in EU - dw.com",
-    "shrnuti": "How a Cuban dance teacher aided Russian sabotage in EU dw.com",
-    "kodZeme": "EU",
-    "zeme": "EU",
-    "kategorie": [
-      "sabotaz",
-      "rusko"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "zeSite": null,
-    "shody": [
-      "sabotage",
-      "russia"
-    ],
-    "naliehave": null,
-    "stav": "vyrizen",
-    "vyrez": {
-      "text": "Google News",
-      "stazeno": "2026-09-15T16:32:54.168Z",
-      "stav": 200
-    },
-    "vyrizeni": {
-      "kdy": "2026-09-19T19:56:38.778Z",
-      "duvod": "zdroj-navrhu",
       "patriK": null,
       "poznamka": null
     }
