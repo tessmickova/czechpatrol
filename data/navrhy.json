@@ -203,5 +203,81 @@
     "aiZpracovano": true,
     "lidskyOvereno": false,
     "archivniZaznam": false
+  },
+  {
+    "kam": "zaznam",
+    "pripravil": "patrol",
+    "pripraveno": "2026-09-26T21:21:17.832Z",
+    "id": "i-2026-09-26-a90ccfc515",
+    "slug": "ru-a90ccfc515",
+    "titulek": "Lavrov v OSN obvinil Evropu, že brání mírovým jednáním o Ukrajině, a tvrdí, že Rusko svých vojenských cílů dosáhne bez ohledu na okolnosti",
+    "kratkyTitulek": "Lavrov v OSN obvinil Evropu, že brání mírovým jednáním o Ukrajině, a tvrdí, že Rusko svých vojenských cílů dosáhne bez ohledu na okolnosti",
+    "zeme": "Rusko",
+    "kodZeme": "RU",
+    "kategorie": [
+      "rusko",
+      "diplomacie"
+    ],
+    "datumUdalosti": "2026-09-26T00:00:00Z",
+    "datumZjisteni": "2026-09-26T00:00:00Z",
+    "aktualizovano": "2026-09-26T21:21:17.832Z",
+    "zavaznost": "Y1",
+    "jistota": "vysoka",
+    "stav": "neuvedeno",
+    "atribuce": "neznama",
+    "puvodce": null,
+    "druh": "reakce",
+    "fakta": [
+      "Podle ČTK/ČeskéNoviny a Novinky.cz (obě 26. 9. 2026, citují AFP a Anadolu Agency) prohlásil ruský ministr zahraničí Sergej Lavrov na Valném shromáždění OSN v New Yorku: „Evropa dělá vše, co je v jejích silách, aby zmařila mírové rozhovory, které si přeje vláda amerického prezidenta Donalda Trumpa“.",
+      "Podle Lavrova (ČeskéNoviny) dosáhne Rusko svých vojenských cílů „bez ohledu na okolnosti“ a na Ukrajině bude obnoven „klidný život“.",
+      "Podle Lavrova (ČeskéNoviny) USA mírové plány podporují, zatímco Evropa jim systematicky brání.",
+      "Podle Novinky.cz obvinil Lavrov Západ z dodávek zbraní Ukrajině a z pomoci při zaměřování na civilisty; šlo o jeho první osobní setkání s německým ministrem zahraničí od ledna 2022."
+    ],
+    "neznameho": [
+      "Žádné z Lavrovových tvrzení (kdo brání mírovým jednáním, kdo cílí na civilisty) není nezávisle ověřeno; jde o jeho vlastní rétoriku.",
+      "Konkrétní obsah zmíněných mírových plánů zdroje neuvádějí."
+    ],
+    "vyznam": "",
+    "eskalacniSpousteče": [],
+    "deeskalacniSignaly": [],
+    "zdroje": [
+      {
+        "nazev": "Český rozhlas — Evropa maří plány na mír na Ukrajině. Rusko svých cílů dosáhne, řekl Lavrov v OSN",
+        "url": "https://www.irozhlas.cz/zpravy-svet/online-evropa-mari-plany-na-mir-na-ukrajine-rusko-svych-cilu-dosahne-rekl-lavrov_2609262001_mst",
+        "typ": "media",
+        "publikovano": "2026-09-26T00:00:00Z",
+        "primarni": false,
+        "jazyk": "cs"
+      },
+      {
+        "nazev": "ČeskéNoviny.cz (ČTK) — Lavrov v OSN obvinil Evropu, že oproti USA brání mírovým plánům pro Ukrajinu",
+        "url": "https://www.ceskenoviny.cz/zpravy/lavrov-v-osn-obvinil-evropu-ze-oproti-usa-brani-mirovym-planum-pro-ukrajinu/2879784?utm_source=rss&utm_medium=feed",
+        "typ": "wire",
+        "publikovano": "2026-09-26T00:00:00Z",
+        "primarni": false,
+        "jazyk": "cs"
+      },
+      {
+        "nazev": "Novinky.cz — Evropa dělá vše pro to, aby zmařila jednání o míru, prohlásil v OSN Lavrov",
+        "url": "https://www.novinky.cz/clanek/zahranicni-evropa-evropa-dela-vse-pro-to-aby-zmarila-jednani-o-miru-prohlasil-v-osn-lavrov-40599712",
+        "typ": "media",
+        "publikovano": "2026-09-26T00:00:00Z",
+        "primarni": false,
+        "jazyk": "cs"
+      }
+    ],
+    "souvisejici": [],
+    "historie": [
+      {
+        "kdy": "2026-09-26T00:00:00Z",
+        "text": "Zachyceno automatickým sběrem, druhý zdroj doložen před zařazením do fronty.",
+        "novySignal": true
+      }
+    ],
+    "novy": true,
+    "zapocitanoTyden": "2026-09-26",
+    "aiZpracovano": true,
+    "lidskyOvereno": false,
+    "archivniZaznam": false
   }
 ]
