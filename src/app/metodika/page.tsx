@@ -98,7 +98,7 @@ export default function Metodika() {
               Verze {METODIKA_VERZE}
             </span>
             <span className="text-drobne text-tlum2">
-              Revidováno {datum(METODIKA_REVIDOVANA)} · verze 2 mění jen názvy úrovní (Nízká → Mírně zvýšená → Střední → Zvýšená → Vysoká → Vážná), prahy a hodnocení zůstávají · <Link href="/opravy/" className="odkaz">historie změn</Link>
+              Revidováno {datum(METODIKA_REVIDOVANA)} · verze 2 mění jen názvy úrovní (Nízká → Mírně zvýšená → Střední → Zvýšená → Vysoká → Vážná), prahy a hodnocení zůstávají
             </span>
           </div>
         }

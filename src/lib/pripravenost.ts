@@ -86,7 +86,20 @@ export interface OtazkaDotazniku {
   upresneni?: string;
   /** Doporučené aplikace (offline mapy) — odkazy do obchodů, důvod po najetí. */
   aplikace?: OfflineMapa[];
+  /** Odkaz pod položkou: zdroj doporučení (ven) nebo stránka webu. */
+  odkaz?: { nazev: string; url: string };
 }
+
+/*
+  Zdroje doporučení (26. 9. 2026). Položky níž nejsou naše zdravotní ani
+  bezpečnostní rady: každá stojí na doporučení úřadu nebo odborné komory.
+*/
+const ZDROJ = {
+  hzsZavazadlo: { nazev: "HZS ČR — evakuační zavazadlo", url: "https://hzscr.gov.cz/clanek/evakuacni-zavazadlo-i.aspx" },
+  autolekarnicka: { nazev: "vyhláška 341/2014 Sb. — povinná autolékárnička", url: "https://www.zakonyprolidi.cz/cs/2014-341" },
+  lekarnici: { nazev: "Česká lékárnická komora — domácí lékárnička", url: "https://lekarnici.cz/wp-content/uploads/2023/07/TI_Jak-na-domaci-lekarnicku_doporuceni-lekarniku.pdf" },
+  lekarniciVraceni: { nazev: "Česká lékárnická komora — prošlé léky do lékárny", url: "https://lekarnici.cz/je-jen-jeden-spravny-zpusob-jak-se-zbavit-nepouzitelnych-leku-odnest-je-do-lekarny/" },
+};
 
 /*
   Samozřejmosti (26. 9. 2026): co zná a má každý — tísňové linky, sirény,
@@ -103,20 +116,47 @@ export const ZMINKY: Record<string, string> = {
   tisen: "Tísňové linky 112, 150, 155 a 158 znáte — tady jen to, co navíc.",
   "mistni-varovani": "Sirény zkouší každou první středu v měsíci ve 12:00; při skutečném poplachu zapněte rádio nebo televizi.",
   "krizove-informace": "Při mimořádné události vysílá krizové informace Český rozhlas a Česká televize.",
-  lekarnicka: "Základ — náplasti, obvazy, dezinfekci, teploměr a léky proti bolesti — má většina domácností; stačí občas zkontrolovat trvanlivost.",
+  lekarnicka: "Lékárnička, která opravdu pomůže: nejdřív věci na zastavení krvácení a ochranu zraněného, pak léky. Lékárníci doporučují ji procházet dvakrát ročně.",
+  odbery: "Když vypadne proud nebo síť, zprávy vám nepřijdou samy — jen tam, kde je máte předem nastavené.",
   offline: "Když vypadne signál, telefon ukáže jen to, co v něm už je.",
 };
 
+/*
+  Zprávy a rádio (26. 9. 2026, na přání provozovatelky): odběry, čtečky
+  a rádio. Krizové vysílání samo je samozřejmost (ZMINKY), ale bez rádia
+  na baterie ho při výpadku proudu a sítě neuslyšíte.
+*/
+export const ODBERY: OtazkaDotazniku[] = [
+  { id: "odb-radio", nazev: "Rádio na baterie nebo s kličkou (FM)", upresneni: "při výpadku proudu a mobilní sítě zachytí krizové vysílání Českého rozhlasu; mějte i náhradní baterie", odkaz: ZDROJ.hzsZavazadlo },
+  { id: "odb-urady", nazev: "Zprávy úřadů ve čtečce nebo aplikaci", upresneni: "RSS kanály nebo účty HZS ČR, ČHMÚ a Policie ČR ve čtečce či aplikaci — zprávy přijdou samy, nemusíte je hledat" },
+  { id: "odb-czechpatrol", nazev: "Upozornění CzechPatrol", upresneni: "ověřené zprávy o bezpečnosti v Telegramu nebo e-mailem; varování úřadů nenahrazuje", odkaz: { nazev: "jak se přihlásit", url: "/odber/" } },
+];
+
 export const BEZ_SIGNALU: OtazkaDotazniku[] = [
+  { id: "off-svitilna", nazev: "Svítilna a náhradní baterie", upresneni: "ne jen telefon — ten budete potřebovat na zprávy a volání", odkaz: ZDROJ.hzsZavazadlo },
+  { id: "off-powerbanka", nazev: "Nabitá powerbanka", upresneni: "dobijte ji po každém použití" },
   { id: "off-mapa", nazev: "Offline mapa svého kraje v telefonu", upresneni: "stáhněte ji předem — bez signálu se nová nenačte", aplikace: OFFLINE_MAPY },
   { id: "off-kontakty", nazev: "Důležitá čísla a adresy i na papíře", upresneni: "rodina, lékař, místo setkání — telefon se může vybít" },
 ];
 
+/*
+  Lékárnička podrobně (26. 9. 2026, na přání provozovatelky: „aby
+  zachraňovala reálně“). Pořadí podle toho, co zachraňuje život: krvácení,
+  dýchání, prochladnutí — položky z povinné autolékárničky (vyhláška
+  341/2014 Sb.) — pak léky podle doporučení lékárníků a nakonec kontrola
+  trvanlivosti. Postupy první pomoci web nepopisuje; na to je kurz.
+*/
 export const LEKARNICKA: OtazkaDotazniku[] = [
+  { id: "lek-skrtidlo", nazev: "Škrtidlo", upresneni: "na silné krvácení z končetiny; je i v povinné autolékárničce", odkaz: ZDROJ.autolekarnicka },
+  { id: "lek-obvazy", nazev: "Sterilní obvazy, krytí na rány a obinadla", upresneni: "hotové obvazy na zastavení krvácení tlakem, víc než jeden kus" },
+  { id: "lek-rukavice", nazev: "Jednorázové rukavice a resuscitační rouška", upresneni: "ochrana vás i zraněného; obojí je v autolékárničce", odkaz: ZDROJ.autolekarnicka },
+  { id: "lek-folie", nazev: "Izotermická (záchranná) fólie", upresneni: "proti prochladnutí zraněného" },
+  { id: "lek-drobnosti", nazev: "Trojcípý šátek, nůžky, pinzeta, náplasti a dezinfekce" },
+  { id: "lek-leky", nazev: "Léky na horečku a bolest, proti průjmu a výplach očí", upresneni: "pro děti ve vhodné formě (sirup, čípky) — poradí lékárník", odkaz: ZDROJ.lekarnici },
   { id: "lek-pravidelne", nazev: "Pravidelně užívané léky a pomůcky na několik dní dopředu" },
-  { id: "lek-folie", nazev: "Izotermická (záchranná) fólie" },
   { id: "lek-seznam", nazev: "Seznam léků, alergií a kontaktů na lékaře", upresneni: "pro každého člena domácnosti, i na papíře" },
   { id: "lek-prvni-pomoc", nazev: "Základy první pomoci", upresneni: "kurz nebo aplikace Záchranka" },
+  { id: "lek-expirace", nazev: "Lékárnička zkontrolovaná za posledního půl roku", upresneni: "prošlé léky a obvazy vyměňte; prošlé léky vraťte do kterékoli lékárny, ne do koše", odkaz: ZDROJ.lekarniciVraceni },
 ];
 
 export const UDALOSTI: OtazkaDotazniku[] = [

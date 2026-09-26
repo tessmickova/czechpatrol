@@ -56,7 +56,7 @@ export default function PodminkyStranka() {
           <Oddil cislo="03" nadpis="Texty, AI a cizí práce">
             <p>Popisy událostí jsou <b>AI shrnutí veřejných zdrojů</b> — ne oficiální články, ne stanoviska úřadů ani projektu. Jsou tak označené u každého záznamu a štítkem „AI-assisted“ na každé stránce. Celkovou úroveň, zařazení a zveřejnění událostí schvaluje člověk; podrobnosti v <Link href="/metodika/" className="odkaz text-inkoust">metodice</Link>.</p>
             <p>Přebíráme fakta, ne znění. Články necitujeme v celku. U každého záznamu uvádíme zdroj a odkaz na originál. Fotografie nepřebíráme. Zákaz automatického čtení respektujeme.</p>
-            <p>Platí presumpce neviny. Bez rozsudku píšeme „obviněný“, „podezřelý“ nebo „podle policie“ — nikdy „pachatel“. O opravu může požádat každý; opravy jsou veřejné na stránce <Link href="/opravy/" className="odkaz text-inkoust">Opravy</Link>.</p>
+            <p>Platí presumpce neviny. Bez rozsudku píšeme „obviněný“, „podezřelý“ nebo „podle policie“ — nikdy „pachatel“. O opravu může požádat každý přes stránku <Link href="/o-projektu/" className="odkaz text-inkoust">O projektu</Link>.</p>
           </Oddil>
 
           <Oddil cislo="04" nadpis="Účet">

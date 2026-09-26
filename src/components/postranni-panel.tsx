@@ -43,7 +43,6 @@ export const PO_PRIHLASENI: { href: string; label: string; ikona: NazevIkony; po
 
 export const DALSI_STRANKY = [
   /* Audit je zdarma a bez účtu; podrobný plán je Premium — proto už ne mezi funkcemi po přihlášení. */
-  { href: "/odolnost/", label: "Odolnost domácnosti" },
   { href: "/zapojit-se/", label: "Zapojit se" },
   { href: "/vyvoj/", label: "Vývoj" },
   { href: "/svet/", label: "Aktéři a cíle" },
@@ -105,7 +104,7 @@ export function PostranniPanel() {
         role="dialog"
         aria-modal="true"
         aria-label="Menu"
-        className={`fixed inset-y-0 right-0 z-[80] flex w-full max-w-[380px] flex-col border-l border-linka bg-papir shadow-[-30px_0_80px_-30px_rgb(0_0_0/0.9)] transition-transform duration-300 ${
+        className={`fixed inset-y-0 right-0 z-[80] flex w-full max-w-[380px] flex-col pt-[env(safe-area-inset-top)] border-l border-linka bg-papir shadow-[-30px_0_80px_-30px_rgb(0_0_0/0.9)] transition-transform duration-300 ${
           otevreno ? "translate-x-0" : "invisible translate-x-full"
         }`}
         aria-hidden={!otevreno}
@@ -140,6 +139,14 @@ export function PostranniPanel() {
                 </li>
               ))}
             </ul>
+            {/* Kalkulačka odolnosti s červeným rámečkem, jako na úvodu (26. 9. 2026). */}
+            <Link href="/odolnost/" onClick={zavri} className="mx-4 mt-2 flex min-h-[52px] items-center gap-3 rounded-[16px] border-2 border-akcent px-3.5 font-semibold text-inkoust transition-colors hover:bg-akcent/10">
+              <Ikona nazev="terc" velikost={17} tah={1.9} trida="shrink-0 text-akcent" />
+              <span className="min-w-0 flex-1">
+                <span className="block">Kalkulačka odolnosti</span>
+                <span className="block text-drobne font-normal text-tlum">jak dlouho vydržíte bez proudu, vody a obchodů</span>
+              </span>
+            </Link>
           </nav>
 
           {/* funkce po přihlášení */}
@@ -345,8 +352,16 @@ export function PostranniPanel() {
           </details>
         </div>
 
-        {/* tísňová čísla — vždy dole */}
+        {/* tísňová čísla a zavření — vždy dole */}
         <div className="shrink-0 border-t border-linka px-4 py-3 pb-[calc(0.75rem+env(safe-area-inset-bottom))]">
+          {/*
+            Druhé tlačítko Zavřít, na dosah palce (26. 9. 2026): horní křížek
+            byl na některých telefonech pod stavovým řádkem nebo mimo dosah
+            a menu nešlo zavřít jinak než klepnutím mimo panel.
+          */}
+          <button type="button" onClick={zavri} className="mb-3 flex min-h-[48px] w-full items-center justify-center gap-2 rounded-full border border-linka text-zaklad font-semibold text-inkoust transition-colors hover:border-akcent">
+            <Ikona nazev="krizek" velikost={15} tah={2} /> Zavřít menu
+          </button>
           <div className="stitek mb-1.5">V nouzi volejte</div>
           <div className="grid grid-cols-4 gap-2">
             {TISNOVA.map((t) => (

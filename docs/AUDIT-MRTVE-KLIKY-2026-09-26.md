@@ -29,15 +29,24 @@ nedostatku minut až po 240. Teď jedno místo pravdy
 `SBER_JAK_CASTO` v `src/config/web.ts` („zhruba jednou za hodinu“)
 a test `testy/texty-kadence.test.ts`.
 
-## Otevřené — rozhodnutí provozovatelky
+## Opravy — rozhodnuto 26. 9. 2026
 
-**Odkazy „Opravy“ vedou do správy.** Stránka Opravy se 24. 9. přesunula
-jen do správy a `/opravy/` přesměrovává na `/sprava/opravy/`. Na
-veřejném webu na ni ale dál vede pět odkazů: Podmínky, O projektu,
-Komunita, Metodika („historie změn“), Svět („historie oprav“).
-Podmínky navíc slibují: *„opravy jsou veřejné na stránce Opravy“*.
-Varianty: (a) vrátit veřejnou stránku oprav, (b) odkazy odstranit
-a přepsat slib v Podmínkách.
+Stránka Opravy zůstává jen pro správce. Pět veřejných odkazů na ni
+(Podmínky, O projektu, Komunita, Metodika, Svět) je pryč, slib
+„opravy jsou veřejné“ z Podmínek taky; `/opravy` není v sitemapě.
+
+## Druhé kolo (spolehlivost kliků)
+
+- **Test `testy/odkazy.test.ts`** (běží s každou změnou): každý interní
+  odkaz v kódu vede na existující stránku, ne přes přesměrování a
+  z veřejné části ne do správy.
+- **`nastroje/kontrola-odkazu.mjs`** nad sestaveným webem: 225 stránek,
+  všechny odkazy i kotvy `#…`, přesměrování se sledují. 0 chyb.
+- **Manipulace:** klik na jinou kampaň na téže stránce měnil jen `#…`
+  a rozbor se neotevřel → stránka teď reaguje na změnu kotvy.
+- **Menu:** na telefonech s průhledným stavovým řádkem byl křížek pod
+  hodinami → bezpečná zóna nahoře a druhé tlačítko „Zavřít menu“ dole.
+  Hlavička stránky už nezajíždí pod stavový řádek.
 
 ## Není mrtvý klik (ověřeno)
 

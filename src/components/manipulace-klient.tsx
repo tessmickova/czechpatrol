@@ -48,7 +48,17 @@ export function ManipulaceKlient({
   /* Otevřený rozbor: z kotvy v adrese (#slug), jinak nic. */
   const [otevreny, setOtevreny] = useState<string | null>(null);
   const rozborRef = useRef<HTMLDivElement>(null);
-  useEffect(() => { const h = decodeURIComponent(location.hash.slice(1)); if (h) setOtevreny(h); }, []);
+  /*
+    Kotva se čte i při změně, nejen při načtení (26. 9. 2026): klik na jinou
+    kampaň z téže stránky (dlaždice, tabulka) měnil jen #… a rozbor se
+    neotevřel — mrtvý klik z kontroly odkazů.
+  */
+  useEffect(() => {
+    const zKotvy = () => { const h = decodeURIComponent(location.hash.slice(1)); if (h) setOtevreny(h); };
+    zKotvy();
+    window.addEventListener("hashchange", zKotvy);
+    return () => window.removeEventListener("hashchange", zKotvy);
+  }, []);
   useEffect(() => { if (otevreny) rozborRef.current?.scrollIntoView({ behavior: "smooth", block: "start" }); }, [otevreny]);
   const [f, setF] = useState<Filtr>({ zeme: null, metoda: null });
   useEffect(() => {

@@ -180,7 +180,7 @@ export function SidebarUvodu({ stav, cr, crHistoricky, crPocet, obcane, pulz, pr
         )}
         <div className="flex flex-wrap gap-2 px-4 pb-4 pt-2">
           <Tlacitko kam="/pripravenost/" varianta="plny" velikost="s" ikona="stit">Projít průvodce</Tlacitko>
-          <Tlacitko kam="/odolnost/" varianta="obrys" velikost="s" ikona="terc">Kalkulačka odolnosti</Tlacitko>
+          <Tlacitko kam="/odolnost/" varianta="obrys" velikost="s" ikona="terc" trida="!border-akcent">Kalkulačka odolnosti</Tlacitko>
         </div>
       </section>
 

@@ -232,7 +232,7 @@ export default function Svet() {
       <ZpusobyVUziti />
 
       <p className="mt-8 text-drobne leading-relaxed text-tlum2">
-        Tahle stránka je náš rozbor veřejných zdrojů, ne úřední zpráva ani předpověď. Každá změna je v <Link href="/opravy/" className="odkaz">historii oprav</Link>. Chyba nebo lepší zdroj? Napište přes <Link href="/o-projektu/" className="odkaz">O projektu</Link>.
+        Tahle stránka je náš rozbor veřejných zdrojů, ne úřední zpráva ani předpověď. Chyba nebo lepší zdroj? Napište přes <Link href="/o-projektu/" className="odkaz">O projektu</Link>.
       </p>
     </div>
   );
