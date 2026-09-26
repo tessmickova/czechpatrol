@@ -29,6 +29,14 @@ describe("výstrahy ČHMÚ (CAP)", () => {
     const r = ctiCapChmi(alert(zadna));
     expect(r.ok && r.vystrahy).toEqual([]);
   });
+  it("„Žádný výhled nebezpečných jevů“ není výstraha (živý případ 26. 9. 2026)", () => {
+    const r = ctiCapChmi(alert(zadna + info("Žádný výhled nebezpečných jevů", oblast("Jihomoravský kraj", JMK))));
+    expect(r.ok && r.vystrahy).toEqual([]);
+  });
+  it("blok s CAP příznaky „nic nehrozí“ není výstraha, i když název nezačíná záporem", () => {
+    const x = info("Vysoké teploty", oblast("Jihomoravský kraj", JMK)).replace("<certainty>Likely</certainty>", "<responseType>None</responseType><certainty>Unlikely</certainty>");
+    expect((ctiCapChmi(alert(zadna + x)) as { vystrahy: unknown[] }).vystrahy).toEqual([]);
+  });
   it("výstraha přes všechny ORP kraje = celý kraj; se zněním vydavatele a platností", () => {
     const r = ctiCapChmi(alert(zadna + info("Silný vítr", oblast("Jihomoravský kraj", JMK))));
     if (!r.ok) throw new Error(r.duvod);

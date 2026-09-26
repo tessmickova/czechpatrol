@@ -70,6 +70,23 @@ function oblasti(info: string): Oblast[] {
 }
 
 /**
+ * Blok, který výstrahou NENÍ: „Žádná výstraha …“, „Žádný výhled
+ * nebezpečných jevů“ a podobné. Slouží jen k tomu, aby soubor pokryl celé
+ * území (a z něj se spočítaly ORP krajů).
+ *
+ * 26. 9. 2026 prošel do přehledu blok „Žádný výhled nebezpečných jevů“ —
+ * filtr znal jen „Žádná výstraha“ — a web ho hodinu ukazoval jako platnou
+ * výstrahu pro všechny kraje. Proto dvě nezávislé pojistky: záporná věta
+ * na začátku (žádná/žádný/žádné) A CAP příznaky „nic nehrozí“ (typ reakce
+ * None a jistota Unlikely). Stačí jedna.
+ */
+export function neniVystraha(info: string, udalost: string): boolean {
+  // Bez \b: v JS regulárních výrazech „ý“ není písmeno slova a \b by za ním nesedlo.
+  if (/^\s*žádn[áýéí](\s|$)/iu.test(udalost) || /^\s*bez\s+(výstrah|nebezpeč)/iu.test(udalost)) return true;
+  return tag(info, "responseType") === "None" && tag(info, "certainty") === "Unlikely";
+}
+
+/**
  * Přečte CAP ČHMÚ. `ok: false` = soubor nelze použít (jiný obsah, chybí
  * oblasti) — volající pak nechá předchozí výstrahy beze změny.
  */
@@ -98,8 +115,7 @@ export function ctiCapChmi(xml: string): { ok: true; odeslano: string | null; id
   const vystrahy: InformaceVstup[] = [];
   infa.forEach((info, i) => {
     const udalost = tag(info, "event");
-    // Bloky „Žádná výstraha …“ nejsou výstrahy; slouží jen k počtu ORP v kraji.
-    if (!udalost || /^žádná výstraha/i.test(udalost)) return;
+    if (!udalost || neniVystraha(info, udalost)) return;
     const obl = vsechnyOblasti[i];
     const cele: string[] = [];
     const casti: Oblast[] = [];
