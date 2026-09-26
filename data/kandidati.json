@@ -1,5 +1,42 @@
 [
   {
+    "id": "k-3b25aa2dbb37cef8",
+    "zachyceno": "2026-09-26T06:10:45.271Z",
+    "publikovano": "2026-09-26T05:59:00.000Z",
+    "zdroj": {
+      "nazev": "Ukrinform (anglicky)",
+      "url": "https://www.ukrinform.net/rubric-ato/4168198-drone-attack-on-kyiv-region-damage-reported-in-three-districts-two-people-injured.html",
+      "typ": "wire",
+      "primarni": false
+    },
+    "titulek": "Drone attack on Kyiv region: Damage reported in three districts, two people injured",
+    "titulekPuvodni": "Drone attack on Kyiv region: Damage reported in three districts, two people injured",
+    "shrnuti": "Two people were injured as a result of Russian attacks in the Kyiv region overnight on September 26.",
+    "kodZeme": "UA",
+    "zeme": "Ukrajina",
+    "kategorie": [
+      "hybridni",
+      "drony",
+      "rusko"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "attack on",
+      "dron",
+      "drone",
+      "russia"
+    ],
+    "naliehave": null,
+    "stav": "ceka",
+    "vyrez": {
+      "text": "Drone attack on Kyiv region: Damage reported in three districts, two people injured\n\r\nSubscription\nNewsletters\nPhotobank\nUkrinform - Ukrainian National News Agency\nFounded in 1918\nSaturday, 26 September 2026, 09:10\nWar\nEconomy\nSports\nMore ☰\nContacts\nEng\nУкр\nEng\nEsp\nDeu\nعربي\nFra\n日本語\nPol\n&times;\nAll topics\nWar\nRecovery of Ukraine\nPolitics\nEconomy\nFact checks\nDefense\nSociety and Culture\nSports\nCrime\nAccidents and Emergencies\nAgency\nInformation on Agency\nOur Contacts\nSubscribtion Terms\nOur Services\nPrivacy policy and personal data protection\nAdditional\nPublications\nInterviews\nPhoto\nVideo\nLongreads\nReleases\nServices\nSubscription\nNewsletters\nPhotobank\n\r\n\r\n\r\nTwo people were injured as a result of Russian attacks in the Kyiv region overnight on September 26.\nAccording to Ukrinform, the State Emergency Service of Ukraine reported this on Facebook .\n\r\n\r\nDuring the night, rescuers were repeatedly called to deal with the consequences of Russian aggression.\n\r\n\r\n\r\n\r\nIn Boryspil district, a fire broke out in a warehouse building. Two people were injured, one of whom was hospitalized. The fire was extinguished by State Emergency Service rescuers and local fire crews.\n\r\n\r\nIn Obukhiv district, a…",
+      "stazeno": "2026-09-26T06:10:45.371Z",
+      "stav": 200
+    }
+  },
+  {
     "id": "k-2f81d2dfd26f4cdf",
     "zachyceno": "2026-09-26T06:02:46.423Z",
     "publikovano": "2026-09-26T05:07:00.000Z",
@@ -12046,49 +12083,6 @@
     "vyrizeni": {
       "kdy": "2026-09-19T19:56:38.778Z",
       "duvod": "neudalost",
-      "patriK": null,
-      "poznamka": null
-    }
-  },
-  {
-    "id": "k-fed0ccf8ec0013e5",
-    "zachyceno": "2026-09-15T16:32:52.553Z",
-    "publikovano": "2026-09-15T05:52:59.000Z",
-    "zdroj": {
-      "nazev": "Litva — drony",
-      "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxPODBITzBaUG1DRHAtT1hiSVN3QmxWQy1TdlhEdk95NnpHcUhidlJSSVJ0ZWw1bHNYbXFJbnFudGw5bkZ1Y0poa1NzSjhPUnRuNzlqZVZWYmZVeVAzVk44U3U2U2FGRDJHUFU4dDFRVG9mWERVTlhBa0ZGYVp3RlhrOV9pV21CcmQ3aXVPVzdvekI2RVJKb3pkZ3dUOC1KdU1IeWtsY2hn?oc=5",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "NATO Jets Shoot Down Drone Violating Lithuanian Airspace From Belarus - streamlinefeed.co.ke",
-    "titulekPuvodni": "NATO Jets Shoot Down Drone Violating Lithuanian Airspace From Belarus - streamlinefeed.co.ke",
-    "shrnuti": "NATO Jets Shoot Down Drone Violating Lithuanian Airspace From Belarus streamlinefeed.co.ke",
-    "kodZeme": "LT",
-    "zeme": "Litva",
-    "kategorie": [
-      "drony",
-      "nato"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "zeSite": null,
-    "shody": [
-      "violat+airspace",
-      "dron",
-      "drone",
-      "airspace",
-      "nato"
-    ],
-    "naliehave": null,
-    "stav": "vyrizen",
-    "vyrez": {
-      "text": "Google News",
-      "stazeno": "2026-09-15T17:03:08.191Z",
-      "stav": 200
-    },
-    "vyrizeni": {
-      "kdy": "2026-09-19T19:56:38.778Z",
-      "duvod": "zdroj-navrhu",
       "patriK": null,
       "poznamka": null
     }

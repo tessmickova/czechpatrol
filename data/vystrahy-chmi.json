@@ -1,1 +1,45 @@
-{ "nacteno": null, "odeslano": null, "identifikator": null, "vystrahy": [] }
+{
+  "nacteno": "2026-09-26T06:08:46.296Z",
+  "odeslano": "2026-09-24T08:38:17.000Z",
+  "identifikator": "2.49.0.0.203.0.CZ.260924083817.XOCZ50_OKPR_000363",
+  "vystrahy": [
+    {
+      "id": "chmi:Žádný výhled nebezpečných jevů:2026-09-24T08:36:59.000Z:Hlavní město Praha,Středočeský,Jihočeský,Plzeňský,Karlovarský,Ústecký,Liberecký,Královéhradecký,Pardubický,Vysočina,Jihomoravský,Olomoucký,Zlínský,Moravskoslezský",
+      "typ": "oficialni-vystraha",
+      "uzemi": {
+        "druh": "kraje",
+        "kraje": [
+          "Hlavní město Praha",
+          "Středočeský",
+          "Jihočeský",
+          "Plzeňský",
+          "Karlovarský",
+          "Ústecký",
+          "Liberecký",
+          "Královéhradecký",
+          "Pardubický",
+          "Vysočina",
+          "Jihomoravský",
+          "Olomoucký",
+          "Zlínský",
+          "Moravskoslezský"
+        ]
+      },
+      "titulek": "Žádný výhled nebezpečných jevů",
+      "text": "Žádný výhled nebezpečných jevů",
+      "textJe": "zneni-vydavatele",
+      "pokyn": null,
+      "vydavatel": "ČHMÚ",
+      "odkaz": "https://vystrahy-cr.chmi.cz/",
+      "vydano": "2026-09-24T08:38:17.000Z",
+      "platiOd": "2026-09-24T08:36:59.000Z",
+      "platiDo": null,
+      "odvolano": null,
+      "opraveno": null,
+      "coNevime": [],
+      "jistota": "Unlikely",
+      "puvod": "ČHMÚ, výstražná služba (CAP)",
+      "detail": null
+    }
+  ]
+}
