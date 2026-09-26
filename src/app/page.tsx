@@ -5,6 +5,7 @@ import { odlehci } from "@/lib/odlehci";
 import { pulz } from "@/lib/pulz";
 import { souhrnSituace } from "@/lib/souhrn-situace";
 import { KONFIGURACE_CERSTVOSTI, snimekPrehledu } from "@/lib/prehled/data";
+import { RYCHLY_PREHLED } from "@/config/web";
 import type { Incident } from "@/lib/typy";
 
 import { hlavniVeta } from "@/lib/veta";
@@ -35,7 +36,7 @@ export default function Prehled() {
         priprava={pripravitTed()}
         pulz={pulz()}
         souhrn={souhrnSituace(ted)}
-        prehled={{ snimek: snimekPrehledu(new Date(ted).toISOString()), konfigurace: KONFIGURACE_CERSTVOSTI }}
+        prehled={RYCHLY_PREHLED ? { snimek: snimekPrehledu(new Date(ted).toISOString()), konfigurace: KONFIGURACE_CERSTVOSTI } : undefined}
         kandidati={kandidati().filter((k) => k.naliehave || Date.now() - new Date(k.publikovano ?? k.zachyceno).getTime() <= 72 * 3_600_000)}
         nepotvrzene={nepotvrzeneZaznamy()}
         tydny={tydny()}

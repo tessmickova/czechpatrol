@@ -559,10 +559,15 @@ export function Dashboard({
               bez ohledu na to, jestli sběr běží — přehled to říká i s časem
               kontroly a stavem zdrojů. Shrnutí ověřovatele zůstává, jen když je.
             */}
-            {souhrn?.veta && <VetaSituace souhrn={souhrn} veta={veta} kontrola={pulz?.kdy ?? overeno} ted={tedMs} />}
-            {prehled
-              ? <RychlyPrehled snimek={prehled.snimek} konfigurace={prehled.konfigurace} ted={ted} />
-              : <VetaSituace souhrn={souhrn ?? { veta: null, aktualizovano: null, podklady: [] }} veta={veta} kontrola={pulz?.kdy ?? overeno} ted={tedMs} />}
+            {/* Bez Rychlého přehledu (RYCHLY_PREHLED = false) zůstává původní věta pod nadpisem. */}
+            {prehled ? (
+              <>
+                {souhrn?.veta && <VetaSituace souhrn={souhrn} veta={veta} kontrola={pulz?.kdy ?? overeno} ted={tedMs} />}
+                <RychlyPrehled snimek={prehled.snimek} konfigurace={prehled.konfigurace} ted={ted} />
+              </>
+            ) : (
+              <VetaSituace souhrn={souhrn ?? { veta: null, aktualizovano: null, podklady: [] }} veta={veta} kontrola={pulz?.kdy ?? overeno} ted={tedMs} />
+            )}
             <div className="mt-4"><Tlacitko kam="/odber/" varianta="obrys" velikost="m" ikona="zvonek">Odběr zpráv</Tlacitko></div>
           </div>
           <div id="podrobny-monitoring" className="order-3 min-w-0 scroll-mt-20 lg:order-none lg:col-start-1 lg:row-start-2"><AktualitySloupce zaznamy={vse} nepotvrzene={nepotvrzene} kandidati={kandidati} /></div>

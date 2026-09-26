@@ -221,6 +221,16 @@ export const UCTY_ZAPNUTE = API_URL !== "";
  */
 export const UVOD_V2 = true;
 
+/**
+ * Rychlý přehled na úvodu (docs/RYCHLY-PREHLED.md).
+ *
+ * Vypnuto 26. 9. 2026 na pokyn provozovatelky: blok není dodělaný.
+ * Vypnuté je jen zobrazení — sběr dál zapisuje stav zdrojů a výstrahy
+ * ČHMÚ a /prehled.json se dál generuje, takže po zapnutí má přehled
+ * historii. Zapnutí je jen tenhle přepínač.
+ */
+export const RYCHLY_PREHLED = false;
+
 export const SPUSTENO = {
   premium: false,
   komunita: false,
