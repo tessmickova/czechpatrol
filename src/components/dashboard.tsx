@@ -1,8 +1,16 @@
 "use client";
 
+/*
+  Žádné <Suspense> kolem částí úvodu (26. 9. 2026): statický export je
+  vypíše na konec HTML jako skryté bloky a skript je vloží na místo až
+  po načtení — na pomalém připojení stránka poskakovala (CLS 0,81).
+  Test testy/vykon.test.ts to hlídá.
+*/
+
 import { HlavickaWidgetu, IkonaKruh } from "./widgety";
 import { AktualitySloupce } from "./aktuality-sloupce";
 import { Znacka } from "./znacka";
+import { casyProPanel } from "@/lib/casy-panelu";
 import { SidebarUvodu } from "./sidebar-uvodu";
 import type { Pulz } from "@/lib/pulz";
 import type { SouhrnSituace } from "@/lib/souhrn-situace";
@@ -40,7 +48,7 @@ import { Tlacitko } from "./ui";
 import { useZiveHodiny } from "@/lib/cas-klient";
 import { PripravenostKarta } from "./pripravenost-klient";
 import { TipyKPriprave } from "./tipy";
-import { tipy as vsechnyTipy } from "@/lib/data";
+import { tipy as vsechnyTipy } from "@/lib/data-lehka";
 import { CoSeZmenilo } from "./co-se-zmenilo";
 import { StavSluzeb } from "./stav-sluzeb";
 import { snimekSluzeb, SLOVA_STAVU, SLUZBY, type StavSluzby } from "@/lib/sluzby";
@@ -578,7 +586,7 @@ export function Dashboard({
           </div>
           <div id="podrobny-monitoring" className="order-3 min-w-0 scroll-mt-20 lg:order-none lg:col-start-1 lg:row-start-2"><AktualitySloupce zaznamy={vse} nepotvrzene={nepotvrzene} kandidati={kandidati} /></div>
           <div className="order-2 min-w-0 lg:order-none lg:col-start-2 lg:row-span-2 lg:row-start-1">
-          <SidebarUvodu stav={stav} cr={cr} crHistoricky={crHistoricky} crPocet={crPocet} obcane={obcane} pulz={pulz} priprava={priprava} vse={vse} kampane={kampane} kandidati={kandidati} zkontrolovano={overeno} overovane={overovaneAktivni} ted={tedMs}
+          <SidebarUvodu stav={stav} cr={cr} crHistoricky={crHistoricky} crPocet={crPocet} obcane={obcane} pulz={pulz} priprava={priprava} {...casyProPanel(vse, kampane)} kandidati={kandidati} zkontrolovano={overeno} overovane={overovaneAktivni} ted={tedMs}
             tipy={<MiniBox nazev="Tipy k přípravě" ikona="fajfka" ton="klid" souhrn={tipyNahled.length ? tipyNahled[0].nadpis : "Zatím bez tipu"}><TipyKPriprave ted={tedMs} vnoreny /></MiniBox>} />
           </div>
         </div>

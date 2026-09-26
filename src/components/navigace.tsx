@@ -36,7 +36,10 @@ export function Navigace() {
     // aby pilulka lícovala s panely pod sebou. Dřív měla vlastní 1200 px a byla
     // o 16 px zasunutá z každé strany; kopírováním obsahu to zůstane srovnané,
     // i kdyby se šířka webu někdy změnila.
-    <header className="neni-tisk sticky top-0 z-50 pt-3">
+    // Bezpečná zóna nahoře (26. 9. 2026): v nainstalované aplikaci je stavový
+    // řádek průhledný (black-translucent + viewport-fit=cover) a pilulka
+    // při posunu zajížděla pod hodiny a baterii.
+    <header className="neni-tisk sticky top-0 z-50 pt-[calc(0.75rem+env(safe-area-inset-top))] before:pointer-events-none before:absolute before:inset-x-0 before:top-0 before:h-[env(safe-area-inset-top)] before:bg-papir before:content-['']">
       <div className="mx-auto max-w-[1280px] px-4 sm:px-6">
       {/*
         Jeden řádek, i na úzkém displeji.

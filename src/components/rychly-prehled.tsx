@@ -180,7 +180,7 @@ export function RychlyPrehled({ snimek: vychozi, konfigurace, ted: tedServer }: 
       )}
       <p className="mt-2 text-mikro leading-snug text-tlum2">
         Neověřené zprávy z médií ({p.neovereno.signalu24h} za 24 h) řadíme zvlášť a do přehledu nevstupují.
-        {p.neovereno.vyvracenych > 0 && <> Vyvrácené: <a href="/nepotvrzeno/" className="text-akcent underline-offset-2 hover:underline">{p.neovereno.vyvracenych}</a>{p.neovereno.oznacenoUradem > 0 ? `, z toho ${p.neovereno.oznacenoUradem} označil úřad za nepravdivé či poplašné` : ""}.</>}
+        {p.neovereno.vyvracenych > 0 && <> Vyvrácené: <a href="/udalosti/?overeni=neprosle" className="text-akcent underline-offset-2 hover:underline">{p.neovereno.vyvracenych}</a>{p.neovereno.oznacenoUradem > 0 ? `, z toho ${p.neovereno.oznacenoUradem} označil úřad za nepravdivé či poplašné` : ""}.</>}
       </p>
 
       <div className="mt-3 flex flex-wrap items-center justify-between gap-2 border-t border-linka pt-3">

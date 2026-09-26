@@ -13,3 +13,4 @@ api/.dev.vars
 # Stav strážce sběru (jen pro běh a mezipaměť workflow)
 .strazce/
 .strazce-testy.log
+audit-kliku.json

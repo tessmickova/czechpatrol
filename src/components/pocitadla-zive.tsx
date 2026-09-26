@@ -31,13 +31,10 @@ export interface PolozkaPoctu {
   kampan?: boolean;
 }
 
+// Jeden formátovač pro všechna data (výkon, 26. 9. 2026).
+const FORMAT_DNE = new Intl.DateTimeFormat("en-CA", { timeZone: "Europe/Prague", year: "numeric", month: "2-digit", day: "2-digit" });
 function denPraha(cas: number) {
-  return new Intl.DateTimeFormat("en-CA", {
-    timeZone: "Europe/Prague",
-    year: "numeric",
-    month: "2-digit",
-    day: "2-digit",
-  }).format(new Date(cas));
+  return FORMAT_DNE.format(new Date(cas));
 }
 
 export function spocitejOkna(polozky: PolozkaPoctu[], ted: number) {

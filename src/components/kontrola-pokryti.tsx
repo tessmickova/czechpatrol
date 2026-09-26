@@ -1,4 +1,18 @@
-import { kontrolaPokryti, souhrnPokryti, STUPNE, type StupenPokryti } from "@/lib/pokryti-stavu";
+import { nato, pravniStav, provoz } from "@/lib/data";
+import { pokrytiPolozky, souhrnPokryti, STUPNE, type PokrytiPolozky, type StupenPokryti } from "@/lib/pokryti-stavu";
+
+/*
+  Celá kontrola pro stránku Zdroje; pořadí jako na přehledu. Je tady, ne
+  v pokryti-stavu.ts (26. 9. 2026): ten čte i komponenta v prohlížeči
+  a s daty by do telefonu táhl celý datový modul.
+*/
+function kontrolaPokryti(): PokrytiPolozky[] {
+  return [
+    ...pravniStav().polozky.map((p) => pokrytiPolozky(p, "Právní stav")),
+    ...nato().polozky.map((p) => pokrytiPolozky(p, "NATO")),
+    ...provoz().polozky.map((p) => pokrytiPolozky(p, "Běžný život")),
+  ];
+}
 import { Odznak, type Ton } from "./ui";
 
 /*

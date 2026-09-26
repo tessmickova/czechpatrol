@@ -13,8 +13,8 @@
 */
 
 @theme {
-  --font-sans: Archivo, ui-sans-serif, system-ui, sans-serif;
-  --font-mono: "IBM Plex Mono", ui-monospace, Menlo, monospace;
+  --font-sans: Archivo, "Archivo Nahradni", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "IBM Plex Mono", "IBM Plex Mono Nahradni", ui-monospace, Menlo, monospace;
 
   /*
     Velikosti písma jako tokeny.
@@ -668,3 +668,31 @@ input[type="range"] { accent-color: var(--color-akcent); }
 @keyframes pulz-kruh { 0% { transform: scale(1); opacity: 0.6; } 100% { transform: scale(2.4); opacity: 0; } }
 .pulz-kruh { animation: pulz-kruh 2.4s ease-out infinite; }
 @media (prefers-reduced-motion: reduce) { .pulz-kruh { animation: none; opacity: 0; } }
+
+/* Lišta souhlasu: v HTML vždy, vidět jen s <html data-souhlas="ptat"> (src/lib/souhlas-skript.ts). */
+.souhlas-lista { display: none; }
+html[data-souhlas="ptat"] .souhlas-lista { display: block; }
+
+/*
+  Náhradní písma se stejnými rozměry (26. 9. 2026). Než se Archivo a Plex
+  Mono stáhnou, kreslí se Arial / Courier New zmenšené a posunuté tak, aby
+  text po výměně písma neposkočil (CLS). Hodnoty spočítané z metrik písem
+  (průměrná šířka malých písmen, ascent, descent) — stejně jako to dělal
+  next/font, než jsme přešli na @fontsource.
+*/
+@font-face {
+  font-family: "Archivo Nahradni";
+  src: local("Arial"), local("ArialMT"), local("Liberation Sans"), local("Helvetica");
+  size-adjust: 100.81%;
+  ascent-override: 87.09%;
+  descent-override: 20.83%;
+  line-gap-override: 0%;
+}
+@font-face {
+  font-family: "IBM Plex Mono Nahradni";
+  src: local("Courier New"), local("CourierNewPSMT"), local("Liberation Mono"), local("Courier");
+  size-adjust: 99.98%;
+  ascent-override: 102.52%;
+  descent-override: 27.5%;
+  line-gap-override: 0%;
+}

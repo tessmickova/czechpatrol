@@ -3,7 +3,7 @@
 import { HlavickaWidgetu } from "./widgety";
 import { useEffect, useState } from "react";
 import { datumPraha } from "@/lib/cas";
-import { BEZ_SIGNALU, LEKARNICKA, NAZVY_KATEGORII, PORADI_KATEGORII, UDALOSTI, ZMINKY, nactiOdpovedi, nastrojeDoPruvodce, skorePripravenosti, souhrnOtazek, ulozOdpovedi, vetaKeSkore, type Odpoved, type Odpovedi, type OtazkaDotazniku } from "@/lib/pripravenost";
+import { BEZ_SIGNALU, LEKARNICKA, ODBERY, NAZVY_KATEGORII, PORADI_KATEGORII, UDALOSTI, ZMINKY, nactiOdpovedi, nastrojeDoPruvodce, skorePripravenosti, souhrnOtazek, ulozOdpovedi, vetaKeSkore, type Odpoved, type Odpovedi, type OtazkaDotazniku } from "@/lib/pripravenost";
 import type { OficialniNastroj } from "@/lib/typy";
 import { Ikona } from "./ikony";
 import { Sdeleni, Tlacitko } from "./ui";
@@ -103,6 +103,9 @@ function SeznamOtazek({ otazky, odpovedi, odpovez }: { otazky: OtazkaDotazniku[]
             <span className={`block text-male font-semibold leading-snug ${odpovedi[q.id] === "mam" ? "text-tlum" : "text-inkoust"}`}>{q.nazev}</span>
             {q.upresneni && <span className="block text-drobne leading-snug text-tlum2">{q.upresneni}</span>}
             {q.aplikace && <Aplikace a={q.aplikace} />}
+            {q.odkaz && (q.odkaz.url.startsWith("/")
+              ? <a href={q.odkaz.url} className="odkaz mt-0.5 inline-block text-drobne text-tlum2">{q.odkaz.nazev} →</a>
+              : <a href={q.odkaz.url} target="_blank" rel={VEN} className="odkaz mt-0.5 inline-block text-drobne text-tlum2">Zdroj: {q.odkaz.nazev} ↗</a>)}
           </span>
         </li>
       ))}
@@ -170,7 +173,11 @@ export function PripravenostKlient({ nastroje }: { nastroje: OficialniNastroj[] 
   const kroky: Krok[] = [
     ...PORADI_KATEGORII.flatMap((kat): Krok[] => {
       const polozky = nastrojeDoPruvodce(nastroje).filter((n) => n.kategorie === kat);
-      return polozky.length ? [{ klic: kat, nazev: NAZVY_KATEGORII[kat], druh: "nastroje", polozky, ids: polozky.map((n) => n.id) }] : [];
+      const krok: Krok[] = polozky.length ? [{ klic: kat, nazev: NAZVY_KATEGORII[kat], druh: "nastroje", polozky, ids: polozky.map((n) => n.id) }] : [];
+      // Odběry a rádio hned za krizovými informacemi — tam je člověk hledá.
+      return kat === "krizove-informace"
+        ? [...krok, { klic: "odbery", nazev: "Zprávy a rádio", druh: "otazky", otazky: ODBERY, ids: ODBERY.map((q) => q.id), uvod: <>{ZMINKY.odbery}</> }]
+        : krok;
     }),
     { klic: "offline", nazev: "Bez signálu", druh: "otazky", otazky: BEZ_SIGNALU, ids: BEZ_SIGNALU.map((q) => q.id), uvod: <>{ZMINKY.offline}</> },
     { klic: "lekarnicka", nazev: "Lékárnička", druh: "otazky", otazky: LEKARNICKA, ids: LEKARNICKA.map((q) => q.id), uvod: <>{ZMINKY.lekarnicka} Složení probírejte s lékárníkem — web zdravotní rady nedává.</> },
@@ -290,10 +297,14 @@ export function PripravenostKlient({ nastroje }: { nastroje: OficialniNastroj[] 
                 })}
               </ul>
             )}
-            <div className="mt-5 flex flex-wrap gap-2">
-              <Tlacitko kam="/odolnost/" varianta="plny" velikost="m" ikona="terc">Kalkulačka odolnosti</Tlacitko>
-              <Tlacitko kam="/" varianta="obrys" velikost="m">Zpět na přehled</Tlacitko>
-            </div>
+            {/* Na konci dotazníku velká výzva ke kalkulačce (26. 9. 2026): průvodce řekne, co máte; kalkulačka, jak dlouho s tím vydržíte. */}
+            <a href="/odolnost/" className="group mt-6 block rounded-[22px] border-2 border-akcent bg-akcent/[0.06] p-5 transition-colors hover:bg-akcent/10 sm:p-6">
+              <span className="flex items-center gap-2 text-akcent"><Ikona nazev="terc" velikost={20} tah={1.9} /><span className="nadpis-boxu !text-akcent">Další krok</span></span>
+              <span className="mt-2 block text-cislo font-bold leading-tight text-inkoust">Vyzkoušejte i kalkulačku odolnosti</span>
+              <span className="mt-1.5 block max-w-[56ch] text-zaklad text-tlum">Řekne vám, jak dlouho dokážete vydržet bez proudu, vody a obchodů — a co doplnit nejdřív.</span>
+              <span className="mt-4 inline-flex min-h-[48px] items-center gap-2 rounded-full bg-akcent px-6 text-zaklad font-semibold text-papir group-hover:bg-akcent-svetla">Spustit kalkulačku <Ikona nazev="nahoru" velikost={13} tah={2} trida="rotate-90" /></span>
+            </a>
+            <div className="mt-3"><Tlacitko kam="/" varianta="obrys" velikost="m">Zpět na přehled</Tlacitko></div>
           </div>
         )}
       </section>

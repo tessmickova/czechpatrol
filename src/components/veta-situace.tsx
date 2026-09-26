@@ -1,6 +1,7 @@
 "use client";
 
 import { casPraha } from "@/lib/cas";
+import { SBER_JAK_CASTO } from "@/config/web";
 import { useZiveHodiny } from "@/lib/cas-klient";
 import type { SouhrnSituace } from "@/lib/souhrn-situace";
 import type { HlavniVeta } from "@/lib/veta";
@@ -33,13 +34,13 @@ export function VetaSituace({ souhrn, veta, kontrola, ted }: { souhrn: SouhrnSit
           <>
             <span className="stitek">AI shrnutí</span>
             <span className="cislice">{casPraha(souhrn.aktualizovano!)}</span>
-            <Otaznik popis={<span className="block">Shrnutí doložených záznamů za 7 dní a úředního stavu, napsané ověřovatelem projektu. Není to úřední zpráva ani předpověď. Po 30 hodinách ho nahradí věta z úředního stavu. Sběr běží každých 30 minut, web se přestaví do několika minut po změně dat.</span>} />
+            <Otaznik popis={<span className="block">Shrnutí doložených záznamů za 7 dní a úředního stavu, napsané ověřovatelem projektu. Není to úřední zpráva ani předpověď. Po 30 hodinách ho nahradí věta z úředního stavu. Sběr běží {SBER_JAK_CASTO}, web se přestaví do několika minut po změně dat.</span>} />
           </>
         ) : (
           <>
             <span>podle úředního stavu</span>
             {kontrola && <span className="cislice">čteno {casPraha(kontrola)}</span>}
-            <Otaznik popis={<span className="block">Věta sestavená z úředního stavu Česka a kontrolovaných zdrojů. Není to úřední zpráva ani předpověď. Sběr běží každých 30 minut, web se přestaví do několika minut po změně dat.</span>} />
+            <Otaznik popis={<span className="block">Věta sestavená z úředního stavu Česka a kontrolovaných zdrojů. Není to úřední zpráva ani předpověď. Sběr běží {SBER_JAK_CASTO}, web se přestaví do několika minut po změně dat.</span>} />
           </>
         )}
       </p>

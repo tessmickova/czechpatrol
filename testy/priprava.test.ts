@@ -1,5 +1,6 @@
 import { describe, expect, it } from "vitest";
-import { pripravitTed, seznamy, tlakHrozeb } from "../src/lib/priprava";
+import { seznamy } from "../src/lib/priprava";
+import { pripravitTed, tlakHrozeb } from "../src/lib/priprava-ted";
 
 describe("Připravit teď", () => {
   it("seznamy mají tři části a každá položka odpovídá na aspoň jednu hrozbu", () => {

@@ -3,6 +3,9 @@ import { datumPraha } from "@/lib/cas";
 import type { Kandidat, Nepotvrzene } from "@/lib/typy";
 import { sklon } from "./zeme";
 
+// Jeden formátovač pro všechna data (výkon, 26. 9. 2026).
+const FORMAT_DNE = new Intl.DateTimeFormat("en-CA", { timeZone: "Europe/Prague", year: "numeric", month: "2-digit", day: "2-digit" });
+
 /*
   Započítávání. Počty podle data zjištění v pražském čase; přepočítají
   se při každém sestavení webu, tedy po každém hodinovém sběru. Číslo
@@ -11,7 +14,7 @@ import { sklon } from "./zeme";
 */
 
 function denPraha(iso: string) {
-  return new Intl.DateTimeFormat("en-CA", { timeZone: "Europe/Prague", year: "numeric", month: "2-digit", day: "2-digit" }).format(new Date(iso));
+  return FORMAT_DNE.format(new Date(iso));
 }
 
 export function Pocitadla({ vse, neprosle, kandidati = [], nepotvrzenych = 0, ted = Date.now() }: { vse: Zaznam[]; neprosle: Nepotvrzene[]; kandidati?: Kandidat[]; nepotvrzenych?: number; ted?: number }) {

@@ -2,14 +2,13 @@
 
 import Link from "next/link";
 import type { StavObcanu } from "@/lib/data";
-import { kdyZjisteno, type Zaznam } from "@/lib/agregace";
 import { NAZVY_HROZEB, type PripravitTed as DataPripravy } from "@/lib/priprava";
 import type { Pulz } from "@/lib/pulz";
 import { PASMA, UROVNE } from "@/lib/skala";
-import type { CelkovyStav, Kampan, Kandidat, Overovana, Uroven } from "@/lib/typy";
+import type { CelkovyStav, Kandidat, Overovana, Uroven } from "@/lib/typy";
 import { casPraha } from "@/lib/cas";
 import { useT } from "@/lib/i18n";
-import { BUY_ME_A_COFFEE_URL, HEROHERO_URL } from "@/config/web";
+import { BUY_ME_A_COFFEE_URL, HEROHERO_URL, KANALY } from "@/config/web";
 import { PIZZA_INDEX, VEN } from "@/config/odkazy-ven";
 import { popisCasu, stavPizzy } from "@/lib/pizza";
 import { Ikona } from "./ikony";
@@ -50,9 +49,9 @@ function Maly({ nadpis, obdobi, uroven, slovo, neutralni, popis, dodatek, graf }
   );
 }
 
-export function SidebarUvodu({ stav, cr, crHistoricky, crPocet, obcane, pulz, priprava, vse, kampane, kandidati, zkontrolovano, overovane = [], ted, tipy }: {
+export function SidebarUvodu({ stav, cr, crHistoricky, crPocet, obcane, pulz, priprava, casy, casyCz, kandidati, zkontrolovano, overovane = [], ted, tipy }: {
   stav: CelkovyStav; cr: Uroven | null; crHistoricky: Uroven | null; crPocet: { pripadu: number; kampani: number }; obcane: StavObcanu;
-  pulz?: Pulz; priprava?: DataPripravy; vse: Zaznam[]; kampane: Kampan[]; kandidati: Kandidat[]; zkontrolovano: string | null; overovane?: Overovana[]; ted: number; /** Box Tipy k přípravě — stojí před „AI radí“ (24. 9. 2026). */ tipy?: React.ReactNode;
+  pulz?: Pulz; priprava?: DataPripravy; casy: string[]; casyCz: string[]; kandidati: Kandidat[]; zkontrolovano: string | null; overovane?: Overovana[]; ted: number; /** Box Tipy k přípravě — stojí před „AI radí“ (24. 9. 2026). */ tipy?: React.ReactNode;
 }) {
   /* Naléhavé zprávy chytá sběr, tak se čerstvost měří jeho posledním průchodem, ne ručním ověřením. */
   const kontrola = pulz?.kdy ?? zkontrolovano;
@@ -60,8 +59,6 @@ export function SidebarUvodu({ stav, cr, crHistoricky, crPocet, obcane, pulz, pr
   const t = useT();
   const d = stav.uroven ? UROVNE[stav.uroven] : null;
   const pasmo = stav.uroven ? PASMA[UROVNE[stav.uroven].pasmo] : null;
-  const casy = [...vse.filter((z) => (z.druh ?? "pripad") === "pripad").map((z) => kdyZjisteno(z)), ...kampane.map((k) => k.odhaleno)];
-  const casyCz = [...vse.filter((z) => (z.druh ?? "pripad") === "pripad" && z.kodZeme === "CZ").map((z) => kdyZjisteno(z)), ...kampane.filter((k) => k.kodyZemi.includes("CZ")).map((k) => k.odhaleno)];
   const d90 = poDnech(casy, 90, ted);
   const d14 = d90.slice(-14);
   const soucet = (n: number) => d90.slice(-n).reduce((a, b) => a + b, 0);
@@ -76,7 +73,8 @@ export function SidebarUvodu({ stav, cr, crHistoricky, crPocet, obcane, pulz, pr
     <aside aria-label="Stav a příprava" className="space-y-4">
       {/* Podpora a odběr — první, bez rámečku, zarovnané s kartami pod tím (24. 9. 2026). */}
       <div className="flex flex-wrap items-center gap-2 px-1">
-        <Tlacitko kam="/odber/" varianta="obrys" velikost="s" ikona="zvonek">Upozornění</Tlacitko>
+        {/* Rovnou do Telegramu (26. 9. 2026): mezikrok přes /odber/ opouštělo 72 % lidí. Kanál bez adresy → stránka Odběr. */}
+        <Tlacitko kam={KANALY.telegram || "/odber/"} nove={Boolean(KANALY.telegram)} varianta="obrys" velikost="s" ikona="zvonek" trida="!border-akcent">{KANALY.telegram ? "Upozornění v Telegramu" : "Upozornění"}</Tlacitko>
         {BUY_ME_A_COFFEE_URL && <Tlacitko kam={BUY_ME_A_COFFEE_URL} nove varianta="obrys" velikost="s" ikona="kava">Buy me a coffee</Tlacitko>}
         {HEROHERO_URL && <Tlacitko kam={HEROHERO_URL} nove varianta="obrys" velikost="s" ikona="srdce">Herohero</Tlacitko>}
         {!podpora && <Tlacitko kam="/podporit/" varianta="obrys" velikost="s" ikona="kava">Podpořit provoz</Tlacitko>}
@@ -180,7 +178,7 @@ export function SidebarUvodu({ stav, cr, crHistoricky, crPocet, obcane, pulz, pr
         )}
         <div className="flex flex-wrap gap-2 px-4 pb-4 pt-2">
           <Tlacitko kam="/pripravenost/" varianta="plny" velikost="s" ikona="stit">Projít průvodce</Tlacitko>
-          <Tlacitko kam="/odolnost/" varianta="obrys" velikost="s" ikona="terc">Kalkulačka odolnosti</Tlacitko>
+          <Tlacitko kam="/odolnost/" varianta="obrys" velikost="s" ikona="terc" trida="!border-akcent">Kalkulačka odolnosti</Tlacitko>
         </div>
       </section>
 

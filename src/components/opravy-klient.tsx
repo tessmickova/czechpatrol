@@ -13,7 +13,7 @@ import { Karta } from "./zaklad";
   vedla jediná cesta k opravě přes příkazovou řádku, což znamená, že se
   neudělá.
 
-  Důvod opravy je povinný a objeví se veřejně na stránce Opravy. Tichý přepis
+  Důvod opravy je povinný a zůstává v historii oprav ve správě (od 26. 9. 2026 jen pro správce). Tichý přepis
   zveřejněného údaje se tu dělat nedá schválně: projekt, který opravuje
   potichu, je k nerozeznání od projektu, který se nemýlí.
 */
@@ -143,7 +143,7 @@ export function OpravaZaznamu() {
                   </div>
 
                   {/*
-                    Povinné a veřejné. Projekt, který opravuje potichu, je
+                    Povinné. Projekt, který opravuje potichu, je
                     k nerozeznání od projektu, který se nemýlí.
                   */}
                   <label className="mt-3 block">

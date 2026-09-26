@@ -1,10 +1,10 @@
 import Link from "next/link";
 import { aktualizaceK, dolozeno, druh, jistotaZobrazena, pripadK, uredniZdroj } from "@/lib/agregace";
 import { datumCasPraha, datumPraha } from "@/lib/cas";
-import { incidenty, opravyK } from "@/lib/data";
 import { ATRIBUCE, KATEGORIE, PUVODCI, STAVY } from "@/lib/kategorie";
 import { JISTOTY, UROVNE, zDeseti } from "@/lib/skala";
-import type { Incident } from "@/lib/typy";
+import type { Incident, Oprava } from "@/lib/typy";
+import type { Zaznam } from "@/lib/agregace";
 import { Ikona } from "./ikony";
 import { SeznamZdroju } from "./zdroje";
 import { Napoveda, VykladUrovne } from "./zaklad";
@@ -53,10 +53,15 @@ function Seznam({ polozky, tlumene = false }: { polozky: string[]; tlumene?: boo
 }
 
 /** Hlavička detailu: druh, země, závažnost, data. */
-export function HlavickaDetailu({ i, velka = false }: { i: Incident; velka?: boolean }) {
+/*
+  Záznamy a opravy přicházejí jako vstup (26. 9. 2026): detail se vykresluje
+  i v prohlížeči (seznam událostí) a dokud si je bral z data.ts sám, jel
+  do telefonu celý datový modul webu.
+*/
+export function HlavickaDetailu({ i, vse, velka = false }: { i: Incident; vse: Zaznam[]; velka?: boolean }) {
   const d = UROVNE[i.zavaznost];
   const dr = druh(i);
-  const rodic = pripadK(i, incidenty());
+  const rodic = pripadK(i, vse);
   const jistota = jistotaZobrazena(i);
   return (
     <header>
@@ -124,10 +129,9 @@ export function HlavickaDetailu({ i, velka = false }: { i: Incident; velka?: boo
   );
 }
 
-export function DetailObsah({ i }: { i: Incident }) {
-  const vse = incidenty();
+export function DetailObsah({ i, vse, opravy: vsechnyOpravy }: { i: Incident; vse: Zaznam[]; opravy: Oprava[] }) {
   const aktualizace = aktualizaceK(i.slug, vse);
-  const opravy = opravyK(i.slug);
+  const opravy = vsechnyOpravy.filter((o) => o.tykaSe === i.slug);
   const historie = [
     ...i.historie.map((h) => ({ kdy: h.kdy, text: h.text, druh: "aktualizace" as const })),
     ...opravy.map((o) => ({ kdy: o.datum, text: `Oprava: ${o.co} ${o.proc}`, druh: "oprava" as const })),

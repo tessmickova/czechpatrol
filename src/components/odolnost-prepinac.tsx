@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useState, useTransition } from "react";
 import { PORADI_SEZNAMU, seznamy, type KlicSeznamu } from "@/lib/priprava";
 import { OdolnostKlient } from "./odolnost-klient";
 import { SeznamyZasob } from "./seznamy-zasob";
@@ -15,15 +15,23 @@ const JE_SEZNAM = (v: string | null): v is KlicSeznamu => (PORADI_SEZNAMU as str
 
 export function OdolnostPrepinac() {
   const [volba, setVolba] = useState<Volba>("kalkulacka");
+  /*
+    Obsah se přepíná jako přechod (26. 9. 2026, výkon): záložka se zvýrazní
+    hned po klepnutí a těžší kalkulačka nebo seznam se vykreslí za ní.
+    Dřív klepnutí čekalo na celé vykreslení (~180 ms na telefonu).
+  */
+  const [zobrazeno, setZobrazeno] = useState<Volba>("kalkulacka");
+  const [, prechod] = useTransition();
   const [zvyrazni, setZvyrazni] = useState<string | null>(null);
   useEffect(() => {
     const q = new URLSearchParams(window.location.search);
     const s = q.get("seznam");
-    if (JE_SEZNAM(s)) setVolba(s);
+    if (JE_SEZNAM(s)) { setVolba(s); setZobrazeno(s); }
     setZvyrazni(q.get("zvyrazni"));
   }, []);
   const zmen = (v: Volba) => {
     setVolba(v);
+    prechod(() => setZobrazeno(v));
     const q = new URLSearchParams(window.location.search);
     if (v === "kalkulacka") { q.delete("seznam"); q.delete("zvyrazni"); } else q.set("seznam", v);
     if (v !== volba) { q.delete("zvyrazni"); setZvyrazni(null); }
@@ -47,7 +55,7 @@ export function OdolnostPrepinac() {
           </button>
         ))}
       </div>
-      {volba === "kalkulacka" ? <OdolnostKlient /> : <SeznamyZasob seznam={volba} zvyrazni={zvyrazni} />}
+      {zobrazeno === "kalkulacka" ? <OdolnostKlient /> : <SeznamyZasob seznam={zobrazeno} zvyrazni={zvyrazni} />}
     </div>
   );
 }

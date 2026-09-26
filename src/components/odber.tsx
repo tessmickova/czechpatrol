@@ -29,6 +29,12 @@ export function OdberPanel({ kompaktni = false }: { kompaktni?: boolean }) {
             )}
             <span className="block text-male leading-snug text-tlum">{DORUCOVANI.telegram.rozsah}</span>
             <span className="block text-drobne leading-snug text-tlum2">Bez nové zprávy nelze usuzovat na stav situace.</span>
+            {/* Hlavní akce stránky jako tlačítko, ne jen podtržený text (26. 9. 2026: z Odběru odcházelo 21 z 29 lidí). */}
+            {KANALY.telegram && (
+              <a href={KANALY.telegram} target="_blank" rel="nofollow noopener noreferrer" className="mt-3 inline-flex min-h-[48px] items-center gap-2 rounded-full bg-akcent px-5 text-zaklad font-semibold text-papir hover:bg-akcent-svetla">
+                <Ikona nazev="zvonek" velikost={16} tah={2} /> Odebírat v Telegramu ↗
+              </a>
+            )}
           </span>
         </li>
         <li className="flex gap-3">

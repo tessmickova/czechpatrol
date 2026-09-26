@@ -3,7 +3,7 @@ import Link from "next/link";
 import { ObsahStranky } from "@/components/obsah-stranky";
 import { HlavickaStranky, Obsah } from "@/components/hlavicka";
 import { Karta, OdznakTypu, Sekce } from "@/components/zaklad";
-import { METODIKA_REVIDOVANA, METODIKA_VERZE } from "@/config/web";
+import { METODIKA_REVIDOVANA, METODIKA_VERZE, SBER_JAK_CASTO } from "@/config/web";
 import { datum } from "@/lib/format";
 import { PASMA, UROVNE, zDeseti } from "@/lib/skala";
 import type { Uroven } from "@/lib/typy";
@@ -98,7 +98,7 @@ export default function Metodika() {
               Verze {METODIKA_VERZE}
             </span>
             <span className="text-drobne text-tlum2">
-              Revidováno {datum(METODIKA_REVIDOVANA)} · verze 2 mění jen názvy úrovní (Nízká → Mírně zvýšená → Střední → Zvýšená → Vysoká → Vážná), prahy a hodnocení zůstávají · <Link href="/opravy/" className="odkaz">historie změn</Link>
+              Revidováno {datum(METODIKA_REVIDOVANA)} · verze 2 mění jen názvy úrovní (Nízká → Mírně zvýšená → Střední → Zvýšená → Vysoká → Vážná), prahy a hodnocení zůstávají
             </span>
           </div>
         }
@@ -329,7 +329,7 @@ export default function Metodika() {
           <h2 className="podnadpis mb-3 text-vetsi">Role automatizace</h2>
           <div className="max-w-[46rem] space-y-3 text-male leading-relaxed text-tlum">
             <p>
-              Sběr běží každých 30 minut, ale nic nezveřejňuje — jen ukládá zprávy ke kontrole. Na web jde záznam se zdrojem po kontrole, nebo se dvěma zdroji včetně úředního.
+              Sběr běží {SBER_JAK_CASTO}, ale nic nezveřejňuje — jen ukládá zprávy ke kontrole. Na web jde záznam se zdrojem po kontrole, nebo se dvěma zdroji včetně úředního.
             </p>
             <p>
               Úřední stavy ověřujeme proti úředním zdrojům. Když ověření neproběhlo, napíšeme to. Nic nedopočítáváme z médií.

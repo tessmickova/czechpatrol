@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
 import { HlavickaStranky } from "@/components/nadpisy";
 import { UdalostiKlient } from "@/components/udalosti-klient";
-import { incidenty, kandidati, nepotvrzene, nepotvrzeneZaznamy } from "@/lib/data";
+import { CoDal } from "@/components/co-dal";
+import { incidenty, kandidati, nepotvrzene, nepotvrzeneZaznamy, opravy } from "@/lib/data";
 
 export const metadata: Metadata = {
   title: "Události",
@@ -17,7 +18,8 @@ export default function Udalosti() {
         uvod="Případy, jejich pokračování, opatření a prohlášení. Každý záznam má zdroj. Jedna událost = jeden záznam, i když o ní vyjde deset článků."
       />
       <div className="mt-12 sm:mt-16" />
-      <UdalostiKlient zaznamy={incidenty()} neprosle={nepotvrzene()} kandidati={kandidati()} nepotvrzene={nepotvrzeneZaznamy()} />
+      <UdalostiKlient zaznamy={incidenty()} neprosle={nepotvrzene()} kandidati={kandidati()} nepotvrzene={nepotvrzeneZaznamy()} opravy={opravy()} />
+      <CoDal bez="/udalosti/" />
     </div>
   );
 }

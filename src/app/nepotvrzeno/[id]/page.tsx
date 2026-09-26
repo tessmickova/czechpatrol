@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { DetailObsah, HlavickaDetailu } from "@/components/detail-obsah";
 import { Sdeleni } from "@/components/ui";
-import { nepotvrzeneZaznamy } from "@/lib/data";
+import { incidenty, nepotvrzeneZaznamy, opravy } from "@/lib/data";
 
 export const dynamicParams = false;
 
@@ -83,8 +83,8 @@ export default async function Stranka({ params }: { params: Promise<{ id: string
             : "Je doložená jen médii. Zveřejní se, až to schválí člověk, nebo až přibude úřední zdroj."}
       </Sdeleni>
 
-      <HlavickaDetailu i={z} velka />
-      <div className="mt-8"><DetailObsah i={z} /></div>
+      <HlavickaDetailu i={z} vse={incidenty()} velka />
+      <div className="mt-8"><DetailObsah i={z} vse={incidenty()} opravy={opravy()} /></div>
     </article>
   );
 }

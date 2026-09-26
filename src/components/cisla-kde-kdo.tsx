@@ -8,7 +8,7 @@ import { cislem, porovnejSPrumerem, prumerNaOkno } from "@/lib/porovnani";
 import type { HybridniTlak, Kampan } from "@/lib/typy";
 import { NadpisSekce } from "./nadpisy";
 import { PavucinaHrozeb } from "./pavucina";
-import { TabulkaZemi } from "./tabulka-zemi";
+import { TabulkaZemi, type RadekTabulkyZemi } from "./tabulka-zemi";
 import { Odznak, Tlacitko } from "./ui";
 import { Otaznik } from "./zaklad";
 import { sklon, Vlajka } from "./zeme";
@@ -41,7 +41,7 @@ function Pruh({ nazev, n, max, barva, odkaz }: { nazev: React.ReactNode; n: numb
   return odkaz ? <Link href={odkaz} className="flex min-h-[36px] items-center gap-2 hover:bg-plocha">{telo}</Link> : <span className="flex min-h-[36px] items-center gap-2">{telo}</span>;
 }
 
-export function TypyUdalosti({ tlakEvropa }: { tlakEvropa: HybridniTlak }) {
+export function TypyUdalosti({ tlakEvropa, tabulka }: { tlakEvropa: HybridniTlak; tabulka: RadekTabulkyZemi[] }) {
   const t = useT();
   return (
     <section className="nalet">
@@ -59,7 +59,7 @@ export function TypyUdalosti({ tlakEvropa }: { tlakEvropa: HybridniTlak }) {
           velikostObrazce={260}
           sPopisky
         />
-        <TabulkaZemi />
+        <TabulkaZemi zeme={tabulka} />
       </div>
     </section>
   );

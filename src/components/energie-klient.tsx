@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useRef, useState } from "react";
 import {
   bateriePro, nejvetsiSpotrebitele, panelyWp, PRIORITY, PVGIS_URL, REZIMY, SLUNECNE_HODINY, SPOTREBICE, spickaW, spotrebaPoRezimech,
   UCINNOST_SOLARU_VYCHOZI, vydrzHodin, zPredvolby, ZTRATY_VYCHOZI, type Priorita, type Rezim, type Sezona, type VybranySpotrebic,
@@ -27,9 +27,11 @@ export function VyberSpotrebicu({ vybrane, onChange }: { vybrane: VybranySpotreb
     else { const p = SPOTREBICE.find((s) => s.klic === klic); if (p) onChange([...vybrane, zPredvolby(p)]); }
   };
   const uprav = (klic: string, z: Partial<VybranySpotrebic>) => onChange(vybrane.map((s) => (s.klic === klic ? { ...s, ...z } : s)));
+  const poleVlastni = useRef<HTMLInputElement>(null);
   const pridejVlastni = () => {
     const nazev = vlastni.trim();
-    if (!nazev) return;
+    // Bez názvu dřív tlačítko tiše nic neudělalo (mrtvý klik); teď aspoň ukáže, co chybí.
+    if (!nazev) { poleVlastni.current?.focus(); return; }
     onChange([...vybrane, { klic: `vlastni-${Date.now().toString(36)}`, nazev, w: 0, hodin: 1, priorita: "nutne" }]);
     setVlastni("");
   };
@@ -67,7 +69,7 @@ export function VyberSpotrebicu({ vybrane, onChange }: { vybrane: VybranySpotreb
       <div className="mt-3 flex flex-wrap items-end gap-2">
         <div className="min-w-0 flex-1">
           <Popisek pro="en-vlastni">Něco jiného</Popisek>
-          <input id="en-vlastni" className={POLE} value={vlastni} onChange={(e) => setVlastni(e.target.value)} placeholder="název spotřebiče" onKeyDown={(e) => { if (e.key === "Enter") { e.preventDefault(); pridejVlastni(); } }} />
+          <input ref={poleVlastni} id="en-vlastni" className={POLE} value={vlastni} onChange={(e) => setVlastni(e.target.value)} placeholder="název spotřebiče" onKeyDown={(e) => { if (e.key === "Enter") { e.preventDefault(); pridejVlastni(); } }} />
         </div>
         <button type="button" onClick={pridejVlastni} className="inline-flex min-h-[44px] items-center gap-1.5 rounded-full border border-linka px-4 text-male font-semibold text-inkoust hover:border-akcent"><Ikona nazev="plus" velikost={13} tah={2.2} /> Přidat</button>
       </div>

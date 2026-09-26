@@ -5,6 +5,9 @@ import { Ikona, type NazevIkony } from "@/components/ikony";
 import { CislaKdeKdo, TypyUdalosti } from "@/components/cisla-kde-kdo";
 import { hybridniTlak, incidenty, kampane, svet, tydny } from "@/lib/data";
 import { sklon } from "@/components/zeme";
+import { radkyTabulkyZemi } from "@/components/tabulka-zemi-data";
+import { CoDal } from "@/components/co-dal";
+import { proPocty } from "@/lib/odlehci";
 
 export const metadata: Metadata = {
   title: "Analýzy",
@@ -83,8 +86,8 @@ export default function Analyzy() {
         rozbor patří sem, kde ho člověk hledá.
       */}
       <div className="mt-12 space-y-14 sm:mt-16 sm:space-y-20">
-        <TypyUdalosti tlakEvropa={hybridniTlak()} />
-        <CislaKdeKdo vse={incidenty()} kampane={kampane()} ted={Date.now()} />
+        <TypyUdalosti tlakEvropa={hybridniTlak()} tabulka={radkyTabulkyZemi()} />
+        <CislaKdeKdo vse={incidenty().map(proPocty)} kampane={kampane()} ted={Date.now()} />
       </div>
 
       <div className="mt-14 border-t border-linka pt-12 sm:mt-20 sm:pt-14">
@@ -108,6 +111,7 @@ export default function Analyzy() {
           </li>
         ))}
       </ul>
+      <CoDal />
     </div>
   );
 }

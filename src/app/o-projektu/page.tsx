@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { ObsahStranky } from "@/components/obsah-stranky";
 import { HlavickaStranky } from "@/components/nadpisy";
 import Link from "next/link";
-import { DORUCOVANI, KANALY, KOMUNITA, METODIKA_REVIDOVANA, PROVOZOVATEL, PROVOZOVATEL_TEXT, UCTY_ZAPNUTE, WEB } from "@/config/web";
+import { DORUCOVANI, KANALY, KOMUNITA, METODIKA_REVIDOVANA, PROVOZOVATEL, SBER_JAK_CASTO, PROVOZOVATEL_TEXT, UCTY_ZAPNUTE, WEB } from "@/config/web";
 import { datumPraha } from "@/lib/cas";
 import { pocty } from "@/lib/agregace";
 import { incidenty, nepotvrzene } from "@/lib/data";
@@ -42,7 +42,7 @@ export default function OProjektu() {
         </Odstavec>
         <Odstavec nadpis="Odkud jsou data">
           <p>Přednost má orgán, který věc sám vyšetřuje nebo provozuje, v kterékoli zemi; pak nezávislé potvrzení z druhé strany; redakce podle toho, jak dokládají, ne odkud jsou. Sociální sítě samy hodnocení nezvyšují. Všechny zdroje jsou na stránce <Link href="/zdroje/" className="odkaz">Zdroje</Link>, pravidla hodnocení v <Link href="/metodika/" className="odkaz">Metodice</Link> (revize {datumPraha(METODIKA_REVIDOVANA)}).</p>
-          <p>Sběr běží každých 30 minut a web se přestaví do několika minut po každé změně dat. Záznam se zveřejní sám jen tehdy, když ho potvrzují dva nezávislé zdroje a jeden z nich je úřední; válečně významné zprávy jen ze dvou médií vycházejí označené jako <strong>neověřené</strong> a do hodnocení se nepočítají. Ostatní čeká na kontrolu. Texty jsou AI shrnutí zdrojů, ne články. Celkové hodnocení se počítá automaticky podle pravidel v Metodice, nejvýš den stará data. Přebíráme fakta, ne znění, a odkazujeme na originál. Opravy jsou na stránce <Link href="/opravy/" className="odkaz">Opravy a historie</Link>.</p>
+          <p>Sběr běží {SBER_JAK_CASTO} a web se přestaví do několika minut po každé změně dat. Záznam se zveřejní sám jen tehdy, když ho potvrzují dva nezávislé zdroje a jeden z nich je úřední; válečně významné zprávy jen ze dvou médií vycházejí označené jako <strong>neověřené</strong> a do hodnocení se nepočítají. Ostatní čeká na kontrolu. Texty jsou AI shrnutí zdrojů, ne články. Celkové hodnocení se počítá automaticky podle pravidel v Metodice, nejvýš den stará data. Přebíráme fakta, ne znění, a odkazujeme na originál.</p>
         </Odstavec>
         <Odstavec nadpis="Nezávislost a peníze">
           <p>Bez inzerce a sponzorů. Základ je a zůstane zdarma. Podpořit provoz jde dobrovolně na stránce <Link href="/podporit/" className="odkaz">Podpořit</Link>.</p>

@@ -7,7 +7,7 @@ import { KOMUNITA } from "@/config/web";
 
 export const metadata: Metadata = {
   title: "Opravy a historie",
-  description: "Veřejný seznam oprav: co bylo špatně, proč a od kdy platí nová verze. Nic se neopravuje potichu.",
+  description: "Seznam oprav (jen pro správce): co bylo špatně, proč a od kdy platí nová verze. Nic se neopravuje potichu.",
 };
 
 const DRUHY: Record<string, string> = {
