@@ -114,3 +114,34 @@ export function casPraha(iso: string): string {
   if (Number.isNaN(d.getTime())) return "";
   return new Intl.DateTimeFormat("cs-CZ", { timeZone: ZONA, hour12: false, hour: "2-digit", minute: "2-digit" }).format(d);
 }
+
+/**
+ * „dnes 6:40“, „včera 22:10“, jinak „25. 9. 6:40“ — v pražském čase.
+ *
+ * Pro Rychlý přehled: čas kontroly musí být vidět i s dnem. Samotné
+ * „06:40“ (casPraha) po výpadku přes půlnoc tvrdí, že kontrola byla dnes.
+ */
+export function kdyKratce(iso: string, ted = Date.now()): string {
+  const d = new Date(iso);
+  if (Number.isNaN(d.getTime())) return "neznámo kdy";
+  const c = casti(d);
+  const t = casti(new Date(ted));
+  const vcera = casti(new Date(ted - 86_400_000));
+  const hm = `${c.h}:${String(c.mi).padStart(2, "0")}`;
+  if (c.y === t.y && c.m === t.m && c.d === t.d) return `dnes ${hm}`;
+  if (c.y === vcera.y && c.m === vcera.m && c.d === vcera.d) return `včera ${hm}`;
+  return `${c.d}. ${c.m}.${c.y !== t.y ? ` ${c.y}` : ""} ${hm}`;
+}
+
+/** „před 25 min“, „před 3 h“, „před 2 dny“ — bez zaokrouhlení na „před chvílí“. */
+export function predKolika(iso: string, ted = Date.now()): string {
+  const t = new Date(iso).getTime();
+  if (Number.isNaN(t)) return "neznámo kdy";
+  const min = Math.round((ted - t) / 60_000);
+  if (min < -3) return "čas z budoucnosti";
+  if (min < 1) return "před méně než minutou";
+  if (min < 90) return `před ${min} min`;
+  const h = Math.round(min / 60);
+  if (h < 48) return `před ${h} h`;
+  return `před ${Math.round(h / 24)} dny`;
+}

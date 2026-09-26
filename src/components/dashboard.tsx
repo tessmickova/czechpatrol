@@ -7,6 +7,12 @@ import { SidebarUvodu } from "./sidebar-uvodu";
 import type { Pulz } from "@/lib/pulz";
 import type { SouhrnSituace } from "@/lib/souhrn-situace";
 import { VetaSituace } from "./veta-situace";
+import { RychlyPrehled } from "./rychly-prehled";
+import { PartnerskyProstor } from "./partnersky-prostor";
+import { UspechySlozek } from "./uspechy-slozek";
+import type { Uspech } from "@/lib/uspechy";
+import type { KonfiguraceCerstvosti } from "@/lib/prehled/model";
+import type { SnimekPrehledu } from "@/lib/prehled/typy";
 import { UVOD_V2 } from "@/config/web";
 import Link from "next/link";
 import { pripady, type Zaznam } from "@/lib/agregace";
@@ -239,11 +245,11 @@ function signalyKPolozkam(stavy: ZivyStav[]): Record<string, SignalSluzby[]> {
   return out;
 }
 
-function RadekStavu({ d, casSkupiny, ted, signaly = [], tvar = "radek" }: { d: Dlazdice; casSkupiny: string | null; ted: number; signaly?: SignalSluzby[]; /** dlaždice = úvod v2: kostka v mřížce místo řádku */ tvar?: "radek" | "dlazdice" }) {
+function RadekStavu({ d, casSkupiny, ted, signaly = [], tvar = "radek", trida = "" }: { d: Dlazdice; casSkupiny: string | null; ted: number; signaly?: SignalSluzby[]; /** dlaždice = úvod v2: kostka v mřížce místo řádku */ tvar?: "radek" | "dlazdice"; trida?: string }) {
   const t = TON[d.ton];
   if (tvar === "dlazdice") {
     return (
-      <li className={`rounded-[14px] has-[details[open]]:col-span-full ${zvyraznitDlazdici(d.ton) ? t.dlazdice : "bg-plocha2/60"}`}>
+      <li className={`rounded-[14px] has-[details[open]]:col-span-full ${zvyraznitDlazdici(d.ton) ? t.dlazdice : "bg-plocha2/60"} ${trida}`}>
         <details className="group">
           <summary className="flex min-h-[64px] cursor-pointer list-none items-center gap-2.5 px-3 py-2.5 text-left hover:bg-plocha2">
             <span className="hidden h-8 w-8 shrink-0 place-items-center rounded-full bg-plocha text-tlum sm:grid"><Ikona nazev={d.ikona} velikost={15} tah={1.8} /></span>
@@ -403,7 +409,7 @@ const TECKA_SLUZBY: Record<StavSluzby, string> = { provoz: "bg-klid", omezeni: "
 
 export function Dashboard({
   stav, pravni, natoPolozky, provozPolozky, overeno, vse, neprosle, kandidati, nepotvrzene = [], tydny, watchlist, crHistoricky, hybridni, obcane, ted, snimky = [], nastroje = [],
-  tlakEvropa, tlakCesko, veta, kampane, nazvyZemi, overovaneAktivni = [], overovaneUzavrene = [], priprava, pulz, souhrn,
+  tlakEvropa, tlakCesko, veta, kampane, nazvyZemi, overovaneAktivni = [], overovaneUzavrene = [], priprava, pulz, souhrn, prehled, uspechy = [],
 }: {
   stav: CelkovyStav; pravni: PravniPolozka[]; natoPolozky: NatoPolozka[]; provozPolozky: ProvozniPolozka[];
   /** Čas sestavení. Klient z něj vychází, aby se první vykreslení shodlo. */
@@ -424,6 +430,10 @@ export function Dashboard({
   pulz?: Pulz;
   /** Věta pod nadpisem od ověřovatele (AI shrnutí); prázdná = věta z úředního stavu. */
   souhrn?: SouhrnSituace;
+  /** Rychlý přehled: snímek zdrojů a informací + meze čerstvosti (src/lib/prehled). */
+  prehled?: { snimek: SnimekPrehledu; konfigurace: KonfiguraceCerstvosti };
+  /** Zásahy složek z ověřených záznamů (src/lib/uspechy.ts). */
+  uspechy?: Uspech[];
 }) {
   const t = useT();
   const platiCr = pravni.filter((p) => p.plati === true);
@@ -548,11 +558,25 @@ export function Dashboard({
               <span className="stitek-znacky">{t("Bezpečnostní přehled")}</span>
             </div>
             <h1 className="titul-sekce">{t("Bezpečnostní situace v Česku a okolí")}</h1>
-            <VetaSituace souhrn={souhrn ?? { veta: null, aktualizovano: null, podklady: [] }} veta={veta} kontrola={pulz?.kdy ?? overeno} ted={tedMs} />
-            {/* Stav naléhavosti nese postranní Souhrn situace; tady jen cesta k upozornění. */}
-            <div className="mt-4"><Tlacitko kam="/odber/" varianta="plny" velikost="m" ikona="zvonek">Přihlásit upozornění</Tlacitko></div>
+            {/*
+              Rychlý přehled (26. 9. 2026) nahrazuje větu z úředního stavu.
+              Ta tvrdila „v kontrolovaných zdrojích žádné celostátní omezení“
+              bez ohledu na to, jestli sběr běží — přehled to říká i s časem
+              kontroly a stavem zdrojů. Shrnutí ověřovatele zůstává, jen když je.
+            */}
+            {/* Bez Rychlého přehledu (RYCHLY_PREHLED = false) zůstává původní věta pod nadpisem. */}
+            {prehled ? (
+              <>
+                {souhrn?.veta && <VetaSituace souhrn={souhrn} veta={veta} kontrola={pulz?.kdy ?? overeno} ted={tedMs} />}
+                <RychlyPrehled snimek={prehled.snimek} konfigurace={prehled.konfigurace} ted={ted} />
+              </>
+            ) : (
+              <VetaSituace souhrn={souhrn ?? { veta: null, aktualizovano: null, podklady: [] }} veta={veta} kontrola={pulz?.kdy ?? overeno} ted={tedMs} />
+            )}
+            {/* Na mobilu je „Upozornění“ hned pod tím v řadě tlačítek — dvakrát totéž nepotřebujeme. */}
+            <div className="mt-4 max-lg:hidden"><Tlacitko kam="/odber/" varianta="obrys" velikost="m" ikona="zvonek">Odběr zpráv</Tlacitko></div>
           </div>
-          <div className="order-3 min-w-0 lg:order-none lg:col-start-1 lg:row-start-2"><AktualitySloupce zaznamy={vse} nepotvrzene={nepotvrzene} kandidati={kandidati} /></div>
+          <div id="podrobny-monitoring" className="order-3 min-w-0 scroll-mt-20 lg:order-none lg:col-start-1 lg:row-start-2"><AktualitySloupce zaznamy={vse} nepotvrzene={nepotvrzene} kandidati={kandidati} /></div>
           <div className="order-2 min-w-0 lg:order-none lg:col-start-2 lg:row-span-2 lg:row-start-1">
           <SidebarUvodu stav={stav} cr={cr} crHistoricky={crHistoricky} crPocet={crPocet} obcane={obcane} pulz={pulz} priprava={priprava} vse={vse} kampane={kampane} kandidati={kandidati} zkontrolovano={overeno} overovane={overovaneAktivni} ted={tedMs}
             tipy={<MiniBox nazev="Tipy k přípravě" ikona="fajfka" ton="klid" souhrn={tipyNahled.length ? tipyNahled[0].nadpis : "Zatím bez tipu"}><TipyKPriprave ted={tedMs} vnoreny /></MiniBox>} />
@@ -627,6 +651,9 @@ export function Dashboard({
       <>
       {/* ===== ÚVOD V2 — spodní část (24. 9. 2026) ===== */}
 
+      {/* Partneři uprostřed stránky, ale až pod aktualitami a stavem — to podstatné je vždy nad nimi (26. 9. 2026). */}
+      <div className="mt-10"><PartnerskyProstor umisteni="uvod" ted={tedMs} obal={false} /></div>
+
       {/* Úřední stav: jedna karta, dlaždice; v klidu jen klíčové, zbytek za „všech N“. */}
       <div className="nalet mt-16 sm:mt-24">
         <NadpisSekce stitek={t("Co právě platí")} ikona="vaha" nadpis={t("Úřední stav v Česku")} />
@@ -635,9 +662,17 @@ export function Dashboard({
         <div className="min-w-0">
         <section aria-label={t("Oficiální stavy")} id="opatreni" className="scroll-mt-[84px] overflow-hidden rounded-[22px] bg-plocha">
           {skupinyDlazdic.map((sk, i) => {
-            const dlazdice = (d: Dlazdice) => <RadekStavu key={d.klic} d={d} casSkupiny={sk.cas} ted={tedMs} signaly={signalySluzeb[d.zdrojovaPolozka.klic] ?? []} tvar="dlazdice" />;
+            const dlazdice = (d: Dlazdice, trida = "") => <RadekStavu key={d.klic} d={d} casSkupiny={sk.cas} ted={tedMs} signaly={signalySluzeb[d.zdrojovaPolozka.klic] ?? []} tvar="dlazdice" trida={trida} />;
             const zvlastni = sk.polozky.filter((d) => KLICOVE.includes(d.klic) || d.ton === "plati" || d.ton === "pozor" || d.ton === "nevime" || (signalySluzeb[d.zdrojovaPolozka.klic] ?? []).length > 0);
             const klidne = sk.polozky.filter((d) => !zvlastni.includes(d));
+            /*
+              Mobil (26. 9. 2026, 95 % návštěv): nahoře jen to, co platí,
+              vyžaduje pozornost nebo má signál. Klíčové položky „bez dokladu“
+              jdou na mobilu do rozbalení — stránka tu byla ~1 000 px vysoká
+              a nesla samé „nedoloženo“.
+            */
+            const dulezite = (d: Dlazdice) => d.ton === "plati" || d.ton === "pozor" || (signalySluzeb[d.zdrojovaPolozka.klic] ?? []).length > 0;
+            const skrytNaMobilu = zvlastni.filter((d) => !dulezite(d));
             return (
               <div key={sk.predpona} className={i ? "mt-2" : ""}>
                 <HlavickaWidgetu
@@ -646,27 +681,30 @@ export function Dashboard({
                   podtitul={souhrnTonu(sk.polozky.map((d) => d.ton), sk.predpona === "n" ? "aktivní" : sk.predpona === "v" ? "narušeno" : "platí", sk.predpona === "v" ? { nedolozeno: "bez hlášení" } : {})}
                   meta={<span className="flex items-center gap-3"><span className="hidden sm:block"><Paleta polozky={sk.polozky.map((d) => ({ nazev: d.nazev, tecka: TON[d.ton].tecka, slovo: d.stav }))} /></span><Stari cas={sk.cas} popisek={sk.popisekCasu} ted={tedMs} /></span>}
                 />
-                <ul className="grid grid-cols-2 gap-2 p-3 lg:grid-cols-3">{zvlastni.map(dlazdice)}</ul>
-                {klidne.length > 0 && (
-                  <details className="group">
-                    <summary className="flex min-h-[40px] cursor-pointer list-none items-center justify-between gap-2 px-4 text-drobne font-semibold text-tlum hover:bg-plocha2">
-                      <span>všech {sk.polozky.length} · dalších {klidne.length} v klidu</span>
+                <ul className={`grid grid-cols-2 gap-2 p-3 lg:grid-cols-3 ${zvlastni.some(dulezite) ? "" : "max-lg:hidden"}`}>{zvlastni.map((d) => dlazdice(d, dulezite(d) ? "" : "max-lg:hidden"))}</ul>
+                {(klidne.length > 0 || skrytNaMobilu.length > 0) && (
+                  <details className={`group ${klidne.length ? "" : "lg:hidden"}`}>
+                    <summary className="flex min-h-[44px] cursor-pointer list-none items-center justify-between gap-2 px-4 text-drobne font-semibold text-tlum hover:bg-plocha2">
+                      <span className="max-lg:hidden">všech {sk.polozky.length} · dalších {klidne.length} v klidu</span>
+                      <span className="lg:hidden">zobrazit všech {sk.polozky.length}</span>
                       <Ikona nazev="dolu" velikost={12} tah={2} trida="text-tlum2 transition-transform group-open:rotate-180" />
                     </summary>
-                    <ul className="grid grid-cols-2 gap-2 px-3 pb-3 lg:grid-cols-3">{klidne.map(dlazdice)}</ul>
+                    <ul className="grid grid-cols-2 gap-2 px-3 pb-3 lg:grid-cols-3">{skrytNaMobilu.map((d) => dlazdice(d, "lg:hidden"))}{klidne.map((d) => dlazdice(d))}</ul>
                   </details>
                 )}
               </div>
             );
           })}
         </section>
-          <div className="mt-6 max-lg:[&_ol>li:nth-child(n+4)]:hidden"><CoSeZmenilo zaznamy={vse} snimky={snimky} ted={tedMs} osa /></div>
+          {/* Zásahy složek pod úředním stavem, „Co se změnilo“ až pod nimi jako nízký posuvný log (26. 9. 2026). */}
+          <div className="mt-6"><UspechySlozek uspechy={uspechy} /></div>
+          <div className="mt-6"><CoSeZmenilo zaznamy={vse} snimky={snimky} ted={tedMs} osa log /></div>
         </div>
 
         {/* Postranní sloupec stejné šířky jako nahoře: dodávky a služby, výpadky provozovatelů, ceny paliv, tipy. */}
         <aside aria-label="Dodávky, služby a ceny" className="min-w-0 space-y-4">
           <section className="overflow-hidden rounded-[22px] bg-plocha">
-            <HlavickaWidgetu ikona="elektrina" nazev="Dodávky a služby" meta={<span>{naruseno.length ? `${naruseno.length} narušeno` : sledujeme.length ? `${sledujeme.length} sledujeme` : "vše běžně"}</span>} napoveda={<span className="block">Elektřina, plyn, spojení, banky, paliva a další podle úředních a provozních zdrojů. Narušené a sledované napřed.</span>} />
+            <HlavickaWidgetu ikona="elektrina" nazev="Dodávky a služby" meta={<span>{naruseno.length ? `${naruseno.length} narušeno` : sledujeme.length ? `${sledujeme.length} sledujeme` : "bez hlášených potíží"}</span>} napoveda={<span className="block">Elektřina, plyn, spojení, banky, paliva a další podle úředních a provozních zdrojů. Narušené a sledované napřed.</span>} />
             <ul className="px-3 pb-3">
               {[...naruseno, ...sledujeme, ...provozPolozky.filter((p) => p.stav !== "narusen" && p.stav !== "sledujeme")].slice(0, 8).map((p) => (
                 <li key={p.klic} className={p.stav === "bezny" ? "max-lg:hidden" : ""}>

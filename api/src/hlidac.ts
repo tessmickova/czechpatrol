@@ -76,6 +76,35 @@ export async function stavSberu(env: Env): Promise<StavSberu | null> {
  * Rozhodne, co se má stát. Oddělené od odesílání, aby se to dalo otestovat
  * bez sítě — na hlídači, který se spustí jednou za měsíc, se ručně zkoušet nedá.
  */
+/** Co hlídač naposledy ohlásil (D1 `stav` klíč hlidac-sber). Starší zápis byl jen čas. */
+export interface Nahlaseno {
+  kdy: string;
+  komu: ("spravce" | "kanal")[];
+}
+
+export function ctiNahlaseno(hodnota: string | null | undefined): Nahlaseno | null {
+  if (!hodnota) return null;
+  try {
+    const j = JSON.parse(hodnota) as Nahlaseno;
+    if (j && typeof j.kdy === "string" && Array.isArray(j.komu)) return j;
+  } catch { /* starý tvar: prostý čas */ }
+  // Starý zápis neříká komu; bere se, že i kanálu — radši jedna zpráva o obnovení navíc než žádná.
+  return /^\d{4}-/.test(hodnota) ? { kdy: hodnota, komu: ["spravce", "kanal"] } : null;
+}
+
+/**
+ * Po obnovení: komu říct, že sběr zase běží. Jen těm, kdo dostali hlášení
+ * o výpadku, a jen jednou (záznam se pak smaže). Bez toho kanál po
+ * „nespoléhejte se na nás“ mlčel dál a nikdo nevěděl, že už to zase platí.
+ */
+export function coObnovit(stav: StavSberu, ted: number, nahlaseno: Nahlaseno | null): ("spravce" | "kanal")[] {
+  if (!nahlaseno || stav.odmitaSe || !stav.posledniUspech) return [];
+  const hodin = (ted - new Date(stav.posledniUspech).getTime()) / 3_600_000;
+  // Úspěch musí být novější než hlášení výpadku — jinak jde o starý úspěch.
+  if (hodin >= PRAH_SPRAVCE_H || new Date(stav.posledniUspech).getTime() <= new Date(nahlaseno.kdy).getTime()) return [];
+  return nahlaseno.komu;
+}
+
 export function coOhlasit(
   stav: StavSberu,
   ted: number,
@@ -105,13 +134,17 @@ function zprava(hodin: number, stav: StavSberu, proKanal: boolean): string {
     ? new Date(stav.posledniUspech).toLocaleString("cs-CZ", { timeZone: "Europe/Prague" })
     : "neznámo kdy";
   if (proKanal) {
+    /*
+      Technická zpráva, ne bezpečnostní poplach (26. 9. 2026): bez výstražných
+      znaků a s výslovnou větou, že o bezpečnosti nic neříká.
+    */
     return [
-      "<b>Sběr dat neběží</b>",
+      "Technická zpráva CzechPatrol: sběr dat stojí",
       "",
       `Poslední úspěšné čtení zdrojů: ${kdy} (před ${Math.round(hodin)} h).`,
-      "Web i tento kanál do odvolání ukazují starý stav. Nová zpráva sem nedorazí.",
+      "Web i tento kanál teď ukazují starší stav a nové zprávy sem nepřicházejí. O bezpečnostní situaci tahle zpráva nic neříká.",
       "",
-      "Nespoléhejte se zatím na tento kanál. V nouzi volejte 112, oficiální informace dává krizové vysílání Českého rozhlasu.",
+      "Oficiální informace hledejte u HZS, ČHMÚ, obce a policie; v nouzi volejte 112.",
     ].join("\n");
   }
   return [
@@ -132,7 +165,21 @@ export async function zkontrolujSber(env: Env, ted: number): Promise<{ ohlaseno:
   if (!stav) return null;
 
   const ulozeno = await env.DB.prepare("SELECT hodnota FROM stav WHERE klic = 'hlidac-sber'").first<{ hodnota: string }>();
-  const rozhodnuti = coOhlasit(stav, ted, ulozeno?.hodnota ?? null);
+  const nahlaseno = ctiNahlaseno(ulozeno?.hodnota);
+
+  const obnovit = coObnovit(stav, ted, nahlaseno);
+  if (obnovit.length) {
+    const kdy = new Date(stav.posledniUspech!).toLocaleString("cs-CZ", { timeZone: "Europe/Prague" });
+    for (const komu of obnovit) {
+      const chat = komu === "spravce" ? env.SPRAVCE_CHAT : env.TELEGRAM_KANAL;
+      if (chat) await posliTelegram(env, chat, komu === "spravce" ? `<b>Hlídač: sběr zase běží</b>\nÚspěšný běh ${kdy}.` : `Technická zpráva CzechPatrol: sběr dat zase běží (úspěšné čtení zdrojů ${kdy}).`);
+    }
+    // Smazat, ať se obnovení neohlásí dvakrát a příští výpadek začne načisto.
+    await env.DB.prepare("DELETE FROM stav WHERE klic = 'hlidac-sber'").run();
+    return { ohlaseno: obnovit.map((k) => `obnoveno:${k}`), hodin: 0 };
+  }
+
+  const rozhodnuti = coOhlasit(stav, ted, nahlaseno?.kdy ?? null);
   if (!rozhodnuti.komu.length) return { ohlaseno: [], hodin: rozhodnuti.hodin };
 
   const ohlaseno: string[] = [];
@@ -144,8 +191,10 @@ export async function zkontrolujSber(env: Env, ted: number): Promise<{ ohlaseno:
   }
 
   const kdy = new Date(ted).toISOString();
+  // Komu se výpadek ohlásil — sčítá se s dřívějším, aby obnovení dostal každý, kdo slyšel o výpadku.
+  const komu = [...new Set([...(nahlaseno?.komu ?? []), ...ohlaseno])] as Nahlaseno["komu"];
   await env.DB.prepare("INSERT OR REPLACE INTO stav (klic, hodnota, aktualizovano) VALUES ('hlidac-sber', ?, ?)")
-    .bind(kdy, kdy)
+    .bind(JSON.stringify({ kdy, komu } satisfies Nahlaseno), kdy)
     .run();
   return { ohlaseno, hodin: rozhodnuti.hodin };
 }

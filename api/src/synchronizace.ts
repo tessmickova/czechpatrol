@@ -17,10 +17,17 @@ export async function synchronizuj(env: Env): Promise<{ zprav: number; zasazeni:
 
   // Stejný build webu = nic nového; šetří to databázi.
   if (stary && stary.generovano === novy.generovano) return { zprav: 0, zasazeni: 0 };
+  /*
+    Starší build, než jaký už známe (kopie z CDN, pozdě doručená odpověď):
+    rozdíl by běžel pozpátku a z „platí“ by udělal „ukončeno“. Ignoruje se
+    a uložený stav zůstává.
+  */
+  if (stary && novy.generovano < stary.generovano) return { zprav: 0, zasazeni: 0 };
 
-  const zpravy = rozdilStavu(stary, novy);
+  const zpravy = rozdilStavu(stary, novy, Date.now());
   let zasazeni = 0;
-  for (const z of zpravy) zasazeni += await rozesli(env, z);
+  // Pevné id ze stálého klíče: opakované zpracování téhož rozdílu nic nezdvojí (INSERT OR IGNORE).
+  for (const z of zpravy) zasazeni += await rozesli(env, z, z.klic ? `zmena:${z.klic}` : undefined);
 
   await env.DB.prepare("INSERT OR REPLACE INTO stav (klic, hodnota, aktualizovano) VALUES ('web', ?, ?)")
     .bind(JSON.stringify(novy), new Date().toISOString())
@@ -42,6 +49,8 @@ export async function uklid(env: Env): Promise<void> {
     env.DB.prepare("DELETE FROM zpravy_izs WHERE vytvoreno < ?").bind(pred(365)),
     env.DB.prepare("DELETE FROM audit WHERE kdy < ?").bind(pred(365)),
     env.DB.prepare("DELETE FROM tipy WHERE vytvoreno < ?").bind(pred(365)),
+    /* Poptávky partnerů: kromě probíhajících a schválených do roka pryč (zásady soukromí, #partneri). */
+    env.DB.prepare("DELETE FROM poptavky_partneru WHERE vytvoreno < ? AND stav NOT IN ('v-jednani', 'schvaleno')").bind(pred(365)),
     /* Odhlášená adresa zmizí do 30 dnů; adresa, které do roka nic nepřišlo, také. */
     env.DB.prepare("DELETE FROM zajem WHERE stav = 'odhlaseno' AND odhlaseno_kdy < ?").bind(pred(30)),
     env.DB.prepare("DELETE FROM zajem WHERE stav = 'nepotvrzeno' AND vytvoreno < ?").bind(pred(365)),

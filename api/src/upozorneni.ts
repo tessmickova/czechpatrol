@@ -42,36 +42,53 @@ const STAVY_PROVOZU: Record<string, string> = {
   narusen: "narušeno",
 };
 
-function zavaznostPasma(pasmo: string | null, nahoru: boolean): Zavaznost {
-  if (pasmo === "cervena") return "kriticka";
-  if (pasmo === "oranzova") return nahoru ? "vysoka" : "stredni";
-  return "stredni";
-}
 
-/** Z rozdílu dvou stavů udělá zprávy. První stav (bez minulého) nic negeneruje. */
-export function rozdilStavu(stary: StavWebu | null, novy: StavWebu): NovaZprava[] {
+/*
+  Po kolika hodinách od posledního běhu sběru je stav webu tak starý, že se
+  z něj „ukončení“ ani změna provozu nevyvozuje. Shodné s hranicí Rychlého
+  přehledu (data/cerstvost-zdroju.json, beh.nelzePotvrditPoMin = 300).
+*/
+export const STARY_STAV_H = 5;
+/** Událost zjištěná před víc než dnem není novinka — po výpadku by jinak přišla dávka starých zpráv. */
+export const NOVINKA_DO_H = 24;
+
+/**
+ * Z rozdílu dvou stavů udělá zprávy. První stav (bez minulého) nic negeneruje.
+ *
+ * Pravidla z 26. 9. 2026 (docs/RYCHLY-PREHLED.md, Notifikace):
+ * - změna našeho celkového hodnocení je analýza: nízká závažnost, jen do souhrnu;
+ * - „Ukončeno“ se pošle jen ze stavu s čerstvým sběrem. Hodnota, která zmizí
+ *   z chybně načtené nebo zastaralé odpovědi, není odvolání;
+ * - událost zjištěná před víc než NOVINKA_DO_H se po obnovení neposílá.
+ */
+export function rozdilStavu(stary: StavWebu | null, novy: StavWebu, ted = Date.now()): NovaZprava[] {
   if (!stary) return [];
   const z: NovaZprava[] = [];
   const web = novy.web;
+  const beh = novy.beh ? new Date(novy.beh).getTime() : NaN;
+  // Web bez údaje o běhu (starší build) se bere jako čerstvý — chování se pro něj nemění.
+  const cerstvy = Number.isNaN(beh) ? !novy.beh : ted - beh <= STARY_STAV_H * 3_600_000;
+  const den = novy.generovano.slice(0, 10);
 
   if (stary.uroven !== novy.uroven && novy.uroven) {
-    const nahoru = (novy.pasmo ?? "") !== (stary.pasmo ?? "") ? true : novy.trend === "nahoru";
     z.push({
       druh: "uroven",
-      zavaznost: zavaznostPasma(novy.pasmo, nahoru),
+      klic: `uroven:${novy.uroven}:${den}`,
+      // Naše analýza, ne výstraha: nikdy nepřeskočí tiché hodiny ani souhrn.
+      zavaznost: "nizka",
       oblast: null,
       kategorie: null,
-      titulek: "Změna celkové úrovně",
-      text: `${stary.nazev ?? "nestanoveno"} → ${novy.nazev}`,
-      odkaz: `${web}/`,
+      titulek: "Naše analýza: změna celkového hodnocení",
+      text: `${stary.nazev ?? "nestanoveno"} → ${novy.nazev}. Není to výstraha ani pokyn.`,
+      odkaz: `${web}/metodika/`,
     });
   }
 
   for (const [k, v] of Object.entries(novy.pravni)) {
     const s = stary.pravni[k] ?? null;
     if (s === v) continue;
-    if (v === true) z.push({ druh: "pravni", zavaznost: "kriticka", oblast: null, kategorie: null, titulek: NAZVY_PRAVNI[k] ?? k, text: "Vyhlášeno podle úředního zdroje.", odkaz: `${web}/#cr` });
-    else if (s === true && v === false) z.push({ druh: "pravni", zavaznost: "vysoka", oblast: null, kategorie: null, titulek: NAZVY_PRAVNI[k] ?? k, text: "Ukončeno — podle úředních zdrojů už neplatí.", odkaz: `${web}/#cr` });
+    if (v === true) z.push({ druh: "pravni", klic: `pravni:${k}:plati:${den}`, zavaznost: "kriticka", oblast: null, kategorie: null, titulek: NAZVY_PRAVNI[k] ?? k, text: "Vyhlášeno podle úředního zdroje.", odkaz: `${web}/#cr` });
+    else if (s === true && v === false && cerstvy) z.push({ druh: "pravni", klic: `pravni:${k}:ukonceno:${den}`, zavaznost: "vysoka", oblast: null, kategorie: null, titulek: NAZVY_PRAVNI[k] ?? k, text: "Ukončeno — podle úředních zdrojů už neplatí.", odkaz: `${web}/#cr` });
     // null ↔ false je změna ověření, ne změna stavu; nic se neposílá.
   }
 
@@ -79,22 +96,24 @@ export function rozdilStavu(stary: StavWebu | null, novy: StavWebu): NovaZprava[
     const s = stary.nato[k] ?? null;
     if (s === v) continue;
     const clanek = k === "clanek-4" || k === "clanek-5";
-    if (v === true) z.push({ druh: "nato", zavaznost: clanek ? "kriticka" : "vysoka", oblast: null, kategorie: null, titulek: NAZVY_NATO[k] ?? k, text: "Aktivováno podle oficiálního oznámení.", odkaz: `${web}/#nato` });
-    else if (s === true && v === false) z.push({ druh: "nato", zavaznost: clanek ? "vysoka" : "stredni", oblast: null, kategorie: null, titulek: NAZVY_NATO[k] ?? k, text: "Ukončeno.", odkaz: `${web}/#nato` });
+    if (v === true) z.push({ druh: "nato", klic: `nato:${k}:plati:${den}`, zavaznost: clanek ? "kriticka" : "vysoka", oblast: null, kategorie: null, titulek: NAZVY_NATO[k] ?? k, text: "Aktivováno podle oficiálního oznámení.", odkaz: `${web}/#nato` });
+    else if (s === true && v === false && cerstvy) z.push({ druh: "nato", klic: `nato:${k}:ukonceno:${den}`, zavaznost: clanek ? "vysoka" : "stredni", oblast: null, kategorie: null, titulek: NAZVY_NATO[k] ?? k, text: "Ukončeno.", odkaz: `${web}/#nato` });
   }
 
   for (const [k, v] of Object.entries(novy.provoz)) {
     const s = stary.provoz[k];
-    if (s === v || v === "bez-zdroje" || s === "bez-zdroje" || s === undefined) continue;
+    if (s === v || v === "bez-zdroje" || s === "bez-zdroje" || s === undefined || !cerstvy) continue;
     const zavaznost: Zavaznost = v === "narusen" ? "vysoka" : "stredni";
-    z.push({ druh: "provoz", zavaznost, oblast: null, kategorie: null, titulek: NAZVY_PROVOZU[k] ?? k, text: `${STAVY_PROVOZU[s] ?? s} → ${STAVY_PROVOZU[v] ?? v}`, odkaz: `${web}/` });
+    z.push({ druh: "provoz", klic: `provoz:${k}:${v}:${den}`, zavaznost, oblast: null, kategorie: null, titulek: NAZVY_PROVOZU[k] ?? k, text: `${STAVY_PROVOZU[s] ?? s} → ${STAVY_PROVOZU[v] ?? v}`, odkaz: `${web}/` });
   }
 
   const stare = new Set(stary.udalosti.map((u) => u.slug));
   for (const u of novy.udalosti) {
     if (stare.has(u.slug)) continue;
+    const zjisteno = new Date(u.datumZjisteni ?? u.aktualizovano ?? u.datumUdalosti).getTime();
+    if (!Number.isNaN(zjisteno) && ted - zjisteno > NOVINKA_DO_H * 3_600_000) continue;
     const zavaznost: Zavaznost = u.pasmo === "cervena" ? "kriticka" : u.pasmo === "oranzova" ? "vysoka" : u.pasmo === "zelena" ? "nizka" : "stredni";
-    z.push({ druh: "udalost", zavaznost, oblast: null, kategorie: u.kategorie, titulek: u.titulek, text: `${u.zeme} · událost ${cesky(u.datumUdalosti)}`, odkaz: u.odkaz });
+    z.push({ druh: "udalost", klic: `udalost:${u.slug}`, zavaznost, oblast: null, kategorie: u.kategorie, titulek: u.titulek, text: `${u.zeme} · událost ${cesky(u.datumUdalosti)}`, odkaz: u.odkaz });
   }
   return z;
 }
@@ -176,10 +195,24 @@ export function naplanuj(z: NovaZprava, n: Nastaveni, ted: Date): Date | null {
     if (z.oblast && z.oblast !== "Celá ČR" && z.oblast !== n.kraj) return null;
     return ted;
   }
+  /*
+    Naše analýza (změna hodnocení) jde jen do souhrnu — volitelného,
+    informačního. Ne jako okamžité upozornění: hodnocení je náš výpočet,
+    ne pokyn úřadu, a na jeho základě nikoho nebudíme.
+  */
+  if (z.druh === "uroven") {
+    if (n.frekvence === "jen-kriticke") return null;
+    return dalsiSouhrn(ted, n.frekvence === "tydne" ? "tydne" : "denne");
+  }
   if (PORADI[z.zavaznost] < PORADI[n.minZavaznost]) return null;
   if (n.oblasti.length && z.kategorie && !z.kategorie.some((k) => n.oblasti.includes(k))) return null;
 
-  const kriticka = z.zavaznost === "kriticka";
+  /*
+    Přednost před tichými hodinami a souhrnem má jen OFICIÁLNÍ změna
+    (vyhlášený stav, krok NATO). Naše ověřená událost je informace, ne
+    pokyn — přijde podle nastavení čtenáře, ale nikoho nevzbudí.
+  */
+  const kriticka = z.zavaznost === "kriticka" && (z.druh === "pravni" || z.druh === "nato");
   const f: Frekvence = n.frekvence;
   if (f === "jen-kriticke") return kriticka ? ted : null;
   if (kriticka) return ted;

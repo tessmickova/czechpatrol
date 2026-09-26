@@ -1,201 +1,247 @@
 {
-  "kdy": "2026-09-26T05:00:45.952Z",
+  "kdy": "2026-09-26T10:00:55.349Z",
   "zdroje": [
     {
       "klic": "e-sbirka",
       "ok": true,
       "stav": 200,
-      "pocetPolozek": 0
+      "pocetPolozek": 0,
+      "vysledek": "obsah"
     },
     {
       "klic": "vlada",
       "ok": true,
       "stav": 200,
-      "pocetPolozek": 0
+      "pocetPolozek": 0,
+      "vysledek": "ok"
     },
     {
       "klic": "psp",
       "ok": true,
       "stav": 200,
-      "pocetPolozek": 0
+      "pocetPolozek": 0,
+      "vysledek": "ok"
     },
     {
       "klic": "senat",
       "ok": true,
       "stav": 200,
-      "pocetPolozek": 0
+      "pocetPolozek": 0,
+      "vysledek": "ok"
     },
     {
       "klic": "hrad",
       "ok": false,
       "stav": 403,
       "pocetPolozek": 0,
-      "chyba": "HTTP 403"
+      "chyba": "HTTP 403",
+      "vysledek": "chyba"
     },
     {
       "klic": "mvcr",
       "ok": true,
       "stav": 200,
-      "pocetPolozek": 0
+      "pocetPolozek": 0,
+      "vysledek": "ok"
     },
     {
       "klic": "mzv",
       "ok": true,
       "stav": 200,
-      "pocetPolozek": 0
+      "pocetPolozek": 0,
+      "vysledek": "ok"
     },
     {
       "klic": "nato",
       "ok": true,
       "stav": 200,
-      "pocetPolozek": 0
+      "pocetPolozek": 0,
+      "vysledek": "ok"
     },
     {
       "klic": "army",
       "ok": true,
       "stav": 200,
-      "pocetPolozek": 0
+      "pocetPolozek": 0,
+      "vysledek": "ok"
     },
     {
       "klic": "ceps",
       "ok": true,
       "stav": 200,
-      "pocetPolozek": 0
+      "pocetPolozek": 0,
+      "vysledek": "ok"
     },
     {
       "klic": "eru",
       "ok": true,
       "stav": 200,
-      "pocetPolozek": 0
+      "pocetPolozek": 0,
+      "vysledek": "ok"
     },
     {
       "klic": "ote",
       "ok": true,
       "stav": 200,
-      "pocetPolozek": 0
+      "pocetPolozek": 0,
+      "vysledek": "ok"
     },
     {
       "klic": "sshr",
       "ok": false,
       "stav": 403,
       "pocetPolozek": 0,
-      "chyba": "HTTP 403"
+      "chyba": "HTTP 403",
+      "vysledek": "chyba"
     },
     {
       "klic": "mpo",
       "ok": true,
       "stav": 200,
-      "pocetPolozek": 0
+      "pocetPolozek": 0,
+      "vysledek": "ok"
     },
     {
       "klic": "cnb",
       "ok": true,
       "stav": 200,
-      "pocetPolozek": 0
+      "pocetPolozek": 0,
+      "vysledek": "ok"
     },
     {
       "klic": "ctu",
       "ok": true,
       "stav": 200,
-      "pocetPolozek": 0
+      "pocetPolozek": 0,
+      "vysledek": "ok"
     },
     {
       "klic": "nukib",
       "ok": true,
       "stav": 200,
-      "pocetPolozek": 0
+      "pocetPolozek": 0,
+      "vysledek": "ok"
     },
     {
       "klic": "hzs",
       "ok": true,
       "stav": 200,
-      "pocetPolozek": 0
+      "pocetPolozek": 0,
+      "vysledek": "ok"
     },
     {
       "klic": "dopravni-info",
       "ok": false,
       "stav": null,
       "pocetPolozek": 0,
-      "chyba": "fetch failed"
+      "chyba": "fetch failed",
+      "vysledek": "chyba"
     },
     {
       "klic": "policie",
       "ok": true,
       "stav": 200,
-      "pocetPolozek": 0
+      "pocetPolozek": 0,
+      "vysledek": "ok"
     },
     {
       "klic": "md",
       "ok": true,
       "stav": 200,
-      "pocetPolozek": 0
+      "pocetPolozek": 0,
+      "vysledek": "ok"
     },
     {
       "klic": "sprava-zeleznic",
       "ok": true,
       "stav": 200,
-      "pocetPolozek": 0
+      "pocetPolozek": 0,
+      "vysledek": "ok"
     },
     {
       "klic": "letiste-praha",
       "ok": true,
       "stav": 200,
-      "pocetPolozek": 0
+      "pocetPolozek": 0,
+      "vysledek": "ok"
     },
     {
       "klic": "celni-sprava",
       "ok": true,
       "stav": 200,
-      "pocetPolozek": 0
+      "pocetPolozek": 0,
+      "vysledek": "ok"
     },
     {
       "klic": "sujb",
       "ok": true,
       "stav": 200,
-      "pocetPolozek": 0
+      "pocetPolozek": 0,
+      "vysledek": "ok"
     },
     {
       "klic": "chmi",
       "ok": true,
       "stav": 200,
-      "pocetPolozek": 0
+      "pocetPolozek": 0,
+      "vysledek": "ok"
     },
     {
       "klic": "mzd",
       "ok": true,
       "stav": 200,
-      "pocetPolozek": 0
+      "pocetPolozek": 0,
+      "vysledek": "ok"
     },
     {
       "klic": "bundespolizei",
       "ok": true,
       "stav": 200,
-      "pocetPolozek": 0
+      "pocetPolozek": 0,
+      "vysledek": "ok"
     },
     {
       "klic": "bmi-de",
       "ok": false,
       "stav": 400,
       "pocetPolozek": 0,
-      "chyba": "HTTP 400"
+      "chyba": "HTTP 400",
+      "vysledek": "chyba"
     },
     {
       "klic": "bmi-at",
       "ok": true,
       "stav": 200,
-      "pocetPolozek": 0
+      "pocetPolozek": 0,
+      "vysledek": "ok"
     },
     {
       "klic": "straz-graniczna",
       "ok": true,
       "stav": 200,
-      "pocetPolozek": 0
+      "pocetPolozek": 0,
+      "vysledek": "ok"
     },
     {
       "klic": "minv-sk",
       "ok": true,
       "stav": 200,
-      "pocetPolozek": 0
+      "pocetPolozek": 0,
+      "vysledek": "ok"
+    },
+    {
+      "klic": "chmi-cap",
+      "ok": true,
+      "stav": 200,
+      "pocetPolozek": 0,
+      "vysledek": "ok"
+    },
+    {
+      "klic": "pizza-index",
+      "ok": true,
+      "stav": null,
+      "pocetPolozek": 1,
+      "vysledek": "ok"
     }
   ],
   "novychVeFronte": 0

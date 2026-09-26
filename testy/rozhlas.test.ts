@@ -767,7 +767,7 @@ describe("přehled dne — česky, dvakrát denně", () => {
     // Nic, co nevíme: žádné „mobilizace ne" natvrdo.
     expect(sestavPrehledDne({ ted, posledniSber: cerstvy })).not.toContain("Mobilizace ne");
     // Stará data se řeknou nahlas.
-    expect(sestavPrehledDne({ ted, posledniSber: new Date(ted - 13 * 3_600_000).toISOString() })).toContain("Data nejsou aktuální");
+    expect(sestavPrehledDne({ ted, posledniSber: new Date(ted - 13 * 3_600_000).toISOString() })).toContain("Údaje nejsou čerstvé");
     const text = sestavPrehledDne({ ted, posledniSber: cerstvy, zmeny: ["Hranice a doprava: běžný provoz → sledujeme"] });
     expect(text).toMatch(/Úřední stav se (změnil|zhoršil)/);
     expect(text).toContain("Hranice a doprava: běžný provoz → sledujeme");

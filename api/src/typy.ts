@@ -98,6 +98,11 @@ export interface Prihlaseny {
 /** Zpráva, která má odejít čtenářům. */
 export interface NovaZprava {
   druh: "uroven" | "pravni" | "nato" | "provoz" | "udalost" | "izs";
+  /**
+   * Stálý klíč změny. Z něj je id zprávy, takže opakované zpracování téhož
+   * rozdílu (pád po odeslání, znovu stažený stav) nic nezdvojí.
+   */
+  klic?: string;
   zavaznost: Zavaznost;
   oblast: string | null;
   kategorie: string[] | null;
@@ -112,6 +117,8 @@ export interface StavWebu {
   web: string;
   generovano: string;
   overeno: string | null;
+  /** Kdy začal poslední běh sběru, ze kterého je tenhle stav. Starší weby ho nemají. */
+  beh?: string | null;
   uroven: string | null;
   nazev: string | null;
   pasmo: string | null;

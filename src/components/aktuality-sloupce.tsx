@@ -104,12 +104,12 @@ function Rozbaleni({ r }: { r: Radek }) {
   );
 }
 
-function Sloupec({ nadpis, ikona, ton, radky, prazdne, paticka, ted, napoveda }: { nadpis: string; ikona: "fajfka" | "otaznik"; ton: "klid" | "pozor"; radky: Radek[]; prazdne: string; paticka?: React.ReactNode; ted: number; napoveda?: string }) {
+function Sloupec({ nadpis, ikona, ton, radky, prazdne, paticka, ted, napoveda, trida = "" }: { nadpis: string; ikona: "fajfka" | "otaznik"; ton: "klid" | "pozor"; radky: Radek[]; prazdne: string; paticka?: React.ReactNode; ted: number; napoveda?: string; trida?: string }) {
   const [limit, setLimit] = useState(KROK);
   const [otevreny, setOtevreny] = useState<string | null>(null);
   const videt = radky.slice(0, limit);
   return (
-    <div className="min-w-0">
+    <div className={`min-w-0 ${trida}`}>
       <div className="flex h-[34px] items-center justify-between gap-3">
         <span className="flex items-center gap-2"><IkonaKruh ikona={ikona} ton={ton} velikost="s" /><h3 className="nadpis-boxu">{nadpis}</h3>{napoveda && <Otaznik popis={<span className="block">{napoveda}</span>} />}</span>
         <span className="cislice text-mikro text-tlum2">{radky.length}</span>
@@ -168,8 +168,9 @@ export function AktualitySloupce({ zaznamy, nepotvrzene = [], kandidati = [], te
       země jsou mimo rozsah (CLAUDE.md, rozsah války); na úvod jdou jen
       naléhavé. Zbytek posoudí ověřovatel ve frontě.
     */
+    // Bez času vydání (ručně zapsané, když redakce čas neuvede) platí čas zachycení — jinak by zpráva spadla na konec seznamu.
     ...kandidati.filter((k) => jeCesky(k.titulek) && !jeJenProjev(k.titulek) && (k.naliehave || (k.kodZeme !== "UA" && k.kodZeme !== "RU"))).map((k): Radek => ({
-      klic: `k-${k.id}`, kam: k.zdroj.url, ven: true, kodZeme: k.kodZeme, zeme: k.zeme, kdy: k.publikovano, titulek: k.titulek, stitek: "zachyceno", pruh: "bg-tlum2",
+      klic: `k-${k.id}`, kam: k.zdroj.url, ven: true, kodZeme: k.kodZeme, zeme: k.zeme, kdy: k.publikovano ?? k.zachyceno, titulek: k.titulek, stitek: "zachyceno", pruh: "bg-tlum2",
       zavaznost: null, jistota: null, kategorie: k.kategorie.map((c) => KATEGORIE[c as Kategorie]?.nazev ?? c), text: k.shrnuti || null, textPopis: "Zachyceno", zdroj: { nazev: k.zdroj.nazev, url: k.zdroj.url },
     })),
   ].sort(serad).slice(0, 40);
@@ -180,7 +181,8 @@ export function AktualitySloupce({ zaznamy, nepotvrzene = [], kandidati = [], te
       <div className="grid gap-10 md:grid-cols-2 md:gap-x-16">
         <Sloupec ted={ted} nadpis="Doloženo zdroji" ikona="fajfka" ton="klid" radky={overene} prazdne="Zatím žádný doložený záznam." napoveda="Záznamy doložené dvěma nezávislými nebo úředními zdroji. Každé tvrzení má původce."
           paticka={<Tlacitko kam="/udalosti/" varianta="tichy" velikost="s" ikonaVpravo="nahoru" trida="[&>svg:last-child]:rotate-90">všechny záznamy od 2014</Tlacitko>} />
-        <Sloupec ted={ted} nadpis="Signály z médií" ikona="otaznik" ton="pozor" radky={neoverene} prazdne="Právě žádný nový signál." napoveda="Zachycené zprávy bez úředního nebo druhého nezávislého zdroje. Do počtů ani hodnocení nevstupují."
+        {/* Mobil: nejdřív čerstvé signály, pak doložené (26. 9. 2026). Na počítači zůstává doložené vlevo. */}
+        <Sloupec trida="max-md:order-first" ted={ted} nadpis="Signály z médií" ikona="otaznik" ton="pozor" radky={neoverene} prazdne="Právě žádný nový signál." napoveda="Zachycené zprávy bez úředního nebo druhého nezávislého zdroje. Do počtů ani hodnocení nevstupují."
           paticka={cizich > 0 ? <Link href="/udalosti/?tab=cekajici" className="text-drobne text-tlum2 hover:text-tlum">+ {cizich} v cizím jazyce ve frontě →</Link> : <span className="text-drobne text-tlum2">Do počtů ani hodnocení nevstupují.</span>} />
       </div>
     </section>

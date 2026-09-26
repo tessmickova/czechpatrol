@@ -153,6 +153,12 @@ ani zahraničních — kvůli tomu, co a jak píše. Proto:
   média, které o tom píše. Kontrola dat to hlídá jako chybu.
 - **Práva všech stran.** Ke každé straně sporu se přistupuje stejně:
   co tvrdí, kdo to tvrdí, co k tomu říkají úřady.
+- **Kroky úřadů a složek nehodnotíme** (od 26. 9. 2026). Zadržení,
+  obžalobu, rozsudek, sestřelení nebo vyhoštění popíšeme tak, jak je úřad
+  oznámil — ne jako „úspěch“, „vítězství“ ani krok „proti“ nějakému státu
+  či národu. Obviněný je podezřelý, ne pachatel, dokud nerozhodne soud.
+  Karta na úvodu proto nese název „Zásahy složek“ (dřív „Úspěchy složek“);
+  zakázaná slova hlídá test (`ZAKAZANE_V_TEXTECH` v `src/lib/uspechy.ts`).
 
 Když si nejsme jistí, jestli věta obstojí, **nevydá se** a založí se
 otázka pro člověka.
@@ -287,6 +293,14 @@ Zvedá hodnocení **nejvýš o jeden stupeň**, platí **nejvýš 14 dní** a we
 u hodnocení vždy řekne, že jde o naše vyhodnocení, že výrok nemusí být
 pravdivý a jaká by úroveň byla bez něj. Předpověď to není a psát se tak
 nesmí (pravidlo č. 3c). Hlídá to `nastroje/kontrola-dat.mjs`.
+
+**Rychlý přehled (26. 9. 2026, `docs/RYCHLY-PREHLED.md`).** Z toho, že
+jsme nic nenašli, neplyne, že nic není — texty to říkají v nadpisu, ne
+v drobném písmu. Pokyn obyvatelům jen doslova z originálu vydavatele;
+naše hodnocení ani AI nikdy nevyvolá okamžité upozornění. Čerstvost se
+počítá od posledního ÚSPĚCHU zdroje podle `data/cerstvost-zdroju.json`,
+v prohlížeči se skutečným časem. Technický výpadek není bezpečnostní
+poplach. Zakázané věty hlídá test (`ZAKAZANE_FORMULACE`).
 
 ## Pravidlo č. 4a — nic se nezahazuje, ale nic se ani nepřeklápí samo
 

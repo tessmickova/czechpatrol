@@ -16,8 +16,8 @@ import { Ikona } from "./ikony";
   - nikdy neradí, co dělat v probíhající krizi. Od toho jsou úřady a krizové
     vysílání; tenhle web nemá jak vědět, kde zrovna kdo je.
 
-  Když tip žádný není, sekce se nevykreslí. Prázdný rámeček s nadpisem
-  „Tipy“ by tvrdil, že si tu je co přečíst.
+  Offline mapy jsou od 26. 9. 2026 v průvodci připraveností (krok „Bez
+  signálu“), ne tady — tipy jsou jen datované novinky.
 */
 
 export function TipyKPripraveNadpis() {
@@ -57,3 +57,4 @@ export function TipyKPriprave({ ted = Date.now(), vnoreny = false }: { ted?: num
     </section>
   );
 }
+

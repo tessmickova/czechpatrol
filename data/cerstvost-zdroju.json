@@ -1,0 +1,59 @@
+{
+  "_poznamka": "Meze čerstvosti pro Rychlý přehled (src/lib/prehled/model.ts). Minuty od POSLEDNÍHO ÚSPĚCHU zdroje, ne od posledního pokusu. Zdůvodnění u každé skupiny; změna mezí se píše do docs/RYCHLY-PREHLED.md.",
+  "beh": {
+    "kadenceMin": 60,
+    "zpozdenoPoMin": 150,
+    "nelzePotvrditPoMin": 300,
+    "proc": "Sběr spouští worker jednou za hodinu (api/src/sber.ts, výchozí kadence 60 min). Plánovač GitHubu běh někdy zdrží až o desítky minut, proto „zpožděno“ až po dvou vynechaných bězích a půlhodinové rezervě (150 min). Když dojdou minuty, worker kadenci natáhne až na 240 min (api/src/minuty.ts); přes 300 min tedy už nejde o plánované natažení, ale o výpadek — přehled pak nelze potvrdit. Dosavadní web měl touž hranici 5 h (HODIN_DO_VYPADKU)."
+  },
+  "skupiny": [
+    {
+      "klic": "krizove-cr",
+      "nazev": "Krizové a varovné instituce ČR",
+      "zasadni": true,
+      "zdroje": ["chmi-cap", "hzs", "chmi", "policie", "sujb", "nukib"],
+      "zpozdenoPoMin": 150,
+      "nedostupnePoMin": 360,
+      "proc": "Tady by se objevilo varování obyvatelstvu; chmi-cap jsou strojově čitelné výstrahy ČHMÚ s územím a platností. Čteme je každý běh; výpadek nesmí zůstat skrytý déle než dva vynechané běhy (150 min). Po 6 h bez úspěchu je zdroj pro přehled nedostupný."
+    },
+    {
+      "klic": "urady-cr",
+      "nazev": "Vláda, parlament a ministerstva ČR",
+      "zasadni": true,
+      "zdroje": ["vlada", "psp", "senat", "mvcr", "mzv", "army", "md", "mzd", "celni-sprava", "e-sbirka", "hrad"],
+      "zpozdenoPoMin": 360,
+      "nedostupnePoMin": 1440,
+      "proc": "Vyhlášení nouzového stavu, uzavření hranic a podobně. Mění se zřídka a ohlašuje se veřejně; zpoždění 6 h je proto „zpožděno“, ne výpadek. Po 24 h bez úspěchu nedostupné (shodně s LHUTY.provoz v src/lib/cas.ts)."
+    },
+    {
+      "klic": "provoz-cr",
+      "nazev": "Provoz infrastruktury ČR",
+      "zasadni": false,
+      "zdroje": ["ceps", "eru", "ote", "sshr", "mpo", "cnb", "ctu", "dopravni-info", "sprava-zeleznic", "letiste-praha"],
+      "zpozdenoPoMin": 360,
+      "nedostupnePoMin": 1440,
+      "proc": "Regulátoři a provozovatelé. Důležité pro běžný život, ne pro výstrahy obyvatelstvu. Stejné meze jako úřady."
+    },
+    {
+      "klic": "zahranici",
+      "nazev": "Zahraniční a spojenecké instituce",
+      "zasadni": false,
+      "zdroje": ["nato", "bundespolizei", "bmi-de", "bmi-at", "straz-graniczna", "minv-sk", "pizza-index"],
+      "zpozdenoPoMin": 720,
+      "nedostupnePoMin": 2880,
+      "proc": "Kontext k situaci v okolí, ne výstraha pro místo v Česku. Zpoždění o půl dne nic nezkreslí; po dvou dnech je zdroj nedostupný."
+    }
+  ],
+  "sluzby": {
+    "zpozdenoPoMin": 120,
+    "nedostupnePoMin": 360,
+    "proc": "Stavové stránky služeb se čtou každý běh a web je čte i živě v prohlížeči (src/lib/sluzby-klient.ts)."
+  },
+  "palivo": {
+    "zpozdenoPoMin": 2160,
+    "nedostupnePoMin": 5760,
+    "proc": "ČSÚ vydává ceny nejvýš jednou denně a sběr je stahuje nejvýš po 12 h (sber/palivo.ts). Den a půl je proto „zpožděno“, čtyři dny nedostupné."
+  },
+  "mediaZaHodin": 24,
+  "podilProNelzePotvrdit": 0.5
+}

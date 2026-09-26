@@ -1,0 +1,5 @@
+{
+  "_poznamka": "Ruční úpravy výběru „Úspěchy složek“ (src/lib/uspechy.ts). vyloucene = slugy, které pravidla chytí omylem; slozka = ruční zařazení, když pravidla určí typ složky špatně. Nic se sem nepíše bez ověřeného záznamu.",
+  "vyloucene": ["polsko-kh101-tarnawa-2026"],
+  "slozka": {}
+}

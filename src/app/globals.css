@@ -13,8 +13,8 @@
 */
 
 @theme {
-  --font-sans: var(--font-chakra), Archivo, ui-sans-serif, system-ui, sans-serif;
-  --font-mono: var(--font-mono-web), "IBM Plex Mono", ui-monospace, Menlo, monospace;
+  --font-sans: Archivo, ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, Menlo, monospace;
 
   /*
     Velikosti písma jako tokeny.
@@ -472,6 +472,8 @@ html, body { overflow-x: clip; }
   pointer-events: none;
 }
 .napoveda-obal:has(> .napoveda-vpravo) > .napoveda-vpravo { left: auto; right: 0; }
+/* Spouštěč na spodku karty s overflow-hidden: bublina dolů by se ořízla (Pizza index, offline mapy). */
+.napoveda-nahoru { top: auto; bottom: calc(100% + 6px); }
 /* Skrytá nápověda nesmí zabírat místo v rozvržení — jinak roztahuje stránku vpravo. */
 .napoveda { display: none; }
 

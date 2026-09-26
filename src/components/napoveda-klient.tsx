@@ -15,7 +15,7 @@ import { useEffect, useId, useRef, useState, type ReactNode } from "react";
   aby vysvětlivka fungovala i bez JavaScriptu.
 */
 export function ObalNapovedy({
-  children, popis, vpravo = false, label = "Co to znamená?", cele = false,
+  children, popis, vpravo = false, label = "Co to znamená?", cele = false, nahoru = false, plna = false,
 }: {
   children: ReactNode;
   popis: ReactNode;
@@ -23,6 +23,10 @@ export function ObalNapovedy({
   label?: string;
   /** Spouštěč vyplní celou šířku (dlaždice). */
   cele?: boolean;
+  /** Bublina nad spouštěčem — pro spouštěče na spodku karty, která ořezává obsah. */
+  nahoru?: boolean;
+  /** Spouštěč vyplní i výšku buňky mřížky — sousední dlaždice pak mají stejnou výšku. */
+  plna?: boolean;
 }) {
   const [otevreno, setOtevreno] = useState(false);
   const [jeKod, setJeKod] = useState(false);
@@ -53,7 +57,7 @@ export function ObalNapovedy({
   return (
     <span
       ref={obal}
-      className={`napoveda-obal ${cele ? "w-full" : ""}`}
+      className={`napoveda-obal ${cele ? "w-full" : ""} ${plna ? "h-full" : ""}`}
       data-js={jeKod ? "ano" : undefined}
       data-otevreno={otevreno ? "ano" : undefined}
       onPointerEnter={(e) => { if (e.pointerType === "mouse") setOtevreno(true); }}
@@ -62,7 +66,7 @@ export function ObalNapovedy({
       <button
         type="button"
         /* U malého spouštěče (ikona „i") se zvětší jen dotyková plocha, ne místo v textu. */
-        className={`text-left ${cele ? "w-full" : "-m-2 inline-flex min-h-[32px] min-w-[32px] items-center p-2"}`}
+        className={`text-left ${cele ? "w-full" : "-m-2 inline-flex min-h-[32px] min-w-[32px] items-center p-2"} ${plna ? "h-full" : ""}`}
         aria-label={label}
         aria-expanded={otevreno}
         aria-describedby={otevreno ? id : undefined}
@@ -85,7 +89,7 @@ export function ObalNapovedy({
       >
         {children}
       </button>
-      <span id={id} role="tooltip" className={`napoveda ${vpravo ? "napoveda-vpravo" : ""}`}>
+      <span id={id} role="tooltip" className={`napoveda ${vpravo ? "napoveda-vpravo" : ""} ${nahoru ? "napoveda-nahoru" : ""}`}>
         {popis}
       </span>
     </span>

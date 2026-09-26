@@ -24,3 +24,9 @@
 
 /manifest.webmanifest
   Cache-Control: public, max-age=0, must-revalidate
+
+# Rychlý přehled si snímek stahuje za běhu. Nesmí ho podržet ani prohlížeč,
+# ani hrana CDN: stará kopie by po výpadku sběru dál vypadala jako nová
+# (prohlížeč sice stáří dopočítá z časů uvnitř, ale novější stav by neviděl).
+/prehled.json
+  Cache-Control: no-store
