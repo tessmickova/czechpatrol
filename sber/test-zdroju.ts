@@ -83,6 +83,8 @@ async function main() {
     }
   }
 
+  await zkusVystrahyChmi();
+
   console.log(`\nZdrojů ${ZDROJE.length}, čitelných ${citelnych}.`);
   if (prazdne.length) console.log(`Odpovídají, ale nejde z nich číst: ${prazdne.join(", ")}.`);
   if (nedostupne.length) console.log(`Nedostupné: ${nedostupne.join(", ")}.`);
@@ -91,3 +93,32 @@ async function main() {
 }
 
 main();
+
+/*
+  Kandidátní adresy strojově čitelných výstrah ČHMÚ (formát CAP).
+
+  Z vývojového prostředí nejsou dosažitelné (26. 9. 2026), proto se
+  ověřují tady, ze sítě sběru, dřív než je začne sběr číst. Výpis ukáže
+  stav, typ obsahu, počet bloků <info>/<area> a druhy geokódů — podle
+  toho se píše parser, ne podle paměti.
+*/
+const KANDIDATI_CAP = [
+  "https://www.chmi.cz/files/portal/docs/meteo/om/bulletiny/XOCZ50_OKPR.xml",
+  "https://vystrahy-cr.chmi.cz/data/XOCZ50_OKPR.xml",
+  "https://www.chmi.cz/files/portal/docs/meteo/om/vystrahy/XOCZ50_OKPR.xml",
+];
+
+async function zkusVystrahyChmi() {
+  console.log("\nVýstrahy ČHMÚ (CAP) — kandidátní adresy:");
+  for (const url of KANDIDATI_CAP) {
+    try {
+      const { stav, telo } = await stahni(url, 1);
+      const pocet = (re: RegExp) => (telo.match(re) ?? []).length;
+      const geokody = [...new Set([...telo.matchAll(/<valueName>([^<]+)<\/valueName>/g)].map((m) => m[1]))].slice(0, 8);
+      console.log(`${String(stav).padEnd(5)}${String(telo.length).padStart(8)} B  alert:${pocet(/<alert\b/g)} info:${pocet(/<info>/g)} area:${pocet(/<area>/g)} geokódy:[${geokody.join(", ")}]  ${url}`);
+      if (stav < 400 && /<alert\b/.test(telo)) console.log(telo.slice(0, 2500).replace(/\s+/g, " "));
+    } catch (e) {
+      console.log(`CHYBA ${url}: ${e instanceof Error ? e.message : e}`);
+    }
+  }
+}
