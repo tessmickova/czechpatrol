@@ -11,10 +11,10 @@
       "klic": "krizove-cr",
       "nazev": "Krizové a varovné instituce ČR",
       "zasadni": true,
-      "zdroje": ["hzs", "chmi", "policie", "sujb", "nukib"],
+      "zdroje": ["chmi-cap", "hzs", "chmi", "policie", "sujb", "nukib"],
       "zpozdenoPoMin": 150,
       "nedostupnePoMin": 360,
-      "proc": "Tady by se objevilo varování obyvatelstvu. Čteme je každý běh; výpadek nesmí zůstat skrytý déle než dva vynechané běhy (150 min). Po 6 h bez úspěchu je zdroj pro přehled nedostupný."
+      "proc": "Tady by se objevilo varování obyvatelstvu; chmi-cap jsou strojově čitelné výstrahy ČHMÚ s územím a platností. Čteme je každý běh; výpadek nesmí zůstat skrytý déle než dva vynechané běhy (150 min). Po 6 h bez úspěchu je zdroj pro přehled nedostupný."
     },
     {
       "klic": "urady-cr",

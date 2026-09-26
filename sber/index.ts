@@ -12,6 +12,7 @@ import { aktualizujStav } from "./hodnoceni";
 import { sbirejPalivo } from "./palivo";
 import { sbirejSluzby } from "./sluzby";
 import { slucStavZdroju, vysledekPokusu } from "../src/lib/prehled/model";
+import { sbirejVystrahyChmi } from "./vystrahy-chmi";
 
 /**
  * Hodinový sběr.
@@ -280,6 +281,19 @@ async function main() {
   const nove = doFronty.filter((n) => !znamé.has(klicPolozky(n)));
   if (nove.length) {
     fs.writeFileSync(souborFronty, JSON.stringify([...stavajici, ...nove], null, 2) + "\n", "utf-8");
+  }
+
+  /*
+    Výstrahy ČHMÚ (CAP) — strukturovaný zdroj oficiálních výstrah. Vlastní
+    blok: chyba tady nesmí zastavit zbytek sběru, a výsledek jde do stavu
+    zdrojů stejně jako ostatní (Rychlý přehled pozná výpadek i nečekaný obsah).
+  */
+  try {
+    const c = await sbirejVystrahyChmi(TED);
+    vysledky.push({ klic: "chmi-cap", ok: c.vysledek !== "chyba", stav: c.stav, pocetPolozek: c.pocet, chyba: c.chyba, vysledek: c.vysledek });
+    console.log(`[sber] výstrahy ČHMÚ: ${c.vysledek}${c.vysledek === "ok" ? `, platných bloků ${c.pocet}` : ` (${c.chyba})`}`);
+  } catch (e) {
+    vysledky.push({ klic: "chmi-cap", ok: false, stav: null, pocetPolozek: 0, chyba: String(e instanceof Error ? e.message : e), vysledek: "chyba" });
   }
 
   fs.writeFileSync(

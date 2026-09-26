@@ -23,6 +23,7 @@ import { Ikona } from "./ikony";
 
 const KLIC_LOKALITY = "cp:lokalita";
 const OBNOVA_MS = 5 * 60_000;
+const MAX_POLOZEK = 5;
 
 function ctiLokalitu(): Lokalita {
   try {
@@ -129,8 +130,15 @@ export function RychlyPrehled({ snimek: vychozi, konfigurace, ted: tedServer }: 
       {/* Oficiální informace pro oblast — konečný seznam, žádné dočítání. */}
       {p.oficialni.length > 0 && (
         <ul className="mt-3 space-y-2" aria-label="Oficiální výstrahy, pokyny a opatření">
-          {p.oficialni.map((i) => <OficialniPolozka key={i.id} i={i} ted={ted} />)}
+          {p.oficialni.slice(0, MAX_POLOZEK).map((i) => <OficialniPolozka key={i.id} i={i} ted={ted} />)}
         </ul>
+      )}
+      {/* Konečný přehled: nad pět položek se další rozbalí vědomě, nic se nedočítá samo. */}
+      {p.oficialni.length > MAX_POLOZEK && (
+        <details className="mt-2">
+          <summary className="cursor-pointer text-male font-semibold text-akcent focus-visible:outline focus-visible:outline-2 focus-visible:outline-akcent">Další oficiální informace ({p.oficialni.length - MAX_POLOZEK})</summary>
+          <ul className="mt-2 space-y-2">{p.oficialni.slice(MAX_POLOZEK).map((i) => <OficialniPolozka key={i.id} i={i} ted={ted} />)}</ul>
+        </details>
       )}
       {p.mimoOblast > 0 && (
         <p className="mt-2 text-mikro text-tlum2">Mimo zvolenou oblast: {p.mimoOblast} {p.mimoOblast === 1 ? "oficiální výstraha" : "oficiální výstrahy"}.</p>
@@ -228,7 +236,7 @@ function RozpisZdroju({ zdroje, ted, necteme }: { zdroje: VyhodnocenyZdroj[]; te
         <h3 className="text-mikro font-semibold text-inkoust">Co zatím nečteme</h3>
         <ul className="mt-0.5 list-disc pl-4 text-mikro leading-snug text-tlum">{necteme.map((n) => <li key={n}>{n}</li>)}</ul>
       </div>
-      <p className="text-mikro text-tlum2">Registry zdrojů čteme podle klíčových slov; výstrahy s územím a platností z nich strojově nerozebíráme. <a href="/zdroje/" className="text-akcent underline-offset-2 hover:underline">Všechny zdroje</a></p>
+      <p className="text-mikro text-tlum2">Výstrahy ČHMÚ čteme strojově i s územím a platností; ostatní úřady podle klíčových slov. <a href="/zdroje/" className="text-akcent underline-offset-2 hover:underline">Všechny zdroje</a></p>
     </div>
   );
 }

@@ -149,8 +149,8 @@ const AKTIVNI: StavInformace[] = ["platna", "nadchazejici", "opravena", "nejasna
 const DOBEH_UKONCENYCH_MIN = 24 * 60;
 
 export const NECTEME = [
-  "Regionální a okresní výstrahy ČHMÚ (čteme jen titulní stránku podle klíčových slov)",
-  "Výstrahy a pokyny krajů a obcí",
+  "Výstrahy a pokyny HZS, krajů a obcí (HZS čteme jen podle klíčových slov)",
+  "Přesné území výstrahy ČHMÚ uvnitř kraje (obce s rozšířenou působností k místu nepřevádíme)",
   "Zprávy partnerů IZS v aplikaci (vidí jen přihlášení)",
 ];
 

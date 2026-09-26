@@ -214,14 +214,20 @@ nasazení hlavičkou odpovědi), čtečka obrazovky na skutečném zařízení.
 
 ## 8. Omezení a otevřené otázky
 
-1. **Oficiální výstrahy s územím a platností zatím nečteme.** Přehled to
-   říká v první větě. Přidání ČHMÚ (výstrahy ve formátu CAP) a HZS
-   vyžaduje ověřit adresu a podmínky užití z běžícího sběru — z tohoto
-   prostředí to nešlo. *Otázka pro provozovatelku: chceš, abych ČHMÚ
-   výstrahy (CAP) zapojila jako první strukturovaný zdroj?*
-2. Přiřazení výstrahy ke kraji umíme jen, když ji zapíše člověk s polem
-   `uzemi`. Okresy a obce (ORP) k krajům nepřevádíme — chybí číselník.
+1. **Výstrahy ČHMÚ (CAP) čteme od 26. 9. 2026** — `sber/vystrahy-chmi.ts`,
+   adresa `https://vystrahy-cr.chmi.cz/data/XOCZ50_OKPR.xml` ověřená
+   během „Ověření zdrojů“ ze sítě sběru (run 36222390575). Oblast = kraj;
+   celý kraj se pozná podle toho, že výstraha jmenuje všechny jeho ORP
+   ze souboru, jinak „část kraje“ (nelze určit). Soubor bez CAP nebo bez
+   oblastí se nepoužije a předchozí výstrahy zůstávají. Výstrahy HZS,
+   krajů a obcí strojově nečteme dál. Upozornění čtenářům z výstrah ČHMÚ
+   zatím nevznikají (API čte jen `stav.json`).
+2. Přesné místo uvnitř kraje neurčujeme: ORP z výstrahy ČHMÚ ukážeme
+   jako „část kraje“, k obci čtenáře je nepřevádíme (volba je jen po krajích).
 3. Spolehlivost běhů: kadence 60 min, při nedostatku minut GitHubu až
    240 min; plánovač GitHubu běhy zdržuje i zahazuje.
-4. `data/fronta/zdroje-stav.json` je zatím prázdný; než ho sběr naplní,
+4. Náklady: čtení ČHMÚ přidává k běhu sběru jeden požadavek (~1,5 MB),
+   žádný běh navíc; sběr commituje a nasazuje už teď při každém běhu.
+   `/prehled.json` je statický soubor na Cloudflare Pages.
+5. `data/fronta/zdroje-stav.json` je zatím prázdný; než ho sběr naplní,
    přehled odvozuje stav z posledního běhu (konzervativně).

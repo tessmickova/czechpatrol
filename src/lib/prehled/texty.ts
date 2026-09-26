@@ -84,7 +84,7 @@ export interface ParametryHlavniho {
 export function textBezVystrahy(p: ParametryHlavniho) {
   return {
     nadpis: `V oficiálních zdrojích, které čteme, jsme pro ${oblastProKoho(p.lokalita)} nenašli platnou výstrahu.`,
-    veta: `Poslední úspěšná kontrola: ${kdy(p.posledniKontrola, p.ted)}. Pokrytí je omezené — regionální výstrahy ČHMÚ ani pokyny obcí zatím strojově nečteme. Při přímém varování se řiďte pokyny HZS, obce a policie.`,
+    veta: `Poslední úspěšná kontrola: ${kdy(p.posledniKontrola, p.ted)}. Pokrytí je omezené — výstrahy ČHMÚ čteme, pokyny HZS, krajů a obcí zatím ne. Při přímém varování se řiďte pokyny HZS, obce a policie.`,
   };
 }
 

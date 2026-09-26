@@ -12,6 +12,14 @@ import type { InformaceVstup, SnimekPrehledu, ZaznamZdroje, ZdrojVeSnimku } from
   v HTML — a stránka z cache by po výpadku sběru dál tvrdila „aktuální“.
 */
 
+/*
+  Zdroje mimo registr sber/zdroje.ts — čtou se vlastním parserem, ale ve stavu
+  zdrojů vystupují stejně. Bez záznamu tady by je přehled neuměl pojmenovat.
+*/
+export const DALSI_ZDROJE = [
+  { klic: "chmi-cap", nazev: "ČHMÚ — výstrahy (strojově, CAP)", odkaz: "https://vystrahy-cr.chmi.cz/" },
+];
+
 export interface VstupySnimku {
   generovano: string;
   posledniBeh: { kdy?: string; zdroje?: { klic: string; ok: boolean; chyba?: string; vysledek?: ZaznamZdroje["posledniVysledek"] }[] } | null;
@@ -19,6 +27,8 @@ export interface VstupySnimku {
   sluzby: { aktualizovano?: string | null } | null;
   palivo: { aktualizovano?: string | null } | null;
   vystraha: VystrahaSoubor | null;
+  /** data/vystrahy-chmi.json — přečtené výstrahy ČHMÚ (sber/vystrahy-chmi.ts). */
+  vystrahyChmi: { nacteno: string | null; vystrahy: InformaceVstup[] } | null;
   pravni: PravniPolozka[];
   incidenty: Incident[];
   celkovy: CelkovyStav | null;
@@ -38,7 +48,7 @@ export function sestavSnimek(v: VstupySnimku): SnimekPrehledu {
     konzervativní: bez historie nevíme o starším úspěchu, a zdroj, který
     teď selhal, proto vyjde jako nedostupný, ne jako „zpožděný“.
   */
-  const zdroje: ZdrojVeSnimku[] = ZDROJE.map((z) => {
+  const zdroje: ZdrojVeSnimku[] = [...ZDROJE, ...DALSI_ZDROJE].map((z) => {
     const trvaly = v.stavZdroju[z.klic];
     const vBehu = beh?.zdroje?.find((x) => x.klic === z.klic);
     const odvozeny: ZaznamZdroje = {
@@ -51,8 +61,8 @@ export function sestavSnimek(v: VstupySnimku): SnimekPrehledu {
     return {
       klic: z.klic,
       nazev: z.nazev,
-      odkaz: z.odkaz ?? z.url,
-      blokovany: Boolean(z.ocekavaneBlokovani),
+      odkaz: ("odkaz" in z && z.odkaz) || ("url" in z ? z.url : ""),
+      blokovany: "ocekavaneBlokovani" in z && Boolean(z.ocekavaneBlokovani),
       ...(trvaly ?? odvozeny),
     };
   });
@@ -89,6 +99,9 @@ export function sestavSnimek(v: VstupySnimku): SnimekPrehledu {
     // Jen nedávno skončené — aby čtenář viděl, že skončila, ne že zmizela.
     if (ted - new Date(a.sundano).getTime() <= 2 * DEN) informace.push(zVystrahy(a, { kdy: a.sundano, zpusob: a.zpusob }));
   }
+
+  /* Výstrahy ČHMÚ — znění vydavatele; platnost a území podle CAP. Stav z nich počítá až prohlížeč. */
+  for (const i of v.vystrahyChmi?.vystrahy ?? []) informace.push(i);
 
   /* Vyhlášené stavy a opatření (pravni-stav.json): platí = true zapisuje jen člověk s úředním zdrojem. */
   for (const p of v.pravni.filter((x) => x.plati === true)) {

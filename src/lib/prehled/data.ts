@@ -4,6 +4,7 @@ import sluzby from "../../../data/sluzby.json";
 import palivo from "../../../data/palivo.json";
 import souborVystrahy from "../../../data/vystraha.json";
 import konfigurace from "../../../data/cerstvost-zdroju.json";
+import vystrahyChmi from "../../../data/vystrahy-chmi.json";
 import { JE_UKAZKA } from "@/config/web";
 import { celkovyStav, incidenty, nepotvrzene, pravniStav, vsichniKandidati } from "../data";
 import type { VystrahaSoubor } from "../typy";
@@ -24,6 +25,7 @@ export function snimekPrehledu(generovano = new Date().toISOString()): SnimekPre
     palivo: palivo as never,
     // Ukázkový režim výstrahu nikdy neukazuje (shodně s data.ts vystraha()).
     vystraha: JE_UKAZKA ? null : (souborVystrahy as unknown as VystrahaSoubor),
+    vystrahyChmi: JE_UKAZKA ? null : (vystrahyChmi as never),
     pravni: pravniStav().polozky,
     incidenty: incidenty(),
     celkovy: celkovyStav(),
