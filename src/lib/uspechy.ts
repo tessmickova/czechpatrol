@@ -2,8 +2,9 @@ import soubor from "../../data/uspechy.json";
 import type { Incident } from "./typy";
 
 /*
-  Úspěchy složek (26. 9. 2026): co bezpečnostní složky odvrátily, odhalily
-  nebo dotáhly k soudu — z NAŠICH OVĚŘENÝCH ZÁZNAMŮ, nic navíc.
+  Zásahy složek (26. 9. 2026; do 26. 9. „Úspěchy složek“ — přejmenováno,
+  viz KARTA níž): co bezpečnostní složky a úřady oznámily — z NAŠICH
+  OVĚŘENÝCH ZÁZNAMŮ, nic navíc.
 
   Pravidla, aby se sem nedostalo nic, co úspěch není:
   - jen ověřené záznamy (člověkem nebo úředním zdrojem), ne archivní;
@@ -29,13 +30,34 @@ const TEMATA = new Set(["vysetrovani", "zpravodajske", "pravo", "sabotaz", "kybe
 
 export type Slozka = "policie" | "zpravodajske" | "armada" | "kyber" | "diplomacie";
 
+/*
+  Texty karty (26. 9. 2026, CLAUDE.md pravidlo 6): popisujeme, co úřad sám
+  oznámil — zadržení, obžalobu, rozsudek, sestřelení, vyhoštění. Nehodnotíme
+  to jako „úspěch“ ani „vítězství“ a nepíšeme, proti komu krok směřuje:
+  hodnocení kroku vůči konkrétnímu státu je stranění a provokace, kterou
+  web dělat nesmí. Obviněný je podezřelý, ne pachatel (presumpce neviny).
+  Hlídá to test testy/uspechy.test.ts (ZAKAZANE_V_TEXTECH).
+*/
+export const KARTA = {
+  nazev: "Zásahy složek",
+  napoveda:
+    "Co bezpečnostní složky a úřady samy oznámily — zadržení, obžaloby, rozsudky, sestřelené drony, vyhoštění — v našich tématech. " +
+    "Přebíráme jen to, co úřad zveřejnil, a nehodnotíme to. Obvinění není odsouzení: dokud nerozhodne soud, jde o podezřelé. " +
+    "Nejdřív Česko — všechny naše ověřené záznamy bez ohledu na stáří, protože takových případů je málo; datum je u každého. " +
+    "Pak V4 (Slovensko, Polsko, Maďarsko) a ostatní Evropa za posledního půl roku; zbytek světa jen pod „Vše“. Každá položka vede na zdroje.",
+  prazdno: "Ve zvolené oblasti zatím nemáme ověřený záznam o zásahu složek.",
+};
+
 export const SLOZKY: { klic: Slozka; nazev: string; popis: string }[] = [
-  { klic: "policie", nazev: "Policie a žalobci", popis: "Zadržení, obvinění a obžaloby pachatelů sabotáží, špionáže a útoků." },
-  { klic: "zpravodajske", nazev: "Zpravodajské služby", popis: "Odhalené sítě, zmařené operace a kontrarozvědka." },
-  { klic: "armada", nazev: "Armáda a obrana", popis: "Sestřelené drony, zachycené průniky, ochrana vzdušného prostoru." },
-  { klic: "kyber", nazev: "Kyberbezpečnost", popis: "Odražené a zneškodněné kybernetické útoky." },
-  { klic: "diplomacie", nazev: "Vlády a diplomacie", popis: "Vyhoštění agentů a kroky vlád proti vlivovým operacím." },
+  { klic: "policie", nazev: "Policie a žalobci", popis: "Zadržení, obvinění, obžaloby a rozsudky, jak je oznámily policie, státní zastupitelství a soudy." },
+  { klic: "zpravodajske", nazev: "Zpravodajské služby", popis: "Případy, které zpravodajské služby nebo žalobci zveřejnili." },
+  { klic: "armada", nazev: "Armáda a obrana", popis: "Sestřelené drony a zachycená narušení vzdušného prostoru podle armád." },
+  { klic: "kyber", nazev: "Kyberbezpečnost", popis: "Kybernetické útoky, které úřady oznámily jako odražené nebo zastavené." },
+  { klic: "diplomacie", nazev: "Vlády a diplomacie", popis: "Vyhoštění diplomatů a další kroky vlád, jak je samy oznámily." },
 ];
+
+/** Slova, která v textech karty nesmí být — hodnotí, straní nebo předjímají vinu. */
+export const ZAKAZANE_V_TEXTECH = /úspěch|vítěz|porážk|porazil|pachatel|proti\s|nepřítel|protivník/i;
 
 const SKUTEK = /zatk|zadrž|zadrz|obvin|obžal|obzal|odsou[zd]|odhal|zmař|zmar|překaz|prekaz|zabrán|zabran|rozbil|zneškod|znesk|sestřel|sestrel|zachyt|vyhost|vyhoštěn|arrest|detain|charged|indict|convict|foil|thwart|shot down|intercept|expel/i;
 
@@ -106,8 +128,8 @@ export function vyberUspechy(
     const slozka = rucne ?? PRAVIDLA.find(([, re]) => re.test(text))?.[0];
     if (!slozka) continue;
     /*
-      Karta má ukázat úspěch, ne původní čin: „Autobusy Klíčov“ a první fakt
-      o zapálení autobusů by v Úspěších působily jako hrozba. Proto titulek
+      Karta má ukázat zásah složky, ne původní čin: „Autobusy Klíčov“ a první fakt
+      o zapálení autobusů by v Zásazích působily jako hrozba. Proto titulek
       a fakt, který skutek složky jmenuje, a teprve pak ty první.
     */
     const titulek = i.kratkyTitulek && SKUTEK.test(i.kratkyTitulek) ? i.kratkyTitulek : SKUTEK.test(i.titulek) ? i.titulek : i.kratkyTitulek || i.titulek;

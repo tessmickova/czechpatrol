@@ -153,6 +153,12 @@ ani zahraničních — kvůli tomu, co a jak píše. Proto:
   média, které o tom píše. Kontrola dat to hlídá jako chybu.
 - **Práva všech stran.** Ke každé straně sporu se přistupuje stejně:
   co tvrdí, kdo to tvrdí, co k tomu říkají úřady.
+- **Kroky úřadů a složek nehodnotíme** (od 26. 9. 2026). Zadržení,
+  obžalobu, rozsudek, sestřelení nebo vyhoštění popíšeme tak, jak je úřad
+  oznámil — ne jako „úspěch“, „vítězství“ ani krok „proti“ nějakému státu
+  či národu. Obviněný je podezřelý, ne pachatel, dokud nerozhodne soud.
+  Karta na úvodu proto nese název „Zásahy složek“ (dřív „Úspěchy složek“);
+  zakázaná slova hlídá test (`ZAKAZANE_V_TEXTECH` v `src/lib/uspechy.ts`).
 
 Když si nejsme jistí, jestli věta obstojí, **nevydá se** a založí se
 otázka pro člověka.

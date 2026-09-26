@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { vOblasti, vyberUspechy } from "../src/lib/uspechy";
+import { KARTA, OBLASTI, SLOZKY, ZAKAZANE_V_TEXTECH, vOblasti, vyberUspechy } from "../src/lib/uspechy";
 import type { Incident } from "../src/lib/typy";
 
 const TED = Date.parse("2026-09-26T12:00:00Z");
@@ -67,5 +67,15 @@ describe("úspěchy složek — karta ukazuje úspěch, ne čin", () => {
     const [u] = vyberUspechy([z({ kratkyTitulek: "Autobusy Klíčov", titulek: "Praha-Klíčov: pachatel odsouzen za teroristický útok", fakta: ["Zapálil tři autobusy.", "Soud ho odsoudil k 13 letům."] })], TED, bez);
     expect(u.titulek).toBe("Praha-Klíčov: pachatel odsouzen za teroristický útok");
     expect(u.coSeStalo).toBe("Soud ho odsoudil k 13 letům.");
+  });
+});
+
+describe("zásahy složek — texty bez hodnocení a stranění (CLAUDE.md pravidlo 6)", () => {
+  it("žádný viditelný text karty nehodnotí, nestraní ani nepředjímá vinu", () => {
+    const texty = [KARTA.nazev, KARTA.napoveda, KARTA.prazdno, ...SLOZKY.flatMap((s) => [s.nazev, s.popis]), ...OBLASTI.map((o) => o.nazev)];
+    for (const t of texty) expect(t, t).not.toMatch(ZAKAZANE_V_TEXTECH);
+  });
+  it("pojistka zakázaná slova opravdu chytá", () => {
+    for (const t of ["Úspěchy složek", "kroky vlád proti vlivovým operacím", "pachatelé sabotáží", "vítězství nad"]) expect(t).toMatch(ZAKAZANE_V_TEXTECH);
   });
 });

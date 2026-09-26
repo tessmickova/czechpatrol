@@ -432,7 +432,7 @@ export function Dashboard({
   souhrn?: SouhrnSituace;
   /** Rychlý přehled: snímek zdrojů a informací + meze čerstvosti (src/lib/prehled). */
   prehled?: { snimek: SnimekPrehledu; konfigurace: KonfiguraceCerstvosti };
-  /** Úspěchy složek z ověřených záznamů (src/lib/uspechy.ts). */
+  /** Zásahy složek z ověřených záznamů (src/lib/uspechy.ts). */
   uspechy?: Uspech[];
 }) {
   const t = useT();
@@ -696,7 +696,7 @@ export function Dashboard({
             );
           })}
         </section>
-          {/* Úspěchy složek pod úředním stavem, „Co se změnilo“ až pod nimi jako nízký posuvný log (26. 9. 2026). */}
+          {/* Zásahy složek pod úředním stavem, „Co se změnilo“ až pod nimi jako nízký posuvný log (26. 9. 2026). */}
           <div className="mt-6"><UspechySlozek uspechy={uspechy} /></div>
           <div className="mt-6"><CoSeZmenilo zaznamy={vse} snimky={snimky} ted={tedMs} osa log /></div>
         </div>

@@ -2,15 +2,15 @@
 
 import { useState } from "react";
 import { datumPraha } from "@/lib/cas";
-import { OBLASTI, SLOZKY, vOblasti, type Oblast, type Slozka, type Uspech } from "@/lib/uspechy";
+import { KARTA, OBLASTI, SLOZKY, vOblasti, type Oblast, type Slozka, type Uspech } from "@/lib/uspechy";
 import { HlavickaWidgetu } from "./widgety";
 import { Vlajka } from "./zeme";
 
 /*
-  Úspěchy složek — přepínání podle typu složky (26. 9. 2026).
+  Zásahy složek — přepínání podle typu složky (26. 9. 2026).
 
-  Protiváha k výčtu hrozeb: co policie, služby, armáda nebo vlády odvrátily
-  a dotáhly. Jen z ověřených záznamů (src/lib/uspechy.ts), každá položka
+  Protiváha k výčtu hrozeb: co policie, služby, armáda nebo vlády oznámily.
+  Texty nehodnotí a nestraní (KARTA v src/lib/uspechy.ts, CLAUDE.md pravidlo 6). Jen z ověřených záznamů (src/lib/uspechy.ts), každá položka
   vede na záznam se zdroji. Konečný výčet: tři na kartu, nic se nedočítá.
 
   Filtr Česko / V4 / Evropa (26. 9. 2026): oblast se volí první, typy složek se
@@ -36,9 +36,9 @@ export function UspechySlozek({ uspechy }: { uspechy: Uspech[] }) {
       <HlavickaWidgetu
         ikona="stit"
         id="uspechy-nadpis"
-        nazev="Úspěchy složek"
+        nazev={KARTA.nazev}
         ton="klid"
-        napoveda={<span className="block">Co bezpečnostní složky odvrátily, odhalily nebo dotáhly k soudu — v našich tématech (sabotáže, špionáž, drony, kyber). Nejdřív Česko — všechny naše ověřené záznamy bez ohledu na stáří, protože takových případů je málo; datum je u každého. Pak V4 (Slovensko, Polsko, Maďarsko) a ostatní Evropa za posledního půl roku. Úspěchy mimo Evropu (třeba obžaloba v USA) jsou jen pod „Vše“. Jen z ověřených záznamů; každý vede na zdroje.</span>}
+        napoveda={<span className="block">{KARTA.napoveda}</span>}
       />
       {/* Vlastní řádek, ne v hlavičce: na mobilu by přepínač přetekl přes nadpis. */}
       <div role="radiogroup" aria-label="Oblast" className="mx-3 mb-2 grid grid-cols-4 rounded-full border border-linka p-0.5 lg:inline-grid">
@@ -71,7 +71,7 @@ export function UspechySlozek({ uspechy }: { uspechy: Uspech[] }) {
       </div>
       <div role="tabpanel" className="px-4 pb-3">
         <div className="mb-2 flex justify-between gap-3 text-mikro text-tlum2"><span>{popis}</span><span className="shrink-0">{pocet}</span></div>
-        {!vOblast.length && <p className="text-male text-tlum">Ve zvolené oblasti zatím nemáme ověřený záznam o úspěchu složek.</p>}
+        {!vOblast.length && <p className="text-male text-tlum">{KARTA.prazdno}</p>}
         <ul className="space-y-2.5">
           {vyber.slice(0, NA_KARTU).map((u, i) => (
             /* Mobil: dvě položky na kartu, fakt na jeden řádek — karta byla přes 500 px. */
