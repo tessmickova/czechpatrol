@@ -8,6 +8,7 @@ import type { Pulz } from "@/lib/pulz";
 import type { SouhrnSituace } from "@/lib/souhrn-situace";
 import { VetaSituace } from "./veta-situace";
 import { RychlyPrehled } from "./rychly-prehled";
+import { PartnerskyProstor } from "./partnersky-prostor";
 import type { KonfiguraceCerstvosti } from "@/lib/prehled/model";
 import type { SnimekPrehledu } from "@/lib/prehled/typy";
 import { UVOD_V2 } from "@/config/web";
@@ -644,6 +645,9 @@ export function Dashboard({
       {UVOD_V2 ? (
       <>
       {/* ===== ÚVOD V2 — spodní část (24. 9. 2026) ===== */}
+
+      {/* Partneři uprostřed stránky, ale až pod aktualitami a stavem — to podstatné je vždy nad nimi (26. 9. 2026). */}
+      <div className="mt-10"><PartnerskyProstor umisteni="uvod" ted={tedMs} obal={false} /></div>
 
       {/* Úřední stav: jedna karta, dlaždice; v klidu jen klíčové, zbytek za „všech N“. */}
       <div className="nalet mt-16 sm:mt-24">

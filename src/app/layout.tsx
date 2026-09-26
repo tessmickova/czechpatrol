@@ -9,6 +9,7 @@ import { RegistraceSW } from "@/components/pwa";
 import { Mereni } from "@/components/mereni";
 import { SouhlasAnalytika } from "@/components/souhlas-analytika";
 import { Paticka } from "@/components/paticka";
+import { PartnerskyProstor } from "@/components/partnersky-prostor";
 import { PruhPuvodu, UkazkaPruh } from "@/components/pruhy";
 import { PulzKratky } from "@/components/pulz-kratky";
 import { pulz } from "@/lib/pulz";
@@ -110,6 +111,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <DialogProvider>
           <main id="obsah" className="pt-3 pb-[calc(60px+env(safe-area-inset-bottom))] sm:pt-5 md:pb-0">{children}</main>
         </DialogProvider>
+        {/* Partneři až za obsahem stránky, před patičkou (26. 9. 2026). */}
+        <div className="mb-6 mt-2"><PartnerskyProstor umisteni="paticka" /></div>
         <Paticka />
         <PostranniPanel />
         <NavadeniZapojeni />

@@ -38,7 +38,7 @@
       "klic": "zahranici",
       "nazev": "Zahraniční a spojenecké instituce",
       "zasadni": false,
-      "zdroje": ["nato", "bundespolizei", "bmi-de", "bmi-at", "straz-graniczna", "minv-sk"],
+      "zdroje": ["nato", "bundespolizei", "bmi-de", "bmi-at", "straz-graniczna", "minv-sk", "pizza-index"],
       "zpozdenoPoMin": 720,
       "nedostupnePoMin": 2880,
       "proc": "Kontext k situaci v okolí, ne výstraha pro místo v Česku. Zpoždění o půl dne nic nezkreslí; po dvou dnech je zdroj nedostupný."

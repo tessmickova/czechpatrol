@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   description: "Co o vás CzechPatrol ví, proč, jak dlouho a jak to smažete. Krátce a bez právničiny.",
 };
 
-const REVIZE = "2026-09-25";
+const REVIZE = "2026-09-26";
 
 function Oddil({ cislo, nadpis, children }: { cislo: string; nadpis: string; children: React.ReactNode }) {
   return (
@@ -147,6 +147,7 @@ export default function SoukromiStranka() {
 
           <Oddil cislo="10" nadpis="Cookies a úložiště prohlížeče">
             <p>Bez vašeho souhlasu web nepoužívá cookies. V prohlížeči ukládá jen přihlášení a vaše předvolby. To je nutné pro službu, kterou chcete, a souhlas se nevyžaduje. Vlastní měření návštěvnosti nic v prohlížeči neukládá.</p>
+            <p id="partneri" className="scroll-mt-[84px]"><b>Poptávka partnera (banner).</b> Z formuláře na /partneri/ ukládáme název firmy, web, kontaktní e-mail, zvolený obor, umístění a období a text zprávy, s časem a verzí souhlasu. Slouží jen k vyřízení poptávky; právní základ je souhlas a jednání o smlouvě. Nevyřízené a zamítnuté poptávky mažeme do roka. O výmaz můžete požádat kdykoli.</p>
             <p id="analytika" className="scroll-mt-[84px]"><b>Analytika třetích stran — jen se souhlasem.</b> Když v liště dole zvolíte „Povolit“, spustí se Microsoft Clarity (Microsoft Corporation; teplotní mapy a záznam průchodu stránkou, vstupní pole jsou maskovaná) a PostHog (PostHog Inc., data v EU; zobrazení stránek a kliknutí). Oba ukládají cookies a zpracovávají technické údaje o zařízení a IP adresu jako zpracovatelé. Právní základ je váš souhlas; odvoláte ho odkazem „Nastavení analytiky“ v patičce a volbou „Odmítnout“. Bez souhlasu ani s nastaveným Global Privacy Control se nic z toho nespustí.</p>
           </Oddil>
 

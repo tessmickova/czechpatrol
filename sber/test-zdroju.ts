@@ -86,6 +86,8 @@ async function main() {
 
   await zkusVystrahyChmi();
 
+  await zkusPizzaIndex();
+
   // Doporučené odkazy ven (src/config/odkazy-ven.ts): vedou pořád tam, kam tvrdíme?
   console.log("\nOdkazy ven (offline mapy, Pizza index):");
   for (const u of [...OFFLINE_MAPY.flatMap((m) => [m.android, m.ios]), PIZZA_INDEX.url]) {
@@ -128,5 +130,36 @@ async function zkusVystrahyChmi() {
     } catch (e) {
       console.log(`CHYBA ${url}: ${e instanceof Error ? e.message : e}`);
     }
+  }
+}
+
+/*
+  Pizza index: nabízí web strojově čitelná data a dovoluje je číst?
+  Sonda jen vypíše, co v HTML je (odkazy na /api/, JSON v datech stránky)
+  a co říká robots.txt. Čtení se do sběru přidá až podle výsledku.
+*/
+async function zkusPizzaIndex() {
+  console.log("\nPizza index — sonda:");
+  try {
+    const { stav, telo } = await stahni(PIZZA_INDEX.url, 1);
+    const titul = telo.match(/<title>([^<]*)<\/title>/i)?.[1] ?? "";
+    const api = [...new Set([...telo.matchAll(/["'(](\/api\/[A-Za-z0-9_\-/?=&.]+)/g)].map((m) => m[1]))].slice(0, 15);
+    const json = [...new Set([...telo.matchAll(/https?:\/\/[^"'\s)]+\.json[^"'\s)]*/g)].map((m) => m[0]))].slice(0, 10);
+    console.log(`HTML ${stav}, ${telo.length} B, titul: ${titul}`);
+    console.log(`api cesty: ${api.join(" | ") || "žádné"}`);
+    console.log(`json adresy: ${json.join(" | ") || "žádné"}`);
+    console.log(`__NEXT_DATA__: ${/__NEXT_DATA__/.test(telo)}, klíčová slova: ${["index", "busy", "doughcon", "level", "score"].filter((k) => new RegExp(k, "i").test(telo)).join(",")}`);
+    const vyrez = telo.replace(/<script[\s\S]*?<\/script>/gi, " ").replace(/<style[\s\S]*?<\/style>/gi, " ").replace(/<[^>]+>/g, " ").replace(/\s+/g, " ").slice(0, 900);
+    console.log(`text: ${vyrez}`);
+    for (const cesta of api.slice(0, 4)) {
+      try {
+        const r = await stahni(new URL(cesta, PIZZA_INDEX.url).toString(), 1);
+        console.log(`  ${cesta} → ${r.stav}, ${r.telo.length} B: ${r.telo.slice(0, 400).replace(/\s+/g, " ")}`);
+      } catch (e) { console.log(`  ${cesta} → chyba ${e instanceof Error ? e.message : e}`); }
+    }
+    const robots = await stahni(new URL("/robots.txt", PIZZA_INDEX.url).toString(), 1).catch(() => ({ stav: 0, telo: "" }));
+    console.log(`robots.txt ${robots.stav}: ${robots.telo.slice(0, 500).replace(/\s+/g, " ")}`);
+  } catch (e) {
+    console.log(`CHYBA: ${e instanceof Error ? e.message : e}`);
   }
 }
