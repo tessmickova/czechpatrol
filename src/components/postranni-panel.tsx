@@ -70,11 +70,17 @@ const RADEK = "flex min-h-[48px] items-center gap-3 px-4 text-zaklad text-inkous
 
 export function PostranniPanel() {
   const [otevreno, setOtevreno] = useState(false);
+  /*
+    Obsah menu se vytvoří až při prvním otevření (26. 9. 2026, výkon): dřív
+    se celé menu oživovalo na každé stránce hned při načtení, i když ho
+    většina lidí neotevře — a klepnutí během načítání čekalo (INP až 420 ms).
+  */
+  const [pripraveno, setPripraveno] = useState(false);
   const zavrit = useRef<HTMLButtonElement>(null);
   const { ucet, nacita } = useUcet();
 
   useEffect(() => {
-    const otevri = () => setOtevreno(true);
+    const otevri = () => { setPripraveno(true); setOtevreno(true); };
     window.addEventListener("czechpatrol:panel", otevri);
     return () => window.removeEventListener("czechpatrol:panel", otevri);
   }, []);
@@ -93,6 +99,7 @@ export function PostranniPanel() {
 
   const zavri = () => setOtevreno(false);
 
+  if (!pripraveno) return null;
   return (
     <>
       <div

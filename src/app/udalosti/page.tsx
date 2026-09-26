@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { HlavickaStranky } from "@/components/nadpisy";
 import { UdalostiKlient } from "@/components/udalosti-klient";
+import { CoDal } from "@/components/co-dal";
 import { incidenty, kandidati, nepotvrzene, nepotvrzeneZaznamy, opravy } from "@/lib/data";
 
 export const metadata: Metadata = {
@@ -18,6 +19,7 @@ export default function Udalosti() {
       />
       <div className="mt-12 sm:mt-16" />
       <UdalostiKlient zaznamy={incidenty()} neprosle={nepotvrzene()} kandidati={kandidati()} nepotvrzene={nepotvrzeneZaznamy()} opravy={opravy()} />
+      <CoDal bez="/udalosti/" />
     </div>
   );
 }

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { HlavickaStranky, Obsah } from "@/components/hlavicka";
 import { OdolnostPrepinac } from "@/components/odolnost-prepinac";
 import { Zebricek } from "@/components/zebricek-klient";
+import { CoDal } from "@/components/co-dal";
 import { SPUSTENO } from "@/config/web";
 
 export const metadata: Metadata = {
@@ -29,6 +30,7 @@ export default function Odolnost() {
         <OdolnostPrepinac />
         {/* Žebříček pod auditem: srovnání je až po vyplnění, ne důvod k vyplnění. */}
         {SPUSTENO.zebricek && <Zebricek />}
+        <CoDal bez="/odolnost/" />
       </Obsah>
     </>
   );

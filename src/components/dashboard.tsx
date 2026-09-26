@@ -1,12 +1,11 @@
 "use client";
 
 /*
-  <Suspense> kolem velkých částí úvodu (26. 9. 2026, výkon): React pak
-  oživuje stránku po kouscích místo jednoho dlouhého bloku a klepnutí
-  do ještě neoživené části dostane přednost. Nic nenačítá líně — obsah je
-  v HTML celý, jen se neoživuje najednou (INP 300 ms, TBT).
+  Žádné <Suspense> kolem částí úvodu (26. 9. 2026): statický export je
+  vypíše na konec HTML jako skryté bloky a skript je vloží na místo až
+  po načtení — na pomalém připojení stránka poskakovala (CLS 0,81).
+  Test testy/vykon.test.ts to hlídá.
 */
-import { Suspense } from "react";
 
 import { HlavickaWidgetu, IkonaKruh } from "./widgety";
 import { AktualitySloupce } from "./aktuality-sloupce";
@@ -585,10 +584,10 @@ export function Dashboard({
             {/* Na mobilu je „Upozornění“ hned pod tím v řadě tlačítek — dvakrát totéž nepotřebujeme. */}
             <div className="mt-4 max-lg:hidden"><Tlacitko kam="/odber/" varianta="obrys" velikost="m" ikona="zvonek">Odběr zpráv</Tlacitko></div>
           </div>
-          <div id="podrobny-monitoring" className="order-3 min-w-0 scroll-mt-20 lg:order-none lg:col-start-1 lg:row-start-2"><Suspense fallback={null}><AktualitySloupce zaznamy={vse} nepotvrzene={nepotvrzene} kandidati={kandidati} /></Suspense></div>
+          <div id="podrobny-monitoring" className="order-3 min-w-0 scroll-mt-20 lg:order-none lg:col-start-1 lg:row-start-2"><AktualitySloupce zaznamy={vse} nepotvrzene={nepotvrzene} kandidati={kandidati} /></div>
           <div className="order-2 min-w-0 lg:order-none lg:col-start-2 lg:row-span-2 lg:row-start-1">
-          <Suspense fallback={null}><SidebarUvodu stav={stav} cr={cr} crHistoricky={crHistoricky} crPocet={crPocet} obcane={obcane} pulz={pulz} priprava={priprava} {...casyProPanel(vse, kampane)} kandidati={kandidati} zkontrolovano={overeno} overovane={overovaneAktivni} ted={tedMs}
-            tipy={<MiniBox nazev="Tipy k přípravě" ikona="fajfka" ton="klid" souhrn={tipyNahled.length ? tipyNahled[0].nadpis : "Zatím bez tipu"}><TipyKPriprave ted={tedMs} vnoreny /></MiniBox>} /></Suspense>
+          <SidebarUvodu stav={stav} cr={cr} crHistoricky={crHistoricky} crPocet={crPocet} obcane={obcane} pulz={pulz} priprava={priprava} {...casyProPanel(vse, kampane)} kandidati={kandidati} zkontrolovano={overeno} overovane={overovaneAktivni} ted={tedMs}
+            tipy={<MiniBox nazev="Tipy k přípravě" ikona="fajfka" ton="klid" souhrn={tipyNahled.length ? tipyNahled[0].nadpis : "Zatím bez tipu"}><TipyKPriprave ted={tedMs} vnoreny /></MiniBox>} />
           </div>
         </div>
       ) : (
@@ -661,7 +660,7 @@ export function Dashboard({
       {/* ===== ÚVOD V2 — spodní část (24. 9. 2026) ===== */}
 
       {/* Partneři uprostřed stránky, ale až pod aktualitami a stavem — to podstatné je vždy nad nimi (26. 9. 2026). */}
-      <div className="mt-10"><Suspense fallback={null}><PartnerskyProstor umisteni="uvod" ted={tedMs} obal={false} /></Suspense></div>
+      <div className="mt-10"><PartnerskyProstor umisteni="uvod" ted={tedMs} obal={false} /></div>
 
       {/* Úřední stav: jedna karta, dlaždice; v klidu jen klíčové, zbytek za „všech N“. */}
       <div className="nalet mt-16 sm:mt-24">
@@ -706,8 +705,8 @@ export function Dashboard({
           })}
         </section>
           {/* Zásahy složek pod úředním stavem, „Co se změnilo“ až pod nimi jako nízký posuvný log (26. 9. 2026). */}
-          <div className="mt-6"><Suspense fallback={null}><UspechySlozek uspechy={uspechy} /></Suspense></div>
-          <div className="mt-6"><Suspense fallback={null}><CoSeZmenilo zaznamy={vse} snimky={snimky} ted={tedMs} osa log /></Suspense></div>
+          <div className="mt-6"><UspechySlozek uspechy={uspechy} /></div>
+          <div className="mt-6"><CoSeZmenilo zaznamy={vse} snimky={snimky} ted={tedMs} osa log /></div>
         </div>
 
         {/* Postranní sloupec stejné šířky jako nahoře: dodávky a služby, výpadky provozovatelů, ceny paliv, tipy. */}
@@ -730,12 +729,12 @@ export function Dashboard({
           </section>
           <section className="overflow-hidden rounded-[22px] bg-plocha max-lg:hidden">
             <HlavickaWidgetu ikona="komunikace" nazev="Výpadky provozovatelů" meta={<span>{(() => { const n = sluzby.stavy.filter((x) => x.stav === "vypadek" || x.stav === "omezeni").length; return n ? `${n} hlášení` : "bez hlášení"; })()}</span>} napoveda={<span className="block">Stavové stránky provozovatelů čtené naživo. Signál, ne úřední stav.</span>} />
-            <Suspense fallback={null}><StavSluzeb stavy={sluzby.stavy} kdy={sluzby.kdy} vnoreny /></Suspense>
+            <StavSluzeb stavy={sluzby.stavy} kdy={sluzby.kdy} vnoreny />
           </section>
           {paliva.length > 0 && (
             <section className="overflow-hidden rounded-[22px] bg-plocha max-lg:hidden">
               <HlavickaWidgetu ikona="palivo" nazev="Ceny pohonných hmot" meta={<span>{paliva.some((p) => p.skok) ? "neobvyklý pohyb" : "běžný pohyb"}</span>} napoveda={<span className="block">Průměrné ceny z týdenního šetření ČSÚ. Měření, ne předpověď.</span>} />
-              <Suspense fallback={null}><CenaPaliva vnoreny /></Suspense>
+              <CenaPaliva vnoreny />
             </section>
           )}
         </aside>
@@ -762,8 +761,8 @@ export function Dashboard({
       {/* Zapojit se: tři dlaždice, hlášení, dvě otázky k hodnocení. */}
       <div className="nalet mt-16 sm:mt-24">
         <NadpisSekce stitek="Zapojit se" ikona="zvonek" nadpis={t("Jak se to dozvíte, aniž byste sem chodili")} popis={t("Kanály, čtečka nebo vlastní přehled. Nic z toho po vás nechce jméno ani e-mail.")} />
-        <Suspense fallback={null}><TriTemata /></Suspense>
-        <div className="mt-6"><Suspense fallback={null}><Nahlaseni /></Suspense></div>
+        <TriTemata />
+        <div className="mt-6"><Nahlaseni /></div>
         <div className="mt-6 grid gap-3 md:grid-cols-2 max-lg:hidden">
           <details className="group rounded-[22px] bg-plocha">
             <summary className="flex min-h-[44px] cursor-pointer items-center justify-between px-4 text-male font-semibold text-inkoust">Proč je hodnocení {d ? d.nazev.toLowerCase() : "takové"}<Ikona nazev="dolu" velikost={12} tah={2} trida="text-tlum2 transition-transform group-open:rotate-180" /></summary>

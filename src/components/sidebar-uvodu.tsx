@@ -8,7 +8,7 @@ import { PASMA, UROVNE } from "@/lib/skala";
 import type { CelkovyStav, Kandidat, Overovana, Uroven } from "@/lib/typy";
 import { casPraha } from "@/lib/cas";
 import { useT } from "@/lib/i18n";
-import { BUY_ME_A_COFFEE_URL, HEROHERO_URL } from "@/config/web";
+import { BUY_ME_A_COFFEE_URL, HEROHERO_URL, KANALY } from "@/config/web";
 import { PIZZA_INDEX, VEN } from "@/config/odkazy-ven";
 import { popisCasu, stavPizzy } from "@/lib/pizza";
 import { Ikona } from "./ikony";
@@ -73,7 +73,8 @@ export function SidebarUvodu({ stav, cr, crHistoricky, crPocet, obcane, pulz, pr
     <aside aria-label="Stav a příprava" className="space-y-4">
       {/* Podpora a odběr — první, bez rámečku, zarovnané s kartami pod tím (24. 9. 2026). */}
       <div className="flex flex-wrap items-center gap-2 px-1">
-        <Tlacitko kam="/odber/" varianta="obrys" velikost="s" ikona="zvonek">Upozornění</Tlacitko>
+        {/* Rovnou do Telegramu (26. 9. 2026): mezikrok přes /odber/ opouštělo 72 % lidí. Kanál bez adresy → stránka Odběr. */}
+        <Tlacitko kam={KANALY.telegram || "/odber/"} nove={Boolean(KANALY.telegram)} varianta="obrys" velikost="s" ikona="zvonek" trida="!border-akcent">{KANALY.telegram ? "Upozornění v Telegramu" : "Upozornění"}</Tlacitko>
         {BUY_ME_A_COFFEE_URL && <Tlacitko kam={BUY_ME_A_COFFEE_URL} nove varianta="obrys" velikost="s" ikona="kava">Buy me a coffee</Tlacitko>}
         {HEROHERO_URL && <Tlacitko kam={HEROHERO_URL} nove varianta="obrys" velikost="s" ikona="srdce">Herohero</Tlacitko>}
         {!podpora && <Tlacitko kam="/podporit/" varianta="obrys" velikost="s" ikona="kava">Podpořit provoz</Tlacitko>}

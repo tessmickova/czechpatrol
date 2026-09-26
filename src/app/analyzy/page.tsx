@@ -6,6 +6,7 @@ import { CislaKdeKdo, TypyUdalosti } from "@/components/cisla-kde-kdo";
 import { hybridniTlak, incidenty, kampane, svet, tydny } from "@/lib/data";
 import { sklon } from "@/components/zeme";
 import { radkyTabulkyZemi } from "@/components/tabulka-zemi-data";
+import { CoDal } from "@/components/co-dal";
 import { proPocty } from "@/lib/odlehci";
 
 export const metadata: Metadata = {
@@ -110,6 +111,7 @@ export default function Analyzy() {
           </li>
         ))}
       </ul>
+      <CoDal />
     </div>
   );
 }

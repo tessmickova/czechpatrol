@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { HlavickaStranky } from "@/components/nadpisy";
 import { PripravenostKlient } from "@/components/pripravenost-klient";
 import { SidebarWebu } from "@/components/sidebar-webu";
+import { CoDal } from "@/components/co-dal";
 import { oficialniNastroje } from "@/lib/data";
 
 export const metadata: Metadata = {
@@ -18,7 +19,7 @@ export default function Pripravenost() {
         uvod="Stát už provozuje nástroje, které v krizi pomohou. Tady je seznam a co si u nich nastavit předem. CzechPatrol žádný z nich nenahrazuje."
       />
       <div className="mt-16 grid gap-10 sm:mt-24 lg:grid-cols-[minmax(0,2fr)_minmax(0,1fr)] lg:gap-x-16">
-        <div className="min-w-0"><PripravenostKlient nastroje={oficialniNastroje()} /></div>
+        <div className="min-w-0"><PripravenostKlient nastroje={oficialniNastroje()} /><CoDal bez="/pripravenost/" /></div>
         <SidebarWebu />
       </div>
     </div>

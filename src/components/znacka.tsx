@@ -128,8 +128,9 @@ export function Logo({
       */}
       {beta && (
         <span
-          className="shrink-0 rounded-full border border-akcent/60 px-[6px] py-[2px] font-mono font-semibold uppercase leading-none tracking-[0.12em] text-akcent"
-          style={{ fontSize: Math.max(10, Math.round(pismo * 0.48)) }}
+          className="inline-block shrink-0 rounded-full border border-akcent/60 py-[2px] text-center font-mono font-semibold uppercase leading-none tracking-[0.12em] text-akcent"
+          /* Pevná šířka (4 znaky × 0,72 em + vyrovnání prostrkání + okraje): pilulka nemění šířku, když dorazí písmo — jinak poskočí celá hlavička (CLS, 26. 9. 2026). */
+          style={{ fontSize: Math.max(10, Math.round(pismo * 0.48)), width: "calc(3em + 14px)", paddingLeft: "calc(0.12em + 6px)", paddingRight: 6 }}
         >
           beta
         </span>
@@ -137,8 +138,8 @@ export function Logo({
       {/* AI: web sbírá a shrnuje s pomocí AI. Stejná pilulka, tlumenější, ať nesoupeří s BETA. */}
       {beta && (
         <span
-          className="shrink-0 rounded-full border border-tlum2/60 px-[6px] py-[2px] font-mono font-semibold uppercase leading-none tracking-[0.12em] text-tlum"
-          style={{ fontSize: Math.max(10, Math.round(pismo * 0.48)) }}
+          className="inline-block shrink-0 rounded-full border border-tlum2/60 py-[2px] text-center font-mono font-semibold uppercase leading-none tracking-[0.12em] text-tlum"
+          style={{ fontSize: Math.max(10, Math.round(pismo * 0.48)), width: "calc(1.56em + 14px)", paddingLeft: "calc(0.12em + 6px)", paddingRight: 6 }}
           title="Projekt s pomocí AI: sběr, třídění a shrnutí"
         >
           AI

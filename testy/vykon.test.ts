@@ -59,3 +59,10 @@ describe("klientské komponenty nenesou data celého webu", () => {
     expect(spatne).toEqual([]);
   });
 });
+
+describe("úvod bez streamovaných bloků", () => {
+  it("dashboard nepoužívá <Suspense> (statický export ho vloží až skriptem → poskakování)", () => {
+    const t = fs.readFileSync(path.join(KOREN, "src/components/dashboard.tsx"), "utf-8");
+    expect(t).not.toMatch(/<Suspense[\s/]|from "react".*Suspense/);
+  });
+});

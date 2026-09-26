@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { HlavickaStranky, Obsah } from "@/components/hlavicka";
+import { CoDal } from "@/components/co-dal";
 import { OdberPanel } from "@/components/odber";
 
 export const metadata: Metadata = {
@@ -18,6 +19,7 @@ export default function Odber() {
       />
       <Obsah>
         <OdberPanel />
+        <CoDal bez="telegram" />
       </Obsah>
     </>
   );
