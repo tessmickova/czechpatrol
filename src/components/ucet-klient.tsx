@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { useEffect, useState } from "react";
-import { KRAJE, UCTY_ZAPNUTE, WEB, SPUSTENO } from "@/config/web";
+import { KANALY, KRAJE, UCTY_ZAPNUTE, WEB, SPUSTENO } from "@/config/web";
 import { KATEGORIE, PORADI_KATEGORII } from "@/lib/kategorie";
 import { obnovit, podporujePasskey, pridatPasskey, prihlasit, registrovat } from "@/lib/passkey";
 import { api, odhlasit, ROLE, ulozToken, useUcet, VYCHOZI_UPOZORNENI, type Frekvence, type MinZavaznost, type NastaveniUpozorneni } from "@/lib/ucet";
@@ -343,7 +343,16 @@ function Nastaveni({
                   <button type="button" onClick={propojTelegram} className={`${TLACITKO_TICHE} mt-3`}>Propojit Telegram</button>
                 )
               ) : (
-                <p className="mt-2 text-male text-tlum">Bot ještě neběží. Až poběží, propojení je jedno kliknutí.</p>
+                /*
+                  26. 9. 2026: dřív „Bot ještě neběží“ — nebylo jasné, o jakého bota
+                  jde. Jde o soukromé zprávy od telegramového bota CzechPatrol
+                  (Cloudflare worker, api/src/telegram.ts); veřejný kanál funguje
+                  zvlášť a běží.
+                */
+                <p className="mt-2 text-male leading-relaxed text-tlum">
+                  Soukromé zprávy od telegramového bota CzechPatrol zatím nejsou zapnuté. Až budou, propojení je jedno kliknutí.
+                  Veřejný kanál <a href={KANALY.telegram} target="_blank" rel="nofollow noopener noreferrer" className="odkaz">@czechpatrol</a> funguje už teď — chodí do něj ověřené zprávy všem odběratelům, bez účtu a bez nastavení.
+                </p>
               )}
             </div>
 
@@ -394,9 +403,20 @@ function Nastaveni({
       <Karta odstin="modra" className="p-6" id="upozorneni">
         <div className="stitek mb-2 !text-akcent">Upozornění</div>
         <h2 className="podnadpis text-velke">Co a kdy vám má přijít</h2>
+        {/* Kam zprávy chodí — dřív to z účtu nebylo poznat (26. 9. 2026). */}
+        <p className="mt-2 text-male leading-relaxed text-tlum">
+          Podle tohoto nastavení posíláme soukromou zprávu do kanálu, který propojíte v kartě <b className="font-semibold text-inkoust">Kanály</b> — Telegram nebo WhatsApp. E-mailem upozornění neposíláme.
+        </p>
         {zadnyKanal && (
           <div className="mt-4">
-            <Hlaska typ="info">Zatím nemáte propojený žádný kanál. Nastavení se uloží, doručovat začneme, jakmile nějaký propojíte.</Hlaska>
+            {dostupne.telegram || dostupne.whatsapp ? (
+              <Hlaska typ="info">Zatím nemáte propojený žádný kanál. Nastavení se uloží, doručovat začneme, jakmile nějaký propojíte.</Hlaska>
+            ) : (
+              <Hlaska typ="info">
+                Teď nejde propojit žádný kanál, takže vám podle tohoto nastavení zatím nic nepřijde. Nastavení se uloží a začne platit po propojení.
+                Mezitím: veřejný kanál <a href={KANALY.telegram} target="_blank" rel="nofollow noopener noreferrer" className="odkaz">Telegram @czechpatrol</a> nebo <a href="/feed.xml" className="odkaz">RSS</a>.
+              </Hlaska>
+            )}
           </div>
         )}
 

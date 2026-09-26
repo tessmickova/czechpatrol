@@ -17,6 +17,7 @@ import * as patrol from "./patrol";
 import * as sprava from "./sprava";
 import * as tipy from "./tipy";
 import * as zajem from "./zajem";
+import * as partneri from "./partneri";
 import * as mereni from "./mereni";
 import * as zebricek from "./zebricek";
 import { synchronizuj, uklid } from "./synchronizace";
@@ -78,6 +79,8 @@ const CESTY: [string, RegExp, Obsluha][] = [
   ["POST", /^\/tipy$/, (req, env) => tipy.prijmi(env, req)],
   // Zájem o e-mail a komunitu: bez účtu, s brzdou; odhlášení tokenem z e-mailu.
   ["POST", /^\/zajem$/, (req, env) => zajem.prijmi(env, req)],
+  ["POST", /^\/partneri\/poptavka$/, (req, env) => partneri.prijmi(env, req)],
+  ["GET", /^\/sprava\/partneri$/, async (req, env) => partneri.prehled(env, await vyzadujPrihlaseni(env, req))],
   ["POST", /^\/zajem\/odhlasit$/, (req, env) => zajem.odhlasit(env, req)],
   ["GET", /^\/sprava\/zajem$/, async (req, env) => zajem.prehled(env, await vyzadujPrihlaseni(env, req))],
   // Žebříček připravenosti: veřejně přezdívka, skóre a datum; záznam patří přihlášenému účtu; kontakt jen správci.

@@ -21,7 +21,8 @@ export type UdalostMereni =
   | "premium_view"
   | "premium_click"
   | "payment_start"
-  | "payment_success";
+  | "payment_success"
+  | "partner_poptavka";
 
 export const SLOVNIK_MERENI: Record<UdalostMereni, string> = {
   overview_view: "zobrazení přehledu",
@@ -38,6 +39,7 @@ export const SLOVNIK_MERENI: Record<UdalostMereni, string> = {
   premium_click: "kliknutí na odemknutí Premium",
   payment_start: "založení platby (přesměrování na bránu)",
   payment_success: "potvrzené zaplacení (stav z API)",
+  partner_poptavka: "odeslaná poptávka banneru partnera",
 };
 
 const ADRESA = (process.env.NEXT_PUBLIC_MERENI_URL ?? "").replace(/\/$/, "");
