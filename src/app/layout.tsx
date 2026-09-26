@@ -1,5 +1,4 @@
 import type { Metadata, Viewport } from "next";
-import { Archivo, IBM_Plex_Mono } from "next/font/google";
 import { ListaMobil } from "@/components/lista-mobil";
 import { Navigace } from "@/components/navigace";
 import { DialogProvider } from "@/components/dialog";
@@ -19,24 +18,26 @@ import { SKRIPT_POHYBU } from "@/components/pohyb";
 import { WEB } from "@/config/web";
 import "./globals.css";
 
+/*
+  Písma jsou v balíčcích (@fontsource), ne z Google Fonts při sestavení.
+  26. 9. 2026 spadlo nasazení, protože next/font/google na běžci nestáhl
+  Archivo — web tak visel na dostupnosti cizího serveru v minutě sestavení.
+  Soubory teď jdou z node_modules a servírují se z naší domény; návštěvník
+  na server třetí strany nechodí. Rodiny „Archivo“ a „IBM Plex Mono“ bere
+  globals.css (--font-sans, --font-mono). Každý soubor nese unicode-range,
+  takže prohlížeč stáhne jen latin a latin-ext, které čeština potřebuje.
+*/
 // Písmo značky. Archivo nese nadpisy, tlačítka i běžný text.
-// next/font stahuje písmo při sestavení a servíruje z naší domény —
-// návštěvník tím nechodí na server třetí strany.
-const archivo = Archivo({
-  subsets: ["latin", "latin-ext"],
-  weight: ["400", "500", "600", "700"],
-  variable: "--font-chakra",
-  display: "swap",
-});
-
+import "@fontsource/archivo/400.css";
+import "@fontsource/archivo/500.css";
+import "@fontsource/archivo/600.css";
+import "@fontsource/archivo/700.css";
 // Neproporcionální písmo nesou popisky, čísla a časy — přehled se má číst
 // jako přístroj, ne jako článek.
-const mono = IBM_Plex_Mono({
-  subsets: ["latin", "latin-ext"],
-  variable: "--font-mono-web",
-  weight: ["400", "500", "600", "700"],
-  display: "swap",
-});
+import "@fontsource/ibm-plex-mono/400.css";
+import "@fontsource/ibm-plex-mono/500.css";
+import "@fontsource/ibm-plex-mono/600.css";
+import "@fontsource/ibm-plex-mono/700.css";
 
 export const metadata: Metadata = {
   metadataBase: new URL(WEB.url),
@@ -72,7 +73,7 @@ export const viewport: Viewport = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="cs" className={`${archivo.variable} ${mono.variable}`} suppressHydrationWarning>
+    <html lang="cs" suppressHydrationWarning>
       <head>
         {/* Volba pohybu se nastaví před vykreslením, ať nic neproblikne. */}
         <script dangerouslySetInnerHTML={{ __html: SKRIPT_POHYBU }} />

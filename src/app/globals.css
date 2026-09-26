@@ -13,8 +13,8 @@
 */
 
 @theme {
-  --font-sans: var(--font-chakra), Archivo, ui-sans-serif, system-ui, sans-serif;
-  --font-mono: var(--font-mono-web), "IBM Plex Mono", ui-monospace, Menlo, monospace;
+  --font-sans: Archivo, ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, Menlo, monospace;
 
   /*
     Velikosti písma jako tokeny.
