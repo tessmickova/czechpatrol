@@ -37,8 +37,9 @@ export function Paticka() {
     <footer className="neni-tisk pb-6">
       <div className="mx-auto max-w-[1280px] px-4 sm:px-6">
       <div className="noc rounded-[28px] px-6 py-10 sm:px-8">
-        <div className="grid gap-10 md:grid-cols-[minmax(0,1.4fr)_repeat(3,minmax(0,1fr))]">
-          <div>
+        {/* Mobil: odkazy po dvou sloupcích — jeden sloupec byl přes 1 100 px dlouhý (26. 9. 2026). */}
+        <div className="grid grid-cols-2 gap-x-6 gap-y-8 md:grid-cols-[minmax(0,1.4fr)_repeat(3,minmax(0,1fr))] md:gap-10">
+          <div className="col-span-2 md:col-span-1">
             <Logo velikost={32} pismo={17} tmave />
             <p className="mt-3 max-w-[38ch] text-zaklad leading-relaxed text-noc-tlum max-md:hidden">
               {t("Nezávislý AI projekt: sběr, ověřování a vyhodnocení bezpečnostních událostí a změn, které mohou mít dopad na lidi v Česku. Shrnutí píše AI, zveřejňuje člověk. Není to úřední zdroj ani varovný systém. V nouzi volejte 112.")}
