@@ -3,11 +3,12 @@
 import { HlavickaWidgetu } from "./widgety";
 import { useEffect, useState } from "react";
 import { datumPraha } from "@/lib/cas";
-import { LEKARNICKA, NAZVY_KATEGORII, PORADI_KATEGORII, UDALOSTI, nactiOdpovedi, skorePripravenosti, souhrnOtazek, ulozOdpovedi, vetaKeSkore, type Odpoved, type Odpovedi, type OtazkaDotazniku } from "@/lib/pripravenost";
+import { BEZ_SIGNALU, LEKARNICKA, NAZVY_KATEGORII, PORADI_KATEGORII, UDALOSTI, ZMINKY, nactiOdpovedi, nastrojeDoPruvodce, skorePripravenosti, souhrnOtazek, ulozOdpovedi, vetaKeSkore, type Odpoved, type Odpovedi, type OtazkaDotazniku } from "@/lib/pripravenost";
 import type { OficialniNastroj } from "@/lib/typy";
-import { Ikona, type NazevIkony } from "./ikony";
-import { Odznak, Sdeleni, Tlacitko } from "./ui";
-import { Otaznik } from "./zaklad";
+import { Ikona } from "./ikony";
+import { Sdeleni, Tlacitko } from "./ui";
+import { Napoveda, Otaznik } from "./zaklad";
+import type { OfflineMapa } from "@/config/odkazy-ven";
 
 /*
   Odkazy ven jsou rel="nofollow": web neručí za cizí stránky a nepřenáší
@@ -36,13 +37,6 @@ function platforma(): "ios" | "android" | null {
   neposílají — CzechPatrol nemá vědět, kdo nemá Záchranku.
 */
 
-const ODPOVEDI: { klic: Odpoved; znak: string; slovo: string }[] = [
-  { klic: "mam", znak: "✓", slovo: "mám" },
-  { klic: "nemam", znak: "○", slovo: "nemám" },
-  { klic: "nevim", znak: "?", slovo: "nevím" },
-];
-
-const DOSTUPNOST: Record<OficialniNastroj["dostupnost"], string> = { aplikace: "aplikace", sluzba: "služba", system: "systém v telefonu / v místě" };
 
 function Stav({ n }: { n: OficialniNastroj }) {
   if (n.stav === "overeno" && n.overeno) return <span className="text-mikro text-tlum2">ověřeno {datumPraha(`${n.overeno}T12:00:00Z`)}</span>;
@@ -59,38 +53,57 @@ function Stav({ n }: { n: OficialniNastroj }) {
   );
 }
 
-function Prepinac({ id, nazev, odpovedi, odpovez }: { id: string; nazev: string; odpovedi: Odpovedi; odpovez: (id: string, o: Odpoved) => void }) {
-  const o = odpovedi[id];
+/*
+  Zaškrtávací kolečko (26. 9. 2026): místo tří voleb mám / nemám / nevím
+  jedno klepnutí. Zaškrtnuto = mám; odškrtnutí uloží „nemám“. Dotyková
+  plocha 44 px, vidět je kolečko 28 px.
+*/
+function Kolecko({ id, nazev, odpovedi, odpovez }: { id: string; nazev: string; odpovedi: Odpovedi; odpovez: (id: string, o: Odpoved) => void }) {
+  const mam = odpovedi[id] === "mam";
   return (
-    <div role="radiogroup" aria-label={`${nazev}: mám, nemám, nevím`} className="flex shrink-0 gap-1.5">
-      {ODPOVEDI.map((x) => (
-        <button
-          key={x.klic}
-          type="button"
-          role="radio"
-          aria-checked={o === x.klic}
-          onClick={() => odpovez(id, x.klic)}
-          className={`inline-flex min-h-[32px] items-center gap-1.5 rounded-full border px-2.5 text-mikro font-semibold transition-colors ${o === x.klic ? (x.klic === "mam" ? "pop border-klid/70 bg-klid/15 text-klid-text" : "pop border-inkoust text-inkoust") : "border-linka text-tlum hover:border-akcent"}`}
-        >
-          <span aria-hidden className={`h-[6px] w-[6px] rounded-full ${o === x.klic ? (x.klic === "mam" ? "bg-klid" : x.klic === "nemam" ? "bg-akcent" : "bg-pozor") : "border border-linka"}`} />
-          {x.znak} {x.slovo}
-        </button>
+    <button
+      type="button"
+      role="checkbox"
+      aria-checked={mam}
+      aria-label={nazev}
+      onClick={() => odpovez(id, mam ? "nemam" : "mam")}
+      className="-m-2 grid shrink-0 place-items-center p-2"
+    >
+      <span aria-hidden className={`grid h-7 w-7 place-items-center rounded-full border-2 transition-colors ${mam ? "pop border-klid bg-klid text-papir" : "border-linka hover:border-klid/70"}`}>
+        {mam && <Ikona nazev="fajfka" velikost={14} tah={3} />}
+      </span>
+    </button>
+  );
+}
+
+/** Odkazy do obchodů u doporučené aplikace; důvod po najetí nebo klepnutí na název. */
+function Aplikace({ a }: { a: OfflineMapa[] }) {
+  return (
+    <span className="mt-1.5 flex flex-col gap-1">
+      {a.map((m) => (
+        <span key={m.nazev} className="flex flex-wrap items-center gap-x-3 gap-y-0.5 text-drobne">
+          <Napoveda popis={<span className="block">{m.proc}</span>} label={`Proč ${m.nazev}`}>
+            <span className="cursor-help font-semibold text-inkoust underline decoration-dotted underline-offset-4">{m.nazev}{m.alternativa && <span className="ml-1 font-normal text-tlum2">alternativa</span>}</span>
+          </Napoveda>
+          <a href={m.android} target="_blank" rel={VEN} className="odkaz text-tlum2">Android ↗</a>
+          <a href={m.ios} target="_blank" rel={VEN} className="odkaz text-tlum2">iPhone ↗</a>
+        </span>
       ))}
-    </div>
+    </span>
   );
 }
 
 function SeznamOtazek({ otazky, odpovedi, odpovez }: { otazky: OtazkaDotazniku[]; odpovedi: Odpovedi; odpovez: (id: string, o: Odpoved) => void }) {
   return (
-    <ul className="bez-stropu">
+    <ul className="bez-stropu divide-y divide-linka/60">
       {otazky.map((q) => (
-        <li key={q.id} className={`flex flex-wrap items-center justify-between gap-3 rounded-[10px] px-2 py-2 ${odpovedi[q.id] === "mam" ? "bg-klid/[0.07]" : ""}`}>
-          <span className="flex min-w-0 items-center gap-2">
-            {odpovedi[q.id] === "mam" && <span className="pop grid h-5 w-5 shrink-0 place-items-center rounded-full bg-klid text-papir"><Ikona nazev="fajfka" velikost={11} tah={3} /></span>}
-            <span className="min-w-0"><span className="block text-male font-semibold text-inkoust">{q.nazev}</span>
-            {q.upresneni && <span className="block text-drobne text-tlum2">{q.upresneni}</span>}</span>
+        <li key={q.id} className="flex items-start gap-3 py-2.5">
+          <Kolecko id={q.id} nazev={q.nazev} odpovedi={odpovedi} odpovez={odpovez} />
+          <span className="min-w-0 pt-0.5">
+            <span className={`block text-male font-semibold leading-snug ${odpovedi[q.id] === "mam" ? "text-tlum" : "text-inkoust"}`}>{q.nazev}</span>
+            {q.upresneni && <span className="block text-drobne leading-snug text-tlum2">{q.upresneni}</span>}
+            {q.aplikace && <Aplikace a={q.aplikace} />}
           </span>
-          <Prepinac id={q.id} nazev={q.nazev} odpovedi={odpovedi} odpovez={odpovez} />
         </li>
       ))}
     </ul>
@@ -109,65 +122,39 @@ type Krok =
   | { klic: string; nazev: string; druh: "otazky"; otazky: OtazkaDotazniku[]; ids: string[]; uvod: React.ReactNode }
   | { klic: "vysledek"; nazev: string; druh: "vysledek"; ids: string[] };
 
-function KartaNastroje({ n, odpovedi, odpovez, zarizeni }: { n: OficialniNastroj; odpovedi: Odpovedi; odpovez: (id: string, o: Odpoved) => void; zarizeni: "ios" | "android" | null }) {
+function RadekNastroje({ n, odpovedi, odpovez, zarizeni }: { n: OficialniNastroj; odpovedi: Odpovedi; odpovez: (id: string, o: Odpoved) => void; zarizeni: "ios" | "android" | null }) {
+  const mam = odpovedi[n.id] === "mam";
+  const obchody = (zarizeni === "android" ? [["android", n.androidUrl, "Android"], ["ios", n.iosUrl, "iPhone"]] : [["ios", n.iosUrl, "iPhone"], ["android", n.androidUrl, "Android"]]).filter(([, u]) => u) as [string, string, string][];
   return (
-    <li className={`rounded-[18px] bg-plocha p-3 transition-colors sm:p-4 ${odpovedi[n.id] === "mam" ? "ring-1 ring-klid/40" : ""}`}>
-      <div className="flex flex-wrap items-start justify-between gap-3">
-        <div className="flex min-w-0 items-start gap-3">
-          <span className={`mt-[2px] grid h-8 w-8 shrink-0 place-items-center rounded-[10px] ${odpovedi[n.id] === "mam" ? "pop bg-klid/15 text-klid-text" : "bg-plocha2 text-tlum"}`}>{odpovedi[n.id] === "mam" ? <Ikona nazev="fajfka" velikost={15} tah={2.6} /> : <Ikona nazev={n.ikona as NazevIkony} velikost={16} tah={1.8} />}</span>
-          <span className="min-w-0">
-            <h3 className="text-zaklad font-bold leading-tight text-inkoust">{n.nazev}</h3>
-            <p className="mt-0.5 text-male text-inkoust">{n.kratce}</p>
-            <p className="mt-0.5 text-drobne text-tlum2">{n.provozovatel} · {DOSTUPNOST[n.dostupnost]}</p>
-          </span>
-        </div>
-        {/* Tři odpovědi jako přepínač. Barvu nese jen tečka u vybrané. */}
-        <Prepinac id={n.id} nazev={n.nazev} odpovedi={odpovedi} odpovez={odpovez} />
-      </div>
-
-      {/* Instalace hned: jedno klepnutí do obchodu, nejdřív pro zařízení, ze kterého člověk čte. */}
-      {(n.iosUrl || n.androidUrl) && (
-        <p className="mt-3 flex flex-wrap gap-2">
-          {(zarizeni === "android" ? [["android", n.androidUrl, "Nainstalovat pro Android"], ["ios", n.iosUrl, "Nainstalovat pro iPhone"]] : [["ios", n.iosUrl, "Nainstalovat pro iPhone"], ["android", n.androidUrl, "Nainstalovat pro Android"]])
-            .filter(([, u]) => u)
-            .map(([k, u, t], i) => (
-              <a key={k as string} href={u as string} target="_blank" rel={VEN} className={`inline-flex min-h-[40px] items-center gap-2 rounded-full px-4 text-drobne font-semibold ${i === 0 ? "bg-akcent text-papir hover:bg-akcent-svetla" : "border border-linka text-inkoust hover:border-akcent"}`}>
-                <Ikona nazev="instalace" velikost={14} tah={2} />{t as string}
-              </a>
-            ))}
-        </p>
-      )}
-
-      {/* Podrobnosti na rozkliknutí: v kroku má být vidět otázka a odpověď, ne čtyři odstavce. */}
-      <details className="group mt-3">
-        <summary className="inline-flex cursor-pointer list-none items-center gap-1.5 text-drobne font-semibold text-tlum hover:text-inkoust">
-          K čemu je a co nastavit <Ikona nazev="dolu" velikost={11} tah={2} trida="transition-transform group-open:rotate-180" />
-        </summary>
-        <p className="mt-3 max-w-[62ch] text-zaklad leading-relaxed text-tlum">{n.popis}</p>
-        <dl className="mt-3 grid gap-x-6 gap-y-2 text-male sm:grid-cols-2 [&_dd]:max-w-[62ch] [&_dt]:max-w-[62ch]">
-          <div><dt className="stitek">K čemu je</dt><dd className="mt-0.5 text-tlum">{n.kCemu}</dd></div>
-          <div><dt className="stitek">Kdy mi pomůže</dt><dd className="mt-0.5 text-tlum">{n.kdyPomuze}</dd></div>
-          <div><dt className="stitek">Proč to mít</dt><dd className="mt-0.5 text-tlum">{n.procMit}</dd></div>
-          <div>
-            <dt className="stitek">Co nastavit</dt>
-            <dd className="mt-0.5 text-tlum"><ul className="list-disc pl-4">{n.coNastavit.map((c) => <li key={c}>{c}</li>)}</ul></dd>
+    <li className="flex items-start gap-3 py-2.5">
+      <Kolecko id={n.id} nazev={n.nazev} odpovedi={odpovedi} odpovez={odpovez} />
+      <div className="min-w-0 flex-1 pt-0.5">
+        <p className={`text-male font-semibold leading-snug ${mam ? "text-tlum" : "text-inkoust"}`}>{n.nazev}</p>
+        <p className="text-drobne leading-snug text-tlum2">{n.kratce}</p>
+        {/* Instalace a podrobnosti až na klepnutí — v kroku má být vidět jen co a jestli to mám. */}
+        <details className="group mt-1">
+          <summary className="inline-flex min-h-[32px] cursor-pointer list-none items-center gap-1 text-drobne font-semibold text-tlum hover:text-inkoust">
+            Jak nastavit <Ikona nazev="dolu" velikost={11} tah={2} trida="transition-transform group-open:rotate-180" />
+          </summary>
+          <div className="mt-1 space-y-2 text-drobne leading-relaxed text-tlum">
+            {obchody.length > 0 && (
+              <p className="flex flex-wrap gap-2">
+                {obchody.map(([k, u, t], i) => (
+                  <a key={k} href={u} target="_blank" rel={VEN} className={`inline-flex min-h-[36px] items-center gap-1.5 rounded-full px-3 font-semibold ${i === 0 ? "bg-akcent text-papir hover:bg-akcent-svetla" : "border border-linka text-inkoust hover:border-akcent"}`}>
+                    <Ikona nazev="instalace" velikost={13} tah={2} />{t}
+                  </a>
+                ))}
+              </p>
+            )}
+            <p>{n.kCemu}</p>
+            <ul className="list-disc pl-4">{n.coNastavit.map((c) => <li key={c}>{c}</li>)}</ul>
+            <p className="flex flex-wrap items-center gap-x-3 gap-y-1">
+              {n.webUrl && <a href={n.webUrl} target="_blank" rel={VEN} className="odkaz">Web provozovatele ↗</a>}
+              {n.oficialniZdroj && n.oficialniZdroj !== n.webUrl && <a href={n.oficialniZdroj} target="_blank" rel={VEN} className="odkaz">Oficiální informace ↗</a>}
+              <Stav n={n} />
+            </p>
           </div>
-        </dl>
-        {n.poznamka && (
-          <p className="mt-3 flex items-start gap-1.5 text-drobne leading-snug text-tlum2">
-            <Ikona nazev="info" velikost={13} tah={1.9} trida="mt-[2px] shrink-0" />{n.poznamka}
-          </p>
-        )}
-      </details>
-
-      <div className="mt-3 flex flex-wrap items-center justify-between gap-x-4 gap-y-2 pt-3">
-        <div className="flex flex-wrap items-center gap-x-3 gap-y-1">
-          {n.webUrl && <a href={n.webUrl} target="_blank" rel={VEN} className="odkaz text-drobne">Web provozovatele ↗</a>}
-          {n.oficialniZdroj && n.oficialniZdroj !== n.webUrl && <a href={n.oficialniZdroj} target="_blank" rel={VEN} className="odkaz text-drobne">Oficiální informace ↗</a>}
-          {!n.iosUrl && !n.androidUrl && n.dostupnost === "aplikace" && <span className="text-drobne text-tlum2">odkazy do obchodů: přes web provozovatele</span>}
-          {n.proKoho.map((p) => <Odznak key={p} ton="neutral">{p}</Odznak>)}
-        </div>
-        <Stav n={n} />
+        </details>
       </div>
     </li>
   );
@@ -182,10 +169,11 @@ export function PripravenostKlient({ nastroje }: { nastroje: OficialniNastroj[] 
 
   const kroky: Krok[] = [
     ...PORADI_KATEGORII.flatMap((kat): Krok[] => {
-      const polozky = nastroje.filter((n) => n.kategorie === kat);
+      const polozky = nastrojeDoPruvodce(nastroje).filter((n) => n.kategorie === kat);
       return polozky.length ? [{ klic: kat, nazev: NAZVY_KATEGORII[kat], druh: "nastroje", polozky, ids: polozky.map((n) => n.id) }] : [];
     }),
-    { klic: "lekarnicka", nazev: "Lékárnička", druh: "otazky", otazky: LEKARNICKA, ids: LEKARNICKA.map((q) => q.id), uvod: <>Na které oblasti jste připraveni. Složení lékárničky probírejte s lékárníkem nebo lékařem — web zdravotní rady nedává.</> },
+    { klic: "offline", nazev: "Bez signálu", druh: "otazky", otazky: BEZ_SIGNALU, ids: BEZ_SIGNALU.map((q) => q.id), uvod: <>{ZMINKY.offline}</> },
+    { klic: "lekarnicka", nazev: "Lékárnička", druh: "otazky", otazky: LEKARNICKA, ids: LEKARNICKA.map((q) => q.id), uvod: <>{ZMINKY.lekarnicka} Složení probírejte s lékárníkem — web zdravotní rady nedává.</> },
     { klic: "udalosti", nazev: "Události", druh: "otazky", otazky: UDALOSTI, ids: UDALOSTI.map((q) => q.id), uvod: <>Víte, co dělat, a máte k tomu doma, co je potřeba? Oficiální rady pro domácnosti: <a href="https://72h.gov.cz/" target="_blank" rel={VEN} className="odkaz">72h.gov.cz ↗</a></> },
     { klic: "vysledek", nazev: "Výsledek", druh: "vysledek", ids: [] },
   ];
@@ -207,9 +195,10 @@ export function PripravenostKlient({ nastroje }: { nastroje: OficialniNastroj[] 
     if (!ulozOdpovedi(nove)) setUlozisteFunguje(false);
   };
 
-  const skore = skorePripravenosti(nastroje, odpovedi);
+  const vybrane = nastrojeDoPruvodce(nastroje);
+  const skore = skorePripravenosti(vybrane, odpovedi);
   // Skóre nástrojů se počítá jen z odpovědí u nástrojů — vyplněná lékárnička ho nesmí „zapnout".
-  const odpovezenoNastroju = nastroje.some((n) => odpovedi[n.id]);
+  const odpovezenoNastroju = vybrane.some((n) => odpovedi[n.id]);
   const aktualni = kroky[Math.min(krok, kroky.length - 1)];
   const posledni = krok >= kroky.length - 1;
   const jdi = (i: number) => {
@@ -257,16 +246,16 @@ export function PripravenostKlient({ nastroje }: { nastroje: OficialniNastroj[] 
         <h2 className="titul-mensi">{aktualni.nazev}</h2>
         {aktualni.druh === "nastroje" && (
           <>
-            <p className="max-w-[62ch] text-male text-tlum">U každé služby zvolte mám, nemám nebo nevím. Odpovědi zůstávají jen v tomto prohlížeči.</p>
-            <ol className="bez-stropu space-y-3">
-              {aktualni.polozky.map((n) => <KartaNastroje key={n.id} n={n} odpovedi={odpovedi} odpovez={odpovez} zarizeni={zarizeni} />)}
+            <p className="max-w-[62ch] text-male text-tlum">{ZMINKY[aktualni.klic] ? `${ZMINKY[aktualni.klic]} ` : ""}Zaškrtněte, co máte. Odpovědi zůstávají jen v tomto prohlížeči.</p>
+            <ol className="bez-stropu divide-y divide-linka/60 rounded-[22px] bg-plocha px-3 sm:px-4">
+              {aktualni.polozky.map((n) => <RadekNastroje key={n.id} n={n} odpovedi={odpovedi} odpovez={odpovez} zarizeni={zarizeni} />)}
             </ol>
           </>
         )}
         {aktualni.druh === "otazky" && (
           <>
             <p className="max-w-[62ch] text-male text-tlum">{aktualni.uvod}</p>
-            <div className="rounded-[22px] bg-plocha p-3 sm:p-4"><SeznamOtazek otazky={aktualni.otazky} odpovedi={odpovedi} odpovez={odpovez} /></div>
+            <div className="rounded-[22px] bg-plocha px-3 sm:px-4"><SeznamOtazek otazky={aktualni.otazky} odpovedi={odpovedi} odpovez={odpovez} /></div>
           </>
         )}
         {aktualni.druh === "vysledek" && (
@@ -285,16 +274,16 @@ export function PripravenostKlient({ nastroje }: { nastroje: OficialniNastroj[] 
               </div>
             </div>
             {/* Před první odpovědí se skóre nepočítá: „0 z 8, u 8 nevíte" by vypadalo jako výsledek. */}
-            <p className="mt-2 max-w-[62ch] text-male text-tlum">{!nacteno ? "Odpovědi se načítají z tohoto zařízení." : !odpovezenoNastroju ? "Zatím bez odpovědí. Projděte kroky a u každé položky zvolte mám, nemám nebo nevím." : vetaKeSkore(skore)}</p>
+            <p className="mt-2 max-w-[62ch] text-male text-tlum">{!nacteno ? "Odpovědi se načítají z tohoto zařízení." : !odpovezenoNastroju ? "Zatím nic nezaškrtnuto. Projděte kroky a zaškrtněte, co máte." : vetaKeSkore(skore)}</p>
             {nacteno && (skore.chybi.length > 0 || skore.nevim.length > 0) && (
               <ul className="mt-4">
                 {[...skore.chybi, ...skore.nevim].map((id) => {
-                  const n = nastroje.find((x) => x.id === id);
+                  const n = vybrane.find((x) => x.id === id);
                   if (!n) return null;
                   const i = kroky.findIndex((k) => k.druh === "nastroje" && k.ids.includes(id));
                   return (
                     <li key={id} className="flex flex-wrap items-center justify-between gap-2 py-2">
-                      <span className="flex items-center gap-2 text-male text-inkoust"><span aria-hidden className={`h-[6px] w-[6px] rounded-full ${odpovedi[id] === "nemam" ? "bg-akcent" : "bg-pozor"}`} />{n.nazev} <span className="text-drobne text-tlum2">{odpovedi[id] === "nemam" ? "nemáte" : "nevíte"}</span></span>
+                      <span className="flex items-center gap-2 text-male text-inkoust"><span aria-hidden className={`h-[6px] w-[6px] rounded-full ${odpovedi[id] === "nemam" ? "bg-akcent" : "bg-pozor"}`} />{n.nazev} <span className="text-drobne text-tlum2">nezaškrtnuto</span></span>
                       {i >= 0 && <button type="button" onClick={() => jdi(i)} className="text-drobne font-semibold text-tlum hover:text-akcent">upravit →</button>}
                     </li>
                   );
@@ -329,14 +318,14 @@ export function PripravenostKlient({ nastroje }: { nastroje: OficialniNastroj[] 
 export function PripravenostKarta({ nastroje, vnoreny = false }: { nastroje: OficialniNastroj[]; vnoreny?: boolean }) {
   const [odpovedi, setOdpovedi] = useState<Odpovedi | null>(null);
   useEffect(() => { setOdpovedi(nactiOdpovedi()); }, []);
-  const skore = skorePripravenosti(nastroje, odpovedi ?? {});
+  const skore = skorePripravenosti(nastrojeDoPruvodce(nastroje), odpovedi ?? {});
   const zacal = odpovedi && Object.keys(odpovedi).length > 0;
   return (
     <section aria-label="Jsem připraven?" className={vnoreny ? "" : "overflow-hidden rounded-[22px] bg-plocha"}>
       {!vnoreny && <HlavickaWidgetu ikona="stit" nazev="Jsem připraven/a?" meta={<span className="cislice">{zacal ? `${skore.mam} / ${skore.celkem}` : `${skore.celkem} doporučených služeb`}</span>} />}
       <div className="px-4 py-3">
         <p className="text-male leading-snug text-tlum">
-          {zacal ? vetaKeSkore(skore) : "Záchranka, tísňové linky, varování na mobil, výstrahy ČHMÚ, DROZD, sirény, krizové vysílání, kanál obce. Co z toho máte nastavené?"}
+          {zacal ? vetaKeSkore(skore) : "Záchranka, varování na mobil, výstrahy ČHMÚ, kanál obce, offline mapa. Co z toho máte nastavené?"}
         </p>
         <Tlacitko kam="/pripravenost/" varianta="plny" velikost="s" ikonaVpravo="nahoru" trida="mt-3 [&>svg:last-child]:rotate-90">Projít průvodce</Tlacitko>
       </div>
