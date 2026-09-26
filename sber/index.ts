@@ -13,6 +13,7 @@ import { sbirejPalivo } from "./palivo";
 import { sbirejSluzby } from "./sluzby";
 import { slucStavZdroju, vysledekPokusu } from "../src/lib/prehled/model";
 import { sbirejVystrahyChmi } from "./vystrahy-chmi";
+import { sbirejPizzaIndex } from "./pizza-index";
 
 /**
  * Hodinový sběr.
@@ -295,6 +296,12 @@ async function main() {
   } catch (e) {
     vysledky.push({ klic: "chmi-cap", ok: false, stav: null, pocetPolozek: 0, chyba: String(e instanceof Error ? e.message : e), vysledek: "chyba" });
   }
+
+  /* Pizza index — kuriozita, vlastní blok; chyba nic dalšího nezastaví. Stav jde mezi zdroje jako „pizza-index“. */
+  try {
+    const pz = await sbirejPizzaIndex(TED);
+    vysledky.push({ klic: "pizza-index", ok: pz.vysledek !== "chyba", stav: null, pocetPolozek: pz.vysledek === "ok" ? 1 : 0, chyba: pz.chyba, vysledek: pz.vysledek });
+  } catch { /* nic — čtení kuriozity nesmí shodit sběr */ }
 
   fs.writeFileSync(
     path.join(FRONTA, "posledni-beh.json"),

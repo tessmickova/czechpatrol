@@ -11,6 +11,7 @@ import { casPraha } from "@/lib/cas";
 import { useT } from "@/lib/i18n";
 import { BUY_ME_A_COFFEE_URL, HEROHERO_URL } from "@/config/web";
 import { PIZZA_INDEX, VEN } from "@/config/odkazy-ven";
+import { popisCasu, stavPizzy } from "@/lib/pizza";
 import { Ikona } from "./ikony";
 import { ObloukovyMerak } from "./mericky";
 import { Cara, poDnech, Sloupky } from "./mikrograf";
@@ -69,6 +70,7 @@ export function SidebarUvodu({ stav, cr, crHistoricky, crPocet, obcane, pulz, pr
     ? [crPocet.pripadu ? `${crPocet.pripadu} ${sklon(crPocet.pripadu, "případ", "případy", "případů")}` : null, crPocet.kampani ? `${crPocet.kampani} ${sklon(crPocet.kampani, "operace proti občanům", "operace proti občanům", "operací proti občanům")}` : null].filter(Boolean).join(" a ")
     : "ani jeden případ za 90 dní";
   const podpora = BUY_ME_A_COFFEE_URL || HEROHERO_URL;
+  const pizza = stavPizzy(undefined, ted);
 
   return (
     <aside aria-label="Stav a příprava" className="space-y-4">
@@ -137,10 +139,12 @@ export function SidebarUvodu({ stav, cr, crHistoricky, crPocet, obcane, pulz, pr
           {/* Pizza index: kuriozita z otevřených zdrojů, jasně oddělená od našeho měření (26. 9. 2026). */}
           <div className="mt-2 flex items-center gap-2 px-1 text-mikro text-tlum">
             {/* Spouštěč na začátku řádku: bublina začne u levého okraje karty a vejde se. */}
-            <Napoveda popis={<span className="block">{PIZZA_INDEX.popis}</span>} label="Co je Pizza index" nahoru>
+            <Napoveda popis={<span className="block">{PIZZA_INDEX.popis}<span className="mt-1.5 block text-tlum2">{pizza.uroven ? `Stupeň ${pizza.uroven} z 5 na jejich stupnici (5 je nejnižší)${pizza.popis ? `, „${pizza.popis}“` : ""}. ` : "Aktuální hodnotu teď nemáme. "}{popisCasu(pizza, ted)}</span></span>} label="Co je Pizza index" nahoru>
               <span className="inline-flex cursor-help items-center gap-1.5 text-inkoust">
                 <Ikona nazev="pizza" velikost={15} tah={1.8} />
                 <span className="underline decoration-dotted underline-offset-4">Pizza index</span>
+                {/* Jedno slovo stavu; bez čerstvého údaje „nezjištěno“, nikdy domyšlený klid. */}
+                <span className={`rounded-full border px-1.5 py-0.5 text-mikro ${pizza.aktualni ? "border-linka text-inkoust" : "border-dashed border-linka text-tlum2"}`}>{pizza.slovo}{pizza.uroven ? ` · ${pizza.uroven}/5` : ""}</span>
               </span>
             </Napoveda>
             <a href={PIZZA_INDEX.url} target="_blank" rel={VEN} className="odkaz">otevřít ↗</a>

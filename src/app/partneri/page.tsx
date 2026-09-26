@@ -15,7 +15,7 @@ export const metadata: Metadata = {
 const ZASADY = [
   "Jen služby, které lidem pomáhají s připraveností, bezpečností, zdravím nebo spojením.",
   "Žádné poplašné sdělení, strašení ani sliby typu „přežijete jen s námi“.",
-  "Banner je vždy označený jako partner a vede přes odkaz rel=\"sponsored\".",
+  "Banner je vždy označený jako partner a vyhledávačům ho hlásíme jako sponzorovaný odkaz.",
   "Stojí až za tím podstatným: pod aktualitami na úvodu a před patičkou ostatních stránek.",
   "Partner nemá vliv na obsah webu, výběr zpráv ani hodnocení situace.",
 ];
