@@ -48,7 +48,7 @@ describe("skóre připravenosti", () => {
   it("věta ke skóre neradí ani nehodnotí člověka", () => {
     const s = skorePripravenosti(katalog, {});
     const v = vetaKeSkore(s);
-    expect(v).toMatch(/nevíte/);
+    expect(v).toMatch(/zaškrtnut/);
     expect(v).not.toMatch(/musíte|okamžitě|nebezpeč/i);
     const vse = Object.fromEntries(katalog.map((n) => [n.id, "mam" as const]));
     expect(vetaKeSkore(skorePripravenosti(katalog, vse))).toBe("Máte všechny doporučené služby.");

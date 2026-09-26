@@ -2,8 +2,6 @@ import { HlavickaWidgetu } from "./widgety";
 import { datumPraha } from "@/lib/cas";
 import { tipy } from "@/lib/data";
 import { Ikona } from "./ikony";
-import { Napoveda } from "./zaklad";
-import { OFFLINE_MAPY, VEN } from "@/config/odkazy-ven";
 
 /*
   Tipy k přípravě.
@@ -18,9 +16,8 @@ import { OFFLINE_MAPY, VEN } from "@/config/odkazy-ven";
   - nikdy neradí, co dělat v probíhající krizi. Od toho jsou úřady a krizové
     vysílání; tenhle web nemá jak vědět, kde zrovna kdo je.
 
-  Stálá část: offline mapy (26. 9. 2026). Nejsou to novinky, ale věc,
-  kterou je potřeba mít připravenou dřív, než vypadne signál — proto se
-  ukazují vždy, i když žádný datovaný tip není.
+  Offline mapy jsou od 26. 9. 2026 v průvodci připraveností (krok „Bez
+  signálu“), ne tady — tipy jsou jen datované novinky.
 */
 
 export function TipyKPripraveNadpis() {
@@ -34,11 +31,12 @@ export function TipyKPripraveNadpis() {
 
 export function TipyKPriprave({ ted = Date.now(), vnoreny = false }: { ted?: number; vnoreny?: boolean }) {
   const t = tipy(ted);
+  if (!t.length) return null;
 
   return (
     <section aria-labelledby="tipy-nadpis" className={vnoreny ? "px-4 py-3" : "overflow-hidden rounded-[22px] bg-plocha"}>
       {vnoreny ? <h3 id="tipy-nadpis" className="sr-only">Tipy k přípravě</h3> : <HlavickaWidgetu ikona="fajfka" nazev="Tipy k přípravě" id="tipy-nadpis" ton="klid" meta={<span className="cislice">{t.length}</span>} />}
-      {t.length > 0 && <ul className={`${vnoreny ? "" : "px-4 py-3"}`}>
+      <ul className={`${vnoreny ? "" : "px-4 py-3"}`}>
         {t.map((x) => (
           <li key={x.klic} className="py-2.5 first:pt-0 last:pb-0">
             <div className="flex flex-wrap items-baseline gap-x-2.5 gap-y-1">
@@ -55,31 +53,8 @@ export function TipyKPriprave({ ted = Date.now(), vnoreny = false }: { ted?: num
             </p>
           </li>
         ))}
-      </ul>}
-      <OfflineMapy odsazeni={!vnoreny} oddelit={t.length > 0} />
+      </ul>
     </section>
   );
 }
 
-/** Offline mapy: důvod po najetí nebo klepnutí na název, odkazy do obchodů s aplikacemi. */
-function OfflineMapy({ odsazeni, oddelit }: { odsazeni: boolean; oddelit: boolean }) {
-  return (
-    <div className={`${odsazeni ? "px-4 pb-3" : ""} ${oddelit ? "mt-3 border-t border-linka pt-3" : ""}`}>
-      <p className="flex items-center gap-1.5 text-male font-semibold text-inkoust"><Ikona nazev="mapa" velikost={14} tah={2} /> Offline mapy</p>
-      <p className="mt-0.5 text-mikro leading-snug text-tlum">Stáhněte si mapu svého kraje předem — bez signálu se nová nenačte.</p>
-      <ul className="mt-2 space-y-2">
-        {OFFLINE_MAPY.map((m) => (
-          <li key={m.nazev} className="flex flex-wrap items-center gap-x-3 gap-y-1">
-            <Napoveda popis={<span className="block">{m.proc}</span>} label={`Proč ${m.nazev}`} nahoru>
-              <span className="cursor-help text-male font-semibold text-inkoust underline decoration-dotted underline-offset-4">
-                {m.nazev}{m.alternativa && <span className="ml-1.5 text-mikro font-normal text-tlum2">alternativa</span>}
-              </span>
-            </Napoveda>
-            <a href={m.android} target="_blank" rel={VEN} className="odkaz text-drobne text-tlum2">Android ↗</a>
-            <a href={m.ios} target="_blank" rel={VEN} className="odkaz text-drobne text-tlum2">iPhone ↗</a>
-          </li>
-        ))}
-      </ul>
-    </div>
-  );
-}
