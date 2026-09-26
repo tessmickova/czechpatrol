@@ -22,6 +22,8 @@ export interface PolozkaSeznamu {
   popis: string;
   hrozby: Hrozba[];
   funkce: string | null;
+  /** Zdroj jednotlivé položky, když se liší od zdroje seznamu (26. 9. 2026). */
+  zdroj?: { nazev: string; url: string };
 }
 export interface Seznam { klic: KlicSeznamu; nazev: string; popis: string; zdroj: { nazev: string; url: string } | null; polozky: PolozkaSeznamu[] }
 export type KlicSeznamu = "72h" | "rozsireny" | "ai";

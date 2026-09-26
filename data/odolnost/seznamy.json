@@ -1,6 +1,6 @@
 {
   "_poznamka": "Tři seznamy k přípravě domácnosti. „72h“ vychází z doporučení HZS ČR pro zásoby a evakuační zavazadlo; „rozsireny“ je rozšířený seznam z praxe komunit připravenosti; „ai“ jsou tipy projektu pro běžný život, sepsané s pomocí AI a označené tak. Každá položka má hrozby, na které odpovídá — podle nich se počítá karta „Připravit teď“ (src/lib/priprava.ts). Množství jsou orientační, ne úřední norma.",
-  "verze": "2026-09-24",
+  "verze": "2026-09-26",
   "hrozby": {
     "elektrina": "výpadek elektřiny",
     "voda": "výpadek vody",
@@ -164,6 +164,64 @@
             "elektrina"
           ],
           "funkce": "pozar"
+        },
+        {
+          "klic": "uzavery",
+          "nazev": "Vím, kde zavřít vodu, plyn a hlavní jistič",
+          "popis": "Při evakuaci, požáru nebo vytopení na tom záleží. Ukažte to všem doma, i dětem.",
+          "hrozby": [
+            "evakuace",
+            "pozar",
+            "voda"
+          ],
+          "funkce": null,
+          "zdroj": {
+            "nazev": "manuál Cimrmanových 72 hodin (neoficiální)",
+            "url": "https://72hodin.info/"
+          }
+        },
+        {
+          "klic": "otvirak-nadobi",
+          "nazev": "Otvírák na konzervy a základní nádobí",
+          "popis": "Hrnek, miska a příbor na osobu. Bez otvíráku jsou konzervy k ničemu.",
+          "hrozby": [
+            "elektrina",
+            "doprava"
+          ],
+          "funkce": null,
+          "zdroj": {
+            "nazev": "manuál Cimrmanových 72 hodin (neoficiální)",
+            "url": "https://72hodin.info/"
+          }
+        },
+        {
+          "klic": "kontakty-papir",
+          "nazev": "Důležitá čísla na papíře a kartička v kapse",
+          "popis": "Rodina, lékař, soused. Dětem a seniorům kartička se jménem, adresou a kontaktem.",
+          "hrozby": [
+            "komunikace",
+            "elektrina",
+            "evakuace"
+          ],
+          "funkce": null,
+          "zdroj": {
+            "nazev": "manuál Cimrmanových 72 hodin (neoficiální)",
+            "url": "https://72hodin.info/"
+          }
+        },
+        {
+          "klic": "zvirata",
+          "nazev": "Zásoby a přepravka pro domácí zvíře",
+          "popis": "Krmivo a léky na pár dní, miska, vodítko nebo přepravka a plán, co s ním při odchodu.",
+          "hrozby": [
+            "evakuace",
+            "doprava"
+          ],
+          "funkce": null,
+          "zdroj": {
+            "nazev": "manuál Cimrmanových 72 hodin (neoficiální)",
+            "url": "https://72hodin.info/"
+          }
         }
       ]
     },
@@ -309,6 +367,118 @@
             "voda"
           ],
           "funkce": "wc-odpad"
+        },
+        {
+          "klic": "misto-setkani-b",
+          "nazev": "Druhé místo setkání a kontakt mimo region",
+          "popis": "Když uzavřou okolí domova. Vzdálený příbuzný předává zprávy mezi členy rodiny, když nejde volat.",
+          "hrozby": [
+            "komunikace",
+            "evakuace"
+          ],
+          "funkce": null,
+          "zdroj": {
+            "nazev": "manuál Cimrmanových 72 hodin (neoficiální)",
+            "url": "https://72hodin.info/"
+          }
+        },
+        {
+          "klic": "zranitelni",
+          "nazev": "Batoh a baterie do pomůcek pro zranitelné",
+          "popis": "Senior, malé dítě nebo člověk s postižením: vlastní batoh, léky, baterie do sluchadla či glukometru a kdo ho vyzvedne.",
+          "hrozby": [
+            "zdravi",
+            "evakuace"
+          ],
+          "funkce": null,
+          "zdroj": {
+            "nazev": "manuál Cimrmanových 72 hodin (neoficiální)",
+            "url": "https://72hodin.info/"
+          }
+        },
+        {
+          "klic": "respiratory",
+          "nazev": "Respirátory FFP2 do zásoby",
+          "popis": "Při zhoršeném ovzduší, požáru v okolí nebo úniku nebezpečné látky.",
+          "hrozby": [
+            "zdravi",
+            "pozar"
+          ],
+          "funkce": null,
+          "zdroj": {
+            "nazev": "manuál Cimrmanových 72 hodin (neoficiální)",
+            "url": "https://72hodin.info/"
+          }
+        },
+        {
+          "klic": "utesneni",
+          "nazev": "Lepicí páska a fólie na utěsnění oken",
+          "popis": "Při úniku nebezpečné látky se zavírají okna, utěsňují otvory a vypíná ventilace.",
+          "hrozby": [
+            "zdravi"
+          ],
+          "funkce": null,
+          "zdroj": {
+            "nazev": "manuál Cimrmanových 72 hodin (neoficiální)",
+            "url": "https://72hodin.info/"
+          }
+        },
+        {
+          "klic": "zalohy-digital",
+          "nazev": "Zálohy dokumentů offline a zabezpečený telefon",
+          "popis": "Skeny dokladů v telefonu i na flash disku v batohu. Aktualizace a dvoufázové ověření — v krizi přibývá podvodů.",
+          "hrozby": [
+            "informace",
+            "komunikace",
+            "evakuace"
+          ],
+          "funkce": null,
+          "zdroj": {
+            "nazev": "manuál Cimrmanových 72 hodin (neoficiální)",
+            "url": "https://72hodin.info/"
+          }
+        },
+        {
+          "klic": "multitool",
+          "nazev": "Nůž nebo multitool, zápalky a zapalovač",
+          "popis": "Do evakuačního batohu i domů; skladovat bezpečně mimo dosah dětí.",
+          "hrozby": [
+            "teplo",
+            "evakuace"
+          ],
+          "funkce": null,
+          "zdroj": {
+            "nazev": "manuál Cimrmanových 72 hodin (neoficiální)",
+            "url": "https://72hodin.info/"
+          }
+        },
+        {
+          "klic": "kontrola-2x",
+          "nazev": "Kontrola zásob dvakrát ročně",
+          "popis": "Voda, baterie a léky mají trvanlivost. Co končí, spotřebujte a doplňte.",
+          "hrozby": [
+            "voda",
+            "zdravi",
+            "elektrina"
+          ],
+          "funkce": null,
+          "zdroj": {
+            "nazev": "manuál Cimrmanových 72 hodin (neoficiální)",
+            "url": "https://72hodin.info/"
+          }
+        },
+        {
+          "klic": "listek-dvere",
+          "nazev": "Lístek na dveře při evakuaci",
+          "popis": "Kdo odešel, kdy a kam. Pomůže záchranářům při kontrole evakuované oblasti.",
+          "hrozby": [
+            "evakuace"
+          ],
+          "funkce": null,
+          "zdroj": {
+            "nazev": "manuál Cimrmanových 72 hodin (neoficiální)",
+            "url": "https://72hodin.info/"
+          }
         }
       ]
     },

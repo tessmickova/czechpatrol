@@ -57,6 +57,7 @@ export function SeznamyZasob({ seznam, zvyrazni }: { seznam: KlicSeznamu; zvyraz
                 <span className="min-w-0 flex-1">
                   <span className={`block text-zaklad font-bold leading-snug ${je ? "text-tlum line-through decoration-tlum2/50" : "text-inkoust"}`}>{p.nazev}{p.mnozstvi && <span className="ml-1.5 font-normal text-tlum">· {p.mnozstvi}</span>}</span>
                   <span className="mt-0.5 block text-male leading-relaxed text-tlum">{p.popis}</span>
+                  {p.zdroj && <a href={p.zdroj.url} target="_blank" rel="nofollow noopener noreferrer" className="odkaz mt-0.5 inline-block text-drobne text-tlum2">Zdroj: {p.zdroj.nazev} ↗</a>}
                   <span className="mt-1.5 flex flex-wrap items-center gap-1.5 text-mikro text-tlum2">
                     {p.hrozby.map((h) => <span key={h} className="rounded-full border border-linka2 px-2 py-[2px]">{NAZVY_HROZEB[h]}</span>)}
                     {nazevFunkce(p.funkce) && <span className="flex items-center gap-1"><Ikona nazev="terc" velikost={11} tah={2} /> v kalkulačce: {nazevFunkce(p.funkce)}</span>}
