@@ -1,5 +1,71 @@
 [
   {
+    "id": "k-14fe0b40b88f8c69",
+    "zachyceno": "2026-09-27T04:33:10.390Z",
+    "publikovano": "2026-09-27T04:30:00.000Z",
+    "zdroj": {
+      "nazev": "Český rozhlas — domácí zprávy",
+      "url": "https://www.irozhlas.cz/komentare/babis-vola-po-miru-ale-putin-chce-valku-evropa-bez-babise-pracuje-na_2609270630_lar",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Babiš volá po míru, ale Putin chce válku. Evropa bez Babiše pracuje na protivzdušné obraně",
+    "titulekPuvodni": "Babiš volá po míru, ale Putin chce válku. Evropa bez Babiše pracuje na protivzdušné obraně",
+    "shrnuti": "Český občan musí být zmaten. Premiér Babiš (ANO) opakovaně mluví o míru. Točí videa v tričku No war (Žádnou válku). Stěžuje si, že je se svým voláním nepochopen, cituji: „Dostal jsem hrozně vynadáno od novinářů a různých komentátorů, co si to vlastně dovoluju mluvit o míru.“",
+    "kodZeme": "CZ",
+    "zeme": "Česko",
+    "kategorie": [
+      "hybridni"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "putin+evrop+valk"
+    ],
+    "naliehave": null,
+    "stav": "ceka",
+    "vyrez": {
+      "text": "",
+      "stazeno": "2026-09-27T04:33:13.608Z",
+      "stav": 403,
+      "chyba": "HTTP 403"
+    }
+  },
+  {
+    "id": "k-c67595e9a30e8782",
+    "zachyceno": "2026-09-27T04:33:13.046Z",
+    "publikovano": "2026-09-27T04:29:23.000Z",
+    "zdroj": {
+      "nazev": "Digi24 (Rumunsko)",
+      "url": "https://www.digi24.ro/stiri/externe/fragmente-de-drona-descoperite-in-republica-moldova-sambata-seara-localnicii-au-alertat-autoritatile-3966179",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Fragmente de dronă, descoperite în Republica Moldova sâmbătă seară. Localnicii au alertat autoritățile",
+    "titulekPuvodni": "Fragmente de dronă, descoperite în Republica Moldova sâmbătă seară. Localnicii au alertat autoritățile",
+    "shrnuti": "Fragmente ale unui aparat de zbor fără pilot au fost descoperite în seara zilei de sâmbătă, pe un câmp din apropierea localităţii Volintiri, raionul Ştefan Vodă. Poliţiştii de frontieră au ajuns în zonă după ce au fost alertaţi de localnici, relatează News.ro.",
+    "kodZeme": "MD",
+    "zeme": "Moldavsko",
+    "kategorie": [
+      "drony"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "fragment+dron",
+      "dron"
+    ],
+    "naliehave": null,
+    "stav": "ceka",
+    "vyrez": {
+      "text": "Fragmente de dronă, descoperite în Republica Moldova sâmbătă seară. Localnicii au alertat autoritățile | Digi24\nHOME\nȘtiri\nExterne\nFragmente de dronă, descoperite în Republica Moldova sâmbătă seară. Localnicii au alertat autoritățile\nFragmente de dronă, descoperite în Republica Moldova sâmbătă seară. Localnicii au alertat autoritățile\nData publicării: 27.09.2026 07:29\nFoto: Profimedia Urmărește Digi24 în Google Discover Adaugă Digi24 ca sursă preferată în Google\nFragmente ale unui aparat de zbor fără pilot au fost descoperite în seara zilei de sâmbătă, pe un câmp din apropierea localităţii Volintiri, raionul Ştefan Vodă. Poliţiştii de frontieră au ajuns în zonă după ce au fost alertaţi de localnici, relatează News.ro.\nPotrivit Poliţiei de Frontieră din Republica Moldova, fragmentele au fost depistate în jurul orei 20:25, în extravilanul localităţii. Zona a fost imediat securizată, iar autorităţile au început verificările pentru a stabili circumstanţele incidentului.\nSetarile tale privind cookie-urile nu permit afisarea continutul din aceasta sectiune. Poti actualiza setarile modulelor coookie direct din browser sau de aici – e nevoie sa accepti cookie-urile social…",
+      "stazeno": "2026-09-27T04:33:13.666Z",
+      "stav": 200
+    }
+  },
+  {
     "id": "k-377fddbcc5f0343d",
     "zachyceno": "2026-09-24T09:47:04.471Z",
     "publikovano": "2026-09-23T15:04:25.000Z",
@@ -12098,85 +12164,6 @@
     },
     "vyrizeni": {
       "kdy": "2026-09-19T19:10:07.226Z",
-      "duvod": "neudalost",
-      "patriK": null,
-      "poznamka": null
-    }
-  },
-  {
-    "id": "k-dbce78e9ee0a825e",
-    "zachyceno": "2026-09-15T22:02:57.674Z",
-    "publikovano": "2026-09-15T18:02:39.000Z",
-    "zdroj": {
-      "nazev": "Téma: hranice (anglicky)",
-      "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxQd09jZUtOZm00UnQ0c21DbzlCSDQ0QjV2M2gwQllYSURUYkh5UjBiOENUUWFuNTN6Rk1NVG5vLVhtbnBvRVRnM0g2SDhGXzlfdVBmN0VsLTU5MTZOcnJIN2JiLUE1TndweXVBNjkteGVRR1N3OVBUTE1lczN1UExXcWJYUTNRcXpMcDJHRjFOd0NYOTdxTm8xQkcwdkl3NnREUHVrcE5ENlFNMjB0WExKcnRn?oc=5",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Italy extends border controls on air, sea routes from Spain for another 15 days - FM Bharat",
-    "titulekPuvodni": "Italy extends border controls on air, sea routes from Spain for another 15 days - FM Bharat",
-    "shrnuti": "Italy extends border controls on air, sea routes from Spain for another 15 days FM Bharat",
-    "kodZeme": "IT",
-    "zeme": "Itálie",
-    "kategorie": [
-      "hranice"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "zeSite": null,
-    "shody": [
-      "border controls",
-      "border"
-    ],
-    "naliehave": null,
-    "stav": "vyrizen",
-    "vyrez": {
-      "text": "Google News",
-      "stazeno": "2026-09-15T22:02:57.932Z",
-      "stav": 200
-    },
-    "vyrizeni": {
-      "kdy": "2026-09-19T19:10:07.226Z",
-      "duvod": "neudalost",
-      "patriK": null,
-      "poznamka": null
-    }
-  },
-  {
-    "id": "k-5c9f56c26a2c9155",
-    "zachyceno": "2026-09-19T22:02:27.955Z",
-    "publikovano": "2026-09-15T16:58:00.000Z",
-    "zdroj": {
-      "nazev": "Téma: zeleznice (anglicky)",
-      "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxPb0xmMC1NSmNvX0VUOTV3U0tLZC1xZE9DRTdYWXNHZThiYzBxb1phYkNrVnk3dV9sQmhmTWtBekRDVVVrblhSMzBUaWhKS3ZxOTFnUjF3LVBrZURESkJJenRZU3dYV2JnWHRWZU9BaXRCcUdhcHRCcjFrbmJfSnAxTUN1ZW1KTlltNnhxcThEdTZhT0VYR3c?oc=5",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Nizozemská železniční síť paralyzována podezřelou sabotáží",
-    "titulekPuvodni": "Dutch rail network crippled by suspected sabotage - The Straits Times",
-    "shrnuti": "Provoz na nizozemské železniční síti byl narušen kvůli podezření na sabotáž.",
-    "kodZeme": "NL",
-    "zeme": "Nizozemsko",
-    "kategorie": [
-      "sabotaz",
-      "infrastruktura",
-      "vysetrovani"
-    ],
-    "druhOdhad": "pripad",
-    "klasifikace": "model",
-    "zeSite": null,
-    "shody": [
-      "sabotage"
-    ],
-    "naliehave": null,
-    "stav": "vyrizen",
-    "vyrez": {
-      "text": "Google News",
-      "stazeno": "2026-09-19T22:03:55.888Z",
-      "stav": 200
-    },
-    "vyrizeni": {
-      "kdy": "2026-09-20T08:02:30.912Z",
       "duvod": "neudalost",
       "patriK": null,
       "poznamka": null
