@@ -1,5 +1,41 @@
 [
   {
+    "id": "k-2949ee501bf6bc70",
+    "zachyceno": "2026-09-27T06:29:22.524Z",
+    "publikovano": "2026-09-27T06:19:40.000Z",
+    "zdroj": {
+      "nazev": "ČT24 — hlavní zprávy",
+      "url": "https://ct24.ceskatelevize.cz/clanek/svet/rusko-treti-noc-za-sebou-utocilo-drony-na-kyjev-377998",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Rusko třetí noc za sebou útočilo drony na Kyjev",
+    "titulekPuvodni": "Rusko třetí noc za sebou útočilo drony na Kyjev",
+    "shrnuti": "Rusko provedlo třetí noc po sobě dronový útok na ukrajinské hlavní město Kyjev. Útok způsobil několik požárů, nejméně jeden člověk byl zraněn, informoval server The Kyiv Independent. Nad městem operovaly jednotky protivzdušné obrany, oznámil starosta metropole Vitalij Klyčko.",
+    "kodZeme": "UA",
+    "zeme": "Ukrajina",
+    "kategorie": [
+      "hybridni",
+      "drony",
+      "rusko"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "utok na",
+      "dron",
+      "rusk"
+    ],
+    "naliehave": null,
+    "stav": "ceka",
+    "vyrez": {
+      "text": "Rusko třetí noc za sebou útočilo drony na Kyjev — ČT24 — Česká televize\nŽivé vysílání\nTV program\nPočasí\nTeletext\nE-shop\nVše o ČT\nTV poplatky\nKontakty\nSpravovat účet\nOblíbené pořady\nRozkoukaná videa\nPřihlásit se do TV\nOdhlásit se\nRusko třetí noc za sebou útočilo drony na Kyjev\nČTK\n, jch\n27. 9. 2026 před 1 m minutou | Zdroj: ČTK\nIlustrační foto\nZdroj: Reuters/Gleb Garanich\nRusko provedlo třetí noc po sobě dronový útok na ukrajinské hlavní město Kyjev. Útok způsobil několik požárů, nejméně jeden člověk byl zraněn, informoval server The Kyiv Independent. Nad městem operovaly jednotky protivzdušné obrany, oznámil starosta metropole Vitalij Klyčko.\nPodle ukrajinského serveru, který se odvolává na úřady, byl dronový útok z noci na neděli třetím dnem útoků na ukrajinskou metropoli po sobě. Místní zpravodajové serveru ve městě slyšeli zasahovat protivzdušnou obranu. Při útoku byla zraněna žena, které se ujali zdravotníci, informovala ukrajinská služba pro mimořádné situace.\nV Ševčenkivské čtvrti podle Klyčka dron zasáhl obytnou budovu, která však byla neobydlená. Její požár dostali hasiči pod kontrolu.\nV Solomjanské čtvrti dopadl dron na volné prostranství. Tlaková vlna však poškodila…",
+      "stazeno": "2026-09-27T06:29:25.216Z",
+      "stav": 200
+    }
+  },
+  {
     "id": "k-7d96cfa27a17bdac",
     "zachyceno": "2026-09-27T06:03:15.638Z",
     "publikovano": "2026-09-27T05:51:00.000Z",
@@ -12096,46 +12132,6 @@
     "vyrez": {
       "text": "Google News",
       "stazeno": "2026-09-19T08:32:06.596Z",
-      "stav": 200
-    },
-    "vyrizeni": {
-      "kdy": "2026-09-19T19:10:07.226Z",
-      "duvod": "neudalost",
-      "patriK": null,
-      "poznamka": null
-    }
-  },
-  {
-    "id": "k-5a9fe326cf627a6e",
-    "zachyceno": "2026-09-16T16:03:14.549Z",
-    "publikovano": "2026-09-16T03:46:52.000Z",
-    "zdroj": {
-      "nazev": "Finsko — hranice",
-      "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxNVlFXMjVqbEZuVzFDcGptOXpCYVhwWW5qc1E0Q2x5Z2NJam9XV1k0WFVUSVJQeVB1MVlzZWZKLVpKRklBWk5ocUlBNmN5ZHZzdkJwZjhFMzRXbUJFaHJza0dlWmMzQ2xzSVBGa1ZaNm0wQ2ZzODdURDduV2MtekU2dXNCRjlIWXEwNmhUbHhINW9VNFk1OTdsWUNNYS1QQ3FYSjZGZjlR?oc=5",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Spain extends border checks on arrivals from Italy until Oct 8 - Daily Finland",
-    "titulekPuvodni": "Spain extends border checks on arrivals from Italy until Oct 8 - Daily Finland",
-    "shrnuti": "Spain extends border checks on arrivals from Italy until Oct 8 Daily Finland",
-    "kodZeme": "FI",
-    "zeme": "Finsko",
-    "kategorie": [
-      "hranice"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "zeSite": null,
-    "shody": [
-      "border checks",
-      "border+checks",
-      "border"
-    ],
-    "naliehave": null,
-    "stav": "vyrizen",
-    "vyrez": {
-      "text": "Google News",
-      "stazeno": "2026-09-16T16:03:14.593Z",
       "stav": 200
     },
     "vyrizeni": {
