@@ -11471,5 +11471,78 @@
       "overeno": "2026-09-25"
     },
     "overeni": "neovereno"
+  },
+  {
+    "id": "i-2026-09-02-a1d4a7697d",
+    "slug": "de-a1d4a7697d",
+    "titulek": "Německo oznámilo výpověď dohody o Ruském domě v Berlíně a uzavření ruského konzulátu v Bonnu jako odpověď na hybridní útoky",
+    "kratkyTitulek": "Německo oznámilo výpověď dohody o Ruském domě v Berlíně a uzavření ruského konzulátu v Bonnu jako odpověď na hybridní útoky",
+    "zeme": "Německo",
+    "kodZeme": "DE",
+    "kategorie": [
+      "rusko",
+      "diplomacie",
+      "hybridni"
+    ],
+    "datumUdalosti": "2026-09-02T00:00:00Z",
+    "datumZjisteni": "2026-09-27T00:00:00Z",
+    "aktualizovano": "2026-09-27T10:01:30.613Z",
+    "zavaznost": "Y3",
+    "jistota": "stredni",
+    "stav": "neuvedeno",
+    "atribuce": "neznama",
+    "puvodce": null,
+    "druh": "opatreni",
+    "fakta": [
+      "Podle LTO.de oznámili 2. 9. 2026 večer německý ministr zahraničí Johann Wadephul a ministr vnitra Alexander Dobrindt uzavření generálního konzulátu Ruska v Bonnu a výpověď dohody o Ruském domě v Berlíně.",
+      "Podle LTO.de a Meduzy je zdůvodněním reakce na „hybridní útoky Ruska“, konkrétně na nález dronů a výbušnin u letiště Lipsko/Halle 4. 8. 2026.",
+      "Podle Meduzy nařídilo Německo zaměstnancům Ruského domu opustit zemi do sedmi dnů.",
+      "Podle LTO.de ministr Dobrindt zdůraznil, že „Německo není ve válce s Ruskem“, ale jednotlivé incidenty nelze posuzovat izolovaně.",
+      "Podle Meduzy trvala smlouva o Ruském domě od roku 1984 a fungovala i po sankcích z roku 2022 díky recipročnímu ujednání o německém Goethe-Institutu v Moskvě; Rusko na výpověď zareagovalo uzavřením Goethe-Institutů (už zveřejněný záznam rusko-goethe-instituty)."
+    ],
+    "neznameho": [
+      "Přesné datum, kdy má Ruský dům skutečně zavřít; smlouva se automaticky obnovuje na pět let, pokud není vypovězena šest měsíců předem, nynější lhůta je 6. 12. 2026.",
+      "Zda a jak Rusko na uzavření konzulátu v Bonnu reagovalo mimo odvetu vůči Goethe-Institutům."
+    ],
+    "vyznam": "",
+    "eskalacniSpousteče": [],
+    "deeskalacniSignaly": [],
+    "zdroje": [
+      {
+        "nazev": "Meduza (anglicky) — Berlin's 'Russian House' stayed open despite Russia's war in Ukraine and EU sanctions",
+        "url": "https://meduza.io/en/feature/2026/09/27/berlin-s-russian-house-stayed-open-despite-russia-s-war-in-ukraine-and-eu-sanctions-shielded-by-a-reciprocal-deal-over-moscow-s-goethe-institut-germany-s-sabotage-accusation-was-the-final-straw",
+        "typ": "media",
+        "publikovano": "2026-09-27T00:00:00Z",
+        "primarni": false,
+        "jazyk": "en"
+      },
+      {
+        "nazev": "LTO.de — Nach Drohnen-Vorfall: Russisches Haus in Berlin schließen?",
+        "url": "https://www.lto.de/recht/hintergruende/h/russland-bundesregierung-deutschland-hybride-angriffe-leipzig-russisches-haus-konsulat-schliessen",
+        "typ": "media",
+        "publikovano": "2026-09-02T00:00:00Z",
+        "primarni": false,
+        "jazyk": "de"
+      }
+    ],
+    "souvisejici": [],
+    "historie": [
+      {
+        "kdy": "2026-09-02T00:00:00Z",
+        "text": "Zachyceno automatickým sběrem, druhý zdroj doložen před zařazením do fronty.",
+        "novySignal": true
+      },
+      {
+        "kdy": "2026-09-27T10:01:30.613Z",
+        "text": "Zveřejněno jako neověřené úředně: dvě nezávislé redakce, úřad zatím nepotvrdil.",
+        "novySignal": false
+      }
+    ],
+    "novy": true,
+    "zapocitanoTyden": "2026-09-02",
+    "aiZpracovano": true,
+    "lidskyOvereno": false,
+    "archivniZaznam": false,
+    "overeni": "neovereno"
   }
 ]

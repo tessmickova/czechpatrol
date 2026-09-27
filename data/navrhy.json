@@ -279,5 +279,72 @@
     "aiZpracovano": true,
     "lidskyOvereno": false,
     "archivniZaznam": false
+  },
+  {
+    "kam": "zaznam",
+    "pripravil": "patrol",
+    "pripraveno": "2026-09-27T08:27:35.482Z",
+    "id": "i-2026-09-27-32c154f4ac",
+    "slug": "ru-32c154f4ac",
+    "titulek": "Lavrov na tiskové konferenci v OSN varoval, že evropské řeči o válce s Ruskem by se mohly stát „sebenaplňujícím se proroctvím“",
+    "kratkyTitulek": "Lavrov na tiskové konferenci v OSN varoval, že evropské řeči o válce s Ruskem by se mohly stát „sebenaplňujícím se proroctvím“",
+    "zeme": "Rusko",
+    "kodZeme": "RU",
+    "kategorie": [
+      "rusko",
+      "diplomacie"
+    ],
+    "datumUdalosti": "2026-09-27T00:00:00Z",
+    "datumZjisteni": "2026-09-26T00:00:00Z",
+    "aktualizovano": "2026-09-27T08:27:35.482Z",
+    "zavaznost": "Y1",
+    "jistota": "stredni",
+    "stav": "neuvedeno",
+    "atribuce": "neznama",
+    "puvodce": null,
+    "druh": "reakce",
+    "fakta": [
+      "Podle Ukrainska Pravda řekl ruský ministr zahraničí Sergej Lavrov na závěrečné tiskové konferenci Valného shromáždění OSN v New Yorku 27. 9. 2026: „This could become a self-fulfilling prophecy, such a position, because they are investing enormous amounts of money in arms production.“",
+      "Podle Ukrainska Pravda kritizoval Lavrov evropské investice do vojenské výroby a přípravy s tím, že by mohly vést k vojenskému konfliktu, který by podle něj vyvolala Evropa, ne Rusko; zároveň popřel jakékoli ruské plány na válku s Evropou.",
+      "Podle Ukrainska Pravda podobná ujištění o „žádné válce“ vydávalo ruské vedení i před invazí na Ukrajinu v roce 2014 a v únoru 2022; jde o poznámku článku, ne o Lavrovovo tvrzení."
+    ],
+    "neznameho": [
+      "Druhý zdroj (UNN) je otevřený a nezávislý na Ukrainska Pravda; obě média ale čerpají ze stejné tiskové konference.",
+      "Přesný kontext otázky, na kterou Lavrov odpovídal, není v otevřeném textu."
+    ],
+    "vyznam": "",
+    "eskalacniSpousteče": [],
+    "deeskalacniSignaly": [],
+    "zdroje": [
+      {
+        "nazev": "Ukrainska Pravda (anglicky) — European statements about war with Russia could become a self-fulfilling prophecy – Russian foreign minister",
+        "url": "https://www.pravda.com.ua/eng/news/2026/09/27/8055200/",
+        "typ": "media",
+        "publikovano": "2026-09-27T00:00:00Z",
+        "primarni": false,
+        "jazyk": "en"
+      },
+      {
+        "nazev": "УНН (Ukrainian National News) — Lavrov said that Europe's calls to prepare for war with Russia could become a self-fulfilling prophecy",
+        "url": "https://unn.ua/en/news/lavrov-said-that-europes-calls-to-prepare-for-war-with-russia-could-become-a-self-fulfilling-prophecy",
+        "typ": "media",
+        "publikovano": "2026-09-26T00:00:00Z",
+        "primarni": false,
+        "jazyk": "en"
+      }
+    ],
+    "souvisejici": [],
+    "historie": [
+      {
+        "kdy": "2026-09-27T00:00:00Z",
+        "text": "Zachyceno automatickým sběrem, druhý zdroj doložen před zařazením do fronty.",
+        "novySignal": true
+      }
+    ],
+    "novy": true,
+    "zapocitanoTyden": "2026-09-27",
+    "aiZpracovano": true,
+    "lidskyOvereno": false,
+    "archivniZaznam": false
   }
 ]
