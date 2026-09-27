@@ -279,5 +279,142 @@
     "aiZpracovano": true,
     "lidskyOvereno": false,
     "archivniZaznam": false
+  },
+  {
+    "kam": "zaznam",
+    "pripravil": "patrol",
+    "pripraveno": "2026-09-27T08:27:35.482Z",
+    "id": "i-2026-09-02-a1d4a7697d",
+    "slug": "de-a1d4a7697d",
+    "titulek": "Německo oznámilo výpověď dohody o Ruském domě v Berlíně a uzavření ruského konzulátu v Bonnu jako odpověď na hybridní útoky",
+    "kratkyTitulek": "Německo oznámilo výpověď dohody o Ruském domě v Berlíně a uzavření ruského konzulátu v Bonnu jako odpověď na hybridní útoky",
+    "zeme": "Německo",
+    "kodZeme": "DE",
+    "kategorie": [
+      "rusko",
+      "diplomacie",
+      "hybridni"
+    ],
+    "datumUdalosti": "2026-09-02T00:00:00Z",
+    "datumZjisteni": "2026-09-27T00:00:00Z",
+    "aktualizovano": "2026-09-27T08:27:35.482Z",
+    "zavaznost": "Y3",
+    "jistota": "vysoka",
+    "stav": "neuvedeno",
+    "atribuce": "neznama",
+    "puvodce": null,
+    "druh": "opatreni",
+    "fakta": [
+      "Podle LTO.de oznámili 2. 9. 2026 večer německý ministr zahraničí Johann Wadephul a ministr vnitra Alexander Dobrindt uzavření generálního konzulátu Ruska v Bonnu a výpověď dohody o Ruském domě v Berlíně.",
+      "Podle LTO.de a Meduzy je zdůvodněním reakce na „hybridní útoky Ruska“, konkrétně na nález dronů a výbušnin u letiště Lipsko/Halle 4. 8. 2026.",
+      "Podle Meduzy nařídilo Německo zaměstnancům Ruského domu opustit zemi do sedmi dnů.",
+      "Podle LTO.de ministr Dobrindt zdůraznil, že „Německo není ve válce s Ruskem“, ale jednotlivé incidenty nelze posuzovat izolovaně.",
+      "Podle Meduzy trvala smlouva o Ruském domě od roku 1984 a fungovala i po sankcích z roku 2022 díky recipročnímu ujednání o německém Goethe-Institutu v Moskvě; Rusko na výpověď zareagovalo uzavřením Goethe-Institutů (už zveřejněný záznam rusko-goethe-instituty)."
+    ],
+    "neznameho": [
+      "Přesné datum, kdy má Ruský dům skutečně zavřít; smlouva se automaticky obnovuje na pět let, pokud není vypovězena šest měsíců předem, nynější lhůta je 6. 12. 2026.",
+      "Zda a jak Rusko na uzavření konzulátu v Bonnu reagovalo mimo odvetu vůči Goethe-Institutům."
+    ],
+    "vyznam": "",
+    "eskalacniSpousteče": [],
+    "deeskalacniSignaly": [],
+    "zdroje": [
+      {
+        "nazev": "Meduza (anglicky) — Berlin's 'Russian House' stayed open despite Russia's war in Ukraine and EU sanctions",
+        "url": "https://meduza.io/en/feature/2026/09/27/berlin-s-russian-house-stayed-open-despite-russia-s-war-in-ukraine-and-eu-sanctions-shielded-by-a-reciprocal-deal-over-moscow-s-goethe-institut-germany-s-sabotage-accusation-was-the-final-straw",
+        "typ": "media",
+        "publikovano": "2026-09-27T00:00:00Z",
+        "primarni": false,
+        "jazyk": "en"
+      },
+      {
+        "nazev": "LTO.de — Nach Drohnen-Vorfall: Russisches Haus in Berlin schließen?",
+        "url": "https://www.lto.de/recht/hintergruende/h/russland-bundesregierung-deutschland-hybride-angriffe-leipzig-russisches-haus-konsulat-schliessen",
+        "typ": "media",
+        "publikovano": "2026-09-02T00:00:00Z",
+        "primarni": false,
+        "jazyk": "de"
+      }
+    ],
+    "souvisejici": [],
+    "historie": [
+      {
+        "kdy": "2026-09-02T00:00:00Z",
+        "text": "Zachyceno automatickým sběrem, druhý zdroj doložen před zařazením do fronty.",
+        "novySignal": true
+      }
+    ],
+    "novy": true,
+    "zapocitanoTyden": "2026-09-02",
+    "aiZpracovano": true,
+    "lidskyOvereno": false,
+    "archivniZaznam": false
+  },
+  {
+    "kam": "zaznam",
+    "pripravil": "patrol",
+    "pripraveno": "2026-09-27T08:27:35.482Z",
+    "id": "i-2026-09-27-32c154f4ac",
+    "slug": "ru-32c154f4ac",
+    "titulek": "Lavrov na tiskové konferenci v OSN varoval, že evropské řeči o válce s Ruskem by se mohly stát „sebenaplňujícím se proroctvím“",
+    "kratkyTitulek": "Lavrov na tiskové konferenci v OSN varoval, že evropské řeči o válce s Ruskem by se mohly stát „sebenaplňujícím se proroctvím“",
+    "zeme": "Rusko",
+    "kodZeme": "RU",
+    "kategorie": [
+      "rusko",
+      "diplomacie"
+    ],
+    "datumUdalosti": "2026-09-27T00:00:00Z",
+    "datumZjisteni": "2026-09-26T00:00:00Z",
+    "aktualizovano": "2026-09-27T08:27:35.482Z",
+    "zavaznost": "Y1",
+    "jistota": "vysoka",
+    "stav": "neuvedeno",
+    "atribuce": "neznama",
+    "puvodce": null,
+    "druh": "reakce",
+    "fakta": [
+      "Podle Ukrainska Pravda řekl ruský ministr zahraničí Sergej Lavrov na závěrečné tiskové konferenci Valného shromáždění OSN v New Yorku 27. 9. 2026: „This could become a self-fulfilling prophecy, such a position, because they are investing enormous amounts of money in arms production.“",
+      "Podle Ukrainska Pravda kritizoval Lavrov evropské investice do vojenské výroby a přípravy s tím, že by mohly vést k vojenskému konfliktu, který by podle něj vyvolala Evropa, ne Rusko; zároveň popřel jakékoli ruské plány na válku s Evropou.",
+      "Podle Ukrainska Pravda podobná ujištění o „žádné válce“ vydávalo ruské vedení i před invazí na Ukrajinu v roce 2014 a v únoru 2022; jde o poznámku článku, ne o Lavrovovo tvrzení."
+    ],
+    "neznameho": [
+      "Druhý zdroj (UNN) je otevřený a nezávislý na Ukrainska Pravda; obě média ale čerpají ze stejné tiskové konference.",
+      "Přesný kontext otázky, na kterou Lavrov odpovídal, není v otevřeném textu."
+    ],
+    "vyznam": "",
+    "eskalacniSpousteče": [],
+    "deeskalacniSignaly": [],
+    "zdroje": [
+      {
+        "nazev": "Ukrainska Pravda (anglicky) — European statements about war with Russia could become a self-fulfilling prophecy – Russian foreign minister",
+        "url": "https://www.pravda.com.ua/eng/news/2026/09/27/8055200/",
+        "typ": "media",
+        "publikovano": "2026-09-27T00:00:00Z",
+        "primarni": false,
+        "jazyk": "en"
+      },
+      {
+        "nazev": "УНН (Ukrainian National News) — Lavrov said that Europe's calls to prepare for war with Russia could become a self-fulfilling prophecy",
+        "url": "https://unn.ua/en/news/lavrov-said-that-europes-calls-to-prepare-for-war-with-russia-could-become-a-self-fulfilling-prophecy",
+        "typ": "media",
+        "publikovano": "2026-09-26T00:00:00Z",
+        "primarni": false,
+        "jazyk": "en"
+      }
+    ],
+    "souvisejici": [],
+    "historie": [
+      {
+        "kdy": "2026-09-27T00:00:00Z",
+        "text": "Zachyceno automatickým sběrem, druhý zdroj doložen před zařazením do fronty.",
+        "novySignal": true
+      }
+    ],
+    "novy": true,
+    "zapocitanoTyden": "2026-09-27",
+    "aiZpracovano": true,
+    "lidskyOvereno": false,
+    "archivniZaznam": false
   }
 ]
