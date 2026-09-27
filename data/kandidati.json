@@ -1,5 +1,42 @@
 [
   {
+    "id": "k-369b70639b79a1b3",
+    "zachyceno": "2026-09-27T22:03:54.467Z",
+    "publikovano": "2026-09-27T21:55:28.000Z",
+    "zdroj": {
+      "nazev": "France 24 (anglicky)",
+      "url": "https://www.france24.com/en/europe/20260927-russian-strikes-kill-eight-ukraine-war-moscow",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Russian attacks kill eight in Ukraine after Moscow vows to continue war",
+    "titulekPuvodni": "Russian attacks kill eight in Ukraine after Moscow vows to continue war",
+    "shrnuti": "Russian strikes killed eight people across Ukraine on Sunday, authorities said, a day after Moscow vowed to continue the war. President Volodymyr Zelensky said Russia had launched about 3,900 drones, aerial bombs and missiles over the past week. Ukraine accused Moscow of deliberately targeting civil",
+    "kodZeme": "UA",
+    "zeme": "Ukrajina",
+    "kategorie": [
+      "sabotaz",
+      "drony",
+      "rusko"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "bomb",
+      "dron",
+      "drone",
+      "russia"
+    ],
+    "naliehave": null,
+    "stav": "ceka",
+    "vyrez": {
+      "text": "Russian attacks kill eight in Ukraine after Moscow vows to continue war - France 24\nSkip to main content\nAdvertising\nRussian attacks kill eight in Ukraine after Moscow vows to continue war\nEurope\nRussian strikes killed eight people across Ukraine on Sunday, authorities said, a day after Moscow vowed to continue the war. President Volodymyr Zelensky said Russia had launched about 3,900 drones, aerial bombs and missiles over the past week. Ukraine accused Moscow of deliberately targeting civilians as winter approaches.\nIssued on: 27/09/2026 - 23:55 Modified: 27/09/2026 - 23:55\n2 min Reading time\nShare\nBy:\nFRANCE 24\nFirefighters work at the site of an apartment building, Ukraine, September 26, 2026 © Gleb Garanich, Reuters\nRussian strikes killed eight people across Ukraine on Sunday, a day after Moscow vowed to pursue the war, authorities said Sunday.\nPresident Volodymyr Zelensky said that Russia had fired about 3,900 drones , aerial bombs and other missiles at Ukraine over the past week.\nRussia has stepped up attacks on  Kyiv , with Ukraine charging that Moscow is deliberately hitting civilian targets as the country braces for another tough winter.\nInterior Minister Ivan Vyhivskyi…",
+      "stazeno": "2026-09-27T22:03:56.747Z",
+      "stav": 200
+    }
+  },
+  {
     "id": "k-4b6638df5d949951",
     "zachyceno": "2026-09-27T20:03:22.933Z",
     "publikovano": "2026-09-27T19:58:00.000Z",
@@ -12097,46 +12134,6 @@
       "duvod": "neudalost-stara",
       "patriK": null,
       "poznamka": "Plánované cvičení KILP, uzavření Narvy 30. 4.–2. 5. 2025 (zpráva z 21. 3. 2025); staré a plánované, ne skutek."
-    }
-  },
-  {
-    "id": "k-fd657b73cb784ec2",
-    "zachyceno": "2026-09-20T13:02:21.024Z",
-    "publikovano": "2026-09-20T12:26:47.000Z",
-    "zdroj": {
-      "nazev": "Česko — sabotaz",
-      "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxPQ1RQT2kyTFVDRmZvQWdsbDBIRERhR0I1REJSSVE3N2JYSjFXWGQxWVJSVzBZUjRvZ3NMZV9HRnc5eWdsdjR2QVZxd0t2VEVXQ2o2aW1jVl9teGQ2NkNXcjNTTFl1NnJoa3B3WjROcXFDUlVKby1TUDRBLXlFck5LS193R2NsWG5xS1NTeVJVazF0SzdlbnVyXzJUemM4VmcybXc?oc=5",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "US Charges Russian Network in Alleged European Sabotage, US Murder Plot - OCCRP",
-    "titulekPuvodni": "US Charges Russian Network in Alleged European Sabotage, US Murder Plot - OCCRP",
-    "shrnuti": "US Charges Russian Network in Alleged European Sabotage, US Murder Plot OCCRP",
-    "kodZeme": "RU",
-    "zeme": "Rusko",
-    "kategorie": [
-      "sabotaz",
-      "rusko"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "zeSite": null,
-    "shody": [
-      "sabotage",
-      "russia"
-    ],
-    "naliehave": null,
-    "stav": "vyrizen",
-    "vyrez": {
-      "text": "Google News",
-      "stazeno": "2026-09-20T13:02:21.880Z",
-      "stav": 200
-    },
-    "vyrizeni": {
-      "kdy": "2026-09-20T19:27:03.845Z",
-      "duvod": "duplicita",
-      "patriK": null,
-      "poznamka": "Týž případ jako i-2026-09-15-590b687216 (obvinění v USA); doplněn úřední zdroj DOJ."
     }
   }
 ]
