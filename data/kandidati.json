@@ -1,49 +1,91 @@
 [
   {
-    "id": "k-0e41c8a9162c69e3",
-    "zachyceno": "2026-09-27T17:14:28.561Z",
-    "publikovano": "2026-09-27T16:18:00.000Z",
+    "id": "k-369b70639b79a1b3",
+    "zachyceno": "2026-09-27T22:03:54.467Z",
+    "publikovano": "2026-09-27T21:55:28.000Z",
     "zdroj": {
-      "nazev": "Ukrinform (anglicky)",
-      "url": "https://www.ukrinform.net/rubric-society/4168574-ukrenergo-forecasts-no-power-outages-on-monday.html",
-      "typ": "wire",
+      "nazev": "France 24 (anglicky)",
+      "url": "https://www.france24.com/en/europe/20260927-russian-strikes-kill-eight-ukraine-war-moscow",
+      "typ": "media",
       "primarni": false
     },
-    "titulek": "Ukrenergo forecasts no power outages on Monday",
-    "titulekPuvodni": "Ukrenergo forecasts no power outages on Monday",
-    "shrnuti": "No restrictions on electricity consumption are planned in Ukraine on Monday, September 28.",
+    "titulek": "Russian attacks kill eight in Ukraine after Moscow vows to continue war",
+    "titulekPuvodni": "Russian attacks kill eight in Ukraine after Moscow vows to continue war",
+    "shrnuti": "Russian strikes killed eight people across Ukraine on Sunday, authorities said, a day after Moscow vowed to continue the war. President Volodymyr Zelensky said Russia had launched about 3,900 drones, aerial bombs and missiles over the past week. Ukraine accused Moscow of deliberately targeting civil",
     "kodZeme": "UA",
     "zeme": "Ukrajina",
     "kategorie": [
-      "infrastruktura"
+      "sabotaz",
+      "drony",
+      "rusko"
     ],
     "druhOdhad": "neurceno",
     "klasifikace": "pravidla",
     "zeSite": null,
     "shody": [
-      "power outage"
+      "bomb",
+      "dron",
+      "drone",
+      "russia"
     ],
     "naliehave": null,
     "stav": "ceka",
     "vyrez": {
-      "text": "Ukrenergo forecasts no power outages on Monday\n\r\nSubscription\nNewsletters\nPhotobank\nUkrinform - Ukrainian National News Agency\nFounded in 1918\nSunday, 27 September 2026, 20:14\nWar\nEconomy\nSports\nMore ☰\nContacts\nEng\nУкр\nEng\nEsp\nDeu\nعربي\nFra\n日本語\nPol\n&times;\nAll topics\nWar\nRecovery of Ukraine\nPolitics\nEconomy\nFact checks\nDefense\nSociety and Culture\nSports\nCrime\nAccidents and Emergencies\nAgency\nInformation on Agency\nOur Contacts\nSubscribtion Terms\nOur Services\nPrivacy policy and personal data protection\nAdditional\nPublications\nInterviews\nPhoto\nVideo\nLongreads\nReleases\nServices\nSubscription\nNewsletters\nPhotobank\n\r\n\r\n\r\nNo restrictions on electricity consumption are planned in Ukraine on Monday, September 28.\nAccording to Ukrinform, national power grid operator Ukrenergo reported this on Telegram .\n\r\n\r\n\"No consumption restrictions are planned for tomorrow, Monday,\" the company said.\n\r\n\r\nThe company urged consumers to shift their use of high-power appliances to the daytime hours between 11:00 and 15:00 and to conserve electricity during the evening peak hours from 17:00 to 22:00.\n\r\n\r\nRead also: Russian attacks cause new power outages in six regions \r\n\r\nAs Ukrinform reported, a power line…",
-      "stazeno": "2026-09-27T17:14:28.740Z",
+      "text": "Russian attacks kill eight in Ukraine after Moscow vows to continue war - France 24\nSkip to main content\nAdvertising\nRussian attacks kill eight in Ukraine after Moscow vows to continue war\nEurope\nRussian strikes killed eight people across Ukraine on Sunday, authorities said, a day after Moscow vowed to continue the war. President Volodymyr Zelensky said Russia had launched about 3,900 drones, aerial bombs and missiles over the past week. Ukraine accused Moscow of deliberately targeting civilians as winter approaches.\nIssued on: 27/09/2026 - 23:55 Modified: 27/09/2026 - 23:55\n2 min Reading time\nShare\nBy:\nFRANCE 24\nFirefighters work at the site of an apartment building, Ukraine, September 26, 2026 © Gleb Garanich, Reuters\nRussian strikes killed eight people across Ukraine on Sunday, a day after Moscow vowed to pursue the war, authorities said Sunday.\nPresident Volodymyr Zelensky said that Russia had fired about 3,900 drones , aerial bombs and other missiles at Ukraine over the past week.\nRussia has stepped up attacks on  Kyiv , with Ukraine charging that Moscow is deliberately hitting civilian targets as the country braces for another tough winter.\nInterior Minister Ivan Vyhivskyi…",
+      "stazeno": "2026-09-27T22:03:56.747Z",
       "stav": 200
     }
   },
   {
-    "id": "k-40e53a2a046d7d87",
-    "zachyceno": "2026-09-27T16:03:38.023Z",
-    "publikovano": "2026-09-27T15:44:00.000Z",
+    "id": "k-4b6638df5d949951",
+    "zachyceno": "2026-09-27T20:03:22.933Z",
+    "publikovano": "2026-09-27T19:58:00.000Z",
     "zdroj": {
       "nazev": "Ukrinform (anglicky)",
-      "url": "https://www.ukrinform.net/rubric-ato/4168572-cars-catch-fire-in-kyivs-solomianskyi-district-after-drone-debris-falls.html",
+      "url": "https://www.ukrinform.net/rubric-ato/4168605-russian-drone-attack-on-novhorodsiverskyi-injures-four-people.html",
       "typ": "wire",
       "primarni": false
     },
-    "titulek": "Cars catch fire in Kyiv’s Solomianskyi district after drone debris falls",
-    "titulekPuvodni": "Cars catch fire in Kyiv’s Solomianskyi district after drone debris falls",
-    "shrnuti": "Cars caught fire in Kyiv’s Solomianskyi district as a result of falling debris from a Russian drone.",
+    "titulek": "Russian drone attack on Novhorod-Siverskyi injures four people",
+    "titulekPuvodni": "Russian drone attack on Novhorod-Siverskyi injures four people",
+    "shrnuti": "Russian troops attacked Novhorod-Siverskyi in the Chernihiv region with a drone this evening; four people were injured, including two children.",
+    "kodZeme": "RU",
+    "zeme": "Rusko",
+    "kategorie": [
+      "hybridni",
+      "drony",
+      "rusko"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "attack on",
+      "dron",
+      "drone",
+      "russia"
+    ],
+    "naliehave": null,
+    "stav": "ceka",
+    "vyrez": {
+      "text": "Russian drone attack on Novhorod-Siverskyi injures four people\n\r\nSubscription\nNewsletters\nPhotobank\nUkrinform - Ukrainian National News Agency\nFounded in 1918\nSunday, 27 September 2026, 23:03\nWar\nEconomy\nSports\nMore ☰\nContacts\nEng\nУкр\nEng\nEsp\nDeu\nعربي\nFra\n日本語\nPol\n&times;\nAll topics\nWar\nRecovery of Ukraine\nPolitics\nEconomy\nFact checks\nDefense\nSociety and Culture\nSports\nCrime\nAccidents and Emergencies\nAgency\nInformation on Agency\nOur Contacts\nSubscribtion Terms\nOur Services\nPrivacy policy and personal data protection\nAdditional\nPublications\nInterviews\nPhoto\nVideo\nLongreads\nReleases\nServices\nSubscription\nNewsletters\nPhotobank\n\r\n\r\n\r\nRussian troops attacked Novhorod-Siverskyi in the Chernihiv region with a drone this evening; four people were injured, including two children.\nAccording to Ukrinform, this was reported by the National Police of Ukraine.\n\r\n\r\n\r\n\r\n\r\n\r\n&ldquo;This evening, the Russians attacked a residential area of the city of Novhorod-Siverskyi with a drone &mdash;two girls aged 17 and 15, as well as a 19-year-old and a 27-year-old man, were injured,&rdquo; the statement said.\n\r\n\r\n\r\n\r\n\r\n\r\nPrivate residential buildings sustained damage and destruction as a result of the…",
+      "stazeno": "2026-09-27T20:03:23.111Z",
+      "stav": 200
+    }
+  },
+  {
+    "id": "k-2b6387cca3ad8b0b",
+    "zachyceno": "2026-09-27T20:03:22.936Z",
+    "publikovano": "2026-09-27T19:34:00.000Z",
+    "zdroj": {
+      "nazev": "Ukrinform (anglicky)",
+      "url": "https://www.ukrinform.net/rubric-ato/4168596-uav-debris-found-in-kyiv.html",
+      "typ": "wire",
+      "primarni": false
+    },
+    "titulek": "UAV debris found in Kyiv",
+    "titulekPuvodni": "UAV debris found in Kyiv",
+    "shrnuti": "Debris from Russian drones has been reported to have fallen in three districts of Kyiv; there are reportedly casualties.",
     "kodZeme": "UA",
     "zeme": "Ukrajina",
     "kategorie": [
@@ -57,249 +99,14 @@
       "debris+dron",
       "dron",
       "drone",
+      "uav",
       "russia"
     ],
     "naliehave": null,
     "stav": "ceka",
     "vyrez": {
-      "text": "Cars catch fire in Kyiv’s Solomianskyi district after drone debris falls\n\r\nSubscription\nNewsletters\nPhotobank\nUkrinform - Ukrainian National News Agency\nFounded in 1918\nSunday, 27 September 2026, 19:03\nWar\nEconomy\nSports\nMore ☰\nContacts\nEng\nУкр\nEng\nEsp\nDeu\nعربي\nFra\n日本語\nPol\n&times;\nAll topics\nWar\nRecovery of Ukraine\nPolitics\nEconomy\nFact checks\nDefense\nSociety and Culture\nSports\nCrime\nAccidents and Emergencies\nAgency\nInformation on Agency\nOur Contacts\nSubscribtion Terms\nOur Services\nPrivacy policy and personal data protection\nAdditional\nPublications\nInterviews\nPhoto\nVideo\nLongreads\nReleases\nServices\nSubscription\nNewsletters\nPhotobank\n\r\n\r\n\r\nCars caught fire in Kyiv&rsquo;s Solomianskyi district as a result of falling debris from a Russian drone.\nAccording to Ukrinform, Kyiv Mayor Vitali Klitschko reported this on Telegram .\n\r\n\r\n\"Cars are on fire in the Solomianskyi district as a result of falling UAV debris,\" the statement said.\n\r\n\r\nAccording to Klitschko, emergency services were heading to the scene.\n\r\n\r\nRead also: Russian airstrikes in Sumy leaves two killed, five injured \r\n\r\nAs Ukrinform reported, a Russian drone struck a nine-story residential building in Kyiv&rsquo;s Darnytskyi…",
-      "stazeno": "2026-09-27T16:03:38.212Z",
-      "stav": 200
-    }
-  },
-  {
-    "id": "k-e2f36964d8c5d85d",
-    "zachyceno": "2026-09-27T16:03:35.770Z",
-    "publikovano": "2026-09-27T14:55:13.000Z",
-    "zdroj": {
-      "nazev": "France 24 (anglicky)",
-      "url": "https://www.france24.com/en/uk-police-arrest-5-on-suspicion-of-preparing-a-terrorist-act",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "UK: Police arrest 5 on suspicion of preparing a terrorist act",
-    "titulekPuvodni": "UK: Police arrest 5 on suspicion of preparing a terrorist act",
-    "shrnuti": "British police have evacuated homes near an air force base in Gloucestershire, as army bomb disposal experts examined several vehicles in what authorities described as a major incident. Five men have been arrested on suspicion of preparing a terrorist act and offences under the Explosives Act. RAF F",
-    "kodZeme": "FR",
-    "zeme": "Francie",
-    "kategorie": [
-      "sabotaz",
-      "zpravodajske"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "zeSite": null,
-    "shody": [
-      "bomb",
-      "arrested+terror"
-    ],
-    "naliehave": null,
-    "stav": "ceka",
-    "vyrez": {
-      "text": "UK: Police arrest 5 on suspicion of preparing a terrorist act - France 24\nSkip to main content\nTo display this content from YouTube, you must enable advertisement tracking and audience measurement.\nAccept\nManage my choices\nOne of your browser extensions seems to be blocking the video player from loading. To watch this content, you may need to disable it on this site.\nTry again\nCover image: © France 24\n04:37\nUK: Police arrest 5 on suspicion of preparing a terrorist act\nUK\nIssued on: 27/09/2026 - 16:55\nShare\nBritish police have evacuated homes near an air force base in Gloucestershire, as army bomb disposal experts examined several vehicles in what authorities described as a major incident. Five men have been arrested on suspicion of preparing a terrorist act and offences under the Explosives Act. RAF Fairford, the base involved, is also being used by the US for strikes on Iranian missile sites targeting ships in the Strait of Hormuz. US Air Force personnel at the base have been told to remain vigilant, while police say the incident is now contained. France 24 international affairs editor\nVideo by:\nPhilip Turle\nKeywords for this article\nUK\nRead more\nRead less\nMajor incident at UK…",
-      "stazeno": "2026-09-27T16:03:38.757Z",
-      "stav": 200
-    }
-  },
-  {
-    "id": "k-b4274e863285d734",
-    "zachyceno": "2026-09-27T16:03:35.090Z",
-    "publikovano": "2026-09-27T14:36:00.000Z",
-    "zdroj": {
-      "nazev": "iDNES.cz — zpravodajství",
-      "url": "https://www.idnes.cz/zpravy/domaci/videa-tydne-trump-leknuti-bombarder-lanovka-petrin-rozjezd.A260927_155136_tv-domaci_rejs#utm_source=rss&utm_medium=feed&utm_campaign=zpravodaj&utm_content=main",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "VIDEA TÝDNE: Vylekaný Trump, rozjezd lanovky na Petřín a pobouření v Osvětimi",
-    "titulekPuvodni": "VIDEA TÝDNE: Vylekaný Trump, rozjezd lanovky na Petřín a pobouření v Osvětimi",
-    "shrnuti": "Tento týden se po dvouleté rekonstrukci opět rozjela lanovka na pražský Petřín. Britská turistka pobouřila videem, v němž si stěžovala na ceny nápojů v kavárně u koncentračního tábora Osvětim. Polský ministr se v OSN pustil do Rusů a amerického prezidenta Donalda Trumpa viditelně překvapilo burácení",
-    "kodZeme": "PL",
-    "zeme": "Polsko",
-    "kategorie": [
-      "sabotaz"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "zeSite": null,
-    "shody": [
-      "bomb"
-    ],
-    "naliehave": null,
-    "stav": "ceka",
-    "vyrez": {
-      "text": "VIDEA TÝDNE: Vylekaný Trump, rozjezd lanovky na Petřín a pobouření v Osvětimi - iDNES.cz \r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\niDNES.cz\n\r\n\r\n\r\nP�ihl�sit \r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nAbyste mohli pokra�ovat, pot�ebujeme v�d�t, jakou formou v�m m��eme zobrazovat reklamu \r\n\r\n\r\n\r\n\r\n\r\nV�mi zvolen� nastaven� \r\nneobsahuje souhlas se zobrazov�n�m c�len� reklamy . \r\nVyberte pros�m znovu, \r\njakou formou v�m m�me zobrazovat obsah. \r\n\r\n\r\n\r\n\r\n\r\n\r\niDNES Premium\n\r\nBez reklam\n\r\n\r\n199 K� m�s��n�\n\r\nM��ete neomezen� ��st iDNES.cz, Lidovky.cz, Expres.cz a Antiyoutuber.cz. K tomu dostanete tak� noviny a �asopisy v elektronick� podob�. To v�e bez reklam. 1\n\r\n\r\nP�edplatit\n\r\n\r\nU� m�te ��et? P�ihlaste se\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nS c�lenou reklamou\n\r\n\r\n\r\nZdarma \r\n\r\nZachov�me v�m v�e tak, jak jste zvykl� a reklamu p�izp�sob�me va�im z�jm�m. Bez omezen� si m��ete d�l ��st, p�ehr�vat videa, sout�it �i p�isp�vat do v�ech diskus�. 2\n\r\n\r\nSouhlas�m\n\r\nPodrobn� nastaven�\n\r\n\r\n\r\n\r\n\r\n\r\niDNES a reklama\n\r\nPokud vyu�ijete m�sto platby ud�len� souhlasu s reklamou (tj. souhlas s vyu�it�m cookies a dal��ch s�ov�ch identifik�tor� pro ��ely c�len� reklamy), \r\nbudou V�m…",
-      "stazeno": "2026-09-27T16:03:38.841Z",
-      "stav": 200
-    }
-  },
-  {
-    "id": "k-f2cccb738a748400",
-    "zachyceno": "2026-09-27T16:03:38.031Z",
-    "publikovano": "2026-09-27T14:29:00.000Z",
-    "zdroj": {
-      "nazev": "Ukrinform (anglicky)",
-      "url": "https://www.ukrinform.net/rubric-ato/4168563-russian-airstrikes-in-sumy-leaves-two-killed-five-injured-in.html",
-      "typ": "wire",
-      "primarni": false
-    },
-    "titulek": "Russian airstrikes in Sumy leaves two killed, five injured",
-    "titulekPuvodni": "Russian airstrikes in Sumy leaves two killed, five injured",
-    "shrnuti": "A woman and a 16-year-old girl were killed and five other people were injured in a Russian attack on Sumy.",
-    "kodZeme": "RU",
-    "zeme": "Rusko",
-    "kategorie": [
-      "hybridni",
-      "rusko"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "zeSite": null,
-    "shody": [
-      "attack on",
-      "russia"
-    ],
-    "naliehave": null,
-    "stav": "ceka",
-    "vyrez": {
-      "text": "Russian airstrikes in Sumy leaves two killed, five injured\n\r\nSubscription\nNewsletters\nPhotobank\nUkrinform - Ukrainian National News Agency\nFounded in 1918\nSunday, 27 September 2026, 19:03\nWar\nEconomy\nSports\nMore ☰\nContacts\nEng\nУкр\nEng\nEsp\nDeu\nعربي\nFra\n日本語\nPol\n&times;\nAll topics\nWar\nRecovery of Ukraine\nPolitics\nEconomy\nFact checks\nDefense\nSociety and Culture\nSports\nCrime\nAccidents and Emergencies\nAgency\nInformation on Agency\nOur Contacts\nSubscribtion Terms\nOur Services\nPrivacy policy and personal data protection\nAdditional\nPublications\nInterviews\nPhoto\nVideo\nLongreads\nReleases\nServices\nSubscription\nNewsletters\nPhotobank\n\r\n\r\n\r\nA woman and a 16-year-old girl were killed and five other people were injured in a Russian attack on Sumy.\nAccording to Ukrinform, Oleh Hryhorov, head of the Sumy Regional Military Administration, reported this on Telegram .\n\r\n\r\n\"Unfortunately, two people were killed today as a result of the enemy attack on Sumy. They were an elderly woman and a 16-year-old girl,\" he wrote.\n\r\n\r\nIt was reported that Russian forces attacked Sumy again using three glide bombs (KABs). One of the strikes landed near a building housing a support center for families and children. The…",
-      "stazeno": "2026-09-27T16:03:42.756Z",
-      "stav": 200
-    }
-  },
-  {
-    "id": "k-c9ebc1dc7bd988f7",
-    "zachyceno": "2026-09-27T16:03:34.938Z",
-    "publikovano": "2026-09-27T13:57:00.000Z",
-    "zdroj": {
-      "nazev": "Český rozhlas — domácí zprávy",
-      "url": "https://www.irozhlas.cz/zpravy-svet/britska-policie-zatkla-nekolik-lidi-u-zakladny-fairford-usa-ji-pouzivaji-mimo_2609271557_vdv",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Britská policie zatkla několik lidí u základny Fairford. USA ji používají mimo jiné k útokům na Írán",
-    "titulekPuvodni": "Britská policie zatkla několik lidí u základny Fairford. USA ji používají mimo jiné k útokům na Írán",
-    "shrnuti": "U letecké základny Fairford na západě Anglie v neděli policie zadržela pět mužů, nyní jsou ve vazbě kvůli podezření z přípravy teroristického útoku. Policie odpoledne uvedla, že úřady 85 domácnostem v okolí základny doporučily, aby se evakuovaly. Základnu využívá americké letectvo. Armádní experti n",
-    "kodZeme": "GB",
-    "zeme": "Spojené království",
-    "kategorie": [
-      "zpravodajske",
-      "vojsko"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "zeSite": null,
-    "shody": [
-      "zadrz+vybusn",
-      "policie"
-    ],
-    "naliehave": null,
-    "stav": "ceka",
-    "vyrez": {
-      "text": "",
-      "stazeno": "2026-09-27T16:03:43.134Z",
-      "stav": 403,
-      "chyba": "HTTP 403"
-    }
-  },
-  {
-    "id": "k-5449e8aeabfb0558",
-    "zachyceno": "2026-09-27T16:03:38.066Z",
-    "publikovano": "2026-09-27T13:34:00.000Z",
-    "zdroj": {
-      "nazev": "Ukrainska Pravda (anglicky)",
-      "url": "https://www.pravda.com.ua/eng/news/2026/09/27/8055253/",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Russians hit Sumy: two killed, including teenager, five injured – photos",
-    "titulekPuvodni": "Russians hit Sumy: two killed, including teenager, five injured – photos",
-    "shrnuti": "Two people, including a 16-year-old girl, were killed after Russian guided aerial bombs struck Sumy, damaging local infrastructure and injuring five.",
-    "kodZeme": "RU",
-    "zeme": "Rusko",
-    "kategorie": [
-      "sabotaz",
-      "rusko"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "zeSite": null,
-    "shody": [
-      "bomb",
-      "russia"
-    ],
-    "naliehave": null,
-    "stav": "ceka",
-    "vyrez": {
-      "text": "Russian guided bombs hit Sumy, killing two, injuring five | Ukrainska Pravda\nAftermath of the strike on Sumy. Photo: Sumy Oblast Military Administration\nTwo people were killed, including a 16-year-old girl, and five others were injured, as a result of a Russian guided aerial bomb (GAB) strike on Sumy on Sunday 27 September.\nSource: Oleh Hryhorov , Head of Sumy Oblast Military Administration; Kordon.Media , a local media outlet\n\r\n\r\n\r\nAftermath of the strike on Sumy\n\r\n\r\n\r\nPhoto: Sumy Oblast Military Administration\r\n\r\n\r\nAdvertisement:\n\r\n\r\n\r\n\r\n\r\n\r\nQuote from Hryhorov: \"Sadly, today, as a result of an enemy strike on Sumy, two people have been killed. An elderly woman and a 16-year-old girl.\"\nDetails: Five more people were injured, including one child.\nRussian forces attacked Sumy with three guided aerial bombs. One of the strikes hit near the building of a family and child support centre, damaging the structure. At the time of the impact, there were no visitors inside.\nAccording to Kordon.Media, one of those killed in Sumy was 16-year-old Kateryna. The girl had gone to the shop. When she heard the danger of incoming GABs heading towards the city, she began running to the nearest…",
-      "stazeno": "2026-09-27T16:03:43.176Z",
-      "stav": 200
-    }
-  },
-  {
-    "id": "k-128ff9272135d104",
-    "zachyceno": "2026-09-27T16:03:37.266Z",
-    "publikovano": "2026-09-27T13:23:21.000Z",
-    "zdroj": {
-      "nazev": "Le Monde (Francie)",
-      "url": "https://www.lemonde.fr/international/live/2026/09/27/en-direct-guerre-en-ukraine-les-dernieres-informations-et-nos-reponses-a-vos-questions_6783795_3210.html",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "EN DIRECT, guerre en Ukraine : des morts dans le nord-est du pays à la suite de frappes russes ; Kiev également visée par des bombardements dimanche",
-    "titulekPuvodni": "EN DIRECT, guerre en Ukraine : des morts dans le nord-est du pays à la suite de frappes russes ; Kiev également visée par des bombardements dimanche",
-    "shrnuti": "Un bâtiment administratif a été touché, dimanche, dans le raïon Holossiïvsky, à Kiev, a annoncé le maire de la capitale ukrainienne, tandis que, dans le raïon Darnytsky, un drone a touché un immeuble d’habitation. Dans le nord-est de l’Ukraine, trois bombes aériennes russes ont frappé dimanche après",
-    "kodZeme": "UA",
-    "zeme": "Ukrajina",
-    "kategorie": [
-      "sabotaz",
-      "drony"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "zeSite": null,
-    "shody": [
-      "bomb",
-      "dron",
-      "drone"
-    ],
-    "naliehave": null,
-    "stav": "ceka",
-    "vyrez": {
-      "text": "Client Challenge\nA required part of this site couldn’t load. This may be due to a browser\nextension, network issues, or browser settings. Please check your\nconnection, disable any ad blockers, or try using a different browser.",
-      "stazeno": "2026-09-27T16:03:43.214Z",
-      "stav": 200
-    }
-  },
-  {
-    "id": "k-baa69c0d1acbfcf4",
-    "zachyceno": "2026-09-27T17:14:25.855Z",
-    "publikovano": "2026-09-25T23:08:02.000Z",
-    "zdroj": {
-      "nazev": "BBC News — Europe",
-      "url": "https://www.bbc.co.uk/news/articles/cmx2zlqeje9zo?at_medium=RSS&at_campaign=rss",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "As Merz scrambles for support, Germany's identity crisis is laid bare",
-    "titulekPuvodni": "As Merz scrambles for support, Germany's identity crisis is laid bare",
-    "shrnuti": "Voters are turning away from the centre in Germany as fears grow about the economy and migration.",
-    "kodZeme": "DE",
-    "zeme": "Německo",
-    "kategorie": [
-      "drony"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "zeSite": null,
-    "shody": [
-      "scrambl"
-    ],
-    "naliehave": null,
-    "stav": "ceka",
-    "vyrez": {
-      "text": "As Merz scrambles for support, Germany's identity crisis is laid bare - BBC News\nImage source, Getty Images\nImage caption, Friedrich Merz has led Germany since 2025\nBy Jessica Parker Berlin correspondent\nPublished\n26 September 2026\nA set of bumper local elections has thrown Germany, and its government, off balance.\nChancellor Friedrich Merz may now be a man on borrowed time. His coalition government is in crisis.\nBut this breakdown of business as usual in Germany has been brewing for years.\nIt's a nation wrestling with new, uncomfortable and unresolved realities.\nThink of certain stereotypes about Germany, and think again.\nA country dominated by boring, consensus-driven politics? Not any more.\nA confident, powerhouse economy at the cutting edge of car-making? Yesterday's story.\nA nation that can be used as a byword for impressive efficiency? The trains don't even run on time.\nMany Germans I've spoken to feel their nation has drifted away from the things that once anchored their identity.\nAnd the question of what next is, as yet, unanswered.\nThat uncertainty is currently embodied by a beleaguered chancellor weakened by bruising regional election results.\nImage source, Reuters\nImage…",
-      "stazeno": "2026-09-27T17:14:29.107Z",
+      "text": "UAV debris found in Kyiv\n\r\nSubscription\nNewsletters\nPhotobank\nUkrinform - Ukrainian National News Agency\nFounded in 1918\nSunday, 27 September 2026, 23:03\nWar\nEconomy\nSports\nMore ☰\nContacts\nEng\nУкр\nEng\nEsp\nDeu\nعربي\nFra\n日本語\nPol\n&times;\nAll topics\nWar\nRecovery of Ukraine\nPolitics\nEconomy\nFact checks\nDefense\nSociety and Culture\nSports\nCrime\nAccidents and Emergencies\nAgency\nInformation on Agency\nOur Contacts\nSubscribtion Terms\nOur Services\nPrivacy policy and personal data protection\nAdditional\nPublications\nInterviews\nPhoto\nVideo\nLongreads\nReleases\nServices\nSubscription\nNewsletters\nPhotobank\n\r\n\r\n\r\nDebris from Russian drones has been reported to have fallen in three districts of Kyiv; there are reportedly casualties.\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nAccording to Ukrinform, Kyiv Mayor Vitali Klitschko reported this on Telegram .\n\r\n\r\n\r\n\r\n\r\n\r\nHe said that in the Podil district, the debris caused a grassy area to catch fire.\n\r\n\r\n\r\n\r\n\r\n\r\nIn the Darnytskyi district, debris also fell in an open area near one of the stores .\n\r\n\r\n\r\n\r\n\r\n\r\nIn the Dniprovskyi district, debris also fell in an open area. Preliminary reports indicate there are casualties, Klitschko added .\n\r\n\r\n\r\n\r\n\r\n\r\nLater, the Kyiv City Military…",
+      "stazeno": "2026-09-27T20:03:23.986Z",
       "stav": 200
     }
   },
@@ -536,6 +343,245 @@
     }
   },
   {
+    "id": "k-0e41c8a9162c69e3",
+    "zachyceno": "2026-09-27T17:14:28.561Z",
+    "publikovano": "2026-09-27T16:18:00.000Z",
+    "zdroj": {
+      "nazev": "Ukrinform (anglicky)",
+      "url": "https://www.ukrinform.net/rubric-society/4168574-ukrenergo-forecasts-no-power-outages-on-monday.html",
+      "typ": "wire",
+      "primarni": false
+    },
+    "titulek": "Ukrenergo forecasts no power outages on Monday",
+    "titulekPuvodni": "Ukrenergo forecasts no power outages on Monday",
+    "shrnuti": "No restrictions on electricity consumption are planned in Ukraine on Monday, September 28.",
+    "kodZeme": "UA",
+    "zeme": "Ukrajina",
+    "kategorie": [
+      "infrastruktura"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "power outage"
+    ],
+    "naliehave": null,
+    "stav": "vyrizen",
+    "vyrez": {
+      "text": "Ukrenergo forecasts no power outages on Monday\n\r\nSubscription\nNewsletters\nPhotobank\nUkrinform - Ukrainian National News Agency\nFounded in 1918\nSunday, 27 September 2026, 20:14\nWar\nEconomy\nSports\nMore ☰\nContacts\nEng\nУкр\nEng\nEsp\nDeu\nعربي\nFra\n日本語\nPol\n&times;\nAll topics\nWar\nRecovery of Ukraine\nPolitics\nEconomy\nFact checks\nDefense\nSociety and Culture\nSports\nCrime\nAccidents and Emergencies\nAgency\nInformation on Agency\nOur Contacts\nSubscribtion Terms\nOur Services\nPrivacy policy and personal data protection\nAdditional\nPublications\nInterviews\nPhoto\nVideo\nLongreads\nReleases\nServices\nSubscription\nNewsletters\nPhotobank\n\r\n\r\n\r\nNo restrictions on electricity consumption are planned in Ukraine on Monday, September 28.\nAccording to Ukrinform, national power grid operator Ukrenergo reported this on Telegram .\n\r\n\r\n\"No consumption restrictions are planned for tomorrow, Monday,\" the company said.\n\r\n\r\nThe company urged consumers to shift their use of high-power appliances to the daytime hours between 11:00 and 15:00 and to conserve electricity during the evening peak hours from 17:00 to 22:00.\n\r\n\r\nRead also: Russian attacks cause new power outages in six regions \r\n\r\nAs Ukrinform reported, a power line…",
+      "stazeno": "2026-09-27T17:14:28.740Z",
+      "stav": 200
+    },
+    "vyrizeni": {
+      "kdy": "2026-09-27T20:01:24.429Z",
+      "duvod": "neudalost",
+      "patriK": null,
+      "poznamka": "Ukrenergo očekává, že v pondělí nedojde k výpadkům elektřiny; zpráva o tom, že se něco nestane, ne o skutku."
+    }
+  },
+  {
+    "id": "k-40e53a2a046d7d87",
+    "zachyceno": "2026-09-27T16:03:38.023Z",
+    "publikovano": "2026-09-27T15:44:00.000Z",
+    "zdroj": {
+      "nazev": "Ukrinform (anglicky)",
+      "url": "https://www.ukrinform.net/rubric-ato/4168572-cars-catch-fire-in-kyivs-solomianskyi-district-after-drone-debris-falls.html",
+      "typ": "wire",
+      "primarni": false
+    },
+    "titulek": "Cars catch fire in Kyiv’s Solomianskyi district after drone debris falls",
+    "titulekPuvodni": "Cars catch fire in Kyiv’s Solomianskyi district after drone debris falls",
+    "shrnuti": "Cars caught fire in Kyiv’s Solomianskyi district as a result of falling debris from a Russian drone.",
+    "kodZeme": "UA",
+    "zeme": "Ukrajina",
+    "kategorie": [
+      "drony",
+      "rusko"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "debris+dron",
+      "dron",
+      "drone",
+      "russia"
+    ],
+    "naliehave": null,
+    "stav": "vyrizen",
+    "vyrez": {
+      "text": "Cars catch fire in Kyiv’s Solomianskyi district after drone debris falls\n\r\nSubscription\nNewsletters\nPhotobank\nUkrinform - Ukrainian National News Agency\nFounded in 1918\nSunday, 27 September 2026, 19:03\nWar\nEconomy\nSports\nMore ☰\nContacts\nEng\nУкр\nEng\nEsp\nDeu\nعربي\nFra\n日本語\nPol\n&times;\nAll topics\nWar\nRecovery of Ukraine\nPolitics\nEconomy\nFact checks\nDefense\nSociety and Culture\nSports\nCrime\nAccidents and Emergencies\nAgency\nInformation on Agency\nOur Contacts\nSubscribtion Terms\nOur Services\nPrivacy policy and personal data protection\nAdditional\nPublications\nInterviews\nPhoto\nVideo\nLongreads\nReleases\nServices\nSubscription\nNewsletters\nPhotobank\n\r\n\r\n\r\nCars caught fire in Kyiv&rsquo;s Solomianskyi district as a result of falling debris from a Russian drone.\nAccording to Ukrinform, Kyiv Mayor Vitali Klitschko reported this on Telegram .\n\r\n\r\n\"Cars are on fire in the Solomianskyi district as a result of falling UAV debris,\" the statement said.\n\r\n\r\nAccording to Klitschko, emergency services were heading to the scene.\n\r\n\r\nRead also: Russian airstrikes in Sumy leaves two killed, five injured \r\n\r\nAs Ukrinform reported, a Russian drone struck a nine-story residential building in Kyiv&rsquo;s Darnytskyi…",
+      "stazeno": "2026-09-27T16:03:38.212Z",
+      "stav": 200
+    },
+    "vyrizeni": {
+      "kdy": "2026-09-27T20:01:24.429Z",
+      "duvod": "mimo-rozsah",
+      "patriK": null,
+      "poznamka": "Trosky dronu zapálily auta v Kyjevě; uvnitř Ukrajiny, bez doloženého následku pro sledované země."
+    }
+  },
+  {
+    "id": "k-e2f36964d8c5d85d",
+    "zachyceno": "2026-09-27T16:03:35.770Z",
+    "publikovano": "2026-09-27T14:55:13.000Z",
+    "zdroj": {
+      "nazev": "France 24 (anglicky)",
+      "url": "https://www.france24.com/en/uk-police-arrest-5-on-suspicion-of-preparing-a-terrorist-act",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "UK: Police arrest 5 on suspicion of preparing a terrorist act",
+    "titulekPuvodni": "UK: Police arrest 5 on suspicion of preparing a terrorist act",
+    "shrnuti": "British police have evacuated homes near an air force base in Gloucestershire, as army bomb disposal experts examined several vehicles in what authorities described as a major incident. Five men have been arrested on suspicion of preparing a terrorist act and offences under the Explosives Act. RAF F",
+    "kodZeme": "FR",
+    "zeme": "Francie",
+    "kategorie": [
+      "sabotaz",
+      "zpravodajske"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "bomb",
+      "arrested+terror"
+    ],
+    "naliehave": null,
+    "stav": "vyrizen",
+    "vyrez": {
+      "text": "UK: Police arrest 5 on suspicion of preparing a terrorist act - France 24\nSkip to main content\nTo display this content from YouTube, you must enable advertisement tracking and audience measurement.\nAccept\nManage my choices\nOne of your browser extensions seems to be blocking the video player from loading. To watch this content, you may need to disable it on this site.\nTry again\nCover image: © France 24\n04:37\nUK: Police arrest 5 on suspicion of preparing a terrorist act\nUK\nIssued on: 27/09/2026 - 16:55\nShare\nBritish police have evacuated homes near an air force base in Gloucestershire, as army bomb disposal experts examined several vehicles in what authorities described as a major incident. Five men have been arrested on suspicion of preparing a terrorist act and offences under the Explosives Act. RAF Fairford, the base involved, is also being used by the US for strikes on Iranian missile sites targeting ships in the Strait of Hormuz. US Air Force personnel at the base have been told to remain vigilant, while police say the incident is now contained. France 24 international affairs editor\nVideo by:\nPhilip Turle\nKeywords for this article\nUK\nRead more\nRead less\nMajor incident at UK…",
+      "stazeno": "2026-09-27T16:03:38.757Z",
+      "stav": 200
+    },
+    "vyrizeni": {
+      "kdy": "2026-09-27T20:01:24.429Z",
+      "duvod": "duplicita",
+      "patriK": null,
+      "poznamka": "Táž událost jako už zveřejněný záznam o zadržení pěti mužů u RAF Fairford (i-2026-09-27-e480488876)."
+    }
+  },
+  {
+    "id": "k-b4274e863285d734",
+    "zachyceno": "2026-09-27T16:03:35.090Z",
+    "publikovano": "2026-09-27T14:36:00.000Z",
+    "zdroj": {
+      "nazev": "iDNES.cz — zpravodajství",
+      "url": "https://www.idnes.cz/zpravy/domaci/videa-tydne-trump-leknuti-bombarder-lanovka-petrin-rozjezd.A260927_155136_tv-domaci_rejs#utm_source=rss&utm_medium=feed&utm_campaign=zpravodaj&utm_content=main",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "VIDEA TÝDNE: Vylekaný Trump, rozjezd lanovky na Petřín a pobouření v Osvětimi",
+    "titulekPuvodni": "VIDEA TÝDNE: Vylekaný Trump, rozjezd lanovky na Petřín a pobouření v Osvětimi",
+    "shrnuti": "Tento týden se po dvouleté rekonstrukci opět rozjela lanovka na pražský Petřín. Britská turistka pobouřila videem, v němž si stěžovala na ceny nápojů v kavárně u koncentračního tábora Osvětim. Polský ministr se v OSN pustil do Rusů a amerického prezidenta Donalda Trumpa viditelně překvapilo burácení",
+    "kodZeme": "PL",
+    "zeme": "Polsko",
+    "kategorie": [
+      "sabotaz"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "bomb"
+    ],
+    "naliehave": null,
+    "stav": "vyrizen",
+    "vyrez": {
+      "text": "VIDEA TÝDNE: Vylekaný Trump, rozjezd lanovky na Petřín a pobouření v Osvětimi - iDNES.cz \r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\niDNES.cz\n\r\n\r\n\r\nP�ihl�sit \r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nAbyste mohli pokra�ovat, pot�ebujeme v�d�t, jakou formou v�m m��eme zobrazovat reklamu \r\n\r\n\r\n\r\n\r\n\r\nV�mi zvolen� nastaven� \r\nneobsahuje souhlas se zobrazov�n�m c�len� reklamy . \r\nVyberte pros�m znovu, \r\njakou formou v�m m�me zobrazovat obsah. \r\n\r\n\r\n\r\n\r\n\r\n\r\niDNES Premium\n\r\nBez reklam\n\r\n\r\n199 K� m�s��n�\n\r\nM��ete neomezen� ��st iDNES.cz, Lidovky.cz, Expres.cz a Antiyoutuber.cz. K tomu dostanete tak� noviny a �asopisy v elektronick� podob�. To v�e bez reklam. 1\n\r\n\r\nP�edplatit\n\r\n\r\nU� m�te ��et? P�ihlaste se\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nS c�lenou reklamou\n\r\n\r\n\r\nZdarma \r\n\r\nZachov�me v�m v�e tak, jak jste zvykl� a reklamu p�izp�sob�me va�im z�jm�m. Bez omezen� si m��ete d�l ��st, p�ehr�vat videa, sout�it �i p�isp�vat do v�ech diskus�. 2\n\r\n\r\nSouhlas�m\n\r\nPodrobn� nastaven�\n\r\n\r\n\r\n\r\n\r\n\r\niDNES a reklama\n\r\nPokud vyu�ijete m�sto platby ud�len� souhlasu s reklamou (tj. souhlas s vyu�it�m cookies a dal��ch s�ov�ch identifik�tor� pro ��ely c�len� reklamy), \r\nbudou V�m…",
+      "stazeno": "2026-09-27T16:03:38.841Z",
+      "stav": 200
+    },
+    "vyrizeni": {
+      "kdy": "2026-09-27T20:01:24.429Z",
+      "duvod": "neudalost",
+      "patriK": null,
+      "poznamka": "Souhrn videí týdne (Trump, lanovka na Petřín, Osvětim); nesouvisí s bezpečnostním rozsahem projektu."
+    }
+  },
+  {
+    "id": "k-f2cccb738a748400",
+    "zachyceno": "2026-09-27T16:03:38.031Z",
+    "publikovano": "2026-09-27T14:29:00.000Z",
+    "zdroj": {
+      "nazev": "Ukrinform (anglicky)",
+      "url": "https://www.ukrinform.net/rubric-ato/4168563-russian-airstrikes-in-sumy-leaves-two-killed-five-injured-in.html",
+      "typ": "wire",
+      "primarni": false
+    },
+    "titulek": "Russian airstrikes in Sumy leaves two killed, five injured",
+    "titulekPuvodni": "Russian airstrikes in Sumy leaves two killed, five injured",
+    "shrnuti": "A woman and a 16-year-old girl were killed and five other people were injured in a Russian attack on Sumy.",
+    "kodZeme": "RU",
+    "zeme": "Rusko",
+    "kategorie": [
+      "hybridni",
+      "rusko"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "attack on",
+      "russia"
+    ],
+    "naliehave": null,
+    "stav": "vyrizen",
+    "vyrez": {
+      "text": "Russian airstrikes in Sumy leaves two killed, five injured\n\r\nSubscription\nNewsletters\nPhotobank\nUkrinform - Ukrainian National News Agency\nFounded in 1918\nSunday, 27 September 2026, 19:03\nWar\nEconomy\nSports\nMore ☰\nContacts\nEng\nУкр\nEng\nEsp\nDeu\nعربي\nFra\n日本語\nPol\n&times;\nAll topics\nWar\nRecovery of Ukraine\nPolitics\nEconomy\nFact checks\nDefense\nSociety and Culture\nSports\nCrime\nAccidents and Emergencies\nAgency\nInformation on Agency\nOur Contacts\nSubscribtion Terms\nOur Services\nPrivacy policy and personal data protection\nAdditional\nPublications\nInterviews\nPhoto\nVideo\nLongreads\nReleases\nServices\nSubscription\nNewsletters\nPhotobank\n\r\n\r\n\r\nA woman and a 16-year-old girl were killed and five other people were injured in a Russian attack on Sumy.\nAccording to Ukrinform, Oleh Hryhorov, head of the Sumy Regional Military Administration, reported this on Telegram .\n\r\n\r\n\"Unfortunately, two people were killed today as a result of the enemy attack on Sumy. They were an elderly woman and a 16-year-old girl,\" he wrote.\n\r\n\r\nIt was reported that Russian forces attacked Sumy again using three glide bombs (KABs). One of the strikes landed near a building housing a support center for families and children. The…",
+      "stazeno": "2026-09-27T16:03:42.756Z",
+      "stav": 200
+    },
+    "vyrizeni": {
+      "kdy": "2026-09-27T20:01:24.429Z",
+      "duvod": "mimo-rozsah",
+      "patriK": null,
+      "poznamka": "Ruský úder na Sumy (Ukrajina, chybná zeměpisná značka na Rusko); uvnitř Ukrajiny, bez doloženého následku pro sledované země."
+    }
+  },
+  {
+    "id": "k-c9ebc1dc7bd988f7",
+    "zachyceno": "2026-09-27T16:03:34.938Z",
+    "publikovano": "2026-09-27T13:57:00.000Z",
+    "zdroj": {
+      "nazev": "Český rozhlas — domácí zprávy",
+      "url": "https://www.irozhlas.cz/zpravy-svet/britska-policie-zatkla-nekolik-lidi-u-zakladny-fairford-usa-ji-pouzivaji-mimo_2609271557_vdv",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Britská policie zatkla několik lidí u základny Fairford. USA ji používají mimo jiné k útokům na Írán",
+    "titulekPuvodni": "Britská policie zatkla několik lidí u základny Fairford. USA ji používají mimo jiné k útokům na Írán",
+    "shrnuti": "U letecké základny Fairford na západě Anglie v neděli policie zadržela pět mužů, nyní jsou ve vazbě kvůli podezření z přípravy teroristického útoku. Policie odpoledne uvedla, že úřady 85 domácnostem v okolí základny doporučily, aby se evakuovaly. Základnu využívá americké letectvo. Armádní experti n",
+    "kodZeme": "GB",
+    "zeme": "Spojené království",
+    "kategorie": [
+      "zpravodajske",
+      "vojsko"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "zadrz+vybusn",
+      "policie"
+    ],
+    "naliehave": null,
+    "stav": "vyrizen",
+    "vyrez": {
+      "text": "",
+      "stazeno": "2026-09-27T16:03:43.134Z",
+      "stav": 403,
+      "chyba": "HTTP 403"
+    },
+    "vyrizeni": {
+      "kdy": "2026-09-27T20:01:24.429Z",
+      "duvod": "duplicita",
+      "patriK": null,
+      "poznamka": "Táž událost jako už zveřejněný záznam o zadržení pěti mužů u RAF Fairford (i-2026-09-27-e480488876)."
+    }
+  },
+  {
     "id": "k-509b0f46e1f26ebc",
     "zachyceno": "2026-09-27T14:03:40.949Z",
     "publikovano": "2026-09-27T13:44:47.000Z",
@@ -574,6 +620,87 @@
       "duvod": "mimo-rozsah",
       "patriK": null,
       "poznamka": "Ruský denní úder na Kyjev/Bucha/Vyšneve/Fastiv v posledních 24 hodinách; uvnitř Ukrajiny, bez doloženého následku pro sledované země."
+    }
+  },
+  {
+    "id": "k-5449e8aeabfb0558",
+    "zachyceno": "2026-09-27T16:03:38.066Z",
+    "publikovano": "2026-09-27T13:34:00.000Z",
+    "zdroj": {
+      "nazev": "Ukrainska Pravda (anglicky)",
+      "url": "https://www.pravda.com.ua/eng/news/2026/09/27/8055253/",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Russians hit Sumy: two killed, including teenager, five injured – photos",
+    "titulekPuvodni": "Russians hit Sumy: two killed, including teenager, five injured – photos",
+    "shrnuti": "Two people, including a 16-year-old girl, were killed after Russian guided aerial bombs struck Sumy, damaging local infrastructure and injuring five.",
+    "kodZeme": "RU",
+    "zeme": "Rusko",
+    "kategorie": [
+      "sabotaz",
+      "rusko"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "bomb",
+      "russia"
+    ],
+    "naliehave": null,
+    "stav": "vyrizen",
+    "vyrez": {
+      "text": "Russian guided bombs hit Sumy, killing two, injuring five | Ukrainska Pravda\nAftermath of the strike on Sumy. Photo: Sumy Oblast Military Administration\nTwo people were killed, including a 16-year-old girl, and five others were injured, as a result of a Russian guided aerial bomb (GAB) strike on Sumy on Sunday 27 September.\nSource: Oleh Hryhorov , Head of Sumy Oblast Military Administration; Kordon.Media , a local media outlet\n\r\n\r\n\r\nAftermath of the strike on Sumy\n\r\n\r\n\r\nPhoto: Sumy Oblast Military Administration\r\n\r\n\r\nAdvertisement:\n\r\n\r\n\r\n\r\n\r\n\r\nQuote from Hryhorov: \"Sadly, today, as a result of an enemy strike on Sumy, two people have been killed. An elderly woman and a 16-year-old girl.\"\nDetails: Five more people were injured, including one child.\nRussian forces attacked Sumy with three guided aerial bombs. One of the strikes hit near the building of a family and child support centre, damaging the structure. At the time of the impact, there were no visitors inside.\nAccording to Kordon.Media, one of those killed in Sumy was 16-year-old Kateryna. The girl had gone to the shop. When she heard the danger of incoming GABs heading towards the city, she began running to the nearest…",
+      "stazeno": "2026-09-27T16:03:43.176Z",
+      "stav": 200
+    },
+    "vyrizeni": {
+      "kdy": "2026-09-27T20:01:24.429Z",
+      "duvod": "mimo-rozsah",
+      "patriK": null,
+      "poznamka": "Ruský úder na Sumy (Ukrajina, chybná zeměpisná značka na Rusko); uvnitř Ukrajiny, bez doloženého následku pro sledované země."
+    }
+  },
+  {
+    "id": "k-128ff9272135d104",
+    "zachyceno": "2026-09-27T16:03:37.266Z",
+    "publikovano": "2026-09-27T13:23:21.000Z",
+    "zdroj": {
+      "nazev": "Le Monde (Francie)",
+      "url": "https://www.lemonde.fr/international/live/2026/09/27/en-direct-guerre-en-ukraine-les-dernieres-informations-et-nos-reponses-a-vos-questions_6783795_3210.html",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "EN DIRECT, guerre en Ukraine : des morts dans le nord-est du pays à la suite de frappes russes ; Kiev également visée par des bombardements dimanche",
+    "titulekPuvodni": "EN DIRECT, guerre en Ukraine : des morts dans le nord-est du pays à la suite de frappes russes ; Kiev également visée par des bombardements dimanche",
+    "shrnuti": "Un bâtiment administratif a été touché, dimanche, dans le raïon Holossiïvsky, à Kiev, a annoncé le maire de la capitale ukrainienne, tandis que, dans le raïon Darnytsky, un drone a touché un immeuble d’habitation. Dans le nord-est de l’Ukraine, trois bombes aériennes russes ont frappé dimanche après",
+    "kodZeme": "UA",
+    "zeme": "Ukrajina",
+    "kategorie": [
+      "sabotaz",
+      "drony"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "bomb",
+      "dron",
+      "drone"
+    ],
+    "naliehave": null,
+    "stav": "vyrizen",
+    "vyrez": {
+      "text": "Client Challenge\nA required part of this site couldn’t load. This may be due to a browser\nextension, network issues, or browser settings. Please check your\nconnection, disable any ad blockers, or try using a different browser.",
+      "stazeno": "2026-09-27T16:03:43.214Z",
+      "stav": 200
+    },
+    "vyrizeni": {
+      "kdy": "2026-09-27T20:01:24.429Z",
+      "duvod": "mimo-rozsah",
+      "patriK": null,
+      "poznamka": "Souhrn ruských úderů na severovýchodě Ukrajiny a Kyjeva; uvnitř Ukrajiny, bez doloženého následku pro sledované země."
     }
   },
   {
@@ -4212,6 +4339,44 @@
       "duvod": "neudalost",
       "patriK": null,
       "poznamka": "Odborník Beskrestnov uklidňuje, že plošný výpadek internetu na Ukrajině je nepravděpodobný i přes útoky na síťovou infrastrukturu; jde o vyjádření/odhad, ne o nový skutek, a navíc uvnitř Ukrajiny bez následku pro sledované země."
+    }
+  },
+  {
+    "id": "k-baa69c0d1acbfcf4",
+    "zachyceno": "2026-09-27T17:14:25.855Z",
+    "publikovano": "2026-09-25T23:08:02.000Z",
+    "zdroj": {
+      "nazev": "BBC News — Europe",
+      "url": "https://www.bbc.co.uk/news/articles/cmx2zlqeje9zo?at_medium=RSS&at_campaign=rss",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "As Merz scrambles for support, Germany's identity crisis is laid bare",
+    "titulekPuvodni": "As Merz scrambles for support, Germany's identity crisis is laid bare",
+    "shrnuti": "Voters are turning away from the centre in Germany as fears grow about the economy and migration.",
+    "kodZeme": "DE",
+    "zeme": "Německo",
+    "kategorie": [
+      "drony"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "scrambl"
+    ],
+    "naliehave": null,
+    "stav": "vyrizen",
+    "vyrez": {
+      "text": "As Merz scrambles for support, Germany's identity crisis is laid bare - BBC News\nImage source, Getty Images\nImage caption, Friedrich Merz has led Germany since 2025\nBy Jessica Parker Berlin correspondent\nPublished\n26 September 2026\nA set of bumper local elections has thrown Germany, and its government, off balance.\nChancellor Friedrich Merz may now be a man on borrowed time. His coalition government is in crisis.\nBut this breakdown of business as usual in Germany has been brewing for years.\nIt's a nation wrestling with new, uncomfortable and unresolved realities.\nThink of certain stereotypes about Germany, and think again.\nA country dominated by boring, consensus-driven politics? Not any more.\nA confident, powerhouse economy at the cutting edge of car-making? Yesterday's story.\nA nation that can be used as a byword for impressive efficiency? The trains don't even run on time.\nMany Germans I've spoken to feel their nation has drifted away from the things that once anchored their identity.\nAnd the question of what next is, as yet, unanswered.\nThat uncertainty is currently embodied by a beleaguered chancellor weakened by bruising regional election results.\nImage source, Reuters\nImage…",
+      "stazeno": "2026-09-27T17:14:29.107Z",
+      "stav": 200
+    },
+    "vyrizeni": {
+      "kdy": "2026-09-27T20:01:24.429Z",
+      "duvod": "neudalost",
+      "patriK": null,
+      "poznamka": "Komentář o Merzově hledání politické podpory a německé „krizi identity“; domácí politický komentář, ne bezpečnostní skutek."
     }
   },
   {
@@ -11969,128 +12134,6 @@
       "duvod": "neudalost-stara",
       "patriK": null,
       "poznamka": "Plánované cvičení KILP, uzavření Narvy 30. 4.–2. 5. 2025 (zpráva z 21. 3. 2025); staré a plánované, ne skutek."
-    }
-  },
-  {
-    "id": "k-fd657b73cb784ec2",
-    "zachyceno": "2026-09-20T13:02:21.024Z",
-    "publikovano": "2026-09-20T12:26:47.000Z",
-    "zdroj": {
-      "nazev": "Česko — sabotaz",
-      "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxPQ1RQT2kyTFVDRmZvQWdsbDBIRERhR0I1REJSSVE3N2JYSjFXWGQxWVJSVzBZUjRvZ3NMZV9HRnc5eWdsdjR2QVZxd0t2VEVXQ2o2aW1jVl9teGQ2NkNXcjNTTFl1NnJoa3B3WjROcXFDUlVKby1TUDRBLXlFck5LS193R2NsWG5xS1NTeVJVazF0SzdlbnVyXzJUemM4VmcybXc?oc=5",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "US Charges Russian Network in Alleged European Sabotage, US Murder Plot - OCCRP",
-    "titulekPuvodni": "US Charges Russian Network in Alleged European Sabotage, US Murder Plot - OCCRP",
-    "shrnuti": "US Charges Russian Network in Alleged European Sabotage, US Murder Plot OCCRP",
-    "kodZeme": "RU",
-    "zeme": "Rusko",
-    "kategorie": [
-      "sabotaz",
-      "rusko"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "zeSite": null,
-    "shody": [
-      "sabotage",
-      "russia"
-    ],
-    "naliehave": null,
-    "stav": "vyrizen",
-    "vyrez": {
-      "text": "Google News",
-      "stazeno": "2026-09-20T13:02:21.880Z",
-      "stav": 200
-    },
-    "vyrizeni": {
-      "kdy": "2026-09-20T19:27:03.845Z",
-      "duvod": "duplicita",
-      "patriK": null,
-      "poznamka": "Týž případ jako i-2026-09-15-590b687216 (obvinění v USA); doplněn úřední zdroj DOJ."
-    }
-  },
-  {
-    "id": "k-ad9e995a839bf16f",
-    "zachyceno": "2026-09-20T13:02:20.680Z",
-    "publikovano": "2026-09-20T10:45:39.000Z",
-    "zdroj": {
-      "nazev": "BBC News — Europe",
-      "url": "https://www.bbc.co.uk/news/articles/c34gdjk1ne8yo?at_medium=RSS&at_campaign=rss",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Largest attack on Moscow sees Ukraine fire hundreds of drones, mayor says",
-    "titulekPuvodni": "Largest attack on Moscow sees Ukraine fire hundreds of drones, mayor says",
-    "shrnuti": "Moscow's mayor says 450 drones were downed during the overnight barrage, in which two people died.",
-    "kodZeme": "UA",
-    "zeme": "Ukrajina",
-    "kategorie": [
-      "hybridni",
-      "drony"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "zeSite": null,
-    "shody": [
-      "attack on",
-      "dron",
-      "drone"
-    ],
-    "naliehave": null,
-    "stav": "vyrizen",
-    "vyrez": {
-      "text": "Largest attack on Moscow sees Ukraine fire hundreds of drones, mayor says - BBC News\nFigure caption, Moscow oil refinery seen on fire after Ukrainian drone attack\nBy Jaroslav Lukiv   and   Dearbail Jordan\nPublished\n20 September 2026, 06:04 BST\nUpdated 2 hours ago\nUkraine has fired its largest drone attack on the Moscow region, the mayor has said, hitting the city's main oil refinery and a residential building.\nMayor Sergei Sobyanin said 450 drones heading for the capital had been shot down in what he called \"the most massive\" attack. The region's governor said at least two people were killed and 20 injured.\nUkraine's President Volodymyr Zelensky confirmed Kyiv had hit a \"key\" Russian oil facility and a logistics site in the region with drones and missiles, representing \"billions of dollars that sustain the war machine\".\nUkrainian officials meanwhile said nine people, including three children, had been killed in Russian attacks in the Kyiv and Sumy regions on Saturday.\nRussia and Ukraine have recently intensified their strikes, targeting energy-generating and transport facilities, as well as major logistics hubs.\nA 44-year-old woman was killed in Sofyino on Sunday…",
-      "stazeno": "2026-09-20T13:02:22.032Z",
-      "stav": 200
-    },
-    "vyrizeni": {
-      "kdy": "2026-09-20T19:41:38.758Z",
-      "duvod": "mimo-rozsah",
-      "patriK": null,
-      "poznamka": "Úder uvnitř Ruska nebo Ukrajiny bez doloženého následku pro sledované země. Hranice rozsahu podle metodiky (rozhoduje následek, ne místo)."
-    }
-  },
-  {
-    "id": "k-036cb3bbc9dd78ee",
-    "zachyceno": "2026-09-20T09:01:21.569Z",
-    "publikovano": null,
-    "zdroj": {
-      "nazev": "The Kyiv Independent",
-      "url": "https://kyivindependent.com/russia-claims-cyberattacks-on-voting-systems-during-parliamentary-election/",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Russia claims cyberattacks on voting systems during parliamentary election.",
-    "titulekPuvodni": "Russia claims cyberattacks on voting systems during parliamentary election.",
-    "shrnuti": "",
-    "kodZeme": "RU",
-    "zeme": "Rusko",
-    "kategorie": [
-      "kyber",
-      "rusko"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "zeSite": null,
-    "shody": [
-      "cyberattack",
-      "cyber",
-      "russia"
-    ],
-    "naliehave": null,
-    "stav": "vyrizen",
-    "vyrez": {
-      "text": "Russia claims cyberattacks on voting systems during parliamentary election\nRussia Russia claims cyberattacks on voting systems during parliamentary election\nSeptember 20, 2026 7:30 am • 2 min read\nPrefer on Google\nby Olena Goncharova\nCitizens cast their ballots at a polling station during the country's parliamentary elections in russian controlled city of Mariupol, on Sept. 19, 2026. The Sept. 18-20 vote will determine the ninth convocation of the State Duma, with parliamentary elections being held for the first time since the beginning of the full-scale invasion of Ukraine in February 2022. (Stringer/Anadolu via Getty Images)\nRussian authorities claimed on Sept. 19 that electronic voting systems and communications infrastructure had come under attack as the country entered the second day of its three-day parliamentary election.\nVoting for the 450-seat State Duma began on Sept. 18 and runs through Sept. 20. It is Russia's first parliamentary election since Moscow launched its full-scale invasion of Ukraine in February 2022. The Kremlin-aligned United Russia party currently dominates the lower house of parliament.\nElla Pamfilova, head of Russia's Central Election…",
-      "stazeno": "2026-09-20T09:01:22.779Z",
-      "stav": 200
-    },
-    "vyrizeni": {
-      "kdy": "2026-09-20T19:27:03.845Z",
-      "duvod": "neudalost",
-      "patriK": null,
-      "poznamka": "Ruské tvrzení o kyberútocích na volební systémy bez nezávislého potvrzení; původce nikdo nejmenuje."
     }
   }
 ]
