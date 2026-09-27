@@ -1,0 +1,6 @@
+{
+  "_poznamka": "Dokud tenhle soubor existuje a pozastaveno je true, nastroje/rozhlas.mjs nic nepošle do Telegram kanálu (okamžité zprávy, přehledy dne, mimořádné). Nic se přitom neoznačí jako odeslané. Soukromá zkušební zpráva správci (--test-spravce) a náhled bez odeslání (--nacisto) fungují dál. Obnovení: smazat soubor nebo dát pozastaveno: false.",
+  "pozastaveno": true,
+  "od": "2026-09-27",
+  "duvod": "úprava formátu zpráv (na pokyn provozovatelky)"
+}

@@ -1201,12 +1201,35 @@ async function posliTelegram(text, { nahled = true, pokusu = 3, komu = "kanal" }
   return { ok: false, chyba: "vyčerpány pokusy" };
 }
 
+/** Vrátí záznam o pozastavení, nebo null, když kanál běží. */
+export function pozastaveno(soubor = path.join(koren, "data", "fronta", "rozhlas-pozastaveno.json")) {
+  try {
+    const d = JSON.parse(fs.readFileSync(soubor, "utf-8"));
+    return d && d.pozastaveno === true ? d : null;
+  } catch {
+    return null;
+  }
+}
+
 async function main() {
   const arg = process.argv.slice(2);
   const rezim = arg.includes("--souhrn") ? "souhrn" : "okamzite";
   const nacisto = arg.includes("--nacisto");
   const test = arg.includes("--test");
   const posli = async (text, volby) => (nacisto ? (console.log("---\n" + text), { ok: true }) : posliTelegram(text, volby));
+
+  /*
+    Pozastavení kanálu (27. 9. 2026, úprava formátu zpráv). Vypínač je
+    soubor v repozitáři, ne nastavení na GitHubu: vidí ho každý, kdo čte
+    kód, a obnovení je jeden commit. Nic se neoznačí jako odeslané, takže
+    po obnovení se neztratí žádný záznam. Zkouška správci a náhled
+    (--nacisto) jdou dál — na nich se nový formát ladí.
+  */
+  const pauza = pozastaveno();
+  if (pauza && !nacisto && !(test && arg.includes("--test-spravce"))) {
+    console.log(`[rozhlas] POZASTAVENO od ${pauza.od ?? "?"} (${pauza.duvod ?? "bez důvodu"}) — do kanálu se nic neposílá. Obnovení: smazat data/fronta/rozhlas-pozastaveno.json.`);
+    return;
+  }
 
   const zaznamy = JSON.parse(fs.readFileSync(path.join(koren, "data", "incidenty.json"), "utf-8"))
     .sort((a, b) => kdyZjisteno(a).localeCompare(kdyZjisteno(b)));
