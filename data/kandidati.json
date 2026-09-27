@@ -1,5 +1,39 @@
 [
   {
+    "id": "k-20f64d41f4745f1d",
+    "zachyceno": "2026-09-27T12:23:49.268Z",
+    "publikovano": "2026-09-27T11:58:00.000Z",
+    "zdroj": {
+      "nazev": "Ukrinform (anglicky)",
+      "url": "https://www.ukrinform.net/rubric-ato/4168530-russian-attack-on-vyshneve-in-kyiv-region-kills-one-and-injures-three-others.html",
+      "typ": "wire",
+      "primarni": false
+    },
+    "titulek": "Russian attack on Vyshneve in Kyiv region kills one and injures three others",
+    "titulekPuvodni": "Russian attack on Vyshneve in Kyiv region kills one and injures three others",
+    "shrnuti": "In Vyshneve, Kyiv region, on September 27, one person was killed and three others were injured as a result of a Russian attack.",
+    "kodZeme": "UA",
+    "zeme": "Ukrajina",
+    "kategorie": [
+      "hybridni",
+      "rusko"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "attack on",
+      "russia"
+    ],
+    "naliehave": null,
+    "stav": "ceka",
+    "vyrez": {
+      "text": "Russian attack on Vyshneve in Kyiv region kills one and injures three others\n\r\nSubscription\nNewsletters\nPhotobank\nUkrinform - Ukrainian National News Agency\nFounded in 1918\nSunday, 27 September 2026, 15:23\nWar\nEconomy\nSports\nMore ☰\nContacts\nEng\nУкр\nEng\nEsp\nDeu\nعربي\nFra\n日本語\nPol\n&times;\nAll topics\nWar\nRecovery of Ukraine\nPolitics\nEconomy\nFact checks\nDefense\nSociety and Culture\nSports\nCrime\nAccidents and Emergencies\nAgency\nInformation on Agency\nOur Contacts\nSubscribtion Terms\nOur Services\nPrivacy policy and personal data protection\nAdditional\nPublications\nInterviews\nPhoto\nVideo\nLongreads\nReleases\nServices\nSubscription\nNewsletters\nPhotobank\n\r\n\r\n\r\nIn Vyshneve, Kyiv region, on September 27, one person was killed and three others were injured as a result of a Russian attack.\nAccording to Ukrinform, Timur Tkachenko, head of the Kyiv Regional State Administration, reported this on Telegram .\n\r\n\r\n\r\n\r\n\r\n\r\nIn Vyshneve , five vehicles were damaged when an enemy UAV struck. A fire broke out.\n\r\n\r\n\r\n\r\n\r\n\r\nThe condition of the injured is being assessed. They are receiving all necessary medical care.\n\r\n\r\n\r\n\r\n\r\n\r\nIn Brovary, the attack caused fires in a warehouse and an office building. No one was…",
+      "stazeno": "2026-09-27T12:23:49.447Z",
+      "stav": 200
+    }
+  },
+  {
     "id": "k-66152e03542a37b3",
     "zachyceno": "2026-09-27T12:03:57.384Z",
     "publikovano": "2026-09-27T11:30:00.000Z",
@@ -28,6 +62,45 @@
     "vyrez": {
       "text": "Očima byznysu: Útok na Londýn. Čeští miliardáři bojují ve světové konkurenci - Seznam Zprávy\nZobrazení snímku 1 z 0\nHlavní obsah\nOčima byznysu: Útok na Londýn. Čeští miliardáři bojují ve světové konkurenci\nJakub Kuneš Ředitel Liberálního institutu\n8:42\nChcete-li článek poslouchat, přihlaste se\neBook\nSdílet\nFoto: Sven Hansche, Shutterstock.com\nIlustrační snímek.\n13:30\nKKCG, Penta Real Estate, PPF nebo J&T staví nebo kupují nemovitosti v Londýně. Zatím tedy dokázali vstoupit na prestižní adresy, ale zda „něco“ vytvořili, teprve uvidíme, píše v komentáři ředitel Liberálního institutu Jakub Kuneš.\nČlánek\nČeští developeři dlouho rostli především doma a v zemích střední Evropy. V posledních letech se však jejich ambice posouvají dál na západ. Londýn, jeden z nejdražších a nejkonkurenčnějších realitních trhů světa, pro ně přestává být jen místem příležitostných nákupů nemovitostí. Stává se trhem, na kterém chtějí aktivně stavět, přestavovat a dlouhodobě působit.\nTento posun není příběhem jediné skupiny ani jediné transakce. V Londýně dnes český kapitál míří do různých segmentů – od rezidenční výstavby přes prémiové kanceláře až po starší hotelové investice. Realitní divize KKCG zde…",
       "stazeno": "2026-09-27T12:04:00.501Z",
+      "stav": 200
+    }
+  },
+  {
+    "id": "k-e146c86e83b1806d",
+    "zachyceno": "2026-09-27T12:23:49.305Z",
+    "publikovano": "2026-09-27T11:10:00.000Z",
+    "zdroj": {
+      "nazev": "Ukrainska Pravda (anglicky)",
+      "url": "https://www.pravda.com.ua/eng/news/2026/09/27/8055237/",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Drone debris found near Moldovan village",
+    "titulekPuvodni": "Drone debris found near Moldovan village",
+    "shrnuti": "Moldovan border guards discovered pieces of an unidentified drone in Ștefan Vodă District on 26 September, hours after another unidentified drone entered the country's airspace amid Russian attacks on Ukraine.",
+    "kodZeme": "MD",
+    "zeme": "Moldavsko",
+    "kategorie": [
+      "drony",
+      "hranice",
+      "rusko"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "debris+dron",
+      "dron",
+      "drone",
+      "airspace",
+      "border",
+      "russia"
+    ],
+    "naliehave": null,
+    "stav": "ceka",
+    "vyrez": {
+      "text": "Drone pieces discovered in Moldova near Ukrainian border | Ukrainska Pravda\nMoldovan and Ukrainian flags. Stock photo: Getty Images\nOn the evening of 26 September, Moldovan border guards discovered debris of an unmanned aerial vehicle outside the village of Volintiri in Ștefan Vodă District.\nSource : Moldova's Border Police\nDetails : Pieces of an unidentified drone were discovered at around 20:25 after local residents alerted the authorities.\nAdvertisement:\n\r\n\r\n\r\n\r\n\r\nBorder guards immediately cordoned off the area. The necessary measures are currently being taken to establish all the circumstances surrounding the incident.\nMoldova's Border Police said that, in cooperation with other competent authorities, it was continuously monitoring the situation and maintaining contact with the relevant Ukrainian authorities.\nLaw enforcement officers urged the public not to approach or touch possible pieces of aircraft, ammunition or other unidentified objects. Anyone who discovers such objects is advised to move away from the area and immediately call 112.\nIt is worth noting that earlier the same day, amid Russian attacks on Ukraine, an unidentified drone illegally entered Moldovan airspace.…",
+      "stazeno": "2026-09-27T12:23:50.000Z",
       "stav": 200
     }
   },
@@ -11961,90 +12034,6 @@
     "vyrizeni": {
       "kdy": "2026-09-19T19:10:07.226Z",
       "duvod": "neudalost",
-      "patriK": null,
-      "poznamka": null
-    }
-  },
-  {
-    "id": "k-322c4221ae3e05d5",
-    "zachyceno": "2026-09-19T08:00:22.395Z",
-    "publikovano": "2026-09-18T09:50:54.000Z",
-    "zdroj": {
-      "nazev": "Téma: vojsko (česky)",
-      "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxOSHQ1VkV2cS1IQV9uanY2eEwyVTM1MWFiaGlIRmgtdzA4U0VhVG5ESmYzUk9pNmJKVU9VbW12bXB3b091XzFBV3MyQm1BTVRvc0dwaERjcXF6Z3JHX2lFTy0xdVdtbGc2dkxNSmtmY2g1OHptbV9aZjhpODlpVV9HdGVKektRSFVVRHhWc25IV1Y1ZXN0aGNSV1c0WkpWTF80TmNLTG1EZi0zYnpZYVE?oc=5",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Polsko vyslalo vojáky na hranice s Ukrajinou. Rusko ohrožuje bezpečnost celé Evropy a to musí skončit - ArmádníZpravodaj.cz",
-    "titulekPuvodni": "Polsko vyslalo vojáky na hranice s Ukrajinou. Rusko ohrožuje bezpečnost celé Evropy a to musí skončit - ArmádníZpravodaj.cz",
-    "shrnuti": "Polsko vyslalo vojáky na hranice s Ukrajinou. Rusko ohrožuje bezpečnost celé Evropy a to musí skončit ArmádníZpravodaj.cz",
-    "kodZeme": "PL",
-    "zeme": "Polsko",
-    "kategorie": [
-      "hranice",
-      "vojsko",
-      "rusko"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "zeSite": null,
-    "shody": [
-      "hranic+vojak",
-      "hranice",
-      "vojak",
-      "rusk"
-    ],
-    "naliehave": null,
-    "stav": "vyrizen",
-    "vyrez": {
-      "text": "Google News",
-      "stazeno": "2026-09-19T08:00:24.064Z",
-      "stav": 200
-    },
-    "vyrizeni": {
-      "kdy": "2026-09-19T19:10:07.226Z",
-      "duvod": "neudalost",
-      "patriK": null,
-      "poznamka": null
-    }
-  },
-  {
-    "id": "k-8a1833a84bd22e27",
-    "zachyceno": "2026-09-19T08:00:22.042Z",
-    "publikovano": "2026-09-18T08:04:56.000Z",
-    "zdroj": {
-      "nazev": "ČT24 — hlavní zprávy",
-      "url": "https://ct24.ceskatelevize.cz/clanek/svet/s-kym-a-proc-budeme-bojovat-fico-se-odmita-ridit-clankem-5-nato-377737",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "„S kým a proč budeme bojovat?“ Fico zpochybnil závazek článku 5 NATO",
-    "titulekPuvodni": "„S kým a proč budeme bojovat?“ Fico zpochybnil závazek článku 5 NATO",
-    "shrnuti": "Slovenský premiér Robert Fico (Smer) prohlásil, že v případě ruského útoku nehodlá plnit závazky Slovenska vyplývající z článku 5 Severoatlantické smlouvy o kolektivní obraně. Během projevu ke studentům a zaměstnancům nemocnice v Prešově se ptal, s kým by se vlastně bojovalo, proč a za co, přičemž M",
-    "kodZeme": "SK",
-    "zeme": "Slovensko",
-    "kategorie": [
-      "nato",
-      "rusko"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "zeSite": null,
-    "shody": [
-      "clanku 5",
-      "nato",
-      "rusk"
-    ],
-    "naliehave": null,
-    "stav": "vyrizen",
-    "vyrez": {
-      "text": "„S kým a proč budeme bojovat?“ Fico zpochybnil závazek článku 5 NATO — ČT24 — Česká televize\nŽivé vysílání\nTV program\nPočasí\nTeletext\nE-shop\nVše o ČT\nTV poplatky\nKontakty\nSpravovat účet\nOblíbené pořady\nRozkoukaná videa\nPřihlásit se do TV\nOdhlásit se\n„S kým a proč budeme bojovat?“ Fico zpochybnil závazek článku 5 NATO\nTamara Kejlová\n18. 9. 2026 před 21 h hodinami | Zdroj: ČTK , Ukrajinska pravda , ČT24\nSlovenský premiér Robert Fico (Smer)\nZdroj: Reuters/Radovan Stoklasa\nSlovenský premiér Robert Fico (Smer) prohlásil, že v případě ruského útoku nehodlá plnit závazky Slovenska vyplývající z článku 5 Severoatlantické smlouvy o kolektivní obraně. Během projevu ke studentům a zaměstnancům nemocnice v Prešově se ptal, s kým by se vlastně bojovalo, proč a za co, přičemž Moskvu ani jednou neoznačil za agresora.\nFico v souvislosti s Ukrajinou, která se pátým rokem brání plnohodnotné ruské agresi, mluvil o riziku rozsáhlého konfliktu. „Situace nikdy nebyla tak vážná a vypjatá, pokud jde o možnost celoevropského vojenského konfliktu, jako je tomu nyní,“ varoval ministerský předseda.\nFakta\nČlánek 5 Severoatlantické smlouvy\nDodal, že udělá všechno pro to, aby Slovensko nebylo zataženo do války.…",
-      "stazeno": "2026-09-19T08:00:24.200Z",
-      "stav": 200
-    },
-    "vyrizeni": {
-      "kdy": "2026-09-19T19:10:07.226Z",
-      "duvod": "navrh",
       "patriK": null,
       "poznamka": null
     }
