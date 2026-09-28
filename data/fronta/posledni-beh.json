@@ -1,5 +1,5 @@
 {
-  "kdy": "2026-09-28T06:01:35.057Z",
+  "kdy": "2026-09-28T08:31:21.183Z",
   "zdroje": [
     {
       "klic": "e-sbirka",
@@ -39,10 +39,11 @@
     },
     {
       "klic": "mvcr",
-      "ok": true,
-      "stav": 200,
+      "ok": false,
+      "stav": null,
       "pocetPolozek": 0,
-      "vysledek": "ok"
+      "chyba": "fetch failed",
+      "vysledek": "chyba"
     },
     {
       "klic": "mzv",
@@ -139,10 +140,11 @@
     },
     {
       "klic": "policie",
-      "ok": true,
-      "stav": 200,
+      "ok": false,
+      "stav": null,
       "pocetPolozek": 0,
-      "vysledek": "ok"
+      "chyba": "fetch failed",
+      "vysledek": "chyba"
     },
     {
       "klic": "md",
