@@ -1,5 +1,5 @@
 {
-  "aktualizovano": "2026-09-28T08:33:40.714Z",
+  "aktualizovano": "2026-09-28T09:04:30.695Z",
   "stavy": [
     {
       "klic": "cloudflare",
@@ -28,7 +28,7 @@
         "Arica, Chile - (ARI)",
         "Algiers, Algeria - (ALG)"
       ],
-      "zkontrolovano": "2026-09-28T08:33:40.714Z",
+      "zkontrolovano": "2026-09-28T09:04:30.695Z",
       "chyba": null
     },
     {
@@ -43,12 +43,10 @@
         }
       ],
       "postizene": [
-        "Zoom Meetings",
-        "Zoom Phone",
-        "Zoom Rooms",
-        "Zoom Contact Center"
+        "Devices (Softphones/Deskphones)",
+        "Zoom Phone - Global"
       ],
-      "zkontrolovano": "2026-09-28T08:33:40.714Z",
+      "zkontrolovano": "2026-09-28T09:04:30.695Z",
       "chyba": null
     },
     {
@@ -57,7 +55,7 @@
       "popis": "All Systems Operational",
       "incidenty": [],
       "postizene": [],
-      "zkontrolovano": "2026-09-28T08:33:40.714Z",
+      "zkontrolovano": "2026-09-28T09:04:30.695Z",
       "chyba": null
     }
   ]
