@@ -23,6 +23,8 @@ describe("co je úřední zdroj", () => {
       "https://www.consilium.europa.eu/en/press/",
       "https://shape.nato.int/nieco",
       "https://www.bsi.bund.de/DE/Service-Navi/Presse/",
+      // Lotyšská pohraniční stráž (28. 9. 2026: záznam o poškozené ostraze hranice).
+      "https://www.rs.gov.lv/lv/projekts/pargriezti-kabeli",
     ]) {
       expect(jeUredniZdroj(u), u).toBe(true);
     }

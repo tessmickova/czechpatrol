@@ -426,3 +426,31 @@ describe("scénář zabrání území země NATO (26. 9. 2026)", () => {
     expect(duvodOdmitnuti("Obsazení hotelů v Estonsku letos rekordní")).not.toBeNull();
   });
 });
+
+/*
+  Poškozená ostraha hranice (28. 9. 2026). Lotyšská pohraniční stráž
+  oznámila přeřezané kabely a poškozené kamery na hranici s Ruskem
+  a Běloruskem; síto to zahazovalo jako „bez skutku“. Běžný vandalismus
+  mimo hranici projít nesmí.
+*/
+describe("poškozená ostraha hranice", () => {
+  it("zachytí česky, anglicky i lotyšsky", () => {
+    for (const t of [
+      "Lotyšsko: na hranici s Ruskem někdo přeřezal kabely a poškodil kamery, podle pohraniční stráže záměrně",
+      "Latvian border guard: cables cut, surveillance cameras damaged deliberately on eastern border",
+      "Latvia reports attempts to disrupt expansion of border control system with Russia and Belarus",
+      "Latvijas robežsardze: pārgriezti kabeļi un bojātas kameras uz austrumu robežas",
+    ]) {
+      expect(duvodOdmitnuti(t), t).toBeNull();
+      expect(odhadniTemata(t).kategorie, t).toContain("sabotaz");
+    }
+  });
+  it("vandalismus mimo hranici neprojde", () => {
+    for (const t of [
+      "Vandalové poškodili kamery na parkovišti v Brně",
+      "Zloději přeřezali kabely u tramvajové trati v Ostravě",
+    ]) {
+      expect(duvodOdmitnuti(t), t).not.toBeNull();
+    }
+  });
+});

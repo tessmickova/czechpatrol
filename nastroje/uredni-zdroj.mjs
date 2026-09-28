@@ -28,6 +28,8 @@
 const UREDNI_KONCOVKY = [
   ".gov",
   ".gov.cz", ".gov.uk", ".gov.pl", ".gov.ua", ".gov.au", ".gov.sa",
+  // gov.lv spravuje lotyšský stát (VARAM); pod ní jsou úřady jako pohraniční stráž rs.gov.lv.
+  ".gov.lv",
   ".gouv.fr",
   ".gv.at",
   ".bund.de",

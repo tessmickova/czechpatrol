@@ -21,7 +21,7 @@ export interface ZdrojUdalosti {
   nazev: string;
   url: string;
   /* Jazyk kanálu. Síto zná slova česky a anglicky; u ostatních jazyků chytí jen to, co se píše stejně (dron, sabotaż, NATO). */
-  jazyk: "cs" | "en" | "sk" | "pl" | "de" | "fr" | "it" | "es" | "ro" | "hu" | "nl" | "sv" | "no" | "fi";
+  jazyk: "cs" | "en" | "sk" | "pl" | "de" | "fr" | "it" | "es" | "ro" | "hu" | "nl" | "sv" | "no" | "fi" | "lv";
   /** Úřad nebo instituce, která věc sama oznamuje. */
   primarni: boolean;
   /*
@@ -321,6 +321,16 @@ const REDAKCE: ZdrojUdalosti[] = [
   /* Pobaltí a sever */
   { klic: "postimees-en", nazev: "Postimees (Estonsko, anglicky)", url: "https://news.postimees.ee/rss", jazyk: "en", primarni: false, typ: "media" },
   { klic: "lsm-en", nazev: "LSM (Lotyšsko, anglicky)", url: "https://eng.lsm.lv/rss/", jazyk: "en", primarni: false, typ: "media" },
+  /*
+    Pohraniční stráže na východní hranici EU (28. 9. 2026). Přeřezané kabely
+    a poškozené kamery na lotyšské hranici s Ruskem a Běloruskem oznámila
+    nejdřív Valsts robežsardze na svém webu, média to převzala až potom
+    (a někteří jen jako příspěvek na sociální síti). Úřad sám je nejlepší
+    zdroj takových „tichých“ signálů. Adresy odtud nešly ověřit (blokovaná
+    síť), čtou se jako stránky; nefunkční se ukáže ve Stavu zdrojů.
+  */
+  { klic: "vrs-lv", nazev: "Valsts robežsardze (pohraniční stráž Lotyšska)", url: "https://www.rs.gov.lv/lv/jaunumi", jazyk: "lv", primarni: true, typ: "primary" },
+  { klic: "straz-graniczna", nazev: "Straż Graniczna (pohraniční stráž Polska)", url: "https://www.strazgraniczna.pl/pl/aktualnosci", jazyk: "pl", primarni: true, typ: "primary" },
   { klic: "hs-fi", nazev: "Helsingin Sanomat (Finsko)", url: "https://www.hs.fi/rss/tuoreimmat.xml", jazyk: "fi", primarni: false, typ: "media" },
   { klic: "svt", nazev: "SVT Nyheter (Švédsko)", url: "https://www.svt.se/nyheter/rss.xml", jazyk: "sv", primarni: false, typ: "media" },
   { klic: "nrk", nazev: "NRK (Norsko)", url: "https://www.nrk.no/toppsaker.rss", jazyk: "no", primarni: false, typ: "media" },
