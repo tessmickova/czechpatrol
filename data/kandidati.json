@@ -1,5 +1,37 @@
 [
   {
+    "id": "k-551c1784d79128c6",
+    "zachyceno": "2026-09-28T01:58:02.724Z",
+    "publikovano": "2026-09-27T23:00:00.000Z",
+    "zdroj": {
+      "nazev": "la Repubblica (Itálie)",
+      "url": "https://www.repubblica.it/esteri/2026/09/28/news/fairford_regno_unito_base_usa_raid_iran_sigonella_allarme-425611213/",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Fairford, la rampa di lancio dei bombardieri Usa che hanno devastato l’Iran",
+    "titulekPuvodni": "Fairford, la rampa di lancio dei bombardieri Usa che hanno devastato l’Iran",
+    "shrnuti": "L’allarme attentati esteso a tutte le basi europee, dalla Germania al Belgio, dalla Grecia alla Bulgaria. Controlli anche in Italia",
+    "kodZeme": "DE",
+    "zeme": "Německo",
+    "kategorie": [
+      "sabotaz"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "bomb"
+    ],
+    "naliehave": null,
+    "stav": "ceka",
+    "vyrez": {
+      "text": "Fairford, la rampa di lancio dei bombardieri Usa che hanno devastato l’Iran - la Repubblica\n\r\n\r\n\r\nAbbonati\nScarica l'app\nMenu\nCerca\nNotifiche\nAbbonati\nAbbonati\nEdicola\nRedazione\nScriveteci\n28 Settembre 2026 alle 01:00\n2 minuti di lettura\nAbbonati per leggere anche\nLeggi i commenti",
+      "stazeno": "2026-09-28T01:58:03.354Z",
+      "stav": 200
+    }
+  },
+  {
     "id": "k-377fddbcc5f0343d",
     "zachyceno": "2026-09-24T09:47:04.471Z",
     "publikovano": "2026-09-23T15:04:25.000Z",
@@ -12113,45 +12145,6 @@
       "duvod": "neudalost-stara",
       "patriK": null,
       "poznamka": "Zpráva PPA z 5. 9. 2024 o kybernetických útocích jednotky GRU 29155; sběr ji vzal s dnešním datem, událost není z roku 2026."
-    }
-  },
-  {
-    "id": "k-2054b9c611dd2b43",
-    "zachyceno": "2026-09-20T19:02:29.992Z",
-    "publikovano": null,
-    "zdroj": {
-      "nazev": "Estonská policie — news",
-      "url": "https://www.politsei.ee/en/news/police-to-temporarily-close-narva-border-crossing-point-from-30-april-to-2-may-for-training-exercise-12554",
-      "typ": "primary",
-      "primarni": true
-    },
-    "titulek": "Police to temporarily close Narva border crossing point from 30 April to 2 May for training exercise",
-    "titulekPuvodni": "Police to temporarily close Narva border crossing point from 30 April to 2 May for training exercise",
-    "shrnuti": "",
-    "kodZeme": "EE",
-    "zeme": "Estonsko",
-    "kategorie": [
-      "hranice"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "zeSite": null,
-    "shody": [
-      "border+exercise",
-      "border"
-    ],
-    "naliehave": null,
-    "stav": "vyrizen",
-    "vyrez": {
-      "text": "Police to temporarily close Narva border crossing point from 30 April to 2 May for training exercise - News - Police and Border Guard Board\nPolice to temporarily close Narva border crossing point from 30 April to 2 May for training exercise\n21. March 2025\nThe East Prefecture, in cooperation with the Estonian Defence League, will conduct a joint exercise called KILP, during which the Narva border crossing point will be temporarily closed from April 30 to May 2. The border crossing point will reopen for regular operations on May 3.\nAccording to Eerik Purgel, Head of the Border Guard Bureau of the East Prefecture, the plans to temporarily close the Narva border crossing point are related to a long-planned exercise, as some of the activities are going to be carried out at the border crossing point. “We ask people to take this into account when planning their journeys – from April 30 to May 2, the Narva border crossing point will be temporarily closed, and it will not be possible to cross the border there. During this period, the border can be crossed at the Koidula and Luhamaa border crossing points, which are open 24/7 and allow for crossing by car as well,” he added.\nThe joint…",
-      "stazeno": "2026-09-20T19:02:31.011Z",
-      "stav": 200
-    },
-    "vyrizeni": {
-      "kdy": "2026-09-20T19:27:03.845Z",
-      "duvod": "neudalost-stara",
-      "patriK": null,
-      "poznamka": "Plánované cvičení KILP, uzavření Narvy 30. 4.–2. 5. 2025 (zpráva z 21. 3. 2025); staré a plánované, ne skutek."
     }
   }
 ]
