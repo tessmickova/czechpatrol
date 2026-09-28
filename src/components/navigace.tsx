@@ -23,6 +23,7 @@ export const HLAVNI = [
   { href: "/zeme/", label: "Země" },
   { href: "/analyzy/", label: "Analýzy" },
   { href: "/pripravenost/", label: "Připravenost" },
+  { href: "/zkusenosti/", label: "Zkušenosti" },
 ];
 
 export function Navigace() {
