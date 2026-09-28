@@ -463,6 +463,26 @@ const AKTY_KOMBINACE: { kategorie: string; a: string[]; b: string[]; c?: string[
   },
   {
     /*
+      Poškození ostrahy hranice (28. 9. 2026). Lotyšská pohraniční stráž
+      24. 9. oznámila přeřezané kabely a poškozené kamery a rozvaděče
+      na hranici s Ruskem a Běloruskem, podle ní záměrně. Síto to zahodilo
+      jako „bez skutku“ — přeřezaný kabel ani poškozená kamera v seznamu
+      skutků nejsou, protože samy o sobě jsou běžný vandalismus.
+
+      Proto tři sloupce: poškození + zařízení ostrahy + hranice. Rozbitá
+      kamera na parkovišti neprojde, rozbitá kamera na hranici ano.
+      Lotyšské kmeny (pārgriezt, bojāt, robeža) kvůli úředním zprávám
+      Valsts robežsardze, které vycházejí nejdřív lotyšsky.
+    */
+    kategorie: "sabotaz",
+    a: ["prerez", "pretrh", "poskod", "vyradil", "vyradili", "znicil", "znicili", "znicen", "cut", "severed", "damag", "sabot",
+      "vandal", "disrupt", "obstruct", "tamper", "pargriez", "bojat", "bojaj", "uszkodz", "przeci", "zniszcz"],
+    b: ["kabel", "kabl", "cable", "kamer", "camera", "cctv", "surveillance", "sledovac", "ostrah", "rozvad", "skap", "sloup", "stozar",
+      "oploc", "fence", "barrier", "senzor", "sensor", "control system", "kontrolni system"],
+    c: ["hranic", "border", "pohranic", "robez", "frontier", "granic"],
+  },
+  {
+    /*
       Incident s válečnou lodí nebo ponorkou.
 
       Doplněno 23. 9. 2026: ruská fregata 14. 9. vypálila dvě světlice směrem
@@ -627,7 +647,7 @@ const ZEME: { kod: string; nazev: string; slova: string[]; presna?: string[] }[]
   { kod: "AT", nazev: "Rakousko", slova: ["austria", "rakousk", "vienna", "viden"] },
   { kod: "HU", nazev: "Maďarsko", slova: ["hungary", "hungarian", "madarsk", "budapest"] },
   { kod: "LT", nazev: "Litva", slova: ["lithuania", "litv", "vilnius", "klaipeda"] },
-  { kod: "LV", nazev: "Lotyšsko", slova: ["latvia", "lotys", "riga"] },
+  { kod: "LV", nazev: "Lotyšsko", slova: ["latvia", "latvij", "lotys", "riga", "robezsardz"] },
   { kod: "EE", nazev: "Estonsko", slova: ["estonia", "estonsk", "tallinn", "narva"] },
   { kod: "FI", nazev: "Finsko", slova: ["finland", "finnish", "finsk", "helsinki", "helsink"] },
   { kod: "SE", nazev: "Švédsko", slova: ["sweden", "swedish", "svedsk", "stockholm", "gotland"] },

@@ -25,6 +25,8 @@ const koren = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const WEB = "https://czechpatrol.cz";
 const STAV = path.join(koren, "data", "fronta", "rozhlaseno.json");
 const MAX_ZPRAV_NA_BEH = 8;
+/** Kolik záznamů se vejde do jednoho přehledu; zbytek odkazem na web. */
+const MAX_V_PREHLEDU_ZAZNAMU = 12;
 /** Při prvním spuštění se oznámí jen záznamy zjištěné v posledních dnech; starší se považují za oznámené. */
 const PRVNI_BEH_DNI = 2;
 /** Záznam zjištěný před delší dobou (zpětné doplnění osy) se neoznamuje nikdy — jen se zapamatuje. */
@@ -388,13 +390,19 @@ export function sestavZpravu(i, { aktualizace = false, souhrn = false, faktu = 1
   */
   const potvrzen = i.atribuce === "oficialni" || i.atribuce === "domaci";
   const kdoSeUvadi = i.puvodce && i.puvodce !== "neznamy" ? PUVODCI[i.puvodce] : null;
+  /*
+    „Vyšetřování pokračuje“ jen tehdy, když to záznam opravdu říká (stav
+    „probiha“). Dřív to stálo u každého případu bez původce — i u poškozené
+    lotyšské hranice (28. 9. 2026), kde o vyšetřování zdroje nemluví.
+  */
+  const vysetruje = i.stav === "probiha";
   const pachatel = d !== "pripad"
     ? null
     : potvrzen
       ? `<b>Původce:</b> ${PUVODCI[i.puvodce ?? "neznamy"]} — potvrzeno úředním závěrem`
       : kdoSeUvadi
-        ? `<b>Původce: zatím neurčen.</b> Média a komentáře uvádějí ${kdoSeUvadi}; úřední potvrzení k tomu není a vyšetřování pokračuje.`
-        : "<b>Původce: zatím neurčen.</b> Vyšetřování pokračuje.";
+        ? `<b>Původce: zatím neurčen.</b> Média a komentáře uvádějí ${kdoSeUvadi}; úřední potvrzení k tomu není${vysetruje ? " a vyšetřování pokračuje" : ""}.`
+        : `<b>Původce: zatím neurčen.</b>${vysetruje ? " Vyšetřování pokračuje." : ""}`;
 
   if (souhrn) {
     const { celkem, uredni } = pocetZdroju(i);
@@ -510,7 +518,7 @@ export function klicovaVetaSouhrnu(zaznamy) {
  * Denní souhrn: pruh puntíků a legenda nahoře, tučně to podstatné, pak zkrácené
  * položky seřazené podle naléhavosti. Delší souhrn se rozdělí na víc zpráv.
  */
-export function sestavSouhrn(polozky, { ted = Date.now(), limit = 3500 } = {}) {
+export function sestavSouhrn(polozky, { ted = Date.now(), limit = 3500, cast = null } = {}) {
   const razene = [...polozky].sort((a, b) => vaha(b.i) - vaha(a.i) || kdyZjisteno(b.i).localeCompare(kdyZjisteno(a.i)));
   const zaznamy = razene.map((p) => p.i);
   const pocet = zaznamy.length;
@@ -520,7 +528,7 @@ export function sestavSouhrn(polozky, { ted = Date.now(), limit = 3500 } = {}) {
   const kusy = [];
   let akt = [
     pruhTecek(zaznamy),
-    `<b>CzechPatrol · denní přehled ${datumCz(new Date(ted).toISOString())}</b>`,
+    `<b>CzechPatrol · ${cast === "rano" ? "ranní" : cast === "vecer" ? "večerní" : "denní"} přehled ${datumCz(new Date(ted).toISOString())}</b>`,
     `${pocet} ${slovo}${nejvyssi}`,
     `<i>${legendaTecek(zaznamy)}</i>`,
     "",
@@ -847,9 +855,35 @@ export function jeCesky(text) {
   return /[áéíýúž]/i.test(t) && /\b(a|v|ve|na|se|je|z|ze|o|k|do|po|za|pro|při|u)\b/i.test(t);
 }
 
-/** Jméno části dne podle hodiny UTC: přehled v 5:00 UTC je ranní, v 17:00 večerní. */
+/*
+  Přehled chodí v 7:30 a 19:30 PRAŽSKÉHO času (28. 9. 2026, přání
+  provozovatelky). Cron na GitHubu zná jen UTC, a tak běží dvakrát
+  (v letním i zimním posunu) a o tom, jestli je čas, rozhoduje tenhle
+  výpočet. Zbytečný běh skončí hned; přehled se pozná podle klíče dne
+  a části dne, takže dvakrát neodejde.
+*/
+const PRAHA = new Intl.DateTimeFormat("en-GB", {
+  timeZone: "Europe/Prague", year: "numeric", month: "2-digit", day: "2-digit", hour: "2-digit", minute: "2-digit", hourCycle: "h23",
+});
+export function prazskyCas(ted = Date.now()) {
+  const c = Object.fromEntries(PRAHA.formatToParts(new Date(ted)).map((x) => [x.type, x.value]));
+  return { den: `${c.year}-${c.month}-${c.day}`, hodina: Number(c.hour), minuta: Number(c.minute) };
+}
+
+/** Jméno části dne podle pražského času: do 13:00 ranní přehled, potom večerní. */
 export function castDne(ted = Date.now()) {
-  return new Date(ted).getUTCHours() < 12 ? "rano" : "vecer";
+  return prazskyCas(ted).hodina < 13 ? "rano" : "vecer";
+}
+
+/**
+ * Je čas na přehled? Od 7:15 do poledne ranní, od 19:15 do půlnoci večerní.
+ * Spodní mez chytí běh v 7:30 (cron se spíš zpozdí, než předběhne) a pustí
+ * zimní běh v 6:30 naprázdno; horní mez dovolí dohnat zpožděný běh.
+ */
+export function jeCasPrehledu(ted = Date.now()) {
+  const { hodina, minuta } = prazskyCas(ted);
+  const m = hodina * 60 + minuta;
+  return (m >= 7 * 60 + 15 && m < 12 * 60) || (m >= 19 * 60 + 15 && m < 24 * 60);
 }
 
 export function vyberNavrhyDoPrehledu(navrhy, stav, { ted = Date.now() } = {}) {
@@ -936,6 +970,12 @@ function radekNavrhu(n) {
   Pořadí přehledu: nejdřív to nejkritičtější, co sběr zachytil, pak ověřené,
   pak neověřené. Kdo přehled jen přelétne, má nejzávažnější věc nahoře —
   a hned u ní, jestli je ověřená, nebo ne.
+*/
+/*
+  Přehled dne s neověřenými návrhy a zachycenými titulky do kanálu od
+  28. 9. 2026 nechodí — provozovatelka chtěla zpět klasický přehled
+  ověřených záznamů (sestavSouhrn). Sestavení zůstává, testy ho drží
+  pro případ návratu.
 */
 export function sestavPrehledDne({ ted = Date.now(), cast = castDne(ted), zmeny = [], palivo = null, sluzby = [], navrhy = [], overene = [], kandidati = [], posledniSber = null } = {}) {
   const od = ted - 24 * 3_600_000;
@@ -1024,10 +1064,22 @@ export function ctiTipy() {
   try { return JSON.parse(fs.readFileSync(soubor, "utf-8")); } catch { return []; }
 }
 
+/** Nejvýš jeden tip za tolik hodin — tip je služba, ne proud zpráv. */
+const TIP_KAZDYCH_H = 20;
+
+/*
+  `znovu` (datum) u tipu = poslat ho ještě jednou, i když už odešel dřív
+  (28. 9. 2026: tip o rádiích s ASA, doplněný o modely). Odejde jednou
+  po tom datu; stav si pamatuje, kdy naposledy.
+*/
+const tipCeka = (t, poslane) => !poslane[t.klic] || (t.znovu && String(poslane[t.klic].kdy ?? "") < t.znovu);
+
 export function vyberTip(tipy, stav, { ted = Date.now() } = {}) {
   const poslane = stav.tipy ?? {};
+  const posledni = Math.max(0, ...Object.values(poslane).filter((x) => !x?.ticho).map((x) => new Date(x?.kdy ?? 0).getTime() || 0));
+  if (ted - posledni < TIP_KAZDYCH_H * 3_600_000) return null;
   return (tipy ?? [])
-    .filter((t) => t?.klic && !poslane[t.klic])
+    .filter((t) => t?.klic && tipCeka(t, poslane))
     .filter((t) => (t.zdroje ?? []).some((z) => /^https?:\/\//.test(z?.url ?? "")))
     .filter((t) => !t.platiDo || new Date(t.platiDo).getTime() > ted)
     .sort((a, b) => String(b.kdy).localeCompare(String(a.kdy)))[0] ?? null;
@@ -1066,50 +1118,126 @@ function zapisStav(s) {
   fs.writeFileSync(STAV, JSON.stringify(s, null, 2) + "\n", "utf-8");
 }
 
+/*
+  Kudy záznam do kanálu půjde (28. 9. 2026, přání provozovatelky):
+  „Nechci spamovat každou novinku.“ Průběžně jen to, co se reálně týká lidí
+  v Česku nebo vážně zhoršuje situaci; ostatní v přehledu v 7:30 a 19:30.
+
+  - „hned“ — celá zpráva ihned: vážný případ (O, R), úřední opatření platné
+    v Česku, článek 4 nebo 5 NATO v titulku.
+  - „kratce“ — malý signál (případ se žlutou závažností, třeba poškozená
+    ostraha lotyšské hranice): dvouřádková zpráva, nejvýš jedna za 4 hodiny.
+    Co se do okna nevejde, počká na přehled.
+  - „prehled“ — všechno ostatní: opatření v cizině, reakce, nízká
+    závažnost.
+
+  Pravidlo je opsané v src/lib/kam-odejde.ts (Správa ho ukazuje u tlačítka
+  Schválit); testy/kam-odejde.test.ts hlídá, aby se nerozešla.
+*/
+const CLANEK_4_5 = /(^|[^\p{L}])(čl\.|článe?k\p{L}*|article)\s*[45](?!\d)/iu;
+export function cestaZaznamu(i) {
+  const d = druh(i);
+  if (CLANEK_4_5.test(`${i.titulek ?? ""} ${i.kratkyTitulek ?? ""}`)) return "hned";
+  if (d === "pripad" && vazne(i)) return "hned";
+  if (d === "opatreni" && dulezitePro(i)) return "hned";
+  if (d === "pripad" && /^Y/.test(i.zavaznost ?? "")) return "kratce";
+  return "prehled";
+}
+
+/** Nejvýš jeden malý signál za tolik hodin. */
+export const KRATCE_KAZDYCH_H = 4;
+/** Starší malý signál už průběžně nejde — počká na přehled. */
+const KRATCE_NEJVYS_H = 12;
+
+/** Ověřený záznam (člověkem nebo dvěma zdroji s úředním). „Neověřeno úředně“ do kanálu nejde. */
+const overeny = (i) => i.lidskyOvereno || i.overeni === "automaticke";
+
 /**
- * Vybere, co odeslat. `okamzite` = jen vážné případy a opatření; `souhrn` = zbytek.
- * Vrací položky {i, aktualizace} a vedlejším účinkem označí za oznámené to, co se při prvním běhu přeskočilo.
+ * Tiché zapamatování starého a archivního. Vrací true, když se záznam jen
+ * zapamatoval (a nemá se posílat).
+ */
+function jenZapamatuj(i, stav, ted) {
+  const doposlat = stav.zaznamy[i.id]?.doposlat === true;
+  if (doposlat || stav.zaznamy[i.id]) return false;
+  const prvni = !stav.prvniBeh;
+  const zjisteno = new Date(kdyZjisteno(i)).getTime();
+  /*
+    Zpětně doplněná osa a staré události nejsou novinka: jen se zapamatují,
+    aby kanál nezaplavil archiv. Rozhoduje stáří UDÁLOSTI, ne datum, kdy
+    jsme ji zapsali — jinak by případ z loňska odešel jako čerstvá zpráva
+    jen proto, že jsme ho doplnili dnes.
+  */
+  if (jeArchivni(i, ted) || zjisteno < ted - NEJSTARSI_DNI * 86_400_000 || (prvni && zjisteno < ted - PRVNI_BEH_DNI * 86_400_000)) {
+    stav.zaznamy[i.id] = { kdy: new Date(ted).toISOString(), historie: i.historie?.length ?? 0, ticho: true };
+    return true;
+  }
+  return false;
+}
+
+/**
+ * Vybere, co odeslat.
+ *
+ * `okamzite` = jen cesta „hned“ (nové záznamy a nová zjištění k nim).
+ * `souhrn` = přehled: všechno ověřené, co ještě v žádném přehledu nebylo —
+ * i to, co už odešlo průběžně, aby přehled byl úplný. Záznamy, které
+ * odešly před touhle úpravou (bez `cesta`), se do přehledu nevracejí.
+ *
+ * Vedlejším účinkem označí za oznámené to, co se jen tiše zapamatovalo.
+ * Doposlání: u záznamu ve stavu stačí `doposlat: true` (tak se 23. 9. 2026
+ * doposílaly WB Electronics a Porvoo).
  */
 export function vyberNove(zaznamy, stav, { rezim, ted = Date.now() }) {
-  const prvni = !stav.prvniBeh;
-  const hranicePrvni = ted - PRVNI_BEH_DNI * 86_400_000;
-  const hraniceStari = ted - NEJSTARSI_DNI * 86_400_000;
   const vybrane = [];
   for (const i of zaznamy) {
-    /* Automaticky zveřejněné (dva zdroje, úřední podle adresy) jdou jako ostatní; „neověřeno úředně" ne. */
-    if (!i.lidskyOvereno && i.overeni !== "automaticke") continue;
-    const d = druh(i);
-    const historie = i.historie?.length ?? 0;
-    /*
-      Doposlání. Záznam, který se při prvním běhu nebo kvůli stáří jen tiše
-      zapamatoval, jde odeslat dodatečně: stačí u něj ve stavu nastavit
-      `doposlat: true`. Odejde v nejbližším běhu s ostatními a pak se zapíše
-      jako odeslaný. Tak se 23. 9. 2026 doposílaly WB Electronics a Porvoo,
-      které se 6. 9. při prvním spuštění kanálu jen zapamatovaly.
-    */
+    if (!overeny(i)) continue;
+    if (jenZapamatuj(i, stav, ted)) continue;
     const doposlat = stav.zaznamy[i.id]?.doposlat === true;
     const z = doposlat ? undefined : stav.zaznamy[i.id];
-    const zjisteno = new Date(kdyZjisteno(i)).getTime();
-    /*
-      Zpětně doplněná osa a staré události nejsou novinka: jen se zapamatují,
-      aby kanál nezaplavil archiv. Rozhoduje stáří UDÁLOSTI, ne datum, kdy
-      jsme ji zapsali — jinak by případ z loňska odešel jako čerstvá zpráva
-      jen proto, že jsme ho doplnili dnes.
-
-      Nové zjištění k takovému případu novinka je; přijde příště jako
-      aktualizace, protože záznam už budeme mít zapamatovaný.
-    */
-    if (!z && !doposlat && (jeArchivni(i, ted) || zjisteno < hraniceStari || (prvni && zjisteno < hranicePrvni))) {
-      stav.zaznamy[i.id] = { kdy: new Date(ted).toISOString(), historie, ticho: true };
-      continue;
+    const historie = i.historie?.length ?? 0;
+    const vice = z && historie > (z.historie ?? 0) && druh(i) === "pripad";
+    if (rezim === "okamzite") {
+      if (cestaZaznamu(i) !== "hned") continue;
+      if (!z) vybrane.push({ i, aktualizace: false });
+      else if (vice) vybrane.push({ i, aktualizace: true });
+    } else {
+      if (!z) vybrane.push({ i, aktualizace: false });
+      else if (z.cesta && !z.prehled) vybrane.push({ i, aktualizace: false });
+      else if (vice) vybrane.push({ i, aktualizace: true });
     }
-    const patriDoOkamzitych = d === "opatreni" || (d === "pripad" && vazne(i));
-    if (rezim === "okamzite" && !patriDoOkamzitych) continue;
-    if (rezim === "souhrn" && patriDoOkamzitych && z) continue; // vážné šly hned; do souhrnu jen když ještě neodešly
-    if (!z) vybrane.push({ i, aktualizace: false });
-    else if (historie > z.historie && d === "pripad") vybrane.push({ i, aktualizace: true });
   }
   return vybrane;
+}
+
+/**
+ * Jeden malý signál, pokud od posledního uběhly 4 hodiny. Nejdřív to
+ * nejzávažnější, při shodě nejnovější. Ostatní počkají na přehled.
+ */
+export function vyberKratky(zaznamy, stav, { ted = Date.now() } = {}) {
+  const posledni = stav.kratce?.posledni ? new Date(stav.kratce.posledni).getTime() : 0;
+  if (ted - posledni < KRATCE_KAZDYCH_H * 3_600_000) return null;
+  return zaznamy
+    .filter((i) => overeny(i) && !stav.zaznamy[i.id] && cestaZaznamu(i) === "kratce")
+    .filter((i) => !jenZapamatuj(i, stav, ted))
+    .filter((i) => ted - new Date(kdyZjisteno(i)).getTime() <= KRATCE_NEJVYS_H * 3_600_000)
+    .sort((a, b) => vaha(b) - vaha(a) || (Z_DESETI[b.zavaznost] ?? 0) - (Z_DESETI[a.zavaznost] ?? 0) || kdyZjisteno(b).localeCompare(kdyZjisteno(a)))[0] ?? null;
+}
+
+/** Malý signál na dva řádky: puntík a titulek, pak odkaz na celý záznam se zdroji. */
+export function sestavKratky(i) {
+  return [
+    `${tecka(i)} <b>${esc(zkrat(String(i.titulek || i.kratkyTitulek), 200))}</b>`,
+    `Podrobnosti a zdroje: ${WEB}/incident/${i.slug}/`,
+  ].join("\n");
+}
+
+/** Přehled bez nových záznamů — i to je zpráva: kanál žije a nic nového nepřibylo. */
+export function sestavPrazdnyPrehled({ ted = Date.now(), cast = castDne(ted) } = {}) {
+  return [
+    `<b>CzechPatrol · ${cast === "rano" ? "ranní" : "večerní"} přehled ${datumCz(new Date(ted).toISOString())}</b>`,
+    "Od minulého přehledu žádný nový ověřený záznam.",
+    "",
+    `${WEB}/`,
+  ].join("\n");
 }
 
 /** Změny oficiálních stavů z archivu, které ještě nebyly oznámené. */
@@ -1360,18 +1488,6 @@ async function main() {
     }
   }
 
-  /* 0c. tip k přípravě — jeden za běh, v klidném režimu i v souhrnu. */
-  const tip = vyberTip(ctiTipy(), stav, { ted });
-  if (tip) {
-    if (prvniBeh) {
-      stav.tipy[tip.klic] = { kdy: new Date(ted).toISOString(), ticho: true };
-    } else {
-      const v = await posli(sestavTip(tip), { nahled: false });
-      if (v.ok) { stav.tipy[tip.klic] = { kdy: new Date(ted).toISOString(), messageId: v.messageId ?? null }; odeslano++; }
-      else { selhalo++; console.log(`[rozhlas] tip neodešel: ${v.chyba}`); }
-    }
-  }
-
   // 1. změny oficiálních stavů — vždy hned
   for (const { snimek, zmeny } of vyberZmenyStavu(archiv, stav)) {
     if (prvniBeh) { stav.snimky[snimek.kdy] = { kdy: new Date(ted).toISOString(), ticho: true }; continue; }
@@ -1380,33 +1496,24 @@ async function main() {
   }
 
   /*
-    1b. skokový pohyb ceny pohonných hmot.
-
-    Jde jen v okamžitém režimu a jen tehdy, když sběr skok opravdu naměřil.
-    Při prvním běhu se jen zapamatuje — jinak by kanál začal cenou, která
-    mohla vyskočit před týdnem a už dávno není novinka.
+    Cena paliv průběžně nechodí (28. 9. 2026): týdenní pohyb ceny není
+    krize. Skok, který sběr naměří, jde jednou větou do přehledu. Když
+    benzín opravdu dochází, je to úřední opatření nebo případ v Česku
+    a jde cestou „hned“.
   */
   const palivo = ctiPalivo();
   const skok = vyberPalivo(palivo, stav);
-  if (rezim === "okamzite" && skok) {
-    if (prvniBeh) {
-      stav.palivo[skok.tyden] = { kdy: new Date(ted).toISOString(), ticho: true };
-    } else {
-      const v = await posli(sestavPalivo(skok), { nahled: false });
-      if (v.ok) { stav.palivo[skok.tyden] = { kdy: new Date(ted).toISOString(), messageId: v.messageId ?? null }; odeslano++; }
-      else { selhalo++; console.log(`[rozhlas] ${v.chyba}`); }
-    }
-  }
 
   // 2. záznamy
-  const nove = vyberNove(zaznamy, stav, { rezim, ted });
-  const davka = nove.slice(0, MAX_ZPRAV_NA_BEH);
-  if (rezim === "souhrn" && davka.length > 1) {
-    const { kusy } = sestavSouhrn(davka, { ted });
-    let ok = true;
-    for (const k of kusy) { const v = await posli(k, { nahled: false }); if (!v.ok) { ok = false; console.log(`[rozhlas] ${v.chyba}`); } }
-    if (ok) { for (const { i } of davka) stav.zaznamy[i.id] = { kdy: new Date(ted).toISOString(), historie: i.historie?.length ?? 0 }; odeslano += kusy.length; } else selhalo++;
-  } else {
+  const den = prazskyCas(ted).den;
+  const cast = castDne(ted);
+  const klicPrehledu = `${den}-${cast}`;
+  const vynutit = arg.includes("--vynutit");
+  let nove = [];
+  let davka = [];
+  if (rezim === "okamzite") {
+    nove = vyberNove(zaznamy, stav, { rezim, ted });
+    davka = nove.slice(0, MAX_ZPRAV_NA_BEH);
     for (const { i, aktualizace } of davka) {
       const dily = rozdelZpravu(sestavZpravu(i, { aktualizace }));
       let ok = true;
@@ -1424,42 +1531,61 @@ async function main() {
         přijmout a odpověď se cestou ztratit; druhé odeslání téhož záznamu
         je horší než jedna možná chybějící zpráva, kterou člověk dohledá.
       */
-      if (!ok && nejisty) {
-        stav.zaznamy[i.id] = { kdy: new Date(ted).toISOString(), historie: i.historie?.length ?? 0, nejistyVysledek: true };
-      }
-      if (ok) { stav.zaznamy[i.id] = { kdy: new Date(ted).toISOString(), historie: i.historie?.length ?? 0, messageId: prvniId }; odeslano += dily.length; }
+      const zaznam = { kdy: new Date(ted).toISOString(), historie: i.historie?.length ?? 0, cesta: "hned" };
+      if (!ok && nejisty) stav.zaznamy[i.id] = { ...zaznam, nejistyVysledek: true };
+      if (ok) { stav.zaznamy[i.id] = { ...zaznam, messageId: prvniId }; odeslano += dily.length; }
       else selhalo++;
     }
+
+    // 2b. malý signál — dva řádky, nejvýš jeden za 4 hodiny.
+    const kratky = prvniBeh ? null : vyberKratky(zaznamy, stav, { ted });
+    if (kratky) {
+      const v = await posli(sestavKratky(kratky), { nahled: false });
+      if (v.ok || v.nejisty) {
+        stav.zaznamy[kratky.id] = { kdy: new Date(ted).toISOString(), historie: kratky.historie?.length ?? 0, cesta: "kratce", messageId: v.messageId ?? null };
+        stav.kratce = { posledni: new Date(ted).toISOString(), id: kratky.id };
+        if (v.ok) odeslano++;
+      } else { selhalo++; console.log(`[rozhlas] malý signál neodešel: ${v.chyba}`); }
+    }
+  } else if (!prvniBeh && !(stav.prehledy ?? {})[klicPrehledu] && (vynutit || jeCasPrehledu(ted))) {
+    /*
+      Přehled v 7:30 a 19:30 — klasický formát (pruh puntíků, závažnost,
+      co z toho plyne pro Česko, položky podle naléhavosti). Obsahuje
+      všechno ověřené od minulého přehledu, i to, co odešlo průběžně.
+    */
+    nove = vyberNove(zaznamy, stav, { rezim, ted });
+    davka = nove.slice(0, MAX_V_PREHLEDU_ZAZNAMU);
+    const kusy = davka.length ? sestavSouhrn(davka, { ted, cast }).kusy : [sestavPrazdnyPrehled({ ted, cast })];
+    if (skok) kusy[kusy.length - 1] += `\n\n\u26fd ${esc(skok.text.split("\n")[0])}`;
+    if (nove.length > davka.length) kusy[kusy.length - 1] += `\n\nDalší záznamy (${nove.length - davka.length}) na ${WEB}/udalosti/`;
+    let ok = true;
+    let prvniId = null;
+    for (const k of kusy) {
+      const v = await posli(k, { nahled: false });
+      if (v.ok) prvniId ??= v.messageId ?? null;
+      else { ok = false; console.log(`[rozhlas] přehled neodešel: ${v.chyba}`); }
+    }
+    if (ok) {
+      const kdy = new Date(ted).toISOString();
+      for (const { i } of nove) stav.zaznamy[i.id] = { ...(stav.zaznamy[i.id] ?? { cesta: "prehled" }), kdy: stav.zaznamy[i.id]?.kdy ?? kdy, historie: i.historie?.length ?? 0, prehled: klicPrehledu, doposlat: undefined };
+      stav.prehledy[klicPrehledu] = { kdy, zaznamu: nove.length, messageId: prvniId };
+      if (skok) stav.palivo[skok.tyden] = { kdy, prehled: klicPrehledu };
+      odeslano += kusy.length;
+    } else selhalo++;
+  } else if (rezim === "souhrn") {
+    console.log(`[rozhlas] přehled ${klicPrehledu}: ${(stav.prehledy ?? {})[klicPrehledu] ? "už odešel" : "není čas (7:30 a 19:30 pražského času)"}`);
   }
 
-  /*
-    Přehled dne. Až úplně nakonec, v souhrnném režimu, vždycky — ráno
-    i večer, bez ohledu na to, co odešlo před ním. Kanál tak dvakrát denně
-    řekne česky, co se změnilo, co je nepotvrzené a co sběr zachytil;
-    ověřené záznamy, které odešly zvlášť, jen spočítá.
-  */
-  const den = new Date(ted).toISOString().slice(0, 10);
-  const cast = castDne(ted);
-  const klicPrehledu = `${den}-${cast}`;
-  if (rezim === "souhrn" && !prvniBeh && !(stav.prehledy ?? {})[klicPrehledu]) {
-    const navrhyDoPrehledu = vyberNavrhyDoPrehledu(ctiNavrhy(), stav, { ted });
-    const text = sestavPrehledDne({
-      ted, cast,
-      zmeny: zmenyStavuZaDen(archiv, { ted }),
-      palivo: palivoDoPrehledu(palivo, { ted }),
-      sluzby: sluzbyDoPrehledu(ctiSluzby()),
-      navrhy: navrhyDoPrehledu,
-      /* Ověřené za 24 h podle data zjištění — i ty, co odešly zvlášť dřív. */
-      overene: zaznamy.filter((i) => (i.lidskyOvereno || i.overeni === "automaticke") && ted - new Date(kdyZjisteno(i)).getTime() <= 24 * 3_600_000).reverse(),
-      kandidati: ctiKandidaty(),
-      posledniSber: (() => { try { return JSON.parse(fs.readFileSync(path.join(koren, "data", "fronta", "posledni-beh.json"), "utf-8")).kdy ?? null; } catch { return null; } })(),
-    });
-    const v = await posli(text, { nahled: false });
-    if (v.ok) {
-      stav.prehledy[klicPrehledu] = { kdy: new Date(ted).toISOString(), navrhu: navrhyDoPrehledu.length, messageId: v.messageId ?? null };
-      for (const n of navrhyDoPrehledu) stav.navrhy[n.id] = { kdy: new Date(ted).toISOString(), prehled: klicPrehledu };
-      odeslano++;
-    } else { selhalo++; console.log(`[rozhlas] přehled dne neodešel: ${v.chyba}`); }
+  /* 3. tip k přípravě — nejvýš jeden za 20 hodin, za ostatními zprávami, ať nepředbíhá naléhavé. */
+  const tip = vyberTip(ctiTipy(), stav, { ted });
+  if (tip) {
+    if (prvniBeh) {
+      stav.tipy[tip.klic] = { kdy: new Date(ted).toISOString(), ticho: true };
+    } else {
+      const v = await posli(sestavTip(tip), { nahled: false });
+      if (v.ok) { stav.tipy[tip.klic] = { kdy: new Date(ted).toISOString(), messageId: v.messageId ?? null }; odeslano++; }
+      else { selhalo++; console.log(`[rozhlas] tip neodešel: ${v.chyba}`); }
+    }
   }
 
   if (prvniBeh) stav.prvniBeh = new Date(ted).toISOString();

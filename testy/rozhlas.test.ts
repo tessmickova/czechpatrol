@@ -2,7 +2,7 @@
 import fs from "node:fs";
 import path from "node:path";
 import { describe, expect, it } from "vitest";
-import { castDne, jeCesky, palivoDoPrehledu, sestavPrehledDne, sluzbyDoPrehledu, vyberNavrhyDoPrehledu, zmenyStavuZaDen, klicovaVeta, legendaTecek, pocetZdroju, pruhTecek, PUVODCI, radekPokryti, jeArchivni, radekData, rozdelZpravu, sestavPalivo, sestavSouhrn, sestavPrehledZachycenych, sestavSignal, sestavTest, sestavVystrahu, sestavZdroje, sestavZmenuStavu, sestavZpravu, vyberDoPrehledu, vyberNove, vyberPalivo, vyberSignaly, vyberVystrahu, vyberZmenyStavu, zahlavi, sestavVaznyNavrh, vyberVazneNavrhy, smerZmeny, sestavMimoradnou } from "../nastroje/rozhlas.mjs";
+import { castDne, cestaZaznamu, jeCasPrehledu, sestavKratky, sestavPrazdnyPrehled, vyberKratky, vyberTip, jeCesky, palivoDoPrehledu, sestavPrehledDne, sluzbyDoPrehledu, vyberNavrhyDoPrehledu, zmenyStavuZaDen, klicovaVeta, legendaTecek, pocetZdroju, pruhTecek, PUVODCI, radekPokryti, jeArchivni, radekData, rozdelZpravu, sestavPalivo, sestavSouhrn, sestavPrehledZachycenych, sestavSignal, sestavTest, sestavVystrahu, sestavZdroje, sestavZmenuStavu, sestavZpravu, vyberDoPrehledu, vyberNove, vyberPalivo, vyberSignaly, vyberVystrahu, vyberZmenyStavu, zahlavi, sestavVaznyNavrh, vyberVazneNavrhy, smerZmeny, sestavMimoradnou } from "../nastroje/rozhlas.mjs";
 import { smerZmeny as smerZmenyWeb } from "../src/lib/smer";
 import { UROVNE, zDeseti } from "../src/lib/skala";
 import { PUVODCI as PUVODCI_WEB } from "../src/lib/kategorie";
@@ -23,20 +23,27 @@ describe("rozhlas", () => {
     expect(z).toContain("<b>Původce: zatím neurčen.</b>");
     expect(z).toContain("https://czechpatrol.cz/incident/x/");
   });
-  it("okamžitě jdou jen vážné případy a opatření, zbytek do souhrnu; každý záznam jednou", () => {
+  it("hned jde jen vážné a opatření v Česku; přehled má všechno ověřené od minulého přehledu, jednou", () => {
     const ted = new Date("2026-09-06T12:00:00Z").getTime();
     const vazny = zaznam({ id: "a", slug: "a" });
     const mirny = zaznam({ id: "b", slug: "b", zavaznost: "Y2" });
-    const opatreni = zaznam({ id: "c", slug: "c", druh: "opatreni", puvodce: undefined, zavaznost: "Y1" });
+    const opatreniCz = zaznam({ id: "c", slug: "c", druh: "opatreni", puvodce: undefined, zavaznost: "Y1", kodZeme: "CZ" });
+    const opatreniDe = zaznam({ id: "e", slug: "e", druh: "opatreni", puvodce: undefined, zavaznost: "Y1" });
+    const vse = [vazny, mirny, opatreniCz, opatreniDe];
     const stav = { zaznamy: {}, snimky: {}, prvniBeh: "2026-09-05T00:00:00Z" };
-    const hned = vyberNove([vazny, mirny, opatreni], stav, { rezim: "okamzite", ted });
+    const hned = vyberNove(vse, stav, { rezim: "okamzite", ted });
     expect(hned.map((x) => x.i.id)).toEqual(["a", "c"]);
-    stav.zaznamy["a"] = { kdy: "x", historie: 1 };
-    stav.zaznamy["c"] = { kdy: "x", historie: 1 };
-    const souhrn = vyberNove([vazny, mirny, opatreni], stav, { rezim: "souhrn", ted });
-    expect(souhrn.map((x) => x.i.id)).toEqual(["b"]);
-    stav.zaznamy["b"] = { kdy: "x", historie: 1 };
-    expect(vyberNove([vazny, mirny, opatreni], stav, { rezim: "souhrn", ted })).toEqual([]);
+    stav.zaznamy["a"] = { kdy: "x", historie: 1, cesta: "hned" };
+    stav.zaznamy["c"] = { kdy: "x", historie: 1, cesta: "hned" };
+    // Přehled je úplný: i to, co odešlo průběžně.
+    expect(vyberNove(vse, stav, { rezim: "souhrn", ted }).map((x) => x.i.id)).toEqual(["a", "b", "c", "e"]);
+    for (const id of ["a", "b", "c", "e"]) stav.zaznamy[id] = { ...(stav.zaznamy[id] ?? {}), kdy: "x", historie: 1, prehled: "2026-09-06-vecer" };
+    expect(vyberNove(vse, stav, { rezim: "souhrn", ted })).toEqual([]);
+  });
+  it("záznam odeslaný před 28. 9. 2026 (bez cesty) se do přehledu nevrací", () => {
+    const ted = new Date("2026-09-06T12:00:00Z").getTime();
+    const stav = { zaznamy: { a: { kdy: "x", historie: 1 } }, snimky: {}, prvniBeh: "2026-09-05T00:00:00Z" };
+    expect(vyberNove([zaznam({ id: "a", slug: "a" })], stav, { rezim: "souhrn", ted })).toEqual([]);
   });
   it("nová položka v historii případu = jedna zpráva aktualizace", () => {
     const ted = new Date("2026-09-06T12:00:00Z").getTime();
@@ -841,5 +848,98 @@ describe("mimořádná zpráva", () => {
   it("u prohlášení netvrdí, že jde o dění v zemi mluvčího", () => {
     expect(klicovaVeta(i)).toContain("zaznělo v Rusku");
     expect(klicovaVeta(i)).not.toContain("k dění");
+  });
+});
+
+/*
+  Pravidla kanálu od 28. 9. 2026 (přání provozovatelky): průběžně jen
+  naléhavé, malé signály dvěma řádky nejvýš jednou za 4 hodiny, přehled
+  v 7:30 a 19:30 pražského času.
+*/
+describe("co jde do kanálu průběžně", () => {
+  const ted = Date.parse("2026-09-28T10:00:00Z");
+  const z = (n: Record<string, unknown>) => zaznam({ datumUdalosti: "2026-09-28T06:00:00Z", datumZjisteni: "2026-09-28T08:00:00Z", ...n });
+
+  it("cesta záznamu", () => {
+    expect(cestaZaznamu(z({ zavaznost: "O1" }))).toBe("hned");
+    expect(cestaZaznamu(z({ zavaznost: "R2" }))).toBe("hned");
+    expect(cestaZaznamu(z({ druh: "opatreni", kodZeme: "CZ", zavaznost: "G1" }))).toBe("hned");
+    expect(cestaZaznamu(z({ druh: "opatreni", kodZeme: "PL", zavaznost: "Y1" }))).toBe("prehled");
+    expect(cestaZaznamu(z({ druh: "reakce", zavaznost: "Y1", titulek: "Polsko žádá konzultace podle článku 4 NATO" }))).toBe("hned");
+    expect(cestaZaznamu(z({ druh: "reakce", zavaznost: "Y1", titulek: "Estonia invokes Article 4" }))).toBe("hned");
+    expect(cestaZaznamu(z({ zavaznost: "Y2", titulek: "Lotyšsko: přeřezané kabely na hranici" }))).toBe("kratce");
+    expect(cestaZaznamu(z({ zavaznost: "G2" }))).toBe("prehled");
+    expect(cestaZaznamu(z({ druh: "reakce", zavaznost: "Y3" }))).toBe("prehled");
+  });
+
+  it("malý signál nejvýš jednou za 4 hodiny, jen čerstvý a jen ověřený", () => {
+    const a = z({ id: "a", slug: "a", zavaznost: "Y2" });
+    const b = z({ id: "b", slug: "b", zavaznost: "Y3" });
+    const stav = { zaznamy: {}, prvniBeh: "2026-09-01T00:00:00Z" };
+    expect(vyberKratky([a, b], stav, { ted })?.id).toBe("b");
+    stav.kratce = { posledni: new Date(ted - 3 * 3_600_000).toISOString() };
+    expect(vyberKratky([a, b], stav, { ted })).toBeNull();
+    stav.kratce = { posledni: new Date(ted - 4 * 3_600_000).toISOString() };
+    expect(vyberKratky([a], stav, { ted })?.id).toBe("a");
+    expect(vyberKratky([z({ id: "s", zavaznost: "Y2", datumZjisteni: "2026-09-27T08:00:00Z" })], { zaznamy: {}, prvniBeh: "x" }, { ted })).toBeNull();
+    expect(vyberKratky([z({ id: "n", zavaznost: "Y2", lidskyOvereno: false })], { zaznamy: {}, prvniBeh: "x" }, { ted })).toBeNull();
+  });
+
+  it("malý signál má dva řádky", () => {
+    const t = sestavKratky(z({ slug: "lv", zavaznost: "Y2", titulek: "Lotyšsko: přeřezané kabely a kamery na hranici" }));
+    expect(t.split("\n")).toHaveLength(2);
+    expect(t).toContain("https://czechpatrol.cz/incident/lv/");
+  });
+
+  it("vážný případ nejde podruhé jako malý signál", () => {
+    expect(vyberKratky([z({ id: "o", zavaznost: "O1" })], { zaznamy: {}, prvniBeh: "x" }, { ted })).toBeNull();
+  });
+});
+
+describe("přehled v 7:30 a 19:30 pražského času", () => {
+  it("letní i zimní čas: pošle jen běh ve správnou hodinu", () => {
+    expect(jeCasPrehledu(Date.parse("2026-09-28T05:30:00Z"))).toBe(true);   // 7:30 SELČ
+    expect(jeCasPrehledu(Date.parse("2026-09-28T17:30:00Z"))).toBe(true);   // 19:30 SELČ
+    expect(jeCasPrehledu(Date.parse("2026-12-01T05:30:00Z"))).toBe(false);  // 6:30 SEČ — brzy
+    expect(jeCasPrehledu(Date.parse("2026-12-01T06:30:00Z"))).toBe(true);   // 7:30 SEČ
+    expect(jeCasPrehledu(Date.parse("2026-12-01T17:30:00Z"))).toBe(false);  // 18:30 SEČ — brzy
+    expect(jeCasPrehledu(Date.parse("2026-12-01T18:30:00Z"))).toBe(true);   // 19:30 SEČ
+    expect(jeCasPrehledu(Date.parse("2026-09-28T12:00:00Z"))).toBe(false);  // 14:00
+  });
+  it("workflow má čtyři běhy, které obě pásma pokryjí", () => {
+    const yml = fs.readFileSync(path.join(__dirname, "..", ".github", "workflows", "rozhlas.yml"), "utf-8");
+    for (const c of ["30 5 * * *", "30 6 * * *", "30 17 * * *", "30 18 * * *"]) expect(yml).toContain(`"${c}"`);
+  });
+  it("prázdný přehled řekne, že nic nového nepřibylo", () => {
+    const t = sestavPrazdnyPrehled({ ted: Date.parse("2026-09-28T05:30:00Z") });
+    expect(t).toContain("ranní přehled 28. 9. 2026");
+    expect(t).toContain("žádný nový ověřený záznam");
+  });
+  it("klasický přehled nese ranní nebo večerní v hlavičce", () => {
+    const { kusy } = sestavSouhrn([{ i: zaznam({}), aktualizace: false }], { ted: Date.parse("2026-09-28T17:30:00Z"), cast: "vecer" });
+    expect(kusy[0]).toContain("večerní přehled 28. 9. 2026");
+  });
+});
+
+describe("tip k přípravě", () => {
+  const tip = { klic: "asa", nadpis: "ASA", text: "t", kdy: "2026-09-10", zdroje: [{ url: "https://x", nazev: "x" }] };
+  const ted = Date.parse("2026-09-28T10:00:00Z");
+  it("odeslaný tip se znovu pošle jen s datem znovu", () => {
+    const stav = { tipy: { asa: { kdy: "2026-09-15T19:53:33.893Z" } } };
+    expect(vyberTip([tip], stav, { ted })).toBeNull();
+    expect(vyberTip([{ ...tip, znovu: "2026-09-28" }], stav, { ted })?.klic).toBe("asa");
+    expect(vyberTip([{ ...tip, znovu: "2026-09-28" }], { tipy: { asa: { kdy: "2026-09-28T08:00:00Z" } } }, { ted })).toBeNull();
+  });
+  it("nejvýš jeden tip za 20 hodin", () => {
+    const stav = { tipy: { jiny: { kdy: new Date(ted - 5 * 3_600_000).toISOString() } } };
+    expect(vyberTip([tip], stav, { ted })).toBeNull();
+  });
+});
+
+describe("vyšetřování se nepíše, když o něm záznam nemluví", () => {
+  it("jen u stavu probiha", () => {
+    expect(sestavZpravu(zaznam({ stav: "probiha" }))).toContain("Vyšetřování pokračuje.");
+    expect(sestavZpravu(zaznam({ stav: "neuvedeno" }))).not.toContain("yšetřování");
+    expect(sestavZpravu(zaznam({ stav: "bez-vysetrovani" }))).not.toContain("yšetřování pokračuje");
   });
 });

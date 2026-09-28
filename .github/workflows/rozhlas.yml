@@ -6,13 +6,17 @@ on:
     paths:
       - "data/incidenty.json"
       - "data/historie.json"
+      # Nový tip (nebo tip k opětovnému poslání) odejde hned, ne až s přehledem.
+      - "data/tipy.json"
   schedule:
-    # Přehled dne dvakrát: ráno v 5:00 UTC (7:00 letního / 6:00 zimního
-    # času) a večer v 17:00 UTC (19:00 / 18:00). Jeden večerní přehled
-    # nestačil — kdo se ráno ptá „co se přes noc stalo", dostal odpověď
-    # až v sedm večer.
-    - cron: "0 5 * * *"
-    - cron: "0 17 * * *"
+    # Přehled v 7:30 a 19:30 PRAŽSKÉHO času (28. 9. 2026). Cron zná jen UTC,
+    # proto dva běhy na každý přehled — 5:30/6:30 a 17:30/18:30 UTC pokryjí
+    # letní i zimní čas. O tom, který běh přehled pošle, rozhoduje skript
+    # (jeCasPrehledu v nastroje/rozhlas.mjs); druhý skončí za pár sekund.
+    - cron: "30 5 * * *"
+    - cron: "30 6 * * *"
+    - cron: "30 17 * * *"
+    - cron: "30 18 * * *"
   workflow_dispatch:
     inputs:
       test:
@@ -89,7 +93,15 @@ jobs:
 
       - name: Přehled dne
         if: github.event_name == 'schedule' || (github.event_name == 'workflow_dispatch' && inputs.prehled)
-        run: node nastroje/rozhlas.mjs --souhrn
+        env:
+          RUCNE: ${{ github.event_name == 'workflow_dispatch' && inputs.prehled }}
+        run: |
+          # Ručně spuštěný přehled nečeká na 7:30 / 19:30.
+          if [ "$RUCNE" = "true" ]; then
+            node nastroje/rozhlas.mjs --souhrn --vynutit
+          else
+            node nastroje/rozhlas.mjs --souhrn
+          fi
 
       - name: Uložit stav odeslaného
         run: |

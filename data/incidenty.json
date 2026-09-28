@@ -11688,5 +11688,84 @@
     "lidskyOvereno": false,
     "archivniZaznam": false,
     "overeni": "neovereno"
+  },
+  {
+    "id": "i-2026-09-24-lotyssko-hranice-kabely",
+    "slug": "lotyssko-poskozena-ostraha-hranice-zari-2026",
+    "titulek": "Lotyšsko: na hranici s Ruskem a Běloruskem přeřezané kabely a poškozené kamery ostrahy; podle pohraniční stráže nejde o náhodný vandalismus",
+    "kratkyTitulek": "Poškozená ostraha lotyšské hranice",
+    "zeme": "Lotyšsko",
+    "kodZeme": "LV",
+    "kategorie": [
+      "sabotaz",
+      "hranice"
+    ],
+    "datumUdalosti": "2026-09-24T00:00:00Z",
+    "datumZjisteni": "2026-09-24T00:00:00Z",
+    "aktualizovano": "2026-09-28T00:00:00Z",
+    "zavaznost": "Y2",
+    "jistota": "vysoka",
+    "stav": "neuvedeno",
+    "atribuce": "nepotvrzena",
+    "puvodce": "neznamy",
+    "druh": "pripad",
+    "fakta": [
+      "Podle lotyšské pohraniční stráže (Valsts robežsardze, 24. 9. 2026) byly na východní hranici s Ruskem a Běloruskem přeřezány kabely a poškozeny rozvodné skříně, kamery a sloupy kamerového dohledu; zařízení patří k budovanému automatizovanému systému ostrahy hranice.",
+      "Náčelník pohraniční stráže podle úřadu uvedl, že úmyslné poškozování kamer a kabelů „není náhodný vandalismus, ale cílené jednání, jehož účelem je ztížit ostrahu hranice a zavádění technologií“.",
+      "Pohraniční stráž podle svého sdělení od začátku roku 2026 zabránila 11 384 pokusům o nelegální přechod hranice z Běloruska, z toho 24 dne 24. 9."
+    ],
+    "neznameho": [
+      "Kdo zařízení poškodil: pohraniční stráž obecně uvádí, že postupy osob podporovaných režimy Ruska a Běloruska jsou stále agresivnější; konkrétní původce těchto škod nejmenovala.",
+      "Kdy přesně a na kolika místech ke škodám došlo, úřad neuvedl.",
+      "Zda věc vyšetřuje policie nebo jiný orgán, jsem ve zdrojích nenašel."
+    ],
+    "vyznam": "",
+    "eskalacniSpousteče": [],
+    "deeskalacniSignaly": [],
+    "zdroje": [
+      {
+        "nazev": "Valsts robežsardze — Pārgriezti kabeļi, bojāti skapji un dabas stihija neaptur austrumu robežas izbūvi",
+        "url": "https://www.rs.gov.lv/lv/projekts/pargriezti-kabeli-bojati-skapji-un-dabas-stihija-neaptur-austrumu-robezas-izbuvi-darbi-virzas-uz-prieksu",
+        "typ": "primary",
+        "publikovano": "2026-09-24T00:00:00Z",
+        "primarni": true,
+        "jazyk": "lv"
+      },
+      {
+        "nazev": "ReTV — Robežsardze ziņo par apzinātiem bojājumiem uz Latvijas austrumu robežas",
+        "url": "https://retv.lv/drosiba/robezsardze-zino-par-apzinatiem-bojajumiem-uz-latvijas-austrumu-robezas/",
+        "typ": "media",
+        "publikovano": "2026-09-24T00:00:00Z",
+        "primarni": false,
+        "jazyk": "lv"
+      },
+      {
+        "nazev": "Militarnyi — Latvia Reports Attempts to Disrupt Expansion of Border Control System With Russia and Belarus",
+        "url": "https://militarnyi.com/en/news/latvia-reports-attempts-to-disrupt-expansion-of-border-control-system-with-russia-and-belarus/",
+        "typ": "media",
+        "publikovano": "2026-09-24T00:00:00Z",
+        "primarni": false,
+        "jazyk": "en"
+      }
+    ],
+    "souvisejici": [],
+    "historie": [
+      {
+        "kdy": "2026-09-24T00:00:00Z",
+        "text": "Pohraniční stráž zveřejnila škody na ostraze hranice.",
+        "novySignal": true
+      },
+      {
+        "kdy": "2026-09-28T00:00:00Z",
+        "text": "Zapsáno podle úředního zdroje a dvou redakcí; podnět byl příspěvek na sociální síti, ten se jako zdroj neuvádí. Zveřejněno cestou dvou nezávislých zdrojů, z toho úředního.",
+        "novySignal": false
+      }
+    ],
+    "novy": true,
+    "zapocitanoTyden": "2026-09-21",
+    "aiZpracovano": true,
+    "lidskyOvereno": false,
+    "archivniZaznam": false,
+    "overeni": "automaticke"
   }
 ]

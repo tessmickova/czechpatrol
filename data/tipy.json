@@ -1,8 +1,8 @@
 [
   {
     "klic": "asa-dab-2026-09",
-    "nadpis": "Rozhlas poprvé otestoval varovný systém ASA v digitálním vysílání",
-    "text": "10. září proběhly v Česku první testy systému ASA, který umí do digitálního rozhlasového vysílání DAB vložit varovné hlášení. Potřeba je přijímač, který umí DAB — u analogového FM vysílání systém nefunguje. Pokud rádio s DAB doma nebo v autě máte, stojí za to vědět, že tahle cesta varování existuje.",
+    "nadpis": "Rádio s technologií ASA vás při krizi varuje samo",
+    "text": "Rádio s ASA (digitální vysílání DAB+) se při krizi samo zapne, přepne na Radiožurnál a přehraje varování pro vaši oblast. Český rozhlas ho v září 2026 poprvé otestoval. Potvrzené modely: Telestar TOP 300 a TechniSat DIGITRADIO 3 ASA, u jiných hledejte logo ASA. Rádio musí zůstat v zásuvce nebo s bateriemi. Na FM vysílání ASA nefunguje.",
     "kdy": "2026-09-10",
     "zdroje": [
       {
@@ -12,8 +12,17 @@
         "publikovano": "2026-09-10T00:00:00Z",
         "primarni": true,
         "jazyk": "cs"
+      },
+      {
+        "nazev": "Český rozhlas — celoplošný test varování obyvatelstva",
+        "url": "https://informace.rozhlas.cz/cesky-rozhlas-a-ceske-radiokomunikace-otestuji-celoplosne-varovani-obyvatelstva-9642099",
+        "typ": "primary",
+        "publikovano": null,
+        "primarni": true,
+        "jazyk": "cs"
       }
     ],
-    "platiDo": null
+    "platiDo": null,
+    "znovu": "2026-09-28"
   }
 ]

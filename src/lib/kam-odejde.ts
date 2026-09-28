@@ -13,7 +13,7 @@
 /** Po kolika dnech od události se do kanálu už nic neposílá. */
 export const NEJSTARSI_DNI = 14;
 
-export type Kam = "hned" | "souhrn" | "ticho";
+export type Kam = "hned" | "kratce" | "souhrn" | "ticho";
 
 export interface Vysledek {
   kam: Kam;
@@ -27,10 +27,16 @@ interface Navrh {
   puvodce?: string | null;
   datumUdalosti?: string | null;
   archivniZaznam?: boolean | null;
+  titulek?: string | null;
+  kratkyTitulek?: string | null;
+  kodZeme?: string | null;
+  kategorie?: string[] | null;
 }
 
 /** Vážné případy jsou O a R; G a Y do okamžitého rozeslání nepatří. */
 const vazne = (z: string) => /^[OR]/.test(z);
+/** Článek 4 nebo 5 NATO v titulku — stejný vzor jako CLANEK_4_5 v rozhlasu. */
+const CLANEK_4_5 = /(^|[^\p{L}])(čl\.|článe?k\p{L}*|article)\s*[45](?!\d)/iu;
 
 export function kamOdejde(n: Navrh, ted: number = Date.now()): Vysledek {
   const druh = n.druh ?? (n.puvodce ? "pripad" : "reakce");
@@ -48,18 +54,25 @@ export function kamOdejde(n: Navrh, ted: number = Date.now()): Vysledek {
     };
   }
 
-  if (druh === "opatreni" || (druh === "pripad" && vazne(zavaznost))) {
+  const proCesko = n.kodZeme === "CZ" || (n.kategorie ?? []).includes("cr");
+  if (CLANEK_4_5.test(`${n.titulek ?? ""} ${n.kratkyTitulek ?? ""}`)) {
+    return { kam: "hned", vysvetleni: "Článek 4 nebo 5 NATO — po schválení odejde do veřejného kanálu hned." };
+  }
+  if (druh === "pripad" && vazne(zavaznost)) {
+    return { kam: "hned", vysvetleni: `Vážný případ (${zavaznost}) — po schválení odejde do veřejného kanálu hned.` };
+  }
+  if (druh === "opatreni" && proCesko) {
+    return { kam: "hned", vysvetleni: "Opatření platné v Česku — po schválení odejde do veřejného kanálu hned." };
+  }
+  if (druh === "pripad" && /^Y/.test(zavaznost)) {
     return {
-      kam: "hned",
-      vysvetleni:
-        druh === "opatreni"
-          ? "Opatření — po schválení odejde do veřejného kanálu hned."
-          : `Vážný případ (${zavaznost}) — po schválení odejde do veřejného kanálu hned.`,
+      kam: "kratce",
+      vysvetleni: "Malý signál — odejde jako dvouřádková zpráva (nejvýš jedna za 4 hodiny), jinak v přehledu v 7:30 nebo 19:30.",
     };
   }
 
   return {
     kam: "souhrn",
-    vysvetleni: "Do kanálu nejde hned, přidá se do denního souhrnu v 19:00.",
+    vysvetleni: "Do kanálu nejde hned, přidá se do přehledu v 7:30 nebo 19:30.",
   };
 }
