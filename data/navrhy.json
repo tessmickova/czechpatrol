@@ -350,57 +350,192 @@
   {
     "kam": "zaznam",
     "pripravil": "patrol",
-    "pripraveno": "2026-09-28T14:16:45.198Z",
-    "id": "i-2026-09-28-fa2517243f",
-    "slug": "eu-fa2517243f",
-    "titulek": "EU: ministři zahraničí v Bruselu připravují „nouzový bezpečnostní protokol“ pro koordinaci reakce na hybridní útoky",
-    "kratkyTitulek": "EU: ministři zahraničí v Bruselu připravují „nouzový bezpečnostní protokol“ pro koordinaci reakce na hybridní útoky",
-    "zeme": "Evropská unie",
-    "kodZeme": "EU",
+    "pripraveno": "2026-09-28T20:42:58.740Z",
+    "id": "i-2026-09-24-ae87e10e80",
+    "slug": "lv-ae87e10e80",
+    "titulek": "Lotyšsko: pohraniční stráž hlásí úmyslně přeřezané kabely a sabotované rozvaděče kamerového systému na východní hranici s Ruskem a Běloruskem",
+    "kratkyTitulek": "Lotyšsko: pohraniční stráž hlásí úmyslně přeřezané kabely a sabotované rozvaděče kamerového systému na východní hranici s Ruskem a Běloruskem",
+    "zeme": "Lotyšsko",
+    "kodZeme": "LV",
     "kategorie": [
-      "hybridni",
-      "diplomacie",
-      "nato"
+      "sabotaz",
+      "hranice",
+      "infrastruktura"
     ],
-    "datumUdalosti": "2026-09-28T00:00:00Z",
+    "datumUdalosti": "2026-09-24T00:00:00Z",
     "datumZjisteni": "2026-09-28T00:00:00Z",
-    "aktualizovano": "2026-09-28T14:16:45.198Z",
-    "zavaznost": "Y1",
+    "aktualizovano": "2026-09-28T20:42:58.740Z",
+    "zavaznost": "O1",
     "jistota": "vysoka",
     "stav": "neuvedeno",
     "atribuce": "neznama",
-    "puvodce": null,
-    "druh": "opatreni",
+    "puvodce": "neznamy",
+    "druh": "pripad",
     "fakta": [
-      "Podle Euronews a УНН (UNN) se v pondělí 28. 9. 2026 sešli ministři v Bruselu s úkolem připravit takzvaný „nouzový bezpečnostní protokol“ pro koordinaci rychlé reakce členských států na hybridní hrozby.",
-      "Podle obou zdrojů řekla vysoká představitelka EU pro zahraniční věci Kaja Kallasová: „We need to be vigilant because we see in the intelligence that Russia is planning more sabotage acts.“",
-      "Podle УНН má protokol pokrýt incidenty, které nedosahují prahu ozbrojené agrese, ale vyžadují společnou reakci Evropské komise, členských států a Evropské služby pro vnější činnost.",
-      "Podle Euronews Kallasová zdůraznila snahu vyhnout se překryvu s NATO a to, aby byl protokol „více o činech než o řečech“.",
-      "Podle Euronews podtrhlo naléhavost jednání narušení finského vzdušného prostoru ruským letadlem nad Finským zálivem v pátek, kvůli kterému vzlétly finské a švédské stíhačky."
+      "Podle lotyšské Státní pohraniční stráže (Valsts robežsardze, zveřejněno 24. 9. 2026) byly na východní hranici s Ruskem a Běloruskem zjištěny úmyslně poškozené kabely a sabotované rozvaděče kamerového systému, budovaného v rámci projektu automatizovaného sledování hranice.",
+      "Podle přednosty pohraniční stráže generála Guntise Pujātse jde o cílené škody, které přirovnal k metodám podporovaným režimy sousedních zemí.",
+      "Podle pohraniční stráže projekt navzdory sabotážím i přírodním vlivům (vichřice) pokračuje přesně podle plánu, s dokončením plánovaným na konec roku 2026."
     ],
     "neznameho": [
-      "Kdy bude protokol formálně schválen a jak konkrétně bude fungovat.",
-      "Konkrétní zpravodajské informace, o které se Kallasové tvrzení o plánovaných ruských sabotážích opírá, nejsou zveřejněny; jde o její vyjádření, ne o doložený fakt."
+      "Přesný počet a data jednotlivých incidentů stráž nezveřejnila.",
+      "Kdo je za poškozením, stráž nejmenuje konkrétní stát ani osobu; „režimy sousedních zemí“ je její formulace, ne úřední atribuce."
     ],
     "vyznam": "",
     "eskalacniSpousteče": [],
     "deeskalacniSignaly": [],
     "zdroje": [
       {
-        "nazev": "Euronews — EU ministers plan hybrid threat response amid warnings of Russian sabotage",
-        "url": "https://www.euronews.com/2026/09/28/eu-mininsters-plan-response-to-hybrid-attacks-amid-warnings-of-russian-sabotage",
+        "nazev": "Český rozhlas — Poničení kabelů či kamerového systému. Lotyšští pohraniční poukazují na škody na hranici",
+        "url": "https://www.irozhlas.cz/zpravy-svet/poniceni-kabelu-ci-kameroveho-systemu-lotyssti-pohranicni-poukazuji-na-skody-na_2609281640_vdv",
+        "typ": "media",
+        "publikovano": "2026-09-28T00:00:00Z",
+        "primarni": false,
+        "jazyk": "cs"
+      },
+      {
+        "nazev": "Valsts robežsardze (Státní pohraniční stráž Lotyšska) — Pārgriezti kabeļi, bojāti skapji un dabas stihija neaptur austrumu robežas izbūvi",
+        "url": "https://www.rs.gov.lv/lv/projekts/pargriezti-kabeli-bojati-skapji-un-dabas-stihija-neaptur-austrumu-robezas-izbuvi-darbi-virzas-uz-prieksu",
+        "typ": "primary",
+        "publikovano": "2026-09-24T00:00:00Z",
+        "primarni": true,
+        "jazyk": "lv"
+      }
+    ],
+    "souvisejici": [],
+    "historie": [
+      {
+        "kdy": "2026-09-24T00:00:00Z",
+        "text": "Zachyceno automatickým sběrem, druhý zdroj doložen před zařazením do fronty.",
+        "novySignal": true
+      }
+    ],
+    "novy": true,
+    "zapocitanoTyden": "2026-09-24",
+    "aiZpracovano": true,
+    "lidskyOvereno": false,
+    "archivniZaznam": false
+  },
+  {
+    "kam": "zaznam",
+    "pripravil": "patrol",
+    "pripraveno": "2026-09-28T20:42:58.740Z",
+    "id": "i-2026-09-28-519a22b993",
+    "slug": "eu-519a22b993",
+    "titulek": "Nejvyšší velitel spojeneckých sil NATO v Evropě řekl europoslancům, že se ruská sabotáž v Evropě nedaří a podporu Ukrajině neoslabuje",
+    "kratkyTitulek": "Nejvyšší velitel spojeneckých sil NATO v Evropě řekl europoslancům, že se ruská sabotáž v Evropě nedaří a podporu Ukrajině neoslabuje",
+    "zeme": "Evropská unie",
+    "kodZeme": "EU",
+    "kategorie": [
+      "hybridni",
+      "nato"
+    ],
+    "datumUdalosti": "2026-09-28T00:00:00Z",
+    "datumZjisteni": "2026-09-28T00:00:00Z",
+    "aktualizovano": "2026-09-28T20:42:58.740Z",
+    "zavaznost": "Y1",
+    "jistota": "vysoka",
+    "stav": "neuvedeno",
+    "atribuce": "neznama",
+    "puvodce": null,
+    "druh": "reakce",
+    "fakta": [
+      "Podle ORF a Courthouse News Service řekl 28. 9. 2026 nejvyšší velitel spojeneckých sil NATO v Evropě generál Alexus Grynkewich výboru europoslanců: „State-directed sabotage is growing increasingly brazen.“",
+      "Podle Grynkewiche (Courthouse News) jde o pokusy vyvolat strach a rozbít jednotnou podporu Ukrajině, ale „It isn’t working“ (nedaří se to).",
+      "Podle Grynkewiche jako příklady posloužily nález dronu s výbušninami na letišti v Lipsku a vypálení světlic ruskou válečnou lodí na dánský vrtulník; jako doklad neúspěchu strategie uvedl, že Dánsko po incidentu se světlicemi zrychlilo novou vojenskou pomoc Ukrajině.",
+      "Podle Grynkewiche vyzval státy, aby veřejně pojmenovaly odpovědné v Moskvě, což podle něj zvyšuje náklady pro tvůrce těchto akcí."
+    ],
+    "neznameho": [
+      "Konkrétní seznam všech incidentů, které generál považuje za součást kampaně, není zveřejněn.",
+      "Oficiální přepis projevu (nato.int, europarl.europa.eu) jsem neotevřel; údaje jsou z médií."
+    ],
+    "vyznam": "",
+    "eskalacniSpousteče": [],
+    "deeskalacniSignaly": [],
+    "zdroje": [
+      {
+        "nazev": "ORF News (Rakousko) — NATO-General: Russische Sabotage in Europa erfolglos",
+        "url": "https://orf.at/stories/3443526/",
+        "typ": "media",
+        "publikovano": "2026-09-28T00:00:00Z",
+        "primarni": false,
+        "jazyk": "de"
+      },
+      {
+        "nazev": "Courthouse News Service — Top NATO commander says Russian hybrid campaign 'isn't working'",
+        "url": "https://www.courthousenews.com/top-nato-commander-says-russian-hybrid-campaign-isnt-working/",
+        "typ": "media",
+        "publikovano": "2026-09-28T00:00:00Z",
+        "primarni": false,
+        "jazyk": "en"
+      }
+    ],
+    "souvisejici": [],
+    "historie": [
+      {
+        "kdy": "2026-09-28T00:00:00Z",
+        "text": "Zachyceno automatickým sběrem, druhý zdroj doložen před zařazením do fronty.",
+        "novySignal": true
+      }
+    ],
+    "novy": true,
+    "zapocitanoTyden": "2026-09-28",
+    "aiZpracovano": true,
+    "lidskyOvereno": false,
+    "archivniZaznam": false
+  },
+  {
+    "kam": "zaznam",
+    "pripravil": "patrol",
+    "pripraveno": "2026-09-28T20:42:58.740Z",
+    "id": "i-2026-09-28-88f15d5c65",
+    "slug": "ro-88f15d5c65",
+    "titulek": "Rumunsko: nominovaný ministr obrany uvedl v parlamentu 49 neoprávněných vniknutí do vzdušného prostoru a 148 útoků u hranice od začátku války, většinu z roku 2026",
+    "kratkyTitulek": "Rumunsko: nominovaný ministr obrany uvedl v parlamentu 49 neoprávněných vniknutí do vzdušného prostoru a 148 útoků u hranice od začátku války, většinu z roku 2026",
+    "zeme": "Rumunsko",
+    "kodZeme": "RO",
+    "kategorie": [
+      "hranice",
+      "drony",
+      "nato"
+    ],
+    "datumUdalosti": "2026-09-28T00:00:00Z",
+    "datumZjisteni": "2026-09-28T00:00:00Z",
+    "aktualizovano": "2026-09-28T20:42:58.740Z",
+    "zavaznost": "Y2",
+    "jistota": "vysoka",
+    "stav": "neuvedeno",
+    "atribuce": "neznama",
+    "puvodce": null,
+    "druh": "reakce",
+    "fakta": [
+      "Podle AGERPRES uvedl 28. 9. 2026 nominovaný ministr obrany Radu Miruța na slyšení v rumunském parlamentu, že od začátku války na Ukrajině došlo k 49 neoprávněným vniknutím do rumunského vzdušného prostoru, z toho 30 jen v roce 2026.",
+      "Podle Miruți došlo od začátku války ke 148 útokům u rumunské hranice, z toho 81 v prvních osmi měsících roku 2026.",
+      "Podle AGERPRES byly za tu dobu sestřeleny čtyři drony — tři rumunskou armádou a jeden španělskými piloty v rámci zesílené vzdušné policie v Rumunsku.",
+      "Podle AGERPRES parlamentní výbory nakonec hlasovaly proti potvrzení Miruți do funkce ministra; s údaji o vniknutích to přímo nesouviselo."
+    ],
+    "neznameho": [
+      "Přesná povaha a závažnost jednotlivých ze 148 útoků u hranice zdroj nerozvádí.",
+      "Zda a jak byl Miruța nakonec ve funkci ministra obrany potvrzen nebo nahrazen."
+    ],
+    "vyznam": "",
+    "eskalacniSpousteče": [],
+    "deeskalacniSignaly": [],
+    "zdroje": [
+      {
+        "nazev": "AGERPRES (státní agentura Rumunska) — Parliament - ministerial hearings/Miruta: 49 unauthorized incursions into Romanian airspace since start of war",
+        "url": "https://agerpres.ro/english/2026/09/28/parliament---ministerial-hearings-miruta-49-unauthorized-incursions-into-romanian-airspace-since-sta--1597779",
         "typ": "media",
         "publikovano": "2026-09-28T00:00:00Z",
         "primarni": false,
         "jazyk": "en"
       },
       {
-        "nazev": "УНН (Ukrainian National News) — The EU is preparing an 'emergency protocol' as part of its response to hybrid attacks",
-        "url": "https://unn.ua/en/news/the-eu-is-preparing-an-emergency-protocol-as-part-of-its-response-to-hybrid-attacks",
+        "nazev": "AGERPRES (rumunsky) — Parlament - audieri miniștri/ Miruță: 49 de pătrunderi neautorizate în spațiul aerian românesc de la începutul războiului",
+        "url": "https://agerpres.ro/politic/2026/09/28/parlament---audieri-ministri-miruta-49-de-patrunderi-neautorizate-in-spatiul-aerian-romanesc-de-la-i--1597749",
         "typ": "media",
         "publikovano": "2026-09-28T00:00:00Z",
         "primarni": false,
-        "jazyk": "en"
+        "jazyk": "ro"
       }
     ],
     "souvisejici": [],
