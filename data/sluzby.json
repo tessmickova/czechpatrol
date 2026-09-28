@@ -1,5 +1,5 @@
 {
-  "aktualizovano": "2026-09-28T20:04:48.087Z",
+  "aktualizovano": "2026-09-28T22:31:02.642Z",
   "stavy": [
     {
       "klic": "cloudflare",
@@ -9,17 +9,17 @@
         {
           "nazev": "Network Performance Degradation — Asia-Pacific",
           "odkaz": "https://www.cloudflarestatus.com/incidents/8wmvkv5jkf15",
-          "aktualizovano": "2026-09-25T08:50:56.074Z"
+          "aktualizovano": "2026-09-25T08:50:56.000Z"
         },
         {
           "nazev": "Cloudflare One Clients are incorrectly challenged on some sites",
           "odkaz": "https://www.cloudflarestatus.com/incidents/tl0vrgjy99r0",
-          "aktualizovano": "2026-09-23T11:02:41.673Z"
+          "aktualizovano": "2026-09-23T11:02:41.000Z"
         },
         {
           "nazev": "Incorrect geo location for some Cloudflare WARP users",
           "odkaz": "https://www.cloudflarestatus.com/incidents/9g65dxfbcjln",
-          "aktualizovano": "2026-09-01T08:29:56.953Z"
+          "aktualizovano": "2026-09-01T08:29:56.000Z"
         }
       ],
       "postizene": [
@@ -28,7 +28,7 @@
         "Arica, Chile - (ARI)",
         "Algiers, Algeria - (ALG)"
       ],
-      "zkontrolovano": "2026-09-28T20:04:48.087Z",
+      "zkontrolovano": "2026-09-28T22:31:02.642Z",
       "chyba": null
     },
     {
@@ -37,6 +37,11 @@
       "popis": "Partially Degraded Service",
       "incidenty": [
         {
+          "nazev": "Service Degradation Affecting Zoom Canvas",
+          "odkaz": "https://stspg.io/5qlzwcr61g78",
+          "aktualizovano": "2026-09-28T15:15:44.904-07:00"
+        },
+        {
           "nazev": "Service Degradation Affecting Customer Using Polycom Devices Going Offline",
           "odkaz": "https://stspg.io/4cpggx38p4g2",
           "aktualizovano": "2026-09-27T18:19:15.129-07:00"
@@ -44,11 +49,11 @@
       ],
       "postizene": [
         "Zoom Phone",
+        "Zoom Canvas",
         "Devices (Softphones/Deskphones)",
-        "Zoom Phone - Global",
-        "Zoom Phone - EMEA"
+        "Zoom Phone - Global"
       ],
-      "zkontrolovano": "2026-09-28T20:04:48.087Z",
+      "zkontrolovano": "2026-09-28T22:31:02.642Z",
       "chyba": null
     },
     {
@@ -57,7 +62,7 @@
       "popis": "All Systems Operational",
       "incidenty": [],
       "postizene": [],
-      "zkontrolovano": "2026-09-28T20:04:48.087Z",
+      "zkontrolovano": "2026-09-28T22:31:02.642Z",
       "chyba": null
     }
   ]

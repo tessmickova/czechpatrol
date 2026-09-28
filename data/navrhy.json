@@ -346,5 +346,74 @@
     "aiZpracovano": true,
     "lidskyOvereno": false,
     "archivniZaznam": false
+  },
+  {
+    "kam": "zaznam",
+    "pripravil": "patrol",
+    "pripraveno": "2026-09-28T20:42:58.740Z",
+    "id": "i-2026-09-28-88f15d5c65",
+    "slug": "ro-88f15d5c65",
+    "titulek": "Rumunsko: nominovaný ministr obrany uvedl v parlamentu 49 neoprávněných vniknutí do vzdušného prostoru a 148 útoků u hranice od začátku války, většinu z roku 2026",
+    "kratkyTitulek": "Rumunsko: nominovaný ministr obrany uvedl v parlamentu 49 neoprávněných vniknutí do vzdušného prostoru a 148 útoků u hranice od začátku války, většinu z roku 2026",
+    "zeme": "Rumunsko",
+    "kodZeme": "RO",
+    "kategorie": [
+      "hranice",
+      "drony",
+      "nato"
+    ],
+    "datumUdalosti": "2026-09-28T00:00:00Z",
+    "datumZjisteni": "2026-09-28T00:00:00Z",
+    "aktualizovano": "2026-09-28T20:42:58.740Z",
+    "zavaznost": "Y2",
+    "jistota": "stredni",
+    "stav": "neuvedeno",
+    "atribuce": "neznama",
+    "puvodce": null,
+    "druh": "reakce",
+    "fakta": [
+      "Podle AGERPRES uvedl 28. 9. 2026 nominovaný ministr obrany Radu Miruța na slyšení v rumunském parlamentu, že od začátku války na Ukrajině došlo k 49 neoprávněným vniknutím do rumunského vzdušného prostoru, z toho 30 jen v roce 2026.",
+      "Podle Miruți došlo od začátku války ke 148 útokům u rumunské hranice, z toho 81 v prvních osmi měsících roku 2026.",
+      "Podle AGERPRES byly za tu dobu sestřeleny čtyři drony — tři rumunskou armádou a jeden španělskými piloty v rámci zesílené vzdušné policie v Rumunsku.",
+      "Podle AGERPRES parlamentní výbory nakonec hlasovaly proti potvrzení Miruți do funkce ministra; s údaji o vniknutích to přímo nesouviselo."
+    ],
+    "neznameho": [
+      "Přesná povaha a závažnost jednotlivých ze 148 útoků u hranice zdroj nerozvádí.",
+      "Zda a jak byl Miruța nakonec ve funkci ministra obrany potvrzen nebo nahrazen."
+    ],
+    "vyznam": "",
+    "eskalacniSpousteče": [],
+    "deeskalacniSignaly": [],
+    "zdroje": [
+      {
+        "nazev": "AGERPRES (státní agentura Rumunska) — Parliament - ministerial hearings/Miruta: 49 unauthorized incursions into Romanian airspace since start of war",
+        "url": "https://agerpres.ro/english/2026/09/28/parliament---ministerial-hearings-miruta-49-unauthorized-incursions-into-romanian-airspace-since-sta--1597779",
+        "typ": "media",
+        "publikovano": "2026-09-28T00:00:00Z",
+        "primarni": false,
+        "jazyk": "en"
+      },
+      {
+        "nazev": "AGERPRES (rumunsky) — Parlament - audieri miniștri/ Miruță: 49 de pătrunderi neautorizate în spațiul aerian românesc de la începutul războiului",
+        "url": "https://agerpres.ro/politic/2026/09/28/parlament---audieri-ministri-miruta-49-de-patrunderi-neautorizate-in-spatiul-aerian-romanesc-de-la-i--1597749",
+        "typ": "media",
+        "publikovano": "2026-09-28T00:00:00Z",
+        "primarni": false,
+        "jazyk": "ro"
+      }
+    ],
+    "souvisejici": [],
+    "historie": [
+      {
+        "kdy": "2026-09-28T00:00:00Z",
+        "text": "Zachyceno automatickým sběrem, druhý zdroj doložen před zařazením do fronty.",
+        "novySignal": true
+      }
+    ],
+    "novy": true,
+    "zapocitanoTyden": "2026-09-28",
+    "aiZpracovano": true,
+    "lidskyOvereno": false,
+    "archivniZaznam": false
   }
 ]
