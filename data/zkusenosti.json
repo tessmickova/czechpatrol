@@ -1,0 +1,819 @@
+{
+  "aktualizovano": "2026-09-28",
+  "poznamka": "Útržky ze zveřejněných reportáží, úřadů a organizací. Přebíráme fakta, ne znění. Rešerše 28. 9. 2026 z výsledků vyhledávání; u každého útržku zdroj.",
+  "polozky": [
+    {
+      "id": "sim-vsech-operatoru",
+      "tema": "elektrina",
+      "nadpis": "SIM karty všech operátorů: jeden vždycky nějak šel",
+      "coSeStalo": "Zpravodaj Martin Dorazín popsal, že po vypnutí proudu se mobilní sítě hned zahltily, protože všichni přešli na mobilní data. Měl SIM karty všech ukrajinských operátorů a některá z nich vždy nějak fungovala.",
+      "kdyKde": "začátek invaze 2022, Mariupol (rozhovor vyšel v roce 2023)",
+      "coNasledovalo": "Posílat fotky nebo stahovat videa nešlo, ale stránky se otevřít daly a na základní věci to stačilo.",
+      "jakToLideResili": "Měl v telefonu SIM karty více operátorů a používal tu, jejíž síť zrovna fungovala.",
+      "pouceni": "Mějte v domácnosti aspoň jednu předplacenou SIM jiného operátora, než je ten hlavní — třeba ve starém telefonu.",
+      "zdroje": [
+        {
+          "nazev": "Aktuálně.cz — Jel jsem rychle pro benzin a peníze. Dorazín vzpomíná na první den invaze v Mariupolu",
+          "url": "https://zpravy.aktualne.cz/zahranici/martin-dorazin-vzpomina-na-prvni-den-invaze-v-mariupolu/r~b9260942b2ba11ed9ae20cc47ab5f122/",
+          "datum": "2023-02"
+        }
+      ]
+    },
+    {
+      "id": "tri-sim-uzhorod",
+      "tema": "elektrina",
+      "nadpis": "Tři SIM karty, slovenská navíc a kredit dopředu",
+      "coSeStalo": "Autor z Užhorodu popsal, že při útocích na sítě zažil úplný výpadek mobilního spojení. Nosí proto SIM karty tří operátorů a pořídil si i slovenskou, protože v Užhorodu dosáhne na slovenské sítě.",
+      "kdyKde": "Užhorod, článek z ledna 2025",
+      "coNasledovalo": "Operátoři museli doplnit záložní zdroje vysílačů, které před válkou nebyly všude nebo nestačily na delší výpadky.",
+      "jakToLideResili": "Na předplacených SIM drží kredit na několik měsíců dopředu a powerbanky nabíjí, kdykoli může.",
+      "pouceni": "Na záložní předplacené SIM mějte kredit dopředu, ať jde ve výpadku hned použít.",
+      "zdroje": [
+        {
+          "nazev": "Aktuálně.cz — Jak se Ukrajinci vyrovnali s útoky na mobilní sítě",
+          "url": "https://nazory.aktualne.cz/jak-se-ukrajinci-vyrovnali-s-utoky-na-mobilni-site/r~f8307fbeda6311efa065ac1f6b220ee8/",
+          "datum": "2025-01-27"
+        }
+      ]
+    },
+    {
+      "id": "narodni-roaming",
+      "tema": "elektrina",
+      "nadpis": "Když nejde váš operátor, jde se do sítě jiného",
+      "coSeStalo": "Tři ukrajinští operátoři se dohodli, že když síť vlastního operátora nefunguje, zákazník se může připojit do sítě jiného — nejdřív v oblastech bojů, později v celé zemi.",
+      "kdyKde": "od března 2022, Ukrajina",
+      "coNasledovalo": "Připojení se často nedělo samo a data v cizí síti byla výrazně zpomalená.",
+      "jakToLideResili": "Lidé vypnuli automatický výběr sítě a ručně zvolili dostupnou síť jiného operátora.",
+      "pouceni": "Zjistěte si, kde je v telefonu ruční výběr sítě. V Česku ale národní roaming jako běžná služba není — spolehlivější je záložní SIM jiného operátora.",
+      "zdroje": [
+        {
+          "nazev": "Vláda Ukrajiny — Ministry of Digital Transformation: operators will allow subscribers to switch networks",
+          "url": "https://www.kmu.gov.ua/en/news/mincifri-ukrayinski-operatori-dozvolyat-peremikatisya-mizh-merezhami-shchob-lishatisya-na-zvyazku",
+          "datum": "2022-03"
+        },
+        {
+          "nazev": "Ukrainian News — Vodafone Ukraine, Kyivstar and lifecell launch national roaming",
+          "url": "https://ukranews.com/en/news/839365-vodafone-ukraine-kyivstar-and-lifecell-launch-national-roaming",
+          "datum": "2022-03"
+        }
+      ]
+    },
+    {
+      "id": "baterie-vysilacu",
+      "tema": "elektrina",
+      "nadpis": "Vysílač bez proudu vydrží jen hodiny",
+      "coSeStalo": "Většina ukrajinských základnových stanic měla baterie, které při výpadku vydrží jen pár hodin. Regulátor proto nařídil, aby vysílače vydržely bez proudu 10 hodin; operátoři to nezvládli plně splnit.",
+      "kdyKde": "Ukrajina, 2022–2025",
+      "coNasledovalo": "Operátoři přecházeli na lithiové baterie a generátory; Kyjev v říjnu 2022 hlásil stovky odpojených stanic a přerušovaný signál.",
+      "jakToLideResili": "Operátoři a ministerstvo radili nespoléhat na jediný kanál; zdroje konkrétní postup domácností nepopisují.",
+      "pouceni": "Mobilní síť při výpadku proudu vydrží jen omezenou dobu. Nejdůležitější hovory a zprávy vyřiďte hned na začátku.",
+      "zdroje": [
+        {
+          "nazev": "NV — Mobile operators required to operate for 10 hours without electricity – is it realistic?",
+          "url": "https://english.nv.ua/nation/mobile-operators-required-to-operate-for-10-hours-without-electricity-is-it-realistic-50436049.html"
+        },
+        {
+          "nazev": "Kyiv Independent — Mobile service in Kyiv may be disrupted due to power grid damage",
+          "url": "https://kyivindependent.com/digital-transformation-ministry-mobile-service-in-kyiv-may-be-disrupted-due-to-power-grid-damage/",
+          "datum": "2022-10-31"
+        }
+      ]
+    },
+    {
+      "id": "router-zaloha",
+      "tema": "elektrina",
+      "nadpis": "Síť operátora běží, router doma ne",
+      "coSeStalo": "Podle šéfa Kyivstaru běželo přes 30 % sítě devátý den po sobě na generátory a baterie. Zálohu pro domácí router si ale zajistilo jen 15–20 % zákazníků.",
+      "kdyKde": "listopad 2025, Ukrajina",
+      "coNasledovalo": "Operátor vyzval zákazníky, ať si napájení routeru zálohují; ministerstvo mezitím tlačilo optické sítě, které vydrží bez proudu až 72 hodin.",
+      "jakToLideResili": "Lidé připojovali router a optický převodník na malou UPS nebo powerbanku; podle ministerstva vydrží router na UPS asi 4–6 hodin.",
+      "pouceni": "Router má malou spotřebu. Malá UPS nebo powerbanka ho udrží několik hodin — pokud síť poskytovatele sama běží.",
+      "zdroje": [
+        {
+          "nazev": "Interfax-Ukraine — Up to one-third of Kyivstar network without power, CEO urges backup power for routers",
+          "url": "https://en.interfax.com.ua/news/economic/1122024.html",
+          "datum": "2025-11-20"
+        },
+        {
+          "nazev": "Rubryka — New map shows internet providers' coverage during blackouts",
+          "url": "https://rubryka.com/en/2024/04/25/pratsyuyut-pry-vidklyuchennyah-svitla-v-ukrayini-z-yavylasya-mapa-internet-provajderiv/",
+          "datum": "2024-04-25"
+        }
+      ]
+    },
+    {
+      "id": "vytahy-balicky",
+      "tema": "elektrina",
+      "nadpis": "Balíček s vodou a baterkou přímo ve výtahu",
+      "coSeStalo": "Při častých výpadcích lidé v Kyjevě uvízali ve výtazích.",
+      "kdyKde": "říjen a listopad 2022, Kyjev; znovu leden 2026",
+      "coNasledovalo": "V lednu 2026 AP popsala lidi s omezenou pohyblivostí, kteří kvůli nefunkčním výtahům týdny nemohli opustit byt ve vysokém patře.",
+      "jakToLideResili": "Obyvatelé dávali do výtahů krabice s vodou, tyčinkami, baterkou, nádobou na toaletu a podložkou na sezení; výtah používali jen mimo ohlášené výpadky.",
+      "pouceni": "Nejezděte výtahem krátce před ohlášeným výpadkem a myslete na sousedy s omezenou pohyblivostí ve vyšších patrech.",
+      "zdroje": [
+        {
+          "nazev": "Reuters (WMBD) — 'Survival kits' in lifts: Kyiv residents get creative amid power cuts",
+          "url": "https://www.1470wmbd.com/2022/10/27/survival-kits-in-lifts-kyiv-residents-get-creative-amid-power-cuts/",
+          "datum": "2022-10-27"
+        },
+        {
+          "nazev": "AP (ABC News) — Kyiv residents are stranded in tower blocks",
+          "url": "https://abcnews.go.com/International/wireStory/freezing-dark-kyiv-residents-stranded-tower-blocks-russia-129513472",
+          "datum": "2026-01-24"
+        }
+      ]
+    },
+    {
+      "id": "generator-co",
+      "tema": "elektrina",
+      "nadpis": "Generátor v domě: otrava, kterou není cítit",
+      "coSeStalo": "V Kyjevské oblasti rodiny spustily generátor uvnitř domu. V Bobryci muž na otravu oxidem uhelnatým zemřel a jeho žena skončila v nemocnici; v Hostomelu se otrávila čtyřčlenná rodina.",
+      "kdyKde": "Kyjevská oblast, období výpadků proudu",
+      "coNasledovalo": "Policie vyzvala lidi, aby dodržovali návody k generátorům a topidlům.",
+      "jakToLideResili": "Doporučený postup je provozovat generátor jen venku a dál od oken.",
+      "pouceni": "Generátor nesmí běžet v bytě, garáži ani na zasklené lodžii. Kdo ho má, ať má i detektor oxidu uhelnatého.",
+      "zdroje": [
+        {
+          "nazev": "Ukrajinska pravda (AOL) — Turned on power generator indoors: two families poisoned",
+          "url": "https://www.aol.com/news/turned-power-generator-indoors-two-114141486.html"
+        },
+        {
+          "nazev": "Rubryka — Power generators and \"silent death\": protect yourself from carbon monoxide",
+          "url": "https://rubryka.com/en/article/generators-safety/"
+        }
+      ]
+    },
+    {
+      "id": "kavarny-generator",
+      "tema": "elektrina",
+      "nadpis": "Kavárna s generátorem jako pracovna",
+      "coSeStalo": "Při výpadcích jely kavárny a obchody na malé hlučné generátory a lákaly lidi s notebooky optickým internetem, který držela v chodu záloha.",
+      "kdyKde": "listopad 2022 a červen 2024, Kyjev",
+      "coNasledovalo": "Podniky investovaly do vlastních generátorů, aby mohly zůstat otevřené.",
+      "jakToLideResili": "Lidé chodili pracovat a nabíjet do podniků se záložním zdrojem a internetem.",
+      "pouceni": "Při delším výpadku se hodí vědět, které podniky v okolí mají záložní zdroj — a mít nabitý notebook nebo powerbanku.",
+      "zdroje": [
+        {
+          "nazev": "Euronews — 'Worst winter of our lives': Ukrainian capital prepares for cold and dark",
+          "url": "https://www.euronews.com/2022/11/21/worst-winter-of-our-lives-ukrainian-capital-prepares-for-cold-and-dark-times-ahead",
+          "datum": "2022-11-21"
+        },
+        {
+          "nazev": "AP (AccessWDUN) — Ukraine's emergency blackouts return",
+          "url": "https://accesswdun.com/article/2024/6/1248962",
+          "datum": "2024-06"
+        }
+      ]
+    },
+    {
+      "id": "rozpisy-vypadku",
+      "tema": "elektrina",
+      "nadpis": "Osm hodin bez proudu podle rozpisu",
+      "coSeStalo": "V létě 2024 trvaly plánované výpadky až osm hodin najednou. Rozpisy zveřejňovali distributoři na webu a v aplikacích.",
+      "kdyKde": "květen až srpen 2024, Ukrajina",
+      "coNasledovalo": "Koncem července úřady oznámily, že přísné vypínání se na další měsíce opakovat nebude, pokud nepřijde nové poškození.",
+      "jakToLideResili": "Lidé podle rozpisů plánovali praní, vaření, práci a nabíjení powerbank.",
+      "pouceni": "Když distributor ohlásí odstávku, nabijte předem všechno a načasujte vaření a praní.",
+      "zdroje": [
+        {
+          "nazev": "ACAPS — Ukraine: attacks on the energy infrastructure (PDF)",
+          "url": "https://www.acaps.org/fileadmin/Data_Product/Main_media/20240913_ACAPS_Ukraine_Analysis_hub_Attacks_on_the_energy_infrastructure_in_Ukraine.pdf",
+          "datum": "2024-09-13"
+        },
+        {
+          "nazev": "DTEK — Schedules of power shutdowns: where to find and how to use",
+          "url": "https://grids.dtek.com/en/media-center/press/grafiki-vidklyuchen-de-znayti-ta-yak-koristuvatis/"
+        }
+      ]
+    },
+    {
+      "id": "body-nezdolnosti",
+      "tema": "elektrina",
+      "nadpis": "Body nezdolnosti: teplo, voda a nabíjení pro všechny",
+      "coSeStalo": "Stát spustil síť míst s generátorem, kde je teplo, voda, elektřina a signál a dá se nabít telefon.",
+      "kdyKde": "od 24. 11. 2022, celá Ukrajina",
+      "coNasledovalo": "Místa fungovala zdarma a nepřetržitě. V zimě 2025/26 byly některé při vícedenních výpadcích přeplněné; Kyjev jich otevřel asi 1 300 — ve stanech, vagonech i veřejných budovách.",
+      "jakToLideResili": "Lidé tam chodili nabít telefony, spojit se s blízkými, ohřát se a v některých dostat teplé jídlo.",
+      "pouceni": "Zjistěte si předem na obecním úřadě, jestli obec počítá s vytápěným místem s nabíjením pro dlouhý výpadek.",
+      "zdroje": [
+        {
+          "nazev": "Ukrainska Pravda — Thousands of \"Points of invincibility\" prepared for prolonged power outage",
+          "url": "https://www.pravda.com.ua/eng/news/2022/11/22/7377536/",
+          "datum": "2022-11-22"
+        },
+        {
+          "nazev": "Ukrinform — 'Points of Invincibility' to be set up throughout Ukraine",
+          "url": "https://www.ukrinform.net/rubric-ato/3619960-points-of-invincibility-to-be-set-up-throughout-ukraine-zelensky.html"
+        },
+        {
+          "nazev": "Reuters (US News) — Ukrainians withstand days-long power cuts in crowded 'resilience' shelters",
+          "url": "https://www.usnews.com/news/world/articles/2025-12-29/ukrainians-withstand-days-long-power-cuts-in-crowded-resilence-shelters",
+          "datum": "2025-12-29"
+        },
+        {
+          "nazev": "iROZHLAS — Lidé jsou už poučení. Kvůli výpadkům proudu se vybavili powerbankami a generátory",
+          "url": "https://www.irozhlas.cz/zpravy-svet/kyjev-ukrajina-irpin-energie-vypadky-proudu-ruske-bombardovani_2211271617_lev",
+          "datum": "2022-11-27"
+        }
+      ]
+    },
+    {
+      "id": "voda-kyjev-2022-10",
+      "tema": "voda-teplo",
+      "nadpis": "Po útoku na energetiku zůstala většina Kyjeva bez vody",
+      "coSeStalo": "Po raketovém útoku na energetiku u Kyjeva zůstalo podle starosty a vodárny až 80 % obyvatel bez vody; zhruba 350 tisíc domácností bylo i bez proudu.",
+      "kdyKde": "31. 10. 2022, Kyjev",
+      "coNasledovalo": "Napájení i dodávky vody se obnovovaly postupně během několika dní.",
+      "jakToLideResili": "Lidé plnili kanystry a láhve u veřejných pump v parcích.",
+      "pouceni": "Vodárny a čerpadla potřebují elektřinu. Mějte doma pitnou vodu v kanystrech a vězte, kde je nejbližší veřejná pumpa nebo studna.",
+      "zdroje": [
+        {
+          "nazev": "The Times of Israel — 80% of Kyiv residents without water after Russian barrage",
+          "url": "https://www.timesofisrael.com/80-of-kyiv-residents-without-water-after-russian-barrage-targets-infrastructure/",
+          "datum": "2022-10-31"
+        },
+        {
+          "nazev": "CNN — Kyiv and other Ukraine cities hit by barrage of Russian missile strikes",
+          "url": "https://www.cnn.com/2022/10/31/europe/russian-missile-strikes-ukraine-intl/index.html",
+          "datum": "2022-10-31"
+        }
+      ]
+    },
+    {
+      "id": "voda-mykolajiv-2022",
+      "tema": "voda-teplo",
+      "nadpis": "Mykolajiv: voda z kohoutku tekla, ale pít se nedala",
+      "coSeStalo": "Po zničení přívodu vody z Dněpru pouštělo město do potrubí vodu z Jižního Bugu. Z kohoutků tekla nažloutlá slaná voda, která se nedala pít.",
+      "kdyKde": "od dubna 2022, Mykolajiv (asi 470 tisíc obyvatel)",
+      "coNasledovalo": "Po městě vznikla výdejní místa pitné vody; opravu vodovodu později podpořily mimo jiné UNICEF a Dánská rada pro uprchlíky.",
+      "jakToLideResili": "Lidé denně chodili k cisternám pro desetilitrové láhve a vozili je v dětských kočárcích nebo na koloběžkách.",
+      "pouceni": "Voda z kohoutku nemusí být pitná, i když teče. Mějte zásobu balené vody a vozík nebo tašku, ve kterých unesete desítky litrů.",
+      "zdroje": [
+        {
+          "nazev": "NPR — After Russia destroyed water supply, Mykolaiv is struggling to get clean water",
+          "url": "https://www.npr.org/2022/10/11/1128197788/after-russia-destroyed-water-supply-mykolaiv-is-struggling-to-get-clean-water",
+          "datum": "2022-10-11"
+        },
+        {
+          "nazev": "UNICEF Ukraine — Repair of water supply system in Mykolaiv",
+          "url": "https://www.unicef.org/ukraine/en/stories/repair-of-water-supply-system-in-mykolaiv"
+        }
+      ]
+    },
+    {
+      "id": "voda-mariupol-2022",
+      "tema": "voda-teplo",
+      "nadpis": "Mariupol: proud, plyn i voda naráz, v mrazu",
+      "coSeStalo": "Začátkem března 2022 přestala v Mariupolu fungovat elektřina, plyn i vodovod najednou, přestože mrzlo.",
+      "kdyKde": "březen 2022, Mariupol",
+      "coNasledovalo": "Služby se neobnovily; zdroje popisují nedostatek jídla i vody a šíření infekcí.",
+      "jakToLideResili": "Lidé brali vodu z hydrantů, chytali dešťovou vodu, rozpouštěli sníh a chodili ke studnám. Vařili venku na ohništích.",
+      "pouceni": "Počítejte s tím, že může vypadnout všechno najednou. Vařič s palivem pro venkovní použití a nádoby na vodu jsou základ.",
+      "zdroje": [
+        {
+          "nazev": "Human Rights Watch — Beneath the Rubble: Documenting Devastation and Loss in Mariupol",
+          "url": "https://www.hrw.org/feature/russia-ukraine-war-mariupol"
+        },
+        {
+          "nazev": "Euromaidan Press — Mariupol people melt snow for water",
+          "url": "https://euromaidanpress.com/2022/03/20/mariupol-people-melt-snow-drink-water-from-heating-mains-besieged-city-faces-total-destruction/",
+          "datum": "2022-03-20"
+        }
+      ]
+    },
+    {
+      "id": "voda-kyjev-2022-11",
+      "tema": "voda-teplo",
+      "nadpis": "Celostátní výpadek: prázdné láhve a voda z okapů",
+      "coSeStalo": "Plošný útok na energetiku zastavil proud i vodu v mnoha městech. V Kyjevě chodili lidé s prázdnými láhvemi, někteří chytali dešťovou vodu z okapů; v prodejně vody bez proudu nejela čerpadla.",
+      "kdyKde": "23.–26. 11. 2022, Kyjev",
+      "coNasledovalo": "Do 26. 11. se voda v Kyjevě vrátila všude. Začátkem prosince starosta vyzval obyvatele, ať mají zásobu pitné i užitkové vody, trvanlivého jídla a teplého oblečení.",
+      "jakToLideResili": "Lidé si předem stáčeli vodu do láhví a kbelíků a plánovali vaření, sprchování a praní podle rozpisu odstávek.",
+      "pouceni": "Mějte zvlášť pitnou vodu a užitkovou vodu na splachování a mytí. Když hrozí výpadek, napusťte nádoby předem.",
+      "zdroje": [
+        {
+          "nazev": "Al Jazeera — Bombed, not beaten: Ukraine's capital flips to survival mode",
+          "url": "https://www.aljazeera.com/news/2022/11/25/bombed-not-beaten-ukraines-capital-flips-to-survival-mode",
+          "datum": "2022-11-25"
+        },
+        {
+          "nazev": "Euronews — Mayor tells Kyiv residents to stock up on water, food in case of major blackout",
+          "url": "https://www.euronews.com/2022/12/02/ukraine-crisis-blackouts",
+          "datum": "2022-12-02"
+        }
+      ]
+    },
+    {
+      "id": "voda-vyskove-domy",
+      "tema": "voda-teplo",
+      "nadpis": "Ve vyšších patrech teče voda jen s proudem",
+      "coSeStalo": "Do vyšších pater paneláků dotlačují vodu čerpadla, která bez proudu nejedou. Domovní generátor ji podle zdroje dostane zhruba do pátého patra, ne výš.",
+      "kdyKde": "zimy 2022–2026, Kyjev",
+      "coNasledovalo": "Některá společenství vlastníků si složila na solární panely a baterie; při dlouhých výpadcích správci vypínali výtahy, aby zbyla energie na čerpadla.",
+      "jakToLideResili": "Obyvatelé vyšších pater nosili vodu v kbelících po schodech. Do výtahů lidé nechávali tašky s vodou a sušenkami pro ty, kdo v nich uvíznou.",
+      "pouceni": "Bydlíte-li výš, mějte zásobu vody přímo v bytě a při výpadku nejezděte výtahem.",
+      "zdroje": [
+        {
+          "nazev": "NV — Water supply restored in Kyiv — upper floors of high-rise buildings depend on electricity",
+          "url": "https://english.nv.ua/nation/water-supply-restored-in-kyiv-supply-to-upper-floors-of-high-rise-buildings-depends-on-electricity-50577328.html"
+        },
+        {
+          "nazev": "France 24 (AFP) — Kyiv residents pool together for solar panels and batteries",
+          "url": "https://www.france24.com/en/live-news/20260226-kyiv-residents-pool-together-for-solar-panels-and-batteries-amid-russian-strikes",
+          "datum": "2026-02-26"
+        }
+      ]
+    },
+    {
+      "id": "teplo-kyjev-2026-01",
+      "tema": "voda-teplo",
+      "nadpis": "Polovina Kyjeva bez topení v mrazu pod −15 °C",
+      "coSeStalo": "Útok 9. ledna vyřadil topení asi v 6 000 bytových domech, zhruba v polovině kyjevských činžáků. Přes den bylo kolem −10 °C, v noci pod −15 °C.",
+      "kdyKde": "od 9. 1. 2026, Kyjev",
+      "coNasledovalo": "Topení se vracelo pomalu: 29. ledna bylo stále bez tepla 613 domů.",
+      "jakToLideResili": "Lidé nosili více vrstev a zabalovali se do přikrývek; záchranáři stavěli vyhřívané stany s teplým nápojem.",
+      "pouceni": "Výpadek topení může v mrazu trvat týdny. Mějte teplé oblečení na spaní, spacák nebo deky a plán, kam se na čas přestěhovat.",
+      "zdroje": [
+        {
+          "nazev": "Ukrainska Pravda — Heating still out for Kyiv residents in 613 apartment blocks",
+          "url": "https://www.pravda.com.ua/eng/news/2026/01/29/8018439/",
+          "datum": "2026-01-29"
+        },
+        {
+          "nazev": "CNN — Bitter winter cold bites for Kyiv's residents",
+          "url": "https://www.cnn.com/2026/01/11/europe/ukraine-energy-attacks-restore-power-intl",
+          "datum": "2026-01-11"
+        }
+      ]
+    },
+    {
+      "id": "teplo-improvizace-2026",
+      "tema": "voda-teplo",
+      "nadpis": "Nahřáté cihly a láhve s horkou vodou — i s rizikem",
+      "coSeStalo": "Během zimního výpadku tepla si Kyjevané sdíleli rady, jak se v bytě zahřát. Nejčastější bylo nahřívat cihly na plynovém sporáku.",
+      "kdyKde": "leden 2026, Kyjev",
+      "coNasledovalo": "Jiní uživatelé upozorňovali na nebezpečí a doporučovali detektory oxidu uhelnatého a kouře.",
+      "jakToLideResili": "Vrstvy tenčího oblečení, láhve s horkou vodou v posteli, nahřáté cihly zabalené v dekách; někdo přespával u známých v domě s generátorem.",
+      "pouceni": "Kdo topí nebo vaří improvizovaně, potřebuje detektor oxidu uhelnatého. Bezpečnější jsou termofory a vrstvené oblečení.",
+      "zdroje": [
+        {
+          "nazev": "NPR (WHRO) — Ukrainians are sharing hacks online on how to survive winter power cuts",
+          "url": "https://www.whro.org/2026-01-26/ukrainians-are-sharing-hacks-online-on-how-to-survive-winter-power-cuts",
+          "datum": "2026-01-26"
+        },
+        {
+          "nazev": "The Insider — Heated bricks, shared generators, and candles: How Kyiv survives without power and heat",
+          "url": "https://theins.press/en/society/288871"
+        }
+      ]
+    },
+    {
+      "id": "hotovost-2022-02",
+      "tema": "penize-zasoby",
+      "nadpis": "První den: fronty u bankomatů a limit výběrů",
+      "coSeStalo": "V první den invaze stály celý den fronty u bankomatů, pump a supermarketů. Národní banka omezila výběry hotovosti na 100 000 hřiven denně na klienta.",
+      "kdyKde": "24. 2. 2022, celá Ukrajina",
+      "coNasledovalo": "Banka uvedla, že bankomaty průběžně doplňuje, a banky dál fungovaly.",
+      "jakToLideResili": "Lidé se snažili vybrat hotovost hned první den, hlavně ti, kdo odjížděli.",
+      "pouceni": "Mějte doma menší rezervu hotovosti v drobných. Bankomaty jsou v krizi první místo, kde vznikají fronty.",
+      "zdroje": [
+        {
+          "nazev": "UPI — Ukraine central bank limits cash withdrawals",
+          "url": "https://www.upi.com/Top_News/World-News/2022/02/25/ukraine-central-bank-restrictions-cryptocurrency/4431645804768/",
+          "datum": "2022-02-25"
+        },
+        {
+          "nazev": "NPR (KGOU) — Kyiv's residents rush to stock up and reach safety",
+          "url": "https://www.kgou.org/2022-02-24/with-ukraine-under-attack-kyivs-residents-rush-to-stock-up-and-reach-safety",
+          "datum": "2022-02-24"
+        }
+      ]
+    },
+    {
+      "id": "platby-blackout",
+      "tema": "penize-zasoby",
+      "nadpis": "Bez proudu nejdou terminály — banky postavily záložní síť",
+      "coSeStalo": "Při dlouhých výpadcích proudu nefungovaly platební terminály a lidé nemohli platit kartou ani za základní zboží.",
+      "kdyKde": "podzim a zima 2022, Ukrajina",
+      "coNasledovalo": "Národní banka s 14 bankami vytvořila síť Power Banking: přes 1 000 poboček se záložním napájením, kde šlo i při blackoutu vybrat hotovost a platit. Vláda zveřejnila jejich mapu.",
+      "jakToLideResili": "Lidé si pobočky našli na online mapě a chodili tam pro hotovost.",
+      "pouceni": "Při výpadku proudu nemusí fungovat karta ani bankomat. Hotovost doma je záloha na jídlo a léky.",
+      "zdroje": [
+        {
+          "nazev": "Národní banka Ukrajiny — Joint Banking Network POWER BANKING will work even in blackouts",
+          "url": "https://bank.gov.ua/en/news/all/za-initsiativi-natsionalnogo-banku-stvorena-spilna-bankivska-mereja-power-banking-yaka-pratsyuvatime-navit-v-umovah-blekautu"
+        },
+        {
+          "nazev": "European Payments Council — Payments in wartime: the story of the National Bank of Ukraine",
+          "url": "https://www.europeanpaymentscouncil.eu/news-insights/insight/payments-wartime-story-national-bank-ukraine"
+        }
+      ]
+    },
+    {
+      "id": "potraviny-2022-03",
+      "tema": "penize-zasoby",
+      "nadpis": "Prázdné regály — a za tři týdny zase zboží",
+      "coSeStalo": "Po začátku invaze zmizely z kyjevských obchodů levnější potraviny, chléb, zelenina, olej i maso; zásilky vázly kvůli dopravě.",
+      "kdyKde": "konec února a začátek března 2022, Kyjev",
+      "coNasledovalo": "Podle ekonomů citovaných estonským ICDS se zásobování vrátilo k normálu zhruba do třetího týdne.",
+      "jakToLideResili": "Lidé v prvních dnech rychle nakupovali zásoby ve frontách v supermarketech.",
+      "pouceni": "První dny bývají nejhorší. Trvanlivé jídlo na dva až tři týdny pokryje právě tohle období a ušetří vás front.",
+      "zdroje": [
+        {
+          "nazev": "Al Jazeera — Empty shelves, spy hunt: Kyiv residents brace for Russian assault",
+          "url": "https://www.aljazeera.com/news/2022/3/2/empty-shelves-spy-hunt-kyiv-residents-brace-for-russian-assault",
+          "datum": "2022-03-02"
+        },
+        {
+          "nazev": "ICDS — Resilience by Force and Frustration",
+          "url": "https://icds.ee/en/resilience-by-force-and-frustration/"
+        }
+      ]
+    },
+    {
+      "id": "leky-inzulin-2022",
+      "tema": "penize-zasoby",
+      "nadpis": "Inzulin: lék byl, jen se k lidem nedostal",
+      "coSeStalo": "Na začátku války se v Kyjevě tvořily fronty v lékárnách; mnoho lékáren zavřelo kvůli bojům nebo nedostatku personálu a lidé dny sháněli inzulin.",
+      "kdyKde": "březen 2022, Kyjev a zasažené oblasti",
+      "coNasledovalo": "Podle diabetologické nadace měla země inzulin asi na tři měsíce, problém byla distribuce; akutní nedostatek se později podařilo odstranit.",
+      "jakToLideResili": "Pacienti obcházeli lékárny, dokud lék nesehnali.",
+      "pouceni": "Kdo bere léky trvale, ať se s lékařem domluví na rezervě — a u inzulinu myslí i na chlazení bez proudu.",
+      "zdroje": [
+        {
+          "nazev": "The Washington Post — A desperate search for insulin in Kyiv as medicines disappear",
+          "url": "https://www.washingtonpost.com/world/2022/03/12/ukraine-russia-medicine-war/",
+          "datum": "2022-03-12"
+        },
+        {
+          "nazev": "CNN — Ukraine's conflict zone cut off from insulin supplies",
+          "url": "https://edition.cnn.com/2022/03/18/health/ukraine-insulin-shortage/index.html",
+          "datum": "2022-03-18"
+        }
+      ]
+    },
+    {
+      "id": "palivo-2022-05",
+      "tema": "doprava-palivo",
+      "nadpis": "Deset litrů na auto a tři hodiny ve frontě",
+      "coSeStalo": "Po útocích na sklady paliv a blokádě přístavů chybělo palivo po celé zemi. Některé pumpy v Kyjevě prodávaly jen 10 litrů na auto nebo jeden 20litrový kanystr; fronty trvaly i přes tři hodiny.",
+      "kdyKde": "květen 2022, Kyjev a celá Ukrajina",
+      "coNasledovalo": "Vláda nedostatek řešila dovozem ze západní Evropy, ceny rostly.",
+      "jakToLideResili": "Řidiči kupovali po malých dávkách; některé pumpy zavedly kupony, na které šlo koupit víc předem online.",
+      "pouceni": "Nejezděte na rezervu. Tankujte průběžně, dokud je palivo běžně k dostání.",
+      "zdroje": [
+        {
+          "nazev": "Euronews — Long queues and rationing at Ukrainian petrol stations",
+          "url": "https://www.euronews.com/video/2022/05/04/long-queues-and-rationing-at-ukrainian-petrol-stations-due-to-fuel-shortages",
+          "datum": "2022-05-04"
+        },
+        {
+          "nazev": "NBC News — 4-hour wait for 5 gallons of gas in Kyiv",
+          "url": "https://www.nbcnews.com/news/world/4-hour-wait-5-gallons-gas-oil-shortage-sparks-panic-buying-kyiv-rcna28095"
+        }
+      ]
+    },
+    {
+      "id": "odjezd-kyjev-2022-02",
+      "tema": "doprava-palivo",
+      "nadpis": "Všichni najednou: tankovat, vybrat, nakoupit, odjet",
+      "coSeStalo": "Ráno 24. 2. 2022 se od šesti hodin tvořily kolony z Kyjeva a před bankomaty, obchody a pumpami stály dlouhé fronty.",
+      "kdyKde": "24. 2. 2022, Kyjev",
+      "coNasledovalo": "Nedostatek paliva pokračoval i na jaře; pumpy omezovaly prodej a na benzín se čekalo hodiny.",
+      "jakToLideResili": "Lidé se snažili natankovat, vybrat hotovost a nakoupit — většinou zároveň s pokusem o odjezd.",
+      "pouceni": "Mějte nádrž aspoň z poloviny plnou a doma trochu hotovosti. Pak nemusíte v první den stát ve všech frontách najednou.",
+      "zdroje": [
+        {
+          "nazev": "Al Jazeera — Russian attack causes panic in Kyiv as people flee",
+          "url": "https://www.aljazeera.com/news/2022/2/24/russian-attack-prompts-initial-panic-in-kyiv-with-people-fleeing",
+          "datum": "2022-02-24"
+        },
+        {
+          "nazev": "NBC News — Lines, traffic jams and bomb shelters",
+          "url": "https://www.nbcnews.com/news/world/russian-attack-ukraine-crisis-civilians-rcna17492",
+          "datum": "2022-02-24"
+        }
+      ]
+    },
+    {
+      "id": "aplikace-poplach",
+      "tema": "poplach-kryt",
+      "nadpis": "Varování do telefonu, i když sirénu neslyšíte",
+      "coSeStalo": "V prvních dnech invaze vznikla aplikace, která posílá upozornění na leteckou hrozbu pro nastavenou oblast; vyvinuly ji soukromé firmy s ministerstvem digitální transformace.",
+      "kdyKde": "od konce února 2022, celá Ukrajina",
+      "coNasledovalo": "Podle výrobce měla ke čtvrtému výročí přes 46 milionů stažení a 6,7 milionu denně aktivních uživatelů.",
+      "jakToLideResili": "Lidé si v aplikaci nastavili svou oblast a varování dostávali do telefonu i tam, kde siréna nebyla slyšet.",
+      "pouceni": "Mějte v telefonu nastavené oficiální varování pro místo, kde jste — nespoléhejte jen na sirénu.",
+      "zdroje": [
+        {
+          "nazev": "Ajax Systems — Fourth anniversary of the Air Alert app",
+          "url": "https://ajax.systems/blog/air-alert-fourth-anniversary/"
+        },
+        {
+          "nazev": "Ajax Systems — Three years of the Air Alert app",
+          "url": "https://ajax.systems/press-page/air-alert-third-anniversary/"
+        }
+      ]
+    },
+    {
+      "id": "unava-z-poplachu",
+      "tema": "poplach-kryt",
+      "nadpis": "Únava z poplachů: lidé časem přestávají reagovat",
+      "coSeStalo": "Studie v časopise PNAS prošla polohová data zhruba 17 milionů telefonů a přes 3 000 poplachů. Rychlá reakce na varování v prvních měsících výrazně snížila počet obětí, ochota reagovat ale postupně slábla.",
+      "kdyKde": "data z roku 2022, studie vyšla v dubnu 2023",
+      "coNasledovalo": "Autoři odhadli, že reakce v prvních měsících zabránila 35–45 % obětí; podle VOA se dalším 8–15 % dalo předejít, kdyby lidé varování poslouchali dál.",
+      "jakToLideResili": "Lidé reagovali víc, když bylo nebezpečí dobře vidět; autoři proto doporučují varování, která srozumitelně ukazují skutečné riziko.",
+      "pouceni": "Domluvte se doma na jednoduchém pravidle, co uděláte při každém varování — a držte se ho, i když předchozí poplachy skončily bez následků.",
+      "zdroje": [
+        {
+          "nazev": "PNAS — Public response to government alerts saves lives during Russian invasion of Ukraine",
+          "url": "https://www.pnas.org/doi/10.1073/pnas.2220160120",
+          "datum": "2023-04"
+        },
+        {
+          "nazev": "VOA — 'Alert Fatigue' Is Costing Ukrainians Their Lives",
+          "url": "https://www.voanews.com/a/alert-fatigue-is-costing-ukrainians-their-lives/7190434.html",
+          "datum": "2023-07-21"
+        }
+      ]
+    },
+    {
+      "id": "metro-kyjev-2022",
+      "tema": "poplach-kryt",
+      "nadpis": "Kyjevské metro: přes den vlaky, v noci kryt",
+      "coSeStalo": "Hned první noc invaze přečkaly tisíce Kyjevanů na nástupištích metra; starosta zastavil dopravu, aby stanice sloužily jako kryt.",
+      "kdyKde": "od 24. 2. 2022, Kyjev",
+      "coNasledovalo": "Podle Bloombergu v březnu 2022 ve stanicích spalo odhadem 15 000 lidí, zatímco přes den vlaky znovu jezdily.",
+      "jakToLideResili": "Lidé nocovali na nástupištích a v chodbách; metro přes den vozilo cestující a v noci sloužilo jako úkryt.",
+      "pouceni": "Zjistěte si předem, který hluboký podzemní prostor ve vašem městě slouží jako úkryt.",
+      "zdroje": [
+        {
+          "nazev": "Bloomberg — As Thousands Shelter in Stations, Kyiv's Metro Is Still Running Trains",
+          "url": "https://www.bloomberg.com/news/articles/2022-03-14/how-kyiv-transformed-its-subway-into-a-bomb-shelter",
+          "datum": "2022-03-14"
+        },
+        {
+          "nazev": "Foreign Policy — Soviet-Built Kyiv Metro Stations Provide Shelter",
+          "url": "https://foreignpolicy.com/2022/11/12/ukraine-russia-war-kyiv-metro-transit-shelter-missiles/",
+          "datum": "2022-11-12"
+        }
+      ]
+    },
+    {
+      "id": "zamceny-kryt-2023",
+      "tema": "poplach-kryt",
+      "nadpis": "Kryt byl zamčený",
+      "coSeStalo": "Při nočním útoku utíkali lidé do krytu pod poliklinikou, ale byl zamčený. Nikdo neotevřel a venku zahynuli tři lidé.",
+      "kdyKde": "1. 6. 2023, Kyjev",
+      "coNasledovalo": "Úřady nařídily celostátní kontrolu: z více než 50 000 prověřených krytů bylo 9 % zavřených a 23 % nepoužitelných.",
+      "jakToLideResili": "Obyvatelé hromadně hlásili zamčené kryty; podle starosty se téměř polovina stížností týkala právě zamčených vchodů.",
+      "pouceni": "Ještě v klidu si ověřte, že váš úkryt je opravdu přístupný, kdo má klíč a kam jít, když bude zavřeno.",
+      "zdroje": [
+        {
+          "nazev": "CNN — Anger in Kyiv as 3 killed trying to get into closed bomb shelter",
+          "url": "https://us.cnn.com/2023/06/01/europe/kyiv-three-killed-closed-bomb-shelter-intl-ukr/",
+          "datum": "2023-06-01"
+        },
+        {
+          "nazev": "AP (Central Maine) — Inspections found nearly a quarter of air-raid shelters locked or unusable",
+          "url": "https://www.centralmaine.com/2023/06/03/ukraine-says-inspections-found-nearly-a-quarter-of-its-air-raid-shelters-locked-or-unusable/",
+          "datum": "2023-06-03"
+        }
+      ]
+    },
+    {
+      "id": "pravidlo-dvou-sten",
+      "tema": "poplach-kryt",
+      "nadpis": "Když není čas do krytu: dvě pevné zdi",
+      "coSeStalo": "Oficiální ukrajinské rady doporučují, když není čas dojít do krytu, schovat se za aspoň dvě pevné zdi od ulice — na chodbě, v koupelně, v předsíni bez oken — a vyhnout se proskleným schodištím.",
+      "kdyKde": "Ukrajina, vládní portál dovidka.info",
+      "coNasledovalo": "Pozdější články upozorňují, že pravidlo bezpečí nezaručuje; vnitřní místnost bez oken ale riziko zranění střepinami a tlakovou vlnou výrazně snižuje.",
+      "jakToLideResili": "Kdo nešel do krytu, trávil útok na chodbě nebo v koupelně, daleko od oken.",
+      "pouceni": "Určete si doma předem místo bez oken za dvěma pevnými zdmi — jako nouzové řešení, ne náhradu úkrytu.",
+      "zdroje": [
+        {
+          "nazev": "Dovidka.info — Shelter",
+          "url": "https://dovidka.info/en/what-is-shelter/"
+        },
+        {
+          "nazev": "Visit Ukraine — Why the two-wall rule no longer saves lives",
+          "url": "https://visitukraine.today/blog/6411/why-the-two-wall-rule-no-longer-saves-lives-how-to-protect-yourself-during-shelling-in-ukraine-in-2025",
+          "datum": "2025"
+        }
+      ]
+    },
+    {
+      "id": "vlaky-2022",
+      "tema": "evakuace",
+      "nadpis": "Evakuační vlaky: kdo přišel dřív, nastoupil",
+      "coSeStalo": "Na kyjevském nádraží čekaly denně tisíce lidí hodiny na vlak. Jízdenky neplatily, spoje jezdily jako evakuační a lidé se do vagonů tlačili.",
+      "kdyKde": "konec února a začátek března 2022, Kyjev a Lvov",
+      "coNasledovalo": "Železnice nasadily další spoje do Lvova, odkud mnozí pokračovali dál.",
+      "jakToLideResili": "Někteří nechali na nástupišti zavazadla i kočárky, jen aby nastoupili.",
+      "pouceni": "Evakuační zavazadlo mějte tak malé, abyste ho unesli v tlačenici. S kočárkem a velkým kufrem se počítat nedá.",
+      "zdroje": [
+        {
+          "nazev": "Kyiv Independent — Kyiv train station mayhem as thousands rush to flee",
+          "url": "https://kyivindependent.com/kyiv-train-station-mayhem-as-thousands-rush-to-flee/",
+          "datum": "2022-03-01"
+        },
+        {
+          "nazev": "Euronews — Railways run extra train services for people fleeing",
+          "url": "https://www.euronews.com/travel/2022/02/28/ukraine-travel-railways-run-extra-train-services-for-people-fleeing-russian-invasion",
+          "datum": "2022-02-28"
+        }
+      ]
+    },
+    {
+      "id": "zvirata-evakuace",
+      "tema": "evakuace",
+      "nadpis": "Se psem, kočkou i králíkem přes hranici",
+      "coSeStalo": "Lidé odcházející z Ukrajiny si brali psy, kočky, králíky i ptáky. Sousední státy EU proto dočasně zmírnily veterinární pravidla pro vstup zvířat.",
+      "kdyKde": "od konce února 2022, hranice s Polskem, Rumunskem a Maďarskem",
+      "coNasledovalo": "Některé státy nabízely čipování a očkování zvířat přímo na hranici.",
+      "jakToLideResili": "Zvířata cestovala s majiteli; na hranicích a nádražích jim organizace na ochranu zvířat zajišťovaly krmivo a péči.",
+      "pouceni": "Mějte zvíře načipované a očkované, jeho doklady u ostatních dokumentů a přepravku s krmivem na pár dní.",
+      "zdroje": [
+        {
+          "nazev": "Euronews — Helping Ukraine's pet refugees find a safe haven",
+          "url": "https://www.euronews.com/2022/03/03/the-countries-and-organisations-helping-ukraine-s-pet-refugees-find-a-safe-haven",
+          "datum": "2022-03-03"
+        },
+        {
+          "nazev": "NBC News — Birds, rabbits, cats and dogs: Fleeing Ukrainians bring their pets",
+          "url": "https://www.nbcnews.com/news/world/ukrainians-fleeing-russian-invasion-bring-pets-rcna19562",
+          "datum": "2022"
+        }
+      ]
+    },
+    {
+      "id": "doklady-telefon",
+      "tema": "evakuace",
+      "nadpis": "Doklady v telefonu, když papírový pas zůstal doma",
+      "coSeStalo": "Státní aplikace Dija nabízí elektronický občanský průkaz, pas a další doklady; po invazi do ní přibyl zjednodušený válečný elektronický průkaz.",
+      "kdyKde": "od roku 2022, Ukrajina; Polsko zavedlo Diia.pl v červenci 2022",
+      "coNasledovalo": "Elektronické doklady mají na Ukrajině stejnou platnost jako papírové; Polsko v Diia.pl vydávalo doklad o pobytu.",
+      "jakToLideResili": "Kdo ztratil papírový doklad nebo ho neměl u sebe, prokazoval se z telefonu.",
+      "pouceni": "Pokud to jde, mějte doklady i v aplikaci eDoklady a skeny důležitých dokumentů uložené bezpečně mimo domov.",
+      "zdroje": [
+        {
+          "nazev": "CGAP — Ukraine's Diia: A Digital Lifeline in Times of Crisis",
+          "url": "https://www.cgap.org/blog/ukraines-diia-digital-lifeline-in-times-of-crisis"
+        },
+        {
+          "nazev": "UNHCR Global Compact on Refugees — Diia.pl digital identity document",
+          "url": "https://globalcompactrefugees.org/good-practices/diiapl-digital-identity-document"
+        }
+      ]
+    },
+    {
+      "id": "zavazadlo-doklady",
+      "tema": "evakuace",
+      "nadpis": "Evakuační zavazadlo: hlavně doklady, třikrát",
+      "coSeStalo": "Záchranná služba a úřady zveřejňovaly seznamy do evakuačního zavazadla s důrazem na doklady: originály a papírové kopie pasů, rodných listů, dokladů k bytu, řidičáků a zdravotní dokumentace.",
+      "kdyKde": "od začátku roku 2022, Ukrajina",
+      "coNasledovalo": "Doporučení se ustálila na dokladech ve třech podobách: originál a kopie v nepromokavém obalu, sken na flash disku a kopie v cloudu.",
+      "jakToLideResili": "Lidé měli zavazadlo sbalené u dveří a kopie dokladů v igelitovém sáčku.",
+      "pouceni": "Připravte si kopie dokladů v nepromokavém obalu, sken na flash disku i v cloudu — a dejte je do zavazadla, které jen popadnete.",
+      "zdroje": [
+        {
+          "nazev": "Ministerstvo školství Ukrajiny — doporučení k obsahu evakuačního zavazadla (PDF)",
+          "url": "https://mon.gov.ua/storage/app/media/civilniy-zahist/2022/03.02/Rekom.vmist.tryvozhnoyi.valizy.03.02.pdf",
+          "datum": "2022-02-03"
+        },
+        {
+          "nazev": "5.ua — seznam do evakuačního zavazadla podle DSNS",
+          "url": "https://www.5.ua/dv/life/268871"
+        }
+      ]
+    },
+    {
+      "id": "radio-baterie",
+      "tema": "informace",
+      "nadpis": "Rádio z powerbanky, zprávy jednou za hodinu",
+      "coSeStalo": "Při výpadcích se doporučovalo poslouchat veřejnoprávní rozhlas z rádia na baterie. Jedna obyvatelka popsala, že když se baterie rádia vybila, napájela ho z powerbanky.",
+      "kdyKde": "listopad 2022, Ukrajina",
+      "coNasledovalo": "Rádio zůstalo zdrojem zpráv i ve chvílích, kdy nešel mobil ani internet.",
+      "jakToLideResili": "Rádio napájeli z baterií nebo powerbanky a energii šetřili krátkým poslechem zpráv jednou za hodinu.",
+      "pouceni": "Rádio na baterie nebo s USB napájením je levná záloha, když nejde mobilní síť ani internet.",
+      "zdroje": [
+        {
+          "nazev": "Visit Ukraine — Radio, satellite and online: how to find out the news",
+          "url": "https://visitukraine.today/blog/1230/radio-satellite-and-online-how-to-find-out-the-news-if-the-broadcast-does-not-work"
+        },
+        {
+          "nazev": "UC Berkeley Library — Capturing Struggle: Ukraine Through American and Ukrainian Lenses",
+          "url": "https://exhibits.lib.berkeley.edu/spotlight/ukraine/catalog/72-4389"
+        }
+      ]
+    },
+    {
+      "id": "deti-metro-charkov",
+      "tema": "informace",
+      "nadpis": "Děti týdny v metru: pomohl pravidelný program",
+      "coSeStalo": "Charkovské metro sloužilo jako kryt, ve kterém lidé žili týdny. Podle UNICEF bylo v 29 stanicích asi 1 500 dětí a některé čtyři týdny nevyšly ven.",
+      "kdyKde": "březen až květen 2022, Charkov",
+      "coNasledovalo": "V květnu 2022 metro po zhruba třech měsících znovu začalo jezdit.",
+      "jakToLideResili": "Učitelé, psychologové, trenéři a lektoři tance jako dobrovolníci s dětmi ve stanicích pravidelně učili a hráli si; UNICEF přispěl hrací koutky a pomůckami.",
+      "pouceni": "Když děti musí zůstat v úkrytu déle, držte jim pravidelný denní program. Do zavazadla přibalte něco na kreslení a hraní.",
+      "zdroje": [
+        {
+          "nazev": "UNICEF Ukrajina — A month underground: Volunteers in Kharkiv metro entertain children",
+          "url": "https://www.unicef.org/ukraine/en/stories/subways-become-safe-spaces-for-children",
+          "datum": "2022"
+        },
+        {
+          "nazev": "Euronews — After weeks sheltering in Kharkiv's metro, locals emerge",
+          "url": "https://www.euronews.com/2022/06/10/after-weeks-sheltering-from-bombs-in-kharkiv-s-metro-locals-emerge-to-a-devastated-city",
+          "datum": "2022-06-10"
+        }
+      ]
+    },
+    {
+      "id": "falesne-video-2022",
+      "tema": "informace",
+      "nadpis": "Falešné video vyzývalo ke složení zbraní",
+      "coSeStalo": "Útočníci pronikli na web a do běžícího textu televize Ukrajina 24 a šířili uměle vytvořené video, v němž prezident vyzývá ke kapitulaci.",
+      "kdyKde": "16. 3. 2022, Ukrajina",
+      "coNasledovalo": "Podvrh byl během několika hodin odhalen a smazán; prezident ho vyvrátil vlastním videem na oficiálních kanálech.",
+      "jakToLideResili": "Diváci si všimli nepřirozeného hlasu a zprávu si ověřili na oficiálních kanálech.",
+      "pouceni": "Zprávu, která vyzývá k panice nebo okamžitému jednání, si před sdílením ověřte na oficiálním kanálu úřadu.",
+      "zdroje": [
+        {
+          "nazev": "NPR — A deepfake video showing Volodymyr Zelenskyy surrendering worries experts",
+          "url": "https://www.npr.org/2022/03/16/1087062648/deepfake-video-zelenskyy-experts-war-manipulation-ukraine-russia",
+          "datum": "2022-03-16"
+        },
+        {
+          "nazev": "France 24 — Debunking a deepfake video of Zelensky",
+          "url": "https://www.france24.com/en/tv-shows/truth-or-fake/20220317-deepfake-video-of-zelensky-telling-ukrainians-to-surrender-debunked",
+          "datum": "2022-03-17"
+        }
+      ]
+    },
+    {
+      "id": "spojeni-mariupol",
+      "tema": "informace",
+      "nadpis": "Když padne poslední vysílač",
+      "coSeStalo": "V Mariupolu byla od 2. března 2022 poškozená elektrická síť a lidé nemohli dobíjet telefony; kolem 6. března zasáhlo ostřelování poslední fungující vysílač.",
+      "kdyKde": "březen 2022, Mariupol",
+      "coNasledovalo": "Příbuzní mimo město o blízkých dlouho nic nevěděli.",
+      "jakToLideResili": "Rodiny zakládaly skupiny na sociálních sítích a sdílely v nich fotografie a údaje o pohřešovaných.",
+      "pouceni": "Domluvte se v rodině předem, kde se sejdete a přes koho mimo postižené místo si budete předávat zprávy, když nepůjde telefon.",
+      "zdroje": [
+        {
+          "nazev": "Al Jazeera — Anguished Ukrainians await news of relatives in besieged Mariupol",
+          "url": "https://www.aljazeera.com/news/2022/3/9/anguished-ukrainians-await-news-of-relatives-in-besieged-mariupol",
+          "datum": "2022-03-09"
+        },
+        {
+          "nazev": "NBC News — Mariupol siege: family search for information",
+          "url": "https://www.nbcnews.com/news/world/russia-urkaine-war-mariupol-siege-family-search-information-rcna24960",
+          "datum": "2022"
+        }
+      ]
+    },
+    {
+      "id": "spanek-2025",
+      "tema": "informace",
+      "nadpis": "Noci s poplachy: spát tam, kde je bezpečno",
+      "coSeStalo": "Při sérii nočních útoků v létě 2025 lidé v Kyjevě popisovali, že je budí výbuchy nebo nemohou usnout až do odvolání poplachu.",
+      "kdyKde": "léto 2025, Kyjev",
+      "coNasledovalo": "Psychologové upozorňovali, že chronický nedostatek spánku přináší výkyvy nálad, stres, apatii a u dětí horší soustředění.",
+      "jakToLideResili": "Lidé spali na chodbách, v koupelnách nebo ve stanicích metra, aby se vyspali a zároveň byli v bezpečí.",
+      "pouceni": "Připravte si na chráněném místě bez oken jednoduché lůžko, třeba matraci na chodbě — pak se v noci nemusíte rozhodovat mezi spánkem a bezpečím.",
+      "zdroje": [
+        {
+          "nazev": "Al Jazeera — Sleeplessness, death, destruction: Russian attacks torment Kyiv",
+          "url": "https://www.aljazeera.com/news/2025/7/14/sleeplessness-death-destruction-russian-attacks-torment-kyiv",
+          "datum": "2025-07-14"
+        },
+        {
+          "nazev": "Kyiv Independent — 'We are exhausted' — how Ukrainians cope with nightly drone attacks",
+          "url": "https://kyivindependent.com/we-are-exhausted-how-ukrainians-cope-with-nightly-russian-drone-attacks/"
+        }
+      ]
+    },
+    {
+      "id": "chat-domu",
+      "tema": "informace",
+      "nadpis": "Chat domu: sousedé si radili a pomáhali",
+      "coSeStalo": "Obyvatelé jednoho panelového domu v Buči používali za okupace společný chat, kde si vedle zpráv o střelbě radili a pomáhali.",
+      "kdyKde": "jaro 2022, Buča",
+      "coNasledovalo": "Záznamy z chatu později posloužily novinářům jako popis každodenního života v té době.",
+      "jakToLideResili": "Sousedé přes chat řešili každodenní potíže a sdíleli informace.",
+      "pouceni": "Založte si se sousedy chat domu a sepište si, kdo potřebuje pomoc (senioři, rodiny s malými dětmi) a kdo s čím umí pomoct.",
+      "zdroje": [
+        {
+          "nazev": "OCCRP — Telegram Chats From a Group of Neighbors in Bucha",
+          "url": "https://cdn.occrp.org/projects/the-banality-of-brutality"
+        },
+        {
+          "nazev": "GIJN — Using Telegram Chats to Reveal Life in Bucha",
+          "url": "https://gijn.org/2022/10/26/using-telegram-chats-reveal-life-bucha-russian-occupation",
+          "datum": "2022-10-26"
+        }
+      ]
+    }
+  ]
+}

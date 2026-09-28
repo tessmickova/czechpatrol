@@ -11767,5 +11767,78 @@
     "lidskyOvereno": false,
     "archivniZaznam": false,
     "overeni": "automaticke"
+  },
+  {
+    "id": "i-2026-09-28-fa2517243f",
+    "slug": "eu-fa2517243f",
+    "titulek": "EU: ministři zahraničí v Bruselu připravují „nouzový bezpečnostní protokol“ pro koordinaci reakce na hybridní útoky",
+    "kratkyTitulek": "EU: ministři zahraničí v Bruselu připravují „nouzový bezpečnostní protokol“ pro koordinaci reakce na hybridní útoky",
+    "zeme": "Evropská unie",
+    "kodZeme": "EU",
+    "kategorie": [
+      "hybridni",
+      "diplomacie",
+      "nato"
+    ],
+    "datumUdalosti": "2026-09-28T00:00:00Z",
+    "datumZjisteni": "2026-09-28T00:00:00Z",
+    "aktualizovano": "2026-09-28T15:01:39.433Z",
+    "zavaznost": "Y1",
+    "jistota": "stredni",
+    "stav": "neuvedeno",
+    "atribuce": "neznama",
+    "puvodce": null,
+    "druh": "opatreni",
+    "fakta": [
+      "Podle Euronews a УНН (UNN) se v pondělí 28. 9. 2026 sešli ministři v Bruselu s úkolem připravit takzvaný „nouzový bezpečnostní protokol“ pro koordinaci rychlé reakce členských států na hybridní hrozby.",
+      "Podle obou zdrojů řekla vysoká představitelka EU pro zahraniční věci Kaja Kallasová: „We need to be vigilant because we see in the intelligence that Russia is planning more sabotage acts.“",
+      "Podle УНН má protokol pokrýt incidenty, které nedosahují prahu ozbrojené agrese, ale vyžadují společnou reakci Evropské komise, členských států a Evropské služby pro vnější činnost.",
+      "Podle Euronews Kallasová zdůraznila snahu vyhnout se překryvu s NATO a to, aby byl protokol „více o činech než o řečech“.",
+      "Podle Euronews podtrhlo naléhavost jednání narušení finského vzdušného prostoru ruským letadlem nad Finským zálivem v pátek, kvůli kterému vzlétly finské a švédské stíhačky."
+    ],
+    "neznameho": [
+      "Kdy bude protokol formálně schválen a jak konkrétně bude fungovat.",
+      "Konkrétní zpravodajské informace, o které se Kallasové tvrzení o plánovaných ruských sabotážích opírá, nejsou zveřejněny; jde o její vyjádření, ne o doložený fakt."
+    ],
+    "vyznam": "",
+    "eskalacniSpousteče": [],
+    "deeskalacniSignaly": [],
+    "zdroje": [
+      {
+        "nazev": "Euronews — EU ministers plan hybrid threat response amid warnings of Russian sabotage",
+        "url": "https://www.euronews.com/2026/09/28/eu-mininsters-plan-response-to-hybrid-attacks-amid-warnings-of-russian-sabotage",
+        "typ": "media",
+        "publikovano": "2026-09-28T00:00:00Z",
+        "primarni": false,
+        "jazyk": "en"
+      },
+      {
+        "nazev": "УНН (Ukrainian National News) — The EU is preparing an 'emergency protocol' as part of its response to hybrid attacks",
+        "url": "https://unn.ua/en/news/the-eu-is-preparing-an-emergency-protocol-as-part-of-its-response-to-hybrid-attacks",
+        "typ": "media",
+        "publikovano": "2026-09-28T00:00:00Z",
+        "primarni": false,
+        "jazyk": "en"
+      }
+    ],
+    "souvisejici": [],
+    "historie": [
+      {
+        "kdy": "2026-09-28T00:00:00Z",
+        "text": "Zachyceno automatickým sběrem, druhý zdroj doložen před zařazením do fronty.",
+        "novySignal": true
+      },
+      {
+        "kdy": "2026-09-28T15:01:39.433Z",
+        "text": "Zveřejněno jako neověřené úředně: dvě nezávislé redakce, úřad zatím nepotvrdil.",
+        "novySignal": false
+      }
+    ],
+    "novy": true,
+    "zapocitanoTyden": "2026-09-28",
+    "aiZpracovano": true,
+    "lidskyOvereno": false,
+    "archivniZaznam": false,
+    "overeni": "neovereno"
   }
 ]
