@@ -11982,5 +11982,99 @@
     "lidskyOvereno": false,
     "archivniZaznam": false,
     "overeni": "neovereno"
+  },
+  {
+    "id": "i-2026-09-28-ru-stav-armady",
+    "slug": "rusko-tabulkovy-stav-armady-zari-2026",
+    "titulek": "Rusko: Putin zvýšil tabulkový početní stav armády o 15 500 vojáků na 1,55 milionu; nejde o mobilizaci",
+    "kratkyTitulek": "Rusko navýšilo tabulkový stav armády, nejde o mobilizaci",
+    "zeme": "Rusko",
+    "kodZeme": "RU",
+    "kategorie": [
+      "rusko",
+      "pravo"
+    ],
+    "datumUdalosti": "2026-09-28T00:00:00Z",
+    "datumZjisteni": "2026-09-28T00:00:00Z",
+    "aktualizovano": "2026-09-29T09:30:00Z",
+    "zavaznost": "Y1",
+    "jistota": "vysoka",
+    "stav": "neuvedeno",
+    "atribuce": "neznama",
+    "puvodce": null,
+    "druh": "opatreni",
+    "fakta": [
+      "Podle dekretu č. 700 z 28. 9. 2026, zveřejněného na oficiálním ruském portálu právních předpisů, se tabulkový početní stav ozbrojených sil zvyšuje na 2 441 630 osob, z toho 1 550 500 vojáků — o 15 500 víc než podle červencového dekretu. Platí ode dne podpisu.",
+      "Jde o čtvrté takové navýšení v roce 2026 (dekrety z 4. 3., 12. 6., 27. 7. a 28. 9.). Od březnového dekretu přibylo v tabulkách 47 860 vojenských míst.",
+      "Dekret nikoho nepovolává. Mění plánovaný (tabulkový) stav armády; místa se podle ruských i nezávislých médií obsazují smluvními vojáky, dobrovolníky a běžnými odvody. Mobilizace by vyžadovala samostatný dekret, jako byl v září 2022."
+    ],
+    "neznameho": [
+      "Dekret neuvádí důvod navýšení.",
+      "Kolik z tabulkových míst je skutečně obsazeno, ruské úřady nezveřejňují.",
+      "Titulek Euronews z 29. 9. mluví o „nové mobilizaci“; tělo článku ani ostatní agentury (AFP) a ruská či nezávislá média o mobilizaci nepíší."
+    ],
+    "vyznam": "",
+    "eskalacniSpousteče": [],
+    "deeskalacniSignaly": [],
+    "zdroje": [
+      {
+        "nazev": "Oficiální portál právních předpisů RF — dekret č. 700 z 28. 9. 2026",
+        "url": "http://publication.pravo.gov.ru/document/0001202609280040",
+        "typ": "primary",
+        "publikovano": "2026-09-28T00:00:00Z",
+        "primarni": true,
+        "jazyk": "ru"
+      },
+      {
+        "nazev": "Meduza — Putin orders fourth expansion of Russia's armed forces this year",
+        "url": "https://meduza.io/en/news/2026/09/28/putin-orders-fourth-expansion-of-russia-s-armed-forces-this-year",
+        "typ": "media",
+        "publikovano": "2026-09-28T00:00:00Z",
+        "primarni": false,
+        "jazyk": "en"
+      },
+      {
+        "nazev": "The Moscow Times — Putin počtvrté letos zvýšil tabulkový stav armády",
+        "url": "https://ru.themoscowtimes.com/2026/09/28/putin-v-chetvertii-raz-s-nachala-goda-uvelichil-shtatnuyu-chislennost-armii-a207214",
+        "typ": "media",
+        "publikovano": "2026-09-28T00:00:00Z",
+        "primarni": false,
+        "jazyk": "ru"
+      },
+      {
+        "nazev": "AFP (SCMP) — Putin signs decree adding 15,500 troops to Russian army",
+        "url": "https://www.scmp.com/news/world/russia-central-asia/article/3369112/putin-signs-decree-adding-15500-troops-russian-army",
+        "typ": "media",
+        "publikovano": "2026-09-29T00:00:00Z",
+        "primarni": false,
+        "jazyk": "en"
+      },
+      {
+        "nazev": "Euronews — New Russian mobilisation: Putin signs decree adding 15,500 troops to army (titulek zavádějící)",
+        "url": "https://www.euronews.com/2026/09/29/new-russian-mobilisation-putin-signs-decree-adding-15500-troops-to-army",
+        "typ": "media",
+        "publikovano": "2026-09-29T00:00:00Z",
+        "primarni": false,
+        "jazyk": "en"
+      }
+    ],
+    "souvisejici": [],
+    "historie": [
+      {
+        "kdy": "2026-09-28T00:00:00Z",
+        "text": "Dekret podepsán a zveřejněn.",
+        "novySignal": true
+      },
+      {
+        "kdy": "2026-09-29T09:30:00Z",
+        "text": "Zachyceno sběrem pod titulkem o „nové mobilizaci“ (Euronews). Ověřeno na pokyn provozovatelky proti oficiálnímu znění a dalším médiím: dekret existuje, mobilizace to není.",
+        "novySignal": false
+      }
+    ],
+    "novy": true,
+    "zapocitanoTyden": "2026-09-28",
+    "aiZpracovano": true,
+    "lidskyOvereno": true,
+    "archivniZaznam": false
   }
 ]

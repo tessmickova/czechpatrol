@@ -19,7 +19,12 @@ describe("texty o tom, jak často běží sběr", () => {
       .filter((f) => !f.endsWith(path.join("config", "web.ts")))
       .filter((f) => /(každých|kazdych|po)\s+30\s+min/i.test(fs.readFileSync(f, "utf-8")));
     expect(spatne).toEqual([]);
-  });
+    /*
+      Delší limit (29. 9. 2026): synchronní čtení celého src/ trvá samo
+      desítky milisekund, ale při souběhu 60+ testových souborů jednou
+      trvalo 6,4 s a spadlo na výchozích 5 s — bez chyby v kódu.
+    */
+  }, 30_000);
   it("text odpovídá nejkratší kadenci workeru", async () => {
     const { KADENCE } = await import("../api/src/minuty");
     const { SBER_JAK_CASTO } = await import("../src/config/web");

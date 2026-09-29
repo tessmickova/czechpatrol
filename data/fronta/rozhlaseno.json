@@ -6,7 +6,12 @@
     }
   },
   "vystrahy": {},
-  "signaly": {},
+  "signaly": {
+    "k-e765638546678309": {
+      "kdy": "2026-09-29T08:04:52.615Z",
+      "messageId": 29
+    }
+  },
   "tipy": {
     "asa-dab-2026-09": {
       "kdy": "2026-09-28T05:55:16.382Z",
@@ -711,6 +716,12 @@
       "historie": 2,
       "cesta": "hned",
       "messageId": 54
+    },
+    "i-2026-09-28-ru-stav-armady": {
+      "kdy": "2026-09-29T08:19:17.313Z",
+      "historie": 2,
+      "cesta": "hned",
+      "messageId": 55
     }
   },
   "snimky": {
@@ -725,6 +736,12 @@
       "kdy": "2026-09-25T20:09:24.414Z",
       "slug": "ru-putin-pobalti-mensiny-2026-09-25",
       "messageId": 48
+    },
+    "i-2026-09-28-ru-stav-armady": {
+      "kdy": "2026-09-29T08:19:17.313Z",
+      "slug": "rusko-tabulkovy-stav-armady-zari-2026",
+      "styl": "vyjasneni",
+      "messageId": 55
     }
   }
 }

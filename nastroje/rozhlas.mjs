@@ -474,6 +474,44 @@ export function sestavZpravu(i, { aktualizace = false, souhrn = false, faktu = 1
  * a u neověřeného záznamu řádek, že vychází z médií — čtenář musí vědět,
  * na čem zpráva stojí.
  */
+/*
+  Uvedení na pravou míru (29. 9. 2026). Když kolem záznamu koluje zavádějící
+  titulek („nová mobilizace“ u dekretu, který nikoho nepovolává), červená
+  „MIMOŘÁDNÁ ZPRÁVA“ by ten titulek jen zesílila. Tady je nahoře to, co se
+  opravdu stalo, a hned pod tím, co z toho neplyne.
+*/
+export function sestavVyjasneni(i, nadpis) {
+  const fakta = (i.fakta ?? []).slice(0, 3).map((f) => `• ${esc(f)}`);
+  return [
+    "ℹ️ <b>Uvedení na pravou míru</b>",
+    `<b>${esc(nadpis || i.kratkyTitulek || i.titulek)}</b>`,
+    "",
+    ...fakta,
+    "",
+    `<b>${esc(klicovaVeta(i))}</b>`,
+    "",
+    `Zdroje: ${(i.zdroje ?? []).map((z) => `<a href="${esc(z.url)}">${esc(String(z.nazev).split(" — ")[0])}</a>`).join(" · ")}`,
+    "",
+    `Celý záznam: ${WEB}/incident/${i.slug}/`,
+  ].filter((r, n, a) => !(r === "" && a[n - 1] === "")).join("\n");
+}
+
+/*
+  Fronta mimořádných zpráv v datech (29. 9. 2026). Ruční spuštění workflow
+  odsud nejde a správkyně ho z telefonu dělat nemusí: stačí přidat položku
+  do data/fronta/mimoradne-zpravy.json a commit spustí rozhlas. Každá
+  položka odejde jednou (stav.mimoradne), i když v souboru zůstane.
+*/
+export function ctiFrontuMimoradnych(soubor = path.join(koren, "data", "fronta", "mimoradne-zpravy.json")) {
+  try { return JSON.parse(fs.readFileSync(soubor, "utf-8")); } catch { return []; }
+}
+export function vyberMimoradne(fronta, zaznamy, stav) {
+  return (fronta ?? [])
+    .filter((f) => f?.slug && !(stav.mimoradne ?? {})[zaznamy.find((z) => z.slug === f.slug)?.id ?? f.slug])
+    .map((f) => ({ f, i: zaznamy.find((z) => z.slug === f.slug) }))
+    .filter((x) => x.i && (x.i.lidskyOvereno || x.i.overeni === "automaticke"));
+}
+
 export function sestavMimoradnou(i) {
   const uredne = i.lidskyOvereno || i.overeni === "automaticke";
   // Mimořádná zpráva nese dvě doložená fakta: u výroku bývá podstata ve dvou větách.
@@ -1447,6 +1485,25 @@ async function main() {
       const v = await posli(sestavVystrahu(vystraha), { nahled: false });
       if (v.ok) { stav.vystrahy[vystraha.klic] = { kdy: new Date(ted).toISOString(), messageId: v.messageId ?? null }; odeslano++; }
       else { selhalo++; console.log(`[rozhlas] výstraha neodešla: ${v.chyba}`); }
+    }
+  }
+
+  /* 0a. mimořádné zprávy z fronty v datech — před vším ostatním kromě výstrahy. */
+  if (rezim === "okamzite" && !prvniBeh) {
+    for (const { f, i } of vyberMimoradne(ctiFrontuMimoradnych(), zaznamy, stav)) {
+      const text = f.styl === "vyjasneni" ? sestavVyjasneni(i, f.nadpis) : sestavMimoradnou(i);
+      let ok = true, messageId = null;
+      for (const [n, dil] of rozdelZpravu(text).entries()) {
+        const v = await posli(dil, { nahled: n === 0 });
+        if (!v.ok && !v.nejisty) { ok = false; console.log(`[rozhlas] mimořádná z fronty neodešla: ${v.chyba}`); break; }
+        messageId ??= v.messageId ?? null;
+      }
+      if (!ok) { selhalo++; continue; }
+      const kdy = new Date(ted).toISOString();
+      stav.mimoradne ??= {};
+      stav.mimoradne[i.id] = { kdy, slug: i.slug, styl: f.styl ?? "mimoradna", messageId };
+      stav.zaznamy[i.id] ??= { kdy, historie: i.historie?.length ?? 0, cesta: "hned", messageId };
+      odeslano++;
     }
   }
 
