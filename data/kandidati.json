@@ -1,187 +1,149 @@
 [
   {
-    "id": "k-88f15d5c65335a7e",
-    "zachyceno": "2026-09-28T20:04:36.717Z",
+    "id": "k-4dffc164b59c060b",
+    "zachyceno": "2026-09-29T00:03:22.883Z",
     "publikovano": null,
     "zdroj": {
-      "nazev": "AGERPRES (státní agentura Rumunska)",
-      "url": "https://agerpres.ro/english/2026/09/28/parliament---ministerial-hearings-miruta-49-unauthorized-incursions-into-romanian-airspace-since-sta--1597779",
+      "nazev": "TASR (Slovensko)",
+      "url": "https://www.tasr.sk/tasr-clanok/TASR:2026092900000003",
       "typ": "wire",
       "primarni": false
     },
-    "titulek": "Parliament - ministerial hearings/Miruta: 49 unauthorized incursions into Romanian airspace since start of war in Ukraine",
-    "titulekPuvodni": "Parliament - ministerial hearings/Miruta: 49 unauthorized incursions into Romanian airspace since start of war in Ukraine",
+    "titulek": "dnes 1:52 Rusko opäť útočí raketami na Kyjev, v metropole sa ozývajú výbuchy",
+    "titulekPuvodni": "dnes 1:52 Rusko opäť útočí raketami na Kyjev, v metropole sa ozývajú výbuchy",
     "shrnuti": "",
-    "kodZeme": "RO",
-    "zeme": "Rumunsko",
-    "kategorie": [
-      "drony"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "zeSite": null,
-    "shody": [
-      "incursion+airspace",
-      "airspace"
-    ],
-    "naliehave": null,
-    "stav": "ceka",
-    "vyrez": {
-      "text": "Parliament - ministerial hearings/Miruta: 49 unauthorized incursions into Romanian airspace since start of war in Ukraine - AGERPRES\nAgerpres – National News Agency: Current news with reliable information for a well-informed society.\nHome\nPaid news feed\nFoto Agerpres\nPress Monitoring\nBucharest\nPiaţa Presei Libere nr. 1, sector 1\nPhone: +4 021.2076.110\noffice@agerpres.ro\nParliament - ministerial hearings/Miruta: 49 unauthorized incursions into Romanian airspace since start of war in Ukraine\nCategory: English\nDate: 2026-09-28 19:10:03\nFoto: Mihai POZIUMSCHI / AGERPRES Photo\nThe nominee for Minister of Defense, Radu Miruta stated on Monday that unauthorized incursions into Romanian airspace have intensified in 2026 compared to the period since the start of the war in Ukraine. \r\n\r\n'Since the beginning of the war in Ukraine, there have been 49 unauthorized incursions into Romanian airspace, and of these, 30 occurred in 2026. So, while there were 49 over this four-and-a-half-year period, 30 took place in just eight months of this year alone. Clearly, there is an intensification. There have been 148 attacks near Romania's border since the start, with 81 occurring during these months of…",
-      "stazeno": "2026-09-28T20:04:38.807Z",
-      "stav": 200
-    }
-  },
-  {
-    "id": "k-8180e873fe620184",
-    "zachyceno": "2026-09-28T20:04:36.647Z",
-    "publikovano": "2026-09-28T19:28:54.000Z",
-    "zdroj": {
-      "nazev": "BBC News — Europe",
-      "url": "https://www.bbc.co.uk/news/videos/cw33kxk3707jo?at_medium=RSS&at_campaign=rss",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Watch: RAF Fairford suspects are bailed, what happens now?",
-    "titulekPuvodni": "Watch: RAF Fairford suspects are bailed, what happens now?",
-    "shrnuti": "The men were all UK nationals in their 20s who live in London and were arrested under the Explosives Act and on suspicion of preparing a terrorist act.",
-    "kodZeme": "GB",
-    "zeme": "Spojené království",
-    "kategorie": [
-      "zpravodajske"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "zeSite": null,
-    "shody": [
-      "arrested+terror"
-    ],
-    "naliehave": null,
-    "stav": "ceka",
-    "vyrez": {
-      "text": "RAF Fairford suspects are bailed, what happens now? - BBC News\nWatch: RAF Fairford suspects are bailed, what happens now?\nWatch: RAF Fairford suspects are bailed, what happens now? Close\nThe five men arrested on suspicion of terror offences near RAF Fairford on Sunday have been released on bail, according to the head of UK counter terrorism policing.\nThe men, UK nationals in their 20s, were arrested under the Explosives Act and on suspicion of preparing a terrorist act.\nSpeaking to the press on Monday, Assistant Commissioner Laurence Taylor said the investigation was not over as police are considering numerous angles, including if proxies working on behalf of a foreign state could have been involved.\nThe BBC's Daniel Sandford explains what authorities said they would be looking at next.\nSubsection\nUK\nPublished\n35 minutes ago\nShare\nclose panel\nShare page\nCopy link\nAbout sharing\nRelated topics\nFairford Royal Air Force Base Follow Fairford Royal Air Force Base\nclose panel\nYou are now following\nFairford Royal Air Force Base\nUpdates from your News topics will appear in My News and in a collection on the News homepage .\nGloucestershire Follow Gloucestershire\nclose panel\nYou are now…",
-      "stazeno": "2026-09-28T20:04:39.063Z",
-      "stav": 200
-    }
-  },
-  {
-    "id": "k-7f0830981503151c",
-    "zachyceno": "2026-09-28T20:04:36.921Z",
-    "publikovano": "2026-09-28T19:28:26.000Z",
-    "zdroj": {
-      "nazev": "France 24 (anglicky)",
-      "url": "https://www.france24.com/en/ukrainian-arms-producers-warn-competitive-edge-eroding-due-to-stringent-export-licence-rules",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Ukrainian arms producers warn competitive edge eroding due to stringent export licence rules",
-    "titulekPuvodni": "Ukrainian arms producers warn competitive edge eroding due to stringent export licence rules",
-    "shrnuti": "Russian drones struck Ukraine's National Academy of Sciences in the historic heart of Kyiv on Monday, in the latest deadly daytime attack on the capital. Volodymyr Zelensky has long been pleading with Ukraine’s allies for more military aid to fend off Russia. But Ukrainian weapons producers say the ",
-    "kodZeme": "FR",
-    "zeme": "Francie",
-    "kategorie": [
-      "hybridni",
-      "drony",
-      "rusko"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "zeSite": null,
-    "shody": [
-      "attack on",
-      "dron",
-      "drone",
-      "russia"
-    ],
-    "naliehave": null,
-    "stav": "ceka",
-    "vyrez": {
-      "text": "Ukrainian arms producers warn competitive edge eroding due to stringent export licence rules - France 24\nSkip to main content\nTo display this content from YouTube, you must enable advertisement tracking and audience measurement.\nAccept\nManage my choices\nOne of your browser extensions seems to be blocking the video player from loading. To watch this content, you may need to disable it on this site.\nTry again\nCover image: © France 24\n06:22\nUkrainian arms producers warn competitive edge eroding due to stringent export licence rules\nEurope\nIssued on: 28/09/2026 - 21:28 Modified: 28/09/2026 - 21:29\nShare\nRussian drones struck Ukraine's National Academy of Sciences in the historic heart of Kyiv on Monday, in the latest deadly daytime attack on the capital. Volodymyr Zelensky has long been pleading with Ukraine’s allies for more military aid to fend off Russia. But Ukrainian weapons producers say the country could be bringing in significant revenue of its own, if only they were allowed to export their products. FRANCE 24's Gulliver Cragg reports from Kyiv.\nVideo by:\nGulliver CRAGG\nKeywords for this article\nUkraine\nRussia\ndrones\nKyiv\nweapons\nmilitary\nEurope\nNATO\nRead more\nRead less\nFirst…",
-      "stazeno": "2026-09-28T20:04:39.239Z",
-      "stav": 200
-    }
-  },
-  {
-    "id": "k-57af103cc1ef72c5",
-    "zachyceno": "2026-09-28T20:04:38.666Z",
-    "publikovano": "2026-09-28T18:57:00.000Z",
-    "zdroj": {
-      "nazev": "Ukrinform (anglicky)",
-      "url": "https://www.ukrinform.net/rubric-ato/4168964-debris-from-enemy-uav-fell-in-courtyard-of-residential-building-in-kyivs-desnianskyi-district.html",
-      "typ": "wire",
-      "primarni": false
-    },
-    "titulek": "Debris from enemy UAV fell in courtyard of residential building in Kyiv's Desnianskyi district",
-    "titulekPuvodni": "Debris from enemy UAV fell in courtyard of residential building in Kyiv's Desnianskyi district",
-    "shrnuti": "Debris was recorded falling in the courtyard of a residential building in Kyiv's Desnianskyi district.",
     "kodZeme": "UA",
     "zeme": "Ukrajina",
     "kategorie": [
-      "drony"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "zeSite": null,
-    "shody": [
-      "uav+fell",
-      "debris+uav",
-      "uav"
-    ],
-    "naliehave": null,
-    "stav": "ceka",
-    "vyrez": {
-      "text": "Debris from enemy UAV fell in courtyard of residential building in Kyiv's Desnianskyi district\n\r\nSubscription\nNewsletters\nPhotobank\nUkrinform - Ukrainian National News Agency\nFounded in 1918\nMonday, 28 September 2026, 23:04\nWar\nEconomy\nSports\nMore ☰\nContacts\nEng\nУкр\nEng\nEsp\nDeu\nعربي\nFra\n日本語\nPol\n&times;\nAll topics\nWar\nRecovery of Ukraine\nPolitics\nEconomy\nFact checks\nDefense\nSociety and Culture\nSports\nCrime\nAccidents and Emergencies\nAgency\nInformation on Agency\nOur Contacts\nSubscribtion Terms\nOur Services\nPrivacy policy and personal data protection\nAdditional\nPublications\nInterviews\nPhoto\nVideo\nLongreads\nReleases\nServices\nSubscription\nNewsletters\nPhotobank\n\r\n\r\n\r\nDebris was recorded falling in the courtyard of a residential building in Kyiv's Desnianskyi district.\nAccording to Ukrinform, the Kyiv City Military Administration reported this on Telegram .\n\r\n\r\n\"In the Desnianskyi district, debris fell in the courtyard of a residential building,\" the statement said.\n\r\n\r\nThe Kyiv City Military Administration clarified that, according to preliminary information, there was no damage or injuries.\n\r\n\r\nRead also: Russian attacks in Dnipropetrovsk region kill six people and injure 28 in one day…",
-      "stazeno": "2026-09-28T20:04:39.352Z",
-      "stav": 200
-    }
-  },
-  {
-    "id": "k-f61ce536be95971e",
-    "zachyceno": "2026-09-28T20:04:37.326Z",
-    "publikovano": "2026-09-28T18:43:02.000Z",
-    "zdroj": {
-      "nazev": "Aktuality.sk",
-      "url": "https://www.aktuality.sk/clanok/VYyTc0g/wadephul-odmieta-dalsie-rokovania-s-ruskom-kym-moskva-neprejavi-ustretovost/",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Wadephul odmieta ďalšie rokovania s Ruskom, kým Moskva neprejaví ústretovosť",
-    "titulekPuvodni": "Wadephul odmieta ďalšie rokovania s Ruskom, kým Moskva neprejaví ústretovosť",
-    "shrnuti": "Nemecký minister Johann Wadephul po stretnutí s Lavrovom odmieta ďalšie rokovania s Moskvou bez zmeny jej postoja. Hovorí o potrebe tvrdšieho tlaku na Rusko.",
-    "kodZeme": "DE",
-    "zeme": "Německo",
-    "kategorie": [
-      "hybridni",
+      "sabotaz",
       "rusko"
     ],
     "druhOdhad": "neurceno",
     "klasifikace": "pravidla",
     "zeSite": null,
     "shody": [
-      "lavrov+nemeck+stret",
+      "vybuch",
       "rusk"
     ],
     "naliehave": null,
     "stav": "ceka",
     "vyrez": {
-      "text": "Wadephul odmieta ďalšie rokovania s Ruskom, kým Moskva neprejaví ústretovosť | Aktuality.sk\nAktuality\nŠport\nDiva\nNajmama\nŽivé\nRecepty\nDobrú chuť\nSlovník\n18 °C -\nBratislava\npondelok 28. 9.\n28. 9.\nVáclav\nSprávy dnes 28. Sep 2026 o 20:43\n1 min. čítania\nPridať do Google\nWadephul odmieta ďalšie rokovania s Ruskom, kým Moskva neprejaví ústretovosť\n1 fotka v galérii\nJohann Wadephul Zdroj: REUTERS/Ints Kalnins\nTASR\nAktuality.sk\nUložiť článok\nNemecký minister Johann Wadephul po stretnutí s Lavrovom odmieta ďalšie rokovania s Moskvou bez zmeny jej postoja. Hovorí o potrebe tvrdšieho tlaku na Rusko.\nNemecký minister zahraničných vecí Johann Wadephul, ktorý sa cez víkend v New Yorku stretol so svojím ruským náprotivkom Sergejom Lavrovom, aspoň zatiaľ nevidí dôvod na ďalšie rokovania s predstaviteľmi Ruska. Uviedol to v pondelok počas návštevy Holandska, píše TASR podľa správy agentúry DPA.\n„Ďalšie stretnutia majú zmysel len za predpokladu, že Rusko je skutočne pripravené rokovať,“ povedal Wadephul, ktorý sa s Lavrovom stretol na 20 minút na okraj Valného zhromaždenia OSN. Hlavnou témou ich rozhovoru bola vojna na Ukrajine, ktorá sa od februára 2022 bráni invázii ruských jednotiek. Išlo o prvé…",
-      "stazeno": "2026-09-28T20:04:40.645Z",
+      "text": "Tlačová agentúra Slovenskej republiky - TASR.sk\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nPre Weissa bude duel s Kazachstanom špeciálny: Verím našej kvalite\nSlovenku mali nútiť pracovať v podvodnom call centre na Ukrajine\nPolicajti kontrolovali železnice, zabránili aj tragédii pri tuneli\nPS vyzýva opozičných poslancov, aby sa zúčastnili na rokovaní NR SR\nV Poľsku zadržali 13-ročného chlapca, ktorý plánoval útok v škole\nJuraj Blanár bude so šéfom nemeckej diplomacie rokovať aj o migrácii\nPrezident vyhovel požiadavke premiéra na stiahnutie odvolania Tarabu\n\r\n\r\n\r\n\r \r\r\r\n\r \r \r \r \r Teraz\n\r TASR TV\n\r Webmagazín\n\r Vtedy.sk\n\r \r FOTOBANKA TASR\n\r Webreport\n\r Školské\n\r \r\r \r\n\r\n\r\n\r \r\r\n\r\n\r\n\r \r \r\n\r Úvod\nO agentúre\nProdukty a služby\nKontakty\nPodporujeme\n\r\n\r \r\n\r \r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nRusko opäť útočí raketami na Kyjev, v metropole sa ozývajú výbuchy\ndnes 1:52\nKyjev 29. septembra (TASR) - V utorok skoro ráno sa v Kyjeve ozvalo niekoľko silných výbuchov, pričom počas leteckého poplachu boli aktivované systémy protivzdušnej obrany, informovala agentúra AFP, píše TASR.\n„Na Kyjev mieria nové balistické rakety,“ varovali ukrajinské vzdušné sily na platforme Telegram. Novinári v Kyjeve informovali o kombinovanom útoku dronmi a raketami…",
+      "stazeno": "2026-09-29T00:03:25.746Z",
       "stav": 200
     }
   },
   {
-    "id": "k-35b0229141136b38",
-    "zachyceno": "2026-09-28T20:04:38.697Z",
-    "publikovano": "2026-09-28T18:42:00.000Z",
+    "id": "k-7524de8d8d882c7e",
+    "zachyceno": "2026-09-29T00:03:24.696Z",
+    "publikovano": "2026-09-28T22:38:24.000Z",
     "zdroj": {
-      "nazev": "Ukrainska Pravda (anglicky)",
-      "url": "https://www.pravda.com.ua/eng/news/2026/09/28/8055498/",
+      "nazev": "Le Monde (Francie)",
+      "url": "https://www.lemonde.fr/international/live/2026/09/29/en-direct-guerre-en-ukraine-fortes-explosions-entendues-a-kiev-visee-par-des-missiles-balistiques-selon-l-armee-de-l-air-ukrainienne_6783795_3210.html",
       "typ": "media",
       "primarni": false
     },
-    "titulek": "Zelenskyy: Russia has already begun additional mobilisation",
-    "titulekPuvodni": "Zelenskyy: Russia has already begun additional mobilisation",
-    "shrnuti": "President Volodymyr Zelenskyy says Moscow is expanding recruitment of foreign nationals and preparing additional North Korean troops for deployment, citing Defence Intelligence.",
+    "titulek": "EN DIRECT, guerre en Ukraine : fortes explosions entendues à Kiev visée par des missiles balistiques, selon l’armée de l’air ukrainienne",
+    "titulekPuvodni": "EN DIRECT, guerre en Ukraine : fortes explosions entendues à Kiev visée par des missiles balistiques, selon l’armée de l’air ukrainienne",
+    "shrnuti": "D’après Volodymyr Zelensky, l’Académie nationale des sciences, une entreprise pharmaceutique et des stations-service ont déjà été touchées dans la journée, dans la capitale ukrainienne, ainsi qu’un centre d’affaires à Dnipro, faisant des victimes. L’Ukraine a aussi confirmé qu’un poste-frontière ava",
+    "kodZeme": "UA",
+    "zeme": "Ukrajina",
+    "kategorie": [
+      "sabotaz"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "explosion"
+    ],
+    "naliehave": null,
+    "stav": "ceka",
+    "vyrez": {
+      "text": "Client Challenge\nA required part of this site couldn’t load. This may be due to a browser\nextension, network issues, or browser settings. Please check your\nconnection, disable any ad blockers, or try using a different browser.",
+      "stazeno": "2026-09-29T00:03:26.311Z",
+      "stav": 200
+    }
+  },
+  {
+    "id": "k-0844a460efe1ca2f",
+    "zachyceno": "2026-09-28T22:30:54.670Z",
+    "publikovano": null,
+    "zdroj": {
+      "nazev": "The Kyiv Independent",
+      "url": "https://kyivindependent.com/russia-beginning-additional-mobilization-of-troops-north-korean-recruitment-zelensky-warns/",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Russia beginning 'additional mobilization' of troops, North Korean recruitment, Zelensky warns.",
+    "titulekPuvodni": "Russia beginning 'additional mobilization' of troops, North Korean recruitment, Zelensky warns.",
+    "shrnuti": "",
+    "kodZeme": "RU",
+    "zeme": "Rusko",
+    "kategorie": [
+      "vojsko",
+      "rusko"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "troops+mobiliz",
+      "russia"
+    ],
+    "naliehave": null,
+    "stav": "ceka",
+    "vyrez": {
+      "text": "Russia beginning 'additional mobilization' of troops, North Korean recruitment, Zelensky warns The Kyiv Independent Live in London: October 2\nDays until event:\n03 d days\n18 h hours\n29 m minutes\n54 s seconds\nGet your ticket\nNorth Korea Russia beginning 'additional mobilization' of troops, North Korean recruitment, Zelensky warns\nSeptember 28, 2026 11:20 pm • 3 min read\nPrefer on Google\nL\nby Lachlan Hyatt\nPresident of Ukraine Volodymyr Zelenskyy addresses the 81st session of the United Nations (U.N.) General Assembly at U.N. Headquarters on Sept. 23, 2026 in New York City. (Alexi J. Rosenfeld/Getty Images)\nIn his nightly video address, President Volodymyr Zelensky warned on Sept. 28 that Moscow is beginning further troop mobilizations following Russian parliamentary elections.\n\"Today, the GUR reported on the measures that Russia is planning in the future,\" Zelensky said. \"In fact, the Russians have already begun additional mobilization - they are increasing the number of people they are recruiting using various methods.\"\nThe president said that Russia is looking to \"increase the involvement of foreigners\" in its armed forces. North Korea is preparing to deploy another 10,000 troops…",
+      "stazeno": "2026-09-28T22:30:57.675Z",
+      "stav": 200
+    }
+  },
+  {
+    "id": "k-bb298c51157bd08d",
+    "zachyceno": "2026-09-28T22:30:55.029Z",
+    "publikovano": "2026-09-28T20:55:42.000Z",
+    "zdroj": {
+      "nazev": "France 24 (anglicky)",
+      "url": "https://www.france24.com/en/raf-fairford-ai-enhanced-photos-of-suspects-fuel-false-claims-about-their-religion-1",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "RAF Fairford: AI-enhanced photos of suspects fuel false claims about their religion",
+    "titulekPuvodni": "RAF Fairford: AI-enhanced photos of suspects fuel false claims about their religion",
+    "shrnuti": "Five men arrested over a suspected bomb plot at RAF Fairford have been released on bail as investigations continue. Meanwhile, AI-enhanced images purporting to show their faces have gone viral, with some users claiming it ‘proves’ the men are Muslim. SynthID confirms the sharpened images were create",
+    "kodZeme": "GB",
+    "zeme": "Spojené království",
+    "kategorie": [
+      "sabotaz"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "bomb"
+    ],
+    "naliehave": null,
+    "stav": "ceka",
+    "vyrez": {
+      "text": "RAF Fairford: AI-enhanced photos of suspects fuel false claims about their religion - Truth or Fake - France 24\nSkip to main content\nRAF Fairford: AI-enhanced photos of suspects fuel false claims about their religion\nEurope\nTo display this content from YouTube, you must enable advertisement tracking and audience measurement.\nAccept\nManage my choices\nOne of your browser extensions seems to be blocking the video player from loading. To watch this content, you may need to disable it on this site.\nTry again\nCover image: Truth or Fake © France 24\n04:38\nIssued on: 28/09/2026 - 22:55\n04:38 min\nShare\nFrom the show\nReading time\n1 min\nFive men arrested over a suspected bomb plot at RAF Fairford have been released on bail as investigations continue. Meanwhile, AI-enhanced images purporting to show their faces have gone viral, with some users claiming it ‘proves’ the men are Muslim. SynthID confirms the sharpened images were created using OpenAI tools, meaning the AI has suggested different facial features. UK police have not disclosed any names or religion, only that the men are all British nationals. Vedika Bahl explains.\nFive men arrested over a suspected bomb plot at RAF Fairford in…",
+      "stazeno": "2026-09-28T22:30:58.003Z",
+      "stav": 200
+    }
+  },
+  {
+    "id": "k-e07640df0360fed6",
+    "zachyceno": "2026-09-28T22:30:57.499Z",
+    "publikovano": "2026-09-28T20:18:00.000Z",
+    "zdroj": {
+      "nazev": "Ukrinform (anglicky)",
+      "url": "https://www.ukrinform.net/rubric-ato/4168983-zelensky-russia-has-already-begun-additional-mobilization.html",
+      "typ": "wire",
+      "primarni": false
+    },
+    "titulek": "Zelensky: Russia has already begun additional mobilization",
+    "titulekPuvodni": "Zelensky: Russia has already begun additional mobilization",
+    "shrnuti": "President Volodymyr Zelensky said that Russia has effectively already begun an additional mobilization. He also said there is new information about the involvement of North Korean troops: in addition to the 8,000 currently there, preparations are underway to deploy another 10,000 personnel.",
     "kodZeme": "RU",
     "zeme": "Rusko",
     "kategorie": [
@@ -198,879 +160,8 @@
     "naliehave": null,
     "stav": "ceka",
     "vyrez": {
-      "text": "Zelenskyy says Russia has begun new mobilisation wave | Ukrainska Pravda\nVolodymyr Zelenskyy. Photo: Volodymyr Zelenskyy on social media\nPresident Volodymyr Zelenskyy has said Russia has begun a new wave of mobilisation and plans to recruit more foreign nationals to fight in its war against Ukraine.\nSource: Zelenskyy in his evening address on 28 September\nQuote : \" In effect, the Russians have already begun additional mobilisation – they are increasing the number of people they recruit through various means. They also plan to increase the recruitment of foreigners, and it is important that the governments of the countries from which Russia recruits people into its ranks counter this. We will inform every relevant government.\"\nAdvertisement:\n\r\n\r\n\r\n\r\n\r\nDetails: Zelenskyy said he has received a report from Defence Intelligence of Ukraine on Russia's plans.\nIn particular, Ukraine has new information about Russia's recruitment of North Korean troops: more than 8,000 North Korean military personnel are currently on Russian territory.\nAn additional contingent of 10,000 troops is also being prepared for deployment. They are being selected for training and subsequent transfer to…",
-      "stazeno": "2026-09-28T20:04:42.101Z",
-      "stav": 200
-    }
-  },
-  {
-    "id": "k-e64aa345fd1332d5",
-    "zachyceno": "2026-09-28T20:04:37.312Z",
-    "publikovano": "2026-09-28T18:39:27.000Z",
-    "zdroj": {
-      "nazev": "Denník N (Slovensko)",
-      "url": "https://dennikn.sk/5588100/ukrajinsky-analytik-o-zivote-v-kyjive-zachovavame-pokoj-a-ideme-dalej-najhorsi-je-chronicky-nedostatok-spanku/",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Ukrajinský analytik o živote v Kyjive: Zachovávame pokoj a ideme ďalej. Najhorší je chronický nedostatok spánku",
-    "titulekPuvodni": "Ukrajinský analytik o živote v Kyjive: Zachovávame pokoj a ideme ďalej. Najhorší je chronický nedostatok spánku",
-    "shrnuti": "Použiť jadrovú bombu by nemalo strategický zmysel, hovorí ukrajinský analytik Artem Rybalčenko. A to napriek tomu, že ruská jadrová doktrína je jedna z najzvláštnejších a najflexibilnejších na svete.",
-    "kodZeme": "UA",
-    "zeme": "Ukrajina",
-    "kategorie": [
-      "sabotaz",
-      "rusko"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "zeSite": null,
-    "shody": [
-      "bomb",
-      "rusk"
-    ],
-    "naliehave": null,
-    "stav": "ceka",
-    "vyrez": {
-      "text": "",
-      "stazeno": "2026-09-28T20:04:42.172Z",
-      "stav": 403,
-      "chyba": "HTTP 403"
-    }
-  },
-  {
-    "id": "k-ae1aa9f66e004cbe",
-    "zachyceno": "2026-09-28T20:04:36.485Z",
-    "publikovano": "2026-09-28T18:19:00.000Z",
-    "zdroj": {
-      "nazev": "iDNES.cz — zpravodajství",
-      "url": "https://www.idnes.cz/zpravy/zahranicni/valka-na-ukrajine-rusko-dron-polsko-hranice-kosiniak-kamysz.A260928_201039_zahranicni_hock#utm_source=rss&utm_medium=feed&utm_campaign=zpravodaj&utm_content=main",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Na Ukrajině u hranic s Polskem spadl dron. Vzdušný prostor Polska nebyl narušen",
-    "titulekPuvodni": "Na Ukrajině u hranic s Polskem spadl dron. Vzdušný prostor Polska nebyl narušen",
-    "shrnuti": "Polský ministr obrany Wladyslaw Kosiniak-Kamysz v pondělí odpoledne uvedl, že na Ukrajině asi dva kilometry od hraničního přechodu v polském Dorohusku se zřítil bezpilotní letoun s proudovým pohonem. K narušení polského vzdušného prostoru podle ministra nedošlo, napsala polská agentura PAP. Polsko v",
-    "kodZeme": "PL",
-    "zeme": "Polsko",
-    "kategorie": [
-      "drony"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "zeSite": null,
-    "shody": [
-      "dron+zritil",
-      "dron",
-      "vzdusny prostor"
-    ],
-    "naliehave": null,
-    "stav": "ceka",
-    "vyrez": {
-      "text": "Na Ukrajině u hranic s Polskem spadl ruský dron - iDNES.cz \r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\niDNES.cz\n\r\n\r\n\r\nP�ihl�sit \r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nAbyste mohli pokra�ovat, pot�ebujeme v�d�t, jakou formou v�m m��eme zobrazovat reklamu \r\n\r\n\r\n\r\n\r\n\r\nV�mi zvolen� nastaven� \r\nneobsahuje souhlas se zobrazov�n�m c�len� reklamy . \r\nVyberte pros�m znovu, \r\njakou formou v�m m�me zobrazovat obsah. \r\n\r\n\r\n\r\n\r\n\r\n\r\niDNES Premium\n\r\nBez reklam\n\r\n\r\n199 K� m�s��n�\n\r\nM��ete neomezen� ��st iDNES.cz, Lidovky.cz, Expres.cz a Antiyoutuber.cz. K tomu dostanete tak� noviny a �asopisy v elektronick� podob�. To v�e bez reklam. 1\n\r\n\r\nP�edplatit\n\r\n\r\nU� m�te ��et? P�ihlaste se\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nS c�lenou reklamou\n\r\n\r\n\r\nZdarma \r\n\r\nZachov�me v�m v�e tak, jak jste zvykl� a reklamu p�izp�sob�me va�im z�jm�m. Bez omezen� si m��ete d�l ��st, p�ehr�vat videa, sout�it �i p�isp�vat do v�ech diskus�. 2\n\r\n\r\nSouhlas�m\n\r\nPodrobn� nastaven�\n\r\n\r\n\r\n\r\n\r\n\r\niDNES a reklama\n\r\nPokud vyu�ijete m�sto platby ud�len� souhlasu s reklamou (tj. souhlas s vyu�it�m cookies a dal��ch s�ov�ch identifik�tor� pro ��ely c�len� reklamy), \r\nbudou V�m zobrazov�ny v r�mci na�ich web�…",
-      "stazeno": "2026-09-28T20:04:42.509Z",
-      "stav": 200
-    }
-  },
-  {
-    "id": "k-9b73b8e7487a6c23",
-    "zachyceno": "2026-09-28T20:04:36.896Z",
-    "publikovano": "2026-09-28T17:31:14.000Z",
-    "zdroj": {
-      "nazev": "The Guardian — World",
-      "url": "https://www.theguardian.com/uk-news/2026/sep/28/men-arrested-raf-fairford-counter-terrorism-police",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Five UK nationals arrested near RAF Fairford released on bail",
-    "titulekPuvodni": "Five UK nationals arrested near RAF Fairford released on bail",
-    "shrnuti": "Police say alleged offences could have been committed ‘knowingly or unknowingly’ on behalf of a foreign state Five men arrested over a suspected bomb plot at RAF Fairford have been released on bail as police investigate why they were so close to the airbase in three vans with suspicious material in ",
-    "kodZeme": "GB",
-    "zeme": "Spojené království",
-    "kategorie": [
-      "sabotaz",
-      "zpravodajske"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "zeSite": null,
-    "shody": [
-      "bomb",
-      "arrested+terror"
-    ],
-    "naliehave": null,
-    "stav": "ceka",
-    "vyrez": {
-      "text": "Five UK nationals arrested near RAF Fairford released on bail | UK news | The Guardian\nSkip to main content Skip to navigation\nThe men were pictured on Sunday being apprehended near the RAF base in Gloucestershire. Photograph: BBC\nView image in fullscreen\nThe men were pictured on Sunday being apprehended near the RAF base in Gloucestershire. Photograph: BBC\nFive UK nationals arrested near RAF Fairford released on bail\nPolice say alleged offences could have been committed ‘knowingly or unknowingly’ on behalf of a foreign state\nFive men arrested over a suspected bomb plot at RAF Fairford have been released on bail as police investigate why they were so close to the airbase in three vans with suspicious material in the back.\nThe five suspects were revealed to be British men, all in their 20s and from London. They had been arrested in the Gloucestershire countryside early on Sunday morning on suspicion of explosives offences and preparing an act of terrorism, with an Iranian link a key line of inquiry.\nTheir release on police bail suggests detectives believe it is unlikely they were on the brink of a mass casualty attack by exploding a bomb close to the base, sources said.\nAn Iranian…",
-      "stazeno": "2026-09-28T20:04:45.324Z",
-      "stav": 200
-    }
-  },
-  {
-    "id": "k-519a22b99350013c",
-    "zachyceno": "2026-09-28T20:04:37.088Z",
-    "publikovano": "2026-09-28T17:25:40.000Z",
-    "zdroj": {
-      "nazev": "ORF News (Rakousko)",
-      "url": "https://orf.at/stories/3443526/",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "NATO-General: Russische Sabotage in Europa erfolglos",
-    "titulekPuvodni": "NATO-General: Russische Sabotage in Europa erfolglos",
-    "shrnuti": "",
-    "kodZeme": null,
-    "zeme": null,
-    "kategorie": [
-      "sabotaz",
-      "nato"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "zeSite": null,
-    "shody": [
-      "sabotage",
-      "nato"
-    ],
-    "naliehave": null,
-    "stav": "ceka",
-    "vyrez": {
-      "text": "NATO-General: Russische Sabotage in Europa erfolglos - news.ORF.at\nNATO-General: Russische Sabotage in Europa erfolglos\n28.09.2026 19.25\nOnline seit heute, 19.25 Uhr\nNach den Worten des Oberbefehlshabers der NATO-Truppen in Europa, US-General Alexus Grynkewich, hat die „russische Sabotagekampagne“ in Europa für den Kreml keinen Erfolg. Die „staatlich gesteuerte Sabotage“ werde zwar „immer dreister“, sagte Grynkewich heute vor EU-Abgeordneten. Dennoch halte das die europäischen Länder nicht davon ab, die Ukraine weiter zu unterstützen.\nKonkret verwies Grynkewich auf den Fund einer mit Sprengstoff beladenen Drohne auf dem Flughafen in Leipzig und den Abschuss von Leuchtraketen durch ein russisches Kriegsschiff auf einen dänischen Hubschrauber.\nGeneral: Entschlossene Reaktion nötig\nGrynkewich rief die europäischen Staaten zu einer entschlossenen Reaktion auf russische Sabotageakte auf. Der beste Weg zur Gegenwehr sei es, die Verantwortlichen in Moskau öffentlich zu benennen und die Unterstützung für die Ukraine zu verstärken, sagte Grynkewich.\nEine öffentliche Zuschreibung erhöhe die Kosten für die Drahtzieher und zwinge diese zur Verhaltensänderung, und das habe eine abschreckende…",
-      "stazeno": "2026-09-28T20:04:45.499Z",
-      "stav": 200
-    }
-  },
-  {
-    "id": "k-c8a0fde0683be04b",
-    "zachyceno": "2026-09-28T20:04:36.460Z",
-    "publikovano": "2026-09-28T17:16:30.000Z",
-    "zdroj": {
-      "nazev": "Seznam Zprávy",
-      "url": "https://www.seznamzpravy.cz/clanek/zahranicni-zeme-eu-zvazuji-spolecne-akce-proti-utokum-ruska-316330",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "„Proti Rusku potřebujeme obranu, která ho bude bolet,“ plánuje Evropa",
-    "titulekPuvodni": "„Proti Rusku potřebujeme obranu, která ho bude bolet,“ plánuje Evropa",
-    "shrnuti": "Ministři obrany zemí EU řešili v Bruselu i otázku evropského mechanismu k reakcím proti ruským útokům. Takzvaný Pohotovostní bezpečnostní protokol, který se přirovnává k článku 4 NATO, navrhla už dřív šéfka Evropské komise.",
-    "kodZeme": "BE",
-    "zeme": "Belgie",
-    "kategorie": [
-      "nato",
-      "rusko"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "zeSite": null,
-    "shody": [
-      "clanku 4",
-      "nato",
-      "rusk"
-    ],
-    "naliehave": null,
-    "stav": "ceka",
-    "vyrez": {
-      "text": "„Proti Rusku potřebujeme obranu, která ho bude bolet,“ plánuje Evropa - Seznam Zprávy\nZobrazení snímku 1 z 0\nHlavní obsah\n„Proti Rusku potřebujeme obranu, která ho bude bolet,“ plánuje Evropa\nLukáš Marek\n5:29\nChcete-li článek poslouchat, přihlaste se\neBook\nSdílet\nFoto: Cavan-Images , Shutterstock.com\nRuský dron, ilustrační foto.\n19:16\nMinistři obrany zemí EU řešili v Bruselu i otázku evropského mechanismu k reakcím proti ruským útokům. Takzvaný Pohotovostní bezpečnostní protokol, který se přirovnává k článku 4 NATO, navrhla už dřív šéfka Evropské komise.\nČlánek\nŠéfka unijní diplomacie Kaja Kallasová před novináři potvrdila , že předmětem pondělního jednání ministrů obrany v Bruselu byl i plán na novou „širší strategii proti hybridním útokům“ s názvem Pohotovostní bezpečnostní protokol.\nS návrhem na tento mechanismus poprvé přišla v polovině září šéfka Evropské komise Ursula von der Leyenová a hovoří se o něm jako o evropské obdobě článku 4 NATO .\nČlánek 4 NATO\nČlánek 4  Severoatlantické smlouvy zní následovně: „Smluvní strany budou společně konzultovat vždy, když podle názoru kterékoli z nich bude ohrožena územní celistvost, politická nezávislost nebo bezpečnost kterékoli smluvní…",
-      "stazeno": "2026-09-28T20:04:46.961Z",
-      "stav": 200
-    }
-  },
-  {
-    "id": "k-e817d38bd772d116",
-    "zachyceno": "2026-09-28T20:04:36.899Z",
-    "publikovano": "2026-09-28T17:16:25.000Z",
-    "zdroj": {
-      "nazev": "The Guardian — World",
-      "url": "https://www.theguardian.com/politics/2026/sep/28/nandy-labels-farage-master-of-conspiracy-theory-over-fairford-claims",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Nandy labels Farage ‘master of conspiracy theory’ over Fairford claims",
-    "titulekPuvodni": "Nandy labels Farage ‘master of conspiracy theory’ over Fairford claims",
-    "shrnuti": "Culture secretary criticises Reform leader after he tried to link suspected bomb plot to small boat crossings Nigel Farage has been described as a “master of the conspiracy theory” by the culture secretary, Lisa Nandy, , after he tried to link events at RAF Fairford to small boat crossings. The Refo",
-    "kodZeme": "GB",
-    "zeme": "Spojené království",
-    "kategorie": [
-      "sabotaz"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "zeSite": null,
-    "shody": [
-      "bomb"
-    ],
-    "naliehave": null,
-    "stav": "ceka",
-    "vyrez": {
-      "text": "Nandy labels Farage ‘master of conspiracy theory’ over Fairford claims | Politics | The Guardian\nSkip to main content Skip to navigation\nNigel Farage said he had been warning about ‘Iranian agents’ coming into the UK on small boats after arrests near RAF Fairford. Photograph: Murdo MacLeod/The Guardian\nView image in fullscreen\nNigel Farage said he had been warning about ‘Iranian agents’ coming into the UK on small boats after arrests near RAF Fairford. Photograph: Murdo MacLeod/The Guardian\nNandy labels Farage ‘master of conspiracy theory’ over Fairford claims\nCulture secretary criticises Reform leader after he tried to link suspected bomb plot to small boat crossings\nNigel Farage has been described as a “master of the conspiracy theory” by the culture secretary, Lisa Nandy, , after he tried to link events at RAF Fairford to small boat crossings.\nThe Reform UK leader was criticised over his reaction to the arrests of the men on Sunday, when he said he had been warning for months about “Iranian agents” coming into the UK across the Channel in small boats.\n“We deserve to be told the truth about the Fairford bomb plotters’ identities,” he added in his post on X on Sunday.\nOn Monday…",
-      "stazeno": "2026-09-28T20:04:47.992Z",
-      "stav": 200
-    }
-  },
-  {
-    "id": "k-442dc1f6d9421262",
-    "zachyceno": "2026-09-28T17:00:12.228Z",
-    "publikovano": "2026-09-28T16:56:00.000Z",
-    "zdroj": {
-      "nazev": "Ukrinform (anglicky)",
-      "url": "https://www.ukrinform.net/rubric-ato/4168918-air-defense-forces-shoot-down-86-of-124-russian-drones-over-ukraine-during-day.html",
-      "typ": "wire",
-      "primarni": false
-    },
-    "titulek": "Air defense forces shoot down 86 of 124 Russian drones over Ukraine during day",
-    "titulekPuvodni": "Air defense forces shoot down 86 of 124 Russian drones over Ukraine during day",
-    "shrnuti": "Throughout the day on September 28, air defense forces shot down 86 of 124 Russian drones; the Kyiv region was the main target of the attack.",
-    "kodZeme": "UA",
-    "zeme": "Ukrajina",
-    "kategorie": [
-      "drony",
-      "rusko"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "zeSite": null,
-    "shody": [
-      "shot down",
-      "dron",
-      "drone",
-      "russia"
-    ],
-    "naliehave": null,
-    "stav": "ceka",
-    "vyrez": {
-      "text": "Air defense forces shoot down 86 of 124 Russian drones over Ukraine during day\n\r\nSubscription\nNewsletters\nPhotobank\nUkrinform - Ukrainian National News Agency\nFounded in 1918\nMonday, 28 September 2026, 20:00\nWar\nEconomy\nSports\nMore ☰\nContacts\nEng\nУкр\nEng\nEsp\nDeu\nعربي\nFra\n日本語\nPol\n&times;\nAll topics\nWar\nRecovery of Ukraine\nPolitics\nEconomy\nFact checks\nDefense\nSociety and Culture\nSports\nCrime\nAccidents and Emergencies\nAgency\nInformation on Agency\nOur Contacts\nSubscribtion Terms\nOur Services\nPrivacy policy and personal data protection\nAdditional\nPublications\nInterviews\nPhoto\nVideo\nLongreads\nReleases\nServices\nSubscription\nNewsletters\nPhotobank\n\r\n\r\n\r\nThroughout the day on September 28, air defense forces shot down 86 of 124 Russian drones; the Kyiv region was the main target of the attack.\nAccording to Ukrinform, the Ukrainian Air Force Command reported this on Facebook .\n\r\n\r\n\r\n\r\n\r\n\r\n&ldquo;Throughout the day on September 28 (from 6:30 a.m. to 6:30 p.m.), the enemy attacked Ukraine with 124 strike UAVs (86 of which were jet-powered), &lsquo;Gerbara,&rsquo; &lsquo;Banderole&rsquo;/&lsquo;Dan-T,&rsquo; and other types of drones. The main target of the attack was the Kyiv region,&rdquo;…",
-      "stazeno": "2026-09-28T17:00:12.430Z",
-      "stav": 200
-    }
-  },
-  {
-    "id": "k-a56f7642ff638c4f",
-    "zachyceno": "2026-09-28T17:00:09.824Z",
-    "publikovano": "2026-09-28T16:47:11.000Z",
-    "zdroj": {
-      "nazev": "France 24 (anglicky)",
-      "url": "https://www.france24.com/en/video/20260928-five-suspects-arrested-in-explosives-case-near-uk-airbase-were-british-nationals",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Five suspects arrested in explosives case near UK airbase were British nationals",
-    "titulekPuvodni": "Five suspects arrested in explosives case near UK airbase were British nationals",
-    "shrnuti": "Five suspects arrested by British police on suspicion of terrorism and explosives ​offenses after white vans drove towards an airbase used by US forces were all British nationals from London in their early 20s, police said on Monday. France 24 Benedicte Paviot has more.",
-    "kodZeme": "FR",
-    "zeme": "Francie",
-    "kategorie": [
-      "zpravodajske"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "zeSite": null,
-    "shody": [
-      "arrested+terror"
-    ],
-    "naliehave": null,
-    "stav": "ceka",
-    "vyrez": {
-      "text": "Five suspects arrested in explosives case near UK airbase were British nationals - France 24\nSkip to main content\nTo display this content from YouTube, you must enable advertisement tracking and audience measurement.\nAccept\nManage my choices\nOne of your browser extensions seems to be blocking the video player from loading. To watch this content, you may need to disable it on this site.\nTry again\nCover image: © France 24\n06:00\nFive suspects arrested in explosives case near UK airbase were British nationals\nIssued on: 28/09/2026 - 18:47\nShare\nFive suspects arrested by British police on suspicion of terrorism and explosives ​offenses after white vans drove towards an airbase used by US forces were all British nationals from London in their early 20s, police said on Monday. France 24 Benedicte Paviot has more.\nRead more\nRead less\nFor a 'measured diplomatic figure', Pope Leo's visit to France has been 'deeply political'\n28/09/2026\nFrance\n'Fascinating success': Pope Leo’s appeal in France transcends faith and politics\n28/09/2026\nFrance\nFrench Senate elections: What next after far right surge?\n28/09/2026\nHeavy rain and flooding kills dozens northern India\n28/09/2026\nTrump heads to GOP…",
-      "stazeno": "2026-09-28T17:00:12.790Z",
-      "stav": 200
-    }
-  },
-  {
-    "id": "k-cddb8a7a917d7eab",
-    "zachyceno": "2026-09-28T17:00:09.205Z",
-    "publikovano": "2026-09-28T16:08:57.000Z",
-    "zdroj": {
-      "nazev": "Deník N",
-      "url": "https://denikn.cz/2197738/vyvoj-boju-1677-den-ukrajinci-behem-operace-vivaldi-zajali-250-ruskych-vojaku-rusove-priznavaji-krizi-na-slovjanskem-smeru/",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Vývoj bojů (1677. den): Ukrajinci během operace Vivaldi zajali 250 ruských vojáků, Rusové přiznávají krizi na slovjanském směru",
-    "titulekPuvodni": "Vývoj bojů (1677. den): Ukrajinci během operace Vivaldi zajali 250 ruských vojáků, Rusové přiznávají krizi na slovjanském směru",
-    "shrnuti": "Informace v textu jsou shrnutím událostí za pátek až neděli 25.–27. září. V tuto chvíli už situace na některých místech může být jiná. Ukrajinský útok na severním křídle slovjansko-kramatorského úseku fronty prokračuje. „Na lymanském směru přetrvává těžká situace. Podle zpráv z terénu se nepřítel po",
-    "kodZeme": "UA",
-    "zeme": "Ukrajina",
-    "kategorie": [
-      "hybridni",
-      "vojsko",
-      "rusko"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "zeSite": null,
-    "shody": [
-      "utok na",
-      "vojak",
-      "rusk"
-    ],
-    "naliehave": null,
-    "stav": "ceka",
-    "vyrez": {
-      "text": "Vývoj bojů (1677. den): Ukrajinci během operace Vivaldi zajali 250 ruských vojáků, Rusové přiznávají krizi na slovjanském směru &mdash; Deník N\nČást z 250 ruských vojáků, které zajala ukrajinská armáda během operace Vivaldi. Foto: ukrajinský 3. armádní sbor\nVíce o poslechu Deníku N\nUkrajinský útok na severním křídle slovjansko-kramatorského úseku fronty pokračuje.\nRusové začali útočit na datová centra v ukrajinských městech.\nUkrajinské drony zasáhly továrnu na výrobu naváděcích zařízení pro rakety.\nSice už se o ní tolik nemluví, ale ukrajinská kampaň na střední vzdálenosti úspěšně pokračuje.\nMapy dne: mapa míst zasažených v Kyjevě; ukrajinské úspěchy v okolí Lymanu a Slovjansku.\nVidea dne: roj ruských dronů se blíží ke Kyjevu; ukrajinský dron s vlajkou létal nad okupovaným městem Hola Prystaň; ukrajinská armáda pomocí dronů poslala potraviny obyvatelům okupovaných Olešek v Chersonské oblasti .\nInformace v textu jsou shrnutím událostí za pátek až neděli 25.–27. září. V tuto chvíli už situace na některých místech může být jiná.\nUkrajinský útok na severním křídle slovjansko-kramatorského úseku fronty prokračuje. „Na lymanském směru přetrvává těžká situace. Podle zpráv z terénu…",
-      "stazeno": "2026-09-28T17:00:12.831Z",
-      "stav": 200
-    }
-  },
-  {
-    "id": "k-e6ece409bd66a6c2",
-    "zachyceno": "2026-09-28T17:00:12.312Z",
-    "publikovano": "2026-09-28T16:05:01.000Z",
-    "zdroj": {
-      "nazev": "Meduza (anglicky)",
-      "url": "https://meduza.io/en/news/2026/09/28/bloomberg-hungary-s-otp-bank-considers-a-full-russia-exit-as-regulators-review-its-purchase-of-baltic-lender-luminor",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Bloomberg: Hungary’s OTP Bank considers a full Russia exit as regulators review its purchase of Baltic lender Luminor",
-    "titulekPuvodni": "Bloomberg: Hungary’s OTP Bank considers a full Russia exit as regulators review its purchase of Baltic lender Luminor",
-    "shrnuti": "Hungary’s OTP Bank is considering a complete exit from Russia, Bloomberg reported. The bank has continued operating there since Russia’s full-scale invasion of Ukraine, but its Russian business could hinder approval of its planned purchase of Baltic lender Luminor Bank.",
-    "kodZeme": "HU",
-    "zeme": "Maďarsko",
-    "kategorie": [
-      "nato",
-      "rusko"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "zeSite": null,
-    "shody": [
-      "invasion+baltic+could",
-      "russia"
-    ],
-    "naliehave": null,
-    "stav": "ceka",
-    "vyrez": {
-      "text": "Bloomberg: Hungary’s OTP Bank considers a full Russia exit as regulators review its purchase of Baltic lender Luminor — Meduza\nSkip to main content\nBloomberg: Hungary’s OTP Bank considers a full Russia exit as regulators review its purchase of Baltic lender Luminor\nSeptember 28, 2026, 4:05 pm\nSource: Bloomberg\nHungary’s OTP Bank is considering a complete exit from Russia, Bloomberg reported. The bank has continued operating there since Russia’s full-scale invasion of Ukraine, but its Russian business could hinder approval of its planned purchase of Baltic lender Luminor Bank.\nOTP Group CEO Peter Csanyi told Bloomberg that the bank is reviewing its strategy in Russia, partly because it plans to expand abroad. But OTP acknowledges the obstacles: “At present, a sale is virtually impossible.” The owners of its Russian business could receive only 5% of its value in a sale, and any buyer would have to be acceptable to both the Kremlin and European authorities.\nThe question of what to do with its Russian business is especially important for OTP because of the Luminor deal. In July, the group agreed to buy the Baltic bank from funds managed by Blackstone and DNB. The acquisition would…",
-      "stazeno": "2026-09-28T17:00:13.606Z",
-      "stav": 200
-    }
-  },
-  {
-    "id": "k-618319ef8eb8391a",
-    "zachyceno": "2026-09-28T17:00:08.917Z",
-    "publikovano": "2026-09-28T16:05:00.000Z",
-    "zdroj": {
-      "nazev": "Český rozhlas — domácí zprávy",
-      "url": "https://www.irozhlas.cz/veda-technologie/historie/zbrane-tanky-cimbalovka-muzeum-na-demarkacni-linii-v-rokycanech-oziva-duchem_2609281805_aru",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Zbraně, tanky, cimbálovka. Muzeum na demarkační linii v Rokycanech ožívá duchem první republiky",
-    "titulekPuvodni": "Zbraně, tanky, cimbálovka. Muzeum na demarkační linii v Rokycanech ožívá duchem první republiky",
-    "shrnuti": "Na svátek svatého Václava si v Rokycanech připomněli historii československé armády i život za první republiky. Program v Muzeu na demarkační linii začal v 11 hodin. Patřila mezi ně rozsáhlá bojová ukázka. „Nazvali jsme ji Boj o hranice a představilo se nám v ní více než 100 členů klubu vojenské his",
-    "kodZeme": "CZ",
-    "zeme": "Česko",
-    "kategorie": [
-      "hranice",
-      "cr"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "zeSite": null,
-    "shody": [
-      "hranic+armad",
-      "hranice",
-      "cesky rozhlas",
-      "rozhlas"
-    ],
-    "naliehave": null,
-    "stav": "ceka",
-    "vyrez": {
-      "text": "",
-      "stazeno": "2026-09-28T17:00:13.761Z",
-      "stav": 403,
-      "chyba": "HTTP 403"
-    }
-  },
-  {
-    "id": "k-5cdb4ac67570b68f",
-    "zachyceno": "2026-09-28T17:00:11.760Z",
-    "publikovano": "2026-09-28T16:03:22.000Z",
-    "zdroj": {
-      "nazev": "El Mundo (Španělsko)",
-      "url": "https://www.elmundo.es/internacional/2026/09/28/6aba8121fdddff217f8b457f.html",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Rusia bombardea la Academia Nacional de Ciencias y un gran hospital en Kiev con drones a reacción",
-    "titulekPuvodni": "Rusia bombardea la Academia Nacional de Ciencias y un gran hospital en Kiev con drones a reacción",
-    "shrnuti": "El Kremlin lanza sus aparatos no tripulados contra la capital ucraniana sin interrupción, destruyendo almacenes de alimentos, centros de datos, clínicas y mercados Leer",
-    "kodZeme": "RU",
-    "zeme": "Rusko",
-    "kategorie": [
-      "sabotaz",
-      "drony",
-      "rusko"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "zeSite": null,
-    "shody": [
-      "bomb",
-      "dron",
-      "drone",
-      "kreml",
-      "kremlin"
-    ],
-    "naliehave": null,
-    "stav": "ceka",
-    "vyrez": {
-      "text": "Rusia bombardea la Academia Nacional de Ciencias y un gran hospital en Kiev con drones a reacci�n | Internacional\nINTERNACIONAL\nEuropa en guerra\nRusia bombardea la Academia Nacional de Ciencias y un gran hospital en Kiev con drones a reacci�n\nEl Kremlin lanza sus aparatos no tripulados contra la capital ucraniana sin interrupci�n, destruyendo almacenes de alimentos, centros de datos, cl�nicas y mercados\nCompartir\nComentar\nLos bomberos tratan de apagar el fuego provocado por el bombardeo sobre la Academia Nacional de Ciencias de Kiev. Dan Bashakov AP\nAlberto Rojas\nSEGUIR AUTOR\nActualizado Lunes,\n28\nseptiembre\n2026\n-\n18:03\nA�ADE EL MUNDO EN GOOGLE Haz que nuestras noticias aparezcan en tus b�squedas\nEuropa en guerra La tormenta perfecta de vulnerabilidad europea que Vladimir Putin puede explotar\nEuropa en guerra Rusia extiende su estrategia de terror contra los ucranianos y ataca trenes, gasolineras y almacenes de alimentos\nEl terror ruso no se detiene en Kiev. Al mediod�a de hoy, en el en�simo ataque con los temidos drones de propulsi�n a chorro, la aviaci�n no tripulada del Kremlin impact� contra el edificio de la Academia Nacional de Ciencias, que en ese momento estaba lleno de…",
-      "stazeno": "2026-09-28T17:00:13.852Z",
-      "stav": 200
-    }
-  },
-  {
-    "id": "k-49a4bbf9a0bf8099",
-    "zachyceno": "2026-09-28T17:00:12.274Z",
-    "publikovano": "2026-09-28T15:38:00.000Z",
-    "zdroj": {
-      "nazev": "Ukrainska Pravda (anglicky)",
-      "url": "https://www.pravda.com.ua/eng/news/2026/09/28/8055458/",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Russia hits Darnytsia pharmaceutical plant for third time in six days",
-    "titulekPuvodni": "Russia hits Darnytsia pharmaceutical plant for third time in six days",
-    "shrnuti": "Russian forces struck the Darnytsia pharmaceutical plant in Kyiv on 28 September, marking the third Russian attack on the facility in six days.",
-    "kodZeme": "UA",
-    "zeme": "Ukrajina",
-    "kategorie": [
-      "hybridni",
-      "rusko"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "zeSite": null,
-    "shody": [
-      "attack on",
-      "russia"
-    ],
-    "naliehave": null,
-    "stav": "ceka",
-    "vyrez": {
-      "text": "Russia hits Darnytsia pharmaceutical plant for third time | Ukrainska Pravda\nStock photo: Darnytsia pharmaceutical company\nRussian forces struck a plant in Kyiv belonging to Ukrainian pharmaceutical company Darnytsia once again on 28 September, marking the third attack on the facility in six days.\nSource: Kateryna Zahorii , Chair of the Board of Directors at Darnytsia, on Facebook\nDetails: Zahorii said no one had been injured in the strike.\nAdvertisement:\n\r\n\r\n\r\n\r\n\r\nThe company is not disclosing information about the aftermath of the attack or the condition of the plant for security reasons.\nQuote: \"We are not publishing any details about the aftermath of the strike or the condition of the plant. I also ask you not to post photos or videos, describe the damage or add any details.\"\nBackground: Russian forces previously attacked the Darnytsia plant on 26 September. No casualties were reported at the time either, and the company did not disclose the aftermath of the strike. Another strike on the facility took place on 23 September.\nSubscribe on Patreon to back our journalism long-term.\nRussia-Ukraine war\nAdvertisement:\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nRussia-Ukraine war\n\"She had taste in…",
-      "stazeno": "2026-09-28T17:00:14.007Z",
-      "stav": 200
-    }
-  },
-  {
-    "id": "k-328e48adf5f2c99f",
-    "zachyceno": "2026-09-28T17:00:09.091Z",
-    "publikovano": "2026-09-28T15:37:00.000Z",
-    "zdroj": {
-      "nazev": "iDNES.cz — zpravodajství",
-      "url": "https://www.idnes.cz/zpravy/zahranicni/piloti-budou-moci-rychleji-nicit-objekty-vnikajici-do-polska-ze-strany-ruska.A260928_173117_zahranicni_remy#utm_source=rss&utm_medium=feed&utm_campaign=zpravodaj&utm_content=main",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Ponaučení z ruské vzdušné provokace: Poláci se s identifikací už párat nebudou",
-    "titulekPuvodni": "Ponaučení z ruské vzdušné provokace: Poláci se s identifikací už párat nebudou",
-    "shrnuti": "Polská armáda v nadcházejících dnech upraví postupy, které umožní pilotům stíhacích letounů a vrtulníků sestřelovat objekty pronikající do polského vzdušného prostoru ze strany Ruska na základě údajů z radarů, a nikoliv až po vizuální identifikaci. Podle rádia RMF24 to dnes uvedl náměstek ministra o",
-    "kodZeme": "PL",
-    "zeme": "Polsko",
-    "kategorie": [
-      "drony",
-      "vojsko",
-      "rusko"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "zeSite": null,
-    "shody": [
-      "sestrel",
-      "armada",
-      "rusk"
-    ],
-    "naliehave": null,
-    "stav": "ceka",
-    "vyrez": {
-      "text": "Piloti budou moci rychleji ničit objekty vnikající do Polska ze strany Ruska - iDNES.cz \r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\niDNES.cz\n\r\n\r\n\r\nP�ihl�sit \r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nAbyste mohli pokra�ovat, pot�ebujeme v�d�t, jakou formou v�m m��eme zobrazovat reklamu \r\n\r\n\r\n\r\n\r\n\r\nV�mi zvolen� nastaven� \r\nneobsahuje souhlas se zobrazov�n�m c�len� reklamy . \r\nVyberte pros�m znovu, \r\njakou formou v�m m�me zobrazovat obsah. \r\n\r\n\r\n\r\n\r\n\r\n\r\niDNES Premium\n\r\nBez reklam\n\r\n\r\n199 K� m�s��n�\n\r\nM��ete neomezen� ��st iDNES.cz, Lidovky.cz, Expres.cz a Antiyoutuber.cz. K tomu dostanete tak� noviny a �asopisy v elektronick� podob�. To v�e bez reklam. 1\n\r\n\r\nP�edplatit\n\r\n\r\nU� m�te ��et? P�ihlaste se\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nS c�lenou reklamou\n\r\n\r\n\r\nZdarma \r\n\r\nZachov�me v�m v�e tak, jak jste zvykl� a reklamu p�izp�sob�me va�im z�jm�m. Bez omezen� si m��ete d�l ��st, p�ehr�vat videa, sout�it �i p�isp�vat do v�ech diskus�. 2\n\r\n\r\nSouhlas�m\n\r\nPodrobn� nastaven�\n\r\n\r\n\r\n\r\n\r\n\r\niDNES a reklama\n\r\nPokud vyu�ijete m�sto platby ud�len� souhlasu s reklamou (tj. souhlas s vyu�it�m cookies a dal��ch s�ov�ch identifik�tor� pro ��ely c�len� reklamy), \r\nbudou V�m…",
-      "stazeno": "2026-09-28T17:00:14.107Z",
-      "stav": 200
-    }
-  },
-  {
-    "id": "k-cbc8351b0aaac232",
-    "zachyceno": "2026-09-28T17:00:09.742Z",
-    "publikovano": "2026-09-28T15:16:50.000Z",
-    "zdroj": {
-      "nazev": "The Guardian — World",
-      "url": "https://www.theguardian.com/world/2026/sep/28/russia-strike-on-kyiv-science-academy-drone-ukraine",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Russian strike on Kyiv’s science academy kills at least one in latest daytime attack",
-    "titulekPuvodni": "Russian strike on Kyiv’s science academy kills at least one in latest daytime attack",
-    "shrnuti": "Three others wounded as jet-powered drones increasingly target Ukraine’s capital, with medical centre also hit Europe live – latest updates A Russian drone hit the National Academy of Sciences in central Kyiv on Monday, killing at least one person, in the latest daytime attack on Ukraine’s capital. ",
-    "kodZeme": "UA",
-    "zeme": "Ukrajina",
-    "kategorie": [
-      "sabotaz",
-      "hybridni",
-      "drony",
-      "rusko"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "zeSite": null,
-    "shody": [
-      "bomb",
-      "attack on",
-      "dron",
-      "drone",
-      "russia"
-    ],
-    "naliehave": null,
-    "stav": "ceka",
-    "vyrez": {
-      "text": "Russian strike on Kyiv’s science academy kills at least one in latest daytime attack | Ukraine | The Guardian\nSkip to main content Skip to navigation\nStaff try to escape from second-floor windows after the National Academy of Sciences in Kyiv was hit by a Russian jet-powered drone on Monday. Photograph: Gleb Garanich/Reuters\nView image in fullscreen\nStaff try to escape from second-floor windows after the National Academy of Sciences in Kyiv was hit by a Russian jet-powered drone on Monday. Photograph: Gleb Garanich/Reuters\nRussian strike on Kyiv’s science academy kills at least one in latest daytime attack\nThree others wounded as jet-powered drones increasingly target Ukraine’s capital, with medical centre also hit\nEurope live – latest updates\nA Russian drone hit the National Academy of Sciences in central Kyiv on Monday, killing at least one person, in the latest daytime attack on Ukraine’s capital.\nFlames tore through the historic building as people clambered out of first- and second-floor windows to escape, in dramatic scenes increasingly familiar in the heavily bombarded city.\nAt least one person was killed and three others were wounded, according to Kyiv’s mayor, Vitali…",
-      "stazeno": "2026-09-28T17:00:16.728Z",
-      "stav": 200
-    }
-  },
-  {
-    "id": "k-fb35ccbbe65dd811",
-    "zachyceno": "2026-09-28T17:00:09.831Z",
-    "publikovano": "2026-09-28T15:05:32.000Z",
-    "zdroj": {
-      "nazev": "France 24 (anglicky)",
-      "url": "https://www.france24.com/en/europe/20260928-five-men-arrested-suspected-bomb-plot-uk-air-base-to-be-released-on-bail-fairford",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "🔴 Five men arrested over suspected bomb plot at UK air base to be released on bail",
-    "titulekPuvodni": "🔴 Five men arrested over suspected bomb plot at UK air base to be released on bail",
-    "shrnuti": "",
-    "kodZeme": "GB",
-    "zeme": "Spojené království",
-    "kategorie": [
-      "sabotaz"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "zeSite": null,
-    "shody": [
-      "bomb"
-    ],
-    "naliehave": null,
-    "stav": "ceka",
-    "vyrez": {
-      "text": "UK police bail five men held over suspected bomb plot at US-run air base - France 24\nSkip to main content\nAdvertising\nUK police bail five men held over suspected bomb plot at US-run air base\nEurope\nBritish police said Monday that five men arrested on explosives and terror charges near a US-run air base in England were being released on bail but remained under investigation. Counter-terror detectives said they were investigating \"multiple lines of inquiry\", including whether there is a link to Iran.\nIssued on: 28/09/2026 - 17:01 Modified: 28/09/2026 - 18:31\n4 min Reading time\nShare\nBy:\nFRANCE 24\nVideo by:\nCaroline BAUM\nTo display this content from YouTube, you must enable advertisement tracking and audience measurement.\nAccept\nManage my choices\nOne of your browser extensions seems to be blocking the video player from loading. To watch this content, you may need to disable it on this site.\nTry again\nCover image: Armed police officers stand guard on a road outside the perimeter of the RAF Fairford air base on September 28, 2026. © Toby Shepheard, Reuters\n01:20\nBritish police said Monday five men arrested near an airbase used by the United States were being released on bail, as…",
-      "stazeno": "2026-09-28T17:00:16.806Z",
-      "stav": 200
-    }
-  },
-  {
-    "id": "k-1f6464aec4af8659",
-    "zachyceno": "2026-09-28T15:03:51.191Z",
-    "publikovano": null,
-    "zdroj": {
-      "nazev": "RTL Today (Lucembursko)",
-      "url": "https://today.rtl.lu/live/follow-the-latest-news-around-the-world",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "International news ticker Iran denies involvement in UK airbase bomb scare LIVE",
-    "titulekPuvodni": "International news ticker Iran denies involvement in UK airbase bomb scare LIVE",
-    "shrnuti": "",
-    "kodZeme": "GB",
-    "zeme": "Spojené království",
-    "kategorie": [
-      "sabotaz"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "zeSite": null,
-    "shody": [
-      "bomb"
-    ],
-    "naliehave": null,
-    "stav": "ceka",
-    "vyrez": {
-      "text": "International news ticker: Iran denies involvement in UK airbase bomb scare - RTL Today\nInternational news ticker\nIran denies involvement in UK airbase bomb scare\nStay up to date with the most important events unfolding around the world, with our live ticker bringing you the latest major developments and breaking news.\n© AFP\nLoad more\nMost read\nJanuary 2027\nEasyJet to suspend Luxembourg-Lisbon flights for a month\nNeutrality vote\nSwiss reject plan to toughen neutrality\nEmergency services\nAir ambulance deployed in Mullerthal motorbike crash\nWeather & Traffic\nMonday 28 September: a gathering of clouds\nMaricarmen Abascal\nMadrid housing protest camp enters second night as PM vows action\nMore News\nUS says no China arms sale plans after envoy cites Trump offer\nLong queues and quick sales\nSouvenirs fly off shelves ahead of Pope Leo XIV's Metz visit\nFrench far-right's Bardella denies alleged 2013 antisemitic comments\nDozens kidnapped in two weekend attacks in northern Nigeria\nFilipino tennis star\nEala makes fast start as weather and transport woes hit Asian Games\n28,000 km/h\nSpaceX puts Starship megarocket in orbit for first time\nBack to Top\nSubscribe to our newsletter Ok\nDo you want to…",
-      "stazeno": "2026-09-28T15:03:53.194Z",
-      "stav": 200
-    }
-  },
-  {
-    "id": "k-3fcffdccaf330ade",
-    "zachyceno": "2026-09-28T17:00:12.281Z",
-    "publikovano": "2026-09-28T14:54:00.000Z",
-    "zdroj": {
-      "nazev": "Ukrainska Pravda (anglicky)",
-      "url": "https://www.pravda.com.ua/eng/news/2026/09/28/8055444/",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "EU prepares new security protocol against threats from Russia",
-    "titulekPuvodni": "EU prepares new security protocol against threats from Russia",
-    "shrnuti": "EU defence ministers have held initial talks on a new emergency security protocol to counter Russian hybrid threats, including sabotage and airspace violations.",
-    "kodZeme": "EU",
-    "zeme": "EU",
-    "kategorie": [
-      "sabotaz",
-      "drony",
-      "rusko"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "zeSite": null,
-    "shody": [
-      "sabotage",
-      "airspace violation",
-      "violat+airspace",
-      "airspace",
-      "russia"
-    ],
-    "naliehave": null,
-    "stav": "ceka",
-    "vyrez": {
-      "text": "EU discusses new security protocol against Russian threats | Ukrainska Pravda\nStock photo: Getty Images\nEU defence ministers held their first discussion on a new emergency security protocol that would set out actions and responses to hybrid threats from Russia, such as sabotage, airspace violations and arson, at a meeting of the Council of the EU on Monday 28 September.\nSource: EU High Representative for Foreign Affairs and Security Policy Kaja Kallas, as reported by a European Pravda correspondent in Brussels\nDetails: The ministers discussed a new emergency security protocol for the European Union in response to Russian hybrid attacks.\nAdvertisement:\n\r\n\r\n\r\n\r\n\r\n\"Ministers had first chance to exchange views on the idea of new emergency security protocol. Such a mechanism would provide a coordination mechanism to respond to grey zone attacks and complement Article 42.7 of today,\" Kallas said.\nShe noted that \"Russia's sustained acts of sabotage, arson and airspace violations persist\".\nQuote from Kallas: \"On the EU side, sanctions against perpetrators and the expulsion of Russian diplomats bite, but we need to look into what more can we do... And of course, to reiterate, this is…",
-      "stazeno": "2026-09-28T17:00:17.707Z",
-      "stav": 200
-    }
-  },
-  {
-    "id": "k-ae87e10e809fa44a",
-    "zachyceno": "2026-09-28T15:03:50.671Z",
-    "publikovano": "2026-09-28T14:40:00.000Z",
-    "zdroj": {
-      "nazev": "Český rozhlas — domácí zprávy",
-      "url": "https://www.irozhlas.cz/zpravy-svet/poniceni-kabelu-ci-kameroveho-systemu-lotyssti-pohranicni-poukazuji-na-skody-na_2609281640_vdv",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Poničení kabelů či kamerového systému. Lotyšští pohraniční poukazují na škody na hranicích",
-    "titulekPuvodni": "Poničení kabelů či kamerového systému. Lotyšští pohraniční poukazují na škody na hranicích",
-    "shrnuti": "Lotyšsko se potýká s úmyslným poškozováním bezpečnostního zařízení hranice. Oznámila to lotyšská pohraniční stráž s tím, že se nejedná o vandalismus. Ta taky uvedla, že metody pachatelů podporovaných režimy Běloruska a Ruska jsou stále agresivnější a sofistikovanější. Bělorusko rovněž podle lotyšský",
-    "kodZeme": "LV",
-    "zeme": "Lotyšsko",
-    "kategorie": [
-      "sabotaz",
-      "hranice",
-      "rusko"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "zeSite": null,
-    "shody": [
-      "vandal+kabel+hranic",
-      "hranice",
-      "rusk"
-    ],
-    "naliehave": null,
-    "stav": "ceka",
-    "vyrez": {
-      "text": "",
-      "stazeno": "2026-09-28T15:03:53.498Z",
-      "stav": 403,
-      "chyba": "HTTP 403"
-    }
-  },
-  {
-    "id": "k-045d4807bb181a89",
-    "zachyceno": "2026-09-28T15:03:50.773Z",
-    "publikovano": "2026-09-28T14:31:22.000Z",
-    "zdroj": {
-      "nazev": "Seznam Zprávy",
-      "url": "https://www.seznamzpravy.cz/clanek/zahranicni-zadrzeni-u-letecke-zakladny-v-anglii-byli-britove-iran-popira-jakykoli-podil-316334",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Zadržení u letecké základny v Anglii byli Britové, Írán popírá jakýkoli podíl",
-    "titulekPuvodni": "Zadržení u letecké základny v Anglii byli Britové, Írán popírá jakýkoli podíl",
-    "shrnuti": "Pětice mužů zadržená v důsledku podezření z přípravy teroristického útoku u letecké základny mohou zůstat ve vazbě až 14 dní. Britští vyšetřovatelé prověřují možnou spojitost s Íránem či Ruskem, Írán to však odmítá.",
-    "kodZeme": "RU",
-    "zeme": "Rusko",
-    "kategorie": [
-      "zpravodajske",
-      "rusko"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "zeSite": null,
-    "shody": [
-      "zadrz+rusk",
-      "rusk"
-    ],
-    "naliehave": null,
-    "stav": "ceka",
-    "vyrez": {
-      "text": "Zadržení u letecké základny v Anglii byli Britové, Írán popírá jakýkoli podíl - Seznam Zprávy\nZobrazení snímku 1 z 0\nHlavní obsah\nZadržení u letecké základny v Anglii byli Britové, Írán popírá jakýkoli podíl\nČTK\n3:04\nChcete-li článek poslouchat, přihlaste se\neBook\nSdílet\nFoto: Reuters\nPolicisté u základny RAF Fairford.\n16:31\nPětice mužů zadržená v důsledku podezření z přípravy teroristického útoku u letecké základny mohou zůstat ve vazbě až 14 dní. Britští vyšetřovatelé prověřují možnou spojitost s Íránem či Ruskem, Írán to však odmítá.\nČlánek\nVšech pět podezřelých, kteří byli v neděli zadrženi u západoanglické základny RAF Fairford využívané americkým letectvem, jsou britští občané žijící v Londýně. Oznámila to v pondělí podle tiskových agentur britská policie. Íránské velvyslanectví v Londýně „kategoricky“ odmítlo spekulace, že by s nimi měl Teherán cokoli společného.\nBritské úřady v pondělí nadále zadržovaly pětici zatčených mužů a zkoumaly podezřelé výbušniny nalezené poblíž letecké základny provozované USA, zatímco protiterorističtí vyšetřovatelé zjišťovali, zda se díky těmto zatčením podařilo zmařit útok napojený na Írán, píše agentura AP.\nU základny, odkud vzlétaly americké…",
-      "stazeno": "2026-09-28T15:03:54.133Z",
-      "stav": 200
-    }
-  },
-  {
-    "id": "k-ed97a116fe735d1d",
-    "zachyceno": "2026-09-28T15:03:51.789Z",
-    "publikovano": "2026-09-28T13:49:08.000Z",
-    "zdroj": {
-      "nazev": "Rzeczpospolita (Polsko)",
-      "url": "https://www.rp.pl/gospodarka/art45201891-wladimir-putin-pojawi-sie-na-g20-ekspert-polska-moze-na-tym-zyskac",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Władimir Putin pojawi się na G20? Ekspert: Polska może na tym zyskać",
-    "titulekPuvodni": "Władimir Putin pojawi się na G20? Ekspert: Polska może na tym zyskać",
-    "shrnuti": "Warszawa będzie miała możliwość kształtowania pozycji UE i NATO w bezpośrednich negocjacjach z rosyjskim dyktatorem, jeśli ten faktycznie będzie obecny na Szczycie G20 w Miami – oceniają eksperci. Byłaby to pierwsza obecność Putina na posiedzeniu G20 od 2021 r.",
-    "kodZeme": "PL",
-    "zeme": "Polsko",
-    "kategorie": [
-      "hybridni",
-      "nato"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "zeSite": null,
-    "shody": [
-      "putin+polsk+war",
-      "nato"
-    ],
-    "naliehave": null,
-    "stav": "ceka",
-    "vyrez": {
-      "text": "Putin pojawi się na Szczycie G20? Wiadomo, jak zachowa się Karol Nawrocki - rp.pl\nReklama\nEkonomia\nGospodarka\nWładimir Putin pojawi się na G20? Ekspert: Polska może na tym zyskać\nWarszawa będzie miała możliwość kształtowania pozycji UE i NATO w bezpośrednich negocjacjach z rosyjskim dyktatorem, jeśli ten faktycznie będzie obecny na Szczycie G20 w Miami – oceniają eksperci. Byłaby to pierwsza obecność Putina na posiedzeniu G20 od 2021 r.\nAktualizacja:\n28.09.2026 17:03\nPublikacja:\n28.09.2026 15:49\nUstaw „Rzeczpospolitą” jako swoje ulubione źródło informacji w Google\nPutin pojawi się na Szczycie G20? Prezydent Nawrocki ręki mu nie poda\nFoto: Reuters\nNikodem Chinowski\nPrezydent Rosji Władimir Putin został zaproszony na grudniowy Szczyt G20 w Miami – taką informację na marginesie zakończonego w piątek 81. Ogólnego Posiedzenia ONZ przekazał amerykański sekretarz stanu, Marco Rubio. Ten zaskakujący ruch amerykańska administracja tłumaczy „otwartością na rozmowy z Moskwą o Ukrainie”.\nReklama\nReklama\nStany Zjednoczone przewodzą pracom G20 w tym roku, więc Waszyngton ma wolną rękę nie tylko w kształtowaniu kalendarza i agendy spotkań, ale również doboru uczestników. Mimo to chęć goszczenia…",
-      "stazeno": "2026-09-28T15:03:55.148Z",
-      "stav": 200
-    }
-  },
-  {
-    "id": "k-e676b4fbfdc01607",
-    "zachyceno": "2026-09-28T15:03:50.747Z",
-    "publikovano": "2026-09-28T13:24:09.000Z",
-    "zdroj": {
-      "nazev": "Novinky.cz",
-      "url": "https://www.novinky.cz/clanek/valka-na-ukrajine-rusky-dron-zasahl-ukrajinskou-akademii-ved-na-miste-zuri-mohutny-pozar-40599811",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Ruský dron zasáhl ukrajinskou akademii věd. Na místě zuří mohutný požár",
-    "titulekPuvodni": "Ruský dron zasáhl ukrajinskou akademii věd. Na místě zuří mohutný požár",
-    "shrnuti": "Ruský dron v pondělí v Kyjevě zasáhl budovu ukrajinské Národní akademie věd. Oznámil to starosta města Vitalij Kličko. Při útoku zemřelo několik lidí. Budovu rovněž zachvátil mohutný požár.",
-    "kodZeme": "UA",
-    "zeme": "Ukrajina",
-    "kategorie": [
-      "drony",
-      "rusko"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "zeSite": null,
-    "shody": [
-      "dron+zasahl",
-      "dron",
-      "rusk"
-    ],
-    "naliehave": null,
-    "stav": "ceka",
-    "vyrez": {
-      "text": "Ruský dron zasáhl ukrajinskou akademii věd. Na místě zuří mohutný požár - Novinky\nZobrazení snímku 1 z 0\nzáhlaví\nHlavní obsah\nRuský dron zasáhl ukrajinskou akademii věd. Na místě zuří mohutný požár\nJaromír Moravec\n1:20\nChcete-li článek poslouchat, přihlaste se\neBook\nSdílet\nDnes 28. 9., 15:24\nRuský dron v pondělí v Kyjevě zasáhl budovu ukrajinské Národní akademie věd. Oznámil to starosta města Vitalij Kličko. Při útoku zemřelo několik lidí. Budovu rovněž zachvátil mohutný požár.\nNásledky útoku na ukrajinskou Národní akademii věd Video: @ZelenskyyUa, @den_kazansky\nČlánek\n„Do neobytné budovy v Ševčenkovské čtvrti, v centru města, narazil dron. Vypukl požár,“ oznámil na platformě Telegram Kličko, přičemž videa z místa útoku jasně ukazují, že se jedná o budovu Národní akademie věd.\nŠéf správy čtvrti Oleksandr Sazanovyč později informoval, že jsou na místě po ruském útoku mrtví a zranění, jejichž počet ale neupřesnil.\n„Obyvatele bych rád požádal, aby k místu nechodili a záchranným službám neztěžovali práci,“ uvedl Sazanovyč.\nNa videích hořící budovy jsou vidět lidé stojící na římsách, zatímco se kolem nich z oken valí černý kouř. Z jiného úhlu je zase vidět, že se budově zřítila střecha…",
-      "stazeno": "2026-09-28T15:03:56.173Z",
-      "stav": 200
-    }
-  },
-  {
-    "id": "k-9d80a83bc4eb3a15",
-    "zachyceno": "2026-09-28T15:03:51.356Z",
-    "publikovano": "2026-09-28T13:13:54.000Z",
-    "zdroj": {
-      "nazev": "Euronews",
-      "url": "https://www.euronews.com/2026/09/28/euronews-explains-does-the-eu-have-enough-gas-for-winter",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Euronews explains: Does the EU have enough gas for winter?",
-    "titulekPuvodni": "Euronews explains: Does the EU have enough gas for winter?",
-    "shrnuti": "With winter approaching and gas storage at record-low levels, EU governments are bracing for soaring costs as they compete with Asian buyers to secure supplies and avert power outages.",
-    "kodZeme": "EU",
-    "zeme": "EU",
-    "kategorie": [
-      "infrastruktura"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "zeSite": null,
-    "shody": [
-      "power outage"
-    ],
-    "naliehave": null,
-    "stav": "ceka",
-    "vyrez": {
-      "text": "Euronews explains: Does the EU have enough gas for winter?\nAdvertisement\nBy&nbsp Marta Pacheco\nPublished on 28/09/2026 - 15:13 GMT+2 &bull; Updated\n15:50\nShare\nComments\nAdd Euronews on Google\nShare\nFacebook\nTwitter\nFlipboard\nSend\nReddit\nLinkedin\nMessenger\nTelegram\nVK\nBluesky\nThreads\nWhatsapp\nWith winter approaching and gas storage at record-low levels, EU governments are bracing for soaring costs as they compete with Asian buyers to secure supplies and avert power outages.\nThe European Union is heading into winter with a thin gas cushion, prompting Brussels to warn that the bloc’s energy price crisis could become a supply problem.\nADVERTISEMENT\nADVERTISEMENT\nIn a recent letter to EU capitals seen by Euronews, Energy Commissioner Dan Jørgensen said gas storage levels remain “exceptionally low” after a summer in which hot and dry weather forced countries to burn more gas for electricity, reducing the amount available to refill underground reserves.\nMeanwhile, the global market remains deeply affected by the US and Israeli war against Iran, which has cut liquefied natural gas (LNG) flows through the vital Strait of Hormuz to just 15% to 25% of pre-war levels.\nOn Monday, gas-rich…",
-      "stazeno": "2026-09-28T15:03:56.928Z",
-      "stav": 200
-    }
-  },
-  {
-    "id": "k-4b2dcf1a05664ab8",
-    "zachyceno": "2026-09-28T15:03:51.717Z",
-    "publikovano": "2026-09-28T13:12:09.000Z",
-    "zdroj": {
-      "nazev": "Denník N (Slovensko)",
-      "url": "https://dennikn.sk/5587810/vyvoj-bojov-1677-den-ukrajinci-pocas-operacie-vivaldi-zajali-250-ruskych-vojakov-rusi-priznavaju-krizu-na-slovianskom-smere/",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Vývoj bojov (1677. deň): Ukrajinci počas operácie Vivaldi zajali 250 ruských vojakov, Rusi priznávajú krízu na slovianskom smere",
-    "titulekPuvodni": "Vývoj bojov (1677. deň): Ukrajinci počas operácie Vivaldi zajali 250 ruských vojakov, Rusi priznávajú krízu na slovianskom smere",
-    "shrnuti": "Informácie v tomto texte sú zhrnutím udalostí za nedeľu 27. septembra. Situácia už môže byť medzičasom iná. Pokračuje ukrajinský útok na severnom krídle sloviansko-kramatorského úseku frontu. „Na lymanskom smere pretrváva ťažká situácia. Podľa správ z terénu sa nepriateľ snaží vytlačiť ruské jednotk",
-    "kodZeme": "UA",
-    "zeme": "Ukrajina",
-    "kategorie": [
-      "hybridni",
-      "vojsko",
-      "rusko"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "zeSite": null,
-    "shody": [
-      "utok na",
-      "vojak",
-      "rusk"
-    ],
-    "naliehave": null,
-    "stav": "ceka",
-    "vyrez": {
-      "text": "",
-      "stazeno": "2026-09-28T15:03:57.755Z",
-      "stav": 403,
-      "chyba": "HTTP 403"
-    }
-  },
-  {
-    "id": "k-8d0a11f4a5685404",
-    "zachyceno": "2026-09-28T15:03:50.890Z",
-    "publikovano": "2026-09-28T04:49:00.000Z",
-    "zdroj": {
-      "nazev": "ČTK — České noviny",
-      "url": "https://www.ceskenoviny.cz/zpravy/rusky-utok-zasahl-v-kyjeve-budovu-akademie-ved-uvadi-media/2880145?utm_source=rss&utm_medium=feed",
-      "typ": "wire",
-      "primarni": false
-    },
-    "titulek": "Ruský útok zasáhl v Kyjevě budovu akademie věd, uvádí média",
-    "titulekPuvodni": "Ruský útok zasáhl v Kyjevě budovu akademie věd, uvádí média",
-    "shrnuti": "Kyjev/Moskva - Ruský vzdušný útok na ukrajinské město Dnipro zabil tři lidi, nejméně 12 dalších zranil, uvedl dnes na platformě Telegram šéf správy Dněpropetrovské oblasti Oleksandr Hanža. O něco dříve...",
-    "kodZeme": "UA",
-    "zeme": "Ukrajina",
-    "kategorie": [
-      "hybridni",
-      "rusko"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "zeSite": null,
-    "shody": [
-      "utok na",
-      "rusk"
-    ],
-    "naliehave": null,
-    "stav": "ceka",
-    "vyrez": {
-      "text": "Ruský útok zasáhl v Kyjevě budovu akademie věd, uvádí média | ČeskéNoviny.cz \r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nPřejít k obsahu \r\n| \r\nPřejít k hlavnímu menu \r\n| \r\nPřejít k vyhledávání \r\n\r\n\r\n\r\n\r\n\r\n\r\nČeské noviny \r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nMenu \r\n\r\n\r\n\r\n\r\n\r\n\r\nÚvod \r\n\r\n\r\nČR\n\r\nSvět\n\r\nEkonomika\n\r\nKultura\n\r\nSport\n\r\nMagazín\n\r\nSpeciál\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nKonflikt na Blízkém Východě\n\r\n\r\n\r\nInvaze na Ukrajinu\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nRuský útok zasáhl v Kyjevě budovu akademie věd, uvádí média\n\r\n\r\n\r\n\r\n\r\n\r\nKomerční prezentace Aktual.: 28.09.2026 15:41 \r\nVydáno: 28.09.2026, 06:49 \r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nUkrajinští záchranáři zasahují u požáru budovy Národní akademie věd v centru Kyjeva po ruském vzdušném útoku, 28. září 2026. \r\nAP/Dan Bashakov \r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nKyjev/Moskva - Ruský vzdušný útok na ukrajinské město Dnipro zabil tři lidi, nejméně 12 dalších zranil, uvedl dnes na platformě Telegram šéf správy Dněpropetrovské oblasti Oleksandr Hanža. O něco dříve informoval o zásahu obchodního centra ve městě. Ruský vzdušný útok na ukrajinské…",
-      "stazeno": "2026-09-28T15:03:58.054Z",
+      "text": "Zelensky: Russia has already begun additional mobilization\n\r\nSubscription\nNewsletters\nPhotobank\nUkrinform - Ukrainian National News Agency\nFounded in 1918\nTuesday, 29 September 2026, 01:30\nWar\nEconomy\nSports\nMore ☰\nContacts\nEng\nУкр\nEng\nEsp\nDeu\nعربي\nFra\n日本語\nPol\n&times;\nAll topics\nWar\nRecovery of Ukraine\nPolitics\nEconomy\nFact checks\nDefense\nSociety and Culture\nSports\nCrime\nAccidents and Emergencies\nAgency\nInformation on Agency\nOur Contacts\nSubscribtion Terms\nOur Services\nPrivacy policy and personal data protection\nAdditional\nPublications\nInterviews\nPhoto\nVideo\nLongreads\nReleases\nServices\nSubscription\nNewsletters\nPhotobank\n\r\n\r\n\r\nPresident Volodymyr Zelensky said that Russia has effectively already begun an additional mobilization. He also said there is new information about the involvement of North Korean troops: in addition to the 8,000 currently there, preparations are underway to deploy another 10,000 personnel.\nThe head of state said this in his evening address , according to Ukrinform.\n\r\n\r\n\"Today, I also received a report from the Defense Intelligence of Ukraine on the measures Russia is planning next. In effect, the Russians have already begun additional mobilization &ndash;…",
+      "stazeno": "2026-09-28T22:30:58.160Z",
       "stav": 200
     }
   },
@@ -1304,6 +395,1144 @@
       "duvod": "pokracovani",
       "patriK": "moldavsko-dron-uzavrel-vzdusny-prostor-2026",
       "poznamka": null
+    }
+  },
+  {
+    "id": "k-88f15d5c65335a7e",
+    "zachyceno": "2026-09-28T20:04:36.717Z",
+    "publikovano": null,
+    "zdroj": {
+      "nazev": "AGERPRES (státní agentura Rumunska)",
+      "url": "https://agerpres.ro/english/2026/09/28/parliament---ministerial-hearings-miruta-49-unauthorized-incursions-into-romanian-airspace-since-sta--1597779",
+      "typ": "wire",
+      "primarni": false
+    },
+    "titulek": "Parliament - ministerial hearings/Miruta: 49 unauthorized incursions into Romanian airspace since start of war in Ukraine",
+    "titulekPuvodni": "Parliament - ministerial hearings/Miruta: 49 unauthorized incursions into Romanian airspace since start of war in Ukraine",
+    "shrnuti": "",
+    "kodZeme": "RO",
+    "zeme": "Rumunsko",
+    "kategorie": [
+      "drony"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "incursion+airspace",
+      "airspace"
+    ],
+    "naliehave": null,
+    "stav": "vyrizen",
+    "vyrez": {
+      "text": "Parliament - ministerial hearings/Miruta: 49 unauthorized incursions into Romanian airspace since start of war in Ukraine - AGERPRES\nAgerpres – National News Agency: Current news with reliable information for a well-informed society.\nHome\nPaid news feed\nFoto Agerpres\nPress Monitoring\nBucharest\nPiaţa Presei Libere nr. 1, sector 1\nPhone: +4 021.2076.110\noffice@agerpres.ro\nParliament - ministerial hearings/Miruta: 49 unauthorized incursions into Romanian airspace since start of war in Ukraine\nCategory: English\nDate: 2026-09-28 19:10:03\nFoto: Mihai POZIUMSCHI / AGERPRES Photo\nThe nominee for Minister of Defense, Radu Miruta stated on Monday that unauthorized incursions into Romanian airspace have intensified in 2026 compared to the period since the start of the war in Ukraine. \r\n\r\n'Since the beginning of the war in Ukraine, there have been 49 unauthorized incursions into Romanian airspace, and of these, 30 occurred in 2026. So, while there were 49 over this four-and-a-half-year period, 30 took place in just eight months of this year alone. Clearly, there is an intensification. There have been 148 attacks near Romania's border since the start, with 81 occurring during these months of…",
+      "stazeno": "2026-09-28T20:04:38.807Z",
+      "stav": 200
+    },
+    "vyrizeni": {
+      "kdy": "2026-09-28T22:28:36.263Z",
+      "duvod": "zdroj-navrhu",
+      "patriK": null,
+      "poznamka": null
+    }
+  },
+  {
+    "id": "k-8180e873fe620184",
+    "zachyceno": "2026-09-28T20:04:36.647Z",
+    "publikovano": "2026-09-28T19:28:54.000Z",
+    "zdroj": {
+      "nazev": "BBC News — Europe",
+      "url": "https://www.bbc.co.uk/news/videos/cw33kxk3707jo?at_medium=RSS&at_campaign=rss",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Watch: RAF Fairford suspects are bailed, what happens now?",
+    "titulekPuvodni": "Watch: RAF Fairford suspects are bailed, what happens now?",
+    "shrnuti": "The men were all UK nationals in their 20s who live in London and were arrested under the Explosives Act and on suspicion of preparing a terrorist act.",
+    "kodZeme": "GB",
+    "zeme": "Spojené království",
+    "kategorie": [
+      "zpravodajske"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "arrested+terror"
+    ],
+    "naliehave": null,
+    "stav": "vyrizen",
+    "vyrez": {
+      "text": "RAF Fairford suspects are bailed, what happens now? - BBC News\nWatch: RAF Fairford suspects are bailed, what happens now?\nWatch: RAF Fairford suspects are bailed, what happens now? Close\nThe five men arrested on suspicion of terror offences near RAF Fairford on Sunday have been released on bail, according to the head of UK counter terrorism policing.\nThe men, UK nationals in their 20s, were arrested under the Explosives Act and on suspicion of preparing a terrorist act.\nSpeaking to the press on Monday, Assistant Commissioner Laurence Taylor said the investigation was not over as police are considering numerous angles, including if proxies working on behalf of a foreign state could have been involved.\nThe BBC's Daniel Sandford explains what authorities said they would be looking at next.\nSubsection\nUK\nPublished\n35 minutes ago\nShare\nclose panel\nShare page\nCopy link\nAbout sharing\nRelated topics\nFairford Royal Air Force Base Follow Fairford Royal Air Force Base\nclose panel\nYou are now following\nFairford Royal Air Force Base\nUpdates from your News topics will appear in My News and in a collection on the News homepage .\nGloucestershire Follow Gloucestershire\nclose panel\nYou are now…",
+      "stazeno": "2026-09-28T20:04:39.063Z",
+      "stav": 200
+    },
+    "vyrizeni": {
+      "kdy": "2026-09-28T22:28:36.263Z",
+      "duvod": "duplicita",
+      "patriK": null,
+      "poznamka": "Aktualizace už zveřejněného záznamu o zadržení pěti mužů u RAF Fairford (i-2026-09-27-e480488876): muži byli po výslechu propuštěni na kauci, Írán jakoukoli účast popřel. Do incidenty.json nesahám."
+    }
+  },
+  {
+    "id": "k-7f0830981503151c",
+    "zachyceno": "2026-09-28T20:04:36.921Z",
+    "publikovano": "2026-09-28T19:28:26.000Z",
+    "zdroj": {
+      "nazev": "France 24 (anglicky)",
+      "url": "https://www.france24.com/en/ukrainian-arms-producers-warn-competitive-edge-eroding-due-to-stringent-export-licence-rules",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Ukrainian arms producers warn competitive edge eroding due to stringent export licence rules",
+    "titulekPuvodni": "Ukrainian arms producers warn competitive edge eroding due to stringent export licence rules",
+    "shrnuti": "Russian drones struck Ukraine's National Academy of Sciences in the historic heart of Kyiv on Monday, in the latest deadly daytime attack on the capital. Volodymyr Zelensky has long been pleading with Ukraine’s allies for more military aid to fend off Russia. But Ukrainian weapons producers say the ",
+    "kodZeme": "FR",
+    "zeme": "Francie",
+    "kategorie": [
+      "hybridni",
+      "drony",
+      "rusko"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "attack on",
+      "dron",
+      "drone",
+      "russia"
+    ],
+    "naliehave": null,
+    "stav": "vyrizen",
+    "vyrez": {
+      "text": "Ukrainian arms producers warn competitive edge eroding due to stringent export licence rules - France 24\nSkip to main content\nTo display this content from YouTube, you must enable advertisement tracking and audience measurement.\nAccept\nManage my choices\nOne of your browser extensions seems to be blocking the video player from loading. To watch this content, you may need to disable it on this site.\nTry again\nCover image: © France 24\n06:22\nUkrainian arms producers warn competitive edge eroding due to stringent export licence rules\nEurope\nIssued on: 28/09/2026 - 21:28 Modified: 28/09/2026 - 21:29\nShare\nRussian drones struck Ukraine's National Academy of Sciences in the historic heart of Kyiv on Monday, in the latest deadly daytime attack on the capital. Volodymyr Zelensky has long been pleading with Ukraine’s allies for more military aid to fend off Russia. But Ukrainian weapons producers say the country could be bringing in significant revenue of its own, if only they were allowed to export their products. FRANCE 24's Gulliver Cragg reports from Kyiv.\nVideo by:\nGulliver CRAGG\nKeywords for this article\nUkraine\nRussia\ndrones\nKyiv\nweapons\nmilitary\nEurope\nNATO\nRead more\nRead less\nFirst…",
+      "stazeno": "2026-09-28T20:04:39.239Z",
+      "stav": 200
+    },
+    "vyrizeni": {
+      "kdy": "2026-09-28T22:28:36.263Z",
+      "duvod": "neudalost",
+      "patriK": null,
+      "poznamka": "Ukrajinští výrobci zbraní si stěžují na ztrátu konkurenceschopnosti kvůli přísným pravidlům pro exportní licence; obchodní/politické téma, ne bezpečnostní skutek."
+    }
+  },
+  {
+    "id": "k-57af103cc1ef72c5",
+    "zachyceno": "2026-09-28T20:04:38.666Z",
+    "publikovano": "2026-09-28T18:57:00.000Z",
+    "zdroj": {
+      "nazev": "Ukrinform (anglicky)",
+      "url": "https://www.ukrinform.net/rubric-ato/4168964-debris-from-enemy-uav-fell-in-courtyard-of-residential-building-in-kyivs-desnianskyi-district.html",
+      "typ": "wire",
+      "primarni": false
+    },
+    "titulek": "Debris from enemy UAV fell in courtyard of residential building in Kyiv's Desnianskyi district",
+    "titulekPuvodni": "Debris from enemy UAV fell in courtyard of residential building in Kyiv's Desnianskyi district",
+    "shrnuti": "Debris was recorded falling in the courtyard of a residential building in Kyiv's Desnianskyi district.",
+    "kodZeme": "UA",
+    "zeme": "Ukrajina",
+    "kategorie": [
+      "drony"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "uav+fell",
+      "debris+uav",
+      "uav"
+    ],
+    "naliehave": null,
+    "stav": "vyrizen",
+    "vyrez": {
+      "text": "Debris from enemy UAV fell in courtyard of residential building in Kyiv's Desnianskyi district\n\r\nSubscription\nNewsletters\nPhotobank\nUkrinform - Ukrainian National News Agency\nFounded in 1918\nMonday, 28 September 2026, 23:04\nWar\nEconomy\nSports\nMore ☰\nContacts\nEng\nУкр\nEng\nEsp\nDeu\nعربي\nFra\n日本語\nPol\n&times;\nAll topics\nWar\nRecovery of Ukraine\nPolitics\nEconomy\nFact checks\nDefense\nSociety and Culture\nSports\nCrime\nAccidents and Emergencies\nAgency\nInformation on Agency\nOur Contacts\nSubscribtion Terms\nOur Services\nPrivacy policy and personal data protection\nAdditional\nPublications\nInterviews\nPhoto\nVideo\nLongreads\nReleases\nServices\nSubscription\nNewsletters\nPhotobank\n\r\n\r\n\r\nDebris was recorded falling in the courtyard of a residential building in Kyiv's Desnianskyi district.\nAccording to Ukrinform, the Kyiv City Military Administration reported this on Telegram .\n\r\n\r\n\"In the Desnianskyi district, debris fell in the courtyard of a residential building,\" the statement said.\n\r\n\r\nThe Kyiv City Military Administration clarified that, according to preliminary information, there was no damage or injuries.\n\r\n\r\nRead also: Russian attacks in Dnipropetrovsk region kill six people and injure 28 in one day…",
+      "stazeno": "2026-09-28T20:04:39.352Z",
+      "stav": 200
+    },
+    "vyrizeni": {
+      "kdy": "2026-09-28T22:28:36.263Z",
+      "duvod": "mimo-rozsah",
+      "patriK": null,
+      "poznamka": "Ruský denní úder na Kyjev (akademie věd, farmaceutický závod) v posledních 24 hodinách; uvnitř Ukrajiny, bez doloženého následku pro sledované země."
+    }
+  },
+  {
+    "id": "k-f61ce536be95971e",
+    "zachyceno": "2026-09-28T20:04:37.326Z",
+    "publikovano": "2026-09-28T18:43:02.000Z",
+    "zdroj": {
+      "nazev": "Aktuality.sk",
+      "url": "https://www.aktuality.sk/clanok/VYyTc0g/wadephul-odmieta-dalsie-rokovania-s-ruskom-kym-moskva-neprejavi-ustretovost/",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Wadephul odmieta ďalšie rokovania s Ruskom, kým Moskva neprejaví ústretovosť",
+    "titulekPuvodni": "Wadephul odmieta ďalšie rokovania s Ruskom, kým Moskva neprejaví ústretovosť",
+    "shrnuti": "Nemecký minister Johann Wadephul po stretnutí s Lavrovom odmieta ďalšie rokovania s Moskvou bez zmeny jej postoja. Hovorí o potrebe tvrdšieho tlaku na Rusko.",
+    "kodZeme": "DE",
+    "zeme": "Německo",
+    "kategorie": [
+      "hybridni",
+      "rusko"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "lavrov+nemeck+stret",
+      "rusk"
+    ],
+    "naliehave": null,
+    "stav": "vyrizen",
+    "vyrez": {
+      "text": "Wadephul odmieta ďalšie rokovania s Ruskom, kým Moskva neprejaví ústretovosť | Aktuality.sk\nAktuality\nŠport\nDiva\nNajmama\nŽivé\nRecepty\nDobrú chuť\nSlovník\n18 °C -\nBratislava\npondelok 28. 9.\n28. 9.\nVáclav\nSprávy dnes 28. Sep 2026 o 20:43\n1 min. čítania\nPridať do Google\nWadephul odmieta ďalšie rokovania s Ruskom, kým Moskva neprejaví ústretovosť\n1 fotka v galérii\nJohann Wadephul Zdroj: REUTERS/Ints Kalnins\nTASR\nAktuality.sk\nUložiť článok\nNemecký minister Johann Wadephul po stretnutí s Lavrovom odmieta ďalšie rokovania s Moskvou bez zmeny jej postoja. Hovorí o potrebe tvrdšieho tlaku na Rusko.\nNemecký minister zahraničných vecí Johann Wadephul, ktorý sa cez víkend v New Yorku stretol so svojím ruským náprotivkom Sergejom Lavrovom, aspoň zatiaľ nevidí dôvod na ďalšie rokovania s predstaviteľmi Ruska. Uviedol to v pondelok počas návštevy Holandska, píše TASR podľa správy agentúry DPA.\n„Ďalšie stretnutia majú zmysel len za predpokladu, že Rusko je skutočne pripravené rokovať,“ povedal Wadephul, ktorý sa s Lavrovom stretol na 20 minút na okraj Valného zhromaždenia OSN. Hlavnou témou ich rozhovoru bola vojna na Ukrajine, ktorá sa od februára 2022 bráni invázii ruských jednotiek. Išlo o prvé…",
+      "stazeno": "2026-09-28T20:04:40.645Z",
+      "stav": 200
+    },
+    "vyrizeni": {
+      "kdy": "2026-09-28T22:28:36.263Z",
+      "duvod": "neudalost",
+      "patriK": null,
+      "poznamka": "Německý ministr zahraničí Wadephul odmítá další jednání s Ruskem, dokud Moskva neprojeví vstřícnost; diplomatické vyjádření, ne skutek podle pravidla č. 1."
+    }
+  },
+  {
+    "id": "k-35b0229141136b38",
+    "zachyceno": "2026-09-28T20:04:38.697Z",
+    "publikovano": "2026-09-28T18:42:00.000Z",
+    "zdroj": {
+      "nazev": "Ukrainska Pravda (anglicky)",
+      "url": "https://www.pravda.com.ua/eng/news/2026/09/28/8055498/",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Zelenskyy: Russia has already begun additional mobilisation",
+    "titulekPuvodni": "Zelenskyy: Russia has already begun additional mobilisation",
+    "shrnuti": "President Volodymyr Zelenskyy says Moscow is expanding recruitment of foreign nationals and preparing additional North Korean troops for deployment, citing Defence Intelligence.",
+    "kodZeme": "RU",
+    "zeme": "Rusko",
+    "kategorie": [
+      "vojsko",
+      "rusko"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "troops+deploy",
+      "russia"
+    ],
+    "naliehave": null,
+    "stav": "vyrizen",
+    "vyrez": {
+      "text": "Zelenskyy says Russia has begun new mobilisation wave | Ukrainska Pravda\nVolodymyr Zelenskyy. Photo: Volodymyr Zelenskyy on social media\nPresident Volodymyr Zelenskyy has said Russia has begun a new wave of mobilisation and plans to recruit more foreign nationals to fight in its war against Ukraine.\nSource: Zelenskyy in his evening address on 28 September\nQuote : \" In effect, the Russians have already begun additional mobilisation – they are increasing the number of people they recruit through various means. They also plan to increase the recruitment of foreigners, and it is important that the governments of the countries from which Russia recruits people into its ranks counter this. We will inform every relevant government.\"\nAdvertisement:\n\r\n\r\n\r\n\r\n\r\nDetails: Zelenskyy said he has received a report from Defence Intelligence of Ukraine on Russia's plans.\nIn particular, Ukraine has new information about Russia's recruitment of North Korean troops: more than 8,000 North Korean military personnel are currently on Russian territory.\nAn additional contingent of 10,000 troops is also being prepared for deployment. They are being selected for training and subsequent transfer to…",
+      "stazeno": "2026-09-28T20:04:42.101Z",
+      "stav": 200
+    },
+    "vyrizeni": {
+      "kdy": "2026-09-28T22:28:36.263Z",
+      "duvod": "neudalost",
+      "patriK": null,
+      "poznamka": "Zelenskyj tvrdí, že Rusko už zahájilo další mobilizaci; jde o tvrzení ukrajinské strany o vnitřní záležitosti Ruska, nezávisle nepotvrzené, a navíc směřuje k odhadu budoucího kroku, ne k doloženému skutku."
+    }
+  },
+  {
+    "id": "k-e64aa345fd1332d5",
+    "zachyceno": "2026-09-28T20:04:37.312Z",
+    "publikovano": "2026-09-28T18:39:27.000Z",
+    "zdroj": {
+      "nazev": "Denník N (Slovensko)",
+      "url": "https://dennikn.sk/5588100/ukrajinsky-analytik-o-zivote-v-kyjive-zachovavame-pokoj-a-ideme-dalej-najhorsi-je-chronicky-nedostatok-spanku/",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Ukrajinský analytik o živote v Kyjive: Zachovávame pokoj a ideme ďalej. Najhorší je chronický nedostatok spánku",
+    "titulekPuvodni": "Ukrajinský analytik o živote v Kyjive: Zachovávame pokoj a ideme ďalej. Najhorší je chronický nedostatok spánku",
+    "shrnuti": "Použiť jadrovú bombu by nemalo strategický zmysel, hovorí ukrajinský analytik Artem Rybalčenko. A to napriek tomu, že ruská jadrová doktrína je jedna z najzvláštnejších a najflexibilnejších na svete.",
+    "kodZeme": "UA",
+    "zeme": "Ukrajina",
+    "kategorie": [
+      "sabotaz",
+      "rusko"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "bomb",
+      "rusk"
+    ],
+    "naliehave": null,
+    "stav": "vyrizen",
+    "vyrez": {
+      "text": "",
+      "stazeno": "2026-09-28T20:04:42.172Z",
+      "stav": 403,
+      "chyba": "HTTP 403"
+    },
+    "vyrizeni": {
+      "kdy": "2026-09-28T22:28:36.263Z",
+      "duvod": "neudalost",
+      "patriK": null,
+      "poznamka": "Rozhovor s ukrajinským analytikem o životě v Kyjevě; osobní/lidský příběh, ne zpráva o konkrétním skutku."
+    }
+  },
+  {
+    "id": "k-ae1aa9f66e004cbe",
+    "zachyceno": "2026-09-28T20:04:36.485Z",
+    "publikovano": "2026-09-28T18:19:00.000Z",
+    "zdroj": {
+      "nazev": "iDNES.cz — zpravodajství",
+      "url": "https://www.idnes.cz/zpravy/zahranicni/valka-na-ukrajine-rusko-dron-polsko-hranice-kosiniak-kamysz.A260928_201039_zahranicni_hock#utm_source=rss&utm_medium=feed&utm_campaign=zpravodaj&utm_content=main",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Na Ukrajině u hranic s Polskem spadl dron. Vzdušný prostor Polska nebyl narušen",
+    "titulekPuvodni": "Na Ukrajině u hranic s Polskem spadl dron. Vzdušný prostor Polska nebyl narušen",
+    "shrnuti": "Polský ministr obrany Wladyslaw Kosiniak-Kamysz v pondělí odpoledne uvedl, že na Ukrajině asi dva kilometry od hraničního přechodu v polském Dorohusku se zřítil bezpilotní letoun s proudovým pohonem. K narušení polského vzdušného prostoru podle ministra nedošlo, napsala polská agentura PAP. Polsko v",
+    "kodZeme": "PL",
+    "zeme": "Polsko",
+    "kategorie": [
+      "drony"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "dron+zritil",
+      "dron",
+      "vzdusny prostor"
+    ],
+    "naliehave": null,
+    "stav": "vyrizen",
+    "vyrez": {
+      "text": "Na Ukrajině u hranic s Polskem spadl ruský dron - iDNES.cz \r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\niDNES.cz\n\r\n\r\n\r\nP�ihl�sit \r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nAbyste mohli pokra�ovat, pot�ebujeme v�d�t, jakou formou v�m m��eme zobrazovat reklamu \r\n\r\n\r\n\r\n\r\n\r\nV�mi zvolen� nastaven� \r\nneobsahuje souhlas se zobrazov�n�m c�len� reklamy . \r\nVyberte pros�m znovu, \r\njakou formou v�m m�me zobrazovat obsah. \r\n\r\n\r\n\r\n\r\n\r\n\r\niDNES Premium\n\r\nBez reklam\n\r\n\r\n199 K� m�s��n�\n\r\nM��ete neomezen� ��st iDNES.cz, Lidovky.cz, Expres.cz a Antiyoutuber.cz. K tomu dostanete tak� noviny a �asopisy v elektronick� podob�. To v�e bez reklam. 1\n\r\n\r\nP�edplatit\n\r\n\r\nU� m�te ��et? P�ihlaste se\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nS c�lenou reklamou\n\r\n\r\n\r\nZdarma \r\n\r\nZachov�me v�m v�e tak, jak jste zvykl� a reklamu p�izp�sob�me va�im z�jm�m. Bez omezen� si m��ete d�l ��st, p�ehr�vat videa, sout�it �i p�isp�vat do v�ech diskus�. 2\n\r\n\r\nSouhlas�m\n\r\nPodrobn� nastaven�\n\r\n\r\n\r\n\r\n\r\n\r\niDNES a reklama\n\r\nPokud vyu�ijete m�sto platby ud�len� souhlasu s reklamou (tj. souhlas s vyu�it�m cookies a dal��ch s�ov�ch identifik�tor� pro ��ely c�len� reklamy), \r\nbudou V�m zobrazov�ny v r�mci na�ich web�…",
+      "stazeno": "2026-09-28T20:04:42.509Z",
+      "stav": 200
+    },
+    "vyrizeni": {
+      "kdy": "2026-09-28T22:28:36.263Z",
+      "duvod": "neudalost",
+      "patriK": null,
+      "poznamka": "Dron spadl na Ukrajině u polské hranice, polský vzdušný prostor nebyl narušen; zpráva o tom, že se nic nestalo, ne o skutku."
+    }
+  },
+  {
+    "id": "k-9b73b8e7487a6c23",
+    "zachyceno": "2026-09-28T20:04:36.896Z",
+    "publikovano": "2026-09-28T17:31:14.000Z",
+    "zdroj": {
+      "nazev": "The Guardian — World",
+      "url": "https://www.theguardian.com/uk-news/2026/sep/28/men-arrested-raf-fairford-counter-terrorism-police",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Five UK nationals arrested near RAF Fairford released on bail",
+    "titulekPuvodni": "Five UK nationals arrested near RAF Fairford released on bail",
+    "shrnuti": "Police say alleged offences could have been committed ‘knowingly or unknowingly’ on behalf of a foreign state Five men arrested over a suspected bomb plot at RAF Fairford have been released on bail as police investigate why they were so close to the airbase in three vans with suspicious material in ",
+    "kodZeme": "GB",
+    "zeme": "Spojené království",
+    "kategorie": [
+      "sabotaz",
+      "zpravodajske"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "bomb",
+      "arrested+terror"
+    ],
+    "naliehave": null,
+    "stav": "vyrizen",
+    "vyrez": {
+      "text": "Five UK nationals arrested near RAF Fairford released on bail | UK news | The Guardian\nSkip to main content Skip to navigation\nThe men were pictured on Sunday being apprehended near the RAF base in Gloucestershire. Photograph: BBC\nView image in fullscreen\nThe men were pictured on Sunday being apprehended near the RAF base in Gloucestershire. Photograph: BBC\nFive UK nationals arrested near RAF Fairford released on bail\nPolice say alleged offences could have been committed ‘knowingly or unknowingly’ on behalf of a foreign state\nFive men arrested over a suspected bomb plot at RAF Fairford have been released on bail as police investigate why they were so close to the airbase in three vans with suspicious material in the back.\nThe five suspects were revealed to be British men, all in their 20s and from London. They had been arrested in the Gloucestershire countryside early on Sunday morning on suspicion of explosives offences and preparing an act of terrorism, with an Iranian link a key line of inquiry.\nTheir release on police bail suggests detectives believe it is unlikely they were on the brink of a mass casualty attack by exploding a bomb close to the base, sources said.\nAn Iranian…",
+      "stazeno": "2026-09-28T20:04:45.324Z",
+      "stav": 200
+    },
+    "vyrizeni": {
+      "kdy": "2026-09-28T22:28:36.263Z",
+      "duvod": "duplicita",
+      "patriK": null,
+      "poznamka": "Aktualizace už zveřejněného záznamu o zadržení pěti mužů u RAF Fairford (i-2026-09-27-e480488876): muži byli po výslechu propuštěni na kauci, Írán jakoukoli účast popřel. Do incidenty.json nesahám."
+    }
+  },
+  {
+    "id": "k-c8a0fde0683be04b",
+    "zachyceno": "2026-09-28T20:04:36.460Z",
+    "publikovano": "2026-09-28T17:16:30.000Z",
+    "zdroj": {
+      "nazev": "Seznam Zprávy",
+      "url": "https://www.seznamzpravy.cz/clanek/zahranicni-zeme-eu-zvazuji-spolecne-akce-proti-utokum-ruska-316330",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "„Proti Rusku potřebujeme obranu, která ho bude bolet,“ plánuje Evropa",
+    "titulekPuvodni": "„Proti Rusku potřebujeme obranu, která ho bude bolet,“ plánuje Evropa",
+    "shrnuti": "Ministři obrany zemí EU řešili v Bruselu i otázku evropského mechanismu k reakcím proti ruským útokům. Takzvaný Pohotovostní bezpečnostní protokol, který se přirovnává k článku 4 NATO, navrhla už dřív šéfka Evropské komise.",
+    "kodZeme": "BE",
+    "zeme": "Belgie",
+    "kategorie": [
+      "nato",
+      "rusko"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "clanku 4",
+      "nato",
+      "rusk"
+    ],
+    "naliehave": null,
+    "stav": "vyrizen",
+    "vyrez": {
+      "text": "„Proti Rusku potřebujeme obranu, která ho bude bolet,“ plánuje Evropa - Seznam Zprávy\nZobrazení snímku 1 z 0\nHlavní obsah\n„Proti Rusku potřebujeme obranu, která ho bude bolet,“ plánuje Evropa\nLukáš Marek\n5:29\nChcete-li článek poslouchat, přihlaste se\neBook\nSdílet\nFoto: Cavan-Images , Shutterstock.com\nRuský dron, ilustrační foto.\n19:16\nMinistři obrany zemí EU řešili v Bruselu i otázku evropského mechanismu k reakcím proti ruským útokům. Takzvaný Pohotovostní bezpečnostní protokol, který se přirovnává k článku 4 NATO, navrhla už dřív šéfka Evropské komise.\nČlánek\nŠéfka unijní diplomacie Kaja Kallasová před novináři potvrdila , že předmětem pondělního jednání ministrů obrany v Bruselu byl i plán na novou „širší strategii proti hybridním útokům“ s názvem Pohotovostní bezpečnostní protokol.\nS návrhem na tento mechanismus poprvé přišla v polovině září šéfka Evropské komise Ursula von der Leyenová a hovoří se o něm jako o evropské obdobě článku 4 NATO .\nČlánek 4 NATO\nČlánek 4  Severoatlantické smlouvy zní následovně: „Smluvní strany budou společně konzultovat vždy, když podle názoru kterékoli z nich bude ohrožena územní celistvost, politická nezávislost nebo bezpečnost kterékoli smluvní…",
+      "stazeno": "2026-09-28T20:04:46.961Z",
+      "stav": 200
+    },
+    "vyrizeni": {
+      "kdy": "2026-09-28T22:28:36.263Z",
+      "duvod": "neudalost",
+      "patriK": null,
+      "poznamka": "Text o plánu Evropy vybudovat obranu, „která bude Rusko bolet“; analytický/politický text, ne popis konkrétního rozhodnutí."
+    }
+  },
+  {
+    "id": "k-e817d38bd772d116",
+    "zachyceno": "2026-09-28T20:04:36.899Z",
+    "publikovano": "2026-09-28T17:16:25.000Z",
+    "zdroj": {
+      "nazev": "The Guardian — World",
+      "url": "https://www.theguardian.com/politics/2026/sep/28/nandy-labels-farage-master-of-conspiracy-theory-over-fairford-claims",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Nandy labels Farage ‘master of conspiracy theory’ over Fairford claims",
+    "titulekPuvodni": "Nandy labels Farage ‘master of conspiracy theory’ over Fairford claims",
+    "shrnuti": "Culture secretary criticises Reform leader after he tried to link suspected bomb plot to small boat crossings Nigel Farage has been described as a “master of the conspiracy theory” by the culture secretary, Lisa Nandy, , after he tried to link events at RAF Fairford to small boat crossings. The Refo",
+    "kodZeme": "GB",
+    "zeme": "Spojené království",
+    "kategorie": [
+      "sabotaz"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "bomb"
+    ],
+    "naliehave": null,
+    "stav": "vyrizen",
+    "vyrez": {
+      "text": "Nandy labels Farage ‘master of conspiracy theory’ over Fairford claims | Politics | The Guardian\nSkip to main content Skip to navigation\nNigel Farage said he had been warning about ‘Iranian agents’ coming into the UK on small boats after arrests near RAF Fairford. Photograph: Murdo MacLeod/The Guardian\nView image in fullscreen\nNigel Farage said he had been warning about ‘Iranian agents’ coming into the UK on small boats after arrests near RAF Fairford. Photograph: Murdo MacLeod/The Guardian\nNandy labels Farage ‘master of conspiracy theory’ over Fairford claims\nCulture secretary criticises Reform leader after he tried to link suspected bomb plot to small boat crossings\nNigel Farage has been described as a “master of the conspiracy theory” by the culture secretary, Lisa Nandy, , after he tried to link events at RAF Fairford to small boat crossings.\nThe Reform UK leader was criticised over his reaction to the arrests of the men on Sunday, when he said he had been warning for months about “Iranian agents” coming into the UK across the Channel in small boats.\n“We deserve to be told the truth about the Fairford bomb plotters’ identities,” he added in his post on X on Sunday.\nOn Monday…",
+      "stazeno": "2026-09-28T20:04:47.992Z",
+      "stav": 200
+    },
+    "vyrizeni": {
+      "kdy": "2026-09-28T22:28:36.263Z",
+      "duvod": "neudalost",
+      "patriK": null,
+      "poznamka": "Britský politický spor mezi Nandy a Farage o teoriích spiknutí ohledně Fairfordu; domácí britská politika, ne bezpečnostní skutek."
+    }
+  },
+  {
+    "id": "k-442dc1f6d9421262",
+    "zachyceno": "2026-09-28T17:00:12.228Z",
+    "publikovano": "2026-09-28T16:56:00.000Z",
+    "zdroj": {
+      "nazev": "Ukrinform (anglicky)",
+      "url": "https://www.ukrinform.net/rubric-ato/4168918-air-defense-forces-shoot-down-86-of-124-russian-drones-over-ukraine-during-day.html",
+      "typ": "wire",
+      "primarni": false
+    },
+    "titulek": "Air defense forces shoot down 86 of 124 Russian drones over Ukraine during day",
+    "titulekPuvodni": "Air defense forces shoot down 86 of 124 Russian drones over Ukraine during day",
+    "shrnuti": "Throughout the day on September 28, air defense forces shot down 86 of 124 Russian drones; the Kyiv region was the main target of the attack.",
+    "kodZeme": "UA",
+    "zeme": "Ukrajina",
+    "kategorie": [
+      "drony",
+      "rusko"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "shot down",
+      "dron",
+      "drone",
+      "russia"
+    ],
+    "naliehave": null,
+    "stav": "vyrizen",
+    "vyrez": {
+      "text": "Air defense forces shoot down 86 of 124 Russian drones over Ukraine during day\n\r\nSubscription\nNewsletters\nPhotobank\nUkrinform - Ukrainian National News Agency\nFounded in 1918\nMonday, 28 September 2026, 20:00\nWar\nEconomy\nSports\nMore ☰\nContacts\nEng\nУкр\nEng\nEsp\nDeu\nعربي\nFra\n日本語\nPol\n&times;\nAll topics\nWar\nRecovery of Ukraine\nPolitics\nEconomy\nFact checks\nDefense\nSociety and Culture\nSports\nCrime\nAccidents and Emergencies\nAgency\nInformation on Agency\nOur Contacts\nSubscribtion Terms\nOur Services\nPrivacy policy and personal data protection\nAdditional\nPublications\nInterviews\nPhoto\nVideo\nLongreads\nReleases\nServices\nSubscription\nNewsletters\nPhotobank\n\r\n\r\n\r\nThroughout the day on September 28, air defense forces shot down 86 of 124 Russian drones; the Kyiv region was the main target of the attack.\nAccording to Ukrinform, the Ukrainian Air Force Command reported this on Facebook .\n\r\n\r\n\r\n\r\n\r\n\r\n&ldquo;Throughout the day on September 28 (from 6:30 a.m. to 6:30 p.m.), the enemy attacked Ukraine with 124 strike UAVs (86 of which were jet-powered), &lsquo;Gerbara,&rsquo; &lsquo;Banderole&rsquo;/&lsquo;Dan-T,&rsquo; and other types of drones. The main target of the attack was the Kyiv region,&rdquo;…",
+      "stazeno": "2026-09-28T17:00:12.430Z",
+      "stav": 200
+    },
+    "vyrizeni": {
+      "kdy": "2026-09-28T22:28:36.263Z",
+      "duvod": "mimo-rozsah",
+      "patriK": null,
+      "poznamka": "Ukrajinská protivzdušná obrana sestřelila 86 ze 124 ruských dronů za den; uvnitř Ukrajiny, rutinní statistika bez sledovaného dopadu."
+    }
+  },
+  {
+    "id": "k-a56f7642ff638c4f",
+    "zachyceno": "2026-09-28T17:00:09.824Z",
+    "publikovano": "2026-09-28T16:47:11.000Z",
+    "zdroj": {
+      "nazev": "France 24 (anglicky)",
+      "url": "https://www.france24.com/en/video/20260928-five-suspects-arrested-in-explosives-case-near-uk-airbase-were-british-nationals",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Five suspects arrested in explosives case near UK airbase were British nationals",
+    "titulekPuvodni": "Five suspects arrested in explosives case near UK airbase were British nationals",
+    "shrnuti": "Five suspects arrested by British police on suspicion of terrorism and explosives ​offenses after white vans drove towards an airbase used by US forces were all British nationals from London in their early 20s, police said on Monday. France 24 Benedicte Paviot has more.",
+    "kodZeme": "FR",
+    "zeme": "Francie",
+    "kategorie": [
+      "zpravodajske"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "arrested+terror"
+    ],
+    "naliehave": null,
+    "stav": "vyrizen",
+    "vyrez": {
+      "text": "Five suspects arrested in explosives case near UK airbase were British nationals - France 24\nSkip to main content\nTo display this content from YouTube, you must enable advertisement tracking and audience measurement.\nAccept\nManage my choices\nOne of your browser extensions seems to be blocking the video player from loading. To watch this content, you may need to disable it on this site.\nTry again\nCover image: © France 24\n06:00\nFive suspects arrested in explosives case near UK airbase were British nationals\nIssued on: 28/09/2026 - 18:47\nShare\nFive suspects arrested by British police on suspicion of terrorism and explosives ​offenses after white vans drove towards an airbase used by US forces were all British nationals from London in their early 20s, police said on Monday. France 24 Benedicte Paviot has more.\nRead more\nRead less\nFor a 'measured diplomatic figure', Pope Leo's visit to France has been 'deeply political'\n28/09/2026\nFrance\n'Fascinating success': Pope Leo’s appeal in France transcends faith and politics\n28/09/2026\nFrance\nFrench Senate elections: What next after far right surge?\n28/09/2026\nHeavy rain and flooding kills dozens northern India\n28/09/2026\nTrump heads to GOP…",
+      "stazeno": "2026-09-28T17:00:12.790Z",
+      "stav": 200
+    },
+    "vyrizeni": {
+      "kdy": "2026-09-28T22:28:36.263Z",
+      "duvod": "duplicita",
+      "patriK": null,
+      "poznamka": "Aktualizace už zveřejněného záznamu o zadržení pěti mužů u RAF Fairford (i-2026-09-27-e480488876): muži byli po výslechu propuštěni na kauci, Írán jakoukoli účast popřel. Do incidenty.json nesahám."
+    }
+  },
+  {
+    "id": "k-cddb8a7a917d7eab",
+    "zachyceno": "2026-09-28T17:00:09.205Z",
+    "publikovano": "2026-09-28T16:08:57.000Z",
+    "zdroj": {
+      "nazev": "Deník N",
+      "url": "https://denikn.cz/2197738/vyvoj-boju-1677-den-ukrajinci-behem-operace-vivaldi-zajali-250-ruskych-vojaku-rusove-priznavaji-krizi-na-slovjanskem-smeru/",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Vývoj bojů (1677. den): Ukrajinci během operace Vivaldi zajali 250 ruských vojáků, Rusové přiznávají krizi na slovjanském směru",
+    "titulekPuvodni": "Vývoj bojů (1677. den): Ukrajinci během operace Vivaldi zajali 250 ruských vojáků, Rusové přiznávají krizi na slovjanském směru",
+    "shrnuti": "Informace v textu jsou shrnutím událostí za pátek až neděli 25.–27. září. V tuto chvíli už situace na některých místech může být jiná. Ukrajinský útok na severním křídle slovjansko-kramatorského úseku fronty prokračuje. „Na lymanském směru přetrvává těžká situace. Podle zpráv z terénu se nepřítel po",
+    "kodZeme": "UA",
+    "zeme": "Ukrajina",
+    "kategorie": [
+      "hybridni",
+      "vojsko",
+      "rusko"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "utok na",
+      "vojak",
+      "rusk"
+    ],
+    "naliehave": null,
+    "stav": "vyrizen",
+    "vyrez": {
+      "text": "Vývoj bojů (1677. den): Ukrajinci během operace Vivaldi zajali 250 ruských vojáků, Rusové přiznávají krizi na slovjanském směru &mdash; Deník N\nČást z 250 ruských vojáků, které zajala ukrajinská armáda během operace Vivaldi. Foto: ukrajinský 3. armádní sbor\nVíce o poslechu Deníku N\nUkrajinský útok na severním křídle slovjansko-kramatorského úseku fronty pokračuje.\nRusové začali útočit na datová centra v ukrajinských městech.\nUkrajinské drony zasáhly továrnu na výrobu naváděcích zařízení pro rakety.\nSice už se o ní tolik nemluví, ale ukrajinská kampaň na střední vzdálenosti úspěšně pokračuje.\nMapy dne: mapa míst zasažených v Kyjevě; ukrajinské úspěchy v okolí Lymanu a Slovjansku.\nVidea dne: roj ruských dronů se blíží ke Kyjevu; ukrajinský dron s vlajkou létal nad okupovaným městem Hola Prystaň; ukrajinská armáda pomocí dronů poslala potraviny obyvatelům okupovaných Olešek v Chersonské oblasti .\nInformace v textu jsou shrnutím událostí za pátek až neděli 25.–27. září. V tuto chvíli už situace na některých místech může být jiná.\nUkrajinský útok na severním křídle slovjansko-kramatorského úseku fronty prokračuje. „Na lymanském směru přetrvává těžká situace. Podle zpráv z terénu…",
+      "stazeno": "2026-09-28T17:00:12.831Z",
+      "stav": 200
+    },
+    "vyrizeni": {
+      "kdy": "2026-09-28T22:28:36.263Z",
+      "duvod": "mimo-rozsah",
+      "patriK": null,
+      "poznamka": "Souhrn 1677. dne bojů (operace Vivaldi, zajatí vojáci); souhrn války, ne jeden konkrétní skutek se sledovaným dopadem."
+    }
+  },
+  {
+    "id": "k-e6ece409bd66a6c2",
+    "zachyceno": "2026-09-28T17:00:12.312Z",
+    "publikovano": "2026-09-28T16:05:01.000Z",
+    "zdroj": {
+      "nazev": "Meduza (anglicky)",
+      "url": "https://meduza.io/en/news/2026/09/28/bloomberg-hungary-s-otp-bank-considers-a-full-russia-exit-as-regulators-review-its-purchase-of-baltic-lender-luminor",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Bloomberg: Hungary’s OTP Bank considers a full Russia exit as regulators review its purchase of Baltic lender Luminor",
+    "titulekPuvodni": "Bloomberg: Hungary’s OTP Bank considers a full Russia exit as regulators review its purchase of Baltic lender Luminor",
+    "shrnuti": "Hungary’s OTP Bank is considering a complete exit from Russia, Bloomberg reported. The bank has continued operating there since Russia’s full-scale invasion of Ukraine, but its Russian business could hinder approval of its planned purchase of Baltic lender Luminor Bank.",
+    "kodZeme": "HU",
+    "zeme": "Maďarsko",
+    "kategorie": [
+      "nato",
+      "rusko"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "invasion+baltic+could",
+      "russia"
+    ],
+    "naliehave": null,
+    "stav": "vyrizen",
+    "vyrez": {
+      "text": "Bloomberg: Hungary’s OTP Bank considers a full Russia exit as regulators review its purchase of Baltic lender Luminor — Meduza\nSkip to main content\nBloomberg: Hungary’s OTP Bank considers a full Russia exit as regulators review its purchase of Baltic lender Luminor\nSeptember 28, 2026, 4:05 pm\nSource: Bloomberg\nHungary’s OTP Bank is considering a complete exit from Russia, Bloomberg reported. The bank has continued operating there since Russia’s full-scale invasion of Ukraine, but its Russian business could hinder approval of its planned purchase of Baltic lender Luminor Bank.\nOTP Group CEO Peter Csanyi told Bloomberg that the bank is reviewing its strategy in Russia, partly because it plans to expand abroad. But OTP acknowledges the obstacles: “At present, a sale is virtually impossible.” The owners of its Russian business could receive only 5% of its value in a sale, and any buyer would have to be acceptable to both the Kremlin and European authorities.\nThe question of what to do with its Russian business is especially important for OTP because of the Luminor deal. In July, the group agreed to buy the Baltic bank from funds managed by Blackstone and DNB. The acquisition would…",
+      "stazeno": "2026-09-28T17:00:13.606Z",
+      "stav": 200
+    },
+    "vyrizeni": {
+      "kdy": "2026-09-28T22:28:36.263Z",
+      "duvod": "neudalost",
+      "patriK": null,
+      "poznamka": "Maďarská OTP Bank zvažuje úplný odchod z Ruska; obchodní/ekonomické rozhodnutí soukromé firmy, ne bezpečnostní skutek."
+    }
+  },
+  {
+    "id": "k-618319ef8eb8391a",
+    "zachyceno": "2026-09-28T17:00:08.917Z",
+    "publikovano": "2026-09-28T16:05:00.000Z",
+    "zdroj": {
+      "nazev": "Český rozhlas — domácí zprávy",
+      "url": "https://www.irozhlas.cz/veda-technologie/historie/zbrane-tanky-cimbalovka-muzeum-na-demarkacni-linii-v-rokycanech-oziva-duchem_2609281805_aru",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Zbraně, tanky, cimbálovka. Muzeum na demarkační linii v Rokycanech ožívá duchem první republiky",
+    "titulekPuvodni": "Zbraně, tanky, cimbálovka. Muzeum na demarkační linii v Rokycanech ožívá duchem první republiky",
+    "shrnuti": "Na svátek svatého Václava si v Rokycanech připomněli historii československé armády i život za první republiky. Program v Muzeu na demarkační linii začal v 11 hodin. Patřila mezi ně rozsáhlá bojová ukázka. „Nazvali jsme ji Boj o hranice a představilo se nám v ní více než 100 členů klubu vojenské his",
+    "kodZeme": "CZ",
+    "zeme": "Česko",
+    "kategorie": [
+      "hranice",
+      "cr"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "hranic+armad",
+      "hranice",
+      "cesky rozhlas",
+      "rozhlas"
+    ],
+    "naliehave": null,
+    "stav": "vyrizen",
+    "vyrez": {
+      "text": "",
+      "stazeno": "2026-09-28T17:00:13.761Z",
+      "stav": 403,
+      "chyba": "HTTP 403"
+    },
+    "vyrizeni": {
+      "kdy": "2026-09-28T22:28:36.263Z",
+      "duvod": "neudalost",
+      "patriK": null,
+      "poznamka": "Reportáž o muzeu na demarkační linii v Rokycanech; historicko-kulturní téma, nesouvisí s rozsahem projektu."
+    }
+  },
+  {
+    "id": "k-5cdb4ac67570b68f",
+    "zachyceno": "2026-09-28T17:00:11.760Z",
+    "publikovano": "2026-09-28T16:03:22.000Z",
+    "zdroj": {
+      "nazev": "El Mundo (Španělsko)",
+      "url": "https://www.elmundo.es/internacional/2026/09/28/6aba8121fdddff217f8b457f.html",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Rusia bombardea la Academia Nacional de Ciencias y un gran hospital en Kiev con drones a reacción",
+    "titulekPuvodni": "Rusia bombardea la Academia Nacional de Ciencias y un gran hospital en Kiev con drones a reacción",
+    "shrnuti": "El Kremlin lanza sus aparatos no tripulados contra la capital ucraniana sin interrupción, destruyendo almacenes de alimentos, centros de datos, clínicas y mercados Leer",
+    "kodZeme": "RU",
+    "zeme": "Rusko",
+    "kategorie": [
+      "sabotaz",
+      "drony",
+      "rusko"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "bomb",
+      "dron",
+      "drone",
+      "kreml",
+      "kremlin"
+    ],
+    "naliehave": null,
+    "stav": "vyrizen",
+    "vyrez": {
+      "text": "Rusia bombardea la Academia Nacional de Ciencias y un gran hospital en Kiev con drones a reacci�n | Internacional\nINTERNACIONAL\nEuropa en guerra\nRusia bombardea la Academia Nacional de Ciencias y un gran hospital en Kiev con drones a reacci�n\nEl Kremlin lanza sus aparatos no tripulados contra la capital ucraniana sin interrupci�n, destruyendo almacenes de alimentos, centros de datos, cl�nicas y mercados\nCompartir\nComentar\nLos bomberos tratan de apagar el fuego provocado por el bombardeo sobre la Academia Nacional de Ciencias de Kiev. Dan Bashakov AP\nAlberto Rojas\nSEGUIR AUTOR\nActualizado Lunes,\n28\nseptiembre\n2026\n-\n18:03\nA�ADE EL MUNDO EN GOOGLE Haz que nuestras noticias aparezcan en tus b�squedas\nEuropa en guerra La tormenta perfecta de vulnerabilidad europea que Vladimir Putin puede explotar\nEuropa en guerra Rusia extiende su estrategia de terror contra los ucranianos y ataca trenes, gasolineras y almacenes de alimentos\nEl terror ruso no se detiene en Kiev. Al mediod�a de hoy, en el en�simo ataque con los temidos drones de propulsi�n a chorro, la aviaci�n no tripulada del Kremlin impact� contra el edificio de la Academia Nacional de Ciencias, que en ese momento estaba lleno de…",
+      "stazeno": "2026-09-28T17:00:13.852Z",
+      "stav": 200
+    },
+    "vyrizeni": {
+      "kdy": "2026-09-28T22:28:36.263Z",
+      "duvod": "mimo-rozsah",
+      "patriK": null,
+      "poznamka": "Ruský denní úder na Kyjev (akademie věd, farmaceutický závod) v posledních 24 hodinách; uvnitř Ukrajiny, bez doloženého následku pro sledované země."
+    }
+  },
+  {
+    "id": "k-49a4bbf9a0bf8099",
+    "zachyceno": "2026-09-28T17:00:12.274Z",
+    "publikovano": "2026-09-28T15:38:00.000Z",
+    "zdroj": {
+      "nazev": "Ukrainska Pravda (anglicky)",
+      "url": "https://www.pravda.com.ua/eng/news/2026/09/28/8055458/",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Russia hits Darnytsia pharmaceutical plant for third time in six days",
+    "titulekPuvodni": "Russia hits Darnytsia pharmaceutical plant for third time in six days",
+    "shrnuti": "Russian forces struck the Darnytsia pharmaceutical plant in Kyiv on 28 September, marking the third Russian attack on the facility in six days.",
+    "kodZeme": "UA",
+    "zeme": "Ukrajina",
+    "kategorie": [
+      "hybridni",
+      "rusko"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "attack on",
+      "russia"
+    ],
+    "naliehave": null,
+    "stav": "vyrizen",
+    "vyrez": {
+      "text": "Russia hits Darnytsia pharmaceutical plant for third time | Ukrainska Pravda\nStock photo: Darnytsia pharmaceutical company\nRussian forces struck a plant in Kyiv belonging to Ukrainian pharmaceutical company Darnytsia once again on 28 September, marking the third attack on the facility in six days.\nSource: Kateryna Zahorii , Chair of the Board of Directors at Darnytsia, on Facebook\nDetails: Zahorii said no one had been injured in the strike.\nAdvertisement:\n\r\n\r\n\r\n\r\n\r\nThe company is not disclosing information about the aftermath of the attack or the condition of the plant for security reasons.\nQuote: \"We are not publishing any details about the aftermath of the strike or the condition of the plant. I also ask you not to post photos or videos, describe the damage or add any details.\"\nBackground: Russian forces previously attacked the Darnytsia plant on 26 September. No casualties were reported at the time either, and the company did not disclose the aftermath of the strike. Another strike on the facility took place on 23 September.\nSubscribe on Patreon to back our journalism long-term.\nRussia-Ukraine war\nAdvertisement:\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nRussia-Ukraine war\n\"She had taste in…",
+      "stazeno": "2026-09-28T17:00:14.007Z",
+      "stav": 200
+    },
+    "vyrizeni": {
+      "kdy": "2026-09-28T22:28:36.263Z",
+      "duvod": "mimo-rozsah",
+      "patriK": null,
+      "poznamka": "Ruský denní úder na Kyjev (akademie věd, farmaceutický závod) v posledních 24 hodinách; uvnitř Ukrajiny, bez doloženého následku pro sledované země."
+    }
+  },
+  {
+    "id": "k-328e48adf5f2c99f",
+    "zachyceno": "2026-09-28T17:00:09.091Z",
+    "publikovano": "2026-09-28T15:37:00.000Z",
+    "zdroj": {
+      "nazev": "iDNES.cz — zpravodajství",
+      "url": "https://www.idnes.cz/zpravy/zahranicni/piloti-budou-moci-rychleji-nicit-objekty-vnikajici-do-polska-ze-strany-ruska.A260928_173117_zahranicni_remy#utm_source=rss&utm_medium=feed&utm_campaign=zpravodaj&utm_content=main",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Ponaučení z ruské vzdušné provokace: Poláci se s identifikací už párat nebudou",
+    "titulekPuvodni": "Ponaučení z ruské vzdušné provokace: Poláci se s identifikací už párat nebudou",
+    "shrnuti": "Polská armáda v nadcházejících dnech upraví postupy, které umožní pilotům stíhacích letounů a vrtulníků sestřelovat objekty pronikající do polského vzdušného prostoru ze strany Ruska na základě údajů z radarů, a nikoliv až po vizuální identifikaci. Podle rádia RMF24 to dnes uvedl náměstek ministra o",
+    "kodZeme": "PL",
+    "zeme": "Polsko",
+    "kategorie": [
+      "drony",
+      "vojsko",
+      "rusko"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "sestrel",
+      "armada",
+      "rusk"
+    ],
+    "naliehave": null,
+    "stav": "vyrizen",
+    "vyrez": {
+      "text": "Piloti budou moci rychleji ničit objekty vnikající do Polska ze strany Ruska - iDNES.cz \r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\niDNES.cz\n\r\n\r\n\r\nP�ihl�sit \r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nAbyste mohli pokra�ovat, pot�ebujeme v�d�t, jakou formou v�m m��eme zobrazovat reklamu \r\n\r\n\r\n\r\n\r\n\r\nV�mi zvolen� nastaven� \r\nneobsahuje souhlas se zobrazov�n�m c�len� reklamy . \r\nVyberte pros�m znovu, \r\njakou formou v�m m�me zobrazovat obsah. \r\n\r\n\r\n\r\n\r\n\r\n\r\niDNES Premium\n\r\nBez reklam\n\r\n\r\n199 K� m�s��n�\n\r\nM��ete neomezen� ��st iDNES.cz, Lidovky.cz, Expres.cz a Antiyoutuber.cz. K tomu dostanete tak� noviny a �asopisy v elektronick� podob�. To v�e bez reklam. 1\n\r\n\r\nP�edplatit\n\r\n\r\nU� m�te ��et? P�ihlaste se\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nS c�lenou reklamou\n\r\n\r\n\r\nZdarma \r\n\r\nZachov�me v�m v�e tak, jak jste zvykl� a reklamu p�izp�sob�me va�im z�jm�m. Bez omezen� si m��ete d�l ��st, p�ehr�vat videa, sout�it �i p�isp�vat do v�ech diskus�. 2\n\r\n\r\nSouhlas�m\n\r\nPodrobn� nastaven�\n\r\n\r\n\r\n\r\n\r\n\r\niDNES a reklama\n\r\nPokud vyu�ijete m�sto platby ud�len� souhlasu s reklamou (tj. souhlas s vyu�it�m cookies a dal��ch s�ov�ch identifik�tor� pro ��ely c�len� reklamy), \r\nbudou V�m…",
+      "stazeno": "2026-09-28T17:00:14.107Z",
+      "stav": 200
+    },
+    "vyrizeni": {
+      "kdy": "2026-09-28T22:28:36.263Z",
+      "duvod": "neudalost",
+      "patriK": null,
+      "poznamka": "Polský komentář o poučení z incidentu s vrtulníkem Mi-8 a zjednodušení identifikace; navazuje na už zveřejněné záznamy (Mi-8, zjednodušení sestřelování), ne nový skutek."
+    }
+  },
+  {
+    "id": "k-cbc8351b0aaac232",
+    "zachyceno": "2026-09-28T17:00:09.742Z",
+    "publikovano": "2026-09-28T15:16:50.000Z",
+    "zdroj": {
+      "nazev": "The Guardian — World",
+      "url": "https://www.theguardian.com/world/2026/sep/28/russia-strike-on-kyiv-science-academy-drone-ukraine",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Russian strike on Kyiv’s science academy kills at least one in latest daytime attack",
+    "titulekPuvodni": "Russian strike on Kyiv’s science academy kills at least one in latest daytime attack",
+    "shrnuti": "Three others wounded as jet-powered drones increasingly target Ukraine’s capital, with medical centre also hit Europe live – latest updates A Russian drone hit the National Academy of Sciences in central Kyiv on Monday, killing at least one person, in the latest daytime attack on Ukraine’s capital. ",
+    "kodZeme": "UA",
+    "zeme": "Ukrajina",
+    "kategorie": [
+      "sabotaz",
+      "hybridni",
+      "drony",
+      "rusko"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "bomb",
+      "attack on",
+      "dron",
+      "drone",
+      "russia"
+    ],
+    "naliehave": null,
+    "stav": "vyrizen",
+    "vyrez": {
+      "text": "Russian strike on Kyiv’s science academy kills at least one in latest daytime attack | Ukraine | The Guardian\nSkip to main content Skip to navigation\nStaff try to escape from second-floor windows after the National Academy of Sciences in Kyiv was hit by a Russian jet-powered drone on Monday. Photograph: Gleb Garanich/Reuters\nView image in fullscreen\nStaff try to escape from second-floor windows after the National Academy of Sciences in Kyiv was hit by a Russian jet-powered drone on Monday. Photograph: Gleb Garanich/Reuters\nRussian strike on Kyiv’s science academy kills at least one in latest daytime attack\nThree others wounded as jet-powered drones increasingly target Ukraine’s capital, with medical centre also hit\nEurope live – latest updates\nA Russian drone hit the National Academy of Sciences in central Kyiv on Monday, killing at least one person, in the latest daytime attack on Ukraine’s capital.\nFlames tore through the historic building as people clambered out of first- and second-floor windows to escape, in dramatic scenes increasingly familiar in the heavily bombarded city.\nAt least one person was killed and three others were wounded, according to Kyiv’s mayor, Vitali…",
+      "stazeno": "2026-09-28T17:00:16.728Z",
+      "stav": 200
+    },
+    "vyrizeni": {
+      "kdy": "2026-09-28T22:28:36.263Z",
+      "duvod": "mimo-rozsah",
+      "patriK": null,
+      "poznamka": "Ruský denní úder na Kyjev (akademie věd, farmaceutický závod) v posledních 24 hodinách; uvnitř Ukrajiny, bez doloženého následku pro sledované země."
+    }
+  },
+  {
+    "id": "k-fb35ccbbe65dd811",
+    "zachyceno": "2026-09-28T17:00:09.831Z",
+    "publikovano": "2026-09-28T15:05:32.000Z",
+    "zdroj": {
+      "nazev": "France 24 (anglicky)",
+      "url": "https://www.france24.com/en/europe/20260928-five-men-arrested-suspected-bomb-plot-uk-air-base-to-be-released-on-bail-fairford",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "🔴 Five men arrested over suspected bomb plot at UK air base to be released on bail",
+    "titulekPuvodni": "🔴 Five men arrested over suspected bomb plot at UK air base to be released on bail",
+    "shrnuti": "",
+    "kodZeme": "GB",
+    "zeme": "Spojené království",
+    "kategorie": [
+      "sabotaz"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "bomb"
+    ],
+    "naliehave": null,
+    "stav": "vyrizen",
+    "vyrez": {
+      "text": "UK police bail five men held over suspected bomb plot at US-run air base - France 24\nSkip to main content\nAdvertising\nUK police bail five men held over suspected bomb plot at US-run air base\nEurope\nBritish police said Monday that five men arrested on explosives and terror charges near a US-run air base in England were being released on bail but remained under investigation. Counter-terror detectives said they were investigating \"multiple lines of inquiry\", including whether there is a link to Iran.\nIssued on: 28/09/2026 - 17:01 Modified: 28/09/2026 - 18:31\n4 min Reading time\nShare\nBy:\nFRANCE 24\nVideo by:\nCaroline BAUM\nTo display this content from YouTube, you must enable advertisement tracking and audience measurement.\nAccept\nManage my choices\nOne of your browser extensions seems to be blocking the video player from loading. To watch this content, you may need to disable it on this site.\nTry again\nCover image: Armed police officers stand guard on a road outside the perimeter of the RAF Fairford air base on September 28, 2026. © Toby Shepheard, Reuters\n01:20\nBritish police said Monday five men arrested near an airbase used by the United States were being released on bail, as…",
+      "stazeno": "2026-09-28T17:00:16.806Z",
+      "stav": 200
+    },
+    "vyrizeni": {
+      "kdy": "2026-09-28T22:28:36.263Z",
+      "duvod": "duplicita",
+      "patriK": null,
+      "poznamka": "Aktualizace už zveřejněného záznamu o zadržení pěti mužů u RAF Fairford (i-2026-09-27-e480488876): muži byli po výslechu propuštěni na kauci, Írán jakoukoli účast popřel. Do incidenty.json nesahám."
+    }
+  },
+  {
+    "id": "k-1f6464aec4af8659",
+    "zachyceno": "2026-09-28T15:03:51.191Z",
+    "publikovano": null,
+    "zdroj": {
+      "nazev": "RTL Today (Lucembursko)",
+      "url": "https://today.rtl.lu/live/follow-the-latest-news-around-the-world",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "International news ticker Iran denies involvement in UK airbase bomb scare LIVE",
+    "titulekPuvodni": "International news ticker Iran denies involvement in UK airbase bomb scare LIVE",
+    "shrnuti": "",
+    "kodZeme": "GB",
+    "zeme": "Spojené království",
+    "kategorie": [
+      "sabotaz"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "bomb"
+    ],
+    "naliehave": null,
+    "stav": "vyrizen",
+    "vyrez": {
+      "text": "International news ticker: Iran denies involvement in UK airbase bomb scare - RTL Today\nInternational news ticker\nIran denies involvement in UK airbase bomb scare\nStay up to date with the most important events unfolding around the world, with our live ticker bringing you the latest major developments and breaking news.\n© AFP\nLoad more\nMost read\nJanuary 2027\nEasyJet to suspend Luxembourg-Lisbon flights for a month\nNeutrality vote\nSwiss reject plan to toughen neutrality\nEmergency services\nAir ambulance deployed in Mullerthal motorbike crash\nWeather & Traffic\nMonday 28 September: a gathering of clouds\nMaricarmen Abascal\nMadrid housing protest camp enters second night as PM vows action\nMore News\nUS says no China arms sale plans after envoy cites Trump offer\nLong queues and quick sales\nSouvenirs fly off shelves ahead of Pope Leo XIV's Metz visit\nFrench far-right's Bardella denies alleged 2013 antisemitic comments\nDozens kidnapped in two weekend attacks in northern Nigeria\nFilipino tennis star\nEala makes fast start as weather and transport woes hit Asian Games\n28,000 km/h\nSpaceX puts Starship megarocket in orbit for first time\nBack to Top\nSubscribe to our newsletter Ok\nDo you want to…",
+      "stazeno": "2026-09-28T15:03:53.194Z",
+      "stav": 200
+    },
+    "vyrizeni": {
+      "kdy": "2026-09-28T22:28:36.263Z",
+      "duvod": "duplicita",
+      "patriK": null,
+      "poznamka": "Aktualizace už zveřejněného záznamu o zadržení pěti mužů u RAF Fairford (i-2026-09-27-e480488876): muži byli po výslechu propuštěni na kauci, Írán jakoukoli účast popřel. Do incidenty.json nesahám."
+    }
+  },
+  {
+    "id": "k-3fcffdccaf330ade",
+    "zachyceno": "2026-09-28T17:00:12.281Z",
+    "publikovano": "2026-09-28T14:54:00.000Z",
+    "zdroj": {
+      "nazev": "Ukrainska Pravda (anglicky)",
+      "url": "https://www.pravda.com.ua/eng/news/2026/09/28/8055444/",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "EU prepares new security protocol against threats from Russia",
+    "titulekPuvodni": "EU prepares new security protocol against threats from Russia",
+    "shrnuti": "EU defence ministers have held initial talks on a new emergency security protocol to counter Russian hybrid threats, including sabotage and airspace violations.",
+    "kodZeme": "EU",
+    "zeme": "EU",
+    "kategorie": [
+      "sabotaz",
+      "drony",
+      "rusko"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "sabotage",
+      "airspace violation",
+      "violat+airspace",
+      "airspace",
+      "russia"
+    ],
+    "naliehave": null,
+    "stav": "vyrizen",
+    "vyrez": {
+      "text": "EU discusses new security protocol against Russian threats | Ukrainska Pravda\nStock photo: Getty Images\nEU defence ministers held their first discussion on a new emergency security protocol that would set out actions and responses to hybrid threats from Russia, such as sabotage, airspace violations and arson, at a meeting of the Council of the EU on Monday 28 September.\nSource: EU High Representative for Foreign Affairs and Security Policy Kaja Kallas, as reported by a European Pravda correspondent in Brussels\nDetails: The ministers discussed a new emergency security protocol for the European Union in response to Russian hybrid attacks.\nAdvertisement:\n\r\n\r\n\r\n\r\n\r\n\"Ministers had first chance to exchange views on the idea of new emergency security protocol. Such a mechanism would provide a coordination mechanism to respond to grey zone attacks and complement Article 42.7 of today,\" Kallas said.\nShe noted that \"Russia's sustained acts of sabotage, arson and airspace violations persist\".\nQuote from Kallas: \"On the EU side, sanctions against perpetrators and the expulsion of Russian diplomats bite, but we need to look into what more can we do... And of course, to reiterate, this is…",
+      "stazeno": "2026-09-28T17:00:17.707Z",
+      "stav": 200
+    },
+    "vyrizeni": {
+      "kdy": "2026-09-28T22:28:36.263Z",
+      "duvod": "duplicita",
+      "patriK": null,
+      "poznamka": "Táž událost jako nový návrh i-2026-09-28-fa2517243f (nouzový bezpečnostní protokol EU)."
+    }
+  },
+  {
+    "id": "k-045d4807bb181a89",
+    "zachyceno": "2026-09-28T15:03:50.773Z",
+    "publikovano": "2026-09-28T14:31:22.000Z",
+    "zdroj": {
+      "nazev": "Seznam Zprávy",
+      "url": "https://www.seznamzpravy.cz/clanek/zahranicni-zadrzeni-u-letecke-zakladny-v-anglii-byli-britove-iran-popira-jakykoli-podil-316334",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Zadržení u letecké základny v Anglii byli Britové, Írán popírá jakýkoli podíl",
+    "titulekPuvodni": "Zadržení u letecké základny v Anglii byli Britové, Írán popírá jakýkoli podíl",
+    "shrnuti": "Pětice mužů zadržená v důsledku podezření z přípravy teroristického útoku u letecké základny mohou zůstat ve vazbě až 14 dní. Britští vyšetřovatelé prověřují možnou spojitost s Íránem či Ruskem, Írán to však odmítá.",
+    "kodZeme": "RU",
+    "zeme": "Rusko",
+    "kategorie": [
+      "zpravodajske",
+      "rusko"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "zadrz+rusk",
+      "rusk"
+    ],
+    "naliehave": null,
+    "stav": "vyrizen",
+    "vyrez": {
+      "text": "Zadržení u letecké základny v Anglii byli Britové, Írán popírá jakýkoli podíl - Seznam Zprávy\nZobrazení snímku 1 z 0\nHlavní obsah\nZadržení u letecké základny v Anglii byli Britové, Írán popírá jakýkoli podíl\nČTK\n3:04\nChcete-li článek poslouchat, přihlaste se\neBook\nSdílet\nFoto: Reuters\nPolicisté u základny RAF Fairford.\n16:31\nPětice mužů zadržená v důsledku podezření z přípravy teroristického útoku u letecké základny mohou zůstat ve vazbě až 14 dní. Britští vyšetřovatelé prověřují možnou spojitost s Íránem či Ruskem, Írán to však odmítá.\nČlánek\nVšech pět podezřelých, kteří byli v neděli zadrženi u západoanglické základny RAF Fairford využívané americkým letectvem, jsou britští občané žijící v Londýně. Oznámila to v pondělí podle tiskových agentur britská policie. Íránské velvyslanectví v Londýně „kategoricky“ odmítlo spekulace, že by s nimi měl Teherán cokoli společného.\nBritské úřady v pondělí nadále zadržovaly pětici zatčených mužů a zkoumaly podezřelé výbušniny nalezené poblíž letecké základny provozované USA, zatímco protiterorističtí vyšetřovatelé zjišťovali, zda se díky těmto zatčením podařilo zmařit útok napojený na Írán, píše agentura AP.\nU základny, odkud vzlétaly americké…",
+      "stazeno": "2026-09-28T15:03:54.133Z",
+      "stav": 200
+    },
+    "vyrizeni": {
+      "kdy": "2026-09-28T22:28:36.263Z",
+      "duvod": "duplicita",
+      "patriK": null,
+      "poznamka": "Aktualizace už zveřejněného záznamu o zadržení pěti mužů u RAF Fairford (i-2026-09-27-e480488876): muži byli po výslechu propuštěni na kauci, Írán jakoukoli účast popřel. Do incidenty.json nesahám."
+    }
+  },
+  {
+    "id": "k-ed97a116fe735d1d",
+    "zachyceno": "2026-09-28T15:03:51.789Z",
+    "publikovano": "2026-09-28T13:49:08.000Z",
+    "zdroj": {
+      "nazev": "Rzeczpospolita (Polsko)",
+      "url": "https://www.rp.pl/gospodarka/art45201891-wladimir-putin-pojawi-sie-na-g20-ekspert-polska-moze-na-tym-zyskac",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Władimir Putin pojawi się na G20? Ekspert: Polska może na tym zyskać",
+    "titulekPuvodni": "Władimir Putin pojawi się na G20? Ekspert: Polska może na tym zyskać",
+    "shrnuti": "Warszawa będzie miała możliwość kształtowania pozycji UE i NATO w bezpośrednich negocjacjach z rosyjskim dyktatorem, jeśli ten faktycznie będzie obecny na Szczycie G20 w Miami – oceniają eksperci. Byłaby to pierwsza obecność Putina na posiedzeniu G20 od 2021 r.",
+    "kodZeme": "PL",
+    "zeme": "Polsko",
+    "kategorie": [
+      "hybridni",
+      "nato"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "putin+polsk+war",
+      "nato"
+    ],
+    "naliehave": null,
+    "stav": "vyrizen",
+    "vyrez": {
+      "text": "Putin pojawi się na Szczycie G20? Wiadomo, jak zachowa się Karol Nawrocki - rp.pl\nReklama\nEkonomia\nGospodarka\nWładimir Putin pojawi się na G20? Ekspert: Polska może na tym zyskać\nWarszawa będzie miała możliwość kształtowania pozycji UE i NATO w bezpośrednich negocjacjach z rosyjskim dyktatorem, jeśli ten faktycznie będzie obecny na Szczycie G20 w Miami – oceniają eksperci. Byłaby to pierwsza obecność Putina na posiedzeniu G20 od 2021 r.\nAktualizacja:\n28.09.2026 17:03\nPublikacja:\n28.09.2026 15:49\nUstaw „Rzeczpospolitą” jako swoje ulubione źródło informacji w Google\nPutin pojawi się na Szczycie G20? Prezydent Nawrocki ręki mu nie poda\nFoto: Reuters\nNikodem Chinowski\nPrezydent Rosji Władimir Putin został zaproszony na grudniowy Szczyt G20 w Miami – taką informację na marginesie zakończonego w piątek 81. Ogólnego Posiedzenia ONZ przekazał amerykański sekretarz stanu, Marco Rubio. Ten zaskakujący ruch amerykańska administracja tłumaczy „otwartością na rozmowy z Moskwą o Ukrainie”.\nReklama\nReklama\nStany Zjednoczone przewodzą pracom G20 w tym roku, więc Waszyngton ma wolną rękę nie tylko w kształtowaniu kalendarza i agendy spotkań, ale również doboru uczestników. Mimo to chęć goszczenia…",
+      "stazeno": "2026-09-28T15:03:55.148Z",
+      "stav": 200
+    },
+    "vyrizeni": {
+      "kdy": "2026-09-28T22:28:36.263Z",
+      "duvod": "neudalost",
+      "patriK": null,
+      "poznamka": "Polská spekulace, zda se Putin objeví na G20, a zda by z toho Polsko mohlo těžit; hypotetický/analytický text, ne zpráva o skutku."
+    }
+  },
+  {
+    "id": "k-e676b4fbfdc01607",
+    "zachyceno": "2026-09-28T15:03:50.747Z",
+    "publikovano": "2026-09-28T13:24:09.000Z",
+    "zdroj": {
+      "nazev": "Novinky.cz",
+      "url": "https://www.novinky.cz/clanek/valka-na-ukrajine-rusky-dron-zasahl-ukrajinskou-akademii-ved-na-miste-zuri-mohutny-pozar-40599811",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Ruský dron zasáhl ukrajinskou akademii věd. Na místě zuří mohutný požár",
+    "titulekPuvodni": "Ruský dron zasáhl ukrajinskou akademii věd. Na místě zuří mohutný požár",
+    "shrnuti": "Ruský dron v pondělí v Kyjevě zasáhl budovu ukrajinské Národní akademie věd. Oznámil to starosta města Vitalij Kličko. Při útoku zemřelo několik lidí. Budovu rovněž zachvátil mohutný požár.",
+    "kodZeme": "UA",
+    "zeme": "Ukrajina",
+    "kategorie": [
+      "drony",
+      "rusko"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "dron+zasahl",
+      "dron",
+      "rusk"
+    ],
+    "naliehave": null,
+    "stav": "vyrizen",
+    "vyrez": {
+      "text": "Ruský dron zasáhl ukrajinskou akademii věd. Na místě zuří mohutný požár - Novinky\nZobrazení snímku 1 z 0\nzáhlaví\nHlavní obsah\nRuský dron zasáhl ukrajinskou akademii věd. Na místě zuří mohutný požár\nJaromír Moravec\n1:20\nChcete-li článek poslouchat, přihlaste se\neBook\nSdílet\nDnes 28. 9., 15:24\nRuský dron v pondělí v Kyjevě zasáhl budovu ukrajinské Národní akademie věd. Oznámil to starosta města Vitalij Kličko. Při útoku zemřelo několik lidí. Budovu rovněž zachvátil mohutný požár.\nNásledky útoku na ukrajinskou Národní akademii věd Video: @ZelenskyyUa, @den_kazansky\nČlánek\n„Do neobytné budovy v Ševčenkovské čtvrti, v centru města, narazil dron. Vypukl požár,“ oznámil na platformě Telegram Kličko, přičemž videa z místa útoku jasně ukazují, že se jedná o budovu Národní akademie věd.\nŠéf správy čtvrti Oleksandr Sazanovyč později informoval, že jsou na místě po ruském útoku mrtví a zranění, jejichž počet ale neupřesnil.\n„Obyvatele bych rád požádal, aby k místu nechodili a záchranným službám neztěžovali práci,“ uvedl Sazanovyč.\nNa videích hořící budovy jsou vidět lidé stojící na římsách, zatímco se kolem nich z oken valí černý kouř. Z jiného úhlu je zase vidět, že se budově zřítila střecha…",
+      "stazeno": "2026-09-28T15:03:56.173Z",
+      "stav": 200
+    },
+    "vyrizeni": {
+      "kdy": "2026-09-28T22:28:36.263Z",
+      "duvod": "mimo-rozsah",
+      "patriK": null,
+      "poznamka": "Ruský denní úder na Kyjev (akademie věd, farmaceutický závod) v posledních 24 hodinách; uvnitř Ukrajiny, bez doloženého následku pro sledované země."
+    }
+  },
+  {
+    "id": "k-9d80a83bc4eb3a15",
+    "zachyceno": "2026-09-28T15:03:51.356Z",
+    "publikovano": "2026-09-28T13:13:54.000Z",
+    "zdroj": {
+      "nazev": "Euronews",
+      "url": "https://www.euronews.com/2026/09/28/euronews-explains-does-the-eu-have-enough-gas-for-winter",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Euronews explains: Does the EU have enough gas for winter?",
+    "titulekPuvodni": "Euronews explains: Does the EU have enough gas for winter?",
+    "shrnuti": "With winter approaching and gas storage at record-low levels, EU governments are bracing for soaring costs as they compete with Asian buyers to secure supplies and avert power outages.",
+    "kodZeme": "EU",
+    "zeme": "EU",
+    "kategorie": [
+      "infrastruktura"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "power outage"
+    ],
+    "naliehave": null,
+    "stav": "vyrizen",
+    "vyrez": {
+      "text": "Euronews explains: Does the EU have enough gas for winter?\nAdvertisement\nBy&nbsp Marta Pacheco\nPublished on 28/09/2026 - 15:13 GMT+2 &bull; Updated\n15:50\nShare\nComments\nAdd Euronews on Google\nShare\nFacebook\nTwitter\nFlipboard\nSend\nReddit\nLinkedin\nMessenger\nTelegram\nVK\nBluesky\nThreads\nWhatsapp\nWith winter approaching and gas storage at record-low levels, EU governments are bracing for soaring costs as they compete with Asian buyers to secure supplies and avert power outages.\nThe European Union is heading into winter with a thin gas cushion, prompting Brussels to warn that the bloc’s energy price crisis could become a supply problem.\nADVERTISEMENT\nADVERTISEMENT\nIn a recent letter to EU capitals seen by Euronews, Energy Commissioner Dan Jørgensen said gas storage levels remain “exceptionally low” after a summer in which hot and dry weather forced countries to burn more gas for electricity, reducing the amount available to refill underground reserves.\nMeanwhile, the global market remains deeply affected by the US and Israeli war against Iran, which has cut liquefied natural gas (LNG) flows through the vital Strait of Hormuz to just 15% to 25% of pre-war levels.\nOn Monday, gas-rich…",
+      "stazeno": "2026-09-28T15:03:56.928Z",
+      "stav": 200
+    },
+    "vyrizeni": {
+      "kdy": "2026-09-28T22:28:36.263Z",
+      "duvod": "neudalost",
+      "patriK": null,
+      "poznamka": "Vysvětlující text Euronews, zda má EU dost plynu na zimu; obecný přehledový článek, ne zpráva o konkrétním skutku."
+    }
+  },
+  {
+    "id": "k-4b2dcf1a05664ab8",
+    "zachyceno": "2026-09-28T15:03:51.717Z",
+    "publikovano": "2026-09-28T13:12:09.000Z",
+    "zdroj": {
+      "nazev": "Denník N (Slovensko)",
+      "url": "https://dennikn.sk/5587810/vyvoj-bojov-1677-den-ukrajinci-pocas-operacie-vivaldi-zajali-250-ruskych-vojakov-rusi-priznavaju-krizu-na-slovianskom-smere/",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Vývoj bojov (1677. deň): Ukrajinci počas operácie Vivaldi zajali 250 ruských vojakov, Rusi priznávajú krízu na slovianskom smere",
+    "titulekPuvodni": "Vývoj bojov (1677. deň): Ukrajinci počas operácie Vivaldi zajali 250 ruských vojakov, Rusi priznávajú krízu na slovianskom smere",
+    "shrnuti": "Informácie v tomto texte sú zhrnutím udalostí za nedeľu 27. septembra. Situácia už môže byť medzičasom iná. Pokračuje ukrajinský útok na severnom krídle sloviansko-kramatorského úseku frontu. „Na lymanskom smere pretrváva ťažká situácia. Podľa správ z terénu sa nepriateľ snaží vytlačiť ruské jednotk",
+    "kodZeme": "UA",
+    "zeme": "Ukrajina",
+    "kategorie": [
+      "hybridni",
+      "vojsko",
+      "rusko"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "utok na",
+      "vojak",
+      "rusk"
+    ],
+    "naliehave": null,
+    "stav": "vyrizen",
+    "vyrez": {
+      "text": "",
+      "stazeno": "2026-09-28T15:03:57.755Z",
+      "stav": 403,
+      "chyba": "HTTP 403"
+    },
+    "vyrizeni": {
+      "kdy": "2026-09-28T22:28:36.263Z",
+      "duvod": "mimo-rozsah",
+      "patriK": null,
+      "poznamka": "Souhrn 1677. dne bojů (slovensky, totéž jako výše); souhrn války, ne konkrétní skutek."
     }
   },
   {
@@ -2106,6 +2335,46 @@
       "duvod": "mimo-rozsah",
       "patriK": null,
       "poznamka": "Ruský denní úder na Kyjev/Charkov/Dnipro/Synelnykove v posledních 24 hodinách; uvnitř Ukrajiny, bez doloženého následku pro sledované země."
+    }
+  },
+  {
+    "id": "k-8d0a11f4a5685404",
+    "zachyceno": "2026-09-28T15:03:50.890Z",
+    "publikovano": "2026-09-28T04:49:00.000Z",
+    "zdroj": {
+      "nazev": "ČTK — České noviny",
+      "url": "https://www.ceskenoviny.cz/zpravy/rusky-utok-zasahl-v-kyjeve-budovu-akademie-ved-uvadi-media/2880145?utm_source=rss&utm_medium=feed",
+      "typ": "wire",
+      "primarni": false
+    },
+    "titulek": "Ruský útok zasáhl v Kyjevě budovu akademie věd, uvádí média",
+    "titulekPuvodni": "Ruský útok zasáhl v Kyjevě budovu akademie věd, uvádí média",
+    "shrnuti": "Kyjev/Moskva - Ruský vzdušný útok na ukrajinské město Dnipro zabil tři lidi, nejméně 12 dalších zranil, uvedl dnes na platformě Telegram šéf správy Dněpropetrovské oblasti Oleksandr Hanža. O něco dříve...",
+    "kodZeme": "UA",
+    "zeme": "Ukrajina",
+    "kategorie": [
+      "hybridni",
+      "rusko"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "utok na",
+      "rusk"
+    ],
+    "naliehave": null,
+    "stav": "vyrizen",
+    "vyrez": {
+      "text": "Ruský útok zasáhl v Kyjevě budovu akademie věd, uvádí média | ČeskéNoviny.cz \r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nPřejít k obsahu \r\n| \r\nPřejít k hlavnímu menu \r\n| \r\nPřejít k vyhledávání \r\n\r\n\r\n\r\n\r\n\r\n\r\nČeské noviny \r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nMenu \r\n\r\n\r\n\r\n\r\n\r\n\r\nÚvod \r\n\r\n\r\nČR\n\r\nSvět\n\r\nEkonomika\n\r\nKultura\n\r\nSport\n\r\nMagazín\n\r\nSpeciál\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nKonflikt na Blízkém Východě\n\r\n\r\n\r\nInvaze na Ukrajinu\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nRuský útok zasáhl v Kyjevě budovu akademie věd, uvádí média\n\r\n\r\n\r\n\r\n\r\n\r\nKomerční prezentace Aktual.: 28.09.2026 15:41 \r\nVydáno: 28.09.2026, 06:49 \r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nUkrajinští záchranáři zasahují u požáru budovy Národní akademie věd v centru Kyjeva po ruském vzdušném útoku, 28. září 2026. \r\nAP/Dan Bashakov \r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nKyjev/Moskva - Ruský vzdušný útok na ukrajinské město Dnipro zabil tři lidi, nejméně 12 dalších zranil, uvedl dnes na platformě Telegram šéf správy Dněpropetrovské oblasti Oleksandr Hanža. O něco dříve informoval o zásahu obchodního centra ve městě. Ruský vzdušný útok na ukrajinské…",
+      "stazeno": "2026-09-28T15:03:58.054Z",
+      "stav": 200
+    },
+    "vyrizeni": {
+      "kdy": "2026-09-28T22:28:36.263Z",
+      "duvod": "mimo-rozsah",
+      "patriK": null,
+      "poznamka": "Ruský denní úder na Kyjev (akademie věd, farmaceutický závod) v posledních 24 hodinách; uvnitř Ukrajiny, bez doloženého následku pro sledované země."
     }
   },
   {
@@ -11864,126 +12133,6 @@
       "duvod": "mimo-rozsah",
       "patriK": null,
       "poznamka": "Ruský úder na klenotnickou firmu v Kyjevě; uvnitř Ukrajiny, bez doloženého následku pro sledované země."
-    }
-  },
-  {
-    "id": "k-3edb18635747f80b",
-    "zachyceno": "2026-09-24T09:47:04.352Z",
-    "publikovano": "2026-09-24T09:35:00.000Z",
-    "zdroj": {
-      "nazev": "Ukrinform (anglicky)",
-      "url": "https://www.ukrinform.net/rubric-ato/4167505-poland-scrambles-military-aircraft-twice-in-morning-over-russian-strikes-on-ukraine.html",
-      "typ": "wire",
-      "primarni": false
-    },
-    "titulek": "Poland scrambles military aircraft twice in morning over Russian strikes on Ukraine",
-    "titulekPuvodni": "Poland scrambles military aircraft twice in morning over Russian strikes on Ukraine",
-    "shrnuti": "Poland scrambled its military aircraft twice on Thursday morning in response to Russian strikes on Ukraine.",
-    "kodZeme": "PL",
-    "zeme": "Polsko",
-    "kategorie": [
-      "drony",
-      "rusko"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "zeSite": null,
-    "shody": [
-      "scrambl",
-      "russia"
-    ],
-    "naliehave": null,
-    "stav": "vyrizen",
-    "vyrez": {
-      "text": "Poland scrambles military aircraft twice in morning over Russian strikes on Ukraine\n\r\nSubscription\nNewsletters\nPhotobank\nUkrinform - Ukrainian National News Agency\nFounded in 1918\nThursday, 24 September 2026, 12:47\nWar\nEconomy\nSports\nMore ☰\nContacts\nEng\nУкр\nEng\nEsp\nDeu\nعربي\nFra\n日本語\nPol\n&times;\nAll topics\nWar\nRecovery of Ukraine\nPolitics\nEconomy\nFact checks\nDefense\nSociety and Culture\nSports\nCrime\nAccidents and Emergencies\nAgency\nInformation on Agency\nOur Contacts\nSubscribtion Terms\nOur Services\nPrivacy policy and personal data protection\nAdditional\nPublications\nInterviews\nPhoto\nVideo\nLongreads\nReleases\nServices\nSubscription\nNewsletters\nPhotobank\n\r\n\r\n\r\nPoland scrambled its military aircraft twice on Thursday morning in response to Russian strikes on Ukraine.\nThe Operational Command of the Polish Armed Forces reported this on X , according to Ukrinform.\n\r\n\r\n&ldquo;Due to Russian Federation strikes against Ukrainian territory involving air attack assets, military aviation is operating in Polish airspace,&rdquo; the Command said in its first statement.\n\r\n\r\nIn response, the Operational Command activated the necessary forces and assets, including placing ground-based air defense and…",
-      "stazeno": "2026-09-24T09:47:05.186Z",
-      "stav": 200
-    },
-    "vyrizeni": {
-      "kdy": "2026-09-25T19:51:38.645Z",
-      "duvod": "duplicita",
-      "patriK": null,
-      "poznamka": "Polsko dvakrát preventivně vyslalo letectvo kvůli ruským úderům na Ukrajinu; rutinní vzorec, rozhodováno už dříve jako mimo rozsah."
-    }
-  },
-  {
-    "id": "k-ab5253219f0f07d5",
-    "zachyceno": "2026-09-24T09:47:01.738Z",
-    "publikovano": "2026-09-24T09:32:00.000Z",
-    "zdroj": {
-      "nazev": "iDNES.cz — zpravodajství",
-      "url": "https://www.idnes.cz/zpravy/domaci/bavme-se-o-bezpecnostni-situaci-v-evrope-zada-rakusan-babise-at-svola-strany.A260924_111626_domaci_kop#utm_source=rss&utm_medium=feed&utm_campaign=zpravodaj&utm_content=main",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Bavme se o bezpečnostní situaci v Evropě, žádá Rakušan Babiše, ať svolá strany",
-    "titulekPuvodni": "Bavme se o bezpečnostní situaci v Evropě, žádá Rakušan Babiše, ať svolá strany",
-    "shrnuti": "Předseda opozičního hnutí STAN Vít Rakušan vyzval premiéra a předsedu ANO Andreje Babiše, aby svolal schůzku všech stran zastoupených ve Sněmovně. „„Bavme se, prosím, o bezpečnostní situaci v Evropě, která je nejhorší od začátku války na Ukrajině,“ řekl Rakušan na tiskové konferenci stínové vlády ST",
-    "kodZeme": "UA",
-    "zeme": "Ukrajina",
-    "kategorie": [
-      "diplomacie"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "zeSite": null,
-    "shody": [
-      "svolal+bezpecnost"
-    ],
-    "naliehave": null,
-    "stav": "vyrizen",
-    "vyrez": {
-      "text": "Stínová vláda STAN žádá Babiše o svolání bezpečnostní schůzky - iDNES.cz \r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\niDNES.cz\n\r\n\r\n\r\nP�ihl�sit \r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nAbyste mohli pokra�ovat, pot�ebujeme v�d�t, jakou formou v�m m��eme zobrazovat reklamu \r\n\r\n\r\n\r\n\r\n\r\nV�mi zvolen� nastaven� \r\nneobsahuje souhlas se zobrazov�n�m c�len� reklamy . \r\nVyberte pros�m znovu, \r\njakou formou v�m m�me zobrazovat obsah. \r\n\r\n\r\n\r\n\r\n\r\n\r\niDNES Premium\n\r\nBez reklam\n\r\n\r\n199 K� m�s��n�\n\r\nM��ete neomezen� ��st iDNES.cz, Lidovky.cz, Expres.cz a Antiyoutuber.cz. K tomu dostanete tak� noviny a �asopisy v elektronick� podob�. To v�e bez reklam. 1\n\r\n\r\nP�edplatit\n\r\n\r\nU� m�te ��et? P�ihlaste se\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nS c�lenou reklamou\n\r\n\r\n\r\nZdarma \r\n\r\nZachov�me v�m v�e tak, jak jste zvykl� a reklamu p�izp�sob�me va�im z�jm�m. Bez omezen� si m��ete d�l ��st, p�ehr�vat videa, sout�it �i p�isp�vat do v�ech diskus�. 2\n\r\n\r\nSouhlas�m\n\r\nPodrobn� nastaven�\n\r\n\r\n\r\n\r\n\r\n\r\niDNES a reklama\n\r\nPokud vyu�ijete m�sto platby ud�len� souhlasu s reklamou (tj. souhlas s vyu�it�m cookies a dal��ch s�ov�ch identifik�tor� pro ��ely c�len� reklamy), \r\nbudou V�m zobrazov�ny v r�mci…",
-      "stazeno": "2026-09-24T09:47:05.546Z",
-      "stav": 200
-    },
-    "vyrizeni": {
-      "kdy": "2026-09-25T19:51:38.645Z",
-      "duvod": "neudalost",
-      "patriK": null,
-      "poznamka": "Rakouský kancléř žádá Babiše o svolání stran k debatě o bezpečnosti Evropy; podle nového pravidla „řeči bez skutku nejsou událost“ — jde jen o výzvu k jednání, ne o rozhodnutí ani skutek."
-    }
-  },
-  {
-    "id": "k-2e607159df147d00",
-    "zachyceno": "2026-09-24T09:47:02.728Z",
-    "publikovano": "2026-09-24T08:44:44.000Z",
-    "zdroj": {
-      "nazev": "Aktuality.sk",
-      "url": "https://www.aktuality.sk/clanok/ssl7rhu/rusky-utok-na-farmu-v-charkovskej-oblasti-zabil-sest-ludi-obetami-boli-farmari/",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Ruský útok na farmu v Charkovskej oblasti zabil šesť ľudí. Obeťami boli farmári",
-    "titulekPuvodni": "Ruský útok na farmu v Charkovskej oblasti zabil šesť ľudí. Obeťami boli farmári",
-    "shrnuti": "Ruský dronový útok na poľnohospodársky podnik v Charkovskej oblasti si vyžiadal najmenej šesť obetí. Ukrajinské úrady uviedli, že medzi mŕtvymi a zranenými sú pracovníci farmy.",
-    "kodZeme": "UA",
-    "zeme": "Ukrajina",
-    "kategorie": [
-      "hybridni",
-      "drony",
-      "rusko"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "zeSite": null,
-    "shody": [
-      "utok na",
-      "dron",
-      "rusk"
-    ],
-    "naliehave": null,
-    "stav": "vyrizen",
-    "vyrez": {
-      "text": "Ruský útok na farmu v Charkovskej oblasti zabil šesť ľudí. Obeťami boli farmári | Aktuality.sk\nAktuality\nŠport\nDiva\nNajmama\nŽivé\nRecepty\nDobrú chuť\nSlovník\n12 °C -\nBratislava\nštvrtok 24. 9.\n24. 9.\nĽubor\nĽuboš\nSprávy dnes 24. Sep 2026 o 10:44\n1 min. čítania\nPridať do Google\nRuský útok na farmu v Charkovskej oblasti zabil šesť ľudí. Obeťami boli farmári\n1 fotka v galérii\nRuský dronový útok na farmu v Charkove Zdroj: Ukrajinská polícia Charkov\nTASR\nAktuality.sk\nUložiť článok\nRuský dronový útok na poľnohospodársky podnik v Charkovskej oblasti si vyžiadal najmenej šesť obetí. Ukrajinské úrady uviedli, že medzi mŕtvymi a zranenými sú pracovníci farmy.\nNajmenej šesť ľudí zahynulo vo štvrtok pri ruskom útoku na poľnohospodársky podnik v dedine v Charkovskej oblasti na východe Ukrajiny. Na sociálnych sieťach o tom informovali premiér Serhij Koreckyj a oblastný gubernátor Oleh Synehubov. Ďalších 12 ľudí utrpelo zranenia, píše TASR podľa správy agentúry AFP a portálu Ukrajinska pravda.\n„Zahynuli dvaja muži a štyri ženy,“ uviedol Synehubov na platforme Telegram s tým, že všetky obete aj zranení boli farmármi.\n🚨 A Russian strike on a farm in Stara Hnylytsia, Kharkiv region, killed six…",
-      "stazeno": "2026-09-24T09:47:08.665Z",
-      "stav": 200
-    },
-    "vyrizeni": {
-      "kdy": "2026-09-25T19:51:38.645Z",
-      "duvod": "mimo-rozsah",
-      "patriK": null,
-      "poznamka": "Podle titulků jde o ruský útok na farmu v Charkovské oblasti (typ řízené střely Banderol, který podle prověření není nový, v nasazení nejméně od 2025); uvnitř Ukrajiny, mimo rozsah."
     }
   }
 ]
