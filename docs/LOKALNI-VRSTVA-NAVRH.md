@@ -4,6 +4,13 @@
 **Nic z tohoto dokumentu zatím není naprogramováno.** Implementace začne až po schválení
 fází (část 20) provozovatelkou.
 
+**Rozhodnutí provozovatelky (29. 9. 2026):**
+1. Tarif Workers Paid — provozovatelka zjistí (do té doby se počítá s oběma variantami).
+2. Pilot: **Praha, Brno, Ostrava** (Palkovice a Havířov zatím ne; náhled Palkovic zůstává jen jako ukázka rozložení).
+3. Doména API podle obecného zvyku: **`api.czechpatrol.cz`**.
+4. Hlavní řádek bez „KLID“ — rozhodne se podle toho, jak bude celé vypadat.
+5. Doplněna bezpečnostní architektura (část 21) — závazná pro všechny fáze.
+
 Náhled obrazovky obce: [`lokalni-vrstva/palkovice-nahled.png`](lokalni-vrstva/palkovice-nahled.png)
 (zdroj [`palkovice-nahled.html`](lokalni-vrstva/palkovice-nahled.html) — tokeny z `globals.css`,
 obsah **smyšlený**, jen rozložení).
@@ -76,7 +83,7 @@ Data jsou verzovaná v gitu a web je statický. To je silná stránka (nic nemů
 
 | Riziko | Proč | Opatření |
 |---|---|---|
-| **Limit souborů Cloudflare Pages** | stránka = ~6 souborů; 6 250+ obcí × 6 ≈ 37 500 souborů. Limit Pages na nasazení je podle dokumentace řádově 20 000 souborů (**OVĚŘIT** pro náš tarif) | statické stránky jen pro pilot (5 obcí); celostátně jedna stránka-slupka + data z API (část 19) |
+| **Limit souborů Cloudflare Pages** | stránka = ~6 souborů; 6 250+ obcí × 6 ≈ 37 500 souborů. Limit Pages na nasazení je podle dokumentace řádově 20 000 souborů (**OVĚŘIT** pro náš tarif) | statické stránky jen pro pilot (Praha, Brno, Ostrava); celostátně jedna stránka-slupka + data z API (část 19) |
 | Build a velikost JS | `vykon.test.ts` hlídá, co klient načte | registr obcí nikdy celý do klienta; vyhledávání přes API nebo malý index (~6 250 × název+kód ≈ 150–250 kB gz, načtený až po kliknutí do hledání) |
 | Kvóta Actions (2 000 min/měs.) | sběr už jede 60–240 min | lokální zdroje číst **ve Workeru**, ne v Actions (část 9) |
 | Worker na tarifu Free | limit CPU na vyvolání je nízký (**OVĚŘIT** aktuální hodnotu); parsování CAP/XML může přetéct | rozhodnutí o tarifu Workers Paid (část 20, bod R1) |
@@ -385,7 +392,7 @@ co zdroje opravdu řeknou.
 
 ## 19. API (jedno pro web, PWA, iOS, Android)
 
-Worker `api/`, verze v cestě, čtení bez přihlášení, cache na hraně (ETag, `s-maxage` 60 s):
+Worker `api/` na **`api.czechpatrol.cz`**, verze v cestě, čtení bez přihlášení, cache na hraně (ETag, `s-maxage` 60 s):
 
 | Metoda | Cesta | Co vrací |
 |---|---|---|
@@ -411,7 +418,7 @@ stránky nic nestahuje ani nepočítá. Web: `/obec/{slug}/` je statická slupka
 | **0** | tento audit a návrh | schváleno provozovatelkou | — |
 | **R1 rozhodnutí** | tarif Workers (CPU, Queues), limit souborů Pages, zdroj RÚIAN, doména API (`api.czechpatrol.cz`?) | rozhodnuto | — |
 | 1 | registr obcí/ORP/krajů v D1 + `/geo/*.json`; testy migrací | 6 250+ obcí, 206 ORP, kontrola součtů proti ČSÚ | vypnout plnění; tabulky nevadí |
-| 2 | profil obce pro **pilot (5 obcí)** jen s ČHMÚ (CISORP) + pokrytí; `SPUSTENO.obce=false` pro veřejnost | náhled pro provozovatelku, mobil i desktop, 0 změn na úvodu | přepínač |
+| 2 | profil obce pro **pilot (Praha, Brno, Ostrava)** jen s ČHMÚ (CISORP) + pokrytí; `SPUSTENO.obce=false` pro veřejnost | náhled pro provozovatelku, mobil i desktop, 0 změn na úvodu | přepínač |
 | 3 | registr zdrojů v D1, převod dnešních 271+33 | `/zdroje` čte z registru, výstup stejný | návrat na JSON katalog |
 | 4 | adaptéry CAP (Worker) + HZS kraje pilotu, strop velikosti, SSRF pojistky | ČHMÚ ve Workeru ≤ 15 min, Actions bez změny kvóty | vypnout cron adaptéru |
 | 5 | zprávy + události (D1), relevance k obci | časová osa u události, nic se nemaže | přepínač |
@@ -428,7 +435,111 @@ Po každé fázi: testy webu i API, `kontrola-dat`, `kontrola-odkazu` nad builde
 (LCP ≤ 2,5 s), migrace na prázdné DB, sběr a rozhlas proběhnou.
 
 ### Otevřené otázky pro provozovatelku
-1. Tarif Workers Paid (CPU, Queues) — bez něj lokální adaptéry buď v Actions (pomalé, kvóta), nebo ve Free Workeru s rizikem limitu.
-2. Pilot: Palkovice, Havířov, Ostrava, Brno, Praha — souhlas? (Praha = obec i kraj; profil obce = profil kraje.)
-3. Doména API (`api.czechpatrol.cz`) — pro aplikace a CORS.
-4. Hlavní řádek bez „KLID“ (část 15) — souhlas s odchylkou?
+1. Tarif Workers Paid (CPU, Queues) — zjišťuje provozovatelka.
+2. Hlavní řádek bez „KLID“ — rozhodne se na hotovém pilotu.
+3. Druhá osoba pro schvalování nouzových zásahů (část 21.6) — dnes je jediná správkyně.
+
+---
+
+## 21. Bezpečnostní architektura (doplnění provozovatelky 29. 9. 2026)
+
+Závazné schéma: **veřejné zdroje → (nedůvěryhodný vstup) → ingestion → hranice důvěry → normalizace →
+AI karanténa ∥ Source Trust Engine → Event Engine → hranice důvěry → Safety Kernel (bez LLM) →
+publikace / upozornění**, a **oddělená bezpečnostní rovina** pro správu a nouzové vypínače.
+
+Níž je každý blok převedený na konkrétní místo v kódu, s tím, co z toho **už dnes existuje** a co chybí.
+
+### 21.1 Ingestion zone (všechno je nedůvěryhodné)
+
+| Požadavek | Dnes | Doplnit |
+|---|---|---|
+| parser | regexové čtení RSS/Atom a CAP (`sber/nacti.ts`, `vystrahy-chmi.ts`); DTD/entity se nezpracují → XXE nehrozí | pevné schéma výstupu adaptéru (část 9), neznámý tvar = `obsah`, ne „nic“ |
+| sanitizer | web vykresluje texty přes React (escapování); `dangerouslySetInnerHTML` jen pro vlastní skripty v `layout.tsx` | test: žádný `dangerouslySetInnerHTML` s daty ze zdrojů; texty zdrojů jen jako prostý text, odkazy jen `https?:` |
+| velikost a čas | časový limit 20 s; **strop velikosti chybí** (`o.text()` celé tělo); API bez stropu těla požadavku | strop odpovědi (např. 2 MB, CAP 5 MB) s čtením po částech; strop těla v API |
+| přesměrování, SSRF | adresy jsou pevné z registru | povolit přesměrování jen v rámci domény zdroje; zakázat privátní IP a `localhost`; Worker nikdy nestahuje adresu od uživatele (dnes platí, zachovat testem) |
+| „malware/content checks“ | stahuje se jen text | přijmout jen `text/*`, `application/(rss\|atom\|xml\|json)`; binárky se nestahují vůbec; záplava (stejný otisk ×N) se sloučí |
+| neměnný archiv syrových dat | ukládá se jen výřez a otisk u kandidátů | **R2** (bucket s retencí, zápis bez přepisu, klíč = otisk) — R2 má bezplatnou úroveň, nezávisí na tarifu Workers; v D1 jen otisk a klíč |
+
+### 21.2 Hranice důvěry → normalizace
+
+Normalizace je **deterministický kód** (čas, místo → kód obce z registru, zdroj, typ, provenance).
+Co se nepřevede na kód z registru, zůstane `nelze-urcit` — nic se nedomýšlí (dnešní pravidlo ČHMÚ adaptéru).
+
+### 21.3 AI karanténa — „žádné privilegium“
+
+- Model nemá nástroje, síť ani zápis. Dostane data v ohraničeném bloku, vrátí **návrh v JSON**, který se ověří schématem.
+- Smí navrhnout: shluk, druh, místa a časy z textu, krátký výtah (označený `shrnuti-cp`).
+- **Nesmí** (vynucuje Safety Kernel, ne model): vytvořit nebo upravit `pokyn`, zvýšit závažnost, publikovat, poslat upozornění,
+  změnit důvěru zdroje, přiřadit obec mimo registr.
+- Dnes: model ve sběru je vypnutý a přepínač AI už existuje (`PUT /sprava/nastaveni-ai`, čte ho sběr přes `/nastaveni-sberu`) — to je základ **AI KILL SWITCH**.
+
+### 21.4 Source Trust Engine
+
+| Rozměr | Pravidlo |
+|---|---|
+| identita | doména z registru, TLS, přesměrování jen v doméně; úřední podle adresy (`nastroje/uredni-zdroj.mjs`, dnes s testy) |
+| autorita | třída A–D (část 6); z Ruska jen sbírka předpisů, ministerstva stran konfliktu nikdy úřední (dnešní test) |
+| scope | zpráva mimo geografický rozsah zdroje (HZS MSK o Praze) se neuvěří — jde k operátorovi |
+| health | stavy z části 14 |
+| **compromise state** | zdroj náhle změní vzorec (jiná doména odkazů, text s instrukcemi pro čtenáře/AI, skok objemu, neobvyklá závažnost) → `podezrely`: jeho zprávy nejdou do upozornění ani do „Právě teď“, dokud je člověk nepotvrdí |
+
+### 21.5 Event Engine a rozpory
+
+Rozpor dvou úředních zdrojů (jeden odvolá, druhý platí; různé území) se **nesloučí potichu**: událost dostane stav
+`nejasna`, na profilu jsou vidět obě verze se zdroji. Kernel u `nejasna` nikdy nepošle kritické upozornění.
+
+### 21.6 CzechPatrol Safety Kernel — deterministický, bez LLM
+
+Jeden modul (návrh `src/lib/jadro/`, sdílený webem, Workerem i sběrem), čisté funkce, čas zvenčí. Každá publikace
+a každé upozornění projde všemi kontrolami; neprojde-li jedna, výsledek je „nepublikovat / neposlat“ a důvod do auditu.
+
+| Kontrola | Pravidlo |
+|---|---|
+| authority | kritické jen ze zdroje třídy A (B jen pro výpadek jeho vlastní infrastruktury) |
+| provenance | každý zobrazený fakt má zprávu s URL, časem a otiskem; bez ní se nezobrazí |
+| geography | obec v `udalosti_obce` jako `puvod`/`dotcena`; `v-orp` jen ORP-úrovňové jevy (počasí) |
+| freshness | zpráva i zdroj v mezích čerstvosti; jinak „nelze potvrdit“, nikdy „platí“ |
+| **instruction** | `pokyn` musí být **doslovný podřetězec** syrového textu zdroje (po normalizaci mezer) — ověřitelné strojově, AI pokyn nevyrobí |
+| notification policy | úroveň podle pravidel (část 11), tiché hodiny, idempotence, rychlostní strop na obec |
+| contradiction | stav `nejasna` nebo zdroj `podezrely` → žádné kritické |
+
+Pojistky testem (vzor `vykon.test.ts`): modul `jadro` nesmí importovat nic z `sber/model.ts`, SDK modelů ani síť;
+pro každou kontrolu testy „projde“ i „neprojde“.
+
+### 21.7 Publikace a upozornění
+
+- Veřejné API jen pro čtení (`/v1/*`), žádná data od uživatele se nepromítají do veřejných odpovědí.
+- Push gateway jako samostatný modul Workeru s vlastním vypínačem a stropem (N zpráv za minutu celkem i na zařízení).
+- APNs/FCM až s aplikacemi; stejná politika Kernelu.
+
+### 21.8 Oddělená bezpečnostní rovina (správa)
+
+| Požadavek | Dnes | Doplnit |
+|---|---|---|
+| hardwarové MFA | přihlášení **passkey** (WebAuthn, klíč v zařízení) | pro roli `admin` **zakázat obnovu jen kódem** (dnes `/auth/obnova` pustí i správce); správce ≥ 2 passkeys (záloha) |
+| RBAC | role `obcan / podporovatel / izs / admin` (`api/src/role.ts`) | role `operator` (zdroje, události) bez práv k účtům a platbám |
+| schvalování | změny záznamů přes `schvaleni.yml` s auditem | dvojí schválení pro vypnutí nouzového režimu a změnu třídy zdroje — **vyžaduje druhou osobu** (otevřená otázka) |
+| audit log | tabulka `audit` v D1 | zápis jen přidáváním; každý vypínač, oprava závažnosti a sloučení událostí |
+| tajemství | secrets přes `wrangler secret put` | `SPRAVCE_CHAT` přesunout z proměnných do secrets; `ADMIN_BOOTSTRAP_KOD` po použití odstranit |
+| známé slabiny z auditu | — | atomický rate limiter (dnes read-then-write), strop těla požadavku, obnova kódem prochází všechny účty |
+
+### 21.9 Nouzové vypínače
+
+Stav vypínačů v D1 (`stav`) + zrcadlo v repozitáři pro Actions (vzor dnešního `data/fronta/rozhlas-pozastaveno.json`).
+Ovládání z `/sprava` jedním klepnutím z telefonu, každé přepnutí do auditu a zprávou správkyni.
+**Selhání čtení vypínače = bezpečná poloha** (nečitelný stav push = neposílat).
+
+| Vypínač | Co udělá | Dnes |
+|---|---|---|
+| PUSH KILL SWITCH | žádná upozornění žádným kanálem | jen Telegram kanál (`rozhlas-pozastaveno.json`) → rozšířit na frontu v D1 a push |
+| AI KILL SWITCH | model se nevolá; pipeline běží jen na pravidlech | existuje (`nastaveni-ai`) |
+| SOURCE KILL SWITCH | jeden zdroj (nebo třída) se nečte ani nezobrazuje | nové (`zdroje.zapnuto`) |
+| INGESTION KILL SWITCH | žádný sběr; web ukazuje poslední stav s časem a „sběr pozastaven“ | nové (dnes jen vypnutím workflow) |
+| READ-ONLY MODE | API odmítá zápisy kromě správy | nové |
+| VERIFIED-ONLY MODE | publikuje se jen lidsky ověřené; cesty `automaticke` a `neovereno` stojí | nové (dnes pravidla v `spravce.mjs zverejni`) |
+
+### 21.10 Kam to patří ve fázích
+
+Bezpečnost není samostatná fáze na konci: **fáze 1** dostane strop velikosti, SSRF pojistky a vypínače
+(ingestion, source, read-only); **fáze 4** R2 archiv a Trust Engine; **fáze 5** Safety Kernel před první publikací
+lokální události; **fáze 8** push až s Kernelem, push kill switchem a stropem. Bez Kernelu se nic lokálního nepublikuje.
