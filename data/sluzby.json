@@ -1,5 +1,5 @@
 {
-  "aktualizovano": "2026-09-28T22:31:02.642Z",
+  "aktualizovano": "2026-09-29T00:03:26.365Z",
   "stavy": [
     {
       "klic": "cloudflare",
@@ -24,11 +24,11 @@
       ],
       "postizene": [
         "Cloudflare Sites and Services",
+        "Accra, Ghana - (ACC)",
         "Africa",
-        "Arica, Chile - (ARI)",
-        "Algiers, Algeria - (ALG)"
+        "Arica, Chile - (ARI)"
       ],
-      "zkontrolovano": "2026-09-28T22:31:02.642Z",
+      "zkontrolovano": "2026-09-29T00:03:26.365Z",
       "chyba": null
     },
     {
@@ -37,11 +37,6 @@
       "popis": "Partially Degraded Service",
       "incidenty": [
         {
-          "nazev": "Service Degradation Affecting Zoom Canvas",
-          "odkaz": "https://stspg.io/5qlzwcr61g78",
-          "aktualizovano": "2026-09-28T15:15:44.904-07:00"
-        },
-        {
           "nazev": "Service Degradation Affecting Customer Using Polycom Devices Going Offline",
           "odkaz": "https://stspg.io/4cpggx38p4g2",
           "aktualizovano": "2026-09-27T18:19:15.129-07:00"
@@ -49,11 +44,11 @@
       ],
       "postizene": [
         "Zoom Phone",
-        "Zoom Canvas",
         "Devices (Softphones/Deskphones)",
-        "Zoom Phone - Global"
+        "Zoom Phone - Global",
+        "Zoom Phone - EMEA"
       ],
-      "zkontrolovano": "2026-09-28T22:31:02.642Z",
+      "zkontrolovano": "2026-09-29T00:03:26.365Z",
       "chyba": null
     },
     {
@@ -62,7 +57,7 @@
       "popis": "All Systems Operational",
       "incidenty": [],
       "postizene": [],
-      "zkontrolovano": "2026-09-28T22:31:02.642Z",
+      "zkontrolovano": "2026-09-29T00:03:26.365Z",
       "chyba": null
     }
   ]

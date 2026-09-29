@@ -1,5 +1,71 @@
 [
   {
+    "id": "k-4dffc164b59c060b",
+    "zachyceno": "2026-09-29T00:03:22.883Z",
+    "publikovano": null,
+    "zdroj": {
+      "nazev": "TASR (Slovensko)",
+      "url": "https://www.tasr.sk/tasr-clanok/TASR:2026092900000003",
+      "typ": "wire",
+      "primarni": false
+    },
+    "titulek": "dnes 1:52 Rusko opäť útočí raketami na Kyjev, v metropole sa ozývajú výbuchy",
+    "titulekPuvodni": "dnes 1:52 Rusko opäť útočí raketami na Kyjev, v metropole sa ozývajú výbuchy",
+    "shrnuti": "",
+    "kodZeme": "UA",
+    "zeme": "Ukrajina",
+    "kategorie": [
+      "sabotaz",
+      "rusko"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "vybuch",
+      "rusk"
+    ],
+    "naliehave": null,
+    "stav": "ceka",
+    "vyrez": {
+      "text": "Tlačová agentúra Slovenskej republiky - TASR.sk\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nPre Weissa bude duel s Kazachstanom špeciálny: Verím našej kvalite\nSlovenku mali nútiť pracovať v podvodnom call centre na Ukrajine\nPolicajti kontrolovali železnice, zabránili aj tragédii pri tuneli\nPS vyzýva opozičných poslancov, aby sa zúčastnili na rokovaní NR SR\nV Poľsku zadržali 13-ročného chlapca, ktorý plánoval útok v škole\nJuraj Blanár bude so šéfom nemeckej diplomacie rokovať aj o migrácii\nPrezident vyhovel požiadavke premiéra na stiahnutie odvolania Tarabu\n\r\n\r\n\r\n\r \r\r\r\n\r \r \r \r \r Teraz\n\r TASR TV\n\r Webmagazín\n\r Vtedy.sk\n\r \r FOTOBANKA TASR\n\r Webreport\n\r Školské\n\r \r\r \r\n\r\n\r\n\r \r\r\n\r\n\r\n\r \r \r\n\r Úvod\nO agentúre\nProdukty a služby\nKontakty\nPodporujeme\n\r\n\r \r\n\r \r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nRusko opäť útočí raketami na Kyjev, v metropole sa ozývajú výbuchy\ndnes 1:52\nKyjev 29. septembra (TASR) - V utorok skoro ráno sa v Kyjeve ozvalo niekoľko silných výbuchov, pričom počas leteckého poplachu boli aktivované systémy protivzdušnej obrany, informovala agentúra AFP, píše TASR.\n„Na Kyjev mieria nové balistické rakety,“ varovali ukrajinské vzdušné sily na platforme Telegram. Novinári v Kyjeve informovali o kombinovanom útoku dronmi a raketami…",
+      "stazeno": "2026-09-29T00:03:25.746Z",
+      "stav": 200
+    }
+  },
+  {
+    "id": "k-7524de8d8d882c7e",
+    "zachyceno": "2026-09-29T00:03:24.696Z",
+    "publikovano": "2026-09-28T22:38:24.000Z",
+    "zdroj": {
+      "nazev": "Le Monde (Francie)",
+      "url": "https://www.lemonde.fr/international/live/2026/09/29/en-direct-guerre-en-ukraine-fortes-explosions-entendues-a-kiev-visee-par-des-missiles-balistiques-selon-l-armee-de-l-air-ukrainienne_6783795_3210.html",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "EN DIRECT, guerre en Ukraine : fortes explosions entendues à Kiev visée par des missiles balistiques, selon l’armée de l’air ukrainienne",
+    "titulekPuvodni": "EN DIRECT, guerre en Ukraine : fortes explosions entendues à Kiev visée par des missiles balistiques, selon l’armée de l’air ukrainienne",
+    "shrnuti": "D’après Volodymyr Zelensky, l’Académie nationale des sciences, une entreprise pharmaceutique et des stations-service ont déjà été touchées dans la journée, dans la capitale ukrainienne, ainsi qu’un centre d’affaires à Dnipro, faisant des victimes. L’Ukraine a aussi confirmé qu’un poste-frontière ava",
+    "kodZeme": "UA",
+    "zeme": "Ukrajina",
+    "kategorie": [
+      "sabotaz"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "explosion"
+    ],
+    "naliehave": null,
+    "stav": "ceka",
+    "vyrez": {
+      "text": "Client Challenge\nA required part of this site couldn’t load. This may be due to a browser\nextension, network issues, or browser settings. Please check your\nconnection, disable any ad blockers, or try using a different browser.",
+      "stazeno": "2026-09-29T00:03:26.311Z",
+      "stav": 200
+    }
+  },
+  {
     "id": "k-0844a460efe1ca2f",
     "zachyceno": "2026-09-28T22:30:54.670Z",
     "publikovano": null,
@@ -12067,84 +12133,6 @@
       "duvod": "mimo-rozsah",
       "patriK": null,
       "poznamka": "Ruský úder na klenotnickou firmu v Kyjevě; uvnitř Ukrajiny, bez doloženého následku pro sledované země."
-    }
-  },
-  {
-    "id": "k-3edb18635747f80b",
-    "zachyceno": "2026-09-24T09:47:04.352Z",
-    "publikovano": "2026-09-24T09:35:00.000Z",
-    "zdroj": {
-      "nazev": "Ukrinform (anglicky)",
-      "url": "https://www.ukrinform.net/rubric-ato/4167505-poland-scrambles-military-aircraft-twice-in-morning-over-russian-strikes-on-ukraine.html",
-      "typ": "wire",
-      "primarni": false
-    },
-    "titulek": "Poland scrambles military aircraft twice in morning over Russian strikes on Ukraine",
-    "titulekPuvodni": "Poland scrambles military aircraft twice in morning over Russian strikes on Ukraine",
-    "shrnuti": "Poland scrambled its military aircraft twice on Thursday morning in response to Russian strikes on Ukraine.",
-    "kodZeme": "PL",
-    "zeme": "Polsko",
-    "kategorie": [
-      "drony",
-      "rusko"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "zeSite": null,
-    "shody": [
-      "scrambl",
-      "russia"
-    ],
-    "naliehave": null,
-    "stav": "vyrizen",
-    "vyrez": {
-      "text": "Poland scrambles military aircraft twice in morning over Russian strikes on Ukraine\n\r\nSubscription\nNewsletters\nPhotobank\nUkrinform - Ukrainian National News Agency\nFounded in 1918\nThursday, 24 September 2026, 12:47\nWar\nEconomy\nSports\nMore ☰\nContacts\nEng\nУкр\nEng\nEsp\nDeu\nعربي\nFra\n日本語\nPol\n&times;\nAll topics\nWar\nRecovery of Ukraine\nPolitics\nEconomy\nFact checks\nDefense\nSociety and Culture\nSports\nCrime\nAccidents and Emergencies\nAgency\nInformation on Agency\nOur Contacts\nSubscribtion Terms\nOur Services\nPrivacy policy and personal data protection\nAdditional\nPublications\nInterviews\nPhoto\nVideo\nLongreads\nReleases\nServices\nSubscription\nNewsletters\nPhotobank\n\r\n\r\n\r\nPoland scrambled its military aircraft twice on Thursday morning in response to Russian strikes on Ukraine.\nThe Operational Command of the Polish Armed Forces reported this on X , according to Ukrinform.\n\r\n\r\n&ldquo;Due to Russian Federation strikes against Ukrainian territory involving air attack assets, military aviation is operating in Polish airspace,&rdquo; the Command said in its first statement.\n\r\n\r\nIn response, the Operational Command activated the necessary forces and assets, including placing ground-based air defense and…",
-      "stazeno": "2026-09-24T09:47:05.186Z",
-      "stav": 200
-    },
-    "vyrizeni": {
-      "kdy": "2026-09-25T19:51:38.645Z",
-      "duvod": "duplicita",
-      "patriK": null,
-      "poznamka": "Polsko dvakrát preventivně vyslalo letectvo kvůli ruským úderům na Ukrajinu; rutinní vzorec, rozhodováno už dříve jako mimo rozsah."
-    }
-  },
-  {
-    "id": "k-ab5253219f0f07d5",
-    "zachyceno": "2026-09-24T09:47:01.738Z",
-    "publikovano": "2026-09-24T09:32:00.000Z",
-    "zdroj": {
-      "nazev": "iDNES.cz — zpravodajství",
-      "url": "https://www.idnes.cz/zpravy/domaci/bavme-se-o-bezpecnostni-situaci-v-evrope-zada-rakusan-babise-at-svola-strany.A260924_111626_domaci_kop#utm_source=rss&utm_medium=feed&utm_campaign=zpravodaj&utm_content=main",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Bavme se o bezpečnostní situaci v Evropě, žádá Rakušan Babiše, ať svolá strany",
-    "titulekPuvodni": "Bavme se o bezpečnostní situaci v Evropě, žádá Rakušan Babiše, ať svolá strany",
-    "shrnuti": "Předseda opozičního hnutí STAN Vít Rakušan vyzval premiéra a předsedu ANO Andreje Babiše, aby svolal schůzku všech stran zastoupených ve Sněmovně. „„Bavme se, prosím, o bezpečnostní situaci v Evropě, která je nejhorší od začátku války na Ukrajině,“ řekl Rakušan na tiskové konferenci stínové vlády ST",
-    "kodZeme": "UA",
-    "zeme": "Ukrajina",
-    "kategorie": [
-      "diplomacie"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "zeSite": null,
-    "shody": [
-      "svolal+bezpecnost"
-    ],
-    "naliehave": null,
-    "stav": "vyrizen",
-    "vyrez": {
-      "text": "Stínová vláda STAN žádá Babiše o svolání bezpečnostní schůzky - iDNES.cz \r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\niDNES.cz\n\r\n\r\n\r\nP�ihl�sit \r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nAbyste mohli pokra�ovat, pot�ebujeme v�d�t, jakou formou v�m m��eme zobrazovat reklamu \r\n\r\n\r\n\r\n\r\n\r\nV�mi zvolen� nastaven� \r\nneobsahuje souhlas se zobrazov�n�m c�len� reklamy . \r\nVyberte pros�m znovu, \r\njakou formou v�m m�me zobrazovat obsah. \r\n\r\n\r\n\r\n\r\n\r\n\r\niDNES Premium\n\r\nBez reklam\n\r\n\r\n199 K� m�s��n�\n\r\nM��ete neomezen� ��st iDNES.cz, Lidovky.cz, Expres.cz a Antiyoutuber.cz. K tomu dostanete tak� noviny a �asopisy v elektronick� podob�. To v�e bez reklam. 1\n\r\n\r\nP�edplatit\n\r\n\r\nU� m�te ��et? P�ihlaste se\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nS c�lenou reklamou\n\r\n\r\n\r\nZdarma \r\n\r\nZachov�me v�m v�e tak, jak jste zvykl� a reklamu p�izp�sob�me va�im z�jm�m. Bez omezen� si m��ete d�l ��st, p�ehr�vat videa, sout�it �i p�isp�vat do v�ech diskus�. 2\n\r\n\r\nSouhlas�m\n\r\nPodrobn� nastaven�\n\r\n\r\n\r\n\r\n\r\n\r\niDNES a reklama\n\r\nPokud vyu�ijete m�sto platby ud�len� souhlasu s reklamou (tj. souhlas s vyu�it�m cookies a dal��ch s�ov�ch identifik�tor� pro ��ely c�len� reklamy), \r\nbudou V�m zobrazov�ny v r�mci…",
-      "stazeno": "2026-09-24T09:47:05.546Z",
-      "stav": 200
-    },
-    "vyrizeni": {
-      "kdy": "2026-09-25T19:51:38.645Z",
-      "duvod": "neudalost",
-      "patriK": null,
-      "poznamka": "Rakouský kancléř žádá Babiše o svolání stran k debatě o bezpečnosti Evropy; podle nového pravidla „řeči bez skutku nejsou událost“ — jde jen o výzvu k jednání, ne o rozhodnutí ani skutek."
     }
   }
 ]
