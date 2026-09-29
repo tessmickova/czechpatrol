@@ -13,6 +13,7 @@
  * předpověď.
  */
 import { nalepkyVTextu } from "./zasady-textu.mjs";
+import { privilegovanePokyny } from "./privilegovane-pokyny.mjs";
 
 export const NEJDELE_ZNAKU = 320;
 export const NEJKRATSI_ZNAKU = 40;
@@ -47,6 +48,9 @@ export function chybySouhrnu(s, ted = Date.now()) {
   else if (new Date(s.aktualizovano).getTime() > ted + 3_600_000) chyby.push("aktualizovano je v budoucnosti");
   if (s.napsal !== "patrol") chyby.push("napsal musí být „patrol“");
   if (!Array.isArray(s.podklady) || !s.podklady.length) chyby.push("chybí podklady (id záznamů, ze kterých věta vychází)");
+  /* Souhrn píše model — pokyn obyvatelům z něj nikdy nevyjde (29. 9. 2026). */
+  const pokyny = privilegovanePokyny(s.veta);
+  if (pokyny.length) chyby.push(`obsahuje pokyn obyvatelům (${pokyny.join(", ")}) — souhrn je shrnutí, ne pokyn`);
   return chyby;
 }
 

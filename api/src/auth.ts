@@ -204,6 +204,9 @@ export async function prihlaseniDokoncit(env: Env, req: Request): Promise<Respon
 
 /* ---------- obnova ---------- */
 
+/** Role, které se smí obnovit kódem. Správa a IZS jen passkeyem. */
+export const ROLE_S_OBNOVOU = ["obcan", "podporovatel"] as const;
+
 export async function obnova(env: Env, req: Request): Promise<Response> {
   await omez(env, req, "obnova", 5, 30);
   const { kod } = await telo<{ kod: string }>(req);
@@ -211,7 +214,14 @@ export async function obnova(env: Env, req: Request): Promise<Response> {
   if (n.length !== 16) throw new ChybaHttp(400, "Kód má 16 znaků.");
   // Otisk je solený identifikátorem účtu, takže se musí projít účty s kódem.
   // Účtů je málo a obnova vzácná; pomalost je tu na místě.
-  const { results } = await env.DB.prepare("SELECT id, obnova_hash FROM ucty WHERE obnova_hash IS NOT NULL").all<{ id: string; obnova_hash: string }>();
+  /*
+    Privilegované role (správa, IZS) se kódem obnovit nedají (29. 9. 2026,
+    bezpečnostní specifikace: silné MFA pro správu). Kód je sdílitelné
+    tajemství — kdo ho získá, nesmí se dostat do správy bez klíče v zařízení.
+    Ztracený passkey správce řeší jiný správce nebo jednorázový bootstrap.
+  */
+  const { results } = await env.DB.prepare(`SELECT id, obnova_hash FROM ucty WHERE obnova_hash IS NOT NULL AND role IN (${ROLE_S_OBNOVOU.map(() => "?").join(", ")})`)
+    .bind(...ROLE_S_OBNOVOU).all<{ id: string; obnova_hash: string }>();
   for (const u of results) {
     if (stejne(await sha256(`${u.id}|${n}`), u.obnova_hash)) {
       const token = await vytvorRelaci(env, u.id);

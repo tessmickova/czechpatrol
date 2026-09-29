@@ -8,13 +8,20 @@ import type { Env } from "./typy";
 export async function omez(env: Env, req: Request, akce: string, max: number, oknoMin = 10): Promise<void> {
   const klic = `${await otiskIp(req)}:${akce}`;
   const nyni = new Date();
-  const radek = await env.DB.prepare("SELECT pocet, okno_do FROM limity WHERE klic = ?").bind(klic).first<{ pocet: number; okno_do: string }>();
-  if (!radek || new Date(radek.okno_do) < nyni) {
-    await env.DB.prepare("INSERT OR REPLACE INTO limity (klic, pocet, okno_do) VALUES (?, 1, ?)")
-      .bind(klic, new Date(nyni.getTime() + oknoMin * 60_000).toISOString())
-      .run();
-    return;
-  }
-  if (radek.pocet >= max) throw new ChybaHttp(429, "Příliš mnoho pokusů. Zkuste to za chvíli.");
-  await env.DB.prepare("UPDATE limity SET pocet = pocet + 1 WHERE klic = ?").bind(klic).run();
+  /*
+    Jeden atomický dotaz (29. 9. 2026). Dřív to bylo „přečti, pak zapiš“:
+    souběžné požadavky přečetly stejný počet a prošly všechny, takže dávkou
+    naráz šlo limit obejít. Teď databáze počet zvýší a vrátí v jednom kroku;
+    po uplynutí okna začne znovu od jedné.
+  */
+  const iso = nyni.toISOString();
+  const noveOkno = new Date(nyni.getTime() + oknoMin * 60_000).toISOString();
+  const radek = await env.DB.prepare(
+    `INSERT INTO limity (klic, pocet, okno_do) VALUES (?1, 1, ?2)
+     ON CONFLICT(klic) DO UPDATE SET
+       pocet   = CASE WHEN limity.okno_do < ?3 THEN 1 ELSE limity.pocet + 1 END,
+       okno_do = CASE WHEN limity.okno_do < ?3 THEN ?2 ELSE limity.okno_do END
+     RETURNING pocet`,
+  ).bind(klic, noveOkno, iso).first<{ pocet: number }>();
+  if ((radek?.pocet ?? 1) > max) throw new ChybaHttp(429, "Příliš mnoho pokusů. Zkuste to za chvíli.");
 }

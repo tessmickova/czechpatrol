@@ -32,6 +32,7 @@ import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { maUredniZdroj } from "./uredni-zdroj.mjs";
+import { privilegovanePokyny, textyZaznamu } from "./privilegovane-pokyny.mjs";
 
 const koren = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const cti = (f, zaloha) => {
@@ -541,7 +542,13 @@ function dobreDolozeny(n) {
       byla jejím zrcadlem na globalsecurity.org.
     */
     maUredniZdroj(zdroje) &&
-    (n.fakta ?? []).length > 0
+    (n.fakta ?? []).length > 0 &&
+    /*
+      Privilegovaný pokyn (evakuace, nepijte vodu, nebezpečí pominulo…)
+      se nikdy nezveřejní automaticky — ani s úředním zdrojem: text napsal
+      model a úřední web mohl být napaden. Čeká na člověka (29. 9. 2026).
+    */
+    privilegovanePokyny(textyZaznamu(n)).length === 0
   );
 }
 
@@ -637,6 +644,7 @@ function zverejniNeoverene() {
   const kZverejneni = navrhy.filter((n) =>
     (n.kam ?? "zaznam") === "zaznam" && !jiz.has(n.id) && (n.fakta ?? []).length > 0 &&
     nezavisleRedakce(n.zdroje) >= 2 && !maUredniZdroj(n.zdroje ?? []) && valecneRelevantni(n) &&
+    privilegovanePokyny(textyZaznamu(n)).length === 0 &&
     (n.druh !== "aktualizace" || slugy.has(n.navazujeNa)));
   if (!kZverejneni.length) {
     console.log("Nic válečně relevantního k zveřejnění jako neověřené.");
