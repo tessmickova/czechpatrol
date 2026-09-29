@@ -2,7 +2,7 @@
 import fs from "node:fs";
 import path from "node:path";
 import { describe, expect, it } from "vitest";
-import { castDne, cestaZaznamu, jeCasPrehledu, sestavKratky, sestavPrazdnyPrehled, vyberKratky, vyberTip, jeCesky, palivoDoPrehledu, sestavPrehledDne, sluzbyDoPrehledu, vyberNavrhyDoPrehledu, zmenyStavuZaDen, klicovaVeta, legendaTecek, pocetZdroju, pruhTecek, PUVODCI, radekPokryti, jeArchivni, radekData, rozdelZpravu, sestavPalivo, sestavSouhrn, sestavPrehledZachycenych, sestavSignal, sestavTest, sestavVystrahu, sestavZdroje, sestavZmenuStavu, sestavZpravu, vyberDoPrehledu, vyberNove, vyberPalivo, vyberSignaly, vyberVystrahu, vyberZmenyStavu, zahlavi, sestavVaznyNavrh, vyberVazneNavrhy, smerZmeny, sestavMimoradnou } from "../nastroje/rozhlas.mjs";
+import { sestavVyjasneni, vyberMimoradne, castDne, cestaZaznamu, jeCasPrehledu, sestavKratky, sestavPrazdnyPrehled, vyberKratky, vyberTip, jeCesky, palivoDoPrehledu, sestavPrehledDne, sluzbyDoPrehledu, vyberNavrhyDoPrehledu, zmenyStavuZaDen, klicovaVeta, legendaTecek, pocetZdroju, pruhTecek, PUVODCI, radekPokryti, jeArchivni, radekData, rozdelZpravu, sestavPalivo, sestavSouhrn, sestavPrehledZachycenych, sestavSignal, sestavTest, sestavVystrahu, sestavZdroje, sestavZmenuStavu, sestavZpravu, vyberDoPrehledu, vyberNove, vyberPalivo, vyberSignaly, vyberVystrahu, vyberZmenyStavu, zahlavi, sestavVaznyNavrh, vyberVazneNavrhy, smerZmeny, sestavMimoradnou } from "../nastroje/rozhlas.mjs";
 import { smerZmeny as smerZmenyWeb } from "../src/lib/smer";
 import { UROVNE, zDeseti } from "../src/lib/skala";
 import { PUVODCI as PUVODCI_WEB } from "../src/lib/kategorie";
@@ -941,5 +941,28 @@ describe("vyšetřování se nepíše, když o něm záznam nemluví", () => {
     expect(sestavZpravu(zaznam({ stav: "probiha" }))).toContain("Vyšetřování pokračuje.");
     expect(sestavZpravu(zaznam({ stav: "neuvedeno" }))).not.toContain("yšetřování");
     expect(sestavZpravu(zaznam({ stav: "bez-vysetrovani" }))).not.toContain("yšetřování pokračuje");
+  });
+});
+
+/*
+  Fronta mimořádných zpráv v datech (29. 9. 2026): položka odejde jednou
+  a jen k ověřenému záznamu. Vyjasnění nese nahoře, co se stalo, a nesmí
+  opakovat zavádějící titulek jako fakt.
+*/
+describe("mimořádné zprávy z fronty", () => {
+  const i = zaznam({ id: "r", slug: "r", druh: "opatreni", puvodce: undefined, kodZeme: "RU", zeme: "Rusko", zavaznost: "Y1", titulek: "Rusko: navýšení stavu armády", fakta: ["Dekret nikoho nepovolává."] });
+  it("odejde jednou a jen k ověřenému záznamu", () => {
+    const fronta = [{ slug: "r", styl: "vyjasneni" }, { slug: "neexistuje" }];
+    expect(vyberMimoradne(fronta, [i], { mimoradne: {} }).map((x) => x.i.id)).toEqual(["r"]);
+    expect(vyberMimoradne(fronta, [i], { mimoradne: { r: { kdy: "x" } } })).toEqual([]);
+    expect(vyberMimoradne(fronta, [{ ...i, lidskyOvereno: false }], { mimoradne: {} })).toEqual([]);
+  });
+  it("vyjasnění: nadpis, fakta, co z toho plyne pro Česko, odkaz", () => {
+    const t = sestavVyjasneni(i, "Není to mobilizace");
+    expect(t).toContain("Uvedení na pravou míru");
+    expect(t).toContain("<b>Není to mobilizace</b>");
+    expect(t).toContain("• Dekret nikoho nepovolává.");
+    expect(t).toContain("https://czechpatrol.cz/incident/r/");
+    expect(t).not.toContain("MIMOŘÁDNÁ");
   });
 });

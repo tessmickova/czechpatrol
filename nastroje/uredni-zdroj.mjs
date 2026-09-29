@@ -95,6 +95,12 @@ const UREDNI_DOMENY = new Set([
   "minv.sk", "mosr.sk", "mvr.bg",
   // Rakousko
   "bundesheer.at",
+  /*
+    Rusko jen úřední sbírka předpisů (29. 9. 2026: dekret o početním stavu
+    armády). Znění zákona je fakt; ministerstva a jejich tvrzení úřední
+    oporou pro automatické zveřejnění být nesmějí — jsou stranou konfliktu.
+  */
+  "publication.pravo.gov.ru",
   // Mezinárodní
   "enisa.europa.eu", "consilium.europa.eu", "eeas.europa.eu",
   "press.un.org", "digitallibrary.un.org", "un.org", "osce.org", "iaea.org",

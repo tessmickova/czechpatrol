@@ -25,6 +25,8 @@ describe("co je úřední zdroj", () => {
       "https://www.bsi.bund.de/DE/Service-Navi/Presse/",
       // Lotyšská pohraniční stráž (28. 9. 2026: záznam o poškozené ostraze hranice).
       "https://www.rs.gov.lv/lv/projekts/pargriezti-kabeli",
+      // Ruská sbírka předpisů — znění dekretu (29. 9. 2026).
+      "http://publication.pravo.gov.ru/document/0001202609280040",
     ]) {
       expect(jeUredniZdroj(u), u).toBe(true);
     }
@@ -38,6 +40,10 @@ describe("co je úřední zdroj", () => {
       "https://www.irozhlas.cz/zpravy-svet/cokoli_2609160616_aru",
       "https://news.google.com/rss/articles/CBMiabc?oc=5",
       "https://kyivindependent.com/neco/",
+      // Ruská ministerstva ano stranou konfliktu, úředním zdrojem pro zveřejnění ne (jen sbírka předpisů).
+      "https://mil.ru/news/neco",
+      "https://function.mil.ru/news_page/country.htm",
+      "https://mid.ru/ru/foreign_policy/news/",
     ]) {
       expect(jeUredniZdroj(u), u).toBe(false);
     }
