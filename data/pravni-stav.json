@@ -27,9 +27,9 @@
           "jazyk": "cs"
         }
       ],
-      "zkontrolovano": "2026-09-29T08:01:32.917Z",
-      "pokryti": "nedostupne",
-      "pokrytiDuvod": "nepodařilo se přečíst: psp"
+      "zkontrolovano": "2026-09-29T08:56:54.250Z",
+      "pokryti": "orientacni",
+      "pokrytiDuvod": "přečteno vlada, psp, senat; žádný z nich není úplný seznam, zápor z nich neplyne"
     },
     {
       "klic": "valecny-stav",
@@ -49,9 +49,9 @@
           "jazyk": "cs"
         }
       ],
-      "zkontrolovano": "2026-09-29T08:01:32.917Z",
-      "pokryti": "nedostupne",
-      "pokrytiDuvod": "nepodařilo se přečíst: psp"
+      "zkontrolovano": "2026-09-29T08:56:54.250Z",
+      "pokryti": "orientacni",
+      "pokrytiDuvod": "přečteno psp, senat; žádný z nich není úplný seznam, zápor z nich neplyne"
     },
     {
       "klic": "mobilizace",
@@ -79,7 +79,7 @@
           "jazyk": "cs"
         }
       ],
-      "zkontrolovano": "2026-09-29T08:01:32.917Z",
+      "zkontrolovano": "2026-09-29T08:56:54.250Z",
       "pokryti": "orientacni",
       "pokrytiDuvod": "přečteno vlada, army; žádný z nich není úplný seznam, zápor z nich neplyne"
     },
@@ -101,9 +101,9 @@
           "jazyk": "cs"
         }
       ],
-      "zkontrolovano": "2026-09-29T08:01:32.917Z",
+      "zkontrolovano": "2026-09-29T08:56:54.250Z",
       "pokryti": "nedostupne",
-      "pokrytiDuvod": "nepodařilo se přečíst: psp, mvcr"
+      "pokrytiDuvod": "nepodařilo se přečíst: mvcr"
     },
     {
       "klic": "vycestovani",
@@ -123,7 +123,7 @@
           "jazyk": "cs"
         }
       ],
-      "zkontrolovano": "2026-09-29T08:01:32.917Z",
+      "zkontrolovano": "2026-09-29T08:56:54.250Z",
       "pokryti": "nedostupne",
       "pokrytiDuvod": "nepodařilo se přečíst: mvcr"
     },
@@ -153,7 +153,7 @@
           "jazyk": "cs"
         }
       ],
-      "zkontrolovano": "2026-09-29T08:01:32.917Z",
+      "zkontrolovano": "2026-09-29T08:56:54.250Z",
       "pokryti": "nedostupne",
       "pokrytiDuvod": "nepodařilo se přečíst: mvcr, policie"
     },
@@ -175,9 +175,9 @@
           "jazyk": "cs"
         }
       ],
-      "zkontrolovano": "2026-09-29T08:01:32.917Z",
-      "pokryti": "nedostupne",
-      "pokrytiDuvod": "nepodařilo se přečíst: psp"
+      "zkontrolovano": "2026-09-29T08:56:54.250Z",
+      "pokryti": "orientacni",
+      "pokrytiDuvod": "přečteno psp, senat; žádný z nich není úplný seznam, zápor z nich neplyne"
     }
   ],
   "zkontrolovano": "2026-09-15T06:31:32.570Z"
