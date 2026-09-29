@@ -7532,7 +7532,7 @@
     "id": "z-mun8vllg",
     "zadano": "2026-09-29T22:25:13.492Z",
     "zadal": "fronta",
-    "stav": "ceka",
+    "stav": "hotovo",
     "seznam": [
       {
         "druh": "navrh",
@@ -7775,6 +7775,250 @@
         "url": "https://www.lemonde.fr/international/live/2026/09/29/en-direct-guerre-en-ukraine-des-centaines-de-drones-russes-neutralises-pendant-la-nuit-des-blesses-signales-a-odessa_6783795_3210.html"
       }
     ],
-    "zadani": "Seznam k vyřízení: 40 položek. Projdi ho celý.\n\nU KAŽDÉ položky musí po tobě zůstat stopa v datech — buď zápis, nebo\nodepsání s důvodem. Položka, ke které nic nenapíšeš, se počítá jako\nnevyřízená a vrátí se ti v dalším zadání.\n\nPravidla jsou v PATROL.md na tvé větvi a nemění se. Nejčastěji to padá na:\ndva nezávislé zdroje vždycky, datum události není datum článku, původce až\npo úředním závěru, [DOPLNIT] se nenahrazuje odhadem.\n\nZÁSADY TEXTU (od 24. 9. 2026, CLAUDE.md pravidlo č. 0.5 a 0.6)\n\n- Shrnuj jen to, co zdroj říká. Žádné nové tvrzení, závěr, motiv ani číslo.\n- Nezesiluj: podezřelý zůstane podezřelý, „údajně“ a „podle …“ zůstanou.\n- Každé tvrzení s původcem; tvrzení strany konfliktu jako její tvrzení.\n- Typ prostředku není původce: dron ruského typu mohl vyslat kdokoli, dron\n  ukrajinského typu mohla přesměrovat obrana nebo rušení. Původce jen\n  z úředního závěru nebo přihlášení; do té doby „nepotvrzený“ a napiš,\n  co víme (typ, směr letu) a kdo co tvrdí.\n- Zdroje neřaď podle země ani spektra: nejblíž věci je orgán, který ji\n  vyšetřuje nebo provozuje, pak potvrzení z druhé strany.\n- Věcně a s úctou ke všem: žádné nálepky ani hanlivé přezdívky.\n- Žádná jména soukromých osob, pohyby jednotek, podrobnosti vyšetřování\n  nad rámec oznámení úřadu ani návody.\n- Média ze sankčního seznamu EU (RT, Sputnik, RIA Novosti…) nejsou zdroj.\n- Projev, výzva, varování ani komentář politika či instituce (OSN, prezident,\n  ministr) není událost. Zapisuje se jen konkrétní bezpečnostní následek,\n  změna nebo rozhodnutí (vyhlášení, zákaz, nasazení, uzavření, sankce).\n  Řeč bez skutku odepiš jako „jen projev“.\n\nROZSAH — válka v Rusku a na Ukrajině\n\nPtal ses na to dvakrát, tak ať je to napsané a neptáš se potřetí. Pravidlo\nplyne z naší vlastní metodiky, oddíl o původci: „Útok Ukrajiny na ropovod\nv Rusku, který zastaví dodávky do Maďarska, je záznam.\" Rozhoduje tedy\ndoložený následek pro země, které sledujeme — ne to, kde se to stalo.\n\n- Úder uvnitř Ruska nebo Ukrajiny BEZ doloženého následku pro sledované\n  země je mimo rozsah. Zapiš `rozhodnuti: \"mimo-rozsah\"` a důvod.\n- VÝJIMKA (rozhodnutí provozovatelky 23. 9. 2026): zapisuje se i to, co na\n  Ukrajině NENÍ běžné — výrazný postup fronty (obsazení krajského města,\n  prolomení obrany v šíři desítek km), vpád nebo útok z NOVÉHO směru\n  (z Běloruska, z Podněstří, přes Černé moře na nové pobřeží), první\n  použití nového druhu zbraně, úder na jadernou elektrárnu. Denní údery\n  dronů a raket na ukrajinská města běžné jsou a zůstávají mimo rozsah.\n\nVÁLEČNĚ RELEVANTNÍ NÁVRHY SE ZVEŘEJŇUJÍ I BEZ ÚŘADU\n\nOd 23. 9. 2026: návrh o narušení pravidel ze strany protivníka (dron,\nstřela, sabotáž, špionáž pro Rusko, incident s válečnou lodí) nebo\no doloženém zlepšení vztahů se zveřejní jako „neověřeno úředně\", jakmile\nmá dvě nezávislé redakce (dvě různé domény). Běžná trestná činnost,\nterorismus bez vazby na stát, domácí politika a soudní spory občanů\nv zahraničí sem nepatří — ty dál čekají na úřední zdroj.\n- Týž úder S doloženým následkem (zastavené dodávky, zasažená evropská\n  firma, uzavřený vzdušný prostor, zbloudilý dron přes hranici) je záznam\n  jako každý jiný.\n\nNení to hodnocení té války. Je to hranice projektu: bezpečnostní situace\nv Česku a okolí. Kdybychom sem brali průběh bojů, utopí se v něm to, kvůli\nčemu sem lidé chodí.\n\nBEZPEČNOST OBSAHU — co do záznamu nepatří, i když to zdroj napsal\n\nCzechPatrol je pro civilisty, ne pro toho, kdo chce vědět, kde zasahují\nsložky. Do fakt ani nejasností nezapisuj: souřadnice GPS (stačí kraj nebo\nokres), pohyb, trasy a rozmístění jednotek či hlídek, počty zasahujících,\ninterní kontakty, neveřejná evakuační místa, zásoby, kapacity a slabá\nmísta infrastruktury, technické detaily využitelné k útoku. Kontrola dat\nsouřadnice a přístupové údaje zastaví jako chybu; pohyb jednotek hlásí\njako varování k posouzení. Když si nejsi jistý, jestli údaj civilista\npotřebuje, vynech ho — „provoz omezen\" stačí.\n\nZLEPŠENÍ A KDO JE ZAŘÍDIL\n\nWeb nemá být jen výčet zhoršení. Když stát, obec nebo provozovatel něco\nudělá a doloženě to pomůže, má to být vidět stejně nahlas jako incident.\nProto u druhu „opatreni“ vyplň pole `vykonal`: orgán nebo instituce, která\nkrok provedla (Policie ČR, Armáda ČR, ČEZ Distribuce, obec Dobrá) — nikdy\njméno osoby. A když opatření nebo jiný krok situaci prokazatelně zlepšil\n(provoz obnoven, hranice otevřena, výstraha odvolána), zapiš to do\n`deeskalacniSignaly` se zdrojem. Web z toho dělá blok „Co situaci\nzlepšuje“. Nevymýšlej: bez zdroje o zlepšení ani slovo.\n\nDOPAD NA ČESKO u zahraniční události\n\nU návrhu s kodZeme jiným než CZ vyplň pole `dopadNaCr`: `stav` (zadny |\nmozny | potvrzeny), `procRelevantni` (proč to sledujeme), `dopad` (co\ndnes doloženě platí pro lidi v Česku — u „zadny\" věta, že nic), `sledujeme`\n(co by to změnilo) a `overeno` (datum). Stav „mozny\" nebo „potvrzeny\" musí\nmít oporu ve zdrojích záznamu; jinak je to „zadny\". Zahraniční zpráva se\nnezveřejňuje proto, že je dramatická, ale proto, že na tyhle otázky\nodpovídá.\n\nA) 7 NÁVRHŮ BEZ ÚŘEDNÍHO ZDROJE — dohledej ho\n\nTyhle jsou zpracované a na webu už jsou vidět jako nepotvrzené. Chybí jim\ndruhý doklad z první ruky: úřad, policie, armáda, národní CERT nebo\nprovozovatel zasažené infrastruktury. S ním se záznam zveřejní sám.\n\nSběr od 20. 9. 2026 čte 35 úředních kanálů — vlády, ministerstva vnitra\na obrany, bezpečnostní služby, CERTy a policie sledovaných zemí, k tomu\nNATO, ENISA, Evropskou komisi a provozovatele sítí (ČEPS, Správa železnic,\nProRail). Seznam je v sber/zdroje-udalosti.ts v poli URADY. Hledej nejdřív\ntam; u nizozemské železnice je správný zdroj ProRail, ne médium.\n\nKdyž je u návrhu titulek cizojazyčný, přelož ho česky. Model, který to\ndělal při sběru, je od 20. 9. 2026 vypnutý.\n\nPOZOR na to, na čem se to už jednou zlomilo: úřední zdroj je odkaz NA ÚŘAD.\nZrcadlo tiskové zprávy (globalsecurity.org), distribuce (mynewsdesk.com)\nani veřejnoprávní vysílatel (irozhlas.cz) úřední zdroj nejsou. Kvůli tomu\nse 20. 9. musely stáhnout z webu dva záznamy, které se zveřejnily samy.\n\n 1. i-2026-09-16-114787e14f · 2026-09-16 · Rusko · Rusko: FSB zavedla dočasná omezení pohybu v okresech Kingisepp a Slantsy u hranice s Estonskem; estonští představitelé nevylučují souvislost s mobilizací [vráceno už 18×]\n    https://kyivindependent.com/russia-imposes-restrictions-near-estonian-border-amid-mobilization-concerns/\n 2. i-2026-09-25-f6c68bbeaa · 2026-09-25 · Litva · Litva: kyberútok na archivní informační systém ministerstva vnitra (EPEKIS), únik dat nepotvrzen [vráceno už 14×]\n    https://www.ukrinform.net/rubric-polytics/4168103-lithuanias-interior-ministry-reports-cyberattack-on-its-information-system.html\n 3. i-2026-09-25-4fd791e56c · 2026-09-25 · Rusko · Putin na fóru v Petrohradě popřel přípravu vojenské akce proti Evropě a tvrdí, že jsou porušována práva rusky mluvících v Pobaltí [vráceno už 13×]\n    https://meduza.io/en/feature/2026/09/26/putin-says-russia-will-not-attack-europe-and-blames-ukraine-for-the-breakdown-in-peace-talks\n 4. i-2026-09-26-a90ccfc515 · 2026-09-26 · Rusko · Lavrov v OSN obvinil Evropu, že brání mírovým jednáním o Ukrajině, a tvrdí, že Rusko svých vojenských cílů dosáhne bez ohledu na okolnosti [vráceno už 10×]\n    https://www.irozhlas.cz/zpravy-svet/online-evropa-mari-plany-na-mir-na-ukrajine-rusko-svych-cilu-dosahne-rekl-lavrov_2609262001_mst\n 5. i-2026-09-27-32c154f4ac · 2026-09-27 · Rusko · Lavrov na tiskové konferenci v OSN varoval, že evropské řeči o válce s Ruskem by se mohly stát „sebenaplňujícím se proroctvím“ [vráceno už 9×]\n    https://www.pravda.com.ua/eng/news/2026/09/27/8055200/\n 6. i-2026-09-28-88f15d5c65 · 2026-09-28 · Rumunsko · Rumunsko: nominovaný ministr obrany uvedl v parlamentu 49 neoprávněných vniknutí do vzdušného prostoru a 148 útoků u hranice od začátku války, většinu z roku 2026 [vráceno už 3×]\n    https://agerpres.ro/english/2026/09/28/parliament---ministerial-hearings-miruta-49-unauthorized-incursions-into-romanian-airspace-since-sta--1597779\n 7. i-2026-09-29-b84ab24086 · 2026-09-29 · Německo · Nord Stream: podezřelý Volodymyr Žuravlov požádal o politický azyl v Chorvatsku, aby zabránil vydání do Německa\n    https://kyivindependent.com/ukrainian-suspect-in-nord-stream-sabotage-requests-asylum-in-croatia/\n\nB) 33 NEPOSOUZENÝCH ZACHYCENÝCH ZPRÁV\n\nRozhodni, co je nová událost a co ne. U toho, co ne, napiš proč —\ntichý zápor vypadá zvenčí stejně jako porucha.\n\nTITULEK PIŠ ČESKY. Tohle je nové: do 20. 9. 2026 překládal cizojazyčné\ntitulky model při sběru, jenže placené volání je vypnuté. Od té doby jdou\nna web anglicky, což je na české stránce vidět na první pohled. Překlad je\nteď na tobě — věcně, co se stalo a kde, bez ozdob.\n\nDATUM UDÁLOSTI URČI Z TEXTU. Zachycená zpráva nese datum vydání zdroje,\na když ho zdroj neuvádí, datum, kdy si toho sběr všiml — takže dnešní.\nNa webu pak vypadají všechny zprávy jako dnešní, přestože se staly dřív.\nDo datumUdalosti patří den, kdy se to stalo. Když se z textu určit nedá,\nnech ho prázdný a napiš to do neznameho; nehádej podle data článku.\n\n 1. k-3cd0ccc624ee56ef · 2026-09-29 · Rusko · 3 children injured as Russia strikes Sumy school with glide bombs.\n    https://kyivindependent.com/3-children-injured-as-russia-strikes-sumy-school-with-glide-bombs/\n 2. k-222544af08117a66 · 2026-09-29 · Francie · Vývoj bojů (1678. den): Vědci utíkali okny z hořící budovy, Rusové útočí na Kyjev v podstatě nepřetržitě\n    https://denikn.cz/2198666/vyvoj-boju-1678-den-vedci-utikali-okny-z-horici-budovy-rusove-utoci-na-kyjev-v-podstate-nepretrzite/\n 3. k-ce81ba2de1ae350d · 2026-09-29 · Ukrajina · ‘Yes, I regret going’: Russian IT specialist returned to Russia to visit his ailing father and was charged with treason over €30 sent to his ex-girlfriend in Ukraine.\n    https://meduza.io/en/feature/2026/09/29/yes-i-regret-going-russian-it-specialist-returned-to-russia-to-visit-his-ailing-father-and-was-charged-with-treason-over-30-sent-to-his-ex-girlfriend-in-ukraine\n 4. k-aab7461b0aa8c414 · 2026-09-29 · Spojené království · No explosives found in three vans searched near RAF Fairford, say police\n    https://www.theguardian.com/uk-news/2026/sep/29/raf-fairford-police-uk-counter-terrorism\n 5. k-0220e5b4d88b4c7e · 2026-09-29 · Rusko · Ruské letectvo shodilo čtvrttunovou bombu přímo na školu\n    https://www.novinky.cz/clanek/valka-na-ukrajine-ruske-letectvo-shodilo-ctvrttunovou-bombu-primo-na-skolu-40600023\n 6. k-76e918de0a3e2672 · 2026-09-29 · Rusko · Russian Tu-95 strategic bomber crashes in country’s Far East, killing six\n    https://meduza.io/en/news/2026/09/29/russian-tu-95-strategic-bomber-crashes-in-country-s-far-east-killing-six\n 7. k-01a041577eb73925 · 2026-09-29 · Německo · Kazakh president again calls on Putin to freeze war in Ukraine after talks in Germany\n    https://www.pravda.com.ua/eng/news/2026/09/29/8055675/\n 8. k-a25fd3a44fa92e41 · 2026-09-29 · Česko · Babiš: V případě napadení Pobaltí tam vyšleme dvě brigády\n    https://www.novinky.cz/clanek/domaci-babis-v-pripade-napadeni-pobalti-tam-vysleme-dve-brigady-40600017\n 9. k-1a993a50f2f1da2f · 2026-09-29 · Estonsko · Estonia accuses Russian intelligence services of ordering arson at defense-robotics company supplying Ukraine\n    https://meduza.io/en/news/2026/09/29/estonia-accuses-russian-intelligence-services-of-ordering-arson-at-defense-robotics-company-supplying-ukraine\n10. k-e9261f54f8854833 · 2026-09-29 · Rusko · Evan Gershkovich, WSJ reporter jailed by Putin: ‘They didn’t break me as a human being’\n    https://english.elpais.com/usa/2026-09-29/evan-gershkovich-wsj-reporter-jailed-by-putin-they-didnt-break-me-as-a-human-being.html\n11. k-87358de154f8fb2d · 2026-09-29 · Rusko · ONLINE: Ruská armáda svrhla bombu na školu v Sumách. V budově byli žáci první až čtvrté třídy\n    https://www.irozhlas.cz/zpravy-svet/online-ruska-armada-svrhla-bombu-na-skolu-v-sumach-v-budove-byly-zaci-prvni-az_2609291808_vsn\n12. k-49e8d617dfdbb3c8 · 2026-09-29 · Rusko · Russian glide-bomb strikes on central Sumy leaves two killed, children among "
+    "zadani": "Seznam k vyřízení: 40 položek. Projdi ho celý.\n\nU KAŽDÉ položky musí po tobě zůstat stopa v datech — buď zápis, nebo\nodepsání s důvodem. Položka, ke které nic nenapíšeš, se počítá jako\nnevyřízená a vrátí se ti v dalším zadání.\n\nPravidla jsou v PATROL.md na tvé větvi a nemění se. Nejčastěji to padá na:\ndva nezávislé zdroje vždycky, datum události není datum článku, původce až\npo úředním závěru, [DOPLNIT] se nenahrazuje odhadem.\n\nZÁSADY TEXTU (od 24. 9. 2026, CLAUDE.md pravidlo č. 0.5 a 0.6)\n\n- Shrnuj jen to, co zdroj říká. Žádné nové tvrzení, závěr, motiv ani číslo.\n- Nezesiluj: podezřelý zůstane podezřelý, „údajně“ a „podle …“ zůstanou.\n- Každé tvrzení s původcem; tvrzení strany konfliktu jako její tvrzení.\n- Typ prostředku není původce: dron ruského typu mohl vyslat kdokoli, dron\n  ukrajinského typu mohla přesměrovat obrana nebo rušení. Původce jen\n  z úředního závěru nebo přihlášení; do té doby „nepotvrzený“ a napiš,\n  co víme (typ, směr letu) a kdo co tvrdí.\n- Zdroje neřaď podle země ani spektra: nejblíž věci je orgán, který ji\n  vyšetřuje nebo provozuje, pak potvrzení z druhé strany.\n- Věcně a s úctou ke všem: žádné nálepky ani hanlivé přezdívky.\n- Žádná jména soukromých osob, pohyby jednotek, podrobnosti vyšetřování\n  nad rámec oznámení úřadu ani návody.\n- Média ze sankčního seznamu EU (RT, Sputnik, RIA Novosti…) nejsou zdroj.\n- Projev, výzva, varování ani komentář politika či instituce (OSN, prezident,\n  ministr) není událost. Zapisuje se jen konkrétní bezpečnostní následek,\n  změna nebo rozhodnutí (vyhlášení, zákaz, nasazení, uzavření, sankce).\n  Řeč bez skutku odepiš jako „jen projev“.\n\nROZSAH — válka v Rusku a na Ukrajině\n\nPtal ses na to dvakrát, tak ať je to napsané a neptáš se potřetí. Pravidlo\nplyne z naší vlastní metodiky, oddíl o původci: „Útok Ukrajiny na ropovod\nv Rusku, který zastaví dodávky do Maďarska, je záznam.\" Rozhoduje tedy\ndoložený následek pro země, které sledujeme — ne to, kde se to stalo.\n\n- Úder uvnitř Ruska nebo Ukrajiny BEZ doloženého následku pro sledované\n  země je mimo rozsah. Zapiš `rozhodnuti: \"mimo-rozsah\"` a důvod.\n- VÝJIMKA (rozhodnutí provozovatelky 23. 9. 2026): zapisuje se i to, co na\n  Ukrajině NENÍ běžné — výrazný postup fronty (obsazení krajského města,\n  prolomení obrany v šíři desítek km), vpád nebo útok z NOVÉHO směru\n  (z Běloruska, z Podněstří, přes Černé moře na nové pobřeží), první\n  použití nového druhu zbraně, úder na jadernou elektrárnu. Denní údery\n  dronů a raket na ukrajinská města běžné jsou a zůstávají mimo rozsah.\n\nVÁLEČNĚ RELEVANTNÍ NÁVRHY SE ZVEŘEJŇUJÍ I BEZ ÚŘADU\n\nOd 23. 9. 2026: návrh o narušení pravidel ze strany protivníka (dron,\nstřela, sabotáž, špionáž pro Rusko, incident s válečnou lodí) nebo\no doloženém zlepšení vztahů se zveřejní jako „neověřeno úředně\", jakmile\nmá dvě nezávislé redakce (dvě různé domény). Běžná trestná činnost,\nterorismus bez vazby na stát, domácí politika a soudní spory občanů\nv zahraničí sem nepatří — ty dál čekají na úřední zdroj.\n- Týž úder S doloženým následkem (zastavené dodávky, zasažená evropská\n  firma, uzavřený vzdušný prostor, zbloudilý dron přes hranici) je záznam\n  jako každý jiný.\n\nNení to hodnocení té války. Je to hranice projektu: bezpečnostní situace\nv Česku a okolí. Kdybychom sem brali průběh bojů, utopí se v něm to, kvůli\nčemu sem lidé chodí.\n\nBEZPEČNOST OBSAHU — co do záznamu nepatří, i když to zdroj napsal\n\nCzechPatrol je pro civilisty, ne pro toho, kdo chce vědět, kde zasahují\nsložky. Do fakt ani nejasností nezapisuj: souřadnice GPS (stačí kraj nebo\nokres), pohyb, trasy a rozmístění jednotek či hlídek, počty zasahujících,\ninterní kontakty, neveřejná evakuační místa, zásoby, kapacity a slabá\nmísta infrastruktury, technické detaily využitelné k útoku. Kontrola dat\nsouřadnice a přístupové údaje zastaví jako chybu; pohyb jednotek hlásí\njako varování k posouzení. Když si nejsi jistý, jestli údaj civilista\npotřebuje, vynech ho — „provoz omezen\" stačí.\n\nZLEPŠENÍ A KDO JE ZAŘÍDIL\n\nWeb nemá být jen výčet zhoršení. Když stát, obec nebo provozovatel něco\nudělá a doloženě to pomůže, má to být vidět stejně nahlas jako incident.\nProto u druhu „opatreni“ vyplň pole `vykonal`: orgán nebo instituce, která\nkrok provedla (Policie ČR, Armáda ČR, ČEZ Distribuce, obec Dobrá) — nikdy\njméno osoby. A když opatření nebo jiný krok situaci prokazatelně zlepšil\n(provoz obnoven, hranice otevřena, výstraha odvolána), zapiš to do\n`deeskalacniSignaly` se zdrojem. Web z toho dělá blok „Co situaci\nzlepšuje“. Nevymýšlej: bez zdroje o zlepšení ani slovo.\n\nDOPAD NA ČESKO u zahraniční události\n\nU návrhu s kodZeme jiným než CZ vyplň pole `dopadNaCr`: `stav` (zadny |\nmozny | potvrzeny), `procRelevantni` (proč to sledujeme), `dopad` (co\ndnes doloženě platí pro lidi v Česku — u „zadny\" věta, že nic), `sledujeme`\n(co by to změnilo) a `overeno` (datum). Stav „mozny\" nebo „potvrzeny\" musí\nmít oporu ve zdrojích záznamu; jinak je to „zadny\". Zahraniční zpráva se\nnezveřejňuje proto, že je dramatická, ale proto, že na tyhle otázky\nodpovídá.\n\nA) 7 NÁVRHŮ BEZ ÚŘEDNÍHO ZDROJE — dohledej ho\n\nTyhle jsou zpracované a na webu už jsou vidět jako nepotvrzené. Chybí jim\ndruhý doklad z první ruky: úřad, policie, armáda, národní CERT nebo\nprovozovatel zasažené infrastruktury. S ním se záznam zveřejní sám.\n\nSběr od 20. 9. 2026 čte 35 úředních kanálů — vlády, ministerstva vnitra\na obrany, bezpečnostní služby, CERTy a policie sledovaných zemí, k tomu\nNATO, ENISA, Evropskou komisi a provozovatele sítí (ČEPS, Správa železnic,\nProRail). Seznam je v sber/zdroje-udalosti.ts v poli URADY. Hledej nejdřív\ntam; u nizozemské železnice je správný zdroj ProRail, ne médium.\n\nKdyž je u návrhu titulek cizojazyčný, přelož ho česky. Model, který to\ndělal při sběru, je od 20. 9. 2026 vypnutý.\n\nPOZOR na to, na čem se to už jednou zlomilo: úřední zdroj je odkaz NA ÚŘAD.\nZrcadlo tiskové zprávy (globalsecurity.org), distribuce (mynewsdesk.com)\nani veřejnoprávní vysílatel (irozhlas.cz) úřední zdroj nejsou. Kvůli tomu\nse 20. 9. musely stáhnout z webu dva záznamy, které se zveřejnily samy.\n\n 1. i-2026-09-16-114787e14f · 2026-09-16 · Rusko · Rusko: FSB zavedla dočasná omezení pohybu v okresech Kingisepp a Slantsy u hranice s Estonskem; estonští představitelé nevylučují souvislost s mobilizací [vráceno už 18×]\n    https://kyivindependent.com/russia-imposes-restrictions-near-estonian-border-amid-mobilization-concerns/\n 2. i-2026-09-25-f6c68bbeaa · 2026-09-25 · Litva · Litva: kyberútok na archivní informační systém ministerstva vnitra (EPEKIS), únik dat nepotvrzen [vráceno už 14×]\n    https://www.ukrinform.net/rubric-polytics/4168103-lithuanias-interior-ministry-reports-cyberattack-on-its-information-system.html\n 3. i-2026-09-25-4fd791e56c · 2026-09-25 · Rusko · Putin na fóru v Petrohradě popřel přípravu vojenské akce proti Evropě a tvrdí, že jsou porušována práva rusky mluvících v Pobaltí [vráceno už 13×]\n    https://meduza.io/en/feature/2026/09/26/putin-says-russia-will-not-attack-europe-and-blames-ukraine-for-the-breakdown-in-peace-talks\n 4. i-2026-09-26-a90ccfc515 · 2026-09-26 · Rusko · Lavrov v OSN obvinil Evropu, že brání mírovým jednáním o Ukrajině, a tvrdí, že Rusko svých vojenských cílů dosáhne bez ohledu na okolnosti [vráceno už 10×]\n    https://www.irozhlas.cz/zpravy-svet/online-evropa-mari-plany-na-mir-na-ukrajine-rusko-svych-cilu-dosahne-rekl-lavrov_2609262001_mst\n 5. i-2026-09-27-32c154f4ac · 2026-09-27 · Rusko · Lavrov na tiskové konferenci v OSN varoval, že evropské řeči o válce s Ruskem by se mohly stát „sebenaplňujícím se proroctvím“ [vráceno už 9×]\n    https://www.pravda.com.ua/eng/news/2026/09/27/8055200/\n 6. i-2026-09-28-88f15d5c65 · 2026-09-28 · Rumunsko · Rumunsko: nominovaný ministr obrany uvedl v parlamentu 49 neoprávněných vniknutí do vzdušného prostoru a 148 útoků u hranice od začátku války, většinu z roku 2026 [vráceno už 3×]\n    https://agerpres.ro/english/2026/09/28/parliament---ministerial-hearings-miruta-49-unauthorized-incursions-into-romanian-airspace-since-sta--1597779\n 7. i-2026-09-29-b84ab24086 · 2026-09-29 · Německo · Nord Stream: podezřelý Volodymyr Žuravlov požádal o politický azyl v Chorvatsku, aby zabránil vydání do Německa\n    https://kyivindependent.com/ukrainian-suspect-in-nord-stream-sabotage-requests-asylum-in-croatia/\n\nB) 33 NEPOSOUZENÝCH ZACHYCENÝCH ZPRÁV\n\nRozhodni, co je nová událost a co ne. U toho, co ne, napiš proč —\ntichý zápor vypadá zvenčí stejně jako porucha.\n\nTITULEK PIŠ ČESKY. Tohle je nové: do 20. 9. 2026 překládal cizojazyčné\ntitulky model při sběru, jenže placené volání je vypnuté. Od té doby jdou\nna web anglicky, což je na české stránce vidět na první pohled. Překlad je\nteď na tobě — věcně, co se stalo a kde, bez ozdob.\n\nDATUM UDÁLOSTI URČI Z TEXTU. Zachycená zpráva nese datum vydání zdroje,\na když ho zdroj neuvádí, datum, kdy si toho sběr všiml — takže dnešní.\nNa webu pak vypadají všechny zprávy jako dnešní, přestože se staly dřív.\nDo datumUdalosti patří den, kdy se to stalo. Když se z textu určit nedá,\nnech ho prázdný a napiš to do neznameho; nehádej podle data článku.\n\n 1. k-3cd0ccc624ee56ef · 2026-09-29 · Rusko · 3 children injured as Russia strikes Sumy school with glide bombs.\n    https://kyivindependent.com/3-children-injured-as-russia-strikes-sumy-school-with-glide-bombs/\n 2. k-222544af08117a66 · 2026-09-29 · Francie · Vývoj bojů (1678. den): Vědci utíkali okny z hořící budovy, Rusové útočí na Kyjev v podstatě nepřetržitě\n    https://denikn.cz/2198666/vyvoj-boju-1678-den-vedci-utikali-okny-z-horici-budovy-rusove-utoci-na-kyjev-v-podstate-nepretrzite/\n 3. k-ce81ba2de1ae350d · 2026-09-29 · Ukrajina · ‘Yes, I regret going’: Russian IT specialist returned to Russia to visit his ailing father and was charged with treason over €30 sent to his ex-girlfriend in Ukraine.\n    https://meduza.io/en/feature/2026/09/29/yes-i-regret-going-russian-it-specialist-returned-to-russia-to-visit-his-ailing-father-and-was-charged-with-treason-over-30-sent-to-his-ex-girlfriend-in-ukraine\n 4. k-aab7461b0aa8c414 · 2026-09-29 · Spojené království · No explosives found in three vans searched near RAF Fairford, say police\n    https://www.theguardian.com/uk-news/2026/sep/29/raf-fairford-police-uk-counter-terrorism\n 5. k-0220e5b4d88b4c7e · 2026-09-29 · Rusko · Ruské letectvo shodilo čtvrttunovou bombu přímo na školu\n    https://www.novinky.cz/clanek/valka-na-ukrajine-ruske-letectvo-shodilo-ctvrttunovou-bombu-primo-na-skolu-40600023\n 6. k-76e918de0a3e2672 · 2026-09-29 · Rusko · Russian Tu-95 strategic bomber crashes in country’s Far East, killing six\n    https://meduza.io/en/news/2026/09/29/russian-tu-95-strategic-bomber-crashes-in-country-s-far-east-killing-six\n 7. k-01a041577eb73925 · 2026-09-29 · Německo · Kazakh president again calls on Putin to freeze war in Ukraine after talks in Germany\n    https://www.pravda.com.ua/eng/news/2026/09/29/8055675/\n 8. k-a25fd3a44fa92e41 · 2026-09-29 · Česko · Babiš: V případě napadení Pobaltí tam vyšleme dvě brigády\n    https://www.novinky.cz/clanek/domaci-babis-v-pripade-napadeni-pobalti-tam-vysleme-dve-brigady-40600017\n 9. k-1a993a50f2f1da2f · 2026-09-29 · Estonsko · Estonia accuses Russian intelligence services of ordering arson at defense-robotics company supplying Ukraine\n    https://meduza.io/en/news/2026/09/29/estonia-accuses-russian-intelligence-services-of-ordering-arson-at-defense-robotics-company-supplying-ukraine\n10. k-e9261f54f8854833 · 2026-09-29 · Rusko · Evan Gershkovich, WSJ reporter jailed by Putin: ‘They didn’t break me as a human being’\n    https://english.elpais.com/usa/2026-09-29/evan-gershkovich-wsj-reporter-jailed-by-putin-they-didnt-break-me-as-a-human-being.html\n11. k-87358de154f8fb2d · 2026-09-29 · Rusko · ONLINE: Ruská armáda svrhla bombu na školu v Sumách. V budově byli žáci první až čtvrté třídy\n    https://www.irozhlas.cz/zpravy-svet/online-ruska-armada-svrhla-bombu-na-skolu-v-sumach-v-budove-byly-zaci-prvni-az_2609291808_vsn\n12. k-49e8d617dfdbb3c8 · 2026-09-29 · Rusko · Russian glide-bomb strikes on central Sumy leaves two killed, children among ",
+    "rozhodnuti": [
+      {
+        "id": "i-2026-09-16-114787e14f",
+        "druh": "navrh",
+        "rozhodnuti": "ponechano-bez-uredniho-zdroje",
+        "duvod": "Beze změny. Rozhodnuto už dříve; vrací se opakovaně."
+      },
+      {
+        "id": "i-2026-09-25-f6c68bbeaa",
+        "druh": "navrh",
+        "rozhodnuti": "ponechano-bez-uredniho-zdroje",
+        "duvod": "Litevské ministerstvo vnitra (vrm.lt) nemá otevřenou vlastní zprávu. Rozhodnuto už dříve; vrací se opakovaně."
+      },
+      {
+        "id": "i-2026-09-25-4fd791e56c",
+        "druh": "navrh",
+        "rozhodnuti": "ponechano-bez-uredniho-zdroje",
+        "duvod": "Beze změny; kremlin.ru/en nemá otevřenou vlastní zprávu s tímto textem. Rozhodnuto už dříve; vrací se opakovaně."
+      },
+      {
+        "id": "i-2026-09-26-a90ccfc515",
+        "druh": "navrh",
+        "rozhodnuti": "ponechano-bez-uredniho-zdroje",
+        "duvod": "Beze změny; mid.ru nemá otevřenou vlastní zprávu s tímto textem. Rozhodnuto už dříve; vrací se opakovaně."
+      },
+      {
+        "id": "i-2026-09-27-32c154f4ac",
+        "druh": "navrh",
+        "rozhodnuti": "ponechano-bez-uredniho-zdroje",
+        "duvod": "Beze změny; mid.ru nemá otevřenou vlastní zprávu s tímto textem. Rozhodnuto už dříve; vrací se opakovaně."
+      },
+      {
+        "id": "i-2026-09-28-88f15d5c65",
+        "druh": "navrh",
+        "rozhodnuti": "ponechano-bez-uredniho-zdroje",
+        "duvod": "Rumunské ministerstvo obrany (mapn.ro) nemá otevřenou vlastní zprávu s touto statistikou. Rozhodnuto už dříve; vrací se opakovaně."
+      },
+      {
+        "id": "i-2026-09-29-b84ab24086",
+        "druh": "navrh",
+        "rozhodnuti": "jiz-zverejneno",
+        "duvod": "Mezitím zveřejněno jako neověřený záznam (de-b84ab24086) automatickým během."
+      },
+      {
+        "id": "k-3cd0ccc624ee56ef",
+        "druh": "kandidat",
+        "rozhodnuti": "mimo-rozsah",
+        "duvod": "Ruský úder řízenou bombou na školu v Sumech; uvnitř Ukrajiny, bez doloženého následku pro sledované země, jde o běžný denní typ útoku (výjimka pro nový směr/postup fronty se netýká)."
+      },
+      {
+        "id": "k-222544af08117a66",
+        "druh": "kandidat",
+        "rozhodnuti": "mimo-rozsah",
+        "duvod": "Denní vývoj bojů na Ukrajině bez doloženého následku pro sledované země; běžný typ zprávy, mimo rozsah projektu."
+      },
+      {
+        "id": "k-ce81ba2de1ae350d",
+        "druh": "kandidat",
+        "rozhodnuti": "mimo-rozsah",
+        "duvod": "Ruský IT specialista obviněný z vlastizrady za poslání 30 eur bývalé přítelkyni na Ukrajině; vnitroruská trestní věc bez následku pro sledované země."
+      },
+      {
+        "id": "k-aab7461b0aa8c414",
+        "druh": "kandidat",
+        "rozhodnuti": "duplicita",
+        "duvod": "Táž událost jako už zveřejněná aktualizace RAF Fairford — propuštění na kauci, výbušniny oficiálně nepotvrzeny (i-2026-09-28-cbc3ae593b, na webu jako neovereno)."
+      },
+      {
+        "id": "k-0220e5b4d88b4c7e",
+        "druh": "kandidat",
+        "rozhodnuti": "mimo-rozsah",
+        "duvod": "Ruský úder řízenou bombou na školu v Sumech; uvnitř Ukrajiny, bez doloženého následku pro sledované země, jde o běžný denní typ útoku (výjimka pro nový směr/postup fronty se netýká)."
+      },
+      {
+        "id": "k-76e918de0a3e2672",
+        "druh": "kandidat",
+        "rozhodnuti": "mimo-rozsah",
+        "duvod": "Havárie ruského strategického bombardéru Tu-95 na Dálném východě, šest členů posádky zemřelo; nehoda na ruském území bez vazby na sabotáž nebo sledované země."
+      },
+      {
+        "id": "k-01a041577eb73925",
+        "druh": "kandidat",
+        "rozhodnuti": "neudalost",
+        "duvod": "Kazašský prezident vyzval Putina k zastavení války při jednání v Německu; jde o výzvu/řeč bez konkrétního bezpečnostního opatření."
+      },
+      {
+        "id": "k-a25fd3a44fa92e41",
+        "druh": "kandidat",
+        "rozhodnuti": "neudalost",
+        "duvod": "Babiš uvedl, že by ČR v případě napadení Pobaltí vyslala dvě brigády; jde o výrok o hypotetickém budoucím scénáři, ne o skutečné rozhodnutí ani nasazení (pravidlo č. 1 a č. 3c)."
+      },
+      {
+        "id": "k-1a993a50f2f1da2f",
+        "druh": "kandidat",
+        "rozhodnuti": "duplicita",
+        "duvod": "Táž událost jako už zveřejněný záznam o oficiální atribuci útoku na Milrem Rusku (i-2026-09-29-0ec3ee9612, na webu jako plně ověřeno)."
+      },
+      {
+        "id": "k-e9261f54f8854833",
+        "druh": "kandidat",
+        "rozhodnuti": "mimo-rozsah",
+        "duvod": "Retrospektivní rozhovor s novinářem Evanem Gershkovichem o jeho věznění v Rusku; starý případ, ne nová událost."
+      },
+      {
+        "id": "k-87358de154f8fb2d",
+        "druh": "kandidat",
+        "rozhodnuti": "mimo-rozsah",
+        "duvod": "Ruský úder řízenou bombou na školu v Sumech; uvnitř Ukrajiny, bez doloženého následku pro sledované země, jde o běžný denní typ útoku (výjimka pro nový směr/postup fronty se netýká)."
+      },
+      {
+        "id": "k-49e8d617dfdbb3c8",
+        "druh": "kandidat",
+        "rozhodnuti": "mimo-rozsah",
+        "duvod": "Ruský úder řízenou bombou na školu v Sumech; uvnitř Ukrajiny, bez doloženého následku pro sledované země, jde o běžný denní typ útoku (výjimka pro nový směr/postup fronty se netýká)."
+      },
+      {
+        "id": "k-0991949244a2dd6f",
+        "druh": "kandidat",
+        "rozhodnuti": "mimo-rozsah",
+        "duvod": "Denní vývoj bojů na Ukrajině bez doloženého následku pro sledované země; běžný typ zprávy, mimo rozsah projektu."
+      },
+      {
+        "id": "k-3adc703d8d4b7d56",
+        "druh": "kandidat",
+        "rozhodnuti": "duplicita",
+        "duvod": "Táž událost jako už zveřejněný záznam o oficiální atribuci útoku na Milrem Rusku (i-2026-09-29-0ec3ee9612, na webu jako plně ověřeno)."
+      },
+      {
+        "id": "k-3d17e36bea217419",
+        "druh": "kandidat",
+        "rozhodnuti": "neudalost",
+        "duvod": "Generální tajemník NATO Rutte komentuje vývoj hrozby po dronových incidentech v EU a připomíná starší sestřel nad Litvou; jde o vyjádření/analýzu, ne o nový skutek."
+      },
+      {
+        "id": "k-8c5f2051599e2eb8",
+        "druh": "kandidat",
+        "rozhodnuti": "neudalost",
+        "duvod": "Rozhovor s generálním tajemníkem NATO o německém zbrojení a povaze budoucí války; analytický/spekulativní text, ne zpráva o konkrétním opatření."
+      },
+      {
+        "id": "k-34788b49f61cde10",
+        "druh": "kandidat",
+        "rozhodnuti": "duplicita",
+        "duvod": "Táž událost jako už zveřejněný záznam o oficiální atribuci útoku na Milrem Rusku (i-2026-09-29-0ec3ee9612, na webu jako plně ověřeno)."
+      },
+      {
+        "id": "k-a01e81e5bcd7af45",
+        "druh": "kandidat",
+        "rozhodnuti": "mimo-rozsah",
+        "duvod": "Denní vývoj bojů na Ukrajině bez doloženého následku pro sledované země; běžný typ zprávy, mimo rozsah projektu. Zásah cizojazyčně vlajkovaných lodí v Černém moři není doložen jako následek pro sledovanou zemi."
+      },
+      {
+        "id": "k-8ebbc321554ac5d3",
+        "druh": "kandidat",
+        "rozhodnuti": "duplicita",
+        "duvod": "Táž událost jako už zveřejněná aktualizace RAF Fairford — propuštění na kauci, výbušniny oficiálně nepotvrzeny (i-2026-09-28-cbc3ae593b, na webu jako neovereno)."
+      },
+      {
+        "id": "k-d85734dbc60995d5",
+        "druh": "kandidat",
+        "rozhodnuti": "duplicita",
+        "duvod": "Táž událost jako už zveřejněný záznam o oficiální atribuci útoku na Milrem Rusku (i-2026-09-29-0ec3ee9612, na webu jako plně ověřeno)."
+      },
+      {
+        "id": "k-ab3322c1e3aec6b8",
+        "druh": "kandidat",
+        "rozhodnuti": "duplicita",
+        "duvod": "Táž událost jako už zveřejněný záznam o oficiální atribuci útoku na Milrem Rusku (i-2026-09-29-0ec3ee9612, na webu jako plně ověřeno)."
+      },
+      {
+        "id": "k-132c92f9356f4a4e",
+        "druh": "kandidat",
+        "rozhodnuti": "duplicita",
+        "duvod": "Táž událost jako už zveřejněný záznam o oficiální atribuci útoku na Milrem Rusku (i-2026-09-29-0ec3ee9612, na webu jako plně ověřeno)."
+      },
+      {
+        "id": "k-00436a8257f2e58b",
+        "druh": "kandidat",
+        "rozhodnuti": "neudalost",
+        "duvod": "Rutte v souvislosti s estonskou kauzou Milrem prohlásil, že ruské sabotáže v Evropě selhávají; jde o komentář/hodnocení, ne o nový skutek."
+      },
+      {
+        "id": "k-b6ee7f4a5258e3fd",
+        "druh": "kandidat",
+        "rozhodnuti": "mimo-rozsah",
+        "duvod": "Denní vývoj bojů na Ukrajině bez doloženého následku pro sledované země; běžný typ zprávy, mimo rozsah projektu. Poškození muzea Tarase Ševčenka při útoku na Kyjev."
+      },
+      {
+        "id": "k-db459d69bd8ed213",
+        "druh": "kandidat",
+        "rozhodnuti": "neudalost",
+        "duvod": "Ruský dekret o dočasné správě ruské pobočky německého Metra navazuje na stejný postup vůči Nestlé a Auchan z roku 2023; jde o obchodně-právní krok bez bezpečnostního následku pro Česko či sledované země (pravidlo č. 1)."
+      },
+      {
+        "id": "k-f90fac19979bd046",
+        "druh": "kandidat",
+        "rozhodnuti": "duplicita",
+        "duvod": "Táž událost jako už zveřejněný záznam o oficiální atribuci útoku na Milrem Rusku (i-2026-09-29-0ec3ee9612, na webu jako plně ověřeno)."
+      },
+      {
+        "id": "k-63ee2cd755955be5",
+        "druh": "kandidat",
+        "rozhodnuti": "neudalost",
+        "duvod": "Zelenskyj poděkoval partnerům za protivzdušnou obranu po dalším ruském útoku; jde o vyjádření/poděkování, ne o nové rozhodnutí sledované země."
+      },
+      {
+        "id": "k-d79f276d3721ea24",
+        "druh": "kandidat",
+        "rozhodnuti": "duplicita",
+        "duvod": "Táž událost jako už zveřejněná aktualizace RAF Fairford — propuštění na kauci, výbušniny oficiálně nepotvrzeny (i-2026-09-28-cbc3ae593b, na webu jako neovereno). Trumpovo vyjádření je jen komentář k témuž případu, navíc obsahuje nedoloženou spekulaci o vazbě na Írán."
+      },
+      {
+        "id": "k-79dd0d3685c0a5d7",
+        "druh": "kandidat",
+        "rozhodnuti": "duplicita",
+        "duvod": "Táž událost jako už zveřejněný záznam o oficiální atribuci útoku na Milrem Rusku (i-2026-09-29-0ec3ee9612, na webu jako plně ověřeno)."
+      },
+      {
+        "id": "k-e83f728b4e9f02b3",
+        "druh": "kandidat",
+        "rozhodnuti": "duplicita",
+        "duvod": "Táž událost jako už zveřejněný záznam o oficiální atribuci útoku na Milrem Rusku (i-2026-09-29-0ec3ee9612, na webu jako plně ověřeno). (francouzsky psaný přehled bojů zmiňuje totéž obvinění.)"
+      },
+      {
+        "id": "k-abceb638dc489c30",
+        "druh": "kandidat",
+        "rozhodnuti": "navrh",
+        "duvod": "Nová událost: trosky dronu s výbušnou náloží nalezeny v Rumunsku u Gropeni (Brăila), potvrzeno oficiálně ministerstvem obrany (i-2026-09-29-abceb638dc)."
+      },
+      {
+        "id": "k-04fc3df536b20d74",
+        "druh": "kandidat",
+        "rozhodnuti": "duplicita",
+        "duvod": "Táž událost jako už zveřejněný záznam o oficiální atribuci útoku na Milrem Rusku (i-2026-09-29-0ec3ee9612, na webu jako plně ověřeno)."
+      },
+      {
+        "id": "k-d26d40ba2d934c52",
+        "druh": "kandidat",
+        "rozhodnuti": "duplicita",
+        "duvod": "Táž událost jako už zveřejněný záznam o oficiální atribuci útoku na Milrem Rusku (i-2026-09-29-0ec3ee9612, na webu jako plně ověřeno). (francouzský živý přehled bojů zmiňuje totéž obvinění Estonska.)"
+      }
+    ],
+    "hotovo": "2026-09-29T22:37:21.348Z",
+    "odpoved": "Jeden nový návrh: Rumunsko — trosky dronu s výbušnou náloží u Gropeni (Brăila), potvrzeno přímo tiskovou zprávou ministerstva obrany (mapn.ro) + Agerpres a Ukrinform; upozorňuji na rozpor v samotném hlášení MApN (první zpráva: radar nezachytil narušení vzdušného prostoru, druhá zpráva o pár hodin později: potvrzena výbušná nálož a kráter) — do neznameho jsem dal, že ministerstvo rozpor samo nevysvětlilo. Nord Stream/Žuravlov (azyl v Chorvatsku) se mezitím zveřejnil jako neověřený záznam. Přes deset kandidátů je duplicita už zveřejněné estonské atribuce útoku na Milrem Rusku a dva duplicita aktualizace RAF Fairford (propuštění na kauci). Babišův výrok o vyslání dvou brigád v případě napadení Pobaltí beru jako řeč o hypotetickém scénáři, ne rozhodnutí. Ruský dekret o Metru je obchodně-právní krok bez bezpečnostního dopadu. Zbytek jsou denní údery na Ukrajině a komentáře/analýzy (Rutte, kazašský prezident) mimo rozsah."
   }
 ]
