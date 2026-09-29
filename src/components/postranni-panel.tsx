@@ -46,7 +46,6 @@ export const DALSI_STRANKY = [
   /* Audit je zdarma a bez účtu; podrobný plán je Premium — proto už ne mezi funkcemi po přihlášení. */
   { href: "/zapojit-se/", label: "Zapojit se" },
   { href: "/vyvoj/", label: "Vývoj" },
-  { href: "/ochrana/", label: "Ochranné vazby zemí" },
   { href: "/metodika/", label: "Metodika" },
   { href: "/zdroje/", label: "Zdroje" },
   { href: "/o-projektu/", label: "O projektu" },
