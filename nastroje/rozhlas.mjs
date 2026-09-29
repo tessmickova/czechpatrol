@@ -19,6 +19,7 @@ import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { maUredniZdroj } from "./uredni-zdroj.mjs";
+import { privilegovanePokyny, textyZaznamu } from "./privilegovane-pokyny.mjs";
 import { NAZVY_SPEKTRA, radekSpektra, spektrumKandidata } from "./spektrum-medii.mjs";
 
 const koren = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
@@ -509,7 +510,7 @@ export function vyberMimoradne(fronta, zaznamy, stav) {
   return (fronta ?? [])
     .filter((f) => f?.slug && !(stav.mimoradne ?? {})[zaznamy.find((z) => z.slug === f.slug)?.id ?? f.slug])
     .map((f) => ({ f, i: zaznamy.find((z) => z.slug === f.slug) }))
-    .filter((x) => x.i && (x.i.lidskyOvereno || x.i.overeni === "automaticke"));
+    .filter((x) => x.i && overeny(x.i));
 }
 
 export function sestavMimoradnou(i) {
@@ -1187,8 +1188,15 @@ export const KRATCE_KAZDYCH_H = 4;
 /** Starší malý signál už průběžně nejde — počká na přehled. */
 const KRATCE_NEJVYS_H = 12;
 
-/** Ověřený záznam (člověkem nebo dvěma zdroji s úředním). „Neověřeno úředně“ do kanálu nejde. */
-const overeny = (i) => i.lidskyOvereno || i.overeni === "automaticke";
+/**
+ * Smí záznam do veřejného kanálu? Ověřený (člověkem, nebo dvěma zdroji
+ * s úředním) — a bez privilegovaného pokynu, pokud ho neschválil člověk.
+ * Pokyn („evakuujte“, „nepijte vodu“, „nebezpečí pominulo“) v textu, který
+ * napsal automat, do kanálu nikdy (29. 9. 2026, bezpečnostní specifikace).
+ */
+export const overeny = (i) =>
+  (i.lidskyOvereno || i.overeni === "automaticke") &&
+  (i.lidskyOvereno === true || privilegovanePokyny(textyZaznamu(i)).length === 0);
 
 /**
  * Tiché zapamatování starého a archivního. Vrací true, když se záznam jen
@@ -1539,7 +1547,13 @@ async function main() {
   if (rezim === "okamzite") {
     for (const n of vyberVazneNavrhy(ctiNavrhy(), stav, { ted })) {
       if (prvniBeh) { stav.signaly[n.id] = { kdy: new Date(ted).toISOString(), ticho: true }; continue; }
-      const v = await posli(sestavVaznyNavrh(n), { nahled: false });
+      /*
+        Od 29. 9. 2026 jen SPRÁVCI, ne do veřejného kanálu. Návrh píše
+        ověřovatel (model): titulek i fakt jsou jeho text a úřední adresa
+        dokládá jen to, že se úřad k věci vyjádřil, ne co přesně řekl.
+        Veřejně to odejde až po schválení člověkem jako záznam.
+      */
+      const v = await posli(sestavVaznyNavrh(n), { nahled: false, komu: "spravce" });
       if (v.ok) { stav.signaly[n.id] = { kdy: new Date(ted).toISOString(), messageId: v.messageId ?? null }; odeslano++; }
       else { selhalo++; console.log(`[rozhlas] vážný návrh neodešel: ${v.chyba}`); }
     }

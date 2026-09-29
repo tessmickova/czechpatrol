@@ -106,9 +106,9 @@ const KAM: Cil[] = [
     kdy: "Odchází samo, do hodiny od zachycení, a je zřetelně označené jako neověřené. U téhle pětky je zpoždění horší než nejistota. Na web se tím nic nedostane.",
   },
   {
-    nazev: "Telegram — vážný případ z úředního zdroje, BEZ schválení",
+    nazev: "Telegram — vážný případ z úředního zdroje",
     podminka: "závažnost O nebo R · dva nezávislé zdroje · aspoň jeden úřední",
-    kdy: "Odchází samo a je označené jako neověřené. Takhle doložená zpráva se schválením obvykle nezmění, jen zdrží. Záznam dál čeká ve frontě — do počtů a na web ho pustí až člověk.",
+    kdy: "Od 29. 9. 2026 jde nejdřív soukromě správci, ne do kanálu. Text návrhu píše automat a úřední adresa dokládá jen to, že se úřad k věci vyjádřil. Veřejně odejde až po schválení člověkem. Pokyn obyvatelům (evakuace, voda, okna, konec nebezpečí) automat nikdy nezveřejní ani nepošle.",
   },
   {
     nazev: "Telegram — soukromě správci",

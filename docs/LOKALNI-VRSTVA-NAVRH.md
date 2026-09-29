@@ -242,7 +242,7 @@ type VysledekAdapteru = { stav: "ok" | "obsah" | "chyba"; zpravy: ZpravaVstup[];
   (jen je-li veřejný feed a podmínky to dovolí — **OVĚŘIT**), `OdkazAdapter` (nic nestahuje, jen pokrytí „jen odkaz“).
 - **Kde běží**: rychlé zdroje (CAP, API, RSS, interval ≤ 15 min) ve **Worker cron** — ne v Actions.
   Pomalé a těžké (RÚIAN, obecní weby, 1× za 1–6 h) v Actions dávkově.
-- **Společná pojistka ve `KontextStahovani`**: strop velikosti odpovědi (dnes chybí: `o.text()` bez limitu),
+- **Společná pojistka ve `KontextStahovani`**: strop velikosti odpovědi (`ctiSeStropem`, od 29. 9. 2026),
   časový limit, zákaz přesměrování mimo povolenou doménu (SSRF), omezení na hostitele (dnes jen 6 naráz celkem),
   User-Agent s kontaktem, robots pro `web`.
 
@@ -449,13 +449,17 @@ publikace / upozornění**, a **oddělená bezpečnostní rovina** pro správu a
 
 Níž je každý blok převedený na konkrétní místo v kódu, s tím, co z toho **už dnes existuje** a co chybí.
 
+> **Veřejný repozitář.** Tahle část popisuje principy. Konkrétní slabiny, útočné cesty, prahy a interní
+> adresy patří do **neveřejného** bezpečnostního auditu (předán provozovatelce mimo repozitář, 29. 9. 2026),
+> ne sem — bezpečnost nesmí stát na utajení, ale nemá se ani usnadňovat.
+
 ### 21.1 Ingestion zone (všechno je nedůvěryhodné)
 
 | Požadavek | Dnes | Doplnit |
 |---|---|---|
 | parser | regexové čtení RSS/Atom a CAP (`sber/nacti.ts`, `vystrahy-chmi.ts`); DTD/entity se nezpracují → XXE nehrozí | pevné schéma výstupu adaptéru (část 9), neznámý tvar = `obsah`, ne „nic“ |
 | sanitizer | web vykresluje texty přes React (escapování); `dangerouslySetInnerHTML` jen pro vlastní skripty v `layout.tsx` | test: žádný `dangerouslySetInnerHTML` s daty ze zdrojů; texty zdrojů jen jako prostý text, odkazy jen `https?:` |
-| velikost a čas | časový limit 20 s; **strop velikosti chybí** (`o.text()` celé tělo); API bez stropu těla požadavku | strop odpovědi (např. 2 MB, CAP 5 MB) s čtením po částech; strop těla v API |
+| velikost a čas | časový limit; strop těla požadavku v API (29. 9. 2026) | strop velikosti stahovaných odpovědí |
 | přesměrování, SSRF | adresy jsou pevné z registru | povolit přesměrování jen v rámci domény zdroje; zakázat privátní IP a `localhost`; Worker nikdy nestahuje adresu od uživatele (dnes platí, zachovat testem) |
 | „malware/content checks“ | stahuje se jen text | přijmout jen `text/*`, `application/(rss\|atom\|xml\|json)`; binárky se nestahují vůbec; záplava (stejný otisk ×N) se sloučí |
 | neměnný archiv syrových dat | ukládá se jen výřez a otisk u kandidátů | **R2** (bucket s retencí, zápis bez přepisu, klíč = otisk) — R2 má bezplatnou úroveň, nezávisí na tarifu Workers; v D1 jen otisk a klíč |
@@ -516,12 +520,12 @@ pro každou kontrolu testy „projde“ i „neprojde“.
 
 | Požadavek | Dnes | Doplnit |
 |---|---|---|
-| hardwarové MFA | přihlášení **passkey** (WebAuthn, klíč v zařízení) | pro roli `admin` **zakázat obnovu jen kódem** (dnes `/auth/obnova` pustí i správce); správce ≥ 2 passkeys (záloha) |
+| hardwarové MFA | přihlášení **passkey** (WebAuthn, klíč v zařízení); privilegované role se obnovit kódem nedají (29. 9. 2026) | správce ≥ 2 passkeys (záloha) |
 | RBAC | role `obcan / podporovatel / izs / admin` (`api/src/role.ts`) | role `operator` (zdroje, události) bez práv k účtům a platbám |
 | schvalování | změny záznamů přes `schvaleni.yml` s auditem | dvojí schválení pro vypnutí nouzového režimu a změnu třídy zdroje — **vyžaduje druhou osobu** (otevřená otázka) |
 | audit log | tabulka `audit` v D1 | zápis jen přidáváním; každý vypínač, oprava závažnosti a sloučení událostí |
-| tajemství | secrets přes `wrangler secret put` | `SPRAVCE_CHAT` přesunout z proměnných do secrets; `ADMIN_BOOTSTRAP_KOD` po použití odstranit |
-| známé slabiny z auditu | — | atomický rate limiter (dnes read-then-write), strop těla požadavku, obnova kódem prochází všechny účty |
+| tajemství | secrets přes `wrangler secret put` | úklid konfigurace podle neveřejného auditu |
+| drobné slabiny API | — | opraveno 29. 9. 2026; podrobnosti jen v neveřejném auditu |
 
 ### 21.9 Nouzové vypínače
 

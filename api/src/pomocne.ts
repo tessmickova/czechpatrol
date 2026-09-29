@@ -71,9 +71,26 @@ export function json(telo: unknown, stav = 200, hlavicky: Record<string, string>
   });
 }
 
+/**
+ * Nejvýš tolik bajtů těla JSON požadavku. Nejdelší pole v API mají pár
+ * tisíc znaků (tip 2 000, návrh 6 000); 64 kB je s rezervou a zastaví
+ * zahlcení obřím tělem (29. 9. 2026 — dřív strop nebyl žádný).
+ */
+export const MAX_TELA = 64 * 1024;
+
 export async function telo<T>(req: Request): Promise<T> {
+  const delka = Number(req.headers.get("content-length") ?? "0");
+  if (delka > MAX_TELA) throw new ChybaHttp(413, "Požadavek je příliš velký.");
+  let text: string;
   try {
-    return (await req.json()) as T;
+    text = await req.text();
+  } catch {
+    throw new ChybaHttp(400, "Tělo požadavku nejde přečíst.");
+  }
+  // Content-Length může chybět nebo lhát (chunked) — měří se i skutečná délka.
+  if (new TextEncoder().encode(text).length > MAX_TELA) throw new ChybaHttp(413, "Požadavek je příliš velký.");
+  try {
+    return JSON.parse(text) as T;
   } catch {
     throw new ChybaHttp(400, "Tělo požadavku není platný JSON.");
   }

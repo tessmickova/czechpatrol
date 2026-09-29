@@ -15,6 +15,36 @@ export async function stahniSeSvolenim(url: string, pokusu = 3): Promise<{ stav:
 }
 
 /** Stažení s časovým limitem a opakováním. Síť selhává, sběr kvůli tomu padat nemá. */
+/*
+  Strop velikosti odpovědi (29. 9. 2026, bezpečnostní specifikace). Zdroj je
+  nedůvěryhodný vstup: napadený nebo rozbitý web může poslat obří soubor
+  a sběr by ho celý načetl do paměti. Největší dnešní zdroj (CAP ČHMÚ,
+  řada ČSÚ) má jednotky stovek kB; 8 MB je s velkou rezervou.
+*/
+export const MAX_ODPOVEDI = 8 * 1024 * 1024;
+
+/** Přečte tělo nejvýš do stropu; co je větší, je chyba zdroje (413), ne data. */
+export async function ctiSeStropem(o: Response, strop = MAX_ODPOVEDI): Promise<string> {
+  const delka = Number(o.headers.get("content-length") ?? "0");
+  if (delka > strop) { await o.body?.cancel(); throw new NadStropem(); }
+  if (!o.body) return "";
+  const cteni = o.body.getReader();
+  const kusy: Uint8Array[] = [];
+  let celkem = 0;
+  for (;;) {
+    const { done, value } = await cteni.read();
+    if (done) break;
+    celkem += value.length;
+    if (celkem > strop) { await cteni.cancel(); throw new NadStropem(); }
+    kusy.push(value);
+  }
+  const vse = new Uint8Array(celkem);
+  let pos = 0;
+  for (const k of kusy) { vse.set(k, pos); pos += k.length; }
+  return new TextDecoder().decode(vse);
+}
+export class NadStropem extends Error { constructor() { super("odpověď nad strop velikosti"); } }
+
 export async function stahni(url: string, pokusu = 3): Promise<{ stav: number; telo: string }> {
   let posledni: unknown;
   for (let i = 0; i < pokusu; i++) {
@@ -25,8 +55,10 @@ export async function stahni(url: string, pokusu = 3): Promise<{ stav: number; t
         headers: { "user-agent": AGENT, accept: "application/rss+xml, application/xml, text/xml, application/json, text/html" },
         redirect: "follow",
       });
-      return { stav: o.status, telo: await o.text() };
+      return { stav: o.status, telo: await ctiSeStropem(o) };
     } catch (e) {
+      // Obří odpověď se opakováním nezmenší — rovnou jako chyba zdroje.
+      if (e instanceof NadStropem) return { stav: 413, telo: "" };
       posledni = e;
       await new Promise((r) => setTimeout(r, 1000 * 2 ** i));
     }
