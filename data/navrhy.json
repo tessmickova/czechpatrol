@@ -415,5 +415,154 @@
     "aiZpracovano": true,
     "lidskyOvereno": false,
     "archivniZaznam": false
+  },
+  {
+    "kam": "zaznam",
+    "pripravil": "patrol",
+    "pripraveno": "2026-09-29T08:47:19.312Z",
+    "id": "i-2026-09-29-0ec3ee9612",
+    "slug": "ee-0ec3ee9612",
+    "titulek": "Estonsko oficiálně přisoudilo žhářský útok na výrobce vojenské techniky Milrem Robotics Rusku",
+    "kratkyTitulek": "Estonsko oficiálně přisoudilo žhářský útok na výrobce vojenské techniky Milrem Robotics Rusku",
+    "zeme": "Estonsko",
+    "kodZeme": "EE",
+    "kategorie": [
+      "sabotaz",
+      "rusko",
+      "zpravodajske"
+    ],
+    "datumUdalosti": "2026-09-29T00:00:00Z",
+    "datumZjisteni": "2026-09-29T00:00:00Z",
+    "aktualizovano": "2026-09-29T08:47:19.312Z",
+    "zavaznost": "O2",
+    "jistota": "potvrzeno",
+    "stav": "probiha",
+    "atribuce": "neznama",
+    "puvodce": null,
+    "druh": "aktualizace",
+    "fakta": [
+      "Podle oficiálního vládního oznámení (valitsus.ee, 29. 9. 2026) prohlásil estonský premiér Kristen Michal, že žhářský útok na Milrem v noci na 15. 8. 2026 byl „akt sabotáže objednaný speciálními službami Ruské federace“.",
+      "Podle vlády dospěla k tomuto závěru Estonská bezpečnostní služba (ISS/Kaitsepolitsei) na základě shromážděných zpravodajských informací; ředitel služby Margo Palloson uvedl, že „ruské speciální služby pokračují v pokusech verbovat a ovlivňovat lidi v Evropě“.",
+      "Podle vlády estonský ministr zahraničí Margus Tsahkna oznámil, že Estonsko bude se spojenci zvyšovat tlak na Rusko, zpřísňovat sankce a hledat způsoby omezení cestování ruských občanů do Evropy.",
+      "Podle Bloombergu jde o formální oznámení odpovědnosti Ruska za konkrétní sabotážní čin na území členského státu NATO/EU."
+    ],
+    "neznameho": [
+      "Konkrétní zpravodajské důkazy, na kterých ISS závěr založila, nejsou veřejně zveřejněny.",
+      "Zda a jaké konkrétní sankce nebo diplomatické kroky (vyhoštění diplomatů) budou následovat."
+    ],
+    "vyznam": "",
+    "eskalacniSpousteče": [],
+    "deeskalacniSignaly": [],
+    "zdroje": [
+      {
+        "nazev": "Vláda Estonska (valitsus.ee) — Russia Responsible for Arson Attack on Milrem",
+        "url": "https://valitsus.ee/en/news/russia-responsible-arson-attack-milrem",
+        "typ": "primary",
+        "publikovano": "2026-09-29T00:00:00Z",
+        "primarni": true,
+        "jazyk": "en"
+      },
+      {
+        "nazev": "ERR News (Estonsko) — Estonia: Russia responsible for arson attack on defense contractor Milrem",
+        "url": "https://news.err.ee/1610151220/estonia-russia-responsible-for-arson-attack-on-defense-contractor-milrem",
+        "typ": "media",
+        "publikovano": "2026-09-29T00:00:00Z",
+        "primarni": false,
+        "jazyk": "en"
+      }
+    ],
+    "souvisejici": [],
+    "historie": [
+      {
+        "kdy": "2026-09-29T00:00:00Z",
+        "text": "Zachyceno automatickým sběrem, druhý zdroj doložen před zařazením do fronty.",
+        "novySignal": true
+      }
+    ],
+    "novy": true,
+    "zapocitanoTyden": "2026-09-29",
+    "aiZpracovano": true,
+    "lidskyOvereno": false,
+    "archivniZaznam": false,
+    "navazujeNa": "ee-005c23a0c4"
+  },
+  {
+    "kam": "zaznam",
+    "pripravil": "patrol",
+    "pripraveno": "2026-09-29T08:48:40.565Z",
+    "id": "i-2026-09-29-ed406feac0",
+    "slug": "gb-ed406feac0",
+    "titulek": "USA: ministr zahraničí Rubio řekl, že za plánem útoku na základnu RAF Fairford jednoznačně stojí zahraniční aktér, konkrétní stát nejmenoval",
+    "kratkyTitulek": "USA: ministr zahraničí Rubio řekl, že za plánem útoku na základnu RAF Fairford jednoznačně stojí zahraniční aktér, konkrétní stát nejmenoval",
+    "zeme": "Spojené království",
+    "kodZeme": "GB",
+    "kategorie": [
+      "pravo",
+      "vysetrovani",
+      "nato"
+    ],
+    "datumUdalosti": "2026-09-29T00:00:00Z",
+    "datumZjisteni": "2026-09-29T00:00:00Z",
+    "aktualizovano": "2026-09-29T08:48:40.565Z",
+    "zavaznost": "O1",
+    "jistota": "stredni",
+    "stav": "probiha",
+    "atribuce": "neznama",
+    "puvodce": null,
+    "druh": "aktualizace",
+    "fakta": [
+      "Podle Euronews a CNN řekl americký ministr zahraničí Marco Rubio, že plán útoku na základnu RAF Fairford „clearly involves the hands of a foreign actor“ (jednoznačně v tom mají prsty ruce zahraničního aktéra), aniž upřesnil, o který stát jde.",
+      "Podle CNN vyšetřovatelé zvažují možnou spojitost s Íránem, Ruskem nebo nestátními militantními skupinami a zatím neuzavřeli, zda šlo o čin podporovaný státem.",
+      "Podle CNN íránská ambasáda v Londýně popření zopakovala a označila spekulace spojující Írán s případem za „nepodložené a zlovolné“.",
+      "Podle CNN kritizoval prezident Trump propuštění zadržených mužů na kauci a řekl, že byl „překvapen“, že to Spojené království udělalo."
+    ],
+    "neznameho": [
+      "Který konkrétní stát nebo aktér má být podle amerických představitelů za plánem — Rubio to výslovně nespecifikoval.",
+      "Zda vyšetřování dospělo k závěru o státní podpoře činu.",
+      "Oficiální vyjádření amerického ministerstva zahraničí (state.gov) jsem neotevřel; údaje jsou z médií, která Rubia citují."
+    ],
+    "vyznam": "",
+    "eskalacniSpousteče": [],
+    "deeskalacniSignaly": [],
+    "zdroje": [
+      {
+        "nazev": "Aktuality.sk — USA hovoria o zahraničnom aktérovi za plánom útoku na základňu v Británii",
+        "url": "https://www.aktuality.sk/clanok/dxM3sR5/usa-hovoria-o-zahranicnom-akterovi-za-planom-utoku-na-zakladnu-v-britanii/",
+        "typ": "media",
+        "publikovano": "2026-09-29T00:00:00Z",
+        "primarni": false,
+        "jazyk": "sk"
+      },
+      {
+        "nazev": "Euronews — RAF Fairford bomb plot 'clearly involves' foreign actor, US secretary of state says",
+        "url": "https://www.euronews.com/2026/09/29/raf-fairford-bomb-plot-clearly-involves-foreign-actor-us-secretary-of-state-says",
+        "typ": "media",
+        "publikovano": "2026-09-29T00:00:00Z",
+        "primarni": false,
+        "jazyk": "en"
+      },
+      {
+        "nazev": "CNN — Rubio says 'foreign actor' involved in alleged terror plot targeting British base used by US",
+        "url": "https://www.cnn.com/2026/09/28/uk/raf-fairford-key-questions-terror-suspects-arrests-intl",
+        "typ": "media",
+        "publikovano": "2026-09-28T00:00:00Z",
+        "primarni": false,
+        "jazyk": "en"
+      }
+    ],
+    "souvisejici": [],
+    "historie": [
+      {
+        "kdy": "2026-09-29T00:00:00Z",
+        "text": "Zachyceno automatickým sběrem, druhý zdroj doložen před zařazením do fronty.",
+        "novySignal": true
+      }
+    ],
+    "novy": true,
+    "zapocitanoTyden": "2026-09-29",
+    "aiZpracovano": true,
+    "lidskyOvereno": false,
+    "archivniZaznam": false,
+    "navazujeNa": "gb-e480488876"
   }
 ]
