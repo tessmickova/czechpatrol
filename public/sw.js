@@ -95,3 +95,38 @@ self.addEventListener("fetch", (u) => {
       .catch(() => caches.match(request)),
   );
 });
+
+/*
+  Upozornění do telefonu (29. 9. 2026, api/src/push.ts). Zpráva přijde
+  zašifrovaná, prohlížeč ji rozbalí a tady se jen ukáže. Klepnutí otevře
+  web — jen na naší adrese, nikam jinam.
+*/
+self.addEventListener("push", (u) => {
+  let d = {};
+  try { d = u.data ? u.data.json() : {}; } catch { d = { b: u.data ? u.data.text() : "" }; }
+  const cesta = typeof d.u === "string" && d.u.startsWith("/") && !d.u.startsWith("//") ? d.u : "/";
+  u.waitUntil(
+    self.registration.showNotification(String(d.t || "CzechPatrol").slice(0, 120), {
+      body: String(d.b || "").slice(0, 300),
+      icon: "/ikona-192.png",
+      tag: typeof d.tag === "string" ? d.tag : undefined,
+      lang: "cs",
+      data: { cesta },
+    }),
+  );
+});
+
+self.addEventListener("notificationclick", (u) => {
+  u.notification.close();
+  const cil = new URL((u.notification.data && u.notification.data.cesta) || "/", self.location.origin).href;
+  u.waitUntil(
+    self.clients.matchAll({ type: "window", includeUncontrolled: true }).then((okna) => {
+      for (const o of okna) {
+        if (new URL(o.url).origin === self.location.origin && "focus" in o) {
+          return o.focus().then((f) => (f && "navigate" in f ? f.navigate(cil) : f));
+        }
+      }
+      return self.clients.openWindow(cil);
+    }),
+  );
+});

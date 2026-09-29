@@ -15,6 +15,7 @@
  * Přístupy: TELEGRAM_BOT_TOKEN (secret) a TELEGRAM_KANAL (např. @czechpatrol).
  * Bez tokenu skript nic neposílá a skončí bez chyby — web tím nesmí spadnout.
  */
+import { createHash, createHmac } from "node:crypto";
 import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
@@ -1375,6 +1376,84 @@ async function posliTelegram(text, { nahled = true, pokusu = 3, komu = "kanal" }
   return { ok: false, chyba: "vyčerpány pokusy" };
 }
 
+/*
+  Upozornění do telefonu přes webovou aplikaci (29. 9. 2026).
+
+  Stejná zpráva, která odešla do kanálu, jde i do telefonů — ve zkrácené
+  podobě (titulek, pár řádků, odkaz na web). Doručuje API (api/src/push.ts);
+  rozhlas se prokazuje podpisem odvozeným z tokenu bota. Selhání tady
+  nikdy neshodí Telegram ani běh: zapíše se jako varování a jde se dál.
+*/
+const PUSH_API = process.env.PUSH_API ?? "";
+
+const ENTITY = { "&lt;": "<", "&gt;": ">", "&quot;": '"', "&#39;": "'", "&amp;": "&" };
+
+/** Z HTML zprávy pro Telegram udělá titulek, krátký text a odkaz na náš web. */
+export function doTelefonu(html) {
+  const odkaz = (html.match(/href="(https:\/\/czechpatrol\.cz\/[^"]*)"/) ?? html.match(/(https:\/\/czechpatrol\.cz\/[^\s<"]*)/) ?? [])[1] ?? `${WEB}/`;
+  const cisty = html
+    .replace(/<br\s*\/?>/gi, "\n")
+    // Odkazy („Podrobnosti“, „Zdroj“) v telefonu nahrazuje klepnutí na upozornění.
+    .replace(/<a\b[^>]*>[\s\S]*?<\/a>/gi, "")
+    .replace(/<[^>]+>/g, "")
+    .replace(/&(lt|gt|quot|#39|amp);/g, (m) => ENTITY[m]);
+  // Řádky bez písmen (pruh barevných puntíků), holé adresy a „Podrobnosti:“ bez adresy do telefonu nepatří.
+  const radky = cisty.split("\n")
+    .map((r) => r.replace(/https?:\/\/\S+/g, "").trim())
+    .filter((r) => /\p{L}/u.test(r) && !(r.endsWith(":") && r.length < 40));
+  /*
+    Zprávy začínají štítkem („📋 Oficiální opatření“, „❗ MIMOŘÁDNÁ ZPRÁVA“):
+    krátký řádek uvozený symbolem.
+    Samotný štítek by jako titulek upozornění nic neřekl — spojí se proto
+    s prvním skutečným řádkem.
+  */
+  const STITEK = 30;
+  let n = 0;
+  const jeStitek = (r) => r.length <= STITEK && /^[^\p{L}\p{N}]/u.test(r);
+  while (n < radky.length - 1 && jeStitek(radky[n])) n++;
+  const titulek = (n > 0 ? `${radky[0]} · ${radky[n]}` : (radky[0] ?? "CzechPatrol")).slice(0, 120);
+  let text = radky.slice(n + 1).join(" ").replace(/\s+/g, " ").trim();
+  if (text.length > 300) text = `${text.slice(0, 297).replace(/\s+\S*$/, "")}…`;
+  return { titulek, text, odkaz };
+}
+
+export function podpisProTelefon(token, cas, telo) {
+  const klic = createHash("sha256").update(`czechpatrol-push-v1:${token}`).digest();
+  return createHmac("sha256", klic).update(`${cas}.${telo}`).digest("hex");
+}
+
+/**
+ * Rozešle zprávu do telefonů. `druh`: hned | prehled | kratce | tipy.
+ * Id je otisk textu — opakovaný běh téže zprávy API pozná a nepošle znovu.
+ */
+async function posliDoTelefonu(html, druh, odkaz) {
+  const token = process.env.TELEGRAM_BOT_TOKEN;
+  if (!PUSH_API || !token) return;
+  const zakladni = { id: createHash("sha256").update(`${druh}\n${html}`).digest("hex").slice(0, 40), druh, ...doTelefonu(html), ...(odkaz ? { odkaz } : {}) };
+  let od = "", odeslano = 0;
+  try {
+    // Nejvýš 500 dávek po 20 = 10 000 telefonů; víc zatím nečekáme a smyčka nesmí běžet donekonečna.
+    for (let n = 0; n < 500; n++) {
+      const telo = JSON.stringify(od ? { ...zakladni, od } : zakladni);
+      const cas = String(Math.floor(Date.now() / 1000));
+      const r = await fetch(`${PUSH_API}/push/rozeslat`, {
+        method: "POST",
+        headers: { "content-type": "application/json", "x-cas": cas, "x-podpis": podpisProTelefon(token, cas, telo) },
+        body: telo,
+        signal: AbortSignal.timeout(LIMIT_MS),
+      });
+      if (!r.ok) { console.log(`::warning::[rozhlas] upozornění do telefonů: API ${r.status} ${(await r.text().catch(() => "")).slice(0, 200)}`); return; }
+      const v = await r.json();
+      odeslano += v.odeslano ?? 0;
+      if (!v.dalsi) break;
+      od = v.dalsi;
+    }
+    if (odeslano) console.log(`[rozhlas] upozornění do telefonů (${druh}): ${odeslano}`);
+  } catch (e) {
+    console.log(`::warning::[rozhlas] upozornění do telefonů selhala: ${e?.message ?? e}`);
+  }
+}
+
 /** Vrátí záznam o pozastavení, nebo null, když kanál běží. */
 export function pozastaveno(soubor = path.join(koren, "data", "fronta", "rozhlas-pozastaveno.json")) {
   try {
@@ -1391,6 +1470,7 @@ async function main() {
   const nacisto = arg.includes("--nacisto");
   const test = arg.includes("--test");
   const posli = async (text, volby) => (nacisto ? (console.log("---\n" + text), { ok: true }) : posliTelegram(text, volby));
+  const telefon = (text, druh, odkaz) => (nacisto ? (console.log(`--- telefon (${druh}): ${JSON.stringify(doTelefonu(text))}`), undefined) : posliDoTelefonu(text, druh, odkaz));
 
   /*
     Pozastavení kanálu (27. 9. 2026, úprava formátu zpráv). Vypínač je
@@ -1452,6 +1532,7 @@ async function main() {
       messageId ??= v.messageId ?? null;
     }
     if (!ok) process.exit(1);
+    await telefon(sestavMimoradnou(i), "hned");
     const kdy = new Date().toISOString();
     stav.mimoradne[i.id] = { kdy, slug, messageId };
     stav.zaznamy[i.id] ??= { kdy, historie: i.historie?.length ?? 0, mimoradne: true };
@@ -1491,6 +1572,7 @@ async function main() {
       stav.vystrahy[vystraha.klic] = { kdy: new Date(ted).toISOString(), ticho: true };
     } else {
       const v = await posli(sestavVystrahu(vystraha), { nahled: false });
+      if (v.ok) await telefon(sestavVystrahu(vystraha), "hned");
       if (v.ok) { stav.vystrahy[vystraha.klic] = { kdy: new Date(ted).toISOString(), messageId: v.messageId ?? null }; odeslano++; }
       else { selhalo++; console.log(`[rozhlas] výstraha neodešla: ${v.chyba}`); }
     }
@@ -1507,6 +1589,7 @@ async function main() {
         messageId ??= v.messageId ?? null;
       }
       if (!ok) { selhalo++; continue; }
+      await telefon(text, "hned");
       const kdy = new Date(ted).toISOString();
       stav.mimoradne ??= {};
       stav.mimoradne[i.id] = { kdy, slug: i.slug, styl: f.styl ?? "mimoradna", messageId };
@@ -1563,6 +1646,7 @@ async function main() {
   for (const { snimek, zmeny } of vyberZmenyStavu(archiv, stav)) {
     if (prvniBeh) { stav.snimky[snimek.kdy] = { kdy: new Date(ted).toISOString(), ticho: true }; continue; }
     const v = await posli(sestavZmenuStavu(snimek, zmeny), { nahled: false });
+    if (v.ok) await telefon(sestavZmenuStavu(snimek, zmeny), "hned");
     if (v.ok) { stav.snimky[snimek.kdy] = { kdy: new Date(ted).toISOString(), messageId: v.messageId ?? null }; odeslano++; } else { selhalo++; console.log(`[rozhlas] ${v.chyba}`); }
   }
 
@@ -1604,7 +1688,7 @@ async function main() {
       */
       const zaznam = { kdy: new Date(ted).toISOString(), historie: i.historie?.length ?? 0, cesta: "hned" };
       if (!ok && nejisty) stav.zaznamy[i.id] = { ...zaznam, nejistyVysledek: true };
-      if (ok) { stav.zaznamy[i.id] = { ...zaznam, messageId: prvniId }; odeslano += dily.length; }
+      if (ok) { stav.zaznamy[i.id] = { ...zaznam, messageId: prvniId }; odeslano += dily.length; await telefon(dily[0], "hned"); }
       else selhalo++;
     }
 
@@ -1612,6 +1696,7 @@ async function main() {
     const kratky = prvniBeh ? null : vyberKratky(zaznamy, stav, { ted });
     if (kratky) {
       const v = await posli(sestavKratky(kratky), { nahled: false });
+      if (v.ok) await telefon(sestavKratky(kratky), "kratce");
       if (v.ok || v.nejisty) {
         stav.zaznamy[kratky.id] = { kdy: new Date(ted).toISOString(), historie: kratky.historie?.length ?? 0, cesta: "kratce", messageId: v.messageId ?? null };
         stav.kratce = { posledni: new Date(ted).toISOString(), id: kratky.id };
@@ -1637,6 +1722,8 @@ async function main() {
       else { ok = false; console.log(`[rozhlas] přehled neodešel: ${v.chyba}`); }
     }
     if (ok) {
+      // Přehled vede na úvod, ne na první záznam v něm.
+      await telefon(kusy[0], "prehled", `${WEB}/`);
       const kdy = new Date(ted).toISOString();
       for (const { i } of nove) stav.zaznamy[i.id] = { ...(stav.zaznamy[i.id] ?? { cesta: "prehled" }), kdy: stav.zaznamy[i.id]?.kdy ?? kdy, historie: i.historie?.length ?? 0, prehled: klicPrehledu, doposlat: undefined };
       stav.prehledy[klicPrehledu] = { kdy, zaznamu: nove.length, messageId: prvniId };
@@ -1654,6 +1741,7 @@ async function main() {
       stav.tipy[tip.klic] = { kdy: new Date(ted).toISOString(), ticho: true };
     } else {
       const v = await posli(sestavTip(tip), { nahled: false });
+      if (v.ok) await telefon(sestavTip(tip), "tipy");
       if (v.ok) { stav.tipy[tip.klic] = { kdy: new Date(ted).toISOString(), messageId: v.messageId ?? null }; odeslano++; }
       else { selhalo++; console.log(`[rozhlas] tip neodešel: ${v.chyba}`); }
     }

@@ -79,6 +79,16 @@ export function json(telo: unknown, stav = 200, hlavicky: Record<string, string>
 export const MAX_TELA = 64 * 1024;
 
 export async function telo<T>(req: Request): Promise<T> {
+  const text = await surovyText(req);
+  try {
+    return JSON.parse(text) as T;
+  } catch {
+    throw new ChybaHttp(400, "Tělo požadavku není platný JSON.");
+  }
+}
+
+/** Tělo jako text se stejným stropem — pro podepsané požadavky, kde se podpis počítá z přesných bajtů. */
+export async function surovyText(req: Request): Promise<string> {
   const delka = Number(req.headers.get("content-length") ?? "0");
   if (delka > MAX_TELA) throw new ChybaHttp(413, "Požadavek je příliš velký.");
   let text: string;
@@ -89,11 +99,7 @@ export async function telo<T>(req: Request): Promise<T> {
   }
   // Content-Length může chybět nebo lhát (chunked) — měří se i skutečná délka.
   if (new TextEncoder().encode(text).length > MAX_TELA) throw new ChybaHttp(413, "Požadavek je příliš velký.");
-  try {
-    return JSON.parse(text) as T;
-  } catch {
-    throw new ChybaHttp(400, "Tělo požadavku není platný JSON.");
-  }
+  return text;
 }
 
 /**

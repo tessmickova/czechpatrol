@@ -55,6 +55,8 @@ export function RegistraceSW() {
         // mohl vracející se člověk vidět starou verzi webu ještě den po
         // nasazení, aniž by tušil proč.
         reg.update().catch(() => {});
+        // Upozornění do telefonu: když je prohlížeč potichu zahodil, přihlásit znovu (src/lib/push.ts).
+        import("@/lib/push").then((m) => m.obnovitPotichu()).catch(() => {});
         const priNavratu = () => { if (document.visibilityState === "visible") reg.update().catch(() => {}); };
         document.addEventListener("visibilitychange", priNavratu);
       })

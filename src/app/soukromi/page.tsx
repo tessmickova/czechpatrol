@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   description: "Co o vás CzechPatrol ví, proč, jak dlouho a jak to smažete. Krátce a bez právničiny.",
 };
 
-const REVIZE = "2026-09-26";
+const REVIZE = "2026-09-29";
 
 function Oddil({ cislo, nadpis, children }: { cislo: string; nadpis: string; children: React.ReactNode }) {
   return (
@@ -63,7 +63,7 @@ export default function SoukromiStranka() {
           </Karta>
           <Karta odstin="pisek" className="p-5">
             <div className="stitek mb-2">Kanály</div>
-            <p className="text-zaklad leading-relaxed text-tlum">Telegram: číslo chatu. WhatsApp: telefonní číslo. Jen pro doručení, kdykoli smažete.</p>
+            <p className="text-zaklad leading-relaxed text-tlum">Upozornění v telefonu: jen anonymní adresa od prohlížeče. Telegram: číslo chatu. WhatsApp: telefonní číslo. Jen pro doručení, kdykoli smažete.</p>
           </Karta>
         </div>
 
@@ -102,7 +102,9 @@ export default function SoukromiStranka() {
             <ul className="list-disc space-y-1 pl-5">
               <li><b>Telegram</b>: číslo chatu, které nám Telegram předá po vašem kliknutí na „Start“. Není z něj vidět jméno ani telefon.</li>
               <li><b>WhatsApp</b>: telefonní číslo, které zadáte. Jediný údaj, bez kterého to nejde.</li>
+              <li><b>Upozornění v telefonu</b> (bez účtu): adresa pro doručení, kterou vydá váš prohlížeč, dva klíče k šifrování zpráv a druhy zpráv, které jste si vybrali. Adresa neobsahuje jméno ani číslo a nespojujeme ji s účtem ani s IP adresou. Obsah zprávy je šifrovaný tak, že ho po cestě nepřečte ani služba prohlížeče.</li>
             </ul>
+            <p>Upozornění v telefonu vypnete tlačítkem na stránce Upozornění v telefonu nebo zákazem upozornění v prohlížeči; záznam se tím smaže. Právní základ: váš souhlas (čl. 6 odst. 1 písm. a GDPR), který dáváte zapnutím.</p>
             <p>Obsah zpráv doručují Telegram Messenger Inc. a Meta Platforms Ireland Ltd. jako provozovatelé těchto služeb podle vlastních podmínek. Propojení kanálu jde v účtu kdykoli zrušit; údaj se tím smaže.</p>
             <p>Právní základ: plnění smlouvy (čl. 6 odst. 1 písm. b GDPR).</p>
           </Oddil>
@@ -125,6 +127,7 @@ export default function SoukromiStranka() {
               <li>propojovací kód Telegramu: 15 minut,</li>
               <li>přihlašovací token: 30 dní od posledního použití,</li>
               <li>otisk IP: 24 hodin,</li>
+              <li>upozornění v telefonu: do vypnutí; když služba prohlížeče ohlásí, že adresa už neplatí, nebo deset doručení v řadě selže, smažeme ji hned,</li>
               <li>audit správců: 12 měsíců,</li>
               <li>e-mail pro souhrn: do odvolání souhlasu, po odhlášení 30 dnů; bez jediného e-mailu nejvýš 12 měsíců,</li>
               <li>zprávy partnerů IZS: text zprávy 12 měsíců, doručení jen jako počet.</li>
@@ -135,6 +138,7 @@ export default function SoukromiStranka() {
             <ul className="list-disc space-y-1 pl-5">
               <li><b>Cloudflare, Inc.</b> — hosting webu, běh API a databáze. Zpracovatel; data mohou být zpracována i mimo EU na základě standardních smluvních doložek a rámce EU–US Data Privacy Framework.</li>
               <li><b>Telegram Messenger Inc.</b> a <b>Meta Platforms Ireland Ltd.</b> — jen pokud si kanál propojíte; doručují zprávy jako samostatní správci.</li>
+              <li><b>Služba upozornění vašeho prohlížeče</b> (Google u Chrome a Androidu, Apple u Safari a iPhonu, Mozilla u Firefoxu, Microsoft u Edge) — jen pokud si upozornění zapnete; předá zašifrovanou zprávu do vašeho zařízení. Obsah nepřečte.</li>
                           </ul>
             <p>Nikomu údaje neprodáváme a nepoužíváme je k reklamě.</p>
           </Oddil>

@@ -19,6 +19,17 @@ export function OdberPanel({ kompaktni = false }: { kompaktni?: boolean }) {
   return (
     <div className={`grid gap-6 ${kompaktni ? "" : "lg:grid-cols-[minmax(0,1.3fr)_minmax(0,1fr)] lg:gap-x-16"}`}>
       <ul className="space-y-3">
+        {/* Upozornění z webové aplikace (29. 9. 2026): stejné zprávy jako Telegram, bez čísla a bez účtu. */}
+        <li className="flex gap-3">
+          <span className="mt-0.5 grid h-9 w-9 shrink-0 place-items-center rounded-[12px] bg-akcent/15 text-akcent"><Ikona nazev="zvonek" velikost={16} tah={2} /></span>
+          <span>
+            <Link href="/upozorneni/" className="text-zaklad font-semibold text-inkoust underline decoration-linka underline-offset-4 hover:decoration-inkoust">Upozornění v telefonu</Link>
+            <span className="block text-male leading-snug text-tlum">Stejné zprávy jako v Telegramu, přímo z webu. Bez aplikace z obchodu, bez telefonního čísla a bez účtu. Funguje na Androidu i iPhonu.</span>
+            <Link href="/upozorneni/" className="mt-3 inline-flex min-h-[48px] items-center gap-2 rounded-full bg-akcent px-5 text-zaklad font-semibold text-papir hover:bg-akcent-svetla">
+              <Ikona nazev="zvonek" velikost={16} tah={2} /> Zapnout upozornění
+            </Link>
+          </span>
+        </li>
         <li className="flex gap-3">
           <span className="mt-0.5 grid h-9 w-9 shrink-0 place-items-center rounded-[12px] bg-akcent/15 text-akcent"><Ikona nazev="komunikace" velikost={16} tah={2} /></span>
           <span>
@@ -31,8 +42,8 @@ export function OdberPanel({ kompaktni = false }: { kompaktni?: boolean }) {
             <span className="block text-drobne leading-snug text-tlum2">Bez nové zprávy nelze usuzovat na stav situace.</span>
             {/* Hlavní akce stránky jako tlačítko, ne jen podtržený text (26. 9. 2026: z Odběru odcházelo 21 z 29 lidí). */}
             {KANALY.telegram && (
-              <a href={KANALY.telegram} target="_blank" rel="nofollow noopener noreferrer" className="mt-3 inline-flex min-h-[48px] items-center gap-2 rounded-full bg-akcent px-5 text-zaklad font-semibold text-papir hover:bg-akcent-svetla">
-                <Ikona nazev="zvonek" velikost={16} tah={2} /> Odebírat v Telegramu ↗
+              <a href={KANALY.telegram} target="_blank" rel="nofollow noopener noreferrer" className="mt-3 inline-flex min-h-[44px] items-center gap-2 rounded-full border border-akcent/60 px-5 text-zaklad font-semibold text-akcent-svetla hover:bg-akcent/10">
+                Odebírat v Telegramu ↗
               </a>
             )}
           </span>
