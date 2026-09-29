@@ -1,5 +1,39 @@
 [
   {
+    "id": "k-73462a8440b47b69",
+    "zachyceno": "2026-09-29T04:03:31.121Z",
+    "publikovano": "2026-09-29T03:59:00.000Z",
+    "zdroj": {
+      "nazev": "Novinky.cz",
+      "url": "https://www.novinky.cz/clanek/zahranicni-firma-napojena-na-ruskou-tajnou-sluzbu-infiltrovala-evropske-kriminalisty-40599824",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Firma napojená na ruskou tajnou službu infiltrovala evropské kriminalisty",
+    "titulekPuvodni": "Firma napojená na ruskou tajnou službu infiltrovala evropské kriminalisty",
+    "shrnuti": "Americká společnost Oxygen Forensics, zabývající se sběrem dat, která je obviněná z toho, že je tajně řízená z Ruska, pracovala na projektech Evropské unie a prodávala své služby evropským orgánům činným v trestním řízení. Vyplývá to z dokumentů, do kterých měl server Politico možnost nahlédnout.",
+    "kodZeme": "RU",
+    "zeme": "Rusko",
+    "kategorie": [
+      "zpravodajske",
+      "rusko"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "obvin+rusk",
+      "rusk"
+    ],
+    "naliehave": null,
+    "stav": "ceka",
+    "vyrez": {
+      "text": "Firma napojená na ruskou tajnou službu infiltrovala evropské kriminalisty - Novinky\nZobrazení snímku 1 z 0\nzáhlaví\nHlavní obsah\nFirma napojená na ruskou tajnou službu infiltrovala evropské kriminalisty\nMarek Bádal\neBook\nSdílet\nDnes 29. 9., 5:59\nAmerická společnost Oxygen Forensics, zabývající se sběrem dat, která je obviněná z toho, že je tajně řízená z Ruska, pracovala na projektech Evropské unie a prodávala své služby evropským orgánům činným v trestním řízení. Vyplývá to z dokumentů, do kterých měl server Politico možnost nahlédnout.\nFoto: Shutterstock\nIlustrační foto\nČlánek\nAmerické ministerstvo spravedlnosti podle Politica minulý týden obvinilo firmu Oxygen Forensics, která má oficiálně své ústředí ve státě Virginia, z toho, že je utajeně vlastněná a řízená Rusy. Firma vyvíjí a prodává výkonný software, který je schopný dostat a analyzovat informace z chytrých telefonů a počítačů, toto odvětví se nazývá digitální forenzika.\nStejnou firmu podle veřejně dostupných dokumentů využily minimálně dva Evropskou unií podporované projekty, zaměřené na to, jak v rámci trestního vyšetřování zlepšit způsob sběru, zpracování a sdílení elektronických důkazů.\nPrvní projekt EVIDENCE ( česky…",
+      "stazeno": "2026-09-29T04:03:33.329Z",
+      "stav": 200
+    }
+  },
+  {
     "id": "k-377fddbcc5f0343d",
     "zachyceno": "2026-09-24T09:47:04.471Z",
     "publikovano": "2026-09-23T15:04:25.000Z",
@@ -12123,46 +12157,6 @@
       "duvod": "duplicita",
       "patriK": null,
       "poznamka": "Táž událost, viz výše."
-    }
-  },
-  {
-    "id": "k-f24a0a49817c2556",
-    "zachyceno": "2026-09-24T11:03:47.008Z",
-    "publikovano": "2026-09-24T09:52:00.000Z",
-    "zdroj": {
-      "nazev": "Ukrainska Pravda (anglicky)",
-      "url": "https://www.pravda.com.ua/eng/news/2026/09/24/8054882/",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Russians destroy jewellery company in Kyiv – video",
-    "titulekPuvodni": "Russians destroy jewellery company in Kyiv – video",
-    "shrnuti": "Russia destroyed the Dukachi jewellery company in a missile attack on Kyiv on the night of 23-24 September.",
-    "kodZeme": "UA",
-    "zeme": "Ukrajina",
-    "kategorie": [
-      "hybridni",
-      "rusko"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "zeSite": null,
-    "shody": [
-      "attack on",
-      "russia"
-    ],
-    "naliehave": null,
-    "stav": "vyrizen",
-    "vyrez": {
-      "text": "Russians destroy jewellery company in Kyiv – video | Ukrainska Pravda\nRussia destroyed the Dukachi jewellery company in a missile attack on Kyiv on the night of 23-24 September.\nSource: Dukachi co-founder Anna Knyzhenko on Facebook\nDetails: No one was injured in the attack.\nAdvertisement:\n\r\n\r\n\r\n\r\n\r\n\"Today, our jewellery company was completely destroyed by a Russian missile. Everyone is safe, and that is the most important thing. We will rebuild everything else,\" Knyzhenko wrote.\nBackground: An increasing number of jewellery businesses run by sole proprietors are closing in Ukraine, while the number of companies has been growing for five consecutive years, even since the start of the full-scale war.\nYour support on Patreon helps us keep the news free and accessible.\nAdvertisement:\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nLatest news\nAdvertisement:\n\r\n\r\n\r\nAdvertisement:",
-      "stazeno": "2026-09-24T11:03:52.625Z",
-      "stav": 200
-    },
-    "vyrizeni": {
-      "kdy": "2026-09-25T19:51:38.645Z",
-      "duvod": "mimo-rozsah",
-      "patriK": null,
-      "poznamka": "Ruský úder na klenotnickou firmu v Kyjevě; uvnitř Ukrajiny, bez doloženého následku pro sledované země."
     }
   }
 ]
