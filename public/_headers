@@ -9,6 +9,19 @@
 
 /*
   Cache-Control: public, max-age=0, must-revalidate
+  # Bezpečnost (30. 9. 2026, audit po zveřejnění webu):
+  # - web nejde vložit do cizího rámu (podvržené kliknutí ve správě a účtu),
+  # - jen HTTPS, i pro poddomény (api.),
+  # - prohlížeč nesmí web pustit ke kameře, mikrofonu ani platbám; poloha
+  #   jen pro tento web (připravovaná „Použít moji polohu“),
+  # - CSP zatím jen rámy, pluginy a základní adresa; skripty a spojení se
+  #   omezí, až bude ověřené, že tím nevypadne měření ani analytika.
+  X-Frame-Options: DENY
+  Content-Security-Policy: frame-ancestors 'none'; object-src 'none'; base-uri 'self'
+  Strict-Transport-Security: max-age=31536000; includeSubDomains
+  Permissions-Policy: camera=(), microphone=(), payment=(), usb=(), geolocation=(self)
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
 
 # Soubory buildu mají v názvu hash. Když se obsah změní, změní se i název,
 # takže je bezpečné držet je v mezipaměti dlouho.

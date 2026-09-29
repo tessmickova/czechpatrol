@@ -8,7 +8,7 @@
 */
 // Změna verze = nová mezipaměť. Stará se smaže při aktivaci a stránka
 // dostane zprávu, ať nabídne obnovení — nikdy nepřepínáme obsah potichu.
-const VERZE = "cp-v3";
+const VERZE = "cp-v4"; // v4 (30. 9. 2026): pryč z mezipaměti chybové a přesměrované odpovědi
 const SKORAPKA = ["/", "/offline/", "/manifest.webmanifest", "/ikona-192.png"];
 
 self.addEventListener("install", (u) => {
@@ -47,8 +47,11 @@ self.addEventListener("fetch", (u) => {
         (hit) =>
           hit ||
           fetch(request).then((odpoved) => {
-            const kopie = odpoved.clone();
-            caches.open(VERZE).then((c) => c.put(request, kopie));
+            // Ukládá se jen úspěšná odpověď — 404 z doby nasazení by jinak zůstala „navždy“.
+            if (odpoved.ok) {
+              const kopie = odpoved.clone();
+              caches.open(VERZE).then((c) => c.put(request, kopie));
+            }
             return odpoved;
           }),
       ),
@@ -63,8 +66,16 @@ self.addEventListener("fetch", (u) => {
     u.respondWith(
       fetch(request.url, { cache: "no-cache", credentials: "same-origin" })
         .then((odpoved) => {
-          const kopie = odpoved.clone();
-          caches.open(VERZE).then((c) => c.put(request, kopie));
+          /*
+            Přesměrovanou odpověď Chrome u navigace odmítne jako síťovou
+            chybu — prohlížeč proto pošleme na cílovou adresu. Do mezipaměti
+            jde jen úspěšná a nepřesměrovaná stránka (30. 9. 2026).
+          */
+          if (odpoved.redirected) return Response.redirect(odpoved.url, 301);
+          if (odpoved.ok) {
+            const kopie = odpoved.clone();
+            caches.open(VERZE).then((c) => c.put(request, kopie));
+          }
           return odpoved;
         })
         .catch(() => caches.match(request).then((hit) => hit || caches.match("/offline/"))),

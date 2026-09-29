@@ -6,7 +6,7 @@ import type { Env } from "./typy";
  * Klíč je solený otisk IP, takže v databázi žádná IP není.
  */
 export async function omez(env: Env, req: Request, akce: string, max: number, oknoMin = 10): Promise<void> {
-  const klic = `${await otiskIp(req)}:${akce}`;
+  const klic = `${await otiskIp(req, env.KLIC_SIFROVANI ?? "")}:${akce}`;
   const nyni = new Date();
   /*
     Jeden atomický dotaz (29. 9. 2026). Dřív to bylo „přečti, pak zapiš“:

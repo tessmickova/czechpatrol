@@ -111,7 +111,8 @@ export function povolenePuvody(env: Env): string[] {
 export function povolenyPuvod(env: Env, origin: string | null): string | null {
   if (!origin) return null;
   if (povolenePuvody(env).includes(origin)) return origin;
-  if (/^http:\/\/localhost(:\d+)?$/.test(origin)) return origin;
+  // Lokální vývoj jen s VYVOJ=ano (30. 9. 2026) — v provozu by byl „důvěryhodný původ“ každý program na počítači.
+  if (env.VYVOJ === "ano" && /^http:\/\/localhost(:\d+)?$/.test(origin)) return origin;
   return null;
 }
 
@@ -140,11 +141,22 @@ export function sCors(odpoved: Response, puvod: string | null): Response {
   return new Response(odpoved.body, { status: odpoved.status, headers: h });
 }
 
-/** Otisk IP se solí podle dne — z databáze se IP nedá zpětně získat. */
-export async function otiskIp(req: Request): Promise<string> {
-  const ip = req.headers.get("CF-Connecting-IP") ?? "0.0.0.0";
+/**
+ * Otisk IP pro brzdu pokusů (30. 9. 2026 zpevněno):
+ * - IPv6 se bere jako síť /64 — jeden připojený domov má 2^64 adres a brzda
+ *   podle celé adresy se dala obejít pouhým střídáním adres v síti;
+ * - vedle data je v otisku tajný pepř (secret), jinak by šel celý prostor
+ *   IPv4 z tabulky `limity` zpětně spočítat za pár sekund.
+ */
+export function sitIp(ip: string): string {
+  if (!ip.includes(":")) return ip;
+  const casti = ip.toLowerCase().split("::")[0].split(":");
+  return casti.slice(0, 4).join(":") + "::/64";
+}
+export async function otiskIp(req: Request, pepr = ""): Promise<string> {
+  const ip = sitIp(req.headers.get("CF-Connecting-IP") ?? "0.0.0.0");
   const den = new Date().toISOString().slice(0, 10);
-  return (await sha256(`${den}|${ip}`)).slice(0, 32);
+  return (await sha256(`${pepr}|${den}|${ip}`)).slice(0, 32);
 }
 
 export function escapeHtml(s: string): string {

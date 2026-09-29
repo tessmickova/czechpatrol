@@ -19,7 +19,6 @@ export const UPOZORNENI_ZA_HODINU = 6;
 
 export async function prijmi(env: Env, req: Request): Promise<Response> {
   await omez(env, req, "tip", 5, 60);
-  if (!(await vLimituCelkem(env, "tip", TIPU_ZA_DEN, 24 * 60))) throw new ChybaHttp(429, "Hlášení je teď hodně. Zkuste to prosím zítra.");
   const t = await telo<{ popis?: string; odkaz?: string; jmeno?: string; email?: string; telefon?: string; past?: string }>(req);
   // Skryté pole „past“ vyplňují jen roboti.
   if (t.past) return json({ ok: true });
@@ -30,6 +29,8 @@ export async function prijmi(env: Env, req: Request): Promise<Response> {
   const kontakt = osobniUdajePovoleny(env);
   const odkaz = ořež(t.odkaz, MAX.odkaz);
   if (odkaz && !/^https?:\/\//.test(odkaz)) throw new ChybaHttp(400, "Odkaz musí začínat http:// nebo https://.");
+  // Celkový strop až po kontrolách — prázdné a robotí požadavky ho nevyčerpají.
+  if (!(await vLimituCelkem(env, "tip", TIPU_ZA_DEN, 24 * 60))) throw new ChybaHttp(429, "Hlášení je teď hodně. Zkuste to prosím zítra.");
   await env.DB.prepare("INSERT INTO tipy (id, vytvoreno, popis, odkaz, jmeno, email, telefon) VALUES (?, ?, ?, ?, ?, ?, ?)")
     .bind(crypto.randomUUID(), ted(), popis.slice(0, MAX.popis), odkaz, kontakt ? ořež(t.jmeno, MAX.jmeno) : null, kontakt ? ořež(t.email, MAX.email) : null, kontakt ? ořež(t.telefon, MAX.telefon) : null)
     .run();

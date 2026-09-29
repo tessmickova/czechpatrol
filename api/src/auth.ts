@@ -7,7 +7,7 @@ import {
   type AuthenticatorTransport,
   type RegistrationResponseJSON,
 } from "@simplewebauthn/server";
-import { omez } from "./limit";
+import { omez, vLimituCelkem } from "./limit";
 import { b64u, ChybaHttp, json, nahodnyToken, normalizujKod, novyObnovovaciKod, povolenyPuvod, rpIdProPuvod, sha256, stejne, ted, telo, zaDni, zaMinut, zB64u } from "./pomocne";
 import { VYCHOZI_NASTAVENI, type Env, type Nastaveni, type Prihlaseny, type RadekUctu, type Role } from "./typy";
 
@@ -51,13 +51,18 @@ export async function prihlaseny(env: Env, req: Request): Promise<Prihlaseny | n
   if (!auth?.startsWith("Bearer ")) return null;
   const hash = await sha256(auth.slice(7).trim());
   const r = await env.DB.prepare(
-    `SELECT u.id, u.role, u.nastaveni, u.nazev, s.expirace FROM relace s JOIN ucty u ON u.id = s.ucet_id WHERE s.hash = ? AND u.smazano IS NULL`,
-  ).bind(hash).first<{ id: string; role: Role; nastaveni: string; nazev: string | null; expirace: string }>();
+    `SELECT u.id, u.role, u.nastaveni, u.nazev, s.expirace, s.vytvoreno FROM relace s JOIN ucty u ON u.id = s.ucet_id WHERE s.hash = ? AND u.smazano IS NULL`,
+  ).bind(hash).first<{ id: string; role: Role; nastaveni: string; nazev: string | null; expirace: string; vytvoreno: string }>();
   if (!r || new Date(r.expirace) < new Date()) return null;
+  /* Absolutní strop relace (30. 9. 2026): ukradený token nežije donekonečna, jen když se používá. */
+  if (Date.now() - new Date(r.vytvoreno).getTime() > MAX_STARI_RELACE_DNI * 86_400_000) return null;
   // Klouzavá platnost: kdo web používá, nemusí se přihlašovat znovu.
   await env.DB.prepare("UPDATE relace SET posledni = ?, expirace = ? WHERE hash = ?").bind(ted(), zaDni(PLATNOST_RELACE_DNI), hash).run();
   return { id: r.id, role: r.role, nastaveni: nastaveniZ(r), nazev: r.nazev };
 }
+
+/** Po kolika dnech od přihlášení relace skončí, i když se používá. */
+export const MAX_STARI_RELACE_DNI = 180;
 
 export async function vyzadujPrihlaseni(env: Env, req: Request): Promise<Prihlaseny> {
   const p = await prihlaseny(env, req);
@@ -96,6 +101,8 @@ async function vyzvedniVyzvu(env: Env, id: string, druh: string): Promise<{ vyzv
 
 export async function registraceZacit(env: Env, req: Request, proUcet: string | null = null): Promise<Response> {
   await omez(env, req, "registrace", 15);
+  // Celkový strop (30. 9. 2026): brzda podle IP nezastaví zakládání účtů z mnoha adres.
+  if (!(await vLimituCelkem(env, "registrace", 300, 24 * 60))) throw new ChybaHttp(429, "Registrací je dnes hodně. Zkuste to prosím zítra.");
   const vylouceni = proUcet
     ? (await env.DB.prepare("SELECT id, transporty FROM passkeys WHERE ucet_id = ?").bind(proUcet).all<{ id: string; transporty: string | null }>()).results
     : [];
@@ -130,7 +137,9 @@ async function overRegistraci(env: Env, req: Request, druh: "registrace" | "pass
       requireUserVerification: false,
     });
   } catch (e) {
-    throw new ChybaHttp(400, `Passkey se nepodařilo ověřit: ${e instanceof Error ? e.message : "neznámá chyba"}`);
+    // Detail knihovny jen do logu, ne klientovi (30. 9. 2026).
+    console.warn("[auth] registrace:", e instanceof Error ? e.message : e);
+    throw new ChybaHttp(400, "Passkey se nepodařilo ověřit. Zkuste to prosím znovu.");
   }
   if (!v.verified) throw new ChybaHttp(400, "Passkey se nepodařilo ověřit.");
   return { ucetId, cred: v.registrationInfo.credential };
@@ -194,7 +203,8 @@ export async function prihlaseniDokoncit(env: Env, req: Request): Promise<Respon
       },
     });
   } catch (e) {
-    throw new ChybaHttp(400, `Přihlášení se nepodařilo ověřit: ${e instanceof Error ? e.message : "neznámá chyba"}`);
+    console.warn("[auth] přihlášení:", e instanceof Error ? e.message : e);
+    throw new ChybaHttp(400, "Přihlášení se nepodařilo ověřit. Zkuste to prosím znovu.");
   }
   if (!v.verified) throw new ChybaHttp(400, "Přihlášení se nepodařilo ověřit.");
   await env.DB.prepare("UPDATE passkeys SET pocitadlo = ? WHERE id = ?").bind(v.authenticationInfo.newCounter, pk.id).run();
@@ -209,6 +219,7 @@ export const ROLE_S_OBNOVOU = ["obcan", "podporovatel"] as const;
 
 export async function obnova(env: Env, req: Request): Promise<Response> {
   await omez(env, req, "obnova", 5, 30);
+  if (!(await vLimituCelkem(env, "obnova", 200, 24 * 60))) throw new ChybaHttp(429, "Obnova je teď přetížená. Zkuste to prosím později.");
   const { kod } = await telo<{ kod: string }>(req);
   const n = normalizujKod(kod ?? "");
   if (n.length !== 16) throw new ChybaHttp(400, "Kód má 16 znaků.");

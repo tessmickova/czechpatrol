@@ -54,6 +54,12 @@ export async function odpojKanal(env: Env, ucet: Prihlaseny, druh: "telegram" | 
 
 export async function ulozWhatsapp(env: Env, req: Request, ucet: Prihlaseny): Promise<Response> {
   if (!env.WHATSAPP_TOKEN || !env.WHATSAPP_PHONE_ID) throw new ChybaHttp(503, "WhatsApp zatím není zapnutý.");
+  /*
+    Číslo se zatím neověřuje, takže by šlo zadat cizí a posílat mu zprávy
+    (30. 9. 2026, audit). Dokud nebude ověřovací kód poslaný na to číslo,
+    uložení čísla je vypnuté.
+  */
+  if (env.WHATSAPP_OVERENI !== "ano") throw new ChybaHttp(503, "WhatsApp připravujeme — nejdřív ověření čísla kódem.");
   const { cislo } = await telo<{ cislo: string }>(req);
   const c = (cislo ?? "").replace(/[\s()-]/g, "");
   if (!/^\+\d{9,15}$/.test(c)) throw new ChybaHttp(400, "Číslo zadejte v mezinárodním tvaru, např. +420…");

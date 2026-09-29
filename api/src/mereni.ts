@@ -1,5 +1,5 @@
 import { omez } from "./limit";
-import { ChybaHttp, json, telo } from "./pomocne";
+import { ChybaHttp, json, telo, povolenyPuvod } from "./pomocne";
 import type { Env, Prihlaseny } from "./typy";
 
 /*
@@ -74,6 +74,11 @@ const den = () => new Date().toISOString().slice(0, 10);
 
 /** POST /mereni — dávka událostí z jedné stránky. Odpovídá 204 i na prázdno; nikdy nevrací data. */
 export async function prijmi(env: Env, req: Request): Promise<Response> {
+  /*
+    Jen z povoleného původu (30. 9. 2026): požadavek bez hlavičky Origin
+    (skript, curl) sem dřív prošel a mohl čísla ve Správě podvrhnout.
+  */
+  if (!povolenyPuvod(env, req.headers.get("Origin"))) return new Response(null, { status: 204 });
   await omez(env, req, "mereni", 120, 10);
   const t = await telo<{ udalosti?: unknown[] }>(req).catch(() => ({ udalosti: [] }));
   const udalosti = (Array.isArray(t.udalosti) ? t.udalosti : []).slice(0, NEJVIC_UDALOSTI).map(ocistiUdalost).filter((u): u is Udalost => u !== null);

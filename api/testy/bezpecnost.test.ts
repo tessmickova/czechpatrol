@@ -101,3 +101,12 @@ describe("celkový strop bez ohledu na IP", () => {
     expect(v.filter(Boolean)).toHaveLength(6);
   });
 });
+
+describe("otisk IP", () => {
+  it("IPv6 bere jako síť /64, IPv4 celou", async () => {
+    const { sitIp } = await import("../src/pomocne");
+    expect(sitIp("2001:db8:1:2:aaaa:bbbb:cccc:dddd")).toBe("2001:db8:1:2::/64");
+    expect(sitIp("2001:db8:1:2:1:1:1:1")).toBe(sitIp("2001:db8:1:2:ffff:0:0:9"));
+    expect(sitIp("203.0.113.7")).toBe("203.0.113.7");
+  });
+});

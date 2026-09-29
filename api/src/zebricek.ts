@@ -1,8 +1,12 @@
 import { platnyEmail } from "./emaily";
-import { omez } from "./limit";
+import { omez, vLimituCelkem } from "./limit";
+import { vyzadujOsobniUdaje } from "./osobni-udaje";
 import { ChybaHttp, json, ted, telo } from "./pomocne";
 import { desifruj, sifrovaniNastaveno, zasifruj } from "./sifrovani";
 import type { Env, Prihlaseny } from "./typy";
+
+/** Klíče krajů jako v data/odolnost/kraje.json (odkud je posílá web). */
+export const KRAJE_ZEBRICKU = ["praha", "stredocesky", "jihocesky", "plzensky", "karlovarsky", "ustecky", "liberecky", "kralovehradecky", "pardubicky", "vysocina", "jihomoravsky", "olomoucky", "zlinsky", "moravskoslezsky"];
 
 /*
   Žebříček připravenosti — pro přihlášené anonymní účty.
@@ -39,7 +43,7 @@ export function platnyTelefon(t: string): boolean {
 export const normalizujTelefon = (t: string) => { const c = t.replace(/[\s()-]/g, ""); return /^\d{9}$/.test(c) ? `+420${c}` : c; };
 
 export async function verejny(env: Env): Promise<Response> {
-  const { results } = await env.DB.prepare("SELECT prezdivka, skore, aktualizovano, kraj FROM zebricek ORDER BY skore DESC, aktualizovano ASC LIMIT ?").bind(VEREJNE_MAX)
+  const { results } = await env.DB.prepare("SELECT z.prezdivka, z.skore, z.aktualizovano, z.kraj FROM zebricek z JOIN ucty u ON u.id = z.ucet_id WHERE u.vytvoreno < ? ORDER BY z.skore DESC, z.aktualizovano ASC LIMIT ?").bind(new Date(Date.now() - 24 * 3_600_000).toISOString(), VEREJNE_MAX)
     .all<{ prezdivka: string; skore: number; aktualizovano: string; kraj: string | null }>();
   const pocet = (await env.DB.prepare("SELECT COUNT(*) AS n, AVG(skore) AS prumer FROM zebricek").first<{ n: number; prumer: number | null }>()) ?? { n: 0, prumer: null };
   return json({
@@ -62,10 +66,12 @@ export async function muj(env: Env, ucet: Prihlaseny): Promise<Response> {
 
 export async function uloz(env: Env, req: Request, ucet: Prihlaseny): Promise<Response> {
   await omez(env, req, "zebricek", 10, 60);
+  if (!(await vLimituCelkem(env, "zebricek", 300, 24 * 60))) throw new ChybaHttp(429, "Zápisů do žebříčku je dnes hodně. Zkuste to prosím zítra.");
   const t = await telo<{ skore?: number; kraj?: string; osob?: number; souhrn?: unknown; email?: string; telefon?: string; souhlas?: boolean }>(req);
   const skore = Number(t.skore);
   if (!Number.isInteger(skore) || skore < 0 || skore > 100) throw new ChybaHttp(400, "Skóre musí být celé číslo 0–100.");
-  const kraj = typeof t.kraj === "string" ? t.kraj.toLowerCase().replace(/[^a-z-]/g, "").slice(0, 30) || null : null;
+  /* Kraj jen ze seznamu (30. 9. 2026) — volný text by šel do veřejného výpisu. */
+  const kraj = typeof t.kraj === "string" && KRAJE_ZEBRICKU.includes(t.kraj.toLowerCase()) ? t.kraj.toLowerCase() : null;
   const osob = Number.isInteger(t.osob) && t.osob! >= 0 && t.osob! < 100 ? t.osob! : null;
   const souhrn = t.souhrn && typeof t.souhrn === "object" ? JSON.stringify(t.souhrn).slice(0, 2000) : null;
 
@@ -75,6 +81,7 @@ export async function uloz(env: Env, req: Request, ucet: Prihlaseny): Promise<Re
   let emailS: string | null = null;
   let telefonS: string | null = null;
   if (email || telefon) {
+    vyzadujOsobniUdaje(env);
     if (!sifrovaniNastaveno(env)) throw new ChybaHttp(503, "Kontakt zatím nejde uložit; do žebříčku se zařadíte i bez něj.");
     if (email && !platnyEmail(email)) throw new ChybaHttp(400, "Zadejte prosím platný e-mail, nebo pole nechte prázdné.");
     if (telefon && !platnyTelefon(telefon)) throw new ChybaHttp(400, "Zadejte prosím telefon, např. +420 777 123 456, nebo pole nechte prázdné.");

@@ -27,9 +27,8 @@ concurrency:
 jobs:
   nasadit:
     runs-on: ubuntu-latest
-    env:
-      CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
-      CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+    # Tajemství jen v krocích, které je potřebují (30. 9. 2026, audit): na úrovni
+    # úlohy by je viděly i instalační skripty cizích balíčků při `npm ci`.
     steps:
       - uses: actions/checkout@v7
         with:
@@ -115,6 +114,9 @@ jobs:
 
       - name: Založit projekt Pages, pokud ještě není
         if: steps.zmena.outputs.nasadit == 'true'
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
         run: |
           if npx --yes wrangler@3 pages project list | grep -q '^czechpatrol\|[[:space:]]czechpatrol[[:space:]]'; then
             echo "Projekt už existuje."
