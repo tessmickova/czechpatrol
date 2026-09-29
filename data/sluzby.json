@@ -1,5 +1,5 @@
 {
-  "aktualizovano": "2026-09-29T20:03:51.411Z",
+  "aktualizovano": "2026-09-29T20:14:38.966Z",
   "stavy": [
     {
       "klic": "cloudflare",
@@ -7,28 +7,28 @@
       "popis": "Minor Service Outage",
       "incidenty": [
         {
+          "nazev": "OTP Deliverability Errors",
+          "odkaz": "https://www.cloudflarestatus.com/incidents/vcstgt8gqkyk",
+          "aktualizovano": "2026-09-29T20:11:20.189Z"
+        },
+        {
           "nazev": "Network Performance Degradation — Asia-Pacific",
           "odkaz": "https://www.cloudflarestatus.com/incidents/8wmvkv5jkf15",
-          "aktualizovano": "2026-09-25T08:50:56.000Z"
+          "aktualizovano": "2026-09-25T08:50:56.074Z"
         },
         {
           "nazev": "Cloudflare One Clients are incorrectly challenged on some sites",
           "odkaz": "https://www.cloudflarestatus.com/incidents/tl0vrgjy99r0",
-          "aktualizovano": "2026-09-23T11:02:41.000Z"
-        },
-        {
-          "nazev": "Incorrect geo location for some Cloudflare WARP users",
-          "odkaz": "https://www.cloudflarestatus.com/incidents/9g65dxfbcjln",
-          "aktualizovano": "2026-09-01T08:29:56.000Z"
+          "aktualizovano": "2026-09-23T11:02:41.673Z"
         }
       ],
       "postizene": [
         "Cloudflare Sites and Services",
         "Africa",
         "Auckland, New Zealand - (AKL)",
-        "Arica, Chile - (ARI)"
+        "Access"
       ],
-      "zkontrolovano": "2026-09-29T20:03:51.411Z",
+      "zkontrolovano": "2026-09-29T20:14:38.966Z",
       "chyba": null
     },
     {
@@ -48,7 +48,7 @@
         "Zoom Phone - Global",
         "Zoom Phone - EMEA"
       ],
-      "zkontrolovano": "2026-09-29T20:03:51.411Z",
+      "zkontrolovano": "2026-09-29T20:14:38.966Z",
       "chyba": null
     },
     {
@@ -57,7 +57,7 @@
       "popis": "All Systems Operational",
       "incidenty": [],
       "postizene": [],
-      "zkontrolovano": "2026-09-29T20:03:51.411Z",
+      "zkontrolovano": "2026-09-29T20:14:38.966Z",
       "chyba": null
     }
   ]
