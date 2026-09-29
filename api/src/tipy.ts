@@ -1,5 +1,5 @@
 import { posliTelegram } from "./dorucovani";
-import { omez } from "./limit";
+import { omez, vLimituCelkem } from "./limit";
 import { osobniUdajePovoleny } from "./osobni-udaje";
 import { ChybaHttp, json, ted, telo } from "./pomocne";
 import type { Env, Prihlaseny } from "./typy";
@@ -10,9 +10,16 @@ import type { Env, Prihlaseny } from "./typy";
 */
 
 const MAX = { popis: 2000, odkaz: 500, jmeno: 120, email: 200, telefon: 40 };
+/*
+  Celkové stropy (30. 9. 2026, po zveřejnění webu chodily do Telegramu správkyně
+  cizí texty). Brzda podle IP se dá obejít střídáním adres, tyhle ne.
+*/
+export const TIPU_ZA_DEN = 200;
+export const UPOZORNENI_ZA_HODINU = 6;
 
 export async function prijmi(env: Env, req: Request): Promise<Response> {
   await omez(env, req, "tip", 5, 60);
+  if (!(await vLimituCelkem(env, "tip", TIPU_ZA_DEN, 24 * 60))) throw new ChybaHttp(429, "Hlášení je teď hodně. Zkuste to prosím zítra.");
   const t = await telo<{ popis?: string; odkaz?: string; jmeno?: string; email?: string; telefon?: string; past?: string }>(req);
   // Skryté pole „past“ vyplňují jen roboti.
   if (t.past) return json({ ok: true });
@@ -32,7 +39,13 @@ export async function prijmi(env: Env, req: Request): Promise<Response> {
     Jde jen text a odkaz, nikdy kontakt. Selhání Telegramu hlášení neshodí:
     v databázi už je.
   */
-  if (env.SPRAVCE_CHAT && env.TELEGRAM_BOT_TOKEN) {
+  /*
+    Od 30. 9. 2026 jde do Telegramu jen UPOZORNĚNÍ, ne text hlášení ani odkaz.
+    Text píše kdokoli z internetu: v Telegramu by byl klikací odkaz (podvod,
+    phishing) a obtěžování by šlo přímo do telefonu správkyně. Číst se dá
+    ve Správě. Nad hodinový strop se už neupozorňuje (hlášení se uloží).
+  */
+  if (env.SPRAVCE_CHAT && env.TELEGRAM_BOT_TOKEN && (await vLimituCelkem(env, "tip-upozorneni", UPOZORNENI_ZA_HODINU, 60))) {
     await posliTelegram(env, env.SPRAVCE_CHAT, zpravaOTipu(popis, odkaz)).catch(() => null);
   }
   return json({ ok: true }, 201);
@@ -40,15 +53,16 @@ export async function prijmi(env: Env, req: Request): Promise<Response> {
 
 const html = (s: string) => s.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
 
-/** Zpráva pro správce: bez kontaktu, zkrácená, bezpečná pro HTML režim Telegramu. */
+/**
+ * Upozornění pro správce: žádný text od odesílatele, žádný odkaz — jen že
+ * hlášení přišlo a jak vypadá. Obsah se čte ve Správě.
+ */
 export function zpravaOTipu(popis: string, odkaz: string | null): string {
-  const text = popis.length > 900 ? popis.slice(0, 900) + "…" : popis;
   return [
     "<b>Nové hlášení z webu</b>",
-    html(text),
-    odkaz ? `Odkaz: ${html(odkaz)}` : "Bez odkazu na zdroj.",
-    "Vyřídit: /sprava/ → Hlášení",
-  ].join("\n\n");
+    `${popis.length} znaků · ${odkaz ? "s odkazem" : "bez odkazu"}`,
+    "Text se sem neposílá (píše ho kdokoli z internetu). Přečíst: Správa → Hlášení.",
+  ].join("\n");
 }
 
 export async function seznam(env: Env, ucet: Prihlaseny): Promise<Response> {

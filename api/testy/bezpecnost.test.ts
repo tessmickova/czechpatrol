@@ -89,3 +89,15 @@ describe("konfigurace workeru", () => {
     }
   });
 });
+
+describe("celkový strop bez ohledu na IP", () => {
+  it("pustí max za okno, z různých IP dohromady", async () => {
+    const { vLimituCelkem } = await import("../src/limit");
+    const sql = await novaDb();
+    sql.exec("CREATE TABLE limity (klic TEXT PRIMARY KEY, pocet INTEGER NOT NULL, okno_do TEXT NOT NULL)");
+    const env = { DB: d1(sql) } as never;
+    const v = [];
+    for (let i = 0; i < 9; i++) v.push(await vLimituCelkem(env, "x", 6, 60));
+    expect(v.filter(Boolean)).toHaveLength(6);
+  });
+});
