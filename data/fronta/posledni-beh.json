@@ -1,5 +1,5 @@
 {
-  "kdy": "2026-09-29T04:01:25.671Z",
+  "kdy": "2026-09-29T08:01:32.917Z",
   "zdroje": [
     {
       "klic": "e-sbirka",
@@ -17,10 +17,11 @@
     },
     {
       "klic": "psp",
-      "ok": true,
-      "stav": 200,
+      "ok": false,
+      "stav": null,
       "pocetPolozek": 0,
-      "vysledek": "ok"
+      "chyba": "The operation was aborted due to timeout",
+      "vysledek": "chyba"
     },
     {
       "klic": "senat",
@@ -82,10 +83,11 @@
     },
     {
       "klic": "ote",
-      "ok": true,
-      "stav": 200,
+      "ok": false,
+      "stav": null,
       "pocetPolozek": 0,
-      "vysledek": "ok"
+      "chyba": "The operation was aborted due to timeout",
+      "vysledek": "chyba"
     },
     {
       "klic": "sshr",

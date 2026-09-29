@@ -1,5 +1,574 @@
 [
   {
+    "id": "k-e765638546678309",
+    "zachyceno": "2026-09-29T08:04:33.672Z",
+    "publikovano": "2026-09-29T07:15:44.000Z",
+    "zdroj": {
+      "nazev": "Euronews",
+      "url": "https://www.euronews.com/2026/09/29/new-russian-mobilisation-putin-signs-decree-adding-15500-troops-to-army",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "New Russian mobilisation: Putin signs decree adding 15,500 troops to army",
+    "titulekPuvodni": "New Russian mobilisation: Putin signs decree adding 15,500 troops to army",
+    "shrnuti": "Putin had previously signed documents boosting the size of the army in March, June and July. The combined increase since March amounts to 47,860 soldiers.",
+    "kodZeme": "RU",
+    "zeme": "Rusko",
+    "kategorie": [
+      "pravo",
+      "rusko"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "signed+mobilisation",
+      "russia"
+    ],
+    "naliehave": {
+      "druh": "mobilizace-rusko",
+      "stupen": 1,
+      "proc": "signed+mobilisation"
+    },
+    "stav": "ceka",
+    "vyrez": {
+      "text": "New Russian mobilisation: Putin signs decree adding 15,500 troops to army | Euronews\nAdvertisement\nBy&nbsp Александра Ягодкина\nPublished on\n29/09/2026 - 9:15 GMT+2\nShare\nComments\nAdd Euronews on Google\nShare\nFacebook\nTwitter\nFlipboard\nSend\nReddit\nLinkedin\nMessenger\nTelegram\nVK\nBluesky\nThreads\nWhatsapp\nPutin had previously signed documents boosting the size of the army in March, June and July. The combined increase since March amounts to 47,860 soldiers.\nRussian President Vladimir Putin has signed a decree boosting the size of the army by 15,500 troops in the fourth such order this year.\nADVERTISEMENT\nADVERTISEMENT\n\"The authorised personnel strength of the Russian armed forces is to be set at 2,441,630 units, including 1,550,500 military personnel,\" the decree said.\nPutin had previously signed documents boosting the size of the army in March, June and July. The combined increase since March amounts to 47,860 soldiers.\nThe president did not state the reason for the decision, but it has been taken against the backdrop of rising losses on both the Russian and Ukrainian sides in the full-scale war in Ukraine.\nThis year, the pace of advance of Russian troops on the battlefield has…",
+      "stazeno": "2026-09-29T08:04:36.361Z",
+      "stav": 200
+    }
+  },
+  {
+    "id": "k-15085f82f16fe66d",
+    "zachyceno": "2026-09-29T08:04:33.292Z",
+    "publikovano": null,
+    "zdroj": {
+      "nazev": "LRT English (Litva)",
+      "url": "https://www.lrt.lt/en/news-in-english/19/3067027/lithuania-to-test-air-raid-sirens-on-tuesday",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Lithuania to test air raid sirens on Tuesday",
+    "titulekPuvodni": "Lithuania to test air raid sirens on Tuesday",
+    "shrnuti": "",
+    "kodZeme": "LT",
+    "zeme": "Litva",
+    "kategorie": [
+      "drony"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "air raid siren"
+    ],
+    "naliehave": null,
+    "stav": "ceka",
+    "vyrez": {
+      "text": "Lithuania to test air raid sirens on Tuesday - LRT\n\r\n\r\n\r\nNaujienų srautas\nNews\n3 h ago\nI worry about Russian miscalculation in Baltics – interview with Britain’s top general\nNews\n3 h ago\nLithuania to test air raid sirens on Tuesday\nNews\n19 h ago\nLithuania to showcase culture, arts in 52 countries during EU presidency\nNews\n20 h ago\nLithuania imposes national sanctions on Russian billionaires Usmanov, Fridman\nNews\n1 d ago\nRussian language study falls, German rises in Lithuanian schools\nNews\n1 d ago\nCanadian, Norwegian, Ukrainian ambassadors in Lithuania sign plea to bring back detainees\nNews\n1 d ago\nLithuania sticks to 2030 Rail Baltica deadline despite Baltic agreement to extend it\nNews\n1 d ago\nAmid warnings over possible attack, Europe mulls contingency plans\nNews\n2 d ago\nBetween three countries, a young Lithuanian finds her way home\nNews\n2 d ago\nLithuania’s interior minister wants to restore warning shots for police and border guards\nNews\n3 d ago\nYoung Lithuanian farmers compete in plowing contest\nNews\n3 d ago\nCan we still call Russia’s strategy against the EU hybrid?\nNews\n3 d ago\nRare 17th-century wall paintings restored at Lithuania’s Siesikai Castle\nNews\n3 d ago\nLithuania’s…",
+      "stazeno": "2026-09-29T08:04:36.376Z",
+      "stav": 200
+    }
+  },
+  {
+    "id": "k-0ec3ee961279bf38",
+    "zachyceno": "2026-09-29T08:04:33.199Z",
+    "publikovano": "2026-09-29T07:36:00.000Z",
+    "zdroj": {
+      "nazev": "ERR News (Estonsko)",
+      "url": "https://news.err.ee/1610151220/estonia-russia-responsible-for-arson-attack-on-defense-contractor-milrem",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Estonia: Russia responsible for arson attack on defense contractor Milrem",
+    "titulekPuvodni": "Estonia: Russia responsible for arson attack on defense contractor Milrem",
+    "shrnuti": "Based on ISS intelligence, there are grounds to state with full confidence that the arson attack on the Milrem building in Tallinn on August 15 was an act of sabotage commissioned by Russian special services, the government said in a press release.",
+    "kodZeme": "EE",
+    "zeme": "Estonsko",
+    "kategorie": [
+      "sabotaz",
+      "hybridni",
+      "rusko"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "sabotage",
+      "arson",
+      "attack on",
+      "russia"
+    ],
+    "naliehave": null,
+    "stav": "ceka",
+    "vyrez": {
+      "text": "Estonia: Russia responsible for arson attack on defense contractor Milrem | News | ERR\n{{noticeUi.heading[langCode]}}\n{{infoLink[langCode].label}}\n{{noticeUi.allowAllLabel[langCode]}}\n{{rewokeLabels[langCode]}}\nX !\nNews\nERR News\n{{1790667360000 | amCalendar}}\nshare Facebook X (Twitter) e-mail\nMilrem Robotics. Source: Siim Lõvi /ERR\nNews\nBased on ISS intelligence, there are grounds to state with full confidence that the arson attack on the Milrem building in Tallinn on August 15 was an act of sabotage commissioned by Russian special services, the government said in a press release.\n\"Today, we can state with full confidence that the arson attack on Milrem in Estonia on the night of August 15 was an act of sabotage commissioned by the special services of the Russian Federation. The Estonian Internal Security Service (ISS) has reached this conclusion after a thorough assessment of the information it has gathered,\" Prime Minister Kristen Michal said.\nAccording to the prime minister, the act of sabotage is part of Russia's broader campaign in Europe, aimed at intimidating Europe and forcing it to reduce its support for Ukraine and the pressure on Russia. \"Such activity is absolutely…",
+      "stazeno": "2026-09-29T08:04:37.202Z",
+      "stav": 200
+    }
+  },
+  {
+    "id": "k-7cd020e170fc5643",
+    "zachyceno": "2026-09-29T08:04:32.862Z",
+    "publikovano": "2026-09-29T07:00:00.000Z",
+    "zdroj": {
+      "nazev": "Novinky.cz",
+      "url": "https://www.novinky.cz/clanek/kultura-hudba-colours-of-ostrava-hlasi-hudebni-bombu-prijede-robbie-williams-40599818",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Colours of Ostrava hlásí hudební bombu. Přijede Robbie Williams",
+    "titulekPuvodni": "Colours of Ostrava hlásí hudební bombu. Přijede Robbie Williams",
+    "shrnuti": "Pořadatelé Colours of Ostrava mají v rukávu výjimečnou kartu. V roce 2027 vystoupí hned první večer festivalu na hlavním pódiu britský zpěvák a hudebník Robbie Williams. Do Ostravy přiveze své poslední album Britpop a připomene i třicet let od vydání svého prvního sólového alba Life Thru a Lens. Čty",
+    "kodZeme": "CZ",
+    "zeme": "Česko",
+    "kategorie": [
+      "sabotaz"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "bomb"
+    ],
+    "naliehave": null,
+    "stav": "ceka",
+    "vyrez": {
+      "text": "Colours of Ostrava 2027: Přijede Robbie Williams\nZobrazení snímku 1 z 0\nzáhlaví\nHlavní obsah\nColours of Ostrava hlásí hudební bombu. Přijede Robbie Williams\nJaroslav Špulák\n2:26\nChcete-li článek poslouchat, přihlaste se\neBook\nSdílet\nDnes 29. 9., 9:00\nPořadatelé Colours of Ostrava mají v rukávu výjimečnou kartu. V roce 2027 vystoupí hned první večer festivalu na hlavním pódiu britský zpěvák a hudebník Robbie Williams. Do Ostravy přiveze své poslední album Britpop a připomene i třicet let od vydání svého prvního sólového alba Life Thru a Lens. Čtyřiadvacátý ročník Colours of Ostrava se uskuteční od 21. do 24. července 2027.\nFoto: Kateřina Šulová, ČTK\nRobbie Williams je na hudební scéně už 36 let, od roku 1990.\nČlánek\n„Robbie Williams je pro mě především persona. Je to člověk, kterého znáte, i když třeba nejste jeho fanouškem. Za více než tři desetiletí dokázal zůstat relevantní, měnit se, překvapovat, a přitom si zachovat vlastní tvář. A právě takové osobnosti chceme na Colours přivážet. Umělce, kteří mají za sebou silný příběh, velké písně a zároveň dokážou vytvořit okamžik, který si člověk bude pamatovat i dlouho po skončení koncertu,“ říká umělecký ředitel Colours of Ostrava…",
+      "stazeno": "2026-09-29T08:04:37.753Z",
+      "stav": 200
+    }
+  },
+  {
+    "id": "k-8ad8a5c6bd2c8df6",
+    "zachyceno": "2026-09-29T08:04:36.158Z",
+    "publikovano": "2026-09-29T06:59:00.000Z",
+    "zdroj": {
+      "nazev": "Ukrinform (anglicky)",
+      "url": "https://www.ukrinform.net/rubric-ato/4169066-russian-attack-on-kyiv-buildings-damaged-in-two-districts-one-injured.html",
+      "typ": "wire",
+      "primarni": false
+    },
+    "titulek": "Russian attack on Kyiv: Buildings damaged in two districts, one injured",
+    "titulekPuvodni": "Russian attack on Kyiv: Buildings damaged in two districts, one injured",
+    "shrnuti": "One person was injured and another 10 people were evacuated as a result of the Russian attack on Kyiv in the morning.",
+    "kodZeme": "UA",
+    "zeme": "Ukrajina",
+    "kategorie": [
+      "hybridni",
+      "rusko"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "attack on",
+      "russia"
+    ],
+    "naliehave": null,
+    "stav": "ceka",
+    "vyrez": {
+      "text": "Russian attack on Kyiv: Buildings damaged in two districts, one injured\n\r\nSubscription\nNewsletters\nPhotobank\nUkrinform - Ukrainian National News Agency\nFounded in 1918\nTuesday, 29 September 2026, 11:04\nWar\nEconomy\nSports\nMore ☰\nContacts\nEng\nУкр\nEng\nEsp\nDeu\nعربي\nFra\n日本語\nPol\n&times;\nAll topics\nWar\nRecovery of Ukraine\nPolitics\nEconomy\nFact checks\nDefense\nSociety and Culture\nSports\nCrime\nAccidents and Emergencies\nAgency\nInformation on Agency\nOur Contacts\nSubscribtion Terms\nOur Services\nPrivacy policy and personal data protection\nAdditional\nPublications\nInterviews\nPhoto\nVideo\nLongreads\nReleases\nServices\nSubscription\nNewsletters\nPhotobank\n\r\n\r\n\r\nOne person was injured and another 10 people were evacuated as a result of the Russian attack on Kyiv in the morning.\nAccording to Ukrinform, Ukraine's Ministry of Internal Affairs reported this on Facebook .\n\r\n\r\n\r\n\r\n\r\n\r\nAccording to the ministry, a six-story residential building in Kyiv's Holosiivskyi district was hit.\n\r\n\r\nIn addition, two private residential buildings were damaged in the Solomianskyi district.\n\r\n\r\n\"All fires have been extinguished,\" the ministry added.\n\r\n\r\nRead also: Russian drone strike on private home in Kyiv region injures…",
+      "stazeno": "2026-09-29T08:04:38.609Z",
+      "stav": 200
+    }
+  },
+  {
+    "id": "k-ed6f78c949fbb746",
+    "zachyceno": "2026-09-29T08:04:36.198Z",
+    "publikovano": "2026-09-29T06:56:00.000Z",
+    "zdroj": {
+      "nazev": "Ukrainska Pravda (anglicky)",
+      "url": "https://www.pravda.com.ua/eng/news/2026/09/29/8055549/",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Russians attack infrastructure in Odesa: lorries destroyed, two people injured",
+    "titulekPuvodni": "Russians attack infrastructure in Odesa: lorries destroyed, two people injured",
+    "shrnuti": "Two people have been injured in a Russian attack on Odesa on 29 September, according to preliminary reports. Three lorries have been destroyed and another eight damaged.",
+    "kodZeme": "UA",
+    "zeme": "Ukrajina",
+    "kategorie": [
+      "hybridni",
+      "rusko"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "attack on",
+      "russia"
+    ],
+    "naliehave": null,
+    "stav": "ceka",
+    "vyrez": {
+      "text": "Russians attack infrastructure in Odesa: lorries destroyed, two people injured | Ukrainska Pravda\nPhoto: State Emergency Service of Ukraine\nTwo people have been injured in a Russian attack on Odesa on 29 September, according to preliminary reports . Three lorries have been destroyed and another eight damaged.\nSource: Serhii Lysak , Head of Odesa City Military Administration\nDetails: Lysak said that three lorries had been destroyed and another eight damaged in the Russian strike on infrastructure. Buildings were also damaged.\nAdvertisement:\n\r\n\r\n\r\n\r\n\r\nInitial reports indicated that there were no casualties, but it later emerged that two people had been injured.\nEmergency services are working at the scene. Information on the aftermath of the attack is being confirmed.\nBackground: Lysak previously reported that Russian forces had attacked infrastructure in Odesa overnight and in the morning. The strikes caused a fire, which was quickly extinguished.\nSubscribe on Patreon to back our journalism long-term.\nOdesa\nAdvertisement:\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nOdesa\nNumber of people injured in Russian strike on Odesa rises to six\nDog shelter catches fire near Odesa after Russian attack –…",
+      "stazeno": "2026-09-29T08:04:39.355Z",
+      "stav": 200
+    }
+  },
+  {
+    "id": "k-957662233f95b25f",
+    "zachyceno": "2026-09-29T08:04:36.201Z",
+    "publikovano": "2026-09-29T06:48:00.000Z",
+    "zdroj": {
+      "nazev": "Ukrainska Pravda (anglicky)",
+      "url": "https://www.pravda.com.ua/eng/news/2026/09/29/8055548/",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Russia attacks railway facility in Vinnytsia Oblast",
+    "titulekPuvodni": "Russia attacks railway facility in Vinnytsia Oblast",
+    "shrnuti": "A Russian attack on a railway facility in Vinnytsia Oblast left over 15,000 consumers without electricity, local authorities reported",
+    "kodZeme": "RU",
+    "zeme": "Rusko",
+    "kategorie": [
+      "hybridni",
+      "infrastruktura",
+      "rusko"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "attack on",
+      "railway",
+      "russia"
+    ],
+    "naliehave": null,
+    "stav": "ceka",
+    "vyrez": {
+      "text": "Russian strike on Vinnytsia railway cuts power to 15,000 consumers | Ukrainska Pravda\nStock photo\nRussian forces struck a railway infrastructure facility in Vinnytsia Oblast on the morning of 29 September, leaving more than 15,000 consumers without power.\nSource: Natalia Zabolotna, Head of Vinnytsia Oblast Military Administration, on Telegram\nDetails: Emergency services are working at the site of the strike and response efforts to deal with the aftermath of the attack are ongoing.\nAdvertisement:\n\r\n\r\n\r\n\r\n\r\nAccording to Zabolotna, no casualties have been reported as a result of the strike.\nBackground: Russian drones attacked Vinnytsia Oblast early on 20 September, damaging a railway infrastructure facility. A fire broke out at the time, which was extinguished by firefighters, and no casualties were reported.\nSubscribe on Patreon to back our journalism long-term.\nVinnytsia Oblast\nrailways\nUkrainian Railways\nattack\nAdvertisement:\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nVinnytsia Oblast\nRussians attack railway infrastructure in Vinnytsia Oblast – photo\nRussians attack railway infrastructure in Vinnytsia Oblast\nTwo people injured by falling UAV debris in Vinnytsia Oblast – photos\nLatest…",
+      "stazeno": "2026-09-29T08:04:39.545Z",
+      "stav": 200
+    }
+  },
+  {
+    "id": "k-ed406feac0ee3bc2",
+    "zachyceno": "2026-09-29T08:04:34.259Z",
+    "publikovano": "2026-09-29T06:30:00.000Z",
+    "zdroj": {
+      "nazev": "Aktuality.sk",
+      "url": "https://www.aktuality.sk/clanok/dxM3sR5/usa-hovoria-o-zahranicnom-akterovi-za-planom-utoku-na-zakladnu-v-britanii/",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "USA hovoria o zahraničnom aktérovi za plánom útoku na základňu v Británii",
+    "titulekPuvodni": "USA hovoria o zahraničnom aktérovi za plánom útoku na základňu v Británii",
+    "shrnuti": "Za údajným plánom bombového útoku pri britskej základni RAF Fairford mohol podľa Marca Rubia stáť zahraničný aktér. Minister spomenul aj Irán.",
+    "kodZeme": "GB",
+    "zeme": "Spojené království",
+    "kategorie": [
+      "sabotaz"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "bomb"
+    ],
+    "naliehave": null,
+    "stav": "ceka",
+    "vyrez": {
+      "text": "USA hovoria o zahraničnom aktérovi za plánom útoku na základňu v Británii | Aktuality.sk\nAktuality\nŠport\nDiva\nNajmama\nŽivé\nRecepty\nDobrú chuť\nSlovník\n13 °C -\nBratislava\nutorok 29. 9.\n29. 9.\nMichal\nMichaela\nSprávy dnes 29. Sep 2026 o 08:30\n1 min. čítania\nPridať do Google\nUSA hovoria o zahraničnom aktérovi za plánom útoku na základňu v Británii\n1 fotka v galérii\nBritská letecká základňa Fairford Zdroj: Reuters/via REUTERS\nTASR\nAktuality.sk\nUložiť článok\nZa údajným plánom bombového útoku pri britskej základni RAF Fairford mohol podľa Marca Rubia stáť zahraničný aktér. Minister spomenul aj Irán.\nAmerický minister zahraničných vecí Marco Rubio v pondelok uviedol, že za údajným plánom bombového útoku v blízkosti britskej leteckej základne využívanej Spojenými štátmi stojí „zahraničný aktér“. TASR o tom informuje na základe správ stanice Fox News a agentúry AFP.\nRubio v rozhovore pre Fox News uviedol, že údajné teroristické sprisahanie, ktoré cez víkend zmarili na základni RAF Fairford v Británii, predstavovalo veľmi vážnu hrozbu. Päť ľudí zadržali a neskôr prepustili na kauciu. „To, čo sa mohlo cez víkend v Spojenom kráľovstve stať, je veľmi vážna vec. Je zrejmé, že do toho bol zapojený…",
+      "stazeno": "2026-09-29T08:04:39.565Z",
+      "stav": 200
+    }
+  },
+  {
+    "id": "k-c8d8b7460319f57e",
+    "zachyceno": "2026-09-29T08:04:32.795Z",
+    "publikovano": "2026-09-29T06:20:46.000Z",
+    "zdroj": {
+      "nazev": "ČT24 — hlavní zprávy",
+      "url": "https://ct24.ceskatelevize.cz/clanek/svet/rusove-utocili-na-kyjev-zasahli-skolu-i-obytny-dum-378042",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Rusové útočili na Kyjev, zasáhli školu i obytný dům",
+    "titulekPuvodni": "Rusové útočili na Kyjev, zasáhli školu i obytný dům",
+    "shrnuti": "Kyjev v noci čelil ruskému raketovému útoku, zasaženo bylo několik budov, uvedl starosta ukrajinské metropole Vitalij Klyčko. Počet obětí předchozího pondělního útoku na Kyjev vzrostl na dvě, zraněno bylo 26 lidí, informovala agentura Ukrinform. Pokračující humanitární krizi v Oleškách se ukrajinská",
+    "kodZeme": "UA",
+    "zeme": "Ukrajina",
+    "kategorie": [
+      "drony",
+      "vojsko",
+      "rusko"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "dron+zasahl",
+      "dron",
+      "armada",
+      "rusk"
+    ],
+    "naliehave": null,
+    "stav": "ceka",
+    "vyrez": {
+      "text": "Rusové útočili na Kyjev, zasáhli školu i obytný dům — ČT24 — Česká televize\nŽivé vysílání\nTV program\nPočasí\nTeletext\nE-shop\nVše o ČT\nTV poplatky\nKontakty\nSpravovat účet\nOblíbené pořady\nRozkoukaná videa\nPřihlásit se do TV\nOdhlásit se\nRusové útočili na Kyjev, zasáhli školu i obytný dům\nČTK ,\nČT24\n, srk\npřed 1 h hodinou | Zdroj: ČTK , ČT24\nTrosky domu v Kyjevě po ruském útoku, 29. 9. 2026\nZdroj: Reuters/Thomas Peter\nKyjev v noci čelil ruskému raketovému útoku, zasaženo bylo několik budov, uvedl starosta ukrajinské metropole Vitalij Klyčko. Počet obětí předchozího pondělního útoku na Kyjev vzrostl na dvě, zraněno bylo 26 lidí, informovala agentura Ukrinform. Pokračující humanitární krizi v Oleškách se ukrajinská armáda pokouší řešit skrze dodávky pomocí dronů.\nV Solomjanské čtvrti byla v noci zasažena budova vzdělávací instituce, která začala hořet, napsal Klyčko na svém telegramovém účtu. Dodal, že na místo míří záchranné složky. Útok v téže čtvrti zasáhl také administrativní budovu, trosky rakety dopadly na dvůr obytného domu. V Pečerské čtvrti začal hořet třípatrový dům.\nUkrajinské úřady v noci také aktualizovaly počet obětí dronového útoku, který v pondělí zasáhl budovu Národní…",
+      "stazeno": "2026-09-29T08:04:41.186Z",
+      "stav": 200
+    }
+  },
+  {
+    "id": "k-528f0551992011b7",
+    "zachyceno": "2026-09-29T08:04:32.880Z",
+    "publikovano": "2026-09-29T06:04:47.000Z",
+    "zdroj": {
+      "nazev": "Novinky.cz",
+      "url": "https://www.novinky.cz/clanek/valka-na-ukrajine-zelenskyj-kldr-chysta-vyslani-dalsich-10-tisic-vojaku-do-ruska-40599838",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Zelenskyj: KLDR chystá vyslání dalších 10 tisíc vojáků do Ruska",
+    "titulekPuvodni": "Zelenskyj: KLDR chystá vyslání dalších 10 tisíc vojáků do Ruska",
+    "shrnuti": "Severní Korea připravuje vyslání dalších 10 000 vojáků do Ruska, kde by se měli zapojit do války proti Ukrajině. V pondělí to uvedl ukrajinský prezident Volodymyr Zelenskyj. Na ruském území se podle něj nyní nachází více než 8000 severokorejských vojáků. Rusko tak podle jeho slov už zahájilo mobiliz",
+    "kodZeme": "UA",
+    "zeme": "Ukrajina",
+    "kategorie": [
+      "vojsko",
+      "rusko"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "vojak+mobiliz",
+      "vojak",
+      "rusk"
+    ],
+    "naliehave": null,
+    "stav": "ceka",
+    "vyrez": {
+      "text": "Zelenskyj: KLDR chystá vyslání dalších 10 tisíc vojáků do Ruska - Novinky\nZobrazení snímku 1 z 0\nzáhlaví\nHlavní obsah\nZelenskyj: KLDR chystá vyslání dalších 10 tisíc vojáků do Ruska\nLenka Komárková , ČTK\nvybrat autory ke sledování\n1:57\nChcete-li článek poslouchat, přihlaste se\neBook\nSdílet\nDnes 29. 9., 8:04\nSeverní Korea připravuje vyslání dalších 10 000 vojáků do Ruska, kde by se měli zapojit do války proti Ukrajině. V pondělí to uvedl ukrajinský prezident Volodymyr Zelenskyj. Na ruském území se podle něj nyní nachází více než 8000 severokorejských vojáků. Rusko tak podle jeho slov už zahájilo mobilizaci a zvyšuje počet lidí, které nabírá.\nFoto: ČTK/AP\nSeverokorejští vojáci. Ilustrační foto\nČlánek\n„Na ruském území se nyní nachází více než 8000 severokorejských vojáků. Kromě toho probíhají přípravy na nasazení dalších 10 000 vojáků – jsou vybíráni k výcviku a následnému vyslání do Ruska,“ napsal Zelenskyj na síti X .\nPodle Zelenského Rusko za tuto vojenskou pomoc mimo jiné platí technologiemi. Uvedl, že v Severní Koreji byla s ruskou technickou podporou zahájena výroba útočných dronů typu Šáhed.\n„Rusové zahájili mobilizaci“\n„Ve skutečnosti už Rusové zahájili další mobilizaci –…",
+      "stazeno": "2026-09-29T08:04:44.717Z",
+      "stav": 200
+    }
+  },
+  {
+    "id": "k-c9414283a1b52e6a",
+    "zachyceno": "2026-09-29T08:04:36.164Z",
+    "publikovano": "2026-09-29T05:58:00.000Z",
+    "zdroj": {
+      "nazev": "Ukrinform (anglicky)",
+      "url": "https://www.ukrinform.net/rubric-ato/4169043-russian-drone-attacks-continue-in-kyiv-as-debris-sparks-fire-on-residential-building-roof.html",
+      "typ": "wire",
+      "primarni": false
+    },
+    "titulek": "Russian drone attacks continue in Kyiv as debris sparks fire on residential building roof",
+    "titulekPuvodni": "Russian drone attacks continue in Kyiv as debris sparks fire on residential building roof",
+    "shrnuti": "A fire broke out on the roof of a residential building in Kyiv’s Holosiivskyi District after debris from a drone fell.",
+    "kodZeme": "UA",
+    "zeme": "Ukrajina",
+    "kategorie": [
+      "drony",
+      "rusko"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "dron+fell",
+      "debris+dron",
+      "dron",
+      "drone",
+      "russia"
+    ],
+    "naliehave": null,
+    "stav": "ceka",
+    "vyrez": {
+      "text": "Russian drone attacks continue in Kyiv as debris sparks fire on residential building roof\n\r\nSubscription\nNewsletters\nPhotobank\nUkrinform - Ukrainian National News Agency\nFounded in 1918\nTuesday, 29 September 2026, 11:04\nWar\nEconomy\nSports\nMore ☰\nContacts\nEng\nУкр\nEng\nEsp\nDeu\nعربي\nFra\n日本語\nPol\n&times;\nAll topics\nWar\nRecovery of Ukraine\nPolitics\nEconomy\nFact checks\nDefense\nSociety and Culture\nSports\nCrime\nAccidents and Emergencies\nAgency\nInformation on Agency\nOur Contacts\nSubscribtion Terms\nOur Services\nPrivacy policy and personal data protection\nAdditional\nPublications\nInterviews\nPhoto\nVideo\nLongreads\nReleases\nServices\nSubscription\nNewsletters\nPhotobank\n\r\n\r\n\r\nA fire broke out on the roof of a residential building in Kyiv&rsquo;s Holosiivskyi District after debris from a drone fell.\nThe Kyiv City Military Administration reported this on Telegram , according to Ukrinform.\n\r\n\r\n\r\n\r\n\r\n\r\n&ldquo;In the Holosiivskyi District, a fire broke out on the roof of a 5-story residential building after debris fell on it,&rdquo; the statement reads.\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nIn addition, according to the Kyiv City Military Administratio n, debris fell on the grounds of a private residential building in the…",
+      "stazeno": "2026-09-29T08:04:45.800Z",
+      "stav": 200
+    }
+  },
+  {
+    "id": "k-7b4a8c55691173bc",
+    "zachyceno": "2026-09-29T08:04:36.206Z",
+    "publikovano": "2026-09-29T05:53:00.000Z",
+    "zdroj": {
+      "nazev": "Ukrainska Pravda (anglicky)",
+      "url": "https://www.pravda.com.ua/eng/news/2026/09/29/8055542/",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Norway to provide €2.3 million to find Ukrainian children deported by Russia and help prisoners",
+    "titulekPuvodni": "Norway to provide €2.3 million to find Ukrainian children deported by Russia and help prisoners",
+    "shrnuti": "Norway will provide 25 million kroner (€2.3 million) through UNICEF and the International Committee of the Red Cross to help find and bring back Ukrainian children deported by Russia and assist prisoners of war and detained civilians",
+    "kodZeme": "NO",
+    "zeme": "Norsko",
+    "kategorie": [
+      "zpravodajske",
+      "rusko"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "detained+russia",
+      "russia"
+    ],
+    "naliehave": null,
+    "stav": "ceka",
+    "vyrez": {
+      "text": "Norway allocates €2.3 million to help find deported Ukrainian children and support prisoners | Ukrainska Pravda\nThe flag of Norway. Photo: Getty Images\nNorway will allocate 25 million kroner (€2.3 million) to help find and bring back Ukrainian children deported by Russia and assist prisoners of war and civilians held in detention. The funds will be channelled through UNICEF and the International Committee of the Red Cross.\nSource: European Pravda, citing the Norwegian government\nDetails: The new aid will be allocated to UNICEF and the International Committee of the Red Cross.\nAdvertisement:\n\r\n\r\n\r\n\r\n\r\nThese funds are intended to help find missing people, bring more people home and support the rehabilitation and reintegration of those affected by the war.\nFifteen million kroner (€1.4 million) will be allocated to UNICEF's work on the reintegration of deported children who have returned to Ukraine and on searching for missing children. This is part of a new, larger contribution of 132 million kroner (€12.2 million) to UNICEF's humanitarian programme in Ukraine.\nAnother 10 million kroner (€921,506) will be allocated to the Central Tracing Agency of the International Committee of the…",
+      "stazeno": "2026-09-29T08:04:46.842Z",
+      "stav": 200
+    }
+  },
+  {
+    "id": "k-320def9e7a92d0e6",
+    "zachyceno": "2026-09-29T08:04:36.166Z",
+    "publikovano": "2026-09-29T05:48:00.000Z",
+    "zdroj": {
+      "nazev": "Ukrinform (anglicky)",
+      "url": "https://www.ukrinform.net/rubric-ato/4169049-russian-kab-strikes-drone-attacks-and-mortar-fire-injure-four-people-in-sumy-region.html",
+      "typ": "wire",
+      "primarni": false
+    },
+    "titulek": "Russian KAB strikes, drone attacks and mortar fire injure four people in Sumy region",
+    "titulekPuvodni": "Russian KAB strikes, drone attacks and mortar fire injure four people in Sumy region",
+    "shrnuti": "Over the past 24 hours, Russian troops attacked 24 settlements in the Sumy region with guided bombs, mortars, and various types of drones. Four people were injured.",
+    "kodZeme": "RU",
+    "zeme": "Rusko",
+    "kategorie": [
+      "sabotaz",
+      "drony",
+      "rusko"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "bomb",
+      "dron",
+      "drone",
+      "russia"
+    ],
+    "naliehave": null,
+    "stav": "ceka"
+  },
+  {
+    "id": "k-1c4cee6e890e0542",
+    "zachyceno": "2026-09-29T08:04:36.208Z",
+    "publikovano": "2026-09-29T05:46:00.000Z",
+    "zdroj": {
+      "nazev": "Ukrainska Pravda (anglicky)",
+      "url": "https://www.pravda.com.ua/eng/news/2026/09/29/8055540/",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "State Emergency Service: One person injured in Russian attack on Kyiv, residential buildings damaged – photos",
+    "titulekPuvodni": "State Emergency Service: One person injured in Russian attack on Kyiv, residential buildings damaged – photos",
+    "shrnuti": "A Russian attack on Kyiv injured one person and damaged residential buildings in the Holosiivskyi and Solomianskyi districts.",
+    "kodZeme": "UA",
+    "zeme": "Ukrajina",
+    "kategorie": [
+      "hybridni",
+      "rusko"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "attack on",
+      "russia"
+    ],
+    "naliehave": null,
+    "stav": "ceka"
+  },
+  {
+    "id": "k-fe986e50deda1c5f",
+    "zachyceno": "2026-09-29T08:04:33.609Z",
+    "publikovano": "2026-09-29T05:45:56.000Z",
+    "zdroj": {
+      "nazev": "The Guardian — World",
+      "url": "https://www.theguardian.com/world/2026/sep/29/tuesday-briefing-first-edition-raf-fairford-cotswolds",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Tuesday briefing: Inside the suspected bomb plot at RAF Fairford",
+    "titulekPuvodni": "Tuesday briefing: Inside the suspected bomb plot at RAF Fairford",
+    "shrnuti": "In today’s newsletter: New details suggest there is a counter-narrative to how events unfolded at the airbase used by the US Good morning. Vehicles suspected of carrying explosives zipping across Britain, entirely unbeknownst to authorities, is a disconcerting prospect. Initially, it seemed precisel",
+    "kodZeme": "GB",
+    "zeme": "Spojené království",
+    "kategorie": [
+      "sabotaz",
+      "hybridni"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "bomb",
+      "attack on"
+    ],
+    "naliehave": null,
+    "stav": "ceka"
+  },
+  {
+    "id": "k-3f1d2734c58b13b2",
+    "zachyceno": "2026-09-29T08:04:36.216Z",
+    "publikovano": "2026-09-29T04:19:00.000Z",
+    "zdroj": {
+      "nazev": "Ukrainska Pravda (anglicky)",
+      "url": "https://www.pravda.com.ua/eng/news/2026/09/29/8055524/",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Number of people injured in Russian strike on Odesa rises to six",
+    "titulekPuvodni": "Number of people injured in Russian strike on Odesa rises to six",
+    "shrnuti": "Six people were injured in a Russian attack on Odesa on 28 September, with two still in hospital, while repair work continues on damaged buildings.",
+    "kodZeme": "UA",
+    "zeme": "Ukrajina",
+    "kategorie": [
+      "hybridni",
+      "rusko"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "attack on",
+      "russia"
+    ],
+    "naliehave": null,
+    "stav": "ceka"
+  },
+  {
+    "id": "k-b3d1ade71e7122dd",
+    "zachyceno": "2026-09-29T08:04:36.176Z",
+    "publikovano": "2026-09-29T04:02:00.000Z",
+    "zdroj": {
+      "nazev": "Ukrinform (anglicky)",
+      "url": "https://www.ukrinform.net/rubric-ato/4169013-russian-missile-and-drone-attack-on-kyiv-sparks-fires-and-damages-buildings-in-capital.html",
+      "typ": "wire",
+      "primarni": false
+    },
+    "titulek": "Russian missile and drone attack on Kyiv sparks fires and damages buildings in capital",
+    "titulekPuvodni": "Russian missile and drone attack on Kyiv sparks fires and damages buildings in capital",
+    "shrnuti": "The enemy carried out another nighttime attack on Kyiv using missiles and drones, causing fires and damage in the capital.",
+    "kodZeme": "UA",
+    "zeme": "Ukrajina",
+    "kategorie": [
+      "hybridni",
+      "drony",
+      "rusko"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "attack on",
+      "dron",
+      "drone",
+      "russia"
+    ],
+    "naliehave": null,
+    "stav": "ceka"
+  },
+  {
     "id": "k-73462a8440b47b69",
     "zachyceno": "2026-09-29T04:03:31.121Z",
     "publikovano": "2026-09-29T03:59:00.000Z",
@@ -32,6 +601,96 @@
       "stazeno": "2026-09-29T04:03:33.329Z",
       "stav": 200
     }
+  },
+  {
+    "id": "k-27eb58c9a0344301",
+    "zachyceno": "2026-09-29T08:04:33.540Z",
+    "publikovano": "2026-09-29T01:16:28.000Z",
+    "zdroj": {
+      "nazev": "The Guardian — World",
+      "url": "https://www.theguardian.com/australia-news/2026/sep/29/melbourne-human-rights-activist-tran-hiep-missing-cambodia-ntwnfb",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Vietnamese government accused of abducting human rights activists",
+    "titulekPuvodni": "Vietnamese government accused of abducting human rights activists",
+    "shrnuti": "Detained anti-human trafficking campaigners include Tran Hiep, a Vietnamese Australian, not heard from since 18 September Vietnamese authorities have detained three activists, including a Norwegian and an Australian, on what have been described as “fabricated” charges. The Vietnamese government said",
+    "kodZeme": "NO",
+    "zeme": "Norsko",
+    "kategorie": [
+      "zpravodajske"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "detained+terror"
+    ],
+    "naliehave": null,
+    "stav": "ceka"
+  },
+  {
+    "id": "k-9c8849e8f924cc90",
+    "zachyceno": "2026-09-29T08:04:36.227Z",
+    "publikovano": "2026-09-28T22:18:00.000Z",
+    "zdroj": {
+      "nazev": "Ukrainska Pravda (anglicky)",
+      "url": "https://www.pravda.com.ua/eng/news/2026/09/29/8055510/",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Overnight Russian attack on Kyiv: explosions heard and fires break out",
+    "titulekPuvodni": "Overnight Russian attack on Kyiv: explosions heard and fires break out",
+    "shrnuti": "Explosions were heard and fires broke out in Kyiv overnight as Russian forces launched attacks amid a ballistic and drone threat.",
+    "kodZeme": "UA",
+    "zeme": "Ukrajina",
+    "kategorie": [
+      "sabotaz",
+      "hybridni",
+      "drony",
+      "rusko"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "explosion",
+      "attack on",
+      "dron",
+      "drone",
+      "russia"
+    ],
+    "naliehave": null,
+    "stav": "ceka"
+  },
+  {
+    "id": "k-61679b314fd35ccd",
+    "zachyceno": "2026-09-29T08:04:36.230Z",
+    "publikovano": "2026-09-28T21:48:00.000Z",
+    "zdroj": {
+      "nazev": "Ukrainska Pravda (anglicky)",
+      "url": "https://www.pravda.com.ua/eng/news/2026/09/29/8055509/",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Dog shelter catches fire near Odesa after Russian attack – videos",
+    "titulekPuvodni": "Dog shelter catches fire near Odesa after Russian attack – videos",
+    "shrnuti": "A dog shelter near Odesa caught fire after a reported strike during an overnight attack on 29 September.",
+    "kodZeme": "UA",
+    "zeme": "Ukrajina",
+    "kategorie": [
+      "hybridni",
+      "rusko"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "attack on",
+      "russia"
+    ],
+    "naliehave": null,
+    "stav": "ceka"
   },
   {
     "id": "k-377fddbcc5f0343d",
@@ -11359,804 +12018,6 @@
       "duvod": "neudalost",
       "patriK": null,
       "poznamka": "Rodina íránských dvojčat žádá OSN o pomoc; nesouvisí s rozsahem projektu (Rusko/hybridní hrozby v Evropě). Rozhodnuto už dříve; vrací se opakovaně."
-    }
-  },
-  {
-    "id": "k-3f375e0ccbb39c4a",
-    "zachyceno": "2026-09-24T13:04:08.725Z",
-    "publikovano": "2026-09-24T12:57:47.000Z",
-    "zdroj": {
-      "nazev": "SME (Slovensko)",
-      "url": "https://www.sme.sk/svet/c/v-polsku-dobodal-pocas-omse-utocnik-niekolko-osob-dvaja-knazi-zomreli?utm_source=rss&utm_medium=feed&utm_campaign=www-rss",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "V Poľsku dobodal počas omše útočník niekoľko osôb, dvaja kňazi zomreli",
-    "titulekPuvodni": "V Poľsku dobodal počas omše útočník niekoľko osôb, dvaja kňazi zomreli",
-    "shrnuti": "Polícia zadržala 31-ročného občana Ukrajiny, ktorý je podozrivý z útoku.",
-    "kodZeme": "PL",
-    "zeme": "Polsko",
-    "kategorie": [
-      "zpravodajske"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "zeSite": null,
-    "shody": [
-      "zadrz"
-    ],
-    "naliehave": null,
-    "stav": "vyrizen",
-    "vyrez": {
-      "text": "",
-      "stazeno": "2026-09-24T13:04:10.444Z",
-      "stav": 403,
-      "chyba": "HTTP 403"
-    },
-    "vyrizeni": {
-      "kdy": "2026-09-25T19:51:38.645Z",
-      "duvod": "neudalost",
-      "patriK": null,
-      "poznamka": "Táž událost jako klášterní útok v Jarosławi (Slovenský popis: dva kněží zemřeli, jiné číslo obětí než ostatní zdroje), rozhodnuto už dříve jako neudalost — motiv útočníka není znám. Rozhodnuto už dříve; vrací se opakovaně."
-    }
-  },
-  {
-    "id": "k-78d22f2d3fe318c1",
-    "zachyceno": "2026-09-24T13:04:08.107Z",
-    "publikovano": "2026-09-24T12:54:42.000Z",
-    "zdroj": {
-      "nazev": "Notes from Poland",
-      "url": "https://notesfrompoland.com/2026/09/24/polish-constitutional-court-officials-charged-with-preventing-entry-of-new-judges/",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Polish constitutional court officials charged with preventing entry of new judges",
-    "titulekPuvodni": "Polish constitutional court officials charged with preventing entry of new judges",
-    "shrnuti": "Meanwhile, the court's chief justice announced proceedings of his own against three other judges.",
-    "kodZeme": "PL",
-    "zeme": "Polsko",
-    "kategorie": [
-      "zpravodajske"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "zeSite": null,
-    "shody": [
-      "charged with"
-    ],
-    "naliehave": null,
-    "stav": "vyrizen",
-    "vyrez": {
-      "text": "Polish constitutional court officials charged with preventing entry of new judges | Notes From Poland\n\r\n\r\nPolish constitutional court officials charged with preventing entry of new judges\nSep 24, 2026 | Law , Politics\nKeep our news free from ads and paywalls by making a donation to support our work!\nNotes from Poland is run by a small editorial team and is published by an independent, non-profit foundation that is funded through donations from our readers. We cannot do what we do without your support.\nThe crisis around Poland’s Constitutional Tribunal (TK) has deepened further, after prosecutors charged two senior TK officials over their role in preventing new judges from taking up their positions on the court.\nThose judges were chosen by the government’s majority in parliament but rejected by President Karol Nawrocki and the TK’s chief justice, Bogdan Święczkowski, both of whom are aligned with the right-wing opposition.\nFollowing news of the charges, Święczkowski announced that he has initiated proceedings of his own against three other new judges who were admitted to the court this year after being chosen by the ruling coalition. That could result in them being expelled from…",
-      "stazeno": "2026-09-24T13:04:10.478Z",
-      "stav": 200
-    },
-    "vyrizeni": {
-      "kdy": "2026-09-25T19:51:38.645Z",
-      "duvod": "neudalost",
-      "patriK": null,
-      "poznamka": "Polský ústavní soud a spor o nové soudce; domácí politika, mimo rozsah projektu. Rozhodnuto už dříve; vrací se opakovaně."
-    }
-  },
-  {
-    "id": "k-392a8afe1f809cb0",
-    "zachyceno": "2026-09-24T14:04:02.792Z",
-    "publikovano": "2026-09-24T12:29:00.000Z",
-    "zdroj": {
-      "nazev": "Ukrainska Pravda (anglicky)",
-      "url": "https://www.pravda.com.ua/eng/news/2026/09/24/8054905/",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Fire breaks out at Starlink station in Poland, Russians suspected",
-    "titulekPuvodni": "Fire breaks out at Starlink station in Poland, Russians suspected",
-    "shrnuti": "Polish PM Donald Tusk said a fire at a Starlink ground station in Masovian Voivodeship doesn't \"look good\", with officials suspecting sabotage.",
-    "kodZeme": "PL",
-    "zeme": "Polsko",
-    "kategorie": [
-      "sabotaz",
-      "rusko"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "zeSite": null,
-    "shody": [
-      "sabotage",
-      "russia"
-    ],
-    "naliehave": null,
-    "stav": "vyrizen",
-    "vyrez": {
-      "text": "Poland suspects sabotage in fire at Starlink station | Ukrainska Pravda\nThe Starlink satellite communications ground station in Wola Krobowska, Masovian Voivodeship. Photo: Krzysztof Zasada/RMF FM\nPolish Prime Minister Donald Tusk has commented on a fire at a Starlink ground station in the Masovian Voivodeship, saying it was unlikely to have been accidental.\nSource: Polish news agency PAP , as reported by European Pravda\nDetails: Tusk said he \"does not like to make definitions without 100% certainty as to what constitutes sabotage and what is an accident\", but added that \"it does not look good\".\nAdvertisement:\n\r\n\r\n\r\n\r\n\r\nMeanwhile, Marcin Kierwiński, Minister of the Interior and Administration, stressed that the circumstances of the incident will be thoroughly investigated by the State Fire Service, police and prosecutors.\n\"But it is difficult to imagine that there are coincidences in such matters. Let's let the police do their job calmly,\" he said.\nThe minister also believes there is no doubt that Russia has taken its hybrid war against Europe to a new level.\nThe fire at a Starlink satellite communications ground station located in the Polish village of Wola Krobowska broke out on…",
-      "stazeno": "2026-09-24T14:04:06.896Z",
-      "stav": 200
-    },
-    "vyrizeni": {
-      "kdy": "2026-09-25T19:51:38.645Z",
-      "duvod": "duplicita",
-      "patriK": null,
-      "poznamka": "Táž událost jako už zveřejněný záznam o požáru u polské stanice Starlink."
-    }
-  },
-  {
-    "id": "k-11c80445ed35ec69",
-    "zachyceno": "2026-09-24T13:04:07.743Z",
-    "publikovano": "2026-09-24T12:27:58.000Z",
-    "zdroj": {
-      "nazev": "Seznam Zprávy",
-      "url": "https://www.seznamzpravy.cz/clanek/zahranicni-nemecko-vysetruje-105leteho-dozorce-hrozi-mu-obzaloba-z-napomahani-k-vrazde-316123",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Německo vyšetřuje 105letého dozorce. Hrozí mu obžaloba z napomáhání k vraždě",
-    "titulekPuvodni": "Německo vyšetřuje 105letého dozorce. Hrozí mu obžaloba z napomáhání k vraždě",
-    "shrnuti": "Může jít o nejstaršího obviněného v dějinách německého soudnictví. Státní zastupitelství stíhá stopětiletého bývalého dozorce tábora Wehrmachtu v Senne, kterým prošly statisíce sovětských a dalších spojeneckých zajatců.",
-    "kodZeme": "DE",
-    "zeme": "Německo",
-    "kategorie": [
-      "zpravodajske"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "zeSite": null,
-    "shody": [
-      "obvin"
-    ],
-    "naliehave": null,
-    "stav": "vyrizen",
-    "vyrez": {
-      "text": "Německo vyšetřuje 105letého dozorce. Hrozí mu obžaloba z napomáhání k vraždě - Seznam Zprávy\nZobrazení snímku 1 z 0\nHlavní obsah\nNěmecko vyšetřuje 105letého dozorce. Hrozí mu obžaloba z napomáhání k vraždě\nČTK\n2:38\nChcete-li článek poslouchat, přihlaste se\neBook\nSdílet\nIlustrační snímek.\n14:27\nMůže jít o nejstaršího obviněného v dějinách německého soudnictví. Státní zastupitelství stíhá stopětiletého bývalého dozorce tábora Wehrmachtu v Senne, kterým prošly statisíce sovětských a dalších spojeneckých zajatců.\nČlánek\nV Německu je vyšetřován 105letý bývalý dozorce v táboře pro zajatce z druhé světové války. Podle dortmundského státního zastupitelství čelí podezření z napomáhání k mnohanásobné vraždě. Muž podle úřadů působil v táboře pro válečné zajatce v Senne na západě Německa, ve kterém nacistické Německo v letech 1941 až 1945 věznilo stovky tisíc hlavně sovětských zajatců.\nZajateckým táborem Stalag 326 VI K v Senne nedaleko Bielefeldu prošel podle německých médií každý třetí sovětský zajatec, který byl za druhé světové války zavlečen do Německa. Vězni byli nuceni pracovat v okolních továrnách či v dolech. Kromě občanů Sovětského svazu byli v určitých částech tábora vězněni také…",
-      "stazeno": "2026-09-24T13:04:10.544Z",
-      "stav": 200
-    },
-    "vyrizeni": {
-      "kdy": "2026-09-25T19:51:38.645Z",
-      "duvod": "neudalost",
-      "patriK": null,
-      "poznamka": "Německo vyšetřuje 105letého bývalého dozorce z nacistického tábora; historická válečná zločinnost z 2. světové války, ne současná hybridní hrozba. Rozhodnuto už dříve; vrací se opakovaně."
-    }
-  },
-  {
-    "id": "k-9943fce2ef971771",
-    "zachyceno": "2026-09-24T13:04:08.936Z",
-    "publikovano": "2026-09-24T12:26:27.000Z",
-    "zdroj": {
-      "nazev": "LSM (Lotyšsko, anglicky)",
-      "url": "https://eng.lsm.lv/article/society/defence/24.09.2026-latvia-will-send-up-to-20-soldiers-to-clear-hormuz.a664650/?utm_source=rss&utm_campaign=rss&utm_medium=links",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Latvia will send up to 20 soldiers to clear Hormuz",
-    "titulekPuvodni": "Latvia will send up to 20 soldiers to clear Hormuz",
-    "shrnuti": "On Thursday, 24 September, the Saeima approved the participation of the National Armed Forces (NBS) in multinational military operations to secure the Strait of Hormuz. Latvia plans to deploy up to 20 soldiers to clear the Strait of Hormuz of mines.",
-    "kodZeme": "LV",
-    "zeme": "Lotyšsko",
-    "kategorie": [
-      "vojsko"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "zeSite": null,
-    "shody": [
-      "soldiers+deploy"
-    ],
-    "naliehave": null,
-    "stav": "vyrizen",
-    "vyrez": {
-      "text": "Latvia will send up to 20 soldiers to clear Hormuz / Article\nLatvia will send up to 20 soldiers to clear Hormuz\nShare\nFollow: Follow LSM on Google\nPhoto: via REUTERS, Majid Asgaripour\nHormuza &scaron;aurums\nToday, 15:26\nDefence\nAuthors:\nLSM English (Latvian Public Media)\nOn Thursday, 24 September, the Saeima approved the participation of the National Armed Forces (NBS) in multinational military operations to secure the Strait of Hormuz. Latvia plans to deploy up to 20 soldiers to clear the Strait of Hormuz of mines.\nSeventy-three MPs voted in favour of the draft resolution; none voted against it, nor did any abstain.\nAs a result of the conflict in the Middle East, the Strait of Hormuz has been littered with various types of sea mines, and Latvia could potentially contribute to the clearance of these mines. Latvia&rsquo;s participation is subject to clearly defined tasks and restrictions &ndash; our soldiers will not take part in operations that would support the US as a belligerent in the conflict with Iran.\nThe Ministry of Defence has previously stated that the clearance of the Strait of Hormuz is of critical importance to ensure freedom of navigation in accordance with the…",
-      "stazeno": "2026-09-24T13:04:11.184Z",
-      "stav": 200
-    },
-    "vyrizeni": {
-      "kdy": "2026-09-25T19:51:38.645Z",
-      "duvod": "neudalost",
-      "patriK": null,
-      "poznamka": "Lotyšsko vyšle až 20 vojáků k odminování v Hormuzském průlivu; vojenská mise mimo sledovaný rozsah (Rusko/Bělorusko/hybridní hrozby v Evropě). Rozhodnuto už dříve; vrací se opakovaně."
-    }
-  },
-  {
-    "id": "k-2d4166d57ebf756d",
-    "zachyceno": "2026-09-24T13:04:07.735Z",
-    "publikovano": "2026-09-24T12:20:00.000Z",
-    "zdroj": {
-      "nazev": "Seznam Zprávy",
-      "url": "https://www.seznamzpravy.cz/clanek/domaci-kauzy-v-praze-skoncili-obvineni-urednici-na-korupci-meli-system-popsala-policie-316106",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "V Praze skončili obvinění úředníci. Na korupci měli systém, popsala policie",
-    "titulekPuvodni": "V Praze skončili obvinění úředníci. Na korupci měli systém, popsala policie",
-    "shrnuti": "Na pražském magistrátu podle zjištění Seznam Zpráv skončili dva vysoce postavení úředníci, které v červenci policie obvinila z korupce. Od policejní razie byli oba na překážkách.",
-    "kodZeme": "CZ",
-    "zeme": "Česko",
-    "kategorie": [
-      "zpravodajske",
-      "vojsko"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "zeSite": null,
-    "shody": [
-      "obvin",
-      "policie"
-    ],
-    "naliehave": null,
-    "stav": "vyrizen",
-    "vyrez": {
-      "text": "V Praze skončili obvinění úředníci. Na korupci měli systém, popsala policie - Seznam Zprávy\nZobrazení snímku 1 z 0\nHlavní obsah\nV Praze skončili obvinění úředníci. Na korupci měli systém, popsala policie\nJakub Mikel , Vojtěch Blažek\nvybrat autory ke sledování\n3:04\nChcete-li článek poslouchat, přihlaste se\neBook\nSdílet\nFoto: Renata Matějková, Seznam Zprávy\nDvojici úředníků pražského magistrátu obvinila policie letos v červenci. Teď nuceně opustili kanceláře na dopravním odboru.\n14:20\nNa pražském magistrátu podle zjištění Seznam Zpráv skončili dva vysoce postavení úředníci, které v červenci policie obvinila z korupce. Od policejní razie byli oba na překážkách.\nČlánek\nNěkdejší šéf odboru pozemních komunikací na pražském magistrátu Aleš Krejča a jeho zástupce Jan Krejčí přišli o práci. Dvojici úředníků v červenci obvinila policie z korupce související se zpracováním a  následným schvalováním dokumentace k dopravním projektům.\nJak Seznam Zprávám potvrdil mluvčí magistrátu Vít Hofman, oba muži skončili v práci dohodou. „Pracovní poměr pana Aleše Krejči skončil 13. 8. 2026 a pracovní poměr pana Jana Krejčího skončil 14. 9. 2026,“ napsal redakci Hofman.\nOba úředníci byli už v červenci…",
-      "stazeno": "2026-09-24T13:04:12.603Z",
-      "stav": 200
-    },
-    "vyrizeni": {
-      "kdy": "2026-09-25T19:51:38.645Z",
-      "duvod": "neudalost",
-      "patriK": null,
-      "poznamka": "Obvinění úředníci v pražské korupční kauze propuštěni; domácí korupční věc bez bezpečnostního rozměru. Rozhodnuto už dříve; vrací se opakovaně."
-    }
-  },
-  {
-    "id": "k-e76d6ddcaa485553",
-    "zachyceno": "2026-09-24T13:04:10.295Z",
-    "publikovano": "2026-09-24T12:10:00.000Z",
-    "zdroj": {
-      "nazev": "Ukrinform (anglicky)",
-      "url": "https://www.ukrinform.net/rubric-ato/4167582-one-injured-homes-and-power-line-damaged-in-russian-attack-on-zhytomyr-region.html",
-      "typ": "wire",
-      "primarni": false
-    },
-    "titulek": "One injured, homes and power line damaged in Russian attack on Zhytomyr region",
-    "titulekPuvodni": "One injured, homes and power line damaged in Russian attack on Zhytomyr region",
-    "shrnuti": "One person was injured, power lines, administrative buildings and homes were damaged in Russian attacks in the Zhytomyr region.",
-    "kodZeme": "RU",
-    "zeme": "Rusko",
-    "kategorie": [
-      "hybridni",
-      "rusko"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "zeSite": null,
-    "shody": [
-      "attack on",
-      "russia"
-    ],
-    "naliehave": null,
-    "stav": "vyrizen",
-    "vyrez": {
-      "text": "One injured, homes and power line damaged in Russian attack on Zhytomyr region\n\r\nSubscription\nNewsletters\nPhotobank\nUkrinform - Ukrainian National News Agency\nFounded in 1918\nThursday, 24 September 2026, 16:04\nWar\nEconomy\nSports\nMore ☰\nContacts\nEng\nУкр\nEng\nEsp\nDeu\nعربي\nFra\n日本語\nPol\n&times;\nAll topics\nWar\nRecovery of Ukraine\nPolitics\nEconomy\nFact checks\nDefense\nSociety and Culture\nSports\nCrime\nAccidents and Emergencies\nAgency\nInformation on Agency\nOur Contacts\nSubscribtion Terms\nOur Services\nPrivacy policy and personal data protection\nAdditional\nPublications\nInterviews\nPhoto\nVideo\nLongreads\nReleases\nServices\nSubscription\nNewsletters\nPhotobank\n\r\n\r\n\r\nOne person was injured, power lines, administrative buildings and homes were damaged in Russian attacks in the Zhytomyr region.\nAccording to Ukrinform, this was reported on Facebook by Vitalii Bunechko, Head of the Zhytomyr Regional Military Administration.\n\r\n\r\n&ldquo;Throughout the day, rescuers worked at the sites of strikes in various districts of the region. Enemy attacks continued this morning. One person was injured in the Korosten district,&rdquo; the official said.\n\r\n\r\n\r\n\r\nAccording to him, the attacks damaged administrative…",
-      "stazeno": "2026-09-24T13:04:12.778Z",
-      "stav": 200
-    },
-    "vyrizeni": {
-      "kdy": "2026-09-25T19:51:38.645Z",
-      "duvod": "mimo-rozsah",
-      "patriK": null,
-      "poznamka": "Ruský útok na Žytomyrskou oblast, poškozené domy a vedení; uvnitř Ukrajiny, bez doloženého následku pro sledované země. Rozhodnuto už dříve; vrací se opakovaně."
-    }
-  },
-  {
-    "id": "k-984a8089413c0902",
-    "zachyceno": "2026-09-24T13:04:08.317Z",
-    "publikovano": "2026-09-24T12:09:20.000Z",
-    "zdroj": {
-      "nazev": "France 24 (anglicky)",
-      "url": "https://www.france24.com/en/video/20260924-huge-security-operation-underway-for-pope-s-visit-to-france",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Huge security operation underway for Pope's visit to France",
-    "titulekPuvodni": "Huge security operation underway for Pope's visit to France",
-    "shrnuti": "Hundreds of thousands of the faithful and visitors are expected in Paris this weekend as Pope Leo XIV visits the French capital, marking the first papal visit to the country since 2008. France has pulled out all the stops to welcome the pontiff over the two-day visit in the capital and security forc",
-    "kodZeme": "FR",
-    "zeme": "Francie",
-    "kategorie": [
-      "vojsko"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "zeSite": null,
-    "shody": [
-      "soldiers+mobiliz"
-    ],
-    "naliehave": null,
-    "stav": "vyrizen",
-    "vyrez": {
-      "text": "Huge security operation underway for Pope's visit to France - France 24\nSkip to main content\nTo display this content from YouTube, you must enable advertisement tracking and audience measurement.\nAccept\nManage my choices\nOne of your browser extensions seems to be blocking the video player from loading. To watch this content, you may need to disable it on this site.\nTry again\nCover image: © France 24\n02:20\nHuge security operation underway for Pope's visit to France\nIssued on: 24/09/2026 - 14:09\nShare\nHundreds of thousands of the faithful and visitors are expected in Paris this weekend as Pope Leo XIV visits the French capital, marking the first papal visit to the country since 2008. France has pulled out all the stops to welcome the pontiff over the two-day visit in the capital and security forces are ensuring maximum protection with some 14,000 police officers, gendarmes, and soldiers mobilized across the capital.\nRead more\nRead less\nEthiopia's Tigray rebels in 'full-blown' war with govt\n24/09/2026\nAustralia’s Albanese rebukes OpenAI after government website hacked\n24/09/2026\n'Particularly heavy night' of Russian strikes on Kyiv\n24/09/2026\nUS says China trade truce extended as…",
-      "stazeno": "2026-09-24T13:04:13.934Z",
-      "stav": 200
-    },
-    "vyrizeni": {
-      "kdy": "2026-09-25T19:51:38.645Z",
-      "duvod": "neudalost",
-      "patriK": null,
-      "poznamka": "Bezpečnostní opatření k papežově návštěvě Francie; rutinní ochranná akce, ne bezpečnostní hrozba. Rozhodnuto už dříve; vrací se opakovaně."
-    }
-  },
-  {
-    "id": "k-923ffca2a455a278",
-    "zachyceno": "2026-09-24T12:04:45.507Z",
-    "publikovano": "2026-09-24T11:59:23.000Z",
-    "zdroj": {
-      "nazev": "BBC News — Europe",
-      "url": "https://www.bbc.co.uk/news/articles/cmp30r1klk37o?at_medium=RSS&at_campaign=rss",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Poland says fire at Starlink station is sabotage as Denmark warns of rising Russian threat",
-    "titulekPuvodni": "Poland says fire at Starlink station is sabotage as Denmark warns of rising Russian threat",
-    "shrnuti": "The satellite station is used in part to provide internet coverage to neighbouring Ukraine, the government says.",
-    "kodZeme": "PL",
-    "zeme": "Polsko",
-    "kategorie": [
-      "sabotaz",
-      "rusko"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "zeSite": null,
-    "shody": [
-      "sabotage",
-      "russia"
-    ],
-    "naliehave": null,
-    "stav": "vyrizen",
-    "vyrez": {
-      "text": "Poland says fire at Starlink station is sabotage as Denmark warns of rising Russian threat - BBC News\nImage source, Telewizja Polska SA\nBy Alys Davies\nPublished\n24 September 2026, 12:16 BST\nUpdated 5 minutes ago\nA fire at a Starlink satellite station in central Poland was a deliberate \"act of sabotage\", a government minister has said.\nPolish Deputy Prime Minister Krzysztof Gawkowski said the fire in the Masovian Voivodeship province was \"deliberately designed to disable the station... disrupting internet access for various institutions, including the Ukrainian army\".\nHe told Polish public broadcaster TVP Info an investigation was ongoing but \"many indications suggest\" the attack fits into a \"new Russian doctrine of attack\". The Kremlin has not commented.\nMeanwhile, Denmark's intelligence service issued a new threat assessment saying it expects Russia to escalate hybrid warfare in the coming months.\nIt said an attack remained \"highly unlikely\" but warned of \"a low but growing risk\" that Russia could launch a limited military attack against Nato countries.\nIn recent weeks a number of European Nato members have said Russia may be preparing attacks to test their commitment to…",
-      "stazeno": "2026-09-24T12:04:48.041Z",
-      "stav": 200
-    },
-    "vyrizeni": {
-      "kdy": "2026-09-25T19:51:38.645Z",
-      "duvod": "duplicita",
-      "patriK": null,
-      "poznamka": "Táž událost jako i-2026-09-23-240a0f841d (Starlink, Polsko tvrdí sabotáž)."
-    }
-  },
-  {
-    "id": "k-47360730502ab034",
-    "zachyceno": "2026-09-24T13:04:10.322Z",
-    "publikovano": "2026-09-24T11:56:00.000Z",
-    "zdroj": {
-      "nazev": "Ukrainska Pravda (anglicky)",
-      "url": "https://www.pravda.com.ua/eng/news/2026/09/24/8054902/",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "\"His heart couldn't take the stress\": 65-year-old man dies in shelter during attack on Kyiv",
-    "titulekPuvodni": "\"His heart couldn't take the stress\": 65-year-old man dies in shelter during attack on Kyiv",
-    "shrnuti": "A 65-year-old man died in one of the underground pedestrian crossings in the Solomianskyi district during the attack on Kyiv. A few minutes after the explosions, he lost consciousness and began to struggle to breathe.",
-    "kodZeme": "UA",
-    "zeme": "Ukrajina",
-    "kategorie": [
-      "sabotaz",
-      "hybridni"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "zeSite": null,
-    "shody": [
-      "explosion",
-      "attack on"
-    ],
-    "naliehave": null,
-    "stav": "vyrizen",
-    "vyrez": {
-      "text": "\"His heart couldn't take the stress\": 65-year-old man dies in shelter during attack on Kyiv | Ukrainska Pravda\nViktor Yerko with his daughter Anna and grandson Marko. Photo: hromadske\nA 65-year-old man died in one of the underground pedestrian crossings in the Solomianskyi district during the attack on Kyiv . A few minutes after the explosions, he lost consciousness and began to struggle to breathe.\nSource: hromadske , a Ukrainian independent media outlet\nDetails: Viktor lived alone and went to a shelter every time there was an attack.\nAdvertisement:\n\r\n\r\n\r\n\r\n\r\nHromadske journalist Denys Bulavin witnessed the man's death. He said Viktor had brought his own chair into the underground crossing. A few minutes after the explosions, he lost consciousness, began struggling to breathe and his face quickly turned blue. Medics who arrived at the scene pronounced him dead.\n\"When he lost consciousness, his phone fell out of his hands. The screen was showing tracking of what aerial asset was flying and where,\" Bulavin wrote.\nThe man who died was 65-year-old Viktor Yerko, originally from Chernihiv Oblast. His daughter Anna Venedyktova said he worked in construction his whole life. When he…",
-      "stazeno": "2026-09-24T13:04:14.092Z",
-      "stav": 200
-    },
-    "vyrizeni": {
-      "kdy": "2026-09-25T19:51:38.645Z",
-      "duvod": "mimo-rozsah",
-      "patriK": null,
-      "poznamka": "Muž zemřel v krytu při útoku na Ukrajinu; uvnitř Ukrajiny, bez doloženého následku pro sledované země."
-    }
-  },
-  {
-    "id": "k-fe001a4316d892be",
-    "zachyceno": "2026-09-24T12:04:45.897Z",
-    "publikovano": "2026-09-24T11:47:56.000Z",
-    "zdroj": {
-      "nazev": "Politico Europe",
-      "url": "https://www.politico.eu/article/poland-says-starlink-fire-was-sabotage/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Poland says Starlink fire was sabotage",
-    "titulekPuvodni": "Poland says Starlink fire was sabotage",
-    "shrnuti": "The digital minister has previously warned that his country faces some 2,000–3,000 cyberattacks on its infrastructure daily.",
-    "kodZeme": "PL",
-    "zeme": "Polsko",
-    "kategorie": [
-      "sabotaz",
-      "kyber"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "zeSite": null,
-    "shody": [
-      "sabotage",
-      "cyberattack",
-      "cyber"
-    ],
-    "naliehave": null,
-    "stav": "vyrizen",
-    "vyrez": {
-      "text": "Poland says Starlink fire was sabotage – POLITICO\nSkip to main content\nAdvertisement\nThe fire at a Starlink ground station near Warsaw on Wednesday night was an act of sabotage and part of hybrid warfare against Poland, Digital Minister Krzysztof Gawkowski said Thursday morning.\n“[This was] sabotage and an attempt to disrupt the operation of a vital station that is crucial for the security and continuity of internet services in Ukraine,” Gawkowski told state broadcaster TVP Info, stopping short of blaming Russia for the incident directly.\n“It’s about actions aimed at shutting down the internet and disrupting the functioning of basic services. These may concern the supply of water, gas or electricity, as well as the financial system,” Gawkowski added.\nAdvertisement\nThe fire broke out in the village of Wola Krobowska, 50 kilometers south of Warsaw. It didn’t cause significant damage and there were no injuries. Poland’s counterintelligence agency, ABW, and the police are investigating the incident.\nOperated by the state-owned telecoms company Exatel, the station links Starlink satellites to terrestrial internet networks. Together with a station in Kaunas, Lithuania, it serves Central…",
-      "stazeno": "2026-09-24T12:04:48.185Z",
-      "stav": 200
-    },
-    "vyrizeni": {
-      "kdy": "2026-09-25T19:51:38.645Z",
-      "duvod": "duplicita",
-      "patriK": null,
-      "poznamka": "Táž událost jako i-2026-09-23-240a0f841d (Starlink)."
-    }
-  },
-  {
-    "id": "k-bf89afba3a2c403d",
-    "zachyceno": "2026-09-24T12:04:47.883Z",
-    "publikovano": "2026-09-24T11:45:00.000Z",
-    "zdroj": {
-      "nazev": "Ukrinform (anglicky)",
-      "url": "https://www.ukrinform.net/rubric-ato/4167574-russian-attack-targets-energy-and-border-infrastructure-in-chernivtsi-region.html",
-      "typ": "wire",
-      "primarni": false
-    },
-    "titulek": "Russian attack targets energy and border infrastructure in Chernivtsi region",
-    "titulekPuvodni": "Russian attack targets energy and border infrastructure in Chernivtsi region",
-    "shrnuti": "Four UAVs were detected over Ukraine’s Chernivtsi region during Russia’s attack on September 24.",
-    "kodZeme": "UA",
-    "zeme": "Ukrajina",
-    "kategorie": [
-      "hybridni",
-      "drony",
-      "hranice",
-      "rusko"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "zeSite": null,
-    "shody": [
-      "attack on",
-      "uav",
-      "border",
-      "russia"
-    ],
-    "naliehave": null,
-    "stav": "vyrizen",
-    "vyrez": {
-      "text": "Russian attack targets energy and border infrastructure in Chernivtsi region\n\r\nSubscription\nNewsletters\nPhotobank\nUkrinform - Ukrainian National News Agency\nFounded in 1918\nThursday, 24 September 2026, 15:04\nWar\nEconomy\nSports\nMore ☰\nContacts\nEng\nУкр\nEng\nEsp\nDeu\nعربي\nFra\n日本語\nPol\n&times;\nAll topics\nWar\nRecovery of Ukraine\nPolitics\nEconomy\nFact checks\nDefense\nSociety and Culture\nSports\nCrime\nAccidents and Emergencies\nAgency\nInformation on Agency\nOur Contacts\nSubscribtion Terms\nOur Services\nPrivacy policy and personal data protection\nAdditional\nPublications\nInterviews\nPhoto\nVideo\nLongreads\nReleases\nServices\nSubscription\nNewsletters\nPhotobank\n\r\n\r\n\r\nFour UAVs were detected over Ukraine’s Chernivtsi region during Russia’s attack on September 24.\nAccording to Ukrinform, this was reported on Facebook by Ruslan Osypenko, Head of the Chernivtsi Regional Military Administration.\n\r\n\r\n“The enemy targeted an energy facility and border infrastructure, including international crossing points on the Ukrainian-Romanian and Ukrainian-Moldovan borders,” the statement said.\n\r\n\r\nOsypenko noted that three drones were destroyed by air defense forces outside populated areas.\n\r\n\r\nFortunately, there were no…",
-      "stazeno": "2026-09-24T12:04:48.225Z",
-      "stav": 200
-    },
-    "vyrizeni": {
-      "kdy": "2026-09-25T19:51:38.645Z",
-      "duvod": "mimo-rozsah",
-      "patriK": null,
-      "poznamka": "Ruský útok na energetickou a hraniční infrastrukturu v Černovické oblasti (čtyři drony, tři sestřeleny, čtvrtý mířil k rumunské Suceavě); podle Ukrinformu bez obětí a poškození, žádný zdroj nedokládá skutečný dopad na Rumunsko nebo Moldavsko — jen že dron „mířil“ tím směrem."
-    }
-  },
-  {
-    "id": "k-9cc23a6ef99ad6c6",
-    "zachyceno": "2026-09-24T12:04:46.325Z",
-    "publikovano": "2026-09-24T11:30:09.000Z",
-    "zdroj": {
-      "nazev": "SME (Slovensko)",
-      "url": "https://www.sme.sk/svet/c/v-nemecku-vysetruju-105-rocneho-byvaleho-dozorcu-z-nacistickeho-tabora?utm_source=rss&utm_medium=feed&utm_campaign=www-rss",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "V Nemecku vyšetrujú 105-ročného bývalého dozorcu z nacistického tábora",
-    "titulekPuvodni": "V Nemecku vyšetrujú 105-ročného bývalého dozorcu z nacistického tábora",
-    "shrnuti": "V tábore v rokoch 1941 až 1945 zadržiavali približne 200-tisíc sovietskych vojnových zajatcov.",
-    "kodZeme": "DE",
-    "zeme": "Německo",
-    "kategorie": [
-      "zpravodajske"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "zeSite": null,
-    "shody": [
-      "zadrz"
-    ],
-    "naliehave": null,
-    "stav": "vyrizen",
-    "vyrez": {
-      "text": "",
-      "stazeno": "2026-09-24T12:04:49.388Z",
-      "stav": 403,
-      "chyba": "HTTP 403"
-    },
-    "vyrizeni": {
-      "kdy": "2026-09-25T19:51:38.645Z",
-      "duvod": "neudalost",
-      "patriK": null,
-      "poznamka": "Táž historická věc jako výše (105letý dozorce), rozhodnuto už dříve."
-    }
-  },
-  {
-    "id": "k-2f2f9a0d8a5804fe",
-    "zachyceno": "2026-09-24T12:04:46.351Z",
-    "publikovano": "2026-09-24T11:30:00.000Z",
-    "zdroj": {
-      "nazev": "Aktuality.sk",
-      "url": "https://www.aktuality.sk/clanok/BWgnJ5L/rusko-ma-pripravovat-utok-na-jeden-z-troch-stredomorskych-statov-pouzit-chce-drony-ukryte-v-kontajneri-na-lodi/",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Rusko má pripravovať útok na jeden z troch stredomorských štátov. Použiť chce drony ukryté v kontajneri na lodi",
-    "titulekPuvodni": "Rusko má pripravovať útok na jeden z troch stredomorských štátov. Použiť chce drony ukryté v kontajneri na lodi",
-    "shrnuti": "Americké spravodajské služby mali európskych spojencov varovať pred možnou ruskou operáciou na juhu Európy. Podľa El Mundo sa medzi možnými cieľmi spomínajú Francúzsko, Taliansko a Španielsko.",
-    "kodZeme": "RU",
-    "zeme": "Rusko",
-    "kategorie": [
-      "hybridni",
-      "drony",
-      "rusko"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "zeSite": null,
-    "shody": [
-      "utok na",
-      "dron",
-      "rusk"
-    ],
-    "naliehave": null,
-    "stav": "vyrizen",
-    "vyrez": {
-      "text": "Rusko má pripravovať útok na jeden z troch stredomorských štátov. Použiť chce drony ukryté v kontajneri na lodi | Aktuality.sk\nAktuality\nŠport\nDiva\nNajmama\nŽivé\nRecepty\nDobrú chuť\nSlovník\n14 °C -\nBratislava\nštvrtok 24. 9.\n24. 9.\nĽubor\nĽuboš\nPrémiové čítanie dnes 24. Sep 2026 o 13:30\n2 min. čítania\nPridať do Google\nRusko má pripravovať útok na jeden z troch stredomorských štátov. Použiť chce drony ukryté v kontajneri na lodi\n3 fotky v galérii\nGerbera, teda ruský dron slúžiaci počas útoku ako takzvaná návnada na zahltenie systémov protivsdušnej obrany, pri poľskej obci Czosnowka Zdroj: reuters\nSamuel Škultéty Redaktor zahraničného oddelenia\nUložiť článok\nAmerické spravodajské služby mali európskych spojencov varovať pred možnou ruskou operáciou na juhu Európy. Podľa El Mundo sa medzi možnými cieľmi spomínajú Francúzsko, Taliansko a Španielsko.\nZatiaľ čo sa Európska únia a NATO pri hrozbe ruských útokoch na členský štát, sústreďuje najmä na Pobaltie, Rusko sa snaží túto situáciu využiť. Ako informuje španielsky denník El Mundo, Moskva má s pomocou dronov zaútočiť na jeden z troch stredomorských štátov, a to Španielsko, Taliansko alebo Francúzsko.\nOdvoláva sa na zdroj blízky…",
-      "stazeno": "2026-09-24T12:04:49.420Z",
-      "stav": 200
-    },
-    "vyrizeni": {
-      "kdy": "2026-09-25T19:51:38.645Z",
-      "duvod": "neudalost",
-      "patriK": null,
-      "poznamka": "Tvrzení, že Rusko připravuje útok na jeden ze tří středomořských států drony ukrytými v lodním kontejneru; jde o nedoloženou spekulaci o budoucím záměru, ne o skutek. Pravidlo č. 3c a č. 0 projektu takový obsah vylučují — nezveřejňuje se nic, co by mohlo vyvolat obavu z ohrožení bez doložení."
-    }
-  },
-  {
-    "id": "k-40ebce19b873b8b0",
-    "zachyceno": "2026-09-24T12:04:47.969Z",
-    "publikovano": "2026-09-24T11:24:53.000Z",
-    "zdroj": {
-      "nazev": "The Moscow Times",
-      "url": "https://www.themoscowtimes.com/2026/09/24/krasnodar-region-declares-state-of-emergency-as-ukrainian-strikes-cripple-grain-exports-a93786",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Krasnodar Region Declares State of Emergency as Ukrainian Strikes Cripple Grain Exports",
-    "titulekPuvodni": "Krasnodar Region Declares State of Emergency as Ukrainian Strikes Cripple Grain Exports",
-    "shrnuti": "Authorities said many farmers in the region have been unable to sell their grain due to disruptions to export infrastructure.",
-    "kodZeme": "UA",
-    "zeme": "Ukrajina",
-    "kategorie": [
-      "pravo"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "zeSite": null,
-    "shody": [
-      "state of emergency"
-    ],
-    "naliehave": null,
-    "stav": "vyrizen",
-    "vyrez": {
-      "text": "Krasnodar Region Declares State of Emergency as Ukrainian Strikes Cripple Grain Exports - The Moscow Times\nSupport The Moscow Times!\nContribute today\nMy account\nSignout\n&times;\nSupport The Moscow Times!\nContribute today\nSep. 24, 2026\nGrain elevators at the port of Novorossiysk.\nSunliftan (CC BY-SA 4.0)\nSouthern Russia&rsquo;s Krasnodar region has declared a state of emergency following weeks of intense Ukrainian strikes against Black Sea ports and shipping infrastructure, which have hobbled export routes and left local farms overflowing with unsold grain, authorities said.\nKrasnodar region Governor Veniamin Kondratyev signed the emergency decree on Wednesday, retroactively setting its effective date to Aug. 12. The order cites &ldquo;mass attacks on logistics facilities, suspended port operations and disrupted shipping in the Azov-Black Sea basin &rdquo; as the reason for emergency measures.\nIn August, Ukrainian drone and missile strikes were estimated to have taken 90% of Russia&rsquo;s grain export capacity in the region offline, according to industry analysts. The vast majority of the country&rsquo;s agricultural shipments flow out of the Azov-Black Sea basin.\nKondratyev said…",
-      "stazeno": "2026-09-24T12:04:50.613Z",
-      "stav": 200
-    },
-    "vyrizeni": {
-      "kdy": "2026-09-25T19:51:38.645Z",
-      "duvod": "mimo-rozsah",
-      "patriK": null,
-      "poznamka": "Guvernér Krasnodarského kraje vyhlásil nouzový stav kvůli ukrajinským úderům na přístavy a export obilí (retroaktivně od 12. 8. 2026); jde o vnitroruský dopad (přebytky neprodaného obilí, tlak na ceny v Rusku), zdroj nezmiňuje doložený dopad na ceny nebo dodávky do sledovaných zemí."
-    }
-  },
-  {
-    "id": "k-dfe9ecc56fddf992",
-    "zachyceno": "2026-09-24T12:04:47.887Z",
-    "publikovano": "2026-09-24T11:03:00.000Z",
-    "zdroj": {
-      "nazev": "Ukrinform (anglicky)",
-      "url": "https://www.ukrinform.net/rubric-ato/4167553-russian-attack-damages-120yearold-st-pokrovsky-church-in-kyiv.html",
-      "typ": "wire",
-      "primarni": false
-    },
-    "titulek": "Russian attack damages 120-year-old St. Pokrovsky Church in Kyiv",
-    "titulekPuvodni": "Russian attack damages 120-year-old St. Pokrovsky Church in Kyiv",
-    "shrnuti": "The St. Pokrovsky Church in Kyiv, built in 1906, was damaged in a Russian attack on September 24.",
-    "kodZeme": "UA",
-    "zeme": "Ukrajina",
-    "kategorie": [
-      "hybridni",
-      "rusko"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "zeSite": null,
-    "shody": [
-      "attack on",
-      "russia"
-    ],
-    "naliehave": null,
-    "stav": "vyrizen",
-    "vyrez": {
-      "text": "Russian attack damages 120-year-old St. Pokrovsky Church in Kyiv\n\r\nSubscription\nNewsletters\nPhotobank\nUkrinform - Ukrainian National News Agency\nFounded in 1918\nThursday, 24 September 2026, 15:04\nWar\nEconomy\nSports\nMore ☰\nContacts\nEng\nУкр\nEng\nEsp\nDeu\nعربي\nFra\n日本語\nPol\n&times;\nAll topics\nWar\nRecovery of Ukraine\nPolitics\nEconomy\nFact checks\nDefense\nSociety and Culture\nSports\nCrime\nAccidents and Emergencies\nAgency\nInformation on Agency\nOur Contacts\nSubscribtion Terms\nOur Services\nPrivacy policy and personal data protection\nAdditional\nPublications\nInterviews\nPhoto\nVideo\nLongreads\nReleases\nServices\nSubscription\nNewsletters\nPhotobank\n\r\n\r\n\r\nThe St. Pokrovsky Church in Kyiv, built in 1906, was damaged in a Russian attack on September 24.\nAccording to Ukrinform, this was reported on Telegram by Volodymyr Nakonechnyi, Head of the Podilskyi District State Administration.\n\r\n\r\n\r\nAccording to him, the church’s windows, domes and historic facade made of yellow Kyiv brick were damaged – “part of the church that has preserved the memory of this district for more than a century.”\n\r\n\r\nRead also: Russian strikes damage Nova Poshta sorting depot in Kyiv \r\n\r\nAs reported by Ukrinform, Russia attacked…",
-      "stazeno": "2026-09-24T12:04:51.333Z",
-      "stav": 200
-    },
-    "vyrizeni": {
-      "kdy": "2026-09-25T19:51:38.645Z",
-      "duvod": "mimo-rozsah",
-      "patriK": null,
-      "poznamka": "Ruský útok poškodil 120 let starý kostel v Kyjevě; uvnitř Ukrajiny, bez doloženého následku pro sledované země."
-    }
-  },
-  {
-    "id": "k-6cab24d5fdec8416",
-    "zachyceno": "2026-09-24T11:03:44.500Z",
-    "publikovano": "2026-09-24T10:52:00.000Z",
-    "zdroj": {
-      "nazev": "iDNES.cz — zpravodajství",
-      "url": "https://www.idnes.cz/zpravy/zahranicni/polsko-klaster-jaroslaw-utok-nozem-ukrajinec.A260924_123913_zahranicni_kha#utm_source=rss&utm_medium=feed&utm_campaign=zpravodaj&utm_content=main",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Útočník během mše pobodal několik lidí v polském klášteře, jeden muž zemřel",
-    "titulekPuvodni": "Útočník během mše pobodal několik lidí v polském klášteře, jeden muž zemřel",
-    "shrnuti": "V ženském klášteře ve městě Jaroslaw na jihovýchodě Polska ve čtvrtek zaútočil muž nožem. Pět lidí zranil, jeden z nich později zemřel. Policie podezřelého zadržela.",
-    "kodZeme": "PL",
-    "zeme": "Polsko",
-    "kategorie": [
-      "zpravodajske",
-      "vojsko"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "zeSite": null,
-    "shody": [
-      "zadrz",
-      "policie"
-    ],
-    "naliehave": null,
-    "stav": "vyrizen",
-    "vyrez": {
-      "text": "Útočník pobodal několik lidí v polském klášteře, jeden muž zemřel - iDNES.cz \r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\niDNES.cz\n\r\n\r\n\r\nP�ihl�sit \r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nAbyste mohli pokra�ovat, pot�ebujeme v�d�t, jakou formou v�m m��eme zobrazovat reklamu \r\n\r\n\r\n\r\n\r\n\r\nV�mi zvolen� nastaven� \r\nneobsahuje souhlas se zobrazov�n�m c�len� reklamy . \r\nVyberte pros�m znovu, \r\njakou formou v�m m�me zobrazovat obsah. \r\n\r\n\r\n\r\n\r\n\r\n\r\niDNES Premium\n\r\nBez reklam\n\r\n\r\n199 K� m�s��n�\n\r\nM��ete neomezen� ��st iDNES.cz, Lidovky.cz, Expres.cz a Antiyoutuber.cz. K tomu dostanete tak� noviny a �asopisy v elektronick� podob�. To v�e bez reklam. 1\n\r\n\r\nP�edplatit\n\r\n\r\nU� m�te ��et? P�ihlaste se\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nS c�lenou reklamou\n\r\n\r\n\r\nZdarma \r\n\r\nZachov�me v�m v�e tak, jak jste zvykl� a reklamu p�izp�sob�me va�im z�jm�m. Bez omezen� si m��ete d�l ��st, p�ehr�vat videa, sout�it �i p�isp�vat do v�ech diskus�. 2\n\r\n\r\nSouhlas�m\n\r\nPodrobn� nastaven�\n\r\n\r\n\r\n\r\n\r\n\r\niDNES a reklama\n\r\nPokud vyu�ijete m�sto platby ud�len� souhlasu s reklamou (tj. souhlas s vyu�it�m cookies a dal��ch s�ov�ch identifik�tor� pro ��ely c�len� reklamy), \r\nbudou V�m zobrazov�ny v…",
-      "stazeno": "2026-09-24T11:03:47.131Z",
-      "stav": 200
-    },
-    "vyrizeni": {
-      "kdy": "2026-09-25T19:51:38.645Z",
-      "duvod": "neudalost",
-      "patriK": null,
-      "poznamka": "Útočník pobodal lidi v klášteře v Jarosławi, 1 mrtvý; motiv není znám, nejde o potvrzenou vazbu na stát ani hybridní hrozbu, mimo výčet pravidla č. 1. Presumpce neviny — nejde o odsouzeného pachatele."
-    }
-  },
-  {
-    "id": "k-5be91759bf22db31",
-    "zachyceno": "2026-09-24T11:03:45.458Z",
-    "publikovano": "2026-09-24T10:45:09.000Z",
-    "zdroj": {
-      "nazev": "Denník N (Slovensko)",
-      "url": "https://dennikn.sk/5580554/obmedzte-spravy-prijmite-ze-svet-nie-je-bezpecne-miesto-politici-castejsie-pouzivaju-slovo-vojna-co-robit-ak-mate-obavy-anketa/",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Obmedzte správy, prijmite, že svet nie je bezpečné miesto. Politici častejšie používajú slovo vojna, čo robiť, ak máte obavy? (anketa)",
-    "titulekPuvodni": "Obmedzte správy, prijmite, že svet nie je bezpečné miesto. Politici častejšie používajú slovo vojna, čo robiť, ak máte obavy? (anketa)",
-    "shrnuti": "Od politikov čoraz častejšie vo verejnom priestore počujeme o vojne. Premiér Robert Fico cez víkend obviňoval Západ, že chce vojnu medzi Ruskom a NATO, hovoril o hrozbe jadrovej vojny. Opisoval aj svoje obavy z vojny. Vo verejnom priestore sa slovo vojna skloňuje teraz častejšie. Aj politici z iných",
-    "kodZeme": "NO",
-    "zeme": "Norsko",
-    "kategorie": [
-      "zpravodajske",
-      "nato",
-      "rusko"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "zeSite": null,
-    "shody": [
-      "obvin",
-      "nato",
-      "rusk"
-    ],
-    "naliehave": null,
-    "stav": "vyrizen",
-    "vyrez": {
-      "text": "",
-      "stazeno": "2026-09-24T11:03:50.175Z",
-      "stav": 403,
-      "chyba": "HTTP 403"
-    },
-    "vyrizeni": {
-      "kdy": "2026-09-25T19:51:38.645Z",
-      "duvod": "neudalost",
-      "patriK": null,
-      "poznamka": "Anketa/komentář o strachu z války a mediálním pokrytí; není zpráva o události."
-    }
-  },
-  {
-    "id": "k-625bb997618ce72f",
-    "zachyceno": "2026-09-24T12:04:47.918Z",
-    "publikovano": "2026-09-24T10:39:00.000Z",
-    "zdroj": {
-      "nazev": "Ukrainska Pravda (anglicky)",
-      "url": "https://www.pravda.com.ua/eng/news/2026/09/24/8054892/",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Russian missile destroys textile factory in Kyiv",
-    "titulekPuvodni": "Russian missile destroys textile factory in Kyiv",
-    "shrnuti": "A Russian ballistic missile struck the TK-Domashnii Tekstyl production facility in Kyiv, causing extensive damage.",
-    "kodZeme": "UA",
-    "zeme": "Ukrajina",
-    "kategorie": [
-      "hybridni",
-      "rusko"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "zeSite": null,
-    "shody": [
-      "missile struck",
-      "russia"
-    ],
-    "naliehave": null,
-    "stav": "vyrizen",
-    "vyrez": {
-      "text": "Russian missile destroys textile factory in Kyiv | Ukrainska Pravda\nPhoto: Oleksandr Sokolovskyi’s Facebook\nA Russian ballistic missile struck the TK-Domashnii Tekstyl production facility in Kyiv, causing extensive damage.\nSource: Oleksandr Sokolovskyi , co-owner of the Tekstyl-Kontakt Group\nQuote: \"It is very difficult to write about this. Last night, the enemy reached us too. A ballistic missile struck our main production facility and the TK-Domashnii Tekstyl logistics warehouse.\"\nAdvertisement:\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nPhoto: Oleksandr Sokolovskyi’s Facebook\r\n\r\n\r\n\r\nDetails: \"Unfortunately, there is extensive damage to everything we spent years building. But the most important thing is that none of our employees were injured,\" Sokolovskyi said.\nMost of the company's products are manufactured at its own garment factories in Kyiv and Odesa. The production facilities cover a total area of 4,000 sq m and employ around 250 people, including seamsters, cutters, technologists and other staff.\n\r\n\r\n\r\n\r\n\r\nPhoto: Oleksandr Sokolovskyi’s Facebook\r\n\r\n\r\n\r\n\"I want to thank all our partners – our customers and suppliers – for their support and understanding. We will do everything we can not to let…",
-      "stazeno": "2026-09-24T12:04:51.945Z",
-      "stav": 200
-    },
-    "vyrizeni": {
-      "kdy": "2026-09-26T00:00:31.394Z",
-      "duvod": "mimo-rozsah",
-      "patriK": null,
-      "poznamka": "Ruský útok na Kyjev/Oděsu/Sumy v noci na 25. 9. a předchozí dny (textilka, byty); uvnitř Ukrajiny, bez doloženého následku pro sledované země."
-    }
-  },
-  {
-    "id": "k-ae577e6ce12b8763",
-    "zachyceno": "2026-09-24T11:03:44.527Z",
-    "publikovano": "2026-09-24T10:25:00.000Z",
-    "zdroj": {
-      "nazev": "ČTK — České noviny",
-      "url": "https://www.ceskenoviny.cz/zpravy/na-jihovychode-polska-muz-zautocil-na-lidi-v-klastere-jeden-z-nich-zemrel/2878832?utm_source=rss&utm_medium=feed",
-      "typ": "wire",
-      "primarni": false
-    },
-    "titulek": "Na jihovýchodě Polska muž zaútočil na lidi v klášteře, jeden z nich zemřel",
-    "titulekPuvodni": "Na jihovýchodě Polska muž zaútočil na lidi v klášteře, jeden z nich zemřel",
-    "shrnuti": "Varšava - V ženském klášteře ve městě Jaroslaw na jihovýchodě Polska dnes muž zaútočil na lidi nožem. Pět osob zranil, jedna z nich později zemřela. Informují o tom polská média. Policie podezřelého zadržela....",
-    "kodZeme": "PL",
-    "zeme": "Polsko",
-    "kategorie": [
-      "zpravodajske",
-      "vojsko"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "zeSite": null,
-    "shody": [
-      "zadrz",
-      "policie"
-    ],
-    "naliehave": null,
-    "stav": "vyrizen",
-    "vyrez": {
-      "text": "Na jihovýchodě Polska muž zaútočil na lidi v klášteře, jeden z nich zemřel | ČeskéNoviny.cz \r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nPřejít k obsahu \r\n| \r\nPřejít k hlavnímu menu \r\n| \r\nPřejít k vyhledávání \r\n\r\n\r\n\r\n\r\n\r\n\r\nČeské noviny \r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nMenu \r\n\r\n\r\n\r\n\r\n\r\n\r\nÚvod \r\n\r\n\r\nČR\n\r\nSvět\n\r\nEkonomika\n\r\nKultura\n\r\nSport\n\r\nMagazín\n\r\nSpeciál\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nKonflikt na Blízkém Východě\n\r\n\r\n\r\nInvaze na Ukrajinu\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nNa jihovýchodě Polska muž zaútočil na lidi v klášteře, jeden z nich zemřel\n\r\n\r\n\r\n\r\n\r\n\r\nKomerční prezentace Aktual.: 24.09.2026 12:25 \r\nVydáno: 24.09.2026, 12:25 \r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nVůz polské policie - ilustrační foto. \r\nČTK/Taneček David \r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nVaršava - V ženském klášteře ve městě Jaroslaw na jihovýchodě Polska dnes muž zaútočil na lidi nožem. Pět osob zranil, jedna z nich později zemřela. Informují o tom polská média. Policie podezřelého zadržela.\n\r\n\r\n\r\n\r\n\r\nReklama \r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nTelevize TVN24 na svých internetových stránkách uvedla, že muž zaútočil…",
-      "stazeno": "2026-09-24T11:03:51.865Z",
-      "stav": 200
-    },
-    "vyrizeni": {
-      "kdy": "2026-09-25T19:51:38.645Z",
-      "duvod": "duplicita",
-      "patriK": null,
-      "poznamka": "Táž událost, viz výše."
     }
   }
 ]
