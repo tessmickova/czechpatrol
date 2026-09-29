@@ -110,6 +110,8 @@ jobs:
           TELEGRAM_WEBHOOK_SECRET: ${{ secrets.TELEGRAM_WEBHOOK_SECRET }}
           API_URL: ${{ vars.API_URL }}
         run: |
+          # Vlastní doména, když odpovídá (30. 9. 2026); jinak dosavadní adresa.
+          if curl -fsS -m 10 https://api.czechpatrol.cz/zdravi >/dev/null; then API_URL=https://api.czechpatrol.cz; fi
           [ -n "$API_URL" ] || { echo "Chybí proměnná API_URL, webhook nenastaven."; exit 0; }
           curl -sS -X POST "https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/setWebhook" \
             -H 'Content-Type: application/json' \

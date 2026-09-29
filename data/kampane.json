@@ -42,9 +42,9 @@
     "jistotaManipulace": "potvrzeno",
     "duvodManipulace": "Podvržený dokument i falešný web jsou doložené a Český rozhlas nechal napodobeninu vypnout. Že šlo o cílené klamání, není sporné.",
     "puvodce": {
-      "koho": "Rusko",
+      "koho": "",
       "jistota": "nizka",
-      "duvod": "Část polských i českých expertů a politiků původ kampaně přisuzuje Rusku. Žádný úřad to zatím veřejně nedoložil, proto to vedeme jako podezření, ne jako zjištění."
+      "duvod": "Žádný úřad původce veřejně neurčil, proto ho nikomu nepřipisujeme. Doložené je jen to, co je popsané výš."
     },
     "zdroje": [
       {
@@ -218,9 +218,9 @@
     "jistotaManipulace": "potvrzeno",
     "duvodManipulace": "Agentura PAP sama potvrdila, že zprávu nevydala, a polská vláda případ vede jako kybernetický útok. O podvrhu není spor.",
     "puvodce": {
-      "koho": "Rusko",
+      "koho": "",
       "jistota": "stredni",
-      "duvod": "Polský ministr digitalizace veřejně uvedl, že vše nasvědčuje útoku řízenému z ruské strany. Je to vyjádření člena vlády, ne formální státní atribuce s doklady, proto to vedeme jako silné podezření."
+      "duvod": "Žádný úřad původce veřejně neurčil, proto ho nikomu nepřipisujeme. Doložené je jen to, co je popsané výš."
     },
     "zdroje": [
       {
@@ -413,10 +413,10 @@
         "jak": "Jméno města slouží jako značka portálu, aby působil místně."
       }
     ],
-    "titulek": "Portál založený roku 2024 se tváří jako nezávislé místní zpravodajství z Narvy a míchá běžné městské zprávy s obsahem odpovídajícím kremelské linii",
+    "titulek": "Portál založený roku 2024 se tváří jako nezávislé místní zpravodajství z Narvy a míchá běžné městské zprávy s obsahem převzatým z ruských státních médií",
     "tvrzeni": [
       "Portál se představuje jako neutrální místní zdroj pro rusky mluvící obyvatele Estonska.",
-      "Mezi běžnými zprávami se objevují texty odpovídající kremelské linii vůči estonskému státu."
+      "Mezi běžnými zprávami se objevují texty převzaté z ruských státních médií (podle EU DisinfoLab a Propastop)."
     ],
     "kanaly": [
       "Vlastní zpravodajský web vydávající se za místní médium z Narvy.",
@@ -439,9 +439,9 @@
     "jistotaManipulace": "vysoka",
     "duvodManipulace": "Provoz portálu i jeho zpětné citování ruskými státními médii popsaly nezávisle dvě analytické organizace. Chybí ale úřední závěr estonských orgánů.",
     "puvodce": {
-      "koho": "Rusko",
+      "koho": "",
       "jistota": "stredni",
-      "duvod": "Napojení na ruská státní média je doložené zpětným citováním. Kdo portál provozuje a kdo ho platí, veřejně doložené není, proto to vedeme jako podezření."
+      "duvod": "Žádný úřad původce veřejně neurčil, proto ho nikomu nepřipisujeme. Doložené je jen to, co je popsané výš."
     },
     "zdroje": [
       {
@@ -527,9 +527,9 @@
     "jistotaManipulace": "potvrzeno",
     "duvodManipulace": "Finská policie vede případ jako vydávání se za úřad. Že záchranný sbor dokument nevydal, je nesporné.",
     "puvodce": {
-      "koho": "Rusko",
+      "koho": "",
       "jistota": "nizka",
-      "duvod": "Odborník Evropského centra pro potírání hybridních hrozeb označil ruský původ za pravděpodobný a Yle vystopovalo první šíření na ruskou sociální síť. Finská policie ale nikoho neoznačila, proto to vedeme jako podezření."
+      "duvod": "Žádný úřad původce veřejně neurčil, proto ho nikomu nepřipisujeme. Doložené je jen to, co je popsané výš."
     },
     "zdroje": [
       {

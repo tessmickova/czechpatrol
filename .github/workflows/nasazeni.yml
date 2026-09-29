@@ -98,7 +98,16 @@ jobs:
       # Jeden další pokus po půl minutě; chyba v kódu spadne i napodruhé.
       - name: Sestavení
         if: steps.zmena.outputs.nasadit == 'true'
-        run: npm run build || { echo "::warning::Sestavení selhalo, zkouším znovu za 30 s (např. nedostupná písma)"; sleep 30; npm run build; }
+        # Adresa API bez jména zakladatelky (30. 9. 2026): api.czechpatrol.cz,
+        # ale jen když opravdu odpovídá — jinak zůstane dosavadní adresa
+        # z proměnné, ať web nikdy neukazuje na nefunkční API.
+        run: |
+          if curl -fsS -m 10 https://api.czechpatrol.cz/zdravi >/dev/null; then
+            export NEXT_PUBLIC_API_URL=https://api.czechpatrol.cz
+          else
+            echo "::warning::api.czechpatrol.cz neodpovídá — web zůstává na dosavadní adrese API"
+          fi
+          npm run build || { echo "::warning::Sestavení selhalo, zkouším znovu za 30 s (např. nedostupná písma)"; sleep 30; npm run build; }
         env:
           NEXT_PUBLIC_API_URL: ${{ vars.API_URL }}
           NEXT_PUBLIC_POSTHOG_KEY: ${{ vars.POSTHOG_KEY }}

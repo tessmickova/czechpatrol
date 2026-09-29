@@ -72,3 +72,20 @@ describe("obnova kódem", () => {
     expect(ROLE_S_OBNOVOU).not.toContain("izs");
   });
 });
+
+describe("konfigurace workeru", () => {
+  it("routes a další hlavní klíče stojí před první [tabulkou]", async () => {
+    /*
+      30. 9. 2026: `routes` zapsané pod `[observability]` patřilo v TOML do té
+      tabulky; Wrangler to vzal jen jako varování a nasazení API spadlo.
+    */
+    const { readFileSync } = await import(/* @vite-ignore */ ["node", "fs"].join(":")) as { readFileSync: (p: string, k: string) => string };
+    const radky = readFileSync("wrangler.toml", "utf-8").split("\n");
+    const prvniTabulka = radky.findIndex((r) => /^\[/.test(r));
+    for (const klic of ["name", "main", "routes", "compatibility_date"]) {
+      const i = radky.findIndex((r) => r.startsWith(`${klic} =`));
+      expect(i, klic).toBeGreaterThanOrEqual(0);
+      expect(i, `${klic} musí být před první tabulkou`).toBeLessThan(prvniTabulka);
+    }
+  });
+});

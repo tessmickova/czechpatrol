@@ -15,7 +15,7 @@ const SLOUPCE: { nadpis: string; odkazy: [string, string][] }[] = [
   },
   {
     nadpis: "Důvěryhodnost",
-    odkazy: [["/metodika/", "Metodika"], ["/zdroje/", "Zdroje"], ["/vyvoj/", "Vývoj"], ["/svet/", "Aktéři a cíle"], ["/o-projektu/", "O projektu"]],
+    odkazy: [["/metodika/", "Metodika"], ["/zdroje/", "Zdroje"], ["/vyvoj/", "Vývoj"], ["/o-projektu/", "O projektu"]],
   },
   {
     nadpis: "Projekt",

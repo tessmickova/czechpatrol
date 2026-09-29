@@ -183,7 +183,7 @@ export function KartaKampane({ k, nazvyZemi }: { k: Kampan; nazvyZemi: Record<st
           />
           <StitekJistoty
             otazka="Kdo za tím stojí?"
-            odpoved={k.puvodce.koho ? (k.puvodce.jistota === "potvrzeno" || k.puvodce.jistota === "vysoka" ? k.puvodce.koho : `${k.puvodce.koho} — zatím jen podezření`) : "Neznámý"}
+            odpoved={puvodceKampane(k) ?? "Úřady původce neurčily"}
             jistota={k.puvodce.jistota}
             duvod={k.puvodce.duvod}
           />
@@ -298,7 +298,7 @@ export function DlazdiceKampane({ k, nazvyZemi, siroka = false }: { k: Kampan; n
           zásah: {k.jistotaManipulace === "potvrzeno" || k.jistotaManipulace === "vysoka" ? "doloženo" : k.jistotaManipulace === "stredni" ? "pravděpodobně" : "sporné"}
         </Odznak>
         <Odznak ton={TON_JISTOTY[k.puvodce.jistota]} duraz="silny" ikona="otaznik">
-          původce: {k.puvodce.koho ? (k.puvodce.jistota === "potvrzeno" || k.puvodce.jistota === "vysoka" ? k.puvodce.koho.toLowerCase() : `${k.puvodce.koho.toLowerCase()} — podezření`) : "neznámý"}
+          původce: {puvodceKampane(k)?.toLowerCase() ?? "úředně neurčen"}
         </Odznak>
       </span>
     </Link>
@@ -346,4 +346,14 @@ export function TabulkaZemiKampani({
       </ul>
     </div>
   );
+}
+
+/*
+  Původce kampaně jen s úředním závěrem (30. 9. 2026). Připsat operaci státu
+  podle expertů nebo novinářů je tvrzení, které web nemá šířit jako své —
+  a zbytečně z něj dělá terč. Pod vysokou jistotou se jméno nezobrazí vůbec,
+  ani s dovětkem „podezření“; kontrola dat ho ani nepustí do dat.
+*/
+function puvodceKampane(k: { puvodce: { koho: string; jistota: string } }): string | null {
+  return k.puvodce.koho && (k.puvodce.jistota === "vysoka" || k.puvodce.jistota === "potvrzeno") ? k.puvodce.koho : null;
 }

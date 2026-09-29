@@ -2,7 +2,7 @@ import { chromium } from "playwright";
 // cesta k prohlížeči se liší podle stroje; bez proměnné se použije ten, který si nainstaloval Playwright
 const prohlizec = process.env.CHROMIUM;
 const b = await chromium.launch(prohlizec ? { executablePath: prohlizec } : {});
-const STRANKY = ["/", "/udalosti/", "/zeme/", "/analyzy/", "/metodika/", "/zdroje/", "/opravy/", "/o-projektu/", "/odber/", "/manipulace/", "/svet/", "/vyvoj/", "/podporit/", "/muj-prehled/", "/en/", "/zeme/cz/"];
+const STRANKY = ["/", "/udalosti/", "/zeme/", "/analyzy/", "/metodika/", "/zdroje/", "/opravy/", "/o-projektu/", "/odber/", "/manipulace/", "/vyvoj/", "/podporit/", "/muj-prehled/", "/en/", "/zeme/cz/"];
 const chyby = [];
 for (const url of STRANKY) {
   const ctx = await b.newContext({ viewport: { width: 1280, height: 900 }, colorScheme: "light" });

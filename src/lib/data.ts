@@ -4,7 +4,7 @@ export { tipy, vystraha } from "./data-lehka";
 import type { OficialniNastroj, PravniPolozka, ProvozniPolozka, OpatreniZeme, OpatreniZemi,
   Odmitnuty,
   Archiv, CelkovyStav, HybridniTlak, Incident, Kampan, Kandidat, Kategorie, NatoPolozka, Oprava, PravniStav,
-  Nepotvrzene, Overovana, Provoz, Puvodce, RuskoStav, Svet, Tip, TydenniHodnoceni, Uroven, Vystraha, VystrahaSoubor, Watchlist,
+  Nepotvrzene, Overovana, Provoz, Puvodce, Tip, TydenniHodnoceni, Uroven, Vystraha, VystrahaSoubor, Watchlist,
 } from "./typy";
 import { PORADI_KATEGORII } from "./kategorie";
 import { UROVNE } from "./skala";
@@ -17,14 +17,12 @@ import ostryProvoz from "../../data/provoz.json";
 import ostreNastroje from "../../data/oficialni-nastroje.json";
 import ostryHybridni from "../../data/hybridni-tlak.json";
 import ostreTydny from "../../data/tydny.json";
-import ostreRusko from "../../data/rusko.json";
 import ostryWatchlist from "../../data/watchlist.json";
 import ostryArchiv from "../../data/historie.json";
 import ostreNepotvrzene from "../../data/nepotvrzeno.json";
 import mesiceData from "../../data/mesice.json";
 import ostreOpravy from "../../data/opravy.json";
 import ostriKandidati from "../../data/kandidati.json";
-import ostrySvet from "../../data/svet.json";
 import ostreKampane from "../../data/kampane.json";
 import ostreOverujeme from "../../data/overujeme.json";
 import ostreOdmitnute from "../../data/fronta/odmitnute.json";
@@ -38,7 +36,6 @@ import ukazkoveNato from "../../data/ukazka/nato.json";
 import ukazkovyProvoz from "../../data/ukazka/provoz.json";
 import ukazkovyHybridni from "../../data/ukazka/hybridni-tlak.json";
 import ukazkoveTydny from "../../data/ukazka/tydny.json";
-import ukazkoveRusko from "../../data/ukazka/rusko.json";
 import ukazkovyArchiv from "../../data/ukazka/historie.json";
 import ukazkoveOverujeme from "../../data/ukazka/overujeme.json";
 
@@ -155,22 +152,6 @@ export function hybridniTlak(): HybridniTlak {
 export function tydny(): TydenniHodnoceni[] {
   const zdroj = JE_UKAZKA ? jako<TydenniHodnoceni[]>(ukazkoveTydny) : jako<TydenniHodnoceni[]>(ostreTydny);
   return zdroj.slice().sort((a, b) => a.zacatek.localeCompare(b.zacatek));
-}
-
-export function rusko(): RuskoStav {
-  const ostry = jako<RuskoStav>(ostreRusko);
-  if (!JE_UKAZKA) return ostry;
-  const u = jako<RuskoStav>(ukazkoveRusko);
-  return {
-    ...ostry,
-    overeno: u.overeno,
-    casovyTlak: u.casovyTlak,
-    dopadNaIndex: u.dopadNaIndex,
-    ukazatele: ostry.ukazatele.map((p) => {
-      const n = u.ukazatele.find((x) => x.nazev === p.nazev);
-      return n ? { ...p, uroven: n.uroven } : p;
-    }),
-  };
 }
 
 /**
@@ -639,11 +620,6 @@ export function nazvyZemi(): Record<string, string> {
   const m: Record<string, string> = { CZ: "Česko" };
   for (const i of incidenty()) if (!m[i.kodZeme]) m[i.kodZeme] = i.zeme;
   return m;
-}
-
-/** Cíle mocností a míra jejich naplnění — analytická stránka, verzovaná a datovaná. */
-export function svet(): Svet {
-  return jako<Svet>(ostrySvet);
 }
 
 /** Veřejné opravy, nejnovější první. */
