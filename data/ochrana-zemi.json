@@ -1,0 +1,73 @@
+{
+  "aktualizovano": "2026-09-30",
+  "poznamka": "Počítají se jen doložená členství a smlouvy, ne vojenská síla ani skutečná míra ohrožení. Bilaterální bezpečnostní dohody bez závazku obrany se nepočítají.",
+  "faktory": [
+    {
+      "klic": "nato",
+      "nazev": "NATO (článek 5)",
+      "popis": "Ozbrojený útok na jednoho člena je útokem na všechny. Podle strategické koncepce NATO k odstrašení přispívají i jaderné síly USA, Spojeného království a Francie.",
+      "zeme": ["AL", "BE", "BG", "HR", "CZ", "DK", "EE", "FI", "FR", "DE", "GR", "HU", "IS", "IT", "LV", "LT", "LU", "ME", "NL", "MK", "NO", "PL", "PT", "RO", "SK", "SI", "ES", "SE", "TR", "GB"],
+      "zdroje": [
+        { "nazev": "NATO — členské státy", "url": "https://www.nato.int/cps/en/natohq/nato_countries.htm" },
+        { "nazev": "NATO — Strategická koncepce 2022", "url": "https://www.nato.int/strategic-concept/" }
+      ]
+    },
+    {
+      "klic": "eu",
+      "nazev": "EU (článek 42 odst. 7)",
+      "popis": "Doložka o vzájemné pomoci: při ozbrojeném útoku na území člena mu ostatní poskytnou pomoc všemi prostředky, které mají.",
+      "zeme": ["AT", "BE", "BG", "HR", "CY", "CZ", "DK", "EE", "FI", "FR", "DE", "GR", "HU", "IE", "IT", "LV", "LT", "LU", "MT", "NL", "PL", "PT", "RO", "SK", "SI", "ES", "SE"],
+      "zdroje": [
+        { "nazev": "EUR-Lex — Smlouva o EU, článek 42", "url": "https://eur-lex.europa.eu/legal-content/CS/TXT/?uri=CELEX:12016M042" },
+        { "nazev": "Evropská unie — členské země", "url": "https://european-union.europa.eu/principles-countries-history/eu-countries_cs" }
+      ]
+    },
+    {
+      "klic": "jaderne",
+      "nazev": "Vlastní jaderné zbraně",
+      "popis": "Stát sám vlastní jaderné zbraně.",
+      "zeme": ["GB", "FR"],
+      "zdroje": [
+        { "nazev": "Arms Control Association — Nuclear Weapons: Who Has What at a Glance", "url": "https://www.armscontrol.org/factsheets/nuclear-weapons-who-has-what-glance" }
+      ]
+    },
+    {
+      "klic": "jef",
+      "nazev": "Společné expediční síly (JEF)",
+      "popis": "Uskupení deseti zemí severní Evropy vedené Spojeným královstvím pro rychlou společnou reakci.",
+      "zeme": ["GB", "DK", "EE", "FI", "IS", "LV", "LT", "NL", "NO", "SE"],
+      "zdroje": [
+        { "nazev": "JEF — Participant Nations", "url": "https://jefnations.org/about-the-jef/jef-nations/" }
+      ]
+    },
+    {
+      "klic": "predsunute",
+      "nazev": "Předsunuté síly NATO na území",
+      "popis": "Mnohonárodní bojové uskupení NATO umístěné na území státu (od 2017 v Pobaltí a Polsku, od 2022 i na Slovensku, v Maďarsku, Rumunsku a Bulharsku).",
+      "zeme": ["EE", "LV", "LT", "PL", "SK", "HU", "RO", "BG"],
+      "zdroje": [
+        { "nazev": "NATO — Posílení východního křídla", "url": "https://www.nato.int/en/what-we-do/deterrence-and-defence/strengthening-natos-eastern-flank" },
+        { "nazev": "NATO Allied Land Command — Enhanced Forward Presence", "url": "https://lc.nato.int/operations/enhanced-forward-presence-efp" }
+      ]
+    }
+  ],
+  "hranice": {
+    "nazev": "Pozemní hranice s Ruskem nebo Běloruskem",
+    "popis": "Včetně hranice s Kaliningradskou oblastí.",
+    "zeme": ["NO", "FI", "EE", "LV", "LT", "PL", "UA"],
+    "zdroje": [
+      { "nazev": "CIA World Factbook — Rusko (hranice)", "url": "https://www.cia.gov/the-world-factbook/countries/russia/" },
+      { "nazev": "CIA World Factbook — Bělorusko (hranice)", "url": "https://www.cia.gov/the-world-factbook/countries/belarus/" }
+    ]
+  },
+  "mimo": ["RU", "BY"],
+  "nazvy": {
+    "AL": "Albánie", "AT": "Rakousko", "BA": "Bosna a Hercegovina", "BE": "Belgie", "BG": "Bulharsko", "CH": "Švýcarsko", "CY": "Kypr",
+    "CZ": "Česko", "DE": "Německo", "DK": "Dánsko", "EE": "Estonsko", "ES": "Španělsko", "FI": "Finsko", "FR": "Francie",
+    "GB": "Spojené království", "GR": "Řecko", "HR": "Chorvatsko", "HU": "Maďarsko", "IE": "Irsko", "IS": "Island", "IT": "Itálie",
+    "LT": "Litva", "LU": "Lucembursko", "LV": "Lotyšsko", "MD": "Moldavsko", "ME": "Černá Hora", "MK": "Severní Makedonie",
+    "MT": "Malta", "NL": "Nizozemsko", "NO": "Norsko", "PL": "Polsko", "PT": "Portugalsko", "RO": "Rumunsko", "RS": "Srbsko",
+    "SE": "Švédsko", "SI": "Slovinsko", "SK": "Slovensko", "TR": "Turecko", "UA": "Ukrajina", "XK": "Kosovo",
+    "RU": "Rusko", "BY": "Bělorusko"
+  }
+}
