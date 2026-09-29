@@ -59,17 +59,21 @@ export async function kopniDoSberu(env: Env, cas: number, kazdychMinut = KAZDYCH
   if (!repo) return { spusteno: false, duvod: "není nastaven SBER_REPO" };
   const soubor = env.SBER_WORKFLOW ?? "sber.yml";
 
+  return spustWorkflow(env.GH_TOKEN_SBER, repo, soubor);
+}
+
+async function spustWorkflow(token: string, repo: string, soubor: string, vstupy?: Record<string, string>): Promise<VysledekSberu> {
   const odpoved = await fetch(`https://api.github.com/repos/${repo}/actions/workflows/${soubor}/dispatches`, {
     method: "POST",
     headers: {
-      authorization: `Bearer ${env.GH_TOKEN_SBER}`,
+      authorization: `Bearer ${token}`,
       accept: "application/vnd.github+json",
       "x-github-api-version": "2022-11-28",
       "content-type": "application/json",
       // GitHub API bez tohohle hlavičkového údaje odmítá požadavky.
       "user-agent": "czechpatrol-api",
     },
-    body: JSON.stringify({ ref: "main" }),
+    body: JSON.stringify(vstupy ? { ref: "main", inputs: vstupy } : { ref: "main" }),
   });
 
   if (odpoved.status === 204) return { spusteno: true };
@@ -78,4 +82,30 @@ export async function kopniDoSberu(env: Env, cas: number, kazdychMinut = KAZDYCH
   // o repozitáři, které do veřejné odpovědi nepatří.
   const text = await odpoved.text().catch(() => "");
   return { spusteno: false, duvod: `GitHub odpověděl ${odpoved.status}${text ? `: ${text.slice(0, 200)}` : ""}` };
+}
+
+/** Hodina a minuta v Praze — letní i zimní čas řeší databáze časových pásem, ne my. */
+export function prazskyCas(cas: number): { hodina: number; minuta: number } {
+  const casti = new Intl.DateTimeFormat("en-GB", { timeZone: "Europe/Prague", hour: "2-digit", minute: "2-digit", hourCycle: "h23" }).formatToParts(new Date(cas));
+  const cislo = (typ: string) => Number(casti.find((c) => c.type === typ)?.value ?? 0);
+  return { hodina: cislo("hour"), minuta: cislo("minute") };
+}
+
+/** Tik plánovače (každých 10 minut), ve kterém se spouští přehled: 7:30 a 19:30 pražského času. */
+export function jeCasPrehledu(cas: number): boolean {
+  const { hodina, minuta } = prazskyCas(cas);
+  return (hodina === 7 || hodina === 19) && minuta >= 30 && minuta < 40;
+}
+
+/*
+  Přehled v 7:30 a 19:30 spouští worker (29. 9. 2026). Plánovač GitHubu
+  běh zdržel o čtyři hodiny a večerní přehled přišel ve 23:28. Worker se
+  trefí na deset minut; naplánované běhy GitHubu zůstávají jako záloha
+  a opožděný běh rozhlas sám zahodí (nastroje/rozhlas.mjs, jeCasPrehledu).
+  Dvojí odeslání hlídá stav rozhlasu: přehled s daným klíčem odejde jednou.
+*/
+export async function kopniDoRozhlasu(env: Env, cas: number): Promise<VysledekSberu> {
+  if (!jeCasPrehledu(cas)) return { spusteno: false, duvod: "není čas" };
+  if (!env.GH_TOKEN_SBER || !env.SBER_REPO) return { spusteno: false, duvod: "není nastaven GH_TOKEN_SBER nebo SBER_REPO" };
+  return spustWorkflow(env.GH_TOKEN_SBER, env.SBER_REPO, "rozhlas.yml", { prehled: "true" });
 }

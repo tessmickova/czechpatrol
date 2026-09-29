@@ -101,3 +101,31 @@ describe("kopnutí do sběru", () => {
     vi.unstubAllGlobals();
   });
 });
+
+describe("přehled spouští worker v 7:30 a 19:30 pražského času", async () => {
+  const { jeCasPrehledu, kopniDoRozhlasu } = await import("../src/sber");
+  it("letní i zimní čas, jen jeden desetiminutový tik", () => {
+    expect(jeCasPrehledu(Date.parse("2026-09-29T05:30:00Z"))).toBe(true);  // 7:30 SELČ
+    expect(jeCasPrehledu(Date.parse("2026-09-29T17:30:00Z"))).toBe(true);  // 19:30 SELČ
+    expect(jeCasPrehledu(Date.parse("2026-09-29T17:40:00Z"))).toBe(false); // 19:40 — další tik už ne
+    expect(jeCasPrehledu(Date.parse("2026-09-29T17:20:00Z"))).toBe(false);
+    expect(jeCasPrehledu(Date.parse("2026-12-01T06:30:00Z"))).toBe(true);  // 7:30 SEČ
+    expect(jeCasPrehledu(Date.parse("2026-12-01T05:30:00Z"))).toBe(false); // 6:30 SEČ
+    expect(jeCasPrehledu(Date.parse("2026-12-01T18:30:00Z"))).toBe(true);  // 19:30 SEČ
+  });
+  it("spustí rozhlas s přehledem", async () => {
+    const { vi } = await import("vitest");
+    let telo = "";
+    let adresa = "";
+    vi.stubGlobal("fetch", async (url: string, init: RequestInit) => { adresa = url; telo = String(init.body); return new Response(null, { status: 204 }); });
+    try {
+      const env = { GH_TOKEN_SBER: "t", SBER_REPO: "o/r" } as never;
+      expect(await kopniDoRozhlasu(env, Date.parse("2026-09-29T17:30:00Z"))).toEqual({ spusteno: true });
+      expect(adresa).toContain("/actions/workflows/rozhlas.yml/dispatches");
+      expect(JSON.parse(telo)).toEqual({ ref: "main", inputs: { prehled: "true" } });
+      expect((await kopniDoRozhlasu(env, Date.parse("2026-09-29T12:00:00Z"))).spusteno).toBe(false);
+    } finally {
+      vi.unstubAllGlobals();
+    }
+  });
+});

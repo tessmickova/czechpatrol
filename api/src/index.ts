@@ -10,7 +10,7 @@ import * as izs from "./izs";
 import * as ja from "./ja";
 import { ChybaHttp, json, povolenyPuvod, sCors } from "./pomocne";
 import { hlidejMinuty, kadenceSberu, zkontrolujSber } from "./hlidac";
-import { kopniDoSberu } from "./sber";
+import { kopniDoRozhlasu, kopniDoSberu } from "./sber";
 import * as nastaveni from "./nastaveni";
 import * as navrhy from "./navrhy";
 import * as patrol from "./patrol";
@@ -189,6 +189,14 @@ export default {
           else if (b.duvod && b.duvod !== "není čas") console.warn(`[sběr] nespuštěn — ${b.duvod}`);
         } catch (e) {
           console.error("[sběr]", e);
+        }
+
+        try {
+          const r = await kopniDoRozhlasu(env, udalost.scheduledTime);
+          if (r.spusteno) console.log("[rozhlas] přehled spuštěn");
+          else if (r.duvod && r.duvod !== "není čas") console.warn(`[rozhlas] přehled nespuštěn — ${r.duvod}`);
+        } catch (e) {
+          console.error("[rozhlas]", e);
         }
 
         /*

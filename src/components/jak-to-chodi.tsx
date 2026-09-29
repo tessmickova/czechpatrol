@@ -98,7 +98,7 @@ const KAM: Cil[] = [
   {
     nazev: "Telegram — veřejný kanál",
     podminka: "lidskyOvereno = true",
-    kdy: "Hned: vážné případy (O, R), opatření platná v Česku, článek 4/5 NATO a změny úředních stavů. Malé signály (žlutá závažnost) dvěma řádky, nejvýš jeden za 4 hodiny. Všechno ověřené navíc v přehledu v 7:30 a 19:30.",
+    kdy: "Hned: vážné případy (O, R), opatření platná v Česku, článek 4/5 NATO a změny úředních stavů. Malé signály (žlutá závažnost) dvěma řádky, nejvýš jeden za 4 hodiny. Ostatní ověřené v přehledu v 7:30 a 19:30 — bez opakování a jen když je co nového.",
   },
   {
     nazev: "Telegram — naléhavý signál, BEZ schválení",

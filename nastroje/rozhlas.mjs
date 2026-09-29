@@ -923,7 +923,13 @@ export function castDne(ted = Date.now()) {
 export function jeCasPrehledu(ted = Date.now()) {
   const { hodina, minuta } = prazskyCas(ted);
   const m = hodina * 60 + minuta;
-  return (m >= 7 * 60 + 15 && m < 12 * 60) || (m >= 19 * 60 + 15 && m < 24 * 60);
+  /*
+    Okno jen dvě hodiny (29. 9. 2026). GitHub naplánované běhy zdržuje
+    o hodiny — večerní přehled pak přišel ve 23:28. Opožděný běh teď
+    nic nepošle; včas přehled spouští worker (api/src/sber.ts,
+    kopniDoRozhlasu) a to, co nestihl večer, vezme ranní přehled.
+  */
+  return (m >= 7 * 60 + 15 && m < 9 * 60 + 30) || (m >= 19 * 60 + 15 && m < 21 * 60 + 30);
 }
 
 export function vyberNavrhyDoPrehledu(navrhy, stav, { ted = Date.now() } = {}) {
@@ -1247,8 +1253,12 @@ export function vyberNove(zaznamy, stav, { rezim, ted = Date.now() }) {
       if (!z) vybrane.push({ i, aktualizace: false });
       else if (vice) vybrane.push({ i, aktualizace: true });
     } else {
+      /*
+        Přehled neopakuje, co už odešlo průběžně (29. 9. 2026, provozovatelka:
+        „jen proto, aby se napsalo to stejné“). Do přehledu jde jen to, co
+        ještě nikdo neviděl, a nové položky v historii případu.
+      */
       if (!z) vybrane.push({ i, aktualizace: false });
-      else if (z.cesta && !z.prehled) vybrane.push({ i, aktualizace: false });
       else if (vice) vybrane.push({ i, aktualizace: true });
     }
   }
@@ -1711,7 +1721,16 @@ async function main() {
     */
     nove = vyberNove(zaznamy, stav, { rezim, ted });
     davka = nove.slice(0, MAX_V_PREHLEDU_ZAZNAMU);
-    const kusy = davka.length ? sestavSouhrn(davka, { ted, cast }).kusy : [sestavPrazdnyPrehled({ ted, cast })];
+    /*
+      Bez novinky se přehled neposílá (29. 9. 2026). Zpráva „nic nového“
+      ve 20:00 jen budí; kdo chce vědět, že kanál žije, vidí to na webu.
+      Zapamatuje se jako odbytý, ať to další běh nezkouší znovu.
+    */
+    if (!davka.length && !skok) {
+      stav.prehledy[klicPrehledu] = { kdy: new Date(ted).toISOString(), zaznamu: 0, neodeslan: "nic nového" };
+      console.log(`[rozhlas] přehled ${klicPrehledu}: nic nového, neposílá se`);
+    }
+    const kusy = !davka.length && !skok ? [] : davka.length ? sestavSouhrn(davka, { ted, cast }).kusy : [sestavPrazdnyPrehled({ ted, cast })];
     if (skok) kusy[kusy.length - 1] += `\n\n\u26fd ${esc(skok.text.split("\n")[0])}`;
     if (nove.length > davka.length) kusy[kusy.length - 1] += `\n\nDalší záznamy (${nove.length - davka.length}) na ${WEB}/udalosti/`;
     let ok = true;
@@ -1721,7 +1740,7 @@ async function main() {
       if (v.ok) prvniId ??= v.messageId ?? null;
       else { ok = false; console.log(`[rozhlas] přehled neodešel: ${v.chyba}`); }
     }
-    if (ok) {
+    if (ok && kusy.length) {
       // Přehled vede na úvod, ne na první záznam v něm.
       await telefon(kusy[0], "prehled", `${WEB}/`);
       const kdy = new Date(ted).toISOString();
@@ -1729,7 +1748,7 @@ async function main() {
       stav.prehledy[klicPrehledu] = { kdy, zaznamu: nove.length, messageId: prvniId };
       if (skok) stav.palivo[skok.tyden] = { kdy, prehled: klicPrehledu };
       odeslano += kusy.length;
-    } else selhalo++;
+    } else if (kusy.length) selhalo++;
   } else if (rezim === "souhrn") {
     console.log(`[rozhlas] přehled ${klicPrehledu}: ${(stav.prehledy ?? {})[klicPrehledu] ? "už odešel" : "není čas (7:30 a 19:30 pražského času)"}`);
   }

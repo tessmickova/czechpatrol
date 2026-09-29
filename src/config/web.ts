@@ -73,9 +73,9 @@ export const DORUCOVANI = {
       správci (rozhlas.mjs, komu: "spravce"), ne do kanálu. Veřejně jdou jen
       vážné neověřené návrhy se dvěma nezávislými zdroji, označené.
     */
-    rozsah: "Průběžně jen to podstatné: mimořádná výstraha, vážné případy, opatření platná v Česku, článek 4/5 NATO a změny úředních stavů. Menší signály krátce, nejvýš jednou za 4 hodiny. Vážnou neověřenou zprávu pošleme jen se dvěma nezávislými zdroji a vždy označenou jako neověřenou. Všechno ověřené v přehledu ráno a večer. Doručení zaručit neumíme: kanál závisí na běhu našeho sběru i na Telegramu.",
+    rozsah: "Průběžně jen to podstatné: mimořádná výstraha, vážné případy, opatření platná v Česku, článek 4/5 NATO a změny úředních stavů. Menší signály krátce, nejvýš jednou za 4 hodiny. Vážnou neověřenou zprávu pošleme jen se dvěma nezávislými zdroji a vždy označenou jako neověřenou. Ostatní ověřené v přehledu ráno a večer — bez opakování toho, co už přišlo; když nic nového není, přehled nepřijde. Doručení zaručit neumíme: kanál závisí na běhu našeho sběru i na Telegramu.",
     /** Podle .github/workflows/rozhlas.yml. Změna workflow = změna téhle věty. */
-    kadence: "průběžně jen naléhavé, přehled v 7:30 a 19:30",
+    kadence: "průběžně jen naléhavé, přehled v 7:30 a 19:30, jen když je co nového",
   },
   rss: {
     bezi: true,
