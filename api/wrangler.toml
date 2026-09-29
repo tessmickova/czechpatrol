@@ -10,6 +10,12 @@ compatibility_flags = ["nodejs_compat"]
 [observability]
 enabled = true
 
+# Vlastní doména API (30. 9. 2026). Adresa *.workers.dev nese v názvu účtu
+# jméno zakladatelky a byla vidět ve veřejném JavaScriptu webu. Web
+# a webhook Telegramu volají jen tuhle adresu; workers.dev zatím zůstává
+# zapnutý jako záloha a vypne se, až bude nová ověřená (docs/PROVOZ.md).
+routes = [{ pattern = "api.czechpatrol.cz", custom_domain = true }]
+
 [vars]
 # Odkud smí web volat API (CORS) a pro který doménový název platí passkeye.
 PUVOD_WEBU = "https://czechpatrol.cz"
