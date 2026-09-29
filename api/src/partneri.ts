@@ -1,4 +1,4 @@
-import { omez } from "./limit";
+import { omez, vLimituCelkem } from "./limit";
 import { ChybaHttp, json, ted, telo } from "./pomocne";
 import { vyzadujOsobniUdaje } from "./osobni-udaje";
 import { platnyEmail } from "./zajem";
@@ -62,6 +62,7 @@ export async function prijmi(env: Env, req: Request): Promise<Response> {
   vyzadujOsobniUdaje(env);
   if (t.souhlas !== true) throw new ChybaHttp(400, "Bez souhlasu poptávku neuložíme.");
   const p = zkontrolujPoptavku(t);
+  if (!(await vLimituCelkem(env, "partneri", 50, 24 * 60))) throw new ChybaHttp(429, "Poptávek je dnes hodně. Zkuste to prosím zítra.");
   await env.DB.prepare(
     "INSERT INTO poptavky_partneru (id, vytvoreno, firma, web, email, kategorie, umisteni, obdobi, zprava, souhlas_kdy, souhlas_verze, stav) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, 'nova')",
   ).bind(crypto.randomUUID(), ted(), p.firma, p.web, p.email, p.kategorie, p.umisteni, p.obdobi, p.zprava, ted(), VERZE_SOUHLASU_PARTNERI).run();

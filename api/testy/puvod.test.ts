@@ -23,8 +23,9 @@ describe("původy webu", () => {
     expect(povolenyPuvod(e, "https://czechpatrol.pages.dev")).toBe("https://czechpatrol.pages.dev");
   });
 
-  it("localhost projde vždy, cizí adresa nikdy", () => {
-    expect(povolenyPuvod(env(), "http://localhost:3000")).toBe("http://localhost:3000");
+  it("localhost jen při lokálním vývoji (VYVOJ=ano), cizí adresa nikdy", () => {
+    expect(povolenyPuvod(env(), "http://localhost:3000")).toBeNull();
+    expect(povolenyPuvod({ ...env(), VYVOJ: "ano" }, "http://localhost:3000")).toBe("http://localhost:3000");
     expect(povolenyPuvod(env(), "https://utocnik.example")).toBeNull();
     expect(povolenyPuvod(env(), null)).toBeNull();
   });

@@ -3,7 +3,7 @@ import Link from "next/link";
 import { HlavickaStranky } from "@/components/nadpisy";
 import { Ikona, type NazevIkony } from "@/components/ikony";
 import { CislaKdeKdo, TypyUdalosti } from "@/components/cisla-kde-kdo";
-import { hybridniTlak, incidenty, kampane, svet, tydny } from "@/lib/data";
+import { hybridniTlak, incidenty, kampane, tydny } from "@/lib/data";
 import { sklon } from "@/components/zeme";
 import { radkyTabulkyZemi } from "@/components/tabulka-zemi-data";
 import { CoDal } from "@/components/co-dal";
@@ -17,15 +17,14 @@ export const metadata: Metadata = {
 /*
   Rozcestník analýz.
 
-  V navigaci je jedna položka místo tří, protože Vývoj, Aktéři a Manipulace
-  jsou tři odpovědi na jednu otázku: „co z toho plyne?“. Rozcestník u každé
+  V navigaci je jedna položka místo několika, protože Vývoj, Země a Manipulace
+  jsou odpovědi na jednu otázku: „co z toho plyne?“. Rozcestník u každé
   napíše, na co odpovídá a kolik pod ní stojí dat — bez toho by to byl jen
   seznam odkazů.
 */
 export default function Analyzy() {
   const zaznamu = incidenty().length;
   const tydnu = tydny().length;
-  const aktoru = svet().aktori.length;
   const kampani = kampane().length;
   const zemi = new Set(incidenty().map((i) => i.kodZeme)).size;
 
@@ -45,14 +44,6 @@ export default function Analyzy() {
       popis: "Každá sledovaná země zvlášť: počty, typy hrozeb, vyšetřování a kdy naposledy něco přibylo. Česko je vždy první.",
       cislo: `${zemi} ${sklon(zemi, "sledovaná země", "sledované země", "sledovaných zemí")}`,
       ikona: "mapa",
-    },
-    {
-      href: "/svet/",
-      stitek: "Aktéři a cíle",
-      nadpis: "Kdo čeho chce dosáhnout",
-      popis: "Deklarované cíle mocností se zdroji a hodnocení projektu, jak blízko k nim jsou. Fakt a odhad jsou v textu rozlišené štítkem, ne tónem.",
-      cislo: `${aktoru} ${sklon(aktoru, "aktér", "aktéři", "aktérů")}`,
-      ikona: "globus",
     },
     {
       href: "/manipulace/",

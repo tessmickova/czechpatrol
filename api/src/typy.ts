@@ -1,5 +1,9 @@
 export interface Env {
   DB: D1Database;
+  /** „ano“ jen při lokálním vývoji — povolí CORS pro http://localhost. */
+  VYVOJ?: string;
+  /** „ano“ až bude ověřování čísla WhatsApp kódem hotové. */
+  WHATSAPP_OVERENI?: string;
   PUVOD_WEBU: string;
   RP_ID: string;
   /** Předchozí adresy webu během přechodu na vlastní doménu, oddělené čárkou. Viz pomocne.ts. */

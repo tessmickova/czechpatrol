@@ -1,4 +1,4 @@
-import { omez } from "./limit";
+import { omez, vLimituCelkem } from "./limit";
 import { ChybaHttp, json, nahodnyToken, ted, telo } from "./pomocne";
 import { vyzadujOsobniUdaje } from "./osobni-udaje";
 import type { Env, Prihlaseny } from "./typy";
@@ -52,11 +52,21 @@ export async function prijmi(env: Env, req: Request): Promise<Response> {
   const zdroj = (t.zdroj ?? "").toLowerCase().replace(/[^a-z0-9-]/g, "").slice(0, 40) || null;
   const kdy = ted();
 
-  const stavajici = await env.DB.prepare("SELECT id FROM zajem WHERE email = ?").bind(email).first<{ id: string }>();
+  if (!(await vLimituCelkem(env, "zajem", 200, 24 * 60))) throw new ChybaHttp(429, "Přihlášek je dnes hodně. Zkuste to prosím zítra.");
+  const stavajici = await env.DB.prepare("SELECT id, stav FROM zajem WHERE email = ?").bind(email).first<{ id: string; stav: string }>();
+  if (stavajici?.stav === "odhlaseno") {
+    /*
+      Odhlášenou adresu formulář znovu nepřihlásí (30. 9. 2026): kdokoli by
+      mohl zadat cizí e-mail a „obnovit“ souhlas za jiného člověka. Návrat
+      bude jen přes potvrzení z té schránky (double opt-in před rozesíláním).
+      Odpověď je stejná jako při úspěchu, ať se nedá zjistit, kdo je v seznamu.
+    */
+    return json({ ok: true }, 201);
+  }
   if (stavajici) {
-    /* Opakované přihlášení = aktualizace zájmů a nový souhlas; odhlášený se tím vrací. */
+    /* Opakované přihlášení = aktualizace zájmů a nový souhlas. */
     await env.DB.prepare(
-      "UPDATE zajem SET zajmy = ?, souhlas_kdy = ?, souhlas_verze = ?, zdroj = COALESCE(?, zdroj), stav = CASE WHEN stav = 'odhlaseno' THEN 'nepotvrzeno' ELSE stav END, odhlaseno_kdy = NULL WHERE id = ?",
+      "UPDATE zajem SET zajmy = ?, souhlas_kdy = ?, souhlas_verze = ?, zdroj = COALESCE(?, zdroj) WHERE id = ?",
     ).bind(JSON.stringify(zajmy), kdy, VERZE_SOUHLASU, zdroj, stavajici.id).run();
   } else {
     await env.DB.prepare(

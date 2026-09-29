@@ -2,7 +2,7 @@ import { pripravEmail, emailUctu } from "./emaily";
 import { pripravVydani } from "./kredity";
 import { omez } from "./limit";
 import { maOpravneni, pripravUdeleni } from "./opravneni";
-import { ChybaHttp, json, sha256, stejne, ted, telo } from "./pomocne";
+import { ChybaHttp, json, sha256, stejne, ted, telo, MAX_TELA } from "./pomocne";
 import { osobniUdajePovoleny } from "./osobni-udaje";
 import { vyzadujPravo } from "./prava";
 import { sifrovaniNastaveno } from "./sifrovani";
@@ -187,7 +187,10 @@ async function stavUBrany(env: Env, transId: string): Promise<{ stav: StavBrany;
 
 export async function webhookComgate(env: Env, req: Request): Promise<Response> {
   if (!bezi(env)) return json({ chyba: "Platby nejsou zapnuté." }, 503);
+  // Strop těla i tady (30. 9. 2026): webhook je veřejný a čte se bez JSON pomocníka.
+  if (Number(req.headers.get("content-length") ?? "0") > MAX_TELA) return json({ chyba: "Příliš velké." }, 413);
   const surove = await req.text();
+  if (surove.length > MAX_TELA) return json({ chyba: "Příliš velké." }, 413);
   const push = new URLSearchParams(surove);
   const transId = push.get("transId");
   const tajemstvi = push.get("secret") ?? "";

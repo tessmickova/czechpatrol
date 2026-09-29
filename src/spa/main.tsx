@@ -9,7 +9,6 @@ import { DetailIncidentu } from "@/components/detail-incidentu";
 import Prehled from "@/app/page";
 import Udalosti from "@/app/udalosti/page";
 import Vyvoj from "@/app/vyvoj/page";
-import Svet from "@/app/svet/page";
 import MujPrehled from "@/app/muj-prehled/page";
 import OProjektu from "@/app/o-projektu/page";
 import Opravy from "@/app/sprava/opravy/page";
@@ -38,7 +37,6 @@ const CESTY: Record<string, () => React.JSX.Element> = {
   "/": Prehled,
   "/udalosti/": Udalosti,
   "/vyvoj/": Vyvoj,
-  "/svet/": Svet,
   "/muj-prehled/": MujPrehled,
   "/o-projektu/": OProjektu,
   "/sprava/opravy/": Opravy,
@@ -57,7 +55,7 @@ const CESTY: Record<string, () => React.JSX.Element> = {
 /** Přestěhované adresy — stejné jako v public/_redirects. */
 const PRESUNUTE: Record<string, string> = {
   "/dnes/": "/", "/trend/": "/vyvoj/", "/tlak/": "/vyvoj/", "/watchlist/": "/vyvoj/", "/osa/": "/udalosti/",
-  "/cr/": "/#opatreni", "/nato/": "/#opatreni", "/nepotvrzeno/": "/udalosti/?overeni=neprosle", "/komunita/": "/o-projektu/",
+  "/cr/": "/#opatreni", "/nato/": "/#opatreni", "/nepotvrzeno/": "/udalosti/?overeni=neprosle", "/komunita/": "/o-projektu/", "/svet/": "/analyzy/",
 };
 
 function Obsah() {

@@ -1,5 +1,5 @@
 import { pripravEmail, emailUctu } from "./emaily";
-import { omez } from "./limit";
+import { omez, vLimituCelkem } from "./limit";
 import { ChybaHttp, json, sha256, stejne, ted, telo } from "./pomocne";
 import { vyzadujPravo } from "./prava";
 import { desifruj, zasifruj } from "./sifrovani";
@@ -107,6 +107,8 @@ export async function moje(env: Env, ucet: Prihlaseny): Promise<Response> {
 /** „Poslat znovu“ — jen přihlášený, jen vlastní kredit, jen když má e-mail. */
 export async function poslatZnovu(env: Env, req: Request, ucet: Prihlaseny, id: string): Promise<Response> {
   await omez(env, req, "kredit-email", 5, 60);
+  // Strop na účet, ne jen na IP (30. 9. 2026): střídáním adres šlo zasypat cizí schránku.
+  if (!(await vLimituCelkem(env, `kredit-email:${ucet.id}`, 3, 24 * 60))) throw new ChybaHttp(429, "E-mail s kódem jde poslat nejvýš 3× denně.");
   const r = await env.DB.prepare("SELECT id, stav FROM kredity WHERE id = ? AND ucet_id = ?").bind(id, ucet.id).first<{ id: string; stav: string }>();
   if (!r) throw new ChybaHttp(404, "Kredit nenalezen.");
   const email = await emailUctu(env, ucet.id);

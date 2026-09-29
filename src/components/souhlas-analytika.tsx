@@ -27,8 +27,17 @@ function ulozVolbu(v: Exclude<Volba, null>) {
 }
 
 let spusteno = false;
+/*
+  Přihlášený uživatel analytiku nedostane nikdy (30. 9. 2026, audit): token
+  účtu leží v localStorage a cizí skript na téže doméně by ho mohl přečíst —
+  u správkyně by to znamenalo převzetí správy.
+*/
+function jePrihlasen(): boolean {
+  try { return Boolean(localStorage.getItem("czechpatrol.token")); } catch { return false; }
+}
+
 function spustAnalytiku() {
-  if (spusteno) return;
+  if (spusteno || jePrihlasen()) return;
   spusteno = true;
   // Microsoft Clarity — oficiální vkládací kód, jen po souhlasu.
   if (CLARITY_ID) {
@@ -51,7 +60,8 @@ function spustAnalytiku() {
         capture_pageleave: true,
         autocapture: true,
         respect_dnt: true,
-        mask_all_text: false,
+        // Zobrazený text (e-mail v účtu, telefon) se do nahrávek nedostane (30. 9. 2026).
+        mask_all_text: true,
         session_recording: { maskAllInputs: true },
       });
     }).catch(() => { /* bez analytiky web funguje stejně */ });

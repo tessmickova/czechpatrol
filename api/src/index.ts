@@ -10,7 +10,7 @@ import * as izs from "./izs";
 import * as ja from "./ja";
 import { ChybaHttp, json, povolenyPuvod, sCors } from "./pomocne";
 import { hlidejMinuty, kadenceSberu, zkontrolujSber } from "./hlidac";
-import { kopniDoSberu } from "./sber";
+import { kopniDoRozhlasu, kopniDoSberu } from "./sber";
 import * as nastaveni from "./nastaveni";
 import * as navrhy from "./navrhy";
 import * as patrol from "./patrol";
@@ -20,6 +20,7 @@ import * as zajem from "./zajem";
 import * as partneri from "./partneri";
 import * as mereni from "./mereni";
 import * as zebricek from "./zebricek";
+import * as push from "./push";
 import { synchronizuj, uklid } from "./synchronizace";
 import { nastavWebhook, webhook } from "./telegram";
 import type { Env } from "./typy";
@@ -75,6 +76,15 @@ const CESTY: [string, RegExp, Obsluha][] = [
     if (u.role !== "admin") throw new ChybaHttp(403, "Jen pro správce.");
     return json(await synchronizuj(env));
   }],
+
+  // Upozornění do telefonu (Web Push): bez účtu; rozesílá jen rozhlas s podpisem.
+  ["GET", /^\/push\/klic$/, (_r, env) => push.verejnyKlic(env)],
+  ["POST", /^\/push\/odber$/, (req, env) => push.prihlasit(env, req)],
+  ["POST", /^\/push\/odhlasit$/, (req, env) => push.odhlasit(env, req)],
+  ["POST", /^\/push\/stav$/, (req, env) => push.stav(env, req)],
+  ["POST", /^\/push\/zkouska$/, (req, env) => push.zkouska(env, req)],
+  ["POST", /^\/push\/rozeslat$/, (req, env) => push.rozeslat(env, req)],
+  ["GET", /^\/sprava\/push$/, async (req, env) => push.prehled(env, await vyzadujPrihlaseni(env, req))],
 
   ["POST", /^\/tipy$/, (req, env) => tipy.prijmi(env, req)],
   // Zájem o e-mail a komunitu: bez účtu, s brzdou; odhlášení tokenem z e-mailu.
@@ -181,6 +191,14 @@ export default {
           console.error("[sběr]", e);
         }
 
+        try {
+          const r = await kopniDoRozhlasu(env, udalost.scheduledTime);
+          if (r.spusteno) console.log("[rozhlas] přehled spuštěn");
+          else if (r.duvod && r.duvod !== "není čas") console.warn(`[rozhlas] přehled nespuštěn — ${r.duvod}`);
+        } catch (e) {
+          console.error("[rozhlas]", e);
+        }
+
         /*
           Kopnout do sběru nestačí. Když GitHub kopnutí přijme a pak běh
           shodí, vypadá to odsud stejně jako úspěch — a přesně tak se stalo,
@@ -222,6 +240,11 @@ export default {
           if (m.odeslano || m.selhalo) console.log(`[e-maily] odesláno ${m.odeslano}, selhalo ${m.selhalo}, čeká ${m.ceka}`);
         } catch (e) {
           console.error("[e-maily]", e);
+        }
+        try {
+          await push.uklidPush(env);
+        } catch (e) {
+          console.error("[push]", e);
         }
         await uklid(env);
       })(),

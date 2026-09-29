@@ -85,6 +85,11 @@
       "kdy": "2026-09-27T10:16:57.165Z",
       "navrhu": 2,
       "messageId": 52
+    },
+    "2026-09-29-vecer": {
+      "kdy": "2026-09-29T21:28:14.382Z",
+      "zaznamu": 5,
+      "messageId": 56
     }
   },
   "navrhy": {
@@ -719,13 +724,33 @@
       "kdy": "2026-09-28T22:31:08.130Z",
       "historie": 2,
       "cesta": "hned",
-      "messageId": 54
+      "messageId": 54,
+      "prehled": "2026-09-29-vecer"
     },
     "i-2026-09-28-ru-stav-armady": {
       "kdy": "2026-09-29T08:19:17.313Z",
       "historie": 2,
       "cesta": "hned",
-      "messageId": 55
+      "messageId": 55,
+      "prehled": "2026-09-29-vecer"
+    },
+    "i-2026-09-24-lotyssko-hranice-kabely": {
+      "cesta": "prehled",
+      "kdy": "2026-09-29T21:28:14.382Z",
+      "historie": 2,
+      "prehled": "2026-09-29-vecer"
+    },
+    "i-2026-09-29-0ec3ee9612": {
+      "cesta": "prehled",
+      "kdy": "2026-09-29T21:28:14.382Z",
+      "historie": 2,
+      "prehled": "2026-09-29-vecer"
+    },
+    "i-2026-09-28-cbc3ae593b": {
+      "cesta": "prehled",
+      "kdy": "2026-09-29T21:28:14.382Z",
+      "historie": 2,
+      "prehled": "2026-09-29-vecer"
     }
   },
   "snimky": {

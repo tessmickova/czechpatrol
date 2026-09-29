@@ -59,6 +59,8 @@ jobs:
       TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
       TELEGRAM_KANAL: ${{ vars.TELEGRAM_KANAL || '@czechpatrol' }}
       SPRAVCE_CHAT: ${{ vars.SPRAVCE_CHAT }}
+      # Upozornění do telefonu (webová aplikace): stejné zprávy jako do kanálu, doručuje API.
+      PUSH_API: ${{ vars.PUSH_API || 'https://api.czechpatrol.cz' }}
     steps:
       - uses: actions/checkout@v7
         with:

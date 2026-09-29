@@ -1,4 +1,4 @@
-import { omez } from "./limit";
+import { omez, vLimituCelkem } from "./limit";
 import { ChybaHttp, json, stejne, ted, telo } from "./pomocne";
 import { jeRole, smiZmenitRoli } from "./role";
 import type { Env, Prihlaseny, Role } from "./typy";
@@ -64,6 +64,8 @@ export async function audit(env: Env, ucet: Prihlaseny): Promise<Response> {
  */
 export async function bootstrap(env: Env, req: Request, ucet: Prihlaseny): Promise<Response> {
   await omez(env, req, "bootstrap", 5, 60);
+  // Celkový strop: hádání kódu z mnoha adres (30. 9. 2026).
+  if (!(await vLimituCelkem(env, "bootstrap", 20, 24 * 60))) throw new ChybaHttp(429, "Příliš mnoho pokusů. Zkuste to zítra.");
   const { kod } = await telo<{ kod: string }>(req);
   if (!env.ADMIN_BOOTSTRAP_KOD) throw new ChybaHttp(503, "Zavedení správce není nastavené.");
   const spravcu = (await env.DB.prepare("SELECT COUNT(*) AS n FROM ucty WHERE role = 'admin'").first<{ n: number }>())?.n ?? 0;

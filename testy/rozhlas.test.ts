@@ -23,7 +23,7 @@ describe("rozhlas", () => {
     expect(z).toContain("<b>Původce: zatím neurčen.</b>");
     expect(z).toContain("https://czechpatrol.cz/incident/x/");
   });
-  it("hned jde jen vážné a opatření v Česku; přehled má všechno ověřené od minulého přehledu, jednou", () => {
+  it("hned jde jen vážné a opatření v Česku; přehled má jen to, co ještě neodešlo, jednou", () => {
     const ted = new Date("2026-09-06T12:00:00Z").getTime();
     const vazny = zaznam({ id: "a", slug: "a" });
     const mirny = zaznam({ id: "b", slug: "b", zavaznost: "Y2" });
@@ -35,8 +35,8 @@ describe("rozhlas", () => {
     expect(hned.map((x) => x.i.id)).toEqual(["a", "c"]);
     stav.zaznamy["a"] = { kdy: "x", historie: 1, cesta: "hned" };
     stav.zaznamy["c"] = { kdy: "x", historie: 1, cesta: "hned" };
-    // Přehled je úplný: i to, co odešlo průběžně.
-    expect(vyberNove(vse, stav, { rezim: "souhrn", ted }).map((x) => x.i.id)).toEqual(["a", "b", "c", "e"]);
+    // Přehled neopakuje, co už odešlo průběžně (29. 9. 2026).
+    expect(vyberNove(vse, stav, { rezim: "souhrn", ted }).map((x) => x.i.id)).toEqual(["b", "e"]);
     for (const id of ["a", "b", "c", "e"]) stav.zaznamy[id] = { ...(stav.zaznamy[id] ?? {}), kdy: "x", historie: 1, prehled: "2026-09-06-vecer" };
     expect(vyberNove(vse, stav, { rezim: "souhrn", ted })).toEqual([]);
   });
@@ -905,6 +905,10 @@ describe("přehled v 7:30 a 19:30 pražského času", () => {
     expect(jeCasPrehledu(Date.parse("2026-12-01T17:30:00Z"))).toBe(false);  // 18:30 SEČ — brzy
     expect(jeCasPrehledu(Date.parse("2026-12-01T18:30:00Z"))).toBe(true);   // 19:30 SEČ
     expect(jeCasPrehledu(Date.parse("2026-09-28T12:00:00Z"))).toBe(false);  // 14:00
+    // Opožděný běh GitHubu nic nepošle (29. 9. 2026 přišel večerní přehled ve 23:28).
+    expect(jeCasPrehledu(Date.parse("2026-09-29T21:28:00Z"))).toBe(false);  // 23:28 SELČ
+    expect(jeCasPrehledu(Date.parse("2026-09-29T19:25:00Z"))).toBe(true);   // 21:25 SELČ
+    expect(jeCasPrehledu(Date.parse("2026-09-29T08:00:00Z"))).toBe(false);  // 10:00 SELČ
   });
   it("workflow má čtyři běhy, které obě pásma pokryjí", () => {
     const yml = fs.readFileSync(path.join(__dirname, "..", ".github", "workflows", "rozhlas.yml"), "utf-8");

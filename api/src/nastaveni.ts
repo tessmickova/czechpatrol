@@ -51,7 +51,9 @@ export async function nactiAi(env: Env): Promise<AiNastaveni> {
  * citlivého to neobsahuje: jestli se posuzuje a jakým modelem.
  */
 export async function proSber(env: Env): Promise<Response> {
-  return json(await nactiAi(env));
+  /* Bez času poslední změny (30. 9. 2026) — prozrazoval, kdy byla správkyně aktivní. */
+  const { zapnuto, model } = await nactiAi(env);
+  return json({ zapnuto, model });
 }
 
 export async function uloz(env: Env, req: Request, ucet: Prihlaseny): Promise<Response> {

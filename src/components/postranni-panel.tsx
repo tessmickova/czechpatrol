@@ -46,7 +46,6 @@ export const DALSI_STRANKY = [
   /* Audit je zdarma a bez účtu; podrobný plán je Premium — proto už ne mezi funkcemi po přihlášení. */
   { href: "/zapojit-se/", label: "Zapojit se" },
   { href: "/vyvoj/", label: "Vývoj" },
-  { href: "/svet/", label: "Aktéři a cíle" },
   { href: "/metodika/", label: "Metodika" },
   { href: "/zdroje/", label: "Zdroje" },
   { href: "/o-projektu/", label: "O projektu" },
@@ -248,6 +247,18 @@ export function PostranniPanel() {
           {/* odběr — Telegram nahoře, ostatní kanály pod ním */}
           <section aria-label="Odběr" className="border-t border-linka px-4 py-3">
             <div className="stitek mb-2">Odběr upozornění</div>
+            {/* Upozornění přímo z webové aplikace (29. 9. 2026) — bez Telegramu, bez čísla. */}
+            <Link
+              href="/upozorneni/"
+              onClick={zavri}
+              className="mb-1.5 flex min-h-[60px] items-center gap-3 rounded-[18px] border border-akcent/55 bg-akcent/12 px-3.5 transition-colors hover:bg-akcent/20"
+            >
+              <span className="grid h-[30px] w-[30px] shrink-0 place-items-center rounded-full bg-akcent text-papir"><Ikona nazev="zvonek" velikost={16} tah={2} /></span>
+              <span className="min-w-0 flex-1">
+                <span className="block text-zaklad font-bold text-inkoust">Upozornění v telefonu</span>
+                <span className="block text-drobne leading-snug text-tlum">bez aplikace z obchodu a bez telefonního čísla</span>
+              </span>
+            </Link>
             {KANALY.telegram ? (
               <a
                 href={KANALY.telegram}

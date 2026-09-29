@@ -34,7 +34,6 @@ const provoz = cti("provoz.json");
 const kandidati = fs.existsSync(path.join(koren, "data", "kandidati.json")) ? cti("kandidati.json") : [];
 /* Návrhy se na webu ukazují jako nepotvrzené, takže na ně smí mířit i oprava. */
 const navrhy = fs.existsSync(path.join(koren, "data", "navrhy.json")) ? cti("navrhy.json") : [];
-const svet = fs.existsSync(path.join(koren, "data", "svet.json")) ? cti("svet.json") : null;
 const overujeme = fs.existsSync(path.join(koren, "data", "overujeme.json")) ? cti("overujeme.json") : [];
 const vystrahy = fs.existsSync(path.join(koren, "data", "vystraha.json")) ? cti("vystraha.json") : { aktivni: null, archiv: [] };
 const tipy = fs.existsSync(path.join(koren, "data", "tipy.json")) ? cti("tipy.json") : [];
@@ -155,23 +154,6 @@ for (const k of kandidati) {
   if (adresyZaznamu.has(klicAdresy(k.zdroj?.url))) varovani.push(`kandidát ${k.id}: stejná adresa jako zveřejněný záznam — sběr ho příště odloží`);
   if (k.stav !== "ceka" && k.stav !== "vyrizen") chyby.push(`kandidát ${k.id}: neznámý stav ${k.stav}`);
   if (k.stav === "vyrizen" && !k.vyrizeni?.duvod) chyby.push(`kandidát ${k.id}: vyřízený bez důvodu`);
-}
-
-// 2c. svět: každé tvrzení odkazuje na existující zdroj, postoje mají správnou délku
-if (svet) {
-  if (!platneDatum(svet.aktualizovano)) chyby.push("svet: neplatné datum aktualizace");
-  for (const a of svet.aktori) {
-    const n = a.zdroje.length;
-    for (const z of a.zdroje) if (!/^https?:\/\//.test(z.url)) chyby.push(`svet/${a.klic}: neplatná adresa zdroje „${z.nazev}“`);
-    for (const t of [...a.deklarovane, ...a.postup]) {
-      if (!t.zdroje.length) chyby.push(`svet/${a.klic}: tvrzení bez zdroje: ${t.text.slice(0, 50)}`);
-      for (const i of t.zdroje) if (i < 0 || i >= n) chyby.push(`svet/${a.klic}: odkaz na neexistující zdroj [${i + 1}]`);
-    }
-    if (a.priblizeni.stupen < 0 || a.priblizeni.stupen >= svet.stupne.length) chyby.push(`svet/${a.klic}: stupeň mimo stupnici`);
-    if ((svet.stret.postoje[a.klic] ?? []).length !== svet.stret.otazky.length) chyby.push(`svet/${a.klic}: počet postojů neodpovídá počtu otázek`);
-  }
-  const hSvet = (Date.now() - new Date(svet.aktualizovano).getTime()) / 3_600_000;
-  if (hSvet > 14 * 24) varovani.push(`svet: hodnocení staré ${Math.round(hSvet / 24)} dní`);
 }
 
 // 3. konzistence agregací: součet po zemích = celkem případů

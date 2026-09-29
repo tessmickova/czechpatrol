@@ -288,16 +288,6 @@ export interface RuskoUkazatel {
   poznamka: string;
 }
 
-export interface RuskoStav {
-  overeno: string | null;
-  casovyTlak: Uroven | null;
-  dopadNaIndex: string;
-  ukazatele: RuskoUkazatel[];
-  /** termin zůstává prázdný, dokud není doložen primárním zdrojem */
-  sledujemePo: { nadpis: string; termin: string; body: string[] };
-  poznamkaZdravi: string;
-}
-
 export interface WatchPolozka {
   cislo: string;
   nazev: string;
@@ -485,33 +475,6 @@ export interface Kandidat {
     patriK?: string | null;
     poznamka?: string | null;
   } | null;
-}
-
-/* ---------- svět: cíle mocností ---------- */
-
-export interface SvetZdroj { nazev: string; url: string; typ: TypZdroje; publikovano: string }
-export interface SvetTvrzeni { text: string; zdroje: number[]; odhad?: boolean }
-export interface SvetAktor {
-  klic: string;
-  nazev: string;
-  /** Kód země pro vlajku; null = seskupení bez vlajky (NATO). */
-  kod: string | null;
-  role: string;
-  deklarovane: SvetTvrzeni[];
-  postup: SvetTvrzeni[];
-  /** Hodnocení projektu: stupeň 0–4 na stupnici `stupne`. */
-  priblizeni: { stupen: number; odhad: string };
-  coByZmenilo: string[];
-  zdroje: SvetZdroj[];
-}
-export interface Svet {
-  aktualizovano: string;
-  verze: number;
-  uvod: string;
-  stupne: string[];
-  aktori: SvetAktor[];
-  stret: { otazky: string[]; postoje: Record<string, string[]> };
-  sledovat: { text: string; smer: "nahoru" | "dolu" | "obojí" }[];
 }
 
 /* ---------- manipulační kampaně ---------- */

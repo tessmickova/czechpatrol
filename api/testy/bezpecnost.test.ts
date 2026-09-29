@@ -72,3 +72,41 @@ describe("obnova kódem", () => {
     expect(ROLE_S_OBNOVOU).not.toContain("izs");
   });
 });
+
+describe("konfigurace workeru", () => {
+  it("routes a další hlavní klíče stojí před první [tabulkou]", async () => {
+    /*
+      30. 9. 2026: `routes` zapsané pod `[observability]` patřilo v TOML do té
+      tabulky; Wrangler to vzal jen jako varování a nasazení API spadlo.
+    */
+    const { readFileSync } = await import(/* @vite-ignore */ ["node", "fs"].join(":")) as { readFileSync: (p: string, k: string) => string };
+    const radky = readFileSync("wrangler.toml", "utf-8").split("\n");
+    const prvniTabulka = radky.findIndex((r) => /^\[/.test(r));
+    for (const klic of ["name", "main", "routes", "compatibility_date"]) {
+      const i = radky.findIndex((r) => r.startsWith(`${klic} =`));
+      expect(i, klic).toBeGreaterThanOrEqual(0);
+      expect(i, `${klic} musí být před první tabulkou`).toBeLessThan(prvniTabulka);
+    }
+  });
+});
+
+describe("celkový strop bez ohledu na IP", () => {
+  it("pustí max za okno, z různých IP dohromady", async () => {
+    const { vLimituCelkem } = await import("../src/limit");
+    const sql = await novaDb();
+    sql.exec("CREATE TABLE limity (klic TEXT PRIMARY KEY, pocet INTEGER NOT NULL, okno_do TEXT NOT NULL)");
+    const env = { DB: d1(sql) } as never;
+    const v = [];
+    for (let i = 0; i < 9; i++) v.push(await vLimituCelkem(env, "x", 6, 60));
+    expect(v.filter(Boolean)).toHaveLength(6);
+  });
+});
+
+describe("otisk IP", () => {
+  it("IPv6 bere jako síť /64, IPv4 celou", async () => {
+    const { sitIp } = await import("../src/pomocne");
+    expect(sitIp("2001:db8:1:2:aaaa:bbbb:cccc:dddd")).toBe("2001:db8:1:2::/64");
+    expect(sitIp("2001:db8:1:2:1:1:1:1")).toBe(sitIp("2001:db8:1:2:ffff:0:0:9"));
+    expect(sitIp("203.0.113.7")).toBe("203.0.113.7");
+  });
+});

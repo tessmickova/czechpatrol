@@ -33,9 +33,8 @@ jobs:
   prevzit:
     if: github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
-    env:
-      TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
-      SPRAVCE_CHAT: ${{ vars.SPRAVCE_CHAT }}
+    # Tajemství jen v krocích, které je potřebují (30. 9. 2026, audit): na úrovni
+    # úlohy by je viděly i instalační skripty cizích balíčků při `npm ci`.
     steps:
       - uses: actions/checkout@v7
         with:
@@ -106,6 +105,9 @@ jobs:
       # Změny mimo data/ se nepřevádějí automaticky — otevře se na ně pull
       # request, aby si je někdo přečetl.
       - name: Upozornit na změny kódu
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          SPRAVCE_CHAT: ${{ vars.SPRAVCE_CHAT }}
         run: |
           set -u
           ROZDIL=$(git diff --name-only origin/main origin/patrol/overovani -- . ':(exclude)data/' ':(exclude)PATROL.md' || true)

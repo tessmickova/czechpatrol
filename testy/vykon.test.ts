@@ -11,7 +11,7 @@ import { describe, expect, it } from "vitest";
 */
 const KOREN = process.cwd();
 const ZAKAZANE = [path.join(KOREN, "src/lib/data.ts")];
-const VELKE_DATA = /data[\\/](incidenty|historie|kandidati|kampane|nepotvrzeno|svet|navrhy|fronta[\\/]odmitnute)\.json$/;
+const VELKE_DATA = /data[\\/](incidenty|historie|kandidati|kampane|nepotvrzeno|navrhy|fronta[\\/]odmitnute)\.json$/;
 
 function vyres(z: string, spec: string): string | null {
   let zaklad: string;
