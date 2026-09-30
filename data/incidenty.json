@@ -12376,5 +12376,93 @@
     "archivniZaznam": false,
     "navazujeNa": "de-aa438bb2cd",
     "overeni": "neovereno"
+  },
+  {
+    "id": "i-2026-09-29-abceb638dc",
+    "slug": "ro-abceb638dc",
+    "titulek": "Rumunsko: v Insula Mare a Brăilei u obce Gropeni (Brăila) dopadl objekt s výbušnou náloží, tu detonoval náraz do země; radar podle prvního hlášení nezachytil narušení vzdušného prostoru",
+    "kratkyTitulek": "Rumunsko: v Insula Mare a Brăilei u obce Gropeni (Brăila) dopadl objekt s výbušnou náloží, tu detonoval náraz do země; radar podle prvního hlášení nezachytil narušení vzdušného prostoru",
+    "zeme": "Rumunsko",
+    "kodZeme": "RO",
+    "kategorie": [
+      "drony",
+      "hranice"
+    ],
+    "datumUdalosti": "2026-09-29T00:00:00Z",
+    "datumZjisteni": "2026-09-29T00:00:00Z",
+    "aktualizovano": "2026-09-29T23:55:46.557Z",
+    "zavaznost": "Y2",
+    "jistota": "vysoka",
+    "stav": "bez-vysetrovani",
+    "atribuce": "neznama",
+    "puvodce": "neznamy",
+    "druh": "pripad",
+    "fakta": [
+      "V noci na 29. 9. 2026 dopadl na zemědělskou půdu v Insula Mare a Brăilei u obce Gropeni (župa Brăila) objekt, u kterého ministerstvo obrany (MApN) později potvrdilo, že šlo o trosky dronu.",
+      "Podle aktualizovaného hlášení MApN dron nesl výbušnou nálož, která automaticky detonovala při nárazu do země; na místě vznikl kráter.",
+      "Požár po výbuchu zasáhl omezenou plochu zemědělské půdy, ministerstvo nehlásí zranění ani škody na majetku.",
+      "Trosky dronu převzali k dalšímu zkoumání specialisté rumunské zpravodajské služby SRI; oblast prohledal i vrtulník IAR-330 SOCAT.",
+      "V prvním hlášení téhož dne MApN uvedlo, že radarové systémy ministerstva nezaznamenaly žádné neoprávněné narušení rumunského vzdušného prostoru v předchozí noci."
+    ],
+    "neznameho": [
+      "Typ dronu a jeho původ (výrobce, země vypuštění) ministerstvo neuvedlo.",
+      "Kdo dron vypustil a s jakým úmyslem — žádné official prohlášení o připsání viny Rusku ani jiné straně jsem nenašel.",
+      "Jak se slučuje aktualizované hlášení o výbušné náloži s dřívějším tvrzením MApN, že radar nezachytil narušení vzdušného prostoru — ministerstvo to samo nevysvětlilo."
+    ],
+    "vyznam": "",
+    "eskalacniSpousteče": [],
+    "deeskalacniSignaly": [],
+    "zdroje": [
+      {
+        "nazev": "Ukrinform — Possible drone debris found in Romania",
+        "url": "https://www.ukrinform.net/rubric-ato/4169112-possible-drone-debris-found-in-romania.html",
+        "typ": "media",
+        "publikovano": "2026-09-29T00:00:00Z",
+        "primarni": false,
+        "jazyk": "en"
+      },
+      {
+        "nazev": "Ministerul Apărării Naționale — Update - Informație de presă (nr. 311)",
+        "url": "https://www.mapn.ro/cpresa/19420_update---informație-de-presa",
+        "typ": "uredni",
+        "publikovano": "2026-09-29T00:00:00Z",
+        "primarni": true,
+        "jazyk": "ro"
+      },
+      {
+        "nazev": "Agerpres — MApN: Un crater și fragmente de dronă, identificate în zona localității Gropeni din județul Brăila",
+        "url": "https://agerpres.ro/social/2026/09/29/mapn-un-crater-si-fragmente-de-drona---identificate-in-zona-localitatii-gropeni-din-judetul-braila--1598110",
+        "typ": "media",
+        "publikovano": "2026-09-29T00:00:00Z",
+        "primarni": false,
+        "jazyk": "ro"
+      }
+    ],
+    "souvisejici": [],
+    "historie": [
+      {
+        "kdy": "2026-09-29T00:00:00Z",
+        "text": "Zachyceno automatickým sběrem, druhý zdroj doložen před zařazením do fronty.",
+        "novySignal": true
+      },
+      {
+        "kdy": "2026-09-29T23:55:46.557Z",
+        "text": "Zveřejněno automaticky: dva nezávislé zdroje, z toho úřední. Bez lidské kontroly.",
+        "novySignal": false
+      }
+    ],
+    "novy": true,
+    "zapocitanoTyden": "2026-09-29",
+    "aiZpracovano": true,
+    "lidskyOvereno": false,
+    "archivniZaznam": false,
+    "dopadNaCr": {
+      "stav": "zadny",
+      "procRelevantni": "Další nález dronu s výbušnou náloží na území členského státu NATO a EU, tentokrát v Rumunsku poblíž hranice s Ukrajinou.",
+      "dopad": "Pro lidi v Česku ze zprávy dnes neplyne žádné omezení.",
+      "sledujeme": "Zda MApN dron oficiálně připíše Rusku a jak vysvětlí rozpor mezi prvním hlášením (žádné narušení vzdušného prostoru) a pozdějším potvrzením výbušné nálože.",
+      "overeno": "2026-09-29"
+    },
+    "overeni": "automaticke"
   }
 ]

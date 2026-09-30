@@ -1,14 +1,14 @@
 {
-  "aktualizovano": "2026-09-29T20:03:54.350Z",
-  "uroven": "Y2",
-  "trend": "beze-zmeny",
-  "trendPopis": "Posledních 7 dní: 4 případy (součet závažnosti 23.1). Týden předtím: 5 případů (23).",
-  "shrnuti": "Spočteno z ověřených případů za posledních 14 dní (9 případů) v 8 zemích. Úroveň je jejich střední závažnost z pohledu Česka, jediná událost ji nezvedne. Je to měření, ne předpověď.",
+  "aktualizovano": "2026-09-30T00:02:45.688Z",
+  "uroven": "Y1",
+  "trend": "nahoru",
+  "trendPopis": "Posledních 7 dní: 5 případů (součet závažnosti 26.9). Týden předtím: 3 případy (11.5).",
+  "shrnuti": "Spočteno z ověřených případů za posledních 14 dní (8 případů) v 7 zemích. Úroveň je jejich střední závažnost z pohledu Česka, jediná událost ji nezvedne. Je to měření, ne předpověď.",
   "noveSignaly": {
-    "celkem": 4,
+    "celkem": 5,
     "kriticke": 0,
     "vysoke": 3,
-    "stredni": 1
+    "stredni": 2
   },
   "mimoradny": null
 }
