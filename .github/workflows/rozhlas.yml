@@ -38,6 +38,12 @@ on:
         description: "Poslat přehled dne teď (místo okamžitých zpráv)"
         type: boolean
         default: false
+      planovany:
+        # Spouští worker v 7:30 a 19:30 (api/src/sber.ts). Na rozdíl od ručního
+        # přehledu podléhá pravidlům: ráno jen se závažností 7 a víc.
+        description: "Plánovaný přehled (spouští worker, ručně nezaškrtávat)"
+        type: boolean
+        default: false
       mimoradne:
         # Výjimka z pravidla „do kanálu jen ověřené": správce vědomě pošle
         # jeden zveřejněný záznam hned. Stav hlídá, aby odešel jen jednou.
@@ -98,10 +104,14 @@ jobs:
       - name: Přehled dne
         if: github.event_name == 'schedule' || (github.event_name == 'workflow_dispatch' && inputs.prehled)
         env:
-          RUCNE: ${{ github.event_name == 'workflow_dispatch' && inputs.prehled }}
+          RUCNE: ${{ github.event_name == 'workflow_dispatch' && inputs.prehled && !inputs.planovany }}
+          PLANOVANY: ${{ github.event_name == 'workflow_dispatch' && inputs.prehled && inputs.planovany }}
         run: |
-          # Ručně spuštěný přehled nečeká na 7:30 / 19:30.
+          # Ručně spuštěný přehled nečeká na 7:30 / 19:30 a pošle se vždy.
+          # Přehled od workeru přijde přesně v čas, ale pravidla platí.
           if [ "$RUCNE" = "true" ]; then
+            node nastroje/rozhlas.mjs --souhrn --vynutit --rucne
+          elif [ "$PLANOVANY" = "true" ]; then
             node nastroje/rozhlas.mjs --souhrn --vynutit
           else
             node nastroje/rozhlas.mjs --souhrn

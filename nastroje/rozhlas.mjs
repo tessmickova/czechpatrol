@@ -28,7 +28,6 @@ const WEB = "https://czechpatrol.cz";
 const STAV = path.join(koren, "data", "fronta", "rozhlaseno.json");
 const MAX_ZPRAV_NA_BEH = 8;
 /** Kolik záznamů se vejde do jednoho přehledu; zbytek odkazem na web. */
-const MAX_V_PREHLEDU_ZAZNAMU = 12;
 /** Při prvním spuštění se oznámí jen záznamy zjištěné v posledních dnech; starší se považují za oznámené. */
 const PRVNI_BEH_DNI = 2;
 /** Záznam zjištěný před delší dobou (zpětné doplnění osy) se neoznamuje nikdy — jen se zapamatuje. */
@@ -555,32 +554,38 @@ export function klicovaVetaSouhrnu(zaznamy) {
 }
 
 /**
- * Denní souhrn: pruh puntíků a legenda nahoře, tučně to podstatné, pak zkrácené
- * položky seřazené podle naléhavosti. Delší souhrn se rozdělí na víc zpráv.
+ * Přehled ráno a večer — jen titulky (30. 9. 2026, provozovatelka: „bez
+ * zbytečných informací, ne tak dlouhý výpis, spíše jen titulky nebo zásadní
+ * info“). Každý záznam jeden řádek s odkazem; podrobnosti jsou na webu.
+ * Co se týká Česka, stojí nahoře (řazení podle vahy), bez další věty navíc.
  */
+export const MAX_TITULKU_V_PREHLEDU = 8;
+
 export function sestavSouhrn(polozky, { ted = Date.now(), limit = 3500, cast = null } = {}) {
   const razene = [...polozky].sort((a, b) => vaha(b.i) - vaha(a.i) || kdyZjisteno(b.i).localeCompare(kdyZjisteno(a.i)));
   const zaznamy = razene.map((p) => p.i);
-  const pocet = zaznamy.length;
-  const slovo = pocet === 1 ? "nový záznam" : pocet < 5 ? "nové záznamy" : "nových záznamů";
-  const cisla = zaznamy.filter((i) => druh(i) === "pripad").map((i) => Z_DESETI[i.zavaznost]).filter(Boolean);
-  const nejvyssi = cisla.length ? ` · nejvýše ${Math.max(...cisla)} z 10` : "";
+  const hlavicka = [`<b>CzechPatrol · ${cast === "rano" ? "ranní" : cast === "vecer" ? "večerní" : "denní"} přehled ${datumCz(new Date(ted).toISOString())}</b>`];
+  const radky = razene.slice(0, MAX_TITULKU_V_PREHLEDU).map(({ i, aktualizace }) => {
+    const cislo = druh(i) === "pripad" && Z_DESETI[i.zavaznost] ? ` ${Z_DESETI[i.zavaznost]}/10 ·` : "";
+    const titulek = esc(zkrat(String(i.kratkyTitulek || i.titulek), 110));
+    return `${tecka(i)}${cislo} ${aktualizace ? "Aktualizace: " : ""}<a href="${WEB}/incident/${i.slug}/">${titulek}</a>`;
+  });
+  const zbyva = razene.length - radky.length;
+  const pata = zbyva > 0 ? `+ ${zbyva} dalších na ${WEB}/udalosti/` : "";
   const kusy = [];
-  let akt = [
-    pruhTecek(zaznamy),
-    `<b>CzechPatrol · ${cast === "rano" ? "ranní" : cast === "vecer" ? "večerní" : "denní"} přehled ${datumCz(new Date(ted).toISOString())}</b>`,
-    `${pocet} ${slovo}${nejvyssi}`,
-    `<i>${legendaTecek(zaznamy)}</i>`,
-    "",
-    `<b>${esc(klicovaVetaSouhrnu(zaznamy))}</b>`,
-  ].join("\n");
-  for (const p of razene) {
-    const z = sestavZpravu(p.i, { aktualizace: p.aktualizace, souhrn: true });
-    if ((akt + "\n\n" + z).length > limit) { kusy.push(akt); akt = z; } else akt += "\n\n" + z;
+  let akt = hlavicka.join("\n") + "\n";
+  for (const r of radky) {
+    if ((akt + "\n" + r).length > limit) { kusy.push(akt); akt = r; } else akt += "\n" + r;
   }
-  akt += `\n\nPřehled vydává CzechPatrol · ${WEB}/`;
+  if (pata) akt += `\n\n${pata}`;
   kusy.push(akt);
   return { kusy, razene };
+}
+
+/** Ranní přehled jen s něčím závažnějším (7 a víc z 10) od večera. Jinak vše počká na večerní. */
+export const PRAH_RANNIHO_PREHLEDU = 7;
+export function stojiRanniPrehled(polozky) {
+  return polozky.some(({ i }) => (Z_DESETI[i.zavaznost] ?? 0) >= PRAH_RANNIHO_PREHLEDU);
 }
 
 /** Zpráva o změně oficiálního stavu z archivu snímků. To nejzávažnější, co kanál posílá. */
@@ -1404,7 +1409,8 @@ export function doTelefonu(html) {
   const cisty = html
     .replace(/<br\s*\/?>/gi, "\n")
     // Odkazy („Podrobnosti“, „Zdroj“) v telefonu nahrazuje klepnutí na upozornění.
-    .replace(/<a\b[^>]*>[\s\S]*?<\/a>/gi, "")
+    // Titulky v přehledu jsou taky odkazy — ty zůstanou jako text.
+    .replace(/<a\b[^>]*>([\s\S]*?)<\/a>/gi, (_, t) => (t.replace(/<[^>]+>/g, "").trim().length > 25 ? t : ""))
     .replace(/<[^>]+>/g, "")
     .replace(/&(lt|gt|quot|#39|amp);/g, (m) => ENTITY[m]);
   // Řádky bez písmen (pruh barevných puntíků), holé adresy a „Podrobnosti:“ bez adresy do telefonu nepatří.
@@ -1422,7 +1428,7 @@ export function doTelefonu(html) {
   const jeStitek = (r) => r.length <= STITEK && /^[^\p{L}\p{N}]/u.test(r);
   while (n < radky.length - 1 && jeStitek(radky[n])) n++;
   const titulek = (n > 0 ? `${radky[0]} · ${radky[n]}` : (radky[0] ?? "CzechPatrol")).slice(0, 120);
-  let text = radky.slice(n + 1).join(" ").replace(/\s+/g, " ").trim();
+  let text = radky.slice(n + 1).join(" · ").replace(/\s+/g, " ").trim();
   if (text.length > 300) text = `${text.slice(0, 297).replace(/\s+\S*$/, "")}…`;
   return { titulek, text, odkaz };
 }
@@ -1720,19 +1726,28 @@ async function main() {
       všechno ověřené od minulého přehledu, i to, co odešlo průběžně.
     */
     nove = vyberNove(zaznamy, stav, { rezim, ted });
-    davka = nove.slice(0, MAX_V_PREHLEDU_ZAZNAMU);
+    // Všechny do přehledu; řádků ukáže nejvýš MAX_TITULKU_V_PREHLEDU a zbytek odkáže na web.
+    davka = nove;
     /*
       Bez novinky se přehled neposílá (29. 9. 2026). Zpráva „nic nového“
       ve 20:00 jen budí; kdo chce vědět, že kanál žije, vidí to na webu.
       Zapamatuje se jako odbytý, ať to další běh nezkouší znovu.
     */
-    if (!davka.length && !skok) {
+    /*
+      Ranní přehled jen se závažností 7+ (30. 9. 2026). Nic se neoznačí jako
+      odeslané, takže záznamy od večera vezme večerní přehled.
+    */
+    // Ručně vyžádaný přehled („--rucne“) jde vždy; ten, který spouští worker nebo plánovač, podléhá pravidlu.
+    const ranoBezZavazneho = cast === "rano" && !arg.includes("--rucne") && !stojiRanniPrehled(davka);
+    if (ranoBezZavazneho) {
+      stav.prehledy[klicPrehledu] = { kdy: new Date(ted).toISOString(), zaznamu: 0, neodeslan: `nic od ${PRAH_RANNIHO_PREHLEDU}/10` };
+      console.log(`[rozhlas] ranní přehled ${klicPrehledu}: nic za ${PRAH_RANNIHO_PREHLEDU}/10 a víc, počká na večer`);
+    } else if (!davka.length && !skok) {
       stav.prehledy[klicPrehledu] = { kdy: new Date(ted).toISOString(), zaznamu: 0, neodeslan: "nic nového" };
       console.log(`[rozhlas] přehled ${klicPrehledu}: nic nového, neposílá se`);
     }
-    const kusy = !davka.length && !skok ? [] : davka.length ? sestavSouhrn(davka, { ted, cast }).kusy : [sestavPrazdnyPrehled({ ted, cast })];
-    if (skok) kusy[kusy.length - 1] += `\n\n\u26fd ${esc(skok.text.split("\n")[0])}`;
-    if (nove.length > davka.length) kusy[kusy.length - 1] += `\n\nDalší záznamy (${nove.length - davka.length}) na ${WEB}/udalosti/`;
+    const kusy = ranoBezZavazneho || (!davka.length && !skok) ? [] : davka.length ? sestavSouhrn(davka, { ted, cast }).kusy : [sestavPrazdnyPrehled({ ted, cast })];
+    if (skok && kusy.length) kusy[kusy.length - 1] += `\n\n\u26fd ${esc(skok.text.split("\n")[0])}`;
     let ok = true;
     let prvniId = null;
     for (const k of kusy) {

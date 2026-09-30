@@ -2,7 +2,7 @@
 import fs from "node:fs";
 import path from "node:path";
 import { describe, expect, it } from "vitest";
-import { sestavVyjasneni, vyberMimoradne, castDne, cestaZaznamu, jeCasPrehledu, sestavKratky, sestavPrazdnyPrehled, vyberKratky, vyberTip, jeCesky, palivoDoPrehledu, sestavPrehledDne, sluzbyDoPrehledu, vyberNavrhyDoPrehledu, zmenyStavuZaDen, klicovaVeta, legendaTecek, pocetZdroju, pruhTecek, PUVODCI, radekPokryti, jeArchivni, radekData, rozdelZpravu, sestavPalivo, sestavSouhrn, sestavPrehledZachycenych, sestavSignal, sestavTest, sestavVystrahu, sestavZdroje, sestavZmenuStavu, sestavZpravu, vyberDoPrehledu, vyberNove, vyberPalivo, vyberSignaly, vyberVystrahu, vyberZmenyStavu, zahlavi, sestavVaznyNavrh, vyberVazneNavrhy, smerZmeny, sestavMimoradnou } from "../nastroje/rozhlas.mjs";
+import { stojiRanniPrehled, sestavVyjasneni, vyberMimoradne, castDne, cestaZaznamu, jeCasPrehledu, sestavKratky, sestavPrazdnyPrehled, vyberKratky, vyberTip, jeCesky, palivoDoPrehledu, sestavPrehledDne, sluzbyDoPrehledu, vyberNavrhyDoPrehledu, zmenyStavuZaDen, klicovaVeta, legendaTecek, pocetZdroju, pruhTecek, PUVODCI, radekPokryti, jeArchivni, radekData, rozdelZpravu, sestavPalivo, sestavSouhrn, sestavPrehledZachycenych, sestavSignal, sestavTest, sestavVystrahu, sestavZdroje, sestavZmenuStavu, sestavZpravu, vyberDoPrehledu, vyberNove, vyberPalivo, vyberSignaly, vyberVystrahu, vyberZmenyStavu, zahlavi, sestavVaznyNavrh, vyberVazneNavrhy, smerZmeny, sestavMimoradnou } from "../nastroje/rozhlas.mjs";
 import { smerZmeny as smerZmenyWeb } from "../src/lib/smer";
 import { UROVNE, zDeseti } from "../src/lib/skala";
 import { PUVODCI as PUVODCI_WEB } from "../src/lib/kategorie";
@@ -121,23 +121,37 @@ describe("rozhlas", () => {
     expect(z.trimEnd().endsWith("CzechPatrol · aktualizováno 4. 9. 2026")).toBe(true);
     expect(z).not.toContain("záznam x");
   });
-  it("souhrn: pruh a legenda nahoře, nejdřív opatření a české záznamy", () => {
+  it("přehled: jen titulky s odkazem, nejdřív opatření a české záznamy", () => {
     const polozky = [
       { i: zaznam({ id: "a", slug: "a", zavaznost: "Y2", kratkyTitulek: "Mírné" }), aktualizace: false },
       { i: zaznam({ id: "b", slug: "b", kodZeme: "CZ", zeme: "Česko", druh: "opatreni", puvodce: undefined, kratkyTitulek: "ČR: opatření" }), aktualizace: false },
-      { i: zaznam({ id: "c", slug: "c", zavaznost: "R1", kratkyTitulek: "Vážné" }), aktualizace: false },
+      { i: zaznam({ id: "c", slug: "c", zavaznost: "R1", kratkyTitulek: "Vážné" }), aktualizace: true },
     ];
     const { kusy, razene } = sestavSouhrn(polozky, { ted: new Date("2026-09-06T17:00:00Z").getTime() });
     expect(razene.map((x: { i: { id: string } }) => x.i.id)).toEqual(["b", "c", "a"]);
-    // Pruh je barevná škála (nejzávažnější vlevo), pořadí položek pod ním je podle naléhavosti pro čtenáře.
-    expect(kusy[0].startsWith("🔴🟡📋\n<b>CzechPatrol · denní přehled 6. 9. 2026</b>")).toBe(true);
-    expect(kusy[0]).toContain("3 nové záznamy · nejvýše 9 z 10");
-    expect(kusy[0]).toContain("<i>🔴 1× vážné · 🟡 1× střední závažnost · 📋 1× opatření</i>");
-    expect(kusy[0]).toContain("<b>V České republice bylo přijato úřední opatření: opatření.");
+    expect(kusy).toHaveLength(1);
+    expect(kusy[0].startsWith("<b>CzechPatrol · denní přehled 6. 9. 2026</b>\n\n📋 <a")).toBe(true);
+    expect(kusy[0]).toContain('📋 <a href="https://czechpatrol.cz/incident/b/">ČR: opatření</a>');
+    expect(kusy[0]).toContain('🔴 9/10 · Aktualizace: <a href="https://czechpatrol.cz/incident/c/">Vážné</a>');
+    expect(kusy[0]).toContain('🟡 5/10 · <a href="https://czechpatrol.cz/incident/a/">Mírné</a>');
+    // Žádné rozepsané položky, fakta ani legenda.
+    expect(kusy[0].split("\n").length).toBeLessThanOrEqual(8);
+    expect(kusy[0]).not.toContain("Původce");
+  });
+  it("víc než 8 záznamů odkáže na web", () => {
+    const polozky = Array.from({ length: 11 }, (_, n) => ({ i: zaznam({ id: `i${n}`, slug: `i${n}` }), aktualizace: false }));
+    const { kusy } = sestavSouhrn(polozky, { ted: Date.now() });
+    expect(kusy[0].match(/<a href=/g)).toHaveLength(8);
+    expect(kusy[0]).toContain("+ 3 dalších na https://czechpatrol.cz/udalosti/");
+  });
+  it("ranní přehled jen se závažností 7 a víc", () => {
+    expect(stojiRanniPrehled([{ i: zaznam({ zavaznost: "Y3" }) }])).toBe(false);
+    expect(stojiRanniPrehled([{ i: zaznam({ zavaznost: "Y3" }) }, { i: zaznam({ zavaznost: "O1" }) }])).toBe(true);
+    expect(stojiRanniPrehled([])).toBe(false);
   });
   it("dlouhý souhrn se rozdělí, každý kus zůstane pod limitem Telegramu", () => {
     const polozky = Array.from({ length: 8 }, (_, n) => ({ i: zaznam({ id: `i${n}`, slug: `i${n}` }), aktualizace: false }));
-    const { kusy } = sestavSouhrn(polozky, { ted: Date.now(), limit: 900 });
+    const { kusy } = sestavSouhrn(polozky, { ted: Date.now(), limit: 250 });
     expect(kusy.length).toBeGreaterThan(1);
     for (const k of kusy) expect(k.length).toBeLessThanOrEqual(4096);
   });
@@ -158,19 +172,14 @@ describe("rozhlas", () => {
     expect(Math.min(...cisla)).toBe(1);
     expect(Math.max(...cisla)).toBe(10);
   });
-  it("souhrn hlásí nejvyšší závažnost číslem, jen když obsahuje případ", () => {
+  it("číslo závažnosti má v přehledu jen případ", () => {
     const ted = new Date("2026-09-06T17:00:00Z").getTime();
-    const sPripadem = sestavSouhrn([
+    const { kusy } = sestavSouhrn([
       { i: zaznam({ id: "a", slug: "a", zavaznost: "R1" }), aktualizace: false },
-      { i: zaznam({ id: "b", slug: "b", zavaznost: "Y2" }), aktualizace: false },
-    ], { ted });
-    expect(sPripadem.kusy[0]).toContain("2 nové záznamy · nejvýše 9 z 10");
-    const bezPripadu = sestavSouhrn([
       { i: zaznam({ id: "c", slug: "c", druh: "opatreni", puvodce: undefined }), aktualizace: false },
-      { i: zaznam({ id: "d", slug: "d", druh: "reakce", puvodce: undefined }), aktualizace: false },
     ], { ted });
-    expect(bezPripadu.kusy[0]).toContain("2 nové záznamy\n");
-    expect(bezPripadu.kusy[0]).not.toContain("z 10");
+    expect(kusy[0]).toContain("🔴 9/10 ·");
+    expect(kusy[0]).toMatch(/📋 <a /);
   });
 
   const zdroj = (n: Record<string, unknown>) => ({

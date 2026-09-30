@@ -122,7 +122,7 @@ describe("přehled spouští worker v 7:30 a 19:30 pražského času", async () 
       const env = { GH_TOKEN_SBER: "t", SBER_REPO: "o/r" } as never;
       expect(await kopniDoRozhlasu(env, Date.parse("2026-09-29T17:30:00Z"))).toEqual({ spusteno: true });
       expect(adresa).toContain("/actions/workflows/rozhlas.yml/dispatches");
-      expect(JSON.parse(telo)).toEqual({ ref: "main", inputs: { prehled: "true" } });
+      expect(JSON.parse(telo)).toEqual({ ref: "main", inputs: { prehled: "true", planovany: "true" } });
       expect((await kopniDoRozhlasu(env, Date.parse("2026-09-29T12:00:00Z"))).spusteno).toBe(false);
     } finally {
       vi.unstubAllGlobals();

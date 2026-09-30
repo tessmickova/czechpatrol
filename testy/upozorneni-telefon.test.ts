@@ -41,6 +41,14 @@ describe("text upozornění v telefonu", () => {
     expect(u.titulek).toBe("📋 Oficiální opatření · Polsko zavřelo přechod");
     expect(u.text).toBe("Další text.");
   });
+  it("přehled v telefonu vypíše titulky", async () => {
+    // @ts-expect-error — .mjs nástroj bez typů
+    const { sestavSouhrn } = await import("../nastroje/rozhlas.mjs");
+    const u = doTelefonu(sestavSouhrn(zaznamy.slice(0, 2).map((i: unknown) => ({ i, aktualizace: false })), { cast: "vecer" }).kusy[0]);
+    expect(u.titulek).toMatch(/večerní přehled/);
+    expect(u.text).toContain(" · ");
+    expect(u.text.length).toBeGreaterThan(20);
+  });
   it("cizí odkaz se do upozornění nedostane", () => {
     expect(doTelefonu('<a href="https://zlo.example/">klik</a>\nNadpis zprávy tady').odkaz).toBe("https://czechpatrol.cz/");
   });
