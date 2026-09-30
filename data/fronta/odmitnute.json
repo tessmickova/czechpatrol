@@ -1,5 +1,21 @@
 [
   {
+    "id": "k-7c3c1889d849a253",
+    "zachyceno": "2026-09-30T00:02:40.247Z",
+    "publikovano": "2026-09-29T23:59:34.000Z",
+    "zdroj": {
+      "nazev": "Tagesschau (Německo)",
+      "url": "https://www.tagesschau.de/tagesschau_in_100_sekunden/video-1657824.html",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "tagesschau in 100 Sekunden",
+    "shrnuti": "tagesschau in 100 Sekunden",
+    "duvod": "bez-skutku",
+    "kategorie": [],
+    "posouzeni": null
+  },
+  {
     "id": "k-de4d8b7a077b216f",
     "zachyceno": "2026-09-29T23:57:34.750Z",
     "publikovano": "2026-09-29T23:45:28.000Z",
@@ -8106,22 +8122,6 @@
     "kategorie": [
       "zpravodajske"
     ],
-    "posouzeni": null
-  },
-  {
-    "id": "k-284696b9bc716751",
-    "zachyceno": "2026-09-29T20:03:43.523Z",
-    "publikovano": "2026-09-29T16:50:03.000Z",
-    "zdroj": {
-      "nazev": "Tagesschau (Německo)",
-      "url": "https://www.tagesschau.de/video/video-1657640.html",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Klage wegen Lidls Rabatt-App: Oberlandesgericht erklärt sich für nicht zuständig",
-    "shrnuti": "Das Oberlandesgericht in Brandenburg an der Havel hat die Klage des Bundesverbands der Verbraucherzentrale abgewiesen. Dieser wirft Lidl vor, mit der App bestimmte Personengruppen zu diskriminieren.",
-    "duvod": "bez-skutku",
-    "kategorie": [],
     "posouzeni": null
   }
 ]
