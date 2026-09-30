@@ -12464,5 +12464,181 @@
       "overeno": "2026-09-29"
     },
     "overeni": "automaticke"
+  },
+  {
+    "id": "i-2026-09-28-97c0b279d5",
+    "slug": "pl-97c0b279d5",
+    "titulek": "Polsko: Okresní soud v Lublinu odsoudil běloruského občana Vitalije S. na tři a půl roku vězení za přípravu žhářského útoku na sklad v Chełmu ve prospěch cizí zpravodajské služby",
+    "kratkyTitulek": "Polsko: Okresní soud v Lublinu odsoudil běloruského občana Vitalije S. na tři a půl roku vězení za přípravu žhářského útoku na sklad v Chełmu ve prospěch cizí zpravodajské služby",
+    "zeme": "Polsko",
+    "kodZeme": "PL",
+    "kategorie": [
+      "sabotaz",
+      "vysetrovani",
+      "pravo"
+    ],
+    "datumUdalosti": "2026-09-28T00:00:00Z",
+    "datumZjisteni": "2026-09-29T00:00:00Z",
+    "aktualizovano": "2026-09-30T08:01:01.328Z",
+    "zavaznost": "Y2",
+    "jistota": "stredni",
+    "stav": "bez-vysetrovani",
+    "atribuce": "neznama",
+    "puvodce": "neznamy",
+    "druh": "pripad",
+    "fakta": [
+      "Okresní soud v Lublinu 28. 9. 2026 odsoudil 28letého běloruského občana Vitalije S. na tři a půl roku vězení, pokutu 1500 zlotých a devět let odnětí veřejných práv.",
+      "Podle obžaloby v červenci 2025 připravoval žhářský útok na sklad v Chełmu — objekt vyfotografoval a natočil a materiály poslal přes Telegram svému kontaktu, který jednal jménem cizí zpravodajské služby.",
+      "Za natáčení dostal v kryptoměně ekvivalent asi 1474 zlotých (přibližně 337 eur).",
+      "Přípravu sabotáže odhalila Agentura vnitřní bezpečnosti (ABW), Vitalij S. byl zadržen 13. 8. 2025 a od té doby zůstal ve vazbě.",
+      "Obžalovaný přijal u soudu první den líčení dohodnutý trest; hrozilo mu až osm let vězení.",
+      "Úřady oficiálně neuvedly, pro který stát měl jednat."
+    ],
+    "neznameho": [
+      "Který stát za zadáním stál — úřady to oficiálně neuvedly, atribuce zůstává neznámá.",
+      "Přesný způsob, jakým byl Vitalij S. naverbován, mimo to, že šlo o Telegram."
+    ],
+    "vyznam": "",
+    "eskalacniSpousteče": [],
+    "deeskalacniSignaly": [],
+    "zdroje": [
+      {
+        "nazev": "Notes from Poland — Belarusian convicted for preparing arson in Poland on behalf of foreign intelligence",
+        "url": "https://notesfrompoland.com/2026/09/29/belarusian-convicted-for-preparing-arson-in-poland-on-behalf-of-foreign-intelligence/",
+        "typ": "media",
+        "publikovano": "2026-09-29T00:00:00Z",
+        "primarni": false,
+        "jazyk": "en"
+      },
+      {
+        "nazev": "Reform.news — Belarusian Man Sentenced to 3.5 Years in Prison for Preparing Sabotage in Polish City of Chełm",
+        "url": "https://reform.news/en/belarusian-man-sentenced-to-3-5-years-in-prison-for-preparing-sabotage-in-polish-city-of-chelm/",
+        "typ": "media",
+        "publikovano": "2026-09-28T00:00:00Z",
+        "primarni": false,
+        "jazyk": "en"
+      },
+      {
+        "nazev": "Polskie Radio 24 — Werbunek w sieci, akt dywersji i zapłata w kryptowalutach. Białorusin usłyszał wyrok",
+        "url": "https://polskieradio24.pl/polska/dywersja-w-chelmie-bialorusin-skazany-na-35-roku-wiezienia",
+        "typ": "media",
+        "publikovano": "2026-09-28T00:00:00Z",
+        "primarni": false,
+        "jazyk": "pl"
+      }
+    ],
+    "souvisejici": [],
+    "historie": [
+      {
+        "kdy": "2026-09-28T00:00:00Z",
+        "text": "Zachyceno automatickým sběrem, druhý zdroj doložen před zařazením do fronty.",
+        "novySignal": true
+      },
+      {
+        "kdy": "2026-09-30T08:01:01.328Z",
+        "text": "Zveřejněno jako neověřené úředně: dvě nezávislé redakce, úřad zatím nepotvrdil.",
+        "novySignal": false
+      }
+    ],
+    "novy": true,
+    "zapocitanoTyden": "2026-09-28",
+    "aiZpracovano": true,
+    "lidskyOvereno": false,
+    "archivniZaznam": false,
+    "dopadNaCr": {
+      "stav": "zadny",
+      "procRelevantni": "Další případ přípravy sabotáže v Polsku ve prospěch cizí zpravodajské služby, atribuce oficiálně neuvedena.",
+      "dopad": "Pro lidi v Česku ze zprávy dnes neplyne žádné omezení.",
+      "sledujeme": "Zda úřady v dalším šetření oficiálně pojmenují stát, pro který Vitalij S. jednal.",
+      "overeno": "2026-09-30"
+    },
+    "overeni": "neovereno"
+  },
+  {
+    "id": "i-2026-09-28-26433e78cd",
+    "slug": "pl-26433e78cd",
+    "titulek": "Polsko: ministerstvo obrany mění pravidla zásahu proti vzdušným cílům — místo vizuálního ověření bude stačit „pozitivní identifikace“ podle radaru a letových dat",
+    "kratkyTitulek": "Polsko: ministerstvo obrany mění pravidla zásahu proti vzdušným cílům — místo vizuálního ověření bude stačit „pozitivní identifikace“ podle radaru a letových dat",
+    "zeme": "Polsko",
+    "kodZeme": "PL",
+    "kategorie": [
+      "drony",
+      "nato"
+    ],
+    "datumUdalosti": "2026-09-28T00:00:00Z",
+    "datumZjisteni": "2026-09-29T00:00:00Z",
+    "aktualizovano": "2026-09-30T08:01:01.328Z",
+    "zavaznost": "Y1",
+    "jistota": "stredni",
+    "stav": "bez-vysetrovani",
+    "atribuce": "neznama",
+    "puvodce": null,
+    "druh": "opatreni",
+    "fakta": [
+      "Náměstek ministra obrany Cezary Tomczyk 28. 9. 2026 oznámil změnu postupu pro použití zbraní letectvem proti cizím vzdušným prostředkům.",
+      "Dosavadní podmínka vizuálního ověření cíle (VID) se nahrazuje takzvanou pozitivní identifikací (PID) — kombinací radarových dat, chybějící odpovědi IFF, směru přeletu hranice, rychlosti, výšky a trajektorie letu.",
+      "Rozhodnutí zahájit palbu bude moci učinit pilot nebo velitel operace bez čekání na vizuální kontakt.",
+      "Ministerstvo změnu zdůvodňuje každodenním rizikem narušení polského vzdušného prostoru drony a zkušenostmi z války na Ukrajině; doporučení vzešlo od náčelníka operačního velení generála Ireneusze Nowaka.",
+      "Podle ministerstva nejde o nižší úroveň identifikace, ale o jiný způsob, jak k ní dojít; zavádí se postupně."
+    ],
+    "neznameho": [
+      "Přesné datum, od kterého nová pravidla reálně platí v praxi (ministerstvo mluví o postupném zavádění).",
+      "Podrobnosti o vymezení zóny, ve které se nová pravidla použijí, ministerstvo veřejně nespecifikovalo."
+    ],
+    "vyznam": "",
+    "eskalacniSpousteče": [],
+    "deeskalacniSignaly": [],
+    "zdroje": [
+      {
+        "nazev": "CZ DEFENCE — Polsko umožní rychlejší rozhodování o sestřelení podezřelých vzdušných cílů",
+        "url": "https://www.czdefence.cz/clanek/polsko-umozni-rychlejsi-rozhodovani-o-sestreleni-podezrelych-vzdusnych-cilu",
+        "typ": "media",
+        "primarni": false,
+        "jazyk": "cs"
+      },
+      {
+        "nazev": "TVN24 — Cezary Tomczyk: Wojsko Polskie zmieni procedury, zestrzelenie nie będzie wymagało identyfikacji wizualnej",
+        "url": "https://tvn24.pl/polska/cezary-tomczyk-wojsko-polskie-zmieni-procedury-zestrzelenie-nie-bedzie-wymagalo-identyfikacji-wizualnej-st9251973",
+        "typ": "media",
+        "publikovano": "2026-09-28T00:00:00Z",
+        "primarni": false,
+        "jazyk": "pl"
+      },
+      {
+        "nazev": "Notes from Poland — Poland changes rules of engagement for firing on foreign aircraft amid growing Russia threat",
+        "url": "https://notesfrompoland.com/2026/09/29/poland-changes-rules-of-engagement-for-firing-on-foreign-aircraft-amid-growing-russia-threat/",
+        "typ": "media",
+        "publikovano": "2026-09-29T00:00:00Z",
+        "primarni": false,
+        "jazyk": "en"
+      }
+    ],
+    "souvisejici": [],
+    "historie": [
+      {
+        "kdy": "2026-09-28T00:00:00Z",
+        "text": "Zachyceno automatickým sběrem, druhý zdroj doložen před zařazením do fronty.",
+        "novySignal": true
+      },
+      {
+        "kdy": "2026-09-30T08:01:01.328Z",
+        "text": "Zveřejněno jako neověřené úředně: dvě nezávislé redakce, úřad zatím nepotvrdil.",
+        "novySignal": false
+      }
+    ],
+    "novy": true,
+    "zapocitanoTyden": "2026-09-28",
+    "aiZpracovano": true,
+    "lidskyOvereno": false,
+    "archivniZaznam": false,
+    "vykonal": "Ministerstvo národní obrany Polska",
+    "dopadNaCr": {
+      "stav": "zadny",
+      "procRelevantni": "Polsko jako sousední členský stát NATO mění pravidla nasazení letectva proti dronům a raketám kvůli rostoucímu ruskému ohrožení.",
+      "dopad": "Pro lidi v Česku ze zprávy dnes neplyne žádné omezení; jde o vnitřní postup polského letectva.",
+      "sledujeme": "Zda podobný krok zváží i další státy NATO včetně Česka a jak se nová pravidla v praxi osvědčí.",
+      "overeno": "2026-09-30"
+    },
+    "overeni": "neovereno"
   }
 ]

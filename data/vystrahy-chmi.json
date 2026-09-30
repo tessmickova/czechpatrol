@@ -1,10 +1,10 @@
 {
-  "nacteno": "2026-09-30T05:06:59.537Z",
-  "odeslano": "2026-09-29T08:08:50.000Z",
-  "identifikator": "2.49.0.0.203.0.CZ.260929080850.XOCZ50_OKPR_000367",
+  "nacteno": "2026-09-30T08:01:01.781Z",
+  "odeslano": "2026-09-30T07:49:11.000Z",
+  "identifikator": "2.49.0.0.203.0.CZ.260930074911.XOCZ50_OKPR_000368",
   "vystrahy": [
     {
-      "id": "chmi:Silný vítr:2026-09-29T22:00:00.000Z:nezname",
+      "id": "chmi:Silný vítr:2026-09-30T07:46:47.000Z:nezname",
       "typ": "oficialni-pokyn",
       "uzemi": {
         "druh": "nezname",
@@ -16,8 +16,8 @@
       "pokyn": "Zajistit okna, dveře, odstranit nebo zabezpečit volně uložené předměty, stany, skleníky apod. Dbát zvýšené opatrnosti při pohybu venku a při řízení vozidel. Na horách omezit túry a nevydávat se zejména do hřebenových partií.",
       "vydavatel": "ČHMÚ, Marjan Sandev",
       "odkaz": "https://vystrahy-cr.chmi.cz/",
-      "vydano": "2026-09-29T08:08:50.000Z",
-      "platiOd": "2026-09-29T22:00:00.000Z",
+      "vydano": "2026-09-30T07:49:11.000Z",
+      "platiOd": "2026-09-30T07:46:47.000Z",
       "platiDo": "2026-10-01T10:00:00.000Z",
       "odvolano": null,
       "opraveno": null,
