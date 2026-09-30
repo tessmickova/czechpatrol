@@ -90,6 +90,11 @@
       "kdy": "2026-09-29T21:28:14.382Z",
       "zaznamu": 5,
       "messageId": 56
+    },
+    "2026-09-30-rano": {
+      "kdy": "2026-09-30T05:30:40.438Z",
+      "zaznamu": 1,
+      "messageId": 57
     }
   },
   "navrhy": {
@@ -751,6 +756,12 @@
       "kdy": "2026-09-29T21:28:14.382Z",
       "historie": 2,
       "prehled": "2026-09-29-vecer"
+    },
+    "i-2026-09-29-abceb638dc": {
+      "cesta": "prehled",
+      "kdy": "2026-09-30T05:30:40.438Z",
+      "historie": 2,
+      "prehled": "2026-09-30-rano"
     }
   },
   "snimky": {
