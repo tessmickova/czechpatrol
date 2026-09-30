@@ -12988,5 +12988,90 @@
       "overeno": "2026-09-30"
     },
     "overeni": "neovereno"
+  },
+  {
+    "id": "i-2026-09-30-fca0db17a2",
+    "slug": "ua-fca0db17a2",
+    "titulek": "Rusko poprvé použilo proudový dron se speciální náloží na ničení ocelových sloupů vysokého napětí a mostních konstrukcí, uvedl poradce Zelenského",
+    "kratkyTitulek": "Rusko poprvé použilo proudový dron se speciální náloží na ničení ocelových sloupů vysokého napětí a mostních konstrukcí, uvedl poradce Zelenského",
+    "zeme": "Ukrajina",
+    "kodZeme": "UA",
+    "kategorie": [
+      "drony",
+      "infrastruktura"
+    ],
+    "datumUdalosti": "2026-09-30T00:00:00Z",
+    "datumZjisteni": "2026-09-30T00:00:00Z",
+    "aktualizovano": "2026-09-30T20:01:12.345Z",
+    "zavaznost": "Y2",
+    "jistota": "stredni",
+    "stav": "bez-vysetrovani",
+    "atribuce": "neznama",
+    "puvodce": "neznamy",
+    "druh": "pripad",
+    "fakta": [
+      "Poradce prezidenta Zelenského pro obrannou techniku Serhij \"Flash\" Beskrestnov 30. 9. 2026 na Telegramu uvedl, že Rusko poprvé použilo proudový bezpilotní letoun s náloží určenou k ničení sloupů vysokého napětí a ocelových mostních konstrukcí.",
+      "Podle jeho popisu má nálož tvarovanou hlavní část o 40 kg a čtyři další destrukční moduly.",
+      "Nasazení přišlo v noci, kdy Rusko provedlo za poslední měsíce svůj nejsilnější kombinovaný úder na ukrajinskou energetiku; v Kyjevě byly kvůli tomu zavedeny nouzové odstávky elektřiny."
+    ],
+    "neznameho": [
+      "Tvrzení vychází jen z vyjádření poradce na Telegramu, ne z nezávislého technického rozboru trosek ani z oficiálního ukrajinského vojenského stanoviska.",
+      "Přesný rozsah dosavadního použití (kolikrát, kde konkrétně) neznámý."
+    ],
+    "vyznam": "",
+    "eskalacniSpousteče": [],
+    "deeskalacniSignaly": [],
+    "zdroje": [
+      {
+        "nazev": "The Kyiv Independent — Russia strikes Ukrainian power pylon with steel-cutting drone for 1st time, Zelensky's adviser says",
+        "url": "https://kyivindependent.com/russia-strikes-ukrainian-power-pylon-with-steel-cutting-drone-for-1st-time-zelenskys-adviser-says/",
+        "typ": "media",
+        "publikovano": "2026-09-30T00:00:00Z",
+        "primarni": false,
+        "jazyk": "en"
+      },
+      {
+        "nazev": "UNN — Russia used a drone with a warhead for the first time to destroy supports and bridges — \"Flash\"",
+        "url": "https://unn.ua/en/news/russia-used-a-drone-with-a-warhead-for-the-first-time-to-destroy-bridge-supports-and-bridges-flash",
+        "typ": "media",
+        "publikovano": "2026-09-30T00:00:00Z",
+        "primarni": false,
+        "jazyk": "en"
+      },
+      {
+        "nazev": "Ukrinform — Russians use jet-powered drone for first time with payload designed to destroy power lines",
+        "url": "https://www.ukrinform.net/rubric-ato/4169724-russians-use-jetpowered-drone-for-first-time-with-payload-designed-to-destroy-power-lines-flash.html",
+        "typ": "media",
+        "publikovano": "2026-09-30T00:00:00Z",
+        "primarni": false,
+        "jazyk": "en"
+      }
+    ],
+    "souvisejici": [],
+    "historie": [
+      {
+        "kdy": "2026-09-30T00:00:00Z",
+        "text": "Zachyceno automatickým sběrem, druhý zdroj doložen před zařazením do fronty.",
+        "novySignal": true
+      },
+      {
+        "kdy": "2026-09-30T20:01:12.345Z",
+        "text": "Zveřejněno jako neověřené úředně: dvě nezávislé redakce, úřad zatím nepotvrdil.",
+        "novySignal": false
+      }
+    ],
+    "novy": true,
+    "zapocitanoTyden": "2026-09-30",
+    "aiZpracovano": true,
+    "lidskyOvereno": false,
+    "archivniZaznam": false,
+    "dopadNaCr": {
+      "stav": "zadny",
+      "procRelevantni": "Nový typ ruské zbraně proti energetické infrastruktuře na Ukrajině — vývoj prostředků hybridní/vojenské hrozby, kterou projekt sleduje.",
+      "dopad": "Pro lidi v Česku ze zprávy dnes neplyne žádné omezení.",
+      "sledujeme": "Zda se použití nálože na sloupy vysokého napětí potvrdí nezávisle a zda se rozšíří i mimo Ukrajinu.",
+      "overeno": "2026-09-30"
+    },
+    "overeni": "neovereno"
   }
 ]
