@@ -12640,5 +12640,96 @@
       "overeno": "2026-09-30"
     },
     "overeni": "neovereno"
+  },
+  {
+    "id": "i-2026-09-30-rusko-non-paper-kaliningrad",
+    "slug": "rusko-jaderne-varovani-nato-kaliningrad-2026",
+    "titulek": "Rusko poslalo NATO neformální dokument: při pokusu o izolaci Kaliningradu je připraveno použít i jaderné zbraně",
+    "kratkyTitulek": "Rusko v dokumentu pro NATO pohrozilo jadernými zbraněmi kvůli Kaliningradu",
+    "zeme": "Rusko",
+    "kodZeme": "RU",
+    "kategorie": [
+      "diplomacie",
+      "rusko",
+      "nato"
+    ],
+    "datumUdalosti": "2026-09-30T00:00:00Z",
+    "datumZjisteni": "2026-09-30T00:00:00Z",
+    "aktualizovano": "2026-09-30T12:30:00Z",
+    "zavaznost": "Y3",
+    "jistota": "vysoka",
+    "stav": "probiha",
+    "atribuce": "neznama",
+    "puvodce": null,
+    "druh": "reakce",
+    "fakta": [
+      "Rusko poslalo NATO neformální diplomatický dokument. Podle agentury Reuters, která ho viděla, v něm stojí, že při pokusu NATO odříznout Kaliningradskou oblast od zbytku Ruska je Rusko připraveno ji bránit všemi prostředky včetně jaderných zbraní.",
+      "Mluvčí NATO Allison Hart potvrdila, že Aliance dokument dostala; jeho obsah nekomentovala. NATO podle ní důrazně odsuzuje hrozbu silou včetně nezodpovědné jaderné rétoriky.",
+      "Podle Reuters dokument zmiňuje i možnost ruských úderů na rozhodovací centra členských států hned od začátku případného konfliktu. Vysoký evropský obranný představitel to pro Reuters označil za první takovou hrozbu od studené války.",
+      "Ruská velvyslanectví nejméně ve třech evropských zemích v posledních dnech vydala prohlášení, v nichž NATO viní z vyhrocování napětí cvičeními a plány týkajícími se Kaliningradu."
+    ],
+    "neznameho": [
+      "Úplné znění dokumentu zveřejněno nebylo; jeho obsah známe jen z popisu Reuters.",
+      "Žádný z ověřených zdrojů nehlásí, že by varování doprovázely přesuny ruských jednotek, mobilizace nebo změna pohotovosti jaderných sil."
+    ],
+    "vyznam": "",
+    "eskalacniSpousteče": [
+      "Změna pohotovosti ruských jaderných sil nebo přesuny jednotek u hranic NATO.",
+      "Omezení tranzitu do Kaliningradu nebo incident na hranici s Litvou či Polskem."
+    ],
+    "deeskalacniSignaly": [
+      "Diplomatická jednání NATO a Ruska o Kaliningradu bez dalších hrozeb."
+    ],
+    "zdroje": [
+      {
+        "nazev": "Reuters (přes U.S. News) — Russia Issues Nuclear Warning to NATO as Tensions Rise in the Baltic",
+        "url": "https://www.usnews.com/news/world/articles/2026-09-30/russia-issues-nuclear-warning-to-nato-as-tensions-rise-in-the-baltic",
+        "typ": "media",
+        "publikovano": "2026-09-30T00:00:00Z",
+        "primarni": false,
+        "jazyk": "en"
+      },
+      {
+        "nazev": "RTÉ — Russia issues NATO nuclear warning amid Baltic tensions",
+        "url": "https://www.rte.ie/news/2026/0930/1593475-russia-issues-nato-nuclear-warning-amid-baltic-tensions/",
+        "typ": "media",
+        "publikovano": "2026-09-30T00:00:00Z",
+        "primarni": false,
+        "jazyk": "en"
+      },
+      {
+        "nazev": "Irish Examiner — Russia warns it could use nuclear weapons if Nato tries to isolate Kaliningrad",
+        "url": "https://www.irishexaminer.com/world/arid-41917762.html",
+        "typ": "media",
+        "publikovano": "2026-09-30T00:00:00Z",
+        "primarni": false,
+        "jazyk": "en"
+      },
+      {
+        "nazev": "ThePrint (Reuters) — Russia issues nuclear warning to NATO as tensions rise in the Baltic",
+        "url": "https://theprint.in/world/russia-issues-nuclear-warning-to-nato-as-tensions-rise-in-the-baltic/3057825/",
+        "typ": "media",
+        "publikovano": "2026-09-30T00:00:00Z",
+        "primarni": false,
+        "jazyk": "en"
+      }
+    ],
+    "souvisejici": [
+      {
+        "incidentId": "i-2026-09-23-d6a13634e0",
+        "potvrzena": false,
+        "popis": "Napětí kolem Kaliningradu; přímou souvislost nikdo nedoložil."
+      }
+    ],
+    "historie": [
+      {
+        "kdy": "2026-09-30T00:00:00Z",
+        "text": "Reuters zveřejnil obsah dokumentu; NATO potvrdilo jeho přijetí.",
+        "novySignal": true
+      }
+    ],
+    "novy": true,
+    "aiZpracovano": true,
+    "lidskyOvereno": true
   }
 ]

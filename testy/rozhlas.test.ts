@@ -979,3 +979,12 @@ describe("mimořádné zprávy z fronty", () => {
     expect(t).not.toContain("MIMOŘÁDNÁ");
   });
 });
+
+describe("krátká mimořádná zpráva", () => {
+  it("nadpis, dvě fakta, co nevíme, věta o Česku a odkaz — bez dlouhého výpisu", async () => {
+    const { sestavKratkouMimoradnou } = await import("../nastroje/rozhlas.mjs");
+    const i = zaznam({ druh: "reakce", puvodce: undefined, kodZeme: "RU", zeme: "Rusko", fakta: ["A.", "B.", "C."], neznameho: ["X.", "Y."] });
+    const t = sestavKratkouMimoradnou(i, "Nadpis");
+    expect(t.split("\n")).toEqual(["❗ <b>Nadpis</b>", "• A.", "• B.", "<i>Y.</i>", "Pro Česko z toho neplyne žádné nové úřední opatření.", "Podrobnosti a zdroje: https://czechpatrol.cz/incident/x/"]);
+  });
+});

@@ -525,6 +525,25 @@ export function sestavMimoradnou(i) {
   ].join("\n");
 }
 
+/*
+  Krátká mimořádná zpráva (30. 9. 2026, provozovatelka: „ve zkráceném
+  formátu“). Nadpis, nejvýš dvě doložená fakta, co nevíme a odkaz. Bez
+  hodnocení, bez legendy — podrobnosti a zdroje jsou na webu.
+*/
+export function sestavKratkouMimoradnou(i, nadpis) {
+  const uredne = i.lidskyOvereno || i.overeni === "automaticke";
+  const fakta = (i.fakta ?? []).slice(0, 2).map((f) => `• ${esc(zkrat(String(f), 260))}`);
+  const nevime = (i.neznameho ?? [])[1] ?? (i.neznameho ?? [])[0];
+  return [
+    `❗ <b>${esc(nadpis || i.kratkyTitulek || i.titulek)}</b>`,
+    ...(uredne ? [] : ["<i>Úředně neověřeno — vychází ze shodných zpráv více médií.</i>"]),
+    ...fakta,
+    ...(nevime ? [`<i>${esc(zkrat(String(nevime), 200))}</i>`] : []),
+    ...(dulezitePro(i) ? [] : ["Pro Česko z toho neplyne žádné nové úřední opatření."]),
+    `Podrobnosti a zdroje: ${WEB}/incident/${i.slug}/`,
+  ].join("\n");
+}
+
 /**
  * Rozdělí dlouhou zprávu na díly, které Telegram unese (limit 4096 znaků).
  * Dělí se jen mezi odstavci, aby se nerozpadlo formátování.
@@ -1597,7 +1616,7 @@ async function main() {
   /* 0a. mimořádné zprávy z fronty v datech — před vším ostatním kromě výstrahy. */
   if (rezim === "okamzite" && !prvniBeh) {
     for (const { f, i } of vyberMimoradne(ctiFrontuMimoradnych(), zaznamy, stav)) {
-      const text = f.styl === "vyjasneni" ? sestavVyjasneni(i, f.nadpis) : sestavMimoradnou(i);
+      const text = f.styl === "vyjasneni" ? sestavVyjasneni(i, f.nadpis) : f.styl === "kratka" ? sestavKratkouMimoradnou(i, f.nadpis) : sestavMimoradnou(i);
       let ok = true, messageId = null;
       for (const [n, dil] of rozdelZpravu(text).entries()) {
         const v = await posli(dil, { nahled: n === 0 });
