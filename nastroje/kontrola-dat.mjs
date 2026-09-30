@@ -85,6 +85,8 @@ for (const i of incidenty) {
   if (d === "pripad" && !sUrl) varovani.push(`${i.slug}: případ bez zdroje s URL${i.archivniZaznam ? " (označen jako archivní)" : ""}`);
   if (!i.lidskyOvereno && !i.overeni) varovani.push(`${i.slug}: neprošel lidskou kontrolou — na webu se nezobrazí`);
   for (const z of i.zdroje ?? []) if (z.url && !/^https?:\/\//.test(z.url)) chyby.push(`${i.slug}: zdroj „${z.nazev}“ má neplatnou adresu`);
+  // Neznámý typ zdroje shodí sestavení webu (30. 9. 2026, „uredni“ místo „primary“).
+  for (const z of i.zdroje ?? []) if (!["primary", "wire", "media", "local", "analysis", "social"].includes(z.typ)) chyby.push(`${i.slug}: zdroj „${z.nazev}“ má neznámý typ „${z.typ}“`);
 
   /*
     Dokument vydaný dlouho PŘED událostí ji nemůže dokládat.

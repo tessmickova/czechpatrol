@@ -164,6 +164,26 @@ function navrhy() {
   console.log("Schválit: npm run spravce schval <id>   (dokud to neuděláš, na web to nejde)\n");
 }
 
+/*
+  Typ zdroje jen z pevného seznamu webu (src/lib/typy.ts, TypZdroje).
+  30. 9. 2026 zveřejnil automat záznam se zdrojem typu „uredni“ (návrh
+  psal model) a sestavení webu na tom spadlo. Typ se proto sjednotí při
+  každém přesunu návrhu mezi záznamy; neznámý typ nikdy nepropadne dál.
+*/
+export const TYPY_ZDROJU = ["primary", "wire", "media", "local", "analysis", "social"];
+const SYNONYMA_TYPU = {
+  uredni: "primary", urad: "primary", official: "primary", government: "primary", primarni: "primary",
+  agentura: "wire", agency: "wire", medium: "media", news: "media", zpravodajstvi: "media",
+  mistni: "local", regionalni: "local", analyza: "analysis", "think-tank": "analysis", socialni: "social", "socialni-site": "social",
+};
+export function sjednotZdroje(zdroje = []) {
+  return zdroje.map((z) => {
+    if (TYPY_ZDROJU.includes(z?.typ)) return z;
+    const klic = String(z?.typ ?? "").toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+    return { ...z, typ: SYNONYMA_TYPU[klic] ?? "media" };
+  });
+}
+
 function schval(id) {
   if (!id) {
     console.error("Který návrh? npm run spravce schval <id>");
@@ -211,6 +231,7 @@ function schval(id) {
     zaznam.uzavritDo = new Date(ted.getTime() + 7 * 86_400_000).toISOString();
   }
 
+  if (Array.isArray(zaznam.zdroje)) zaznam.zdroje = sjednotZdroje(zaznam.zdroje);
   cil.push(zaznam);
   fs.writeFileSync(path.join(koren, soubor), `${JSON.stringify(cil, null, 2)}\n`);
   fs.writeFileSync(path.join(koren, "data/navrhy.json"), `${JSON.stringify(n.filter((x) => x.id !== id), null, 2)}\n`);
@@ -578,6 +599,7 @@ function zverejniAutomaticky() {
       ...(zaznam.historie ?? []),
       { kdy: ted, text: "Zveřejněno automaticky: dva nezávislé zdroje, z toho úřední. Bez lidské kontroly.", novySignal: false },
     ];
+    zaznam.zdroje = sjednotZdroje(zaznam.zdroje);
     inc.push(zaznam);
   }
 
@@ -664,6 +686,7 @@ function zverejniNeoverene() {
       ...(zaznam.historie ?? []),
       { kdy: ted, text: "Zveřejněno jako neověřené úředně: dvě nezávislé redakce, úřad zatím nepotvrdil.", novySignal: false },
     ];
+    zaznam.zdroje = sjednotZdroje(zaznam.zdroje);
     inc.push(zaznam);
   }
 
