@@ -762,6 +762,12 @@
       "kdy": "2026-09-30T05:30:40.438Z",
       "historie": 2,
       "prehled": "2026-09-30-rano"
+    },
+    "i-2026-09-30-rusko-non-paper-kaliningrad": {
+      "kdy": "2026-09-30T12:07:12.036Z",
+      "historie": 1,
+      "cesta": "hned",
+      "messageId": 58
     }
   },
   "snimky": {
@@ -782,6 +788,12 @@
       "slug": "rusko-tabulkovy-stav-armady-zari-2026",
       "styl": "vyjasneni",
       "messageId": 55
+    },
+    "i-2026-09-30-rusko-non-paper-kaliningrad": {
+      "kdy": "2026-09-30T12:07:12.036Z",
+      "slug": "rusko-jaderne-varovani-nato-kaliningrad-2026",
+      "styl": "kratka",
+      "messageId": 58
     }
   }
 }
