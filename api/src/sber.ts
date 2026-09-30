@@ -107,5 +107,5 @@ export function jeCasPrehledu(cas: number): boolean {
 export async function kopniDoRozhlasu(env: Env, cas: number): Promise<VysledekSberu> {
   if (!jeCasPrehledu(cas)) return { spusteno: false, duvod: "není čas" };
   if (!env.GH_TOKEN_SBER || !env.SBER_REPO) return { spusteno: false, duvod: "není nastaven GH_TOKEN_SBER nebo SBER_REPO" };
-  return spustWorkflow(env.GH_TOKEN_SBER, env.SBER_REPO, "rozhlas.yml", { prehled: "true" });
+  return spustWorkflow(env.GH_TOKEN_SBER, env.SBER_REPO, "rozhlas.yml", { prehled: "true", planovany: "true" });
 }

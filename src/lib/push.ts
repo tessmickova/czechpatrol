@@ -12,7 +12,7 @@ import { API_URL } from "@/config/web";
 /** Klíče odpovídají api/src/push.ts (DRUHY_PUSH). */
 export const DRUHY_UPOZORNENI = [
   { klic: "hned", nazev: "Naléhavé zprávy", popis: "mimořádná výstraha, vážné případy, opatření v Česku, článek 4/5 NATO — hned" },
-  { klic: "prehled", nazev: "Přehled ráno a večer", popis: "v 7:30 a 19:30, jen co ještě nepřišlo; bez novinek nepřijde" },
+  { klic: "prehled", nazev: "Krátký přehled", popis: "titulky v 19:30, ráno v 7:30 jen se závažností 7+; bez novinek nepřijde" },
   { klic: "kratce", nazev: "Menší signály", popis: "krátce, nejvýš jednou za 4 hodiny" },
   { klic: "tipy", nazev: "Tipy k přípravě", popis: "občas jedna praktická rada" },
 ] as const;

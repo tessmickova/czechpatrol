@@ -4,7 +4,8 @@ import type { KampanZdroj, Zdroj } from "@/lib/typy";
 import { Napoveda } from "./zaklad";
 
 export function ZnackaZdroje({ zdroj }: { zdroj: Zdroj | KampanZdroj }) {
-  const t = TYPY_ZDROJU[zdroj.typ];
+  // Neznámý typ (chyba v datech) nesmí shodit stránku — ukáže se jako médium.
+  const t = TYPY_ZDROJU[zdroj.typ] ?? TYPY_ZDROJU.media;
   return (
     <Napoveda popis={<span className="block">{t.popis}</span>}>
       <span className={`stitek-tmavy inline-flex items-center rounded-[18px] border px-1.5 py-[3px] ${t.tridy}`}>
