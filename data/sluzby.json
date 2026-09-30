@@ -1,5 +1,5 @@
 {
-  "aktualizovano": "2026-09-30T11:09:03.507Z",
+  "aktualizovano": "2026-09-30T12:03:39.113Z",
   "stavy": [
     {
       "klic": "cloudflare",
@@ -9,7 +9,7 @@
         {
           "nazev": "Network Performance Issues in Madrid",
           "odkaz": "https://www.cloudflarestatus.com/incidents/fs7dz54l226c",
-          "aktualizovano": "2026-09-30T10:31:26.000Z"
+          "aktualizovano": "2026-09-30T11:31:16.000Z"
         },
         {
           "nazev": "Cloudflare One Clients are incorrectly challenged on some sites",
@@ -28,7 +28,7 @@
         "Auckland, New Zealand - (AKL)",
         "Arica, Chile - (ARI)"
       ],
-      "zkontrolovano": "2026-09-30T11:09:03.507Z",
+      "zkontrolovano": "2026-09-30T12:03:39.113Z",
       "chyba": null
     },
     {
@@ -46,7 +46,7 @@
         "Devices (Softphones/Deskphones)",
         "Zoom Phone - Global"
       ],
-      "zkontrolovano": "2026-09-30T11:09:03.507Z",
+      "zkontrolovano": "2026-09-30T12:03:39.113Z",
       "chyba": null
     },
     {
@@ -55,7 +55,7 @@
       "popis": "All Systems Operational",
       "incidenty": [],
       "postizene": [],
-      "zkontrolovano": "2026-09-30T11:09:03.507Z",
+      "zkontrolovano": "2026-09-30T12:03:39.113Z",
       "chyba": null
     }
   ]
