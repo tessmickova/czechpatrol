@@ -419,21 +419,103 @@
   {
     "kam": "zaznam",
     "pripravil": "patrol",
-    "pripraveno": "2026-09-30T05:48:48.528Z",
-    "id": "i-2026-09-28-97c0b279d5",
-    "slug": "pl-97c0b279d5",
-    "titulek": "Polsko: Okresní soud v Lublinu odsoudil běloruského občana Vitalije S. na tři a půl roku vězení za přípravu žhářského útoku na sklad v Chełmu ve prospěch cizí zpravodajské služby",
-    "kratkyTitulek": "Polsko: Okresní soud v Lublinu odsoudil běloruského občana Vitalije S. na tři a půl roku vězení za přípravu žhářského útoku na sklad v Chełmu ve prospěch cizí zpravodajské služby",
+    "pripraveno": "2026-09-30T12:58:05.494Z",
+    "id": "i-2026-09-30-f92afe8069",
+    "slug": "ru-f92afe8069",
+    "titulek": "Rusko poslalo NATO dokument, ve kterém hrozí použitím jaderných zbraní, pokud by se Aliance pokusila izolovat exklávu Kaliningrad",
+    "kratkyTitulek": "Rusko poslalo NATO dokument, ve kterém hrozí použitím jaderných zbraní, pokud by se Aliance pokusila izolovat exklávu Kaliningrad",
+    "zeme": "Rusko",
+    "kodZeme": "RU",
+    "kategorie": [
+      "rusko",
+      "nato"
+    ],
+    "datumUdalosti": "2026-09-30T00:00:00Z",
+    "datumZjisteni": "2026-09-30T00:00:00Z",
+    "aktualizovano": "2026-09-30T12:58:05.494Z",
+    "zavaznost": "Y2",
+    "jistota": "vysoka",
+    "stav": "bez-vysetrovani",
+    "atribuce": "neznama",
+    "puvodce": null,
+    "druh": "reakce",
+    "fakta": [
+      "Moskva podle agentury Reuters poslala NATO diplomatický dokument (tzv. non-paper), ve kterém varuje, že v případě pokusu Aliance izolovat ruskou exklávu Kaliningrad je Rusko připraveno použít \"celý arzenál sil a schopností, které má k dispozici, včetně jaderných zbraní\", k obraně svého území.",
+      "Dokument podle Reuters obsahuje i hrozbu úderů na \"centra rozhodování v členských státech Aliance hned od začátku konfliktu\", pokud by NATO izolaci Kaliningradu prosazovalo.",
+      "Mluvčí Kremlu Dmitrij Peskov ve středu 30. 9. 2026 potvrdil, že Rusko poslalo NATO varování ohledně Kaliningradu, a uvedl, že ruská velvyslanectví v posledních dnech ve statementech obviňují NATO z eskalace napětí vojenskými cvičeními a plánováním scénářů kolem Kaliningradu.",
+      "Mluvčí NATO Allison Hart hrozby odmítla jako \"nezodpovědnou jadernou rétoriku\" a uvedla, že se Aliance nenechá zastrašit od podpory Ukrajiny."
+    ],
+    "neznameho": [
+      "Přesný text celého ruského dokumentu (non-paper) nebyl zveřejněn; citace vychází z toho, co z něj otisklo Reuters.",
+      "Zda a jaké konkrétní kroky NATO ohledně Kaliningradu Rusko tímto reaguje — žádný takový plán Aliance veřejně nepotvrdila."
+    ],
+    "vyznam": "",
+    "eskalacniSpousteče": [],
+    "deeskalacniSignaly": [],
+    "zdroje": [
+      {
+        "nazev": "Digi24 — Moscova a avertizat oficial NATO că va folosi armele nucleare dacă Alianța va încerca izoleze o exclavă rusă",
+        "url": "https://www.digi24.ro/stiri/externe/rusia/moscova-a-avertizat-oficial-nato-ca-va-folosi-armele-nucleare-daca-alianta-va-incerca-izoleze-o-exclava-rusa-3971079",
+        "typ": "media",
+        "publikovano": "2026-09-30T00:00:00Z",
+        "primarni": false,
+        "jazyk": "ro"
+      },
+      {
+        "nazev": "Irish Examiner (Reuters) — Russia issues nuclear warning to Nato as tensions rise in the Baltic",
+        "url": "https://www.irishexaminer.com/world/arid-41917762.html",
+        "typ": "wire",
+        "publikovano": "2026-09-30T00:00:00Z",
+        "primarni": false,
+        "jazyk": "en"
+      },
+      {
+        "nazev": "US News (Reuters) — Russia Issues Nuclear Warning to NATO as Tensions Rise in the Baltic",
+        "url": "https://www.usnews.com/news/world/articles/2026-09-30/russia-issues-nuclear-warning-to-nato-as-tensions-rise-in-the-baltic",
+        "typ": "wire",
+        "publikovano": "2026-09-30T00:00:00Z",
+        "primarni": false,
+        "jazyk": "en"
+      }
+    ],
+    "souvisejici": [],
+    "historie": [
+      {
+        "kdy": "2026-09-30T00:00:00Z",
+        "text": "Zachyceno automatickým sběrem, druhý zdroj doložen před zařazením do fronty.",
+        "novySignal": true
+      }
+    ],
+    "novy": true,
+    "zapocitanoTyden": "2026-09-30",
+    "aiZpracovano": true,
+    "lidskyOvereno": false,
+    "archivniZaznam": false,
+    "dopadNaCr": {
+      "stav": "zadny",
+      "procRelevantni": "Ruská jaderná hrozba vůči NATO kvůli Kaliningradu; Česko je členem NATO, případná eskalace by se ho týkala nepřímo přes alianci.",
+      "dopad": "Pro lidi v Česku ze zprávy dnes neplyne žádné omezení; jde o diplomatickou výhrůžku, ne o vojenský krok.",
+      "sledujeme": "Jak NATO na dokument oficiálně zareaguje a zda Rusko podnikne jakýkoli konkrétní krok, ne jen prohlášení.",
+      "overeno": "2026-09-30"
+    }
+  },
+  {
+    "kam": "zaznam",
+    "pripravil": "patrol",
+    "pripraveno": "2026-09-30T12:58:05.494Z",
+    "id": "i-2026-09-25-4fd0720a00",
+    "slug": "pl-4fd0720a00",
+    "titulek": "Polsko: kyberútok na zdravotnický systém Medyc (firma Qbusoft) mohl odhalit data až pěti milionů lidí, včetně zdravotních záznamů; Úřad pro ochranu osobních údajů nařídil kontrolu",
+    "kratkyTitulek": "Polsko: kyberútok na zdravotnický systém Medyc (firma Qbusoft) mohl odhalit data až pěti milionů lidí, včetně zdravotních záznamů; Úřad pro ochranu osobních údajů nařídil kontrolu",
     "zeme": "Polsko",
     "kodZeme": "PL",
     "kategorie": [
-      "sabotaz",
-      "vysetrovani",
-      "pravo"
+      "kyber",
+      "infrastruktura"
     ],
-    "datumUdalosti": "2026-09-28T00:00:00Z",
-    "datumZjisteni": "2026-09-29T00:00:00Z",
-    "aktualizovano": "2026-09-30T05:48:48.528Z",
+    "datumUdalosti": "2026-09-25T00:00:00Z",
+    "datumZjisteni": "2026-09-30T00:00:00Z",
+    "aktualizovano": "2026-09-30T12:58:05.494Z",
     "zavaznost": "Y2",
     "jistota": "vysoka",
     "stav": "bez-vysetrovani",
@@ -441,125 +523,127 @@
     "puvodce": "neznamy",
     "druh": "pripad",
     "fakta": [
-      "Okresní soud v Lublinu 28. 9. 2026 odsoudil 28letého běloruského občana Vitalije S. na tři a půl roku vězení, pokutu 1500 zlotých a devět let odnětí veřejných práv.",
-      "Podle obžaloby v červenci 2025 připravoval žhářský útok na sklad v Chełmu — objekt vyfotografoval a natočil a materiály poslal přes Telegram svému kontaktu, který jednal jménem cizí zpravodajské služby.",
-      "Za natáčení dostal v kryptoměně ekvivalent asi 1474 zlotých (přibližně 337 eur).",
-      "Přípravu sabotáže odhalila Agentura vnitřní bezpečnosti (ABW), Vitalij S. byl zadržen 13. 8. 2025 a od té doby zůstal ve vazbě.",
-      "Obžalovaný přijal u soudu první den líčení dohodnutý trest; hrozilo mu až osm let vězení.",
-      "Úřady oficiálně neuvedly, pro který stát měl jednat."
+      "Neznámá osoba zneužila v srpnu 2026 zranitelnost typu SQL injection v rozhraní aplikace Medyc firmy Qbusoft a přenesla šifrovaný archiv databáze mimo systémy firmy; průnik byl odhalen v noci na 9. 9. 2026.",
+      "Unikla jména, rodná čísla (PESEL), adresy, telefonní čísla, e-maily a zdravotní záznamy včetně údajů o hospitalizaci a propouštěcích zprávách; podle neověřených tvrzení šlo až o 5 milionů lidí.",
+      "Úřad pro ochranu osobních údajů (UODO) 25. 9. 2026 oznámil, že firma Qbusoft incident nenahlásila CERT Polska ani zdravotnickému CSiRT CeZ, a předseda úřadu Mirosław Wróblewski nařídil u firmy kontrolu.",
+      "Jde o druhý podobný únik zdravotních dat v Polsku během několika týdnů po srpnovém úniku z platformy MyDr, který se týkal zhruba 19 milionů lidí."
     ],
     "neznameho": [
-      "Který stát za zadáním stál — úřady to oficiálně neuvedly, atribuce zůstává neznámá.",
-      "Přesný způsob, jakým byl Vitalij S. naverbován, mimo to, že šlo o Telegram."
+      "Přesný a potvrzený počet postižených lidí — číslo 5 milionů je zatím neověřené tvrzení, ne úřední údaj.",
+      "Kdo je za útokem, motiv (výkupné, sabotáž) ani vazba na zahraničního aktéra nebyly úředně stanoveny."
     ],
     "vyznam": "",
     "eskalacniSpousteče": [],
     "deeskalacniSignaly": [],
     "zdroje": [
       {
-        "nazev": "Notes from Poland — Belarusian convicted for preparing arson in Poland on behalf of foreign intelligence",
-        "url": "https://notesfrompoland.com/2026/09/29/belarusian-convicted-for-preparing-arson-in-poland-on-behalf-of-foreign-intelligence/",
+        "nazev": "SME (Slovensko) — Z poľského zdravotníctva mohli pri kyberútokoch uniknúť údaje miliónov ľudí",
+        "url": "https://www.sme.sk/svet/c/z-polskeho-zdravotnictva-mohli-pri-kyberutokoch-uniknut-udaje-milionov-ludi?utm_source=rss&utm_medium=feed&utm_campaign=www-rss",
         "typ": "media",
-        "publikovano": "2026-09-29T00:00:00Z",
         "primarni": false,
-        "jazyk": "en"
+        "jazyk": "sk"
       },
       {
-        "nazev": "Reform.news — Belarusian Man Sentenced to 3.5 Years in Prison for Preparing Sabotage in Polish City of Chełm",
-        "url": "https://reform.news/en/belarusian-man-sentenced-to-3-5-years-in-prison-for-preparing-sabotage-in-polish-city-of-chelm/",
-        "typ": "media",
-        "publikovano": "2026-09-28T00:00:00Z",
-        "primarni": false,
-        "jazyk": "en"
-      },
-      {
-        "nazev": "Polskie Radio 24 — Werbunek w sieci, akt dywersji i zapłata w kryptowalutach. Białorusin usłyszał wyrok",
-        "url": "https://polskieradio24.pl/polska/dywersja-w-chelmie-bialorusin-skazany-na-35-roku-wiezienia",
-        "typ": "media",
-        "publikovano": "2026-09-28T00:00:00Z",
-        "primarni": false,
+        "nazev": "UODO — Miliony Polaków poszkodowane. Po nowym wycieku danych medycznych",
+        "url": "https://uodo.gov.pl/pl/138/4585",
+        "typ": "primary",
+        "publikovano": "2026-09-25T00:00:00Z",
+        "primarni": true,
         "jazyk": "pl"
+      },
+      {
+        "nazev": "The Record — Cyberattack on Polish medical software provider exposes patient data",
+        "url": "https://therecord.media/poland-cyberattack-medical-medyc",
+        "typ": "media",
+        "primarni": false,
+        "jazyk": "en"
       }
     ],
     "souvisejici": [],
     "historie": [
       {
-        "kdy": "2026-09-28T00:00:00Z",
+        "kdy": "2026-09-25T00:00:00Z",
         "text": "Zachyceno automatickým sběrem, druhý zdroj doložen před zařazením do fronty.",
         "novySignal": true
       }
     ],
     "novy": true,
-    "zapocitanoTyden": "2026-09-28",
+    "zapocitanoTyden": "2026-09-25",
     "aiZpracovano": true,
     "lidskyOvereno": false,
     "archivniZaznam": false,
     "dopadNaCr": {
       "stav": "zadny",
-      "procRelevantni": "Další případ přípravy sabotáže v Polsku ve prospěch cizí zpravodajské služby, atribuce oficiálně neuvedena.",
-      "dopad": "Pro lidi v Česku ze zprávy dnes neplyne žádné omezení.",
-      "sledujeme": "Zda úřady v dalším šetření oficiálně pojmenují stát, pro který Vitalij S. jednal.",
+      "procRelevantni": "Rozsáhlý únik zdravotních dat v sousedním členském státě EU ukazuje na zranitelnost zdravotnických systémů, které používá i Česko.",
+      "dopad": "Pro lidi v Česku ze zprávy dnes neplyne žádné omezení; české zdravotnické systémy útok nezasáhl.",
+      "sledujeme": "Výsledek kontroly UODO a zda se ukáže vazba na zahraničního aktéra nebo organizovaný kyberzločin.",
       "overeno": "2026-09-30"
     }
   },
   {
     "kam": "zaznam",
     "pripravil": "patrol",
-    "pripraveno": "2026-09-30T05:48:48.528Z",
-    "id": "i-2026-09-28-26433e78cd",
-    "slug": "pl-26433e78cd",
-    "titulek": "Polsko: ministerstvo obrany mění pravidla zásahu proti vzdušným cílům — místo vizuálního ověření bude stačit „pozitivní identifikace“ podle radaru a letových dat",
-    "kratkyTitulek": "Polsko: ministerstvo obrany mění pravidla zásahu proti vzdušným cílům — místo vizuálního ověření bude stačit „pozitivní identifikace“ podle radaru a letových dat",
-    "zeme": "Polsko",
-    "kodZeme": "PL",
+    "pripraveno": "2026-09-30T12:58:05.494Z",
+    "id": "i-2026-09-30-91a8bcc5bb",
+    "slug": "lt-91a8bcc5bb",
+    "titulek": "Litva předala Rusku dvě protestní nóty — kvůli žhářské sabotáži v Estonsku a kvůli útokům na Ukrajinu, včetně zásahu budovy Akademie věd v Kyjevě",
+    "kratkyTitulek": "Litva předala Rusku dvě protestní nóty — kvůli žhářské sabotáži v Estonsku a kvůli útokům na Ukrajinu, včetně zásahu budovy Akademie věd v Kyjevě",
+    "zeme": "Litva",
+    "kodZeme": "LT",
     "kategorie": [
-      "drony",
-      "nato"
+      "diplomacie",
+      "rusko"
     ],
-    "datumUdalosti": "2026-09-28T00:00:00Z",
-    "datumZjisteni": "2026-09-29T00:00:00Z",
-    "aktualizovano": "2026-09-30T05:48:48.528Z",
+    "datumUdalosti": "2026-09-30T00:00:00Z",
+    "datumZjisteni": "2026-09-30T00:00:00Z",
+    "aktualizovano": "2026-09-30T12:58:05.494Z",
     "zavaznost": "Y1",
     "jistota": "vysoka",
     "stav": "bez-vysetrovani",
     "atribuce": "neznama",
     "puvodce": null,
-    "druh": "opatreni",
+    "druh": "reakce",
     "fakta": [
-      "Náměstek ministra obrany Cezary Tomczyk 28. 9. 2026 oznámil změnu postupu pro použití zbraní letectvem proti cizím vzdušným prostředkům.",
-      "Dosavadní podmínka vizuálního ověření cíle (VID) se nahrazuje takzvanou pozitivní identifikací (PID) — kombinací radarových dat, chybějící odpovědi IFF, směru přeletu hranice, rychlosti, výšky a trajektorie letu.",
-      "Rozhodnutí zahájit palbu bude moci učinit pilot nebo velitel operace bez čekání na vizuální kontakt.",
-      "Ministerstvo změnu zdůvodňuje každodenním rizikem narušení polského vzdušného prostoru drony a zkušenostmi z války na Ukrajině; doporučení vzešlo od náčelníka operačního velení generála Ireneusze Nowaka.",
-      "Podle ministerstva nejde o nižší úroveň identifikace, ale o jiný způsob, jak k ní dojít; zavádí se postupně."
+      "Litevské ministerstvo zahraničí si 30. 9. 2026 předvolalo zástupce ruského velvyslanectví a předalo mu dvě protestní nóty.",
+      "V první nótě Litva ze solidarity s Estonskem důrazně odsoudila žhářskou sabotáž v Tallinnu z 15. 8., při níž byla zapálena budova estonské obranné firmy Milrem Robotics; estonské úřady za útokem oficiálně označily ruské tajné služby.",
+      "Ve druhé nótě Litva protestovala proti pokračujícím ruským útokům na Ukrajinu, konkrétně proti úderu na Kyjev a další města 28. 9., při kterém byla zasažena budova Národní akademie věd Ukrajiny.",
+      "Ministerstvo uvedlo, že Litva bude se spojenci spolupracovat na rozhodné reakci na ruské útoky a další kroky porušující mezinárodní právo, včetně hybridních útoků."
     ],
     "neznameho": [
-      "Přesné datum, od kterého nová pravidla reálně platí v praxi (ministerstvo mluví o postupném zavádění).",
-      "Podrobnosti o vymezení zóny, ve které se nová pravidla použijí, ministerstvo veřejně nespecifikovalo."
+      "Žádná bezprostřední ruská reakce na protestní nóty ve zdrojích uvedena není."
     ],
     "vyznam": "",
     "eskalacniSpousteče": [],
     "deeskalacniSignaly": [],
     "zdroje": [
       {
-        "nazev": "CZ DEFENCE — Polsko umožní rychlejší rozhodování o sestřelení podezřelých vzdušných cílů",
-        "url": "https://www.czdefence.cz/clanek/polsko-umozni-rychlejsi-rozhodovani-o-sestreleni-podezrelych-vzdusnych-cilu",
+        "nazev": "Ukrainska Pravda (English) — Lithuania lodges protest with Russia over sabotage in Estonia and attacks on Ukraine",
+        "url": "https://www.pravda.com.ua/eng/news/2026/09/30/8055750/",
         "typ": "media",
+        "publikovano": "2026-09-30T00:00:00Z",
         "primarni": false,
-        "jazyk": "cs"
+        "jazyk": "en"
       },
       {
-        "nazev": "TVN24 — Cezary Tomczyk: Wojsko Polskie zmieni procedury, zestrzelenie nie będzie wymagało identyfikacji wizualnej",
-        "url": "https://tvn24.pl/polska/cezary-tomczyk-wojsko-polskie-zmieni-procedury-zestrzelenie-nie-bedzie-wymagalo-identyfikacji-wizualnej-st9251973",
+        "nazev": "Yahoo News (European Pravda) — Lithuania lodges protest with Russia over sabotage in Estonia and attacks on Ukraine",
+        "url": "https://www.yahoo.com/news/world/articles/lithuania-lodges-protest-russia-over-090400422.html",
         "typ": "media",
-        "publikovano": "2026-09-28T00:00:00Z",
+        "publikovano": "2026-09-30T00:00:00Z",
         "primarni": false,
-        "jazyk": "pl"
+        "jazyk": "en"
       },
       {
-        "nazev": "Notes from Poland — Poland changes rules of engagement for firing on foreign aircraft amid growing Russia threat",
-        "url": "https://notesfrompoland.com/2026/09/29/poland-changes-rules-of-engagement-for-firing-on-foreign-aircraft-amid-growing-russia-threat/",
+        "nazev": "Eurointegration — Lithuania lodges protest with Russia over sabotage in Estonia and attacks on Ukraine",
+        "url": "https://www.eurointegration.com.ua/eng/news/2026/09/30/7246607/",
         "typ": "media",
-        "publikovano": "2026-09-29T00:00:00Z",
+        "publikovano": "2026-09-30T00:00:00Z",
+        "primarni": false,
+        "jazyk": "en"
+      },
+      {
+        "nazev": "Ministerstvo zahraničních věcí Litvy (urm.lt) — Lithuania issued a note of protest to Russia",
+        "url": "https://www.urm.lt/en/news/928/lithuania-issued-a-note-of-protest-to-russia-over-the-attacks-on-ukraine-and-the-violation-of-polish-airspace:46359",
+        "typ": "media",
         "primarni": false,
         "jazyk": "en"
       }
@@ -567,23 +651,184 @@
     "souvisejici": [],
     "historie": [
       {
-        "kdy": "2026-09-28T00:00:00Z",
+        "kdy": "2026-09-30T00:00:00Z",
         "text": "Zachyceno automatickým sběrem, druhý zdroj doložen před zařazením do fronty.",
         "novySignal": true
       }
     ],
     "novy": true,
-    "zapocitanoTyden": "2026-09-28",
+    "zapocitanoTyden": "2026-09-30",
     "aiZpracovano": true,
     "lidskyOvereno": false,
     "archivniZaznam": false,
-    "vykonal": "Ministerstvo národní obrany Polska",
     "dopadNaCr": {
       "stav": "zadny",
-      "procRelevantni": "Polsko jako sousední členský stát NATO mění pravidla nasazení letectva proti dronům a raketám kvůli rostoucímu ruskému ohrožení.",
-      "dopad": "Pro lidi v Česku ze zprávy dnes neplyne žádné omezení; jde o vnitřní postup polského letectva.",
-      "sledujeme": "Zda podobný krok zváží i další státy NATO včetně Česka a jak se nová pravidla v praxi osvědčí.",
+      "procRelevantni": "Další diplomatická reakce spojeneckého státu NATO na ruskou sabotáž v Pobaltí a útoky na Ukrajinu.",
+      "dopad": "Pro lidi v Česku ze zprávy dnes neplyne žádné omezení.",
+      "sledujeme": "Zda se k protestu připojí i další státy NATO/EU včetně Česka.",
       "overeno": "2026-09-30"
     }
+  },
+  {
+    "kam": "zaznam",
+    "pripravil": "patrol",
+    "pripraveno": "2026-09-30T12:58:05.494Z",
+    "id": "i-2026-09-30-57a5e5c278",
+    "slug": "md-57a5e5c278",
+    "titulek": "Moldavsko: dron zasáhl telekomunikační stožár a explodoval u vesnice Hîrbovăț v okrese Anenii Noi, bez obětí a bez výpadku spojení",
+    "kratkyTitulek": "Moldavsko: dron zasáhl telekomunikační stožár a explodoval u vesnice Hîrbovăț v okrese Anenii Noi, bez obětí a bez výpadku spojení",
+    "zeme": "Moldavsko",
+    "kodZeme": "MD",
+    "kategorie": [
+      "drony",
+      "hranice"
+    ],
+    "datumUdalosti": "2026-09-30T00:00:00Z",
+    "datumZjisteni": "2026-09-30T00:00:00Z",
+    "aktualizovano": "2026-09-30T12:58:05.494Z",
+    "zavaznost": "Y2",
+    "jistota": "vysoka",
+    "stav": "bez-vysetrovani",
+    "atribuce": "neznama",
+    "puvodce": "neznamy",
+    "druh": "pripad",
+    "fakta": [
+      "Moldavská policie hlásila 30. 9. 2026 v 5:40 dron letící v malé výšce nad městem Bender; dron následně dopadl na okraji vesnice Hîrbovăț v okrese Anenii Noi a explodoval.",
+      "Dron explodoval ve výšce asi 40 m po nárazu do telekomunikačního stožáru; dvanáctimetrový úsek antény nese stopy výbuchu (deformace kovu, tepelné poškození).",
+      "V okruhu asi 265 m od místa se našly úlomky dronu — konstrukční prvky, řídicí systém, zdroj napájení a pohonná jednotka.",
+      "Anténa patří civilnímu operátorovi; komunikační služby výbuch nepřerušil, zranění nikdo neutrpěl.",
+      "Podle moldavského ministra obrany Anatolie Nosatii šlo o proudový dron s rychlostí kolem 400 km/h."
+    ],
+    "neznameho": [
+      "Typ dronu a jeho původ (výrobce, země vypuštění) uveden nebyl.",
+      "Oficiální atribuce (Rusko) v otevřených zdrojích chybí; incident se odehrál v souvislosti s ruským masivním útokem na Ukrajinu téže noci."
+    ],
+    "vyznam": "",
+    "eskalacniSpousteče": [],
+    "deeskalacniSignaly": [],
+    "zdroje": [
+      {
+        "nazev": "Ukrainska Pravda — Moldova reveals new details on drone explosion near power line",
+        "url": "https://www.pravda.com.ua/eng/news/2026/09/30/8055736/",
+        "typ": "media",
+        "publikovano": "2026-09-30T00:00:00Z",
+        "primarni": false,
+        "jazyk": "en"
+      },
+      {
+        "nazev": "Eurointegration — Moldova reveals new details regarding drone explosion incident",
+        "url": "https://www.eurointegration.com.ua/eng/news/2026/09/30/7246604/",
+        "typ": "media",
+        "publikovano": "2026-09-30T00:00:00Z",
+        "primarni": false,
+        "jazyk": "en"
+      },
+      {
+        "nazev": "Kyiv Independent — Drone crashes in Moldova amid Russian mass attack on Ukraine",
+        "url": "https://kyivindependent.com/drone-crashes-in-moldova-amid-russian-mass-attack-on-ukraine/",
+        "typ": "media",
+        "publikovano": "2026-09-30T00:00:00Z",
+        "primarni": false,
+        "jazyk": "en"
+      }
+    ],
+    "souvisejici": [],
+    "historie": [
+      {
+        "kdy": "2026-09-30T00:00:00Z",
+        "text": "Zachyceno automatickým sběrem, druhý zdroj doložen před zařazením do fronty.",
+        "novySignal": true
+      }
+    ],
+    "novy": true,
+    "zapocitanoTyden": "2026-09-30",
+    "aiZpracovano": true,
+    "lidskyOvereno": false,
+    "archivniZaznam": false,
+    "dopadNaCr": {
+      "stav": "zadny",
+      "procRelevantni": "Další nález a exploze dronu na území sledované země sousedící s Ukrajinou, bez obětí, v souvislosti s ruským masivním útokem téže noci.",
+      "dopad": "Pro lidi v Česku ze zprávy dnes neplyne žádné omezení.",
+      "sledujeme": "Zda moldavské úřady dron oficiálně připíší Rusku.",
+      "overeno": "2026-09-30"
+    }
+  },
+  {
+    "kam": "zaznam",
+    "pripravil": "patrol",
+    "pripraveno": "2026-09-30T12:58:57.651Z",
+    "id": "i-2026-09-27-4f8f67e983",
+    "slug": "gb-4f8f67e983",
+    "titulek": "RAF Fairford: jeden z podezřelých zavolal policii sám na sebe skoro hodinu před tím, než na místo přijela další hlídka po ohlášení místní farmářky; v dodávkách se našel benzín, ne výbušniny",
+    "kratkyTitulek": "RAF Fairford: jeden z podezřelých zavolal policii sám na sebe skoro hodinu před tím, než na místo přijela další hlídka po ohlášení místní farmářky; v dodávkách se našel benzín, ne výbušniny",
+    "zeme": "Spojené království",
+    "kodZeme": "GB",
+    "kategorie": [
+      "vysetrovani",
+      "pravo"
+    ],
+    "datumUdalosti": "2026-09-27T00:00:00Z",
+    "datumZjisteni": "2026-09-30T00:00:00Z",
+    "aktualizovano": "2026-09-30T12:58:57.651Z",
+    "zavaznost": "Y2",
+    "jistota": "vysoka",
+    "stav": "bez-vysetrovani",
+    "atribuce": "neznama",
+    "puvodce": null,
+    "druh": "aktualizace",
+    "fakta": [
+      "Podle vyšetřování zavolal jeden z pěti zadržených mužů na tísňovou linku 999 sám na sebe téměř hodinu předtím, než přijela další hlídka poté, co místní farmářka nahlásila skupinu mužů v maskách a tři bílé dodávky poblíž letecké základny RAF Fairford.",
+      "Policie na místě byla ještě před tím, než dorazilo druhé hlášení od farmářky.",
+      "Vyšetřovatelé neuvedli, zda muž dostal studenou nohu, nebo zda šlo o součást plánu.",
+      "V dodávkách použitých muži se nenašly žádné improvizované výbušné zařízení, ale bylo tam nalezeno určité množství benzínu.",
+      "Podezřelí, identifikovaní jen jako britští státní příslušníci ve věku 23 až 25 let z Londýna, byli v pondělí propuštěni na kauci."
+    ],
+    "neznameho": [
+      "Motiv volajícího podezřelého (lítost, součást plánu, nebo něco jiného) není objasněn.",
+      "Zda a jak volání souvisí s dřívějším neoficiálním tvrzením ministra zahraničí Rubia o zahraničním aktérovi za útokem."
+    ],
+    "vyznam": "",
+    "eskalacniSpousteče": [],
+    "deeskalacniSignaly": [],
+    "zdroje": [
+      {
+        "nazev": "Digi24 — Atacul asupra bazei militare americane din Anglia, dejucat după ce unul dintre suspecți a sunat chiar el la poliție",
+        "url": "https://www.digi24.ro/stiri/externe/atacul-asupra-bazei-militare-americane-din-anglia-dejucat-dupa-ce-unul-dintre-suspecti-a-sunat-chiar-el-la-politie-3970563",
+        "typ": "media",
+        "publikovano": "2026-09-30T00:00:00Z",
+        "primarni": false,
+        "jazyk": "ro"
+      },
+      {
+        "nazev": "CNN — RAF Fairford: Suspect in alleged plot against British base called police on himself",
+        "url": "https://edition.cnn.com/2026/09/30/uk/suspect-police-terrorism-uk-base-fairford-intl-hnk",
+        "typ": "media",
+        "publikovano": "2026-09-30T00:00:00Z",
+        "primarni": false,
+        "jazyk": "en"
+      },
+      {
+        "nazev": "LBC — RAF Fairford suspect foiled 'bomb plot' by ringing police on himself",
+        "url": "https://www.lbc.co.uk/article/raf-fairford-suspect-foiled-plot-5HjdjDR_2/",
+        "typ": "media",
+        "publikovano": "2026-09-30T00:00:00Z",
+        "primarni": false,
+        "jazyk": "en"
+      }
+    ],
+    "souvisejici": [],
+    "historie": [
+      {
+        "kdy": "2026-09-27T00:00:00Z",
+        "text": "Zachyceno automatickým sběrem, druhý zdroj doložen před zařazením do fronty.",
+        "novySignal": true
+      }
+    ],
+    "novy": true,
+    "zapocitanoTyden": "2026-09-27",
+    "aiZpracovano": true,
+    "lidskyOvereno": false,
+    "archivniZaznam": false,
+    "navazujeNa": "gb-e480488876"
   }
 ]
