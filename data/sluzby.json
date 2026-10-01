@@ -1,5 +1,5 @@
 {
-  "aktualizovano": "2026-10-01T12:03:08.106Z",
+  "aktualizovano": "2026-10-01T18:03:17.078Z",
   "stavy": [
     {
       "klic": "cloudflare",
@@ -26,44 +26,28 @@
         "Cloudflare Sites and Services",
         "Africa",
         "Arica, Chile - (ARI)",
-        "Algiers, Algeria - (ALG)"
+        "Baghdad, Iraq - (BGW)"
       ],
-      "zkontrolovano": "2026-10-01T12:03:08.106Z",
+      "zkontrolovano": "2026-10-01T18:03:17.078Z",
       "chyba": null
     },
     {
       "klic": "zoom",
-      "stav": "omezeni",
-      "popis": "Partially Degraded Service",
-      "incidenty": [
-        {
-          "nazev": "Service Degradation Affecting user’s integration of Zoom app in 3P Calendar Services",
-          "odkaz": "https://stspg.io/sn8rq0f3vgdq",
-          "aktualizovano": "2026-10-01T04:52:48.814-07:00"
-        },
-        {
-          "nazev": "Service Degradation Affecting Customer Using Polycom Devices Going Offline",
-          "odkaz": "https://stspg.io/4cpggx38p4g2",
-          "aktualizovano": "2026-09-30T18:33:05.667-07:00"
-        }
-      ],
-      "postizene": [
-        "Integrations/Calendar/Plug-In/Add-In",
-        "Devices (Softphones/Deskphones)",
-        "Zoom Phone - Global",
-        "Zoom Website"
-      ],
-      "zkontrolovano": "2026-10-01T12:03:08.106Z",
-      "chyba": null
+      "stav": "nezjisteno",
+      "popis": null,
+      "incidenty": [],
+      "postizene": [],
+      "zkontrolovano": "2026-10-01T18:03:17.078Z",
+      "chyba": "The operation was aborted due to timeout"
     },
     {
       "klic": "discord",
-      "stav": "provoz",
-      "popis": "All Systems Operational",
+      "stav": "nezjisteno",
+      "popis": null,
       "incidenty": [],
       "postizene": [],
-      "zkontrolovano": "2026-10-01T12:03:08.106Z",
-      "chyba": null
+      "zkontrolovano": "2026-10-01T18:03:17.078Z",
+      "chyba": "The operation was aborted due to timeout"
     }
   ]
 }

@@ -130,8 +130,8 @@ describe("rozhlas", () => {
     const { kusy, razene } = sestavSouhrn(polozky, { ted: new Date("2026-09-06T17:00:00Z").getTime() });
     expect(razene.map((x: { i: { id: string } }) => x.i.id)).toEqual(["b", "c", "a"]);
     expect(kusy).toHaveLength(1);
-    expect(kusy[0].startsWith("<b>CzechPatrol · denní přehled 6. 9. 2026</b>\n\n📋 <a")).toBe(true);
-    expect(kusy[0]).toContain('📋 <a href="https://czechpatrol.cz/incident/b/">ČR: opatření</a>');
+    expect(kusy[0].startsWith("<b>CzechPatrol · denní přehled 6. 9. 2026</b>\n\n📋 7/10 · <a")).toBe(true);
+    expect(kusy[0]).toContain('📋 7/10 · <a href="https://czechpatrol.cz/incident/b/">ČR: opatření</a>');
     expect(kusy[0]).toContain('🔴 9/10 · Aktualizace: <a href="https://czechpatrol.cz/incident/c/">Vážné</a>');
     expect(kusy[0]).toContain('🟡 5/10 · <a href="https://czechpatrol.cz/incident/a/">Mírné</a>');
     // Žádné rozepsané položky, fakta ani legenda.
@@ -159,8 +159,9 @@ describe("rozhlas", () => {
   it("zpráva začíná puntíkem a závažností číslem; číslo je totéž co na webu", () => {
     expect(zahlavi(zaznam({ zavaznost: "R3" }))).toBe("🔴 Závažnost: 10 z 10 · vážná");
     expect(zahlavi(zaznam({ zavaznost: "G1" }))).toBe("🟢 Závažnost: 1 z 10 · nízká");
-    expect(zahlavi(zaznam({ druh: "opatreni", puvodce: undefined }))).toBe("📋 Oficiální opatření");
-    expect(zahlavi(zaznam({ druh: "reakce", puvodce: undefined }))).toBe("💬 Prohlášení nebo reakce");
+    // Závažnost je na začátku i u opatření a prohlášení (1. 10. 2026).
+    expect(zahlavi(zaznam({ druh: "opatreni", puvodce: undefined }))).toBe("🟠 Závažnost: 7 z 10 · vysoká\n📋 Oficiální opatření");
+    expect(zahlavi(zaznam({ druh: "reakce", puvodce: undefined }))).toBe("🟠 Závažnost: 7 z 10 · vysoká\n💬 Prohlášení nebo reakce");
     // Tabulka v rozhlas.mjs se nesmí rozejít se stupnicí webu.
     const kody = Object.keys(UROVNE) as Uroven[];
     for (const kod of kody) {
@@ -172,14 +173,14 @@ describe("rozhlas", () => {
     expect(Math.min(...cisla)).toBe(1);
     expect(Math.max(...cisla)).toBe(10);
   });
-  it("číslo závažnosti má v přehledu jen případ", () => {
+  it("číslo závažnosti má v přehledu každý záznam", () => {
     const ted = new Date("2026-09-06T17:00:00Z").getTime();
     const { kusy } = sestavSouhrn([
       { i: zaznam({ id: "a", slug: "a", zavaznost: "R1" }), aktualizace: false },
       { i: zaznam({ id: "c", slug: "c", druh: "opatreni", puvodce: undefined }), aktualizace: false },
     ], { ted });
     expect(kusy[0]).toContain("🔴 9/10 ·");
-    expect(kusy[0]).toMatch(/📋 <a /);
+    expect(kusy[0]).toMatch(/📋 7\/10 · <a /);
   });
 
   const zdroj = (n: Record<string, unknown>) => ({
@@ -849,7 +850,8 @@ describe("mimořádná zpráva", () => {
   const i = zaznam({ druh: "reakce", puvodce: undefined, kodZeme: "RU", zeme: "Rusko", lidskyOvereno: false, overeni: "neovereno", fakta: ["První fakt.", "Druhý fakt."] });
   it("nese označení, upozornění na neověřenost a obě fakta", () => {
     const t = sestavMimoradnou(i);
-    expect(t.split("\n")[0]).toContain("MIMOŘÁDNÁ ZPRÁVA");
+    expect(t.split("\n")[0]).toMatch(/^🟠 Závažnost: 7 z 10/);
+    expect(t.split("\n")[1]).toContain("MIMOŘÁDNÁ ZPRÁVA");
     expect(t).toContain("Úředně neověřeno");
     expect(t).toContain("První fakt.");
     expect(t).toContain("Druhý fakt.");
@@ -985,6 +987,6 @@ describe("krátká mimořádná zpráva", () => {
     const { sestavKratkouMimoradnou } = await import("../nastroje/rozhlas.mjs");
     const i = zaznam({ druh: "reakce", puvodce: undefined, kodZeme: "RU", zeme: "Rusko", fakta: ["A.", "B.", "C."], neznameho: ["X.", "Y."] });
     const t = sestavKratkouMimoradnou(i, "Nadpis");
-    expect(t.split("\n")).toEqual(["❗ <b>Nadpis</b>", "• A.", "• B.", "<i>Y.</i>", "Pro Česko z toho neplyne žádné nové úřední opatření.", "Podrobnosti a zdroje: https://czechpatrol.cz/incident/x/"]);
+    expect(t.split("\n")).toEqual(["🟠 Závažnost: 7 z 10 · vysoká", "❗ <b>Nadpis</b>", "• A.", "• B.", "<i>Y.</i>", "Pro Česko z toho neplyne žádné nové úřední opatření.", "Podrobnosti a zdroje: https://czechpatrol.cz/incident/x/"]);
   });
 });
