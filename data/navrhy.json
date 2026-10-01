@@ -736,5 +736,73 @@
     "lidskyOvereno": false,
     "archivniZaznam": false,
     "navazujeNa": "gb-e480488876"
+  },
+  {
+    "kam": "zaznam",
+    "pripravil": "patrol",
+    "pripraveno": "2026-10-01T06:17:15.517Z",
+    "id": "i-2026-10-01-2bb72a488e",
+    "slug": "dk-2bb72a488e",
+    "titulek": "Dánsko–Rusko: Moskva si předvolala dánského velvyslance s obviněním, že dánský vrtulník u ruské korvety sám provokoval; velitel korvety mezitím dostal za vypálení světlic ruské vyznamenání",
+    "kratkyTitulek": "Dánsko–Rusko: Moskva si předvolala dánského velvyslance s obviněním, že dánský vrtulník u ruské korvety sám provokoval; velitel korvety mezitím dostal za vypálení světlic ruské vyznamenání",
+    "zeme": "Dánsko",
+    "kodZeme": "DK",
+    "kategorie": [
+      "diplomacie",
+      "rusko"
+    ],
+    "datumUdalosti": "2026-10-01T00:00:00Z",
+    "datumZjisteni": "2026-10-01T00:00:00Z",
+    "aktualizovano": "2026-10-01T06:17:15.517Z",
+    "zavaznost": "Y1",
+    "jistota": "stredni",
+    "stav": "bez-vysetrovani",
+    "atribuce": "neznama",
+    "puvodce": null,
+    "druh": "aktualizace",
+    "fakta": [
+      "Ruské ministerstvo zahraničí si 1. 10. 2026 předvolalo dánského velvyslance-designovaného Rolfa Holmboeho a předalo mu protest kvůli chování dánského vojenského vrtulníku Fennec u ruské korvety Sobrazitělnyj 14. 9. 2026 u Gedseru v Baltském moři.",
+      "Podle ruského ministerstva se vrtulník k lodi nebezpečně přiblížil a vznášel se ve výšce pod 50 m, což podle Ruska ohrožovalo bezpečnost plavby a nereagoval na výzvy na mezinárodním komunikačním kanálu.",
+      "Ruský ministr obrany Andrej Belousov mezitím veliteli korvety udělil medaili \"Za bojové zásluhy\" za vypálení dvou signálních světlic směrem k vrtulníku.",
+      "Dánsko už 14. 9. 2026 popsalo událost opačně — vrtulník prováděl rutinní fotografování ruské lodi v mezinárodních vodách — a tehdy si kvůli incidentu předvolalo ruského velvyslance Vladimira Barbina; dánský ministr zahraničí Lars Løkke Rasmussen incident označil za \"nepřijatelný\" a premiérka Mette Frederiksenová ho zařadila do \"sílící hybridní kampaně proti Evropě\"."
+    ],
+    "neznameho": [
+      "Nezávislé potvrzení, zda vrtulník skutečně nereagoval na výzvy, jak tvrdí Rusko — Dánsko toto tvrzení nepotvrdilo."
+    ],
+    "vyznam": "",
+    "eskalacniSpousteče": [],
+    "deeskalacniSignaly": [],
+    "zdroje": [
+      {
+        "nazev": "Ukrainska Pravda (European Pravda) — Russia summons Denmark's ambassador after Russian corvette fires flares at Danish helicopter",
+        "url": "https://www.pravda.com.ua/eng/news/2026/10/01/8055905/",
+        "typ": "media",
+        "publikovano": "2026-10-01T00:00:00Z",
+        "primarni": false,
+        "jazyk": "en"
+      },
+      {
+        "nazev": "The Insider — Russian commander awarded medal after firing flares toward Danish military helicopter",
+        "url": "https://theins.press/en/news/297223",
+        "typ": "media",
+        "publikovano": "2026-10-01T00:00:00Z",
+        "primarni": false,
+        "jazyk": "en"
+      }
+    ],
+    "souvisejici": [],
+    "historie": [
+      {
+        "kdy": "2026-10-01T00:00:00Z",
+        "text": "Zachyceno automatickým sběrem, druhý zdroj doložen před zařazením do fronty.",
+        "novySignal": true
+      }
+    ],
+    "novy": true,
+    "zapocitanoTyden": "2026-10-01",
+    "aiZpracovano": true,
+    "lidskyOvereno": false,
+    "archivniZaznam": false,
+    "navazujeNa": "dk-540223fa5a"
   }
 ]
