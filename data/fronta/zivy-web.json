@@ -1,15 +1,15 @@
 {
-  "kontrolovano": "2026-09-30T21:31:58Z",
+  "kontrolovano": "2026-10-01T11:47:19Z",
   "adresa": "https://czechpatrol.cz",
   "dostupny": true,
   "httpUvodni": 200,
   "httpStavJson": 200,
-  "zivyCommit": "1ee5e7d17f12fccc2fe6c00ab40718558fb547cc",
-  "zivyGenerovano": "2026-09-30T21:23:34.450Z",
-  "repoCommit": "94dcf80ba6ff6b4f8fa98079d4ea740a8ddc2e03",
+  "zivyCommit": "cb5d2cedb5b9d93f020ed0d0d57692c235b39119",
+  "zivyGenerovano": "2026-10-01T11:12:47.226Z",
+  "repoCommit": "e1c46b305bd421ebe17a78f9ad93cb6d10421935",
   "shodujeSe": false,
   "commituNavic": 1,
-  "rozdilVObsahu": true,
-  "poznamka": "Repozitář je napřed o obsah, který ještě není nasazený. Nejbližší nasazení to srovná; ručně nenasazovat.",
+  "rozdilVObsahu": false,
+  "poznamka": "Repozitář je napřed jen o zápisy stavu (data/fronta), které se na web nepublikují. Není to rozpor.",
   "vysvetleni": "Zapsáno workflow Stav pro routines. Routine tenhle soubor jen čte; na doménu sama nedosáhne. Za rozpor považuj jen rozdilVObsahu: true, který trvá i v dalším běhu."
 }
