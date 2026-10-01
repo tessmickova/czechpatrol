@@ -47,7 +47,8 @@ const INTERNET = /internet|online|e-?shop|on-line|web|stránk|server|aplikac|e-?
 const PRAVIDLA: [DruhKyber, RegExp, RegExp | null][] = [
   ["ddos", /\bddos|noname0?57|ddosia|(přetěž|přetíž|zahlcen|zahlt)\S*\s+(\S+\s+){0,3}(web|server|stránk|portál|internet)/i, null],
   ["podvod", /phishing|smishing|vishing|spoofing|podvodn[éáýíou]\S*\s+(\S+\s+){0,2}(sms|e-?mail|zpráv|hovor|web|stránk|odkaz|aplikac|reklam|inzer)|falešn\S*\s+(\S+\s+){0,2}(sms|e-?mail|zpráv|web|stránk|bank|e-?shop|profil|účet)|vydáv(á|ají|al|ali) se za/i, INTERNET],
-  ["vypadek", /výpad|nefunguj|nedostupn|downdetector|nejde (se )?přihlásit/i, /internet|web|stránk|server|aplikac|bankovnictv|platb|síť|signál|mobil|e-?mail|datov|portál|systém/i],
+  /* Výpadek jen jako výpadek služby: „výpadek/nefunguje/nedostupné“ těsně u webu, aplikace, bankovnictví, sítě… („systém pokut nefunguje“ neprojde). */
+  ["vypadek", /downdetector|nejde (se )?přihlásit|(výpad\S*|nefunguj\S*|nedostupn\S*)\s+(\S+\s+){0,2}(web|internet|aplikac|bankovnictv|plateb|karet|sít[ěi]|signál|mobiln|e-?mail|datov|portál|server|služb)|(web|internet|aplikac|bankovnictví|síť|signál|portál|server)\S*\s+(\S+\s+){0,2}(nefunguj|nedostupn|má výpadek|vypadl)/i, null],
   ["utok", /kybernetick\S*\s+útok|kyberútok|hacker|ransomware|únik\S*\s+(\S+\s+){0,2}dat/i, null],
 ];
 
@@ -91,10 +92,16 @@ export function vyberZpravy(polozky: PolozkaKyber[], ted: number): ZpravaKyber[]
     if (!(kdy <= ted + 3_600_000 && ted - kdy <= 7 * 86_400_000)) continue;
     const rozdeleny = p.zdroj ? { titulek: p.nadpis.trim(), vydavatel: p.zdroj } : rozdelTitulek(p.nadpis);
     const { titulek, vydavatel } = rozdeleny;
-    const text = `${titulek} ${p.shrnuti ?? ""}`;
+    /*
+      Druh jen podle titulku (1. 10. 2026). Shrnutí v obecných kanálech
+      nese úvod celého článku a slova z něj dělala falešné výpadky
+      („heslo do BIOSu“, „systém pokut nefunguje“). Shrnutí slouží jen
+      k poznání, že jde o Česko.
+    */
+    const text = titulek;
     const druh = druhZpravy(text);
     if (!druh) continue;
-    if (!CESKO.test(`${text} ${vydavatel ?? ""}`)) continue;
+    if (!CESKO.test(`${text} ${p.shrnuti ?? ""} ${vydavatel ?? ""}`)) continue;
     const klic = klicTitulku(titulek);
     if (!klic || videno.has(klic)) continue;
     videno.add(klic);
