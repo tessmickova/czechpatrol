@@ -153,6 +153,18 @@ export function tecka(i) {
  * úroveň z webu, ne pravděpodobnost. Záznamy bez závažnosti (opatření,
  * prohlášení, aktualizace) mají místo čísla slovo, čím jsou.
  */
+/*
+  Závažnost na začátku každé zprávy o záznamu (1. 10. 2026, provozovatelka):
+  i u opatření, prohlášení a krátkých zpráv, ne jen u případů. Barva podle
+  závažnosti, číslo stejné jako na webu.
+*/
+export function radekZavaznosti(i) {
+  const u = String(i.zavaznost ?? "");
+  const barva = u.startsWith("R") ? "🔴" : u.startsWith("O") || u === "YO" ? "🟠" : u.startsWith("Y") ? "🟡" : "🟢";
+  const nazev = (NAZVY_UROVNI[u] ?? u).toLowerCase();
+  return `${barva} Závažnost: ${Z_DESETI[u] ?? "?"} z 10 · ${nazev}`;
+}
+
 export function zahlavi(i, ted = Date.now()) {
   const d = druh(i);
   /*
@@ -161,10 +173,9 @@ export function zahlavi(i, ted = Date.now()) {
     jestli doplňujeme něco z loňska.
   */
   const archiv = jeArchivni(i, ted) ? "🗄 ARCHIV · " : "";
-  if (d !== "pripad") return `${tecka(i)} ${archiv}${DRUH_SLOVA[d]}`;
-  const cislo = Z_DESETI[i.zavaznost];
-  const nazev = NAZVY_UROVNI[i.zavaznost] ?? i.zavaznost;
-  return `${tecka(i)} ${archiv}Závažnost: ${cislo ?? "?"} z 10 · ${nazev.toLowerCase()}`;
+  if (d !== "pripad") return `${radekZavaznosti(i)}\n${tecka(i)} ${archiv}${DRUH_SLOVA[d]}`;
+  const [barva, ...zbytek] = radekZavaznosti(i).split(" ");
+  return `${barva} ${archiv}${zbytek.join(" ")}`;
 }
 
 export function datumCz(iso) {
@@ -484,6 +495,7 @@ export function sestavZpravu(i, { aktualizace = false, souhrn = false, faktu = 1
 export function sestavVyjasneni(i, nadpis) {
   const fakta = (i.fakta ?? []).slice(0, 3).map((f) => `• ${esc(f)}`);
   return [
+    radekZavaznosti(i),
     "ℹ️ <b>Uvedení na pravou míru</b>",
     `<b>${esc(nadpis || i.kratkyTitulek || i.titulek)}</b>`,
     "",
@@ -516,8 +528,11 @@ export function vyberMimoradne(fronta, zaznamy, stav) {
 export function sestavMimoradnou(i) {
   const uredne = i.lidskyOvereno || i.overeni === "automaticke";
   // Mimořádná zpráva nese dvě doložená fakta: u výroku bývá podstata ve dvou větách.
-  const [prvni, ...zbytek] = sestavZpravu(i, { faktu: 2 }).split("\n");
+  const [zavaznost, ...dalsi] = sestavZpravu(i, { faktu: 2 }).split("\n");
+  // U případu je druhý řádek už titulek; u opatření a prohlášení štítek druhu.
+  const [prvni, ...zbytek] = druh(i) === "pripad" ? dalsi : [dalsi[0], ...dalsi.slice(1)];
   return [
+    zavaznost,
     "❗ <b>MIMOŘÁDNÁ ZPRÁVA</b>",
     prvni,
     ...(uredne ? [] : ["<i>Úředně neověřeno — vychází ze shodných zpráv více médií.</i>"]),
@@ -535,6 +550,7 @@ export function sestavKratkouMimoradnou(i, nadpis) {
   const fakta = (i.fakta ?? []).slice(0, 2).map((f) => `• ${esc(zkrat(String(f), 260))}`);
   const nevime = (i.neznameho ?? [])[1] ?? (i.neznameho ?? [])[0];
   return [
+    radekZavaznosti(i),
     `❗ <b>${esc(nadpis || i.kratkyTitulek || i.titulek)}</b>`,
     ...(uredne ? [] : ["<i>Úředně neověřeno — vychází ze shodných zpráv více médií.</i>"]),
     ...fakta,
@@ -585,7 +601,7 @@ export function sestavSouhrn(polozky, { ted = Date.now(), limit = 3500, cast = n
   const zaznamy = razene.map((p) => p.i);
   const hlavicka = [`<b>CzechPatrol · ${cast === "rano" ? "ranní" : cast === "vecer" ? "večerní" : "denní"} přehled ${datumCz(new Date(ted).toISOString())}</b>`];
   const radky = razene.slice(0, MAX_TITULKU_V_PREHLEDU).map(({ i, aktualizace }) => {
-    const cislo = druh(i) === "pripad" && Z_DESETI[i.zavaznost] ? ` ${Z_DESETI[i.zavaznost]}/10 ·` : "";
+    const cislo = Z_DESETI[i.zavaznost] ? ` ${Z_DESETI[i.zavaznost]}/10 ·` : "";
     const titulek = esc(zkrat(String(i.kratkyTitulek || i.titulek), 110));
     return `${tecka(i)}${cislo} ${aktualizace ? "Aktualizace: " : ""}<a href="${WEB}/incident/${i.slug}/">${titulek}</a>`;
   });
@@ -1361,7 +1377,7 @@ export function vyberKratky(zaznamy, stav, { ted = Date.now() } = {}) {
 /** Malý signál na dva řádky: puntík a titulek, pak odkaz na celý záznam se zdroji. */
 export function sestavKratky(i) {
   return [
-    `${tecka(i)} <b>${esc(zkrat(String(i.titulek || i.kratkyTitulek), 200))}</b>`,
+    `${radekZavaznosti(i)} · <b>${esc(zkrat(String(i.titulek || i.kratkyTitulek), 200))}</b>`,
     `Podrobnosti a zdroje: ${WEB}/incident/${i.slug}/`,
   ].join("\n");
 }
