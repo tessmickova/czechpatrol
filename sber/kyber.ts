@@ -22,8 +22,8 @@ import type { VysledekPokusu } from "../src/lib/prehled/typy";
   úspěchem a web ho po dni přestane ukazovat.
 */
 
-/** Klíče z katalogu sběru událostí — tam jsou adresy ověřené během. */
-export const KLICE_KYBER = ["nukib-rss", "policie-rss", "mvcr", "irozhlas", "cro-rss", "ct24", "novinky", "seznam-zpravy", "idnes", "ctk", "aktualne", "denikn"] as const;
+/** Klíče z katalogu sběru událostí — tam jsou adresy ověřené během. Aktuálně.cz ne: jeho robots.txt čtení nedovoluje (1. 10. 2026). */
+export const KLICE_KYBER = ["nukib-rss", "policie-rss", "mvcr", "irozhlas", "cro-rss", "ct24", "novinky", "seznam-zpravy", "idnes", "ctk", "denikn"] as const;
 
 /* Technologická média, kde se o útocích píše nejdřív. Nejsou v katalogu událostí. */
 const DALSI = [

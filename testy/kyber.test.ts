@@ -34,6 +34,11 @@ describe("výběr zpráv o internetu", () => {
     expect(druhZpravy("Hackeři napadli systém nemocnice ransomwarem")).toBe("utok");
     expect(druhZpravy("Útočníci zahltili weby ministerstev")).toBe("ddos");
     expect(druhZpravy("Výpadek bankovnictví ČSOB, klienti se nemohou přihlásit")).toBe("vypadek");
+    // Falešné výpadky z prvního ostrého běhu 1. 10. 2026.
+    expect(druhZpravy("Vymáhání z ciziny příliš nefunguje, řidiče čeká v Česku přísnější systém pokut")).toBeNull();
+    expect(druhZpravy("Heslo do BIOSu už dnes skoro nikdo nenastavuje. Přesto na základní desce najdete piny pro jeho vymazání")).toBeNull();
+    expect(druhZpravy("Internetové bankovnictví Komerční banky nefunguje")).toBe("vypadek");
+    expect(druhZpravy("Výpadek mobilní sítě O2 zasáhl celé Česko")).toBe("vypadek");
   });
   it("jen české, jen čerstvé, bez duplicit; úřad se pozná podle vydavatele", () => {
     const v = vyberZpravy([
@@ -96,6 +101,7 @@ describe("zdroje pro internet", () => {
     const { zdrojeKyber } = await import("../sber/kyber");
     const z = zdrojeKyber();
     expect(z.length).toBeGreaterThanOrEqual(12);
+    expect(z.some((x) => x.klic === "aktualne")).toBe(false);
     expect(z.some((x) => x.klic === "nukib-rss" && x.primarni)).toBe(true);
     expect(z.every((x) => !x.url.includes("news.google.com"))).toBe(true);
   });
