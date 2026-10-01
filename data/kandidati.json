@@ -1,5 +1,252 @@
 [
   {
+    "id": "k-695e36333e8b5eb8",
+    "zachyceno": "2026-10-01T12:02:58.637Z",
+    "publikovano": "2026-10-01T11:48:00.000Z",
+    "zdroj": {
+      "nazev": "ERR News (Estonsko)",
+      "url": "https://news.err.ee/1610153470/russia-detains-cargo-ship-bound-for-estonia-s-sillamae-port",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Russia detains cargo ship bound for Estonia's Sillamäe port",
+    "titulekPuvodni": "Russia detains cargo ship bound for Estonia's Sillamäe port",
+    "shrnuti": "Russia's border guard detained a cargo ship sailing under the Cypriot flag in the Gulf of Finland that was headed for the port of Sillamäe.",
+    "kodZeme": "EE",
+    "zeme": "Estonsko",
+    "kategorie": [
+      "zpravodajske",
+      "hranice",
+      "rusko"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "detained+russia",
+      "border",
+      "russia"
+    ],
+    "naliehave": null,
+    "stav": "ceka",
+    "vyrez": {
+      "text": "Russia detains cargo ship bound for Estonia's Sillamäe port | News | ERR\n{{noticeUi.heading[langCode]}}\n{{infoLink[langCode].label}}\n{{noticeUi.allowAllLabel[langCode]}}\n{{rewokeLabels[langCode]}}\nX !\nNews\nERR\n{{1790855280000 | amCalendar}}\nshare Facebook X (Twitter) e-mail\nDetained cargo ship. Source: Vesselfinder\nNews\nRussia's border guard detained a cargo ship sailing under the Cypriot flag in the Gulf of Finland that was headed for the port of Sillamäe.\nThe Police and Border Guard Board confirmed the detention of the ship.\nAccording to the application Vesselfinder, the ship V&auml;sterbotten is anchored in Russian waters. When looking at the ship's trajectory in the map application, it appears that the ship passed through Russian territorial waters before being detained.\nAt the same time, Russia, Estonia and Finland have an agreement that ships may pass through that location, because that route is safer for large vessels than sailing between the shallows in Estonia's maritime area.\nIn 2025, Russia detained the oil tanker Green Admire, which had departed from the port of Sillam&auml;e. It was the first similar incident.\nTo avoid similar situations, the Estonian Transport…",
+      "stazeno": "2026-10-01T12:03:01.928Z",
+      "stav": 200
+    }
+  },
+  {
+    "id": "k-5cb45d30fa83e304",
+    "zachyceno": "2026-10-01T12:03:01.733Z",
+    "publikovano": "2026-10-01T11:36:00.000Z",
+    "zdroj": {
+      "nazev": "Ukrinform (anglicky)",
+      "url": "https://www.ukrinform.net/rubric-ato/4170002-train-caught-in-blast-wave-kyiv-changes-green-line-metro-service-after-russian-attack-on-south-bridge.html",
+      "typ": "wire",
+      "primarni": false
+    },
+    "titulek": "Train caught in blast wave: Kyiv changes Green Line metro service after Russian attack on South Bridge",
+    "titulekPuvodni": "Train caught in blast wave: Kyiv changes Green Line metro service after Russian attack on South Bridge",
+    "shrnuti": "Following a Russian attack, Kyiv temporarily changed metro and ground public transport services across the South Bridge.",
+    "kodZeme": "UA",
+    "zeme": "Ukrajina",
+    "kategorie": [
+      "hybridni",
+      "rusko"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "attack on",
+      "russia"
+    ],
+    "naliehave": null,
+    "stav": "ceka",
+    "vyrez": {
+      "text": "Train caught in blast wave: Kyiv changes Green Line metro service after Russian attack on South Bridge\n\r\nSubscription\nNewsletters\nPhotobank\nUkrinform - Ukrainian National News Agency\nFounded in 1918\nThursday, 01 October 2026, 15:03\nWar\nEconomy\nSports\nMore ☰\nContacts\nEng\nУкр\nEng\nEsp\nDeu\nعربي\nFra\n日本語\nPol\n&times;\nAll topics\nWar\nRecovery of Ukraine\nPolitics\nEconomy\nFact checks\nDefense\nSociety and Culture\nSports\nCrime\nAccidents and Emergencies\nAgency\nInformation on Agency\nOur Contacts\nSubscribtion Terms\nOur Services\nPrivacy policy and personal data protection\nAdditional\nPublications\nInterviews\nPhoto\nVideo\nLongreads\nReleases\nServices\nSubscription\nNewsletters\nPhotobank\n\r\n\r\n\r\nFollowing a Russian attack, Kyiv temporarily changed metro and ground public transport services across the South Bridge.\nAccording to Ukrinform, the Kyiv City State Administration said this on its website .\n\r\n\r\n\"Currently, trains on the Green Line of the metro are operating only on underground sections: Syrets&ndash;Vydubychi and Osokorky&ndash;Chervonyi Khutir,\" the statement said.\n\r\n\r\nAt approximately 11:30, while a metro train was traveling, a blast wave caused by the attack forced dust into the passenger…",
+      "stazeno": "2026-10-01T12:03:02.417Z",
+      "stav": 200
+    }
+  },
+  {
+    "id": "k-639d336b604c129d",
+    "zachyceno": "2026-10-01T12:02:58.307Z",
+    "publikovano": "2026-10-01T11:23:16.000Z",
+    "zdroj": {
+      "nazev": "Novinky.cz",
+      "url": "https://www.novinky.cz/clanek/zahranicni-evropa-moskva-v-reakci-na-budapest-vyhosti-madarske-diplomaty-40600338",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Moskva v reakci na Budapešť vyhostí maďarské diplomaty",
+    "titulekPuvodni": "Moskva v reakci na Budapešť vyhostí maďarské diplomaty",
+    "shrnuti": "Moskva ve čtvrtek oznámila vyhoštění skupiny pracovníků maďarské diplomatické mise v Rusku. Reaguje tak na dřívější vyhoštění deseti ruských diplomatů z Maďarska.",
+    "kodZeme": "HU",
+    "zeme": "Maďarsko",
+    "kategorie": [
+      "zpravodajske",
+      "rusko"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "vyhost",
+      "rusk"
+    ],
+    "naliehave": null,
+    "stav": "ceka",
+    "vyrez": {
+      "text": "Moskva v reakci na Budapešť vyhostí maďarské diplomaty - Novinky\nZobrazení snímku 1 z 0\nzáhlaví\nHlavní obsah\nMoskva v reakci na Budapešť vyhostí maďarské diplomaty\nIvan Vilček , ČTK\nvybrat autory ke sledování\n2:05\nChcete-li článek poslouchat, přihlaste se\neBook\nSdílet\nDnes 1. 10., 13:23\nMoskva ve čtvrtek oznámila vyhoštění skupiny pracovníků maďarské diplomatické mise v Rusku. Reaguje tak na dřívější vyhoštění deseti ruských diplomatů z Maďarska.\nFoto: Evgenia Novozhenina, Reuters\nMluvčí ruského ministerstva zahraničí Marija Zacharova\nČlánek\nRuské ministerstvo zahraničí v prohlášení přesný počet vyhoštěných neupřesnilo. Do dvou týdnů musí odjet skupina pracovníků maďarského velvyslanectví v Moskvě a generálních konzulátů v Petrohradě a Kazani.\nRuské ministerstvo zahraničí si podle ČTK rovněž předvolalo maďarského chargé d’affaires a předneslo mu důrazný protest proti vyhoštění ruských diplomatů, které označilo za bezdůvodné a nikoliv přátelské.\nMaďarské ministerstvo zahraničí na Facebooku uvedlo, že rozhodnutí Ruska o vyhoštění diplomatů bere na vědomí. „Maďarsko nemá zájem na eskalaci diplomatického napětí, ale zároveň trvá na svém dříve učiněném rozhodnutí vycházejícím z ohledů…",
+      "stazeno": "2026-10-01T12:03:03.161Z",
+      "stav": 200
+    }
+  },
+  {
+    "id": "k-dab5494bd7d9a0a1",
+    "zachyceno": "2026-10-01T12:02:58.349Z",
+    "publikovano": "2026-10-01T11:03:00.000Z",
+    "zdroj": {
+      "nazev": "Seznam Zprávy",
+      "url": "https://www.seznamzpravy.cz/clanek/zahranicni-trikrat-za-jeden-den-drony-narusily-vzdusny-prostor-moldavska-316571",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Třikrát za jeden den. Drony narušily vzdušný prostor Moldavska",
+    "titulekPuvodni": "Třikrát za jeden den. Drony narušily vzdušný prostor Moldavska",
+    "shrnuti": "Od začátku války na Ukrajině dopadlo na území Moldavska 32 dronů a devět raket.",
+    "kodZeme": "MD",
+    "zeme": "Moldavsko",
+    "kategorie": [
+      "drony"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "narusil+vzdusny prostor",
+      "dron+dopadl",
+      "dron",
+      "vzdusny prostor"
+    ],
+    "naliehave": null,
+    "stav": "ceka",
+    "vyrez": {
+      "text": "Třikrát za jeden den. Drony narušily vzdušný prostor Moldavska - Seznam Zprávy\nZobrazení snímku 1 z 0\nHlavní obsah\nTřikrát za jeden den. Drony narušily vzdušný prostor Moldavska\nSeznam Zprávy\n2:07\nChcete-li článek poslouchat, přihlaste se\neBook\nSdílet\nBez komentáře: Ve středu večer explodoval v blízkosti moldavské obce Brănești bezpilotní stroj. Video: facebook/politiarepubliciimoldova\n13:03\nOd začátku války na Ukrajině dopadlo na území Moldavska 32 dronů a devět raket.\nČlánek\nBěhem středy byl třikrát narušen moldavský vzdušný prostor. K prvnímu incidentu došlo ráno kolem 5:43 tamního času. Informovalo o tom tamní ministerstvo obrany.\nBezpilotní stroj se poté zřítil poblíž obce Hîrbovăț a explodoval. Úřady sdělily, že při explozi nikdo nebyl zraněn.\nO několik hodin později byl v 10:26 kvůli přeletu bezpilotního letounu nad územím Moldavska uzavřen vzdušný prostor v severní a centrální části země, shrnul server The Kyiv Independent .\nVe středu večer pak explodoval v blízkosti moldavské obce Brănești další bezpilotní stroj, napsala stanice TV8.md . Stroj dopadl poblíž silnice mezi Ivanceou a Brănești. Provoz na ní byl podle policie z bezpečnostních důvodů dočasně zastaven v obou…",
+      "stazeno": "2026-10-01T12:03:03.725Z",
+      "stav": 200
+    }
+  },
+  {
+    "id": "k-e73a7d72a1a251e1",
+    "zachyceno": "2026-10-01T12:02:58.397Z",
+    "publikovano": "2026-10-01T10:59:00.000Z",
+    "zdroj": {
+      "nazev": "iDNES.cz — zpravodajství",
+      "url": "https://www.idnes.cz/zpravy/zahranicni/rusko-ukrajina-valka-kyjev.A261001_123214_zahranicni_pluh#utm_source=rss&utm_medium=feed&utm_campaign=zpravodaj&utm_content=main",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Ruské drony zasáhly Jižní most v Kyjevě, metro i povrchová doprava přes něj stojí",
+    "titulekPuvodni": "Ruské drony zasáhly Jižní most v Kyjevě, metro i povrchová doprava přes něj stojí",
+    "shrnuti": "V blízkosti opěrné části Jižního mostu v Kyjevě jsou dva zásahy bezpilotními letouny, oznámil ve čtvrtek starosta ukrajinského hlavního města Vitalij Kličko na Telegramu. Provoz metra i povrchové veřejné dopravy přes most je podle něj nyní pozastaven a odborníci kontrolují stav konstrukce. Ukrajinsk",
+    "kodZeme": "UA",
+    "zeme": "Ukrajina",
+    "kategorie": [
+      "drony",
+      "rusko"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "dron+zasahl",
+      "dron",
+      "rusk"
+    ],
+    "naliehave": null,
+    "stav": "ceka",
+    "vyrez": {
+      "text": "Ruské drony zasáhly most v Kyjevě, doprava přes něj stojí - iDNES.cz \r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\niDNES.cz\n\r\n\r\n\r\nP�ihl�sit \r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nAbyste mohli pokra�ovat, pot�ebujeme v�d�t, jakou formou v�m m��eme zobrazovat reklamu \r\n\r\n\r\n\r\n\r\n\r\nV�mi zvolen� nastaven� \r\nneobsahuje souhlas se zobrazov�n�m c�len� reklamy . \r\nVyberte pros�m znovu, \r\njakou formou v�m m�me zobrazovat obsah. \r\n\r\n\r\n\r\n\r\n\r\n\r\niDNES Premium\n\r\nBez reklam\n\r\n\r\n199 K� m�s��n�\n\r\nM��ete neomezen� ��st iDNES.cz, Lidovky.cz, Expres.cz a Antiyoutuber.cz. K tomu dostanete tak� noviny a �asopisy v elektronick� podob�. To v�e bez reklam. 1\n\r\n\r\nP�edplatit\n\r\n\r\nU� m�te ��et? P�ihlaste se\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nS c�lenou reklamou\n\r\n\r\n\r\nZdarma \r\n\r\nZachov�me v�m v�e tak, jak jste zvykl� a reklamu p�izp�sob�me va�im z�jm�m. Bez omezen� si m��ete d�l ��st, p�ehr�vat videa, sout�it �i p�isp�vat do v�ech diskus�. 2\n\r\n\r\nSouhlas�m\n\r\nPodrobn� nastaven�\n\r\n\r\n\r\n\r\n\r\n\r\niDNES a reklama\n\r\nPokud vyu�ijete m�sto platby ud�len� souhlasu s reklamou (tj. souhlas s vyu�it�m cookies a dal��ch s�ov�ch identifik�tor� pro ��ely c�len� reklamy), \r\nbudou V�m zobrazov�ny v r�mci na�ich…",
+      "stazeno": "2026-10-01T12:03:04.289Z",
+      "stav": 200
+    }
+  },
+  {
+    "id": "k-e6b92c9401fd041c",
+    "zachyceno": "2026-10-01T12:02:58.316Z",
+    "publikovano": "2026-10-01T10:55:36.000Z",
+    "zdroj": {
+      "nazev": "Novinky.cz",
+      "url": "https://www.novinky.cz/clanek/valka-na-ukrajine-drony-zautocily-na-opernou-cast-kyjevskeho-mostu-vypukl-pozar-40600325",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Drony zaútočily na opěrnou část kyjevského mostu, vypukl požár",
+    "titulekPuvodni": "Drony zaútočily na opěrnou část kyjevského mostu, vypukl požár",
+    "shrnuti": "Ruské drony při čtvrtečním náletu na Kyjev zasáhly opěrné části Jižního mostu přes řeku Dněpr. Oznámil to kyjevský starosta Vitalij Kličko na Telegramu.",
+    "kodZeme": "UA",
+    "zeme": "Ukrajina",
+    "kategorie": [
+      "drony",
+      "rusko"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "dron+zasahl",
+      "dron",
+      "rusk"
+    ],
+    "naliehave": null,
+    "stav": "ceka",
+    "vyrez": {
+      "text": "Drony zaútočily na opěrnou část kyjevského mostu, vypukl požár - Novinky\nZobrazení snímku 1 z 0\nzáhlaví\nHlavní obsah\nDrony zaútočily na opěrnou část kyjevského mostu, vypukl požár\nJana Kotrášová , ČTK\nvybrat autory ke sledování\n1:06\nChcete-li článek poslouchat, přihlaste se\neBook\nSdílet\nDnes 1. 10., 12:55 Aktualizováno dnes 13:07\nRuské drony při čtvrtečním náletu na Kyjev zasáhly opěrné části Jižního mostu přes řeku Dněpr. Oznámil to kyjevský starosta Vitalij Kličko na Telegramu.\nJižní most přes Dněpr v Kyjevě po zásahu ruskými drony. Video: Kyjevskyj Dvyž, INsiderUA/Telegram\nČlánek\n„Dva bezpilotní letouny zasáhly oblast v blízkosti nosné části mostu Pivděnnyj. V současné době je na mostě zastaven provoz metra i pozemní hromadné dopravy,“ oznámil Kličko na Telegramu s tím, že odborníci nyní prověřují stav konstrukce.\nPodle agentury Unian při úderu nikdo neutrpěl zranění ani nezemřel. Místní média a telegramové kanály informovaly o dvou zásazích do opory mostu a připomněly, že Rusové při útoku využili proudové drony Geraň-5.\nTelegramový kanál Kyjevskij Dviž krátce po útoku zveřejnil video, kde je vidět hořící pylon mostu a na dalším z dálky přímo zásah mostní konstrukce.\nJižní most…",
+      "stazeno": "2026-10-01T12:03:06.765Z",
+      "stav": 200
+    }
+  },
+  {
+    "id": "k-aa9ed718fc8c3907",
+    "zachyceno": "2026-10-01T12:02:59.711Z",
+    "publikovano": "2026-10-01T10:44:59.000Z",
+    "zdroj": {
+      "nazev": "Aktuality.sk",
+      "url": "https://www.aktuality.sk/clanok/MH7Ubm3/ruske-drony-zasiahli-strategicky-pivdennyj-most-ponad-dneper-v-kyjeve/",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Ruské drony zasiahli strategický Pivdennyj most ponad Dneper v Kyjeve",
+    "titulekPuvodni": "Ruské drony zasiahli strategický Pivdennyj most ponad Dneper v Kyjeve",
+    "shrnuti": "Dva ruské drony vo štvrtok zaútočili na strategický Pivdennyj most ponad rieku Dneper v Kyjeve. Útok na cestno-železničné spojenie spájajúce pravý a ľavý breh metropoly si vyžiadal okamžité pozastavenie premávky áut aj vlakov zelenej linky metra.",
+    "kodZeme": "UA",
+    "zeme": "Ukrajina",
+    "kategorie": [
+      "hybridni",
+      "drony",
+      "infrastruktura",
+      "rusko"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "utok na",
+      "dron",
+      "zeleznic",
+      "rusk"
+    ],
+    "naliehave": null,
+    "stav": "ceka",
+    "vyrez": {
+      "text": "Ruské drony zasiahli strategický Pivdennyj most ponad Dneper v Kyjeve | Aktuality.sk\nAktuality\nŠport\nDiva\nNajmama\nŽivé\nRecepty\nDobrú chuť\nSlovník\n22 °C -\nBratislava\nštvrtok 1. 10.\n1. 10.\nArnold\nSprávy dnes 01. okt 2026 o 12:44\n1 min. čítania\nPridať do Google\nRuské drony zasiahli strategický Pivdennyj most ponad Dneper v Kyjeve\n1 fotka v galérii\nVlajky Ruska a Ukrajiny Zdroj: istock\nTASR\nAktuality.sk\nUložiť článok\nDva ruské drony vo štvrtok zaútočili na strategický Pivdennyj most ponad rieku Dneper v Kyjeve. Útok na cestno-železničné spojenie spájajúce pravý a ľavý breh metropoly si vyžiadal okamžité pozastavenie premávky áut aj vlakov zelenej linky metra.\nDva ruské drony vo štvrtok zaútočili na Pivdennyj most ponad Dneper v Kyjeve, oznámil starosta ukrajinskej metropoly Vitalij Kličko. TASR o tom informuje na základe správy agentúry AFP.\nDopravu v metre aj na moste museli pozastaviť\nPivdennyj most je strategické cestno-železničné spojenie v meste, ktoré spája pravobrežný Holosijivský rajón a ľavobrežný Darnyckého rajón. Vedie po ňom aj Sirecko-Pečerska (zelená) linka metra.\nAko Kličko napísal na platforme Telegram, „v tejto chvíli je pozastavená doprava v metre i na moste“.…",
+      "stazeno": "2026-10-01T12:03:06.924Z",
+      "stav": 200
+    }
+  },
+  {
     "id": "k-d1d48a348341f8f7",
     "zachyceno": "2026-10-01T10:32:58.645Z",
     "publikovano": null,
@@ -169,6 +416,44 @@
     "vyrez": {
       "text": "Opilého Rusa po močení z balkonu čeká vyhoštění z Gruzie - iDNES.cz \r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\niDNES.cz\n\r\n\r\n\r\nP�ihl�sit \r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nAbyste mohli pokra�ovat, pot�ebujeme v�d�t, jakou formou v�m m��eme zobrazovat reklamu \r\n\r\n\r\n\r\n\r\n\r\nV�mi zvolen� nastaven� \r\nneobsahuje souhlas se zobrazov�n�m c�len� reklamy . \r\nVyberte pros�m znovu, \r\njakou formou v�m m�me zobrazovat obsah. \r\n\r\n\r\n\r\n\r\n\r\n\r\niDNES Premium\n\r\nBez reklam\n\r\n\r\n199 K� m�s��n�\n\r\nM��ete neomezen� ��st iDNES.cz, Lidovky.cz, Expres.cz a Antiyoutuber.cz. K tomu dostanete tak� noviny a �asopisy v elektronick� podob�. To v�e bez reklam. 1\n\r\n\r\nP�edplatit\n\r\n\r\nU� m�te ��et? P�ihlaste se\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nS c�lenou reklamou\n\r\n\r\n\r\nZdarma \r\n\r\nZachov�me v�m v�e tak, jak jste zvykl� a reklamu p�izp�sob�me va�im z�jm�m. Bez omezen� si m��ete d�l ��st, p�ehr�vat videa, sout�it �i p�isp�vat do v�ech diskus�. 2\n\r\n\r\nSouhlas�m\n\r\nPodrobn� nastaven�\n\r\n\r\n\r\n\r\n\r\n\r\niDNES a reklama\n\r\nPokud vyu�ijete m�sto platby ud�len� souhlasu s reklamou (tj. souhlas s vyu�it�m cookies a dal��ch s�ov�ch identifik�tor� pro ��ely c�len� reklamy), \r\nbudou V�m zobrazov�ny v r�mci na�ich…",
       "stazeno": "2026-10-01T10:33:05.118Z",
+      "stav": 200
+    }
+  },
+  {
+    "id": "k-0cfdbd2a3efc3ce6",
+    "zachyceno": "2026-10-01T12:03:01.781Z",
+    "publikovano": "2026-10-01T09:50:00.000Z",
+    "zdroj": {
+      "nazev": "Ukrainska Pravda (anglicky)",
+      "url": "https://www.pravda.com.ua/eng/news/2026/10/01/8055947/",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Russian jet-powered drone exploded in Moldova",
+    "titulekPuvodni": "Russian jet-powered drone exploded in Moldova",
+    "shrnuti": "A jet-powered Russian drone crashed near a Moldovan highway, leaving thermal damage and fragments across a 120-meter radius in Orhei district.",
+    "kodZeme": "MD",
+    "zeme": "Moldavsko",
+    "kategorie": [
+      "drony",
+      "rusko"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "drone crash",
+      "dron+crashed",
+      "fragment+dron",
+      "dron",
+      "drone",
+      "russia"
+    ],
+    "naliehave": null,
+    "stav": "ceka",
+    "vyrez": {
+      "text": "Moldova confirms jet-powered Russian drone blast in Orhei | Ukrainska Pravda\nDrone debris. Photo: Moldovan authorities' Facebook\nA drone, believed to be a jet-powered Geran model, exploded in the Orhei district in Moldova on the evening of 30 September.\nSource: European Pravda , citing the Moldovan Ministry of Defence and the General Police Inspectorate, quoted by Moldovan media outlet Newsmaker\nDetails: According to Moldovan authorities, the drone entered the country's airspace at around 20:45. It then crashed after colliding with trees near the village of Branesti in the Orhei district.\nAdvertisement:\n\r\n\r\n\r\n\r\n\r\nPolice received a report of a loud sound resembling an explosion.\nShortly before midnight, police, based on early reports, stated that the discovered drone had characteristics typical of a jet-powered Geran.\nOn 1 October, law enforcement officers clarified the circumstances of the crash: according to their data, the explosion occurred after the drone collided with trees in a tree line right next to a highway.\n\r\n\r\n\r\n\r\n\r\n\r\nA crater approximately 50 cm in diameter and about 30 cm deep formed at the site. Damaged trees, traces of a shockwave and thermal impact were discovered…",
+      "stazeno": "2026-10-01T12:03:08.044Z",
       "stav": 200
     }
   },
@@ -11787,331 +12072,6 @@
       "duvod": "duplicita",
       "patriK": null,
       "poznamka": "Nález trosek dronu v Moldavsku v sobotu večer; podle Digi24 jde o další případ ve vlně incidentů z konce září, pravděpodobně souvisí s už zveřejněnými záznamy (Cernița, Cotiujeni); konkrétní novou lokalitu odlišnou od nich zdroj neuvádí jasně."
-    }
-  },
-  {
-    "id": "k-4ec8a985736f7f54",
-    "zachyceno": "2026-09-27T06:03:18.520Z",
-    "publikovano": "2026-09-27T01:47:00.000Z",
-    "zdroj": {
-      "nazev": "Ukrainska Pravda (anglicky)",
-      "url": "https://www.pravda.com.ua/eng/news/2026/09/27/8055207/",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Russia completely destroys warehouse of Ukraine's largest ice cream producer",
-    "titulekPuvodni": "Russia completely destroys warehouse of Ukraine's largest ice cream producer",
-    "shrnuti": "A Russian drone attack on Zhytomyr completely destroyed a refrigerated warehouse belonging to Rud, Ukraine's largest ice cream producer. The area destroyed totalled 4,350 sq m.",
-    "kodZeme": "UA",
-    "zeme": "Ukrajina",
-    "kategorie": [
-      "hybridni",
-      "drony",
-      "rusko"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "zeSite": null,
-    "shody": [
-      "attack on",
-      "dron",
-      "drone",
-      "russia"
-    ],
-    "naliehave": null,
-    "stav": "vyrizen",
-    "vyrez": {
-      "text": "Russian drone attack destroys warehouse of Ukraine's largest ice cream producer | Ukrainska Pravda\nPhoto: Rubryka\nA refrigerated warehouse belonging to Rud, Ukraine's largest ice cream producer, was completely destroyed in a Russian drone attack on Zhytomyr on 5 September.\nSource : Olha Blazhkevych, head of Rud's legal department, in a comment to NV Business\nDetails : Blazhkevych said a Russian drone struck the refrigerated warehouse building, which also housed administrative and staff facilities, on the south-eastern outskirts of the city of Zhytomyr at around 16:05 on 5 September.\nAdvertisement:\n\r\n\r\n\r\n\r\n\r\nThe total area destroyed amounts to 4,350 sq m. At the time of the Russian attack, the premises contained finished products, loading equipment and other property.\nFor reference: Rud is Ukraine's largest ice cream producer and a leader in the country's frozen food market, with a market share of around 30%. The company operates its own production facility in Zhytomyr, processing more than 35,000 tonnes of milk annually.\nThe brand's products are sold at 75,000 retail outlets across Ukraine and exported to 36 countries, including through international retail chains Lidl, Kaufland,…",
-      "stazeno": "2026-09-27T06:03:20.487Z",
-      "stav": 200
-    },
-    "vyrizeni": {
-      "kdy": "2026-09-27T10:01:30.437Z",
-      "duvod": "mimo-rozsah",
-      "patriK": null,
-      "poznamka": "Ruský útok zničil sklad největšího ukrajinského výrobce zmrzliny; uvnitř Ukrajiny, bez doloženého následku pro sledované země."
-    }
-  },
-  {
-    "id": "k-e733816a1141f73b",
-    "zachyceno": "2026-09-26T22:33:20.537Z",
-    "publikovano": null,
-    "zdroj": {
-      "nazev": "The Kyiv Independent",
-      "url": "https://kyivindependent.com/russia-launches-third-consecutive-attack-on-kyiv-injuring-1-setting-off-fires/",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Russia launches third consecutive attack on Kyiv, injuring 1, setting off fires.",
-    "titulekPuvodni": "Russia launches third consecutive attack on Kyiv, injuring 1, setting off fires.",
-    "shrnuti": "",
-    "kodZeme": "UA",
-    "zeme": "Ukrajina",
-    "kategorie": [
-      "hybridni",
-      "rusko"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "zeSite": null,
-    "shody": [
-      "attack on",
-      "russia"
-    ],
-    "naliehave": null,
-    "stav": "vyrizen",
-    "vyrez": {
-      "text": "Russia launches third consecutive attack on Kyiv, injuring 1, setting off fires The Kyiv Independent Live in London: October 2\nDays until event:\n05 d days\n18 h hours\n27 m minutes\n12 s seconds\nGet your ticket\nWar Russia launches third consecutive attack on Kyiv, injuring 1, setting off fires\nSeptember 27, 2026 1:29 am • 2 min read\nPrefer on Google\nby Anna Fratsyvir, Volodymyr Ivanyshyn\nA car is damaged in a Russian drone attack against Kyiv late on Sept. 26, 2026. (State Emergency Service / Telegram)\nRussia launched another drone attack on Kyiv on the night of Sept. 26-27, marking the third consecutive day of attacks on the Ukrainian capital, according to Kyiv Mayor Vitali Klitschko and Ukraine's State Emergency Service.\nAir defense units were operating over the city, Klitschko said in an evening update. Kyiv Independent reporters on the ground also heard air defenses operating in the city.\nIn the Shevchenkivskyi district, a Russian drone struck an uninhabited residential building, according to the mayor. A fire at the building was later brought under control, while emergency crews continued working at the site.\nIn the Solomianskyi district, a drone fell in an open area. The…",
-      "stazeno": "2026-09-26T22:33:22.831Z",
-      "stav": 200
-    },
-    "vyrizeni": {
-      "kdy": "2026-09-27T00:48:40.290Z",
-      "duvod": "mimo-rozsah",
-      "patriK": null,
-      "poznamka": "Ruský úder na Kyjev (třetí za sebou, zahynula bývalá zaměstnankyně Centra strategické komunikace); uvnitř Ukrajiny, bez doloženého následku pro sledované země."
-    }
-  },
-  {
-    "id": "k-e585e6e5b0127780",
-    "zachyceno": "2026-09-27T00:03:51.670Z",
-    "publikovano": "2026-09-26T22:26:00.000Z",
-    "zdroj": {
-      "nazev": "Ukrinform (anglicky)",
-      "url": "https://www.ukrinform.net/rubric-society/4168294-former-center-for-strategic-communications-employee-maria-ivzhenko-killed-in-russian-attack-on-kyiv.html",
-      "typ": "wire",
-      "primarni": false
-    },
-    "titulek": "Former Center for Strategic Communications employee Maria Ivzhenko killed in Russian attack on Kyiv",
-    "titulekPuvodni": "Former Center for Strategic Communications employee Maria Ivzhenko killed in Russian attack on Kyiv",
-    "shrnuti": "Maria Ivzhenko, a former employee of the Center for Strategic Communications, was killed in Kyiv as a result of a Russian strike on a business center.",
-    "kodZeme": "UA",
-    "zeme": "Ukrajina",
-    "kategorie": [
-      "hybridni",
-      "rusko"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "zeSite": null,
-    "shody": [
-      "attack on",
-      "russia"
-    ],
-    "naliehave": null,
-    "stav": "vyrizen",
-    "vyrez": {
-      "text": "Former Center for Strategic Communications employee Maria Ivzhenko killed in Russian attack on Kyiv\n\r\nSubscription\nNewsletters\nPhotobank\nUkrinform - Ukrainian National News Agency\nFounded in 1918\nSunday, 27 September 2026, 03:03\nWar\nEconomy\nSports\nMore ☰\nContacts\nEng\nУкр\nEng\nEsp\nDeu\nعربي\nFra\n日本語\nPol\n&times;\nAll topics\nWar\nRecovery of Ukraine\nPolitics\nEconomy\nFact checks\nDefense\nSociety and Culture\nSports\nCrime\nAccidents and Emergencies\nAgency\nInformation on Agency\nOur Contacts\nSubscribtion Terms\nOur Services\nPrivacy policy and personal data protection\nAdditional\nPublications\nInterviews\nPhoto\nVideo\nLongreads\nReleases\nServices\nSubscription\nNewsletters\nPhotobank\n\r\n\r\n\r\nMaria Ivzhenko, a former employee of the Center for Strategic Communications, was killed in Kyiv as a result of a Russian strike on a business center.\nAccording to Ukrinform, the Center for Strategic Communications reported this on Telegram .\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n&ldquo;Russia took the life of our former colleague Maria Ivzhenko. Maria was killed as a result of a Russian terrorist attack on a business center. In the early days of the full-scale invasion, she worked as a volunteer on the SPRAVDI news feed. We remember Maria…",
-      "stazeno": "2026-09-27T00:03:51.849Z",
-      "stav": 200
-    },
-    "vyrizeni": {
-      "kdy": "2026-09-27T00:48:40.290Z",
-      "duvod": "mimo-rozsah",
-      "patriK": null,
-      "poznamka": "Ruský úder na Kyjev (třetí za sebou, zahynula bývalá zaměstnankyně Centra strategické komunikace); uvnitř Ukrajiny, bez doloženého následku pro sledované země."
-    }
-  },
-  {
-    "id": "k-32c154f4aca9f452",
-    "zachyceno": "2026-09-27T08:03:29.826Z",
-    "publikovano": "2026-09-26T21:56:00.000Z",
-    "zdroj": {
-      "nazev": "Ukrainska Pravda (anglicky)",
-      "url": "https://www.pravda.com.ua/eng/news/2026/09/27/8055200/",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "European statements about war with Russia could become a \"self-fulfilling prophecy\" – Russian foreign minister",
-    "titulekPuvodni": "European statements about war with Russia could become a \"self-fulfilling prophecy\" – Russian foreign minister",
-    "shrnuti": "Russian Foreign Minister Sergei Lavrov claims Europe's military build-up could lead to war with Russia and says any conflict resulting from a European attack would be \"short\".",
-    "kodZeme": "RU",
-    "zeme": "Rusko",
-    "kategorie": [
-      "hybridni",
-      "rusko"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "zeSite": null,
-    "shody": [
-      "lavrov+europ+war",
-      "russia"
-    ],
-    "naliehave": null,
-    "stav": "vyrizen",
-    "vyrez": {
-      "text": "Lavrov claims Europe's preparations for war could become \"self-fulfilling prophecy\" | Ukrainska Pravda\nSergei Lavrov. Photo: TASS, a Kremlin-aligned Russian news outlet\nRussian Foreign Minister Sergei Lavrov has claimed that calls by European leaders to prepare for a possible armed confrontation with Russia could provoke a war.\nSource: Lavrov speaking at a final press conference at the UN General Assembly in New York, as quoted by Russian Kremlin-aligned media outlets\nDetails: Lavrov dismissed warnings about a possible Russian attack on Europe as \"nonsense\". Meanwhile, he criticised European countries for investing heavily in arms production and preparing their defences.\nAdvertisement:\n\r\n\r\n\r\n\r\n\r\nLavrov claimed that European investment in weapons could ultimately prompt an attack by Europe on Russia and said that, in such an event, this would provoke a completely different response which would be \"short\".\nLavrov completely ignored the fact that Europe's military build-up and preparations for self-defence are a direct response to the Kremlin's systematic nuclear threats and hybrid aggression in a number of EU countries. In particular, Russian military aircraft have repeatedly…",
-      "stazeno": "2026-09-27T08:03:30.920Z",
-      "stav": 200
-    },
-    "vyrizeni": {
-      "kdy": "2026-09-27T10:01:30.437Z",
-      "duvod": "zdroj-navrhu",
-      "patriK": null,
-      "poznamka": null
-    }
-  },
-  {
-    "id": "k-8c41fc0151064ec0",
-    "zachyceno": "2026-09-26T21:03:17.359Z",
-    "publikovano": null,
-    "zdroj": {
-      "nazev": "DR Nyheder (Dánsko)",
-      "url": "https://www.dr.dk/nyheder/kultur/rusland-har-bombet-over-13-millioner-boeger-til-aske-i-ukraine-paa-blot-maaneder",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Rusland har bombet over 13 millioner bøger til aske i Ukraine på blot to måneder",
-    "titulekPuvodni": "Rusland har bombet over 13 millioner bøger til aske i Ukraine på blot to måneder",
-    "shrnuti": "",
-    "kodZeme": "UA",
-    "zeme": "Ukrajina",
-    "kategorie": [
-      "sabotaz"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "zeSite": null,
-    "shody": [
-      "bomb"
-    ],
-    "naliehave": null,
-    "stav": "vyrizen",
-    "vyrez": {
-      "text": "Rusland har bombet over 13 millioner bøger til aske i Ukraine på blot to måneder | Kultur | DR Gå til indhold\nNavigation\nDR's hovedindgange\nDR.DK DRTV DR LYD\nGå til forsiden\nSektionens indgange\nKultur\nMusik\nFILM & SERIER\nBØGER\nHISTORIE\nLog ind\nSektionens indgange\nKultur\nMusik\nFILM & SERIER\nBØGER\nHISTORIE\nKrigen i Ukraine\nSe tema\nRussiske droner ramte dette boglager i Kharkiv i august.\nLÆS OP\nORDBOG TEKST\nAf\nSilas Bay Nielsen\nI dag kl. 21:36\nUkraines bogbranche står over for et kollaps, efter russiske angreb i sensommeren har ødelagt flere lagre med bøger.\nSådan lyder det i mediet Fortune , der skriver, at over 13 millioner ukrainske bøger er blevet ødelagt på blot to måneder i løbet af sommeren. Det er sket under russiske bombeangreb.\nNew York Times skriver , at tallet ligger på 15 millioner, hvis man tæller de seneste måneder med. Ifølge Artem Bidenko, der er leder den ukrainske brancheforening for forlag, svarer det til halvdelen af den ukrainske bogproduktion på et helt år.\n- Det er en bevidst strategi for Rusland, fordi de ved, at vores kultur er det, der får os til at føle os modstandsdygtige. Det er, hvad der får os til at føle os som ejere af vores land, siger den ukrainske…",
-      "stazeno": "2026-09-26T21:03:19.161Z",
-      "stav": 200
-    },
-    "vyrizeni": {
-      "kdy": "2026-09-26T22:08:42.806Z",
-      "duvod": "mimo-rozsah",
-      "patriK": null,
-      "poznamka": "Zpráva o zničených knihách na Ukrajině za dva měsíce; kulturní/humanitární dopad války uvnitř Ukrajiny, bez doloženého následku pro sledované země."
-    }
-  },
-  {
-    "id": "k-092f3c5ed2339ed7",
-    "zachyceno": "2026-09-26T21:03:19.043Z",
-    "publikovano": "2026-09-26T19:57:00.000Z",
-    "zdroj": {
-      "nazev": "Ukrinform (anglicky)",
-      "url": "https://www.ukrinform.net/rubric-ato/4168409-drone-debris-falls-onto-preschool-grounds-in-kyiv.html",
-      "typ": "wire",
-      "primarni": false
-    },
-    "titulek": "Drone debris falls onto preschool grounds in Kyiv",
-    "titulekPuvodni": "Drone debris falls onto preschool grounds in Kyiv",
-    "shrnuti": "In Kyiv’s Svyatoshynskyi District, drone debris fell onto the grounds of a preschool.",
-    "kodZeme": "UA",
-    "zeme": "Ukrajina",
-    "kategorie": [
-      "drony"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "zeSite": null,
-    "shody": [
-      "dron+fell",
-      "debris+dron",
-      "dron",
-      "drone"
-    ],
-    "naliehave": null,
-    "stav": "vyrizen",
-    "vyrez": {
-      "text": "Drone debris falls onto preschool grounds in Kyiv\n\r\nSubscription\nNewsletters\nPhotobank\nUkrinform - Ukrainian National News Agency\nFounded in 1918\nSunday, 27 September 2026, 00:03\nWar\nEconomy\nSports\nMore ☰\nContacts\nEng\nУкр\nEng\nEsp\nDeu\nعربي\nFra\n日本語\nPol\n&times;\nAll topics\nWar\nRecovery of Ukraine\nPolitics\nEconomy\nFact checks\nDefense\nSociety and Culture\nSports\nCrime\nAccidents and Emergencies\nAgency\nInformation on Agency\nOur Contacts\nSubscribtion Terms\nOur Services\nPrivacy policy and personal data protection\nAdditional\nPublications\nInterviews\nPhoto\nVideo\nLongreads\nReleases\nServices\nSubscription\nNewsletters\nPhotobank\n\r\n\r\n\r\nIn Kyiv&rsquo;s Svyatoshynskyi District, drone debris fell onto the grounds of a preschool.\nAccording to Ukrinform, Kyiv Mayor Vitali Klitschko reported this on Telegram .\n\r\n\r\n\r\n\r\n\r\n\r\n&ldquo;In the Svyatoshynsky District, debris fell onto the grounds of a preschool. No fire,&rdquo; the message reads.\n\r\n\r\n\r\n\r\n\r\n\r\nPreliminary reports indicate no damage.\n\r\n\r\n\r\n\r\n\r\n\r\nA short time later, the mayor added : &ldquo;In the Solomyanskyi district, a non-residential building was reportedly hit. There is smoke.&rdquo;\n\r\n\r\n\r\n\r\n\r\n\r\nRead also: Russian drone strikes office building in…",
-      "stazeno": "2026-09-26T21:03:19.374Z",
-      "stav": 200
-    },
-    "vyrizeni": {
-      "kdy": "2026-09-26T22:08:42.806Z",
-      "duvod": "mimo-rozsah",
-      "patriK": null,
-      "poznamka": "Ruský denní úder na Kyjev/Sumy v posledních 24 hodinách; uvnitř Ukrajiny, bez doloženého následku pro sledované země."
-    }
-  },
-  {
-    "id": "k-f569d7c381cddb54",
-    "zachyceno": "2026-09-26T19:21:20.007Z",
-    "publikovano": "2026-09-26T18:27:00.000Z",
-    "zdroj": {
-      "nazev": "Ukrainska Pravda (anglicky)",
-      "url": "https://www.pravda.com.ua/eng/news/2026/09/26/8055186/",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Drone strikes or falling debris reported in three Kyiv districts",
-    "titulekPuvodni": "Drone strikes or falling debris reported in three Kyiv districts",
-    "shrnuti": "Russian drone strikes or falling debris from intercepted drones were reported in three districts of Kyiv on the evening of 26 September.",
-    "kodZeme": "UA",
-    "zeme": "Ukrajina",
-    "kategorie": [
-      "drony",
-      "rusko"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "zeSite": null,
-    "shody": [
-      "debris+dron",
-      "dron",
-      "drone",
-      "russia"
-    ],
-    "naliehave": null,
-    "stav": "vyrizen",
-    "vyrez": {
-      "text": "Drone strikes or falling debris reported in three Kyiv districts | Ukrainska Pravda\nA drone. Stock photo: Getty Images\nRussian drone strikes or falling debris from intercepted drones were reported in three districts of Kyiv on the evening of 26 September.\nSource: Kyiv Mayor Vitali Klitschko\nQuote: \"A drone has struck an office building in the Shevchenkivskyi district. Early reports indicate there is no fire.\nAdvertisement:\n\r\n\r\n\r\n\r\n\r\nEmergency services are heading to the scene.\"\nDetails: Klitschko added that debris had fallen in the grounds of a preschool in the Sviatoshynskyi district. There was no fire and, according to the latest reports, no damage.\nUpdate: At 21:21, Klitschko reported that a non-residential building in the Solomianskyi district has apparently been hit, with smoke seen at the site. Emergency services are heading there.\nThe mayor also said that seven people have been injured as a result of Russian attacks on the capital on 26 September. Medics provided them with outpatient treatment.\nYour support on Patreon helps us keep the news free and accessible.\nKyiv\ndrones\nAdvertisement:\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nKyiv\nRussia attacks Kyiv with drones: four people…",
-      "stazeno": "2026-09-26T19:21:20.158Z",
-      "stav": 200
-    },
-    "vyrizeni": {
-      "kdy": "2026-09-26T22:08:42.806Z",
-      "duvod": "mimo-rozsah",
-      "patriK": null,
-      "poznamka": "Ruský denní úder na Kyjev/Sumy v posledních 24 hodinách; uvnitř Ukrajiny, bez doloženého následku pro sledované země."
-    }
-  },
-  {
-    "id": "k-a90ccfc515e7d38d",
-    "zachyceno": "2026-09-26T19:21:16.845Z",
-    "publikovano": "2026-09-26T18:01:00.000Z",
-    "zdroj": {
-      "nazev": "Český rozhlas — domácí zprávy",
-      "url": "https://www.irozhlas.cz/zpravy-svet/online-evropa-mari-plany-na-mir-na-ukrajine-rusko-svych-cilu-dosahne-rekl-lavrov_2609262001_mst",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "ONLINE: Evropa maří plány na mír na Ukrajině. Rusko svých cílů dosáhne, řekl Lavrov v OSN",
-    "titulekPuvodni": "ONLINE: Evropa maří plány na mír na Ukrajině. Rusko svých cílů dosáhne, řekl Lavrov v OSN",
-    "shrnuti": "Ruský ministr zahraničí Sergej Lavrov v sobotním projevu na Valném shromáždění OSN v New Yorku obvinil Evropu, že systematicky brání mírovým plánům pro Ukrajinu, což je podle něj v rozporu s postojem Spojených států. Dodal, že Rusko dosáhne svých vojenských cílů na Ukrajině „bez ohledu na okolnosti“",
-    "kodZeme": "UA",
-    "zeme": "Ukrajina",
-    "kategorie": [
-      "zpravodajske",
-      "rusko"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "zeSite": null,
-    "shody": [
-      "obvin+rusk",
-      "rusk"
-    ],
-    "naliehave": null,
-    "stav": "vyrizen",
-    "vyrez": {
-      "text": "",
-      "stazeno": "2026-09-26T19:21:20.180Z",
-      "stav": 403,
-      "chyba": "HTTP 403"
-    },
-    "vyrizeni": {
-      "kdy": "2026-09-26T22:08:42.806Z",
-      "duvod": "zdroj-navrhu",
-      "patriK": null,
-      "poznamka": null
     }
   }
 ]
