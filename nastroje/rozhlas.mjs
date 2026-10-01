@@ -1128,6 +1128,61 @@ export function sestavPrehledDne({ ted = Date.now(), cast = castDne(ted), zmeny 
   bude potřeba. Proto chodí i ve chvíli, kdy se nic neděje, a proto nejvýš
   jeden za běh: kdyby jich přišlo pět naráz, nikdo si nepřečte ani jeden.
 */
+/*
+  Internet v Česku (1. 10. 2026): útoky, podvody, výpadky — data/kyber.json
+  ze sběru (sber/kyber.ts, pravidla v src/lib/kyber.ts). Do kanálu jen dvě
+  věci a nejvýš jednou za 24 hodin: začátek vlny útoků a nové varování
+  úřadu. Všechno ostatní je jen v banneru na webu — zprávy nesmí obtěžovat.
+*/
+export const KYBER_KAZDYCH_H = 24;
+export const KYBER_CERSTVOST_H = 6;
+
+export function ctiKyber(soubor = path.join(koren, "data", "kyber.json")) {
+  if (!fs.existsSync(soubor)) return null;
+  try { return JSON.parse(fs.readFileSync(soubor, "utf-8")); } catch { return null; }
+}
+
+/** Co z internetu poslat: { duvod: "vlna" | "varovani", zprava? } nebo null. */
+export function vyberKyber(snimek, stav, { ted = Date.now() } = {}) {
+  if (!snimek?.nacteno || ted - new Date(snimek.nacteno).getTime() > KYBER_CERSTVOST_H * 3_600_000) return null;
+  const k = stav.kyber ?? {};
+  if (k.posledni && ted - new Date(k.posledni).getTime() < KYBER_KAZDYCH_H * 3_600_000) return null;
+  if (snimek.stav === "utok" && k.stav !== "utok") return { duvod: "vlna" };
+  const poslana = new Set(k.varovani ?? []);
+  const varovani = (snimek.zpravy ?? []).find((z) => z.uredni && z.druh !== "vypadek" && !poslana.has(z.id) && ted - new Date(z.kdy).getTime() <= 48 * 3_600_000);
+  return varovani ? { duvod: "varovani", zprava: varovani } : null;
+}
+
+const SLOVO_KYBER = { ddos: "přetížení webů", podvod: "podvodné zprávy", utok: "kybernetický útok", vypadek: "výpadek služby" };
+
+export function sestavKyber(snimek, volba) {
+  const zdroj = (snimek.zpravy ?? []).find((z) => z.uredni) ?? (snimek.zpravy ?? [])[0];
+  if (volba.duvod === "vlna") {
+    return [
+      "🛡 <b>Internet v Česku: probíhá vlna útoků</b>",
+      "Některé weby úřadů a firem se teď mohou načítat pomalu nebo vůbec. Peníze ani data tím ohrožené nejsou — weby jsou jen přetížené.",
+      "Pozor na podvodníky: banka ani policie po vás nikdy nechtějí heslo, PIN ani kód z SMS.",
+      ...(zdroj ? [`Zdroj: ${esc(zdroj.vydavatel ?? "zpráva médií")}`] : []),
+      `Podrobnosti: ${WEB}/#internet`,
+    ].join("\n");
+  }
+  const z = volba.zprava;
+  return [
+    `🛡 <b>Varování: ${SLOVO_KYBER[z.druh] ?? "internet"}</b>`,
+    `${esc(zkrat(z.titulek, 200))} <i>(${esc(z.vydavatel ?? "úřad")})</i>`,
+    "Když zpráva spěchá nebo chce heslo či kód, je to skoro jistě podvod. Pochybujete? Zavolejte bance sami.",
+    `Podrobnosti: ${WEB}/#internet`,
+  ].join("\n");
+}
+
+/** Jedna řádka do přehledu, když na internetu není klid. */
+export function radekKyber(snimek, ted = Date.now()) {
+  if (!snimek?.nacteno || ted - new Date(snimek.nacteno).getTime() > KYBER_CERSTVOST_H * 3_600_000) return null;
+  if (snimek.stav === "utok") return `🛡 Internet v Česku: probíhá vlna útoků na weby — ${WEB}/#internet`;
+  if (snimek.stav === "pozor") return `🛡 Internet v Česku: zvýšená pozornost, pozor na podvodné zprávy — ${WEB}/#internet`;
+  return null;
+}
+
 export function ctiTipy() {
   const soubor = path.join(koren, "data", "tipy.json");
   if (!fs.existsSync(soubor)) return [];
@@ -1766,6 +1821,8 @@ async function main() {
       console.log(`[rozhlas] přehled ${klicPrehledu}: nic nového, neposílá se`);
     }
     const kusy = ranoBezZavazneho || (!davka.length && !skok) ? [] : davka.length ? sestavSouhrn(davka, { ted, cast }).kusy : [sestavPrazdnyPrehled({ ted, cast })];
+    const internet = radekKyber(ctiKyber(), ted);
+    if (internet && kusy.length) kusy[kusy.length - 1] += `\n\n${esc(internet)}`;
     if (skok && kusy.length) kusy[kusy.length - 1] += `\n\n\u26fd ${esc(skok.text.split("\n")[0])}`;
     let ok = true;
     let prvniId = null;
@@ -1785,6 +1842,26 @@ async function main() {
     } else if (kusy.length) selhalo++;
   } else if (rezim === "souhrn") {
     console.log(`[rozhlas] přehled ${klicPrehledu}: ${(stav.prehledy ?? {})[klicPrehledu] ? "už odešel" : "není čas (7:30 a 19:30 pražského času)"}`);
+  }
+
+  /* 2c. internet v Česku — začátek vlny útoků nebo varování úřadu, nejvýš jednou za 24 hodin. */
+  const kyber = ctiKyber();
+  if (kyber && rezim === "okamzite") {
+    const volba = vyberKyber(kyber, stav, { ted });
+    const kdy = new Date(ted).toISOString();
+    if (volba && prvniBeh) {
+      stav.kyber = { ...(stav.kyber ?? {}), stav: kyber.stav, varovani: [...(stav.kyber?.varovani ?? []), ...(volba.zprava ? [volba.zprava.id] : [])] };
+    } else if (volba) {
+      const text = sestavKyber(kyber, volba);
+      const v = await posli(text, { nahled: false });
+      if (v.ok) {
+        await telefon(text, "hned", `${WEB}/#internet`);
+        stav.kyber = { stav: kyber.stav, posledni: kdy, varovani: [...(stav.kyber?.varovani ?? []), ...(volba.zprava ? [volba.zprava.id] : [])].slice(-50) };
+        odeslano++;
+      } else { selhalo++; console.log(`[rozhlas] internet neodešel: ${v.chyba}`); }
+    }
+    // Stav se pamatuje i bez zprávy: konec vlny a nová vlna později = nová zpráva.
+    if (!volba && kyber.nacteno) stav.kyber = { ...(stav.kyber ?? {}), stav: kyber.stav };
   }
 
   /* 3. tip k přípravě — nejvýš jeden za 20 hodin, za ostatními zprávami, ať nepředbíhá naléhavé. */

@@ -10,6 +10,8 @@ on:
       - "data/tipy.json"
       # Mimořádná zpráva zadaná v datech (fronta) odejde hned po commitu.
       - "data/fronta/mimoradne-zpravy.json"
+      # Internet v Česku (1. 10. 2026): zpráva jen při začátku vlny útoků nebo varování úřadu, nejvýš 1× za 24 h.
+      - "data/kyber.json"
   schedule:
     # Přehled v 7:30 a 19:30 PRAŽSKÉHO času (28. 9. 2026). Cron zná jen UTC,
     # proto dva běhy na každý přehled — 5:30/6:30 a 17:30/18:30 UTC pokryjí
