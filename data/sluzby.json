@@ -1,5 +1,5 @@
 {
-  "aktualizovano": "2026-10-01T19:47:31.052Z",
+  "aktualizovano": "2026-10-01T20:03:32.813Z",
   "stavy": [
     {
       "klic": "cloudflare",
@@ -28,7 +28,7 @@
         "Arica, Chile - (ARI)",
         "Baghdad, Iraq - (BGW)"
       ],
-      "zkontrolovano": "2026-10-01T19:47:31.052Z",
+      "zkontrolovano": "2026-10-01T20:03:32.813Z",
       "chyba": null
     },
     {
@@ -46,16 +46,25 @@
         "Devices (Softphones/Deskphones)",
         "Zoom Phone - Global"
       ],
-      "zkontrolovano": "2026-10-01T19:47:31.052Z",
+      "zkontrolovano": "2026-10-01T20:03:32.813Z",
       "chyba": null
     },
     {
       "klic": "discord",
-      "stav": "provoz",
-      "popis": "All Systems Operational",
-      "incidenty": [],
-      "postizene": [],
-      "zkontrolovano": "2026-10-01T19:47:31.052Z",
+      "stav": "omezeni",
+      "popis": "Partially Degraded Service",
+      "incidenty": [
+        {
+          "nazev": "Elevated API error rate",
+          "odkaz": "https://stspg.io/d34fn55r326n",
+          "aktualizovano": "2026-10-01T12:48:10.575-07:00"
+        }
+      ],
+      "postizene": [
+        "API",
+        "Media Proxy"
+      ],
+      "zkontrolovano": "2026-10-01T20:03:32.813Z",
       "chyba": null
     }
   ]

@@ -1180,5 +1180,80 @@
       "overeno": "2026-10-01"
     },
     "navazujeNa": "gb-e480488876"
+  },
+  {
+    "kam": "zaznam",
+    "pripravil": "patrol",
+    "pripraveno": "2026-10-01T19:43:55.429Z",
+    "id": "i-2026-10-01-2282172128",
+    "slug": "gb-2282172128",
+    "titulek": "RAF Fairford: protiteroristická policie zadržela 27letého britsko-íránského muže podezřelého z přípravy teroristického činu, druhý muž byl vyslechnut",
+    "kratkyTitulek": "RAF Fairford: protiteroristická policie zadržela 27letého britsko-íránského muže podezřelého z přípravy teroristického činu, druhý muž byl vyslechnut",
+    "zeme": "Spojené království",
+    "kodZeme": "GB",
+    "kategorie": [
+      "vysetrovani",
+      "pravo"
+    ],
+    "datumUdalosti": "2026-10-01T00:00:00Z",
+    "datumZjisteni": "2026-10-01T00:00:00Z",
+    "aktualizovano": "2026-10-01T19:43:55.429Z",
+    "zavaznost": "Y2",
+    "jistota": "stredni",
+    "stav": "bez-vysetrovani",
+    "atribuce": "neznama",
+    "puvodce": null,
+    "druh": "aktualizace",
+    "fakta": [
+      "Britská protiteroristická policie 1. 10. 2026 zadržela ve Westminsteru 27letého muže s britsko-íránským občanstvím pro podezření z přípravy teroristického činu podle paragrafu 5 zákona o terorismu z roku 2006.",
+      "Druhý, 26letý muž s britským občanstvím byl vyslechnut pod výstrahou (nebyl zadržen); policie prohledala dvě nemovitosti.",
+      "Vrchní celostátní koordinátorka protiteroristické policie Vicki Evansová uvedla, že vyšetřování okolností událostí v Gloucestershiru je mimořádně složité a specialisté prověřují více linií včetně možné zahraniční vazby."
+    ],
+    "neznameho": [
+      "Zda je zadržený muž přímo spojen s pěti dříve zadrženými a na kauci propuštěnými muži z víkendového incidentu.",
+      "Jak zadržení souvisí s dřívějším tvrzením premiéra Burnhama o \"silných indiciích\" o podílu Íránu."
+    ],
+    "vyznam": "",
+    "eskalacniSpousteče": [],
+    "deeskalacniSignaly": [],
+    "zdroje": [
+      {
+        "nazev": "POLITICO Europe — British-Iranian man arrested in RAF Fairford investigation",
+        "url": "https://www.politico.eu/article/british-iranian-man-arrest-raf-fairford-investigation/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication",
+        "typ": "media",
+        "publikovano": "2026-10-01T00:00:00Z",
+        "primarni": false,
+        "jazyk": "en"
+      },
+      {
+        "nazev": "The Guardian — UK-Iran national arrested under Terrorism Act over RAF Fairford incident",
+        "url": "https://www.theguardian.com/uk-news/2026/oct/01/uk-iran-national-arrested-terrorism-act-raf-fairford",
+        "typ": "media",
+        "publikovano": "2026-10-01T00:00:00Z",
+        "primarni": false,
+        "jazyk": "en"
+      }
+    ],
+    "souvisejici": [],
+    "historie": [
+      {
+        "kdy": "2026-10-01T00:00:00Z",
+        "text": "Zachyceno automatickým sběrem, druhý zdroj doložen před zařazením do fronty.",
+        "novySignal": true
+      }
+    ],
+    "novy": true,
+    "zapocitanoTyden": "2026-10-01",
+    "aiZpracovano": true,
+    "lidskyOvereno": false,
+    "archivniZaznam": false,
+    "navazujeNa": "gb-e480488876",
+    "dopadNaCr": {
+      "stav": "zadny",
+      "procRelevantni": "Další vrstva vyšetřování incidentu u RAF Fairford, který se týká americké základny používané i pro operace proti Íránu.",
+      "dopad": "Pro lidi v Česku ze zprávy dnes neplyne žádné omezení.",
+      "sledujeme": "Zda bude zadržený muž obviněn a jak zadržení souvisí s předchozí pěticí.",
+      "overeno": "2026-10-01"
+    }
   }
 ]
