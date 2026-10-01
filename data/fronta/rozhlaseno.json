@@ -95,6 +95,11 @@
       "kdy": "2026-09-30T05:30:40.438Z",
       "zaznamu": 1,
       "messageId": 57
+    },
+    "2026-09-30-vecer": {
+      "kdy": "2026-09-30T17:31:07.895Z",
+      "zaznamu": 1,
+      "messageId": 59
     }
   },
   "navrhy": {
@@ -768,6 +773,12 @@
       "historie": 1,
       "cesta": "hned",
       "messageId": 58
+    },
+    "i-2026-09-25-4fd0720a00": {
+      "cesta": "prehled",
+      "kdy": "2026-09-30T17:31:07.895Z",
+      "historie": 2,
+      "prehled": "2026-09-30-vecer"
     }
   },
   "snimky": {

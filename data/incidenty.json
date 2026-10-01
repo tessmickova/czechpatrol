@@ -12731,5 +12731,347 @@
     "novy": true,
     "aiZpracovano": true,
     "lidskyOvereno": true
+  },
+  {
+    "id": "i-2026-09-25-4fd0720a00",
+    "slug": "pl-4fd0720a00",
+    "titulek": "Polsko: kyberútok na zdravotnický systém Medyc (firma Qbusoft) mohl odhalit data až pěti milionů lidí, včetně zdravotních záznamů; Úřad pro ochranu osobních údajů nařídil kontrolu",
+    "kratkyTitulek": "Polsko: kyberútok na zdravotnický systém Medyc (firma Qbusoft) mohl odhalit data až pěti milionů lidí, včetně zdravotních záznamů; Úřad pro ochranu osobních údajů nařídil kontrolu",
+    "zeme": "Polsko",
+    "kodZeme": "PL",
+    "kategorie": [
+      "kyber",
+      "infrastruktura"
+    ],
+    "datumUdalosti": "2026-09-25T00:00:00Z",
+    "datumZjisteni": "2026-09-30T00:00:00Z",
+    "aktualizovano": "2026-09-30T16:01:23.576Z",
+    "zavaznost": "Y2",
+    "jistota": "vysoka",
+    "stav": "bez-vysetrovani",
+    "atribuce": "neznama",
+    "puvodce": "neznamy",
+    "druh": "pripad",
+    "fakta": [
+      "Neznámá osoba zneužila v srpnu 2026 zranitelnost typu SQL injection v rozhraní aplikace Medyc firmy Qbusoft a přenesla šifrovaný archiv databáze mimo systémy firmy; průnik byl odhalen v noci na 9. 9. 2026.",
+      "Unikla jména, rodná čísla (PESEL), adresy, telefonní čísla, e-maily a zdravotní záznamy včetně údajů o hospitalizaci a propouštěcích zprávách; podle neověřených tvrzení šlo až o 5 milionů lidí.",
+      "Úřad pro ochranu osobních údajů (UODO) 25. 9. 2026 oznámil, že firma Qbusoft incident nenahlásila CERT Polska ani zdravotnickému CSiRT CeZ, a předseda úřadu Mirosław Wróblewski nařídil u firmy kontrolu.",
+      "Jde o druhý podobný únik zdravotních dat v Polsku během několika týdnů po srpnovém úniku z platformy MyDr, který se týkal zhruba 19 milionů lidí."
+    ],
+    "neznameho": [
+      "Přesný a potvrzený počet postižených lidí — číslo 5 milionů je zatím neověřené tvrzení, ne úřední údaj.",
+      "Kdo je za útokem, motiv (výkupné, sabotáž) ani vazba na zahraničního aktéra nebyly úředně stanoveny."
+    ],
+    "vyznam": "",
+    "eskalacniSpousteče": [],
+    "deeskalacniSignaly": [],
+    "zdroje": [
+      {
+        "nazev": "SME (Slovensko) — Z poľského zdravotníctva mohli pri kyberútokoch uniknúť údaje miliónov ľudí",
+        "url": "https://www.sme.sk/svet/c/z-polskeho-zdravotnictva-mohli-pri-kyberutokoch-uniknut-udaje-milionov-ludi?utm_source=rss&utm_medium=feed&utm_campaign=www-rss",
+        "typ": "media",
+        "primarni": false,
+        "jazyk": "sk"
+      },
+      {
+        "nazev": "UODO — Miliony Polaków poszkodowane. Po nowym wycieku danych medycznych",
+        "url": "https://uodo.gov.pl/pl/138/4585",
+        "typ": "primary",
+        "publikovano": "2026-09-25T00:00:00Z",
+        "primarni": true,
+        "jazyk": "pl"
+      },
+      {
+        "nazev": "The Record — Cyberattack on Polish medical software provider exposes patient data",
+        "url": "https://therecord.media/poland-cyberattack-medical-medyc",
+        "typ": "media",
+        "primarni": false,
+        "jazyk": "en"
+      }
+    ],
+    "souvisejici": [],
+    "historie": [
+      {
+        "kdy": "2026-09-25T00:00:00Z",
+        "text": "Zachyceno automatickým sběrem, druhý zdroj doložen před zařazením do fronty.",
+        "novySignal": true
+      },
+      {
+        "kdy": "2026-09-30T16:01:23.576Z",
+        "text": "Zveřejněno automaticky: dva nezávislé zdroje, z toho úřední. Bez lidské kontroly.",
+        "novySignal": false
+      }
+    ],
+    "novy": true,
+    "zapocitanoTyden": "2026-09-25",
+    "aiZpracovano": true,
+    "lidskyOvereno": false,
+    "archivniZaznam": false,
+    "dopadNaCr": {
+      "stav": "zadny",
+      "procRelevantni": "Rozsáhlý únik zdravotních dat v sousedním členském státě EU ukazuje na zranitelnost zdravotnických systémů, které používá i Česko.",
+      "dopad": "Pro lidi v Česku ze zprávy dnes neplyne žádné omezení; české zdravotnické systémy útok nezasáhl.",
+      "sledujeme": "Výsledek kontroly UODO a zda se ukáže vazba na zahraničního aktéra nebo organizovaný kyberzločin.",
+      "overeno": "2026-09-30"
+    },
+    "overeni": "automaticke"
+  },
+  {
+    "id": "i-2026-09-30-f92afe8069",
+    "slug": "ru-f92afe8069",
+    "titulek": "Rusko poslalo NATO dokument, ve kterém hrozí použitím jaderných zbraní, pokud by se Aliance pokusila izolovat exklávu Kaliningrad",
+    "kratkyTitulek": "Rusko poslalo NATO dokument, ve kterém hrozí použitím jaderných zbraní, pokud by se Aliance pokusila izolovat exklávu Kaliningrad",
+    "zeme": "Rusko",
+    "kodZeme": "RU",
+    "kategorie": [
+      "rusko",
+      "nato"
+    ],
+    "datumUdalosti": "2026-09-30T00:00:00Z",
+    "datumZjisteni": "2026-09-30T00:00:00Z",
+    "aktualizovano": "2026-09-30T16:01:23.592Z",
+    "zavaznost": "Y2",
+    "jistota": "stredni",
+    "stav": "bez-vysetrovani",
+    "atribuce": "neznama",
+    "puvodce": null,
+    "druh": "reakce",
+    "fakta": [
+      "Moskva podle agentury Reuters poslala NATO diplomatický dokument (tzv. non-paper), ve kterém varuje, že v případě pokusu Aliance izolovat ruskou exklávu Kaliningrad je Rusko připraveno použít \"celý arzenál sil a schopností, které má k dispozici, včetně jaderných zbraní\", k obraně svého území.",
+      "Dokument podle Reuters obsahuje i hrozbu úderů na \"centra rozhodování v členských státech Aliance hned od začátku konfliktu\", pokud by NATO izolaci Kaliningradu prosazovalo.",
+      "Mluvčí Kremlu Dmitrij Peskov ve středu 30. 9. 2026 potvrdil, že Rusko poslalo NATO varování ohledně Kaliningradu, a uvedl, že ruská velvyslanectví v posledních dnech ve statementech obviňují NATO z eskalace napětí vojenskými cvičeními a plánováním scénářů kolem Kaliningradu.",
+      "Mluvčí NATO Allison Hart hrozby odmítla jako \"nezodpovědnou jadernou rétoriku\" a uvedla, že se Aliance nenechá zastrašit od podpory Ukrajiny."
+    ],
+    "neznameho": [
+      "Přesný text celého ruského dokumentu (non-paper) nebyl zveřejněn; citace vychází z toho, co z něj otisklo Reuters.",
+      "Zda a jaké konkrétní kroky NATO ohledně Kaliningradu Rusko tímto reaguje — žádný takový plán Aliance veřejně nepotvrdila."
+    ],
+    "vyznam": "",
+    "eskalacniSpousteče": [],
+    "deeskalacniSignaly": [],
+    "zdroje": [
+      {
+        "nazev": "Digi24 — Moscova a avertizat oficial NATO că va folosi armele nucleare dacă Alianța va încerca izoleze o exclavă rusă",
+        "url": "https://www.digi24.ro/stiri/externe/rusia/moscova-a-avertizat-oficial-nato-ca-va-folosi-armele-nucleare-daca-alianta-va-incerca-izoleze-o-exclava-rusa-3971079",
+        "typ": "media",
+        "publikovano": "2026-09-30T00:00:00Z",
+        "primarni": false,
+        "jazyk": "ro"
+      },
+      {
+        "nazev": "Irish Examiner (Reuters) — Russia issues nuclear warning to Nato as tensions rise in the Baltic",
+        "url": "https://www.irishexaminer.com/world/arid-41917762.html",
+        "typ": "wire",
+        "publikovano": "2026-09-30T00:00:00Z",
+        "primarni": false,
+        "jazyk": "en"
+      },
+      {
+        "nazev": "US News (Reuters) — Russia Issues Nuclear Warning to NATO as Tensions Rise in the Baltic",
+        "url": "https://www.usnews.com/news/world/articles/2026-09-30/russia-issues-nuclear-warning-to-nato-as-tensions-rise-in-the-baltic",
+        "typ": "wire",
+        "publikovano": "2026-09-30T00:00:00Z",
+        "primarni": false,
+        "jazyk": "en"
+      }
+    ],
+    "souvisejici": [],
+    "historie": [
+      {
+        "kdy": "2026-09-30T00:00:00Z",
+        "text": "Zachyceno automatickým sběrem, druhý zdroj doložen před zařazením do fronty.",
+        "novySignal": true
+      },
+      {
+        "kdy": "2026-09-30T16:01:23.592Z",
+        "text": "Zveřejněno jako neověřené úředně: dvě nezávislé redakce, úřad zatím nepotvrdil.",
+        "novySignal": false
+      }
+    ],
+    "novy": true,
+    "zapocitanoTyden": "2026-09-30",
+    "aiZpracovano": true,
+    "lidskyOvereno": false,
+    "archivniZaznam": false,
+    "dopadNaCr": {
+      "stav": "zadny",
+      "procRelevantni": "Ruská jaderná hrozba vůči NATO kvůli Kaliningradu; Česko je členem NATO, případná eskalace by se ho týkala nepřímo přes alianci.",
+      "dopad": "Pro lidi v Česku ze zprávy dnes neplyne žádné omezení; jde o diplomatickou výhrůžku, ne o vojenský krok.",
+      "sledujeme": "Jak NATO na dokument oficiálně zareaguje a zda Rusko podnikne jakýkoli konkrétní krok, ne jen prohlášení.",
+      "overeno": "2026-09-30"
+    },
+    "overeni": "neovereno"
+  },
+  {
+    "id": "i-2026-09-30-57a5e5c278",
+    "slug": "md-57a5e5c278",
+    "titulek": "Moldavsko: dron zasáhl telekomunikační stožár a explodoval u vesnice Hîrbovăț v okrese Anenii Noi, bez obětí a bez výpadku spojení",
+    "kratkyTitulek": "Moldavsko: dron zasáhl telekomunikační stožár a explodoval u vesnice Hîrbovăț v okrese Anenii Noi, bez obětí a bez výpadku spojení",
+    "zeme": "Moldavsko",
+    "kodZeme": "MD",
+    "kategorie": [
+      "drony",
+      "hranice"
+    ],
+    "datumUdalosti": "2026-09-30T00:00:00Z",
+    "datumZjisteni": "2026-09-30T00:00:00Z",
+    "aktualizovano": "2026-09-30T16:01:23.592Z",
+    "zavaznost": "Y2",
+    "jistota": "stredni",
+    "stav": "bez-vysetrovani",
+    "atribuce": "neznama",
+    "puvodce": "neznamy",
+    "druh": "pripad",
+    "fakta": [
+      "Moldavská policie hlásila 30. 9. 2026 v 5:40 dron letící v malé výšce nad městem Bender; dron následně dopadl na okraji vesnice Hîrbovăț v okrese Anenii Noi a explodoval.",
+      "Dron explodoval ve výšce asi 40 m po nárazu do telekomunikačního stožáru; dvanáctimetrový úsek antény nese stopy výbuchu (deformace kovu, tepelné poškození).",
+      "V okruhu asi 265 m od místa se našly úlomky dronu — konstrukční prvky, řídicí systém, zdroj napájení a pohonná jednotka.",
+      "Anténa patří civilnímu operátorovi; komunikační služby výbuch nepřerušil, zranění nikdo neutrpěl.",
+      "Podle moldavského ministra obrany Anatolie Nosatii šlo o proudový dron s rychlostí kolem 400 km/h."
+    ],
+    "neznameho": [
+      "Typ dronu a jeho původ (výrobce, země vypuštění) uveden nebyl.",
+      "Oficiální atribuce (Rusko) v otevřených zdrojích chybí; incident se odehrál v souvislosti s ruským masivním útokem na Ukrajinu téže noci."
+    ],
+    "vyznam": "",
+    "eskalacniSpousteče": [],
+    "deeskalacniSignaly": [],
+    "zdroje": [
+      {
+        "nazev": "Ukrainska Pravda — Moldova reveals new details on drone explosion near power line",
+        "url": "https://www.pravda.com.ua/eng/news/2026/09/30/8055736/",
+        "typ": "media",
+        "publikovano": "2026-09-30T00:00:00Z",
+        "primarni": false,
+        "jazyk": "en"
+      },
+      {
+        "nazev": "Eurointegration — Moldova reveals new details regarding drone explosion incident",
+        "url": "https://www.eurointegration.com.ua/eng/news/2026/09/30/7246604/",
+        "typ": "media",
+        "publikovano": "2026-09-30T00:00:00Z",
+        "primarni": false,
+        "jazyk": "en"
+      },
+      {
+        "nazev": "Kyiv Independent — Drone crashes in Moldova amid Russian mass attack on Ukraine",
+        "url": "https://kyivindependent.com/drone-crashes-in-moldova-amid-russian-mass-attack-on-ukraine/",
+        "typ": "media",
+        "publikovano": "2026-09-30T00:00:00Z",
+        "primarni": false,
+        "jazyk": "en"
+      }
+    ],
+    "souvisejici": [],
+    "historie": [
+      {
+        "kdy": "2026-09-30T00:00:00Z",
+        "text": "Zachyceno automatickým sběrem, druhý zdroj doložen před zařazením do fronty.",
+        "novySignal": true
+      },
+      {
+        "kdy": "2026-09-30T16:01:23.592Z",
+        "text": "Zveřejněno jako neověřené úředně: dvě nezávislé redakce, úřad zatím nepotvrdil.",
+        "novySignal": false
+      }
+    ],
+    "novy": true,
+    "zapocitanoTyden": "2026-09-30",
+    "aiZpracovano": true,
+    "lidskyOvereno": false,
+    "archivniZaznam": false,
+    "dopadNaCr": {
+      "stav": "zadny",
+      "procRelevantni": "Další nález a exploze dronu na území sledované země sousedící s Ukrajinou, bez obětí, v souvislosti s ruským masivním útokem téže noci.",
+      "dopad": "Pro lidi v Česku ze zprávy dnes neplyne žádné omezení.",
+      "sledujeme": "Zda moldavské úřady dron oficiálně připíší Rusku.",
+      "overeno": "2026-09-30"
+    },
+    "overeni": "neovereno"
+  },
+  {
+    "id": "i-2026-09-30-fca0db17a2",
+    "slug": "ua-fca0db17a2",
+    "titulek": "Rusko poprvé použilo proudový dron se speciální náloží na ničení ocelových sloupů vysokého napětí a mostních konstrukcí, uvedl poradce Zelenského",
+    "kratkyTitulek": "Rusko poprvé použilo proudový dron se speciální náloží na ničení ocelových sloupů vysokého napětí a mostních konstrukcí, uvedl poradce Zelenského",
+    "zeme": "Ukrajina",
+    "kodZeme": "UA",
+    "kategorie": [
+      "drony",
+      "infrastruktura"
+    ],
+    "datumUdalosti": "2026-09-30T00:00:00Z",
+    "datumZjisteni": "2026-09-30T00:00:00Z",
+    "aktualizovano": "2026-09-30T20:01:12.345Z",
+    "zavaznost": "Y2",
+    "jistota": "stredni",
+    "stav": "bez-vysetrovani",
+    "atribuce": "neznama",
+    "puvodce": "neznamy",
+    "druh": "pripad",
+    "fakta": [
+      "Poradce prezidenta Zelenského pro obrannou techniku Serhij \"Flash\" Beskrestnov 30. 9. 2026 na Telegramu uvedl, že Rusko poprvé použilo proudový bezpilotní letoun s náloží určenou k ničení sloupů vysokého napětí a ocelových mostních konstrukcí.",
+      "Podle jeho popisu má nálož tvarovanou hlavní část o 40 kg a čtyři další destrukční moduly.",
+      "Nasazení přišlo v noci, kdy Rusko provedlo za poslední měsíce svůj nejsilnější kombinovaný úder na ukrajinskou energetiku; v Kyjevě byly kvůli tomu zavedeny nouzové odstávky elektřiny."
+    ],
+    "neznameho": [
+      "Tvrzení vychází jen z vyjádření poradce na Telegramu, ne z nezávislého technického rozboru trosek ani z oficiálního ukrajinského vojenského stanoviska.",
+      "Přesný rozsah dosavadního použití (kolikrát, kde konkrétně) neznámý."
+    ],
+    "vyznam": "",
+    "eskalacniSpousteče": [],
+    "deeskalacniSignaly": [],
+    "zdroje": [
+      {
+        "nazev": "The Kyiv Independent — Russia strikes Ukrainian power pylon with steel-cutting drone for 1st time, Zelensky's adviser says",
+        "url": "https://kyivindependent.com/russia-strikes-ukrainian-power-pylon-with-steel-cutting-drone-for-1st-time-zelenskys-adviser-says/",
+        "typ": "media",
+        "publikovano": "2026-09-30T00:00:00Z",
+        "primarni": false,
+        "jazyk": "en"
+      },
+      {
+        "nazev": "UNN — Russia used a drone with a warhead for the first time to destroy supports and bridges — \"Flash\"",
+        "url": "https://unn.ua/en/news/russia-used-a-drone-with-a-warhead-for-the-first-time-to-destroy-bridge-supports-and-bridges-flash",
+        "typ": "media",
+        "publikovano": "2026-09-30T00:00:00Z",
+        "primarni": false,
+        "jazyk": "en"
+      },
+      {
+        "nazev": "Ukrinform — Russians use jet-powered drone for first time with payload designed to destroy power lines",
+        "url": "https://www.ukrinform.net/rubric-ato/4169724-russians-use-jetpowered-drone-for-first-time-with-payload-designed-to-destroy-power-lines-flash.html",
+        "typ": "media",
+        "publikovano": "2026-09-30T00:00:00Z",
+        "primarni": false,
+        "jazyk": "en"
+      }
+    ],
+    "souvisejici": [],
+    "historie": [
+      {
+        "kdy": "2026-09-30T00:00:00Z",
+        "text": "Zachyceno automatickým sběrem, druhý zdroj doložen před zařazením do fronty.",
+        "novySignal": true
+      },
+      {
+        "kdy": "2026-09-30T20:01:12.345Z",
+        "text": "Zveřejněno jako neověřené úředně: dvě nezávislé redakce, úřad zatím nepotvrdil.",
+        "novySignal": false
+      }
+    ],
+    "novy": true,
+    "zapocitanoTyden": "2026-09-30",
+    "aiZpracovano": true,
+    "lidskyOvereno": false,
+    "archivniZaznam": false,
+    "dopadNaCr": {
+      "stav": "zadny",
+      "procRelevantni": "Nový typ ruské zbraně proti energetické infrastruktuře na Ukrajině — vývoj prostředků hybridní/vojenské hrozby, kterou projekt sleduje.",
+      "dopad": "Pro lidi v Česku ze zprávy dnes neplyne žádné omezení.",
+      "sledujeme": "Zda se použití nálože na sloupy vysokého napětí potvrdí nezávisle a zda se rozšíří i mimo Ukrajinu.",
+      "overeno": "2026-09-30"
+    },
+    "overeni": "neovereno"
   }
 ]
