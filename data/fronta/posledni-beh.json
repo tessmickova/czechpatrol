@@ -1,5 +1,5 @@
 {
-  "kdy": "2026-10-01T22:01:20.248Z",
+  "kdy": "2026-10-01T23:49:46.292Z",
   "zdroje": [
     {
       "klic": "e-sbirka",
@@ -168,11 +168,10 @@
     },
     {
       "klic": "celni-sprava",
-      "ok": false,
-      "stav": null,
+      "ok": true,
+      "stav": 200,
       "pocetPolozek": 0,
-      "chyba": "The operation was aborted due to timeout",
-      "vysledek": "chyba"
+      "vysledek": "ok"
     },
     {
       "klic": "sujb",
