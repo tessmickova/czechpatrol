@@ -51,6 +51,7 @@ import { TipyKPriprave } from "./tipy";
 import { tipy as vsechnyTipy } from "@/lib/data-lehka";
 import { CoSeZmenilo } from "./co-se-zmenilo";
 import { StavSluzeb } from "./stav-sluzeb";
+import { InternetBanner } from "./internet-banner";
 import { snimekSluzeb, SLOVA_STAVU, SLUZBY, type StavSluzby } from "@/lib/sluzby";
 import { useStavSluzeb, type ZivyStav } from "@/lib/sluzby-klient";
 import { casPraha } from "@/lib/cas";
@@ -581,6 +582,8 @@ export function Dashboard({
             ) : (
               <VetaSituace souhrn={souhrn ?? { veta: null, aktualizovano: null, podklady: [] }} veta={veta} kontrola={pulz?.kdy ?? overeno} ted={tedMs} />
             )}
+            {/* Internet v Česku: útoky, podvody, výpadky (1. 10. 2026). V klidu jeden řádek. */}
+            <InternetBanner ted={tedMs} />
             {/* Na mobilu je „Upozornění“ hned pod tím v řadě tlačítek — dvakrát totéž nepotřebujeme. */}
             <div className="mt-4 max-lg:hidden"><Tlacitko kam="/odber/" varianta="obrys" velikost="m" ikona="zvonek">Odběr zpráv</Tlacitko></div>
           </div>

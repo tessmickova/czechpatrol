@@ -14,6 +14,7 @@ import { sbirejSluzby } from "./sluzby";
 import { slucStavZdroju, vysledekPokusu } from "../src/lib/prehled/model";
 import { sbirejVystrahyChmi } from "./vystrahy-chmi";
 import { sbirejPizzaIndex } from "./pizza-index";
+import { sbirejKyber } from "./kyber";
 
 /**
  * Hodinový sběr.
@@ -295,6 +296,14 @@ async function main() {
     console.log(`[sber] výstrahy ČHMÚ: ${c.vysledek}${c.vysledek === "ok" ? `, platných bloků ${c.pocet}` : ` (${c.chyba})`}`);
   } catch (e) {
     vysledky.push({ klic: "chmi-cap", ok: false, stav: null, pocetPolozek: 0, chyba: String(e instanceof Error ? e.message : e), vysledek: "chyba" });
+  }
+
+  /* Bezpečnost na internetu v Česku (1. 10. 2026) — vlastní blok; chyba nic dalšího nezastaví. */
+  try {
+    const k = await sbirejKyber(TED);
+    vysledky.push({ klic: "kyber", ok: k.vysledek !== "chyba", stav: null, pocetPolozek: k.pocet, chyba: k.chyba, vysledek: k.vysledek });
+  } catch (e) {
+    vysledky.push({ klic: "kyber", ok: false, stav: null, pocetPolozek: 0, chyba: String(e instanceof Error ? e.message : e), vysledek: "chyba" });
   }
 
   /* Pizza index — kuriozita, vlastní blok; chyba nic dalšího nezastaví. Stav jde mezi zdroje jako „pizza-index“. */

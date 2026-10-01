@@ -1,5 +1,5 @@
 {
-  "kdy": "2026-09-30T21:21:12.764Z",
+  "kdy": "2026-10-01T06:01:12.395Z",
   "zdroje": [
     {
       "klic": "e-sbirka",
@@ -236,6 +236,14 @@
       "stav": 200,
       "pocetPolozek": 1,
       "vysledek": "ok"
+    },
+    {
+      "klic": "kyber",
+      "ok": false,
+      "stav": null,
+      "pocetPolozek": 0,
+      "chyba": "site:nukib.gov.cz: robots.txt; site:csirt.cz: robots.txt; NÚKIB varování: robots.txt",
+      "vysledek": "chyba"
     },
     {
       "klic": "pizza-index",

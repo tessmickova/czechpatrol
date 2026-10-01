@@ -29,7 +29,7 @@
       "klic": "provoz-cr",
       "nazev": "Provoz infrastruktury ČR",
       "zasadni": false,
-      "zdroje": ["ceps", "eru", "ote", "sshr", "mpo", "cnb", "ctu", "dopravni-info", "sprava-zeleznic", "letiste-praha"],
+      "zdroje": ["ceps", "eru", "ote", "sshr", "mpo", "cnb", "ctu", "dopravni-info", "sprava-zeleznic", "letiste-praha", "kyber"],
       "zpozdenoPoMin": 360,
       "nedostupnePoMin": 1440,
       "proc": "Regulátoři a provozovatelé. Důležité pro běžný život, ne pro výstrahy obyvatelstvu. Stejné meze jako úřady."

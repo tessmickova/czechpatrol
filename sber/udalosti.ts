@@ -937,6 +937,30 @@ export function duvodOdmitnuti(text: string): DuvodOdmitnuti | null {
 */
 const NARAZ = 6;
 
+/*
+  Hromadný výpadek zdrojů se hlásí správkyni (1. 10. 2026). Od 23. 9. 2026
+  robots.txt Google News tiše zablokoval celé tematické vyhledávání — přes
+  sto kanálů — a týden si toho nikdo nevšiml: zablokovaný kanál vypadá
+  stejně jako klid. Když selže čtvrtina katalogu, jde jedna věta do
+  .strazce/zprava.txt; workflow ji pošle soukromě správkyni (nejvýš
+  jednou za 6 hodin, nastroje/upozorni-spravce.mjs).
+*/
+export function zpravaOVypadku(celkem: number, chyby: string[]): string | null {
+  if (!celkem || chyby.length / celkem < 0.25) return null;
+  const robots = chyby.filter((c) => /robots/i.test(c)).length;
+  return `Sběr událostí: nečte se ${chyby.length} z ${celkem} zdrojů${robots ? `, z toho ${robots} zakazuje robots.txt` : ""}. Bez nich sběr může přehlédnout události.`;
+}
+
+function hlasHromadnyVypadek(celkem: number, chyby: string[]) {
+  const zprava = zpravaOVypadku(celkem, chyby);
+  if (!zprava) return;
+  console.log(`::warning::${zprava}`);
+  try {
+    fs.mkdirSync(".strazce", { recursive: true });
+    fs.appendFileSync(".strazce/zprava.txt", `${zprava}\n`);
+  } catch { /* hlášení nesmí shodit sběr */ }
+}
+
 /** Zpracuje pole po dávkách, aby se nestahovalo všechno naráz. */
 async function poDavkach<T, R>(polozky: T[], kolik: number, f: (x: T) => Promise<R>): Promise<R[]> {
   const vysledky: R[] = [];
@@ -1156,6 +1180,7 @@ export async function sbirejUdalosti(): Promise<{ novych: number; celkem: number
   const chybyProfilu = profily.filter((v) => Boolean(v.chyba)).map((v) => `${v.profil.klic}: ${v.chyba}`);
 
   const nedostupne = [...stazene.filter((s) => !s.ok).map((s) => `${s.z.klic}: ${s.chyba}`), ...chybyProfilu];
+  hlasHromadnyVypadek(stazene.length, stazene.filter((s) => !s.ok).map((s) => String(s.chyba ?? "")));
   const stare = ctiKandidaty();
   const zname = znameZIncidentu();
   const hranice = Date.now() - DNI_ZPET * 86_400_000;

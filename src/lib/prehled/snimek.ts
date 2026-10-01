@@ -19,6 +19,7 @@ import type { InformaceVstup, SnimekPrehledu, ZaznamZdroje, ZdrojVeSnimku } from
 export const DALSI_ZDROJE = [
   { klic: "chmi-cap", nazev: "ČHMÚ — výstrahy (strojově, CAP)", odkaz: "https://vystrahy-cr.chmi.cz/" },
   { klic: "pizza-index", nazev: "Pizza index (PizzINT)", odkaz: "https://www.pizzint.watch/" },
+  { klic: "kyber", nazev: "Internet v Česku — útoky a podvody (kanály úřadů a médií)", odkaz: "https://nukib.gov.cz/cs/infoservis/aktuality/" },
 ];
 
 export interface VstupySnimku {
