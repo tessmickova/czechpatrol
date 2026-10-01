@@ -1180,5 +1180,246 @@
       "overeno": "2026-10-01"
     },
     "navazujeNa": "gb-e480488876"
+  },
+  {
+    "kam": "zaznam",
+    "pripravil": "patrol",
+    "pripraveno": "2026-10-01T19:43:55.429Z",
+    "id": "i-2026-10-01-2282172128",
+    "slug": "gb-2282172128",
+    "titulek": "RAF Fairford: protiteroristická policie zadržela 27letého britsko-íránského muže podezřelého z přípravy teroristického činu, druhý muž byl vyslechnut",
+    "kratkyTitulek": "RAF Fairford: protiteroristická policie zadržela 27letého britsko-íránského muže podezřelého z přípravy teroristického činu, druhý muž byl vyslechnut",
+    "zeme": "Spojené království",
+    "kodZeme": "GB",
+    "kategorie": [
+      "vysetrovani",
+      "pravo"
+    ],
+    "datumUdalosti": "2026-10-01T00:00:00Z",
+    "datumZjisteni": "2026-10-01T00:00:00Z",
+    "aktualizovano": "2026-10-01T19:43:55.429Z",
+    "zavaznost": "Y2",
+    "jistota": "vysoka",
+    "stav": "bez-vysetrovani",
+    "atribuce": "neznama",
+    "puvodce": null,
+    "druh": "aktualizace",
+    "fakta": [
+      "Britská protiteroristická policie 1. 10. 2026 zadržela ve Westminsteru 27letého muže s britsko-íránským občanstvím pro podezření z přípravy teroristického činu podle paragrafu 5 zákona o terorismu z roku 2006.",
+      "Druhý, 26letý muž s britským občanstvím byl vyslechnut pod výstrahou (nebyl zadržen); policie prohledala dvě nemovitosti.",
+      "Vrchní celostátní koordinátorka protiteroristické policie Vicki Evansová uvedla, že vyšetřování okolností událostí v Gloucestershiru je mimořádně složité a specialisté prověřují více linií včetně možné zahraniční vazby."
+    ],
+    "neznameho": [
+      "Zda je zadržený muž přímo spojen s pěti dříve zadrženými a na kauci propuštěnými muži z víkendového incidentu.",
+      "Jak zadržení souvisí s dřívějším tvrzením premiéra Burnhama o \"silných indiciích\" o podílu Íránu."
+    ],
+    "vyznam": "",
+    "eskalacniSpousteče": [],
+    "deeskalacniSignaly": [],
+    "zdroje": [
+      {
+        "nazev": "POLITICO Europe — British-Iranian man arrested in RAF Fairford investigation",
+        "url": "https://www.politico.eu/article/british-iranian-man-arrest-raf-fairford-investigation/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication",
+        "typ": "media",
+        "publikovano": "2026-10-01T00:00:00Z",
+        "primarni": false,
+        "jazyk": "en"
+      },
+      {
+        "nazev": "The Guardian — UK-Iran national arrested under Terrorism Act over RAF Fairford incident",
+        "url": "https://www.theguardian.com/uk-news/2026/oct/01/uk-iran-national-arrested-terrorism-act-raf-fairford",
+        "typ": "media",
+        "publikovano": "2026-10-01T00:00:00Z",
+        "primarni": false,
+        "jazyk": "en"
+      }
+    ],
+    "souvisejici": [],
+    "historie": [
+      {
+        "kdy": "2026-10-01T00:00:00Z",
+        "text": "Zachyceno automatickým sběrem, druhý zdroj doložen před zařazením do fronty.",
+        "novySignal": true
+      }
+    ],
+    "novy": true,
+    "zapocitanoTyden": "2026-10-01",
+    "aiZpracovano": true,
+    "lidskyOvereno": false,
+    "archivniZaznam": false,
+    "navazujeNa": "gb-e480488876",
+    "dopadNaCr": {
+      "stav": "zadny",
+      "procRelevantni": "Další vrstva vyšetřování incidentu u RAF Fairford, který se týká americké základny používané i pro operace proti Íránu.",
+      "dopad": "Pro lidi v Česku ze zprávy dnes neplyne žádné omezení.",
+      "sledujeme": "Zda bude zadržený muž obviněn a jak zadržení souvisí s předchozí pěticí.",
+      "overeno": "2026-10-01"
+    }
+  },
+  {
+    "kam": "zaznam",
+    "pripravil": "patrol",
+    "pripraveno": "2026-10-01T19:43:55.429Z",
+    "id": "i-2026-10-01-6c992106c6",
+    "slug": "ua-6c992106c6",
+    "titulek": "Rusko poprvé od začátku plné invaze zasáhlo drony most v Kyjevě — Jižní most byl zasažen ve chvíli, kdy po něm projížděla souprava metra",
+    "kratkyTitulek": "Rusko poprvé od začátku plné invaze zasáhlo drony most v Kyjevě — Jižní most byl zasažen ve chvíli, kdy po něm projížděla souprava metra",
+    "zeme": "Ukrajina",
+    "kodZeme": "UA",
+    "kategorie": [
+      "drony",
+      "infrastruktura"
+    ],
+    "datumUdalosti": "2026-10-01T00:00:00Z",
+    "datumZjisteni": "2026-10-01T00:00:00Z",
+    "aktualizovano": "2026-10-01T19:43:55.429Z",
+    "zavaznost": "Y2",
+    "jistota": "vysoka",
+    "stav": "bez-vysetrovani",
+    "atribuce": "neznama",
+    "puvodce": "neznamy",
+    "druh": "pripad",
+    "fakta": [
+      "Ruské síly 1. 10. 2026 kolem 11:30 místního času poprvé od začátku plné invaze zaútočily drony na most v Kyjevě — dva drony zasáhly Jižní most, po kterém vede silniční doprava i trať metra.",
+      "V okamžiku zásahu po mostě projížděla souprava metra; tlaková vlna vehnala do vagonů prach z ventilačního systému, cestující ani souprava nebyly podle předběžných zpráv zraněny ani poškozeny.",
+      "Provoz metra a autobusů přes most byl pozastaven, autobusy byly dočasně přesměrovány; souprava byla poslána na další kontrolu do depa.",
+      "Předběžná zjištění ukazují, že most nemá kritické poškození; odborníci na místě posuzují rozsah škod."
+    ],
+    "neznameho": [
+      "Konečný rozsah poškození nosné konstrukce mostu po dokončení inspekce.",
+      "Kdy bude obnoven plný provoz metra a autobusů přes most."
+    ],
+    "vyznam": "",
+    "eskalacniSpousteče": [],
+    "deeskalacniSignaly": [],
+    "zdroje": [
+      {
+        "nazev": "Meduza — Russian drones strike Kyiv's Southern Bridge in first attack on the city's bridges since the full-scale invasion",
+        "url": "https://meduza.io/en/feature/2026/10/01/russian-drones-strike-kyiv-s-southern-bridge-in-first-drone-attack-on-a-kyiv-bridge-since-the-full-scale-invasion-a-subway-train-was-crossing-it-at-the-time",
+        "typ": "media",
+        "publikovano": "2026-10-01T00:00:00Z",
+        "primarni": false,
+        "jazyk": "en"
+      },
+      {
+        "nazev": "Kyiv Post — Two Drone Strikes Hit Kyiv's South Bridge, Suspending Metro Traffic as Engineers Inspect Damage",
+        "url": "https://www.kyivpost.com/post/85832",
+        "typ": "media",
+        "publikovano": "2026-10-01T00:00:00Z",
+        "primarni": false,
+        "jazyk": "en"
+      },
+      {
+        "nazev": "BBC — Russia targets busy bridge in central Kyiv in broad daylight",
+        "url": "https://www.bbc.co.uk/news/articles/cmn8e8344v5qo?at_medium=RSS&at_campaign=rss",
+        "typ": "media",
+        "publikovano": "2026-10-01T00:00:00Z",
+        "primarni": false,
+        "jazyk": "en"
+      }
+    ],
+    "souvisejici": [],
+    "historie": [
+      {
+        "kdy": "2026-10-01T00:00:00Z",
+        "text": "Zachyceno automatickým sběrem, druhý zdroj doložen před zařazením do fronty.",
+        "novySignal": true
+      }
+    ],
+    "novy": true,
+    "zapocitanoTyden": "2026-10-01",
+    "aiZpracovano": true,
+    "lidskyOvereno": false,
+    "archivniZaznam": false,
+    "dopadNaCr": {
+      "stav": "zadny",
+      "procRelevantni": "Ukazuje posun v ruské taktice (první útok na mosty v Kyjevě), relevantní pro sledování vývoje hybridní/vojenské hrozby.",
+      "dopad": "Pro lidi v Česku ze zprávy dnes neplyne žádné omezení.",
+      "sledujeme": "Zda se útoky na mosty v Kyjevě budou opakovat.",
+      "overeno": "2026-10-01"
+    }
+  },
+  {
+    "kam": "zaznam",
+    "pripravil": "patrol",
+    "pripraveno": "2026-10-01T19:43:55.429Z",
+    "id": "i-2026-10-01-ba05efd5da",
+    "slug": "lt-ba05efd5da",
+    "titulek": "Británie nabídla devíti zemím Spojených expedičních sil (JEF) jadernou ochranu mimo rámec NATO, bez nutnosti vyhlásit článek 5",
+    "kratkyTitulek": "Británie nabídla devíti zemím Spojených expedičních sil (JEF) jadernou ochranu mimo rámec NATO, bez nutnosti vyhlásit článek 5",
+    "zeme": "Litva",
+    "kodZeme": "LT",
+    "kategorie": [
+      "nato",
+      "diplomacie"
+    ],
+    "datumUdalosti": "2026-10-01T00:00:00Z",
+    "datumZjisteni": "2026-10-01T00:00:00Z",
+    "aktualizovano": "2026-10-01T19:43:55.429Z",
+    "zavaznost": "Y1",
+    "jistota": "vysoka",
+    "stav": "bez-vysetrovani",
+    "atribuce": "neznama",
+    "puvodce": null,
+    "druh": "reakce",
+    "fakta": [
+      "První lord admirality a náčelník štábu britského královského námořnictva generál Sir Gwyn Jenkins během návštěvy Finska oznámil nabídku jaderné ochrany zemím Spojených expedičních sil (JEF) — Finsku, Švédsku, Norsku, Dánsku, Islandu, Estonsku, Lotyšsku, Litvě a Nizozemsku.",
+      "Ochranu by podle admirála Jenkinse zajišťovaly britské jaderné ponorky hlídkující v Atlantiku; mechanismus by fungoval mimo formální postupy NATO a nevyžadoval by vyhlášení článku 5 Severoatlantické smlouvy.",
+      "Očekává se, že zúčastněné země by mohly příslušná ujednání formalizovat na listopadovém setkání JEF v Oslu.",
+      "Nabídka přišla týden poté, co americká CIA podle médií sdělila, že Rusko připravuje dronové útoky na Španělsko, Francii a Itálii, a objevily se zprávy o chystaném útoku na země sousedící s Ruskem."
+    ],
+    "neznameho": [
+      "Jak přesně by mechanismus v praxi fungoval a za jakých podmínek by byl aktivován.",
+      "Oficiální reakce jednotlivých zemí JEF na nabídku."
+    ],
+    "vyznam": "",
+    "eskalacniSpousteče": [],
+    "deeskalacniSignaly": [],
+    "zdroje": [
+      {
+        "nazev": "Deník N — Británie nabízí jaderný deštník pro „malé evropské NATO“. Bez čekání na článek 5",
+        "url": "https://denikn.cz/2200103/britanie-nabizi-jaderny-destnik-pro-male-evropske-nato-bez-cekani-na-clanek-5/",
+        "typ": "media",
+        "publikovano": "2026-10-01T00:00:00Z",
+        "primarni": false,
+        "jazyk": "cs"
+      },
+      {
+        "nazev": "Militarnyi — UK Offers 'Nuclear Umbrella' to JEF Alliance Members",
+        "url": "https://militarnyi.com/en/news/uk-offers-nuclear-umbrella-to-jef-alliance-members/",
+        "typ": "media",
+        "publikovano": "2026-10-01T00:00:00Z",
+        "primarni": false,
+        "jazyk": "en"
+      },
+      {
+        "nazev": "Прямий — Great Britain offered a \"nuclear umbrella\" to JEF countries",
+        "url": "https://prm.ua/en/great-britain-offered-a-nuclear-umbrella-to-jef-countries/",
+        "typ": "media",
+        "publikovano": "2026-10-01T00:00:00Z",
+        "primarni": false,
+        "jazyk": "en"
+      }
+    ],
+    "souvisejici": [],
+    "historie": [
+      {
+        "kdy": "2026-10-01T00:00:00Z",
+        "text": "Zachyceno automatickým sběrem, druhý zdroj doložen před zařazením do fronty.",
+        "novySignal": true
+      }
+    ],
+    "novy": true,
+    "zapocitanoTyden": "2026-10-01",
+    "aiZpracovano": true,
+    "lidskyOvereno": false,
+    "archivniZaznam": false,
+    "dopadNaCr": {
+      "stav": "zadny",
+      "procRelevantni": "Nabídka britské jaderné ochrany mimo NATO zemím JEF (mj. Pobaltí) je potenciální posun v bezpečnostní architektuře regionu, který Česko sleduje jako člen NATO.",
+      "dopad": "Česko není členem JEF, nabídka se ho přímo netýká; pro lidi v Česku ze zprávy dnes neplyne žádné omezení.",
+      "sledujeme": "Zda země JEF nabídku na listopadovém setkání v Oslu formálně přijmou.",
+      "overeno": "2026-10-01"
+    }
   }
 ]
