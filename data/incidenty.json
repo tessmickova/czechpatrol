@@ -13073,5 +13073,98 @@
       "overeno": "2026-09-30"
     },
     "overeni": "neovereno"
+  },
+  {
+    "id": "i-2026-09-30-rusko-zbrojovky-cile",
+    "slug": "rusko-zbrojovky-v-evrope-potencialni-cile-2026",
+    "titulek": "Rusko: zbrojovky v evropských zemích, které vyrábějí pro Ukrajinu, jsou podle ministerstva zahraničí potenciální vojenské cíle",
+    "kratkyTitulek": "Rusko označilo evropské zbrojovky pro Ukrajinu za potenciální cíle",
+    "zeme": "Rusko",
+    "kodZeme": "RU",
+    "kategorie": [
+      "diplomacie",
+      "rusko"
+    ],
+    "datumUdalosti": "2026-09-30T00:00:00Z",
+    "datumZjisteni": "2026-09-30T00:00:00Z",
+    "aktualizovano": "2026-10-01T11:30:00Z",
+    "zavaznost": "Y3",
+    "jistota": "vysoka",
+    "stav": "probiha",
+    "atribuce": "neznama",
+    "puvodce": null,
+    "druh": "reakce",
+    "fakta": [
+      "Mluvčí ruského ministerstva zahraničí Marija Zacharovová 30. září řekla, že továrny v evropských zemích vyrábějící zbraně pro Ukrajinu jsou pro Rusko potenciálními vojenskými cíli. Reagovala na otázku k možné výrobě střel Patriot pro Ukrajinu v Polsku.",
+      "Generální tajemník NATO Mark Rutte 1. října řekl, že bezprostřední hrozbu pro území NATO nevidí a že hodnocení ruské hrozby se nezměnilo.",
+      "Výrok přišel den poté, co agentura Reuters zveřejnila ruské varování NATO kvůli Kaliningradu."
+    ],
+    "neznameho": [
+      "Česko ani konkrétní továrnu Zacharovová podle zpráv agentur nejmenovala.",
+      "Žádný ověřený zdroj nehlásí rozkaz, výběr cíle ani vojenské přípravy k útoku na továrnu v zemi NATO."
+    ],
+    "vyznam": "",
+    "eskalacniSpousteče": [
+      "Útok nebo sabotáž v továrně vyrábějící zbraně pro Ukrajinu v zemi NATO."
+    ],
+    "deeskalacniSignaly": [
+      "Ruská strana výrok nezopakuje ani neupřesní."
+    ],
+    "zdroje": [
+      {
+        "nazev": "Reuters (Internazionale) — Russia says European arms factories supplying Ukraine are potential military targets",
+        "url": "https://www.internazionale.it/ultime-notizie-reuters/2026/09/30/russia-says-european-arms-factories-supplying-ukraine-are-potential-military-targets-for-moscow",
+        "typ": "media",
+        "publikovano": "2026-09-30T00:00:00Z",
+        "primarni": false,
+        "jazyk": "en"
+      },
+      {
+        "nazev": "Reuters (TBS News) — Russia says European arms factories supplying Ukraine are potential military targets",
+        "url": "https://www.tbsnews.net/world/russia-says-european-arms-factories-supplying-ukraine-are-potential-military-targets-moscow",
+        "typ": "media",
+        "publikovano": "2026-09-30T00:00:00Z",
+        "primarni": false,
+        "jazyk": "en"
+      },
+      {
+        "nazev": "Forces News — There is no imminent threat to Nato territory from Russia, Rutte insists",
+        "url": "https://www.forcesnews.com/nato/no-imminent-threat-nato-territory-russia-nato-chief-rutte-insists",
+        "typ": "media",
+        "publikovano": "2026-10-01T00:00:00Z",
+        "primarni": false,
+        "jazyk": "en"
+      },
+      {
+        "nazev": "Euronews — Rutte tells Russia to stop nuclear threats",
+        "url": "https://www.euronews.com/video/2026/10/01/europe-today-rutte-tells-russia-to-stop-nuclear-threats-at-euronews-defence-summit",
+        "typ": "media",
+        "publikovano": "2026-10-01T00:00:00Z",
+        "primarni": false,
+        "jazyk": "en"
+      }
+    ],
+    "souvisejici": [
+      {
+        "incidentId": "i-2026-09-30-rusko-non-paper-kaliningrad",
+        "potvrzena": false,
+        "popis": "Ruské varování NATO kvůli Kaliningradu den předtím."
+      }
+    ],
+    "historie": [
+      {
+        "kdy": "2026-09-30T00:00:00Z",
+        "text": "Výrok na tiskovém brífinku ruského ministerstva zahraničí.",
+        "novySignal": true
+      },
+      {
+        "kdy": "2026-10-01T00:00:00Z",
+        "text": "Rutte: bezprostřední hrozbu pro území NATO nevidí.",
+        "novySignal": false
+      }
+    ],
+    "novy": true,
+    "aiZpracovano": true,
+    "lidskyOvereno": true
   }
 ]
