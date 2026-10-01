@@ -1,5 +1,5 @@
 {
-  "kdy": "2026-10-01T00:01:08.655Z",
+  "kdy": "2026-10-01T00:47:10.267Z",
   "zdroje": [
     {
       "klic": "e-sbirka",
@@ -168,10 +168,11 @@
     },
     {
       "klic": "celni-sprava",
-      "ok": true,
-      "stav": 200,
+      "ok": false,
+      "stav": null,
       "pocetPolozek": 0,
-      "vysledek": "ok"
+      "chyba": "fetch failed",
+      "vysledek": "chyba"
     },
     {
       "klic": "sujb",
@@ -225,10 +226,11 @@
     },
     {
       "klic": "minv-sk",
-      "ok": true,
-      "stav": 200,
+      "ok": false,
+      "stav": null,
       "pocetPolozek": 0,
-      "vysledek": "ok"
+      "chyba": "fetch failed",
+      "vysledek": "chyba"
     },
     {
       "klic": "chmi-cap",
@@ -245,5 +247,5 @@
       "vysledek": "ok"
     }
   ],
-  "novychVeFronte": 3
+  "novychVeFronte": 0
 }
