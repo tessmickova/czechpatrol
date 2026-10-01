@@ -24,6 +24,16 @@ describe("výběr zpráv o internetu", () => {
     expect(druhZpravy("Policie varuje před podvodnými SMS jménem České pošty")).toBe("podvod");
     expect(druhZpravy("Výpadek bankovní aplikace, hlásí Downdetector")).toBe("vypadek");
     expect(druhZpravy("Fotbalová liga začíná")).toBeNull();
+    // Běžné zprávy z obecných kanálů do banneru o internetu nepatří.
+    expect(druhZpravy("Soud poslal podvodníka, který okradl seniory, do vězení")).toBeNull();
+    expect(druhZpravy("Výpadek proudu zasáhl tři obce na Vysočině")).toBeNull();
+    expect(druhZpravy("Přetížená urgentní příjmová oddělení nemocnic")).toBeNull();
+    expect(druhZpravy("Muž byl napaden v tramvaji")).toBeNull();
+    expect(druhZpravy("Pozor na falešné e-shopy s levnou elektronikou")).toBe("podvod");
+    expect(druhZpravy("Hackeři zahltili weby krajů")).toBe("ddos");
+    expect(druhZpravy("Hackeři napadli systém nemocnice ransomwarem")).toBe("utok");
+    expect(druhZpravy("Útočníci zahltili weby ministerstev")).toBe("ddos");
+    expect(druhZpravy("Výpadek bankovnictví ČSOB, klienti se nemohou přihlásit")).toBe("vypadek");
   });
   it("jen české, jen čerstvé, bez duplicit; úřad se pozná podle vydavatele", () => {
     const v = vyberZpravy([
@@ -78,5 +88,27 @@ describe("internet v Telegramu", () => {
   });
   it("rozhlas se spustí i při změně dat o internetu", () => {
     expect(fs.readFileSync(".github/workflows/rozhlas.yml", "utf-8")).toContain('"data/kyber.json"');
+  });
+});
+
+describe("zdroje pro internet", () => {
+  it("přímé kanály úřadů a médií, žádné vyhledávání Google News (robots.txt ho zakazuje)", async () => {
+    const { zdrojeKyber } = await import("../sber/kyber");
+    const z = zdrojeKyber();
+    expect(z.length).toBeGreaterThanOrEqual(12);
+    expect(z.some((x) => x.klic === "nukib-rss" && x.primarni)).toBe(true);
+    expect(z.every((x) => !x.url.includes("news.google.com"))).toBe(true);
+  });
+  it("přímý kanál: vydavatel ze zdroje, úřad podle zdroje", () => {
+    const v = vyberZpravy([{ nadpis: "Upozornění na podvodné SMS jménem Policie ČR", odkaz: "https://www.policie.cz/x", publikovano: new Date(ted - 3_600_000).toISOString(), zdroj: "Policie ČR", uredniZdroj: true }], ted);
+    expect(v[0]).toMatchObject({ vydavatel: "Policie ČR", uredni: true, druh: "podvod" });
+  });
+});
+
+describe("hromadný výpadek zdrojů se nahlásí", () => {
+  it("od čtvrtiny katalogu; řekne, kolik zakazuje robots.txt", async () => {
+    const { zpravaOVypadku } = await import("../sber/udalosti");
+    expect(zpravaOVypadku(100, Array(10).fill("HTTP 500"))).toBeNull();
+    expect(zpravaOVypadku(100, [...Array(30).fill("robots.txt stahování nepovoluje"), "HTTP 500"])).toBe("Sběr událostí: nečte se 31 z 100 zdrojů, z toho 30 zakazuje robots.txt. Bez nich sběr může přehlédnout události.");
   });
 });

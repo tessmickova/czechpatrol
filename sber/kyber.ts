@@ -1,53 +1,62 @@
 import fs from "node:fs";
 import path from "node:path";
-import { ctiRss, stahniSeSvolenim } from "./nacti";
-import { stavKyber, vyberZpravy, type SnimekKyber } from "../src/lib/kyber";
+import { ctiRss, polozkyZeStranky, stahniSeSvolenim } from "./nacti";
+import { ZDROJE_UDALOSTI } from "./zdroje-udalosti";
+import { stavKyber, vyberZpravy, type PolozkaKyber, type SnimekKyber } from "../src/lib/kyber";
 import type { VysledekPokusu } from "../src/lib/prehled/typy";
 
 /*
   Bezpečnost na internetu v Česku (1. 10. 2026) — viz src/lib/kyber.ts.
 
-  Jen veřejné zprávy přes RSS Google News (česká vydání), čtené stejně jako
-  ostatní zdroje: přes robots.txt (stahniSeSvolenim) a se stropem velikosti.
-  Nic se neskenuje, nikam se nepřipojuje, žádný web se netestuje. Dotazy
-  míří na úřady (site:) i na témata; co do Česka nepatří, odfiltruje
-  vyberZpravy. Neúspěšné čtení nikdy neudělá „klid“ — soubor zůstane
-  s posledním úspěchem.
+  Jen veřejné zprávy z vlastních kanálů úřadů a českých médií, čtené
+  stejně jako ostatní zdroje: přes robots.txt (stahniSeSvolenim) a se
+  stropem velikosti. Nic se neskenuje, nikam se nepřipojuje, žádný web
+  se netestuje.
+
+  Proč ne vyhledávání Google News: první běh 1. 10. 2026 ukázal, že
+  robots.txt Google News automatické čtení vyhledávacích kanálů
+  nepovoluje — a sběr se jím řídí. Přímé kanály médií to dovolují
+  a stejné kanály už používá sběr událostí (sber/zdroje-udalosti.ts).
+
+  Neúspěšné čtení nikdy neudělá „klid“ — soubor zůstane s posledním
+  úspěchem a web ho po dni přestane ukazovat.
 */
 
-const gn = (dotaz: string) => `https://news.google.com/rss/search?q=${encodeURIComponent(dotaz)}&hl=cs&gl=CZ&ceid=CZ:cs`;
+/** Klíče z katalogu sběru událostí — tam jsou adresy ověřené během. */
+export const KLICE_KYBER = ["nukib-rss", "policie-rss", "mvcr", "irozhlas", "cro-rss", "ct24", "novinky", "seznam-zpravy", "idnes", "ctk", "aktualne", "denikn"] as const;
 
-export const DOTAZY_KYBER = [
-  "site:nukib.gov.cz",
-  "site:csirt.cz",
-  "NÚKIB varování",
-  "DDoS útok weby",
-  "NoName057",
-  "kybernetický útok Česko",
-  "podvodné SMS varování",
-  "policie varuje podvodníci",
-  "phishing banka varování klienty",
-  "výpadek Downdetector",
-] as const;
+/* Technologická média, kde se o útocích píše nejdřív. Nejsou v katalogu událostí. */
+const DALSI = [
+  { klic: "lupa", nazev: "Lupa.cz", url: "https://www.lupa.cz/rss/clanky/", primarni: false },
+  { klic: "zive", nazev: "Živě.cz", url: "https://www.zive.cz/rss/sc-47/", primarni: false },
+];
+
+export function zdrojeKyber() {
+  const z = KLICE_KYBER.map((k) => ZDROJE_UDALOSTI.find((x) => x.klic === k)).filter((x): x is NonNullable<typeof x> => Boolean(x));
+  return [...z.map((x) => ({ klic: x.klic, nazev: x.nazev.split(" — ")[0], url: x.url, primarni: x.primarni })), ...DALSI];
+}
 
 const SOUBOR = path.join(process.cwd(), "data", "kyber.json");
 const ARCHIV = path.join(process.cwd(), "data", "kyber-archiv.json");
 
 export async function sbirejKyber(ted: string): Promise<{ vysledek: VysledekPokusu; pocet: number; chyba?: string }> {
-  const polozky: ReturnType<typeof ctiRss> = [];
+  const polozky: PolozkaKyber[] = [];
+  const zdroje = zdrojeKyber();
   let precteno = 0;
   const chyby: string[] = [];
-  for (const d of DOTAZY_KYBER) {
+  for (const z of zdroje) {
     try {
-      const { stav, telo } = await stahniSeSvolenim(gn(d), 2);
-      if (stav >= 400) { chyby.push(`${d}: ${stav === 999 ? "robots.txt" : `HTTP ${stav}`}`); continue; }
-      polozky.push(...ctiRss(telo));
+      const { stav, telo } = await stahniSeSvolenim(z.url, 2);
+      if (stav >= 400) { chyby.push(`${z.klic}: ${stav === 999 ? telo : `HTTP ${stav}`}`); continue; }
+      let p = ctiRss(telo);
+      if (!p.length && /<a\b/i.test(telo)) p = polozkyZeStranky(telo, z.url);
+      polozky.push(...p.map((x) => ({ ...x, zdroj: z.nazev, uredniZdroj: z.primarni })));
       precteno++;
     } catch (e) {
-      chyby.push(`${d}: ${e instanceof Error ? e.message : e}`);
+      chyby.push(`${z.klic}: ${e instanceof Error ? e.message : e}`);
     }
   }
-  if (!precteno) return { vysledek: "chyba", pocet: 0, chyba: chyby.slice(0, 3).join("; ") };
+  if (!precteno) return { vysledek: "chyba", pocet: 0, chyba: chyby.slice(0, 4).join("; ") };
   const tedMs = new Date(ted).getTime();
   const zpravy = vyberZpravy(polozky, tedMs);
   const snimek: SnimekKyber = { aktualizovano: ted, nacteno: ted, stav: stavKyber(zpravy, tedMs), zpravy };
@@ -60,6 +69,6 @@ export async function sbirejKyber(ted: string): Promise<{ vysledek: VysledekPoku
   const zname = new Set(archiv.map((z) => z.id));
   const doplnene = [...zpravy.filter((z) => !zname.has(z.id)), ...archiv].sort((a, b) => b.kdy.localeCompare(a.kdy)).slice(0, 1000);
   fs.writeFileSync(ARCHIV, JSON.stringify(doplnene, null, 2) + "\n", "utf-8");
-  console.log(`[sber] internet: ${snimek.stav}, zpráv ${zpravy.length}, dotazů ${precteno}/${DOTAZY_KYBER.length}${chyby.length ? ` (chyby: ${chyby.slice(0, 3).join("; ")})` : ""}`);
-  return { vysledek: "ok", pocet: zpravy.length };
+  console.log(`[sber] internet: ${snimek.stav}, zpráv ${zpravy.length}, zdrojů ${precteno}/${zdroje.length}${chyby.length ? ` (chyby: ${chyby.join("; ")})` : ""}`);
+  return { vysledek: "ok", pocet: zpravy.length, chyba: chyby.length ? chyby.slice(0, 4).join("; ") : undefined };
 }

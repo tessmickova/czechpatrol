@@ -3,7 +3,7 @@
 
   Útoky přetížením webů (DDoS), vlny podvodných zpráv a výpadky služeb —
   srozumitelně pro seniora i dítě. Sběr (sber/kyber.ts) čte jen veřejné
-  zprávy úřadů a médií přes RSS; nic neskenuje, na nic se nepřipojuje
+  zprávy úřadů a médií z jejich vlastních kanálů; nic neskenuje, na nic se nepřipojuje
   a robots.txt dodržuje. Downdetector se nečte: jeho podmínky automatické
   stahování zakazují. Výpadek, o kterém Downdetector píše, se k nám dostane
   přes média, která ho citují.
@@ -37,11 +37,18 @@ export interface SnimekKyber {
 /** Úřady, jejichž varování má vlastní váhu. Pozná se podle vydavatele v titulku Google News. */
 const URADY = /\b(NÚKIB|Národní úřad pro kybernetickou|CSIRT|Policie ČR|Policie České republiky|policie\.cz|ČNB|Česká národní banka|Ministerstvo vnitra|Ministerstvo|vláda ČR|gov\.cz)\b/i;
 
-const PRAVIDLA: [DruhKyber, RegExp][] = [
-  ["ddos", /\bddos|přetěž|zahlcen|noname0?57|ddosia/i],
-  ["podvod", /podvod|phishing|smishing|vishing|falešn[áéýí]|podvrž|scam|spoofing|vydáv(á|ají|al|ali) se za/i],
-  ["vypadek", /výpad|nefunguj|nedostupn|downdetector|nejde (se )?přihlásit/i],
-  ["utok", /kybernetick|hacker|ransomware|únik dat|uniklo|napaden/i],
+/*
+  Druh zprávy: klíčové slovo A ZÁROVEŇ souvislost s internetem. Obecné
+  zpravodajské kanály jsou plné „podvodníků“ u soudu, výpadků proudu
+  a přetížených nemocnic — to do banneru o internetu nepatří.
+*/
+const INTERNET = /internet|online|e-?shop|on-line|web|stránk|server|aplikac|e-?mail|sms|zpráv[auy]? |odkaz|účt|bankovnictv|messenger|whatsapp|facebook|instagram|telegram|sociální síť|kyber|hacker|data|digitáln|platební kart|mobil|telefon/i;
+
+const PRAVIDLA: [DruhKyber, RegExp, RegExp | null][] = [
+  ["ddos", /\bddos|noname0?57|ddosia|(přetěž|přetíž|zahlcen|zahlt)\S*\s+(\S+\s+){0,3}(web|server|stránk|portál|internet)/i, null],
+  ["podvod", /phishing|smishing|vishing|spoofing|podvodn[éáýíou]\S*\s+(\S+\s+){0,2}(sms|e-?mail|zpráv|hovor|web|stránk|odkaz|aplikac|reklam|inzer)|falešn\S*\s+(\S+\s+){0,2}(sms|e-?mail|zpráv|web|stránk|bank|e-?shop|profil|účet)|vydáv(á|ají|al|ali) se za/i, INTERNET],
+  ["vypadek", /výpad|nefunguj|nedostupn|downdetector|nejde (se )?přihlásit/i, /internet|web|stránk|server|aplikac|bankovnictv|platb|síť|signál|mobil|e-?mail|datov|portál|systém/i],
+  ["utok", /kybernetick\S*\s+útok|kyberútok|hacker|ransomware|únik\S*\s+(\S+\s+){0,2}dat/i, null],
 ];
 
 /** Zpráva se týká Česka: česká instituce, firma, město nebo .cz. */
@@ -54,7 +61,7 @@ export function rozdelTitulek(nadpis: string): { titulek: string; vydavatel: str
 }
 
 export function druhZpravy(text: string): DruhKyber | null {
-  for (const [druh, vzor] of PRAVIDLA) if (vzor.test(text)) return druh;
+  for (const [druh, vzor, souvislost] of PRAVIDLA) if (vzor.test(text) && (!souvislost || souvislost.test(text))) return druh;
   return null;
 }
 
@@ -64,14 +71,26 @@ const klicTitulku = (t: string) => t.toLowerCase().normalize("NFD").replace(/[̀
  * Z položek RSS udělá zprávy: jen české, jen o útocích, podvodech a výpadcích,
  * jen posledních 7 dní, bez duplicit (stejný titulek z více dotazů).
  */
-export function vyberZpravy(polozky: { nadpis: string; odkaz: string; publikovano: string | null; shrnuti?: string }[], ted: number): ZpravaKyber[] {
+export interface PolozkaKyber {
+  nadpis: string;
+  odkaz: string;
+  publikovano: string | null;
+  shrnuti?: string;
+  /** Název zdroje, když ho nenese titulek (přímý kanál média nebo úřadu). */
+  zdroj?: string;
+  /** Zdroj je úřad (NÚKIB, policie, ministerstvo). */
+  uredniZdroj?: boolean;
+}
+
+export function vyberZpravy(polozky: PolozkaKyber[], ted: number): ZpravaKyber[] {
   const videno = new Set<string>();
   const vysledek: ZpravaKyber[] = [];
   for (const p of polozky) {
     if (!p.publikovano || !/^https:\/\//.test(p.odkaz)) continue;
     const kdy = new Date(p.publikovano).getTime();
     if (!(kdy <= ted + 3_600_000 && ted - kdy <= 7 * 86_400_000)) continue;
-    const { titulek, vydavatel } = rozdelTitulek(p.nadpis);
+    const rozdeleny = p.zdroj ? { titulek: p.nadpis.trim(), vydavatel: p.zdroj } : rozdelTitulek(p.nadpis);
+    const { titulek, vydavatel } = rozdeleny;
     const text = `${titulek} ${p.shrnuti ?? ""}`;
     const druh = druhZpravy(text);
     if (!druh) continue;
@@ -79,7 +98,7 @@ export function vyberZpravy(polozky: { nadpis: string; odkaz: string; publikovan
     const klic = klicTitulku(titulek);
     if (!klic || videno.has(klic)) continue;
     videno.add(klic);
-    vysledek.push({ id: klic.replace(/ /g, "-").slice(0, 60), druh, titulek: titulek.slice(0, 200), vydavatel, odkaz: p.odkaz, kdy: new Date(kdy).toISOString(), uredni: URADY.test(vydavatel ?? "") });
+    vysledek.push({ id: klic.replace(/ /g, "-").slice(0, 60), druh, titulek: titulek.slice(0, 200), vydavatel, odkaz: p.odkaz, kdy: new Date(kdy).toISOString(), uredni: p.uredniZdroj === true || URADY.test(vydavatel ?? "") });
   }
   return vysledek.sort((a, b) => b.kdy.localeCompare(a.kdy)).slice(0, 30);
 }
@@ -130,4 +149,4 @@ export const TIPY_KYBER = [
   "Pochybujete? Zavolejte bance nebo blízkému sami — na číslo, které znáte.",
 ] as const;
 
-export const ZDROJE_KYBER_POPIS = "Úřady (NÚKIB, CSIRT.CZ, Policie ČR, ČNB) a česká média, automaticky přes Google News. Jen veřejné zprávy, nic neskenujeme.";
+export const ZDROJE_KYBER_POPIS = "Úřady (NÚKIB, Policie ČR, Ministerstvo vnitra) a česká média z jejich vlastních kanálů. Jen veřejné zprávy, nic neskenujeme.";
