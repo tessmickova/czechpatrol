@@ -1,5 +1,39 @@
 [
   {
+    "id": "k-006e908b4816b2d7",
+    "zachyceno": "2026-10-01T04:03:19.480Z",
+    "publikovano": "2026-10-01T02:21:15.000Z",
+    "zdroj": {
+      "nazev": "France 24 (anglicky)",
+      "url": "https://www.france24.com/en/europe/20261001-russia-launches-major-attack-on-ukraine-energy-grid-causing-power-cuts",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Russia launches major attack on Ukraine’s energy grid, causing power cuts",
+    "titulekPuvodni": "Russia launches major attack on Ukraine’s energy grid, causing power cuts",
+    "shrnuti": "Russia launched its heaviest combined assault on Ukraine’s energy infrastructure in months on Wednesday, killing seven people and triggering emergency power cuts in Kyiv and nearby regions. The strikes came as officials warned of a difficult winter as Russian forces target power and heating systems.",
+    "kodZeme": "UA",
+    "zeme": "Ukrajina",
+    "kategorie": [
+      "hybridni",
+      "rusko"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "attack on",
+      "russia"
+    ],
+    "naliehave": null,
+    "stav": "ceka",
+    "vyrez": {
+      "text": "Russia launches major attack on Ukraine’s energy grid, causing power cuts - France 24\nSkip to main content\nAdvertising\nRussia launches major attack on Ukraine’s energy grid, causing power cuts\nEurope\nRussia launched its heaviest combined assault on Ukraine’s energy infrastructure in months on Wednesday, killing seven people and triggering emergency power cuts in Kyiv and nearby regions. The strikes came as officials warned of a difficult winter as Russian forces target power and heating systems.\nIssued on: 01/10/2026 - 04:21\n3 min Reading time\nShare\nBy:\nFRANCE 24\nElectricians restore the power grid in front of a destroyed private house where a 14-year-old was killed in an air attack in Vyshgorod on September 30, 2026. © Vladyslav Musiienko, AFP\nRussia unleashed a widely anticipated air campaign against Ukraine's energy grid on Wednesday, hitting power facilities and infrastructure around Kyiv and other regions in the heaviest combined attack on energy sites in months.\nThe strikes, in which Ukrainian officials said seven people were killed, followed days of intensifying drone barrages primarily on the capital, a prelude to what many Ukrainians expect to be a winter of attacks…",
+      "stazeno": "2026-10-01T04:03:22.236Z",
+      "stav": 200
+    }
+  },
+  {
     "id": "k-abf0440089c5d23b",
     "zachyceno": "2026-10-01T00:03:45.966Z",
     "publikovano": "2026-09-30T23:35:00.000Z",
@@ -12183,47 +12217,6 @@
       "duvod": "neudalost",
       "patriK": null,
       "poznamka": "Ukrajinský ministr zahraničí Sybiha komentuje útoky na mezinárodní firmy v Ukrajině; vyjádření/komentář, ne nový skutek."
-    }
-  },
-  {
-    "id": "k-f80a5f872482b00f",
-    "zachyceno": "2026-09-26T11:45:24.082Z",
-    "publikovano": "2026-09-26T11:21:45.000Z",
-    "zdroj": {
-      "nazev": "Aktuality.sk",
-      "url": "https://www.aktuality.sk/clanok/kQ8vP4V/ukrajinsky-vojak-a-civilista-pasovali-brancov-na-slovensko-za-utek-pred-mobilizaciou-si-pytali-tisice-dolarov/",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Ukrajinský vojak a civilista pašovali brancov na Slovensko. Za útek pred mobilizáciou si pýtali tisíce dolárov",
-    "titulekPuvodni": "Ukrajinský vojak a civilista pašovali brancov na Slovensko. Za útek pred mobilizáciou si pýtali tisíce dolárov",
-    "shrnuti": "Vojak cez známych verboval záujemcov o útek z Ukrajiny a civilista ich viedol na nelegálny prechod na Slovensko. Polícia ich prichytila pri preberaní platby.",
-    "kodZeme": "SK",
-    "zeme": "Slovensko",
-    "kategorie": [
-      "hranice",
-      "vojsko"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "zeSite": null,
-    "shody": [
-      "prechod+vojak",
-      "vojak+mobiliz",
-      "vojak"
-    ],
-    "naliehave": null,
-    "stav": "vyrizen",
-    "vyrez": {
-      "text": "Ukrajinský vojak a civilista pašovali brancov na Slovensko. Za útek pred mobilizáciou si pýtali tisíce dolárov | Aktuality.sk\nAktuality\nŠport\nDiva\nNajmama\nŽivé\nRecepty\nDobrú chuť\nSlovník\n17 °C -\nBratislava\nsobota 26. 9.\n26. 9.\nEdita\nKrimi dnes 26. Sep 2026 o 13:21\n1 min. čítania\nPridať do Google\nUkrajinský vojak a civilista pašovali brancov na Slovensko. Za útek pred mobilizáciou si pýtali tisíce dolárov\n1 fotka v galérii\nUkrajinská vlajka. Zdroj: Nina Liashonok/Ukrinform/ABACAPRESS.COM\nTASR\nAktuality.sk\nUložiť článok\nVojak cez známych verboval záujemcov o útek z Ukrajiny a civilista ich viedol na nelegálny prechod na Slovensko. Polícia ich prichytila pri preberaní platby.\nVojak a civilista, ktorí boli súčasťou organizovanej skupiny, zabezpečovali nelegálny prechod osôb podliehajúcich vojenskej povinnosti z Ukrajiny na Slovensko, informovala v piatok ukrajinská generálna prokuratúra. Zároveň dodala, že za túto „službu“ si pýtali 8500 amerických dolárov (v prepočte 7450 eur), píše TASR.\nOrgány v rámci vyšetrovania zistili, že vojak prostredníctvom blízkych osôb vyhľadával záujemcov o nelegálne prekročenie hranice. Jeho komplic ich mal zase dopraviť na vopred určené miesto v…",
-      "stazeno": "2026-09-26T11:45:26.597Z",
-      "stav": 200
-    },
-    "vyrizeni": {
-      "kdy": "2026-09-26T18:00:49.457Z",
-      "duvod": "neudalost",
-      "patriK": null,
-      "poznamka": "Reportáž o ukrajinském vojákovi (titulek useknutý); podle dostupného kontextu lidský příběh, ne bezpečnostní skutek."
     }
   }
 ]
