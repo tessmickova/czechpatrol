@@ -125,7 +125,7 @@ export function HeroDashboard({
           <Znacka velikost={26} tmave />
           <span className="stitek-znacky">{t("Bezpečnostní přehled")}</span>
         </div>
-        <h1 className="titul-sekce pb-3">{t("Hlídáme zdroje, včas upozorníme")}</h1>
+        <h1 className="titul-sekce pb-3">{t("Bezpečnostní hlídka pro Česko")}</h1>
       </div>
       {/*
         Jedna věta, kterou má čtenář odnést, i kdyby dál nečetl. Nic pod ní:

@@ -566,7 +566,7 @@ export function Dashboard({
               <Znacka velikost={26} tmave />
               <span className="stitek-znacky">{t("Bezpečnostní přehled")}</span>
             </div>
-            <h1 className="titul-sekce">{t("Hlídáme zdroje, včas upozorníme")}</h1>
+            <h1 className="titul-sekce">{t("Bezpečnostní hlídka pro Česko")}</h1>
             {/*
               Rychlý přehled (26. 9. 2026) nahrazuje větu z úředního stavu.
               Ta tvrdila „v kontrolovaných zdrojích žádné celostátní omezení“
