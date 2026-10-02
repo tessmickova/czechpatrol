@@ -652,6 +652,17 @@ input[type="range"] { accent-color: var(--color-akcent); }
   body { background: #fff; color: #000; }
 }
 
+/* Letáky „Co dělat“ (3. 10. 2026): každý na vlastní stránku, černobíle, bez lišt webu. */
+@media print {
+  body:has(.letak) header, body:has(.letak) nav, body:has(.letak) footer, body:has(.letak) [role="status"], body:has(.letak) [role="dialog"], body:has(.letak) .souhlas-lista { display: none !important; }
+  body:has(.letak) .vrstva { display: none !important; }
+  body:has(.letak) { background: #fff !important; }
+  .letak { break-after: page; break-inside: avoid; background: #fff !important; border-color: #000 !important; }
+  .letak, .letak * { color: #000 !important; }
+  .letak li { border-color: #000 !important; background: #fff !important; }
+  .letak .bg-akcent { background: #000 !important; color: #fff !important; }
+}
+
 /*
   Plná červená tlačítka ve světlém režimu (revize 24. 9. 2026).
   Bílý text na akcentu #e8484f má 3,8:1; na akcent-tmava #c1272d 5,8:1.

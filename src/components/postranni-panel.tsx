@@ -29,6 +29,7 @@ export const HLAVNI_STRANKY: { href: string; label: string; ikona: NazevIkony; p
   { href: "/zeme/", label: "Země", ikona: "vlajka", popis: "přehled a počty pro každou sledovanou zemi" },
   { href: "/analyzy/", label: "Analýzy", ikona: "graf", popis: "vývoj v čase, cíle aktérů, metodika" },
   { href: "/pripravenost/", label: "Jsem připraven/a?", ikona: "fajfka", popis: "oficiální nástroje a co si nastavit předem" },
+  { href: "/letaky/", label: "Letáky: co dělat", ikona: "sirena", popis: "tóny sirén, výstraha, nález trosek — k tisku" },
   { href: "/zkusenosti/", label: "Zkušenosti z Ukrajiny", ikona: "kniha", popis: "co ve válce přestalo fungovat a jak si lidé poradili" },
 ];
 

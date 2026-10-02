@@ -6,6 +6,7 @@ import { OdkazNastaveniAnalytiky } from "./souhlas-analytika";
 import { KOMUNITA, METODIKA_REVIDOVANA, WEB, SPUSTENO } from "@/config/web";
 import { datum } from "@/lib/format";
 import { Logo } from "./znacka";
+import { Vlna } from "./letaky";
 import { useT } from "@/lib/i18n";
 
 const SLOUPCE: { nadpis: string; odkazy: [string, string][] }[] = [
@@ -37,6 +38,18 @@ export function Paticka() {
     <footer className="neni-tisk pb-6">
       <div className="mx-auto max-w-[1280px] px-4 sm:px-6">
       <div className="noc rounded-[28px] px-6 py-10 sm:px-8">
+        {/*
+          Na každé stránce (3. 10. 2026): co znamená kolísavý tón sirény.
+          Jedna věta, kterou má znát každý — a odkaz na letáky a kvíz.
+        */}
+        <Odkaz href="/letaky/" className="mb-8 flex flex-col gap-2 rounded-[18px] sm:flex-row sm:items-center sm:gap-4 border border-white/15 bg-white/[0.04] px-4 py-3 transition-colors hover:bg-white/[0.08]">
+          <Vlna tvar="kolisavy" trida="h-7 w-28 shrink-0 text-akcent" />
+          <span className="min-w-0 flex-1 text-zaklad leading-snug text-noc-text">
+            <b className="font-semibold">{t("Kolísavý tón sirény = všeobecná výstraha.")}</b>{" "}
+            <span className="text-noc-tlum">{t("Jděte dovnitř, zavřete okna, zapněte rádio.")}</span>
+          </span>
+          <span className="text-male font-semibold text-akcent-svetla">{t("Letáky a kvíz →")}</span>
+        </Odkaz>
         {/* Mobil: odkazy po dvou sloupcích — jeden sloupec byl přes 1 100 px dlouhý (26. 9. 2026). */}
         <div className="grid grid-cols-2 gap-x-6 gap-y-8 md:grid-cols-[minmax(0,1.4fr)_repeat(3,minmax(0,1fr))] md:gap-10">
           <div className="col-span-2 md:col-span-1">
