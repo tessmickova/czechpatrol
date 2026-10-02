@@ -454,3 +454,25 @@ describe("poškozená ostraha hranice", () => {
     }
   });
 });
+
+describe("síto rozumí jazykům kanálů, které čte (2. 10. 2026)", async () => {
+  const { duvodOdmitnuti, odhadniZemi } = await import("../sber/udalosti");
+  it("rumunsky: dron spadl u Tulcey — 2. 10. propadl jako „bez skutku“", () => {
+    for (const t of [
+      "Incendiu izbucnit în județul Tulcea după ce o dronă a căzut vineri dimineață în zona Plauru",
+      "Alertă în Tulcea: Un obiect, posibil o dronă, ar fi căzut în apropierea graniței. Precizările MApN",
+      "MApN: o dronă a încălcat spațiul aerian al României lângă Chilia Veche",
+    ]) {
+      expect(duvodOdmitnuti(t)).toBeNull();
+      expect(odhadniZemi(t)?.kod).toBe("RO");
+    }
+  });
+  it("polsky a německy", () => {
+    expect(duvodOdmitnuti("Dron spadł pod Lublinem, policja zabezpiecza teren w Polsce")).toBeNull();
+    expect(duvodOdmitnuti("Rosyjski dron naruszył polską przestrzeń powietrzną")).toBeNull();
+    expect(duvodOdmitnuti("Drohne in der Nähe der Bundeswehr-Kaserne abgestürzt")).toBeNull();
+  });
+  it("nová slova nedělají Rumunsko z „romantiky“", () => {
+    expect(odhadniZemi("Romantická večeře v Praze")?.kod).not.toBe("RO");
+  });
+});

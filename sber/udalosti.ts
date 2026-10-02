@@ -395,8 +395,9 @@ const AKTY_KOMBINACE: { kategorie: string; a: string[]; b: string[]; c?: string[
       o narušení vzdušného prostoru píše.
     */
     kategorie: "drony",
-    a: ["violat", "narusil", "narusila", "narusily", "breach", "incursion"],
-    b: ["airspace", "vzdusny prostor", "vzdusneho prostoru"],
+    a: ["violat", "narusil", "narusila", "narusily", "breach", "incursion",
+      /* rumunsky, polsky, německy (2. 10. 2026) */ "incalcat", "patrun", "narusz", "verletz"],
+    b: ["airspace", "vzdusny prostor", "vzdusneho prostoru", "spatiul aerian", "spatiului aerian", "przestrzen powietrzn", "przestrzeni powietrzn", "luftraum"],
   },
   {
     /*
@@ -412,9 +413,16 @@ const AKTY_KOMBINACE: { kategorie: string; a: string[]; b: string[]; c?: string[
       přívlastek („zřítil se podezřelý dron“) a slova skloňuje.
     */
     kategorie: "drony",
-    a: ["dron", "drone", "uav", "bezpilotn"],
+    a: ["dron", "drone", "drohne", "uav", "bezpilotn"],
     b: ["zritil", "spadl", "havaroval", "nalezen", "nalezli", "naslo", "patraji", "patrala",
-      "dopadl", "zasahl", "crashed", "crashes", "fell", "recovered"],
+      "dopadl", "zasahl", "crashed", "crashes", "fell", "recovered",
+      /*
+        Rumunsky, polsky, německy (2. 10. 2026). Kanály v těchto jazycích čte
+        sběr od 23. 9., ale síto znalo jen česká a anglická slovesa — a tak
+        2. 10. zahodilo jako „bez skutku“ dron, který spadl a způsobil požár
+        u Plauru v župě Tulcea („a căzut“), ačkoli o něm psaly Digi24 i G4Media.
+      */
+      "cazut", "prabusit", "gasit", "gasita", "spadł", "rozbił", "znalezion", "odnalezion", "abgesturzt", "absturz", "gefunden"],
   },
   {
     /*
@@ -429,7 +437,7 @@ const AKTY_KOMBINACE: { kategorie: string; a: string[]; b: string[]; c?: string[
       je každodenní doprava.
     */
     kategorie: "drony",
-    a: ["dron", "drone", "uav", "bezpilotn"],
+    a: ["dron", "drone", "drohne", "uav", "bezpilotn"],
     b: ["letist", "airport", "flights", "lety", "letovy provoz", "leteckeho provozu", "leteckou dopravu", "air traffic"],
     c: ["disrupt", "suspend", "halt", "closed", "closure", "divert", "uzavr", "prerus", "pozastav", "zastav", "omez", "stopped"],
   },
@@ -443,8 +451,8 @@ const AKTY_KOMBINACE: { kategorie: string; a: string[]; b: string[]; c?: string[
       ani „sestřelen". Nález trosek je doklad, že dron na území byl.
     */
     kategorie: "drony",
-    a: ["debris", "wreckage", "fragment", "trosk", "ulomk", "remains of"],
-    b: ["dron", "drone", "uav", "bezpilotn", "missile", "strel", "raket", "geran", "shahed", "gerbera"],
+    a: ["debris", "wreckage", "fragment", "trosk", "ulomk", "remains of", "resturi", "szczątk", "szczatk", "trummer"],
+    b: ["dron", "drone", "drohne", "uav", "bezpilotn", "missile", "strel", "raket", "geran", "shahed", "gerbera"],
   },
   {
     /*
@@ -642,8 +650,8 @@ const ZEME: { kod: string; nazev: string; slova: string[]; presna?: string[] }[]
       */
       "cetin", "vypadky24"], presna: ["cr", "o2"] },
   { kod: "SK", nazev: "Slovensko", slova: ["slovak", "slovensk", "bratislav", "kosic"] },
-  { kod: "PL", nazev: "Polsko", slova: ["poland", "polish", "polsk", "polac", "warsaw", "varsav", "rzeszow", "gdansk"] },
-  { kod: "DE", nazev: "Německo", slova: ["germany", "german", "nemeck", "berlin", "hamburg", "leipzig", "munich", "mnichov", "bundeswehr"] },
+  { kod: "PL", nazev: "Polsko", slova: ["poland", "polish", "polsk", "polac", "warsaw", "varsav", "rzeszow", "gdansk", /* polsky (2. 10. 2026) */ "polsce", "warszaw", "lublin"] },
+  { kod: "DE", nazev: "Německo", slova: ["germany", "german", "nemeck", "berlin", "hamburg", "leipzig", "munich", "mnichov", "bundeswehr", /* německy (2. 10. 2026) */ "deutschland", "munchen"] },
   { kod: "AT", nazev: "Rakousko", slova: ["austria", "rakousk", "vienna", "viden"] },
   { kod: "HU", nazev: "Maďarsko", slova: ["hungary", "hungarian", "madarsk", "budapest"] },
   { kod: "LT", nazev: "Litva", slova: ["lithuania", "litv", "vilnius", "klaipeda"] },
@@ -658,7 +666,7 @@ const ZEME: { kod: string; nazev: string; slova: string[]; presna?: string[] }[]
   { kod: "LU", nazev: "Lucembursko", slova: ["luxembourg", "luxemburg", "lucembur", "findel"] },
   { kod: "FR", nazev: "Francie", slova: ["france", "french", "francie", "francouz", "paris", "pariz", "elysee", "elysejsk"] },
   { kod: "GB", nazev: "Spojené království", slova: ["britain", "british", "united kingdom", "britsk", "britani", "velka britanie", "london", "londyn", "downing street"], presna: ["uk"] },
-  { kod: "RO", nazev: "Rumunsko", slova: ["romania", "rumunsk", "bucharest", "bukurest"] },
+  { kod: "RO", nazev: "Rumunsko", slova: ["romania", "rumunsk", "bucharest", "bukurest", /* rumunsky a pohraniční župy (2. 10. 2026) */ "romani", "bucurest", "tulcea", "constanta", "galati", "suceava"], presna: ["mapn"] },
   { kod: "BG", nazev: "Bulharsko", slova: ["bulgaria", "bulharsk", "sofia"] },
   { kod: "MD", nazev: "Moldavsko", slova: ["moldova", "moldav", "chisinau"] },
   { kod: "UA", nazev: "Ukrajina", slova: ["ukraine", "ukrainian", "ukrajin", "kyiv", "kyjev", "odesa", "lviv"] },
@@ -945,14 +953,30 @@ const NARAZ = 6;
   .strazce/zprava.txt; workflow ji pošle soukromě správkyni (nejvýš
   jednou za 6 hodin, nastroje/upozorni-spravce.mjs).
 */
-export function zpravaOVypadku(celkem: number, chyby: string[]): string | null {
-  if (!celkem || chyby.length / celkem < 0.25) return null;
-  const robots = chyby.filter((c) => /robots/i.test(c)).length;
-  return `Sběr událostí: nečte se ${chyby.length} z ${celkem} zdrojů${robots ? `, z toho ${robots} zakazuje robots.txt` : ""}. Bez nich sběr může přehlédnout události.`;
+export function zpravaOVypadku(celkem: number, chyby: { klic: string; chyba: string }[], drivejsiRobots: string[]): { zprava: string | null; robots: string[] } {
+  /*
+    Blokace robots.txt je trvalé rozhodnutí webu, ne výpadek — hlásí se
+    jen NOVĚ zablokované zdroje (jednou), jinak by zpráva chodila každých
+    6 hodin kvůli tematickému vyhledávání Google News, které je zakázané
+    od 23. 9. 2026. Ostatní chyby se hlásí, když jich je čtvrtina katalogu.
+  */
+  const robots = chyby.filter((c) => /robots/i.test(c.chyba)).map((c) => c.klic).sort();
+  const nove = robots.filter((k) => !drivejsiRobots.includes(k));
+  const ostatni = chyby.length - robots.length;
+  const casti: string[] = [];
+  if (celkem - robots.length > 0 && ostatni / (celkem - robots.length) >= 0.25) casti.push(`nečte se ${ostatni} z ${celkem - robots.length} dostupných zdrojů`);
+  if (nove.length) casti.push(`nově zakazuje čtení robots.txt u ${nove.length} zdrojů (${nove.slice(0, 5).join(", ")}${nove.length > 5 ? ", …" : ""})`);
+  return { zprava: casti.length ? `Sběr událostí: ${casti.join("; ")}. Bez nich sběr může přehlédnout události.` : null, robots };
 }
 
-function hlasHromadnyVypadek(celkem: number, chyby: string[]) {
-  const zprava = zpravaOVypadku(celkem, chyby);
+const SOUBOR_ROBOTS = path.join(process.cwd(), "data", "fronta", "robots-blokace.json");
+
+function hlasHromadnyVypadek(celkem: number, chyby: { klic: string; chyba: string }[]) {
+  let drivejsi: string[] | null = null;
+  try { drivejsi = JSON.parse(fs.readFileSync(SOUBOR_ROBOTS, "utf-8")); } catch { /* první běh */ }
+  // Při prvním běhu se jen zapamatuje dnešní stav — známé blokace už provozovatelka ví.
+  const { zprava, robots } = zpravaOVypadku(celkem, chyby, drivejsi ?? chyby.filter((c) => /robots/i.test(c.chyba)).map((c) => c.klic));
+  try { fs.writeFileSync(SOUBOR_ROBOTS, JSON.stringify(robots, null, 2) + "\n"); } catch { /* nevadí */ }
   if (!zprava) return;
   console.log(`::warning::${zprava}`);
   try {
@@ -960,6 +984,7 @@ function hlasHromadnyVypadek(celkem: number, chyby: string[]) {
     fs.appendFileSync(".strazce/zprava.txt", `${zprava}\n`);
   } catch { /* hlášení nesmí shodit sběr */ }
 }
+
 
 /** Zpracuje pole po dávkách, aby se nestahovalo všechno naráz. */
 async function poDavkach<T, R>(polozky: T[], kolik: number, f: (x: T) => Promise<R>): Promise<R[]> {
@@ -1180,7 +1205,7 @@ export async function sbirejUdalosti(): Promise<{ novych: number; celkem: number
   const chybyProfilu = profily.filter((v) => Boolean(v.chyba)).map((v) => `${v.profil.klic}: ${v.chyba}`);
 
   const nedostupne = [...stazene.filter((s) => !s.ok).map((s) => `${s.z.klic}: ${s.chyba}`), ...chybyProfilu];
-  hlasHromadnyVypadek(stazene.length, stazene.filter((s) => !s.ok).map((s) => String(s.chyba ?? "")));
+  hlasHromadnyVypadek(stazene.length, stazene.filter((s) => !s.ok).map((s) => ({ klic: s.z.klic, chyba: String(s.chyba ?? "") })));
   const stare = ctiKandidaty();
   const zname = znameZIncidentu();
   const hranice = Date.now() - DNI_ZPET * 86_400_000;
