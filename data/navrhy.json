@@ -1255,5 +1255,224 @@
       "sledujeme": "Zda bude zadržený muž obviněn a jak zadržení souvisí s předchozí pěticí.",
       "overeno": "2026-10-01"
     }
+  },
+  {
+    "kam": "zaznam",
+    "pripravil": "patrol",
+    "pripraveno": "2026-10-02T00:05:58.384Z",
+    "id": "i-2026-10-01-64d3f85c94",
+    "slug": "cz-64d3f85c94",
+    "titulek": "Česko: po zářijovém varování šéfa CIA před ruskými provokacemi chce premiér Babiš větší kontrolu nad rozvědkou ÚZSI, prezident Pavel prosazuje letouny Skyfox proti dronům",
+    "kratkyTitulek": "Česko: po zářijovém varování šéfa CIA před ruskými provokacemi chce premiér Babiš větší kontrolu nad rozvědkou ÚZSI, prezident Pavel prosazuje letouny Skyfox proti dronům",
+    "zeme": "Česko",
+    "kodZeme": "CZ",
+    "kategorie": [
+      "cr",
+      "hybridni"
+    ],
+    "datumUdalosti": "2026-10-01T00:00:00Z",
+    "datumZjisteni": "2026-10-01T00:00:00Z",
+    "aktualizovano": "2026-10-02T00:05:58.384Z",
+    "zavaznost": "Y1",
+    "jistota": "stredni",
+    "stav": "bez-vysetrovani",
+    "atribuce": "neznama",
+    "puvodce": null,
+    "druh": "reakce",
+    "fakta": [
+      "Podle Deníku N se v první zářijové týdnu 2026 v Praze konaly dvě bezpečnostní schůzky: ředitel americké CIA John Ratcliffe se setkal s premiérem Andrejem Babišem i s prezidentem Petrem Pavlem a varoval je před možnými ruskými provokacemi; Deník N si obsah u tří vysoce postavených zdrojů ověřil.",
+      "Podle Deníku N varování přimělo premiéra Babiše k tomu, aby usiloval o přímější vliv na civilní zpravodajskou službu ÚZSI.",
+      "Prezident Pavel podle Deníku N v reakci rozvíjí plán na nasazení českých cvičných letounů L-39 Skyfox k sestřelování dronů.",
+      "Pavel už 24. 9. 2026 veřejně řekl, že Česko může partnerům v NATO nabídnout letoun Skyfox pro protidronovou obranu — stroj je levný na provoz i pořízení a umí i průzkum, bojovou podporu a výcvik pilotů; nabídka by mohla zahrnovat i výcvik osádek a technickou podporu."
+    ],
+    "neznameho": [
+      "Přesné datum schůzek s ředitelem CIA — Deník N uvádí jen \"první zářijový týden\".",
+      "Přesný obsah CIA briefingu Deník N nezveřejnil, jen souhrn podle tří zdrojů; žádné oficiální vyjádření Úřadu vlády, Kanceláře prezidenta ani ÚZSI k obsahu schůzky.",
+      "Konkrétní podoba navrhované kontroly nad ÚZSI ani harmonogram nasazení Skyfoxů."
+    ],
+    "vyznam": "",
+    "eskalacniSpousteče": [],
+    "deeskalacniSignaly": [],
+    "zdroje": [
+      {
+        "nazev": "Deník N — Varování CIA rozhýbalo Pavla i Babiše. Premiér chce kontrolu nad rozvědkou, prezident prosazuje česká letadla proti dronům",
+        "url": "https://denikn.cz/2149990/varovani-cia-rozhybalo-pavla-i-babise-premier-chce-kontrolu-nad-rozvedkou-prezident-prosazuje-ceska-letadla-proti-dronum/",
+        "typ": "media",
+        "publikovano": "2026-10-01T00:00:00Z",
+        "primarni": false,
+        "jazyk": "cs"
+      },
+      {
+        "nazev": "České noviny (ČTK) — Pavel: ČR může nabídnout v NATO letoun Skyfox pro protidronovou obranu",
+        "url": "https://www.ceskenoviny.cz/zpravy/pavel-cr-muze-nabidnout-v-nato-letoun-skyfox-pro-protidronovou-obranu/2879057",
+        "typ": "wire",
+        "publikovano": "2026-09-24T00:00:00Z",
+        "primarni": false,
+        "jazyk": "cs"
+      }
+    ],
+    "souvisejici": [],
+    "historie": [
+      {
+        "kdy": "2026-10-01T00:00:00Z",
+        "text": "Zachyceno automatickým sběrem, druhý zdroj doložen před zařazením do fronty.",
+        "novySignal": true
+      }
+    ],
+    "novy": true,
+    "zapocitanoTyden": "2026-10-01",
+    "aiZpracovano": true,
+    "lidskyOvereno": false,
+    "archivniZaznam": false
+  },
+  {
+    "kam": "zaznam",
+    "pripravil": "patrol",
+    "pripraveno": "2026-10-02T00:05:58.384Z",
+    "id": "i-2026-10-01-abd37bf6fb",
+    "slug": "ua-abd37bf6fb",
+    "titulek": "Rusko zasáhlo dronem Institut jaderného výzkumu v Kyjevě, kde je výzkumný reaktor VVR-M; reaktor i radiační pozadí zůstaly podle úřadů bez změny",
+    "kratkyTitulek": "Rusko zasáhlo dronem Institut jaderného výzkumu v Kyjevě, kde je výzkumný reaktor VVR-M; reaktor i radiační pozadí zůstaly podle úřadů bez změny",
+    "zeme": "Ukrajina",
+    "kodZeme": "UA",
+    "kategorie": [
+      "drony",
+      "infrastruktura"
+    ],
+    "datumUdalosti": "2026-10-01T00:00:00Z",
+    "datumZjisteni": "2026-10-01T00:00:00Z",
+    "aktualizovano": "2026-10-02T00:05:58.384Z",
+    "zavaznost": "Y2",
+    "jistota": "vysoka",
+    "stav": "bez-vysetrovani",
+    "atribuce": "neznama",
+    "puvodce": "neznamy",
+    "druh": "pripad",
+    "fakta": [
+      "Ruský dron zasáhl ve středu 1. 10. 2026 po 18. hodině areál Institutu jaderného výzkumu Ukrajinské akademie věd v Kyjevě, kde se nachází výzkumný reaktor VVR-M, a způsobil požár, který byl záhy uhašen.",
+      "Podle oznámení Státní inspekce jaderného dohledu Ukrajiny nikdo neutrpěl zranění, samotný reaktor a bezpečnostní systémy zůstaly nepoškozené a radiační pozadí se nezměnilo, hodnoty jsou v přirozeném rozmezí.",
+      "Reaktor VVR-M slouží jako zdroj neutronů pro základní a aplikovaný výzkum v oblasti jaderné fyziky, ne k výrobě elektřiny."
+    ],
+    "neznameho": [
+      "Zda šlo o cílený zásah objektu s jaderným zařízením, nebo o náhodný dopad v rámci širšího útoku na Kyjev té noci.",
+      "Žádné úřední přisouzení viny Rusku za konkrétní zásah tohoto objektu ve zdrojích nezaznělo nad rámec obecného faktu, že jde o ruský dron."
+    ],
+    "vyznam": "",
+    "eskalacniSpousteče": [],
+    "deeskalacniSignaly": [],
+    "zdroje": [
+      {
+        "nazev": "Novinky.cz — Rusové zasáhli Institut jaderného výzkumu v Kyjevě, ohrozili reaktor",
+        "url": "https://www.novinky.cz/clanek/valka-na-ukrajine-rusove-zasahli-institut-jaderneho-vyzkumu-v-kyjeve-ohrozili-reaktor-40600368",
+        "typ": "media",
+        "publikovano": "2026-10-01T00:00:00Z",
+        "primarni": false,
+        "jazyk": "cs"
+      },
+      {
+        "nazev": "UNIAN — Россия нанесла удар по Институту ядерных исследований в Киеве: там находится реактор",
+        "url": "https://www.unian.net/war/rossiya-atakovala-institut-yadernyh-issledovaniy-v-kieve-voznik-pozhar-novosti-kieva-13515588.html",
+        "typ": "media",
+        "publikovano": "2026-10-01T00:00:00Z",
+        "primarni": false,
+        "jazyk": "ru"
+      }
+    ],
+    "souvisejici": [],
+    "historie": [
+      {
+        "kdy": "2026-10-01T00:00:00Z",
+        "text": "Zachyceno automatickým sběrem, druhý zdroj doložen před zařazením do fronty.",
+        "novySignal": true
+      }
+    ],
+    "novy": true,
+    "zapocitanoTyden": "2026-10-01",
+    "aiZpracovano": true,
+    "lidskyOvereno": false,
+    "archivniZaznam": false,
+    "dopadNaCr": {
+      "stav": "zadny",
+      "procRelevantni": "Zásah objektu s jaderným zařízením (výzkumný reaktor) je bezpečnostně citlivá kategorie, kterou projekt sleduje i mimo elektrárny.",
+      "dopad": "Pro lidi v Česku ze zprávy dnes neplyne žádné omezení; reaktor i radiační pozadí zůstaly podle úřadů bez změny.",
+      "sledujeme": "Zda se podobné zásahy u jaderných zařízení budou opakovat.",
+      "overeno": "2026-10-01"
+    }
+  },
+  {
+    "kam": "zaznam",
+    "pripravil": "patrol",
+    "pripraveno": "2026-10-02T00:05:58.384Z",
+    "id": "i-2026-10-01-e2866db524",
+    "slug": "md-e2866db524",
+    "titulek": "Moldavsko si předvolalo ruského velvyslance Ozerova za narušení vzdušného prostoru třemi drony 30. 9.; nejvážnější případ byl u vesnice Brănești",
+    "kratkyTitulek": "Moldavsko si předvolalo ruského velvyslance Ozerova za narušení vzdušného prostoru třemi drony 30. 9.; nejvážnější případ byl u vesnice Brănești",
+    "zeme": "Moldavsko",
+    "kodZeme": "MD",
+    "kategorie": [
+      "diplomacie",
+      "drony"
+    ],
+    "datumUdalosti": "2026-10-01T00:00:00Z",
+    "datumZjisteni": "2026-10-01T00:00:00Z",
+    "aktualizovano": "2026-10-02T00:05:58.384Z",
+    "zavaznost": "Y1",
+    "jistota": "vysoka",
+    "stav": "bez-vysetrovani",
+    "atribuce": "neznama",
+    "puvodce": null,
+    "druh": "aktualizace",
+    "fakta": [
+      "Moldavské ministerstvo zahraničí si 1. 10. 2026 předvolalo ruského velvyslance Olega Ozerova kvůli narušení vzdušného prostoru země třemi drony 30. 9. 2026 v souvislosti s rozsáhlými ruskými útoky na Ukrajinu.",
+      "Ministerstvo v prohlášení uvedlo: \"Tato porušení přímo ohrožují bezpečnost obyvatel Moldavska,\" a vyzvalo Rusko, aby \"okamžitě zastavilo útoky na Ukrajinu a jakékoli jednání ohrožující Moldavsko.\"",
+      "Nejvážnější z trojice incidentů nastal ve středu večer u vesnice Brănești v Orhejském okrese, kde dron typu Geran s proudovým motorem narazil do stromu a explodoval poblíž veřejné silnice; trosky se rozptýlily v okruhu asi 120 m.",
+      "Dvě další narušení 30. 9. ráno zahrnovala dron, který se zřítil u vesnice Hîrbovăț v okrese Anenii Noi (již dříve zveřejněný případ), a dron nad Lungou v Dubăsarském okrese.",
+      "Velvyslanec Ozerov podle ministerstva dříve připustil, že drony mohou být ruské, ale trval na tom, že jejich cílem je Ukrajina, ne Moldavsko."
+    ],
+    "neznameho": [
+      "Oficiální ruská reakce na předvolání velvyslance ve zdrojích chybí."
+    ],
+    "vyznam": "",
+    "eskalacniSpousteče": [],
+    "deeskalacniSignaly": [],
+    "zdroje": [
+      {
+        "nazev": "Ukrinform — Moldova summons Russian ambassador over airspace violations by Russian drones",
+        "url": "https://www.ukrinform.net/rubric-polytics/4170004-moldova-summons-russian-ambassador-over-airspace-violations-by-russian-drones.html",
+        "typ": "wire",
+        "publikovano": "2026-10-01T00:00:00Z",
+        "primarni": false,
+        "jazyk": "en"
+      },
+      {
+        "nazev": "NewsMaker — МИД Молдовы вызвал Озерова в связи с падением беспилотника в Орхейском районе",
+        "url": "https://newsmaker.md/ru/mid-moldovy-vyzval-ozerova-v-svyazi-s-padeniem-bespilotnika-v-orgeevskom-raione",
+        "typ": "media",
+        "publikovano": "2026-10-01T00:00:00Z",
+        "primarni": false,
+        "jazyk": "ru"
+      }
+    ],
+    "souvisejici": [],
+    "historie": [
+      {
+        "kdy": "2026-10-01T00:00:00Z",
+        "text": "Zachyceno automatickým sběrem, druhý zdroj doložen před zařazením do fronty.",
+        "novySignal": true
+      }
+    ],
+    "novy": true,
+    "zapocitanoTyden": "2026-10-01",
+    "aiZpracovano": true,
+    "lidskyOvereno": false,
+    "archivniZaznam": false,
+    "navazujeNa": "md-57a5e5c278",
+    "dopadNaCr": {
+      "stav": "zadny",
+      "procRelevantni": "Další diplomatický krok sledované země proti Rusku po narušení vzdušného prostoru drony.",
+      "dopad": "Pro lidi v Česku ze zprávy dnes neplyne žádné omezení.",
+      "sledujeme": "Oficiální ruskou reakci na předvolání velvyslance.",
+      "overeno": "2026-10-01"
+    }
   }
 ]
