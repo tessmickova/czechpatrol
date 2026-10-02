@@ -1,5 +1,38 @@
 [
   {
+    "id": "k-3d196c361ecc0803",
+    "zachyceno": "2026-10-02T22:03:40.252Z",
+    "publikovano": "2026-10-02T21:35:00.000Z",
+    "zdroj": {
+      "nazev": "Český rozhlas — domácí zprávy",
+      "url": "https://www.irozhlas.cz/zpravy-domov/valecny-zpravodaj-stomatova-schruger-medaile-predsedy-senatu_2610022335_zfr",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Stomatová a Schrüger: Dokončit tu práci a reportovat z Ukrajiny je důležitější, než že jsme unavení",
+    "titulekPuvodni": "Stomatová a Schrüger: Dokončit tu práci a reportovat z Ukrajiny je důležitější, než že jsme unavení",
+    "shrnuti": "„Čím déle tam jsem, tím větší mám strach, víc vnímám i ostřelování a nebezpečí, které přichází společně s ním. Občas je těžké ukočírovat vlastní emoce,“ říká válečná zpravodajka České televize na Ukrajině Darja Stomatová. Spolu s kameramanem Jánem Schrügerem převzala Stříbrnou medaili předsedy Senát",
+    "kodZeme": "CZ",
+    "zeme": "Česko",
+    "kategorie": [
+      "hybridni"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "ostrelovani"
+    ],
+    "naliehave": null,
+    "stav": "ceka",
+    "vyrez": {
+      "text": "",
+      "stazeno": "2026-10-02T22:03:43.971Z",
+      "stav": 403,
+      "chyba": "HTTP 403"
+    }
+  },
+  {
     "id": "k-ce31ad6169645d5c",
     "zachyceno": "2026-10-02T21:16:53.071Z",
     "publikovano": null,
@@ -12043,44 +12076,6 @@
       "duvod": "mimo-rozsah",
       "patriK": null,
       "poznamka": "Denní ruský útok na Ukrajině bez doloženého následku pro sledované země; běžný typ zprávy, mimo rozsah projektu."
-    }
-  },
-  {
-    "id": "k-7524de8d8d882c7e",
-    "zachyceno": "2026-09-29T00:03:24.696Z",
-    "publikovano": "2026-09-28T22:38:24.000Z",
-    "zdroj": {
-      "nazev": "Le Monde (Francie)",
-      "url": "https://www.lemonde.fr/international/live/2026/09/29/en-direct-guerre-en-ukraine-fortes-explosions-entendues-a-kiev-visee-par-des-missiles-balistiques-selon-l-armee-de-l-air-ukrainienne_6783795_3210.html",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "EN DIRECT, guerre en Ukraine : fortes explosions entendues à Kiev visée par des missiles balistiques, selon l’armée de l’air ukrainienne",
-    "titulekPuvodni": "EN DIRECT, guerre en Ukraine : fortes explosions entendues à Kiev visée par des missiles balistiques, selon l’armée de l’air ukrainienne",
-    "shrnuti": "D’après Volodymyr Zelensky, l’Académie nationale des sciences, une entreprise pharmaceutique et des stations-service ont déjà été touchées dans la journée, dans la capitale ukrainienne, ainsi qu’un centre d’affaires à Dnipro, faisant des victimes. L’Ukraine a aussi confirmé qu’un poste-frontière ava",
-    "kodZeme": "UA",
-    "zeme": "Ukrajina",
-    "kategorie": [
-      "sabotaz"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "zeSite": null,
-    "shody": [
-      "explosion"
-    ],
-    "naliehave": null,
-    "stav": "vyrizen",
-    "vyrez": {
-      "text": "Client Challenge\nA required part of this site couldn’t load. This may be due to a browser\nextension, network issues, or browser settings. Please check your\nconnection, disable any ad blockers, or try using a different browser.",
-      "stazeno": "2026-09-29T00:03:26.311Z",
-      "stav": 200
-    },
-    "vyrizeni": {
-      "kdy": "2026-09-29T02:13:33.713Z",
-      "duvod": "mimo-rozsah",
-      "patriK": null,
-      "poznamka": "Ruský raketový útok na Kyjev v noci na 29. 9.; uvnitř Ukrajiny, bez doloženého následku pro sledované země."
     }
   }
 ]
