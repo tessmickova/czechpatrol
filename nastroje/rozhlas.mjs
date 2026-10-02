@@ -545,7 +545,7 @@ export function sestavMimoradnou(i) {
   formátu“). Nadpis, nejvýš dvě doložená fakta, co nevíme a odkaz. Bez
   hodnocení, bez legendy — podrobnosti a zdroje jsou na webu.
 */
-export function sestavKratkouMimoradnou(i, nadpis) {
+export function sestavKratkouMimoradnou(i, nadpis, dalsi = []) {
   const uredne = i.lidskyOvereno || i.overeni === "automaticke";
   const fakta = (i.fakta ?? []).slice(0, 2).map((f) => `• ${esc(zkrat(String(f), 260))}`);
   const nevime = (i.neznameho ?? [])[1] ?? (i.neznameho ?? [])[0];
@@ -557,6 +557,11 @@ export function sestavKratkouMimoradnou(i, nadpis) {
     ...(nevime ? [`<i>${esc(zkrat(String(nevime), 200))}</i>`] : []),
     ...(dulezitePro(i) ? [] : ["Pro Česko z toho neplyne žádné nové úřední opatření."]),
     `Podrobnosti a zdroje: ${WEB}/incident/${i.slug}/`,
+    /*
+      Další závažné zachycené (2. 10. 2026): jedna řádka na záznam se
+      závažností a odkazem, ať nejde několik zpráv za sebou.
+    */
+    ...(dalsi.length ? ["", "<b>Další:</b>", ...dalsi.map((d) => `${radekZavaznosti(d).split(" · ")[0]} · <a href="${WEB}/incident/${d.slug}/">${esc(zkrat(String(d.kratkyTitulek || d.titulek), 120))}</a>`)] : []),
   ].join("\n");
 }
 
@@ -1687,7 +1692,7 @@ async function main() {
   /* 0a. mimořádné zprávy z fronty v datech — před vším ostatním kromě výstrahy. */
   if (rezim === "okamzite" && !prvniBeh) {
     for (const { f, i } of vyberMimoradne(ctiFrontuMimoradnych(), zaznamy, stav)) {
-      const text = f.styl === "vyjasneni" ? sestavVyjasneni(i, f.nadpis) : f.styl === "kratka" ? sestavKratkouMimoradnou(i, f.nadpis) : sestavMimoradnou(i);
+      const text = f.styl === "vyjasneni" ? sestavVyjasneni(i, f.nadpis) : f.styl === "kratka" ? sestavKratkouMimoradnou(i, f.nadpis, (f.dalsi ?? []).map((sl) => zaznamy.find((z) => z.slug === sl)).filter((z) => z && overeny(z))) : sestavMimoradnou(i);
       let ok = true, messageId = null;
       for (const [n, dil] of rozdelZpravu(text).entries()) {
         const v = await posli(dil, { nahled: n === 0 });
@@ -1700,6 +1705,8 @@ async function main() {
       stav.mimoradne ??= {};
       stav.mimoradne[i.id] = { kdy, slug: i.slug, styl: f.styl ?? "mimoradna", messageId };
       stav.zaznamy[i.id] ??= { kdy, historie: i.historie?.length ?? 0, cesta: "hned", messageId };
+      // Záznamy přibalené v „Další:“ už odešly — jinak by přišly znovu zvlášť.
+      for (const sl of f.dalsi ?? []) { const z = zaznamy.find((x) => x.slug === sl); if (z) stav.zaznamy[z.id] ??= { kdy, historie: z.historie?.length ?? 0, cesta: "hned", messageId }; }
       odeslano++;
     }
   }

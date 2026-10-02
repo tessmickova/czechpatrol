@@ -13566,5 +13566,133 @@
       "overeno": "2026-10-01"
     },
     "overeni": "neovereno"
+  },
+  {
+    "id": "i-2026-10-02-zelenskyj-putin-pravidla",
+    "slug": "zelenskyj-putin-bez-pravidel-utoku-2026",
+    "titulek": "Zelenskyj pro Financial Times: Putin podle ukrajinských tajných služeb nařídil armádě upustit od omezení útoků na civilní cíle",
+    "kratkyTitulek": "Zelenskyj: Putin nařídil armádě útočit bez omezení",
+    "zeme": "Ukrajina",
+    "kodZeme": "UA",
+    "kategorie": [
+      "rusko",
+      "diplomacie"
+    ],
+    "datumUdalosti": "2026-10-02T00:00:00Z",
+    "datumZjisteni": "2026-10-02T00:00:00Z",
+    "aktualizovano": "2026-10-02T13:30:00Z",
+    "zavaznost": "Y2",
+    "jistota": "nizka",
+    "stav": "probiha",
+    "atribuce": "neznama",
+    "puvodce": null,
+    "druh": "reakce",
+    "fakta": [
+      "Ukrajinský prezident Volodymyr Zelenskyj řekl Financial Times (2. 10.), že Putin v září nařídil armádě upustit od omezení leteckých útoků a zesílit údery na civilní cíle. Opírá se o poznatky ukrajinských tajných služeb.",
+      "Podle Zelenského Rusko chystá silnější útoky na velká města, aby je v zimě odřízlo od zbytku země. V posledních dnech ruské útoky zasáhly v Kyjevě mimo jiné školu a mosty přes Dněpr."
+    ],
+    "neznameho": [
+      "Žádný z ověřených zdrojů nehlásí, že by se to týkalo území mimo Ukrajinu.",
+      "Kyjev zachycené rozhovory nezveřejnil; tvrzení o Putinově rozkazu nikdo nezávisle neověřil."
+    ],
+    "vyznam": "",
+    "eskalacniSpousteče": [],
+    "deeskalacniSignaly": [],
+    "zdroje": [
+      {
+        "nazev": "Kyiv Post — Putin Ordered ‘No Rules’ War on Ukrainian Civilians, Zelensky Says",
+        "url": "https://www.kyivpost.com/post/85936",
+        "typ": "media",
+        "publikovano": "2026-10-02T00:00:00Z",
+        "primarni": false,
+        "jazyk": "en"
+      },
+      {
+        "nazev": "UNITED24 Media — Putin ordered Russian military to abandon any restraints on airstrikes, Zelenskyy tells FT",
+        "url": "https://united24media.com/war-in-ukraine/putin-ordered-russian-military-to-abandon-any-restraints-on-airstrikes-zelenskyy-tells-ft-23049",
+        "typ": "media",
+        "publikovano": "2026-10-02T00:00:00Z",
+        "primarni": false,
+        "jazyk": "en"
+      }
+    ],
+    "souvisejici": [],
+    "historie": [
+      {
+        "kdy": "2026-10-02T00:00:00Z",
+        "text": "Rozhovor Financial Times zveřejněn.",
+        "novySignal": true
+      }
+    ],
+    "novy": true,
+    "aiZpracovano": true,
+    "lidskyOvereno": true
+  },
+  {
+    "id": "i-2026-10-02-leipzig-organizator",
+    "slug": "leipzig-organizator-gru-2026",
+    "titulek": "Leipzig/Halle: The Telegraph a Welt am Sonntag jmenují podezřelého organizátora útoku a spojují ho s ruskou vojenskou rozvědkou",
+    "kratkyTitulek": "Leipzig: Telegraph spojuje útok s jednotkou GRU z kauzy Vrbětice",
+    "zeme": "Německo",
+    "kodZeme": "DE",
+    "kategorie": [
+      "vysetrovani",
+      "sabotaz"
+    ],
+    "datumUdalosti": "2026-10-02T00:00:00Z",
+    "datumZjisteni": "2026-10-02T00:00:00Z",
+    "aktualizovano": "2026-10-02T13:30:00Z",
+    "zavaznost": "O1",
+    "jistota": "stredni",
+    "stav": "probiha",
+    "atribuce": "vysetrovana",
+    "druh": "aktualizace",
+    "navazujeNa": "leipzig-halle-utok",
+    "fakta": [
+      "Podle společného zjištění The Telegraph a Welt am Sonntag mohl pokus o útok na letiště Leipzig/Halle zorganizovat ruský motorkář Oleg Ljovuškin; útok měl podle německých vyšetřovatelů provést běloruský prostředník.",
+      "The Telegraph spojuje akci s jednotkou 29155 ruské vojenské rozvědky GRU — tou, kterou české úřady viní z výbuchů ve Vrběticích v roce 2014. Ljovuškinovu příslušnost k jednotce ale nikdo nedoložil."
+    ],
+    "neznameho": [
+      "Německé úřady zjištění médií oficiálně nepotvrdily.",
+      "Příslušnost podezřelého k jednotce 29155 není doložena."
+    ],
+    "vyznam": "",
+    "eskalacniSpousteče": [],
+    "deeskalacniSignaly": [],
+    "zdroje": [
+      {
+        "nazev": "Militarnyi — The Telegraph names suspected organizer of Leipzig/Halle airport attack",
+        "url": "https://militarnyi.com/en/news/the-telegraph-names-suspected-organizer-of-leipzig-halle-airport-attack-links-him-to-russia-s-general-staff-main-directorate/",
+        "typ": "media",
+        "publikovano": "2026-10-02T00:00:00Z",
+        "primarni": false,
+        "jazyk": "en"
+      },
+      {
+        "nazev": "European Pravda — Media reveal information about Russian who may have organised sabotage at Leipzig airport",
+        "url": "https://www.eurointegration.com.ua/eng/news/2026/10/2/7246805/",
+        "typ": "media",
+        "publikovano": "2026-10-02T00:00:00Z",
+        "primarni": false,
+        "jazyk": "en"
+      }
+    ],
+    "souvisejici": [
+      {
+        "incidentId": "a04",
+        "potvrzena": true,
+        "popis": "navazuje na útok na Leipzig/Halle"
+      }
+    ],
+    "historie": [
+      {
+        "kdy": "2026-10-02T00:00:00Z",
+        "text": "Zjištění The Telegraph a Welt am Sonntag.",
+        "novySignal": true
+      }
+    ],
+    "novy": true,
+    "aiZpracovano": true,
+    "lidskyOvereno": true
   }
 ]

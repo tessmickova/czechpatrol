@@ -990,3 +990,14 @@ describe("krátká mimořádná zpráva", () => {
     expect(t.split("\n")).toEqual(["🟠 Závažnost: 7 z 10 · vysoká", "❗ <b>Nadpis</b>", "• A.", "• B.", "<i>Y.</i>", "Pro Česko z toho neplyne žádné nové úřední opatření.", "Podrobnosti a zdroje: https://czechpatrol.cz/incident/x/"]);
   });
 });
+
+describe("krátká mimořádná s dalšími závažnými (2. 10. 2026)", () => {
+  it("přibalí jednu řádku na záznam se závažností a odkazem", async () => {
+    const { sestavKratkouMimoradnou } = await import("../nastroje/rozhlas.mjs");
+    const i = zaznam({ druh: "reakce", puvodce: undefined, kodZeme: "UA", fakta: ["A."], neznameho: ["X."] });
+    const d = zaznam({ slug: "dalsi", kratkyTitulek: "Další věc", zavaznost: "O1" });
+    const t = sestavKratkouMimoradnou(i, "Nadpis", [d]);
+    expect(t).toContain('<b>Další:</b>\n🟠 Závažnost: 7 z 10 · <a href="https://czechpatrol.cz/incident/dalsi/">Další věc</a>');
+    expect(sestavKratkouMimoradnou(i, "Nadpis")).not.toContain("Další:");
+  });
+});
