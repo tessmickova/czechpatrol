@@ -27,7 +27,7 @@
           "jazyk": "cs"
         }
       ],
-      "zkontrolovano": "2026-10-02T08:01:13.164Z",
+      "zkontrolovano": "2026-10-02T10:01:13.726Z",
       "pokryti": "nedostupne",
       "pokrytiDuvod": "nepodařilo se přečíst: psp"
     },
@@ -49,7 +49,7 @@
           "jazyk": "cs"
         }
       ],
-      "zkontrolovano": "2026-10-02T08:01:13.164Z",
+      "zkontrolovano": "2026-10-02T10:01:13.726Z",
       "pokryti": "nedostupne",
       "pokrytiDuvod": "nepodařilo se přečíst: psp"
     },
@@ -79,7 +79,7 @@
           "jazyk": "cs"
         }
       ],
-      "zkontrolovano": "2026-10-02T08:01:13.164Z",
+      "zkontrolovano": "2026-10-02T10:01:13.726Z",
       "pokryti": "orientacni",
       "pokrytiDuvod": "přečteno vlada, army; žádný z nich není úplný seznam, zápor z nich neplyne"
     },
@@ -101,7 +101,7 @@
           "jazyk": "cs"
         }
       ],
-      "zkontrolovano": "2026-10-02T08:01:13.164Z",
+      "zkontrolovano": "2026-10-02T10:01:13.726Z",
       "pokryti": "nedostupne",
       "pokrytiDuvod": "nepodařilo se přečíst: psp"
     },
@@ -123,9 +123,9 @@
           "jazyk": "cs"
         }
       ],
-      "zkontrolovano": "2026-10-02T08:01:13.164Z",
-      "pokryti": "nedostupne",
-      "pokrytiDuvod": "nepodařilo se přečíst: bundespolizei"
+      "zkontrolovano": "2026-10-02T10:01:13.726Z",
+      "pokryti": "orientacni",
+      "pokrytiDuvod": "přečteno mvcr, mzv, letiste-praha, bundespolizei, bmi-at, straz-graniczna, minv-sk; žádný z nich není úplný seznam, zápor z nich neplyne"
     },
     {
       "klic": "hranice",
@@ -153,9 +153,9 @@
           "jazyk": "cs"
         }
       ],
-      "zkontrolovano": "2026-10-02T08:01:13.164Z",
-      "pokryti": "nedostupne",
-      "pokrytiDuvod": "nepodařilo se přečíst: bundespolizei"
+      "zkontrolovano": "2026-10-02T10:01:13.726Z",
+      "pokryti": "orientacni",
+      "pokrytiDuvod": "přečteno vlada, mvcr, policie, md, celni-sprava, bundespolizei, bmi-at, straz-graniczna, minv-sk; žádný z nich není úplný seznam, zápor z nich neplyne"
     },
     {
       "klic": "schuze-parlamentu",
@@ -175,7 +175,7 @@
           "jazyk": "cs"
         }
       ],
-      "zkontrolovano": "2026-10-02T08:01:13.164Z",
+      "zkontrolovano": "2026-10-02T10:01:13.726Z",
       "pokryti": "nedostupne",
       "pokrytiDuvod": "nepodařilo se přečíst: psp"
     }
