@@ -1,5 +1,21 @@
 [
   {
+    "id": "k-64fd575dc4ac1fa2",
+    "zachyceno": "2026-10-02T00:03:07.034Z",
+    "publikovano": "2026-10-01T23:57:18.000Z",
+    "zdroj": {
+      "nazev": "NOS Nieuws (Nizozemsko)",
+      "url": "https://nos.nl/l/2633355",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Hulpverlener met ebola aangekomen in Leids ziekenhuis",
+    "shrnuti": "De medewerker van hulporganisatie Artsen zonder Grenzen die besmet is geraakt met ebola , is aangekomen in het Leids Universitair Medisch Centrum (LUMC). De patiënt werd met een Frans privévliegtuig vanuit Congo naar Nederland gerepatrieerd en kwam rond 19.45 uur aan op Schiphol, en werd daarna naar",
+    "duvod": "bez-skutku",
+    "kategorie": [],
+    "posouzeni": null
+  },
+  {
     "id": "k-e5f49148c8d23e50",
     "zachyceno": "2026-10-01T23:51:45.379Z",
     "publikovano": "2026-10-01T23:48:31.000Z",
@@ -1677,6 +1693,24 @@
     "titulek": "Portugalia învinge Danemarca la primul meci de la plecarea lui Cristiano Ronaldo, scor 4-2 / Rezultatele serii din Liga Națiunilor",
     "shrnuti": "Naționala Portugaliei s-a impus joi seară la Copenhaga, în fața Danemarcei, scor 4-2, în runda a treia din Grupa 4A a Ligii Națiunilor, la primul meci de la plecarea lui Cristiano Ronaldo din lot. Joao Cancelo a deschis scorul în minutul 13, după o combinație bună de pase cu Goncalo Ramos care s-a î",
     "duvod": "vylouceno-tematem",
+    "kategorie": [
+      "zpravodajske"
+    ],
+    "posouzeni": null
+  },
+  {
+    "id": "k-a4903e3480b52273",
+    "zachyceno": "2026-10-02T00:03:07.607Z",
+    "publikovano": "2026-10-01T20:57:10.000Z",
+    "zdroj": {
+      "nazev": "Digi24 (Rumunsko)",
+      "url": "https://www.digi24.ro/stiri/externe/sua/cazul-cornell-7-cum-a-trecut-o-studenta-de-la-rusine-la-furie-stenograme-din-dosarul-care-tine-prima-pagina-a-presei-americane-3973499",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Cazul „Cornell 7”. Cum a trecut o studentă de la rușine la furie: stenograme din dosarul care ține prima pagină a presei americane",
+    "shrnuti": "Femeia cunoscută în spațiul public sub numele de „Jane Doe” (numele folosit în mod obișnuit în SUA pentru persoane neidentificate sau care trebuie protejate, n.r.) s-a simțit inițial jenată de ceea ce s-a întâmplat la o petrecere a unei frății studențești în 2024, dar a ajuns curând la concluzia: „A",
+    "duvod": "bez-skutku",
     "kategorie": [
       "zpravodajske"
     ],
@@ -3818,6 +3852,22 @@
     },
     "titulek": "Pourquoi l’Algérie a élargi la peine de mort aux incendiaires et aux kidnappeurs d’enfants",
     "shrnuti": "Après les feux de forêts intenses et meurtriers de l’été, le chef de l’Etat, Abdelmadjid Tebboune, a souhaité élargir le nombre de « crimes capitaux », passibles de la peine de mort. Le pays respectait pourtant un moratoire sur cette question depuis 1993.",
+    "duvod": "bez-skutku",
+    "kategorie": [],
+    "posouzeni": null
+  },
+  {
+    "id": "k-fb933daeddbd7996",
+    "zachyceno": "2026-10-02T00:03:06.532Z",
+    "publikovano": "2026-10-01T19:07:00.000Z",
+    "zdroj": {
+      "nazev": "Helsingin Sanomat (Finsko)",
+      "url": "https://www.hs.fi/politiikka/art-2000012314519.html",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Eduskunta | Viranomaislähde HS:lle: Joihinkin kansanedustajien koteihin on saatettu murtautua",
+    "shrnuti": "Eduskunnan puhemies Jussi Halla-aho kertoi torstaina, että useiden kansanedustajien koteihin on mahdollisesti tunkeuduttu. Helsingin poliisi selvittää tapauksia keskusrikospoliisin tukemana.",
     "duvod": "bez-skutku",
     "kategorie": [],
     "posouzeni": null
@@ -8097,56 +8147,6 @@
     },
     "titulek": "Un bărbat cu dublă cetățenie, britanică și iraniană, a fost arestat în legătură cu incidentul de la baza militară Fairford din Anglia",
     "shrnuti": "Un bărbat cu dublă cetățenie, britanică și iraniană, a fost arestat sub suspiciunea de pregătire a unor acte teroriste în legătură cu incidentul de la RAF Fairford, a anunțat Poliția Antiteroristă din Marea Britanie, citată de BBC.",
-    "duvod": "bez-skutku",
-    "kategorie": [],
-    "posouzeni": null
-  },
-  {
-    "id": "k-8f47173fa23795ed",
-    "zachyceno": "2026-10-01T18:03:07.473Z",
-    "publikovano": "2026-10-01T17:06:00.000Z",
-    "zdroj": {
-      "nazev": "Český rozhlas — domácí zprávy",
-      "url": "https://www.irozhlas.cz/zpravy-domov/zikmundova-nova-superdavka-nepripustny-experiment-nejohrozenejsi-jsou_2610011906_med",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Zikmundová: Nová superdávka? Nepřípustný experiment. Nejohroženější jsou jednočlenné domácnosti",
-    "shrnuti": "Od října se znovu mění podmínky pro takzvanou superdávku. Mezi zranitelné osoby nově patří samoživitelé s dětmi do 15 let, už tam ale nespadají lidé v bytové nouzi nebo někteří senioři. „Problém je už v samotném přístupu. Člověk potřebuje každý den bydlet, jíst, užívat léky. Nemůžeme ho nechávat v t",
-    "duvod": "bez-skutku",
-    "kategorie": [
-      "cr"
-    ],
-    "posouzeni": null
-  },
-  {
-    "id": "k-ad7db5a4617176de",
-    "zachyceno": "2026-10-01T18:03:08.936Z",
-    "publikovano": "2026-10-01T17:05:30.000Z",
-    "zdroj": {
-      "nazev": "Aktuality.sk",
-      "url": "https://www.aktuality.sk/clanok/oiRQmGq/trump-nobelovu-cenu-za-mier-neziska-vybor-chce-kandidata-ktory-prezidentovmu-tlaku-odola/",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Trump Nobelovu cenu za mier nezíska. Výbor chce kandidáta, ktorý prezidentovmu tlaku odolá",
-    "shrnuti": "Donald Trump Nobelovu cenu za mier nezíska. Jeho tlak však môže nepriamo ovplyvniť rozhodovanie výboru.",
-    "duvod": "bez-skutku",
-    "kategorie": [],
-    "posouzeni": null
-  },
-  {
-    "id": "k-623157e4ab88d951",
-    "zachyceno": "2026-10-01T18:03:09.411Z",
-    "publikovano": "2026-10-01T17:05:30.000Z",
-    "zdroj": {
-      "nazev": "SVT Nyheter (Švédsko)",
-      "url": "https://www.svt.se/sport/fotboll/magnus-eriksson-om-manfallet-paverkar-saklart-sveriges-chanser",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Magnus Eriksson om manfallet: ”Påverkar såklart Sveriges chanser”",
-    "shrnuti": "En hel elva saknas för Graham Potter. Tre skadade innan samlingen, tre skadade under samlingen och nu fem sjuka samtidigt. – Jag har aldrig varit med om det här manfallet. Det är väldigt många spelare vilket såklart påverkar Sveriges chanser, säger SVT:s expert Magnus Eriksson inför Bosnien-mötet im",
     "duvod": "bez-skutku",
     "kategorie": [],
     "posouzeni": null
