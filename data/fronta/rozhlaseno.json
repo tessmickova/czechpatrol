@@ -800,6 +800,18 @@
       "historie": 2,
       "cesta": "hned",
       "messageId": 60
+    },
+    "i-2026-10-02-zelenskyj-putin-pravidla": {
+      "kdy": "2026-10-02T13:32:27.682Z",
+      "historie": 1,
+      "cesta": "hned",
+      "messageId": 61
+    },
+    "i-2026-10-02-leipzig-organizator": {
+      "kdy": "2026-10-02T13:32:27.682Z",
+      "historie": 1,
+      "cesta": "hned",
+      "messageId": 61
     }
   },
   "snimky": {
@@ -832,6 +844,12 @@
       "slug": "rusko-zbrojovky-v-evrope-potencialni-cile-2026",
       "styl": "kratka",
       "messageId": 60
+    },
+    "i-2026-10-02-zelenskyj-putin-pravidla": {
+      "kdy": "2026-10-02T13:32:27.682Z",
+      "slug": "zelenskyj-putin-bez-pravidel-utoku-2026",
+      "styl": "kratka",
+      "messageId": 61
     }
   },
   "kyber": {
