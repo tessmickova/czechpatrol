@@ -67,7 +67,7 @@ export function OdznakUkazky() {
 */
 export function PruhPuvodu({ vpravo }: { vpravo?: ReactNode }) {
   return (
-    <div className="bg-plocha2/60">
+    <div className="neni-tisk bg-plocha2/60">
       {/*
         Vpravo stav kontroly. Dřív měl vlastní pruh hned pod tímhle — dvě
         tenké linky nad sebou kvůli dvěma větám. Když je co hlásit, vlastní

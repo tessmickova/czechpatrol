@@ -1,5 +1,5 @@
 {
-  "kdy": "2026-10-02T12:01:16.056Z",
+  "kdy": "2026-10-02T18:01:21.627Z",
   "zdroje": [
     {
       "klic": "e-sbirka",
@@ -17,11 +17,10 @@
     },
     {
       "klic": "psp",
-      "ok": false,
-      "stav": null,
+      "ok": true,
+      "stav": 200,
       "pocetPolozek": 0,
-      "chyba": "fetch failed",
-      "vysledek": "chyba"
+      "vysledek": "ok"
     },
     {
       "klic": "senat",
