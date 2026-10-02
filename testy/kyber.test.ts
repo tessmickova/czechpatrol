@@ -112,9 +112,14 @@ describe("zdroje pro internet", () => {
 });
 
 describe("hromadný výpadek zdrojů se nahlásí", () => {
-  it("od čtvrtiny katalogu; řekne, kolik zakazuje robots.txt", async () => {
+  it("známé blokace robots.txt nehlásí znovu; nové ano; ostatní výpadky od čtvrtiny", async () => {
     const { zpravaOVypadku } = await import("../sber/udalosti");
-    expect(zpravaOVypadku(100, Array(10).fill("HTTP 500"))).toBeNull();
-    expect(zpravaOVypadku(100, [...Array(30).fill("robots.txt stahování nepovoluje"), "HTTP 500"])).toBe("Sběr událostí: nečte se 31 z 100 zdrojů, z toho 30 zakazuje robots.txt. Bez nich sběr může přehlédnout události.");
+    const gn = Array.from({ length: 150 }, (_, i) => ({ klic: `t-${i}`, chyba: "robots.txt stahování nepovoluje" }));
+    const zname = gn.map((c) => c.klic);
+    expect(zpravaOVypadku(270, gn, zname).zprava).toBeNull();
+    expect(zpravaOVypadku(270, [...gn, { klic: "novinky", chyba: "robots.txt stahování nepovoluje" }], zname).zprava).toContain("nově zakazuje čtení robots.txt u 1 zdrojů (novinky)");
+    const vypadky = Array.from({ length: 30 }, (_, i) => ({ klic: `p-${i}`, chyba: "HTTP 500" }));
+    expect(zpravaOVypadku(270, [...gn, ...vypadky], zname).zprava).toContain("nečte se 30 z 120 dostupných zdrojů");
+    expect(zpravaOVypadku(270, [...gn, ...vypadky.slice(0, 10)], zname).zprava).toBeNull();
   });
 });
