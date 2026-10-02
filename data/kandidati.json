@@ -316,6 +316,40 @@
     }
   },
   {
+    "id": "k-d91e3918ce4d7653",
+    "zachyceno": "2026-10-02T12:03:35.363Z",
+    "publikovano": "2026-10-02T07:43:00.000Z",
+    "zdroj": {
+      "nazev": "Ukrainska Pravda (anglicky)",
+      "url": "https://www.pravda.com.ua/eng/news/2026/10/02/8056100/",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Russia attacks business in Rivne Oblast",
+    "titulekPuvodni": "Russia attacks business in Rivne Oblast",
+    "shrnuti": "Premises belonging to a business were damaged in Rivne Oblast during a Russian attack on the night of 1-2 October.",
+    "kodZeme": "RU",
+    "zeme": "Rusko",
+    "kategorie": [
+      "hybridni",
+      "rusko"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "attack on",
+      "russia"
+    ],
+    "naliehave": null,
+    "stav": "ceka",
+    "vyrez": {
+      "text": "Russia attacks business in Rivne Oblast | Ukrainska Pravda\nStock photo: Getty Images\nPremises belonging to a business were damaged in Rivne Oblast during a Russian attack on the night of 1-2 October.\nSource: Oleksandr Koval , Head of Rivne Oblast Military Administration\nDetails: Early reports indicate that there are no casualties. Residents of nearby buildings were evacuated due to a fire on the premises.\nAdvertisement:\n\r\n\r\n\r\n\r\n\r\nThe appropriate emergency services are working at the scene. The report does not specify which business was hit.\nBackground: Following the Russian attack on the night of 1-2 October, the Pivdennyi Bridge in Kyiv was completely closed to traffic , the movement of vehicles across the Paton Bridge from the right to the left bank was halted, and traffic on the Metro Bridge from the left to the right bank was partially restricted.\nYour support on Patreon helps us keep the news free and accessible.\nAdvertisement:\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nLatest news\nAdvertisement:\n\r\n\r\n\r\nAdvertisement:",
+      "stazeno": "2026-10-02T12:03:35.455Z",
+      "stav": 200
+    }
+  },
+  {
     "id": "k-a3f0dd7af98f081c",
     "zachyceno": "2026-10-02T08:02:58.733Z",
     "publikovano": "2026-10-02T07:40:11.000Z",
@@ -12047,46 +12081,6 @@
       "duvod": "neudalost",
       "patriK": null,
       "poznamka": "Podle Seznam Zpráv (přes Bild) zesiluje Německo viditelný dohled nad ruskou ambasádou a prověřování ruských oligarchů; jde o jeden původní zdroj (Bild) přebíraný různými redakcemi, ne o dva nezávislé zdroje, a bez oficiální tiskové zprávy německých úřadů."
-    }
-  },
-  {
-    "id": "k-0dd90baefd8f16cc",
-    "zachyceno": "2026-09-28T12:03:48.153Z",
-    "publikovano": "2026-09-28T09:09:00.000Z",
-    "zdroj": {
-      "nazev": "Ukrainska Pravda (anglicky)",
-      "url": "https://www.pravda.com.ua/eng/news/2026/09/28/8055359/",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Russian attacks cause power outages in eight Ukrainian regions",
-    "titulekPuvodni": "Russian attacks cause power outages in eight Ukrainian regions",
-    "shrnuti": "As of this morning, some consumers in Dnipropetrovsk, Donetsk, Zaporizhzhia, Kyiv, Odesa, Sumy, Chernihiv and Kharkiv oblasts are without electricity as a result of hostilities and attacks on energy infrastructure.",
-    "kodZeme": "UA",
-    "zeme": "Ukrajina",
-    "kategorie": [
-      "infrastruktura",
-      "rusko"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "zeSite": null,
-    "shody": [
-      "power outage",
-      "russia"
-    ],
-    "naliehave": null,
-    "stav": "vyrizen",
-    "vyrez": {
-      "text": "Russian attacks cause power outages in eight Ukrainian regions | Ukrainska Pravda\nPhoto: Getty Images\nAs of this morning, some consumers in Dnipropetrovsk, Donetsk, Zaporizhzhia, Kyiv, Odesa, Sumy, Chernihiv and Kharkiv oblasts are without electricity as a result of hostilities and attacks on energy infrastructure.\nSource : Ukrenergo , Ukraine's state-owned electricity transmission operator\nDetails : Repair work is already underway wherever the security situation allows.\nAdvertisement:\n\r\n\r\n\r\n\r\n\r\nIn addition, 11 settlements in Poltava and Sumy oblasts remain without electricity due to adverse weather conditions.\nNo scheduled power outages are expected.\nUkrenergo is asking consumers to shift energy-intensive activities today to the period when industrial solar power plants operate most efficiently – from 11:00 to 15:00.\nIn addition, Ukrenergo recommends avoiding the simultaneous use of several high-power electrical appliances during the evening hours – from 17:00 to 22:00 – to prevent overloads and disruptions to the power system.\nBackground : On the night of 27-28 September, Russian forces attacked Ukraine with 165 strike UAVs, including Shahed drones, 79 of which were jet-powered,…",
-      "stazeno": "2026-09-28T12:03:51.597Z",
-      "stav": 200
-    },
-    "vyrizeni": {
-      "kdy": "2026-09-28T15:01:39.277Z",
-      "duvod": "mimo-rozsah",
-      "patriK": null,
-      "poznamka": "Ruské útoky způsobily výpadky proudu v osmi ukrajinských regionech; uvnitř Ukrajiny, bez doloženého následku pro sledované země."
     }
   }
 ]
