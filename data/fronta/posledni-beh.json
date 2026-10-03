@@ -1,5 +1,5 @@
 {
-  "kdy": "2026-10-03T00:01:22.820Z",
+  "kdy": "2026-10-03T00:40:14.175Z",
   "zdroje": [
     {
       "klic": "e-sbirka",
@@ -241,7 +241,6 @@
       "ok": true,
       "stav": null,
       "pocetPolozek": 0,
-      "chyba": "zive: The operation was aborted due to timeout",
       "vysledek": "ok"
     },
     {
@@ -252,5 +251,5 @@
       "vysledek": "ok"
     }
   ],
-  "novychVeFronte": 3
+  "novychVeFronte": 0
 }
