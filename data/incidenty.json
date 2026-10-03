@@ -14025,5 +14025,82 @@
       "overeno": "2026-10-03"
     },
     "overeni": "neovereno"
+  },
+  {
+    "id": "i-2026-10-03-e5b075d32f",
+    "slug": "md-e5b075d32f",
+    "titulek": "Moldavsko: prezidentka Sanduová upřesnila, že šlo o tři střely Banderol a dva drony, odsoudila Rusko a varovala, že jeho válka nebezpečně zasahuje i Moldavsko",
+    "kratkyTitulek": "Moldavsko: prezidentka Sanduová upřesnila, že šlo o tři střely Banderol a dva drony, odsoudila Rusko a varovala, že jeho válka nebezpečně zasahuje i Moldavsko",
+    "zeme": "Moldavsko",
+    "kodZeme": "MD",
+    "kategorie": [
+      "drony",
+      "hranice"
+    ],
+    "datumUdalosti": "2026-10-03T00:00:00Z",
+    "datumZjisteni": "2026-10-03T00:00:00Z",
+    "aktualizovano": "2026-10-03T18:01:07.652Z",
+    "zavaznost": "Y2",
+    "jistota": "stredni",
+    "stav": "bez-vysetrovani",
+    "atribuce": "neznama",
+    "puvodce": null,
+    "druh": "aktualizace",
+    "fakta": [
+      "Moldavská prezidentka Maia Sanduová na síti X napsala: \"Odsuzuji ruský útok na Ukrajinu dnes ráno. Jeho válka nebezpečně zasahuje i Moldavsko,\" a dodala, že \"ruské útočné vzdušné zbraně, včetně střel Banderol a dronů, narušily náš vzdušný prostor a vybuchly na naší půdě.\"",
+      "Podle upřesnění šlo celkem o tři střely a dva drony, které přeletěly území mezi 7:45 a 8:00; trosky se později našly ve východních okresech Hâncești, Anenii Noi a Căușeni.",
+      "Policie oblast s troskami zajistila; výbuch způsobil požár, zranění nebyla hlášena."
+    ],
+    "neznameho": [
+      "Oficiální moldavské ministerstvo obrany mezi zdroji, které jsem otevřel, přesné rozdělení na \"tři střely a dva drony\" oproti dřívějšímu údaji \"pět dronů\" nevysvětlilo; jde o upřesnění podle Politico/Sanduové."
+    ],
+    "vyznam": "",
+    "eskalacniSpousteče": [],
+    "deeskalacniSignaly": [],
+    "zdroje": [
+      {
+        "nazev": "POLITICO Europe — Sandu slams Russia as attack debris hits Moldova in latest airspace violation",
+        "url": "https://www.politico.eu/article/maia-sandu-slams-russia-as-attack-debris-hits-moldova-in-latest-airspace-violation/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication",
+        "typ": "media",
+        "publikovano": "2026-10-03T00:00:00Z",
+        "primarni": false,
+        "jazyk": "en"
+      },
+      {
+        "nazev": "Aktuality.sk (TASR) — Moldavský vzdušný priestor opäť narušený ruskými raketami, úrady hlásia výbuchy bez obetí",
+        "url": "https://www.aktuality.sk/clanok/6c9D6O2/ruske-rakety-a-drony-vybuchli-na-uzemi-moldavska-prezidentka-sanduova-varuje-ze-moskva-ohrozuje-celu-europu/",
+        "typ": "media",
+        "publikovano": "2026-10-03T00:00:00Z",
+        "primarni": false,
+        "jazyk": "sk"
+      }
+    ],
+    "souvisejici": [],
+    "historie": [
+      {
+        "kdy": "2026-10-03T00:00:00Z",
+        "text": "Zachyceno automatickým sběrem, druhý zdroj doložen před zařazením do fronty.",
+        "novySignal": true
+      },
+      {
+        "kdy": "2026-10-03T18:01:07.652Z",
+        "text": "Zveřejněno jako neověřené úředně: dvě nezávislé redakce, úřad zatím nepotvrdil.",
+        "novySignal": false
+      }
+    ],
+    "novy": true,
+    "zapocitanoTyden": "2026-10-03",
+    "aiZpracovano": true,
+    "lidskyOvereno": false,
+    "archivniZaznam": false,
+    "navazujeNa": "md-10d6d0f8f0",
+    "dopadNaCr": {
+      "stav": "zadny",
+      "procRelevantni": "Upřesnění a prezidentská reakce na stejnodenní narušení vzdušného prostoru Moldavska, sousedící s regionem sledovaným projektem.",
+      "dopad": "Pro lidi v Česku ze zprávy dnes neplyne žádné omezení.",
+      "sledujeme": "Zda Rusko na prezidentčino odsouzení zareaguje.",
+      "overeno": "2026-10-03"
+    },
+    "overeni": "neovereno"
   }
 ]
