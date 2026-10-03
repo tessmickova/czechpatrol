@@ -36,12 +36,13 @@ export const ZDROJE_LETAKU: Record<"sireny" | "vystraha" | "nalez", Zdroj[]> = {
 };
 
 /** Oficiální příručky ke stažení. Jen originály od vydavatelů — neoficiální překlady na cizích discích neodkazujeme. */
-export const PRIRUCKY: { nazev: string; kdo: string; jazyk: string; url: string; poznamka?: string }[] = [
-  { nazev: "Pro případ ohrožení — příručka pro obyvatele", kdo: "HZS ČR", jazyk: "česky", url: "https://hzscr.gov.cz/soubor/prirucka-oo-pdf-1-pdf.aspx" },
-  { nazev: "Varování obyvatelstva — leták A4", kdo: "HZS ČR", jazyk: "česky", url: "https://hzscr.gov.cz/soubor/letaky-a4-varovani-obyvatelstva.aspx" },
-  { nazev: "72 hodin — jak se připravit na mimořádnou událost", kdo: "Ministerstvo vnitra ČR", jazyk: "česky", url: "https://www.72h.gov.cz/" },
-  { nazev: "Poradnik bezpieczeństwa", kdo: "Polská vláda (MSWiA, MON, RCB)", jazyk: "polsky", url: "https://www.gov.pl/web/poradnikbezpieczenstwa", poznamka: "Polské pokyny — v Česku platí postup HZS ČR." },
-  { nazev: "In case of crisis or war", kdo: "Švédská agentura pro civilní obranu (MCF, dříve MSB)", jazyk: "anglicky", url: "https://www.mcf.se/en/advice-for-individuals/the-brochure-in-case-of-crisis-or-war/download-and-order-the-brochure-in-case-of-crisis-or-war/", poznamka: "Švédské pokyny — v Česku platí postup HZS ČR." },
+export type VzorObalky = "hzs" | "hzs-letak" | "72h" | "pl" | "se";
+export const PRIRUCKY: { id: string; nazev: string; kdo: string; jazyk: string; vlajka: string; url: string; typ: "PDF" | "web"; vzor: VzorObalky; minut: number; poznamka?: string }[] = [
+  { id: "hzs-prirucka", nazev: "Pro případ ohrožení — příručka pro obyvatele", kdo: "HZS ČR", jazyk: "česky", vlajka: "🇨🇿", url: "https://hzscr.gov.cz/soubor/prirucka-oo-pdf-1-pdf.aspx", typ: "PDF", vzor: "hzs", minut: 20 },
+  { id: "hzs-varovani", nazev: "Varování obyvatelstva — leták A4", kdo: "HZS ČR", jazyk: "česky", vlajka: "🇨🇿", url: "https://hzscr.gov.cz/soubor/letaky-a4-varovani-obyvatelstva.aspx", typ: "PDF", vzor: "hzs-letak", minut: 2 },
+  { id: "72h", nazev: "72 hodin — jak se připravit na mimořádnou událost", kdo: "Ministerstvo vnitra ČR", jazyk: "česky", vlajka: "🇨🇿", url: "https://www.72h.gov.cz/", typ: "web", vzor: "72h", minut: 10 },
+  { id: "pl-poradnik", nazev: "Poradnik bezpieczeństwa", kdo: "Polská vláda (MSWiA, MON, RCB)", jazyk: "polsky", vlajka: "🇵🇱", url: "https://www.gov.pl/web/poradnikbezpieczenstwa", typ: "web", vzor: "pl", minut: 30, poznamka: "Polské pokyny — v Česku platí postup HZS ČR." },
+  { id: "se-brozura", nazev: "In case of crisis or war", kdo: "Švédská agentura pro civilní obranu (MCF, dříve MSB)", jazyk: "anglicky", vlajka: "🇸🇪", url: "https://www.mcf.se/en/advice-for-individuals/the-brochure-in-case-of-crisis-or-war/download-and-order-the-brochure-in-case-of-crisis-or-war/", typ: "web", vzor: "se", minut: 25, poznamka: "Švédské pokyny — v Česku platí postup HZS ČR." },
 ];
 
 /** Kvíz „Vím to“ — tři otázky, správná odpověď je index. */

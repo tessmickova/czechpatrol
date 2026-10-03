@@ -2,7 +2,9 @@
 
 import { HlavickaWidgetu } from "./widgety";
 import { jeRadio, TipAsa } from "./tip-asa";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
+import { Konfety } from "./konfety";
+import type { NazevIkony } from "./ikony";
 import { datumPraha } from "@/lib/cas";
 import { BEZ_SIGNALU, LEKARNICKA, ODBERY, NAZVY_KATEGORII, PORADI_KATEGORII, UDALOSTI, ZMINKY, nactiOdpovedi, nastrojeDoPruvodce, skorePripravenosti, souhrnOtazek, ulozOdpovedi, vetaKeSkore, type Odpoved, type Odpovedi, type OtazkaDotazniku } from "@/lib/pripravenost";
 import type { OficialniNastroj } from "@/lib/typy";
@@ -101,7 +103,7 @@ function SeznamOtazek({ otazky, odpovedi, odpovez }: { otazky: OtazkaDotazniku[]
         <li key={q.id} className="flex items-start gap-3 py-2.5">
           <Kolecko id={q.id} nazev={q.nazev} odpovedi={odpovedi} odpovez={odpovez} />
           <span className="min-w-0 pt-0.5">
-            <span className={`block text-male font-semibold leading-snug ${odpovedi[q.id] === "mam" ? "text-tlum" : "text-inkoust"}`}>{q.nazev}</span>
+            <button type="button" onClick={() => odpovez(q.id, odpovedi[q.id] === "mam" ? "nemam" : "mam")} className={`block text-left text-zaklad font-semibold leading-snug ${odpovedi[q.id] === "mam" ? "text-tlum line-through decoration-klid/60" : "text-inkoust"}`}>{q.nazev}</button>
             {q.upresneni && <span className="block text-drobne leading-snug text-tlum2">{q.upresneni}</span>}
             {q.aplikace && <Aplikace a={q.aplikace} />}
             {jeRadio(q.nazev) && <TipAsa />}
@@ -122,6 +124,25 @@ function SeznamOtazek({ otazky, odpovedi, odpovez }: { otazky: OtazkaDotazniku[]
   Odpovědi se ukládají po každém klepnutí, takže se dá kdykoli odejít
   a vrátit; průvodce otevře první nedokončený krok.
 */
+/*
+  Ikona a barva ke každému kroku (3. 10. 2026): průvodce má být rychlý
+  a vizuální — co krok, to obrázek, ne jen text.
+*/
+const IKONA_KROKU: Record<string, NazevIkony> = {
+  tisen: "telefon", "mistni-varovani": "sirena", "krizove-informace": "vystraha", odbery: "komunikace",
+  pocasi: "snih", cestovani: "pas", zdravi: "srdce", offline: "mapa", lekarnicka: "plus", udalosti: "stit", vysledek: "stit-ok",
+};
+const BARVY_KROKU = ["bg-akcent/15 text-akcent", "bg-jantar/15 text-jantar", "bg-klid/15 text-klid-text", "bg-[#6aa7ff]/15 text-[#6aa7ff]"];
+const barvaKroku = (i: number) => BARVY_KROKU[i % BARVY_KROKU.length];
+
+/** Úroveň podle podílu zaškrtnutého — malá odměna za každý krok. */
+function uroven(podil: number): { nazev: string; ikona: NazevIkony } {
+  if (podil >= 1) return { nazev: "Připraveno", ikona: "stit-ok" };
+  if (podil >= 0.6) return { nazev: "Skoro hotovo", ikona: "terc" };
+  if (podil >= 0.25) return { nazev: "Na dobré cestě", ikona: "zebrik" };
+  return { nazev: "Začínáme", ikona: "fajfka" };
+}
+
 type Krok =
   | { klic: string; nazev: string; druh: "nastroje"; polozky: OficialniNastroj[]; ids: string[] }
   | { klic: string; nazev: string; druh: "otazky"; otazky: OtazkaDotazniku[]; ids: string[]; uvod: React.ReactNode }
@@ -134,7 +155,7 @@ function RadekNastroje({ n, odpovedi, odpovez, zarizeni }: { n: OficialniNastroj
     <li className="flex items-start gap-3 py-2.5">
       <Kolecko id={n.id} nazev={n.nazev} odpovedi={odpovedi} odpovez={odpovez} />
       <div className="min-w-0 flex-1 pt-0.5">
-        <p className={`text-male font-semibold leading-snug ${mam ? "text-tlum" : "text-inkoust"}`}>{n.nazev}</p>
+        <button type="button" onClick={() => odpovez(n.id, mam ? "nemam" : "mam")} className={`text-left text-zaklad font-semibold leading-snug ${mam ? "text-tlum line-through decoration-klid/60" : "text-inkoust"}`}>{n.nazev}</button>
         <p className="text-drobne leading-snug text-tlum2">{n.kratce}</p>
         {/* Instalace a podrobnosti až na klepnutí — v kroku má být vidět jen co a jestli to mám. */}
         <details className="group mt-1">
@@ -171,6 +192,8 @@ export function PripravenostKlient({ nastroje }: { nastroje: OficialniNastroj[] 
   const [ulozisteFunguje, setUlozisteFunguje] = useState(true);
   const [zarizeni, setZarizeni] = useState<"ios" | "android" | null>(null);
   const [krok, setKrok] = useState(0);
+  const [oslava, setOslava] = useState(0);
+  const hotoveKroky = useRef<Set<string>>(new Set());
 
   const kroky: Krok[] = [
     ...PORADI_KATEGORII.flatMap((kat): Krok[] => {
@@ -190,6 +213,7 @@ export function PripravenostKlient({ nastroje }: { nastroje: OficialniNastroj[] 
   useEffect(() => {
     const ulozene = nactiOdpovedi();
     setOdpovedi(ulozene);
+    for (const k of kroky) if (k.druh !== "vysledek" && k.ids.every((id) => ulozene[id] === "mam")) hotoveKroky.current.add(k.klic);
     setNacteno(true);
     setZarizeni(platforma());
     // Otevřít první nedokončený krok; kdo má vše, vidí rovnou výsledek.
@@ -198,11 +222,20 @@ export function PripravenostKlient({ nastroje }: { nastroje: OficialniNastroj[] 
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
-  const odpovez = (id: string, o: Odpoved) => {
-    const nove = { ...odpovedi, [id]: o };
+  const odpovez = (id: string, o: Odpoved) => ulozVse({ ...odpovedi, [id]: o });
+  const ulozVse = (nove: Odpovedi) => {
     setOdpovedi(nove);
     if (!ulozOdpovedi(nove)) setUlozisteFunguje(false);
+    /* Konfety, když se krok právě dokončil (ne při načtení už hotových). */
+    for (const k of kroky) {
+      if (k.druh === "vysledek") continue;
+      const hotovo = souhrnOtazek(k.ids, nove).hotovo && k.ids.every((id) => nove[id] === "mam");
+      if (hotovo && !hotoveKroky.current.has(k.klic)) setOslava((n) => n + 1);
+      if (hotovo) hotoveKroky.current.add(k.klic); else hotoveKroky.current.delete(k.klic);
+    }
   };
+  /* „Mám všechno“ — jedním klepnutím celý krok. */
+  const mamVse = (ids: string[]) => ulozVse({ ...odpovedi, ...Object.fromEntries(ids.map((id) => [id, "mam" as Odpoved])) });
 
   const vybrane = nastrojeDoPruvodce(nastroje);
   const skore = skorePripravenosti(vybrane, odpovedi);
@@ -220,11 +253,24 @@ export function PripravenostKlient({ nastroje }: { nastroje: OficialniNastroj[] 
   return (
     <div className="space-y-6">
       {/* Pruh postupu: tečka za každý krok, hotové zelené, aktuální s obrysem. Kliknutím se dá skočit kamkoli. */}
-      <nav aria-label="Kroky průvodce" className="rounded-[22px] bg-plocha px-4 py-3 sm:px-5">
-        <div className="flex flex-wrap items-center justify-between gap-x-4 gap-y-1">
-          <span className="nadpis-boxu">Krok {krok + 1} z {kroky.length} · {aktualni.nazev}</span>
-          <span className="cislice text-mikro text-tlum2">{nacteno ? `${zodpovezenoCelkem} z ${otazekCelkem} · ${Object.values(odpovedi).filter((o) => o === "mam").length}× mám` : ""}</span>
-        </div>
+      <nav aria-label="Kroky průvodce" className="relative overflow-hidden rounded-[22px] bg-plocha px-4 py-3 sm:px-5">
+        {oslava > 0 && <Konfety klic={oslava} />}
+        {(() => {
+          const mamPocet = Object.values(odpovedi).filter((o) => o === "mam").length;
+          const u = uroven(otazekCelkem ? mamPocet / otazekCelkem : 0);
+          return (
+            <div className="flex flex-wrap items-center justify-between gap-x-4 gap-y-2">
+              <span className="flex items-center gap-2.5">
+                <span key={u.nazev} className="pop grid h-10 w-10 place-items-center rounded-full bg-klid text-papir"><Ikona nazev={u.ikona} velikost={18} tah={2.4} /></span>
+                <span>
+                  <span className="block text-zaklad font-bold leading-tight text-inkoust">{u.nazev}</span>
+                  <span className="cislice block text-mikro text-tlum2">{nacteno ? `${mamPocet} z ${otazekCelkem} odškrtnuto` : ""}</span>
+                </span>
+              </span>
+              <span className="nadpis-boxu">Krok {krok + 1} z {kroky.length}</span>
+            </div>
+          );
+        })()}
         <div className="mt-2 h-2 overflow-hidden rounded-full bg-plocha2">
           <div className="h-full rounded-full bg-klid transition-[width] duration-500" style={{ width: `${otazekCelkem ? Math.round((zodpovezenoCelkem / otazekCelkem) * 100) : 0}%` }} />
         </div>
@@ -239,7 +285,7 @@ export function PripravenostKlient({ nastroje }: { nastroje: OficialniNastroj[] 
               <li key={k.klic} className="shrink-0">
                 <button type="button" onClick={() => jdi(i)} aria-current={i === krok ? "step" : undefined}
                   className={`inline-flex min-h-[32px] items-center gap-1.5 rounded-full border px-3 text-drobne ${i === krok ? "border-inkoust text-inkoust" : "border-linka2 text-tlum hover:border-akcent"}`}>
-                  <span aria-hidden className={`grid h-4 w-4 place-items-center rounded-full text-[10px] ${hotovo ? "bg-klid text-papir" : i === krok ? "bg-inkoust text-papir" : "bg-plocha2 text-tlum2"}`}>{hotovo ? <Ikona nazev="fajfka" velikost={9} tah={3} /> : i + 1}</span>
+                  <span aria-hidden className={`grid h-5 w-5 place-items-center rounded-full ${hotovo ? "bg-klid text-papir" : i === krok ? "bg-inkoust text-papir" : "bg-plocha2 text-tlum2"}`}>{hotovo ? <Ikona nazev="fajfka" velikost={10} tah={3} /> : <Ikona nazev={IKONA_KROKU[k.klic] ?? "fajfka"} velikost={11} tah={2.2} />}</span>
                   {k.nazev}
                 </button>
               </li>
@@ -252,7 +298,18 @@ export function PripravenostKlient({ nastroje }: { nastroje: OficialniNastroj[] 
 
       {/* Tělo kroku */}
       <section aria-label={aktualni.nazev} className="space-y-3">
-        <h2 className="titul-mensi">{aktualni.nazev}</h2>
+        <div className="flex flex-wrap items-center gap-3">
+          <span className={`grid h-14 w-14 shrink-0 place-items-center rounded-[16px] ${barvaKroku(krok)}`}><Ikona nazev={IKONA_KROKU[aktualni.klic] ?? "fajfka"} velikost={28} tah={2} /></span>
+          <div className="min-w-0 flex-1">
+            <h2 className="titul-mensi leading-tight">{aktualni.nazev}</h2>
+            {aktualni.druh !== "vysledek" && <p className="cislice text-drobne text-tlum2">{souhrnOtazek(aktualni.ids, odpovedi).zodpovezeno} z {aktualni.ids.length} · zabere asi minutu</p>}
+          </div>
+          {aktualni.druh !== "vysledek" && !aktualni.ids.every((id) => odpovedi[id] === "mam") && (
+            <button type="button" onClick={() => mamVse(aktualni.ids)} className="inline-flex min-h-[44px] items-center gap-1.5 rounded-full border-2 border-klid/70 px-4 text-male font-semibold text-klid-text hover:bg-klid/10">
+              <Ikona nazev="fajfka" velikost={14} tah={2.8} /> Mám všechno
+            </button>
+          )}
+        </div>
         {aktualni.druh === "nastroje" && (
           <>
             <p className="max-w-[62ch] text-male text-tlum">{ZMINKY[aktualni.klic] ? `${ZMINKY[aktualni.klic]} ` : ""}Zaškrtněte, co máte. Odpovědi zůstávají jen v tomto prohlížeči.</p>

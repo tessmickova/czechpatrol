@@ -707,3 +707,18 @@ html[data-souhlas="ptat"] .souhlas-lista { display: block; }
   descent-override: 27.5%;
   line-gap-override: 0%;
 }
+
+/*
+  Konfety při dokončení kroku průvodce (3. 10. 2026). Krátké, jen při
+  povoleném pohybu v systému — stejně jako .pop. Bez pohybu zůstane
+  jen zelená odznaková hláška.
+*/
+.konfety { position: absolute; inset: 0; pointer-events: none; overflow: hidden; }
+.konfeta { position: absolute; top: -8px; width: 8px; height: 12px; border-radius: 2px; opacity: 0; }
+@media (prefers-reduced-motion: no-preference) {
+  .konfeta { animation: konfeta 1.1s ease-out forwards; }
+}
+@keyframes konfeta {
+  0% { opacity: 1; transform: translate3d(0, 0, 0) rotate(0deg); }
+  100% { opacity: 0; transform: translate3d(var(--dx), 140px, 0) rotate(var(--rot)); }
+}
