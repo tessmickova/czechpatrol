@@ -34,6 +34,38 @@
     }
   },
   {
+    "id": "k-e829217907a2e084",
+    "zachyceno": "2026-10-03T16:06:13.246Z",
+    "publikovano": "2026-10-03T16:01:51.000Z",
+    "zdroj": {
+      "nazev": "Politico Europe",
+      "url": "https://www.politico.eu/article/two-iranians-charged-with-alleged-bomb-plot-against-britains-jewish-community/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Two Iranians charged with alleged bomb plot against Britain’s Jewish community",
+    "titulekPuvodni": "Two Iranians charged with alleged bomb plot against Britain’s Jewish community",
+    "shrnuti": "Police said the two men received instructions and materials to make a homemade bomb for possible use on Jewish targets.",
+    "kodZeme": "GB",
+    "zeme": "Spojené království",
+    "kategorie": [
+      "sabotaz"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "bomb"
+    ],
+    "naliehave": null,
+    "stav": "ceka",
+    "vyrez": {
+      "text": "Two Iranians charged with alleged bomb plot against Britain’s Jewish community – POLITICO\nSkip to main content\nAdvertisement\nTwo Iranian men have been charged with terror offenses over an alleged plot to bomb Manchester’s Jewish community.\nRahman Salehi, 34, and Salam Ahmadyan, 36, appeared in a British court on Saturday on charges of preparing to commit an act of terrorism or assisting another to commit an act of terrorism.\nPolice said the two men, who were arrested last month on the eve of the Jewish holiday of Yom Kippur, had received material and instructions on how to make a bomb, identified targets and carried out reconnaissance ahead of an attack on Jewish targets.\nAdvertisement\nThey also said another man, likely in Iran, was in contact with them over the plot. The arrests followed a joint investigation by counter-terrorism police and the MI5 secret services.\nThe latest charges follow Prime Minister Andy Burnham announcing there were “strong indications” that Iran was involved in a suspicious incident linked to the RAF Fairford last week, which involved three vans parked strangely and a group of hooded, masked men near the airbase.\nBritain’s deputy assistant commissioner…",
+      "stazeno": "2026-10-03T16:06:16.034Z",
+      "stav": 200
+    }
+  },
+  {
     "id": "k-dd128b3562061200",
     "zachyceno": "2026-10-03T16:02:54.818Z",
     "publikovano": "2026-10-03T15:42:45.000Z",
@@ -12044,48 +12076,6 @@
       "duvod": "duplicita",
       "patriK": null,
       "poznamka": "Táž událost jako už zveřejněná aktualizace RAF Fairford — propuštění na kauci, výbušniny oficiálně nepotvrzeny (i-2026-09-28-cbc3ae593b, na webu jako neovereno)."
-    }
-  },
-  {
-    "id": "k-d85734dbc60995d5",
-    "zachyceno": "2026-09-29T12:03:48.495Z",
-    "publikovano": "2026-09-29T10:30:00.000Z",
-    "zdroj": {
-      "nazev": "ERR News (Estonsko)",
-      "url": "https://news.err.ee/1610151406/iss-chief-milrem-arson-was-first-successful-russian-attack-on-estonia-this-year",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "ISS chief: Milrem arson was first successful Russian attack on Estonia this year",
-    "titulekPuvodni": "ISS chief: Milrem arson was first successful Russian attack on Estonia this year",
-    "shrnuti": "The arson attack on the Milrem building was the first successful attack in Estonia this year carried out on behalf of Russian special services, Internal Security Service (ISS) chief Margo Palloson has said.",
-    "kodZeme": "EE",
-    "zeme": "Estonsko",
-    "kategorie": [
-      "sabotaz",
-      "hybridni",
-      "rusko"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "zeSite": null,
-    "shody": [
-      "arson",
-      "attack on",
-      "russia"
-    ],
-    "naliehave": null,
-    "stav": "vyrizen",
-    "vyrez": {
-      "text": "ISS chief: Milrem arson was first successful Russian attack on Estonia this year | News | ERR\n{{noticeUi.heading[langCode]}}\n{{infoLink[langCode].label}}\n{{noticeUi.allowAllLabel[langCode]}}\n{{rewokeLabels[langCode]}}\nX !\nNews\nERR\n{{1790677800000 | amCalendar}}\nshare Facebook X (Twitter) e-mail\nMargo Palloson. Source: Siim Lõvi /ERR\nNews\nThe arson attack on the Milrem building was the first successful attack in Estonia this year carried out on behalf of Russian special services, Internal Security Service (ISS) chief Margo Palloson has said.\nPalloson told ERR the ISS, known in Estonian as Kapo, has up to now prevented most similar would-be attacks, and that Russia is constantly seeking people to carry out sabotage on its behalf.\nBased on ISS intelligence, Estonia's government on Tuesday announced it had concluded with full confidence that the August 15 arson attack on the Milrem Robotics building in Tallinn was an act of sabotage commissioned by Russian special services.\nPalloson said in an interview with ERR that he \"can say that of course this is not Russia's only attempt. They are constantly planning, looking for opportunities, trying to find people who would carry out attacks,…",
-      "stazeno": "2026-09-29T12:03:53.649Z",
-      "stav": 200
-    },
-    "vyrizeni": {
-      "kdy": "2026-09-29T23:55:46.404Z",
-      "duvod": "duplicita",
-      "patriK": null,
-      "poznamka": "Táž událost jako už zveřejněný záznam o oficiální atribuci útoku na Milrem Rusku (i-2026-09-29-0ec3ee9612, na webu jako plně ověřeno)."
     }
   }
 ]
