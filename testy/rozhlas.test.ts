@@ -1,7 +1,7 @@
 // @ts-nocheck — skript je prostý ES modul bez typů; test hlídá chování, typy hlídá běh.
 import fs from "node:fs";
 import path from "node:path";
-import { describe, expect, it } from "vitest";
+import { afterAll, beforeAll, describe, expect, it, vi } from "vitest";
 import { stojiRanniPrehled, sestavVyjasneni, vyberMimoradne, castDne, cestaZaznamu, jeCasPrehledu, sestavKratky, sestavPrazdnyPrehled, vyberKratky, vyberTip, jeCesky, palivoDoPrehledu, sestavPrehledDne, sluzbyDoPrehledu, vyberNavrhyDoPrehledu, zmenyStavuZaDen, klicovaVeta, legendaTecek, pocetZdroju, pruhTecek, PUVODCI, radekPokryti, jeArchivni, radekData, rozdelZpravu, sestavPalivo, sestavSouhrn, sestavPrehledZachycenych, sestavSignal, sestavTest, sestavVystrahu, sestavZdroje, sestavZmenuStavu, sestavZpravu, vyberDoPrehledu, vyberNove, vyberPalivo, vyberSignaly, vyberVystrahu, vyberZmenyStavu, zahlavi, sestavVaznyNavrh, vyberVazneNavrhy, smerZmeny, sestavMimoradnou } from "../nastroje/rozhlas.mjs";
 import { smerZmeny as smerZmenyWeb } from "../src/lib/smer";
 import { UROVNE, zDeseti } from "../src/lib/skala";
@@ -14,6 +14,19 @@ const zaznam = (n: Record<string, unknown>) => ({
   atribuce: "vysetrovana", puvodce: "neznamy", druh: "pripad", fakta: ["První fakt."], historie: [{ kdy: "2026-09-04T00:00:00Z", text: "Událost." }],
   lidskyOvereno: true, ...n,
 });
+
+/*
+  Pevné „teď“ pro celý soubor (6. 9. 2026, opraveno 3. 10. 2026). Fixtury nesou data ze září
+  a funkce bez explicitního času berou Date.now() — jakmile skutečný čas
+  překročil hranici archivu (31 dní), dostaly zprávy slovo ARCHIV a testy
+  začaly padat jen proto, že běžely o měsíc později. Čas se zmrazí jen
+  pro Date, časovače běží dál.
+*/
+beforeAll(() => {
+  vi.useFakeTimers({ toFake: ["Date"] });
+  vi.setSystemTime(new Date("2026-09-06T12:00:00Z"));
+});
+afterAll(() => vi.useRealTimers());
 
 describe("rozhlas", () => {
   it("zpráva má titulek, závažnost, odkaz na celý záznam a únik HTML", () => {

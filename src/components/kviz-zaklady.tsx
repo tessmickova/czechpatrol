@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { KVIZ } from "@/lib/letaky";
+import { Konfety } from "./konfety";
 
 /*
   „Vím to“ — tři otázky ke všeobecné výstraze a nálezu trosek. Výsledek
@@ -33,8 +34,14 @@ export function KvizZaklady() {
   }
 
   return (
-    <div className="rounded-[18px] border border-linka p-4">
-      <div className="stitek mb-3">Vím to? Tři otázky</div>
+    <div className="relative overflow-hidden rounded-[18px] border border-linka bg-plocha p-4">
+      {vse && <Konfety klic="kviz" />}
+      <div className="mb-3 flex items-center justify-between gap-3">
+        <span className="stitek">Vím to? Tři otázky</span>
+        <span aria-label={`${odpovedi.filter((o, i) => o === KVIZ[i].spravne).length} ze ${KVIZ.length} správně`} className="flex gap-1">
+          {KVIZ.map((q, i) => <span key={q.otazka} className={`h-2.5 w-6 rounded-full transition-colors ${odpovedi[i] === q.spravne ? "bg-klid" : "bg-plocha2"}`} />)}
+        </span>
+      </div>
       <ol className="space-y-4">
         {KVIZ.map((q, i) => (
           <li key={q.otazka}>
