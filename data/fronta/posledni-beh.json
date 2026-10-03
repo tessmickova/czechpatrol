@@ -1,5 +1,5 @@
 {
-  "kdy": "2026-10-03T04:01:31.426Z",
+  "kdy": "2026-10-03T10:01:07.289Z",
   "zdroje": [
     {
       "klic": "e-sbirka",
@@ -89,9 +89,9 @@
     {
       "klic": "sshr",
       "ok": false,
-      "stav": 403,
+      "stav": null,
       "pocetPolozek": 0,
-      "chyba": "HTTP 403",
+      "chyba": "fetch failed",
       "vysledek": "chyba"
     },
     {
@@ -160,10 +160,11 @@
     },
     {
       "klic": "letiste-praha",
-      "ok": true,
-      "stav": 200,
+      "ok": false,
+      "stav": null,
       "pocetPolozek": 0,
-      "vysledek": "ok"
+      "chyba": "fetch failed",
+      "vysledek": "chyba"
     },
     {
       "klic": "celni-sprava",
