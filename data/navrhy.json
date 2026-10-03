@@ -1207,7 +1207,8 @@
     "fakta": [
       "Britská protiteroristická policie 1. 10. 2026 zadržela ve Westminsteru 27letého muže s britsko-íránským občanstvím pro podezření z přípravy teroristického činu podle paragrafu 5 zákona o terorismu z roku 2006.",
       "Druhý, 26letý muž s britským občanstvím byl vyslechnut pod výstrahou (nebyl zadržen); policie prohledala dvě nemovitosti.",
-      "Vrchní celostátní koordinátorka protiteroristické policie Vicki Evansová uvedla, že vyšetřování okolností událostí v Gloucestershiru je mimořádně složité a specialisté prověřují více linií včetně možné zahraniční vazby."
+      "Vrchní celostátní koordinátorka protiteroristické policie Vicki Evansová uvedla, že vyšetřování okolností událostí v Gloucestershiru je mimořádně složité a specialisté prověřují více linií včetně možné zahraniční vazby.",
+      "Dodatek 3. 10. 2026: muž byl propuštěn na kauci; vyšetřování podle protiteroristické policie pokračuje."
     ],
     "neznameho": [
       "Zda je zadržený muž přímo spojen s pěti dříve zadrženými a na kauci propuštěnými muži z víkendového incidentu.",
@@ -1232,6 +1233,22 @@
         "publikovano": "2026-10-01T00:00:00Z",
         "primarni": false,
         "jazyk": "en"
+      },
+      {
+        "nazev": "The Guardian — UK-Iran national arrested over alleged bomb plot at RAF Fairford released on bail",
+        "url": "https://www.theguardian.com/uk-news/2026/oct/03/uk-iran-national-arrested-alleged-bomb-plot-raf-fairford-released-bail",
+        "typ": "media",
+        "publikovano": "2026-10-03T00:00:00Z",
+        "primarni": false,
+        "jazyk": "en"
+      },
+      {
+        "nazev": "Seznam Zprávy — Britská policie propustila muže podezřelého z útoku na základnu Fairford",
+        "url": "https://www.seznamzpravy.cz/clanek/zahranicni-britska-policie-propustila-muze-podezreleho-z-utoku-na-zakladnu-fairford-316722",
+        "typ": "media",
+        "publikovano": "2026-10-03T00:00:00Z",
+        "primarni": false,
+        "jazyk": "cs"
       }
     ],
     "souvisejici": [],
@@ -1259,11 +1276,11 @@
   {
     "kam": "zaznam",
     "pripravil": "patrol",
-    "pripraveno": "2026-10-03T12:12:02.031Z",
-    "id": "i-2026-10-03-10d6d0f8f0",
-    "slug": "md-10d6d0f8f0",
-    "titulek": "Moldavsko: pět dronů přeletělo vzdušný prostor, výbuch u vesnice Crocmaz způsobil požár a rozbil okna zemědělské budovy, bez zranění",
-    "kratkyTitulek": "Moldavsko: pět dronů přeletělo vzdušný prostor, výbuch u vesnice Crocmaz způsobil požár a rozbil okna zemědělské budovy, bez zranění",
+    "pripraveno": "2026-10-03T16:37:35.996Z",
+    "id": "i-2026-10-03-e5b075d32f",
+    "slug": "md-e5b075d32f",
+    "titulek": "Moldavsko: prezidentka Sanduová upřesnila, že šlo o tři střely Banderol a dva drony, odsoudila Rusko a varovala, že jeho válka nebezpečně zasahuje i Moldavsko",
+    "kratkyTitulek": "Moldavsko: prezidentka Sanduová upřesnila, že šlo o tři střely Banderol a dva drony, odsoudila Rusko a varovala, že jeho válka nebezpečně zasahuje i Moldavsko",
     "zeme": "Moldavsko",
     "kodZeme": "MD",
     "kategorie": [
@@ -1272,116 +1289,40 @@
     ],
     "datumUdalosti": "2026-10-03T00:00:00Z",
     "datumZjisteni": "2026-10-03T00:00:00Z",
-    "aktualizovano": "2026-10-03T12:12:02.031Z",
+    "aktualizovano": "2026-10-03T16:37:35.996Z",
     "zavaznost": "Y2",
     "jistota": "vysoka",
     "stav": "bez-vysetrovani",
     "atribuce": "neznama",
-    "puvodce": "neznamy",
-    "druh": "pripad",
+    "puvodce": null,
+    "druh": "aktualizace",
     "fakta": [
-      "Letecká provozní služba moldavské Národní armády oznámila, že v sobotu 3. 10. 2026 mezi 7:45 a 8:00 přeletělo moldavský vzdušný prostor pět bezpilotních letounů; zaznamenány byly u obcí Anenii Noi, Ștefan Vodă, Hâncești, Tudora a Căușeni.",
-      "Nejméně ve dvou oblastech se našly úlomky letadel; v obci Crocmaz exploze jednoho z dronů způsobila požár vegetace a rozbila okna zemědělské budovy.",
-      "Žádná zranění nebyla nahlášena; ministerstvo obrany uvedlo, že k incidentu došlo v souvislosti s (nespecifikovanými) okolnostmi."
+      "Moldavská prezidentka Maia Sanduová na síti X napsala: \"Odsuzuji ruský útok na Ukrajinu dnes ráno. Jeho válka nebezpečně zasahuje i Moldavsko,\" a dodala, že \"ruské útočné vzdušné zbraně, včetně střel Banderol a dronů, narušily náš vzdušný prostor a vybuchly na naší půdě.\"",
+      "Podle upřesnění šlo celkem o tři střely a dva drony, které přeletěly území mezi 7:45 a 8:00; trosky se později našly ve východních okresech Hâncești, Anenii Noi a Căușeni.",
+      "Policie oblast s troskami zajistila; výbuch způsobil požár, zranění nebyla hlášena."
     ],
     "neznameho": [
-      "Přesný typ dronů a jejich původ nebyl v otevřených zdrojích upřesněn.",
-      "Oficiální přisouzení viny Rusku ve zdrojích chybí."
+      "Oficiální moldavské ministerstvo obrany mezi zdroji, které jsem otevřel, přesné rozdělení na \"tři střely a dva drony\" oproti dřívějšímu údaji \"pět dronů\" nevysvětlilo; jde o upřesnění podle Politico/Sanduové."
     ],
     "vyznam": "",
     "eskalacniSpousteče": [],
     "deeskalacniSignaly": [],
     "zdroje": [
       {
-        "nazev": "Ukrinform — Five drones flew over Moldova, explosions reported in several districts",
-        "url": "https://www.ukrinform.net/rubric-emergencies/4170671-five-drones-flew-over-moldova-explosions-reported-in-several-districts.html",
-        "typ": "wire",
+        "nazev": "POLITICO Europe — Sandu slams Russia as attack debris hits Moldova in latest airspace violation",
+        "url": "https://www.politico.eu/article/maia-sandu-slams-russia-as-attack-debris-hits-moldova-in-latest-airspace-violation/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication",
+        "typ": "media",
         "publikovano": "2026-10-03T00:00:00Z",
         "primarni": false,
         "jazyk": "en"
       },
       {
-        "nazev": "Digi24 — Cinci drone au intrat sâmbătă dimineață în spațiul aerian al R. Moldova",
-        "url": "https://www.digi24.ro/stiri/externe/moldova/cinci-drone-au-intrat-sambata-dimineata-in-spatiul-aerian-al-r-moldova-incendiu-provocat-de-explozia-uneia-dintre-ele-fara-victime-3976107",
-        "typ": "media",
-        "publikovano": "2026-10-03T00:00:00Z",
-        "primarni": false,
-        "jazyk": "ro"
-      }
-    ],
-    "souvisejici": [],
-    "historie": [
-      {
-        "kdy": "2026-10-03T00:00:00Z",
-        "text": "Zachyceno automatickým sběrem, druhý zdroj doložen před zařazením do fronty.",
-        "novySignal": true
-      }
-    ],
-    "novy": true,
-    "zapocitanoTyden": "2026-10-03",
-    "aiZpracovano": true,
-    "lidskyOvereno": false,
-    "archivniZaznam": false,
-    "dopadNaCr": {
-      "stav": "zadny",
-      "procRelevantni": "Další a výrazně větší nález dronů (pět najednou) na území sledované země sousedící s Ukrajinou.",
-      "dopad": "Pro lidi v Česku ze zprávy dnes neplyne žádné omezení.",
-      "sledujeme": "Zda moldavské úřady dron(y) oficiálně připíší Rusku.",
-      "overeno": "2026-10-03"
-    }
-  },
-  {
-    "kam": "zaznam",
-    "pripravil": "patrol",
-    "pripraveno": "2026-10-03T12:12:02.031Z",
-    "id": "i-2026-10-03-19baea4b78",
-    "slug": "lt-19baea4b78",
-    "titulek": "Litva: nad Vilniuskem se asi 50 minut řešil letecký poplach po neznámém objektu, letiště bylo dočasně uzavřeno; ředitel krizového centra řekl, že nemůže potvrdit, zda šlo o dron, nebo o hejno ptáků",
-    "kratkyTitulek": "Litva: nad Vilniuskem se asi 50 minut řešil letecký poplach po neznámém objektu, letiště bylo dočasně uzavřeno; ředitel krizového centra řekl, že nemůže potvrdit, zda šlo o dron, nebo o hejno ptáků",
-    "zeme": "Litva",
-    "kodZeme": "LT",
-    "kategorie": [
-      "drony",
-      "hranice"
-    ],
-    "datumUdalosti": "2026-10-03T00:00:00Z",
-    "datumZjisteni": "2026-10-03T00:00:00Z",
-    "aktualizovano": "2026-10-03T12:12:02.031Z",
-    "zavaznost": "Y1",
-    "jistota": "nizka",
-    "stav": "bez-vysetrovani",
-    "atribuce": "neznama",
-    "puvodce": "neznamy",
-    "druh": "pripad",
-    "fakta": [
-      "Litevské úřady vyhlásily kolem 9:50 v sobotu 3. 10. 2026 žlutý poplach pro Vilniuský kraj poté, co do litevského vzdušného prostoru vstoupil neidentifikovaný objekt; do vzduchu vzlétly stíhačky a kontrolovaný vzdušný prostor kolem letiště ve Vilniusu byl dočasně uzavřen.",
-      "Po asi 50 minutách, kolem 10:40, úřady vyhlásily konec poplachu (bílý poplach) s tím, že objekt nepředstavoval žádné nebezpečí.",
-      "Ředitel Národního centra krizového řízení Vilmantas Vitkauskas řekl: \"Zda to byli ptáci, nebo nějaký jiný objekt, to teď nemohu říct.\" Objekt se podle všeho pomalu pohyboval směrem na Jonavu, což vedlo úřady k úvaze, že mohlo jít o hejno ptáků.",
-      "Slovenská TASR s odkazem na agenturu Reuters uvedla, že šlo o podezřelý dron přilétající z Běloruska a že reagovaly stíhačky NATO; tuto konkrétní verzi (dron, původ z Běloruska) litevský zpravodajský server LRT ve svém vlastním podání nepotvrzuje a omezuje se na to, co řekly úřady."
-    ],
-    "neznameho": [
-      "Zda šlo skutečně o dron, nebo o ptáky — litevské úřady to podle vlastního vyjádření nedokázaly v době poplachu rozlišit.",
-      "Případný původ objektu (Bělorusko) není v otevřeném vyjádření litevských úřadů, které jsem přímo otevřel, potvrzen."
-    ],
-    "vyznam": "",
-    "eskalacniSpousteče": [],
-    "deeskalacniSignaly": [],
-    "zdroje": [
-      {
-        "nazev": "Aktuality.sk (TASR, podle Reuters) — Vilniuské letisko uzavreli pre podozrivý dron, do vzduchu vzlietli stíhačky NATO",
-        "url": "https://www.aktuality.sk/clanok/mnDDGmb/letisko-v-litovskom-vilniuse-uzavreli-kvoli-podozrivemu-dronu-z-bieloruska-vzlietli-stihacky-nato/",
+        "nazev": "Aktuality.sk (TASR) — Moldavský vzdušný priestor opäť narušený ruskými raketami, úrady hlásia výbuchy bez obetí",
+        "url": "https://www.aktuality.sk/clanok/6c9D6O2/ruske-rakety-a-drony-vybuchli-na-uzemi-moldavska-prezidentka-sanduova-varuje-ze-moskva-ohrozuje-celu-europu/",
         "typ": "media",
         "publikovano": "2026-10-03T00:00:00Z",
         "primarni": false,
         "jazyk": "sk"
-      },
-      {
-        "nazev": "LRT English — Lithuania's authorities issue all-clear following earlier air alert",
-        "url": "https://www.lrt.lt/en/news-in-english/19/3071034/lithuania-s-authorities-issue-all-clear-following-earlier-air-alert",
-        "typ": "media",
-        "publikovano": "2026-10-03T00:00:00Z",
-        "primarni": false,
-        "jazyk": "en"
       }
     ],
     "souvisejici": [],
@@ -1397,11 +1338,12 @@
     "aiZpracovano": true,
     "lidskyOvereno": false,
     "archivniZaznam": false,
+    "navazujeNa": "md-10d6d0f8f0",
     "dopadNaCr": {
       "stav": "zadny",
-      "procRelevantni": "Letecký poplach u hlavního města členského státu NATO a EU sousedícího s Běloruskem.",
+      "procRelevantni": "Upřesnění a prezidentská reakce na stejnodenní narušení vzdušného prostoru Moldavska, sousedící s regionem sledovaným projektem.",
       "dopad": "Pro lidi v Česku ze zprávy dnes neplyne žádné omezení.",
-      "sledujeme": "Zda litevské úřady objekt dodatečně identifikují.",
+      "sledujeme": "Zda Rusko na prezidentčino odsouzení zareaguje.",
       "overeno": "2026-10-03"
     }
   }
