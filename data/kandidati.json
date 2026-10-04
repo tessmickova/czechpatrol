@@ -1,5 +1,79 @@
 [
   {
+    "id": "k-870ec9cf908dcf04",
+    "zachyceno": "2026-10-04T06:03:06.386Z",
+    "publikovano": "2026-10-04T04:45:00.000Z",
+    "zdroj": {
+      "nazev": "Ukrainska Pravda (anglicky)",
+      "url": "https://www.pravda.com.ua/eng/news/2026/10/04/8056347/",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Russian drones attack Kyiv: debris falls on roof of house in Dniprovskyi district",
+    "titulekPuvodni": "Russian drones attack Kyiv: debris falls on roof of house in Dniprovskyi district",
+    "shrnuti": "Russian drones attacked Kyiv repeatedly overnight and on the morning of 4 October, causing a fire at a non-residential building in the Desnianskyi district. Debris also fell onto the roof of a house in the Dniprovskyi district.",
+    "kodZeme": "UA",
+    "zeme": "Ukrajina",
+    "kategorie": [
+      "drony",
+      "rusko"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "dron+fell",
+      "debris+dron",
+      "dron",
+      "drone",
+      "russia"
+    ],
+    "naliehave": null,
+    "stav": "ceka",
+    "vyrez": {
+      "text": "Russian drones attack Kyiv: debris falls on roof of house in Dniprovskyi district | Ukrainska Pravda\nA mobile fire group. Stock photo: General Staff of the Armed Forces of Ukraine\nRussian drones attacked Kyiv repeatedly overnight and on the morning of 4 October, causing a fire at a non-residential building in the Desnianskyi district. Debris also fell onto the roof of a house in the Dniprovskyi district.\nSource: Kyiv City Military Administration ; Kyiv Mayor Vitali Klitschko\nQuote from Klitschko: \"In the Dniprovskyi district, UAV debris fell onto the roof of a house. There was no fire. Debris also fell in an open area near a road in the same district. There was no fire there either.\"\nAdvertisement:\n\r\n\r\n\r\n\r\n\r\nDetails: An air-raid warning was issued six times in the capital overnight and in the morning due to the drone threat.\nDuring one of the attacks, falling debris caused a fire at a non-residential building in the Desnianskyi district.\nSupport Ukrainska Pravda on Patreon to help us keep reporting!\nKyiv\nattack\ndrones\nAdvertisement:\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nKyiv\nKyiv authorities retract report of drone debris falling on apartment block\nKyiv is preparing pontoon crossings in case of…",
+      "stazeno": "2026-10-04T06:03:06.518Z",
+      "stav": 200
+    }
+  },
+  {
+    "id": "k-fd9dbbee780c2c0d",
+    "zachyceno": "2026-10-04T06:03:03.590Z",
+    "publikovano": "2026-10-04T04:30:00.000Z",
+    "zdroj": {
+      "nazev": "Český rozhlas — domácí zprávy",
+      "url": "https://www.irozhlas.cz/komentare/musime-si-promluvit-o-obrane-ceska-jak-vazne-brat-retoricky-obrat-premiera-ktery_2610040630_lhv",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Musíme si promluvit o obraně Česka. Jak vážně brát rétorický obrat premiéra, který rok vládne s pátou kolonou?",
+    "titulekPuvodni": "Musíme si promluvit o obraně Česka. Jak vážně brát rétorický obrat premiéra, který rok vládne s pátou kolonou?",
+    "shrnuti": "Zprávy o tom, že se Evropa musí připravit na další eskalaci konfliktu ze strany Ruska, se množí. Bezpečnostní instituce napříč Evropou přitvrzují ve varováních. Dánská kontrarozvědka PET začátkem září oznámila, že sleduje konkrétní přípravy ruských sabotáží, především proti obrannému průmyslu a firm",
+    "kodZeme": "CZ",
+    "zeme": "Česko",
+    "kategorie": [
+      "sabotaz",
+      "zpravodajske",
+      "rusko"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "sabotaz",
+      "kontrarozvedka",
+      "rusk"
+    ],
+    "naliehave": null,
+    "stav": "ceka",
+    "vyrez": {
+      "text": "",
+      "stazeno": "2026-10-04T06:03:06.535Z",
+      "stav": 403,
+      "chyba": "HTTP 403"
+    }
+  },
+  {
     "id": "k-20fe047a0b4d9f8b",
     "zachyceno": "2026-10-04T04:03:08.437Z",
     "publikovano": "2026-10-04T03:25:00.000Z",
@@ -12093,89 +12167,6 @@
       "duvod": "neudalost",
       "patriK": null,
       "poznamka": "Generální tajemník NATO Rutte komentuje vývoj hrozby po dronových incidentech v EU a připomíná starší sestřel nad Litvou; jde o vyjádření/analýzu, ne o nový skutek."
-    }
-  },
-  {
-    "id": "k-8c5f2051599e2eb8",
-    "zachyceno": "2026-09-29T12:03:49.560Z",
-    "publikovano": "2026-09-29T10:53:46.000Z",
-    "zdroj": {
-      "nazev": "SME (Slovensko)",
-      "url": "https://www.sme.sk/svet/c/nemecko-buduje-najvacsiu-armadu-v-europe-nato-by-viedlo-iny-druh-vojny-ako-ukrajina-vravi-tajomnik?utm_source=rss&utm_medium=feed&utm_campaign=www-rss",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Nemecko buduje najväčšiu armádu v Európe. NATO by viedlo iný druh vojny ako Ukrajina, vraví tajomník",
-    "titulekPuvodni": "Nemecko buduje najväčšiu armádu v Európe. NATO by viedlo iný druh vojny ako Ukrajina, vraví tajomník",
-    "shrnuti": "Nemecko mení odvody aj nákup techniky.",
-    "kodZeme": "DE",
-    "zeme": "Německo",
-    "kategorie": [
-      "pravo",
-      "nato"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "zeSite": null,
-    "shody": [
-      "odvody",
-      "nato"
-    ],
-    "naliehave": null,
-    "stav": "vyrizen",
-    "vyrez": {
-      "text": "",
-      "stazeno": "2026-09-29T12:03:53.203Z",
-      "stav": 403,
-      "chyba": "HTTP 403"
-    },
-    "vyrizeni": {
-      "kdy": "2026-09-29T23:55:46.404Z",
-      "duvod": "neudalost",
-      "patriK": null,
-      "poznamka": "Rozhovor s generálním tajemníkem NATO o německém zbrojení a povaze budoucí války; analytický/spekulativní text, ne zpráva o konkrétním opatření."
-    }
-  },
-  {
-    "id": "k-34788b49f61cde10",
-    "zachyceno": "2026-09-29T12:03:51.854Z",
-    "publikovano": "2026-09-29T10:51:39.000Z",
-    "zdroj": {
-      "nazev": "The Moscow Times",
-      "url": "https://www.themoscowtimes.com/2026/09/29/kremlin-denies-orchestrating-arson-attack-at-estonian-robotics-plant-a93815",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Kremlin Denies Orchestrating Arson Attack at Estonian Robotics Plant",
-    "titulekPuvodni": "Kremlin Denies Orchestrating Arson Attack at Estonian Robotics Plant",
-    "shrnuti": "Estonia claimed Russia was behind a fire that broke out at Milrem Robotics, which supplies unmanned ground vehicles to Ukraine.",
-    "kodZeme": "EE",
-    "zeme": "Estonsko",
-    "kategorie": [
-      "sabotaz",
-      "rusko"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "zeSite": null,
-    "shody": [
-      "arson",
-      "russia",
-      "kreml",
-      "kremlin"
-    ],
-    "naliehave": null,
-    "stav": "vyrizen",
-    "vyrez": {
-      "text": "Kremlin Denies Orchestrating Arson Attack at Estonian Robotics Plant - The Moscow Times\nSupport The Moscow Times!\nContribute today\nMy account\nSignout\n&times;\nSupport The Moscow Times!\nContribute today\nSep. 29, 2026\nA Milrem Robotics booth at an exhibition in London.\nMilrem Robotics\nThe Kremlin has denied accusations that it was behind a fire that broke out at a military robotics plant in Estonia last month.\nEstonia&rsquo;s Internal Security Service (KAPO) claimed Tuesday that Russia orchestrated an Aug. 15 arson attack against Milrem Robotics, which supplies unmanned ground vehicles to Ukraine\n&ldquo;The modus operandi of the Milrem attack is consistent with other acts of sabotage carried out in Europe on behalf of Russia,&rdquo; KAPO said in a statement, adding that &ldquo;these activities are intended to undermine support for Ukraine.&rdquo;\nEstonia did not disclose its evidence in the case, citing the confidentiality of security services, but said the incident &ldquo;demonstrates the continued need for industries&hellip; to maintain robust physical and cyber security measures.&rdquo;\nKremlin spokesman Dmitry Peskov later told reporters that Estonia&rsquo;s accusations were…",
-      "stazeno": "2026-09-29T12:03:53.242Z",
-      "stav": 200
-    },
-    "vyrizeni": {
-      "kdy": "2026-09-29T23:55:46.404Z",
-      "duvod": "duplicita",
-      "patriK": null,
-      "poznamka": "Táž událost jako už zveřejněný záznam o oficiální atribuci útoku na Milrem Rusku (i-2026-09-29-0ec3ee9612, na webu jako plně ověřeno)."
     }
   }
 ]
