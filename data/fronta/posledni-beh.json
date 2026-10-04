@@ -1,5 +1,5 @@
 {
-  "kdy": "2026-10-04T14:18:17.009Z",
+  "kdy": "2026-10-04T16:01:09.692Z",
   "zdroje": [
     {
       "klic": "e-sbirka",
@@ -160,11 +160,10 @@
     },
     {
       "klic": "letiste-praha",
-      "ok": false,
-      "stav": null,
+      "ok": true,
+      "stav": 200,
       "pocetPolozek": 0,
-      "chyba": "fetch failed",
-      "vysledek": "chyba"
+      "vysledek": "ok"
     },
     {
       "klic": "celni-sprava",
