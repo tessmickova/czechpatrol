@@ -1,5 +1,5 @@
 {
-  "kdy": "2026-10-04T00:01:27.219Z",
+  "kdy": "2026-10-04T08:15:46.574Z",
   "zdroje": [
     {
       "klic": "e-sbirka",
@@ -89,9 +89,9 @@
     {
       "klic": "sshr",
       "ok": false,
-      "stav": null,
+      "stav": 403,
       "pocetPolozek": 0,
-      "chyba": "fetch failed",
+      "chyba": "HTTP 403",
       "vysledek": "chyba"
     },
     {
@@ -252,5 +252,5 @@
       "vysledek": "ok"
     }
   ],
-  "novychVeFronte": 3
+  "novychVeFronte": 0
 }
