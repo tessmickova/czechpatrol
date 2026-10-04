@@ -1,5 +1,5 @@
 {
-  "aktualizovano": "2026-10-04T08:17:34.917Z",
+  "aktualizovano": "2026-10-04T10:03:46.509Z",
   "stavy": [
     {
       "klic": "cloudflare",
@@ -28,7 +28,7 @@
         "Arica, Chile - (ARI)",
         "Baghdad, Iraq - (BGW)"
       ],
-      "zkontrolovano": "2026-10-04T08:17:34.917Z",
+      "zkontrolovano": "2026-10-04T10:03:46.509Z",
       "chyba": null
     },
     {
@@ -36,11 +36,6 @@
       "stav": "omezeni",
       "popis": "Partially Degraded Service",
       "incidenty": [
-        {
-          "nazev": "Service Degradation Affected Inbound and Outbound Calls of Zoom Phone and Contact Center in North America Region",
-          "odkaz": "https://stspg.io/0hbst70j3ckv",
-          "aktualizovano": "2026-10-04T01:05:44.791-07:00"
-        },
         {
           "nazev": "Service Degradation Affecting Customer Using Polycom Devices Going Offline",
           "odkaz": "https://stspg.io/4cpggx38p4g2",
@@ -53,7 +48,7 @@
         "Zoom Phone - Global",
         "Zoom Phone - NORTH AMERICA"
       ],
-      "zkontrolovano": "2026-10-04T08:17:34.917Z",
+      "zkontrolovano": "2026-10-04T10:03:46.509Z",
       "chyba": null
     },
     {
@@ -62,7 +57,7 @@
       "popis": "All Systems Operational",
       "incidenty": [],
       "postizene": [],
-      "zkontrolovano": "2026-10-04T08:17:34.917Z",
+      "zkontrolovano": "2026-10-04T10:03:46.509Z",
       "chyba": null
     }
   ]
