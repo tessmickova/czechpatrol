@@ -1,5 +1,5 @@
 {
-  "aktualizovano": "2026-10-05T12:03:49.998Z",
+  "aktualizovano": "2026-10-05T14:03:50.161Z",
   "stavy": [
     {
       "klic": "cloudflare",
@@ -9,17 +9,17 @@
         {
           "nazev": "API Shield JWT Validation Errors",
           "odkaz": "https://www.cloudflarestatus.com/incidents/ts295zqycqn7",
-          "aktualizovano": "2026-10-05T11:24:33.000Z"
+          "aktualizovano": "2026-10-05T11:24:33.470Z"
         },
         {
           "nazev": "Cloudflare One Clients are incorrectly challenged on some sites",
           "odkaz": "https://www.cloudflarestatus.com/incidents/tl0vrgjy99r0",
-          "aktualizovano": "2026-09-23T11:02:41.000Z"
+          "aktualizovano": "2026-09-23T11:02:41.673Z"
         },
         {
           "nazev": "Incorrect geo location for some Cloudflare WARP users",
           "odkaz": "https://www.cloudflarestatus.com/incidents/9g65dxfbcjln",
-          "aktualizovano": "2026-09-01T08:29:56.000Z"
+          "aktualizovano": "2026-09-01T08:29:56.953Z"
         }
       ],
       "postizene": [
@@ -28,7 +28,7 @@
         "Arica, Chile - (ARI)",
         "Baghdad, Iraq - (BGW)"
       ],
-      "zkontrolovano": "2026-10-05T12:03:49.998Z",
+      "zkontrolovano": "2026-10-05T14:03:50.161Z",
       "chyba": null
     },
     {
@@ -46,7 +46,7 @@
         "Devices (Softphones/Deskphones)",
         "Zoom Phone - Global"
       ],
-      "zkontrolovano": "2026-10-05T12:03:49.998Z",
+      "zkontrolovano": "2026-10-05T14:03:50.161Z",
       "chyba": null
     },
     {
@@ -55,7 +55,7 @@
       "popis": "All Systems Operational",
       "incidenty": [],
       "postizene": [],
-      "zkontrolovano": "2026-10-05T12:03:49.998Z",
+      "zkontrolovano": "2026-10-05T14:03:50.161Z",
       "chyba": null
     }
   ]
