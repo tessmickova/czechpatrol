@@ -1,5 +1,5 @@
 {
-  "kdy": "2026-10-05T10:01:36.063Z",
+  "kdy": "2026-10-05T12:01:40.933Z",
   "zdroje": [
     {
       "klic": "e-sbirka",
@@ -46,10 +46,11 @@
     },
     {
       "klic": "mzv",
-      "ok": true,
-      "stav": 200,
+      "ok": false,
+      "stav": 503,
       "pocetPolozek": 0,
-      "vysledek": "ok"
+      "chyba": "HTTP 503",
+      "vysledek": "chyba"
     },
     {
       "klic": "nato",
