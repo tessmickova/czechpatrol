@@ -1,5 +1,5 @@
 {
-  "kdy": "2026-10-05T22:01:18.340Z",
+  "kdy": "2026-10-05T22:28:57.754Z",
   "zdroje": [
     {
       "klic": "e-sbirka",
@@ -110,10 +110,11 @@
     },
     {
       "klic": "ctu",
-      "ok": true,
-      "stav": 200,
+      "ok": false,
+      "stav": 403,
       "pocetPolozek": 0,
-      "vysledek": "ok"
+      "chyba": "HTTP 403",
+      "vysledek": "chyba"
     },
     {
       "klic": "nukib",
@@ -167,11 +168,10 @@
     },
     {
       "klic": "celni-sprava",
-      "ok": false,
-      "stav": null,
+      "ok": true,
+      "stav": 200,
       "pocetPolozek": 0,
-      "chyba": "The operation was aborted due to timeout",
-      "vysledek": "chyba"
+      "vysledek": "ok"
     },
     {
       "klic": "sujb",
@@ -204,9 +204,9 @@
     {
       "klic": "bmi-de",
       "ok": false,
-      "stav": null,
+      "stav": 400,
       "pocetPolozek": 0,
-      "chyba": "fetch failed",
+      "chyba": "HTTP 400",
       "vysledek": "chyba"
     },
     {

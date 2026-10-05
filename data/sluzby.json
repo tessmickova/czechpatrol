@@ -1,5 +1,5 @@
 {
-  "aktualizovano": "2026-10-05T22:03:42.818Z",
+  "aktualizovano": "2026-10-05T22:31:13.907Z",
   "stavy": [
     {
       "klic": "cloudflare",
@@ -28,7 +28,7 @@
         "Arica, Chile - (ARI)",
         "Baghdad, Iraq - (BGW)"
       ],
-      "zkontrolovano": "2026-10-05T22:03:42.818Z",
+      "zkontrolovano": "2026-10-05T22:31:13.907Z",
       "chyba": null
     },
     {
@@ -36,11 +36,6 @@
       "stav": "omezeni",
       "popis": "Partially Degraded Service",
       "incidenty": [
-        {
-          "nazev": "Service Degradation Affecting ZoomMate",
-          "odkaz": "https://stspg.io/1f5pxbhqkzjp",
-          "aktualizovano": "2026-10-05T15:02:04.698-07:00"
-        },
         {
           "nazev": "Service Degradation Affecting Customer Using Polycom Devices Going Offline",
           "odkaz": "https://stspg.io/4cpggx38p4g2",
@@ -53,7 +48,7 @@
         "Zoom Phone - Global",
         "Zoom Phone - JAPAN"
       ],
-      "zkontrolovano": "2026-10-05T22:03:42.818Z",
+      "zkontrolovano": "2026-10-05T22:31:13.907Z",
       "chyba": null
     },
     {
@@ -62,7 +57,7 @@
       "popis": "All Systems Operational",
       "incidenty": [],
       "postizene": [],
-      "zkontrolovano": "2026-10-05T22:03:42.818Z",
+      "zkontrolovano": "2026-10-05T22:31:13.907Z",
       "chyba": null
     }
   ]
