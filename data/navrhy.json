@@ -1272,5 +1272,154 @@
       "sledujeme": "Zda bude zadržený muž obviněn a jak zadržení souvisí s předchozí pěticí.",
       "overeno": "2026-10-01"
     }
+  },
+  {
+    "kam": "zaznam",
+    "pripravil": "patrol",
+    "pripraveno": "2026-10-05T15:08:54.568Z",
+    "id": "i-2026-10-05-a4f36499bc",
+    "slug": "md-a4f36499bc",
+    "titulek": "Rusko zasáhlo projektilem hraniční přechod Palanca mezi Moldavskem a Ukrajinou, zranilo pracovníka pohraniční policie; Rumunsko a Moldavsko útok odsoudily",
+    "kratkyTitulek": "Rusko zasáhlo projektilem hraniční přechod Palanca mezi Moldavskem a Ukrajinou, zranilo pracovníka pohraniční policie; Rumunsko a Moldavsko útok odsoudily",
+    "zeme": "Moldavsko",
+    "kodZeme": "MD",
+    "kategorie": [
+      "hranice",
+      "diplomacie"
+    ],
+    "datumUdalosti": "2026-10-05T00:00:00Z",
+    "datumZjisteni": "2026-10-05T00:00:00Z",
+    "aktualizovano": "2026-10-05T15:08:54.568Z",
+    "zavaznost": "Y2",
+    "jistota": "stredni",
+    "stav": "bez-vysetrovani",
+    "atribuce": "neznama",
+    "puvodce": "neznamy",
+    "druh": "pripad",
+    "fakta": [
+      "V oblasti hraničního přechodu Palanca–Maiaki-Udobnoe v Moldavsku dopadl 5. 10. 2026 kolem 9:38 projektil, který se odrazil, zasáhl stojící linkový autobus a poškodil kontrolní budku.",
+      "Moldavská pohraniční policie uvedla, že jeden její pracovník utrpěl lehké zranění; jiná zranění nebyla hlášena. Provoz přechodu byl přerušen, doprava byla přesměrována.",
+      "Rumunský vyslanec v Kišiněvě Cristian-Leon Țurcanu incident důrazně odsoudil: \"Důrazně odsuzujeme závažný incident, který se dnes stal v oblasti Palanca a při kterém byla zraněna jedna osoba, v souvislosti s útoky Ruské federace na Ukrajinu,\" s tím, že to je další důkaz přímých důsledků ruské agrese pro bezpečnost Moldavska a regionální stabilitu.",
+      "Moldavské úřady vyzvaly obyvatele, aby se oblasti vyhýbali, při zvuku dronů nebo výbuchů vyhledali úkryt a nahlásili nalezené trosky letadel."
+    ],
+    "neznameho": [
+      "Zda šlo o trosky raketové/dronové obrany, nebo přímý zásah — moldavská policie píše jen o \"projektilu, který se odrazil\", bez upřesnění typu.",
+      "Oficiální ruské vyjádření k incidentu v otevřených zdrojích chybí."
+    ],
+    "vyznam": "",
+    "eskalacniSpousteče": [],
+    "deeskalacniSignaly": [],
+    "zdroje": [
+      {
+        "nazev": "Digi24 — Reacția României, după ce Rusia a bombardat un punct de frontieră dintre Ucraina și Republica Moldova",
+        "url": "https://www.digi24.ro/stiri/externe/moldova/reactia-romaniei-dupa-ce-rusia-a-bombardat-un-punct-de-frontiera-dintre-ucraina-si-republica-moldova-3978489",
+        "typ": "media",
+        "publikovano": "2026-10-05T00:00:00Z",
+        "primarni": false,
+        "jazyk": "ro"
+      },
+      {
+        "nazev": "Moldpres — Projectile fell in area of Palanca-Maiaki-Udobnoe border crossing",
+        "url": "https://www.moldpres.md/eng/society/projectile-fell-in-area-of-palanca-maiaki-udobnoe-border-crossing",
+        "typ": "wire",
+        "publikovano": "2026-10-05T00:00:00Z",
+        "primarni": false,
+        "jazyk": "en"
+      }
+    ],
+    "souvisejici": [],
+    "historie": [
+      {
+        "kdy": "2026-10-05T00:00:00Z",
+        "text": "Zachyceno automatickým sběrem, druhý zdroj doložen před zařazením do fronty.",
+        "novySignal": true
+      }
+    ],
+    "novy": true,
+    "zapocitanoTyden": "2026-10-05",
+    "aiZpracovano": true,
+    "lidskyOvereno": false,
+    "archivniZaznam": false,
+    "dopadNaCr": {
+      "stav": "zadny",
+      "procRelevantni": "Další přímý dopad ruské války proti Ukrajině na bezpečnost Moldavska a regionální stabilitu, odsouzený i Rumunskem.",
+      "dopad": "Pro lidi v Česku ze zprávy dnes neplyne žádné omezení.",
+      "sledujeme": "Zda se podobné incidenty na hranici Moldavska s Ukrajinou budou opakovat.",
+      "overeno": "2026-10-05"
+    }
+  },
+  {
+    "kam": "zaznam",
+    "pripravil": "patrol",
+    "pripraveno": "2026-10-05T15:08:54.568Z",
+    "id": "i-2026-10-05-7201245118",
+    "slug": "ro-7201245118",
+    "titulek": "Nákladní loď s tureckou vlajkou se potápí u rumunských břehů v Černém moři po požáru, který podle Zelenského způsobily ruské drony; dva členové posádky zemřeli",
+    "kratkyTitulek": "Nákladní loď s tureckou vlajkou se potápí u rumunských břehů v Černém moři po požáru, který podle Zelenského způsobily ruské drony; dva členové posádky zemřeli",
+    "zeme": "Rumunsko",
+    "kodZeme": "RO",
+    "kategorie": [
+      "infrastruktura",
+      "hranice"
+    ],
+    "datumUdalosti": "2026-10-05T00:00:00Z",
+    "datumZjisteni": "2026-10-05T00:00:00Z",
+    "aktualizovano": "2026-10-05T15:08:54.568Z",
+    "zavaznost": "Y2",
+    "jistota": "stredni",
+    "stav": "bez-vysetrovani",
+    "atribuce": "neznama",
+    "puvodce": "neznamy",
+    "druh": "pripad",
+    "fakta": [
+      "V pondělí 5. 10. 2026 vypukl požár na nákladní lodi Royad Mammadov plující pod tureckou vlajkou a převážející obilí, poté co ji zřejmě zasáhl dron; k incidentu došlo asi 20 námořních mil od rumunského pobřeží a 9 námořních mil od ropné plošiny Pescăruș.",
+      "Rumunská pobřežní stráž uvedla, že loď se začala potápět; záchranné složky evakuovaly 11 osob z posádky, včetně tří zraněných, dva členové posádky zemřeli.",
+      "Ukrajinský prezident Zelenskyj podle agentury Agerpres obvinil z útoku na nákladní loď ruské drony."
+    ],
+    "neznameho": [
+      "Oficiální rumunské nebo turecké potvrzení příčiny požáru (dron) nad rámec Zelenského tvrzení ve zdrojích chybí.",
+      "Přesný počet a stav zbylých zachráněných členů posádky."
+    ],
+    "vyznam": "",
+    "eskalacniSpousteče": [],
+    "deeskalacniSignaly": [],
+    "zdroje": [
+      {
+        "nazev": "Novinky.cz — U rumunských břehů se potápí turecká loď. Zřejmě ji zasáhl dron",
+        "url": "https://www.novinky.cz/clanek/zahranicni-evropa-u-rumunskych-brehu-se-potapi-turecka-lod-zrejme-ji-zasahl-dron-40600882",
+        "typ": "media",
+        "publikovano": "2026-10-05T00:00:00Z",
+        "primarni": false,
+        "jazyk": "cs"
+      },
+      {
+        "nazev": "Agerpres — Zelenski denunță un atac rusesc în cazul celor doi marinari uciși în Marea Neagră",
+        "url": "https://agerpres.ro/politic-extern/2026/10/05/zelenski-denunta-un-atac-rusesc-in-cazul-celor-doi-marinari-ucisi-in-marea-neagra--1599995",
+        "typ": "wire",
+        "publikovano": "2026-10-05T00:00:00Z",
+        "primarni": false,
+        "jazyk": "ro"
+      }
+    ],
+    "souvisejici": [],
+    "historie": [
+      {
+        "kdy": "2026-10-05T00:00:00Z",
+        "text": "Zachyceno automatickým sběrem, druhý zdroj doložen před zařazením do fronty.",
+        "novySignal": true
+      }
+    ],
+    "novy": true,
+    "zapocitanoTyden": "2026-10-05",
+    "aiZpracovano": true,
+    "lidskyOvereno": false,
+    "archivniZaznam": false,
+    "dopadNaCr": {
+      "stav": "zadny",
+      "procRelevantni": "Útok na civilní loď v mezinárodních vodách u pobřeží členského státu NATO a EU s oběťmi na životech.",
+      "dopad": "Pro lidi v Česku ze zprávy dnes neplyne žádné omezení.",
+      "sledujeme": "Oficiální rumunské vyšetřování příčiny požáru a potvrzení/vyvrácení zásahu dronem.",
+      "overeno": "2026-10-05"
+    }
   }
 ]
