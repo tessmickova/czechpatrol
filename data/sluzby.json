@@ -1,5 +1,5 @@
 {
-  "aktualizovano": "2026-10-05T00:04:09.587Z",
+  "aktualizovano": "2026-10-05T00:41:44.208Z",
   "stavy": [
     {
       "klic": "cloudflare",
@@ -28,7 +28,7 @@
         "Arica, Chile - (ARI)",
         "Baghdad, Iraq - (BGW)"
       ],
-      "zkontrolovano": "2026-10-05T00:04:09.587Z",
+      "zkontrolovano": "2026-10-05T00:41:44.208Z",
       "chyba": null
     },
     {
@@ -36,11 +36,6 @@
       "stav": "omezeni",
       "popis": "Partially Degraded Service",
       "incidenty": [
-        {
-          "nazev": "Service Degradation Affecting Zoom Rooms Management and Workspaces Management in SA01.",
-          "odkaz": "https://stspg.io/1mzjn9tgd3dc",
-          "aktualizovano": "2026-10-04T17:00:36.771-07:00"
-        },
         {
           "nazev": "Service Degradation Affecting Customer Using Polycom Devices Going Offline",
           "odkaz": "https://stspg.io/4cpggx38p4g2",
@@ -53,7 +48,7 @@
         "Zoom Phone - Global",
         "Zoom Phone - NORTH AMERICA"
       ],
-      "zkontrolovano": "2026-10-05T00:04:09.587Z",
+      "zkontrolovano": "2026-10-05T00:41:44.208Z",
       "chyba": null
     },
     {
@@ -62,7 +57,7 @@
       "popis": "All Systems Operational",
       "incidenty": [],
       "postizene": [],
-      "zkontrolovano": "2026-10-05T00:04:09.587Z",
+      "zkontrolovano": "2026-10-05T00:41:44.208Z",
       "chyba": null
     }
   ]
