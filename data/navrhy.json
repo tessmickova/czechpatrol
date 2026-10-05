@@ -1272,5 +1272,81 @@
       "sledujeme": "Zda bude zadržený muž obviněn a jak zadržení souvisí s předchozí pěticí.",
       "overeno": "2026-10-01"
     }
+  },
+  {
+    "kam": "zaznam",
+    "pripravil": "patrol",
+    "pripraveno": "2026-10-05T06:01:15.379Z",
+    "id": "i-2026-10-04-2500434c6d",
+    "slug": "gb-2500434c6d",
+    "titulek": "RAF Fairford: americké letectvo stáhlo všechny bombardéry B-1 z britské základny zpět do USA po vyšetřování plánovaného útoku",
+    "kratkyTitulek": "RAF Fairford: americké letectvo stáhlo všechny bombardéry B-1 z britské základny zpět do USA po vyšetřování plánovaného útoku",
+    "zeme": "Spojené království",
+    "kodZeme": "GB",
+    "kategorie": [
+      "vysetrovani",
+      "nato"
+    ],
+    "datumUdalosti": "2026-10-04T00:00:00Z",
+    "datumZjisteni": "2026-10-05T00:00:00Z",
+    "aktualizovano": "2026-10-05T06:01:15.379Z",
+    "zavaznost": "Y2",
+    "jistota": "vysoka",
+    "stav": "bez-vysetrovani",
+    "atribuce": "neznama",
+    "puvodce": null,
+    "druh": "aktualizace",
+    "fakta": [
+      "Americké letectvo stáhlo všechny bombardéry B-1 Lancer z britské základny RAF Fairford zpět na domovské základny v USA poté, co vyšetřování odhalilo plánovaný útok na základnu.",
+      "Podle představitele Pentagonu, který nebyl oprávněn o citlivých vojenských přesunech mluvit veřejně a hovořil v neděli pod podmínkou anonymity, byly stroje přesunuty zpět do USA.",
+      "Pozorovatelé letového provozu (např. Military Air Tracking Alliance) zaznamenali desítky bombardérů B-52 a B-1 operujících z RAF Fairford od začátku války s Íránem; v neděli viděli řadu B-1 odlétat ze základny v Gloucestershiru."
+    ],
+    "neznameho": [
+      "Zda jde o trvalé stažení, nebo jen dočasné přesunutí do doby, než vyšetřování skončí.",
+      "Přesný počet stažených letadel."
+    ],
+    "vyznam": "",
+    "eskalacniSpousteče": [],
+    "deeskalacniSignaly": [],
+    "zdroje": [
+      {
+        "nazev": "Novinky.cz — USA stáhly bombardéry z britské základny",
+        "url": "https://www.novinky.cz/clanek/zahranicni-evropa-usa-stahly-bombardery-z-britske-zakladny-40600756",
+        "typ": "media",
+        "publikovano": "2026-10-05T00:00:00Z",
+        "primarni": false,
+        "jazyk": "cs"
+      },
+      {
+        "nazev": "France 24 — US withdraws all B-1 bombers from British military base RAF Fairford",
+        "url": "https://www.france24.com/en/europe/20261004-us-bombers-raf-fairford-uk-pentagon",
+        "typ": "media",
+        "publikovano": "2026-10-04T00:00:00Z",
+        "primarni": false,
+        "jazyk": "en"
+      },
+      {
+        "nazev": "Le Monde — Les Etats-Unis retirent leurs bombardiers de la base britannique près de laquelle a eu lieu un incident",
+        "url": "https://www.lemonde.fr/international/article/2026/10/05/les-etats-unis-retirent-leurs-bombardiers-de-la-base-britannique-pres-de-laquelle-a-eu-lieu-un-incident_6788399_3210.html",
+        "typ": "media",
+        "publikovano": "2026-10-05T00:00:00Z",
+        "primarni": false,
+        "jazyk": "fr"
+      }
+    ],
+    "souvisejici": [],
+    "historie": [
+      {
+        "kdy": "2026-10-04T00:00:00Z",
+        "text": "Zachyceno automatickým sběrem, druhý zdroj doložen před zařazením do fronty.",
+        "novySignal": true
+      }
+    ],
+    "novy": true,
+    "zapocitanoTyden": "2026-10-04",
+    "aiZpracovano": true,
+    "lidskyOvereno": false,
+    "archivniZaznam": false,
+    "navazujeNa": "gb-e480488876"
   }
 ]
