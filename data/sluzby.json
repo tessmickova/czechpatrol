@@ -1,5 +1,5 @@
 {
-  "aktualizovano": "2026-10-05T08:03:38.516Z",
+  "aktualizovano": "2026-10-05T10:04:36.741Z",
   "stavy": [
     {
       "klic": "cloudflare",
@@ -19,11 +19,11 @@
       ],
       "postizene": [
         "Cloudflare Sites and Services",
+        "Ahmedabad, India - (AMD)",
         "Africa",
-        "Arica, Chile - (ARI)",
-        "Baghdad, Iraq - (BGW)"
+        "Arica, Chile - (ARI)"
       ],
-      "zkontrolovano": "2026-10-05T08:03:38.516Z",
+      "zkontrolovano": "2026-10-05T10:04:36.741Z",
       "chyba": null
     },
     {
@@ -38,12 +38,10 @@
         }
       ],
       "postizene": [
-        "Zoom Meetings",
-        "Zoom Phone",
-        "Zoom Rooms",
-        "Zoom Contact Center"
+        "Devices (Softphones/Deskphones)",
+        "Zoom Phone - Global"
       ],
-      "zkontrolovano": "2026-10-05T08:03:38.516Z",
+      "zkontrolovano": "2026-10-05T10:04:36.741Z",
       "chyba": null
     },
     {
@@ -52,7 +50,7 @@
       "popis": "All Systems Operational",
       "incidenty": [],
       "postizene": [],
-      "zkontrolovano": "2026-10-05T08:03:38.516Z",
+      "zkontrolovano": "2026-10-05T10:04:36.741Z",
       "chyba": null
     }
   ]
