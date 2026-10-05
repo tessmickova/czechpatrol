@@ -14181,5 +14181,94 @@
     "archivniZaznam": false,
     "navazujeNa": "gb-e480488876",
     "overeni": "neovereno"
+  },
+  {
+    "id": "i-2026-10-05-28fbc4c97c",
+    "slug": "ee-28fbc4c97c",
+    "titulek": "Estonsko přesouvá hlavní bojovou brigádu blíž k ruské hranici a staví novou základnu v Narvě pro až tisíc vojáků v rámci strategie „aktivní obrany“",
+    "kratkyTitulek": "Estonsko přesouvá hlavní bojovou brigádu blíž k ruské hranici a staví novou základnu v Narvě pro až tisíc vojáků v rámci strategie „aktivní obrany“",
+    "zeme": "Estonsko",
+    "kodZeme": "EE",
+    "kategorie": [
+      "cr",
+      "nato"
+    ],
+    "datumUdalosti": "2026-10-05T00:00:00Z",
+    "datumZjisteni": "2026-10-05T00:00:00Z",
+    "aktualizovano": "2026-10-05T15:47:50.942Z",
+    "zavaznost": "Y1",
+    "jistota": "stredni",
+    "stav": "bez-vysetrovani",
+    "atribuce": "neznama",
+    "puvodce": null,
+    "druh": "opatreni",
+    "fakta": [
+      "Estonsko podle deníku Financial Times trvale přesouvá své ozbrojené síly blíž k hranici s Ruskem a kupuje zbraně s dosahem hluboko na ruské území.",
+      "Velitelství 1. pěší brigády, hlavní bojové síly Estonska, se přestěhovalo ze základny Tapa (130 km od hranice) do Jõhvi (50 km od hranice); v Narvě se staví nová základna pro až 1000 vojáků (200 trvale, dalších 800 v případě krize).",
+      "Estonsko letos zvyšuje vojenské výdaje o 42 % na 2,4 miliardy eur (5,4 % HDP) a smluvně zajistilo devět amerických systémů HIMARS a devět jihokorejských systémů Chunmoo s doletem kolem 300 km, které dosáhnou i na Petrohrad.",
+      "Velitel brigády pplk. Tarmo Kundla řekl: \"Musíme začít od hranice a vyhrát už první bitvy.\"",
+      "Estonské zpravodajské složky podle FT odhadují kritické okno zranitelnosti na příštích 1 až 4 roky; jeden vysoký představitel uvedl, že \"zastrašování nefunguje\".",
+      "Estonsko se obává spíše omezených ruských provokací zaměřených na rusky mluvící Narvu, které by testovaly funkčnost kolektivní obrany NATO, než plné invaze."
+    ],
+    "neznameho": [
+      "Přesný harmonogram dokončení základny v Narvě.",
+      "Jak na plán reagovalo Rusko."
+    ],
+    "vyznam": "",
+    "eskalacniSpousteče": [],
+    "deeskalacniSignaly": [],
+    "zdroje": [
+      {
+        "nazev": "Meduza (anglicky) — Estonia moves troops closer to Russian border under 'active defense' program",
+        "url": "https://meduza.io/en/news/2026/10/05/estonia-moves-troops-closer-to-russian-border-under-active-defense-program",
+        "typ": "media",
+        "publikovano": "2026-10-05T00:00:00Z",
+        "primarni": false,
+        "jazyk": "en"
+      },
+      {
+        "nazev": "ERR News — FT: Estonia moving troops closer to Russia in 'active defense' push",
+        "url": "https://news.err.ee/1610156476/ft-estonia-moving-troops-closer-to-russia-in-active-defense-push",
+        "typ": "media",
+        "publikovano": "2026-10-05T00:00:00Z",
+        "primarni": false,
+        "jazyk": "en"
+      },
+      {
+        "nazev": "Novinky.cz — Estonsko přesouvá síly k ruské hranici a pořizuje zbraně s dosahem na Petrohrad",
+        "url": "https://www.novinky.cz/clanek/valka-na-ukrajine-estonsko-presouva-sily-k-ruske-hranici-a-porizuje-zbrane-s-dosahem-na-petrohrad-40600805",
+        "typ": "media",
+        "publikovano": "2026-10-05T00:00:00Z",
+        "primarni": false,
+        "jazyk": "cs"
+      }
+    ],
+    "souvisejici": [],
+    "historie": [
+      {
+        "kdy": "2026-10-05T00:00:00Z",
+        "text": "Zachyceno automatickým sběrem, druhý zdroj doložen před zařazením do fronty.",
+        "novySignal": true
+      },
+      {
+        "kdy": "2026-10-05T15:47:50.942Z",
+        "text": "Zveřejněno jako neověřené úředně: dvě nezávislé redakce, úřad zatím nepotvrdil.",
+        "novySignal": false
+      }
+    ],
+    "novy": true,
+    "zapocitanoTyden": "2026-10-05",
+    "aiZpracovano": true,
+    "lidskyOvereno": false,
+    "archivniZaznam": false,
+    "vykonal": "Ozbrojené síly Estonska",
+    "dopadNaCr": {
+      "stav": "zadny",
+      "procRelevantni": "Zásadní posun v obranné strategii sousedícího členského státu NATO vůči Rusku, relevantní pro posuzování rizika v regionu.",
+      "dopad": "Pro lidi v Česku ze zprávy dnes neplyne žádné omezení.",
+      "sledujeme": "Jak na přesun estonských sil zareaguje Rusko a zda podobný krok zvažují i další pobaltské státy.",
+      "overeno": "2026-10-05"
+    },
+    "overeni": "neovereno"
   }
 ]
