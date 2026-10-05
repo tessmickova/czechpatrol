@@ -1,5 +1,5 @@
 {
-  "aktualizovano": "2026-10-04T22:03:37.228Z",
+  "aktualizovano": "2026-10-05T00:04:09.587Z",
   "stavy": [
     {
       "klic": "cloudflare",
@@ -9,17 +9,17 @@
         {
           "nazev": "Issues with Workers Build failing to start",
           "odkaz": "https://www.cloudflarestatus.com/incidents/q2bck6r39bzk",
-          "aktualizovano": "2026-10-03T08:54:50.851Z"
+          "aktualizovano": "2026-10-03T08:54:50.000Z"
         },
         {
           "nazev": "Cloudflare One Clients are incorrectly challenged on some sites",
           "odkaz": "https://www.cloudflarestatus.com/incidents/tl0vrgjy99r0",
-          "aktualizovano": "2026-09-23T11:02:41.673Z"
+          "aktualizovano": "2026-09-23T11:02:41.000Z"
         },
         {
           "nazev": "Incorrect geo location for some Cloudflare WARP users",
           "odkaz": "https://www.cloudflarestatus.com/incidents/9g65dxfbcjln",
-          "aktualizovano": "2026-09-01T08:29:56.953Z"
+          "aktualizovano": "2026-09-01T08:29:56.000Z"
         }
       ],
       "postizene": [
@@ -28,7 +28,7 @@
         "Arica, Chile - (ARI)",
         "Baghdad, Iraq - (BGW)"
       ],
-      "zkontrolovano": "2026-10-04T22:03:37.228Z",
+      "zkontrolovano": "2026-10-05T00:04:09.587Z",
       "chyba": null
     },
     {
@@ -36,6 +36,11 @@
       "stav": "omezeni",
       "popis": "Partially Degraded Service",
       "incidenty": [
+        {
+          "nazev": "Service Degradation Affecting Zoom Rooms Management and Workspaces Management in SA01.",
+          "odkaz": "https://stspg.io/1mzjn9tgd3dc",
+          "aktualizovano": "2026-10-04T17:00:36.771-07:00"
+        },
         {
           "nazev": "Service Degradation Affecting Customer Using Polycom Devices Going Offline",
           "odkaz": "https://stspg.io/4cpggx38p4g2",
@@ -48,7 +53,7 @@
         "Zoom Phone - Global",
         "Zoom Phone - NORTH AMERICA"
       ],
-      "zkontrolovano": "2026-10-04T22:03:37.228Z",
+      "zkontrolovano": "2026-10-05T00:04:09.587Z",
       "chyba": null
     },
     {
@@ -57,7 +62,7 @@
       "popis": "All Systems Operational",
       "incidenty": [],
       "postizene": [],
-      "zkontrolovano": "2026-10-04T22:03:37.228Z",
+      "zkontrolovano": "2026-10-05T00:04:09.587Z",
       "chyba": null
     }
   ]
