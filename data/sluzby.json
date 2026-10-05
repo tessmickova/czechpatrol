@@ -1,16 +1,11 @@
 {
-  "aktualizovano": "2026-10-05T06:48:28.121Z",
+  "aktualizovano": "2026-10-05T08:03:38.516Z",
   "stavy": [
     {
       "klic": "cloudflare",
       "stav": "omezeni",
       "popis": "Minor Service Outage",
       "incidenty": [
-        {
-          "nazev": "Issues with Workers Build failing to start",
-          "odkaz": "https://www.cloudflarestatus.com/incidents/q2bck6r39bzk",
-          "aktualizovano": "2026-10-03T08:54:50.000Z"
-        },
         {
           "nazev": "Cloudflare One Clients are incorrectly challenged on some sites",
           "odkaz": "https://www.cloudflarestatus.com/incidents/tl0vrgjy99r0",
@@ -28,7 +23,7 @@
         "Arica, Chile - (ARI)",
         "Baghdad, Iraq - (BGW)"
       ],
-      "zkontrolovano": "2026-10-05T06:48:28.121Z",
+      "zkontrolovano": "2026-10-05T08:03:38.516Z",
       "chyba": null
     },
     {
@@ -48,7 +43,7 @@
         "Zoom Rooms",
         "Zoom Contact Center"
       ],
-      "zkontrolovano": "2026-10-05T06:48:28.121Z",
+      "zkontrolovano": "2026-10-05T08:03:38.516Z",
       "chyba": null
     },
     {
@@ -57,7 +52,7 @@
       "popis": "All Systems Operational",
       "incidenty": [],
       "postizene": [],
-      "zkontrolovano": "2026-10-05T06:48:28.121Z",
+      "zkontrolovano": "2026-10-05T08:03:38.516Z",
       "chyba": null
     }
   ]
