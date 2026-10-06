@@ -1449,7 +1449,7 @@
     "datumZjisteni": "2026-10-06T00:00:00Z",
     "aktualizovano": "2026-10-06T15:26:28.513Z",
     "zavaznost": "Y2",
-    "jistota": "vysoka",
+    "jistota": "stredni",
     "stav": "bez-vysetrovani",
     "atribuce": "neznama",
     "puvodce": "neznamy",
@@ -1524,7 +1524,7 @@
     "datumZjisteni": "2026-10-06T00:00:00Z",
     "aktualizovano": "2026-10-06T15:26:28.513Z",
     "zavaznost": "Y2",
-    "jistota": "vysoka",
+    "jistota": "stredni",
     "stav": "bez-vysetrovani",
     "atribuce": "neznama",
     "puvodce": null,
@@ -1586,88 +1586,6 @@
       "procRelevantni": "Další vrstva vyšetřování incidentu u RAF Fairford, který se týká americké základny používané i pro operace proti Íránu.",
       "dopad": "Pro lidi v Česku ze zprávy dnes neplyne žádné omezení.",
       "sledujeme": "Zda bude nově zadržený muž obviněn a jak souvisí s předchozími šesti zadrženými.",
-      "overeno": "2026-10-06"
-    }
-  },
-  {
-    "kam": "zaznam",
-    "pripravil": "patrol",
-    "pripraveno": "2026-10-06T15:26:28.513Z",
-    "id": "i-2026-10-06-72becf367b",
-    "slug": "lt-72becf367b",
-    "titulek": "Litevský parlament schválil v prvním čtení zrušení ústavního zákazu umístění jaderných zbraní na svém území; Kreml hrozí „nezbytnými opatřeními“",
-    "kratkyTitulek": "Litevský parlament schválil v prvním čtení zrušení ústavního zákazu umístění jaderných zbraní na svém území; Kreml hrozí „nezbytnými opatřeními“",
-    "zeme": "Litva",
-    "kodZeme": "LT",
-    "kategorie": [
-      "nato",
-      "rusko"
-    ],
-    "datumUdalosti": "2026-10-06T00:00:00Z",
-    "datumZjisteni": "2026-10-06T00:00:00Z",
-    "aktualizovano": "2026-10-06T15:26:28.513Z",
-    "zavaznost": "Y2",
-    "jistota": "vysoka",
-    "stav": "bez-vysetrovani",
-    "atribuce": "neznama",
-    "puvodce": null,
-    "druh": "reakce",
-    "fakta": [
-      "Litevský Seimas v úterý 6. 10. 2026 schválil v prvním ze dvou nutných hlasování ústavní dodatek, který by zrušil zákaz umístění jaderných zbraní na litevském území.",
-      "Mluvčí Kremlu Dmitrij Peskov na dotaz novinářů, jak Rusko vidí tento krok i americkým prezidentem Trumpem tento měsíc nadhozený návrh zřídit v Litvě trvalou vojenskou základnu USA, řekl, že umístění takové vojenské infrastruktury \"by nepřispělo ke stabilitě a předvídatelnosti na evropském kontinentu\", ale naopak by to byl \"další významný krok k vyhrocení napětí\".",
-      "Peskov dodal, že Rusko \"bude nuceno přijmout všechna nezbytná opatření, aby spolehlivě zajistilo svou vlastní bezpečnost\"."
-    ],
-    "neznameho": [
-      "Výsledek druhého, konečného hlasování litevského parlamentu o ústavním dodatku.",
-      "Jaká konkrétní \"nezbytná opatření\" by Rusko zvažovalo — Peskov to neupřesnil."
-    ],
-    "vyznam": "",
-    "eskalacniSpousteče": [],
-    "deeskalacniSignaly": [],
-    "zdroje": [
-      {
-        "nazev": "Ukrainska Pravda (European Pravda, Interfax) — Kremlin threatens Lithuania over plans to allow stationing nuclear weapons",
-        "url": "https://www.pravda.com.ua/eng/news/2026/10/06/8056704/",
-        "typ": "media",
-        "publikovano": "2026-10-06T00:00:00Z",
-        "primarni": false,
-        "jazyk": "en"
-      },
-      {
-        "nazev": "The Moscow Times (Reuters) — Kremlin Warns Lithuania Lifting Nuclear Arms Ban Risks Escalation",
-        "url": "https://www.themoscowtimes.com/2026/10/06/kremlin-warns-lithuania-lifting-nuclear-arms-ban-risks-escalation-a93891",
-        "typ": "wire",
-        "publikovano": "2026-10-06T00:00:00Z",
-        "primarni": false,
-        "jazyk": "en"
-      },
-      {
-        "nazev": "Digi24 — Avertismentul Kremlinului după ce Lituania a votat în favoarea ridicării interdicției privind armele nucleare",
-        "url": "https://www.digi24.ro/stiri/externe/rusia/avertismentul-kremlinului-dupa-ce-lituania-a-votat-in-favoarea-ridicarii-interdictiei-privind-armele-nucleare-o-noua-escaladare-3980471",
-        "typ": "media",
-        "publikovano": "2026-10-06T00:00:00Z",
-        "primarni": false,
-        "jazyk": "ro"
-      }
-    ],
-    "souvisejici": [],
-    "historie": [
-      {
-        "kdy": "2026-10-06T00:00:00Z",
-        "text": "Zachyceno automatickým sběrem, druhý zdroj doložen před zařazením do fronty.",
-        "novySignal": true
-      }
-    ],
-    "novy": true,
-    "zapocitanoTyden": "2026-10-06",
-    "aiZpracovano": true,
-    "lidskyOvereno": false,
-    "archivniZaznam": false,
-    "dopadNaCr": {
-      "stav": "zadny",
-      "procRelevantni": "Posun v jaderné politice členského státu NATO sousedícího s Ruskem a Běloruskem a ruská reakce na něj.",
-      "dopad": "Pro lidi v Česku ze zprávy dnes neplyne žádné omezení.",
-      "sledujeme": "Výsledek druhého hlasování litevského parlamentu a případná konkrétní ruská opatření.",
       "overeno": "2026-10-06"
     }
   }

@@ -1,16 +1,11 @@
 {
-  "aktualizovano": "2026-10-06T14:03:41.708Z",
+  "aktualizovano": "2026-10-06T20:03:30.699Z",
   "stavy": [
     {
       "klic": "cloudflare",
       "stav": "vypadek",
       "popis": "Partial System Outage",
       "incidenty": [
-        {
-          "nazev": "Network routing issue",
-          "odkaz": "https://www.cloudflarestatus.com/incidents/ryvhi2suec0d",
-          "aktualizovano": "2026-10-06T13:34:23.615Z"
-        },
         {
           "nazev": "Cloudflare One Clients are incorrectly challenged on some sites",
           "odkaz": "https://www.cloudflarestatus.com/incidents/tl0vrgjy99r0",
@@ -24,29 +19,43 @@
       ],
       "postizene": [
         "Cloudflare Sites and Services",
-        "Accra, Ghana - (ACC)",
         "Africa",
-        "Arica, Chile - (ARI)"
+        "Arica, Chile - (ARI)",
+        "Baghdad, Iraq - (BGW)"
       ],
-      "zkontrolovano": "2026-10-06T14:03:41.708Z",
+      "zkontrolovano": "2026-10-06T20:03:30.699Z",
       "chyba": null
     },
     {
       "klic": "zoom",
-      "stav": "nezjisteno",
-      "popis": null,
-      "incidenty": [],
-      "postizene": [],
-      "zkontrolovano": "2026-10-06T14:03:41.708Z",
-      "chyba": "The operation was aborted due to timeout"
+      "stav": "omezeni",
+      "popis": "Partially Degraded Service",
+      "incidenty": [
+        {
+          "nazev": "Service Degradation Affecting Customer Using Polycom Devices Going Offline",
+          "odkaz": "https://stspg.io/4cpggx38p4g2",
+          "aktualizovano": "2026-10-05T18:31:53.125-07:00"
+        }
+      ],
+      "postizene": [
+        "Zoom Phone",
+        "Devices (Softphones/Deskphones)",
+        "Zoom Phone - Global",
+        "Zoom Phone - JAPAN"
+      ],
+      "zkontrolovano": "2026-10-06T20:03:30.699Z",
+      "chyba": null
     },
     {
       "klic": "discord",
-      "stav": "provoz",
-      "popis": "All Systems Operational",
+      "stav": "omezeni",
+      "popis": "Partially Degraded Service",
       "incidenty": [],
-      "postizene": [],
-      "zkontrolovano": "2026-10-06T14:03:41.708Z",
+      "postizene": [
+        "Tax Calculation Service",
+        "Third-party"
+      ],
+      "zkontrolovano": "2026-10-06T20:03:30.699Z",
       "chyba": null
     }
   ]
