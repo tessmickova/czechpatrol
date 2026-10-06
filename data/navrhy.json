@@ -1588,5 +1588,80 @@
       "sledujeme": "Zda bude nově zadržený muž obviněn a jak souvisí s předchozími šesti zadrženými.",
       "overeno": "2026-10-06"
     }
+  },
+  {
+    "kam": "zaznam",
+    "pripravil": "patrol",
+    "pripraveno": "2026-10-06T21:06:52.462Z",
+    "id": "i-2026-10-06-dba248d267",
+    "slug": "bg-dba248d267",
+    "titulek": "Rusko podle Zelenského kombinovaným útokem námořních a vzdušných dronů napadlo dvě civilní lodě v bulharské výlučné ekonomické zóně, jedna se potopila; bulharská prezidentka svolala bezpečnostní radu",
+    "kratkyTitulek": "Rusko podle Zelenského kombinovaným útokem námořních a vzdušných dronů napadlo dvě civilní lodě v bulharské výlučné ekonomické zóně, jedna se potopila; bulharská prezidentka svolala bezpečnostní radu",
+    "zeme": "Bulharsko",
+    "kodZeme": "BG",
+    "kategorie": [
+      "infrastruktura",
+      "hranice"
+    ],
+    "datumUdalosti": "2026-10-06T00:00:00Z",
+    "datumZjisteni": "2026-10-06T00:00:00Z",
+    "aktualizovano": "2026-10-06T21:06:52.462Z",
+    "zavaznost": "Y2",
+    "jistota": "vysoka",
+    "stav": "bez-vysetrovani",
+    "atribuce": "neznama",
+    "puvodce": "neznamy",
+    "druh": "pripad",
+    "fakta": [
+      "Ukrajinský prezident Zelenskyj ve večerním projevu 6. 10. 2026 uvedl, že v noci byly v bulharských vodách napadeny dvě civilní lodě; jedna se potopila, druhá utrpěla značné škody.",
+      "Podle Zelenského ukrajinské námořnictvo kontaktovalo bulharské protějšky a společně potvrdilo, že šlo o kombinovaný ruský útok s použitím námořních i vzdušných dronů; ukrajinské síly v této části moře podle něj žádnou operaci nevedly.",
+      "Zelenskyj označil útok za další část ruské snahy učinit západní část Černého moře zcela nevhodnou k plavbě a vyjádřil soustrast postiženým.",
+      "Bulharská prezidentka Iliana Jotovová svolala na středu 7. 10. 2026 v 13:00 do prezidentského sídla jednání Poradní rady pro národní bezpečnost (CCNS), které se má zaměřit na \"aktuální rizika a hrozby pro námořní bezpečnost a kritickou infrastrukturu Bulharska v souvislosti s válkou\" na Ukrajině."
+    ],
+    "neznameho": [
+      "Jména a vlajky napadených lodí ve zdrojích chybí.",
+      "Počet obětí nebo zraněných na palubách — zdroje uvádějí jen škodu na plavidlech."
+    ],
+    "vyznam": "",
+    "eskalacniSpousteče": [],
+    "deeskalacniSignaly": [],
+    "zdroje": [
+      {
+        "nazev": "Ukrinform (Novinite) — Bulgarian President convenes Security Council after drone attacks on commercial vessels",
+        "url": "https://www.ukrinform.net/rubric-polytics/4171723-bulgarian-president-convenes-security-council-after-drone-attacks-on-commercial-vessels.html",
+        "typ": "wire",
+        "publikovano": "2026-10-06T00:00:00Z",
+        "primarni": false,
+        "jazyk": "en"
+      },
+      {
+        "nazev": "Ukrainska Pravda (European Pravda) — Zelenskyy: Vessels in Bulgarian waters were attacked by Russia",
+        "url": "https://www.pravda.com.ua/eng/news/2026/10/06/8056782/",
+        "typ": "media",
+        "publikovano": "2026-10-06T00:00:00Z",
+        "primarni": false,
+        "jazyk": "en"
+      }
+    ],
+    "souvisejici": [],
+    "historie": [
+      {
+        "kdy": "2026-10-06T00:00:00Z",
+        "text": "Zachyceno automatickým sběrem, druhý zdroj doložen před zařazením do fronty.",
+        "novySignal": true
+      }
+    ],
+    "novy": true,
+    "zapocitanoTyden": "2026-10-06",
+    "aiZpracovano": true,
+    "lidskyOvereno": false,
+    "archivniZaznam": false,
+    "dopadNaCr": {
+      "stav": "zadny",
+      "procRelevantni": "Útok na civilní lodě ve výlučné ekonomické zóně členského státu NATO a EU, rozšiřující dosah ruských útoků na Černém moři na další zemi.",
+      "dopad": "Pro lidi v Česku ze zprávy dnes neplyne žádné omezení.",
+      "sledujeme": "Výsledek jednání bulharské Poradní rady pro národní bezpečnost 7. 10.",
+      "overeno": "2026-10-06"
+    }
   }
 ]
