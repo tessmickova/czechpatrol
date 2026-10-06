@@ -1,5 +1,5 @@
 {
-  "aktualizovano": "2026-10-06T16:13:50.633Z",
+  "aktualizovano": "2026-10-06T18:03:09.864Z",
   "stavy": [
     {
       "klic": "cloudflare",
@@ -19,11 +19,11 @@
       ],
       "postizene": [
         "Cloudflare Sites and Services",
-        "Accra, Ghana - (ACC)",
+        "Adelaide, SA, Australia - (ADL)",
         "Africa",
         "Arica, Chile - (ARI)"
       ],
-      "zkontrolovano": "2026-10-06T16:13:50.633Z",
+      "zkontrolovano": "2026-10-06T18:03:09.864Z",
       "chyba": null
     },
     {
@@ -43,16 +43,19 @@
         "Zoom Phone - Global",
         "Zoom Phone - JAPAN"
       ],
-      "zkontrolovano": "2026-10-06T16:13:50.633Z",
+      "zkontrolovano": "2026-10-06T18:03:09.864Z",
       "chyba": null
     },
     {
       "klic": "discord",
-      "stav": "provoz",
-      "popis": "All Systems Operational",
+      "stav": "omezeni",
+      "popis": "Partially Degraded Service",
       "incidenty": [],
-      "postizene": [],
-      "zkontrolovano": "2026-10-06T16:13:50.633Z",
+      "postizene": [
+        "Tax Calculation Service",
+        "Third-party"
+      ],
+      "zkontrolovano": "2026-10-06T18:03:09.864Z",
       "chyba": null
     }
   ]
