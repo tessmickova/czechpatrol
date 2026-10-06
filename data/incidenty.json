@@ -14270,5 +14270,83 @@
       "overeno": "2026-10-05"
     },
     "overeni": "neovereno"
+  },
+  {
+    "id": "i-2026-10-05-1489ead766",
+    "slug": "bg-1489ead766",
+    "titulek": "Bulharsko: koordinovaná vlna e-mailových bombových hrozeb zasáhla školy, školky, nemocnice, soudy a úřady v patnácti městech, policie nikde nenašla výbušninu",
+    "kratkyTitulek": "Bulharsko: koordinovaná vlna e-mailových bombových hrozeb zasáhla školy, školky, nemocnice, soudy a úřady v patnácti městech, policie nikde nenašla výbušninu",
+    "zeme": "Bulharsko",
+    "kodZeme": "BG",
+    "kategorie": [
+      "hybridni",
+      "vysetrovani"
+    ],
+    "datumUdalosti": "2026-10-05T00:00:00Z",
+    "datumZjisteni": "2026-10-05T00:00:00Z",
+    "aktualizovano": "2026-10-06T08:01:24.622Z",
+    "zavaznost": "Y2",
+    "jistota": "stredni",
+    "stav": "bez-vysetrovani",
+    "atribuce": "neznama",
+    "puvodce": "neznamy",
+    "druh": "pripad",
+    "fakta": [
+      "V pondělí 5. 10. 2026 ráno (zhruba mezi 9:15 a 9:46) dorazila do institucí po celém Bulharsku vlna bombových hrozeb, většinou e-mailem; zasaženy byly Sofie, Razgrad, Kazanlak, Plovdiv, Varna, Burgas, Dupnica, Kjustendil, Loveč, Šumen, Montana, Isperih, Blagoevgrad, Dobrič a Kostinbrod.",
+      "Hrozby se týkaly školek, škol, nemocnic, soudů, obecních úřadů, státních zastupitelství a úřadů včetně Národní revizní agentury; desítky institucí byly evakuovány.",
+      "Policie prohledala všechna nahlášená místa a nikde nenašla výbušné zařízení.",
+      "Starosta Kostinbrodu Trajko Mladenov řekl, že úřady se domnívají, že e-mail přišel ze zahraničí; Sofijské ředitelství uvedlo, že postupuje podle standardních postupů."
+    ],
+    "neznameho": [
+      "Žádné official potvrzení pachatele ani jeho spojení s konkrétním státem; tvrzení o zahraničním původu e-mailu je jen odhad starosty, ne doložený závěr vyšetřování.",
+      "Přesný celkový počet evakuovaných institucí."
+    ],
+    "vyznam": "",
+    "eskalacniSpousteče": [],
+    "deeskalacniSignaly": [],
+    "zdroje": [
+      {
+        "nazev": "Digi24 — Panica se extinde în Bulgaria: sute de instituții evacuate după amenințări cu bombă",
+        "url": "https://www.digi24.ro/stiri/externe/panica-se-extinde-in-bulgaria-sute-de-institutii-evacuate-dupa-amenintari-cu-bomba-autoritatile-inca-investigheaza-3979023",
+        "typ": "media",
+        "publikovano": "2026-10-05T00:00:00Z",
+        "primarni": false,
+        "jazyk": "ro"
+      },
+      {
+        "nazev": "Novinite — Bomb Threats Trigger Evacuations Across Bulgaria",
+        "url": "https://www.novinite.com/articles/240886/Bomb+Threats+Trigger+Evacuations+Across+Bulgaria",
+        "typ": "media",
+        "publikovano": "2026-10-05T00:00:00Z",
+        "primarni": false,
+        "jazyk": "en"
+      }
+    ],
+    "souvisejici": [],
+    "historie": [
+      {
+        "kdy": "2026-10-05T00:00:00Z",
+        "text": "Zachyceno automatickým sběrem, druhý zdroj doložen před zařazením do fronty.",
+        "novySignal": true
+      },
+      {
+        "kdy": "2026-10-06T08:01:24.622Z",
+        "text": "Zveřejněno jako neověřené úředně: dvě nezávislé redakce, úřad zatím nepotvrdil.",
+        "novySignal": false
+      }
+    ],
+    "novy": true,
+    "zapocitanoTyden": "2026-10-05",
+    "aiZpracovano": true,
+    "lidskyOvereno": false,
+    "archivniZaznam": false,
+    "dopadNaCr": {
+      "stav": "zadny",
+      "procRelevantni": "Koordinovaná vlna bombových hrozeb proti institucím po celé zemi EU a NATO je typ hybridního narušení, který se může opakovat i v Česku.",
+      "dopad": "Pro lidi v Česku ze zprávy dnes neplyne žádné omezení.",
+      "sledujeme": "Zda vyšetřování potvrdí původ hrozeb a jejich případnou vazbu na zahraničního aktéra.",
+      "overeno": "2026-10-06"
+    },
+    "overeni": "neovereno"
   }
 ]
