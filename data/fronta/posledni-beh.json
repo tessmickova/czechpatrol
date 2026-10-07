@@ -1,5 +1,5 @@
 {
-  "kdy": "2026-10-07T10:01:19.794Z",
+  "kdy": "2026-10-07T12:01:22.203Z",
   "zdroje": [
     {
       "klic": "e-sbirka",
@@ -17,11 +17,10 @@
     },
     {
       "klic": "psp",
-      "ok": false,
-      "stav": 408,
+      "ok": true,
+      "stav": 200,
       "pocetPolozek": 0,
-      "chyba": "HTTP 408",
-      "vysledek": "chyba"
+      "vysledek": "ok"
     },
     {
       "klic": "senat",
@@ -204,9 +203,9 @@
     {
       "klic": "bmi-de",
       "ok": false,
-      "stav": 400,
+      "stav": null,
       "pocetPolozek": 0,
-      "chyba": "HTTP 400",
+      "chyba": "fetch failed",
       "vysledek": "chyba"
     },
     {
@@ -241,7 +240,7 @@
       "klic": "kyber",
       "ok": true,
       "stav": null,
-      "pocetPolozek": 0,
+      "pocetPolozek": 1,
       "vysledek": "ok"
     },
     {
