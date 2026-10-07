@@ -14433,5 +14433,82 @@
       "overeno": "2026-10-06"
     },
     "overeni": "neovereno"
+  },
+  {
+    "id": "i-2026-10-06-afd25b4121",
+    "slug": "lv-afd25b4121",
+    "titulek": "Lotyšsko: ozbrojení maskovaní muži z Běloruska hrozili vojákům lotyšské armády při pokusu protlačit přes hranici 20 migrantů, pak sami vstoupili na lotyšské území a ukradli bezpečnostní kamery",
+    "kratkyTitulek": "Lotyšsko: ozbrojení maskovaní muži z Běloruska hrozili vojákům lotyšské armády při pokusu protlačit přes hranici 20 migrantů, pak sami vstoupili na lotyšské území a ukradli bezpečnostní kamery",
+    "zeme": "Lotyšsko",
+    "kodZeme": "LV",
+    "kategorie": [
+      "hranice",
+      "hybridni"
+    ],
+    "datumUdalosti": "2026-10-06T00:00:00Z",
+    "datumZjisteni": "2026-10-06T00:00:00Z",
+    "aktualizovano": "2026-10-07T02:01:04.631Z",
+    "zavaznost": "Y2",
+    "jistota": "stredni",
+    "stav": "bez-vysetrovani",
+    "atribuce": "neznama",
+    "puvodce": "neznamy",
+    "druh": "pripad",
+    "fakta": [
+      "Lotyšský ministr vnitra Jānis Dombrava a ozbrojené síly Lotyšska oznámili, že ozbrojení maskovaní muži se pokusili 6. 10. 2026 nezákonně přes hranici z Běloruska do Lotyšska protlačit skupinu asi 20 migrantů.",
+      "Podle Dombravy vojáci lotyšské Národní armády průchod zabránili; doprovázející osoby zůstaly na běloruské straně, byly ozbrojené, vyhrožovaly vojákům a aktivně skupinu migrantů \"strkaly a naváděly\" směrem k Lotyšsku.",
+      "O několik hodin později maskované osoby samy vstoupily na lotyšské území: poškodily elektrický rozvodný panel a odcizily bezpečnostní kamery, poté se vrátily do Běloruska ještě před příjezdem pohraniční stráže."
+    ],
+    "neznameho": [
+      "Totožnost ozbrojených osob a jejich přesné spojení s běloruskými nebo ruskými orgány.",
+      "Osud 20 migrantů, kteří se podle zprávy na lotyšské území nedostali."
+    ],
+    "vyznam": "",
+    "eskalacniSpousteče": [],
+    "deeskalacniSignaly": [],
+    "zdroje": [
+      {
+        "nazev": "Meduza (anglicky) — Latvian officials say armed masked men threatened troops",
+        "url": "https://meduza.io/en/news/2026/10/07/latvian-officials-say-armed-masked-men-threatened-troops-while-trying-to-push-20-migrants-across-from-belarus-then-crossed-into-latvia-themselves-and-stole-surveillance-cameras",
+        "typ": "media",
+        "publikovano": "2026-10-07T00:00:00Z",
+        "primarni": false,
+        "jazyk": "en"
+      },
+      {
+        "nazev": "LSM.lv — Agresīvi un bruņoti pavadoņi no Baltkrievijas mēģinājuši \"iespiest\" Latvijā robežpārkāpeju grupu",
+        "url": "https://www.lsm.lv/raksts/zinas/latvija/06.10.2026-agresivi-un-brunoti-pavadoni-no-baltkrievijas-meginajusi-iespiest-latvija-robezparkapeju-grupu.a666462/",
+        "typ": "media",
+        "publikovano": "2026-10-06T00:00:00Z",
+        "primarni": false,
+        "jazyk": "lv"
+      }
+    ],
+    "souvisejici": [],
+    "historie": [
+      {
+        "kdy": "2026-10-06T00:00:00Z",
+        "text": "Zachyceno automatickým sběrem, druhý zdroj doložen před zařazením do fronty.",
+        "novySignal": true
+      },
+      {
+        "kdy": "2026-10-07T02:01:04.631Z",
+        "text": "Zveřejněno jako neověřené úředně: dvě nezávislé redakce, úřad zatím nepotvrdil.",
+        "novySignal": false
+      }
+    ],
+    "novy": true,
+    "zapocitanoTyden": "2026-10-06",
+    "aiZpracovano": true,
+    "lidskyOvereno": false,
+    "archivniZaznam": false,
+    "dopadNaCr": {
+      "stav": "zadny",
+      "procRelevantni": "Přímý incident na hranici členského státu NATO a EU s Běloruskem, zahrnující ozbrojené osoby a vniknutí na území.",
+      "dopad": "Pro lidi v Česku ze zprávy dnes neplyne žádné omezení.",
+      "sledujeme": "Zda lotyšské úřady totožnost ozbrojených osob a jejich napojení zjistí.",
+      "overeno": "2026-10-07"
+    },
+    "overeni": "neovereno"
   }
 ]
