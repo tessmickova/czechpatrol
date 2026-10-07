@@ -1,11 +1,16 @@
 {
-  "aktualizovano": "2026-10-07T02:02:54.161Z",
+  "aktualizovano": "2026-10-07T04:03:12.020Z",
   "stavy": [
     {
       "klic": "cloudflare",
       "stav": "vypadek",
       "popis": "Partial System Outage",
       "incidenty": [
+        {
+          "nazev": "Network Performance Issues in Columbus",
+          "odkaz": "https://www.cloudflarestatus.com/incidents/tt8f4ttcuonf",
+          "aktualizovano": "2026-10-07T03:06:12.759Z"
+        },
         {
           "nazev": "Cloudflare One Clients are incorrectly challenged on some sites",
           "odkaz": "https://www.cloudflarestatus.com/incidents/tl0vrgjy99r0",
@@ -23,7 +28,7 @@
         "Arica, Chile - (ARI)",
         "Baghdad, Iraq - (BGW)"
       ],
-      "zkontrolovano": "2026-10-07T02:02:54.161Z",
+      "zkontrolovano": "2026-10-07T04:03:12.020Z",
       "chyba": null
     },
     {
@@ -34,7 +39,12 @@
         {
           "nazev": "Service Degradation Affecting Customer Using Polycom Devices Going Offline",
           "odkaz": "https://stspg.io/4cpggx38p4g2",
-          "aktualizovano": "2026-10-05T18:31:53.125-07:00"
+          "aktualizovano": "2026-10-06T20:02:59.867-07:00"
+        },
+        {
+          "nazev": "Service Degradation Affecting Zoom Slides Generation in US Region",
+          "odkaz": "https://stspg.io/7v4g7cgtddvk",
+          "aktualizovano": "2026-10-06T19:08:18.621-07:00"
         }
       ],
       "postizene": [
@@ -43,7 +53,7 @@
         "Zoom Phone - Global",
         "Zoom Phone - JAPAN"
       ],
-      "zkontrolovano": "2026-10-07T02:02:54.161Z",
+      "zkontrolovano": "2026-10-07T04:03:12.020Z",
       "chyba": null
     },
     {
@@ -55,7 +65,7 @@
         "Tax Calculation Service",
         "Third-party"
       ],
-      "zkontrolovano": "2026-10-07T02:02:54.161Z",
+      "zkontrolovano": "2026-10-07T04:03:12.020Z",
       "chyba": null
     }
   ]
