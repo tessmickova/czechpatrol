@@ -1,5 +1,5 @@
 {
-  "kdy": "2026-10-07T06:01:17.982Z",
+  "kdy": "2026-10-07T07:03:41.860Z",
   "zdroje": [
     {
       "klic": "e-sbirka",
@@ -198,15 +198,15 @@
       "ok": false,
       "stav": null,
       "pocetPolozek": 0,
-      "chyba": "The operation was aborted due to timeout",
+      "chyba": "fetch failed",
       "vysledek": "chyba"
     },
     {
       "klic": "bmi-de",
       "ok": false,
-      "stav": null,
+      "stav": 400,
       "pocetPolozek": 0,
-      "chyba": "fetch failed",
+      "chyba": "HTTP 400",
       "vysledek": "chyba"
     },
     {
