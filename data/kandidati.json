@@ -1,5 +1,42 @@
 [
   {
+    "id": "k-3cf573148635c7be",
+    "zachyceno": "2026-10-07T00:59:21.229Z",
+    "publikovano": "2026-10-07T00:00:00.000Z",
+    "zdroj": {
+      "nazev": "The Kyiv Independent",
+      "url": "https://kyivindependent.com/russia-slams-kyiv-in-mass-missile-drone-attack-on-putins-74th-birthday/",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Russia slams Kyiv in mass missile, drone attack on Putin's 74th birthday.",
+    "titulekPuvodni": "Russia slams Kyiv in mass missile, drone attack on Putin's 74th birthday.",
+    "shrnuti": "",
+    "kodZeme": "UA",
+    "zeme": "Ukrajina",
+    "kategorie": [
+      "hybridni",
+      "drony",
+      "rusko"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "attack on",
+      "dron",
+      "drone",
+      "russia"
+    ],
+    "naliehave": null,
+    "stav": "ceka",
+    "vyrez": {
+      "text": "Russia slams Kyiv in mass missile, drone attack on Putin's 74th birthday Help rescue animals from the front line — shop our Companion Collection 🐾\nShop Now\nWar Russia slams Kyiv in mass missile, drone attack on Putin's 74th birthday\nOctober 7, 2026 3:25 am  (Updated:  October 7, 2026 3:51 am )\n• 2 min read\nPrefer on Google\nR\nby Volodymyr Ivanyshyn, Dmytro Basmat, Rebecka Pieder\nCars drive through Independence Square as a Ukrainian flag is displayed on a large screen during a power outage in Kyiv, Ukraine, on Nov. 20, 2025. (Sergei Gapon / AFP via Getty Images)\nEditor's note: This is a developing story and is being updated.\nExplosions rocked Kyiv overnight on Oct. 7 as Moscow launched its latest mass missile and drone attack on the capital, coinciding with Russian President Vladimir Putin's 74th birthday.\nMultiple explosions were heard in Kyiv around 3:15 a.m. local time, according to Kyiv Independent journalists on the ground. Ukraine's Air Force previously warned of several Russian Tu-95 bombers approaching the border.\n\"The missiles are falling one after another. At least 10-12 explosions from what I can count. It's pretty loud in the city center,\" the Kyiv Independent's Tim…",
+      "stazeno": "2026-10-07T00:59:24.378Z",
+      "stav": 200
+    }
+  },
+  {
     "id": "k-8e8e189f5d4ac99e",
     "zachyceno": "2026-10-07T00:03:33.635Z",
     "publikovano": "2026-10-06T22:10:00.000Z",
@@ -11666,49 +11703,6 @@
       "duvod": "neudalost",
       "patriK": null,
       "poznamka": "Táž rétorika jako už podaný návrh o ruské jaderné hrozbě ohledně Kaliningradu a živé přehledy s Putinovými/Merzovými vyjádřeními z minulého cyklu (i-2026-09-30-f92afe8069); jde o pokračování téhož výměny varování bez nového konkrétního skutku."
-    }
-  },
-  {
-    "id": "k-4d9dbfa2c0de8b72",
-    "zachyceno": "2026-10-02T06:03:14.006Z",
-    "publikovano": "2026-10-02T04:38:00.000Z",
-    "zdroj": {
-      "nazev": "Ukrainska Pravda (anglicky)",
-      "url": "https://www.pravda.com.ua/eng/news/2026/10/02/8056068/",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Drones attack Russia's Volgograd: fires reported near oil refinery and chemical plant – video",
-    "titulekPuvodni": "Drones attack Russia's Volgograd: fires reported near oil refinery and chemical plant – video",
-    "shrnuti": "Explosions were heard in Volgograd overnight, while the glow from a fire was seen near the Volgograd oil refinery and Kaustik chemical plant. The cause of the fire remains unclear.",
-    "kodZeme": "RU",
-    "zeme": "Rusko",
-    "kategorie": [
-      "sabotaz",
-      "drony",
-      "rusko"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "zeSite": null,
-    "shody": [
-      "explosion",
-      "dron",
-      "drone",
-      "russia"
-    ],
-    "naliehave": null,
-    "stav": "vyrizen",
-    "vyrez": {
-      "text": "Drone attack reported in Volgograd, Russia, with fire seen near oil refinery and chemical plant | Ukrainska Pravda\nA fire. Screenshot\nExplosions were heard in the Russian city of Volgograd on the night of 1-2 October, while the glow from a fire was seen near an oil refinery and the Kaustik chemical plant.\nSource: Russian media outlet Astra; Volgograd Oblast Governor Andrei Bocharov ; Exilenova+ Telegram channel\nDetails: Astra said that residents of Volgograd had reported drones and several explosions in different parts of the city overnight. They also complained that no air-raid warning had been issued.\nAdvertisement:\n\r\n\r\n\r\n\r\n\r\nAfter analysing eyewitness footage, Astra determined that the glow from the fire could be seen coming from the direction of the Volgograd oil refinery and the nearby Kaustik plant. However, the available footage does not make it possible to determine what exactly caught fire.\nExilenova+ reported that explosions could be heard for a long time both in the city itself and in the industrial area of the Volgograd oil refinery.\nBocharov said the region's industrial infrastructure had come under a large-scale drone attack, but did not report any fires at the…",
-      "stazeno": "2026-10-02T06:03:15.239Z",
-      "stav": 200
-    },
-    "vyrizeni": {
-      "kdy": "2026-10-02T14:01:27.101Z",
-      "duvod": "mimo-rozsah",
-      "patriK": null,
-      "poznamka": "Ukrajinský dron/útok na cíl uvnitř Ruska (rafinerie, sklad); obě strany uvnitř probíhající války, bez doloženého následku pro sledované země. Požáry u rafinerie a chemičky ve Volgogradu."
     }
   }
 ]
