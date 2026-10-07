@@ -1,5 +1,44 @@
 [
   {
+    "id": "k-8e8e189f5d4ac99e",
+    "zachyceno": "2026-10-07T00:03:33.635Z",
+    "publikovano": "2026-10-06T22:10:00.000Z",
+    "zdroj": {
+      "nazev": "Český rozhlas — domácí zprávy",
+      "url": "https://www.irozhlas.cz/zpravy-svet/utoku-drony-je-vice-a-jsou-nebezpecnejsi-z-mesta-ale-neodejdu-popisuje-cesky_2610070010_ako",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Útoků drony je více a jsou nebezpečnější. Z města ale neodejdu, popisuje český velvyslanec v Kyjevě",
+    "titulekPuvodni": "Útoků drony je více a jsou nebezpečnější. Z města ale neodejdu, popisuje český velvyslanec v Kyjevě",
+    "shrnuti": "Ukrajina měla v noci na úterý vyslat na Moskvu a její okolí přes 600 dronů. Starosta metropole tvrdí, že se většinu z nich podařilo sestřelit. Naopak Rusko opět útočilo na ukrajinskou civilní infrastrukturu a tlačí tím na uzavření diplomatických misí v Kyjevě. „Rusko téměř jistě nebude cílit na budo",
+    "kodZeme": "CZ",
+    "zeme": "Česko",
+    "kategorie": [
+      "drony",
+      "rusko",
+      "cr"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "sestrel",
+      "dron",
+      "rusk",
+      "cesky rozhlas",
+      "rozhlas"
+    ],
+    "naliehave": null,
+    "stav": "ceka",
+    "vyrez": {
+      "text": "",
+      "stazeno": "2026-10-07T00:03:37.399Z",
+      "stav": 403,
+      "chyba": "HTTP 403"
+    }
+  },
+  {
     "id": "k-5a2d3cbf81b6a208",
     "zachyceno": "2026-10-06T22:04:21.567Z",
     "publikovano": null,
@@ -11670,46 +11709,6 @@
       "duvod": "mimo-rozsah",
       "patriK": null,
       "poznamka": "Ukrajinský dron/útok na cíl uvnitř Ruska (rafinerie, sklad); obě strany uvnitř probíhající války, bez doloženého následku pro sledované země. Požáry u rafinerie a chemičky ve Volgogradu."
-    }
-  },
-  {
-    "id": "k-50b35b0bbdca75f4",
-    "zachyceno": "2026-10-02T05:11:22.690Z",
-    "publikovano": "2026-10-02T04:17:00.000Z",
-    "zdroj": {
-      "nazev": "Ukrainska Pravda (anglicky)",
-      "url": "https://www.pravda.com.ua/eng/news/2026/10/02/8056065/",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Kyiv closes Pivdennyi and Paton bridges after Russian attack, restricts traffic on Metro Bridge",
-    "titulekPuvodni": "Kyiv closes Pivdennyi and Paton bridges after Russian attack, restricts traffic on Metro Bridge",
-    "shrnuti": "Kyiv authorities have closed the Pivdennyi and Paton bridges in both directions and restricted traffic towards the right bank on Metro Bridge following the Russian attack on 2 October.",
-    "kodZeme": "UA",
-    "zeme": "Ukrajina",
-    "kategorie": [
-      "hybridni",
-      "rusko"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "zeSite": null,
-    "shody": [
-      "attack on",
-      "russia"
-    ],
-    "naliehave": null,
-    "stav": "vyrizen",
-    "vyrez": {
-      "text": "Kyiv closes Pivdennyi and Paton bridges after Russian attack, limits traffic on Metro Bridge | Ukrainska Pravda\nA bridge. Photo: TOV-TOB.livejournal.com\nKyiv has closed the Pivdennyi and Paton bridges in both directions, while traffic on the Metro Bridge is restricted towards the right bank following the Russian attack on the night of 1-2 October. Several bus and trolleybus routes have been changed as a result.\nSource: Kyiv City Military Administration\nQuote: \"Public transport movement has been temporarily restricted on several bridges due to the overnight enemy attacks.\nAdvertisement:\n\r\n\r\n\r\n\r\n\r\nThe Pivdennyi Bridge is closed in both directions.\nThe Paton Bridge is closed in both directions. The Metro Bridge is closed towards the right bank.\"\nDetails: The restrictions are temporary. Kyivpastrans, a Kyiv transport company, is asking passengers to take the changes into account when planning their journeys.\nBackground:\nRussian forces hit Kyiv's Pivdennyi Bridge again on the night of 1-2 October. A 25-storey residential building was also damaged in the Darnytskyi district, with information about casualties still being confirmed.\nDebris damaged windows in a non-residential building and…",
-      "stazeno": "2026-10-02T05:11:24.454Z",
-      "stav": 200
-    },
-    "vyrizeni": {
-      "kdy": "2026-10-02T06:01:12.590Z",
-      "duvod": "duplicita",
-      "patriK": null,
-      "poznamka": "Táž událost/pokračování jako už zveřejněný záznam o prvním ruském útoku na mosty v Kyjevě (ua-6c992106c6); jde o další ostřelování téhož typu cíle tutéž noc, uzavření mostů je následek, ne nová samostatná událost."
     }
   }
 ]
