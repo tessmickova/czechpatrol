@@ -1685,76 +1685,75 @@
   {
     "kam": "zaznam",
     "pripravil": "patrol",
-    "pripraveno": "2026-10-08T06:28:08.394Z",
-    "id": "i-2026-10-07-08184d8850",
-    "slug": "lt-08184d8850",
-    "titulek": "Litva: ministr vnitra požádal o nasazení armády na hranici s ruskou Kaliningradskou oblastí po incidentu na lotyšské hranici a zprávách o možné ruské mobilizaci",
-    "kratkyTitulek": "Litva: ministr vnitra požádal o nasazení armády na hranici s ruskou Kaliningradskou oblastí po incidentu na lotyšské hranici a zprávách o možné ruské mobilizaci",
-    "zeme": "Litva",
-    "kodZeme": "LT",
+    "pripraveno": "2026-10-08T13:54:23.318Z",
+    "id": "i-2026-10-08-2a93d42f53",
+    "slug": "gb-2a93d42f53",
+    "titulek": "Spojené království: britská protiteroristická policie obvinila 24letého příslušníka Královského námořnictva Teddyho Younga ze špionáže ve prospěch cizí mocnosti",
+    "kratkyTitulek": "Spojené království: britská protiteroristická policie obvinila 24letého příslušníka Královského námořnictva Teddyho Younga ze špionáže ve prospěch cizí mocnosti",
+    "zeme": "Spojené království",
+    "kodZeme": "GB",
     "kategorie": [
-      "hranice",
-      "nato",
-      "rusko"
+      "zpravodajske",
+      "pravo",
+      "vysetrovani"
     ],
-    "datumUdalosti": "2026-10-07T00:00:00Z",
+    "datumUdalosti": "2026-10-08T00:00:00Z",
     "datumZjisteni": "2026-10-08T00:00:00Z",
-    "aktualizovano": "2026-10-08T06:28:08.394Z",
+    "aktualizovano": "2026-10-08T13:54:23.318Z",
     "zavaznost": "Y2",
-    "jistota": "vysoka",
+    "jistota": "stredni",
     "stav": "bez-vysetrovani",
     "atribuce": "neznama",
-    "puvodce": null,
-    "druh": "opatreni",
+    "puvodce": "neznamy",
+    "druh": "pripad",
     "fakta": [
-      "Litevský ministr vnitra Martynas Katelynas 7. 10. 2026 ve veřejném prohlášení požádal ministra obrany Roberta Kaunase, aby nasadil jednotky litevských ozbrojených sil na pomoc pohraniční stráži při ochraně hranice s ruskou Kaliningradskou oblastí.",
-      "Katelynas rozhodnutí zdůvodnil incidentem na lotyšsko-běloruské hranici z 6. 10. 2026 (ozbrojené maskované osoby doprovázející skupinu nejméně 20 migrantů, část z nich krátce vstoupila na lotyšské území) a celkovým vyhodnocením bezpečnostní situace v regionu, včetně zpráv o možném vyhlášení ruské mobilizace.",
-      "Ministr zdůraznil, že situace na litevské hranici je klidná a nasazení vojáků je preventivním opatřením v reakci na signály z okolí, ne reakcí na konkrétní narušení litevské hranice."
+      "Protiteroristická policie v Londýně (vedoucí Helen Flanaganová) ve čtvrtek 8. 10. 2026 oznámila, že obvinila 24letého příslušníka Královského námořnictva Teddyho Younga z přípravy trestného činu zveřejnění chráněných informací ve prospěch cizí mocnosti.",
+      "Podle obvinění měl Young jednat „s úmyslem, aby toto jednání prospělo cizí mocnosti, přičemž věděl, že dané skutečnosti jsou škodlivé pro bezpečnost nebo zájmy Spojeného království“; zdroje konkrétní stát neuvádějí.",
+      "Údajné jednání se mělo odehrávat v období od 26. 11. 2024 do 21. 5. 2025; Young byl po obvinění vzat do vazby."
     ],
     "neznameho": [
-      "Počet nasazených vojáků a přesný rozsah nebo plánovaná délka operace zdroje neuvádějí.",
-      "Zdroj zpráv o možné ruské mobilizaci, na které se ministr odvolává, články nejmenují."
+      "Pro kterou cizí mocnost měl Young podle obvinění jednat — zdroje ji nejmenují.",
+      "Jaké konkrétní chráněné informace měl zveřejnit nebo komu je předat."
     ],
     "vyznam": "",
     "eskalacniSpousteče": [],
     "deeskalacniSignaly": [],
     "zdroje": [
       {
-        "nazev": "The Kyiv Independent — Lithuania to deploy troops along border with Russia's Kaliningrad after Latvia incident",
-        "url": "https://kyivindependent.com/lithuania-to-deploy-troops-along-border-with-russias-kaliningrad-after-latvia-incident/",
+        "nazev": "Novinky.cz — Britského námořníka obvinili ze špionáže",
+        "url": "https://www.novinky.cz/clanek/zahranicni-evropa-britskeho-namornika-obvinili-ze-spionaze-40601474",
         "typ": "media",
         "publikovano": "2026-10-08T00:00:00Z",
         "primarni": false,
-        "jazyk": "en"
+        "jazyk": "cs"
       },
       {
-        "nazev": "LRT.lt — Lithuania to deploy military to help guard border with Kaliningrad – minister",
-        "url": "https://www.lrt.lt/en/news-in-english/19/3075423/lithuania-to-deploy-military-to-help-guard-border-with-kaliningrad-minister",
+        "nazev": "SME.sk — Britská polícia obvinila príslušníka Kráľovského námorníctva zo špionáže",
+        "url": "https://www.sme.sk/svet/c/britska-policia-obvinila-prislusnika-kralovskeho-namornictva-zo-spionaze?utm_source=rss&utm_medium=feed&utm_campaign=www-rss",
         "typ": "media",
-        "publikovano": "2026-10-07T00:00:00Z",
+        "publikovano": "2026-10-08T00:00:00Z",
         "primarni": false,
-        "jazyk": "en"
+        "jazyk": "sk"
       }
     ],
     "souvisejici": [],
     "historie": [
       {
-        "kdy": "2026-10-07T00:00:00Z",
+        "kdy": "2026-10-08T00:00:00Z",
         "text": "Zachyceno automatickým sběrem, druhý zdroj doložen před zařazením do fronty.",
         "novySignal": true
       }
     ],
     "novy": true,
-    "zapocitanoTyden": "2026-10-07",
+    "zapocitanoTyden": "2026-10-08",
     "aiZpracovano": true,
     "lidskyOvereno": false,
     "archivniZaznam": false,
-    "vykonal": "Litevské ministerstvo obrany",
     "dopadNaCr": {
       "stav": "zadny",
-      "procRelevantni": "Členský stát NATO/EU reaguje na hraniční incident u souseda preventivním nasazením armády k ruské exklávě; ukazuje, jak rychle se hraniční incident v jedné pobaltské zemi promítá do opatření v sousední zemi.",
+      "procRelevantni": "Další případ obvinění ze špionáže v ozbrojených silách členského státu NATO, podobný typ kauzy jako už sledovaný případ Augusta Hanninga v Německu.",
       "dopad": "Pro lidi v Česku ze zprávy dnes neplyne žádné omezení.",
-      "sledujeme": "Zda Litva zveřejní rozsah nasazení a zda se situace na hranici s Kaliningradem dál vyvíjí.",
+      "sledujeme": "Zda vyšetřování upřesní, pro kterou cizí mocnost měl Young jednat.",
       "overeno": "2026-10-08"
     }
   }
