@@ -1,5 +1,5 @@
 {
-  "aktualizovano": "2026-10-08T14:03:15.814Z",
+  "aktualizovano": "2026-10-08T16:03:43.573Z",
   "stavy": [
     {
       "klic": "cloudflare",
@@ -19,11 +19,11 @@
       ],
       "postizene": [
         "Cloudflare Sites and Services",
-        "Accra, Ghana - (ACC)",
         "Africa",
-        "Arica, Chile - (ARI)"
+        "Arica, Chile - (ARI)",
+        "Baghdad, Iraq - (BGW)"
       ],
-      "zkontrolovano": "2026-10-08T14:03:15.814Z",
+      "zkontrolovano": "2026-10-08T16:03:43.573Z",
       "chyba": null
     },
     {
@@ -38,10 +38,12 @@
         }
       ],
       "postizene": [
+        "Zoom Phone",
         "Devices (Softphones/Deskphones)",
-        "Zoom Phone - Global"
+        "Zoom Phone - Global",
+        "Zoom Phone - APAC"
       ],
-      "zkontrolovano": "2026-10-08T14:03:15.814Z",
+      "zkontrolovano": "2026-10-08T16:03:43.573Z",
       "chyba": null
     },
     {
@@ -50,7 +52,7 @@
       "popis": "All Systems Operational",
       "incidenty": [],
       "postizene": [],
-      "zkontrolovano": "2026-10-08T14:03:15.814Z",
+      "zkontrolovano": "2026-10-08T16:03:43.573Z",
       "chyba": null
     }
   ]
