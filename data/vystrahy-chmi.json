@@ -1,6 +1,78 @@
 {
-  "nacteno": "2026-10-08T08:01:47.161Z",
-  "odeslano": "2026-10-07T07:58:19.000Z",
-  "identifikator": "2.49.0.0.203.0.CZ.261007075819.XOCZ50_OKPR_000375",
-  "vystrahy": []
+  "nacteno": "2026-10-08T10:01:18.114Z",
+  "odeslano": "2026-10-08T08:42:52.000Z",
+  "identifikator": "2.49.0.0.203.0.CZ.261008084252.XOCZ50_OKPR_000376",
+  "vystrahy": [
+    {
+      "id": "chmi:Silný vítr:2026-10-08T18:00:00.000Z:Vysočina",
+      "typ": "oficialni-pokyn",
+      "uzemi": {
+        "druh": "kraje",
+        "kraje": [
+          "Vysočina"
+        ]
+      },
+      "titulek": "Silný vítr",
+      "text": "Při přechodu studené fronty nárazy severozápadního větru 15 až 20 m/s (55 až 70 km/h).      \n\nMožné komplikace v energetice, lesním hospodářství a dopravě. Možná poškození stromů a lesních porostů. Možné menší škody na energetické infrastruktuře, majetku a zejména starších budovách. Riziko úrazu uvolněnými předměty a zlomenými větvemi. Možné komplikace v dopravě.",
+      "textJe": "zneni-vydavatele",
+      "pokyn": "Zajistit okna, dveře, odstranit nebo zabezpečit volně uložené předměty, stany, skleníky apod. Dbát zvýšené opatrnosti při pohybu venku a při řízení vozidel. Na horách omezit túry a nevydávat se zejména do hřebenových partií.",
+      "vydavatel": "ČHMÚ, Štefan Handžák",
+      "odkaz": "https://vystrahy-cr.chmi.cz/",
+      "vydano": "2026-10-08T08:42:52.000Z",
+      "platiOd": "2026-10-08T18:00:00.000Z",
+      "platiDo": "2026-10-09T00:00:00.000Z",
+      "odvolano": null,
+      "opraveno": null,
+      "coNevime": [],
+      "jistota": "Likely",
+      "puvod": "ČHMÚ, výstražná služba (CAP)",
+      "detail": null
+    },
+    {
+      "id": "chmi:Silný vítr:2026-10-08T18:00:00.000Z:nezname",
+      "typ": "oficialni-pokyn",
+      "uzemi": {
+        "druh": "nezname",
+        "popis": "Jihočeský kraj (Dačice, Jindřichův Hradec), Pardubický kraj (Hlinsko, Litomyšl, Moravská Třebová, Polička, Svitavy), Jihomoravský kraj (Blansko, Boskovice, Brno, Ivančice, Kuřim, Moravský Krumlov, Pohořelice, Rosice, Šlapanice, Tišnov, Vyškov, Znojmo, Židlochovice), Olomoucký kraj (Konice, Prostějov)"
+      },
+      "titulek": "Silný vítr",
+      "text": "Při přechodu studené fronty nárazy severozápadního větru 15 až 20 m/s (55 až 70 km/h).      \n\nMožné komplikace v energetice, lesním hospodářství a dopravě. Možná poškození stromů a lesních porostů. Možné menší škody na energetické infrastruktuře, majetku a zejména starších budovách. Riziko úrazu uvolněnými předměty a zlomenými větvemi. Možné komplikace v dopravě.",
+      "textJe": "zneni-vydavatele",
+      "pokyn": "Zajistit okna, dveře, odstranit nebo zabezpečit volně uložené předměty, stany, skleníky apod. Dbát zvýšené opatrnosti při pohybu venku a při řízení vozidel. Na horách omezit túry a nevydávat se zejména do hřebenových partií.",
+      "vydavatel": "ČHMÚ, Štefan Handžák",
+      "odkaz": "https://vystrahy-cr.chmi.cz/",
+      "vydano": "2026-10-08T08:42:52.000Z",
+      "platiOd": "2026-10-08T18:00:00.000Z",
+      "platiDo": "2026-10-09T00:00:00.000Z",
+      "odvolano": null,
+      "opraveno": null,
+      "coNevime": [],
+      "jistota": "Likely",
+      "puvod": "ČHMÚ, výstražná služba (CAP)",
+      "detail": null
+    },
+    {
+      "id": "chmi:Silný vítr:2026-10-08T14:00:00.000Z:nezname",
+      "typ": "oficialni-pokyn",
+      "uzemi": {
+        "druh": "nezname",
+        "popis": "Karlovarský kraj (Ostrov), Ústecký kraj (Bílina, Děčín, Chomutov, Kadaň, Litvínov, Most, Teplice, Ústí nad Labem)"
+      },
+      "titulek": "Silný vítr",
+      "text": "Při přechodu studené fronty nárazy severozápadního větru 15 až 20 m/s (55 až 70 km/h).      \n\nMožné komplikace v energetice, lesním hospodářství a dopravě. Možná poškození stromů a lesních porostů. Možné menší škody na energetické infrastruktuře, majetku a zejména starších budovách. Riziko úrazu uvolněnými předměty a zlomenými větvemi. Možné komplikace v dopravě.",
+      "textJe": "zneni-vydavatele",
+      "pokyn": "Zajistit okna, dveře, odstranit nebo zabezpečit volně uložené předměty, stany, skleníky apod. Dbát zvýšené opatrnosti při pohybu venku a při řízení vozidel. Na horách omezit túry a nevydávat se zejména do hřebenových partií.",
+      "vydavatel": "ČHMÚ, Štefan Handžák",
+      "odkaz": "https://vystrahy-cr.chmi.cz/",
+      "vydano": "2026-10-08T08:42:52.000Z",
+      "platiOd": "2026-10-08T14:00:00.000Z",
+      "platiDo": "2026-10-08T23:00:00.000Z",
+      "odvolano": null,
+      "opraveno": null,
+      "coNevime": [],
+      "jistota": "Likely",
+      "puvod": "ČHMÚ, výstražná služba (CAP)",
+      "detail": null
+    }
+  ]
 }
