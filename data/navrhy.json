@@ -1685,55 +1685,54 @@
   {
     "kam": "zaznam",
     "pripravil": "patrol",
-    "pripraveno": "2026-10-08T13:54:23.318Z",
-    "id": "i-2026-10-08-2a93d42f53",
-    "slug": "gb-2a93d42f53",
-    "titulek": "Spojené království: britská protiteroristická policie obvinila 24letého příslušníka Královského námořnictva Teddyho Younga ze špionáže ve prospěch cizí mocnosti",
-    "kratkyTitulek": "Spojené království: britská protiteroristická policie obvinila 24letého příslušníka Královského námořnictva Teddyho Younga ze špionáže ve prospěch cizí mocnosti",
-    "zeme": "Spojené království",
-    "kodZeme": "GB",
+    "pripraveno": "2026-10-08T20:02:58.894Z",
+    "id": "i-2026-10-08-4efe8855fb",
+    "slug": "it-4efe8855fb",
+    "titulek": "Itálie: proruská hackerská skupina NoName zaútočila na web ministerstva zahraničí; ministerstvo útok zmírnilo bezpečnostními systémy bez přerušení provozu",
+    "kratkyTitulek": "Itálie: proruská hackerská skupina NoName zaútočila na web ministerstva zahraničí; ministerstvo útok zmírnilo bezpečnostními systémy bez přerušení provozu",
+    "zeme": "Itálie",
+    "kodZeme": "IT",
     "kategorie": [
-      "zpravodajske",
-      "pravo",
-      "vysetrovani"
+      "kyber",
+      "rusko"
     ],
     "datumUdalosti": "2026-10-08T00:00:00Z",
     "datumZjisteni": "2026-10-08T00:00:00Z",
-    "aktualizovano": "2026-10-08T13:54:23.318Z",
-    "zavaznost": "Y2",
+    "aktualizovano": "2026-10-08T20:02:58.894Z",
+    "zavaznost": "Y1",
     "jistota": "stredni",
     "stav": "bez-vysetrovani",
     "atribuce": "neznama",
     "puvodce": "neznamy",
     "druh": "pripad",
     "fakta": [
-      "Protiteroristická policie v Londýně (vedoucí Helen Flanaganová) ve čtvrtek 8. 10. 2026 oznámila, že obvinila 24letého příslušníka Královského námořnictva Teddyho Younga z přípravy trestného činu zveřejnění chráněných informací ve prospěch cizí mocnosti.",
-      "Podle obvinění měl Young jednat „s úmyslem, aby toto jednání prospělo cizí mocnosti, přičemž věděl, že dané skutečnosti jsou škodlivé pro bezpečnost nebo zájmy Spojeného království“; zdroje konkrétní stát neuvádějí.",
-      "Údajné jednání se mělo odehrávat v období od 26. 11. 2024 do 21. 5. 2025; Young byl po obvinění vzat do vazby."
+      "Proruská hackerská skupina NoName podle Euronews ve čtvrtek 8. 10. 2026 zaútočila na webové stránky italského ministerstva zahraničí (Farnesina).",
+      "Italské ministerstvo zahraničí podle agentury ANSA potvrdilo, že jeho web byl od rána 8. 10. 2026 terčem kybernetického útoku, který byl účinně zmírněn bezpečnostními systémy bez přerušení provozu.",
+      "Ministerstvo podle ANSA koordinuje sledování situace s národním strategickým centrem pro kybernetickou bezpečnost a příslušnými úřady a prověřuje i weby italských diplomatických a konzulárních zastoupení v zahraničí."
     ],
     "neznameho": [
-      "Pro kterou cizí mocnost měl Young podle obvinění jednat — zdroje ji nejmenují.",
-      "Jaké konkrétní chráněné informace měl zveřejnit nebo komu je předat."
+      "ANSA (citující přímo ministerstvo) skupinu NoName nejmenuje; spojení s útokem uvádí jen Euronews.",
+      "Žádná škoda ani únik dat nebyl zdroji potvrzen."
     ],
     "vyznam": "",
     "eskalacniSpousteče": [],
     "deeskalacniSignaly": [],
     "zdroje": [
       {
-        "nazev": "Novinky.cz — Britského námořníka obvinili ze špionáže",
-        "url": "https://www.novinky.cz/clanek/zahranicni-evropa-britskeho-namornika-obvinili-ze-spionaze-40601474",
+        "nazev": "Euronews — Pro-Russian hacker group NoName targets Italian Foreign Ministry website",
+        "url": "https://www.euronews.com/2026/10/08/pro-russian-hacker-group-noname-targets-italian-foreign-ministry-website",
         "typ": "media",
         "publikovano": "2026-10-08T00:00:00Z",
         "primarni": false,
-        "jazyk": "cs"
+        "jazyk": "en"
       },
       {
-        "nazev": "SME.sk — Britská polícia obvinila príslušníka Kráľovského námorníctva zo špionáže",
-        "url": "https://www.sme.sk/svet/c/britska-policia-obvinila-prislusnika-kralovskeho-namornictva-zo-spionaze?utm_source=rss&utm_medium=feed&utm_campaign=www-rss",
+        "nazev": "ANSA — Foreign Ministry says cyberattack on website, impact mitigated by security measures",
+        "url": "https://www.ansa.it/english/news/general_news/2026/10/08/foreign-ministry-says-cyberattack-on-website-impact-mitigated-by-security-measures_a78833ec-95c6-4be4-9b8a-88168fdd1a0e.html",
         "typ": "media",
         "publikovano": "2026-10-08T00:00:00Z",
         "primarni": false,
-        "jazyk": "sk"
+        "jazyk": "en"
       }
     ],
     "souvisejici": [],
@@ -1751,9 +1750,9 @@
     "archivniZaznam": false,
     "dopadNaCr": {
       "stav": "zadny",
-      "procRelevantni": "Další případ obvinění ze špionáže v ozbrojených silách členského státu NATO, podobný typ kauzy jako už sledovaný případ Augusta Hanninga v Německu.",
+      "procRelevantni": "Kybernetický útok proruské hacktivistické skupiny na ministerstvo zahraničí členského státu NATO a EU; stejný typ skupiny a metody, jaké se objevují i v jiných evropských zemích.",
       "dopad": "Pro lidi v Česku ze zprávy dnes neplyne žádné omezení.",
-      "sledujeme": "Zda vyšetřování upřesní, pro kterou cizí mocnost měl Young jednat.",
+      "sledujeme": "Zda italské úřady útok formálně přisoudí skupině NoName a zda zveřejní další podrobnosti.",
       "overeno": "2026-10-08"
     }
   }
