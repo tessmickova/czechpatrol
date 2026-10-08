@@ -1,5 +1,5 @@
 {
-  "kdy": "2026-10-08T18:01:31.279Z",
+  "kdy": "2026-10-08T19:46:26.042Z",
   "zdroje": [
     {
       "klic": "e-sbirka",
@@ -195,11 +195,10 @@
     },
     {
       "klic": "bundespolizei",
-      "ok": false,
-      "stav": null,
+      "ok": true,
+      "stav": 200,
       "pocetPolozek": 0,
-      "chyba": "fetch failed",
-      "vysledek": "chyba"
+      "vysledek": "ok"
     },
     {
       "klic": "bmi-de",
