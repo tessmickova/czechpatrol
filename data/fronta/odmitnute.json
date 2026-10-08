@@ -1,5 +1,21 @@
 [
   {
+    "id": "k-63580d832ff27bd7",
+    "zachyceno": "2026-10-08T00:10:10.110Z",
+    "publikovano": "2026-10-08T00:02:42.000Z",
+    "zdroj": {
+      "nazev": "Tagesschau (Německo)",
+      "url": "https://www.tagesschau.de/tagesschau_in_100_sekunden/video-1662414.html",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "tagesschau in 100 Sekunden",
+    "shrnuti": "tagesschau in 100 Sekunden",
+    "duvod": "bez-skutku",
+    "kategorie": [],
+    "posouzeni": null
+  },
+  {
     "id": "k-fcf49085db2f219f",
     "zachyceno": "2026-10-08T00:03:40.843Z",
     "publikovano": "2026-10-07T23:58:02.000Z",
@@ -591,6 +607,22 @@
     },
     "titulek": "Japani | Japanilaismediat: Suomalais­naisen matka­laukusta löytyi yli kolme kiloa kokaiinia",
     "shrnuti": "Suomalaisnaisen kerrotaan olevan pidätettynä epäiltynä huumeiden salakuljetuksesta. Nainen on kiistänyt rikokset.",
+    "duvod": "bez-skutku",
+    "kategorie": [],
+    "posouzeni": null
+  },
+  {
+    "id": "k-a8b2d5211be9abff",
+    "zachyceno": "2026-10-08T00:10:11.618Z",
+    "publikovano": "2026-10-07T22:27:34.000Z",
+    "zdroj": {
+      "nazev": "Le Monde (Francie)",
+      "url": "https://www.lemonde.fr/societe/article/2026/10/08/demantelement-d-un-reseau-de-proxenetisme-violent-dans-le-nord-et-le-pas-de-calais-dix-personnes-interpellees-une-mineure-de-13-ans-parmi-les-victimes_6789656_3224.html",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Démantèlement d’un réseau de proxénétisme « violent » dans le Nord et le Pas-de-Calais : dix personnes interpellées, une mineure de 13 ans parmi les victimes",
+    "shrnuti": "La majorité des victimes, des prostituées mais aussi leurs clients, ont dénoncé « des violences physiques » et toutes ont déploré des « menaces » de la part des mis en cause, a précisé le procureur de Béthune.",
     "duvod": "bez-skutku",
     "kategorie": [],
     "posouzeni": null
@@ -3868,6 +3900,22 @@
     },
     "titulek": "FBI vereitelt geplanten Terroranschlag bei Minneapolis",
     "shrnuti": "",
+    "duvod": "bez-skutku",
+    "kategorie": [],
+    "posouzeni": null
+  },
+  {
+    "id": "k-facb6846ba7cf4f9",
+    "zachyceno": "2026-10-08T00:10:09.899Z",
+    "publikovano": "2026-10-07T19:16:24.000Z",
+    "zdroj": {
+      "nazev": "The Guardian — World",
+      "url": "https://www.theguardian.com/law/2026/oct/07/two-men-freed-indefinite-sentences-for-public-protection-ipp",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Two men serving indefinite jail sentences freed after two decades",
+    "shrnuti": "Convicted pair, plus third man released in August, have IPPs replaced after serving much longer than minimum terms Two men jailed with indefinite sentences for public protection (IPPs) have been freed after each serving about two decades in custody despite receiving minimum terms of two years or les",
     "duvod": "bez-skutku",
     "kategorie": [],
     "posouzeni": null
@@ -8083,56 +8131,6 @@
     "kategorie": [
       "rusko"
     ],
-    "posouzeni": null
-  },
-  {
-    "id": "k-cb4d07f1b53121dc",
-    "zachyceno": "2026-10-07T18:03:52.769Z",
-    "publikovano": "2026-10-07T17:00:01.000Z",
-    "zdroj": {
-      "nazev": "Presseportal — zprávy policie (Blaulicht)",
-      "url": "https://www.presseportal.de/blaulicht/pm/178159/6366957",
-      "typ": "wire",
-      "primarni": false
-    },
-    "titulek": "FW-AUR: Grund für Feueralarm nicht erkennbar",
-    "shrnuti": "Aurich-Sandhorst (ots) - Gegen 03:20 Uhr löste in der Nacht zu Dienstag die Brandmeldeanlage eines Gewerbeobjektes am Kreihüttenmoorweg aus. Die Feuerwehr Sandhorst rückte folglich zu dem Gebäudekomplex aus und leitete die Erkundung der ...",
-    "duvod": "bez-skutku",
-    "kategorie": [
-      "zpravodajske"
-    ],
-    "posouzeni": null
-  },
-  {
-    "id": "k-8780dae8a219f557",
-    "zachyceno": "2026-10-07T20:03:15.292Z",
-    "publikovano": "2026-10-07T17:00:00.000Z",
-    "zdroj": {
-      "nazev": "Aktuality.sk",
-      "url": "https://www.aktuality.sk/clanok/yJQl49t/kdh-potichu-buduje-blok-spojencov-progresivci-maju-obavu-ci-sa-neobrati-aj-proti-nim/",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "KDH potichu buduje blok spojencov. Progresívci majú obavu, či sa neobráti aj proti nim",
-    "shrnuti": "So silným blokom by opozícia vyhrala zdrvujúco, hovorí podpredseda KDH Viliam Karas.",
-    "duvod": "bez-skutku",
-    "kategorie": [],
-    "posouzeni": null
-  },
-  {
-    "id": "k-c338ed0d44d4eb47",
-    "zachyceno": "2026-10-07T18:03:53.856Z",
-    "publikovano": "2026-10-07T17:00:00.000Z",
-    "zdroj": {
-      "nazev": "The Guardian — World",
-      "url": "https://www.theguardian.com/news/2026/oct/07/billionaire-quit-uk-wealth-tax-resident-monaco-super-rich-exodus",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "‘I reside in Monaco’: billionaire said to have quit UK over potential wealth tax had already left",
-    "shrnuti": "TaxWatch contradicts claims about David Reuben’s departure and questions stories of super-rich exodus Apparent exodus of super-rich suggests UK is no longer billionaires’ playground When the Sunday Times broke the news that David Reuben, one of the richest men in the UK, had apparently fled to the t",
-    "duvod": "bez-skutku",
-    "kategorie": [],
     "posouzeni": null
   }
 ]
