@@ -14510,5 +14510,91 @@
       "overeno": "2026-10-07"
     },
     "overeni": "neovereno"
+  },
+  {
+    "id": "i-2026-10-07-202d82851e",
+    "slug": "dk-202d82851e",
+    "titulek": "Dánsko: analytička tajné služby PET Josefine Christensenová uvedla, že Rusko od léta rozjelo sabotáže proti dánským firmám dodávajícím zbraně na Ukrajinu, k náboru využívá i bezdomovce a závislé",
+    "kratkyTitulek": "Dánsko: analytička tajné služby PET Josefine Christensenová uvedla, že Rusko od léta rozjelo sabotáže proti dánským firmám dodávajícím zbraně na Ukrajinu, k náboru využívá i bezdomovce a závislé",
+    "zeme": "Dánsko",
+    "kodZeme": "DK",
+    "kategorie": [
+      "sabotaz",
+      "hybridni",
+      "zpravodajske"
+    ],
+    "datumUdalosti": "2026-10-07T00:00:00Z",
+    "datumZjisteni": "2026-10-07T00:00:00Z",
+    "aktualizovano": "2026-10-08T00:01:23.152Z",
+    "zavaznost": "Y2",
+    "jistota": "stredni",
+    "stav": "bez-vysetrovani",
+    "atribuce": "neznama",
+    "puvodce": "neznamy",
+    "druh": "pripad",
+    "fakta": [
+      "Josefine Christensenová, vedoucí analytička dánské Bezpečnostní a zpravodajské služby (PET), na bezpečnostní konferenci v Kodani 7. 10. 2026 uvedla, že Rusko zahájilo sabotážní operace proti dánským firmám podílejícím se na dodávkách zbraní Ukrajině.",
+      "Podle Christensenové Rusko na jaře 2026 sabotáže především plánovalo a provádělo jich málo, ale od začátku léta začalo plány realizovat výrazně častěji poté, co zjistilo, že dřívější přístup neodradil NATO od podpory Ukrajiny; cílem je teď přímo zbrojní výroba s dopadem na frontu.",
+      "Christensenová popsala, že Rusko k sabotážím verbuje přes sociální sítě (Telegram) nezkušené „netrénované proxy“, včetně bezdomovců a lidí závislých na drogách, kteří hledají rychlé peníze; úkoly začínají sledováním a fotografováním a postupně eskalují k sabotáži, a pokud jedna osoba neuspěje, Rusko pošle další."
+    ],
+    "neznameho": [
+      "Konkrétní jména napadených dánských obranných firem a přesná data nebo popis jednotlivých sabotážních incidentů zdroje neuvádějí.",
+      "Zda PET k tomuto tvrzení vydala i písemnou zprávu, nebo šlo jen o ústní vyjádření na konferenci."
+    ],
+    "vyznam": "",
+    "eskalacniSpousteče": [],
+    "deeskalacniSignaly": [],
+    "zdroje": [
+      {
+        "nazev": "Seznam Zprávy — Rusko u nás začalo se sabotážemi, využívá i bezdomovce, říká dánská analytička",
+        "url": "https://www.seznamzpravy.cz/clanek/zahranicni-rusko-u-nas-zacalo-se-sabotazemi-vyuziva-i-bezdomovce-rika-danska-analyticka-317021",
+        "typ": "media",
+        "publikovano": "2026-10-07T00:00:00Z",
+        "primarni": false,
+        "jazyk": "cs"
+      },
+      {
+        "nazev": "Novinky.cz — Rusko u nás rozjelo sabotáže, uvedla analytička dánské tajné služby",
+        "url": "https://www.novinky.cz/clanek/zahranicni-rusko-u-nas-rozjelo-sabotaze-uvedla-analyticka-danske-tajne-sluzby-40601379",
+        "typ": "media",
+        "publikovano": "2026-10-07T00:00:00Z",
+        "primarni": false,
+        "jazyk": "cs"
+      },
+      {
+        "nazev": "The Moscow Times — Denmark Says Russia Has Conducted Sabotage Attacks Against Its Defense Firms",
+        "url": "https://www.themoscowtimes.com/2026/10/07/denmark-says-russia-has-conducted-sabotage-attacks-against-its-defense-firms-a93914",
+        "typ": "media",
+        "publikovano": "2026-10-07T00:00:00Z",
+        "primarni": false,
+        "jazyk": "en"
+      }
+    ],
+    "souvisejici": [],
+    "historie": [
+      {
+        "kdy": "2026-10-07T00:00:00Z",
+        "text": "Zachyceno automatickým sběrem, druhý zdroj doložen před zařazením do fronty.",
+        "novySignal": true
+      },
+      {
+        "kdy": "2026-10-08T00:01:23.152Z",
+        "text": "Zveřejněno jako neověřené úředně: dvě nezávislé redakce, úřad zatím nepotvrdil.",
+        "novySignal": false
+      }
+    ],
+    "novy": true,
+    "zapocitanoTyden": "2026-10-07",
+    "aiZpracovano": true,
+    "lidskyOvereno": false,
+    "archivniZaznam": false,
+    "dopadNaCr": {
+      "stav": "zadny",
+      "procRelevantni": "Dokládá posun ruské hybridní strategie od plánování k provádění sabotáží proti zbrojnímu průmyslu členské země NATO a EU, s využitím náhodně verbovaných lidí přes sociální sítě — stejný způsob náboru popisují zprávy z jiných evropských zemí.",
+      "dopad": "Pro lidi v Česku ze zprávy dnes neplyne žádné omezení.",
+      "sledujeme": "Zda PET nebo dánská vláda zveřejní konkrétní jména napadených firem nebo písemnou zprávu k tomuto tvrzení.",
+      "overeno": "2026-10-07"
+    },
+    "overeni": "neovereno"
   }
 ]
