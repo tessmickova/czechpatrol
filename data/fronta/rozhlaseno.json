@@ -175,6 +175,11 @@
       "kdy": "2026-10-08T05:31:05.930Z",
       "zaznamu": 0,
       "neodeslan": "nic od 7/10"
+    },
+    "2026-10-08-vecer": {
+      "kdy": "2026-10-08T17:30:59.023Z",
+      "zaznamu": 0,
+      "neodeslan": "nic nového"
     }
   },
   "navrhy": {
@@ -913,6 +918,6 @@
     }
   },
   "kyber": {
-    "stav": "klid"
+    "stav": "pozor"
   }
 }
