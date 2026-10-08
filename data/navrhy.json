@@ -1685,59 +1685,51 @@
   {
     "kam": "zaznam",
     "pripravil": "patrol",
-    "pripraveno": "2026-10-07T23:25:09.255Z",
-    "id": "i-2026-10-07-202d82851e",
-    "slug": "dk-202d82851e",
-    "titulek": "Dánsko: analytička tajné služby PET Josefine Christensenová uvedla, že Rusko od léta rozjelo sabotáže proti dánským firmám dodávajícím zbraně na Ukrajinu, k náboru využívá i bezdomovce a závislé",
-    "kratkyTitulek": "Dánsko: analytička tajné služby PET Josefine Christensenová uvedla, že Rusko od léta rozjelo sabotáže proti dánským firmám dodávajícím zbraně na Ukrajinu, k náboru využívá i bezdomovce a závislé",
-    "zeme": "Dánsko",
-    "kodZeme": "DK",
+    "pripraveno": "2026-10-08T06:28:08.394Z",
+    "id": "i-2026-10-07-08184d8850",
+    "slug": "lt-08184d8850",
+    "titulek": "Litva: ministr vnitra požádal o nasazení armády na hranici s ruskou Kaliningradskou oblastí po incidentu na lotyšské hranici a zprávách o možné ruské mobilizaci",
+    "kratkyTitulek": "Litva: ministr vnitra požádal o nasazení armády na hranici s ruskou Kaliningradskou oblastí po incidentu na lotyšské hranici a zprávách o možné ruské mobilizaci",
+    "zeme": "Litva",
+    "kodZeme": "LT",
     "kategorie": [
-      "sabotaz",
-      "hybridni",
-      "zpravodajske"
+      "hranice",
+      "nato",
+      "rusko"
     ],
     "datumUdalosti": "2026-10-07T00:00:00Z",
-    "datumZjisteni": "2026-10-07T00:00:00Z",
-    "aktualizovano": "2026-10-07T23:25:09.255Z",
+    "datumZjisteni": "2026-10-08T00:00:00Z",
+    "aktualizovano": "2026-10-08T06:28:08.394Z",
     "zavaznost": "Y2",
-    "jistota": "stredni",
+    "jistota": "vysoka",
     "stav": "bez-vysetrovani",
     "atribuce": "neznama",
-    "puvodce": "neznamy",
-    "druh": "pripad",
+    "puvodce": null,
+    "druh": "opatreni",
     "fakta": [
-      "Josefine Christensenová, vedoucí analytička dánské Bezpečnostní a zpravodajské služby (PET), na bezpečnostní konferenci v Kodani 7. 10. 2026 uvedla, že Rusko zahájilo sabotážní operace proti dánským firmám podílejícím se na dodávkách zbraní Ukrajině.",
-      "Podle Christensenové Rusko na jaře 2026 sabotáže především plánovalo a provádělo jich málo, ale od začátku léta začalo plány realizovat výrazně častěji poté, co zjistilo, že dřívější přístup neodradil NATO od podpory Ukrajiny; cílem je teď přímo zbrojní výroba s dopadem na frontu.",
-      "Christensenová popsala, že Rusko k sabotážím verbuje přes sociální sítě (Telegram) nezkušené „netrénované proxy“, včetně bezdomovců a lidí závislých na drogách, kteří hledají rychlé peníze; úkoly začínají sledováním a fotografováním a postupně eskalují k sabotáži, a pokud jedna osoba neuspěje, Rusko pošle další."
+      "Litevský ministr vnitra Martynas Katelynas 7. 10. 2026 ve veřejném prohlášení požádal ministra obrany Roberta Kaunase, aby nasadil jednotky litevských ozbrojených sil na pomoc pohraniční stráži při ochraně hranice s ruskou Kaliningradskou oblastí.",
+      "Katelynas rozhodnutí zdůvodnil incidentem na lotyšsko-běloruské hranici z 6. 10. 2026 (ozbrojené maskované osoby doprovázející skupinu nejméně 20 migrantů, část z nich krátce vstoupila na lotyšské území) a celkovým vyhodnocením bezpečnostní situace v regionu, včetně zpráv o možném vyhlášení ruské mobilizace.",
+      "Ministr zdůraznil, že situace na litevské hranici je klidná a nasazení vojáků je preventivním opatřením v reakci na signály z okolí, ne reakcí na konkrétní narušení litevské hranice."
     ],
     "neznameho": [
-      "Konkrétní jména napadených dánských obranných firem a přesná data nebo popis jednotlivých sabotážních incidentů zdroje neuvádějí.",
-      "Zda PET k tomuto tvrzení vydala i písemnou zprávu, nebo šlo jen o ústní vyjádření na konferenci."
+      "Počet nasazených vojáků a přesný rozsah nebo plánovaná délka operace zdroje neuvádějí.",
+      "Zdroj zpráv o možné ruské mobilizaci, na které se ministr odvolává, články nejmenují."
     ],
     "vyznam": "",
     "eskalacniSpousteče": [],
     "deeskalacniSignaly": [],
     "zdroje": [
       {
-        "nazev": "Seznam Zprávy — Rusko u nás začalo se sabotážemi, využívá i bezdomovce, říká dánská analytička",
-        "url": "https://www.seznamzpravy.cz/clanek/zahranicni-rusko-u-nas-zacalo-se-sabotazemi-vyuziva-i-bezdomovce-rika-danska-analyticka-317021",
+        "nazev": "The Kyiv Independent — Lithuania to deploy troops along border with Russia's Kaliningrad after Latvia incident",
+        "url": "https://kyivindependent.com/lithuania-to-deploy-troops-along-border-with-russias-kaliningrad-after-latvia-incident/",
         "typ": "media",
-        "publikovano": "2026-10-07T00:00:00Z",
+        "publikovano": "2026-10-08T00:00:00Z",
         "primarni": false,
-        "jazyk": "cs"
+        "jazyk": "en"
       },
       {
-        "nazev": "Novinky.cz — Rusko u nás rozjelo sabotáže, uvedla analytička dánské tajné služby",
-        "url": "https://www.novinky.cz/clanek/zahranicni-rusko-u-nas-rozjelo-sabotaze-uvedla-analyticka-danske-tajne-sluzby-40601379",
-        "typ": "media",
-        "publikovano": "2026-10-07T00:00:00Z",
-        "primarni": false,
-        "jazyk": "cs"
-      },
-      {
-        "nazev": "The Moscow Times — Denmark Says Russia Has Conducted Sabotage Attacks Against Its Defense Firms",
-        "url": "https://www.themoscowtimes.com/2026/10/07/denmark-says-russia-has-conducted-sabotage-attacks-against-its-defense-firms-a93914",
+        "nazev": "LRT.lt — Lithuania to deploy military to help guard border with Kaliningrad – minister",
+        "url": "https://www.lrt.lt/en/news-in-english/19/3075423/lithuania-to-deploy-military-to-help-guard-border-with-kaliningrad-minister",
         "typ": "media",
         "publikovano": "2026-10-07T00:00:00Z",
         "primarni": false,
@@ -1757,12 +1749,13 @@
     "aiZpracovano": true,
     "lidskyOvereno": false,
     "archivniZaznam": false,
+    "vykonal": "Litevské ministerstvo obrany",
     "dopadNaCr": {
       "stav": "zadny",
-      "procRelevantni": "Dokládá posun ruské hybridní strategie od plánování k provádění sabotáží proti zbrojnímu průmyslu členské země NATO a EU, s využitím náhodně verbovaných lidí přes sociální sítě — stejný způsob náboru popisují zprávy z jiných evropských zemí.",
+      "procRelevantni": "Členský stát NATO/EU reaguje na hraniční incident u souseda preventivním nasazením armády k ruské exklávě; ukazuje, jak rychle se hraniční incident v jedné pobaltské zemi promítá do opatření v sousední zemi.",
       "dopad": "Pro lidi v Česku ze zprávy dnes neplyne žádné omezení.",
-      "sledujeme": "Zda PET nebo dánská vláda zveřejní konkrétní jména napadených firem nebo písemnou zprávu k tomuto tvrzení.",
-      "overeno": "2026-10-07"
+      "sledujeme": "Zda Litva zveřejní rozsah nasazení a zda se situace na hranici s Kaliningradem dál vyvíjí.",
+      "overeno": "2026-10-08"
     }
   }
 ]
