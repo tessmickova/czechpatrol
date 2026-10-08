@@ -14596,5 +14596,84 @@
       "overeno": "2026-10-07"
     },
     "overeni": "neovereno"
+  },
+  {
+    "id": "i-2026-10-07-08184d8850",
+    "slug": "lt-08184d8850",
+    "titulek": "Litva: ministr vnitra požádal o nasazení armády na hranici s ruskou Kaliningradskou oblastí po incidentu na lotyšské hranici a zprávách o možné ruské mobilizaci",
+    "kratkyTitulek": "Litva: ministr vnitra požádal o nasazení armády na hranici s ruskou Kaliningradskou oblastí po incidentu na lotyšské hranici a zprávách o možné ruské mobilizaci",
+    "zeme": "Litva",
+    "kodZeme": "LT",
+    "kategorie": [
+      "hranice",
+      "nato",
+      "rusko"
+    ],
+    "datumUdalosti": "2026-10-07T00:00:00Z",
+    "datumZjisteni": "2026-10-08T00:00:00Z",
+    "aktualizovano": "2026-10-08T06:32:37.630Z",
+    "zavaznost": "Y2",
+    "jistota": "stredni",
+    "stav": "bez-vysetrovani",
+    "atribuce": "neznama",
+    "puvodce": null,
+    "druh": "opatreni",
+    "fakta": [
+      "Litevský ministr vnitra Martynas Katelynas 7. 10. 2026 ve veřejném prohlášení požádal ministra obrany Roberta Kaunase, aby nasadil jednotky litevských ozbrojených sil na pomoc pohraniční stráži při ochraně hranice s ruskou Kaliningradskou oblastí.",
+      "Katelynas rozhodnutí zdůvodnil incidentem na lotyšsko-běloruské hranici z 6. 10. 2026 (ozbrojené maskované osoby doprovázející skupinu nejméně 20 migrantů, část z nich krátce vstoupila na lotyšské území) a celkovým vyhodnocením bezpečnostní situace v regionu, včetně zpráv o možném vyhlášení ruské mobilizace.",
+      "Ministr zdůraznil, že situace na litevské hranici je klidná a nasazení vojáků je preventivním opatřením v reakci na signály z okolí, ne reakcí na konkrétní narušení litevské hranice."
+    ],
+    "neznameho": [
+      "Počet nasazených vojáků a přesný rozsah nebo plánovaná délka operace zdroje neuvádějí.",
+      "Zdroj zpráv o možné ruské mobilizaci, na které se ministr odvolává, články nejmenují."
+    ],
+    "vyznam": "",
+    "eskalacniSpousteče": [],
+    "deeskalacniSignaly": [],
+    "zdroje": [
+      {
+        "nazev": "The Kyiv Independent — Lithuania to deploy troops along border with Russia's Kaliningrad after Latvia incident",
+        "url": "https://kyivindependent.com/lithuania-to-deploy-troops-along-border-with-russias-kaliningrad-after-latvia-incident/",
+        "typ": "media",
+        "publikovano": "2026-10-08T00:00:00Z",
+        "primarni": false,
+        "jazyk": "en"
+      },
+      {
+        "nazev": "LRT.lt — Lithuania to deploy military to help guard border with Kaliningrad – minister",
+        "url": "https://www.lrt.lt/en/news-in-english/19/3075423/lithuania-to-deploy-military-to-help-guard-border-with-kaliningrad-minister",
+        "typ": "media",
+        "publikovano": "2026-10-07T00:00:00Z",
+        "primarni": false,
+        "jazyk": "en"
+      }
+    ],
+    "souvisejici": [],
+    "historie": [
+      {
+        "kdy": "2026-10-07T00:00:00Z",
+        "text": "Zachyceno automatickým sběrem, druhý zdroj doložen před zařazením do fronty.",
+        "novySignal": true
+      },
+      {
+        "kdy": "2026-10-08T06:32:37.630Z",
+        "text": "Zveřejněno jako neověřené úředně: dvě nezávislé redakce, úřad zatím nepotvrdil.",
+        "novySignal": false
+      }
+    ],
+    "novy": true,
+    "zapocitanoTyden": "2026-10-07",
+    "aiZpracovano": true,
+    "lidskyOvereno": false,
+    "archivniZaznam": false,
+    "vykonal": "Litevské ministerstvo obrany",
+    "dopadNaCr": {
+      "stav": "zadny",
+      "procRelevantni": "Členský stát NATO/EU reaguje na hraniční incident u souseda preventivním nasazením armády k ruské exklávě; ukazuje, jak rychle se hraniční incident v jedné pobaltské zemi promítá do opatření v sousední zemi.",
+      "dopad": "Pro lidi v Česku ze zprávy dnes neplyne žádné omezení.",
+      "sledujeme": "Zda Litva zveřejní rozsah nasazení a zda se situace na hranici s Kaliningradem dál vyvíjí.",
+      "overeno": "2026-10-08"
+    },
+    "overeni": "neovereno"
   }
 ]
