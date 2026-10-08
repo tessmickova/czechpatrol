@@ -1,5 +1,5 @@
 {
-  "aktualizovano": "2026-10-08T02:03:00.008Z",
+  "aktualizovano": "2026-10-08T04:03:54.711Z",
   "stavy": [
     {
       "klic": "cloudflare",
@@ -23,7 +23,7 @@
         "Arica, Chile - (ARI)",
         "Baghdad, Iraq - (BGW)"
       ],
-      "zkontrolovano": "2026-10-08T02:03:00.008Z",
+      "zkontrolovano": "2026-10-08T04:03:54.711Z",
       "chyba": null
     },
     {
@@ -34,14 +34,14 @@
         {
           "nazev": "Service Degradation Affecting Customer Using Polycom Devices Going Offline",
           "odkaz": "https://stspg.io/4cpggx38p4g2",
-          "aktualizovano": "2026-10-06T20:02:59.867-07:00"
+          "aktualizovano": "2026-10-07T19:40:01.837-07:00"
         }
       ],
       "postizene": [
         "Devices (Softphones/Deskphones)",
         "Zoom Phone - Global"
       ],
-      "zkontrolovano": "2026-10-08T02:03:00.008Z",
+      "zkontrolovano": "2026-10-08T04:03:54.711Z",
       "chyba": null
     },
     {
@@ -50,7 +50,7 @@
       "popis": "All Systems Operational",
       "incidenty": [],
       "postizene": [],
-      "zkontrolovano": "2026-10-08T02:03:00.008Z",
+      "zkontrolovano": "2026-10-08T04:03:54.711Z",
       "chyba": null
     }
   ]
