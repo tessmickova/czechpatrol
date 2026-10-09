@@ -1769,80 +1769,6 @@
   {
     "kam": "zaznam",
     "pripravil": "patrol",
-    "pripraveno": "2026-10-08T20:02:58.894Z",
-    "id": "i-2026-10-08-4efe8855fb",
-    "slug": "it-4efe8855fb",
-    "titulek": "Itálie: proruská hackerská skupina NoName zaútočila na web ministerstva zahraničí; ministerstvo útok zmírnilo bezpečnostními systémy bez přerušení provozu",
-    "kratkyTitulek": "Itálie: proruská hackerská skupina NoName zaútočila na web ministerstva zahraničí; ministerstvo útok zmírnilo bezpečnostními systémy bez přerušení provozu",
-    "zeme": "Itálie",
-    "kodZeme": "IT",
-    "kategorie": [
-      "kyber",
-      "rusko"
-    ],
-    "datumUdalosti": "2026-10-08T00:00:00Z",
-    "datumZjisteni": "2026-10-08T00:00:00Z",
-    "aktualizovano": "2026-10-08T20:02:58.894Z",
-    "zavaznost": "Y1",
-    "jistota": "stredni",
-    "stav": "bez-vysetrovani",
-    "atribuce": "neznama",
-    "puvodce": "neznamy",
-    "druh": "pripad",
-    "fakta": [
-      "Proruská hackerská skupina NoName podle Euronews ve čtvrtek 8. 10. 2026 zaútočila na webové stránky italského ministerstva zahraničí (Farnesina).",
-      "Italské ministerstvo zahraničí podle agentury ANSA potvrdilo, že jeho web byl od rána 8. 10. 2026 terčem kybernetického útoku, který byl účinně zmírněn bezpečnostními systémy bez přerušení provozu.",
-      "Ministerstvo podle ANSA koordinuje sledování situace s národním strategickým centrem pro kybernetickou bezpečnost a příslušnými úřady a prověřuje i weby italských diplomatických a konzulárních zastoupení v zahraničí."
-    ],
-    "neznameho": [
-      "ANSA (citující přímo ministerstvo) skupinu NoName nejmenuje; spojení s útokem uvádí jen Euronews.",
-      "Žádná škoda ani únik dat nebyl zdroji potvrzen."
-    ],
-    "vyznam": "",
-    "eskalacniSpousteče": [],
-    "deeskalacniSignaly": [],
-    "zdroje": [
-      {
-        "nazev": "Euronews — Pro-Russian hacker group NoName targets Italian Foreign Ministry website",
-        "url": "https://www.euronews.com/2026/10/08/pro-russian-hacker-group-noname-targets-italian-foreign-ministry-website",
-        "typ": "media",
-        "publikovano": "2026-10-08T00:00:00Z",
-        "primarni": false,
-        "jazyk": "en"
-      },
-      {
-        "nazev": "ANSA — Foreign Ministry says cyberattack on website, impact mitigated by security measures",
-        "url": "https://www.ansa.it/english/news/general_news/2026/10/08/foreign-ministry-says-cyberattack-on-website-impact-mitigated-by-security-measures_a78833ec-95c6-4be4-9b8a-88168fdd1a0e.html",
-        "typ": "media",
-        "publikovano": "2026-10-08T00:00:00Z",
-        "primarni": false,
-        "jazyk": "en"
-      }
-    ],
-    "souvisejici": [],
-    "historie": [
-      {
-        "kdy": "2026-10-08T00:00:00Z",
-        "text": "Zachyceno automatickým sběrem, druhý zdroj doložen před zařazením do fronty.",
-        "novySignal": true
-      }
-    ],
-    "novy": true,
-    "zapocitanoTyden": "2026-10-08",
-    "aiZpracovano": true,
-    "lidskyOvereno": false,
-    "archivniZaznam": false,
-    "dopadNaCr": {
-      "stav": "zadny",
-      "procRelevantni": "Kybernetický útok proruské hacktivistické skupiny na ministerstvo zahraničí členského státu NATO a EU; stejný typ skupiny a metody, jaké se objevují i v jiných evropských zemích.",
-      "dopad": "Pro lidi v Česku ze zprávy dnes neplyne žádné omezení.",
-      "sledujeme": "Zda italské úřady útok formálně přisoudí skupině NoName a zda zveřejní další podrobnosti.",
-      "overeno": "2026-10-08"
-    }
-  },
-  {
-    "kam": "zaznam",
-    "pripravil": "patrol",
     "pripraveno": "2026-10-09T00:35:02.395Z",
     "id": "i-2026-10-08-9f6ec047f2",
     "slug": "cz-9f6ec047f2",
@@ -1858,7 +1784,7 @@
     "datumZjisteni": "2026-10-08T00:00:00Z",
     "aktualizovano": "2026-10-09T00:35:02.395Z",
     "zavaznost": "Y1",
-    "jistota": "vysoka",
+    "jistota": "stredni",
     "stav": "bez-vysetrovani",
     "atribuce": "neznama",
     "puvodce": "neznamy",

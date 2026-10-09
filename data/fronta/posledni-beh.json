@@ -1,5 +1,5 @@
 {
-  "kdy": "2026-10-09T00:13:35.704Z",
+  "kdy": "2026-10-09T08:01:45.429Z",
   "zdroje": [
     {
       "klic": "e-sbirka",
@@ -195,17 +195,18 @@
     },
     {
       "klic": "bundespolizei",
-      "ok": true,
-      "stav": 200,
+      "ok": false,
+      "stav": null,
       "pocetPolozek": 0,
-      "vysledek": "ok"
+      "chyba": "fetch failed",
+      "vysledek": "chyba"
     },
     {
       "klic": "bmi-de",
       "ok": false,
-      "stav": 400,
+      "stav": null,
       "pocetPolozek": 0,
-      "chyba": "HTTP 400",
+      "chyba": "fetch failed",
       "vysledek": "chyba"
     },
     {
@@ -233,14 +234,14 @@
       "klic": "chmi-cap",
       "ok": true,
       "stav": 200,
-      "pocetPolozek": 3,
+      "pocetPolozek": 0,
       "vysledek": "ok"
     },
     {
       "klic": "kyber",
       "ok": true,
       "stav": null,
-      "pocetPolozek": 2,
+      "pocetPolozek": 0,
       "vysledek": "ok"
     },
     {
