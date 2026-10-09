@@ -41,6 +41,40 @@
     }
   },
   {
+    "id": "k-5804c979e5c82014",
+    "zachyceno": "2026-10-09T14:04:23.506Z",
+    "publikovano": "2026-10-09T14:01:23.000Z",
+    "zdroj": {
+      "nazev": "Politico Europe",
+      "url": "https://www.politico.eu/article/arrested-german-august-hanning-lashes-out-bnd-russia-spy-allegations/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Arrested German spy chief lashed out at his old agency over allegations he spied for Russia",
+    "titulekPuvodni": "Arrested German spy chief lashed out at his old agency over allegations he spied for Russia",
+    "shrnuti": "A letter sent weeks before August Hanning’s arrest adds to concerns over the BND’s credibility among allies.",
+    "kodZeme": "DE",
+    "zeme": "Německo",
+    "kategorie": [
+      "zpravodajske",
+      "rusko"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "arrested+spy",
+      "russia"
+    ],
+    "naliehave": null,
+    "stav": "ceka",
+    "vyrez": {
+      "text": "Arrested German spy chief lashed out at his old agency over allegations he spied for Russia  – POLITICO\nSkip to main content\nAdvertisement\nBERLIN — Former German intelligence chief August Hanning angrily challenged his successor after learning that the agency he once headed, the BND, had passed allegations that he was a Russian spy to investigators.\nIn a three-page letter sent on Aug. 17, less than three months before his arrest this week, Hanning demanded answers to 11 questions from BND President Martin Jäger.\nIn the letter, obtained by WELT — which, like POLITICO, is part of the Axel Springer Global Reporters Network — Hanning complained that the BND had passed allegations by a former intelligence agent that he was a Russian spy to investigators without consulting him.\nAdvertisement\nJäger did not respond to the letter at the time, according to Hanning, who spoke to WELT before his arrest.\nHanning’s subsequent arrest, including on suspicion of attempted treason, has caused considerable concern abroad. Grzegorz Malecki, the former head of Poland’s foreign intelligence service, told WELT that the case was “extremely concerning” and could deepen allies’ distrust of the BND. He…",
+      "stazeno": "2026-10-09T14:04:26.236Z",
+      "stav": 200
+    }
+  },
+  {
     "id": "k-e8eefd1a3f778d86",
     "zachyceno": "2026-10-09T13:42:16.333Z",
     "publikovano": "2026-10-09T13:07:00.000Z",
@@ -11321,54 +11355,6 @@
       "duvod": "mimo-rozsah",
       "patriK": null,
       "poznamka": "Obavy z moru v Rusku a mazání zmínek v médiích; vnitroruská zdravotní/medialní záležitost bez vazby na sledované země."
-    }
-  },
-  {
-    "id": "k-b7bfb92617846a09",
-    "zachyceno": "2026-10-06T12:04:11.577Z",
-    "publikovano": "2026-10-06T11:13:40.000Z",
-    "zdroj": {
-      "nazev": "El País (Španělsko, anglicky)",
-      "url": "https://english.elpais.com/international/2026-10-06/tensions-mount-on-mexico-us-border-amid-drones-and-shootouts.html",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Tensions mount on Mexico-US border amid drones and shootouts",
-    "titulekPuvodni": "Tensions mount on Mexico-US border amid drones and shootouts",
-    "shrnuti": "The deployment of troops to the Texas and Tamaulipas area over a possible attack on US Coast Guard personnel coincides with increased drone use by cartels",
-    "kodZeme": null,
-    "zeme": null,
-    "kategorie": [
-      "nato",
-      "hybridni",
-      "hranice",
-      "vojsko",
-      "drony"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "zeSite": null,
-    "shody": [
-      "deployment of troops",
-      "attack on",
-      "border+troops",
-      "troops+deploy",
-      "dron",
-      "drone",
-      "border"
-    ],
-    "naliehave": null,
-    "stav": "vyrizen",
-    "vyrez": {
-      "text": "Tensions mount on Mexico-US border amid drones and shootouts | International | EL PAÍS English Skip to content _\n_\n_\n_\nPablo Ferri\nMexico - Oct 06, 2026 - 13:13 CEST\nShare on Whatsapp\nShare on Facebook\nShare on Twitter\nDesplegar Redes Sociales\nPrefer EL PAÍS on Google\nCompartir:\nWhatsapp\nFacebook\nTwitter\nBluesky\nLinkedin\nCopy link\nTensions are rising along the Mexico-U.S. border — this time on the eastern side — due to an incident that has quietly made its way to the press. Ten days ago, U.S. Coast Guard personnel patrolling the Rio Grande area between Texas and Tamaulipas exchanged gunfire with suspected armed men who were crossing from the Mexican side. No injuries or fatalities were reported, but authorities have launched separate operations on both sides of the border — a deployment that, at its core, reignites fears of intervention by Washington on Mexican territory .\nIt’s been the same old tune for the past year and a half — the usual threat from Washington since Donald Trump’s return to the White House. According to the Republican narrative, the activities of Mexican “narco-terrorist organizations” pose a risk to Americans; if Mexico doesn’t do more to stop them, the…",
-      "stazeno": "2026-10-06T12:04:15.188Z",
-      "stav": 200
-    },
-    "vyrizeni": {
-      "kdy": "2026-10-06T16:01:14.463Z",
-      "duvod": "mimo-rozsah",
-      "patriK": null,
-      "poznamka": "Napětí na hranici Mexika a USA s drony a střelbou; nesouvisí s ruskou hybridní hrozbou vůči Evropě."
     }
   }
 ]
