@@ -1,19 +1,19 @@
 [
   {
-    "id": "k-24ce20ea7a149bac",
-    "zachyceno": "2026-10-09T12:03:49.091Z",
-    "publikovano": "2026-10-09T11:10:00.000Z",
+    "id": "k-40e52f86512f9701",
+    "zachyceno": "2026-10-09T19:25:11.122Z",
+    "publikovano": "2026-10-09T18:56:00.000Z",
     "zdroj": {
-      "nazev": "Seznam Zprávy",
-      "url": "https://www.seznamzpravy.cz/clanek/zahranicni-vysetrovatele-nasli-v-ruskych-dronech-polske-sim-karty-317170",
+      "nazev": "Meduza (anglicky)",
+      "url": "https://meduza.io/en/news/2026/10/09/ukrainian-drone-alert-disrupts-russian-government-flights-returning-from-putin-s-turkmenistan-trip",
       "typ": "media",
       "primarni": false
     },
-    "titulek": "Vyšetřovatelé našli v ruských dronech polské SIM karty",
-    "titulekPuvodni": "Vyšetřovatelé našli v ruských dronech polské SIM karty",
-    "shrnuti": "Desítky ruských strojů narušily polský vzdušný prostor loni v září. Nyní prokuratura oznámila, že vyšetřování bylo zastaveno. Pachatele se nepodařilo vypátrat.",
-    "kodZeme": "PL",
-    "zeme": "Polsko",
+    "titulek": "Ukrainian drone alert disrupts Russian government flights returning from Putin’s Turkmenistan trip",
+    "titulekPuvodni": "Ukrainian drone alert disrupts Russian government flights returning from Putin’s Turkmenistan trip",
+    "shrnuti": "Several aircraft from Russia’s Rossiya Special Flight Detachment, which transports the country’s leaders and senior officials, circled over Moscow on the evening of October 9 because of the threat of a Ukrainian drone attack.",
+    "kodZeme": "UA",
+    "zeme": "Ukrajina",
     "kategorie": [
       "drony",
       "rusko"
@@ -22,39 +22,105 @@
     "klasifikace": "pravidla",
     "zeSite": null,
     "shody": [
-      "narusil+vzdusny prostor",
+      "dron+flights+disrupt",
       "dron",
       "drone",
-      "vzdusny prostor",
-      "rusk"
+      "russia"
     ],
-    "naliehave": {
-      "druh": "vzdusny-prostor-nato",
-      "stupen": 2,
-      "proc": "narusil+vzdusny prostor"
-    },
+    "naliehave": null,
     "stav": "ceka",
     "vyrez": {
-      "text": "Vyšetřovatelé našli v ruských dronech polské SIM karty - Seznam Zprávy\nZobrazení snímku 1 z 0\nHlavní obsah\nVyšetřovatelé našli v ruských dronech polské SIM karty\nSeznam Zprávy\n3:10\nChcete-li článek poslouchat, přihlaste se\neBook\nSdílet\nBez komentáře: Nález dronů na polském území v září 2025. Video: x.com/sentdefender, facebook/Lubelskie jest najlepsze\n13:10\nDesítky ruských strojů narušily polský vzdušný prostor loni v září. Nyní prokuratura oznámila, že vyšetřování bylo zastaveno. Pachatele se nepodařilo vypátrat.\nČlánek\nPolská prokuratura po více než roce uzavřela vyšetřování loňského narušení vzdušného prostoru bezprecedentním počtem ruských dronů.\nAčkoliv vyšetřovatelé nezjistili, kdo akci nařídil, podezření, že šlo o záměr, posílil nález polských SIM karet v některých bezpilotních letounech.\n„Vyšetřování bylo zastaveno, protože se nepodařilo identifikovat pachatele trestného činu spočívajícího v narušení polského vzdušného prostoru, a tím i v ohrožení veřejné bezpečnosti,“ řekl deníku Rzeczpospolita mluvčí okresní prokuratury v Lublinu Marcin Kozak.\nUdálosti z noci na 10. září 2025  tehdy nepředstavovaly útok v pravém slova smyslu, ale spíše koordinované narušení vzdušného…",
-      "stazeno": "2026-10-09T12:03:52.085Z",
+      "text": "Ukrainian drone alert disrupts Russian government flights returning from Putin’s Turkmenistan trip — Meduza\nSkip to main content\nUkrainian drone alert disrupts Russian government flights returning from Putin’s Turkmenistan trip\nOctober 9, 2026, 6:56 pm\nSource: Meduza\nSeveral aircraft from Russia’s Rossiya Special Flight Detachment, which transports the country’s leaders and senior officials, circled over Moscow on the evening of October 9 because of the threat of a Ukrainian drone attack.\nFive of the detachment’s aircraft were unable to land immediately. At least three were returning from Turkmenistan, where Russian President Vladimir Putin had attended a Commonwealth of Independent States summit, several Russian news outlets and Telegram channels reported ( 1 , 2 , 3 ). All three were Il-96s, the type used to transport the president, Agentstvo reported .\nAccording to Flightradar24, two Il-96s with registration numbers RA-96020 and RA-96022 circled over Moscow and the surrounding region. They departed Turkmenbashi Airport at 2 p.m. and 2:15 p.m. and landed at Moscow’s Vnukovo Airport at 6:06 p.m. and 6:21 p.m., respectively.\nA third Il-96, with registration number RA-96025 ,…",
+      "stazeno": "2026-10-09T19:25:11.227Z",
       "stav": 200
     }
   },
   {
-    "id": "k-63028fe6b89d82f7",
-    "zachyceno": "2026-10-09T16:03:58.064Z",
-    "publikovano": "2026-10-09T15:01:28.000Z",
+    "id": "k-ad70bf8132ab7f50",
+    "zachyceno": "2026-10-09T19:25:11.062Z",
+    "publikovano": "2026-10-09T18:37:00.000Z",
     "zdroj": {
-      "nazev": "Digi24 (Rumunsko)",
-      "url": "https://www.digi24.ro/stiri/sci-tech/auto/masina-cu-butuci-de-lemn-in-loc-de-suspensii-neregulile-descoperite-in-timpul-controalelor-rar-care-i-au-socat-pe-inspectori-3985883",
+      "nazev": "Ukrinform (anglicky)",
+      "url": "https://www.ukrinform.net/rubric-ato/4172832-injury-toll-from-russian-morning-attack-on-zaporizhzhia-rises-to-23-one-dead.html",
+      "typ": "wire",
+      "primarni": false
+    },
+    "titulek": "Injury toll from Russian morning attack on Zaporizhzhia rises to 23, one dead",
+    "titulekPuvodni": "Injury toll from Russian morning attack on Zaporizhzhia rises to 23, one dead",
+    "shrnuti": "The number of people injured in a Russian attack on Zaporizhzhia this morning has risen to 23. One man was killed.",
+    "kodZeme": "RU",
+    "zeme": "Rusko",
+    "kategorie": [
+      "hybridni",
+      "rusko"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "attack on",
+      "russia"
+    ],
+    "naliehave": null,
+    "stav": "ceka",
+    "vyrez": {
+      "text": "Injury toll from Russian morning attack on Zaporizhzhia rises to 23, one dead\n\r\nSubscription\nNewsletters\nPhotobank\nUkrinform - Ukrainian National News Agency\nFounded in 1918\nFriday, 09 October 2026, 22:25\nWar\nEconomy\nSports\nMore ☰\nContacts\nEng\nУкр\nEng\nEsp\nDeu\nعربي\nFra\n日本語\nPol\n&times;\nAll topics\nWar\nRecovery of Ukraine\nPolitics\nEconomy\nFact checks\nDefense\nSociety and Culture\nSports\nCrime\nAccidents and Emergencies\nAgency\nInformation on Agency\nOur Contacts\nSubscribtion Terms\nOur Services\nPrivacy policy and personal data protection\nAdditional\nPublications\nInterviews\nPhoto\nVideo\nLongreads\nReleases\nServices\nSubscription\nNewsletters\nPhotobank\n\r\n\r\n\r\nThe number of people injured in a Russian attack on Zaporizhzhia this morning has risen to 23. One man was killed.\nMykhailo Semikin, Acting Head of the Zaporizhzhia Regional Military Administration, reported this on Telegram , according to Ukrinform.\n\r\n\r\n&ldquo;Unfortunately, the number of people injured in enemy attacks over the course of the day has risen to 23. The injured are receiving the necessary medical assistance,&rdquo; Semikin wrote.\n\r\n\r\nEarlier reports put the number of injured at 14.\n\r\n\r\n\r\n1 / 6\n\r\n\r\n\r\nRead also: Russians attack…",
+      "stazeno": "2026-10-09T19:25:11.400Z",
+      "stav": 200
+    }
+  },
+  {
+    "id": "k-787d5d842b9b51e2",
+    "zachyceno": "2026-10-09T20:04:00.671Z",
+    "publikovano": "2026-10-09T18:32:00.000Z",
+    "zdroj": {
+      "nazev": "Ukrainska Pravda (anglicky)",
+      "url": "https://www.pravda.com.ua/eng/news/2026/10/09/8057288/",
       "typ": "media",
       "primarni": false
     },
-    "titulek": "Mașină cu butuci de lemn în loc de suspensii: Neregulile descoperite în timpul controalelor RAR care i-au șocat pe inspectori",
-    "titulekPuvodni": "Mașină cu butuci de lemn în loc de suspensii: Neregulile descoperite în timpul controalelor RAR care i-au șocat pe inspectori",
-    "shrnuti": "Adevărate „bombe pe patru roți” pe șoselele din România. Inspectorii RAR au descoperit nereguli grave în timpul verificărilor tehnice. Una i-a șocat de-a dreptul: o mașină avea butuci de lemn în loc de suspensii.",
-    "kodZeme": "RO",
-    "zeme": "Rumunsko",
+    "titulek": "Ukrainian foreign ministry denies Belarusian claims of drone attack on lorry in Russia",
+    "titulekPuvodni": "Ukrainian foreign ministry denies Belarusian claims of drone attack on lorry in Russia",
+    "shrnuti": "Ukraine has rejected Belarusian accusations of an intentional drone strike in Bryansk Oblast, criticising Minsk for aiding Russian aggression and escalating tensions.",
+    "kodZeme": "UA",
+    "zeme": "Ukrajina",
+    "kategorie": [
+      "hybridni",
+      "drony",
+      "rusko"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "attack on",
+      "dron",
+      "drone",
+      "russia"
+    ],
+    "naliehave": null,
+    "stav": "ceka",
+    "vyrez": {
+      "text": "Ukraine dismisses Minsk claims over alleged drone strike on lorry in Russia | Ukrainska Pravda\nPhoto: Ukraine's Ministry of Foreign Affairs\nUkraine's Ministry of Foreign Affairs has lodged a protest over the summoning of the Ukrainian chargé d'affaires in Belarus to the Foreign Ministry in Minsk and claims by Belarus that a Ukrainian drone attacked a Belarusian lorry in Russia's Bryansk Oblast.\nSource: European Pravda, citing a statement by the spokesperson for Ukraine's Ministry of Foreign Affairs\nDetails: The spokesperson emphasised that there is no justification for holding Ukraine responsible without providing convincing evidence of its involvement in the incident with the lorry in Bryansk Oblast.\nAdvertisement:\n\r\n\r\n\r\n\r\n\r\nQuote from the Ukrainian Foreign Ministry: \"Minsk's public accusations against Ukraine are accompanied by rhetoric about the alleged deliberate dragging of Belarus into the conflict and threats of 'appropriate measures in response'. We reject such absurd accusations from a country that is an accomplice to the crime of aggression against Ukraine and provides Russia with extensive assistance in its criminal war of conquest against our country.\"\nDetails: The…",
+      "stazeno": "2026-10-09T20:04:00.755Z",
+      "stav": 200
+    }
+  },
+  {
+    "id": "k-a1837ec5ac5f6e22",
+    "zachyceno": "2026-10-09T19:25:10.080Z",
+    "publikovano": "2026-10-09T18:11:34.000Z",
+    "zdroj": {
+      "nazev": "Le Monde (Francie)",
+      "url": "https://www.lemonde.fr/international/live/2026/10/09/en-direct-guerre-en-ukraine-pres-de-26-000-foyers-prives-d-electricite-a-la-suite-de-bombardements-russes-dans-la-region-de-dnipropetrovsk_6787996_3210.html",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "EN DIRECT, guerre en Ukraine : près de 26 000 foyers privés d’électricité à la suite de bombardements russes dans la région de Dnipropetrovsk",
+    "titulekPuvodni": "EN DIRECT, guerre en Ukraine : près de 26 000 foyers privés d’électricité à la suite de bombardements russes dans la région de Dnipropetrovsk",
+    "shrnuti": "Après des attaques contre deux installations énergétiques dans le centre-est de l’Ukraine, les réparations se poursuivaient vendredi.",
+    "kodZeme": "UA",
+    "zeme": "Ukrajina",
     "kategorie": [
       "sabotaz"
     ],
@@ -67,59 +133,24 @@
     "naliehave": null,
     "stav": "ceka",
     "vyrez": {
-      "text": "Mașină cu butuci de lemn în loc de suspensii: Neregulile descoperite în timpul controalelor RAR care i-au șocat pe inspectori | Digi24\nHOME\nȘtiri\nSci-tech\nAuto\nMașină cu butuci de lemn în loc de suspensii: Neregulile descoperite în timpul controalelor RAR care i-au șocat pe inspectori\nVideo Mașină cu butuci de lemn în loc de suspensii: Neregulile descoperite în timpul controalelor RAR care i-au șocat pe inspectori\nData publicării: 09.10.2026 18:01\nMașină cu butuci de lemn în loc de suspensii, descoperita la RAR. Foto: Registrul Auto Roman Urmărește Digi24 în Google Discover Adaugă Digi24 ca sursă preferată în Google\nAdevărate „bombe pe patru roți” pe șoselele din România. Inspectorii RAR au descoperit nereguli grave în timpul verificărilor tehnice. Una i-a șocat de-a dreptul: o mașină avea butuci de lemn în loc de suspensii.\nAvion blocat sub un pod pe DN1: ce se va întâmpla cu aeronava\nScandal în direct între George Simion și Anca Alexandrescu. „Ce ai de faci așa?”/ „Nu vă e rușine?”\nViolențe pe străzile din Bruxelles în timpul demonstrațiilor sindicatelor. Polițiștii au folosit gaze lacrimogene și un tun cu apă\nUn spion rus căutat de SUA a fost arestat în Muntenegru. Pe capul lui…",
-      "stazeno": "2026-10-09T16:03:58.606Z",
+      "text": "Client Challenge\nA required part of this site couldn’t load. This may be due to a browser\nextension, network issues, or browser settings. Please check your\nconnection, disable any ad blockers, or try using a different browser.",
+      "stazeno": "2026-10-09T19:25:12.429Z",
       "stav": 200
     }
   },
   {
-    "id": "k-eb99fb5fd179a076",
-    "zachyceno": "2026-10-09T16:03:58.527Z",
-    "publikovano": "2026-10-09T15:00:39.000Z",
+    "id": "k-574076a9ff7341d5",
+    "zachyceno": "2026-10-09T18:03:24.366Z",
+    "publikovano": null,
     "zdroj": {
-      "nazev": "Meduza (anglicky)",
-      "url": "https://meduza.io/en/feature/2026/10/09/how-life-has-changed-in-a-moscow-suburb-where-ukrainian-drones-hit-the-same-apartment-building-twice",
+      "nazev": "The Kyiv Independent",
+      "url": "https://kyivindependent.com/russian-airports-closed-amid-alleged-ukrainian-balloon-and-drone-raid/",
       "typ": "media",
       "primarni": false
     },
-    "titulek": "How life has changed in a Moscow suburb where Ukrainian drones hit the same apartment building twice",
-    "titulekPuvodni": "How life has changed in a Moscow suburb where Ukrainian drones hit the same apartment building twice",
-    "shrnuti": "On September 20, 2026, Ukraine launched another large-scale drone attack on the Moscow region. One drone hit a high-rise apartment building in Kotelniki, southeast of Moscow. Another had struck the same building in June. Neither strike killed anyone, but the attacks badly frightened many people in t",
-    "kodZeme": "UA",
-    "zeme": "Ukrajina",
-    "kategorie": [
-      "hybridni",
-      "drony"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "zeSite": null,
-    "shody": [
-      "attack on",
-      "dron",
-      "drone"
-    ],
-    "naliehave": null,
-    "stav": "ceka",
-    "vyrez": {
-      "text": "How life has changed in a Moscow suburb where Ukrainian drones hit the same apartment building twice — Meduza\nSkip to main content\nstories\nHow life has changed in a Moscow suburb where Ukrainian drones hit the same apartment building twice\nOctober 9, 2026, 3:00 pm\nSource: Meduza\nOn September 20, 2026, Ukraine launched another large-scale drone attack on the Moscow region. One drone hit a high-rise apartment building in Kotelniki, southeast of Moscow. Another had struck the same building in June. Neither strike killed anyone, but the attacks badly frightened many people in the neighborhood. Reporters from Bereg, a cooperative of independent journalists, visited the Novye Kotelniki residential complex to see how repairs were progressing after the two attacks and how residents had responded. Meduza is translating their report in full.\n‘ People were shaking, children were crying, older people’s blood pressure was shooting up ’\nDrivers struggle to find parking in this densely populated neighborhood in Kotelniki, outside Moscow. Shoppers wait in short lines at grocery store checkouts. It’s a warm, sunny weekend day, yet the courtyard of the Novye Kotelniki residential complex…",
-      "stazeno": "2026-10-09T16:03:59.370Z",
-      "stav": 200
-    }
-  },
-  {
-    "id": "k-707325ff7bc703a5",
-    "zachyceno": "2026-10-09T16:03:56.091Z",
-    "publikovano": "2026-10-09T14:15:24.000Z",
-    "zdroj": {
-      "nazev": "Novinky.cz",
-      "url": "https://www.novinky.cz/clanek/valka-na-ukrajine-moskva-je-pod-masivnim-utokem-40601776",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Moskva pod masivním útokem. Na nebi se střídaly drony a zvláštní malé balony",
-    "titulekPuvodni": "Moskva pod masivním útokem. Na nebi se střídaly drony a zvláštní malé balony",
-    "shrnuti": "Moskva a přilehlá Moskevská oblast je v pátek odpoledne pod útokem dronů a balónů se zavěšenými předměty. Informují o tom ruská a ukrajinská média. Podle agentury TASS kvůli tomu letecká společnost Aeroflot mění letecký řád, letiště jsou uzavřena, některé lety již přesměrovali na jiná letiště. Nad r",
+    "titulek": "Russian airports closed amid alleged Ukrainian balloon and drone raid.",
+    "titulekPuvodni": "Russian airports closed amid alleged Ukrainian balloon and drone raid.",
+    "shrnuti": "",
     "kodZeme": "UA",
     "zeme": "Ukrajina",
     "kategorie": [
@@ -130,31 +161,345 @@
     "klasifikace": "pravidla",
     "zeSite": null,
     "shody": [
-      "dron+letist+uzavr",
+      "dron+airport+closed",
+      "dron",
+      "drone",
+      "russia"
+    ],
+    "naliehave": null,
+    "stav": "ceka",
+    "vyrez": {
+      "text": "Russian airports closed amid alleged Ukrainian balloon and drone raid Help rescue animals from the front line — shop our Companion Collection 🐾\nShop Now\nWar Russian airports closed amid alleged Ukrainian balloon and drone raid\nOctober 9, 2026 7:30 pm • 2 min read\nPrefer on Google\nby Jimmy Rushton\nIllustrative purposes only: People wait for their flights at the Sheremetyevo International Airport on the outskirts of Moscow on July 28, 2025 (Tatyana Makeyeva/AFP via Getty Images)\nSeveral Moscow airports temporarily suspended flights on Oct. 9, as suspected Ukrainian drones and balloons entered airspace around the Russian capital.\nDomodedovo, Sheremetyevo, Vnukovo, and Zhukovsky airports all halted operations during the alleged Ukrainian raid, disrupting flights and causing long delays.  \nAccording to FlightRadar24 , an open-source air traffic monitoring website, multiple Russian government aircraft from the Rossiya Special Flight Detachment, which transports top-level Russian government officials, were scheduled to fly into Moscow's airports on Oct. 9.\nAt least one of the aircraft, an Ilyushin Il-96-300PU flying from Türkmenbaşy in Turkmenistan to Vnukovo Airport in Moscow, was…",
+      "stazeno": "2026-10-09T18:03:27.552Z",
+      "stav": 200
+    }
+  },
+  {
+    "id": "k-b84fe875c803bdd9",
+    "zachyceno": "2026-10-09T18:03:24.657Z",
+    "publikovano": "2026-10-09T17:46:16.000Z",
+    "zdroj": {
+      "nazev": "The Guardian — World",
+      "url": "https://www.theguardian.com/uk-news/2026/oct/09/two-latvians-arrested-at-raf-molesworth-base-in-cambridgeshire-released-on-bail",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Two Latvians arrested at RAF base in Cambridgeshire released on bail",
+    "titulekPuvodni": "Two Latvians arrested at RAF base in Cambridgeshire released on bail",
+    "shrnuti": "Men found inside RAF Molesworth, used by US and Nato for intelligence, freed on strict conditions as police continue investigation Two Latvian men have been released on bail after being arrested at an RAF base in Cambridgeshire used by the US military and Nato. The two men, aged 32 and 26, were arre",
+    "kodZeme": "LV",
+    "zeme": "Lotyšsko",
+    "kategorie": [
+      "zpravodajske",
+      "nato"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "arrested+intelligence",
+      "nato"
+    ],
+    "naliehave": null,
+    "stav": "ceka",
+    "vyrez": {
+      "text": "Two Latvians arrested at RAF base in Cambridgeshire released on bail | UK news | The Guardian\nSkip to main content Skip to navigation\nRAF Molesworth is home to Nato’s Intelligence Fusion Centre and the US Joint Intelligence Operations Center, Europe. Photograph: Ryan Jenkinson/Getty Images\nView image in fullscreen\nRAF Molesworth is home to Nato’s Intelligence Fusion Centre and the US Joint Intelligence Operations Center, Europe. Photograph: Ryan Jenkinson/Getty Images\nTwo Latvians arrested at RAF base in Cambridgeshire released on bail\nMen found inside RAF Molesworth, used by US and Nato for intelligence, freed on strict conditions as police continue investigation\nTwo Latvian men have been released on bail after being arrested at an RAF base in Cambridgeshire used by the US military and Nato.\nThe two men, aged 32 and 26, were arrested at 2am on Thursday after they were discovered inside RAF Molesworth in Cambridgeshire, which is used by the US military and Nato for intelligence operations.\nAn investigation had begun four hours earlier, when military police found an abandoned vehicle near the facility at around 10pm on Wednesday.\nMilitary police, joined by officers from…",
+      "stazeno": "2026-10-09T18:03:28.019Z",
+      "stav": 200
+    }
+  },
+  {
+    "id": "k-386b81bed6f41da6",
+    "zachyceno": "2026-10-09T18:03:24.090Z",
+    "publikovano": "2026-10-09T17:31:14.000Z",
+    "zdroj": {
+      "nazev": "Deník N",
+      "url": "https://denikn.cz/2211567/vyvoj-boju-1688-den-v-cerne-hore-zadrzeli-zakladatele-provalecneho-uctu-rybar-i-se-spolupracovniky-ma-byt-vyhosten-ze-zeme/",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Vývoj bojů (1688. den): V Černé Hoře zadrželi zakladatele proválečného účtu Rybar, i se spolupracovníky má být vyhoštěn ze země",
+    "titulekPuvodni": "Vývoj bojů (1688. den): V Černé Hoře zadrželi zakladatele proválečného účtu Rybar, i se spolupracovníky má být vyhoštěn ze země",
+    "shrnuti": "Informace v textu jsou shrnutím událostí za čtvrtek 8. října. V tuto chvíli už situace na některých místech může být jiná. V Černé Hoře zadrželi zakladatele telegramového kanálu Rybar Michaila Zvinčuka, který patří k předním postavám ruské proválečné mediální scény. Spolu s ním bude ze země z důvodů",
+    "kodZeme": "RU",
+    "zeme": "Rusko",
+    "kategorie": [
+      "zpravodajske",
+      "rusko"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "vyhost",
+      "zadrz+rusk",
+      "rusk"
+    ],
+    "naliehave": null,
+    "stav": "ceka",
+    "vyrez": {
+      "text": "Vývoj bojů (1688. den): V Černé Hoře zadrželi zakladatele proválečného účtu Rybar, i se spolupracovníky má být vyhoštěn ze země &mdash; Deník N\nTrosky jednoho ze dvou zničených autobusů v Kramatorsku. Čtvrteční ruský letecký útok zabil nejméně třicet lidí. Foto: DSNS Donecké oblasti\nVíce o poslechu Deníku N\nV Černé Hoře zadrželi zakladatele telegramového kanálu Rybar Michaila Zvinčuka. Spolu s manželkou a spolupracovníky má být vyhoštěn ze země.\nJaké jsou klíčové směry na frontě podle Rybara, ukrajinských a nezávislých analytiků.\nZapomeňte na Slovjansk , jeho dobytí je aktuálně nereálné.\nUkrajinský tlak ve směru na Velyku Novosilku pokračuje, bojuje se už u Komaru na východním břehu říčky Mokri Jaly.\nRusové pronikají do Dobropillji, na jejich křídlo však ze severu tlačí ukrajinský protiútok.\nUž i bitva o datová centra je obousměrná, Ukrajinci útočí na „ruský Google“.\nMapy dne: slovjanský směr; velykonovosilský směr; dobropilljský směr.\nVidea dne: scéna jako z druhé světové války – MiG-29 sestřeluje dron kanonem; vojáci čistí síť ruských bunkrů; raketomet HIMARS zničil dělostřelecký radar; jak to vypadá na silnici R-280 na Krym.\nInformace v textu jsou shrnutím událostí za čtvrtek…",
+      "stazeno": "2026-10-09T18:03:28.048Z",
+      "stav": 200
+    }
+  },
+  {
+    "id": "k-b2b1b5e183c23535",
+    "zachyceno": "2026-10-09T18:03:27.414Z",
+    "publikovano": "2026-10-09T17:01:00.000Z",
+    "zdroj": {
+      "nazev": "Ukrainska Pravda (anglicky)",
+      "url": "https://www.pravda.com.ua/eng/news/2026/10/09/8057268/",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Seven injured, including four children from one family, in Russian attack on house in Rivne Oblast",
+    "titulekPuvodni": "Seven injured, including four children from one family, in Russian attack on house in Rivne Oblast",
+    "shrnuti": "Seven people have been injured in a Russian attack on a house in Rivne Oblast.",
+    "kodZeme": "RU",
+    "zeme": "Rusko",
+    "kategorie": [
+      "hybridni",
+      "rusko"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "attack on",
+      "russia"
+    ],
+    "naliehave": null,
+    "stav": "ceka",
+    "vyrez": {
+      "text": "Seven injured, including four children from one family, in Russian attack on house in Rivne Oblast | Ukrainska Pravda\nThe house damaged in the Russian attack. Photo: Rivne Oblast Military Administration\nSeven people have been injured in a Russian attack on a house in Rivne Oblast.\nSource: Oleksandr Koval , Head of Rivne Oblast Military Administration\nQuote: \"A family with several children has been affected in northern Rivne Oblast as a result of yet another enemy attack.\"\nAdvertisement:\n\r\n\r\n\r\n\r\n\r\nDetails: Koval said seven people were injured: two women, a man and four children.\nThree of the children sustained moderate injuries. A 13-year-old boy is in a serious condition.\nThe family's home was severely damaged.\nSubscribe on Patreon to back our journalism long-term.\nRivne Oblast\nRussia-Ukraine war\nchildren\nAdvertisement:\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nRivne Oblast\nRussians attack Rivne Oblast, causing power outages\nRussians strike disused industrial facility in Rivne Oblast and attack Dnipro: fires break out – photo\nRussia attacks Rivne Oblast: residential building hit, three people killed\nLatest news\nAdvertisement:\n\r\n\r\n\r\nAdvertisement:",
+      "stazeno": "2026-10-09T18:03:29.326Z",
+      "stav": 200
+    }
+  },
+  {
+    "id": "k-55b0c40e6a820fca",
+    "zachyceno": "2026-10-09T18:03:23.903Z",
+    "publikovano": "2026-10-09T16:57:18.000Z",
+    "zdroj": {
+      "nazev": "Novinky.cz",
+      "url": "https://www.novinky.cz/clanek/zahranicni-evropa-ve-vidni-zadrzeli-ctyri-ukrajince-kvuli-podezreni-ze-spionaze-40601807",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Ve Vídni zadrželi čtyři Ukrajince kvůli podezření ze špionáže",
+    "titulekPuvodni": "Ve Vídni zadrželi čtyři Ukrajince kvůli podezření ze špionáže",
+    "shrnuti": "Ve Vídni zadrželi čtyři Ukrajince kvůli podezření ze špionáže. Dva z nich, novinář Mychajlo Tkač a kameraman Jaroslav Bondarenko z webu Ukrajinska pravda, byli po výslechu propuštěni. Rakouské úřady uvedly, že podezření vůči nim se nepotvrdilo. Zbylé dva muže, podezřelé z práce pro ukrajinskou vojen",
+    "kodZeme": "AT",
+    "zeme": "Rakousko",
+    "kategorie": [
+      "zpravodajske"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "zadrz+spion",
+      "spionaz"
+    ],
+    "naliehave": null,
+    "stav": "ceka",
+    "vyrez": {
+      "text": "Ve Vídni zadrželi čtyři Ukrajince kvůli podezření ze špionáže - Novinky\nZobrazení snímku 1 z 0\nzáhlaví\nHlavní obsah\nVe Vídni zadrželi čtyři Ukrajince kvůli podezření ze špionáže\nLenka Komárková\n2:05\nChcete-li článek poslouchat, přihlaste se\neBook\nSdílet\nDnes 9. 10., 18:57 Vídeň\nVe Vídni zadrželi čtyři Ukrajince kvůli podezření ze špionáže. Dva z nich, novinář Mychajlo Tkač a kameraman Jaroslav Bondarenko z webu Ukrajinska pravda, byli po výslechu propuštěni. Rakouské úřady uvedly, že podezření vůči nim se nepotvrdilo. Zbylé dva muže, podezřelé z práce pro ukrajinskou vojenskou rozvědku, poslal soud do vazby. Oba obvinění odmítají.\nFoto: Heinz-Peter Bader, Reuters\nRakouská policie. Ilustrační foto\nČlánek\nMuže podezřelé ze špionáže zadrželi rakouští policisté ve Vídni v pondělí 5. října. Podle rakouského deníku Der Standard , na který se odvolává server Evropejska Pravda, mají být napojeni na ukrajinskou vojenskou rozvědku. Ve středu 7. října soud rozhodl o převzetí dvou z nich do vazby.\nMluvčí soudu Christina Salzbornová v pátek uvedla, že důvodem vazby je riziko pokračování v trestné činnosti, ovlivňování důkazů a útěku. Rozhodnutí platí prozatím do 21. října. Oba podezřelí vinu…",
+      "stazeno": "2026-10-09T18:03:29.372Z",
+      "stav": 200
+    }
+  },
+  {
+    "id": "k-a8f0c340bca72987",
+    "zachyceno": "2026-10-09T18:03:23.942Z",
+    "publikovano": "2026-10-09T16:50:40.000Z",
+    "zdroj": {
+      "nazev": "Seznam Zprávy",
+      "url": "https://www.seznamzpravy.cz/clanek/zahranicni-rakousko-zadrzelo-ctyri-ukrajince-kvuli-spionazi-dva-jsou-novinari-317249",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Rakousko zadrželo čtyři Ukrajince kvůli špionáži. Dva jsou novináři",
+    "titulekPuvodni": "Rakousko zadrželo čtyři Ukrajince kvůli špionáži. Dva jsou novináři",
+    "shrnuti": "Rakouská policie zadržela ve Vídni čtyři Ukrajince podezřelé ze špionáže. Dva z nich, investigativní novináře deníku Ukrajinska pravda, úřady po nepotvrzeném podezření propustily. Vyšetřování zbývající dvojice dál pokračuje.",
+    "kodZeme": "AT",
+    "zeme": "Rakousko",
+    "kategorie": [
+      "zpravodajske",
+      "vojsko"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "zadrz+spion",
+      "spionaz",
+      "policie"
+    ],
+    "naliehave": null,
+    "stav": "ceka",
+    "vyrez": {
+      "text": "Rakousko zadrželo čtyři Ukrajince kvůli špionáži. Dva jsou novináři - Seznam Zprávy\nZobrazení snímku 1 z 0\nHlavní obsah\nRakousko zadrželo čtyři Ukrajince kvůli špionáži. Dva jsou novináři\nČTK\n1:56\nChcete-li článek poslouchat, přihlaste se\neBook\nSdílet\nFoto: Ajdin Kamber, Shutterstock.com\nRakouská policie, ilustrační snímek.\n18:50\nRakouská policie zadržela ve Vídni čtyři Ukrajince podezřelé ze špionáže. Dva z nich, investigativní novináře deníku Ukrajinska pravda, úřady po nepotvrzeném podezření propustily. Vyšetřování zbývající dvojice dál pokračuje.\nČlánek\nVe Vídni byli tento týden zadrženi čtyři Ukrajinci podezřelí ze špionáže, uvedl rakouský ministr vnitra Gerhard Karner. Dva ze zadržených, kteří pracují jako novináři pro server Ukrajinska pravda, byli následně propuštěni.\n„Jsou podezřelí ze špionáže. Vyšetřování stále probíhá,“ uvedl Karner a dodal, že o dvou zadržených nemůže poskytnout žádné další informace.\nPodle rakouské tiskové agentury APA jsou první dva muži patrně členy ukrajinské vojenské rozvědky.\nZbylí dva muži byli zadrženi na základě „podezření, která se nepotvrdila,“ uvedl podle AFP mluvčí státního zastupitelství s tím, že jedna osoba byla propuštěna a druhá bude…",
+      "stazeno": "2026-10-09T18:03:30.265Z",
+      "stav": 200
+    }
+  },
+  {
+    "id": "k-79b3de67f29e2b33",
+    "zachyceno": "2026-10-09T18:03:27.375Z",
+    "publikovano": "2026-10-09T16:42:00.000Z",
+    "zdroj": {
+      "nazev": "Ukrinform (anglicky)",
+      "url": "https://www.ukrinform.net/rubric-ato/4172815-russians-attack-rivne-region-injuring-family-with-many-children.html",
+      "typ": "wire",
+      "primarni": false
+    },
+    "titulek": "Russians attack Rivne region, injuring family with many children",
+    "titulekPuvodni": "Russians attack Rivne region, injuring family with many children",
+    "shrnuti": "A family with many children was injured in a Russian attack on the Rivne region; according to preliminary reports, five people were wounded, including a 10-year-old child who is in serious condition.",
+    "kodZeme": "RU",
+    "zeme": "Rusko",
+    "kategorie": [
+      "hybridni",
+      "rusko"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "attack on",
+      "russia"
+    ],
+    "naliehave": null,
+    "stav": "ceka",
+    "vyrez": {
+      "text": "Russians attack Rivne region, injuring family with many children\n\r\nSubscription\nNewsletters\nPhotobank\nUkrinform - Ukrainian National News Agency\nFounded in 1918\nFriday, 09 October 2026, 21:03\nWar\nEconomy\nSports\nMore ☰\nContacts\nEng\nУкр\nEng\nEsp\nDeu\nعربي\nFra\n日本語\nPol\n&times;\nAll topics\nWar\nRecovery of Ukraine\nPolitics\nEconomy\nFact checks\nDefense\nSociety and Culture\nSports\nCrime\nAccidents and Emergencies\nAgency\nInformation on Agency\nOur Contacts\nSubscribtion Terms\nOur Services\nPrivacy policy and personal data protection\nAdditional\nPublications\nInterviews\nPhoto\nVideo\nLongreads\nReleases\nServices\nSubscription\nNewsletters\nPhotobank\n\r\n\r\n\r\nA family with many children was injured in a Russian attack on the Rivne region; according to preliminary reports, five people were wounded, including a 10-year-old child who is in serious condition.\nHead of the Rivne Regional Military Administration Oleksandr Koval reported this in a Telegram post, according to Ukrinform.\n\r\n\r\n&ldquo;A family with many children was affected in northern Rivne region in another enemy attack. Preliminary reports indicate that five people were injured. A 10-year-old child is in serious condition,&rdquo; the statement…",
+      "stazeno": "2026-10-09T18:03:31.175Z",
+      "stav": 200
+    }
+  },
+  {
+    "id": "k-d9b913f5afb02d16",
+    "zachyceno": "2026-10-09T18:03:24.095Z",
+    "publikovano": "2026-10-09T16:39:52.000Z",
+    "zdroj": {
+      "nazev": "Deník N",
+      "url": "https://denikn.cz/2211256/jak-presne-rusove-chystali-dronovy-utok-na-letiste-v-lipsku-novinari-odhalili-detaily-i-obliceje/",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Jak přesně Rusové chystali dronový útok na letiště v Lipsku? Novináři odhalili detaily i obličeje",
+    "titulekPuvodni": "Jak přesně Rusové chystali dronový útok na letiště v Lipsku? Novináři odhalili detaily i obličeje",
+    "shrnuti": "Měli zničit největší ukrajinské letadlo, které stálo na letišti Lipsko/Halle v Německu. Vyrobili si kvůli tomu miniaturní drony, ty však nevybuchly a operace ruských tajných služeb zkrachovala. Nyní ale investigativci webů Insider a Spiegel zjistili, kdo konkrétně ji připravoval a jak tito Rusové a ",
+    "kodZeme": "DE",
+    "zeme": "Německo",
+    "kategorie": [
+      "hybridni",
+      "drony",
+      "rusko"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "utok na",
       "dron",
       "rusk"
     ],
     "naliehave": null,
     "stav": "ceka",
     "vyrez": {
-      "text": "Moskva pod masivním útokem. Na nebi se střídaly drony a zvláštní malé balony - Novinky\nZobrazení snímku 1 z 0\nzáhlaví\nHlavní obsah\nMoskva pod masivním útokem. Na nebi se střídaly drony a zvláštní malé balony\nVojtěch Bauer\n2:08\nChcete-li článek poslouchat, přihlaste se\neBook\nSdílet\nDnes 9. 10., 16:15 Moskva Aktualizováno dnes 17:18\nMoskva a přilehlá Moskevská oblast je v pátek odpoledne pod útokem dronů a balónů se zavěšenými předměty. Informují o tom ruská a ukrajinská média. Podle agentury TASS kvůli tomu letecká společnost Aeroflot mění letecký řád, letiště jsou uzavřena, některé lety již přesměrovali na jiná letiště. Nad ruským hlavním městem pracuje protivzdušná obrana.\nMoskva je pod útokem. Video: X/Nexta\nČlánek\nTelegramový kanál Exilenova+ o útoku na Moskvu informoval před třetí hodinou odpoledne. Podle něj v ruském hlavním městě zní letecký poplach. Později v dalším příspěvku uvedl, že zpožděno nebo zrušeno bylo na čtyřech moskevských letištích 300 letů.\n„V předměstí Moskvy, v okolí samotné Moskvy, je v plném provozu protivzdušná obrana,“ doplnila Exilenova+.\nMoskevský starosta Sergej Sobjanin později oznámil sestřelení 15 dronů. Na letišti Šeremeťjevo byla po několika…",
-      "stazeno": "2026-10-09T16:03:59.685Z",
+      "text": "Jak přesně Rusové chystali dronový útok na letiště v Lipsku? Novináři odhalili detaily i obličeje &mdash; Deník N\nUkrajinská nákladní letadla Antonov 124-100 na Letišti Lipsko/Halle. Foto: Kyryl Gorlov, Adobe Stock\nMěli zničit největší ukrajinské letadlo, které stálo na letišti Lipsko/Halle v Německu. Vyrobili si kvůli tomu miniaturní drony, ty však nevybuchly a operace ruských tajných služeb zkrachovala. Nyní ale investigativci webů Insider a Spiegel zjistili, kdo konkrétně ji připravoval a jak tito Rusové a Bělorusové postupovali.\nVíce o poslechu Deníku N\nInvestigativním novinářům se na rozdíl od německé bezpečnostní služby podařilo prokázat , že útok na letiště Lipsko/Halle chystala ruská rozvědka GRU.\nPřipomeňme si, že 4. srpna narazil dron s výbušninou do křídla ukrajinského letadla Antonov.\nZařízení se však neaktivovalo a dron spadl na zem, kde ho o několik hodin později objevil nikoli radar, ale řidič autobusu . Letadlo bylo prázdné, ale krátce před incidentem přepravovalo střelivo z Francie přes Lipsko.\n„Kdyby výbuch nastal, způsobilo by to v Německu mnoho úmrtí,“ komentoval věc jeden z autorů investigace Christo Grozev .\nBylo to zároveň poprvé, co Německo přímo…",
+      "stazeno": "2026-10-09T18:03:31.995Z",
       "stav": 200
     }
   },
   {
-    "id": "k-9a62a363febe4358",
-    "zachyceno": "2026-10-09T16:03:58.500Z",
-    "publikovano": "2026-10-09T14:11:00.000Z",
+    "id": "k-c76d628baf3a6dce",
+    "zachyceno": "2026-10-09T18:03:23.997Z",
+    "publikovano": "2026-10-09T16:23:00.000Z",
     "zdroj": {
-      "nazev": "Ukrainska Pravda (anglicky)",
-      "url": "https://www.pravda.com.ua/eng/news/2026/10/09/8057238/",
+      "nazev": "iDNES.cz — zpravodajství",
+      "url": "https://www.idnes.cz/zpravy/zahranicni/putin-moskva-rusko-turkmenistan-lety-drony-utok.A261009_172940_zahranicni_tmps#utm_source=rss&utm_medium=feed&utm_campaign=zpravodaj&utm_content=main",
       "typ": "media",
       "primarni": false
     },
-    "titulek": "\"We were detained like terrorists\": UP journalist Mykhailo Tkach details circumstances of detention in Vienna",
-    "titulekPuvodni": "\"We were detained like terrorists\": UP journalist Mykhailo Tkach details circumstances of detention in Vienna",
-    "shrnuti": "Mykhailo Tkach recounted being held at gunpoint and restrained by Austrian police while working on an investigation in Vienna.",
+    "titulek": "Moskva musela zavřít všechna svoje letiště. Přistát nemohl ani Putinův letoun",
+    "titulekPuvodni": "Moskva musela zavřít všechna svoje letiště. Přistát nemohl ani Putinův letoun",
+    "shrnuti": "Letadlo ruského prezidenta Vladimira Putina nemohlo v pátek po návratu ze summitu v Turkmenistánu přistát v Moskvě. Metropole se podle úřadů totiž ocitla pod rozsáhlým útokem dronů a průzkumných balónů. V souvislosti s útokem byly totiž pozastaveny přílety i odlety na všech čtyřech letištích. Zpoždě",
+    "kodZeme": "RU",
+    "zeme": "Rusko",
+    "kategorie": [
+      "drony",
+      "rusko"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "dron+letist+pozastav",
+      "dron",
+      "rusk"
+    ],
+    "naliehave": null,
+    "stav": "ceka",
+    "vyrez": {
+      "text": "Moskva musela zavřít všechna svoje letiště. Přistát nemohl ani Putinův letoun - iDNES.cz \r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\niDNES.cz\n\r\n\r\n\r\nP�ihl�sit \r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nAbyste mohli pokra�ovat, pot�ebujeme v�d�t, jakou formou v�m m��eme zobrazovat reklamu \r\n\r\n\r\n\r\n\r\n\r\nV�mi zvolen� nastaven� \r\nneobsahuje souhlas se zobrazov�n�m c�len� reklamy . \r\nVyberte pros�m znovu, \r\njakou formou v�m m�me zobrazovat obsah. \r\n\r\n\r\n\r\n\r\n\r\n\r\niDNES Premium\n\r\nBez reklam\n\r\n\r\n199 K� m�s��n�\n\r\nM��ete neomezen� ��st iDNES.cz, Lidovky.cz, Expres.cz a Antiyoutuber.cz. K tomu dostanete tak� noviny a �asopisy v elektronick� podob�. To v�e bez reklam. 1\n\r\n\r\nP�edplatit\n\r\n\r\nU� m�te ��et? P�ihlaste se\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nS c�lenou reklamou\n\r\n\r\n\r\nZdarma \r\n\r\nZachov�me v�m v�e tak, jak jste zvykl� a reklamu p�izp�sob�me va�im z�jm�m. Bez omezen� si m��ete d�l ��st, p�ehr�vat videa, sout�it �i p�isp�vat do v�ech diskus�. 2\n\r\n\r\nSouhlas�m\n\r\nPodrobn� nastaven�\n\r\n\r\n\r\n\r\n\r\n\r\niDNES a reklama\n\r\nPokud vyu�ijete m�sto platby ud�len� souhlasu s reklamou (tj. souhlas s vyu�it�m cookies a dal��ch s�ov�ch identifik�tor� pro ��ely c�len� reklamy), \r\nbudou V�m…",
+      "stazeno": "2026-10-09T18:03:32.341Z",
+      "stav": 200
+    }
+  },
+  {
+    "id": "k-7a927fc22cec50f1",
+    "zachyceno": "2026-10-09T18:03:24.024Z",
+    "publikovano": "2026-10-09T16:22:00.000Z",
+    "zdroj": {
+      "nazev": "ČTK — České noviny",
+      "url": "https://www.ceskenoviny.cz/zpravy/moskevska-letiste-musela-omezit-provoz-utocily-drony-i-balony/2885177?utm_source=rss&utm_medium=feed",
+      "typ": "wire",
+      "primarni": false
+    },
+    "titulek": "Moskevská letiště musela omezit provoz, útočily drony i balóny",
+    "titulekPuvodni": "Moskevská letiště musela omezit provoz, útočily drony i balóny",
+    "shrnuti": "Moskva - Všechna čtyři moskevská letiště dnes musela kvůli vzdušným útokům omezit provoz. Podle ruskojazyčného telegramového kanálu Astra hlásily monitorovací služby kromě dronů také malé balóny. Výbuchy...",
+    "kodZeme": "RU",
+    "zeme": "Rusko",
+    "kategorie": [
+      "sabotaz",
+      "drony",
+      "rusko"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "vybuch",
+      "dron+letist+omez",
+      "dron",
+      "rusk"
+    ],
+    "naliehave": null,
+    "stav": "ceka",
+    "vyrez": {
+      "text": "Moskevská letiště musela omezit provoz, útočily drony i balóny | ČeskéNoviny.cz \r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nPřejít k obsahu \r\n| \r\nPřejít k hlavnímu menu \r\n| \r\nPřejít k vyhledávání \r\n\r\n\r\n\r\n\r\n\r\n\r\nČeské noviny \r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nMenu \r\n\r\n\r\n\r\n\r\n\r\n\r\nÚvod \r\n\r\n\r\nČR\n\r\nSvět\n\r\nEkonomika\n\r\nKultura\n\r\nSport\n\r\nMagazín\n\r\nSpeciál\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nVolby 2026:\n\r\n\r\nZpravodajství\n\r\nVýsledky\n\r\nŽivě\n\r\n\r\nDalší:\n\r\n\r\nBlízký Východ\n\r\n\r\n\r\nInvaze na Ukrajinu\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nMoskevská letiště musela omezit provoz, útočily drony i balóny\n\r\n\r\n\r\n\r\n\r\n\r\nKomerční prezentace Aktual.: 9.10.2026 18:22 \r\nVydáno: 9.10.2026, 18:22 \r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nUkrajinský voják s dronem - ilustrační foto. \r\nAP/Andriy Andriyenko \r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nMoskva - Všechna čtyři moskevská letiště dnes musela kvůli vzdušným útokům omezit provoz. Podle ruskojazyčného telegramového kanálu Astra hlásily monitorovací služby kromě dronů také malé balóny. Výbuchy se podle místních ozývaly na jihu a východě ruské metropole a zasahovat měla ruská protivzdušná…",
+      "stazeno": "2026-10-09T18:03:35.306Z",
+      "stav": 200
+    }
+  },
+  {
+    "id": "k-f1b4184f668598b3",
+    "zachyceno": "2026-10-09T18:03:27.378Z",
+    "publikovano": "2026-10-09T16:21:00.000Z",
+    "zdroj": {
+      "nazev": "Ukrinform (anglicky)",
+      "url": "https://www.ukrinform.net/rubric-society/4172808-ukrainian-journalist-tkach-says-he-was-detained-in-vienna-like-a-terrorist.html",
+      "typ": "wire",
+      "primarni": false
+    },
+    "titulek": "Ukrainian journalist Tkach says he was detained in Vienna “like a terrorist”",
+    "titulekPuvodni": "Ukrainian journalist Tkach says he was detained in Vienna “like a terrorist”",
+    "shrnuti": "Mykhailo Tkach, a journalist with Ukrainska Pravda, said he and cameraman Yaroslav Bondarenko were detained in Vienna by armed masked men, with one of them pressing a knee against the journalist’s neck.",
     "kodZeme": "AT",
     "zeme": "Rakousko",
     "kategorie": [
@@ -169,164 +514,24 @@
     "naliehave": null,
     "stav": "ceka",
     "vyrez": {
-      "text": "Mykhailo Tkach shares details of armed police detention in Vienna | Ukrainska Pravda\nMykhailo Tkach. Photo: Dmytro Larin\nMykhailo Tkach, head of Ukrainska Pravda's investigative journalism department, said that masked, armed men smashed the car windows and dragged him and cameraman Yaroslav Bondarenko onto the road during their detention in Vienna. One of the men then knelt on Tkach's neck as he repeatedly said he was a journalist.\nSource: Tkach in a video for UP\nQuote: \"It felt like we were being treated as terrorists. They didn't speak to us at all. There was just this shocking amount of shouting – everyone was yelling and pointing their weapons at us, and there was virtually no communication.\"\nAdvertisement:\n\r\n\r\n\r\n\r\n\r\nDetails: Tkach said he and Bondarenko were driving between filming locations when their car stopped at a traffic light about 3-5 km from central Vienna. Seven masked, armed men then ran up to the car, smashed its windows and pointed their weapons at the journalists.\nHe added that he immediately raised his hand and told the men he was a journalist. They then pulled both men from the car, forced them face down onto the road, searched them and taped their hands…",
-      "stazeno": "2026-10-09T16:04:00.382Z",
+      "text": "Ukrainian journalist Tkach says he was detained in Vienna “like a terrorist”\n\r\nSubscription\nNewsletters\nPhotobank\nUkrinform - Ukrainian National News Agency\nFounded in 1918\nFriday, 09 October 2026, 21:03\nWar\nEconomy\nSports\nMore ☰\nContacts\nEng\nУкр\nEng\nEsp\nDeu\nعربي\nFra\n日本語\nPol\n&times;\nAll topics\nWar\nRecovery of Ukraine\nPolitics\nEconomy\nFact checks\nDefense\nSociety and Culture\nSports\nCrime\nAccidents and Emergencies\nAgency\nInformation on Agency\nOur Contacts\nSubscribtion Terms\nOur Services\nPrivacy policy and personal data protection\nAdditional\nPublications\nInterviews\nPhoto\nVideo\nLongreads\nReleases\nServices\nSubscription\nNewsletters\nPhotobank\n\r\n\r\n\r\nMykhailo Tkach, a journalist with Ukrainska Pravda, said he and cameraman Yaroslav Bondarenko were detained in Vienna by armed masked men, with one of them pressing a knee against the journalist&rsquo;s neck.\nAs reported by Ukrinform, this was stated by Mykhailo Tkach, head of the investigative journalism department at Ukrainska Pravda, as reported by Ukrainska Pravda .\n\r\n\r\n&ldquo;From the way I experienced it, we were detained like terrorists. They did not communicate with us at all. There were these shocking screams, they were all shouting…",
+      "stazeno": "2026-10-09T18:03:36.182Z",
       "stav": 200
     }
   },
   {
-    "id": "k-5804c979e5c82014",
-    "zachyceno": "2026-10-09T14:04:23.506Z",
-    "publikovano": "2026-10-09T14:01:23.000Z",
+    "id": "k-6b70fd60f93059db",
+    "zachyceno": "2026-10-09T18:03:27.479Z",
+    "publikovano": "2026-10-09T16:05:00.000Z",
     "zdroj": {
-      "nazev": "Politico Europe",
-      "url": "https://www.politico.eu/article/arrested-german-august-hanning-lashes-out-bnd-russia-spy-allegations/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication",
+      "nazev": "The Moscow Times",
+      "url": "https://www.themoscowtimes.com/2026/10/09/montenegro-arrests-founder-of-influential-russian-pro-war-blog-rybar-a93929",
       "typ": "media",
       "primarni": false
     },
-    "titulek": "Arrested German spy chief lashed out at his old agency over allegations he spied for Russia",
-    "titulekPuvodni": "Arrested German spy chief lashed out at his old agency over allegations he spied for Russia",
-    "shrnuti": "A letter sent weeks before August Hanning’s arrest adds to concerns over the BND’s credibility among allies.",
-    "kodZeme": "DE",
-    "zeme": "Německo",
-    "kategorie": [
-      "zpravodajske",
-      "rusko"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "zeSite": null,
-    "shody": [
-      "arrested+spy",
-      "russia"
-    ],
-    "naliehave": null,
-    "stav": "ceka",
-    "vyrez": {
-      "text": "Arrested German spy chief lashed out at his old agency over allegations he spied for Russia  – POLITICO\nSkip to main content\nAdvertisement\nBERLIN — Former German intelligence chief August Hanning angrily challenged his successor after learning that the agency he once headed, the BND, had passed allegations that he was a Russian spy to investigators.\nIn a three-page letter sent on Aug. 17, less than three months before his arrest this week, Hanning demanded answers to 11 questions from BND President Martin Jäger.\nIn the letter, obtained by WELT — which, like POLITICO, is part of the Axel Springer Global Reporters Network — Hanning complained that the BND had passed allegations by a former intelligence agent that he was a Russian spy to investigators without consulting him.\nAdvertisement\nJäger did not respond to the letter at the time, according to Hanning, who spoke to WELT before his arrest.\nHanning’s subsequent arrest, including on suspicion of attempted treason, has caused considerable concern abroad. Grzegorz Malecki, the former head of Poland’s foreign intelligence service, told WELT that the case was “extremely concerning” and could deepen allies’ distrust of the BND. He…",
-      "stazeno": "2026-10-09T14:04:26.236Z",
-      "stav": 200
-    }
-  },
-  {
-    "id": "k-9fd1a15a5f7a7480",
-    "zachyceno": "2026-10-09T16:03:58.474Z",
-    "publikovano": "2026-10-09T13:52:00.000Z",
-    "zdroj": {
-      "nazev": "Ukrinform (anglicky)",
-      "url": "https://www.ukrinform.net/rubric-society/4172732-ukrainian-woman-detained-at-russias-request-leaves-kazakhstan-and-is-now-in-eu-lawyer.html",
-      "typ": "wire",
-      "primarni": false
-    },
-    "titulek": "Ukrainian woman detained at Russia's request leaves Kazakhstan and is now in EU – lawyer",
-    "titulekPuvodni": "Ukrainian woman detained at Russia's request leaves Kazakhstan and is now in EU – lawyer",
-    "shrnuti": "Ukrainian national Liubov Rozhanska, who was detained in Kazakhstan at Russia's request on suspicion of abducting a child, has managed to leave Kazakhstan and travel to an EU country.",
-    "kodZeme": "EU",
-    "zeme": "EU",
-    "kategorie": [
-      "zpravodajske",
-      "rusko"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "zeSite": null,
-    "shody": [
-      "detained+russia",
-      "russia"
-    ],
-    "naliehave": null,
-    "stav": "ceka",
-    "vyrez": {
-      "text": "Ukrainian woman detained at Russia's request leaves Kazakhstan and is now in EU – lawyer\n\r\nSubscription\nNewsletters\nPhotobank\nUkrinform - Ukrainian National News Agency\nFounded in 1918\nFriday, 09 October 2026, 19:04\nWar\nEconomy\nSports\nMore ☰\nContacts\nEng\nУкр\nEng\nEsp\nDeu\nعربي\nFra\n日本語\nPol\n&times;\nAll topics\nWar\nRecovery of Ukraine\nPolitics\nEconomy\nFact checks\nDefense\nSociety and Culture\nSports\nCrime\nAccidents and Emergencies\nAgency\nInformation on Agency\nOur Contacts\nSubscribtion Terms\nOur Services\nPrivacy policy and personal data protection\nAdditional\nPublications\nInterviews\nPhoto\nVideo\nLongreads\nReleases\nServices\nSubscription\nNewsletters\nPhotobank\n\r\n\r\n\r\nUkrainian national Liubov Rozhanska, who was detained in Kazakhstan at Russia's request on suspicion of abducting a child, has managed to leave Kazakhstan and travel to an EU country.\nOne of the woman's lawyers, Oleksii Pryanishnikov, told this to DW , Ukrinform reports.\n\r\n\r\nAfter three days had elapsed since her detention in Astana on October 1, a court in Kazakhstan was supposed to decide on a preventive measure for Rozhanska.\n\r\n\r\nHowever, this did not happen, allowing the woman to leave the pre-trial detention center. She then…",
-      "stazeno": "2026-10-09T16:04:00.594Z",
-      "stav": 200
-    }
-  },
-  {
-    "id": "k-e8eefd1a3f778d86",
-    "zachyceno": "2026-10-09T13:42:16.333Z",
-    "publikovano": "2026-10-09T13:07:00.000Z",
-    "zdroj": {
-      "nazev": "Ukrinform (anglicky)",
-      "url": "https://www.ukrinform.net/rubric-ato/4172726-russian-guided-bomb-strike-on-zaporizhzhia-injures-14-kills-one.html",
-      "typ": "wire",
-      "primarni": false
-    },
-    "titulek": "Russian guided bomb strike on Zaporizhzhia injures 14, kills one",
-    "titulekPuvodni": "Russian guided bomb strike on Zaporizhzhia injures 14, kills one",
-    "shrnuti": "The number of people injured in a Russian strike on the city of Zaporizhzhia has risen to 14, including a child.",
-    "kodZeme": "RU",
-    "zeme": "Rusko",
-    "kategorie": [
-      "sabotaz",
-      "rusko"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "zeSite": null,
-    "shody": [
-      "bomb",
-      "russia"
-    ],
-    "naliehave": null,
-    "stav": "ceka",
-    "vyrez": {
-      "text": "Russian guided bomb strike on Zaporizhzhia injures 14, kills one\n\r\nSubscription\nNewsletters\nPhotobank\nUkrinform - Ukrainian National News Agency\nFounded in 1918\nFriday, 09 October 2026, 16:42\nWar\nEconomy\nSports\nMore ☰\nContacts\nEng\nУкр\nEng\nEsp\nDeu\nعربي\nFra\n日本語\nPol\n&times;\nAll topics\nWar\nRecovery of Ukraine\nPolitics\nEconomy\nFact checks\nDefense\nSociety and Culture\nSports\nCrime\nAccidents and Emergencies\nAgency\nInformation on Agency\nOur Contacts\nSubscribtion Terms\nOur Services\nPrivacy policy and personal data protection\nAdditional\nPublications\nInterviews\nPhoto\nVideo\nLongreads\nReleases\nServices\nSubscription\nNewsletters\nPhotobank\n\r\n\r\n\r\nThe number of people injured in a Russian strike on the city of Zaporizhzhia has risen to 14, including a child.\nAccording to Ukrinform reports, Ukraine's State Emergency Service said this in a statement .\n\r\n\r\n\"As of 12:40, the number of people injured in the Russian strike in Zaporizhzhia has risen to 14,\" the statement said.\n\r\n\r\nhttps://static.ukrinform.com/photos/2026_10/thumb_files/630_360_1791533504-3325.jpeg\n\r\n\r\nAccording to the State Emergency Service, those injured include a child and a police officer. One person was killed. Emergency service…",
-      "stazeno": "2026-10-09T13:42:16.521Z",
-      "stav": 200
-    }
-  },
-  {
-    "id": "k-56a5cf2c43c74a61",
-    "zachyceno": "2026-10-09T13:42:15.655Z",
-    "publikovano": "2026-10-09T12:28:38.000Z",
-    "zdroj": {
-      "nazev": "El País (Španělsko, anglicky)",
-      "url": "https://english.elpais.com/international/2026-10-09/russian-drones-harass-moldova.html",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Russian drones harass Moldova",
-    "titulekPuvodni": "Russian drones harass Moldova",
-    "shrnuti": "The small former Soviet republic, constitutionally neutral, has recorded 56 airspace violations so far this year, more than double the total in 2025",
-    "kodZeme": "MD",
-    "zeme": "Moldavsko",
-    "kategorie": [
-      "drony",
-      "rusko"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "zeSite": null,
-    "shody": [
-      "airspace violation",
-      "violat+airspace",
-      "dron",
-      "drone",
-      "airspace",
-      "russia"
-    ],
-    "naliehave": null,
-    "stav": "ceka",
-    "vyrez": {
-      "text": "Russian drones harass Moldova | International | EL PAÍS English Skip to content _\n_\n_\n_\nRaúl Sánchez Costa\nBucharest - Oct 09, 2026 - 14:28 CEST\nShare on Whatsapp\nShare on Facebook\nShare on Twitter\nDesplegar Redes Sociales\nPrefer EL PAÍS on Google\nCompartir:\nWhatsapp\nFacebook\nTwitter\nBluesky\nLinkedin\nCopy link\nA powerful explosion shook Colonita, a small village in the municipality of Chișinău , at 4.20 a.m. on September 18. Residents saw a blinding flash and heard a terrifying blast that made houses tremble. Six hours later, emergency teams found the remains of a Russian drone — including its engine — scattered across agricultural land. The device had fallen about four miles from the center of the Moldovan capital, which is home to more than 700,000 people. It had not been detected by surveillance systems, which the Defense Ministry attributed to the speed and low altitude at which it was flying.\nThe Russian invasion of Ukraine, launched in February 2022, has not turned this former Soviet republic of 2.4 million people into a battlefield; it is constitutionally neutral and aims to join the European Union in 2030 . But it has made Moldovan airspace increasingly exposed: Russian…",
-      "stazeno": "2026-10-09T13:42:17.742Z",
-      "stav": 200
-    }
-  },
-  {
-    "id": "k-5a2eaa14cf164102",
-    "zachyceno": "2026-10-09T13:42:16.407Z",
-    "publikovano": "2026-10-09T12:24:24.000Z",
-    "zdroj": {
-      "nazev": "Meduza (anglicky)",
-      "url": "https://meduza.io/en/news/2026/10/09/russia-opens-criminal-fraud-case-against-former-co-owner-of-retail-chains-lenta-and-rive-gauche",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Russia opens criminal fraud case against former co-owner of retail chains Lenta and Rive Gauche",
-    "titulekPuvodni": "Russia opens criminal fraud case against former co-owner of retail chains Lenta and Rive Gauche",
-    "shrnuti": "Dmitry Kostygin, the former co-owner of the Russian supermarket chain Lenta and the Rive Gauche chain, has been detained, the Russian business news outlet RBC and the St. Petersburg-based news outlet Fontanka reported, citing sources. On October 8, a Moscow court placed Kostygin under house arrest.",
+    "titulek": "Montenegro Expels Founder of Russian Pro-War Blog Rybar for 'Security Reasons'",
+    "titulekPuvodni": "Montenegro Expels Founder of Russian Pro-War Blog Rybar for 'Security Reasons'",
+    "shrnuti": "Mikhail Zvinchuk and four others had been detained earlier in an operation targeting suspected Russian influence activities.",
     "kodZeme": "RU",
     "zeme": "Rusko",
     "kategorie": [
@@ -343,220 +548,8 @@
     "naliehave": null,
     "stav": "ceka",
     "vyrez": {
-      "text": "Russia opens criminal fraud case against former co-owner of retail chains Lenta and Rive Gauche — Meduza\nSkip to main content\nRussia opens criminal fraud case against former co-owner of retail chains Lenta and Rive Gauche\nOctober 9, 2026, 12:24 pm\nSource: RBC\nDmitry Kostygin, the former co-owner of the Russian supermarket chain Lenta and the Rive Gauche chain, has been detained, the Russian business news outlet RBC and the St. Petersburg-based news outlet Fontanka reported, citing sources. On October 8, a Moscow court placed Kostygin under house arrest.\nAccording to Fontanka, Kostygin is accused of concealing Yulmart’s true financial position when he and accomplices signed a 2017 contract on Yulmart’s behalf with a company called Berks to supply equipment and machinery.\nKostygin, a former co-owner of the retailer Yulmart, was named a suspect in a criminal fraud case in 2017. August Meyer, another co-owner of the chain, was also charged in the case.\nThe businessmen were accused of misappropriating loans Yulmart had received from Sberbank and VTB for business development, with total damage estimated at 3.14 billion rubles. In 2024, a court sentenced Kostygin to four years in prison…",
-      "stazeno": "2026-10-09T13:42:18.368Z",
-      "stav": 200
-    }
-  },
-  {
-    "id": "k-717750d19e8456f3",
-    "zachyceno": "2026-10-09T13:42:14.148Z",
-    "publikovano": "2026-10-09T12:24:22.000Z",
-    "zdroj": {
-      "nazev": "Denník N (Slovensko)",
-      "url": "https://dennikn.sk/5611976/vyvoj-bojov-1688-den-v-ciernej-hore-zatkli-provojnoveho-rybara-jeho-nove-mapy-ukazuju-ruske-problemy-na-fronte/",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Vývoj bojov (1688. deň): V Čiernej Hore zatkli provojnového „Rybara“, jeho nové mapy ukazujú ruské problémy na fronte",
-    "titulekPuvodni": "Vývoj bojov (1688. deň): V Čiernej Hore zatkli provojnového „Rybara“, jeho nové mapy ukazujú ruské problémy na fronte",
-    "shrnuti": "Informácie v tomto texte sú zhrnutím udalostí za štvrtok 8. októbra. Situácia už môže byť medzičasom iná. V Čiernej Hore zadržali zakladateľa telegramového kanála Rybar Michaila Zvinčuka, ktorý zastáva jedno z hlavných miest v ekosystéme ruských médií podporujúcich vojnu. Spolu s ním zatkli aj jeho ",
-    "kodZeme": "RU",
-    "zeme": "Rusko",
-    "kategorie": [
-      "zpravodajske",
-      "rusko"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "zeSite": null,
-    "shody": [
-      "zadrz+rusk",
-      "rusk"
-    ],
-    "naliehave": null,
-    "stav": "ceka",
-    "vyrez": {
-      "text": "",
-      "stazeno": "2026-10-09T13:42:18.474Z",
-      "stav": 403,
-      "chyba": "HTTP 403"
-    }
-  },
-  {
-    "id": "k-29063cafa38e6a40",
-    "zachyceno": "2026-10-09T13:42:16.383Z",
-    "publikovano": "2026-10-09T12:09:00.000Z",
-    "zdroj": {
-      "nazev": "Ukrainska Pravda (anglicky)",
-      "url": "https://www.pravda.com.ua/eng/news/2026/10/09/8057219/",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "UP journalist Mykhailo Tkach was detained in Vienna on \"espionage\" charges",
-    "titulekPuvodni": "UP journalist Mykhailo Tkach was detained in Vienna on \"espionage\" charges",
-    "shrnuti": "Austrian Interior Minister Gerhard Karner stated that Ukrainska Pravda journalist Mykhailo Tkach and his cameraman Yaroslav Bondarenko were detained on suspicion of espionage.",
-    "kodZeme": "AT",
-    "zeme": "Rakousko",
-    "kategorie": [
-      "zpravodajske"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "zeSite": null,
-    "shody": [
-      "detained+espionage",
-      "espionage"
-    ],
-    "naliehave": null,
-    "stav": "ceka",
-    "vyrez": {
-      "text": "UP journalist Tkach detained in Vienna on suspicion of espionage | Ukrainska Pravda\nMykhailo Tkach. Photo: Olha Korotenko\nAustrian Interior Minister Gerhard Karner has stated that Mykhailo Tkach, head of Ukrainska Pravda's investigative journalism department, has been released following his detention in Vienna, but cameraman Yaroslav Bondarenko remains in custody. The minister said the Ukrainians were detained on suspicion of espionage.\nSource: Kleine Zeitung\nDetails: During a press conference, Karner said Tkach and Bondarenko were detained on Thursday. Bondarenko is still being held, and Tkach has since been released.\nAdvertisement:\n\r\n\r\n\r\n\r\n\r\nTkach was released at 04:00 on Friday after spending 12 hours in custody. Cameraman Yaroslav Bondarenko, who was detained alongside Tkach, sustained injuries during the detention and was \"in hospital\". The questioning of Bondarenko only began at night.\nA spokesperson for the Ukrainian Embassy in Vienna stated that Ukraine \"expects a prompt official comment from the relevant Austrian authorities regarding the circumstances and legal grounds for his detention\".\nCommenting on the matter, Nina Bussek, a spokesperson for the Vienna public…",
-      "stazeno": "2026-10-09T13:42:18.748Z",
-      "stav": 200
-    }
-  },
-  {
-    "id": "k-e6ff3fedbbd08c57",
-    "zachyceno": "2026-10-09T12:03:49.118Z",
-    "publikovano": "2026-10-09T11:54:00.000Z",
-    "zdroj": {
-      "nazev": "iDNES.cz — zpravodajství",
-      "url": "https://www.idnes.cz/zpravy/zahranicni/zvincuk-rybar-rusko-bloger-telegram-cerna-hora-propaganda-valka.A261009_132158_zahranicni_jhr#utm_source=rss&utm_medium=feed&utm_campaign=zpravodaj&utm_content=main",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Černá Hora zadržela šéfa proválečného kanálu Rybar. Hon na Rusy, zuří Medveděv",
-    "titulekPuvodni": "Černá Hora zadržela šéfa proválečného kanálu Rybar. Hon na Rusy, zuří Medveděv",
-    "shrnuti": "Policie v Černé Hoře zadržela zakladatele ruského projektu Rybar, který podporuje ruskou invazi na Ukrajinu a má blízko k ministerstvu obrany v Moskvě. Uvedl to černohorský premiér Milojko Spajić. Bývalý ruský prezident a současný místopředseda ruské Rady bezpečnosti Dmitrij Medveděv krok černohorsk",
-    "kodZeme": "UA",
-    "zeme": "Ukrajina",
-    "kategorie": [
-      "zpravodajske",
-      "vojsko",
-      "rusko"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "zeSite": null,
-    "shody": [
-      "zadrz+rusk",
-      "policie",
-      "rusk"
-    ],
-    "naliehave": null,
-    "stav": "ceka",
-    "vyrez": {
-      "text": "V Černé Hoře zadrželi zakladatele ruského proválečného projektu Rybar - iDNES.cz \r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\niDNES.cz\n\r\n\r\n\r\nP�ihl�sit \r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nAbyste mohli pokra�ovat, pot�ebujeme v�d�t, jakou formou v�m m��eme zobrazovat reklamu \r\n\r\n\r\n\r\n\r\n\r\nV�mi zvolen� nastaven� \r\nneobsahuje souhlas se zobrazov�n�m c�len� reklamy . \r\nVyberte pros�m znovu, \r\njakou formou v�m m�me zobrazovat obsah. \r\n\r\n\r\n\r\n\r\n\r\n\r\niDNES Premium\n\r\nBez reklam\n\r\n\r\n199 K� m�s��n�\n\r\nM��ete neomezen� ��st iDNES.cz, Lidovky.cz, Expres.cz a Antiyoutuber.cz. K tomu dostanete tak� noviny a �asopisy v elektronick� podob�. To v�e bez reklam. 1\n\r\n\r\nP�edplatit\n\r\n\r\nU� m�te ��et? P�ihlaste se\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nS c�lenou reklamou\n\r\n\r\n\r\nZdarma \r\n\r\nZachov�me v�m v�e tak, jak jste zvykl� a reklamu p�izp�sob�me va�im z�jm�m. Bez omezen� si m��ete d�l ��st, p�ehr�vat videa, sout�it �i p�isp�vat do v�ech diskus�. 2\n\r\n\r\nSouhlas�m\n\r\nPodrobn� nastaven�\n\r\n\r\n\r\n\r\n\r\n\r\niDNES a reklama\n\r\nPokud vyu�ijete m�sto platby ud�len� souhlasu s reklamou (tj. souhlas s vyu�it�m cookies a dal��ch s�ov�ch identifik�tor� pro ��ely c�len� reklamy), \r\nbudou V�m zobrazov�ny v…",
-      "stazeno": "2026-10-09T12:03:52.789Z",
-      "stav": 200
-    }
-  },
-  {
-    "id": "k-7a2d4d797017bd2b",
-    "zachyceno": "2026-10-09T12:03:49.682Z",
-    "publikovano": "2026-10-09T11:51:18.000Z",
-    "zdroj": {
-      "nazev": "The Guardian — World",
-      "url": "https://www.theguardian.com/world/2026/oct/09/russian-military-blogger-mikhail-zvinchuk-rybar-arrested-montenegro",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Pro-Kremlin Russian military blogger Mikhail Zvinchuk arrested in Montenegro",
-    "titulekPuvodni": "Pro-Kremlin Russian military blogger Mikhail Zvinchuk arrested in Montenegro",
-    "shrnuti": "Founder of influential Rybar blog detained after warnings of attempts to destabilise Balkan country, officials say A leading pro-Kremlin Russian military blogger with reported ties to Russia’s intelligence services has been arrested in Montenegro, after warnings of attempts to destabilise the Balkan",
-    "kodZeme": "RU",
-    "zeme": "Rusko",
-    "kategorie": [
-      "zpravodajske",
-      "rusko"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "zeSite": null,
-    "shody": [
-      "arrested+russia",
-      "russia",
-      "kreml",
-      "kremlin"
-    ],
-    "naliehave": null,
-    "stav": "ceka",
-    "vyrez": {
-      "text": "Pro-Kremlin Russian military blogger Mikhail Zvinchuk arrested in Montenegro | Montenegro | The Guardian\nSkip to main content Skip to navigation\nMikhail Zvinchuk’s Rybar blog has more than 1.5 million subscribers on Telegram, and is one of the most popular Russian military blogs covering the war in Ukraine. Photograph: Francesca Ebel/The Washington Post/Getty Images\nView image in fullscreen\nMikhail Zvinchuk’s Rybar blog has more than 1.5 million subscribers on Telegram, and is one of the most popular Russian military blogs covering the war in Ukraine. Photograph: Francesca Ebel/The Washington Post/Getty Images\nPro-Kremlin Russian military blogger Mikhail Zvinchuk arrested in Montenegro\nFounder of influential Rybar blog detained after warnings of attempts to destabilise Balkan country, officials say\nA leading pro-Kremlin Russian military blogger with reported ties to Russia’s intelligence services has been arrested in Montenegro , after warnings of attempts to destabilise the Balkan country, officials have said.\nMikhail Zvinchuk, the founder of the influential Rybar war blog, was detained on Friday alongside his wife and three other Russians by police and security agents in the…",
-      "stazeno": "2026-10-09T12:03:55.467Z",
-      "stav": 200
-    }
-  },
-  {
-    "id": "k-9dc0359c3eddea9c",
-    "zachyceno": "2026-10-09T12:03:50.272Z",
-    "publikovano": "2026-10-09T11:46:00.000Z",
-    "zdroj": {
-      "nazev": "Aktuality.sk",
-      "url": "https://www.aktuality.sk/clanok/20uIJKo/cierna-hora-zadrzala-zakladatela-kanala-ruskej-propagandy-zaistila-drony-a-elektroniku/",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Čierna Hora zadržala zakladateľa kanála ruskej propagandy, zaistila drony a elektroniku",
-    "titulekPuvodni": "Čierna Hora zadržala zakladateľa kanála ruskej propagandy, zaistila drony a elektroniku",
-    "shrnuti": "Pohyb zakladateľa telegramového kanála sledovali bezpečnostné zložky niekoľko dní.",
-    "kodZeme": "RU",
-    "zeme": "Rusko",
-    "kategorie": [
-      "zpravodajske",
-      "drony",
-      "rusko"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "zeSite": null,
-    "shody": [
-      "zadrz+rusk",
-      "dron",
-      "rusk"
-    ],
-    "naliehave": null,
-    "stav": "ceka",
-    "vyrez": {
-      "text": "Čierna Hora zadržala zakladateľa kanála ruskej propagandy, zaistila drony a elektroniku | Aktuality.sk\nAktuality\nŠport\nDiva\nNajmama\nŽivé\nRecepty\nDobrú chuť\nSlovník\n15 °C -\nBratislava\npiatok 9. 10.\n9. 10.\nDionýz\nSprávy dnes 09. okt 2026 o 13:46\n2 min. čítania\nPridať do Google\nČierna Hora zadržala zakladateľa kanála ruskej propagandy, zaistila drony a elektroniku\n1 fotka v galérii\nBlesková správa Zdroj: Aktuality.sk\nTASR\nAktuality.sk\nUložiť článok\nPohyb zakladateľa telegramového kanála sledovali bezpečnostné zložky niekoľko dní.\nÚrady v Čiernej Hore zadržali Michaila Zvinčuka, zakladateľa ruského telegramového kanála Rybar, ktorý šíri naratívy na podporu Kremľa a obhajuje aj vojnu na Ukrajine, informovali miestne médiá Vijesti a Pobjeda. Zaistené boli údajne aj drony a rôzne elektronické vybavenie, doplnila agentúra AFP, píše TASR.\nZvinčuka, jeho manželku Valeriju a niekoľkých spolupracovníkov zadržali v piatok ráno v meste Risan v zálive Boka Kotorska počas operácie čiernohorskej polície a Národnej bezpečnostnej agentúry (ANB). Podľa čiernohorských médií bolo cieľom operácie obmedziť hybridné aktivity siete kanálov, ktoré britské a americké úrady spájajú so šírením kremeľskej…",
-      "stazeno": "2026-10-09T12:03:55.672Z",
-      "stav": 200
-    }
-  },
-  {
-    "id": "k-18cc5e4054a2368e",
-    "zachyceno": "2026-10-09T12:03:48.980Z",
-    "publikovano": "2026-10-09T11:45:00.000Z",
-    "zdroj": {
-      "nazev": "ČT24 — hlavní zprávy",
-      "url": "https://ct24.ceskatelevize.cz/clanek/svet/arabske-nato-v-akci-pakistan-poslal-saudum-vojaky-turci-zbrane-378395",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "„Arabské NATO“ v akci. Pákistán poslal Saúdům vojáky, Turci zbraně",
-    "titulekPuvodni": "„Arabské NATO“ v akci. Pákistán poslal Saúdům vojáky, Turci zbraně",
-    "shrnuti": "Nová vojenská aliance Saúdské Arábie, Pákistánu a Turecka přechází od rétoriky k akci. Islámábád už vyslal do Saúdské Arábie vojáky a Ankara poskytuje zemi ohrožené útoky proíránských džihádistů hútíů zbraně i zpravodajskou a logistickou podporu. Nasazení dalších sil však musí schválit turecký parla",
-    "kodZeme": null,
-    "zeme": null,
-    "kategorie": [
-      "vojsko",
-      "nato"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "zeSite": null,
-    "shody": [
-      "vojak+nasazen",
-      "nato",
-      "aliance",
-      "vojak"
-    ],
-    "naliehave": null,
-    "stav": "ceka",
-    "vyrez": {
-      "text": "„Arabské NATO“ v akci. Pákistán poslal Saúdům vojáky, Turci zbraně — ČT24 — Česká televize\nŽivé vysílání\nTV program\nPočasí\nTeletext\nE-shop\nVše o ČT\nTV poplatky\nKontakty\nSpravovat účet\nOblíbené pořady\nRozkoukaná videa\nPřihlásit se do TV\nOdhlásit se\nPrávě se stalo\nV Česku začaly volby do zastupitelstev obcí a Senátu Zobrazit\n„Arabské NATO“ v akci. Pákistán poslal Saúdům vojáky, Turci zbraně\nTamara Kejlová\npřed 18 m minutami | Zdroj: ČT24 , ČTK , The New Arab , The Middle East Eye , Deutsche Welle , CNN\nIlustrační foto – společné cvičení pákistánské a saúdskoarabské armády (snímek z roku 2011)\nZdroj: Reuters/Faisal Mahmood\nNová vojenská aliance Saúdské Arábie, Pákistánu a Turecka přechází od rétoriky k akci. Islámábád už vyslal do Saúdské Arábie vojáky a Ankara poskytuje zemi ohrožené útoky proíránských džihádistů hútíů zbraně i zpravodajskou a logistickou podporu. Nasazení dalších sil však musí schválit turecký parlament. Otázka přímého zapojení spojenců z paktu z Mekky do bojů v Jemenu zůstává otevřená. Totální porážku hútíů experti neočekávají.\nÍránem podporovaní šíitští povstalci v Jemenu v posledních dnech pokračovali v přeshraničních útocích a smrtících úderech na…",
-      "stazeno": "2026-10-09T12:03:56.993Z",
+      "text": "Montenegro Expels Founder of Russian Pro-War Blog Rybar for 'Security Reasons' - The Moscow Times\nSupport The Moscow Times!\nContribute today\nMy account\nSignout\n&times;\nSupport The Moscow Times!\nContribute today\nOct. 9, 2026\nMikhail Zvinchuk.\nRutube\nMontenegro expelled Mikhail Zvinchuk, the founder of the influential Russian pro-war Telegram channel Rybar, and three other Russian nationals on Friday after detaining them in an operation targeting suspected Russian influence activities, police and the country&rsquo;s National Security Agency said.\nThe agencies said the four could no longer remain in Montenegro &ldquo;for reasons of national and internal security of the state.&rdquo; Their statement identified the Russians only by their initials, but a police source confirmed their identities to Reuters.\nZvinchuk, a former Russian Defense Ministry press officer, was detained in the Adriatic resort town of Risan along with others including his wife, Rybar creative director Valeria Zvinchuk, local media reported.\nSecurity sources told Vijesti that police and the National Security Agency (ANB) carried out the operation to counter &ldquo;hybrid activities&rdquo; by Russian information…",
+      "stazeno": "2026-10-09T18:03:37.527Z",
       "stav": 200
     }
   },
@@ -4876,6 +4869,53 @@
     }
   },
   {
+    "id": "k-24ce20ea7a149bac",
+    "zachyceno": "2026-10-09T12:03:49.091Z",
+    "publikovano": "2026-10-09T11:10:00.000Z",
+    "zdroj": {
+      "nazev": "Seznam Zprávy",
+      "url": "https://www.seznamzpravy.cz/clanek/zahranicni-vysetrovatele-nasli-v-ruskych-dronech-polske-sim-karty-317170",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Vyšetřovatelé našli v ruských dronech polské SIM karty",
+    "titulekPuvodni": "Vyšetřovatelé našli v ruských dronech polské SIM karty",
+    "shrnuti": "Desítky ruských strojů narušily polský vzdušný prostor loni v září. Nyní prokuratura oznámila, že vyšetřování bylo zastaveno. Pachatele se nepodařilo vypátrat.",
+    "kodZeme": "PL",
+    "zeme": "Polsko",
+    "kategorie": [
+      "drony",
+      "rusko"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "narusil+vzdusny prostor",
+      "dron",
+      "drone",
+      "vzdusny prostor",
+      "rusk"
+    ],
+    "naliehave": {
+      "druh": "vzdusny-prostor-nato",
+      "stupen": 2,
+      "proc": "narusil+vzdusny prostor"
+    },
+    "stav": "vyrizen",
+    "vyrez": {
+      "text": "Vyšetřovatelé našli v ruských dronech polské SIM karty - Seznam Zprávy\nZobrazení snímku 1 z 0\nHlavní obsah\nVyšetřovatelé našli v ruských dronech polské SIM karty\nSeznam Zprávy\n3:10\nChcete-li článek poslouchat, přihlaste se\neBook\nSdílet\nBez komentáře: Nález dronů na polském území v září 2025. Video: x.com/sentdefender, facebook/Lubelskie jest najlepsze\n13:10\nDesítky ruských strojů narušily polský vzdušný prostor loni v září. Nyní prokuratura oznámila, že vyšetřování bylo zastaveno. Pachatele se nepodařilo vypátrat.\nČlánek\nPolská prokuratura po více než roce uzavřela vyšetřování loňského narušení vzdušného prostoru bezprecedentním počtem ruských dronů.\nAčkoliv vyšetřovatelé nezjistili, kdo akci nařídil, podezření, že šlo o záměr, posílil nález polských SIM karet v některých bezpilotních letounech.\n„Vyšetřování bylo zastaveno, protože se nepodařilo identifikovat pachatele trestného činu spočívajícího v narušení polského vzdušného prostoru, a tím i v ohrožení veřejné bezpečnosti,“ řekl deníku Rzeczpospolita mluvčí okresní prokuratury v Lublinu Marcin Kozak.\nUdálosti z noci na 10. září 2025  tehdy nepředstavovaly útok v pravém slova smyslu, ale spíše koordinované narušení vzdušného…",
+      "stazeno": "2026-10-09T12:03:52.085Z",
+      "stav": 200
+    },
+    "vyrizeni": {
+      "kdy": "2026-10-09T18:01:26.875Z",
+      "duvod": "ponechano-bez-druheho-zdroje",
+      "patriK": null,
+      "poznamka": "Mluvčí prokuratury v Lublinu podle Seznam Zpráv (cituje Rzeczpospolitu) potvrdil, že vyšetřování masivního vniknutí více než 30 dronů do polského vzdušného prostoru z noci na 10. 9. 2025 bylo po roce uzavřeno bez identifikace pachatele; nalezené polské SIM karty v dronech posilují podezření na záměr"
+    }
+  },
+  {
     "id": "k-d66b19094eaff8f5",
     "zachyceno": "2026-09-29T12:03:48.158Z",
     "publikovano": "2026-09-29T10:29:35.000Z",
@@ -5014,6 +5054,535 @@
       "duvod": "duplicita",
       "patriK": null,
       "poznamka": "Táž událost, viz výše. Rozhodnuto už dříve. Rozhodnuto už dříve; vrací se opakovaně."
+    }
+  },
+  {
+    "id": "k-63028fe6b89d82f7",
+    "zachyceno": "2026-10-09T16:03:58.064Z",
+    "publikovano": "2026-10-09T15:01:28.000Z",
+    "zdroj": {
+      "nazev": "Digi24 (Rumunsko)",
+      "url": "https://www.digi24.ro/stiri/sci-tech/auto/masina-cu-butuci-de-lemn-in-loc-de-suspensii-neregulile-descoperite-in-timpul-controalelor-rar-care-i-au-socat-pe-inspectori-3985883",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Mașină cu butuci de lemn în loc de suspensii: Neregulile descoperite în timpul controalelor RAR care i-au șocat pe inspectori",
+    "titulekPuvodni": "Mașină cu butuci de lemn în loc de suspensii: Neregulile descoperite în timpul controalelor RAR care i-au șocat pe inspectori",
+    "shrnuti": "Adevărate „bombe pe patru roți” pe șoselele din România. Inspectorii RAR au descoperit nereguli grave în timpul verificărilor tehnice. Una i-a șocat de-a dreptul: o mașină avea butuci de lemn în loc de suspensii.",
+    "kodZeme": "RO",
+    "zeme": "Rumunsko",
+    "kategorie": [
+      "sabotaz"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "bomb"
+    ],
+    "naliehave": null,
+    "stav": "vyrizen",
+    "vyrez": {
+      "text": "Mașină cu butuci de lemn în loc de suspensii: Neregulile descoperite în timpul controalelor RAR care i-au șocat pe inspectori | Digi24\nHOME\nȘtiri\nSci-tech\nAuto\nMașină cu butuci de lemn în loc de suspensii: Neregulile descoperite în timpul controalelor RAR care i-au șocat pe inspectori\nVideo Mașină cu butuci de lemn în loc de suspensii: Neregulile descoperite în timpul controalelor RAR care i-au șocat pe inspectori\nData publicării: 09.10.2026 18:01\nMașină cu butuci de lemn în loc de suspensii, descoperita la RAR. Foto: Registrul Auto Roman Urmărește Digi24 în Google Discover Adaugă Digi24 ca sursă preferată în Google\nAdevărate „bombe pe patru roți” pe șoselele din România. Inspectorii RAR au descoperit nereguli grave în timpul verificărilor tehnice. Una i-a șocat de-a dreptul: o mașină avea butuci de lemn în loc de suspensii.\nAvion blocat sub un pod pe DN1: ce se va întâmpla cu aeronava\nScandal în direct între George Simion și Anca Alexandrescu. „Ce ai de faci așa?”/ „Nu vă e rușine?”\nViolențe pe străzile din Bruxelles în timpul demonstrațiilor sindicatelor. Polițiștii au folosit gaze lacrimogene și un tun cu apă\nUn spion rus căutat de SUA a fost arestat în Muntenegru. Pe capul lui…",
+      "stazeno": "2026-10-09T16:03:58.606Z",
+      "stav": 200
+    },
+    "vyrizeni": {
+      "kdy": "2026-10-09T18:01:26.875Z",
+      "duvod": "mimo-rozsah",
+      "patriK": null,
+      "poznamka": "Rumunský článek o vozu s dřevěnými kláty místo tlumičů odhaleném při technické kontrole; kuriozita z běžné dopravní kontroly bez bezpečnostního skutku."
+    }
+  },
+  {
+    "id": "k-eb99fb5fd179a076",
+    "zachyceno": "2026-10-09T16:03:58.527Z",
+    "publikovano": "2026-10-09T15:00:39.000Z",
+    "zdroj": {
+      "nazev": "Meduza (anglicky)",
+      "url": "https://meduza.io/en/feature/2026/10/09/how-life-has-changed-in-a-moscow-suburb-where-ukrainian-drones-hit-the-same-apartment-building-twice",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "How life has changed in a Moscow suburb where Ukrainian drones hit the same apartment building twice",
+    "titulekPuvodni": "How life has changed in a Moscow suburb where Ukrainian drones hit the same apartment building twice",
+    "shrnuti": "On September 20, 2026, Ukraine launched another large-scale drone attack on the Moscow region. One drone hit a high-rise apartment building in Kotelniki, southeast of Moscow. Another had struck the same building in June. Neither strike killed anyone, but the attacks badly frightened many people in t",
+    "kodZeme": "UA",
+    "zeme": "Ukrajina",
+    "kategorie": [
+      "hybridni",
+      "drony"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "attack on",
+      "dron",
+      "drone"
+    ],
+    "naliehave": null,
+    "stav": "vyrizen",
+    "vyrez": {
+      "text": "How life has changed in a Moscow suburb where Ukrainian drones hit the same apartment building twice — Meduza\nSkip to main content\nstories\nHow life has changed in a Moscow suburb where Ukrainian drones hit the same apartment building twice\nOctober 9, 2026, 3:00 pm\nSource: Meduza\nOn September 20, 2026, Ukraine launched another large-scale drone attack on the Moscow region. One drone hit a high-rise apartment building in Kotelniki, southeast of Moscow. Another had struck the same building in June. Neither strike killed anyone, but the attacks badly frightened many people in the neighborhood. Reporters from Bereg, a cooperative of independent journalists, visited the Novye Kotelniki residential complex to see how repairs were progressing after the two attacks and how residents had responded. Meduza is translating their report in full.\n‘ People were shaking, children were crying, older people’s blood pressure was shooting up ’\nDrivers struggle to find parking in this densely populated neighborhood in Kotelniki, outside Moscow. Shoppers wait in short lines at grocery store checkouts. It’s a warm, sunny weekend day, yet the courtyard of the Novye Kotelniki residential complex…",
+      "stazeno": "2026-10-09T16:03:59.370Z",
+      "stav": 200
+    },
+    "vyrizeni": {
+      "kdy": "2026-10-09T18:01:26.875Z",
+      "duvod": "mimo-rozsah",
+      "patriK": null,
+      "poznamka": "Reportáž o životě v moskevském předměstí opakovaně zasahovaném ukrajinskými drony; novinářská reportáž o útoku uvnitř Ruska bez následku pro sledované země."
+    }
+  },
+  {
+    "id": "k-707325ff7bc703a5",
+    "zachyceno": "2026-10-09T16:03:56.091Z",
+    "publikovano": "2026-10-09T14:15:24.000Z",
+    "zdroj": {
+      "nazev": "Novinky.cz",
+      "url": "https://www.novinky.cz/clanek/valka-na-ukrajine-moskva-je-pod-masivnim-utokem-40601776",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Moskva pod masivním útokem. Na nebi se střídaly drony a zvláštní malé balony",
+    "titulekPuvodni": "Moskva pod masivním útokem. Na nebi se střídaly drony a zvláštní malé balony",
+    "shrnuti": "Moskva a přilehlá Moskevská oblast je v pátek odpoledne pod útokem dronů a balónů se zavěšenými předměty. Informují o tom ruská a ukrajinská média. Podle agentury TASS kvůli tomu letecká společnost Aeroflot mění letecký řád, letiště jsou uzavřena, některé lety již přesměrovali na jiná letiště. Nad r",
+    "kodZeme": "UA",
+    "zeme": "Ukrajina",
+    "kategorie": [
+      "drony",
+      "rusko"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "dron+letist+uzavr",
+      "dron",
+      "rusk"
+    ],
+    "naliehave": null,
+    "stav": "vyrizen",
+    "vyrez": {
+      "text": "Moskva pod masivním útokem. Na nebi se střídaly drony a zvláštní malé balony - Novinky\nZobrazení snímku 1 z 0\nzáhlaví\nHlavní obsah\nMoskva pod masivním útokem. Na nebi se střídaly drony a zvláštní malé balony\nVojtěch Bauer\n2:08\nChcete-li článek poslouchat, přihlaste se\neBook\nSdílet\nDnes 9. 10., 16:15 Moskva Aktualizováno dnes 17:18\nMoskva a přilehlá Moskevská oblast je v pátek odpoledne pod útokem dronů a balónů se zavěšenými předměty. Informují o tom ruská a ukrajinská média. Podle agentury TASS kvůli tomu letecká společnost Aeroflot mění letecký řád, letiště jsou uzavřena, některé lety již přesměrovali na jiná letiště. Nad ruským hlavním městem pracuje protivzdušná obrana.\nMoskva je pod útokem. Video: X/Nexta\nČlánek\nTelegramový kanál Exilenova+ o útoku na Moskvu informoval před třetí hodinou odpoledne. Podle něj v ruském hlavním městě zní letecký poplach. Později v dalším příspěvku uvedl, že zpožděno nebo zrušeno bylo na čtyřech moskevských letištích 300 letů.\n„V předměstí Moskvy, v okolí samotné Moskvy, je v plném provozu protivzdušná obrana,“ doplnila Exilenova+.\nMoskevský starosta Sergej Sobjanin později oznámil sestřelení 15 dronů. Na letišti Šeremeťjevo byla po několika…",
+      "stazeno": "2026-10-09T16:03:59.685Z",
+      "stav": 200
+    },
+    "vyrizeni": {
+      "kdy": "2026-10-09T18:01:26.875Z",
+      "duvod": "mimo-rozsah",
+      "patriK": null,
+      "poznamka": "Masivní ukrajinský dronový a balónový útok na Moskvu; útok uvnitř Ruska bez doloženého následku pro sledované země."
+    }
+  },
+  {
+    "id": "k-9a62a363febe4358",
+    "zachyceno": "2026-10-09T16:03:58.500Z",
+    "publikovano": "2026-10-09T14:11:00.000Z",
+    "zdroj": {
+      "nazev": "Ukrainska Pravda (anglicky)",
+      "url": "https://www.pravda.com.ua/eng/news/2026/10/09/8057238/",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "\"We were detained like terrorists\": UP journalist Mykhailo Tkach details circumstances of detention in Vienna",
+    "titulekPuvodni": "\"We were detained like terrorists\": UP journalist Mykhailo Tkach details circumstances of detention in Vienna",
+    "shrnuti": "Mykhailo Tkach recounted being held at gunpoint and restrained by Austrian police while working on an investigation in Vienna.",
+    "kodZeme": "AT",
+    "zeme": "Rakousko",
+    "kategorie": [
+      "zpravodajske"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "detained+terror"
+    ],
+    "naliehave": null,
+    "stav": "vyrizen",
+    "vyrez": {
+      "text": "Mykhailo Tkach shares details of armed police detention in Vienna | Ukrainska Pravda\nMykhailo Tkach. Photo: Dmytro Larin\nMykhailo Tkach, head of Ukrainska Pravda's investigative journalism department, said that masked, armed men smashed the car windows and dragged him and cameraman Yaroslav Bondarenko onto the road during their detention in Vienna. One of the men then knelt on Tkach's neck as he repeatedly said he was a journalist.\nSource: Tkach in a video for UP\nQuote: \"It felt like we were being treated as terrorists. They didn't speak to us at all. There was just this shocking amount of shouting – everyone was yelling and pointing their weapons at us, and there was virtually no communication.\"\nAdvertisement:\n\r\n\r\n\r\n\r\n\r\nDetails: Tkach said he and Bondarenko were driving between filming locations when their car stopped at a traffic light about 3-5 km from central Vienna. Seven masked, armed men then ran up to the car, smashed its windows and pointed their weapons at the journalists.\nHe added that he immediately raised his hand and told the men he was a journalist. They then pulled both men from the car, forced them face down onto the road, searched them and taped their hands…",
+      "stazeno": "2026-10-09T16:04:00.382Z",
+      "stav": 200
+    },
+    "vyrizeni": {
+      "kdy": "2026-10-09T18:01:26.875Z",
+      "duvod": "navrh",
+      "patriK": null,
+      "poznamka": "Táž nová událost jako výše — zadržení novináře Tkače ve Vídni (i-2026-10-08-29063cafa3)."
+    }
+  },
+  {
+    "id": "k-5804c979e5c82014",
+    "zachyceno": "2026-10-09T14:04:23.506Z",
+    "publikovano": "2026-10-09T14:01:23.000Z",
+    "zdroj": {
+      "nazev": "Politico Europe",
+      "url": "https://www.politico.eu/article/arrested-german-august-hanning-lashes-out-bnd-russia-spy-allegations/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Arrested German spy chief lashed out at his old agency over allegations he spied for Russia",
+    "titulekPuvodni": "Arrested German spy chief lashed out at his old agency over allegations he spied for Russia",
+    "shrnuti": "A letter sent weeks before August Hanning’s arrest adds to concerns over the BND’s credibility among allies.",
+    "kodZeme": "DE",
+    "zeme": "Německo",
+    "kategorie": [
+      "zpravodajske",
+      "rusko"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "arrested+spy",
+      "russia"
+    ],
+    "naliehave": null,
+    "stav": "vyrizen",
+    "vyrez": {
+      "text": "Arrested German spy chief lashed out at his old agency over allegations he spied for Russia  – POLITICO\nSkip to main content\nAdvertisement\nBERLIN — Former German intelligence chief August Hanning angrily challenged his successor after learning that the agency he once headed, the BND, had passed allegations that he was a Russian spy to investigators.\nIn a three-page letter sent on Aug. 17, less than three months before his arrest this week, Hanning demanded answers to 11 questions from BND President Martin Jäger.\nIn the letter, obtained by WELT — which, like POLITICO, is part of the Axel Springer Global Reporters Network — Hanning complained that the BND had passed allegations by a former intelligence agent that he was a Russian spy to investigators without consulting him.\nAdvertisement\nJäger did not respond to the letter at the time, according to Hanning, who spoke to WELT before his arrest.\nHanning’s subsequent arrest, including on suspicion of attempted treason, has caused considerable concern abroad. Grzegorz Malecki, the former head of Poland’s foreign intelligence service, told WELT that the case was “extremely concerning” and could deepen allies’ distrust of the BND. He…",
+      "stazeno": "2026-10-09T14:04:26.236Z",
+      "stav": 200
+    },
+    "vyrizeni": {
+      "kdy": "2026-10-09T18:01:26.875Z",
+      "duvod": "ponechano-bez-druheho-zdroje",
+      "patriK": null,
+      "poznamka": "Politico píše, že se zadržený exšéf BND Hanning ohradil proti podezření, že špehoval pro Rusko; samotný Politico.eu se mi nepodařilo otevřít a náhradní zdroj (Spiegel, Tagesschau, DW) jsem nedohledal, takže jsem nemohl ověřit, co konkrétně řekl — do existujícího návrhu o Hanningovi (i-2026-10-06-454"
+    }
+  },
+  {
+    "id": "k-9fd1a15a5f7a7480",
+    "zachyceno": "2026-10-09T16:03:58.474Z",
+    "publikovano": "2026-10-09T13:52:00.000Z",
+    "zdroj": {
+      "nazev": "Ukrinform (anglicky)",
+      "url": "https://www.ukrinform.net/rubric-society/4172732-ukrainian-woman-detained-at-russias-request-leaves-kazakhstan-and-is-now-in-eu-lawyer.html",
+      "typ": "wire",
+      "primarni": false
+    },
+    "titulek": "Ukrainian woman detained at Russia's request leaves Kazakhstan and is now in EU – lawyer",
+    "titulekPuvodni": "Ukrainian woman detained at Russia's request leaves Kazakhstan and is now in EU – lawyer",
+    "shrnuti": "Ukrainian national Liubov Rozhanska, who was detained in Kazakhstan at Russia's request on suspicion of abducting a child, has managed to leave Kazakhstan and travel to an EU country.",
+    "kodZeme": "EU",
+    "zeme": "EU",
+    "kategorie": [
+      "zpravodajske",
+      "rusko"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "detained+russia",
+      "russia"
+    ],
+    "naliehave": null,
+    "stav": "vyrizen",
+    "vyrez": {
+      "text": "Ukrainian woman detained at Russia's request leaves Kazakhstan and is now in EU – lawyer\n\r\nSubscription\nNewsletters\nPhotobank\nUkrinform - Ukrainian National News Agency\nFounded in 1918\nFriday, 09 October 2026, 19:04\nWar\nEconomy\nSports\nMore ☰\nContacts\nEng\nУкр\nEng\nEsp\nDeu\nعربي\nFra\n日本語\nPol\n&times;\nAll topics\nWar\nRecovery of Ukraine\nPolitics\nEconomy\nFact checks\nDefense\nSociety and Culture\nSports\nCrime\nAccidents and Emergencies\nAgency\nInformation on Agency\nOur Contacts\nSubscribtion Terms\nOur Services\nPrivacy policy and personal data protection\nAdditional\nPublications\nInterviews\nPhoto\nVideo\nLongreads\nReleases\nServices\nSubscription\nNewsletters\nPhotobank\n\r\n\r\n\r\nUkrainian national Liubov Rozhanska, who was detained in Kazakhstan at Russia's request on suspicion of abducting a child, has managed to leave Kazakhstan and travel to an EU country.\nOne of the woman's lawyers, Oleksii Pryanishnikov, told this to DW , Ukrinform reports.\n\r\n\r\nAfter three days had elapsed since her detention in Astana on October 1, a court in Kazakhstan was supposed to decide on a preventive measure for Rozhanska.\n\r\n\r\nHowever, this did not happen, allowing the woman to leave the pre-trial detention center. She then…",
+      "stazeno": "2026-10-09T16:04:00.594Z",
+      "stav": 200
+    },
+    "vyrizeni": {
+      "kdy": "2026-10-09T18:01:26.875Z",
+      "duvod": "mimo-rozsah",
+      "patriK": null,
+      "poznamka": "Ukrajinka Ljubov Rožanská, kterou Rusko žádalo o vydání z Kazachstánu v souvislosti se spory o vnuka (obvinění z únosu dítěte), unikla do EU; osobní rodinněprávní kauza mezinárodního zatykače, ne skutek podle pravidla č. 1, i když ji zdroj rámuje jako „hybridní nátlak“."
+    }
+  },
+  {
+    "id": "k-e8eefd1a3f778d86",
+    "zachyceno": "2026-10-09T13:42:16.333Z",
+    "publikovano": "2026-10-09T13:07:00.000Z",
+    "zdroj": {
+      "nazev": "Ukrinform (anglicky)",
+      "url": "https://www.ukrinform.net/rubric-ato/4172726-russian-guided-bomb-strike-on-zaporizhzhia-injures-14-kills-one.html",
+      "typ": "wire",
+      "primarni": false
+    },
+    "titulek": "Russian guided bomb strike on Zaporizhzhia injures 14, kills one",
+    "titulekPuvodni": "Russian guided bomb strike on Zaporizhzhia injures 14, kills one",
+    "shrnuti": "The number of people injured in a Russian strike on the city of Zaporizhzhia has risen to 14, including a child.",
+    "kodZeme": "RU",
+    "zeme": "Rusko",
+    "kategorie": [
+      "sabotaz",
+      "rusko"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "bomb",
+      "russia"
+    ],
+    "naliehave": null,
+    "stav": "vyrizen",
+    "vyrez": {
+      "text": "Russian guided bomb strike on Zaporizhzhia injures 14, kills one\n\r\nSubscription\nNewsletters\nPhotobank\nUkrinform - Ukrainian National News Agency\nFounded in 1918\nFriday, 09 October 2026, 16:42\nWar\nEconomy\nSports\nMore ☰\nContacts\nEng\nУкр\nEng\nEsp\nDeu\nعربي\nFra\n日本語\nPol\n&times;\nAll topics\nWar\nRecovery of Ukraine\nPolitics\nEconomy\nFact checks\nDefense\nSociety and Culture\nSports\nCrime\nAccidents and Emergencies\nAgency\nInformation on Agency\nOur Contacts\nSubscribtion Terms\nOur Services\nPrivacy policy and personal data protection\nAdditional\nPublications\nInterviews\nPhoto\nVideo\nLongreads\nReleases\nServices\nSubscription\nNewsletters\nPhotobank\n\r\n\r\n\r\nThe number of people injured in a Russian strike on the city of Zaporizhzhia has risen to 14, including a child.\nAccording to Ukrinform reports, Ukraine's State Emergency Service said this in a statement .\n\r\n\r\n\"As of 12:40, the number of people injured in the Russian strike in Zaporizhzhia has risen to 14,\" the statement said.\n\r\n\r\nhttps://static.ukrinform.com/photos/2026_10/thumb_files/630_360_1791533504-3325.jpeg\n\r\n\r\nAccording to the State Emergency Service, those injured include a child and a police officer. One person was killed. Emergency service…",
+      "stazeno": "2026-10-09T13:42:16.521Z",
+      "stav": 200
+    },
+    "vyrizeni": {
+      "kdy": "2026-10-09T18:01:26.875Z",
+      "duvod": "mimo-rozsah",
+      "patriK": null,
+      "poznamka": "Ruský naváděný bombový útok na Záporoží; denní útok uvnitř Ukrajiny bez doloženého následku pro sledované země."
+    }
+  },
+  {
+    "id": "k-56a5cf2c43c74a61",
+    "zachyceno": "2026-10-09T13:42:15.655Z",
+    "publikovano": "2026-10-09T12:28:38.000Z",
+    "zdroj": {
+      "nazev": "El País (Španělsko, anglicky)",
+      "url": "https://english.elpais.com/international/2026-10-09/russian-drones-harass-moldova.html",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Russian drones harass Moldova",
+    "titulekPuvodni": "Russian drones harass Moldova",
+    "shrnuti": "The small former Soviet republic, constitutionally neutral, has recorded 56 airspace violations so far this year, more than double the total in 2025",
+    "kodZeme": "MD",
+    "zeme": "Moldavsko",
+    "kategorie": [
+      "drony",
+      "rusko"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "airspace violation",
+      "violat+airspace",
+      "dron",
+      "drone",
+      "airspace",
+      "russia"
+    ],
+    "naliehave": null,
+    "stav": "vyrizen",
+    "vyrez": {
+      "text": "Russian drones harass Moldova | International | EL PAÍS English Skip to content _\n_\n_\n_\nRaúl Sánchez Costa\nBucharest - Oct 09, 2026 - 14:28 CEST\nShare on Whatsapp\nShare on Facebook\nShare on Twitter\nDesplegar Redes Sociales\nPrefer EL PAÍS on Google\nCompartir:\nWhatsapp\nFacebook\nTwitter\nBluesky\nLinkedin\nCopy link\nA powerful explosion shook Colonita, a small village in the municipality of Chișinău , at 4.20 a.m. on September 18. Residents saw a blinding flash and heard a terrifying blast that made houses tremble. Six hours later, emergency teams found the remains of a Russian drone — including its engine — scattered across agricultural land. The device had fallen about four miles from the center of the Moldovan capital, which is home to more than 700,000 people. It had not been detected by surveillance systems, which the Defense Ministry attributed to the speed and low altitude at which it was flying.\nThe Russian invasion of Ukraine, launched in February 2022, has not turned this former Soviet republic of 2.4 million people into a battlefield; it is constitutionally neutral and aims to join the European Union in 2030 . But it has made Moldovan airspace increasingly exposed: Russian…",
+      "stazeno": "2026-10-09T13:42:17.742Z",
+      "stav": 200
+    },
+    "vyrizeni": {
+      "kdy": "2026-10-09T18:01:26.875Z",
+      "duvod": "duplicita",
+      "patriK": null,
+      "poznamka": "Souhrnný článek o opakovaném narušování moldavského vzdušného prostoru ruskými drony; jde o už dříve zachycené jednotlivé incidenty (např. dron u Kišiněva, požár po výbuchu dronu), ne o jednu novou, dřív nezveřejněnou událost."
+    }
+  },
+  {
+    "id": "k-5a2eaa14cf164102",
+    "zachyceno": "2026-10-09T13:42:16.407Z",
+    "publikovano": "2026-10-09T12:24:24.000Z",
+    "zdroj": {
+      "nazev": "Meduza (anglicky)",
+      "url": "https://meduza.io/en/news/2026/10/09/russia-opens-criminal-fraud-case-against-former-co-owner-of-retail-chains-lenta-and-rive-gauche",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Russia opens criminal fraud case against former co-owner of retail chains Lenta and Rive Gauche",
+    "titulekPuvodni": "Russia opens criminal fraud case against former co-owner of retail chains Lenta and Rive Gauche",
+    "shrnuti": "Dmitry Kostygin, the former co-owner of the Russian supermarket chain Lenta and the Rive Gauche chain, has been detained, the Russian business news outlet RBC and the St. Petersburg-based news outlet Fontanka reported, citing sources. On October 8, a Moscow court placed Kostygin under house arrest.",
+    "kodZeme": "RU",
+    "zeme": "Rusko",
+    "kategorie": [
+      "zpravodajske",
+      "rusko"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "detained+russia",
+      "russia"
+    ],
+    "naliehave": null,
+    "stav": "vyrizen",
+    "vyrez": {
+      "text": "Russia opens criminal fraud case against former co-owner of retail chains Lenta and Rive Gauche — Meduza\nSkip to main content\nRussia opens criminal fraud case against former co-owner of retail chains Lenta and Rive Gauche\nOctober 9, 2026, 12:24 pm\nSource: RBC\nDmitry Kostygin, the former co-owner of the Russian supermarket chain Lenta and the Rive Gauche chain, has been detained, the Russian business news outlet RBC and the St. Petersburg-based news outlet Fontanka reported, citing sources. On October 8, a Moscow court placed Kostygin under house arrest.\nAccording to Fontanka, Kostygin is accused of concealing Yulmart’s true financial position when he and accomplices signed a 2017 contract on Yulmart’s behalf with a company called Berks to supply equipment and machinery.\nKostygin, a former co-owner of the retailer Yulmart, was named a suspect in a criminal fraud case in 2017. August Meyer, another co-owner of the chain, was also charged in the case.\nThe businessmen were accused of misappropriating loans Yulmart had received from Sberbank and VTB for business development, with total damage estimated at 3.14 billion rubles. In 2024, a court sentenced Kostygin to four years in prison…",
+      "stazeno": "2026-10-09T13:42:18.368Z",
+      "stav": 200
+    },
+    "vyrizeni": {
+      "kdy": "2026-10-09T18:01:26.875Z",
+      "duvod": "mimo-rozsah",
+      "patriK": null,
+      "poznamka": "Rusko zahájilo trestní řízení pro podvod proti bývalému spolumajiteli obchodních řetězců Lenta; vnitroruská obchodní/trestní záležitost bez následku pro sledované země."
+    }
+  },
+  {
+    "id": "k-717750d19e8456f3",
+    "zachyceno": "2026-10-09T13:42:14.148Z",
+    "publikovano": "2026-10-09T12:24:22.000Z",
+    "zdroj": {
+      "nazev": "Denník N (Slovensko)",
+      "url": "https://dennikn.sk/5611976/vyvoj-bojov-1688-den-v-ciernej-hore-zatkli-provojnoveho-rybara-jeho-nove-mapy-ukazuju-ruske-problemy-na-fronte/",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Vývoj bojov (1688. deň): V Čiernej Hore zatkli provojnového „Rybara“, jeho nové mapy ukazujú ruské problémy na fronte",
+    "titulekPuvodni": "Vývoj bojov (1688. deň): V Čiernej Hore zatkli provojnového „Rybara“, jeho nové mapy ukazujú ruské problémy na fronte",
+    "shrnuti": "Informácie v tomto texte sú zhrnutím udalostí za štvrtok 8. októbra. Situácia už môže byť medzičasom iná. V Čiernej Hore zadržali zakladateľa telegramového kanála Rybar Michaila Zvinčuka, ktorý zastáva jedno z hlavných miest v ekosystéme ruských médií podporujúcich vojnu. Spolu s ním zatkli aj jeho ",
+    "kodZeme": "RU",
+    "zeme": "Rusko",
+    "kategorie": [
+      "zpravodajske",
+      "rusko"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "zadrz+rusk",
+      "rusk"
+    ],
+    "naliehave": null,
+    "stav": "vyrizen",
+    "vyrez": {
+      "text": "",
+      "stazeno": "2026-10-09T13:42:18.474Z",
+      "stav": 403,
+      "chyba": "HTTP 403"
+    },
+    "vyrizeni": {
+      "kdy": "2026-10-09T18:01:26.875Z",
+      "duvod": "navrh",
+      "patriK": null,
+      "poznamka": "Táž nová událost jako výše — vyhoštění zakladatele Rybaru z Černé Hory (i-2026-10-09-7a2d4d7970)."
+    }
+  },
+  {
+    "id": "k-e6ff3fedbbd08c57",
+    "zachyceno": "2026-10-09T12:03:49.118Z",
+    "publikovano": "2026-10-09T11:54:00.000Z",
+    "zdroj": {
+      "nazev": "iDNES.cz — zpravodajství",
+      "url": "https://www.idnes.cz/zpravy/zahranicni/zvincuk-rybar-rusko-bloger-telegram-cerna-hora-propaganda-valka.A261009_132158_zahranicni_jhr#utm_source=rss&utm_medium=feed&utm_campaign=zpravodaj&utm_content=main",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Černá Hora zadržela šéfa proválečného kanálu Rybar. Hon na Rusy, zuří Medveděv",
+    "titulekPuvodni": "Černá Hora zadržela šéfa proválečného kanálu Rybar. Hon na Rusy, zuří Medveděv",
+    "shrnuti": "Policie v Černé Hoře zadržela zakladatele ruského projektu Rybar, který podporuje ruskou invazi na Ukrajinu a má blízko k ministerstvu obrany v Moskvě. Uvedl to černohorský premiér Milojko Spajić. Bývalý ruský prezident a současný místopředseda ruské Rady bezpečnosti Dmitrij Medveděv krok černohorsk",
+    "kodZeme": "UA",
+    "zeme": "Ukrajina",
+    "kategorie": [
+      "zpravodajske",
+      "vojsko",
+      "rusko"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "zadrz+rusk",
+      "policie",
+      "rusk"
+    ],
+    "naliehave": null,
+    "stav": "vyrizen",
+    "vyrez": {
+      "text": "V Černé Hoře zadrželi zakladatele ruského proválečného projektu Rybar - iDNES.cz \r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\niDNES.cz\n\r\n\r\n\r\nP�ihl�sit \r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nAbyste mohli pokra�ovat, pot�ebujeme v�d�t, jakou formou v�m m��eme zobrazovat reklamu \r\n\r\n\r\n\r\n\r\n\r\nV�mi zvolen� nastaven� \r\nneobsahuje souhlas se zobrazov�n�m c�len� reklamy . \r\nVyberte pros�m znovu, \r\njakou formou v�m m�me zobrazovat obsah. \r\n\r\n\r\n\r\n\r\n\r\n\r\niDNES Premium\n\r\nBez reklam\n\r\n\r\n199 K� m�s��n�\n\r\nM��ete neomezen� ��st iDNES.cz, Lidovky.cz, Expres.cz a Antiyoutuber.cz. K tomu dostanete tak� noviny a �asopisy v elektronick� podob�. To v�e bez reklam. 1\n\r\n\r\nP�edplatit\n\r\n\r\nU� m�te ��et? P�ihlaste se\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nS c�lenou reklamou\n\r\n\r\n\r\nZdarma \r\n\r\nZachov�me v�m v�e tak, jak jste zvykl� a reklamu p�izp�sob�me va�im z�jm�m. Bez omezen� si m��ete d�l ��st, p�ehr�vat videa, sout�it �i p�isp�vat do v�ech diskus�. 2\n\r\n\r\nSouhlas�m\n\r\nPodrobn� nastaven�\n\r\n\r\n\r\n\r\n\r\n\r\niDNES a reklama\n\r\nPokud vyu�ijete m�sto platby ud�len� souhlasu s reklamou (tj. souhlas s vyu�it�m cookies a dal��ch s�ov�ch identifik�tor� pro ��ely c�len� reklamy), \r\nbudou V�m zobrazov�ny v…",
+      "stazeno": "2026-10-09T12:03:52.789Z",
+      "stav": 200
+    },
+    "vyrizeni": {
+      "kdy": "2026-10-09T18:01:26.875Z",
+      "duvod": "navrh",
+      "patriK": null,
+      "poznamka": "Táž nová událost jako výše — vyhoštění zakladatele Rybaru z Černé Hory (i-2026-10-09-7a2d4d7970)."
+    }
+  },
+  {
+    "id": "k-9dc0359c3eddea9c",
+    "zachyceno": "2026-10-09T12:03:50.272Z",
+    "publikovano": "2026-10-09T11:46:00.000Z",
+    "zdroj": {
+      "nazev": "Aktuality.sk",
+      "url": "https://www.aktuality.sk/clanok/20uIJKo/cierna-hora-zadrzala-zakladatela-kanala-ruskej-propagandy-zaistila-drony-a-elektroniku/",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Čierna Hora zadržala zakladateľa kanála ruskej propagandy, zaistila drony a elektroniku",
+    "titulekPuvodni": "Čierna Hora zadržala zakladateľa kanála ruskej propagandy, zaistila drony a elektroniku",
+    "shrnuti": "Pohyb zakladateľa telegramového kanála sledovali bezpečnostné zložky niekoľko dní.",
+    "kodZeme": "RU",
+    "zeme": "Rusko",
+    "kategorie": [
+      "zpravodajske",
+      "drony",
+      "rusko"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "zadrz+rusk",
+      "dron",
+      "rusk"
+    ],
+    "naliehave": null,
+    "stav": "vyrizen",
+    "vyrez": {
+      "text": "Čierna Hora zadržala zakladateľa kanála ruskej propagandy, zaistila drony a elektroniku | Aktuality.sk\nAktuality\nŠport\nDiva\nNajmama\nŽivé\nRecepty\nDobrú chuť\nSlovník\n15 °C -\nBratislava\npiatok 9. 10.\n9. 10.\nDionýz\nSprávy dnes 09. okt 2026 o 13:46\n2 min. čítania\nPridať do Google\nČierna Hora zadržala zakladateľa kanála ruskej propagandy, zaistila drony a elektroniku\n1 fotka v galérii\nBlesková správa Zdroj: Aktuality.sk\nTASR\nAktuality.sk\nUložiť článok\nPohyb zakladateľa telegramového kanála sledovali bezpečnostné zložky niekoľko dní.\nÚrady v Čiernej Hore zadržali Michaila Zvinčuka, zakladateľa ruského telegramového kanála Rybar, ktorý šíri naratívy na podporu Kremľa a obhajuje aj vojnu na Ukrajine, informovali miestne médiá Vijesti a Pobjeda. Zaistené boli údajne aj drony a rôzne elektronické vybavenie, doplnila agentúra AFP, píše TASR.\nZvinčuka, jeho manželku Valeriju a niekoľkých spolupracovníkov zadržali v piatok ráno v meste Risan v zálive Boka Kotorska počas operácie čiernohorskej polície a Národnej bezpečnostnej agentúry (ANB). Podľa čiernohorských médií bolo cieľom operácie obmedziť hybridné aktivity siete kanálov, ktoré britské a americké úrady spájajú so šírením kremeľskej…",
+      "stazeno": "2026-10-09T12:03:55.672Z",
+      "stav": 200
+    },
+    "vyrizeni": {
+      "kdy": "2026-10-09T18:01:26.875Z",
+      "duvod": "navrh",
+      "patriK": null,
+      "poznamka": "Táž nová událost jako výše — vyhoštění zakladatele Rybaru z Černé Hory (i-2026-10-09-7a2d4d7970)."
+    }
+  },
+  {
+    "id": "k-18cc5e4054a2368e",
+    "zachyceno": "2026-10-09T12:03:48.980Z",
+    "publikovano": "2026-10-09T11:45:00.000Z",
+    "zdroj": {
+      "nazev": "ČT24 — hlavní zprávy",
+      "url": "https://ct24.ceskatelevize.cz/clanek/svet/arabske-nato-v-akci-pakistan-poslal-saudum-vojaky-turci-zbrane-378395",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "„Arabské NATO“ v akci. Pákistán poslal Saúdům vojáky, Turci zbraně",
+    "titulekPuvodni": "„Arabské NATO“ v akci. Pákistán poslal Saúdům vojáky, Turci zbraně",
+    "shrnuti": "Nová vojenská aliance Saúdské Arábie, Pákistánu a Turecka přechází od rétoriky k akci. Islámábád už vyslal do Saúdské Arábie vojáky a Ankara poskytuje zemi ohrožené útoky proíránských džihádistů hútíů zbraně i zpravodajskou a logistickou podporu. Nasazení dalších sil však musí schválit turecký parla",
+    "kodZeme": null,
+    "zeme": null,
+    "kategorie": [
+      "vojsko",
+      "nato"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "vojak+nasazen",
+      "nato",
+      "aliance",
+      "vojak"
+    ],
+    "naliehave": null,
+    "stav": "vyrizen",
+    "vyrez": {
+      "text": "„Arabské NATO“ v akci. Pákistán poslal Saúdům vojáky, Turci zbraně — ČT24 — Česká televize\nŽivé vysílání\nTV program\nPočasí\nTeletext\nE-shop\nVše o ČT\nTV poplatky\nKontakty\nSpravovat účet\nOblíbené pořady\nRozkoukaná videa\nPřihlásit se do TV\nOdhlásit se\nPrávě se stalo\nV Česku začaly volby do zastupitelstev obcí a Senátu Zobrazit\n„Arabské NATO“ v akci. Pákistán poslal Saúdům vojáky, Turci zbraně\nTamara Kejlová\npřed 18 m minutami | Zdroj: ČT24 , ČTK , The New Arab , The Middle East Eye , Deutsche Welle , CNN\nIlustrační foto – společné cvičení pákistánské a saúdskoarabské armády (snímek z roku 2011)\nZdroj: Reuters/Faisal Mahmood\nNová vojenská aliance Saúdské Arábie, Pákistánu a Turecka přechází od rétoriky k akci. Islámábád už vyslal do Saúdské Arábie vojáky a Ankara poskytuje zemi ohrožené útoky proíránských džihádistů hútíů zbraně i zpravodajskou a logistickou podporu. Nasazení dalších sil však musí schválit turecký parlament. Otázka přímého zapojení spojenců z paktu z Mekky do bojů v Jemenu zůstává otevřená. Totální porážku hútíů experti neočekávají.\nÍránem podporovaní šíitští povstalci v Jemenu v posledních dnech pokračovali v přeshraničních útocích a smrtících úderech na…",
+      "stazeno": "2026-10-09T12:03:56.993Z",
+      "stav": 200
+    },
+    "vyrizeni": {
+      "kdy": "2026-10-09T18:01:26.875Z",
+      "duvod": "mimo-rozsah",
+      "patriK": null,
+      "poznamka": "Článek o „arabském NATO“ — Pákistán vysílá vojáky Saúdům, Turci dodávají zbraně; aliance mimo Blízký východ bez vazby na ruskou hybridní hrozbu."
     }
   },
   {
@@ -10756,570 +11325,6 @@
       "duvod": "neudalost",
       "patriK": null,
       "poznamka": "Francie testovala novou verzi mezikontinentální balistické střely M51 bez jaderné hlavice za osobní přítomnosti prezidenta Macrona; jde o rutinní ověření důvěryhodnosti odstrašení, ne o reakci na konkrétní novou hybridní hrozbu."
-    }
-  },
-  {
-    "id": "k-420dd7852b418d6c",
-    "zachyceno": "2026-10-06T16:03:02.638Z",
-    "publikovano": "2026-10-06T15:36:00.000Z",
-    "zdroj": {
-      "nazev": "The Moscow Times",
-      "url": "https://www.themoscowtimes.com/2026/10/06/russia-drops-criminal-case-against-childrens-hospice-founder-lida-moniava-a93898",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Russia Drops Criminal Case Against Children’s Hospice Founder Lida Moniava",
-    "titulekPuvodni": "Russia Drops Criminal Case Against Children’s Hospice Founder Lida Moniava",
-    "shrnuti": "Moniava had been charged with spreading “false information” about Russia’s army for a post about Ukrainian civilians killed in Russian attacks.",
-    "kodZeme": "UA",
-    "zeme": "Ukrajina",
-    "kategorie": [
-      "zpravodajske",
-      "rusko"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "zeSite": null,
-    "shody": [
-      "charged with+russia",
-      "russia"
-    ],
-    "naliehave": null,
-    "stav": "vyrizen",
-    "vyrez": {
-      "text": "Russia Drops Criminal Case Against Children’s Hospice Founder Lida Moniava - The Moscow Times\nSupport The Moscow Times!\nContribute today\nMy account\nSignout\n&times;\nSupport The Moscow Times!\nContribute today\nOct. 6, 2026\nLida Moniava.\nfreelidamoniava / Telegram\nRussian investigators have dropped a criminal case against Lida Moniava, a prominent advocate for critically ill children&rsquo;s care, after finding no grounds for prosecution, her supporters said Tuesday, citing her lawyer.\nMoniava was arrested on Sept. 2 and charged with spreading &ldquo;false information&rdquo; about Russia&rsquo;s military over a social media post about Ukrainian civilians killed in Russian attacks. The charge carries a maximum sentence of 10 years in prison.\nHer support group said lawyer Mikhail Biryukov had confirmed the decision and that an official notice closing the case had been sent by mail.\n&ldquo;This is a miracle. But it didn&rsquo;t happen on its own. You made it happen,&rdquo; the group wrote, thanking those who attended her court hearing, wrote letters in her defense and publicly supported her.\nThe group gave special thanks to hospice patients who came to court, some of whom were in…",
-      "stazeno": "2026-10-06T16:03:02.711Z",
-      "stav": 200
-    },
-    "vyrizeni": {
-      "kdy": "2026-10-06T21:09:36.335Z",
-      "duvod": "mimo-rozsah",
-      "patriK": null,
-      "poznamka": "Rusko zastavilo trestní řízení proti zakladatelce dětského hospicu Lidě Moniavové; kladná zpráva, ale jde o vnitroruskou justiční záležitost bez vazby na sledované země."
-    }
-  },
-  {
-    "id": "k-e9c3025922fb7e90",
-    "zachyceno": "2026-10-06T18:03:08.326Z",
-    "publikovano": "2026-10-06T15:27:00.000Z",
-    "zdroj": {
-      "nazev": "Ukrainska Pravda (anglicky)",
-      "url": "https://www.pravda.com.ua/eng/news/2026/10/06/8056741/",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Damaged section of Pivnichnyi Bridge in Kyiv repaired after Russian strike",
-    "titulekPuvodni": "Damaged section of Pivnichnyi Bridge in Kyiv repaired after Russian strike",
-    "shrnuti": "A section of the Pivnichnyi Bridge in Kyiv that was damaged as a result of a Russian attack on 4 October has been rebuilt.",
-    "kodZeme": "UA",
-    "zeme": "Ukrajina",
-    "kategorie": [
-      "hybridni",
-      "rusko"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "zeSite": null,
-    "shody": [
-      "attack on",
-      "russia"
-    ],
-    "naliehave": null,
-    "stav": "vyrizen",
-    "vyrez": {
-      "text": "Kyiv's Pivnichnyi Bridge: section damaged by Russian strike repaired | Ukrainska Pravda\nPhoto: hromadske\nThe section of the Pivnichnyi (Northern) Bridge damaged in an attack on 4 October has been rebuilt.\nSource: Kyiv City State Administration\nQuote: \"Experts from the Kyivavtoshliakhmist utility company have repaired the section of the Pivnichnyi Bridge that was damaged as a result of the attack on 4 October. On the damaged section, they have:\nAdvertisement:\n\r\n\r\n\r\n\r\n\r\nrebuilt the bridge structure and the road surface;\nreinforced the damaged base of the roadway;\ncovered it with a special metal plate;\nrepaired the asphalt concrete pavement.\"\nDetails: Bridge builders have also repaired the damaged structural elements that connect its parts and ensure the bridge's strength and stability.\nBackground:\nOn 3 October, a Russian jet-powered drone struck the Pivnichnyi Bridge in Kyiv, which connects the right and left banks of the Dnipro River.\nTwo people were injured as a result of the strike on the Pivnichnyi Bridge.\nOn the morning of 4 October, the Russians attacked the Pivnichnyi Bridge in Kyiv again.\nSupport Ukrainska Pravda on Patreon to help us keep…",
-      "stazeno": "2026-10-06T18:03:09.762Z",
-      "stav": 200
-    },
-    "vyrizeni": {
-      "kdy": "2026-10-06T21:09:36.335Z",
-      "duvod": "mimo-rozsah",
-      "patriK": null,
-      "poznamka": "Opravený úsek Pivnichnyj mostu v Kyjevě po ruském útoku; následné hlášení k už řešenému případu bez nové bezpečnostní události."
-    }
-  },
-  {
-    "id": "k-223518286b22aeb3",
-    "zachyceno": "2026-10-06T16:03:02.641Z",
-    "publikovano": "2026-10-06T14:53:00.000Z",
-    "zdroj": {
-      "nazev": "The Moscow Times",
-      "url": "https://www.themoscowtimes.com/2026/10/06/putin-orders-priority-rail-transit-for-russian-grain-kommersant-a93896",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Putin Orders Priority Rail Transit for Russian Grain – Kommersant",
-    "titulekPuvodni": "Putin Orders Priority Rail Transit for Russian Grain – Kommersant",
-    "shrnuti": "Despite the workarounds, market analysts warn that Baltic and Arctic ports lack the storage capacity and specialized infrastructure needed.",
-    "kodZeme": "RU",
-    "zeme": "Rusko",
-    "kategorie": [
-      "hybridni",
-      "rusko"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "zeSite": null,
-    "shody": [
-      "putin+baltic+war",
-      "russia"
-    ],
-    "naliehave": null,
-    "stav": "vyrizen",
-    "vyrez": {
-      "text": "Putin Orders Priority Rail Transit for Russian Grain – Kommersant - The Moscow Times\nSupport The Moscow Times!\nContribute today\nMy account\nSignout\n&times;\nSupport The Moscow Times!\nContribute today\nOct. 6, 2026\nJakub Maciejewski (CC BY-SA 4.0)\nPresident Vladimir Putin has ordered Russian Railways to give priority to export grain shipments across the national rail network as Ukrainian drone attacks cut off southern shipping hubs, the Kommersant newspaper reported Tuesday.\nStandard Russian Railways rules generally prioritize domestic freight and transit shipments over export goods. Now, grain trains can leapfrog other export commodities like coal on congested rail routes leading to Baltic and Arctic ports.\n&ldquo;Regarding commercial shipping in the Black Sea, the president indeed instructed the Agriculture Ministry together with other agencies to work out alternative delivery routes for domestic grain to world markets,&rdquo; Kremlin spokesman Dmitry Peskov told the publication.\nGrain has been moved into the third-highest priority category on Russia&rsquo;s railway system, which is reserved for cargo transported under direct presidential orders.\nThe shift in priorities follows a…",
-      "stazeno": "2026-10-06T16:03:02.813Z",
-      "stav": 200
-    },
-    "vyrizeni": {
-      "kdy": "2026-10-06T21:09:36.335Z",
-      "duvod": "mimo-rozsah",
-      "patriK": null,
-      "poznamka": "Putin nařídil prioritní železniční přepravu ruského obilí; vnitroruské hospodářské opatření bez vazby na sledované země."
-    }
-  },
-  {
-    "id": "k-dbd38c491f4e3eed",
-    "zachyceno": "2026-10-06T16:02:59.240Z",
-    "publikovano": "2026-10-06T14:27:15.000Z",
-    "zdroj": {
-      "nazev": "iDNES.cz — zpravodajství",
-      "url": "https://www.idnes.cz/zpravy/zahranicni/rusko-ukrajina-valka-kyjev-dron-most-ochrana-site.A261006_155921_zahranicni_dtt#utm_source=rss&utm_medium=feed&utm_campaign=zpravodaj&utm_content=main",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Kyjev natahuje na mosty protidronové sítě, očekává masivní ruský úder",
-    "titulekPuvodni": "Kyjev natahuje na mosty protidronové sítě, očekává masivní ruský úder",
-    "shrnuti": "Ukrajina začala chránit kyjevské mosty před útoky dronů. Na Severním mostě, který o víkendu zasáhly ruské bezpilotní stroje, už dělníci natahují rozsáhlé protidronové sítě. V metropoli k takovému kroku ukrajinské úřady přistoupily vůbec poprvé. Ukrajinský prezident Volodymyr Zelenskyj v úterý uvedl,",
-    "kodZeme": "UA",
-    "zeme": "Ukrajina",
-    "kategorie": [
-      "hybridni",
-      "drony",
-      "rusko"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "zeSite": null,
-    "shody": [
-      "utok na",
-      "dron+zasahl",
-      "dron",
-      "rusk"
-    ],
-    "naliehave": null,
-    "stav": "vyrizen",
-    "vyrez": {
-      "text": "Kyjev natahuje na mosty protidronové sítě - iDNES.cz \r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\niDNES.cz\n\r\n\r\n\r\nP�ihl�sit \r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nAbyste mohli pokra�ovat, pot�ebujeme v�d�t, jakou formou v�m m��eme zobrazovat reklamu \r\n\r\n\r\n\r\n\r\n\r\nV�mi zvolen� nastaven� \r\nneobsahuje souhlas se zobrazov�n�m c�len� reklamy . \r\nVyberte pros�m znovu, \r\njakou formou v�m m�me zobrazovat obsah. \r\n\r\n\r\n\r\n\r\n\r\n\r\niDNES Premium\n\r\nBez reklam\n\r\n\r\n199 K� m�s��n�\n\r\nM��ete neomezen� ��st iDNES.cz, Lidovky.cz, Expres.cz a Antiyoutuber.cz. K tomu dostanete tak� noviny a �asopisy v elektronick� podob�. To v�e bez reklam. 1\n\r\n\r\nP�edplatit\n\r\n\r\nU� m�te ��et? P�ihlaste se\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nS c�lenou reklamou\n\r\n\r\n\r\nZdarma \r\n\r\nZachov�me v�m v�e tak, jak jste zvykl� a reklamu p�izp�sob�me va�im z�jm�m. Bez omezen� si m��ete d�l ��st, p�ehr�vat videa, sout�it �i p�isp�vat do v�ech diskus�. 2\n\r\n\r\nSouhlas�m\n\r\nPodrobn� nastaven�\n\r\n\r\n\r\n\r\n\r\n\r\niDNES a reklama\n\r\nPokud vyu�ijete m�sto platby ud�len� souhlasu s reklamou (tj. souhlas s vyu�it�m cookies a dal��ch s�ov�ch identifik�tor� pro ��ely c�len� reklamy), \r\nbudou V�m zobrazov�ny v r�mci na�ich web� iDNES.cz,…",
-      "stazeno": "2026-10-06T16:03:02.919Z",
-      "stav": 200
-    },
-    "vyrizeni": {
-      "kdy": "2026-10-06T21:09:36.335Z",
-      "duvod": "neudalost",
-      "patriK": null,
-      "poznamka": "Kyjev natahuje na mosty protidronové sítě a očekává masivní ruský úder; jde z části o doložené opatření, z části o predikci budoucího útoku, kterou podle pravidla č. 3c nezveřejňujeme."
-    }
-  },
-  {
-    "id": "k-50c2452f0ee409bb",
-    "zachyceno": "2026-10-06T16:02:59.993Z",
-    "publikovano": "2026-10-06T14:23:52.000Z",
-    "zdroj": {
-      "nazev": "Euronews",
-      "url": "https://www.euronews.com/2026/10/06/lithuania-takes-further-step-towards-lifting-nuclear-weapons-ban",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Lithuania takes further step towards lifting nuclear weapons ban",
-    "titulekPuvodni": "Lithuania takes further step towards lifting nuclear weapons ban",
-    "shrnuti": "Kremlin spokesperson Dmitry Peskov said on Tuesday that Lithuania’s move, alongside broader plans to expand US and NATO military infrastructure in the region, risked further escalating tensions.",
-    "kodZeme": "LT",
-    "zeme": "Litva",
-    "kategorie": [
-      "hybridni",
-      "nato",
-      "rusko"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "zeSite": null,
-    "shody": [
-      "kreml+lithuan+nuclear",
-      "nato",
-      "kreml",
-      "kremlin"
-    ],
-    "naliehave": null,
-    "stav": "vyrizen",
-    "vyrez": {
-      "text": "Lithuania takes further step towards lifting nuclear weapons ban | Euronews\nAdvertisement\nBy&nbsp Giedre Peseckyte\nPublished on\n06/10/2026 - 16:23 GMT+2\nShare\nComments\nAdd Euronews on Google\nShare\nFacebook\nTwitter\nFlipboard\nSend\nReddit\nLinkedin\nMessenger\nTelegram\nVK\nBluesky\nThreads\nWhatsapp\nKremlin spokesperson Dmitry Peskov said on Tuesday that Lithuania’s move, alongside broader plans to expand US and NATO military infrastructure in the region, risked further escalating tensions.\nLithuania has taken a step towards removing a constitutional ban on nuclear weapons from its territory, bringing the Baltic state closer to the legal position of its neighbours as European allies debate how to strengthen NATO’s deterrence in the face of Russia.\nADVERTISEMENT\nADVERTISEMENT\nThe Lithuanian parliament, the Seimas, voted 106-18, with six abstentions, on Tuesday to advance a constitutional amendment removing a provision that bars weapons of mass destruction and foreign military bases from Lithuanian territory.\nThe change still requires a second vote after a constitutionally mandated three-month waiting period. At least 94 of the Seimas’ 141 members must back it on both occasions. The final…",
-      "stazeno": "2026-10-06T16:03:05.910Z",
-      "stav": 200
-    },
-    "vyrizeni": {
-      "kdy": "2026-10-06T21:09:36.335Z",
-      "duvod": "duplicita",
-      "patriK": null,
-      "poznamka": "Táž událost jako už podaný návrh o litevském hlasování o jaderných zbraních (i-2026-10-06-72becf367b)."
-    }
-  },
-  {
-    "id": "k-4adee1784634182b",
-    "zachyceno": "2026-10-06T16:03:02.564Z",
-    "publikovano": "2026-10-06T14:22:00.000Z",
-    "zdroj": {
-      "nazev": "Ukrainska Pravda (anglicky)",
-      "url": "https://www.pravda.com.ua/eng/news/2026/10/06/8056736/",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Ukraine becomes one of world's main targets for cyberattacks – Microsoft report",
-    "titulekPuvodni": "Ukraine becomes one of world's main targets for cyberattacks – Microsoft report",
-    "shrnuti": "Ukraine is ranked first in Europe and third in the world by the number of cyberattacks against countries, organisations and users, accounting for 4.8% of all recorded attacks in the first half of 2026.",
-    "kodZeme": "UA",
-    "zeme": "Ukrajina",
-    "kategorie": [
-      "kyber"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "zeSite": null,
-    "shody": [
-      "cyberattack",
-      "cyber"
-    ],
-    "naliehave": null,
-    "stav": "vyrizen",
-    "vyrez": {
-      "text": "Ukraine ranks 3rd globally for cyberattacks, remains prime target for Russian hackers | Ukrainska Pravda\nA hacker. Stock photo: Getty Images\nUkraine ranks first in Europe and third in the world in terms of the number of cyberattacks against countries, organisations and users – it accounts for 4.8% of all recorded attacks in the first half of 2026. Only the United States and Israel were attacked more often, according to the new Microsoft Digital Defense Report 2026 .\nSource: Ukrainska Pravda\nDetails: Unsurprisingly, Ukraine remains one of the main targets of Russian state hackers, accounting for 14% of all recorded activity. They only carried out more attacks against the United States.\nAdvertisement:\n\r\n\r\n\r\n\r\n\r\nLooking at the overall situation, the public sector is most frequently targeted by cyberattacks – government institutions and services accounted for 27% of all activity, compared to 17% in 2025. The share of phishing attacks also increased significantly, from 7% in 2025 to 23% in the first half of 2026.\n\r\n\r\n\r\n\r\n\r\nPhoto: Microsoft\r\n\r\n\r\n\r\nThe report also noted the impact of artificial intelligence (AI), which significantly reduces response times. Thanks to AI, attackers can…",
-      "stazeno": "2026-10-06T16:03:05.942Z",
-      "stav": 200
-    },
-    "vyrizeni": {
-      "kdy": "2026-10-06T21:09:36.335Z",
-      "duvod": "neudalost",
-      "patriK": null,
-      "poznamka": "Zpráva Microsoft Digital Defense Report 2026 o tom, že Ukrajina je třetím nejčastějším cílem kyberútoků ve světě; souhrnná statistika, ne zpráva o jedné konkrétní nové události."
-    }
-  },
-  {
-    "id": "k-3ddf63bca594150e",
-    "zachyceno": "2026-10-06T16:03:00.008Z",
-    "publikovano": "2026-10-06T14:05:59.000Z",
-    "zdroj": {
-      "nazev": "Euronews",
-      "url": "https://www.euronews.com/2026/10/06/two-spanish-f-18-jets-scrambled-in-romania-after-drone-alert-near-ukraine",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Two Spanish F-18 jets scrambled in Romania after drone alert near Ukraine",
-    "titulekPuvodni": "Two Spanish F-18 jets scrambled in Romania after drone alert near Ukraine",
-    "shrnuti": "Two Spanish F-18s deployed in Romania under NATO command took off at dawn after two air targets were detected near the Ukrainian border. The objects did not ultimately enter Romanian airspace and were not intercepted.",
-    "kodZeme": "RO",
-    "zeme": "Rumunsko",
-    "kategorie": [
-      "drony",
-      "nato",
-      "hranice"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "zeSite": null,
-    "shody": [
-      "scrambl",
-      "dron",
-      "drone",
-      "airspace",
-      "nato",
-      "border"
-    ],
-    "naliehave": null,
-    "stav": "vyrizen",
-    "vyrez": {
-      "text": "Two Spanish F-18 jets scrambled in Romania after drone alert near Ukraine | Euronews\nAdvertisement\nBy&nbsp Christina Thykjaer\nPublished on\n06/10/2026 - 16:05 GMT+2\nShare\nComments\nAdd Euronews on Google\nShare\nFacebook\nTwitter\nFlipboard\nSend\nReddit\nLinkedin\nMessenger\nTelegram\nVK\nBluesky\nThreads\nWhatsapp\nTwo Spanish F-18s deployed in Romania under NATO command took off at dawn after two air targets were detected near the Ukrainian border. The objects did not ultimately enter Romanian airspace and were not intercepted.\nTwo Spanish F-18 fighter jets deployed in Romania under NATO command took off in the early hours of Tuesday after radar detected two aerial objects near the border between Romania and Ukraine, Romania's Ministry of Defence reported.\nADVERTISEMENT\nADVERTISEMENT\nThe Spanish aircraft were scrambled from the Mihail Kogălniceanu air base, near the city of Constanta in the south-east of the country, after surveillance systems detected the two objects in Ukrainian airspace, close to the river border with Romania.\nThe objects did not enter Romanian airspace, so the Spanish jets did not have to intercept or shoot them down, according to the Romanian authorities.\nRelated\nEU adds…",
-      "stazeno": "2026-10-06T16:03:05.976Z",
-      "stav": 200
-    },
-    "vyrizeni": {
-      "kdy": "2026-10-06T21:09:36.335Z",
-      "duvod": "duplicita",
-      "patriK": null,
-      "poznamka": "Táž událost jako už dříve rozhodnuto — dva stíhače F-18 vzlétly v Rumunsku po dronovém poplachu u ukrajinské hranice (Tulcea), teď s upřesněním, že šlo o španělské letouny."
-    }
-  },
-  {
-    "id": "k-0b80140abd711657",
-    "zachyceno": "2026-10-06T14:03:30.891Z",
-    "publikovano": "2026-10-06T14:00:30.000Z",
-    "zdroj": {
-      "nazev": "Seznam Zprávy",
-      "url": "https://www.seznamzpravy.cz/clanek/zahranicni-video-ukrajina-vyuziva-k-sestrelovani-dronu-roboticke-veze-s-ai-316867",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Video: Ukrajina využívá k sestřelování dronů robotické věže s AI",
-    "titulekPuvodni": "Video: Ukrajina využívá k sestřelování dronů robotické věže s AI",
-    "shrnuti": "V Kyjevě úřady instalovaly nejméně 12 palebných systémů a dalších osm bude v Kyjevské oblasti.",
-    "kodZeme": "UA",
-    "zeme": "Ukrajina",
-    "kategorie": [
-      "drony"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "zeSite": null,
-    "shody": [
-      "sestrel",
-      "dron"
-    ],
-    "naliehave": null,
-    "stav": "vyrizen",
-    "vyrez": {
-      "text": "Video: Ukrajina využívá k sestřelování dronů robotické věže s AI - Seznam Zprávy\nZobrazení snímku 1 z 0\nHlavní obsah\nVideo: Ukrajina využívá k sestřelování dronů robotické věže s AI\nSeznam Zprávy\neBook\nSdílet\nBez komentáře: Ukrajinské robotické střelecké věže, které k zaměřování cílů využívají prvky umělé inteligence (AI) a strojového vidění. Video: facebook/kpszsu\n16:00\nV Kyjevě úřady instalovaly nejméně 12 palebných systémů a dalších osm bude v Kyjevské oblasti.\nČlánek\nUkrajina při obraně před ruskými drony s proudovým pohonem začala používat robotické střelecké věže, které k zaměřování cílů využívají prvky umělé inteligence (AI) a strojového vidění, napsaly servery The Kyiv Post a  The Kyiv Independent .\nPrezident Volodymyr Zelenskyj už v neděli podle agentury Ukrinform sdělil, že v Kyjevě úřady instalovaly nejméně 12 střeleckých věží a dalších osm bude v Kyjevské oblasti.\nPodle mluvčího ukrajinského letectva Jurije Ihnata Ukrajinci instalují tyto věže například na mostech a robotické zbraně už mají za sebou první úspěšné sestřely ruských proudových dronů.\n„Sám jsem byl velký skeptik. Říkal jsem si, jak je to možné,“ přiznal v pondělním televizním vystoupení. Dosah systémů je…",
-      "stazeno": "2026-10-06T14:03:34.708Z",
-      "stav": 200
-    },
-    "vyrizeni": {
-      "kdy": "2026-10-06T16:01:14.463Z",
-      "duvod": "mimo-rozsah",
-      "patriK": null,
-      "poznamka": "Video o ukrajinských robotických věžích proti dronům; vojensko-technická zpráva uvnitř Ukrajiny bez následku pro sledované země."
-    }
-  },
-  {
-    "id": "k-562dc816539357a8",
-    "zachyceno": "2026-10-06T14:03:30.964Z",
-    "publikovano": "2026-10-06T13:51:00.000Z",
-    "zdroj": {
-      "nazev": "ČTK — České noviny",
-      "url": "https://www.ceskenoviny.cz/zpravy/rusko-pripravuje-dalsi-masivni-utok-na-ukrajinu-uvedl-zelenskyj/2883714?utm_source=rss&utm_medium=feed",
-      "typ": "wire",
-      "primarni": false
-    },
-    "titulek": "Rusko připravuje další masivní útok na Ukrajinu, uvedl Zelenskyj",
-    "titulekPuvodni": "Rusko připravuje další masivní útok na Ukrajinu, uvedl Zelenskyj",
-    "shrnuti": "Kyjev - Ukrajinský prezident Volodymyr Zelenskyj dnes uvedl , že Rusko připravuje další masivní útok na Ukrajinu. Vyplývá to podle něj z informací ukrajinské rozvědky....",
-    "kodZeme": "UA",
-    "zeme": "Ukrajina",
-    "kategorie": [
-      "hybridni",
-      "rusko"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "zeSite": null,
-    "shody": [
-      "utok na",
-      "rusk"
-    ],
-    "naliehave": null,
-    "stav": "vyrizen",
-    "vyrez": {
-      "text": "Rusko připravuje další masivní útok na Ukrajinu, uvedl Zelenskyj | ČeskéNoviny.cz \r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nPřejít k obsahu \r\n| \r\nPřejít k hlavnímu menu \r\n| \r\nPřejít k vyhledávání \r\n\r\n\r\n\r\n\r\n\r\n\r\nČeské noviny \r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nMenu \r\n\r\n\r\n\r\n\r\n\r\n\r\nÚvod \r\n\r\n\r\nČR\n\r\nSvět\n\r\nEkonomika\n\r\nKultura\n\r\nSport\n\r\nMagazín\n\r\nSpeciál\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nKonflikt na Blízkém Východě\n\r\n\r\n\r\nInvaze na Ukrajinu\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nRusko připravuje další masivní útok na Ukrajinu, uvedl Zelenskyj\n\r\n\r\n\r\n\r\n\r\n\r\nKomerční prezentace Aktual.: 6.10.2026 15:51 \r\nVydáno: 6.10.2026, 15:51 \r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nIlustrační foto - Ukrajinští hasiči v Záporoží zasahují u požáru vozidel po ruském úderu na čerpací stanici, 6. října 2026. \r\nAP/Ukrainian Emergency Service \r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nKyjev - Ukrajinský prezident Volodymyr Zelenskyj dnes uvedl , že Rusko připravuje další masivní útok na Ukrajinu. Vyplývá to podle něj z informací ukrajinské rozvědky.\n\r\n\r\n\r\n\r\n\r\nReklama \r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\"Dnes jsme obdrželi aktualizované…",
-      "stazeno": "2026-10-06T14:03:35.598Z",
-      "stav": 200
-    },
-    "vyrizeni": {
-      "kdy": "2026-10-06T16:01:14.463Z",
-      "duvod": "neudalost",
-      "patriK": null,
-      "poznamka": "Zelenskyj varoval před dalším masivním ruským útokem; jde o predikci budoucího útoku, kterou podle pravidla č. 3c nezveřejňujeme."
-    }
-  },
-  {
-    "id": "k-b60b7502132ee8c5",
-    "zachyceno": "2026-10-06T14:03:30.851Z",
-    "publikovano": "2026-10-06T13:23:00.000Z",
-    "zdroj": {
-      "nazev": "Novinky.cz",
-      "url": "https://www.novinky.cz/clanek/cestovani-v-italii-na-vikend-otevrou-stovky-bezne-nepristupnych-mist-40600786",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "V Itálii na víkend otevřou stovky běžně nepřístupných míst",
-    "titulekPuvodni": "V Itálii na víkend otevřou stovky běžně nepřístupných míst",
-    "shrnuti": "Pokud jste doteď nevěděli, jak naložit s příštím víkendem a máte trochu impulzívní náturu, zbystřete. Platí to koneckonců i pro všechny, kteří mají cestu do Itálie již nějakou dobu zamluvenou a jen netušili, že si vybrali velmi dobrý víkend. Budete mít totiž příležitost navštívit skutečně výjimečná ",
-    "kodZeme": "IT",
-    "zeme": "Itálie",
-    "kategorie": [
-      "sabotaz"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "zeSite": null,
-    "shody": [
-      "naloz"
-    ],
-    "naliehave": null,
-    "stav": "vyrizen",
-    "vyrez": {
-      "text": "V Itálii na víkend otevřou stovky běžně nepřístupných míst - Novinky\nZobrazení snímku 1 z 0\nzáhlaví\nHlavní obsah\nV Itálii na víkend otevřou stovky běžně nepřístupných míst\nTaťána Kynčlová\n2:49\nChcete-li článek poslouchat, přihlaste se\neBook\nSdílet\nDnes 6. 10., 15:23\nPokud jste doteď nevěděli, jak naložit s příštím víkendem a máte trochu impulzívní náturu, zbystřete. Platí to koneckonců i pro všechny, kteří mají cestu do Itálie již nějakou dobu zamluvenou a jen netušili, že si vybrali velmi dobrý víkend. Budete mít totiž příležitost navštívit skutečně výjimečná místa, kam se běžně nepodíváte.\nFoto: Shutterstock\nStarobylé jeskyně v Palment Urban Parku budou o víkendu přístupné turistům.\nČlánek\nO nadcházejícím víkendu, tedy 10. až 11. října, se koná 15. ročník akce Podzimní dny FAI (Giornate FAI d’Autunno), během kterých bude ve více než 350 italských městech veřejnosti zpřístupněno na 700 míst. O zajímavé události informoval italský zpravodajský web la Repubblica s tím, že značná část lokalit je návštěvníkům běžně nepřístupná.\nLetos se projekt primárně zaměřuje na malé rodinné podniky, řemesla a tradiční postupy. Desítky míst lidem ukážou i své výrobní postupy a poodkryjí své…",
-      "stazeno": "2026-10-06T14:03:36.525Z",
-      "stav": 200
-    },
-    "vyrizeni": {
-      "kdy": "2026-10-06T16:01:14.463Z",
-      "duvod": "mimo-rozsah",
-      "patriK": null,
-      "poznamka": "Přehled míst otevřených v Itálii na víkend; cestovní/turistický obsah bez bezpečnostního rozměru."
-    }
-  },
-  {
-    "id": "k-4540ac893cf05b6d",
-    "zachyceno": "2026-10-06T14:03:34.590Z",
-    "publikovano": "2026-10-06T13:18:27.000Z",
-    "zdroj": {
-      "nazev": "Meduza (anglicky)",
-      "url": "https://meduza.io/en/news/2026/10/06/former-german-spy-chief-arrested-on-espionage-charges-he-made-at-least-seven-trips-to-russia-after-leaving-office",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Former German spy chief arrested on espionage charges. He made at least seven trips to Russia after leaving office.",
-    "titulekPuvodni": "Former German spy chief arrested on espionage charges. He made at least seven trips to Russia after leaving office.",
-    "shrnuti": "Germany’s Federal Prosecutor’s Office said it detained August Hanning, the former head of the country’s Federal Intelligence Service (BND), on suspicion of espionage and attempted treason. His former bureau chief, Manfred D., was detained along with him.",
-    "kodZeme": "DE",
-    "zeme": "Německo",
-    "kategorie": [
-      "zpravodajske",
-      "rusko"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "zeSite": null,
-    "shody": [
-      "arrested+spy",
-      "espionage",
-      "russia"
-    ],
-    "naliehave": null,
-    "stav": "vyrizen",
-    "vyrez": {
-      "text": "Former German spy chief arrested on espionage charges. He made at least seven trips to Russia after leaving office. — Meduza\nSkip to main content\nFormer German spy chief arrested on espionage charges. He made at least seven trips to Russia after leaving office.\nOctober 6, 2026, 1:18 pm\nSource: Germany's Federal Prosecutor's Office\nGermany’s Federal Prosecutor’s Office said it detained August Hanning, the former head of the country’s Federal Intelligence Service (BND), on suspicion of espionage and attempted treason. His former bureau chief, Manfred D., was detained along with him.\nHanning led the BND from December 1998 to November 2005. Investigators said that in 2010, he arranged for Manfred D. to pass him classified intelligence agency information in exchange for money. By 2022, Hanning had obtained roughly 2,000 internal BND documents, including materials on Iran’s nuclear program and the Russian armed forces.\nIn one instance, he used the documents to prepare an analytical report for an officer of a foreign intelligence service, though it is not clear which country was involved. Süddeutsche Zeitung, NDR, and WDR reported that this episode was not connected to Russia.\nHanning…",
-      "stazeno": "2026-10-06T14:03:37.411Z",
-      "stav": 200
-    },
-    "vyrizeni": {
-      "kdy": "2026-10-06T16:01:14.463Z",
-      "duvod": "zdroj-navrhu",
-      "patriK": null,
-      "poznamka": null
-    }
-  },
-  {
-    "id": "k-1703017936a68b04",
-    "zachyceno": "2026-10-06T14:03:31.635Z",
-    "publikovano": "2026-10-06T13:02:11.000Z",
-    "zdroj": {
-      "nazev": "Politico Europe",
-      "url": "https://www.politico.eu/article/police-arrest-another-british-man-in-raf-fairford-investigation/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Police arrest another British man in RAF Fairford investigation",
-    "titulekPuvodni": "Police arrest another British man in RAF Fairford investigation",
-    "shrnuti": "The arrest is the seventh in connection to the investigation into a security incident at the airbase, which led to the U.S. withdrawing B-1 bombers.",
-    "kodZeme": "GB",
-    "zeme": "Spojené království",
-    "kategorie": [
-      "sabotaz"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "zeSite": null,
-    "shody": [
-      "bomb"
-    ],
-    "naliehave": null,
-    "stav": "vyrizen",
-    "vyrez": {
-      "text": "Police arrest another British man in RAF Fairford investigation – POLITICO\nSkip to main content\nAdvertisement\nLONDON — A seventh man has been arrested as part of an investigation into the suspected terror plot around the RAF Fairford airbase , Britain’s Counter Terrorism Policing said on Tuesday.\nThe statement said that a 22-year-old British man was arrested on suspicion of the preparation of terrorist acts under Section 5 of the Terrorism Act 2006.\nThis is the seventh arrest in the live investigation into events surrounding a suspected terror plot near the RAF Fairford airbase, which has been used by the United States to conduct defensive strikes against Iran.\nAdvertisement\nFive British men were arrested on Sunday, 27 September, on suspicion of offences under the Explosives Act and preparation of a terrorist act, after police were alerted to three suspicious vehicles near the airbase. No improvised explosive devices were found in the vehicles, but investigators recovered a quantity of petrol.\nOn Thursday, Counter Terrorism Policing arrested a 25-year-old British-Iranian man for the same offense as part of investigations. All six men were later released on bail.\nOn Sunday, the…",
-      "stazeno": "2026-10-06T14:03:37.789Z",
-      "stav": 200
-    },
-    "vyrizeni": {
-      "kdy": "2026-10-06T16:01:14.463Z",
-      "duvod": "zdroj-navrhu",
-      "patriK": null,
-      "poznamka": null
-    }
-  },
-  {
-    "id": "k-4e103fa2768c5742",
-    "zachyceno": "2026-10-06T14:03:31.619Z",
-    "publikovano": "2026-10-06T12:52:44.000Z",
-    "zdroj": {
-      "nazev": "The Guardian — World",
-      "url": "https://www.theguardian.com/uk-news/2026/oct/06/british-man-arrested-over-suspected-raf-fairford-terrorism-plot",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "British man arrested over suspected RAF Fairford terrorism plot",
-    "titulekPuvodni": "British man arrested over suspected RAF Fairford terrorism plot",
-    "shrnuti": "Counter-terrorism policing says 22-year-old detained in London on suspicion of terrorism offences A seventh man has been arrested in London on suspicion of terrorism offences related to the suspected RAF Fairford terrorism plot, police have said. The 22-year-old British national was arrested in West",
-    "kodZeme": "GB",
-    "zeme": "Spojené království",
-    "kategorie": [
-      "zpravodajske"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "zeSite": null,
-    "shody": [
-      "arrested+terror"
-    ],
-    "naliehave": null,
-    "stav": "vyrizen",
-    "vyrez": {
-      "text": "British man arrested over suspected RAF Fairford terrorism plot | UK news | The Guardian\nSkip to main content Skip to navigation\nA police roadblock outside RAF Fairford base. Photograph: Ben Stansall/AFP/Getty Images\nView image in fullscreen\nA police roadblock outside RAF Fairford base. Photograph: Ben Stansall/AFP/Getty Images\nBritish man arrested over suspected RAF Fairford terrorism plot\nCounter-terrorism policing says 22-year-old detained in London on suspicion of terrorism offences\nA seventh man has been arrested in London on suspicion of terrorism offences related to the suspected RAF Fairford terrorism plot, police have said.\nThe 22-year-old British national was arrested in Westminster, central London, on suspicion of preparation of terrorist acts under section 5 of the Terrorism Act 2006, counter-terrorism policing said.\nFive men in their 20s were arrested in the village of Whelford, Gloucestershire, outside the RAF base in the early hours of 27 September after police were alerted to suspicious vans in the area. They were later released on bail.\nOn Thursday, a 25-year-old dual UK-Iranian national was arrested in Westminster on suspicion of terrorism offences. He was…",
-      "stazeno": "2026-10-06T14:03:37.980Z",
-      "stav": 200
-    },
-    "vyrizeni": {
-      "kdy": "2026-10-06T16:01:14.463Z",
-      "duvod": "zdroj-navrhu",
-      "patriK": null,
-      "poznamka": null
-    }
-  },
-  {
-    "id": "k-b09b77fe4779697f",
-    "zachyceno": "2026-10-06T14:03:32.305Z",
-    "publikovano": "2026-10-06T12:30:00.000Z",
-    "zdroj": {
-      "nazev": "Aktuality.sk",
-      "url": "https://www.aktuality.sk/clanok/Udt3hSn/ficov-mytus-o-neutralite-vystavi-nas-nahych-do-vetra-a-prinesie-povinnu-vojensku-sluzbu-varuje-exminister-wlachovsky-videopodcast/",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Ficov mýtus o neutralite: Vystaví nás nahých do vetra a prinesie povinnú vojenskú službu, varuje exminister Wlachovský (videopodcast)",
-    "titulekPuvodni": "Ficov mýtus o neutralite: Vystaví nás nahých do vetra a prinesie povinnú vojenskú službu, varuje exminister Wlachovský (videopodcast)",
-    "shrnuti": "„Dnes vo mne konanie a výroky premiéra vyvolávajú dôvodnú obavu, že nás ťahá do putinského vojnového Ruska. Spochybňovanie našich spojencov v čase najväčšieho konfliktu od druhej svetovej vojny nie je suverenita, ale hazard s bezpečnosťou Slovenska“ - Miroslav Wlachovský, bývalý šéf slovenskej diplo",
-    "kodZeme": "SK",
-    "zeme": "Slovensko",
-    "kategorie": [
-      "hybridni",
-      "rusko"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "zeSite": null,
-    "shody": [
-      "putin+nemeck+konflikt",
-      "rusk"
-    ],
-    "naliehave": null,
-    "stav": "vyrizen",
-    "vyrez": {
-      "text": "Ficov mýtus o neutralite: Vystaví nás nahých do vetra a prinesie povinnú vojenskú službu, varuje exminister Wlachovský (videopodcast) | Aktuality.sk\nAktuality\nŠport\nDiva\nNajmama\nŽivé\nRecepty\nDobrú chuť\nSlovník\n22 °C -\nBratislava\nutorok 6. 10.\n6. 10.\nNatália\nAktuality Nahlas dnes 06. okt 2026 o 14:30\n8 min. čítania\nPridať do Google\nFicov mýtus o neutralite: Vystaví nás nahých do vetra a prinesie povinnú vojenskú službu, varuje exminister Wlachovský (videopodcast)\n4 fotky v galérii\nRóbert Fico a Vladimír Putin v Pekingu Zdroj: reuters\nJaroslav Barborák Redaktor, moderátor\nUložiť článok\n„Dnes vo mne konanie a výroky premiéra vyvolávajú dôvodnú obavu, že nás ťahá do putinského vojnového Ruska. Spochybňovanie našich spojencov v čase najväčšieho konfliktu od druhej svetovej vojny nie je suverenita, ale hazard s bezpečnosťou Slovenska“ - Miroslav Wlachovský, bývalý šéf slovenskej diplomacie. Reaguje na návštevu šéfa nemeckej diplomacie Johanna Wadephula.\nVideo sa načítava...\n📌 V tomto rozhovore sa dozviete:\nPrečo prišiel šéf nemeckej diplomacie do Bratislavy s nezaobaleným varovaním pred hrozbou z Moskvy.\nAko Berlín vníma spochybňovanie kolektívnej obrany NATO a článku 5 zo strany…",
-      "stazeno": "2026-10-06T14:03:37.997Z",
-      "stav": 200
-    },
-    "vyrizeni": {
-      "kdy": "2026-10-06T16:01:14.463Z",
-      "duvod": "neudalost",
-      "patriK": null,
-      "poznamka": "Komentář/videopodcast o slovenské neutralitě a kritice Fica exministrem Wlachovským; názorový text, ne zpráva o konkrétní nové události."
     }
   }
 ]
