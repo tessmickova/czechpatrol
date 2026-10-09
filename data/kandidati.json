@@ -70,6 +70,43 @@
     }
   },
   {
+    "id": "k-787d5d842b9b51e2",
+    "zachyceno": "2026-10-09T20:04:00.671Z",
+    "publikovano": "2026-10-09T18:32:00.000Z",
+    "zdroj": {
+      "nazev": "Ukrainska Pravda (anglicky)",
+      "url": "https://www.pravda.com.ua/eng/news/2026/10/09/8057288/",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Ukrainian foreign ministry denies Belarusian claims of drone attack on lorry in Russia",
+    "titulekPuvodni": "Ukrainian foreign ministry denies Belarusian claims of drone attack on lorry in Russia",
+    "shrnuti": "Ukraine has rejected Belarusian accusations of an intentional drone strike in Bryansk Oblast, criticising Minsk for aiding Russian aggression and escalating tensions.",
+    "kodZeme": "UA",
+    "zeme": "Ukrajina",
+    "kategorie": [
+      "hybridni",
+      "drony",
+      "rusko"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "attack on",
+      "dron",
+      "drone",
+      "russia"
+    ],
+    "naliehave": null,
+    "stav": "ceka",
+    "vyrez": {
+      "text": "Ukraine dismisses Minsk claims over alleged drone strike on lorry in Russia | Ukrainska Pravda\nPhoto: Ukraine's Ministry of Foreign Affairs\nUkraine's Ministry of Foreign Affairs has lodged a protest over the summoning of the Ukrainian chargé d'affaires in Belarus to the Foreign Ministry in Minsk and claims by Belarus that a Ukrainian drone attacked a Belarusian lorry in Russia's Bryansk Oblast.\nSource: European Pravda, citing a statement by the spokesperson for Ukraine's Ministry of Foreign Affairs\nDetails: The spokesperson emphasised that there is no justification for holding Ukraine responsible without providing convincing evidence of its involvement in the incident with the lorry in Bryansk Oblast.\nAdvertisement:\n\r\n\r\n\r\n\r\n\r\nQuote from the Ukrainian Foreign Ministry: \"Minsk's public accusations against Ukraine are accompanied by rhetoric about the alleged deliberate dragging of Belarus into the conflict and threats of 'appropriate measures in response'. We reject such absurd accusations from a country that is an accomplice to the crime of aggression against Ukraine and provides Russia with extensive assistance in its criminal war of conquest against our country.\"\nDetails: The…",
+      "stazeno": "2026-10-09T20:04:00.755Z",
+      "stav": 200
+    }
+  },
+  {
     "id": "k-a1837ec5ac5f6e22",
     "zachyceno": "2026-10-09T19:25:10.080Z",
     "publikovano": "2026-10-09T18:11:34.000Z",
@@ -11288,46 +11325,6 @@
       "duvod": "neudalost",
       "patriK": null,
       "poznamka": "Francie testovala novou verzi mezikontinentální balistické střely M51 bez jaderné hlavice za osobní přítomnosti prezidenta Macrona; jde o rutinní ověření důvěryhodnosti odstrašení, ne o reakci na konkrétní novou hybridní hrozbu."
-    }
-  },
-  {
-    "id": "k-420dd7852b418d6c",
-    "zachyceno": "2026-10-06T16:03:02.638Z",
-    "publikovano": "2026-10-06T15:36:00.000Z",
-    "zdroj": {
-      "nazev": "The Moscow Times",
-      "url": "https://www.themoscowtimes.com/2026/10/06/russia-drops-criminal-case-against-childrens-hospice-founder-lida-moniava-a93898",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Russia Drops Criminal Case Against Children’s Hospice Founder Lida Moniava",
-    "titulekPuvodni": "Russia Drops Criminal Case Against Children’s Hospice Founder Lida Moniava",
-    "shrnuti": "Moniava had been charged with spreading “false information” about Russia’s army for a post about Ukrainian civilians killed in Russian attacks.",
-    "kodZeme": "UA",
-    "zeme": "Ukrajina",
-    "kategorie": [
-      "zpravodajske",
-      "rusko"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "zeSite": null,
-    "shody": [
-      "charged with+russia",
-      "russia"
-    ],
-    "naliehave": null,
-    "stav": "vyrizen",
-    "vyrez": {
-      "text": "Russia Drops Criminal Case Against Children’s Hospice Founder Lida Moniava - The Moscow Times\nSupport The Moscow Times!\nContribute today\nMy account\nSignout\n&times;\nSupport The Moscow Times!\nContribute today\nOct. 6, 2026\nLida Moniava.\nfreelidamoniava / Telegram\nRussian investigators have dropped a criminal case against Lida Moniava, a prominent advocate for critically ill children&rsquo;s care, after finding no grounds for prosecution, her supporters said Tuesday, citing her lawyer.\nMoniava was arrested on Sept. 2 and charged with spreading &ldquo;false information&rdquo; about Russia&rsquo;s military over a social media post about Ukrainian civilians killed in Russian attacks. The charge carries a maximum sentence of 10 years in prison.\nHer support group said lawyer Mikhail Biryukov had confirmed the decision and that an official notice closing the case had been sent by mail.\n&ldquo;This is a miracle. But it didn&rsquo;t happen on its own. You made it happen,&rdquo; the group wrote, thanking those who attended her court hearing, wrote letters in her defense and publicly supported her.\nThe group gave special thanks to hospice patients who came to court, some of whom were in…",
-      "stazeno": "2026-10-06T16:03:02.711Z",
-      "stav": 200
-    },
-    "vyrizeni": {
-      "kdy": "2026-10-06T21:09:36.335Z",
-      "duvod": "mimo-rozsah",
-      "patriK": null,
-      "poznamka": "Rusko zastavilo trestní řízení proti zakladatelce dětského hospicu Lidě Moniavové; kladná zpráva, ale jde o vnitroruskou justiční záležitost bez vazby na sledované země."
     }
   }
 ]
