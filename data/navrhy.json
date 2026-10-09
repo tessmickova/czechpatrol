@@ -1832,5 +1832,162 @@
     "aiZpracovano": true,
     "lidskyOvereno": false,
     "archivniZaznam": false
+  },
+  {
+    "kam": "zaznam",
+    "pripravil": "patrol",
+    "pripraveno": "2026-10-09T17:11:58.398Z",
+    "id": "i-2026-10-09-7a2d4d7970",
+    "slug": "me-7a2d4d7970",
+    "titulek": "Černá Hora vyhostila zakladatele ruského provalečného Telegram kanálu Rybar Michaila Zvinčuka a čtyři spolupracovníky; úřady mluví o „potenciálně nebezpečné činnosti“",
+    "kratkyTitulek": "Černá Hora vyhostila zakladatele ruského provalečného Telegram kanálu Rybar Michaila Zvinčuka a čtyři spolupracovníky; úřady mluví o „potenciálně nebezpečné činnosti“",
+    "zeme": "Černá Hora",
+    "kodZeme": "ME",
+    "kategorie": [
+      "zpravodajske",
+      "nato",
+      "rusko"
+    ],
+    "datumUdalosti": "2026-10-09T00:00:00Z",
+    "datumZjisteni": "2026-10-09T00:00:00Z",
+    "aktualizovano": "2026-10-09T17:11:58.398Z",
+    "zavaznost": "Y2",
+    "jistota": "vysoka",
+    "stav": "bez-vysetrovani",
+    "atribuce": "neznama",
+    "puvodce": "neznamy",
+    "druh": "pripad",
+    "fakta": [
+      "Černohorská policie 9. 10. 2026 zadržela Michaila Zvinčuka, zakladatele ruského pro-válečného Telegram kanálu Rybar (1,5 milionu odběratelů), spolu s manželkou Valerií Zvinčukovou a třemi dalšími ruskými občany spojenými s kanálem.",
+      "Podle Balkan Insight policie podezření popsala jako „malicious political meddling“ v Černé Hoře; kanál Rybar tvrdil, že skupina do země přijela natáčet v klášteře Cetinje.",
+      "Černohorské úřady je týž den vyhostily; podle Meduzy to zdůvodnily tím, že „zabránily potenciálně nebezpečné činnosti těchto osob v Černé Hoře“. Zvinčuk je na sankčním seznamu EU — do země se podle vlastních slov dostal kvůli chybě pohraničního hlídače."
+    ],
+    "neznameho": [
+      "Co konkrétně bylo při zásahu zabaveno — otevřené zdroje to neuvádějí.",
+      "Jak dlouho byli zadrženi před vyhoštěním a v čem přesně mělo spočívat „nebezpečné jednání“."
+    ],
+    "vyznam": "",
+    "eskalacniSpousteče": [],
+    "deeskalacniSignaly": [],
+    "zdroje": [
+      {
+        "nazev": "Balkan Insight — Montenegro Detains Co-Founders of Pro-Russian Telegram Channel",
+        "url": "https://balkaninsight.com/2026/10/09/montenegro-detains-co-founders-of-pro-russian-telegram-channel/bi/",
+        "typ": "media",
+        "publikovano": "2026-10-09T00:00:00Z",
+        "primarni": false,
+        "jazyk": "en"
+      },
+      {
+        "nazev": "Meduza (anglicky) — Montenegro expels founder of Russian pro-war Telegram channel Rybar, citing 'potentially dangerous' activities",
+        "url": "https://meduza.io/en/news/2026/10/09/montenegro-expels-founder-of-russian-pro-war-telegram-channel-rybar-citing-potentially-dangerous-activities",
+        "typ": "media",
+        "publikovano": "2026-10-09T00:00:00Z",
+        "primarni": false,
+        "jazyk": "en"
+      },
+      {
+        "nazev": "The Guardian — Pro-Kremlin Russian military blogger Mikhail Zvinchuk arrested in Montenegro",
+        "url": "https://www.theguardian.com/world/2026/oct/09/russian-military-blogger-mikhail-zvinchuk-rybar-arrested-montenegro",
+        "typ": "media",
+        "publikovano": "2026-10-09T00:00:00Z",
+        "primarni": false,
+        "jazyk": "en"
+      }
+    ],
+    "souvisejici": [],
+    "historie": [
+      {
+        "kdy": "2026-10-09T00:00:00Z",
+        "text": "Zachyceno automatickým sběrem, druhý zdroj doložen před zařazením do fronty.",
+        "novySignal": true
+      }
+    ],
+    "novy": true,
+    "zapocitanoTyden": "2026-10-09",
+    "aiZpracovano": true,
+    "lidskyOvereno": false,
+    "archivniZaznam": false,
+    "dopadNaCr": {
+      "stav": "zadny",
+      "procRelevantni": "Členský stát NATO vyhostil zakladatele jednoho z nejsledovanějších ruských pro-válečných propagandistických kanálů; ukazuje, že i menší spojenecké země aktivně jednají proti osobám na sankčním seznamu EU.",
+      "dopad": "Pro lidi v Česku ze zprávy dnes neplyne žádné omezení.",
+      "sledujeme": "Co konkrétně úřady zjistily o „potenciálně nebezpečné činnosti“ a zda Rusko na vyhoštění reaguje.",
+      "overeno": "2026-10-09"
+    }
+  },
+  {
+    "kam": "zaznam",
+    "pripravil": "patrol",
+    "pripraveno": "2026-10-09T17:11:58.398Z",
+    "id": "i-2026-10-08-29063cafa3",
+    "slug": "at-29063cafa3",
+    "titulek": "Rakousko: policie krátce zadržela dva ukrajinské muže — novináře Ukrajinské pravdy Mychajla Tkače a kameramana — pro podezření z činnosti pro cizí vojenskou zpravodajskou službu; podezření se podle prokuratury nepotvrdilo",
+    "kratkyTitulek": "Rakousko: policie krátce zadržela dva ukrajinské muže — novináře Ukrajinské pravdy Mychajla Tkače a kameramana — pro podezření z činnosti pro cizí vojenskou zpravodajskou službu; podezření se podle prokuratury nepotvrdilo",
+    "zeme": "Rakousko",
+    "kodZeme": "AT",
+    "kategorie": [
+      "zpravodajske",
+      "pravo"
+    ],
+    "datumUdalosti": "2026-10-08T00:00:00Z",
+    "datumZjisteni": "2026-10-09T00:00:00Z",
+    "aktualizovano": "2026-10-09T17:11:58.398Z",
+    "zavaznost": "Y1",
+    "jistota": "stredni",
+    "stav": "bez-vysetrovani",
+    "atribuce": "neznama",
+    "puvodce": "neznamy",
+    "druh": "pripad",
+    "fakta": [
+      "Rakouská policie ve čtvrtek 8. 10. 2026 ve Vídni krátce zadržela investigativního novináře Ukrajinské pravdy Mychajla Tkače a kameramana Jaroslava Bondarenka pro podezření z činnosti pro cizí vojenskou zpravodajskou službu k újmě Rakouska (§ 256 rakouského trestního zákoníku); Tkač byl propuštěn po 12 hodinách, v pátek v 4:00.",
+      "Podle Ukrajinské pravdy byli ve Vídni na zadání redakce a sledovali uprchlého bývalého nejvyššího žalobce Ruslana Kravčenka; Tkač řekl, že „byli zadržováni jako teroristé“. Bondarenko během zadržení utrpěl zranění a zůstal v péči nemocnice.",
+      "Mluvčí vídeňské státní prokuratury uvedla, že podezření se nepotvrdilo a že obdobné (rovněž nepotvrzené) podezření vzniklo i proti dalším dvěma lidem v samostatných vyšetřováních; rakouský státní sekretář Jörg Leichtfried k probíhajícímu vyšetřování odmítl dál komentovat."
+    ],
+    "neznameho": [
+      "Totožnost dalších dvou lidí, u kterých podle ORF.at vzniklo obdobné nepotvrzené podezření v samostatných vyšetřováních.",
+      "Přesná povaha zranění kameramana Bondarenka a okolnosti, za kterých k němu došlo."
+    ],
+    "vyznam": "",
+    "eskalacniSpousteče": [],
+    "deeskalacniSignaly": [],
+    "zdroje": [
+      {
+        "nazev": "Ukrainska Pravda (anglicky) — UP journalist Mykhailo Tkach was detained in Vienna on \"espionage\" charges",
+        "url": "https://www.pravda.com.ua/eng/news/2026/10/09/8057219/",
+        "typ": "media",
+        "publikovano": "2026-10-09T00:00:00Z",
+        "primarni": false,
+        "jazyk": "en"
+      },
+      {
+        "nazev": "ORF Wien — Spionageverdacht: Zwei Ukrainer in Wien in Haft",
+        "url": "https://wien.orf.at/stories/3374579/",
+        "typ": "media",
+        "publikovano": "2026-10-09T00:00:00Z",
+        "primarni": false,
+        "jazyk": "de"
+      }
+    ],
+    "souvisejici": [],
+    "historie": [
+      {
+        "kdy": "2026-10-08T00:00:00Z",
+        "text": "Zachyceno automatickým sběrem, druhý zdroj doložen před zařazením do fronty.",
+        "novySignal": true
+      }
+    ],
+    "novy": true,
+    "zapocitanoTyden": "2026-10-08",
+    "aiZpracovano": true,
+    "lidskyOvereno": false,
+    "archivniZaznam": false,
+    "dopadNaCr": {
+      "stav": "zadny",
+      "procRelevantni": "Krátké zadržení ukrajinských novinářů na podezření ze špionáže v členském státě EU a NATO, s podezřením později prokuraturou nepotvrzeným; dotýká se svobody tisku i klimatu podezírání kolem špionáže v Evropě.",
+      "dopad": "Pro lidi v Česku ze zprávy dnes neplyne žádné omezení.",
+      "sledujeme": "Zda vyšetřování upřesní, oč u dalších dvou zmíněných podezřelých šlo, a jak se zranil kameraman Bondarenko.",
+      "overeno": "2026-10-09"
+    }
   }
 ]
