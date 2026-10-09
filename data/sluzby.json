@@ -1,5 +1,5 @@
 {
-  "aktualizovano": "2026-10-09T20:04:00.820Z",
+  "aktualizovano": "2026-10-09T22:03:40.128Z",
   "stavy": [
     {
       "klic": "cloudflare",
@@ -9,7 +9,7 @@
         {
           "nazev": "Cloudflare API service issues",
           "odkaz": "https://www.cloudflarestatus.com/incidents/x8n12150xwf6",
-          "aktualizovano": "2026-10-09T18:52:55.000Z"
+          "aktualizovano": "2026-10-09T21:10:01.000Z"
         },
         {
           "nazev": "Cloudflare One Clients are incorrectly challenged on some sites",
@@ -28,7 +28,7 @@
         "Arica, Chile - (ARI)",
         "Baghdad, Iraq - (BGW)"
       ],
-      "zkontrolovano": "2026-10-09T20:04:00.820Z",
+      "zkontrolovano": "2026-10-09T22:03:40.128Z",
       "chyba": null
     },
     {
@@ -48,7 +48,7 @@
         "Zoom Phone - Global",
         "Zoom Phone - APAC"
       ],
-      "zkontrolovano": "2026-10-09T20:04:00.820Z",
+      "zkontrolovano": "2026-10-09T22:03:40.128Z",
       "chyba": null
     },
     {
@@ -57,7 +57,7 @@
       "popis": "All Systems Operational",
       "incidenty": [],
       "postizene": [],
-      "zkontrolovano": "2026-10-09T20:04:00.820Z",
+      "zkontrolovano": "2026-10-09T22:03:40.128Z",
       "chyba": null
     }
   ]
