@@ -15167,5 +15167,76 @@
       "overeno": "2026-10-09"
     },
     "overeni": "neovereno"
+  },
+  {
+    "id": "i-2026-10-09-acf30dbfa2",
+    "slug": "cz-acf30dbfa2",
+    "titulek": "Česko: policie asi tři týdny před zadržením zakladatele Rybaru v Černé Hoře zadržela a vyslechla na pražské Letné dva propagandisty téhož ruského centra a nařídila jim opustit zemi",
+    "kratkyTitulek": "Česko: policie asi tři týdny před zadržením zakladatele Rybaru v Černé Hoře zadržela a vyslechla na pražské Letné dva propagandisty téhož ruského centra a nařídila jim opustit zemi",
+    "zeme": "Česko",
+    "kodZeme": "CZ",
+    "kategorie": [
+      "cr",
+      "zpravodajske",
+      "rusko"
+    ],
+    "datumUdalosti": "2026-10-09T00:00:00Z",
+    "datumZjisteni": "2026-10-09T00:00:00Z",
+    "aktualizovano": "2026-10-10T08:01:41.688Z",
+    "zavaznost": "Y1",
+    "jistota": "stredni",
+    "stav": "bez-vysetrovani",
+    "atribuce": "neznama",
+    "puvodce": "neznamy",
+    "druh": "pripad",
+    "fakta": [
+      "Podle Seznam Zpráv česká policie asi tři týdny před zadržením zakladatele ruského pro-válečného centra Rybar Michaila Zvinčuka v Černé Hoře (9. 10. 2026) zadržela a vyslechla na pražské Letné dva propagandisty téhož centra a nařídila jim opustit zemi; přesné datum českého zásahu zdroj neuvádí.",
+      "ČT24 nezávisle potvrzuje český zásah: „V Česku dva propagandisty zadržela a vyslýchala česká policie. Nařídila jim, aby zemi opustili.“ — bez upřesnění data nebo místa.",
+      "Rybar je Telegram kanál s 1,5 milionu odběratelů; Seznam Zprávy akci popisují jako past, kterou na propagandisty předem nachystaly."
+    ],
+    "neznameho": [
+      "Přesné datum českého zásahu — zdroje uvádějí jen přibližné „tři týdny před“ černohorským zadržením.",
+      "Totožnost obou vykázaných propagandistů a to, zda měli další vazby na Česko nad rámec této jedné akce."
+    ],
+    "vyznam": "",
+    "eskalacniSpousteče": [],
+    "deeskalacniSignaly": [],
+    "zdroje": [
+      {
+        "nazev": "Seznam Zprávy — Hlavu ruských propagandistů, kteří operovali v Česku, zatkli (v Černé Hoře)",
+        "url": "https://www.seznamzpravy.cz/clanek/domaci-kauzy-hlavu-ruskych-propagandistu-kteri-operovali-v-cesku-zatkli-v-cerne-hore-317189",
+        "typ": "media",
+        "publikovano": "2026-10-09T00:00:00Z",
+        "primarni": false,
+        "jazyk": "cs"
+      },
+      {
+        "nazev": "ČT24 — Zadrželi a vyhostili 'Rybara'. Zakladatele ruského projektu našla policie v Černé Hoře",
+        "url": "https://ct24.ceskatelevize.cz/clanek/svet/policie-v-cerne-hore-zadrzela-zakladatele-ruskeho-projektu-rybar-378407",
+        "typ": "media",
+        "publikovano": "2026-10-09T00:00:00Z",
+        "primarni": false,
+        "jazyk": "cs"
+      }
+    ],
+    "souvisejici": [],
+    "historie": [
+      {
+        "kdy": "2026-10-09T00:00:00Z",
+        "text": "Zachyceno automatickým sběrem, druhý zdroj doložen před zařazením do fronty.",
+        "novySignal": true
+      },
+      {
+        "kdy": "2026-10-10T08:01:41.688Z",
+        "text": "Zveřejněno jako neověřené úředně: dvě nezávislé redakce, úřad zatím nepotvrdil.",
+        "novySignal": false
+      }
+    ],
+    "novy": true,
+    "zapocitanoTyden": "2026-10-09",
+    "aiZpracovano": true,
+    "lidskyOvereno": false,
+    "archivniZaznam": false,
+    "overeni": "neovereno"
   }
 ]
