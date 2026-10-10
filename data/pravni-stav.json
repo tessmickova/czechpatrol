@@ -27,9 +27,9 @@
           "jazyk": "cs"
         }
       ],
-      "zkontrolovano": "2026-10-10T00:01:27.611Z",
-      "pokryti": "nedostupne",
-      "pokrytiDuvod": "nepodařilo se přečíst: psp"
+      "zkontrolovano": "2026-10-10T02:01:32.440Z",
+      "pokryti": "orientacni",
+      "pokrytiDuvod": "přečteno vlada, psp, senat; žádný z nich není úplný seznam, zápor z nich neplyne"
     },
     {
       "klic": "valecny-stav",
@@ -49,9 +49,9 @@
           "jazyk": "cs"
         }
       ],
-      "zkontrolovano": "2026-10-10T00:01:27.611Z",
-      "pokryti": "nedostupne",
-      "pokrytiDuvod": "nepodařilo se přečíst: psp"
+      "zkontrolovano": "2026-10-10T02:01:32.440Z",
+      "pokryti": "orientacni",
+      "pokrytiDuvod": "přečteno psp, senat; žádný z nich není úplný seznam, zápor z nich neplyne"
     },
     {
       "klic": "mobilizace",
@@ -79,7 +79,7 @@
           "jazyk": "cs"
         }
       ],
-      "zkontrolovano": "2026-10-10T00:01:27.611Z",
+      "zkontrolovano": "2026-10-10T02:01:32.440Z",
       "pokryti": "orientacni",
       "pokrytiDuvod": "přečteno vlada, army; žádný z nich není úplný seznam, zápor z nich neplyne"
     },
@@ -101,9 +101,9 @@
           "jazyk": "cs"
         }
       ],
-      "zkontrolovano": "2026-10-10T00:01:27.611Z",
-      "pokryti": "nedostupne",
-      "pokrytiDuvod": "nepodařilo se přečíst: psp"
+      "zkontrolovano": "2026-10-10T02:01:32.440Z",
+      "pokryti": "orientacni",
+      "pokrytiDuvod": "přečteno vlada, psp, mvcr; žádný z nich není úplný seznam, zápor z nich neplyne"
     },
     {
       "klic": "vycestovani",
@@ -123,9 +123,9 @@
           "jazyk": "cs"
         }
       ],
-      "zkontrolovano": "2026-10-10T00:01:27.611Z",
-      "pokryti": "orientacni",
-      "pokrytiDuvod": "přečteno mvcr, mzv, letiste-praha, bundespolizei, bmi-at, straz-graniczna, minv-sk; žádný z nich není úplný seznam, zápor z nich neplyne"
+      "zkontrolovano": "2026-10-10T02:01:32.440Z",
+      "pokryti": "nedostupne",
+      "pokrytiDuvod": "nepodařilo se přečíst: bundespolizei"
     },
     {
       "klic": "hranice",
@@ -153,9 +153,9 @@
           "jazyk": "cs"
         }
       ],
-      "zkontrolovano": "2026-10-10T00:01:27.611Z",
-      "pokryti": "orientacni",
-      "pokrytiDuvod": "přečteno vlada, mvcr, policie, md, celni-sprava, bundespolizei, bmi-at, straz-graniczna, minv-sk; žádný z nich není úplný seznam, zápor z nich neplyne"
+      "zkontrolovano": "2026-10-10T02:01:32.440Z",
+      "pokryti": "nedostupne",
+      "pokrytiDuvod": "nepodařilo se přečíst: bundespolizei"
     },
     {
       "klic": "schuze-parlamentu",
@@ -175,9 +175,9 @@
           "jazyk": "cs"
         }
       ],
-      "zkontrolovano": "2026-10-10T00:01:27.611Z",
-      "pokryti": "nedostupne",
-      "pokrytiDuvod": "nepodařilo se přečíst: psp"
+      "zkontrolovano": "2026-10-10T02:01:32.440Z",
+      "pokryti": "orientacni",
+      "pokrytiDuvod": "přečteno psp, senat; žádný z nich není úplný seznam, zápor z nich neplyne"
     }
   ],
   "zkontrolovano": "2026-09-15T06:31:32.570Z"
