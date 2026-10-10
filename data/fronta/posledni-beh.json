@@ -1,5 +1,5 @@
 {
-  "kdy": "2026-10-10T12:01:16.304Z",
+  "kdy": "2026-10-10T18:02:14.874Z",
   "zdroje": [
     {
       "klic": "e-sbirka",
@@ -195,18 +195,17 @@
     },
     {
       "klic": "bundespolizei",
-      "ok": false,
-      "stav": null,
+      "ok": true,
+      "stav": 200,
       "pocetPolozek": 0,
-      "chyba": "fetch failed",
-      "vysledek": "chyba"
+      "vysledek": "ok"
     },
     {
       "klic": "bmi-de",
       "ok": false,
-      "stav": null,
+      "stav": 400,
       "pocetPolozek": 0,
-      "chyba": "The operation was aborted due to timeout",
+      "chyba": "HTTP 400",
       "vysledek": "chyba"
     },
     {
