@@ -7,7 +7,7 @@
     "primarni": true
   },
   "poznamka": "Řadu plní sběr běžící na GitHub Actions; v sandboxu rutiny jsou úřední domény nedostupné. Dokud řada není naplněná, na webu se o ceně nepíše nic — prázdná řada není nula.",
-  "chyba": null,
+  "chyba": "https://data.csu.gov.cz/api/dotaz/v1/data/sady/CENPHMTT01?format=csv: HTTP 400 | https://data.csu.gov.cz/data/csu/data/CENPHMTT01.csv: nenašel se sloupec s datem (hlavička: <!doctype html>; první řádek: <html lang=en data-beasties-container>) | https://data.csu.gov.cz/datastat/data/VYBER/CENPHMTT01?format=csv: nenašel se sloupec s datem (hlavička: <!doctype html>; první řádek: <html lang=en data-beasties-container>)",
   "rada": [
     {
       "tyden": "2018-W41",
@@ -2426,5 +2426,5 @@
     "tyden": "2026-W41",
     "text": "Skokový pohyb ceny pohonných hmot\n\nNafta 47,74 Kč/l · za týden −2,91 Kč.\n\nPrůměrné spotřebitelské ceny za týden do 11. 10. 2026 podle týdenního šetření Českého statistického úřadu.\nJe to změřený údaj za uplynulý týden, ne předpověď. Kam ceny půjdou dál, nevíme a netvrdíme to."
   },
-  "pokus": "2026-10-10T08:04:00.990Z"
+  "pokus": "2026-10-10T20:04:07.140Z"
 }
