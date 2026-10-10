@@ -15009,5 +15009,163 @@
       "overeno": "2026-10-09"
     },
     "overeni": "neovereno"
+  },
+  {
+    "id": "i-2026-10-08-d9b913f5af",
+    "slug": "de-d9b913f5af",
+    "titulek": "Leipzig/Halle: společné vyšetřování The Insider a Der Spiegel jmenuje celý řetězec GRU za plánovaným dronovým útokem — plukovníka Smoljaninova, obchodníka se zbraněmi Usačeva i dva běloruské vykonavatele",
+    "kratkyTitulek": "Leipzig/Halle: společné vyšetřování The Insider a Der Spiegel jmenuje celý řetězec GRU za plánovaným dronovým útokem — plukovníka Smoljaninova, obchodníka se zbraněmi Usačeva i dva běloruské vykonavatele",
+    "zeme": "Německo",
+    "kodZeme": "DE",
+    "kategorie": [
+      "sabotaz",
+      "drony",
+      "rusko",
+      "vysetrovani"
+    ],
+    "datumUdalosti": "2026-10-08T00:00:00Z",
+    "datumZjisteni": "2026-10-09T00:00:00Z",
+    "aktualizovano": "2026-10-09T23:25:57.685Z",
+    "zavaznost": "Y2",
+    "jistota": "stredni",
+    "stav": "bez-vysetrovani",
+    "atribuce": "neznama",
+    "puvodce": null,
+    "druh": "aktualizace",
+    "fakta": [
+      "Společné vyšetřování serveru The Insider a Der Spiegel zveřejněné 8. 10. 2026 jmenuje celý řetězec lidí za loňským (4. 8. 2026) neúspěšným pokusem o dronový útok na ukrajinské nákladní letadlo Antonov An-124 na letišti Lipsko/Halle, nad rámec dřív veřejně jmenovaného motorkáře Olega Levushkina.",
+      "Operaci podle vyšetřování organizoval plukovník GRU Denis Smoljaninov z 172. centra pro velení a průzkum zaměřeného na Ukrajinu; obchodník se zbraněmi Andrej Usačev (54, dřívější příslušník ruských vzdušných sil) kontaktoval Levushkina v červenci 2026 a zajišťoval odbornost na výzbroj a drony.",
+      "Přímými vykonavateli měli být dva běloruští občané — Andrej Karšakov, u kterého vyšetřovatelé našli DNA na anténě dronu, a Maksim Lapunov, který do Německa přiletěl 19. 7. 2026, dva týdny před odhalením dronu. Levushkinovou hlavní rolí v síti byl přístup do EU díky jeho lotyšskému občanství."
+    ],
+    "neznameho": [
+      "Zda a kde byli Karšakov a Lapunov zadrženi, nebo zda jsou stále na útěku — zdroje to neuvádějí.",
+      "Jak přesně vyšetřovatelé spojili Smoljaninova s operací (jaký druh důkazu)."
+    ],
+    "vyznam": "",
+    "eskalacniSpousteče": [],
+    "deeskalacniSignaly": [],
+    "zdroje": [
+      {
+        "nazev": "Deník N — Jak přesně Rusové chystali dronový útok na letiště v Lipsku? Novináři odhalili detaily i obličeje",
+        "url": "https://denikn.cz/2211256/jak-presne-rusove-chystali-dronovy-utok-na-letiste-v-lipsku-novinari-odhalili-detaily-i-obliceje/",
+        "typ": "media",
+        "publikovano": "2026-10-09T00:00:00Z",
+        "primarni": false,
+        "jazyk": "cs"
+      },
+      {
+        "nazev": "The Insider — The GRU's dud drone: How Russian intelligence botched a sabotage plot at Leipzig airport",
+        "url": "https://theins.press/en/inv/298011",
+        "typ": "media",
+        "publikovano": "2026-10-08T00:00:00Z",
+        "primarni": false,
+        "jazyk": "en"
+      }
+    ],
+    "souvisejici": [],
+    "historie": [
+      {
+        "kdy": "2026-10-08T00:00:00Z",
+        "text": "Zachyceno automatickým sběrem, druhý zdroj doložen před zařazením do fronty.",
+        "novySignal": true
+      },
+      {
+        "kdy": "2026-10-09T23:25:57.685Z",
+        "text": "Zveřejněno jako neověřené úředně: dvě nezávislé redakce, úřad zatím nepotvrdil.",
+        "novySignal": false
+      }
+    ],
+    "novy": true,
+    "zapocitanoTyden": "2026-10-08",
+    "aiZpracovano": true,
+    "lidskyOvereno": false,
+    "archivniZaznam": false,
+    "navazujeNa": "leipzig-organizator-gru-2026",
+    "dopadNaCr": {
+      "stav": "zadny",
+      "procRelevantni": "Podrobné odhalení celého řetězce GRU za sabotážním plánem proti ukrajinskému nákladnímu letadlu na německém letišti — ukazuje konkrétní strukturu a metody ruské sabotážní sítě v EU.",
+      "dopad": "Pro lidi v Česku ze zprávy dnes neplyne žádné omezení.",
+      "sledujeme": "Zda budou Karšakov nebo Lapunov zadrženi a zda německé úřady vyšetřování formálně potvrdí.",
+      "overeno": "2026-10-09"
+    },
+    "overeni": "neovereno"
+  },
+  {
+    "id": "i-2026-10-09-a8f0c340bc",
+    "slug": "at-a8f0c340bc",
+    "titulek": "Rakousko upřesnilo: ve Vídni zadrželo celkem čtyři Ukrajince — novináře Tkače a Bondarenka a dva další muže podezřelé z příslušnosti k ukrajinské vojenské rozvědce; u všech se podezření ze špionáže nepotvrdilo",
+    "kratkyTitulek": "Rakousko upřesnilo: ve Vídni zadrželo celkem čtyři Ukrajince — novináře Tkače a Bondarenka a dva další muže podezřelé z příslušnosti k ukrajinské vojenské rozvědce; u všech se podezření ze špionáže nepotvrdilo",
+    "zeme": "Rakousko",
+    "kodZeme": "AT",
+    "kategorie": [
+      "zpravodajske",
+      "pravo"
+    ],
+    "datumUdalosti": "2026-10-09T00:00:00Z",
+    "datumZjisteni": "2026-10-09T00:00:00Z",
+    "aktualizovano": "2026-10-09T23:25:57.685Z",
+    "zavaznost": "Y1",
+    "jistota": "stredni",
+    "stav": "bez-vysetrovani",
+    "atribuce": "neznama",
+    "puvodce": null,
+    "druh": "aktualizace",
+    "fakta": [
+      "Rakouský ministr vnitra Gerhard Karner upřesnil, že policie ve Vídni zadržela celkem čtyři Ukrajince, ne jen novináře Tkače a kameramana Bondarenka: další dva muži jsou podle Seznam Zpráv „patrně příslušníci ukrajinské vojenské rozvědky“ (jména zdroje neuvádějí).",
+      "U obou nejmenovaných mužů se podezření ze špionáže podle zdroje nepotvrdilo; jeden byl propuštěn, druhý měl být propuštěn „ještě dnes“ — stejně jako u Tkače a Bondarenka, kteří byli propuštěni dřív.",
+      "Zdroj znovu spojuje zadržení s tím, že Tkač ve Vídni pracoval na případu uprchlého bývalého ukrajinského nejvyššího žalobce Ruslana Kravčenka, kterého prezident Zelenskyj minulý měsíc odvolal z funkce."
+    ],
+    "neznameho": [
+      "Jména a přesná role obou nejmenovaných mužů podezřelých z příslušnosti k ukrajinské vojenské rozvědce.",
+      "Zda a jak je jejich zadržení propojeno s Tkačovým vyšetřováním Kravčenkova případu, nebo šlo o nesouvisející souběh."
+    ],
+    "vyznam": "",
+    "eskalacniSpousteče": [],
+    "deeskalacniSignaly": [],
+    "zdroje": [
+      {
+        "nazev": "Novinky.cz — Ve Vídni zadrželi čtyři Ukrajince kvůli podezření ze špionáže",
+        "url": "https://www.novinky.cz/clanek/zahranicni-evropa-ve-vidni-zadrzeli-ctyri-ukrajince-kvuli-podezreni-ze-spionaze-40601807",
+        "typ": "media",
+        "publikovano": "2026-10-09T00:00:00Z",
+        "primarni": false,
+        "jazyk": "cs"
+      },
+      {
+        "nazev": "Seznam Zprávy — Rakousko zadrželo čtyři Ukrajince kvůli špionáži. Dva jsou novináři",
+        "url": "https://www.seznamzpravy.cz/clanek/zahranicni-rakousko-zadrzelo-ctyri-ukrajince-kvuli-spionazi-dva-jsou-novinari-317249",
+        "typ": "media",
+        "publikovano": "2026-10-09T00:00:00Z",
+        "primarni": false,
+        "jazyk": "cs"
+      }
+    ],
+    "souvisejici": [],
+    "historie": [
+      {
+        "kdy": "2026-10-09T00:00:00Z",
+        "text": "Zachyceno automatickým sběrem, druhý zdroj doložen před zařazením do fronty.",
+        "novySignal": true
+      },
+      {
+        "kdy": "2026-10-09T23:25:57.685Z",
+        "text": "Zveřejněno jako neověřené úředně: dvě nezávislé redakce, úřad zatím nepotvrdil.",
+        "novySignal": false
+      }
+    ],
+    "novy": true,
+    "zapocitanoTyden": "2026-10-09",
+    "aiZpracovano": true,
+    "lidskyOvereno": false,
+    "archivniZaznam": false,
+    "navazujeNa": "at-29063cafa3",
+    "dopadNaCr": {
+      "stav": "zadny",
+      "procRelevantni": "Upřesnění rozsahu rakouského zadržení (celkem čtyři lidé, ne jen dva novináři) v kauze s možnou vazbou na ukrajinskou vojenskou rozvědku na území členského státu EU a NATO.",
+      "dopad": "Pro lidi v Česku ze zprávy dnes neplyne žádné omezení.",
+      "sledujeme": "Jména a roli obou nejmenovaných mužů a zda rakouské úřady případ dál vyšetřují.",
+      "overeno": "2026-10-09"
+    },
+    "overeni": "neovereno"
   }
 ]
