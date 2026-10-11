@@ -1,5 +1,5 @@
 {
-  "kdy": "2026-10-11T20:01:21.957Z",
+  "kdy": "2026-10-11T22:01:13.728Z",
   "zdroje": [
     {
       "klic": "e-sbirka",
@@ -167,10 +167,11 @@
     },
     {
       "klic": "celni-sprava",
-      "ok": true,
-      "stav": 200,
+      "ok": false,
+      "stav": 503,
       "pocetPolozek": 0,
-      "vysledek": "ok"
+      "chyba": "HTTP 503",
+      "vysledek": "chyba"
     },
     {
       "klic": "sujb",
