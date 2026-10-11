@@ -1,6 +1,25 @@
 {
-  "aktualizovano": "2026-10-11T12:01:24.493Z",
-  "nacteno": "2026-10-11T12:01:24.493Z",
-  "stav": "klid",
-  "zpravy": []
+  "aktualizovano": "2026-10-11T18:02:00.158Z",
+  "nacteno": "2026-10-11T18:02:00.158Z",
+  "stav": "pozor",
+  "zpravy": [
+    {
+      "id": "kyberutok-na-rohlik-hackeri-odcizili-osobni-udaje-zakazniku-",
+      "druh": "utok",
+      "titulek": "Kyberútok na Rohlík. Hackeři odcizili osobní údaje zákazníků i jejich komunikaci",
+      "vydavatel": "iDNES.cz",
+      "odkaz": "https://www.idnes.cz/ekonomika/domaci/rohlik-cz-kyberutok-udaje-uzivatele-internetovy-supermarket-spolecnost.A261011_165730_ekonomika_mikp#utm_source=rss&utm_medium=feed&utm_campaign=zpravodaj&utm_content=main",
+      "kdy": "2026-10-11T15:08:00.000Z",
+      "uredni": false
+    },
+    {
+      "id": "rohlik-oznamil-velky-unik-osobnich-dat-zakazniku",
+      "druh": "utok",
+      "titulek": "Rohlík oznámil velký únik osobních dat zákazníků",
+      "vydavatel": "Novinky.cz",
+      "odkaz": "https://www.novinky.cz/clanek/internet-a-pc-pozor-na-zpravy-a-telefonaty-od-rohlik-cz-firma-oznamila-unik-osobnich-dat-zakazniku-40602172",
+      "kdy": "2026-10-11T14:18:08.000Z",
+      "uredni": false
+    }
+  ]
 }
