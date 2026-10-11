@@ -1,5 +1,5 @@
 {
-  "aktualizovano": "2026-10-11T22:03:32.184Z",
+  "aktualizovano": "2026-10-11T23:35:05.214Z",
   "stavy": [
     {
       "klic": "cloudflare",
@@ -28,16 +28,25 @@
         "Arica, Chile - (ARI)",
         "Baghdad, Iraq - (BGW)"
       ],
-      "zkontrolovano": "2026-10-11T22:03:32.184Z",
+      "zkontrolovano": "2026-10-11T23:35:05.214Z",
       "chyba": null
     },
     {
       "klic": "zoom",
-      "stav": "provoz",
-      "popis": "All Systems Operational",
-      "incidenty": [],
-      "postizene": [],
-      "zkontrolovano": "2026-10-11T22:03:32.184Z",
+      "stav": "omezeni",
+      "popis": "Partially Degraded Service",
+      "incidenty": [
+        {
+          "nazev": "Service Degradation Affecting Zoom Scheduler.",
+          "odkaz": "https://stspg.io/696czlyjfngy",
+          "aktualizovano": "2026-10-11T15:29:02.453-07:00"
+        }
+      ],
+      "postizene": [
+        "Zoom Scheduler",
+        "Zoom Mail"
+      ],
+      "zkontrolovano": "2026-10-11T23:35:05.214Z",
       "chyba": null
     },
     {
@@ -46,7 +55,7 @@
       "popis": "All Systems Operational",
       "incidenty": [],
       "postizene": [],
-      "zkontrolovano": "2026-10-11T22:03:32.184Z",
+      "zkontrolovano": "2026-10-11T23:35:05.214Z",
       "chyba": null
     }
   ]
