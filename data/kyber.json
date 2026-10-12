@@ -1,6 +1,43 @@
 {
-  "aktualizovano": "2026-10-12T06:02:05.568Z",
-  "nacteno": "2026-10-12T06:02:05.568Z",
-  "stav": "klid",
-  "zpravy": []
+  "aktualizovano": "2026-10-12T14:02:02.296Z",
+  "nacteno": "2026-10-12T14:02:02.296Z",
+  "stav": "pozor",
+  "zpravy": [
+    {
+      "id": "kyberutok-vyradil-chlazeni-ve-150-francouzskych-obchodech-sk",
+      "druh": "utok",
+      "titulek": "Kyberútok vyřadil chlazení ve 150 francouzských obchodech. Škody jsou podle médií velké",
+      "vydavatel": "Český rozhlas",
+      "odkaz": "https://www.irozhlas.cz/zpravy-svet/kyberutok-vyradil-chlazeni-ve-150-francouzskych-obchodech-skody-jsou-podle-medii_2610121405_ntu",
+      "kdy": "2026-10-12T12:05:00.000Z",
+      "uredni": false
+    },
+    {
+      "id": "hory-zkazeneho-masa-kyberutok-poskodil-chlazeni-ve-francouzs",
+      "druh": "utok",
+      "titulek": "Hory zkaženého masa. Kyberútok poškodil chlazení ve francouzských supermarketech",
+      "vydavatel": "iDNES.cz",
+      "odkaz": "https://www.idnes.cz/ekonomika/zahranicni/hory-zkazeneho-masa-kyberutok-poskodil-chlazeni-ve-francouzskych-supermarketech.A261012_131750_eko-zahranicni_ven#utm_source=rss&utm_medium=feed&utm_campaign=zpravodaj&utm_content=main",
+      "kdy": "2026-10-12T11:27:00.000Z",
+      "uredni": false
+    },
+    {
+      "id": "kyberneticky-utok-na-francouzske-supermarkety-skody-budou-ve",
+      "druh": "utok",
+      "titulek": "Kybernetický útok na francouzské supermarkety, škody budou velké",
+      "vydavatel": "Seznam Zprávy",
+      "odkaz": "https://www.seznamzpravy.cz/clanek/zahranicni-kyberneticky-utok-na-francouzske-supermarkety-skody-budou-velke-317649",
+      "kdy": "2026-10-12T11:09:48.000Z",
+      "uredni": false
+    },
+    {
+      "id": "po-kybernetickem-utoku-na-francouzske-supermarkety-selhalo-c",
+      "druh": "utok",
+      "titulek": "Po kybernetickém útoku na francouzské supermarkety selhalo chlazení a zkazila se řada potravin",
+      "vydavatel": "Novinky.cz",
+      "odkaz": "https://www.novinky.cz/clanek/zahranicni-evropa-po-kybernetickem-utoku-na-francouzske-supermarkety-selhalo-chlazeni-a-zkazila-se-rada-potravin-40602304",
+      "kdy": "2026-10-12T11:00:57.000Z",
+      "uredni": false
+    }
+  ]
 }
