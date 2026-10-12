@@ -1,5 +1,5 @@
 {
-  "kdy": "2026-10-12T04:01:56.687Z",
+  "kdy": "2026-10-12T06:02:05.568Z",
   "zdroje": [
     {
       "klic": "e-sbirka",
@@ -110,10 +110,11 @@
     },
     {
       "klic": "ctu",
-      "ok": true,
-      "stav": 200,
+      "ok": false,
+      "stav": 403,
       "pocetPolozek": 0,
-      "vysledek": "ok"
+      "chyba": "HTTP 403",
+      "vysledek": "chyba"
     },
     {
       "klic": "nukib",
@@ -195,18 +196,17 @@
     },
     {
       "klic": "bundespolizei",
-      "ok": false,
-      "stav": null,
+      "ok": true,
+      "stav": 200,
       "pocetPolozek": 0,
-      "chyba": "fetch failed",
-      "vysledek": "chyba"
+      "vysledek": "ok"
     },
     {
       "klic": "bmi-de",
       "ok": false,
-      "stav": 400,
+      "stav": null,
       "pocetPolozek": 0,
-      "chyba": "HTTP 400",
+      "chyba": "fetch failed",
       "vysledek": "chyba"
     },
     {
