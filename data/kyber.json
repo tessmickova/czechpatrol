@@ -1,6 +1,25 @@
 {
-  "aktualizovano": "2026-10-12T10:01:32.484Z",
-  "nacteno": "2026-10-12T10:01:32.484Z",
-  "stav": "klid",
-  "zpravy": []
+  "aktualizovano": "2026-10-12T12:02:21.692Z",
+  "nacteno": "2026-10-12T12:02:21.692Z",
+  "stav": "pozor",
+  "zpravy": [
+    {
+      "id": "hory-zkazeneho-masa-kyberutok-poskodil-chlazeni-ve-francouzs",
+      "druh": "utok",
+      "titulek": "Hory zkaženého masa. Kyberútok poškodil chlazení ve francouzských supermarketech",
+      "vydavatel": "iDNES.cz",
+      "odkaz": "https://www.idnes.cz/ekonomika/zahranicni/hory-zkazeneho-masa-kyberutok-poskodil-chlazeni-ve-francouzskych-supermarketech.A261012_131750_eko-zahranicni_ven#utm_source=rss&utm_medium=feed&utm_campaign=zpravodaj&utm_content=main",
+      "kdy": "2026-10-12T11:27:00.000Z",
+      "uredni": false
+    },
+    {
+      "id": "kyberneticky-utok-na-francouzske-supermarkety-skody-budou-ve",
+      "druh": "utok",
+      "titulek": "Kybernetický útok na francouzské supermarkety, škody budou velké",
+      "vydavatel": "Seznam Zprávy",
+      "odkaz": "https://www.seznamzpravy.cz/clanek/zahranicni-kyberneticky-utok-na-francouzske-supermarkety-skody-budou-velke-317649",
+      "kdy": "2026-10-12T11:09:48.000Z",
+      "uredni": false
+    }
+  ]
 }
