@@ -1,5 +1,39 @@
 [
   {
+    "id": "k-f1b85c7d1960254c",
+    "zachyceno": "2026-10-12T09:43:43.927Z",
+    "publikovano": "2026-10-12T08:37:00.000Z",
+    "zdroj": {
+      "nazev": "Ukrainska Pravda (anglicky)",
+      "url": "https://www.pravda.com.ua/eng/news/2026/10/12/8057565/",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Russian attack on Dnipro kills one person, sparks fire at shopping centre",
+    "titulekPuvodni": "Russian attack on Dnipro kills one person, sparks fire at shopping centre",
+    "shrnuti": "A Russian attack on Dnipro killed one person on 12 October, while a separate strike on Dnipro district caused a fire at a shopping centre.",
+    "kodZeme": "RU",
+    "zeme": "Rusko",
+    "kategorie": [
+      "hybridni",
+      "rusko"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "attack on",
+      "russia"
+    ],
+    "naliehave": null,
+    "stav": "ceka",
+    "vyrez": {
+      "text": "Russian attack on Dnipro kills one, shopping centre catches fire in district | Ukrainska Pravda\nPhoto: Dnipropetrovsk Oblast Military Administration\nRussian forces struck the city of Dnipro on 12 October, killing one person, and also attacked the Dnipro district, where a fire broke out on one floor of a shopping centre.\nSource : Oleksandr Hanzha , Head of Dnipropetrovsk Oblast Military Administration\nQuote : \"Sadly, one person has been killed in the Russian attack on Dnipro.\"\nAdvertisement:\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nPhoto: Dnipropetrovsk Oblast Military Administration\n\r\n\r\n\r\n\r\nDetails : Hanzha initially reported a strike on the city, saying that the blast wave had damaged windows in a high-rise building. He later clarified that one person had been killed.\n\r\n\r\n\r\nPhoto: Dnipropetrovsk Oblast Military Administration\n\r\n\r\n\r\n\r\nHanzha said the threat was ongoing and urged residents to remain in safe places until the all-clear.\nUpdate : A few minutes later, Hanzha reported that Russian forces had also struck the Dnipro district. A fire broke out on one floor of a shopping centre. Information on possible casualties is being established.\n\r\n\r\n\r\nPhoto: Dnipropetrovsk Oblast Military…",
+      "stazeno": "2026-10-12T09:43:44.069Z",
+      "stav": 200
+    }
+  },
+  {
     "id": "k-75eaf2d76b24f421",
     "zachyceno": "2026-10-12T08:05:14.302Z",
     "publikovano": "2026-10-12T07:45:00.000Z",
@@ -11482,45 +11516,6 @@
       "duvod": "mimo-rozsah",
       "patriK": null,
       "poznamka": "Strážný zabit při útoku ruského dronu Shahed na Ivano-Frankivsk; útok uvnitř Ukrajiny bez doloženého následku pro sledované země."
-    }
-  },
-  {
-    "id": "k-9f54a64c30697f2b",
-    "zachyceno": "2026-10-08T22:03:33.973Z",
-    "publikovano": "2026-10-08T21:13:00.000Z",
-    "zdroj": {
-      "nazev": "Český rozhlas — domácí zprávy",
-      "url": "https://www.irozhlas.cz/zpravy-svet/francie-studentske-protesty-nehygienicke-podminky-nedostatek-ucitelu_2610082313_zfr",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Krysy v kantýně a absence učitelů. Problémy na francouzských školách se neřešily a vybuchly, říká politoložka",
-    "titulekPuvodni": "Krysy v kantýně a absence učitelů. Problémy na francouzských školách se neřešily a vybuchly, říká politoložka",
-    "shrnuti": "Většina francouzských středních škol po rozsáhlých pouličních protestech ve středu obnovila výuku, ale studentské svazy středoškoláků a vysokoškoláků oznámily další protestní pochody. „Ze strany vlády nepřichází adekvátní odpověď, čili mobilizace pořád pokračuje a přidávají se další střední i vysoké",
-    "kodZeme": "FR",
-    "zeme": "Francie",
-    "kategorie": [
-      "sabotaz"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "zeSite": null,
-    "shody": [
-      "vybuch"
-    ],
-    "naliehave": null,
-    "stav": "vyrizen",
-    "vyrez": {
-      "text": "",
-      "stazeno": "2026-10-08T22:03:37.599Z",
-      "stav": 403,
-      "chyba": "HTTP 403"
-    },
-    "vyrizeni": {
-      "kdy": "2026-10-09T02:01:26.258Z",
-      "duvod": "mimo-rozsah",
-      "patriK": null,
-      "poznamka": "Potkani v kantýně a chybějící učitelé na francouzských školách; vnitřní správní problém školství bez bezpečnostního skutku."
     }
   }
 ]
