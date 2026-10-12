@@ -1,5 +1,5 @@
 {
-  "aktualizovano": "2026-10-12T14:04:33.782Z",
+  "aktualizovano": "2026-10-12T22:03:27.194Z",
   "stavy": [
     {
       "klic": "cloudflare",
@@ -7,19 +7,19 @@
       "popis": "Partial System Outage",
       "incidenty": [
         {
-          "nazev": "Cloudflare Workers API",
-          "odkaz": "https://www.cloudflarestatus.com/incidents/l9hx816r7e6h",
-          "aktualizovano": "2026-10-12T13:42:46.776Z"
+          "nazev": "Cloudflare Workers - Cron Trigger Activation Issues",
+          "odkaz": "https://www.cloudflarestatus.com/incidents/mbv1dfp471bh",
+          "aktualizovano": "2026-10-12T19:39:43.000Z"
+        },
+        {
+          "nazev": "Cloudflare Network Performance Issues",
+          "odkaz": "https://www.cloudflarestatus.com/incidents/ja8aolszxtrg",
+          "aktualizovano": "2026-10-12T17:13:47.670Z"
         },
         {
           "nazev": "Elevated errors in Los Angeles (LAX)",
           "odkaz": "https://www.cloudflarestatus.com/incidents/vyy1a1dspusg",
-          "aktualizovano": "2026-10-12T08:52:23.535Z"
-        },
-        {
-          "nazev": "Elevated Errors in China Network Colos",
-          "odkaz": "https://www.cloudflarestatus.com/incidents/cyxclg7nnhjy",
-          "aktualizovano": "2026-10-12T04:23:57.000Z"
+          "aktualizovano": "2026-10-12T21:41:25.669Z"
         }
       ],
       "postizene": [
@@ -28,7 +28,7 @@
         "Arica, Chile - (ARI)",
         "Baghdad, Iraq - (BGW)"
       ],
-      "zkontrolovano": "2026-10-12T14:04:33.782Z",
+      "zkontrolovano": "2026-10-12T22:03:27.194Z",
       "chyba": null
     },
     {
@@ -37,7 +37,7 @@
       "popis": "All Systems Operational",
       "incidenty": [],
       "postizene": [],
-      "zkontrolovano": "2026-10-12T14:04:33.782Z",
+      "zkontrolovano": "2026-10-12T22:03:27.194Z",
       "chyba": null
     },
     {
@@ -46,7 +46,7 @@
       "popis": "All Systems Operational",
       "incidenty": [],
       "postizene": [],
-      "zkontrolovano": "2026-10-12T14:04:33.782Z",
+      "zkontrolovano": "2026-10-12T22:03:27.194Z",
       "chyba": null
     }
   ]
