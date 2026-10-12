@@ -1,11 +1,16 @@
 {
-  "aktualizovano": "2026-10-12T18:03:25.363Z",
+  "aktualizovano": "2026-10-12T19:45:52.220Z",
   "stavy": [
     {
       "klic": "cloudflare",
       "stav": "vypadek",
       "popis": "Partial System Outage",
       "incidenty": [
+        {
+          "nazev": "Cloudflare Workers - Cron Trigger Activation Issues",
+          "odkaz": "https://www.cloudflarestatus.com/incidents/mbv1dfp471bh",
+          "aktualizovano": "2026-10-12T19:39:43.000Z"
+        },
         {
           "nazev": "Cloudflare Network Performance Issues",
           "odkaz": "https://www.cloudflarestatus.com/incidents/ja8aolszxtrg",
@@ -15,11 +20,6 @@
           "nazev": "Elevated errors in Los Angeles (LAX)",
           "odkaz": "https://www.cloudflarestatus.com/incidents/vyy1a1dspusg",
           "aktualizovano": "2026-10-12T08:52:23.535Z"
-        },
-        {
-          "nazev": "Elevated Errors in China Network Colos",
-          "odkaz": "https://www.cloudflarestatus.com/incidents/cyxclg7nnhjy",
-          "aktualizovano": "2026-10-12T15:33:07.000Z"
         }
       ],
       "postizene": [
@@ -28,7 +28,7 @@
         "Arica, Chile - (ARI)",
         "Baghdad, Iraq - (BGW)"
       ],
-      "zkontrolovano": "2026-10-12T18:03:25.363Z",
+      "zkontrolovano": "2026-10-12T19:45:52.220Z",
       "chyba": null
     },
     {
@@ -37,7 +37,7 @@
       "popis": "All Systems Operational",
       "incidenty": [],
       "postizene": [],
-      "zkontrolovano": "2026-10-12T18:03:25.363Z",
+      "zkontrolovano": "2026-10-12T19:45:52.220Z",
       "chyba": null
     },
     {
@@ -46,7 +46,7 @@
       "popis": "All Systems Operational",
       "incidenty": [],
       "postizene": [],
-      "zkontrolovano": "2026-10-12T18:03:25.363Z",
+      "zkontrolovano": "2026-10-12T19:45:52.220Z",
       "chyba": null
     }
   ]
