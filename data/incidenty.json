@@ -15238,5 +15238,82 @@
     "lidskyOvereno": false,
     "archivniZaznam": false,
     "overeni": "neovereno"
+  },
+  {
+    "id": "i-2026-10-11-f7fa4beec4",
+    "slug": "md-f7fa4beec4",
+    "titulek": "Moldavsko: neznámý dron v noci na 11. 10. 2026 vybuchl v lese u vesnice Geamăna (Novoanenský okres) — druhý podobný případ od 30. 9., bez zranění",
+    "kratkyTitulek": "Moldavsko: neznámý dron v noci na 11. 10. 2026 vybuchl v lese u vesnice Geamăna (Novoanenský okres) — druhý podobný případ od 30. 9., bez zranění",
+    "zeme": "Moldavsko",
+    "kodZeme": "MD",
+    "kategorie": [
+      "drony",
+      "hranice"
+    ],
+    "datumUdalosti": "2026-10-11T00:00:00Z",
+    "datumZjisteni": "2026-10-11T00:00:00Z",
+    "aktualizovano": "2026-10-12T00:01:25.524Z",
+    "zavaznost": "Y1",
+    "jistota": "stredni",
+    "stav": "bez-vysetrovani",
+    "atribuce": "neznama",
+    "puvodce": "neznamy",
+    "druh": "pripad",
+    "fakta": [
+      "Neznámý dron v noci z 10. na 11. 10. 2026 havaroval a explodoval na území Moldavska v lese na okraji vesnice Geamăna v Novoanenském okrese; podle moldavských zákonodárců policie hlášení o dronu obdržela kolem 22:20, na místo vyjely vojenské jednotky a pyrotechnici.",
+      "Žádná zranění ani škody na majetku zdroje neuvádějí; oblast byla uzavřena a obyvatelé byli vyzváni, aby se nepřibližovali k podezřelým fragmentům.",
+      "Jde o druhý podobný případ po tom, co moldavské ministerstvo obrany 30. 9. 2026 oznámilo explozi ruského dronu směřujícího na Ukrajinu na svém území; moldavská letová kontrola ani v tomto případě nezjistila neoprávněné narušení vzdušného prostoru."
+    ],
+    "neznameho": [
+      "Typ a původ dronu — zdroje ho označují jako „neznámý“, bez úřední atribuce Rusku.",
+      "Zda pyrotechnici nález dronu nebo jeho zbytky potvrdili a jak byl zneškodněn."
+    ],
+    "vyznam": "",
+    "eskalacniSpousteče": [],
+    "deeskalacniSignaly": [],
+    "zdroje": [
+      {
+        "nazev": "Ukrinform — Another drone explodes Moldova",
+        "url": "https://www.ukrinform.net/rubric-ato/4173226-another-drone-explodes-moldova.html",
+        "typ": "media",
+        "publikovano": "2026-10-11T00:00:00Z",
+        "primarni": false,
+        "jazyk": "en"
+      },
+      {
+        "nazev": "Ukrainska Pravda (anglicky) — Unidentified drone explodes on Moldovan territory",
+        "url": "https://www.pravda.com.ua/eng/news/2026/10/11/8057458/",
+        "typ": "media",
+        "publikovano": "2026-10-11T00:00:00Z",
+        "primarni": false,
+        "jazyk": "en"
+      }
+    ],
+    "souvisejici": [],
+    "historie": [
+      {
+        "kdy": "2026-10-11T00:00:00Z",
+        "text": "Zachyceno automatickým sběrem, druhý zdroj doložen před zařazením do fronty.",
+        "novySignal": true
+      },
+      {
+        "kdy": "2026-10-12T00:01:25.524Z",
+        "text": "Zveřejněno jako neověřené úředně: dvě nezávislé redakce, úřad zatím nepotvrdil.",
+        "novySignal": false
+      }
+    ],
+    "novy": true,
+    "zapocitanoTyden": "2026-10-11",
+    "aiZpracovano": true,
+    "lidskyOvereno": false,
+    "archivniZaznam": false,
+    "dopadNaCr": {
+      "stav": "zadny",
+      "procRelevantni": "Druhý podobný dronový incident na území Moldavska během dvou týdnů ukazuje opakující se riziko pro vzdušný prostor zemí sousedících s válkou, i když samo Moldavsko narušení vzdušného prostoru nepotvrzuje.",
+      "dopad": "Pro lidi v Česku ze zprávy dnes neplyne žádné omezení.",
+      "sledujeme": "Zda moldavské úřady dron úředně identifikují a atribuují Rusku.",
+      "overeno": "2026-10-11"
+    },
+    "overeni": "neovereno"
   }
 ]
