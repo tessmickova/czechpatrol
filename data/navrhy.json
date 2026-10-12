@@ -1832,5 +1832,78 @@
     "aiZpracovano": true,
     "lidskyOvereno": false,
     "archivniZaznam": false
+  },
+  {
+    "kam": "zaznam",
+    "pripravil": "patrol",
+    "pripraveno": "2026-10-12T15:53:12.352Z",
+    "id": "i-2026-10-12-b96fd1f9ad",
+    "slug": "fr-b96fd1f9ad",
+    "titulek": "Francie: kyberútok v noci na 12. 10. 2026 vyřadil chladicí zařízení v asi 150 prodejnách řetězců Coopérative U, Intermarché a E.Leclerc, zkazilo se velké množství potravin",
+    "kratkyTitulek": "Francie: kyberútok v noci na 12. 10. 2026 vyřadil chladicí zařízení v asi 150 prodejnách řetězců Coopérative U, Intermarché a E.Leclerc, zkazilo se velké množství potravin",
+    "zeme": "Francie",
+    "kodZeme": "FR",
+    "kategorie": [
+      "kyber"
+    ],
+    "datumUdalosti": "2026-10-12T00:00:00Z",
+    "datumZjisteni": "2026-10-12T00:00:00Z",
+    "aktualizovano": "2026-10-12T15:53:12.352Z",
+    "zavaznost": "Y2",
+    "jistota": "vysoka",
+    "stav": "bez-vysetrovani",
+    "atribuce": "neznama",
+    "puvodce": "neznamy",
+    "druh": "pripad",
+    "fakta": [
+      "Hackeři v noci na 12. 10. 2026 vzdáleně spustili vynucené odmrazování chladicích a mrazicích zařízení v asi 150 prodejnách francouzských řetězců Coopérative U, Intermarché a E.Leclerc (podle Novinky.cz i síti Metro a nezávislých provozoven); teplota v boxech vystoupala až na 50 °C.",
+      "Šéf družstva Coopérative U Dominique Schelcher označil útok za „mimořádně závažný“ a „nepřijatelný“ čin; podle Novinky.cz generální ředitel Les Mousquetaires uvedl, že jde o „bezprecedentní situaci“, s jakou se dosud nesetkali.",
+      "Jen ve dvou prodejnách v alsaském Haguenau dosáhla ztráta zboží 270 000 eur (asi 6,6 milionu Kč); celkové škody by podle médií mohly dosáhnout milionů eur. Podle předběžného vyšetřování útočníci cílili na software dánské firmy Danfoss používaný ke správě chladicích systémů."
+    ],
+    "neznameho": [
+      "Kdo je za útokem a zda má vazbu na Rusko nebo jinou zemi — žádný z otevřených zdrojů to neuvádí.",
+      "Celková výše škody za všechny zasažené prodejny — zdroje uvádějí jen dílčí čísla."
+    ],
+    "vyznam": "",
+    "eskalacniSpousteče": [],
+    "deeskalacniSignaly": [],
+    "zdroje": [
+      {
+        "nazev": "České noviny (ČTK) — Kyberútok poškodil chlazení v asi 150 supermarketech ve Francii",
+        "url": "https://www.ceskenoviny.cz/zpravy/kyberutok-poskodil-chlazeni-v-asi-150-supermarketech-ve-francii/2886712?utm_source=rss&utm_medium=feed",
+        "typ": "media",
+        "publikovano": "2026-10-12T00:00:00Z",
+        "primarni": false,
+        "jazyk": "cs"
+      },
+      {
+        "nazev": "Novinky.cz — Po kybernetickém útoku na francouzské supermarkety selhalo chlazení a zkazila se řada potravin",
+        "url": "https://www.novinky.cz/clanek/zahranicni-evropa-po-kybernetickem-utoku-na-francouzske-supermarkety-selhalo-chlazeni-a-zkazila-se-rada-potravin-40602304",
+        "typ": "media",
+        "publikovano": "2026-10-12T00:00:00Z",
+        "primarni": false,
+        "jazyk": "cs"
+      }
+    ],
+    "souvisejici": [],
+    "historie": [
+      {
+        "kdy": "2026-10-12T00:00:00Z",
+        "text": "Zachyceno automatickým sběrem, druhý zdroj doložen před zařazením do fronty.",
+        "novySignal": true
+      }
+    ],
+    "novy": true,
+    "zapocitanoTyden": "2026-10-12",
+    "aiZpracovano": true,
+    "lidskyOvereno": false,
+    "archivniZaznam": false,
+    "dopadNaCr": {
+      "stav": "zadny",
+      "procRelevantni": "Kybernetický útok s reálným hospodářským dopadem (zkažené potraviny, škody v milionech eur) na kritickou maloobchodní infrastrukturu členského státu NATO a EU přes zneužití softwaru třetí strany (Danfoss) — ukazuje zranitelnost dodavatelského řetězce i mimo energetiku.",
+      "dopad": "Pro lidi v Česku ze zprávy dnes neplyne žádné omezení.",
+      "sledujeme": "Zda francouzské úřady útok formálně přisoudí konkrétnímu aktérovi a jaká bude celková výše škody.",
+      "overeno": "2026-10-12"
+    }
   }
 ]
