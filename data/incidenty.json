@@ -15394,5 +15394,84 @@
       "overeno": "2026-10-12"
     },
     "overeni": "neovereno"
+  },
+  {
+    "id": "i-2026-10-13-000a07a7aa",
+    "slug": "bg-000a07a7aa",
+    "titulek": "Bulharsko: drony v Černém moři zasáhly dvě lodě u bulharského pobřeží, nákladní loď Chelsea 3 se potopila; podle Zelenského společné vyšetřování s bulharským námořnictvem ukázalo na Rusko",
+    "kratkyTitulek": "Bulharsko: drony v Černém moři zasáhly dvě lodě u bulharského pobřeží, nákladní loď Chelsea 3 se potopila; podle Zelenského společné vyšetřování s bulharským námořnictvem ukázalo na Rusko",
+    "zeme": "Bulharsko",
+    "kodZeme": "BG",
+    "kategorie": [
+      "drony",
+      "hranice",
+      "rusko"
+    ],
+    "datumUdalosti": "2026-10-13T00:00:00Z",
+    "datumZjisteni": "2026-10-13T00:00:00Z",
+    "aktualizovano": "2026-10-13T09:01:57.471Z",
+    "zavaznost": "Y2",
+    "jistota": "stredni",
+    "stav": "bez-vysetrovani",
+    "atribuce": "neznama",
+    "puvodce": "neznamy",
+    "druh": "pripad",
+    "fakta": [
+      "Drony v úterý 13. 10. 2026 ráno zasáhly v Černém moři dvě lodě přibližně 24–30 km od bulharského pobřeží: nákladní loď Chelsea 3 (ukrajinská společnost Black Sea Shipping, plující pod maltskou vlajkou) poblíž Bjaly a tureckou loď Azov Concord poblíž Krapce.",
+      "Chelsea 3 se po zásahu třemi drony potopila, všech 15 členů posádky bylo evakuováno; u Azov Concord se při záchranné akci podařilo zachránit zatím jen jednoho člena posádky.",
+      "Bulharský premiér Rumen Radev označil útok za „naprosto nepřijatelný“, svolal bezpečnostní složky a oznámil, že si předvolá ruskou velvyslankyni Eleonoru Mitrofanovovou; podle agentury Bloomberg to potvrdila i Sofie.",
+      "Podle ukrajinského prezidenta Zelenského společné vyšetřování s bulharským námořnictvem ukázalo, že za útokem stálo Rusko; bulharský premiér sám původ dronů ani odpovědnost přímo nejmenoval."
+    ],
+    "neznameho": [
+      "Osud zbylé posádky lodi Azov Concord — zdroje k době zprávy uváděly jen jednoho zachráněného.",
+      "Přesný typ dronů a jejich bezprostřední původ — úřední vyšetřování v době zprávy ještě neuzavřeno."
+    ],
+    "vyznam": "",
+    "eskalacniSpousteče": [],
+    "deeskalacniSignaly": [],
+    "zdroje": [
+      {
+        "nazev": "ČT24 — Drony zasáhly u pobřeží Bulharska dvě lodě, jedna se potopila, oznámil premiér Radev",
+        "url": "https://ct24.ceskatelevize.cz/clanek/svet/drony-zasahly-u-pobrezi-bulharska-dve-lode-jedna-se-potopila-oznamil-premier-radev-378524",
+        "typ": "media",
+        "publikovano": "2026-10-13T00:00:00Z",
+        "primarni": false,
+        "jazyk": "cs"
+      },
+      {
+        "nazev": "Novinky.cz — Drony zaútočily na lodě u bulharského pobřeží, jedna se potopila",
+        "url": "https://www.novinky.cz/clanek/valka-na-ukrajine-u-bulharskeho-pobrezi-zasahly-drony-dve-lode-jedna-se-potopila-40602438",
+        "typ": "media",
+        "publikovano": "2026-10-13T00:00:00Z",
+        "primarni": false,
+        "jazyk": "cs"
+      }
+    ],
+    "souvisejici": [],
+    "historie": [
+      {
+        "kdy": "2026-10-13T00:00:00Z",
+        "text": "Zachyceno automatickým sběrem, druhý zdroj doložen před zařazením do fronty.",
+        "novySignal": true
+      },
+      {
+        "kdy": "2026-10-13T09:01:57.471Z",
+        "text": "Zveřejněno jako neověřené úředně: dvě nezávislé redakce, úřad zatím nepotvrdil.",
+        "novySignal": false
+      }
+    ],
+    "novy": true,
+    "zapocitanoTyden": "2026-10-13",
+    "aiZpracovano": true,
+    "lidskyOvereno": false,
+    "archivniZaznam": false,
+    "dopadNaCr": {
+      "stav": "zadny",
+      "procRelevantni": "Další útok dronů na civilní lodě v bulharských teritoriálních vodách — podle Zelenského vyšetřování ukázalo na Rusko — navazuje na opakovanou řadu podobných incidentů v Černém moři u členských zemí NATO a EU.",
+      "dopad": "Pro lidi v Česku ze zprávy dnes neplyne žádné omezení.",
+      "sledujeme": "Výsledek bulharského úředního vyšetřování a osud zbylé posádky Azov Concord.",
+      "overeno": "2026-10-13"
+    },
+    "overeni": "neovereno"
   }
 ]
