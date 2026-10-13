@@ -1,5 +1,5 @@
 {
-  "aktualizovano": "2026-10-13T12:05:21.431Z",
+  "aktualizovano": "2026-10-13T15:04:42.564Z",
   "stavy": [
     {
       "klic": "cloudflare",
@@ -12,23 +12,23 @@
           "aktualizovano": "2026-10-13T11:45:43.999Z"
         },
         {
-          "nazev": "Network performance issues in Ashburn, US (IAD)",
-          "odkaz": "https://www.cloudflarestatus.com/incidents/gqm2xrm9wk8t",
-          "aktualizovano": "2026-10-13T10:42:59.602Z"
-        },
-        {
           "nazev": "Elevated errors in Los Angeles (LAX)",
           "odkaz": "https://www.cloudflarestatus.com/incidents/vyy1a1dspusg",
           "aktualizovano": "2026-10-12T21:41:25.669Z"
+        },
+        {
+          "nazev": "Elevated Errors in China Network Colos",
+          "odkaz": "https://www.cloudflarestatus.com/incidents/cyxclg7nnhjy",
+          "aktualizovano": "2026-10-12T15:33:07.000Z"
         }
       ],
       "postizene": [
         "Cloudflare Sites and Services",
         "Africa",
         "Arica, Chile - (ARI)",
-        "Ashburn, VA, United States - (IAD)"
+        "Annaba, Algeria - (AAE)"
       ],
-      "zkontrolovano": "2026-10-13T12:05:21.431Z",
+      "zkontrolovano": "2026-10-13T15:04:42.564Z",
       "chyba": null
     },
     {
@@ -43,7 +43,7 @@
         }
       ],
       "postizene": [],
-      "zkontrolovano": "2026-10-13T12:05:21.431Z",
+      "zkontrolovano": "2026-10-13T15:04:42.564Z",
       "chyba": null
     },
     {
@@ -52,7 +52,7 @@
       "popis": "All Systems Operational",
       "incidenty": [],
       "postizene": [],
-      "zkontrolovano": "2026-10-13T12:05:21.431Z",
+      "zkontrolovano": "2026-10-13T15:04:42.564Z",
       "chyba": null
     }
   ]
