@@ -1,11 +1,16 @@
 {
-  "aktualizovano": "2026-10-13T15:04:42.564Z",
+  "aktualizovano": "2026-10-13T17:08:12.207Z",
   "stavy": [
     {
       "klic": "cloudflare",
       "stav": "vypadek",
       "popis": "Partial System Outage",
       "incidenty": [
+        {
+          "nazev": "Cloudflare Workers - Cron Trigger Activation Issues",
+          "odkaz": "https://www.cloudflarestatus.com/incidents/cbvocc87nsne",
+          "aktualizovano": "2026-10-13T15:19:04.428Z"
+        },
         {
           "nazev": "Audit Logs v2 ingestion is missing multiple Cloudflare products ",
           "odkaz": "https://www.cloudflarestatus.com/incidents/hpmrg8d5vwr6",
@@ -15,11 +20,6 @@
           "nazev": "Elevated errors in Los Angeles (LAX)",
           "odkaz": "https://www.cloudflarestatus.com/incidents/vyy1a1dspusg",
           "aktualizovano": "2026-10-12T21:41:25.669Z"
-        },
-        {
-          "nazev": "Elevated Errors in China Network Colos",
-          "odkaz": "https://www.cloudflarestatus.com/incidents/cyxclg7nnhjy",
-          "aktualizovano": "2026-10-12T15:33:07.000Z"
         }
       ],
       "postizene": [
@@ -28,22 +28,16 @@
         "Arica, Chile - (ARI)",
         "Annaba, Algeria - (AAE)"
       ],
-      "zkontrolovano": "2026-10-13T15:04:42.564Z",
+      "zkontrolovano": "2026-10-13T17:08:12.207Z",
       "chyba": null
     },
     {
       "klic": "zoom",
       "stav": "provoz",
       "popis": "All Systems Operational",
-      "incidenty": [
-        {
-          "nazev": "Service degradation affecting Zoom Meeting API in US region",
-          "odkaz": "https://stspg.io/5xfllbgtmb1y",
-          "aktualizovano": "2026-10-13T02:32:46.604-07:00"
-        }
-      ],
+      "incidenty": [],
       "postizene": [],
-      "zkontrolovano": "2026-10-13T15:04:42.564Z",
+      "zkontrolovano": "2026-10-13T17:08:12.207Z",
       "chyba": null
     },
     {
@@ -52,7 +46,7 @@
       "popis": "All Systems Operational",
       "incidenty": [],
       "postizene": [],
-      "zkontrolovano": "2026-10-13T15:04:42.564Z",
+      "zkontrolovano": "2026-10-13T17:08:12.207Z",
       "chyba": null
     }
   ]
