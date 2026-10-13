@@ -15315,5 +15315,84 @@
       "overeno": "2026-10-11"
     },
     "overeni": "neovereno"
+  },
+  {
+    "id": "i-2026-10-12-6cb9c707cc",
+    "slug": "pl-6cb9c707cc",
+    "titulek": "Německo zadrželo dva turecké občany podezřelé ze žhářského útoku na pozemní stanici Starlink ve Woli Krobowské v Polsku; polský ministr vnitra Siemoniak za aktem viní ruské služby",
+    "kratkyTitulek": "Německo zadrželo dva turecké občany podezřelé ze žhářského útoku na pozemní stanici Starlink ve Woli Krobowské v Polsku; polský ministr vnitra Siemoniak za aktem viní ruské služby",
+    "zeme": "Polsko",
+    "kodZeme": "PL",
+    "kategorie": [
+      "sabotaz",
+      "rusko",
+      "pravo"
+    ],
+    "datumUdalosti": "2026-10-12T00:00:00Z",
+    "datumZjisteni": "2026-10-12T00:00:00Z",
+    "aktualizovano": "2026-10-13T00:01:26.385Z",
+    "zavaznost": "Y2",
+    "jistota": "stredni",
+    "stav": "bez-vysetrovani",
+    "atribuce": "neznama",
+    "puvodce": null,
+    "druh": "aktualizace",
+    "fakta": [
+      "Německé úřady 12. 10. 2026 zadržely dva turecké občany podezřelé ze žhářského útoku na pozemní stanici služby Starlink ve Woli Krobowské, ke kterému došlo v noci z 23. na 24. 9. 2026.",
+      "Polský ministr vnitra Marcin Kierwiński/Siemoniak (šéf koordinující speciální služby) uvedl: „Nepochybně za tímto aktem sabotáže stojí ruské služby.“ Policejní prezident Marek Boroń dodal, že všechny shromážděné důkazy (nahrávky, otisky prstů i DNA pachatelů) jasně ukazují na konkrétní sabotážní akt.",
+      "Zadržení muži čekají na předání polským úřadům na základě evropského zatýkacího rozkazu."
+    ],
+    "neznameho": [
+      "Jména zadržených mužů a jejich přesná role nebo motivace — zdroje je neuvádějí.",
+      "Jak přesně německé úřady k zadrženým dospěly a kdy přesně k zatčení došlo."
+    ],
+    "vyznam": "",
+    "eskalacniSpousteče": [],
+    "deeskalacniSignaly": [],
+    "zdroje": [
+      {
+        "nazev": "SME (SK) — V Nemecku zadržali dvoch Turkov podozrivých z podpálenia stanice Starlinku v Poľsku",
+        "url": "https://www.sme.sk/svet/c/v-nemecku-zadrzali-dvoch-turkov-podozrivych-z-podpalenia-stanice-starlinku-v-polsku?utm_source=rss&utm_medium=feed&utm_campaign=www-rss",
+        "typ": "media",
+        "publikovano": "2026-10-12T00:00:00Z",
+        "primarni": false,
+        "jazyk": "sk"
+      },
+      {
+        "nazev": "Polsat News — Akt sabotażu w Polsce. Zatrzymani dwaj obywatele Turcji",
+        "url": "https://www.polsatnews.pl/wiadomosc/2026-10-12/akt-sabotazu-w-polsce-zatrzymani-dwaj-obywatele-turcji/",
+        "typ": "media",
+        "publikovano": "2026-10-12T00:00:00Z",
+        "primarni": false,
+        "jazyk": "pl"
+      }
+    ],
+    "souvisejici": [],
+    "historie": [
+      {
+        "kdy": "2026-10-12T00:00:00Z",
+        "text": "Zachyceno automatickým sběrem, druhý zdroj doložen před zařazením do fronty.",
+        "novySignal": true
+      },
+      {
+        "kdy": "2026-10-13T00:01:26.385Z",
+        "text": "Zveřejněno jako neověřené úředně: dvě nezávislé redakce, úřad zatím nepotvrdil.",
+        "novySignal": false
+      }
+    ],
+    "novy": true,
+    "zapocitanoTyden": "2026-10-12",
+    "aiZpracovano": true,
+    "lidskyOvereno": false,
+    "archivniZaznam": false,
+    "navazujeNa": "pl-240a0f841d",
+    "dopadNaCr": {
+      "stav": "zadny",
+      "procRelevantni": "Zadržení podezřelých z žhářského útoku na infrastrukturu Starlinku v Polsku s přímou úřední atribucí ruským službám ukazuje mezinárodní (tureckou) stopu v ruské sabotážní síti proti satelitní komunikaci podporující Ukrajinu.",
+      "dopad": "Pro lidi v Česku ze zprávy dnes neplyne žádné omezení.",
+      "sledujeme": "Zda budou muži po předání polským úřadům obžalováni a co vyšetřování dál zjistí o jejich napojení.",
+      "overeno": "2026-10-12"
+    },
+    "overeni": "neovereno"
   }
 ]

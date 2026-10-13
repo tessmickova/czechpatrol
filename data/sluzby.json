@@ -1,5 +1,5 @@
 {
-  "aktualizovano": "2026-10-12T22:03:27.194Z",
+  "aktualizovano": "2026-10-13T06:04:01.737Z",
   "stavy": [
     {
       "klic": "cloudflare",
@@ -7,28 +7,28 @@
       "popis": "Partial System Outage",
       "incidenty": [
         {
-          "nazev": "Cloudflare Workers - Cron Trigger Activation Issues",
-          "odkaz": "https://www.cloudflarestatus.com/incidents/mbv1dfp471bh",
-          "aktualizovano": "2026-10-12T19:39:43.000Z"
-        },
-        {
-          "nazev": "Cloudflare Network Performance Issues",
-          "odkaz": "https://www.cloudflarestatus.com/incidents/ja8aolszxtrg",
-          "aktualizovano": "2026-10-12T17:13:47.670Z"
+          "nazev": "Network performance issues in Ashburn, US (IAD)",
+          "odkaz": "https://www.cloudflarestatus.com/incidents/gqm2xrm9wk8t",
+          "aktualizovano": "2026-10-13T05:09:00.774Z"
         },
         {
           "nazev": "Elevated errors in Los Angeles (LAX)",
           "odkaz": "https://www.cloudflarestatus.com/incidents/vyy1a1dspusg",
           "aktualizovano": "2026-10-12T21:41:25.669Z"
+        },
+        {
+          "nazev": "Elevated Errors in China Network Colos",
+          "odkaz": "https://www.cloudflarestatus.com/incidents/cyxclg7nnhjy",
+          "aktualizovano": "2026-10-12T15:33:07.000Z"
         }
       ],
       "postizene": [
         "Cloudflare Sites and Services",
         "Africa",
         "Arica, Chile - (ARI)",
-        "Baghdad, Iraq - (BGW)"
+        "Ashburn, VA, United States - (IAD)"
       ],
-      "zkontrolovano": "2026-10-12T22:03:27.194Z",
+      "zkontrolovano": "2026-10-13T06:04:01.737Z",
       "chyba": null
     },
     {
@@ -37,7 +37,7 @@
       "popis": "All Systems Operational",
       "incidenty": [],
       "postizene": [],
-      "zkontrolovano": "2026-10-12T22:03:27.194Z",
+      "zkontrolovano": "2026-10-13T06:04:01.737Z",
       "chyba": null
     },
     {
@@ -46,7 +46,7 @@
       "popis": "All Systems Operational",
       "incidenty": [],
       "postizene": [],
-      "zkontrolovano": "2026-10-12T22:03:27.194Z",
+      "zkontrolovano": "2026-10-13T06:04:01.737Z",
       "chyba": null
     }
   ]

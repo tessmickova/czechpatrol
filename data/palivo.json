@@ -1,5 +1,5 @@
 {
-  "aktualizovano": "2026-10-12T12:05:21.526Z",
+  "aktualizovano": "2026-10-13T01:58:01.250Z",
   "zdroj": {
     "nazev": "Český statistický úřad — průměrné spotřebitelské ceny pohonných hmot (týdenní šetření)",
     "url": "https://vdb.czso.cz/pll/eweb/cenyphm.data",
@@ -9,12 +9,6 @@
   "poznamka": "Řadu plní sběr běžící na GitHub Actions; v sandboxu rutiny jsou úřední domény nedostupné. Dokud řada není naplněná, na webu se o ceně nepíše nic — prázdná řada není nula.",
   "chyba": null,
   "rada": [
-    {
-      "tyden": "2018-W41",
-      "konec": "2018-10-14",
-      "nafta": 33.07,
-      "benzin95": 33.41
-    },
     {
       "tyden": "2018-W42",
       "konec": "2018-10-21",
@@ -2426,5 +2420,5 @@
     "tyden": "2026-W41",
     "text": "Skokový pohyb ceny pohonných hmot\n\nNafta 47,74 Kč/l · za týden −2,91 Kč.\n\nPrůměrné spotřebitelské ceny za týden do 11. 10. 2026 podle týdenního šetření Českého statistického úřadu.\nJe to změřený údaj za uplynulý týden, ne předpověď. Kam ceny půjdou dál, nevíme a netvrdíme to."
   },
-  "pokus": "2026-10-12T12:05:21.526Z"
+  "pokus": "2026-10-13T01:58:01.250Z"
 }
