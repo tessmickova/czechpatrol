@@ -1,5 +1,5 @@
 {
-  "aktualizovano": "2026-10-13T09:15:06.785Z",
+  "aktualizovano": "2026-10-13T12:05:21.431Z",
   "stavy": [
     {
       "klic": "cloudflare",
@@ -7,19 +7,19 @@
       "popis": "Partial System Outage",
       "incidenty": [
         {
+          "nazev": "Audit Logs v2 ingestion is missing multiple Cloudflare products ",
+          "odkaz": "https://www.cloudflarestatus.com/incidents/hpmrg8d5vwr6",
+          "aktualizovano": "2026-10-13T11:45:43.999Z"
+        },
+        {
           "nazev": "Network performance issues in Ashburn, US (IAD)",
           "odkaz": "https://www.cloudflarestatus.com/incidents/gqm2xrm9wk8t",
-          "aktualizovano": "2026-10-13T06:57:17.159Z"
+          "aktualizovano": "2026-10-13T10:42:59.602Z"
         },
         {
           "nazev": "Elevated errors in Los Angeles (LAX)",
           "odkaz": "https://www.cloudflarestatus.com/incidents/vyy1a1dspusg",
           "aktualizovano": "2026-10-12T21:41:25.669Z"
-        },
-        {
-          "nazev": "Elevated Errors in China Network Colos",
-          "odkaz": "https://www.cloudflarestatus.com/incidents/cyxclg7nnhjy",
-          "aktualizovano": "2026-10-12T15:33:07.000Z"
         }
       ],
       "postizene": [
@@ -28,16 +28,22 @@
         "Arica, Chile - (ARI)",
         "Ashburn, VA, United States - (IAD)"
       ],
-      "zkontrolovano": "2026-10-13T09:15:06.785Z",
+      "zkontrolovano": "2026-10-13T12:05:21.431Z",
       "chyba": null
     },
     {
       "klic": "zoom",
       "stav": "provoz",
       "popis": "All Systems Operational",
-      "incidenty": [],
+      "incidenty": [
+        {
+          "nazev": "Service degradation affecting Zoom Meeting API in US region",
+          "odkaz": "https://stspg.io/5xfllbgtmb1y",
+          "aktualizovano": "2026-10-13T02:32:46.604-07:00"
+        }
+      ],
       "postizene": [],
-      "zkontrolovano": "2026-10-13T09:15:06.785Z",
+      "zkontrolovano": "2026-10-13T12:05:21.431Z",
       "chyba": null
     },
     {
@@ -46,7 +52,7 @@
       "popis": "All Systems Operational",
       "incidenty": [],
       "postizene": [],
-      "zkontrolovano": "2026-10-13T09:15:06.785Z",
+      "zkontrolovano": "2026-10-13T12:05:21.431Z",
       "chyba": null
     }
   ]
