@@ -15629,5 +15629,84 @@
       "overeno": "2026-10-13"
     },
     "overeni": "neovereno"
+  },
+  {
+    "id": "i-2026-10-13-89815fedce",
+    "slug": "de-89815fedce",
+    "titulek": "Leipzig/Halle: vyšetřování jmenuje další společníky GRU plukovníka Karšakova — instruktora házení nožů a jáhna Vladimira Trofimova a tři Bělorusy žijící v Rusku",
+    "kratkyTitulek": "Leipzig/Halle: vyšetřování jmenuje další společníky GRU plukovníka Karšakova — instruktora házení nožů a jáhna Vladimira Trofimova a tři Bělorusy žijící v Rusku",
+    "zeme": "Německo",
+    "kodZeme": "DE",
+    "kategorie": [
+      "sabotaz",
+      "zpravodajske",
+      "rusko"
+    ],
+    "datumUdalosti": "2026-10-13T00:00:00Z",
+    "datumZjisteni": "2026-10-13T00:00:00Z",
+    "aktualizovano": "2026-10-14T03:01:21.928Z",
+    "zavaznost": "Y1",
+    "jistota": "stredni",
+    "stav": "bez-vysetrovani",
+    "atribuce": "neznama",
+    "puvodce": null,
+    "druh": "aktualizace",
+    "fakta": [
+      "Podle Novinky.cz (shrnujícího vyšetřování The Insider a Der Spiegel) byl v lednu 2026 v Moskvě s GRU plukovníkem Smoljaninovem a obchodníkem se zbraněmi Usačevem vyfotografován i Vladimir Trofimov, instruktor házení nožů a současně jáhen pravoslavné církve; o čem skupina ten den jednala, není jasné.",
+      "Mezi dalšími Karšakovými společníky vyšetřování jmenuje tři Bělorusy žijící v Rusku: Vjačeslava Ajsina, který podle zdroje pravidelně navštěvoval Německo včetně Lipska, bývalého policistu Denise Šulgana a Romana Kovalevského s rejstříkem trestů za krádeže a loupeže v Rusku.",
+      "Role žádného z těchto čtyř mužů v samotné sabotáži na letišti Lipsko/Halle nebyla upřesněna; The Insider výslovně uvádí, že jejich role zůstává nejasná a žádný z nich nebyl přímo spojen se samotným selháním dronu."
+    ],
+    "neznameho": [
+      "Konkrétní role Trofimova, Ajsina, Šulgana a Kovalevského v přípravě nebo provedení sabotáže — vyšetřování to zatím neurčilo.",
+      "Zda a kde byl některý z nich zadržen."
+    ],
+    "vyznam": "",
+    "eskalacniSpousteče": [],
+    "deeskalacniSignaly": [],
+    "zdroje": [
+      {
+        "nazev": "Novinky.cz — Plukovník GRU v zajímavé společnosti. Kdo je spojován s útokem na letiště v Lipsku",
+        "url": "https://www.novinky.cz/clanek/zahranicni-evropa-vrhac-nozu-i-obchodnik-se-zbranemi-kdo-je-take-spojovan-s-utokem-na-letiste-v-lipsku-40601611",
+        "typ": "media",
+        "publikovano": "2026-10-13T00:00:00Z",
+        "primarni": false,
+        "jazyk": "cs"
+      },
+      {
+        "nazev": "The Insider — The GRU's dud drone: How Russian intelligence botched a sabotage plot at Leipzig airport",
+        "url": "https://theins.press/en/inv/298011",
+        "typ": "media",
+        "publikovano": "2026-10-08T00:00:00Z",
+        "primarni": false,
+        "jazyk": "en"
+      }
+    ],
+    "souvisejici": [],
+    "historie": [
+      {
+        "kdy": "2026-10-13T00:00:00Z",
+        "text": "Zachyceno automatickým sběrem, druhý zdroj doložen před zařazením do fronty.",
+        "novySignal": true
+      },
+      {
+        "kdy": "2026-10-14T03:01:21.928Z",
+        "text": "Zveřejněno jako neověřené úředně: dvě nezávislé redakce, úřad zatím nepotvrdil.",
+        "novySignal": false
+      }
+    ],
+    "novy": true,
+    "zapocitanoTyden": "2026-10-13",
+    "aiZpracovano": true,
+    "lidskyOvereno": false,
+    "archivniZaznam": false,
+    "navazujeNa": "de-d9b913f5af",
+    "dopadNaCr": {
+      "stav": "zadny",
+      "procRelevantni": "Rozšiřuje síť osob spojených s plánem GRU na sabotáž letecké dopravy pro Ukrajinu v Německu — ukazuje rozsah a sociální vazby ruské sabotážní sítě v EU.",
+      "dopad": "Pro lidi v Česku ze zprávy dnes neplyne žádné omezení.",
+      "sledujeme": "Zda vyšetřování upřesní roli těchto čtyř mužů a zda budou zadrženi.",
+      "overeno": "2026-10-13"
+    },
+    "overeni": "neovereno"
   }
 ]

@@ -1,5 +1,5 @@
 {
-  "aktualizovano": "2026-10-14T01:04:58.245Z",
+  "aktualizovano": "2026-10-14T06:02:28.796Z",
   "stavy": [
     {
       "klic": "cloudflare",
@@ -7,28 +7,28 @@
       "popis": "Partial System Outage",
       "incidenty": [
         {
+          "nazev": "Cloudflare Workers - Cron Trigger Activation Issues",
+          "odkaz": "https://www.cloudflarestatus.com/incidents/npjny9agana8",
+          "aktualizovano": "2026-10-14T05:36:12.243Z"
+        },
+        {
+          "nazev": "Elevated number of 5XX errors in PDX",
+          "odkaz": "https://www.cloudflarestatus.com/incidents/7hicc5bfkvx3",
+          "aktualizovano": "2026-10-14T04:54:34.852Z"
+        },
+        {
           "nazev": "Audit Logs v2 ingestion is missing multiple Cloudflare products ",
           "odkaz": "https://www.cloudflarestatus.com/incidents/hpmrg8d5vwr6",
           "aktualizovano": "2026-10-13T11:45:43.999Z"
-        },
-        {
-          "nazev": "Elevated Errors in China Network Colos",
-          "odkaz": "https://www.cloudflarestatus.com/incidents/cyxclg7nnhjy",
-          "aktualizovano": "2026-10-12T15:33:07.000Z"
-        },
-        {
-          "nazev": "Cloudflare One Clients are incorrectly challenged on some sites",
-          "odkaz": "https://www.cloudflarestatus.com/incidents/tl0vrgjy99r0",
-          "aktualizovano": "2026-09-23T11:02:41.000Z"
         }
       ],
       "postizene": [
+        "Amsterdam, Netherlands - (AMS)",
         "Cloudflare Sites and Services",
         "Africa",
-        "Arica, Chile - (ARI)",
-        "Annaba, Algeria - (AAE)"
+        "Arica, Chile - (ARI)"
       ],
-      "zkontrolovano": "2026-10-14T01:04:58.245Z",
+      "zkontrolovano": "2026-10-14T06:02:28.796Z",
       "chyba": null
     },
     {
@@ -39,13 +39,13 @@
         {
           "nazev": "Service Degradation Affecting Zoom Clips",
           "odkaz": "https://stspg.io/rcc26f8fnwgf",
-          "aktualizovano": "2026-10-13T17:20:29.164-07:00"
+          "aktualizovano": "2026-10-13T20:48:32.451-07:00"
         }
       ],
       "postizene": [
         "Zoom Clips"
       ],
-      "zkontrolovano": "2026-10-14T01:04:58.245Z",
+      "zkontrolovano": "2026-10-14T06:02:28.796Z",
       "chyba": null
     },
     {
@@ -54,7 +54,7 @@
       "popis": "All Systems Operational",
       "incidenty": [],
       "postizene": [],
-      "zkontrolovano": "2026-10-14T01:04:58.245Z",
+      "zkontrolovano": "2026-10-14T06:02:28.796Z",
       "chyba": null
     }
   ]
