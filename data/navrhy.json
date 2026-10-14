@@ -1925,7 +1925,7 @@
     "datumZjisteni": "2026-10-14T00:00:00Z",
     "aktualizovano": "2026-10-14T13:57:57.532Z",
     "zavaznost": "Y2",
-    "jistota": "vysoka",
+    "jistota": "stredni",
     "stav": "bez-vysetrovani",
     "atribuce": "neznama",
     "puvodce": "neznamy",
@@ -1973,79 +1973,5 @@
     "aiZpracovano": true,
     "lidskyOvereno": false,
     "archivniZaznam": false
-  },
-  {
-    "kam": "zaznam",
-    "pripravil": "patrol",
-    "pripraveno": "2026-10-14T13:57:57.532Z",
-    "id": "i-2026-10-14-29b06742b1",
-    "slug": "ro-29b06742b1",
-    "titulek": "Rumunsko: dron krátce narušil vzdušný prostor u Suliny, vzlétly dvě stíhačky F-16, poté přeletěl do Ukrajiny, kde jej sestřelila ukrajinská protivzdušná obrana",
-    "kratkyTitulek": "Rumunsko: dron krátce narušil vzdušný prostor u Suliny, vzlétly dvě stíhačky F-16, poté přeletěl do Ukrajiny, kde jej sestřelila ukrajinská protivzdušná obrana",
-    "zeme": "Rumunsko",
-    "kodZeme": "RO",
-    "kategorie": [
-      "drony",
-      "hranice"
-    ],
-    "datumUdalosti": "2026-10-14T00:00:00Z",
-    "datumZjisteni": "2026-10-14T00:00:00Z",
-    "aktualizovano": "2026-10-14T13:57:57.532Z",
-    "zavaznost": "Y2",
-    "jistota": "vysoka",
-    "stav": "bez-vysetrovani",
-    "atribuce": "neznama",
-    "puvodce": "neznamy",
-    "druh": "pripad",
-    "fakta": [
-      "Radary rumunského ministerstva obrany (MApN) ve středu 14. 10. 2026 ráno zachytily dron, který krátce narušil národní vzdušný prostor východně od města Sulina nad Černým mořem; RO-Alert byl vydán v 10:19 a odvolán v 11:22.",
-      "MApN nechalo vzlétnout dvě stíhačky F-16 z 86. letecké základny Borcea; dron následně přeletěl do ukrajinského vzdušného prostoru, kde ho sestřelila ukrajinská protivzdušná obrana — rumunská armáda ho sama nesestřelila.",
-      "Celý incident trval podle Digi24 přibližně hodinu; MApN nepotvrdilo typ ani původ dronu."
-    ],
-    "neznameho": [
-      "Typ dronu a jeho přesný původ — MApN to v této zprávě neupřesnilo.",
-      "Zda šlo o stejný dron, který se objevil v hlášeních z předchozích dnů u Tulcey/Vylkove, nebo o nový případ."
-    ],
-    "vyznam": "",
-    "eskalacniSpousteče": [],
-    "deeskalacniSignaly": [],
-    "zdroje": [
-      {
-        "nazev": "Agerpres (anglicky) — MApN: Drone enters national airspace near Sulina, two F-16 aircraft scrambled",
-        "url": "https://agerpres.ro/english/2026/10/14/mapn-drone-enters-national-airspace-near-sulina-two-f-16-aicraft-scrambled--1602830",
-        "typ": "media",
-        "publikovano": "2026-10-14T00:00:00Z",
-        "primarni": false,
-        "jazyk": "en"
-      },
-      {
-        "nazev": "Digi24 — Radarele MApN au detectat încă o dronă care a intrat în spațiul aerian național; aparatul a fost doborât de ucraineni",
-        "url": "https://www.digi24.ro/stiri/actualitate/radarele-mapn-au-detectat-inca-o-drona-care-a-intrat-in-spatiul-aerian-national-aparatul-a-fost-doborat-de-ucraineni-3991583",
-        "typ": "media",
-        "publikovano": "2026-10-14T00:00:00Z",
-        "primarni": false,
-        "jazyk": "ro"
-      }
-    ],
-    "souvisejici": [],
-    "historie": [
-      {
-        "kdy": "2026-10-14T00:00:00Z",
-        "text": "Zachyceno automatickým sběrem, druhý zdroj doložen před zařazením do fronty.",
-        "novySignal": true
-      }
-    ],
-    "novy": true,
-    "zapocitanoTyden": "2026-10-14",
-    "aiZpracovano": true,
-    "lidskyOvereno": false,
-    "archivniZaznam": false,
-    "dopadNaCr": {
-      "stav": "zadny",
-      "procRelevantni": "Potvrzené, byť krátké narušení vzdušného prostoru členského státu NATO a EU dronem, který následně pokračoval do Ukrajiny — na rozdíl od jiných nedávných hlášení z Rumunska, kde k narušení nedošlo.",
-      "dopad": "Pro lidi v Česku ze zprávy dnes neplyne žádné omezení.",
-      "sledujeme": "Zda MApN dron identifikuje a potvrdí jeho typ a původ.",
-      "overeno": "2026-10-14"
-    }
   }
 ]
