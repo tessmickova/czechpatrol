@@ -1,5 +1,5 @@
 {
-  "aktualizovano": "2026-10-13T21:50:53.895Z",
+  "aktualizovano": "2026-10-14T00:03:18.856Z",
   "stavy": [
     {
       "klic": "cloudflare",
@@ -7,19 +7,19 @@
       "popis": "Partial System Outage",
       "incidenty": [
         {
-          "nazev": "Network Performance Issues in LAX",
-          "odkaz": "https://www.cloudflarestatus.com/incidents/fdgz8zlmfhw6",
-          "aktualizovano": "2026-10-13T20:37:59.232Z"
-        },
-        {
           "nazev": "Cloudflare Workers - Cron Trigger Activation Issues",
           "odkaz": "https://www.cloudflarestatus.com/incidents/cbvocc87nsne",
-          "aktualizovano": "2026-10-13T15:19:04.428Z"
+          "aktualizovano": "2026-10-13T23:10:18.529Z"
         },
         {
           "nazev": "Audit Logs v2 ingestion is missing multiple Cloudflare products ",
           "odkaz": "https://www.cloudflarestatus.com/incidents/hpmrg8d5vwr6",
           "aktualizovano": "2026-10-13T11:45:43.999Z"
+        },
+        {
+          "nazev": "Elevated Errors in China Network Colos",
+          "odkaz": "https://www.cloudflarestatus.com/incidents/cyxclg7nnhjy",
+          "aktualizovano": "2026-10-12T15:33:07.000Z"
         }
       ],
       "postizene": [
@@ -28,7 +28,7 @@
         "Arica, Chile - (ARI)",
         "Annaba, Algeria - (AAE)"
       ],
-      "zkontrolovano": "2026-10-13T21:50:53.895Z",
+      "zkontrolovano": "2026-10-14T00:03:18.856Z",
       "chyba": null
     },
     {
@@ -37,7 +37,7 @@
       "popis": "All Systems Operational",
       "incidenty": [],
       "postizene": [],
-      "zkontrolovano": "2026-10-13T21:50:53.895Z",
+      "zkontrolovano": "2026-10-14T00:03:18.856Z",
       "chyba": null
     },
     {
@@ -46,7 +46,7 @@
       "popis": "All Systems Operational",
       "incidenty": [],
       "postizene": [],
-      "zkontrolovano": "2026-10-13T21:50:53.895Z",
+      "zkontrolovano": "2026-10-14T00:03:18.856Z",
       "chyba": null
     }
   ]
