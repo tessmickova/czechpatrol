@@ -15708,5 +15708,84 @@
       "overeno": "2026-10-13"
     },
     "overeni": "neovereno"
+  },
+  {
+    "id": "i-2026-10-14-940a40e375",
+    "slug": "de-940a40e375",
+    "titulek": "Nord Stream: v Hamburku začal soud s obžalovaným Ukrajincem Serhijem Kuzněcovem, plánovaný nejméně do února 2027",
+    "kratkyTitulek": "Nord Stream: v Hamburku začal soud s obžalovaným Ukrajincem Serhijem Kuzněcovem, plánovaný nejméně do února 2027",
+    "zeme": "Německo",
+    "kodZeme": "DE",
+    "kategorie": [
+      "sabotaz",
+      "vysetrovani",
+      "pravo"
+    ],
+    "datumUdalosti": "2026-10-14T00:00:00Z",
+    "datumZjisteni": "2026-10-14T00:00:00Z",
+    "aktualizovano": "2026-10-14T09:01:36.005Z",
+    "zavaznost": "Y2",
+    "jistota": "stredni",
+    "stav": "bez-vysetrovani",
+    "atribuce": "neznama",
+    "puvodce": null,
+    "druh": "aktualizace",
+    "fakta": [
+      "V Hamburku 14. 10. 2026 začal soudní proces s ukrajinským exvojákem Serhijem Kuzněcovem (49), obžalovaným z vedení skupiny, která podle německé prokuratury v září 2022 sabotovala plynovody Nord Stream; proces je podle NOS plánován nejméně do února 2027.",
+      "Kuzněcov byl podle VRT zatčen v srpnu 2025 v Itálii na dovolené, kde cestoval s padělaným ukrajinským pasem na jméno „Serhi Kuelinits“ a byl identifikován podle fotografie v pasu; podle NOS pronajal německou plachetnici Andromeda bez GPS sledování a měl u sebe dva různé pasy.",
+      "Mezi důkazy žalobci uvádějí vyhledávání v jeho telefonu (hloubky vody, souřadnice, hospodářské zóny a technické údaje o potrubí v Baltském moři), fotografie turistů a dopravních kamer a podle NOS i telefonát z italské cely, v němž měl o sabotáži mluvit jako o „oficiální vojenské operaci“; obhájce podle VRT popírá přímé důkazy o jeho účasti."
+    ],
+    "neznameho": [
+      "Zda se u soudu objeví i polské stopy, jak předeslal polský deník Rzeczpospolita — podrobnosti zdroje, které jsem otevřel, neuvádějí.",
+      "Jak se toto řízení slučuje s případem dalšího podezřelého Volodymyra Žuravlova, který žádal o azyl v Chorvatsku, aby zabránil vydání do Německa."
+    ],
+    "vyznam": "",
+    "eskalacniSpousteče": [],
+    "deeskalacniSignaly": [],
+    "zdroje": [
+      {
+        "nazev": "NOS — Proces Nord Stream-aanslag van start: 6 vragen over 'sabotage van de eeuw'",
+        "url": "https://nos.nl/l/2634888",
+        "typ": "media",
+        "publikovano": "2026-10-14T00:00:00Z",
+        "primarni": false,
+        "jazyk": "nl"
+      },
+      {
+        "nazev": "VRT NWS — Zeiljacht en vervalst paspoort: zit Oekraïense ex-militair achter sabotage Nord-Stream pijpleidingen? Proces start",
+        "url": "https://www.vrt.be/vrtnws/nl/2026/10/13/north-stream-proces-duitsland-hamburg-sabotage-oorlog-rusland-oe/",
+        "typ": "media",
+        "publikovano": "2026-10-13T00:00:00Z",
+        "primarni": false,
+        "jazyk": "nl"
+      }
+    ],
+    "souvisejici": [],
+    "historie": [
+      {
+        "kdy": "2026-10-14T00:00:00Z",
+        "text": "Zachyceno automatickým sběrem, druhý zdroj doložen před zařazením do fronty.",
+        "novySignal": true
+      },
+      {
+        "kdy": "2026-10-14T09:01:36.005Z",
+        "text": "Zveřejněno jako neověřené úředně: dvě nezávislé redakce, úřad zatím nepotvrdil.",
+        "novySignal": false
+      }
+    ],
+    "novy": true,
+    "zapocitanoTyden": "2026-10-14",
+    "aiZpracovano": true,
+    "lidskyOvereno": false,
+    "archivniZaznam": false,
+    "navazujeNa": "nord-stream-obzaloba-2026",
+    "dopadNaCr": {
+      "stav": "zadny",
+      "procRelevantni": "Začátek prvního soudního procesu v kauze sabotáže plynovodů Nord Stream — klíčový milník ve vyšetřování útoku na kritickou energetickou infrastrukturu mezi Ruskem a Německem.",
+      "dopad": "Pro lidi v Česku ze zprávy dnes neplyne žádné omezení.",
+      "sledujeme": "Zda se u soudu objeví polské stopy, jak předeslala Rzeczpospolita, a jak proces pokročí.",
+      "overeno": "2026-10-14"
+    },
+    "overeni": "neovereno"
   }
 ]
