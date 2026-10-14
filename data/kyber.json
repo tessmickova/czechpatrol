@@ -1,8 +1,17 @@
 {
-  "aktualizovano": "2026-10-14T05:59:33.966Z",
-  "nacteno": "2026-10-14T05:59:33.966Z",
+  "aktualizovano": "2026-10-14T09:01:36.498Z",
+  "nacteno": "2026-10-14T09:01:36.498Z",
   "stav": "klid",
   "zpravy": [
+    {
+      "id": "aplikace-albertu-nefunguje-retezec-celil-kyberutoku-resi-se-",
+      "druh": "vypadek",
+      "titulek": "Aplikace Albertu nefunguje. Řetězec čelil kyberútoku, řeší se odcizení dat",
+      "vydavatel": "iDNES.cz",
+      "odkaz": "https://www.idnes.cz/ekonomika/podniky/albert-hackersky-utok-aplikace-udaje.A261014_091528_ekoakcie_vebe#utm_source=rss&utm_medium=feed&utm_campaign=zpravodaj&utm_content=main",
+      "kdy": "2026-10-14T08:36:00.000Z",
+      "uredni": false
+    },
     {
       "id": "obchodnich-retezcu-v-cesku-se-francouzsky-kyberutok-nedotkl-",
       "druh": "utok",
@@ -10,15 +19,6 @@
       "vydavatel": "ČT24",
       "odkaz": "https://ct24.ceskatelevize.cz/clanek/domaci/obchodnich-retezcu-v-cesku-se-francouzsky-kyberutok-nedotkl-krizove-plany-vsak-maji-378566",
       "kdy": "2026-10-13T18:15:44.000Z",
-      "uredni": false
-    },
-    {
-      "id": "albert-ma-uz-druhy-den-vypadek-aplikace-schovejte-si-uctenky",
-      "druh": "vypadek",
-      "titulek": "Albert má už druhý den výpadek aplikace. Schovejte si účtenky, radí řetězec",
-      "vydavatel": "Seznam Zprávy",
-      "odkaz": "https://www.seznamzpravy.cz/clanek/ekonomika-firmy-aplikace-albertu-ma-vypadek-nefunguje-uz-druhy-den-317794",
-      "kdy": "2026-10-13T17:38:39.000Z",
       "uredni": false
     }
   ]
