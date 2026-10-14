@@ -1909,55 +1909,122 @@
   {
     "kam": "zaznam",
     "pripravil": "patrol",
-    "pripraveno": "2026-10-14T07:52:17.987Z",
-    "id": "i-2026-10-14-940a40e375",
-    "slug": "de-940a40e375",
-    "titulek": "Nord Stream: v Hamburku začal soud s obžalovaným Ukrajincem Serhijem Kuzněcovem, plánovaný nejméně do února 2027",
-    "kratkyTitulek": "Nord Stream: v Hamburku začal soud s obžalovaným Ukrajincem Serhijem Kuzněcovem, plánovaný nejméně do února 2027",
-    "zeme": "Německo",
-    "kodZeme": "DE",
+    "pripraveno": "2026-10-14T13:57:57.532Z",
+    "id": "i-2026-10-14-49e98e11c7",
+    "slug": "cz-49e98e11c7",
+    "titulek": "Česko: u Městského soudu v Praze začal první proces svého druhu s čínským občanem Jangem I-mingem obžalovaným ze špionáže pro čínskou zpravodajskou službu pod novinářským krytím",
+    "kratkyTitulek": "Česko: u Městského soudu v Praze začal první proces svého druhu s čínským občanem Jangem I-mingem obžalovaným ze špionáže pro čínskou zpravodajskou službu pod novinářským krytím",
+    "zeme": "Česko",
+    "kodZeme": "CZ",
     "kategorie": [
-      "sabotaz",
-      "vysetrovani",
+      "cr",
+      "zpravodajske",
       "pravo"
     ],
     "datumUdalosti": "2026-10-14T00:00:00Z",
     "datumZjisteni": "2026-10-14T00:00:00Z",
-    "aktualizovano": "2026-10-14T07:52:17.987Z",
+    "aktualizovano": "2026-10-14T13:57:57.532Z",
     "zavaznost": "Y2",
     "jistota": "vysoka",
     "stav": "bez-vysetrovani",
     "atribuce": "neznama",
-    "puvodce": null,
-    "druh": "aktualizace",
+    "puvodce": "neznamy",
+    "druh": "pripad",
     "fakta": [
-      "V Hamburku 14. 10. 2026 začal soudní proces s ukrajinským exvojákem Serhijem Kuzněcovem (49), obžalovaným z vedení skupiny, která podle německé prokuratury v září 2022 sabotovala plynovody Nord Stream; proces je podle NOS plánován nejméně do února 2027.",
-      "Kuzněcov byl podle VRT zatčen v srpnu 2025 v Itálii na dovolené, kde cestoval s padělaným ukrajinským pasem na jméno „Serhi Kuelinits“ a byl identifikován podle fotografie v pasu; podle NOS pronajal německou plachetnici Andromeda bez GPS sledování a měl u sebe dva různé pasy.",
-      "Mezi důkazy žalobci uvádějí vyhledávání v jeho telefonu (hloubky vody, souřadnice, hospodářské zóny a technické údaje o potrubí v Baltském moři), fotografie turistů a dopravních kamer a podle NOS i telefonát z italské cely, v němž měl o sabotáži mluvit jako o „oficiální vojenské operaci“; obhájce podle VRT popírá přímé důkazy o jeho účasti."
+      "U Městského soudu v Praze 14. 10. 2026 začal podle Deníku N a Seznam Zpráv proces s čínským občanem Jangem I-mingem, obžalovaným z trestného činu neoprávněné činnosti pro cizí moc — špionáže pro čínskou zpravodajskou službu; jde o první případ tohoto druhu v Česku.",
+      "Podle žaloby obžalovaný pod krytím akreditovaného novináře sbíral politické a ekonomické informace a scházel se s různými osobami, kterým podle žalobce „dával i drobné dárky“, aby od nich získával citlivé informace pro čínské služby.",
+      "Obžalovaný prostřednictvím svého právníka Michala Sýkory obžalobu odmítl: „Pan obžalovaný se cítí být nevinen, nesouhlasí s popisem skutku, právní kvalifikací ani navrženým trestem.“ Hrozí mu až pět let vězení, peněžitý trest a vyhoštění z České republiky; obhajoba podle Seznam Zpráv argumentuje, že podle judikatury Ústavního soudu by jednání mělo být trestné jen při konkrétním ohrožení českých zájmů, které v obžalobě chybí."
     ],
     "neznameho": [
-      "Zda se u soudu objeví i polské stopy, jak předeslal polský deník Rzeczpospolita — podrobnosti zdroje, které jsem otevřel, neuvádějí.",
-      "Jak se toto řízení slučuje s případem dalšího podezřelého Volodymyra Žuravlova, který žádal o azyl v Chorvatsku, aby zabránil vydání do Německa."
+      "Pro kterou konkrétní čínskou zpravodajskou službu měl obžalovaný působit — zdroje to neuvádějí.",
+      "Jak dlouho činnost podle obžaloby trvala a jaké konkrétní informace byly předány."
     ],
     "vyznam": "",
     "eskalacniSpousteče": [],
     "deeskalacniSignaly": [],
     "zdroje": [
       {
-        "nazev": "NOS — Proces Nord Stream-aanslag van start: 6 vragen over 'sabotage van de eeuw'",
-        "url": "https://nos.nl/l/2634888",
+        "nazev": "Deník N — „Dával i drobné dárky.“ Začal soud s mužem obžalovaným ze špionáže pro Čínu",
+        "url": "https://denikn.cz/2219133/daval-i-drobne-darky-zacal-soud-s-muzem-obzalovanym-ze-spionaze-pro-cinu/",
         "typ": "media",
         "publikovano": "2026-10-14T00:00:00Z",
         "primarni": false,
-        "jazyk": "nl"
+        "jazyk": "cs"
       },
       {
-        "nazev": "VRT NWS — Zeiljacht en vervalst paspoort: zit Oekraïense ex-militair achter sabotage Nord-Stream pijpleidingen? Proces start",
-        "url": "https://www.vrt.be/vrtnws/nl/2026/10/13/north-stream-proces-duitsland-hamburg-sabotage-oorlog-rusland-oe/",
+        "nazev": "Seznam Zprávy — Čínský občan u soudu odmítl obžalobu ze špionáže pro zpravodajskou službu",
+        "url": "https://www.seznamzpravy.cz/clanek/domaci-zivot-v-cesku-cinsky-obcan-u-soudu-odmitl-obzalobu-ze-spionaze-pro-zpravodajskou-sluzbu-317848",
         "typ": "media",
-        "publikovano": "2026-10-13T00:00:00Z",
+        "publikovano": "2026-10-14T00:00:00Z",
         "primarni": false,
-        "jazyk": "nl"
+        "jazyk": "cs"
+      }
+    ],
+    "souvisejici": [],
+    "historie": [
+      {
+        "kdy": "2026-10-14T00:00:00Z",
+        "text": "Zachyceno automatickým sběrem, druhý zdroj doložen před zařazením do fronty.",
+        "novySignal": true
+      }
+    ],
+    "novy": true,
+    "zapocitanoTyden": "2026-10-14",
+    "aiZpracovano": true,
+    "lidskyOvereno": false,
+    "archivniZaznam": false
+  },
+  {
+    "kam": "zaznam",
+    "pripravil": "patrol",
+    "pripraveno": "2026-10-14T13:57:57.532Z",
+    "id": "i-2026-10-14-29b06742b1",
+    "slug": "ro-29b06742b1",
+    "titulek": "Rumunsko: dron krátce narušil vzdušný prostor u Suliny, vzlétly dvě stíhačky F-16, poté přeletěl do Ukrajiny, kde jej sestřelila ukrajinská protivzdušná obrana",
+    "kratkyTitulek": "Rumunsko: dron krátce narušil vzdušný prostor u Suliny, vzlétly dvě stíhačky F-16, poté přeletěl do Ukrajiny, kde jej sestřelila ukrajinská protivzdušná obrana",
+    "zeme": "Rumunsko",
+    "kodZeme": "RO",
+    "kategorie": [
+      "drony",
+      "hranice"
+    ],
+    "datumUdalosti": "2026-10-14T00:00:00Z",
+    "datumZjisteni": "2026-10-14T00:00:00Z",
+    "aktualizovano": "2026-10-14T13:57:57.532Z",
+    "zavaznost": "Y2",
+    "jistota": "vysoka",
+    "stav": "bez-vysetrovani",
+    "atribuce": "neznama",
+    "puvodce": "neznamy",
+    "druh": "pripad",
+    "fakta": [
+      "Radary rumunského ministerstva obrany (MApN) ve středu 14. 10. 2026 ráno zachytily dron, který krátce narušil národní vzdušný prostor východně od města Sulina nad Černým mořem; RO-Alert byl vydán v 10:19 a odvolán v 11:22.",
+      "MApN nechalo vzlétnout dvě stíhačky F-16 z 86. letecké základny Borcea; dron následně přeletěl do ukrajinského vzdušného prostoru, kde ho sestřelila ukrajinská protivzdušná obrana — rumunská armáda ho sama nesestřelila.",
+      "Celý incident trval podle Digi24 přibližně hodinu; MApN nepotvrdilo typ ani původ dronu."
+    ],
+    "neznameho": [
+      "Typ dronu a jeho přesný původ — MApN to v této zprávě neupřesnilo.",
+      "Zda šlo o stejný dron, který se objevil v hlášeních z předchozích dnů u Tulcey/Vylkove, nebo o nový případ."
+    ],
+    "vyznam": "",
+    "eskalacniSpousteče": [],
+    "deeskalacniSignaly": [],
+    "zdroje": [
+      {
+        "nazev": "Agerpres (anglicky) — MApN: Drone enters national airspace near Sulina, two F-16 aircraft scrambled",
+        "url": "https://agerpres.ro/english/2026/10/14/mapn-drone-enters-national-airspace-near-sulina-two-f-16-aicraft-scrambled--1602830",
+        "typ": "media",
+        "publikovano": "2026-10-14T00:00:00Z",
+        "primarni": false,
+        "jazyk": "en"
+      },
+      {
+        "nazev": "Digi24 — Radarele MApN au detectat încă o dronă care a intrat în spațiul aerian național; aparatul a fost doborât de ucraineni",
+        "url": "https://www.digi24.ro/stiri/actualitate/radarele-mapn-au-detectat-inca-o-drona-care-a-intrat-in-spatiul-aerian-national-aparatul-a-fost-doborat-de-ucraineni-3991583",
+        "typ": "media",
+        "publikovano": "2026-10-14T00:00:00Z",
+        "primarni": false,
+        "jazyk": "ro"
       }
     ],
     "souvisejici": [],
@@ -1973,12 +2040,11 @@
     "aiZpracovano": true,
     "lidskyOvereno": false,
     "archivniZaznam": false,
-    "navazujeNa": "nord-stream-obzaloba-2026",
     "dopadNaCr": {
       "stav": "zadny",
-      "procRelevantni": "Začátek prvního soudního procesu v kauze sabotáže plynovodů Nord Stream — klíčový milník ve vyšetřování útoku na kritickou energetickou infrastrukturu mezi Ruskem a Německem.",
+      "procRelevantni": "Potvrzené, byť krátké narušení vzdušného prostoru členského státu NATO a EU dronem, který následně pokračoval do Ukrajiny — na rozdíl od jiných nedávných hlášení z Rumunska, kde k narušení nedošlo.",
       "dopad": "Pro lidi v Česku ze zprávy dnes neplyne žádné omezení.",
-      "sledujeme": "Zda se u soudu objeví polské stopy, jak předeslala Rzeczpospolita, a jak proces pokročí.",
+      "sledujeme": "Zda MApN dron identifikuje a potvrdí jeho typ a původ.",
       "overeno": "2026-10-14"
     }
   }
