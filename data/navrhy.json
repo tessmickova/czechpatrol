@@ -1905,5 +1905,73 @@
       "sledujeme": "Zda francouzské úřady útok formálně přisoudí konkrétnímu aktérovi a jaká bude celková výše škody.",
       "overeno": "2026-10-12"
     }
+  },
+  {
+    "kam": "zaznam",
+    "pripravil": "patrol",
+    "pripraveno": "2026-10-14T13:57:57.532Z",
+    "id": "i-2026-10-14-49e98e11c7",
+    "slug": "cz-49e98e11c7",
+    "titulek": "Česko: u Městského soudu v Praze začal první proces svého druhu s čínským občanem Jangem I-mingem obžalovaným ze špionáže pro čínskou zpravodajskou službu pod novinářským krytím",
+    "kratkyTitulek": "Česko: u Městského soudu v Praze začal první proces svého druhu s čínským občanem Jangem I-mingem obžalovaným ze špionáže pro čínskou zpravodajskou službu pod novinářským krytím",
+    "zeme": "Česko",
+    "kodZeme": "CZ",
+    "kategorie": [
+      "cr",
+      "zpravodajske",
+      "pravo"
+    ],
+    "datumUdalosti": "2026-10-14T00:00:00Z",
+    "datumZjisteni": "2026-10-14T00:00:00Z",
+    "aktualizovano": "2026-10-14T13:57:57.532Z",
+    "zavaznost": "Y2",
+    "jistota": "stredni",
+    "stav": "bez-vysetrovani",
+    "atribuce": "neznama",
+    "puvodce": "neznamy",
+    "druh": "pripad",
+    "fakta": [
+      "U Městského soudu v Praze 14. 10. 2026 začal podle Deníku N a Seznam Zpráv proces s čínským občanem Jangem I-mingem, obžalovaným z trestného činu neoprávněné činnosti pro cizí moc — špionáže pro čínskou zpravodajskou službu; jde o první případ tohoto druhu v Česku.",
+      "Podle žaloby obžalovaný pod krytím akreditovaného novináře sbíral politické a ekonomické informace a scházel se s různými osobami, kterým podle žalobce „dával i drobné dárky“, aby od nich získával citlivé informace pro čínské služby.",
+      "Obžalovaný prostřednictvím svého právníka Michala Sýkory obžalobu odmítl: „Pan obžalovaný se cítí být nevinen, nesouhlasí s popisem skutku, právní kvalifikací ani navrženým trestem.“ Hrozí mu až pět let vězení, peněžitý trest a vyhoštění z České republiky; obhajoba podle Seznam Zpráv argumentuje, že podle judikatury Ústavního soudu by jednání mělo být trestné jen při konkrétním ohrožení českých zájmů, které v obžalobě chybí."
+    ],
+    "neznameho": [
+      "Pro kterou konkrétní čínskou zpravodajskou službu měl obžalovaný působit — zdroje to neuvádějí.",
+      "Jak dlouho činnost podle obžaloby trvala a jaké konkrétní informace byly předány."
+    ],
+    "vyznam": "",
+    "eskalacniSpousteče": [],
+    "deeskalacniSignaly": [],
+    "zdroje": [
+      {
+        "nazev": "Deník N — „Dával i drobné dárky.“ Začal soud s mužem obžalovaným ze špionáže pro Čínu",
+        "url": "https://denikn.cz/2219133/daval-i-drobne-darky-zacal-soud-s-muzem-obzalovanym-ze-spionaze-pro-cinu/",
+        "typ": "media",
+        "publikovano": "2026-10-14T00:00:00Z",
+        "primarni": false,
+        "jazyk": "cs"
+      },
+      {
+        "nazev": "Seznam Zprávy — Čínský občan u soudu odmítl obžalobu ze špionáže pro zpravodajskou službu",
+        "url": "https://www.seznamzpravy.cz/clanek/domaci-zivot-v-cesku-cinsky-obcan-u-soudu-odmitl-obzalobu-ze-spionaze-pro-zpravodajskou-sluzbu-317848",
+        "typ": "media",
+        "publikovano": "2026-10-14T00:00:00Z",
+        "primarni": false,
+        "jazyk": "cs"
+      }
+    ],
+    "souvisejici": [],
+    "historie": [
+      {
+        "kdy": "2026-10-14T00:00:00Z",
+        "text": "Zachyceno automatickým sběrem, druhý zdroj doložen před zařazením do fronty.",
+        "novySignal": true
+      }
+    ],
+    "novy": true,
+    "zapocitanoTyden": "2026-10-14",
+    "aiZpracovano": true,
+    "lidskyOvereno": false,
+    "archivniZaznam": false
   }
 ]
