@@ -1909,77 +1909,77 @@
   {
     "kam": "zaznam",
     "pripravil": "patrol",
-    "pripraveno": "2026-10-14T01:22:02.130Z",
-    "id": "i-2026-10-13-89815fedce",
-    "slug": "de-89815fedce",
-    "titulek": "Leipzig/Halle: vyšetřování jmenuje další společníky GRU plukovníka Karšakova — instruktora házení nožů a jáhna Vladimira Trofimova a tři Bělorusy žijící v Rusku",
-    "kratkyTitulek": "Leipzig/Halle: vyšetřování jmenuje další společníky GRU plukovníka Karšakova — instruktora házení nožů a jáhna Vladimira Trofimova a tři Bělorusy žijící v Rusku",
+    "pripraveno": "2026-10-14T07:52:17.987Z",
+    "id": "i-2026-10-14-940a40e375",
+    "slug": "de-940a40e375",
+    "titulek": "Nord Stream: v Hamburku začal soud s obžalovaným Ukrajincem Serhijem Kuzněcovem, plánovaný nejméně do února 2027",
+    "kratkyTitulek": "Nord Stream: v Hamburku začal soud s obžalovaným Ukrajincem Serhijem Kuzněcovem, plánovaný nejméně do února 2027",
     "zeme": "Německo",
     "kodZeme": "DE",
     "kategorie": [
       "sabotaz",
-      "zpravodajske",
-      "rusko"
+      "vysetrovani",
+      "pravo"
     ],
-    "datumUdalosti": "2026-10-13T00:00:00Z",
-    "datumZjisteni": "2026-10-13T00:00:00Z",
-    "aktualizovano": "2026-10-14T01:22:02.130Z",
-    "zavaznost": "Y1",
-    "jistota": "stredni",
+    "datumUdalosti": "2026-10-14T00:00:00Z",
+    "datumZjisteni": "2026-10-14T00:00:00Z",
+    "aktualizovano": "2026-10-14T07:52:17.987Z",
+    "zavaznost": "Y2",
+    "jistota": "vysoka",
     "stav": "bez-vysetrovani",
     "atribuce": "neznama",
     "puvodce": null,
     "druh": "aktualizace",
     "fakta": [
-      "Podle Novinky.cz (shrnujícího vyšetřování The Insider a Der Spiegel) byl v lednu 2026 v Moskvě s GRU plukovníkem Smoljaninovem a obchodníkem se zbraněmi Usačevem vyfotografován i Vladimir Trofimov, instruktor házení nožů a současně jáhen pravoslavné církve; o čem skupina ten den jednala, není jasné.",
-      "Mezi dalšími Karšakovými společníky vyšetřování jmenuje tři Bělorusy žijící v Rusku: Vjačeslava Ajsina, který podle zdroje pravidelně navštěvoval Německo včetně Lipska, bývalého policistu Denise Šulgana a Romana Kovalevského s rejstříkem trestů za krádeže a loupeže v Rusku.",
-      "Role žádného z těchto čtyř mužů v samotné sabotáži na letišti Lipsko/Halle nebyla upřesněna; The Insider výslovně uvádí, že jejich role zůstává nejasná a žádný z nich nebyl přímo spojen se samotným selháním dronu."
+      "V Hamburku 14. 10. 2026 začal soudní proces s ukrajinským exvojákem Serhijem Kuzněcovem (49), obžalovaným z vedení skupiny, která podle německé prokuratury v září 2022 sabotovala plynovody Nord Stream; proces je podle NOS plánován nejméně do února 2027.",
+      "Kuzněcov byl podle VRT zatčen v srpnu 2025 v Itálii na dovolené, kde cestoval s padělaným ukrajinským pasem na jméno „Serhi Kuelinits“ a byl identifikován podle fotografie v pasu; podle NOS pronajal německou plachetnici Andromeda bez GPS sledování a měl u sebe dva různé pasy.",
+      "Mezi důkazy žalobci uvádějí vyhledávání v jeho telefonu (hloubky vody, souřadnice, hospodářské zóny a technické údaje o potrubí v Baltském moři), fotografie turistů a dopravních kamer a podle NOS i telefonát z italské cely, v němž měl o sabotáži mluvit jako o „oficiální vojenské operaci“; obhájce podle VRT popírá přímé důkazy o jeho účasti."
     ],
     "neznameho": [
-      "Konkrétní role Trofimova, Ajsina, Šulgana a Kovalevského v přípravě nebo provedení sabotáže — vyšetřování to zatím neurčilo.",
-      "Zda a kde byl některý z nich zadržen."
+      "Zda se u soudu objeví i polské stopy, jak předeslal polský deník Rzeczpospolita — podrobnosti zdroje, které jsem otevřel, neuvádějí.",
+      "Jak se toto řízení slučuje s případem dalšího podezřelého Volodymyra Žuravlova, který žádal o azyl v Chorvatsku, aby zabránil vydání do Německa."
     ],
     "vyznam": "",
     "eskalacniSpousteče": [],
     "deeskalacniSignaly": [],
     "zdroje": [
       {
-        "nazev": "Novinky.cz — Plukovník GRU v zajímavé společnosti. Kdo je spojován s útokem na letiště v Lipsku",
-        "url": "https://www.novinky.cz/clanek/zahranicni-evropa-vrhac-nozu-i-obchodnik-se-zbranemi-kdo-je-take-spojovan-s-utokem-na-letiste-v-lipsku-40601611",
+        "nazev": "NOS — Proces Nord Stream-aanslag van start: 6 vragen over 'sabotage van de eeuw'",
+        "url": "https://nos.nl/l/2634888",
+        "typ": "media",
+        "publikovano": "2026-10-14T00:00:00Z",
+        "primarni": false,
+        "jazyk": "nl"
+      },
+      {
+        "nazev": "VRT NWS — Zeiljacht en vervalst paspoort: zit Oekraïense ex-militair achter sabotage Nord-Stream pijpleidingen? Proces start",
+        "url": "https://www.vrt.be/vrtnws/nl/2026/10/13/north-stream-proces-duitsland-hamburg-sabotage-oorlog-rusland-oe/",
         "typ": "media",
         "publikovano": "2026-10-13T00:00:00Z",
         "primarni": false,
-        "jazyk": "cs"
-      },
-      {
-        "nazev": "The Insider — The GRU's dud drone: How Russian intelligence botched a sabotage plot at Leipzig airport",
-        "url": "https://theins.press/en/inv/298011",
-        "typ": "media",
-        "publikovano": "2026-10-08T00:00:00Z",
-        "primarni": false,
-        "jazyk": "en"
+        "jazyk": "nl"
       }
     ],
     "souvisejici": [],
     "historie": [
       {
-        "kdy": "2026-10-13T00:00:00Z",
+        "kdy": "2026-10-14T00:00:00Z",
         "text": "Zachyceno automatickým sběrem, druhý zdroj doložen před zařazením do fronty.",
         "novySignal": true
       }
     ],
     "novy": true,
-    "zapocitanoTyden": "2026-10-13",
+    "zapocitanoTyden": "2026-10-14",
     "aiZpracovano": true,
     "lidskyOvereno": false,
     "archivniZaznam": false,
-    "navazujeNa": "de-d9b913f5af",
+    "navazujeNa": "nord-stream-obzaloba-2026",
     "dopadNaCr": {
       "stav": "zadny",
-      "procRelevantni": "Rozšiřuje síť osob spojených s plánem GRU na sabotáž letecké dopravy pro Ukrajinu v Německu — ukazuje rozsah a sociální vazby ruské sabotážní sítě v EU.",
+      "procRelevantni": "Začátek prvního soudního procesu v kauze sabotáže plynovodů Nord Stream — klíčový milník ve vyšetřování útoku na kritickou energetickou infrastrukturu mezi Ruskem a Německem.",
       "dopad": "Pro lidi v Česku ze zprávy dnes neplyne žádné omezení.",
-      "sledujeme": "Zda vyšetřování upřesní roli těchto čtyř mužů a zda budou zadrženi.",
-      "overeno": "2026-10-13"
+      "sledujeme": "Zda se u soudu objeví polské stopy, jak předeslala Rzeczpospolita, a jak proces pokročí.",
+      "overeno": "2026-10-14"
     }
   }
 ]
