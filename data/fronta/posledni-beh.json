@@ -1,5 +1,5 @@
 {
-  "kdy": "2026-10-14T21:01:25.693Z",
+  "kdy": "2026-10-14T23:08:42.875Z",
   "zdroje": [
     {
       "klic": "e-sbirka",
@@ -146,10 +146,11 @@
     },
     {
       "klic": "md",
-      "ok": true,
-      "stav": 200,
+      "ok": false,
+      "stav": null,
       "pocetPolozek": 0,
-      "vysledek": "ok"
+      "chyba": "fetch failed",
+      "vysledek": "chyba"
     },
     {
       "klic": "sprava-zeleznic",
@@ -241,7 +242,7 @@
       "klic": "kyber",
       "ok": true,
       "stav": null,
-      "pocetPolozek": 1,
+      "pocetPolozek": 2,
       "vysledek": "ok"
     },
     {
