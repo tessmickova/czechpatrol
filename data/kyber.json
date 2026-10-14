@@ -1,8 +1,17 @@
 {
-  "aktualizovano": "2026-10-14T18:01:16.777Z",
-  "nacteno": "2026-10-14T18:01:16.777Z",
-  "stav": "klid",
+  "aktualizovano": "2026-10-14T23:08:42.875Z",
+  "nacteno": "2026-10-14T23:08:42.875Z",
+  "stav": "pozor",
   "zpravy": [
+    {
+      "id": "kamery-jsou-vsude-armady-je-zacaly-vyuzivat-pro-valecne-ucel",
+      "druh": "utok",
+      "titulek": "Kamery jsou všude. Armády je začaly využívat pro válečné účely a zapojily hackery",
+      "vydavatel": "Český rozhlas",
+      "odkaz": "https://www.irozhlas.cz/veda-technologie/technologie/kamery-jsou-vsude-armady-je-zacaly-vyuzivat-pro-valecne-ucely-a-zapojily-hackery_2610150010_cen",
+      "kdy": "2026-10-14T22:10:00.000Z",
+      "uredni": false
+    },
     {
       "id": "obchodnich-retezcu-v-cesku-se-francouzsky-kyberutok-nedotkl-",
       "druh": "utok",

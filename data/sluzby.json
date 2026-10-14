@@ -1,5 +1,5 @@
 {
-  "aktualizovano": "2026-10-14T18:04:02.561Z",
+  "aktualizovano": "2026-10-14T23:10:48.536Z",
   "stavy": [
     {
       "klic": "cloudflare",
@@ -28,24 +28,16 @@
         "Arica, Chile - (ARI)",
         "Asunción, Paraguay - (ASU)"
       ],
-      "zkontrolovano": "2026-10-14T18:04:02.561Z",
+      "zkontrolovano": "2026-10-14T23:10:48.536Z",
       "chyba": null
     },
     {
       "klic": "zoom",
-      "stav": "omezeni",
-      "popis": "Partially Degraded Service",
-      "incidenty": [
-        {
-          "nazev": "Service Degradation Affecting Zoom Clips",
-          "odkaz": "https://stspg.io/rcc26f8fnwgf",
-          "aktualizovano": "2026-10-14T09:04:54.315-07:00"
-        }
-      ],
-      "postizene": [
-        "Zoom Clips"
-      ],
-      "zkontrolovano": "2026-10-14T18:04:02.561Z",
+      "stav": "provoz",
+      "popis": "All Systems Operational",
+      "incidenty": [],
+      "postizene": [],
+      "zkontrolovano": "2026-10-14T23:10:48.536Z",
       "chyba": null
     },
     {
@@ -54,7 +46,7 @@
       "popis": "All Systems Operational",
       "incidenty": [],
       "postizene": [],
-      "zkontrolovano": "2026-10-14T18:04:02.561Z",
+      "zkontrolovano": "2026-10-14T23:10:48.536Z",
       "chyba": null
     }
   ]
