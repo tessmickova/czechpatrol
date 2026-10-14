@@ -1973,5 +1973,78 @@
     "aiZpracovano": true,
     "lidskyOvereno": false,
     "archivniZaznam": false
+  },
+  {
+    "kam": "zaznam",
+    "pripravil": "patrol",
+    "pripraveno": "2026-10-14T18:46:57.088Z",
+    "id": "i-2026-10-14-44463091cd",
+    "slug": "nl-44463091cd",
+    "titulek": "Nizozemsko: kybernetický incident od neděle odstavil systémy řetězce Albert Heijn (prázdné regály, výpadek objednávek i aplikace), NCSC podle Euronews vyloučila souvislost s francouzským útokem na chlazení",
+    "kratkyTitulek": "Nizozemsko: kybernetický incident od neděle odstavil systémy řetězce Albert Heijn (prázdné regály, výpadek objednávek i aplikace), NCSC podle Euronews vyloučila souvislost s francouzským útokem na chlazení",
+    "zeme": "Nizozemsko",
+    "kodZeme": "NL",
+    "kategorie": [
+      "kyber"
+    ],
+    "datumUdalosti": "2026-10-14T00:00:00Z",
+    "datumZjisteni": "2026-10-14T00:00:00Z",
+    "aktualizovano": "2026-10-14T18:46:57.088Z",
+    "zavaznost": "Y1",
+    "jistota": "stredni",
+    "stav": "bez-vysetrovani",
+    "atribuce": "neznama",
+    "puvodce": "neznamy",
+    "druh": "pripad",
+    "fakta": [
+      "Řetězec supermarketů Albert Heijn měl podle NOS v pondělí a úterý (12.–13. 10. 2026) kvůli kybernetickému incidentu odstavené veškeré systémy — distribuční centra, online objednávky, doručování, zákaznický servis i aplikaci; prodejny hlásily prázdné regály, zejména u zeleniny a ovoce.",
+      "Podle Euronews (citujícího nizozemský kybernetický bezpečnostní úřad NCSC) nejde o totéž co francouzský útok na chlazení supermarketů z předchozího víkendu — „nizozemský kybernetický bezpečnostní úřad NCSC řekl, že nevidí souvislost s francouzským útokem“.",
+      "Reuters podle Euronews v úterý zjistil nejméně 4500 veřejně přístupných rozhraní dánské firmy Danfoss (stejný výrobce, jehož software zneužili útočníci ve Francii) — mnohá zařízení jsou zastaralá a již nedostávají bezpečnostní aktualizace; firma Onyphe to popsala jako „stále velmi rozšířené“ riziko napříč Evropou."
+    ],
+    "neznameho": [
+      "Přesná příčina incidentu u Albert Heijn — NOS píše, že „příčina ještě není známa“, byť experti připouštějí, že šlo pravděpodobně o hackerský útok.",
+      "Zda byla odcizena data zákazníků — Albert Heijn k době zprávy uváděl, že nemá náznaky odcizení."
+    ],
+    "vyznam": "",
+    "eskalacniSpousteče": [],
+    "deeskalacniSignaly": [],
+    "zdroje": [
+      {
+        "nazev": "Euronews — Thousands of supermarket fridges still exposed after cyberattack",
+        "url": "https://www.euronews.com/2026/10/14/thousands-of-supermarket-fridges-still-exposed-after-cyberattack",
+        "typ": "media",
+        "publikovano": "2026-10-14T00:00:00Z",
+        "primarni": false,
+        "jazyk": "en"
+      },
+      {
+        "nazev": "NOS — Distributie Albert Heijn 'in de loop van de dag' weer opgestart",
+        "url": "https://nos.nl/artikel/2634918",
+        "typ": "media",
+        "publikovano": "2026-10-14T00:00:00Z",
+        "primarni": false,
+        "jazyk": "nl"
+      }
+    ],
+    "souvisejici": [],
+    "historie": [
+      {
+        "kdy": "2026-10-14T00:00:00Z",
+        "text": "Zachyceno automatickým sběrem, druhý zdroj doložen před zařazením do fronty.",
+        "novySignal": true
+      }
+    ],
+    "novy": true,
+    "zapocitanoTyden": "2026-10-14",
+    "aiZpracovano": true,
+    "lidskyOvereno": false,
+    "archivniZaznam": false,
+    "dopadNaCr": {
+      "stav": "zadny",
+      "procRelevantni": "Druhý kybernetický incident proti maloobchodnímu chladicímu/distribučnímu řetězci během týdne u jiného členského státu EU — i bez prokázané souvislosti s francouzským případem ukazuje na širokou zranitelnost zastaralých zařízení Danfoss po celé Evropě.",
+      "dopad": "Pro lidi v Česku ze zprávy dnes neplyne žádné omezení.",
+      "sledujeme": "Zda nizozemské úřady příčinu incidentu potvrdí jako kybernetický útok a kdo za ním stojí.",
+      "overeno": "2026-10-14"
+    }
   }
 ]
