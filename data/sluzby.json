@@ -1,16 +1,11 @@
 {
-  "aktualizovano": "2026-10-15T17:44:15.352Z",
+  "aktualizovano": "2026-10-15T18:04:33.941Z",
   "stavy": [
     {
       "klic": "cloudflare",
       "stav": "vypadek",
       "popis": "Partial System Outage",
       "incidenty": [
-        {
-          "nazev": "Network Performance Issues in London",
-          "odkaz": "https://www.cloudflarestatus.com/incidents/ybyy2whvd8ef",
-          "aktualizovano": "2026-10-15T17:33:44.712Z"
-        },
         {
           "nazev": "Pages.dev sites experiencing availability issues in Norway",
           "odkaz": "https://www.cloudflarestatus.com/incidents/5py8l9ees6di",
@@ -20,6 +15,11 @@
           "nazev": "Increased Errors for Durable Objects",
           "odkaz": "https://www.cloudflarestatus.com/incidents/9yl8m5h16g1z",
           "aktualizovano": "2026-10-15T16:12:20.000Z"
+        },
+        {
+          "nazev": "DNS Update Delays",
+          "odkaz": "https://www.cloudflarestatus.com/incidents/wpq9v3pzhcwl",
+          "aktualizovano": "2026-10-15T16:27:45.000Z"
         }
       ],
       "postizene": [
@@ -28,7 +28,7 @@
         "Arica, Chile - (ARI)",
         "Annaba, Algeria - (AAE)"
       ],
-      "zkontrolovano": "2026-10-15T17:44:15.352Z",
+      "zkontrolovano": "2026-10-15T18:04:33.941Z",
       "chyba": null
     },
     {
@@ -37,7 +37,7 @@
       "popis": "All Systems Operational",
       "incidenty": [],
       "postizene": [],
-      "zkontrolovano": "2026-10-15T17:44:15.352Z",
+      "zkontrolovano": "2026-10-15T18:04:33.941Z",
       "chyba": null
     },
     {
@@ -46,7 +46,7 @@
       "popis": "All Systems Operational",
       "incidenty": [],
       "postizene": [],
-      "zkontrolovano": "2026-10-15T17:44:15.352Z",
+      "zkontrolovano": "2026-10-15T18:04:33.941Z",
       "chyba": null
     }
   ]
