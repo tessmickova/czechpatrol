@@ -1,5 +1,5 @@
 {
-  "aktualizovano": "2026-10-15T07:15:58.804Z",
+  "aktualizovano": "2026-10-15T09:03:57.407Z",
   "stavy": [
     {
       "klic": "cloudflare",
@@ -9,7 +9,7 @@
         {
           "nazev": "Cloudflare Workers AI Issues",
           "odkaz": "https://www.cloudflarestatus.com/incidents/alzmexlqangd",
-          "aktualizovano": "2026-10-15T07:10:58.804Z"
+          "aktualizovano": "2026-10-15T07:57:49.667Z"
         },
         {
           "nazev": "Audit Logs v2 ingestion is missing multiple Cloudflare products ",
@@ -25,10 +25,10 @@
       "postizene": [
         "Amsterdam, Netherlands - (AMS)",
         "Cloudflare Sites and Services",
-        "Albuquerque, NM, United States - (ABQ)",
-        "Africa"
+        "Africa",
+        "Arica, Chile - (ARI)"
       ],
-      "zkontrolovano": "2026-10-15T07:15:58.804Z",
+      "zkontrolovano": "2026-10-15T09:03:57.407Z",
       "chyba": null
     },
     {
@@ -37,7 +37,7 @@
       "popis": "All Systems Operational",
       "incidenty": [],
       "postizene": [],
-      "zkontrolovano": "2026-10-15T07:15:58.804Z",
+      "zkontrolovano": "2026-10-15T09:03:57.407Z",
       "chyba": null
     },
     {
@@ -46,7 +46,7 @@
       "popis": "All Systems Operational",
       "incidenty": [],
       "postizene": [],
-      "zkontrolovano": "2026-10-15T07:15:58.804Z",
+      "zkontrolovano": "2026-10-15T09:03:57.407Z",
       "chyba": null
     }
   ]
