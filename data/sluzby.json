@@ -1,5 +1,5 @@
 {
-  "aktualizovano": "2026-10-15T06:03:24.680Z",
+  "aktualizovano": "2026-10-15T07:15:58.804Z",
   "stavy": [
     {
       "klic": "cloudflare",
@@ -7,9 +7,9 @@
       "popis": "Partial System Outage",
       "incidenty": [
         {
-          "nazev": "Degraded performance for Cloudflare Browser Run",
-          "odkaz": "https://www.cloudflarestatus.com/incidents/9tmkb5hagxvp",
-          "aktualizovano": "2026-10-15T05:57:52.574Z"
+          "nazev": "Cloudflare Workers AI Issues",
+          "odkaz": "https://www.cloudflarestatus.com/incidents/alzmexlqangd",
+          "aktualizovano": "2026-10-15T07:10:58.804Z"
         },
         {
           "nazev": "Audit Logs v2 ingestion is missing multiple Cloudflare products ",
@@ -19,16 +19,16 @@
         {
           "nazev": "Elevated Errors in China Network Colos",
           "odkaz": "https://www.cloudflarestatus.com/incidents/cyxclg7nnhjy",
-          "aktualizovano": "2026-10-14T17:50:10.608Z"
+          "aktualizovano": "2026-10-14T17:50:10.000Z"
         }
       ],
       "postizene": [
         "Amsterdam, Netherlands - (AMS)",
         "Cloudflare Sites and Services",
-        "Africa",
-        "Arica, Chile - (ARI)"
+        "Albuquerque, NM, United States - (ABQ)",
+        "Africa"
       ],
-      "zkontrolovano": "2026-10-15T06:03:24.680Z",
+      "zkontrolovano": "2026-10-15T07:15:58.804Z",
       "chyba": null
     },
     {
@@ -37,7 +37,7 @@
       "popis": "All Systems Operational",
       "incidenty": [],
       "postizene": [],
-      "zkontrolovano": "2026-10-15T06:03:24.680Z",
+      "zkontrolovano": "2026-10-15T07:15:58.804Z",
       "chyba": null
     },
     {
@@ -46,7 +46,7 @@
       "popis": "All Systems Operational",
       "incidenty": [],
       "postizene": [],
-      "zkontrolovano": "2026-10-15T06:03:24.680Z",
+      "zkontrolovano": "2026-10-15T07:15:58.804Z",
       "chyba": null
     }
   ]
