@@ -1,5 +1,5 @@
 {
-  "kdy": "2026-10-14T23:08:42.875Z",
+  "kdy": "2026-10-15T00:01:30.927Z",
   "zdroje": [
     {
       "klic": "e-sbirka",
@@ -146,11 +146,10 @@
     },
     {
       "klic": "md",
-      "ok": false,
-      "stav": null,
+      "ok": true,
+      "stav": 200,
       "pocetPolozek": 0,
-      "chyba": "fetch failed",
-      "vysledek": "chyba"
+      "vysledek": "ok"
     },
     {
       "klic": "sprava-zeleznic",
@@ -196,18 +195,17 @@
     },
     {
       "klic": "bundespolizei",
-      "ok": false,
-      "stav": null,
+      "ok": true,
+      "stav": 200,
       "pocetPolozek": 0,
-      "chyba": "fetch failed",
-      "vysledek": "chyba"
+      "vysledek": "ok"
     },
     {
       "klic": "bmi-de",
       "ok": false,
-      "stav": 400,
+      "stav": null,
       "pocetPolozek": 0,
-      "chyba": "HTTP 400",
+      "chyba": "fetch failed",
       "vysledek": "chyba"
     },
     {
@@ -253,5 +251,5 @@
       "vysledek": "ok"
     }
   ],
-  "novychVeFronte": 0
+  "novychVeFronte": 7
 }
