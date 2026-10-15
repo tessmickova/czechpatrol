@@ -1,11 +1,16 @@
 {
-  "aktualizovano": "2026-10-15T03:03:49.683Z",
+  "aktualizovano": "2026-10-15T09:03:57.407Z",
   "stavy": [
     {
       "klic": "cloudflare",
       "stav": "vypadek",
       "popis": "Partial System Outage",
       "incidenty": [
+        {
+          "nazev": "Cloudflare Workers AI Issues",
+          "odkaz": "https://www.cloudflarestatus.com/incidents/alzmexlqangd",
+          "aktualizovano": "2026-10-15T07:57:49.667Z"
+        },
         {
           "nazev": "Audit Logs v2 ingestion is missing multiple Cloudflare products ",
           "odkaz": "https://www.cloudflarestatus.com/incidents/hpmrg8d5vwr6",
@@ -15,20 +20,15 @@
           "nazev": "Elevated Errors in China Network Colos",
           "odkaz": "https://www.cloudflarestatus.com/incidents/cyxclg7nnhjy",
           "aktualizovano": "2026-10-14T17:50:10.000Z"
-        },
-        {
-          "nazev": "Incorrect geo location for some Cloudflare WARP users",
-          "odkaz": "https://www.cloudflarestatus.com/incidents/9g65dxfbcjln",
-          "aktualizovano": "2026-09-01T08:29:56.000Z"
         }
       ],
       "postizene": [
+        "Amsterdam, Netherlands - (AMS)",
         "Cloudflare Sites and Services",
         "Africa",
-        "Arica, Chile - (ARI)",
-        "Algiers, Algeria - (ALG)"
+        "Arica, Chile - (ARI)"
       ],
-      "zkontrolovano": "2026-10-15T03:03:49.683Z",
+      "zkontrolovano": "2026-10-15T09:03:57.407Z",
       "chyba": null
     },
     {
@@ -37,7 +37,7 @@
       "popis": "All Systems Operational",
       "incidenty": [],
       "postizene": [],
-      "zkontrolovano": "2026-10-15T03:03:49.683Z",
+      "zkontrolovano": "2026-10-15T09:03:57.407Z",
       "chyba": null
     },
     {
@@ -46,7 +46,7 @@
       "popis": "All Systems Operational",
       "incidenty": [],
       "postizene": [],
-      "zkontrolovano": "2026-10-15T03:03:49.683Z",
+      "zkontrolovano": "2026-10-15T09:03:57.407Z",
       "chyba": null
     }
   ]
