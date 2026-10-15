@@ -2046,5 +2046,163 @@
       "sledujeme": "Zda nizozemské úřady příčinu incidentu potvrdí jako kybernetický útok a kdo za ním stojí.",
       "overeno": "2026-10-14"
     }
+  },
+  {
+    "kam": "zaznam",
+    "pripravil": "patrol",
+    "pripraveno": "2026-10-15T11:53:16.596Z",
+    "id": "i-2026-10-15-cd615d058c",
+    "slug": "se-cd615d058c",
+    "titulek": "Rusko: FSB oznámila zadržení švédského občana v Pskovské oblasti, obviňuje ho z boje za Ukrajinu a plánování sabotáží na ruském území",
+    "kratkyTitulek": "Rusko: FSB oznámila zadržení švédského občana v Pskovské oblasti, obviňuje ho z boje za Ukrajinu a plánování sabotáží na ruském území",
+    "zeme": "Švédsko",
+    "kodZeme": "SE",
+    "kategorie": [
+      "sabotaz",
+      "zpravodajske",
+      "hranice",
+      "rusko"
+    ],
+    "datumUdalosti": "2026-10-15T00:00:00Z",
+    "datumZjisteni": "2026-10-15T00:00:00Z",
+    "aktualizovano": "2026-10-15T11:53:16.596Z",
+    "zavaznost": "Y2",
+    "jistota": "stredni",
+    "stav": "bez-vysetrovani",
+    "atribuce": "neznama",
+    "puvodce": "neznamy",
+    "druh": "pripad",
+    "fakta": [
+      "FSB 15. 10. 2026 oznámila, že v Pskovské oblasti zadržela švédského občana (jméno neuvedeno), kterého obviňuje z nelegálního překročení ruské hranice a z boje na straně ukrajinských ozbrojených sil — konkrétně jako velitel skupiny bezpilotních letounů u 24. samostatné útočné brigády od února do června 2026.",
+      "Podle FSB přišel muž do Ruska „pod záminkou vstupu do ruských ozbrojených sil“ s cílem provádět sabotáže na vojenských objektech; agentura tvrdí, že má „dokumenty potvrzující jeho účast v bojových operacích proti naší zemi jako součásti ukrajinských ozbrojených sil“.",
+      "Zatím bylo zahájeno trestní řízení za nelegální překročení hranice; FSB podle Meduzy plánuje otevřít druhý případ ohledně organizování činnosti teroristické organizace a žoldnéřství."
+    ],
+    "neznameho": [
+      "Jméno, věk a další osobní údaje zadrženého muže — zdroje je neuvádějí.",
+      "Zda a jak se k obvinění staví švédské úřady nebo rodina zadrženého."
+    ],
+    "vyznam": "",
+    "eskalacniSpousteče": [],
+    "deeskalacniSignaly": [],
+    "zdroje": [
+      {
+        "nazev": "Meduza (anglicky) — FSB says it detained a Swedish citizen in Russia, accuses him of fighting for Ukraine and plotting sabotage",
+        "url": "https://meduza.io/en/news/2026/10/15/fsb-says-it-detained-a-swedish-citizen-in-russia-accuses-him-of-fighting-for-ukraine-and-plotting-sabotage",
+        "typ": "media",
+        "publikovano": "2026-10-15T00:00:00Z",
+        "primarni": false,
+        "jazyk": "en"
+      },
+      {
+        "nazev": "Seznam Zprávy — FSB oznámila zadržení švédského občana, jehož viní z úmyslu provádět sabotáže",
+        "url": "https://www.seznamzpravy.cz/clanek/zahranicni-fsb-oznamila-zadrzeni-svedskeho-obcana-jehoz-vini-z-umyslu-provadet-sabotaze-317925",
+        "typ": "media",
+        "publikovano": "2026-10-15T00:00:00Z",
+        "primarni": false,
+        "jazyk": "cs"
+      }
+    ],
+    "souvisejici": [],
+    "historie": [
+      {
+        "kdy": "2026-10-15T00:00:00Z",
+        "text": "Zachyceno automatickým sběrem, druhý zdroj doložen před zařazením do fronty.",
+        "novySignal": true
+      }
+    ],
+    "novy": true,
+    "zapocitanoTyden": "2026-10-15",
+    "aiZpracovano": true,
+    "lidskyOvereno": false,
+    "archivniZaznam": false,
+    "dopadNaCr": {
+      "stav": "zadny",
+      "procRelevantni": "Zadržení švédského (tedy NATO/EU) občana ruskou FSB s obviněním z boje za Ukrajinu a plánování sabotáží na ruském území je dalším případem kriminalizace cizích státních příslušníků, kteří se postavili na stranu Ukrajiny.",
+      "dopad": "Pro lidi v Česku ze zprávy dnes neplyne žádné omezení.",
+      "sledujeme": "Zda se k případu vyjádří švédská vláda a jak bude vyšetřování a případné trestní řízení pokračovat.",
+      "overeno": "2026-10-15"
+    }
+  },
+  {
+    "kam": "zaznam",
+    "pripravil": "patrol",
+    "pripraveno": "2026-10-15T11:53:16.596Z",
+    "id": "i-2026-10-15-5cd3d99956",
+    "slug": "ro-5cd3d99956",
+    "titulek": "Rumunsko: v Černém moři asi 13 námořních mil jihovýchodně od Suliny hoří nákladní loď Wine Trader, sedm z dvanácti členů posádky je nezvěstných; nepotvrzená svědectví mluví o zásahu drony",
+    "kratkyTitulek": "Rumunsko: v Černém moři asi 13 námořních mil jihovýchodně od Suliny hoří nákladní loď Wine Trader, sedm z dvanácti členů posádky je nezvěstných; nepotvrzená svědectví mluví o zásahu drony",
+    "zeme": "Rumunsko",
+    "kodZeme": "RO",
+    "kategorie": [
+      "hranice",
+      "drony"
+    ],
+    "datumUdalosti": "2026-10-15T00:00:00Z",
+    "datumZjisteni": "2026-10-15T00:00:00Z",
+    "aktualizovano": "2026-10-15T11:53:16.596Z",
+    "zavaznost": "Y2",
+    "jistota": "nizka",
+    "stav": "bez-vysetrovani",
+    "atribuce": "neznama",
+    "puvodce": "neznamy",
+    "druh": "pripad",
+    "fakta": [
+      "Nákladní loď Wine Trader plující pod vlajkou San Marina vyslala ve čtvrtek 15. 10. 2026 kolem 7:00 tísňové hlášení o požáru v nástavbě lodi přibližně 13 námořních mil jihovýchodně od Suliny v Černém moři; na palubě bylo 12 osob, loď nevezla žádný náklad.",
+      "Rumunská námořní autorita (Námořní koordinační centrum) spustila pátrací a záchrannou operaci; podle aktualizované zprávy Agerpres bylo zachráněno pět členů posádky, sedm zůstává nezvěstných.",
+      "Podle Digi24 námořníci na blízkých lodích tvrdili, že viděli, jak byl tanker zasažen dvěma drony, záchranu komplikovaly velmi vysoké vlny; Agerpres ve své zprávě zásah drony nezmiňuje a označuje příčinu jen jako požár — zásah drony tedy zůstává nepotvrzený."
+    ],
+    "neznameho": [
+      "Skutečná příčina požáru — zda šlo o zásah dronem, jak tvrdí nepotvrzená svědectví, nebo o jinou příčinu.",
+      "Osud sedmi nezvěstných členů posádky."
+    ],
+    "vyznam": "",
+    "eskalacniSpousteče": [],
+    "deeskalacniSignaly": [],
+    "zdroje": [
+      {
+        "nazev": "Agerpres (anglicky) — Five crew members from Wine Trader rescued, seven others remain missing",
+        "url": "https://agerpres.ro/english/2026/10/15/five-crew-members-from-wine-trader-rescued-seven-others-remain-missing--1603294",
+        "typ": "media",
+        "publikovano": "2026-10-15T00:00:00Z",
+        "primarni": false,
+        "jazyk": "en"
+      },
+      {
+        "nazev": "Digi24 — Alertă în Marea Neagră: Încă o navă aflată în apropiere de Sulina a anunțat un incendiu la bord",
+        "url": "https://www.digi24.ro/stiri/actualitate/alerta-in-marea-neagra-inca-o-nava-aflata-in-apropiere-de-sulina-a-anuntat-un-incendiu-la-bord-3993019",
+        "typ": "media",
+        "publikovano": "2026-10-15T00:00:00Z",
+        "primarni": false,
+        "jazyk": "ro"
+      },
+      {
+        "nazev": "BBC News — Eight crew missing in tanker fire off Romania's coast",
+        "url": "https://www.bbc.co.uk/news/articles/c60qkgpp592yo?at_medium=RSS&at_campaign=rss",
+        "typ": "media",
+        "publikovano": "2026-10-15T00:00:00Z",
+        "primarni": false,
+        "jazyk": "en"
+      }
+    ],
+    "souvisejici": [],
+    "historie": [
+      {
+        "kdy": "2026-10-15T00:00:00Z",
+        "text": "Zachyceno automatickým sběrem, druhý zdroj doložen před zařazením do fronty.",
+        "novySignal": true
+      }
+    ],
+    "novy": true,
+    "zapocitanoTyden": "2026-10-15",
+    "aiZpracovano": true,
+    "lidskyOvereno": false,
+    "archivniZaznam": false,
+    "dopadNaCr": {
+      "stav": "zadny",
+      "procRelevantni": "Další vážný incident s civilní lodí v blízkosti pobřeží členského státu NATO a EU v Černém moři se sedmi nezvěstnými; nepotvrzené svědectví o zásahu drony zapadá do řady podobných hlášení z téhož regionu.",
+      "dopad": "Pro lidi v Česku ze zprávy dnes neplyne žádné omezení.",
+      "sledujeme": "Osud nezvěstných členů posádky a zda se potvrdí nebo vyvrátí zásah dronem.",
+      "overeno": "2026-10-15"
+    }
   }
 ]
