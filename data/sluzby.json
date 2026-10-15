@@ -1,5 +1,5 @@
 {
-  "aktualizovano": "2026-10-15T09:03:57.407Z",
+  "aktualizovano": "2026-10-15T15:04:18.546Z",
   "stavy": [
     {
       "klic": "cloudflare",
@@ -7,9 +7,9 @@
       "popis": "Partial System Outage",
       "incidenty": [
         {
-          "nazev": "Cloudflare Workers AI Issues",
-          "odkaz": "https://www.cloudflarestatus.com/incidents/alzmexlqangd",
-          "aktualizovano": "2026-10-15T07:57:49.667Z"
+          "nazev": "Increased HTTP 502 Errors",
+          "odkaz": "https://www.cloudflarestatus.com/incidents/mxthd6onaplz",
+          "aktualizovano": "2026-10-15T11:41:54.809Z"
         },
         {
           "nazev": "Audit Logs v2 ingestion is missing multiple Cloudflare products ",
@@ -17,9 +17,9 @@
           "aktualizovano": "2026-10-13T11:45:43.999Z"
         },
         {
-          "nazev": "Elevated Errors in China Network Colos",
-          "odkaz": "https://www.cloudflarestatus.com/incidents/cyxclg7nnhjy",
-          "aktualizovano": "2026-10-14T17:50:10.000Z"
+          "nazev": "Incorrect geo location for some Cloudflare WARP users",
+          "odkaz": "https://www.cloudflarestatus.com/incidents/9g65dxfbcjln",
+          "aktualizovano": "2026-09-01T08:29:56.000Z"
         }
       ],
       "postizene": [
@@ -28,7 +28,7 @@
         "Africa",
         "Arica, Chile - (ARI)"
       ],
-      "zkontrolovano": "2026-10-15T09:03:57.407Z",
+      "zkontrolovano": "2026-10-15T15:04:18.546Z",
       "chyba": null
     },
     {
@@ -37,7 +37,7 @@
       "popis": "All Systems Operational",
       "incidenty": [],
       "postizene": [],
-      "zkontrolovano": "2026-10-15T09:03:57.407Z",
+      "zkontrolovano": "2026-10-15T15:04:18.546Z",
       "chyba": null
     },
     {
@@ -46,7 +46,7 @@
       "popis": "All Systems Operational",
       "incidenty": [],
       "postizene": [],
-      "zkontrolovano": "2026-10-15T09:03:57.407Z",
+      "zkontrolovano": "2026-10-15T15:04:18.546Z",
       "chyba": null
     }
   ]
