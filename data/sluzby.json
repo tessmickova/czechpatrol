@@ -1,11 +1,16 @@
 {
-  "aktualizovano": "2026-10-15T23:48:58.603Z",
+  "aktualizovano": "2026-10-16T00:03:14.218Z",
   "stavy": [
     {
       "klic": "cloudflare",
       "stav": "vypadek",
       "popis": "Partial System Outage",
       "incidenty": [
+        {
+          "nazev": "Workers Cron Triggers issues",
+          "odkaz": "https://www.cloudflarestatus.com/incidents/51udczr46uj2",
+          "aktualizovano": "2026-10-16T00:01:49.616Z"
+        },
         {
           "nazev": "Audit Logs v2 ingestion is missing multiple Cloudflare products ",
           "odkaz": "https://www.cloudflarestatus.com/incidents/hpmrg8d5vwr6",
@@ -21,9 +26,9 @@
         "Cloudflare Sites and Services",
         "Africa",
         "Arica, Chile - (ARI)",
-        "Annaba, Algeria - (AAE)"
+        "Almaty, Kazakhstan - (ALA)"
       ],
-      "zkontrolovano": "2026-10-15T23:48:58.603Z",
+      "zkontrolovano": "2026-10-16T00:03:14.218Z",
       "chyba": null
     },
     {
@@ -32,7 +37,7 @@
       "popis": "All Systems Operational",
       "incidenty": [],
       "postizene": [],
-      "zkontrolovano": "2026-10-15T23:48:58.603Z",
+      "zkontrolovano": "2026-10-16T00:03:14.218Z",
       "chyba": null
     },
     {
@@ -41,7 +46,7 @@
       "popis": "All Systems Operational",
       "incidenty": [],
       "postizene": [],
-      "zkontrolovano": "2026-10-15T23:48:58.603Z",
+      "zkontrolovano": "2026-10-16T00:03:14.218Z",
       "chyba": null
     }
   ]
