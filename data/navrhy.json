@@ -2046,5 +2046,79 @@
       "sledujeme": "Zda nizozemské úřady příčinu incidentu potvrdí jako kybernetický útok a kdo za ním stojí.",
       "overeno": "2026-10-14"
     }
+  },
+  {
+    "kam": "zaznam",
+    "pripravil": "patrol",
+    "pripraveno": "2026-10-16T13:27:14.038Z",
+    "id": "i-2026-10-16-9fa0b9db1c",
+    "slug": "fr-9fa0b9db1c",
+    "titulek": "Rusko: Putin dekretem svěřil ruská aktiva pěti zahraničních firem (včetně francouzského výrobce podlah Tarkett) do dočasné správy společnosti veterána války na Ukrajině Marata Mirchajdarova",
+    "kratkyTitulek": "Rusko: Putin dekretem svěřil ruská aktiva pěti zahraničních firem (včetně francouzského výrobce podlah Tarkett) do dočasné správy společnosti veterána války na Ukrajině Marata Mirchajdarova",
+    "zeme": "Francie",
+    "kodZeme": "FR",
+    "kategorie": [
+      "rusko",
+      "diplomacie"
+    ],
+    "datumUdalosti": "2026-10-16T00:00:00Z",
+    "datumZjisteni": "2026-10-16T00:00:00Z",
+    "aktualizovano": "2026-10-16T13:27:14.038Z",
+    "zavaznost": "Y1",
+    "jistota": "vysoka",
+    "stav": "bez-vysetrovani",
+    "atribuce": "neznama",
+    "puvodce": "neznamy",
+    "druh": "pripad",
+    "fakta": [
+      "Ruský prezident Putin podle Úřadu právních informací Ruské federace (dokument z 15. 10. 2026, zveřejněný 16. 10. 2026) svěřil ruská aktiva pěti zahraničních firem do dočasné správy společnosti Tsentr Kapital: francouzského výrobce podlah Tarkett (dva závody v Moskvě a Samaře), belgického výrobce hygienických produktů Ontex Ru a tří výrobců obalů — Kappa Rus, Menshen Packaging CIS a Eviosys Packaging Kuban (americká Sonoco Products).",
+      "Společnost Tsentr Kapital, založenou v únoru 2026, vlastní a řídí 47letý Marat Mirchajdarov, bývalý místopředseda vlády Zabajkalského kraje, který podle Moscow Times řekl, že „sloužil v jednotce Achmat čečenských sil na Ukrajině na počátku roku 2024“ a z regionální funkce odstoupil v březnu 2025 kvůli zdravotní rehabilitaci po zraněních.",
+      "Podle Meduzy jde o pokračování širší politiky — v září 2026 Putin stejným způsobem rozhodl o aktivech maloobchodních řetězců Globus, Metro Cash & Carry, Auchan a Leroy Merlin."
+    ],
+    "neznameho": [
+      "Jak se k rozhodnutí postaví postižené firmy (Tarkett, Ontex) a jejich domovské vlády.",
+      "Jaký je právní a ekonomický dopad „dočasné správy“ na skutečné vlastnictví aktiv."
+    ],
+    "vyznam": "",
+    "eskalacniSpousteče": [],
+    "deeskalacniSignaly": [],
+    "zdroje": [
+      {
+        "nazev": "The Moscow Times — Putin Hands Control of 5 Western Firms to Ukraine War Veteran",
+        "url": "https://www.themoscowtimes.com/2026/10/16/putin-hands-control-of-5-western-firms-to-ukraine-war-veteran-a93998",
+        "typ": "media",
+        "publikovano": "2026-10-16T00:00:00Z",
+        "primarni": false,
+        "jazyk": "en"
+      },
+      {
+        "nazev": "Meduza (anglicky) — Putin places assets of several more foreign companies, including flooring manufacturer Tarkett, under temporary management",
+        "url": "https://meduza.io/en/news/2026/10/16/putin-places-assets-of-several-more-foreign-companies-including-flooring-manufacturer-tarkett-under-temporary-management",
+        "typ": "media",
+        "publikovano": "2026-10-16T00:00:00Z",
+        "primarni": false,
+        "jazyk": "en"
+      }
+    ],
+    "souvisejici": [],
+    "historie": [
+      {
+        "kdy": "2026-10-16T00:00:00Z",
+        "text": "Zachyceno automatickým sběrem, druhý zdroj doložen před zařazením do fronty.",
+        "novySignal": true
+      }
+    ],
+    "novy": true,
+    "zapocitanoTyden": "2026-10-16",
+    "aiZpracovano": true,
+    "lidskyOvereno": false,
+    "archivniZaznam": false,
+    "dopadNaCr": {
+      "stav": "zadny",
+      "procRelevantni": "Ruský stát pokračuje v systematickém přebírání kontroly nad aktivy firem z členských zemí NATO a EU (Francie, Belgie, Německo, USA) a svěřuje je lidem spojeným s válkou proti Ukrajině — ukazuje pokračující ekonomický tlak na zahraniční firmy v Rusku.",
+      "dopad": "Pro lidi v Česku ze zprávy dnes neplyne žádné omezení.",
+      "sledujeme": "Jak na rozhodnutí zareagují postižené firmy a jejich domovské vlády.",
+      "overeno": "2026-10-16"
+    }
   }
 ]
