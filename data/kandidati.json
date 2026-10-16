@@ -69,6 +69,40 @@
     }
   },
   {
+    "id": "k-8dcb88ec65442282",
+    "zachyceno": "2026-10-16T04:08:26.084Z",
+    "publikovano": "2026-10-16T02:33:00.000Z",
+    "zdroj": {
+      "nazev": "Ukrinform (anglicky)",
+      "url": "https://www.ukrinform.net/rubric-ato/4174839-man-injured-in-russian-attack-on-enterprise-in-derhachi-dies-in-hospital.html",
+      "typ": "wire",
+      "primarni": false
+    },
+    "titulek": "Man injured in Russian attack on enterprise in Derhachi dies in hospital",
+    "titulekPuvodni": "Man injured in Russian attack on enterprise in Derhachi dies in hospital",
+    "shrnuti": "A man who suffered severe burns in a Russian strike on an enterprise in Derhachi, Kharkiv region, has died in hospital.",
+    "kodZeme": "RU",
+    "zeme": "Rusko",
+    "kategorie": [
+      "hybridni",
+      "rusko"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "attack on",
+      "russia"
+    ],
+    "naliehave": null,
+    "stav": "ceka",
+    "vyrez": {
+      "text": "Man injured in Russian attack on enterprise in Derhachi dies in hospital\n\r\nSubscription\nNewsletters\nPhotobank\nUkrinform - Ukrainian National News Agency\nFounded in 1918\nFriday, 16 October 2026, 07:08\nWar\nEconomy\nSports\nMore ☰\nContacts\nEng\nУкр\nEng\nEsp\nDeu\nعربي\nFra\n日本語\nPol\n&times;\nAll topics\nWar\nRecovery of Ukraine\nPolitics\nEconomy\nFact checks\nDefense\nSociety and Culture\nSports\nCrime\nAccidents and Emergencies\nAgency\nInformation on Agency\nOur Contacts\nSubscribtion Terms\nOur Services\nPrivacy policy and personal data protection\nAdditional\nPublications\nInterviews\nPhoto\nVideo\nLongreads\nReleases\nServices\nSubscription\nNewsletters\nPhotobank\n\r\n\r\n\r\nA man who suffered severe burns in a Russian strike on an enterprise in Derhachi, Kharkiv region, has died in hospital.\nViacheslav Zadorenko, head of the Derhachi City Military Administration, reported the death on Facebook , according to Ukrinform.\n\r\n\r\n\"Unfortunately, a 54-year-old man who was injured in yesterday's Russian FPV drone attack on a transport enterprise in Derhachi died in hospital today,\" the statement said.\n\r\n\r\nRead also: Russian drone strike hits shop in Odesa region, injuring three \r\n\r\nZadorenko noted that doctors had fought for…",
+      "stazeno": "2026-10-16T04:08:26.271Z",
+      "stav": 200
+    }
+  },
+  {
     "id": "k-ee7813aa07f4fd39",
     "zachyceno": "2026-10-16T03:03:19.517Z",
     "publikovano": "2026-10-16T01:39:00.000Z",
@@ -10669,50 +10703,6 @@
       "duvod": "mimo-rozsah",
       "patriK": null,
       "poznamka": "Útok na zdravotní sestru v nemocnici na bratislavských Kramárech; domácí násilný trestný čin bez jakékoli zmínky o vazbě na ruskou hybridní hrozbu."
-    }
-  },
-  {
-    "id": "k-93df8cebff5a3074",
-    "zachyceno": "2026-10-15T09:03:46.632Z",
-    "publikovano": "2026-10-15T08:54:51.000Z",
-    "zdroj": {
-      "nazev": "The Moscow Times",
-      "url": "https://www.themoscowtimes.com/2026/10/15/fsb-arrests-swede-in-pskov-region-over-border-crossing-and-sabotage-allegations-a93982",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "FSB Arrests Swede in Pskov Region Over Border Crossing and Sabotage Allegations",
-    "titulekPuvodni": "FSB Arrests Swede in Pskov Region Over Border Crossing and Sabotage Allegations",
-    "shrnuti": "The man allegedly crossed into Russian territory under the guise of enlisting in the Russian military.",
-    "kodZeme": "RU",
-    "zeme": "Rusko",
-    "kategorie": [
-      "sabotaz",
-      "zpravodajske",
-      "hranice",
-      "rusko"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "zeSite": null,
-    "shody": [
-      "sabotage",
-      "fsb",
-      "border",
-      "russia"
-    ],
-    "naliehave": null,
-    "stav": "vyrizen",
-    "vyrez": {
-      "text": "FSB Arrests Swede in Pskov Region Over Border Crossing and Sabotage Allegations - The Moscow Times\nSupport The Moscow Times!\nContribute today\nMy account\nSignout\n&times;\nSupport The Moscow Times!\nContribute today\nOct. 15, 2026\nFSB\nRussia&rsquo;s FSB security service said Thursday it has arrested a Swedish citizen in the northwestern Pskov region on allegations of illegally crossing the border to carry out sabotage attacks against military facilities.\nAn FSB video published by the state-run news agency TASS showed the man identifying himself through an interpreter as 35-year-old Freddy Michael St&aring;lkrantz Lindholm.\nIn a statement on its website, the FSB said it had detained Lindholm in the Sebezhsky district near the border with Latvia and Belarus. It did not indicate from which country he crossed into Russia.\nThe FSB claimed he crossed into Russian territory under the guise of enlisting in the Russian military, with the alleged intent of committing &ldquo;sabotage and terrorist acts at military facilities.&rdquo;\nThe FSB said Lindholm served as a contracted service member in Ukraine from February to June this year as a squad commander operating drones.\nIn the interrogation…",
-      "stazeno": "2026-10-15T09:03:46.849Z",
-      "stav": 200
-    },
-    "vyrizeni": {
-      "kdy": "2026-10-15T12:01:23.675Z",
-      "duvod": "duplicita",
-      "patriK": null,
-      "poznamka": "Táž nová událost jako výše — FSB zadržela švédského občana (i-2026-10-15-cd615d058c)."
     }
   }
 ]

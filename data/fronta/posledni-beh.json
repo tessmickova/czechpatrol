@@ -1,5 +1,5 @@
 {
-  "kdy": "2026-10-16T03:01:29.196Z",
+  "kdy": "2026-10-16T04:06:24.850Z",
   "zdroje": [
     {
       "klic": "e-sbirka",
@@ -203,9 +203,9 @@
     {
       "klic": "bmi-de",
       "ok": false,
-      "stav": null,
+      "stav": 400,
       "pocetPolozek": 0,
-      "chyba": "The operation was aborted due to timeout",
+      "chyba": "HTTP 400",
       "vysledek": "chyba"
     },
     {
