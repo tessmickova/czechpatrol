@@ -2120,5 +2120,81 @@
       "sledujeme": "Jak na rozhodnutí zareagují postižené firmy a jejich domovské vlády.",
       "overeno": "2026-10-16"
     }
+  },
+  {
+    "kam": "zaznam",
+    "pripravil": "patrol",
+    "pripraveno": "2026-10-16T21:26:49.617Z",
+    "id": "i-2026-10-16-10ed972ca5",
+    "slug": "pl-10ed972ca5",
+    "titulek": "Polsko: Der Spiegel píše, že za žhářským útokem na Starlink stál podle všeho turecký gang Daltons, který si podle všeho najaly ruské tajné služby; vůdce gangu byl v roce 2024 zadržen v Rusku, Turecko ho žádalo o vydání marně",
+    "kratkyTitulek": "Polsko: Der Spiegel píše, že za žhářským útokem na Starlink stál podle všeho turecký gang Daltons, který si podle všeho najaly ruské tajné služby; vůdce gangu byl v roce 2024 zadržen v Rusku, Turecko ho žádalo o vydání marně",
+    "zeme": "Polsko",
+    "kodZeme": "PL",
+    "kategorie": [
+      "sabotaz",
+      "hybridni",
+      "rusko"
+    ],
+    "datumUdalosti": "2026-10-16T00:00:00Z",
+    "datumZjisteni": "2026-10-16T00:00:00Z",
+    "aktualizovano": "2026-10-16T21:26:49.617Z",
+    "zavaznost": "Y1",
+    "jistota": "nizka",
+    "stav": "bez-vysetrovani",
+    "atribuce": "neznama",
+    "puvodce": null,
+    "druh": "aktualizace",
+    "fakta": [
+      "Německý týdeník Der Spiegel podle Meduzy a Rzeczpospolité napsal, že za žhářským útokem na pozemní stanici Starlink v Polsku stojí podle všeho turecký zločinecký gang Daltons (založený 2024, členové narození po roce 2000, dřív zapojený do vraždy tureckého právníka Serdara Öktema a do vydírání, obchodu se zbraněmi a vražd na objednávku v Německu a dalších evropských zemích) — ne přímo ruští agenti.",
+      "Vůdce Daltonů Beratcan Gökdemir byl podle Meduzy zadržen v Rusku v roce 2024; Turecko žádalo o jeho vydání, Rusko ho ale nikdy nevydalo a není jasné, zda v Rusku zůstal. Podle Der Spiegelu by to mohlo znamenat, že ruské zpravodajské služby gang k útoku najaly.",
+      "Dva turečtí občané podezřelí z účasti na žhářství — Ümit E. (38) a Müslüm T. (34) — byli podle Meduzy zadrženi v německém městě Nürtingen; jde o doplnění k už zveřejněnému případu (dřív známí jen jako „dva turečtí občané“, bez jmen)."
+    ],
+    "neznameho": [
+      "Zda je spojení s gangem Daltons úředně potvrzené, nebo jde stále o novinářské zjištění Der Spiegelu.",
+      "Zda a kde se Gökdemir v současnosti nachází."
+    ],
+    "vyznam": "",
+    "eskalacniSpousteče": [],
+    "deeskalacniSignaly": [],
+    "zdroje": [
+      {
+        "nazev": "Meduza (anglicky) — Russian intelligence may have hired a Turkish crime gang to set fire to a Starlink ground station in Poland, Spiegel reports",
+        "url": "https://meduza.io/en/news/2026/10/16/russian-intelligence-may-have-hired-a-turkish-crime-gang-to-set-fire-to-a-starlink-ground-station-in-poland-spiegel-reports",
+        "typ": "media",
+        "publikovano": "2026-10-16T00:00:00Z",
+        "primarni": false,
+        "jazyk": "en"
+      },
+      {
+        "nazev": "Rzeczpospolita — Podpalenie stacji Starlink na Mazowszu. „Der Spiegel” wskazuje na turecki gang i Rosję",
+        "url": "https://www.rp.pl/przestepczosc/art45350271-podpalenie-stacji-starlink-na-mazowszu-der-spiegel-wskazuje-na-turecki-gang-i-rosje",
+        "typ": "media",
+        "publikovano": "2026-10-16T00:00:00Z",
+        "primarni": false,
+        "jazyk": "pl"
+      }
+    ],
+    "souvisejici": [],
+    "historie": [
+      {
+        "kdy": "2026-10-16T00:00:00Z",
+        "text": "Zachyceno automatickým sběrem, druhý zdroj doložen před zařazením do fronty.",
+        "novySignal": true
+      }
+    ],
+    "novy": true,
+    "zapocitanoTyden": "2026-10-16",
+    "aiZpracovano": true,
+    "lidskyOvereno": false,
+    "archivniZaznam": false,
+    "navazujeNa": "pl-6cb9c707cc",
+    "dopadNaCr": {
+      "stav": "zadny",
+      "procRelevantni": "Pokud by se potvrdilo najmutí zahraničního kriminálního gangu ruskými službami, ukazovalo by to posun v metodách ruské sabotáže proti infrastruktuře podporující Ukrajinu v zemích NATO a EU směrem k využívání externích najatých skupin místo vlastních agentů.",
+      "dopad": "Pro lidi v Česku ze zprávy dnes neplyne žádné omezení.",
+      "sledujeme": "Zda polské nebo německé úřady spojení s gangem Daltons úředně potvrdí.",
+      "overeno": "2026-10-16"
+    }
   }
 ]
