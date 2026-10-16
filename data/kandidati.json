@@ -34,6 +34,40 @@
     }
   },
   {
+    "id": "k-85eda1f5d1dbc38d",
+    "zachyceno": "2026-10-16T18:04:02.656Z",
+    "publikovano": "2026-10-16T17:33:00.000Z",
+    "zdroj": {
+      "nazev": "Ukrainska Pravda (anglicky)",
+      "url": "https://www.pravda.com.ua/eng/news/2026/10/16/8058428/",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Emergency power outages in Ukraine, schedules do not apply",
+    "titulekPuvodni": "Emergency power outages in Ukraine, schedules do not apply",
+    "shrnuti": "Due to severe damage to the energy system from Russian strikes, emergency power outages have been introduced and previously published schedules do not apply.",
+    "kodZeme": "UA",
+    "zeme": "Ukrajina",
+    "kategorie": [
+      "infrastruktura",
+      "rusko"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "power outage",
+      "russia"
+    ],
+    "naliehave": null,
+    "stav": "ceka",
+    "vyrez": {
+      "text": "Emergency power cuts applied in Ukraine as schedules suspended | Ukrainska Pravda\nPhoto: Getty Images\nEmergency power outages have been introduced in several regions of Ukraine due to the difficult situation in the energy system following Russian attacks.\nSource: Ukrenergo , Ukraine's state-owned electricity transmission operator\nDetails: In the regions where emergency outages have been applied, previously published power outage schedules are temporarily not in force.\nAdvertisement:\n\r\n\r\n\r\n\r\n\r\nPower engineers are working to restore the power supply. Emergency outages will be cancelled once the situation stabilises.\nConsumers have been urged to use electricity sparingly and to monitor updates from their regional power distribution companies.\nBackground:\nValery Gerasimov, Chief of the General Staff of the Russian Armed Forces and First Deputy Minister of Defence, has announced that Russian forces have begun massive strikes on Ukraine's energy facilities .\nUkrenergo said its forecasts for winter have been worsened by recent Russian strikes on thermal power plants (TPPs) that were supposed to be operating in winter, but the company does not assess the situation as critical.\nYour…",
+      "stazeno": "2026-10-16T18:04:02.802Z",
+      "stav": 200
+    }
+  },
+  {
     "id": "k-bc85e568306c3ee0",
     "zachyceno": "2026-10-16T17:56:50.382Z",
     "publikovano": "2026-10-16T17:20:24.000Z",
@@ -10475,47 +10509,6 @@
       "duvod": "mimo-rozsah",
       "patriK": null,
       "poznamka": "Reportáž o tom, že je lepší se nechlubit opravenou infrastrukturou, protože ji zasáhne další dron; novinářská reportáž o už řešeném typu útoků uvnitř Ukrajiny, ne nová konkrétní událost."
-    }
-  },
-  {
-    "id": "k-5658bc54812a62fe",
-    "zachyceno": "2026-10-16T12:03:54.666Z",
-    "publikovano": "2026-10-16T11:08:34.000Z",
-    "zdroj": {
-      "nazev": "ANSA (Itálie, anglicky)",
-      "url": "https://www.ansa.it/english/news/politics/2026/10/16/italy-and-spain-set-to-drop-suspension-of-schengen-rules_9d7ace19-74ee-41a9-ada3-b6573beb4a14.html",
-      "typ": "wire",
-      "primarni": false
-    },
-    "titulek": "Italy and Spain set to drop suspension of Schengen rules",
-    "titulekPuvodni": "Italy and Spain set to drop suspension of Schengen rules",
-    "shrnuti": "(ANSA) - ROME, 16 OTT - Italy is set to extend its suspension of the Schengen Agreement for travellers arriving from Spain for seven days, bringing into line with the expiration date of Madrid's tit-for-tat measure and a sign that a solution is in sight, government sources said on Friday. The two co",
-    "kodZeme": "IT",
-    "zeme": "Itálie",
-    "kategorie": [
-      "hranice"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "zeSite": null,
-    "shody": [
-      "border checks",
-      "border+checks",
-      "schengen",
-      "border"
-    ],
-    "naliehave": null,
-    "stav": "vyrizen",
-    "vyrez": {
-      "text": "Italy and Spain set to drop suspension of Schengen rules - Politics - Ansa.it\nSe hai scelto di non accettare i cookie di profilazione e tracciamento, puoi aderire all&rsquo;abbonamento \"Consentless\" a un costo molto accessibile, oppure scegliere un altro abbonamento per accedere ad ANSA.it.\nTi invitiamo a leggere le Condizioni Generali di Servizio , la Cookie Policy e l' Informativa Privacy .\nABBONAMENTO CONSENTLESS\nPuoi leggere tutti i titoli di ANSA.it e 10 contenuti ogni 30 giorni a &euro;16,99/anno\nServizio equivalente a quello accessibile prestando il consenso ai cookie di profilazione pubblicitaria e tracciamento\nDurata annuale (senza rinnovo automatico)\nUn pop-up ti avvertir&agrave; che hai raggiunto i contenuti consentiti in 30 giorni (potrai continuare a vedere tutti i titoli del sito, ma per aprire altri contenuti dovrai attendere il successivo periodo di 30 giorni)\nPubblicit&agrave; presente ma non profilata o gestibile mediante il pannello delle preferenze\nIscrizione alle Newsletter tematiche curate dalle redazioni ANSA.\nALTRI ABBONAMENTI\nPer accedere senza limiti a tutti i contenuti di ANSA.it\nScegli il piano di abbonamento pi&ugrave; adatto alle tue esigenze.\nSe hai…",
-      "stazeno": "2026-10-16T12:03:57.142Z",
-      "stav": 200
-    },
-    "vyrizeni": {
-      "kdy": "2026-10-16T13:52:52.854Z",
-      "duvod": "mimo-rozsah",
-      "patriK": null,
-      "poznamka": "Itálie a Španělsko chystají zrušit pozastavení schengenských pravidel; migrační/schengenská politika bez vazby na ruskou hybridní hrozbu."
     }
   }
 ]
