@@ -1,5 +1,5 @@
 {
-  "aktualizovano": "2026-10-15T21:14:26.854Z",
+  "aktualizovano": "2026-10-16T00:03:14.218Z",
   "stavy": [
     {
       "klic": "cloudflare",
@@ -7,19 +7,19 @@
       "popis": "Partial System Outage",
       "incidenty": [
         {
-          "nazev": "Network Performance Issues in Eastern North America",
-          "odkaz": "https://www.cloudflarestatus.com/incidents/fiv2bu3zf8kx",
-          "aktualizovano": "2026-10-15T21:06:10.863Z"
+          "nazev": "Workers Cron Triggers issues",
+          "odkaz": "https://www.cloudflarestatus.com/incidents/51udczr46uj2",
+          "aktualizovano": "2026-10-16T00:01:49.616Z"
         },
         {
-          "nazev": "Pages.dev sites experiencing availability issues in Norway",
-          "odkaz": "https://www.cloudflarestatus.com/incidents/5py8l9ees6di",
-          "aktualizovano": "2026-10-15T21:05:57.494Z"
+          "nazev": "Audit Logs v2 ingestion is missing multiple Cloudflare products ",
+          "odkaz": "https://www.cloudflarestatus.com/incidents/hpmrg8d5vwr6",
+          "aktualizovano": "2026-10-13T11:45:43.999Z"
         },
         {
-          "nazev": "Increased Errors for Durable Objects",
-          "odkaz": "https://www.cloudflarestatus.com/incidents/9yl8m5h16g1z",
-          "aktualizovano": "2026-10-15T16:12:20.000Z"
+          "nazev": "Incorrect geo location for some Cloudflare WARP users",
+          "odkaz": "https://www.cloudflarestatus.com/incidents/9g65dxfbcjln",
+          "aktualizovano": "2026-09-01T08:29:56.000Z"
         }
       ],
       "postizene": [
@@ -28,7 +28,7 @@
         "Arica, Chile - (ARI)",
         "Almaty, Kazakhstan - (ALA)"
       ],
-      "zkontrolovano": "2026-10-15T21:14:26.854Z",
+      "zkontrolovano": "2026-10-16T00:03:14.218Z",
       "chyba": null
     },
     {
@@ -37,7 +37,7 @@
       "popis": "All Systems Operational",
       "incidenty": [],
       "postizene": [],
-      "zkontrolovano": "2026-10-15T21:14:26.854Z",
+      "zkontrolovano": "2026-10-16T00:03:14.218Z",
       "chyba": null
     },
     {
@@ -46,7 +46,7 @@
       "popis": "All Systems Operational",
       "incidenty": [],
       "postizene": [],
-      "zkontrolovano": "2026-10-15T21:14:26.854Z",
+      "zkontrolovano": "2026-10-16T00:03:14.218Z",
       "chyba": null
     }
   ]
