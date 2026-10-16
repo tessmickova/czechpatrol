@@ -1,5 +1,5 @@
 {
-  "kdy": "2026-10-16T06:01:37.630Z",
+  "kdy": "2026-10-16T08:58:02.090Z",
   "zdroje": [
     {
       "klic": "e-sbirka",
@@ -24,11 +24,10 @@
     },
     {
       "klic": "senat",
-      "ok": false,
-      "stav": 500,
+      "ok": true,
+      "stav": 200,
       "pocetPolozek": 0,
-      "chyba": "HTTP 500",
-      "vysledek": "chyba"
+      "vysledek": "ok"
     },
     {
       "klic": "hrad",
@@ -204,9 +203,9 @@
     {
       "klic": "bmi-de",
       "ok": false,
-      "stav": 400,
+      "stav": null,
       "pocetPolozek": 0,
-      "chyba": "HTTP 400",
+      "chyba": "fetch failed",
       "vysledek": "chyba"
     },
     {
