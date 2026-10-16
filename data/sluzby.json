@@ -1,5 +1,5 @@
 {
-  "aktualizovano": "2026-10-16T12:04:04.632Z",
+  "aktualizovano": "2026-10-16T18:04:03.471Z",
   "stavy": [
     {
       "klic": "cloudflare",
@@ -7,18 +7,23 @@
       "popis": "Partial System Outage",
       "incidenty": [
         {
+          "nazev": "Cloudflare Fed Dashboard",
+          "odkaz": "https://www.cloudflarestatus.com/incidents/qwx5xtl8mv7d",
+          "aktualizovano": "2026-10-16T17:57:14.000Z"
+        },
+        {
           "nazev": "Incorrect geo location for some Cloudflare WARP users",
           "odkaz": "https://www.cloudflarestatus.com/incidents/9g65dxfbcjln",
           "aktualizovano": "2026-09-01T08:29:56.000Z"
         }
       ],
       "postizene": [
-        "Amsterdam, Netherlands - (AMS)",
         "Cloudflare Sites and Services",
         "Africa",
-        "Arica, Chile - (ARI)"
+        "Arica, Chile - (ARI)",
+        "Annaba, Algeria - (AAE)"
       ],
-      "zkontrolovano": "2026-10-16T12:04:04.632Z",
+      "zkontrolovano": "2026-10-16T18:04:03.471Z",
       "chyba": null
     },
     {
@@ -27,7 +32,7 @@
       "popis": "All Systems Operational",
       "incidenty": [],
       "postizene": [],
-      "zkontrolovano": "2026-10-16T12:04:04.632Z",
+      "zkontrolovano": "2026-10-16T18:04:03.471Z",
       "chyba": null
     },
     {
@@ -36,7 +41,7 @@
       "popis": "All Systems Operational",
       "incidenty": [],
       "postizene": [],
-      "zkontrolovano": "2026-10-16T12:04:04.632Z",
+      "zkontrolovano": "2026-10-16T18:04:03.471Z",
       "chyba": null
     }
   ]
