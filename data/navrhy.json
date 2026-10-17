@@ -2120,5 +2120,81 @@
       "sledujeme": "Jak na rozhodnutí zareagují postižené firmy a jejich domovské vlády.",
       "overeno": "2026-10-16"
     }
+  },
+  {
+    "kam": "zaznam",
+    "pripravil": "patrol",
+    "pripraveno": "2026-10-17T18:42:50.636Z",
+    "id": "i-2026-10-17-131d375000",
+    "slug": "ro-131d375000",
+    "titulek": "Rumunsko: dvě F-16 sestřelily nad Černým mořem u Ostrova hadů dva útočné drony typu Geran, které narušily rumunský vzdušný prostor a teritoriální vody",
+    "kratkyTitulek": "Rumunsko: dvě F-16 sestřelily nad Černým mořem u Ostrova hadů dva útočné drony typu Geran, které narušily rumunský vzdušný prostor a teritoriální vody",
+    "zeme": "Rumunsko",
+    "kodZeme": "RO",
+    "kategorie": [
+      "drony",
+      "hranice",
+      "nato"
+    ],
+    "datumUdalosti": "2026-10-17T00:00:00Z",
+    "datumZjisteni": "2026-10-17T00:00:00Z",
+    "aktualizovano": "2026-10-17T18:42:50.636Z",
+    "zavaznost": "Y2",
+    "jistota": "vysoka",
+    "stav": "bez-vysetrovani",
+    "atribuce": "neznama",
+    "puvodce": "neznamy",
+    "druh": "pripad",
+    "fakta": [
+      "Rumunské ministerstvo obrany (MApN) tiskovými zprávami č. 336 a 337 oznámilo, že v sobotu 17. 10. 2026 v 17:43 vzlétly dvě stíhačky F-16 z 86. letecké základny Borcea poté, co radary zachytily skupinu vzdušných cílů přibližně 120 km východně od Ostrova hadů, letících jihozápadním směrem.",
+      "Podle MApN byly oba cíle identifikovány jako útočné drony typu Geran s proudovým pohonem; první byl sestřelen v 18:01 jihovýchodně od Suliny po dvou minutách v rumunském vzdušném prostoru, druhý v 18:05 východně od Suliny po pěti minutách — oba nad rumunskými teritoriálními vodami.",
+      "MApN zprávu zařadilo do kontextu zvýšené aktivity u hranice s Ukrajinou za poslední týden: osm dřívějších radarových detekcí cílů v ukrajinském vzdušném prostoru a čtyři krátká narušení rumunského území.",
+      "Polský deník Rzeczpospolita nezávisle potvrdil sestřelení dvou dronů stíhačkami F-16 s odkazem na vyjádření rumunského ministerstva obrany."
+    ],
+    "neznameho": [
+      "Zda drony byly vypuštěny přímo Ruskem, nebo šlo o drony určené pro útok na Ukrajinu, které zabloudily nad rumunské území — MApN přesný původ ani vlastníka v této zprávě neuvedlo.",
+      "Zda byly nalezeny a vyzvednuty trosky dronů k dalšímu forenznímu vyšetřování."
+    ],
+    "vyznam": "",
+    "eskalacniSpousteče": [],
+    "deeskalacniSignaly": [],
+    "zdroje": [
+      {
+        "nazev": "Rzeczpospolita — Dwa drony naruszyły przestrzeń powietrzną Rumunii. Zostały zestrzelone",
+        "url": "https://www.rp.pl/konflikty-zbrojne/art45351741-dwa-drony-naruszyly-przestrzen-powietrzna-rumunii-zostaly-zestrzelone",
+        "typ": "media",
+        "publikovano": "2026-10-17T00:00:00Z",
+        "primarni": false,
+        "jazyk": "pl"
+      },
+      {
+        "nazev": "Ministerul Apărării Naționale (MApN) — Informație de presă – update (nr. 337)",
+        "url": "https://www.mapn.ro/cpresa/19446_informație-de-presa-–-update",
+        "typ": "primary",
+        "publikovano": "2026-10-17T00:00:00Z",
+        "primarni": true,
+        "jazyk": "ro"
+      }
+    ],
+    "souvisejici": [],
+    "historie": [
+      {
+        "kdy": "2026-10-17T00:00:00Z",
+        "text": "Zachyceno automatickým sběrem, druhý zdroj doložen před zařazením do fronty.",
+        "novySignal": true
+      }
+    ],
+    "novy": true,
+    "zapocitanoTyden": "2026-10-17",
+    "aiZpracovano": true,
+    "lidskyOvereno": false,
+    "archivniZaznam": false,
+    "dopadNaCr": {
+      "stav": "zadny",
+      "procRelevantni": "Úředně potvrzené sestřelení dvou útočných dronů typu Geran rumunskou armádou nad teritoriálními vodami členského státu NATO a EU — jde o přímé vojenské zapojení (ne jen krátký přelet) a o konkrétní identifikaci typu drona, což ukazuje pokračující narušování vzdušného prostoru NATO při útocích na Ukrajinu.",
+      "dopad": "Pro lidi v Česku ze zprávy dnes neplyne žádné omezení.",
+      "sledujeme": "Zda MApN potvrdí přesný původ a vlastníka dronů a zda budou vyzvednuty trosky k forenznímu vyšetřování.",
+      "overeno": "2026-10-17"
+    }
   }
 ]
