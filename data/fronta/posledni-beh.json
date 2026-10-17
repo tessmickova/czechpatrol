@@ -1,5 +1,5 @@
 {
-  "kdy": "2026-10-17T06:00:44.821Z",
+  "kdy": "2026-10-17T09:00:43.979Z",
   "zdroje": [
     {
       "klic": "e-sbirka",
@@ -241,6 +241,7 @@
       "ok": true,
       "stav": null,
       "pocetPolozek": 1,
+      "chyba": "lupa: robots.txt nedostupný (RFC 9309: nestahovat)",
       "vysledek": "ok"
     },
     {
