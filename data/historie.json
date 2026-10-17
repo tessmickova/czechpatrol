@@ -1547,6 +1547,42 @@
       "zmeny": [
         "celková úroveň: Zvýšená → Nízká"
       ]
+    },
+    {
+      "kdy": "2026-10-17T21:00:47.968Z",
+      "uroven": "Y1",
+      "hybridni": "O1",
+      "primyStret": "G2",
+      "pravni": {
+        "stav-ohrozeni": false,
+        "valecny-stav": false,
+        "mobilizace": false,
+        "nouzovy-stav": false,
+        "vycestovani": false,
+        "hranice": false,
+        "schuze-parlamentu": false
+      },
+      "nato": {
+        "clanek-4": false,
+        "clanek-5": false,
+        "readiness": false,
+        "evakuace": false,
+        "vychodni-kridlo": null
+      },
+      "provoz": {
+        "vycestovani": "bezny",
+        "hranice": "bezny",
+        "palivo": "bezny",
+        "elektrina": "bezny",
+        "plyn": "bezny",
+        "banky": "bezny",
+        "komunikace": "bezny",
+        "bezny-zivot": "bezny"
+      },
+      "udalosti": 112,
+      "zmeny": [
+        "celková úroveň: Nízká → Mírně zvýšená"
+      ]
     }
   ]
 }
