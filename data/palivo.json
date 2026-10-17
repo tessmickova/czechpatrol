@@ -1,5 +1,5 @@
 {
-  "aktualizovano": "2026-10-17T01:29:58.816Z",
+  "aktualizovano": "2026-10-17T16:58:33.610Z",
   "zdroj": {
     "nazev": "Český statistický úřad — průměrné spotřebitelské ceny pohonných hmot (týdenní šetření)",
     "url": "https://vdb.czso.cz/pll/eweb/cenyphm.data",
@@ -7,7 +7,7 @@
     "primarni": true
   },
   "poznamka": "Řadu plní sběr běžící na GitHub Actions; v sandboxu rutiny jsou úřední domény nedostupné. Dokud řada není naplněná, na webu se o ceně nepíše nic — prázdná řada není nula.",
-  "chyba": "https://data.csu.gov.cz/api/dotaz/v1/data/sady/CENPHMTT01?format=csv: HTTP 400 | https://data.csu.gov.cz/data/csu/data/CENPHMTT01.csv: nenašel se sloupec s datem (hlavička: <!doctype html>; první řádek: <html lang=en data-beasties-container>) | https://data.csu.gov.cz/datastat/data/VYBER/CENPHMTT01?format=csv: nenašel se sloupec s datem (hlavička: <!doctype html>; první řádek: <html lang=en data-beasties-container>)",
+  "chyba": null,
   "rada": [
     {
       "tyden": "2018-W42",
@@ -2423,5 +2423,5 @@
     }
   ],
   "zprava": null,
-  "pokus": "2026-10-17T13:55:03.513Z"
+  "pokus": "2026-10-17T16:58:33.610Z"
 }
