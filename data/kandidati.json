@@ -1,339 +1,59 @@
 [
   {
-    "id": "k-f2f8c4b614fcb8ab",
-    "zachyceno": "2026-10-18T12:03:11.042Z",
-    "publikovano": "2026-10-18T11:00:00.000Z",
-    "zdroj": {
-      "nazev": "Ukrainska Pravda (anglicky)",
-      "url": "https://www.pravda.com.ua/eng/news/2026/10/18/8058602/",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Lithuania reports damage caused by unidentified drone that entered its airspace",
-    "titulekPuvodni": "Lithuania reports damage caused by unidentified drone that entered its airspace",
-    "shrnuti": "A drone that crashed in Lithuania after entering from the direction of Poland damaged a passing car; no injuries, PM Sinkevičius says.",
-    "kodZeme": "PL",
-    "zeme": "Polsko",
-    "kategorie": [
-      "drony"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "zeSite": null,
-    "shody": [
-      "dron+crashed",
-      "dron",
-      "drone",
-      "airspace"
-    ],
-    "naliehave": {
-      "druh": "vzdusny-prostor-nato",
-      "stupen": 2,
-      "proc": "entered+airspace"
-    },
-    "stav": "ceka",
-    "vyrez": {
-      "text": "Unidentified drone entering Lithuania damages civilian car | Ukrainska Pravda\nThe area where the drone likely fell. Photo: Pasvalys Area Eldership\nAn unidentified drone that violated Lithuanian airspace on Sunday damaged a civilian car. No injuries have been reported so far, said Vilmantas Vitkauskas, Head of Lithuania's Risk Management and Crisis Prevention Bureau.\nSource: Lithuanian public broadcaster LRT , as reported by European Pravda\nDetails: Vitkauskas said the drone, which is believed to have entered the country on Sunday, crashed near a civilian car that was passing by.\nAdvertisement:\n\r\n\r\n\r\n\r\n\r\nQuote: \"It appears that the red warnings advising people not to do this [be outside – ed.] were not followed. Of course, people may not have heard them or may have thought it was safer to reach the nearest point and take shelter there. It is difficult to assess why this happened, but perhaps the most important thing is that nobody was injured.\"\nDetails: Vitkauskas said the area where the drone is believed to have fallen is still being searched. Some debris and components have been found, but not all of them. The area has been cordoned off, and searches are being conducted both from…",
-      "stazeno": "2026-10-18T12:03:11.197Z",
-      "stav": 200
-    }
-  },
-  {
-    "id": "k-45420893bf1ca6b6",
-    "zachyceno": "2026-10-18T15:02:27.781Z",
-    "publikovano": "2026-10-18T14:31:30.000Z",
-    "zdroj": {
-      "nazev": "The Guardian — World",
-      "url": "https://www.theguardian.com/world/2026/oct/18/killed-injured-russia-ukraine-strikes-power-infrastructure",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Two killed and at least 17 injured as Russia and Ukraine trade blows on power infrastructure",
-    "titulekPuvodni": "Two killed and at least 17 injured as Russia and Ukraine trade blows on power infrastructure",
-    "shrnuti": "Ukraine used more than 1,000 drones to target Russian oil depots, logistics facilities and datacentres Two people have been killed and at least 17 injured as Russia and Ukraine continue to trade strikes on each other’s power infrastructure, after the breakdown of Donald Trump’s short-lived and unila",
-    "kodZeme": "UA",
-    "zeme": "Ukrajina",
-    "kategorie": [
-      "sabotaz",
-      "drony",
-      "rusko"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "zeSite": null,
-    "shody": [
-      "bomb",
-      "dron",
-      "drone",
-      "russia"
-    ],
-    "naliehave": null,
-    "stav": "ceka",
-    "vyrez": {
-      "text": "Two killed and at least 17 injured as Russia and Ukraine trade blows on power infrastructure | Russia | The Guardian\nSkip to main content Skip to navigation\nA Ukrainian drone strike on the St Petersburg oil terminal. Photograph: AFP/Getty Images\nView image in fullscreen\nA Ukrainian drone strike on the St Petersburg oil terminal. Photograph: AFP/Getty Images\nTwo killed and at least 17 injured as Russia and Ukraine trade blows on power infrastructure\nUkraine used more than 1,000 drones to target Russian oil depots, logistics facilities and datacentres\nTwo people have been killed and at least 17 injured as Russia and Ukraine continue to trade strikes on each other’s power infrastructure, after the breakdown of Donald Trump’s short-lived and unilaterally declared “energy ceasefire”.\nOne person was killed and 15 wounded overnight after Ukraine used more than 1,000 drones to target Russian oil depots, logistics facilities and datacentres in one of its largest ever aerial bombardments.\nSt Petersburg’s governor, Alexander Beglov, said on Sunday that fires ⁠had broken out overnight at the city’s oil terminal, ​an oil depot and industrial ‌warehouses. A logistics centre belonging to the…",
-      "stazeno": "2026-10-18T15:02:30.451Z",
-      "stav": 200
-    }
-  },
-  {
-    "id": "k-5424463f8bcbc40c",
-    "zachyceno": "2026-10-18T15:02:27.128Z",
-    "publikovano": "2026-10-18T13:23:32.000Z",
-    "zdroj": {
-      "nazev": "iDNES.cz — zpravodajství",
-      "url": "https://www.idnes.cz/zpravy/zahranicni/migrace-francie-nasilnosti-protesty-vance-usa.A261018_103100_zahranicni_jhr#utm_source=rss&utm_medium=feed&utm_campaign=zpravodaj&utm_content=main",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Uzavřete hranice, než bude pozdě, radí Trump Francouzům. Vance varuje Američany",
-    "titulekPuvodni": "Uzavřete hranice, než bude pozdě, radí Trump Francouzům. Vance varuje Američany",
-    "shrnuti": "Americký prezident Donald Trump i jeho viceprezident J.D Vance připisují sobotní střety v ulicích francouzských městech migraci. Trump v příspěvku na své síti Truth Social pak vyzval k uzavření hranic. Oba politici se proti migraci vymezují dlouhodobě.",
-    "kodZeme": "FR",
-    "zeme": "Francie",
-    "kategorie": [
-      "hranice"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "zeSite": null,
-    "shody": [
-      "uzavreni hranic",
-      "hranic+uzavr",
-      "hranice"
-    ],
-    "naliehave": null,
-    "stav": "ceka",
-    "vyrez": {
-      "text": "Trump: Za násilnostmi ve Francii je imigrace nenávistivých lidí - iDNES.cz \r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\niDNES.cz\n\r\n\r\n\r\nP�ihl�sit \r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nAbyste mohli pokra�ovat, pot�ebujeme v�d�t, jakou formou v�m m��eme zobrazovat reklamu \r\n\r\n\r\n\r\n\r\n\r\nV�mi zvolen� nastaven� \r\nneobsahuje souhlas se zobrazov�n�m c�len� reklamy . \r\nVyberte pros�m znovu, \r\njakou formou v�m m�me zobrazovat obsah. \r\n\r\n\r\n\r\n\r\n\r\n\r\niDNES Premium\n\r\nBez reklam\n\r\n\r\n199 K� m�s��n�\n\r\nM��ete neomezen� ��st iDNES.cz, Lidovky.cz, Expres.cz a Antiyoutuber.cz. K tomu dostanete tak� noviny a �asopisy v elektronick� podob�. To v�e bez reklam. 1\n\r\n\r\nP�edplatit\n\r\n\r\nU� m�te ��et? P�ihlaste se\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nS c�lenou reklamou\n\r\n\r\n\r\nZdarma \r\n\r\nZachov�me v�m v�e tak, jak jste zvykl� a reklamu p�izp�sob�me va�im z�jm�m. Bez omezen� si m��ete d�l ��st, p�ehr�vat videa, sout�it �i p�isp�vat do v�ech diskus�. 2\n\r\n\r\nSouhlas�m\n\r\nPodrobn� nastaven�\n\r\n\r\n\r\n\r\n\r\n\r\niDNES a reklama\n\r\nPokud vyu�ijete m�sto platby ud�len� souhlasu s reklamou (tj. souhlas s vyu�it�m cookies a dal��ch s�ov�ch identifik�tor� pro ��ely c�len� reklamy), \r\nbudou V�m zobrazov�ny v r�mci…",
-      "stazeno": "2026-10-18T15:02:30.473Z",
-      "stav": 200
-    }
-  },
-  {
-    "id": "k-81920528106c990f",
-    "zachyceno": "2026-10-18T15:02:27.834Z",
-    "publikovano": "2026-10-18T13:20:49.000Z",
-    "zdroj": {
-      "nazev": "Politico Europe",
-      "url": "https://www.politico.eu/article/france-calls-on-israel-to-arrest-perpetrators-of-attack-on-eu-diplomats/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "France says Israel must ‘stop these acts of terror’ following attack on EU diplomats",
-    "titulekPuvodni": "France says Israel must ‘stop these acts of terror’ following attack on EU diplomats",
-    "shrnuti": "Video footage of the incident in Taybeh, north of Jerusalem, showed settlers confronting a convoy of diplomats.",
-    "kodZeme": "FR",
-    "zeme": "Francie",
-    "kategorie": [
-      "hybridni"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "zeSite": null,
-    "shody": [
-      "attack on"
-    ],
-    "naliehave": null,
-    "stav": "ceka",
-    "vyrez": {
-      "text": "France says Israel must ‘stop these acts of terror’ following attack on EU diplomats – POLITICO\nSkip to main content\nAdvertisement\nFrance called on Israeli authorities to take “all necessary measures” to “stop these acts of terror” following an attack by masked Israeli settlers against European diplomats in the West Bank on Saturday.\nIn a statement issued Sunday, the French Ministry of Foreign Affairs said: “France calls on the Israeli authorities to arrest the perpetrators of this extremely serious assault and bring them to justice.\n“Furthermore, the Israeli authorities must take all necessary measures to put an end to these acts of terror and to ensure the safety of civilian populations and diplomatic missions, as they are obligated to do under international law.”\nAdvertisement\nThe incident took place in Taybeh, a mainly Christian town north of Jerusalem, where diplomats and other officials from France, Poland and Belgium were watching local people harvest olives. Video footage of the attack showed settlers confronting a convoy of diplomats and a man wearing a French tricolor sash slumped beside a car.\n“The mayor of the commune of Aulnoye-Aymeries was violently assaulted by…",
-      "stazeno": "2026-10-18T15:02:33.155Z",
-      "stav": 200
-    }
-  },
-  {
-    "id": "k-6dfe0e3fc3544433",
-    "zachyceno": "2026-10-18T15:02:30.316Z",
-    "publikovano": "2026-10-18T13:18:00.000Z",
-    "zdroj": {
-      "nazev": "Ukrainska Pravda (anglicky)",
-      "url": "https://www.pravda.com.ua/eng/news/2026/10/18/8058618/",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "University teacher Kostiantyn Chub killed in Russian attack on Poltava",
-    "titulekPuvodni": "University teacher Kostiantyn Chub killed in Russian attack on Poltava",
-    "shrnuti": "Poltava Pedagogical University lecturer Kostiantyn Chub has been killed in a Russian drone attack that targeted residential areas in Poltava.",
-    "kodZeme": "RU",
-    "zeme": "Rusko",
-    "kategorie": [
-      "hybridni",
-      "drony",
-      "rusko"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "zeSite": null,
-    "shody": [
-      "attack on",
-      "dron",
-      "drone",
-      "russia"
-    ],
-    "naliehave": null,
-    "stav": "ceka",
-    "vyrez": {
-      "text": "Russian drone strike on Poltava kills university teacher Kostiantyn Chub | Ukrainska Pravda\nKostiantyn Chub held a PhD in physics and mathematics. Photo: Poltava V. G. Korolenko National Pedagogical University\nKostiantyn Chub, who held a PhD in physics and mathematics and lectured at Poltava V. G. Korolenko National Pedagogical University, was killed in a Russian attack on Poltava on 17 October.\nSource: his ex-wife, as reported by Suspilne Poltava , a local branch of the Ukrainian public broadcaster\nDetails: Kostiantyn was around 59. He studied at Poltava Pedagogical University before completing postgraduate studies at the Faculty of Cybernetics at Taras Shevchenko National University of Kyiv. He later earned a master's degree in primary education.\nAdvertisement:\n\r\n\r\n\r\n\r\n\r\nIn 2002, Kostiantyn was awarded a PhD in physics and mathematics.\nKostiantyn began his career teaching mathematics and computer science at Secondary School No. 37 in Poltava, where he worked for several years. He later joined the Department of Mathematical Analysis and Computer Science at the pedagogical university.\nFrom September 2004, Kostiantyn worked at the same university's Faculty of Pedagogical and Art…",
-      "stazeno": "2026-10-18T15:02:33.211Z",
-      "stav": 200
-    }
-  },
-  {
-    "id": "k-e48457ee3b3e317a",
-    "zachyceno": "2026-10-18T15:02:30.280Z",
-    "publikovano": "2026-10-18T13:15:00.000Z",
-    "zdroj": {
-      "nazev": "Ukrinform (anglicky)",
-      "url": "https://www.ukrinform.net/rubric-emergencies/4175657-lithuania-links-attempted-arson-at-starlink-equipment-facility-to-russia.html",
-      "typ": "wire",
-      "primarni": false
-    },
-    "titulek": "Lithuania links attempted arson at Starlink equipment facility to Russia",
-    "titulekPuvodni": "Lithuania links attempted arson at Starlink equipment facility to Russia",
-    "shrnuti": "Unknown individuals attempted to set fire to a Lithuanian facility where equipment for Starlink satellite internet is stored.",
-    "kodZeme": "LT",
-    "zeme": "Litva",
-    "kategorie": [
-      "sabotaz",
-      "rusko"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "zeSite": null,
-    "shody": [
-      "arson",
-      "russia"
-    ],
-    "naliehave": null,
-    "stav": "ceka",
-    "vyrez": {
-      "text": "Lithuania links attempted arson at Starlink equipment facility to Russia\n\r\nSubscription\nNewsletters\nPhotobank\nUkrinform - Ukrainian National News Agency\nFounded in 1918\nSunday, 18 October 2026, 18:02\nWar\nEconomy\nSports\nMore ☰\nContacts\nEng\nУкр\nEng\nEsp\nDeu\nعربي\nFra\n日本語\nPol\n&times;\nAll topics\nWar\nRecovery of Ukraine\nPolitics\nEconomy\nFact checks\nDefense\nSociety and Culture\nSports\nCrime\nAccidents and Emergencies\nAgency\nInformation on Agency\nOur Contacts\nSubscribtion Terms\nOur Services\nPrivacy policy and personal data protection\nAdditional\nPublications\nInterviews\nPhoto\nVideo\nLongreads\nReleases\nServices\nSubscription\nNewsletters\nPhotobank\n\r\n\r\n\r\nUnknown individuals attempted to set fire to a Lithuanian facility where equipment for Starlink satellite internet is stored.\nAs reported by Ukrinform, Lithuanian Prime Minister Mindaugas Sinkevičius said this, according to LRT.\n\r\n\r\nAccording to him, the relevant authorities warned the company in advance of possible attacks and strengthened security, preventing the attempted arson.\n\r\n\r\nSinkevičius believes Russia was likely behind the attempted arson at the Lithuanian facility where Starlink equipment is stored.\n\r\n\r\nHe said the Lithuanian…",
-      "stazeno": "2026-10-18T15:02:33.257Z",
-      "stav": 200
-    }
-  },
-  {
-    "id": "k-b60a8757d87b5958",
-    "zachyceno": "2026-10-18T13:10:13.791Z",
+    "id": "k-b77a35044521cd34",
+    "zachyceno": "2026-10-18T18:02:56.525Z",
     "publikovano": null,
     "zdroj": {
       "nazev": "The Kyiv Independent",
-      "url": "https://kyivindependent.com/lithuania-foils-arson-attack-on-starlink-equipment-suspects-russian-involvement/",
+      "url": "https://kyivindependent.com/nato-jets-scramble-as-drone-explodes-in-lithuanian-airspace/",
       "typ": "media",
       "primarni": false
     },
-    "titulek": "Lithuania foils arson attack on Starlink equipment, suspects Russian involvement.",
-    "titulekPuvodni": "Lithuania foils arson attack on Starlink equipment, suspects Russian involvement.",
+    "titulek": "NATO jets scramble as drone explodes in Lithuanian airspace.",
+    "titulekPuvodni": "NATO jets scramble as drone explodes in Lithuanian airspace.",
     "shrnuti": "",
     "kodZeme": "LT",
     "zeme": "Litva",
     "kategorie": [
-      "sabotaz",
-      "hybridni",
-      "rusko"
+      "drony",
+      "nato"
     ],
     "druhOdhad": "neurceno",
     "klasifikace": "pravidla",
     "zeSite": null,
     "shody": [
-      "arson",
-      "attack on",
-      "russia"
-    ],
-    "naliehave": null,
-    "stav": "ceka",
-    "vyrez": {
-      "text": "Lithuania foils arson attack on Starlink equipment, suspects Russian involvement Help rescue animals from the front line — shop our Companion Collection 🐾\nShop Now\nEurope Lithuania foils arson attack on Starlink equipment, suspects Russian involvement\nOctober 18, 2026 3:57 pm • 2 min read\nPrefer on Google\nby Linda Hourani\nLithuania's Prime Minister Mindaugas Sinkevicius speaks during the Warsaw Security Forum in Warsaw, Poland, on Oct. 12, 2026. (Wojtek Radwanski / AFP via Getty Images)\nLithuanian authorities thwarted an attempted arson attack on a company storing Starlink satellite communications equipment overnight on Oct. 18, Prime Minister Mindaugas Sinkevicius said.\nThe attackers attempted to set fire to satellite antennas and a control unit. Investigators found incendiary liquids and containers with capacities ranging from three to 10 liters at the scene, Sinkevicius told Lithuania's national broadcaster LRT Radio .\n\"The authorities had warned the company of possible attacks, security had been stepped up, and the attempt failed,\" he later wrote in a Facebook post.\nSinkevicius described the incident as part of Russia's hybrid warfare campaign, pointing to similar suspected…",
-      "stazeno": "2026-10-18T13:10:16.788Z",
-      "stav": 200
-    }
-  },
-  {
-    "id": "k-2477f0151da47f03",
-    "zachyceno": "2026-10-18T13:10:13.768Z",
-    "publikovano": null,
-    "zdroj": {
-      "nazev": "LRT English (Litva)",
-      "url": "https://www.lrt.lt/en/news-in-english/19/3086051/drone-enters-lithuania-from-poland-debris-hits-a-car-on-rural-road",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Drone enters Lithuania from Poland, debris hits a car on rural road",
-    "titulekPuvodni": "Drone enters Lithuania from Poland, debris hits a car on rural road",
-    "shrnuti": "",
-    "kodZeme": "PL",
-    "zeme": "Polsko",
-    "kategorie": [
-      "drony"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "zeSite": null,
-    "shody": [
-      "debris+dron",
+      "scrambl",
       "dron",
-      "drone"
+      "drone",
+      "airspace",
+      "nato"
     ],
     "naliehave": null,
     "stav": "ceka",
     "vyrez": {
-      "text": "Drone enters Lithuania from Poland, debris hits a car on rural road - LRT\n\r\n\r\nNaujienų srautas\nNews\n3 h ago\nAttempted arson at Lithuanian firm storing Starlink equipment, PM blames Russia\nNews\n3 h ago\nDrone enters Lithuania from Poland, debris hits a car on rural road\nNews\n6 h ago\nChildren welcome – as long as they stay quiet: Is Lithuania becoming less child-friendly?\nNews\n8 h ago\n‘Mr Fix-It’: How Romas Šležas helped bring America’s civil rights history to the screen\nNews\n1 d ago\nEU working on multiple fronts to limit Russians from entering bloc\nNews\n1 d ago\nVytautas the Great invited Muslims to Lithuania ‘not because he was a leftist’ – interview\nNews\n1 d ago\nHow US bullied Vilnius into dropping support for conference critical of Trump\nNews\n2 d ago\nNew laser factory opens in Lithuania with ambition to become one of world's largest\nNews\n2 d ago\nEconomists warn Lithuania’s 2027 budget risks rising debt and deficit\nNews\n2 d ago\nLithuania extends military support for patrolling Kaliningrad border\nNews\n2 d ago\nPoverty rises in Lithuania, including among people with jobs\nNews\n2 d ago\nLithuania’s 2027 budget: 5% for defence, growing government deficit\nNews\n2 d ago\nLRT English…",
-      "stazeno": "2026-10-18T13:10:17.087Z",
+      "text": "NATO jets scramble as drone explodes in Lithuanian airspace Help rescue animals from the front line — shop our Companion Collection 🐾\nShop Now\nEurope NATO jets scramble as drone explodes in Lithuanian airspace\nOctober 18, 2026 8:59 pm • 2 min read\nPrefer on Google\nR\nby Rebecka Pieder\nPhoto for illustrative purposes: Saab JAS 39 Gripen fighter jets at the NATO Foreign Ministers Meeting on May 21, 2026 in Helsingborg, Sweden. (Thomas Imo / Photothek for the German Federal Foreign Office / Getty Images)\nAn unidentified object, likely a drone, entered Lithuanian airspace and exploded on Oct. 18, sending residents to shelters and damaging a civilian vehicle, according to Lithuanian President Gitanas Nauseda.\nThe incident is the latest in a string of drone incursions along NATO's eastern flank , stoking concern that Russia's war in Ukraine is spilling over into NATO territory.\nNATO fighter jets were scrambled in response to the incident, Nauseda said on social media. The jets were unable to identify the object because of cloudy weather and did not attempt to shoot it down.\n\"Russia's war of aggression against Ukraine is spilling over onto the eastern flank of NATO and EU,\" the…",
+      "stazeno": "2026-10-18T18:02:59.599Z",
       "stav": 200
     }
   },
   {
-    "id": "k-a97340baf75ea812",
-    "zachyceno": "2026-10-18T13:10:13.766Z",
-    "publikovano": null,
+    "id": "k-78e7f5c67951ffdc",
+    "zachyceno": "2026-10-18T16:48:10.252Z",
+    "publikovano": "2026-10-18T16:32:00.000Z",
     "zdroj": {
-      "nazev": "LRT English (Litva)",
-      "url": "https://www.lrt.lt/en/news-in-english/19/3086054/attempted-arson-at-lithuanian-firm-storing-starlink-equipment-pm-blames-russia",
-      "typ": "media",
+      "nazev": "Ukrinform (anglicky)",
+      "url": "https://www.ukrinform.net/rubric-ato/4175695-russian-forces-launch-another-attack-on-critical-infrastructure-in-vinnytsia-region.html",
+      "typ": "wire",
       "primarni": false
     },
-    "titulek": "Attempted arson at Lithuanian firm storing Starlink equipment, PM blames Russia",
-    "titulekPuvodni": "Attempted arson at Lithuanian firm storing Starlink equipment, PM blames Russia",
-    "shrnuti": "",
-    "kodZeme": "LT",
-    "zeme": "Litva",
-    "kategorie": [
-      "sabotaz",
-      "rusko"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "zeSite": null,
-    "shody": [
-      "arson",
-      "russia"
-    ],
-    "naliehave": null,
-    "stav": "ceka",
-    "vyrez": {
-      "text": "Attempted arson at Lithuanian firm storing Starlink equipment, PM blames Russia - LRT\n\r\n\r\nNaujienų srautas\nNews\n3 h ago\nAttempted arson at Lithuanian firm storing Starlink equipment, PM blames Russia\nNews\n3 h ago\nDrone enters Lithuania from Poland, debris hits a car on rural road\nNews\n6 h ago\nChildren welcome – as long as they stay quiet: Is Lithuania becoming less child-friendly?\nNews\n8 h ago\n‘Mr Fix-It’: How Romas Šležas helped bring America’s civil rights history to the screen\nNews\n1 d ago\nEU working on multiple fronts to limit Russians from entering bloc\nNews\n1 d ago\nVytautas the Great invited Muslims to Lithuania ‘not because he was a leftist’ – interview\nNews\n1 d ago\nHow US bullied Vilnius into dropping support for conference critical of Trump\nNews\n2 d ago\nNew laser factory opens in Lithuania with ambition to become one of world's largest\nNews\n2 d ago\nEconomists warn Lithuania’s 2027 budget risks rising debt and deficit\nNews\n2 d ago\nLithuania extends military support for patrolling Kaliningrad border\nNews\n2 d ago\nPoverty rises in Lithuania, including among people with jobs\nNews\n2 d ago\nLithuania’s 2027 budget: 5% for defence, growing government deficit\nNews\n2 d ago\nLRT…",
-      "stazeno": "2026-10-18T13:10:17.425Z",
-      "stav": 200
-    }
-  },
-  {
-    "id": "k-d803c2318f2e32de",
-    "zachyceno": "2026-10-18T15:02:30.318Z",
-    "publikovano": "2026-10-18T13:04:00.000Z",
-    "zdroj": {
-      "nazev": "Ukrainska Pravda (anglicky)",
-      "url": "https://www.pravda.com.ua/eng/news/2026/10/18/8058616/",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Four injured in Russian drone attack on cars in Kharkiv Oblast",
-    "titulekPuvodni": "Four injured in Russian drone attack on cars in Kharkiv Oblast",
-    "shrnuti": "Two separate Russian drone attacks on vehicles in Kharkiv Oblast left four people injured on 18 October.",
+    "titulek": "Russian forces launch another attack on critical infrastructure in Vinnytsia region",
+    "titulekPuvodni": "Russian forces launch another attack on critical infrastructure in Vinnytsia region",
+    "shrnuti": "Russian forces have once again attacked critical infrastructure in the Vinnytsia region, and residents of the region have been urged to reduce their electricity consumption.",
     "kodZeme": "RU",
     "zeme": "Rusko",
     "kategorie": [
       "hybridni",
-      "drony",
+      "infrastruktura",
       "rusko"
     ],
     "druhOdhad": "neurceno",
@@ -341,33 +61,32 @@
     "zeSite": null,
     "shody": [
       "attack on",
-      "dron",
-      "drone",
+      "critical infrastructure",
       "russia"
     ],
     "naliehave": null,
     "stav": "ceka",
     "vyrez": {
-      "text": "Four injured in Russian FPV drone strikes in Kharkiv Oblast | Ukrainska Pravda\nThe aftermath of a drone attack on Kharkiv Oblast. Photo: Kharkiv Oblast Prosecutor's Office\nFour people have been injured in Russian drone attacks on Kharkiv Oblast on 18 October.\nSource: Kharkiv Oblast Prosecutor's Office\nDetails: A Russian FPV drone hit a car in the village of Staryi Saltiv in the Chuhuiv district at around 09:30. A 58-year-old man and his 55-year-old wife have been injured. Both are in a mild condition and refused hospitalisation.\nAdvertisement:\n\r\n\r\n\r\n\r\n\r\nAnother attack struck the Velykyi Burluk - Nova Oleksandrivka road at around 08:30, when a drone hit a van. A 49-year-old man was injured, and a 55-year-old woman was suffering from shock.\nYour support on Patreon helps us keep the news free and accessible.\nKharkiv Oblast\ndrones\nAdvertisement:\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nKharkiv Oblast\nThree injured in Russian guided aerial bomb attack on Izium – photos\nRussian drones \"hunt\" cars in Kharkiv Oblast: one killed, two injured\nRussians lead civilians to gas pipeline, use them as a human shield, then open fire on them – video\nLatest news\nAdvertisement:\n\r\n\r\n\r\nAdvertisement:",
-      "stazeno": "2026-10-18T15:02:34.106Z",
+      "text": "Russian forces launch another attack on critical infrastructure in Vinnytsia region\n\r\nSubscription\nNewsletters\nPhotobank\nUkrinform - Ukrainian National News Agency\nFounded in 1918\nSunday, 18 October 2026, 19:48\nWar\nEconomy\nSports\nMore ☰\nContacts\nEng\nУкр\nEng\nEsp\nDeu\nعربي\nFra\n日本語\nPol\n&times;\nAll topics\nWar\nRecovery of Ukraine\nPolitics\nEconomy\nFact checks\nDefense\nSociety and Culture\nSports\nCrime\nAccidents and Emergencies\nAgency\nInformation on Agency\nOur Contacts\nSubscribtion Terms\nOur Services\nPrivacy policy and personal data protection\nAdditional\nPublications\nInterviews\nPhoto\nVideo\nLongreads\nReleases\nServices\nSubscription\nNewsletters\nPhotobank\n\r\n\r\n\r\nRussian forces have once again attacked critical infrastructure in the Vinnytsia region, and residents of the region have been urged to reduce their electricity consumption.\nNatalia Zabolotna, head of the Vinnytsia Regional Military Administration, made this statement during a television broadcast, according to a Ukrinform correspondent.\n\r\n\r\n\r\n\r\n\r\n\r\n&ldquo;The enemy continues its massive attacks. Just half an hour ago, a critical facility in Vinnytsia region came under fire once again. I want to ask residents of the region to use…",
+      "stazeno": "2026-10-18T16:48:10.426Z",
       "stav": 200
     }
   },
   {
-    "id": "k-610b847f434312d5",
-    "zachyceno": "2026-10-18T15:02:27.134Z",
-    "publikovano": "2026-10-18T13:00:00.000Z",
+    "id": "k-10f17f35be9786a6",
+    "zachyceno": "2026-10-18T18:02:59.453Z",
+    "publikovano": "2026-10-18T16:20:00.000Z",
     "zdroj": {
-      "nazev": "iDNES.cz — zpravodajství",
-      "url": "https://www.idnes.cz/usti/zpravy/odsun-nemci-pohranici-osidlovani-vesely-historik-ujep.A261016_084157_usti-zpravy_grr#utm_source=rss&utm_medium=feed&utm_campaign=zpravodaj&utm_content=main",
+      "nazev": "Ukrainska Pravda (anglicky)",
+      "url": "https://www.pravda.com.ua/eng/news/2026/10/18/8058641/",
       "typ": "media",
       "primarni": false
     },
-    "titulek": "Po výbuchu skladu házeli Němce do řeky, líčí historik události kolem odsunu",
-    "titulekPuvodni": "Po výbuchu skladu házeli Němce do řeky, líčí historik události kolem odsunu",
-    "shrnuti": "Už 80 let uplynulo od doby, kdy v Československu začaly organizované poválečně odsuny Němců. Do pohraničí zároveň přicházelo české obyvatelstvo z vnitrozemí, aby opět zabydlelo opuštěná místa. Divoké časy regiony natrvalo poznamenaly. Kdo házel Němce z mostu? Co se podařilo komunistům a jaký paradox",
-    "kodZeme": "CZ",
-    "zeme": "Česko",
+    "titulek": "Lithuania says attempted arson of Starlink station sabotage is aimed at influencing Ukraine",
+    "titulekPuvodni": "Lithuania says attempted arson of Starlink station sabotage is aimed at influencing Ukraine",
+    "shrnuti": "Vilmantas Vitkauskas, head of the Lithuanian National Crisis Management Centre, has stated that the attempted arson at a Starlink station is intended to disrupt Ukrainian operations.",
+    "kodZeme": "LT",
+    "zeme": "Litva",
     "kategorie": [
       "sabotaz"
     ],
@@ -375,13 +94,146 @@
     "klasifikace": "pravidla",
     "zeSite": null,
     "shody": [
-      "vybuch"
+      "sabotage",
+      "arson"
     ],
     "naliehave": null,
     "stav": "ceka",
     "vyrez": {
-      "text": "Po výbuchu házeli Němce do řeky, líčí historik krvavou historii odsunu Němců z Česka - iDNES.cz \r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\niDNES.cz\n\r\n\r\n\r\nP�ihl�sit \r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nAbyste mohli pokra�ovat, pot�ebujeme v�d�t, jakou formou v�m m��eme zobrazovat reklamu \r\n\r\n\r\n\r\n\r\n\r\nV�mi zvolen� nastaven� \r\nneobsahuje souhlas se zobrazov�n�m c�len� reklamy . \r\nVyberte pros�m znovu, \r\njakou formou v�m m�me zobrazovat obsah. \r\n\r\n\r\n\r\n\r\n\r\n\r\niDNES Premium\n\r\nBez reklam\n\r\n\r\n199 K� m�s��n�\n\r\nM��ete neomezen� ��st iDNES.cz, Lidovky.cz, Expres.cz a Antiyoutuber.cz. K tomu dostanete tak� noviny a �asopisy v elektronick� podob�. To v�e bez reklam. 1\n\r\n\r\nP�edplatit\n\r\n\r\nU� m�te ��et? P�ihlaste se\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nS c�lenou reklamou\n\r\n\r\n\r\nZdarma \r\n\r\nZachov�me v�m v�e tak, jak jste zvykl� a reklamu p�izp�sob�me va�im z�jm�m. Bez omezen� si m��ete d�l ��st, p�ehr�vat videa, sout�it �i p�isp�vat do v�ech diskus�. 2\n\r\n\r\nSouhlas�m\n\r\nPodrobn� nastaven�\n\r\n\r\n\r\n\r\n\r\n\r\niDNES a reklama\n\r\nPokud vyu�ijete m�sto platby ud�len� souhlasu s reklamou (tj. souhlas s vyu�it�m cookies a dal��ch s�ov�ch identifik�tor� pro ��ely c�len� reklamy), \r\nbudou V�m…",
-      "stazeno": "2026-10-18T15:02:34.148Z",
+      "text": "Lithuania labels Starlink station arson attempt as Russian sabotage | Ukrainska Pravda\nStarlink. Photo: Getty Images\nLithuania considers the attempted arson of a SpaceX Starlink base station that occurred on Sunday to be an act of sabotage linked to Russia and aimed at undermining Ukraine's military potential.\nSource: European Pravda, citing Vilmantas Vitkauskas, Head of the government's National Crisis Management Centre, speaking to journalists, as reported by Reuters\nDetails: Vitkauskas said that the Lithuanian authorities are currently searching for suspects.\nAdvertisement:\n\r\n\r\n\r\n\r\n\r\n\"We understand that this was not a routine arson ​attack but an act of sabotage,\" he said.\nHe noted that this incident is connected to previous arsons of Starlink stations in Bulgaria and Poland.\nQuote: \"They are part of Russian attempts to disrupt Starlink and influence ​the success of Ukrainian operations. Ukraine is the target.\"\nBackground:\nOn 18 October, Lithuanian Prime Minister Mindaugas Sinkevičius reported an unsuccessful attempt to set fire to a Lithuanian company that stores equipment for Starlink communications.\nOn 23 September, a fire occurred at a Starlink ground satellite…",
+      "stazeno": "2026-10-18T18:03:00.083Z",
+      "stav": 200
+    }
+  },
+  {
+    "id": "k-b3f5c022b642e4da",
+    "zachyceno": "2026-10-18T16:48:07.972Z",
+    "publikovano": "2026-10-18T16:13:24.000Z",
+    "zdroj": {
+      "nazev": "Tagesschau (Německo)",
+      "url": "https://www.tagesschau.de/ausland/europa/litauen-drohne-absturz-ukraine-100.html",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Drohne in Litauens Luftraum eingedrungen und abgestürzt",
+    "titulekPuvodni": "Drohne in Litauens Luftraum eingedrungen und abgestürzt",
+    "shrnuti": "NATO-Kampfjets stiegen auf, Bürger wurden gewarnt: In Litauen hat eine Drohne für Alarm gesorgt, weil sie in den Luftraum eindrang. Kiew entschuldigte sich kurz darauf - und vermutet eine Störaktion Russlands dahinter.",
+    "kodZeme": null,
+    "zeme": null,
+    "kategorie": [
+      "drony",
+      "nato"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "drohne+abgesturzt",
+      "nato"
+    ],
+    "naliehave": null,
+    "stav": "ceka",
+    "vyrez": {
+      "text": "Drohne in Litauens Luftraum eingedrungen und abgestürzt | tagesschau.de\nHauptnavigation\nNebennavigation\nInhalt\nFußzeile\nLuftalarm im Baltikum\nDrohne in Litauen abgestürzt\nStand: 18.10.2026 • 18:13 Uhr\nNATO-Kampfjets stiegen auf, Bürger wurden gewarnt: In Litauen hat eine Drohne für Alarm gesorgt, weil sie in den Luftraum eindrang. Kiew entschuldigte sich kurz darauf - und vermutet eine Störaktion Russlands dahinter.\nIn Litauen ist eine Drohne in den Luftraum eingedrungen. Das NATO- und EU-Land versetzte seine Streitkräfte in Alarmbereitschaft, NATO-Kampfflugzeuge stiegen auf. Bewohner im Zentrum und Norden des Landes wurden aufgerufen, für etwa eine Stunde Schutzräume aufzusuchen. Auch im benachbarten Lettland wurden die Bewohner einiger an Litauen grenzender Regionen gewarnt.\nNachdem das Objekt vom Radar verschwunden war, stürzte es ab: In der Nähe des Dorfes Juodzionys wurden mögliche Trümmerteile gefunden. Einige davon hätten ein ziviles Fahrzeug getroffen, teilte der litauische Verteidigungsminister Robertas Kaunas mit. Verletzt worden sei niemand, sagte der Leiter des nationalen Krisenmanagementzentrums, Vilmantas Vitkauskas, im litauischen Radio.\n13.10.2026\nVor Bulgariens…",
+      "stazeno": "2026-10-18T16:48:10.828Z",
+      "stav": 200
+    }
+  },
+  {
+    "id": "k-07999c255d408b84",
+    "zachyceno": "2026-10-18T16:48:09.858Z",
+    "publikovano": "2026-10-18T15:50:58.000Z",
+    "zdroj": {
+      "nazev": "Digi24 (Rumunsko)",
+      "url": "https://www.digi24.ro/stiri/trei-premiere-absolute-in-cazul-celor-doua-drone-doborate-deasupra-marii-negre-3997773",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Trei premiere absolute în cazul celor două drone doborâte deasupra Mării Negre",
+    "titulekPuvodni": "Trei premiere absolute în cazul celor două drone doborâte deasupra Mării Negre",
+    "shrnuti": "Ministrul interimar al Apărării, Radu Miruţă, a afirmat că au existat trei premiere în cazul celor două drone doborâte, sâmbătă seara, deasupra Mării Negre de aeronava F-16 ale Forţelor Aeriene Române. El a explicat că este pentru prima dată când sunt doborâte două drone la un interval de patru minu",
+    "kodZeme": "RO",
+    "zeme": "Rumunsko",
+    "kategorie": [
+      "drony"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "patrun+spatiul aerian",
+      "dron",
+      "drone"
+    ],
+    "naliehave": null,
+    "stav": "ceka",
+    "vyrez": {
+      "text": "Trei premiere absolute în cazul celor două drone doborâte deasupra Mării Negre | Digi24\nHOME\nȘtiri\nTrei premiere absolute în cazul celor două drone doborâte deasupra Mării Negre\nTrei premiere absolute în cazul celor două drone doborâte deasupra Mării Negre\nData actualizării: 18.10.2026 18:50 Data publicării: 18.10.2026 18:49\nFoto: Ministerul Apararii Nationale, Romania - www.mapn.ro﻿ Facebook Urmărește Digi24 în Google Discover Adaugă Digi24 ca sursă preferată în Google\nMinistrul interimar al Apărării, Radu Miruţă, a afirmat că, au existat trei premiere în cazul celor două drone doborâte, sâmbătă seara, deasupra Mării Negre, aeronava F-16 a Forţelor Aeriene Române. El a explicat că este pentru prima dată, când sunt doborâte două drone la un interval de patru minute şi la scurt timp după ce au pătruns în spaţiul aerian naţional. Miruţă a mai precizat că pentru prima dată piloţii români au avut de-a face cu drone Geran 4 de provenienţă rusească, care zboară cu 450 de km/h.\n„Pot să vă spun premiera pentru cele două drone care au fost doborâte aseară în spaţiul aerian românesc. Ministerul Apărării a înregistrat trei premiere absolute. Una, că au fost doborâte două drone consecutive la…",
+      "stazeno": "2026-10-18T16:48:11.452Z",
+      "stav": 200
+    }
+  },
+  {
+    "id": "k-c4a23a869acbaae3",
+    "zachyceno": "2026-10-18T16:48:06.267Z",
+    "publikovano": "2026-10-18T15:31:57.000Z",
+    "zdroj": {
+      "nazev": "Evropská komise — presscorner",
+      "url": "https://ec.europa.eu/commission/presscorner/detail/en/statement_26_2194",
+      "typ": "primary",
+      "primarni": true
+    },
+    "titulek": "Commission statement on the protests in Albania",
+    "titulekPuvodni": "Commission statement on the protests in Albania",
+    "shrnuti": "European Commission Statement Brussels, 18 Oct 2026 We condemn the use of violence in Tirana and other cities in Albania, including arson, attacks on State institutions and the destruction of public and private p...",
+    "kodZeme": "BE",
+    "zeme": "Belgie",
+    "kategorie": [
+      "sabotaz"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "arson"
+    ],
+    "naliehave": null,
+    "stav": "ceka",
+    "vyrez": {
+      "text": "Press corner | European Commission",
+      "stazeno": "2026-10-18T16:48:13.256Z",
+      "stav": 200
+    }
+  },
+  {
+    "id": "k-9e235dbe784a1b6c",
+    "zachyceno": "2026-10-18T16:48:07.762Z",
+    "publikovano": "2026-10-18T15:10:32.000Z",
+    "zdroj": {
+      "nazev": "The Guardian — World",
+      "url": "https://www.theguardian.com/world/2026/oct/18/french-government-crisis-talks-violent-unrest-policing-macron",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "French government in crisis talks after ‘colossal failure of the state’",
+    "titulekPuvodni": "French government in crisis talks after ‘colossal failure of the state’",
+    "shrnuti": "Ministers, officials and police under pressure over response to days of violent unrest in cities across France The French government was in crisis talks on Sunday after one of the most violent days of unrest in years left public buildings burned, hundreds of shops destroyed and looted, and more than",
+    "kodZeme": "FR",
+    "zeme": "Francie",
+    "kategorie": [
+      "diplomacie"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "crisis talks"
+    ],
+    "naliehave": null,
+    "stav": "ceka",
+    "vyrez": {
+      "text": "French government in crisis talks after ‘colossal failure of the state’ | France | The Guardian\nSkip to main content Skip to navigation\nPeople stormed and torched the town hall in Limoges, central France, destroying the 19th-century building. Photograph: Pascal Lachenaud/AFP/Getty Images\nView image in fullscreen\nPeople stormed and torched the town hall in Limoges, central France, destroying the 19th-century building. Photograph: Pascal Lachenaud/AFP/Getty Images\nFrench government in crisis talks after ‘colossal failure of the state’\nMinisters, officials and police under pressure over response to days of violent unrest in cities across France\nThe French government was in crisis talks on Sunday after one of the most violent days of unrest in years left public buildings burned, hundreds of shops destroyed and looted, and more than 2,000 people arrested in cities across the country .\nPoliticians on the left and right called for the resignation of the interior minister, Laurent Nuñez, after the government appeared to have been caught by surprise by the scale of violence as state buildings were stormed and torched, bus stops smashed, roads barricaded and shops broken into and…",
+      "stazeno": "2026-10-18T16:48:13.613Z",
       "stav": 200
     }
   },
@@ -9760,6 +9612,291 @@
     }
   },
   {
+    "id": "k-45420893bf1ca6b6",
+    "zachyceno": "2026-10-18T15:02:27.781Z",
+    "publikovano": "2026-10-18T14:31:30.000Z",
+    "zdroj": {
+      "nazev": "The Guardian — World",
+      "url": "https://www.theguardian.com/world/2026/oct/18/killed-injured-russia-ukraine-strikes-power-infrastructure",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Two killed and at least 17 injured as Russia and Ukraine trade blows on power infrastructure",
+    "titulekPuvodni": "Two killed and at least 17 injured as Russia and Ukraine trade blows on power infrastructure",
+    "shrnuti": "Ukraine used more than 1,000 drones to target Russian oil depots, logistics facilities and datacentres Two people have been killed and at least 17 injured as Russia and Ukraine continue to trade strikes on each other’s power infrastructure, after the breakdown of Donald Trump’s short-lived and unila",
+    "kodZeme": "UA",
+    "zeme": "Ukrajina",
+    "kategorie": [
+      "sabotaz",
+      "drony",
+      "rusko"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "bomb",
+      "dron",
+      "drone",
+      "russia"
+    ],
+    "naliehave": null,
+    "stav": "vyrizen",
+    "vyrez": {
+      "text": "Two killed and at least 17 injured as Russia and Ukraine trade blows on power infrastructure | Russia | The Guardian\nSkip to main content Skip to navigation\nA Ukrainian drone strike on the St Petersburg oil terminal. Photograph: AFP/Getty Images\nView image in fullscreen\nA Ukrainian drone strike on the St Petersburg oil terminal. Photograph: AFP/Getty Images\nTwo killed and at least 17 injured as Russia and Ukraine trade blows on power infrastructure\nUkraine used more than 1,000 drones to target Russian oil depots, logistics facilities and datacentres\nTwo people have been killed and at least 17 injured as Russia and Ukraine continue to trade strikes on each other’s power infrastructure, after the breakdown of Donald Trump’s short-lived and unilaterally declared “energy ceasefire”.\nOne person was killed and 15 wounded overnight after Ukraine used more than 1,000 drones to target Russian oil depots, logistics facilities and datacentres in one of its largest ever aerial bombardments.\nSt Petersburg’s governor, Alexander Beglov, said on Sunday that fires ⁠had broken out overnight at the city’s oil terminal, ​an oil depot and industrial ‌warehouses. A logistics centre belonging to the…",
+      "stazeno": "2026-10-18T15:02:30.451Z",
+      "stav": 200
+    },
+    "vyrizeni": {
+      "kdy": "2026-10-18T16:46:09.095Z",
+      "duvod": "mimo-rozsah",
+      "patriK": null,
+      "poznamka": "Rusko a Ukrajina si vyměnily údery na energetickou infrastrukturu, dva mrtví a 17 zraněných; denní válka na Ukrajině/uvnitř Ruska, běžný typ zprávy."
+    }
+  },
+  {
+    "id": "k-5424463f8bcbc40c",
+    "zachyceno": "2026-10-18T15:02:27.128Z",
+    "publikovano": "2026-10-18T13:23:32.000Z",
+    "zdroj": {
+      "nazev": "iDNES.cz — zpravodajství",
+      "url": "https://www.idnes.cz/zpravy/zahranicni/migrace-francie-nasilnosti-protesty-vance-usa.A261018_103100_zahranicni_jhr#utm_source=rss&utm_medium=feed&utm_campaign=zpravodaj&utm_content=main",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Uzavřete hranice, než bude pozdě, radí Trump Francouzům. Vance varuje Američany",
+    "titulekPuvodni": "Uzavřete hranice, než bude pozdě, radí Trump Francouzům. Vance varuje Američany",
+    "shrnuti": "Americký prezident Donald Trump i jeho viceprezident J.D Vance připisují sobotní střety v ulicích francouzských městech migraci. Trump v příspěvku na své síti Truth Social pak vyzval k uzavření hranic. Oba politici se proti migraci vymezují dlouhodobě.",
+    "kodZeme": "FR",
+    "zeme": "Francie",
+    "kategorie": [
+      "hranice"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "uzavreni hranic",
+      "hranic+uzavr",
+      "hranice"
+    ],
+    "naliehave": null,
+    "stav": "vyrizen",
+    "vyrez": {
+      "text": "Trump: Za násilnostmi ve Francii je imigrace nenávistivých lidí - iDNES.cz \r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\niDNES.cz\n\r\n\r\n\r\nP�ihl�sit \r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nAbyste mohli pokra�ovat, pot�ebujeme v�d�t, jakou formou v�m m��eme zobrazovat reklamu \r\n\r\n\r\n\r\n\r\n\r\nV�mi zvolen� nastaven� \r\nneobsahuje souhlas se zobrazov�n�m c�len� reklamy . \r\nVyberte pros�m znovu, \r\njakou formou v�m m�me zobrazovat obsah. \r\n\r\n\r\n\r\n\r\n\r\n\r\niDNES Premium\n\r\nBez reklam\n\r\n\r\n199 K� m�s��n�\n\r\nM��ete neomezen� ��st iDNES.cz, Lidovky.cz, Expres.cz a Antiyoutuber.cz. K tomu dostanete tak� noviny a �asopisy v elektronick� podob�. To v�e bez reklam. 1\n\r\n\r\nP�edplatit\n\r\n\r\nU� m�te ��et? P�ihlaste se\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nS c�lenou reklamou\n\r\n\r\n\r\nZdarma \r\n\r\nZachov�me v�m v�e tak, jak jste zvykl� a reklamu p�izp�sob�me va�im z�jm�m. Bez omezen� si m��ete d�l ��st, p�ehr�vat videa, sout�it �i p�isp�vat do v�ech diskus�. 2\n\r\n\r\nSouhlas�m\n\r\nPodrobn� nastaven�\n\r\n\r\n\r\n\r\n\r\n\r\niDNES a reklama\n\r\nPokud vyu�ijete m�sto platby ud�len� souhlasu s reklamou (tj. souhlas s vyu�it�m cookies a dal��ch s�ov�ch identifik�tor� pro ��ely c�len� reklamy), \r\nbudou V�m zobrazov�ny v r�mci…",
+      "stazeno": "2026-10-18T15:02:30.473Z",
+      "stav": 200
+    },
+    "vyrizeni": {
+      "kdy": "2026-10-18T16:46:09.095Z",
+      "duvod": "mimo-rozsah",
+      "patriK": null,
+      "poznamka": "Trump radí Francouzům uzavřít hranice, Vance varuje Američany; politická vyjádření o francouzské migrační/bezpečnostní politice, nesouvisí s ruskou hybridní hrozbou."
+    }
+  },
+  {
+    "id": "k-81920528106c990f",
+    "zachyceno": "2026-10-18T15:02:27.834Z",
+    "publikovano": "2026-10-18T13:20:49.000Z",
+    "zdroj": {
+      "nazev": "Politico Europe",
+      "url": "https://www.politico.eu/article/france-calls-on-israel-to-arrest-perpetrators-of-attack-on-eu-diplomats/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "France says Israel must ‘stop these acts of terror’ following attack on EU diplomats",
+    "titulekPuvodni": "France says Israel must ‘stop these acts of terror’ following attack on EU diplomats",
+    "shrnuti": "Video footage of the incident in Taybeh, north of Jerusalem, showed settlers confronting a convoy of diplomats.",
+    "kodZeme": "FR",
+    "zeme": "Francie",
+    "kategorie": [
+      "hybridni"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "attack on"
+    ],
+    "naliehave": null,
+    "stav": "vyrizen",
+    "vyrez": {
+      "text": "France says Israel must ‘stop these acts of terror’ following attack on EU diplomats – POLITICO\nSkip to main content\nAdvertisement\nFrance called on Israeli authorities to take “all necessary measures” to “stop these acts of terror” following an attack by masked Israeli settlers against European diplomats in the West Bank on Saturday.\nIn a statement issued Sunday, the French Ministry of Foreign Affairs said: “France calls on the Israeli authorities to arrest the perpetrators of this extremely serious assault and bring them to justice.\n“Furthermore, the Israeli authorities must take all necessary measures to put an end to these acts of terror and to ensure the safety of civilian populations and diplomatic missions, as they are obligated to do under international law.”\nAdvertisement\nThe incident took place in Taybeh, a mainly Christian town north of Jerusalem, where diplomats and other officials from France, Poland and Belgium were watching local people harvest olives. Video footage of the attack showed settlers confronting a convoy of diplomats and a man wearing a French tricolor sash slumped beside a car.\n“The mayor of the commune of Aulnoye-Aymeries was violently assaulted by…",
+      "stazeno": "2026-10-18T15:02:33.155Z",
+      "stav": 200
+    },
+    "vyrizeni": {
+      "kdy": "2026-10-18T16:46:09.095Z",
+      "duvod": "mimo-rozsah",
+      "patriK": null,
+      "poznamka": "Francie vyzývá Izrael, aby „zastavil teroristické akty“ po útoku na unijní diplomaty; izraelsko-palestinský konflikt, nesouvisí s ruskou/běloruskou hybridní hrozbou."
+    }
+  },
+  {
+    "id": "k-6dfe0e3fc3544433",
+    "zachyceno": "2026-10-18T15:02:30.316Z",
+    "publikovano": "2026-10-18T13:18:00.000Z",
+    "zdroj": {
+      "nazev": "Ukrainska Pravda (anglicky)",
+      "url": "https://www.pravda.com.ua/eng/news/2026/10/18/8058618/",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "University teacher Kostiantyn Chub killed in Russian attack on Poltava",
+    "titulekPuvodni": "University teacher Kostiantyn Chub killed in Russian attack on Poltava",
+    "shrnuti": "Poltava Pedagogical University lecturer Kostiantyn Chub has been killed in a Russian drone attack that targeted residential areas in Poltava.",
+    "kodZeme": "RU",
+    "zeme": "Rusko",
+    "kategorie": [
+      "hybridni",
+      "drony",
+      "rusko"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "attack on",
+      "dron",
+      "drone",
+      "russia"
+    ],
+    "naliehave": null,
+    "stav": "vyrizen",
+    "vyrez": {
+      "text": "Russian drone strike on Poltava kills university teacher Kostiantyn Chub | Ukrainska Pravda\nKostiantyn Chub held a PhD in physics and mathematics. Photo: Poltava V. G. Korolenko National Pedagogical University\nKostiantyn Chub, who held a PhD in physics and mathematics and lectured at Poltava V. G. Korolenko National Pedagogical University, was killed in a Russian attack on Poltava on 17 October.\nSource: his ex-wife, as reported by Suspilne Poltava , a local branch of the Ukrainian public broadcaster\nDetails: Kostiantyn was around 59. He studied at Poltava Pedagogical University before completing postgraduate studies at the Faculty of Cybernetics at Taras Shevchenko National University of Kyiv. He later earned a master's degree in primary education.\nAdvertisement:\n\r\n\r\n\r\n\r\n\r\nIn 2002, Kostiantyn was awarded a PhD in physics and mathematics.\nKostiantyn began his career teaching mathematics and computer science at Secondary School No. 37 in Poltava, where he worked for several years. He later joined the Department of Mathematical Analysis and Computer Science at the pedagogical university.\nFrom September 2004, Kostiantyn worked at the same university's Faculty of Pedagogical and Art…",
+      "stazeno": "2026-10-18T15:02:33.211Z",
+      "stav": 200
+    },
+    "vyrizeni": {
+      "kdy": "2026-10-18T16:46:09.095Z",
+      "duvod": "mimo-rozsah",
+      "patriK": null,
+      "poznamka": "Denní ruský útok na Ukrajině bez doloženého následku pro sledované země; běžný typ zprávy, mimo rozsah projektu."
+    }
+  },
+  {
+    "id": "k-e48457ee3b3e317a",
+    "zachyceno": "2026-10-18T15:02:30.280Z",
+    "publikovano": "2026-10-18T13:15:00.000Z",
+    "zdroj": {
+      "nazev": "Ukrinform (anglicky)",
+      "url": "https://www.ukrinform.net/rubric-emergencies/4175657-lithuania-links-attempted-arson-at-starlink-equipment-facility-to-russia.html",
+      "typ": "wire",
+      "primarni": false
+    },
+    "titulek": "Lithuania links attempted arson at Starlink equipment facility to Russia",
+    "titulekPuvodni": "Lithuania links attempted arson at Starlink equipment facility to Russia",
+    "shrnuti": "Unknown individuals attempted to set fire to a Lithuanian facility where equipment for Starlink satellite internet is stored.",
+    "kodZeme": "LT",
+    "zeme": "Litva",
+    "kategorie": [
+      "sabotaz",
+      "rusko"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "arson",
+      "russia"
+    ],
+    "naliehave": null,
+    "stav": "vyrizen",
+    "vyrez": {
+      "text": "Lithuania links attempted arson at Starlink equipment facility to Russia\n\r\nSubscription\nNewsletters\nPhotobank\nUkrinform - Ukrainian National News Agency\nFounded in 1918\nSunday, 18 October 2026, 18:02\nWar\nEconomy\nSports\nMore ☰\nContacts\nEng\nУкр\nEng\nEsp\nDeu\nعربي\nFra\n日本語\nPol\n&times;\nAll topics\nWar\nRecovery of Ukraine\nPolitics\nEconomy\nFact checks\nDefense\nSociety and Culture\nSports\nCrime\nAccidents and Emergencies\nAgency\nInformation on Agency\nOur Contacts\nSubscribtion Terms\nOur Services\nPrivacy policy and personal data protection\nAdditional\nPublications\nInterviews\nPhoto\nVideo\nLongreads\nReleases\nServices\nSubscription\nNewsletters\nPhotobank\n\r\n\r\n\r\nUnknown individuals attempted to set fire to a Lithuanian facility where equipment for Starlink satellite internet is stored.\nAs reported by Ukrinform, Lithuanian Prime Minister Mindaugas Sinkevičius said this, according to LRT.\n\r\n\r\nAccording to him, the relevant authorities warned the company in advance of possible attacks and strengthened security, preventing the attempted arson.\n\r\n\r\nSinkevičius believes Russia was likely behind the attempted arson at the Lithuanian facility where Starlink equipment is stored.\n\r\n\r\nHe said the Lithuanian…",
+      "stazeno": "2026-10-18T15:02:33.257Z",
+      "stav": 200
+    },
+    "vyrizeni": {
+      "kdy": "2026-10-18T16:46:09.095Z",
+      "duvod": "duplicita",
+      "patriK": null,
+      "poznamka": "Táž událost jako nový návrh výše — Litva zabránila žhářskému útoku na firmu uchovávající vybavení Starlink, premiér vinu připisuje Rusku (i-2026-10-18-a97340baf7)."
+    }
+  },
+  {
+    "id": "k-d803c2318f2e32de",
+    "zachyceno": "2026-10-18T15:02:30.318Z",
+    "publikovano": "2026-10-18T13:04:00.000Z",
+    "zdroj": {
+      "nazev": "Ukrainska Pravda (anglicky)",
+      "url": "https://www.pravda.com.ua/eng/news/2026/10/18/8058616/",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Four injured in Russian drone attack on cars in Kharkiv Oblast",
+    "titulekPuvodni": "Four injured in Russian drone attack on cars in Kharkiv Oblast",
+    "shrnuti": "Two separate Russian drone attacks on vehicles in Kharkiv Oblast left four people injured on 18 October.",
+    "kodZeme": "RU",
+    "zeme": "Rusko",
+    "kategorie": [
+      "hybridni",
+      "drony",
+      "rusko"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "attack on",
+      "dron",
+      "drone",
+      "russia"
+    ],
+    "naliehave": null,
+    "stav": "vyrizen",
+    "vyrez": {
+      "text": "Four injured in Russian FPV drone strikes in Kharkiv Oblast | Ukrainska Pravda\nThe aftermath of a drone attack on Kharkiv Oblast. Photo: Kharkiv Oblast Prosecutor's Office\nFour people have been injured in Russian drone attacks on Kharkiv Oblast on 18 October.\nSource: Kharkiv Oblast Prosecutor's Office\nDetails: A Russian FPV drone hit a car in the village of Staryi Saltiv in the Chuhuiv district at around 09:30. A 58-year-old man and his 55-year-old wife have been injured. Both are in a mild condition and refused hospitalisation.\nAdvertisement:\n\r\n\r\n\r\n\r\n\r\nAnother attack struck the Velykyi Burluk - Nova Oleksandrivka road at around 08:30, when a drone hit a van. A 49-year-old man was injured, and a 55-year-old woman was suffering from shock.\nYour support on Patreon helps us keep the news free and accessible.\nKharkiv Oblast\ndrones\nAdvertisement:\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nKharkiv Oblast\nThree injured in Russian guided aerial bomb attack on Izium – photos\nRussian drones \"hunt\" cars in Kharkiv Oblast: one killed, two injured\nRussians lead civilians to gas pipeline, use them as a human shield, then open fire on them – video\nLatest news\nAdvertisement:\n\r\n\r\n\r\nAdvertisement:",
+      "stazeno": "2026-10-18T15:02:34.106Z",
+      "stav": 200
+    },
+    "vyrizeni": {
+      "kdy": "2026-10-18T16:46:09.095Z",
+      "duvod": "mimo-rozsah",
+      "patriK": null,
+      "poznamka": "Denní ruský útok na Ukrajině bez doloženého následku pro sledované země; běžný typ zprávy, mimo rozsah projektu."
+    }
+  },
+  {
+    "id": "k-610b847f434312d5",
+    "zachyceno": "2026-10-18T15:02:27.134Z",
+    "publikovano": "2026-10-18T13:00:00.000Z",
+    "zdroj": {
+      "nazev": "iDNES.cz — zpravodajství",
+      "url": "https://www.idnes.cz/usti/zpravy/odsun-nemci-pohranici-osidlovani-vesely-historik-ujep.A261016_084157_usti-zpravy_grr#utm_source=rss&utm_medium=feed&utm_campaign=zpravodaj&utm_content=main",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Po výbuchu skladu házeli Němce do řeky, líčí historik události kolem odsunu",
+    "titulekPuvodni": "Po výbuchu skladu házeli Němce do řeky, líčí historik události kolem odsunu",
+    "shrnuti": "Už 80 let uplynulo od doby, kdy v Československu začaly organizované poválečně odsuny Němců. Do pohraničí zároveň přicházelo české obyvatelstvo z vnitrozemí, aby opět zabydlelo opuštěná místa. Divoké časy regiony natrvalo poznamenaly. Kdo házel Němce z mostu? Co se podařilo komunistům a jaký paradox",
+    "kodZeme": "CZ",
+    "zeme": "Česko",
+    "kategorie": [
+      "sabotaz"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "vybuch"
+    ],
+    "naliehave": null,
+    "stav": "vyrizen",
+    "vyrez": {
+      "text": "Po výbuchu házeli Němce do řeky, líčí historik krvavou historii odsunu Němců z Česka - iDNES.cz \r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\niDNES.cz\n\r\n\r\n\r\nP�ihl�sit \r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nAbyste mohli pokra�ovat, pot�ebujeme v�d�t, jakou formou v�m m��eme zobrazovat reklamu \r\n\r\n\r\n\r\n\r\n\r\nV�mi zvolen� nastaven� \r\nneobsahuje souhlas se zobrazov�n�m c�len� reklamy . \r\nVyberte pros�m znovu, \r\njakou formou v�m m�me zobrazovat obsah. \r\n\r\n\r\n\r\n\r\n\r\n\r\niDNES Premium\n\r\nBez reklam\n\r\n\r\n199 K� m�s��n�\n\r\nM��ete neomezen� ��st iDNES.cz, Lidovky.cz, Expres.cz a Antiyoutuber.cz. K tomu dostanete tak� noviny a �asopisy v elektronick� podob�. To v�e bez reklam. 1\n\r\n\r\nP�edplatit\n\r\n\r\nU� m�te ��et? P�ihlaste se\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nS c�lenou reklamou\n\r\n\r\n\r\nZdarma \r\n\r\nZachov�me v�m v�e tak, jak jste zvykl� a reklamu p�izp�sob�me va�im z�jm�m. Bez omezen� si m��ete d�l ��st, p�ehr�vat videa, sout�it �i p�isp�vat do v�ech diskus�. 2\n\r\n\r\nSouhlas�m\n\r\nPodrobn� nastaven�\n\r\n\r\n\r\n\r\n\r\n\r\niDNES a reklama\n\r\nPokud vyu�ijete m�sto platby ud�len� souhlasu s reklamou (tj. souhlas s vyu�it�m cookies a dal��ch s�ov�ch identifik�tor� pro ��ely c�len� reklamy), \r\nbudou V�m…",
+      "stazeno": "2026-10-18T15:02:34.148Z",
+      "stav": 200
+    },
+    "vyrizeni": {
+      "kdy": "2026-10-18T16:46:09.095Z",
+      "duvod": "mimo-rozsah",
+      "patriK": null,
+      "poznamka": "Historická reportáž o poválečném odsunu Němců a vzpomínkách historika; nesouvisí s ruskou hybridní hrozbou."
+    }
+  },
+  {
     "id": "k-4de78d5d93960987",
     "zachyceno": "2026-10-18T09:02:36.340Z",
     "publikovano": "2026-10-18T08:57:04.000Z",
@@ -10532,128 +10669,6 @@
       "duvod": "mimo-rozsah",
       "patriK": null,
       "poznamka": "Denní ruský útok na Ukrajině bez doloženého následku pro sledované země; běžný typ zprávy, mimo rozsah projektu."
-    }
-  },
-  {
-    "id": "k-957ce09e451e1a6d",
-    "zachyceno": "2026-10-17T18:02:29.320Z",
-    "publikovano": "2026-10-17T16:54:00.000Z",
-    "zdroj": {
-      "nazev": "Ukrainska Pravda (anglicky)",
-      "url": "https://www.pravda.com.ua/eng/news/2026/10/17/8058534/",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Russians attack energy facility in Ternopil Oblast again, causing power outages",
-    "titulekPuvodni": "Russians attack energy facility in Ternopil Oblast again, causing power outages",
-    "shrnuti": "Russian forces have launched another attack on an energy infrastructure facility in Ternopil Oblast, leaving some consumers in the Kremenets district without electricity.",
-    "kodZeme": "RU",
-    "zeme": "Rusko",
-    "kategorie": [
-      "infrastruktura",
-      "hybridni",
-      "rusko"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "zeSite": null,
-    "shody": [
-      "power outage",
-      "attack on",
-      "russia"
-    ],
-    "naliehave": null,
-    "stav": "vyrizen",
-    "vyrez": {
-      "text": "Russian attack on Ternopil Oblast: energy facility hit again, power outages reported | Ukrainska Pravda\nStock photo: Pixabay\nRussian forces have attacked an energy facility in Ternopil Oblast again, leaving some consumers in the Kremenets district without electricity.\nSource: Ternopiloblenergo , Ternopil Oblast energy distribution company\nQuote from Ternopiloblenergo: \"The enemy has attacked an energy infrastructure facility in Ternopil Oblast again.\nAdvertisement:\n\r\n\r\n\r\n\r\n\r\nToday, some consumers in the Kremenets district have once again been left without power as a result of another enemy attack on the oblast's energy infrastructure.\"\nYour support on Patreon helps us keep the news free and accessible.\nTernopil Oblast\npower\nAdvertisement:\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nTernopil Oblast\nRussian forces attack factory in Ternopil Oblast, injuring five people – photo\nRussian drone attacks on energy facilities in Ternopil Oblast: power outages reported\nRussian attack on Ukraine leaves three oblasts almost completely without power\nLatest news\nAdvertisement:\n\r\n\r\n\r\nAdvertisement:",
-      "stazeno": "2026-10-17T18:02:32.942Z",
-      "stav": 200
-    },
-    "vyrizeni": {
-      "kdy": "2026-10-17T19:09:58.438Z",
-      "duvod": "mimo-rozsah",
-      "patriK": null,
-      "poznamka": "Denní ruský útok na Ukrajině bez doloženého následku pro sledované země; běžný typ zprávy, mimo rozsah projektu."
-    }
-  },
-  {
-    "id": "k-4194850a9e6b8389",
-    "zachyceno": "2026-10-17T21:02:38.563Z",
-    "publikovano": "2026-10-17T16:34:00.000Z",
-    "zdroj": {
-      "nazev": "ČTK — České noviny",
-      "url": "https://www.ceskenoviny.cz/zpravy/rumunske-stroje-sestrelily-dva-ruske-drony-ve-vzdusnem-prostoru-zeme/2889337?utm_source=rss&utm_medium=feed",
-      "typ": "wire",
-      "primarni": false
-    },
-    "titulek": "Rumunské stroje sestřelily dva ruské drony ve vzdušném prostoru země",
-    "titulekPuvodni": "Rumunské stroje sestřelily dva ruské drony ve vzdušném prostoru země",
-    "shrnuti": "Bukurešť - Dva stroje F-16 rumunského letectva dnes v Černém moři nad výsostnými vodami země sestřelily krátce po sobě dva bezpilotní letouny, uvedlo tamní ministerstvo obrany na webu. Později ministerstvo...",
-    "kodZeme": "RO",
-    "zeme": "Rumunsko",
-    "kategorie": [
-      "drony",
-      "rusko"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "zeSite": null,
-    "shody": [
-      "sestrel",
-      "dron",
-      "rusk"
-    ],
-    "naliehave": null,
-    "stav": "vyrizen",
-    "vyrez": {
-      "text": "Rumunské stroje sestřelily dva ruské drony ve vzdušném prostoru země | ČeskéNoviny.cz \r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nPřejít k obsahu \r\n| \r\nPřejít k hlavnímu menu \r\n| \r\nPřejít k vyhledávání \r\n\r\n\r\n\r\n\r\n\r\n\r\nČeské noviny \r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nMenu \r\n\r\n\r\n\r\n\r\n\r\n\r\nÚvod \r\n\r\n\r\nČR\n\r\nSvět\n\r\nEkonomika\n\r\nKultura\n\r\nSport\n\r\nMagazín\n\r\nSpeciál\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nVolby 2026:\n\r\n\r\nZpravodajství\n\r\nVýsledky\n\r\nŽivě\n\r\n\r\nDalší:\n\r\n\r\nBlízký Východ\n\r\n\r\n\r\nInvaze na Ukrajinu\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nRumunské stroje sestřelily dva ruské drony ve vzdušném prostoru země\n\r\n\r\n\r\n\r\n\r\n\r\nKomerční prezentace Aktual.: 17.10.2026 18:34 \r\nVydáno: 17.10.2026, 18:34 \r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nIlustrační foto - Dvě rumunské stíhačky F-16, 7. srpna 2026. \r\nČTK/AP/Vadim Ghirda \r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nBukurešť - Dva stroje F-16 rumunského letectva dnes v Černém moři nad výsostnými vodami země sestřelily krátce po sobě dva bezpilotní letouny, uvedlo tamní ministerstvo obrany na webu. Později ministerstvo podle agentury AFP oznámilo, že se jednalo o útočné drony typu Geraň,…",
-      "stazeno": "2026-10-17T21:02:44.157Z",
-      "stav": 200
-    },
-    "vyrizeni": {
-      "kdy": "2026-10-17T23:54:36.327Z",
-      "duvod": "duplicita",
-      "patriK": null,
-      "poznamka": "Táž událost jako už zveřejněný případ — rumunské F-16 sestřelily dva drony Geran u Ostrova hadů (ro-131d375000)."
-    }
-  },
-  {
-    "id": "k-05b8b8a1709995a7",
-    "zachyceno": "2026-10-17T16:58:28.396Z",
-    "publikovano": "2026-10-17T16:34:00.000Z",
-    "zdroj": {
-      "nazev": "ČTK — České noviny",
-      "url": "https://www.ceskenoviny.cz/zpravy/rumunske-stroje-f16-sestrelily-dva-drony-ve-vzdusnem-prostoru-zeme/2889337?utm_source=rss&utm_medium=feed",
-      "typ": "wire",
-      "primarni": false
-    },
-    "titulek": "Rumunské stroje F-16 sestřelily dva drony ve vzdušném prostoru země",
-    "titulekPuvodni": "Rumunské stroje F-16 sestřelily dva drony ve vzdušném prostoru země",
-    "shrnuti": "Bukurešť - Dva letouny F-16 rumunského letectva dnes nad výsostnými vodami země sestřelily krátce po sobě dva bezpilotní letouny, uvedlo tamní ministerstvo obrany na webu....",
-    "kodZeme": "RO",
-    "zeme": "Rumunsko",
-    "kategorie": [
-      "drony"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "zeSite": null,
-    "shody": [
-      "sestrel",
-      "dron"
-    ],
-    "naliehave": null,
-    "stav": "vyrizen",
-    "vyrez": {
-      "text": "Rumunské stroje F-16 sestřelily dva drony ve vzdušném prostoru země | ČeskéNoviny.cz \r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nPřejít k obsahu \r\n| \r\nPřejít k hlavnímu menu \r\n| \r\nPřejít k vyhledávání \r\n\r\n\r\n\r\n\r\n\r\n\r\nČeské noviny \r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nMenu \r\n\r\n\r\n\r\n\r\n\r\n\r\nÚvod \r\n\r\n\r\nČR\n\r\nSvět\n\r\nEkonomika\n\r\nKultura\n\r\nSport\n\r\nMagazín\n\r\nSpeciál\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nVolby 2026:\n\r\n\r\nZpravodajství\n\r\nVýsledky\n\r\nŽivě\n\r\n\r\nDalší:\n\r\n\r\nBlízký Východ\n\r\n\r\n\r\nInvaze na Ukrajinu\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nRumunské stroje F-16 sestřelily dva drony ve vzdušném prostoru země\n\r\n\r\n\r\n\r\n\r\n\r\nKomerční prezentace Aktual.: 17.10.2026 18:34 \r\nVydáno: 17.10.2026, 18:34 \r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nIlustrační foto - Dvě rumunské stíhačky F-16, 7. srpna 2026. \r\nČTK/AP/Vadim Ghirda \r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nBukurešť - Dva letouny F-16 rumunského letectva dnes nad výsostnými vodami země sestřelily krátce po sobě dva bezpilotní letouny, uvedlo tamní ministerstvo obrany na webu.\n\r\n\r\n\r\n\r\n\r\nReklama \r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nV prohlášení úřadu se píše, že stroje vzlétly v…",
-      "stazeno": "2026-10-17T16:58:30.756Z",
-      "stav": 200
-    },
-    "vyrizeni": {
-      "kdy": "2026-10-17T19:09:58.438Z",
-      "duvod": "duplicita",
-      "patriK": null,
-      "poznamka": "Táž událost jako nový návrh výše — rumunské F-16 sestřelily dva drony typu Geran u Ostrova hadů (i-2026-10-17-131d375000)."
     }
   }
 ]

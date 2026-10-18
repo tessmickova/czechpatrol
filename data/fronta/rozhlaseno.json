@@ -283,6 +283,11 @@
       "kdy": "2026-10-18T05:30:24.902Z",
       "zaznamu": 0,
       "neodeslan": "nic od 7/10"
+    },
+    "2026-10-18-vecer": {
+      "kdy": "2026-10-18T17:30:28.660Z",
+      "zaznamu": 1,
+      "messageId": 63
     }
   },
   "navrhy": {
@@ -980,6 +985,12 @@
       "historie": 1,
       "cesta": "hned",
       "messageId": 61
+    },
+    "i-2026-10-17-131d375000": {
+      "cesta": "prehled",
+      "kdy": "2026-10-18T17:30:28.660Z",
+      "historie": 2,
+      "prehled": "2026-10-18-vecer"
     }
   },
   "snimky": {
