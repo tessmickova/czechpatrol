@@ -2120,5 +2120,82 @@
       "sledujeme": "Jak na rozhodnutí zareagují postižené firmy a jejich domovské vlády.",
       "overeno": "2026-10-16"
     }
+  },
+  {
+    "kam": "zaznam",
+    "pripravil": "patrol",
+    "pripraveno": "2026-10-18T11:31:54.501Z",
+    "id": "i-2026-10-18-3ccc2b0d1e",
+    "slug": "lt-3ccc2b0d1e",
+    "titulek": "Litva: nad okresem Biržai u lotyšské hranice NATO stíhačky sledovaly neznámý objekt, podle prezidenta Nausėdy dron explodoval; podobné poplachy téhož rána v Lotyšsku a Polsku",
+    "kratkyTitulek": "Litva: nad okresem Biržai u lotyšské hranice NATO stíhačky sledovaly neznámý objekt, podle prezidenta Nausėdy dron explodoval; podobné poplachy téhož rána v Lotyšsku a Polsku",
+    "zeme": "Litva",
+    "kodZeme": "LT",
+    "kategorie": [
+      "drony",
+      "nato",
+      "hranice"
+    ],
+    "datumUdalosti": "2026-10-18T00:00:00Z",
+    "datumZjisteni": "2026-10-18T00:00:00Z",
+    "aktualizovano": "2026-10-18T11:31:54.501Z",
+    "zavaznost": "Y2",
+    "jistota": "stredni",
+    "stav": "bez-vysetrovani",
+    "atribuce": "neznama",
+    "puvodce": "neznamy",
+    "druh": "pripad",
+    "fakta": [
+      "V neděli 18. 10. 2026 kolem 7:00 ráno byl v okrese Biržai v severní Litvě u hranice s Lotyšskem vyhlášen červený letecký poplach pro dvě oblasti poté, co NATO stíhačky zachytily neznámý létající objekt podezřelý z toho, že jde o dron (podle Euronews a Rzeczpospolité).",
+      "Litevský ministr obrany Robertas Kaunas uvedl, že piloti stíhačů objekt pro nepříznivé počasí nemohli vizuálně identifikovat; podle Euronews objekt pravděpodobně sám detonoval, aniž ho stíhačky sestřelily.",
+      "Prezident Gitanas Nausėda podle Rzeczpospolité uvedl, že objekt „vybuchl“ nad severní Litvou a vytvořil ohrožení civilistů; litevské vojenské jednotky byly vyslány na místo, kde přestal vysílat rádiový signál, aby provedly pozemní ohledání.",
+      "Litevské ministerstvo obrany podle Rzeczpospolité navrhlo společné vyšetřování s Polskem s tím, že dron mohl do litevského vzdušného prostoru vletět z polského území.",
+      "Téhož rána vyhlásilo Polsko (23 obcí v Podkarpatském kraji) a Lotyšsko (tři oblasti, žluté poplachy) obdobné krátké poplachy a nasadily vlastní stíhačky; polský RCB spojil svůj poplach s ruským útokem přibližně 180 drony typu Šahíd na Ukrajinu, letiště v Lublinu a Rzeszówě na čas přerušila provoz."
+    ],
+    "neznameho": [
+      "Původ a typ objektu nad Litvou — žádné vyšetřování ho nepotvrdilo, jde jen o prezidentovo a ministrovo vyjádření.",
+      "Zda šlo o jediný objekt, nebo o navazující, ale oddělené jevy ve třech zemích téhož rána."
+    ],
+    "vyznam": "",
+    "eskalacniSpousteče": [],
+    "deeskalacniSignaly": [],
+    "zdroje": [
+      {
+        "nazev": "Euronews — Possible drone explosion in northern Lithuania near Latvian border",
+        "url": "https://www.euronews.com/2026/10/18/possible-drone-explosion-in-northern-lithuania-near-latvian-border",
+        "typ": "media",
+        "publikovano": "2026-10-18T00:00:00Z",
+        "primarni": false,
+        "jazyk": "en"
+      },
+      {
+        "nazev": "Rzeczpospolita — Alert RCB na Podkarpaciu. Podobne alerty na Litwie i w Łotwie. Poderwano myśliwce NATO",
+        "url": "https://www.rp.pl/konflikty-zbrojne/art45352221-alert-rcb-na-podkarpaciu-podobne-alerty-na-litwie-i-w-lotwie-poderwano-mysliwce-nato",
+        "typ": "media",
+        "publikovano": "2026-10-18T00:00:00Z",
+        "primarni": false,
+        "jazyk": "pl"
+      }
+    ],
+    "souvisejici": [],
+    "historie": [
+      {
+        "kdy": "2026-10-18T00:00:00Z",
+        "text": "Zachyceno automatickým sběrem, druhý zdroj doložen před zařazením do fronty.",
+        "novySignal": true
+      }
+    ],
+    "novy": true,
+    "zapocitanoTyden": "2026-10-18",
+    "aiZpracovano": true,
+    "lidskyOvereno": false,
+    "archivniZaznam": false,
+    "dopadNaCr": {
+      "stav": "zadny",
+      "procRelevantni": "Souběžné letecké poplachy a nasazení stíhačů NATO ve třech členských státech NATO a EU téhož rána (Litva, Lotyšsko, Polsko), s prezidentským vyjádřením o explozi dronu nad civilním územím Litvy — ukazuje pokračující tlak na vzdušný prostor východního křídla NATO.",
+      "dopad": "Pro lidi v Česku ze zprávy dnes neplyne žádné omezení.",
+      "sledujeme": "Zda litevsko-polské společné vyšetřování potvrdí původ a trasu objektu.",
+      "overeno": "2026-10-18"
+    }
   }
 ]
