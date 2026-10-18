@@ -1,5 +1,5 @@
 {
-  "aktualizovano": "2026-10-18T09:02:43.031Z",
+  "aktualizovano": "2026-10-18T15:02:35.643Z",
   "stavy": [
     {
       "klic": "cloudflare",
@@ -9,16 +9,16 @@
         {
           "nazev": "Incorrect geo location for some Cloudflare WARP users",
           "odkaz": "https://www.cloudflarestatus.com/incidents/9g65dxfbcjln",
-          "aktualizovano": "2026-09-01T08:29:56.000Z"
+          "aktualizovano": "2026-09-01T08:29:56.953Z"
         }
       ],
       "postizene": [
         "Cloudflare Sites and Services",
+        "Amman, Jordan - (AMM)",
         "Africa",
-        "Arica, Chile - (ARI)",
-        "Annaba, Algeria - (AAE)"
+        "Arica, Chile - (ARI)"
       ],
-      "zkontrolovano": "2026-10-18T09:02:43.031Z",
+      "zkontrolovano": "2026-10-18T15:02:35.643Z",
       "chyba": null
     },
     {
@@ -27,7 +27,7 @@
       "popis": "All Systems Operational",
       "incidenty": [],
       "postizene": [],
-      "zkontrolovano": "2026-10-18T09:02:43.031Z",
+      "zkontrolovano": "2026-10-18T15:02:35.643Z",
       "chyba": null
     },
     {
@@ -36,7 +36,7 @@
       "popis": "All Systems Operational",
       "incidenty": [],
       "postizene": [],
-      "zkontrolovano": "2026-10-18T09:02:43.031Z",
+      "zkontrolovano": "2026-10-18T15:02:35.643Z",
       "chyba": null
     }
   ]
