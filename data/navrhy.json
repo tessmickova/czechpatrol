@@ -2124,11 +2124,11 @@
   {
     "kam": "zaznam",
     "pripravil": "patrol",
-    "pripraveno": "2026-10-18T11:31:54.501Z",
-    "id": "i-2026-10-18-3ccc2b0d1e",
-    "slug": "lt-3ccc2b0d1e",
-    "titulek": "Litva: nad okresem Biržai u lotyšské hranice NATO stíhačky sledovaly neznámý objekt, podle prezidenta Nausėdy dron explodoval; podobné poplachy téhož rána v Lotyšsku a Polsku",
-    "kratkyTitulek": "Litva: nad okresem Biržai u lotyšské hranice NATO stíhačky sledovaly neznámý objekt, podle prezidenta Nausėdy dron explodoval; podobné poplachy téhož rána v Lotyšsku a Polsku",
+    "pripraveno": "2026-10-18T16:02:16.552Z",
+    "id": "i-2026-10-18-2477f0151d",
+    "slug": "lt-2477f0151d",
+    "titulek": "Litva: trosky dronu, který podle ministra obrany Kaunase vletěl od Polska, poškodily osobní auto mezi Biržai a Pasvalys; prezident Nausėda hovoří o přelévání ruské války na východní křídlo NATO a EU",
+    "kratkyTitulek": "Litva: trosky dronu, který podle ministra obrany Kaunase vletěl od Polska, poškodily osobní auto mezi Biržai a Pasvalys; prezident Nausėda hovoří o přelévání ruské války na východní křídlo NATO a EU",
     "zeme": "Litva",
     "kodZeme": "LT",
     "kategorie": [
@@ -2138,7 +2138,84 @@
     ],
     "datumUdalosti": "2026-10-18T00:00:00Z",
     "datumZjisteni": "2026-10-18T00:00:00Z",
-    "aktualizovano": "2026-10-18T11:31:54.501Z",
+    "aktualizovano": "2026-10-18T16:02:16.552Z",
+    "zavaznost": "Y2",
+    "jistota": "stredni",
+    "stav": "bez-vysetrovani",
+    "atribuce": "neznama",
+    "puvodce": null,
+    "druh": "aktualizace",
+    "fakta": [
+      "Litevský ministr obrany Robertas Kaunas podle LRT uvedl, že objekt z nedělního poplachu u Biržai pravděpodobně vletěl do litevského vzdušného prostoru od Polska; kontaktoval polského protějška ohledně společného vyšetřování.",
+      "Vedoucí Národního krizového řídícího centra Vilmantas Vitkauskas podle LRT řekl, že nejspíš šlo o ukrajinský dron, který se mohl do litevského vzdušného prostoru dostat v souvislosti s ukrajinskými útoky v oblasti Petrohradu.",
+      "Podle premiéra Mindaugase Sinkevičiuse a Ukrajinské pravdy muž cestující z Biržai do Pasvalys uslyšel explozi a trosky poškodily jeho auto — prohnuly dveře; nikdo nebyl zraněn. Oblast předpokládaného dopadu dronu se podle Vitkauskase stále prohledává, nalezeny byly jen trosky a součástky.",
+      "Prezident Nausėda podle LRT označil incident za důkaz, že ruská válka se „přelévá na východní křídlo NATO a EU“; ministr Kaunas kritizoval varovný systém — poplach se podle něj aktivoval se zpožděním a jen v Kaunaském kraji, ač byl objekt zachycen už v jiné části Litvy."
+    ],
+    "neznameho": [
+      "Zda dron nesl výbušninu a zda k explozi došlo ve vzduchu, nebo při dopadu — úřady to podle Ukrajinské pravdy ještě nepotvrdily.",
+      "Přesný typ a vlastník dronu; vyjádření o „ukrajinském dronu“ je jen předběžný odhad National Crisis Management Centre."
+    ],
+    "vyznam": "",
+    "eskalacniSpousteče": [],
+    "deeskalacniSignaly": [],
+    "zdroje": [
+      {
+        "nazev": "LRT English (Litva) — Drone enters Lithuania from Poland, debris hits a car on rural road",
+        "url": "https://www.lrt.lt/en/news-in-english/19/3086051/drone-enters-lithuania-from-poland-debris-hits-a-car-on-rural-road",
+        "typ": "media",
+        "publikovano": "2026-10-18T00:00:00Z",
+        "primarni": false,
+        "jazyk": "en"
+      },
+      {
+        "nazev": "Ukrajinska pravda (anglicky) — Lithuania reports damage caused by unidentified drone that entered its airspace",
+        "url": "https://www.pravda.com.ua/eng/news/2026/10/18/8058602/",
+        "typ": "media",
+        "publikovano": "2026-10-18T00:00:00Z",
+        "primarni": false,
+        "jazyk": "en"
+      }
+    ],
+    "souvisejici": [],
+    "historie": [
+      {
+        "kdy": "2026-10-18T00:00:00Z",
+        "text": "Zachyceno automatickým sběrem, druhý zdroj doložen před zařazením do fronty.",
+        "novySignal": true
+      }
+    ],
+    "novy": true,
+    "zapocitanoTyden": "2026-10-18",
+    "aiZpracovano": true,
+    "lidskyOvereno": false,
+    "archivniZaznam": false,
+    "navazujeNa": "lt-3ccc2b0d1e",
+    "dopadNaCr": {
+      "stav": "zadny",
+      "procRelevantni": "Potvrzené poškození civilního vozidla troskami dronu na území členského státu NATO a EU, prezidentské vyjádření o přelévání ruské války na východní křídlo NATO/EU a doznaná chyba varovného systému — konkrétní doložený dopad na civilisty, ne jen krátký letecký poplach.",
+      "dopad": "Pro lidi v Česku ze zprávy dnes neplyne žádné omezení.",
+      "sledujeme": "Zda společné litevsko-polské vyšetřování potvrdí typ a původ dronu.",
+      "overeno": "2026-10-18"
+    }
+  },
+  {
+    "kam": "zaznam",
+    "pripravil": "patrol",
+    "pripraveno": "2026-10-18T16:02:16.552Z",
+    "id": "i-2026-10-18-a97340baf7",
+    "slug": "lt-a97340baf7",
+    "titulek": "Litva zabránila žhářskému útoku na firmu uchovávající vybavení Starlink, premiér Sinkevičius vinu připisuje Rusku",
+    "kratkyTitulek": "Litva zabránila žhářskému útoku na firmu uchovávající vybavení Starlink, premiér Sinkevičius vinu připisuje Rusku",
+    "zeme": "Litva",
+    "kodZeme": "LT",
+    "kategorie": [
+      "sabotaz",
+      "infrastruktura",
+      "rusko"
+    ],
+    "datumUdalosti": "2026-10-18T00:00:00Z",
+    "datumZjisteni": "2026-10-18T00:00:00Z",
+    "aktualizovano": "2026-10-18T16:02:16.552Z",
     "zavaznost": "Y2",
     "jistota": "stredni",
     "stav": "bez-vysetrovani",
@@ -2146,35 +2223,34 @@
     "puvodce": "neznamy",
     "druh": "pripad",
     "fakta": [
-      "V neděli 18. 10. 2026 kolem 7:00 ráno byl v okrese Biržai v severní Litvě u hranice s Lotyšskem vyhlášen červený letecký poplach pro dvě oblasti poté, co NATO stíhačky zachytily neznámý létající objekt podezřelý z toho, že jde o dron (podle Euronews a Rzeczpospolité).",
-      "Litevský ministr obrany Robertas Kaunas uvedl, že piloti stíhačů objekt pro nepříznivé počasí nemohli vizuálně identifikovat; podle Euronews objekt pravděpodobně sám detonoval, aniž ho stíhačky sestřelily.",
-      "Prezident Gitanas Nausėda podle Rzeczpospolité uvedl, že objekt „vybuchl“ nad severní Litvou a vytvořil ohrožení civilistů; litevské vojenské jednotky byly vyslány na místo, kde přestal vysílat rádiový signál, aby provedly pozemní ohledání.",
-      "Litevské ministerstvo obrany podle Rzeczpospolité navrhlo společné vyšetřování s Polskem s tím, že dron mohl do litevského vzdušného prostoru vletět z polského území.",
-      "Téhož rána vyhlásilo Polsko (23 obcí v Podkarpatském kraji) a Lotyšsko (tři oblasti, žluté poplachy) obdobné krátké poplachy a nasadily vlastní stíhačky; polský RCB spojil svůj poplach s ruským útokem přibližně 180 drony typu Šahíd na Ukrajinu, letiště v Lublinu a Rzeszówě na čas přerušila provoz."
+      "V neděli 18. 10. 2026 kolem druhé hodiny ranní se podle LRT nepodařilo zapálit satelitní antény a kontrolní jednotky v litevské firmě skladující vybavení Starlink; na místě byly nalezeny zápalné kapaliny v nádobách o objemu 3 až 10 litrů.",
+      "Premiér Mindaugas Sinkevičius podle LRT i Kyiv Independent uvedl: „Je pravděpodobné, že už je jasné, kdo si to objednal — je to ruská strana,“ a zařadil incident do ruské hybridní kampaně s odkazem na podobné sabotážní pokusy v Polsku a Bulharsku.",
+      "Podle Kyiv Independent firmu úřady předem varovaly před možnými útoky a bezpečnostní opatření byla zesílena, což pokus zmařilo dřív, než způsobil škodu; ministr obrany potvrdil, že incident byl „zvládnut a zabráněn“, podrobnosti ale kvůli vyšetřování neupřesnil.",
+      "Bylo zahájeno přípravné trestní vyšetřování; Sinkevičius podle Kyiv Independent oznámil, že 19. 10. svolá Komisi národní bezpečnosti, která bude řešit jak tento případ, tak sobotní pád dronu u Biržai."
     ],
     "neznameho": [
-      "Původ a typ objektu nad Litvou — žádné vyšetřování ho nepotvrdilo, jde jen o prezidentovo a ministrovo vyjádření.",
-      "Zda šlo o jediný objekt, nebo o navazující, ale oddělené jevy ve třech zemích téhož rána."
+      "Jméno a přesná adresa postižené firmy — žádný z otevřených zdrojů to neuvedl.",
+      "Zda bylo kvůli incidentu někdo zadržen; žádný zdroj zadržení nepotvrzuje."
     ],
     "vyznam": "",
     "eskalacniSpousteče": [],
     "deeskalacniSignaly": [],
     "zdroje": [
       {
-        "nazev": "Euronews — Possible drone explosion in northern Lithuania near Latvian border",
-        "url": "https://www.euronews.com/2026/10/18/possible-drone-explosion-in-northern-lithuania-near-latvian-border",
+        "nazev": "LRT English (Litva) — Attempted arson at Lithuanian firm storing Starlink equipment, PM blames Russia",
+        "url": "https://www.lrt.lt/en/news-in-english/19/3086054/attempted-arson-at-lithuanian-firm-storing-starlink-equipment-pm-blames-russia",
         "typ": "media",
         "publikovano": "2026-10-18T00:00:00Z",
         "primarni": false,
         "jazyk": "en"
       },
       {
-        "nazev": "Rzeczpospolita — Alert RCB na Podkarpaciu. Podobne alerty na Litwie i w Łotwie. Poderwano myśliwce NATO",
-        "url": "https://www.rp.pl/konflikty-zbrojne/art45352221-alert-rcb-na-podkarpaciu-podobne-alerty-na-litwie-i-w-lotwie-poderwano-mysliwce-nato",
+        "nazev": "Kyiv Independent — Lithuania foils arson attack on Starlink equipment, suspects Russian involvement",
+        "url": "https://kyivindependent.com/lithuania-foils-arson-attack-on-starlink-equipment-suspects-russian-involvement/",
         "typ": "media",
         "publikovano": "2026-10-18T00:00:00Z",
         "primarni": false,
-        "jazyk": "pl"
+        "jazyk": "en"
       }
     ],
     "souvisejici": [],
@@ -2192,9 +2268,9 @@
     "archivniZaznam": false,
     "dopadNaCr": {
       "stav": "zadny",
-      "procRelevantni": "Souběžné letecké poplachy a nasazení stíhačů NATO ve třech členských státech NATO a EU téhož rána (Litva, Lotyšsko, Polsko), s prezidentským vyjádřením o explozi dronu nad civilním územím Litvy — ukazuje pokračující tlak na vzdušný prostor východního křídla NATO.",
+      "procRelevantni": "Premiér členského státu NATO a EU přímo označil Rusko za objednavatele zmařeného žhářského útoku na infrastrukturu Starlink, kterou Ukrajina využívá k vojenské komunikaci — jde o další případ v řadě sabotáží proti satelitní infrastruktuře v Polsku a Bulharsku.",
       "dopad": "Pro lidi v Česku ze zprávy dnes neplyne žádné omezení.",
-      "sledujeme": "Zda litevsko-polské společné vyšetřování potvrdí původ a trasu objektu.",
+      "sledujeme": "Zda vyšetřování zadrží konkrétní podezřelé a zda Litva zveřejní jméno postižené firmy.",
       "overeno": "2026-10-18"
     }
   }
