@@ -1,5 +1,5 @@
 {
-  "aktualizovano": "2026-10-19T15:03:19.432Z",
+  "aktualizovano": "2026-10-19T17:10:27.621Z",
   "stavy": [
     {
       "klic": "cloudflare",
@@ -18,13 +18,13 @@
         "Africa",
         "Arica, Chile - (ARI)"
       ],
-      "zkontrolovano": "2026-10-19T15:03:19.432Z",
+      "zkontrolovano": "2026-10-19T17:10:27.621Z",
       "chyba": null
     },
     {
       "klic": "zoom",
-      "stav": "provoz",
-      "popis": "All Systems Operational",
+      "stav": "omezeni",
+      "popis": "Service Under Maintenance",
       "incidenty": [
         {
           "nazev": "Service Degradation Affecting Zoom Website in UK region",
@@ -32,8 +32,11 @@
           "aktualizovano": "2026-10-19T07:00:17.899-07:00"
         }
       ],
-      "postizene": [],
-      "zkontrolovano": "2026-10-19T15:03:19.432Z",
+      "postizene": [
+        "Zoom Phone",
+        "Zoom Phone - EMEA"
+      ],
+      "zkontrolovano": "2026-10-19T17:10:27.621Z",
       "chyba": null
     },
     {
@@ -42,7 +45,7 @@
       "popis": "All Systems Operational",
       "incidenty": [],
       "postizene": [],
-      "zkontrolovano": "2026-10-19T15:03:19.432Z",
+      "zkontrolovano": "2026-10-19T17:10:27.621Z",
       "chyba": null
     }
   ]
