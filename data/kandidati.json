@@ -1,5 +1,39 @@
 [
   {
+    "id": "k-282e05629475d307",
+    "zachyceno": "2026-10-19T21:44:19.226Z",
+    "publikovano": "2026-10-19T20:10:00.000Z",
+    "zdroj": {
+      "nazev": "Ukrinform (anglicky)",
+      "url": "https://www.ukrinform.net/rubric-ato/4176072-russian-attack-on-kyiv-region-enterprise-kills-one-injures-six.html",
+      "typ": "wire",
+      "primarni": false
+    },
+    "titulek": "Russian attack on Kyiv region enterprise kills one, injures six",
+    "titulekPuvodni": "Russian attack on Kyiv region enterprise kills one, injures six",
+    "shrnuti": "A man was killed and six people were injured in a Russian attack on an enterprise in the Obukhiv district of the Kyiv region.",
+    "kodZeme": "UA",
+    "zeme": "Ukrajina",
+    "kategorie": [
+      "hybridni",
+      "rusko"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "attack on",
+      "russia"
+    ],
+    "naliehave": null,
+    "stav": "ceka",
+    "vyrez": {
+      "text": "Russian attack on Kyiv region enterprise kills one, injures six\n\r\nSubscription\nNewsletters\nPhotobank\nUkrinform - Ukrainian National News Agency\nFounded in 1918\nTuesday, 20 October 2026, 00:44\nWar\nEconomy\nSports\nMore ☰\nContacts\nEng\nУкр\nEng\nEsp\nDeu\nعربي\nFra\n日本語\nPol\n&times;\nAll topics\nWar\nRecovery of Ukraine\nPolitics\nEconomy\nFact checks\nDefense\nSociety and Culture\nSports\nCrime\nAccidents and Emergencies\nAgency\nInformation on Agency\nOur Contacts\nSubscribtion Terms\nOur Services\nPrivacy policy and personal data protection\nAdditional\nPublications\nInterviews\nPhoto\nVideo\nLongreads\nReleases\nServices\nSubscription\nNewsletters\nPhotobank\n\r\n\r\n\r\nA man was killed and six people were injured in a Russian attack on an enterprise in the Obukhiv district of the Kyiv region.\nHead of the Kyiv Regional Military Administration Tymur Tkachenko announced this on Telegram , Ukrinform reports.\n\r\n\r\n&ldquo;Unfortunately, a man was killed in an enemy attack on an enterprise in the Obukhiv district. Six more people were injured. All of them have been hospitalized and are receiving all necessary medical assistance,&rdquo; he wrote.\n\r\n\r\nAccording to the regional administration chief, efforts to extinguish the fire…",
+      "stazeno": "2026-10-19T21:44:19.407Z",
+      "stav": 200
+    }
+  },
+  {
     "id": "k-04ff29492db968a6",
     "zachyceno": "2026-10-19T20:03:04.184Z",
     "publikovano": "2026-10-19T19:35:00.000Z",
@@ -10319,38 +10353,6 @@
     "vyrez": {
       "text": "Satellite images show damage to Russian plant producing Kh-59 missile components | Ukrainska Pravda\nSatellite images have revealed the consequences of the 25 September attack on the Zavod Iskra research and production company in the Russian city of Ulyanovsk.\nSource: OSINT analyst Dnipro Osint ⟨Harbuz⟩\nQuote: \"The images show that most of the strikes hit the building's façade rather than the roof. As a result, around 80% of the strikes were not captured by the satellite: only two of the 11 confirmed strikes caused visible damage in the imagery.\"\nAdvertisement:\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nDetails: Dnipro OSINT believes the strikes on the façade could cause significantly more serious internal damage than hits on the roof, particularly if production facilities and equipment are located behind the walls.\nBackground: It was previously reported that Ukraine's defence forces had struck the Zavod Iskra in Ulyanovsk . Ukraine's General Staff said the facility is part of the Almaz-Antey concern and is involved in the production of Kh-59M2/M2A missiles and components for the 72V6 combat vehicle of the Pantsir-S1 air defence gun and missile system.\nYour support on Patreon helps us keep the news…",
       "stazeno": "2026-10-07T10:03:42.539Z",
-      "stav": 200
-    }
-  },
-  {
-    "id": "k-1ccd310159629e41",
-    "zachyceno": "2026-10-07T10:03:40.013Z",
-    "publikovano": "2026-10-07T08:41:32.000Z",
-    "zdroj": {
-      "nazev": "Le Monde (Francie)",
-      "url": "https://www.lemonde.fr/international/live/2026/10/07/en-direct-guerre-en-ukraine-au-moins-12-morts-et-plus-de-40-blesses-dans-les-bombardements-russes-de-la-nuit_6787996_3210.html",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "EN DIRECT, guerre en Ukraine : au moins 15 morts et plus de 40 blessés dans les bombardements russes de la nuit",
-    "titulekPuvodni": "EN DIRECT, guerre en Ukraine : au moins 15 morts et plus de 40 blessés dans les bombardements russes de la nuit",
-    "shrnuti": "Volodymyr Zelensky a estimé qu’il s’agissait de « l’une des attaques les plus perfides » et a accusé l’armée russe d’avoir ainsi « offert » la destruction d’habitations à Vladimir Poutine pour son 74ᵉ anniversaire, mercredi.",
-    "kodZeme": "UA",
-    "zeme": "Ukrajina",
-    "kategorie": [
-      "sabotaz"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "zeSite": null,
-    "shody": [
-      "bomb"
-    ],
-    "naliehave": null,
-    "stav": "ceka",
-    "vyrez": {
-      "text": "Client Challenge\nA required part of this site couldn’t load. This may be due to a browser\nextension, network issues, or browser settings. Please check your\nconnection, disable any ad blockers, or try using a different browser.",
-      "stazeno": "2026-10-07T10:03:42.586Z",
       "stav": 200
     }
   }
