@@ -1,5 +1,5 @@
 {
-  "kdy": "2026-10-19T10:11:15.489Z",
+  "kdy": "2026-10-19T12:00:49.317Z",
   "zdroje": [
     {
       "klic": "e-sbirka",
@@ -139,11 +139,10 @@
     },
     {
       "klic": "policie",
-      "ok": false,
-      "stav": null,
+      "ok": true,
+      "stav": 200,
       "pocetPolozek": 0,
-      "chyba": "fetch failed",
-      "vysledek": "chyba"
+      "vysledek": "ok"
     },
     {
       "klic": "md",
@@ -242,7 +241,6 @@
       "ok": true,
       "stav": null,
       "pocetPolozek": 1,
-      "chyba": "policie-rss: robots.txt nedostupný (RFC 9309: nestahovat)",
       "vysledek": "ok"
     },
     {
