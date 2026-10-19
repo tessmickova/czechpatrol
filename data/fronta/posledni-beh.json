@@ -1,5 +1,5 @@
 {
-  "kdy": "2026-10-19T09:00:58.406Z",
+  "kdy": "2026-10-19T10:11:15.489Z",
   "zdroje": [
     {
       "klic": "e-sbirka",
@@ -17,11 +17,10 @@
     },
     {
       "klic": "psp",
-      "ok": false,
-      "stav": 408,
+      "ok": true,
+      "stav": 200,
       "pocetPolozek": 0,
-      "chyba": "HTTP 408",
-      "vysledek": "chyba"
+      "vysledek": "ok"
     },
     {
       "klic": "senat",
@@ -140,10 +139,11 @@
     },
     {
       "klic": "policie",
-      "ok": true,
-      "stav": 200,
+      "ok": false,
+      "stav": null,
       "pocetPolozek": 0,
-      "vysledek": "ok"
+      "chyba": "fetch failed",
+      "vysledek": "chyba"
     },
     {
       "klic": "md",
@@ -241,7 +241,8 @@
       "klic": "kyber",
       "ok": true,
       "stav": null,
-      "pocetPolozek": 0,
+      "pocetPolozek": 1,
+      "chyba": "policie-rss: robots.txt nedostupný (RFC 9309: nestahovat)",
       "vysledek": "ok"
     },
     {
