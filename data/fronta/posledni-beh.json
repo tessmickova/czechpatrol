@@ -1,5 +1,5 @@
 {
-  "kdy": "2026-10-19T17:07:42.641Z",
+  "kdy": "2026-10-19T21:42:29.089Z",
   "zdroje": [
     {
       "klic": "e-sbirka",
@@ -117,11 +117,10 @@
     },
     {
       "klic": "nukib",
-      "ok": false,
-      "stav": null,
+      "ok": true,
+      "stav": 200,
       "pocetPolozek": 0,
-      "chyba": "fetch failed",
-      "vysledek": "chyba"
+      "vysledek": "ok"
     },
     {
       "klic": "hzs",
@@ -204,9 +203,9 @@
     {
       "klic": "bmi-de",
       "ok": false,
-      "stav": 400,
+      "stav": null,
       "pocetPolozek": 0,
-      "chyba": "HTTP 400",
+      "chyba": "fetch failed",
       "vysledek": "chyba"
     },
     {
