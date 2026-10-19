@@ -1,5 +1,5 @@
 {
-  "kdy": "2026-10-19T17:07:42.641Z",
+  "kdy": "2026-10-19T20:00:46.987Z",
   "zdroje": [
     {
       "klic": "e-sbirka",
@@ -117,11 +117,10 @@
     },
     {
       "klic": "nukib",
-      "ok": false,
-      "stav": null,
+      "ok": true,
+      "stav": 200,
       "pocetPolozek": 0,
-      "chyba": "fetch failed",
-      "vysledek": "chyba"
+      "vysledek": "ok"
     },
     {
       "klic": "hzs",
