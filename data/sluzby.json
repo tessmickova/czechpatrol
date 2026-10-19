@@ -1,5 +1,5 @@
 {
-  "aktualizovano": "2026-10-19T12:03:43.652Z",
+  "aktualizovano": "2026-10-19T17:10:27.621Z",
   "stavy": [
     {
       "klic": "cloudflare",
@@ -9,7 +9,7 @@
         {
           "nazev": "Incorrect geo location for some Cloudflare WARP users",
           "odkaz": "https://www.cloudflarestatus.com/incidents/9g65dxfbcjln",
-          "aktualizovano": "2026-09-01T08:29:56.953Z"
+          "aktualizovano": "2026-09-01T08:29:56.000Z"
         }
       ],
       "postizene": [
@@ -18,16 +18,25 @@
         "Africa",
         "Arica, Chile - (ARI)"
       ],
-      "zkontrolovano": "2026-10-19T12:03:43.652Z",
+      "zkontrolovano": "2026-10-19T17:10:27.621Z",
       "chyba": null
     },
     {
       "klic": "zoom",
-      "stav": "provoz",
-      "popis": "All Systems Operational",
-      "incidenty": [],
-      "postizene": [],
-      "zkontrolovano": "2026-10-19T12:03:43.652Z",
+      "stav": "omezeni",
+      "popis": "Service Under Maintenance",
+      "incidenty": [
+        {
+          "nazev": "Service Degradation Affecting Zoom Website in UK region",
+          "odkaz": "https://stspg.io/n49f0v00l95f",
+          "aktualizovano": "2026-10-19T07:00:17.899-07:00"
+        }
+      ],
+      "postizene": [
+        "Zoom Phone",
+        "Zoom Phone - EMEA"
+      ],
+      "zkontrolovano": "2026-10-19T17:10:27.621Z",
       "chyba": null
     },
     {
@@ -36,7 +45,7 @@
       "popis": "All Systems Operational",
       "incidenty": [],
       "postizene": [],
-      "zkontrolovano": "2026-10-19T12:03:43.652Z",
+      "zkontrolovano": "2026-10-19T17:10:27.621Z",
       "chyba": null
     }
   ]
