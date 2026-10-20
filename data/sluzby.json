@@ -1,5 +1,5 @@
 {
-  "aktualizovano": "2026-10-19T21:44:19.796Z",
+  "aktualizovano": "2026-10-20T00:03:37.494Z",
   "stavy": [
     {
       "klic": "cloudflare",
@@ -9,7 +9,7 @@
         {
           "nazev": "Cloudflare Secure Web Gateway and DLP enforcement issues for Google Gemini",
           "odkaz": "https://www.cloudflarestatus.com/incidents/3z8y23zn7tr2",
-          "aktualizovano": "2026-10-19T20:30:00.915Z"
+          "aktualizovano": "2026-10-19T23:46:48.411Z"
         },
         {
           "nazev": "Incorrect geo location for some Cloudflare WARP users",
@@ -23,25 +23,26 @@
         "Africa",
         "Arica, Chile - (ARI)"
       ],
-      "zkontrolovano": "2026-10-19T21:44:19.796Z",
+      "zkontrolovano": "2026-10-20T00:03:37.494Z",
       "chyba": null
     },
     {
       "klic": "zoom",
       "stav": "omezeni",
-      "popis": "Service Under Maintenance",
+      "popis": "Partially Degraded Service",
       "incidenty": [
         {
-          "nazev": "Service Degradation Affecting Zoom Website in UK region",
-          "odkaz": "https://stspg.io/n49f0v00l95f",
-          "aktualizovano": "2026-10-19T07:00:17.899-07:00"
+          "nazev": "Service Degradation Affecting Meeting Summaries Via Email.",
+          "odkaz": "https://stspg.io/b071sw22zjsd",
+          "aktualizovano": "2026-10-19T16:30:35.970-07:00"
         }
       ],
       "postizene": [
         "Zoom Phone",
+        "Zoom Canvas",
         "Zoom Phone - EMEA"
       ],
-      "zkontrolovano": "2026-10-19T21:44:19.796Z",
+      "zkontrolovano": "2026-10-20T00:03:37.494Z",
       "chyba": null
     },
     {
@@ -50,7 +51,7 @@
       "popis": "All Systems Operational",
       "incidenty": [],
       "postizene": [],
-      "zkontrolovano": "2026-10-19T21:44:19.796Z",
+      "zkontrolovano": "2026-10-20T00:03:37.494Z",
       "chyba": null
     }
   ]
