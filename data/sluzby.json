@@ -1,5 +1,5 @@
 {
-  "aktualizovano": "2026-10-20T08:03:40.107Z",
+  "aktualizovano": "2026-10-20T11:20:25.470Z",
   "stavy": [
     {
       "klic": "cloudflare",
@@ -14,16 +14,16 @@
         {
           "nazev": "Incorrect geo location for some Cloudflare WARP users",
           "odkaz": "https://www.cloudflarestatus.com/incidents/9g65dxfbcjln",
-          "aktualizovano": "2026-09-01T08:29:56.000Z"
+          "aktualizovano": "2026-09-01T08:29:56.953Z"
         }
       ],
       "postizene": [
         "Cloudflare Sites and Services",
         "Africa",
         "Arica, Chile - (ARI)",
-        "Ashburn, VA, United States - (IAD)"
+        "Annaba, Algeria - (AAE)"
       ],
-      "zkontrolovano": "2026-10-20T08:03:40.107Z",
+      "zkontrolovano": "2026-10-20T11:20:25.470Z",
       "chyba": null
     },
     {
@@ -35,7 +35,7 @@
         "Zoom Phone",
         "Zoom Phone - EMEA"
       ],
-      "zkontrolovano": "2026-10-20T08:03:40.107Z",
+      "zkontrolovano": "2026-10-20T11:20:25.470Z",
       "chyba": null
     },
     {
@@ -44,7 +44,7 @@
       "popis": "All Systems Operational",
       "incidenty": [],
       "postizene": [],
-      "zkontrolovano": "2026-10-20T08:03:40.107Z",
+      "zkontrolovano": "2026-10-20T11:20:25.470Z",
       "chyba": null
     }
   ]
