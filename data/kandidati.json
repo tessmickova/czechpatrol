@@ -1,5 +1,149 @@
 [
   {
+    "id": "k-e03c683fbec0d344",
+    "zachyceno": "2026-10-20T05:51:03.199Z",
+    "publikovano": "2026-10-20T05:17:00.000Z",
+    "zdroj": {
+      "nazev": "Ukrainska Pravda (anglicky)",
+      "url": "https://www.pravda.com.ua/eng/news/2026/10/20/8058847/",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Ukraine's air defence downs 115 out of 165 Russian drones, with 20 still airborne",
+    "titulekPuvodni": "Ukraine's air defence downs 115 out of 165 Russian drones, with 20 still airborne",
+    "shrnuti": "Russia launched 165 drones, including 105 jet-powered UAVs. Ukraine's Air Force reported hits at 30 locations and falling drone debris at another 13.",
+    "kodZeme": "UA",
+    "zeme": "Ukrajina",
+    "kategorie": [
+      "drony",
+      "rusko"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "debris+dron",
+      "dron",
+      "drone",
+      "uav",
+      "russia"
+    ],
+    "naliehave": null,
+    "stav": "ceka",
+    "vyrez": {
+      "text": "Ukraine destroys or jams 115 out of 165 Russian drones overnight | Ukrainska Pravda\nA total of 115 drones were downed overnight. Infographic: Ukraine's Air Force\nRussia attacked Ukraine with 165 drones (105 jet-powered) on the night of 19-20 October. Ukraine's air defence has destroyed or jammed 115 UAVs, while another 20 remain airborne.\nSource: Ukraine's Air Force\nDetails: The attack began at 18:00 on 19 October. Russian forces used Shahed and Gerbera attack drones, S-8000 Banderol/Dan-T drone- and air-launched cruise missiles and Parodiya decoy UAVs.\nAdvertisement:\n\r\n\r\n\r\n\r\n\r\nThe drones were launched from the Russian cities of Oryol, Kursk and Primorsko-Akhtarsk as well as from temporarily occupied Donetsk, Chauda and Hvardiiske (Crimea) and from the Sea of Azov.\nQuote: \"As of 08:00, [Ukrainian] air defence forces had destroyed or jammed 115 Shahed (73 jet-powered), Gerbera and other types of drones. Another 20 attack drones remain airborne,\nHits by aerial assets have been recorded at 30 locations and the fall of downed aerial assets (debris) at 13 locations.\"\nBackground: Russian forces struck an apartment building in the Zarichnyi district of Sumy with a drone on the night of…",
+      "stazeno": "2026-10-20T05:51:03.360Z",
+      "stav": 200
+    }
+  },
+  {
+    "id": "k-790509d67253c048",
+    "zachyceno": "2026-10-20T05:51:03.202Z",
+    "publikovano": "2026-10-20T05:07:00.000Z",
+    "zdroj": {
+      "nazev": "Ukrainska Pravda (anglicky)",
+      "url": "https://www.pravda.com.ua/eng/news/2026/10/20/8058846/",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Five injured in overnight Russian attack on Izium – photos",
+    "titulekPuvodni": "Five injured in overnight Russian attack on Izium – photos",
+    "shrnuti": "Russian forces launched a series of drone attacks on Izium overnight, damaging houses and the city council’s education department building and sparking four fires.",
+    "kodZeme": "RU",
+    "zeme": "Rusko",
+    "kategorie": [
+      "hybridni",
+      "drony",
+      "rusko"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "attack on",
+      "dron",
+      "drone",
+      "russia"
+    ],
+    "naliehave": null,
+    "stav": "ceka",
+    "vyrez": {
+      "text": "Five injured in Russian drone strikes on Izium in Kharkiv Oblast | Ukrainska Pravda\nA fire. Photo: State Emergency Service of Ukraine\nRussian forces launched a series of drone strikes on the city of Izium in Kharkiv Oblast in the early hours of 20 October. Five people have been injured and residential buildings and the city education department building have been damaged.\nSource: State Emergency Service of Ukraine ; Izium City Military Administration\nQuote from the State Emergency Service: \"Kharkiv Oblast: five people have been injured in a Russian attack on Izium.\"\nAdvertisement:\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nA fire\n\r\n\r\n\r\nPhoto: State Emergency Service of Ukraine\r\n\r\n\r\n\r\nDetails: The city military administration said the attack had lasted from 00:22 to 04:00. Russian forces used attack drones, including jet-powered UAVs. Hits were recorded in several parts of the city.\nHouses, outbuildings and a car were destroyed or damaged in a residential area. The building housing the education department of Izium City Council was also damaged and a fire broke out there.\n\r\n\r\n\r\nDamage caused by Russia\n\r\n\r\n\r\nPhoto: State Emergency Service of Ukraine\r\n\r\n\r\n\r\nAccording to the State Emergency Service, the strikes…",
+      "stazeno": "2026-10-20T05:51:03.430Z",
+      "stav": 200
+    }
+  },
+  {
+    "id": "k-5e15693f62283295",
+    "zachyceno": "2026-10-20T05:51:01.325Z",
+    "publikovano": "2026-10-20T04:41:00.000Z",
+    "zdroj": {
+      "nazev": "Aktuality.sk",
+      "url": "https://www.aktuality.sk/clanok/IZ1Yxo0/litva-po-utoku-na-starlink-posilni-ochranu-kritickej-infrastruktury/",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Po pokuse o sabotáž Starlinku Litva sprísni ochranu kľúčových objektov",
+    "titulekPuvodni": "Po pokuse o sabotáž Starlinku Litva sprísni ochranu kľúčových objektov",
+    "shrnuti": "Litva posilní ochranu kritickej infraštruktúry po pokuse o podpaľačský útok na zariadenie Starlink. Úrady z incidentu podozrievajú Rusko",
+    "kodZeme": "LT",
+    "zeme": "Litva",
+    "kategorie": [
+      "sabotaz",
+      "hybridni",
+      "rusko"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "sabotaz",
+      "utok na",
+      "rusk"
+    ],
+    "naliehave": null,
+    "stav": "ceka",
+    "vyrez": {
+      "text": "Po pokuse o sabotáž Starlinku Litva sprísni ochranu kľúčových objektov | Aktuality.sk\nAktuality\nŠport\nDiva\nNajmama\nŽivé\nRecepty\nDobrú chuť\nSlovník\n5 °C -\nBratislava\nutorok 20. 10.\n20. 10.\nVendelín\nSprávy dnes 20. okt 2026 o 06:41\n1 min. čítania\nPridať do Google\nPo pokuse o sabotáž Starlinku Litva sprísni ochranu kľúčových objektov\n1 fotka v galérii\nLitva posilňuje protivzdušnú obranu Zdroj: istock\nTASR\nAktuality.sk\nUložiť článok\nLitva posilní ochranu kritickej infraštruktúry po pokuse o podpaľačský útok na zariadenie Starlink. Úrady z incidentu podozrievajú Rusko\nLitva posilní fyzickú a technickú ochranu lokalít kritickej infraštruktúry po tom, ako v krajine došlo k pokusu o podpaľačský útok na zariadenie satelitného systému Starlink. Po zasadnutí Rady pre národnú bezpečnosť to v pondelok oznámil litovský premiér Mindaugas Sinkevičius, informuje TASR podľa agentúry DPA.\nSinkevičius objasnil, že bezpečnostné opatrenia sa zvýšia vo viac ako 15 objektoch. Hovoril tiež o poskytnutí dodatočných síl a zdrojov na tento účel.\nPodpaľačský incident vo Vilniuse\nPremiér opatrenie zdôvodnil neúspešným pokusom o podpaľačstvo na pozemku firmy v hlavnom meste Vilnius, kde skladujú zariadenia…",
+      "stazeno": "2026-10-20T05:51:03.505Z",
+      "stav": 200
+    }
+  },
+  {
+    "id": "k-4587b292ac0d220c",
+    "zachyceno": "2026-10-20T05:51:03.206Z",
+    "publikovano": "2026-10-20T04:29:00.000Z",
+    "zdroj": {
+      "nazev": "Ukrainska Pravda (anglicky)",
+      "url": "https://www.pravda.com.ua/eng/news/2026/10/20/8058839/",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Death toll from Russian strike on industrial facility in Kyiv Oblast rises to three",
+    "titulekPuvodni": "Death toll from Russian strike on industrial facility in Kyiv Oblast rises to three",
+    "shrnuti": "The death toll from a Russian attack on a production and storage building in Kyiv Oblast has risen to three. Firefighters have extinguished the fire, but search and rescue operations are continuing.",
+    "kodZeme": "UA",
+    "zeme": "Ukrajina",
+    "kategorie": [
+      "hybridni",
+      "rusko"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "attack on",
+      "russia"
+    ],
+    "naliehave": null,
+    "stav": "ceka",
+    "vyrez": {
+      "text": "Three killed and six injured in Russian strike on industrial facility in Kyiv Oblast | Ukrainska Pravda\nFirefighters working. Photo: State Emergency Service of Ukraine\nThree people have been killed and six injured in a Russian attack on a production and storage building in the Obukhiv district in Kyiv Oblast.\nSource: State Emergency Service of Ukraine\nQuote: \"Kyiv Oblast: three people have been killed and six injured in a Russian attack.\"\nAdvertisement:\n\r\n\r\n\r\n\r\n\r\nDetails: Russian forces struck a production and storage building in one of the\nhromadas\nA hromada is an administrative unit designating a village, several villages, or a town, and their adjacent territories\nin the Obukhiv district overnight.\nThe fire has been extinguished, but the removal of rubble is ongoing. Psychologists from the State Emergency Service were also working at the scene.\nBackground: Tymur Tkachenko, Head of Kyiv Oblast Military Administration, previously said that a Russian attack on an industrial facility in the Obukhiv district on 19 October had killed one man and injured six people .\nSupport Ukrainska Pravda on Patreon to help us keep reporting!\nKyiv Oblast\nAdvertisement:\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nKyiv…",
+      "stazeno": "2026-10-20T05:51:04.955Z",
+      "stav": 200
+    }
+  },
+  {
     "id": "k-4910da22de42de53",
     "zachyceno": "2026-10-20T04:02:41.545Z",
     "publikovano": "2026-10-20T03:08:06.000Z",
@@ -2777,6 +2921,39 @@
     "vyrez": {
       "text": "Donald Trump odmieta pritvrdiť voči Rusku. Volodymyra Zelenského obvinil, že nechce koniec vojny | Aktuality.sk\nAktuality\nŠport\nDiva\nNajmama\nŽivé\nRecepty\nDobrú chuť\nSlovník\n7 °C -\nBratislava\npondelok 19. 10.\n19. 10.\nKristián\nSprávy dnes 19. okt 2026 o 06:18\n2 min. čítania\nPridať do Google\nDonald Trump odmieta pritvrdiť voči Rusku. Volodymyra Zelenského obvinil, že nechce koniec vojny\n1 fotka v galérii\nDonald Trump a Volodymyr Zelenskyj Zdroj: TASR/AP\nTASR\nAktuality.sk\nUložiť článok\nDonald Trump obhajoval zmiernenie sankčného tlaku na Rusko a Zelenského obvinil, že vojnu nechce ukončiť.\nAmerický prezident Donald Trump v nedeľu obhajoval svoje rozhodnutie blokovať zavedenie najnovších protiruských opatrení výmenou za stabilitu na trhu s palivami. Na sociálnej sieti Truth Social uviedol, že nechce urobiť nič, čo by Rusko odohnalo od rokovacieho stola. Ukrajinského prezidenta Volodymyra Zelenského zároveň obvinil, že si neželá ukončenie vojny s Ruskom, ktorá trvá už viac ako štyri roky, informovala agentúra AFP.\nTrump reagoval na kritiku ohľadom odkladu podpisu bližšie nešpecifikovaného sankčného dokumentu. Vyhlásil, že ho môže podpísať „kedykoľvek bude chcieť“. Argumentoval, že Rusko…",
       "stazeno": "2026-10-19T04:28:58.394Z",
+      "stav": 200
+    }
+  },
+  {
+    "id": "k-fd7b900593df5362",
+    "zachyceno": "2026-10-20T05:51:02.583Z",
+    "publikovano": "2026-10-19T04:00:00.000Z",
+    "zdroj": {
+      "nazev": "la Repubblica (Itálie)",
+      "url": "https://europe.repubblica.it/en/news/2026/10/19/news/rome_mafia_war_senese_clan_bombs-425658773/",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "The boss’s silence and the season of bombs: inside the invisible mafia war shaking Rome",
+    "titulekPuvodni": "The boss’s silence and the season of bombs: inside the invisible mafia war shaking Rome",
+    "shrnuti": "As the king of Rome's underworld cuts all contact from behind bars, fourteen explosions leave a bloody trail across the city's outskirts—amid the silence of victims and political embarrassment",
+    "kodZeme": "IT",
+    "zeme": "Itálie",
+    "kategorie": [
+      "sabotaz"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "explosion",
+      "bomb"
+    ],
+    "naliehave": null,
+    "stav": "ceka",
+    "vyrez": {
+      "text": "Inside the Rome Mafia war: why bombs are exploding in the capital | la Repubblica Europe\n\r\n\r\n\r\nMenu\nEurope\nIT\nEN\nITALIANO\nENGLISH\nEditorial Team\nContact Us\nNews\n19 October 2026 at 06:00\n4 min read\nROME – The boss cannot speak right now. And on the streets chaos has erupted. Fourteen bombs in four months, caught in a cycle of score-settling and gunfire. In Rome, every show of power is settled with violence.\nIn the Italian capital, there is a power vacuum that organized crime is exploiting, aided by the silence of the institutions. And so the explosions keep coming, one after another, always in the same part of the city: the southeast quadrant, home to nearly a million people. It is the domain of the Senese clan.\nThe boss known as O’ Pazz\nThe boss is Michele Senese, known as O’ Pazz ( The madman ), because he reportedly spent years trying to avoid prison by feigning madness. His roots trace back to the bloody Camorra wars—the powerful mafia organization originating in Naples— between Nuova Famiglia and Raffaele Cutolo's Nuova Camorra Organizzata, a conflict that left hundreds dead in the 1980s.\nMafia boss Michele Senese, nicknamed “O’ Pazz” (“The Madman”), in prison since…",
+      "stazeno": "2026-10-20T05:51:05.155Z",
       "stav": 200
     }
   },
@@ -10177,173 +10354,6 @@
     "vyrez": {
       "text": "Selenskyj: Ukraine-Team reist für Verhandlungen in die USA - Ukraine - derStandard.at › International \r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nJuly 7, 2026, Ankara, Turkey: Volodymyr Zelenskyy, the President of Ukraine, speaks at the Defence Industry Forum during the 2026 NATO Ankara Summit in Ankara, Turkiye, on July 7th, 2026. Ankara Turkey - ZUMAz156 20260707_zip_z156_032 Copyright: xBeataxZawrzelx\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nDas Wichtigste in Kürze:\n\r\n\r\n\r\n\r\nWillkommen bei DER STANDARD\n\r\n\r\nSie entscheiden darüber, wie Sie unsere Inhalte nutzen wollen. Ihr Gerät erlaubt uns derzeit leider nicht, die entsprechenden Optionen anzuzeigen. \r\n\r\nBitte deaktivieren Sie sämtliche Hard- und Software-Komponenten, die in der Lage sind Teile unserer Website zu blockieren. Z.B. Browser-AddOns wie Adblocker oder auch netzwerktechnische Filter.\n\r\nSie haben ein PUR-Abo? Hier anmelden.",
       "stazeno": "2026-10-08T19:48:21.113Z",
-      "stav": 200
-    }
-  },
-  {
-    "id": "k-972d059c54552d2e",
-    "zachyceno": "2026-10-08T14:03:12.077Z",
-    "publikovano": "2026-10-08T00:00:00.000Z",
-    "zdroj": {
-      "nazev": "BTA (státní agentura Bulharska)",
-      "url": "https://www.bta.bg/en/news/bulgaria/1220597-interior-minister-bomb-threats-originate-outside-bulgaria",
-      "typ": "wire",
-      "primarni": false
-    },
-    "titulek": "Interior Minister: Bomb Threats Originate Outside Bulgaria",
-    "titulekPuvodni": "Interior Minister: Bomb Threats Originate Outside Bulgaria",
-    "shrnuti": "",
-    "kodZeme": "BG",
-    "zeme": "Bulharsko",
-    "kategorie": [
-      "sabotaz"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "zeSite": null,
-    "shody": [
-      "bomb"
-    ],
-    "naliehave": null,
-    "stav": "ceka",
-    "vyrez": {
-      "text": "BTA :: Interior Minister: Bomb Threats Originate Outside Bulgaria\nnews.images\nWorld\nnews.images\nBalkans\nnews.images\nnews.images\nEconomy\nnews.images\nnews.images\nnews.images\nCulture\nnews.images\nSport\nnews.images\nBG World\nExchange rates\nForeign exchange rate of BNB 07.10.2026\n1 EUR = 1.9558 BGN\n1 USD = 0.8947 EUR\n1 CHF = 1.0742 EUR\n1 GBP = 1.1814 EUR\nBulgarian News Agency\nMy BTA\nLogin\nHave no account?\nsite.bta Interior Minister: Bomb Threats Originate Outside Bulgaria\nKristina Ivanova , Konstantin Kostov\nInterior Minister Ivan Demerdzhiev during a hearing before the parliamentary Committee on Internal Security and Public Order, Sofia, October 8, 2026 (BTA Photo/Blagoy Kirilov)\nSofia,\n08.10.2026 16:59\n(BTA)\nDuring a hearing before the parliamentary Committee on Internal Security and Public Order on Thursday, Interior Minister Ivan Demerdzhiev said that reports of explosive devices allegedly planted in institutions and educational establishments were communicated from abroad. The reports were translated into Bulgarian using a computer programme, and their frequency could be linked to specific political events in the country, the Minister added.\nHe described the threats as malicious and…",
-      "stazeno": "2026-10-08T14:03:14.933Z",
-      "stav": 200
-    }
-  },
-  {
-    "id": "k-bb3c67bdc764f71c",
-    "zachyceno": "2026-10-07T12:03:16.184Z",
-    "publikovano": "2026-10-07T10:58:00.000Z",
-    "zdroj": {
-      "nazev": "Ukrinform (anglicky)",
-      "url": "https://www.ukrinform.net/rubric-ato/4171897-media-reports-volgograd-oil-refinery-halts-operations-following-drone-attack.html",
-      "typ": "wire",
-      "primarni": false
-    },
-    "titulek": "Media reports: Volgograd oil refinery halts operations following drone attack",
-    "titulekPuvodni": "Media reports: Volgograd oil refinery halts operations following drone attack",
-    "shrnuti": "The Volgograd Oil Refinery in Russia has completely halted oil refining after equipment was damaged in a drone attack on October 2.",
-    "kodZeme": "RU",
-    "zeme": "Rusko",
-    "kategorie": [
-      "hybridni",
-      "drony",
-      "rusko"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "zeSite": null,
-    "shody": [
-      "attack on",
-      "dron",
-      "drone",
-      "russia"
-    ],
-    "naliehave": null,
-    "stav": "ceka",
-    "vyrez": {
-      "text": "Media reports: Volgograd oil refinery halts operations following drone attack\n\r\nSubscription\nNewsletters\nPhotobank\nUkrinform - Ukrainian National News Agency\nFounded in 1918\nWednesday, 07 October 2026, 15:03\nWar\nEconomy\nSports\nMore ☰\nContacts\nEng\nУкр\nEng\nEsp\nDeu\nعربي\nFra\n日本語\nPol\n&times;\nAll topics\nWar\nRecovery of Ukraine\nPolitics\nEconomy\nFact checks\nDefense\nSociety and Culture\nSports\nCrime\nAccidents and Emergencies\nAgency\nInformation on Agency\nOur Contacts\nSubscribtion Terms\nOur Services\nPrivacy policy and personal data protection\nAdditional\nPublications\nInterviews\nPhoto\nVideo\nLongreads\nReleases\nServices\nSubscription\nNewsletters\nPhotobank\n\r\n\r\n\r\nThe Volgograd Oil Refinery in Russia has completely halted oil refining after equipment was damaged in a drone attack on October 2.\nSky News reported this, citing Reuters, according to Ukrinform.\n\r\n\r\n\r\n\r\n\r\n\r\nThe shutdown of the refinery is expected to exacerbate the fuel shortage in Russia, which was caused by attacks on oil refineries.\n\r\n\r\n\r\n\r\n\r\n\r\nOn October 2, the regional administration, citing Governor Andriy Bocharov, reported a large-scale drone attack on industrial facilities in the region but did not specify which facilities were…",
-      "stazeno": "2026-10-07T12:03:20.207Z",
-      "stav": 200
-    }
-  },
-  {
-    "id": "k-e48d393fca97ca5e",
-    "zachyceno": "2026-10-07T12:03:13.408Z",
-    "publikovano": "2026-10-07T10:55:39.000Z",
-    "zdroj": {
-      "nazev": "France 24 (anglicky)",
-      "url": "https://www.france24.com/en/video/20261007-france-suspends-stun-grenade-use-at-student-protests-ahead-of-pm-speech",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "France suspends stun grenade use at student protests ahead of PM speech",
-    "titulekPuvodni": "France suspends stun grenade use at student protests ahead of PM speech",
-    "shrnuti": "France has suspended the use of stun grenades by police at student-led demonstrations, the interior minister said Wednesday, as allegations of police brutality mounted after days of sometimes violent demonstrations across the country. Tens of thousands of people took to the streets across France on ",
-    "kodZeme": "FR",
-    "zeme": "Francie",
-    "kategorie": [
-      "diplomacie"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "zeSite": null,
-    "shody": [
-      "emergency meeting"
-    ],
-    "naliehave": null,
-    "stav": "ceka",
-    "vyrez": {
-      "text": "France suspends stun grenade use at student protests ahead of PM speech - France 24\nSkip to main content\nTo display this content from YouTube, you must enable advertisement tracking and audience measurement.\nAccept\nManage my choices\nOne of your browser extensions seems to be blocking the video player from loading. To watch this content, you may need to disable it on this site.\nTry again\nCover image: © France 24\n05:35\nFrance suspends stun grenade use at student protests ahead of PM speech\nIssued on: 07/10/2026 - 12:55\nShare\nFrance has suspended the use of stun grenades by police at student-led demonstrations, the interior minister said Wednesday, as allegations of police brutality mounted after days of sometimes violent demonstrations across the country. Tens of thousands of people took to the streets across France on Tuesday demanding better conditions in high schools. That same evening, President Emmanuel Macron held an emergency meeting with Prime Minister Sebastien Lecornu and other key ministers to find a way out of the crisis. FRANCE 24's Antonia Kerrigan reports from a high school in Aubervilliers, France.\nVideo by:\nAntonia KERRIGAN\nRead more\nRead less\nFrench government…",
-      "stazeno": "2026-10-07T12:03:21.356Z",
-      "stav": 200
-    }
-  },
-  {
-    "id": "k-17d381dcccdcb20b",
-    "zachyceno": "2026-10-07T12:03:13.414Z",
-    "publikovano": "2026-10-07T10:54:38.000Z",
-    "zdroj": {
-      "nazev": "France 24 (anglicky)",
-      "url": "https://www.france24.com/en/video/20261007-french-government-scrambles-to-calm-nationwide-student-protests",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "French government scrambles to calm nationwide student protests",
-    "titulekPuvodni": "French government scrambles to calm nationwide student protests",
-    "shrnuti": "The French government is looking to appease protesters after a week of high school student protests that spread across the nation. President Emmanuel Macron held a meeting Monday with his Prime Minister, Interior minister and Education minister in hopes of coming up with a solution to appease the pr",
-    "kodZeme": "FR",
-    "zeme": "Francie",
-    "kategorie": [
-      "drony"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "zeSite": null,
-    "shody": [
-      "scrambl"
-    ],
-    "naliehave": null,
-    "stav": "ceka",
-    "vyrez": {
-      "text": "French government scrambles to calm nationwide student protests - France 24\nSkip to main content\nTo display this content from YouTube, you must enable advertisement tracking and audience measurement.\nAccept\nManage my choices\nOne of your browser extensions seems to be blocking the video player from loading. To watch this content, you may need to disable it on this site.\nTry again\nCover image: © France 24\n01:07\nFrench government scrambles to calm nationwide student protests\nIssued on: 07/10/2026 - 12:54\nShare\nThe French government is looking to appease protesters after a week of high school student protests that spread across the nation. President Emmanuel Macron held a meeting Monday with his Prime Minister, Interior minister and Education minister in hopes of coming up with a solution to appease the protesters. But despite government efforts to renew dialogue, widespread protests are expected as soon as Thursday.\nVideo by:\nCaroline BAUM\nRead more\nRead less\nParamount wraps up mega Warner Bros merger to create Hollywood powerhouse Skydance\n07/10/2026\nIsrael marks three years since Hamas's October 7 attack\n07/10/2026\nThree years since Hamas October 7 attack: What did Netanyahu…",
-      "stazeno": "2026-10-07T12:03:21.633Z",
-      "stav": 200
-    }
-  },
-  {
-    "id": "k-e4d348c1a9029e40",
-    "zachyceno": "2026-10-07T20:03:13.930Z",
-    "publikovano": "2026-10-07T10:41:38.000Z",
-    "zdroj": {
-      "nazev": "Novinky.cz",
-      "url": "https://www.novinky.cz/clanek/zahranicni-evropa-zak-utocil-nozem-na-stredni-skole-v-polsku-sedm-zranenych-dva-tezce-40601259",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Útok na škole v Polsku: Mladík útočil mačetou, jeho batoh s výbušninou vyhodili z okna",
-    "titulekPuvodni": "Útok na škole v Polsku: Mladík útočil mačetou, jeho batoh s výbušninou vyhodili z okna",
-    "shrnuti": "Středeční útok devatenáctiletého učně na škole v polské Ostrolence si vyžádal devět zraněných. Pachatel z místa činu utekl, než jej na městské pláži dopadla policie. Podle prokuratury se pokusil o sebevraždu, ale pouze se zranil. Policisté rovněž zajistili jeho batoh, ve kterém do školy přinesl podo",
-    "kodZeme": "PL",
-    "zeme": "Polsko",
-    "kategorie": [
-      "hybridni",
-      "vojsko"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "zeSite": null,
-    "shody": [
-      "utok na",
-      "policie"
-    ],
-    "naliehave": null,
-    "stav": "ceka",
-    "vyrez": {
-      "text": "Útok na škole v Polsku: Mladík útočil mačetou, jeho batoh s výbušninou vyhodili z okna - Novinky\nZobrazení snímku 1 z 0\nzáhlaví\nHlavní obsah\nÚtok na škole v Polsku: Mladík útočil mačetou, jeho batoh s výbušninou vyhodili z okna\nJana Kotrášová , Jaromír Moravec\nvybrat autory ke sledování\n2:28\nChcete-li článek poslouchat, přihlaste se\neBook\nSdílet\nDnes 7. 10., 12:41 Aktualizováno dnes 20:18\nStředeční útok devatenáctiletého učně na škole v polské Ostrolence si vyžádal devět zraněných. Pachatel z místa činu utekl, než jej na městské pláži dopadla policie. Podle prokuratury se pokusil o sebevraždu, ale pouze se zranil. Policisté rovněž zajistili jeho batoh, ve kterém do školy přinesl podomácku vyrobenou výbušninu, jež téměř explodovala.\nFoto: Polská policie\nPolská policie 19letého útočníka dopadla.\nČlánek\nŽák odborného učiliště v Ostrolence podle rádia RMF24  na spolužáky a pedagogy okolo jedenácté hodiny dopoledne během vyučování zaútočil mačetou. Konkrétně měl řádit ve čtvrtém ročníku školy.\nInformace o počtu zraněných se přes den měnily. Mazovský vojvoda Mariusz Frankowski nakonec podle agentury PAP uvedl, že zraněných je deset lidí, včetně pachatele, pěti studentů, dvou učitelů…",
-      "stazeno": "2026-10-07T20:08:07.893Z",
       "stav": 200
     }
   }

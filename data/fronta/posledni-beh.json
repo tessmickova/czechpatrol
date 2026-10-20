@@ -1,5 +1,5 @@
 {
-  "kdy": "2026-10-20T04:00:46.528Z",
+  "kdy": "2026-10-20T05:48:51.503Z",
   "zdroje": [
     {
       "klic": "e-sbirka",
@@ -167,10 +167,11 @@
     },
     {
       "klic": "celni-sprava",
-      "ok": true,
-      "stav": 200,
+      "ok": false,
+      "stav": null,
       "pocetPolozek": 0,
-      "vysledek": "ok"
+      "chyba": "fetch failed",
+      "vysledek": "chyba"
     },
     {
       "klic": "sujb",
@@ -203,9 +204,9 @@
     {
       "klic": "bmi-de",
       "ok": false,
-      "stav": null,
+      "stav": 400,
       "pocetPolozek": 0,
-      "chyba": "fetch failed",
+      "chyba": "HTTP 400",
       "vysledek": "chyba"
     },
     {
@@ -224,10 +225,11 @@
     },
     {
       "klic": "minv-sk",
-      "ok": true,
-      "stav": 200,
+      "ok": false,
+      "stav": null,
       "pocetPolozek": 0,
-      "vysledek": "ok"
+      "chyba": "fetch failed",
+      "vysledek": "chyba"
     },
     {
       "klic": "chmi-cap",

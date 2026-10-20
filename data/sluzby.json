@@ -1,5 +1,5 @@
 {
-  "aktualizovano": "2026-10-20T04:02:44.796Z",
+  "aktualizovano": "2026-10-20T05:51:06.364Z",
   "stavy": [
     {
       "klic": "cloudflare",
@@ -9,7 +9,7 @@
         {
           "nazev": "Cloudflare Zero Trust connectivity",
           "odkaz": "https://www.cloudflarestatus.com/incidents/0eqtn0khkz87",
-          "aktualizovano": "2026-10-20T03:47:31.135Z"
+          "aktualizovano": "2026-10-20T05:46:34.870Z"
         },
         {
           "nazev": "Cloudflare Secure Web Gateway and DLP enforcement issues for Google Gemini",
@@ -24,11 +24,11 @@
       ],
       "postizene": [
         "Cloudflare Sites and Services",
+        "Americana, Brazil - (QWJ)",
         "Africa",
-        "Arica, Chile - (ARI)",
-        "Baghdad, Iraq - (BGW)"
+        "Arica, Chile - (ARI)"
       ],
-      "zkontrolovano": "2026-10-20T04:02:44.796Z",
+      "zkontrolovano": "2026-10-20T05:51:06.364Z",
       "chyba": null
     },
     {
@@ -40,7 +40,7 @@
         "Zoom Phone",
         "Zoom Phone - EMEA"
       ],
-      "zkontrolovano": "2026-10-20T04:02:44.796Z",
+      "zkontrolovano": "2026-10-20T05:51:06.364Z",
       "chyba": null
     },
     {
@@ -49,7 +49,7 @@
       "popis": "All Systems Operational",
       "incidenty": [],
       "postizene": [],
-      "zkontrolovano": "2026-10-20T04:02:44.796Z",
+      "zkontrolovano": "2026-10-20T05:51:06.364Z",
       "chyba": null
     }
   ]
