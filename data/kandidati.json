@@ -1,5 +1,1001 @@
 [
   {
+    "id": "k-8ebcdbe105b834b8",
+    "zachyceno": "2026-10-20T11:20:15.327Z",
+    "publikovano": null,
+    "zdroj": {
+      "nazev": "TASR (Slovensko)",
+      "url": "https://www.teraz.sk/zahranicie/vilnius-ukrajinsky-dron-ktory-vybuch/1001150-clanok.html",
+      "typ": "wire",
+      "primarni": false
+    },
+    "titulek": "Vilnius: Ukrajinský dron, ktorý vybuchol v Litve, priletel z Poľska",
+    "titulekPuvodni": "Vilnius: Ukrajinský dron, ktorý vybuchol v Litve, priletel z Poľska",
+    "shrnuti": "",
+    "kodZeme": "PL",
+    "zeme": "Polsko",
+    "kategorie": [
+      "sabotaz",
+      "drony"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "vybuch",
+      "dron"
+    ],
+    "naliehave": null,
+    "stav": "ceka",
+    "vyrez": {
+      "text": "Vilnius: Ukrajinský dron, ktorý vybuchol v Litve, priletel z Poľska\nKliknite pre viac: Statusy politikov na sociálnych sieťach v agregátore Teraz.sk\nIlustračná snímka dronu. Foto: TASR/AP\nLitovský premiér Mindaugas Sinkevičius vyhlásil, že išlo o ukrajinský dron typu FPV, ktorý prevážal výbušniny.\nAutor TASR\ndnes 10:56 , aktualizované   dnes 13:02\nVilnius 20. okt&oacute;bra (TASR) - Var&scaron;ava a Vilnius prezentovali odli&scaron;n&eacute; zistenia t&yacute;kaj&uacute;ce sa trasy letu bezpilotn&eacute;ho lietadla, ktor&eacute; v nedeľu explodovalo pri hraniciach Litvy s Loty&scaron;skom. Litva trv&aacute; na tom, že ukrajinsk&yacute; dron, priletel z Poľska, poľsk&eacute; radary v&scaron;ak prvotne nepotvrdili naru&scaron;enie vzdu&scaron;n&eacute;ho priestoru. Informuje o tom var&scaron;avsk&yacute; spravodajca TASR podľa denn&iacute;ka Rzeczpospolita a ozn&aacute;menia poľsk&eacute;ho Ministerstva obrany. \r\n\r\n&bdquo;M&ocirc;žem povedať &uacute;plne jednoznačne, m&aacute;me hodnovern&eacute; &uacute;daje, že dron prekročil poľsk&uacute; hranicu,&ldquo; povedal v pondelok poradca litovsk&eacute;ho prezidenta pre n&aacute;rodn&uacute; bezpečnosť Deividas Matulionis. Poľsk&eacute;…",
+      "stazeno": "2026-10-20T11:20:18.300Z",
+      "stav": 200
+    }
+  },
+  {
+    "id": "k-d97d460d094ddb1c",
+    "zachyceno": "2026-10-20T11:20:15.182Z",
+    "publikovano": null,
+    "zdroj": {
+      "nazev": "The Kyiv Independent",
+      "url": "https://kyivindependent.com/russian-drone-attack-on-kyiv-rush-hour-traffic-kills-at-least-1-injures-6/",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Russian drone attack on Kyiv rush-hour traffic kills at least 3, injures 4.",
+    "titulekPuvodni": "Russian drone attack on Kyiv rush-hour traffic kills at least 3, injures 4.",
+    "shrnuti": "",
+    "kodZeme": "UA",
+    "zeme": "Ukrajina",
+    "kategorie": [
+      "hybridni",
+      "drony",
+      "rusko"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "attack on",
+      "dron",
+      "drone",
+      "russia"
+    ],
+    "naliehave": null,
+    "stav": "ceka",
+    "vyrez": {
+      "text": "Russian drone attack on Kyiv rush-hour traffic kills at least 3, injures 4 Help rescue animals from the front line — shop our Companion Collection 🐾\nShop Now\nWar Russian drone attack on Kyiv rush-hour traffic kills at least 3, injures 4\nOctober 20, 2026 11:19 am • 2 min read\nPrefer on Google\nby Jimmy Rushton\nRemains of a car after a Russian drone attack on morning commuter traffic in the Holosiivskyi District of Kyiv, Ukraine, on Oct. 20, 2026 (Kyiv Oblast Prosecutor's Office/Telegram)\nAt least three people were killed and four people were injured after a Russian drone struck early morning commuter traffic in the Holosiivskyi District of Kyiv on Oct. 20, according to local authorities.\nUkraine's State emergency service reported the victims of Russia's drone strike, saying \"The enemy is once again cynically attacking civilians. Behind each such blow are human lives, pain, and ruined destinies.\"\nThe Russian drone crashed near a gas station in the Holosiivskyi District close to the administrative border with Kyiv Oblast, Kyiv city mayor Vitali Klitschko said .\nImages shared by the Kyiv Oblast Prosecutor's Office showed multiple cars ablaze at the scene of the attack near the…",
+      "stazeno": "2026-10-20T11:20:19.486Z",
+      "stav": 200
+    }
+  },
+  {
+    "id": "k-6a3bc6769af876ed",
+    "zachyceno": "2026-10-20T11:20:15.179Z",
+    "publikovano": null,
+    "zdroj": {
+      "nazev": "The Kyiv Independent",
+      "url": "https://kyivindependent.com/power-outages-in-12-regions-after-russian-assault-on-ukraines-power-plants/",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Power outages in half of Ukraine's oblasts after Russian assault on power plants.",
+    "titulekPuvodni": "Power outages in half of Ukraine's oblasts after Russian assault on power plants.",
+    "shrnuti": "",
+    "kodZeme": "UA",
+    "zeme": "Ukrajina",
+    "kategorie": [
+      "infrastruktura",
+      "rusko"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "power outage",
+      "power plant",
+      "russia"
+    ],
+    "naliehave": null,
+    "stav": "ceka",
+    "vyrez": {
+      "text": "Power outages in half of Ukraine's oblasts after Russian assault on power plants Help rescue animals from the front line — shop our Companion Collection 🐾\nShop Now\nWar Power outages in half of Ukraine's oblasts after Russian assault on power plants\nOctober 20, 2026 12:37 pm • 2 min read\nPrefer on Google\nby Jimmy Rushton\nPeople walk along dark streets during a power outage and dropping temperatures in Lviv, Ukraine, on Oct. 17, 2026. (Olena Znak/Anadolu/Getty Images)\nDue to Russian attacks, Ukraine's state-owned electricity operator reported power outages in twelve of Ukraine's oblasts on Oct. 20.\n\"There are new power outages in the Kirovohrad, Zhytomyr, Lviv, Odesa, Rivne, Ternopil, Khmelnytskyi, Zaporizhia, Donetsk, Kharkiv, Sumy and Chernihiv oblasts in the morning,\" Ukrenergo said .\nTo avoid overloading previously damaged equipment, power limitation schedules for industry will be applied across all of Ukraine, as well as hourly outage schedules in some oblasts, according to the operator.\nRussia continues to \"systematically and purposefully attack\" Ukraine's energy sector, Ukrainian First Deputy Minister of Energy of Artem Nekrasov said in a briefing on Oct. 20.\n\"At night and…",
+      "stazeno": "2026-10-20T11:20:19.905Z",
+      "stav": 200
+    }
+  },
+  {
+    "id": "k-1e509b4ee2d36c67",
+    "zachyceno": "2026-10-20T11:20:14.854Z",
+    "publikovano": "2026-10-20T10:24:00.000Z",
+    "zdroj": {
+      "nazev": "ČTK — České noviny",
+      "url": "https://www.ceskenoviny.cz/zpravy/bezpecnostni-rada-projednala-armadni-koncepci-pristi-tyden-ji-probere-vlada/2889964?utm_source=rss&utm_medium=feed",
+      "typ": "wire",
+      "primarni": false
+    },
+    "titulek": "Bezpečnostní rada projednala armádní koncepci, příští týden ji probere vláda",
+    "titulekPuvodni": "Bezpečnostní rada projednala armádní koncepci, příští týden ji probere vláda",
+    "shrnuti": "Praha - Bezpečnostní rada státu na dnešním jednání vzala na vědomí novou armádní koncepci. Platí plán, že příští týden ji projedná vláda, řekl novinářům po zhruba tříhodinovém zasedání náčelník generálního...",
+    "kodZeme": "CZ",
+    "zeme": "Česko",
+    "kategorie": [
+      "diplomacie"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "bezpecnostni rada statu"
+    ],
+    "naliehave": null,
+    "stav": "ceka",
+    "vyrez": {
+      "text": "Bezpečnostní rada projednala armádní koncepci, příští týden ji probere vláda | ČeskéNoviny.cz \r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nPřejít k obsahu \r\n| \r\nPřejít k hlavnímu menu \r\n| \r\nPřejít k vyhledávání \r\n\r\n\r\n\r\n\r\n\r\n\r\nČeské noviny \r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nMenu \r\n\r\n\r\n\r\n\r\n\r\n\r\nÚvod \r\n\r\n\r\nČR\n\r\nSvět\n\r\nEkonomika\n\r\nKultura\n\r\nSport\n\r\nMagazín\n\r\nSpeciál\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nVolby 2026:\n\r\n\r\nZpravodajství\n\r\nVýsledky\n\r\nŽivě\n\r\n\r\nDalší:\n\r\n\r\nBlízký Východ\n\r\n\r\n\r\nInvaze na Ukrajinu\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nBezpečnostní rada projednala armádní koncepci, příští týden ji probere vláda\n\r\n\r\n\r\n\r\n\r\n\r\nKomerční prezentace Aktual.: 20.10.2026 12:30 \r\nVydáno: 20.10.2026, 12:24 \r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nNáčelník generálního štábu Miroslav Hlaváč hovoří s novináři cestou z jednání Bezpečnostní rady státu, 20. října 2026, Praha. \r\nCTK/Kamaryt Michal \r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nPraha - Bezpečnostní rada státu na dnešním jednání vzala na vědomí novou armádní koncepci. Platí plán, že příští týden ji projedná vláda, řekl novinářům po zhruba tříhodinovém zasedání náčelník…",
+      "stazeno": "2026-10-20T11:20:20.319Z",
+      "stav": 200
+    }
+  },
+  {
+    "id": "k-5992b135fd398cfd",
+    "zachyceno": "2026-10-20T11:20:18.221Z",
+    "publikovano": "2026-10-20T10:21:51.000Z",
+    "zdroj": {
+      "nazev": "The Moscow Times",
+      "url": "https://www.themoscowtimes.com/2026/10/20/kazakhstan-drops-drug-charges-against-russian-rapper-navai-a94027",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Kazakhstan Drops Drug Charges Against Russian Rapper Navai",
+    "titulekPuvodni": "Kazakhstan Drops Drug Charges Against Russian Rapper Navai",
+    "shrnuti": "Navai was released and deported from the Central Asian country a week after he was arrested for bringing 2.5 grams of marijuana across the border.",
+    "kodZeme": "RU",
+    "zeme": "Rusko",
+    "kategorie": [
+      "zpravodajske",
+      "hranice",
+      "rusko"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "arrested+russia",
+      "border",
+      "russia"
+    ],
+    "naliehave": null,
+    "stav": "ceka",
+    "vyrez": {
+      "text": "Kazakhstan Drops Drug Charges Against Russian Rapper Navai - The Moscow Times\nSupport The Moscow Times!\nContribute today\nMy account\nSignout\n&times;\nSupport The Moscow Times!\nContribute today\nOct. 20, 2026\nnavaib / Instagram\nAuthorities in Kazakhstan have dropped drug smuggling charges against popular Russian hip-hop artist Navai and deported him from the country, local police said Tuesday.\nNavai Bakirov was arrested last Tuesday while entering Kazakhstan from neighboring Kyrgyzstan after border guards found 2.5 grams of marijuana in his vehicle. A court placed him in pre-trial detention for two months.\nBakirov reportedly admitted during interrogation to purchasing the cannabis in Bishkek prior to crossing the border, triggering an internal investigation in Kyrgyzstan.\n&ldquo;The criminal case against the Russian rap artist was terminated on non-rehabilitating grounds,&rdquo; Kazakhstan&rsquo;s Zhambyl regional police department told the Tengrinews outlet.\nKazakh authorities took into account Bakirov&rsquo;s &ldquo;active repentance&rdquo; and the fact that it was his first offense.\n&ldquo;The foreign citizen has been deported,&rdquo; the police department said in comments quoted…",
+      "stazeno": "2026-10-20T11:20:21.069Z",
+      "stav": 200
+    }
+  },
+  {
+    "id": "k-868952ee31f221aa",
+    "zachyceno": "2026-10-20T11:20:18.138Z",
+    "publikovano": "2026-10-20T10:05:00.000Z",
+    "zdroj": {
+      "nazev": "Ukrainska Pravda (anglicky)",
+      "url": "https://www.pravda.com.ua/eng/news/2026/10/20/8058891/",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Three killed and two injured in Russian attack on Kramatorsk",
+    "titulekPuvodni": "Three killed and two injured in Russian attack on Kramatorsk",
+    "shrnuti": "Russian attack has targeted Kramatorsk, damaging three multi-story residential buildings and causing multiple civilian casualties.",
+    "kodZeme": "RU",
+    "zeme": "Rusko",
+    "kategorie": [
+      "hybridni",
+      "rusko"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "attack on",
+      "russia"
+    ],
+    "naliehave": null,
+    "stav": "ceka",
+    "vyrez": {
+      "text": "Russian attack on Kramatorsk leaves three killed and two injured in Donetsk Oblast | Ukrainska Pravda\nThe damaged residential building. Photo: Donetsk Oblast Prosecutor's Office\nRussian forces attacked the city of Kramatorsk in Donetsk Oblast on Tuesday 20 October, killing three civilians and injuring two others.\nSource: Donetsk Oblast Prosecutor's Office\nDetails: The Russians attacked the city at 10:04. The type of weaponry is currently being established.\nAdvertisement:\n\r\n\r\n\r\n\r\n\r\nThree men aged 42, 47 and 48 sustained fatal injuries as a result of the attack. A woman and a 38-year-old man were also injured. They were diagnosed with shrapnel wounds and blast injuries.\n\r\n\r\n\r\nBodies of people killed in the attack\n\r\n\r\n\r\nPhoto: Donetsk Oblast Prosecutor's Office\r\n\r\n\r\n\r\nThree multi-story residential buildings were damaged in the city.\nUnder the procedural guidance of Kramatorsk District Prosecutor's Office, a pre-trial investigation has been initiated in criminal proceedings regarding a war crime (Article 438.2 of the Criminal Code of Ukraine).\nYour support on Patreon helps us keep the news free and accessible.\nKramatorsk\nDonetsk Oblast\nwar crimes\nRussia-Ukraine…",
+      "stazeno": "2026-10-20T11:20:21.253Z",
+      "stav": 200
+    }
+  },
+  {
+    "id": "k-fe5045f8e37ccc68",
+    "zachyceno": "2026-10-20T11:20:17.103Z",
+    "publikovano": "2026-10-20T10:00:04.000Z",
+    "zdroj": {
+      "nazev": "Le Monde (Francie)",
+      "url": "https://www.lemonde.fr/sciences/article/2026/10/20/la-spectaculaire-supernova-de-l-an-1181-photographiee-dans-ses-moindres-details-par-le-telescope-gemini_6797904_1650684.html",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "La spectaculaire supernova de l’an 1181 photographiée dans ses moindres détails par le télescope Gemini",
+    "titulekPuvodni": "La spectaculaire supernova de l’an 1181 photographiée dans ses moindres détails par le télescope Gemini",
+    "shrnuti": "De nouvelles observations de cette rare supernova permettent d’en apprendre plus sur l’explosion cataclysmique qui a eu lieu il y a plus de huit siècles.",
+    "kodZeme": "EU",
+    "zeme": "EU",
+    "kategorie": [
+      "sabotaz"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "explosion"
+    ],
+    "naliehave": null,
+    "stav": "ceka",
+    "vyrez": {
+      "text": "Client Challenge\nA required part of this site couldn’t load. This may be due to a browser\nextension, network issues, or browser settings. Please check your\nconnection, disable any ad blockers, or try using a different browser.",
+      "stazeno": "2026-10-20T11:20:21.446Z",
+      "stav": 200
+    }
+  },
+  {
+    "id": "k-66f28d435e95bde1",
+    "zachyceno": "2026-10-20T11:20:16.069Z",
+    "publikovano": "2026-10-20T09:41:00.000Z",
+    "zdroj": {
+      "nazev": "Aktuality.sk",
+      "url": "https://www.aktuality.sk/clanok/sSVMUfa/v-madarsku-prisla-vlna-bombovych-hrozieb-policia-preverovala-viac-ako-70-skol/",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "V Maďarsku prišla vlna bombových hrozieb, polícia preverovala viac ako 70 škôl",
+    "titulekPuvodni": "V Maďarsku prišla vlna bombových hrozieb, polícia preverovala viac ako 70 škôl",
+    "shrnuti": "V Maďarsku zaznamenali vlnu anonymných bombových hrozieb, ktoré sa týkali viac ako 70 škôl. V Budapešti museli uzavrieť aj Technickú univerzitu, polícia však výbušniny nenašla.",
+    "kodZeme": "HU",
+    "zeme": "Maďarsko",
+    "kategorie": [
+      "sabotaz"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "bomb"
+    ],
+    "naliehave": null,
+    "stav": "ceka",
+    "vyrez": {
+      "text": "V Maďarsku prišla vlna bombových hrozieb, polícia preverovala viac ako 70 škôl | Aktuality.sk\nAktuality\nŠport\nDiva\nNajmama\nŽivé\nRecepty\nDobrú chuť\nSlovník\n9 °C -\nBratislava\nutorok 20. 10.\n20. 10.\nVendelín\nSprávy dnes 20. okt 2026 o 11:41\n1 min. čítania\nPridať do Google\nV Maďarsku prišla vlna bombových hrozieb, polícia preverovala viac ako 70 škôl\n1 fotka v galérii\nMaďarská polícia Zdroj: istock\nTASR\nAktuality.sk\nUložiť článok\nV Maďarsku zaznamenali vlnu anonymných bombových hrozieb, ktoré sa týkali viac ako 70 škôl. V Budapešti museli uzavrieť aj Technickú univerzitu, polícia však výbušniny nenašla.\nV utorok ráno si bombové hrozby vynútili na budapeštianskej základnej škole a gymnáziu v mestskej časti Zugló vyhlásenie mimoriadneho vyučovacieho voľna. Podľa servera telex.hu Technickú univerzitu v Budapešti (BME) v utorok skoro ráno tiež uzavreli pre bombovú hrozbu. Polícia budovy prehľadala, výbušniny však nenašla, informuje spravodajca TASR v Budapešti.\nCeloštátne riaditeľstvo polície (ORFK) v Maďarsku zaznamenalo v pondelok vlnu anonymných bombových hrozieb zameraných na desiatky škôl po celej krajine.\nViac ako 70 škôl ohrozených\nViacerým poskytovateľom mediálneho obsahu boli…",
+      "stazeno": "2026-10-20T11:20:21.878Z",
+      "stav": 200
+    }
+  },
+  {
+    "id": "k-96daa3fca4e200d9",
+    "zachyceno": "2026-10-20T11:20:18.094Z",
+    "publikovano": "2026-10-20T09:40:00.000Z",
+    "zdroj": {
+      "nazev": "Ukrinform (anglicky)",
+      "url": "https://www.ukrinform.net/rubric-ato/4176233-russian-drones-attacking-energy-infrastructure-in-vinnytsia-region-causing-power-outages.html",
+      "typ": "wire",
+      "primarni": false
+    },
+    "titulek": "Russian drones attacking energy infrastructure in Vinnytsia region, causing power outages",
+    "titulekPuvodni": "Russian drones attacking energy infrastructure in Vinnytsia region, causing power outages",
+    "shrnuti": "Russian drones are attacking energy infrastructure in the Vinnytsia region, causing power outages.",
+    "kodZeme": "RU",
+    "zeme": "Rusko",
+    "kategorie": [
+      "infrastruktura",
+      "drony",
+      "rusko"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "power outage",
+      "dron",
+      "drone",
+      "russia"
+    ],
+    "naliehave": null,
+    "stav": "ceka",
+    "vyrez": {
+      "text": "Russian drones attacking energy infrastructure in Vinnytsia region, causing power outages\n\r\nSubscription\nNewsletters\nPhotobank\nUkrinform - Ukrainian National News Agency\nFounded in 1918\nTuesday, 20 October 2026, 14:20\nWar\nEconomy\nSports\nMore ☰\nContacts\nEng\nУкр\nEng\nEsp\nDeu\nعربي\nFra\n日本語\nPol\n&times;\nAll topics\nWar\nRecovery of Ukraine\nPolitics\nEconomy\nFact checks\nDefense\nSociety and Culture\nSports\nCrime\nAccidents and Emergencies\nAgency\nInformation on Agency\nOur Contacts\nSubscribtion Terms\nOur Services\nPrivacy policy and personal data protection\nAdditional\nPublications\nInterviews\nPhoto\nVideo\nLongreads\nReleases\nServices\nSubscription\nNewsletters\nPhotobank\n\r\n\r\n\r\nRussian drones are attacking energy infrastructure in the Vinnytsia region, causing power outages.\nThis was reported on Telegram by Natalia Zabolotna, Head of the Vinnytsia Regional Military Administration, according to Ukrinform.\n\r\n\r\n&ldquo;The enemy&rsquo;s air attack is ongoing. Energy infrastructure facilities in the Vinnytsia region are under attack,&rdquo; Zabolotna wrote.\n\r\n\r\nAccording to her, energy workers have been working since the night to deal with the aftermath of the strikes and restore power to people&rsquo;s…",
+      "stazeno": "2026-10-20T11:20:23.355Z",
+      "stav": 200
+    }
+  },
+  {
+    "id": "k-0c2ba812b82d56d5",
+    "zachyceno": "2026-10-20T11:20:17.129Z",
+    "publikovano": "2026-10-20T09:33:32.000Z",
+    "zdroj": {
+      "nazev": "ANSA (Itálie, anglicky)",
+      "url": "https://www.ansa.it/english/news/2026/10/20/govt-to-approve-deployment-of-500-troops-with-police-powers-in-milan_0145a9cb-bac0-49a1-856d-c9ecac914ef8.html",
+      "typ": "wire",
+      "primarni": false
+    },
+    "titulek": "Govt to approve deployment of 500 troops with police powers in Milan",
+    "titulekPuvodni": "Govt to approve deployment of 500 troops with police powers in Milan",
+    "shrnuti": "(ANSA) - ROME, 20 OTT - The deployment of 500 troops with police powers in Milan will be among the measures Premier Giorgia Meloni's cabinet will approve on Tuesday in response to last weekend's rioting in by youths in the city, Deputy Premier and Foreign Minister Antonio Tajani said The trouble beg",
+    "kodZeme": "IT",
+    "zeme": "Itálie",
+    "kategorie": [
+      "vojsko"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "troops+deploy"
+    ],
+    "naliehave": null,
+    "stav": "ceka",
+    "vyrez": {
+      "text": "Govt to approve deployment of 500 troops with police powers in Milan - TopNews - Ansa.it\nSe hai scelto di non accettare i cookie di profilazione e tracciamento, puoi aderire all&rsquo;abbonamento \"Consentless\" a un costo molto accessibile, oppure scegliere un altro abbonamento per accedere ad ANSA.it.\nTi invitiamo a leggere le Condizioni Generali di Servizio , la Cookie Policy e l' Informativa Privacy .\nABBONAMENTO CONSENTLESS\nPuoi leggere tutti i titoli di ANSA.it e 10 contenuti ogni 30 giorni a &euro;16,99/anno\nServizio equivalente a quello accessibile prestando il consenso ai cookie di profilazione pubblicitaria e tracciamento\nDurata annuale (senza rinnovo automatico)\nUn pop-up ti avvertir&agrave; che hai raggiunto i contenuti consentiti in 30 giorni (potrai continuare a vedere tutti i titoli del sito, ma per aprire altri contenuti dovrai attendere il successivo periodo di 30 giorni)\nPubblicit&agrave; presente ma non profilata o gestibile mediante il pannello delle preferenze\nIscrizione alle Newsletter tematiche curate dalle redazioni ANSA.\nALTRI ABBONAMENTI\nPer accedere senza limiti a tutti i contenuti di ANSA.it\nScegli il piano di abbonamento pi&ugrave; adatto alle tue…",
+      "stazeno": "2026-10-20T11:20:24.033Z",
+      "stav": 200
+    }
+  },
+  {
+    "id": "k-19d778011c514051",
+    "zachyceno": "2026-10-20T11:20:16.025Z",
+    "publikovano": "2026-10-20T09:29:29.000Z",
+    "zdroj": {
+      "nazev": "SME (Slovensko)",
+      "url": "https://www.sme.sk/svet/c/v-madarsku-pokracovala-seria-bombovych-hrozieb-na-skolach?utm_source=rss&utm_medium=feed&utm_campaign=www-rss",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "V Maďarsku pokračovala séria bombových hrozieb na školách",
+    "titulekPuvodni": "V Maďarsku pokračovala séria bombových hrozieb na školách",
+    "shrnuti": "Vlnu anonymných bombových hrozieb bola aj v pondelok.",
+    "kodZeme": "HU",
+    "zeme": "Maďarsko",
+    "kategorie": [
+      "sabotaz"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "bomb"
+    ],
+    "naliehave": null,
+    "stav": "ceka",
+    "vyrez": {
+      "text": "",
+      "stazeno": "2026-10-20T11:20:24.855Z",
+      "stav": 403,
+      "chyba": "HTTP 403"
+    }
+  },
+  {
+    "id": "k-3058189f06d123ee",
+    "zachyceno": "2026-10-20T11:20:15.077Z",
+    "publikovano": "2026-10-20T09:26:00.000Z",
+    "zdroj": {
+      "nazev": "ERR News (Estonsko)",
+      "url": "https://news.err.ee/1610171125/century-old-german-warship-wrecks-off-estonian-coast-hold-hidden-oil-threat",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Century-old German warship wrecks off Estonian coast hold hidden oil threat",
+    "titulekPuvodni": "Century-old German warship wrecks off Estonian coast hold hidden oil threat",
+    "shrnuti": "Off Hiiumaa island, German warship wrecks from 1916 are ticking ecological time bombs, holding thousands of liters of oil that could pollute Baltic Sea coastlines if released.",
+    "kodZeme": "DE",
+    "zeme": "Německo",
+    "kategorie": [
+      "sabotaz"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "bomb"
+    ],
+    "naliehave": null,
+    "stav": "ceka",
+    "vyrez": {
+      "text": "Century-old German warship wrecks off Estonian coast hold hidden oil threat | News | ERR\n{{noticeUi.heading[langCode]}}\n{{infoLink[langCode].label}}\n{{noticeUi.allowAllLabel[langCode]}}\n{{rewokeLabels[langCode]}}\nX !\nNews\nAndres Reimann\n{{1792488360000 | amCalendar}}\nshare Facebook X (Twitter) e-mail\nThe bow of the sunken torpedo boat S57. Source: Ivar Treffner, 2025/Heritage\nNews\nOff Hiiumaa island, German warship wrecks from 1916 are ticking ecological time bombs, holding thousands of liters of oil that could pollute Baltic Sea coastlines if released.\nThe German torpedo boats S57 , V72 and V75 sank in November 1916 after straying into a minefield during a failed attack on the port of Paldiski.\nA new study by researchers from the Estonian Maritime Museum (EMM) and Finland, led by Ivar Treffner, assessed the wrecks and the environmental threat they pose.\nAt the time, navies had only just begun transitioning from coal to liquid fuel. The ships went down carrying thousands of liters of heavy fuel oil, which remains trapped inside their hulls today.\nThe wrecks are not currently leaking, and researchers do not expect their hulls to collapse in the near future, but as the metal…",
+      "stazeno": "2026-10-20T11:20:24.937Z",
+      "stav": 200
+    }
+  },
+  {
+    "id": "k-9aa04c54f8d92eea",
+    "zachyceno": "2026-10-20T11:20:18.143Z",
+    "publikovano": "2026-10-20T09:10:00.000Z",
+    "zdroj": {
+      "nazev": "Ukrainska Pravda (anglicky)",
+      "url": "https://www.pravda.com.ua/eng/news/2026/10/20/8058882/",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Poland considers joint border controls with Ukraine on Polish side of border",
+    "titulekPuvodni": "Poland considers joint border controls with Ukraine on Polish side of border",
+    "shrnuti": "The Polish Ministry of Interior has announced readiness to implement joint border operations on Polish territory with Ukraine, pending Schengen notifications and security needs.",
+    "kodZeme": "PL",
+    "zeme": "Polsko",
+    "kategorie": [
+      "hranice"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "border controls",
+      "schengen",
+      "border"
+    ],
+    "naliehave": null,
+    "stav": "ceka"
+  },
+  {
+    "id": "k-9f5beae146a2e6bf",
+    "zachyceno": "2026-10-20T11:20:18.101Z",
+    "publikovano": "2026-10-20T08:44:00.000Z",
+    "zdroj": {
+      "nazev": "Ukrinform (anglicky)",
+      "url": "https://www.ukrinform.net/rubric-economy/4176213-power-outages-reported-in-12-regions-following-russian-attacks.html",
+      "typ": "wire",
+      "primarni": false
+    },
+    "titulek": "Power outages reported in 12 regions following Russian attacks",
+    "titulekPuvodni": "Power outages reported in 12 regions following Russian attacks",
+    "shrnuti": "Russian attacks have caused new power outages in 12 regions of Ukraine, while scheduled hourly power cuts affecting up to two groups of consumers are in effect nationwide.",
+    "kodZeme": "UA",
+    "zeme": "Ukrajina",
+    "kategorie": [
+      "infrastruktura",
+      "rusko"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "power outage",
+      "russia"
+    ],
+    "naliehave": null,
+    "stav": "ceka"
+  },
+  {
+    "id": "k-b6514dcf0ddbcb89",
+    "zachyceno": "2026-10-20T11:20:17.593Z",
+    "publikovano": "2026-10-20T08:28:07.000Z",
+    "zdroj": {
+      "nazev": "Digi24 (Rumunsko)",
+      "url": "https://www.digi24.ro/stiri/externe/sua/avertismentul-unui-fost-comandant-nato-trump-ar-putea-sacrifica-ucraina-pentru-a-obtine-ajutorul-lui-putin-in-problema-iranului-4000147",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Avertismentul unui fost comandant NATO: Trump ar putea sacrifica Ucraina pentru a obține ajutorul lui Putin în problema Iranului",
+    "titulekPuvodni": "Avertismentul unui fost comandant NATO: Trump ar putea sacrifica Ucraina pentru a obține ajutorul lui Putin în problema Iranului",
+    "shrnuti": "Generalul în retragere al Armatei SUA Wesley Clark, fost comandant suprem al forțelor aliate din cadrul NATO, a avertizat luni, 19 octombrie, că președintele Donald Trump ar putea încerca să sacrifice suveranitatea Ucrainei în schimbul cooperării președintelui rus Vladimir Putin în soluționarea conf",
+    "kodZeme": "UA",
+    "zeme": "Ukrajina",
+    "kategorie": [
+      "hybridni",
+      "nato"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "putin+nato+conflict",
+      "nato"
+    ],
+    "naliehave": null,
+    "stav": "ceka"
+  },
+  {
+    "id": "k-4d3b360dba881332",
+    "zachyceno": "2026-10-20T11:20:17.142Z",
+    "publikovano": "2026-10-20T08:08:58.000Z",
+    "zdroj": {
+      "nazev": "ANSA (Itálie, anglicky)",
+      "url": "https://www.ansa.it/english/news/2026/10/20/ranucci-to-move-to-rainews-after-being-removed-from-report_ee89a22e-26ab-4f89-a753-06ea9e20fae0.html",
+      "typ": "wire",
+      "primarni": false
+    },
+    "titulek": "Ranucci to move to RaiNews after being removed from Report",
+    "titulekPuvodni": "Ranucci to move to RaiNews after being removed from Report",
+    "shrnuti": "(ANSA) - ROME, 20 OTT - Sigfrido Ranucci said Tuesday that he has accepted the position of deputy director of RaiNews after State broadcaster Rai removed him from the helm of its investigative journalism programme Report over his relationship with a businessman who organized a bombing at his home la",
+    "kodZeme": "IT",
+    "zeme": "Itálie",
+    "kategorie": [
+      "sabotaz"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "bomb"
+    ],
+    "naliehave": null,
+    "stav": "ceka"
+  },
+  {
+    "id": "k-45a53e567307ad02",
+    "zachyceno": "2026-10-20T08:03:25.481Z",
+    "publikovano": null,
+    "zdroj": {
+      "nazev": "LRT English (Litva)",
+      "url": "https://www.lrt.lt/en/news-in-english/19/3087465/eu-proposal-for-security-protocol-modelled-on-nato-s-article-4-draws-scepticism",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "EU proposal for security protocol modelled on NATO’s Article 4 draws scepticism",
+    "titulekPuvodni": "EU proposal for security protocol modelled on NATO’s Article 4 draws scepticism",
+    "shrnuti": "",
+    "kodZeme": "EU",
+    "zeme": "EU",
+    "kategorie": [
+      "nato"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "article 4",
+      "nato"
+    ],
+    "naliehave": null,
+    "stav": "ceka",
+    "vyrez": {
+      "text": "EU proposal for security protocol modelled on NATO’s Article 4 draws scepticism - LRT\n\r\n\r\nNaujienų srautas\nNews\n42 min. ago\nLithuanian president calls for renewed debate on Vilnius metro\nNews\n1 h ago\nLithuania seeks NATO talks on shooting down drones without visual confirmation\nNews\n1 h ago\nLithuania to switch to winter time this weekend\nNews\n3 h ago\nEU proposal for security protocol modelled on NATO’s Article 4 draws scepticism\nNews\n3 h ago\nLithuania is nearing tipping point with growing budget deficit, economist warns\nNews\n18 h ago\nPoland denies report that Sunday’s drone was launched from Lithuanian territory\nNews\n19 h ago\nLithuania aims to have integrated airspace detection system partially operational by 2027\nNews\n21 h ago\nLithuania loses modern pentathlon event over restrictions on Russian, Belarusian athletes\nNews\n22 h ago\nLeading Lithuanian histologist Albertas Vitkus dies aged 97\nNews\n23 h ago\nSuspects in attempted arson at SpaceX-linked facility in Vilnius remain at large\nNews\n23 h ago\nLithuania has evidence Sunday’s drone crossed from Poland, presidential adviser says\nNews\n1 d ago\nNATO, Lithuanian troops holding hybrid threat exercises in western Lithuania\nNews\n1 d…",
+      "stazeno": "2026-10-20T08:03:28.680Z",
+      "stav": 200
+    }
+  },
+  {
+    "id": "k-e51a27830edc317c",
+    "zachyceno": "2026-10-20T11:20:18.149Z",
+    "publikovano": "2026-10-20T07:58:00.000Z",
+    "zdroj": {
+      "nazev": "Ukrainska Pravda (anglicky)",
+      "url": "https://www.pravda.com.ua/eng/news/2026/10/20/8058870/",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "\"A wonderful teacher\": the woman killed with her baby daughter in Nova Vodolaha",
+    "titulekPuvodni": "\"A wonderful teacher\": the woman killed with her baby daughter in Nova Vodolaha",
+    "shrnuti": "A Russian drone attack on a Kharkiv Oblast park has killed six people, including teacher Inna Mariukhna and her one-year-old daughter Anhelina.",
+    "kodZeme": "RU",
+    "zeme": "Rusko",
+    "kategorie": [
+      "hybridni",
+      "drony",
+      "rusko"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "attack on",
+      "dron",
+      "drone",
+      "russia"
+    ],
+    "naliehave": null,
+    "stav": "ceka"
+  },
+  {
+    "id": "k-d63fc6d6c96034c3",
+    "zachyceno": "2026-10-20T11:20:18.152Z",
+    "publikovano": "2026-10-20T07:55:00.000Z",
+    "zdroj": {
+      "nazev": "Ukrainska Pravda (anglicky)",
+      "url": "https://www.pravda.com.ua/eng/news/2026/10/20/8058869/",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Drone crashes near petrol station in Kyiv, killing one and injuring six",
+    "titulekPuvodni": "Drone crashes near petrol station in Kyiv, killing one and injuring six",
+    "shrnuti": "Kyiv Mayor Vitali Klitschko has reported that a drone crash in the Holosiivskyi district near a petrol station killed one person and injured six others.",
+    "kodZeme": "UA",
+    "zeme": "Ukrajina",
+    "kategorie": [
+      "drony"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "drone crash",
+      "dron+crashes",
+      "dron",
+      "drone"
+    ],
+    "naliehave": null,
+    "stav": "ceka"
+  },
+  {
+    "id": "k-0c804269abf670d8",
+    "zachyceno": "2026-10-20T11:20:18.157Z",
+    "publikovano": "2026-10-20T07:29:00.000Z",
+    "zdroj": {
+      "nazev": "Ukrainska Pravda (anglicky)",
+      "url": "https://www.pravda.com.ua/eng/news/2026/10/20/8058866/",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Russians attack superstore in Kovel",
+    "titulekPuvodni": "Russians attack superstore in Kovel",
+    "shrnuti": "Volyn Oblast authorities have confirmed overnight attacks targeted civilian and power infrastructure, causing localised power outages and damaging commercial facilities in Kovel.",
+    "kodZeme": "RU",
+    "zeme": "Rusko",
+    "kategorie": [
+      "infrastruktura",
+      "rusko"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "power outage",
+      "russia"
+    ],
+    "naliehave": null,
+    "stav": "ceka"
+  },
+  {
+    "id": "k-c6639e15c0fde5b8",
+    "zachyceno": "2026-10-20T08:03:25.128Z",
+    "publikovano": "2026-10-20T07:28:00.000Z",
+    "zdroj": {
+      "nazev": "iDNES.cz — zpravodajství",
+      "url": "https://www.idnes.cz/zpravy/zahranicni/charkovska-oblast-rusko-utok-ukrajina-konflikt-dron.A261020_085940_zahranicni_tmps#utm_source=rss&utm_medium=feed&utm_campaign=zpravodaj&utm_content=main",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Naprosté zvěrstvo. Rusko zabíjelo v parku, zemřela i holčička v kočárku",
+    "titulekPuvodni": "Naprosté zvěrstvo. Rusko zabíjelo v parku, zemřela i holčička v kočárku",
+    "shrnuti": "Ruský dronový útok na park v obci Nova Vodolaha v Charkovské oblasti zabil šest lidí, z toho dvě děti, upřesnil v pondělí večer šéf regionální správy Oleh Syněhubov, který dříve informoval o šesti mrtvých včetně tří dětí. Moskva se k této informaci nevyjádřila.",
+    "kodZeme": "RU",
+    "zeme": "Rusko",
+    "kategorie": [
+      "hybridni",
+      "drony",
+      "rusko"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "utok na",
+      "dron",
+      "rusk"
+    ],
+    "naliehave": null,
+    "stav": "ceka",
+    "vyrez": {
+      "text": "Rusko v obci Nova Vodolaha zabilo i holčičku v kočárku - iDNES.cz \r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\niDNES.cz\n\r\n\r\n\r\nP�ihl�sit \r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nAbyste mohli pokra�ovat, pot�ebujeme v�d�t, jakou formou v�m m��eme zobrazovat reklamu \r\n\r\n\r\n\r\n\r\n\r\nV�mi zvolen� nastaven� \r\nneobsahuje souhlas se zobrazov�n�m c�len� reklamy . \r\nVyberte pros�m znovu, \r\njakou formou v�m m�me zobrazovat obsah. \r\n\r\n\r\n\r\n\r\n\r\n\r\niDNES Premium\n\r\nBez reklam\n\r\n\r\n199 K� m�s��n�\n\r\nM��ete neomezen� ��st iDNES.cz, Lidovky.cz, Expres.cz a Antiyoutuber.cz. K tomu dostanete tak� noviny a �asopisy v elektronick� podob�. To v�e bez reklam. 1\n\r\n\r\nP�edplatit\n\r\n\r\nU� m�te ��et? P�ihlaste se\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nS c�lenou reklamou\n\r\n\r\n\r\nZdarma \r\n\r\nZachov�me v�m v�e tak, jak jste zvykl� a reklamu p�izp�sob�me va�im z�jm�m. Bez omezen� si m��ete d�l ��st, p�ehr�vat videa, sout�it �i p�isp�vat do v�ech diskus�. 2\n\r\n\r\nSouhlas�m\n\r\nPodrobn� nastaven�\n\r\n\r\n\r\n\r\n\r\n\r\niDNES a reklama\n\r\nPokud vyu�ijete m�sto platby ud�len� souhlasu s reklamou (tj. souhlas s vyu�it�m cookies a dal��ch s�ov�ch identifik�tor� pro ��ely c�len� reklamy), \r\nbudou V�m zobrazov�ny v r�mci na�ich…",
+      "stazeno": "2026-10-20T08:03:29.187Z",
+      "stav": 200
+    }
+  },
+  {
+    "id": "k-ba16a2127068a103",
+    "zachyceno": "2026-10-20T08:03:25.172Z",
+    "publikovano": "2026-10-20T07:25:00.000Z",
+    "zdroj": {
+      "nazev": "ČTK — České noviny",
+      "url": "https://www.ceskenoviny.cz/zpravy/bezpecnostni-rada-jedna-o-nove-armadni-koncepci-ci-kyberbezpecnosti/2889964?utm_source=rss&utm_medium=feed",
+      "typ": "wire",
+      "primarni": false
+    },
+    "titulek": "Bezpečnostní rada jedná o nové armádní koncepci či kyberbezpečnosti",
+    "titulekPuvodni": "Bezpečnostní rada jedná o nové armádní koncepci či kyberbezpečnosti",
+    "shrnuti": "Praha - Dnešní zasedání Bezpečnostní rady státu se vedle nové armádní koncepce bude týkat například kybernetické bezpečnosti, řekl při příchodu na jednání novinářům ministr dopravy Ivan Bednárik (za SPD)....",
+    "kodZeme": "CZ",
+    "zeme": "Česko",
+    "kategorie": [
+      "diplomacie",
+      "kyber"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "zasedani bezpecnostni rady",
+      "kybernetick"
+    ],
+    "naliehave": null,
+    "stav": "ceka",
+    "vyrez": {
+      "text": "Bezpečnostní rada jedná o nové armádní koncepci či kyberbezpečnosti | ČeskéNoviny.cz \r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nPřejít k obsahu \r\n| \r\nPřejít k hlavnímu menu \r\n| \r\nPřejít k vyhledávání \r\n\r\n\r\n\r\n\r\n\r\n\r\nČeské noviny \r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nMenu \r\n\r\n\r\n\r\n\r\n\r\n\r\nÚvod \r\n\r\n\r\nČR\n\r\nSvět\n\r\nEkonomika\n\r\nKultura\n\r\nSport\n\r\nMagazín\n\r\nSpeciál\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nVolby 2026:\n\r\n\r\nZpravodajství\n\r\nVýsledky\n\r\nŽivě\n\r\n\r\nDalší:\n\r\n\r\nBlízký Východ\n\r\n\r\n\r\nInvaze na Ukrajinu\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nBezpečnostní rada jedná o nové armádní koncepci či kyberbezpečnosti\n\r\n\r\n\r\n\r\n\r\n\r\nKomerční prezentace Aktual.: 20.10.2026 09:25 \r\nVydáno: 20.10.2026, 09:25 \r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nNáčelník generálního štábu Armády ČR Miroslav Hlaváč přichází na jednání Bezpečnostní rady státu za účasti prezidenta Petra Pavla, 20. října 2026, Praha. \r\nCTK/Kamaryt Michal \r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nPraha - Dnešní zasedání Bezpečnostní rady státu se vedle nové armádní koncepce bude týkat například kybernetické bezpečnosti, řekl při příchodu na jednání novinářům ministr dopravy Ivan…",
+      "stazeno": "2026-10-20T08:03:32.608Z",
+      "stav": 200
+    }
+  },
+  {
+    "id": "k-4b0cd43f59cb5793",
+    "zachyceno": "2026-10-20T08:03:25.133Z",
+    "publikovano": "2026-10-20T07:23:21.000Z",
+    "zdroj": {
+      "nazev": "iDNES.cz — zpravodajství",
+      "url": "https://www.idnes.cz/zpravy/zahranicni/rusky-uder-v-kyjevske-oblasti-podle-ukrajinskych-uradu-zabil-tri-lidi.A261020_072237_zahranicni_tmps#utm_source=rss&utm_medium=feed&utm_campaign=zpravodaj&utm_content=main",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Rusové udeřili na továrnu v Kyjevské oblasti. Ukrajinci zasáhli ropovod Družba",
+    "titulekPuvodni": "Rusové udeřili na továrnu v Kyjevské oblasti. Ukrajinci zasáhli ropovod Družba",
+    "shrnuti": "Ruský vzdušný úder v Kyjevské oblasti v noci na úterý zabil tři lidi a dalších šest osob zranil. Oznámily to ukrajinské úřady na síti Telegram. Rusko podle příspěvku zasáhlo výrobní závod a sklad, načež propukl požár, který se později podařilo uhasit. Ukrajinské drony zasáhly ruské Tambovské oblasti",
+    "kodZeme": "UA",
+    "zeme": "Ukrajina",
+    "kategorie": [
+      "drony",
+      "rusko"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "dron+zasahl",
+      "dron",
+      "rusk"
+    ],
+    "naliehave": null,
+    "stav": "ceka",
+    "vyrez": {
+      "text": "Rusové zasáhli továrnu i sklad v Kyjevské oblasti - iDNES.cz \r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\niDNES.cz\n\r\n\r\n\r\nP�ihl�sit \r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nAbyste mohli pokra�ovat, pot�ebujeme v�d�t, jakou formou v�m m��eme zobrazovat reklamu \r\n\r\n\r\n\r\n\r\n\r\nV�mi zvolen� nastaven� \r\nneobsahuje souhlas se zobrazov�n�m c�len� reklamy . \r\nVyberte pros�m znovu, \r\njakou formou v�m m�me zobrazovat obsah. \r\n\r\n\r\n\r\n\r\n\r\n\r\niDNES Premium\n\r\nBez reklam\n\r\n\r\n199 K� m�s��n�\n\r\nM��ete neomezen� ��st iDNES.cz, Lidovky.cz, Expres.cz a Antiyoutuber.cz. K tomu dostanete tak� noviny a �asopisy v elektronick� podob�. To v�e bez reklam. 1\n\r\n\r\nP�edplatit\n\r\n\r\nU� m�te ��et? P�ihlaste se\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nS c�lenou reklamou\n\r\n\r\n\r\nZdarma \r\n\r\nZachov�me v�m v�e tak, jak jste zvykl� a reklamu p�izp�sob�me va�im z�jm�m. Bez omezen� si m��ete d�l ��st, p�ehr�vat videa, sout�it �i p�isp�vat do v�ech diskus�. 2\n\r\n\r\nSouhlas�m\n\r\nPodrobn� nastaven�\n\r\n\r\n\r\n\r\n\r\n\r\niDNES a reklama\n\r\nPokud vyu�ijete m�sto platby ud�len� souhlasu s reklamou (tj. souhlas s vyu�it�m cookies a dal��ch s�ov�ch identifik�tor� pro ��ely c�len� reklamy), \r\nbudou V�m zobrazov�ny v r�mci na�ich web�…",
+      "stazeno": "2026-10-20T08:03:33.476Z",
+      "stav": 200
+    }
+  },
+  {
+    "id": "k-29d77fd462da6ae7",
+    "zachyceno": "2026-10-20T08:03:25.939Z",
+    "publikovano": "2026-10-20T06:01:37.000Z",
+    "zdroj": {
+      "nazev": "Euronews",
+      "url": "https://www.euronews.com/2026/10/20/europe-today-blame-continues-in-france-russia-kills-two-children-in-kharkiv",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Europe Today: Blame continues in France, Russia kills two children in Kharkiv",
+    "titulekPuvodni": "Europe Today: Blame continues in France, Russia kills two children in Kharkiv",
+    "shrnuti": "Blame in France over protests continues as Sébastien Lecornu accuses the ultra-left of orchestrating the unrest. In Kharkiv, two children are among the victims of a Russian strike on a park as Putin reportedly floats a summit without Kyiv. And an interview with Ryanair CEO Michael O’Leary.",
+    "kodZeme": "FR",
+    "zeme": "Francie",
+    "kategorie": [
+      "hybridni",
+      "rusko"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "putin+europ+strike",
+      "russia"
+    ],
+    "naliehave": null,
+    "stav": "ceka",
+    "vyrez": {
+      "text": "Europe Today: Blame continues in France, Russia kills two children in Kharkiv | Euronews\nAdvertisement\nBy&nbsp Adnan Leal\nPublished on 20/10/2026 - 8:01 GMT+2 &bull; Updated\n8:19\nShare\nComments\nAdd Euronews on Google\nShare\nFacebook\nTwitter\nFlipboard\nSend\nReddit\nLinkedin\nMessenger\nTelegram\nVK\nBluesky\nThreads\nWhatsapp\nCopy/paste the article video embed link below:\nCopied\nBlame in France over protests continues as Sébastien Lecornu accuses the ultra-left of orchestrating the unrest. In Kharkiv, two children are among the victims of a Russian strike on a park as Putin reportedly floats a summit without Kyiv. And an interview with Ryanair CEO Michael O’Leary.\nOn today's show:\nEstelle Nilsson-Julien reports from Paris, where the political blame game continues over who is responsible for the weekend’s unrest. French Prime Minister Sébastien Lecornu has accused the “ultra-left movement” of seeking to “orchestrate deep unrest” in the run-up to next year’s presidential election.\nADVERTISEMENT\nADVERTISEMENT\nWe hear from Audelia Sitbon , a pharmacist near Place de la République in Paris. Last Saturday, rioters smashed their way into her shop, looted her stock and set it ablaze. Left with…",
+      "stazeno": "2026-10-20T08:03:35.968Z",
+      "stav": 200
+    }
+  },
+  {
+    "id": "k-62b11840e1c7c6fa",
+    "zachyceno": "2026-10-20T08:03:28.544Z",
+    "publikovano": "2026-10-20T05:59:21.000Z",
+    "zdroj": {
+      "nazev": "Meduza (anglicky)",
+      "url": "https://meduza.io/en/news/2026/10/20/three-people-killed-in-russian-attack-on-kyiv-region-as-rescuers-search-debris-at-industrial-building",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Three people killed in Russian attack on Kyiv region as rescuers search debris at industrial building",
+    "titulekPuvodni": "Three people killed in Russian attack on Kyiv region as rescuers search debris at industrial building",
+    "shrnuti": "Russian forces struck a building used for manufacturing and storage in the Obukhiv district of Ukraine’s Kyiv region overnight on October 20. The building caught fire, the State Emergency Service said.",
+    "kodZeme": "UA",
+    "zeme": "Ukrajina",
+    "kategorie": [
+      "hybridni",
+      "rusko"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "attack on",
+      "russia"
+    ],
+    "naliehave": null,
+    "stav": "ceka",
+    "vyrez": {
+      "text": "Three people killed in Russian attack on Kyiv region as rescuers search debris at industrial building — Meduza\nSkip to main content\nThree people killed in Russian attack on Kyiv region as rescuers search debris at industrial building\nOctober 20, 2026, 5:59 am\nSource: Ukraine's State Emergency Service\nRussian forces struck a building used for manufacturing and storage in the Obukhiv district of Ukraine’s Kyiv region overnight on October 20. The building caught fire, the State Emergency Service said.\nThree people were killed, and six others were injured.\nTwo more people were killed and two were injured in a Russian attack on the Khmelnytskyi region on the evening of October 19. Two businesses and multiple private homes were also damaged.\nRussian air attacks on Ukraine\nKyiv has learned to live between air raid alerts. After two months of relentless Russian attacks, there’s barely any time between them.\nstories\n7 days ago\nRussia’s air attacks are disrupting daily life across Ukraine. Here’s how five major cities are adapting to the growing danger.\nnews\n11 days ago\nRussian missile strike on apartment building in Ukraine kills 14, including four children. Zelensky calls it the Russian…",
+      "stazeno": "2026-10-20T08:03:35.989Z",
+      "stav": 200
+    }
+  },
+  {
+    "id": "k-e03c683fbec0d344",
+    "zachyceno": "2026-10-20T05:51:03.199Z",
+    "publikovano": "2026-10-20T05:17:00.000Z",
+    "zdroj": {
+      "nazev": "Ukrainska Pravda (anglicky)",
+      "url": "https://www.pravda.com.ua/eng/news/2026/10/20/8058847/",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Ukraine's air defence downs 115 out of 165 Russian drones, with 20 still airborne",
+    "titulekPuvodni": "Ukraine's air defence downs 115 out of 165 Russian drones, with 20 still airborne",
+    "shrnuti": "Russia launched 165 drones, including 105 jet-powered UAVs. Ukraine's Air Force reported hits at 30 locations and falling drone debris at another 13.",
+    "kodZeme": "UA",
+    "zeme": "Ukrajina",
+    "kategorie": [
+      "drony",
+      "rusko"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "debris+dron",
+      "dron",
+      "drone",
+      "uav",
+      "russia"
+    ],
+    "naliehave": null,
+    "stav": "ceka",
+    "vyrez": {
+      "text": "Ukraine destroys or jams 115 out of 165 Russian drones overnight | Ukrainska Pravda\nA total of 115 drones were downed overnight. Infographic: Ukraine's Air Force\nRussia attacked Ukraine with 165 drones (105 jet-powered) on the night of 19-20 October. Ukraine's air defence has destroyed or jammed 115 UAVs, while another 20 remain airborne.\nSource: Ukraine's Air Force\nDetails: The attack began at 18:00 on 19 October. Russian forces used Shahed and Gerbera attack drones, S-8000 Banderol/Dan-T drone- and air-launched cruise missiles and Parodiya decoy UAVs.\nAdvertisement:\n\r\n\r\n\r\n\r\n\r\nThe drones were launched from the Russian cities of Oryol, Kursk and Primorsko-Akhtarsk as well as from temporarily occupied Donetsk, Chauda and Hvardiiske (Crimea) and from the Sea of Azov.\nQuote: \"As of 08:00, [Ukrainian] air defence forces had destroyed or jammed 115 Shahed (73 jet-powered), Gerbera and other types of drones. Another 20 attack drones remain airborne,\nHits by aerial assets have been recorded at 30 locations and the fall of downed aerial assets (debris) at 13 locations.\"\nBackground: Russian forces struck an apartment building in the Zarichnyi district of Sumy with a drone on the night of…",
+      "stazeno": "2026-10-20T05:51:03.360Z",
+      "stav": 200
+    }
+  },
+  {
+    "id": "k-790509d67253c048",
+    "zachyceno": "2026-10-20T05:51:03.202Z",
+    "publikovano": "2026-10-20T05:07:00.000Z",
+    "zdroj": {
+      "nazev": "Ukrainska Pravda (anglicky)",
+      "url": "https://www.pravda.com.ua/eng/news/2026/10/20/8058846/",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Five injured in overnight Russian attack on Izium – photos",
+    "titulekPuvodni": "Five injured in overnight Russian attack on Izium – photos",
+    "shrnuti": "Russian forces launched a series of drone attacks on Izium overnight, damaging houses and the city council’s education department building and sparking four fires.",
+    "kodZeme": "RU",
+    "zeme": "Rusko",
+    "kategorie": [
+      "hybridni",
+      "drony",
+      "rusko"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "attack on",
+      "dron",
+      "drone",
+      "russia"
+    ],
+    "naliehave": null,
+    "stav": "ceka",
+    "vyrez": {
+      "text": "Five injured in Russian drone strikes on Izium in Kharkiv Oblast | Ukrainska Pravda\nA fire. Photo: State Emergency Service of Ukraine\nRussian forces launched a series of drone strikes on the city of Izium in Kharkiv Oblast in the early hours of 20 October. Five people have been injured and residential buildings and the city education department building have been damaged.\nSource: State Emergency Service of Ukraine ; Izium City Military Administration\nQuote from the State Emergency Service: \"Kharkiv Oblast: five people have been injured in a Russian attack on Izium.\"\nAdvertisement:\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nA fire\n\r\n\r\n\r\nPhoto: State Emergency Service of Ukraine\r\n\r\n\r\n\r\nDetails: The city military administration said the attack had lasted from 00:22 to 04:00. Russian forces used attack drones, including jet-powered UAVs. Hits were recorded in several parts of the city.\nHouses, outbuildings and a car were destroyed or damaged in a residential area. The building housing the education department of Izium City Council was also damaged and a fire broke out there.\n\r\n\r\n\r\nDamage caused by Russia\n\r\n\r\n\r\nPhoto: State Emergency Service of Ukraine\r\n\r\n\r\n\r\nAccording to the State Emergency Service, the strikes…",
+      "stazeno": "2026-10-20T05:51:03.430Z",
+      "stav": 200
+    }
+  },
+  {
+    "id": "k-b2f17212a2783cd3",
+    "zachyceno": "2026-10-20T08:03:25.190Z",
+    "publikovano": "2026-10-20T04:47:00.000Z",
+    "zdroj": {
+      "nazev": "ČTK — České noviny",
+      "url": "https://www.ceskenoviny.cz/zpravy/ukrajinske-drony-utocily-v-rusku-rusky-uder-v-kyjevske-oblasti-zabil-tri-lidi/2890233?utm_source=rss&utm_medium=feed",
+      "typ": "wire",
+      "primarni": false
+    },
+    "titulek": "Ukrajinské drony útočily v Rusku, ruský úder v Kyjevské oblasti zabil tři lidi",
+    "titulekPuvodni": "Ukrajinské drony útočily v Rusku, ruský úder v Kyjevské oblasti zabil tři lidi",
+    "shrnuti": "Kyjev/Varšava/Moskva - Ukrajinské drony zasáhly ruské Tambovské oblasti blíže neupřesněný podnik, ve kterém vypukl požár, oznámil dnes gubernátor regionu Jevgenij Pervyšov. Podle zpráv na sociálních sítích...",
+    "kodZeme": "PL",
+    "zeme": "Polsko",
+    "kategorie": [
+      "drony",
+      "rusko"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "dron+zasahl",
+      "dron",
+      "rusk"
+    ],
+    "naliehave": null,
+    "stav": "ceka",
+    "vyrez": {
+      "text": "Ukrajinské drony útočily v Rusku, ruský úder v Kyjevské oblasti zabil tři lidi | ČeskéNoviny.cz \r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nPřejít k obsahu \r\n| \r\nPřejít k hlavnímu menu \r\n| \r\nPřejít k vyhledávání \r\n\r\n\r\n\r\n\r\n\r\n\r\nČeské noviny \r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nMenu \r\n\r\n\r\n\r\n\r\n\r\n\r\nÚvod \r\n\r\n\r\nČR\n\r\nSvět\n\r\nEkonomika\n\r\nKultura\n\r\nSport\n\r\nMagazín\n\r\nSpeciál\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nVolby 2026:\n\r\n\r\nZpravodajství\n\r\nVýsledky\n\r\nŽivě\n\r\n\r\nDalší:\n\r\n\r\nBlízký Východ\n\r\n\r\n\r\nInvaze na Ukrajinu\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nUkrajinské drony útočily v Rusku, ruský úder v Kyjevské oblasti zabil tři lidi\n\r\n\r\n\r\n\r\n\r\n\r\nKomerční prezentace Aktual.: 20.10.2026 09:35 \r\nVydáno: 20.10.2026, 06:47 \r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nIlustrační foto - Ukrajinští hasiči u požáru po útoku ruského dronu v Kyjevské oblasti, 12. května 2026. \r\nAP/Uncredited \r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nKyjev/Varšava/Moskva - Ukrajinské drony zasáhly ruské Tambovské oblasti blíže neupřesněný podnik, ve kterém vypukl požár, oznámil dnes gubernátor regionu Jevgenij Pervyšov. Podle zpráv na sociálních sítích se terčem…",
+      "stazeno": "2026-10-20T08:03:36.052Z",
+      "stav": 200
+    }
+  },
+  {
+    "id": "k-5e15693f62283295",
+    "zachyceno": "2026-10-20T05:51:01.325Z",
+    "publikovano": "2026-10-20T04:41:00.000Z",
+    "zdroj": {
+      "nazev": "Aktuality.sk",
+      "url": "https://www.aktuality.sk/clanok/IZ1Yxo0/litva-po-utoku-na-starlink-posilni-ochranu-kritickej-infrastruktury/",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Po pokuse o sabotáž Starlinku Litva sprísni ochranu kľúčových objektov",
+    "titulekPuvodni": "Po pokuse o sabotáž Starlinku Litva sprísni ochranu kľúčových objektov",
+    "shrnuti": "Litva posilní ochranu kritickej infraštruktúry po pokuse o podpaľačský útok na zariadenie Starlink. Úrady z incidentu podozrievajú Rusko",
+    "kodZeme": "LT",
+    "zeme": "Litva",
+    "kategorie": [
+      "sabotaz",
+      "hybridni",
+      "rusko"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "sabotaz",
+      "utok na",
+      "rusk"
+    ],
+    "naliehave": null,
+    "stav": "ceka",
+    "vyrez": {
+      "text": "Po pokuse o sabotáž Starlinku Litva sprísni ochranu kľúčových objektov | Aktuality.sk\nAktuality\nŠport\nDiva\nNajmama\nŽivé\nRecepty\nDobrú chuť\nSlovník\n5 °C -\nBratislava\nutorok 20. 10.\n20. 10.\nVendelín\nSprávy dnes 20. okt 2026 o 06:41\n1 min. čítania\nPridať do Google\nPo pokuse o sabotáž Starlinku Litva sprísni ochranu kľúčových objektov\n1 fotka v galérii\nLitva posilňuje protivzdušnú obranu Zdroj: istock\nTASR\nAktuality.sk\nUložiť článok\nLitva posilní ochranu kritickej infraštruktúry po pokuse o podpaľačský útok na zariadenie Starlink. Úrady z incidentu podozrievajú Rusko\nLitva posilní fyzickú a technickú ochranu lokalít kritickej infraštruktúry po tom, ako v krajine došlo k pokusu o podpaľačský útok na zariadenie satelitného systému Starlink. Po zasadnutí Rady pre národnú bezpečnosť to v pondelok oznámil litovský premiér Mindaugas Sinkevičius, informuje TASR podľa agentúry DPA.\nSinkevičius objasnil, že bezpečnostné opatrenia sa zvýšia vo viac ako 15 objektoch. Hovoril tiež o poskytnutí dodatočných síl a zdrojov na tento účel.\nPodpaľačský incident vo Vilniuse\nPremiér opatrenie zdôvodnil neúspešným pokusom o podpaľačstvo na pozemku firmy v hlavnom meste Vilnius, kde skladujú zariadenia…",
+      "stazeno": "2026-10-20T05:51:03.505Z",
+      "stav": 200
+    }
+  },
+  {
+    "id": "k-4587b292ac0d220c",
+    "zachyceno": "2026-10-20T05:51:03.206Z",
+    "publikovano": "2026-10-20T04:29:00.000Z",
+    "zdroj": {
+      "nazev": "Ukrainska Pravda (anglicky)",
+      "url": "https://www.pravda.com.ua/eng/news/2026/10/20/8058839/",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Death toll from Russian strike on industrial facility in Kyiv Oblast rises to three",
+    "titulekPuvodni": "Death toll from Russian strike on industrial facility in Kyiv Oblast rises to three",
+    "shrnuti": "The death toll from a Russian attack on a production and storage building in Kyiv Oblast has risen to three. Firefighters have extinguished the fire, but search and rescue operations are continuing.",
+    "kodZeme": "UA",
+    "zeme": "Ukrajina",
+    "kategorie": [
+      "hybridni",
+      "rusko"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "attack on",
+      "russia"
+    ],
+    "naliehave": null,
+    "stav": "ceka",
+    "vyrez": {
+      "text": "Three killed and six injured in Russian strike on industrial facility in Kyiv Oblast | Ukrainska Pravda\nFirefighters working. Photo: State Emergency Service of Ukraine\nThree people have been killed and six injured in a Russian attack on a production and storage building in the Obukhiv district in Kyiv Oblast.\nSource: State Emergency Service of Ukraine\nQuote: \"Kyiv Oblast: three people have been killed and six injured in a Russian attack.\"\nAdvertisement:\n\r\n\r\n\r\n\r\n\r\nDetails: Russian forces struck a production and storage building in one of the\nhromadas\nA hromada is an administrative unit designating a village, several villages, or a town, and their adjacent territories\nin the Obukhiv district overnight.\nThe fire has been extinguished, but the removal of rubble is ongoing. Psychologists from the State Emergency Service were also working at the scene.\nBackground: Tymur Tkachenko, Head of Kyiv Oblast Military Administration, previously said that a Russian attack on an industrial facility in the Obukhiv district on 19 October had killed one man and injured six people .\nSupport Ukrainska Pravda on Patreon to help us keep reporting!\nKyiv Oblast\nAdvertisement:\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nKyiv…",
+      "stazeno": "2026-10-20T05:51:04.955Z",
+      "stav": 200
+    }
+  },
+  {
     "id": "k-4910da22de42de53",
     "zachyceno": "2026-10-20T04:02:41.545Z",
     "publikovano": "2026-10-20T03:08:06.000Z",
@@ -2777,6 +3773,39 @@
     "vyrez": {
       "text": "Donald Trump odmieta pritvrdiť voči Rusku. Volodymyra Zelenského obvinil, že nechce koniec vojny | Aktuality.sk\nAktuality\nŠport\nDiva\nNajmama\nŽivé\nRecepty\nDobrú chuť\nSlovník\n7 °C -\nBratislava\npondelok 19. 10.\n19. 10.\nKristián\nSprávy dnes 19. okt 2026 o 06:18\n2 min. čítania\nPridať do Google\nDonald Trump odmieta pritvrdiť voči Rusku. Volodymyra Zelenského obvinil, že nechce koniec vojny\n1 fotka v galérii\nDonald Trump a Volodymyr Zelenskyj Zdroj: TASR/AP\nTASR\nAktuality.sk\nUložiť článok\nDonald Trump obhajoval zmiernenie sankčného tlaku na Rusko a Zelenského obvinil, že vojnu nechce ukončiť.\nAmerický prezident Donald Trump v nedeľu obhajoval svoje rozhodnutie blokovať zavedenie najnovších protiruských opatrení výmenou za stabilitu na trhu s palivami. Na sociálnej sieti Truth Social uviedol, že nechce urobiť nič, čo by Rusko odohnalo od rokovacieho stola. Ukrajinského prezidenta Volodymyra Zelenského zároveň obvinil, že si neželá ukončenie vojny s Ruskom, ktorá trvá už viac ako štyri roky, informovala agentúra AFP.\nTrump reagoval na kritiku ohľadom odkladu podpisu bližšie nešpecifikovaného sankčného dokumentu. Vyhlásil, že ho môže podpísať „kedykoľvek bude chcieť“. Argumentoval, že Rusko…",
       "stazeno": "2026-10-19T04:28:58.394Z",
+      "stav": 200
+    }
+  },
+  {
+    "id": "k-fd7b900593df5362",
+    "zachyceno": "2026-10-20T05:51:02.583Z",
+    "publikovano": "2026-10-19T04:00:00.000Z",
+    "zdroj": {
+      "nazev": "la Repubblica (Itálie)",
+      "url": "https://europe.repubblica.it/en/news/2026/10/19/news/rome_mafia_war_senese_clan_bombs-425658773/",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "The boss’s silence and the season of bombs: inside the invisible mafia war shaking Rome",
+    "titulekPuvodni": "The boss’s silence and the season of bombs: inside the invisible mafia war shaking Rome",
+    "shrnuti": "As the king of Rome's underworld cuts all contact from behind bars, fourteen explosions leave a bloody trail across the city's outskirts—amid the silence of victims and political embarrassment",
+    "kodZeme": "IT",
+    "zeme": "Itálie",
+    "kategorie": [
+      "sabotaz"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "explosion",
+      "bomb"
+    ],
+    "naliehave": null,
+    "stav": "ceka",
+    "vyrez": {
+      "text": "Inside the Rome Mafia war: why bombs are exploding in the capital | la Repubblica Europe\n\r\n\r\n\r\nMenu\nEurope\nIT\nEN\nITALIANO\nENGLISH\nEditorial Team\nContact Us\nNews\n19 October 2026 at 06:00\n4 min read\nROME – The boss cannot speak right now. And on the streets chaos has erupted. Fourteen bombs in four months, caught in a cycle of score-settling and gunfire. In Rome, every show of power is settled with violence.\nIn the Italian capital, there is a power vacuum that organized crime is exploiting, aided by the silence of the institutions. And so the explosions keep coming, one after another, always in the same part of the city: the southeast quadrant, home to nearly a million people. It is the domain of the Senese clan.\nThe boss known as O’ Pazz\nThe boss is Michele Senese, known as O’ Pazz ( The madman ), because he reportedly spent years trying to avoid prison by feigning madness. His roots trace back to the bloody Camorra wars—the powerful mafia organization originating in Naples— between Nuova Famiglia and Raffaele Cutolo's Nuova Camorra Organizzata, a conflict that left hundreds dead in the 1980s.\nMafia boss Michele Senese, nicknamed “O’ Pazz” (“The Madman”), in prison since…",
+      "stazeno": "2026-10-20T05:51:05.155Z",
       "stav": 200
     }
   },
@@ -9259,1091 +10288,6 @@
     "vyrez": {
       "text": "Ukraine destroys or jams 89 Russian drones in overnight attack, including 55 jet-powered UAVs | Ukrainska Pravda\nStock Photo: Anti-Aircraft Missile Regiment named after Kryvonis\nRussia attacked Ukraine with a Kh-59 air-to-surface missile from airspace over the Black Sea and 121 drones on the night of 11-12 October. Ukraine's air defences have downed 89 drones.\nSource: Ukraine's Air Force\nDetails: The Russians used Shahed (76 jet-powered) and Gerbera attack drones, Banderol/Dan-T drone-launched cruise missiles and Parodiya decoy drones launched from the Russian cities of Oryol, Kursk and Primorsko-Akhtarsk as well as from temporarily occupied Donetsk Oblast and Hvardiiske in Crimea.\nAdvertisement:\n\r\n\r\n\r\n\r\n\r\nEarly reports indicated that as of 09:00, Ukrainian air defence forces had destroyed or jammed 89 Shahed (55 jet-powered), Gerbera and other types of drones.\nHits by aerial assets have been recorded at 15 locations and downed aerial assets (debris) landed at four locations.\nThe Air Force warned that the Russian attack is ongoing.\nYour support on Patreon helps us keep the news free and accessible.\nAdvertisement:\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nLatest…",
       "stazeno": "2026-10-12T08:05:20.965Z",
-      "stav": 200
-    }
-  },
-  {
-    "id": "k-7d106effab6ece61",
-    "zachyceno": "2026-10-12T08:05:13.811Z",
-    "publikovano": "2026-10-12T06:10:00.000Z",
-    "zdroj": {
-      "nazev": "ČTK — České noviny",
-      "url": "https://www.ceskenoviny.cz/zpravy/-moskva-i-kyjev-hlasi-desitky-sestrelenych-dronu/2886548?utm_source=rss&utm_medium=feed",
-      "typ": "wire",
-      "primarni": false
-    },
-    "titulek": "Moskva i Kyjev hlásí desítky sestřelených dronů",
-    "titulekPuvodni": "Moskva i Kyjev hlásí desítky sestřelených dronů",
-    "shrnuti": "Kyjev/Moskva - Ruské ministerstvo obrany dnes ráno oznámilo noční sestřelení 151 ukrajinských dronů nad deseti ruskými regiony, anektovaným poloostrovem Krym a nad Černým mořem. O škodách nebo obětech...",
-    "kodZeme": "UA",
-    "zeme": "Ukrajina",
-    "kategorie": [
-      "drony",
-      "rusko"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "zeSite": null,
-    "shody": [
-      "sestrel",
-      "dron",
-      "rusk"
-    ],
-    "naliehave": null,
-    "stav": "ceka",
-    "vyrez": {
-      "text": "Moskva i Kyjev hlásí desítky sestřelených dronů | ČeskéNoviny.cz \r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nPřejít k obsahu \r\n| \r\nPřejít k hlavnímu menu \r\n| \r\nPřejít k vyhledávání \r\n\r\n\r\n\r\n\r\n\r\n\r\nČeské noviny \r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nMenu \r\n\r\n\r\n\r\n\r\n\r\n\r\nÚvod \r\n\r\n\r\nČR\n\r\nSvět\n\r\nEkonomika\n\r\nKultura\n\r\nSport\n\r\nMagazín\n\r\nSpeciál\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nVolby 2026:\n\r\n\r\nZpravodajství\n\r\nVýsledky\n\r\nŽivě\n\r\n\r\nDalší:\n\r\n\r\nBlízký Východ\n\r\n\r\n\r\nInvaze na Ukrajinu\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nMoskva i Kyjev hlásí desítky sestřelených dronů\n\r\n\r\n\r\n\r\n\r\n\r\nKomerční prezentace Aktual.: 12.10.2026 08:10 \r\nVydáno: 12.10.2026, 08:10 \r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nUkrajinský voják s dronem - ilustrační foto. \r\nAP/Andriy Andriyenko \r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nKyjev/Moskva - Ruské ministerstvo obrany dnes ráno oznámilo noční sestřelení 151 ukrajinských dronů nad deseti ruskými regiony, anektovaným poloostrovem Krym a nad Černým mořem. O škodách nebo obětech se nezmiňuje. Ukrajinské letectvo uvedlo, že Moskva v noci na dnešek na Ukrajinu vyslala 121 útočných dronů, z nichž 89 se podle…",
-      "stazeno": "2026-10-12T08:05:20.997Z",
-      "stav": 200
-    }
-  },
-  {
-    "id": "k-87f1573e7c8d015c",
-    "zachyceno": "2026-10-12T12:05:11.127Z",
-    "publikovano": "2026-10-12T05:29:41.000Z",
-    "zdroj": {
-      "nazev": "France 24 (anglicky)",
-      "url": "https://www.france24.com/en/europe/20261012-live-oil-prices-fall-after-trump-unilaterally-announces-russia-ukraine-energy-ceasefire",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Live: Top NATO military commander says a Russian attack would be 'utterly futile'",
-    "titulekPuvodni": "Live: Top NATO military commander says a Russian attack would be 'utterly futile'",
-    "shrnuti": "NATO’s top commander US Air Force General Alexus Grynkewich on Monday said that the military alliance would “block, blunt and break” any Russian attack on its members’ territory, making such an assault “utterly futile”. But he stressed that he did not judge that such a conflict was “imminent or inev",
-    "kodZeme": "RU",
-    "zeme": "Rusko",
-    "kategorie": [
-      "hybridni",
-      "nato",
-      "rusko"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "zeSite": null,
-    "shody": [
-      "attack on",
-      "nato",
-      "russia"
-    ],
-    "naliehave": null,
-    "stav": "ceka",
-    "vyrez": {
-      "text": "Live: Top NATO military commander says a Russian attack would be 'utterly futile' - France 24\nSkip to main content\nLive\nLive: Top NATO military commander says a Russian attack would be 'utterly futile'\nEurope\nIssued on: 12/10/2026 - 07:29 Modified: 12/10/2026 - 13:59\nShare\nBy:\nFRANCE 24\nUS General Alexus G. Grynkewich, the Supreme Allied Commander Europe (SACEUR), speaks during the opening session of the Warsaw Security Forum in Warsaw, Poland on October 12, 2026. © Wojtek Radwanski, AFP\nNATO’s top commander US Air Force General Alexus Grynkewich on Monday said that the military alliance would “block, blunt and break” any Russian attack on its members’ territory, making such an assault “utterly futile”. But he stressed that he did not judge that such a conflict was “imminent or inevitable”. Follow our liveblog for the latest updates.\n12/10/2026 - 13:59 EU adopts new North Korea sanctions over Pyongyang's support for Russian war effort\nThe ​EU ​adopted sanctions against three individuals and four ​entities ‌in ⁠North Korea to target ‌the country's nuclear ⁠and ballistic missile activities, the Council ​of the European ‌Union said in a statement.\nThe new ‌designations were linked…",
-      "stazeno": "2026-10-12T12:05:21.480Z",
-      "stav": 200
-    }
-  },
-  {
-    "id": "k-080d411cd6e0b070",
-    "zachyceno": "2026-10-12T08:05:16.832Z",
-    "publikovano": "2026-10-12T02:22:00.000Z",
-    "zdroj": {
-      "nazev": "Ukrainska Pravda (anglicky)",
-      "url": "https://www.pravda.com.ua/eng/news/2026/10/12/8057525/",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Strikes on Yandex data centres disrupt over 80 Russian services",
-    "titulekPuvodni": "Strikes on Yandex data centres disrupt over 80 Russian services",
-    "shrnuti": "Three Ukrainian drone attacks on Yandex data centres disrupted more than 80 digital services, while bot traffic from the company's network fell to almost zero.",
-    "kodZeme": "UA",
-    "zeme": "Ukrajina",
-    "kategorie": [
-      "drony",
-      "rusko"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "zeSite": null,
-    "shody": [
-      "dron+fell",
-      "dron",
-      "drone",
-      "russia"
-    ],
-    "naliehave": null,
-    "stav": "ceka",
-    "vyrez": {
-      "text": "Ukrainian drone strikes on Yandex data centres disrupt over 80 services | Ukrainska Pravda\nStock photo\nThree consecutive Ukrainian drone attacks on data centres operated by Russian technology company Yandex have caused disruptions to more than 80 of its digital platforms and third-party but related services, such as banking apps and ride-hailing services. Bot traffic from the Yandex network has also fallen to almost zero.\nSource : Tom's Hardware , citing Cloudflare data\nDetails : Tom's Hardware reported that on 8 October, when a Yandex data centre in Sasovo housing two supercomputers was damaged, bot traffic from the network fell to around 57% of its peak level. On 9 October, a larger Yandex data centre complex in Kaluga was put out of operation, followed by another facility in Vladimir on 11 October . As a result, bot traffic fell to 0.4% of the peak level recorded over the previous two weeks.\nAdvertisement:\n\r\n\r\n\r\n\r\n\r\nYandex, sometimes described as \"Russia's Google\", powers hundreds of online services, including its namesake search engine and cloud platform. Kyiv Post reported that the attacks disrupted at least 80 services, including the Alisa voice assistant, Yandex Music and…",
-      "stazeno": "2026-10-12T08:05:21.576Z",
-      "stav": 200
-    }
-  },
-  {
-    "id": "k-dcec8f28ec92cd45",
-    "zachyceno": "2026-10-12T08:05:16.835Z",
-    "publikovano": "2026-10-12T01:58:00.000Z",
-    "zdroj": {
-      "nazev": "Ukrainska Pravda (anglicky)",
-      "url": "https://www.pravda.com.ua/eng/news/2026/10/12/8057524/",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "NATO believes Europe must step up support for Ukraine to deter Putin – Bloomberg",
-    "titulekPuvodni": "NATO believes Europe must step up support for Ukraine to deter Putin – Bloomberg",
-    "shrnuti": "Speaking at the Warsaw Security Forum, General Alexus Grynkewich has emphasised that boosting support for Ukraine is essential to counter Russian sabotage and cyberattacks.",
-    "kodZeme": "PL",
-    "zeme": "Polsko",
-    "kategorie": [
-      "sabotaz",
-      "kyber",
-      "hybridni",
-      "nato",
-      "rusko"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "zeSite": null,
-    "shody": [
-      "sabotage",
-      "cyberattack",
-      "putin+nato+war",
-      "cyber",
-      "nato",
-      "russia"
-    ],
-    "naliehave": null,
-    "stav": "ceka",
-    "vyrez": {
-      "text": "NATO General Grynkewich calls for stronger European support to deter Putin | Ukrainska Pravda\nStock photo: Getty Images\nGeneral Alexus Grynkewich, NATO Supreme Allied Commander Europe, has stated that Europe must step up its support for Ukraine in response to Russian hybrid attacks.\nSource: Grynkewich at the Warsaw Security Forum in a comment to Bloomberg\nDetails: Commenting on the intensifying wave of Russian aggression against Europe, which includes NATO airspace violations, arson, sabotage and cyberattacks, Grynkewich noted: \"They're trying to break our collective will.\"\nAdvertisement:\n\r\n\r\n\r\n\r\n\r\nHe cited Denmark and Germany as examples, which increased their aid to Ukraine after hybrid attacks were carried out on their territories.\nQuote from Grynkewich: \"Those are appropriate responses that show Russia that the objectives that they're seeking to attain are unobtainable.\"\nDetails: Bloomberg notes that these attacks occurred against the backdrop of Russian leader Vladimir Putin's forces continuing to suffer significant losses in Ukraine. Meanwhile, the publication says, Ukrainians are inflicting ever-greater economic damage on the Russian occupiers by conducting numerous attacks…",
-      "stazeno": "2026-10-12T08:05:21.605Z",
-      "stav": 200
-    }
-  },
-  {
-    "id": "k-ce4c65eacbfd8c5e",
-    "zachyceno": "2026-10-12T18:03:16.926Z",
-    "publikovano": "2026-10-12T00:00:00.000Z",
-    "zdroj": {
-      "nazev": "BTA (státní agentura Bulharska)",
-      "url": "https://www.bta.bg/en/news/bulgaria/1223187-mp-mirchev-of-democratic-bulgaria-reports-deliberate-arson-attack-on-11-starlink",
-      "typ": "wire",
-      "primarni": false
-    },
-    "titulek": "MP Mirchev of Democratic Bulgaria Reports Deliberate Arson Attack on 11 Starlink Communication Antennas near Sofia",
-    "titulekPuvodni": "MP Mirchev of Democratic Bulgaria Reports Deliberate Arson Attack on 11 Starlink Communication Antennas near Sofia",
-    "shrnuti": "",
-    "kodZeme": "BG",
-    "zeme": "Bulharsko",
-    "kategorie": [
-      "sabotaz",
-      "hybridni"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "zeSite": null,
-    "shody": [
-      "arson",
-      "attack on"
-    ],
-    "naliehave": null,
-    "stav": "ceka",
-    "vyrez": {
-      "text": "BTA :: MP Mirchev of Democratic Bulgaria Reports Deliberate Arson Attack on 11 Starlink Communication Antennas near Sofia\nnews.images\nWorld\nBalkans\nnews.images\nEconomy\nCulture\nnews.images\nnews.images\nSport\nBG World\nnews.images\nExchange rates\nForeign exchange rate of BNB 12.10.2026\n1 EUR = 1.9558 BGN\n1 USD = 0.8944 EUR\n1 CHF = 1.0739 EUR\n1 GBP = 1.1837 EUR\nBulgarian News Agency\nMy BTA\nLogin\nHave no account?\nsite.bta MP Mirchev of Democratic Bulgaria Reports Deliberate Arson Attack on 11 Starlink Communication Antennas near Sofia\nKonstantin Karagyozov\nDemocratic Bulgaria MP Ivaylo Mirchev (BTA Photo/Hristo Kasabov)\nSofia,\n12.10.2026 20:52\n(BTA)\nEleven antennas used to communicate with Starlink, SpaceX&rsquo;s satellite communications system, were deliberately set on fire at a secret facility near Sofia, Democratic Bulgaria MP Ivaylo Mirchev said in a Facebook post on Monday. He wrote that the damaged antennas provide a key link to Elon Musk&rsquo;s satellites in space, which are also actively used in the war in Ukraine. According to Mirchev, two masked men set fire to 11 of the 17 SpaceX antennas at the site used to connect to Starlink satellites.\nMirchev said that just days…",
-      "stazeno": "2026-10-12T19:45:51.684Z",
-      "stav": 200
-    }
-  },
-  {
-    "id": "k-45e09439ee819d83",
-    "zachyceno": "2026-10-09T13:42:13.198Z",
-    "publikovano": "2026-10-09T00:00:00.000Z",
-    "zdroj": {
-      "nazev": "The Kyiv Independent",
-      "url": "https://kyivindependent.com/ukrainian-investigative-journalist-mykhailo-tkach-detained-in-austria-while-on-assignment/",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Update: Ukrainian journalists detained in Austria suspected of spying, minister claims.",
-    "titulekPuvodni": "Update: Ukrainian journalists detained in Austria suspected of spying, minister claims.",
-    "shrnuti": "",
-    "kodZeme": "AT",
-    "zeme": "Rakousko",
-    "kategorie": [
-      "zpravodajske"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "zeSite": null,
-    "shody": [
-      "detained+spy"
-    ],
-    "naliehave": null,
-    "stav": "ceka",
-    "vyrez": {
-      "text": "Update: Ukrainian journalists detained in Austria suspected of spying, minister claims Help rescue animals from the front line — shop our Companion Collection 🐾\nShop Now\nEurope Update: Ukrainian journalists detained in Austria suspected of spying, minister claims\nOctober 8, 2026 11:52 pm  (Updated:  October 9, 2026 4:24 pm )\n• 3 min read\nPrefer on Google\nL\nby Lachlan Hyatt, Oleg Sukhov\nJournalist Mykhailo Tkach. (Dmytro Larin / Mykhailo Tkach / Facebook )\nEditor's note: This story is being updated.\nThe two Ukrainian journalists detained in Austria on Oct. 8 are suspected of espionage, Austrian Interior Minister Gerhard Karner said at a press conference on Oct. 9.\nMykhailo Tkach, head of the media outlet Ukrainska Pravda's investigations team, has been released, while cameraman Yaroslav Bondarenko is still in custody, Karner said , as cited by the Ausrian newspaper Kleine Zeitung.\n\"At 4 a.m. on Oct. 9, Mykhailo Tkach was released after being detained for more than 12 hours in Vienna,\" Sevhil Musayeva, Ukrainska Pravda's chief editor, wrote on Facebook. \"However, his communication devices have still not been returned, so the editorial team is currently unable to contact him…",
-      "stazeno": "2026-10-09T13:42:21.912Z",
-      "stav": 200
-    }
-  },
-  {
-    "id": "k-e9294615b2b7c793",
-    "zachyceno": "2026-10-09T12:03:49.440Z",
-    "publikovano": "2026-10-09T00:00:00.000Z",
-    "zdroj": {
-      "nazev": "The Kyiv Independent",
-      "url": "https://kyivindependent.com/founder-of-russian-war-propaganda-channel-rybar-detained-in-montenegro/",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Founder of Rybar, Russian war propaganda channel, detained in Montenegro.",
-    "titulekPuvodni": "Founder of Rybar, Russian war propaganda channel, detained in Montenegro.",
-    "shrnuti": "",
-    "kodZeme": "RU",
-    "zeme": "Rusko",
-    "kategorie": [
-      "zpravodajske",
-      "rusko"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "zeSite": null,
-    "shody": [
-      "detained+russia",
-      "russia"
-    ],
-    "naliehave": null,
-    "stav": "ceka",
-    "vyrez": {
-      "text": "Founder of Rybar, Russian war propaganda channel, detained in Montenegro Help rescue animals from the front line — shop our Companion Collection 🐾\nShop Now\nEurope Founder of Rybar, Russian war propaganda channel, detained in Montenegro\nOctober 9, 2026 1:47 pm  (Updated:  October 9, 2026 2:40 pm )\n• 2 min read\nPrefer on Google\nby Martin Fornusek\nRussian military blogger Mikhail Zvinchuk, who runs a Telegram account called Rybar, was interviewed by The Washington Post in Moscow on Nov. 1, 2024. (PFrancesca Ebel/The Washington Post via Getty Images)\nEditor's note: The story has been updated with the latest details.\nMontenegrin authorities detained Mikhail Zvinchuk, the founder of the pro-Kremlin war blog Rybar, as reported by local media and confirmed by Montenegro's government on Oct. 9.\nZvinchuk, his wife Valeria Zvinchuk, and three other associates were detained in an operation by Montenegrin police and security service on the morning of Oct. 9 in the town of Risan, the Vijesti newspaper reported, citing its sources.\nRybar is one of Russia 's most popular pro-war blogs with over 1.5 million followers on the Telegram app, focusing on the coverage of battlefield developments in…",
-      "stazeno": "2026-10-09T13:42:22.615Z",
-      "stav": 200
-    }
-  },
-  {
-    "id": "k-9f2caaec7923f9af",
-    "zachyceno": "2026-10-08T10:03:44.443Z",
-    "publikovano": "2026-10-08T09:11:00.000Z",
-    "zdroj": {
-      "nazev": "iDNES.cz — zpravodajství",
-      "url": "https://www.idnes.cz/zpravy/zahranicni/ukrajinci-uderili-na-datove-centrum-ruskeho-googlu-weby-postihl-vypadek.A261008_110439_zahranicni_bro#utm_source=rss&utm_medium=feed&utm_campaign=zpravodaj&utm_content=main",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Ukrajinci udeřili na datové centrum „ruského Googlu“, weby postihl výpadek",
-    "titulekPuvodni": "Ukrajinci udeřili na datové centrum „ruského Googlu“, weby postihl výpadek",
-    "shrnuti": "Na datové centrum největší ruské technologické společnosti Yandex v Rjazaňské oblasti v noci zaútočily ukrajinské drony. Společnost oznámila, že v centru se stal incident, který zasáhl část infrastruktury. Yandex také uvedl, že situace v areálu je pod kontrolou, nikomu se nic nestalo a pracuje se „n",
-    "kodZeme": "UA",
-    "zeme": "Ukrajina",
-    "kategorie": [
-      "drony",
-      "rusko"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "zeSite": null,
-    "shody": [
-      "dron+zasahl",
-      "dron",
-      "rusk"
-    ],
-    "naliehave": null,
-    "stav": "ceka",
-    "vyrez": {
-      "text": "Ukrajinci udeřili na datové centrum společnosti Jandex - iDNES.cz \r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\niDNES.cz\n\r\n\r\n\r\nP�ihl�sit \r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nAbyste mohli pokra�ovat, pot�ebujeme v�d�t, jakou formou v�m m��eme zobrazovat reklamu \r\n\r\n\r\n\r\n\r\n\r\nV�mi zvolen� nastaven� \r\nneobsahuje souhlas se zobrazov�n�m c�len� reklamy . \r\nVyberte pros�m znovu, \r\njakou formou v�m m�me zobrazovat obsah. \r\n\r\n\r\n\r\n\r\n\r\n\r\niDNES Premium\n\r\nBez reklam\n\r\n\r\n199 K� m�s��n�\n\r\nM��ete neomezen� ��st iDNES.cz, Lidovky.cz, Expres.cz a Antiyoutuber.cz. K tomu dostanete tak� noviny a �asopisy v elektronick� podob�. To v�e bez reklam. 1\n\r\n\r\nP�edplatit\n\r\n\r\nU� m�te ��et? P�ihlaste se\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nS c�lenou reklamou\n\r\n\r\n\r\nZdarma \r\n\r\nZachov�me v�m v�e tak, jak jste zvykl� a reklamu p�izp�sob�me va�im z�jm�m. Bez omezen� si m��ete d�l ��st, p�ehr�vat videa, sout�it �i p�isp�vat do v�ech diskus�. 2\n\r\n\r\nSouhlas�m\n\r\nPodrobn� nastaven�\n\r\n\r\n\r\n\r\n\r\n\r\niDNES a reklama\n\r\nPokud vyu�ijete m�sto platby ud�len� souhlasu s reklamou (tj. souhlas s vyu�it�m cookies a dal��ch s�ov�ch identifik�tor� pro ��ely c�len� reklamy), \r\nbudou V�m zobrazov�ny v r�mci na�ich…",
-      "stazeno": "2026-10-08T10:03:55.712Z",
-      "stav": 200
-    }
-  },
-  {
-    "id": "k-e1c820c7b56c0121",
-    "zachyceno": "2026-10-08T10:03:47.849Z",
-    "publikovano": "2026-10-08T08:58:00.000Z",
-    "zdroj": {
-      "nazev": "Ukrinform (anglicky)",
-      "url": "https://www.ukrinform.net/rubric-ato/4172225-russian-drone-debris-falls-in-kyivs-holosiivskyi-district-killing-one-and-injuring-others.html",
-      "typ": "wire",
-      "primarni": false
-    },
-    "titulek": "Russian drone debris falls in Kyiv's Holosiivskyi district, killing one and injuring others",
-    "titulekPuvodni": "Russian drone debris falls in Kyiv's Holosiivskyi district, killing one and injuring others",
-    "shrnuti": "In Kyiv’s Holosiivskyi district, debris from a Russian drone was reported to have fallen in an open area; medical personnel have been called to the scene.",
-    "kodZeme": "UA",
-    "zeme": "Ukrajina",
-    "kategorie": [
-      "drony",
-      "rusko"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "zeSite": null,
-    "shody": [
-      "debris+dron",
-      "dron",
-      "drone",
-      "russia"
-    ],
-    "naliehave": null,
-    "stav": "ceka",
-    "vyrez": {
-      "text": "Russian drone debris falls in Kyiv's Holosiivskyi district, killing one and injuring others\n\r\nSubscription\nNewsletters\nPhotobank\nUkrinform - Ukrainian National News Agency\nFounded in 1918\nThursday, 08 October 2026, 13:03\nWar\nEconomy\nSports\nMore ☰\nContacts\nEng\nУкр\nEng\nEsp\nDeu\nعربي\nFra\n日本語\nPol\n&times;\nAll topics\nWar\nRecovery of Ukraine\nPolitics\nEconomy\nFact checks\nDefense\nSociety and Culture\nSports\nCrime\nAccidents and Emergencies\nAgency\nInformation on Agency\nOur Contacts\nSubscribtion Terms\nOur Services\nPrivacy policy and personal data protection\nAdditional\nPublications\nInterviews\nPhoto\nVideo\nLongreads\nReleases\nServices\nSubscription\nNewsletters\nPhotobank\n\r\n\r\n\r\nIn Kyiv&rsquo;s Holosiivskyi district, debris from a Russian drone was reported to have fallen in an open area; medical personnel have been called to the scene.\nKyiv Mayor Vitali Klitschko reported this on Telegram , according to Ukrinform.\n\r\n\r\n\r\n\r\n\r\n\r\nEmergency services are heading to the scene.\n\r\n\r\n\r\n\r\n\r\n\r\nKlitschko later reported that one person had died and 11 were injured since the start of the day.\n\r\n\r\n\r\n\r\n\r\n\r\n&ldquo;Since the start of the day on October 8, one person has died in Kyiv as a result of enemy attacks. Eleven…",
-      "stazeno": "2026-10-08T10:03:57.890Z",
-      "stav": 200
-    }
-  },
-  {
-    "id": "k-4556e81c58a3fa5a",
-    "zachyceno": "2026-10-08T10:03:44.349Z",
-    "publikovano": "2026-10-08T08:56:05.000Z",
-    "zdroj": {
-      "nazev": "Novinky.cz",
-      "url": "https://www.novinky.cz/clanek/valka-na-ukrajine-ukrajinsky-namorni-bezpilotni-clun-sestrelil-rusky-sahid-40601431",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Ukrajinský námořní bezpilotní člun sestřelil ruský šáhid",
-    "titulekPuvodni": "Ukrajinský námořní bezpilotní člun sestřelil ruský šáhid",
-    "shrnuti": "Ukrajinský bezpilotní člun Sargan-3000 sestřelil nad Černým mořem ruský sebevražedný dron šáhid. Ve středu záběry ze střetu zveřejnilo ukrajinské námořnictvo.",
-    "kodZeme": "UA",
-    "zeme": "Ukrajina",
-    "kategorie": [
-      "drony",
-      "rusko"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "zeSite": null,
-    "shody": [
-      "sestrel",
-      "dron",
-      "rusk"
-    ],
-    "naliehave": null,
-    "stav": "ceka",
-    "vyrez": {
-      "text": "Ukrajinský námořní bezpilotní člun sestřelil ruský šáhid - Novinky\nZobrazení snímku 1 z 0\nzáhlaví\nHlavní obsah\nUkrajinský námořní bezpilotní člun sestřelil ruský šáhid\nJana Kotrášová\n1:10\nChcete-li článek poslouchat, přihlaste se\neBook\nSdílet\nDnes 8. 10., 10:56\nUkrajinský bezpilotní člun Sargan-3000 sestřelil nad Černým mořem ruský sebevražedný dron šáhid. Ve středu záběry ze střetu zveřejnilo ukrajinské námořnictvo.\nUkrajinský bezpilotní člun Sargan-3000 sestřelil ruský dron šáhid Video: Ukrajinské námořnictvo/YouTube\nČlánek\n„Bezpilotní letoun šáhid zasáhla palba z věže námořního bezposádkového člunu Sargan 3000,“ oznámilo ukrajinské námořnictvo na YouTube .\nPortál Militarnyj upřesnil, že dron zasáhla střelba z automatického modulu RWS s velkorážním kulometem ráže 12,7 mm.\nNámořní dron Sargan-3000 ukrajinské ozbrojené síly zavedly do výzbroje letos v dubnu a připsal si prvenství v robotickém boji. V září během první bezpilotní námořní bitvy jeden Sargan-3000 zničil kulometnou palbou ruský vodní dron.\nBojový dosah ukrajinského bezpilotního člunu činí až 1600 kilometrů. Dokáže vyvinout rychlost 40 až 55 uzlů a uveze až 450 kilogramů bojového nákladu, doplnila agentura Unian .\nPrvní…",
-      "stazeno": "2026-10-08T10:03:59.148Z",
-      "stav": 200
-    }
-  },
-  {
-    "id": "k-2302abb382d61a11",
-    "zachyceno": "2026-10-08T10:03:45.154Z",
-    "publikovano": "2026-10-08T08:37:32.000Z",
-    "zdroj": {
-      "nazev": "Euronews",
-      "url": "https://www.euronews.com/2026/10/08/only-a-third-of-eu-counter-drone-programmes-will-deliver-by-2030-leaked-report-warns",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Only a third of EU counter-drone programmes will deliver by 2030, leaked report warns",
-    "titulekPuvodni": "Only a third of EU counter-drone programmes will deliver by 2030, leaked report warns",
-    "shrnuti": "EU counter-drone investment grew sixfold in 2025, but only a third of programmes will deliver by 2030, a confidential EU report seen by Euronews says, citing fragmented procurement and industry struggling to keep pace with fast-moving drone technology.",
-    "kodZeme": "EU",
-    "zeme": "EU",
-    "kategorie": [
-      "drony"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "zeSite": null,
-    "shody": [
-      "fragment+dron",
-      "dron",
-      "drone"
-    ],
-    "naliehave": null,
-    "stav": "ceka",
-    "vyrez": {
-      "text": "Only a third of EU counter-drone programmes will deliver by 2030, leaked report warns | Euronews\nAdvertisement\nBy&nbsp Luca Bertuzzi\nPublished on\n08/10/2026 - 10:37 GMT+2\nShare\nComments\nAdd Euronews on Google\nShare\nFacebook\nTwitter\nFlipboard\nSend\nReddit\nLinkedin\nMessenger\nTelegram\nVK\nBluesky\nThreads\nWhatsapp\nEU counter-drone investment grew sixfold in 2025, but only a third of programmes will deliver by 2030, a confidential EU report seen by Euronews says, citing fragmented procurement and industry struggling to keep pace with fast-moving drone technology.\nInvestment in counter-drone technology across the EU surged sixfold between 2024 and 2025, but only a third of the programmes are expected to deliver by 2030, according to a confidential EU report obtained by Euronews.\nADVERTISEMENT\nADVERTISEMENT\nThe 2026 annual defence readiness report, a European Defence Agency (EDA) assessment of national military capabilities, exposes persistent gaps in Europe's defences against drones and urges member states to step up investment in drone and counter-drone technology.\n\"Investment in counter-drone and very short-range air defence capabilities grew sixfold between 2024 and 2025 in response to…",
-      "stazeno": "2026-10-08T10:04:00.139Z",
-      "stav": 200
-    }
-  },
-  {
-    "id": "k-aec458888ab20302",
-    "zachyceno": "2026-10-08T10:03:45.160Z",
-    "publikovano": "2026-10-08T08:22:46.000Z",
-    "zdroj": {
-      "nazev": "Euronews",
-      "url": "https://www.euronews.com/2026/10/08/uk-pm-burnham-to-discuss-sabotage-and-cybersecurity-with-merz-in-berlin",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "UK PM Burnham to discuss sabotage and cybersecurity with Merz in Berlin",
-    "titulekPuvodni": "UK PM Burnham to discuss sabotage and cybersecurity with Merz in Berlin",
-    "shrnuti": "Burnham's meeting with Merz comes amid increasing warnings of hybrid threats in Europe and follows a drone attack on Leipzig/Halle airport in August - which Berlin has accused Russia of orchestrating.",
-    "kodZeme": "DE",
-    "zeme": "Německo",
-    "kategorie": [
-      "sabotaz",
-      "hybridni",
-      "drony",
-      "kyber",
-      "rusko"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "zeSite": null,
-    "shody": [
-      "sabotage",
-      "attack on",
-      "dron",
-      "drone",
-      "cyber",
-      "russia"
-    ],
-    "naliehave": null,
-    "stav": "ceka",
-    "vyrez": {
-      "text": "UK PM Burnham to discuss sabotage and cybersecurity with Merz in Berlin | Euronews\nAdvertisement\nBy&nbsp Nathan Rennolds\nPublished on\n08/10/2026 - 10:22 GMT+2\nShare\nComments\nAdd Euronews on Google\nShare\nFacebook\nTwitter\nFlipboard\nSend\nReddit\nLinkedin\nMessenger\nTelegram\nVK\nBluesky\nThreads\nWhatsapp\nBurnham's meeting with Merz comes amid increasing warnings of hybrid threats in Europe and follows a drone attack on Leipzig/Halle airport in August - which Berlin has accused Russia of orchestrating.\nBritish Prime Minister Andy Burnham is set to meet with German Chancellor Friedrich Merz in Berlin on Thursday, with the pair expected to discuss the growing threats from cyber-attacks and sabotage across Europe.\nADVERTISEMENT\nADVERTISEMENT\nAccording to Downing Street, the UK and Germany are to commit to deepening cooperation on cybersecurity and countering sabotage and other hybrid threats.\n\"The hybrid threat from our adversaries – especially Russia – extends across Europe and beyond, threatening our collective security,\" a government press release said. \"The UK and Germany will jointly act on identifying and disrupting hybrid activity, wherever it comes from.\"\nThe new joint-partnership…",
-      "stazeno": "2026-10-08T10:04:00.252Z",
-      "stav": 200
-    }
-  },
-  {
-    "id": "k-31e5d59a1760342a",
-    "zachyceno": "2026-10-08T10:03:47.853Z",
-    "publikovano": "2026-10-08T08:22:00.000Z",
-    "zdroj": {
-      "nazev": "Ukrinform (anglicky)",
-      "url": "https://www.ukrinform.net/rubric-ato/4172175-russian-strike-damages-business-in-rivne-region.html",
-      "typ": "wire",
-      "primarni": false
-    },
-    "titulek": "Russian strike damages business in Rivne region",
-    "titulekPuvodni": "Russian strike damages business in Rivne region",
-    "shrnuti": "In the Rivne region, a facility was damaged and a fire broke out as a result of a Russian attack on the morning of October 8.",
-    "kodZeme": "RU",
-    "zeme": "Rusko",
-    "kategorie": [
-      "hybridni",
-      "rusko"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "zeSite": null,
-    "shody": [
-      "attack on",
-      "russia"
-    ],
-    "naliehave": null,
-    "stav": "ceka",
-    "vyrez": {
-      "text": "Russian strike damages business in Rivne region\n\r\nSubscription\nNewsletters\nPhotobank\nUkrinform - Ukrainian National News Agency\nFounded in 1918\nThursday, 08 October 2026, 13:04\nWar\nEconomy\nSports\nMore ☰\nContacts\nEng\nУкр\nEng\nEsp\nDeu\nعربي\nFra\n日本語\nPol\n&times;\nAll topics\nWar\nRecovery of Ukraine\nPolitics\nEconomy\nFact checks\nDefense\nSociety and Culture\nSports\nCrime\nAccidents and Emergencies\nAgency\nInformation on Agency\nOur Contacts\nSubscribtion Terms\nOur Services\nPrivacy policy and personal data protection\nAdditional\nPublications\nInterviews\nPhoto\nVideo\nLongreads\nReleases\nServices\nSubscription\nNewsletters\nPhotobank\n\r\n\r\n\r\nIn the Rivne region, a facility was damaged and a fire broke out as a result of a Russian attack on the morning of October 8.\nOleksandr Koval, head of the regional military administration, reported this on Telegram , according to Ukrinform.\n\r\n\r\n\r\n\r\n\r\n\r\n\"One of the civilian facilities was damaged during the morning attack on the Rivne region. A fire broke out there,\" Koval said.\n\r\n\r\n\r\n\r\n\r\n\r\nAll relevant emergency services are on the scene.\n\r\n\r\n\r\n\r\n\r\n\r\nRead also: Emergency and rescue operations are ongoing in Pryluky and Obukhiv following Russian strikes \r\n\r\nAccording to…",
-      "stazeno": "2026-10-08T10:04:00.339Z",
-      "stav": 200
-    }
-  },
-  {
-    "id": "k-6e5e922b6f6de1de",
-    "zachyceno": "2026-10-08T10:03:47.892Z",
-    "publikovano": "2026-10-08T08:16:00.000Z",
-    "zdroj": {
-      "nazev": "Ukrainska Pravda (anglicky)",
-      "url": "https://www.pravda.com.ua/eng/news/2026/10/08/8057013/",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Three-year-old girl rescued from under rubble in Pryluky lost grandmother and uncle in Russian attack",
-    "titulekPuvodni": "Three-year-old girl rescued from under rubble in Pryluky lost grandmother and uncle in Russian attack",
-    "shrnuti": "On the morning of 7 October, following the deadly Russian attack on Pryluky, an emergency worker carried three-year-old Zlata, who had been pulled out of the rubble, away from one of the buildings. A photo of the firefighter holding the child in his arms quickly spread across social media.",
-    "kodZeme": "RU",
-    "zeme": "Rusko",
-    "kategorie": [
-      "hybridni",
-      "rusko"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "zeSite": null,
-    "shody": [
-      "attack on",
-      "russia"
-    ],
-    "naliehave": null,
-    "stav": "ceka",
-    "vyrez": {
-      "text": "Three-year-old girl rescued from under rubble in Pryluky lost grandmother and uncle in Russian attack | Ukrainska Pravda\nPhoto: Suspilne Chernihiv\nOn the morning of 7 October, following the deadly Russian attack on Pryluky , an emergency worker carried three-year-old Zlata, who had been pulled out of the rubble, away from one of the buildings. A photo of the firefighter holding the child in his arms quickly spread across social media.\nThe little girl and her mother are currently in hospital.\nSource: Vladyslav Stoianov, chief of the Pryluky District Department of the National Police, in a comment to Suspilne Chernihiv\nAdvertisement:\n\r\n\r\n\r\n\r\n\r\nDetails: Stoianov said Zlata's family lives in the village of Lynovytsia, 15 km from Pryluky. The day before the tragedy, Zlata and her mum had come to Pryluky to see her aunt, while her dad stayed at home.\nLiudmyla, Zlata's grandma, had also come to see the family.\nZlata's aunt, police officer Yuliia Malysh, was injured and remains in hospital in a serious condition. Yuliia's husband, 47-year-old police veteran Oleh Malysh , and her mother, Liudmyla, were killed in the attack.\nBackground :\nRussian forces attacked Pryluky with missiles on 7…",
-      "stazeno": "2026-10-08T12:03:19.122Z",
-      "stav": 200
-    }
-  },
-  {
-    "id": "k-da054c0330a0eca8",
-    "zachyceno": "2026-10-08T08:04:03.565Z",
-    "publikovano": "2026-10-08T08:00:00.000Z",
-    "zdroj": {
-      "nazev": "Aktuality.sk",
-      "url": "https://www.aktuality.sk/clanok/nw63iAi/nemeckom-otriasa-spionazny-skandal-sefa-ich-tajnych-si-mala-kupit-cudzia-mocnost/",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Nemeckom otriasa špionážny škandál. Šéfa ich tajných si mala kúpiť cudzia mocnosť",
-    "titulekPuvodni": "Nemeckom otriasa špionážny škandál. Šéfa ich tajných si mala kúpiť cudzia mocnosť",
-    "shrnuti": "Bývalého šéfa BND Augusta Hanninga zadržali pre podozrenie zo špionáže a vlastizrady. Vyšetrovatelia hovoria o tisícoch tajných dokumentov a kontakte s cudzou rozviedkou.",
-    "kodZeme": "DE",
-    "zeme": "Německo",
-    "kategorie": [
-      "zpravodajske"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "zeSite": null,
-    "shody": [
-      "zadrz+spion",
-      "spionaz"
-    ],
-    "naliehave": null,
-    "stav": "ceka",
-    "vyrez": {
-      "text": "Nemeckom otriasa špionážny škandál. Šéfa ich tajných si mala kúpiť cudzia mocnosť | Aktuality.sk\nAktuality\nŠport\nDiva\nNajmama\nŽivé\nRecepty\nDobrú chuť\nSlovník\n13 °C -\nBratislava\nštvrtok 8. 10.\n8. 10.\nBrigita\nPrémiové čítanie dnes 08. okt 2026 o 10:00\n2 min. čítania\nPridať do Google\nNemeckom otriasa špionážny škandál. Šéfa ich tajných si mala kúpiť cudzia mocnosť\n3 fotky v galérii\nAugust Hanning Zdroj: Reuters/via REUTERS\nSamuel Škultéty Redaktor zahraničného oddelenia\nUložiť článok\nBývalého šéfa BND Augusta Hanninga zadržali pre podozrenie zo špionáže a vlastizrady. Vyšetrovatelia hovoria o tisícoch tajných dokumentov a kontakte s cudzou rozviedkou.\nKeď bol v roku 2023 vysokopostavený predstaviteľ nemeckej tajnej služby BND Carsten L. obžalovaný z vlastizrady a odovzdávania tajných informácií Rusku, nemecké tajné služby zažívali zemetrasenie.\nDnes sa však podobná situácia opakuje, no dokonca s bývalým šéfom BND Augustom Hanningom. Toho začiatkom tohto týždňa zadržala nemecká polícia pre podozrenie zo špionáže, vlastizrady a odovzdávania informácií cudzej spravodajskej službe. To, komu Hanning informácie poskytoval, zatiaľ známe nie je.\nHanning bol šéfom nemeckej tajnej služby od…",
-      "stazeno": "2026-10-08T08:04:05.725Z",
-      "stav": 200
-    }
-  },
-  {
-    "id": "k-ff73eecfe2a0ce95",
-    "zachyceno": "2026-10-08T08:04:02.161Z",
-    "publikovano": "2026-10-08T07:59:00.000Z",
-    "zdroj": {
-      "nazev": "iDNES.cz — zpravodajství",
-      "url": "https://www.idnes.cz/zpravy/zahranicni/rusko-putin-narozeniny-deti-gratulace-vese.A261008_085356_zahranicni_aha#utm_source=rss&utm_medium=feed&utm_campaign=zpravodaj&utm_content=main",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "VIDEO: Děkujeme, že chráníte svět. Ruské školky gratulovaly Putinovi",
-    "titulekPuvodni": "VIDEO: Děkujeme, že chráníte svět. Ruské školky gratulovaly Putinovi",
-    "shrnuti": "Zatímco ruské rakety, bomby a drony zabily na Ukrajině nejméně pětadvacet lidí, v ruských mateřských školách si ve středu připomínaly narozeniny Vladimira Putina. Našňořené děti mu děkovaly za ochranu Ruska a učitelky všechny natáčely na mobily. Veselit se museli i úředníci.",
-    "kodZeme": "UA",
-    "zeme": "Ukrajina",
-    "kategorie": [
-      "sabotaz",
-      "drony",
-      "rusko"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "zeSite": null,
-    "shody": [
-      "bomb",
-      "dron",
-      "rusk"
-    ],
-    "naliehave": null,
-    "stav": "ceka",
-    "vyrez": {
-      "text": "VIDEO: Děkujeme, že chráníte svět. Ruské školky gratulovaly Putinovi - iDNES.cz \r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\niDNES.cz\n\r\n\r\n\r\nP�ihl�sit \r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nAbyste mohli pokra�ovat, pot�ebujeme v�d�t, jakou formou v�m m��eme zobrazovat reklamu \r\n\r\n\r\n\r\n\r\n\r\nV�mi zvolen� nastaven� \r\nneobsahuje souhlas se zobrazov�n�m c�len� reklamy . \r\nVyberte pros�m znovu, \r\njakou formou v�m m�me zobrazovat obsah. \r\n\r\n\r\n\r\n\r\n\r\n\r\niDNES Premium\n\r\nBez reklam\n\r\n\r\n199 K� m�s��n�\n\r\nM��ete neomezen� ��st iDNES.cz, Lidovky.cz, Expres.cz a Antiyoutuber.cz. K tomu dostanete tak� noviny a �asopisy v elektronick� podob�. To v�e bez reklam. 1\n\r\n\r\nP�edplatit\n\r\n\r\nU� m�te ��et? P�ihlaste se\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nS c�lenou reklamou\n\r\n\r\n\r\nZdarma \r\n\r\nZachov�me v�m v�e tak, jak jste zvykl� a reklamu p�izp�sob�me va�im z�jm�m. Bez omezen� si m��ete d�l ��st, p�ehr�vat videa, sout�it �i p�isp�vat do v�ech diskus�. 2\n\r\n\r\nSouhlas�m\n\r\nPodrobn� nastaven�\n\r\n\r\n\r\n\r\n\r\n\r\niDNES a reklama\n\r\nPokud vyu�ijete m�sto platby ud�len� souhlasu s reklamou (tj. souhlas s vyu�it�m cookies a dal��ch s�ov�ch identifik�tor� pro ��ely c�len� reklamy), \r\nbudou V�m zobrazov�ny v…",
-      "stazeno": "2026-10-08T08:04:07.019Z",
-      "stav": 200
-    }
-  },
-  {
-    "id": "k-7c5e34bfcada57f1",
-    "zachyceno": "2026-10-08T10:03:47.897Z",
-    "publikovano": "2026-10-08T07:57:00.000Z",
-    "zdroj": {
-      "nazev": "Ukrainska Pravda (anglicky)",
-      "url": "https://www.pravda.com.ua/eng/news/2026/10/08/8057008/",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "One killed and 11 injured in morning Russian attack on Kyiv",
-    "titulekPuvodni": "One killed and 11 injured in morning Russian attack on Kyiv",
-    "shrnuti": "One person was killed and 11 others injured in Russian attacks on Kyiv on the morning of 8 October, with nine of the injured taken to hospital",
-    "kodZeme": "UA",
-    "zeme": "Ukrajina",
-    "kategorie": [
-      "hybridni",
-      "rusko"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "zeSite": null,
-    "shody": [
-      "attack on",
-      "russia"
-    ],
-    "naliehave": null,
-    "stav": "ceka",
-    "vyrez": {
-      "text": "Russian morning attack on Kyiv kills 1 and injures 11 | Ukrainska Pravda\nPhoto: Municipal Guard\nOne person has been killed and 11 others injured as a result of a Russian attack on Kyiv on the morning of 8 October.\nSource: Kyiv Mayor Vitali Klitschko\nQuote: \"Since the beginning of 8 October, one person has been killed and 11 Kyiv residents injured as a result of Russian attacks.\"\nAdvertisement:\n\r\n\r\n\r\n\r\n\r\nDetails: Nine of those injured were taken to hospital.\nDrone debris fell in an open area in the Holosiivskyi district.\nAn air-raid warning has been in effect in the capital since 09:00 due to the threat of drone attacks.\nBackground: Two people were killed in a Russian strike on a high-rise residential building in Kyiv on the evening of 7 October.\nYour support on Patreon helps us keep the news free and accessible.\nKyiv\nattack\nAdvertisement:\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nKyiv\nRussian drone hits shop in Kyiv's Solomianskyi district: two killed and two injured\nEmergency power cuts cause water supply disruptions on Kyiv's right bank\nEmergency power outages hit Kyiv\nLatest news\nAdvertisement:\n\r\n\r\n\r\nAdvertisement:",
-      "stazeno": "2026-10-08T13:56:47.486Z",
-      "stav": 200
-    }
-  },
-  {
-    "id": "k-36f0eceac8feda74",
-    "zachyceno": "2026-10-08T08:04:05.564Z",
-    "publikovano": "2026-10-08T07:10:00.000Z",
-    "zdroj": {
-      "nazev": "Ukrainska Pravda (anglicky)",
-      "url": "https://www.pravda.com.ua/eng/news/2026/10/08/8057003/",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Emergency power outages hit Kyiv",
-    "titulekPuvodni": "Emergency power outages hit Kyiv",
-    "shrnuti": "Emergency power cuts have been introduced in Kyiv and some districts of Kyiv Oblast on the instructions of Ukrenergo, Ukraine's state-owned electricity transmission system operator.",
-    "kodZeme": "UA",
-    "zeme": "Ukrajina",
-    "kategorie": [
-      "infrastruktura"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "zeSite": null,
-    "shody": [
-      "power outage"
-    ],
-    "naliehave": null,
-    "stav": "ceka",
-    "vyrez": {
-      "text": "Emergency power outages hit Kyiv | Ukrainska Pravda\nStock photo\nEmergency power cuts have been introduced in Kyiv and some districts of Kyiv Oblast on the instructions of Ukrenergo, Ukraine's state-owned electricity transmission system operator.\nSource: press service for DTEK , Ukraine's largest private energy company\nDetails: Scheduled power-cut timetables do not apply during emergency outages.\nAdvertisement:\n\r\n\r\n\r\n\r\n\r\n\"We will keep you informed of any changes on our Telegram channel,\" DTEK added.\nBackground: On 7 October, the electricity supply issues partially knocked out power to water pumping stations. Water supply disruptions were reported on Kyiv's right bank.\nYour support on Patreon helps us keep the news free and accessible.\nKyiv\nenergy\npower\nAdvertisement:\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nKyiv\nRussia's winter campaign against energy infrastructure has begun. Will Kyiv be left without electricity, heating and water?\nEmergency power outages introduced in Kyiv, electric public transport halted\nEight people injured and residential buildings on fire in Kyiv after Russian attack – photos\nLatest news\nAdvertisement:\n\r\n\r\n\r\nAdvertisement:",
-      "stazeno": "2026-10-08T08:04:09.646Z",
-      "stav": 200
-    }
-  },
-  {
-    "id": "k-bf373e9a44edc74e",
-    "zachyceno": "2026-10-08T08:04:05.566Z",
-    "publikovano": "2026-10-08T07:05:00.000Z",
-    "zdroj": {
-      "nazev": "Ukrainska Pravda (anglicky)",
-      "url": "https://www.pravda.com.ua/eng/news/2026/10/08/8056999/",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Russia attacked Ukraine with 142 drones overnight, 126 aerial assets brought down",
-    "titulekPuvodni": "Russia attacked Ukraine with 142 drones overnight, 126 aerial assets brought down",
-    "shrnuti": "Ukrainian air defence shot down or jammed 126 of the 142 attack drones launched by Russia overnight. Of the total, 82 were jet-powered Shahed UAVs.",
-    "kodZeme": "UA",
-    "zeme": "Ukrajina",
-    "kategorie": [
-      "drony",
-      "rusko"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "zeSite": null,
-    "shody": [
-      "shot down",
-      "dron",
-      "drone",
-      "uav",
-      "russia"
-    ],
-    "naliehave": null,
-    "stav": "ceka",
-    "vyrez": {
-      "text": "Ukraine intercepts 126 Russian drones during massive overnight attack | Ukrainska Pravda\nPhoto: Ukraine's Air Force\nThe Russians attacked Ukraine with 142 combat drones, 82 of which were jet-powered, on the night of 7-8 October. Early reports indicate that the Ukrainian Air Force has brought down 126 drones.\nSource: Ukraine's Air Force\nQuote: \"On the night of 7-8 October (from 18:00 on 07 October), the enemy attacked [Ukraine] with 142 Shahed-type attack drones (82 of which were jet-powered), Gerbera UAVs and Parodiya-type decoy drones from the following areas: Oryol, Kursk and Shatalovo, Russia, and occupied Donetsk and Hvardiiske in occupied Crimea.\"\nAdvertisement:\n\r\n\r\n\r\n\r\n\r\nEarly reports indicate that as of 09:30, air defence had intercepted 126 enemy Shahed-type UAVs, Gerbera and drones of other types.\"\nDetails: Hits were recorded at seven locations and intercepted aerial assets (debris) fell at four locations.\nThe aerial attack is being repelled by aircraft, anti-aircraft missile units, electronic warfare assets, unmanned systems units and mobile fire groups from Ukraine's defence forces.\nSupport Ukrainska Pravda on Patreon to help us keep reporting!\nGeneral Staff\nUkraine's…",
-      "stazeno": "2026-10-08T08:04:09.685Z",
-      "stav": 200
-    }
-  },
-  {
-    "id": "k-a2817d349127ea09",
-    "zachyceno": "2026-10-08T10:03:44.270Z",
-    "publikovano": "2026-10-08T07:03:47.000Z",
-    "zdroj": {
-      "nazev": "ČT24 — hlavní zprávy",
-      "url": "https://ct24.ceskatelevize.cz/clanek/svet/v-rusku-hori-zavod-s-datovym-centrem-kyjev-hlasi-mrtve-378357",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Ruský útok na autobusy v Kramatorsku má desítky obětí",
-    "titulekPuvodni": "Ruský útok na autobusy v Kramatorsku má desítky obětí",
-    "shrnuti": "Nejméně třicet lidí přišlo o život a další utrpěli zranění při útoku ruského dronu na dva autobusy v Kramatorsku na východě Ukrajiny, oznámily místní úřady. Kyjev hlásí další dva mrtvé po večerním úderu na výškovou obytnou budovu. V Rusku bylo při údajném dronovém útoku zasaženo hlavní datové centru",
-    "kodZeme": "UA",
-    "zeme": "Ukrajina",
-    "kategorie": [
-      "hybridni",
-      "drony",
-      "rusko"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "zeSite": null,
-    "shody": [
-      "utok na",
-      "dron",
-      "rusk"
-    ],
-    "naliehave": null,
-    "stav": "ceka",
-    "vyrez": {
-      "text": "Ruský útok na autobusy v Kramatorsku má desítky obětí — ČT24 — Česká televize\nŽivé vysílání\nTV program\nPočasí\nTeletext\nE-shop\nVše o ČT\nTV poplatky\nKontakty\nSpravovat účet\nOblíbené pořady\nRozkoukaná videa\nPřihlásit se do TV\nOdhlásit se\nRuský útok na autobusy v Kramatorsku má desítky obětí\nTamara Kejlová\n8. 10. 2026 před 39 m minutami | Zdroj: Ukrajinska pravda , Kyiv Independent , ČT24 , ČTK\nZasažený autobus v Kramatorsku\nZdroj: Doněcká oblastní prokuratura\nNejméně 33 lidí přišlo o život a další utrpěli zranění při útoku ruského dronu na dva autobusy v Kramatorsku na východě Ukrajiny, oznámily místní úřady. Kyjev hlásí další tři mrtvé. V Rusku bylo při údajném dronovém útoku zasaženo hlavní datové centrum společnosti Yandex v Rjazaňské oblasti, které je klíčové pro obranný průmysl země, informují telegramové kanály Astra a Exilenova+. Hoří i ropná rafinerie v ruském Salavatu.\nRusové pravděpodobně použili v Kramatorsku klouzavé letecké bomby, které zasáhly dva linkové autobusy, uvedla prokuratura. Útok vyšetřuje kvůli podezření ze spáchání válečného zločinu.\n„Jsou to lidské bytosti zabité ruskou armádou. Rusko rozsévá smrt na ukrajinské půdě. Útočí na naše města, zabíjí naše lidi a…",
-      "stazeno": "2026-10-08T13:56:47.510Z",
-      "stav": 200
-    }
-  },
-  {
-    "id": "k-3398a968ceb8b017",
-    "zachyceno": "2026-10-08T08:04:03.074Z",
-    "publikovano": "2026-10-08T07:01:10.000Z",
-    "zdroj": {
-      "nazev": "Tagesschau (Německo)",
-      "url": "https://www.tagesschau.de/investigativ/ndr-wdr/nordstream-anschlag-prozess-olg-hamburg-100.html",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Nord-Stream-Anschlag: Diese Indizien belasten den mutmaßlichen Saboteur",
-    "titulekPuvodni": "Nord-Stream-Anschlag: Diese Indizien belasten den mutmaßlichen Saboteur",
-    "shrnuti": "In wenigen Tagen steht der mutmaßliche Anführer des Sabotage-Kommandos vor dem Hamburger Oberlandesgericht. Welche Indizien sprechen dafür, dass er mit seinem Team die Nord-Stream-Gasröhren in der Ostsee gesprengt hat?",
-    "kodZeme": "DE",
-    "zeme": "Německo",
-    "kategorie": [
-      "sabotaz"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "zeSite": null,
-    "shody": [
-      "sabotage"
-    ],
-    "naliehave": null,
-    "stav": "ceka",
-    "vyrez": {
-      "text": "Nord-Stream-Anschlag: Diese Indizien belasten den mutmaßlichen Saboteur | tagesschau.de\nHauptnavigation\nNebennavigation\nInhalt\nFußzeile\nExklusiv\nNord-Stream-Anschlag\nDiese Indizien belasten den mutmaßlichen Saboteur\nStand: 08.10.2026 • 09:01 Uhr\nIn wenigen Tagen steht der mutmaßliche Anführer des Sabotage-Kommandos vor dem Hamburger Oberlandesgericht. Welche Indizien sprechen dafür, dass er mit seinem Team die Nord-Stream-Gasröhren in der Ostsee gesprengt hat?\nVon Manuel Bewarder, Jörg Diehl, NDR/WDR, Florian Flade, WDR, Michael Götschenberg, ARD-Hauptstadtstudio, Georg Heil, RBB, Roman Lehberger, WDR, und Holger Schmidt, SWR\nAls der ukrainische Offizier Serhii K. noch in Italien in Auslieferungshaft saß, telefonierte er manchmal nach Hause. Es sei doch nun der \"richtige Zeitpunkt\", sagte er in einem Gespräch mit seiner Frau, eine Erklärung zu veröffentlichen. Öffentlich müsse klargestellt werden, dass die Sprengung der Nord-Stream-Pipelines \"eine offizielle militärische Operation war\".\nSein Kommandeur solle deutlich machen, dass er und K. keinesfalls \"zwei verrückte Militärmänner\" seien. Wahrscheinlich erhoffte sich Serhii K., öffentlicher Druck könne eine Auslieferung nach…",
-      "stazeno": "2026-10-08T08:04:09.709Z",
-      "stav": 200
-    }
-  },
-  {
-    "id": "k-779dd9a77b8f40e5",
-    "zachyceno": "2026-10-08T08:04:05.569Z",
-    "publikovano": "2026-10-08T07:00:00.000Z",
-    "zdroj": {
-      "nazev": "Ukrainska Pravda (anglicky)",
-      "url": "https://www.pravda.com.ua/eng/news/2026/10/08/8057001/",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Russian sabotage costs UK up to £2.5bn a year",
-    "titulekPuvodni": "Russian sabotage costs UK up to £2.5bn a year",
-    "shrnuti": "Russia's hostile activities cost the UK an estimated £2-2.5 billion a year, including losses from cyberattacks and damage to undersea infrastructure.",
-    "kodZeme": "GB",
-    "zeme": "Spojené království",
-    "kategorie": [
-      "sabotaz",
-      "kyber",
-      "rusko"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "zeSite": null,
-    "shody": [
-      "sabotage",
-      "cyberattack",
-      "cyber",
-      "russia"
-    ],
-    "naliehave": null,
-    "stav": "ceka",
-    "vyrez": {
-      "text": "Russian sabotage costs UK up to £2.5bn a year | Ukrainska Pravda\nPhoto: Getty Images\nThe economic impact of Russia's hostile activities against the United Kingdom amounts to at least £2-2.5 billion a year, according to a new report by the vice-chair of the All-Party Parliamentary Group (APPG) on rearmament.\nSource: Financial Times\nDetails: The new report, entitled \" The Putin Tax \", estimates the costs of the disruption, recovery and investment in resilience caused by Russia's hybrid warfare against the UK.\nAdvertisement:\n\r\n\r\n\r\n\r\n\r\nHowever, the study by Labour MP Graeme Downie, published on Wednesday 7 October, suggests that the true figure is likely to be \" vastly higher \" than his estimate. He warned that gaps in government-published data make it impossible to accurately calculate the cost of hybrid warfare linked to Moscow.\nThe overall estimate of £2-2.5 billion comprises three components: £400-500 million in average annual losses from major incidents since 2022, such as attacks on Jaguar Land Rover, the Royal Mail and National Health Service suppliers; £1.47 billion in losses from Russia-linked cyberattacks, based on industry analysis and threat intelligence; and £250-500…",
-      "stazeno": "2026-10-08T08:04:10.449Z",
-      "stav": 200
-    }
-  },
-  {
-    "id": "k-175879cdee12daec",
-    "zachyceno": "2026-10-08T08:04:01.985Z",
-    "publikovano": "2026-10-08T06:35:00.000Z",
-    "zdroj": {
-      "nazev": "Český rozhlas — domácí zprávy",
-      "url": "https://www.irozhlas.cz/zpravy-svet/online-ukrajinci-zasahli-giganta-yandex-ten-hlasi-vypadky-internetovych-sluzeb_2610080835_ako",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "ONLINE: Ukrajinci zasáhli giganta Yandex. Ten hlásí výpadky internetových služeb",
-    "titulekPuvodni": "ONLINE: Ukrajinci zasáhli giganta Yandex. Ten hlásí výpadky internetových služeb",
-    "shrnuti": "Ukrajinské drony v noci na čtvrtek zasáhly významné datové centrum v Rjazanské oblasti jihovýchodně od Moskvy, které vlastní ruský internetový gigant Yandex. Informuje o tom agentura Reuters. Podle ní jde o první velký útok na ruské datové centrum.",
-    "kodZeme": "UA",
-    "zeme": "Ukrajina",
-    "kategorie": [
-      "infrastruktura",
-      "hybridni",
-      "drony",
-      "rusko"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "zeSite": null,
-    "shody": [
-      "hlasi vypadky",
-      "utok na",
-      "dron+zasahl",
-      "dron",
-      "rusk"
-    ],
-    "naliehave": null,
-    "stav": "ceka",
-    "vyrez": {
-      "text": "",
-      "stazeno": "2026-10-08T08:04:10.468Z",
-      "stav": 403,
-      "chyba": "HTTP 403"
-    }
-  },
-  {
-    "id": "k-3c071976990c9a80",
-    "zachyceno": "2026-10-08T08:04:05.578Z",
-    "publikovano": "2026-10-08T06:15:00.000Z",
-    "zdroj": {
-      "nazev": "Ukrainska Pravda (anglicky)",
-      "url": "https://www.pravda.com.ua/eng/news/2026/10/08/8056991/",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Poland concludes investigation into Russian drone incursion: some had Polish SIM cards",
-    "titulekPuvodni": "Poland concludes investigation into Russian drone incursion: some had Polish SIM cards",
-    "shrnuti": "Polish prosecutors have closed an investigation into the large-scale incursion of Russian drones into Poland in September 2025, saying they could not identify those responsible. Some of the downed drones contained Polish SIM cards.",
-    "kodZeme": "PL",
-    "zeme": "Polsko",
-    "kategorie": [
-      "drony",
-      "nato",
-      "rusko"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "zeSite": null,
-    "shody": [
-      "drone incursion",
-      "incursion+poland+could",
-      "dron",
-      "drone",
-      "russia"
-    ],
-    "naliehave": null,
-    "stav": "ceka",
-    "vyrez": {
-      "text": "Poland closes probe into Russian drone incursion after failing to identify those responsible | Ukrainska Pravda\nDrones. Stock photo: Getty Images\nAn investigation into a large-scale incursion of Russian drones into Polish airspace in September 2025 has been closed because those responsible could not be identified.\nSource: Lublin District Prosecutor's Office; European Pravda, citing RMF24\nDetails: The military prosecutor's office spent months investigating the attack, trying to establish who was responsible.\nAdvertisement:\n\r\n\r\n\r\n\r\n\r\nUnfortunately, as reported by prosecutor Marcin Kozak, a spokesperson for the Lublin District Prosecutor's Office, the investigation has been closed because the perpetrator could not be identified. Most of the case materials, including the justification for the decision, are classified.\n\"The investigation has been closed because it was not possible to identify the perpetrator of the crime, which constituted a violation of Polish airspace and thereby posed a threat to public safety,\" prosecutor Kozak said.\nThe investigation also examined the Polish military's response to the drone attack. The prosecutor's office unequivocally concluded that the military…",
-      "stazeno": "2026-10-08T08:04:10.521Z",
-      "stav": 200
-    }
-  },
-  {
-    "id": "k-6d9d78a6bf074f00",
-    "zachyceno": "2026-10-08T06:35:02.431Z",
-    "publikovano": "2026-10-08T05:55:00.000Z",
-    "zdroj": {
-      "nazev": "Ukrainska Pravda (anglicky)",
-      "url": "https://www.pravda.com.ua/eng/news/2026/10/08/8056990/",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Russians attack civilian business in Rivne Oblast",
-    "titulekPuvodni": "Russians attack civilian business in Rivne Oblast",
-    "shrnuti": "A Russian aerial attack on Rivne Oblast on 8 October damaged a civilian business and caused a fire. No casualties have been reported.",
-    "kodZeme": "RU",
-    "zeme": "Rusko",
-    "kategorie": [
-      "hybridni",
-      "rusko"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "zeSite": null,
-    "shody": [
-      "attack on",
-      "russia"
-    ],
-    "naliehave": null,
-    "stav": "ceka",
-    "vyrez": {
-      "text": "Russian attack damages civilian business in Rivne Oblast | Ukrainska Pravda\nA drone. Stock photo: Getty Images\nRussian forces have attacked Rivne Oblast, damaging a civilian business.\nSource: Oleksandr Koval, Head of Rivne Oblast Military Administration, on social media\nQuote: \"A civilian business has been damaged in a morning attack on Rivne Oblast. A fire has broken out there.\"\nAdvertisement:\n\r\n\r\n\r\n\r\n\r\nDetails: Koval said that all the appropriate services are working at the site.\nEarly reports indicate no casualties.\nBackground: Two people were killed in a Russian strike on a high-rise residential building in Kyiv on the evening of 7 October.\nYour support on Patreon helps us keep the news free and accessible.\nAdvertisement:\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nLatest news\nAdvertisement:\n\r\n\r\n\r\nAdvertisement:",
-      "stazeno": "2026-10-08T06:35:02.579Z",
-      "stav": 200
-    }
-  },
-  {
-    "id": "k-a688cd261f7cc3de",
-    "zachyceno": "2026-10-08T19:48:15.067Z",
-    "publikovano": "2026-10-08T03:56:46.000Z",
-    "zdroj": {
-      "nazev": "Der Standard (Rakousko)",
-      "url": "https://www.derstandard.at/jetzt/livebericht/3000000343179/mindestens-zwei-tote-nach-russischen-angriffen-auf-kyjiw?ref=rss",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Selenskyj: Ukraine-Team reist für Verhandlungen in die USA",
-    "titulekPuvodni": "Selenskyj: Ukraine-Team reist für Verhandlungen in die USA",
-    "shrnuti": "In der ostukrainischen Stadt Kramatorsk wurden bei einem Bombenangriff auf Busse mindestens 33 Menschen getötet. Im ganzen Land startete Russland eine der bislang größten Angriffswellen",
-    "kodZeme": "UA",
-    "zeme": "Ukrajina",
-    "kategorie": [
-      "sabotaz"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "zeSite": null,
-    "shody": [
-      "bomb"
-    ],
-    "naliehave": null,
-    "stav": "ceka",
-    "vyrez": {
-      "text": "Selenskyj: Ukraine-Team reist für Verhandlungen in die USA - Ukraine - derStandard.at › International \r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nJuly 7, 2026, Ankara, Turkey: Volodymyr Zelenskyy, the President of Ukraine, speaks at the Defence Industry Forum during the 2026 NATO Ankara Summit in Ankara, Turkiye, on July 7th, 2026. Ankara Turkey - ZUMAz156 20260707_zip_z156_032 Copyright: xBeataxZawrzelx\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nDas Wichtigste in Kürze:\n\r\n\r\n\r\n\r\nWillkommen bei DER STANDARD\n\r\n\r\nSie entscheiden darüber, wie Sie unsere Inhalte nutzen wollen. Ihr Gerät erlaubt uns derzeit leider nicht, die entsprechenden Optionen anzuzeigen. \r\n\r\nBitte deaktivieren Sie sämtliche Hard- und Software-Komponenten, die in der Lage sind Teile unserer Website zu blockieren. Z.B. Browser-AddOns wie Adblocker oder auch netzwerktechnische Filter.\n\r\nSie haben ein PUR-Abo? Hier anmelden.",
-      "stazeno": "2026-10-08T19:48:21.113Z",
-      "stav": 200
-    }
-  },
-  {
-    "id": "k-972d059c54552d2e",
-    "zachyceno": "2026-10-08T14:03:12.077Z",
-    "publikovano": "2026-10-08T00:00:00.000Z",
-    "zdroj": {
-      "nazev": "BTA (státní agentura Bulharska)",
-      "url": "https://www.bta.bg/en/news/bulgaria/1220597-interior-minister-bomb-threats-originate-outside-bulgaria",
-      "typ": "wire",
-      "primarni": false
-    },
-    "titulek": "Interior Minister: Bomb Threats Originate Outside Bulgaria",
-    "titulekPuvodni": "Interior Minister: Bomb Threats Originate Outside Bulgaria",
-    "shrnuti": "",
-    "kodZeme": "BG",
-    "zeme": "Bulharsko",
-    "kategorie": [
-      "sabotaz"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "zeSite": null,
-    "shody": [
-      "bomb"
-    ],
-    "naliehave": null,
-    "stav": "ceka",
-    "vyrez": {
-      "text": "BTA :: Interior Minister: Bomb Threats Originate Outside Bulgaria\nnews.images\nWorld\nnews.images\nBalkans\nnews.images\nnews.images\nEconomy\nnews.images\nnews.images\nnews.images\nCulture\nnews.images\nSport\nnews.images\nBG World\nExchange rates\nForeign exchange rate of BNB 07.10.2026\n1 EUR = 1.9558 BGN\n1 USD = 0.8947 EUR\n1 CHF = 1.0742 EUR\n1 GBP = 1.1814 EUR\nBulgarian News Agency\nMy BTA\nLogin\nHave no account?\nsite.bta Interior Minister: Bomb Threats Originate Outside Bulgaria\nKristina Ivanova , Konstantin Kostov\nInterior Minister Ivan Demerdzhiev during a hearing before the parliamentary Committee on Internal Security and Public Order, Sofia, October 8, 2026 (BTA Photo/Blagoy Kirilov)\nSofia,\n08.10.2026 16:59\n(BTA)\nDuring a hearing before the parliamentary Committee on Internal Security and Public Order on Thursday, Interior Minister Ivan Demerdzhiev said that reports of explosive devices allegedly planted in institutions and educational establishments were communicated from abroad. The reports were translated into Bulgarian using a computer programme, and their frequency could be linked to specific political events in the country, the Minister added.\nHe described the threats as malicious and…",
-      "stazeno": "2026-10-08T14:03:14.933Z",
-      "stav": 200
-    }
-  },
-  {
-    "id": "k-bb3c67bdc764f71c",
-    "zachyceno": "2026-10-07T12:03:16.184Z",
-    "publikovano": "2026-10-07T10:58:00.000Z",
-    "zdroj": {
-      "nazev": "Ukrinform (anglicky)",
-      "url": "https://www.ukrinform.net/rubric-ato/4171897-media-reports-volgograd-oil-refinery-halts-operations-following-drone-attack.html",
-      "typ": "wire",
-      "primarni": false
-    },
-    "titulek": "Media reports: Volgograd oil refinery halts operations following drone attack",
-    "titulekPuvodni": "Media reports: Volgograd oil refinery halts operations following drone attack",
-    "shrnuti": "The Volgograd Oil Refinery in Russia has completely halted oil refining after equipment was damaged in a drone attack on October 2.",
-    "kodZeme": "RU",
-    "zeme": "Rusko",
-    "kategorie": [
-      "hybridni",
-      "drony",
-      "rusko"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "zeSite": null,
-    "shody": [
-      "attack on",
-      "dron",
-      "drone",
-      "russia"
-    ],
-    "naliehave": null,
-    "stav": "ceka",
-    "vyrez": {
-      "text": "Media reports: Volgograd oil refinery halts operations following drone attack\n\r\nSubscription\nNewsletters\nPhotobank\nUkrinform - Ukrainian National News Agency\nFounded in 1918\nWednesday, 07 October 2026, 15:03\nWar\nEconomy\nSports\nMore ☰\nContacts\nEng\nУкр\nEng\nEsp\nDeu\nعربي\nFra\n日本語\nPol\n&times;\nAll topics\nWar\nRecovery of Ukraine\nPolitics\nEconomy\nFact checks\nDefense\nSociety and Culture\nSports\nCrime\nAccidents and Emergencies\nAgency\nInformation on Agency\nOur Contacts\nSubscribtion Terms\nOur Services\nPrivacy policy and personal data protection\nAdditional\nPublications\nInterviews\nPhoto\nVideo\nLongreads\nReleases\nServices\nSubscription\nNewsletters\nPhotobank\n\r\n\r\n\r\nThe Volgograd Oil Refinery in Russia has completely halted oil refining after equipment was damaged in a drone attack on October 2.\nSky News reported this, citing Reuters, according to Ukrinform.\n\r\n\r\n\r\n\r\n\r\n\r\nThe shutdown of the refinery is expected to exacerbate the fuel shortage in Russia, which was caused by attacks on oil refineries.\n\r\n\r\n\r\n\r\n\r\n\r\nOn October 2, the regional administration, citing Governor Andriy Bocharov, reported a large-scale drone attack on industrial facilities in the region but did not specify which facilities were…",
-      "stazeno": "2026-10-07T12:03:20.207Z",
-      "stav": 200
-    }
-  },
-  {
-    "id": "k-e48d393fca97ca5e",
-    "zachyceno": "2026-10-07T12:03:13.408Z",
-    "publikovano": "2026-10-07T10:55:39.000Z",
-    "zdroj": {
-      "nazev": "France 24 (anglicky)",
-      "url": "https://www.france24.com/en/video/20261007-france-suspends-stun-grenade-use-at-student-protests-ahead-of-pm-speech",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "France suspends stun grenade use at student protests ahead of PM speech",
-    "titulekPuvodni": "France suspends stun grenade use at student protests ahead of PM speech",
-    "shrnuti": "France has suspended the use of stun grenades by police at student-led demonstrations, the interior minister said Wednesday, as allegations of police brutality mounted after days of sometimes violent demonstrations across the country. Tens of thousands of people took to the streets across France on ",
-    "kodZeme": "FR",
-    "zeme": "Francie",
-    "kategorie": [
-      "diplomacie"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "zeSite": null,
-    "shody": [
-      "emergency meeting"
-    ],
-    "naliehave": null,
-    "stav": "ceka",
-    "vyrez": {
-      "text": "France suspends stun grenade use at student protests ahead of PM speech - France 24\nSkip to main content\nTo display this content from YouTube, you must enable advertisement tracking and audience measurement.\nAccept\nManage my choices\nOne of your browser extensions seems to be blocking the video player from loading. To watch this content, you may need to disable it on this site.\nTry again\nCover image: © France 24\n05:35\nFrance suspends stun grenade use at student protests ahead of PM speech\nIssued on: 07/10/2026 - 12:55\nShare\nFrance has suspended the use of stun grenades by police at student-led demonstrations, the interior minister said Wednesday, as allegations of police brutality mounted after days of sometimes violent demonstrations across the country. Tens of thousands of people took to the streets across France on Tuesday demanding better conditions in high schools. That same evening, President Emmanuel Macron held an emergency meeting with Prime Minister Sebastien Lecornu and other key ministers to find a way out of the crisis. FRANCE 24's Antonia Kerrigan reports from a high school in Aubervilliers, France.\nVideo by:\nAntonia KERRIGAN\nRead more\nRead less\nFrench government…",
-      "stazeno": "2026-10-07T12:03:21.356Z",
-      "stav": 200
-    }
-  },
-  {
-    "id": "k-17d381dcccdcb20b",
-    "zachyceno": "2026-10-07T12:03:13.414Z",
-    "publikovano": "2026-10-07T10:54:38.000Z",
-    "zdroj": {
-      "nazev": "France 24 (anglicky)",
-      "url": "https://www.france24.com/en/video/20261007-french-government-scrambles-to-calm-nationwide-student-protests",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "French government scrambles to calm nationwide student protests",
-    "titulekPuvodni": "French government scrambles to calm nationwide student protests",
-    "shrnuti": "The French government is looking to appease protesters after a week of high school student protests that spread across the nation. President Emmanuel Macron held a meeting Monday with his Prime Minister, Interior minister and Education minister in hopes of coming up with a solution to appease the pr",
-    "kodZeme": "FR",
-    "zeme": "Francie",
-    "kategorie": [
-      "drony"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "zeSite": null,
-    "shody": [
-      "scrambl"
-    ],
-    "naliehave": null,
-    "stav": "ceka",
-    "vyrez": {
-      "text": "French government scrambles to calm nationwide student protests - France 24\nSkip to main content\nTo display this content from YouTube, you must enable advertisement tracking and audience measurement.\nAccept\nManage my choices\nOne of your browser extensions seems to be blocking the video player from loading. To watch this content, you may need to disable it on this site.\nTry again\nCover image: © France 24\n01:07\nFrench government scrambles to calm nationwide student protests\nIssued on: 07/10/2026 - 12:54\nShare\nThe French government is looking to appease protesters after a week of high school student protests that spread across the nation. President Emmanuel Macron held a meeting Monday with his Prime Minister, Interior minister and Education minister in hopes of coming up with a solution to appease the protesters. But despite government efforts to renew dialogue, widespread protests are expected as soon as Thursday.\nVideo by:\nCaroline BAUM\nRead more\nRead less\nParamount wraps up mega Warner Bros merger to create Hollywood powerhouse Skydance\n07/10/2026\nIsrael marks three years since Hamas's October 7 attack\n07/10/2026\nThree years since Hamas October 7 attack: What did Netanyahu…",
-      "stazeno": "2026-10-07T12:03:21.633Z",
-      "stav": 200
-    }
-  },
-  {
-    "id": "k-e4d348c1a9029e40",
-    "zachyceno": "2026-10-07T20:03:13.930Z",
-    "publikovano": "2026-10-07T10:41:38.000Z",
-    "zdroj": {
-      "nazev": "Novinky.cz",
-      "url": "https://www.novinky.cz/clanek/zahranicni-evropa-zak-utocil-nozem-na-stredni-skole-v-polsku-sedm-zranenych-dva-tezce-40601259",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Útok na škole v Polsku: Mladík útočil mačetou, jeho batoh s výbušninou vyhodili z okna",
-    "titulekPuvodni": "Útok na škole v Polsku: Mladík útočil mačetou, jeho batoh s výbušninou vyhodili z okna",
-    "shrnuti": "Středeční útok devatenáctiletého učně na škole v polské Ostrolence si vyžádal devět zraněných. Pachatel z místa činu utekl, než jej na městské pláži dopadla policie. Podle prokuratury se pokusil o sebevraždu, ale pouze se zranil. Policisté rovněž zajistili jeho batoh, ve kterém do školy přinesl podo",
-    "kodZeme": "PL",
-    "zeme": "Polsko",
-    "kategorie": [
-      "hybridni",
-      "vojsko"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "zeSite": null,
-    "shody": [
-      "utok na",
-      "policie"
-    ],
-    "naliehave": null,
-    "stav": "ceka",
-    "vyrez": {
-      "text": "Útok na škole v Polsku: Mladík útočil mačetou, jeho batoh s výbušninou vyhodili z okna - Novinky\nZobrazení snímku 1 z 0\nzáhlaví\nHlavní obsah\nÚtok na škole v Polsku: Mladík útočil mačetou, jeho batoh s výbušninou vyhodili z okna\nJana Kotrášová , Jaromír Moravec\nvybrat autory ke sledování\n2:28\nChcete-li článek poslouchat, přihlaste se\neBook\nSdílet\nDnes 7. 10., 12:41 Aktualizováno dnes 20:18\nStředeční útok devatenáctiletého učně na škole v polské Ostrolence si vyžádal devět zraněných. Pachatel z místa činu utekl, než jej na městské pláži dopadla policie. Podle prokuratury se pokusil o sebevraždu, ale pouze se zranil. Policisté rovněž zajistili jeho batoh, ve kterém do školy přinesl podomácku vyrobenou výbušninu, jež téměř explodovala.\nFoto: Polská policie\nPolská policie 19letého útočníka dopadla.\nČlánek\nŽák odborného učiliště v Ostrolence podle rádia RMF24  na spolužáky a pedagogy okolo jedenácté hodiny dopoledne během vyučování zaútočil mačetou. Konkrétně měl řádit ve čtvrtém ročníku školy.\nInformace o počtu zraněných se přes den měnily. Mazovský vojvoda Mariusz Frankowski nakonec podle agentury PAP uvedl, že zraněných je deset lidí, včetně pachatele, pěti studentů, dvou učitelů…",
-      "stazeno": "2026-10-07T20:08:07.893Z",
       "stav": 200
     }
   }
