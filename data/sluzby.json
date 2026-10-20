@@ -1,5 +1,5 @@
 {
-  "aktualizovano": "2026-10-19T21:44:19.796Z",
+  "aktualizovano": "2026-10-20T04:02:44.796Z",
   "stavy": [
     {
       "klic": "cloudflare",
@@ -7,9 +7,14 @@
       "popis": "Partial System Outage",
       "incidenty": [
         {
+          "nazev": "Cloudflare Zero Trust connectivity",
+          "odkaz": "https://www.cloudflarestatus.com/incidents/0eqtn0khkz87",
+          "aktualizovano": "2026-10-20T03:47:31.135Z"
+        },
+        {
           "nazev": "Cloudflare Secure Web Gateway and DLP enforcement issues for Google Gemini",
           "odkaz": "https://www.cloudflarestatus.com/incidents/3z8y23zn7tr2",
-          "aktualizovano": "2026-10-19T20:30:00.915Z"
+          "aktualizovano": "2026-10-19T23:46:48.411Z"
         },
         {
           "nazev": "Incorrect geo location for some Cloudflare WARP users",
@@ -19,29 +24,23 @@
       ],
       "postizene": [
         "Cloudflare Sites and Services",
-        "Amman, Jordan - (AMM)",
         "Africa",
-        "Arica, Chile - (ARI)"
+        "Arica, Chile - (ARI)",
+        "Baghdad, Iraq - (BGW)"
       ],
-      "zkontrolovano": "2026-10-19T21:44:19.796Z",
+      "zkontrolovano": "2026-10-20T04:02:44.796Z",
       "chyba": null
     },
     {
       "klic": "zoom",
       "stav": "omezeni",
       "popis": "Service Under Maintenance",
-      "incidenty": [
-        {
-          "nazev": "Service Degradation Affecting Zoom Website in UK region",
-          "odkaz": "https://stspg.io/n49f0v00l95f",
-          "aktualizovano": "2026-10-19T07:00:17.899-07:00"
-        }
-      ],
+      "incidenty": [],
       "postizene": [
         "Zoom Phone",
         "Zoom Phone - EMEA"
       ],
-      "zkontrolovano": "2026-10-19T21:44:19.796Z",
+      "zkontrolovano": "2026-10-20T04:02:44.796Z",
       "chyba": null
     },
     {
@@ -50,7 +49,7 @@
       "popis": "All Systems Operational",
       "incidenty": [],
       "postizene": [],
-      "zkontrolovano": "2026-10-19T21:44:19.796Z",
+      "zkontrolovano": "2026-10-20T04:02:44.796Z",
       "chyba": null
     }
   ]
