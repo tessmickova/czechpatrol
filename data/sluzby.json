@@ -1,16 +1,11 @@
 {
-  "aktualizovano": "2026-10-21T17:38:06.236Z",
+  "aktualizovano": "2026-10-21T20:03:12.895Z",
   "stavy": [
     {
       "klic": "cloudflare",
       "stav": "vypadek",
       "popis": "Partial System Outage",
       "incidenty": [
-        {
-          "nazev": "Increased Latency in India",
-          "odkaz": "https://www.cloudflarestatus.com/incidents/t77gwnpr6oe5",
-          "aktualizovano": "2026-10-21T16:42:14.640Z"
-        },
         {
           "nazev": "Incorrect geo location for some Cloudflare WARP users",
           "odkaz": "https://www.cloudflarestatus.com/incidents/9g65dxfbcjln",
@@ -23,7 +18,7 @@
         "Arica, Chile - (ARI)",
         "Annaba, Algeria - (AAE)"
       ],
-      "zkontrolovano": "2026-10-21T17:38:06.236Z",
+      "zkontrolovano": "2026-10-21T20:03:12.895Z",
       "chyba": null
     },
     {
@@ -35,7 +30,7 @@
         "Zoom Phone",
         "Zoom Phone - EMEA"
       ],
-      "zkontrolovano": "2026-10-21T17:38:06.236Z",
+      "zkontrolovano": "2026-10-21T20:03:12.895Z",
       "chyba": null
     },
     {
@@ -44,7 +39,7 @@
       "popis": "All Systems Operational",
       "incidenty": [],
       "postizene": [],
-      "zkontrolovano": "2026-10-21T17:38:06.236Z",
+      "zkontrolovano": "2026-10-21T20:03:12.895Z",
       "chyba": null
     }
   ]
