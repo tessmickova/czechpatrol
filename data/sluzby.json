@@ -1,5 +1,5 @@
 {
-  "aktualizovano": "2026-10-20T20:02:45.659Z",
+  "aktualizovano": "2026-10-21T00:02:55.839Z",
   "stavy": [
     {
       "klic": "cloudflare",
@@ -7,28 +7,18 @@
       "popis": "Partial System Outage",
       "incidenty": [
         {
-          "nazev": "Issue with Bot management traffic categorization for verified bots",
-          "odkaz": "https://www.cloudflarestatus.com/incidents/qlgdup1n0ge7",
-          "aktualizovano": "2026-10-20T19:35:33.833Z"
-        },
-        {
-          "nazev": "Cloudflare Secure Web Gateway and DLP enforcement issues for Google Gemini",
-          "odkaz": "https://www.cloudflarestatus.com/incidents/3z8y23zn7tr2",
-          "aktualizovano": "2026-10-19T23:46:48.411Z"
-        },
-        {
           "nazev": "Incorrect geo location for some Cloudflare WARP users",
           "odkaz": "https://www.cloudflarestatus.com/incidents/9g65dxfbcjln",
-          "aktualizovano": "2026-09-01T08:29:56.000Z"
+          "aktualizovano": "2026-09-01T08:29:56.953Z"
         }
       ],
       "postizene": [
         "Cloudflare Sites and Services",
         "Africa",
         "Arica, Chile - (ARI)",
-        "Annaba, Algeria - (AAE)"
+        "Baghdad, Iraq - (BGW)"
       ],
-      "zkontrolovano": "2026-10-20T20:02:45.659Z",
+      "zkontrolovano": "2026-10-21T00:02:55.839Z",
       "chyba": null
     },
     {
@@ -40,7 +30,7 @@
         "Zoom Phone",
         "Zoom Phone - EMEA"
       ],
-      "zkontrolovano": "2026-10-20T20:02:45.659Z",
+      "zkontrolovano": "2026-10-21T00:02:55.839Z",
       "chyba": null
     },
     {
@@ -49,7 +39,7 @@
       "popis": "All Systems Operational",
       "incidenty": [],
       "postizene": [],
-      "zkontrolovano": "2026-10-20T20:02:45.659Z",
+      "zkontrolovano": "2026-10-21T00:02:55.839Z",
       "chyba": null
     }
   ]
