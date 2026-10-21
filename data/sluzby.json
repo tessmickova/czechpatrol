@@ -1,5 +1,5 @@
 {
-  "aktualizovano": "2026-10-21T12:16:57.110Z",
+  "aktualizovano": "2026-10-21T16:02:48.322Z",
   "stavy": [
     {
       "klic": "cloudflare",
@@ -18,29 +18,26 @@
         "Auckland, New Zealand - (AKL)",
         "Arica, Chile - (ARI)"
       ],
-      "zkontrolovano": "2026-10-21T12:16:57.110Z",
+      "zkontrolovano": "2026-10-21T16:02:48.322Z",
       "chyba": null
     },
     {
       "klic": "zoom",
-      "stav": "omezeni",
-      "popis": "Service Under Maintenance",
+      "stav": "nezjisteno",
+      "popis": null,
       "incidenty": [],
-      "postizene": [
-        "Zoom Phone",
-        "Zoom Phone - EMEA"
-      ],
-      "zkontrolovano": "2026-10-21T12:16:57.110Z",
-      "chyba": null
+      "postizene": [],
+      "zkontrolovano": "2026-10-21T16:02:48.322Z",
+      "chyba": "The operation was aborted due to timeout"
     },
     {
       "klic": "discord",
-      "stav": "provoz",
-      "popis": "All Systems Operational",
+      "stav": "nezjisteno",
+      "popis": null,
       "incidenty": [],
       "postizene": [],
-      "zkontrolovano": "2026-10-21T12:16:57.110Z",
-      "chyba": null
+      "zkontrolovano": "2026-10-21T16:02:48.322Z",
+      "chyba": "The operation was aborted due to timeout"
     }
   ]
 }
