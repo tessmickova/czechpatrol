@@ -1,245 +1,245 @@
 {
   "e-sbirka": {
     "posledniUspech": null,
-    "posledniPokus": "2026-10-21T00:00:56.204Z",
+    "posledniPokus": "2026-10-21T06:27:42.192Z",
     "posledniVysledek": "obsah",
     "chyba": "nečekaný obsah",
-    "neuspechuZaSebou": 372
+    "neuspechuZaSebou": 375
   },
   "vlada": {
-    "posledniUspech": "2026-10-21T00:00:56.204Z",
-    "posledniPokus": "2026-10-21T00:00:56.204Z",
+    "posledniUspech": "2026-10-21T06:27:42.192Z",
+    "posledniPokus": "2026-10-21T06:27:42.192Z",
     "posledniVysledek": "ok",
     "chyba": null,
     "neuspechuZaSebou": 0
   },
   "psp": {
-    "posledniUspech": "2026-10-21T00:00:56.204Z",
-    "posledniPokus": "2026-10-21T00:00:56.204Z",
+    "posledniUspech": "2026-10-21T06:27:42.192Z",
+    "posledniPokus": "2026-10-21T06:27:42.192Z",
     "posledniVysledek": "ok",
     "chyba": null,
     "neuspechuZaSebou": 0
   },
   "senat": {
-    "posledniUspech": "2026-10-21T00:00:56.204Z",
-    "posledniPokus": "2026-10-21T00:00:56.204Z",
-    "posledniVysledek": "ok",
-    "chyba": null,
-    "neuspechuZaSebou": 0
+    "posledniUspech": "2026-10-21T04:00:46.163Z",
+    "posledniPokus": "2026-10-21T06:27:42.192Z",
+    "posledniVysledek": "chyba",
+    "chyba": "HTTP 403",
+    "neuspechuZaSebou": 1
   },
   "hrad": {
     "posledniUspech": null,
-    "posledniPokus": "2026-10-21T00:00:56.204Z",
+    "posledniPokus": "2026-10-21T06:27:42.192Z",
     "posledniVysledek": "chyba",
     "chyba": "HTTP 403",
-    "neuspechuZaSebou": 372
+    "neuspechuZaSebou": 375
   },
   "mvcr": {
-    "posledniUspech": "2026-10-21T00:00:56.204Z",
-    "posledniPokus": "2026-10-21T00:00:56.204Z",
+    "posledniUspech": "2026-10-21T06:27:42.192Z",
+    "posledniPokus": "2026-10-21T06:27:42.192Z",
     "posledniVysledek": "ok",
     "chyba": null,
     "neuspechuZaSebou": 0
   },
   "mzv": {
-    "posledniUspech": "2026-10-21T00:00:56.204Z",
-    "posledniPokus": "2026-10-21T00:00:56.204Z",
+    "posledniUspech": "2026-10-21T06:27:42.192Z",
+    "posledniPokus": "2026-10-21T06:27:42.192Z",
     "posledniVysledek": "ok",
     "chyba": null,
     "neuspechuZaSebou": 0
   },
   "nato": {
-    "posledniUspech": "2026-10-21T00:00:56.204Z",
-    "posledniPokus": "2026-10-21T00:00:56.204Z",
+    "posledniUspech": "2026-10-21T06:27:42.192Z",
+    "posledniPokus": "2026-10-21T06:27:42.192Z",
     "posledniVysledek": "ok",
     "chyba": null,
     "neuspechuZaSebou": 0
   },
   "army": {
-    "posledniUspech": "2026-10-21T00:00:56.204Z",
-    "posledniPokus": "2026-10-21T00:00:56.204Z",
+    "posledniUspech": "2026-10-21T06:27:42.192Z",
+    "posledniPokus": "2026-10-21T06:27:42.192Z",
     "posledniVysledek": "ok",
     "chyba": null,
     "neuspechuZaSebou": 0
   },
   "ceps": {
-    "posledniUspech": "2026-10-21T00:00:56.204Z",
-    "posledniPokus": "2026-10-21T00:00:56.204Z",
+    "posledniUspech": "2026-10-21T06:27:42.192Z",
+    "posledniPokus": "2026-10-21T06:27:42.192Z",
     "posledniVysledek": "ok",
     "chyba": null,
     "neuspechuZaSebou": 0
   },
   "eru": {
-    "posledniUspech": "2026-10-21T00:00:56.204Z",
-    "posledniPokus": "2026-10-21T00:00:56.204Z",
+    "posledniUspech": "2026-10-21T06:27:42.192Z",
+    "posledniPokus": "2026-10-21T06:27:42.192Z",
     "posledniVysledek": "ok",
     "chyba": null,
     "neuspechuZaSebou": 0
   },
   "ote": {
-    "posledniUspech": "2026-10-21T00:00:56.204Z",
-    "posledniPokus": "2026-10-21T00:00:56.204Z",
+    "posledniUspech": "2026-10-21T06:27:42.192Z",
+    "posledniPokus": "2026-10-21T06:27:42.192Z",
     "posledniVysledek": "ok",
     "chyba": null,
     "neuspechuZaSebou": 0
   },
   "sshr": {
     "posledniUspech": null,
-    "posledniPokus": "2026-10-21T00:00:56.204Z",
+    "posledniPokus": "2026-10-21T06:27:42.192Z",
     "posledniVysledek": "chyba",
     "chyba": "HTTP 403",
-    "neuspechuZaSebou": 372
+    "neuspechuZaSebou": 375
   },
   "mpo": {
-    "posledniUspech": "2026-10-21T00:00:56.204Z",
-    "posledniPokus": "2026-10-21T00:00:56.204Z",
+    "posledniUspech": "2026-10-21T06:27:42.192Z",
+    "posledniPokus": "2026-10-21T06:27:42.192Z",
     "posledniVysledek": "ok",
     "chyba": null,
     "neuspechuZaSebou": 0
   },
   "cnb": {
-    "posledniUspech": "2026-10-21T00:00:56.204Z",
-    "posledniPokus": "2026-10-21T00:00:56.204Z",
+    "posledniUspech": "2026-10-21T06:27:42.192Z",
+    "posledniPokus": "2026-10-21T06:27:42.192Z",
     "posledniVysledek": "ok",
     "chyba": null,
     "neuspechuZaSebou": 0
   },
   "ctu": {
-    "posledniUspech": "2026-10-21T00:00:56.204Z",
-    "posledniPokus": "2026-10-21T00:00:56.204Z",
+    "posledniUspech": "2026-10-21T06:27:42.192Z",
+    "posledniPokus": "2026-10-21T06:27:42.192Z",
     "posledniVysledek": "ok",
     "chyba": null,
     "neuspechuZaSebou": 0
   },
   "nukib": {
-    "posledniUspech": "2026-10-21T00:00:56.204Z",
-    "posledniPokus": "2026-10-21T00:00:56.204Z",
+    "posledniUspech": "2026-10-21T06:27:42.192Z",
+    "posledniPokus": "2026-10-21T06:27:42.192Z",
     "posledniVysledek": "ok",
     "chyba": null,
     "neuspechuZaSebou": 0
   },
   "hzs": {
-    "posledniUspech": "2026-10-21T00:00:56.204Z",
-    "posledniPokus": "2026-10-21T00:00:56.204Z",
+    "posledniUspech": "2026-10-21T06:27:42.192Z",
+    "posledniPokus": "2026-10-21T06:27:42.192Z",
     "posledniVysledek": "ok",
     "chyba": null,
     "neuspechuZaSebou": 0
   },
   "dopravni-info": {
     "posledniUspech": null,
-    "posledniPokus": "2026-10-21T00:00:56.204Z",
+    "posledniPokus": "2026-10-21T06:27:42.192Z",
     "posledniVysledek": "chyba",
     "chyba": "fetch failed",
-    "neuspechuZaSebou": 372
+    "neuspechuZaSebou": 375
   },
   "policie": {
-    "posledniUspech": "2026-10-21T00:00:56.204Z",
-    "posledniPokus": "2026-10-21T00:00:56.204Z",
+    "posledniUspech": "2026-10-21T06:27:42.192Z",
+    "posledniPokus": "2026-10-21T06:27:42.192Z",
     "posledniVysledek": "ok",
     "chyba": null,
     "neuspechuZaSebou": 0
   },
   "md": {
-    "posledniUspech": "2026-10-21T00:00:56.204Z",
-    "posledniPokus": "2026-10-21T00:00:56.204Z",
+    "posledniUspech": "2026-10-21T06:27:42.192Z",
+    "posledniPokus": "2026-10-21T06:27:42.192Z",
     "posledniVysledek": "ok",
     "chyba": null,
     "neuspechuZaSebou": 0
   },
   "sprava-zeleznic": {
-    "posledniUspech": "2026-10-21T00:00:56.204Z",
-    "posledniPokus": "2026-10-21T00:00:56.204Z",
+    "posledniUspech": "2026-10-21T06:27:42.192Z",
+    "posledniPokus": "2026-10-21T06:27:42.192Z",
     "posledniVysledek": "ok",
     "chyba": null,
     "neuspechuZaSebou": 0
   },
   "letiste-praha": {
-    "posledniUspech": "2026-10-21T00:00:56.204Z",
-    "posledniPokus": "2026-10-21T00:00:56.204Z",
+    "posledniUspech": "2026-10-21T06:27:42.192Z",
+    "posledniPokus": "2026-10-21T06:27:42.192Z",
     "posledniVysledek": "ok",
     "chyba": null,
     "neuspechuZaSebou": 0
   },
   "celni-sprava": {
-    "posledniUspech": "2026-10-21T00:00:56.204Z",
-    "posledniPokus": "2026-10-21T00:00:56.204Z",
+    "posledniUspech": "2026-10-21T06:27:42.192Z",
+    "posledniPokus": "2026-10-21T06:27:42.192Z",
     "posledniVysledek": "ok",
     "chyba": null,
     "neuspechuZaSebou": 0
   },
   "sujb": {
-    "posledniUspech": "2026-10-21T00:00:56.204Z",
-    "posledniPokus": "2026-10-21T00:00:56.204Z",
+    "posledniUspech": "2026-10-21T06:27:42.192Z",
+    "posledniPokus": "2026-10-21T06:27:42.192Z",
     "posledniVysledek": "ok",
     "chyba": null,
     "neuspechuZaSebou": 0
   },
   "chmi": {
-    "posledniUspech": "2026-10-21T00:00:56.204Z",
-    "posledniPokus": "2026-10-21T00:00:56.204Z",
+    "posledniUspech": "2026-10-21T06:27:42.192Z",
+    "posledniPokus": "2026-10-21T06:27:42.192Z",
     "posledniVysledek": "ok",
     "chyba": null,
     "neuspechuZaSebou": 0
   },
   "mzd": {
-    "posledniUspech": "2026-10-21T00:00:56.204Z",
-    "posledniPokus": "2026-10-21T00:00:56.204Z",
+    "posledniUspech": "2026-10-21T06:27:42.192Z",
+    "posledniPokus": "2026-10-21T06:27:42.192Z",
     "posledniVysledek": "ok",
     "chyba": null,
     "neuspechuZaSebou": 0
   },
   "bundespolizei": {
-    "posledniUspech": "2026-10-21T00:00:56.204Z",
-    "posledniPokus": "2026-10-21T00:00:56.204Z",
+    "posledniUspech": "2026-10-21T06:27:42.192Z",
+    "posledniPokus": "2026-10-21T06:27:42.192Z",
     "posledniVysledek": "ok",
     "chyba": null,
     "neuspechuZaSebou": 0
   },
   "bmi-de": {
     "posledniUspech": null,
-    "posledniPokus": "2026-10-21T00:00:56.204Z",
+    "posledniPokus": "2026-10-21T06:27:42.192Z",
     "posledniVysledek": "chyba",
     "chyba": "fetch failed",
-    "neuspechuZaSebou": 372
+    "neuspechuZaSebou": 375
   },
   "bmi-at": {
-    "posledniUspech": "2026-10-21T00:00:56.204Z",
-    "posledniPokus": "2026-10-21T00:00:56.204Z",
+    "posledniUspech": "2026-10-21T06:27:42.192Z",
+    "posledniPokus": "2026-10-21T06:27:42.192Z",
     "posledniVysledek": "ok",
     "chyba": null,
     "neuspechuZaSebou": 0
   },
   "straz-graniczna": {
-    "posledniUspech": "2026-10-21T00:00:56.204Z",
-    "posledniPokus": "2026-10-21T00:00:56.204Z",
+    "posledniUspech": "2026-10-21T06:27:42.192Z",
+    "posledniPokus": "2026-10-21T06:27:42.192Z",
     "posledniVysledek": "ok",
     "chyba": null,
     "neuspechuZaSebou": 0
   },
   "minv-sk": {
-    "posledniUspech": "2026-10-21T00:00:56.204Z",
-    "posledniPokus": "2026-10-21T00:00:56.204Z",
+    "posledniUspech": "2026-10-21T06:27:42.192Z",
+    "posledniPokus": "2026-10-21T06:27:42.192Z",
     "posledniVysledek": "ok",
     "chyba": null,
     "neuspechuZaSebou": 0
   },
   "chmi-cap": {
-    "posledniUspech": "2026-10-21T00:00:56.204Z",
-    "posledniPokus": "2026-10-21T00:00:56.204Z",
+    "posledniUspech": "2026-10-21T06:27:42.192Z",
+    "posledniPokus": "2026-10-21T06:27:42.192Z",
     "posledniVysledek": "ok",
     "chyba": null,
     "neuspechuZaSebou": 0
   },
   "pizza-index": {
-    "posledniUspech": "2026-10-21T00:00:56.204Z",
-    "posledniPokus": "2026-10-21T00:00:56.204Z",
+    "posledniUspech": "2026-10-21T06:27:42.192Z",
+    "posledniPokus": "2026-10-21T06:27:42.192Z",
     "posledniVysledek": "ok",
     "chyba": null,
     "neuspechuZaSebou": 0
   },
   "kyber": {
-    "posledniUspech": "2026-10-21T00:00:56.204Z",
-    "posledniPokus": "2026-10-21T00:00:56.204Z",
+    "posledniUspech": "2026-10-21T06:27:42.192Z",
+    "posledniPokus": "2026-10-21T06:27:42.192Z",
     "posledniVysledek": "ok",
     "chyba": null,
     "neuspechuZaSebou": 0

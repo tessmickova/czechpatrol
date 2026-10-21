@@ -1,5 +1,5 @@
 {
-  "kdy": "2026-10-21T00:00:56.204Z",
+  "kdy": "2026-10-21T06:27:42.192Z",
   "zdroje": [
     {
       "klic": "e-sbirka",
@@ -24,10 +24,11 @@
     },
     {
       "klic": "senat",
-      "ok": true,
-      "stav": 200,
+      "ok": false,
+      "stav": 403,
       "pocetPolozek": 0,
-      "vysledek": "ok"
+      "chyba": "HTTP 403",
+      "vysledek": "chyba"
     },
     {
       "klic": "hrad",
@@ -251,5 +252,5 @@
       "vysledek": "ok"
     }
   ],
-  "novychVeFronte": 3
+  "novychVeFronte": 0
 }
