@@ -27,7 +27,7 @@
           "jazyk": "cs"
         }
       ],
-      "zkontrolovano": "2026-10-21T12:14:21.840Z",
+      "zkontrolovano": "2026-10-21T17:35:26.037Z",
       "pokryti": "orientacni",
       "pokrytiDuvod": "přečteno vlada, psp, senat; žádný z nich není úplný seznam, zápor z nich neplyne"
     },
@@ -49,7 +49,7 @@
           "jazyk": "cs"
         }
       ],
-      "zkontrolovano": "2026-10-21T12:14:21.840Z",
+      "zkontrolovano": "2026-10-21T17:35:26.037Z",
       "pokryti": "orientacni",
       "pokrytiDuvod": "přečteno psp, senat; žádný z nich není úplný seznam, zápor z nich neplyne"
     },
@@ -79,7 +79,7 @@
           "jazyk": "cs"
         }
       ],
-      "zkontrolovano": "2026-10-21T12:14:21.840Z",
+      "zkontrolovano": "2026-10-21T17:35:26.037Z",
       "pokryti": "orientacni",
       "pokrytiDuvod": "přečteno vlada, army; žádný z nich není úplný seznam, zápor z nich neplyne"
     },
@@ -101,7 +101,7 @@
           "jazyk": "cs"
         }
       ],
-      "zkontrolovano": "2026-10-21T12:14:21.840Z",
+      "zkontrolovano": "2026-10-21T17:35:26.037Z",
       "pokryti": "orientacni",
       "pokrytiDuvod": "přečteno vlada, psp, mvcr; žádný z nich není úplný seznam, zápor z nich neplyne"
     },
@@ -123,9 +123,9 @@
           "jazyk": "cs"
         }
       ],
-      "zkontrolovano": "2026-10-21T12:14:21.840Z",
+      "zkontrolovano": "2026-10-21T17:35:26.037Z",
       "pokryti": "nedostupne",
-      "pokrytiDuvod": "nepodařilo se přečíst: bundespolizei"
+      "pokrytiDuvod": "nepodařilo se přečíst: bundespolizei, minv-sk"
     },
     {
       "klic": "hranice",
@@ -153,9 +153,9 @@
           "jazyk": "cs"
         }
       ],
-      "zkontrolovano": "2026-10-21T12:14:21.840Z",
+      "zkontrolovano": "2026-10-21T17:35:26.037Z",
       "pokryti": "nedostupne",
-      "pokrytiDuvod": "nepodařilo se přečíst: bundespolizei"
+      "pokrytiDuvod": "nepodařilo se přečíst: bundespolizei, minv-sk"
     },
     {
       "klic": "schuze-parlamentu",
@@ -175,7 +175,7 @@
           "jazyk": "cs"
         }
       ],
-      "zkontrolovano": "2026-10-21T12:14:21.840Z",
+      "zkontrolovano": "2026-10-21T17:35:26.037Z",
       "pokryti": "orientacni",
       "pokrytiDuvod": "přečteno psp, senat; žádný z nich není úplný seznam, zápor z nich neplyne"
     }
