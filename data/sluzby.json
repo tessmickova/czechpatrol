@@ -1,5 +1,5 @@
 {
-  "aktualizovano": "2026-10-22T04:17:18.045Z",
+  "aktualizovano": "2026-10-22T12:03:02.525Z",
   "stavy": [
     {
       "klic": "cloudflare",
@@ -9,7 +9,7 @@
         {
           "nazev": "Incorrect geo location for some Cloudflare WARP users",
           "odkaz": "https://www.cloudflarestatus.com/incidents/9g65dxfbcjln",
-          "aktualizovano": "2026-09-01T08:29:56.000Z"
+          "aktualizovano": "2026-09-01T08:29:56.953Z"
         }
       ],
       "postizene": [
@@ -18,19 +18,16 @@
         "Africa",
         "Arica, Chile - (ARI)"
       ],
-      "zkontrolovano": "2026-10-22T04:17:18.045Z",
+      "zkontrolovano": "2026-10-22T12:03:02.525Z",
       "chyba": null
     },
     {
       "klic": "zoom",
-      "stav": "omezeni",
-      "popis": "Service Under Maintenance",
+      "stav": "provoz",
+      "popis": "All Systems Operational",
       "incidenty": [],
-      "postizene": [
-        "Zoom Phone",
-        "Zoom Phone - EMEA"
-      ],
-      "zkontrolovano": "2026-10-22T04:17:18.045Z",
+      "postizene": [],
+      "zkontrolovano": "2026-10-22T12:03:02.525Z",
       "chyba": null
     },
     {
@@ -39,7 +36,7 @@
       "popis": "All Systems Operational",
       "incidenty": [],
       "postizene": [],
-      "zkontrolovano": "2026-10-22T04:17:18.045Z",
+      "zkontrolovano": "2026-10-22T12:03:02.525Z",
       "chyba": null
     }
   ]
