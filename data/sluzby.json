@@ -1,5 +1,5 @@
 {
-  "aktualizovano": "2026-10-22T19:09:33.636Z",
+  "aktualizovano": "2026-10-22T20:03:25.941Z",
   "stavy": [
     {
       "klic": "cloudflare",
@@ -28,16 +28,25 @@
         "Africa",
         "Arica, Chile - (ARI)"
       ],
-      "zkontrolovano": "2026-10-22T19:09:33.636Z",
+      "zkontrolovano": "2026-10-22T20:03:25.941Z",
       "chyba": null
     },
     {
       "klic": "zoom",
-      "stav": "provoz",
-      "popis": "All Systems Operational",
-      "incidenty": [],
-      "postizene": [],
-      "zkontrolovano": "2026-10-22T19:09:33.636Z",
+      "stav": "omezeni",
+      "popis": "Partially Degraded Service",
+      "incidenty": [
+        {
+          "nazev": "Service Degradation Affecting Zoom Meetings Services in the US.",
+          "odkaz": "https://stspg.io/813b5nbpsxdf",
+          "aktualizovano": "2026-10-22T12:32:34.210-07:00"
+        }
+      ],
+      "postizene": [
+        "Zoom Meetings",
+        "Zoom Meetings"
+      ],
+      "zkontrolovano": "2026-10-22T20:03:25.941Z",
       "chyba": null
     },
     {
@@ -46,7 +55,7 @@
       "popis": "All Systems Operational",
       "incidenty": [],
       "postizene": [],
-      "zkontrolovano": "2026-10-22T19:09:33.636Z",
+      "zkontrolovano": "2026-10-22T20:03:25.941Z",
       "chyba": null
     }
   ]
