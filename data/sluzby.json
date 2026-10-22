@@ -1,5 +1,5 @@
 {
-  "aktualizovano": "2026-10-22T12:03:02.525Z",
+  "aktualizovano": "2026-10-22T16:03:20.051Z",
   "stavy": [
     {
       "klic": "cloudflare",
@@ -7,9 +7,9 @@
       "popis": "Partial System Outage",
       "incidenty": [
         {
-          "nazev": "Incorrect geo location for some Cloudflare WARP users",
-          "odkaz": "https://www.cloudflarestatus.com/incidents/9g65dxfbcjln",
-          "aktualizovano": "2026-09-01T08:29:56.953Z"
+          "nazev": "Cloudflare Workers API Latency",
+          "odkaz": "https://www.cloudflarestatus.com/incidents/lhdg2tq46faq",
+          "aktualizovano": "2026-10-22T15:33:17.354Z"
         }
       ],
       "postizene": [
@@ -18,7 +18,7 @@
         "Africa",
         "Arica, Chile - (ARI)"
       ],
-      "zkontrolovano": "2026-10-22T12:03:02.525Z",
+      "zkontrolovano": "2026-10-22T16:03:20.051Z",
       "chyba": null
     },
     {
@@ -27,7 +27,7 @@
       "popis": "All Systems Operational",
       "incidenty": [],
       "postizene": [],
-      "zkontrolovano": "2026-10-22T12:03:02.525Z",
+      "zkontrolovano": "2026-10-22T16:03:20.051Z",
       "chyba": null
     },
     {
@@ -36,7 +36,7 @@
       "popis": "All Systems Operational",
       "incidenty": [],
       "postizene": [],
-      "zkontrolovano": "2026-10-22T12:03:02.525Z",
+      "zkontrolovano": "2026-10-22T16:03:20.051Z",
       "chyba": null
     }
   ]
