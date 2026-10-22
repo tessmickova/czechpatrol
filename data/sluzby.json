@@ -1,5 +1,5 @@
 {
-  "aktualizovano": "2026-10-22T04:17:18.045Z",
+  "aktualizovano": "2026-10-22T08:02:52.514Z",
   "stavy": [
     {
       "klic": "cloudflare",
@@ -18,19 +18,16 @@
         "Africa",
         "Arica, Chile - (ARI)"
       ],
-      "zkontrolovano": "2026-10-22T04:17:18.045Z",
+      "zkontrolovano": "2026-10-22T08:02:52.514Z",
       "chyba": null
     },
     {
       "klic": "zoom",
-      "stav": "omezeni",
-      "popis": "Service Under Maintenance",
+      "stav": "provoz",
+      "popis": "All Systems Operational",
       "incidenty": [],
-      "postizene": [
-        "Zoom Phone",
-        "Zoom Phone - EMEA"
-      ],
-      "zkontrolovano": "2026-10-22T04:17:18.045Z",
+      "postizene": [],
+      "zkontrolovano": "2026-10-22T08:02:52.514Z",
       "chyba": null
     },
     {
@@ -39,7 +36,7 @@
       "popis": "All Systems Operational",
       "incidenty": [],
       "postizene": [],
-      "zkontrolovano": "2026-10-22T04:17:18.045Z",
+      "zkontrolovano": "2026-10-22T08:02:52.514Z",
       "chyba": null
     }
   ]
