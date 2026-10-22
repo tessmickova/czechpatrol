@@ -1,5 +1,5 @@
 {
-  "kdy": "2026-10-22T08:00:47.290Z",
+  "kdy": "2026-10-22T09:34:18.422Z",
   "zdroje": [
     {
       "klic": "e-sbirka",
@@ -74,10 +74,11 @@
     },
     {
       "klic": "eru",
-      "ok": true,
-      "stav": 200,
+      "ok": false,
+      "stav": null,
       "pocetPolozek": 0,
-      "vysledek": "ok"
+      "chyba": "fetch failed",
+      "vysledek": "chyba"
     },
     {
       "klic": "ote",
@@ -233,14 +234,14 @@
       "klic": "chmi-cap",
       "ok": true,
       "stav": 200,
-      "pocetPolozek": 1,
+      "pocetPolozek": 0,
       "vysledek": "ok"
     },
     {
       "klic": "kyber",
       "ok": true,
       "stav": null,
-      "pocetPolozek": 0,
+      "pocetPolozek": 1,
       "vysledek": "ok"
     },
     {
