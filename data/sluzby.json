@@ -1,16 +1,11 @@
 {
-  "aktualizovano": "2026-10-22T00:03:04.632Z",
+  "aktualizovano": "2026-10-22T04:03:37.097Z",
   "stavy": [
     {
       "klic": "cloudflare",
       "stav": "vypadek",
       "popis": "Partial System Outage",
       "incidenty": [
-        {
-          "nazev": "Elevated Error Rate for Durable Objects in Lisbon",
-          "odkaz": "https://www.cloudflarestatus.com/incidents/33k6g8j7mhah",
-          "aktualizovano": "2026-10-21T23:50:36.035Z"
-        },
         {
           "nazev": "Incorrect geo location for some Cloudflare WARP users",
           "odkaz": "https://www.cloudflarestatus.com/incidents/9g65dxfbcjln",
@@ -19,11 +14,11 @@
       ],
       "postizene": [
         "Cloudflare Sites and Services",
+        "Accra, Ghana - (ACC)",
         "Africa",
-        "Arica, Chile - (ARI)",
-        "Almaty, Kazakhstan - (ALA)"
+        "Arica, Chile - (ARI)"
       ],
-      "zkontrolovano": "2026-10-22T00:03:04.632Z",
+      "zkontrolovano": "2026-10-22T04:03:37.097Z",
       "chyba": null
     },
     {
@@ -35,7 +30,7 @@
         "Zoom Phone",
         "Zoom Phone - EMEA"
       ],
-      "zkontrolovano": "2026-10-22T00:03:04.632Z",
+      "zkontrolovano": "2026-10-22T04:03:37.097Z",
       "chyba": null
     },
     {
@@ -44,7 +39,7 @@
       "popis": "All Systems Operational",
       "incidenty": [],
       "postizene": [],
-      "zkontrolovano": "2026-10-22T00:03:04.632Z",
+      "zkontrolovano": "2026-10-22T04:03:37.097Z",
       "chyba": null
     }
   ]
