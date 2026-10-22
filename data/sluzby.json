@@ -1,5 +1,5 @@
 {
-  "aktualizovano": "2026-10-22T20:03:25.941Z",
+  "aktualizovano": "2026-10-22T22:17:49.454Z",
   "stavy": [
     {
       "klic": "cloudflare",
@@ -15,38 +15,30 @@
           "nazev": "Delayed audit log delivery for WARP and Zero Trust services",
           "odkaz": "https://www.cloudflarestatus.com/incidents/qwrtvb4jfvk7",
           "aktualizovano": "2026-10-22T17:50:19.000Z"
-        },
-        {
-          "nazev": "Network Error Log Processing Unavailable",
-          "odkaz": "https://www.cloudflarestatus.com/incidents/l3d16334tgjp",
-          "aktualizovano": "2026-10-22T16:30:46.000Z"
         }
       ],
       "postizene": [
         "Cloudflare Sites and Services",
+        "Amman, Jordan - (AMM)",
         "Accra, Ghana - (ACC)",
-        "Africa",
-        "Arica, Chile - (ARI)"
+        "Africa"
       ],
-      "zkontrolovano": "2026-10-22T20:03:25.941Z",
+      "zkontrolovano": "2026-10-22T22:17:49.454Z",
       "chyba": null
     },
     {
       "klic": "zoom",
-      "stav": "omezeni",
-      "popis": "Partially Degraded Service",
+      "stav": "provoz",
+      "popis": "All Systems Operational",
       "incidenty": [
         {
           "nazev": "Service Degradation Affecting Zoom Meetings Services in the US.",
           "odkaz": "https://stspg.io/813b5nbpsxdf",
-          "aktualizovano": "2026-10-22T12:32:34.210-07:00"
+          "aktualizovano": "2026-10-22T13:05:21.706-07:00"
         }
       ],
-      "postizene": [
-        "Zoom Meetings",
-        "Zoom Meetings"
-      ],
-      "zkontrolovano": "2026-10-22T20:03:25.941Z",
+      "postizene": [],
+      "zkontrolovano": "2026-10-22T22:17:49.454Z",
       "chyba": null
     },
     {
@@ -55,7 +47,7 @@
       "popis": "All Systems Operational",
       "incidenty": [],
       "postizene": [],
-      "zkontrolovano": "2026-10-22T20:03:25.941Z",
+      "zkontrolovano": "2026-10-22T22:17:49.454Z",
       "chyba": null
     }
   ]
