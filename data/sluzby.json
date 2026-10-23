@@ -1,33 +1,54 @@
 {
-  "aktualizovano": "2026-10-23T12:02:57.057Z",
+  "aktualizovano": "2026-10-23T16:03:14.250Z",
   "stavy": [
     {
       "klic": "cloudflare",
       "stav": "vypadek",
       "popis": "Partial System Outage",
-      "incidenty": [],
+      "incidenty": [
+        {
+          "nazev": "Degraded network performance affecting some traffic between Cloudflare data centers",
+          "odkaz": "https://www.cloudflarestatus.com/incidents/sufgcbe8rrwt",
+          "aktualizovano": "2026-10-23T15:47:08.918Z"
+        },
+        {
+          "nazev": "Delayed, missed, and duplicated Workers Cron Triggers",
+          "odkaz": "https://www.cloudflarestatus.com/incidents/3ts1mfzs0khz",
+          "aktualizovano": "2026-10-23T15:27:34.000Z"
+        }
+      ],
       "postizene": [
-        "Accra, Ghana - (ACC)",
+        "Cloudflare Sites and Services",
         "Africa",
         "Arica, Chile - (ARI)",
         "Annaba, Algeria - (AAE)"
       ],
-      "zkontrolovano": "2026-10-23T12:02:57.057Z",
+      "zkontrolovano": "2026-10-23T16:03:14.250Z",
       "chyba": null
     },
     {
       "klic": "zoom",
-      "stav": "provoz",
-      "popis": "All Systems Operational",
+      "stav": "omezeni",
+      "popis": "Partially Degraded Service",
       "incidenty": [
+        {
+          "nazev": "Service Degradation Affecting Multiple Zoom Services.",
+          "odkaz": "https://stspg.io/vr1zl6mmnhhw",
+          "aktualizovano": "2026-10-23T09:01:56.763-07:00"
+        },
         {
           "nazev": "Service Degradation Affecting Zoom Meetings Services in the US.",
           "odkaz": "https://stspg.io/813b5nbpsxdf",
           "aktualizovano": "2026-10-22T13:05:21.706-07:00"
         }
       ],
-      "postizene": [],
-      "zkontrolovano": "2026-10-23T12:02:57.057Z",
+      "postizene": [
+        "Zoom Meetings",
+        "Zoom Chat",
+        "Zoom Contact Center",
+        "Zoom Chat"
+      ],
+      "zkontrolovano": "2026-10-23T16:03:14.250Z",
       "chyba": null
     },
     {
@@ -36,7 +57,7 @@
       "popis": "All Systems Operational",
       "incidenty": [],
       "postizene": [],
-      "zkontrolovano": "2026-10-23T12:02:57.057Z",
+      "zkontrolovano": "2026-10-23T16:03:14.250Z",
       "chyba": null
     }
   ]

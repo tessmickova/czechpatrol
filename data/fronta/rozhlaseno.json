@@ -333,6 +333,11 @@
       "kdy": "2026-10-23T05:30:29.270Z",
       "zaznamu": 0,
       "neodeslan": "nic od 7/10"
+    },
+    "2026-10-23-vecer": {
+      "kdy": "2026-10-23T17:30:40.627Z",
+      "zaznamu": 0,
+      "neodeslan": "nic nového"
     }
   },
   "navrhy": {
@@ -1077,6 +1082,6 @@
     }
   },
   "kyber": {
-    "stav": "klid"
+    "stav": "pozor"
   }
 }
