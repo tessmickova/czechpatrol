@@ -1,5 +1,5 @@
 {
-  "aktualizovano": "2026-10-23T00:03:12.543Z",
+  "aktualizovano": "2026-10-23T05:55:36.033Z",
   "stavy": [
     {
       "klic": "cloudflare",
@@ -7,14 +7,9 @@
       "popis": "Partial System Outage",
       "incidenty": [
         {
-          "nazev": "Elevated error rates for Durable Objects in Western Europe",
-          "odkaz": "https://www.cloudflarestatus.com/incidents/v967mz6rrcxw",
-          "aktualizovano": "2026-10-22T18:19:52.000Z"
-        },
-        {
-          "nazev": "Delayed audit log delivery for WARP and Zero Trust services",
-          "odkaz": "https://www.cloudflarestatus.com/incidents/qwrtvb4jfvk7",
-          "aktualizovano": "2026-10-22T17:50:19.000Z"
+          "nazev": "Support Helpdesk Availability Issues",
+          "odkaz": "https://www.cloudflarestatus.com/incidents/8m9a1fjjwxp5",
+          "aktualizovano": "2026-10-23T04:51:14.010Z"
         }
       ],
       "postizene": [
@@ -23,7 +18,7 @@
         "Africa",
         "Arica, Chile - (ARI)"
       ],
-      "zkontrolovano": "2026-10-23T00:03:12.543Z",
+      "zkontrolovano": "2026-10-23T05:55:36.033Z",
       "chyba": null
     },
     {
@@ -38,7 +33,7 @@
         }
       ],
       "postizene": [],
-      "zkontrolovano": "2026-10-23T00:03:12.543Z",
+      "zkontrolovano": "2026-10-23T05:55:36.033Z",
       "chyba": null
     },
     {
@@ -47,7 +42,7 @@
       "popis": "All Systems Operational",
       "incidenty": [],
       "postizene": [],
-      "zkontrolovano": "2026-10-23T00:03:12.543Z",
+      "zkontrolovano": "2026-10-23T05:55:36.033Z",
       "chyba": null
     }
   ]
