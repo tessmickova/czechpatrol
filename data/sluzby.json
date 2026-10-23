@@ -1,18 +1,29 @@
 {
-  "aktualizovano": "2026-10-23T12:02:57.057Z",
+  "aktualizovano": "2026-10-23T15:53:25.526Z",
   "stavy": [
     {
       "klic": "cloudflare",
       "stav": "vypadek",
       "popis": "Partial System Outage",
-      "incidenty": [],
+      "incidenty": [
+        {
+          "nazev": "Degraded network performance affecting some traffic between Cloudflare data centers",
+          "odkaz": "https://www.cloudflarestatus.com/incidents/sufgcbe8rrwt",
+          "aktualizovano": "2026-10-23T15:47:08.918Z"
+        },
+        {
+          "nazev": "Delayed, missed, and duplicated Workers Cron Triggers",
+          "odkaz": "https://www.cloudflarestatus.com/incidents/3ts1mfzs0khz",
+          "aktualizovano": "2026-10-23T15:27:34.000Z"
+        }
+      ],
       "postizene": [
-        "Accra, Ghana - (ACC)",
+        "Cloudflare Sites and Services",
         "Africa",
         "Arica, Chile - (ARI)",
         "Annaba, Algeria - (AAE)"
       ],
-      "zkontrolovano": "2026-10-23T12:02:57.057Z",
+      "zkontrolovano": "2026-10-23T15:53:25.526Z",
       "chyba": null
     },
     {
@@ -27,7 +38,7 @@
         }
       ],
       "postizene": [],
-      "zkontrolovano": "2026-10-23T12:02:57.057Z",
+      "zkontrolovano": "2026-10-23T15:53:25.526Z",
       "chyba": null
     },
     {
@@ -36,7 +47,7 @@
       "popis": "All Systems Operational",
       "incidenty": [],
       "postizene": [],
-      "zkontrolovano": "2026-10-23T12:02:57.057Z",
+      "zkontrolovano": "2026-10-23T15:53:25.526Z",
       "chyba": null
     }
   ]
