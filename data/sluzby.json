@@ -1,24 +1,18 @@
 {
-  "aktualizovano": "2026-10-23T05:55:36.033Z",
+  "aktualizovano": "2026-10-23T12:02:57.057Z",
   "stavy": [
     {
       "klic": "cloudflare",
       "stav": "vypadek",
       "popis": "Partial System Outage",
-      "incidenty": [
-        {
-          "nazev": "Support Helpdesk Availability Issues",
-          "odkaz": "https://www.cloudflarestatus.com/incidents/8m9a1fjjwxp5",
-          "aktualizovano": "2026-10-23T04:51:14.010Z"
-        }
-      ],
+      "incidenty": [],
       "postizene": [
-        "Cloudflare Sites and Services",
         "Accra, Ghana - (ACC)",
         "Africa",
-        "Arica, Chile - (ARI)"
+        "Arica, Chile - (ARI)",
+        "Annaba, Algeria - (AAE)"
       ],
-      "zkontrolovano": "2026-10-23T05:55:36.033Z",
+      "zkontrolovano": "2026-10-23T12:02:57.057Z",
       "chyba": null
     },
     {
@@ -33,7 +27,7 @@
         }
       ],
       "postizene": [],
-      "zkontrolovano": "2026-10-23T05:55:36.033Z",
+      "zkontrolovano": "2026-10-23T12:02:57.057Z",
       "chyba": null
     },
     {
@@ -42,7 +36,7 @@
       "popis": "All Systems Operational",
       "incidenty": [],
       "postizene": [],
-      "zkontrolovano": "2026-10-23T05:55:36.033Z",
+      "zkontrolovano": "2026-10-23T12:02:57.057Z",
       "chyba": null
     }
   ]

@@ -1,5 +1,5 @@
 {
-  "aktualizovano": "2026-10-22T19:09:29.846Z",
+  "aktualizovano": "2026-10-23T08:03:09.308Z",
   "zdroj": {
     "nazev": "Český statistický úřad — průměrné spotřebitelské ceny pohonných hmot (týdenní šetření)",
     "url": "https://vdb.czso.cz/pll/eweb/cenyphm.data",
@@ -2414,8 +2414,14 @@
       "konec": "2026-10-18",
       "nafta": 46.86,
       "benzin95": 45.35
+    },
+    {
+      "tyden": "2026-W43",
+      "konec": "2026-10-25",
+      "nafta": 47.55,
+      "benzin95": 45.33
     }
   ],
   "zprava": null,
-  "pokus": "2026-10-22T19:09:29.846Z"
+  "pokus": "2026-10-23T08:03:09.308Z"
 }
