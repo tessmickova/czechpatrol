@@ -1,5 +1,39 @@
 [
   {
+    "id": "k-5f1b5ff72e68c089",
+    "zachyceno": "2026-10-23T00:03:12.368Z",
+    "publikovano": "2026-10-22T23:51:35.000Z",
+    "zdroj": {
+      "nazev": "Meduza (anglicky)",
+      "url": "https://meduza.io/en/cards/two-critical-php-vulnerabilities-threaten-websites-worldwide-here-s-why-russia-where-the-language-powers-more-than-90-percent-of-sites-faces-particularly-high-risks",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Two critical PHP vulnerabilities threaten websites worldwide. Here’s why Russia, where the language powers more than 90% of sites, faces particularly high risks.",
+    "titulekPuvodni": "Two critical PHP vulnerabilities threaten websites worldwide. Here’s why Russia, where the language powers more than 90% of sites, faces particularly high risks.",
+    "shrnuti": "On October 21, the team behind the PHP programming language said it had discovered two vulnerabilities. Both scored 9.2 out of 10 on the CVSS scale, a critical severity rating. The vulnerabilities allow attackers to run code remotely on a server without authentication. This could let them gain unaut",
+    "kodZeme": "RU",
+    "zeme": "Rusko",
+    "kategorie": [
+      "kyber",
+      "rusko"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "ddos attack",
+      "russia"
+    ],
+    "naliehave": null,
+    "stav": "ceka",
+    "vyrez": {
+      "text": "Two critical PHP vulnerabilities threaten websites worldwide. Here’s why Russia, where the language powers more than 90% of sites, faces particularly high risks. — Meduza\nSkip to main content\nexplainers\nTwo critical PHP vulnerabilities threaten websites worldwide. Here’s why Russia, where the language powers more than 90% of sites, faces particularly high risks.\n7 cards\nOctober 22, 2026, 11:51 pm\nContents\n1\nWhat happened?\nOn October 21, the team behind the PHP programming language said it had discovered two vulnerabilities . Both scored 9.2 out of 10 on the CVSS scale, a critical severity rating. The vulnerabilities allow attackers to run code remotely on a server without authentication. This could let them gain unauthorized access to files and databases, insert malicious code or alter a website’s content, redirect traffic to other sites, or use the server for DDoS attacks or spam campaigns.\nThe vulnerabilities have put almost 70% of all websites on the internet at risk of being hacked . That is the share of sites that use PHP, according to  W3Techs estimates . The developers strongly recommend installing updates immediately. Updates are already available for PHP versions 8.2 and…",
+      "stazeno": "2026-10-23T00:03:12.490Z",
+      "stav": 200
+    }
+  },
+  {
     "id": "k-1b60ba4a4b4240ec",
     "zachyceno": "2026-10-22T22:17:46.502Z",
     "publikovano": "2026-10-22T22:10:00.000Z",
@@ -10148,42 +10182,6 @@
     "vyrez": {
       "text": "Msta Trumpovi nestačí, musíme vládnout. Nezatracujte USA, říká legenda demokratů - iDNES.cz \r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\niDNES.cz\n\r\n\r\n\r\nP�ihl�sit \r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nAbyste mohli pokra�ovat, pot�ebujeme v�d�t, jakou formou v�m m��eme zobrazovat reklamu \r\n\r\n\r\n\r\n\r\n\r\nV�mi zvolen� nastaven� \r\nneobsahuje souhlas se zobrazov�n�m c�len� reklamy . \r\nVyberte pros�m znovu, \r\njakou formou v�m m�me zobrazovat obsah. \r\n\r\n\r\n\r\n\r\n\r\n\r\niDNES Premium\n\r\nBez reklam\n\r\n\r\n199 K� m�s��n�\n\r\nM��ete neomezen� ��st iDNES.cz, Lidovky.cz, Expres.cz a Antiyoutuber.cz. K tomu dostanete tak� noviny a �asopisy v elektronick� podob�. To v�e bez reklam. 1\n\r\n\r\nP�edplatit\n\r\n\r\nU� m�te ��et? P�ihlaste se\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nS c�lenou reklamou\n\r\n\r\n\r\nZdarma \r\n\r\nZachov�me v�m v�e tak, jak jste zvykl� a reklamu p�izp�sob�me va�im z�jm�m. Bez omezen� si m��ete d�l ��st, p�ehr�vat videa, sout�it �i p�isp�vat do v�ech diskus�. 2\n\r\n\r\nSouhlas�m\n\r\nPodrobn� nastaven�\n\r\n\r\n\r\n\r\n\r\n\r\niDNES a reklama\n\r\nPokud vyu�ijete m�sto platby ud�len� souhlasu s reklamou (tj. souhlas s vyu�it�m cookies a dal��ch s�ov�ch identifik�tor� pro ��ely c�len� reklamy), \r\nbudou V�m…",
       "stazeno": "2026-10-19T00:02:56.480Z",
-      "stav": 200
-    }
-  },
-  {
-    "id": "k-6f5977ad017ab97f",
-    "zachyceno": "2026-10-18T21:46:38.675Z",
-    "publikovano": "2026-10-18T21:08:00.000Z",
-    "zdroj": {
-      "nazev": "iDNES.cz — zpravodajství",
-      "url": "https://www.idnes.cz/zpravy/zahranicni/litva-rusko-utok-starlink.A261018_225709_zahranicni_dvou#utm_source=rss&utm_medium=feed&utm_campaign=zpravodaj&utm_content=main",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Rusko stojí za pokusem o žhářský útok na Starlink, tvrdí Litva",
-    "titulekPuvodni": "Rusko stojí za pokusem o žhářský útok na Starlink, tvrdí Litva",
-    "shrnuti": "Rusko s velkou pravděpodobností stojí za nedělním pokusem o žhářský útok na litevskou společnost, v jejíchž prostorách se nachází satelitní komunikační zařízení Starlink důležité pro Ukrajinu. V neděli to uvedl premiér této pobaltské země Mindaugas Sinkevičius. Incident se stal ve dvě hodiny ráno mí",
-    "kodZeme": "LT",
-    "zeme": "Litva",
-    "kategorie": [
-      "sabotaz",
-      "hybridni",
-      "rusko"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "zeSite": null,
-    "shody": [
-      "zhar",
-      "utok na",
-      "rusk"
-    ],
-    "naliehave": null,
-    "stav": "ceka",
-    "vyrez": {
-      "text": "Rusko stojí za pokusem o žhářský útok na Starlink, tvrdí Litva - iDNES.cz \r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\niDNES.cz\n\r\n\r\n\r\nP�ihl�sit \r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nAbyste mohli pokra�ovat, pot�ebujeme v�d�t, jakou formou v�m m��eme zobrazovat reklamu \r\n\r\n\r\n\r\n\r\n\r\nV�mi zvolen� nastaven� \r\nneobsahuje souhlas se zobrazov�n�m c�len� reklamy . \r\nVyberte pros�m znovu, \r\njakou formou v�m m�me zobrazovat obsah. \r\n\r\n\r\n\r\n\r\n\r\n\r\niDNES Premium\n\r\nBez reklam\n\r\n\r\n199 K� m�s��n�\n\r\nM��ete neomezen� ��st iDNES.cz, Lidovky.cz, Expres.cz a Antiyoutuber.cz. K tomu dostanete tak� noviny a �asopisy v elektronick� podob�. To v�e bez reklam. 1\n\r\n\r\nP�edplatit\n\r\n\r\nU� m�te ��et? P�ihlaste se\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nS c�lenou reklamou\n\r\n\r\n\r\nZdarma \r\n\r\nZachov�me v�m v�e tak, jak jste zvykl� a reklamu p�izp�sob�me va�im z�jm�m. Bez omezen� si m��ete d�l ��st, p�ehr�vat videa, sout�it �i p�isp�vat do v�ech diskus�. 2\n\r\n\r\nSouhlas�m\n\r\nPodrobn� nastaven�\n\r\n\r\n\r\n\r\n\r\n\r\niDNES a reklama\n\r\nPokud vyu�ijete m�sto platby ud�len� souhlasu s reklamou (tj. souhlas s vyu�it�m cookies a dal��ch s�ov�ch identifik�tor� pro ��ely c�len� reklamy), \r\nbudou V�m zobrazov�ny v r�mci…",
-      "stazeno": "2026-10-18T21:46:40.895Z",
       "stav": 200
     }
   }
