@@ -1,5 +1,119 @@
 [
   {
+    "id": "k-a82c4f4ef6c85f8d",
+    "zachyceno": "2026-10-23T20:03:19.452Z",
+    "publikovano": "2026-10-23T20:02:01.000Z",
+    "zdroj": {
+      "nazev": "Tagesschau (Německo)",
+      "url": "https://www.tagesschau.de/ausland/europa/frankreich-vorbereitung-ausschreittungen-paris-100.html",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Frankreich rüstet sich für nächsten Protesttag",
+    "shrnuti": "Frankreich fürchtet eine weitere Eskalation der aufgeheizten Stimmung. Diesmal will der Staat besser vorbereitet sein. Inmitten dieser Lage erschüttert ein mutmaßlich rassistisch motivierter Anschlag das Land. Von Cai Rienäcker.",
+    "duvod": "bez-skutku",
+    "kategorie": [],
+    "posouzeni": null
+  },
+  {
+    "id": "k-098763967081f97d",
+    "zachyceno": "2026-10-23T20:03:21.905Z",
+    "publikovano": "2026-10-23T20:00:29.000Z",
+    "zdroj": {
+      "nazev": "G4Media (Rumunsko)",
+      "url": "https://www.g4media.ro/statele-unite-ar-putea-ataca-iranul-in-acest-weekend-afirma-emisarul-american-tom-barrack.html",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Statele Unite ar putea ataca Iranul în acest weekend, afirmă emisarul american Tom Barrack",
+    "shrnuti": "Statele Unite ar putea ataca Iranul chiar în acest weekend, a declarat vineri emisarul american Tom Barrack, după ameninţările tot mai dese ale Washingtonului şi Israelului din ultimele zile, relatează AFP preluată de Agerpres. „Ar putea avea loc un atac în acest weekend? Absolut”, a spus Tom Barrac",
+    "duvod": "bez-skutku",
+    "kategorie": [],
+    "posouzeni": null
+  },
+  {
+    "id": "k-6d2a5c269761dfd3",
+    "zachyceno": "2026-10-23T20:03:20.008Z",
+    "publikovano": "2026-10-23T19:59:00.000Z",
+    "zdroj": {
+      "nazev": "HVG (Maďarsko)",
+      "url": "https://hvg.hu/vilag/20261023_ujabb-tomegtuntetesekre-keszul-franciaorszag-70-ezer-rendfenntartot-mozgositanak",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Újabb tömegtüntetésekre készül Franciaország, 70 ezer rendfenntartót mozgósítanak",
+    "shrnuti": "A hatóságok a múlt hétvégi demonstrácók után 2700 embert állítottak elő.",
+    "duvod": "bez-skutku",
+    "kategorie": [],
+    "posouzeni": null
+  },
+  {
+    "id": "k-31c0031b7bec943a",
+    "zachyceno": "2026-10-23T20:03:18.669Z",
+    "publikovano": "2026-10-23T19:58:34.000Z",
+    "zdroj": {
+      "nazev": "Seznam Zprávy",
+      "url": "https://www.seznamzpravy.cz/clanek/domaci-zivot-v-cesku-evropska-vysilaci-unie-varuje-pred-zrychlenym-schvalovanim-zakona-o-ct-a-cro-318644",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Evropská vysílací unie varuje před zrychleným schvalováním zákona o ČT a ČRo",
+    "shrnuti": "Evropská vysílací unie (EBU) a jedenáct dalších mediálních a novinářských organizací vyjádřily hluboké znepokojení nad tím, že česká sněmovna urychleně projednává zrušení televizních a rozhlasových poplatků.",
+    "duvod": "vylouceno-tematem",
+    "kategorie": [
+      "cr"
+    ],
+    "posouzeni": null
+  },
+  {
+    "id": "k-b65720ea27646489",
+    "zachyceno": "2026-10-23T20:03:20.252Z",
+    "publikovano": "2026-10-23T19:56:00.000Z",
+    "zdroj": {
+      "nazev": "Helsingin Sanomat (Finsko)",
+      "url": "https://www.hs.fi/maailma/art-2000012364045.html",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Kyberhyökkäykset | Tanskalais­yliopistot joutuivat kyber­hyökkäyksen kohteeksi",
+    "shrnuti": "Hakkerit pääsivät käsiksi nimiin, henkilötunnuksiin, puhelinnumeroihin ja sähköpostiosoitteisiin.",
+    "duvod": "bez-skutku",
+    "kategorie": [],
+    "posouzeni": null
+  },
+  {
+    "id": "k-969cdcc160669521",
+    "zachyceno": "2026-10-23T20:03:19.368Z",
+    "publikovano": "2026-10-23T19:55:15.000Z",
+    "zdroj": {
+      "nazev": "Euronews",
+      "url": "https://www.euronews.com/2026/10/23/jihadists-reportedly-urge-attacks-during-protests-in-portugal-and-spain",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Jihadists reportedly urge attacks during protests in Portugal and Spain",
+    "shrnuti": "Spanish newspaper El País has obtained what it identifies as an Interior Ministry report detailing calls for attacks on police officers and protesters during weeks-long demonstrations in several European countries.",
+    "duvod": "bez-skutku",
+    "kategorie": [],
+    "posouzeni": null
+  },
+  {
+    "id": "k-5a4554d0cbc815cd",
+    "zachyceno": "2026-10-23T20:03:19.908Z",
+    "publikovano": "2026-10-23T19:55:00.000Z",
+    "zdroj": {
+      "nazev": "SME (Slovensko)",
+      "url": "https://www.sme.sk/svet/c/pocas-oktobra-celili-lode-v-hormuzskom-prielive-najvacsiemu-poctu-utokov?utm_source=rss&utm_medium=feed&utm_campaign=www-rss",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Počas októbra čelili lode v Hormuzskom prielive najväčšiemu počtu útokov",
+    "shrnuti": "Od začiatku vojny USA a Izraela proti Iránu ich evidujú 113.",
+    "duvod": "bez-skutku",
+    "kategorie": [],
+    "posouzeni": null
+  },
+  {
     "id": "k-3a57b39857b7ef6a",
     "zachyceno": "2026-10-23T19:56:00.026Z",
     "publikovano": "2026-10-23T19:53:00.000Z",
@@ -191,6 +305,40 @@
     "shrnuti": "Premierul ungar Peter Magyar a declarat, vineri, că ţara sa depune eforturi să fie un aliat de încredere în Uniunea Europeană, în încercarea de a recâştiga încrederea partenerilor săi europeni după cei cei 16 ani la putere ai lui Viktor Orban, relatează AFP, potrivit Agerpres.",
     "duvod": "bez-skutku",
     "kategorie": [],
+    "posouzeni": null
+  },
+  {
+    "id": "k-e097ac388c0ec7ec",
+    "zachyceno": "2026-10-23T20:03:18.873Z",
+    "publikovano": "2026-10-23T19:42:08.000Z",
+    "zdroj": {
+      "nazev": "BBC News — Europe",
+      "url": "https://www.bbc.co.uk/news/articles/c6ev38dj1g8zo?at_medium=RSS&at_campaign=rss",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Deadly shooting near Paris is a 'racist terrorist attack', Macron says",
+    "shrnuti": "One person is killed and five wounded in a series of attacks and the suspected gunman has been apprehended.",
+    "duvod": "bez-skutku",
+    "kategorie": [],
+    "posouzeni": null
+  },
+  {
+    "id": "k-5b0e19f8887a637d",
+    "zachyceno": "2026-10-23T20:03:18.708Z",
+    "publikovano": "2026-10-23T19:41:00.000Z",
+    "zdroj": {
+      "nazev": "iDNES.cz — zpravodajství",
+      "url": "https://www.idnes.cz/zpravy/domaci/cesky-rozhlas-koncesionarske-poplatky-verejnopravni-media.A261023_150750_domaci_hock#utm_source=rss&utm_medium=feed&utm_campaign=zpravodaj&utm_content=main",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "ČT zaskočilo náhlé jednání o konci poplatků. Překotné, podivuje se",
+    "shrnuti": "Vedení České televize je znepokojeno překotným způsobem, jakým chce Poslanecká sněmovna projednat návrh na zrušení koncesionářských poplatků. Podle ní je nezbytné, aby součástí projednávání byla plnohodnotná diskuse. Také Český rozhlas varuje před změnou financování veřejnoprávních médií, kterou pro",
+    "duvod": "vylouceno-tematem",
+    "kategorie": [
+      "cr"
+    ],
     "posouzeni": null
   },
   {
@@ -404,6 +552,22 @@
     "titulek": "Krzysztof Gawkowski o Katarzynie Pełczyńskiej-Nałęcz: znam, cenię, ale czasami po prostu nie rozumiem",
     "shrnuti": "Mówienie źle o swojej rodzinie, a rząd to trochę taka rodzina, to mówienie źle o samym sobie - powiedział w programie \"#BezKitu\" TVN24 minister cyfryzacji Krzysztof Gawkowski. Skomentował w ten sposób zarzut Katarzyny Pełczyńskiej-Nałęcz, że rząd Donalda Tuska ma \"przemocową kulturę zarządzania\".",
     "duvod": "bez-skutku",
+    "kategorie": [],
+    "posouzeni": null
+  },
+  {
+    "id": "k-f2d726a971ff80a4",
+    "zachyceno": "2026-10-23T20:03:18.744Z",
+    "publikovano": "2026-10-23T19:26:00.000Z",
+    "zdroj": {
+      "nazev": "ČTK — České noviny",
+      "url": "https://www.ceskenoviny.cz/zpravy/cenu-za-prinos-svetove-kinematografii-na-festivalu-jihlava-prevzala-trestikova/2892331?utm_source=rss&utm_medium=feed",
+      "typ": "wire",
+      "primarni": false
+    },
+    "titulek": "Cenu za přínos světové kinematografii na festivalu Ji.hlava převzala Třeštíková",
+    "shrnuti": "Jihlava - Cenu za přínos světové kinematografii dnes v první den 30. ročníku Mezinárodního festivalu dokumentárních filmů Ji.hlava převzala dokumentaristka Helena Třeštíková. V proslovu se vyjádřila i...",
+    "duvod": "vylouceno-tematem",
     "kategorie": [],
     "posouzeni": null
   },
@@ -964,6 +1128,22 @@
     },
     "titulek": "Maignan, valanga di odio social dopo Bournemouth. Il Milan: “Insulti inaccettabili”",
     "shrnuti": "Il portiere oggetto di messaggi di stampo razzista dopo l’espulsione in Europa League",
+    "duvod": "bez-skutku",
+    "kategorie": [],
+    "posouzeni": null
+  },
+  {
+    "id": "k-786c87478c4151ce",
+    "zachyceno": "2026-10-23T20:03:19.885Z",
+    "publikovano": "2026-10-23T18:57:47.000Z",
+    "zdroj": {
+      "nazev": "NZZ (Švýcarsko)",
+      "url": "https://www.nzz.ch/panorama/schuesse-in-frankreich-mindestens-ein-toter-und-vier-verletzte-ld.10042596",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Macron spricht von einem «terroristischen und rassistischen Angriff»: mindestens ein Toter und fünf Verletzte nach Schüssen im Grossraum Paris",
+    "shrnuti": "Unter den Verletzten ist auch ein zwölfjähriges Kind. Der mutmassliche Täter wurde festgenommen.",
     "duvod": "bez-skutku",
     "kategorie": [],
     "posouzeni": null
@@ -2215,6 +2395,24 @@
     "posouzeni": null
   },
   {
+    "id": "k-698b7f20fd6470b9",
+    "zachyceno": "2026-10-23T20:03:18.712Z",
+    "publikovano": "2026-10-23T18:08:26.000Z",
+    "zdroj": {
+      "nazev": "iDNES.cz — zpravodajství",
+      "url": "https://www.idnes.cz/zpravy/zahranicni/melania-trumpova-bileho-domu-primiri-olesky-rusko-ukrajina.A261023_154358_zahranicni_dtt#utm_source=rss&utm_medium=feed&utm_campaign=zpravodaj&utm_content=main",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Melania vyjednala příměří v Oleškách. Bílý dům a Moskva se neshodnou na datu",
+    "shrnuti": "V okupovaných Oleškách na jižní Ukrajině začne v příštím týdnu příměří, které zprostředkovala americká první dáma Melania Trumpová. Oznámil to v pátek Bílý dům. Informaci později potvrdil i Kreml. Zatímco Washington mluví o začátku 29. října, Moskva uvádí už 27. říjen. Město trpí akutním nedostatkem",
+    "duvod": "bez-skutku",
+    "kategorie": [
+      "rusko"
+    ],
+    "posouzeni": null
+  },
+  {
     "id": "k-7031b7479d8b8b31",
     "zachyceno": "2026-10-23T19:55:58.695Z",
     "publikovano": "2026-10-23T18:08:00.000Z",
@@ -3089,6 +3287,24 @@
     "posouzeni": null
   },
   {
+    "id": "k-c6157087a3e69878",
+    "zachyceno": "2026-10-23T20:03:18.717Z",
+    "publikovano": "2026-10-23T17:35:15.000Z",
+    "zdroj": {
+      "nazev": "iDNES.cz — zpravodajství",
+      "url": "https://www.idnes.cz/zpravy/zahranicni/trappes-francie-pariz-strelba-obet-divka.A261023_133653_zahranicni_dtt#utm_source=rss&utm_medium=feed&utm_campaign=zpravodaj&utm_content=main",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Jeden mrtvý, vážně zraněné dítě. Střelbu u Paříže řeší policie jako terorismus",
+    "shrnuti": "Nejméně jednoho mrtvého a pět raněných, z nichž tři jsou ve velmi vážném stavu, si v pátek dopoledne vyžádala střelba na předměstí Paříže. Případ převzala protiteroristická prokuratura (PNAT), podle níž muž v obci Trappes střílel z automobilu a později byl zatčen.",
+    "duvod": "bez-skutku",
+    "kategorie": [
+      "vojsko"
+    ],
+    "posouzeni": null
+  },
+  {
     "id": "k-5aff832bbeb481a6",
     "zachyceno": "2026-10-23T19:56:00.678Z",
     "publikovano": "2026-10-23T17:34:37.000Z",
@@ -3333,6 +3549,22 @@
     "posouzeni": null
   },
   {
+    "id": "k-60e6da7a12a611ca",
+    "zachyceno": "2026-10-23T20:03:21.339Z",
+    "publikovano": "2026-10-23T17:28:24.000Z",
+    "zdroj": {
+      "nazev": "El Mundo (Španělsko)",
+      "url": "https://www.elmundo.es/madrid/2026/10/23/6adb70fbe9cf4afb108b459d.html",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Interior alerta de un llamamiento yihadista a atacar a policías y manifestantes en España",
+    "shrnuti": "La Oficina de Coordinación de Ciberseguridad detecta una publicación en una web afín a Dáesh que incita a aprovechar las protestas en países europeos para cometer atentados Leer",
+    "duvod": "bez-skutku",
+    "kategorie": [],
+    "posouzeni": null
+  },
+  {
     "id": "k-557c5d508f6d3d37",
     "zachyceno": "2026-10-23T19:56:00.010Z",
     "publikovano": "2026-10-23T17:28:23.000Z",
@@ -3458,6 +3690,22 @@
     },
     "titulek": "Prioritou vlády má být dostupnost zdravotní péče, ukázal průzkum. Její zlepšení ale čeká jen pětina lidí",
     "shrnuti": "Prioritou vlády má být podle občanů dostupnost zdravotní péče a její kvalita. S odstupem následují státní dluh, mezinárodní bezpečnost, dostupnost bydlení, vnitřní bezpečnost a výkon ekonomiky. Zlepšení zdravotní péče ale v příštích čtyřech letech očekává pouze pětina lidí. Vyplývá to z průzkumu age",
+    "duvod": "bez-skutku",
+    "kategorie": [],
+    "posouzeni": null
+  },
+  {
+    "id": "k-6457775024a11273",
+    "zachyceno": "2026-10-23T20:03:19.273Z",
+    "publikovano": "2026-10-23T17:22:11.000Z",
+    "zdroj": {
+      "nazev": "The Guardian — World",
+      "url": "https://www.theguardian.com/world/2026/oct/23/netanyahu-orders-very-extensive-operation-west-bank-two-israeli-soldiers-killed",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Israel launches collective punishment campaign in Hebron after two soldiers killed",
+    "shrnuti": "Benjamin Netanyahu and ministers promise demolitions and forced displacement after deadly gunfight Israel has launched a campaign of collective punishment against Palestinians in Hebron after gunmen killed two Israeli soldiers and injured three near a checkpoint outside the city. Benjamin Netanyahu ",
     "duvod": "bez-skutku",
     "kategorie": [],
     "posouzeni": null
@@ -3622,6 +3870,22 @@
     },
     "titulek": "US and Israel are warned against launching fresh strikes on Iran",
     "shrnuti": "Multinational ‘anti-war bloc’ uses Istanbul summit to call for a diplomatic solution to Middle East crisis Foreign ministers at a summit of eight European and Middle Eastern countries have urged the US and Israel not to renews their attacks on Iran, warning a fresh outbreak of fighting would spread ",
+    "duvod": "bez-skutku",
+    "kategorie": [],
+    "posouzeni": null
+  },
+  {
+    "id": "k-ec8020ac5f264b5d",
+    "zachyceno": "2026-10-23T20:03:18.719Z",
+    "publikovano": "2026-10-23T17:18:18.000Z",
+    "zdroj": {
+      "nazev": "iDNES.cz — zpravodajství",
+      "url": "https://www.idnes.cz/zpravy/zahranicni/netanjahu-uzavera-zapadni-breh-jordanu-strelba-osadnici.A261023_102434_zahranicni_rtn#utm_source=rss&utm_medium=feed&utm_campaign=zpravodaj&utm_content=main",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Netanjahu před volbami pohrozil největší operací na Západním břehu od roku 1967",
+    "shrnuti": "Izraelský premiér Benjamin Netanjahu ohlásil uzávěru okupovaného Západního břehu Jordánu kvůli střelbě z pátečního rána u města Hebron. Blokáda by měla začít v pátek. Později Netanjahu uvedl, že na Západním břehu zvažuje největší vojenskou operaci od začátku izraelské okupace v roce 1967.",
     "duvod": "bez-skutku",
     "kategorie": [],
     "posouzeni": null
@@ -3905,6 +4169,22 @@
     "kategorie": [
       "rusko"
     ],
+    "posouzeni": null
+  },
+  {
+    "id": "k-4e9b6abddebf2404",
+    "zachyceno": "2026-10-23T20:03:19.336Z",
+    "publikovano": "2026-10-23T17:08:51.000Z",
+    "zdroj": {
+      "nazev": "France 24 (anglicky)",
+      "url": "https://www.france24.com/en/france/20261023-french-prosecutors-investigate-paris-shooting-as-suspected-terror-attack",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "🔴 Live: France’s Macron arrives in Trappes after ‘racist terrorist attack’",
+    "shrnuti": "",
+    "duvod": "bez-skutku",
+    "kategorie": [],
     "posouzeni": null
   },
   {
@@ -4470,6 +4750,22 @@
     "posouzeni": null
   },
   {
+    "id": "k-1d17155788833fd0",
+    "zachyceno": "2026-10-23T20:03:19.276Z",
+    "publikovano": "2026-10-23T16:48:28.000Z",
+    "zdroj": {
+      "nazev": "The Guardian — World",
+      "url": "https://www.theguardian.com/business/2026/oct/23/oil-five-month-high-fears-us-renews-strikes-iran",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Oil price rises above $117 a barrel amid fears US will renew strikes on Iran",
+    "shrnuti": "Brent crude increase follows Tehran threatening retaliatory attacks on Gulf refineries and datacentres Oil has hit its highest level in more than six months as fears of fresh escalation in the Middle East conflict grip the energy markets. Brent crude, the international benchmark for oil, rose by abo",
+    "duvod": "bez-skutku",
+    "kategorie": [],
+    "posouzeni": null
+  },
+  {
     "id": "k-32fa58413476655d",
     "zachyceno": "2026-10-23T19:55:59.951Z",
     "publikovano": "2026-10-23T16:48:07.000Z",
@@ -4530,6 +4826,22 @@
     "titulek": "„Politikai foglyok lettünk, mert keresztény kultúránk mellett álltunk ki” – ez történt a Fidesz október 23-i megemlékezésén",
     "shrnuti": "A Bem téren gyűltek össze pénteken a Fidesz szimpatizánsai, beszédet mondott Hankó Balázs felesége, Áder János volt államfő, Bóka János fideszes frakcióvezető, illetve Schmidt Mária, a Terror Háza nemrégiben menesztett főigazgatója is. Eközben Orbán Viktor Párizsban, egy hotel teraszán üldögélt.",
     "duvod": "bez-skutku",
+    "kategorie": [],
+    "posouzeni": null
+  },
+  {
+    "id": "k-4040085a9a2f1832",
+    "zachyceno": "2026-10-23T20:03:18.720Z",
+    "publikovano": "2026-10-23T16:45:43.000Z",
+    "zdroj": {
+      "nazev": "iDNES.cz — zpravodajství",
+      "url": "https://www.idnes.cz/zpravy/domaci/zastupci-audiovize-snizeni-rozpoctu-a-novelizace-zakona-povedou-k-destabilizaci.A261023_125459_domaci_mikp#utm_source=rss&utm_medium=feed&utm_campaign=zpravodaj&utm_content=main",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "„Totální destrukce české audiovize.“ Filmaři kritizují Klempířovy škrty",
+    "shrnuti": "Zástupci audiovize v reakci na plány ministra kultury Oto Klempíře (za Motoristy) na snížení rozpočtu Státního fondu audiovize (SFA) a novelizaci audiovizuálního zákona hovoří o destabilizaci fungujícího systému. Za Asociaci producentů v audiovizi (APA) o tom informovala Martina Reková. Ministerstvo",
+    "duvod": "vylouceno-tematem",
     "kategorie": [],
     "posouzeni": null
   },
@@ -5592,6 +5904,24 @@
     "posouzeni": null
   },
   {
+    "id": "k-44dd36b0bc691377",
+    "zachyceno": "2026-10-23T20:03:19.271Z",
+    "publikovano": "2026-10-23T16:10:34.000Z",
+    "zdroj": {
+      "nazev": "The Guardian — World",
+      "url": "https://www.theguardian.com/world/2026/oct/23/ukraine-troops-report-ongoing-problems-with-starlink-satellite-network",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Russia and Ukraine agree to local ceasefire in Oleshky amid deepening humanitarian crisis",
+    "shrnuti": "People in Russian-occupied city facing severe shortages of food, water and electricity, with some reportedly surviving on weeds The White House has said that Russia and Ukraine have agreed to a ceasefire in the Russian-occupied city of Oleshky, where a deepening humanitarian crisis has left thousand",
+    "duvod": "bez-skutku",
+    "kategorie": [
+      "rusko"
+    ],
+    "posouzeni": null
+  },
+  {
     "id": "k-648be78143e45380",
     "zachyceno": "2026-10-23T19:55:59.602Z",
     "publikovano": "2026-10-23T16:09:12.000Z",
@@ -5621,6 +5951,22 @@
     },
     "titulek": "Bouře připravila statisíce lidí ve Francii o elektřinu, v Bruselu čtyři zranění",
     "shrnuti": "Bouře Austen, která se přehnala Lamanšským průlivem, způsobila dopravní omezení a četné výpadky proudu. Ve Francii se bez elektřiny ocitlo téměř 300 tisíc domácností a letecké spoje i vlaky nabíraly zpoždění. Výpadky proudu zaznamenaly také tisíce britských domácností, zatímco v Belgii jsou čtyři zr",
+    "duvod": "bez-skutku",
+    "kategorie": [],
+    "posouzeni": null
+  },
+  {
+    "id": "k-c98a57a2809df545",
+    "zachyceno": "2026-10-23T20:03:20.269Z",
+    "publikovano": "2026-10-23T16:08:00.000Z",
+    "zdroj": {
+      "nazev": "Helsingin Sanomat (Finsko)",
+      "url": "https://www.hs.fi/maailma/art-2000012363555.html",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Sodassa kolme käännettä | Melania Trump neuvotteli paikallisen tuli­tauon Ukrainaan",
+    "shrnuti": "Ukrainan presidentti Volodymyr Zelenskyi kertoo suostuneensa kolmikantaneuvotteluihin Ukrainan, Venäjän ja Yhdysvaltojen välillä.",
     "duvod": "bez-skutku",
     "kategorie": [],
     "posouzeni": null
@@ -7825,350 +8171,6 @@
     },
     "titulek": "Duchess of Sussex ‘deeply distressed’ over child sexual abuse image claims against father",
     "shrnuti": "Meghan reveals she was made aware of ‘disturbing allegations’ against him in 2018 by Met police The Duchess of Sussex has said she is “deeply distressed” over accusations involving child sexual abuse images against her estranged father, Thomas Markle Sr, and revealed she was made aware of “disturbin",
-    "duvod": "bez-skutku",
-    "kategorie": [],
-    "posouzeni": null
-  },
-  {
-    "id": "k-500e4a11de2682ce",
-    "zachyceno": "2026-10-23T19:55:58.718Z",
-    "publikovano": "2026-10-23T15:16:00.000Z",
-    "zdroj": {
-      "nazev": "ČTK — České noviny",
-      "url": "https://www.ceskenoviny.cz/zpravy/o-budouci-izraelske-vlade-mohou-ve-volbach-rozhodnout-arabsti-volici-pisi-media/2892204?utm_source=rss&utm_medium=feed",
-      "typ": "wire",
-      "primarni": false
-    },
-    "titulek": "O budoucí izraelské vládě mohou ve volbách rozhodnout arabští voliči, píší média",
-    "shrnuti": "Tel Aviv - Arabští občané Izraele by mohli v parlamentních volbách příští týden sehrát klíčovou roli při rozhodování o tom, kdo sestaví příští vládu. Průzkumy naznačují, že ani koalice premiéra Benjamina...",
-    "duvod": "vylouceno-tematem",
-    "kategorie": [],
-    "posouzeni": null
-  },
-  {
-    "id": "k-00743696552e5dea",
-    "zachyceno": "2026-10-23T15:53:13.124Z",
-    "publikovano": "2026-10-23T15:15:56.000Z",
-    "zdroj": {
-      "nazev": "Tagesschau (Německo)",
-      "url": "https://www.tagesschau.de/ausland/frankreich-schuesse-terrorverdacht-100.html",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Ein Toter und Verletze: Innenminister spricht von Terror-Tat bei Paris",
-    "shrnuti": "Aus einem Auto heraus hat ein Mann in mehreren Vororten von Paris Schüsse abgefeuert. Ein Mensch wurde getötet, es gibt mehrere Schwerverletzte. Frankreichs Innenminister Nuñez spricht von einer \"terroristischen Tat\".",
-    "duvod": "bez-skutku",
-    "kategorie": [],
-    "posouzeni": null
-  },
-  {
-    "id": "k-5bc3634387939f83",
-    "zachyceno": "2026-10-23T15:53:12.181Z",
-    "publikovano": "2026-10-23T15:15:00.000Z",
-    "zdroj": {
-      "nazev": "Seznam Zprávy",
-      "url": "https://www.seznamzpravy.cz/clanek/ekonomika-firmy-meta-ustoupila-kontroverzni-zmena-podminek-se-odklada-318619",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Meta ustoupila. Kontroverzní změna podmínek se odkládá",
-    "shrnuti": "Americká společnost Meta v pátek oznámila, že odsouvá zavedení nových obchodních podmínek na listopad. Krok přichází po vlně kritiky ze strany vydavatelů, kteří se báli zneužívání jejich obsahu.",
-    "duvod": "bez-skutku",
-    "kategorie": [],
-    "posouzeni": null
-  },
-  {
-    "id": "k-501624b0dca8e0cf",
-    "zachyceno": "2026-10-23T15:53:13.606Z",
-    "publikovano": "2026-10-23T15:13:50.000Z",
-    "zdroj": {
-      "nazev": "Denník N (Slovensko)",
-      "url": "https://dennikn.sk/5638529/sikovne-miesaju-pop-s-alternativou-bad-karma-boy-sa-postarali-o-soundtrack-k-jeseni/",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Šikovne miešajú pop s alternatívou. Bad Karma Boy sa postarali o soundtrack k jeseni",
-    "shrnuti": "Nestáva sa často, aby sa skupina ľudí stretla a spolu počúvala nový album. V poslednom čase sa v Bratislave rodí nová tradícia, ktorá by mohla vydržať viac než zopár spoločných sedení. Kedysi sa tomu hovorilo posluchová diskotéka. Netancovalo sa, ale počúvalo. Teraz hudobníci nahrajú nový album a po",
-    "duvod": "bez-skutku",
-    "kategorie": [],
-    "posouzeni": null
-  },
-  {
-    "id": "k-a897eabba19dbb5d",
-    "zachyceno": "2026-10-23T15:53:12.978Z",
-    "publikovano": "2026-10-23T15:13:37.000Z",
-    "zdroj": {
-      "nazev": "France 24 (anglicky)",
-      "url": "https://www.france24.com/en/tv-shows/arts24/20261023-akaa-art-and-design-fair-brings-african-artists-to-paris",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "AKAA art and design fair brings African artists to Paris",
-    "shrnuti": "Every year the art and design fair AKAA, or \"Also Known as Africa\", brings dozens of African and Afro-descendant artists to the French capital. As the 11th edition gets underway, we welcome Nigerian painter Midegbeyan Ojisua and South African artist Olivié Keck.",
-    "duvod": "bez-skutku",
-    "kategorie": [],
-    "posouzeni": null
-  },
-  {
-    "id": "k-feded564489c38ed",
-    "zachyceno": "2026-10-23T15:53:13.245Z",
-    "publikovano": "2026-10-23T15:13:32.000Z",
-    "zdroj": {
-      "nazev": "ORF News (Rakousko)",
-      "url": "https://orf.at/stories/3445996/",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "„Spiegel“: Weidel durch geleakte Mails unter Druck",
-    "shrnuti": "",
-    "duvod": "bez-skutku",
-    "kategorie": [],
-    "posouzeni": null
-  },
-  {
-    "id": "k-13e419f1e29aa3bc",
-    "zachyceno": "2026-10-23T15:53:12.345Z",
-    "publikovano": "2026-10-23T15:13:27.000Z",
-    "zdroj": {
-      "nazev": "Deník N",
-      "url": "https://denikn.cz/2230527/uzavera-a-nejvetsi-operace-od-roku-1967-netanjahu-pred-volbami-hrozi-destrukci-zapadniho-brehu/",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Uzávěra a „největší operace od roku 1967“. Netanjahu před volbami hrozí destrukcí Západního břehu",
-    "shrnuti": "Po útoku u Hebronu hrozí Benjamin Netanjahu okupovanému Západnímu břehu Jordánu největší vojenskou operací od roku 1967. Úplná uzávěra palestinských měst a plány na plošné čistky přicházejí pár dní před klíčovými parlamentními volbami, které rozhodnou o politické budoucnosti Netanjahua i jeho krajně",
-    "duvod": "bez-skutku",
-    "kategorie": [],
-    "posouzeni": null
-  },
-  {
-    "id": "k-0193db461b28d5d5",
-    "zachyceno": "2026-10-23T19:55:58.721Z",
-    "publikovano": "2026-10-23T15:13:00.000Z",
-    "zdroj": {
-      "nazev": "ČTK — České noviny",
-      "url": "https://www.ceskenoviny.cz/zpravy/proti-ruseni-poplatku-za-verejnopravni-media-je-arcibiskup-i-iniciativy/2892202?utm_source=rss&utm_medium=feed",
-      "typ": "wire",
-      "primarni": false
-    },
-    "titulek": "Proti rušení poplatků za veřejnoprávní média je arcibiskup i iniciativy",
-    "shrnuti": "Praha - Pražský arcibiskup Stanislav Přibyl nepovažuje za moudré měnit způsob financování České televize (ČT) a Českého rozhlasu (ČRo). Podle iniciativ Stojíme za kulturou! a Média nedáme! má změna financování,...",
-    "duvod": "bez-skutku",
-    "kategorie": [
-      "cr"
-    ],
-    "posouzeni": null
-  },
-  {
-    "id": "k-bd61b4e74f446522",
-    "zachyceno": "2026-10-23T15:53:13.575Z",
-    "publikovano": "2026-10-23T15:11:26.000Z",
-    "zdroj": {
-      "nazev": "SME (Slovensko)",
-      "url": "https://www.sme.sk/svet/c/strelba-pri-parizi-bola-aktom-terorizmu-pachatela-dolapili?utm_source=rss&utm_medium=feed&utm_campaign=www-rss",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Streľba pri Paríži bola aktom terorizmu. Páchateľa dolapili",
-    "shrnuti": "Muž spustil z vozidla paľbu z automatickej pušky na niekoľko okoloidúcich.",
-    "duvod": "bez-skutku",
-    "kategorie": [],
-    "posouzeni": null
-  },
-  {
-    "id": "k-c725f323c05e6d66",
-    "zachyceno": "2026-10-23T15:53:13.624Z",
-    "publikovano": "2026-10-23T15:11:03.000Z",
-    "zdroj": {
-      "nazev": "Aktuality.sk",
-      "url": "https://www.aktuality.sk/clanok/3jQQonD/melania-trumpova-si-pripisuje-zasluhy-za-primerie-v-oleskach/",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Melania Trumpová si pripisuje zásluhy za prímerie v Oleškách",
-    "shrnuti": "Prvá dáma USA si pripisuje zásluhy za prímerie medzi Ruskom a Ukrajinou v Oleškách. Tvrdí že bez jej zásahu by pomoc a evakuácia neboli možné.",
-    "duvod": "bez-skutku",
-    "kategorie": [
-      "rusko"
-    ],
-    "posouzeni": null
-  },
-  {
-    "id": "k-d7ee527e556c74cb",
-    "zachyceno": "2026-10-23T15:53:12.021Z",
-    "publikovano": "2026-10-23T15:10:00.000Z",
-    "zdroj": {
-      "nazev": "Český rozhlas — domácí zprávy",
-      "url": "https://www.irozhlas.cz/zpravy-domov/nejmensi-chyba-s-nejvetsim-dopadem-stiznosti-na-volby-padly-i-ve-druhe_2610231710_ako",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "‚Nejmenší chyba s největším dopadem.‘ Stížnosti na volby padly i ve druhé nejlidnatější části Prahy",
-    "shrnuti": "Jedna chybička při komunálních volbách by v Praze 10 mohla ovlivnit rozložení sil na radnici. Hraje se o dva mandáty. A klíčový je okrsek 10043, na který se teď upíná pozornost politiků a veřejnosti. Uskupení Jsme Praha 10 už k soudu podalo návrh na přepočítání hlasů. Ke stejnému kroku sáhla SPD pro",
-    "duvod": "vylouceno-tematem",
-    "kategorie": [
-      "cr"
-    ],
-    "posouzeni": null
-  },
-  {
-    "id": "k-2871fab84deaf0bd",
-    "zachyceno": "2026-10-23T15:53:13.701Z",
-    "publikovano": "2026-10-23T15:10:00.000Z",
-    "zdroj": {
-      "nazev": "Rzeczpospolita (Polsko)",
-      "url": "https://cyfrowa.rp.pl/it/art45387151-rosyjski-slad-w-oszustwach-na-facebooku-brzoska-ujawnia-nowe-ustalenia",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Rosyjski ślad w oszustwach na Facebooku. Brzoska ujawnia nowe ustalenia",
-    "shrnuti": "Rafał Brzoska ujawnia rosyjski trop w sprawie oszukańczych reklam na Facebooku i Instagramie. Jego eksperci znaleźli firmę z Dubaju, powiązaną z Rosją, która oferuje technologie pozwalające omijać zabezpieczenia Mety. Przedsiębiorca ostrzega, że sprawa może dotyczyć nie tylko pieniędzy, ale także be",
-    "duvod": "bez-skutku",
-    "kategorie": [],
-    "posouzeni": null
-  },
-  {
-    "id": "k-c73ecfc2b085eb14",
-    "zachyceno": "2026-10-23T15:53:13.312Z",
-    "publikovano": "2026-10-23T15:09:10.000Z",
-    "zdroj": {
-      "nazev": "Der Standard (Rakousko)",
-      "url": "https://www.derstandard.at/story/3000000345662/diskussion-zu-den-us-midterms-kommt-eine-noch-aggressivere-aussenpolitik-trumps?ref=rss",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Diskussion zu den US-Midterms: Kommt eine noch aggressivere Außenpolitik Trumps?",
-    "shrnuti": "Der Autor Tobias Endler und der Neos-Politiker Helmut Brandstätter sprachen in Wien über die Frage, ob die USA der neue Feind Europas sind – und ob dieser Trend sich nach den Wahlen verstärken könnte",
-    "duvod": "bez-skutku",
-    "kategorie": [],
-    "posouzeni": null
-  },
-  {
-    "id": "k-f2c3ee458b72b3b7",
-    "zachyceno": "2026-10-23T15:53:13.102Z",
-    "publikovano": "2026-10-23T15:09:02.000Z",
-    "zdroj": {
-      "nazev": "Tagesschau (Německo)",
-      "url": "https://www.tagesschau.de/wirtschaft/unternehmen/ryanair-ber-100.html",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Nicht nur wegen Ryanair-Abzug: Der BER bleibt ein Sorgenflughafen",
-    "shrnuti": "Ryanair schließt seine Basis am Berliner Flughafen. Der BER sei zu teuer, zu kompliziert, zu unflexibel, sagt die Airline schon seit Jahren. Und sie sagt auch: Fliegen in Deutschland sei grundsätzlich zu teuer. Eine Analyse von A. Kartschall",
-    "duvod": "bez-skutku",
-    "kategorie": [
-      "zpravodajske"
-    ],
-    "posouzeni": null
-  },
-  {
-    "id": "k-92ac3709bdce4bfd",
-    "zachyceno": "2026-10-23T15:53:13.541Z",
-    "publikovano": "2026-10-23T15:08:54.000Z",
-    "zdroj": {
-      "nazev": "NZZ (Švýcarsko)",
-      "url": "https://www.nzz.ch/international/neue-schuelerproteste-in-frankreich-droht-eine-ausweitung-der-ausschreitungen-ld.10026904",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "DIE NEUESTEN ENTWICKLUNGEN - Proteste in Frankreich: Die Regierung mobilisiert für die angekündigten Demos am Samstag 70 000 Polizisten",
-    "shrnuti": "Seit Ende September gehen Schüler, Lehrpersonen und Gewerkschaften auf die Strasse – und lösen eine landesweite Bewegung aus, die zu Krawallen und Gewalt führt. Die neusten Entwicklungen.",
-    "duvod": "bez-skutku",
-    "kategorie": [],
-    "posouzeni": null
-  },
-  {
-    "id": "k-a2ea3d4f10d060d3",
-    "zachyceno": "2026-10-23T15:53:15.227Z",
-    "publikovano": "2026-10-23T15:08:39.000Z",
-    "zdroj": {
-      "nazev": "Digi24 (Rumunsko)",
-      "url": "https://www.digi24.ro/stiri/actualitate/jandarmii-nu-au-ingenuncheat-in-fata-sustinatorilor-lui-georgescu-mai-dezminte-un-fals-raspandit-pe-retelele-sociale-4006369",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Jandarmii nu au îngenuncheat în fața susținătorilor lui Georgescu. MAI dezminte un fals răspândit pe rețelele sociale",
-    "shrnuti": "Jandarmeria Română a transmis că pe rețelele sociale sunt răspândite mai multe imagini false, generate cu inteligența artificială, menite să ducă în eroare opinia publica. Forțele de ordine nu au îngenuncheat în fața așa-numiților suveraniști, punctează oficialii.",
-    "duvod": "bez-skutku",
-    "kategorie": [],
-    "posouzeni": null
-  },
-  {
-    "id": "k-16cdf3a8200b6361",
-    "zachyceno": "2026-10-23T15:53:15.234Z",
-    "publikovano": "2026-10-23T15:08:09.000Z",
-    "zdroj": {
-      "nazev": "Digi24 (Rumunsko)",
-      "url": "https://www.digi24.ro/stiri/actualitate/justitie/fiul-lui-tudorel-toader-a-fost-retinut-lectorul-ar-fi-agresat-sexual-doua-studente-reactia-fostului-ministru-al-justitiei-4006353",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Fiul lui Tudorel Toader a fost reținut: lectorul ar fi agresat sexual două studente. Reacția fostului ministru al Justiției",
-    "shrnuti": "Ionuț Alexandru Toader, fiul fostului ministru al Justiției Tudorel Toader, a fost reținut vineri în dosarul privind acuzațiile de natură sexuală formulate împotriva sa de două foste studente ale Facultății de Drept din Iași. Procurorii au formulat și o propunere de arestare preventivă. Vineri, la p",
-    "duvod": "bez-skutku",
-    "kategorie": [],
-    "posouzeni": null
-  },
-  {
-    "id": "k-fb8516c4c895a7d2",
-    "zachyceno": "2026-10-23T15:53:11.862Z",
-    "publikovano": "2026-10-23T15:07:36.000Z",
-    "zdroj": {
-      "nazev": "Presseportal — zprávy policie (Blaulicht)",
-      "url": "https://www.presseportal.de/blaulicht/pm/30127/6376963",
-      "typ": "wire",
-      "primarni": false
-    },
-    "titulek": "POL-MG: Bilanz zum Schwerpunkteinsatz in Stadtzentren Mönchengladbach und Rheydt - Zwei Männer in Untersuchungshaft",
-    "shrnuti": "Mönchengladbach (ots) - Am Donnerstag, 22. Oktober, haben Einsatzkräfte des Polizeipräsidiums Mönchengladbach gemeinsam mit Beamten der Bundespolizei und Mitarbeitern des Ordnungsamtes erneut Schwerpunktkontrollen in und rund um die Innenstädte ...",
-    "duvod": "bez-skutku",
-    "kategorie": [],
-    "posouzeni": null
-  },
-  {
-    "id": "k-974621f5e624bfdb",
-    "zachyceno": "2026-10-23T15:53:13.703Z",
-    "publikovano": "2026-10-23T15:07:00.000Z",
-    "zdroj": {
-      "nazev": "Rzeczpospolita (Polsko)",
-      "url": "https://www.rp.pl/efni/art45388341-transformacja-energetyczna-pod-lupa-nowe-wyzwania-rozwoj-sieci-i-elastycznosc-systemu",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Transformacja energetyczna pod lupą. Nowe wyzwania, rozwój sieci i elastyczność systemu",
-    "shrnuti": "Polska energetyka znajduje się w punkcie zwrotnym, w sektorze realizowane są inwestycje na niespotykaną dotąd skalę. Dynamiczny rozwój OZE, elektryfikacja kolejnych obszarów gospodarki, rosnące wymagania dotyczące elastyczności, odporności i bezpieczeństwa systemu – to główne wyzwania dzisiejszych c",
-    "duvod": "bez-skutku",
-    "kategorie": [],
-    "posouzeni": null
-  },
-  {
-    "id": "k-be859279c690f6ff",
-    "zachyceno": "2026-10-23T15:53:11.864Z",
-    "publikovano": "2026-10-23T15:06:52.000Z",
-    "zdroj": {
-      "nazev": "Presseportal — zprávy policie (Blaulicht)",
-      "url": "https://www.presseportal.de/blaulicht/pm/117715/6376962",
-      "typ": "wire",
-      "primarni": false
-    },
-    "titulek": "POL-PPKO: +++ Erstmeldung +++ Umgestürztes Baugerüst in Nastätten",
-    "shrnuti": "Nastätten (ots) - Gegen 16:30 Uhr ist ein Baugerüst im Bereich der Bahnhofstraße in Nastätten vmtl. infolge von Windböen umgestürzt. Hierdurch wurden mehrere Personen verletzt. In dem Bereich findet aktuell der Oktobermarkt statt. ...",
-    "duvod": "bez-skutku",
-    "kategorie": [],
-    "posouzeni": null
-  },
-  {
-    "id": "k-c0195cee54407ce1",
-    "zachyceno": "2026-10-23T15:53:15.762Z",
-    "publikovano": "2026-10-23T15:06:26.000Z",
-    "zdroj": {
-      "nazev": "G4Media (Rumunsko)",
-      "url": "https://www.g4media.ro/liderii-ue-si-ai-balcanilor-de-vest-se-reunesc-pe-25-noiembrie-la-bruxelles.html",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Liderii UE și ai Balcanilor de Vest se reunesc pe 25 noiembrie la Bruxelles",
-    "shrnuti": "Liderii UE și ai statelor din Balcanii de Vest se vor reuni pe 25 noiembrie, la Bruxelles, pentru a discuta despre aderarea regiunii la Uniunea Europeană, scrie Mediafax. Liderii Uniunii Europene (UE) și ai statelor din Balcanii de Vest se vor întâlni pe 25 noiembrie, la Bruxelles, în cadrul unui su",
     "duvod": "bez-skutku",
     "kategorie": [],
     "posouzeni": null
