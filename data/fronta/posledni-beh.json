@@ -1,5 +1,5 @@
 {
-  "kdy": "2026-10-24T08:01:32.729Z",
+  "kdy": "2026-10-24T16:01:41.683Z",
   "zdroje": [
     {
       "klic": "e-sbirka",
@@ -188,11 +188,10 @@
     },
     {
       "klic": "mzd",
-      "ok": false,
-      "stav": null,
+      "ok": true,
+      "stav": 200,
       "pocetPolozek": 0,
-      "chyba": "fetch failed",
-      "vysledek": "chyba"
+      "vysledek": "ok"
     },
     {
       "klic": "bundespolizei",
@@ -241,7 +240,7 @@
       "klic": "kyber",
       "ok": true,
       "stav": null,
-      "pocetPolozek": 1,
+      "pocetPolozek": 0,
       "vysledek": "ok"
     },
     {
