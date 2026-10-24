@@ -1,24 +1,18 @@
 {
-  "aktualizovano": "2026-10-24T01:29:27.020Z",
+  "aktualizovano": "2026-10-24T04:03:28.790Z",
   "stavy": [
     {
       "klic": "cloudflare",
       "stav": "vypadek",
       "popis": "Partial System Outage",
-      "incidenty": [
-        {
-          "nazev": "Network Performance Issues in Ashburn",
-          "odkaz": "https://www.cloudflarestatus.com/incidents/39fz3wkl42tr",
-          "aktualizovano": "2026-10-24T01:28:05.195Z"
-        }
-      ],
+      "incidenty": [],
       "postizene": [
-        "Cloudflare Sites and Services",
         "Africa",
         "Arica, Chile - (ARI)",
-        "Ashburn, VA, United States - (IAD)"
+        "Annaba, Algeria - (AAE)",
+        "Asia"
       ],
-      "zkontrolovano": "2026-10-24T01:29:27.020Z",
+      "zkontrolovano": "2026-10-24T04:03:28.790Z",
       "chyba": null
     },
     {
@@ -27,7 +21,7 @@
       "popis": "All Systems Operational",
       "incidenty": [],
       "postizene": [],
-      "zkontrolovano": "2026-10-24T01:29:27.020Z",
+      "zkontrolovano": "2026-10-24T04:03:28.790Z",
       "chyba": null
     },
     {
@@ -36,7 +30,7 @@
       "popis": "All Systems Operational",
       "incidenty": [],
       "postizene": [],
-      "zkontrolovano": "2026-10-24T01:29:27.020Z",
+      "zkontrolovano": "2026-10-24T04:03:28.790Z",
       "chyba": null
     }
   ]
