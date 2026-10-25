@@ -1,5 +1,5 @@
 {
-  "aktualizovano": "2026-10-25T12:03:45.845Z",
+  "aktualizovano": "2026-10-25T14:58:11.955Z",
   "stavy": [
     {
       "klic": "cloudflare",
@@ -12,16 +12,19 @@
         "Annaba, Algeria - (AAE)",
         "Asia"
       ],
-      "zkontrolovano": "2026-10-25T12:03:45.845Z",
+      "zkontrolovano": "2026-10-25T14:58:11.955Z",
       "chyba": null
     },
     {
       "klic": "zoom",
-      "stav": "provoz",
-      "popis": "All Systems Operational",
+      "stav": "omezeni",
+      "popis": "Service Under Maintenance",
       "incidenty": [],
-      "postizene": [],
-      "zkontrolovano": "2026-10-25T12:03:45.845Z",
+      "postizene": [
+        "Integration (API/Webhook)",
+        "Zoom Phone - Global"
+      ],
+      "zkontrolovano": "2026-10-25T14:58:11.955Z",
       "chyba": null
     },
     {
@@ -30,7 +33,7 @@
       "popis": "All Systems Operational",
       "incidenty": [],
       "postizene": [],
-      "zkontrolovano": "2026-10-25T12:03:45.845Z",
+      "zkontrolovano": "2026-10-25T14:58:11.955Z",
       "chyba": null
     }
   ]
