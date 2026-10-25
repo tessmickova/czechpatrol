@@ -1,5 +1,5 @@
 {
-  "aktualizovano": "2026-10-25T11:08:58.928Z",
+  "aktualizovano": "2026-10-25T16:03:42.432Z",
   "stavy": [
     {
       "klic": "cloudflare",
@@ -9,19 +9,22 @@
       "postizene": [
         "Africa",
         "Arica, Chile - (ARI)",
-        "Baghdad, Iraq - (BGW)",
-        "Annaba, Algeria - (AAE)"
+        "Annaba, Algeria - (AAE)",
+        "Asia"
       ],
-      "zkontrolovano": "2026-10-25T11:08:58.928Z",
+      "zkontrolovano": "2026-10-25T16:03:42.432Z",
       "chyba": null
     },
     {
       "klic": "zoom",
-      "stav": "provoz",
-      "popis": "All Systems Operational",
+      "stav": "omezeni",
+      "popis": "Service Under Maintenance",
       "incidenty": [],
-      "postizene": [],
-      "zkontrolovano": "2026-10-25T11:08:58.928Z",
+      "postizene": [
+        "Integration (API/Webhook)",
+        "Zoom Phone - Global"
+      ],
+      "zkontrolovano": "2026-10-25T16:03:42.432Z",
       "chyba": null
     },
     {
@@ -30,7 +33,7 @@
       "popis": "All Systems Operational",
       "incidenty": [],
       "postizene": [],
-      "zkontrolovano": "2026-10-25T11:08:58.928Z",
+      "zkontrolovano": "2026-10-25T16:03:42.432Z",
       "chyba": null
     }
   ]
