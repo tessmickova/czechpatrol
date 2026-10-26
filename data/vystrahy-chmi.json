@@ -1,30 +1,6 @@
 {
-  "nacteno": "2026-10-26T08:01:29.781Z",
-  "odeslano": "2026-10-25T08:52:35.000Z",
-  "identifikator": "2.49.0.0.203.0.CZ.261025085235.XOCZ50_OKPR_000390",
-  "vystrahy": [
-    {
-      "id": "chmi:Silný vítr:2026-10-25T08:44:24.000Z:nezname",
-      "typ": "oficialni-pokyn",
-      "uzemi": {
-        "druh": "nezname",
-        "popis": "Ústecký kraj (Rumburk, Varnsdorf), Liberecký kraj (Frýdlant), Olomoucký kraj (Jeseník), Moravskoslezský kraj (Bruntál, Frenštát pod Radhoštěm, Frýdek-Místek, Frýdlant nad Ostravicí, Jablunkov, Kopřivnice, Kravaře, Krnov, Opava, Třinec, Vítkov)"
-      },
-      "titulek": "Silný vítr",
-      "text": "Jihozápadní až jižní vítr s nárazy kolem 20 m/s (70 km/h).\n\nMožné komplikace v energetice, lesním hospodářství a dopravě. Možná poškození stromů a lesních porostů. Možné menší škody na energetické infrastruktuře, majetku a zejména starších budovách. Riziko úrazu uvolněnými předměty a zlomenými větvemi. Možné komplikace v dopravě.",
-      "textJe": "zneni-vydavatele",
-      "pokyn": "Zajistit okna, dveře, odstranit nebo zabezpečit volně uložené předměty, stany, skleníky apod. Dbát zvýšené opatrnosti při pohybu venku a při řízení vozidel. Na horách omezit túry a nevydávat se zejména do hřebenových partií.",
-      "vydavatel": "ČHMÚ, Martin Tomáš",
-      "odkaz": "https://vystrahy-cr.chmi.cz/",
-      "vydano": "2026-10-25T08:52:35.000Z",
-      "platiOd": "2026-10-25T08:44:24.000Z",
-      "platiDo": "2026-10-25T18:00:00.000Z",
-      "odvolano": null,
-      "opraveno": null,
-      "coNevime": [],
-      "jistota": "Likely",
-      "puvod": "ČHMÚ, výstražná služba (CAP)",
-      "detail": null
-    }
-  ]
+  "nacteno": "2026-10-26T12:01:38.915Z",
+  "odeslano": "2026-10-26T08:52:33.000Z",
+  "identifikator": "2.49.0.0.203.0.CZ.261026085233.XOCZ50_OKPR_000391",
+  "vystrahy": []
 }
