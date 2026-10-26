@@ -1,5 +1,5 @@
 {
-  "aktualizovano": "2026-10-26T00:03:32.759Z",
+  "aktualizovano": "2026-10-26T01:35:09.385Z",
   "stavy": [
     {
       "klic": "cloudflare",
@@ -7,12 +7,12 @@
       "popis": "Partial System Outage",
       "incidenty": [],
       "postizene": [
+        "Amman, Jordan - (AMM)",
         "Africa",
         "Arica, Chile - (ARI)",
-        "Annaba, Algeria - (AAE)",
-        "Asia"
+        "Baghdad, Iraq - (BGW)"
       ],
-      "zkontrolovano": "2026-10-26T00:03:32.759Z",
+      "zkontrolovano": "2026-10-26T01:35:09.385Z",
       "chyba": null
     },
     {
@@ -24,7 +24,7 @@
         "Integration (API/Webhook)",
         "Zoom Phone - Global"
       ],
-      "zkontrolovano": "2026-10-26T00:03:32.759Z",
+      "zkontrolovano": "2026-10-26T01:35:09.385Z",
       "chyba": null
     },
     {
@@ -33,7 +33,7 @@
       "popis": "All Systems Operational",
       "incidenty": [],
       "postizene": [],
-      "zkontrolovano": "2026-10-26T00:03:32.759Z",
+      "zkontrolovano": "2026-10-26T01:35:09.385Z",
       "chyba": null
     }
   ]
