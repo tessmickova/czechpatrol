@@ -1,24 +1,18 @@
 {
-  "aktualizovano": "2026-10-27T16:03:04.222Z",
+  "aktualizovano": "2026-10-27T20:02:47.282Z",
   "stavy": [
     {
       "klic": "cloudflare",
       "stav": "vypadek",
       "popis": "Partial System Outage",
-      "incidenty": [
-        {
-          "nazev": "Cache Purging Delays Affecting Requests Routed Through EEUR",
-          "odkaz": "https://www.cloudflarestatus.com/incidents/8s6pn9rvof3l",
-          "aktualizovano": "2026-10-27T16:02:33.460Z"
-        }
-      ],
+      "incidenty": [],
       "postizene": [
-        "Cloudflare Sites and Services",
-        "Adelaide, Australia - (ADL)",
         "Africa",
-        "Arica, Chile - (ARI)"
+        "Arica, Chile - (ARI)",
+        "Algiers, Algeria - (ALG)",
+        "Ashburn, United States - (IAD)"
       ],
-      "zkontrolovano": "2026-10-27T16:03:04.222Z",
+      "zkontrolovano": "2026-10-27T20:02:47.282Z",
       "chyba": null
     },
     {
@@ -30,7 +24,7 @@
         "Integration (API/Webhook)",
         "Zoom Phone - Global"
       ],
-      "zkontrolovano": "2026-10-27T16:03:04.222Z",
+      "zkontrolovano": "2026-10-27T20:02:47.282Z",
       "chyba": null
     },
     {
@@ -39,7 +33,7 @@
       "popis": "All Systems Operational",
       "incidenty": [],
       "postizene": [],
-      "zkontrolovano": "2026-10-27T16:03:04.222Z",
+      "zkontrolovano": "2026-10-27T20:02:47.282Z",
       "chyba": null
     }
   ]
