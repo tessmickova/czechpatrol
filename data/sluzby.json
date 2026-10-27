@@ -1,24 +1,18 @@
 {
-  "aktualizovano": "2026-10-27T00:02:34.086Z",
+  "aktualizovano": "2026-10-27T04:37:23.349Z",
   "stavy": [
     {
       "klic": "cloudflare",
       "stav": "vypadek",
       "popis": "Partial System Outage",
-      "incidenty": [
-        {
-          "nazev": "Delayed, missed, and duplicated Workers Cron Triggers",
-          "odkaz": "https://www.cloudflarestatus.com/incidents/97y1vy5nsjrn",
-          "aktualizovano": "2026-10-26T21:48:46.945Z"
-        }
-      ],
+      "incidenty": [],
       "postizene": [
-        "Cloudflare Sites and Services",
         "Africa",
         "Arica, Chile - (ARI)",
-        "Algiers, Algeria - (ALG)"
+        "Algiers, Algeria - (ALG)",
+        "Asunción, Paraguay - (ASU)"
       ],
-      "zkontrolovano": "2026-10-27T00:02:34.086Z",
+      "zkontrolovano": "2026-10-27T04:37:23.349Z",
       "chyba": null
     },
     {
@@ -30,7 +24,7 @@
         "Integration (API/Webhook)",
         "Zoom Phone - Global"
       ],
-      "zkontrolovano": "2026-10-27T00:02:34.086Z",
+      "zkontrolovano": "2026-10-27T04:37:23.349Z",
       "chyba": null
     },
     {
@@ -39,7 +33,7 @@
       "popis": "All Systems Operational",
       "incidenty": [],
       "postizene": [],
-      "zkontrolovano": "2026-10-27T00:02:34.086Z",
+      "zkontrolovano": "2026-10-27T04:37:23.349Z",
       "chyba": null
     }
   ]
