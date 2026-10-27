@@ -1,5 +1,5 @@
 {
-  "aktualizovano": "2026-10-27T15:50:42.362Z",
+  "aktualizovano": "2026-10-27T16:03:04.222Z",
   "stavy": [
     {
       "klic": "cloudflare",
@@ -9,7 +9,7 @@
         {
           "nazev": "Cache Purging Delays Affecting Requests Routed Through EEUR",
           "odkaz": "https://www.cloudflarestatus.com/incidents/8s6pn9rvof3l",
-          "aktualizovano": "2026-10-27T15:19:06.772Z"
+          "aktualizovano": "2026-10-27T16:02:33.460Z"
         }
       ],
       "postizene": [
@@ -18,7 +18,7 @@
         "Africa",
         "Arica, Chile - (ARI)"
       ],
-      "zkontrolovano": "2026-10-27T15:50:42.362Z",
+      "zkontrolovano": "2026-10-27T16:03:04.222Z",
       "chyba": null
     },
     {
@@ -30,7 +30,7 @@
         "Integration (API/Webhook)",
         "Zoom Phone - Global"
       ],
-      "zkontrolovano": "2026-10-27T15:50:42.362Z",
+      "zkontrolovano": "2026-10-27T16:03:04.222Z",
       "chyba": null
     },
     {
@@ -39,7 +39,7 @@
       "popis": "All Systems Operational",
       "incidenty": [],
       "postizene": [],
-      "zkontrolovano": "2026-10-27T15:50:42.362Z",
+      "zkontrolovano": "2026-10-27T16:03:04.222Z",
       "chyba": null
     }
   ]
