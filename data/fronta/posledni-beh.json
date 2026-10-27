@@ -1,5 +1,5 @@
 {
-  "kdy": "2026-10-27T12:00:37.486Z",
+  "kdy": "2026-10-27T20:33:08.476Z",
   "zdroje": [
     {
       "klic": "e-sbirka",
@@ -156,7 +156,7 @@
       "ok": true,
       "stav": 200,
       "pocetPolozek": 0,
-      "vysledek": "ok"
+      "vysledek": "obsah"
     },
     {
       "klic": "letiste-praha",
@@ -203,9 +203,9 @@
     {
       "klic": "bmi-de",
       "ok": false,
-      "stav": null,
+      "stav": 400,
       "pocetPolozek": 0,
-      "chyba": "fetch failed",
+      "chyba": "HTTP 400",
       "vysledek": "chyba"
     },
     {
