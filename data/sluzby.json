@@ -1,5 +1,5 @@
 {
-  "aktualizovano": "2026-10-28T12:03:18.576Z",
+  "aktualizovano": "2026-10-28T16:03:02.011Z",
   "stavy": [
     {
       "klic": "cloudflare",
@@ -13,31 +13,31 @@
         }
       ],
       "postizene": [
-        "Africa",
         "Arica, Chile - (ARI)",
         "Algiers, Algeria - (ALG)",
-        "Ashburn, United States - (IAD)"
+        "Ashburn, United States - (IAD)",
+        "Annaba, Algeria - (AAE)"
       ],
-      "zkontrolovano": "2026-10-28T12:03:18.576Z",
+      "zkontrolovano": "2026-10-28T16:03:02.011Z",
       "chyba": null
     },
     {
       "klic": "zoom",
-      "stav": "provoz",
-      "popis": "All Systems Operational",
+      "stav": "nezjisteno",
+      "popis": null,
       "incidenty": [],
       "postizene": [],
-      "zkontrolovano": "2026-10-28T12:03:18.576Z",
-      "chyba": null
+      "zkontrolovano": "2026-10-28T16:03:02.011Z",
+      "chyba": "HTTP 503"
     },
     {
       "klic": "discord",
-      "stav": "provoz",
-      "popis": "All Systems Operational",
+      "stav": "nezjisteno",
+      "popis": null,
       "incidenty": [],
       "postizene": [],
-      "zkontrolovano": "2026-10-28T12:03:18.576Z",
-      "chyba": null
+      "zkontrolovano": "2026-10-28T16:03:02.011Z",
+      "chyba": "HTTP 503"
     }
   ]
 }

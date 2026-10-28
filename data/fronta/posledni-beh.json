@@ -1,5 +1,5 @@
 {
-  "kdy": "2026-10-28T12:00:39.269Z",
+  "kdy": "2026-10-28T16:00:50.212Z",
   "zdroje": [
     {
       "klic": "e-sbirka",
@@ -203,9 +203,9 @@
     {
       "klic": "bmi-de",
       "ok": false,
-      "stav": null,
+      "stav": 400,
       "pocetPolozek": 0,
-      "chyba": "fetch failed",
+      "chyba": "HTTP 400",
       "vysledek": "chyba"
     },
     {
@@ -247,9 +247,8 @@
       "klic": "pizza-index",
       "ok": true,
       "stav": null,
-      "pocetPolozek": 0,
-      "chyba": "DOUGHCON na stránce nenalezen",
-      "vysledek": "obsah"
+      "pocetPolozek": 1,
+      "vysledek": "ok"
     }
   ],
   "novychVeFronte": 0
