@@ -1,5 +1,71 @@
 [
   {
+    "id": "k-0fbba0791ad133f2",
+    "zachyceno": "2026-10-28T20:02:41.148Z",
+    "publikovano": "2026-10-28T19:03:51.000Z",
+    "zdroj": {
+      "nazev": "Tagesschau (Německo)",
+      "url": "https://www.tagesschau.de/inland/bayern-ermittlungen-gegen-belarusen-sabotage-100.html",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Bayern: Ermittlungen gegen zwei Belarusen wegen Sabotageverdacht",
+    "titulekPuvodni": "Bayern: Ermittlungen gegen zwei Belarusen wegen Sabotageverdacht",
+    "shrnuti": "Zwei Männer aus Belarus stehen im Verdacht, im Raum Nürnberg einen Brandanschlag geplant zu haben - im Auftrag einer fremden Regierung oder Vereinigung. Sie wurden festgenommen und sitzen in Untersuchungshaft. Von Joseph Röhmel.",
+    "kodZeme": "BY",
+    "zeme": "Bělorusko",
+    "kategorie": [
+      "sabotaz"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "sabotage"
+    ],
+    "naliehave": null,
+    "stav": "ceka",
+    "vyrez": {
+      "text": "Bayern: Ermittlungen gegen zwei Belarusen wegen Sabotageverdacht | tagesschau.de\nHauptnavigation\nNebennavigation\nInhalt\nFußzeile\nSabotageverdacht in Bayern\nGeneralstaatsanwalt ermittelt gegen zwei Belarusen\nStand: 28.10.2026 • 20:03 Uhr\nZwei Männer aus Belarus stehen im V erdacht, im Raum Nürnberg einen Brandanschlag geplant zu haben - im Auftrag einer fremden Regierung oder Vereinigung. Sie wurden festgenommen und sitzen in Untersuchungshaft.\nDie Generalstaatsanwaltschaft München ermittelt gegen zwei Belarusen, die im Raum Nürnberg einen Sabotageanschlag geplant haben sollen. Das bestätigte die Behörde dem Bayerischen Rundfunk auf Anfrage.\nDie 39 und 50 Jahre alten Beschuldigten befinden sich seit dem 7. Oktober aufgrund von Haftbefehlen des Amtsgerichts Fürth in Untersuchungshaft, wie die Generalstaaatsanwalschaft mitteilte. Zuerst hatte der \"Spiegel\" über die mutmaßlichen Sabotagepläne der beiden Männer berichtet.\nSabotageverdacht auch in Rumänien\nLaut Generalstaatsanwaltschaft besteht der dringende Verdacht, dass die beiden Männer einen Brandanschlag im Raum Nürnberg verüben wollten - gegen Bezahlung und im Auftrag einer fremden Regierung oder Vereinigung. Sie sollen geplant…",
+      "stazeno": "2026-10-28T20:02:43.960Z",
+      "stav": 200
+    }
+  },
+  {
+    "id": "k-03bb811cc75c4c00",
+    "zachyceno": "2026-10-28T20:02:43.804Z",
+    "publikovano": "2026-10-28T18:37:00.000Z",
+    "zdroj": {
+      "nazev": "Ukrainska Pravda (anglicky)",
+      "url": "https://www.pravda.com.ua/eng/news/2026/10/28/8060162/",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "One killed in Russian attack on civilian facility in Rivne Oblast",
+    "titulekPuvodni": "One killed in Russian attack on civilian facility in Rivne Oblast",
+    "shrnuti": "A Russian attack on a civilian facility in the Sarny district of Rivne Oblast on 28 October has claimed the life of one man, local authorities report.",
+    "kodZeme": "RU",
+    "zeme": "Rusko",
+    "kategorie": [
+      "hybridni",
+      "rusko"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "attack on",
+      "russia"
+    ],
+    "naliehave": null,
+    "stav": "ceka",
+    "vyrez": {
+      "text": "Russian strike on civilian facility in Ukraine's Rivne Oblast leaves one killed | Ukrainska Pravda\nPhoto: Oleksandr Koval's Telegram channel\nRussian forces struck a civilian facility in Rivne Oblast on 28 October, killing a man.\nSource: Oleksandr Koval , Head of Rivne Oblast Military Administration\nQuote: \"A civilian facility in the Sarny district came under attack by the enemy. Unfortunately, casualties could not be avoided. One man was killed.\"\nAdvertisement:\n\r\n\r\n\r\n\r\n\r\nDetails: A fire broke out at the scene, which firefighters have now contained.\nSubscribe on Patreon to back our journalism long-term.\nAdvertisement:\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nLatest news\nAdvertisement:\n\r\n\r\n\r\nAdvertisement:",
+      "stazeno": "2026-10-28T20:02:44.602Z",
+      "stav": 200
+    }
+  },
+  {
     "id": "k-dc485631e9ed92cb",
     "zachyceno": "2026-10-28T17:19:56.658Z",
     "publikovano": "2026-10-28T17:06:33.000Z",
@@ -38,6 +104,43 @@
     }
   },
   {
+    "id": "k-e5e163c0cd5395e3",
+    "zachyceno": "2026-10-28T20:02:43.763Z",
+    "publikovano": "2026-10-28T17:06:00.000Z",
+    "zdroj": {
+      "nazev": "Ukrinform (anglicky)",
+      "url": "https://www.ukrinform.net/rubric-ato/4179125-russian-attacks-target-four-districts-in-dnipropetrovsk-region-injuring-five-people.html",
+      "typ": "wire",
+      "primarni": false
+    },
+    "titulek": "Russian attacks target four districts in Dnipropetrovsk region, injuring five people",
+    "titulekPuvodni": "Russian attacks target four districts in Dnipropetrovsk region, injuring five people",
+    "shrnuti": "The enemy attacked four districts more than 40 times using drones, artillery, and aerial bombs. Five people were injured. A child was among the victims.",
+    "kodZeme": "RU",
+    "zeme": "Rusko",
+    "kategorie": [
+      "sabotaz",
+      "drony",
+      "rusko"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "bomb",
+      "dron",
+      "drone",
+      "russia"
+    ],
+    "naliehave": null,
+    "stav": "ceka",
+    "vyrez": {
+      "text": "Russian attacks target four districts in Dnipropetrovsk region, injuring five people\n\r\nSubscription\nNewsletters\nPhotobank\nUkrinform - Ukrainian National News Agency\nFounded in 1918\nWednesday, 28 October 2026, 22:02\nWar\nEconomy\nSports\nMore ☰\nContacts\nEng\nУкр\nEng\nEsp\nDeu\nعربي\nFra\n日本語\nPol\n&times;\nAll topics\nWar\nRecovery of Ukraine\nPolitics\nEconomy\nFact checks\nDefense\nSociety and Culture\nSports\nCrime\nAccidents and Emergencies\nAgency\nInformation on Agency\nOur Contacts\nSubscribtion Terms\nOur Services\nPrivacy policy and personal data protection\nAdditional\nPublications\nInterviews\nPhoto\nVideo\nLongreads\nReleases\nServices\nSubscription\nNewsletters\nPhotobank\n\r\n\r\n\r\nThe enemy attacked four districts more than 40 times using drones, artillery, and aerial bombs. Five people were injured. A child was among the victims.\nThis was reported on Telegram by Oleksandr Hanzha, head of the Dnipropetrovsk Regional Military Administration, according to Ukrinform.\n\r\n\r\n\r\n\r\n\r\n\r\n&ldquo;In the Nikopol district, the district center and the communities of Marhanets, Myrove, Pokrovsk, and Chervonohryhorivka were hit. Private homes, an administrative building, a warehouse, and a store were damaged. A 54-year-old woman…",
+      "stazeno": "2026-10-28T20:02:44.730Z",
+      "stav": 200
+    }
+  },
+  {
     "id": "k-c4b309b6a2c7d127",
     "zachyceno": "2026-10-28T17:19:55.501Z",
     "publikovano": "2026-10-28T17:05:32.000Z",
@@ -66,6 +169,76 @@
     "vyrez": {
       "text": "Meloni says no attack on magistrates, defended work of the State - Politics - Ansa.it\nSe hai scelto di non accettare i cookie di profilazione e tracciamento, puoi aderire all&rsquo;abbonamento \"Consentless\" a un costo molto accessibile, oppure scegliere un altro abbonamento per accedere ad ANSA.it.\nTi invitiamo a leggere le Condizioni Generali di Servizio , la Cookie Policy e l' Informativa Privacy .\nABBONAMENTO CONSENTLESS\nPuoi leggere tutti i titoli di ANSA.it e 10 contenuti ogni 30 giorni a &euro;16,99/anno\nServizio equivalente a quello accessibile prestando il consenso ai cookie di profilazione pubblicitaria e tracciamento\nDurata annuale (senza rinnovo automatico)\nUn pop-up ti avvertir&agrave; che hai raggiunto i contenuti consentiti in 30 giorni (potrai continuare a vedere tutti i titoli del sito, ma per aprire altri contenuti dovrai attendere il successivo periodo di 30 giorni)\nPubblicit&agrave; presente ma non profilata o gestibile mediante il pannello delle preferenze\nIscrizione alle Newsletter tematiche curate dalle redazioni ANSA.\nALTRI ABBONAMENTI\nPer accedere senza limiti a tutti i contenuti di ANSA.it\nScegli il piano di abbonamento pi&ugrave; adatto alle tue…",
       "stazeno": "2026-10-28T17:19:57.078Z",
+      "stav": 200
+    }
+  },
+  {
+    "id": "k-bccfcdc371742b27",
+    "zachyceno": "2026-10-28T20:02:43.818Z",
+    "publikovano": "2026-10-28T17:03:00.000Z",
+    "zdroj": {
+      "nazev": "Ukrainska Pravda (anglicky)",
+      "url": "https://www.pravda.com.ua/eng/news/2026/10/28/8060139/",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "One killed, four injured in Russian strike on Kharkiv – photos",
+    "titulekPuvodni": "One killed, four injured in Russian strike on Kharkiv – photos",
+    "shrnuti": "A massive fire broke out at a post office facility in the city of Kharkiv following a Russian UAV attack on 28 October, claiming one life and injuring four others.",
+    "kodZeme": "RU",
+    "zeme": "Rusko",
+    "kategorie": [
+      "hybridni",
+      "drony",
+      "rusko"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "attack on",
+      "uav",
+      "russia"
+    ],
+    "naliehave": null,
+    "stav": "ceka",
+    "vyrez": {
+      "text": "Russian drone strike on Kharkiv postal warehouse leaves one killed, four injured | Ukrainska Pravda\nPhoto: State Emergency Service in Kharkiv Oblast\nRussian troops attacked a warehouse in the city of Kharkiv on 28 October, killing one person and injuring four others.\nSource: State Emergency Service of Ukraine (SES)\nQuote: \"One person has been killed and four others injured in Kharkiv as a result of a strike by a Russian attack UAV.\nAdvertisement:\n\r\n\r\n\r\n\r\n\r\nThis afternoon, the enemy struck a postal warehouse in the city, causing a fire covering an area of 1,000 sq. m.\"\n\r\n\r\n\r\n\r\n\r\nPhoto: State Emergency Service in Kharkiv Oblast\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nPhoto: State Emergency Service in Kharkiv Oblast\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nPhoto: State Emergency Service in Kharkiv Oblast\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nPhoto: State Emergency Service in Kharkiv Oblast\r\n\r\n\r\n\r\nSubscribe on Patreon to back our journalism long-term.\nKharkiv\nAdvertisement:\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nKharkiv\nOne killed and four injured in Russian drone strike on Kharkiv\nRussia damages warehouses, business and metro entrance in Kharkiv – photos\nRussians attack residential buildings in Kharkiv, injuring five people, including a child – photos and…",
+      "stazeno": "2026-10-28T20:02:45.454Z",
+      "stav": 200
+    }
+  },
+  {
+    "id": "k-cf112215c8cb2861",
+    "zachyceno": "2026-10-28T20:02:43.821Z",
+    "publikovano": "2026-10-28T16:49:00.000Z",
+    "zdroj": {
+      "nazev": "Ukrainska Pravda (anglicky)",
+      "url": "https://www.pravda.com.ua/eng/news/2026/10/28/8060138/",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Two bomb disposal experts killed following detonation of Russian munition in Sumy Oblast",
+    "titulekPuvodni": "Two bomb disposal experts killed following detonation of Russian munition in Sumy Oblast",
+    "shrnuti": "A Russian munition has detonated during humanitarian demining in the Shostka district, claiming the lives of SES bomb disposal experts Oleksandr Kovalchuk and Denys Sydorych.",
+    "kodZeme": "RU",
+    "zeme": "Rusko",
+    "kategorie": [
+      "sabotaz",
+      "rusko"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "bomb",
+      "russia"
+    ],
+    "naliehave": null,
+    "stav": "ceka",
+    "vyrez": {
+      "text": "Two Ukrainian bomb disposal experts killed in blast in Sumy Oblast | Ukrainska Pravda\nPhoto: State Emergency Service of Ukraine\nA Russian munition detonated during demining operations in the Shostka district of Sumy Oblast, killing bomb disposal experts Oleksandr Kovalchuk and Denys Sydorych.\nSource: State Emergency Service of Ukraine (SES)\nDetails: Rescue workers reported that on 28 October, Oleksandr Kovalchuk, Major of the Civil Protection Service and head of a mechanised demining group, and Denys Sydorych, Master Sergeant of the Civil Protection Service and bomb disposal operator, were killed during humanitarian demining in Sumy Oblast.\nAdvertisement:\n\r\n\r\n\r\n\r\n\r\nQuote: \"While a bomb disposal team was working in the Shostka district, a Russian munition detonated. One demining expert died at the scene, and the other was taken to hospital in a critical condition, but his life could not be saved.\"\nDetails: Oleksandr Kovalchuk was 32 years old. He had served in the SES for over 15 years. Denys Sydorych was 39.\nQuote: \"But today, the hardest thing is not talking about ranks and years of service. The hardest thing is to realise that they are no longer with us. Oleksandr had his wife,…",
+      "stazeno": "2026-10-28T20:02:45.937Z",
       "stav": 200
     }
   },
@@ -10093,177 +10266,6 @@
     "vyrez": {
       "text": "Německo zadrželo muže podezřelého z vojenské špionáže pro Rusko - Seznam Zprávy\nZobrazení snímku 1 z 0\nHlavní obsah\nNěmecko zadrželo muže podezřelého z vojenské špionáže pro Rusko\nČTK\n1:24\nChcete-li článek poslouchat, přihlaste se\neBook\nSdílet\nFoto: Pixabay.com\nIlustrační snímek.\n14:20\nUkrajinec měl minimálně od loňského července shromažďovat informace o vojenské výrobě a předávat je ruské zpravodajské službě.\nČlánek\nNěmecké úřady zadržely v Braniborsku ukrajinského občana podezřelého ze špionáže pro Rusko, informovala agentura DPA a deník Bild s odvoláním na spolkové státní zastupitelství v Karlsruhe. Muž podle vyšetřovatelů shromažďoval mimo jiné vojensky využitelné zpravodajské informace.\nUkrajinský občan identifikovaný jako Vadym Y. se zaměřoval na údaje týkající se výroby obrněných vozidel, munice či výbušnin. Budoval si síť kontaktů v evropském obranném průmyslu, od nichž se pokoušel získávat další informace. Nejméně od července 2025 byl v kontaktu s ruskou zpravodajskou službou.\nNěmecké tajné služby v posledních letech opakovaně varují před sabotážními akcemi a špionáží. Podle Spolkového úřadu pro ochranu ústavy, který v Německu funguje jako civilní vnitřní tajná služba, za…",
       "stazeno": "2026-10-22T16:03:18.390Z",
-      "stav": 200
-    }
-  },
-  {
-    "id": "k-c6d0342438697bf3",
-    "zachyceno": "2026-10-22T12:02:53.138Z",
-    "publikovano": null,
-    "zdroj": {
-      "nazev": "TASR (Slovensko)",
-      "url": "https://www.tasr.sk/tasr-clanok/TASR:2026102200000144",
-      "typ": "wire",
-      "primarni": false
-    },
-    "titulek": "dnes 11:35 Rím a Madrid zrušili hraničné kontroly zavedené po migračnej kríze v Ceute",
-    "titulekPuvodni": "dnes 11:35 Rím a Madrid zrušili hraničné kontroly zavedené po migračnej kríze v Ceute",
-    "shrnuti": "",
-    "kodZeme": "IT",
-    "zeme": "Itálie",
-    "kategorie": [
-      "hranice"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "zeSite": null,
-    "shody": [
-      "hranic+kontrol"
-    ],
-    "naliehave": null,
-    "stav": "ceka",
-    "vyrez": {
-      "text": "Tlačová agentúra Slovenskej republiky - TASR.sk\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nPrezident podpísal zákon o rozpočtových pravidlách verejnej správy\nPrezident: Seniori si zaslúžia dôstojný život aj na dôchodku\nPrieskum: Slováci považujú za dostatočnú finančnú rezervu TÚTO SUMU\nŠtart 114. ročníka Tour de France bude v Británii\nD. Saková: EÚ by mohla prispieť na ropovodné prepojenie s Rakúskom\nSrbsko odohrá zápas v Belehrade proti Nemecku bez divákov\nBritská banka Barclays chystá zrušenie 5000 pracovných miest\n\r\n\r\n\r\n\r \r\r\r\n\r \r \r \r \r Teraz\n\r TASR TV\n\r Webmagazín\n\r Vtedy.sk\n\r \r FOTOBANKA TASR\n\r Webreport\n\r Školské\n\r \r\r \r\n\r\n\r\n\r \r\r\n\r\n\r\n\r \r \r\n\r Úvod\nO agentúre\nProdukty a služby\nKontakty\nPodporujeme\n\r\n\r \r\n\r \r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nRím a Madrid zrušili hraničné kontroly zavedené po migračnej kríze v Ceute\ndnes 11:35\nRím 22. októbra (TASR) - Taliansko a Španielsko sa dohodli na zrušení vzájomných hraničných kontrol, ktoré zaviedli po masívnom prieniku migrantov do španielskej severoafrickej exklávy Ceuta koncom júla. Oznámilo to vo štvrtok talianske ministerstvo vnútra, na ktoré sa odvolala agentúra Reuters, píše TASR.\nTaliansko pozastavilo uplatňovanie schengenských pravidiel pre cestujúcich zo Španielska 31. júla.…",
-      "stazeno": "2026-10-22T12:02:56.403Z",
-      "stav": 200
-    }
-  },
-  {
-    "id": "k-9936a3964ebbaf9e",
-    "zachyceno": "2026-10-22T12:02:52.545Z",
-    "publikovano": "2026-10-22T11:54:00.000Z",
-    "zdroj": {
-      "nazev": "iDNES.cz — zpravodajství",
-      "url": "https://www.idnes.cz/zpravy/zahranicni/nemci-zadrzeli-ukrajince-najateho-na-spionaz-pro-rusko-cilil-na-obranny-prumysl.A261022_135215_zahranicni_bro#utm_source=rss&utm_medium=feed&utm_campaign=zpravodaj&utm_content=main",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Němci zadrželi Ukrajince najatého na špionáž pro Rusko, cílil na obranný průmysl",
-    "titulekPuvodni": "Němci zadrželi Ukrajince najatého na špionáž pro Rusko, cílil na obranný průmysl",
-    "shrnuti": "Německé úřady zadržely v Braniborsku ukrajinského občana podezřelého ze špionáže pro Rusko. Muž podle vyšetřovatelů shromažďoval mimo jiné vojensky využitelné zpravodajské informace.",
-    "kodZeme": "DE",
-    "zeme": "Německo",
-    "kategorie": [
-      "zpravodajske",
-      "rusko"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "zeSite": null,
-    "shody": [
-      "zadrz+spion",
-      "spionaz",
-      "rusk"
-    ],
-    "naliehave": null,
-    "stav": "ceka",
-    "vyrez": {
-      "text": "Německo zadrželo Ukrajince podezřelého ze špionáže pro Rusko - iDNES.cz \r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\niDNES.cz\n\r\n\r\n\r\nP�ihl�sit \r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nAbyste mohli pokra�ovat, pot�ebujeme v�d�t, jakou formou v�m m��eme zobrazovat reklamu \r\n\r\n\r\n\r\n\r\n\r\nV�mi zvolen� nastaven� \r\nneobsahuje souhlas se zobrazov�n�m c�len� reklamy . \r\nVyberte pros�m znovu, \r\njakou formou v�m m�me zobrazovat obsah. \r\n\r\n\r\n\r\n\r\n\r\n\r\niDNES Premium\n\r\nBez reklam\n\r\n\r\n199 K� m�s��n�\n\r\nM��ete neomezen� ��st iDNES.cz, Lidovky.cz, Expres.cz a Antiyoutuber.cz. K tomu dostanete tak� noviny a �asopisy v elektronick� podob�. To v�e bez reklam. 1\n\r\n\r\nP�edplatit\n\r\n\r\nU� m�te ��et? P�ihlaste se\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nS c�lenou reklamou\n\r\n\r\n\r\nZdarma \r\n\r\nZachov�me v�m v�e tak, jak jste zvykl� a reklamu p�izp�sob�me va�im z�jm�m. Bez omezen� si m��ete d�l ��st, p�ehr�vat videa, sout�it �i p�isp�vat do v�ech diskus�. 2\n\r\n\r\nSouhlas�m\n\r\nPodrobn� nastaven�\n\r\n\r\n\r\n\r\n\r\n\r\niDNES a reklama\n\r\nPokud vyu�ijete m�sto platby ud�len� souhlasu s reklamou (tj. souhlas s vyu�it�m cookies a dal��ch s�ov�ch identifik�tor� pro ��ely c�len� reklamy), \r\nbudou V�m zobrazov�ny v r�mci…",
-      "stazeno": "2026-10-22T12:02:56.949Z",
-      "stav": 200
-    }
-  },
-  {
-    "id": "k-8060c66966de97ab",
-    "zachyceno": "2026-10-22T12:02:54.007Z",
-    "publikovano": "2026-10-22T11:45:50.000Z",
-    "zdroj": {
-      "nazev": "TVN24 (Polsko)",
-      "url": "https://tvn24.pl/tvnwarszawa/okolice/jozefow-stracili-lacznosc-dronem-spadl-na-prywatna-posesje-wyjasnienia-wojskowych-st9300426?source=rss",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Stracili łączność dronem, spadł na posesję pod Warszawą. Wyjaśnienia wojskowych",
-    "titulekPuvodni": "Stracili łączność dronem, spadł na posesję pod Warszawą. Wyjaśnienia wojskowych",
-    "shrnuti": "Na prywatną posesję koło Warszawy spadł dron należący do wojskowego ośrodka badawczego. Jego przedstawiciele tłumaczą, że stracili łączność z maszyną, lecz nieprzerwanie śledzili jej lokalizację. Nie zdradzają jednak, dlaczego doszło do jej upadku.",
-    "kodZeme": "PL",
-    "zeme": "Polsko",
-    "kategorie": [
-      "drony"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "zeSite": null,
-    "shody": [
-      "dron+spadł",
-      "dron",
-      "drone"
-    ],
-    "naliehave": null,
-    "stav": "ceka",
-    "vyrez": {
-      "text": "Józefów. Stracili łączność dronem, spadł na prywatną posesję. Wyjaśnienia wojskowych | TVN Warszawa\nWarszawa\nSUBSKRYBUJ Przejdź do\nSzukaj\nZnaleziono 0 materiałów zawierających:\nRedakcja poleca:\nZobacz więcej wyników\nMoje konto\nOglądaj dalej\nObserwowane\nNewslettery\nPreferencje treści\nMoje zakupy i karty\nSklep\nZrealizuj voucher\nPomoc\nZgłoś problem\nEdytuj dane\nWyloguj się\nZaloguj się\nMenu\nZamknij\nOglądaj TVN24\nNajnowsze\nDzielnice\nBemowo\nBiałołęka\nBielany\nMokotów\nOchota\nPraga Północ\nPraga Południe\nRembertów\nŚródmieście\nTargówek\nUrsus\nUrsynów\nWawer\nWesoła\nWilanów\nWola\nWłochy\nŻoliborz\nOkolice\nUlice\nKultura\nKomunikacja\nCzytaj\nSłuchaj\nOglądaj\nPolicja o upadku drona w Józefowie\nŹródło wideo: TVN24\nŹródło zdj. gł.: Mapy Google\nPosłuchaj artykułu Czyta lektor AI\nWykup subskrypcję TVN24+, aby posłuchać artykułu. Masz subskrypcję? Zaloguj się.\nDowiedz się więcej\nUdostępnij Facebook Kopiuj link\nDodaj do preferowanych źródeł w Google Dodaj nas do listy preferowanych źródeł w Google, aby nasze materiały częściej pojawiały się w Twoich wynikach wyszukiwania.\nNa prywatną posesję koło Warszawy spadł dron należący do wojskowego ośrodka badawczego. Jego przedstawiciele tłumaczą, że stracili łączność z…",
-      "stazeno": "2026-10-22T12:02:59.668Z",
-      "stav": 200
-    }
-  },
-  {
-    "id": "k-d3ddd1cd4b01697b",
-    "zachyceno": "2026-10-22T12:02:52.599Z",
-    "publikovano": "2026-10-22T11:33:00.000Z",
-    "zdroj": {
-      "nazev": "ČTK — České noviny",
-      "url": "https://www.ceskenoviny.cz/zpravy/nemecko-zadrzelo-muze-podezreleho-ze-spionaze-pro-rusko/2891523?utm_source=rss&utm_medium=feed",
-      "typ": "wire",
-      "primarni": false
-    },
-    "titulek": "Německo zadrželo muže podezřelého ze špionáže pro Rusko",
-    "titulekPuvodni": "Německo zadrželo muže podezřelého ze špionáže pro Rusko",
-    "shrnuti": "Berlín - Německé úřady zadržely v Braniborsku ukrajinského občana podezřelého ze špionáže pro Rusko, informovala dnes agentura DPA a deník Bild s odvoláním na spolkové státní zastupitelství v Karlsruhe....",
-    "kodZeme": "DE",
-    "zeme": "Německo",
-    "kategorie": [
-      "zpravodajske",
-      "rusko"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "zeSite": null,
-    "shody": [
-      "zadrz+spion",
-      "spionaz",
-      "rusk"
-    ],
-    "naliehave": null,
-    "stav": "ceka",
-    "vyrez": {
-      "text": "Německo zadrželo muže podezřelého ze špionáže pro Rusko | ČeskéNoviny.cz \r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nPřejít k obsahu \r\n| \r\nPřejít k hlavnímu menu \r\n| \r\nPřejít k vyhledávání \r\n\r\n\r\n\r\n\r\n\r\n\r\nČeské noviny \r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nMenu \r\n\r\n\r\n\r\n\r\n\r\n\r\nÚvod \r\n\r\n\r\nČR\n\r\nSvět\n\r\nEkonomika\n\r\nKultura\n\r\nSport\n\r\nMagazín\n\r\nSpeciál\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nVolby 2026:\n\r\n\r\nZpravodajství\n\r\nVýsledky\n\r\nŽivě\n\r\n\r\nDalší:\n\r\n\r\nBlízký Východ\n\r\n\r\n\r\nInvaze na Ukrajinu\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nNěmecko zadrželo muže podezřelého ze špionáže pro Rusko\n\r\n\r\n\r\n\r\n\r\n\r\nKomerční prezentace Aktual.: 22.10.2026 13:33 \r\nVydáno: 22.10.2026, 13:33 \r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nAutomobil německé policie - ilustrační foto. \r\nČTK/AP/Arno Burgi \r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nBerlín - Německé úřady zadržely v Braniborsku ukrajinského občana podezřelého ze špionáže pro Rusko, informovala dnes agentura DPA a deník Bild s odvoláním na spolkové státní zastupitelství v Karlsruhe. Muž podle vyšetřovatelů shromažďoval mimo jiné vojensky využitelné zpravodajské informace.\n\r\n\r\n\r\n\r\n\r\nReklama…",
-      "stazeno": "2026-10-22T12:03:00.072Z",
-      "stav": 200
-    }
-  },
-  {
-    "id": "k-350be3685bdfa9ae",
-    "zachyceno": "2026-10-22T12:02:52.435Z",
-    "publikovano": "2026-10-22T11:31:21.000Z",
-    "zdroj": {
-      "nazev": "Novinky.cz",
-      "url": "https://www.novinky.cz/clanek/zahranicni-nemecko-zadrzelo-spiona-40604304",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Německo zadrželo Ukrajince podezřelého ze špionáže pro Rusko",
-    "titulekPuvodni": "Německo zadrželo Ukrajince podezřelého ze špionáže pro Rusko",
-    "shrnuti": "Německé úřady zadržely v Braniborsku ukrajinského občana Vadyma Y., který je podezřelý ze špionáže pro Rusko. V pátek má být předveden před vyšetřujícího soudce, který rozhodne, zda muž skončí ve vazbě.",
-    "kodZeme": "DE",
-    "zeme": "Německo",
-    "kategorie": [
-      "zpravodajske",
-      "rusko"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "zeSite": null,
-    "shody": [
-      "zadrz+spion",
-      "spionaz",
-      "rusk"
-    ],
-    "naliehave": null,
-    "stav": "ceka",
-    "vyrez": {
-      "text": "Německo zadrželo Ukrajince podezřelého ze špionáže pro Rusko - Novinky\nZobrazení snímku 1 z 0\nzáhlaví\nHlavní obsah\nNěmecko zadrželo Ukrajince podezřelého ze špionáže pro Rusko\nJitka Zadražilová\n1:20\nChcete-li článek poslouchat, přihlaste se\neBook\nSdílet\nDnes 22. 10., 13:31 Aktualizováno dnes 13:55\nNěmecké úřady zadržely v Braniborsku ukrajinského občana Vadyma Y., který je podezřelý ze špionáže pro Rusko. V pátek má být předveden před vyšetřujícího soudce, který rozhodne, zda muž skončí ve vazbě.\nFoto: Profimedia.cz\nIlustrační foto\nČlánek\nMuž se zaměřil na evropský zbrojní průmysl a východní křídlo NATO. Vadym Y. má podle zjištění webu t-online žít v Eisenhüttenstadtu. Údajně shromažďoval informace o výrobě tanků, munice a výbušnin, stejně jako o personálu. Měl zkoumat vojenská zařízení k zajištění východního křídla NATO. Podle informací týdeníku Spiegel také špehoval litevskou brigádu Bundeswehru.\nNěkteré informace byly podle úřadu veřejně dostupné, jiné Vadym Y. záměrně „získával“ od lidí z evropského zbrojního průmyslu. Podle Generálního spolkového státního zastupitelství byl muž od loňského července v kontaktu s ruskou zpravodajskou službou, styk mu zajišťoval…",
-      "stazeno": "2026-10-22T12:03:00.649Z",
       "stav": 200
     }
   }
