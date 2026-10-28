@@ -1,5 +1,5 @@
 {
-  "aktualizovano": "2026-10-28T16:03:02.011Z",
+  "aktualizovano": "2026-10-28T17:20:01.156Z",
   "stavy": [
     {
       "klic": "cloudflare",
@@ -18,26 +18,34 @@
         "Ashburn, United States - (IAD)",
         "Annaba, Algeria - (AAE)"
       ],
-      "zkontrolovano": "2026-10-28T16:03:02.011Z",
+      "zkontrolovano": "2026-10-28T17:20:01.156Z",
       "chyba": null
     },
     {
       "klic": "zoom",
-      "stav": "nezjisteno",
-      "popis": null,
-      "incidenty": [],
-      "postizene": [],
-      "zkontrolovano": "2026-10-28T16:03:02.011Z",
-      "chyba": "HTTP 503"
+      "stav": "omezeni",
+      "popis": "Partially Degraded Service",
+      "incidenty": [
+        {
+          "nazev": "Service Degradation Affecting the Evaluations Acknowledge Button in Zoom Quality Management in the US Region",
+          "odkaz": "https://stspg.io/3wdnhf87gqwg",
+          "aktualizovano": "2026-10-28T07:31:21.814-07:00"
+        }
+      ],
+      "postizene": [
+        "Zoom Quality Management"
+      ],
+      "zkontrolovano": "2026-10-28T17:20:01.156Z",
+      "chyba": null
     },
     {
       "klic": "discord",
-      "stav": "nezjisteno",
-      "popis": null,
+      "stav": "provoz",
+      "popis": "All Systems Operational",
       "incidenty": [],
       "postizene": [],
-      "zkontrolovano": "2026-10-28T16:03:02.011Z",
-      "chyba": "HTTP 503"
+      "zkontrolovano": "2026-10-28T17:20:01.156Z",
+      "chyba": null
     }
   ]
 }
