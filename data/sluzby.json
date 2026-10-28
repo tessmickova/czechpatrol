@@ -1,30 +1,33 @@
 {
-  "aktualizovano": "2026-10-28T00:02:42.750Z",
+  "aktualizovano": "2026-10-28T08:02:51.615Z",
   "stavy": [
     {
       "klic": "cloudflare",
       "stav": "vypadek",
       "popis": "Partial System Outage",
-      "incidenty": [],
+      "incidenty": [
+        {
+          "nazev": "Network Performance Issues in Ashburn, IAD",
+          "odkaz": "https://www.cloudflarestatus.com/incidents/snth5ero95rz",
+          "aktualizovano": "2026-10-28T05:05:21.234Z"
+        }
+      ],
       "postizene": [
         "Africa",
         "Arica, Chile - (ARI)",
         "Algiers, Algeria - (ALG)",
-        "Anchorage, United States - (ANC)"
+        "Ashburn, United States - (IAD)"
       ],
-      "zkontrolovano": "2026-10-28T00:02:42.750Z",
+      "zkontrolovano": "2026-10-28T08:02:51.615Z",
       "chyba": null
     },
     {
       "klic": "zoom",
-      "stav": "omezeni",
-      "popis": "Service Under Maintenance",
+      "stav": "provoz",
+      "popis": "All Systems Operational",
       "incidenty": [],
-      "postizene": [
-        "Integration (API/Webhook)",
-        "Zoom Phone - Global"
-      ],
-      "zkontrolovano": "2026-10-28T00:02:42.750Z",
+      "postizene": [],
+      "zkontrolovano": "2026-10-28T08:02:51.615Z",
       "chyba": null
     },
     {
@@ -33,7 +36,7 @@
       "popis": "All Systems Operational",
       "incidenty": [],
       "postizene": [],
-      "zkontrolovano": "2026-10-28T00:02:42.750Z",
+      "zkontrolovano": "2026-10-28T08:02:51.615Z",
       "chyba": null
     }
   ]
