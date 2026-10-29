@@ -1,5 +1,5 @@
 {
-  "kdy": "2026-10-29T15:28:20.629Z",
+  "kdy": "2026-10-29T16:01:20.987Z",
   "zdroje": [
     {
       "klic": "e-sbirka",
@@ -247,9 +247,8 @@
       "klic": "pizza-index",
       "ok": true,
       "stav": null,
-      "pocetPolozek": 0,
-      "chyba": "DOUGHCON na stránce nenalezen",
-      "vysledek": "obsah"
+      "pocetPolozek": 1,
+      "vysledek": "ok"
     }
   ],
   "novychVeFronte": 0
