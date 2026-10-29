@@ -1,5 +1,5 @@
 {
-  "aktualizovano": "2026-10-29T12:03:47.049Z",
+  "aktualizovano": "2026-10-29T15:30:35.174Z",
   "stavy": [
     {
       "klic": "cloudflare",
@@ -7,9 +7,9 @@
       "popis": "Partial System Outage",
       "incidenty": [
         {
-          "nazev": "Increased HTTP 429 Rate Limit Errors on Cloudflare Dashboard",
-          "odkaz": "https://www.cloudflarestatus.com/incidents/k2cd9e1fyskp",
-          "aktualizovano": "2026-10-29T12:00:24.338Z"
+          "nazev": "Increased Durable Objects, D1 and Workflows Error Rates",
+          "odkaz": "https://www.cloudflarestatus.com/incidents/r4mz367vddi7",
+          "aktualizovano": "2026-10-29T14:38:50.855Z"
         }
       ],
       "postizene": [
@@ -18,7 +18,7 @@
         "Arica, Chile - (ARI)",
         "Algiers, Algeria - (ALG)"
       ],
-      "zkontrolovano": "2026-10-29T12:03:47.049Z",
+      "zkontrolovano": "2026-10-29T15:30:35.174Z",
       "chyba": null
     },
     {
@@ -27,7 +27,7 @@
       "popis": "All Systems Operational",
       "incidenty": [],
       "postizene": [],
-      "zkontrolovano": "2026-10-29T12:03:47.049Z",
+      "zkontrolovano": "2026-10-29T15:30:35.174Z",
       "chyba": null
     },
     {
@@ -36,7 +36,7 @@
       "popis": "All Systems Operational",
       "incidenty": [],
       "postizene": [],
-      "zkontrolovano": "2026-10-29T12:03:47.049Z",
+      "zkontrolovano": "2026-10-29T15:30:35.174Z",
       "chyba": null
     }
   ]
