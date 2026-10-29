@@ -1,5 +1,5 @@
 {
-  "aktualizovano": "2026-10-29T08:03:47.720Z",
+  "aktualizovano": "2026-10-29T08:20:17.301Z",
   "stavy": [
     {
       "klic": "cloudflare",
@@ -9,7 +9,7 @@
         {
           "nazev": "Increased errors and latency for CNI 2.0 traffic in LAX",
           "odkaz": "https://www.cloudflarestatus.com/incidents/oco7f885d2v4",
-          "aktualizovano": "2026-10-29T06:56:08.509Z"
+          "aktualizovano": "2026-10-29T08:08:20.112Z"
         }
       ],
       "postizene": [
@@ -18,7 +18,7 @@
         "Algiers, Algeria - (ALG)",
         "Annaba, Algeria - (AAE)"
       ],
-      "zkontrolovano": "2026-10-29T08:03:47.720Z",
+      "zkontrolovano": "2026-10-29T08:20:17.301Z",
       "chyba": null
     },
     {
@@ -27,7 +27,7 @@
       "popis": "All Systems Operational",
       "incidenty": [],
       "postizene": [],
-      "zkontrolovano": "2026-10-29T08:03:47.720Z",
+      "zkontrolovano": "2026-10-29T08:20:17.301Z",
       "chyba": null
     },
     {
@@ -36,7 +36,7 @@
       "popis": "All Systems Operational",
       "incidenty": [],
       "postizene": [],
-      "zkontrolovano": "2026-10-29T08:03:47.720Z",
+      "zkontrolovano": "2026-10-29T08:20:17.301Z",
       "chyba": null
     }
   ]
