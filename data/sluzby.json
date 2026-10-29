@@ -1,33 +1,33 @@
 {
-  "aktualizovano": "2026-10-29T04:03:39.625Z",
+  "aktualizovano": "2026-10-29T12:03:47.049Z",
   "stavy": [
     {
       "klic": "cloudflare",
       "stav": "vypadek",
       "popis": "Partial System Outage",
-      "incidenty": [],
-      "postizene": [
-        "Amsterdam, Netherlands - (AMS)",
-        "Arica, Chile - (ARI)",
-        "Algiers, Algeria - (ALG)",
-        "Ashburn, United States - (IAD)"
+      "incidenty": [
+        {
+          "nazev": "Increased HTTP 429 Rate Limit Errors on Cloudflare Dashboard",
+          "odkaz": "https://www.cloudflarestatus.com/incidents/k2cd9e1fyskp",
+          "aktualizovano": "2026-10-29T12:00:24.338Z"
+        }
       ],
-      "zkontrolovano": "2026-10-29T04:03:39.625Z",
+      "postizene": [
+        "Cloudflare Sites and Services",
+        "Amman, Jordan - (AMM)",
+        "Arica, Chile - (ARI)",
+        "Algiers, Algeria - (ALG)"
+      ],
+      "zkontrolovano": "2026-10-29T12:03:47.049Z",
       "chyba": null
     },
     {
       "klic": "zoom",
       "stav": "provoz",
       "popis": "All Systems Operational",
-      "incidenty": [
-        {
-          "nazev": "Service Degradation Affecting the Evaluations Acknowledge Button in Zoom Quality Management in the US Region",
-          "odkaz": "https://stspg.io/3wdnhf87gqwg",
-          "aktualizovano": "2026-10-28T20:19:24.153-07:00"
-        }
-      ],
+      "incidenty": [],
       "postizene": [],
-      "zkontrolovano": "2026-10-29T04:03:39.625Z",
+      "zkontrolovano": "2026-10-29T12:03:47.049Z",
       "chyba": null
     },
     {
@@ -36,7 +36,7 @@
       "popis": "All Systems Operational",
       "incidenty": [],
       "postizene": [],
-      "zkontrolovano": "2026-10-29T04:03:39.625Z",
+      "zkontrolovano": "2026-10-29T12:03:47.049Z",
       "chyba": null
     }
   ]
