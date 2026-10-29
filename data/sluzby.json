@@ -1,5 +1,5 @@
 {
-  "aktualizovano": "2026-10-29T08:20:17.301Z",
+  "aktualizovano": "2026-10-29T12:03:47.049Z",
   "stavy": [
     {
       "klic": "cloudflare",
@@ -7,18 +7,18 @@
       "popis": "Partial System Outage",
       "incidenty": [
         {
-          "nazev": "Increased errors and latency for CNI 2.0 traffic in LAX",
-          "odkaz": "https://www.cloudflarestatus.com/incidents/oco7f885d2v4",
-          "aktualizovano": "2026-10-29T08:08:20.112Z"
+          "nazev": "Increased HTTP 429 Rate Limit Errors on Cloudflare Dashboard",
+          "odkaz": "https://www.cloudflarestatus.com/incidents/k2cd9e1fyskp",
+          "aktualizovano": "2026-10-29T12:00:24.338Z"
         }
       ],
       "postizene": [
         "Cloudflare Sites and Services",
+        "Amman, Jordan - (AMM)",
         "Arica, Chile - (ARI)",
-        "Algiers, Algeria - (ALG)",
-        "Annaba, Algeria - (AAE)"
+        "Algiers, Algeria - (ALG)"
       ],
-      "zkontrolovano": "2026-10-29T08:20:17.301Z",
+      "zkontrolovano": "2026-10-29T12:03:47.049Z",
       "chyba": null
     },
     {
@@ -27,7 +27,7 @@
       "popis": "All Systems Operational",
       "incidenty": [],
       "postizene": [],
-      "zkontrolovano": "2026-10-29T08:20:17.301Z",
+      "zkontrolovano": "2026-10-29T12:03:47.049Z",
       "chyba": null
     },
     {
@@ -36,7 +36,7 @@
       "popis": "All Systems Operational",
       "incidenty": [],
       "postizene": [],
-      "zkontrolovano": "2026-10-29T08:20:17.301Z",
+      "zkontrolovano": "2026-10-29T12:03:47.049Z",
       "chyba": null
     }
   ]
