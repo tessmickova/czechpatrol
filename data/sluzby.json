@@ -1,41 +1,33 @@
 {
-  "aktualizovano": "2026-10-28T21:54:09.536Z",
+  "aktualizovano": "2026-10-29T04:03:39.625Z",
   "stavy": [
     {
       "klic": "cloudflare",
       "stav": "vypadek",
       "popis": "Partial System Outage",
-      "incidenty": [
-        {
-          "nazev": "Network Performance Issues in Ashburn, IAD",
-          "odkaz": "https://www.cloudflarestatus.com/incidents/snth5ero95rz",
-          "aktualizovano": "2026-10-28T05:05:21.234Z"
-        }
-      ],
+      "incidenty": [],
       "postizene": [
+        "Amsterdam, Netherlands - (AMS)",
         "Arica, Chile - (ARI)",
         "Algiers, Algeria - (ALG)",
-        "Ashburn, United States - (IAD)",
-        "Annaba, Algeria - (AAE)"
+        "Ashburn, United States - (IAD)"
       ],
-      "zkontrolovano": "2026-10-28T21:54:09.536Z",
+      "zkontrolovano": "2026-10-29T04:03:39.625Z",
       "chyba": null
     },
     {
       "klic": "zoom",
-      "stav": "omezeni",
-      "popis": "Partially Degraded Service",
+      "stav": "provoz",
+      "popis": "All Systems Operational",
       "incidenty": [
         {
           "nazev": "Service Degradation Affecting the Evaluations Acknowledge Button in Zoom Quality Management in the US Region",
           "odkaz": "https://stspg.io/3wdnhf87gqwg",
-          "aktualizovano": "2026-10-28T13:34:49.377-07:00"
+          "aktualizovano": "2026-10-28T20:19:24.153-07:00"
         }
       ],
-      "postizene": [
-        "Zoom Quality Management"
-      ],
-      "zkontrolovano": "2026-10-28T21:54:09.536Z",
+      "postizene": [],
+      "zkontrolovano": "2026-10-29T04:03:39.625Z",
       "chyba": null
     },
     {
@@ -44,7 +36,7 @@
       "popis": "All Systems Operational",
       "incidenty": [],
       "postizene": [],
-      "zkontrolovano": "2026-10-28T21:54:09.536Z",
+      "zkontrolovano": "2026-10-29T04:03:39.625Z",
       "chyba": null
     }
   ]
