@@ -1,24 +1,18 @@
 {
-  "aktualizovano": "2026-10-28T21:54:09.536Z",
+  "aktualizovano": "2026-10-29T00:02:50.302Z",
   "stavy": [
     {
       "klic": "cloudflare",
       "stav": "vypadek",
       "popis": "Partial System Outage",
-      "incidenty": [
-        {
-          "nazev": "Network Performance Issues in Ashburn, IAD",
-          "odkaz": "https://www.cloudflarestatus.com/incidents/snth5ero95rz",
-          "aktualizovano": "2026-10-28T05:05:21.234Z"
-        }
-      ],
+      "incidenty": [],
       "postizene": [
         "Arica, Chile - (ARI)",
         "Algiers, Algeria - (ALG)",
         "Ashburn, United States - (IAD)",
         "Annaba, Algeria - (AAE)"
       ],
-      "zkontrolovano": "2026-10-28T21:54:09.536Z",
+      "zkontrolovano": "2026-10-29T00:02:50.302Z",
       "chyba": null
     },
     {
@@ -35,7 +29,7 @@
       "postizene": [
         "Zoom Quality Management"
       ],
-      "zkontrolovano": "2026-10-28T21:54:09.536Z",
+      "zkontrolovano": "2026-10-29T00:02:50.302Z",
       "chyba": null
     },
     {
@@ -44,7 +38,7 @@
       "popis": "All Systems Operational",
       "incidenty": [],
       "postizene": [],
-      "zkontrolovano": "2026-10-28T21:54:09.536Z",
+      "zkontrolovano": "2026-10-29T00:02:50.302Z",
       "chyba": null
     }
   ]
