@@ -1,5 +1,5 @@
 {
-  "aktualizovano": "2026-10-29T01:43:00.649Z",
+  "aktualizovano": "2026-10-29T04:03:39.625Z",
   "stavy": [
     {
       "klic": "cloudflare",
@@ -7,31 +7,37 @@
       "popis": "Partial System Outage",
       "incidenty": [],
       "postizene": [
+        "Amsterdam, Netherlands - (AMS)",
         "Arica, Chile - (ARI)",
         "Algiers, Algeria - (ALG)",
-        "Ashburn, United States - (IAD)",
-        "Annaba, Algeria - (AAE)"
+        "Ashburn, United States - (IAD)"
       ],
-      "zkontrolovano": "2026-10-29T01:43:00.649Z",
+      "zkontrolovano": "2026-10-29T04:03:39.625Z",
       "chyba": null
     },
     {
       "klic": "zoom",
-      "stav": "nezjisteno",
-      "popis": null,
-      "incidenty": [],
+      "stav": "provoz",
+      "popis": "All Systems Operational",
+      "incidenty": [
+        {
+          "nazev": "Service Degradation Affecting the Evaluations Acknowledge Button in Zoom Quality Management in the US Region",
+          "odkaz": "https://stspg.io/3wdnhf87gqwg",
+          "aktualizovano": "2026-10-28T20:19:24.153-07:00"
+        }
+      ],
       "postizene": [],
-      "zkontrolovano": "2026-10-29T01:43:00.649Z",
-      "chyba": "The operation was aborted due to timeout"
+      "zkontrolovano": "2026-10-29T04:03:39.625Z",
+      "chyba": null
     },
     {
       "klic": "discord",
-      "stav": "nezjisteno",
-      "popis": null,
+      "stav": "provoz",
+      "popis": "All Systems Operational",
       "incidenty": [],
       "postizene": [],
-      "zkontrolovano": "2026-10-29T01:43:00.649Z",
-      "chyba": "The operation was aborted due to timeout"
+      "zkontrolovano": "2026-10-29T04:03:39.625Z",
+      "chyba": null
     }
   ]
 }
