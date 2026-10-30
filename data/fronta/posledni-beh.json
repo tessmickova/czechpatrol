@@ -1,5 +1,5 @@
 {
-  "kdy": "2026-10-30T04:01:19.412Z",
+  "kdy": "2026-10-30T12:01:19.556Z",
   "zdroje": [
     {
       "klic": "e-sbirka",
@@ -67,11 +67,10 @@
     },
     {
       "klic": "ceps",
-      "ok": false,
-      "stav": null,
+      "ok": true,
+      "stav": 200,
       "pocetPolozek": 0,
-      "chyba": "The operation was aborted due to timeout",
-      "vysledek": "chyba"
+      "vysledek": "ok"
     },
     {
       "klic": "eru",
