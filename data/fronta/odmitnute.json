@@ -1,5 +1,21 @@
 [
   {
+    "id": "k-74ebae7e6700544c",
+    "zachyceno": "2026-10-30T00:11:55.596Z",
+    "publikovano": "2026-10-30T00:01:06.000Z",
+    "zdroj": {
+      "nazev": "Tagesschau (Německo)",
+      "url": "https://www.tagesschau.de/ausland/asien/israel-wahl-ergebnis-102.html",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Wahl in Israel: Alle Stimmen ausgezählt - Patt bleibt bestehen",
+    "shrnuti": "Die Auszählung der Stimmen in Israel bestätigt, dass eine äußerst schwierige Regierungsbildung bevorsteht. Unterdessen ist ein Streit über das Wahlergebnis entbrannt - die Likud-Partei spricht von \"gestohlener Wahl\".",
+    "duvod": "bez-skutku",
+    "kategorie": [],
+    "posouzeni": null
+  },
+  {
     "id": "k-25026dd7632a1eb7",
     "zachyceno": "2026-10-30T00:03:37.154Z",
     "publikovano": "2026-10-30T00:00:00.000Z",
@@ -321,6 +337,22 @@
     "kategorie": [
       "rusko"
     ],
+    "posouzeni": null
+  },
+  {
+    "id": "k-f495ba54dd066bea",
+    "zachyceno": "2026-10-30T00:11:55.408Z",
+    "publikovano": "2026-10-29T23:14:53.000Z",
+    "zdroj": {
+      "nazev": "The Guardian — World",
+      "url": "https://www.theguardian.com/world/2026/oct/29/israeli-leader-netanyahu-accused-of-using-ugly-smear-tactics-to-cling-to-power",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Netanyahu accused of smearing Arab voters to hold on to power",
+    "shrnuti": "Prime minister claims Arab Israeli parties used foreign backing to steal elections, in which his coalition lost its majority Benjamin Netanyahu has been accused of using smear tactics to cling to power, after he claimed that Arab Israeli parties had used foreign backing to “steal” Tuesday’s election",
+    "duvod": "bez-skutku",
+    "kategorie": [],
     "posouzeni": null
   },
   {
@@ -8116,38 +8148,6 @@
     },
     "titulek": "МИД Молдовы осудил российские атаки на Украину и нарушения воздушного пространства страны",
     "shrnuti": "Министерство иностранных дел Молдовы осудило российские атаки на гражданское население и энергетическую инфраструктуру Украины, а также нарушения воздушного пространства Молдовы и Румынии. Об этом ведомство сообщили 29 октября по итогам заседания Форума ОБСЕ по сотрудничеству в области безопасности ",
-    "duvod": "bez-skutku",
-    "kategorie": [],
-    "posouzeni": null
-  },
-  {
-    "id": "k-0904c3bc45fbb44e",
-    "zachyceno": "2026-10-29T20:03:28.799Z",
-    "publikovano": "2026-10-29T17:35:28.000Z",
-    "zdroj": {
-      "nazev": "El Mundo (Španělsko)",
-      "url": "https://www.elmundo.es/economia/2026/10/29/6ae38096e85ece3d5e8b4593.html",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Fátima Báñez, sabia y leal consejera",
-    "shrnuti": "Leer",
-    "duvod": "bez-skutku",
-    "kategorie": [],
-    "posouzeni": null
-  },
-  {
-    "id": "k-947ac9edc4364c1a",
-    "zachyceno": "2026-10-29T20:03:26.852Z",
-    "publikovano": "2026-10-29T17:35:23.000Z",
-    "zdroj": {
-      "nazev": "ORF News (Rakousko)",
-      "url": "https://orf.at/stories/3446533/",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Tote durch Felseinsturz in türkischer Tourismusregion",
-    "shrnuti": "",
     "duvod": "bez-skutku",
     "kategorie": [],
     "posouzeni": null
