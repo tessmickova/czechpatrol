@@ -1,24 +1,18 @@
 {
-  "aktualizovano": "2026-10-29T20:31:49.590Z",
+  "aktualizovano": "2026-10-30T00:03:45.720Z",
   "stavy": [
     {
       "klic": "cloudflare",
       "stav": "vypadek",
       "popis": "Partial System Outage",
-      "incidenty": [
-        {
-          "nazev": "R2 Elevated Latency in Eastern Europe",
-          "odkaz": "https://www.cloudflarestatus.com/incidents/kp28d3kzgft1",
-          "aktualizovano": "2026-10-29T19:57:54.368Z"
-        }
-      ],
+      "incidenty": [],
       "postizene": [
-        "Cloudflare Sites and Services",
-        "Amman, Jordan - (AMM)",
         "Arica, Chile - (ARI)",
-        "Algiers, Algeria - (ALG)"
+        "Algiers, Algeria - (ALG)",
+        "Barcelona, Spain - (BCN)",
+        "Annaba, Algeria - (AAE)"
       ],
-      "zkontrolovano": "2026-10-29T20:31:49.590Z",
+      "zkontrolovano": "2026-10-30T00:03:45.720Z",
       "chyba": null
     },
     {
@@ -27,7 +21,7 @@
       "popis": "All Systems Operational",
       "incidenty": [],
       "postizene": [],
-      "zkontrolovano": "2026-10-29T20:31:49.590Z",
+      "zkontrolovano": "2026-10-30T00:03:45.720Z",
       "chyba": null
     },
     {
@@ -36,7 +30,7 @@
       "popis": "All Systems Operational",
       "incidenty": [],
       "postizene": [],
-      "zkontrolovano": "2026-10-29T20:31:49.590Z",
+      "zkontrolovano": "2026-10-30T00:03:45.720Z",
       "chyba": null
     }
   ]
