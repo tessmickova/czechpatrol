@@ -82,7 +82,22 @@ const pripadu = (n: number) => `${n} ${n === 1 ? "případ" : n >= 2 && n <= 4 ?
   z nedostupných zdrojů se nepotvrzuje (pravidlo č. 4). 23. 9. 2026 by
   jinak web ukázal „trend dolů" jen proto, že sběr stál.
 */
-export function spocitejStav(incidenty: Incident[], ted = Date.now(), posledniSber: string | null = null, signaly: MimoradnySignal[] = []): CelkovyStav {
+/*
+  Ověřování stojí (31. 10. 2026). Patrol od 18. 10. nedokončil jedinou
+  dávku, nic se nezveřejnilo, okno 14 dní se vyprázdnilo a budík ukázal
+  sebejisté „Nízká“ s „beze změny“. Sběr přitom běžel, takže pojistka
+  `sberStoji` mlčela — a ticho vypadalo jako klid. Když zprávy čekají a
+  poslední rozhodnutí o nich je starší než 48 h, trend se nepočítá a web
+  to řekne. `posledniOvereni` = čas posledního rozhodnutí ve frontě,
+  null = nic nečeká nebo to nejde zjistit (pak se nic netvrdí).
+*/
+export const MEZ_OVEROVANI_H = 48;
+const datumKratce = (iso: string) => {
+  const d = new Date(iso);
+  return `${d.getUTCDate()}. ${d.getUTCMonth() + 1}.`;
+};
+
+export function spocitejStav(incidenty: Incident[], ted = Date.now(), posledniSber: string | null = null, signaly: MimoradnySignal[] = [], posledniOvereni: string | null = null): CelkovyStav {
   const platne = incidenty.filter(vstupujeDoHodnoceni);
   const vOkne = platne.filter((i) => kdy(i) > ted - OKNO_DNI * DEN && kdy(i) <= ted);
   const tyden = vOkne.filter((i) => kdy(i) > ted - 7 * DEN);
@@ -98,7 +113,9 @@ export function spocitejStav(incidenty: Incident[], ted = Date.now(), posledniSb
   const s1 = soucet(tyden);
   const s0 = soucet(predtim);
   const sberStoji = !posledniSber || ted - new Date(posledniSber).getTime() > DEN;
-  const trend: CelkovyStav["trend"] = sberStoji
+  const casOvereni = posledniOvereni ? new Date(posledniOvereni).getTime() : NaN;
+  const overovaniStoji = !Number.isNaN(casOvereni) && ted - casOvereni > MEZ_OVEROVANI_H * 3_600_000 ? new Date(casOvereni).toISOString() : null;
+  const trend: CelkovyStav["trend"] = sberStoji || overovaniStoji
     ? null
     : s1 >= s0 * 1.25 && s1 - s0 >= 3 ? "nahoru" : s1 <= s0 * 0.8 && s0 - s1 >= 3 ? "dolu" : "beze-zmeny";
 
@@ -115,14 +132,18 @@ export function spocitejStav(incidenty: Incident[], ted = Date.now(), posledniSb
     ? `Spočteno z ověřených případů za posledních 14 dní (${pripadu(vOkne.length)}) v ${zeme.size} ${zeme.size === 1 ? "zemi" : "zemích"}. Úroveň je jejich střední závažnost z pohledu Česka, jediná událost ji nezvedne. Je to měření, ne předpověď.`
     : "Za posledních 14 dní není žádný ověřený případ. Je to měření, ne předpověď.";
 
+  const stojiVeta = overovaniStoji ? `Ověřování zachycených zpráv stojí od ${datumKratce(overovaniStoji)}, takže úroveň může být nižší, než by odpovídalo. ` : "";
   return {
     aktualizovano: new Date(ted).toISOString(),
     uroven,
     trend,
     trendPopis: sberStoji
       ? "Sběr dat den neproběhl, trend se proto nepočítá."
-      : `Posledních 7 dní: ${pripadu(tyden.length)} (součet závažnosti ${s1}). Týden předtím: ${pripadu(predtim.length)} (${s0}).`,
-    shrnuti: signal ? `${shrnuti} Teď o jeden stupeň výš kvůli mimořádnému signálu, který jsme vyhodnotili sami: ${signal.kratce}.` : shrnuti,
+      : overovaniStoji
+        ? `Ověřování zachycených zpráv stojí od ${datumKratce(overovaniStoji)} — méně případů proto nemusí znamenat klid, trend se nepočítá.`
+        : `Posledních 7 dní: ${pripadu(tyden.length)} (součet závažnosti ${s1}). Týden předtím: ${pripadu(predtim.length)} (${s0}).`,
+    shrnuti: `${stojiVeta}${signal ? `${shrnuti} Teď o jeden stupeň výš kvůli mimořádnému signálu, který jsme vyhodnotili sami: ${signal.kratce}.` : shrnuti}`,
+    overovaniStoji,
     noveSignaly,
     mimoradny: signal
       ? { zakladni, kratce: signal.kratce, proc: signal.proc, mez: signal.mez, zaznam: signal.zaznam ?? null, platiDo: signal.platiDo }
@@ -135,6 +156,24 @@ export function spocitejStav(incidenty: Incident[], ted = Date.now(), posledniSb
   sběr by jinak commitoval stav.json každou hodinu jen kvůli času, a web by
   se kvůli tomu zbytečně přestavoval.
 */
+/*
+  Kdy se naposledy rozhodlo o zachycené zprávě (data/fronta/vyrizene.json).
+  Jen když něco čeká (kandidát ve stavu „ceka“) — prázdná fronta bez
+  rozhodnutí je klid, ne výpadek. Poškozený soubor nesmí shodit přepočet:
+  pak se vrátí null a nic se netvrdí.
+*/
+export function posledniOvereniFronty(koren: string): string | null {
+  try {
+    const kandidati = JSON.parse(fs.readFileSync(path.join(koren, "kandidati.json"), "utf-8")) as { stav?: string }[];
+    if (!Array.isArray(kandidati) || !kandidati.some((k) => (k.stav ?? "ceka") === "ceka")) return null;
+    const vyrizene = JSON.parse(fs.readFileSync(path.join(koren, "fronta", "vyrizene.json"), "utf-8")) as { kdy?: string }[];
+    const casy = (Array.isArray(vyrizene) ? vyrizene : []).map((v) => v.kdy ?? "").filter((k) => !Number.isNaN(new Date(k).getTime())).sort();
+    return casy.at(-1) ?? null;
+  } catch {
+    return null;
+  }
+}
+
 export function aktualizujStav(koren = path.join(process.cwd(), "data"), ted = Date.now()): { zmena: boolean; stav: CelkovyStav } {
   const incidenty = JSON.parse(fs.readFileSync(path.join(koren, "incidenty.json"), "utf-8")) as Incident[];
   const soubor = path.join(koren, "stav.json");
@@ -145,7 +184,7 @@ export function aktualizujStav(koren = path.join(process.cwd(), "data"), ted = D
   /* Poškozený soubor signálů nesmí zastavit přepočet — hodnocení pak jde bez něj. */
   let signaly: MimoradnySignal[] = [];
   try { if (fs.existsSync(souborSignalu)) signaly = (JSON.parse(fs.readFileSync(souborSignalu, "utf-8")) as { signaly?: MimoradnySignal[] }).signaly ?? []; } catch { signaly = []; }
-  const novy = spocitejStav(incidenty, ted, posledniSber, signaly);
+  const novy = spocitejStav(incidenty, ted, posledniSber, signaly, posledniOvereniFronty(koren));
   const bezCasu = (s: CelkovyStav | null) => (s ? JSON.stringify({ ...s, aktualizovano: null }) : "");
   const stari = stary?.aktualizovano ? ted - new Date(stary.aktualizovano).getTime() : Infinity;
   if (bezCasu(stary) === bezCasu(novy) && stari < 20 * 3_600_000) return { zmena: false, stav: stary! };

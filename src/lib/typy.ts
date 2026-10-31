@@ -317,6 +317,8 @@ export interface CelkovyStav {
    * Když platí, `uroven` je o jeden stupeň nad `zakladni` — spočtenou z případů.
    */
   mimoradny?: { zakladni: Uroven; kratce: string; proc: string; mez: string; zaznam: string | null; platiDo: string } | null;
+  /** Od kdy stojí ověřování zachycených zpráv (poslední rozhodnutí starší než 48 h). null = běží. */
+  overovaniStoji?: string | null;
 }
 
 /** Položka data/mimoradne-signaly.json. */

@@ -337,6 +337,17 @@ async function main() {
   try {
     const { zmena, stav } = aktualizujStav();
     if (zmena) console.log(`[sber] celkové hodnocení přepočteno: ${stav.uroven}, trend ${stav.trend ?? "nepočítán"}`);
+    /*
+      Stojící ověřování se hlásí správkyni soukromě (31. 10. 2026): od 18. 10.
+      se nic neověřilo a dva týdny to nikdo nevěděl. Věta je stejná po celou
+      dobu výpadku, takže ji upozorni-spravce pošle nejvýš jednou za 6 hodin.
+    */
+    if (stav.overovaniStoji) {
+      const zprava = `Ověřování zachycených zpráv stojí: poslední rozhodnutí ve frontě je z ${stav.overovaniStoji.slice(0, 16).replace("T", " ")} UTC. Nic nového se nezveřejňuje a hodnocení může být nižší, než by odpovídalo. Zkontrolujte Patrola.`;
+      console.log(`::warning::${zprava}`);
+      fs.mkdirSync(".strazce", { recursive: true });
+      fs.appendFileSync(".strazce/zprava.txt", `${zprava}\n`);
+    }
   } catch (e) {
     console.log(`[sber] přepočet celkového hodnocení selhal: ${e instanceof Error ? e.message : e}`);
   }

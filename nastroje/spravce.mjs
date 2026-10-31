@@ -32,6 +32,7 @@ import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { maUredniZdroj } from "./uredni-zdroj.mjs";
+import { podobnaUdalost } from "./podobna-udalost.mjs";
 import { privilegovanePokyny, textyZaznamu } from "./privilegovane-pokyny.mjs";
 
 const koren = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
@@ -573,14 +574,31 @@ function dobreDolozeny(n) {
   );
 }
 
+/*
+  Odloží návrhy, které jsou nejspíš už zveřejněná událost (31. 10. 2026,
+  nastroje/podobna-udalost.mjs). Zůstanou ve frontě se značkou
+  `moznaDuplicita` pro člověka — nic se nezahazuje (pravidlo č. 4a).
+*/
+function bezDuplicit(kandidati, inc) {
+  const ven = [];
+  const odlozene = [];
+  for (const n of kandidati) {
+    const d = podobnaUdalost(n, [...inc, ...ven]);
+    if (d) { n.moznaDuplicita = d.slug; odlozene.push(n); } else ven.push(n);
+  }
+  for (const n of odlozene) console.log(`  = ${n.slug} odložen: nejspíš tatáž událost jako ${n.moznaDuplicita}`);
+  return { ven, odlozene };
+}
+
 function zverejniAutomaticky() {
   const navrhy = cti("data/navrhy.json", []);
   const inc = cti("data/incidenty.json", []);
   const jiz = new Set(inc.map((x) => x.id));
 
   const slugy = new Set(inc.map((x) => x.slug));
-  const kZverejneni = navrhy.filter((n) => dobreDolozeny(n) && !jiz.has(n.id) && (n.druh !== "aktualizace" || slugy.has(n.navazujeNa)));
+  const { ven: kZverejneni, odlozene } = bezDuplicit(navrhy.filter((n) => dobreDolozeny(n) && !jiz.has(n.id) && (n.druh !== "aktualizace" || slugy.has(n.navazujeNa))), inc);
   if (!kZverejneni.length) {
+    if (odlozene.length) fs.writeFileSync(path.join(koren, "data/navrhy.json"), `${JSON.stringify(navrhy, null, 2)}\n`);
     console.log(`Nic dobře doloženého k zveřejnění. Ve frontě zůstává ${navrhy.length}.`);
     return;
   }
@@ -663,12 +681,13 @@ function zverejniNeoverene() {
 
   /* Aktualizace bez existujícího případu shodí kontrolu dat (25. 9. 2026) — zůstane ve frontě, dokud ji člověk nenaváže. */
   const slugy = new Set(inc.map((x) => x.slug));
-  const kZverejneni = navrhy.filter((n) =>
+  const { ven: kZverejneni, odlozene } = bezDuplicit(navrhy.filter((n) =>
     (n.kam ?? "zaznam") === "zaznam" && !jiz.has(n.id) && (n.fakta ?? []).length > 0 &&
     nezavisleRedakce(n.zdroje) >= 2 && !maUredniZdroj(n.zdroje ?? []) && valecneRelevantni(n) &&
     privilegovanePokyny(textyZaznamu(n)).length === 0 &&
-    (n.druh !== "aktualizace" || slugy.has(n.navazujeNa)));
+    (n.druh !== "aktualizace" || slugy.has(n.navazujeNa))), inc);
   if (!kZverejneni.length) {
+    if (odlozene.length) fs.writeFileSync(path.join(koren, "data/navrhy.json"), `${JSON.stringify(navrhy, null, 2)}\n`);
     console.log("Nic válečně relevantního k zveřejnění jako neověřené.");
     return;
   }

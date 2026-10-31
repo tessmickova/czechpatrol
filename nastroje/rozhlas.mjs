@@ -492,12 +492,24 @@ export function sestavZpravu(i, { aktualizace = false, souhrn = false, faktu = 1
   „MIMOŘÁDNÁ ZPRÁVA“ by ten titulek jen zesílila. Tady je nahoře to, co se
   opravdu stalo, a hned pod tím, co z toho neplyne.
 */
-export function sestavVyjasneni(i, nadpis) {
+/*
+  Nadpis ruční mimořádné zprávy s datem události (31. 10. 2026). Krátká
+  zpráva datum neměla, takže zpráva o čtyři týdny starém varování by
+  v kanálu vypadala jako dnešní. Událost starší než den proto nese datum
+  v závorce, stejně jako běžná zpráva o záznamu.
+*/
+export function nadpisMimoradne(i, nadpis, ted = Date.now()) {
+  const text = esc(nadpis || i.kratkyTitulek || i.titulek);
+  const dni = stariUdalostiDni(i, ted);
+  return dni !== null && dni >= 1 && i.datumUdalosti ? `${text} (${datumCz(i.datumUdalosti)})` : text;
+}
+
+export function sestavVyjasneni(i, nadpis, ted = Date.now()) {
   const fakta = (i.fakta ?? []).slice(0, 3).map((f) => `• ${esc(f)}`);
   return [
     radekZavaznosti(i),
     "ℹ️ <b>Uvedení na pravou míru</b>",
-    `<b>${esc(nadpis || i.kratkyTitulek || i.titulek)}</b>`,
+    `<b>${nadpisMimoradne(i, nadpis, ted)}</b>`,
     "",
     ...fakta,
     "",
@@ -545,13 +557,13 @@ export function sestavMimoradnou(i) {
   formátu“). Nadpis, nejvýš dvě doložená fakta, co nevíme a odkaz. Bez
   hodnocení, bez legendy — podrobnosti a zdroje jsou na webu.
 */
-export function sestavKratkouMimoradnou(i, nadpis, dalsi = []) {
+export function sestavKratkouMimoradnou(i, nadpis, dalsi = [], ted = Date.now()) {
   const uredne = i.lidskyOvereno || i.overeni === "automaticke";
   const fakta = (i.fakta ?? []).slice(0, 2).map((f) => `• ${esc(zkrat(String(f), 260))}`);
   const nevime = (i.neznameho ?? [])[1] ?? (i.neznameho ?? [])[0];
   return [
     radekZavaznosti(i),
-    `❗ <b>${esc(nadpis || i.kratkyTitulek || i.titulek)}</b>`,
+    `❗ <b>${nadpisMimoradne(i, nadpis, ted)}</b>`,
     ...(uredne ? [] : ["<i>Úředně neověřeno — vychází ze shodných zpráv více médií.</i>"]),
     ...fakta,
     ...(nevime ? [`<i>${esc(zkrat(String(nevime), 200))}</i>`] : []),
@@ -1692,7 +1704,7 @@ async function main() {
   /* 0a. mimořádné zprávy z fronty v datech — před vším ostatním kromě výstrahy. */
   if (rezim === "okamzite" && !prvniBeh) {
     for (const { f, i } of vyberMimoradne(ctiFrontuMimoradnych(), zaznamy, stav)) {
-      const text = f.styl === "vyjasneni" ? sestavVyjasneni(i, f.nadpis) : f.styl === "kratka" ? sestavKratkouMimoradnou(i, f.nadpis, (f.dalsi ?? []).map((sl) => zaznamy.find((z) => z.slug === sl)).filter((z) => z && overeny(z))) : sestavMimoradnou(i);
+      const text = f.styl === "vyjasneni" ? sestavVyjasneni(i, f.nadpis, ted) : f.styl === "kratka" ? sestavKratkouMimoradnou(i, f.nadpis, (f.dalsi ?? []).map((sl) => zaznamy.find((z) => z.slug === sl)).filter((z) => z && overeny(z)), ted) : sestavMimoradnou(i);
       let ok = true, messageId = null;
       for (const [n, dil] of rozdelZpravu(text).entries()) {
         const v = await posli(dil, { nahled: n === 0 });

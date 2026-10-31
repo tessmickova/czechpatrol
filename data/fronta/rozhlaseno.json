@@ -412,6 +412,11 @@
       "kdy": "2026-10-30T18:30:57.975Z",
       "zaznamu": 0,
       "messageId": 64
+    },
+    "2026-10-31-rano": {
+      "kdy": "2026-10-31T06:30:55.397Z",
+      "zaznamu": 0,
+      "neodeslan": "nic od 7/10"
     }
   },
   "navrhy": {
@@ -1115,6 +1120,12 @@
       "kdy": "2026-10-18T17:30:28.660Z",
       "historie": 2,
       "prehled": "2026-10-18-vecer"
+    },
+    "i-2026-10-02-hur-varovani-starlink": {
+      "kdy": "2026-10-31T08:14:02.030Z",
+      "historie": 2,
+      "cesta": "hned",
+      "messageId": 65
     }
   },
   "snimky": {
@@ -1153,6 +1164,12 @@
       "slug": "zelenskyj-putin-bez-pravidel-utoku-2026",
       "styl": "kratka",
       "messageId": 61
+    },
+    "i-2026-10-02-hur-varovani-starlink": {
+      "kdy": "2026-10-31T08:14:02.030Z",
+      "slug": "hur-varovani-ruske-operace-eu-nato-starlink-2026",
+      "styl": "kratka",
+      "messageId": 65
     }
   },
   "kyber": {

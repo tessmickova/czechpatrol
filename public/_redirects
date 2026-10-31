@@ -39,3 +39,8 @@
 # Opravy dat jen ve správě.
 /opravy/  /sprava/opravy/  301
 /opravy   /sprava/opravy/  301
+# Sloučené dvojité záznamy (31. 10. 2026)
+/incident/pl-starlink-wola-krobowska-2026-09-23/  /incident/pl-240a0f841d/  301
+/incident/pl-starlink-wola-krobowska-2026-09-23   /incident/pl-240a0f841d/  301
+/incident/lv-ae87e10e80/  /incident/lotyssko-poskozena-ostraha-hranice-zari-2026/  301
+/incident/lv-ae87e10e80   /incident/lotyssko-poskozena-ostraha-hranice-zari-2026/  301

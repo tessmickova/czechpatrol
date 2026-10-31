@@ -1,5 +1,21 @@
 [
   {
+    "id": "o-2026-10-31-dvakrat-lv-ae87e10e80",
+    "datum": "2026-10-31",
+    "tykaSe": "lotyssko-poskozena-ostraha-hranice-zari-2026",
+    "druh": "oprava-dat",
+    "co": "Událost byla zveřejněna dvakrát (lotyssko-poskozena-ostraha-hranice-zari-2026 a lv-ae87e10e80). Záznamy jsou sloučené pod lotyssko-poskozena-ostraha-hranice-zari-2026, druhá adresa na něj přesměrovává.",
+    "proc": "Automat 24. 9. zveřejnil tutéž událost dvakrát, protože porovnával jen identifikátor návrhu. Oba záznamy vstupovaly do počtů, takže se 24. 9. případ v Lotyšsku počítal dvakrát, a do kanálu odešly dvě zprávy. Zveřejnění teď před zápisem hledá stejnou událost podle země, data a titulku."
+  },
+  {
+    "id": "o-2026-10-31-dvakrat-pl-starlink-wola-krobowska-2026-09-23",
+    "datum": "2026-10-31",
+    "tykaSe": "pl-240a0f841d",
+    "druh": "oprava-dat",
+    "co": "Událost byla zveřejněna dvakrát (pl-240a0f841d a pl-starlink-wola-krobowska-2026-09-23). Záznamy jsou sloučené pod pl-240a0f841d, druhá adresa na něj přesměrovává.",
+    "proc": "Automat 24. 9. zveřejnil tutéž událost dvakrát z různých redakcí, protože porovnával jen identifikátor návrhu. Obě verze byly neověřené úředně, do počtů nevstupovaly. Zveřejnění teď před zápisem hledá stejnou událost podle země, data a titulku."
+  },
+  {
     "id": "o-2026-09-20-stazeno-ro-8097dca796",
     "datum": "2026-09-20",
     "tykaSe": "ro-8097dca796",

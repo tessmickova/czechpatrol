@@ -67,3 +67,34 @@ describe("mimořádný signál redakce", () => {
     expect(spocitejStav(r, TED, beh, [signal(1, 10)]).uroven).toBe("R3");
   });
 });
+
+describe("ověřování stojí (31. 10. 2026)", () => {
+  it("poslední rozhodnutí starší než 48 h: trend se nepočítá a web to řekne", () => {
+    const stare = new Date(TED - 5 * 864e5).toISOString();
+    const s = spocitejStav([], TED, beh, [], stare);
+    expect(s.overovaniStoji).toBe(stare);
+    expect(s.trend).toBeNull();
+    expect(s.trendPopis).toContain("Ověřování zachycených zpráv stojí od 18. 9.");
+    expect(s.shrnuti).toMatch(/^Ověřování zachycených zpráv stojí od 18\. 9\./);
+  });
+  it("čerstvé rozhodnutí nebo nic ve frontě: nic se netvrdí", () => {
+    expect(spocitejStav([], TED, beh, [], new Date(TED - 3_600_000).toISOString()).overovaniStoji).toBeNull();
+    expect(spocitejStav([], TED, beh, [], null).overovaniStoji).toBeNull();
+    expect(spocitejStav([], TED, beh).trend).toBe("beze-zmeny");
+  });
+  it("poslední rozhodnutí se čte z fronty, jen když něco čeká", async () => {
+    const fs = await import("node:fs");
+    const os = await import("node:os");
+    const path = await import("node:path");
+    const { posledniOvereniFronty } = await import("../sber/hodnoceni");
+    const dir = fs.mkdtempSync(path.join(os.tmpdir(), "hodnoceni-"));
+    fs.mkdirSync(path.join(dir, "fronta"));
+    fs.writeFileSync(path.join(dir, "fronta", "vyrizene.json"), JSON.stringify([{ kdy: "2026-10-18T16:46:09Z" }, { kdy: "2026-10-17T10:00:00Z" }, { kdy: "nesmysl" }]));
+    fs.writeFileSync(path.join(dir, "kandidati.json"), JSON.stringify([{ stav: "ceka" }]));
+    expect(posledniOvereniFronty(dir)).toBe("2026-10-18T16:46:09Z");
+    fs.writeFileSync(path.join(dir, "kandidati.json"), JSON.stringify([]));
+    expect(posledniOvereniFronty(dir)).toBeNull();
+    fs.writeFileSync(path.join(dir, "kandidati.json"), "{rozbité");
+    expect(posledniOvereniFronty(dir)).toBeNull();
+  });
+});
