@@ -988,7 +988,7 @@ describe("mimořádné zprávy z fronty", () => {
   it("vyjasnění: nadpis, fakta, co z toho plyne pro Česko, odkaz", () => {
     const t = sestavVyjasneni(i, "Není to mobilizace");
     expect(t).toContain("Uvedení na pravou míru");
-    expect(t).toContain("<b>Není to mobilizace</b>");
+    expect(t).toContain("<b>Není to mobilizace (1. 9. 2026)</b>");
     expect(t).toContain("• Dekret nikoho nepovolává.");
     expect(t).toContain("https://czechpatrol.cz/incident/r/");
     expect(t).not.toContain("MIMOŘÁDNÁ");
@@ -1000,7 +1000,19 @@ describe("krátká mimořádná zpráva", () => {
     const { sestavKratkouMimoradnou } = await import("../nastroje/rozhlas.mjs");
     const i = zaznam({ druh: "reakce", puvodce: undefined, kodZeme: "RU", zeme: "Rusko", fakta: ["A.", "B.", "C."], neznameho: ["X.", "Y."] });
     const t = sestavKratkouMimoradnou(i, "Nadpis");
-    expect(t.split("\n")).toEqual(["🟠 Závažnost: 7 z 10 · vysoká", "❗ <b>Nadpis</b>", "• A.", "• B.", "<i>Y.</i>", "Pro Česko z toho neplyne žádné nové úřední opatření.", "Podrobnosti a zdroje: https://czechpatrol.cz/incident/x/"]);
+    expect(t.split("\n")).toEqual(["🟠 Závažnost: 7 z 10 · vysoká", "❗ <b>Nadpis (1. 9. 2026)</b>", "• A.", "• B.", "<i>Y.</i>", "Pro Česko z toho neplyne žádné nové úřední opatření.", "Podrobnosti a zdroje: https://czechpatrol.cz/incident/x/"]);
+  });
+});
+
+describe("ruční mimořádná nese datum starší události (31. 10. 2026)", () => {
+  it("dnešní bez data, starší než den s datem v nadpisu; platí i pro uvedení na pravou míru", async () => {
+    const { sestavKratkouMimoradnou, sestavVyjasneni } = await import("../nastroje/rozhlas.mjs");
+    const i = zaznam({ druh: "reakce", puvodce: undefined, datumUdalosti: "2026-10-02T00:00:00Z", fakta: ["A."], neznameho: ["X."] });
+    const ted = new Date("2026-10-31T09:00:00Z").getTime();
+    expect(sestavKratkouMimoradnou(i, "Nadpis", [], ted)).toContain("❗ <b>Nadpis (2. 10. 2026)</b>");
+    expect(sestavVyjasneni(i, "Nadpis", ted)).toContain("<b>Nadpis (2. 10. 2026)</b>");
+    const dnes = new Date("2026-10-02T15:00:00Z").getTime();
+    expect(sestavKratkouMimoradnou(i, "Nadpis", [], dnes)).toContain("❗ <b>Nadpis</b>");
   });
 });
 

@@ -13629,6 +13629,103 @@
     "lidskyOvereno": true
   },
   {
+    "id": "i-2026-10-02-hur-varovani-starlink",
+    "slug": "hur-varovani-ruske-operace-eu-nato-starlink-2026",
+    "titulek": "Ukrajinská vojenská rozvědka HUR: ruské služby dostaly za úkol zesílit činnost v EU a NATO, mezi možnými cíli jmenuje stanice Starlink",
+    "kratkyTitulek": "Ukrajinská rozvědka: ruské služby mají zesílit činnost v EU a NATO",
+    "zeme": "Evropa",
+    "kodZeme": "EU",
+    "kategorie": [
+      "hybridni",
+      "sabotaz",
+      "zpravodajske",
+      "infrastruktura"
+    ],
+    "datumUdalosti": "2026-10-02T00:00:00Z",
+    "datumZjisteni": "2026-10-02T00:00:00Z",
+    "aktualizovano": "2026-10-31T10:00:00Z",
+    "zavaznost": "Y2",
+    "jistota": "stredni",
+    "stav": "probiha",
+    "atribuce": "neznama",
+    "puvodce": null,
+    "druh": "reakce",
+    "fakta": [
+      "Ukrajinská vojenská rozvědka HUR 2. 10. 2026 uvedla, že ruské tajné služby dostaly za úkol zesílit činnost na území států EU a NATO. Podle HUR o tom varovala partnery.",
+      "Jako pravděpodobné cíle HUR jmenuje vojenské objekty, kritickou infrastrukturu, komunikační systémy a přijímací stanice Starlinku v Evropě, které využívá ukrajinská armáda.",
+      "Provádět to mají podle HUR agenti, které v Evropě naverbovaly ruské služby GRU a FSB.",
+      "Varování přišlo něco přes týden po požáru pozemní stanice Starlinku ve Wole Krobowské u Varšavy, který polské úřady prověřují jako podezření ze sabotáže."
+    ],
+    "neznameho": [
+      "Konkrétní zemi, místo ani termín HUR podle zpráv nejmenovala.",
+      "Obsah poznatku HUR nikdo nezávisle nepotvrdil a HUR nezveřejnila, z čeho vychází."
+    ],
+    "vyznam": "",
+    "eskalacniSpousteče": [],
+    "deeskalacniSignaly": [],
+    "zdroje": [
+      {
+        "nazev": "LB.ua — ГУР: спецслужби РФ готують гібридні операції в ЄС і НАТО",
+        "url": "https://lb.ua/world/2026/10/02/770684_gur_rosiyski_spetssluzhbi.html",
+        "typ": "media",
+        "publikovano": "2026-10-02T00:00:00Z",
+        "primarni": false,
+        "jazyk": "uk"
+      },
+      {
+        "nazev": "LIGA.net — They may strike Starlink: HUR warns the West of Russian plans",
+        "url": "https://news.liga.net/en/politics/news/they-may-strike-starlink-hur-warns-the-west-of-russian-plans",
+        "typ": "media",
+        "publikovano": "2026-10-02T00:00:00Z",
+        "primarni": false,
+        "jazyk": "en"
+      },
+      {
+        "nazev": "TVP World — Kyiv warns Russia has ordered spies to ‘step up’ sabotage across EU",
+        "url": "https://tvpworld.com/95721433/russian-spies-told-to-step-up-sabotage-across-eu-nato-ukraines-hur",
+        "typ": "media",
+        "publikovano": "2026-10-02T00:00:00Z",
+        "primarni": false,
+        "jazyk": "en"
+      },
+      {
+        "nazev": "UNITED24 Media — Russian Agents Could Target Military Sites and Starlink Across Europe, HUR Warns",
+        "url": "https://united24media.com/world/russia-plans-sabotage-operations-across-europe-ukraines-hur-warns-23065",
+        "typ": "media",
+        "publikovano": "2026-10-02T00:00:00Z",
+        "primarni": false,
+        "jazyk": "en"
+      }
+    ],
+    "souvisejici": [
+      {
+        "incidentId": "i-2026-09-23-pl-starlink-wola-krobowska",
+        "potvrzena": false,
+        "popis": "Požár pozemní stanice Starlinku v Polsku 23. 9."
+      },
+      {
+        "incidentId": "i-2026-10-18-a97340baf7",
+        "potvrzena": false,
+        "popis": "Později: pokus o žhářský útok na sklad vybavení Starlink v Litvě (18. 10.)."
+      }
+    ],
+    "historie": [
+      {
+        "kdy": "2026-10-02T00:00:00Z",
+        "text": "HUR zveřejnila varování.",
+        "novySignal": true
+      },
+      {
+        "kdy": "2026-10-31T10:00:00Z",
+        "text": "Doplněno na pokyn provozovatelky.",
+        "novySignal": false
+      }
+    ],
+    "novy": true,
+    "aiZpracovano": true,
+    "lidskyOvereno": true
+  },
+  {
     "id": "i-2026-10-02-leipzig-organizator",
     "slug": "leipzig-organizator-gru-2026",
     "titulek": "Leipzig/Halle: The Telegraph a Welt am Sonntag jmenují podezřelého organizátora útoku a spojují ho s ruskou vojenskou rozvědkou",
