@@ -10537,92 +10537,6 @@
     "aiZpracovano": true,
     "lidskyOvereno": false,
     "archivniZaznam": false,
-    "id": "i-2026-09-23-pl-starlink-wola-krobowska",
-    "slug": "pl-starlink-wola-krobowska-2026-09-23",
-    "titulek": "Polsko: požár v pozemní stanici Starlinku ve Wole Krobowské u Varšavy; vicepremiér Gawkowski mluví o sabotáži a prvku hybridní války, služba zůstala v provozu",
-    "kratkyTitulek": "Polsko: požár ve stanici Starlinku u Varšavy, vláda mluví o sabotáži",
-    "zeme": "Polsko",
-    "kodZeme": "PL",
-    "kategorie": [
-      "sabotaz",
-      "infrastruktura",
-      "hybridni"
-    ],
-    "datumUdalosti": "2026-09-23T00:00:00Z",
-    "datumZjisteni": "2026-09-24T09:45:00Z",
-    "zavaznost": "Y1",
-    "jistota": "stredni",
-    "druh": "pripad",
-    "fakta": [
-      "Podle Novinky.cz (ČTK, s odvoláním na Reuters) vypukl ve středu 23. 9. 2026 večer po 21. hodině požár v pozemní stanici satelitní služby Starlink v obci Wola Krobowska zhruba 40 km jihozápadně od centra Varšavy; zasažen byl rozvaděč a generátor u napájecích zařízení. Operátorem stanice je polský státní podnik Exatel.",
-      "Podle Euronews a Notes from Poland označil polský vicepremiér a ministr digitalizace Krzysztof Gawkowski ve čtvrtek požár za sabotáž s cílem vyřadit stanici z provozu a narušit připojení institucí včetně ukrajinské armády; podle něj „mnohé nasvědčuje“, že jde o další prvek hybridní války, a modus operandi je podle něj „zjevně ruský“.",
-      "Podle Euronews a Novinky.cz stanice zůstala v provozu; vyšetřování pokračuje."
-    ],
-    "neznameho": [
-      "Kdo požár založil. Označení za sabotáž a odkaz na Rusko je hodnocení ministra; polská policie ani prokuratura zatím podle dostupných zdrojů nikoho neobvinila.",
-      "Rozsah výpadku spojení, pokud nějaký byl; zdroje mluví jen o cíli útoku."
-    ],
-    "zdroje": [
-      {
-        "nazev": "Euronews — Fire at Starlink station in central Poland was 'sabotage,' digital affairs minister says",
-        "url": "https://www.euronews.com/2026/09/24/fire-at-starlink-station-in-central-poland-was-sabotage-digital-affairs-minister-says",
-        "typ": "media",
-        "publikovano": "2026-09-24T09:29:36Z",
-        "primarni": false,
-        "jazyk": "en"
-      },
-      {
-        "nazev": "Novinky.cz (ČTK) — Požár ve stanici Starlinku u Varšavy mají polské úřady za sabotáž",
-        "url": "https://www.novinky.cz/clanek/zahranicni-evropa-pozar-ve-stanici-starlinku-u-varsavy-maji-polske-urady-za-sabotaz-40599293",
-        "typ": "media",
-        "publikovano": "2026-09-24T09:26:50Z",
-        "primarni": false,
-        "jazyk": "cs"
-      },
-      {
-        "nazev": "Notes from Poland — Starlink ground station in Poland hit by fire in suspected arson attack",
-        "url": "https://notesfrompoland.com/2026/09/24/starlink-ground-station-in-poland-hit-by-fire-in-suspected-arson-attack/",
-        "typ": "media",
-        "publikovano": "2026-09-24T09:21:37Z",
-        "primarni": false,
-        "jazyk": "en"
-      }
-    ],
-    "historie": [
-      {
-        "kdy": "2026-09-24T09:45:00Z",
-        "text": "Zachyceno automatickým sběrem ze tří redakcí; čeká na úřední zdroj (polská policie, prokuratura nebo ministerstvo digitalizace).",
-        "novySignal": true
-      },
-      {
-        "kdy": "2026-09-24T09:49:46.832Z",
-        "text": "Zveřejněno jako neověřené úředně: dvě nezávislé redakce, úřad zatím nepotvrdil.",
-        "novySignal": false
-      }
-    ],
-    "zapocitanoTyden": "2026-09-23",
-    "dopadNaCr": {
-      "stav": "zadny",
-      "procRelevantni": "Útok na komunikační infrastrukturu v sousední zemi, kterou vláda označuje za prvek hybridní války.",
-      "dopad": "Pro lidi v Česku dnes z události neplyne žádné omezení.",
-      "sledujeme": "Výsledek vyšetřování a případná opatření u obdobných zařízení v Česku.",
-      "overeno": "2026-09-24"
-    },
-    "overeni": "neovereno"
-  },
-  {
-    "aktualizovano": "2026-09-24T09:49:46.832Z",
-    "stav": "neuvedeno",
-    "atribuce": "neznama",
-    "puvodce": "neznamy",
-    "vyznam": "",
-    "eskalacniSpousteče": [],
-    "deeskalacniSignaly": [],
-    "souvisejici": [],
-    "novy": true,
-    "aiZpracovano": true,
-    "lidskyOvereno": false,
-    "archivniZaznam": false,
     "id": "i-2026-09-24-ro-dron-suceava",
     "slug": "ro-dron-suceava-2026-09-24",
     "titulek": "Rumunsko: dron ráno vstoupil do vzdušného prostoru z Ukrajiny a zřítil se v župě Suceava; vzlétly dvě F-16, výuka ve čtyřech obcích odložena",
@@ -10873,7 +10787,7 @@
     ],
     "datumUdalosti": "2026-09-23T00:00:00Z",
     "datumZjisteni": "2026-09-24T00:00:00Z",
-    "aktualizovano": "2026-09-24T13:01:51.604Z",
+    "aktualizovano": "2026-10-31T10:30:00Z",
     "zavaznost": "O1",
     "jistota": "stredni",
     "stav": "probiha",
@@ -10919,6 +10833,30 @@
         "publikovano": "2026-09-24T00:00:00Z",
         "primarni": false,
         "jazyk": "pl"
+      },
+      {
+        "nazev": "Euronews — Fire at Starlink station in central Poland was 'sabotage,' digital affairs minister says",
+        "url": "https://www.euronews.com/2026/09/24/fire-at-starlink-station-in-central-poland-was-sabotage-digital-affairs-minister-says",
+        "typ": "media",
+        "publikovano": "2026-09-24T09:29:36Z",
+        "primarni": false,
+        "jazyk": "en"
+      },
+      {
+        "nazev": "Novinky.cz (ČTK) — Požár ve stanici Starlinku u Varšavy mají polské úřady za sabotáž",
+        "url": "https://www.novinky.cz/clanek/zahranicni-evropa-pozar-ve-stanici-starlinku-u-varsavy-maji-polske-urady-za-sabotaz-40599293",
+        "typ": "media",
+        "publikovano": "2026-09-24T09:26:50Z",
+        "primarni": false,
+        "jazyk": "cs"
+      },
+      {
+        "nazev": "Notes from Poland — Starlink ground station in Poland hit by fire in suspected arson attack",
+        "url": "https://notesfrompoland.com/2026/09/24/starlink-ground-station-in-poland-hit-by-fire-in-suspected-arson-attack/",
+        "typ": "media",
+        "publikovano": "2026-09-24T09:21:37Z",
+        "primarni": false,
+        "jazyk": "en"
       }
     ],
     "souvisejici": [],
@@ -10931,6 +10869,11 @@
       {
         "kdy": "2026-09-24T13:01:51.604Z",
         "text": "Zveřejněno jako neověřené úředně: dvě nezávislé redakce, úřad zatím nepotvrdil.",
+        "novySignal": false
+      },
+      {
+        "kdy": "2026-10-31T10:30:00Z",
+        "text": "Sloučeno se záznamem pl-starlink-wola-krobowska-2026-09-23: stejná událost byla zveřejněna dvakrát. Zdroje převzaty.",
         "novySignal": false
       }
     ],
@@ -11702,7 +11645,7 @@
     ],
     "datumUdalosti": "2026-09-24T00:00:00Z",
     "datumZjisteni": "2026-09-24T00:00:00Z",
-    "aktualizovano": "2026-09-28T00:00:00Z",
+    "aktualizovano": "2026-10-31T10:30:00Z",
     "zavaznost": "Y2",
     "jistota": "vysoka",
     "stav": "neuvedeno",
@@ -11746,6 +11689,14 @@
         "publikovano": "2026-09-24T00:00:00Z",
         "primarni": false,
         "jazyk": "en"
+      },
+      {
+        "nazev": "Český rozhlas — Poničení kabelů či kamerového systému. Lotyšští pohraniční poukazují na škody na hranici",
+        "url": "https://www.irozhlas.cz/zpravy-svet/poniceni-kabelu-ci-kameroveho-systemu-lotyssti-pohranicni-poukazuji-na-skody-na_2609281640_vdv",
+        "typ": "media",
+        "publikovano": "2026-09-28T00:00:00Z",
+        "primarni": false,
+        "jazyk": "cs"
       }
     ],
     "souvisejici": [],
@@ -11758,6 +11709,11 @@
       {
         "kdy": "2026-09-28T00:00:00Z",
         "text": "Zapsáno podle úředního zdroje a dvou redakcí; podnět byl příspěvek na sociální síti, ten se jako zdroj neuvádí. Zveřejněno cestou dvou nezávislých zdrojů, z toho úředního.",
+        "novySignal": false
+      },
+      {
+        "kdy": "2026-10-31T10:30:00Z",
+        "text": "Sloučeno se záznamem lv-ae87e10e80: stejná událost byla zveřejněna dvakrát. Zdroje převzaty.",
         "novySignal": false
       }
     ],
@@ -11840,77 +11796,6 @@
     "lidskyOvereno": false,
     "archivniZaznam": false,
     "overeni": "neovereno"
-  },
-  {
-    "id": "i-2026-09-24-ae87e10e80",
-    "slug": "lv-ae87e10e80",
-    "titulek": "Lotyšsko: pohraniční stráž hlásí úmyslně přeřezané kabely a sabotované rozvaděče kamerového systému na východní hranici s Ruskem a Běloruskem",
-    "kratkyTitulek": "Lotyšsko: pohraniční stráž hlásí úmyslně přeřezané kabely a sabotované rozvaděče kamerového systému na východní hranici s Ruskem a Běloruskem",
-    "zeme": "Lotyšsko",
-    "kodZeme": "LV",
-    "kategorie": [
-      "sabotaz",
-      "hranice",
-      "infrastruktura"
-    ],
-    "datumUdalosti": "2026-09-24T00:00:00Z",
-    "datumZjisteni": "2026-09-28T00:00:00Z",
-    "aktualizovano": "2026-09-28T22:28:36.417Z",
-    "zavaznost": "O1",
-    "jistota": "vysoka",
-    "stav": "neuvedeno",
-    "atribuce": "neznama",
-    "puvodce": "neznamy",
-    "druh": "pripad",
-    "fakta": [
-      "Podle lotyšské Státní pohraniční stráže (Valsts robežsardze, zveřejněno 24. 9. 2026) byly na východní hranici s Ruskem a Běloruskem zjištěny úmyslně poškozené kabely a sabotované rozvaděče kamerového systému, budovaného v rámci projektu automatizovaného sledování hranice.",
-      "Podle přednosty pohraniční stráže generála Guntise Pujātse jde o cílené škody, které přirovnal k metodám podporovaným režimy sousedních zemí.",
-      "Podle pohraniční stráže projekt navzdory sabotážím i přírodním vlivům (vichřice) pokračuje přesně podle plánu, s dokončením plánovaným na konec roku 2026."
-    ],
-    "neznameho": [
-      "Přesný počet a data jednotlivých incidentů stráž nezveřejnila.",
-      "Kdo je za poškozením, stráž nejmenuje konkrétní stát ani osobu; „režimy sousedních zemí“ je její formulace, ne úřední atribuce."
-    ],
-    "vyznam": "",
-    "eskalacniSpousteče": [],
-    "deeskalacniSignaly": [],
-    "zdroje": [
-      {
-        "nazev": "Český rozhlas — Poničení kabelů či kamerového systému. Lotyšští pohraniční poukazují na škody na hranici",
-        "url": "https://www.irozhlas.cz/zpravy-svet/poniceni-kabelu-ci-kameroveho-systemu-lotyssti-pohranicni-poukazuji-na-skody-na_2609281640_vdv",
-        "typ": "media",
-        "publikovano": "2026-09-28T00:00:00Z",
-        "primarni": false,
-        "jazyk": "cs"
-      },
-      {
-        "nazev": "Valsts robežsardze (Státní pohraniční stráž Lotyšska) — Pārgriezti kabeļi, bojāti skapji un dabas stihija neaptur austrumu robežas izbūvi",
-        "url": "https://www.rs.gov.lv/lv/projekts/pargriezti-kabeli-bojati-skapji-un-dabas-stihija-neaptur-austrumu-robezas-izbuvi-darbi-virzas-uz-prieksu",
-        "typ": "primary",
-        "publikovano": "2026-09-24T00:00:00Z",
-        "primarni": true,
-        "jazyk": "lv"
-      }
-    ],
-    "souvisejici": [],
-    "historie": [
-      {
-        "kdy": "2026-09-24T00:00:00Z",
-        "text": "Zachyceno automatickým sběrem, druhý zdroj doložen před zařazením do fronty.",
-        "novySignal": true
-      },
-      {
-        "kdy": "2026-09-28T22:28:36.417Z",
-        "text": "Zveřejněno automaticky: dva nezávislé zdroje, z toho úřední. Bez lidské kontroly.",
-        "novySignal": false
-      }
-    ],
-    "novy": true,
-    "zapocitanoTyden": "2026-09-24",
-    "aiZpracovano": true,
-    "lidskyOvereno": false,
-    "archivniZaznam": false,
-    "overeni": "automaticke"
   },
   {
     "id": "i-2026-09-28-519a22b993",
@@ -13699,7 +13584,7 @@
     ],
     "souvisejici": [
       {
-        "incidentId": "i-2026-09-23-pl-starlink-wola-krobowska",
+        "incidentId": "i-2026-09-23-240a0f841d",
         "potvrzena": false,
         "popis": "Požár pozemní stanice Starlinku v Polsku 23. 9."
       },

@@ -1,9 +1,10 @@
 {
-  "aktualizovano": "2026-10-31T00:03:31.195Z",
+  "aktualizovano": "2026-10-31T08:23:27.408Z",
   "uroven": "G2",
-  "trend": "beze-zmeny",
-  "trendPopis": "Posledních 7 dní: 0 případů (součet závažnosti 0). Týden předtím: 0 případů (0).",
-  "shrnuti": "Za posledních 14 dní není žádný ověřený případ. Je to měření, ne předpověď.",
+  "trend": null,
+  "trendPopis": "Ověřování zachycených zpráv stojí od 18. 10. — méně případů proto nemusí znamenat klid, trend se nepočítá.",
+  "shrnuti": "Ověřování zachycených zpráv stojí od 18. 10., takže úroveň může být nižší, než by odpovídalo. Za posledních 14 dní není žádný ověřený případ. Je to měření, ne předpověď.",
+  "overovaniStoji": "2026-10-18T16:46:09.095Z",
   "noveSignaly": {
     "celkem": 0,
     "kriticke": 0,

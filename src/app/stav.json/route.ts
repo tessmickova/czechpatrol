@@ -35,6 +35,8 @@ export function GET() {
     nazev: stav.uroven ? UROVNE[stav.uroven].nazev : null,
     pasmo: stav.uroven ? UROVNE[stav.uroven].pasmo : null,
     trend: stav.trend,
+    /* Od kdy stojí ověřování zachycených zpráv; když stojí, nízká úroveň neznamená změřený klid. */
+    overovaniStoji: stav.overovaniStoji ?? null,
     /* Úroveň zvednutá mimořádným signálem redakce: spočtená úroveň a důvod, ať to strojový odběratel neplete s měřením. */
     mimoradny: stav.mimoradny ? { zakladni: stav.mimoradny.zakladni, kratce: stav.mimoradny.kratce, platiDo: stav.mimoradny.platiDo } : null,
     hybridni: hybrid.celkem,

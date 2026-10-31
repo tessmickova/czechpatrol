@@ -21,6 +21,7 @@ import { jeJenProjev, jeSankcionovane, nalepkyVTextu } from "./zasady-textu.mjs"
 import { zkontrolujZaznam } from "./bezpecnost-obsahu.mjs";
 import { chybySouhrnu } from "./souhrn-situace.mjs";
 import { klicAdresy } from "./klic-adresy.mjs";
+import { podobnaUdalost } from "./podobna-udalost.mjs";
 
 const koren = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const cti = (f) => JSON.parse(fs.readFileSync(path.join(koren, "data", f), "utf-8"));
@@ -497,6 +498,23 @@ if (fs.existsSync(path.join(koren, "data", "mimoradne-signaly.json"))) {
     if (sg.zaznam && !slugyZaznamu.has(sg.zaznam)) chyby.push(`${kde}: záznam ${sg.zaznam} není zveřejněný`);
     if (!/nemusí být pravdiv|neověřen/i.test(sg.mez)) chyby.push(`${kde}: mez musí říct, že tvrzení nemusí být pravdivé`);
     if (!/není to předpověď/i.test(sg.mez)) chyby.push(`${kde}: mez musí říct, že nejde o předpověď (pravidlo č. 3c)`);
+  }
+}
+
+/*
+  Tatáž událost dvakrát (31. 10. 2026). Polský Starlink i přeřezané kabely
+  v Lotyšsku byly 24. 9. zveřejněné dvakrát a lotyšský případ se počítal
+  dvakrát. Zveřejnění to teď nepustí; tady se hlídá i ruční zápis.
+  Varování, ne chyba: podobnost je odhad a rozhodne člověk.
+*/
+{
+  const pripadyKontrola = incidenty.filter((i) => (i.druh ?? "pripad") === "pripad");
+  const videno = new Set();
+  for (const i of pripadyKontrola) {
+    const d = podobnaUdalost(i, pripadyKontrola.filter((x) => x.id !== i.id));
+    if (!d || videno.has(d.id)) continue;
+    videno.add(i.id);
+    varovani.push(`${i.slug}: nejspíš tatáž událost jako ${d.slug} — sloučit, nebo vést jako aktualizaci`);
   }
 }
 

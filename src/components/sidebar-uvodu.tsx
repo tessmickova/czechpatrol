@@ -6,7 +6,7 @@ import { NAZVY_HROZEB, type PripravitTed as DataPripravy } from "@/lib/priprava"
 import type { Pulz } from "@/lib/pulz";
 import { PASMA, UROVNE } from "@/lib/skala";
 import type { CelkovyStav, Kandidat, Overovana, Uroven } from "@/lib/typy";
-import { casPraha } from "@/lib/cas";
+import { casPraha, datumPraha } from "@/lib/cas";
 import { useT } from "@/lib/i18n";
 import { BUY_ME_A_COFFEE_URL, HEROHERO_URL, KANALY } from "@/config/web";
 import { PIZZA_INDEX, VEN } from "@/config/odkazy-ven";
@@ -92,10 +92,10 @@ export function SidebarUvodu({ stav, cr, crHistoricky, crPocet, obcane, pulz, pr
             <span className="mt-2 line-clamp-3 text-male font-bold leading-snug text-inkoust">{nal.text}</span>
           </span>
         </Napoveda>
-        <Napoveda cele plna popis={overovane.length ? <span className="block">{overovane.slice(0, 3).map((o) => <span key={o.slug} className="mb-1.5 block"><b className="font-semibold text-inkoust">{o.kratce ?? o.coSeHlasi}</b><span className="block">{o.coSeHlasi}</span>{o.coRikajiUrady[0] && <span className="block text-tlum2">Úřady: {o.coRikajiUrady[0]}</span>}</span>)}<span className="block text-tlum2">Nepotvrzené zprávy. Do počtů ani hodnocení nevstupují.</span></span> : <span className="block">Žádná zpráva teď nečeká na posouzení.</span>}>
+        <Napoveda cele plna popis={overovane.length ? <span className="block">{overovane.slice(0, 3).map((o) => <span key={o.slug} className="mb-1.5 block"><b className="font-semibold text-inkoust">{o.kratce ?? o.coSeHlasi}</b><span className="block">{o.coSeHlasi}</span>{o.coRikajiUrady[0] && <span className="block text-tlum2">Úřady: {o.coRikajiUrady[0]}</span>}</span>)}<span className="block text-tlum2">Nepotvrzené zprávy. Do počtů ani hodnocení nevstupují.</span></span> : <span className="block">Sem patří kolující zprávy, které prověřujeme. Teď žádná není.</span>}>
           <span aria-label="Právě ověřujeme" className="flex h-full min-h-[118px] w-full flex-col rounded-[22px] border border-dashed border-jantar/55 bg-jantar/[0.06] px-3.5 py-3 text-left">
             <span className="flex min-h-[34px] items-center gap-2"><IkonaKruh ikona="otaznik" velikost="s" /><span className="nadpis-boxu min-w-0 flex-1 leading-tight">Právě ověřujeme</span><span className="cislice text-tlum2">{overovane.length}</span></span>
-            <span className="mt-2 line-clamp-3 text-male font-bold leading-snug text-inkoust">{overovane[0] ? overovane[0].kratce ?? overovane[0].coSeHlasi : "Nic v hodnocení"}</span>
+            <span className="mt-2 line-clamp-3 text-male font-bold leading-snug text-inkoust">{overovane[0] ? overovane[0].kratce ?? overovane[0].coSeHlasi : "Žádná kolující zpráva"}</span>
           </span>
         </Napoveda>
       </div>
@@ -114,7 +114,8 @@ export function SidebarUvodu({ stav, cr, crHistoricky, crPocet, obcane, pulz, pr
               <p className="mt-0.5 flex items-center gap-1 text-mikro font-semibold text-tlum">
                 {stav.trend === "nahoru" && <><span className="text-stari"><Ikona nazev="nahoru" velikost={11} tah={2.2} /></span>{t("zhoršení za 7 dní")}</>}
                 {stav.trend === "dolu" && !stav.mimoradny && <><span className="text-klid"><Ikona nazev="dolu" velikost={11} tah={2.2} /></span>{t("zlepšení za 7 dní")}</>}
-                {stav.trend === "beze-zmeny" && <span className="text-tlum2">{t("beze změny 7 dní")}</span>}
+                {stav.trend === "beze-zmeny" && <span className="text-tlum2">{t("stejně jako minulý týden")}</span>}
+                {stav.overovaniStoji && <span className="text-jantar">{t("ověřování stojí od")} {datumPraha(stav.overovaniStoji)}</span>}
               </p>
               <div className={`mt-1.5 ${pasmo ? pasmo.text : "text-tlum"}`}><Cara hodnoty={d14} sirka={120} vyska={24} popis={`Případy po dnech za 14 dní: ${d14.join(", ")}`} /></div>
             </div>
