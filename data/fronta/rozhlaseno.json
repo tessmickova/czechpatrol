@@ -417,6 +417,11 @@
       "kdy": "2026-10-31T06:30:55.397Z",
       "zaznamu": 0,
       "neodeslan": "nic od 7/10"
+    },
+    "2026-10-31-vecer": {
+      "kdy": "2026-10-31T18:30:55.239Z",
+      "zaznamu": 1,
+      "messageId": 66
     }
   },
   "navrhy": {
@@ -1064,8 +1069,8 @@
     "i-2026-09-24-lotyssko-hranice-kabely": {
       "cesta": "prehled",
       "kdy": "2026-09-29T21:28:14.382Z",
-      "historie": 2,
-      "prehled": "2026-09-29-vecer"
+      "historie": 3,
+      "prehled": "2026-10-31-vecer"
     },
     "i-2026-09-29-0ec3ee9612": {
       "cesta": "prehled",
