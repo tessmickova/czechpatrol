@@ -1,5 +1,5 @@
 {
-  "aktualizovano": "2026-10-31T16:03:25.513Z",
+  "aktualizovano": "2026-10-31T22:46:04.691Z",
   "stavy": [
     {
       "klic": "cloudflare",
@@ -12,7 +12,7 @@
         "Annaba, Algeria - (AAE)",
         "Baku, Azerbaijan - (GYD)"
       ],
-      "zkontrolovano": "2026-10-31T16:03:25.513Z",
+      "zkontrolovano": "2026-10-31T22:46:04.691Z",
       "chyba": null
     },
     {
@@ -21,22 +21,16 @@
       "popis": "All Systems Operational",
       "incidenty": [],
       "postizene": [],
-      "zkontrolovano": "2026-10-31T16:03:25.513Z",
+      "zkontrolovano": "2026-10-31T22:46:04.691Z",
       "chyba": null
     },
     {
       "klic": "discord",
       "stav": "provoz",
       "popis": "All Systems Operational",
-      "incidenty": [
-        {
-          "nazev": "Issues establishing voice call",
-          "odkaz": "https://stspg.io/pl4x16p74j68",
-          "aktualizovano": "2026-10-31T08:26:29.315-07:00"
-        }
-      ],
+      "incidenty": [],
       "postizene": [],
-      "zkontrolovano": "2026-10-31T16:03:25.513Z",
+      "zkontrolovano": "2026-10-31T22:46:04.691Z",
       "chyba": null
     }
   ]
