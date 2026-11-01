@@ -72,7 +72,6 @@ export function GET() {
       uroven: stav.uroven,
       nazev: stav.uroven ? UROVNE[stav.uroven].nazev : null,
       trend: stav.trend,
-      overovaniStoji: stav.overovaniStoji ?? null,
     },
 
     /*

@@ -12,7 +12,6 @@ import { Tlacitko } from "./ui";
 import { sklon } from "./zeme";
 import { useT } from "@/lib/i18n";
 import { MimoradnySignalPoznamka } from "./mimoradny-signal";
-import { datumPraha } from "@/lib/cas";
 
 /*
   Hlavička přehledu: jedna věta, jeden velký budík, dva malé.
@@ -188,8 +187,6 @@ export function HeroDashboard({
               </p>
             )}
             {stav.trend === "beze-zmeny" && <p className="mt-1.5 text-mikro text-tlum2">{t("stejně jako minulý týden")}</p>}
-            {/* Ověřování stojí (31. 10. 2026): bez téhle řádky by „Nízká“ vypadala jako změřený klid. */}
-            {stav.overovaniStoji && <p className="mt-1.5 text-mikro font-semibold text-jantar">{t("ověřování stojí od")} {datumPraha(stav.overovaniStoji)}</p>}
             {/*
               Číslo „6 z 10" je pryč. Vypadalo jako měření, ale je to jen jinak
               zapsané totéž slovo — a hlavně se dalo číst jako pravděpodobnost

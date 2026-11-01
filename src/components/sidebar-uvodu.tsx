@@ -6,7 +6,7 @@ import { NAZVY_HROZEB, type PripravitTed as DataPripravy } from "@/lib/priprava"
 import type { Pulz } from "@/lib/pulz";
 import { PASMA, UROVNE } from "@/lib/skala";
 import type { CelkovyStav, Kandidat, Overovana, Uroven } from "@/lib/typy";
-import { casPraha, datumPraha } from "@/lib/cas";
+import { casPraha } from "@/lib/cas";
 import { useT } from "@/lib/i18n";
 import { BUY_ME_A_COFFEE_URL, HEROHERO_URL, KANALY } from "@/config/web";
 import { PIZZA_INDEX, VEN } from "@/config/odkazy-ven";
@@ -115,7 +115,6 @@ export function SidebarUvodu({ stav, cr, crHistoricky, crPocet, obcane, pulz, pr
                 {stav.trend === "nahoru" && <><span className="text-stari"><Ikona nazev="nahoru" velikost={11} tah={2.2} /></span>{t("zhoršení za 7 dní")}</>}
                 {stav.trend === "dolu" && !stav.mimoradny && <><span className="text-klid"><Ikona nazev="dolu" velikost={11} tah={2.2} /></span>{t("zlepšení za 7 dní")}</>}
                 {stav.trend === "beze-zmeny" && <span className="text-tlum2">{t("stejně jako minulý týden")}</span>}
-                {stav.overovaniStoji && <span className="text-jantar">{t("ověřování stojí od")} {datumPraha(stav.overovaniStoji)}</span>}
               </p>
               <div className={`mt-1.5 ${pasmo ? pasmo.text : "text-tlum"}`}><Cara hodnoty={d14} sirka={120} vyska={24} popis={`Případy po dnech za 14 dní: ${d14.join(", ")}`} /></div>
             </div>

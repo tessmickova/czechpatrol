@@ -69,13 +69,13 @@ describe("mimořádný signál redakce", () => {
 });
 
 describe("ověřování stojí (31. 10. 2026)", () => {
-  it("poslední rozhodnutí starší než 48 h: trend se nepočítá a web to řekne", () => {
+  it("poslední rozhodnutí starší než 48 h: trend se nepočítá, veřejné texty o tom mlčí", () => {
     const stare = new Date(TED - 5 * 864e5).toISOString();
     const s = spocitejStav([], TED, beh, [], stare);
     expect(s.overovaniStoji).toBe(stare);
     expect(s.trend).toBeNull();
-    expect(s.trendPopis).toContain("Ověřování zachycených zpráv stojí od 18. 9.");
-    expect(s.shrnuti).toMatch(/^Ověřování zachycených zpráv stojí od 18\. 9\./);
+    // Provozní stav na veřejný web nepatří (provozovatelka 1. 11. 2026).
+    expect(`${s.shrnuti} ${s.trendPopis}`).not.toMatch(/ověřování|stojí|Patrol|výpadek/i);
   });
   it("čerstvé rozhodnutí nebo nic ve frontě: nic se netvrdí", () => {
     expect(spocitejStav([], TED, beh, [], new Date(TED - 3_600_000).toISOString()).overovaniStoji).toBeNull();
@@ -96,5 +96,23 @@ describe("ověřování stojí (31. 10. 2026)", () => {
     expect(posledniOvereniFronty(dir)).toBeNull();
     fs.writeFileSync(path.join(dir, "kandidati.json"), "{rozbité");
     expect(posledniOvereniFronty(dir)).toBeNull();
+  });
+});
+
+describe("provozní stav není na veřejném webu (1. 11. 2026)", () => {
+  it("stránky ani veřejné JSON nevypisují overovaniStoji", async () => {
+    const fs = await import("node:fs");
+    const path = await import("node:path");
+    const soubory: string[] = [];
+    const projdi = (d: string) => {
+      for (const p of fs.readdirSync(d, { withFileTypes: true })) {
+        const cesta = path.join(d, p.name);
+        if (p.isDirectory()) projdi(cesta);
+        else if (/\.tsx?$/.test(p.name) && !cesta.endsWith(path.join("lib", "typy.ts"))) soubory.push(cesta);
+      }
+    };
+    projdi(path.join(__dirname, "..", "src"));
+    const kde = soubory.filter((f) => fs.readFileSync(f, "utf-8").includes("overovaniStoji"));
+    expect(kde).toEqual([]);
   });
 });

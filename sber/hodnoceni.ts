@@ -87,15 +87,17 @@ const pripadu = (n: number) => `${n} ${n === 1 ? "případ" : n >= 2 && n <= 4 ?
   dávku, nic se nezveřejnilo, okno 14 dní se vyprázdnilo a budík ukázal
   sebejisté „Nízká“ s „beze změny“. Sběr přitom běžel, takže pojistka
   `sberStoji` mlčela — a ticho vypadalo jako klid. Když zprávy čekají a
-  poslední rozhodnutí o nich je starší než 48 h, trend se nepočítá a web
-  to řekne. `posledniOvereni` = čas posledního rozhodnutí ve frontě,
-  null = nic nečeká nebo to nejde zjistit (pak se nic netvrdí).
+  poslední rozhodnutí o nich je starší než 48 h, trend se nepočítá
+  a správkyně dostane soukromé upozornění (sber/index.ts).
+
+  Na veřejný web se provozní stav NEPÍŠE (provozovatelka 1. 11. 2026:
+  web používá veřejnost i média). `overovaniStoji` je jen interní údaj
+  v data/stav.json; shrnutí ani popis trendu ho nezmiňují a stránky ani
+  veřejné stav.json ho nezobrazují. Hlídá to test.
+  `posledniOvereni` = čas posledního rozhodnutí ve frontě, null = nic
+  nečeká nebo to nejde zjistit (pak se nic netvrdí).
 */
 export const MEZ_OVEROVANI_H = 48;
-const datumKratce = (iso: string) => {
-  const d = new Date(iso);
-  return `${d.getUTCDate()}. ${d.getUTCMonth() + 1}.`;
-};
 
 export function spocitejStav(incidenty: Incident[], ted = Date.now(), posledniSber: string | null = null, signaly: MimoradnySignal[] = [], posledniOvereni: string | null = null): CelkovyStav {
   const platne = incidenty.filter(vstupujeDoHodnoceni);
@@ -132,7 +134,6 @@ export function spocitejStav(incidenty: Incident[], ted = Date.now(), posledniSb
     ? `Spočteno z ověřených případů za posledních 14 dní (${pripadu(vOkne.length)}) v ${zeme.size} ${zeme.size === 1 ? "zemi" : "zemích"}. Úroveň je jejich střední závažnost z pohledu Česka, jediná událost ji nezvedne. Je to měření, ne předpověď.`
     : "Za posledních 14 dní není žádný ověřený případ. Je to měření, ne předpověď.";
 
-  const stojiVeta = overovaniStoji ? `Ověřování zachycených zpráv stojí od ${datumKratce(overovaniStoji)}, takže úroveň může být nižší, než by odpovídalo. ` : "";
   return {
     aktualizovano: new Date(ted).toISOString(),
     uroven,
@@ -140,9 +141,9 @@ export function spocitejStav(incidenty: Incident[], ted = Date.now(), posledniSb
     trendPopis: sberStoji
       ? "Sběr dat den neproběhl, trend se proto nepočítá."
       : overovaniStoji
-        ? `Ověřování zachycených zpráv stojí od ${datumKratce(overovaniStoji)} — méně případů proto nemusí znamenat klid, trend se nepočítá.`
+        ? "Trend se teď nepočítá."
         : `Posledních 7 dní: ${pripadu(tyden.length)} (součet závažnosti ${s1}). Týden předtím: ${pripadu(predtim.length)} (${s0}).`,
-    shrnuti: `${stojiVeta}${signal ? `${shrnuti} Teď o jeden stupeň výš kvůli mimořádnému signálu, který jsme vyhodnotili sami: ${signal.kratce}.` : shrnuti}`,
+    shrnuti: signal ? `${shrnuti} Teď o jeden stupeň výš kvůli mimořádnému signálu, který jsme vyhodnotili sami: ${signal.kratce}.` : shrnuti,
     overovaniStoji,
     noveSignaly,
     mimoradny: signal
