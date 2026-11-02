@@ -42,7 +42,7 @@ import { PripravitTed } from "./pripravit-ted";
 import type { PripravitTed as DataPripravy } from "@/lib/priprava";
 import { Partneri, Sledovat } from "./sledovat";
 import { Aktuality } from "./aktuality";
-import { NaliehaveVUvodu, UrgentniPas } from "./urgentni";
+import { UrgentniPas } from "./urgentni";
 import { TriTemata } from "./tri-temata";
 import { Tlacitko } from "./ui";
 import { useZiveHodiny } from "@/lib/cas-klient";
@@ -582,8 +582,11 @@ export function Dashboard({
             ) : (
               <VetaSituace souhrn={souhrn ?? { veta: null, aktualizovano: null, podklady: [] }} veta={veta} kontrola={pulz?.kdy ?? overeno} ted={tedMs} />
             )}
-            {/* Naléhavé zprávy ze sběru mají přednost před vším ostatním v sloupci (2. 11. 2026). */}
-            <NaliehaveVUvodu kandidati={kandidati} zkontrolovano={overeno} ted={tedMs} />
+            {/*
+              Naléhavé zprávy ze sběru tu jako blok nejsou (2. 11. 2026, provozovatelka:
+              „příliš poplašné a velké“). Jsou v boxu Souhrn situace vpravo — počet
+              a druh, titulky až po rozkliknutí fronty.
+            */}
             {/* Internet v Česku: jeden řádek; rámeček jen při probíhající vlně útoků. */}
             <InternetBanner ted={tedMs} />
             {/* Na mobilu je „Upozornění“ hned pod tím v řadě tlačítek — dvakrát totéž nepotřebujeme. */}

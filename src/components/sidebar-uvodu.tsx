@@ -97,16 +97,16 @@ export function SidebarUvodu({ stav, cr, crHistoricky, crPocet, obcane, pulz, pr
           ) : nal.dodatek && <span className="mb-1.5 block text-inkoust">{nal.dodatek}</span>}
           {pulz && <span className="block text-tlum2">Za 24 h: {pulz.zachyceno24} zachyceno, {pulz.overeno24} ověřeno, {pulz.zdrojuOk} z {pulz.zdrojuCelkem} zdrojů odpovědělo.</span>}{kontrola && <span className="mt-1.5 block text-tlum2">Zdroje čteny {casPraha(kontrola)}.</span>}</span>}>
           {nal.polozky.length ? (
-            /* S naléhavými zprávami je box odkaz do fronty: kliknutí vede k první z nich, titulky jsou vidět už tady. */
-            <Link href={`/udalosti/?tab=cekajici#${nal.polozky[0].id}`} role="status" aria-label="Souhrn situace" className="flex h-full min-h-[118px] w-full flex-col rounded-[22px] border border-akcent/70 bg-akcent/[0.05] px-3.5 py-3 text-left transition-colors hover:border-akcent">
+            /*
+              Odkaz do fronty, klidně: tečka, počet, druhy zpráv. Žádný červený
+              rámeček ani titulky — ty jsou v nápovědě a ve frontě. Je to
+              pořadí k ověření, ne tvrzení, a tak to má i vypadat.
+            */
+            <Link href={`/udalosti/?tab=cekajici#${nal.polozky[0].id}`} role="status" aria-label="Souhrn situace" className="flex h-full min-h-[118px] w-full flex-col rounded-[22px] border border-linka bg-plocha2/40 px-3.5 py-3 text-left transition-colors hover:border-akcent/60">
               <span className="flex min-h-[34px] items-center gap-2"><IkonaKruh ikona="info" velikost="s" /><span className="nadpis-boxu leading-tight">Souhrn situace</span></span>
-              <span className="mt-2 text-male font-bold leading-snug text-inkoust">{nal.text}</span>
-              <span className="mt-1.5 block space-y-0.5">
-                {nal.polozky.slice(0, 3).map((p) => (
-                  <span key={p.id} className="flex items-baseline gap-1.5 text-mikro leading-snug text-tlum"><span aria-hidden className="mt-[5px] h-[5px] w-[5px] shrink-0 rounded-full bg-akcent" /><span className="line-clamp-2">{p.titulek}</span></span>
-                ))}
-              </span>
-              <span className="mt-auto pt-2 text-mikro font-semibold uppercase tracking-[0.05em] text-akcent">Otevřít frontu →</span>
+              <span className="mt-2 flex items-start gap-2 text-male font-bold leading-snug text-inkoust"><span aria-hidden className="mt-[7px] h-[6px] w-[6px] shrink-0 rounded-full bg-akcent" />{nal.text}</span>
+              <span className="mt-1 block text-mikro leading-snug text-tlum">{nal.skupiny.map((g) => `${g.druh}${g.pocet > 1 ? ` (${g.pocet})` : ""}`).join(" · ")}</span>
+              <span className="mt-auto pt-2 text-mikro text-tlum2">otevřít frontu →</span>
             </Link>
           ) : (
             <span role="status" aria-label="Souhrn situace" className={`flex h-full min-h-[118px] w-full flex-col rounded-[22px] border px-3.5 py-3 text-left ${nal.ton === "deje" ? "border-akcent/70 bg-akcent/[0.05]" : "border-linka bg-plocha2/40"}`}>
