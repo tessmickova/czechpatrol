@@ -1,5 +1,7 @@
 "use client";
 
+import { nazevNaliehave } from "@/lib/naliehave";
+
 import Link from "next/link";
 import { Fragment, useCallback, useEffect, useMemo, useState } from "react";
 import { druh, jistotaZobrazena, kdyZjisteno, pachatelPotvrzen, uredniZdroj, type Zaznam } from "@/lib/agregace";
@@ -253,6 +255,23 @@ export function UdalostiKlient({ zaznamy, neprosle, kandidati = [], nepotvrzene 
   }, [zaznamy, neprosle, kandidati, nepotvrzene, f]);
 
   useEffect(() => { setLimit(10); }, [f.zalozka, f.zeme, f.tema, f.obdobi, f.overeni, f.druhy, f.zavaznost]);
+
+  /*
+    Proklik z úvodu: adresa nese kotvu na kandidáta (#k-…). Seznam se
+    vykresluje až po připojení, takže prohlížeč sám kotvu nenajde —
+    posun se udělá tady, až řádek existuje, a rozbalí se.
+  */
+  useEffect(() => {
+    const kotva = typeof window !== "undefined" ? window.location.hash.slice(1) : "";
+    if (!kotva || f.zalozka !== "cekajici") return;
+    const t = window.setTimeout(() => {
+      const el = document.getElementById(kotva);
+      if (!el) return;
+      el.querySelector("details")?.setAttribute("open", "");
+      el.scrollIntoView({ block: "center", behavior: "smooth" });
+    }, 150);
+    return () => window.clearTimeout(t);
+  }, [f.zalozka, kandidati]);
 
   const otevreny = f.detail ? zaznamy.find((z) => z.slug === f.detail) ?? null : null;
   const otevri = (slug: string) => {
@@ -653,6 +672,7 @@ function RadekNepotvrzeneho({ z }: { z: Zaznam }) {
 function RadekKandidata({ k }: { k: Kandidat }) {
   return (
     <RadekSeznamu
+      id={k.id}
       varianta="holy"
       o={{
         datum: k.publikovano ?? k.zachyceno,
@@ -668,7 +688,7 @@ function RadekKandidata({ k }: { k: Kandidat }) {
           */
           k.naliehave
             ? <Odznak key="n" ton="vazne" ikona="sirena">
-                {k.naliehave.druh === "mobilizace-rusko" ? "k okamžité kontrole: mobilizace" : "k okamžité kontrole: krizové vysílání"}
+                k okamžité kontrole: {nazevNaliehave(k.naliehave.druh)}
               </Odznak>
             : null,
           k.klasifikace === "model" ? <span key="m" className="text-tlum2">přeloženo modelem</span> : null,

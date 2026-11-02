@@ -1,3 +1,4 @@
+import type { DruhNaliehave } from "./naliehave";
 // Datový model celého webu.
 //
 // Dvě zásady, na kterých stojí důvěryhodnost projektu:
@@ -456,7 +457,7 @@ export interface Kandidat {
    * spuštěné krizové vysílání. Je to jen pořadí ve frontě: kandidát zůstává
    * neověřený, do počtů nevstupuje a mimořádnou výstrahu nezapíná.
    */
-  naliehave?: { druh: "mobilizace-rusko" | "krizove-vysilani"; proc: string } | null;
+  naliehave?: { druh: DruhNaliehave; proc: string } | null;
   /**
    * Kde kandidát je.
    *

@@ -207,6 +207,17 @@ export async function prihlaseniDokoncit(env: Env, req: Request): Promise<Respon
     throw new ChybaHttp(400, "Přihlášení se nepodařilo ověřit. Zkuste to prosím znovu.");
   }
   if (!v.verified) throw new ChybaHttp(400, "Přihlášení se nepodařilo ověřit.");
+  /*
+    Správce jen s ověřením v zařízení (PIN, otisk, obličej). Pro čtenáře
+    stačí držet passkey — nic cenného za tím není. Za správcem je schválení
+    toho, co web tvrdí, a peníze; ukradené odemčené zařízení nesmí stačit.
+    Rozhoduje odpověď autentikátoru (flag UV), ne nastavení klienta.
+  */
+  const ucet = await env.DB.prepare("SELECT role FROM ucty WHERE id = ? AND smazano IS NULL").bind(pk.ucet_id).first<{ role: Role }>();
+  if (!ucet) throw new ChybaHttp(400, "Účet neexistuje.");
+  if (ucet.role === "admin" && !v.authenticationInfo.userVerified) {
+    throw new ChybaHttp(403, "Správcovský účet vyžaduje ověření v zařízení (PIN, otisk prstu nebo obličej). Zapněte ho u passkey a zkuste to znovu.");
+  }
   await env.DB.prepare("UPDATE passkeys SET pocitadlo = ? WHERE id = ?").bind(v.authenticationInfo.newCounter, pk.id).run();
   const token = await vytvorRelaci(env, pk.ucet_id);
   return json({ token, ucet: await verejnyUcet(env, pk.ucet_id) });

@@ -86,11 +86,37 @@ export function SidebarUvodu({ stav, cr, crHistoricky, crPocet, obcane, pulz, pr
         řádky; tón nese rámeček, ne různé rozložení.
       */}
       <div className="grid grid-cols-2 gap-3">
-        <Napoveda cele plna popis={<span className="block">{nal.dodatek && <span className="mb-1.5 block text-inkoust">{nal.dodatek}</span>}{pulz && <span className="block text-tlum2">Za 24 h: {pulz.zachyceno24} zachyceno, {pulz.overeno24} ověřeno, {pulz.zdrojuOk} z {pulz.zdrojuCelkem} zdrojů odpovědělo.</span>}{kontrola && <span className="mt-1.5 block text-tlum2">Zdroje čteny {casPraha(kontrola)}.</span>}</span>}>
-          <span role="status" aria-label="Souhrn situace" className={`flex h-full min-h-[118px] w-full flex-col rounded-[22px] border px-3.5 py-3 text-left ${nal.ton === "deje" ? "border-akcent/70 bg-akcent/[0.05]" : "border-linka bg-plocha2/40"}`}>
-            <span className="flex min-h-[34px] items-center gap-2"><IkonaKruh ikona="info" velikost="s" /><span className="nadpis-boxu leading-tight">Souhrn situace</span></span>
-            <span className="mt-2 line-clamp-3 text-male font-bold leading-snug text-inkoust">{nal.text}</span>
-          </span>
+        <Napoveda cele plna popis={<span className="block">
+          {nal.polozky.length ? (
+            /* Každá naléhavá zpráva zvlášť, s proklikem do fronty a na zdroj. Je to pořadí ve frontě, ne tvrzení. */
+            <span className="mb-1.5 block space-y-1.5">
+              {nal.polozky.map((p) => (
+                <span key={p.id} className="block">
+                  <Link href={`/udalosti/?tab=cekajici#${p.id}`} className="font-semibold text-inkoust underline decoration-linka underline-offset-4 hover:decoration-akcent">{p.titulek}</Link>
+                  <span className="block text-tlum2">{p.druh} · {p.datum} · <a href={p.url} target="_blank" rel="nofollow noopener noreferrer" className="hover:text-inkoust">{p.zdroj}</a> · neověřeno</span>
+                </span>
+              ))}
+            </span>
+          ) : nal.dodatek && <span className="mb-1.5 block text-inkoust">{nal.dodatek}</span>}
+          {pulz && <span className="block text-tlum2">Za 24 h: {pulz.zachyceno24} zachyceno, {pulz.overeno24} ověřeno, {pulz.zdrojuOk} z {pulz.zdrojuCelkem} zdrojů odpovědělo.</span>}{kontrola && <span className="mt-1.5 block text-tlum2">Zdroje čteny {casPraha(kontrola)}.</span>}</span>}>
+          {nal.polozky.length ? (
+            /* S naléhavými zprávami je box odkaz do fronty: kliknutí vede k první z nich, titulky jsou vidět už tady. */
+            <Link href={`/udalosti/?tab=cekajici#${nal.polozky[0].id}`} role="status" aria-label="Souhrn situace" className="flex h-full min-h-[118px] w-full flex-col rounded-[22px] border border-akcent/70 bg-akcent/[0.05] px-3.5 py-3 text-left transition-colors hover:border-akcent">
+              <span className="flex min-h-[34px] items-center gap-2"><IkonaKruh ikona="info" velikost="s" /><span className="nadpis-boxu leading-tight">Souhrn situace</span></span>
+              <span className="mt-2 text-male font-bold leading-snug text-inkoust">{nal.text}</span>
+              <span className="mt-1.5 block space-y-0.5">
+                {nal.polozky.slice(0, 3).map((p) => (
+                  <span key={p.id} className="flex items-baseline gap-1.5 text-mikro leading-snug text-tlum"><span aria-hidden className="mt-[5px] h-[5px] w-[5px] shrink-0 rounded-full bg-akcent" /><span className="line-clamp-2">{p.titulek}</span></span>
+                ))}
+              </span>
+              <span className="mt-auto pt-2 text-mikro font-semibold uppercase tracking-[0.05em] text-akcent">Otevřít frontu →</span>
+            </Link>
+          ) : (
+            <span role="status" aria-label="Souhrn situace" className={`flex h-full min-h-[118px] w-full flex-col rounded-[22px] border px-3.5 py-3 text-left ${nal.ton === "deje" ? "border-akcent/70 bg-akcent/[0.05]" : "border-linka bg-plocha2/40"}`}>
+              <span className="flex min-h-[34px] items-center gap-2"><IkonaKruh ikona="info" velikost="s" /><span className="nadpis-boxu leading-tight">Souhrn situace</span></span>
+              <span className="mt-2 line-clamp-3 text-male font-bold leading-snug text-inkoust">{nal.text}</span>
+            </span>
+          )}
         </Napoveda>
         <Napoveda cele plna popis={overovane.length ? <span className="block">{overovane.slice(0, 3).map((o) => <span key={o.slug} className="mb-1.5 block"><b className="font-semibold text-inkoust">{o.kratce ?? o.coSeHlasi}</b><span className="block">{o.coSeHlasi}</span>{o.coRikajiUrady[0] && <span className="block text-tlum2">Úřady: {o.coRikajiUrady[0]}</span>}</span>)}<span className="block text-tlum2">Nepotvrzené zprávy. Do počtů ani hodnocení nevstupují.</span></span> : <span className="block">Sem patří kolující zprávy, které prověřujeme. Teď žádná není.</span>}>
           <span aria-label="Právě ověřujeme" className="flex h-full min-h-[118px] w-full flex-col rounded-[22px] border border-dashed border-jantar/55 bg-jantar/[0.06] px-3.5 py-3 text-left">

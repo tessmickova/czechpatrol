@@ -406,6 +406,70 @@ to je přesně poplašná zpráva podle Pravidla č. 0.
 Štítek **„nové“** u záznamu se počítá v prohlížeči a drží dvanáct hodin od
 zjištění. Kdyby se počítal při sestavení, visel by i na dva dny starém záznamu.
 
+### Naléhavé zprávy: kde jsou a kdo je schválí (doplněno 2. 11. 2026)
+
+Kandidát, kterého síto označí jako naléhavý (`naliehave.druh`: mobilizace,
+krizové vysílání, článek 4/5, mimořádný stav, hranice, narušení vzdušného
+prostoru Aliance), se do 48 hodin ukazuje v **urgentním pásu v úvodu**
+s červeným rámečkem, každá zpráva zvlášť s proklikem do fronty
+(`/udalosti/?tab=cekajici#<id>`) a na zdroj. Je to pořadí ve frontě, ne
+tvrzení: do počtů nevstupuje a odznak říká „čeká na ověření“.
+
+Jak se z něj stane záznam (tři cesty, všechny končí commitem v repozitáři):
+
+1. **Hodinová rutina** (Routine „ověření“) otevře zdroje nejvýš pěti
+   nejnovějších kandidátů; co doloží druhým nezávislým zdrojem, zapíše do
+   `data/navrhy.json`. Návrh s úředním zdrojem se zveřejní sám, návrh jen
+   z médií čeká na člověka.
+2. **Správce ve Správě** (`/sprava/`, karta „Návrhy ke schválení“) návrh
+   schválí nebo zamítne; stránka rozhodnutí jen odešle, práci udělá
+   workflow `schvaleni.yml` stejným příkazem jako `npm run spravce schval`.
+   Kandidát, ke kterému rutina návrh neudělala, tam není — nejdřív ho
+   musí zpracovat rutina (lze ji ručně zadat kartou „Zadání pro Patrola“)
+   nebo člověk z příkazové řádky.
+3. **Z příkazové řádky:** `npm run spravce fronta` (naléhavé nahoře),
+   `npm run spravce prijmi <id>` vypíše kostru záznamu; člověk doplní
+   fakta, závažnost a jistotu, nastaví `lidskyOvereno: true`, vloží do
+   `data/incidenty.json` a pushne. Sběr pak kandidáta sám odloží.
+
+Pravidlo zůstává: zpráva z jediného média (např. Ukrajinska Pravda
+o narušení vzdušného prostoru) se nezveřejní, dokud k ní není druhý
+nezávislý zdroj — ideálně úřední (ministerstvo obrany dané země, NATO).
+
+### Bezpečné přihlášení správce (doplněno 2. 11. 2026)
+
+Co platí v kódu:
+
+- Účet je passkey (WebAuthn), žádné heslo, nic k phishingu; podpis je
+  vázaný na doménu (`RP_ID`), takže na podvržené adrese passkey nefunguje.
+- **Správce se přihlásí jen s ověřením v zařízení** (PIN, otisk, obličej):
+  API odmítne přihlášení správcovského účtu bez flagu UV
+  (`api/src/auth.ts`, `prihlaseniDokoncit`). Ukradené odemčené zařízení
+  s passkey proto nestačí.
+- Brzdy: přihlášení 20 pokusů / 10 min, obnovovací kód 5 / 30 min,
+  zaváděcí kód 5 / h z jednoho místa; v databázi jen solený otisk IP.
+- Relace 30 dní klouzavě, token jen v tomto prohlížeči; odhlášení ho
+  zneplatní na serveru. Web nejde vložit do cizího rámu, HSTS, CSP.
+- Každý zásah správce je v auditu (`/sprava/`, Kdo co změnil).
+
+Co má udělat provozovatel:
+
+1. Účet správce zakládat na **vlastním zařízení s biometrií nebo PINem**
+   (telefon s Face ID / otiskem, notebook s Windows Hello nebo Touch ID),
+   ne ve sdíleném nebo cizím prohlížeči.
+2. **Obnovovací kód** opsat offline (papír, trezor hesel), ne do poznámek
+   v telefonu ani do e-mailu. Je to jediná záloha; kdo ho má, má účet.
+3. První správce: `/ucet/` → založit účet → `/sprava/` → zaváděcí kód
+   (`ADMIN_BOOTSTRAP_KOD`). **Hned potom kód z GitHub secrets smazat**
+   a další správce přidávat jen rolí ve Správě (ve dvou lidech; druhý
+   správce je i záloha proti ztrátě přístupu).
+4. Ke správcovskému účtu přidat **druhý passkey** (druhé zařízení), ať
+   ztráta telefonu neznamená ztrátu správy.
+5. Do Správy chodit jen přes HTTPS adresu webu (czechpatrol.cz nebo
+   czechpatrol.pages.dev), ne přes odkazy z e-mailů nebo chatů.
+6. Na sdíleném počítači se **odhlásit** (tlačítko v účtu), ne jen zavřít
+   okno — token by jinak platil dál.
+
 ## Rozhlas do kanálů
 
 `nastroje/rozhlas.mjs` posílá krátké zprávy o nových ověřených záznamech do Telegram kanálu @czechpatrol (bot CzechPatrolBot, správce kanálu). Workflow `.github/workflows/rozhlas.yml`: po každém pushi, který mění `data/incidenty.json` nebo `data/historie.json`, odejdou **okamžité** zprávy (případy se závažností Vysoká a výš, opatření, změny právního stavu a NATO z archivu); denně v 17:00 UTC odejde **souhrn** ostatních nových záznamů. Každý záznam jednou; nová položka v historii případu = jedna zpráva „nové zjištění“. Nejvýš 8 zpráv na běh, zbytek příště. Při prvním běhu se starší záznamy jen označí za oznámené, aby kanál nezaplavil archiv. Stav: `data/fronta/rozhlaseno.json`. Automaticky zachycení kandidáti se neposílají nikdy.

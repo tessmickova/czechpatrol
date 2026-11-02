@@ -152,6 +152,9 @@ ze které požadavek přišel. Po přechodu se proměnná vyprázdní.
 ## Soukromí v kódu
 
 - Do databáze se nezapisuje IP; brzda proti útokům používá denně solený otisk.
+- Správcovský účet se přihlásí jen s ověřením v zařízení (PIN, otisk,
+  obličej) — API kontroluje flag UV z autentikátoru, ne nastavení klienta.
+  Postup pro provozovatele: `docs/PROVOZ.md`, „Bezpečné přihlášení správce“.
 - Účet nemá jméno, e-mail ani telefon; WhatsApp je jediný kanál, kde číslo
   nejde obejít, a jde kdykoli smazat.
 - Úklid v `src/synchronizace.ts` maže přesně to, co slibuje stránka
