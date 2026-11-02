@@ -1,6 +1,6 @@
 import data from "../../data/kyber.json";
 import { datumCas } from "@/lib/format";
-import { CO_TO_JE, NADPIS_STAVU, stavKyber, TIPY_KYBER, VETA_STAVU, ZDROJE_KYBER_POPIS, type SnimekKyber } from "@/lib/kyber";
+import { CO_TO_JE, NADPIS_STAVU, stavKyber, TIPY_KYBER, VETA_STAVU, type SnimekKyber } from "@/lib/kyber";
 import { Ikona } from "./ikony";
 
 /*
@@ -22,20 +22,40 @@ export function InternetBanner({ ted }: { ted: number }) {
   const stav = stavKyber(snimek.zpravy, ted);
   const posledni = snimek.zpravy.filter((z) => ted - new Date(z.kdy).getTime() <= 72 * 3_600_000).slice(0, 3);
 
-  if (stav === "klid") {
+  /*
+    Rámeček jen při probíhající vlně útoků. „Zvýšená pozornost“ (pár zpráv
+    o podvodech) bývala velký jantarový box nad vším ostatním — 2. 11. 2026
+    zastínil zprávy o posílení hranice u Kaliningradu. Teď je to jeden
+    řádek s tečkou; zprávy a tipy jsou po rozkliknutí.
+  */
+  if (stav !== "utok") {
+    const pozor = stav === "pozor";
     return (
       <details id="internet" className="group mt-4 scroll-mt-20 rounded-[14px] border border-linka px-3 py-2">
         <summary className="flex cursor-pointer list-none items-center gap-2 text-mikro text-tlum">
-          <Ikona nazev="zamek" velikost={13} tah={2} trida="shrink-0 text-klid-text" />
-          <span className="flex-1"><b className="font-semibold text-inkoust">{NADPIS_STAVU.klid}</b> · jak se chránit</span>
+          <span aria-hidden className={`h-[7px] w-[7px] shrink-0 rounded-full ${pozor ? "bg-jantar" : "bg-klid"}`} />
+          <span className="flex-1"><b className="font-semibold text-inkoust">{NADPIS_STAVU[stav]}</b>{pozor && posledni.length ? ` · ${posledni.length} ${posledni.length === 1 ? "zpráva" : posledni.length < 5 ? "zprávy" : "zpráv"}` : " · jak se chránit"}</span>
           <span aria-hidden className="transition-transform group-open:rotate-180">▾</span>
         </summary>
+        {pozor && <p className="mt-2 text-male leading-snug text-tlum">{VETA_STAVU.pozor}</p>}
+        {pozor && posledni.length > 0 && (
+          <ul className="mt-2 space-y-1.5">
+            {posledni.map((z) => (
+              <li key={z.id} className="text-male leading-snug">
+                <span className="font-semibold text-inkoust">{CO_TO_JE[z.druh].slovo}:</span>{" "}
+                <a href={z.odkaz} target="_blank" rel="nofollow noopener noreferrer" className="text-tlum underline decoration-linka underline-offset-2 hover:text-inkoust">{z.titulek}</a>
+                <span className="text-drobne text-tlum2"> · {z.vydavatel ?? (z.uredni ? "úřad" : "médium")} · {datumCas(z.kdy)}</span>
+              </li>
+            ))}
+          </ul>
+        )}
         <Tipy />
+        <p className="mt-2 text-drobne text-tlum2">Automaticky ze zpráv · neověřeno</p>
       </details>
     );
   }
 
-  const utok = stav === "utok";
+  const utok = true;
   return (
     <section id="internet" aria-label="Internet v Česku" className={`mt-4 scroll-mt-20 rounded-[18px] border px-4 py-3.5 ${utok ? "border-akcent/55 bg-akcent/[0.07]" : "border-jantar/55 bg-jantar/[0.06]"}`}>
       <div className="flex items-start gap-2.5">
@@ -65,7 +85,7 @@ export function InternetBanner({ ted }: { ted: number }) {
           ))}
         </dl>
       </details>
-      <p className="mt-2 text-drobne text-tlum2">Automaticky ze zpráv, člověk to neověřoval. {ZDROJE_KYBER_POPIS}</p>
+      <p className="mt-2 text-drobne text-tlum2">Automaticky ze zpráv · neověřeno</p>
     </section>
   );
 }

@@ -1,0 +1,77 @@
+name: Správce ručně
+
+# Přidělení role správce účtu přímo v databázi — pro případ, kdy žádný
+# správce ještě není, nebo se k účtu nedá dostat jinak. Spouští jen člověk
+# s právem zápisu do repozitáře; běh i zásah zůstávají v historii Actions
+# a v tabulce audit (kdo = github:<uživatel>). Účet se zadává začátkem
+# identifikátoru (ten, co se ukazuje v účtu jako #xxxxxxxx); zásah projde
+# jen tehdy, když se trefí právě jeden účet.
+#
+# Po přihlášení platí: správce se přihlásí jen s ověřením v zařízení
+# (PIN, otisk, obličej) — viz docs/PROVOZ.md.
+
+on:
+  workflow_dispatch:
+    inputs:
+      ucet:
+        description: "Začátek identifikátoru účtu (aspoň 8 znaků, např. 3b6f7930)"
+        required: true
+        type: string
+
+permissions:
+  contents: read
+
+concurrency:
+  group: spravce-rucne
+
+jobs:
+  spravce:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: api
+    steps:
+      - uses: actions/checkout@v7
+
+      - uses: actions/setup-node@v7
+        with:
+          node-version: "24"
+          cache: npm
+          cache-dependency-path: api/package-lock.json
+
+      - run: npm ci
+
+      - name: Role správce
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          UCET: ${{ inputs.ucet }}
+          KDO: ${{ github.actor }}
+        run: |
+          set -e
+          case "$UCET" in
+            *[!0-9a-f-]*|????????*) ;;
+          esac
+          if ! printf '%s' "$UCET" | grep -Eq '^[0-9a-f-]{8,36}$'; then
+            echo "::error::Účet zadejte jako začátek identifikátoru: 8 až 36 znaků 0-9, a-f, pomlčka."; exit 1
+          fi
+          NAJDI='let s="";process.stdin.on("data",d=>s+=d).on("end",()=>{const v=JSON.parse(s).find(x=>x.name==="czechpatrol");console.log(v?v.uuid:"")})'
+          npx wrangler d1 list --json > d1.json
+          ID=$(node -e "$NAJDI" < d1.json)
+          [ -n "$ID" ] || { echo "::error::Databáze czechpatrol nenalezena"; exit 1; }
+          sed -i "s/__D1_ID__/$ID/" wrangler.toml
+          KDY=$(date -u +%Y-%m-%dT%H:%M:%SZ)
+          # Jedna shoda, jinak nic. Audit se zapíše jen k účtu, který roli opravdu dostal.
+          npx wrangler d1 execute czechpatrol --remote --command "
+            UPDATE ucty SET role = 'admin'
+             WHERE id LIKE '${UCET}%' AND smazano IS NULL AND role != 'admin'
+               AND (SELECT COUNT(*) FROM ucty WHERE id LIKE '${UCET}%') = 1;
+            INSERT INTO audit (kdy, kdo, co, cil)
+              SELECT '${KDY}', 'github:${KDO}', 'role → admin (workflow Správce ručně)', id
+                FROM ucty WHERE id LIKE '${UCET}%' AND role = 'admin'
+                  AND (SELECT COUNT(*) FROM ucty WHERE id LIKE '${UCET}%') = 1
+                  AND NOT EXISTS (SELECT 1 FROM audit a WHERE a.cil = ucty.id AND a.co LIKE 'role → admin (workflow%' AND a.kdy > '${KDY}');
+            SELECT substr(id, 1, 8) AS ucet, role, CASE WHEN smazano IS NULL THEN 'aktivní' ELSE 'smazaný' END AS stav
+              FROM ucty WHERE id LIKE '${UCET}%';
+          "
+          echo "Hotovo. Pokud výpis výše neukazuje role=admin, neshodl se právě jeden účet — zkontrolujte identifikátor."

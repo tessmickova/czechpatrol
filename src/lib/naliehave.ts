@@ -13,6 +13,7 @@ export const NAZVY_NALIEHAVE = {
   "pravni-stav-cr": "mimořádný právní stav v ČR",
   "hranice-cr": "uzavření hranic ČR",
   "vzdusny-prostor-nato": "narušení vzdušného prostoru Aliance",
+  "hranice-nato": "posílení hranice NATO s Ruskem nebo Běloruskem",
 } as const;
 
 export type DruhNaliehave = keyof typeof NAZVY_NALIEHAVE;

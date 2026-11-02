@@ -51,14 +51,15 @@ describe("urgentní upozornění", () => {
     expect(naliehaveVOkne([kandidat(pozde, true)], ted)).toHaveLength(0);
   });
 
-  it("ukazuje nejvýš tři, nejnovější první", () => {
+  it("ukazuje nejvýš pět, nejnovější první", () => {
+    /* Pět, ne tři (2. 11. 2026): tatáž zpráva přijde ve třech jazycích a nesmí vytlačit jinou. */
     const v = naliehaveVOkne(
-      ["2026-09-16T08:00:00Z", "2026-09-16T07:00:00Z", "2026-09-16T06:00:00Z", "2026-09-16T05:00:00Z"].map((d) =>
+      ["2026-09-16T08:00:00Z", "2026-09-16T07:00:00Z", "2026-09-16T06:00:00Z", "2026-09-16T05:00:00Z", "2026-09-16T04:00:00Z", "2026-09-16T03:00:00Z"].map((d) =>
         kandidat(d, true),
       ),
       ted,
     );
-    expect(v).toHaveLength(3);
+    expect(v).toHaveLength(5);
     expect(v[0].publikovano).toBe("2026-09-16T08:00:00Z");
   });
 });

@@ -44,6 +44,34 @@ const OKNO_HODIN = 48;
  * Táž logika jako pás níž — výstraha, naléhavá zachycená zpráva, stará
  * data (žádná zelená bez čerstvé kontroly), jinak klid.
  */
+/**
+ * Naléhavé zprávy v hlavním sloupci úvodu: jen když nějaké jsou. Každá
+ * s proklikem do fronty a na zdroj, bez vysvětlivek — odznak „neověřeno“
+ * říká vše, co čtenář potřebuje. Stojí před bannerem internetu: krok
+ * státu u hranice je důležitější než podvodné e-maily.
+ */
+export function NaliehaveVUvodu({ kandidati, zkontrolovano, ted = Date.now() }: { kandidati: Kandidat[]; zkontrolovano: string | null; ted?: number }) {
+  const nal = stavNalehavosti(kandidati, zkontrolovano, useZiveHodiny(ted));
+  if (!nal.polozky.length) return null;
+  return (
+    <section aria-label="Naléhavé zprávy" className="mt-4 rounded-[18px] border border-akcent/70 bg-akcent/[0.05] px-4 py-3">
+      <div className="flex items-center gap-2">
+        <span aria-hidden className="h-[7px] w-[7px] shrink-0 rounded-full bg-akcent" />
+        <h2 className="text-zaklad font-bold leading-snug text-inkoust">{nal.text}</h2>
+      </div>
+      <ul className="mt-2 space-y-1.5">
+        {nal.polozky.map((p) => (
+          <li key={p.id} className="flex flex-wrap items-baseline gap-x-2 text-male leading-snug">
+            <span className="cislice shrink-0 text-mikro text-tlum2">{p.datum}</span>
+            <Link href={`/udalosti/?tab=cekajici#${p.id}`} className="min-w-0 font-semibold text-inkoust underline decoration-linka underline-offset-4 hover:decoration-akcent">{p.titulek}</Link>
+            <span className="shrink-0 text-mikro text-tlum2">{p.druh} · <a href={p.url} target="_blank" rel="nofollow noopener noreferrer" className="hover:text-inkoust">{p.zdroj}</a> · neověřeno</span>
+          </li>
+        ))}
+      </ul>
+    </section>
+  );
+}
+
 export interface NaliehavaPolozka { id: string; titulek: string; druh: string; datum: string; zdroj: string; url: string }
 
 export function stavNalehavosti(kandidati: Kandidat[], zkontrolovano: string | null, ted: number): { ton: "deje" | "stary" | "klid"; text: string; dodatek: string | null; polozky: NaliehavaPolozka[] } {
@@ -57,7 +85,7 @@ export function stavNalehavosti(kandidati: Kandidat[], zkontrolovano: string | n
   */
   if (n.length) return {
     ton: "deje",
-    text: n.length === 1 ? "Naléhavá zpráva čeká na ověření" : `${n.length} naléhavé zprávy čekají na ověření`,
+    text: n.length === 1 ? "Naléhavá zpráva čeká na ověření" : n.length < 5 ? `${n.length} naléhavé zprávy čekají na ověření` : `${n.length} naléhavých zpráv čeká na ověření`,
     dodatek: NAZVY[n[0].naliehave!.druh],
     polozky: n.map((k) => ({ id: k.id, titulek: k.titulek, druh: NAZVY[k.naliehave!.druh], datum: datumPraha(k.publikovano ?? k.zachyceno), zdroj: k.zdroj.nazev, url: k.zdroj.url })),
   };
@@ -78,7 +106,8 @@ export function naliehaveVOkne(kandidati: Kandidat[], ted: number) {
     .filter((k) => k.naliehave)
     .filter((k) => ted - new Date(k.publikovano ?? k.zachyceno).getTime() <= OKNO_HODIN * 3_600_000)
     .sort((a, b) => (b.publikovano ?? b.zachyceno).localeCompare(a.publikovano ?? a.zachyceno))
-    .slice(0, 3);
+    /* Nejvýš pět: tatáž zpráva často přijde ve třech jazycích a nesmí vytlačit jinou. */
+    .slice(0, 5);
 }
 
 export function UrgentniUpozorneni({
@@ -188,7 +217,7 @@ export function UrgentniPas({ kandidati, zkontrolovano, ted = Date.now() }: { ka
             druh — čtenář se k ničemu nedostal a správce nevěděl, co schválit.
           */
           <>
-            <b className="font-semibold text-inkoust">Sběr zachytil {naliehave.length === 1 ? "naléhavou zprávu" : `${naliehave.length} naléhavé zprávy`}, {naliehave.length === 1 ? "čeká" : "čekají"} na ověření.</b>
+            <b className="font-semibold text-inkoust">Sběr zachytil {naliehave.length === 1 ? "naléhavou zprávu" : naliehave.length < 5 ? `${naliehave.length} naléhavé zprávy` : `${naliehave.length} naléhavých zpráv`}, {naliehave.length === 1 ? "čeká" : naliehave.length < 5 ? "čekají" : "čeká"} na ověření.</b>
             <span className="mt-1 block space-y-0.5">
               {naliehave.map((k) => (
                 <span key={k.id} className="flex flex-wrap items-baseline gap-x-2">

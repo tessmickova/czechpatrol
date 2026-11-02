@@ -409,9 +409,11 @@ zjištění. Kdyby se počítal při sestavení, visel by i na dva dny starém z
 ### Naléhavé zprávy: kde jsou a kdo je schválí (doplněno 2. 11. 2026)
 
 Kandidát, kterého síto označí jako naléhavý (`naliehave.druh`: mobilizace,
-krizové vysílání, článek 4/5, mimořádný stav, hranice, narušení vzdušného
-prostoru Aliance), se do 48 hodin ukazuje v **urgentním pásu v úvodu**
-s červeným rámečkem, každá zpráva zvlášť s proklikem do fronty
+krizové vysílání, článek 4/5, mimořádný stav, hranice ČR, narušení
+vzdušného prostoru Aliance, od 2. 11. 2026 i posílení hranice členského
+státu s Ruskem nebo Běloruskem), se do 48 hodin ukazuje **v hlavním
+sloupci úvodu** s červeným rámečkem (před bannerem internetu) a v boxu
+Souhrn situace, každá zpráva zvlášť s proklikem do fronty
 (`/udalosti/?tab=cekajici#<id>`) a na zdroj. Je to pořadí ve frontě, ne
 tvrzení: do počtů nevstupuje a odznak říká „čeká na ověření“.
 
@@ -462,7 +464,11 @@ Co má udělat provozovatel:
 3. První správce: `/ucet/` → založit účet → `/sprava/` → zaváděcí kód
    (`ADMIN_BOOTSTRAP_KOD`). **Hned potom kód z GitHub secrets smazat**
    a další správce přidávat jen rolí ve Správě (ve dvou lidech; druhý
-   správce je i záloha proti ztrátě přístupu).
+   správce je i záloha proti ztrátě přístupu). Náhradní cesta bez kódu:
+   workflow **„Správce ručně“** (`.github/workflows/spravce.yml`) — zadá
+   se začátek identifikátoru účtu, role se zapíše přímo do D1 a zásah
+   je v auditu jako `github:<uživatel>`. Spustit ho smí jen člověk
+   s právem zápisu do repozitáře.
 4. Ke správcovskému účtu přidat **druhý passkey** (druhé zařízení), ať
    ztráta telefonu neznamená ztrátu správy.
 5. Do Správy chodit jen přes HTTPS adresu webu (czechpatrol.cz nebo

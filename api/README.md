@@ -77,7 +77,10 @@ nehlídá nic.
    pustí migrace, nasadí worker, nahraje tajemství, nastaví webhook Telegramu.
 3. Spustit workflow „Nasazení“ webu, aby se web sestavil s `API_URL`.
 4. Na webu založit účet, otevřít `/sprava/`, zadat zaváděcí kód → první správce.
+   Bez kódu: workflow „Správce ručně“ se začátkem identifikátoru účtu
+   (zapíše roli do D1, zásah je v auditu).
 5. Po zavedení správce zaváděcí kód z GitHubu smazat.
+6. Správce se přihlásí jen s ověřením v zařízení (PIN, otisk, obličej).
 
 ### WhatsApp
 

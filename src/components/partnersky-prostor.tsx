@@ -15,6 +15,8 @@ const REL = "sponsored nofollow noopener noreferrer";
 
 export function PartnerskyProstor({ umisteni, ted, obal = true }: { umisteni: UmisteniPartnera; ted?: number; /** false = uvnitř stránky, která už má okraje. */ obal?: boolean }) {
   const partneri = aktivniPartneri(umisteni, ted);
+  /* Bez schváleného partnera nic: zástupný rámeček „místo pro službu“ vypadal jako prázdná reklama (2. 11. 2026). Nabídka zůstává na /partneri/. */
+  if (!partneri.length) return null;
   return (
     <aside aria-label="Partneři" className={obal ? "mx-auto max-w-[1280px] px-4 sm:px-6" : ""}>
       <div className="flex flex-wrap items-center justify-between gap-3 rounded-[22px] border border-dashed border-linka px-4 py-3">
