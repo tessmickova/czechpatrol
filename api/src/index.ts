@@ -4,6 +4,7 @@ import { posliSplatne } from "./dorucovani";
 import * as emaily from "./emaily";
 import * as kredity from "./kredity";
 import * as opravneni from "./opravneni";
+import * as oznameni from "./oznameni";
 import * as platby from "./platby";
 import * as prava from "./prava";
 import * as izs from "./izs";
@@ -145,6 +146,9 @@ const CESTY: [string, RegExp, Obsluha][] = [
   ["POST", /^\/sprava\/opravneni\/([\w-]+)\/zrusit$/, async (req, env, _u, id) => opravneni.zrus(env, req, await vyzadujPrihlaseni(env, req), id)],
   ["GET", /^\/sprava\/emaily$/, async (req, env) => emaily.seznam(env, await vyzadujPrihlaseni(env, req))],
   ["POST", /^\/sprava\/emaily\/([\w-]+)\/znovu$/, async (req, env, _u, id) => emaily.znovu(env, await vyzadujPrihlaseni(env, req), id)],
+  // Správa: co čeká na rozhodnutí; ruční oznámení do kanálu a čtenářům (vždy v auditu).
+  ["GET", /^\/sprava\/prehled$/, async (req, env) => oznameni.prehled(env, await vyzadujPrihlaseni(env, req))],
+  ["POST", /^\/sprava\/oznameni$/, async (req, env) => oznameni.posli(env, req, await vyzadujPrihlaseni(env, req))],
   ["GET", /^\/sprava\/prava$/, async (req, env) => prava.seznam(env, await vyzadujPrihlaseni(env, req))],
   ["PUT", /^\/sprava\/prava$/, async (req, env) => prava.nastav(env, req, await vyzadujPrihlaseni(env, req))],
 ];

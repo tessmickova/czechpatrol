@@ -191,3 +191,23 @@ describe("žebříček", () => {
     expect(normalizujTelefon("777 123 456")).toBe("+420777123456");
   });
 });
+
+import { overOznameni, sestavOznameni } from "../src/oznameni";
+
+describe("oznámení správce", () => {
+  it("text do kanálu má titulek tučně, bez HTML ze vstupu, s podpisem", () => {
+    const t = sestavOznameni({ titulek: "Zkouška <b>", text: "Text & odkaz", odkaz: "https://czechpatrol.cz/", nazevWebu: "CzechPatrol" });
+    expect(t.startsWith("<b>Zkouška &lt;b&gt;</b>")).toBe(true);
+    expect(t).toContain("Text &amp; odkaz");
+    expect(t).toContain("https://czechpatrol.cz/");
+    expect(t).toContain("oznámení správce");
+  });
+  it("kontrola vstupu: kam, délky, odkaz jen https", () => {
+    expect(() => overOznameni({ kam: "vsem", titulek: "Ahoj", text: "Dost dlouhý text." })).toThrow();
+    expect(() => overOznameni({ kam: "kanal", titulek: "A", text: "Dost dlouhý text." })).toThrow();
+    expect(() => overOznameni({ kam: "kanal", titulek: "Ahoj", text: "krátké" })).toThrow();
+    expect(() => overOznameni({ kam: "kanal", titulek: "Ahoj", text: "Dost dlouhý text.", odkaz: "http://x.cz" })).toThrow();
+    const o = overOznameni({ kam: "oba", titulek: " Ahoj ", text: "Dost dlouhý text.", zavaznost: "kriticka" });
+    expect(o).toEqual({ kam: "oba", titulek: "Ahoj", text: "Dost dlouhý text.", odkaz: null, zavaznost: "kriticka" });
+  });
+});

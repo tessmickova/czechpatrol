@@ -7,6 +7,7 @@ import { Ikona } from "./ikony";
 import { otevriPanel } from "./postranni-panel";
 import { Logo } from "./znacka";
 import { useT } from "@/lib/i18n";
+import { useUcet } from "@/lib/ucet";
 
 /*
   Pět cílů. Vývoj, Aktéři, Manipulace a Země stojí pod jedním rozcestníkem
@@ -30,6 +31,8 @@ export function Navigace() {
   const t = useT();
   const cesta = usePathname();
   const aktivni = (href: string) => (href === "/" ? cesta === "/" : cesta.startsWith(href));
+  /* Přihlášený má v hlavičce vlastní vstup: Účet, u správce Správa. Bez toho se k tomu šlo jen přes postranní menu. */
+  const { ucet } = useUcet();
 
   return (
     // Hlavička je skleněná pilulka, ne pruh přes celou šířku — tak ji má značka.
@@ -90,6 +93,20 @@ export function Navigace() {
         </nav>
 
         <div className="flex shrink-0 items-center gap-1 sm:gap-2">
+          {ucet && (
+            <Odkaz
+              href={ucet.role === "admin" ? "/sprava/" : "/ucet/"}
+              aria-current={aktivni(ucet.role === "admin" ? "/sprava/" : "/ucet/") ? "page" : undefined}
+              /* Jen ikona: sedm položek nabídky + Podpořit se vedle značky nevejdou ani na širokém displeji. Slovo nese title a postranní menu. */
+              className={`hidden h-10 items-center gap-1.5 rounded-full border px-2.5 text-drobne font-semibold uppercase tracking-[0.05em] transition-colors lg:inline-flex ${ucet.role === "admin" ? "border-akcent/60 text-inkoust hover:bg-akcent/10" : "border-linka text-tlum hover:text-inkoust"}`}
+              style={{ fontFamily: "var(--font-mono)" }}
+              aria-label={ucet.role === "admin" ? "Správa" : "Účet"}
+              title={ucet.role === "admin" ? "Správa — co čeká na rozhodnutí" : "Účet"}
+            >
+              {ucet.role === "admin" && <span aria-hidden className="h-[6px] w-[6px] rounded-full bg-akcent" />}
+              <Ikona nazev={ucet.role === "admin" ? "vaha" : "uzivatel"} velikost={14} tah={2} />
+            </Odkaz>
+          )}
           <Odkaz
             href="/podporit/"
             // Jediná plná plocha v hlavičce: na tmavém podkladu papír, po najetí červená.

@@ -179,10 +179,10 @@ export function AktualitySloupce({ zaznamy, nepotvrzene = [], kandidati = [], te
     <section aria-labelledby="aktuality-nadpis">
       <h2 id="aktuality-nadpis" className="sr-only">Aktuality</h2>
       <div className="grid gap-10 md:grid-cols-2 md:gap-x-16">
-        <Sloupec ted={ted} nadpis="Doloženo zdroji" ikona="fajfka" ton="klid" radky={overene} prazdne="Zatím žádný doložený záznam." napoveda="Záznamy doložené dvěma nezávislými nebo úředními zdroji. Každé tvrzení má původce."
+        <Sloupec ted={ted} nadpis="Doloženo zdroji" ikona="fajfka" ton="klid" radky={overene} prazdne="Zatím žádný doložený záznam."
           paticka={<Tlacitko kam="/udalosti/" varianta="tichy" velikost="s" ikonaVpravo="nahoru" trida="[&>svg:last-child]:rotate-90">všechny záznamy od 2014</Tlacitko>} />
         {/* Mobil: nejdřív čerstvé signály, pak doložené (26. 9. 2026). Na počítači zůstává doložené vlevo. */}
-        <Sloupec trida="max-md:order-first" ted={ted} nadpis="Signály z médií" ikona="otaznik" ton="pozor" radky={neoverene} prazdne="Právě žádný nový signál." napoveda="Zachycené zprávy bez úředního nebo druhého nezávislého zdroje. Do počtů ani hodnocení nevstupují."
+        <Sloupec trida="max-md:order-first" ted={ted} nadpis="Signály z médií" ikona="otaznik" ton="pozor" radky={neoverene} prazdne="Právě žádný nový signál." napoveda="Neověřené. Do počtů ani hodnocení nevstupují."
           paticka={cizich > 0 ? <Link href="/udalosti/?tab=cekajici" className="text-drobne text-tlum2 hover:text-tlum">+ {cizich} v cizím jazyce ve frontě →</Link> : <span className="text-drobne text-tlum2">Do počtů ani hodnocení nevstupují.</span>} />
       </div>
     </section>

@@ -100,3 +100,18 @@ describe("stupně naléhavosti", () => {
     expect(n?.stupen).toBe(1);
   });
 });
+
+import { naliehavost as naliehavostSita } from "../sber/udalosti";
+
+describe("posílení hranice NATO s Ruskem (2. 11. 2026)", () => {
+  it("polská operace u hranice s Ruskem je naléhavá, stupeň 2", () => {
+    const a = naliehavostSita("Poland launches operation along Russian border in response to reports of planned sabotage");
+    expect(a?.druh).toBe("hranice-nato");
+    expect(a?.stupen).toBe(2);
+    const b = naliehavostSita("Poľsko posilňuje hranicu s Kaliningradom. Tajné služby varovali pred možnými sabotážami");
+    expect(b?.druh).toBe("hranice-nato");
+  });
+  it("běžná zpráva o hranici bez Ruska naléhavá není", () => {
+    expect(naliehavostSita("Polsko zavedlo kontroly na hranici s Německem kvůli migraci")).toBeNull();
+  });
+});

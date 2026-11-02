@@ -77,7 +77,10 @@ nehlídá nic.
    pustí migrace, nasadí worker, nahraje tajemství, nastaví webhook Telegramu.
 3. Spustit workflow „Nasazení“ webu, aby se web sestavil s `API_URL`.
 4. Na webu založit účet, otevřít `/sprava/`, zadat zaváděcí kód → první správce.
+   Bez kódu: workflow „Správce ručně“ se začátkem identifikátoru účtu
+   (zapíše roli do D1, zásah je v auditu).
 5. Po zavedení správce zaváděcí kód z GitHubu smazat.
+6. Správce se přihlásí jen s ověřením v zařízení (PIN, otisk, obličej).
 
 ### WhatsApp
 
@@ -147,11 +150,16 @@ ze které požadavek přišel. Po přechodu se proměnná vyprázdní.
 | `GET/POST /sprava/opravneni` · `POST …/:id/zrusit` | správce | udělení bez platby (dar) a zrušení, vždy s důvodem |
 | `GET /sprava/emaily` · `POST …/:id/znovu` | správce | fronta e-mailů, znovu zařadit |
 | `GET/PUT /sprava/prava` | správce | práva správců |
+| `GET /sprava/prehled` | správce | počty front v databázi (zprávy IZS, hlášení, platby, e-maily, žebříček), stav kanálu |
+| `POST /sprava/oznameni` | správce | ruční oznámení do veřejného kanálu a/nebo čtenářům s kanálem; audit, 10/h |
 | `GET /sprava/zebricek` · `PUT …/:id` | správce | záznamy s kontaktem (čtení v auditu); stav pozvání, poznámka, smazání |
 
 ## Soukromí v kódu
 
 - Do databáze se nezapisuje IP; brzda proti útokům používá denně solený otisk.
+- Správcovský účet se přihlásí jen s ověřením v zařízení (PIN, otisk,
+  obličej) — API kontroluje flag UV z autentikátoru, ne nastavení klienta.
+  Postup pro provozovatele: `docs/PROVOZ.md`, „Bezpečné přihlášení správce“.
 - Účet nemá jméno, e-mail ani telefon; WhatsApp je jediný kanál, kde číslo
   nejde obejít, a jde kdykoli smazat.
 - Úklid v `src/synchronizace.ts` maže přesně to, co slibuje stránka

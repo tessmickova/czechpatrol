@@ -215,7 +215,7 @@ export function PostranniPanel() {
                   <li><Link href="/izs/" onClick={zavri} className={RADEK}><span className="w-9" /> Zprávy partnera IZS</Link></li>
                 )}
                 {ucet.role === "admin" && (
-                  <li><Link href="/sprava/" onClick={zavri} className={RADEK}><span className="w-9" /> Správa účtů</Link></li>
+                  <li><Link href="/sprava/" onClick={zavri} className={RADEK}><span className="w-9" /> Správa — co čeká na rozhodnutí, oznámení</Link></li>
                 )}
                 <li>
                   <button type="button" onClick={() => odhlasit()} className={`${RADEK} w-full text-left text-tlum`}><span className="w-9" /> Odhlásit z tohoto zařízení</button>

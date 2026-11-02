@@ -42,7 +42,7 @@ import { PripravitTed } from "./pripravit-ted";
 import type { PripravitTed as DataPripravy } from "@/lib/priprava";
 import { Partneri, Sledovat } from "./sledovat";
 import { Aktuality } from "./aktuality";
-import { UrgentniPas } from "./urgentni";
+import { NaliehaveVUvodu, UrgentniPas } from "./urgentni";
 import { TriTemata } from "./tri-temata";
 import { Tlacitko } from "./ui";
 import { useZiveHodiny } from "@/lib/cas-klient";
@@ -582,7 +582,9 @@ export function Dashboard({
             ) : (
               <VetaSituace souhrn={souhrn ?? { veta: null, aktualizovano: null, podklady: [] }} veta={veta} kontrola={pulz?.kdy ?? overeno} ted={tedMs} />
             )}
-            {/* Internet v Česku: útoky, podvody, výpadky (1. 10. 2026). V klidu jeden řádek. */}
+            {/* Naléhavé zprávy ze sběru mají přednost před vším ostatním v sloupci (2. 11. 2026). */}
+            <NaliehaveVUvodu kandidati={kandidati} zkontrolovano={overeno} ted={tedMs} />
+            {/* Internet v Česku: jeden řádek; rámeček jen při probíhající vlně útoků. */}
             <InternetBanner ted={tedMs} />
             {/* Na mobilu je „Upozornění“ hned pod tím v řadě tlačítek — dvakrát totéž nepotřebujeme. */}
             <div className="mt-4 max-lg:hidden"><Tlacitko kam="/odber/" varianta="obrys" velikost="m" ikona="zvonek">Odběr zpráv</Tlacitko></div>
@@ -715,7 +717,7 @@ export function Dashboard({
         {/* Postranní sloupec stejné šířky jako nahoře: dodávky a služby, výpadky provozovatelů, ceny paliv, tipy. */}
         <aside aria-label="Dodávky, služby a ceny" className="min-w-0 space-y-4">
           <section className="overflow-hidden rounded-[22px] bg-plocha">
-            <HlavickaWidgetu ikona="elektrina" nazev="Dodávky a služby" meta={<span>{naruseno.length ? `${naruseno.length} narušeno` : sledujeme.length ? `${sledujeme.length} sledujeme` : "bez hlášených potíží"}</span>} napoveda={<span className="block">Elektřina, plyn, spojení, banky, paliva a další podle úředních a provozních zdrojů. Narušené a sledované napřed.</span>} />
+            <HlavickaWidgetu ikona="elektrina" nazev="Dodávky a služby" meta={<span>{naruseno.length ? `${naruseno.length} narušeno` : sledujeme.length ? `${sledujeme.length} sledujeme` : "bez hlášených potíží"}</span>} />
             <ul className="px-3 pb-3">
               {[...naruseno, ...sledujeme, ...provozPolozky.filter((p) => p.stav !== "narusen" && p.stav !== "sledujeme")].slice(0, 8).map((p) => (
                 <li key={p.klic} className={p.stav === "bezny" ? "max-lg:hidden" : ""}>
@@ -736,7 +738,7 @@ export function Dashboard({
           </section>
           {paliva.length > 0 && (
             <section className="overflow-hidden rounded-[22px] bg-plocha max-lg:hidden">
-              <HlavickaWidgetu ikona="palivo" nazev="Ceny pohonných hmot" meta={<span>{paliva.some((p) => p.skok) ? "neobvyklý pohyb" : "běžný pohyb"}</span>} napoveda={<span className="block">Průměrné ceny z týdenního šetření ČSÚ. Měření, ne předpověď.</span>} />
+              <HlavickaWidgetu ikona="palivo" nazev="Ceny pohonných hmot" meta={<span>{paliva.some((p) => p.skok) ? "neobvyklý pohyb" : "běžný pohyb"}</span>} />
               <CenaPaliva vnoreny />
             </section>
           )}
@@ -750,7 +752,6 @@ export function Dashboard({
             stitek="Manipulace"
             ikona="bublina"
             nadpis={t("Manipulace a útoky na občany")}
-            popis="Podvržené dokumenty, weby a profily vydávající se za někoho jiného."
             akce={<Tlacitko kam="/manipulace/" varianta="obrys" velikost="s" ikonaVpravo="nahoru" trida="[&>svg:last-child]:rotate-90">{t("všechny rozbory")}</Tlacitko>}
           />
           <div className="pas-scroll pas-okraj -mx-4 flex snap-x snap-mandatory gap-3 overflow-x-auto px-4 pb-2 sm:mx-0 sm:px-0" role="list" aria-label={t("Manipulace a útoky na občany")}>
@@ -763,7 +764,7 @@ export function Dashboard({
 
       {/* Zapojit se: tři dlaždice, hlášení, dvě otázky k hodnocení. */}
       <div className="nalet mt-16 sm:mt-24">
-        <NadpisSekce stitek="Zapojit se" ikona="zvonek" nadpis={t("Jak se to dozvíte, aniž byste sem chodili")} popis={t("Kanály, čtečka nebo vlastní přehled. Nic z toho po vás nechce jméno ani e-mail.")} />
+        <NadpisSekce stitek="Zapojit se" ikona="zvonek" nadpis={t("Jak se to dozvíte, aniž byste sem chodili")} />
         <TriTemata />
         <div className="mt-6"><Nahlaseni /></div>
         <div className="mt-6 grid gap-3 md:grid-cols-2 max-lg:hidden">

@@ -280,9 +280,11 @@ export function SeznamPolozek({ varianta = "karta", children }: { varianta?: "ka
 }
 
 export function RadekSeznamu({
-  o, kam, onKlik, aktivni = false, hustota = "normalni", varianta = "karta", detail,
+  o, kam, onKlik, aktivni = false, hustota = "normalni", varianta = "karta", detail, id,
 }: {
   o: ObsahRadku;
+  /** Kotva v adrese (např. proklik z úvodu na kandidáta). */
+  id?: string;
   kam?: string;
   onKlik?: () => void;
   aktivni?: boolean;
@@ -298,7 +300,7 @@ export function RadekSeznamu({
 
   if (detail) {
     return (
-      <li>
+      <li id={id}>
         <details className={`group ${varianta === "holy" ? "" : ""}`}>
           <summary className={`${zaklad} cursor-pointer list-none ${varianta === "holy" ? "border-b-0" : ""}`}>
             <TeloRadku o={o} hustota={hustota} />
@@ -310,10 +312,10 @@ export function RadekSeznamu({
     );
   }
   if (onKlik) {
-    return <li><button type="button" onClick={onKlik} aria-expanded={aktivni} className={zaklad}><TeloRadku o={o} hustota={hustota} /></button></li>;
+    return <li id={id}><button type="button" onClick={onKlik} aria-expanded={aktivni} className={zaklad}><TeloRadku o={o} hustota={hustota} /></button></li>;
   }
   return (
-    <li>
+    <li id={id}>
       <Link href={kam ?? "#"} className={zaklad}><TeloRadku o={o} hustota={hustota} /></Link>
     </li>
   );

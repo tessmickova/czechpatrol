@@ -177,7 +177,7 @@ export function SpravaPlateb() {
         </div>
       </Karta>
 
-      <Karta className="p-6">
+      <Karta className="p-6" id="emaily">
         <h2 className="podnadpis text-velke">E-maily s kódy</h2>
         {emaily.length === 0 ? <p className="mt-3 text-male text-tlum2">Fronta je prázdná.</p> : (
           <ul className="mt-3">

@@ -9,8 +9,6 @@ import type { CelkovyStav, Kandidat, Overovana, Uroven } from "@/lib/typy";
 import { casPraha } from "@/lib/cas";
 import { useT } from "@/lib/i18n";
 import { BUY_ME_A_COFFEE_URL, HEROHERO_URL, KANALY } from "@/config/web";
-import { PIZZA_INDEX, VEN } from "@/config/odkazy-ven";
-import { popisCasu, stavPizzy } from "@/lib/pizza";
 import { Ikona } from "./ikony";
 import { ObloukovyMerak } from "./mericky";
 import { Cara, poDnech, Sloupky } from "./mikrograf";
@@ -67,7 +65,6 @@ export function SidebarUvodu({ stav, cr, crHistoricky, crPocet, obcane, pulz, pr
     ? [crPocet.pripadu ? `${crPocet.pripadu} ${sklon(crPocet.pripadu, "případ", "případy", "případů")}` : null, crPocet.kampani ? `${crPocet.kampani} ${sklon(crPocet.kampani, "operace proti občanům", "operace proti občanům", "operací proti občanům")}` : null].filter(Boolean).join(" a ")
     : "ani jeden případ za 90 dní";
   const podpora = BUY_ME_A_COFFEE_URL || HEROHERO_URL;
-  const pizza = stavPizzy(undefined, ted);
 
   return (
     <aside aria-label="Stav a příprava" className="space-y-4">
@@ -86,11 +83,37 @@ export function SidebarUvodu({ stav, cr, crHistoricky, crPocet, obcane, pulz, pr
         řádky; tón nese rámeček, ne různé rozložení.
       */}
       <div className="grid grid-cols-2 gap-3">
-        <Napoveda cele plna popis={<span className="block">{nal.dodatek && <span className="mb-1.5 block text-inkoust">{nal.dodatek}</span>}{pulz && <span className="block text-tlum2">Za 24 h: {pulz.zachyceno24} zachyceno, {pulz.overeno24} ověřeno, {pulz.zdrojuOk} z {pulz.zdrojuCelkem} zdrojů odpovědělo.</span>}{kontrola && <span className="mt-1.5 block text-tlum2">Zdroje čteny {casPraha(kontrola)}.</span>}</span>}>
-          <span role="status" aria-label="Souhrn situace" className={`flex h-full min-h-[118px] w-full flex-col rounded-[22px] border px-3.5 py-3 text-left ${nal.ton === "deje" ? "border-akcent/70 bg-akcent/[0.05]" : "border-linka bg-plocha2/40"}`}>
-            <span className="flex min-h-[34px] items-center gap-2"><IkonaKruh ikona="info" velikost="s" /><span className="nadpis-boxu leading-tight">Souhrn situace</span></span>
-            <span className="mt-2 line-clamp-3 text-male font-bold leading-snug text-inkoust">{nal.text}</span>
-          </span>
+        <Napoveda cele plna popis={<span className="block">
+          {nal.polozky.length ? (
+            /* Každá naléhavá zpráva zvlášť, s proklikem do fronty a na zdroj. Je to pořadí ve frontě, ne tvrzení. */
+            <span className="mb-1.5 block space-y-1.5">
+              {nal.polozky.map((p) => (
+                <span key={p.id} className="block">
+                  <Link href={`/udalosti/?tab=cekajici#${p.id}`} className="font-semibold text-inkoust underline decoration-linka underline-offset-4 hover:decoration-akcent">{p.titulek}</Link>
+                  <span className="block text-tlum2">{p.druh} · {p.datum} · <a href={p.url} target="_blank" rel="nofollow noopener noreferrer" className="hover:text-inkoust">{p.zdroj}</a> · neověřeno</span>
+                </span>
+              ))}
+            </span>
+          ) : nal.dodatek && <span className="mb-1.5 block text-inkoust">{nal.dodatek}</span>}
+          {pulz && <span className="block text-tlum2">Za 24 h: {pulz.zachyceno24} zachyceno, {pulz.overeno24} ověřeno, {pulz.zdrojuOk} z {pulz.zdrojuCelkem} zdrojů odpovědělo.</span>}{kontrola && <span className="mt-1.5 block text-tlum2">Zdroje čteny {casPraha(kontrola)}.</span>}</span>}>
+          {nal.polozky.length ? (
+            /* S naléhavými zprávami je box odkaz do fronty: kliknutí vede k první z nich, titulky jsou vidět už tady. */
+            <Link href={`/udalosti/?tab=cekajici#${nal.polozky[0].id}`} role="status" aria-label="Souhrn situace" className="flex h-full min-h-[118px] w-full flex-col rounded-[22px] border border-akcent/70 bg-akcent/[0.05] px-3.5 py-3 text-left transition-colors hover:border-akcent">
+              <span className="flex min-h-[34px] items-center gap-2"><IkonaKruh ikona="info" velikost="s" /><span className="nadpis-boxu leading-tight">Souhrn situace</span></span>
+              <span className="mt-2 text-male font-bold leading-snug text-inkoust">{nal.text}</span>
+              <span className="mt-1.5 block space-y-0.5">
+                {nal.polozky.slice(0, 3).map((p) => (
+                  <span key={p.id} className="flex items-baseline gap-1.5 text-mikro leading-snug text-tlum"><span aria-hidden className="mt-[5px] h-[5px] w-[5px] shrink-0 rounded-full bg-akcent" /><span className="line-clamp-2">{p.titulek}</span></span>
+                ))}
+              </span>
+              <span className="mt-auto pt-2 text-mikro font-semibold uppercase tracking-[0.05em] text-akcent">Otevřít frontu →</span>
+            </Link>
+          ) : (
+            <span role="status" aria-label="Souhrn situace" className={`flex h-full min-h-[118px] w-full flex-col rounded-[22px] border px-3.5 py-3 text-left ${nal.ton === "deje" ? "border-akcent/70 bg-akcent/[0.05]" : "border-linka bg-plocha2/40"}`}>
+              <span className="flex min-h-[34px] items-center gap-2"><IkonaKruh ikona="info" velikost="s" /><span className="nadpis-boxu leading-tight">Souhrn situace</span></span>
+              <span className="mt-2 line-clamp-3 text-male font-bold leading-snug text-inkoust">{nal.text}</span>
+            </span>
+          )}
         </Napoveda>
         <Napoveda cele plna popis={overovane.length ? <span className="block">{overovane.slice(0, 3).map((o) => <span key={o.slug} className="mb-1.5 block"><b className="font-semibold text-inkoust">{o.kratce ?? o.coSeHlasi}</b><span className="block">{o.coSeHlasi}</span>{o.coRikajiUrady[0] && <span className="block text-tlum2">Úřady: {o.coRikajiUrady[0]}</span>}</span>)}<span className="block text-tlum2">Nepotvrzené zprávy. Do počtů ani hodnocení nevstupují.</span></span> : <span className="block">Sem patří kolující zprávy, které prověřujeme. Teď žádná není.</span>}>
           <span aria-label="Právě ověřujeme" className="flex h-full min-h-[118px] w-full flex-col rounded-[22px] border border-dashed border-jantar/55 bg-jantar/[0.06] px-3.5 py-3 text-left">
@@ -139,20 +162,7 @@ export function SidebarUvodu({ stav, cr, crHistoricky, crPocet, obcane, pulz, pr
         </div>
       </section>
 
-      {/* Pizza index ve vlastním boxu pod Situací teď — kuriozita, ne součást našeho měření (26. 9. 2026). */}
-      <section aria-label="Pizza index" className="flex items-center justify-between gap-3 rounded-[22px] bg-plocha px-4 py-3 text-male">
-        <Napoveda popis={<span className="block">{PIZZA_INDEX.popis}<span className="mt-1.5 block text-tlum2">{pizza.uroven ? `Stupeň ${pizza.uroven} z 5 na jejich stupnici (5 je nejnižší)${pizza.popis ? `, „${pizza.popis}“` : ""}. ` : "Aktuální hodnotu teď nemáme. "}{popisCasu(pizza, ted)}</span></span>} label="Co je Pizza index" nahoru>
-          <span className="inline-flex cursor-help items-center gap-2 text-inkoust">
-            <Ikona nazev="pizza" velikost={17} tah={1.8} />
-            <span className="font-semibold underline decoration-dotted underline-offset-4">Pizza index</span>
-          </span>
-        </Napoveda>
-        <span className="flex items-center gap-3">
-          {/* Jedno slovo stavu; bez čerstvého údaje „nezjištěno“, nikdy domyšlený klid. */}
-          <span className={`rounded-full border px-2 py-0.5 text-mikro ${pizza.aktualni ? "border-linka text-inkoust" : "border-dashed border-linka text-tlum2"}`}>{pizza.slovo}{pizza.uroven ? ` · ${pizza.uroven}/5` : ""}</span>
-          <a href={PIZZA_INDEX.url} target="_blank" rel={VEN} className="odkaz text-mikro">otevřít ↗</a>
-        </span>
-      </section>
+      {/* Pizza index (kuriozita) z úvodu pryč 2. 11. 2026: na úvod patří jen to, co se dotýká bezpečí. */}
 
 
       {/* Tipy jen na počítači: na mobilu je to další box navíc. */}
@@ -160,7 +170,7 @@ export function SidebarUvodu({ stav, cr, crHistoricky, crPocet, obcane, pulz, pr
 
       {/* Připravenost */}
       <section className="overflow-hidden rounded-[22px] bg-plocha">
-        <HlavickaWidgetu ikona="stit" nazev="AI radí dle aktuální situace" napoveda={<span className="block">Tři věci pro domácnost, které AI vybírá podle tlaku doložených událostí za 30 dní, narušených služeb a platných opatření. Není to předpověď ani úřední doporučení.</span>} />
+        <HlavickaWidgetu ikona="stit" nazev="AI radí dle aktuální situace" />
         {priprava && priprava.polozky.length > 0 && (
           <ol>
             {priprava.polozky.map((p, i) => (

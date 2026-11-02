@@ -6,6 +6,7 @@ import Link from "next/link";
 import { datumCasPraha, datumPraha } from "@/lib/cas";
 import { useZiveHodiny } from "@/lib/cas-klient";
 import { vystraha } from "@/lib/data-lehka";
+import { NAZVY_NALIEHAVE, naliehaveVOkne as naliehaveVOkneLib } from "@/lib/naliehave";
 import type { Kandidat } from "@/lib/typy";
 import { Ikona } from "./ikony";
 import { Tlacitko } from "./ui";
@@ -28,15 +29,7 @@ import { Tlacitko } from "./ui";
   píše" je jediná věc, kterou tahle sekce nesmí rozmazat.
 */
 
-const NAZVY = {
-  "mobilizace-rusko": "vyhlášení mobilizace v Rusku",
-  "priprava-mobilizace": "přípravy mobilizace v Rusku",
-  "krizove-vysilani": "krizové vysílání Českého rozhlasu",
-  "clanek-nato": "článek 4 nebo 5 NATO",
-  "pravni-stav-cr": "mimořádný právní stav v ČR",
-  "hranice-cr": "uzavření hranic ČR",
-  "vzdusny-prostor-nato": "narušení vzdušného prostoru Aliance",
-} as const;
+const NAZVY = NAZVY_NALIEHAVE;
 
 /*
   Jak staré smí být zachycené hlášení, aby se ještě vešlo pod slovo
@@ -51,29 +44,65 @@ const OKNO_HODIN = 48;
  * Táž logika jako pás níž — výstraha, naléhavá zachycená zpráva, stará
  * data (žádná zelená bez čerstvé kontroly), jinak klid.
  */
-export function stavNalehavosti(kandidati: Kandidat[], zkontrolovano: string | null, ted: number): { ton: "deje" | "stary" | "klid"; text: string; dodatek: string | null } {
+/**
+ * Naléhavé zprávy v hlavním sloupci úvodu: jen když nějaké jsou. Každá
+ * s proklikem do fronty a na zdroj, bez vysvětlivek — odznak „neověřeno“
+ * říká vše, co čtenář potřebuje. Stojí před bannerem internetu: krok
+ * státu u hranice je důležitější než podvodné e-maily.
+ */
+export function NaliehaveVUvodu({ kandidati, zkontrolovano, ted = Date.now() }: { kandidati: Kandidat[]; zkontrolovano: string | null; ted?: number }) {
+  const nal = stavNalehavosti(kandidati, zkontrolovano, useZiveHodiny(ted));
+  if (!nal.polozky.length) return null;
+  return (
+    <section aria-label="Naléhavé zprávy" className="mt-4 rounded-[18px] border border-akcent/70 bg-akcent/[0.05] px-4 py-3">
+      <div className="flex items-center gap-2">
+        <span aria-hidden className="h-[7px] w-[7px] shrink-0 rounded-full bg-akcent" />
+        <h2 className="text-zaklad font-bold leading-snug text-inkoust">{nal.text}</h2>
+      </div>
+      <ul className="mt-2 space-y-1.5">
+        {nal.polozky.map((p) => (
+          <li key={p.id} className="flex flex-wrap items-baseline gap-x-2 text-male leading-snug">
+            <span className="cislice shrink-0 text-mikro text-tlum2">{p.datum}</span>
+            <Link href={`/udalosti/?tab=cekajici#${p.id}`} className="min-w-0 font-semibold text-inkoust underline decoration-linka underline-offset-4 hover:decoration-akcent">{p.titulek}</Link>
+            <span className="shrink-0 text-mikro text-tlum2">{p.druh} · <a href={p.url} target="_blank" rel="nofollow noopener noreferrer" className="hover:text-inkoust">{p.zdroj}</a> · neověřeno</span>
+          </li>
+        ))}
+      </ul>
+    </section>
+  );
+}
+
+export interface NaliehavaPolozka { id: string; titulek: string; druh: string; datum: string; zdroj: string; url: string }
+
+export function stavNalehavosti(kandidati: Kandidat[], zkontrolovano: string | null, ted: number): { ton: "deje" | "stary" | "klid"; text: string; dodatek: string | null; polozky: NaliehavaPolozka[] } {
   const v = vystraha();
-  if (v) return { ton: "deje", text: `Platí: ${v.nadpis}`, dodatek: datumCasPraha(v.kdy) };
+  if (v) return { ton: "deje", text: `Platí: ${v.nadpis}`, dodatek: datumCasPraha(v.kdy), polozky: [] };
   const n = naliehaveVOkne(kandidati, ted);
-  if (n.length) return { ton: "deje", text: n.length === 1 ? "Naléhavá zpráva čeká na ověření" : `${n.length} naléhavé zprávy čekají na ověření`, dodatek: NAZVY[n[0].naliehave!.druh] };
+  /*
+    Položky jdou ven i jednotlivě: souhrn v úvodu na ně odkazuje (fronta
+    na stránce Události s kotvou na kandidáta), aby čtenář i správce
+    viděli, O ČEM zpráva je a kde se schvaluje — ne jen že „dvě čekají“.
+  */
+  if (n.length) return {
+    ton: "deje",
+    text: n.length === 1 ? "Naléhavá zpráva čeká na ověření" : n.length < 5 ? `${n.length} naléhavé zprávy čekají na ověření` : `${n.length} naléhavých zpráv čeká na ověření`,
+    dodatek: NAZVY[n[0].naliehave!.druh],
+    polozky: n.map((k) => ({ id: k.id, titulek: k.titulek, druh: NAZVY[k.naliehave!.druh], datum: datumPraha(k.publikovano ?? k.zachyceno), zdroj: k.zdroj.nazev, url: k.zdroj.url })),
+  };
   const stary = !zkontrolovano || ted - new Date(zkontrolovano).getTime() > HODIN_DO_VYPADKU * 3_600_000;
-  if (stary) { const h = zkontrolovano ? Math.round((ted - new Date(zkontrolovano).getTime()) / 3_600_000) : null; return { ton: "stary", text: h === null ? "Kontrola zdrojů" : `Poslední kontrola před ${h} h`, dodatek: zkontrolovano ? datumCasPraha(zkontrolovano) : null }; }
+  if (stary) { const h = zkontrolovano ? Math.round((ted - new Date(zkontrolovano).getTime()) / 3_600_000) : null; return { ton: "stary", text: h === null ? "Kontrola zdrojů" : `Poslední kontrola před ${h} h`, dodatek: zkontrolovano ? datumCasPraha(zkontrolovano) : null, polozky: [] }; }
   /*
     26. 9. 2026: dřív „Nic naléhavého za 48 h — žádná mobilizace, krizové
     vysílání ani mimořádný stav“, zeleně. Tvrdilo to víc, než sběr ví:
     čte média a titulní stránky úřadů, ne výstražné systémy. Teď to říká
     jen to, co je pravda — náš sběr nic nezachytil — a barvu nemá.
   */
-  return { ton: "klid", text: `Náš sběr nezachytil naléhavou zprávu · ${OKNO_HODIN} h`, dodatek: "Týká se zpráv, které sběr zachytil. Úřední výstrahy a stav zdrojů jsou v Rychlém přehledu." };
+  return { ton: "klid", text: `Náš sběr nezachytil naléhavou zprávu · ${OKNO_HODIN} h`, dodatek: "Týká se zpráv, které sběr zachytil. Úřední výstrahy a stav zdrojů jsou v Rychlém přehledu.", polozky: [] };
 }
 
 /** Naléhavé zachycené zprávy uvnitř okna, nejnovější první. Nejvýš tři. */
 export function naliehaveVOkne(kandidati: Kandidat[], ted: number) {
-  return kandidati
-    .filter((k) => k.naliehave)
-    .filter((k) => ted - new Date(k.publikovano ?? k.zachyceno).getTime() <= OKNO_HODIN * 3_600_000)
-    .sort((a, b) => (b.publikovano ?? b.zachyceno).localeCompare(a.publikovano ?? a.zachyceno))
-    .slice(0, 3);
+  return naliehaveVOkneLib(kandidati, ted, OKNO_HODIN);
 }
 
 export function UrgentniUpozorneni({
@@ -177,7 +206,23 @@ export function UrgentniPas({ kandidati, zkontrolovano, ted = Date.now() }: { ka
         {v ? (
           <><b className="font-semibold text-inkoust">Platí: {v.nadpis}</b> <span className="cislice text-mikro text-tlum2">{datumCasPraha(v.kdy)}</span></>
         ) : naliehave.length > 0 ? (
-          <><b className="font-semibold text-inkoust">Sběr zachytil {naliehave.length === 1 ? "naléhavou zprávu" : `${naliehave.length} naléhavé zprávy`}, čekají na ověření.</b> {NAZVY[naliehave[0].naliehave!.druh]}{naliehave[0].publikovano || naliehave[0].zachyceno ? ` · ${datumPraha(naliehave[0].publikovano ?? naliehave[0].zachyceno)}` : ""}</>
+          /*
+            Každá zpráva zvlášť a proklikem: do fronty na stránce Události
+            (kotva na kandidáta) a na zdroj. Dřív tu byl jen počet a první
+            druh — čtenář se k ničemu nedostal a správce nevěděl, co schválit.
+          */
+          <>
+            <b className="font-semibold text-inkoust">Sběr zachytil {naliehave.length === 1 ? "naléhavou zprávu" : naliehave.length < 5 ? `${naliehave.length} naléhavé zprávy` : `${naliehave.length} naléhavých zpráv`}, {naliehave.length === 1 ? "čeká" : naliehave.length < 5 ? "čekají" : "čeká"} na ověření.</b>
+            <span className="mt-1 block space-y-0.5">
+              {naliehave.map((k) => (
+                <span key={k.id} className="flex flex-wrap items-baseline gap-x-2">
+                  <span className="cislice shrink-0 text-mikro text-tlum2">{datumPraha(k.publikovano ?? k.zachyceno)}</span>
+                  <Link href={`/udalosti/?tab=cekajici#${k.id}`} className="min-w-0 text-inkoust underline decoration-linka underline-offset-4 hover:decoration-akcent">{k.titulek}</Link>
+                  <span className="shrink-0 text-mikro text-tlum2">{NAZVY[k.naliehave!.druh]} · <a href={k.zdroj.url} target="_blank" rel="nofollow noopener noreferrer" className="hover:text-inkoust">{k.zdroj.nazev}</a> · neověřeno</span>
+                </span>
+              ))}
+            </span>
+          </>
         ) : stary ? (
           <>Naléhavé zprávy sledujeme průběžně.{zkontrolovano ? <span className="cislice text-mikro text-tlum2"> · aktualizováno {datumCasPraha(zkontrolovano)}</span> : null}</>
         ) : (

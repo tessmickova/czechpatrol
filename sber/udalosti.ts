@@ -766,7 +766,8 @@ export type DruhNaliehavosti =
   | "clanek-nato"
   | "pravni-stav-cr"
   | "hranice-cr"
-  | "vzdusny-prostor-nato";
+  | "vzdusny-prostor-nato"
+  | "hranice-nato";
 
 export interface Naliehavost {
   druh: DruhNaliehavosti;
@@ -860,6 +861,21 @@ const SPOUSTECE: {
     sloveso: ["narusil", "narusila", "narusily", "vnikl", "vnikla", "violated", "violates", "breached", "entered"],
     predmet: ["vzdusny prostor", "vzdusneho prostoru", "airspace"],
     kontext: NATO_STATY,
+  },
+  {
+    /*
+      Posílení hranice členského státu s Ruskem nebo Běloruskem: nasazení
+      jednotek, bezpečnostní operace, varování před sabotáží. 2. 11. 2026
+      zůstala zpráva o polské operaci u Kaliningradu ve frontě jako každá
+      jiná, zatímco úvod zvýrazňoval podvodné e-maily. Stupeň 2: nahoru ve
+      frontě, do kanálu ne — je to krok státu, ne útok.
+    */
+    druh: "hranice-nato",
+    stupen: 2,
+    sloveso: ["posil", "posiluj", "zahajil", "zahajila", "zahajilo", "spustil", "spustila", "vyslal", "vyslala", "nasadil", "nasadila", "nasazuje",
+      "launches", "launched", "deploys", "deployed", "reinforces", "reinforced", "reinforcing", "sends", "sent", "operaci", "operace", "operation"],
+    predmet: ["hranic", "border", "kaliningrad", "suwalk"],
+    kontext: [...RUSKO, "belarus", "belorus", "kaliningrad"],
   },
 ];
 

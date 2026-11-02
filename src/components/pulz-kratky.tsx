@@ -27,9 +27,8 @@ export function PulzKratky({ pulz, ted }: { pulz: Pulz; ted: number }) {
         </span>
         {stoji ? "Hlídka" : "Hlídka běží"}
       </span>
+      {/* Jen čas. Počty zdrojů a nových zpráv jsou provozní údaj a patří na /zdroje/ (2. 11. 2026). */}
       <span className="cislice">{kdy}</span>
-      {pulz.zdrojuCelkem > 0 && <span className="cislice max-sm:hidden">{pulz.zdrojuOk}/{pulz.zdrojuCelkem} zdrojů</span>}
-      <span className="cislice max-sm:hidden">{pulz.zachyceno24} nových / 24 h</span>
     </Link>
   );
 }
