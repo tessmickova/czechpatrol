@@ -1,5 +1,5 @@
 {
-  "kdy": "2026-11-02T22:00:56.753Z",
+  "kdy": "2026-11-02T22:40:38.512Z",
   "zdroje": [
     {
       "klic": "e-sbirka",
@@ -240,17 +240,15 @@
       "klic": "kyber",
       "ok": true,
       "stav": null,
-      "pocetPolozek": 1,
-      "chyba": "lupa: robots.txt nedostupný (RFC 9309: nestahovat)",
+      "pocetPolozek": 2,
       "vysledek": "ok"
     },
     {
       "klic": "pizza-index",
       "ok": true,
       "stav": null,
-      "pocetPolozek": 0,
-      "chyba": "DOUGHCON na stránce nenalezen",
-      "vysledek": "obsah"
+      "pocetPolozek": 1,
+      "vysledek": "ok"
     }
   ],
   "novychVeFronte": 0
