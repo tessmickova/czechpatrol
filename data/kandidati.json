@@ -43,6 +43,40 @@
     }
   },
   {
+    "id": "k-013fc29e0680a422",
+    "zachyceno": "2026-11-01T21:03:14.155Z",
+    "publikovano": "2026-11-01T20:40:00.000Z",
+    "zdroj": {
+      "nazev": "Ukrinform (anglicky)",
+      "url": "https://www.ukrinform.net/rubric-ato/4180334-injury-toll-in-russian-strike-on-vinnytsia-region-rises-to-six-two-killed.html",
+      "typ": "wire",
+      "primarni": false
+    },
+    "titulek": "Injury toll in Russian strike on Vinnytsia region rises to six, two killed",
+    "titulekPuvodni": "Injury toll in Russian strike on Vinnytsia region rises to six, two killed",
+    "shrnuti": "The number of people injured in a Russian attack on the Koziatyn community in the Vinnytsia region has risen to six, while two people were killed.",
+    "kodZeme": "RU",
+    "zeme": "Rusko",
+    "kategorie": [
+      "hybridni",
+      "rusko"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "attack on",
+      "russia"
+    ],
+    "naliehave": null,
+    "stav": "ceka",
+    "vyrez": {
+      "text": "Injury toll in Russian strike on Vinnytsia region rises to six, two killed\n\r\nSubscription\nNewsletters\nPhotobank\nUkrinform - Ukrainian National News Agency\nFounded in 1918\nSunday, 01 November 2026, 23:03\nWar\nEconomy\nSports\nMore ☰\nContacts\nEng\nУкр\nEng\nEsp\nDeu\nعربي\nFra\n日本語\nPol\n&times;\nAll topics\nWar\nRecovery of Ukraine\nPolitics\nEconomy\nFact checks\nDefense\nSociety and Culture\nSports\nCrime\nAccidents and Emergencies\nAgency\nInformation on Agency\nOur Contacts\nSubscribtion Terms\nOur Services\nPrivacy policy and personal data protection\nAdditional\nPublications\nInterviews\nPhoto\nVideo\nLongreads\nReleases\nServices\nSubscription\nNewsletters\nPhotobank\n\r\n\r\n\r\nThe number of people injured in a Russian attack on the Koziatyn community in the Vinnytsia region has risen to six, while two people were killed.\nHead of the Vinnytsia Regional Military Administration Nataliia Zabolotna reported this on Telegram , according to Ukrinform.\n\r\n\r\n&ldquo;The strike hit between a dormitory and an academic building. Unfortunately, two people were killed. A 13-year-old girl died at the scene from her injuries. Another woman died from her injuries later in hospital. As of now, six people have been injured. Four of them…",
+      "stazeno": "2026-11-01T21:03:14.307Z",
+      "stav": 200
+    }
+  },
+  {
     "id": "k-7f5363c26cefe58c",
     "zachyceno": "2026-11-01T20:26:11.231Z",
     "publikovano": "2026-11-01T20:14:09.000Z",
@@ -10356,43 +10390,6 @@
       "stazeno": "2026-10-26T14:08:09.067Z",
       "stav": 403,
       "chyba": "HTTP 403"
-    }
-  },
-  {
-    "id": "k-d80d83bc79b5af79",
-    "zachyceno": "2026-10-26T14:08:03.572Z",
-    "publikovano": "2026-10-26T13:17:00.000Z",
-    "zdroj": {
-      "nazev": "Ukrainska Pravda (anglicky)",
-      "url": "https://www.pravda.com.ua/eng/news/2026/10/26/8059765/",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "One killed and two children injured in Russian drone attack on Pavlohrad",
-    "titulekPuvodni": "One killed and two children injured in Russian drone attack on Pavlohrad",
-    "shrnuti": "One person was killed when Russian forces attacked the city of Pavlohrad in Dnipropetrovsk Oblast with a drone on Monday 26 October.",
-    "kodZeme": "RU",
-    "zeme": "Rusko",
-    "kategorie": [
-      "hybridni",
-      "drony",
-      "rusko"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "zeSite": null,
-    "shody": [
-      "attack on",
-      "dron",
-      "drone",
-      "russia"
-    ],
-    "naliehave": null,
-    "stav": "ceka",
-    "vyrez": {
-      "text": "One killed and two children injured in Russian drone attack on Pavlohrad | Ukrainska Pravda\nPhoto: Dnipropetrovsk Oblast Military Administration\nOne person was killed when Russian forces attacked the city of Pavlohrad in Dnipropetrovsk Oblast with a drone on Monday 26 October.\nSource: Oleksandr Hanzha , Head of Dnipropetrovsk Oblast Military Administration\nDetails: Hanzha said at least three other people were injured. \"All those injured are currently in hospital. Two of them are 10-year-old girls,\" he wrote.\nAdvertisement:\n\r\n\r\n\r\n\r\n\r\nHanzha said the attack caused a car to catch fire and damaged several apartment blocks and a shop.\nYour support on Patreon helps us keep the news free and accessible.\nDnipropetrovsk Oblast\nRussia-Ukraine war\ncivilian casualties\nAdvertisement:\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nDnipropetrovsk Oblast\nFour killed and 14 injured in Russian attacks on Dnipropetrovsk Oblast – video\nRussian attack on Synelnykove kills three and injures 12 as fires break out\nRussian drone hits food shop in Nikopol district: four injured, including child\nLatest news\nAdvertisement:\n\r\n\r\n\r\nAdvertisement:",
-      "stazeno": "2026-10-26T14:08:09.158Z",
-      "stav": 200
     }
   }
 ]
