@@ -150,6 +150,8 @@ ze které požadavek přišel. Po přechodu se proměnná vyprázdní.
 | `GET/POST /sprava/opravneni` · `POST …/:id/zrusit` | správce | udělení bez platby (dar) a zrušení, vždy s důvodem |
 | `GET /sprava/emaily` · `POST …/:id/znovu` | správce | fronta e-mailů, znovu zařadit |
 | `GET/PUT /sprava/prava` | správce | práva správců |
+| `GET /sprava/prehled` | správce | počty front v databázi (zprávy IZS, hlášení, platby, e-maily, žebříček), stav kanálu |
+| `POST /sprava/oznameni` | správce | ruční oznámení do veřejného kanálu a/nebo čtenářům s kanálem; audit, 10/h |
 | `GET /sprava/zebricek` · `PUT …/:id` | správce | záznamy s kontaktem (čtení v auditu); stav pozvání, poznámka, smazání |
 
 ## Soukromí v kódu

@@ -14,6 +14,7 @@ import { OpravaZaznamu } from "./opravy-klient";
 import { OvladaniOverovani } from "./overovani-klient";
 import { SpravaPlateb } from "./sprava-platby-klient";
 import { SpravaZebricku } from "./sprava-zebricek-klient";
+import { Oznameni, SpravaPrehled } from "./sprava-prehled";
 import { Karta } from "./zaklad";
 
 interface UcetSprava {
@@ -54,7 +55,7 @@ interface Audit {
  * Správce vidí identifikátory, role a kanály — ne obsah účtů, protože žádný
  * není. Každý zásah se zapíše do auditu, včetně toho, kdo ho udělal.
  */
-export function SpravaKlient() {
+export function SpravaKlient({ naliehave = 0, kandidatu = 0, odmitnutychVazne = 0 }: { naliehave?: number; kandidatu?: number; odmitnutychVazne?: number }) {
   const { ucet, nacita, obnov } = useUcet();
   const [ucty, setUcty] = useState<UcetSprava[]>([]);
   const [zpravy, setZpravy] = useState<ZpravaIzs[]>([]);
@@ -191,6 +192,10 @@ export function SpravaKlient() {
     <div className="space-y-6">
       {hlaska && <Hlaska typ={hlaska.typ}>{hlaska.text}</Hlaska>}
 
+      {/* První: co čeká, s počty a odkazy. Pak oznámení. Teprve pod tím jednotlivé fronty. */}
+      <SpravaPrehled naliehave={naliehave} kandidatu={kandidatu} odmitnutychVazne={odmitnutychVazne} />
+      <Oznameni />
+
       {/*
         Přehled odmítnutých je statická stránka z repozitáře, ne data z API —
         proto jen odkaz, ne další sekce. Nepotřebuje přihlášení, protože v něm
@@ -209,7 +214,7 @@ export function SpravaKlient() {
         </a>
       </Karta>
 
-      <Karta odstin={cekajici.length ? "pisek" : "bila"} className="p-6">
+      <Karta odstin={cekajici.length ? "pisek" : "bila"} className="p-6" id="izs">
         <div className="mb-3 flex items-center justify-between">
           <div>
             <div className="stitek mb-1">Zprávy partnerů IZS</div>
@@ -226,7 +231,7 @@ export function SpravaKlient() {
         )}
       </Karta>
 
-      <NavrhyKeSchvaleni />
+      <div id="navrhy" className="scroll-mt-20"><NavrhyKeSchvaleni /></div>
 
       <OpravaZaznamu />
 
@@ -234,7 +239,7 @@ export function SpravaKlient() {
 
       <JakToChodi />
 
-      <Karta odstin={tipy.some((x) => x.stav === "novy") ? "modra" : "bila"} className="p-6">
+      <Karta odstin={tipy.some((x) => x.stav === "novy") ? "modra" : "bila"} className="p-6" id="tipy">
         <div className="mb-3">
           <div className="stitek mb-1">Hlášení od čtenářů</div>
           <h2 className="podnadpis text-velke">{tipy.filter((x) => x.stav === "novy").length} nových</h2>
@@ -312,8 +317,8 @@ export function SpravaKlient() {
       </Karta>
 
       {/* Premium: platby, kredity, e-maily, práva — jen pro správce, každý zásah v auditu. */}
-      <SpravaPlateb />
-      <SpravaZebricku />
+      <div id="platby" className="scroll-mt-20"><SpravaPlateb /></div>
+      <div id="zebricek" className="scroll-mt-20"><SpravaZebricku /></div>
 
       <Karta className="p-6">
         <div className="stitek mb-1">Audit</div>

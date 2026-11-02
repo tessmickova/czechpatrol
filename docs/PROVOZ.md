@@ -438,6 +438,27 @@ Pravidlo zůstává: zpráva z jediného média (např. Ukrajinska Pravda
 o narušení vzdušného prostoru) se nezveřejní, dokud k ní není druhý
 nezávislý zdroj — ideálně úřední (ministerstvo obrany dané země, NATO).
 
+### Správa: co kde najdete (doplněno 2. 11. 2026)
+
+Po přihlášení je v hlavičce tlačítko **Účet** (u správce **Správa**
+s červenou tečkou) a v účtu nahoře přehled „Co máte k dispozici“:
+upozornění, Můj přehled, odolnost a Premium, žebříček, kredity, u správce
+první řádek „Správa: co čeká na rozhodnutí“.
+
+`/sprava/` začíná seznamem front s počty a odkazem: naléhavé zprávy ze
+sběru, návrhy ke schválení, zprávy partnerů IZS, hlášení od čtenářů,
+kandidáti, odmítnuté s vysokým podezřením, platby k rozhodnutí, selhané
+e-maily, noví v žebříčku. Počty z databáze jsou živé (`GET
+/sprava/prehled`), kandidáti a odmítnuté jsou ze sestavení webu.
+
+Hned pod tím je **Oznámení** — jediné místo, odkud správce z webu něco
+pošle ven: do veřejného kanálu na Telegramu (bot musí být správcem
+kanálu, `TELEGRAM_BOT_TOKEN` + `TELEGRAM_KANAL`), čtenářům s propojeným
+kanálem (přes běžnou frontu, tedy podle jejich nastavení četnosti a
+závažnosti; „kritická“ projde i tichými hodinami), nebo obojí. Vždy
+s potvrzením a v auditu (`OZNAMENI …`), nejvýš 10 za hodinu. Nic se
+neposílá automaticky.
+
 ### Bezpečné přihlášení správce (doplněno 2. 11. 2026)
 
 Co platí v kódu:

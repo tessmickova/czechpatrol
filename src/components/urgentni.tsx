@@ -6,7 +6,7 @@ import Link from "next/link";
 import { datumCasPraha, datumPraha } from "@/lib/cas";
 import { useZiveHodiny } from "@/lib/cas-klient";
 import { vystraha } from "@/lib/data-lehka";
-import { NAZVY_NALIEHAVE } from "@/lib/naliehave";
+import { NAZVY_NALIEHAVE, naliehaveVOkne as naliehaveVOkneLib } from "@/lib/naliehave";
 import type { Kandidat } from "@/lib/typy";
 import { Ikona } from "./ikony";
 import { Tlacitko } from "./ui";
@@ -102,12 +102,7 @@ export function stavNalehavosti(kandidati: Kandidat[], zkontrolovano: string | n
 
 /** Naléhavé zachycené zprávy uvnitř okna, nejnovější první. Nejvýš tři. */
 export function naliehaveVOkne(kandidati: Kandidat[], ted: number) {
-  return kandidati
-    .filter((k) => k.naliehave)
-    .filter((k) => ted - new Date(k.publikovano ?? k.zachyceno).getTime() <= OKNO_HODIN * 3_600_000)
-    .sort((a, b) => (b.publikovano ?? b.zachyceno).localeCompare(a.publikovano ?? a.zachyceno))
-    /* Nejvýš pět: tatáž zpráva často přijde ve třech jazycích a nesmí vytlačit jinou. */
-    .slice(0, 5);
+  return naliehaveVOkneLib(kandidati, ted, OKNO_HODIN);
 }
 
 export function UrgentniUpozorneni({

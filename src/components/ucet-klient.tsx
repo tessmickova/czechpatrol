@@ -12,7 +12,7 @@ import { Hlaska, POLE, Popisek, Prepinac, TLACITKO_AKCENT, TLACITKO_TICHE, TLACI
 import { Ikona } from "./ikony";
 import { PremiumVUctu } from "./premium-klient";
 import { Karta } from "./zaklad";
-import { DalsiKroky } from "./zapojit-klient";
+import { PrehledUctu } from "./ucet-prehled";
 
 const FREKVENCE: { hodnota: Frekvence; nazev: string; popis: string }[] = [
   { hodnota: "ihned", nazev: "Hned, cokoli důležitého", popis: "Bez čekání a bez omezení počtu. Když se něco změní, víte to první." },
@@ -252,8 +252,8 @@ function Nastaveni({
     <div className="grid gap-4 lg:grid-cols-[minmax(0,1fr)_minmax(0,1.6fr)] lg:gap-x-16">
       {/* účet */}
       <div className="space-y-4">
-        {/* Hned po založení: co dalšího existuje. Nabídka, ne povinnost. */}
-        <DalsiKroky />
+        {/* První: co má člověk díky přihlášení k dispozici — stav a jeden krok u každé věci. */}
+        <PrehledUctu ucet={ucet} />
         <Karta odstin="modra" className="p-6">
           <div className="stitek mb-2 !text-akcent">Účet</div>
           <div className="podnadpis text-cislo text-akcent-svetla">{ROLE[ucet.role].nazev}</div>
@@ -313,7 +313,7 @@ function Nastaveni({
           )}
         </Karta>
 
-        <Karta className="p-6">
+        <Karta className="p-6" id="kanaly">
           <div className="stitek mb-3">Kanály</div>
           <div className="space-y-4">
             <div className="rounded-[22px] border border-linka p-4">
