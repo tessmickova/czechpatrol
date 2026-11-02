@@ -1,5 +1,5 @@
 {
-  "kdy": "2026-11-02T20:01:02.159Z",
+  "kdy": "2026-11-02T22:00:56.753Z",
   "zdroje": [
     {
       "klic": "e-sbirka",
@@ -203,9 +203,9 @@
     {
       "klic": "bmi-de",
       "ok": false,
-      "stav": null,
+      "stav": 400,
       "pocetPolozek": 0,
-      "chyba": "fetch failed",
+      "chyba": "HTTP 400",
       "vysledek": "chyba"
     },
     {
@@ -240,15 +240,17 @@
       "klic": "kyber",
       "ok": true,
       "stav": null,
-      "pocetPolozek": 2,
+      "pocetPolozek": 1,
+      "chyba": "lupa: robots.txt nedostupný (RFC 9309: nestahovat)",
       "vysledek": "ok"
     },
     {
       "klic": "pizza-index",
       "ok": true,
       "stav": null,
-      "pocetPolozek": 1,
-      "vysledek": "ok"
+      "pocetPolozek": 0,
+      "chyba": "DOUGHCON na stránce nenalezen",
+      "vysledek": "obsah"
     }
   ],
   "novychVeFronte": 0

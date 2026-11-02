@@ -1,5 +1,5 @@
 {
-  "aktualizovano": "2026-11-02T20:03:10.164Z",
+  "aktualizovano": "2026-11-02T22:03:06.956Z",
   "stavy": [
     {
       "klic": "cloudflare",
@@ -7,12 +7,12 @@
       "popis": "Partial System Outage",
       "incidenty": [],
       "postizene": [
+        "Ahmedabad, India - (AMD)",
         "Arica, Chile - (ARI)",
         "Algiers, Algeria - (ALG)",
-        "Annaba, Algeria - (AAE)",
-        "Baku, Azerbaijan - (GYD)"
+        "Annaba, Algeria - (AAE)"
       ],
-      "zkontrolovano": "2026-11-02T20:03:10.164Z",
+      "zkontrolovano": "2026-11-02T22:03:06.956Z",
       "chyba": null
     },
     {
@@ -21,7 +21,7 @@
       "popis": "All Systems Operational",
       "incidenty": [],
       "postizene": [],
-      "zkontrolovano": "2026-11-02T20:03:10.164Z",
+      "zkontrolovano": "2026-11-02T22:03:06.956Z",
       "chyba": null
     },
     {
@@ -30,7 +30,7 @@
       "popis": "All Systems Operational",
       "incidenty": [],
       "postizene": [],
-      "zkontrolovano": "2026-11-02T20:03:10.164Z",
+      "zkontrolovano": "2026-11-02T22:03:06.956Z",
       "chyba": null
     }
   ]
