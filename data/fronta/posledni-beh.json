@@ -1,5 +1,5 @@
 {
-  "kdy": "2026-11-03T03:53:32.816Z",
+  "kdy": "2026-11-03T04:01:01.855Z",
   "zdroje": [
     {
       "klic": "e-sbirka",
@@ -24,11 +24,10 @@
     },
     {
       "klic": "senat",
-      "ok": false,
-      "stav": null,
+      "ok": true,
+      "stav": 200,
       "pocetPolozek": 0,
-      "chyba": "The operation was aborted due to timeout",
-      "vysledek": "chyba"
+      "vysledek": "ok"
     },
     {
       "klic": "hrad",
