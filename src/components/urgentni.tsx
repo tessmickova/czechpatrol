@@ -44,60 +44,44 @@ const OKNO_HODIN = 48;
  * Táž logika jako pás níž — výstraha, naléhavá zachycená zpráva, stará
  * data (žádná zelená bez čerstvé kontroly), jinak klid.
  */
-/**
- * Naléhavé zprávy v hlavním sloupci úvodu: jen když nějaké jsou. Každá
- * s proklikem do fronty a na zdroj, bez vysvětlivek — odznak „neověřeno“
- * říká vše, co čtenář potřebuje. Stojí před bannerem internetu: krok
- * státu u hranice je důležitější než podvodné e-maily.
- */
-export function NaliehaveVUvodu({ kandidati, zkontrolovano, ted = Date.now() }: { kandidati: Kandidat[]; zkontrolovano: string | null; ted?: number }) {
-  const nal = stavNalehavosti(kandidati, zkontrolovano, useZiveHodiny(ted));
-  if (!nal.polozky.length) return null;
-  return (
-    <section aria-label="Naléhavé zprávy" className="mt-4 rounded-[18px] border border-akcent/70 bg-akcent/[0.05] px-4 py-3">
-      <div className="flex items-center gap-2">
-        <span aria-hidden className="h-[7px] w-[7px] shrink-0 rounded-full bg-akcent" />
-        <h2 className="text-zaklad font-bold leading-snug text-inkoust">{nal.text}</h2>
-      </div>
-      <ul className="mt-2 space-y-1.5">
-        {nal.polozky.map((p) => (
-          <li key={p.id} className="flex flex-wrap items-baseline gap-x-2 text-male leading-snug">
-            <span className="cislice shrink-0 text-mikro text-tlum2">{p.datum}</span>
-            <Link href={`/udalosti/?tab=cekajici#${p.id}`} className="min-w-0 font-semibold text-inkoust underline decoration-linka underline-offset-4 hover:decoration-akcent">{p.titulek}</Link>
-            <span className="shrink-0 text-mikro text-tlum2">{p.druh} · <a href={p.url} target="_blank" rel="nofollow noopener noreferrer" className="hover:text-inkoust">{p.zdroj}</a> · neověřeno</span>
-          </li>
-        ))}
-      </ul>
-    </section>
-  );
-}
-
 export interface NaliehavaPolozka { id: string; titulek: string; druh: string; datum: string; zdroj: string; url: string }
 
-export function stavNalehavosti(kandidati: Kandidat[], zkontrolovano: string | null, ted: number): { ton: "deje" | "stary" | "klid"; text: string; dodatek: string | null; polozky: NaliehavaPolozka[] } {
+export interface SkupinaNaliehavych { druh: string; pocet: number }
+
+export function stavNalehavosti(kandidati: Kandidat[], zkontrolovano: string | null, ted: number): { ton: "deje" | "stary" | "klid"; text: string; dodatek: string | null; polozky: NaliehavaPolozka[]; skupiny: SkupinaNaliehavych[] } {
   const v = vystraha();
-  if (v) return { ton: "deje", text: `Platí: ${v.nadpis}`, dodatek: datumCasPraha(v.kdy), polozky: [] };
+  if (v) return { ton: "deje", text: `Platí: ${v.nadpis}`, dodatek: datumCasPraha(v.kdy), polozky: [], skupiny: [] };
   const n = naliehaveVOkne(kandidati, ted);
   /*
     Položky jdou ven i jednotlivě: souhrn v úvodu na ně odkazuje (fronta
     na stránce Události s kotvou na kandidáta), aby čtenář i správce
     viděli, O ČEM zpráva je a kde se schvaluje — ne jen že „dvě čekají“.
   */
-  if (n.length) return {
-    ton: "deje",
-    text: n.length === 1 ? "Naléhavá zpráva čeká na ověření" : n.length < 5 ? `${n.length} naléhavé zprávy čekají na ověření` : `${n.length} naléhavých zpráv čeká na ověření`,
-    dodatek: NAZVY[n[0].naliehave!.druh],
-    polozky: n.map((k) => ({ id: k.id, titulek: k.titulek, druh: NAZVY[k.naliehave!.druh], datum: datumPraha(k.publikovano ?? k.zachyceno), zdroj: k.zdroj.nazev, url: k.zdroj.url })),
-  };
+  /*
+    Tatáž událost chodí v několika jazycích (Polsko u Kaliningradu: čtyři
+    média). Souhrn proto počítá druhy, ne titulky — „posílení hranice (4)“
+    říká víc než čtyři stejné řádky a nekřičí.
+  */
+  if (n.length) {
+    const skupiny = new Map<string, number>();
+    for (const k of n) skupiny.set(NAZVY[k.naliehave!.druh], (skupiny.get(NAZVY[k.naliehave!.druh]) ?? 0) + 1);
+    return {
+      ton: "deje",
+      text: n.length === 1 ? "Zachycená zpráva k ověření" : n.length < 5 ? `${n.length} zachycené zprávy k ověření` : `${n.length} zachycených zpráv k ověření`,
+      dodatek: NAZVY[n[0].naliehave!.druh],
+      polozky: n.map((k) => ({ id: k.id, titulek: k.titulek, druh: NAZVY[k.naliehave!.druh], datum: datumPraha(k.publikovano ?? k.zachyceno), zdroj: k.zdroj.nazev, url: k.zdroj.url })),
+      skupiny: [...skupiny.entries()].map(([druh, pocet]) => ({ druh, pocet })),
+    };
+  }
   const stary = !zkontrolovano || ted - new Date(zkontrolovano).getTime() > HODIN_DO_VYPADKU * 3_600_000;
-  if (stary) { const h = zkontrolovano ? Math.round((ted - new Date(zkontrolovano).getTime()) / 3_600_000) : null; return { ton: "stary", text: h === null ? "Kontrola zdrojů" : `Poslední kontrola před ${h} h`, dodatek: zkontrolovano ? datumCasPraha(zkontrolovano) : null, polozky: [] }; }
+  if (stary) { const h = zkontrolovano ? Math.round((ted - new Date(zkontrolovano).getTime()) / 3_600_000) : null; return { ton: "stary", text: h === null ? "Kontrola zdrojů" : `Poslední kontrola před ${h} h`, dodatek: zkontrolovano ? datumCasPraha(zkontrolovano) : null, polozky: [], skupiny: [] }; }
   /*
     26. 9. 2026: dřív „Nic naléhavého za 48 h — žádná mobilizace, krizové
     vysílání ani mimořádný stav“, zeleně. Tvrdilo to víc, než sběr ví:
     čte média a titulní stránky úřadů, ne výstražné systémy. Teď to říká
     jen to, co je pravda — náš sběr nic nezachytil — a barvu nemá.
   */
-  return { ton: "klid", text: `Náš sběr nezachytil naléhavou zprávu · ${OKNO_HODIN} h`, dodatek: "Týká se zpráv, které sběr zachytil. Úřední výstrahy a stav zdrojů jsou v Rychlém přehledu.", polozky: [] };
+  return { ton: "klid", text: `Náš sběr nezachytil naléhavou zprávu · ${OKNO_HODIN} h`, dodatek: "Týká se zpráv, které sběr zachytil. Úřední výstrahy a stav zdrojů jsou v Rychlém přehledu.", polozky: [], skupiny: [] };
 }
 
 /** Naléhavé zachycené zprávy uvnitř okna, nejnovější první. Nejvýš tři. */
