@@ -5,6 +5,8 @@ import { SidebarWebu } from "@/components/sidebar-webu";
 import { CoDal } from "@/components/co-dal";
 import { oficialniNastroje } from "@/lib/data";
 import { ZakladyPripravenosti } from "@/components/zaklady-pripravenosti";
+import Link from "next/link";
+import { Ikona } from "@/components/ikony";
 
 export const metadata: Metadata = {
   title: "Jsem připraven/a?",
@@ -20,7 +22,20 @@ export default function Pripravenost() {
         uvod="Stát už provozuje nástroje, které v krizi pomohou. Tady je seznam a co si u nich nastavit předem. CzechPatrol žádný z nich nenahrazuje."
       />
       <div className="mt-16 grid gap-10 sm:mt-24 lg:grid-cols-[minmax(0,2fr)_minmax(0,1fr)] lg:gap-x-16">
-        <div className="min-w-0"><ZakladyPripravenosti /><PripravenostKlient nastroje={oficialniNastroje()} /><CoDal bez="/pripravenost/" /></div>
+        <div className="min-w-0">
+          <ZakladyPripravenosti />
+          {/* Typy útoků (3. 11. 2026): co se děje nejčastěji a co s tím může udělat občan. Jeden řádek, ne další box. */}
+          <Link href="/typy-utoku/" className="group -mt-6 mb-12 flex items-center gap-3 rounded-[18px] border border-linka p-4 transition-colors hover:border-akcent">
+            <span className="grid h-10 w-10 shrink-0 place-items-center rounded-[12px] bg-akcent/15 text-akcent"><Ikona nazev="stit" velikost={18} tah={1.9} /></span>
+            <span className="min-w-0 flex-1">
+              <span className="block text-zaklad font-semibold leading-snug text-inkoust">Nejčastější typy útoků a co s nimi</span>
+              <span className="mt-0.5 block text-male leading-snug text-tlum">Drony, sabotáže, výpadky, kyberútoky, podvody. Předem a když nastane.</span>
+            </span>
+            <Ikona nazev="nahoru" velikost={14} tah={2} trida="shrink-0 rotate-90 text-tlum2 group-hover:text-akcent" />
+          </Link>
+          <PripravenostKlient nastroje={oficialniNastroje()} />
+          <CoDal bez="/pripravenost/" />
+        </div>
         <SidebarWebu />
       </div>
     </div>

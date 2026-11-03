@@ -2,6 +2,7 @@ import data from "../../data/kyber.json";
 import { datumCas } from "@/lib/format";
 import { CO_TO_JE, NADPIS_STAVU, stavKyber, TIPY_KYBER, VETA_STAVU, type SnimekKyber } from "@/lib/kyber";
 import { Ikona } from "./ikony";
+import { RadaKTypu } from "./rada-k-typu";
 
 /*
   Banner „Internet v Česku“ (1. 10. 2026). Pro seniora i dítě: jedna věta,
@@ -45,6 +46,7 @@ export function InternetBanner({ ted }: { ted: number }) {
                 <span className="font-semibold text-inkoust">{CO_TO_JE[z.druh].slovo}:</span>{" "}
                 <a href={z.odkaz} target="_blank" rel="nofollow noopener noreferrer" className="text-tlum underline decoration-linka underline-offset-2 hover:text-inkoust">{z.titulek}</a>
                 <span className="text-drobne text-tlum2"> · {z.vydavatel ?? (z.uredni ? "úřad" : "médium")} · {datumCas(z.kdy)}</span>
+                {" "}<RadaKTypu druh={z.druh} />
               </li>
             ))}
           </ul>
@@ -71,7 +73,7 @@ export function InternetBanner({ ted }: { ted: number }) {
             <li key={z.id} className="text-male leading-snug">
               <span className="font-semibold text-inkoust">{CO_TO_JE[z.druh].slovo}:</span>{" "}
               <a href={z.odkaz} target="_blank" rel="nofollow noopener noreferrer" className="text-tlum underline decoration-linka underline-offset-2 hover:text-inkoust">{z.titulek}</a>
-              <span className="block text-drobne text-tlum2">{z.uredni ? "úřad" : "médium"}{z.vydavatel ? ` · ${z.vydavatel}` : ""} · {datumCas(z.kdy)}</span>
+              <span className="block text-drobne text-tlum2">{z.uredni ? "úřad" : "médium"}{z.vydavatel ? ` · ${z.vydavatel}` : ""} · {datumCas(z.kdy)} <RadaKTypu druh={z.druh} /></span>
             </li>
           ))}
         </ul>

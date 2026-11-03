@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { RadaKTypu } from "./rada-k-typu";
 import { aktualizaceK, dolozeno, druh, jistotaZobrazena, pripadK, uredniZdroj } from "@/lib/agregace";
 import { datumCasPraha, datumPraha } from "@/lib/cas";
 import { ATRIBUCE, KATEGORIE, PUVODCI, STAVY } from "@/lib/kategorie";
@@ -160,6 +161,7 @@ export function DetailObsah({ i, vse, opravy: vsechnyOpravy }: { i: Incident; vs
           {i.puvodce && !potvrzenPachatel ? ", dosud nepotvrzeno" : ""}
           {" · "}Oblasti: {i.kategorie.map((k) => KATEGORIE[k].nazev).join(", ")}
         </p>
+        <div className="mt-2"><RadaKTypu kategorie={i.kategorie} /></div>
       </Blok>
 
       {/* Prázdná sekce se nezobrazuje (revize 24. 9. 2026): „žádná aktualizace“ zabírala místo a nic neříkala. */}
