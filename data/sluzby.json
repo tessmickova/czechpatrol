@@ -1,24 +1,18 @@
 {
-  "aktualizovano": "2026-11-03T00:03:09.205Z",
+  "aktualizovano": "2026-11-03T02:03:00.178Z",
   "stavy": [
     {
       "klic": "cloudflare",
       "stav": "vypadek",
       "popis": "Partial System Outage",
-      "incidenty": [
-        {
-          "nazev": " Cloudflare Gateway DNS-over-TLS Connectivity Issues over IPv4",
-          "odkaz": "https://www.cloudflarestatus.com/incidents/3bv9locsg7ln",
-          "aktualizovano": "2026-11-02T22:13:03.498Z"
-        }
-      ],
+      "incidenty": [],
       "postizene": [
         "Amsterdam, Netherlands - (AMS)",
-        "Cloudflare Sites and Services",
-        "Ahmedabad, India - (AMD)",
-        "Arica, Chile - (ARI)"
+        "Arica, Chile - (ARI)",
+        "Algiers, Algeria - (ALG)",
+        "Annaba, Algeria - (AAE)"
       ],
-      "zkontrolovano": "2026-11-03T00:03:09.205Z",
+      "zkontrolovano": "2026-11-03T02:03:00.178Z",
       "chyba": null
     },
     {
@@ -27,7 +21,7 @@
       "popis": "All Systems Operational",
       "incidenty": [],
       "postizene": [],
-      "zkontrolovano": "2026-11-03T00:03:09.205Z",
+      "zkontrolovano": "2026-11-03T02:03:00.178Z",
       "chyba": null
     },
     {
@@ -36,7 +30,7 @@
       "popis": "All Systems Operational",
       "incidenty": [],
       "postizene": [],
-      "zkontrolovano": "2026-11-03T00:03:09.205Z",
+      "zkontrolovano": "2026-11-03T02:03:00.178Z",
       "chyba": null
     }
   ]
