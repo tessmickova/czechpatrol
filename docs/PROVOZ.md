@@ -448,6 +448,16 @@ jen ve frontě a sloupec je ukazuje jako počet s odkazem. Do 3. 11. sloupec
 bral jen česky psané titulky a Souhrn hlásil zprávu z Lotyšska, která ve
 sloupci nebyla.
 
+Tatáž událost z několika redakcí je **jeden řádek** (`seskupSignaly`
+tamtéž): zprávy o téže zemi nejvýš dva dny od sebe patří k sobě, když je
+síto označilo stejným druhem naléhavosti (tak se potkají i různé jazyky)
+nebo mají aspoň tři společná vzácná slova v titulku (stejné pravidlo jako
+`nastroje/podobna-udalost.mjs`). Řádek zastupuje nejnovější česky psaná
+nebo naléhavá zpráva, v řádku stojí počet redakcí a po rozbalení seznam
+zdrojů s vlajkou země redakce (`zemeZdroje`: ze jména zdroje, z národní
+domény, nebo ze známé redakce; jinak bez vlajky). Souhrn situace počítá
+stejně: události, ne zprávy, a u druhu počet zdrojů.
+
 ### Typy útoků a rady občanům (doplněno 3. 11. 2026)
 
 Stránka `/typy-utoku/` řadí typy útoků podle naší evidence (doložené

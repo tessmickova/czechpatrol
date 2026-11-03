@@ -733,6 +733,13 @@ describe("přehled dne — česky, dvakrát denně", () => {
     expect(jeCesky("A GRU military unit launched cyberattacks against Estonian authorities")).toBe(false);
     expect(jeCesky("Straż Graniczna przywróciła kontrolę na granicy")).toBe(false);
     expect(jeCesky("Bundespolizei führt Grenzkontrollen durch")).toBe(false);
+    /* 3. 11. 2026: maďarština procházela přes á/é a člen „a“, slovenština přes ť/ň/ď. */
+    expect(jeCesky("Átvizsgálták a Wizz Air utasszállítóját, amelynek bombafenyegetés miatt kellett leszállnia")).toBe(false);
+    expect(jeCesky("Bombariadó miatt kényszerleszállást hajtott végre Varsóban egy Londonból érkező gép")).toBe(false);
+    expect(jeCesky("Poľsko posilňuje hranicu s Kaliningradom. Tajné služby varovali pred možnými sabotážami")).toBe(false);
+    expect(jeCesky("Zomrela legenda odboja. Josef Mašín bol posledný z trojice, ktorá sa prestrieľala na Západ")).toBe(false);
+    expect(jeCesky("Na letišti u Varšavy neplánovaně přistál letoun kvůli bombové hrozbě")).toBe(true);
+    expect(jeCesky("Čínský občan viněný ze špionáže zproštěn obžaloby")).toBe(true);
   });
 
   it("ráno je do poledne UTC, večer potom", () => {

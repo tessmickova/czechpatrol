@@ -7,6 +7,7 @@ import { datumCasPraha, datumPraha } from "@/lib/cas";
 import { useZiveHodiny } from "@/lib/cas-klient";
 import { vystraha } from "@/lib/data-lehka";
 import { NAZVY_NALIEHAVE, naliehaveVOkne as naliehaveVOkneLib } from "@/lib/naliehave";
+import { pocetZdroju, seskupSignaly } from "@/lib/signaly";
 import type { Kandidat } from "@/lib/typy";
 import { Ikona } from "./ikony";
 import { Tlacitko } from "./ui";
@@ -44,14 +45,21 @@ const OKNO_HODIN = 48;
  * Táž logika jako pás níž — výstraha, naléhavá zachycená zpráva, stará
  * data (žádná zelená bez čerstvé kontroly), jinak klid.
  */
-export interface NaliehavaPolozka { id: string; titulek: string; druh: string; datum: string; zdroj: string; url: string }
+export interface NaliehavaPolozka { id: string; titulek: string; druh: string; datum: string; zdroj: string; url: string; /** Kolik redakcí o téže události píše. */ zdroju: number }
 
-export interface SkupinaNaliehavych { druh: string; pocet: number }
+export interface SkupinaNaliehavych { druh: string; /** Počet událostí tohoto druhu. */ pocet: number; /** Počet redakcí dohromady. */ zdroju: number }
 
 export function stavNalehavosti(kandidati: Kandidat[], zkontrolovano: string | null, ted: number): { ton: "deje" | "stary" | "klid"; text: string; dodatek: string | null; polozky: NaliehavaPolozka[]; skupiny: SkupinaNaliehavych[] } {
   const v = vystraha();
   if (v) return { ton: "deje", text: `Platí: ${v.nadpis}`, dodatek: datumCasPraha(v.kdy), polozky: [], skupiny: [] };
-  const n = naliehaveVOkne(kandidati, ted);
+  /*
+    Tatáž událost z několika redakcí je jedna událost (3. 11. 2026): sloupec
+    Signály z médií i tenhle souhrn ji počítají jednou a vedle ní říkají,
+    kolik zdrojů o ní píše. Pravidlo slučování je společné (src/lib/signaly.ts).
+  */
+  const vOkne = new Set(naliehaveVOkneLib(kandidati, ted, OKNO_HODIN, 100).map((k) => k.id));
+  /* Skupiny se dělají nad všemi zachycenými (i neoznačenými), aby počet zdrojů vyšel stejně jako ve sloupci; zůstanou ty s naléhavou zprávou v okně. */
+  const n = seskupSignaly(kandidati).filter((g) => g.polozky.some((p) => vOkne.has(p.id))).slice(0, 5);
   /*
     Položky jdou ven i jednotlivě: souhrn v úvodu na ně odkazuje (fronta
     na stránce Události s kotvou na kandidáta), aby čtenář i správce
@@ -63,14 +71,21 @@ export function stavNalehavosti(kandidati: Kandidat[], zkontrolovano: string | n
     říká víc než čtyři stejné řádky a nekřičí.
   */
   if (n.length) {
-    const skupiny = new Map<string, number>();
-    for (const k of n) skupiny.set(NAZVY[k.naliehave!.druh], (skupiny.get(NAZVY[k.naliehave!.druh]) ?? 0) + 1);
+    const druhSkupiny = (g: (typeof n)[number]) => NAZVY[g.polozky.find((p) => vOkne.has(p.id))!.naliehave!.druh];
+    const skupiny = new Map<string, SkupinaNaliehavych>();
+    for (const g of n) {
+      const druh = druhSkupiny(g);
+      const s = skupiny.get(druh) ?? { druh, pocet: 0, zdroju: 0 };
+      s.pocet += 1;
+      s.zdroju += pocetZdroju(g.polozky);
+      skupiny.set(druh, s);
+    }
     return {
       ton: "deje",
-      text: n.length === 1 ? "Zachycená zpráva k ověření" : n.length < 5 ? `${n.length} zachycené zprávy k ověření` : `${n.length} zachycených zpráv k ověření`,
-      dodatek: NAZVY[n[0].naliehave!.druh],
-      polozky: n.map((k) => ({ id: k.id, titulek: k.titulek, druh: NAZVY[k.naliehave!.druh], datum: datumPraha(k.publikovano ?? k.zachyceno), zdroj: k.zdroj.nazev, url: k.zdroj.url })),
-      skupiny: [...skupiny.entries()].map(([druh, pocet]) => ({ druh, pocet })),
+      text: n.length === 1 ? "Zachycená událost k ověření" : n.length < 5 ? `${n.length} zachycené události k ověření` : `${n.length} zachycených událostí k ověření`,
+      dodatek: druhSkupiny(n[0]),
+      polozky: n.map((g) => ({ id: g.hlavni.id, titulek: g.hlavni.titulek, druh: druhSkupiny(g), datum: datumPraha(g.hlavni.publikovano ?? g.hlavni.zachyceno), zdroj: g.hlavni.zdroj.nazev, url: g.hlavni.zdroj.url, zdroju: pocetZdroju(g.polozky) })),
+      skupiny: [...skupiny.values()],
     };
   }
   const stary = !zkontrolovano || ted - new Date(zkontrolovano).getTime() > HODIN_DO_VYPADKU * 3_600_000;

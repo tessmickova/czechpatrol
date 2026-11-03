@@ -6,7 +6,7 @@ import { datumCasPraha } from "@/lib/cas";
 import { kdyZjisteno, type Zaznam } from "@/lib/agregace";
 import { jeCesky } from "@/lib/jazyk";
 import { nazevNaliehave } from "@/lib/naliehave";
-import { jeCiziVeFronte, jeSignal } from "@/lib/signaly";
+import { jeCiziVeFronte, jeSignal, pocetZdroju, seskupSignaly, zemeZdroje } from "@/lib/signaly";
 import { KATEGORIE } from "@/lib/kategorie";
 import { JISTOTY, PASMA, UROVNE } from "@/lib/skala";
 import type { Kandidat, Kategorie } from "@/lib/typy";
@@ -15,7 +15,7 @@ import { Tlacitko } from "./ui";
 import { IkonaKruh } from "./widgety";
 import { RadaKTypu } from "./rada-k-typu";
 import { Otaznik } from "./zaklad";
-import { Vlajka } from "./zeme";
+import { sklon, Vlajka } from "./zeme";
 
 /*
   Aktuality ve dvou sloupcích bez rámečku (24. 9. 2026, podle zadání):
@@ -52,7 +52,15 @@ interface Radek {
   text: string | null;
   textPopis: "Doloženo" | "Nepotvrzeno" | "Zachyceno";
   zdroj: { nazev: string; url: string } | null;
+  /*
+    Všechny zprávy o téže události (3. 11. 2026): počet redakcí stojí
+    v řádku, po rozbalení seznam s vlajkou země, odkud zpráva přichází.
+  */
+  zdroje: ZdrojRadku[];
+  pocetZdroju: number;
 }
+
+interface ZdrojRadku { klic: string; nazev: string; url: string; kodZeme: string | null; kdy: string | null; titulek: string | null }
 
 const KROK = 8;
 
@@ -84,6 +92,8 @@ function zZaznamu(z: Zaznam, klic: string, kam: string, stitek: Radek["stitek"],
     text: z.fakta[0] ?? z.neznameho[0] ?? null,
     textPopis: nepotvrzeny ? "Nepotvrzeno" : z.fakta[0] ? "Doloženo" : "Nepotvrzeno",
     zdroj: z.zdroje[0] ? { nazev: z.zdroje[0].nazev, url: z.zdroje[0].url } : null,
+    zdroje: z.zdroje.map((s, i) => ({ klic: `${i}-${s.url}`, nazev: s.nazev, url: s.url, kodZeme: zemeZdroje(s), kdy: null, titulek: null })),
+    pocetZdroju: pocetZdroju(z.zdroje.map((s) => ({ zdroj: s }))),
   };
 }
 
@@ -105,8 +115,22 @@ function Rozbaleni({ r }: { r: Radek }) {
           <span className="stitek mr-1.5 text-tlum2">{r.textPopis}:</span>{r.text}
         </p>
       )}
+      {r.zdroje.length > 1 && (
+        <ul className="mt-2 space-y-1 border-t border-linka/60 pt-2">
+          {r.zdroje.map((s) => (
+            <li key={s.klic} className="flex items-start gap-2 text-mikro leading-snug text-tlum2">
+              <span className="w-[18px] shrink-0 text-center leading-none">{s.kodZeme ? <Vlajka kod={s.kodZeme} /> : <span aria-hidden>·</span>}</span>
+              <a href={s.url} target="_blank" rel="nofollow noopener noreferrer" className="min-w-0 flex-1 hover:text-inkoust">
+                <span className="font-semibold text-tlum">{s.nazev}</span>
+                {s.kdy && <span className="cislice"> · {datumCasPraha(s.kdy)}</span>}
+                {s.titulek && <span className="block truncate">{s.titulek}</span>}
+              </a>
+            </li>
+          ))}
+        </ul>
+      )}
       <p className="mt-2 flex flex-wrap items-center justify-between gap-2">
-        <span className="min-w-0 truncate text-mikro text-tlum2">{r.zdroj ? `Zdroj: ${r.zdroj.nazev}` : ""}</span>
+        <span className="min-w-0 truncate text-mikro text-tlum2">{r.zdroje.length > 1 ? `${r.pocetZdroju} ${sklon(r.pocetZdroju, "zdroj", "zdroje", "zdrojů")}` : r.zdroj ? `Zdroj: ${r.zdroj.nazev}` : ""}</span>
         <span className="flex items-center gap-3">
           <RadaKTypu kategorie={r.klice} vpravo />
           {r.ven
@@ -146,6 +170,7 @@ function Sloupec({ nadpis, ikona, ton, radky, prazdne, paticka, ted, napoveda, t
                     <span className="flex items-center gap-1.5 text-mikro leading-none text-tlum2">
                       <span className="cislice">{kratkeDatum(r.kdy, ted)}</span>
                       {r.stitek && <span className="uppercase tracking-[0.06em]">{r.stitek}</span>}
+                      {r.pocetZdroju > 1 && <span className="cislice">· {r.pocetZdroju} {sklon(r.pocetZdroju, "zdroj", "zdroje", "zdrojů")}</span>}
                     </span>
                     <span className={`mt-1 line-clamp-2 text-male leading-[1.3] ${r.stitek ? "text-tlum" : "text-inkoust"}`}>{r.titulek}</span>
                   </span>
@@ -173,6 +198,7 @@ function Sloupec({ nadpis, ikona, ton, radky, prazdne, paticka, ted, napoveda, t
 
 export function AktualitySloupce({ zaznamy, nepotvrzene = [], kandidati = [], ted = Date.now() }: { zaznamy: Zaznam[]; nepotvrzene?: Zaznam[]; kandidati?: Kandidat[]; ted?: number }) {
   const serad = (a: { kdy: string | null }, b: { kdy: string | null }) => (b.kdy ?? "").localeCompare(a.kdy ?? "");
+  const skupiny = seskupSignaly(kandidati);
   const overene: Radek[] = zaznamy.filter((z) => z.overeni !== "neovereno").map((z) => zZaznamu(z, `o-${z.slug}`, `/incident/${z.slug}/`, null, PASMA[UROVNE[z.zavaznost].pasmo].tecka)).sort(serad).slice(0, 40);
   const neoverene: Radek[] = [
     ...zaznamy.filter((z) => z.overeni === "neovereno").map((z) => zZaznamu(z, `u-${z.slug}`, `/incident/${z.slug}/`, "jen média", "bg-jantar")),
@@ -183,14 +209,24 @@ export function AktualitySloupce({ zaznamy, nepotvrzene = [], kandidati = [], te
       naléhavé. Zbytek posoudí ověřovatel ve frontě.
     */
     // Bez času vydání (ručně zapsané, když redakce čas neuvede) platí čas zachycení — jinak by zpráva spadla na konec seznamu.
-    // Které zachycené sem patří, říká jedno pravidlo pro celý web (src/lib/signaly.ts) — stejné zprávy jako v Souhrnu situace.
-    ...kandidati.filter(jeSignal).map((k): Radek => ({
-      klic: `k-${k.id}`, kam: k.zdroj.url, ven: true, kodZeme: k.kodZeme, zeme: k.zeme, kdy: k.publikovano ?? k.zachyceno, titulek: k.titulek, stitek: k.naliehave ? "naléhavé" : "zachyceno", pruh: "bg-tlum2",
-      naliehave: k.naliehave ? nazevNaliehave(k.naliehave.druh) : null, cizojazycne: !jeCesky(k.titulek),
+    /*
+      Které zachycené sem patří, říká jedno pravidlo pro celý web
+      (src/lib/signaly.ts) — stejné zprávy jako v Souhrnu situace. Tatáž
+      událost z několika redakcí je jeden řádek: zastupuje ji nejnovější
+      česky psaná nebo naléhavá zpráva, ostatní (i cizojazyčné) jsou v něm
+      jako zdroje s vlajkou země redakce.
+    */
+    ...skupiny.filter((g) => jeSignal(g.hlavni)).map(({ hlavni: k, polozky }): Radek => ({
+      klic: `k-${k.id}`, kam: k.zdroj.url, ven: true, kodZeme: k.kodZeme, zeme: k.zeme, kdy: k.publikovano ?? k.zachyceno, titulek: k.titulek, stitek: polozky.some((p) => p.naliehave) ? "naléhavé" : "zachyceno", pruh: "bg-tlum2",
+      naliehave: polozky.find((p) => p.naliehave)?.naliehave ? nazevNaliehave(polozky.find((p) => p.naliehave)!.naliehave!.druh) : null, cizojazycne: !jeCesky(k.titulek),
       zavaznost: null, jistota: null, kategorie: k.kategorie.map((c) => KATEGORIE[c as Kategorie]?.nazev ?? c), klice: k.kategorie, text: k.shrnuti || null, textPopis: "Zachyceno", zdroj: { nazev: k.zdroj.nazev, url: k.zdroj.url },
+      zdroje: polozky.map((p) => ({ klic: p.id, nazev: p.zdroj.nazev, url: p.zdroj.url, kodZeme: zemeZdroje(p.zdroj), kdy: p.publikovano ?? p.zachyceno, titulek: p.id === k.id ? null : p.titulek })),
+      pocetZdroju: pocetZdroju(polozky),
     })),
   ].sort(serad).slice(0, 40);
-  const cizich = kandidati.filter(jeCiziVeFronte).length;
+  /* Cizojazyčné, které se nevešly do žádného zobrazeného řádku jako zdroj — na úvodu jen jako počet. */
+  const zobrazene = new Set(skupiny.filter((g) => jeSignal(g.hlavni)).flatMap((g) => g.polozky.map((p) => p.id)));
+  const cizich = kandidati.filter((k) => jeCiziVeFronte(k) && !zobrazene.has(k.id)).length;
   return (
     <section aria-labelledby="aktuality-nadpis">
       <h2 id="aktuality-nadpis" className="sr-only">Aktuality</h2>
