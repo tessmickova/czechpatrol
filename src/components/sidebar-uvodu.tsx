@@ -90,7 +90,7 @@ export function SidebarUvodu({ stav, cr, crHistoricky, crPocet, obcane, pulz, pr
               {nal.polozky.map((p) => (
                 <span key={p.id} className="block">
                   <Link href={`/udalosti/?tab=cekajici#${p.id}`} className="font-semibold text-inkoust underline decoration-linka underline-offset-4 hover:decoration-akcent">{p.titulek}</Link>
-                  <span className="block text-tlum2">{p.druh} · {p.datum} · <a href={p.url} target="_blank" rel="nofollow noopener noreferrer" className="hover:text-inkoust">{p.zdroj}</a> · neověřeno</span>
+                  <span className="block text-tlum2">{p.druh} · {p.datum} · <a href={p.url} target="_blank" rel="nofollow noopener noreferrer" className="hover:text-inkoust">{p.zdroj}</a>{p.zdroju > 1 ? ` a další, celkem ${p.zdroju} ${sklon(p.zdroju, "zdroj", "zdroje", "zdrojů")}` : ""} · neověřeno</span>
                 </span>
               ))}
             </span>
@@ -105,7 +105,8 @@ export function SidebarUvodu({ stav, cr, crHistoricky, crPocet, obcane, pulz, pr
             <Link href={`/udalosti/?tab=cekajici#${nal.polozky[0].id}`} role="status" aria-label="Souhrn situace" className="flex h-full min-h-[118px] w-full flex-col rounded-[22px] border border-linka bg-plocha2/40 px-3.5 py-3 text-left transition-colors hover:border-akcent/60">
               <span className="flex min-h-[34px] items-center gap-2"><IkonaKruh ikona="info" velikost="s" /><span className="nadpis-boxu leading-tight">Souhrn situace</span></span>
               <span className="mt-2 flex items-start gap-2 text-male font-bold leading-snug text-inkoust"><span aria-hidden className="mt-[7px] h-[6px] w-[6px] shrink-0 rounded-full bg-akcent" />{nal.text}</span>
-              <span className="mt-1 block text-mikro leading-snug text-tlum">{nal.skupiny.map((g) => `${g.druh}${g.pocet > 1 ? ` (${g.pocet})` : ""}`).join(" · ")}</span>
+              {/* Druh, kolikrát, a z kolika redakcí: „posílení hranice NATO (4 zdroje)“ říká víc než čtyři stejné řádky. */}
+              <span className="mt-1 block text-mikro leading-snug text-tlum">{nal.skupiny.map((g) => `${g.pocet > 1 ? `${g.pocet}× ` : ""}${g.druh}${g.zdroju > 1 ? ` (${g.zdroju} ${sklon(g.zdroju, "zdroj", "zdroje", "zdrojů")})` : ""}`).join(" · ")}</span>
               <span className="mt-auto pt-2 text-mikro text-tlum2">otevřít frontu →</span>
             </Link>
           ) : (

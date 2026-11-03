@@ -944,12 +944,18 @@ const MAX_CESKYCH_ZACHYCENYCH = 4;
 /** Návrh starší než týden už není novinka, i když ho nikdo neposlal. */
 const NAVRH_NEJVYS_DNI = 7;
 
-/** Text psaný česky? Hlídá se česká diakritika a vylučují se polské a německé znaky. */
+/*
+  Text psaný česky? Stejné pravidlo jako src/lib/jazyk.ts (držet obě kopie shodné).
+  Cizí znaky rozhodnou dřív než společná diakritika: slovenština (ľ ô ŕ ĺ),
+  polština, němčina, maďarština (ő ű), francouzština a italština. Mezi
+  předložkami není „a“ — je to maďarský člen (3. 11. 2026).
+*/
 export function jeCesky(text) {
   const t = String(text ?? "");
+  if (/[ľôŕĺłąęśźżäöüßőűàèêçùâî]/i.test(t)) return false;
   if (/[ěřůňťď]/i.test(t)) return true;
-  if (/[łąęśźż]/i.test(t) || /[äöüß]/i.test(t)) return false;
-  return /[áéíýúž]/i.test(t) && /\b(a|v|ve|na|se|je|z|ze|o|k|do|po|za|pro|při|u)\b/i.test(t);
+  /* Hranice slova přes \p{L}, ne \b: to je jen ASCII a v „Átvizsgálták“ by našlo „k“ za á. */
+  return /[áéíýúž]/i.test(t) && /(^|[^\p{L}])(v|ve|na|se|je|z|ze|o|k|do|po|za|pro|při|u)(?=[^\p{L}]|$)/iu.test(t);
 }
 
 /*
