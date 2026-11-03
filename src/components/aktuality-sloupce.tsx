@@ -5,13 +5,15 @@ import { useState } from "react";
 import { datumCasPraha } from "@/lib/cas";
 import { kdyZjisteno, type Zaznam } from "@/lib/agregace";
 import { jeCesky } from "@/lib/jazyk";
-import { jeJenProjev } from "../../nastroje/zasady-textu.mjs";
+import { nazevNaliehave } from "@/lib/naliehave";
+import { jeCiziVeFronte, jeSignal } from "@/lib/signaly";
 import { KATEGORIE } from "@/lib/kategorie";
 import { JISTOTY, PASMA, UROVNE } from "@/lib/skala";
 import type { Kandidat, Kategorie } from "@/lib/typy";
 import { Ikona } from "./ikony";
 import { Tlacitko } from "./ui";
 import { IkonaKruh } from "./widgety";
+import { RadaKTypu } from "./rada-k-typu";
 import { Otaznik } from "./zaklad";
 import { Vlajka } from "./zeme";
 
@@ -35,12 +37,18 @@ interface Radek {
   zeme: string | null;
   kdy: string | null;
   titulek: string;
-  stitek: "nepotvrzeno" | "zachyceno" | "jen média" | null;
+  stitek: "nepotvrzeno" | "zachyceno" | "naléhavé" | "jen média" | null;
+  /* Jen u naléhavých zachycených: čeho se týká (stejné slovo jako v Souhrnu situace). */
+  naliehave?: string | null;
+  /* Titulek v cizím jazyce — čtenář má vědět, proč je ve sloupci anglicky. */
+  cizojazycne?: boolean;
   pruh: string;
   /* Do rozbalení. */
   zavaznost: { nazev: string; trida: string } | null;
   jistota: string | null;
   kategorie: string[];
+  /* Klíče kategorií pro radu „Co mohu udělat“. */
+  klice: string[];
   text: string | null;
   textPopis: "Doloženo" | "Nepotvrzeno" | "Zachyceno";
   zdroj: { nazev: string; url: string } | null;
@@ -72,6 +80,7 @@ function zZaznamu(z: Zaznam, klic: string, kam: string, stitek: Radek["stitek"],
     zavaznost: { nazev: UROVNE[z.zavaznost].nazev, trida: PASMA[UROVNE[z.zavaznost].pasmo].text },
     jistota: JISTOTY[z.jistota]?.nazev ?? null,
     kategorie: z.kategorie.map((k) => KATEGORIE[k as Kategorie]?.nazev ?? k),
+    klice: z.kategorie,
     text: z.fakta[0] ?? z.neznameho[0] ?? null,
     textPopis: nepotvrzeny ? "Nepotvrzeno" : z.fakta[0] ? "Doloženo" : "Nepotvrzeno",
     zdroj: z.zdroje[0] ? { nazev: z.zdroje[0].nazev, url: z.zdroje[0].url } : null,
@@ -88,7 +97,9 @@ function Rozbaleni({ r }: { r: Radek }) {
         {r.zavaznost && <span className={`font-semibold ${r.zavaznost.trida}`}>{r.zavaznost.nazev}</span>}
         {r.jistota && <span>jistota {r.jistota.toLowerCase()}</span>}
         {r.kategorie.slice(0, 2).map((k) => <span key={k}>{k}</span>)}
+        {r.cizojazycne && <span>v cizím jazyce</span>}
       </p>
+      {r.naliehave && <p className="mt-1.5 text-male leading-snug text-inkoust">K okamžité kontrole: {r.naliehave}. Neověřeno, do počtů nevstupuje.</p>}
       {r.text && (
         <p className="mt-1.5 line-clamp-4 leading-relaxed text-tlum">
           <span className="stitek mr-1.5 text-tlum2">{r.textPopis}:</span>{r.text}
@@ -96,9 +107,12 @@ function Rozbaleni({ r }: { r: Radek }) {
       )}
       <p className="mt-2 flex flex-wrap items-center justify-between gap-2">
         <span className="min-w-0 truncate text-mikro text-tlum2">{r.zdroj ? `Zdroj: ${r.zdroj.nazev}` : ""}</span>
-        {r.ven
-          ? <a href={r.kam} target="_blank" rel="nofollow noopener noreferrer" className="inline-flex items-center gap-1 font-semibold text-inkoust hover:text-akcent">Otevřít zdroj <Ikona nazev="nahoru" velikost={11} tah={2} trida="rotate-45" /></a>
-          : <Link href={r.kam} className="inline-flex items-center gap-1 font-semibold text-inkoust hover:text-akcent">Celý záznam <Ikona nazev="nahoru" velikost={11} tah={2} trida="rotate-90" /></Link>}
+        <span className="flex items-center gap-3">
+          <RadaKTypu kategorie={r.klice} vpravo />
+          {r.ven
+            ? <a href={r.kam} target="_blank" rel="nofollow noopener noreferrer" className="inline-flex items-center gap-1 font-semibold text-inkoust hover:text-akcent">Otevřít zdroj <Ikona nazev="nahoru" velikost={11} tah={2} trida="rotate-45" /></a>
+            : <Link href={r.kam} className="inline-flex items-center gap-1 font-semibold text-inkoust hover:text-akcent">Celý záznam <Ikona nazev="nahoru" velikost={11} tah={2} trida="rotate-90" /></Link>}
+        </span>
       </p>
     </div>
   );
@@ -169,12 +183,14 @@ export function AktualitySloupce({ zaznamy, nepotvrzene = [], kandidati = [], te
       naléhavé. Zbytek posoudí ověřovatel ve frontě.
     */
     // Bez času vydání (ručně zapsané, když redakce čas neuvede) platí čas zachycení — jinak by zpráva spadla na konec seznamu.
-    ...kandidati.filter((k) => jeCesky(k.titulek) && !jeJenProjev(k.titulek) && (k.naliehave || (k.kodZeme !== "UA" && k.kodZeme !== "RU"))).map((k): Radek => ({
-      klic: `k-${k.id}`, kam: k.zdroj.url, ven: true, kodZeme: k.kodZeme, zeme: k.zeme, kdy: k.publikovano ?? k.zachyceno, titulek: k.titulek, stitek: "zachyceno", pruh: "bg-tlum2",
-      zavaznost: null, jistota: null, kategorie: k.kategorie.map((c) => KATEGORIE[c as Kategorie]?.nazev ?? c), text: k.shrnuti || null, textPopis: "Zachyceno", zdroj: { nazev: k.zdroj.nazev, url: k.zdroj.url },
+    // Které zachycené sem patří, říká jedno pravidlo pro celý web (src/lib/signaly.ts) — stejné zprávy jako v Souhrnu situace.
+    ...kandidati.filter(jeSignal).map((k): Radek => ({
+      klic: `k-${k.id}`, kam: k.zdroj.url, ven: true, kodZeme: k.kodZeme, zeme: k.zeme, kdy: k.publikovano ?? k.zachyceno, titulek: k.titulek, stitek: k.naliehave ? "naléhavé" : "zachyceno", pruh: "bg-tlum2",
+      naliehave: k.naliehave ? nazevNaliehave(k.naliehave.druh) : null, cizojazycne: !jeCesky(k.titulek),
+      zavaznost: null, jistota: null, kategorie: k.kategorie.map((c) => KATEGORIE[c as Kategorie]?.nazev ?? c), klice: k.kategorie, text: k.shrnuti || null, textPopis: "Zachyceno", zdroj: { nazev: k.zdroj.nazev, url: k.zdroj.url },
     })),
   ].sort(serad).slice(0, 40);
-  const cizich = kandidati.filter((k) => !jeCesky(k.titulek)).length;
+  const cizich = kandidati.filter(jeCiziVeFronte).length;
   return (
     <section aria-labelledby="aktuality-nadpis">
       <h2 id="aktuality-nadpis" className="sr-only">Aktuality</h2>
