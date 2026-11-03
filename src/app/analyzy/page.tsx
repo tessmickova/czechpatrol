@@ -8,6 +8,7 @@ import { sklon } from "@/components/zeme";
 import { radkyTabulkyZemi } from "@/components/tabulka-zemi-data";
 import { CoDal } from "@/components/co-dal";
 import { proPocty } from "@/lib/odlehci";
+import { prehledTypu } from "@/components/typy-utoku-prehled";
 
 export const metadata: Metadata = {
   title: "Analýzy",
@@ -27,6 +28,7 @@ export default function Analyzy() {
   const tydnu = tydny().length;
   const kampani = kampane().length;
   const zemi = new Set(incidenty().map((i) => i.kodZeme)).size;
+  const typy = prehledTypu().filter((p) => p.zaznamu + p.zprav > 0).length;
 
   const karty: { href: string; stitek: string; nadpis: string; popis: string; cislo: string; ikona: NazevIkony }[] = [
     {
@@ -52,6 +54,14 @@ export default function Analyzy() {
       popis: "Podvržené dokumenty, weby a profily vydávající se za někoho jiného. U každé operace zvlášť: co je doložené, a víme, kdo za ní stojí?",
       cislo: `${kampani} ${sklon(kampani, "rozebraná kampaň", "rozebrané kampaně", "rozebraných kampaní")}`,
       ikona: "bublina",
+    },
+    {
+      href: "/typy-utoku/",
+      stitek: "Typy útoků",
+      nadpis: "Co se děje nejčastěji a co s tím",
+      popis: "Pořadí typů útoků podle naší evidence. U každého, jak se připravit předem a co dělat jako občan, když nastane.",
+      cislo: `${typy} ${sklon(typy, "typ s doloženým případem", "typy s doloženým případem", "typů s doloženým případem")}`,
+      ikona: "stit",
     },
     {
       href: "/metodika/",

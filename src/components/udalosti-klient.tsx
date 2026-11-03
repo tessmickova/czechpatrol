@@ -1,6 +1,7 @@
 "use client";
 
 import { nazevNaliehave } from "@/lib/naliehave";
+import { RadaKTypu } from "./rada-k-typu";
 
 import Link from "next/link";
 import { Fragment, useCallback, useEffect, useMemo, useState } from "react";
@@ -706,6 +707,7 @@ function RadekKandidata({ k }: { k: Kandidat }) {
       detail={
         <div className="space-y-2 pt-1 text-zaklad leading-relaxed">
           {k.shrnuti && <p className="text-tlum">{k.shrnuti}</p>}
+          <p><RadaKTypu kategorie={k.kategorie} /></p>
           {k.titulek !== k.titulekPuvodni && <p className="text-drobne text-tlum2">Původní titulek: {k.titulekPuvodni}</p>}
           <p><a href={k.zdroj.url} target="_blank" rel="nofollow noopener noreferrer" className="odkaz break-all">{k.zdroj.url}</a></p>
           <p className="text-drobne text-tlum2">Zachyceno {datumPraha(k.zachyceno)} hodinovým sběrem. Není to ověřený záznam: závažnost ani jistota nejsou stanovené a do počtů nevstupuje. Po lidské kontrole se buď stane záznamem, nebo po třech týdnech zmizí.</p>

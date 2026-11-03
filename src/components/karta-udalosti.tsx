@@ -5,6 +5,7 @@ import { tokeny, UROVNE } from "@/lib/skala";
 import type { Incident } from "@/lib/typy";
 import type { SUkazkou } from "@/lib/data";
 import { Ikona } from "./ikony";
+import { RadaKTypu } from "./rada-k-typu";
 import { OdznakUkazky } from "./pruhy";
 import { SeznamZdroju } from "./zdroje";
 import { Napoveda, OdznakJistoty, OdznakTypu, VykladUrovne } from "./zaklad";
@@ -109,7 +110,11 @@ export function KartaUdalosti({
 
       <div className={`flex items-center justify-between gap-3 border-t ${t.ramecek} px-5 py-3 pl-6`}>
         <OdznakJistoty jistota={incident.jistota} />
-        <span className="stitek">{incident.zdroje.length} zdroje</span>
+        <span className="flex items-center gap-4">
+          {/* Karta ořezává obsah (overflow-hidden) a spouštěč je u spodku: bublina nahoru, zarovnaná vpravo. */}
+          <RadaKTypu kategorie={incident.kategorie} vpravo nahoru />
+          <span className="stitek">{incident.zdroje.length} zdroje</span>
+        </span>
       </div>
 
       {rozbalitelna && (

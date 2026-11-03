@@ -1,0 +1,187 @@
+[
+  {
+    "klic": "drony",
+    "nazev": "Drony a narušení vzdušného prostoru",
+    "kratce": "Cizí dron nebo letoun bez povolení, dopad trosek, sestřel.",
+    "kategorie": ["drony"],
+    "druhyKyber": [],
+    "coToJe": "Dron nebo letoun vletí bez povolení do vzdušného prostoru, dopadne, nebo ho sestřelí stíhačky. Nejčastěji na východním křídle NATO: Polsko, Pobaltí, Rumunsko, Moldavsko. Letiště se na čas zavře, v okolí dopadu platí poplach.",
+    "proObcana": "V Česku zatím bez přímého dopadu. Na cestách po východě Evropy se může zpozdit let nebo uzavřít oblast kolem dopadu.",
+    "predem": [
+      "Zapnout varování na mobil a znát tři tóny sirén.",
+      "Před cestou do Polska, Pobaltí nebo Rumunska se zaregistrovat v DROZD, aby vás stát uměl najít."
+    ],
+    "kdyzNastane": [
+      "K troskám se nepřibližovat a nedotýkat se jich; volat 158 nebo 112.",
+      "Řídit se pokyny místních úřadů, zpoždění letu řešit s dopravcem."
+    ],
+    "odkazy": [
+      { "nazev": "Hasičský záchranný sbor ČR", "url": "https://www.hzscr.cz/" },
+      { "nazev": "DROZD — registrace před cestou", "url": "https://drozd.mzv.cz/" },
+      { "nazev": "Základy za minutu: tóny sirén", "url": "/pripravenost/#zaklady" }
+    ]
+  },
+  {
+    "klic": "sabotaz",
+    "nazev": "Sabotáž: žhářství a poškození zařízení",
+    "kratce": "Zapálený sklad, přeřezané kabely, cizí předměty na trati.",
+    "kategorie": ["sabotaz"],
+    "druhyKyber": [],
+    "coToJe": "Požár skladu nebo továrny, přeřezané kabely, cizí předměty na trati. Pachatelé jsou často lidé najatí přes internet za malé peníze, kteří nevědí, pro koho pracují.",
+    "proObcana": "Dopad je místní: výpadek dodávky, zastavená trať, uzavřené okolí. Riziko pro jednotlivce je hlavně nechat se najmout.",
+    "predem": [
+      "Nabídku peněz za fotografování objektů, přenesení balíčku nebo „malý úkol“ od neznámého účtu brát jako to, co je: nábor.",
+      "Mít doma zásobu na několik dní pro případ výpadku dodávek; spočítá ji kalkulačka odolnosti."
+    ],
+    "kdyzNastane": [
+      "Požár nebo podezřelé chování u objektu hlásit na 150 nebo 158, nezasahovat sám.",
+      "Nabídku „úkolu za peníze“ nahlásit policii a zprávu si uložit."
+    ],
+    "odkazy": [
+      { "nazev": "Hasičský záchranný sbor ČR", "url": "https://www.hzscr.cz/" },
+      { "nazev": "Ministerstvo vnitra", "url": "https://www.mvcr.cz/" },
+      { "nazev": "Kalkulačka odolnosti", "url": "/odolnost/" }
+    ]
+  },
+  {
+    "klic": "infrastruktura",
+    "nazev": "Útok na energetiku, dopravu a sítě",
+    "kratce": "Rozvodny, plynovody, podmořské kabely, železnice.",
+    "kategorie": ["infrastruktura"],
+    "druhyKyber": [],
+    "coToJe": "Poškozená rozvodna, plynovod, kabel na dně moře nebo trať. Pro domácnost je to výpadek proudu, tepla, vody, internetu nebo dopravy, ať za ním stojí kdokoli.",
+    "proObcana": "Většina výpadků v Česku je porucha, ne útok. Příprava je stejná: vydržet pár dní bez toho, na co jsme zvyklí.",
+    "predem": [
+      "Spočítat si, jak dlouho domácnost vydrží bez proudu a vody, a doplnit, co chybí.",
+      "Hotovost na několik dní, nabitá powerbanka, rádio na baterie, baterka."
+    ],
+    "kdyzNastane": [
+      "Výpadek nehlásit na 112; tísňové linky jsou pro ohrožení života. Poruchu hlaste dodavateli.",
+      "Informace z krizového vysílání Českého rozhlasu a České televize a z kanálu obce."
+    ],
+    "odkazy": [
+      { "nazev": "Hasičský záchranný sbor ČR", "url": "https://www.hzscr.cz/" },
+      { "nazev": "Český rozhlas", "url": "https://www.rozhlas.cz/" },
+      { "nazev": "Kalkulačka odolnosti", "url": "/odolnost/" }
+    ]
+  },
+  {
+    "klic": "kyber",
+    "nazev": "Kybernetický útok na firmu nebo úřad",
+    "kratce": "Napadené počítače obchodu, nemocnice nebo úřadu.",
+    "kategorie": ["kyber"],
+    "druhyKyber": ["utok", "vypadek"],
+    "coToJe": "Někdo napadne počítače obchodního řetězce, nemocnice, dopravce nebo úřadu. Přestane fungovat aplikace, pokladna, objednávky, v krajním případě i chlazení ve skladech, takže se zkazí potraviny. Někdy uniknou data zákazníků.",
+    "proObcana": "Nejde nakoupit přes aplikaci, nefungují věrnostní body, zpozdí se rozvoz. Po úniku dat přicházejí podvodné zprávy, které ho zneužívají.",
+    "predem": [
+      "Nespoléhat na jednu aplikaci ani jeden obchod: mít kartu i hotovost, účtenky si nechávat.",
+      "Pro každou důležitou službu jiné heslo a dvoufázové ověření; únik z jednoho místa pak neotevře ostatní."
+    ],
+    "kdyzNastane": [
+      "Řídit se tím, co firma nebo úřad oznámí sami. Zpráva, která po úniku žádá heslo, kód nebo platbu, je podvod.",
+      "Po oznámeném úniku dat změnit heslo u dané služby a všude, kde bylo stejné."
+    ],
+    "odkazy": [
+      { "nazev": "NÚKIB", "url": "https://nukib.gov.cz/" }
+    ]
+  },
+  {
+    "klic": "podvod",
+    "nazev": "Podvodné zprávy a falešné weby",
+    "kratce": "Zpráva se tváří jako banka, úřad, dopravce nebo známý.",
+    "kategorie": [],
+    "druhyKyber": ["podvod"],
+    "coToJe": "SMS, e-mail, hovor nebo inzerát se tváří jako banka, úřad, dopravce, e-shop nebo známý. Chce peníze, přihlašovací údaje nebo kód z SMS. Po velkém úniku dat nebo při krizi přichází ve vlnách.",
+    "proObcana": "Jediný typ útoku, který míří přímo na peníze jednotlivce. Ztráta je rychlá a vrací se těžko.",
+    "predem": [
+      "Banka, policie ani úřad po vás nikdy nechtějí heslo, PIN ani kód z SMS.",
+      "Domluvit si s blízkými slovo, kterým se poznáte, když přijde „nutná“ žádost o peníze."
+    ],
+    "kdyzNastane": [
+      "Nic nepotvrzovat, na odkaz neklikat. Zavolat bance na číslo z karty a zeptat se.",
+      "Když už jste zaplatili nebo zadali údaje: hned banka, pak policie na 158."
+    ],
+    "odkazy": [
+      { "nazev": "NÚKIB", "url": "https://nukib.gov.cz/" }
+    ]
+  },
+  {
+    "klic": "hybridni",
+    "nazev": "Zastrašování a nátlak",
+    "kratce": "Výhrůžky bombou, provokace u hranic, vniknutí do domů.",
+    "kategorie": ["hybridni"],
+    "druhyKyber": [],
+    "coToJe": "Vlny e-mailových výhrůžek bombou školám, vniknutí do domů politiků, provokace lodí a letadel u hranic. Cílem je strach a zahlcení úřadů; skutečný útok většinou nepřijde, prověřit se musí každý.",
+    "proObcana": "Evakuovaná škola, zavřený úřad, zrušený let. Největší škodu dělá šíření paniky a neověřených zpráv.",
+    "predem": [
+      "Domluvit si s dětmi a školou, jak se o evakuaci dozvíte a kde se sejdete.",
+      "Mít zapnuté varování na mobil a sledovat kanál obce."
+    ],
+    "kdyzNastane": [
+      "Evakuaci neodmítat, i když výhrůžka vypadá planě.",
+      "Nešířit fotky z místa ani neověřené zprávy; čekat na slovo policie nebo školy."
+    ],
+    "odkazy": [
+      { "nazev": "Hasičský záchranný sbor ČR", "url": "https://www.hzscr.cz/" },
+      { "nazev": "Ministerstvo vnitra", "url": "https://www.mvcr.cz/" }
+    ]
+  },
+  {
+    "klic": "zpravodajske",
+    "nazev": "Špionáž a nábor lidí",
+    "kratce": "Fotografování objektů, sledování, přenášení věcí pro cizí službu.",
+    "kategorie": ["zpravodajske"],
+    "druhyKyber": [],
+    "coToJe": "Zadržení lidé, kteří pro cizí službu fotili vojenské objekty, sledovali osoby nebo převáželi balíčky. Oslovení přichází přes Telegram nebo inzerát a platí se pár tisíc za „úkol“.",
+    "proObcana": "Nábor míří i na Čechy, zvlášť na mladé a na lidi v nouzi. Za „brigádu“ hrozí trestní stíhání.",
+    "predem": [
+      "Snadný výdělek za fotky objektů, sledování lidí nebo doručení balíčku bez vysvětlení je nábor, ne brigáda."
+    ],
+    "kdyzNastane": [
+      "Nic neplnit, zprávy nemazat, oslovení nahlásit policii na 158."
+    ],
+    "odkazy": [
+      { "nazev": "Ministerstvo vnitra", "url": "https://www.mvcr.cz/" }
+    ]
+  },
+  {
+    "klic": "hranice",
+    "nazev": "Tlak na hranici",
+    "kratce": "Zavřené přechody, posílené hlídky u hranic s Ruskem a Běloruskem.",
+    "kategorie": ["hranice"],
+    "druhyKyber": [],
+    "coToJe": "Zavřené přechody, posílené hlídky a operace na hranici s Ruskem a Běloruskem, ozbrojení lidé u hraniční čáry. Na českých hranicích nic z toho zatím neplatí.",
+    "proObcana": "Týká se cest na východ: zavřený přechod, kontrola, delší čekání.",
+    "predem": [
+      "Před cestou do Polska, Pobaltí, Finska nebo Rumunska registrace v DROZD a kontrola platných opatření země."
+    ],
+    "kdyzNastane": [
+      "Zavřený přechod neobjíždět mimo značené cesty; řídit se pokyny pohraniční stráže.",
+      "Pomoc a informace u českého velvyslanectví."
+    ],
+    "odkazy": [
+      { "nazev": "DROZD — registrace před cestou", "url": "https://drozd.mzv.cz/" },
+      { "nazev": "Opatření sledovaných zemí", "url": "/zeme/" }
+    ]
+  },
+  {
+    "klic": "ddos",
+    "nazev": "Přetížení webů",
+    "kratce": "Záplava falešných návštěv web na chvíli vyřadí.",
+    "kategorie": [],
+    "druhyKyber": ["ddos"],
+    "coToJe": "Na web úřadu, banky nebo média míří záplava falešných návštěv a stránka chvíli nejde otevřít. Data neunikají. Skupiny hlásící se k Rusku to dělají jako odpověď na politická rozhodnutí.",
+    "proObcana": "Nepohodlí, ne škoda: formulář počká, platba projde jinudy.",
+    "predem": [
+      "Úřední věci s termínem nenechávat na poslední den.",
+      "Znát druhou cestu: telefon, pobočku, datovou schránku."
+    ],
+    "kdyzNastane": [
+      "Zkusit to za hodinu nebo jinou cestou.",
+      "Nevěřit zprávám, které „kvůli výpadku“ chtějí údaje nebo platbu."
+    ],
+    "odkazy": [
+      { "nazev": "NÚKIB", "url": "https://nukib.gov.cz/" }
+    ]
+  }
+]

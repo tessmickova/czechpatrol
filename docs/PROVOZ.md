@@ -411,9 +411,9 @@ zjištění. Kdyby se počítal při sestavení, visel by i na dva dny starém z
 Kandidát, kterého síto označí jako naléhavý (`naliehave.druh`: mobilizace,
 krizové vysílání, článek 4/5, mimořádný stav, hranice ČR, narušení
 vzdušného prostoru Aliance, od 2. 11. 2026 i posílení hranice členského
-státu s Ruskem nebo Běloruskem), se do 48 hodin ukazuje **v hlavním
-sloupci úvodu** s červeným rámečkem (před bannerem internetu) a v boxu
-Souhrn situace, každá zpráva zvlášť s proklikem do fronty
+státu s Ruskem nebo Běloruskem), se do 48 hodin ukazuje v boxu
+Souhrn situace (počet a druh; blok v hlavním sloupci byl 2. 11. 2026
+odstraněn jako příliš poplašný) a ve sloupci Signály z médií, s proklikem do fronty
 (`/udalosti/?tab=cekajici#<id>`) a na zdroj. Je to pořadí ve frontě, ne
 tvrzení: do počtů nevstupuje a odznak říká „čeká na ověření“.
 
@@ -437,6 +437,34 @@ Jak se z něj stane záznam (tři cesty, všechny končí commitem v repozitář
 Pravidlo zůstává: zpráva z jediného média (např. Ukrajinska Pravda
 o narušení vzdušného prostoru) se nezveřejní, dokud k ní není druhý
 nezávislý zdroj — ideálně úřední (ministerstvo obrany dané země, NATO).
+
+### Signály z médií a Souhrn situace jsou jedna množina (doplněno 3. 11. 2026)
+
+Sloupec „Signály z médií“ na úvodu a box „Souhrn situace“ vpravo berou
+zachycené zprávy podle jednoho pravidla (`src/lib/signaly.ts`): naléhavá
+zpráva jde do sloupce vždy, i v cizím jazyce (štítek „naléhavé“, v rozbalení
+„k okamžité kontrole: …“ a „v cizím jazyce“); ostatní cizojazyčné zůstávají
+jen ve frontě a sloupec je ukazuje jako počet s odkazem. Do 3. 11. sloupec
+bral jen česky psané titulky a Souhrn hlásil zprávu z Lotyšska, která ve
+sloupci nebyla.
+
+### Typy útoků a rady občanům (doplněno 3. 11. 2026)
+
+Stránka `/typy-utoku/` řadí typy útoků podle naší evidence (doložené
+případy z `data/incidenty.json` a zprávy z banneru o internetu z
+`data/kyber.json` a `data/kyber-archiv.json`) a u každého typu dává tři
+poslední doložené příklady se zdrojem. Obsah rad je v `data/typy-utoku.json`:
+co to je, co předem, co když nastane, odkazy. Stejné body se ukazují jako
+najížděcí „Co mohu udělat“ u karty záznamu, v detailu, v rozbaleném řádku
+aktualit, u zpráv banneru o internetu a u kandidáta ve frontě
+(`src/components/rada-k-typu.tsx`). O typu rozhoduje kategorie skutku,
+ne souvislosti (`PRIORITA_TYPU` v `src/lib/typy-utoku.ts`).
+
+Pravidla obsahu (hlídá `testy/typy-utoku.test.ts`): odkazy jen na úřady,
+které web používá jinde (HZS, NÚKIB, MV, DROZD, ČRo), nebo na vlastní
+stránky; žádné dávky, úprava vody ani elektřina; žádná evropská statistika
+— čísla jsou počty z naší evidence a stránka to říká. Nový typ = nový
+objekt v JSON s `kategorie` nebo `druhyKyber`, nic dalšího se neprogramuje.
 
 ### Správa: co kde najdete (doplněno 2. 11. 2026)
 
