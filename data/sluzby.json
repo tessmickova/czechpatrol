@@ -1,18 +1,29 @@
 {
-  "aktualizovano": "2026-11-03T14:03:27.911Z",
+  "aktualizovano": "2026-11-03T16:03:19.163Z",
   "stavy": [
     {
       "klic": "cloudflare",
       "stav": "vypadek",
       "popis": "Partial System Outage",
-      "incidenty": [],
+      "incidenty": [
+        {
+          "nazev": "Increased Durable Object Errors in the Dallas, TX US region",
+          "odkaz": "https://www.cloudflarestatus.com/incidents/7gixemnw9oei",
+          "aktualizovano": "2026-11-03T15:38:32.820Z"
+        },
+        {
+          "nazev": "Cloudflare Workers and Pages build errors ",
+          "odkaz": "https://www.cloudflarestatus.com/incidents/nbyxn84kvb6o",
+          "aktualizovano": "2026-11-03T15:15:31.333Z"
+        }
+      ],
       "postizene": [
+        "Cloudflare Sites and Services",
         "Accra, Ghana - (ACC)",
         "Albuquerque, United States - (ABQ)",
-        "Arica, Chile - (ARI)",
-        "Algiers, Algeria - (ALG)"
+        "Arica, Chile - (ARI)"
       ],
-      "zkontrolovano": "2026-11-03T14:03:27.911Z",
+      "zkontrolovano": "2026-11-03T16:03:19.163Z",
       "chyba": null
     },
     {
@@ -21,7 +32,7 @@
       "popis": "All Systems Operational",
       "incidenty": [],
       "postizene": [],
-      "zkontrolovano": "2026-11-03T14:03:27.911Z",
+      "zkontrolovano": "2026-11-03T16:03:19.163Z",
       "chyba": null
     },
     {
@@ -30,7 +41,7 @@
       "popis": "All Systems Operational",
       "incidenty": [],
       "postizene": [],
-      "zkontrolovano": "2026-11-03T14:03:27.911Z",
+      "zkontrolovano": "2026-11-03T16:03:19.163Z",
       "chyba": null
     }
   ]
