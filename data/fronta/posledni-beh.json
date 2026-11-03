@@ -1,5 +1,5 @@
 {
-  "kdy": "2026-11-03T12:01:05.656Z",
+  "kdy": "2026-11-03T14:01:04.172Z",
   "zdroje": [
     {
       "klic": "e-sbirka",
@@ -195,11 +195,10 @@
     },
     {
       "klic": "bundespolizei",
-      "ok": false,
-      "stav": null,
+      "ok": true,
+      "stav": 200,
       "pocetPolozek": 0,
-      "chyba": "fetch failed",
-      "vysledek": "chyba"
+      "vysledek": "ok"
     },
     {
       "klic": "bmi-de",
@@ -241,8 +240,7 @@
       "klic": "kyber",
       "ok": true,
       "stav": null,
-      "pocetPolozek": 2,
-      "chyba": "lupa: robots.txt nedostupný (RFC 9309: nestahovat)",
+      "pocetPolozek": 4,
       "vysledek": "ok"
     },
     {
