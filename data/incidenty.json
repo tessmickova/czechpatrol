@@ -16484,5 +16484,301 @@
       "overeno": "2026-10-18"
     },
     "overeni": "neovereno"
+  },
+  {
+    "id": "i-2026-11-02-eu-chlazeni-obchody",
+    "slug": "eu-kyberutoky-chlazeni-obchody-2026-11",
+    "titulek": "Evropa: kyberútoky vyřadily chlazení v supermarketech v několika zemích EU, Evropská komise mluví o záměrném narušení dodávek potravin",
+    "kratkyTitulek": "Evropa: kyberútoky na chlazení v supermarketech v několika zemích EU",
+    "zeme": "Evropa",
+    "kodZeme": "EU",
+    "kategorie": [
+      "kyber",
+      "infrastruktura",
+      "hybridni"
+    ],
+    "datumUdalosti": "2026-11-02T00:00:00Z",
+    "datumZjisteni": "2026-11-02T00:00:00Z",
+    "aktualizovano": "2026-11-04T14:34:11.062Z",
+    "zavaznost": "Y2",
+    "jistota": "stredni",
+    "stav": "neuvedeno",
+    "atribuce": "neznama",
+    "puvodce": "neznamy",
+    "druh": "pripad",
+    "fakta": [
+      "V pondělí 2. 11. 2026 hlásily desítky supermarketů v Belgii, Lucembursku, Švédsku, Irsku a Estonsku problémy s mrazáky a lednicemi kvůli kybernetickému útoku; podle agentury Belga šlo o prodejny řetězců Ahold Delhaize, Carrefour a Spar (ČTK, Český rozhlas).",
+      "Teploty v lednicích a mrazácích některých prodejen stouply přes noc až na 50 °C; podobný útok zasáhl 12. 10. 2026 francouzské supermarkety (The Guardian, Český rozhlas).",
+      "Evropská komise označila útoky za záměrný pokus narušit dodávky potravin v EU a svolala koordinační schůzky; původce zatím nezná a odmítá spekulovat o zapojení Ruska (France 24, Seznam Zprávy).",
+      "Italská agentura pro kybernetickou bezpečnost vydala 2. 11. 2026 varování před útoky na chladicí řetězce obchodů v několika evropských zemích; italská vláda 3. 11. 2026 po jednání uvedla, že útoky, které zasáhly chlazení některých italských supermarketů, nejsou důvodem k poplachu (ANSA).",
+      "Podle Euronews ze 4. 11. 2026 útok zasáhl desítky supermarketů v šesti zemích, zkazily se tuny potravin a poškozeny byly i čtyři prodejny Coop na Sicílii; Politico 4. 11. 2026 píše o incidentu ve francouzských krevních bankách, který se zdá být s vlnou spojený."
+    ],
+    "neznameho": [
+      "Počet zasažených zemí se podle zdrojů liší: pět (Seznam Zprávy), nejméně sedm (The Guardian), nejméně osm (France 24), devět (Euronews).",
+      "Původce. Žádný úřad ho neuvedl; Komise odmítla spekulace o Rusku, šéf rumunské kybernetické bezpečnosti podle Euronews označil útoky za „poloamatérské“.",
+      "Zda jde o jednu koordinovanou vlnu, nebo o více nezávislých incidentů, a jaký je rozsah v dalších zemích."
+    ],
+    "vyznam": "",
+    "eskalacniSpousteče": [],
+    "deeskalacniSignaly": [],
+    "zdroje": [
+      {
+        "nazev": "ČTK — České noviny — Chladicí zařízení v Evropě zasáhl kybernetický útok, Brusel mluví o záměru",
+        "url": "https://www.ceskenoviny.cz/zpravy/chladici-zarizeni-v-evrope-zasahl-kyberneticky-utok-brusel-mluvi-o-zameru/2896192",
+        "typ": "wire",
+        "publikovano": "2026-11-02T12:53:00.000Z",
+        "primarni": false,
+        "jazyk": "cs"
+      },
+      {
+        "nazev": "Český rozhlas — domácí zprávy — Až 50 stupňů v lednici. Obchody v Belgii, Lucembursku a Švédsku zasáhl kyberútok, podobný jako ve Francii",
+        "url": "https://www.irozhlas.cz/zpravy-svet/az-50-stupnu-v-lednici-obchody-v-belgii-lucembursku-a-svedsku-zasahl-kyberutok_2611021309_lhv",
+        "typ": "media",
+        "publikovano": "2026-11-02T12:09:00.000Z",
+        "primarni": false,
+        "jazyk": "cs"
+      },
+      {
+        "nazev": "The Guardian — World — Shop fridges and freezers across Europe hit by fresh suspected cyber-attack",
+        "url": "https://www.theguardian.com/world/2026/nov/02/supermarket-freezers-across-europe-hit-by-second-suspected-cyber-attack",
+        "typ": "media",
+        "publikovano": "2026-11-02T16:39:20.000Z",
+        "primarni": false,
+        "jazyk": "en"
+      },
+      {
+        "nazev": "France 24 (anglicky) — EU says fridge attacks 'deliberate attempt to disrupt' bloc's food supply",
+        "url": "https://www.france24.com/en/eu-says-fridge-attacks-deliberate-attempt-to-disrupt-bloc-s-food-supply",
+        "typ": "media",
+        "publikovano": "2026-11-02T20:30:07.000Z",
+        "primarni": false,
+        "jazyk": "en"
+      },
+      {
+        "nazev": "Seznam Zprávy — Evropská komise svolala schůzky kvůli kyberútokům na supermarkety, původce nezná",
+        "url": "https://www.seznamzpravy.cz/clanek/zahranicni-evropska-komise-svolala-schuzky-kvuli-kyberutokum-na-supermarkety-puvodce-nezna-319494",
+        "typ": "media",
+        "publikovano": "2026-11-03T13:42:02.000Z",
+        "primarni": false,
+        "jazyk": "cs"
+      },
+      {
+        "nazev": "ANSA (Itálie, anglicky) — Italian Cybersecurity Agency issues alert over hacker attacks on supermarkets",
+        "url": "https://www.ansa.it/english/news/general_news/2026/11/02/italian-cybersecurity-agency-issues-alert-over-hacker-attacks-on-supermarkets_c58bc5ff-cb1d-4b2f-be2a-0d0d9858a355.html",
+        "typ": "wire",
+        "publikovano": "2026-11-02T18:21:33.000Z",
+        "primarni": false,
+        "jazyk": "en"
+      },
+      {
+        "nazev": "ANSA (Itálie, anglicky) — No cause for alarm over cyber attacks on supermarket fridges - govt",
+        "url": "https://www.ansa.it/english/news/2026/11/03/no-cause-for-alarm-over-cyber-attacks-on-supermarket-fridges-govt_5e523b20-3e0e-4330-b99f-32212189fcd7.html",
+        "typ": "wire",
+        "publikovano": "2026-11-03T12:50:22.000Z",
+        "primarni": false,
+        "jazyk": "en"
+      },
+      {
+        "nazev": "Euronews — Which countries in Europe have been hit by supermarket fridge cyber incidents?",
+        "url": "https://www.euronews.com/2026/11/03/which-countries-in-europe-have-been-hit-by-supermarket-fridge-cyber-incidents",
+        "typ": "media",
+        "publikovano": "2026-11-03T10:13:36.000Z",
+        "primarni": false,
+        "jazyk": "en"
+      },
+      {
+        "nazev": "Euronews — Supermarket cyberattacks in Europe hit Italy's Coop stores in Catania and Palermo",
+        "url": "https://www.euronews.com/2026/11/04/supermarket-cyberattacks-in-europe-hit-italys-coop-stores-in-catania-and-palermo",
+        "typ": "media",
+        "publikovano": "2026-11-04T08:43:48.000Z",
+        "primarni": false,
+        "jazyk": "en"
+      },
+      {
+        "nazev": "Politico Europe — Fridge hacks also hit French blood banks",
+        "url": "https://www.politico.eu/article/fridge-hacks-hit-french-blood-banks/",
+        "typ": "media",
+        "publikovano": "2026-11-04T13:37:30.000Z",
+        "primarni": false,
+        "jazyk": "en"
+      }
+    ],
+    "souvisejici": [],
+    "historie": [
+      {
+        "kdy": "2026-11-04T14:34:00.335Z",
+        "text": "Sestaveno ze zachycených zpráv deseti redakcí; úřední potvrzení zatím chybí.",
+        "novySignal": true
+      },
+      {
+        "kdy": "2026-11-04T14:34:11.062Z",
+        "text": "Zveřejněno jako neověřené úředně: dvě nezávislé redakce, úřad zatím nepotvrdil.",
+        "novySignal": false
+      }
+    ],
+    "novy": true,
+    "zapocitanoTyden": "2026-11-02",
+    "aiZpracovano": true,
+    "lidskyOvereno": false,
+    "overeni": "neovereno"
+  },
+  {
+    "id": "i-2026-11-02-eu-bombove-hrozby-lety",
+    "slug": "eu-bombove-hrozby-lety-2026-11",
+    "titulek": "Evropa: vlna bombových hrozeb proti letům 2.–3. 11. 2026, nouzová přistání u Varšavy, v Sofii, Budapešti a ve Španělsku; výbušniny nenalezeny",
+    "kratkyTitulek": "Evropa: vlna bombových hrozeb proti letům, nouzová přistání, výbušniny nenalezeny",
+    "zeme": "Evropa",
+    "kodZeme": "EU",
+    "kategorie": [
+      "hybridni"
+    ],
+    "datumUdalosti": "2026-11-02T00:00:00Z",
+    "datumZjisteni": "2026-11-03T00:00:00Z",
+    "aktualizovano": "2026-11-04T14:34:11.062Z",
+    "zavaznost": "Y1",
+    "jistota": "stredni",
+    "stav": "neuvedeno",
+    "atribuce": "neznama",
+    "puvodce": "neznamy",
+    "druh": "pripad",
+    "fakta": [
+      "V pondělí 2. 11. 2026 přerušila bombová hrozba let Wizz Air z Londýna do Sofie; letadlo doprovodil do Budapešti maďarský Gripen (Novinky.cz, Euronews).",
+      "V úterý 3. 11. 2026 kvůli bombové hrozbě neplánovaně přistál na letišti Varšava-Modlin letoun z Londýna se 181 lidmi na palubě a letiště bylo dočasně uzavřeno (Seznam Zprávy, iDNES.cz, Novinky.cz).",
+      "Podle ČTK s odvoláním na BBC, Sky News a The Guardian poznamenaly 3. 11. 2026 hrozby bombovými útoky nejméně sedm komerčních letů v Evropě; DW uvádí dva lety do Varšavy, let Ryanairu z Londýna do Španělska, dva lety do Říma a let z Izraele do Sofie; výbušniny nebyly nalezeny.",
+      "Bulharská agentura BTA uvedla 3. 11. 2026, že kontroly na letišti v Sofii nenašly na dvou letadlech žádné výbušniny.",
+      "Podle France 24 cílily hrozby 3. 11. 2026 nejméně na deset evropských aerolinek, nejvíc na Ryanair (nejméně čtyři lety); podle la Repubblica ze 4. 11. 2026 šlo o anonymní e-maily letištím a společná režie není doložena.",
+      "Podle Rzeczpospolité s odvoláním na Times of Israel byla 3. 11. 2026 kvůli bombové hrozbě zadržena na řeckém ostrově Syros výletní loď mířící do Izraele; v přístavu uvízlo přes 1 500 lidí."
+    ],
+    "neznameho": [
+      "Kdo hrozby posílá a zda spolu souvisejí; podle la Repubblica není společná režie doložena.",
+      "Přesný počet zasažených letů se podle zdrojů liší (od čtyř po více než deset aerolinek)."
+    ],
+    "vyznam": "",
+    "eskalacniSpousteče": [],
+    "deeskalacniSignaly": [],
+    "zdroje": [
+      {
+        "nazev": "ČTK — České noviny — Hrozby bombovými útoky dnes v Evropě poznamenaly čtyři lety, píší média",
+        "url": "https://www.ceskenoviny.cz/zpravy/hrozby-bombovymi-utoky-dnes-v-evrope-poznamenaly-ctyri-lety-pisi-media/2896808",
+        "typ": "wire",
+        "publikovano": "2026-11-03T14:30:00.000Z",
+        "primarni": false,
+        "jazyk": "cs"
+      },
+      {
+        "nazev": "Novinky.cz — Jedno za druhým. Letadla v Evropě nouzově přistávají kvůli hlášeným bombám",
+        "url": "https://www.novinky.cz/clanek/zahranicni-jedno-za-druhym-letadla-v-evrope-nouzove-pristavaji-kvuli-hlasenym-bombam-40606396",
+        "typ": "media",
+        "publikovano": "2026-11-03T13:23:27.000Z",
+        "primarni": false,
+        "jazyk": "cs"
+      },
+      {
+        "nazev": "Seznam Zprávy — Na letišti u Varšavy neplánovaně přistál letoun kvůli bombové hrozbě",
+        "url": "https://www.seznamzpravy.cz/clanek/zahranicni-na-letisti-u-varsavy-neplanovane-pristal-letoun-kvuli-bombove-hrozbe-319416",
+        "typ": "media",
+        "publikovano": "2026-11-03T10:14:00.000Z",
+        "primarni": false,
+        "jazyk": "cs"
+      },
+      {
+        "nazev": "iDNES.cz — zpravodajství — U Varšavy přistál letoun kvůli bombové hrozbě, letiště uzavřeli",
+        "url": "https://www.idnes.cz/zpravy/zahranicni/u-varsavy-pristal-letoun-kvuli-bombove-hrozbe-letiste-uzavreli.A261103_104532_zahranicni_bro",
+        "typ": "media",
+        "publikovano": "2026-11-03T09:52:00.000Z",
+        "primarni": false,
+        "jazyk": "cs"
+      },
+      {
+        "nazev": "Novinky.cz — Let Wizz Air přerušila bombová hrozba. Letadlo doprovodil do Budapešti gripen",
+        "url": "https://www.novinky.cz/clanek/zahranicni-evropa-let-wizz-air-prerusila-bombova-hrozba-letadlo-doprovodil-do-budapesti-gripen-40606171",
+        "typ": "media",
+        "publikovano": "2026-11-02T14:47:24.000Z",
+        "primarni": false,
+        "jazyk": "cs"
+      },
+      {
+        "nazev": "The Guardian — World — Four planes flying across Europe targeted by bomb threats",
+        "url": "https://www.theguardian.com/world/2026/nov/03/four-planes-flying-across-europe-targeted-by-bomb-threats",
+        "typ": "media",
+        "publikovano": "2026-11-03T14:21:24.000Z",
+        "primarni": false,
+        "jazyk": "en"
+      },
+      {
+        "nazev": "Deutsche Welle — Europe — Multiple flights to European airports targeted by bomb threats",
+        "url": "https://www.dw.com/en/multiple-flights-to-european-airports-targeted-by-bomb-threats/a-79842434?maca=en-rss-en-eu-2092-rdf",
+        "typ": "media",
+        "publikovano": "2026-11-03T14:18:00.000Z",
+        "primarni": false,
+        "jazyk": "en"
+      },
+      {
+        "nazev": "France 24 (anglicky) — Bomb threats against European airlines disrupt flights across the bloc",
+        "url": "https://www.france24.com/en/europe/20261103-bomb-threats-disrupt-europe-flights",
+        "typ": "media",
+        "publikovano": "2026-11-03T15:41:48.000Z",
+        "primarni": false,
+        "jazyk": "en"
+      },
+      {
+        "nazev": "Euronews — Bomb threats target four European flights as scares spread across the continent",
+        "url": "https://www.euronews.com/2026/11/03/bomb-threats-target-four-european-flights-as-scares-spread-across-the-continent",
+        "typ": "media",
+        "publikovano": "2026-11-03T15:45:16.000Z",
+        "primarni": false,
+        "jazyk": "en"
+      },
+      {
+        "nazev": "Euronews — Wizz Air flight from London to Sofia diverts after 'bomb threat'",
+        "url": "https://www.euronews.com/2026/11/02/wizz-air-flight-from-london-to-sofia-diverts-after-bomb-threat",
+        "typ": "media",
+        "publikovano": "2026-11-02T14:39:37.000Z",
+        "primarni": false,
+        "jazyk": "en"
+      },
+      {
+        "nazev": "BTA (státní agentura Bulharska) — UPDATED Inspections at Sofia Airport Find No Explosives on Two Aircraft after Bomb Threats",
+        "url": "https://www.bta.bg/en/news/bulgaria/1238833-inspections-at-sofia-airport-find-no-explosives-on-two-aircraft-after-bomb-threa",
+        "typ": "wire",
+        "publikovano": "2026-11-03T00:00:00.000Z",
+        "primarni": false,
+        "jazyk": "en"
+      },
+      {
+        "nazev": "la Repubblica (Itálie) — Falsi allarmi bomba su sette aerei in Europa: caccia italiani in volo",
+        "url": "https://www.repubblica.it/politica/2026/11/04/news/falsi_allarmi_bomba_sette_aerei_europa_caccia_italiani_in_volo-425697545/",
+        "typ": "media",
+        "publikovano": "2026-11-04T00:00:00.000Z",
+        "primarni": false,
+        "jazyk": "it"
+      },
+      {
+        "nazev": "Rzeczpospolita (Polsko) — Seria alarmów bombowych. Ponad 1500 osób zatrzymanych na greckiej wyspie",
+        "url": "https://turystyka.rp.pl/zanim-wyjedziesz/art45441361-seria-alarmow-bombowych-ponad-1500-osob-zatrzymanych-na-greckiej-wyspie",
+        "typ": "media",
+        "publikovano": "2026-11-04T00:16:15.000Z",
+        "primarni": false,
+        "jazyk": "pl"
+      }
+    ],
+    "souvisejici": [],
+    "historie": [
+      {
+        "kdy": "2026-11-04T14:34:00.335Z",
+        "text": "Sestaveno ze zachycených zpráv třinácti redakcí; úřední potvrzení zatím chybí.",
+        "novySignal": true
+      },
+      {
+        "kdy": "2026-11-04T14:34:11.062Z",
+        "text": "Zveřejněno jako neověřené úředně: dvě nezávislé redakce, úřad zatím nepotvrdil.",
+        "novySignal": false
+      }
+    ],
+    "novy": true,
+    "zapocitanoTyden": "2026-11-03",
+    "aiZpracovano": true,
+    "lidskyOvereno": false,
+    "overeni": "neovereno"
   }
 ]

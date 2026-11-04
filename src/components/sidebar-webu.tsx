@@ -1,5 +1,5 @@
 import { pripady } from "@/lib/agregace";
-import { celkovyStav, incidenty, kampane, kandidati, overovaneAktivni, posledniOvereni, tipy as vsechnyTipy, tlakCr, urovenObcanu } from "@/lib/data";
+import { celkovyStav, incidenty, kampane, kandidati, posledniOvereni, tipy as vsechnyTipy, tlakCr, urovenObcanu } from "@/lib/data";
 import { odlehci } from "@/lib/odlehci";
 import { pripravitTed } from "@/lib/priprava-ted";
 import { pulz } from "@/lib/pulz";
@@ -38,7 +38,6 @@ export function SidebarWebu() {
       {...casyProPanel(vse, kamp)}
       kandidati={kandidati().filter((k) => k.naliehave || ted - new Date(k.publikovano ?? k.zachyceno).getTime() <= 72 * 3_600_000)}
       zkontrolovano={posledniOvereni()}
-      overovane={overovaneAktivni()}
       ted={ted}
       tipy={<MiniBox nazev="Tipy k přípravě" ikona="fajfka" ton="klid" souhrn={tipyNahled.length ? tipyNahled[0].nadpis : "Zatím bez tipu"}><TipyKPriprave ted={ted} vnoreny /></MiniBox>}
     />

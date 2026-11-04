@@ -5,7 +5,7 @@ import type { StavObcanu } from "@/lib/data";
 import { NAZVY_HROZEB, type PripravitTed as DataPripravy } from "@/lib/priprava";
 import type { Pulz } from "@/lib/pulz";
 import { PASMA, UROVNE } from "@/lib/skala";
-import type { CelkovyStav, Kandidat, Overovana, Uroven } from "@/lib/typy";
+import type { CelkovyStav, Kandidat, Uroven } from "@/lib/typy";
 import { casPraha, datumPraha } from "@/lib/cas";
 import { useT } from "@/lib/i18n";
 import { BUY_ME_A_COFFEE_URL, HEROHERO_URL, KANALY } from "@/config/web";
@@ -13,6 +13,7 @@ import { Ikona } from "./ikony";
 import { ObloukovyMerak } from "./mericky";
 import { Cara, poDnech, Sloupky } from "./mikrograf";
 import { Tlacitko } from "./ui";
+import { InternetBox } from "./internet-banner";
 import { stavNalehavosti } from "./urgentni";
 import { HlavickaWidgetu, IkonaKruh } from "./widgety";
 import { Napoveda, VykladUrovne } from "./zaklad";
@@ -47,12 +48,12 @@ function Maly({ nadpis, obdobi, uroven, slovo, neutralni, popis, dodatek, navic,
   );
 }
 
-export function SidebarUvodu({ stav, cr, crHistoricky, crPocet, crKampane = [], obcane, pulz, priprava, casy, casyCz, kandidati, zkontrolovano, overovane = [], ted, tipy }: {
+export function SidebarUvodu({ stav, cr, crHistoricky, crPocet, crKampane = [], obcane, pulz, priprava, casy, casyCz, kandidati, zkontrolovano, ted, tipy }: {
   stav: CelkovyStav; cr: Uroven | null; crHistoricky: Uroven | null; crPocet: { pripadu: number; kampani: number };
   /** Operace proti občanům v Česku za 90 dní — do nápovědy u Česka: téma a zasažená média (ostražitost, ne další box). */
   crKampane?: { slug: string; nazev: string; probiha: boolean; odhaleno: string; media: string[] }[];
   obcane: StavObcanu;
-  pulz?: Pulz; priprava?: DataPripravy; casy: string[]; casyCz: string[]; kandidati: Kandidat[]; zkontrolovano: string | null; overovane?: Overovana[]; ted: number; /** Box Tipy k přípravě — stojí před „AI radí“ (24. 9. 2026). */ tipy?: React.ReactNode;
+  pulz?: Pulz; priprava?: DataPripravy; casy: string[]; casyCz: string[]; kandidati: Kandidat[]; zkontrolovano: string | null; ted: number; /** Box Tipy k přípravě — stojí před „AI radí“ (24. 9. 2026). */ tipy?: React.ReactNode;
 }) {
   /* Naléhavé zprávy chytá sběr, tak se čerstvost měří jeho posledním průchodem, ne ručním ověřením. */
   const kontrola = pulz?.kdy ?? zkontrolovano;
@@ -81,7 +82,7 @@ export function SidebarUvodu({ stav, cr, crHistoricky, crPocet, crKampane = [], 
       </div>
 
       {/*
-        Souhrn situace a Právě ověřujeme vedle sebe (24. 9. 2026). 26. 9.: stejná
+        Souhrn situace a Internet v Česku vedle sebe (24. 9. 2026, od 4. 11. 2026 místo „Právě ověřujeme“). 26. 9.: stejná
         stavba i výška — nadpis nahoře na jedné lince, text pod ním na nejvýš tři
         řádky; tón nese rámeček, ne různé rozložení.
       */}
@@ -119,12 +120,8 @@ export function SidebarUvodu({ stav, cr, crHistoricky, crPocet, crKampane = [], 
             </span>
           )}
         </Napoveda>
-        <Napoveda cele plna popis={overovane.length ? <span className="block">{overovane.slice(0, 3).map((o) => <span key={o.slug} className="mb-1.5 block"><b className="font-semibold text-inkoust">{o.kratce ?? o.coSeHlasi}</b><span className="block">{o.coSeHlasi}</span>{o.coRikajiUrady[0] && <span className="block text-tlum2">Úřady: {o.coRikajiUrady[0]}</span>}</span>)}<span className="block text-tlum2">Nepotvrzené zprávy. Do počtů ani hodnocení nevstupují.</span></span> : <span className="block">Sem patří kolující zprávy, které prověřujeme. Teď žádná není.</span>}>
-          <span aria-label="Právě ověřujeme" className="flex h-full min-h-[118px] w-full flex-col rounded-[22px] border border-dashed border-jantar/55 bg-jantar/[0.06] px-3.5 py-3 text-left">
-            <span className="flex min-h-[34px] items-center gap-2"><IkonaKruh ikona="otaznik" velikost="s" /><span className="nadpis-boxu min-w-0 flex-1 leading-tight">Právě ověřujeme</span><span className="cislice text-tlum2">{overovane.length}</span></span>
-            <span className="mt-2 line-clamp-3 text-male font-bold leading-snug text-inkoust">{overovane[0] ? overovane[0].kratce ?? overovane[0].coSeHlasi : "Žádná kolující zpráva"}</span>
-          </span>
-        </Napoveda>
+        {/* Internet v Česku místo „Právě ověřujeme“ (4. 11. 2026, provozovatelka: Souhrn situace stačí). */}
+        <InternetBox ted={ted} />
       </div>
 
       {/* Situace teď */}
