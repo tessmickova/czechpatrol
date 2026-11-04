@@ -1,5 +1,5 @@
 {
-  "aktualizovano": "2026-11-04T00:11:49.290Z",
+  "aktualizovano": "2026-11-04T02:03:15.919Z",
   "stavy": [
     {
       "klic": "cloudflare",
@@ -12,27 +12,19 @@
         "Annaba, Algeria - (AAE)",
         "Baku, Azerbaijan - (GYD)"
       ],
-      "zkontrolovano": "2026-11-04T00:11:49.290Z",
+      "zkontrolovano": "2026-11-04T02:03:15.919Z",
       "chyba": null
     },
     {
       "klic": "zoom",
       "stav": "omezeni",
-      "popis": "Partially Degraded Service",
-      "incidenty": [
-        {
-          "nazev": "Service Degradation Affecting Outbound MMS Services in the US region",
-          "odkaz": "https://stspg.io/d46nxybl90r5",
-          "aktualizovano": "2026-11-03T14:22:51.545-08:00"
-        }
-      ],
+      "popis": "Service Under Maintenance",
+      "incidenty": [],
       "postizene": [
         "Zoom Phone",
-        "SMS/MMS (Inbound/Outbound)",
-        "Zoom Phone - EMEA",
-        "Zoom Phone - NORTH AMERICA"
+        "Zoom Phone - EMEA"
       ],
-      "zkontrolovano": "2026-11-04T00:11:49.290Z",
+      "zkontrolovano": "2026-11-04T02:03:15.919Z",
       "chyba": null
     },
     {
@@ -41,7 +33,7 @@
       "popis": "All Systems Operational",
       "incidenty": [],
       "postizene": [],
-      "zkontrolovano": "2026-11-04T00:11:49.290Z",
+      "zkontrolovano": "2026-11-04T02:03:15.919Z",
       "chyba": null
     }
   ]
