@@ -499,6 +499,50 @@ Nevstupují: neověřené zprávy a zachycené signály (fronta), reakce
 a prohlášení, projevy bez skutku, údery uvnitř Ukrajiny a Ruska bez
 následku pro sledované země, sociální sítě, historické záznamy.
 
+### Postranní panel: Souhrn situace a Internet v Česku (doplněno 4. 11. 2026)
+
+Box „Právě ověřujeme“ je z panelu pryč (provozovatelka: Souhrn situace
+stačí). Na jeho místě je **Internet v Česku** (`InternetBox`
+v `src/components/internet-banner.tsx`): stav jedním slovem, počet zpráv
+za 72 h, po najetí zprávy, tipy a „Automaticky ze zpráv · neověřeno“.
+V hlavním sloupci zůstává rámeček jen při probíhající vlně útoků
+(`InternetBanner jenUtok`). Data „Právě ověřujeme“ (`data/overujeme.json`)
+zůstávají pro stránku Události.
+
+### Kde se na webu sbírají zprávy a odkud jsou (doplněno 4. 11. 2026)
+
+| Místo | Odkud | Kdy se obnoví |
+|---|---|---|
+| Úvod · Doloženo zdroji | zveřejněné záznamy (`incidenty.json`, lidsky nebo automaticky ověřené) | po schválení návrhu nebo automatickém zveřejnění |
+| Úvod · Signály z médií | záznamy „neověřeno úředně“ + zachycené zprávy z fronty | každý sběr (hodinově) |
+| Úvod · Internet v Česku | `kyber.json` (média a úřady o internetu v ČR) | každý sběr |
+| Úvod · Tipy k přípravě | `tipy.json` (ručně, se zdroji a platností) | ručně |
+| Události | totéž co úvod, všechny záložky | jako úvod |
+| Země, Analýzy, Typy útoků, feed.xml, Telegram | zveřejněné záznamy | po zveřejnění |
+
+Když „Doloženo zdroji“ stárne, není to chyba kódu: v `data/navrhy.json`
+čekají hotové návrhy na schválení (`/sprava/`, nebo `npm run spravce
+schval <id>`). Válečně relevantní návrh ze dvou redakcí zveřejní sběr sám
+jako „neověřeno úředně“ (`npm run spravce zverejni`, běží v `sber.yml`).
+
+### Sloupce na úvodu a kolik redakcí zpráva potřebuje (doplněno 4. 11. 2026)
+
+- Oba sloupce (Doloženo zdroji, Signály z médií) ukazují **osm řádků** i na
+  telefonu; dřív se na mobilu schovávalo od šestého.
+- Do Signálů jde jen zpráva **o útoku nebo ohrožení** (`jeOUtoku`
+  v `src/lib/signaly.ts`: slova o útoku, sabotáži, dronech, kyberútoku,
+  hrozbě, špionáži…; ne domácí politika, cvičení, kultura, nehody).
+  Co neprojde, zůstává ve frontě a sloupec to ukazuje jen jako počet
+  „+ N dalších ve frontě“.
+- **Kolik redakcí**: zpráva o útoku stojí na dvou nezávislých redakcích
+  (dvě různé domény). Je-li mezi zdroji redakce s doloženým průnikem
+  (`data/napadane-redakce.json`, každá položka se opírá o rozebranou
+  operaci v `kampane.json`), chce to **tři**. Napodobenina redakce
+  (`falesne`, např. lrozhlas.cz) není zdroj nikdy. Pravidlo je v jednom
+  modulu `nastroje/napadane-redakce.mjs` a platí pro automatické
+  zveřejnění, kontrolu dat, rozhlas do kanálů i zadání rutiny. Seznam
+  doplňuje provozovatelka; `do` říká, kdy riziko pominulo.
+
 ### Správa: co kde najdete (doplněno 2. 11. 2026)
 
 Po přihlášení je v hlavičce tlačítko **Účet** (u správce **Správa**

@@ -1,0 +1,28 @@
+{
+  "_poznamka": "Redakce, do kterých někdo prokazatelně pronikl, a napodobeniny redakcí, které kolují. Zpráva o útoku stojí na dvou nezávislých redakcích; když je mezi zdroji napadená redakce, chce to tři (provozovatelka 4. 11. 2026). Napodobenina se jako zdroj nepočítá nikdy. Každá položka se opírá o rozebranou operaci v data/kampane.json (klíč `kampan`); `do` = kdy riziko pominulo (null = platí). Doménu doplňuje provozovatelka; bez ní se položka pozná podle jména zdroje.",
+  "redakce": [
+    {
+      "nazev": "Polský rozhlas PiK",
+      "domena": null,
+      "duvod": "Průnik do webu regionální stanice; už zveřejněný článek byl přepsán na podvrh (srpen 2026).",
+      "kampan": "tesinsko-2026",
+      "od": "2026-08-17",
+      "do": null
+    },
+    {
+      "nazev": "Polská tisková agentura PAP",
+      "domena": "pap.pl",
+      "duvod": "Průnik přímo do redakčního systému agentury, podvržená zpráva o mobilizaci (květen 2024).",
+      "kampan": "polsko-pap-mobilizace-2024",
+      "od": "2024-05-31",
+      "do": null
+    }
+  ],
+  "falesne": [
+    {
+      "domena": "lrozhlas.cz",
+      "napodobuje": "irozhlas.cz",
+      "kampan": "tesinsko-2026"
+    }
+  ]
+}

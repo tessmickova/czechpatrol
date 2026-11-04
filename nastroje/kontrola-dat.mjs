@@ -22,6 +22,7 @@ import { zkontrolujZaznam } from "./bezpecnost-obsahu.mjs";
 import { chybySouhrnu } from "./souhrn-situace.mjs";
 import { klicAdresy } from "./klic-adresy.mjs";
 import { podobnaUdalost } from "./podobna-udalost.mjs";
+import { jeFalesnaRedakce, nezavisleRedakce, potrebnychRedakci } from "./napadane-redakce.mjs";
 
 const koren = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const cti = (f) => JSON.parse(fs.readFileSync(path.join(koren, "data", f), "utf-8"));
@@ -347,8 +348,11 @@ for (const i of incidenty) {
 */
 for (const i of incidenty) {
   if (i.overeni !== "neovereno") continue;
-  const domeny = new Set((i.zdroje ?? []).map((z) => { try { return new URL(z.url).hostname.replace(/^www\./, ""); } catch { return null; } }).filter((d) => d && d !== "news.google.com"));
-  if (domeny.size < 2) chyby.push(`${i.slug}: neověřený záznam potřebuje aspoň dvě nezávislé redakce (různé domény), má ${domeny.size}`);
+  /* Dvě redakce; s napadenou redakcí mezi zdroji tři, napodobenina se nepočítá (4. 11. 2026, data/napadane-redakce.json). */
+  const potreba = potrebnychRedakci(i.zdroje ?? []);
+  const redakci = nezavisleRedakce(i.zdroje ?? []);
+  if (redakci < potreba) chyby.push(`${i.slug}: neověřený záznam potřebuje aspoň ${potreba === 3 ? "tři" : "dvě"} nezávislé redakce (různé domény), má ${redakci}`);
+  for (const z of i.zdroje ?? []) if (jeFalesnaRedakce(z)) chyby.push(`${i.slug}: zdroj je napodobenina redakce — ${z.url}`);
   if (i.jistota === "potvrzeno" || i.jistota === "vysoka") chyby.push(`${i.slug}: neověřený záznam nesmí mít jistotu „${i.jistota}“`);
   if (i.vyznam) chyby.push(`${i.slug}: neověřený záznam nesmí nést hodnocení projektu`);
   if (i.lidskyOvereno) chyby.push(`${i.slug}: neověřený záznam nemůže být zároveň lidsky ověřený`);

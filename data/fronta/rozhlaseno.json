@@ -32,6 +32,10 @@
     "asa-dab-2026-09": {
       "kdy": "2026-09-28T05:55:16.382Z",
       "messageId": 53
+    },
+    "chlazeni-obchody-2026-11": {
+      "kdy": "2026-11-04T14:37:41.627Z",
+      "messageId": 67
     }
   },
   "prehledy": {
@@ -1213,6 +1217,6 @@
     }
   },
   "kyber": {
-    "stav": "pozor"
+    "stav": "klid"
   }
 }

@@ -3,6 +3,8 @@ import { datumCas } from "@/lib/format";
 import { CO_TO_JE, NADPIS_STAVU, stavKyber, TIPY_KYBER, VETA_STAVU, type SnimekKyber } from "@/lib/kyber";
 import { Ikona } from "./ikony";
 import { RadaKTypu } from "./rada-k-typu";
+import { IkonaKruh } from "./widgety";
+import { Napoveda } from "./zaklad";
 
 /*
   Banner „Internet v Česku“ (1. 10. 2026). Pro seniora i dítě: jedna věta,
@@ -17,10 +19,51 @@ import { RadaKTypu } from "./rada-k-typu";
 const snimek = data as SnimekKyber;
 const MAX_STARI_H = 24;
 
-export function InternetBanner({ ted }: { ted: number }) {
+/*
+  Box do postranního panelu (4. 11. 2026, provozovatelka): místo „Právě
+  ověřujeme“ vedle Souhrnu situace. Stejná stavba jako Souhrn: nadpis,
+  stav jedním slovem, počet zpráv; zprávy, tipy a rady až po najetí.
+  Bez čerstvých dat box říká „bez údaje“ — nikdy „klid“.
+*/
+export function InternetBox({ ted }: { ted: number }) {
+  const cerstve = Boolean(snimek.nacteno && ted - new Date(snimek.nacteno).getTime() <= MAX_STARI_H * 3_600_000);
+  const stav = cerstve ? stavKyber(snimek.zpravy, ted) : null;
+  const posledni = cerstve ? snimek.zpravy.filter((z) => ted - new Date(z.kdy).getTime() <= 72 * 3_600_000).slice(0, 3) : [];
+  const slovo = stav === "utok" ? "Probíhá vlna útoků" : stav === "pozor" ? "Zvýšená pozornost" : stav === "klid" ? "Bez hlášených útoků" : "Bez údaje";
+  const tecka = stav === "utok" ? "bg-akcent" : stav === "pozor" ? "bg-jantar" : stav === "klid" ? "bg-klid" : "bg-tlum2";
+  return (
+    <Napoveda cele plna vpravo popis={<span className="block">
+      <span className="block text-inkoust">{stav ? VETA_STAVU[stav] : "Zprávy o internetu v Česku se v posledním dni nepodařilo přečíst."}</span>
+      {posledni.length > 0 && (
+        <span className="mt-1.5 block space-y-1">
+          {posledni.map((z) => (
+            <span key={z.id} className="block">
+              <a href={z.odkaz} target="_blank" rel="nofollow noopener noreferrer" className="font-semibold text-inkoust underline decoration-linka underline-offset-4 hover:decoration-akcent">{z.titulek}</a>
+              <span className="block text-tlum2">{CO_TO_JE[z.druh].slovo} · {z.vydavatel ?? (z.uredni ? "úřad" : "médium")} · {datumCas(z.kdy)}</span>
+            </span>
+          ))}
+        </span>
+      )}
+      <span className="mt-2 block border-t border-linka/60 pt-2 text-tlum">
+        {TIPY_KYBER.map((t, i) => <span key={t} className="block">{i + 1}. {t}</span>)}
+      </span>
+      <span className="mt-1.5 block text-tlum2">Automaticky ze zpráv · neověřeno</span>
+    </span>}>
+      <span role="status" aria-label="Internet v Česku" className="flex h-full min-h-[118px] w-full flex-col rounded-[22px] border border-linka bg-plocha2/40 px-3.5 py-3 text-left">
+        <span className="flex min-h-[34px] items-center gap-2"><IkonaKruh ikona="zamek" velikost="s" /><span className="nadpis-boxu leading-tight">Internet v Česku</span></span>
+        <span className="mt-2 flex items-start gap-2 text-male font-bold leading-snug text-inkoust"><span aria-hidden className={`mt-[7px] h-[6px] w-[6px] shrink-0 rounded-full ${tecka}`} />{slovo}</span>
+        <span className="mt-1 block text-mikro leading-snug text-tlum">{posledni.length ? `${posledni.length} ${posledni.length === 1 ? "zpráva" : posledni.length < 5 ? "zprávy" : "zpráv"} za 72 h` : cerstve ? "žádná zpráva za 72 h" : "data starší než den"}</span>
+        <span className="mt-auto pt-2 text-mikro text-tlum2">jak se chránit →</span>
+      </span>
+    </Napoveda>
+  );
+}
+
+export function InternetBanner({ ted, jenUtok = false }: { ted: number; /** Jen rámeček při vlně útoků; klidový řádek je v postranním panelu. */ jenUtok?: boolean }) {
   const cerstve = snimek.nacteno && ted - new Date(snimek.nacteno).getTime() <= MAX_STARI_H * 3_600_000;
   if (!cerstve) return null;
   const stav = stavKyber(snimek.zpravy, ted);
+  if (jenUtok && stav !== "utok") return null;
   const posledni = snimek.zpravy.filter((z) => ted - new Date(z.kdy).getTime() <= 72 * 3_600_000).slice(0, 3);
 
   /*

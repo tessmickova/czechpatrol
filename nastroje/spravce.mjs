@@ -32,6 +32,7 @@ import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { maUredniZdroj } from "./uredni-zdroj.mjs";
+import { dostRedakci, jeFalesnaRedakce, nezavisleRedakce as nezavisleRedakciPodleSeznamu, potrebnychRedakci } from "./napadane-redakce.mjs";
 import { podobnaUdalost } from "./podobna-udalost.mjs";
 import { privilegovanePokyny, textyZaznamu } from "./privilegovane-pokyny.mjs";
 
@@ -556,7 +557,8 @@ function dobreDolozeny(n) {
   const zdroje = n.zdroje ?? [];
   return (
     (n.kam ?? "zaznam") === "zaznam" &&
-    zdroje.length >= 2 &&
+    /* Dvě redakce; s napadenou redakcí mezi zdroji tři (4. 11. 2026). Napodobenina se nepočítá. */
+    nezavisleRedakciPodleSeznamu(zdroje) >= potrebnychRedakci(zdroje) &&
     /*
       Úřední zdroj se pozná podle adresy, ne podle toho, co si o sobě napsal.
       Dřív stačilo `typ: "primary"` — a tak se 20. 9. 2026 zveřejnil sám
@@ -663,15 +665,9 @@ export function valecneRelevantni(n) {
   return kat.has("zpravodajske") && RUSKO_V_TEXTU.test(text);
 }
 
+/* Od 4. 11. 2026 z nastroje/napadane-redakce.mjs: napodobenina redakce se nepočítá. */
 export function nezavisleRedakce(zdroje) {
-  const domeny = new Set();
-  for (const z of zdroje ?? []) {
-    try {
-      const d = new URL(z.url).hostname.replace(/^www\./, "");
-      if (d !== "news.google.com") domeny.add(d);
-    } catch { /* neplatná adresa se nepočítá */ }
-  }
-  return domeny.size;
+  return nezavisleRedakciPodleSeznamu(zdroje);
 }
 
 function zverejniNeoverene() {
@@ -683,7 +679,7 @@ function zverejniNeoverene() {
   const slugy = new Set(inc.map((x) => x.slug));
   const { ven: kZverejneni, odlozene } = bezDuplicit(navrhy.filter((n) =>
     (n.kam ?? "zaznam") === "zaznam" && !jiz.has(n.id) && (n.fakta ?? []).length > 0 &&
-    nezavisleRedakce(n.zdroje) >= 2 && !maUredniZdroj(n.zdroje ?? []) && valecneRelevantni(n) &&
+    dostRedakci(n.zdroje) && !(n.zdroje ?? []).some((z) => jeFalesnaRedakce(z)) && !maUredniZdroj(n.zdroje ?? []) && valecneRelevantni(n) &&
     privilegovanePokyny(textyZaznamu(n)).length === 0 &&
     (n.druh !== "aktualizace" || slugy.has(n.navazujeNa))), inc);
   if (!kZverejneni.length) {

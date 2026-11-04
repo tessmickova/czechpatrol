@@ -16,9 +16,23 @@ import { jeCesky } from "./jazyk";
 */
 type Zachycena = { titulek: string; kodZeme: string | null; naliehave?: unknown };
 
+/*
+  Jen zprávy o útoku nebo ohrožení (4. 11. 2026, provozovatelka: žádné
+  „nesmyslné zprávy od politiků“ ani věci, které se netýkají útoků na
+  Evropu, infrastrukturu, systémy a obchody). Síto pouští do fronty i to,
+  co jen zavadí o klíčové slovo — komedii s „náloží“ v anotaci, popálení
+  od plynové kartuše, hledání ostatků vojáků. Fronta je na to správné
+  místo; sloupec na úvodu ne. Slova v titulku, česky, slovensky, anglicky.
+*/
+const O_UTOKU = /útok|utok|útoč|napad|sabot|žhář|zapál|zapal|podpál|výbuch|exploz|bomb|nálož|hrozb|výhrůž|vyhrůž|vyhrož|zastraš|dron|bezpilot|naruš|sestřel|vzdušn\S* prostor|kyber|hacker|hack|ransomware|únik\S* dat|phishing|podvod|špion|spion|diverz|provokac|mobilizac|poplach|evakuac|kabel|plynovod|ropovod|rozvodn|elektrárn|energetik|letišt|želez|hranic|teror|dezinform|manipulac|propagand|falešn|podvrž|zadrž|zatkl|zatčen|vyhost|rušení|raket|střel|munic|zbran|attack|sabotage|arson|explosion|blast|threat|drone|airspace|shot down|cyber|breach|spy|espionage|detain|arrest|mobilis|mobiliz|incursion|border|infrastructure|outage|pipeline|jamming|disinformation|intercept/i;
+/* Co útok není, i když tam slovo padne: domácí politika, cvičení, kultura, sport, nehody v domácnosti. */
+const NE_UTOK = /ústavní kriz|koalic|volby|volební|průzkum|sněmovn|manévr|cvičení|komedie|film|seriál|koncert|fotbal|hokej|dědictv|kartuš|recenz/i;
+
+export const jeOUtoku = (titulek: string): boolean => O_UTOKU.test(titulek) && !NE_UTOK.test(titulek);
+
 export function jeSignal(k: Zachycena): boolean {
   if (k.naliehave) return true;
-  if (!jeCesky(k.titulek) || jeJenProjev(k.titulek)) return false;
+  if (!jeCesky(k.titulek) || jeJenProjev(k.titulek) || !jeOUtoku(k.titulek)) return false;
   /*
     Údery uvnitř Ukrajiny a Ruska bez doloženého následku pro sledované země
     jsou mimo rozsah (CLAUDE.md, rozsah války). Zbytek posoudí ověřovatel ve frontě.
