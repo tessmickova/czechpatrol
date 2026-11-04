@@ -14,6 +14,7 @@ import { ObloukovyMerak } from "./mericky";
 import { Cara, poDnech, Sloupky } from "./mikrograf";
 import { Tlacitko } from "./ui";
 import { InternetBox } from "./internet-banner";
+import type { SouhrnInternetu } from "@/lib/kyber-souhrn";
 import { stavNalehavosti } from "./urgentni";
 import { HlavickaWidgetu, IkonaKruh } from "./widgety";
 import { Napoveda, VykladUrovne } from "./zaklad";
@@ -48,10 +49,12 @@ function Maly({ nadpis, obdobi, uroven, slovo, neutralni, popis, dodatek, navic,
   );
 }
 
-export function SidebarUvodu({ stav, cr, crHistoricky, crPocet, crKampane = [], obcane, pulz, priprava, casy, casyCz, kandidati, zkontrolovano, ted, tipy }: {
+export function SidebarUvodu({ stav, cr, crHistoricky, crPocet, crKampane = [], internet, obcane, pulz, priprava, casy, casyCz, kandidati, zkontrolovano, ted, tipy }: {
   stav: CelkovyStav; cr: Uroven | null; crHistoricky: Uroven | null; crPocet: { pripadu: number; kampani: number };
   /** Operace proti občanům v Česku za 90 dní — do nápovědy u Česka: téma a zasažená média (ostražitost, ne další box). */
   crKampane?: { slug: string; nazev: string; probiha: boolean; odhaleno: string; media: string[] }[];
+  /** Box Internet v Česku: co se děje a kde, za 72 h (server). */
+  internet?: SouhrnInternetu;
   obcane: StavObcanu;
   pulz?: Pulz; priprava?: DataPripravy; casy: string[]; casyCz: string[]; kandidati: Kandidat[]; zkontrolovano: string | null; ted: number; /** Box Tipy k přípravě — stojí před „AI radí“ (24. 9. 2026). */ tipy?: React.ReactNode;
 }) {
@@ -121,7 +124,7 @@ export function SidebarUvodu({ stav, cr, crHistoricky, crPocet, crKampane = [], 
           )}
         </Napoveda>
         {/* Internet v Česku místo „Právě ověřujeme“ (4. 11. 2026, provozovatelka: Souhrn situace stačí). */}
-        <InternetBox ted={ted} />
+        <InternetBox data={internet} />
       </div>
 
       {/* Situace teď */}

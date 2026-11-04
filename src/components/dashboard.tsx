@@ -8,6 +8,8 @@
 */
 
 import { HlavickaWidgetu, IkonaKruh } from "./widgety";
+import type { SouhrnInternetu } from "@/lib/kyber-souhrn";
+import { TipyBox } from "./tipy";
 import { AktualitySloupce } from "./aktuality-sloupce";
 import { Znacka } from "./znacka";
 import { casyProPanel } from "@/lib/casy-panelu";
@@ -418,7 +420,7 @@ const TECKA_SLUZBY: Record<StavSluzby, string> = { provoz: "bg-klid", omezeni: "
 
 export function Dashboard({
   stav, pravni, natoPolozky, provozPolozky, overeno, vse, neprosle, kandidati, nepotvrzene = [], tydny, watchlist, crHistoricky, hybridni, obcane, ted, snimky = [], nastroje = [],
-  tlakEvropa, tlakCesko, veta, kampane, nazvyZemi, overovaneAktivni = [], overovaneUzavrene = [], priprava, pulz, souhrn, prehled, uspechy = [],
+  tlakEvropa, tlakCesko, veta, kampane, nazvyZemi, overovaneAktivni = [], overovaneUzavrene = [], internet, priprava, pulz, souhrn, prehled, uspechy = [],
 }: {
   stav: CelkovyStav; pravni: PravniPolozka[]; natoPolozky: NatoPolozka[]; provozPolozky: ProvozniPolozka[];
   /** Čas sestavení. Klient z něj vychází, aby se první vykreslení shodlo. */
@@ -434,6 +436,8 @@ export function Dashboard({
   kampane: Kampan[]; nazvyZemi: Record<string, string>;
   /** Zprávy, které se šíří a zatím nejsou ověřené. Do počtů nevstupují. */
   overovaneAktivni?: Overovana[];
+  /** Souhrn pro box Internet v Česku (server, src/lib/kyber-souhrn.ts). */
+  internet?: SouhrnInternetu;
   overovaneUzavrene?: Overovana[];
   priprava?: DataPripravy;
   pulz?: Pulz;
@@ -596,8 +600,8 @@ export function Dashboard({
           </div>
           <div id="podrobny-monitoring" className="order-3 min-w-0 scroll-mt-20 lg:order-none lg:col-start-1 lg:row-start-2"><AktualitySloupce zaznamy={vse} nepotvrzene={nepotvrzene} kandidati={kandidati} /></div>
           <div className="order-2 min-w-0 lg:order-none lg:col-start-2 lg:row-span-2 lg:row-start-1">
-          <SidebarUvodu stav={stav} cr={cr} crHistoricky={crHistoricky} crPocet={crPocet} crKampane={crKampane} obcane={obcane} pulz={pulz} priprava={priprava} {...casyProPanel(vse, kampane)} kandidati={kandidati} zkontrolovano={overeno} ted={tedMs}
-            tipy={<MiniBox nazev="Tipy k přípravě" ikona="fajfka" ton="klid" souhrn={tipyNahled.length ? tipyNahled[0].nadpis : "Zatím bez tipu"}><TipyKPriprave ted={tedMs} vnoreny /></MiniBox>} />
+          <SidebarUvodu stav={stav} cr={cr} crHistoricky={crHistoricky} crPocet={crPocet} crKampane={crKampane} internet={internet} obcane={obcane} pulz={pulz} priprava={priprava} {...casyProPanel(vse, kampane)} kandidati={kandidati} zkontrolovano={overeno} ted={tedMs}
+            tipy={<TipyBox ted={tedMs} />} />
           </div>
         </div>
       ) : (

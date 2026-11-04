@@ -123,3 +123,59 @@ describe("hromadný výpadek zdrojů se nahlásí", () => {
     expect(zpravaOVypadku(270, [...gn, ...vypadky.slice(0, 10)], zname).zprava).toBeNull();
   });
 });
+
+/*
+  Box Internet v Česku (4. 11. 2026): krátké názvy toho, co se děje,
+  s vlajkou země, aby „útok na krevní banky“ nevypadal jako Česko.
+  Titulky jsou skutečné z archivu.
+*/
+import { coZpravy, radkyInternetu, zemeZpravy } from "../src/lib/kyber";
+import { sestavSouhrnInternetu } from "../src/lib/kyber-souhrn";
+
+describe("co se děje a kde", () => {
+  it("pozná zemi z titulku; původce není místo", () => {
+    expect(zemeZpravy("Krevní banky ve Francii čelily kyberútoku, ale zasáhly včas")).toBe("FR");
+    expect(zemeZpravy("Až 50 stupňů v lednici. Obchody v Belgii, Lucembursku a Švédsku zasáhl kyberútok, podobný jako ve Francii")).toBe("BE");
+    expect(zemeZpravy("ČVUT čelí kybernetickému útoku, údajně doplatilo na kritickou chybu v PHP")).toBe("CZ");
+    expect(zemeZpravy("Obchodních řetězců v Česku se francouzský kyberútok nedotkl, krizové plány však mají")).toBe("CZ");
+    expect(zemeZpravy("Největší hackerská krádež v historii. Z burzy Binance zmizelo 133 miliard korun, podezření padá na KLDR")).toBeNull();
+    expect(zemeZpravy("Masivní kyberútok zasáhl Discord")).toBeNull();
+  });
+  it("pojmenuje cíl: krevní banky, chlazení v obchodech, univerzita, podvodné e-maily", () => {
+    expect(coZpravy({ druh: "utok", titulek: "Další kybernetický útok. Francie čelila úderu na krevní banky" })).toBe("útok na krevní banky");
+    expect(coZpravy({ druh: "utok", titulek: "Belgie a Švédsko hlásí kyberútoky na chladicí boxy v supermarketech" })).toBe("útok na chlazení v obchodech");
+    expect(coZpravy({ druh: "utok", titulek: "ČVUT čelí kybernetickému útoku, doplatilo na kritickou chybu v PHP" })).toBe("útok na univerzitu");
+    expect(coZpravy({ druh: "vypadek", titulek: "Albert má už druhý den výpadek aplikace. Schovejte si účtenky, radí řetězec" })).toBe("výpadek: obchody");
+    expect(coZpravy({ druh: "podvod", titulek: "Český rozhlas varuje před podvodnými e-maily. Vyzývají k platbě poplatků a hrozí exekucí" })).toBe("podvodné e-maily");
+    expect(coZpravy({ druh: "ddos", titulek: "Hackeři přetížili weby krajů" })).toBe("přetížené weby: úřady");
+    expect(coZpravy({ druh: "utok", titulek: "Masivní kyberútok zasáhl Discord" })).toBe("útok na sociální síť");
+  });
+  it("táž věc z více redakcí je jeden řádek s počtem; nejvýš tři řádky", () => {
+    const r = radkyInternetu([
+      { druh: "utok", titulek: "Krevní banky ve Francii čelily kyberútoku", kdy: "2026-11-04T10:00:00Z" },
+      { druh: "utok", titulek: "Další kybernetický útok. Francie čelila úderu na krevní banky", kdy: "2026-11-04T09:00:00Z" },
+      { druh: "utok", titulek: "Belgie a Švédsko hlásí kyberútoky na chladicí boxy v supermarketech", kdy: "2026-11-02T11:00:00Z" },
+      { druh: "podvod", titulek: "Pneumatiky nikde, peníze fuč. Firma naletěla falešnému e-shopu", kdy: "2026-11-03T08:00:00Z" },
+      { druh: "utok", titulek: "Masivní kyberútok zasáhl Discord", kdy: "2026-10-08T08:00:00Z" },
+    ]);
+    expect(r).toEqual([
+      { kodZeme: "FR", co: "útok na krevní banky", pocet: 2 },
+      { kodZeme: null, co: "falešné e-shopy", pocet: 1 },
+      { kodZeme: "BE", co: "útok na chlazení v obchodech", pocet: 1 },
+    ]);
+  });
+  it("souhrn bere zprávy za 72 h ze snímku i archivu, bez duplicit; bez čerstvého snímku nic netvrdí", () => {
+    const ted = Date.parse("2026-11-04T18:00:00Z");
+    const a = z({ id: "a", druh: "utok", titulek: "Krevní banky ve Francii čelily kyberútoku", kdy: "2026-11-04T10:00:00Z" });
+    const b = z({ id: "b", druh: "utok", titulek: "Belgie a Švédsko hlásí kyberútoky na chladicí boxy v supermarketech", kdy: "2026-11-02T11:00:00Z" });
+    const stary = z({ id: "c", druh: "utok", titulek: "Kyberútok na Rohlík", kdy: "2026-10-11T10:00:00Z" });
+    const s = sestavSouhrnInternetu({ aktualizovano: "2026-11-04T17:00:00Z", nacteno: "2026-11-04T17:00:00Z", stav: "klid", zpravy: [a] }, [a, b, stary], ted);
+    expect(s.cerstve).toBe(true);
+    expect(s.pocet72).toBe(2);
+    expect(s.radky.map((r) => r.co)).toEqual(["útok na krevní banky", "útok na chlazení v obchodech"]);
+    expect(s.posledni.map((p) => p.id)).toEqual(["a", "b"]);
+    const bezDat = sestavSouhrnInternetu({ aktualizovano: null, nacteno: "2026-11-02T10:00:00Z", stav: "klid", zpravy: [] }, [a], ted);
+    expect(bezDat.cerstve).toBe(false);
+    expect(bezDat.stav).toBeNull();
+  });
+});
