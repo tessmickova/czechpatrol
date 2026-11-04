@@ -157,3 +157,86 @@ export const TIPY_KYBER = [
 ] as const;
 
 export const ZDROJE_KYBER_POPIS = "Úřady (NÚKIB, Policie ČR, Ministerstvo vnitra) a česká média z jejich vlastních kanálů. Jen veřejné zprávy, nic neskenujeme.";
+
+/* ---------- souhrn zprávy: co a kde ---------- */
+
+/*
+  Box Internet v Česku (4. 11. 2026, provozovatelka): místo počtu zpráv
+  krátké názvy toho, co se děje — „útok na krevní banky“, „útok na chlazení
+  v obchodech“ — a vždy s vlajkou, aby bylo na první pohled vidět, že jde
+  o Francii nebo Belgii, ne o Česko. Čisté funkce nad titulkem; co nejde
+  poznat, zůstane obecné („kybernetický útok“) a bez vlajky.
+*/
+const ZEME_V_TITULKU: [RegExp, string][] = [
+  [/česk|\bčr\b|\bprah[ay]|\bpraze|\bbrn[oě]|ostrav|plzn|olomouc|liberec|\.cz\b|\bčez\b|české dráhy|núkib|rohlík|čvut|\balbert/i, "CZ"],
+  [/franc/i, "FR"], [/belgi/i, "BE"], [/švéd/i, "SE"], [/lucembur/i, "LU"], [/nizozem|holand/i, "NL"], [/irsk/i, "IE"], [/itál|italsk/i, "IT"],
+  [/polsk/i, "PL"], [/němec|berlín/i, "DE"], [/rakous/i, "AT"], [/slovensk/i, "SK"], [/maďar/i, "HU"], [/estonsk/i, "EE"], [/lotyš/i, "LV"],
+  [/litv|litev/i, "LT"], [/finsk/i, "FI"], [/dánsk/i, "DK"], [/norsk/i, "NO"], [/španěl/i, "ES"], [/portugal/i, "PT"], [/rumun/i, "RO"],
+  [/bulhar/i, "BG"], [/británi|britsk|londýn/i, "GB"], [/ukrajin/i, "UA"], [/\brusk|\brusko|moskv/i, "RU"], [/\busa\b|americ|spojené státy/i, "US"],
+  [/čín/i, "CN"], [/\bkldr\b|severokorej/i, "KP"], [/tchaj/i, "TW"], [/evrop|\beu\b|unie/i, "EU"],
+];
+/* Země zmíněná jako původce („podezření padá na KLDR“) není místo události. */
+const PUVODCE_PRED = /(podezření padá na|stál[ao]? za|stojí za|skupina|hackeři z|hackeři)\s+[^.]{0,25}$/i;
+
+export function zemeZpravy(titulek: string): string | null {
+  let nej: { i: number; kod: string } | null = null;
+  for (const [re, kod] of ZEME_V_TITULKU) {
+    const m = re.exec(titulek);
+    if (!m) continue;
+    if (PUVODCE_PRED.test(titulek.slice(0, m.index))) continue;
+    if (!nej || m.index < nej.i) nej = { i: m.index, kod };
+  }
+  return nej?.kod ?? null;
+}
+
+/* Cíl útoku: čtvrtý pád pro „útok na …“, první pád pro ostatní druhy. Pořadí rozhoduje — užší dřív. */
+const CILE: [RegExp, string, string][] = [
+  [/krevní bank/i, "krevní banky", "krevní banky"],
+  [/chlad|mraz|lednic/i, "chlazení v obchodech", "chlazení v obchodech"],
+  [/varov/i, "varovné aplikace", "varovné aplikace"],
+  [/burz|kryptoměn|bitcoin/i, "kryptoměnovou burzu", "kryptoměnová burza"],
+  [/supermark|obchod|řetězc|řetězec|prodejn|regál|rohlík|albert/i, "obchody", "obchody"],
+  [/nemocnic|zdravotn|pacient/i, "nemocnici", "nemocnice"],
+  [/čvut|univerzit|vysoké škol/i, "univerzitu", "univerzita"],
+  [/škol/i, "školy", "školy"],
+  [/letišt/i, "letiště", "letiště"],
+  [/bankovnictv|\bbank/i, "banky", "banky"],
+  [/úřad|ministerstv|magistrát|radnic|\bkraj|vlád/i, "úřady", "úřady"],
+  [/energet|elektr|plyn|\bčez\b/i, "energetiku", "energetika"],
+  [/doprav|dráh|vlak|letadl/i, "dopravu", "doprava"],
+  [/rozhlas|televiz|médi|redakc/i, "média", "média"],
+  [/discord|sociální sí|facebook|instagram|telegram/i, "sociální síť", "sociální síť"],
+  [/starlink|satelit|připojení|operátor/i, "připojení", "připojení"],
+  [/aplikac/i, "aplikaci", "aplikace"],
+  [/\bdat\b|data|údaj|únik/i, "data", "data"],
+  [/\bweb|stránk|portál|server/i, "weby", "weby"],
+];
+const PODVOD: [RegExp, string][] = [
+  [/e-?mail/i, "podvodné e-maily"], [/\bsms/i, "podvodné SMS"], [/hovor|telefon|volaj/i, "podvodné hovory"], [/e-?shop/i, "falešné e-shopy"],
+  [/inzer|bazar/i, "podvodné inzeráty"], [/investi|kryptoměn/i, "investiční podvody"],
+];
+
+export function coZpravy(z: Pick<ZpravaKyber, "druh" | "titulek">): string {
+  const t = z.titulek;
+  if (z.druh === "podvod") return PODVOD.find(([re]) => re.test(t))?.[1] ?? "podvodné zprávy";
+  const cil = CILE.find(([re]) => re.test(t));
+  if (z.druh === "utok") return cil ? `útok na ${cil[1]}` : "kybernetický útok";
+  if (z.druh === "ddos") return cil ? `přetížené weby: ${cil[2]}` : "přetížené weby";
+  return cil ? `výpadek: ${cil[2]}` : "výpadek služby";
+}
+
+export interface RadekInternetu { kodZeme: string | null; co: string; pocet: number }
+
+/** Krátké řádky do boxu: táž věc z více redakcí jednou, s počtem; nejvýš `max`. */
+export function radkyInternetu(zpravy: readonly Pick<ZpravaKyber, "druh" | "titulek" | "kdy">[], max = 3): RadekInternetu[] {
+  const mapa = new Map<string, RadekInternetu>();
+  for (const z of [...zpravy].sort((a, b) => b.kdy.localeCompare(a.kdy))) {
+    const kodZeme = zemeZpravy(z.titulek);
+    const co = coZpravy(z);
+    const klic = `${kodZeme ?? "?"}|${co}`;
+    const r = mapa.get(klic) ?? { kodZeme, co, pocet: 0 };
+    r.pocet += 1;
+    mapa.set(klic, r);
+  }
+  return [...mapa.values()].slice(0, max);
+}

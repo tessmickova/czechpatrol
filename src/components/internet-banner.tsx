@@ -5,6 +5,8 @@ import { Ikona } from "./ikony";
 import { RadaKTypu } from "./rada-k-typu";
 import { IkonaKruh } from "./widgety";
 import { Napoveda } from "./zaklad";
+import { Vlajka } from "./zeme";
+import type { SouhrnInternetu } from "@/lib/kyber-souhrn";
 
 /*
   Banner „Internet v Česku“ (1. 10. 2026). Pro seniora i dítě: jedna věta,
@@ -25,11 +27,11 @@ const MAX_STARI_H = 24;
   stav jedním slovem, počet zpráv; zprávy, tipy a rady až po najetí.
   Bez čerstvých dat box říká „bez údaje“ — nikdy „klid“.
 */
-export function InternetBox({ ted }: { ted: number }) {
-  const cerstve = Boolean(snimek.nacteno && ted - new Date(snimek.nacteno).getTime() <= MAX_STARI_H * 3_600_000);
-  const stav = cerstve ? stavKyber(snimek.zpravy, ted) : null;
-  const posledni = cerstve ? snimek.zpravy.filter((z) => ted - new Date(z.kdy).getTime() <= 72 * 3_600_000).slice(0, 3) : [];
-  const slovo = stav === "utok" ? "Probíhá vlna útoků" : stav === "pozor" ? "Zvýšená pozornost" : stav === "klid" ? "Bez hlášených útoků" : "Bez údaje";
+export function InternetBox({ data }: { data?: SouhrnInternetu }) {
+  const stav = data?.cerstve ? data.stav : null;
+  const radky = data?.radky ?? [];
+  const posledni = data?.posledni ?? [];
+  const slovo = stav === "utok" ? "Probíhá vlna útoků" : stav === "pozor" ? "Zvýšená pozornost" : stav === "klid" ? "V Česku bez hlášených útoků" : "Bez údaje";
   const tecka = stav === "utok" ? "bg-akcent" : stav === "pozor" ? "bg-jantar" : stav === "klid" ? "bg-klid" : "bg-tlum2";
   return (
     <Napoveda cele plna vpravo popis={<span className="block">
@@ -52,7 +54,23 @@ export function InternetBox({ ted }: { ted: number }) {
       <span role="status" aria-label="Internet v Česku" className="flex h-full min-h-[118px] w-full flex-col rounded-[22px] border border-linka bg-plocha2/40 px-3.5 py-3 text-left">
         <span className="flex min-h-[34px] items-center gap-2"><IkonaKruh ikona="zamek" velikost="s" /><span className="nadpis-boxu leading-tight">Internet v Česku</span></span>
         <span className="mt-2 flex items-start gap-2 text-male font-bold leading-snug text-inkoust"><span aria-hidden className={`mt-[7px] h-[6px] w-[6px] shrink-0 rounded-full ${tecka}`} />{slovo}</span>
-        <span className="mt-1 block text-mikro leading-snug text-tlum">{posledni.length ? `${posledni.length} ${posledni.length === 1 ? "zpráva" : posledni.length < 5 ? "zprávy" : "zpráv"} za 72 h` : cerstve ? "žádná zpráva za 72 h" : "data starší než den"}</span>
+        {/*
+          Co se děje a kde (4. 11. 2026, provozovatelka): krátké názvy
+          s vlajkou místo počtu — „🇫🇷 útok na krevní banky“ říká na první
+          pohled, že to není v Česku. Bez poznané země je tečka, ne hádání.
+        */}
+        {radky.length > 0 ? (
+          <span className="mt-1 block space-y-0.5 text-mikro leading-snug text-tlum">
+            {radky.map((r) => (
+              <span key={`${r.kodZeme}|${r.co}`} className="flex items-start gap-1.5">
+                <span className="w-[16px] shrink-0 text-center leading-none">{r.kodZeme ? <Vlajka kod={r.kodZeme} /> : <span aria-hidden className="text-tlum2">·</span>}</span>
+                <span className="min-w-0">{r.co}{r.pocet > 1 ? ` ×${r.pocet}` : ""}</span>
+              </span>
+            ))}
+          </span>
+        ) : (
+          <span className="mt-1 block text-mikro leading-snug text-tlum">{data?.cerstve ? "žádná zpráva za 72 h" : "data starší než den"}</span>
+        )}
         <span className="mt-auto pt-2 text-mikro text-tlum2">jak se chránit →</span>
       </span>
     </Napoveda>

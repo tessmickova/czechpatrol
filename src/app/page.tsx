@@ -1,4 +1,5 @@
 import { Dashboard } from "@/components/dashboard";
+import { souhrnInternetu } from "@/lib/kyber-souhrn";
 import { archiv, celkovyStav, oficialniNastroje, hybridniTlak, incidenty, kampane, kandidati, nato, nazvyZemi, nepotvrzene, nepotvrzeneZaznamy, posledniKontrola, posledniOvereni, pravniStav, provoz, tlakCr, tydny, overovaneAktivni, overovaneUzavrene, urovenObcanu, watchlist } from "@/lib/data";
 import { pripravitTed } from "@/lib/priprava-ted";
 import { odlehciProUvod } from "@/lib/odlehci";
@@ -54,6 +55,7 @@ export default function Prehled() {
         kampane={kampane()}
         nazvyZemi={nazvyZemi()}
         overovaneAktivni={overovaneAktivni()}
+        internet={souhrnInternetu()}
         overovaneUzavrene={overovaneUzavrene()}
       />
     </>

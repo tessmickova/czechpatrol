@@ -509,6 +509,15 @@ V hlavním sloupci zůstává rámeček jen při probíhající vlně útoků
 (`InternetBanner jenUtok`). Data „Právě ověřujeme“ (`data/overujeme.json`)
 zůstávají pro stránku Události.
 
+Box ukazuje **co se děje a kde**: krátké názvy s vlajkou („🇫🇷 útok na
+krevní banky“, „🇧🇪 útok na chlazení v obchodech“), táž věc z více redakcí
+jednou s počtem, nejvýš tři řádky; země se pozná z titulku a původce
+(„podezření padá na KLDR“) se za místo nebere; bez poznané země je tečka.
+Souhrn se skládá na serveru (`src/lib/kyber-souhrn.ts`) ze snímku
+`kyber.json` a archivu `kyber-archiv.json` za 72 h, do prohlížeče jde jen
+hotový souhrn. Box **Tipy k přípravě** ukazuje až tři nejnovější tipy
+jako řádky s názvem a datem, text a zdroje po rozkliknutí (`TipyBox`).
+
 ### Kde se na webu sbírají zprávy a odkud jsou (doplněno 4. 11. 2026)
 
 | Místo | Odkud | Kdy se obnoví |
