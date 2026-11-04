@@ -377,6 +377,76 @@
     }
   },
   {
+    "id": "k-40767d1250f78c93",
+    "zachyceno": "2026-11-04T08:03:11.737Z",
+    "publikovano": "2026-11-04T07:31:00.000Z",
+    "zdroj": {
+      "nazev": "ERR News (Estonsko)",
+      "url": "https://news.err.ee/1610185591/insurance-won-t-cover-cyberattack-damage-to-stores-experts-warn",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Insurance won't cover cyberattack damage to stores, experts warn",
+    "titulekPuvodni": "Insurance won't cover cyberattack damage to stores, experts warn",
+    "shrnuti": "Property insurance will not cover damage caused by cyber attack, leaving Estonian retailers to absorb the cost themselves, insurance and retail experts warned.",
+    "kodZeme": "EE",
+    "zeme": "Estonsko",
+    "kategorie": [
+      "kyber"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "cyberattack",
+      "cyber attack",
+      "cyber"
+    ],
+    "naliehave": null,
+    "stav": "ceka",
+    "vyrez": {
+      "text": "Insurance won't cover cyberattack damage to stores, experts warn | News | ERR\n{{noticeUi.heading[langCode]}}\n{{infoLink[langCode].label}}\n{{noticeUi.allowAllLabel[langCode]}}\n{{rewokeLabels[langCode]}}\nX !\nNews\nLiisbeth Rats\n{{1793777460000 | amCalendar}}\nshare Facebook X (Twitter) e-mail\nChilled fish and other seafood in an Estonian supermarket. Photo is illustrative. Source: Priit Mürk/ERR\nNews\nProperty insurance will not cover damage caused by cyber attack, leaving Estonian retailers to absorb the cost themselves, insurance and retail experts warned.\nThe warning follows Monday's attack on a Selver supermarket, where hackers raised a freezer to +50&deg;C. No stock was lost, but a repeat could leave chains paying for spoilage.\nThe Selver incident was part of a Europe-wide wave of attacks on supermarket refrigeration this autumn. France and the Netherlands were hit in October, and Sweden, Belgium and Luxembourg on Monday. In some cases, Swedish stores were forced to discard spoiled stock. From Tuesday, Romania, Germany and the UK had joined the list.\nHelen Evert, a cyber insurance expert at insurers IIZI, said property insurance specifically excludes compensation for property…",
+      "stazeno": "2026-11-04T08:03:14.467Z",
+      "stav": 200
+    }
+  },
+  {
+    "id": "k-f3456a6ddcd5e005",
+    "zachyceno": "2026-11-04T08:03:11.400Z",
+    "publikovano": "2026-11-04T07:12:00.000Z",
+    "zdroj": {
+      "nazev": "Český rozhlas — domácí zprávy",
+      "url": "https://www.irozhlas.cz/veda-technologie/historie/nasli-ostatky-odebrali-dna-a-cekaji-historici-hledali-pozustatky-polskych-vojaku_2611040812_dns",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Našli ostatky, odebrali DNA a čekají. Historici hledali pozůstatky polských vojáků na hřbitově v České Lípě",
+    "titulekPuvodni": "Našli ostatky, odebrali DNA a čekají. Historici hledali pozůstatky polských vojáků na hřbitově v České Lípě",
+    "shrnuti": "Obyvatelé České Lípy si mohli před Dušičkami všimnout, že na konci října prováděli historici z polského Institutu národní paměti výzkum na městském hřbitově. Hledali na něm pozůstatky třech vojáků polské Zemské armády z druhé světové války. Jeden z nich totiž zemřel při překračování hranice v roce 1",
+    "kodZeme": "CZ",
+    "zeme": "Česko",
+    "kategorie": [
+      "hranice",
+      "vojsko"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "hranic+vojak",
+      "hranice",
+      "vojak"
+    ],
+    "naliehave": null,
+    "stav": "ceka",
+    "vyrez": {
+      "text": "",
+      "stazeno": "2026-11-04T08:03:15.185Z",
+      "stav": 403,
+      "chyba": "HTTP 403"
+    }
+  },
+  {
     "id": "k-15e2f7f5eba0ccfa",
     "zachyceno": "2026-11-04T06:56:53.462Z",
     "publikovano": "2026-11-04T06:21:00.000Z",
@@ -509,6 +579,42 @@
       "stazeno": "2026-11-04T06:03:22.296Z",
       "stav": 403,
       "chyba": "HTTP 403"
+    }
+  },
+  {
+    "id": "k-efd48167a1776cf6",
+    "zachyceno": "2026-11-04T08:03:14.351Z",
+    "publikovano": "2026-11-04T00:24:00.000Z",
+    "zdroj": {
+      "nazev": "Ukrainska Pravda (anglicky)",
+      "url": "https://www.pravda.com.ua/eng/news/2026/11/04/8061144/",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Russian forces strike private business in Poltava",
+    "titulekPuvodni": "Russian forces strike private business in Poltava",
+    "shrnuti": "A private business in Poltava was struck during an overnight Russian attack. A separate drone fell on a house in the Kremenchuk district.",
+    "kodZeme": "RU",
+    "zeme": "Rusko",
+    "kategorie": [
+      "drony",
+      "rusko"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "dron+fell",
+      "dron",
+      "drone",
+      "russia"
+    ],
+    "naliehave": null,
+    "stav": "ceka",
+    "vyrez": {
+      "text": "Russian drone strike hits business in Poltava | Ukrainska Pravda\nA drone. Stock photo: Getty Images\nRussian forces struck premises belonging to a private business in the city of Poltava on the night of 3-4 November.\nSource: Vitalii Diakivnych, Head of Poltava Oblast Military Administration, on Telegram\nDetails: Reports of explosions in Poltava began emerging at around 01:00.\nAdvertisement:\n\r\n\r\n\r\n\r\n\r\nDiakivnych later said that a Russian strike had hit premises belonging to a private business.\nAfter 02:00, Poltava Oblast Military Administration also reported that a Russian drone had crashed onto a house in the Kamiani Potoky\nhromada\nA hromada is an administrative unit designating a village, several villages, or a town, and their adjacent territories\nin the Kremenchuk district.\nSupport Ukrainska Pravda on Patreon to help us keep reporting!\nPoltava\ndrones\nRussia-Ukraine war\nAdvertisement:\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nPoltava\nRussians strike railway infrastructure in Poltava\nUniversity lecturer Kostiantyn Chub killed in Russian attack on Poltava\nRussia attacks Poltava Oblast: energy and industrial facilities damaged\nLatest news\nAdvertisement:\n\r\n\r\n\r\nAdvertisement:",
+      "stazeno": "2026-11-04T08:03:15.275Z",
+      "stav": 200
     }
   },
   {
@@ -10199,107 +10305,6 @@
       "stazeno": "2026-10-31T15:15:39.713Z",
       "stav": 403,
       "chyba": "HTTP 403"
-    }
-  },
-  {
-    "id": "k-0c32b56f5566c1bd",
-    "zachyceno": "2026-10-31T12:03:48.538Z",
-    "publikovano": null,
-    "zdroj": {
-      "nazev": "RTL Today (Lucembursko)",
-      "url": "https://today.rtl.lu/news/world/polish-riot-police-deployed-as-deposed-court-chief-sets-off-crisis-1142999310",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "'Trampling on our constitutional rights' Polish president calls crisis talks after court standoff",
-    "titulekPuvodni": "'Trampling on our constitutional rights' Polish president calls crisis talks after court standoff",
-    "shrnuti": "",
-    "kodZeme": "PL",
-    "zeme": "Polsko",
-    "kategorie": [
-      "diplomacie"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "zeSite": null,
-    "shody": [
-      "crisis talks"
-    ],
-    "naliehave": null,
-    "stav": "ceka",
-    "vyrez": {
-      "text": "'Trampling on our constitutional rights': Polish president calls crisis talks after court standoff - RTL Today\n'Trampling on our constitutional rights' Polish president calls crisis talks after court standoff\nAFP\nPublished: 31.10.26 12:37 , Update: 31.10.26 13:02\nSupporters of the now opposition PiS protested the ousting of court president Bogdan Swieczkowski\n© AFP\nPoland's president called urgent crisis talks with party representatives on Saturday after a dramatic showdown at the country's constitutional court between the centrist government and nationalist right.\nKarol Nawrocki cut short a trip to Senegal and returned to Warsaw, where police had surrounded the court on Friday following the suspension of its president Bogdan Swieczkowski.\nHe said the talks were necessary because of \"the threat to internal security\", in a statement read on his behalf outside court the next morning.\nThe nationalist president also denounced what he called a \"violation of the constitutional order\" and demanded police withdraw from the court. Talks were due to begin at 1:00 pm local time (1200 GMT) at the presidential palace.\nDozens of police guarded the building as followers of the opposition…",
-      "stazeno": "2026-10-31T12:03:51.639Z",
-      "stav": 200
-    }
-  },
-  {
-    "id": "k-f7aeddb49fa7e550",
-    "zachyceno": "2026-10-31T12:03:47.895Z",
-    "publikovano": "2026-10-31T11:43:36.000Z",
-    "zdroj": {
-      "nazev": "Seznam Zprávy",
-      "url": "https://www.seznamzpravy.cz/clanek/zahranicni-evropane-odmitli-pozovat-s-lavrovem-rubio-tradicni-fotku-skupiny-g20-zrusil-319218",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Evropané odmítli pózovat s Lavrovem. Rubio tradiční fotku skupiny G20 zrušil",
-    "titulekPuvodni": "Evropané odmítli pózovat s Lavrovem. Rubio tradiční fotku skupiny G20 zrušil",
-    "shrnuti": "Přibližně třetina zemí na jednání skupiny G20 odmítla společnou fotografii s ruským ministrem zahraničí. Spojené státy proto nakonec focení zrušily. Během schůzky zároveň někteří představitelé ruskou agresi odsoudili.",
-    "kodZeme": "RU",
-    "zeme": "Rusko",
-    "kategorie": [
-      "zpravodajske",
-      "rusko"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "zeSite": null,
-    "shody": [
-      "odsoud+rusk",
-      "rusk"
-    ],
-    "naliehave": null,
-    "stav": "ceka",
-    "vyrez": {
-      "text": "Evropané odmítli pózovat s Lavrovem. Rubio tradiční fotku skupiny G20 zrušil - Seznam Zprávy\nZobrazení snímku 1 z 0\nHlavní obsah\nEvropané odmítli pózovat s Lavrovem. Rubio tradiční fotku skupiny G20 zrušil\nSeznam Zprávy\n2:57\nChcete-li článek poslouchat, přihlaste se\neBook\nSdílet\nFoto: Reuters\nAmerický ministr zahraničí Marco Rubio během uvítací recepce na zasedání ministrů zahraničí G20 v ​​Atlantě 30. října 2026.\n12:43\nPřibližně třetina zemí na jednání skupiny G20 odmítla společnou fotografii s ruským ministrem zahraničí. Spojené státy proto nakonec focení zrušily. Během schůzky zároveň někteří představitelé ruskou agresi odsoudili.\nČlánek\nAmerický ministr zahraničí Marco Rubio zrušil tradiční společné focení účastníků jednání ministrů zahraničí skupiny G20 v Atlantě. Rozhodl se tak poté, co několik členských států Evropské unie, Velká Británie a Austrálie odmítly pózovat vedle ruského ministra zahraničí Sergeje Lavrova. Podle britského deníku The Guardian se snímku odmítla zúčastnit přibližně třetina zastoupených zemí.\nEvropské země daly najevo svůj postoj ještě před začátkem pátečního zasedání. „V žádném případě nevznikne společná fotografie evropských představitelů s panem…",
-      "stazeno": "2026-10-31T12:03:51.980Z",
-      "stav": 200
-    }
-  },
-  {
-    "id": "k-0c98d6baa73f63f2",
-    "zachyceno": "2026-10-31T12:03:50.455Z",
-    "publikovano": "2026-10-31T10:51:29.000Z",
-    "zdroj": {
-      "nazev": "Le Monde (Francie)",
-      "url": "https://www.lemonde.fr/international/live/2026/10/31/en-direct-guerre-en-ukraine-des-centaines-de-milliers-de-foyers-prives-d-electricite-dans-les-regions-de-dnipro-et-de-kiev-apres-des-bombardements-russes_6799896_3210.html",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "EN DIRECT, guerre en Ukraine : des centaines de milliers de foyers privés d’électricité dans les régions de Dnipro et de Kiev à la suite de bombardements russes",
-    "titulekPuvodni": "EN DIRECT, guerre en Ukraine : des centaines de milliers de foyers privés d’électricité dans les régions de Dnipro et de Kiev à la suite de bombardements russes",
-    "shrnuti": "Dans la capitale, des drones de type Shahed « ont frappé une centrale thermique et électrique », a écrit Volodymyr Zelensky. Dans l’oblast de Dnipropetrovsk, quatre sous-stations électriques ont été touchées au cours de la nuit, ainsi qu’une installation de distribution de gaz.",
-    "kodZeme": "UA",
-    "zeme": "Ukrajina",
-    "kategorie": [
-      "sabotaz",
-      "drony"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "zeSite": null,
-    "shody": [
-      "bomb",
-      "dron",
-      "drone"
-    ],
-    "naliehave": null,
-    "stav": "ceka",
-    "vyrez": {
-      "text": "Client Challenge\nA required part of this site couldn’t load. This may be due to a browser\nextension, network issues, or browser settings. Please check your\nconnection, disable any ad blockers, or try using a different browser.",
-      "stazeno": "2026-10-31T12:03:52.849Z",
-      "stav": 200
     }
   }
 ]
