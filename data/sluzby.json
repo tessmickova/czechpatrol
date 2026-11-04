@@ -1,18 +1,24 @@
 {
-  "aktualizovano": "2026-11-04T12:03:31.867Z",
+  "aktualizovano": "2026-11-04T14:03:37.946Z",
   "stavy": [
     {
       "klic": "cloudflare",
       "stav": "vypadek",
       "popis": "Partial System Outage",
-      "incidenty": [],
+      "incidenty": [
+        {
+          "nazev": "Network latency issues in NRT",
+          "odkaz": "https://www.cloudflarestatus.com/incidents/nbnize4e990z",
+          "aktualizovano": "2026-11-04T13:39:26.804Z"
+        }
+      ],
       "postizene": [
+        "Cloudflare Sites and Services",
         "Albuquerque, United States - (ABQ)",
         "Arica, Chile - (ARI)",
-        "Annaba, Algeria - (AAE)",
-        "Baku, Azerbaijan - (GYD)"
+        "Baghdad, Iraq - (BGW)"
       ],
-      "zkontrolovano": "2026-11-04T12:03:31.867Z",
+      "zkontrolovano": "2026-11-04T14:03:37.946Z",
       "chyba": null
     },
     {
@@ -24,7 +30,7 @@
         "Zoom Phone",
         "Zoom Phone - EMEA"
       ],
-      "zkontrolovano": "2026-11-04T12:03:31.867Z",
+      "zkontrolovano": "2026-11-04T14:03:37.946Z",
       "chyba": null
     },
     {
@@ -33,7 +39,7 @@
       "popis": "All Systems Operational",
       "incidenty": [],
       "postizene": [],
-      "zkontrolovano": "2026-11-04T12:03:31.867Z",
+      "zkontrolovano": "2026-11-04T14:03:37.946Z",
       "chyba": null
     }
   ]
