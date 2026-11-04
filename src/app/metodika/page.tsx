@@ -156,6 +156,54 @@ export default function Metodika() {
         </Karta>
       </Sekce>
 
+      {/*
+        Situace teď (4. 11. 2026, provozovatelka): tři ukazatele na úvodu
+        a přesně to, z čeho se počítají. Na úvodu je to jen po najetí;
+        tady celé, aby šlo zkontrolovat, že výsledek dává smysl.
+      */}
+      <Sekce
+        id="situace-ted"
+        nadpis="Co ukazuje Situace teď"
+        popis="Tři ukazatele na úvodu, každý z jiného zdroje. Žádný z nich není předpověď ani úřední stupeň ohrožení."
+      >
+        <div className="grid gap-5 lg:grid-cols-3">
+          <Karta className="p-5 sm:p-6">
+            <h3 className="podnadpis mb-3 text-zaklad">Evropa · dnes</h3>
+            <ul className="space-y-2 text-male leading-relaxed text-tlum">
+              <li>Vstupují zveřejněné případy a nová zjištění k nim: lidsky ověřené, nebo doložené dvěma zdroji včetně úředního.</li>
+              <li>Okno 14 dní podle data zjištění. Úroveň je střední závažnost těch případů; případ mimo Česko se počítá o stupeň níž.</li>
+              <li>Jediná událost úroveň nezvedne. Méně než dva případy v okně: <b className="font-semibold text-inkoust">Nestanoveno</b>, ne „Nízká“.</li>
+              <li>Mimořádný signál redakce zvedne úroveň nejvýš o stupeň a nejvýš na 14 dní; u hodnocení je vždy vidět proč a jaká by byla bez něj.</li>
+              <li>Trend: součet závažnosti za posledních 7 dní proti týdnu předtím (nahoru od +25 % a +3 body, dolů od −20 % a −3). Nepočítá se, když sběr den neběžel.</li>
+            </ul>
+          </Karta>
+          <Karta className="p-5 sm:p-6">
+            <h3 className="podnadpis mb-3 text-zaklad">Česko · 90 dní</h3>
+            <ul className="space-y-2 text-male leading-relaxed text-tlum">
+              <li>Nejvyšší závažnost ze dvou množin za 90 dní: ověřené případy v Česku a operace proti občanům (manipulační kampaně se zasažením Česka).</li>
+              <li>Bez záznamu = ani jeden případ a ani jedna operace v okně. Není to „bezpečno“, je to „nic doloženého“.</li>
+              <li>V nápovědě je u každé operace téma a která média zasáhla — tam míří ostražitost, ne na celý svět.</li>
+              <li>Vedle stojí nejvyšší úroveň od roku 2014 pro srovnání.</li>
+            </ul>
+          </Karta>
+          <Karta className="p-5 sm:p-6">
+            <h3 className="podnadpis mb-3 text-zaklad">Běžný život · teď</h3>
+            <ul className="space-y-2 text-male leading-relaxed text-tlum">
+              <li>Úřední stav: nouzový stav, mobilizace, omezení pohybu a podobně, podle úředních zdrojů s datem ověření.</li>
+              <li>Provoz služeb: doprava, energie, platby, spojení — narušeno, sledujeme, bez omezení.</li>
+              <li>Pořadí: platí opatření → narušeno → sledujeme → bez omezení. Když zdroj chybí, ukazatel to říká („nic nenalezeno“, ne „klid“).</li>
+              <li>Zprávy z médií sem nevstupují vůbec.</li>
+            </ul>
+          </Karta>
+        </div>
+        <Karta className="mt-5 p-5 sm:p-6">
+          <h3 className="podnadpis mb-3 text-zaklad">Co do ukazatelů nevstupuje</h3>
+          <p className="max-w-[46rem] text-male leading-relaxed text-tlum">
+            Zachycené zprávy ve frontě (ani naléhavé), zprávy z jediného média, reakce a prohlášení bez skutku, údery uvnitř Ukrajiny a Ruska bez doloženého následku pro sledované země, příspěvky ze sociálních sítí, historické záznamy. Kolující tvrzení, která ověřujeme, mají vlastní box „Právě ověřujeme“ a do úrovně nevstupují, dokud nejsou doložená.
+          </p>
+        </Karta>
+      </Sekce>
+
       <Sekce
         nadpis="Stupnice závažnosti"
         popis="Jemnější než čtyři barvy. Uvnitř každého pásma rozlišujeme více úrovní, aby drobné posuny nezmizely a zároveň se nepřeháněly."

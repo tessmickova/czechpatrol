@@ -507,6 +507,8 @@ export function Dashboard({
   const czUrovne: Uroven[] = [...dni90.filter((i) => i.kodZeme === "CZ").map((i) => i.zavaznost), ...czKampane90.map((k) => k.zavaznost)];
   const cr: Uroven | null = czUrovne.length ? czUrovne.reduce((m, u) => (UROVNE[u].poradi > UROVNE[m].poradi ? u : m), czUrovne[0]) : null;
   const crPocet = { pripadu: dni90.filter((i) => i.kodZeme === "CZ").length, kampani: czKampane90.length };
+  /* Do nápovědy u Česka: o jakou operaci jde a která média zasáhla — ostražitost v tématu a kanálu, ne další box. */
+  const crKampane = czKampane90.map((k) => ({ slug: k.slug, nazev: k.nazev, probiha: k.probiha, odhaleno: k.odhaleno, media: k.zasazeni.filter((z) => z.druh === "medium").map((z) => z.nazev) }));
   const stariCelkem = cerstvost(overeno, tedMs);
 
   const crHodnota = platiCr.length ? platiCr.map((p) => KRATCE_PRAVNI[p.klic] ?? p.nazev).join(", ") : naruseno.length ? "Narušeno" : sledujeme.length ? "Sledujeme" : "Bez omezení";
@@ -564,7 +566,7 @@ export function Dashboard({
           <div className="min-w-0">
             <div className="mb-2 flex items-center gap-2">
               <Znacka velikost={26} tmave />
-              <span className="stitek-znacky">{t("Bezpečnostní přehled")}</span>
+              <span className="stitek-znacky">{t("Přehled místo paniky")}</span>
             </div>
             <h1 className="titul-sekce">{t("Bezpečnostní hlídka pro Česko")}</h1>
             {/*
@@ -594,7 +596,7 @@ export function Dashboard({
           </div>
           <div id="podrobny-monitoring" className="order-3 min-w-0 scroll-mt-20 lg:order-none lg:col-start-1 lg:row-start-2"><AktualitySloupce zaznamy={vse} nepotvrzene={nepotvrzene} kandidati={kandidati} /></div>
           <div className="order-2 min-w-0 lg:order-none lg:col-start-2 lg:row-span-2 lg:row-start-1">
-          <SidebarUvodu stav={stav} cr={cr} crHistoricky={crHistoricky} crPocet={crPocet} obcane={obcane} pulz={pulz} priprava={priprava} {...casyProPanel(vse, kampane)} kandidati={kandidati} zkontrolovano={overeno} overovane={overovaneAktivni} ted={tedMs}
+          <SidebarUvodu stav={stav} cr={cr} crHistoricky={crHistoricky} crPocet={crPocet} crKampane={crKampane} obcane={obcane} pulz={pulz} priprava={priprava} {...casyProPanel(vse, kampane)} kandidati={kandidati} zkontrolovano={overeno} overovane={overovaneAktivni} ted={tedMs}
             tipy={<MiniBox nazev="Tipy k přípravě" ikona="fajfka" ton="klid" souhrn={tipyNahled.length ? tipyNahled[0].nadpis : "Zatím bez tipu"}><TipyKPriprave ted={tedMs} vnoreny /></MiniBox>} />
           </div>
         </div>

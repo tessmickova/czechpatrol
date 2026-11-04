@@ -123,7 +123,7 @@ export function HeroDashboard({
       <div className="pt-1 sm:pt-2">
         <div className="mb-2 flex items-center gap-2">
           <Znacka velikost={26} tmave />
-          <span className="stitek-znacky">{t("Bezpečnostní přehled")}</span>
+          <span className="stitek-znacky">{t("Přehled místo paniky")}</span>
         </div>
         <h1 className="titul-sekce pb-3">{t("Bezpečnostní hlídka pro Česko")}</h1>
       </div>

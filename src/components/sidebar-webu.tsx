@@ -31,6 +31,7 @@ export function SidebarWebu() {
       cr={cr}
       crHistoricky={tlakCr().celkem}
       crPocet={{ pripadu: dni90.filter((i) => i.kodZeme === "CZ").length, kampani: czKampane90.length }}
+      crKampane={czKampane90.map((k) => ({ slug: k.slug, nazev: k.nazev, probiha: k.probiha, odhaleno: k.odhaleno, media: k.zasazeni.filter((z) => z.druh === "medium").map((z) => z.nazev) }))}
       obcane={urovenObcanu()}
       pulz={pulz()}
       priprava={pripravitTed()}

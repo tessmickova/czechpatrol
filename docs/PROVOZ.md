@@ -476,6 +476,29 @@ stránky; žádné dávky, úprava vody ani elektřina; žádná evropská stati
 — čísla jsou počty z naší evidence a stránka to říká. Nový typ = nový
 objekt v JSON s `kategorie` nebo `druhyKyber`, nic dalšího se neprogramuje.
 
+### Situace teď: podle čeho se tachometr počítá (doplněno 4. 11. 2026)
+
+Tři ukazatele na úvodu, každý z jiného zdroje (podrobně `/metodika/#situace-ted`):
+
+- **Evropa · dnes** (`sber/hodnoceni.ts spocitejStav`): zveřejněné případy
+  a aktualizace, lidsky ověřené nebo automaticky doložené (dva zdroje, jeden
+  úřední), za 14 dní; střední závažnost, mimo Česko o stupeň níž; mimořádný
+  signál redakce nejvýš +1 stupeň na 14 dní. **Méně než dva případy v okně =
+  „Nestanoveno“** (od 4. 11. 2026; dřív výchozí „Nízká“, která při
+  zastaveném ověřování vypadala jako klid). Trend se nepočítá, když sběr
+  den neběžel nebo ověřování stojí přes 48 h.
+- **Česko · 90 dní** (`dashboard.tsx`, `sidebar-webu.tsx`): nejvyšší
+  závažnost ověřených případů v Česku a operací proti občanům
+  (`data/kampane.json`, kodyZemi CZ) za 90 dní. V nápovědě je téma operace
+  a zasažená média — ostražitost, ne další box.
+- **Běžný život · teď** (`stavObcanuZ`): úřední stav (`pravni-stav.json`)
+  a provoz služeb (`provoz.json`); R1 platí opatření, O1 narušeno,
+  Y1 sledujeme, jinak G1.
+
+Nevstupují: neověřené zprávy a zachycené signály (fronta), reakce
+a prohlášení, projevy bez skutku, údery uvnitř Ukrajiny a Ruska bez
+následku pro sledované země, sociální sítě, historické záznamy.
+
 ### Správa: co kde najdete (doplněno 2. 11. 2026)
 
 Po přihlášení je v hlavičce tlačítko **Účet** (u správce **Správa**
