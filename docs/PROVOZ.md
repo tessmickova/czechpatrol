@@ -525,6 +525,24 @@ Když „Doloženo zdroji“ stárne, není to chyba kódu: v `data/navrhy.json`
 schval <id>`). Válečně relevantní návrh ze dvou redakcí zveřejní sběr sám
 jako „neověřeno úředně“ (`npm run spravce zverejni`, běží v `sber.yml`).
 
+### Sloupce na úvodu a kolik redakcí zpráva potřebuje (doplněno 4. 11. 2026)
+
+- Oba sloupce (Doloženo zdroji, Signály z médií) ukazují **osm řádků** i na
+  telefonu; dřív se na mobilu schovávalo od šestého.
+- Do Signálů jde jen zpráva **o útoku nebo ohrožení** (`jeOUtoku`
+  v `src/lib/signaly.ts`: slova o útoku, sabotáži, dronech, kyberútoku,
+  hrozbě, špionáži…; ne domácí politika, cvičení, kultura, nehody).
+  Co neprojde, zůstává ve frontě a sloupec to ukazuje jen jako počet
+  „+ N dalších ve frontě“.
+- **Kolik redakcí**: zpráva o útoku stojí na dvou nezávislých redakcích
+  (dvě různé domény). Je-li mezi zdroji redakce s doloženým průnikem
+  (`data/napadane-redakce.json`, každá položka se opírá o rozebranou
+  operaci v `kampane.json`), chce to **tři**. Napodobenina redakce
+  (`falesne`, např. lrozhlas.cz) není zdroj nikdy. Pravidlo je v jednom
+  modulu `nastroje/napadane-redakce.mjs` a platí pro automatické
+  zveřejnění, kontrolu dat, rozhlas do kanálů i zadání rutiny. Seznam
+  doplňuje provozovatelka; `do` říká, kdy riziko pominulo.
+
 ### Správa: co kde najdete (doplněno 2. 11. 2026)
 
 Po přihlášení je v hlavičce tlačítko **Účet** (u správce **Správa**

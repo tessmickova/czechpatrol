@@ -6,7 +6,7 @@ import { datumCasPraha } from "@/lib/cas";
 import { kdyZjisteno, type Zaznam } from "@/lib/agregace";
 import { jeCesky } from "@/lib/jazyk";
 import { nazevNaliehave } from "@/lib/naliehave";
-import { jeCiziVeFronte, jeSignal, pocetZdroju, seskupSignaly, zemeZdroje } from "@/lib/signaly";
+import { jeSignal, pocetZdroju, seskupSignaly, zemeZdroje } from "@/lib/signaly";
 import { KATEGORIE } from "@/lib/kategorie";
 import { JISTOTY, PASMA, UROVNE } from "@/lib/skala";
 import type { Kandidat, Kategorie } from "@/lib/typy";
@@ -92,8 +92,13 @@ function zZaznamu(z: Zaznam, klic: string, kam: string, stitek: Radek["stitek"],
     text: z.fakta[0] ?? z.neznameho[0] ?? null,
     textPopis: nepotvrzeny ? "Nepotvrzeno" : z.fakta[0] ? "Doloženo" : "Nepotvrzeno",
     zdroj: z.zdroje[0] ? { nazev: z.zdroje[0].nazev, url: z.zdroje[0].url } : null,
-    zdroje: z.zdroje.map((s, i) => ({ klic: `${i}-${s.url}`, nazev: s.nazev, url: s.url, kodZeme: zemeZdroje(s), kdy: null, titulek: null })),
-    pocetZdroju: pocetZdroju(z.zdroje.map((s) => ({ zdroj: s }))),
+    /*
+      Úvod nese u záznamu celý jen první a úřední zdroj (odlehci.ts), ostatní
+      bez názvu a odkazu kvůli velikosti stránky. Počet se bere z délky,
+      do seznamu jdou jen pojmenované; celý seznam je na stránce záznamu.
+    */
+    zdroje: z.zdroje.filter((s) => s.nazev && s.url && s.url !== "#").map((s, i) => ({ klic: `${i}-${s.url}`, nazev: s.nazev, url: s.url, kodZeme: zemeZdroje(s), kdy: null, titulek: null })),
+    pocetZdroju: z.zdroje.length,
   };
 }
 
@@ -153,7 +158,8 @@ function Sloupec({ nadpis, ikona, ton, radky, prazdne, paticka, ted, napoveda, t
         <span className="cislice text-mikro text-tlum2">{radky.length}</span>
       </div>
       {videt.length ? (
-        <ul className="mt-1 max-md:[&>li:nth-child(n+6)]:hidden">
+        /* Osm řádků i na telefonu (4. 11. 2026, provozovatelka); dřív se na mobilu schovávalo od šestého. */
+        <ul className="mt-1">
           {videt.map((r) => {
             const otevreno = otevreny === r.klic;
             return (
@@ -224,9 +230,9 @@ export function AktualitySloupce({ zaznamy, nepotvrzene = [], kandidati = [], te
       pocetZdroju: pocetZdroju(polozky),
     })),
   ].sort(serad).slice(0, 40);
-  /* Cizojazyčné, které se nevešly do žádného zobrazeného řádku jako zdroj — na úvodu jen jako počet. */
+  /* Co se do sloupce nedostalo (cizí jazyk, nic o útoku, projev) — na úvodu jen jako počet s odkazem do fronty. */
   const zobrazene = new Set(skupiny.filter((g) => jeSignal(g.hlavni)).flatMap((g) => g.polozky.map((p) => p.id)));
-  const cizich = kandidati.filter((k) => jeCiziVeFronte(k) && !zobrazene.has(k.id)).length;
+  const dalsich = kandidati.filter((k) => !zobrazene.has(k.id)).length;
   return (
     <section aria-labelledby="aktuality-nadpis">
       <h2 id="aktuality-nadpis" className="sr-only">Aktuality</h2>
@@ -235,7 +241,7 @@ export function AktualitySloupce({ zaznamy, nepotvrzene = [], kandidati = [], te
           paticka={<Tlacitko kam="/udalosti/" varianta="tichy" velikost="s" ikonaVpravo="nahoru" trida="[&>svg:last-child]:rotate-90">všechny záznamy od 2014</Tlacitko>} />
         {/* Mobil: nejdřív čerstvé signály, pak doložené (26. 9. 2026). Na počítači zůstává doložené vlevo. */}
         <Sloupec trida="max-md:order-first" ted={ted} nadpis="Signály z médií" ikona="otaznik" ton="pozor" radky={neoverene} prazdne="Právě žádný nový signál." napoveda="Neověřené. Do počtů ani hodnocení nevstupují."
-          paticka={cizich > 0 ? <Link href="/udalosti/?tab=cekajici" className="text-drobne text-tlum2 hover:text-tlum">+ {cizich} v cizím jazyce ve frontě →</Link> : <span className="text-drobne text-tlum2">Do počtů ani hodnocení nevstupují.</span>} />
+          paticka={dalsich > 0 ? <Link href="/udalosti/?tab=cekajici" className="text-drobne text-tlum2 hover:text-tlum">+ {dalsich} dalších ve frontě →</Link> : <span className="text-drobne text-tlum2">Do počtů ani hodnocení nevstupují.</span>} />
       </div>
     </section>
   );

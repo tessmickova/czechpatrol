@@ -2,6 +2,7 @@ import fs from "node:fs";
 import path from "node:path";
 import { describe, expect, it } from "vitest";
 import type { Incident, PravniStav } from "../src/lib/typy";
+import { jeFalesnaRedakce, potrebnychRedakci } from "../nastroje/napadane-redakce.mjs";
 
 const KOREN = path.join(process.cwd(), "data");
 const cti = <T,>(p: string): T => JSON.parse(fs.readFileSync(path.join(KOREN, p), "utf-8"));
@@ -28,7 +29,9 @@ describe("produkční data", () => {
       */
       if (i.overeni === "neovereno") {
         const domeny = new Set(i.zdroje.map((z) => { try { return new URL(z.url).hostname.replace(/^www\./, ""); } catch { return ""; } }).filter((d) => d && d !== "news.google.com"));
-        expect(domeny.size, `${i.slug}: neověřený záznam chce dvě nezávislé redakce`).toBeGreaterThanOrEqual(2);
+        /* Dvě redakce; s napadenou redakcí mezi zdroji tři, napodobenina se nepočítá (4. 11. 2026). */
+        for (const z of i.zdroje) expect(jeFalesnaRedakce(z), `${i.slug}: napodobenina redakce jako zdroj`).toBe(false);
+        expect(domeny.size, `${i.slug}: neověřený záznam chce dost nezávislých redakcí`).toBeGreaterThanOrEqual(potrebnychRedakci(i.zdroje));
         expect(["potvrzeno", "vysoka"], `${i.slug}: neověřený záznam s příliš vysokou jistotou`).not.toContain(i.jistota);
         expect(i.vyznam ?? "", `${i.slug}: neověřený záznam nesmí nést hodnocení`).toBe("");
         continue;

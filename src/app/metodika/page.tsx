@@ -327,6 +327,7 @@ export default function Metodika() {
               "O všech stranách píšeme věcně a s úctou. Žádné nálepky, žádné výzvy, nikoho neprovokujeme.",
               "Nezveřejňujeme pohyby jednotek, podrobnosti vyšetřování nad rámec oznámení úřadu, osobní údaje ani návody.",
               "Média ze sankčního seznamu EU nepoužíváme jako zdroj.",
+              "Zpráva o útoku stojí na dvou nezávislých redakcích. Je-li mezi nimi redakce, do které někdo prokazatelně pronikl, chce to tři. Napodobenina redakce není zdroj nikdy.",
             ]}
             znak="✓"
             barva="text-[#7fdcac]"

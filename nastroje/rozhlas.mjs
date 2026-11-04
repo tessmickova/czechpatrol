@@ -17,6 +17,7 @@
  */
 import { createHash, createHmac } from "node:crypto";
 import fs from "node:fs";
+import { dostRedakci } from "./napadane-redakce.mjs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { maUredniZdroj } from "./uredni-zdroj.mjs";
@@ -825,7 +826,8 @@ export function vyberVazneNavrhy(navrhy, stav, { ted = Date.now(), maxStari = 48
   return (navrhy ?? [])
     .filter((n) => (n.kam ?? "zaznam") === "zaznam" && !poslane[n.id])
     .filter((n) => /^[OR]/.test(n.zavaznost ?? ""))
-    .filter((n) => (n.zdroje ?? []).length >= 2)
+    /* Dvě redakce; s napadenou redakcí mezi zdroji tři (4. 11. 2026). */
+    .filter((n) => dostRedakci(n.zdroje))
     /*
       Od 23. 9. 2026 (audit, B-02): do veřejného kanálu jen s úředním zdrojem
       podle ADRESY (seznam úředních domén), ne podle toho, co o sobě zdroj
@@ -1000,8 +1002,8 @@ export function vyberNavrhyDoPrehledu(navrhy, stav, { ted = Date.now() } = {}) {
   const signaly = stav.signaly ?? {};
   return (navrhy ?? [])
     .filter((n) => (n.kam ?? "zaznam") === "zaznam" && n.id && !poslane[n.id] && !signaly[n.id])
-    /* Dva nezávislé zdroje. Jeden článek je zachycená zpráva, ne záznam k ohlášení. */
-    .filter((n) => (n.zdroje ?? []).length >= 2)
+    /* Dva nezávislé zdroje (tři, je-li mezi nimi napadená redakce). Jeden článek je zachycená zpráva, ne záznam k ohlášení. */
+    .filter((n) => dostRedakci(n.zdroje))
     .filter((n) => n.titulek && jeCesky(n.kratkyTitulek || n.titulek))
     .filter((n) => n.pripraveno && ted - new Date(n.pripraveno).getTime() <= NAVRH_NEJVYS_DNI * 86_400_000)
     .sort((a, b) => String(b.pripraveno).localeCompare(String(a.pripraveno)))

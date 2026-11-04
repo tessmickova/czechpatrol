@@ -111,3 +111,34 @@ describe("odkud zpráva přichází", () => {
     expect(zemeZdroje({ nazev: "?", url: "není adresa" })).toBeNull();
   });
 });
+
+/*
+  Jen o útoku nebo ohrožení (4. 11. 2026). Titulky jsou skutečné z fronty:
+  síto je pustilo kvůli jednomu slovu, do sloupce na úvodu nepatří.
+*/
+import { jeOUtoku } from "../src/lib/signaly";
+
+describe("do sloupce jen zprávy o útoku nebo ohrožení", () => {
+  it("útoky, hrozby, drony, sabotáže, špionáž projdou", () => {
+    for (const t of [
+      "Francie zachytila útok na krevní banky, měl zvýšit teploty na vysoké úrovně",
+      "V Německu zatkli třetího Turka kvůli zapálení stanice Starlinku u Varšavy v září",
+      "Na letišti v Modlině u Varšavy kvůli bombové hrozbě neplánovaně přistál letoun z Londýna",
+      "Lotyšům se nepodařilo sestřelit dron, který narušil vzdušný prostor",
+      "Polsko zabránilo snahám o provokaci na hranici s Ruskem, oznámil Tusk",
+      "Soud zprostil obžaloby čínského občana viněného ze špionáže",
+      "Supermarkety vo Švédsku a Belgicku zasiahli kyberútoky na chladiace zariadenia",
+    ]) expect(jeOUtoku(t), t).toBe(true);
+  });
+  it("komedie, nehody, historie, domácí politika a cvičení neprojdou", () => {
+    for (const t of [
+      "Český černý humor a boj o dědictví. Komedie Něco jako rodina představuje…",
+      "Muž se vážně popálil při práci na domě, vybuchla mu plynová kartuše",
+      "Našli ostatky, odebrali DNA a čekají. Historici hledali pozůstatky polských vojáků",
+      "Nawrockého „sabotáže“ a Tuskovo řešení „silou“. Ústavní krize trvá už dekádu",
+      "Z manévrů v motolské nemocnici byl planý poplach, zásahovku zburcoval cizí telefonát",
+      "Vláda za účasti prezidenta Pavla projedná novou koncepci armády do roku 2040",
+    ]) expect(jeOUtoku(t), t).toBe(false);
+    expect(jeSignal({ titulek: "Český černý humor a boj o dědictví. Komedie Něco jako rodina", kodZeme: "CZ", naliehave: null })).toBe(false);
+  });
+});
