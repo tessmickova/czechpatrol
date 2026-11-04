@@ -109,7 +109,16 @@ export function spocitejStav(incidenty: Incident[], ted = Date.now(), posledniSb
   const poradi = !upravene.length ? cislo("G2") : upravene.length < 3 ? upravene[0] : upravene[Math.floor((upravene.length - 1) / 2)];
   const zakladni = PORADI[poradi - 1];
   const signal = platneSignaly(signaly, ted)[0] ?? null;
-  const uroven = signal ? PORADI[Math.min(PORADI.length, poradi + 1) - 1] : zakladni;
+  /*
+    Prázdné okno (4. 11. 2026, provozovatelka: realisticky, ne poplašně — a
+    stejně tak ne falešně klidně). Dřív dostalo prázdné okno výchozí „Nízká“:
+    od 18. 10. nic neprošlo ověřením, okno se vyprázdnilo a budík hlásil
+    sebejistý klid. Méně než dva ověřené případy za 14 dní úroveň nestanoví;
+    web řekne „Nestanoveno“ a proč. Mimořádný signál redakce platí i tak —
+    pak je úroveň o stupeň nad výchozí G2, jako dřív.
+  */
+  const maloDat = vOkne.length < 2;
+  const uroven = signal ? PORADI[Math.min(PORADI.length, poradi + 1) - 1] : maloDat ? null : zakladni;
 
   const soucet = (xs: Incident[]) => Math.round(xs.reduce((s, i) => s + zDeseti(i.zavaznost), 0) * 10) / 10;
   const s1 = soucet(tyden);
@@ -132,7 +141,7 @@ export function spocitejStav(incidenty: Incident[], ted = Date.now(), posledniSb
   const zeme = new Set(vOkne.map((i) => i.zeme));
   const shrnuti = vOkne.length
     ? `Spočteno z ověřených případů za posledních 14 dní (${pripadu(vOkne.length)}) v ${zeme.size} ${zeme.size === 1 ? "zemi" : "zemích"}. Úroveň je jejich střední závažnost z pohledu Česka, jediná událost ji nezvedne. Je to měření, ne předpověď.`
-    : "Za posledních 14 dní není žádný ověřený případ. Je to měření, ne předpověď.";
+    : "Za posledních 14 dní nejsou aspoň dva ověřené případy, úroveň se proto nestanovuje. Neznamená to klid ani ohrožení. Je to měření, ne předpověď.";
 
   return {
     aktualizovano: new Date(ted).toISOString(),

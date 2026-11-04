@@ -6,7 +6,7 @@ import { NAZVY_HROZEB, type PripravitTed as DataPripravy } from "@/lib/priprava"
 import type { Pulz } from "@/lib/pulz";
 import { PASMA, UROVNE } from "@/lib/skala";
 import type { CelkovyStav, Kandidat, Overovana, Uroven } from "@/lib/typy";
-import { casPraha } from "@/lib/cas";
+import { casPraha, datumPraha } from "@/lib/cas";
 import { useT } from "@/lib/i18n";
 import { BUY_ME_A_COFFEE_URL, HEROHERO_URL, KANALY } from "@/config/web";
 import { Ikona } from "./ikony";
@@ -31,10 +31,10 @@ function seskup(hodnoty: number[], kusu: number): number[] {
   return out;
 }
 
-function Maly({ nadpis, obdobi, uroven, slovo, neutralni, popis, dodatek, graf }: { nadpis: string; obdobi: string; uroven: Uroven | null; slovo?: string; neutralni?: boolean; popis?: string; dodatek?: string; graf?: React.ReactNode }) {
+function Maly({ nadpis, obdobi, uroven, slovo, neutralni, popis, dodatek, navic, graf }: { nadpis: string; obdobi: string; uroven: Uroven | null; slovo?: string; neutralni?: boolean; popis?: string; dodatek?: string; /** Čím se ukazatel měří a na co dát pozor — jen v nápovědě. */ navic?: React.ReactNode; graf?: React.ReactNode }) {
   const pasmo = uroven && !neutralni ? PASMA[UROVNE[uroven].pasmo] : null;
   return (
-    <Napoveda cele plna popis={<span className="block">{popis && <span className="mb-1.5 block text-inkoust">{popis}</span>}{uroven && !neutralni ? <VykladUrovne uroven={uroven} /> : null}{dodatek && <span className="mt-1.5 block text-tlum2">{dodatek}</span>}</span>}>
+    <Napoveda cele plna popis={<span className="block">{popis && <span className="mb-1.5 block text-inkoust">{popis}</span>}{uroven && !neutralni ? <VykladUrovne uroven={uroven} /> : null}{dodatek && <span className="mt-1.5 block text-tlum2">{dodatek}</span>}{navic}</span>}>
       <span className="flex h-full w-full flex-col rounded-[14px] bg-plocha2/60 px-3 py-2.5 text-left">
         <span className="whitespace-nowrap text-mikro font-semibold text-tlum">{nadpis} <span className="font-normal text-tlum2">· {obdobi}</span></span>
         <span className="mt-1.5 flex items-center gap-2">
@@ -47,8 +47,11 @@ function Maly({ nadpis, obdobi, uroven, slovo, neutralni, popis, dodatek, graf }
   );
 }
 
-export function SidebarUvodu({ stav, cr, crHistoricky, crPocet, obcane, pulz, priprava, casy, casyCz, kandidati, zkontrolovano, overovane = [], ted, tipy }: {
-  stav: CelkovyStav; cr: Uroven | null; crHistoricky: Uroven | null; crPocet: { pripadu: number; kampani: number }; obcane: StavObcanu;
+export function SidebarUvodu({ stav, cr, crHistoricky, crPocet, crKampane = [], obcane, pulz, priprava, casy, casyCz, kandidati, zkontrolovano, overovane = [], ted, tipy }: {
+  stav: CelkovyStav; cr: Uroven | null; crHistoricky: Uroven | null; crPocet: { pripadu: number; kampani: number };
+  /** Operace proti občanům v Česku za 90 dní — do nápovědy u Česka: téma a zasažená média (ostražitost, ne další box). */
+  crKampane?: { slug: string; nazev: string; probiha: boolean; odhaleno: string; media: string[] }[];
+  obcane: StavObcanu;
   pulz?: Pulz; priprava?: DataPripravy; casy: string[]; casyCz: string[]; kandidati: Kandidat[]; zkontrolovano: string | null; overovane?: Overovana[]; ted: number; /** Box Tipy k přípravě — stojí před „AI radí“ (24. 9. 2026). */ tipy?: React.ReactNode;
 }) {
   /* Naléhavé zprávy chytá sběr, tak se čerstvost měří jeho posledním průchodem, ne ručním ověřením. */
@@ -129,7 +132,19 @@ export function SidebarUvodu({ stav, cr, crHistoricky, crPocet, obcane, pulz, pr
         <HlavickaWidgetu ikona="radar" nazev="Situace teď" meta={<span className="cislice">{soucet(14)} {sklon(soucet(14), "případ", "případy", "případů")} za 14 dní</span>} />
         <div className="p-3">
           <div className="flex items-center gap-3 rounded-[14px] bg-plocha2/60 px-3 py-2.5">
-            <Napoveda popis={stav.uroven ? <VykladUrovne uroven={stav.uroven} /> : <span className="block">{t("Hodnocení zatím nebylo stanoveno.")}</span>}>
+            {/*
+              Podle čeho (4. 11. 2026, provozovatelka): kritéria jen po najetí,
+              stručně, s odkazem na metodiku. Bez úrovně stojí místo výkladu
+              důvod ze shrnutí („méně než dva ověřené případy“).
+            */}
+            <Napoveda popis={<span className="block">
+              {stav.uroven ? <VykladUrovne uroven={stav.uroven} /> : <span className="block">{stav.shrnuti || t("Hodnocení zatím nebylo stanoveno.")}</span>}
+              <span className="mt-2.5 block border-t border-linka/60 pt-2 text-tlum">
+                <span className="stitek block text-tlum2">Podle čeho</span>
+                <span className="mt-1 block">Ověřené případy za 14 dní a jejich střední závažnost; mimo Česko o stupeň níž. Neověřené zprávy a zachycené signály nevstupují. Mimořádný signál redakce nejvýš o stupeň výš na 14 dní, vždy s důvodem. Méně než dva případy: nestanoveno.</span>
+                <Link href="/metodika/#situace-ted" className="mt-1.5 inline-flex items-center gap-1 font-semibold text-inkoust hover:text-akcent">Celá metodika <Ikona nazev="nahoru" velikost={11} tah={2} trida="rotate-90" /></Link>
+              </span>
+            </span>}>
               <span className="block"><ObloukovyMerak uroven={stav.uroven} naNoci velikost={112} skrytPopisek /></span>
             </Napoveda>
             <div className="min-w-0 flex-1">
@@ -146,8 +161,23 @@ export function SidebarUvodu({ stav, cr, crHistoricky, crPocet, obcane, pulz, pr
           <MimoradnySignalPoznamka stav={stav} className="mt-2" />
           <div className="mt-3 grid grid-cols-2 gap-3">
             <Maly nadpis={t("Česko")} obdobi="90 dní" uroven={cr} slovo={cr ? undefined : "Bez záznamu"} neutralni={!cr} popis={crPopis} dodatek={crHistoricky ? `Nejvýš od roku 2014: ${UROVNE[crHistoricky].nazev.toLowerCase()}.` : undefined}
+              navic={<span className="block">
+                <span className="mt-1.5 block text-tlum2">Nejvyšší závažnost ověřených případů v Česku a operací proti občanům za 90 dní.</span>
+                {crKampane.length > 0 && (
+                  <span className="mt-2 block border-t border-linka/60 pt-2">
+                    <span className="stitek block text-tlum2">Ostražitost</span>
+                    {crKampane.slice(0, 3).map((k) => (
+                      <span key={k.slug} className="mt-1 block">
+                        <Link href={`/manipulace/#${k.slug}`} className="font-semibold text-inkoust underline decoration-linka underline-offset-4 hover:decoration-akcent">{k.nazev}</Link>
+                        <span className="block text-tlum2">{k.probiha ? "probíhá" : `odhaleno ${datumPraha(k.odhaleno)}`}{k.media.length ? ` · zasaženo: ${k.media.join(", ")}` : ""}</span>
+                      </span>
+                    ))}
+                  </span>
+                )}
+              </span>}
               graf={<><span className="text-tlum"><Sloupky hodnoty={seskup(cz90, 12)} sirka={56} vyska={18} popis="Případy v Česku po týdnech" /></span><span>{cz90.reduce((a, b) => a + b, 0)} za 90 dní</span></>} />
             <Maly nadpis={t("Běžný život")} obdobi="teď" uroven={obcane.uroven} slovo={obcane.slovo} neutralni={obcane.neutralni} popis={obcane.popis}
+              navic={<span className="mt-1.5 block text-tlum2">Úřední stav (nouzový stav, mobilizace, omezení) a provoz služeb podle úředních zdrojů. Zprávy z médií nevstupují.</span>}
               graf={<span>{obcane.neovereno ? `${obcane.neovereno} bez údaje` : "orientační kontrola"}</span>} />
           </div>
           {/* Čísla v jednom pruhu, ne čtyři krabičky (26. 9. 2026). */}
@@ -159,7 +189,7 @@ export function SidebarUvodu({ stav, cr, crHistoricky, crPocet, obcane, pulz, pr
               </span>
             ))}
           </div>
-          <p className="mt-2 px-1 text-mikro text-tlum2 max-lg:hidden">Případy a operace proti občanům v Evropě. <Link href="/metodika/" className="odkaz">Jak se hodnotí</Link>.</p>
+          <p className="mt-2 px-1 text-mikro text-tlum2 max-lg:hidden">Případy a operace proti občanům v Evropě. <Link href="/metodika/#situace-ted" className="odkaz">Jak se hodnotí</Link>.</p>
         </div>
       </section>
 

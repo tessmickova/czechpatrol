@@ -27,7 +27,7 @@ describe("automatické celkové hodnocení", () => {
       z("R3", 1, "PL", { druh: "reakce" }),
       z("R3", 30),
     ], TED, beh);
-    expect(s.uroven).toBe("G2");
+    expect(s.uroven).toBeNull(); // prázdné okno úroveň nestanoví (4. 11. 2026)
     expect(s.noveSignaly.celkem).toBe(0);
   });
 
@@ -65,6 +65,16 @@ describe("mimořádný signál redakce", () => {
   it("nad nejvyšší úroveň nejde", () => {
     const r = [z("R3", 1, "CZ"), z("R3", 2, "CZ"), z("R3", 3, "CZ")];
     expect(spocitejStav(r, TED, beh, [signal(1, 10)]).uroven).toBe("R3");
+  });
+
+  it("prázdné okno úroveň nestanoví; mimořádný signál ji i tak zvedne nad výchozí (4. 11. 2026)", () => {
+    const prazdne = spocitejStav([], TED, beh);
+    expect(prazdne.uroven).toBeNull();
+    expect(prazdne.shrnuti).toMatch(/nestanovuje/);
+    expect(prazdne.shrnuti).not.toMatch(/ověřování|fronta/i);
+    expect(spocitejStav([z("Y1", 1)], TED, beh).uroven).toBeNull(); // jeden případ je pořád málo
+    expect(spocitejStav([z("Y1", 1), z("Y1", 2)], TED, beh).uroven).toBe("G3");
+    expect(spocitejStav([], TED, beh, [signal(1, 10)]).uroven).toBe("G3");
   });
 });
 

@@ -55,6 +55,8 @@ export function Paticka() {
           <div className="col-span-2 md:col-span-1">
             {/* Odkaz jako v hlavičce: pilulky BETA a AI v patičce jinak vybízely ke klepnutí bez odezvy (audit mrtvých kliků). */}
             <Odkaz href="/" className="inline-flex" aria-label={`${WEB.nazev} — přehled`}><Logo velikost={32} pismo={17} tmave /></Odkaz>
+            {/* Motto webu (4. 11. 2026, provozovatelka): totéž, co stojí u značky na úvodu, na každé stránce. */}
+            <p className="stitek-znacky mt-2 text-noc-tlum">{t("Přehled místo paniky")}</p>
             <p className="mt-3 max-w-[38ch] text-zaklad leading-relaxed text-noc-tlum max-md:hidden">
               {t("Nezávislý AI projekt: sběr, ověřování a vyhodnocení bezpečnostních událostí a změn, které mohou mít dopad na lidi v Česku. Shrnutí píše AI, zveřejňuje člověk. Není to úřední zdroj ani varovný systém. V nouzi volejte 112.")}
             </p>
