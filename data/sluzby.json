@@ -1,5 +1,5 @@
 {
-  "aktualizovano": "2026-11-04T14:03:37.946Z",
+  "aktualizovano": "2026-11-04T15:19:50.984Z",
   "stavy": [
     {
       "klic": "cloudflare",
@@ -9,16 +9,16 @@
         {
           "nazev": "Network latency issues in NRT",
           "odkaz": "https://www.cloudflarestatus.com/incidents/nbnize4e990z",
-          "aktualizovano": "2026-11-04T13:39:26.804Z"
+          "aktualizovano": "2026-11-04T14:58:43.900Z"
         }
       ],
       "postizene": [
         "Cloudflare Sites and Services",
         "Albuquerque, United States - (ABQ)",
         "Arica, Chile - (ARI)",
-        "Baghdad, Iraq - (BGW)"
+        "Annaba, Algeria - (AAE)"
       ],
-      "zkontrolovano": "2026-11-04T14:03:37.946Z",
+      "zkontrolovano": "2026-11-04T15:19:50.984Z",
       "chyba": null
     },
     {
@@ -30,7 +30,7 @@
         "Zoom Phone",
         "Zoom Phone - EMEA"
       ],
-      "zkontrolovano": "2026-11-04T14:03:37.946Z",
+      "zkontrolovano": "2026-11-04T15:19:50.984Z",
       "chyba": null
     },
     {
@@ -39,7 +39,7 @@
       "popis": "All Systems Operational",
       "incidenty": [],
       "postizene": [],
-      "zkontrolovano": "2026-11-04T14:03:37.946Z",
+      "zkontrolovano": "2026-11-04T15:19:50.984Z",
       "chyba": null
     }
   ]
