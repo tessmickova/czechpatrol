@@ -1,24 +1,18 @@
 {
-  "aktualizovano": "2026-11-03T19:25:43.311Z",
+  "aktualizovano": "2026-11-04T00:11:49.290Z",
   "stavy": [
     {
       "klic": "cloudflare",
       "stav": "vypadek",
       "popis": "Partial System Outage",
-      "incidenty": [
-        {
-          "nazev": "Cloudflare Workers and Pages build errors ",
-          "odkaz": "https://www.cloudflarestatus.com/incidents/nbyxn84kvb6o",
-          "aktualizovano": "2026-11-03T17:23:58.613Z"
-        }
-      ],
+      "incidenty": [],
       "postizene": [
-        "Cloudflare Sites and Services",
-        "Accra, Ghana - (ACC)",
         "Albuquerque, United States - (ABQ)",
-        "Arica, Chile - (ARI)"
+        "Arica, Chile - (ARI)",
+        "Annaba, Algeria - (AAE)",
+        "Baku, Azerbaijan - (GYD)"
       ],
-      "zkontrolovano": "2026-11-03T19:25:43.311Z",
+      "zkontrolovano": "2026-11-04T00:11:49.290Z",
       "chyba": null
     },
     {
@@ -29,7 +23,7 @@
         {
           "nazev": "Service Degradation Affecting Outbound MMS Services in the US region",
           "odkaz": "https://stspg.io/d46nxybl90r5",
-          "aktualizovano": "2026-11-03T09:30:07.558-08:00"
+          "aktualizovano": "2026-11-03T14:22:51.545-08:00"
         }
       ],
       "postizene": [
@@ -38,7 +32,7 @@
         "Zoom Phone - EMEA",
         "Zoom Phone - NORTH AMERICA"
       ],
-      "zkontrolovano": "2026-11-03T19:25:43.311Z",
+      "zkontrolovano": "2026-11-04T00:11:49.290Z",
       "chyba": null
     },
     {
@@ -47,7 +41,7 @@
       "popis": "All Systems Operational",
       "incidenty": [],
       "postizene": [],
-      "zkontrolovano": "2026-11-03T19:25:43.311Z",
+      "zkontrolovano": "2026-11-04T00:11:49.290Z",
       "chyba": null
     }
   ]
