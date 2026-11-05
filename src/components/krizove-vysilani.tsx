@@ -60,19 +60,30 @@ export function CoNaladit({ kraj, onVyber }: { kraj: string | null; onVyber: (k:
             {!vybrany
               ? "Vyberte kraj."
               : vybrany.fm.length
-                ? vybrany.fm.map((v) => <span key={`${v.vysilac}-${v.mhz}`} className="block">{v.vysilac} · <span className="cislice text-inkoust">{mhz(v.mhz)}</span></span>)
+                ? (
+                  /* Vysílače podle výkonu: první bývá slyšet v celém kraji, ostatní doplňují údolí a města. */
+                  <span className="block space-y-0.5">
+                    {vybrany.fm.map((v) => (
+                      <span key={`${v.vysilac}-${v.mhz}`} className="flex items-baseline justify-between gap-3">
+                        <span className="min-w-0">{v.vysilac}</span>
+                        <span className="cislice shrink-0 font-semibold text-inkoust">{mhz(v.mhz)}</span>
+                      </span>
+                    ))}
+                    <span className="block pt-1 text-mikro text-tlum2">Podle regionů Českého rozhlasu; silný vysílač je slyšet i za hranicí kraje.</span>
+                  </span>
+                )
                 : <>Kmitočty pro {vybrany.nazev === "Praha" ? "Prahu" : `${vybrany.nazev} kraj`} doplníme z oficiálního seznamu Českého rozhlasu. Do té doby platí DAB+ a televize níže.</>}
           </dd>
         </div>
         {d.celostatni.map((c) => (
           <div key={c.cesta}>
-            <dt className="font-semibold text-inkoust">{c.cesta} · {c.co}</dt>
+            <dt className="font-semibold text-inkoust">{c.cesta} · {c.co}{c.cesta === "DAB+" && vybrany?.dab?.length ? ` · blok ${vybrany.dab.join(", ")}` : ""}</dt>
             <dd className="text-tlum">{c.jak}</dd>
           </div>
         ))}
       </dl>
       <p className="flex flex-wrap gap-x-3 gap-y-1 text-drobne text-tlum2">
-        <a href={d.zdroj.url} target="_blank" rel={VEN} className="odkaz">{d.zdroj.nazev} ↗</a>
+        <a href={d.kmitocty?.zdroj.url ?? d.zdroj.url} target="_blank" rel={VEN} className="odkaz">{d.kmitocty ? `${d.kmitocty.zdroj.nazev} (staženo ${d.kmitocty.stazeno.split("-").reverse().map(Number).join(". ")}) ↗` : `${d.zdroj.nazev} ↗`}</a>
         <a href={d.krizoveVysilani.zdroj.url} target="_blank" rel={VEN} className="odkaz">Varovný systém ASA ↗</a>
       </p>
     </div>
@@ -86,7 +97,7 @@ export function CoNaladitBox() {
   const souhrn = !vybrany
     ? `${KRIZOVE_VYSILANI.stanice} · vyberte kraj`
     : vybrany.fm.length
-      ? `${vybrany.nazev}: ${vybrany.fm.map((v) => mhz(v.mhz)).join(", ")}`
+      ? `${vybrany.nazev}: ${vybrany.fm.slice(0, 3).map((v) => mhz(v.mhz)).join(" · ")}${vybrany.fm.length > 3 ? ` +${vybrany.fm.length - 3}` : ""}`
       : `${vybrany.nazev}: DAB+ a ČT24, kmitočet FM doplníme`;
   return (
     <details className="group overflow-hidden rounded-[22px] bg-plocha">

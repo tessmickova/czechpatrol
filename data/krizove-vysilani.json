@@ -1,30 +1,456 @@
 {
-  "_poznamka": "Co naladit v krizi (5. 11. 2026, provozovatelka). Hlavní vysílání je ČRo Radiožurnál: na DAB+ a v televizi (ČT24) na poloze nezáleží, kmitočty FM se liší po vysílačích, a proto se vybírá kraj — polohu web nezjišťuje. Kmitočty se doplňují JEN z oficiálního seznamu Českého rozhlasu (pole `fm` u kraje: vysílač, mhz, a `zdroj` s adresou stránky, odkud číslo je). Prázdné pole web přizná; nic se nevymýšlí.",
+  "_poznamka": "Co naladit v krizi (5. 11. 2026, provozovatelka). Hlavní vysílání je ČRo Radiožurnál: na DAB+ a v televizi (ČT24) na poloze nezáleží, kmitočty FM se liší po vysílačích, a proto se vybírá kraj — polohu web nezjišťuje. Pole `fm` a `dab` u krajů plní JEN nástroj `npm run kmitocty` (nastroje/kmitocty-cro.mjs) z oficiálních dat Českého rozhlasu, stránka „Vysílače a frekvence“; datum stažení je v `kmitocty.stazeno`. Ručně se sem čísla nepíší; prázdné pole web přizná.",
   "stanice": "ČRo Radiožurnál",
-  "zdroj": { "nazev": "Český rozhlas", "url": "https://www.rozhlas.cz/" },
+  "zdroj": {
+    "nazev": "Český rozhlas",
+    "url": "https://www.rozhlas.cz/"
+  },
   "krizoveVysilani": {
     "text": "Při mimořádné události přerušují Český rozhlas a Česká televize program a vysílají pokyny úřadů pro zasažené území. Rozhlas funguje i bez internetu a bez mobilní sítě — v autě nebo na baterie.",
-    "zdroj": { "nazev": "Český rozhlas — testy varovného systému ASA pro DAB+", "url": "https://digital.rozhlas.cz/v-cesku-probehnou-10-zari-historicky-prvni-testy-varovneho-systemu-asa-pro-dab-9642115" }
+    "zdroj": {
+      "nazev": "Český rozhlas — testy varovného systému ASA pro DAB+",
+      "url": "https://digital.rozhlas.cz/v-cesku-probehnou-10-zari-historicky-prvni-testy-varovneho-systemu-asa-pro-dab-9642115"
+    }
   },
   "celostatni": [
-    { "cesta": "DAB+", "co": "ČRo Radiožurnál", "jak": "V digitálním rádiu se stanice vyhledává podle názvu, kmitočet se neladí. Přijímač s funkcí ASA se při varování zapne a přepne sám." },
-    { "cesta": "Televize", "co": "ČT24", "jak": "Zpravodajský kanál České televize; krizové vysílání přebírají i ostatní kanály ČT." },
-    { "cesta": "Online", "co": "mujRozhlas, rozhlas.cz", "jak": "Jen dokud funguje připojení. Při výpadku elektřiny nebo sítí s ním nepočítejte." }
+    {
+      "cesta": "DAB+",
+      "co": "ČRo Radiožurnál",
+      "jak": "V digitálním rádiu se stanice vyhledává podle názvu, kmitočet se neladí. Přijímač s funkcí ASA se při varování zapne a přepne sám."
+    },
+    {
+      "cesta": "Televize",
+      "co": "ČT24",
+      "jak": "Zpravodajský kanál České televize; krizové vysílání přebírají i ostatní kanály ČT."
+    },
+    {
+      "cesta": "Online",
+      "co": "mujRozhlas, rozhlas.cz",
+      "jak": "Jen dokud funguje připojení. Při výpadku elektřiny nebo sítí s ním nepočítejte."
+    }
   ],
+  "kmitocty": {
+    "stazeno": "2026-11-05",
+    "zdroj": {
+      "nazev": "Český rozhlas — Vysílače a frekvence",
+      "url": "https://portal.rozhlas.cz/vysilace/"
+    },
+    "rozhrani": "https://bridge.rozhlas.cz/vysilace/get-transmitters/?format=rscr-json&sortBy=location&sortDir=asc&"
+  },
   "kraje": [
-    { "klic": "praha", "nazev": "Praha", "fm": [] },
-    { "klic": "stredocesky", "nazev": "Středočeský", "fm": [] },
-    { "klic": "jihocesky", "nazev": "Jihočeský", "fm": [] },
-    { "klic": "plzensky", "nazev": "Plzeňský", "fm": [] },
-    { "klic": "karlovarsky", "nazev": "Karlovarský", "fm": [] },
-    { "klic": "ustecky", "nazev": "Ústecký", "fm": [] },
-    { "klic": "liberecky", "nazev": "Liberecký", "fm": [] },
-    { "klic": "kralovehradecky", "nazev": "Královéhradecký", "fm": [] },
-    { "klic": "pardubicky", "nazev": "Pardubický", "fm": [] },
-    { "klic": "vysocina", "nazev": "Vysočina", "fm": [] },
-    { "klic": "jihomoravsky", "nazev": "Jihomoravský", "fm": [] },
-    { "klic": "olomoucky", "nazev": "Olomoucký", "fm": [] },
-    { "klic": "zlinsky", "nazev": "Zlínský", "fm": [] },
-    { "klic": "moravskoslezsky", "nazev": "Moravskoslezský", "fm": [] }
+    {
+      "klic": "praha",
+      "nazev": "Praha",
+      "fm": [
+        {
+          "vysilac": "Praha (Mahlerovy sady)",
+          "mhz": 94.6,
+          "zdroj": {
+            "nazev": "Český rozhlas — Vysílače a frekvence",
+            "url": "https://portal.rozhlas.cz/vysilace/"
+          },
+          "vykonKw": 5
+        }
+      ],
+      "dab": [
+        "12C"
+      ]
+    },
+    {
+      "klic": "stredocesky",
+      "nazev": "Středočeský",
+      "fm": [
+        {
+          "vysilac": "Votice (Mezivrata)",
+          "mhz": 93.1,
+          "zdroj": {
+            "nazev": "Český rozhlas — Vysílače a frekvence",
+            "url": "https://portal.rozhlas.cz/vysilace/"
+          },
+          "vykonKw": 95
+        },
+        {
+          "vysilac": "Příbram (Kozičín)",
+          "mhz": 102.2,
+          "zdroj": {
+            "nazev": "Český rozhlas — Vysílače a frekvence",
+            "url": "https://portal.rozhlas.cz/vysilace/"
+          },
+          "vykonKw": 0.4
+        }
+      ],
+      "dab": [
+        "12C"
+      ]
+    },
+    {
+      "klic": "jihocesky",
+      "nazev": "Jihočeský",
+      "fm": [
+        {
+          "vysilac": "České Budějovice (Kleť)",
+          "mhz": 91.1,
+          "zdroj": {
+            "nazev": "Český rozhlas — Vysílače a frekvence",
+            "url": "https://portal.rozhlas.cz/vysilace/"
+          },
+          "vykonKw": 78
+        },
+        {
+          "vysilac": "Písek (Jarník)",
+          "mhz": 97,
+          "zdroj": {
+            "nazev": "Český rozhlas — Vysílače a frekvence",
+            "url": "https://portal.rozhlas.cz/vysilace/"
+          },
+          "vykonKw": 1
+        }
+      ],
+      "dab": [
+        "12C"
+      ]
+    },
+    {
+      "klic": "plzensky",
+      "nazev": "Plzeňský",
+      "fm": [
+        {
+          "vysilac": "Plzeň (Krašov)",
+          "mhz": 89.1,
+          "zdroj": {
+            "nazev": "Český rozhlas — Vysílače a frekvence",
+            "url": "https://portal.rozhlas.cz/vysilace/"
+          },
+          "vykonKw": 80.99
+        },
+        {
+          "vysilac": "Domažlice (Vraní vrch)",
+          "mhz": 98,
+          "zdroj": {
+            "nazev": "Český rozhlas — Vysílače a frekvence",
+            "url": "https://portal.rozhlas.cz/vysilace/"
+          },
+          "vykonKw": 10
+        },
+        {
+          "vysilac": "Plzeň (Radeč)",
+          "mhz": 99.2,
+          "zdroj": {
+            "nazev": "Český rozhlas — Vysílače a frekvence",
+            "url": "https://portal.rozhlas.cz/vysilace/"
+          },
+          "vykonKw": 10
+        },
+        {
+          "vysilac": "Klatovy (Barák)",
+          "mhz": 99.8,
+          "zdroj": {
+            "nazev": "Český rozhlas — Vysílače a frekvence",
+            "url": "https://portal.rozhlas.cz/vysilace/"
+          },
+          "vykonKw": 10
+        },
+        {
+          "vysilac": "Sušice (Svatobor)",
+          "mhz": 90.6,
+          "zdroj": {
+            "nazev": "Český rozhlas — Vysílače a frekvence",
+            "url": "https://portal.rozhlas.cz/vysilace/"
+          },
+          "vykonKw": 1
+        }
+      ],
+      "dab": [
+        "12C"
+      ]
+    },
+    {
+      "klic": "karlovarsky",
+      "nazev": "Karlovarský",
+      "fm": [
+        {
+          "vysilac": "Mariánské Lázně (Dyleň)",
+          "mhz": 97.6,
+          "zdroj": {
+            "nazev": "Český rozhlas — Vysílače a frekvence",
+            "url": "https://portal.rozhlas.cz/vysilace/"
+          },
+          "vykonKw": 1
+        },
+        {
+          "vysilac": "Sokolov (Na ovčárně)",
+          "mhz": 94.3,
+          "zdroj": {
+            "nazev": "Český rozhlas — Vysílače a frekvence",
+            "url": "https://portal.rozhlas.cz/vysilace/"
+          },
+          "vykonKw": 0.4
+        },
+        {
+          "vysilac": "Karlovy Vary (Tři kříže)",
+          "mhz": 102.6,
+          "zdroj": {
+            "nazev": "Český rozhlas — Vysílače a frekvence",
+            "url": "https://portal.rozhlas.cz/vysilace/"
+          },
+          "vykonKw": 0.1
+        }
+      ],
+      "dab": [
+        "12C"
+      ]
+    },
+    {
+      "klic": "ustecky",
+      "nazev": "Ústecký",
+      "fm": [
+        {
+          "vysilac": "Ústí nad Labem (Buková hora)",
+          "mhz": 90.9,
+          "zdroj": {
+            "nazev": "Český rozhlas — Vysílače a frekvence",
+            "url": "https://portal.rozhlas.cz/vysilace/"
+          },
+          "vykonKw": 100
+        },
+        {
+          "vysilac": "Chomutov (Jedlová hora)",
+          "mhz": 98.9,
+          "zdroj": {
+            "nazev": "Český rozhlas — Vysílače a frekvence",
+            "url": "https://portal.rozhlas.cz/vysilace/"
+          },
+          "vykonKw": 9.33
+        }
+      ],
+      "dab": [
+        "12C"
+      ]
+    },
+    {
+      "klic": "liberecky",
+      "nazev": "Liberecký",
+      "fm": [
+        {
+          "vysilac": "Liberec (Ještěd)",
+          "mhz": 95.9,
+          "zdroj": {
+            "nazev": "Český rozhlas — Vysílače a frekvence",
+            "url": "https://portal.rozhlas.cz/vysilace/"
+          },
+          "vykonKw": 20
+        }
+      ],
+      "dab": [
+        "12C"
+      ]
+    },
+    {
+      "klic": "kralovehradecky",
+      "nazev": "Královéhradecký",
+      "fm": [
+        {
+          "vysilac": "Trutnov (Černá hora)",
+          "mhz": 88.5,
+          "zdroj": {
+            "nazev": "Český rozhlas — Vysílače a frekvence",
+            "url": "https://portal.rozhlas.cz/vysilace/"
+          },
+          "vykonKw": 10
+        }
+      ],
+      "dab": [
+        "12C"
+      ]
+    },
+    {
+      "klic": "pardubicky",
+      "nazev": "Pardubický",
+      "fm": [
+        {
+          "vysilac": "Pardubice (Krásné)",
+          "mhz": 89.7,
+          "zdroj": {
+            "nazev": "Český rozhlas — Vysílače a frekvence",
+            "url": "https://portal.rozhlas.cz/vysilace/"
+          },
+          "vykonKw": 100
+        }
+      ],
+      "dab": [
+        "12C"
+      ]
+    },
+    {
+      "klic": "vysocina",
+      "nazev": "Vysočina",
+      "fm": [
+        {
+          "vysilac": "Jihlava (Javořice)",
+          "mhz": 90.7,
+          "zdroj": {
+            "nazev": "Český rozhlas — Vysílače a frekvence",
+            "url": "https://portal.rozhlas.cz/vysilace/"
+          },
+          "vykonKw": 20
+        }
+      ],
+      "dab": [
+        "12D"
+      ]
+    },
+    {
+      "klic": "jihomoravsky",
+      "nazev": "Jihomoravský",
+      "fm": [
+        {
+          "vysilac": "Brno (Kojál)",
+          "mhz": 95.1,
+          "zdroj": {
+            "nazev": "Český rozhlas — Vysílače a frekvence",
+            "url": "https://portal.rozhlas.cz/vysilace/"
+          },
+          "vykonKw": 83
+        },
+        {
+          "vysilac": "Hodonín (Babí lom)",
+          "mhz": 106.2,
+          "zdroj": {
+            "nazev": "Český rozhlas — Vysílače a frekvence",
+            "url": "https://portal.rozhlas.cz/vysilace/"
+          },
+          "vykonKw": 9.1
+        },
+        {
+          "vysilac": "Znojmo (Za humny - Kuchařovi)",
+          "mhz": 101.2,
+          "zdroj": {
+            "nazev": "Český rozhlas — Vysílače a frekvence",
+            "url": "https://portal.rozhlas.cz/vysilace/"
+          },
+          "vykonKw": 1
+        },
+        {
+          "vysilac": "Brno (Míčkova)",
+          "mhz": 89.5,
+          "zdroj": {
+            "nazev": "Český rozhlas — Vysílače a frekvence",
+            "url": "https://portal.rozhlas.cz/vysilace/"
+          },
+          "vykonKw": 0.05
+        }
+      ],
+      "dab": [
+        "12D"
+      ]
+    },
+    {
+      "klic": "olomoucky",
+      "nazev": "Olomoucký",
+      "fm": [
+        {
+          "vysilac": "Jeseník (Praděd)",
+          "mhz": 91.3,
+          "zdroj": {
+            "nazev": "Český rozhlas — Vysílače a frekvence",
+            "url": "https://portal.rozhlas.cz/vysilace/"
+          },
+          "vykonKw": 20
+        },
+        {
+          "vysilac": "Jeseník (Lázně)",
+          "mhz": 95,
+          "zdroj": {
+            "nazev": "Český rozhlas — Vysílače a frekvence",
+            "url": "https://portal.rozhlas.cz/vysilace/"
+          },
+          "vykonKw": 0.1
+        }
+      ],
+      "dab": [
+        "12D"
+      ]
+    },
+    {
+      "klic": "zlinsky",
+      "nazev": "Zlínský",
+      "fm": [
+        {
+          "vysilac": "Zlín (Tlustá hora)",
+          "mhz": 99.5,
+          "zdroj": {
+            "nazev": "Český rozhlas — Vysílače a frekvence",
+            "url": "https://portal.rozhlas.cz/vysilace/"
+          },
+          "vykonKw": 5.5
+        },
+        {
+          "vysilac": "Uherský Brod (Černá hora)",
+          "mhz": 93,
+          "zdroj": {
+            "nazev": "Český rozhlas — Vysílače a frekvence",
+            "url": "https://portal.rozhlas.cz/vysilace/"
+          },
+          "vykonKw": 1
+        },
+        {
+          "vysilac": "Valašské Klobouky (Suchý vrch)",
+          "mhz": 91.9,
+          "zdroj": {
+            "nazev": "Český rozhlas — Vysílače a frekvence",
+            "url": "https://portal.rozhlas.cz/vysilace/"
+          },
+          "vykonKw": 0.1
+        },
+        {
+          "vysilac": "Vsetín (Bečevná)",
+          "mhz": 92.1,
+          "zdroj": {
+            "nazev": "Český rozhlas — Vysílače a frekvence",
+            "url": "https://portal.rozhlas.cz/vysilace/"
+          },
+          "vykonKw": 0.08
+        }
+      ],
+      "dab": [
+        "12D"
+      ]
+    },
+    {
+      "klic": "moravskoslezsky",
+      "nazev": "Moravskoslezský",
+      "fm": [
+        {
+          "vysilac": "Ostrava (Hošťálkovice)",
+          "mhz": 101.4,
+          "zdroj": {
+            "nazev": "Český rozhlas — Vysílače a frekvence",
+            "url": "https://portal.rozhlas.cz/vysilace/"
+          },
+          "vykonKw": 43
+        },
+        {
+          "vysilac": "Valašské Meziříčí (Radhošť)",
+          "mhz": 92.5,
+          "zdroj": {
+            "nazev": "Český rozhlas — Vysílače a frekvence",
+            "url": "https://portal.rozhlas.cz/vysilace/"
+          },
+          "vykonKw": 7.2
+        },
+        {
+          "vysilac": "Třinec (Javorový)",
+          "mhz": 92.1,
+          "zdroj": {
+            "nazev": "Český rozhlas — Vysílače a frekvence",
+            "url": "https://portal.rozhlas.cz/vysilace/"
+          },
+          "vykonKw": 1
+        }
+      ],
+      "dab": [
+        "12D"
+      ]
+    }
   ]
 }

@@ -6,17 +6,21 @@ import data from "../../data/krizove-vysilani.json";
   Radiožurnálu se liší po vysílačích, proto si čtenář vybere kraj —
   polohu web nezjišťuje a výběr zůstává jen v jeho prohlížeči.
 
-  Kmitočty jsou v data/krizove-vysilani.json a doplňují se jen
-  z oficiálního seznamu Českého rozhlasu. Prázdné pole web přizná.
+  Kmitočty jsou v data/krizove-vysilani.json a plní je jen nástroj
+  nastroje/kmitocty-cro.mjs z oficiálních dat Českého rozhlasu (stránka
+  „Vysílače a frekvence“). Prázdné pole web přizná.
 */
-export interface VysilacFm { vysilac: string; mhz: number; zdroj?: { nazev: string; url: string } }
-export interface KrajVysilani { klic: string; nazev: string; fm: VysilacFm[] }
+export interface VysilacFm { vysilac: string; mhz: number; vykonKw?: number; zdroj?: { nazev: string; url: string } }
+/** `dab` = bloky DAB+ (12C, 12D), ve kterých v kraji vysílá multiplex Českého rozhlasu. */
+export interface KrajVysilani { klic: string; nazev: string; fm: VysilacFm[]; dab?: string[] }
 export interface CestaVysilani { cesta: string; co: string; jak: string }
 export interface KrizoveVysilani {
   stanice: string;
   zdroj: { nazev: string; url: string };
   krizoveVysilani: { text: string; zdroj: { nazev: string; url: string } };
   celostatni: CestaVysilani[];
+  /** Odkud a kdy jsou kmitočty (nastroje/kmitocty-cro.mjs). */
+  kmitocty?: { stazeno: string; zdroj: { nazev: string; url: string }; rozhrani: string };
   kraje: KrajVysilani[];
 }
 

@@ -560,15 +560,31 @@ hlavní vysílání (ČRo Radiožurnál) podle kraje, bez zjišťování polohy 
 (`localStorage`, klíč `czechpatrol.kraj`). DAB+ a televize (ČT24) na
 poloze nezávisí; kmitočet FM se liší po vysílačích.
 
-**Kmitočty se doplňují jen z oficiálního seznamu Českého rozhlasu**
-(`data/krizove-vysilani.json`, u kraje pole `fm`: `{ "vysilac": "…",
-"mhz": 94.6, "zdroj": { "nazev": "Český rozhlas — kmitočty", "url": "https://…rozhlas.cz/…" } }`).
-Dokud je pole prázdné, web u kraje říká, že kmitočet doplníme, a odkazuje
-na DAB+ a televizi. Test `testy/krizove-vysilani.test.ts` hlídá pásmo
-87,5–108 MHz, zdroj z domény rozhlas.cz a čtrnáct krajů. Z této session
-se na rozhlas.cz nedalo dosáhnout (doména není povolená), proto jsou
-kmitočty zatím prázdné — doplní je provozovatelka, nebo session s povoleným
-přístupem na rozhlas.cz.
+**Kmitočty jsou z oficiálních dat Českého rozhlasu** — stránka „Vysílače
+a frekvence“ (`https://portal.rozhlas.cz/vysilace/`) čte rozhraní
+`bridge.rozhlas.cz/vysilace/get-transmitters/`; totéž čte nástroj
+`npm run kmitocty` (`nastroje/kmitocty-cro.mjs`) a přepíše pole `fm`
+a `dab` u krajů v `data/krizove-vysilani.json`, s datem stažení v
+`kmitocty.stazeno`. Ručně se čísla nepíší. Nástroj:
+
+- bere jen Radiožurnál (id stanice 1) v provozu (`status 0`),
+- vysílač přiřadí kraji podle regionu studia ČRo (tabulka
+  `REGION_NA_KRAJ` v nástroji — regiony nejsou kraje, např. „ČRo Sever“
+  = Ústecký, „ČRo Region, Středočeský kraj“ = Středočeský),
+- seřadí vysílače podle výkonu (první bývá slyšet v celém kraji),
+- k DAB+ přidá blok multiplexu ČRo (12C v Čechách, 12D na Moravě),
+- vypíše, co nedokázal přiřadit (vysílač bez regionu zůstane mimo).
+
+Spouští se ručně, když ČRo změní síť; v CI neběží. Poprvé spuštěno
+5. 11. 2026 (156 vysílačů). Přepínač `--nacisto` jen vypíše, `--ze-souboru
+cesta.json` čte uložená data místo stahování; když Node nevidí proxy,
+nástroj zkusí `curl`. Test `testy/krizove-vysilani.test.ts` hlídá pásmo
+87,5–108 MHz, zdroj z domény rozhlas.cz, čtrnáct krajů, u každého aspoň
+jeden kmitočet FM a blok DAB+ a pořadí podle výkonu.
+
+V boxu je po výběru kraje seznam vysílačů s kmitočtem (nejsilnější
+první), u DAB+ blok multiplexu, a v patičce boxu odkaz na zdroj s datem
+stažení.
 
 Tísňová čísla v menu mají nadpis „Nezahlcujte tato čísla“ a jednu větu,
 kdy volat; informace má čtenář hledat ve vysílání nad nimi.

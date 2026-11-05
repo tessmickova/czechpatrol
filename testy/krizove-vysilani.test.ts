@@ -30,6 +30,20 @@ describe("co naladit v krizi", () => {
     expect(KRIZOVE_VYSILANI.celostatni.map((c) => c.cesta)).toEqual(["DAB+", "Televize", "Online"]);
     expect(KRIZOVE_VYSILANI.krizoveVysilani.zdroj.url).toMatch(/^https:\/\//);
   });
+  it("každý kraj má aspoň jeden kmitočet FM a blok DAB+ z oficiálních dat ČRo", () => {
+    const d = KRIZOVE_VYSILANI;
+    expect(d.kmitocty?.stazeno).toMatch(/^\d{4}-\d{2}-\d{2}$/);
+    expect(d.kmitocty?.zdroj.url).toMatch(/^https:\/\/[a-z.]*rozhlas\.cz\//);
+    for (const k of d.kraje) {
+      expect(k.fm.length, `${k.nazev}: bez kmitočtu FM`).toBeGreaterThan(0);
+      expect(k.dab?.length, `${k.nazev}: bez bloku DAB+`).toBeGreaterThan(0);
+      for (const b of k.dab ?? []) expect(b).toMatch(/^\d{1,2}[A-D]$/);
+      /* Vysílače jsou seřazené podle výkonu — první je ten, který pokryje největší území. */
+      const vykony = k.fm.map((v) => v.vykonKw ?? 0);
+      expect([...vykony].sort((a, b) => b - a)).toEqual(vykony);
+    }
+    expect(krajVysilani("praha")?.fm[0]?.mhz).toBe(94.6);
+  });
   it("kraj se najde podle klíče a kmitočet se píše česky", () => {
     expect(krajVysilani("praha")?.nazev).toBe("Praha");
     expect(krajVysilani("nic")).toBeNull();

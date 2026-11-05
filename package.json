@@ -10,6 +10,7 @@
     "lint": "next lint",
     "typecheck": "tsc --noEmit",
     "sber": "tsx sber/index.ts",
+    "kmitocty": "node nastroje/kmitocty-cro.mjs",
     "sber:provoz": "tsx sber/index.ts --jen-provoz",
     "test": "vitest run testy",
     "kontrola": "npm run kontrola:data && npm test && npm run typecheck && npm run build && npm run nahled && npm ci --prefix api && npm run test:api && npm run typecheck:api",
