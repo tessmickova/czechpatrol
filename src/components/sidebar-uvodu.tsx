@@ -14,6 +14,7 @@ import { ObloukovyMerak } from "./mericky";
 import { Cara, poDnech, Sloupky } from "./mikrograf";
 import { Tlacitko } from "./ui";
 import { InternetBox } from "./internet-banner";
+import { CoNaladitBox } from "./krizove-vysilani";
 import type { SouhrnInternetu } from "@/lib/kyber-souhrn";
 import { stavNalehavosti } from "./urgentni";
 import { HlavickaWidgetu, IkonaKruh } from "./widgety";
@@ -197,6 +198,9 @@ export function SidebarUvodu({ stav, cr, crHistoricky, crPocet, crKampane = [], 
 
 
       {/* Tipy jen na počítači: na mobilu je to další box navíc. */}
+      {/* Co naladit v krizi (5. 11. 2026, provozovatelka): hlavní vysílání podle kraje, i na telefonu. */}
+      <CoNaladitBox />
+
       {tipy && <div className="max-lg:hidden">{tipy}</div>}
 
       {/* Připravenost */}

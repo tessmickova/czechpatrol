@@ -1,0 +1,30 @@
+{
+  "_poznamka": "Co naladit v krizi (5. 11. 2026, provozovatelka). Hlavní vysílání je ČRo Radiožurnál: na DAB+ a v televizi (ČT24) na poloze nezáleží, kmitočty FM se liší po vysílačích, a proto se vybírá kraj — polohu web nezjišťuje. Kmitočty se doplňují JEN z oficiálního seznamu Českého rozhlasu (pole `fm` u kraje: vysílač, mhz, a `zdroj` s adresou stránky, odkud číslo je). Prázdné pole web přizná; nic se nevymýšlí.",
+  "stanice": "ČRo Radiožurnál",
+  "zdroj": { "nazev": "Český rozhlas", "url": "https://www.rozhlas.cz/" },
+  "krizoveVysilani": {
+    "text": "Při mimořádné události přerušují Český rozhlas a Česká televize program a vysílají pokyny úřadů pro zasažené území. Rozhlas funguje i bez internetu a bez mobilní sítě — v autě nebo na baterie.",
+    "zdroj": { "nazev": "Český rozhlas — testy varovného systému ASA pro DAB+", "url": "https://digital.rozhlas.cz/v-cesku-probehnou-10-zari-historicky-prvni-testy-varovneho-systemu-asa-pro-dab-9642115" }
+  },
+  "celostatni": [
+    { "cesta": "DAB+", "co": "ČRo Radiožurnál", "jak": "V digitálním rádiu se stanice vyhledává podle názvu, kmitočet se neladí. Přijímač s funkcí ASA se při varování zapne a přepne sám." },
+    { "cesta": "Televize", "co": "ČT24", "jak": "Zpravodajský kanál České televize; krizové vysílání přebírají i ostatní kanály ČT." },
+    { "cesta": "Online", "co": "mujRozhlas, rozhlas.cz", "jak": "Jen dokud funguje připojení. Při výpadku elektřiny nebo sítí s ním nepočítejte." }
+  ],
+  "kraje": [
+    { "klic": "praha", "nazev": "Praha", "fm": [] },
+    { "klic": "stredocesky", "nazev": "Středočeský", "fm": [] },
+    { "klic": "jihocesky", "nazev": "Jihočeský", "fm": [] },
+    { "klic": "plzensky", "nazev": "Plzeňský", "fm": [] },
+    { "klic": "karlovarsky", "nazev": "Karlovarský", "fm": [] },
+    { "klic": "ustecky", "nazev": "Ústecký", "fm": [] },
+    { "klic": "liberecky", "nazev": "Liberecký", "fm": [] },
+    { "klic": "kralovehradecky", "nazev": "Královéhradecký", "fm": [] },
+    { "klic": "pardubicky", "nazev": "Pardubický", "fm": [] },
+    { "klic": "vysocina", "nazev": "Vysočina", "fm": [] },
+    { "klic": "jihomoravsky", "nazev": "Jihomoravský", "fm": [] },
+    { "klic": "olomoucky", "nazev": "Olomoucký", "fm": [] },
+    { "klic": "zlinsky", "nazev": "Zlínský", "fm": [] },
+    { "klic": "moravskoslezsky", "nazev": "Moravskoslezský", "fm": [] }
+  ]
+}

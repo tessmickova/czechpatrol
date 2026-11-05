@@ -552,6 +552,27 @@ jako „neověřeno úředně“ (`npm run spravce zverejni`, běží v `sber.ym
   zveřejnění, kontrolu dat, rozhlas do kanálů i zadání rutiny. Seznam
   doplňuje provozovatelka; `do` říká, kdy riziko pominulo.
 
+### Co naladit v krizi (doplněno 5. 11. 2026)
+
+Box v postranním panelu a oddíl v postranním menu nad tísňovými čísly:
+hlavní vysílání (ČRo Radiožurnál) podle kraje, bez zjišťování polohy —
+čtenář si kraj vybere dlaždicí a volba zůstává jen v jeho prohlížeči
+(`localStorage`, klíč `czechpatrol.kraj`). DAB+ a televize (ČT24) na
+poloze nezávisí; kmitočet FM se liší po vysílačích.
+
+**Kmitočty se doplňují jen z oficiálního seznamu Českého rozhlasu**
+(`data/krizove-vysilani.json`, u kraje pole `fm`: `{ "vysilac": "…",
+"mhz": 94.6, "zdroj": { "nazev": "Český rozhlas — kmitočty", "url": "https://…rozhlas.cz/…" } }`).
+Dokud je pole prázdné, web u kraje říká, že kmitočet doplníme, a odkazuje
+na DAB+ a televizi. Test `testy/krizove-vysilani.test.ts` hlídá pásmo
+87,5–108 MHz, zdroj z domény rozhlas.cz a čtrnáct krajů. Z této session
+se na rozhlas.cz nedalo dosáhnout (doména není povolená), proto jsou
+kmitočty zatím prázdné — doplní je provozovatelka, nebo session s povoleným
+přístupem na rozhlas.cz.
+
+Tísňová čísla v menu mají nadpis „Nezahlcujte tato čísla“ a jednu větu,
+kdy volat; informace má čtenář hledat ve vysílání nad nimi.
+
 ### Správa: co kde najdete (doplněno 2. 11. 2026)
 
 Po přihlášení je v hlavičce tlačítko **Účet** (u správce **Správa**
