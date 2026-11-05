@@ -495,6 +495,345 @@
     }
   },
   {
+    "id": "k-6245428bd38e9344",
+    "zachyceno": "2026-11-05T14:03:06.687Z",
+    "publikovano": null,
+    "zdroj": {
+      "nazev": "RTL Today (Lucembursko)",
+      "url": "https://today.rtl.lu/news/world/cyberattack-targets-french-blood-banks-863254229",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Raised alarms Cyberattack targets French blood banks",
+    "titulekPuvodni": "Raised alarms Cyberattack targets French blood banks",
+    "shrnuti": "",
+    "kodZeme": "FR",
+    "zeme": "Francie",
+    "kategorie": [
+      "kyber"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "cyberattack",
+      "cyber"
+    ],
+    "naliehave": null,
+    "stav": "ceka",
+    "vyrez": {
+      "text": "Raised alarms: Cyberattack targets French blood banks - RTL Today\nRaised alarms Cyberattack targets French blood banks\nAFP\nA cyberattack has targeted cold stores housing donated blood supplies in France, authorities said Wednesday, the latest in a series of suspected hacks that has raised alarm across Europe.\nPublished: 05.11.26 14:05\n© RICCARDO MILANI/Hans Lucas via AFP\nA \"cybersecurity incident\" targeting a refrigeration service provider on Monday affected monitoring and control systems at three sites, the French Blood Establishment (EFS) said.\nThe cold stores -- which contained blood samples as well as bags of plasma intended for transfusions and the manufacture of medicines -- were programmed to reach 110C instead of -30C, according to French magazine Le Canard Enchaine.\nBut EFS said there had been \"no health impact\" and that \"no loss of blood products\" had been reported.\nInstitutions and companies are on high alert over cyberattacks in Europe after a series of suspected hacks targeting supermarket refrigeration systems caused widespread disruption in recent days.\nHealth Minister Stephanie Rist's office said the facilities' monitoring and alarm systems had ensured the safety…",
+      "stazeno": "2026-11-05T14:03:10.033Z",
+      "stav": 200
+    }
+  },
+  {
+    "id": "k-db8d41fbd912c7bf",
+    "zachyceno": "2026-11-05T14:03:07.503Z",
+    "publikovano": "2026-11-05T13:27:10.000Z",
+    "zdroj": {
+      "nazev": "Denník N (Slovensko)",
+      "url": "https://dennikn.sk/5670600/vyvoj-bojov-1715-den-jeden-z-najvacsich-ruskych-zlocinov-vojny-trojtonova-bomba-znicila-ukryt-s-civilistami-ktori-cakali-na-jedlo/",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Vývoj bojov (1715. deň): Jeden z najväčších ruských zločinov vojny. Trojtonová bomba zničila úkryt s civilistami, ktorí čakali na jedlo",
+    "titulekPuvodni": "Vývoj bojov (1715. deň): Jeden z najväčších ruských zločinov vojny. Trojtonová bomba zničila úkryt s civilistami, ktorí čakali na jedlo",
+    "shrnuti": "Informácie v tomto texte sú zhrnutím udalostí za stredu 4. novembra. Situácia už môže byť medzičasom iná. Najväčší útok na civilistov minimálne za posledné dva roky. Svetové médiá sa v posledných dňoch venovali voľbám v Amerike, a tak akosi zaniklo, že Rusi spáchali na Ukrajine jeden z najväčších út",
+    "kodZeme": "UA",
+    "zeme": "Ukrajina",
+    "kategorie": [
+      "sabotaz",
+      "hybridni",
+      "rusko"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "bomb",
+      "utok na",
+      "rusk"
+    ],
+    "naliehave": null,
+    "stav": "ceka",
+    "vyrez": {
+      "text": "",
+      "stazeno": "2026-11-05T14:03:10.277Z",
+      "stav": 403,
+      "chyba": "HTTP 403"
+    }
+  },
+  {
+    "id": "k-4d7d1be8e983ade1",
+    "zachyceno": "2026-11-05T14:03:09.770Z",
+    "publikovano": "2026-11-05T13:13:48.000Z",
+    "zdroj": {
+      "nazev": "G4Media (Rumunsko)",
+      "url": "https://www.g4media.ro/breaking-amenintarile-cu-bomba-de-pe-zborurile-helsinki-roma-si-dublin-roma-lansate-de-o-grupare-radicala-rusa-luptatorii-statului-masculin-relateaza-presa-italiana-su.html",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "BREAKING | Amenințările cu bombă de pe zborurile Helsinki-Roma și Dublin-Roma lansate de o grupare radicală rusă, „Statul Masculin”, relatează presa italiană / „Sunteți cu toții complici la o conspirație criminală. Vom înroși cerul” scrie în mailurile trimise de grupare",
+    "titulekPuvodni": "BREAKING | Amenințările cu bombă de pe zborurile Helsinki-Roma și Dublin-Roma lansate de o grupare radicală rusă, „Statul Masculin”, relatează presa italiană / „Sunteți cu toții complici la o conspirație criminală. Vom înroși cerul” scrie în mailurile trimise de grupare",
+    "shrnuti": "Alarma cu bombă de pe zborurile Helsinki-Roma și Dublin-Roma a fost declanșată de un singur e-mail semnat de „Luptători ai Statului Masculin (Мужское государство )”, scrie Corriere della Sera. Potrivit unor surse din anchetă, e-mailul, scris în italiană și cu subiectul „raport de amenințare”, a ajun",
+    "kodZeme": "FI",
+    "zeme": "Finsko",
+    "kategorie": [
+      "sabotaz",
+      "zpravodajske"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "bomb",
+      "gru"
+    ],
+    "naliehave": null,
+    "stav": "ceka",
+    "vyrez": {
+      "text": "BREAKING | Amenințările cu bombă de pe zborurile Helsinki-Roma și Dublin-Roma lansate de o grupare radicală rusă, „Statul Masculin”, relatează presa italiană / „Sunteți cu toții complici la o conspirație criminală. Vom înroși cerul” scrie în mailurile trimise de grupare\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nHome » Articole » BREAKING | Amenințările cu bombă de pe zborurile Helsinki-Roma și Dublin-Roma lansate de o grupare radicală rusă, „Statul Masculin”, relatează presa italiană / „Sunteți cu toții complici la o conspirație criminală. Vom înroși cerul” scrie în mailurile trimise de grupare\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nBREAKING | Amenințările cu bombă de pe zborurile Helsinki-Roma și Dublin-Roma lansate de o grupare radicală rusă, „Statul Masculin”, relatează presa italiană / „Sunteți cu toții complici la o conspirație criminală. Vom înroși cerul” scrie în mailurile trimise de grupare\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n05 nov. 2026 \r\n\r\n\r\n\r\n\r\nTeodora Stroe &bull;\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nSHARE: \r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nAdaugă-ne ca sursă preferată\nUrmărește-ne in Discover\n\r\n\r\nAscultă articolul\n\r\n\r\n\r\n\r\n\r\n\r\nAlarma cu bombă de pe zborurile…",
+      "stazeno": "2026-11-05T14:03:10.478Z",
+      "stav": 200
+    }
+  },
+  {
+    "id": "k-b5b548497797e539",
+    "zachyceno": "2026-11-05T14:03:08.700Z",
+    "publikovano": "2026-11-05T13:01:30.000Z",
+    "zdroj": {
+      "nazev": "Le Monde (Francie)",
+      "url": "https://www.lemonde.fr/international/article/2026/11/05/sabotage-de-cables-en-mer-baltique-un-capitaine-russe-et-un-membre-d-equipage-condamnes-en-finlande_6806868_3210.html",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Sabotage de câbles en mer Baltique : un capitaine russe et un membre d’équipage condamnés en Finlande",
+    "titulekPuvodni": "Sabotage de câbles en mer Baltique : un capitaine russe et un membre d’équipage condamnés en Finlande",
+    "shrnuti": "Le tribunal d’Helsinki a condamné les deux marins à de la prison, jeudi, pour « dégradation aggravée » et « entrave aggravée aux télécommunications ». Ils étaient soupçonnés d’avoir endommagé deux câbles avec l’ancre de leur navire, en décembre 2025.",
+    "kodZeme": "FI",
+    "zeme": "Finsko",
+    "kategorie": [
+      "sabotaz"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "sabotage"
+    ],
+    "naliehave": null,
+    "stav": "ceka",
+    "vyrez": {
+      "text": "Client Challenge\nA required part of this site couldn’t load. This may be due to a browser\nextension, network issues, or browser settings. Please check your\nconnection, disable any ad blockers, or try using a different browser.",
+      "stazeno": "2026-11-05T14:03:11.650Z",
+      "stav": 200
+    }
+  },
+  {
+    "id": "k-8aa6e2825f0b85e5",
+    "zachyceno": "2026-11-05T14:03:07.623Z",
+    "publikovano": "2026-11-05T13:00:00.000Z",
+    "zdroj": {
+      "nazev": "Rzeczpospolita (Polsko)",
+      "url": "https://turystyka.rp.pl/linie-lotnicze/art45450841-alarmy-bombowe-w-dwoch-samolotach-do-mediolanu-oba-wyladowaly-bezpiecznie",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Dalszy ciąg alarmów bombowych w samolotach nad Europą. Nie znaleziono nic niepokojącego",
+    "titulekPuvodni": "Dalszy ciąg alarmów bombowych w samolotach nad Europą. Nie znaleziono nic niepokojącego",
+    "shrnuti": "Europejskie media poinformowały w czwartek o alarmach bombowych dotyczących kilku samolotów pasażerskich w Europie. Doniesienia dotyczą m.in. maszyny linii LOT, która lądowała awaryjnie w Brukseli, oraz lotu z Mediolanu do Warszawy.",
+    "kodZeme": "PL",
+    "zeme": "Polsko",
+    "kategorie": [
+      "sabotaz"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "bomb"
+    ],
+    "naliehave": null,
+    "stav": "ceka",
+    "vyrez": {
+      "text": "Alarmy bombowe w dwóch samolotach do Mediolanu. Oba wylądowały bezpiecznie - rp.pl\nReklama\nTurystyka\nPrzejazdy\nLinie Lotnicze\nDalszy ciąg alarmów bombowych w samolotach nad Europą. Nie znaleziono nic niepokojącego\nEuropejskie media poinformowały w czwartek o alarmach bombowych dotyczących kilku samolotów pasażerskich w Europie. Doniesienia dotyczą m.in. maszyny linii LOT, która lądowała awaryjnie w Brukseli, oraz lotu z Mediolanu do Warszawy.\nAktualizacja:\n05.11.2026 14:30\nPublikacja:\n05.11.2026 14:00\nUstaw „Rzeczpospolitą” jako swoje ulubione źródło informacji w Google\nJednym z samolotów, który lądował w Mediolanie po wiadomości, że wiezie bombę, był samolot linii Ryanair\nFoto: Filip Frydrykiewicz\nReklama\nReklama\nReklama\nPAP, oprac.\nFilip Frydrykiewicz\nNa lotnisku Malpensa w Mediolanie bezpiecznie wylądowały w czwartek dwa samoloty, na których pokładzie ogłoszono wcześniej alarmy bombowe - przekazała agencja ANSA. Były to samoloty linii Aegean Airlines lecący z Salonik i Ryanair zmierzający z Porto. Obie maszyny leciały do Mediolanu, po wszczęciu alarmu nie zostały jednak przekierowane i bezpiecznie wylądowały w porcie docelowym.\nReklama\nReklama\nMedia w Bułgarii podały informacje…",
+      "stazeno": "2026-11-05T14:03:11.827Z",
+      "stav": 200
+    }
+  },
+  {
+    "id": "k-a11c4d9809990be7",
+    "zachyceno": "2026-11-05T14:03:06.241Z",
+    "publikovano": "2026-11-05T12:55:00.000Z",
+    "zdroj": {
+      "nazev": "iDNES.cz — zpravodajství",
+      "url": "https://www.idnes.cz/zpravy/zahranicni/polsko-odhalilo-skupinu-podezrelou-z-aktivit-ve-prospech-ruska.A261105_131128_zahranicni_sile#utm_source=rss&utm_medium=feed&utm_campaign=zpravodaj&utm_content=main",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Polsko zadrželo skupinu, kterou podezřívá z aktivit ve prospěch ruských služeb",
+    "titulekPuvodni": "Polsko zadrželo skupinu, kterou podezřívá z aktivit ve prospěch ruských služeb",
+    "shrnuti": "Polská kontrarozvědka (ABW) zadržela šest lidí, z nichž čtyři jsou podezřelí z aktivit ve prospěch ruských tajných služeb. Podle vyšetřovatelů tito lidé nelegálně dodávali do Ruska velké množství materiálu vojenského určení používaného k výrobě munice a zbraňových systémů.",
+    "kodZeme": "PL",
+    "zeme": "Polsko",
+    "kategorie": [
+      "zpravodajske",
+      "rusko"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "zadrz+rusk",
+      "kontrarozvedka",
+      "rusk"
+    ],
+    "naliehave": null,
+    "stav": "ceka",
+    "vyrez": {
+      "text": "Polsko zadrželo skupinu podezřelou z aktivit ve prospěch Ruska - iDNES.cz \r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\niDNES.cz\n\r\n\r\n\r\nP�ihl�sit \r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nAbyste mohli pokra�ovat, pot�ebujeme v�d�t, jakou formou v�m m��eme zobrazovat reklamu \r\n\r\n\r\n\r\n\r\n\r\nV�mi zvolen� nastaven� \r\nneobsahuje souhlas se zobrazov�n�m c�len� reklamy . \r\nVyberte pros�m znovu, \r\njakou formou v�m m�me zobrazovat obsah. \r\n\r\n\r\n\r\n\r\n\r\n\r\niDNES Premium\n\r\nBez reklam\n\r\n\r\n199 K� m�s��n�\n\r\nM��ete neomezen� ��st iDNES.cz, Lidovky.cz, Expres.cz a Antiyoutuber.cz. K tomu dostanete tak� noviny a �asopisy v elektronick� podob�. To v�e bez reklam. 1\n\r\n\r\nP�edplatit\n\r\n\r\nU� m�te ��et? P�ihlaste se\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nS c�lenou reklamou\n\r\n\r\n\r\nZdarma \r\n\r\nZachov�me v�m v�e tak, jak jste zvykl� a reklamu p�izp�sob�me va�im z�jm�m. Bez omezen� si m��ete d�l ��st, p�ehr�vat videa, sout�it �i p�isp�vat do v�ech diskus�. 2\n\r\n\r\nSouhlas�m\n\r\nPodrobn� nastaven�\n\r\n\r\n\r\n\r\n\r\n\r\niDNES a reklama\n\r\nPokud vyu�ijete m�sto platby ud�len� souhlasu s reklamou (tj. souhlas s vyu�it�m cookies a dal��ch s�ov�ch identifik�tor� pro ��ely c�len� reklamy), \r\nbudou V�m zobrazov�ny v r�mci…",
+      "stazeno": "2026-11-05T14:03:12.375Z",
+      "stav": 200
+    }
+  },
+  {
+    "id": "k-0c04498de7633023",
+    "zachyceno": "2026-11-05T14:03:09.836Z",
+    "publikovano": "2026-11-05T12:36:00.000Z",
+    "zdroj": {
+      "nazev": "Ukrinform (anglicky)",
+      "url": "https://www.ukrinform.net/rubric-emergencies/4181759-water-supply-disruptions-reported-across-all-districts-of-kyiv-due-to-power-outages.html",
+      "typ": "wire",
+      "primarni": false
+    },
+    "titulek": "Water supply disruptions reported across all districts of Kyiv due to power outages",
+    "titulekPuvodni": "Water supply disruptions reported across all districts of Kyiv due to power outages",
+    "shrnuti": "Emergency power outages have caused disruptions to water supply in all districts of Kyiv.",
+    "kodZeme": "UA",
+    "zeme": "Ukrajina",
+    "kategorie": [
+      "infrastruktura"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "power outage"
+    ],
+    "naliehave": null,
+    "stav": "ceka",
+    "vyrez": {
+      "text": "Water supply disruptions reported across all districts of Kyiv due to power outages\n\r\nSubscription\nNewsletters\nPhotobank\nUkrinform - Ukrainian National News Agency\nFounded in 1918\nThursday, 05 November 2026, 16:03\nWar\nEconomy\nSports\nMore ☰\nContacts\nEng\nУкр\nEng\nEsp\nDeu\nعربي\nFra\n日本語\nPol\n&times;\nAll topics\nWar\nRecovery of Ukraine\nPolitics\nEconomy\nFact checks\nDefense\nSociety and Culture\nSports\nCrime\nAccidents and Emergencies\nAgency\nInformation on Agency\nOur Contacts\nSubscribtion Terms\nOur Services\nPrivacy policy and personal data protection\nAdditional\nPublications\nInterviews\nPhoto\nVideo\nLongreads\nReleases\nServices\nSubscription\nNewsletters\nPhotobank\n\r\n\r\n\r\nEmergency power outages have caused disruptions to water supply in all districts of Kyiv.\nAccording to Ukrinform, Kyivvodokanal reported this on Facebook .\n\r\n\r\nKyivvodokanal specialists are working together with energy workers to resolve the situation and taking all possible measures to restore water supply as quickly as possible. Services are already being gradually restored.\n\r\n\r\nThe utility also reminded residents that the capital has a network of public drinking-water pump rooms where people can collect water. The locations of the…",
+      "stazeno": "2026-11-05T14:03:16.395Z",
+      "stav": 200
+    }
+  },
+  {
+    "id": "k-a6d66b7fe8979d77",
+    "zachyceno": "2026-11-05T14:03:06.886Z",
+    "publikovano": "2026-11-05T12:23:15.000Z",
+    "zdroj": {
+      "nazev": "Politico Europe",
+      "url": "https://www.politico.eu/article/russia-denies-involvement-in-fridge-hacks-across-europe/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Russia denies involvement in fridge hacks across Europe",
+    "titulekPuvodni": "Russia denies involvement in fridge hacks across Europe",
+    "shrnuti": "Experts see Moscow as one of the main suspects behind the cyberattacks, but national authorities have yet to point to a specific culprit.",
+    "kodZeme": "RU",
+    "zeme": "Rusko",
+    "kategorie": [
+      "kyber",
+      "rusko"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "cyberattack",
+      "cyber",
+      "russia"
+    ],
+    "naliehave": null,
+    "stav": "ceka",
+    "vyrez": {
+      "text": "Russia denies involvement in fridge hacks across Europe – POLITICO\nSkip to main content\nAdvertisement\nA spokesperson for the Kremlin denied on Thursday that Russia had any involvement in the cyberattacks affecting supermarket refrigerators, calling the allegations \"absurd.\"\nDmitry Peskov said accusations of Russian involvement in the attacks are \"unfounded,\" according to reports in Russian media . These allegations are \"becoming a persistent trend in European countries,\" he added.\nSupermarket refrigerators have been hacked in multiple European countries over the past few weeks , forcing retailers to throw away thawing fresh and frozen food. The attacks also hit French blood banks, though the country's blood collection service said its supplies were not affected.\nAdvertisement\nWhile pro-Russian hacker groups claimed the attacks on Wednesday , it is notoriously difficult to attribute a cyberattack to a specific actor definitively, and those groups quickly deleted the claims, according to the BBC.\nSome cybersecurity experts say Russia is one of the main suspects. Xavier Bellekens, CEO of cybersecurity firm Lupovis, told POLITICO that clues pointed to \"a Russian state-sponsored threat…",
+      "stazeno": "2026-11-05T14:03:17.396Z",
+      "stav": 200
+    }
+  },
+  {
+    "id": "k-75351b1a1b974555",
+    "zachyceno": "2026-11-05T14:03:08.770Z",
+    "publikovano": "2026-11-05T12:13:38.000Z",
+    "zdroj": {
+      "nazev": "ANSA (Itálie, anglicky)",
+      "url": "https://www.ansa.it/english/news/2026/11/05/cyberattacks-on-banks-pose-threat-to-italys-stability-says-security-agency-chief_658143e2-cb57-4e2d-9363-ad722f96c187.html",
+      "typ": "wire",
+      "primarni": false
+    },
+    "titulek": "Cyberattacks on banks pose threat to Italy's stability says security agency chief",
+    "titulekPuvodni": "Cyberattacks on banks pose threat to Italy's stability says security agency chief",
+    "shrnuti": "(ANSA) - ROME, 05 NOV - Andrea Quacivi, the director general of national cybersecurity agency ACN, said Thursday that attacks by hackers on Italy's banks and insurers pose a threat to national stability. \"The cyber threat to the banking and insurance sectors can affect the reliability of services, p",
+    "kodZeme": "IT",
+    "zeme": "Itálie",
+    "kategorie": [
+      "kyber"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "cyberattack",
+      "cyber"
+    ],
+    "naliehave": null,
+    "stav": "ceka",
+    "vyrez": {
+      "text": "Cyberattacks on banks pose threat to Italy's stability says security agency chief - TopNews - Ansa.it\nSe hai scelto di non accettare i cookie di profilazione e tracciamento, puoi aderire all&rsquo;abbonamento \"Consentless\" a un costo molto accessibile, oppure scegliere un altro abbonamento per accedere ad ANSA.it.\nTi invitiamo a leggere le Condizioni Generali di Servizio , la Cookie Policy e l' Informativa Privacy .\nABBONAMENTO CONSENTLESS\nPuoi leggere tutti i titoli di ANSA.it e 10 contenuti ogni 30 giorni a &euro;16,99/anno\nServizio equivalente a quello accessibile prestando il consenso ai cookie di profilazione pubblicitaria e tracciamento\nDurata annuale (senza rinnovo automatico)\nUn pop-up ti avvertir&agrave; che hai raggiunto i contenuti consentiti in 30 giorni (potrai continuare a vedere tutti i titoli del sito, ma per aprire altri contenuti dovrai attendere il successivo periodo di 30 giorni)\nPubblicit&agrave; presente ma non profilata o gestibile mediante il pannello delle preferenze\nIscrizione alle Newsletter tematiche curate dalle redazioni ANSA.\nALTRI ABBONAMENTI\nPer accedere senza limiti a tutti i contenuti di ANSA.it\nScegli il piano di abbonamento pi&ugrave; adatto…",
+      "stazeno": "2026-11-05T14:03:17.678Z",
+      "stav": 200
+    }
+  },
+  {
+    "id": "k-e3d3cde32a86fab9",
+    "zachyceno": "2026-11-05T14:03:09.841Z",
+    "publikovano": "2026-11-05T11:54:00.000Z",
+    "zdroj": {
+      "nazev": "Ukrinform (anglicky)",
+      "url": "https://www.ukrinform.net/rubric-ato/4181731-russian-forces-strike-civilian-and-critical-infrastructure-in-vinnytsia-region-injuring-three.html",
+      "typ": "wire",
+      "primarni": false
+    },
+    "titulek": "Russian forces strike civilian and critical infrastructure in Vinnytsia region, injuring three",
+    "titulekPuvodni": "Russian forces strike civilian and critical infrastructure in Vinnytsia region, injuring three",
+    "shrnuti": "Several communities in Ukraine's Vinnytsia region sustained damage to civilian and critical infrastructure during a Russian attack on November 5. Three people were reported injured.",
+    "kodZeme": "UA",
+    "zeme": "Ukrajina",
+    "kategorie": [
+      "hybridni",
+      "infrastruktura",
+      "rusko"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "attack on",
+      "critical infrastructure",
+      "russia"
+    ],
+    "naliehave": null,
+    "stav": "ceka",
+    "vyrez": {
+      "text": "Russian forces strike civilian and critical infrastructure in Vinnytsia region, injuring three\n\r\nSubscription\nNewsletters\nPhotobank\nUkrinform - Ukrainian National News Agency\nFounded in 1918\nThursday, 05 November 2026, 16:03\nWar\nEconomy\nSports\nMore ☰\nContacts\nEng\nУкр\nEng\nEsp\nDeu\nعربي\nFra\n日本語\nPol\n&times;\nAll topics\nWar\nRecovery of Ukraine\nPolitics\nEconomy\nFact checks\nDefense\nSociety and Culture\nSports\nCrime\nAccidents and Emergencies\nAgency\nInformation on Agency\nOur Contacts\nSubscribtion Terms\nOur Services\nPrivacy policy and personal data protection\nAdditional\nPublications\nInterviews\nPhoto\nVideo\nLongreads\nReleases\nServices\nSubscription\nNewsletters\nPhotobank\n\r\n\r\n\r\nSeveral communities in Ukraine's Vinnytsia region sustained damage to civilian and critical infrastructure during a Russian attack on November 5. Three people were reported injured.\nNatalia Zabolotna, head of the Vinnytsia Regional Military Administration, reported this on Telegram , according to Ukrinform.\n\r\n\r\n\"Several communities in the Vinnytsia region sustained damage to civilian and critical infrastructure as a result of the enemy attack. As of now, three people have been reported injured. All sustained minor injuries…",
+      "stazeno": "2026-11-05T14:03:18.475Z",
+      "stav": 200
+    }
+  },
+  {
     "id": "k-7aff08add4e5e1fa",
     "zachyceno": "2026-11-05T12:03:07.665Z",
     "publikovano": "2026-11-05T11:53:50.000Z",
@@ -866,6 +1205,42 @@
     }
   },
   {
+    "id": "k-9cd39121e9397b66",
+    "zachyceno": "2026-11-05T14:03:09.893Z",
+    "publikovano": "2026-11-05T11:00:00.000Z",
+    "zdroj": {
+      "nazev": "Ukrainska Pravda (anglicky)",
+      "url": "https://www.pravda.com.ua/eng/news/2026/11/05/8061385/",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Three injured in Russian attacks on Vinnytsia Oblast, critical infrastructure damaged",
+    "titulekPuvodni": "Three injured in Russian attacks on Vinnytsia Oblast, critical infrastructure damaged",
+    "shrnuti": "A Russian attack on Vinnytsia Oblast injured three people lightly, burned lorries and cars, and damaged critical infrastructure.",
+    "kodZeme": "RU",
+    "zeme": "Rusko",
+    "kategorie": [
+      "hybridni",
+      "infrastruktura",
+      "rusko"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "attack on",
+      "critical infrastructure",
+      "russia"
+    ],
+    "naliehave": null,
+    "stav": "ceka",
+    "vyrez": {
+      "text": "Russian attack on Vinnytsia Oblast injures three, damages infrastructure | Ukrainska Pravda\nFirefighters. Stock photo: State Emergency Service of Ukraine\nThree people have sustained minor injuries in a Russian attack on Vinnytsia Oblast, and civilian and critical infrastructure has been damaged in several\nhromadas\nA hromada is an administrative unit designating a village, several villages, or a town, and their adjacent territories\n.\nSource: Natalia Zabolotna , Head of Vinnytsia Oblast Military Administration\nQuote: \"As of now, three people have been reported injured. All sustained minor injuries. They are receiving the necessary medical assistance.\"\nAdvertisement:\n\r\n\r\n\r\n\r\n\r\nDetails: In one of the oblast's cities, two lorries and a trailer caught fire. Firefighters extinguished the blaze.\nThe fire destroyed four cars and damaged another seven at another location.\nAfter the all-clear was given, power engineers began repairing the facilities damaged in the attack. Emergency services are continuing to deal with the aftermath of the strike.\nYour support on Patreon helps us keep the news free and accessible.\nVinnytsia Oblast\nAdvertisement:\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nVinnytsia Oblast\nGirl…",
+      "stazeno": "2026-11-05T14:03:18.957Z",
+      "stav": 200
+    }
+  },
+  {
     "id": "k-2b9b3665a1d2aefe",
     "zachyceno": "2026-11-05T12:03:04.615Z",
     "publikovano": "2026-11-05T10:59:00.000Z",
@@ -922,7 +1297,12 @@
       "bomb"
     ],
     "naliehave": null,
-    "stav": "ceka"
+    "stav": "ceka",
+    "vyrez": {
+      "text": "Mai multe zboruri din Europa, vizate de amenințări cu bombă\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nHome » Analize » Mai multe zboruri din Europa, vizate de amenințări cu bombă / Alerte pe cursele Milano-București, Dublin-Roma, Milano-Varșovia și mai multe zboruri spre Sofia și Praga / SRI: Amenințarea cu bombă nu se confirmă\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nLive Mai multe zboruri din Europa, vizate de amenințări cu bombă / Alerte pe cursele Milano-București, Dublin-Roma, Milano-Varșovia și mai multe zboruri spre Sofia și Praga / SRI: Amenințarea cu bombă nu se confirmă\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n05 nov. 2026 \r\n\r\n&bull; 652\n\r\n\r\n\r\nȘtefan Munteanu &bull;\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nSHARE: \r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nSursa foto: Photo 24558777 © Markus Gann | Dreamstime.com\n\r\n\r\n\r\n\r\n\r\n\r\nAdaugă-ne ca sursă preferată\nUrmărește-ne in Discover\n\r\n\r\nAscultă articolul\n\r\n\r\n\r\n\r\n\r\n\r\nMai multe zboruri comerciale din Europa au fost afectate joi de amenințări cu bombă, pentru a doua oară în decursul acestei săptămâni. Printre aeronavele vizate se numără un avion care efectua cursa Wizz Air Milano-București, aterizat în siguranță pe Otopeni.\nIncidente au fost…",
+      "stazeno": "2026-11-05T14:03:19.039Z",
+      "stav": 200
+    }
   },
   {
     "id": "k-8a13978ee7151bc1",
@@ -9783,381 +10163,6 @@
     "vyrez": {
       "text": "Při výbuchu plynové kartuše se popálil muž z Nymburka, skončil v nemocnici - iDNES.cz \r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\niDNES.cz\n\r\n\r\n\r\nP�ihl�sit \r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nAbyste mohli pokra�ovat, pot�ebujeme v�d�t, jakou formou v�m m��eme zobrazovat reklamu \r\n\r\n\r\n\r\n\r\n\r\nV�mi zvolen� nastaven� \r\nneobsahuje souhlas se zobrazov�n�m c�len� reklamy . \r\nVyberte pros�m znovu, \r\njakou formou v�m m�me zobrazovat obsah. \r\n\r\n\r\n\r\n\r\n\r\n\r\niDNES Premium\n\r\nBez reklam\n\r\n\r\n199 K� m�s��n�\n\r\nM��ete neomezen� ��st iDNES.cz, Lidovky.cz, Expres.cz a Antiyoutuber.cz. K tomu dostanete tak� noviny a �asopisy v elektronick� podob�. To v�e bez reklam. 1\n\r\n\r\nP�edplatit\n\r\n\r\nU� m�te ��et? P�ihlaste se\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nS c�lenou reklamou\n\r\n\r\n\r\nZdarma \r\n\r\nZachov�me v�m v�e tak, jak jste zvykl� a reklamu p�izp�sob�me va�im z�jm�m. Bez omezen� si m��ete d�l ��st, p�ehr�vat videa, sout�it �i p�isp�vat do v�ech diskus�. 2\n\r\n\r\nSouhlas�m\n\r\nPodrobn� nastaven�\n\r\n\r\n\r\n\r\n\r\n\r\niDNES a reklama\n\r\nPokud vyu�ijete m�sto platby ud�len� souhlasu s reklamou (tj. souhlas s vyu�it�m cookies a dal��ch s�ov�ch identifik�tor� pro ��ely c�len� reklamy), \r\nbudou V�m…",
       "stazeno": "2026-11-02T12:03:07.002Z",
-      "stav": 200
-    }
-  },
-  {
-    "id": "k-90ce479b83d855fb",
-    "zachyceno": "2026-11-02T12:03:00.651Z",
-    "publikovano": "2026-11-02T10:25:56.000Z",
-    "zdroj": {
-      "nazev": "Euronews",
-      "url": "https://www.euronews.com/2026/11/02/cyberattack-hits-belgian-supermarket-fridges-and-freezers",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Cyberattack hits Belgian supermarket fridges and freezers",
-    "titulekPuvodni": "Cyberattack hits Belgian supermarket fridges and freezers",
-    "shrnuti": "A major cyberattack on Belgian supermarket 40 Delhaize, Carrefour and Spa and other supermarket chain stores has taken place, with €100,000 worth of food thrown away.",
-    "kodZeme": "BE",
-    "zeme": "Belgie",
-    "kategorie": [
-      "kyber"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "zeSite": null,
-    "shody": [
-      "cyberattack",
-      "cyber"
-    ],
-    "naliehave": null,
-    "stav": "ceka",
-    "vyrez": {
-      "text": "Cyberattack hits Belgian supermarket fridges and freezers | Euronews\nAdvertisement\nBy&nbsp Jonathan Benton\nPublished on 2 November 2026 - 11:25 GMT+1 &bull; Updated\n11:59\nShare\nComments\nAdd Euronews on Google\nShare\nFacebook\nTwitter\nFlipboard\nSend\nReddit\nLinkedin\nMessenger\nTelegram\nVK\nBluesky\nThreads\nWhatsapp\nA major cyberattack on Belgian supermarket 40 Delhaize, Carrefour and Spa and other supermarket chain stores has taken place, with €100,000 worth of food thrown away.\nDozens of Belgian supermarkets have been hit by a cyber attack that saw their refrigerators turned up to 70 degrees Celsius, resulting in €100,000 worth of food being thrown away, according to Belgian media reports on Monday.\nADVERTISEMENT\nADVERTISEMENT\nSome 40 Delhaize supermarkets, 15 Carrefour stores, and five Spar locations have reportedly been impacted. Butchery group De Laet en Van Haver also said that their fridges were affected.\n\"We have identified an IT incident affecting the refrigeration systems in several dozen stores. We immediately took the necessary measures to keep our stores operational,\" a spokesperson from Delhaize told Euronews.\nCybercriminals carried out the attack between Sunday night and…",
-      "stazeno": "2026-11-02T12:03:09.778Z",
-      "stav": 200
-    }
-  },
-  {
-    "id": "k-b29065c3cca06954",
-    "zachyceno": "2026-11-02T12:03:02.734Z",
-    "publikovano": "2026-11-02T10:22:00.000Z",
-    "zdroj": {
-      "nazev": "Ukrinform (anglicky)",
-      "url": "https://www.ukrinform.net/rubric-ato/4180473-russian-drone-attacks-civilian-car-in-kherson-leaving-two-injured.html",
-      "typ": "wire",
-      "primarni": false
-    },
-    "titulek": "Russian drone attacks civilian car in Kherson, leaving two injured",
-    "titulekPuvodni": "Russian drone attacks civilian car in Kherson, leaving two injured",
-    "shrnuti": "Two people were injured in Kherson as a result of a Russian drone attack on a car.",
-    "kodZeme": "RU",
-    "zeme": "Rusko",
-    "kategorie": [
-      "hybridni",
-      "drony",
-      "rusko"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "zeSite": null,
-    "shody": [
-      "attack on",
-      "dron",
-      "drone",
-      "russia"
-    ],
-    "naliehave": null,
-    "stav": "ceka",
-    "vyrez": {
-      "text": "Russian drone attacks civilian car in Kherson, leaving two injured\n\r\nSubscription\nNewsletters\nPhotobank\nUkrinform - Ukrainian National News Agency\nFounded in 1918\nMonday, 02 November 2026, 14:03\nWar\nEconomy\nSports\nMore ☰\nContacts\nEng\nУкр\nEng\nEsp\nDeu\nعربي\nFra\n日本語\nPol\n&times;\nAll topics\nWar\nRecovery of Ukraine\nPolitics\nEconomy\nFact checks\nDefense\nSociety and Culture\nSports\nCrime\nAccidents and Emergencies\nAgency\nInformation on Agency\nOur Contacts\nSubscribtion Terms\nOur Services\nPrivacy policy and personal data protection\nAdditional\nPublications\nInterviews\nPhoto\nVideo\nLongreads\nReleases\nServices\nSubscription\nNewsletters\nPhotobank\n\r\n\r\n\r\nTwo people were injured in Kherson as a result of a Russian drone attack on a car.\nAccording to Ukrinform, the Kherson City Military Administration reported the incident on Telegram .\n\r\n\r\n\"At approximately 08:00, Russian occupying forces attacked a car with a drone in the Korabelnyi district,\" the statement said.\n\r\n\r\nTwo people were injured: a 62-year-old woman and a 73-year-old man. Both were taken to hospital to receive the necessary medical treatment. They sustained blast-related injuries and are currently undergoing further medical…",
-      "stazeno": "2026-11-02T12:03:09.796Z",
-      "stav": 200
-    }
-  },
-  {
-    "id": "k-e936e7ddb6dde0dd",
-    "zachyceno": "2026-11-02T12:03:00.609Z",
-    "publikovano": "2026-11-02T10:20:45.000Z",
-    "zdroj": {
-      "nazev": "France 24 (anglicky)",
-      "url": "https://www.france24.com/en/video/20261102-ukraine-and-russia-both-hit-by-cyberattacks-on-emergency-apps",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Ukraine and Russia both hit by cyberattacks on emergency apps",
-    "titulekPuvodni": "Ukraine and Russia both hit by cyberattacks on emergency apps",
-    "shrnuti": "Authorities in both Ukraine and Russia said that their emergency alert mobile applications were targeted by cyberattacks late Sunday. Residents in Ukraine received messages that there was a high nuclear radiation danger in the capital Kyiv, while Russian officials said hackers had sent fake emergenc",
-    "kodZeme": "UA",
-    "zeme": "Ukrajina",
-    "kategorie": [
-      "kyber",
-      "rusko"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "zeSite": null,
-    "shody": [
-      "cyberattack",
-      "cyber",
-      "russia"
-    ],
-    "naliehave": null,
-    "stav": "ceka",
-    "vyrez": {
-      "text": "Ukraine and Russia both hit by cyberattacks on emergency apps - France 24\nSkip to main content\nTo display this content from YouTube, you must enable advertisement tracking and audience measurement.\nAccept\nManage my choices\nOne of your browser extensions seems to be blocking the video player from loading. To watch this content, you may need to disable it on this site.\nTry again\nCover image: © France 24\n03:14\nVideo content\nVideo\nUkraine and Russia both hit by cyberattacks on emergency apps\nIssued on: 02/11/2026 - 11:20 Modified: 02/11/2026 - 11:21\nShare\nAuthorities in both Ukraine and Russia said that their emergency alert mobile applications were targeted by cyberattacks late Sunday. Residents in Ukraine received messages that there was a high nuclear radiation danger in the capital Kyiv, while Russian officials said hackers had sent fake emergency alerts after gaining access to the mobile app for Russia’s Emergency Ministry.\nRead more\nRead less\nMidterms: Will Trump backlash lead to Democratic landslide?\n02/11/2026\nVideo content\nVideo\nFrance: Some schools blocked as limited youth protests resume after holidays\n02/11/2026\nVideo content\nVideo\nEurope\nRSF publishes list of press…",
-      "stazeno": "2026-11-02T13:33:15.999Z",
-      "stav": 200
-    }
-  },
-  {
-    "id": "k-2425f9ea9468bc1c",
-    "zachyceno": "2026-11-02T12:03:00.612Z",
-    "publikovano": "2026-11-02T10:18:55.000Z",
-    "zdroj": {
-      "nazev": "France 24 (anglicky)",
-      "url": "https://www.france24.com/en/tv-shows/business/20261102-binance-users-withdraw-3-4-billion-after-record-crypto-heist",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Binance users withdraw $3.4 billion after record crypto heist",
-    "titulekPuvodni": "Binance users withdraw $3.4 billion after record crypto heist",
-    "shrnuti": "Customers of cryptocurrency trading platform Binance withdrew some $3.4 billion of their funds on Sunday after Binance reopened trading. The company had suspended all operations after a cyberattack that compromised over $6 billion in digital assets. Also in this edition: the Wall Street Journal repo",
-    "kodZeme": "RU",
-    "zeme": "Rusko",
-    "kategorie": [
-      "kyber",
-      "rusko"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "zeSite": null,
-    "shody": [
-      "cyberattack",
-      "cyber",
-      "russia"
-    ],
-    "naliehave": null,
-    "stav": "ceka",
-    "vyrez": {
-      "text": "Binance users withdraw $3.4 billion after record crypto heist - Business - France 24\nSkip to main content\nVideo content\nProgram\nBusiness\nBinance users withdraw $3.4 billion after record crypto heist\nTo display this content from YouTube, you must enable advertisement tracking and audience measurement.\nAccept\nManage my choices\nOne of your browser extensions seems to be blocking the video player from loading. To watch this content, you may need to disable it on this site.\nTry again\nCover image: BUSINESS © FRANCE 24\n05:45\nIssued on: 02/11/2026 - 11:18\n05:45 min\nShare\nPlay (05:45 min)\nFrom the show\nReading time\n1 min\nCustomers of cryptocurrency trading platform Binance withdrew some $3.4 billion of their funds on Sunday after Binance reopened trading. The company had suspended all operations after a cyberattack that compromised over $6 billion in digital assets. Also in this edition: the Wall Street Journal reports on a new US plan to restore Russian gas sales to Europe, and we look at Argentina's efforts to capitalise on Patagonia's wide open spaces to attract data centre investment.\nBy:\nCharles PELLEGRIN\nBryan QUINN\nAdvertising\nRelated keywords\ncryptocurrency\ncyber…",
-      "stazeno": "2026-11-02T13:33:16.126Z",
-      "stav": 200
-    }
-  },
-  {
-    "id": "k-59882b53f5e708d4",
-    "zachyceno": "2026-11-02T12:03:02.768Z",
-    "publikovano": "2026-11-02T10:12:00.000Z",
-    "zdroj": {
-      "nazev": "Ukrainska Pravda (anglicky)",
-      "url": "https://www.pravda.com.ua/eng/news/2026/11/02/8060838/",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "One killed and two injured in Russian attack on Komyshuvakha",
-    "titulekPuvodni": "One killed and two injured in Russian attack on Komyshuvakha",
-    "shrnuti": "Mykhailo Semikin has confirmed casualties and ongoing medical treatment after Russian forces target the settlement in Zaporizhzhia Oblast.",
-    "kodZeme": "RU",
-    "zeme": "Rusko",
-    "kategorie": [
-      "hybridni",
-      "rusko"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "zeSite": null,
-    "shody": [
-      "attack on",
-      "russia"
-    ],
-    "naliehave": null,
-    "stav": "ceka",
-    "vyrez": {
-      "text": "Russian attack on Komyshuvakha leaves one killed and two injured | Ukrainska Pravda\nStock photo: Getty Images\nOne person has been killed and two injured as the Russians attacked Komyshuvakha in Zaporizhzhia Oblast on the morning of 2 November.\nSource: Mykhailo Semikin , acting head of Zaporizhzhia Oblast Military Administration\nQuote: \"The enemy attacked Komyshuvakha. Sadly, one person has been killed and another two injured.\"\nAdvertisement:\n\r\n\r\n\r\n\r\n\r\nDetails: Those injured are receiving the necessary medical treatment.\nSupport Ukrainska Pravda on Patreon to help us keep reporting!\nZaporizhzhia Oblast\nAdvertisement:\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nZaporizhzhia Oblast\nRussians launch 935 attacks on Zaporizhzhia Oblast over past day: one killed and two injured\nRussian drone attacks community bus in Zaporizhzhia Oblast, killing 71-year-old woman – photos\nRussians kill man in Zaporizhzhia Oblast and attack public transport in Zaporizhzhia for third time in one day – video\nLatest news\nAdvertisement:\n\r\n\r\n\r\nAdvertisement:",
-      "stazeno": "2026-11-02T13:48:25.241Z",
-      "stav": 200
-    }
-  },
-  {
-    "id": "k-49cbdfd44671638b",
-    "zachyceno": "2026-11-02T15:03:07.100Z",
-    "publikovano": "2026-11-02T09:44:00.000Z",
-    "zdroj": {
-      "nazev": "ERR News (Estonsko)",
-      "url": "https://news.err.ee/1610183296/hackers-raised-freezer-temperature-at-selver-supermarket-to-50-c",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Hackers raised freezer temperature at Selver supermarket to +50°C",
-    "titulekPuvodni": "Hackers raised freezer temperature at Selver supermarket to +50°C",
-    "shrnuti": "A cyber attack hit a Selver supermarket in Estonia, with hackers accessing a computer controlling refrigeration and changing a freezer setting to 50 degrees above zero.",
-    "kodZeme": "EE",
-    "zeme": "Estonsko",
-    "kategorie": [
-      "kyber"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "zeSite": null,
-    "shody": [
-      "cyber attack",
-      "cyber"
-    ],
-    "naliehave": null,
-    "stav": "ceka",
-    "vyrez": {
-      "text": "Hackers raised freezer temperature at Selver supermarket to +50°C | News | ERR\n{{noticeUi.heading[langCode]}}\n{{infoLink[langCode].label}}\n{{noticeUi.allowAllLabel[langCode]}}\n{{rewokeLabels[langCode]}}\nX !\nNews\nERR\n{{1793612640000 | amCalendar}} Updated: {{1793621580000 | amCalendar}}\nshare Facebook X (Twitter) e-mail\nRefrigerated products at a supermarket in Estonia (photo is illustrative). Source: Priit Mürk/ERR\nNews\nA cyber attack hit a Selver supermarket in Estonia, with hackers accessing a computer controlling refrigeration and changing a freezer setting to 50 degrees above zero.\nSimilar incidents were reported on Monday in Sweden, Belgium and Luxembourg.\nJann Mutso, head of refrigeration technology maker and distributor Kitman Coldtech, told ERR that one of its clients was attacked, but that there had been other attacks.\n\"I don't know exactly yet, but other clients in Estonia have also been attacked, not only ours. This is very fresh, it happened this morning,\" Mutso said.\nSelver communications chief Mariann J&auml;rvela said the attack took place in one Selver outlet.\n\"For security reasons we will not disclose more specific information about the particular store or the…",
-      "stazeno": "2026-11-02T22:03:06.530Z",
-      "stav": 200
-    }
-  },
-  {
-    "id": "k-107f8cb68bc42554",
-    "zachyceno": "2026-11-02T10:03:44.329Z",
-    "publikovano": "2026-11-02T09:44:00.000Z",
-    "zdroj": {
-      "nazev": "ERR News (Estonsko)",
-      "url": "https://news.err.ee/1610183296/hackers-raised-freezer-temperature-at-estonian-supermarket-chain-to-50-c",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Hackers raised freezer temperature at Estonian supermarket chain to +50°C",
-    "titulekPuvodni": "Hackers raised freezer temperature at Estonian supermarket chain to +50°C",
-    "shrnuti": "An Estonian supermarket chain has been hit by a cyber attack which saw attackers access a computer controlling refrigeration, and setting a freezer to 50 degrees above zero.",
-    "kodZeme": "EE",
-    "zeme": "Estonsko",
-    "kategorie": [
-      "kyber"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "zeSite": null,
-    "shody": [
-      "cyber attack",
-      "cyber"
-    ],
-    "naliehave": null,
-    "stav": "ceka",
-    "vyrez": {
-      "text": "Hackers raised freezer temperature at Estonian supermarket chain to +50°C | News | ERR\n{{noticeUi.heading[langCode]}}\n{{infoLink[langCode].label}}\n{{noticeUi.allowAllLabel[langCode]}}\n{{rewokeLabels[langCode]}}\nX !\nNews\nERR\n{{1793612640000 | amCalendar}}\nshare Facebook X (Twitter) e-mail\nRefrigerated products at a supermarket in Estonia (photo is illustrative). Source: Priit Mürk/ERR\nNews\nAn Estonian supermarket chain has been hit by a cyber attack which saw attackers access a computer controlling refrigeration, and setting a freezer to 50 degrees above zero.\nJann Mutso, CEO of Kitman Coldtech, which makes the affected tech, said one of its clients was attacked, adding that other Estonian clients have also been hit. The methods match similar attacks seen in France and the Netherlands last month.\nMutso declined to tell ERR which store's cooling system had been the victim, and said due to a swift response no wide-ranging damage was caused by the sudden temperature spike.\n\"One of our clients was attacked,\" Mutso said, describing the victim as a \"large chain store\". He continued: \"More has happened. I don't know exactly yet, but other clients in Estonia have also been attacked, not…",
-      "stazeno": "2026-11-02T10:03:46.619Z",
-      "stav": 200
-    }
-  },
-  {
-    "id": "k-2fd32b55018dd32a",
-    "zachyceno": "2026-11-02T10:03:46.440Z",
-    "publikovano": "2026-11-02T09:26:00.000Z",
-    "zdroj": {
-      "nazev": "Ukrinform (anglicky)",
-      "url": "https://www.ukrinform.net/rubric-ato/4180418-russian-forces-strike-izium-casualties-reportred-city-left-without-power.html",
-      "typ": "wire",
-      "primarni": false
-    },
-    "titulek": "Russian forces strike Izium, casualties reportred, city left without power",
-    "titulekPuvodni": "Russian forces strike Izium, casualties reportred, city left without power",
-    "shrnuti": "Russian forces attacked Izium with guided aerial bombs on the morning of November 2.",
-    "kodZeme": "RU",
-    "zeme": "Rusko",
-    "kategorie": [
-      "sabotaz",
-      "rusko"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "zeSite": null,
-    "shody": [
-      "bomb",
-      "russia"
-    ],
-    "naliehave": null,
-    "stav": "ceka",
-    "vyrez": {
-      "text": "Russian forces strike Izium, casualties reportred, city left without power\n\r\nSubscription\nNewsletters\nPhotobank\nUkrinform - Ukrainian National News Agency\nFounded in 1918\nMonday, 02 November 2026, 12:03\nWar\nEconomy\nSports\nMore ☰\nContacts\nEng\nУкр\nEng\nEsp\nDeu\nعربي\nFra\n日本語\nPol\n&times;\nAll topics\nWar\nRecovery of Ukraine\nPolitics\nEconomy\nFact checks\nDefense\nSociety and Culture\nSports\nCrime\nAccidents and Emergencies\nAgency\nInformation on Agency\nOur Contacts\nSubscribtion Terms\nOur Services\nPrivacy policy and personal data protection\nAdditional\nPublications\nInterviews\nPhoto\nVideo\nLongreads\nReleases\nServices\nSubscription\nNewsletters\nPhotobank\n\r\n\r\n\r\nRussian forces attacked Izium with guided aerial bombs on the morning of November 2.\nAccording to Ukrinform, Kharkiv Region Governor Oleh Syniehubov reported this on Telegram .\n\r\n\r\n\"Preliminary reports indicate that a four-story residential building was hit and cars are on fire. There has also been a report of a fire at a post office,\" the statement said.\n\r\n\r\nRead also: Injury toll from Russian attack on Vasyshcheve in Kharkiv region rises to 12 \r\n\r\nSyniehubov later reported that one person had been killed and at least three others…",
-      "stazeno": "2026-11-02T10:03:47.118Z",
-      "stav": 200
-    }
-  },
-  {
-    "id": "k-e2113d29484e9b25",
-    "zachyceno": "2026-11-02T10:03:46.465Z",
-    "publikovano": "2026-11-02T09:22:00.000Z",
-    "zdroj": {
-      "nazev": "Ukrainska Pravda (anglicky)",
-      "url": "https://www.pravda.com.ua/eng/news/2026/11/02/8060828/",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Emergency power outages begin in some Ukrainian oblasts",
-    "titulekPuvodni": "Emergency power outages begin in some Ukrainian oblasts",
-    "shrnuti": "Unscheduled electricity outages have affected multiple oblasts as damaged high-voltage grids restrict transmission capacity, with Kyiv and Dnipropetrovsk hardest hit.",
-    "kodZeme": "UA",
-    "zeme": "Ukrajina",
-    "kategorie": [
-      "infrastruktura"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "zeSite": null,
-    "shody": [
-      "power outage"
-    ],
-    "naliehave": null,
-    "stav": "ceka",
-    "vyrez": {
-      "text": "Ukraine implements emergency power cuts following Russian infrastructure strikes | Ukrainska Pravda\nStock photo: open sources\nEmergency power outages have been applied in certain oblasts of Ukraine on 2 November, with the most difficult power supply situation remaining in Kyiv and Dnipropetrovsk oblasts.\nSource: Artem Nekrasov , First Deputy Minister of Energy\nDetails: The energy infrastructure of these two oblasts has sustained massive damage due to Russian strikes. Damage to equipment has restricted the transmission capacity of electricity to consumers, forcing power engineers to apply emergency outages.\nAdvertisement:\n\r\n\r\n\r\n\r\n\r\nThe Ministry of Energy noted that the cause of emergency outages in certain regions is also a drop in voltage within the high-voltage grid. Previously posted schedules do not apply there. A return to them will be possible after the situation in the energy system stabilises.\nConsumers are advised to check up-to-date information regarding outages on the official resources of distribution system operators.\nBackground: On the morning of 2 November, emergency power outages were introduced in Kyiv and Kyiv Oblast by order of state-owned electricity…",
-      "stazeno": "2026-11-02T10:03:50.260Z",
-      "stav": 200
-    }
-  },
-  {
-    "id": "k-2be4dee3caecd7b9",
-    "zachyceno": "2026-11-02T10:03:44.108Z",
-    "publikovano": "2026-11-02T09:17:08.000Z",
-    "zdroj": {
-      "nazev": "Seznam Zprávy",
-      "url": "https://www.seznamzpravy.cz/clanek/zahranicni-ukrajina-v-noci-zasahla-ruske-ropne-zarizeni-rusko-utocilo-na-pristav-319275",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Ukrajina v noci zasáhla ruské ropné zařízení, Rusko útočilo na přístav",
-    "titulekPuvodni": "Ukrajina v noci zasáhla ruské ropné zařízení, Rusko útočilo na přístav",
-    "shrnuti": "Rusko v noci podle informací ukrajinského letectva zaútočilo 193 drony, většinu z nich se podařilo zneškodnit. Ranění jsou hlášeni v Oděse a Charkově. Ukrajinská údajně armáda útočila na ropná zařízení v Samarské oblasti.",
-    "kodZeme": "UA",
-    "zeme": "Ukrajina",
-    "kategorie": [
-      "drony",
-      "vojsko",
-      "rusko"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "zeSite": null,
-    "shody": [
-      "dron+zasahl",
-      "dron",
-      "armada",
-      "rusk"
-    ],
-    "naliehave": null,
-    "stav": "ceka",
-    "vyrez": {
-      "text": "Ukrajina v noci zasáhla ruské ropné zařízení, Rusko útočilo na přístav - Seznam Zprávy\nZobrazení snímku 1 z 0\nHlavní obsah\nUkrajina v noci zasáhla ruské ropné zařízení, Rusko útočilo na přístav\nČTK\n2:59\nChcete-li článek poslouchat, přihlaste se\neBook\nSdílet\nFoto: Krajská prokuratura v Charkově\nNásledky ruského útoku v Charkovské oblasti, 1. listopadu 2026\n10:17\nRusko v noci podle informací ukrajinského letectva zaútočilo 193 drony, většinu z nich se podařilo zneškodnit. Ranění jsou hlášeni v Oděse a Charkově. Ukrajinská údajně armáda útočila na ropná zařízení v Samarské oblasti.\nČlánek\nUkrajinské síly v noci na pondělí zasáhly ropné zařízení v ruské Samarské oblasti, napsal server The Kyiv Independent s odkazem na zdroje, které monitorují průběh války. Server uvedl, že informaci nemohl nezávisle ověřit. Ruské ministerstvo obrany oznámilo , že v noci útočilo na objekty přístavní infrastruktury v Oděské oblasti na Ukrajině. Podle ministerstva byl zasažen sklad, kde se přechovávala odpalovací zařízení protilodních raketových systémů Neptun. V oblasti jsou po zásahu ranění.\nŠéf městské vojenské správy v Oděse Serhij Lysak napsal , že v Oděse jsou po útocích čtyři ranění. Ruské útoky…",
-      "stazeno": "2026-11-02T10:03:50.289Z",
-      "stav": 200
-    }
-  },
-  {
-    "id": "k-6b1d0b338f2321de",
-    "zachyceno": "2026-11-02T10:03:44.697Z",
-    "publikovano": "2026-11-02T09:14:28.000Z",
-    "zdroj": {
-      "nazev": "Euronews",
-      "url": "https://www.euronews.com/video/2026/11/02/paris-riots-france-investigates-after-petrol-bomb-sets-officer-on-fire",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Paris riots: France investigates after petrol bomb sets officer on fire",
-    "titulekPuvodni": "Paris riots: France investigates after petrol bomb sets officer on fire",
-    "shrnuti": "France has opened an attempted murder investigation after petrol bombs were thrown at police during protests over the rising cost of living in Paris.",
-    "kodZeme": "FR",
-    "zeme": "Francie",
-    "kategorie": [
-      "sabotaz"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "zeSite": null,
-    "shody": [
-      "bomb"
-    ],
-    "naliehave": null,
-    "stav": "ceka",
-    "vyrez": {
-      "text": "Video. Paris riots: France investigates after petrol bomb sets officer on fire | Euronews\nLoading the video\nEurope News\nVideo.\nParis riots: France investigates after petrol bomb sets officer on fire\nCopy/paste the link below:\nCopy\nCopy/paste the article video embed link below:\nCopy\nUpdated: 2 November 2026 - 10:14 GMT+1\nFrance has opened an attempted murder investigation after petrol bombs were thrown at security forces during protests against the rising cost of living in Paris on Saturday.\nADVERTISEMENT\nADVERTISEMENT\nHundreds of thousands of people took to the streets across France for a third weekend of demonstrations. Clashes erupted in Paris and other cities, with police reporting attacks involving projectiles and incendiary devices.\nDramatic footage circulating on social media shows a police officer performing crowd-control duties when his leg suddenly catches fire after an explosive device goes off at his feet.\nTwo colleagues struggle to extinguish the flames, while a man in a white T-shirt and straw hat rushes to help. They said they had singled out three individuals dressed in black in the style of Black Block protesters as suspects.\nClashes and riots\nPolice\nFrance\nTop…",
-      "stazeno": "2026-11-02T10:03:51.025Z",
       "stav": 200
     }
   }
