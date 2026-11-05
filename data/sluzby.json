@@ -1,16 +1,11 @@
 {
-  "aktualizovano": "2026-11-05T16:03:40.644Z",
+  "aktualizovano": "2026-11-05T22:50:35.043Z",
   "stavy": [
     {
       "klic": "cloudflare",
       "stav": "vypadek",
       "popis": "Partial System Outage",
       "incidenty": [
-        {
-          "nazev": "Network disruption across multiple colocations in India",
-          "odkaz": "https://www.cloudflarestatus.com/incidents/1i6fnludjh1m",
-          "aktualizovano": "2026-11-05T15:37:35.046Z"
-        },
         {
           "nazev": "Increased Errors for Durable Objects in Western Europe",
           "odkaz": "https://www.cloudflarestatus.com/incidents/oy8gxjb38yse",
@@ -23,7 +18,7 @@
         "Albuquerque, United States - (ABQ)",
         "Arica, Chile - (ARI)"
       ],
-      "zkontrolovano": "2026-11-05T16:03:40.644Z",
+      "zkontrolovano": "2026-11-05T22:50:35.043Z",
       "chyba": null
     },
     {
@@ -35,7 +30,7 @@
         "Zoom Phone",
         "Zoom Phone - EMEA"
       ],
-      "zkontrolovano": "2026-11-05T16:03:40.644Z",
+      "zkontrolovano": "2026-11-05T22:50:35.043Z",
       "chyba": null
     },
     {
@@ -44,7 +39,7 @@
       "popis": "All Systems Operational",
       "incidenty": [],
       "postizene": [],
-      "zkontrolovano": "2026-11-05T16:03:40.644Z",
+      "zkontrolovano": "2026-11-05T22:50:35.043Z",
       "chyba": null
     }
   ]
