@@ -198,8 +198,8 @@ export function SidebarUvodu({ stav, cr, crHistoricky, crPocet, crKampane = [], 
 
 
       {/* Tipy jen na počítači: na mobilu je to další box navíc. */}
-      {/* Co naladit v krizi (5. 11. 2026, provozovatelka): hlavní vysílání podle kraje, i na telefonu. */}
-      <CoNaladitBox />
+      {/* Co naladit a co dělat (5. 11. 2026, provozovatelka): hlavní vysílání podle kraje a scénáře, i na telefonu. */}
+      <CoNaladitBox internet={internet} />
 
       {tipy && <div className="max-lg:hidden">{tipy}</div>}
 

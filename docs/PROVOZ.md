@@ -586,6 +586,20 @@ V boxu je po výběru kraje seznam vysílačů s kmitočtem (nejsilnější
 první), u DAB+ blok multiplexu, a v patičce boxu odkaz na zdroj s datem
 stažení.
 
+**Scénáře** (téhož dne: „příprava na více scénářů, nejen zapnutí rádia“):
+box se jmenuje „Co naladit a co dělat“ a pod vysíláním má šest zavřených
+řádků z `data/scenare-krize.json` — vyřazené chlazení v obchodech, útok
+na nemocnici nebo krevní banku, výpadek elektřiny, bez internetu a plateb,
+podvodné zprávy po útoku, evakuace a bombová hrozba. Po rozkliknutí pár
+bodů *předem*, pár bodů *když nastane*, odkazy na úřad nebo stránku webu
+a na doložené případy typu. Body se neberou odnikud nového: opakují typy
+útoků, seznamy zásob a průvodce, bez dávek léků, úpravy vody a zásahů do
+elektřiny. Pole `signaly` je regulární výraz na řádky boxu Internet
+v Česku: když se scénář právě hlásí v médiích („útok na krevní banky“),
+jde v seznamu nahoru a nese vlajky zemí z toho boxu — bez rámečku a bez
+barvy. Totéž je v postranním menu nad tísňovými čísly (bez živých vlajek).
+Test `testy/scenare-krize.test.ts`.
+
 Tísňová čísla v menu mají nadpis „Nezahlcujte tato čísla“ a jednu větu,
 kdy volat; informace má čtenář hledat ve vysílání nad nimi.
 

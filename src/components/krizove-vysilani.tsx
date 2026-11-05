@@ -1,17 +1,27 @@
 "use client";
 
+import Link from "next/link";
 import { useEffect, useState } from "react";
 import { KRIZOVE_VYSILANI, krajVysilani, mhz, nactiKraj, ulozKraj } from "@/lib/krizove-vysilani";
+import type { RadekInternetu } from "@/lib/kyber";
+import type { SouhrnInternetu } from "@/lib/kyber-souhrn";
+import { SCENARE_KRIZE, scenareTed } from "@/lib/scenare-krize";
 import { Ikona } from "./ikony";
 import { HlavickaWidgetu } from "./widgety";
+import { Vlajka } from "./zeme";
 
 /*
-  Co naladit v krizi (5. 11. 2026, provozovatelka).
+  Co naladit a co dělat v krizi (5. 11. 2026, provozovatelka).
 
   Výběr kraje jako řada dlaždic, ne výchozí rozbalovací seznam: na telefonu
   se dá trefit prstem a vybraný kraj je vidět i bez rozkliknutí. Polohu web
   nezjišťuje; výběr zůstává v prohlížeči. Kmitočet FM se ukáže, jen když je
   doplněný z oficiálního seznamu Českého rozhlasu — jinak to řádek přizná.
+
+  Pod vysíláním jsou scénáře (téhož dne: „příprava na více scénářů, nejen
+  zapnutí rádia“): každý zavřený řádek, po rozkliknutí pár bodů předem
+  a pár bodů, když nastane. Když box Internet v Česku k některému zrovna
+  něco hlásí, scénář jde nahoru a nese vlajky zemí — ne rámeček, ne barvu.
 */
 const VEN = "nofollow noopener noreferrer";
 
@@ -43,7 +53,56 @@ export function VyberKraje({ kraj, onVyber }: { kraj: string | null; onVyber: (k
   );
 }
 
-export function CoNaladit({ kraj, onVyber }: { kraj: string | null; onVyber: (k: string | null) => void }) {
+/** Scénáře: předem a když nastane. `radky` jsou řádky boxu Internet v Česku (co se právě hlásí). */
+export function Scenare({ radky = [] }: { radky?: readonly RadekInternetu[] }) {
+  const scenare = scenareTed(radky);
+  return (
+    <div>
+      <div className="stitek mb-1.5 text-tlum2">Scénáře — předem a když nastane</div>
+      <ul className="divide-y divide-linka/60 rounded-[14px] border border-linka/60">
+        {scenare.map((x) => (
+          <li key={x.klic}>
+            <details className="group">
+              <summary className="flex cursor-pointer list-none items-start gap-2 px-3 py-2 hover:bg-plocha2">
+                <span className="min-w-0 flex-1">
+                  <span className="block text-male font-semibold leading-snug text-inkoust">{x.nazev}</span>
+                  {x.ted.length ? (
+                    <span className="mt-0.5 flex flex-wrap items-center gap-x-2 gap-y-0.5 text-mikro leading-snug text-tlum">
+                      <span className="text-tlum2">z médií za 72 h:</span>
+                      {x.ted.map((r) => (
+                        <span key={`${r.kodZeme}|${r.co}`} className="inline-flex items-center gap-1">
+                          {r.kodZeme ? <Vlajka kod={r.kodZeme} /> : <span aria-hidden className="text-tlum2">·</span>}
+                          <span>{r.co}{r.pocet > 1 ? ` ×${r.pocet}` : ""}</span>
+                        </span>
+                      ))}
+                    </span>
+                  ) : (
+                    <span className="mt-0.5 block text-mikro leading-snug text-tlum2">{x.kratce}</span>
+                  )}
+                </span>
+                <Ikona nazev="dolu" velikost={12} tah={2} trida="mt-1 shrink-0 text-tlum2 transition-transform group-open:rotate-180" />
+              </summary>
+              <div className="px-3 pb-3 text-male leading-snug">
+                <span className="stitek block text-tlum2">Předem</span>
+                {x.predem.map((p) => <span key={p} className="mt-0.5 block text-tlum">· {p}</span>)}
+                <span className="stitek mt-2 block text-tlum2">Když nastane</span>
+                {x.kdyzNastane.map((p) => <span key={p} className="mt-0.5 block text-tlum">· {p}</span>)}
+                <span className="mt-2 flex flex-wrap gap-x-3 gap-y-1 text-drobne text-tlum2">
+                  {x.odkazy.map((o) => o.url.startsWith("/")
+                    ? <Link key={o.url} href={o.url} className="odkaz">{o.nazev}</Link>
+                    : <a key={o.url} href={o.url} target="_blank" rel={VEN} className="odkaz">{o.nazev} ↗</a>)}
+                  {x.typ && <Link href={`/typy-utoku/#${x.typ}`} className="odkaz">Doložené případy</Link>}
+                </span>
+              </div>
+            </details>
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
+}
+
+export function CoNaladit({ kraj, onVyber, radky }: { kraj: string | null; onVyber: (k: string | null) => void; /** Řádky boxu Internet v Česku — ke scénářům. */ radky?: readonly RadekInternetu[] }) {
   const d = KRIZOVE_VYSILANI;
   const vybrany = krajVysilani(kraj);
   return (
@@ -86,14 +145,16 @@ export function CoNaladit({ kraj, onVyber }: { kraj: string | null; onVyber: (k:
         <a href={d.kmitocty?.zdroj.url ?? d.zdroj.url} target="_blank" rel={VEN} className="odkaz">{d.kmitocty ? `${d.kmitocty.zdroj.nazev} (staženo ${d.kmitocty.stazeno.split("-").reverse().map(Number).join(". ")}) ↗` : `${d.zdroj.nazev} ↗`}</a>
         <a href={d.krizoveVysilani.zdroj.url} target="_blank" rel={VEN} className="odkaz">Varovný systém ASA ↗</a>
       </p>
+      <Scenare radky={radky} />
     </div>
   );
 }
 
-/** Box do postranního panelu: souhrn v řádku, výběr a vysvětlení po rozkliknutí. */
-export function CoNaladitBox() {
+/** Box do postranního panelu: souhrn v řádku, výběr, vysvětlení a scénáře po rozkliknutí. */
+export function CoNaladitBox({ internet }: { /** Souhrn boxu Internet v Česku — scénáře, které se právě hlásí, jdou nahoru. */ internet?: SouhrnInternetu }) {
   const [kraj, vyber] = useKraj();
   const vybrany = krajVysilani(kraj);
+  const radky = internet?.cerstve ? internet.radky : [];
   const souhrn = !vybrany
     ? `${KRIZOVE_VYSILANI.stanice} · vyberte kraj`
     : vybrany.fm.length
@@ -102,10 +163,10 @@ export function CoNaladitBox() {
   return (
     <details className="group overflow-hidden rounded-[22px] bg-plocha">
       <summary className="cursor-pointer list-none">
-        <HlavickaWidgetu ikona="komunikace" nazev="Co naladit v krizi" ton="klid" meta={<Ikona nazev="dolu" velikost={13} tah={2} trida="text-tlum2 transition-transform group-open:rotate-180" />} />
-        <span className="-mt-1 block px-4 pb-3 text-male font-semibold leading-snug text-inkoust">{souhrn}</span>
+        <HlavickaWidgetu ikona="komunikace" nazev="Co naladit a co dělat" ton="klid" meta={<Ikona nazev="dolu" velikost={13} tah={2} trida="text-tlum2 transition-transform group-open:rotate-180" />} />
+        <span className="-mt-1 block px-4 pb-3 text-male font-semibold leading-snug text-inkoust">{souhrn} <span className="font-normal text-tlum2">· {SCENARE_KRIZE.length} scénářů</span></span>
       </summary>
-      <div className="border-t border-linka/60 px-4 py-3"><CoNaladit kraj={kraj} onVyber={vyber} /></div>
+      <div className="border-t border-linka/60 px-4 py-3"><CoNaladit kraj={kraj} onVyber={vyber} radky={radky} /></div>
     </details>
   );
 }
@@ -115,7 +176,7 @@ export function CoNaladitVMenu() {
   const [kraj, vyber] = useKraj();
   return (
     <div className="mb-5">
-      <div className="stitek mb-1.5">Co naladit v případě krize</div>
+      <div className="stitek mb-1.5">Co naladit a co dělat v krizi</div>
       <CoNaladit kraj={kraj} onVyber={vyber} />
     </div>
   );
