@@ -1,0 +1,128 @@
+[
+  {
+    "_poznamka": "Scénáře k boxu „Co naladit a co dělat“ (5. 11. 2026, provozovatelka: příprava na víc scénářů, ne jen zapnutí rádia). Body jsou převzaté z toho, co web už dokládá jinde — typy útoků (data/typy-utoku.json), seznamy zásob (data/odolnost/seznamy.json), průvodce připraveností a tipy. Žádné dávky léků, úprava vody ani zásahy do elektřiny (docs/BEZPECNOST-OBSAHU.md). `signaly` je regulární výraz na řádky boxu Internet v Česku: shoda znamená, že se scénář právě hlásí v médiích, a jde nahoru.",
+    "klic": "chlazeni",
+    "nazev": "Vyřazené chlazení v obchodech",
+    "kratce": "Kyberútok vypne lednice a mrazáky řetězce; potraviny se zkazí, prodej se omezí.",
+    "signaly": "chlazení|obchody",
+    "typ": "kyber",
+    "predem": [
+      "Trvanlivé jídlo a pití na pár dní, které nepotřebuje vaření ani chlazení: konzervy, sušenky, ořechy; k tomu otvírák.",
+      "Nespoléhat na jeden obchod ani jednu aplikaci; hotovost v malých bankovkách pro případ vypnutých pokladen.",
+      "Plný mrazák doma drží chlad déle: lahve s vodou do prázdných míst."
+    ],
+    "kdyzNastane": [
+      "Zboží z vypnuté lednice nebo mrazáku nekupovat; obchod sám řekne, co stáhl.",
+      "Chybějící zboží dokoupit v jiném obchodě; nakupovat jako obvykle, ne do zásoby.",
+      "Řídit se tím, co řetězec oznámí. Zpráva, která „kvůli výpadku“ žádá údaje nebo platbu, je podvod."
+    ],
+    "odkazy": [
+      { "nazev": "Český rozhlas — útoky na chlazení v obchodech v EU (2. 11. 2026)", "url": "https://www.irozhlas.cz/zpravy-svet/az-50-stupnu-v-lednici-obchody-v-belgii-lucembursku-a-svedsku-zasahl-kyberutok_2611021309_lhv" },
+      { "nazev": "Seznam zásob na 72 hodin", "url": "/odolnost/" }
+    ]
+  },
+  {
+    "klic": "zdravotnictvi",
+    "nazev": "Útok na nemocnici nebo krevní banku",
+    "kratce": "Objednávání, výsledky a pokladny nemocnice; chlazení transfuzních přípravků.",
+    "signaly": "krevní|nemocnic",
+    "typ": "kyber",
+    "predem": [
+      "Pravidelně užívané léky a pomůcky mít na několik dní dopředu; vyzvedávat je týden před koncem balení.",
+      "Seznam léků, alergií a kontaktů na lékaře pro každého doma, i na papíře; kartička pojišťovny u dokladů.",
+      "Pro každou důležitou službu jiné heslo a dvoufázové ověření, i u pacientských portálů."
+    ],
+    "kdyzNastane": [
+      "Řídit se tím, co nemocnice oznámí: objednaný termín potvrdit s ní, ne přes tísňovou linku. Linka 155 je pro ohrožení života.",
+      "Na výzvy k darování krve reagovat jen přes transfuzní oddělení nemocnic; řetězové zprávy nesdílet, dokud je nepotvrdí.",
+      "Zpráva, která po úniku dat žádá heslo, kód nebo platbu, je podvod. Po oznámeném úniku změnit heslo všude, kde bylo stejné."
+    ],
+    "odkazy": [
+      { "nazev": "iROZHLAS — kyberútok na krevní banky ve Francii (4. 11. 2026)", "url": "https://www.irozhlas.cz/zpravy-svet/krevni-banky-ve-francii-celily-kyberutoku-no-zasahly-vcas-zadne-transfuzni_2611041347_ako" },
+      { "nazev": "NÚKIB", "url": "https://nukib.gov.cz/" }
+    ]
+  },
+  {
+    "klic": "elektrina",
+    "nazev": "Výpadek elektřiny",
+    "kratce": "Hodiny až dny bez proudu: světlo, chlazení, nabíjení, topení, platby.",
+    "signaly": "energetik",
+    "typ": "infrastruktura",
+    "predem": [
+      "Pitná voda 3 l na osobu a den a jídlo bez vaření na 3 dny.",
+      "Baterka, nabitá powerbanka, rádio na baterie nebo kliku; hotovost v malých bankovkách.",
+      "Spočítat si, jak dlouho domácnost vydrží bez proudu a vody, a doplnit, co chybí."
+    ],
+    "kdyzNastane": [
+      "Výpadek nehlásit na 112; tísňové linky jsou pro ohrožení života. Poruchu hlaste dodavateli.",
+      "Informace z krizového vysílání Českého rozhlasu a České televize a z kanálu obce; kmitočty jsou výše.",
+      "Při hlášeném výpadku uvařit vodu do termosek. Svíčky jen s dozorem; vařič nebo nouzové topení uvnitř jen s větráním, hrozí oxid uhelnatý."
+    ],
+    "odkazy": [
+      { "nazev": "Hasičský záchranný sbor ČR", "url": "https://www.hzscr.cz/" },
+      { "nazev": "Kalkulačka odolnosti", "url": "/odolnost/" },
+      { "nazev": "Průvodce připraveností", "url": "/pripravenost/" }
+    ]
+  },
+  {
+    "klic": "site",
+    "nazev": "Bez internetu, signálu a plateb kartou",
+    "kratce": "Nejde volat, platit kartou, vybrat z bankomatu ani načíst mapu.",
+    "signaly": "připojení|přetížené|weby|(?<!krevní )banky",
+    "typ": "infrastruktura",
+    "predem": [
+      "Hotovost v malých bankovkách na pár dní nákupů; část v obálce mimo peněženku.",
+      "Důležitá čísla a adresy i na papíře; offline mapa kraje stažená předem.",
+      "Domluvené místo setkání a jeden vzdálený kontakt, který předává zprávy, když nejde volat."
+    ],
+    "kdyzNastane": [
+      "Při přetížené síti projde SMS dřív než hovor; volat jen to nutné.",
+      "Zprávy z rádia: krizové vysílání jde bez sítě i bez internetu.",
+      "Nevěřit zprávám, které „kvůli výpadku“ chtějí údaje nebo platbu; úřední věci zkusit za hodinu nebo jinou cestou."
+    ],
+    "odkazy": [
+      { "nazev": "Hasičský záchranný sbor ČR", "url": "https://www.hzscr.cz/" },
+      { "nazev": "NÚKIB", "url": "https://nukib.gov.cz/" }
+    ]
+  },
+  {
+    "klic": "podvody",
+    "nazev": "Podvodné zprávy po útoku",
+    "kratce": "Falešné e-maily, SMS a hovory, které zneužijí zprávu o útoku nebo úniku dat.",
+    "signaly": "podvod|data",
+    "typ": "podvod",
+    "predem": [
+      "Banka, policie ani úřad po vás nikdy nechtějí heslo, PIN ani kód z SMS.",
+      "Domluvit si s blízkými slovo, kterým se poznáte, když přijde „nutná“ žádost o peníze.",
+      "Pro každou důležitou službu jiné heslo a dvoufázové ověření; únik z jednoho místa pak neotevře ostatní."
+    ],
+    "kdyzNastane": [
+      "Nic nepotvrzovat, na odkaz neklikat. Zavolat bance na číslo z karty a zeptat se.",
+      "Když už jste zaplatili nebo zadali údaje: hned banka, pak policie na 158.",
+      "Po oznámeném úniku dat změnit heslo u dané služby a všude, kde bylo stejné."
+    ],
+    "odkazy": [
+      { "nazev": "NÚKIB", "url": "https://nukib.gov.cz/" }
+    ]
+  },
+  {
+    "klic": "evakuace",
+    "nazev": "Evakuace a bombová hrozba",
+    "kratce": "Výhrůžka škole nebo úřadu, podezřelý předmět, pokyn opustit budovu nebo oblast.",
+    "typ": "hybridni",
+    "predem": [
+      "Evakuační zavazadlo u dveří: doklady a kopie, léky, voda, baterka, oblečení na 1–2 dny.",
+      "Vědět, co znamenají sirény: kolísavý tón 140 s je všeobecná výstraha, pak zapnout rádio.",
+      "Domluvit si s dětmi a školou, jak se o evakuaci dozvíte a kde se sejdete."
+    ],
+    "kdyzNastane": [
+      "Evakuaci neodmítat, i když výhrůžka vypadá planě; řídit se pokyny složek na místě.",
+      "Podezřelého předmětu se nedotýkat a nepřibližovat se k němu; volat 158 nebo 112.",
+      "Nešířit fotky z místa ani neověřené zprávy; čekat na slovo policie nebo školy. Lístek na dveře: kdo odešel, kdy a kam."
+    ],
+    "odkazy": [
+      { "nazev": "HZS ČR — evakuační zavazadlo", "url": "https://hzscr.gov.cz/clanek/evakuacni-zavazadlo-i.aspx" },
+      { "nazev": "Základy za minutu: tóny sirén", "url": "/pripravenost/#zaklady" }
+    ]
+  }
+]

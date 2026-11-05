@@ -9,6 +9,7 @@ import { TlacitkoInstalace } from "./pwa";
 import { KruhyKomunity } from "./komunita";
 import { ZnackaKanalu, type Znacka } from "./znacky";
 import { Tlacitko } from "./ui";
+import { CoNaladitVMenu } from "./krizove-vysilani";
 
 /** Kdokoli může panel otevřít — hlavička, spodní lišta, odkaz v textu. */
 export function otevriPanel() {
@@ -382,7 +383,11 @@ export function PostranniPanel() {
           <button type="button" onClick={zavri} className="mb-3 flex min-h-[48px] w-full items-center justify-center gap-2 rounded-full border border-linka text-zaklad font-semibold text-inkoust transition-colors hover:border-akcent">
             <Ikona nazev="krizek" velikost={15} tah={2} /> Zavřít menu
           </button>
-          <div className="stitek mb-1.5">V nouzi volejte</div>
+          {/* Co naladit v případě krize (5. 11. 2026, provozovatelka): nad tísňová čísla, podle kraje, bez zjišťování polohy. */}
+          <CoNaladitVMenu />
+          {/* Tísňové linky jsou pro ohrožení života, zdraví a majetku; při výpadku nebo pro informace je nezahlcovat (5. 11. 2026). */}
+          <div className="stitek mb-0.5">Nezahlcujte tato čísla</div>
+          <p className="mb-1.5 text-mikro leading-snug text-tlum2">Jen při ohrožení života, zdraví nebo majetku. Informace hledejte ve vysílání výše.</p>
           <div className="grid grid-cols-4 gap-2">
             {TISNOVA.map((t) => (
               <a key={t.cislo} href={`tel:${t.cislo}`} title={t.popis} className="rounded-[12px] border border-linka py-1.5 text-center hover:border-akcent">
