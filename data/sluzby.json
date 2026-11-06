@@ -1,29 +1,18 @@
 {
-  "aktualizovano": "2026-11-06T10:03:13.755Z",
+  "aktualizovano": "2026-11-06T11:25:42.493Z",
   "stavy": [
     {
       "klic": "cloudflare",
       "stav": "vypadek",
       "popis": "Partial System Outage",
-      "incidenty": [
-        {
-          "nazev": "Wrangler Deployments, Pages, and Workers Builds failures",
-          "odkaz": "https://www.cloudflarestatus.com/incidents/wtsd415cavkc",
-          "aktualizovano": "2026-11-06T09:56:12.380Z"
-        },
-        {
-          "nazev": "Network Performance Issues in Singapore",
-          "odkaz": "https://www.cloudflarestatus.com/incidents/3ehw20ozwlkr",
-          "aktualizovano": "2026-11-06T09:32:12.190Z"
-        }
-      ],
+      "incidenty": [],
       "postizene": [
-        "Cloudflare Sites and Services",
         "Albuquerque, United States - (ABQ)",
         "Arica, Chile - (ARI)",
-        "Almaty, Kazakhstan - (ALA)"
+        "Annaba, Algeria - (AAE)",
+        "Baku, Azerbaijan - (GYD)"
       ],
-      "zkontrolovano": "2026-11-06T10:03:13.755Z",
+      "zkontrolovano": "2026-11-06T11:25:42.493Z",
       "chyba": null
     },
     {
@@ -32,7 +21,7 @@
       "popis": "All Systems Operational",
       "incidenty": [],
       "postizene": [],
-      "zkontrolovano": "2026-11-06T10:03:13.755Z",
+      "zkontrolovano": "2026-11-06T11:25:42.493Z",
       "chyba": null
     },
     {
@@ -41,7 +30,7 @@
       "popis": "All Systems Operational",
       "incidenty": [],
       "postizene": [],
-      "zkontrolovano": "2026-11-06T10:03:13.755Z",
+      "zkontrolovano": "2026-11-06T11:25:42.493Z",
       "chyba": null
     }
   ]
