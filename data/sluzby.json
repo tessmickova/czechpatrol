@@ -1,18 +1,24 @@
 {
-  "aktualizovano": "2026-11-06T14:03:12.433Z",
+  "aktualizovano": "2026-11-06T20:03:09.127Z",
   "stavy": [
     {
       "klic": "cloudflare",
       "stav": "vypadek",
       "popis": "Partial System Outage",
-      "incidenty": [],
+      "incidenty": [
+        {
+          "nazev": "Fedramp Customers have Delayed Purges",
+          "odkaz": "https://www.cloudflarestatus.com/incidents/wp49bp8bqo6c",
+          "aktualizovano": "2026-11-06T17:59:13.680Z"
+        }
+      ],
       "postizene": [
+        "Cloudflare Sites and Services",
         "Albuquerque, United States - (ABQ)",
         "Arica, Chile - (ARI)",
-        "Annaba, Algeria - (AAE)",
-        "Baku, Azerbaijan - (GYD)"
+        "Annaba, Algeria - (AAE)"
       ],
-      "zkontrolovano": "2026-11-06T14:03:12.433Z",
+      "zkontrolovano": "2026-11-06T20:03:09.127Z",
       "chyba": null
     },
     {
@@ -21,7 +27,7 @@
       "popis": "All Systems Operational",
       "incidenty": [],
       "postizene": [],
-      "zkontrolovano": "2026-11-06T14:03:12.433Z",
+      "zkontrolovano": "2026-11-06T20:03:09.127Z",
       "chyba": null
     },
     {
@@ -30,7 +36,7 @@
       "popis": "All Systems Operational",
       "incidenty": [],
       "postizene": [],
-      "zkontrolovano": "2026-11-06T14:03:12.433Z",
+      "zkontrolovano": "2026-11-06T20:03:09.127Z",
       "chyba": null
     }
   ]
