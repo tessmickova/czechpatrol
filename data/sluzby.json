@@ -1,5 +1,5 @@
 {
-  "aktualizovano": "2026-11-06T22:02:32.597Z",
+  "aktualizovano": "2026-11-06T23:28:18.054Z",
   "stavy": [
     {
       "klic": "cloudflare",
@@ -18,16 +18,19 @@
         "Arica, Chile - (ARI)",
         "Annaba, Algeria - (AAE)"
       ],
-      "zkontrolovano": "2026-11-06T22:02:32.597Z",
+      "zkontrolovano": "2026-11-06T23:28:18.054Z",
       "chyba": null
     },
     {
       "klic": "zoom",
-      "stav": "provoz",
-      "popis": "All Systems Operational",
+      "stav": "omezeni",
+      "popis": "Service Under Maintenance",
       "incidenty": [],
-      "postizene": [],
-      "zkontrolovano": "2026-11-06T22:02:32.597Z",
+      "postizene": [
+        "Zoom Contact Center",
+        "Zoom CX - Global"
+      ],
+      "zkontrolovano": "2026-11-06T23:28:18.054Z",
       "chyba": null
     },
     {
@@ -36,7 +39,7 @@
       "popis": "All Systems Operational",
       "incidenty": [],
       "postizene": [],
-      "zkontrolovano": "2026-11-06T22:02:32.597Z",
+      "zkontrolovano": "2026-11-06T23:28:18.054Z",
       "chyba": null
     }
   ]
