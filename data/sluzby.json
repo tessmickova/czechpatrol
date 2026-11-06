@@ -1,5 +1,5 @@
 {
-  "aktualizovano": "2026-11-06T03:21:42.721Z",
+  "aktualizovano": "2026-11-06T04:02:50.205Z",
   "stavy": [
     {
       "klic": "cloudflare",
@@ -18,19 +18,27 @@
         "Athens, Greece - (ATH)",
         "Arica, Chile - (ARI)"
       ],
-      "zkontrolovano": "2026-11-06T03:21:42.721Z",
+      "zkontrolovano": "2026-11-06T04:02:50.205Z",
       "chyba": null
     },
     {
       "klic": "zoom",
       "stav": "omezeni",
-      "popis": "Service Under Maintenance",
-      "incidenty": [],
+      "popis": "Partially Degraded Service",
+      "incidenty": [
+        {
+          "nazev": "Service Degradation Affecting Zoom Mail, Calendar and Scheduler.",
+          "odkaz": "https://stspg.io/n6ft1fxrgkw3",
+          "aktualizovano": "2026-11-05T19:32:15.460-08:00"
+        }
+      ],
       "postizene": [
         "Zoom Phone",
-        "Zoom Phone - EMEA"
+        "Calendar",
+        "Mail",
+        "Zoom Scheduler"
       ],
-      "zkontrolovano": "2026-11-06T03:21:42.721Z",
+      "zkontrolovano": "2026-11-06T04:02:50.205Z",
       "chyba": null
     },
     {
@@ -39,7 +47,7 @@
       "popis": "All Systems Operational",
       "incidenty": [],
       "postizene": [],
-      "zkontrolovano": "2026-11-06T03:21:42.721Z",
+      "zkontrolovano": "2026-11-06T04:02:50.205Z",
       "chyba": null
     }
   ]
