@@ -1,5 +1,5 @@
 {
-  "kdy": "2026-11-06T06:00:43.629Z",
+  "kdy": "2026-11-06T14:00:48.201Z",
   "zdroje": [
     {
       "klic": "e-sbirka",
@@ -156,7 +156,7 @@
       "ok": true,
       "stav": 200,
       "pocetPolozek": 0,
-      "vysledek": "ok"
+      "vysledek": "obsah"
     },
     {
       "klic": "letiste-praha",
@@ -240,7 +240,7 @@
       "klic": "kyber",
       "ok": true,
       "stav": null,
-      "pocetPolozek": 0,
+      "pocetPolozek": 2,
       "vysledek": "ok"
     },
     {

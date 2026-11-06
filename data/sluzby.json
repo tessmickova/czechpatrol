@@ -1,24 +1,18 @@
 {
-  "aktualizovano": "2026-11-06T06:03:20.672Z",
+  "aktualizovano": "2026-11-06T14:03:12.433Z",
   "stavy": [
     {
       "klic": "cloudflare",
       "stav": "vypadek",
       "popis": "Partial System Outage",
-      "incidenty": [
-        {
-          "nazev": "Increased Errors for Durable Objects in Western Europe",
-          "odkaz": "https://www.cloudflarestatus.com/incidents/oy8gxjb38yse",
-          "aktualizovano": "2026-11-05T13:24:21.153Z"
-        }
-      ],
+      "incidenty": [],
       "postizene": [
-        "Cloudflare Sites and Services",
         "Albuquerque, United States - (ABQ)",
-        "Athens, Greece - (ATH)",
-        "Arica, Chile - (ARI)"
+        "Arica, Chile - (ARI)",
+        "Annaba, Algeria - (AAE)",
+        "Baku, Azerbaijan - (GYD)"
       ],
-      "zkontrolovano": "2026-11-06T06:03:20.672Z",
+      "zkontrolovano": "2026-11-06T14:03:12.433Z",
       "chyba": null
     },
     {
@@ -27,7 +21,7 @@
       "popis": "All Systems Operational",
       "incidenty": [],
       "postizene": [],
-      "zkontrolovano": "2026-11-06T06:03:20.672Z",
+      "zkontrolovano": "2026-11-06T14:03:12.433Z",
       "chyba": null
     },
     {
@@ -36,7 +30,7 @@
       "popis": "All Systems Operational",
       "incidenty": [],
       "postizene": [],
-      "zkontrolovano": "2026-11-06T06:03:20.672Z",
+      "zkontrolovano": "2026-11-06T14:03:12.433Z",
       "chyba": null
     }
   ]
