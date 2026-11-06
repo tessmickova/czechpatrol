@@ -1,8 +1,17 @@
 {
-  "aktualizovano": "2026-11-06T12:00:43.583Z",
-  "nacteno": "2026-11-06T12:00:43.583Z",
-  "stav": "klid",
+  "aktualizovano": "2026-11-06T14:00:48.201Z",
+  "nacteno": "2026-11-06T14:00:48.201Z",
+  "stav": "pozor",
   "zpravy": [
+    {
+      "id": "ukrajinska-aplikace-air-alert-pod-utokem-hackeru-lzive-varov",
+      "druh": "utok",
+      "titulek": "Ukrajinská aplikace Air Alert pod útokem hackerů. Lživě varovala před jaderným úderem",
+      "vydavatel": "Novinky.cz",
+      "odkaz": "https://www.novinky.cz/clanek/valka-na-ukrajine-ukrajinska-aplikace-air-alert-pod-utokem-hackeru-lzive-varovala-pred-jadernym-uderem-40606027",
+      "kdy": "2026-11-06T13:11:36.000Z",
+      "uredni": false
+    },
     {
       "id": "cast-prahy-postihl-vypadek-elektriny-pre-vyloucila-kyberneti",
       "druh": "utok",
