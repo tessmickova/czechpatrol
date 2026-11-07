@@ -495,6 +495,40 @@
     }
   },
   {
+    "id": "k-967d87c686de33ae",
+    "zachyceno": "2026-11-07T20:28:07.687Z",
+    "publikovano": "2026-11-07T19:57:00.000Z",
+    "zdroj": {
+      "nazev": "Ukrinform (anglicky)",
+      "url": "https://www.ukrinform.net/rubric-ato/4182521-prosecutors-office-building-damaged-in-russian-attack-on-kyiv.html",
+      "typ": "wire",
+      "primarni": false
+    },
+    "titulek": "Prosecutor's office building damaged in Russian attack on Kyiv",
+    "titulekPuvodni": "Prosecutor's office building damaged in Russian attack on Kyiv",
+    "shrnuti": "A prosecutor's office building was damaged in a Russian attack on the capital on Saturday.",
+    "kodZeme": "UA",
+    "zeme": "Ukrajina",
+    "kategorie": [
+      "hybridni",
+      "rusko"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "attack on",
+      "russia"
+    ],
+    "naliehave": null,
+    "stav": "ceka",
+    "vyrez": {
+      "text": "Prosecutor's office building damaged in Russian attack on Kyiv\n\r\nSubscription\nNewsletters\nPhotobank\nUkrinform - Ukrainian National News Agency\nFounded in 1918\nSaturday, 07 November 2026, 22:28\nWar\nEconomy\nSports\nMore ☰\nContacts\nEng\nУкр\nEng\nEsp\nDeu\nعربي\nFra\n日本語\nPol\n&times;\nAll topics\nWar\nRecovery of Ukraine\nPolitics\nEconomy\nFact checks\nDefense\nSociety and Culture\nSports\nCrime\nAccidents and Emergencies\nAgency\nInformation on Agency\nOur Contacts\nSubscribtion Terms\nOur Services\nPrivacy policy and personal data protection\nAdditional\nPublications\nInterviews\nPhoto\nVideo\nLongreads\nReleases\nServices\nSubscription\nNewsletters\nPhotobank\n\r\n\r\n\r\nA prosecutor's office building was damaged in a Russian attack on the capital on Saturday.\nActing Head of the Kyiv City Military Administration Andrii Tkachov said this, according to Ukrinform.\n\r\n\r\n\"The residential building in Solomianskyi district suffered the most damage. Many apartment buildings there were affected. One missile struck directly next to one of the residential buildings, which sustained the most severe damage. Windows, doors and other structural elements were also blown out in surrounding buildings. A kindergarten, a prosecutor's office…",
+      "stazeno": "2026-11-07T20:28:07.843Z",
+      "stav": 200
+    }
+  },
+  {
     "id": "k-d607257269341ec4",
     "zachyceno": "2026-11-07T20:03:09.455Z",
     "publikovano": "2026-11-07T18:46:00.000Z",
@@ -10161,38 +10195,6 @@
       "stazeno": "2026-11-04T12:03:30.626Z",
       "stav": 403,
       "chyba": "HTTP 403"
-    }
-  },
-  {
-    "id": "k-cb6d4078c56b71c4",
-    "zachyceno": "2026-11-04T14:03:33.454Z",
-    "publikovano": "2026-11-04T10:21:15.000Z",
-    "zdroj": {
-      "nazev": "Le Monde (Francie)",
-      "url": "https://www.lemonde.fr/international/live/2026/11/04/en-direct-guerre-en-ukraine-la-chine-dit-etre-en-contact-avec-les-etats-unis-et-la-russie-pour-un-sommet-a-trois_6803934_3210.html",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "EN DIRECT, guerre en Ukraine : le bombardement de lundi sur une école de Komychouvakha a fait 37 morts, selon un nouveau bilan",
-    "titulekPuvodni": "EN DIRECT, guerre en Ukraine : le bombardement de lundi sur une école de Komychouvakha a fait 37 morts, selon un nouveau bilan",
-    "shrnuti": "Trente-sept corps ont été extraits des décombres dans cette localité de l’oblast de Zaporijia, a annoncé la police. Un abri aménagé dans une école a été touché lundi par une bombe guidée de 3 tonnes alors qu’une distribution d’aide s’y déroulait, selon les autorités ukrainiennes.",
-    "kodZeme": "UA",
-    "zeme": "Ukrajina",
-    "kategorie": [
-      "sabotaz"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "zeSite": null,
-    "shody": [
-      "bomb"
-    ],
-    "naliehave": null,
-    "stav": "ceka",
-    "vyrez": {
-      "text": "Client Challenge\nA required part of this site couldn’t load. This may be due to a browser\nextension, network issues, or browser settings. Please check your\nconnection, disable any ad blockers, or try using a different browser.",
-      "stazeno": "2026-11-04T14:03:37.705Z",
-      "stav": 200
     }
   }
 ]
