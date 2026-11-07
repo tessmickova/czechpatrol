@@ -528,6 +528,38 @@
     }
   },
   {
+    "id": "k-43235cb08a793340",
+    "zachyceno": "2026-11-07T16:16:09.537Z",
+    "publikovano": "2026-11-07T15:43:47.000Z",
+    "zdroj": {
+      "nazev": "Le Monde (Francie)",
+      "url": "https://www.lemonde.fr/societe/article/2026/11/07/alertes-a-la-bombe-visant-des-avions-une-enquete-ouverte-par-le-parquet-de-paris-notamment-sur-un-lien-eventuel-avec-des-puissances-etrangeres_6808294_3224.html",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Alertes à la bombe visant des avions : une enquête ouverte par le parquet de Paris, notamment sur un lien éventuel avec des puissances étrangères",
+    "titulekPuvodni": "Alertes à la bombe visant des avions : une enquête ouverte par le parquet de Paris, notamment sur un lien éventuel avec des puissances étrangères",
+    "shrnuti": "Les investigations sont « menées pour retrouver les auteurs des courriels divulguant ces fausses informations afin de faire croire à une destruction dangereuse », a expliqué le parquet.",
+    "kodZeme": "FR",
+    "zeme": "Francie",
+    "kategorie": [
+      "sabotaz"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "bomb"
+    ],
+    "naliehave": null,
+    "stav": "ceka",
+    "vyrez": {
+      "text": "Client Challenge\nA required part of this site couldn’t load. This may be due to a browser\nextension, network issues, or browser settings. Please check your\nconnection, disable any ad blockers, or try using a different browser.",
+      "stazeno": "2026-11-07T16:16:10.462Z",
+      "stav": 200
+    }
+  },
+  {
     "id": "k-85e881d7160ebbee",
     "zachyceno": "2026-11-07T16:03:08.050Z",
     "publikovano": "2026-11-07T15:43:00.000Z",
@@ -10181,40 +10213,6 @@
       "text": "Český černý humor a boj o dědictví. Komedie Něco jako rodina představuje trailer - Novinky\nZobrazení snímku 1 z 0\nzáhlaví\nHlavní obsah\nČeský černý humor a boj o dědictví. Komedie Něco jako rodina představuje trailer\nLenka Hloušková\n1:35\nChcete-li článek poslouchat, přihlaste se\neBook\nSdílet\nDnes 4. 11., 6:32\nRoky se neviděli a teď chtějí svůj podíl z očekávaného dědictví… Něco jako rodina, nejbláznivější komedie roku, odpálí 26. listopadu v kinech nálož nekorektního humoru. Teď tvůrci zveřejňují trailer, který má na Novinkách premiéru.\nTrailer komedie Něco jako rodina Video: Donart Film\nČlánek\nZa novou českou komedií stojí režisérka Zuzana Marianková (Známí neznámí a Jedeme na teambuilding), přičemž svůj příběh staví na jednom netradičním setkání.\nVila bohatého Viktora Hoffmana se během víkendu zaplní hosty, kteří si myslí, že přijeli pro kus dědictví. Pošťák (Jakub Prachař) s velkými sny, jeho manželka (Tereza Ramba), která živí celou rodinu, bývalá milenka (Zuzana Mauréry), ambiciózní realitní makléř (Petr Lněnička) a afektovaný kadeřník (Tomáš Maštalír) s čivavou tvoří výbušnou směs, která nepotřebuje jiskru, stačí trochu vína.\nHory jako ráj neřesti, kde se pije, flirtuje…",
       "stazeno": "2026-11-04T06:03:21.412Z",
       "stav": 200
-    }
-  },
-  {
-    "id": "k-ae0bdb42bd4cb22d",
-    "zachyceno": "2026-11-04T06:03:17.656Z",
-    "publikovano": "2026-11-04T05:00:00.000Z",
-    "zdroj": {
-      "nazev": "Český rozhlas — domácí zprávy",
-      "url": "https://www.irozhlas.cz/zpravy-svet/potapecka-plachetnice-a-casovane-bomby-pribeh-komanda-ktere-nemci-vini-ze_2611040600_jkd",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Potápěčka, plachetnice a časované bomby: Příběh komanda, které Němci viní ze sabotáže století",
-    "titulekPuvodni": "Potápěčka, plachetnice a časované bomby: Příběh komanda, které Němci viní ze sabotáže století",
-    "shrnuti": "Obhajoba neuspěla, soud pokračuje. Lídr sabotážního ukrajinského komanda se chtěl vyvléct z výpovědi, otázkám na odpálení Nord Streamu ale neunikne.",
-    "kodZeme": "UA",
-    "zeme": "Ukrajina",
-    "kategorie": [
-      "sabotaz"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "zeSite": null,
-    "shody": [
-      "sabotaz",
-      "bomb"
-    ],
-    "naliehave": null,
-    "stav": "ceka",
-    "vyrez": {
-      "text": "",
-      "stazeno": "2026-11-04T06:03:22.296Z",
-      "stav": 403,
-      "chyba": "HTTP 403"
     }
   }
 ]
