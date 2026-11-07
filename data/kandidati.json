@@ -495,6 +495,110 @@
     }
   },
   {
+    "id": "k-d607257269341ec4",
+    "zachyceno": "2026-11-07T20:03:09.455Z",
+    "publikovano": "2026-11-07T18:46:00.000Z",
+    "zdroj": {
+      "nazev": "Český rozhlas — domácí zprávy",
+      "url": "https://www.irozhlas.cz/zpravy-svet/mluvime-jen-rusky-casto-jen-naznacujeme-na-ruskem-okupovanych-uzemich-se_2611071946_zko",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "‚Mluvíme jen rusky, často jen naznačujeme.‘ Na Ruskem okupovaných územích se Ukrajinci bojí volat",
+    "titulekPuvodni": "‚Mluvíme jen rusky, často jen naznačujeme.‘ Na Ruskem okupovaných územích se Ukrajinci bojí volat",
+    "shrnuti": "Devětadvacetiletá Polina už rok nemluvila s rodiči, kteří zůstali v okupovaném Mariupolu. Nemá s nimi spojení a zároveň se bojí toho, co by se mohla dozvědět. Jejího otce těžce zranil výbuch, babička zemřela. Penzistka Táňa, která pochází z okupované Berďanské oblasti u Azovského moře, je se svými z",
+    "kodZeme": "UA",
+    "zeme": "Ukrajina",
+    "kategorie": [
+      "sabotaz",
+      "rusko"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "vybuch",
+      "rusk"
+    ],
+    "naliehave": null,
+    "stav": "ceka",
+    "vyrez": {
+      "text": "",
+      "stazeno": "2026-11-07T20:03:13.069Z",
+      "stav": 403,
+      "chyba": "HTTP 403"
+    }
+  },
+  {
+    "id": "k-27d5f770fde7f0cd",
+    "zachyceno": "2026-11-07T20:03:12.396Z",
+    "publikovano": "2026-11-07T18:23:00.000Z",
+    "zdroj": {
+      "nazev": "Digi24 (Rumunsko)",
+      "url": "https://www.digi24.ro/stiri/externe/ue/pozitia-europei-privind-razboiul-din-ucraina-care-risca-sa-o-puna-in-conflict-cu-sua-este-vorba-despre-reconstructia-imperiului-rus-4026319",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Poziția Europei privind războiul din Ucraina care riscă să o pună în conflict cu SUA: „Este vorba despre reconstrucția imperiului rus”",
+    "titulekPuvodni": "Poziția Europei privind războiul din Ucraina care riscă să o pună în conflict cu SUA: „Este vorba despre reconstrucția imperiului rus”",
+    "shrnuti": "Țările europene doresc ca Rusia să pună capăt războiului împotriva Ucrainei înainte de a discuta despre preocupările Kremlinului cu privire la arhitectura de securitate mai largă a continentului, au declarat surse familiarizate cu această chestiune, o poziție care riscă să le pună în conflict cu SUA",
+    "kodZeme": "RU",
+    "zeme": "Rusko",
+    "kategorie": [
+      "hybridni",
+      "rusko"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "kreml+europ+conflict",
+      "kreml",
+      "kremlin"
+    ],
+    "naliehave": null,
+    "stav": "ceka",
+    "vyrez": {
+      "text": "Poziția Europei privind războiul din Ucraina care riscă să o pună în conflict cu SUA: „Este vorba despre reconstrucția imperiului rus” | Digi24\nHOME\nȘtiri\nExterne\nEuropa\nPoziția Europei privind războiul din Ucraina care riscă să o pună în conflict cu SUA: „Este vorba despre reconstrucția imperiului rus”\nPoziția Europei privind războiul din Ucraina care riscă să o pună în conflict cu SUA: „Este vorba despre reconstrucția imperiului rus”\nData publicării: 07.11.2026 20:23\nRăzboi în Ucraina. Foto cu caracter ilustrativ: Profimedia Images Urmărește Digi24 în Google Discover Adaugă Digi24 ca sursă preferată în Google\nȚările europene doresc ca Rusia să pună capăt războiului împotriva Ucrainei înainte de a discuta despre preocupările Kremlinului cu privire la arhitectura de securitate mai largă a continentului, au declarat surse familiarizate cu această chestiune, o poziție care riscă să le pună în conflict cu SUA în ceea ce privește cea mai bună modalitate de a pune capăt conflictului, relatează Bloomberg .\nDe asemenea, oficialii europeni susțin cu fermitate că cererile formulate de președintele rus Vladimir Putin înainte de război, care ar reduce efectiv prezența NATO în Europa de Est,…",
+      "stazeno": "2026-11-07T20:03:13.195Z",
+      "stav": 200
+    }
+  },
+  {
+    "id": "k-b3e69ec47dabdde0",
+    "zachyceno": "2026-11-07T20:03:09.577Z",
+    "publikovano": "2026-11-07T18:04:43.000Z",
+    "zdroj": {
+      "nazev": "Seznam Zprávy",
+      "url": "https://www.seznamzpravy.cz/clanek/zahranicni-stredni-evropa-mel-kuklu-a-neprustrelnou-vestu-kdo-strilel-do-lidi-v-krakove-319957",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "„Byl fascinovaný krajní pravicí. Měl u sebe zbraně.“ Kdo střílel v Krakově",
+    "titulekPuvodni": "„Byl fascinovaný krajní pravicí. Měl u sebe zbraně.“ Kdo střílel v Krakově",
+    "shrnuti": "Muž, kterého policie po střelbě v centru Krakova postřelila a zadržela, je podle prokuratury čtyřiadvacetiletý polský občan. Při útoku zemřelo šest lidí. Jednoho z postřelených policistů lékaři operovali ve velmi vážném stavu.",
+    "kodZeme": "PL",
+    "zeme": "Polsko",
+    "kategorie": [
+      "zpravodajske",
+      "vojsko"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "zadrz+zbran",
+      "policie"
+    ],
+    "naliehave": null,
+    "stav": "ceka",
+    "vyrez": {
+      "text": "„Byl fascinovaný krajní pravicí. Měl u sebe zbraně.“ Kdo střílel v Krakově - Seznam Zprávy\nZobrazení snímku 1 z 0\nHlavní obsah\n„Byl fascinovaný krajní pravicí. Měl u sebe zbraně.“ Kdo střílel v Krakově\nFilip Harzer\n4:53\nChcete-li článek poslouchat, přihlaste se\neBook\nSdílet\nFoto: Reuters\nZáběry ze sobotního útoku v Krakově.\n19:04\naktualizováno  • 20:37\nMuž, kterého policie po střelbě v centru Krakova postřelila a zadržela, je podle prokuratury čtyřiadvacetiletý polský občan. Při útoku zemřelo šest lidí. Jednoho z postřelených policistů lékaři operovali ve velmi vážném stavu.\nČlánek\nÚtočník vjel v sobotu kolem třetí odpoledne autem na Hlavní náměstí z ulice Sławkowska. Podle záběrů z bezpečnostních kamer auto nejdřív zastavil naproti lékárně na rohu těchto ulic a začal střílet. Pak vyrazil směrem k bazilice a v palbě pokračoval.\nPodle mluvčího okresního prokurátora Tomasze Waszczuka náměstí objel a střílel na náhodné kolemjdoucí. Poté ujel a policisté ho začali pronásledovat.\n„Mohu říct jen to, že šlo o automatickou zbraň,“ řekl na podvečerním brífinku mluvčí. Přesný typ neuvedl. Rádio RMF FM dříve informovalo, že šlo zřejmě o pušku AR-15. Podle policejní mluvčí Katarzyny Cisło…",
+      "stazeno": "2026-11-07T20:03:14.721Z",
+      "stav": 200
+    }
+  },
+  {
     "id": "k-a021333473135238",
     "zachyceno": "2026-11-07T18:03:20.114Z",
     "publikovano": null,
@@ -10088,113 +10192,6 @@
     "vyrez": {
       "text": "Client Challenge\nA required part of this site couldn’t load. This may be due to a browser\nextension, network issues, or browser settings. Please check your\nconnection, disable any ad blockers, or try using a different browser.",
       "stazeno": "2026-11-04T14:03:37.705Z",
-      "stav": 200
-    }
-  },
-  {
-    "id": "k-cd054efda717b991",
-    "zachyceno": "2026-11-04T12:03:26.794Z",
-    "publikovano": "2026-11-04T09:58:00.000Z",
-    "zdroj": {
-      "nazev": "Ukrinform (anglicky)",
-      "url": "https://www.ukrinform.net/rubric-ato/4181295-debris-from-russian-drones-falls-in-kyivs-sviatoshynskyi-holosiivskyi-districts-fires-break-out.html",
-      "typ": "wire",
-      "primarni": false
-    },
-    "titulek": "Debris from Russian drones falls in Kyiv's Sviatoshynskyi, Holosiivskyi districts, fires break out",
-    "titulekPuvodni": "Debris from Russian drones falls in Kyiv's Sviatoshynskyi, Holosiivskyi districts, fires break out",
-    "shrnuti": "Debris from Russian drones has been reported in Kyiv's Sviatoshynskyi and Holosiivskyi districts, causing fires.",
-    "kodZeme": "UA",
-    "zeme": "Ukrajina",
-    "kategorie": [
-      "drony",
-      "rusko"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "zeSite": null,
-    "shody": [
-      "debris+dron",
-      "dron",
-      "drone",
-      "russia"
-    ],
-    "naliehave": null,
-    "stav": "ceka",
-    "vyrez": {
-      "text": "Debris from Russian drones falls in Kyiv's Sviatoshynskyi, Holosiivskyi districts, fires break out\n\r\nSubscription\nNewsletters\nPhotobank\nUkrinform - Ukrainian National News Agency\nFounded in 1918\nWednesday, 04 November 2026, 14:03\nWar\nEconomy\nSports\nMore ☰\nContacts\nEng\nУкр\nEng\nEsp\nDeu\nعربي\nFra\n日本語\nPol\n&times;\nAll topics\nWar\nRecovery of Ukraine\nPolitics\nEconomy\nFact checks\nDefense\nSociety and Culture\nSports\nCrime\nAccidents and Emergencies\nAgency\nInformation on Agency\nOur Contacts\nSubscribtion Terms\nOur Services\nPrivacy policy and personal data protection\nAdditional\nPublications\nInterviews\nPhoto\nVideo\nLongreads\nReleases\nServices\nSubscription\nNewsletters\nPhotobank\n\r\n\r\n\r\nDebris from Russian drones has been reported in Kyiv's Sviatoshynskyi and Holosiivskyi districts, causing fires.\nAccording to Ukrinform, the Kyiv City Military Administration reported this on Telegram .\n\r\n\r\n\"In the Sviatoshynskyi district, debris fell on the grounds of a private residence, causing a fire on the roof,\" the statement said.\n\r\n\r\nIn the Holosiivskyi district, debris that fell in an open area caught fire.\n\r\n\r\nRead also: Drone attack debris falls near private home in Kyiv&rsquo;s Desnianskyi district \r\n\r\nOn…",
-      "stazeno": "2026-11-04T12:03:30.657Z",
-      "stav": 200
-    }
-  },
-  {
-    "id": "k-2f71563a609b5505",
-    "zachyceno": "2026-11-04T10:03:02.293Z",
-    "publikovano": "2026-11-04T09:39:30.000Z",
-    "zdroj": {
-      "nazev": "SME (Slovensko)",
-      "url": "https://www.sme.sk/svet/c/ukrajina-rusko-zelenskyj-putin-trump-online-minuta-po-minute-4-11-2026?utm_source=rss&utm_medium=feed&utm_campaign=www-rss",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Ukrajina Rusko Online: Rusko podniklo ďalší dronový útok na civilnú a energetickú infraštruktúru Ukrajiny",
-    "titulekPuvodni": "Ukrajina Rusko Online: Rusko podniklo ďalší dronový útok na civilnú a energetickú infraštruktúru Ukrajiny",
-    "shrnuti": "Vojnu na Ukrajine sledujeme minútu po minúte.",
-    "kodZeme": "UA",
-    "zeme": "Ukrajina",
-    "kategorie": [
-      "hybridni",
-      "drony",
-      "rusko"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "zeSite": null,
-    "shody": [
-      "utok na",
-      "dron",
-      "rusk"
-    ],
-    "naliehave": null,
-    "stav": "ceka",
-    "vyrez": {
-      "text": "",
-      "stazeno": "2026-11-04T10:03:04.647Z",
-      "stav": 403,
-      "chyba": "HTTP 403"
-    }
-  },
-  {
-    "id": "k-806b79203a1cd681",
-    "zachyceno": "2026-11-04T10:03:01.776Z",
-    "publikovano": "2026-11-04T09:26:29.000Z",
-    "zdroj": {
-      "nazev": "Euronews",
-      "url": "https://www.euronews.com/video/2026/11/04/ukraine-31-dead-over-45-missing-after-russian-bombing-in-zaporizhzhia",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Ukraine: 33 dead, over 50 missing after Russian bombing in Zaporizhzhia",
-    "titulekPuvodni": "Ukraine: 33 dead, over 50 missing after Russian bombing in Zaporizhzhia",
-    "shrnuti": "Russian strikes on a humanitarian aid site in Ukraine's Zaporizhzhia region have killed 33 people, with more than 50 still missing, on Monday 2 November. Survivors and rescuers are being treated for severe injuries.",
-    "kodZeme": "UA",
-    "zeme": "Ukrajina",
-    "kategorie": [
-      "sabotaz",
-      "rusko"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "zeSite": null,
-    "shody": [
-      "bomb",
-      "russia"
-    ],
-    "naliehave": null,
-    "stav": "ceka",
-    "vyrez": {
-      "text": "Video. Ukraine: 33 dead, over 50 missing after Russian bombing in Zaporizhzhia | Euronews\nLoading the video\nNo Comment\nVideo.\nUkraine: 33 dead, over 50 missing after Russian bombing in Zaporizhzhia\nCopy/paste the link below:\nCopy\nCopy/paste the article video embed link below:\nCopy\nUpdated: 4 November 2026 - 10:31 GMT+1\nRussian strikes on a humanitarian aid site in Ukraine's Zaporizhzhia region have killed 33 people, with more than 50 still missing, on Monday 2 November. Survivors and rescuers are being treated for severe injuries.\n&hellip; More\nResidents had gathered for their weekly humanitarian aid distribution when at least nine FAB-3000 bombs , each weighing around three tonnes, hit the site. Footage shows a huge crater , debris scattered across the area and bodies being recovered from the wreckage. Four police officers and two rescue workers were among those killed, while around 50 people remain missing . Volunteers joined the search despite repeated disruptions caused by Russian drones .\nADVERTISEMENT\nADVERTISEMENT\nAt a hospital in Zaporizhzhia , doctors treated four survivors for burns, fractures and shrapnel wounds . Among them was a 22-year-old woman with burns covering…",
-      "stazeno": "2026-11-04T10:03:04.721Z",
       "stav": 200
     }
   }
