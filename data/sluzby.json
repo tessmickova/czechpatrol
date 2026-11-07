@@ -1,11 +1,16 @@
 {
-  "aktualizovano": "2026-11-06T20:03:09.127Z",
+  "aktualizovano": "2026-11-07T02:02:50.980Z",
   "stavy": [
     {
       "klic": "cloudflare",
       "stav": "vypadek",
       "popis": "Partial System Outage",
       "incidenty": [
+        {
+          "nazev": "Spectrum Availability Issue in Phoenix",
+          "odkaz": "https://www.cloudflarestatus.com/incidents/c60k3g4vsoc1",
+          "aktualizovano": "2026-11-07T00:59:48.322Z"
+        },
         {
           "nazev": "Fedramp Customers have Delayed Purges",
           "odkaz": "https://www.cloudflarestatus.com/incidents/wp49bp8bqo6c",
@@ -18,7 +23,7 @@
         "Arica, Chile - (ARI)",
         "Annaba, Algeria - (AAE)"
       ],
-      "zkontrolovano": "2026-11-06T20:03:09.127Z",
+      "zkontrolovano": "2026-11-07T02:02:50.980Z",
       "chyba": null
     },
     {
@@ -27,7 +32,7 @@
       "popis": "All Systems Operational",
       "incidenty": [],
       "postizene": [],
-      "zkontrolovano": "2026-11-06T20:03:09.127Z",
+      "zkontrolovano": "2026-11-07T02:02:50.980Z",
       "chyba": null
     },
     {
@@ -36,7 +41,7 @@
       "popis": "All Systems Operational",
       "incidenty": [],
       "postizene": [],
-      "zkontrolovano": "2026-11-06T20:03:09.127Z",
+      "zkontrolovano": "2026-11-07T02:02:50.980Z",
       "chyba": null
     }
   ]
