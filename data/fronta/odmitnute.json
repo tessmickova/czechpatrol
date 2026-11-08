@@ -1,5 +1,523 @@
 [
   {
+    "id": "k-b231015189eeb44b",
+    "zachyceno": "2026-11-08T02:02:59.919Z",
+    "publikovano": "2026-11-08T01:50:38.000Z",
+    "zdroj": {
+      "nazev": "Tagesschau (Německo)",
+      "url": "https://www.tagesschau.de/ausland/europa/polen-krakau-schuesse-102.html",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Nach Schüssen in Krakau: Eine Stadt steht unter Schock",
+    "shrnuti": "Ein Mann schießt in Krakau aus seinem Auto, er tötet sechs Menschen und verletzt viele weitere. Nach der Tat steht Polens zweitgrößte Stadt unter Schock. Ermittler suchen Antworten auf die bohrende Frage: Warum? Von Palina Milling.",
+    "duvod": "bez-skutku",
+    "kategorie": [],
+    "posouzeni": null
+  },
+  {
+    "id": "k-2c42095d9869852c",
+    "zachyceno": "2026-11-08T02:02:59.941Z",
+    "publikovano": "2026-11-08T01:45:41.000Z",
+    "zdroj": {
+      "nazev": "Tagesschau (Německo)",
+      "url": "https://www.tagesschau.de/tagesschau_in_100_sekunden/video-1680100.html",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "tagesschau in 100 Sekunden",
+    "shrnuti": "tagesschau in 100 Sekunden",
+    "duvod": "bez-skutku",
+    "kategorie": [],
+    "posouzeni": null
+  },
+  {
+    "id": "k-f9ce569d6615b2e5",
+    "zachyceno": "2026-11-08T02:02:59.776Z",
+    "publikovano": "2026-11-08T01:00:48.000Z",
+    "zdroj": {
+      "nazev": "The Guardian — World",
+      "url": "https://www.theguardian.com/world/2026/nov/07/new-zealand-election-too-close-to-call-vote-count",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "NZ election 2026: New Zealand faces weeks of uncertainty with results ‘too close to call’",
+    "shrnuti": "National party will be largest in parliament but ultimate shape of next government won’t be settled for some time New Zealand could be facing a weeks-long wait to know the shape of its next government, after its nail-biting election failed to hand a decisive victory to either the incumbent rightwing",
+    "duvod": "bez-skutku",
+    "kategorie": [],
+    "posouzeni": null
+  },
+  {
+    "id": "k-1e0b1c712ff8d055",
+    "zachyceno": "2026-11-08T02:03:00.218Z",
+    "publikovano": "2026-11-08T00:52:24.000Z",
+    "zdroj": {
+      "nazev": "Rzeczpospolita (Polsko)",
+      "url": "https://turystyka.rp.pl/apartamenty/art45459841-najem-krotkoterminowy-wraca-do-sejmu-senatorowie-w-obronie-praw-wlascicieli-mieszkan",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Najem krótkoterminowy wraca do Sejmu. Senatorowie w obronie praw właścicieli mieszkań",
+    "shrnuti": "Senatorowie wprowadzili poprawki do ustawy o najmie krótkoterminowym. Nie zgodzili się jednak na złagodzenie wymogu obecności co najmniej 50 procent członków spółdzielni do zakazania używania jakiegoś mieszkania na cele turystyczne. Ustawa wraca do Sejmu",
+    "duvod": "bez-skutku",
+    "kategorie": [],
+    "posouzeni": null
+  },
+  {
+    "id": "k-bb674dc75dae8e4d",
+    "zachyceno": "2026-11-08T02:03:00.408Z",
+    "publikovano": "2026-11-08T00:44:00.000Z",
+    "zdroj": {
+      "nazev": "Helsingin Sanomat (Finsko)",
+      "url": "https://www.hs.fi/maailma/art-2000012396696.html",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Israelin vaalit | Opposition Eisenkot valittiin pattitilanteeseen joutuneen Israelin hallitus­tunnustelijaksi",
+    "shrnuti": "Israelin lokakuiset vaalit päätyivät umpikujaan, kun sekä hallitus- että oppositioleirit eivät saaneet enemmistöä parlamentissa.",
+    "duvod": "bez-skutku",
+    "kategorie": [],
+    "posouzeni": null
+  },
+  {
+    "id": "k-6ceba98f36dfddbd",
+    "zachyceno": "2026-11-08T02:03:01.104Z",
+    "publikovano": "2026-11-08T00:34:59.000Z",
+    "zdroj": {
+      "nazev": "El Mundo (Španělsko)",
+      "url": "https://www.elmundo.es/internacional/2026/11/07/6aef36e9fdddff5d338b4588.html",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Debilitado en casa por las urnas, desatado fuera: \"Trump herido es más peligroso\"",
+    "shrnuti": "En sus dos últimos años en el poder, los presidentes tienden a buscar éxitos en política exterior para cimentar su legado. El Congreso en manos demócratas, puede poner obstáculos, pero no frenarlo todo Leer",
+    "duvod": "bez-skutku",
+    "kategorie": [],
+    "posouzeni": null
+  },
+  {
+    "id": "k-5c8497721226e869",
+    "zachyceno": "2026-11-08T02:03:01.101Z",
+    "publikovano": "2026-11-08T00:33:40.000Z",
+    "zdroj": {
+      "nazev": "El Mundo (Španělsko)",
+      "url": "https://www.elmundo.es/cronica/2026/11/07/6aecea87e9cf4a380d8b4599.html",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Jordi Wild, frente a sus cuatro entrevistas presidenciales: \"Voy a ser duro con todos, pero muy especialmente con quien lleva ocho años gobernando\"",
+    "shrnuti": "El hombre que pulveriza audiencias en redes ha conseguido que los candidatos presidenciales se dejen interrogar. Quien ha diseccionado durante horas a Charlie Sheen, Ilia Topuria o confesos asesinos promete que no habrá \"entrevistas masaje\". 'Crónica' conversa con él antes de la publicación de los c",
+    "duvod": "bez-skutku",
+    "kategorie": [],
+    "posouzeni": null
+  },
+  {
+    "id": "k-27ee097872d6d5cb",
+    "zachyceno": "2026-11-08T02:03:01.107Z",
+    "publikovano": "2026-11-08T00:32:30.000Z",
+    "zdroj": {
+      "nazev": "El Mundo (Španělsko)",
+      "url": "https://www.elmundo.es/economia/macroeconomia/2026/11/07/6aef0a5ae9cf4a4e038b45ab.html",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "La paradoja de la sanidad española: máximo gasto sanitario y mínimos de satisfacción",
+    "shrnuti": "Pese a las inversiones históricas del Gobierno, la satisfacción con la sanidad pública cae a mínimos. Listas de espera, déficit en Atención Primaria y un parón legislativo amenazan la sostenibilidad del sistema en España Leer",
+    "duvod": "bez-skutku",
+    "kategorie": [],
+    "posouzeni": null
+  },
+  {
+    "id": "k-cdf52c92d73e54a0",
+    "zachyceno": "2026-11-08T02:03:01.443Z",
+    "publikovano": "2026-11-08T00:32:00.000Z",
+    "zdroj": {
+      "nazev": "Ukrinform (anglicky)",
+      "url": "https://www.ukrinform.net/rubric-ato/4182319-police-evacuate-28-children-from-sloviansk-and-kramatorsk-communities-in-one-day.html",
+      "typ": "wire",
+      "primarni": false
+    },
+    "titulek": "Police evacuate 28 children from Sloviansk and Kramatorsk communities in one day",
+    "shrnuti": "In the Donetsk region, police evacuated 28 children from the Sloviansk and Kramatorsk communities over the past 24 hours. More than 1,400 children remain in settlements where mandatory evacuation has been declared.",
+    "duvod": "bez-skutku",
+    "kategorie": [],
+    "posouzeni": null
+  },
+  {
+    "id": "k-03b0fd360435ebd7",
+    "zachyceno": "2026-11-08T02:03:01.110Z",
+    "publikovano": "2026-11-08T00:31:36.000Z",
+    "zdroj": {
+      "nazev": "El Mundo (Španělsko)",
+      "url": "https://www.elmundo.es/yodona/actualidad/2026/11/07/6aeb0b9321efa0fc068b4578.html",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Victoria Luengo, la actriz española del año: \"Entiendo que la gente no nos escuche. ¿Qué me va a decir esta, vestida de alfombra roja, sobre la vivienda?\"",
+    "shrnuti": "Su rostro ocupa marquesinas de Valencia, París, Roma, Varsovia o Dublín. Victoria Luengo comienza a dominar la omnipresencia cinematográfica. Aunque implique algún mareo. Antes de que regrese a los focos del teatro, la alta joyería de Cartier la ilumina. Leer",
+    "duvod": "bez-skutku",
+    "kategorie": [],
+    "posouzeni": null
+  },
+  {
+    "id": "k-ea3785b5a767141a",
+    "zachyceno": "2026-11-08T02:03:01.108Z",
+    "publikovano": "2026-11-08T00:29:33.000Z",
+    "zdroj": {
+      "nazev": "El Mundo (Španělsko)",
+      "url": "https://www.elmundo.es/espana/2026/11/08/6ac77cf2fdddfff5068b45bc.html",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Juan García, el mejor alumno de España en FP, llena un instituto de Murcia al que nadie quería ir: \"Le dijeron a mi madre que con un 9,4 era un error no ir a la universidad\"",
+    "shrnuti": "Ha logrado una marca histórica en la final del mundo celebrada en Shanghai. Su región va en cabeza en esta modalidad formativa Leer",
+    "duvod": "bez-skutku",
+    "kategorie": [],
+    "posouzeni": null
+  },
+  {
+    "id": "k-f7ebc1abd2e64897",
+    "zachyceno": "2026-11-08T02:02:59.783Z",
+    "publikovano": "2026-11-08T00:17:28.000Z",
+    "zdroj": {
+      "nazev": "The Guardian — World",
+      "url": "https://www.theguardian.com/australia-news/2026/nov/08/victoria-barracks-sydney-and-melbourne-remain-in-public-hands-backtrack-defence-property-sale-albanese-marles",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Victoria Barracks in Sydney and Melbourne to remain in public hands after partial backtrack on defence property selloff",
+    "shrnuti": "Four heritage-listed defence properties to be preserved for community use after backlash from veterans and former PMs Get our daily political email , free app or daily news podcast Four heritage-listed defence sites, including Sydney’s Victoria Barracks, will remain in public hands after the Albanes",
+    "duvod": "vylouceno-tematem",
+    "kategorie": [],
+    "posouzeni": null
+  },
+  {
+    "id": "k-20dabf25aadd9d24",
+    "zachyceno": "2026-11-08T02:03:01.102Z",
+    "publikovano": "2026-11-08T00:17:25.000Z",
+    "zdroj": {
+      "nazev": "El Mundo (Španělsko)",
+      "url": "https://www.elmundo.es/cataluna/2026/11/08/6aef6799e85ece1d568b457d.html",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Sánchez busca movilizar el voto en Cataluña, una plaza \"decisiva\" en la que también se vuelca el PP",
+    "shrnuti": "En las elecciones generales de julio de 2023, 40 de los 48 de los diputados escogidos en esta autonomía respaldaron la investidura del candidato socialista Leer",
+    "duvod": "bez-skutku",
+    "kategorie": [],
+    "posouzeni": null
+  },
+  {
+    "id": "k-5b0aeead328378bc",
+    "zachyceno": "2026-11-08T02:03:01.099Z",
+    "publikovano": "2026-11-08T00:17:24.000Z",
+    "zdroj": {
+      "nazev": "El Mundo (Španělsko)",
+      "url": "https://www.elmundo.es/elecciones/elecciones-generales/2026/11/08/6aef6c95e85eceea168b457d.html",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "El PP promete restaurar el Premio Nacional de Tauromaquia y dar más \"protección\" legal y más \"proyección\" económica a los toros",
+    "shrnuti": "En 2024, Ernest Urtasun ordenó eliminar el galardón, lo que provocó una enorme movilización de CCAA del PP y del PSOE en favor de la cultura taurina Leer",
+    "duvod": "bez-skutku",
+    "kategorie": [],
+    "posouzeni": null
+  },
+  {
+    "id": "k-7bed90914e863e60",
+    "zachyceno": "2026-11-08T02:02:59.925Z",
+    "publikovano": "2026-11-08T00:14:21.000Z",
+    "zdroj": {
+      "nazev": "Tagesschau (Německo)",
+      "url": "https://www.tagesschau.de/ausland/europa/frankreich-melenchon-wahlprogramm-100.html",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Französischer Präsidentschaftskandidat Mélenchon fordert NATO-Austritt",
+    "shrnuti": "Bei der französischen Präsidentschaftswahl im kommenden April könnte er stark abschneiden: der linke Kandidat Mélenchon. Jetzt hat er sein Programm vorgestellt - und sich dabei nicht nur gegen die NATO positioniert.",
+    "duvod": "bez-skutku",
+    "kategorie": [
+      "nato"
+    ],
+    "posouzeni": null
+  },
+  {
+    "id": "k-8287ffb2f6287e90",
+    "zachyceno": "2026-11-08T02:03:01.007Z",
+    "publikovano": "2026-11-08T00:13:49.000Z",
+    "zdroj": {
+      "nazev": "la Repubblica (Itálie)",
+      "url": "https://www.repubblica.it/robinson/2026/11/08/news/maestro_margherita_bulgakov_ezio_mauro-425707901/",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Il Maestro, Margherita e il tempo presente",
+    "shrnuti": "Sessant’anni fa usciva postumo il capolavoro di Bulgakov superando decenni di censura. Il capolavoro della letteratura russa diventa una parabola sulla resistenza e la libertà. Da rileggere ora più che mai",
+    "duvod": "bez-skutku",
+    "kategorie": [],
+    "posouzeni": null
+  },
+  {
+    "id": "k-e9c7d29872bad9ec",
+    "zachyceno": "2026-11-08T02:03:01.106Z",
+    "publikovano": "2026-11-08T00:08:40.000Z",
+    "zdroj": {
+      "nazev": "El Mundo (Španělsko)",
+      "url": "https://www.elmundo.es/economia/macroeconomia/2026/11/08/6aecd8d3e9cf4ad7168b45ba.html",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "El negocio de Putin con las sanciones de la UE: revende el gas al cuádruple y deja a Europa con las reservas más bajas desde 2013",
+    "shrnuti": "La presión sobre Rusia con el gas se está demostrando contraproducente al renunciar la UE, incluida España, a precios de hace doce años Leer",
+    "duvod": "bez-skutku",
+    "kategorie": [],
+    "posouzeni": null
+  },
+  {
+    "id": "k-d323adab16cce46b",
+    "zachyceno": "2026-11-08T02:02:59.340Z",
+    "publikovano": "2026-11-08T00:06:00.000Z",
+    "zdroj": {
+      "nazev": "Novinky.cz",
+      "url": "https://www.novinky.cz/clanek/internet-a-pc-ai-ai-precetla-sto-tisic-rucne-psanych-zaznamu-odkryla-minulost-britskeho-obchodu-40603734",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "AI přečetla sto tisíc ručně psaných záznamů. Odkryla minulost britského obchodu",
+    "shrnuti": "Výzkumníci s pomocí umělé inteligence odhalili důležité momenty britské námořní historie. Díky AI se například dozvěděli, jaké byly dříve námořní vazby s Evropou i s čím se obchodovalo nejvíc.",
+    "duvod": "bez-skutku",
+    "kategorie": [],
+    "posouzeni": null
+  },
+  {
+    "id": "k-30820589e0959e55",
+    "zachyceno": "2026-11-08T02:02:59.413Z",
+    "publikovano": "2026-11-08T00:04:00.000Z",
+    "zdroj": {
+      "nazev": "ČTK — České noviny",
+      "url": "https://www.ceskenoviny.cz/zpravy/plzen-ve-fotbalove-lize-privita-spartu-vedouci-slavia-bude-hostit-artis/2898880?utm_source=rss&utm_medium=feed",
+      "typ": "wire",
+      "primarni": false
+    },
+    "titulek": "Plzeň ve fotbalové lize přivítá Spartu, vedoucí Slavia bude hostit Artis",
+    "shrnuti": "Praha - Plzeň dnes ve 14. kole fotbalové ligy v duelu dvou pohárových zástupců přivítá od 18:00 pražskou Spartu, její městský rival Slavia si může upevnit vedoucí pozici v domácím duelu s nováčkem Artisem...",
+    "duvod": "vylouceno-tematem",
+    "kategorie": [],
+    "posouzeni": null
+  },
+  {
+    "id": "k-b4af176bb368bcd2",
+    "zachyceno": "2026-11-08T02:02:59.413Z",
+    "publikovano": "2026-11-08T00:01:00.000Z",
+    "zdroj": {
+      "nazev": "ČTK — České noviny",
+      "url": "https://www.ceskenoviny.cz/zpravy/hokejiste-zakonci-finske-hry-proti-svycarsku-chteji-prvni-vyhru/2898877?utm_source=rss&utm_medium=feed",
+      "typ": "wire",
+      "primarni": false
+    },
+    "titulek": "Hokejisté zakončí Finské hry proti Švýcarsku, chtějí první výhru",
+    "shrnuti": "Helsinky - Čeští hokejisté dnes zakončí Finské hry utkáním proti Švýcarsku a po dvou porážkách po nájezdech se pokusí dosáhnout na první vítězství. Na to zatím čeká na lavičce národního týmu nový trenérský...",
+    "duvod": "vylouceno-tematem",
+    "kategorie": [],
+    "posouzeni": null
+  },
+  {
+    "id": "k-cdba2470a12fd1d8",
+    "zachyceno": "2026-11-08T02:03:01.009Z",
+    "publikovano": "2026-11-08T00:00:00.000Z",
+    "zdroj": {
+      "nazev": "la Repubblica (Itálie)",
+      "url": "https://www.repubblica.it/esteri/2026/11/08/news/israele_alleati_veti_incognite_generale_eisenkot_alla_prova_governo_post-bibi-425707860/",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Alleati, veti e incognite. Il generale alla prova del governo post-Bibi",
+    "shrnuti": "Per sbloccare lo stallo e allargare la coalizione, possibile l’istituzione di un servizio civile obbligatorio che eviti la leva agli studenti religiosi e si possa applicare anche agli arabi",
+    "duvod": "bez-skutku",
+    "kategorie": [],
+    "posouzeni": null
+  },
+  {
+    "id": "k-a3718ae820d6088d",
+    "zachyceno": "2026-11-08T02:03:01.010Z",
+    "publikovano": "2026-11-08T00:00:00.000Z",
+    "zdroj": {
+      "nazev": "la Repubblica (Itálie)",
+      "url": "https://www.repubblica.it/esteri/2026/11/08/news/gaza_piogge_inondazioni_su_tendopoli_ci_lasciano_morire_di_freddo-425707211/",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Piogge e inondazioni su Gaza: “Ci lasciano morire di freddo”",
+    "shrnuti": "Una violenta perturbazione ha colpito 700mila persone, allagando i campi profughi e circa 70mila tende degli sfollati",
+    "duvod": "bez-skutku",
+    "kategorie": [],
+    "posouzeni": null
+  },
+  {
+    "id": "k-2b81a78510b823d3",
+    "zachyceno": "2026-11-08T02:03:01.011Z",
+    "publikovano": "2026-11-08T00:00:00.000Z",
+    "zdroj": {
+      "nazev": "la Repubblica (Itálie)",
+      "url": "https://www.repubblica.it/esteri/2026/11/08/news/da_attivismo_maga_a_casa_bianca_miller_bullo_del_presidente_moglie_dietro_nomina-425707336/",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Miller, il bullo del presidente dall’attivismo alla Casa Bianca: “La moglie dietro la nomina”",
+    "shrnuti": "Kate, nota podcaster conservatrice ha mobilitato i vertici Maga affinché appoggiassero l’incarico a chief of staff",
+    "duvod": "bez-skutku",
+    "kategorie": [],
+    "posouzeni": null
+  },
+  {
+    "id": "k-860859170f8b7cc7",
+    "zachyceno": "2026-11-08T02:03:01.012Z",
+    "publikovano": "2026-11-08T00:00:00.000Z",
+    "zdroj": {
+      "nazev": "la Repubblica (Itálie)",
+      "url": "https://www.repubblica.it/esteri/2026/11/08/news/intervista_economista_wescott_trump_si_affida_a_estremisti_miller-425707242/",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Wescott: “Altro che placarsi, Donald non vuole mollare e si affida a uno staff di estremisti”",
+    "shrnuti": "L’ex capo economista di Bill Clinton analizza le ultime mosse del tycoon: “La scelta più incredibile è il nuovo capo di gabinetto”",
+    "duvod": "bez-skutku",
+    "kategorie": [],
+    "posouzeni": null
+  },
+  {
+    "id": "k-03c53aaa8bc9e451",
+    "zachyceno": "2026-11-08T02:03:01.013Z",
+    "publikovano": "2026-11-08T00:00:00.000Z",
+    "zdroj": {
+      "nazev": "la Repubblica (Itálie)",
+      "url": "https://www.repubblica.it/economia/2026/11/08/news/intelligenza_artificiale_mercati_bolla_investimenti-425707753/",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Crescita e mercati appesi all’IA, la scommessa che scuote il mondo",
+    "shrnuti": "Gli investimenti nei centri dati superano ogni boom infrastrutturale della storia e il crescente debito di Big Tech coinvolge nell’azzardo il settore finanziario. L’Fmi: un crollo trascinerebbe giù il Pil globale di un punto",
+    "duvod": "bez-skutku",
+    "kategorie": [],
+    "posouzeni": null
+  },
+  {
+    "id": "k-a9f56da9c15239a4",
+    "zachyceno": "2026-11-08T02:03:01.015Z",
+    "publikovano": "2026-11-08T00:00:00.000Z",
+    "zdroj": {
+      "nazev": "la Repubblica (Itálie)",
+      "url": "https://www.repubblica.it/cronaca/2026/11/08/news/hacker_obiettivi_violati_ricatti_alle_aziende-425707730/",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Farmacie, società, centrali. Ecco gli altri obiettivi violati: “Così ricattano le aziende”",
+    "shrnuti": "Alcune operazioni puntano a mostrare la fragilità e convincere cittadini e istituzioni che nessun sistema sia davvero protetto",
+    "duvod": "bez-skutku",
+    "kategorie": [],
+    "posouzeni": null
+  },
+  {
+    "id": "k-cc585ab13ee31691",
+    "zachyceno": "2026-11-08T02:03:01.016Z",
+    "publikovano": "2026-11-08T00:00:00.000Z",
+    "zdroj": {
+      "nazev": "la Repubblica (Itálie)",
+      "url": "https://www.repubblica.it/cronaca/2026/11/08/news/guerra_ibrida_attacchi_hacker_tunnel_brennero-425707614/",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Il Brennero e Smartbox nel mirino dei filorussi: “Rubati dati sensibili”",
+    "shrnuti": "Attaccati i sistemi della società del tunnel: “Lavori non a rischio”. Vertice delle polizie Ue ad Europol. Avs: ma il governo taglia la cybersicurezza",
+    "duvod": "bez-skutku",
+    "kategorie": [
+      "kyber"
+    ],
+    "posouzeni": null
+  },
+  {
+    "id": "k-3733d86693f2953f",
+    "zachyceno": "2026-11-08T02:03:01.017Z",
+    "publikovano": "2026-11-08T00:00:00.000Z",
+    "zdroj": {
+      "nazev": "la Repubblica (Itálie)",
+      "url": "https://www.repubblica.it/esteri/2026/11/08/news/allarmi_bomba_aerei_strategia_tensione_europa_mosca-425707695/",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Allarmi aerei, strategia della tensione: l’Europa punta il dito su Mosca",
+    "shrnuti": "Ricostruita dalle intelligence la catena di falsi allarmi bomba: mandanti russi, manodopera nell’Asia ex sovietica e in Sudamerica",
+    "duvod": "bez-mista",
+    "kategorie": [
+      "sabotaz"
+    ],
+    "posouzeni": null
+  },
+  {
+    "id": "k-7ea97a6d4cefacf7",
+    "zachyceno": "2026-11-08T02:03:01.019Z",
+    "publikovano": "2026-11-08T00:00:00.000Z",
+    "zdroj": {
+      "nazev": "la Repubblica (Itálie)",
+      "url": "https://www.repubblica.it/esteri/2026/11/08/news/intervista_esperto_militare_britannico_deterrenza_e_arma_contro_guerra_ibrida_russa-425707549/",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "L’esperto militare britannico: “La deterrenza è la nostra arma contro la guerra ibrida di Mosca”",
+    "shrnuti": "Keri Giles: “Gli autori di tali minacce cercano di abituarci ai falsi allarmi in modo che quando abbassiamo la guardia arrivi l’attacco vero”",
+    "duvod": "bez-skutku",
+    "kategorie": [],
+    "posouzeni": null
+  },
+  {
+    "id": "k-28572024d460e8bc",
+    "zachyceno": "2026-11-08T02:03:01.019Z",
+    "publikovano": "2026-11-08T00:00:00.000Z",
+    "zdroj": {
+      "nazev": "la Repubblica (Itálie)",
+      "url": "https://www.repubblica.it/cronaca/2026/11/08/news/vincenzo_de_caro_nipote_gaspare_mutolo_intervista_documentario_il_gioco_del_silenzio-425707423/",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "“Io, nipote di Mutolo ho scoperto la mafiadopo anni di silenzi”",
+    "shrnuti": "Vincenzo De Caro ha ricostruito in un film la storia della sua famiglia: “In casa c’erano sempre racconti in codice, ho voluto conoscere la verità”",
+    "duvod": "vylouceno-tematem",
+    "kategorie": [],
+    "posouzeni": null
+  },
+  {
+    "id": "k-37832e31b6a26cfe",
+    "zachyceno": "2026-11-08T02:03:01.020Z",
+    "publikovano": "2026-11-08T00:00:00.000Z",
+    "zdroj": {
+      "nazev": "la Repubblica (Itálie)",
+      "url": "https://milano.repubblica.it/cronaca/2026/11/08/news/giulia_veronesi_intervista_anniversario_morte_padre_umberto-425707429/",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "I ricordi di Giulia Veronesi: “Mio padre Umberto un premonitore, lui vedeva più avanti di tutti”",
+    "shrnuti": "A dieci anni dalla morte dell’oncologo fondatore dello Ieo la figlia. che dirige l’unità operativa di Chirurgia toracica del San Raffaele: “Quando avevo vent’anni di lui avevo soggezione, ho ridotto il gap nei suoi ultimi mesi”",
+    "duvod": "bez-skutku",
+    "kategorie": [],
+    "posouzeni": null
+  },
+  {
+    "id": "k-8fe3733d313b458f",
+    "zachyceno": "2026-11-08T02:03:01.022Z",
+    "publikovano": "2026-11-08T00:00:00.000Z",
+    "zdroj": {
+      "nazev": "la Repubblica (Itálie)",
+      "url": "https://www.repubblica.it/sport/calcio/2026/11/08/news/aldo_serena_inter_como_intervista-425707379/",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Aldo Serena, il doppio ex di Inter-Como: “Douvikas sempre lucido in area, Pio merita più cross”",
+    "shrnuti": "Intervista all’ex attaccante alla vigilia del match di San Siro",
+    "duvod": "bez-skutku",
+    "kategorie": [],
+    "posouzeni": null
+  },
+  {
     "id": "k-b97dba8d56a7be20",
     "zachyceno": "2026-11-08T00:03:28.896Z",
     "publikovano": "2026-11-08T00:00:00.000Z",
@@ -210,6 +728,40 @@
     "posouzeni": null
   },
   {
+    "id": "k-7dcd865094d8ceb4",
+    "zachyceno": "2026-11-08T02:03:01.023Z",
+    "publikovano": "2026-11-07T23:37:34.000Z",
+    "zdroj": {
+      "nazev": "la Repubblica (Itálie)",
+      "url": "https://torino.repubblica.it/cronaca/2026/11/08/news/gian_luigi_beccaria_linguista_proteste_torino_studenti-425707891/",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Gian Luigi Beccaria in piazza a 90 anni con gli studenti. Il linguista: “Serve schierarsi”",
+    "shrnuti": "L’accademico dei Lincei e della Crusca alla manifestazione di Torino: “Sono venuto per testimoniare, perché ci sono momenti in cui non è possibile non schierarsi”",
+    "duvod": "bez-skutku",
+    "kategorie": [],
+    "posouzeni": null
+  },
+  {
+    "id": "k-6c90b6327ea41a79",
+    "zachyceno": "2026-11-08T02:03:01.444Z",
+    "publikovano": "2026-11-07T23:37:00.000Z",
+    "zdroj": {
+      "nazev": "Ukrinform (anglicky)",
+      "url": "https://www.ukrinform.net/rubric-society/4182314-russia-holds-385-crimean-political-prisoners-in-detention-human-rights-activist.html",
+      "typ": "wire",
+      "primarni": false
+    },
+    "titulek": "Russia holds 385 Crimean political prisoners in detention – human rights activist",
+    "shrnuti": "Russia is holding 385 Crimean political prisoners in places of detention, 113 of whom belong to the indigenous Crimean Tatar people.",
+    "duvod": "bez-skutku",
+    "kategorie": [
+      "rusko"
+    ],
+    "posouzeni": null
+  },
+  {
     "id": "k-c6858b1b73d90436",
     "zachyceno": "2026-11-07T23:53:21.593Z",
     "publikovano": "2026-11-07T23:32:21.000Z",
@@ -225,6 +777,40 @@
     "kategorie": [
       "rusko"
     ],
+    "posouzeni": null
+  },
+  {
+    "id": "k-84afc73d38788672",
+    "zachyceno": "2026-11-08T02:03:01.515Z",
+    "publikovano": "2026-11-07T23:32:00.000Z",
+    "zdroj": {
+      "nazev": "The Moscow Times",
+      "url": "https://www.themoscowtimes.com/2026/11/08/official-data-shows-450000-russians-killed-in-war-death-rate-accelerating-leaks-a94200",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Official Data Shows 450,000 Russians Killed in War, Death Rate Accelerating – Rosstat Leaks",
+    "shrnuti": "The war in Ukraine has become the fourth most common cause of death in Russia since 2022, according to official statistics released by hackers.",
+    "duvod": "bez-skutku",
+    "kategorie": [
+      "rusko"
+    ],
+    "posouzeni": null
+  },
+  {
+    "id": "k-993d074907fe5a1f",
+    "zachyceno": "2026-11-08T02:03:00.634Z",
+    "publikovano": "2026-11-07T23:29:58.000Z",
+    "zdroj": {
+      "nazev": "NRK (Norsko)",
+      "url": "https://www.nrk.no/nyheter/flere-skadet-etter-kraftig-jordskjelv-sentralt-i-japan-1.18076688",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Flere skadet etter kraftig jordskjelv sentralt i Japan",
+    "shrnuti": "Minst 22 personer ble skadet da et jordskjelv med styrke 5,5 rammet Shizuoka-prefekturet i det sentrale Japan. Butikkvinduer ble knust, og folk rømte ut av bygninger. Ifølge kringkasteren NHK er det ikke fare for tsunamier. Skjelvet inntraff rundt klokka 1 natt til søndag. Det hadde en dybde på 41 k",
+    "duvod": "bez-skutku",
+    "kategorie": [],
     "posouzeni": null
   },
   {
@@ -326,6 +912,22 @@
     "posouzeni": null
   },
   {
+    "id": "k-235cc734155b28c0",
+    "zachyceno": "2026-11-08T02:03:01.111Z",
+    "publikovano": "2026-11-07T23:07:08.000Z",
+    "zdroj": {
+      "nazev": "El Mundo (Španělsko)",
+      "url": "https://www.elmundo.es/deportes/futbol/primera-division/2026/11/08/6aefaecde85ece42768b45ad.html",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Tensión en el césped y bronca en el túnel de vestuarios de Mestalla con intervención de la Policía: \"Hubo alguna palabra que otra\"",
+    "shrnuti": "Braulio, director deportivo del Valencia, \"se encaró\" con uno de los asistentes de Hernández Maeso, según se reflejó en el acta. Bellingham, Maffeo y Rüdiger, entre los jugadores implicados en la tangana. El Valencia cometió 26 faltas. Leer",
+    "duvod": "bez-skutku",
+    "kategorie": [],
+    "posouzeni": null
+  },
+  {
     "id": "k-2cd62dc51e7485e7",
     "zachyceno": "2026-11-07T23:53:20.005Z",
     "publikovano": "2026-11-07T23:06:35.000Z",
@@ -369,6 +971,54 @@
     },
     "titulek": "PP Ravensburg: Meldung aus dem Landkreis Sigmaringen",
     "shrnuti": "Ravensburg (ots) - Sigmaringen Tödlicher Verkehrsunfall Am Samstagabend gegen 17:37 Uhr befuhr der 67-jährige Unfallverursacher mit seinem VW Caddy die L 277 aus Sigmaringen kommend in Richtung Sigmaringen-Gutenstein. Hierbei übersah er den ...",
+    "duvod": "bez-skutku",
+    "kategorie": [],
+    "posouzeni": null
+  },
+  {
+    "id": "k-ab2d5a14c9916eef",
+    "zachyceno": "2026-11-08T02:03:01.024Z",
+    "publikovano": "2026-11-07T23:03:00.000Z",
+    "zdroj": {
+      "nazev": "la Repubblica (Itálie)",
+      "url": "https://napoli.repubblica.it/sport/2026/11/08/news/allegri_rischia_tutto_al_maradona_sfida_verita_con_la_lazio_di_gattuso-425707707/",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Allegri, rischia tutto al Maradona sfida verità con la Lazio di Gattuso",
+    "shrnuti": "Mezzogiorno di fuoco (ore 12.30) per il Napoli, De Laurentiis impone il silenzio all’allenatore. “Ringhio” torna da ex al vertice della classifica, clausura a nervi tesi e altri veleni sugli azzurri",
+    "duvod": "bez-skutku",
+    "kategorie": [],
+    "posouzeni": null
+  },
+  {
+    "id": "k-7b9e2bdde07efcef",
+    "zachyceno": "2026-11-08T02:03:01.114Z",
+    "publikovano": "2026-11-07T23:02:17.000Z",
+    "zdroj": {
+      "nazev": "El Mundo (Španělsko)",
+      "url": "https://www.elmundo.es/economia/empresas/2026/11/08/6ae33e5e21efa0aa6b8b459c.html",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Antonio Mingorance, presidente de Bidafarma: \"Falta un debate serio en este país, sin ideologías, sobre el copago farmacéutico, los recursos son finitos\"",
+    "shrnuti": "Al frente de la segunda mayor distribuidora farmacéutica de España, defiende a ultranza el modelo de cooperativa y la necesidad de articular un copago «socialmente justo» de los medicamentos Leer",
+    "duvod": "bez-skutku",
+    "kategorie": [],
+    "posouzeni": null
+  },
+  {
+    "id": "k-62fdc88552acb638",
+    "zachyceno": "2026-11-08T02:03:01.025Z",
+    "publikovano": "2026-11-07T23:01:00.000Z",
+    "zdroj": {
+      "nazev": "la Repubblica (Itálie)",
+      "url": "https://www.repubblica.it/sport/rubriche/e-sempre-domenica/2026/11/08/news/stadi_deserti_vittorie_lazio_dodicesimo_uomo-425707400/",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Dov’è finito il dodicesimo uomo",
+    "shrnuti": "La rubrica “È sempre domenica”",
     "duvod": "bez-skutku",
     "kategorie": [],
     "posouzeni": null
@@ -513,6 +1163,22 @@
     },
     "titulek": "Französischer Linkspolitiker Jean-Luc Mélenchon stellt Wahlprogramm vor",
     "shrnuti": "Französischer Linkspolitiker Jean-Luc Mélenchon stellt Wahlprogramm vor",
+    "duvod": "bez-skutku",
+    "kategorie": [],
+    "posouzeni": null
+  },
+  {
+    "id": "k-dc06bdec4f544683",
+    "zachyceno": "2026-11-08T02:02:59.837Z",
+    "publikovano": "2026-11-07T22:47:06.000Z",
+    "zdroj": {
+      "nazev": "France 24 (anglicky)",
+      "url": "https://www.france24.com/en/gunmen-kills-six-in-krakow-three-more-bodies-found-at-his-house",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Gunmen kills six in Krakow, three more bodies found at his house",
+    "shrnuti": "A chilling new discovery in Poland, where three bodies have reportedly been found inside the Krakow gunman's home. That's in addition to six people killed and sixteen wounded when the attacker opened fire in the city's historic square. Prime Minister Donald Tusk has now declared the shooting an act ",
     "duvod": "bez-skutku",
     "kategorie": [],
     "posouzeni": null
@@ -680,6 +1346,22 @@
     "posouzeni": null
   },
   {
+    "id": "k-28d80c1b8e1d1202",
+    "zachyceno": "2026-11-08T02:03:01.137Z",
+    "publikovano": "2026-11-07T22:14:38.000Z",
+    "zdroj": {
+      "nazev": "Digi24 (Rumunsko)",
+      "url": "https://www.digi24.ro/stiri/externe/ue/atac-armat-in-cracovia-doi-morti-si-cel-putin-10-raniti-mesajul-lui-donald-tusk-4026181",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Atac armat în Cracovia: șase morți și 16 răniți. Autorul, care purta o ținută de tip militar, se află în spital",
+    "shrnuti": "Șase persoane au fost ucise în urma unui atac armat care a avut loc în Piața Principală din Cracovia, iar 16 au fost rănite, printre care și polițiști. Autoritățile din Polonia l-au identificat pe suspect ca fiind un cetățean polonez, în vârstă de 25 de ani. Ministrul polonez de Interne, Marcin Kier",
+    "duvod": "bez-skutku",
+    "kategorie": [],
+    "posouzeni": null
+  },
+  {
     "id": "k-2373512ec58a6b6c",
     "zachyceno": "2026-11-07T23:53:21.100Z",
     "publikovano": "2026-11-07T22:10:52.000Z",
@@ -727,6 +1409,22 @@
     "kategorie": [
       "drony"
     ],
+    "posouzeni": null
+  },
+  {
+    "id": "k-d0ceb7c0fa3db819",
+    "zachyceno": "2026-11-08T02:03:01.112Z",
+    "publikovano": "2026-11-07T22:09:51.000Z",
+    "zdroj": {
+      "nazev": "El Mundo (Španělsko)",
+      "url": "https://www.elmundo.es/deportes/futbol/primera-division/2026/11/07/6aecf93a21efa031248b4576.html",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "136 días después, se cierra la herida Julián Álvarez en la víspera de jugar contra el Barça: \"No ha sido la declaración sino pequeños gestos\"",
+    "shrnuti": "La afición se reconcilia con el argentino y ya apenas le silba justo antes del partido que podría poner al Atlético líder de la Liga Leer",
+    "duvod": "vylouceno-tematem",
+    "kategorie": [],
     "posouzeni": null
   },
   {
@@ -891,6 +1589,22 @@
     },
     "titulek": "Tusk: V domě střelce z Krakova našli další tři mrtvé, zřejmě rodinu",
     "shrnuti": "Polský premiér Donald Tusk uvedl, že v domě útočníka, který v centru Krakova zastřelil šest lidí, byli nalezeni mrtví dvě ženy a jeden muž, zřejmě členové jeho nejbližší rodiny, a útok označil za teroristický čin.",
+    "duvod": "bez-skutku",
+    "kategorie": [],
+    "posouzeni": null
+  },
+  {
+    "id": "k-1d9fc2770ed2a566",
+    "zachyceno": "2026-11-08T02:03:01.098Z",
+    "publikovano": "2026-11-07T21:49:04.000Z",
+    "zdroj": {
+      "nazev": "El Mundo (Španělsko)",
+      "url": "https://www.elmundo.es/economia/2026/11/07/6aef1a7ffdddff8b688b45a0.html",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "La caja negra del Iryo revela que la maquinista intentó \"reportar a Atocha en 3-4 ocasiones sin contestación\" antes del choque",
+    "shrnuti": "Los datos del tren arrollado en Urda reflejan que fue brutalmente lanzado por el impacto del AVE a una velocidad de 47 km/h en tres segundos Leer",
     "duvod": "bez-skutku",
     "kategorie": [],
     "posouzeni": null
@@ -1139,6 +1853,22 @@
     },
     "titulek": "Donald Tusk: W domu napastnika z Krakowa znaleziono ciała trzech osób",
     "shrnuti": "W domu 24-letniego sprawcy sobotniego ataku w Krakowie znajdują się ciała dwóch kobiet i mężczyzny – poinformował podczas briefingu premier Donald Tusk.",
+    "duvod": "bez-skutku",
+    "kategorie": [],
+    "posouzeni": null
+  },
+  {
+    "id": "k-bd5b66a6233ae97f",
+    "zachyceno": "2026-11-08T02:03:01.103Z",
+    "publikovano": "2026-11-07T21:26:01.000Z",
+    "zdroj": {
+      "nazev": "El Mundo (Španělsko)",
+      "url": "https://www.elmundo.es/internacional/2026/11/07/6aef4327fdddff200a8b4573.html",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Un hombre mata a tiros a al menos seis personas en el centro de Cracovia y la Policía encuentra otros tres fallecidos en su vivienda",
+    "shrnuti": "El autor del ataque, un polaco de 25 años, fue inspirado \"en ideologías de extrema derecha\", afirma el ministro del Interior Leer",
     "duvod": "bez-skutku",
     "kategorie": [],
     "posouzeni": null
@@ -2339,6 +3069,22 @@
     "posouzeni": null
   },
   {
+    "id": "k-5aeac3f9c7f55d43",
+    "zachyceno": "2026-11-08T02:03:01.134Z",
+    "publikovano": "2026-11-07T20:15:01.000Z",
+    "zdroj": {
+      "nazev": "Digi24 (Rumunsko)",
+      "url": "https://www.digi24.ro/stiri/panica-din-cauza-unei-erori-de-soft-mesaj-ro-alert-trimis-din-greseala-in-braila-si-galati-despre-deversarea-unui-baraj-4026209",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Panică din cauza unei erori de soft: Alertă trimisă din greșeală în Brăila și Galați despre deversarea unui baraj",
+    "shrnuti": "Un mesaj de avertizare privind deversarea controlată a unui baraj de pe râul Bistriţa a fost transmis, sâmbătă, în jurul orei 16:00, populaţiei din judeţele Brăila şi Galaţi, prin sistemul de înştiinţare şi alarmare la inundaţii. ISU Brăila precizează că mesajul a fost transmis către mai multe judeţ",
+    "duvod": "bez-skutku",
+    "kategorie": [],
+    "posouzeni": null
+  },
+  {
     "id": "k-ae83cf10248c40b5",
     "zachyceno": "2026-11-07T20:28:05.060Z",
     "publikovano": "2026-11-07T20:15:00.000Z",
@@ -2704,6 +3450,22 @@
     },
     "titulek": "Střelec nikdy nebyl v armádě, tvrdí ministr. Nawrocki vyhlásí celostátní smutek",
     "shrnuti": "Polský prezident Karol Nawrocki vyhlásí kvůli střelbě v Krakově na 8. a 9. listopadu celostátní smutek. Oznámil to mluvčí polské hlavy státu. Příslušné nařízení se šéf státu chystá předat premiérovi Donaldu Tuskovi, jehož podpis je zapotřebí, dodal.",
+    "duvod": "bez-skutku",
+    "kategorie": [],
+    "posouzeni": null
+  },
+  {
+    "id": "k-e3916b5c8e6c0de8",
+    "zachyceno": "2026-11-08T02:03:01.028Z",
+    "publikovano": "2026-11-07T19:58:58.000Z",
+    "zdroj": {
+      "nazev": "la Repubblica (Itálie)",
+      "url": "https://www.repubblica.it/politica/2026/11/07/news/centrosinistra_10_tavoli_programma_campo_largo-425707596/",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Sprint del centrosinistra, 10 tavoli sul programma: “Un mese per chiudere”",
+    "shrnuti": "Prima riunione tra i capigruppo, presenti pure i centristi: i leader dovranno sciogliere i nodi su Ucraina, patrimoniale e giustizia",
     "duvod": "bez-skutku",
     "kategorie": [],
     "posouzeni": null
@@ -4685,6 +5447,22 @@
     },
     "titulek": "Ministerul de Externe anunță că nu sunt români între victimele atacului din Cracovia, soldat cu 6 morți și 15 răniți",
     "shrnuti": "Ministerul de Externe a anunțat, într-un comunicat de sâmbătă seară, că până la acest moment nu sunt cetățeni români între victimele atacului din Cracovia, soldat cu 6 morți și 15 răniți. Comunicatul MAE Ministerul Afacerilor Externe (MAE), prin intermediul Ambasadei României în Republica Polonă, s-",
+    "duvod": "bez-skutku",
+    "kategorie": [],
+    "posouzeni": null
+  },
+  {
+    "id": "k-1c1a506f8fe79ca8",
+    "zachyceno": "2026-11-08T02:03:01.030Z",
+    "publikovano": "2026-11-07T18:16:15.000Z",
+    "zdroj": {
+      "nazev": "la Repubblica (Itálie)",
+      "url": "https://www.repubblica.it/spettacoli/2026/11/07/news/stati_generali_spettacolo_schlein_zingaretti-425707298/",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Stati generali dello spettacolo, Schlein e Zingaretti: \"Bisogna difendere la creatività\"",
+    "shrnuti": "L’incontro a Roma dove sono intervenuti tra gli altri Manuel Agnelli e Tosca. Sul tavolo la proposta di legge di iniziativa popolare a tutela degli spazi e dei festival culturali",
     "duvod": "bez-skutku",
     "kategorie": [],
     "posouzeni": null
@@ -7332,788 +8110,6 @@
     },
     "titulek": "Towarzysze agenci. Jak sztuczna inteligencja wynalazła społeczeństwo",
     "shrnuti": "Przez lata pytaliśmy, czy sztuczna inteligencja zacznie zachowywać się jak człowiek. Być może zadaliśmy niewłaściwe pytanie. Powinniśmy raczej zapytać, czy kiedy damy wielu sztucznym inteligencjom wspólny cel, możliwość komunikowania się i odrobinę zbyt skomplikowany regulamin, zaczną zachowywać się",
-    "duvod": "bez-skutku",
-    "kategorie": [],
-    "posouzeni": null
-  },
-  {
-    "id": "k-f7a1dd2180455b41",
-    "zachyceno": "2026-11-07T16:16:07.617Z",
-    "publikovano": "2026-11-07T16:12:00.000Z",
-    "zdroj": {
-      "nazev": "Novinky.cz",
-      "url": "https://www.novinky.cz/clanek/domaci-zpravy-jihocesky-kraj-tyrane-ci-zanedbane-deti-najdou-bezpecny-domov-v-jindrichove-hradci-40607278",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Týrané či zanedbané děti najdou bezpečný domov v Jindřichově Hradci",
-    "shrnuti": "V Jindřichově Hradci vzniklo nové zařízení pro děti vyžadující okamžitou pomoc. Tedy pro děti, které se ocitly v krizové situaci například kvůli násilí či zanedbávání. Dosud tato služba fungovala na jihu Čech jen ve Strakonicích a ve Volyni. Zázemí vzniklo v městském domě v jindřichohradecké Sládkov",
-    "duvod": "bez-skutku",
-    "kategorie": [],
-    "posouzeni": null
-  },
-  {
-    "id": "k-a2e3d0ad7015eda8",
-    "zachyceno": "2026-11-07T16:16:08.995Z",
-    "publikovano": "2026-11-07T16:12:00.000Z",
-    "zdroj": {
-      "nazev": "Helsingin Sanomat (Finsko)",
-      "url": "https://www.hs.fi/feature/art-2000011955683.html",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Parhaita timanttijuttuja | Selvitimme, miksi todistuksissa ei näy enää nelosia vaan armovitosia",
-    "shrnuti": "Päättäjät haluavat kouluissa armovitosista eroon. Tilalle vaaditaan lisää nelosia ja uhka luokalle jäämisestä. Tutkija, opettaja ja vitosen oppilas kertovat, miksi se on huono idea. Juttu on julkaistu ensimmäisen kerran toukokuussa 2026.",
-    "duvod": "bez-skutku",
-    "kategorie": [],
-    "posouzeni": null
-  },
-  {
-    "id": "k-9cd40bd6195e7ec4",
-    "zachyceno": "2026-11-07T18:03:22.296Z",
-    "publikovano": "2026-11-07T16:11:45.000Z",
-    "zdroj": {
-      "nazev": "la Repubblica (Itálie)",
-      "url": "https://www.repubblica.it/economia/2026/11/07/news/accise_taglio_gasolio_diesel_governo_domenica_prezzi_aumento_carburanti-425707036/",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Accise, il governo non rinnova gli sconti sul diesel: da domani prezzi in aumento",
-    "shrnuti": "A mezzanotte scade il taglio delle imposte sul gasolio che dal 28 ottobre aveva garantito una riduzione di 4,88 centesimi al litro. Nella Gazzetta ufficiale non c’è il rinnovo dell’intervento",
-    "duvod": "bez-skutku",
-    "kategorie": [],
-    "posouzeni": null
-  },
-  {
-    "id": "k-761b6bb825023bc3",
-    "zachyceno": "2026-11-07T18:03:22.987Z",
-    "publikovano": "2026-11-07T16:10:00.000Z",
-    "zdroj": {
-      "nazev": "Ukrinform (anglicky)",
-      "url": "https://www.ukrinform.net/rubric-polytics/4182481-zelensky-announces-further-personnel-changes-at-ssu-following-carthage-case.html",
-      "typ": "wire",
-      "primarni": false
-    },
-    "titulek": "Zelensky announces further personnel changes at SSU following Carthage case",
-    "shrnuti": "Ukrainian President Volodymyr Zelensky has said that further personnel changes will be made at the Security Service of Ukraine (SSU) following the recent release of materials from the National Anti-Corruption Bureau of Ukraine's (NABU) Carthage investigation, which implicated SSU employees.",
-    "duvod": "bez-skutku",
-    "kategorie": [],
-    "posouzeni": null
-  },
-  {
-    "id": "k-8c34bb26a2ba551c",
-    "zachyceno": "2026-11-07T18:03:23.021Z",
-    "publikovano": "2026-11-07T16:10:00.000Z",
-    "zdroj": {
-      "nazev": "Ukrainska Pravda (anglicky)",
-      "url": "https://www.pravda.com.ua/eng/news/2026/11/07/8061744/",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Over 3,000 Ukrainians face detention in Russia's migrant prisons",
-    "shrnuti": "Over 3,000 Ukrainians, including former political prisoners, are reportedly being held in Russian deportation centres, known as migrant prisons.",
-    "duvod": "bez-skutku",
-    "kategorie": [
-      "rusko"
-    ],
-    "posouzeni": null
-  },
-  {
-    "id": "k-c2fd993831bc4de9",
-    "zachyceno": "2026-11-07T16:16:08.714Z",
-    "publikovano": "2026-11-07T16:09:08.000Z",
-    "zdroj": {
-      "nazev": "SME (Slovensko)",
-      "url": "https://www.sme.sk/svet/c/papez-lev-xiv-vyzval-juhoamericanov-na-prekonavanie-rozporov-a-na-jednotu?utm_source=rss&utm_medium=feed&utm_campaign=www-rss",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Pápež Lev XIV. vyzval Juhoameričanov na prekonávanie rozporov a na jednotu",
-    "shrnuti": "Na omši sa zúčastnili desaťtisíce ľudí vrátane mnohých Argentínčanov.",
-    "duvod": "bez-skutku",
-    "kategorie": [],
-    "posouzeni": null
-  },
-  {
-    "id": "k-17de755201dfc531",
-    "zachyceno": "2026-11-07T18:03:19.214Z",
-    "publikovano": "2026-11-07T16:09:04.000Z",
-    "zdroj": {
-      "nazev": "Presseportal — zprávy policie (Blaulicht)",
-      "url": "https://www.presseportal.de/blaulicht/pm/126720/6386026",
-      "typ": "wire",
-      "primarni": false
-    },
-    "titulek": "LPI-G: LK ABG - 0285024/2026 - Vermisstes Kind",
-    "shrnuti": "Altenburg (ots) - LK ABG - 0285024/2026 - Vermisstes Kind Seit dem 06.11.2026 gegen 09:10 Uhr wird der 11 - jährige Lucien Gregorio K. vermisst. Bei seinem letzten bekannten Kontakt hielt er sich in der Molbitzer Straße von Altenburg auf. Lucien ...",
-    "duvod": "bez-skutku",
-    "kategorie": [],
-    "posouzeni": null
-  },
-  {
-    "id": "k-68ba124aa2af3815",
-    "zachyceno": "2026-11-07T20:28:07.268Z",
-    "publikovano": "2026-11-07T16:08:09.000Z",
-    "zdroj": {
-      "nazev": "El Mundo (Španělsko)",
-      "url": "https://www.elmundo.es/espana/2026/11/07/6aef1a9efc6c83a47c8b4575.html",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "El bonus de Adif \"en mitad de los muertos\" sacude la campaña: \"¿Por qué no dimite Sánchez?\", \"tendrán que salir del poder para entrar en la cárcel\"",
-    "shrnuti": "Feijóo exige que respondan ante la Justicia \"si el dinero de la seguridad de los trenes ha acabado en el PSOE o en el bolsillo de alguno de los suyos\" Leer",
-    "duvod": "bez-skutku",
-    "kategorie": [],
-    "posouzeni": null
-  },
-  {
-    "id": "k-a441fe0085816ab6",
-    "zachyceno": "2026-11-07T16:16:07.548Z",
-    "publikovano": "2026-11-07T16:07:00.000Z",
-    "zdroj": {
-      "nazev": "Český rozhlas — domácí zprávy",
-      "url": "https://www.irozhlas.cz/veda-technologie/historie/opravy-za-150-milionu-dokoncuje-zerotinsky-zamek-v-novem-jicine-bude-mit-nove_2611071707_aru",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Opravy za 150 milionů dokončuje Žerotínský zámek v Novém Jičíně. Bude mít nové poklady nebo i zázemí",
-    "shrnuti": "Už jen pár měsíců zbývá do dokončení první části oprav Žerotínského zámku v Novém Jičíně. Stavební část investiční akce za 150 milionů korun má být hotová do února příštího roku. Pak bude následovat instalace nového vybavení i expozice.",
-    "duvod": "bez-skutku",
-    "kategorie": [],
-    "posouzeni": null
-  },
-  {
-    "id": "k-dc6c58db383c9c78",
-    "zachyceno": "2026-11-07T16:16:07.619Z",
-    "publikovano": "2026-11-07T16:07:00.000Z",
-    "zdroj": {
-      "nazev": "Novinky.cz",
-      "url": "https://www.novinky.cz/clanek/kultura-hudba-sex-story-rokenrol-kapelu-ramones-nenicil-punk-ale-laska-dvou-clenu-k-jedne-zene-40607070",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "SEX, STORY, ROKENROL: Kapelu Ramones neničil punk, ale láska dvou členů k jedné ženě",
-    "shrnuti": "Působili jako punková rodina, na kterou si od samého začátku hráli. Zdáli se být semknutí, vzájemně se podporující, odhodlaní a cílevědomí. I proto je publikum milovalo. Skutečnost však byla jiná. Joey Ramone a Johnny Ramone z americké skupiny Ramones byli totálními protiklady. Jediné, v čem si rozu",
-    "duvod": "bez-skutku",
-    "kategorie": [],
-    "posouzeni": null
-  },
-  {
-    "id": "k-90b1e4c1d53718f6",
-    "zachyceno": "2026-11-07T16:16:08.716Z",
-    "publikovano": "2026-11-07T16:06:37.000Z",
-    "zdroj": {
-      "nazev": "SME (Slovensko)",
-      "url": "https://www.sme.sk/index/c/nemecko-chce-vyvoj-novej-stihacky-s-airbusom-alebo-s-britmi-talianmi-a-japoncami?utm_source=rss&utm_medium=feed&utm_campaign=www-rss",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Nemecko chce vývoj novej stíhačky s Airbusom alebo s Britmi, Talianmi a Japoncami",
-    "shrnuti": "Nemecký minister obrany očakáva, že rozhodnutie padne do konca marca.",
-    "duvod": "bez-skutku",
-    "kategorie": [],
-    "posouzeni": null
-  },
-  {
-    "id": "k-08609fa7fea0b9cb",
-    "zachyceno": "2026-11-07T18:03:19.567Z",
-    "publikovano": "2026-11-07T16:06:00.000Z",
-    "zdroj": {
-      "nazev": "iDNES.cz — zpravodajství",
-      "url": "https://www.idnes.cz/zpravy/zahranicni/kanarske-ostrovy-migracni-vlna-stav-nouze-el-hierro-afrika.A261107_155208_zahranicni_linh#utm_source=rss&utm_medium=feed&utm_campaign=zpravodaj&utm_content=main",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Kanárský ostrov čelí náporu migrantů. Vyhlásil stav nouze, prosí o pomoc",
-    "shrnuti": "Vedení jednoho ze španělských Kanárských ostrovů vyhlásilo stav nouze kvůli velké migrační vlně, na ostrov El Hierro za posledních pět týdnů připlulo z Afriky přes 8 tisíc běženců. Od pátku za 24 hodin dorazilo na Kanárské ostrovy na 1100 migrantů, čímž se denní počet přiblížil rekordu z listopadu 2",
-    "duvod": "bez-skutku",
-    "kategorie": [],
-    "posouzeni": null
-  },
-  {
-    "id": "k-947f342698da62d8",
-    "zachyceno": "2026-11-07T16:16:08.302Z",
-    "publikovano": "2026-11-07T16:04:41.000Z",
-    "zdroj": {
-      "nazev": "Euronews",
-      "url": "https://www.euronews.com/2026/11/07/melenchon-presents-party-manifesto-as-social-unrest-continues-across-france",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Mélenchon presents party manifesto as social unrest continues across France",
-    "shrnuti": "In a post on X, Le Pen, the presidential candidate for the far-right National Rally party, hit out at what she called a \"plan to dismantle France\".",
-    "duvod": "bez-skutku",
-    "kategorie": [],
-    "posouzeni": null
-  },
-  {
-    "id": "k-8c1b783bd5eb6874",
-    "zachyceno": "2026-11-07T16:16:07.650Z",
-    "publikovano": "2026-11-07T16:04:31.000Z",
-    "zdroj": {
-      "nazev": "Seznam Zprávy",
-      "url": "https://www.seznamzpravy.cz/clanek/obrazem-fotky-jak-to-vypada-na-miste-kde-utocnik-strilel-do-davu-lidi-319953",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Fotky: Jak to vypadá na místě, kde útočník střílel do davu lidí",
-    "shrnuti": "Nejméně pět mrtvých a více než deset raněných si dnes vyžádala střelba v centru Krakova. Policie zasahuje na největším krakovském náměstí, zvaném Rynek Główny, kam vjel muž v autě, ze kterého střílel po náhodných kolemjdoucích.",
-    "duvod": "bez-skutku",
-    "kategorie": [
-      "vojsko"
-    ],
-    "posouzeni": null
-  },
-  {
-    "id": "k-56158c7a91480501",
-    "zachyceno": "2026-11-07T16:16:08.756Z",
-    "publikovano": "2026-11-07T16:04:00.000Z",
-    "zdroj": {
-      "nazev": "Rzeczpospolita (Polsko)",
-      "url": "https://www.rp.pl/plus-minus/art45450491-niech-miesnie-nawet-nie-drgna-recenzja-japonskiej-gry-patyko",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Niech mięśnie nawet nie drgną. Recenzja japońskiej gry „Patyko”",
-    "shrnuti": "„Patyko” to doskonały trening nie tylko dla palców. I nie tylko dla dzieci.",
-    "duvod": "bez-skutku",
-    "kategorie": [],
-    "posouzeni": null
-  },
-  {
-    "id": "k-db48d148edc17f1c",
-    "zachyceno": "2026-11-07T18:03:22.298Z",
-    "publikovano": "2026-11-07T16:02:54.000Z",
-    "zdroj": {
-      "nazev": "la Repubblica (Itálie)",
-      "url": "https://www.repubblica.it/sport/calcio/nazionale/2026/11/07/news/palma_nazionale_italia_germania-425707025/",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "L’Italia strappa Palma alla Germania. E Mancini lo convoca subito in Nazionale",
-    "shrnuti": "Il difensore dell’Udinese, che aveva giocato nelle giovanili tedesche, prende il posto del romanista Gianluca Mancini, infortunato",
-    "duvod": "bez-skutku",
-    "kategorie": [],
-    "posouzeni": null
-  },
-  {
-    "id": "k-fbba9de8b5e63ba7",
-    "zachyceno": "2026-11-07T16:03:08.232Z",
-    "publikovano": "2026-11-07T16:02:27.000Z",
-    "zdroj": {
-      "nazev": "iDNES.cz — zpravodajství",
-      "url": "https://www.idnes.cz/liberec/zpravy/steve-maggie-skolka-netflix-vyuka-anglictiny-serial.A261106_090350_liberec-zpravy_jape#utm_source=rss&utm_medium=feed&utm_campaign=zpravodaj&utm_content=main",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Z liberecké školky až na Netflix. Steve a Maggie pobláznili miliony dětí",
-    "shrnuti": "Projekt, který začínal před dvaceti lety jako pomůcka pro výuku angličtiny, se dostal na Netflix. Z videí se Stevem a Maggie z Liberce se učí angličtinu miliony dětí napříč světem. Jeho zakladatelé se tak posunuli od výukových videí k profesionálně vyráběnému seriálu.",
-    "duvod": "bez-skutku",
-    "kategorie": [],
-    "posouzeni": null
-  },
-  {
-    "id": "k-343ca4c46efa8b94",
-    "zachyceno": "2026-11-07T20:03:11.963Z",
-    "publikovano": "2026-11-07T16:00:11.000Z",
-    "zdroj": {
-      "nazev": "Le Monde (Francie)",
-      "url": "https://www.lemonde.fr/sport/article/2026/11/07/edwin-pindi-president-du-club-de-football-de-troyes-meme-sous-pavillon-etranger-il-y-a-un-vrai-respect-de-l-identite-locale_6808295_3242.html",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Edwin Pindi, président du club de football de Troyes : « Même sous pavillon étranger, il y a un vrai respect de l’identité locale »",
-    "shrnuti": "Alors que la formation auboise affronte le PSG au Parc des Princes, samedi, en Ligue 1, son dirigeant revient, dans un entretien au « Monde », sur les relations avec son puissant propriétaire, le City Football Group, également à la tête des Skyblues outre-Manche.",
-    "duvod": "vylouceno-tematem",
-    "kategorie": [],
-    "posouzeni": null
-  },
-  {
-    "id": "k-0b2f49c260b562d5",
-    "zachyceno": "2026-11-07T16:03:09.525Z",
-    "publikovano": "2026-11-07T16:00:03.000Z",
-    "zdroj": {
-      "nazev": "Telex (Maďarsko)",
-      "url": "https://telex.hu/karakter/konyvespolc/2026/11/07/karakter-novellapalyazat-fodij-endrey-nagy-agoston-kozonsegdij-horvath-tamas",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Endrey-Nagy Ágoston nyerte a Karakter első novellapályázatának fődíját",
-    "shrnuti": "A zsűri 1510 jeligés írásból választotta ki a kedvencét. A közönségdíjat Horváth Tamás kapta, a Telekom Hello Szülő Különdíját pedig Száraz Eszter nyerte el.",
-    "duvod": "bez-skutku",
-    "kategorie": [],
-    "posouzeni": null
-  },
-  {
-    "id": "k-1ec0203f6edfdbf5",
-    "zachyceno": "2026-11-07T18:03:23.023Z",
-    "publikovano": "2026-11-07T16:00:00.000Z",
-    "zdroj": {
-      "nazev": "Ukrainska Pravda (anglicky)",
-      "url": "https://www.pravda.com.ua/eng/news/2026/11/07/8061743/",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Germany exhausts capacity to supply Patriot systems to Ukraine",
-    "shrnuti": "German Defence Minister Boris Pistorius has announced that Berlin has reached its limit in supplying Patriot air defence systems to Ukraine and urged others to step up.",
-    "duvod": "bez-skutku",
-    "kategorie": [],
-    "posouzeni": null
-  },
-  {
-    "id": "k-c7af200bf3e5693c",
-    "zachyceno": "2026-11-07T16:03:08.074Z",
-    "publikovano": "2026-11-07T16:00:00.000Z",
-    "zdroj": {
-      "nazev": "iROZHLAS — zprávy",
-      "url": "https://www.irozhlas.cz/sport/hokej/hokej-euro-hockey-tour-finske-hry-cesko-finsko_2611071700_lbk",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "ŽIVĚ: Hokejisté hrají na Finských hrách s domácím týmem, Radiožurnál Sport odvysílá přímý přenos",
-    "shrnuti": "Čeští hokejisté narazí ve druhém zápase Finských her na domácí tým. V posledním ročníku Euro Hockey Tour měly oba týmy vyrovnanou bilanci se skóre 10:10, nejdůležitější zápas sezony zvládli ale lépe Finové. Pozdější světoví šampioni zvítězili ve čtvrtfinále mistrovství světa ve Švýcarsku 4:1. Utkání",
-    "duvod": "vylouceno-tematem",
-    "kategorie": [
-      "cr"
-    ],
-    "posouzeni": null
-  },
-  {
-    "id": "k-9ced41ce8fcb46f5",
-    "zachyceno": "2026-11-07T16:03:08.187Z",
-    "publikovano": "2026-11-07T16:00:00.000Z",
-    "zdroj": {
-      "nazev": "Seznam Zprávy",
-      "url": "https://www.seznamzpravy.cz/clanek/ekonomika-byznys-trendy-analyzy-zabit-nezabit-cesi-rozbehli-projekt-kde-o-pribehu-rozhoduji-lide-319891",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Zabít/Nezabít. Češi rozběhli projekt, kde o příběhu rozhodují lidé",
-    "shrnuti": "Češi spustili nový herní projekt Epos, kde příběh tvoří spolu s autorem samotní hráči. Na tvorbu mobilní aplikace vybrali devět milionů korun od investorů a dva měsíce po startu hlásí 10 tisíc hráčů. Chtějí expandovat do Polska.",
-    "duvod": "bez-skutku",
-    "kategorie": [],
-    "posouzeni": null
-  },
-  {
-    "id": "k-70ba0169b1dbb599",
-    "zachyceno": "2026-11-07T16:03:08.219Z",
-    "publikovano": "2026-11-07T16:00:00.000Z",
-    "zdroj": {
-      "nazev": "iDNES.cz — zpravodajství",
-      "url": "https://www.idnes.cz/brno/zpravy/mladistvi-zavislosti-navykove-latky-alkohol-nikotin-kratom-elektronicke-cigarety-prevence.A261106_983062_brno-zpravy_icer#utm_source=rss&utm_medium=feed&utm_campaign=zpravodaj&utm_content=main",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Adiktolog: Důsledně proti kratomu? Ať se u mladých řeší hlavně alkohol a nikotin",
-    "shrnuti": "Proč se tolik mluví o kratomu, ale mnohem méně o alkoholu, který podle odborníků představuje daleko větší nebezpečí? Dospívající dnes lákají elektronické cigarety, nikotinové sáčky i nové psychoaktivní látky. Brněnský adiktolog David Věchet vysvětluje, proč je mladý mozek vůči závislostem zranitelně",
-    "duvod": "bez-skutku",
-    "kategorie": [],
-    "posouzeni": null
-  },
-  {
-    "id": "k-bbace9845791e5db",
-    "zachyceno": "2026-11-07T16:03:08.220Z",
-    "publikovano": "2026-11-07T16:00:00.000Z",
-    "zdroj": {
-      "nazev": "iDNES.cz — zpravodajství",
-      "url": "https://www.idnes.cz/ekonomika/zahranicni/reklamni-prumysl-nasel-lek-na-ai-jsou-to-tuzky-plastelina-a-stop-motion-animace.A261104_142826_eko-zahranicni_jadv#utm_source=rss&utm_medium=feed&utm_campaign=zpravodaj&utm_content=main",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Reklamní průmysl našel lék na AI: Jsou to tužky, plastelína a stop-motion animace",
-    "shrnuti": "Rostoucí nechuť mnoha spotřebitelů k počítačově generované reklamě je hnacím motorem rozmachu studií specializovaných na ruční výrobu reklamních spotů. Filmaři tvrdí, že negativní reakce na snímky vytvořené umělou inteligencí zvyšují poptávku po technikách vyžadujících vysokou míru ruční práce, jako",
-    "duvod": "vylouceno-tematem",
-    "kategorie": [],
-    "posouzeni": null
-  },
-  {
-    "id": "k-ae340ae3c0cadc4d",
-    "zachyceno": "2026-11-07T16:03:09.190Z",
-    "publikovano": "2026-11-07T16:00:00.000Z",
-    "zdroj": {
-      "nazev": "Der Standard (Rakousko)",
-      "url": "https://www.derstandard.at/story/3000000347645/der-pr-coup-um-die-habsburger-juwelen?ref=rss",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Der PR-Coup um die Habsburger Juwelen",
-    "shrnuti": "Wie Karl Habsburg das Narrativ rund um die von seiner Großmutter Zita nach Kanada verbrachten Schmuckstücke schon im Vorfeld geschickt in eine ihm genehme Richtung drehte",
-    "duvod": "bez-skutku",
-    "kategorie": [],
-    "posouzeni": null
-  },
-  {
-    "id": "k-5310ac08fc7ed21b",
-    "zachyceno": "2026-11-07T16:03:09.192Z",
-    "publikovano": "2026-11-07T16:00:00.000Z",
-    "zdroj": {
-      "nazev": "Der Standard (Rakousko)",
-      "url": "https://www.derstandard.at/story/3000000347658/sie-reissen-in-ihrer-freizeit-baeume-aus-der-natur-zuliebe?ref=rss",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Sie reißen in ihrer Freizeit Bäume aus – der Natur zuliebe",
-    "shrnuti": "Am Dernberg im Weinviertel rücken Freiwillige dem Gestrüpp zu Leibe, um seltenen Arten Platz zu machen. Was sie antreibt, dafür ihren freien Samstag herzugeben",
-    "duvod": "bez-skutku",
-    "kategorie": [],
-    "posouzeni": null
-  },
-  {
-    "id": "k-0826d849bf548c6f",
-    "zachyceno": "2026-11-07T16:03:09.208Z",
-    "publikovano": "2026-11-07T16:00:00.000Z",
-    "zdroj": {
-      "nazev": "Der Standard (Rakousko)",
-      "url": "https://www.derstandard.at/story/3000000347903/die-blaue-welle-schwappt-auch-ueber-das-texanische-oelfeld?ref=rss",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Die blaue Welle schwappt auch über das texanische Ölfeld",
-    "shrnuti": "Nach den Midterms beginnt für die Sieger die schwierigere Arbeit. Die Wahl haben die Demokraten zwar mit einer Politik der Mitte gewonnen, die Linke in der Partei ist aber laut. Kann da ein gemeinsames Programm für die nächste Präsidentschaftswahl entstehen?",
-    "duvod": "bez-skutku",
-    "kategorie": [],
-    "posouzeni": null
-  },
-  {
-    "id": "k-32bcdd0af9a73c0d",
-    "zachyceno": "2026-11-07T16:03:09.480Z",
-    "publikovano": "2026-11-07T16:00:00.000Z",
-    "zdroj": {
-      "nazev": "Aktuality.sk",
-      "url": "https://www.aktuality.sk/clanok/8kUNfjp/hitler-dokazal-presvedcit-aj-deti-aby-nenavideli-vlastnych-rodicov-autorka-oscaroveho-bestselleru-doba-sa-opakuje-rozhovor/",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Hitler dokázal presvedčiť aj deti, aby nenávideli vlastných rodičov. Autorka oscarového bestselleru: Doba sa opakuje (rozhovor)",
-    "shrnuti": "Ako sa z obyčajného dieťaťa môže stať nacista a prečo ľudia podliehajú autoritárskym lídrom? Novozélandská spisovateľka Christine Leunens hovorí aj o tom, prečo sa história môže opakovať.",
-    "duvod": "bez-skutku",
-    "kategorie": [],
-    "posouzeni": null
-  },
-  {
-    "id": "k-5f3269a211277d16",
-    "zachyceno": "2026-11-07T16:03:09.498Z",
-    "publikovano": "2026-11-07T16:00:00.000Z",
-    "zdroj": {
-      "nazev": "Rzeczpospolita (Polsko)",
-      "url": "https://radar.rp.pl/modernizacja-sil-zbrojnych/art45455311-norweski-modul-uzbrojenia-dla-k2pl-czyli-jak-polska-zbrojeniowka-przegrala-wazny-kontrakt",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Norweski moduł uzbrojenia dla K2PL, czyli jak polska zbrojeniówka przegrała ważny kontrakt",
-    "shrnuti": "Zero trafień na 1500 m. Tarnowski moduł uzbrojenia A3B oblał wojskowe testy, a czołgi K2PL dostaną norweskie Protectory RS4. Czy wojsko zbyt szybko skreśliło polską broń, czy też przemysł zaoferował obietnice zamiast gotowego uzbrojenia?",
-    "duvod": "bez-skutku",
-    "kategorie": [],
-    "posouzeni": null
-  },
-  {
-    "id": "k-e286b91d832347b4",
-    "zachyceno": "2026-11-07T16:03:09.872Z",
-    "publikovano": "2026-11-07T16:00:00.000Z",
-    "zdroj": {
-      "nazev": "Helsingin Sanomat (Finsko)",
-      "url": "https://www.hs.fi/suomi/art-2000012396071.html",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Puola | Ainakin viisi kuollut ja yli kymmenen loukkaantunut ampumisessa Krakovan keskustassa",
-    "shrnuti": "Poliisi on ottanut epäillyn ampujan kiinni.",
-    "duvod": "bez-skutku",
-    "kategorie": [],
-    "posouzeni": null
-  },
-  {
-    "id": "k-7112ead85709d6db",
-    "zachyceno": "2026-11-07T16:03:09.874Z",
-    "publikovano": "2026-11-07T16:00:00.000Z",
-    "zdroj": {
-      "nazev": "Helsingin Sanomat (Finsko)",
-      "url": "https://www.hs.fi/paakirjoitukset/art-2000012394160.html",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Isät ansaitsevat myös armollisuutta",
-    "shrnuti": "Sunnuntaina vietetään isänpäivää. Viime vuonna ensimmäistä kertaa biologiseksi isäksi tuli 19 200 miestä. Heidän ja muidenkin isien on hyvä muistaa, ettei isyyttä tarvitse suorittaa.",
-    "duvod": "bez-skutku",
-    "kategorie": [],
-    "posouzeni": null
-  },
-  {
-    "id": "k-3cb909b62d80960f",
-    "zachyceno": "2026-11-07T16:03:09.876Z",
-    "publikovano": "2026-11-07T16:00:00.000Z",
-    "zdroj": {
-      "nazev": "Helsingin Sanomat (Finsko)",
-      "url": "https://www.hs.fi/maailma/art-2000012330854.html",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "HS Espanjassa | Madrid päätti perustaa maailman­luokan chinatownin, paikalliset kiinalaiset pyörittelevät päätään",
-    "shrnuti": "Chinatown-hankkeen tarkoitus on houkutella turisteja tukkoisen kantakaupungin ulkopuolelle. Madridissa asuu Rauman verran Kiinan kansalaisia.",
-    "duvod": "bez-skutku",
-    "kategorie": [],
-    "posouzeni": null
-  },
-  {
-    "id": "k-ee94c90f1aa21c23",
-    "zachyceno": "2026-11-07T16:16:08.402Z",
-    "publikovano": "2026-11-07T15:59:36.000Z",
-    "zdroj": {
-      "nazev": "Tagesschau (Německo)",
-      "url": "https://www.tagesschau.de/wirtschaft/arbeitsmarkt/junge-menschen-keine-berufsausbildung-100.html",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Millionen junge Menschen ohne Berufsausbildung in Deutschland",
-    "shrnuti": "Die Zahl junger Erwachsener ohne Berufsabschluss ist alarmierend. Sie haben schlechtere Chancen am Jobmarkt und verdienen weniger. Zugleich suchen viele Unternehmen Fachkräfte. Von Nicole Würth.",
-    "duvod": "bez-skutku",
-    "kategorie": [],
-    "posouzeni": null
-  },
-  {
-    "id": "k-68c9ff5c88837c93",
-    "zachyceno": "2026-11-07T16:03:09.527Z",
-    "publikovano": "2026-11-07T15:59:06.000Z",
-    "zdroj": {
-      "nazev": "Telex (Maďarsko)",
-      "url": "https://telex.hu/g7/kozelet/2026/11/07/energetika-kormany-rezsicsokkentes-foldgaz-kapitany",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Sodródó energetika: csodafegyverre vár a kormány?",
-    "shrnuti": "Kapitány István szerint nem a rezsicsökkentés átalakítása a cél, hanem az, hogy Magyarország olcsóbban és több forrásból tudjon energiát beszerezni. A részletek azonban homályban maradnak.",
-    "duvod": "bez-skutku",
-    "kategorie": [],
-    "posouzeni": null
-  },
-  {
-    "id": "k-9970bedf86c6f02c",
-    "zachyceno": "2026-11-07T16:03:09.878Z",
-    "publikovano": "2026-11-07T15:59:00.000Z",
-    "zdroj": {
-      "nazev": "Helsingin Sanomat (Finsko)",
-      "url": "https://www.hs.fi/urheilu/art-2000012396361.html",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Kamppailulajit | Suomalaiset takoivat kolme MM-kultaa yhdessä päivässä, ja mitali­saalis nousi ennätyk­selliseksi",
-    "shrnuti": "Suomi saavutti amatöörivapaaottelun MM-kisoissa ennätykselliset seitsemän mitalia, joista kolme oli kultaisia.",
-    "duvod": "bez-skutku",
-    "kategorie": [],
-    "posouzeni": null
-  },
-  {
-    "id": "k-7d279891fc277597",
-    "zachyceno": "2026-11-07T16:03:10.438Z",
-    "publikovano": "2026-11-07T15:59:00.000Z",
-    "zdroj": {
-      "nazev": "VRT NWS (Belgie)",
-      "url": "https://www.vrt.be/vrtnws/nl/2026/11/06/droneport-belgian-aviation-training-inhuldiging-nieuwe-vliegscho.rss.xml",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Nieuwe vliegschool opent op Droneport in Sint-Truiden: \"Veel ruimte om verder te groeien\"",
-    "shrnuti": "Op de luchthaven DronePort in Sint-Truiden opent vandaag een nieuwe vliegschool. Je kan er terecht als je je vliegbrevet wil halen, maar ook voor pleziervluchtjes. \"DronePort is een moderne luchthaven met veel ruimte om verder te groeien. Dat gaf voor ons de doorslag, omdat we willen uitbreiden\", ze",
-    "duvod": "bez-skutku",
-    "kategorie": [
-      "drony"
-    ],
-    "posouzeni": null
-  },
-  {
-    "id": "k-87ac1e6f9657342e",
-    "zachyceno": "2026-11-07T20:03:09.667Z",
-    "publikovano": "2026-11-07T15:57:00.000Z",
-    "zdroj": {
-      "nazev": "ČTK — České noviny",
-      "url": "https://www.ceskenoviny.cz/zpravy/salac-byl-v-kvalifikaci-moto2-desaty-ale-do-zavodu-v-kataru-vyrazi-z-treti-rady/2898477?utm_source=rss&utm_medium=feed",
-      "typ": "wire",
-      "primarni": false
-    },
-    "titulek": "Salač byl v kvalifikaci Moto2 desátý, ale do závodu v Kataru vyrazí z třetí řady",
-    "shrnuti": "Losail (Katar) - Filip Salač odstartuje do nedělní motocyklové Velké ceny Kataru ze třetí řady. V Losailu dnes zajel v kvalifikaci třídy Moto2 desátý čas, ale po dodatečných penalizacích několika soupeřů...",
-    "duvod": "bez-skutku",
-    "kategorie": [],
-    "posouzeni": null
-  },
-  {
-    "id": "k-f6a2d396d768d5d4",
-    "zachyceno": "2026-11-07T16:03:08.222Z",
-    "publikovano": "2026-11-07T15:57:00.000Z",
-    "zdroj": {
-      "nazev": "iDNES.cz — zpravodajství",
-      "url": "https://www.idnes.cz/zpravy/zahranicni/dva-mrtve-si-vyzadala-strelba-na-hlavnim-namesti-v-krakove-na-jihu-polska-uvedla-televize-s-odvolani.A261107_160251_zahranicni_kurl#utm_source=rss&utm_medium=feed&utm_campaign=zpravodaj&utm_content=main",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Střelba v polském Krakově. Pět mrtvých, mezi raněnými jsou i policisté",
-    "shrnuti": "Pět mrtvých a více než deset raněných si v sobotu vyžádala střelba v centru polského Krakova, oznámila policie. Mezi raněnými jsou i policisté. Střílelo se z auta. Předpokládaného pachatele policie postřelila a zamířila s ním do nemocnice.",
-    "duvod": "bez-skutku",
-    "kategorie": [
-      "vojsko"
-    ],
-    "posouzeni": null
-  },
-  {
-    "id": "k-c7ecba553b05eb9a",
-    "zachyceno": "2026-11-07T16:03:08.254Z",
-    "publikovano": "2026-11-07T15:57:00.000Z",
-    "zdroj": {
-      "nazev": "ČTK — České noviny",
-      "url": "https://www.ceskenoviny.cz/zpravy/salac-byl-v-kvalifikaci-moto2-desaty-a-do-zavodu-v-kataru-vyrazi-ze-ctvrte-rady/2898477?utm_source=rss&utm_medium=feed",
-      "typ": "wire",
-      "primarni": false
-    },
-    "titulek": "Salač byl v kvalifikaci Moto2 desátý a do závodu v Kataru vyrazí ze čtvrté řady",
-    "shrnuti": "Losail (Katar) - Filip Salač odstartuje do nedělní motocyklové Velké ceny Kataru ze čtvrté řady. V Losailu dnes zajel v kvalifikaci třídy Moto2 desátý čas. Za překvapivě nejrychlejším Španělem Álexem...",
-    "duvod": "bez-skutku",
-    "kategorie": [],
-    "posouzeni": null
-  },
-  {
-    "id": "k-3b791314b2e955c5",
-    "zachyceno": "2026-11-07T16:03:08.256Z",
-    "publikovano": "2026-11-07T15:57:00.000Z",
-    "zdroj": {
-      "nazev": "ČTK — České noviny",
-      "url": "https://www.ceskenoviny.cz/zpravy/pred-budovou-ct-v-praze-dnes-lide-protestovali-za-reformu-verejnopravnich-medii/2898729?utm_source=rss&utm_medium=feed",
-      "typ": "wire",
-      "primarni": false
-    },
-    "titulek": "Před budovou ČT v Praze dnes lidé protestovali za reformu veřejnoprávních médií",
-    "shrnuti": "Praha - Před budou České televize na pražských Kavčích horách se dnes odpoledne uskutečnil protest za zrušení poplatků a reformu České televize (ČT) a Českého rozhlasu (ČRo). Akce, kterou uspořádal spolek...",
-    "duvod": "bez-skutku",
-    "kategorie": [
-      "cr"
-    ],
-    "posouzeni": null
-  },
-  {
-    "id": "k-cd87fac8e7a7ece2",
-    "zachyceno": "2026-11-07T20:03:11.297Z",
-    "publikovano": "2026-11-07T15:56:00.000Z",
-    "zdroj": {
-      "nazev": "Helsingin Sanomat (Finsko)",
-      "url": "https://www.hs.fi/urheilu/art-2000012395969.html",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Jääkiekko | Valko-Venäjä harkitsee oikeu­dellisia toimia vastauksena IIHF:lle",
-    "shrnuti": "Valko-Venäjää ei nähdä ainakaan vuodenvaihteen nuorten kisoissa eikä ensi kevään MM-kisoissa. SJL:n mielestä MM-kisoja ei voida järjestää, jos Venäjä on mukana.",
-    "duvod": "bez-skutku",
-    "kategorie": [],
-    "posouzeni": null
-  },
-  {
-    "id": "k-13f0354ca4a21b1a",
-    "zachyceno": "2026-11-07T16:03:09.041Z",
-    "publikovano": "2026-11-07T15:55:41.000Z",
-    "zdroj": {
-      "nazev": "Tagesschau (Německo)",
-      "url": "https://www.tagesschau.de/ausland/europa/schuesse-krakau-100.html",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Polen: Mindestens fünf Tote nach Schüssen in Krakau",
-    "shrnuti": "Bei Schüssen in der polnischen Stadt Krakau sind laut Polizei mindestens fünf Menschen getötet und mehr als zehn Personen verletzt worden. Der mutmaßliche Täter konnte demnach gefasst werden.",
-    "duvod": "bez-skutku",
-    "kategorie": [],
-    "posouzeni": null
-  },
-  {
-    "id": "k-b652c1e8eeb105f6",
-    "zachyceno": "2026-11-07T16:03:08.847Z",
-    "publikovano": "2026-11-07T15:53:54.000Z",
-    "zdroj": {
-      "nazev": "The Guardian — World",
-      "url": "https://www.theguardian.com/world/live/2026/nov/07/krakow-shooting-poland-latest-news-updates",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Kraków shooting latest updates: five killed and more than a dozen injured, police say",
-    "shrnuti": "Polish Prime Minister Donald Tusk, in a post on X, said police are investigating the attack Here are some more pictures from the scene in Kraków: Donald Tusk, Poland’s PM, has said: I am being kept informed by the Minister of the Interior about the situation in Kraków following the tragic shooting. ",
-    "duvod": "bez-skutku",
-    "kategorie": [],
-    "posouzeni": null
-  },
-  {
-    "id": "k-32d49dc88d63c4a8",
-    "zachyceno": "2026-11-07T16:03:08.147Z",
-    "publikovano": "2026-11-07T15:51:09.000Z",
-    "zdroj": {
-      "nazev": "Novinky.cz",
-      "url": "https://www.novinky.cz/clanek/domaci-zpravy-hlavni-mesto-praha-jedenact-kamer-na-dvoreckem-moste-vyjde-na-4-miliony-rocni-provoz-na-175-milionu-40607224",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Jedenáct kamer na Dvoreckém mostě vyjde na 4 miliony, roční provoz na 1,75 milionu",
-    "shrnuti": "Ještě před koncem roku se na novém Dvoreckém mostě mezi Prahou 4 a Prahou 5 objeví městské bezpečnostní kamery, jejichž provoz vyjde na miliony korun. Sloužit budou ke kontrole veřejného pořádku, nikoli k odhalování porušení zákazu vjezdu či automatickému rozesílání pokut. K tomu jsou určeny jiné ka",
-    "duvod": "bez-skutku",
-    "kategorie": [],
-    "posouzeni": null
-  },
-  {
-    "id": "k-954a433c9f49c8e2",
-    "zachyceno": "2026-11-07T16:03:09.482Z",
-    "publikovano": "2026-11-07T15:51:00.000Z",
-    "zdroj": {
-      "nazev": "Aktuality.sk",
-      "url": "https://www.aktuality.sk/clanok/9zTeAOX/v-taliansku-sa-chysta-viacero-strajkov-pred-cestou-si-overte-situaciu/",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "V Taliansku sa chystá viacero štrajkov, pred cestou si overte situáciu",
-    "shrnuti": "Štrajkovať budú zamestnanci leteckej, železničnej aj nákladnej dopravy.",
-    "duvod": "bez-skutku",
-    "kategorie": [
-      "infrastruktura"
-    ],
-    "posouzeni": null
-  },
-  {
-    "id": "k-cb55a24610b6ea22",
-    "zachyceno": "2026-11-07T18:03:22.480Z",
-    "publikovano": "2026-11-07T15:50:31.000Z",
-    "zdroj": {
-      "nazev": "El Mundo (Španělsko)",
-      "url": "https://www.elmundo.es/cultura/cine/2026/11/07/6aef3da3e9cf4aad398b456d.html",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "'Viva Carmen', la más brillante (y feminista) lectura de la ópera de Bizet desde la animación",
-    "shrnuti": "El director francés Sébastien Laudenbach insiste en las claves de su anterior trabajo, la genial ¡Linda quiere pollo!, para retratar Sevilla y el mito de Carmen como nunca antes Leer",
-    "duvod": "bez-skutku",
-    "kategorie": [],
-    "posouzeni": null
-  },
-  {
-    "id": "k-29f5f369ca61d279",
-    "zachyceno": "2026-11-07T16:03:11.358Z",
-    "publikovano": "2026-11-07T15:50:12.000Z",
-    "zdroj": {
-      "nazev": "G4Media (Rumunsko)",
-      "url": "https://www.g4media.ro/max-verstappen-cel-mai-rapid-in-ultimul-antrenament-de-la-interlagos-hamilton-al-12-lea-timp.html",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Max Verstappen, cel mai rapid în ultimul antrenament de la Interlagos / Hamilton, al 12-lea timp",
-    "shrnuti": "Max Verstappen a înregistrat cel mai bun timp în ultimul antrenament de la Interlagos (1:11.622), din cadrul Marelui Premiu de Formula 1 al Braziliei, sâmbătă. Kimi Antonelli (Mercedes), proaspăt campion mondial matematic, a avut al doilea timp al sesiunii, cu o diferență foarte mică față de neerlan",
-    "duvod": "bez-skutku",
-    "kategorie": [],
-    "posouzeni": null
-  },
-  {
-    "id": "k-e3b579942fe09330",
-    "zachyceno": "2026-11-07T16:03:09.421Z",
-    "publikovano": "2026-11-07T15:50:06.000Z",
-    "zdroj": {
-      "nazev": "NZZ (Švýcarsko)",
-      "url": "https://www.nzz.ch/panorama/fuenf-todesopfer-nach-schuessen-in-krakau-ld.10057354",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Fünf Tote nach Schüssen in Krakau: Der Täter soll wahllos auf Passanten geschossen haben",
-    "shrnuti": "Im Zentrum der polnischen Stadt sind Schüsse aus einem Auto abgegeben worden. Der mutmassliche Täter wurde festgenommen, zum Motiv ist noch nichts bekannt.",
     "duvod": "bez-skutku",
     "kategorie": [],
     "posouzeni": null
