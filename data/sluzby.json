@@ -1,16 +1,11 @@
 {
-  "aktualizovano": "2026-11-09T20:03:25.019Z",
+  "aktualizovano": "2026-11-09T22:02:50.858Z",
   "stavy": [
     {
       "klic": "cloudflare",
       "stav": "vypadek",
       "popis": "Partial System Outage",
       "incidenty": [
-        {
-          "nazev": "Network Performance Issues in Eastern North America",
-          "odkaz": "https://www.cloudflarestatus.com/incidents/88hc76jnq2gn",
-          "aktualizovano": "2026-11-09T17:21:50.437Z"
-        },
         {
           "nazev": "Changes made to Workers may be delayed or disrupted",
           "odkaz": "https://www.cloudflarestatus.com/incidents/1x0tbxpmmttu",
@@ -26,9 +21,9 @@
         "Cloudflare Sites and Services",
         "Albuquerque, United States - (ABQ)",
         "Arica, Chile - (ARI)",
-        "Asunción, Paraguay - (ASU)"
+        "Algiers, Algeria - (ALG)"
       ],
-      "zkontrolovano": "2026-11-09T20:03:25.019Z",
+      "zkontrolovano": "2026-11-09T22:02:50.858Z",
       "chyba": null
     },
     {
@@ -40,7 +35,7 @@
         "Zoom Phone",
         "Zoom Phone - EMEA"
       ],
-      "zkontrolovano": "2026-11-09T20:03:25.019Z",
+      "zkontrolovano": "2026-11-09T22:02:50.858Z",
       "chyba": null
     },
     {
@@ -49,7 +44,7 @@
       "popis": "All Systems Operational",
       "incidenty": [],
       "postizene": [],
-      "zkontrolovano": "2026-11-09T20:03:25.019Z",
+      "zkontrolovano": "2026-11-09T22:02:50.858Z",
       "chyba": null
     }
   ]
