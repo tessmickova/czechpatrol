@@ -552,6 +552,37 @@ jako „neověřeno úředně“ (`npm run spravce zverejni`, běží v `sber.ym
   zveřejnění, kontrolu dat, rozhlas do kanálů i zadání rutiny. Seznam
   doplňuje provozovatelka; `do` říká, kdy riziko pominulo.
 
+### Naléhavé nahoře a vlajky podle místa události (doplněno 9. 11. 2026)
+
+Zpráva, kterou síto označí jako naléhavou, stojí ve sloupci **Signály
+z médií** nahoře, dokud běží lhůta jejího druhu. Lhůta je v
+`src/lib/naliehave.ts` (`PLATNOST_HODIN`) a běží od poslední naléhavé
+zprávy o téže události, takže nové zprávy ji prodlouží:
+
+| Druh | Lhůta | Rámeček |
+|---|---|---|
+| vyhlášení mobilizace v Rusku, článek 4/5 NATO, mimořádný stav v ČR | 14 dní | silný |
+| uzavření hranic ČR | 7 dní | silný |
+| krizové vysílání | 2 dny | silný |
+| přípravy mobilizace, posílení hranice NATO | 7 dní | tenký |
+| narušení vzdušného prostoru Aliance | 3 dny | tenký |
+
+Tloušťka rámečku je stupeň ze sběru (1 silný, 2 tenký). Naléhavé řádky
+jsou mezi sebou podle data, pod nimi ostatní podle data. Místo data říkají
+„před 3 dny“, po rozbalení „Nahoře do …“. Po lhůtě se zařadí mezi ostatní
+a štítek „naléhavé“ ztratí. Stejnou lhůtu používá Souhrn situace vpravo
+i počet ve Správě (dřív pevně 48 h). Naléhavost nese jen zachycená zpráva;
+schválený záznam ve sloupci Doloženo zdroji ji zatím nepřebírá.
+
+**Vlajka je vždy země, kde se věc stala**, ne země redakce. Seznam zdrojů
+po rozbalení vlajky nemá. Sběr určuje zemi nejdřív z titulku: první země
+v titulku vyhraje, kromě Ruska, Ukrajiny a Běloruska a kromě místa za
+předložkou trasy („do Prahy“, „to Rome“, „Dublin-Rome“). Bez země
+v titulku platí dosavadní pravidlo nad titulkem a shrnutím. Čekající
+zprávy se podle titulku přepočítají při každém sběru (`zemeZTitulku`
+v `sber/udalosti.ts`); 9. 11. 2026 se tak opravilo deset zpráv, např.
+francouzské vyšetřování bombových hrozeb dřív neslo českou vlajku.
+
 ### Co naladit v krizi (doplněno 5. 11. 2026)
 
 Box v postranním panelu a oddíl v postranním menu nad tísňovými čísly:

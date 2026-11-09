@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { aktualizujPamet, duvodOdmitnuti, kandidatId, obsahujeSlovo, odhadniTemata, odhadniZemi, otisk, relevantni } from "../sber/udalosti";
+import { aktualizujPamet, duvodOdmitnuti, kandidatId, obsahujeSlovo, odhadniTemata, odhadniZemi, otisk, relevantni, zemeZTitulku } from "../sber/udalosti";
 import { normalizuj, ocistiText, polozkyZeStranky } from "../sber/nacti";
 
 describe("automatický sběr událostí — pravidla", () => {
@@ -8,6 +8,20 @@ describe("automatický sběr událostí — pravidla", () => {
     expect(odhadniZemi("Policie ČR zadržela v Praze muže podezřelého ze sabotáže")?.kod).toBe("CZ");
     expect(odhadniZemi("Kremlin comments on sanctions")?.kod).toBe("RU");
     expect(odhadniZemi("Weather forecast for tomorrow")).toBeNull();
+  });
+  it("země z titulku má přednost před zemí, která padne jen ve shrnutí (9. 11. 2026)", () => {
+    const titulek = "Francie vyšetřuje bombové výhrůžky letadlům. Prověří i vazby na cizí mocnosti";
+    const text = `${titulek} Pařížská prokuratura zahájila vyšetřování; výhrůžky mířily i na lety do Prahy a z Česka.`;
+    expect(odhadniZemi(text, titulek)?.kod).toBe("FR");
+    /* Rusko v titulku ustoupí zemi, kde se věc stala. */
+    expect(odhadniZemi("Polsko zadrželo šest lidí podezřelých z aktivit ve prospěch ruských služeb", "Polsko zadrželo šest lidí podezřelých z aktivit ve prospěch ruských služeb")?.kod).toBe("PL");
+    /* Bez země v titulku platí dosavadní pravidlo nad celým textem. */
+    expect(odhadniZemi("Neznámý útočník zapálil sklad. Policie ČR pátrá v Brně", "Neznámý útočník zapálil sklad")?.kod).toBe("CZ");
+    /* Start a cíl letu nejsou místo události: rozhodne Francie, kde letadlo přistálo. */
+    expect(zemeZTitulku("Dublin-Rome flight lands in France amid bomb threat")?.kod).toBe("FR");
+    expect(zemeZTitulku("Čtyři letadla mířící do Prahy čelila bombové hrozbě")).toBeNull();
+    /* Krizové vysílání zůstává česká událost. */
+    expect(odhadniZemi("Radiožurnál přechází na mimořádné vysílání", "Radiožurnál přechází na mimořádné vysílání")?.kod).toBe("CZ");
   });
   it("přiřadí oblasti podle klíčových slov", () => {
     const t = odhadniTemata("Sabotage suspected after fire at substation; undersea cable also damaged");

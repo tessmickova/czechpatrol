@@ -21,8 +21,9 @@ import { Tlacitko } from "./ui";
 
   Tři stupně, v tomhle pořadí:
     1. platná mimořádná výstraha — vyhlášená mobilizace, krizové vysílání,
-    2. zachycené naléhavé signály z posledních 48 hodin, které ještě nikdo
-       neověřil — starší sem nepatří, protože „urgentní" je o čase,
+    2. zachycené naléhavé signály, které ještě nikdo neověřil a jejichž
+       lhůta podle druhu ještě běží (src/lib/naliehave.ts, PLATNOST_HODIN) —
+       starší sem nepatří, protože „urgentní" je o čase,
     3. nic z toho — a to se taky napíše, protože prázdné místo by čtenář
        četl jako „web nefunguje", ne jako „je klid".
 
@@ -34,11 +35,12 @@ const NAZVY = NAZVY_NALIEHAVE;
 
 /*
   Jak staré smí být zachycené hlášení, aby se ještě vešlo pod slovo
-  „urgentní". Bez tohohle stropu tu týden visela zpráva z osmého září
-  jako naléhavá — a „urgentní" pak neznamená nic. Starší zachycené zprávy
-  nemizí, jen patří mezi události, ne sem.
+  „urgentní". Bez stropu tu týden visela zpráva z osmého září jako
+  naléhavá — a „urgentní" pak neznamená nic. Do 9. 11. 2026 platilo pevně
+  48 hodin; od té doby lhůta podle druhu (posílení hranice týden, narušení
+  vzdušného prostoru tři dny), stejná jako ve sloupci Signály z médií.
+  Starší zachycené zprávy nemizí, jen patří mezi události, ne sem.
 */
-const OKNO_HODIN = 48;
 
 /**
  * Stav naléhavosti pro postranní souhrn (úvod v2): jedno slovo, jedna barva.
@@ -57,7 +59,7 @@ export function stavNalehavosti(kandidati: Kandidat[], zkontrolovano: string | n
     Signály z médií i tenhle souhrn ji počítají jednou a vedle ní říkají,
     kolik zdrojů o ní píše. Pravidlo slučování je společné (src/lib/signaly.ts).
   */
-  const vOkne = new Set(naliehaveVOkneLib(kandidati, ted, OKNO_HODIN, 100).map((k) => k.id));
+  const vOkne = new Set(naliehaveVOkneLib(kandidati, ted, undefined, 100).map((k) => k.id));
   /* Skupiny se dělají nad všemi zachycenými (i neoznačenými), aby počet zdrojů vyšel stejně jako ve sloupci; zůstanou ty s naléhavou zprávou v okně. */
   const n = seskupSignaly(kandidati).filter((g) => g.polozky.some((p) => vOkne.has(p.id))).slice(0, 5);
   /*
@@ -96,12 +98,12 @@ export function stavNalehavosti(kandidati: Kandidat[], zkontrolovano: string | n
     čte média a titulní stránky úřadů, ne výstražné systémy. Teď to říká
     jen to, co je pravda — náš sběr nic nezachytil — a barvu nemá.
   */
-  return { ton: "klid", text: `Náš sběr nezachytil naléhavou zprávu · ${OKNO_HODIN} h`, dodatek: "Týká se zpráv, které sběr zachytil. Úřední výstrahy a stav zdrojů jsou v Rychlém přehledu.", polozky: [], skupiny: [] };
+  return { ton: "klid", text: "Náš sběr nezachytil platnou naléhavou zprávu", dodatek: "Týká se zpráv, které sběr zachytil. Úřední výstrahy a stav zdrojů jsou v Rychlém přehledu.", polozky: [], skupiny: [] };
 }
 
-/** Naléhavé zachycené zprávy uvnitř okna, nejnovější první. Nejvýš tři. */
+/** Naléhavé zachycené zprávy, jejichž lhůta běží, nejnovější první. Nejvýš pět. */
 export function naliehaveVOkne(kandidati: Kandidat[], ted: number) {
-  return naliehaveVOkneLib(kandidati, ted, OKNO_HODIN);
+  return naliehaveVOkneLib(kandidati, ted);
 }
 
 export function UrgentniUpozorneni({
@@ -168,8 +170,8 @@ export function UrgentniUpozorneni({
         <div className="flex flex-wrap items-center gap-x-3 gap-y-1 px-4 py-3">
           <span aria-hidden className="h-[7px] w-[7px] shrink-0 rounded-full bg-klid" />
           <p className="text-male text-tlum">
-            <b className="text-inkoust">Sběr nezachytil nic naléhavého.</b> Ve sledovaných zdrojích není za posledních
-            {" "}{OKNO_HODIN} hodin vyhlášená mobilizace, krizové vysílání ani mimořádný právní stav.
+            <b className="text-inkoust">Sběr nezachytil nic naléhavého.</b> Ve sledovaných zdrojích není platná zpráva
+            o vyhlášené mobilizaci, krizovém vysílání ani mimořádném právním stavu.
           </p>
         </div>
       )}
@@ -185,9 +187,10 @@ export function UrgentniUpozorneni({
 
 /*
   Kompaktní podoba pro úvod: jeden řádek v rámečku barvy stavu — červený,
-  když platí výstraha nebo sběr zachytil naléhavou zprávu, zelený, když
-  za posledních 48 hodin nic. Jediné místo na webu, kde má rámeček barvu:
-  tady barva nese odpověď na otázku „děje se něco?“ a čte se dřív než text.
+  když platí výstraha nebo sběr zachytil naléhavou zprávu, jejíž lhůta
+  běží, zelený, když nic. Barvu rámečku má jinak jen naléhavý řádek ve
+  sloupci Signály z médií: tady barva nese odpověď na otázku „děje se
+  něco?“ a čte se dřív než text.
   Slovo a tečka jsou u toho vždycky — kdo barvy nerozliší, přečte totéž.
 */
 export function UrgentniPas({ kandidati, zkontrolovano, ted = Date.now() }: { kandidati: Kandidat[]; zkontrolovano: string | null; ted?: number }) {
@@ -230,7 +233,7 @@ export function UrgentniPas({ kandidati, zkontrolovano, ted = Date.now() }: { ka
             tvrdilo zápor bez dokladu a bez času. Teď jen to, co víme,
             a vždy s časem kontroly.
           */
-          <><b className="font-semibold text-inkoust">Náš sběr nezachytil nic naléhavého.</b> Za {OKNO_HODIN} h jsme nenašli vyhlášení mobilizace, krizové vysílání ani mimořádný stav.{zkontrolovano ? <span className="cislice text-mikro text-tlum2"> · zdroje čteny {datumCasPraha(zkontrolovano)}</span> : <span className="text-mikro text-tlum2"> · čas kontroly neznámý</span>}</>
+          <><b className="font-semibold text-inkoust">Náš sběr nezachytil nic naléhavého.</b> Nenašli jsme platnou zprávu o vyhlášení mobilizace, krizovém vysílání ani mimořádném stavu.{zkontrolovano ? <span className="cislice text-mikro text-tlum2"> · zdroje čteny {datumCasPraha(zkontrolovano)}</span> : <span className="text-mikro text-tlum2"> · čas kontroly neznámý</span>}</>
         )}
       </span>
       <Tlacitko kam="/odber/" varianta="plny" velikost="s" ikonaVpravo="nahoru" trida="shrink-0 whitespace-nowrap [&>svg:last-child]:rotate-90">Jak se to dozvíte hned</Tlacitko>

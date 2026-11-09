@@ -44,6 +44,7 @@ describe("urgentní upozornění", () => {
     expect(v.map((k) => k.publikovano)).toEqual(["2026-09-15T20:00:00Z"]);
   });
 
+  /* Krizové vysílání má lhůtu 48 hodin (src/lib/naliehave.ts, PLATNOST_HODIN); jiné druhy mají vlastní. */
   it("hranici okna drží na 48 hodinách", () => {
     const tesne = new Date(ted - 47.5 * 3_600_000).toISOString();
     const pozde = new Date(ted - 48.5 * 3_600_000).toISOString();
