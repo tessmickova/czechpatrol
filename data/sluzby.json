@@ -1,11 +1,21 @@
 {
-  "aktualizovano": "2026-11-09T16:03:46.451Z",
+  "aktualizovano": "2026-11-09T18:03:21.788Z",
   "stavy": [
     {
       "klic": "cloudflare",
       "stav": "vypadek",
       "popis": "Partial System Outage",
       "incidenty": [
+        {
+          "nazev": "Network Performance Issues in Eastern North America",
+          "odkaz": "https://www.cloudflarestatus.com/incidents/88hc76jnq2gn",
+          "aktualizovano": "2026-11-09T17:21:50.437Z"
+        },
+        {
+          "nazev": "Changes made to Workers may be delayed or disrupted",
+          "odkaz": "https://www.cloudflarestatus.com/incidents/1x0tbxpmmttu",
+          "aktualizovano": "2026-11-09T16:35:55.009Z"
+        },
         {
           "nazev": "Fedramp Customers have Delayed Purges",
           "odkaz": "https://www.cloudflarestatus.com/incidents/wp49bp8bqo6c",
@@ -18,16 +28,19 @@
         "Arica, Chile - (ARI)",
         "Annaba, Algeria - (AAE)"
       ],
-      "zkontrolovano": "2026-11-09T16:03:46.451Z",
+      "zkontrolovano": "2026-11-09T18:03:21.788Z",
       "chyba": null
     },
     {
       "klic": "zoom",
-      "stav": "provoz",
-      "popis": "All Systems Operational",
+      "stav": "omezeni",
+      "popis": "Service Under Maintenance",
       "incidenty": [],
-      "postizene": [],
-      "zkontrolovano": "2026-11-09T16:03:46.451Z",
+      "postizene": [
+        "Zoom Phone",
+        "Zoom Phone - EMEA"
+      ],
+      "zkontrolovano": "2026-11-09T18:03:21.788Z",
       "chyba": null
     },
     {
@@ -36,7 +49,7 @@
       "popis": "All Systems Operational",
       "incidenty": [],
       "postizene": [],
-      "zkontrolovano": "2026-11-09T16:03:46.451Z",
+      "zkontrolovano": "2026-11-09T18:03:21.788Z",
       "chyba": null
     }
   ]
