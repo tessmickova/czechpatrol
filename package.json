@@ -11,6 +11,8 @@
     "typecheck": "tsc --noEmit",
     "sber": "tsx sber/index.ts",
     "kmitocty": "node nastroje/kmitocty-cro.mjs",
+    "metodika:porovnani": "tsx nastroje/metodika-porovnani.ts",
+    "metodika:vzorek": "tsx nastroje/metodika-vzorek.ts",
     "sber:provoz": "tsx sber/index.ts --jen-provoz",
     "test": "vitest run testy",
     "kontrola": "npm run kontrola:data && npm test && npm run typecheck && npm run build && npm run nahled && npm ci --prefix api && npm run test:api && npm run typecheck:api",

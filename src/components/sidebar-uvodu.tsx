@@ -205,7 +205,8 @@ export function SidebarUvodu({ stav, cr, crHistoricky, crPocet, crKampane = [], 
 
       {/* Připravenost */}
       <section className="overflow-hidden rounded-[22px] bg-plocha">
-        <HlavickaWidgetu ikona="stit" nazev="AI radí dle aktuální situace" />
+        {/* Dřív „AI radí dle aktuální situace“ — jenže výběr počítá pevné pravidlo nad záznamy za 30 dní (src/lib/priprava-ted.ts), ne AI (metodika v2, audit 9. 11. 2026). */}
+        <HlavickaWidgetu ikona="stit" nazev="Co si připravit" podtitul="podle doložených událostí za 30 dní" />
         {priprava && priprava.polozky.length > 0 && (
           <ol>
             {priprava.polozky.map((p, i) => (

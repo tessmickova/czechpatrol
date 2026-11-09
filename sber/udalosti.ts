@@ -828,7 +828,10 @@ export type DruhNaliehavosti =
   | "mobilizace-rusko"
   | "priprava-mobilizace"
   | "krizove-vysilani"
+  /** Dříve jeden druh pro článek 4 i 5; zůstává kvůli starším zprávám ve frontě. */
   | "clanek-nato"
+  | "clanek-4-nato"
+  | "clanek-5-nato"
   | "pravni-stav-cr"
   | "hranice-cr"
   | "vzdusny-prostor-nato"
@@ -892,12 +895,29 @@ const SPOUSTECE: {
     kontext: ["cesky rozhlas", "ceskeho rozhlasu", "radiozurnal", "irozhlas", "ceska televize", "rozhlas"],
   },
   {
-    /* Článek 4 nebo 5 Washingtonské smlouvy. */
-    druh: "clanek-nato",
+    /*
+      Článek 5 Washingtonské smlouvy — kolektivní obrana. Podobu pomoci
+      určují spojenci; automatická mobilizace ani uzavření hranic z něj
+      neplyne (metodika v2, 9. 11. 2026).
+    */
+    druh: "clanek-5-nato",
     stupen: 1,
     sloveso: ["aktivoval", "aktivovala", "aktivovalo", "aktivace", "pozadal", "pozadala", "vyvolal",
       "invoked", "invoke", "invoking", "triggered", "requested"],
-    predmet: ["clanek 4", "clanku 4", "clanek 5", "clanku 5", "article 4", "article 5"],
+    predmet: ["clanek 5", "clanku 5", "article 5"],
+    kontext: ["nato", "aliance", "alliance", "severoatlantick", "north atlantic"],
+  },
+  {
+    /*
+      Článek 4 — konzultace spojenců. Není to předstupeň článku 5 a nic
+      neaktivuje; proto stupeň 2 (nahoru ve frontě), ne hned do kanálu
+      (metodika v2, 9. 11. 2026; dřív společný druh se stupněm 1).
+    */
+    druh: "clanek-4-nato",
+    stupen: 2,
+    sloveso: ["aktivoval", "aktivovala", "aktivovalo", "aktivace", "pozadal", "pozadala", "vyvolal",
+      "invoked", "invoke", "invoking", "triggered", "requested"],
+    predmet: ["clanek 4", "clanku 4", "article 4"],
     kontext: ["nato", "aliance", "alliance", "severoatlantick", "north atlantic"],
   },
   {

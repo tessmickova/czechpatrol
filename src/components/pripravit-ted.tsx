@@ -17,7 +17,7 @@ export function PripravitTed({ priprava }: { priprava: Data }) {
     <section aria-label="Připravit teď" className="overflow-hidden rounded-[22px] bg-plocha">
       <HlavickaWidgetu
         ikona="stit"
-        nazev="AI radí dle aktuální situace"
+        nazev="Co si připravit"
         napoveda={<span className="block">Tři věci pro domácnost podle tlaku doložených událostí za 30 dní, narušených služeb a platných opatření. Přepočítává se po každém sběru. Není to předpověď ani úřední pokyn.</span>}
         meta={<span className="cislice">přepočítáno {datumCasPraha(priprava.prepocitano)}</span>}
       />

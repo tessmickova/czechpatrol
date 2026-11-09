@@ -175,6 +175,12 @@ export interface Incident {
    * zatím není doplněný — web to musí přiznat, ne to zamlčet.
    */
   archivniZaznam?: boolean;
+  /**
+   * Metodika v2 (pilot, 9. 11. 2026): redakčně posouzená pole — vazba na ČR,
+   * stav hrozby, rozsah, tvrzení, dopad. Volitelné; co chybí, výpočet odvodí
+   * a označí jako odvozené (docs/metodika-v2/02-SPECIFIKACE.md).
+   */
+  v2?: import("./metodika2/typy").V2Zaznam;
 }
 
 export interface SouvisejiciVazba {

@@ -800,6 +800,8 @@ const NAZVY_SIGNALU = {
   "mobilizace-rusko": "vyhlášení mobilizace v Rusku",
   "krizove-vysilani": "krizové vysílání Českého rozhlasu",
   "clanek-nato": "aktivace článku 4 nebo 5 NATO",
+  "clanek-4-nato": "žádost o konzultace podle článku 4 NATO",
+  "clanek-5-nato": "aktivace článku 5 NATO (kolektivní obrana)",
   "pravni-stav-cr": "mimořádný právní stav v ČR",
   "hranice-cr": "uzavření hranic ČR",
   "priprava-mobilizace": "přípravy mobilizace v Rusku",

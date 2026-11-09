@@ -15,3 +15,6 @@ api/.dev.vars
 .strazce-testy.log
 audit-kliku.json
 .zkusenosti-tisk.html
+
+# Neveřejné porovnání metodiky v2 (repozitář je veřejný)
+.metodika-v2/

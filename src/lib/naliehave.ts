@@ -13,7 +13,10 @@ export const NAZVY_NALIEHAVE = {
   "mobilizace-rusko": "vyhlášení mobilizace v Rusku",
   "priprava-mobilizace": "přípravy mobilizace v Rusku",
   "krizove-vysilani": "krizové vysílání Českého rozhlasu",
+  /* Starší zprávy ve frontě; nové nesou článek 4 a 5 zvlášť (9. 11. 2026). */
   "clanek-nato": "článek 4 nebo 5 NATO",
+  "clanek-4-nato": "konzultace podle článku 4 NATO",
+  "clanek-5-nato": "článek 5 NATO (kolektivní obrana)",
   "pravni-stav-cr": "mimořádný právní stav v ČR",
   "hranice-cr": "uzavření hranic ČR",
   "vzdusny-prostor-nato": "narušení vzdušného prostoru Aliance",
@@ -42,6 +45,8 @@ export const PLATNOST_HODIN: Record<DruhNaliehave, number> = {
   /* Krizové vysílání je pokyn „teď si pusť rádio“; za dva dny už je to zpráva o minulosti. */
   "krizove-vysilani": 2 * DEN,
   "clanek-nato": 14 * DEN,
+  "clanek-4-nato": 7 * DEN,
+  "clanek-5-nato": 14 * DEN,
   "pravni-stav-cr": 14 * DEN,
   "hranice-cr": 7 * DEN,
   "vzdusny-prostor-nato": 3 * DEN,
@@ -54,7 +59,7 @@ export const PLATNOST_HODIN: Record<DruhNaliehave, number> = {
   tabulka i tady. Na webu z něj je tloušťka rámečku.
 */
 const STUPEN: Record<DruhNaliehave, 1 | 2> = {
-  "mobilizace-rusko": 1, "priprava-mobilizace": 2, "krizove-vysilani": 1, "clanek-nato": 1,
+  "mobilizace-rusko": 1, "priprava-mobilizace": 2, "krizove-vysilani": 1, "clanek-nato": 1, "clanek-4-nato": 2, "clanek-5-nato": 1,
   "pravni-stav-cr": 1, "hranice-cr": 1, "vzdusny-prostor-nato": 2, "hranice-nato": 2,
 };
 

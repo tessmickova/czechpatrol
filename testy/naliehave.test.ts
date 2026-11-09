@@ -78,7 +78,10 @@ describe("stupně naléhavosti", () => {
   it.each([
     ["Rusko vyhlásilo všeobecnou mobilizaci, oznámil Kreml", "mobilizace-rusko", 1],
     ["Český rozhlas zahájil mimořádné vysílání", "krizove-vysilani", 1],
-    ["Polsko aktivovalo článek 4 Severoatlantické smlouvy", "clanek-nato", 1],
+    /* Článek 4 jsou konzultace, ne předstupeň článku 5: stupeň 2 (metodika v2, 9. 11. 2026). */
+    ["Polsko aktivovalo článek 4 Severoatlantické smlouvy", "clanek-4-nato", 2],
+    ["Litva požádala o konzultace podle článku 4 NATO", "clanek-4-nato", 2],
+    ["Estonsko aktivovalo článek 5 NATO", "clanek-5-nato", 1],
     ["Vláda ČR vyhlásila nouzový stav", "pravni-stav-cr", 1],
     ["Česko uzavřelo hranice s Rakouskem", "hranice-cr", 1],
     ["Rusko rozšířilo brannou povinnost a zvýšilo věk odvodů", "priprava-mobilizace", 2],

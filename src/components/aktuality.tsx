@@ -39,6 +39,8 @@ const NAZVY_NALEHAVOSTI: Record<string, string> = {
   "priprava-mobilizace": "přípravy mobilizace",
   "krizove-vysilani": "krizové vysílání",
   "clanek-nato": "článek 4/5 NATO",
+  "clanek-4-nato": "čl. 4 NATO (konzultace)",
+  "clanek-5-nato": "čl. 5 NATO",
   "pravni-stav-cr": "právní stav ČR",
   "hranice-cr": "hranice ČR",
   "vzdusny-prostor-nato": "vzdušný prostor Aliance",
