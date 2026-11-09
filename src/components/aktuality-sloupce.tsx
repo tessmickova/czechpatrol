@@ -6,7 +6,7 @@ import { datumCasPraha, datumPraha, predKolika } from "@/lib/cas";
 import { useZiveHodiny } from "@/lib/cas-klient";
 import { kdyZjisteno, type Zaznam } from "@/lib/agregace";
 import { jeCesky } from "@/lib/jazyk";
-import { naliehaveNahoru, naliehavaDo, naliehavostSkupiny, nazevNaliehave, type NaliehavostSkupiny } from "@/lib/naliehave";
+import { naliehaveNahoru, naliehavaBezRedakci, naliehavaDo, naliehavostSkupiny, nazevNaliehave, type NaliehavostSkupiny } from "@/lib/naliehave";
 import { jeSignal, pocetZdroju, seskupSignaly } from "@/lib/signaly";
 import { KATEGORIE } from "@/lib/kategorie";
 import { JISTOTY, PASMA, UROVNE } from "@/lib/skala";
@@ -33,7 +33,8 @@ import { sklon, Vlajka } from "./zeme";
   Naléhavé nahoře (9. 11. 2026, provozovatelka): zpráva, kterou síto
   označilo jako naléhavou, nezapadne mezi ostatní. Dokud běží lhůta jejího
   druhu (src/lib/naliehave.ts), stojí ve sloupci Signály z médií nahoře,
-  seřazená podle data, s červeným rámečkem — silným u stupně 1 (mobilizace,
+  seřazená podle data, s červeným rámečkem, když o ní píší aspoň dvě
+  nezávislé redakce (s napadenou tři; téhož dne) — silným u stupně 1 (mobilizace,
   článek 5, mimořádný stav, krizové vysílání, hranice ČR), tenkým u stupně 2
   — a místo data říká „před 3 dny“. Po lhůtě se zařadí mezi ostatní podle
   data a štítek „naléhavé“ ztratí. Rámeček je uvnitř řádku, výška zůstává
@@ -56,6 +57,8 @@ interface Radek {
   naliehavost?: NaliehavostSkupiny | null;
   /* Byla naléhavá, lhůta skončila (ISO) — do rozbalení, ať čtenář ví, proč už není nahoře. */
   naliehaveSkoncilo?: string | null;
+  /* Naléhavá s běžící lhůtou, ale zatím jen od jedné redakce: nezvýrazní se, do rozbalení proč. */
+  naliehaveCeka?: { ma: number; potreba: 2 | 3 } | null;
   /* Titulek v cizím jazyce — čtenář má vědět, proč je ve sloupci anglicky. */
   cizojazycne?: boolean;
   pruh: string;
@@ -132,7 +135,8 @@ function Rozbaleni({ r }: { r: Radek }) {
         {r.cizojazycne && <span>v cizím jazyce</span>}
       </p>
       {r.naliehave && r.naliehavost && <p className="mt-1.5 text-male leading-snug text-inkoust">K okamžité kontrole: {r.naliehave}. Nahoře do {datumPraha(r.naliehavost.platiDo)}; nová zpráva o téže věci lhůtu prodlouží. Neověřeno, do počtů nevstupuje.</p>}
-      {r.naliehave && !r.naliehavost && r.naliehaveSkoncilo && <p className="mt-1.5 text-male leading-snug text-tlum">Byla označená jako naléhavá: {r.naliehave}. Lhůta skončila {datumPraha(r.naliehaveSkoncilo)}, proto už není nahoře.</p>}
+      {r.naliehave && !r.naliehavost && r.naliehaveCeka && <p className="mt-1.5 text-male leading-snug text-tlum">Síto ji označilo jako naléhavou: {r.naliehave}. Zvýrazní se, až o ní budou psát aspoň {r.naliehaveCeka.potreba} nezávislé redakce; teď {r.naliehaveCeka.ma === 1 ? "jedna" : r.naliehaveCeka.ma}.</p>}
+      {r.naliehave && !r.naliehavost && !r.naliehaveCeka && r.naliehaveSkoncilo && <p className="mt-1.5 text-male leading-snug text-tlum">Byla označená jako naléhavá: {r.naliehave}. Lhůta skončila {datumPraha(r.naliehaveSkoncilo)}, proto už není nahoře.</p>}
       {r.text && (
         <p className="mt-1.5 line-clamp-4 leading-relaxed text-tlum">
           <span className="stitek mr-1.5 text-tlum2">{r.textPopis}:</span>{r.text}
@@ -258,10 +262,11 @@ export function AktualitySloupce({ zaznamy, nepotvrzene = [], kandidati = [], te
     */
     ...skupiny.filter((g) => jeSignal(g.hlavni)).map(({ hlavni: k, polozky }): Radek => {
       const naliehavost = naliehavostSkupiny(polozky, ted);
-      const druh = naliehavost?.druh ?? polozky.find((p) => p.naliehave)?.naliehave?.druh ?? null;
+      const ceka = naliehavost ? null : naliehavaBezRedakci(polozky, ted);
+      const druh = naliehavost?.druh ?? ceka?.druh ?? polozky.find((p) => p.naliehave)?.naliehave?.druh ?? null;
       return {
       klic: `k-${k.id}`, kam: k.zdroj.url, ven: true, kodZeme: k.kodZeme, zeme: k.zeme, kdy: k.publikovano ?? k.zachyceno, titulek: k.titulek, stitek: naliehavost ? "naléhavé" : "zachyceno", pruh: "bg-tlum2",
-      naliehave: druh ? nazevNaliehave(druh) : null, naliehavost, naliehaveSkoncilo: druh && !naliehavost ? skoncilo(polozky) : null, cizojazycne: !jeCesky(k.titulek),
+      naliehave: druh ? nazevNaliehave(druh) : null, naliehavost, naliehaveSkoncilo: druh && !naliehavost && !ceka ? skoncilo(polozky) : null, naliehaveCeka: ceka ? { ma: ceka.ma, potreba: ceka.potreba } : null, cizojazycne: !jeCesky(k.titulek),
       zavaznost: null, jistota: null, kategorie: k.kategorie.map((c) => KATEGORIE[c as Kategorie]?.nazev ?? c), klice: k.kategorie, text: k.shrnuti || null, textPopis: "Zachyceno", zdroj: { nazev: k.zdroj.nazev, url: k.zdroj.url },
       zdroje: polozky.map((p) => ({ klic: p.id, nazev: p.zdroj.nazev, url: p.zdroj.url, kdy: p.publikovano ?? p.zachyceno, titulek: p.id === k.id ? null : p.titulek })),
       pocetZdroju: pocetZdroju(polozky),

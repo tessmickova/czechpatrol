@@ -567,6 +567,17 @@ zprávy o téže události, takže nové zprávy ji prodlouží:
 | přípravy mobilizace, posílení hranice NATO | 7 dní | tenký |
 | narušení vzdušného prostoru Aliance | 3 dny | tenký |
 
+**Zvýrazní se jen událost, o které píší aspoň dvě nezávislé redakce**
+(s napadenou redakcí mezi zdroji tři; doplněno téhož dne). Počítají se
+různé domény všech zpráv o události, i těch, které síto naléhavými
+neoznačilo; pravidlo je společné se zveřejněním
+(`nastroje/redakce-pravidla.mjs`, bez čtení souborů, aby běželo i na webu;
+`napadane-redakce.mjs` ho jen obaluje daty ze souboru). Naléhavá zpráva od
+jedné redakce zůstane v běžném pořadí jako „zachyceno“ a po rozbalení řekne,
+kolik redakcí chybí. Totéž platí pro Souhrn situace. Telegram a počet ve
+Správě se nemění: Správa je pracovní fronta a jednozdrojovou naléhavou
+zprávu tam správce vidět má.
+
 Tloušťka rámečku je stupeň ze sběru (1 silný, 2 tenký). Naléhavé řádky
 jsou mezi sebou podle data, pod nimi ostatní podle data. Místo data říkají
 „před 3 dny“, po rozbalení „Nahoře do …“. Po lhůtě se zařadí mezi ostatní

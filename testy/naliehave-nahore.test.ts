@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { naliehaveNahoru, naliehaveVOkne, naliehavostSkupiny, platiNaliehave, stupenNaliehave } from "../src/lib/naliehave";
+import { naliehavaBezRedakci, naliehaveNahoru, naliehaveVOkne, naliehavostSkupiny, platiNaliehave, stupenNaliehave } from "../src/lib/naliehave";
 
 /*
   Naléhavé nahoře, dokud je nebezpečí aktuální (9. 11. 2026, provozovatelka).
@@ -9,7 +9,9 @@ import { naliehaveNahoru, naliehaveVOkne, naliehavostSkupiny, platiNaliehave, st
 */
 const ted = new Date("2026-11-09T12:00:00Z").getTime();
 const pred = (hodin: number) => new Date(ted - hodin * 3_600_000).toISOString();
-const zprava = (druh: string | null, hodin: number, stupen?: 1 | 2) => ({ zachyceno: pred(hodin), publikovano: pred(hodin), naliehave: druh ? { druh, stupen } : null });
+let poradi = 0;
+/* Každá zpráva z jiné redakce, ať je ve skupině víc nezávislých zdrojů. */
+const zprava = (druh: string | null, hodin: number, stupen?: 1 | 2, domena = `redakce${++poradi}.cz`) => ({ zachyceno: pred(hodin), publikovano: pred(hodin), naliehave: druh ? { druh, stupen } : null, zdroj: { nazev: domena, url: `https://${domena}/clanek` } });
 
 describe("naléhavé nahoře", () => {
   it("lhůta podle druhu: posílení hranice týden, narušení vzdušného prostoru tři dny, krizové vysílání dva dny", () => {
@@ -38,6 +40,21 @@ describe("naléhavé nahoře", () => {
     expect(n?.platiDo).toBe(new Date(ted + 3 * 24 * 3_600_000).toISOString());
     /* Nová zpráva o téže věci lhůtu prodlouží, stará sama ne. */
     expect(naliehavostSkupiny([zprava("hranice-nato", 8 * 24)], ted)).toBeNull();
+  });
+
+  it("zvýrazní se jen s aspoň dvěma nezávislými redakcemi, s napadenou redakcí se třemi", () => {
+    /* Jedna redakce: lhůta běží, ale zvýraznění ne; řádek řekne proč. */
+    expect(naliehavostSkupiny([zprava("hranice-nato", 24)], ted)).toBeNull();
+    expect(naliehavaBezRedakci([zprava("hranice-nato", 24)], ted)).toEqual({ druh: "hranice-nato", ma: 1, potreba: 2 });
+    /* Dvě zprávy téže redakce jsou pořád jedna redakce. */
+    expect(naliehavostSkupiny([zprava("hranice-nato", 24, 2, "novinky.cz"), zprava("hranice-nato", 20, 2, "novinky.cz")], ted)).toBeNull();
+    /* Druhá redakce se počítá, i když její zprávu síto naléhavou neoznačilo. */
+    expect(naliehavostSkupiny([zprava("hranice-nato", 24), zprava(null, 20)], ted)?.druh).toBe("hranice-nato");
+    expect(naliehavaBezRedakci([zprava("hranice-nato", 24), zprava(null, 20)], ted)).toBeNull();
+    /* Napadená redakce (PAP, data/napadane-redakce.json) mezi zdroji: dvě nestačí, tři ano. */
+    const pap = zprava("hranice-nato", 24, 2, "pap.pl");
+    expect(naliehavostSkupiny([pap, zprava(null, 20)], ted)).toBeNull();
+    expect(naliehavostSkupiny([pap, zprava(null, 20), zprava(null, 10)], ted)?.stupen).toBe(2);
   });
 
   it("naléhavé podle data nahoře, ostatní podle data pod nimi", () => {
