@@ -371,9 +371,18 @@ export function PostranniPanel() {
               ))}
             </ul>
           </details>
+          {/*
+            Co naladit a co dělat v krizi (5. 11. 2026, provozovatelka: nad tísňová čísla, podle kraje,
+            bez zjišťování polohy). Na konci posouvatelného seznamu, těsně nad pevným pásem s čísly.
+            9. 11. 2026: dřív byl v pevném pásu dole — s kraji a scénáři byl tak vysoký, že vytlačil
+            celý seznam stránek a z menu zbyl useknutý první řádek.
+          */}
+          <div className="mt-2 border-t border-linka px-4 pt-4">
+            <CoNaladitVMenu />
+          </div>
         </div>
 
-        {/* tísňová čísla a zavření — vždy dole */}
+        {/* tísňová čísla a zavření — vždy dole, jen nízký pás: seznam nad ním musí zůstat vidět */}
         <div className="shrink-0 border-t border-linka px-4 py-3 pb-[calc(0.75rem+env(safe-area-inset-bottom))]">
           {/*
             Druhé tlačítko Zavřít, na dosah palce (26. 9. 2026): horní křížek
@@ -383,8 +392,6 @@ export function PostranniPanel() {
           <button type="button" onClick={zavri} className="mb-3 flex min-h-[48px] w-full items-center justify-center gap-2 rounded-full border border-linka text-zaklad font-semibold text-inkoust transition-colors hover:border-akcent">
             <Ikona nazev="krizek" velikost={15} tah={2} /> Zavřít menu
           </button>
-          {/* Co naladit v případě krize (5. 11. 2026, provozovatelka): nad tísňová čísla, podle kraje, bez zjišťování polohy. */}
-          <CoNaladitVMenu />
           {/* Tísňové linky jsou pro ohrožení života, zdraví a majetku; při výpadku nebo pro informace je nezahlcovat (5. 11. 2026). */}
           <div className="stitek mb-0.5">Nezahlcujte tato čísla</div>
           <p className="mb-1.5 text-mikro leading-snug text-tlum2">Jen při ohrožení života, zdraví nebo majetku. Informace hledejte ve vysílání výše.</p>

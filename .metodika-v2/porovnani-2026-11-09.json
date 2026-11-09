@@ -1,0 +1,855 @@
+{
+  "verze": "2.0-pilot",
+  "v1": {
+    "aktualizovano": "2026-11-09T08:03:29.006Z",
+    "uroven": null,
+    "trend": null,
+    "trendPopis": "Trend se teď nepočítá.",
+    "shrnuti": "Za posledních 14 dní nejsou aspoň dva ověřené případy, úroveň se proto nestanovuje. Neznamená to klid ani ohrožení. Je to měření, ne předpověď.",
+    "overovaniStoji": "2026-11-04T15:17:51.895Z",
+    "noveSignaly": {
+      "celkem": 0,
+      "kriticke": 0,
+      "vysoke": 0,
+      "stredni": 0
+    },
+    "mimoradny": null
+  },
+  "dny": [
+    {
+      "den": "2026-11-09",
+      "v2": {
+        "verze": "2.0-pilot",
+        "spocteno": "2026-11-09T16:54:27.378Z",
+        "a": {
+          "verze": "2.0-pilot",
+          "pasmo": null,
+          "pasmoBezVyjimky": null,
+          "spodniOdhad": false,
+          "pravidla": [
+            "A-N1"
+          ],
+          "rozhodujici": [],
+          "kontext": [],
+          "nezapocteno": [
+            {
+              "slug": "lt-7693865f77",
+              "titulek": "Litva: italské Eurofightery NATO sestřelily nad okresem Kaišiadorys dron, který podle LRT vletěl z Běloruska",
+              "zeme": "Litva",
+              "pravidlo": null,
+              "duvod": "neověřeno úředně ani člověkem; do hodnocení nevstupuje",
+              "odvozeno": [
+                "vazba (členská země (NATO, EU) a bezpečnostní kategorie; konkrétní zásah do společné bezpečnosti neposouzen)",
+                "aktivita (stav hrozby neposouzen; událost starší než 14 dní)",
+                "doložení (dvě nezávislé redakce, bez úředního zdroje)"
+              ]
+            },
+            {
+              "slug": "ee-42a895b81b",
+              "titulek": "Estonsko: prokuratura uzavřela dohodu o vině s Olegem Bessedinem, obviněným z činnosti proti státu ve prospěch Ruska; navržený trest je sedm let",
+              "zeme": "Estonsko",
+              "pravidlo": null,
+              "duvod": "neověřeno úředně ani člověkem; do hodnocení nevstupuje",
+              "odvozeno": [
+                "vazba (členská země, ale bez bezpečnostní kategorie)",
+                "aktivita (stav hrozby neposouzen; událost starší než 14 dní)",
+                "doložení (dvě nezávislé redakce, bez úředního zdroje)"
+              ]
+            },
+            {
+              "slug": "de-246402d611",
+              "titulek": "Německo: u vojenského letiště Wunstorf u Hannoveru našla policie trosky dronu, původ zatím není znám",
+              "zeme": "Německo",
+              "pravidlo": null,
+              "duvod": "neověřeno úředně ani člověkem; do hodnocení nevstupuje",
+              "odvozeno": [
+                "vazba (členská země (NATO, EU) a bezpečnostní kategorie; konkrétní zásah do společné bezpečnosti neposouzen)",
+                "aktivita (stav hrozby neposouzen; událost starší než 14 dní)",
+                "doložení (dvě nezávislé redakce, bez úředního zdroje)"
+              ]
+            },
+            {
+              "slug": "ee-005c23a0c4",
+              "titulek": "Estonsko: tři lotyšští podezřelí ze žhářství u výrobce vojenské techniky Milrem Robotics byli vydáni z Lotyšska a vzati do vazby",
+              "zeme": "Estonsko",
+              "pravidlo": null,
+              "duvod": "neověřeno úředně ani člověkem; do hodnocení nevstupuje",
+              "odvozeno": [
+                "vazba (členská země (NATO, EU) a bezpečnostní kategorie; konkrétní zásah do společné bezpečnosti neposouzen)",
+                "aktivita (stav hrozby neposouzen; událost starší než 14 dní)",
+                "doložení (dvě nezávislé redakce, bez úředního zdroje)"
+              ]
+            },
+            {
+              "slug": "ro-4a8e8295b2",
+              "titulek": "Rumunsko: dron s náloží u Viișoary",
+              "zeme": "Rumunsko",
+              "pravidlo": null,
+              "duvod": "neověřeno úředně ani člověkem; do hodnocení nevstupuje",
+              "odvozeno": [
+                "vazba (členská země (NATO, EU) a bezpečnostní kategorie; konkrétní zásah do společné bezpečnosti neposouzen)",
+                "aktivita (stav hrozby neposouzen; událost starší než 14 dní)",
+                "doložení (dvě nezávislé redakce, bez úředního zdroje)"
+              ]
+            },
+            {
+              "slug": "pl-41d14a3d41",
+              "titulek": "Polsko: požár v závodě JFG Composites",
+              "zeme": "Polsko",
+              "pravidlo": null,
+              "duvod": "neověřeno úředně ani člověkem; do hodnocení nevstupuje",
+              "odvozeno": [
+                "vazba (členská země (NATO, EU) a bezpečnostní kategorie; konkrétní zásah do společné bezpečnosti neposouzen)",
+                "aktivita (stav hrozby neposouzen; událost starší než 14 dní)",
+                "doložení (dvě nezávislé redakce, bez úředního zdroje)"
+              ]
+            },
+            {
+              "slug": "pl-0d81589740",
+              "titulek": "Polsko: odvrácená hrozba pro hraniční přechod",
+              "zeme": "Polsko",
+              "pravidlo": null,
+              "duvod": "neověřeno úředně ani člověkem; do hodnocení nevstupuje",
+              "odvozeno": [
+                "vazba (členská země (NATO, EU) a bezpečnostní kategorie; konkrétní zásah do společné bezpečnosti neposouzen)",
+                "aktivita (stav hrozby neposouzen; událost starší než 14 dní)",
+                "doložení (dvě nezávislé redakce, bez úředního zdroje)"
+              ]
+            },
+            {
+              "slug": "ro-1c8339e0b9",
+              "titulek": "Rumunsko: trosky dronu na pláži Capu Midia",
+              "zeme": "Rumunsko",
+              "pravidlo": null,
+              "duvod": "neověřeno úředně ani člověkem; do hodnocení nevstupuje",
+              "odvozeno": [
+                "vazba (členská země (NATO, EU) a bezpečnostní kategorie; konkrétní zásah do společné bezpečnosti neposouzen)",
+                "aktivita (stav hrozby neposouzen; událost starší než 14 dní)",
+                "doložení (dvě nezávislé redakce, bez úředního zdroje)"
+              ]
+            },
+            {
+              "slug": "ro-8c2cb86834",
+              "titulek": "Rumunsko: trosky dronů na pobřeží a v moři",
+              "zeme": "Rumunsko",
+              "pravidlo": null,
+              "duvod": "neověřeno úředně ani člověkem; do hodnocení nevstupuje",
+              "odvozeno": [
+                "vazba (členská země (NATO, EU) a bezpečnostní kategorie; konkrétní zásah do společné bezpečnosti neposouzen)",
+                "aktivita (stav hrozby neposouzen; událost starší než 14 dní)",
+                "doložení (dvě nezávislé redakce, bez úředního zdroje)"
+              ]
+            },
+            {
+              "slug": "pl-1a64ea48c6",
+              "titulek": "Polsko: dron s hlavicí v Baltu u Rusinowa",
+              "zeme": "Polsko",
+              "pravidlo": null,
+              "duvod": "neověřeno úředně ani člověkem; do hodnocení nevstupuje",
+              "odvozeno": [
+                "vazba (členská země (NATO, EU) a bezpečnostní kategorie; konkrétní zásah do společné bezpečnosti neposouzen)",
+                "aktivita (stav hrozby neposouzen; událost starší než 14 dní)",
+                "doložení (dvě nezávislé redakce, bez úředního zdroje)"
+              ]
+            },
+            {
+              "slug": "md-a3c89678c7",
+              "titulek": "Moldavsko: dva drony u Palanky a Cioburciu",
+              "zeme": "Moldavsko",
+              "pravidlo": null,
+              "duvod": "neověřeno úředně ani člověkem; do hodnocení nevstupuje",
+              "odvozeno": [
+                "vazba (mimo NATO a EU, bez doložené vazby na ČR)",
+                "aktivita (stav hrozby neposouzen; událost starší než 14 dní)",
+                "doložení (dvě nezávislé redakce, bez úředního zdroje)"
+              ]
+            },
+            {
+              "slug": "dk-540223fa5a",
+              "titulek": "Dánsko: ruská fregata a světlice k vrtulníku",
+              "zeme": "Dánsko",
+              "pravidlo": null,
+              "duvod": "neověřeno úředně ani člověkem; do hodnocení nevstupuje",
+              "odvozeno": [
+                "vazba (členská země (NATO, EU) a bezpečnostní kategorie; konkrétní zásah do společné bezpečnosti neposouzen)",
+                "aktivita (stav hrozby neposouzen; událost starší než 14 dní)",
+                "doložení (dvě nezávislé redakce, bez úředního zdroje)"
+              ]
+            },
+            {
+              "slug": "sk-d57e3f7bc7",
+              "titulek": "Slovensko: požár v muniční továrně ve Snině",
+              "zeme": "Slovensko",
+              "pravidlo": null,
+              "duvod": "neověřeno úředně ani člověkem; do hodnocení nevstupuje",
+              "odvozeno": [
+                "vazba (členská země (NATO, EU) a bezpečnostní kategorie; konkrétní zásah do společné bezpečnosti neposouzen)",
+                "aktivita (stav hrozby neposouzen; událost starší než 14 dní)",
+                "doložení (dvě nezávislé redakce, bez úředního zdroje)"
+              ]
+            },
+            {
+              "slug": "md-ab0ccb636e",
+              "titulek": "Moldavsko: proudový dron u Kišiněva",
+              "zeme": "Moldavsko",
+              "pravidlo": null,
+              "duvod": "neověřeno úředně ani člověkem; do hodnocení nevstupuje",
+              "odvozeno": [
+                "vazba (mimo NATO a EU, bez doložené vazby na ČR)",
+                "aktivita (stav hrozby neposouzen; událost starší než 14 dní)",
+                "doložení (dvě nezávislé redakce, bez úředního zdroje)"
+              ]
+            },
+            {
+              "slug": "lu-f859661837",
+              "titulek": "Lucembursko: drony zastavily letiště",
+              "zeme": "Lucembursko",
+              "pravidlo": null,
+              "duvod": "neověřeno úředně ani člověkem; do hodnocení nevstupuje",
+              "odvozeno": [
+                "vazba (členská země (NATO, EU) a bezpečnostní kategorie; konkrétní zásah do společné bezpečnosti neposouzen)",
+                "aktivita (stav hrozby neposouzen; událost starší než 14 dní)",
+                "doložení (dvě nezávislé redakce, bez úředního zdroje)"
+              ]
+            },
+            {
+              "slug": "md-444ebe893e",
+              "titulek": "Moldavsko: neidentifikované drony u východní hranice",
+              "zeme": "Moldavsko",
+              "pravidlo": null,
+              "duvod": "neověřeno úředně ani člověkem; do hodnocení nevstupuje",
+              "odvozeno": [
+                "vazba (mimo NATO a EU, bez doložené vazby na ČR)",
+                "aktivita (stav hrozby neposouzen; událost starší než 14 dní)",
+                "doložení (dvě nezávislé redakce, bez úředního zdroje)"
+              ]
+            },
+            {
+              "slug": "md-e2cae248d2",
+              "titulek": "Moldavsko: podezřelý přelet nad Orhei a Călărași",
+              "zeme": "Moldavsko",
+              "pravidlo": null,
+              "duvod": "neověřeno úředně ani člověkem; do hodnocení nevstupuje",
+              "odvozeno": [
+                "vazba (mimo NATO a EU, bez doložené vazby na ČR)",
+                "aktivita (stav hrozby neposouzen; událost starší než 14 dní)",
+                "doložení (dvě nezávislé redakce, bez úředního zdroje)"
+              ]
+            },
+            {
+              "slug": "ro-d2de0ee486",
+              "titulek": "Rumunsko: tři úlomky dronu v Černém moři",
+              "zeme": "Rumunsko",
+              "pravidlo": null,
+              "duvod": "neověřeno úředně ani člověkem; do hodnocení nevstupuje",
+              "odvozeno": [
+                "vazba (členská země (NATO, EU) a bezpečnostní kategorie; konkrétní zásah do společné bezpečnosti neposouzen)",
+                "aktivita (stav hrozby neposouzen; událost starší než 14 dní)",
+                "doložení (dvě nezávislé redakce, bez úředního zdroje)"
+              ]
+            },
+            {
+              "slug": "bg-65bb83cb23",
+              "titulek": "Bulharsko: výbuch ve skladu EMCO u Belice",
+              "zeme": "Bulharsko",
+              "pravidlo": null,
+              "duvod": "neověřeno úředně ani člověkem; do hodnocení nevstupuje",
+              "odvozeno": [
+                "vazba (členská země (NATO, EU) a bezpečnostní kategorie; konkrétní zásah do společné bezpečnosti neposouzen)",
+                "aktivita (stav hrozby neposouzen; událost starší než 14 dní)",
+                "doložení (dvě nezávislé redakce, bez úředního zdroje)"
+              ]
+            },
+            {
+              "slug": "pl-d6a13634e0",
+              "titulek": "Polsko: ruský vojenský vrtulník Mi-8 na 42 sekund narušil polský vzdušný prostor u Braniewa poblíž Kaliningradu",
+              "zeme": "Polsko",
+              "pravidlo": null,
+              "duvod": "neověřeno úředně ani člověkem; do hodnocení nevstupuje",
+              "odvozeno": [
+                "vazba (členská země (NATO, EU) a bezpečnostní kategorie; konkrétní zásah do společné bezpečnosti neposouzen)",
+                "aktivita (stav hrozby neposouzen; událost starší než 14 dní)",
+                "doložení (dvě nezávislé redakce, bez úředního zdroje)"
+              ]
+            },
+            {
+              "slug": "ro-c21454328d",
+              "titulek": "Rumunsko: radar zachytil vzdušný cíl u ukrajinského Vylkove poblíž hranice, vzlétly dva F-16, rumunský vzdušný prostor nebyl narušen",
+              "zeme": "Rumunsko",
+              "pravidlo": null,
+              "duvod": "neověřeno úředně ani člověkem; do hodnocení nevstupuje",
+              "odvozeno": [
+                "vazba (členská země (NATO, EU) a bezpečnostní kategorie; konkrétní zásah do společné bezpečnosti neposouzen)",
+                "aktivita (stav hrozby neposouzen; událost starší než 14 dní)",
+                "doložení (dvě nezávislé redakce, bez úředního zdroje)"
+              ]
+            },
+            {
+              "slug": "ro-dron-suceava-2026-09-24",
+              "titulek": "Rumunsko: dron se zřítil v župě Suceava, vzlétly dvě F-16",
+              "zeme": "Rumunsko",
+              "pravidlo": null,
+              "duvod": "neověřeno úředně ani člověkem; do hodnocení nevstupuje",
+              "odvozeno": [
+                "vazba (členská země (NATO, EU) a bezpečnostní kategorie; konkrétní zásah do společné bezpečnosti neposouzen)",
+                "aktivita (stav hrozby neposouzen; událost starší než 14 dní)",
+                "doložení (dvě nezávislé redakce, bez úředního zdroje)"
+              ]
+            },
+            {
+              "slug": "md-36b06b7fd8",
+              "titulek": "Moldavsko: dron s kamerou, pravděpodobně ruský typ Gerbera, dopadl a explodoval u vesnice Cernița v okrese Florești",
+              "zeme": "Moldavsko",
+              "pravidlo": null,
+              "duvod": "neověřeno úředně ani člověkem; do hodnocení nevstupuje",
+              "odvozeno": [
+                "vazba (mimo NATO a EU, bez doložené vazby na ČR)",
+                "aktivita (stav hrozby neposouzen; událost starší než 14 dní)",
+                "doložení (dvě nezávislé redakce, bez úředního zdroje)"
+              ]
+            },
+            {
+              "slug": "pl-240a0f841d",
+              "titulek": "Polsko: požár poškodil rozvodnu a generátor pozemní stanice služby Starlink ve Woli Krobowské; ABW a CBŚP prověřují podezření na sabotáž",
+              "zeme": "Polsko",
+              "pravidlo": null,
+              "duvod": "neověřeno úředně ani člověkem; do hodnocení nevstupuje",
+              "odvozeno": [
+                "vazba (členská země (NATO, EU) a bezpečnostní kategorie; konkrétní zásah do společné bezpečnosti neposouzen)",
+                "aktivita (stav hrozby neposouzen; událost starší než 14 dní)",
+                "doložení (dvě nezávislé redakce, bez úředního zdroje)"
+              ]
+            },
+            {
+              "slug": "de-b8e950bae3",
+              "titulek": "Německo: spatření dronu na 45 minut uzavřelo obě ranveje letiště Berlín-Brandenburg, policie pilota ani stroj nenašla",
+              "zeme": "Německo",
+              "pravidlo": null,
+              "duvod": "neověřeno úředně ani člověkem; do hodnocení nevstupuje",
+              "odvozeno": [
+                "vazba (členská země (NATO, EU) a bezpečnostní kategorie; konkrétní zásah do společné bezpečnosti neposouzen)",
+                "aktivita (stav hrozby neposouzen; událost starší než 14 dní)",
+                "doložení (dvě nezávislé redakce, bez úředního zdroje)"
+              ]
+            },
+            {
+              "slug": "md-8e1738bf2f",
+              "titulek": "Moldavsko: dron s označením Geran-4 dopadl a explodoval u vesnice Cotiujeni v okrese Briceni, asi 1,7 km od hranice s Ukrajinou",
+              "zeme": "Moldavsko",
+              "pravidlo": null,
+              "duvod": "neověřeno úředně ani člověkem; do hodnocení nevstupuje",
+              "odvozeno": [
+                "vazba (mimo NATO a EU, bez doložené vazby na ČR)",
+                "aktivita (stav hrozby neposouzen; událost starší než 14 dní)",
+                "doložení (dvě nezávislé redakce, bez úředního zdroje)"
+              ]
+            },
+            {
+              "slug": "gb-e480488876",
+              "titulek": "Británie: policie zadržela pět mužů podezřelých z přípravy teroristického útoku u letecké základny RAF Fairford využívané americkým letectvem",
+              "zeme": "Spojené království",
+              "pravidlo": null,
+              "duvod": "neověřeno úředně ani člověkem; do hodnocení nevstupuje",
+              "odvozeno": [
+                "vazba (členská země (NATO) a bezpečnostní kategorie; konkrétní zásah do společné bezpečnosti neposouzen)",
+                "aktivita (stav hrozby neposouzen; událost starší než 14 dní)",
+                "doložení (dvě nezávislé redakce, bez úředního zdroje)"
+              ]
+            },
+            {
+              "slug": "md-e146c86e83",
+              "titulek": "Moldavsko: trosky dronu nalezeny u vesnice Volintiri v okrese Ștefan Vodă, hraniční policie zajistila oblast",
+              "zeme": "Moldavsko",
+              "pravidlo": null,
+              "duvod": "neověřeno úředně ani člověkem; do hodnocení nevstupuje",
+              "odvozeno": [
+                "vazba (mimo NATO a EU, bez doložené vazby na ČR)",
+                "aktivita (stav hrozby neposouzen; událost starší než 14 dní)",
+                "doložení (dvě nezávislé redakce, bez úředního zdroje)"
+              ]
+            },
+            {
+              "slug": "pl-97c0b279d5",
+              "titulek": "Polsko: Okresní soud v Lublinu odsoudil běloruského občana Vitalije S. na tři a půl roku vězení za přípravu žhářského útoku na sklad v Chełmu ve prospěch cizí zpravodajské služby",
+              "zeme": "Polsko",
+              "pravidlo": null,
+              "duvod": "neověřeno úředně ani člověkem; do hodnocení nevstupuje",
+              "odvozeno": [
+                "vazba (členská země (NATO, EU) a bezpečnostní kategorie; konkrétní zásah do společné bezpečnosti neposouzen)",
+                "aktivita (stav hrozby neposouzen; událost starší než 14 dní)",
+                "doložení (dvě nezávislé redakce, bez úředního zdroje)"
+              ]
+            },
+            {
+              "slug": "md-57a5e5c278",
+              "titulek": "Moldavsko: dron zasáhl telekomunikační stožár a explodoval u vesnice Hîrbovăț v okrese Anenii Noi, bez obětí a bez výpadku spojení",
+              "zeme": "Moldavsko",
+              "pravidlo": null,
+              "duvod": "neověřeno úředně ani člověkem; do hodnocení nevstupuje",
+              "odvozeno": [
+                "vazba (mimo NATO a EU, bez doložené vazby na ČR)",
+                "aktivita (stav hrozby neposouzen; událost starší než 14 dní)",
+                "doložení (dvě nezávislé redakce, bez úředního zdroje)"
+              ]
+            },
+            {
+              "slug": "ua-fca0db17a2",
+              "titulek": "Rusko poprvé použilo proudový dron se speciální náloží na ničení ocelových sloupů vysokého napětí a mostních konstrukcí, uvedl poradce Zelenského",
+              "zeme": "Ukrajina",
+              "pravidlo": null,
+              "duvod": "neověřeno úředně ani člověkem; do hodnocení nevstupuje",
+              "odvozeno": [
+                "vazba (mimo NATO a EU, bez doložené vazby na ČR)",
+                "aktivita (stav hrozby neposouzen; událost starší než 14 dní)",
+                "doložení (dvě nezávislé redakce, bez úředního zdroje)"
+              ]
+            },
+            {
+              "slug": "ua-6c992106c6",
+              "titulek": "Rusko poprvé od začátku plné invaze zasáhlo drony most v Kyjevě — Jižní most byl zasažen ve chvíli, kdy po něm projížděla souprava metra",
+              "zeme": "Ukrajina",
+              "pravidlo": null,
+              "duvod": "neověřeno úředně ani člověkem; do hodnocení nevstupuje",
+              "odvozeno": [
+                "vazba (mimo NATO a EU, bez doložené vazby na ČR)",
+                "aktivita (stav hrozby neposouzen; událost starší než 14 dní)",
+                "doložení (dvě nezávislé redakce, bez úředního zdroje)"
+              ]
+            },
+            {
+              "slug": "ua-abd37bf6fb",
+              "titulek": "Rusko zasáhlo dronem Institut jaderného výzkumu v Kyjevě, kde je výzkumný reaktor VVR-M; reaktor i radiační pozadí zůstaly podle úřadů bez změny",
+              "zeme": "Ukrajina",
+              "pravidlo": null,
+              "duvod": "neověřeno úředně ani člověkem; do hodnocení nevstupuje",
+              "odvozeno": [
+                "vazba (mimo NATO a EU, bez doložené vazby na ČR)",
+                "aktivita (stav hrozby neposouzen; událost starší než 14 dní)",
+                "doložení (dvě nezávislé redakce, bez úředního zdroje)"
+              ]
+            },
+            {
+              "slug": "fi-22eb5f0619",
+              "titulek": "Finsko vyšetřuje sérii podezřelých vniknutí do domovů až dvacítky poslanců; prezident Stubb to nazval útokem na demokracii, premiér nevylučuje zahraniční zásah",
+              "zeme": "Finsko",
+              "pravidlo": null,
+              "duvod": "neověřeno úředně ani člověkem; do hodnocení nevstupuje",
+              "odvozeno": [
+                "vazba (členská země (NATO, EU) a bezpečnostní kategorie; konkrétní zásah do společné bezpečnosti neposouzen)",
+                "aktivita (stav hrozby neposouzen; událost starší než 14 dní)",
+                "doložení (dvě nezávislé redakce, bez úředního zdroje)"
+              ]
+            },
+            {
+              "slug": "md-10d6d0f8f0",
+              "titulek": "Moldavsko: pět dronů přeletělo vzdušný prostor, výbuch u vesnice Crocmaz způsobil požár a rozbil okna zemědělské budovy, bez zranění",
+              "zeme": "Moldavsko",
+              "pravidlo": null,
+              "duvod": "neověřeno úředně ani člověkem; do hodnocení nevstupuje",
+              "odvozeno": [
+                "vazba (mimo NATO a EU, bez doložené vazby na ČR)",
+                "aktivita (stav hrozby neposouzen; událost starší než 14 dní)",
+                "doložení (dvě nezávislé redakce, bez úředního zdroje)"
+              ]
+            },
+            {
+              "slug": "lt-19baea4b78",
+              "titulek": "Litva: nad Vilniuskem se asi 50 minut řešil letecký poplach po neznámém objektu, letiště bylo dočasně uzavřeno; ředitel krizového centra řekl, že nemůže potvrdit, zda šlo o dron, nebo o hejno ptáků",
+              "zeme": "Litva",
+              "pravidlo": null,
+              "duvod": "neověřeno úředně ani člověkem; do hodnocení nevstupuje",
+              "odvozeno": [
+                "vazba (členská země (NATO, EU) a bezpečnostní kategorie; konkrétní zásah do společné bezpečnosti neposouzen)",
+                "aktivita (stav hrozby neposouzen; událost starší než 14 dní)",
+                "doložení (dvě nezávislé redakce, bez úředního zdroje)"
+              ]
+            },
+            {
+              "slug": "bg-1489ead766",
+              "titulek": "Bulharsko: koordinovaná vlna e-mailových bombových hrozeb zasáhla školy, školky, nemocnice, soudy a úřady v patnácti městech, policie nikde nenašla výbušninu",
+              "zeme": "Bulharsko",
+              "pravidlo": null,
+              "duvod": "neověřeno úředně ani člověkem; do hodnocení nevstupuje",
+              "odvozeno": [
+                "vazba (členská země (NATO, EU) a bezpečnostní kategorie; konkrétní zásah do společné bezpečnosti neposouzen)",
+                "aktivita (stav hrozby neposouzen; událost starší než 14 dní)",
+                "doložení (dvě nezávislé redakce, bez úředního zdroje)"
+              ]
+            },
+            {
+              "slug": "lv-afd25b4121",
+              "titulek": "Lotyšsko: ozbrojení maskovaní muži z Běloruska hrozili vojákům lotyšské armády při pokusu protlačit přes hranici 20 migrantů, pak sami vstoupili na lotyšské území a ukradli bezpečnostní kamery",
+              "zeme": "Lotyšsko",
+              "pravidlo": null,
+              "duvod": "neověřeno úředně ani člověkem; do hodnocení nevstupuje",
+              "odvozeno": [
+                "vazba (členská země (NATO, EU) a bezpečnostní kategorie; konkrétní zásah do společné bezpečnosti neposouzen)",
+                "aktivita (stav hrozby neposouzen; událost starší než 14 dní)",
+                "doložení (dvě nezávislé redakce, bez úředního zdroje)"
+              ]
+            },
+            {
+              "slug": "dk-202d82851e",
+              "titulek": "Dánsko: analytička tajné služby PET Josefine Christensenová uvedla, že Rusko od léta rozjelo sabotáže proti dánským firmám dodávajícím zbraně na Ukrajinu, k náboru využívá i bezdomovce a závislé",
+              "zeme": "Dánsko",
+              "pravidlo": null,
+              "duvod": "neověřeno úředně ani člověkem; do hodnocení nevstupuje",
+              "odvozeno": [
+                "vazba (členská země (NATO, EU) a bezpečnostní kategorie; konkrétní zásah do společné bezpečnosti neposouzen)",
+                "aktivita (stav hrozby neposouzen; událost starší než 14 dní)",
+                "doložení (dvě nezávislé redakce, bez úředního zdroje)"
+              ]
+            },
+            {
+              "slug": "gb-2a93d42f53",
+              "titulek": "Spojené království: britská protiteroristická policie obvinila 24letého příslušníka Královského námořnictva Teddyho Younga ze špionáže ve prospěch cizí mocnosti",
+              "zeme": "Spojené království",
+              "pravidlo": null,
+              "duvod": "neověřeno úředně ani člověkem; do hodnocení nevstupuje",
+              "odvozeno": [
+                "vazba (členská země, ale bez bezpečnostní kategorie)",
+                "aktivita (stav hrozby neposouzen; událost starší než 14 dní)",
+                "doložení (dvě nezávislé redakce, bez úředního zdroje)"
+              ]
+            },
+            {
+              "slug": "lv-ee8a8266b3",
+              "titulek": "Spojené království: policie zadržela dva lotyšské občany po vniknutí na vojenskou základnu RAF Molesworth, kde sídlí zpravodajské operace USA a NATO",
+              "zeme": "Lotyšsko",
+              "pravidlo": null,
+              "duvod": "neověřeno úředně ani člověkem; do hodnocení nevstupuje",
+              "odvozeno": [
+                "vazba (členská země (NATO, EU) a bezpečnostní kategorie; konkrétní zásah do společné bezpečnosti neposouzen)",
+                "aktivita (stav hrozby neposouzen; událost starší než 14 dní)",
+                "doložení (dvě nezávislé redakce, bez úředního zdroje)"
+              ]
+            },
+            {
+              "slug": "me-7a2d4d7970",
+              "titulek": "Černá Hora vyhostila zakladatele ruského provalečného Telegram kanálu Rybar Michaila Zvinčuka a čtyři spolupracovníky; úřady mluví o „potenciálně nebezpečné činnosti“",
+              "zeme": "Černá Hora",
+              "pravidlo": null,
+              "duvod": "neověřeno úředně ani člověkem; do hodnocení nevstupuje",
+              "odvozeno": [
+                "vazba (členská země (NATO) a bezpečnostní kategorie; konkrétní zásah do společné bezpečnosti neposouzen)",
+                "aktivita (stav hrozby neposouzen; událost starší než 14 dní)",
+                "doložení (dvě nezávislé redakce, bez úředního zdroje)"
+              ]
+            },
+            {
+              "slug": "at-29063cafa3",
+              "titulek": "Rakousko: policie krátce zadržela dva ukrajinské muže — novináře Ukrajinské pravdy Mychajla Tkače a kameramana — pro podezření z činnosti pro cizí vojenskou zpravodajskou službu; podezření se podle prokuratury nepotvrdilo",
+              "zeme": "Rakousko",
+              "pravidlo": null,
+              "duvod": "neověřeno úředně ani člověkem; do hodnocení nevstupuje",
+              "odvozeno": [
+                "vazba (členská země, ale bez bezpečnostní kategorie)",
+                "aktivita (stav hrozby neposouzen; událost starší než 14 dní)",
+                "doložení (dvě nezávislé redakce, bez úředního zdroje)"
+              ]
+            },
+            {
+              "slug": "cz-acf30dbfa2",
+              "titulek": "Česko: policie asi tři týdny před zadržením zakladatele Rybaru v Černé Hoře zadržela a vyslechla na pražské Letné dva propagandisty téhož ruského centra a nařídila jim opustit zemi",
+              "zeme": "Česko",
+              "pravidlo": null,
+              "duvod": "neověřeno úředně ani člověkem; do hodnocení nevstupuje",
+              "odvozeno": [
+                "vazba (země události je Česko)",
+                "aktivita (stav hrozby neposouzen; událost starší než 14 dní)",
+                "doložení (dvě nezávislé redakce, bez úředního zdroje)"
+              ]
+            },
+            {
+              "slug": "md-f7fa4beec4",
+              "titulek": "Moldavsko: neznámý dron v noci na 11. 10. 2026 vybuchl v lese u vesnice Geamăna (Novoanenský okres) — druhý podobný případ od 30. 9., bez zranění",
+              "zeme": "Moldavsko",
+              "pravidlo": null,
+              "duvod": "neověřeno úředně ani člověkem; do hodnocení nevstupuje",
+              "odvozeno": [
+                "vazba (mimo NATO a EU, bez doložené vazby na ČR)",
+                "aktivita (stav hrozby neposouzen; událost starší než 14 dní)",
+                "doložení (dvě nezávislé redakce, bez úředního zdroje)"
+              ]
+            },
+            {
+              "slug": "bg-000a07a7aa",
+              "titulek": "Bulharsko: drony v Černém moři zasáhly dvě lodě u bulharského pobřeží, nákladní loď Chelsea 3 se potopila; podle Zelenského společné vyšetřování s bulharským námořnictvem ukázalo na Rusko",
+              "zeme": "Bulharsko",
+              "pravidlo": null,
+              "duvod": "neověřeno úředně ani člověkem; do hodnocení nevstupuje",
+              "odvozeno": [
+                "vazba (členská země (NATO, EU) a bezpečnostní kategorie; konkrétní zásah do společné bezpečnosti neposouzen)",
+                "aktivita (stav hrozby neposouzen; událost starší než 14 dní)",
+                "doložení (dvě nezávislé redakce, bez úředního zdroje)"
+              ]
+            },
+            {
+              "slug": "ro-29b06742b1",
+              "titulek": "Rumunsko: dron krátce narušil vzdušný prostor u Suliny, vzlétly dvě stíhačky F-16, poté přeletěl do Ukrajiny, kde jej sestřelila ukrajinská protivzdušná obrana",
+              "zeme": "Rumunsko",
+              "pravidlo": null,
+              "duvod": "neověřeno úředně ani člověkem; do hodnocení nevstupuje",
+              "odvozeno": [
+                "vazba (členská země (NATO, EU) a bezpečnostní kategorie; konkrétní zásah do společné bezpečnosti neposouzen)",
+                "aktivita (stav hrozby neposouzen; událost starší než 14 dní)",
+                "doložení (dvě nezávislé redakce, bez úředního zdroje)"
+              ]
+            },
+            {
+              "slug": "ro-59afb048ed",
+              "titulek": "Rumunsko: na nákladní lodi Yara J asi 10 námořních mil od pobřeží u Sulina vypukl požár po možném zásahu dronem; ministr Miruță ale míru jistoty o zásahu zpochybnil",
+              "zeme": "Rumunsko",
+              "pravidlo": null,
+              "duvod": "neověřeno úředně ani člověkem; do hodnocení nevstupuje",
+              "odvozeno": [
+                "vazba (členská země (NATO, EU) a bezpečnostní kategorie; konkrétní zásah do společné bezpečnosti neposouzen)",
+                "aktivita (stav hrozby neposouzen; událost starší než 14 dní)",
+                "doložení (dvě nezávislé redakce, bez úředního zdroje)"
+              ]
+            },
+            {
+              "slug": "se-cd615d058c",
+              "titulek": "Rusko: FSB oznámila zadržení švédského občana v Pskovské oblasti, obviňuje ho z boje za Ukrajinu a plánování sabotáží na ruském území",
+              "zeme": "Švédsko",
+              "pravidlo": null,
+              "duvod": "neověřeno úředně ani člověkem; do hodnocení nevstupuje",
+              "odvozeno": [
+                "vazba (členská země (NATO, EU) a bezpečnostní kategorie; konkrétní zásah do společné bezpečnosti neposouzen)",
+                "aktivita (stav hrozby neposouzen; událost starší než 14 dní)",
+                "doložení (dvě nezávislé redakce, bez úředního zdroje)"
+              ]
+            },
+            {
+              "slug": "ro-5cd3d99956",
+              "titulek": "Rumunsko: v Černém moři asi 13 námořních mil jihovýchodně od Suliny hoří nákladní loď Wine Trader, sedm z dvanácti členů posádky je nezvěstných; nepotvrzená svědectví mluví o zásahu drony",
+              "zeme": "Rumunsko",
+              "pravidlo": null,
+              "duvod": "neověřeno úředně ani člověkem; do hodnocení nevstupuje",
+              "odvozeno": [
+                "vazba (členská země (NATO, EU) a bezpečnostní kategorie; konkrétní zásah do společné bezpečnosti neposouzen)",
+                "aktivita (stav hrozby neposouzen; událost starší než 14 dní)",
+                "doložení (dvě nezávislé redakce, bez úředního zdroje)"
+              ]
+            },
+            {
+              "slug": "lt-3ccc2b0d1e",
+              "titulek": "Litva: nad okresem Biržai u lotyšské hranice NATO stíhačky sledovaly neznámý objekt, podle prezidenta Nausėdy dron explodoval; podobné poplachy téhož rána v Lotyšsku a Polsku",
+              "zeme": "Litva",
+              "pravidlo": null,
+              "duvod": "neověřeno úředně ani člověkem; do hodnocení nevstupuje",
+              "odvozeno": [
+                "vazba (členská země (NATO, EU) a bezpečnostní kategorie; konkrétní zásah do společné bezpečnosti neposouzen)",
+                "aktivita (stav hrozby neposouzen; událost starší než 14 dní)",
+                "doložení (dvě nezávislé redakce, bez úředního zdroje)"
+              ]
+            },
+            {
+              "slug": "lt-a97340baf7",
+              "titulek": "Litva zabránila žhářskému útoku na firmu uchovávající vybavení Starlink, premiér Sinkevičius vinu připisuje Rusku",
+              "zeme": "Litva",
+              "pravidlo": null,
+              "duvod": "neověřeno úředně ani člověkem; do hodnocení nevstupuje",
+              "odvozeno": [
+                "vazba (členská země (NATO, EU) a bezpečnostní kategorie; konkrétní zásah do společné bezpečnosti neposouzen)",
+                "aktivita (stav hrozby neposouzen; událost starší než 14 dní)",
+                "doložení (dvě nezávislé redakce, bez úředního zdroje)"
+              ]
+            },
+            {
+              "slug": "eu-kyberutoky-chlazeni-obchody-2026-11",
+              "titulek": "Evropa: kyberútoky na chlazení v supermarketech v několika zemích EU",
+              "zeme": "Evropa",
+              "pravidlo": null,
+              "duvod": "neověřeno úředně ani člověkem; do hodnocení nevstupuje",
+              "odvozeno": [
+                "vazba (členská země (EU) a bezpečnostní kategorie; konkrétní zásah do společné bezpečnosti neposouzen)",
+                "aktivita (stav hrozby neposouzen; událost z 2026-11-02, do 14 dní)",
+                "doložení (dvě nezávislé redakce, bez úředního zdroje)"
+              ]
+            },
+            {
+              "slug": "eu-bombove-hrozby-lety-2026-11",
+              "titulek": "Evropa: vlna bombových hrozeb proti letům, nouzová přistání, výbušniny nenalezeny",
+              "zeme": "Evropa",
+              "pravidlo": null,
+              "duvod": "neověřeno úředně ani člověkem; do hodnocení nevstupuje",
+              "odvozeno": [
+                "vazba (členská země (EU) a bezpečnostní kategorie; konkrétní zásah do společné bezpečnosti neposouzen)",
+                "aktivita (stav hrozby neposouzen; událost z 2026-11-02, do 14 dní)",
+                "doložení (dvě nezávislé redakce, bez úředního zdroje)"
+              ]
+            }
+          ],
+          "neaktualni": [],
+          "noveZjisteni": [],
+          "coByZmenilo": [],
+          "kvalita": {
+            "stav": "nedostatecna",
+            "duvody": [
+              "podklady pro hodnocení nejsou úplné"
+            ],
+            "duvodyInterni": [
+              "ověřování zachycených zpráv stojí od 2026-11-04"
+            ]
+          },
+          "zmena": {
+            "predtim": "omezeny",
+            "smer": "nelze"
+          },
+          "vyjimka": null,
+          "cekaNaPosouzeni": [],
+          "predbezne": false,
+          "vysvetleni": "Aktuální hodnocení není k dispozici: podklady pro hodnocení nejsou úplné (A-N1)."
+        },
+        "b": {
+          "funkce": [
+            {
+              "funkce": "bezpeci-osob",
+              "nazev": "Bezpečí osob na místě",
+              "stav": "nezname",
+              "intenzita": null,
+              "dopady": [],
+              "obnoveno": [],
+              "pokryti": "nesledujeme",
+              "zkontrolovano": null
+            },
+            {
+              "funkce": "zdravotni-pece",
+              "nazev": "Zdravotní péče",
+              "stav": "nezname",
+              "intenzita": null,
+              "dopady": [],
+              "obnoveno": [],
+              "pokryti": "nesledujeme",
+              "zkontrolovano": null
+            },
+            {
+              "funkce": "elektrina",
+              "nazev": "Elektřina",
+              "stav": "bez-dolozeneho-omezeni",
+              "intenzita": null,
+              "dopady": [],
+              "obnoveno": [],
+              "pokryti": "orientační (neúplný seznam zdrojů)",
+              "zkontrolovano": "2026-11-09T16:00:52.935Z"
+            },
+            {
+              "funkce": "voda",
+              "nazev": "Voda",
+              "stav": "nezname",
+              "intenzita": null,
+              "dopady": [],
+              "obnoveno": [],
+              "pokryti": "nesledujeme",
+              "zkontrolovano": null
+            },
+            {
+              "funkce": "teplo-plyn",
+              "nazev": "Teplo a plyn",
+              "stav": "bez-dolozeneho-omezeni",
+              "intenzita": null,
+              "dopady": [],
+              "obnoveno": [],
+              "pokryti": "orientační (neúplný seznam zdrojů)",
+              "zkontrolovano": "2026-11-09T16:00:52.935Z"
+            },
+            {
+              "funkce": "doprava",
+              "nazev": "Doprava",
+              "stav": "bez-dolozeneho-omezeni",
+              "intenzita": null,
+              "dopady": [],
+              "obnoveno": [],
+              "pokryti": "orientační (neúplný seznam zdrojů)",
+              "zkontrolovano": "2026-11-09T16:00:52.935Z"
+            },
+            {
+              "funkce": "palivo",
+              "nazev": "Palivo",
+              "stav": "bez-dolozeneho-omezeni",
+              "intenzita": null,
+              "dopady": [],
+              "obnoveno": [],
+              "pokryti": "orientační (neúplný seznam zdrojů)",
+              "zkontrolovano": "2026-11-09T16:00:52.935Z"
+            },
+            {
+              "funkce": "komunikace",
+              "nazev": "Mobilní síť a internet",
+              "stav": "bez-dolozeneho-omezeni",
+              "intenzita": null,
+              "dopady": [],
+              "obnoveno": [],
+              "pokryti": "orientační (neúplný seznam zdrojů)",
+              "zkontrolovano": "2026-11-09T16:00:52.935Z"
+            },
+            {
+              "funkce": "platby",
+              "nazev": "Platby a hotovost",
+              "stav": "bez-dolozeneho-omezeni",
+              "intenzita": null,
+              "dopady": [],
+              "obnoveno": [],
+              "pokryti": "orientační (neúplný seznam zdrojů)",
+              "zkontrolovano": "2026-11-09T16:00:52.935Z"
+            },
+            {
+              "funkce": "verejne-sluzby",
+              "nazev": "Školy a veřejné služby",
+              "stav": "nezname",
+              "intenzita": null,
+              "dopady": [],
+              "obnoveno": [],
+              "pokryti": "zdroj nedostupný",
+              "zkontrolovano": "2026-11-09T16:00:52.935Z"
+            },
+            {
+              "funkce": "hranice",
+              "nazev": "Hranice a vycestování",
+              "stav": "bez-dolozeneho-omezeni",
+              "intenzita": null,
+              "dopady": [],
+              "obnoveno": [],
+              "pokryti": "orientační (neúplný seznam zdrojů)",
+              "zkontrolovano": "2026-11-09T16:00:52.935Z"
+            }
+          ],
+          "mistni": [],
+          "souhrn": "V kontrolovaných zdrojích bez doloženého celostátního omezení, stav k 9. 11. 16:00 UTC. Místní situace se může lišit. Bez údaje: zdravotní péče, voda, školy a veřejné služby."
+        },
+        "c": {
+          "plati": [],
+          "nedolozeno": [
+            "Stav ohrožení státu",
+            "Válečný stav",
+            "Mobilizace ozbrojených sil",
+            "Nouzový stav",
+            "Omezení obecného vycestování z ČR",
+            "Mimořádné uzavření hranic",
+            "Mimořádná bezpečnostní schůze Parlamentu"
+          ],
+          "stavOhrozeni": false,
+          "valecnyStav": false,
+          "poznamky": [
+            "Stupně teroristického ohrožení (A–D) vyhlašuje Ministerstvo vnitra; CzechPatrol je nepřebírá ani neověřuje."
+          ]
+        },
+        "souhrn": {
+          "coSeZmenilo": "Aktuální hodnocení není k dispozici; změnu proti 2. 11. proto neuvádíme.",
+          "procDulezite": "Aktuální hodnocení není k dispozici: podklady pro hodnocení nejsou úplné (A-N1).",
+          "dopad": "V kontrolovaných zdrojích bez doloženého celostátního omezení, stav k 9. 11. 16:00 UTC. Místní situace se může lišit. Bez údaje: zdravotní péče, voda, školy a veřejné služby.",
+          "coDelat": "Pásmo samo není výzvou k jednání. Pokyny pro obyvatele vydávají úřady; když nějaký platí, je uvedený u úředních výstrah s vydavatelem a územím. Obecnou připravenost domácnosti popisuje průvodce připraveností; s aktuálním pásmem nesouvisí.",
+          "coNevime": [
+            "podklady pro hodnocení nejsou úplné",
+            "54 událostí nevstupuje do pásma, protože není ověřená, potvrzená nebo je sporná či vyvrácená",
+            "Bezpečí osob na místě: bez údaje (nesledujeme)",
+            "Zdravotní péče: bez údaje (nesledujeme)",
+            "Voda: bez údaje (nesledujeme)",
+            "Školy a veřejné služby: bez údaje (zdroj nedostupný)"
+          ]
+        }
+      }
+    }
+  ]
+}
