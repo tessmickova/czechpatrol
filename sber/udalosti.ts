@@ -685,7 +685,7 @@ function ctiKandidaty(): Kandidat[] {
     const stare = JSON.parse(fs.readFileSync(SOUBOR, "utf-8")) as Kandidat[];
     // Id se odvozuje z adresy; starší zápisy se přepočítají a duplicitní adresy se nechají jen jednou.
     const podleAdresy = new Map<string, Kandidat>();
-    for (const k of stare) if (!podleAdresy.has(k.zdroj.url)) podleAdresy.set(k.zdroj.url, { ...k, id: kandidatId(k.zdroj.url) });
+    for (const k of stare) if (!podleAdresy.has(k.zdroj.url)) podleAdresy.set(k.zdroj.url, { ...k, id: kandidatId(k.zdroj.url), ...zemeKandidata(k) });
     return [...podleAdresy.values()];
   } catch { return []; }
 }
@@ -703,7 +703,70 @@ export function otisk(titulek: string): string {
   return normalizuj(titulek).replace(/[^a-z0-9 ]/g, " ").split(/\s+/).filter(Boolean).slice(0, 8).join(" ");
 }
 
-export function odhadniZemi(text: string): { kod: string; nazev: string } | null {
+/*
+  Země čekajícího kandidáta podle titulku (9. 11. 2026): oprava pravidla tak
+  dorazí i ke zprávám, které už ve frontě jsou. Jen titulek — shrnutí je
+  uložené zkrácené na 300 znaků a přepočet nad ním by zemi spíš ztratil.
+  Když titulek zemi nejmenuje, zůstává uložená. Zemi od modelu (klasifikace
+  „model“) nebo zapsanou ručně to nepřepíše.
+*/
+function zemeKandidata(k: Kandidat): Partial<Kandidat> {
+  if (k.klasifikace !== "pravidla") return {};
+  const z = zemeZTitulku(k.titulekPuvodni || k.titulek);
+  return z ? { kodZeme: z.kod, zeme: z.nazev } : {};
+}
+
+const vzorSlova = (slovo: string, koncovka: boolean) =>
+  new RegExp(`(^|[^a-z0-9])${slovo.trim().replace(/[.*+?^${}()|[\]\\]/g, "\\$&").replace(/\s+/g, "\\s+")}${koncovka ? "[a-z]*" : ""}([^a-z0-9]|$)`);
+
+/*
+  Místo za předložkou trasy je start nebo cíl letu, ne místo události:
+  „Dublin-Rome flight lands in France“, „mířící do Prahy“. V titulku se
+  proto přeskočí; když nezbude nic, rozhodne dosavadní pravidlo.
+*/
+const TRASA_PRED = /(?:^|[^a-z0-9])(?:to|from|do|z|ze|od|nach|von|vers|spre|catre)\s+$|[a-z]-$/;
+
+/** Kde v (normalizovaném) titulku země poprvé padne mimo trasu letu, nebo -1. */
+function kdeZeme(t: string, z: (typeof ZEME)[number]): number {
+  let nej = -1;
+  const zkus = (vzor: RegExp) => {
+    const re = new RegExp(vzor.source, "g");
+    for (let m = re.exec(t); m; m = re.exec(t)) {
+      const zacatek = m.index + m[1].length;
+      if (!TRASA_PRED.test(t.slice(0, zacatek))) { if (nej === -1 || zacatek < nej) nej = zacatek; break; }
+      re.lastIndex = zacatek + 1;
+    }
+  };
+  for (const sl of z.slova) zkus(vzorSlova(sl, true));
+  for (const sl of z.presna ?? []) zkus(vzorSlova(sl, false));
+  return nej;
+}
+
+const MIMO_EVROPSKA_FRONTA = new Set(["RU", "UA", "BY"]);
+
+/*
+  Rusko, Ukrajina a Bělorusko v titulku nerozhodují: „Russian attack on
+  Odesa“ je útok na Ukrajině, ale „Russian“ stojí první. U nich zůstává
+  dosavadní pravidlo nad celým textem.
+*/
+export function zemeZTitulku(titulek: string): { kod: string; nazev: string } | null {
+  const tt = normalizuj(titulek);
+  const v = ZEME.filter((z) => !MIMO_EVROPSKA_FRONTA.has(z.kod)).map((z) => ({ z, i: kdeZeme(tt, z) })).filter((x) => x.i >= 0).sort((a, b) => a.i - b.i)[0];
+  return v ? { kod: v.z.kod, nazev: v.z.nazev } : null;
+}
+
+/**
+ * Země, kde se věc stala.
+ *
+ * Titulek má přednost (9. 11. 2026, provozovatelka: „vlaječky mají značit
+ * zemi, ve které se to stalo“). Dřív vyhrála první země ze seznamu ZEME,
+ * která padla kdekoli v titulku nebo shrnutí — a Česko je v seznamu první.
+ * Zpráva „Francie vyšetřuje bombové výhrůžky letadlům“, jejíž shrnutí
+ * zmínilo lety do Prahy, tak nesla českou vlajku. Teď rozhoduje země, která
+ * v titulku padne nejdřív, mimo Rusko, Ukrajinu a Bělorusko; jinak platí
+ * dosavadní pravidlo nad celým textem.
+ */
+export function odhadniZemi(text: string, titulek?: string): { kod: string; nazev: string } | null {
   const t = normalizuj(text);
   /*
     Slovo se hledá od začátku slova, ne kdekoli uvnitř — stejně jako u klíčových
@@ -719,6 +782,8 @@ export function odhadniZemi(text: string): { kod: string; nazev: string } | null
     že zastavené letiště v Litvě je zpráva z Česka.
   */
   if (naliehavost(text)?.druh === "krizove-vysilani") return { kod: "CZ", nazev: "Česko" };
+  const zTitulku = titulek ? zemeZTitulku(titulek) : null;
+  if (zTitulku) return zTitulku;
   const shody = ZEME.filter(
     (z) => z.slova.some((sl) => obsahujeSlovo(t, sl.trim())) || (z.presna ?? []).some((sl) => obsahujeToken(t, sl)),
   );
@@ -1270,7 +1335,7 @@ export async function sbirejUdalosti(): Promise<{ novych: number; celkem: number
       }
       const o = otisk(p.nadpis);
       if (otisky.has(o) || zname.otisky.has(o)) continue;
-      const zeme = odhadniZemi(text);
+      const zeme = odhadniZemi(text, p.nadpis);
       const { kategorie, shody } = odhadniTemata(text);
       const id = kandidatId(p.odkaz);
       nove.push({

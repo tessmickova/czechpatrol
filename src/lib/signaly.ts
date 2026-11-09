@@ -50,33 +50,11 @@ import { kmenyTitulku } from "../../nastroje/podobna-udalost.mjs";
 export interface ZdrojSignalu { nazev: string; url: string }
 
 /*
-  Odkud zpráva přichází (3. 11. 2026, provozovatelka: „vlaječky, ze kterých
-  zemí varování přichází“). Země redakce, ne země události: nejdřív ze jména
-  zdroje („SME (Slovensko)“), pak z národní domény, pak z krátkého seznamu
-  známých redakcí bez národní domény. Co se nepozná, zůstane bez vlajky —
-  hádat zemi podle jazyka by bylo horší než nic (Meduza píše rusky z Rigy).
+  Vlajka na webu je země, kde se věc stala (9. 11. 2026, provozovatelka:
+  „vlaječky mají značit zemi, ve které se to stalo, ne která o tom
+  informuje“). Od 3. 11. tu byla funkce, která hádala zemi redakce ze jména
+  a domény; s tím rozhodnutím odešla. Zemi události nese kandidát (kodZeme).
 */
-const ZEME_VE_JMENU: [string, string][] = [
-  ["Slovensk", "SK"], ["Polsk", "PL"], ["Maďarsk", "HU"], ["Rakousk", "AT"], ["Německ", "DE"], ["Franci", "FR"], ["Itáli", "IT"],
-  ["Litv", "LT"], ["Lotyšsk", "LV"], ["Estonsk", "EE"], ["Lucembursk", "LU"], ["Rumunsk", "RO"], ["Bulharsk", "BG"], ["Dánsk", "DK"],
-  ["Finsk", "FI"], ["Švédsk", "SE"], ["Norsk", "NO"], ["Nizozemsk", "NL"], ["Belgi", "BE"], ["Ukrajin", "UA"], ["Britán", "GB"], ["Moldav", "MD"],
-];
-const ZNAME_HOSTY: [string, string][] = [
-  ["ukrinform.net", "UA"], ["kyivindependent.com", "UA"], ["theguardian.com", "GB"], ["france24.com", "FR"], ["euronews.com", "EU"],
-  ["politico.eu", "EU"], ["notesfrompoland.com", "PL"], ["tvpworld.com", "PL"], ["balkaninsight.com", "EU"],
-];
-const NARODNI_DOMENY = new Set(["cz", "sk", "pl", "lv", "lt", "ee", "de", "at", "hu", "ro", "md", "fr", "it", "bg", "dk", "fi", "se", "no", "nl", "be", "lu", "ua", "es", "pt", "ch", "ie", "gr", "hr", "si"]);
-
-export function zemeZdroje(zdroj: ZdrojSignalu): string | null {
-  const m = zdroj.nazev.match(/\(([^)]+)\)/);
-  if (m) for (const [jmeno, kod] of ZEME_VE_JMENU) if (m[1].includes(jmeno)) return kod;
-  let host: string;
-  try { host = new URL(zdroj.url).hostname.toLowerCase().replace(/^www\./, ""); } catch { return null; }
-  for (const [h, kod] of ZNAME_HOSTY) if (host === h || host.endsWith(`.${h}`)) return kod;
-  const tld = host.split(".").at(-1) ?? "";
-  if (tld === "uk") return "GB";
-  return NARODNI_DOMENY.has(tld) ? tld.toUpperCase() : null;
-}
 
 type ProSkupinu = Zachycena & { id: string; publikovano?: string | null; zachyceno: string; naliehave?: { druh: string } | null };
 

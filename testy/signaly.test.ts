@@ -40,7 +40,7 @@ describe("signály z médií", () => {
   Jedna událost, víc zpráv (3. 11. 2026): nouzové přistání u Varšavy přišlo
   z pěti redakcí a ve sloupci stálo pětkrát. Titulky jsou skutečné.
 */
-import { pocetZdroju, seskupSignaly, zemeZdroje } from "../src/lib/signaly";
+import { pocetZdroju, seskupSignaly } from "../src/lib/signaly";
 
 const z = (id: string, kod: string, kdy: string, nazev: string, url: string, titulek: string, naliehave: { druh: string } | null = null) =>
   ({ id, kodZeme: kod, publikovano: kdy, zachyceno: kdy, zdroj: { nazev, url }, titulek, naliehave });
@@ -95,20 +95,6 @@ describe("jedna událost, víc zpráv", () => {
     const a = varsava[1];
     const b = { ...varsava[2], id: "x", publikovano: "2026-11-06T09:52:00Z", zachyceno: "2026-11-06T09:52:00Z" };
     expect(seskupSignaly([...pozadi, a, b]).filter((g) => g.polozky.some((p) => p.kodZeme === "PL"))).toHaveLength(2);
-  });
-});
-
-describe("odkud zpráva přichází", () => {
-  it("země redakce ze jména, z národní domény nebo ze známé redakce; jinak bez vlajky", () => {
-    expect(zemeZdroje({ nazev: "SME (Slovensko)", url: "https://www.sme.sk/x" })).toBe("SK");
-    expect(zemeZdroje({ nazev: "BTA (státní agentura Bulharska)", url: "https://www.bta.bg/x" })).toBe("BG");
-    expect(zemeZdroje({ nazev: "Ukrainska Pravda (anglicky)", url: "https://www.pravda.com.ua/eng/x" })).toBe("UA");
-    expect(zemeZdroje({ nazev: "BBC News — Europe", url: "https://www.bbc.co.uk/news/x" })).toBe("GB");
-    expect(zemeZdroje({ nazev: "The Kyiv Independent", url: "https://kyivindependent.com/x" })).toBe("UA");
-    expect(zemeZdroje({ nazev: "Novinky.cz", url: "https://www.novinky.cz/x" })).toBe("CZ");
-    expect(zemeZdroje({ nazev: "Meduza (anglicky)", url: "https://meduza.io/en/x" })).toBeNull();
-    expect(zemeZdroje({ nazev: "The Moscow Times", url: "https://www.themoscowtimes.com/x" })).toBeNull();
-    expect(zemeZdroje({ nazev: "?", url: "není adresa" })).toBeNull();
   });
 });
 

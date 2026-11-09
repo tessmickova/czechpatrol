@@ -598,7 +598,7 @@ export function Dashboard({
             {/* Na mobilu je „Upozornění“ hned pod tím v řadě tlačítek — dvakrát totéž nepotřebujeme. */}
             <div className="mt-4 max-lg:hidden"><Tlacitko kam="/odber/" varianta="obrys" velikost="m" ikona="zvonek">Odběr zpráv</Tlacitko></div>
           </div>
-          <div id="podrobny-monitoring" className="order-3 min-w-0 scroll-mt-20 lg:order-none lg:col-start-1 lg:row-start-2"><AktualitySloupce zaznamy={vse} nepotvrzene={nepotvrzene} kandidati={kandidati} /></div>
+          <div id="podrobny-monitoring" className="order-3 min-w-0 scroll-mt-20 lg:order-none lg:col-start-1 lg:row-start-2"><AktualitySloupce zaznamy={vse} nepotvrzene={nepotvrzene} kandidati={kandidati} ted={tedMs} /></div>
           <div className="order-2 min-w-0 lg:order-none lg:col-start-2 lg:row-span-2 lg:row-start-1">
           <SidebarUvodu stav={stav} cr={cr} crHistoricky={crHistoricky} crPocet={crPocet} crKampane={crKampane} internet={internet} obcane={obcane} pulz={pulz} priprava={priprava} {...casyProPanel(vse, kampane)} kandidati={kandidati} zkontrolovano={overeno} ted={tedMs}
             tipy={<TipyBox ted={tedMs} />} />
