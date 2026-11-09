@@ -8,6 +8,7 @@ import type { OficialniNastroj, PravniPolozka, ProvozniPolozka, OpatreniZeme, Op
 } from "./typy";
 import { PORADI_KATEGORII } from "./kategorie";
 import { UROVNE } from "./skala";
+import { sOdchylkami } from "./odchylky";
 
 import ostreIncidenty from "../../data/incidenty.json";
 import ostryStav from "../../data/stav.json";
@@ -495,10 +496,34 @@ export function odmitnute(): Odmitnuty[] {
  * mezi novinkami, přestože o něm je rozhodnuto.
  */
 export function kandidati(): Kandidat[] {
-  return jako<Kandidat[]>(ostriKandidati)
+  /*
+    Odchylky mezi zdroji (src/lib/odchylky.ts) se počítají tady, dokud je
+    k dispozici výřez článku, a výřez se pak zahodí: k porovnání stačí na
+    serveru, do prohlížeče nepatří (dřív odcházelo až 1 200 znaků cizího
+    článku u každé zprávy; úvod tím zhubl o pětinu, 9. 11. 2026).
+  */
+  kandidatiCache ??= sOdchylkami(kandidatiSVyrezem());
+  return kandidatiCache;
+}
+let kandidatiCache: Kandidat[] | undefined;
+
+function kandidatiSVyrezem() {
+  return jako<(Kandidat & { vyrez?: { text?: string | null } | null })[]>(ostriKandidati)
     .filter((k) => k.stav !== "vyrizen")
     .slice()
     .sort((a, b) => (b.publikovano ?? b.zachyceno).localeCompare(a.publikovano ?? a.zachyceno));
+}
+
+/**
+ * Zachycené pro úvod: naléhavé a z posledních 72 hodin.
+ *
+ * Odchylky se tu počítají znovu nad tímtéž výběrem: seskupení zpráv do
+ * událostí závisí na tom, z čeho se skládá (časté slovo v celé frontě není
+ * časté ve třech dnech), a značka „2 jiné zdroje o téže události ne“ musí
+ * mluvit o týchž zdrojích, které čtenář po rozbalení řádku vidí.
+ */
+export function kandidatiUvodu(ted = Date.now()): Kandidat[] {
+  return sOdchylkami(kandidatiSVyrezem().filter((k) => k.naliehave || ted - new Date(k.publikovano ?? k.zachyceno).getTime() <= 72 * 3_600_000), ted);
 }
 
 /**

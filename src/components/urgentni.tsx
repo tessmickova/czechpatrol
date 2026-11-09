@@ -6,7 +6,7 @@ import Link from "next/link";
 import { datumCasPraha, datumPraha } from "@/lib/cas";
 import { useZiveHodiny } from "@/lib/cas-klient";
 import { vystraha } from "@/lib/data-lehka";
-import { NAZVY_NALIEHAVE, naliehaveVOkne as naliehaveVOkneLib } from "@/lib/naliehave";
+import { NAZVY_NALIEHAVE, naliehaveVOkne as naliehaveVOkneLib, naliehavostSkupiny } from "@/lib/naliehave";
 import { pocetZdroju, seskupSignaly } from "@/lib/signaly";
 import type { Kandidat } from "@/lib/typy";
 import { Ikona } from "./ikony";
@@ -60,8 +60,11 @@ export function stavNalehavosti(kandidati: Kandidat[], zkontrolovano: string | n
     kolik zdrojů o ní píše. Pravidlo slučování je společné (src/lib/signaly.ts).
   */
   const vOkne = new Set(naliehaveVOkneLib(kandidati, ted, undefined, 100).map((k) => k.id));
-  /* Skupiny se dělají nad všemi zachycenými (i neoznačenými), aby počet zdrojů vyšel stejně jako ve sloupci; zůstanou ty s naléhavou zprávou v okně. */
-  const n = seskupSignaly(kandidati).filter((g) => g.polozky.some((p) => vOkne.has(p.id))).slice(0, 5);
+  /*
+    Skupiny se dělají nad všemi zachycenými (i neoznačenými), aby počet zdrojů vyšel stejně jako ve sloupci.
+    Zůstanou ty, které sloupec zvýrazní: naléhavá zpráva v okně a aspoň dvě nezávislé redakce (9. 11. 2026).
+  */
+  const n = seskupSignaly(kandidati).filter((g) => g.polozky.some((p) => vOkne.has(p.id)) && naliehavostSkupiny(g.polozky, ted)).slice(0, 5);
   /*
     Položky jdou ven i jednotlivě: souhrn v úvodu na ně odkazuje (fronta
     na stránce Události s kotvou na kandidáta), aby čtenář i správce

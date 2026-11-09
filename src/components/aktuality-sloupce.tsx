@@ -6,7 +6,9 @@ import { datumCasPraha, datumPraha, predKolika } from "@/lib/cas";
 import { useZiveHodiny } from "@/lib/cas-klient";
 import { kdyZjisteno, type Zaznam } from "@/lib/agregace";
 import { jeCesky } from "@/lib/jazyk";
-import { naliehaveNahoru, naliehavaDo, naliehavostSkupiny, nazevNaliehave, type NaliehavostSkupiny } from "@/lib/naliehave";
+import { ZnackaOdchylky, VYZNAM_ODCHYLKY } from "./odchylka";
+import type { OdchylkaKandidata } from "@/lib/odchylky";
+import { naliehaveNahoru, naliehavaBezRedakci, naliehavaDo, naliehavostSkupiny, nazevNaliehave, type NaliehavostSkupiny } from "@/lib/naliehave";
 import { jeSignal, pocetZdroju, seskupSignaly } from "@/lib/signaly";
 import { KATEGORIE } from "@/lib/kategorie";
 import { JISTOTY, PASMA, UROVNE } from "@/lib/skala";
@@ -33,7 +35,8 @@ import { sklon, Vlajka } from "./zeme";
   Naléhavé nahoře (9. 11. 2026, provozovatelka): zpráva, kterou síto
   označilo jako naléhavou, nezapadne mezi ostatní. Dokud běží lhůta jejího
   druhu (src/lib/naliehave.ts), stojí ve sloupci Signály z médií nahoře,
-  seřazená podle data, s červeným rámečkem — silným u stupně 1 (mobilizace,
+  seřazená podle data, s červeným rámečkem, když o ní píší aspoň dvě
+  nezávislé redakce (s napadenou tři; téhož dne) — silným u stupně 1 (mobilizace,
   článek 5, mimořádný stav, krizové vysílání, hranice ČR), tenkým u stupně 2
   — a místo data říká „před 3 dny“. Po lhůtě se zařadí mezi ostatní podle
   data a štítek „naléhavé“ ztratí. Rámeček je uvnitř řádku, výška zůstává
@@ -56,6 +59,8 @@ interface Radek {
   naliehavost?: NaliehavostSkupiny | null;
   /* Byla naléhavá, lhůta skončila (ISO) — do rozbalení, ať čtenář ví, proč už není nahoře. */
   naliehaveSkoncilo?: string | null;
+  /* Naléhavá s běžící lhůtou, ale zatím jen od jedné redakce: nezvýrazní se, do rozbalení proč. */
+  naliehaveCeka?: { ma: number; potreba: 2 | 3 } | null;
   /* Titulek v cizím jazyce — čtenář má vědět, proč je ve sloupci anglicky. */
   cizojazycne?: boolean;
   pruh: string;
@@ -75,9 +80,16 @@ interface Radek {
   */
   zdroje: ZdrojRadku[];
   pocetZdroju: number;
+  /*
+    Zdroj, který o téže události tvrdí něco zásadně jiného (src/lib/odchylky.ts):
+    v řádku jen značka, po rozbalení který a proč. `vlastni` = týká se zprávy,
+    která řádek zastupuje; jinak jiného zdroje ve skupině.
+  */
+  odchylka?: { uroven: OdchylkaKandidata["uroven"]; vlastni: boolean } | null;
+  odchylkyZdroju?: { nazev: string; odchylka: OdchylkaKandidata }[];
 }
 
-interface ZdrojRadku { klic: string; nazev: string; url: string; kdy: string | null; titulek: string | null }
+interface ZdrojRadku { klic: string; nazev: string; url: string; kdy: string | null; titulek: string | null; odchylka?: OdchylkaKandidata | null }
 
 const KROK = 8;
 
@@ -132,7 +144,19 @@ function Rozbaleni({ r }: { r: Radek }) {
         {r.cizojazycne && <span>v cizím jazyce</span>}
       </p>
       {r.naliehave && r.naliehavost && <p className="mt-1.5 text-male leading-snug text-inkoust">K okamžité kontrole: {r.naliehave}. Nahoře do {datumPraha(r.naliehavost.platiDo)}; nová zpráva o téže věci lhůtu prodlouží. Neověřeno, do počtů nevstupuje.</p>}
-      {r.naliehave && !r.naliehavost && r.naliehaveSkoncilo && <p className="mt-1.5 text-male leading-snug text-tlum">Byla označená jako naléhavá: {r.naliehave}. Lhůta skončila {datumPraha(r.naliehaveSkoncilo)}, proto už není nahoře.</p>}
+      {r.naliehave && !r.naliehavost && r.naliehaveCeka && <p className="mt-1.5 text-male leading-snug text-tlum">Síto ji označilo jako naléhavou: {r.naliehave}. Zvýrazní se, až o ní budou psát aspoň {r.naliehaveCeka.potreba} nezávislé redakce; teď {r.naliehaveCeka.ma === 1 ? "jedna" : r.naliehaveCeka.ma}.</p>}
+      {r.naliehave && !r.naliehavost && !r.naliehaveCeka && r.naliehaveSkoncilo && <p className="mt-1.5 text-male leading-snug text-tlum">Byla označená jako naléhavá: {r.naliehave}. Lhůta skončila {datumPraha(r.naliehaveSkoncilo)}, proto už není nahoře.</p>}
+      {r.odchylkyZdroju?.length ? (
+        <div className="mt-1.5 text-male leading-snug">
+          {r.odchylkyZdroju.map((o, i) => (
+            <p key={i} className="flex items-start gap-1.5 text-stari-text">
+              <ZnackaOdchylky uroven={o.odchylka.uroven} text={null} trida="mt-[5px] shrink-0" />
+              <span><span className="font-semibold">{o.nazev}</span> {o.odchylka.uroven === "podezrele" ? "— podezřelé" : "— liší se od ostatních"}: {o.odchylka.duvody.join("; ")}.</span>
+            </p>
+          ))}
+          <p className="mt-1 text-mikro text-tlum2">{VYZNAM_ODCHYLKY}</p>
+        </div>
+      ) : null}
       {r.text && (
         <p className="mt-1.5 line-clamp-4 leading-relaxed text-tlum">
           <span className="stitek mr-1.5 text-tlum2">{r.textPopis}:</span>{r.text}
@@ -142,7 +166,9 @@ function Rozbaleni({ r }: { r: Radek }) {
         <ul className="mt-2 space-y-1 border-t border-linka/60 pt-2">
           {r.zdroje.map((s) => (
             <li key={s.klic} className="flex items-start gap-2 text-mikro leading-snug text-tlum2">
-              <span aria-hidden className="w-[18px] shrink-0 text-center leading-none">·</span>
+              {s.odchylka
+                ? <span className="flex w-[18px] shrink-0 justify-center pt-[3px]"><ZnackaOdchylky uroven={s.odchylka.uroven} text={null} /></span>
+                : <span aria-hidden className="w-[18px] shrink-0 text-center leading-none">·</span>}
               <a href={s.url} target="_blank" rel="nofollow noopener noreferrer" className="min-w-0 flex-1 hover:text-inkoust">
                 <span className="font-semibold text-tlum">{s.nazev}</span>
                 {s.kdy && <span className="cislice"> · {datumCasPraha(s.kdy)}</span>}
@@ -196,14 +222,16 @@ function Sloupec({ nadpis, ikona, ton, radky, prazdne, paticka, ted, napoveda, t
                     {n ? (
                       <span className="flex items-center gap-1.5 text-mikro leading-none text-tlum2">
                         <span className="font-semibold uppercase tracking-[0.06em] text-akcent">naléhavé</span>
-                        <span className="cislice text-inkoust">· {r.kdy ? predKolika(r.kdy, ted) : "—"}</span>
-                        {r.pocetZdroju > 1 && <span className="cislice">· {r.pocetZdroju} {sklon(r.pocetZdroju, "zdroj", "zdroje", "zdrojů")}</span>}
+                        <span className="cislice whitespace-nowrap text-inkoust">· {r.kdy ? predKolika(r.kdy, ted) : "—"}</span>
+                        {r.pocetZdroju > 1 && <span className="cislice whitespace-nowrap">· {r.pocetZdroju} {sklon(r.pocetZdroju, "zdroj", "zdroje", "zdrojů")}</span>}
+                        {r.odchylka && <ZnackaOdchylky uroven={r.odchylka.uroven} text={r.odchylka.vlastni && r.odchylka.uroven === "podezrele" ? "podezřelé" : "liší se"} trida="min-w-0" />}
                       </span>
                     ) : (
                       <span className="flex items-center gap-1.5 text-mikro leading-none text-tlum2">
-                        <span className="cislice">{kratkeDatum(r.kdy, ted)}</span>
-                        {r.stitek && <span className="uppercase tracking-[0.06em]">{r.stitek}</span>}
-                        {r.pocetZdroju > 1 && <span className="cislice">· {r.pocetZdroju} {sklon(r.pocetZdroju, "zdroj", "zdroje", "zdrojů")}</span>}
+                        <span className="cislice whitespace-nowrap">{kratkeDatum(r.kdy, ted)}</span>
+                        {r.stitek && <span className="whitespace-nowrap uppercase tracking-[0.06em]">{r.stitek}</span>}
+                        {r.pocetZdroju > 1 && <span className="cislice whitespace-nowrap">· {r.pocetZdroju} {sklon(r.pocetZdroju, "zdroj", "zdroje", "zdrojů")}</span>}
+                        {r.odchylka && <ZnackaOdchylky uroven={r.odchylka.uroven} text={r.odchylka.vlastni && r.odchylka.uroven === "podezrele" ? "podezřelé" : "liší se"} trida="min-w-0" />}
                       </span>
                     )}
                     <span className={`mt-1 line-clamp-2 text-male leading-[1.3] ${n ? "font-semibold text-inkoust" : r.stitek ? "text-tlum" : "text-inkoust"}`}>{r.titulek}</span>
@@ -228,6 +256,17 @@ function Sloupec({ nadpis, ikona, ton, radky, prazdne, paticka, ted, napoveda, t
       </div>
     </div>
   );
+}
+
+/** Značka řádku a seznam odlišných zdrojů skupiny (podezřelé první). */
+function odchylkaRadku(k: Kandidat, polozky: readonly Kandidat[]): Pick<Radek, "odchylka" | "odchylkyZdroju"> {
+  const odlisne = polozky.filter((p) => p.odchylka).sort((a, b) => (a.odchylka!.uroven === "podezrele" ? 0 : 1) - (b.odchylka!.uroven === "podezrele" ? 0 : 1));
+  if (!odlisne.length) return { odchylka: null, odchylkyZdroju: [] };
+  const vlastni = Boolean(k.odchylka);
+  return {
+    odchylka: { uroven: vlastni ? k.odchylka!.uroven : odlisne[0].odchylka!.uroven, vlastni },
+    odchylkyZdroju: odlisne.map((p) => ({ nazev: p.zdroj.nazev, odchylka: p.odchylka! })),
+  };
 }
 
 export function AktualitySloupce({ zaznamy, nepotvrzene = [], kandidati = [], ted: tedServer = Date.now() }: { zaznamy: Zaznam[]; nepotvrzene?: Zaznam[]; kandidati?: Kandidat[]; ted?: number }) {
@@ -256,20 +295,22 @@ export function AktualitySloupce({ zaznamy, nepotvrzene = [], kandidati = [], te
       česky psaná nebo naléhavá zpráva, ostatní (i cizojazyčné) jsou v něm
       jako zdroje. Vlajka řádku je země události (kodZeme), ne redakce.
     */
-    ...skupiny.filter((g) => jeSignal(g.hlavni)).map(({ hlavni: k, polozky }): Radek => {
+    ...skupiny.filter((g) => g.polozky.some(jeSignal)).map(({ hlavni: k, polozky }): Radek => {
       const naliehavost = naliehavostSkupiny(polozky, ted);
-      const druh = naliehavost?.druh ?? polozky.find((p) => p.naliehave)?.naliehave?.druh ?? null;
+      const ceka = naliehavost ? null : naliehavaBezRedakci(polozky, ted);
+      const druh = naliehavost?.druh ?? ceka?.druh ?? polozky.find((p) => p.naliehave)?.naliehave?.druh ?? null;
       return {
       klic: `k-${k.id}`, kam: k.zdroj.url, ven: true, kodZeme: k.kodZeme, zeme: k.zeme, kdy: k.publikovano ?? k.zachyceno, titulek: k.titulek, stitek: naliehavost ? "naléhavé" : "zachyceno", pruh: "bg-tlum2",
-      naliehave: druh ? nazevNaliehave(druh) : null, naliehavost, naliehaveSkoncilo: druh && !naliehavost ? skoncilo(polozky) : null, cizojazycne: !jeCesky(k.titulek),
+      naliehave: druh ? nazevNaliehave(druh) : null, naliehavost, naliehaveSkoncilo: druh && !naliehavost && !ceka ? skoncilo(polozky) : null, naliehaveCeka: ceka ? { ma: ceka.ma, potreba: ceka.potreba } : null, cizojazycne: !jeCesky(k.titulek),
       zavaznost: null, jistota: null, kategorie: k.kategorie.map((c) => KATEGORIE[c as Kategorie]?.nazev ?? c), klice: k.kategorie, text: k.shrnuti || null, textPopis: "Zachyceno", zdroj: { nazev: k.zdroj.nazev, url: k.zdroj.url },
-      zdroje: polozky.map((p) => ({ klic: p.id, nazev: p.zdroj.nazev, url: p.zdroj.url, kdy: p.publikovano ?? p.zachyceno, titulek: p.id === k.id ? null : p.titulek })),
+      zdroje: polozky.map((p) => ({ klic: p.id, nazev: p.zdroj.nazev, url: p.zdroj.url, kdy: p.publikovano ?? p.zachyceno, titulek: p.id === k.id ? null : p.titulek, odchylka: p.odchylka ?? null })),
       pocetZdroju: pocetZdroju(polozky),
+      ...odchylkaRadku(k, polozky),
       };
     }),
   ]).slice(0, 40);
   /* Co se do sloupce nedostalo (cizí jazyk, nic o útoku, projev) — na úvodu jen jako počet s odkazem do fronty. */
-  const zobrazene = new Set(skupiny.filter((g) => jeSignal(g.hlavni)).flatMap((g) => g.polozky.map((p) => p.id)));
+  const zobrazene = new Set(skupiny.filter((g) => g.polozky.some(jeSignal)).flatMap((g) => g.polozky.map((p) => p.id)));
   const dalsich = kandidati.filter((k) => !zobrazene.has(k.id)).length;
   return (
     <section aria-labelledby="aktuality-nadpis">

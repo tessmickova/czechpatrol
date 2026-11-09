@@ -252,6 +252,34 @@ Hodinový sběr (`sber/udalosti.ts`) čte RSS kanály úřadů, redakcí a vyhle
 
 Převzetí kandidáta do záznamů: `node nastroje/prijmi-kandidata.mjs <id>` vypíše kostru; člověk doplní fakta, závažnost a jistotu, nastaví `lidskyOvereno: true` a vloží do `data/incidenty.json`. Sběr pak kandidáta sám odloží (stejná adresa zdroje).
 
+### Zdroj, který tvrdí něco jiného než ostatní (od 9. 11. 2026)
+
+Když o téže události píše víc zdrojů a jeden z nich tvrdí něco zásadně
+jiného — napadený web hlásí jaderný útok, nebo naopak „nic se nestalo“ —,
+web ho označí. Pravidla jsou pevná, bez modelu (`src/lib/odchylky.ts`,
+testy `testy/odchylky.test.ts`):
+
+- **podezřelé** (plná oranžová tečka): mimořádné tvrzení (jaderný útok,
+  vyhlášení války, invaze do Česka nebo země NATO, vyhlášená mobilizace,
+  článek 5, útok na Česko, evakuace celého města), které aspoň dva jiné
+  zdroje o téže události neuvádějí ani v textu článku; napodobenina
+  redakce; napadená redakce (`data/napadane-redakce.json`) s vlastním
+  odlišným tvrzením,
+- **liší se** (prázdný kroužek): totéž proti jedinému jinému zdroji;
+  „nic se nestalo“ proti aspoň dvěma zdrojům, které událost uvádějí;
+  mimořádné tvrzení zatím jen z jednoho zdroje.
+
+Posuzuje se titulek a shrnutí zdroje; zápor, hrozba, cvičení a výročí
+(„nejde o jaderný útok“, „hrozí jaderným úderem“, Hirošima) se nepočítají.
+Úřední zdroj se neoznačuje nikdy. Podezřelá zpráva nezvýrazní událost jako
+naléhavou, nepočítá se mezi redakce a řádek nezastupuje. Značka říká „liší
+se od ostatních“, ne „je to lež“ — rozhoduje úřední zdroj.
+
+Omezení: porovnávají se jen zachycené zprávy (fronta). Ověřené záznamy
+mají u zdrojů jen název a odkaz, text ne, takže se porovnat nedají.
+Rozdílné počty obětí se záměrně neoznačují: v prvních hodinách se čísla
+mění u všech redakcí a označení by bylo víc šumu než užitku.
+
 ### Co síto nepustí — a proč se to nezahazuje
 
 Síto na klíčová slova umí jen to, co je v seznamu. Zprávu, která je vážná, ale
@@ -566,6 +594,17 @@ zprávy o téže události, takže nové zprávy ji prodlouží:
 | krizové vysílání | 2 dny | silný |
 | přípravy mobilizace, posílení hranice NATO | 7 dní | tenký |
 | narušení vzdušného prostoru Aliance | 3 dny | tenký |
+
+**Zvýrazní se jen událost, o které píší aspoň dvě nezávislé redakce**
+(s napadenou redakcí mezi zdroji tři; doplněno téhož dne). Počítají se
+různé domény všech zpráv o události, i těch, které síto naléhavými
+neoznačilo; pravidlo je společné se zveřejněním
+(`nastroje/redakce-pravidla.mjs`, bez čtení souborů, aby běželo i na webu;
+`napadane-redakce.mjs` ho jen obaluje daty ze souboru). Naléhavá zpráva od
+jedné redakce zůstane v běžném pořadí jako „zachyceno“ a po rozbalení řekne,
+kolik redakcí chybí. Totéž platí pro Souhrn situace. Telegram a počet ve
+Správě se nemění: Správa je pracovní fronta a jednozdrojovou naléhavou
+zprávu tam správce vidět má.
 
 Tloušťka rámečku je stupeň ze sběru (1 silný, 2 tenký). Naléhavé řádky
 jsou mezi sebou podle data, pod nimi ostatní podle data. Místo data říkají

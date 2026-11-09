@@ -1,3 +1,7 @@
+import napadane from "../../data/napadane-redakce.json";
+import { dostRedakci, nezavisleRedakce, potrebnychRedakci } from "../../nastroje/redakce-pravidla.mjs";
+import type { DataNapadanych } from "../../nastroje/napadane-redakce.mjs";
+
 /*
   Druhy naléhavých zpráv, které sběr označí „k okamžité kontrole“.
 
@@ -55,7 +59,17 @@ const STUPEN: Record<DruhNaliehave, 1 | 2> = {
 };
 
 type Naliehava = { druh: string; stupen?: number | null };
-type SNaliehavosti = { naliehave?: Naliehava | null | unknown; publikovano?: string | null; zachyceno: string };
+type SNaliehavosti = { naliehave?: Naliehava | null | unknown; publikovano?: string | null; zachyceno: string; zdroj?: { nazev?: string; url?: string }; odchylka?: { uroven: string } | null };
+
+/*
+  Zpráva, jejíž zdroj tvrdí něco zásadně jiného než ostatní (src/lib/odchylky.ts),
+  nezvýrazní událost ani se nezapočte jako redakce (9. 11. 2026): napadený web
+  hlásící jaderný útok nesmí vytáhnout událost nahoru, ani když o ní píše víc
+  redakcí — o tom, co tvrdí on, nepíše nikdo.
+*/
+const bezPodezrelych = <T extends SNaliehavosti>(polozky: readonly T[]) => polozky.filter((p) => p.odchylka?.uroven !== "podezrele");
+
+const NAPADANE = napadane as DataNapadanych;
 
 const HODINA = 3_600_000;
 const casZpravy = (k: { publikovano?: string | null; zachyceno: string }) => new Date(k.publikovano ?? k.zachyceno).getTime();
@@ -99,16 +113,40 @@ export interface NaliehavostSkupiny {
   platiDo: string;
 }
 
+/*
+  Zvýraznit jen s aspoň dvěma nezávislými redakcemi (9. 11. 2026,
+  provozovatelka: „do zvýrazněných naléhavých vstupují pouze s min. 2 zdroji,
+  ne s 1“). S napadenou redakcí mezi zdroji tři — stejné pravidlo jako
+  u zveřejnění (nastroje/redakce-pravidla.mjs). Počítají se všechny zprávy
+  o události, i ty, které síto naléhavými neoznačilo: druhý zdroj je druhý
+  zdroj, ať ho síto chytilo, nebo ne.
+*/
+export function redakciUdalosti(polozky: readonly SNaliehavosti[], ted: number): { ma: number; potreba: 2 | 3 } {
+  const zdroje = polozky.map((p) => p.zdroj).filter((z): z is { nazev?: string; url?: string } => Boolean(z));
+  return { ma: nezavisleRedakce(zdroje, NAPADANE), potreba: potrebnychRedakci(zdroje, NAPADANE, ted) };
+}
+
 /**
  * Naléhavost události složené z více zpráv. Platí, dokud platí aspoň jedna
- * naléhavá zpráva; nese nejvyšší stupeň (1 je víc než 2) a nejpozdější konec.
+ * naléhavá zpráva a o události píší aspoň dvě nezávislé redakce (s napadenou
+ * tři); nese nejvyšší stupeň (1 je víc než 2) a nejpozdější konec.
  */
-export function naliehavostSkupiny(polozky: readonly SNaliehavosti[], ted: number): NaliehavostSkupiny | null {
+export function naliehavostSkupiny(vsechny: readonly SNaliehavosti[], ted: number): NaliehavostSkupiny | null {
+  const polozky = bezPodezrelych(vsechny);
   const platne = polozky.filter((p) => platiNaliehave(p, ted));
   if (!platne.length) return null;
+  if (!dostRedakci(polozky.map((p) => p.zdroj).filter((z): z is { nazev?: string; url?: string } => Boolean(z)), NAPADANE, ted)) return null;
   const nejsilnejsi = [...platne].sort((a, b) => stupenNaliehave(naliehavaZ(a)!) - stupenNaliehave(naliehavaZ(b)!) || casZpravy(b) - casZpravy(a))[0];
   const n = naliehavaZ(nejsilnejsi)!;
   return { druh: n.druh, stupen: stupenNaliehave(n), platiDo: new Date(Math.max(...platne.map((p) => naliehavaDo(p)!))).toISOString() };
+}
+
+/** Naléhavá s běžící lhůtou, které chybí druhá redakce: do rozbalení řádku, ať je vidět, proč není zvýrazněná. */
+export function naliehavaBezRedakci(vsechny: readonly SNaliehavosti[], ted: number): { druh: string; ma: number; potreba: 2 | 3 } | null {
+  const polozky = bezPodezrelych(vsechny);
+  const platna = polozky.find((p) => platiNaliehave(p, ted));
+  if (!platna || naliehavostSkupiny(polozky, ted)) return null;
+  return { druh: naliehavaZ(platna)!.druh, ...redakciUdalosti(polozky, ted) };
 }
 
 /**

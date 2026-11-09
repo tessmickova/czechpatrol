@@ -119,10 +119,17 @@ export function seskupSignaly<K extends ProSkupinu>(kandidati: readonly K[]): Sk
   }
   for (const g of skupiny) {
     g.polozky.sort((a, b) => casZpravy(b) - casZpravy(a));
-    g.hlavni = g.polozky.find(jeSignal) ?? g.polozky[0];
+    /*
+      Podezřelá zpráva (zdroj tvrdí něco zásadně jiného než ostatní, src/lib/odchylky.ts)
+      řádek nezastupuje, když je z čeho vybrat — ani tehdy, když střízlivé zprávy
+      ostatních redakcí síto za signál nepovažuje („vybuchl sklad“ proti „jaderný útok“).
+    */
+    g.hlavni = g.polozky.find((p) => jeSignal(p) && !jePodezrela(p)) ?? g.polozky.find((p) => !jePodezrela(p) && g.polozky.some(jeSignal)) ?? g.polozky.find(jeSignal) ?? g.polozky[0];
   }
   return skupiny.sort((a, b) => casZpravy(b.polozky[0]) - casZpravy(a.polozky[0]));
 }
+
+const jePodezrela = (p: object) => (p as { odchylka?: { uroven?: string } | null }).odchylka?.uroven === "podezrele";
 
 /** Počet různých redakcí ve skupině (jedna redakce se dvěma aktualizacemi je jeden zdroj). */
 export const pocetZdroju = (polozky: readonly { zdroj: ZdrojSignalu }[]): number => new Set(polozky.map((p) => p.zdroj.nazev)).size;

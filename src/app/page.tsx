@@ -1,6 +1,6 @@
 import { Dashboard } from "@/components/dashboard";
 import { souhrnInternetu } from "@/lib/kyber-souhrn";
-import { archiv, celkovyStav, oficialniNastroje, hybridniTlak, incidenty, kampane, kandidati, nato, nazvyZemi, nepotvrzene, nepotvrzeneZaznamy, posledniKontrola, posledniOvereni, pravniStav, provoz, tlakCr, tydny, overovaneAktivni, overovaneUzavrene, urovenObcanu, watchlist } from "@/lib/data";
+import { archiv, celkovyStav, oficialniNastroje, hybridniTlak, incidenty, kampane, kandidatiUvodu, nato, nazvyZemi, nepotvrzene, nepotvrzeneZaznamy, posledniKontrola, posledniOvereni, pravniStav, provoz, tlakCr, tydny, overovaneAktivni, overovaneUzavrene, urovenObcanu, watchlist } from "@/lib/data";
 import { pripravitTed } from "@/lib/priprava-ted";
 import { odlehciProUvod } from "@/lib/odlehci";
 import { pulz } from "@/lib/pulz";
@@ -40,7 +40,7 @@ export default function Prehled() {
         souhrn={souhrnSituace(ted)}
         uspechy={vyberUspechy(incidenty(), ted)}
         prehled={RYCHLY_PREHLED ? { snimek: snimekPrehledu(new Date(ted).toISOString()), konfigurace: KONFIGURACE_CERSTVOSTI } : undefined}
-        kandidati={kandidati().filter((k) => k.naliehave || Date.now() - new Date(k.publikovano ?? k.zachyceno).getTime() <= 72 * 3_600_000)}
+        kandidati={kandidatiUvodu()}
         nepotvrzene={nepotvrzeneZaznamy()}
         tydny={tydny()}
         watchlist={watchlist()}

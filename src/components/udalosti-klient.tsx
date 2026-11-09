@@ -1,5 +1,6 @@
 "use client";
 
+import { ZnackaOdchylky, VYZNAM_ODCHYLKY } from "./odchylka";
 import { nazevNaliehave } from "@/lib/naliehave";
 import { RadaKTypu } from "./rada-k-typu";
 
@@ -692,6 +693,7 @@ function RadekKandidata({ k }: { k: Kandidat }) {
                 k okamžité kontrole: {nazevNaliehave(k.naliehave.druh)}
               </Odznak>
             : null,
+          k.odchylka ? <ZnackaOdchylky key="o" uroven={k.odchylka.uroven} /> : null,
           k.klasifikace === "model" ? <span key="m" className="text-tlum2">přeloženo modelem</span> : null,
           // Ručně vytažené proti sítu: čtenář má vědět, že tohle nevybral automat.
           k.klasifikace === "clovek" ? <span key="r" className="text-tlum2">vybráno ručně</span> : null,
@@ -707,6 +709,12 @@ function RadekKandidata({ k }: { k: Kandidat }) {
       detail={
         <div className="space-y-2 pt-1 text-zaklad leading-relaxed">
           {k.shrnuti && <p className="text-tlum">{k.shrnuti}</p>}
+          {k.odchylka && (
+            <p className="text-drobne text-stari-text">
+              {k.odchylka.uroven === "podezrele" ? "Podezřelé" : "Liší se od ostatních zdrojů"}: {k.odchylka.duvody.join("; ")}.{" "}
+              <span className="text-tlum2">{VYZNAM_ODCHYLKY}</span>
+            </p>
+          )}
           <p><RadaKTypu kategorie={k.kategorie} /></p>
           {k.titulek !== k.titulekPuvodni && <p className="text-drobne text-tlum2">Původní titulek: {k.titulekPuvodni}</p>}
           <p><a href={k.zdroj.url} target="_blank" rel="nofollow noopener noreferrer" className="odkaz break-all">{k.zdroj.url}</a></p>
