@@ -495,6 +495,42 @@
     }
   },
   {
+    "id": "k-0f019083b0035115",
+    "zachyceno": "2026-11-09T04:03:41.961Z",
+    "publikovano": "2026-11-09T03:00:00.000Z",
+    "zdroj": {
+      "nazev": "Politico Europe",
+      "url": "https://www.politico.eu/article/russia-hybrid-war-europe-low-level-agents/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Disposable: The ordinary people doing Russia’s dirty work",
+    "titulekPuvodni": "Disposable: The ordinary people doing Russia’s dirty work",
+    "shrnuti": "The Kremlin is recruiting civilians to carry out sabotage across Europe.",
+    "kodZeme": "RU",
+    "zeme": "Rusko",
+    "kategorie": [
+      "sabotaz",
+      "rusko"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "sabotage",
+      "russia",
+      "kreml",
+      "kremlin"
+    ],
+    "naliehave": null,
+    "stav": "ceka",
+    "vyrez": {
+      "text": "Disposable: The ordinary people doing Russia’s dirty work – POLITICO\nSkip to main content\nThe life Vasilij Kovacs knew ended with a bang. It was late afternoon on March 1, 2025, when an armored vehicle smashed through the metal gate of the old farmhouse where he lived southeast of the Latvian capital, Riga.\nMasked men emerged with their guns drawn. They belonged to Latvia’s State Security Service, the country’s counterintelligence agency. The officers searched the property, seizing several mobile phones, SIM cards and documents, along with a pistol with its serial number filed off, a bayonet from an AK-47 and a cellphone jammer, according to a search report later filed by the authorities. They arrested Kovacs, a Ukrainian man in his 60s who has lived in Latvia for more than 30 years.\nIn March, Kovacs was transferred to stand trial in Lithuania, where he is accused of planning terrorist attacks, alongside four alleged accomplices. Five others face trial in Warsaw. Lithuanian and Polish prosecutors accuse the ten men of planning and carrying out arson attacks involving cargo parcels across several European countries on behalf of Russia’s military intelligence agency, the…",
+      "stazeno": "2026-11-09T04:03:44.094Z",
+      "stav": 200
+    }
+  },
+  {
     "id": "k-c2eeb92b566f2885",
     "zachyceno": "2026-11-09T02:03:21.837Z",
     "publikovano": null,
@@ -10184,41 +10220,6 @@
       "text": "National Blood Centre says raise guard after France cyber attacks on blood banks - General News - Ansa.it\nSe hai scelto di non accettare i cookie di profilazione e tracciamento, puoi aderire all&rsquo;abbonamento \"Consentless\" a un costo molto accessibile, oppure scegliere un altro abbonamento per accedere ad ANSA.it.\nTi invitiamo a leggere le Condizioni Generali di Servizio , la Cookie Policy e l' Informativa Privacy .\nABBONAMENTO CONSENTLESS\nPuoi leggere tutti i titoli di ANSA.it e 10 contenuti ogni 30 giorni a &euro;16,99/anno\nServizio equivalente a quello accessibile prestando il consenso ai cookie di profilazione pubblicitaria e tracciamento\nDurata annuale (senza rinnovo automatico)\nUn pop-up ti avvertir&agrave; che hai raggiunto i contenuti consentiti in 30 giorni (potrai continuare a vedere tutti i titoli del sito, ma per aprire altri contenuti dovrai attendere il successivo periodo di 30 giorni)\nPubblicit&agrave; presente ma non profilata o gestibile mediante il pannello delle preferenze\nIscrizione alle Newsletter tematiche curate dalle redazioni ANSA.\nALTRI ABBONAMENTI\nPer accedere senza limiti a tutti i contenuti di ANSA.it\nScegli il piano di abbonamento pi&ugrave;…",
       "stazeno": "2026-11-04T18:03:11.285Z",
       "stav": 200
-    }
-  },
-  {
-    "id": "k-6d0b56cd94f5e107",
-    "zachyceno": "2026-11-04T20:03:58.511Z",
-    "publikovano": "2026-11-04T16:46:00.000Z",
-    "zdroj": {
-      "nazev": "Aktuálně.cz",
-      "url": "https://zpravy.aktualne.cz/zahranici/necekany-tah-putin-chce-dostat-k-jednomu-stolu-trumpa-i-si-tin-pchinga-obejdou-se-bez-evropy/r~aaa292d51e7fd083852660d09dcc72e8/",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Nečekaný tah: Putin chce dostat k jednomu stolu Trumpa i Si Ťin-pchinga. Obejdou se bez Evropy",
-    "titulekPuvodni": "Nečekaný tah: Putin chce dostat k jednomu stolu Trumpa i Si Ťin-pchinga. Obejdou se bez Evropy",
-    "shrnuti": "Už 18. a 19. listopadu se může uskutečnit historicky první společný summit prezidentů USA, Ruska a Číny. Donald Trump, Vladimir Putin a Si Ťin-pching by mohli v čínském Šen-čenu jednat především o jaderných zbraních. Dojít ale může i na Ukrajinu. V takovém případě by to ale bylo jednání bez Kyjeva i",
-    "kodZeme": "UA",
-    "zeme": "Ukrajina",
-    "kategorie": [
-      "hybridni",
-      "rusko"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "zeSite": null,
-    "shody": [
-      "putin+evrop+jadern",
-      "rusk"
-    ],
-    "naliehave": null,
-    "stav": "ceka",
-    "vyrez": {
-      "text": "",
-      "stazeno": "2026-11-04T20:04:02.129Z",
-      "stav": 403,
-      "chyba": "HTTP 403"
     }
   }
 ]
