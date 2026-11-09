@@ -1,5 +1,5 @@
 import { pripady } from "@/lib/agregace";
-import { celkovyStav, incidenty, kampane, kandidati, posledniOvereni, tlakCr, urovenObcanu } from "@/lib/data";
+import { celkovyStav, incidenty, kampane, kandidatiUvodu, posledniOvereni, tlakCr, urovenObcanu } from "@/lib/data";
 import { souhrnInternetu } from "@/lib/kyber-souhrn";
 import { odlehci } from "@/lib/odlehci";
 import { pripravitTed } from "@/lib/priprava-ted";
@@ -35,7 +35,7 @@ export function SidebarWebu() {
       pulz={pulz()}
       priprava={pripravitTed()}
       {...casyProPanel(vse, kamp)}
-      kandidati={kandidati().filter((k) => k.naliehave || ted - new Date(k.publikovano ?? k.zachyceno).getTime() <= 72 * 3_600_000)}
+      kandidati={kandidatiUvodu(ted)}
       zkontrolovano={posledniOvereni()}
       ted={ted}
       internet={souhrnInternetu(ted)}

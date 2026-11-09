@@ -459,6 +459,12 @@ export interface Kandidat {
    */
   naliehave?: { druh: DruhNaliehave; proc: string; /** 1 = hned do kanálu, 2 = nahoru ve frontě (sber/udalosti.ts). Starší zprávy ho nenesou. */ stupen?: 1 | 2 } | null;
   /**
+   * Zdroj tvrdí o téže události něco zásadně jiného než ostatní (napadený web
+   * hlásí jaderný útok, nebo naopak „nic se nestalo“). Počítá se při sestavení
+   * stránky (src/lib/odchylky.ts); null = bez odchylky.
+   */
+  odchylka?: { uroven: "podezrele" | "odlisne"; duvody: string[] } | null;
+  /**
    * Kde kandidát je.
    *
    * `ceka` — nikdo ho ještě neposoudil.

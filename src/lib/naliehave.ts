@@ -59,7 +59,15 @@ const STUPEN: Record<DruhNaliehave, 1 | 2> = {
 };
 
 type Naliehava = { druh: string; stupen?: number | null };
-type SNaliehavosti = { naliehave?: Naliehava | null | unknown; publikovano?: string | null; zachyceno: string; zdroj?: { nazev?: string; url?: string } };
+type SNaliehavosti = { naliehave?: Naliehava | null | unknown; publikovano?: string | null; zachyceno: string; zdroj?: { nazev?: string; url?: string }; odchylka?: { uroven: string } | null };
+
+/*
+  Zpráva, jejíž zdroj tvrdí něco zásadně jiného než ostatní (src/lib/odchylky.ts),
+  nezvýrazní událost ani se nezapočte jako redakce (9. 11. 2026): napadený web
+  hlásící jaderný útok nesmí vytáhnout událost nahoru, ani když o ní píše víc
+  redakcí — o tom, co tvrdí on, nepíše nikdo.
+*/
+const bezPodezrelych = <T extends SNaliehavosti>(polozky: readonly T[]) => polozky.filter((p) => p.odchylka?.uroven !== "podezrele");
 
 const NAPADANE = napadane as DataNapadanych;
 
@@ -123,7 +131,8 @@ export function redakciUdalosti(polozky: readonly SNaliehavosti[], ted: number):
  * naléhavá zpráva a o události píší aspoň dvě nezávislé redakce (s napadenou
  * tři); nese nejvyšší stupeň (1 je víc než 2) a nejpozdější konec.
  */
-export function naliehavostSkupiny(polozky: readonly SNaliehavosti[], ted: number): NaliehavostSkupiny | null {
+export function naliehavostSkupiny(vsechny: readonly SNaliehavosti[], ted: number): NaliehavostSkupiny | null {
+  const polozky = bezPodezrelych(vsechny);
   const platne = polozky.filter((p) => platiNaliehave(p, ted));
   if (!platne.length) return null;
   if (!dostRedakci(polozky.map((p) => p.zdroj).filter((z): z is { nazev?: string; url?: string } => Boolean(z)), NAPADANE, ted)) return null;
@@ -133,7 +142,8 @@ export function naliehavostSkupiny(polozky: readonly SNaliehavosti[], ted: numbe
 }
 
 /** Naléhavá s běžící lhůtou, které chybí druhá redakce: do rozbalení řádku, ať je vidět, proč není zvýrazněná. */
-export function naliehavaBezRedakci(polozky: readonly SNaliehavosti[], ted: number): { druh: string; ma: number; potreba: 2 | 3 } | null {
+export function naliehavaBezRedakci(vsechny: readonly SNaliehavosti[], ted: number): { druh: string; ma: number; potreba: 2 | 3 } | null {
+  const polozky = bezPodezrelych(vsechny);
   const platna = polozky.find((p) => platiNaliehave(p, ted));
   if (!platna || naliehavostSkupiny(polozky, ted)) return null;
   return { druh: naliehavaZ(platna)!.druh, ...redakciUdalosti(polozky, ted) };
