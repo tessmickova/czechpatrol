@@ -495,6 +495,159 @@
     }
   },
   {
+    "id": "k-cd814710985a8bd1",
+    "zachyceno": "2026-11-09T06:03:20.112Z",
+    "publikovano": "2026-11-09T05:20:00.000Z",
+    "zdroj": {
+      "nazev": "Český rozhlas — domácí zprávy",
+      "url": "https://www.irozhlas.cz/zivotni-styl/spolecnost/tatinka-vojaka-zasahl-rusky-tank-prala-bych-si-vratit-cas-priblizuje-zivot_2611090620_zko",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "‚Tatínka vojáka zasáhl ruský tank. Přála bych si vrátit čas,‘ přibližuje život válečných dětí 12letá Evelina",
+    "titulekPuvodni": "‚Tatínka vojáka zasáhl ruský tank. Přála bych si vrátit čas,‘ přibližuje život válečných dětí 12letá Evelina",
+    "shrnuti": "Evelina M. patří ke skupině třiceti dětí ukrajinských vojáků, které se podívaly v rámci podzimních prázdnin do Česka. Cílem cesty bylo zažít alespoň na chvíli bezstarostné dětství a pocit bezpečí. Žákyně sedmé třídy z ukrajinské Poltavy slyší denně výbuchy a přelety dronů, během války přišla o otce.",
+    "kodZeme": "CZ",
+    "zeme": "Česko",
+    "kategorie": [
+      "sabotaz",
+      "drony",
+      "vojsko",
+      "rusko",
+      "cr"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "vybuch",
+      "dron+zasahl",
+      "dron",
+      "vojak",
+      "rusk",
+      "radiozurnal"
+    ],
+    "naliehave": null,
+    "stav": "ceka",
+    "vyrez": {
+      "text": "",
+      "stazeno": "2026-11-09T06:03:22.949Z",
+      "stav": 403,
+      "chyba": "HTTP 403"
+    }
+  },
+  {
+    "id": "k-596cf6c302c7dfa2",
+    "zachyceno": "2026-11-09T06:03:22.779Z",
+    "publikovano": "2026-11-09T05:10:00.000Z",
+    "zdroj": {
+      "nazev": "Ukrinform (anglicky)",
+      "url": "https://www.ukrinform.net/rubric-polytics/4182768-estonian-fm-putin-is-the-only-one-who-can-stop-war-ukraine-must-join-nato.html",
+      "typ": "wire",
+      "primarni": false
+    },
+    "titulek": "Estonian FM: Putin is the only one who can stop war, Ukraine must join NATO",
+    "titulekPuvodni": "Estonian FM: Putin is the only one who can stop war, Ukraine must join NATO",
+    "shrnuti": "Russian dictator Vladimir Putin is the only person who can stop the war against Ukraine, while achieving lasting peace requires Ukraine's full membership in NATO.",
+    "kodZeme": "EE",
+    "zeme": "Estonsko",
+    "kategorie": [
+      "hybridni",
+      "nato",
+      "rusko"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "putin+eston+war",
+      "nato",
+      "russia"
+    ],
+    "naliehave": null,
+    "stav": "ceka",
+    "vyrez": {
+      "text": "Estonian FM: Putin is the only one who can stop war, Ukraine must join NATO\n\r\nSubscription\nNewsletters\nPhotobank\nUkrinform - Ukrainian National News Agency\nFounded in 1918\nMonday, 09 November 2026, 08:03\nWar\nEconomy\nSports\nMore ☰\nContacts\nEng\nУкр\nEng\nEsp\nDeu\nعربي\nFra\n日本語\nPol\n&times;\nAll topics\nWar\nRecovery of Ukraine\nPolitics\nEconomy\nFact checks\nDefense\nSociety and Culture\nSports\nCrime\nAccidents and Emergencies\nAgency\nInformation on Agency\nOur Contacts\nSubscribtion Terms\nOur Services\nPrivacy policy and personal data protection\nAdditional\nPublications\nInterviews\nPhoto\nVideo\nLongreads\nReleases\nServices\nSubscription\nNewsletters\nPhotobank\n\r\n\r\n\r\nRussian dictator Vladimir Putin is the only person who can stop the war against Ukraine, while achieving lasting peace requires Ukraine's full membership in NATO.\nEstonian Foreign Minister Margus Tsahkna said this in an interview with Polish broadcaster TVP World, Ukrinform reports, citing Postimees .\n\r\n\r\nTsahkna said he was cautious about peace plans, as numerous ideas and promises had been put forward over the past year, but there was still insufficient evidence that Russia genuinely wanted to end the war.\n\r\n\r\n\"The only person who can stop…",
+      "stazeno": "2026-11-09T06:03:22.991Z",
+      "stav": 200
+    }
+  },
+  {
+    "id": "k-e391d30223d4b7ec",
+    "zachyceno": "2026-11-09T06:03:20.115Z",
+    "publikovano": "2026-11-09T05:06:00.000Z",
+    "zdroj": {
+      "nazev": "Český rozhlas — domácí zprávy",
+      "url": "https://www.irozhlas.cz/zpravy-svet/online-drony-zautocily-na-prumyslovou-oblast-na-severozapade-ruska-poskodily_2611090606_raf",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "ONLINE: Drony zaútočily na průmyslovou oblast na severozápadě Ruska. Poškodily jeden byt",
+    "titulekPuvodni": "ONLINE: Drony zaútočily na průmyslovou oblast na severozápadě Ruska. Poškodily jeden byt",
+    "shrnuti": "Drony zasáhly průmyslovou oblast v Kiriši v Leningradské oblasti na severozápadě Ruska. Uvedl to v pondělí brzy ráno na platformě Telegram gubernátor Alexandr Drozděnko. Podle něj bylo sestřeleno 81 dronů, přičemž útok nadále pokračoval.",
+    "kodZeme": "RU",
+    "zeme": "Rusko",
+    "kategorie": [
+      "drony",
+      "hybridni",
+      "rusko"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "sestrel",
+      "utok na",
+      "dron+zasahl",
+      "dron",
+      "rusk"
+    ],
+    "naliehave": null,
+    "stav": "ceka",
+    "vyrez": {
+      "text": "",
+      "stazeno": "2026-11-09T06:03:23.871Z",
+      "stav": 403,
+      "chyba": "HTTP 403"
+    }
+  },
+  {
+    "id": "k-d6639670f57c6d25",
+    "zachyceno": "2026-11-09T06:03:21.338Z",
+    "publikovano": "2026-11-09T04:45:00.000Z",
+    "zdroj": {
+      "nazev": "Aktuality.sk",
+      "url": "https://www.aktuality.sk/clanok/GiFAL1d/preco-moskva-aj-kyjev-vysielaju-do-emiratov-generalov-a-sefov-spionaze-243-tyzden-vojny/",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Púštne rokovania v tieni amerických volieb: Čo sa skutočne skrýva za diplomatickým stretnutím v Emirátoch? (243. týždeň vojny)",
+    "titulekPuvodni": "Púštne rokovania v tieni amerických volieb: Čo sa skutočne skrýva za diplomatickým stretnutím v Emirátoch? (243. týždeň vojny)",
+    "shrnuti": "Rusko spustilo rekordnú vlnu dronových útokov, no Ukrajina väčšinu z nich zostrelila. Napriek tomu padajú bomby na školy, nemocnice aj humanitárne centrá.",
+    "kodZeme": "UA",
+    "zeme": "Ukrajina",
+    "kategorie": [
+      "sabotaz",
+      "drony",
+      "rusko"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "bomb",
+      "dron",
+      "rusk"
+    ],
+    "naliehave": null,
+    "stav": "ceka",
+    "vyrez": {
+      "text": "Púštne rokovania v tieni amerických volieb: Čo sa skutočne skrýva za diplomatickým stretnutím v Emirátoch? (243. týždeň vojny) | Aktuality.sk\nAktuality\nŠport\nDiva\nNajmama\nŽivé\nRecepty\nDobrú chuť\nSlovník\n4 °C -\nBratislava\npondelok 9. 11.\n9. 11.\nTeodor\nKomentáre dnes 09. Nov 2026 o 05:45\n29 min. čítania\nPridať do Google\nPúštne rokovania v tieni amerických volieb: Čo sa skutočne skrýva za diplomatickým stretnutím v Emirátoch? (243. týždeň vojny)\n1 fotka v galérii\nVladimir Putin a Volodymyr Zelenskyj Zdroj: AP\nVladimír Bednár\nUložiť článok\nRusko spustilo rekordnú vlnu dronových útokov, no Ukrajina väčšinu z nich zostrelila. Napriek tomu padajú bomby na školy, nemocnice aj humanitárne centrá.\nPondelok 2. novembra 2026 (1713. deň vojny)\nTragický ruský útok na obec Komyšuvacha\nRusko na začiatku týždňa pokračovalo v rozsiahlych útokoch bezpilotnými lietadlami, v noci zaútočilo 193 útočnými dronmi typu Shahed. Ukrajinské vzdušné sily oznámili, že zneškodnili 154 z nich. Napriek tomu boli zaznamenané zásahy na 26 miestach. Ruské útoky pokračovali aj počas dňa, keď Rusko (podľa ukrajinských vzdušných síl) nasadilo ďalších 171 dronov, z toho 103 s prúdovým pohonom. Ukrajinská protivzdušná…",
+      "stazeno": "2026-11-09T06:03:23.917Z",
+      "stav": 200
+    }
+  },
+  {
     "id": "k-0f019083b0035115",
     "zachyceno": "2026-11-09T04:03:41.961Z",
     "publikovano": "2026-11-09T03:00:00.000Z",
@@ -560,6 +713,40 @@
     "vyrez": {
       "text": "Cyberattacks on supermarket refrigeration systems spare Lithuania, retailers say - LRT\n\r\n\r\nNaujienų srautas\nNews\n18 h ago\nWhy are laundromats becoming more popular in Estonia?\nNews\n20 h ago\nSalary overdue? Legal tools to recover unpaid wages in Lithuania\nNews\n1 d ago\nPlans for historic Klaipėda lighthouse replica spark criticism from maritime enthusiasts\nNews\n1 d ago\nLabour law changes in Lithuania – here’s what you need to know\nNews\n2 d ago\nLithuania’s border with Kaliningrad calmer than Poland’s, defence minister says\nNews\n2 d ago\nAuditor warns Lithuania’s deficit could approach 6% of GDP by 2029\nNews\n2 d ago\nMore than 6,000 NATO troops to take part in German-led exercises in Lithuania\nNews\n2 d ago\nLithuanian teachers’ union announces strike plan over pay dispute\nNews\n2 d ago\nPresident Nausėda backs referendum on constitutional definition of family\nNews\n2 d ago\nLRT English: Minsk-Washington pressure\nNews\n3 d ago\nNausėda says he apologised to Adamkus for missing centennial celebration\nNews\n3 d ago\nUkraine’s EU accession by 2030 unrealistic, says Hungarian FM in Vilnius\nNews\n3 d ago\nLithuania moves to expand access to fertility treatment beyond married couples\nNews\n3 d…",
       "stazeno": "2026-11-09T02:03:24.288Z",
+      "stav": 200
+    }
+  },
+  {
+    "id": "k-a9668da311bdbd92",
+    "zachyceno": "2026-11-09T06:03:22.813Z",
+    "publikovano": "2026-11-08T22:43:00.000Z",
+    "zdroj": {
+      "nazev": "Ukrainska Pravda (anglicky)",
+      "url": "https://www.pravda.com.ua/eng/news/2026/11/09/8061846/",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Russia attacks Kremenchuk: seven injured, apartment block and hotel damaged – photos",
+    "titulekPuvodni": "Russia attacks Kremenchuk: seven injured, apartment block and hotel damaged – photos",
+    "shrnuti": "A 16-year-old boy was seriously injured in the attack on Kremenchuk in Poltava Oblast. Fires broke out at two locations, and rescue workers rescued 15 people.",
+    "kodZeme": "RU",
+    "zeme": "Rusko",
+    "kategorie": [
+      "hybridni",
+      "rusko"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "attack on",
+      "russia"
+    ],
+    "naliehave": null,
+    "stav": "ceka",
+    "vyrez": {
+      "text": "Russian drone strikes hit apartment block and hotel in Kremenchuk, injuring seven | Ukrainska Pravda\nA fire. Photo: Poltava Oblast Military Administration\nRussian drones attacked the city of Kremenchuk in Poltava Oblast on the evening of 8 November, injuring seven people, including a 16-year-old boy.\nSource: Vitalii Diakivnych, Head of Poltava Oblast Military Administration, on Telegram\n\r\n\r\n\r\nA damaged building\n\r\n\r\n\r\nPhoto: Poltava Oblast Military Administration\r\n\r\n\r\nAdvertisement:\n\r\n\r\n\r\n\r\n\r\n\r\nQuote: \"Early reports indicate that a 16-year-old boy has suffered serious injuries. He has been taken to hospital.\"\nUpdated: Diakivnych later announced that the number of people injured in the attack had risen to seven. Two more people were taken to hospital.\n\r\n\r\n\r\nA damaged building\n\r\n\r\n\r\nPhoto: Poltava Oblast Military Administration\r\n\r\n\r\n\r\nDetails: Russian drones struck two locations in Kremenchuk.\nAn apartment block was damaged in the attack, and a fire broke out inside. A Russian drone also struck a hotel building, causing another fire.\nState Emergency Service of Ukraine units rescued 15 people.\nSupport Ukrainska Pravda on Patreon to help us keep reporting!\nPoltava…",
+      "stazeno": "2026-11-09T06:03:25.307Z",
       "stav": 200
     }
   },
@@ -10044,181 +10231,6 @@
     "vyrez": {
       "text": "Ukraine power outages: DTEK explains frequent changes to emergency blackouts | Ukrainska Pravda\nStock photo\nDTEK, the largest private energy company in Ukraine, has explained why emergency power outages are cancelled and then reintroduced multiple times a day.\nSource: DTEK press service\nDetails: The main reason for this is the constant attacks on the energy system. There were about 20 strikes a day just yesterday.\nAdvertisement:\n\r\n\r\n\r\n\r\n\r\nBecause of this, the situation can change very quickly, sometimes even several times an hour. DTEK dispatchers must balance the energy system in real time so that major accidents do not occur and the power does not go out completely.\nThat is why emergency power outages can be introduced and cancelled so frequently.\nBackground:\nIn Kyiv, emergency power outages could not be cancelled throughout the day on 4 November.\nAt around 14:00, the capital and the oblast returned to scheduled power outages.\nYour support on Patreon helps us keep the news free and accessible.\nenergy\nAdvertisement:\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nenergy\nStable water supply restored in Kyiv\nUkrainian nuclear power plants have been forced to reduce electricity generation, Energy Ministry…",
       "stazeno": "2026-11-04T20:04:01.880Z",
-      "stav": 200
-    }
-  },
-  {
-    "id": "k-b24b465d8d568ea7",
-    "zachyceno": "2026-11-04T20:04:01.231Z",
-    "publikovano": "2026-11-04T19:02:00.000Z",
-    "zdroj": {
-      "nazev": "Ukrainska Pravda (anglicky)",
-      "url": "https://www.pravda.com.ua/eng/news/2026/11/04/8061293/",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Russian forces kill man in Antonivka, Kherson Oblast, in drone attack",
-    "titulekPuvodni": "Russian forces kill man in Antonivka, Kherson Oblast, in drone attack",
-    "shrnuti": "A resident of the settlement of Antonivka in Kherson Oblast has been killed in a Russian drone attack on the afternoon of 4 November.",
-    "kodZeme": "RU",
-    "zeme": "Rusko",
-    "kategorie": [
-      "hybridni",
-      "drony",
-      "rusko"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "zeSite": null,
-    "shody": [
-      "attack on",
-      "dron",
-      "drone",
-      "russia"
-    ],
-    "naliehave": null,
-    "stav": "ceka",
-    "vyrez": {
-      "text": "Kherson Oblast attack: Russian drone kills man in Antonivka | Ukrainska Pravda\nStock photo: Getty Images\nA man has died after Russian forces attacked him with a drone in the settlement of Antonivka in Kherson Oblast.\nSource: Oleksandr Prokudin, Head of Kherson Oblast Military Administration, on Telegram\nQuote: \"At around 16:00, Russian forces killed a man in Antonivka.\"\nAdvertisement:\n\r\n\r\n\r\n\r\n\r\nDetails: Prokudin added that the man sustained fatal injuries as a result of the drone attack.\nHis identity is currently being established.\nSubscribe on Patreon to back our journalism long-term.\nKherson Oblast\ndrones\ncivilian casualties\nAdvertisement:\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nKherson Oblast\nUkraine's human rights commissioner explains why people were not evacuated from Oleshky directly to Kherson\nUkrainian human rights chief says he and Russian counterpart will present joint proposal to Melania Trump\nUkrainian human rights commissioner: Ukraine and Russia will not disclose number of Oleshky evacuees\nLatest news\nAdvertisement:\n\r\n\r\n\r\nAdvertisement:",
-      "stazeno": "2026-11-04T20:04:02.012Z",
-      "stav": 200
-    }
-  },
-  {
-    "id": "k-d1a4d5baaa15754a",
-    "zachyceno": "2026-11-04T18:03:08.099Z",
-    "publikovano": "2026-11-04T18:01:04.000Z",
-    "zdroj": {
-      "nazev": "Meduza (anglicky)",
-      "url": "https://meduza.io/en/news/2026/11/04/occupied-crimea-extends-school-break-as-ukrainian-strikes-leave-the-peninsula-without-power",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Occupied Crimea extends school break as Ukrainian strikes leave the peninsula without power",
-    "titulekPuvodni": "Occupied Crimea extends school break as Ukrainian strikes leave the peninsula without power",
-    "shrnuti": "Crimea has extended its school break amid power outages, Sergei Aksyonov, the Russia-appointed head of the annexed region, confirmed on Wednesday.",
-    "kodZeme": "UA",
-    "zeme": "Ukrajina",
-    "kategorie": [
-      "infrastruktura",
-      "rusko"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "zeSite": null,
-    "shody": [
-      "power outage",
-      "russia"
-    ],
-    "naliehave": null,
-    "stav": "ceka",
-    "vyrez": {
-      "text": "Occupied Crimea extends school break as Ukrainian strikes leave the peninsula without power — Meduza\nSkip to main content\nOccupied Crimea extends school break as Ukrainian strikes leave the peninsula without power\nNovember 4, 2026, 6:01 pm\nSource: Sergei Aksyonov\nCrimea has extended its school break amid power outages, Sergei Aksyonov, the Russia-appointed head of the annexed region, confirmed on Wednesday.\nAksyonov cited “the current difficult situation” as the reason for the extension and urged everyone to “be understanding.” He said classes were expected to resume on November 9.\nCrimea lost power overnight on November 3. Regional authorities initially said the outage was “due to a failure on the main transmission lines.” Outages continued on November 4, and Russia’s Energy Ministry acknowledged that Ukrainian strikes on energy infrastructure were responsible.\nUkrainian forces began a campaign in June aimed at disrupting Crimea’s electricity supply. Since then, the peninsula has repeatedly lost power, which has in turn caused problems with its water supply.\nThe scheduled fall break in Russian schools in 2026 ran from October 26 to November 3.\nAt Meduza, we are committed…",
-      "stazeno": "2026-11-04T18:03:09.061Z",
-      "stav": 200
-    }
-  },
-  {
-    "id": "k-0e050d0f89129020",
-    "zachyceno": "2026-11-04T20:04:01.237Z",
-    "publikovano": "2026-11-04T17:20:00.000Z",
-    "zdroj": {
-      "nazev": "Ukrainska Pravda (anglicky)",
-      "url": "https://www.pravda.com.ua/eng/news/2026/11/04/8061278/",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Russians launch propaganda Shahed drone to drop leaflets on Kyiv",
-    "titulekPuvodni": "Russians launch propaganda Shahed drone to drop leaflets on Kyiv",
-    "shrnuti": "A Russian propaganda Shahed drone carrying inflammatory leaflets with a phishing QR code has been shot down over Ukraine.",
-    "kodZeme": "UA",
-    "zeme": "Ukrajina",
-    "kategorie": [
-      "drony",
-      "rusko"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "zeSite": null,
-    "shody": [
-      "shot down",
-      "dron",
-      "drone",
-      "russia"
-    ],
-    "naliehave": null,
-    "stav": "ceka",
-    "vyrez": {
-      "text": "Kyiv drone attack: Russian Shahed carrying propaganda leaflets shot down | Ukrainska Pravda\nPhoto: Robert Brovdi\nA propaganda Shahed drone on its way to Kyiv with inflammatory propaganda materials containing a QR code that leads to a phishing trap was shot down over Ukraine on the evening of 4 November.\nSource: Robert \" Magyar \" Brovdi , Commander of the Unmanned Systems Forces\nQuote: \"This evening, a Russian drone was shot down near the combat positions of the Birds of the 427th Rarog Separate Brigade of the Unmanned Systems Forces that was carrying a stack of enemy propaganda leaflets along with its warhead.\"\nAdvertisement:\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nPhoto: Robert Brovdi\r\n\r\n\r\n\r\n\r\n\r\n\r\nPhoto: Robert Brovdi\n\r\n\r\n\r\nФото опублікував Роберт Бровді\r\n\r\n\r\n\r\nDetails: According to Magyar, the leaflets contain a call to join a \"Ukrainian volunteer brigade\" within the Russian Armed Forces. He also posted a photo of a leaflet calling on people to \"stop the lawlessness of military recruiters\".\nHe urged people not to scan the QR codes on such leaflets, as this could be a Russian trap to steal data or infect smartphones with a virus.\nYour support on Patreon helps us keep the news free and…",
-      "stazeno": "2026-11-04T20:04:02.067Z",
-      "stav": 200
-    }
-  },
-  {
-    "id": "k-ef6f4a18482d426e",
-    "zachyceno": "2026-11-04T18:03:08.022Z",
-    "publikovano": "2026-11-04T17:11:00.000Z",
-    "zdroj": {
-      "nazev": "Ukrinform (anglicky)",
-      "url": "https://www.ukrinform.net/rubric-ato/4181497-putin-wants-to-freeze-war-to-keep-troops-in-ukraine-and-pressure-europe-analyst.html",
-      "typ": "wire",
-      "primarni": false
-    },
-    "titulek": "Putin wants to freeze war to keep troops in Ukraine and pressure Europe – analyst",
-    "titulekPuvodni": "Putin wants to freeze war to keep troops in Ukraine and pressure Europe – analyst",
-    "shrnuti": "Russian leader Vladimir Putin does not want the war against Ukraine to end, as a frozen conflict would allow him to keep Russian troops on Ukrainian territory and continue putting pressure on European countries and U.S. President Donald Trump.",
-    "kodZeme": "UA",
-    "zeme": "Ukrajina",
-    "kategorie": [
-      "hybridni",
-      "rusko"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "zeSite": null,
-    "shody": [
-      "putin+europ+war",
-      "russia"
-    ],
-    "naliehave": null,
-    "stav": "ceka",
-    "vyrez": {
-      "text": "Putin wants to freeze war to keep troops in Ukraine and pressure Europe – analyst\n\r\nSubscription\nNewsletters\nPhotobank\nUkrinform - Ukrainian National News Agency\nFounded in 1918\nWednesday, 04 November 2026, 20:03\nWar\nEconomy\nSports\nMore ☰\nContacts\nEng\nУкр\nEng\nEsp\nDeu\nعربي\nFra\n日本語\nPol\n&times;\nAll topics\nWar\nRecovery of Ukraine\nPolitics\nEconomy\nFact checks\nDefense\nSociety and Culture\nSports\nCrime\nAccidents and Emergencies\nAgency\nInformation on Agency\nOur Contacts\nSubscribtion Terms\nOur Services\nPrivacy policy and personal data protection\nAdditional\nPublications\nInterviews\nPhoto\nVideo\nLongreads\nReleases\nServices\nSubscription\nNewsletters\nPhotobank\n\r\n\r\n\r\nRussian leader Vladimir Putin does not want the war against Ukraine to end, as a frozen conflict would allow him to keep Russian troops on Ukrainian territory and continue putting pressure on European countries and U.S. President Donald Trump.\nPatrick Bolder, a Dutch military analyst, defense and security expert, and strategic advisor at The Hague Centre for Strategic Studies, said this in an interview with Ukrinform.\n\r\n\r\n\"Putin does not want the war to end. He wants to keep it frozen, because that would allow him to maintain a…",
-      "stazeno": "2026-11-04T18:03:10.366Z",
-      "stav": 200
-    }
-  },
-  {
-    "id": "k-625f2c04eb13fc06",
-    "zachyceno": "2026-11-04T18:03:06.968Z",
-    "publikovano": "2026-11-04T16:56:33.000Z",
-    "zdroj": {
-      "nazev": "ANSA (Itálie, anglicky)",
-      "url": "https://www.ansa.it/english/news/general_news/2026/11/04/national-blood-centre-says-raise-guard-after-france-cyber-attacks_a45e51cc-8bca-4e0b-815e-4a7adbef639c.html",
-      "typ": "wire",
-      "primarni": false
-    },
-    "titulek": "National Blood Centre says raise guard after France cyber attacks on blood banks",
-    "titulekPuvodni": "National Blood Centre says raise guard after France cyber attacks on blood banks",
-    "shrnuti": "(ANSA) - ROME, 04 NOV - Italy's National Blood Centre on Wednesday called on Italian blood banks to raise their level of vigilance following cyber attacks in France that targeted the refrigeration systems of blood banks there. \"In coordination with the Ministry of Health, the National Blood Centre h",
-    "kodZeme": "FR",
-    "zeme": "Francie",
-    "kategorie": [
-      "kyber"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "zeSite": null,
-    "shody": [
-      "cyberattack",
-      "cyber attack",
-      "cyber"
-    ],
-    "naliehave": null,
-    "stav": "ceka",
-    "vyrez": {
-      "text": "National Blood Centre says raise guard after France cyber attacks on blood banks - General News - Ansa.it\nSe hai scelto di non accettare i cookie di profilazione e tracciamento, puoi aderire all&rsquo;abbonamento \"Consentless\" a un costo molto accessibile, oppure scegliere un altro abbonamento per accedere ad ANSA.it.\nTi invitiamo a leggere le Condizioni Generali di Servizio , la Cookie Policy e l' Informativa Privacy .\nABBONAMENTO CONSENTLESS\nPuoi leggere tutti i titoli di ANSA.it e 10 contenuti ogni 30 giorni a &euro;16,99/anno\nServizio equivalente a quello accessibile prestando il consenso ai cookie di profilazione pubblicitaria e tracciamento\nDurata annuale (senza rinnovo automatico)\nUn pop-up ti avvertir&agrave; che hai raggiunto i contenuti consentiti in 30 giorni (potrai continuare a vedere tutti i titoli del sito, ma per aprire altri contenuti dovrai attendere il successivo periodo di 30 giorni)\nPubblicit&agrave; presente ma non profilata o gestibile mediante il pannello delle preferenze\nIscrizione alle Newsletter tematiche curate dalle redazioni ANSA.\nALTRI ABBONAMENTI\nPer accedere senza limiti a tutti i contenuti di ANSA.it\nScegli il piano di abbonamento pi&ugrave;…",
-      "stazeno": "2026-11-04T18:03:11.285Z",
       "stav": 200
     }
   }
