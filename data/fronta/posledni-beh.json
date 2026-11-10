@@ -1,5 +1,5 @@
 {
-  "kdy": "2026-11-10T20:00:50.447Z",
+  "kdy": "2026-11-10T22:00:47.720Z",
   "zdroje": [
     {
       "klic": "e-sbirka",
@@ -224,11 +224,10 @@
     },
     {
       "klic": "minv-sk",
-      "ok": false,
-      "stav": null,
+      "ok": true,
+      "stav": 200,
       "pocetPolozek": 0,
-      "chyba": "fetch failed",
-      "vysledek": "chyba"
+      "vysledek": "ok"
     },
     {
       "klic": "chmi-cap",
@@ -241,7 +240,7 @@
       "klic": "kyber",
       "ok": true,
       "stav": null,
-      "pocetPolozek": 5,
+      "pocetPolozek": 4,
       "vysledek": "ok"
     },
     {
