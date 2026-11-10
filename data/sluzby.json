@@ -1,10 +1,10 @@
 {
-  "aktualizovano": "2026-11-10T12:03:41.653Z",
+  "aktualizovano": "2026-11-10T20:02:58.809Z",
   "stavy": [
     {
       "klic": "cloudflare",
-      "stav": "vypadek",
-      "popis": "Partial System Outage",
+      "stav": "omezeni",
+      "popis": "Partially Degraded Service",
       "incidenty": [
         {
           "nazev": "Changes to Cloudflare Workers are not producing Event Subscription events",
@@ -23,7 +23,7 @@
         "Arica, Chile - (ARI)",
         "Annaba, Algeria - (AAE)"
       ],
-      "zkontrolovano": "2026-11-10T12:03:41.653Z",
+      "zkontrolovano": "2026-11-10T20:02:58.809Z",
       "chyba": null
     },
     {
@@ -35,7 +35,7 @@
         "Zoom Phone",
         "Zoom Phone - EMEA"
       ],
-      "zkontrolovano": "2026-11-10T12:03:41.653Z",
+      "zkontrolovano": "2026-11-10T20:02:58.809Z",
       "chyba": null
     },
     {
@@ -44,7 +44,7 @@
       "popis": "All Systems Operational",
       "incidenty": [],
       "postizene": [],
-      "zkontrolovano": "2026-11-10T12:03:41.653Z",
+      "zkontrolovano": "2026-11-10T20:02:58.809Z",
       "chyba": null
     }
   ]

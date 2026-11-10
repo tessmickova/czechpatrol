@@ -521,6 +521,11 @@
       "kdy": "2026-11-10T06:30:28.609Z",
       "zaznamu": 0,
       "neodeslan": "nic od 7/10"
+    },
+    "2026-11-10-vecer": {
+      "kdy": "2026-11-10T18:30:40.187Z",
+      "zaznamu": 0,
+      "neodeslan": "nic nového"
     }
   },
   "navrhy": {
@@ -1277,6 +1282,6 @@
     }
   },
   "kyber": {
-    "stav": "klid"
+    "stav": "pozor"
   }
 }
