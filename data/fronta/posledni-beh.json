@@ -1,5 +1,5 @@
 {
-  "kdy": "2026-11-10T09:33:29.470Z",
+  "kdy": "2026-11-10T10:00:51.389Z",
   "zdroje": [
     {
       "klic": "e-sbirka",
@@ -206,7 +206,7 @@
       "ok": false,
       "stav": null,
       "pocetPolozek": 0,
-      "chyba": "The operation was aborted due to timeout",
+      "chyba": "fetch failed",
       "vysledek": "chyba"
     },
     {
