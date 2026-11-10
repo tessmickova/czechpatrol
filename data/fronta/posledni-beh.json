@@ -1,5 +1,5 @@
 {
-  "kdy": "2026-11-10T08:00:57.375Z",
+  "kdy": "2026-11-10T09:33:29.470Z",
   "zdroje": [
     {
       "klic": "e-sbirka",
@@ -206,7 +206,7 @@
       "ok": false,
       "stav": null,
       "pocetPolozek": 0,
-      "chyba": "fetch failed",
+      "chyba": "The operation was aborted due to timeout",
       "vysledek": "chyba"
     },
     {
@@ -234,14 +234,14 @@
       "klic": "chmi-cap",
       "ok": true,
       "stav": 200,
-      "pocetPolozek": 0,
+      "pocetPolozek": 5,
       "vysledek": "ok"
     },
     {
       "klic": "kyber",
       "ok": true,
       "stav": null,
-      "pocetPolozek": 1,
+      "pocetPolozek": 2,
       "vysledek": "ok"
     },
     {

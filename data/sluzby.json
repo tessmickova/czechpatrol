@@ -1,16 +1,11 @@
 {
-  "aktualizovano": "2026-11-10T08:03:05.060Z",
+  "aktualizovano": "2026-11-10T09:35:30.763Z",
   "stavy": [
     {
       "klic": "cloudflare",
       "stav": "vypadek",
       "popis": "Partial System Outage",
       "incidenty": [
-        {
-          "nazev": "Account Analytics Filter Issue",
-          "odkaz": "https://www.cloudflarestatus.com/incidents/m644az5hr9xo",
-          "aktualizovano": "2026-11-10T08:02:37.766Z"
-        },
         {
           "nazev": "Changes to Cloudflare Workers are not producing Event Subscription events",
           "odkaz": "https://www.cloudflarestatus.com/incidents/0ocqieaifg7h",
@@ -28,7 +23,7 @@
         "Arica, Chile - (ARI)",
         "Annaba, Algeria - (AAE)"
       ],
-      "zkontrolovano": "2026-11-10T08:03:05.060Z",
+      "zkontrolovano": "2026-11-10T09:35:30.763Z",
       "chyba": null
     },
     {
@@ -40,7 +35,7 @@
         "Zoom Phone",
         "Zoom Phone - EMEA"
       ],
-      "zkontrolovano": "2026-11-10T08:03:05.060Z",
+      "zkontrolovano": "2026-11-10T09:35:30.763Z",
       "chyba": null
     },
     {
@@ -49,7 +44,7 @@
       "popis": "All Systems Operational",
       "incidenty": [],
       "postizene": [],
-      "zkontrolovano": "2026-11-10T08:03:05.060Z",
+      "zkontrolovano": "2026-11-10T09:35:30.763Z",
       "chyba": null
     }
   ]
