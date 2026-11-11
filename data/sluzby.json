@@ -1,5 +1,5 @@
 {
-  "aktualizovano": "2026-11-11T08:03:16.243Z",
+  "aktualizovano": "2026-11-11T09:48:57.587Z",
   "stavy": [
     {
       "klic": "cloudflare",
@@ -9,7 +9,7 @@
         {
           "nazev": "SSL Certificate Provisioning Issue",
           "odkaz": "https://www.cloudflarestatus.com/incidents/21vwp89eiyjx",
-          "aktualizovano": "2026-11-11T07:45:57.602Z"
+          "aktualizovano": "2026-11-11T09:01:59.510Z"
         },
         {
           "nazev": "Replicate Input Upload Issue",
@@ -28,7 +28,7 @@
         "Arica, Chile - (ARI)",
         "Annaba, Algeria - (AAE)"
       ],
-      "zkontrolovano": "2026-11-11T08:03:16.243Z",
+      "zkontrolovano": "2026-11-11T09:48:57.587Z",
       "chyba": null
     },
     {
@@ -40,7 +40,7 @@
         "Zoom Phone",
         "Zoom Phone - EMEA"
       ],
-      "zkontrolovano": "2026-11-11T08:03:16.243Z",
+      "zkontrolovano": "2026-11-11T09:48:57.587Z",
       "chyba": null
     },
     {
@@ -49,7 +49,7 @@
       "popis": "All Systems Operational",
       "incidenty": [],
       "postizene": [],
-      "zkontrolovano": "2026-11-11T08:03:16.243Z",
+      "zkontrolovano": "2026-11-11T09:48:57.587Z",
       "chyba": null
     }
   ]
