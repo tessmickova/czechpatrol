@@ -1,16 +1,11 @@
 {
-  "aktualizovano": "2026-11-11T00:03:02.316Z",
+  "aktualizovano": "2026-11-11T02:03:02.107Z",
   "stavy": [
     {
       "klic": "cloudflare",
       "stav": "omezeni",
       "popis": "Partially Degraded Service",
       "incidenty": [
-        {
-          "nazev": "Network Performance Issues in St. Louis, USA",
-          "odkaz": "https://www.cloudflarestatus.com/incidents/1h9c85fz6bm3",
-          "aktualizovano": "2026-11-10T22:52:01.034Z"
-        },
         {
           "nazev": "Changes to Cloudflare Workers are not producing Event Subscription events",
           "odkaz": "https://www.cloudflarestatus.com/incidents/0ocqieaifg7h",
@@ -26,9 +21,9 @@
         "Cloudflare Sites and Services",
         "Albuquerque, United States - (ABQ)",
         "Arica, Chile - (ARI)",
-        "Annaba, Algeria - (AAE)"
+        "Baghdad, Iraq - (BGW)"
       ],
-      "zkontrolovano": "2026-11-11T00:03:02.316Z",
+      "zkontrolovano": "2026-11-11T02:03:02.107Z",
       "chyba": null
     },
     {
@@ -40,7 +35,7 @@
         "Zoom Phone",
         "Zoom Phone - EMEA"
       ],
-      "zkontrolovano": "2026-11-11T00:03:02.316Z",
+      "zkontrolovano": "2026-11-11T02:03:02.107Z",
       "chyba": null
     },
     {
@@ -49,7 +44,7 @@
       "popis": "All Systems Operational",
       "incidenty": [],
       "postizene": [],
-      "zkontrolovano": "2026-11-11T00:03:02.316Z",
+      "zkontrolovano": "2026-11-11T02:03:02.107Z",
       "chyba": null
     }
   ]
