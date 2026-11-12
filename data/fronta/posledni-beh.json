@@ -1,5 +1,5 @@
 {
-  "kdy": "2026-11-11T17:48:55.269Z",
+  "kdy": "2026-11-12T00:24:09.083Z",
   "zdroje": [
     {
       "klic": "e-sbirka",
@@ -110,11 +110,10 @@
     },
     {
       "klic": "ctu",
-      "ok": false,
-      "stav": 403,
+      "ok": true,
+      "stav": 200,
       "pocetPolozek": 0,
-      "chyba": "HTTP 403",
-      "vysledek": "chyba"
+      "vysledek": "ok"
     },
     {
       "klic": "nukib",
@@ -242,6 +241,7 @@
       "ok": true,
       "stav": null,
       "pocetPolozek": 3,
+      "chyba": "zive: The operation was aborted due to timeout",
       "vysledek": "ok"
     },
     {
