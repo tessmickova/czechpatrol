@@ -1,5 +1,49 @@
 [
   {
+    "id": "k-89c664cd593f9fa6",
+    "zachyceno": "2026-11-12T07:37:44.840Z",
+    "publikovano": "2026-11-12T06:41:00.000Z",
+    "zdroj": {
+      "nazev": "ERR News (Estonsko)",
+      "url": "https://news.err.ee/1610193178/defense-minister-drones-entered-estonian-airspace-from-northeast-and-southeast",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Defense minister: Drones entered Estonian airspace from northeast and southeast",
+    "titulekPuvodni": "Defense minister: Drones entered Estonian airspace from northeast and southeast",
+    "shrnuti": "Defense Minister Martin Herem said that NATO aircraft were monitoring the situation and Estonia had not authorized the use of its airspace during Ukraine's Wednesday attack on Ust-Luga in Russia.",
+    "kodZeme": "EE",
+    "zeme": "Estonsko",
+    "kategorie": [
+      "hybridni",
+      "drony",
+      "nato",
+      "rusko"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "attack on",
+      "dron",
+      "drone",
+      "airspace",
+      "nato",
+      "russia"
+    ],
+    "naliehave": {
+      "druh": "vzdusny-prostor-nato",
+      "stupen": 2,
+      "proc": "entered+airspace"
+    },
+    "stav": "ceka",
+    "vyrez": {
+      "text": "Defense minister: Drones entered Estonian airspace from northeast and southeast | News | ERR\n{{noticeUi.heading[langCode]}}\n{{infoLink[langCode].label}}\n{{noticeUi.allowAllLabel[langCode]}}\n{{rewokeLabels[langCode]}}\nX !\nNews\nVahur Lauri, Juhan Kilumets\n{{1794465660000 | amCalendar}}\nshare Facebook X (Twitter) e-mail\nMartin Herem. Source: Siim Lõvi/ERR\nNews\nDefense Minister Martin Herem said that NATO aircraft were monitoring the situation and Estonia had not authorized the use of its airspace during Ukraine's Wednesday attack on Ust-Luga in Russia.\nMinister of Defense Martin Herem said Ukraine's attack on Ust-Luga began around midnight and continued until approximately 6 a.m. Wednesday. Most of the drones flew close to Estonia's border but remained in Russian airspace.\nAt around 3:30 a.m., one drone briefly entered Estonian airspace from the direction of Latvia before continuing toward Russia. Several drones that reached Ust-Luga subsequently turned west and circled over the Gulf of Finland in Russian airspace. Some briefly crossed into Estonian airspace over the gulf.\nAt approximately 5:30 a.m., an explosion occurred aboard a Russian Baltic Fleet vessel in the Gulf of Finland.…",
+      "stazeno": "2026-11-12T07:37:47.560Z",
+      "stav": 200
+    }
+  },
+  {
     "id": "k-e58d03eb84524b49",
     "zachyceno": "2026-11-05T10:02:57.368Z",
     "publikovano": "2026-11-05T09:49:00.000Z",
@@ -495,6 +539,150 @@
     }
   },
   {
+    "id": "k-f71a3fa1263c5cda",
+    "zachyceno": "2026-11-12T07:37:44.471Z",
+    "publikovano": "2026-11-12T07:00:00.000Z",
+    "zdroj": {
+      "nazev": "Český rozhlas — domácí zprávy",
+      "url": "https://www.irozhlas.cz/zivotni-styl/spolecnost/tata-byl-ve-valce-dva-roky-ma-moc-tezka-zraneni-chybi-mu-cast-plic-rika-valecne_2611120800_tez",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Táta byl ve válce dva roky, má moc těžká zranění. Chybí mu část plic, říká válečné dítě Anna",
+    "titulekPuvodni": "Táta byl ve válce dva roky, má moc těžká zranění. Chybí mu část plic, říká válečné dítě Anna",
+    "shrnuti": "Když začala ruská invaze na Ukrajinu, Anna P. měla těsně před desátými narozeninami. Jak popsala pro seriál Radiožurnálu, její otec byl nasazený hned od začátku války. Po dvou letech utrpěl vážná zranění. Aby si Anna a další děti ukrajinských vojáků na chvíli odpočinuly od sirén a výbuchů, strávily ",
+    "kodZeme": "CZ",
+    "zeme": "Česko",
+    "kategorie": [
+      "sabotaz",
+      "vojsko",
+      "rusko",
+      "cr"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "vybuch",
+      "vojak+nasazen",
+      "vojak",
+      "rusk",
+      "radiozurnal"
+    ],
+    "naliehave": null,
+    "stav": "ceka",
+    "vyrez": {
+      "text": "",
+      "stazeno": "2026-11-12T07:37:47.870Z",
+      "stav": 403,
+      "chyba": "HTTP 403"
+    }
+  },
+  {
+    "id": "k-7173340d608b0de7",
+    "zachyceno": "2026-11-12T07:37:45.675Z",
+    "publikovano": "2026-11-12T06:36:42.000Z",
+    "zdroj": {
+      "nazev": "SME (Slovensko)",
+      "url": "https://www.sme.sk/svet/c/nemecko-by-malo-podla-ministra-vnutra-na-kyberutoky-odpovedat-protiudermi?utm_source=rss&utm_medium=feed&utm_campaign=www-rss",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Nemecko by malo podľa ministra vnútra na kyberútoky odpovedať protiúdermi",
+    "titulekPuvodni": "Nemecko by malo podľa ministra vnútra na kyberútoky odpovedať protiúdermi",
+    "shrnuti": "Minister Dobrindt upozornil na rastúcu intenzitu útokov v Európe.",
+    "kodZeme": "DE",
+    "zeme": "Německo",
+    "kategorie": [
+      "kyber"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "kyberutok"
+    ],
+    "naliehave": null,
+    "stav": "ceka",
+    "vyrez": {
+      "text": "",
+      "stazeno": "2026-11-12T07:37:47.920Z",
+      "stav": 403,
+      "chyba": "HTTP 403"
+    }
+  },
+  {
+    "id": "k-d92d30d85884e468",
+    "zachyceno": "2026-11-12T07:37:44.562Z",
+    "publikovano": "2026-11-12T06:12:40.000Z",
+    "zdroj": {
+      "nazev": "Novinky.cz",
+      "url": "https://www.novinky.cz/clanek/valka-na-ukrajine-v-petrohrade-vyhodili-do-povetri-auto-s-ruskym-plukovnikem-40608183",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "V Petrohradě vyhodili do povětří auto s ruským plukovníkem",
+    "titulekPuvodni": "V Petrohradě vyhodili do povětří auto s ruským plukovníkem",
+    "shrnuti": "V Petrohradě ve čtvrtek explodovalo auto s prozatím nejmenovaným ruským plukovníkem, který výbuch nepřežil. Informoval o tom tamní server Fontanka, podle něhož byl zraněn i jeden jeho příbuzný.",
+    "kodZeme": "RU",
+    "zeme": "Rusko",
+    "kategorie": [
+      "sabotaz",
+      "rusko"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "vybuch",
+      "rusk"
+    ],
+    "naliehave": null,
+    "stav": "ceka",
+    "vyrez": {
+      "text": "V Petrohradě vyhodili do povětří auto s ruským plukovníkem - Novinky\nZobrazení snímku 1 z 0\nzáhlaví\nHlavní obsah\nV Petrohradě vyhodili do povětří auto s ruským plukovníkem\nVojtěch Bauer\n1:14\nChcete-li článek poslouchat, přihlaste se\neBook\nSdílet\nDnes 12. 11., 7:12\nV Petrohradě ve čtvrtek explodovalo auto s prozatím nejmenovaným ruským plukovníkem, který výbuch nepřežil. Informoval o tom tamní server Fontanka, podle něhož byl zraněn i jeden jeho příbuzný.\nV Petrohradě vyhodili do vzduchu auto s plukovníkem Video: X/UA paolo, UAVoyagerUA\nČlánek\nK výbuchu došlo kolem sedmé hodiny ranní (05.00 SELČ) v petrohradské čtvrti Šušary. Ve vozidle seděl voják, podle Fontanky plukovník, který prozatím nebyl jmenován. Vedle něho seděl člen rodiny, který explozi přežil, utrpěl ale vážná zranění.\nTelegramový kanál Astra uvedl, že výbuch uzavřel Kolpinskou šosu, silniční komunikaci, která spojuje města Puškin a Kolpino.\nNa místo výbuchu dorazily ruské speciální jednotky. V okolí lidé pozorují zvýšené množství policistů. Podle další zprávy Fontanky bylo výbušné zařízení připevněno ke spodku vozidla a odpáleno na dálku v okamžiku, kdy plukovník vyjížděl ze dvora.\nAstra připomněla, že na konci srpna…",
+      "stazeno": "2026-11-12T07:37:47.959Z",
+      "stav": 200
+    }
+  },
+  {
+    "id": "k-825a2db918ea882b",
+    "zachyceno": "2026-11-12T07:37:47.420Z",
+    "publikovano": "2026-11-12T05:37:00.000Z",
+    "zdroj": {
+      "nazev": "Ukrainska Pravda (anglicky)",
+      "url": "https://www.pravda.com.ua/eng/news/2026/11/12/8062442/",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Woman injured in Russian drone attack on Kherson this morning dies in hospital",
+    "titulekPuvodni": "Woman injured in Russian drone attack on Kherson this morning dies in hospital",
+    "shrnuti": "A 58-year-old woman sustained severe injuries in a Russian drone attack on Kherson's Korabelnyi district on 12 November. Police have launched a war crime investigation following her death.",
+    "kodZeme": "RU",
+    "zeme": "Rusko",
+    "kategorie": [
+      "hybridni",
+      "drony",
+      "rusko"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "attack on",
+      "dron",
+      "drone",
+      "russia"
+    ],
+    "naliehave": null,
+    "stav": "ceka",
+    "vyrez": {
+      "text": "Woman dies in hospital after Russian drone strike on Kherson | Ukrainska Pravda\nAmbulance. Stock photo: Getty Images\nA Russian drone injured a woman in the Korabelnyi district of Kherson on the morning of 12 November.\nSource: Kherson Oblast Military Administration ; Kherson Oblast Prosecutor's Office\nUpdate: According to the Prosecutor's Office, the woman sustained severe injuries in a Russian drone strike at around 04:40. She was taken to hospital but died despite doctors' efforts to save her.\nAdvertisement:\n\r\n\r\n\r\n\r\n\r\nLaw enforcement officers have launched an investigation into a war crime resulting in a person's death.\nDetails: Kherson Oblast Military Administration reported earlier that Russian forces had attacked the Korabelnyi district of Kherson. A 58-year-old local woman suffered blast injuries and shrapnel wounds to her arms and legs.\nSupport Ukrainska Pravda on Patreon to help us keep reporting!\nKherson\nAdvertisement:\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nKherson\nDuring ceasefire in Oleshky, Russians returned to positions that Ukrainian forces spent nearly a year clearing\nRussians strike hospital in Kherson with drone following end of ceasefire – video\nOne killed and five injured in…",
+      "stazeno": "2026-11-12T07:37:48.541Z",
+      "stav": 200
+    }
+  },
+  {
     "id": "k-b6c4a7235b00e605",
     "zachyceno": "2026-11-12T06:03:21.010Z",
     "publikovano": "2026-11-12T05:30:00.000Z",
@@ -523,6 +711,41 @@
     "vyrez": {
       "text": "130 rokov šíria „smrad“, ktorý Bratislava miluje: Čo sa dnes naozaj skrýva za múrmi najstaršej potravinárskej fabriky? | Aktuality.sk\nAktuality\nŠport\nDiva\nNajmama\nŽivé\nRecepty\nDobrú chuť\nSlovník\n5 °C -\nBratislava\nštvrtok 12. 11.\n12. 11.\nSvätopluk\nEkonomika dnes 12. Nov 2026 o 06:30\n6 min. čítania\nPridať do Google\n130 rokov šíria „smrad“, ktorý Bratislava miluje: Čo sa dnes naozaj skrýva za múrmi najstaršej potravinárskej fabriky?\n13 fotiek v galérii\nModelez, Bratislava 09.10.2026 Zdroj: Branislav Wáclav/Aktuality.sk\nMartin Odkladal Ekonomický redaktor\nUložiť článok\nPrežila bombardovanie, znárodňovanie aj bizarnú tragédiu v kadi s horúcou čokoládou. Najstaršia potravinárska fabrika u nás však už dávno nežije len zo spomienok na tradičné „štolverky“. V novom diele seriálu Kto kŕmi Slovensko odhaľujeme zákulisie bratislavského závodu, ktorý ako jeden z mála v Európe stále spracúva surové kakaové bôby priamo od základu. Ako sa z historického podniku uprostred obytnej štvrte stalo nadnárodné logistické centrum, ktoré chrlí čokoládu do celého sveta?\nNajstaršia potravinárska fabrika na Slovensku. Týmto titulom sa pýši spoločnosť, z ktorej závodu na bratislavskej Račianskej ulici sa už…",
       "stazeno": "2026-11-12T06:03:23.283Z",
+      "stav": 200
+    }
+  },
+  {
+    "id": "k-ffd09a5b879a3743",
+    "zachyceno": "2026-11-12T07:37:47.425Z",
+    "publikovano": "2026-11-12T04:34:00.000Z",
+    "zdroj": {
+      "nazev": "Ukrainska Pravda (anglicky)",
+      "url": "https://www.pravda.com.ua/eng/news/2026/11/12/8062431/",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Russia attacks energy infrastructure facilities and residential areas in Rivne Oblast, leaving parts without power",
+    "titulekPuvodni": "Russia attacks energy infrastructure facilities and residential areas in Rivne Oblast, leaving parts without power",
+    "shrnuti": "Russian forces targeted energy infrastructure facilities and residential areas in Rivne Oblast overnight, causing power outages in the Rivne and Sarny districts. Critical infrastructure facilities are switching to generators.",
+    "kodZeme": "RU",
+    "zeme": "Rusko",
+    "kategorie": [
+      "infrastruktura",
+      "rusko"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "power outage",
+      "critical infrastructure",
+      "russia"
+    ],
+    "naliehave": null,
+    "stav": "ceka",
+    "vyrez": {
+      "text": "Russian strikes leave parts of Rivne Oblast without electricity | Ukrainska Pravda\nPower grid. Photo: Getty Images\nRussian forces struck energy infrastructure facilities and residential areas in Rivne Oblast on the night of 11-12 November.\nSource: Oleksandr Koval, Head of Rivne Oblast Military Administration, on social media\nQuote: \"It has been a difficult night. The enemy has attacked energy infrastructure facilities and residential areas. Early reports indicate that there have been no casualties. However, settlements in the Rivne and Sarny districts have been left without electricity.\"\nAdvertisement:\n\r\n\r\n\r\n\r\n\r\nDetails: The town of Kostopil is among the areas without electricity. Critical infrastructure facilities are switching to generator power, Koval added.\nSupport Ukrainska Pravda on Patreon to help us keep reporting!\nRivne Oblast\nwar\nenergy\nAdvertisement:\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nRivne Oblast\nRussia attacks energy facilities in northern part of Rivne Oblast\nMan killed in morning Russian attack on Rivne Oblast\nRussia strikes Ukrenergo substation in Rivne Oblast\nLatest news\nAdvertisement:\n\r\n\r\n\r\nAdvertisement:",
+      "stazeno": "2026-11-12T07:37:48.587Z",
       "stav": 200
     }
   },
@@ -10175,207 +10398,6 @@
       "stazeno": "2026-11-07T16:03:12.086Z",
       "stav": 403,
       "chyba": "HTTP 403"
-    }
-  },
-  {
-    "id": "k-44e883a35629d85d",
-    "zachyceno": "2026-11-07T16:03:08.955Z",
-    "publikovano": "2026-11-07T15:37:50.000Z",
-    "zdroj": {
-      "nazev": "Euronews",
-      "url": "https://www.euronews.com/2026/11/07/at-least-five-killed-in-shooting-in-krakow-polish-police-say",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "At least five killed in shooting in Kraków, Polish police say",
-    "titulekPuvodni": "At least five killed in shooting in Kraków, Polish police say",
-    "shrnuti": "The shooting occurred in the Main Square in Krakow, the municipal government said on X. A spokesperson for the local firefighters told Polsat News that the perpetrator fired a gun from a passing car.",
-    "kodZeme": "PL",
-    "zeme": "Polsko",
-    "kategorie": [
-      "sabotaz"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "zeSite": null,
-    "shody": [
-      "fire+munic"
-    ],
-    "naliehave": null,
-    "stav": "ceka",
-    "vyrez": {
-      "text": "Breaking news. - At least five killed in shooting in Kraków, Polish police say | Euronews\nAdvertisement\nBy&nbsp Tomasz Lezon &nbsp&&nbsp Emma De Ruiter\nPublished on 7 November 2026 - 16:37 GMT+1 &bull; Updated\n16:53\nShare\nComments\nAdd Euronews on Google\nShare\nFacebook\nTwitter\nFlipboard\nSend\nReddit\nLinkedin\nMessenger\nTelegram\nVK\nBluesky\nThreads\nWhatsapp\nThe shooting occurred in the Main Square in Kraków, the municipal government said on X. A spokesperson for the local firefighters told Polsat News that the perpetrator fired a gun from a passing car.\nAt least five people were killed and more than a dozen injured after a gunman opened fire on the main square of the Polish city of Kraków.\nADVERTISEMENT\nADVERTISEMENT\n\"The perpetrator was shot by police officers and is currently being transported to hospital. Emergency services are continuing their operation at the scene,\" according to police.\nA spokesperson for the local firefighters told Polsat News that the perpetrator fired a gun from a passing car.\nNumerous police cars and ambulances appeared in the area around St Mary's Basilica. A helicopter from the air ambulance service was also dispatched to the site.\nThe police confirmed that…",
-      "stazeno": "2026-11-07T16:03:12.165Z",
-      "stav": 200
-    }
-  },
-  {
-    "id": "k-b582a408ae0d127a",
-    "zachyceno": "2026-11-07T16:03:11.417Z",
-    "publikovano": "2026-11-07T15:22:00.000Z",
-    "zdroj": {
-      "nazev": "Ukrinform (anglicky)",
-      "url": "https://www.ukrinform.net/rubric-ato/4182465-russian-attack-causes-power-outage-in-khmelnytskyi-region.html",
-      "typ": "wire",
-      "primarni": false
-    },
-    "titulek": "Russian attack causes power outage in Khmelnytskyi region",
-    "titulekPuvodni": "Russian attack causes power outage in Khmelnytskyi region",
-    "shrnuti": "A power outage has occurred in the Kamianets-Podilskyi district of the Khmelnytskyi region as a result of a Russian attack.",
-    "kodZeme": "RU",
-    "zeme": "Rusko",
-    "kategorie": [
-      "infrastruktura",
-      "rusko"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "zeSite": null,
-    "shody": [
-      "power outage",
-      "russia"
-    ],
-    "naliehave": null,
-    "stav": "ceka",
-    "vyrez": {
-      "text": "Russian attack causes power outage in Khmelnytskyi region\n\r\nSubscription\nNewsletters\nPhotobank\nUkrinform - Ukrainian National News Agency\nFounded in 1918\nSaturday, 07 November 2026, 18:03\nWar\nEconomy\nSports\nMore ☰\nContacts\nEng\nУкр\nEng\nEsp\nDeu\nعربي\nFra\n日本語\nPol\n&times;\nAll topics\nWar\nRecovery of Ukraine\nPolitics\nEconomy\nFact checks\nDefense\nSociety and Culture\nSports\nCrime\nAccidents and Emergencies\nAgency\nInformation on Agency\nOur Contacts\nSubscribtion Terms\nOur Services\nPrivacy policy and personal data protection\nAdditional\nPublications\nInterviews\nPhoto\nVideo\nLongreads\nReleases\nServices\nSubscription\nNewsletters\nPhotobank\n\r\n\r\n\r\nA power outage has occurred in the Kamianets-Podilskyi district of the Khmelnytskyi region as a result of a Russian attack.\nAccording to Ukrinform, Head of the Khmelnytskyi Regional Military Administration Serhii Tiurin reported this on Telegram.\n\r\n\r\n&ldquo;A power outage has occurred in the Kamianets-Podilskyi district as a result of a Russian attack,&rdquo; Tiurin said.\n\r\n\r\nHe noted that energy workers were working to restore electricity supplies.\n\r\n\r\nRead also: Ukraine's energy facilities hit 18 times in past 24 hours &ndash; energy minister \r\n\r\nAs…",
-      "stazeno": "2026-11-07T16:03:12.198Z",
-      "stav": 200
-    }
-  },
-  {
-    "id": "k-c42ca26f63eb754b",
-    "zachyceno": "2026-11-07T16:03:08.092Z",
-    "publikovano": "2026-11-07T15:19:29.000Z",
-    "zdroj": {
-      "nazev": "ČT24 — hlavní zprávy",
-      "url": "https://ct24.ceskatelevize.cz/clanek/svet/po-strelbe-na-namesti-v-krakove-jsou-hlaseni-mrtvi-i-zraneni-379380",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Po střelbě v Krakově je více mrtvých, mezi zraněnými jsou i policisté",
-    "titulekPuvodni": "Po střelbě v Krakově je více mrtvých, mezi zraněnými jsou i policisté",
-    "shrnuti": "Pět mrtvých si v sobotu odpoledne vyžádala střelba na hlavním náměstí v Krakově na jihu Polska, oznámila polská policie na síti X. Hasiči podle zpravodajské televize TVN 24 původně potvrdili dvě oběti a deset raněných. Na místě zasahují policisté a záchranáři, je tam i několik sanitek a policejních ",
-    "kodZeme": "PL",
-    "zeme": "Polsko",
-    "kategorie": [
-      "zpravodajske",
-      "vojsko"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "zeSite": null,
-    "shody": [
-      "zadrz+zpravodajsk",
-      "policie"
-    ],
-    "naliehave": null,
-    "stav": "ceka",
-    "vyrez": {
-      "text": "Po střelbě v Krakově je více mrtvých, mezi zraněnými jsou i policisté — ČT24 — Česká televize\nŽivé vysílání\nTV program\nPočasí\nTeletext\nE-shop\nVše o ČT\nTV poplatky\nKontakty\nSpravovat účet\nOblíbené pořady\nRozkoukaná videa\nPřihlásit se do TV\nOdhlásit se\nPo střelbě v Krakově je více mrtvých, mezi zraněnými jsou i policisté\nČTK ,\nČT24\n, jol\n7. 11. 2026 před 24 m minutami | Zdroj: ČTK , Wyborcza.pl\nZáchranné složky na hlavním náměstí v Krakově po ohlášené střelbě\nZdroj: Jakub Włodek/Agencja Wyborcza.pl/via Reuters\nPět mrtvých si v sobotu odpoledne vyžádala střelba na hlavním náměstí v Krakově na jihu Polska, oznámila polská policie na síti X. Hasiči podle zpravodajské televize TVN 24 původně potvrdili dvě oběti a deset raněných. Na místě zasahují policisté a záchranáři, je tam i několik sanitek a policejních aut, přistál rovněž vrtulník letecké záchranné služby, dodala stanice. Podle policie se předpokládaného pachatele podařilo zadržet.\nPolský premiér Donald Tusk na síti X napsal, že policie vyšetřuje pozadí a okolnosti střelby. Podle serveru Wyborcza.pl ke střelbě mělo dojít po 15. hodině, dotyčný měl střílet z projíždějícího auta. Mezi raněnými jsou i policisté.\nLidé se v panice…",
-      "stazeno": "2026-11-07T16:03:13.432Z",
-      "stav": 200
-    }
-  },
-  {
-    "id": "k-2edf3cb056ad8db2",
-    "zachyceno": "2026-11-07T16:03:10.929Z",
-    "publikovano": "2026-11-07T14:47:08.000Z",
-    "zdroj": {
-      "nazev": "Digi24 (Rumunsko)",
-      "url": "https://www.digi24.ro/stiri/actualitate/evenimente/descoperire-macabra-pe-nava-lovita-de-drona-in-largul-romaniei-ramasite-umane-gasite-la-bord-de-autoritatile-bulgare-4026163",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Descoperire macabră pe nava lovită de dronă în largul României: rămășițe umane găsite la bord de autoritățile bulgare",
-    "titulekPuvodni": "Descoperire macabră pe nava lovită de dronă în largul României: rămășițe umane găsite la bord de autoritățile bulgare",
-    "shrnuti": "Au fost descoperite rămăşiţe umane la bordul unei nave lovite în urmă cu 15 zile de o dronă în largul României şi transferată într-un şantier naval bulgar pentru reparaţii, a anunţat, sâmbătă, Parchetul din Varna, scrie AFP, citată de News.ro.",
-    "kodZeme": "RO",
-    "zeme": "Rumunsko",
-    "kategorie": [
-      "drony"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "zeSite": null,
-    "shody": [
-      "dron+gasit",
-      "dron"
-    ],
-    "naliehave": null,
-    "stav": "ceka",
-    "vyrez": {
-      "text": "Descoperire macabră pe nava lovită de dronă în largul României: rămășițe umane găsite la bord de autoritățile bulgare | Digi24\nHOME\nȘtiri\nActualitate\nEvenimente\nDescoperire macabră pe nava lovită de dronă în largul României: rămășițe umane găsite la bord de autoritățile bulgare\nDescoperire macabră pe nava lovită de dronă în largul României: rămășițe umane găsite la bord de autoritățile bulgare\nData publicării: 07.11.2026 16:47\nNavă comercială lovită de drone în Marea Neagră. Sursa foto: Profimedia Images Urmărește Digi24 în Google Discover Adaugă Digi24 ca sursă preferată în Google\nAu fost descoperite rămăşiţe umane la bordul unei nave lovite în urmă cu 15 zile de o dronă în largul României şi transferată într-un şantier naval bulgar pentru reparaţii, a anunţat, sâmbătă, Parchetul din Varna, scrie AFP, citată de News.ro.\n„În timpul operaţiunilor de curăţare, au fost găsite rămăşiţe umane foarte deteriorate”, a precizat Parchetul într-un comunicat, adăugând că au fost dispuse analize ADN pentru identificarea victimelor.\nStarea rămăşiţelor umane nu permite determinarea cu certitudine a numărului de cadavre, a explicat pentru AFP o sursă din cadrul forţelor de ordine bulgare,…",
-      "stazeno": "2026-11-07T16:03:14.511Z",
-      "stav": 200
-    }
-  },
-  {
-    "id": "k-11d0e39ed1bb8eed",
-    "zachyceno": "2026-11-07T16:03:11.421Z",
-    "publikovano": "2026-11-07T14:36:00.000Z",
-    "zdroj": {
-      "nazev": "Ukrinform (anglicky)",
-      "url": "https://www.ukrinform.net/rubric-ato/4182452-private-house-damaged-in-russian-attack-on-kyivs-shevchenkivskyi-district.html",
-      "typ": "wire",
-      "primarni": false
-    },
-    "titulek": "Private house damaged in Russian attack on Kyiv's Shevchenkivskyi district",
-    "titulekPuvodni": "Private house damaged in Russian attack on Kyiv's Shevchenkivskyi district",
-    "shrnuti": "A private house was damaged in a Russian attack in Kyiv's Shevchenkivskyi district.",
-    "kodZeme": "UA",
-    "zeme": "Ukrajina",
-    "kategorie": [
-      "hybridni",
-      "rusko"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "zeSite": null,
-    "shody": [
-      "attack on",
-      "russia"
-    ],
-    "naliehave": null,
-    "stav": "ceka",
-    "vyrez": {
-      "text": "Private house damaged in Russian attack on Kyiv's Shevchenkivskyi district\n\r\nSubscription\nNewsletters\nPhotobank\nUkrinform - Ukrainian National News Agency\nFounded in 1918\nSaturday, 07 November 2026, 18:03\nWar\nEconomy\nSports\nMore ☰\nContacts\nEng\nУкр\nEng\nEsp\nDeu\nعربي\nFra\n日本語\nPol\n&times;\nAll topics\nWar\nRecovery of Ukraine\nPolitics\nEconomy\nFact checks\nDefense\nSociety and Culture\nSports\nCrime\nAccidents and Emergencies\nAgency\nInformation on Agency\nOur Contacts\nSubscribtion Terms\nOur Services\nPrivacy policy and personal data protection\nAdditional\nPublications\nInterviews\nPhoto\nVideo\nLongreads\nReleases\nServices\nSubscription\nNewsletters\nPhotobank\n\r\n\r\n\r\nA private house was damaged in a Russian attack in Kyiv's Shevchenkivskyi district.\nAccording to Ukrinform, the Kyiv City Military Administration reported this on Telegram .\n\r\n\r\n&ldquo;A private residential house was damaged in an enemy attack in the Shevchenkivskyi district,&rdquo; the statement said.\n\r\n\r\nAs Ukrinform reported, President Volodymyr Zelensky said that the Russians had used 172 drones and 36 ballistic missiles, all of which were directed at Kyiv and the surrounding region.\n\r\n\r\nRead also: Zelensky: In addition to Kyiv , 12…",
-      "stazeno": "2026-11-07T16:03:15.899Z",
-      "stav": 200
-    }
-  },
-  {
-    "id": "k-5057881ea0749687",
-    "zachyceno": "2026-11-07T16:03:11.424Z",
-    "publikovano": "2026-11-07T14:12:00.000Z",
-    "zdroj": {
-      "nazev": "Ukrinform (anglicky)",
-      "url": "https://www.ukrinform.net/rubric-ato/4182444-russia-may-have-used-north-korean-kn23-missiles-to-strike-ukrainian-energy-facility-zelensky.html",
-      "typ": "wire",
-      "primarni": false
-    },
-    "titulek": "Russia may have used North Korean KN-23 missiles to strike Ukrainian energy facility – Zelensky",
-    "titulekPuvodni": "Russia may have used North Korean KN-23 missiles to strike Ukrainian energy facility – Zelensky",
-    "shrnuti": "Russia likely used North Korean-made KN-23 missiles in its November 7 overnight attack on one of Ukraine's key energy facilities, according to preliminary findings.",
-    "kodZeme": "UA",
-    "zeme": "Ukrajina",
-    "kategorie": [
-      "hybridni",
-      "rusko"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "zeSite": null,
-    "shody": [
-      "attack on",
-      "russia"
-    ],
-    "naliehave": null,
-    "stav": "ceka",
-    "vyrez": {
-      "text": "Russia may have used North Korean KN-23 missiles to strike Ukrainian energy facility – Zelensky\n\r\nSubscription\nNewsletters\nPhotobank\nUkrinform - Ukrainian National News Agency\nFounded in 1918\nSaturday, 07 November 2026, 18:03\nWar\nEconomy\nSports\nMore ☰\nContacts\nEng\nУкр\nEng\nEsp\nDeu\nعربي\nFra\n日本語\nPol\n&times;\nAll topics\nWar\nRecovery of Ukraine\nPolitics\nEconomy\nFact checks\nDefense\nSociety and Culture\nSports\nCrime\nAccidents and Emergencies\nAgency\nInformation on Agency\nOur Contacts\nSubscribtion Terms\nOur Services\nPrivacy policy and personal data protection\nAdditional\nPublications\nInterviews\nPhoto\nVideo\nLongreads\nReleases\nServices\nSubscription\nNewsletters\nPhotobank\n\r\n\r\n\r\nRussia likely used North Korean-made KN-23 missiles in its November 7 overnight attack on one of Ukraine's key energy facilities, according to preliminary findings.\nAccording to Ukrinform, President Volodymyr Zelensky reported this on Facebook following a conference call on the consequences of the Russian strike and recovery efforts after the attacks.\n\r\n\r\n&ldquo;In tonight&rsquo;s attack, Russia used 36 missiles approaching their targets along a ballistic trajectory. Only four missiles were taken down,&rdquo; Zelensky…",
-      "stazeno": "2026-11-07T16:03:16.345Z",
-      "stav": 200
     }
   }
 ]
