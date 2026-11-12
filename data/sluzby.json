@@ -1,5 +1,5 @@
 {
-  "aktualizovano": "2026-11-12T00:26:01.305Z",
+  "aktualizovano": "2026-11-12T03:02:59.195Z",
   "stavy": [
     {
       "klic": "cloudflare",
@@ -28,19 +28,27 @@
         "Albuquerque, United States - (ABQ)",
         "Arica, Chile - (ARI)"
       ],
-      "zkontrolovano": "2026-11-12T00:26:01.305Z",
+      "zkontrolovano": "2026-11-12T03:02:59.195Z",
       "chyba": null
     },
     {
       "klic": "zoom",
       "stav": "omezeni",
-      "popis": "Service Under Maintenance",
-      "incidenty": [],
+      "popis": "Partially Degraded Service",
+      "incidenty": [
+        {
+          "nazev": "Service Degradation Affecting Outbound SMS Messages for a Subset of users in US region",
+          "odkaz": "https://stspg.io/4p9rlpt9fv4v",
+          "aktualizovano": "2026-11-11T18:40:53.969-08:00"
+        }
+      ],
       "postizene": [
         "Zoom Phone",
-        "Zoom Phone - EMEA"
+        "SMS/MMS (Inbound/Outbound)",
+        "SMS/MMS (Inbound/Outbound)",
+        "Zoom CX - NORTH AMERICA"
       ],
-      "zkontrolovano": "2026-11-12T00:26:01.305Z",
+      "zkontrolovano": "2026-11-12T03:02:59.195Z",
       "chyba": null
     },
     {
@@ -49,7 +57,7 @@
       "popis": "All Systems Operational",
       "incidenty": [],
       "postizene": [],
-      "zkontrolovano": "2026-11-12T00:26:01.305Z",
+      "zkontrolovano": "2026-11-12T03:02:59.195Z",
       "chyba": null
     }
   ]
