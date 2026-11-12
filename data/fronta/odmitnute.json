@@ -16,6 +16,72 @@
     "posouzeni": null
   },
   {
+    "id": "k-b9da2c11c7aec3c5",
+    "zachyceno": "2026-11-12T00:26:00.067Z",
+    "publikovano": "2026-11-12T00:10:19.000Z",
+    "zdroj": {
+      "nazev": "Le Monde (Francie)",
+      "url": "https://www.lemonde.fr/international/live/2026/11/12/en-direct-guerre-en-ukraine-volodymyr-zelensky-juge-une-avancee-possible-avant-la-fin-de-l-annee-dans-les-pourparlers-de-paix_6808609_3210.html",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "EN DIRECT, guerre en Ukraine : Volodymyr Zelensky juge une avancée possible avant la fin de l’année dans les pourparlers de paix",
+    "shrnuti": "« Aujourd’hui, cette fenêtre d’opportunité existe réellement, où tous les participants actuellement engagés dans le processus de négociation souhaitent véritablement obtenir un résultat avant 2027 », a estimé mercredi le président ukrainien. En visite en Irlande, il doit s’entretenir jeudi avec les ",
+    "duvod": "bez-skutku",
+    "kategorie": [],
+    "posouzeni": null
+  },
+  {
+    "id": "k-426d404f1a960898",
+    "zachyceno": "2026-11-12T00:26:01.151Z",
+    "publikovano": "2026-11-12T00:06:52.000Z",
+    "zdroj": {
+      "nazev": "Meduza (anglicky)",
+      "url": "https://meduza.io/en/feature/2026/11/12/russian-media-outlets-are-reporting-a-new-claude-ai-ban-the-rule-has-actually-been-in-place-since-last-year",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Russian media outlets are reporting a ‘new’ Claude AI ban. The rule has actually been in place since last year.",
+    "shrnuti": "On November 11, Telegram channels and media outlets began widely circulating reports (1, 2, 3) that Anthropic would cut off access to its Claude chatbot for employees of Russian companies starting November 12, even if they work in other countries.",
+    "duvod": "bez-skutku",
+    "kategorie": [
+      "rusko"
+    ],
+    "posouzeni": null
+  },
+  {
+    "id": "k-0fc6b91c507b3153",
+    "zachyceno": "2026-11-12T00:25:58.372Z",
+    "publikovano": "2026-11-12T00:06:10.000Z",
+    "zdroj": {
+      "nazev": "The Guardian — World",
+      "url": "https://www.theguardian.com/us-news/2026/nov/11/deadly-brooklyn-building-collapse",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Brooklyn building collapse kills at least one, traps others in wreckage",
+    "shrnuti": "Three-story building was at the edge of a construction site where another edifice had been demolished Firefighters dug through the rubble of a three-story building in Brooklyn on Wednesday after it collapsed at the edge of a construction site, killing at least one person and trapping others beneath ",
+    "duvod": "bez-skutku",
+    "kategorie": [],
+    "posouzeni": null
+  },
+  {
+    "id": "k-696fe886a6a6357a",
+    "zachyceno": "2026-11-12T00:25:57.660Z",
+    "publikovano": "2026-11-12T00:05:00.000Z",
+    "zdroj": {
+      "nazev": "iDNES.cz — zpravodajství",
+      "url": "https://www.idnes.cz/zpravy/zahranicni/scott-colom-vyhral-v-mississippi-bude-prvnim-cernosskym-senatorem-od-valky.A261112_004235_zahranicni_air#utm_source=rss&utm_medium=feed&utm_campaign=zpravodaj&utm_content=main",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Scott Colom vyhrál v Mississippi, bude prvním černošským senátorem od války",
+    "shrnuti": "Demokrat Scott Colom podle projekcí CNN po těsném souboji porazil republikánskou senátorku Cindy Hydeovou-Smythovou a získal senátorské křeslo za Mississippi, která tak bude mít prvního černošského senátora od období rekonstrukce po občanské válce.",
+    "duvod": "bez-skutku",
+    "kategorie": [],
+    "posouzeni": null
+  },
+  {
     "id": "k-0ae6d43783d69c2e",
     "zachyceno": "2026-11-11T02:03:00.792Z",
     "publikovano": "2026-11-12T00:02:41.000Z",
@@ -27,6 +93,40 @@
     },
     "titulek": "Viminale: “ Gli hacker puntano al caos, difendere strutture e servizi essenziali”",
     "shrnuti": "Ancora minacce a Tajani. Le opposizioni chiedono che il governo vada a riferire in aula. “Contraddizioni tra ministri e fondi tagliati. E’ una vera emergenza”",
+    "duvod": "bez-skutku",
+    "kategorie": [],
+    "posouzeni": null
+  },
+  {
+    "id": "k-63d8b879cca65d93",
+    "zachyceno": "2026-11-12T00:25:58.363Z",
+    "publikovano": "2026-11-12T00:01:03.000Z",
+    "zdroj": {
+      "nazev": "The Guardian — World",
+      "url": "https://www.theguardian.com/uk-news/2026/nov/12/bronze-leg-scottish-bog-roman-occupation-exhibit",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Bronze leg found in Scottish bog sheds new light on Roman occupation",
+    "shrnuti": "Once thought to have been looted by Scottish tribes, the gilded limb is the centrepiece of a new exhibition on Roman Scotland in Edinburgh A large bronze leg found in a bog in rural Scotland more than 200 years ago and then hidden away in a duke’s storeroom is helping to rewrite the history of the R",
+    "duvod": "bez-mista",
+    "kategorie": [
+      "kyber"
+    ],
+    "posouzeni": null
+  },
+  {
+    "id": "k-64cb458074bc19a8",
+    "zachyceno": "2026-11-12T00:25:58.366Z",
+    "publikovano": "2026-11-12T00:01:03.000Z",
+    "zdroj": {
+      "nazev": "The Guardian — World",
+      "url": "https://www.theguardian.com/technology/2026/nov/12/facial-recognition-errors-put-ethnic-minorities-at-risk-of-wrongful-arrest-police-watchdog-warns",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Facial recognition errors put ethnic minorities at risk of wrongful arrest, police watchdog warns",
+    "shrnuti": "Inspectors find some officers acted on potential matches from retrospective searches without making enough checks Police officers risk arresting innocent people, especially from ethnic minorities, if they treat inaccurate facial recognition data as evidence, an official report has found. Although th",
     "duvod": "bez-skutku",
     "kategorie": [],
     "posouzeni": null
@@ -235,6 +335,22 @@
     },
     "titulek": "tagesschau",
     "shrnuti": "tagesschau",
+    "duvod": "bez-skutku",
+    "kategorie": [],
+    "posouzeni": null
+  },
+  {
+    "id": "k-fff8a7044b111c20",
+    "zachyceno": "2026-11-12T00:25:59.523Z",
+    "publikovano": "2026-11-11T23:53:00.000Z",
+    "zdroj": {
+      "nazev": "SVT Nyheter (Švédsko)",
+      "url": "https://www.svt.se/nyheter/utrikes/minst-en-dod-och-tolv-skadade-efter-husras-i-brooklyn",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Minst en död och tolv skadade efter husras i Brooklyn",
+    "shrnuti": "Minst en person har dött och tolv har skadats sedan en tre våningar hög byggnad rasade i Brooklyn i New York, USA på onsdagseftermiddagen, rapporterar CNN. Ytterligare en person uppges vara fast under rasmassorna.",
     "duvod": "bez-skutku",
     "kategorie": [],
     "posouzeni": null
@@ -1274,6 +1390,22 @@
     "posouzeni": null
   },
   {
+    "id": "k-a129ec772d9511b6",
+    "zachyceno": "2026-11-12T00:26:00.452Z",
+    "publikovano": "2026-11-11T22:13:04.000Z",
+    "zdroj": {
+      "nazev": "El Mundo (Španělsko)",
+      "url": "https://www.elmundo.es/espana/2026/11/11/6af4e6e021efa0af778b456e.html",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Todo le viene bien a Feijóo",
+    "shrnuti": "En el calentamiento, que termina el viernes, Feijóo ha sido el mejor, pero todavía hay tiempo para repetir lo de 2023 Leer",
+    "duvod": "bez-skutku",
+    "kategorie": [],
+    "posouzeni": null
+  },
+  {
     "id": "k-23ae7be265bb00e7",
     "zachyceno": "2026-11-12T00:03:15.173Z",
     "publikovano": "2026-11-11T22:12:19.000Z",
@@ -1374,6 +1506,22 @@
     "posouzeni": null
   },
   {
+    "id": "k-800d2925f3c66f4c",
+    "zachyceno": "2026-11-12T00:26:00.443Z",
+    "publikovano": "2026-11-11T22:01:43.000Z",
+    "zdroj": {
+      "nazev": "El Mundo (Španělsko)",
+      "url": "https://www.elmundo.es/elecciones/elecciones-generales/2026/11/11/6af4c94d21efa05b5e8b4581.html",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "El señalamiento del Sindicato de Inquilinas y las cargas policiales vuelven el foco de la huelga contra el Gobierno",
+    "shrnuti": "En las concentraciones en distintos puntos del país se escucharon cánticos como \"¡Gobierno progresista, cómplice rentista!\" o \"¿Dónde está el Gobierno progresista?\" Leer",
+    "duvod": "bez-skutku",
+    "kategorie": [],
+    "posouzeni": null
+  },
+  {
     "id": "k-ad7ed1d491a8abe3",
     "zachyceno": "2026-11-12T00:03:16.488Z",
     "publikovano": "2026-11-11T22:01:36.000Z",
@@ -1385,6 +1533,54 @@
     },
     "titulek": "Dacian Cioloş anunţă un program de peste 1.700 de burse universitare pentru tinerii din Africa: 26 de universităţi partenere în România",
     "shrnuti": "Candidatul României la funcţia de Secretar general al Francofoniei, Dacian Cioloş, a anunţat, miercuri, lansarea unui program de cooperare academică între România şi Uniunea Africană, prin care universităţile româneşti vor pune la dispoziţia tinerilor africani până la 1.709 burse de studiu, începând",
+    "duvod": "bez-skutku",
+    "kategorie": [],
+    "posouzeni": null
+  },
+  {
+    "id": "k-c995c1ef5da69066",
+    "zachyceno": "2026-11-12T00:26:00.445Z",
+    "publikovano": "2026-11-11T21:55:55.000Z",
+    "zdroj": {
+      "nazev": "El Mundo (Španělsko)",
+      "url": "https://www.elmundo.es/espana/2026/11/11/6af4c9ab21efa010368b4595.html",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "La preocupación de los jóvenes que desborda las calles: \"La izquierda no funciona, y lo que queremos es que espabile\"",
+    "shrnuti": "Salen a la calle por la vivienda y un futuro inalcanzable, afirman rechazar los discursos impuestos y exigen soluciones inmediatas y contundentes Leer",
+    "duvod": "bez-skutku",
+    "kategorie": [],
+    "posouzeni": null
+  },
+  {
+    "id": "k-233d8acb5bb0a0eb",
+    "zachyceno": "2026-11-12T00:26:00.448Z",
+    "publikovano": "2026-11-11T21:55:46.000Z",
+    "zdroj": {
+      "nazev": "El Mundo (Španělsko)",
+      "url": "https://www.elmundo.es/economia/2026/11/11/6af4aa48fc6c83021f8b456d.html",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Alberto Nadal, responsable económico del PP: \"Los trabajadores con hijos notarán rebaja fiscal en la nómina con el primer Presupuesto de Feijóo\"",
+    "shrnuti": "El vicesecretario de Economía del partido sostiene que \"Sánchez puede dejar déficit oculto\" y que \"habrá que hablar con Bruselas\" sobre el margen real para subir el gasto y bajar impuestos Leer",
+    "duvod": "bez-skutku",
+    "kategorie": [],
+    "posouzeni": null
+  },
+  {
+    "id": "k-f738d9240c5df4e7",
+    "zachyceno": "2026-11-12T00:26:00.450Z",
+    "publikovano": "2026-11-11T21:55:38.000Z",
+    "zdroj": {
+      "nazev": "El Mundo (Španělsko)",
+      "url": "https://www.elmundo.es/espana/2026/11/11/6af48f33e85ece74488b45b2.html",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Sánchez blinda en silencio la Defensa antes del final de su mandato: millones comprometidos y misión de paz para Ucrania",
+    "shrnuti": "Leer",
     "duvod": "bez-skutku",
     "kategorie": [],
     "posouzeni": null
@@ -3540,6 +3736,22 @@
     },
     "titulek": "George Simion, despre buna colaborare cu PSD: „Noi înclinăm balanța în Parlamentul României”",
     "shrnuti": "George Simion a spus miercuri seara, la Digi24, că AUR va colabora în Parlament și cu PSD și cu PNL și USR, în contextul în care partidul a votat alături de social-democrați mai multe proiecte legislative și s-a înțeles cu PSD la împărțirea unor funcții în parlament și în instituții publice.",
+    "duvod": "bez-skutku",
+    "kategorie": [],
+    "posouzeni": null
+  },
+  {
+    "id": "k-bc00a50dc0b5589c",
+    "zachyceno": "2026-11-12T00:25:59.526Z",
+    "publikovano": "2026-11-11T19:43:06.000Z",
+    "zdroj": {
+      "nazev": "SVT Nyheter (Švédsko)",
+      "url": "https://www.svt.se/nyheter/utrikes/storstrejk-i-spanien-mot-bostadskrisen",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Storstrejk i Spanien mot bostadskrisen",
+    "shrnuti": "En storstrejk har inletts i Spanien, för första gången på 14 år. Aktivister och landets två största fackförbund kräver högre löner och åtgärder mot landets bostadskris. Storstrejken hålls bara tre veckor före Spaniens parlamentsval – som premiärminister Pedro Sanchez utlyste i hopp om att stärka sin",
     "duvod": "bez-skutku",
     "kategorie": [],
     "posouzeni": null
@@ -6434,6 +6646,22 @@
     "posouzeni": null
   },
   {
+    "id": "k-bd42b93eed2789ac",
+    "zachyceno": "2026-11-12T00:25:58.537Z",
+    "publikovano": "2026-11-11T18:01:47.000Z",
+    "zdroj": {
+      "nazev": "Tagesschau (Německo)",
+      "url": "https://www.tagesschau.de/inland/innenpolitik/prien-unterhaltsvorschuss-gesetzentwurf-100.html",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Familienministerin Prien plant Einkommensgrenze beim Unterhaltsvorschuss",
+    "shrnuti": "Einkommensgrenze, statt verkürzter Zahlung: Familienministerin Prien hat einen Gesetzentwurf zum Unterhaltsvorschuss vorgelegt. Elternteile, die nicht zahlen, sollen stärker in die Pflicht genommen werden - etwa mit Fahrverboten.",
+    "duvod": "bez-skutku",
+    "kategorie": [],
+    "posouzeni": null
+  },
+  {
     "id": "k-edbb1b41b0ed1d7f",
     "zachyceno": "2026-11-11T21:03:02.271Z",
     "publikovano": "2026-11-11T18:00:12.000Z",
@@ -7026,6 +7254,22 @@
     },
     "titulek": "Аудит Arena Chișinău: Комплекс потратил почти 33 млн леев, выделенных на инвестиции, на текущие расходы",
     "shrnuti": "Спортивный комплекс Arena Chișinău использовал 32,8 млн леев из государственных средств, предназначенных для возврата инвестиций в его строительство, на покрытие текущих расходов. Эта сумма образовалась из-за колебаний валютного курса. Об этом говорится в отчете Счетной палаты, который рассмотрела п",
+    "duvod": "bez-skutku",
+    "kategorie": [],
+    "posouzeni": null
+  },
+  {
+    "id": "k-4d254e765689e3e8",
+    "zachyceno": "2026-11-12T00:26:00.085Z",
+    "publikovano": "2026-11-11T17:43:25.000Z",
+    "zdroj": {
+      "nazev": "ANSA (Itálie, anglicky)",
+      "url": "https://www.ansa.it/english/news/general_news/2026/11/11/two-workers-dead-after-building-collapses-near-laquila_0e37d92c-3788-4e71-9605-f4b3ffac29a8.html",
+      "typ": "wire",
+      "primarni": false
+    },
+    "titulek": "Two workers dead after building collapses near L'Aquila",
+    "shrnuti": "(ANSA) - ROME, 11 NOV - Two workers are dead after the building they were renovating near the central Italian city of L'Aquila collapsed on Wednesday. Firefighters managed to pull third worker out of the rubble of the building, Palazzo Paolini, in the town of Fontecchio, and the man has been taken t",
     "duvod": "bez-skutku",
     "kategorie": [],
     "posouzeni": null
@@ -7866,248 +8110,6 @@
     },
     "titulek": "Președintele Nicușor Dan va participa, joi, la reuniunea Comunității Politice Europene, iar vineri la reuniunea informală a Consiliului European, dedicată exclusiv inteligenței artificiale",
     "shrnuti": "Președintele Nicușor Dan va participa, joi, la Dublin, la reuniunea Comunității Politice Europene, iar vineri la reuniunea informală a Consiliului European, potrivit unui anunț al Administrației Prezidențiale. Reuniunea Comunității Politice Europene (CPE), găzduită de Irlanda la Dublin, cu tema „Eur",
-    "duvod": "bez-skutku",
-    "kategorie": [],
-    "posouzeni": null
-  },
-  {
-    "id": "k-98b294cf7c52f278",
-    "zachyceno": "2026-11-11T17:50:56.620Z",
-    "publikovano": "2026-11-11T17:20:26.000Z",
-    "zdroj": {
-      "nazev": "Meduza (anglicky)",
-      "url": "https://meduza.io/en/news/2026/11/11/germany-s-afd-and-left-party-call-for-russia-to-be-allowed-to-compete-in-ice-hockey-world-championship-despite-government-opposition",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Germany’s AfD and Left Party call for Russia to be allowed to compete in Ice Hockey World Championship despite government opposition",
-    "shrnuti": "Two German parliamentary parties have voiced support for accepting the Court of Arbitration for Sport’s decision allowing Russia’s national hockey team to return to international competition, including the world championship, which Germany will host this season.",
-    "duvod": "vylouceno-tematem",
-    "kategorie": [
-      "rusko"
-    ],
-    "posouzeni": null
-  },
-  {
-    "id": "k-ce127fa11f527525",
-    "zachyceno": "2026-11-11T17:50:53.745Z",
-    "publikovano": "2026-11-11T17:20:00.000Z",
-    "zdroj": {
-      "nazev": "ČTK — České noviny",
-      "url": "https://www.ceskenoviny.cz/zpravy/cesko-ma-zajem-zapojit-se-do-obrannych-pujcek-safe-rekl-babis/2900333?utm_source=rss&utm_medium=feed",
-      "typ": "wire",
-      "primarni": false
-    },
-    "titulek": "Česko má zájem zapojit se do obranných půjček SAFE, řekl Babiš",
-    "shrnuti": "Praha - Česko má zájem zapojit se do druhého kola evropského finančního nástroje SAFE, který byl zřízen loni a umožňuje státům získat půjčky na obranné investice. Novinářům to dnes na dotaz ČTK řekl premiér...",
-    "duvod": "bez-skutku",
-    "kategorie": [],
-    "posouzeni": null
-  },
-  {
-    "id": "k-0994113a91c19dcd",
-    "zachyceno": "2026-11-11T17:50:54.516Z",
-    "publikovano": "2026-11-11T17:18:24.000Z",
-    "zdroj": {
-      "nazev": "Tagesschau (Německo)",
-      "url": "https://www.tagesschau.de/wetter/deutschland/wettervorhersage-deutschland-100.html",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Wetter Deutschland: Wolken, Temperaturen, Wind und Aussichten",
-    "shrnuti": "Am Donnerstag vom Süden bis in die Mitte oft stark bewölkt. In der Mitte dabei hier und da Regen oder Nieselregen. In der zweiten Tageshälfte ganz im Süden neue Regenfälle. Im Norden wechselhaft.",
-    "duvod": "bez-skutku",
-    "kategorie": [],
-    "posouzeni": null
-  },
-  {
-    "id": "k-00607758de977f02",
-    "zachyceno": "2026-11-11T17:50:55.888Z",
-    "publikovano": "2026-11-11T17:17:52.000Z",
-    "zdroj": {
-      "nazev": "la Repubblica (Itálie)",
-      "url": "https://www.repubblica.it/esteri/2026/11/11/news/il_flop_dell_impeachment_di_hegseth_colpa_di_11_dem_assenti_tra_cui_pelosi_ocasio-cortez_non_hanno_fatto_il_loro_dovere-425716218/",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Il flop dell’impeachment di Hegseth colpa di 11 dem assenti, tra cui Pelosi. Ocasio-Cortez: “Non hanno fatto il loro dovere”",
-    "shrnuti": "211 repubblicani contro 203 democratici, più Thomas Massie: per una manciata di voti è passata la mozione che bloccava la procedura contro il capo del Pentagono. Le giustificazioni: “Colpa del traffico”",
-    "duvod": "bez-skutku",
-    "kategorie": [],
-    "posouzeni": null
-  },
-  {
-    "id": "k-a52a3fac20aa631f",
-    "zachyceno": "2026-11-11T17:50:53.416Z",
-    "publikovano": "2026-11-11T17:17:04.000Z",
-    "zdroj": {
-      "nazev": "Presseportal — zprávy policie (Blaulicht)",
-      "url": "https://www.presseportal.de/blaulicht/pm/57922/6388822",
-      "typ": "wire",
-      "primarni": false
-    },
-    "titulek": "POL-NI: Unbekannte Täter erbeuten mit Trickdiebstahl Schmuck im Wert von tausenden Euro - Zeugen gesucht",
-    "shrnuti": "Bad Nenndorf (ots) - (eic) Bereits am Montag, den 09.11.2026, ist es in den Mittagsstunden zwischen 12:00 und 14:00 Uhr im westlichen Stadtgebiet von Bad Nenndorf zu einem Trickdiebstahl gekommen. Den Angaben der Geschädigten nach sei am Montag ...",
-    "duvod": "bez-skutku",
-    "kategorie": [],
-    "posouzeni": null
-  },
-  {
-    "id": "k-ec2957a2f796dac0",
-    "zachyceno": "2026-11-11T17:50:53.565Z",
-    "publikovano": "2026-11-11T17:16:00.000Z",
-    "zdroj": {
-      "nazev": "Český rozhlas — domácí zprávy",
-      "url": "https://www.irozhlas.cz/zpravy-domov/ricany-jsou-znovu-top-obci-v-cesku-po-devate-v-rade-zustaly-nejlepsi-v-indexu_2611111816_med",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Říčany jsou znovu top obcí v Česku. Po deváté v řadě zůstaly nejlepší v indexu kvality života",
-    "shrnuti": "V čele žebříčku kvality života v obcích ČR se po deváté v řadě udržely středočeské Říčany před druhou Prahou, naopak předposlední je Karviná a poslední Orlová na Karvinsku. Čtrnáct nejlepších obcí leží do 50 kilometrů od Prahy nebo Brna, zatímco obce s nejnižším počtem bodů v indexu kvality života j",
-    "duvod": "bez-skutku",
-    "kategorie": [],
-    "posouzeni": null
-  },
-  {
-    "id": "k-13eade2f74afe183",
-    "zachyceno": "2026-11-11T17:50:53.713Z",
-    "publikovano": "2026-11-11T17:16:00.000Z",
-    "zdroj": {
-      "nazev": "iDNES.cz — zpravodajství",
-      "url": "https://www.idnes.cz/zpravy/zahranicni/oregon-pred-vetsim-masakrem-zachranil-skolu-tesar-co-rekl-vrahovi-pred-posledni-kulkou.A261111_174227_zahranicni_remy#utm_source=rss&utm_medium=feed&utm_campaign=zpravodaj&utm_content=main",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Před vrahem zachránil školu tesař. Sdělil, co řekl střelci před poslední smrtící kulkou",
-    "shrnuti": "Tesaře Kayluba Giamanca z amerického Oregonu chválí všichni za jeho statečnost. Sám ale říká, že se s hrůzami, které zažil, vyrovnává jen s obtížemi. Otec, který umsrtil dospívajícího střelce ve škole, kam chodí jeho dvě dcery, po necelém měsíci konečně veřejně promluvil a odhalil poslední slova, kt",
-    "duvod": "bez-skutku",
-    "kategorie": [],
-    "posouzeni": null
-  },
-  {
-    "id": "k-e837be986e38763d",
-    "zachyceno": "2026-11-11T17:50:56.051Z",
-    "publikovano": "2026-11-11T17:15:08.000Z",
-    "zdroj": {
-      "nazev": "Digi24 (Rumunsko)",
-      "url": "https://www.digi24.ro/stiri/actualitate/luca-niculescu-intalnire-cu-primarul-capitalei-la-palatul-victoria-ciprian-ciucu-l-am-rugat-sa-ne-sprijine-in-realizarea-sacet-4032089",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Luca Niculescu, întâlnire cu primarul Capitalei la Palatul Victoria. Ciprian Ciucu: „L-am rugat să ne sprijine în realizarea SACET”",
-    "shrnuti": "Premierul Luca Niculescu s-a întâlnit, miercuri, cu primarul Capitalei, Ciprian Ciucu, arătând că l-a rugat să aibă o discuţie despre problemele Bucureştiului, cu care Primăria Capitalei, fără Guvern, nu se poate descurca singură.",
-    "duvod": "bez-skutku",
-    "kategorie": [],
-    "posouzeni": null
-  },
-  {
-    "id": "k-0a8d9d82a0bb23a1",
-    "zachyceno": "2026-11-11T17:50:55.708Z",
-    "publikovano": "2026-11-11T17:15:01.000Z",
-    "zdroj": {
-      "nazev": "ANSA (Itálie, anglicky)",
-      "url": "https://www.ansa.it/english/news/2026/11/11/man-confesses-to-murdering-woman-found-hanged-at-home-in-feb-2025_f6df635d-d00a-416c-8ebb-58201cf51021.html",
-      "typ": "wire",
-      "primarni": false
-    },
-    "titulek": "Man confesses to murdering woman found hanged at home in Feb 2025",
-    "shrnuti": "(ANSA) - ROME, 11 NOV - A man on Wednesday confessed in court to murdering his partner Ramona Rinaldi, a 39-year-old woman who was found hanged in the bathroom of her home in Veniano, near Como, in February 2025. \"I want to plead guilty and apologize to the family, to her relatives, to everyone,\" sa",
-    "duvod": "bez-skutku",
-    "kategorie": [],
-    "posouzeni": null
-  },
-  {
-    "id": "k-d62cff22be9b0492",
-    "zachyceno": "2026-11-11T17:50:53.678Z",
-    "publikovano": "2026-11-11T17:15:00.000Z",
-    "zdroj": {
-      "nazev": "Seznam Zprávy",
-      "url": "https://www.seznamzpravy.cz/clanek/zahranicni-ice-podle-nej-kona-bozi-dilo-republikani-vyberem-lidra-ukazali-novy-smer-320302",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "ICE podle něj koná „Boží dílo“. Republikáni výběrem lídra ukázali nový směr",
-    "shrnuti": "Republikánskou menšinu ve Sněmovně reprezentantů povede Jim Jordan, dlouholetý spojenec Donalda Trumpa a výrazná tvář konzervativního křídla strany.",
-    "duvod": "bez-skutku",
-    "kategorie": [],
-    "posouzeni": null
-  },
-  {
-    "id": "k-eb420f69f027b93e",
-    "zachyceno": "2026-11-11T17:50:55.118Z",
-    "publikovano": "2026-11-11T17:15:00.000Z",
-    "zdroj": {
-      "nazev": "Helsingin Sanomat (Finsko)",
-      "url": "https://www.hs.fi/nakemys/art-2000012404044.html",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Ukrainan sota | Euroopan on viimein puhuttava Venäjälle yhdellä äänellä",
-    "shrnuti": "EU:n jatkuva horjunta Venäjää ja Ukrainan sotaa koskevissa linjauksissa hyödyttää Putinin Venäjää.",
-    "duvod": "bez-skutku",
-    "kategorie": [],
-    "posouzeni": null
-  },
-  {
-    "id": "k-705288f3d734bec8",
-    "zachyceno": "2026-11-11T17:50:55.618Z",
-    "publikovano": "2026-11-11T17:14:31.000Z",
-    "zdroj": {
-      "nazev": "VRT NWS (Belgie)",
-      "url": "https://www.vrt.be/vrtnws/nl/2026/11/11/niel-cross-2026-sfeer.rss.xml",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Van 'exotische uitstap' tot jaarlijkse traditie: supporters uit heel Vlaanderen zakken af naar Niel voor Jaarmarktcross",
-    "shrnuti": "Het grijze weer hield crossliefhebbers vandaag niet tegen om af te zakken naar de Jaarmarktcross in Niel. Voor sommigen is het een jaarlijkse traditie, voor anderen is het 'eenmalige exotische uitstap'. \"Tijdens de cyclocross komt iedereen naar buiten en is iedereen vriendelijk voor elkaar. Dat maak",
-    "duvod": "bez-skutku",
-    "kategorie": [],
-    "posouzeni": null
-  },
-  {
-    "id": "k-dc6473175103b614",
-    "zachyceno": "2026-11-11T17:50:53.805Z",
-    "publikovano": "2026-11-11T17:14:08.000Z",
-    "zdroj": {
-      "nazev": "Deník N",
-      "url": "https://denikn.cz/2253754/naprosto-me-to-vydesilo-rika-expert-k-tomu-jak-vlada-meni-pravidla-pro-skolni-jidelny/",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Naprosto mě to vyděsilo, říká expert k tomu, jak vláda mění pravidla pro školní jídelny",
-    "shrnuti": "V kvalitních školních jídelnách se situace nezhorší, v těch ostatních mohou upustit od snahy vařit zdravě. Tak nutriční terapeut Martin Krobot z Masarykovy univerzity hodnotí možný dopad vládních změn.",
-    "duvod": "bez-skutku",
-    "kategorie": [],
-    "posouzeni": null
-  },
-  {
-    "id": "k-e035814843bc83b5",
-    "zachyceno": "2026-11-11T17:50:54.510Z",
-    "publikovano": "2026-11-11T17:13:36.000Z",
-    "zdroj": {
-      "nazev": "Tagesschau (Německo)",
-      "url": "https://www.tagesschau.de/wirtschaft/finanzen/marktberichte/marktbericht-dax-dow-nasdaq-eon-nvidia-100.html",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Marktbericht: DAX pirscht sich ans Rekordhoch heran",
-    "shrnuti": "Im Handelsverlauf hatte es ausgesehen, als würde dem DAX die Luft ausgehen. Doch dann endet der Handelstag mit einem Index nahe am Rekordhoch. Die Wirtschaftsweisen schüren Optimismus, zudem treten die KI-Sorgen in den Hintergrund.",
-    "duvod": "bez-skutku",
-    "kategorie": [],
-    "posouzeni": null
-  },
-  {
-    "id": "k-50918fafdaed61fd",
-    "zachyceno": "2026-11-11T18:03:12.494Z",
-    "publikovano": "2026-11-11T17:13:01.000Z",
-    "zdroj": {
-      "nazev": "Telex (Maďarsko)",
-      "url": "https://telex.hu/gazdasag/2026/11/11/tiborcz-istvan-100-milliard-invalora-irodaepulet-nem-fer-hozza-az-allam",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "A Válasz Online szerint Tiborcz 100 milliárd forintot érő belgrádi irodaházaihoz nem férhet hozzá az állam",
-    "shrnuti": "A végső tulajdonos magántőkealapban már nincs meg a szükséges állami rész az irányítás átvételéhez.",
     "duvod": "bez-skutku",
     "kategorie": [],
     "posouzeni": null
