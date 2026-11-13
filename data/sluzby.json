@@ -1,5 +1,5 @@
 {
-  "aktualizovano": "2026-11-13T10:48:32.533Z",
+  "aktualizovano": "2026-11-13T12:03:11.476Z",
   "stavy": [
     {
       "klic": "cloudflare",
@@ -18,7 +18,7 @@
         "Arica, Chile - (ARI)",
         "Algiers, Algeria - (ALG)"
       ],
-      "zkontrolovano": "2026-11-13T10:48:32.533Z",
+      "zkontrolovano": "2026-11-13T12:03:11.476Z",
       "chyba": null
     },
     {
@@ -27,14 +27,14 @@
       "popis": "Partially Degraded Service",
       "incidenty": [
         {
-          "nazev": "Service Degradation Affecting Zoom Phone Calls in China Region",
-          "odkaz": "https://stspg.io/7s0ygj0dbwms",
-          "aktualizovano": "2026-11-13T02:02:12.325-08:00"
-        },
-        {
           "nazev": "Service Degradation Affecting Microsoft Integrations due to an underlying vendor issue.",
           "odkaz": "https://stspg.io/jth16cll1kcf",
-          "aktualizovano": "2026-11-13T00:00:11.244-08:00"
+          "aktualizovano": "2026-11-13T04:00:06.455-08:00"
+        },
+        {
+          "nazev": "Service Degradation Affecting Zoom Phone Calls in China Region",
+          "odkaz": "https://stspg.io/7s0ygj0dbwms",
+          "aktualizovano": "2026-11-13T03:30:14.232-08:00"
         }
       ],
       "postizene": [
@@ -43,7 +43,7 @@
         "Microsoft OneDrive for Organizations",
         "Integrations/Calendar/Plug-In/Add-In"
       ],
-      "zkontrolovano": "2026-11-13T10:48:32.533Z",
+      "zkontrolovano": "2026-11-13T12:03:11.476Z",
       "chyba": null
     },
     {
@@ -52,7 +52,7 @@
       "popis": "All Systems Operational",
       "incidenty": [],
       "postizene": [],
-      "zkontrolovano": "2026-11-13T10:48:32.533Z",
+      "zkontrolovano": "2026-11-13T12:03:11.476Z",
       "chyba": null
     }
   ]
