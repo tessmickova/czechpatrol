@@ -1,5 +1,5 @@
 {
-  "aktualizovano": "2026-11-13T06:03:08.176Z",
+  "aktualizovano": "2026-11-13T09:03:43.613Z",
   "stavy": [
     {
       "klic": "cloudflare",
@@ -18,7 +18,7 @@
         "Arica, Chile - (ARI)",
         "Algiers, Algeria - (ALG)"
       ],
-      "zkontrolovano": "2026-11-13T06:03:08.176Z",
+      "zkontrolovano": "2026-11-13T09:03:43.613Z",
       "chyba": null
     },
     {
@@ -29,7 +29,7 @@
         {
           "nazev": "Service Degradation Affecting Microsoft Integrations due to an underlying vendor issue.",
           "odkaz": "https://stspg.io/jth16cll1kcf",
-          "aktualizovano": "2026-11-12T20:02:54.277-08:00"
+          "aktualizovano": "2026-11-13T00:00:11.244-08:00"
         }
       ],
       "postizene": [
@@ -38,7 +38,7 @@
         "Integrations/Calendar/Plug-In/Add-In",
         "Zoom Mail"
       ],
-      "zkontrolovano": "2026-11-13T06:03:08.176Z",
+      "zkontrolovano": "2026-11-13T09:03:43.613Z",
       "chyba": null
     },
     {
@@ -47,7 +47,7 @@
       "popis": "All Systems Operational",
       "incidenty": [],
       "postizene": [],
-      "zkontrolovano": "2026-11-13T06:03:08.176Z",
+      "zkontrolovano": "2026-11-13T09:03:43.613Z",
       "chyba": null
     }
   ]
