@@ -1,5 +1,5 @@
 {
-  "aktualizovano": "2026-11-13T00:03:25.827Z",
+  "aktualizovano": "2026-11-13T02:52:45.674Z",
   "stavy": [
     {
       "klic": "cloudflare",
@@ -12,11 +12,6 @@
           "aktualizovano": "2026-11-12T22:40:03.086Z"
         },
         {
-          "nazev": "Replicate Model Registry Unavailable",
-          "odkaz": "https://www.cloudflarestatus.com/incidents/yu63fhh2peb7",
-          "aktualizovano": "2026-11-12T22:55:17.816Z"
-        },
-        {
           "nazev": "Changes to Cloudflare Workers are not producing Event Subscription events",
           "odkaz": "https://www.cloudflarestatus.com/incidents/0ocqieaifg7h",
           "aktualizovano": "2026-11-11T05:05:06.331Z"
@@ -24,11 +19,11 @@
       ],
       "postizene": [
         "Cloudflare Sites and Services",
-        "Amman, Jordan - (AMM)",
         "Albuquerque, United States - (ABQ)",
-        "Arica, Chile - (ARI)"
+        "Arica, Chile - (ARI)",
+        "Algiers, Algeria - (ALG)"
       ],
-      "zkontrolovano": "2026-11-13T00:03:25.827Z",
+      "zkontrolovano": "2026-11-13T02:52:45.674Z",
       "chyba": null
     },
     {
@@ -48,7 +43,7 @@
         "Integrations/Calendar/Plug-In/Add-In",
         "Zoom Mail"
       ],
-      "zkontrolovano": "2026-11-13T00:03:25.827Z",
+      "zkontrolovano": "2026-11-13T02:52:45.674Z",
       "chyba": null
     },
     {
@@ -57,7 +52,7 @@
       "popis": "All Systems Operational",
       "incidenty": [],
       "postizene": [],
-      "zkontrolovano": "2026-11-13T00:03:25.827Z",
+      "zkontrolovano": "2026-11-13T02:52:45.674Z",
       "chyba": null
     }
   ]
