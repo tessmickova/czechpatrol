@@ -136,9 +136,23 @@ describe("horizonty a spotřeba", () => {
     expect(h.find((x) => x.dni === 7)!.stav).toBe("castecne");
   });
 
-  it("energie s dobíjením nemá limit kapacity", () => {
-    const v = vydrze(profil({}, { energie: { kapacitaWh: 1000, potrebaDenWh: 500, dobijeni: true } }));
-    expect(v.find((x) => x.klic === "energie")!.dni).toBe(Infinity);
+  /*
+    Do 13. 11. 2026 dávalo zaškrtnuté dobíjení „bez limitu kapacity“ i pro
+    malý panel v listopadu. Teď: bez výkonu panelů jen kapacita (generátor
+    a auto závisí na palivu, které neznáme), s panely zisk podle období.
+  */
+  it("dobíjení bez výkonu panelů: jen kapacita a věta proč", () => {
+    const e = vydrze(profil({}, { energie: { kapacitaWh: 1000, potrebaDenWh: 500, dobijeni: true } })).find((x) => x.klic === "energie")!;
+    expect(e.dni).toBe(1.7); // 1 000 Wh × 0,85 / 500 Wh
+    expect(e.upozorneni).toMatch(/palivo|panel/);
+  });
+  it("solár v zimě: 100 Wp pokryje 70 Wh z 500 Wh denně; v létě 400 Wp pokryje vše", () => {
+    const listopad = Date.parse("2026-11-13T12:00:00Z");
+    const cervenec = Date.parse("2026-07-13T12:00:00Z");
+    const zima = vydrze(profil({}, { energie: { kapacitaWh: 1000, potrebaDenWh: 500, dobijeni: true, solarWp: 100 } }), listopad).find((x) => x.klic === "energie")!;
+    expect(zima.dni).toBe(1.9); // 850 Wh / (500 − 70) Wh
+    const leto = vydrze(profil({}, { energie: { kapacitaWh: 1000, potrebaDenWh: 500, dobijeni: true, solarWp: 400 } }), cervenec).find((x) => x.klic === "energie")!;
+    expect(leto.dni).toBe(Infinity); // 400 × 4,5 × 0,7 = 1 260 Wh
     expect(lidskaDoba(Infinity)).toMatch(/bez limitu/);
   });
 
@@ -244,5 +258,80 @@ describe("jídlo podrobně — kolik vydrží živiny (26. 9. 2026)", () => {
     const p = { ...PRAZDNY_PROFIL, osob: 2, zasoby: { ...PRAZDNY_PROFIL.zasoby, jidloDni: 5 } };
     expect(rozpisJidla(p)).toBeNull();
     expect(vydrze(p).find((v) => v.klic === "potraviny")?.dni).toBe(5);
+  });
+});
+
+/*
+  13. 11. 2026, z komentáře čtenářky: výsledek jen opakoval, co člověk
+  napsal, a nereagoval na filtr a užitkovou vodu. Prepperská kontrola.
+*/
+describe("voda: filtr, užitková voda a studna", () => {
+  const zasoby = (z: Partial<Profil["zasoby"]>) => ({ ...PRAZDNY_PROFIL.zasoby, ...z });
+  const voda = (p: Profil) => Object.fromEntries(vydrze(p).map((v) => [v.klic, v]));
+
+  it("bez filtru: užitková voda se k pití nepočítá a web nabídne zaškrtnout úpravu", () => {
+    const v = voda(profil({ "pitna-voda": ["vodovod"] }, { osob: 1, zasoby: zasoby({ pitnaVodaL: 6, uzitkovaVodaL: 100 }) }));
+    expect(v["pitna-voda"].dni).toBe(2);
+    expect(v["pitna-voda"].upozorneni).toMatch(/filtr/);
+    expect(v.hygiena.dni).toBe(10);
+  });
+
+  it("s filtrem: pití 6 l + 100 l užitkové = 35 dní; hygiena kratší, protože se z ní pije", () => {
+    const v = voda(profil({ "pitna-voda": ["uprava"] }, { osob: 1, zasoby: zasoby({ pitnaVodaL: 6, uzitkovaVodaL: 100 }) }));
+    expect(v["pitna-voda"].dni).toBe(35.3); // 106 l / 3 l
+    expect(v["pitna-voda"].upozorneni).toMatch(/33,3 dne z užitkové/);
+    expect(v.hygiena.dni).toBe(8.1);        // (6 + 100) / (3 + 10)
+  });
+
+  it("kapacita filtru je strop: 10 l filtru přidá 3,3 dne pití; pak se z užitkové už nepije", () => {
+    const v = voda(profil({ "pitna-voda": ["uprava"] }, { osob: 1, zasoby: zasoby({ pitnaVodaL: 6, uzitkovaVodaL: 100, upravaL: 10 }) }));
+    expect(v["pitna-voda"].dni).toBe(5.3);  // (6 + 10) / 3
+    expect(v.hygiena.dni).toBe(9);          // (100 − 10) / 10
+    // Při 30 l filtru dojde užitková voda dřív než filtr: obojí končí za (6 + 100) / 13 dne.
+    expect(voda(profil({ "pitna-voda": ["uprava"] }, { osob: 1, zasoby: zasoby({ pitnaVodaL: 6, uzitkovaVodaL: 100, upravaL: 30 }) })).hygiena.dni).toBe(8.1);
+  });
+
+  it("studna s ruční pumpou: hygiena ze zdroje; pití jen s úpravou", () => {
+    const bez = voda(profil({ "pitna-voda": ["studna-rucni"] }, { osob: 2, zasoby: zasoby({ pitnaVodaL: 12 }) }));
+    expect(bez.hygiena.dni).toBe(Infinity);
+    expect(bez["pitna-voda"].dni).toBe(2);
+    expect(bez["pitna-voda"].upozorneni).toMatch(/rozbor/);
+    const s = voda(profil({ "pitna-voda": ["studna-rucni", "uprava"] }, { osob: 2, zasoby: zasoby({ pitnaVodaL: 12 }) }));
+    expect(s["pitna-voda"].dni).toBe(Infinity);
+    expect(horizonty(profil({ "pitna-voda": ["studna-rucni", "uprava"] }, { osob: 2, zasoby: zasoby({ pitnaVodaL: 12 }) })).every((h) => !h.dojde.some((d) => d.klic === "pitna-voda"))).toBe(true);
+  });
+});
+
+describe("jídlo: odhad není výsledek, syrová rýže není jídlo", () => {
+  it("odhad ve dnech je označený a má kontrolu v kaloriích a kilech rýže", () => {
+    const j = vydrze(profil({}, { osob: 2, zasoby: { ...PRAZDNY_PROFIL.zasoby, jidloDni: 14 } })).find((v) => v.klic === "potraviny")!;
+    expect(j.dni).toBe(14);
+    expect(j.puvod).toBe("odhad");
+    expect(j.upozorneni).toMatch(/56\s000 kcal/);  // 14 × 2 × 2 000
+    expect(j.upozorneni).toMatch(/15,3 kg rýže/);   // 56 000 / 3 650
+  });
+
+  it("bez vařiče, který jede bez proudu, se rýže a těstoviny do výdrže nepočítají", () => {
+    const zas = { ...PRAZDNY_PROFIL.zasoby, potraviny: { ryze: 5, orechy: 1 } };
+    const jenProud = vydrze(profil({ vareni: ["elektricky-sporak"] }, { osob: 1, zasoby: zas })).find((v) => v.klic === "potraviny")!;
+    expect(jenProud.dni).toBe(2.8);                 // jen ořechy: 5 790 kcal / 2 000
+    expect(jenProud.upozorneni).toMatch(/rýže/);
+    const sKartusi = vydrze(profil({ vareni: ["elektricky-sporak", "kartuse"] }, { osob: 1, zasoby: zas })).find((v) => v.klic === "potraviny")!;
+    expect(sKartusi.dni).toBe(12);                  // (18 250 + 5 790) / 2 000
+    const nevyplneno = vydrze(profil({}, { osob: 1, zasoby: zas })).find((v) => v.klic === "potraviny")!;
+    expect(nevyplneno.dni).toBe(12);
+    expect(nevyplneno.upozorneni).toMatch(/bez vaření/);
+  });
+
+  it("plynový sporák ze sítě vaří i bez proudu; „jídlo bez vaření“ vařič není", async () => {
+    const { vareniBezProudu } = await import("../src/lib/odolnost");
+    expect(vareniBezProudu(profil({ vareni: ["plynovy-sporak"] }))).toBe(true);
+    expect(vareniBezProudu(profil({ vareni: ["bez-vareni"] }))).toBe(false);
+    expect(vareniBezProudu(profil({}))).toBeNull();
+  });
+
+  it("zvířata: krmivo se nepočítá a výsledek to říká", () => {
+    const j = vydrze(profil({}, { osob: 1, zvirat: 1, zasoby: { ...PRAZDNY_PROFIL.zasoby, jidloDni: 5 } })).find((v) => v.klic === "potraviny")!;
+    expect(j.predpoklad).toMatch(/Krmivo/);
   });
 });

@@ -2,9 +2,9 @@ import katalog from "../../data/odolnost/funkce.json";
 import krajeData from "../../data/odolnost/kraje.json";
 import potravinyData from "../../data/odolnost/potraviny.json";
 
-export interface Potravina { klic: string; nazev: string; jednotka: "kg" | "l"; gramu: number; na100: { kcal: number; bilkoviny: number; tuky: number; sacharidy: number } }
+export interface Potravina { klic: string; nazev: string; jednotka: "kg" | "l"; gramu: number; na100: { kcal: number; bilkoviny: number; tuky: number; sacharidy: number }; /** Jí se jen uvařené (suchá rýže, těstoviny, luštěniny). */ varit?: boolean }
 export const POTRAVINY = potravinyData as unknown as { potreba: { kcal: number; bilkoviny: number; tuky: number; sacharidy: number; zdroj: { nazev: string; url: string } }; zdrojHodnot: { nazev: string; url: string }; polozky: Potravina[] };
-import { spotrebaPoRezimech, type VybranySpotrebic } from "./energie";
+import { SLUNECNE_HODINY, spotrebaPoRezimech, UCINNOST_SOLARU_VYCHOZI, type Sezona, type VybranySpotrebic } from "./energie";
 
 /*
   Odolnost domácnosti — deterministický model.
@@ -111,7 +111,7 @@ export interface Profil {
   /** Které cesty domácnost má, po funkcích. */
   cesty: Record<string, string[]>;
   /** Zásoby: voda v litrech, užitková voda v litrech, jídlo a léky ve dnech. null = nezadáno (není totéž co nula). */
-  zasoby: { pitnaVodaL: number | null; uzitkovaVodaL: number | null; jidloDni: number | null; lekyDni: number | null; /** Jídlo podrobně: množství podle data/odolnost/potraviny.json (kg nebo l). */ potraviny?: Record<string, number> };
+  zasoby: { pitnaVodaL: number | null; uzitkovaVodaL: number | null; jidloDni: number | null; lekyDni: number | null; /** Jídlo podrobně: množství podle data/odolnost/potraviny.json (kg nebo l). */ potraviny?: Record<string, number>; /** Na kolik litrů vystačí filtr nebo tablety (údaj výrobce); null = neuvedeno, počítá se bez stropu. */ upravaL?: number | null };
   /**
    * Energie: kapacita vlastních zdrojů ve Wh, vybrané spotřebiče (z nich
    * se počítá denní potřeba po režimech), dobíjení = solár, generátor,
@@ -131,7 +131,7 @@ export const PRAZDNY_PROFIL: Profil = {
   osob: 1,
   zvirat: 0,
   cesty: {},
-  zasoby: { pitnaVodaL: null, uzitkovaVodaL: null, jidloDni: null, lekyDni: null },
+  zasoby: { pitnaVodaL: null, uzitkovaVodaL: null, jidloDni: null, lekyDni: null, upravaL: null },
   energie: { kapacitaWh: 0, potrebaDenWh: 0, dobijeni: false },
   nemohu: {},
   kontext: { kraj: "", bydleni: "", sidlo: "", deti: 0, seniori: 0, zavislyNaPeci: false, rodinaVDosahu: false },
@@ -249,6 +249,15 @@ export interface Vydrz {
   nazev: string;
   dni: number | null;
   predpoklad: string;
+  /**
+   * Odkud číslo je (13. 11. 2026). „odhad“ = napsali jste ho sami a web ho
+   * jen opakuje — musí to být vidět, jinak to vypadá jako výsledek výpočtu;
+   * „vypocet“ = z množství a spotřeby; „zdroj“ = obnovitelný zdroj, zásoba
+   * není omezení.
+   */
+  puvod?: "odhad" | "vypocet" | "zdroj";
+  /** Jedna věta pod řádkem: kontrola odhadu, co přidal filtr, proč je číslo nižší, než by čekal. */
+  upozorneni?: string | null;
 }
 
 /** Denní potřeba: z vybraných spotřebičů (režim kritické a nutné), jinak ručně zadané číslo. */
@@ -271,15 +280,27 @@ function dny(mnozstvi: number | null, naDen: number): number | null {
 */
 export interface Zivina { klic: "kcal" | "bilkoviny" | "tuky" | "sacharidy"; nazev: string; jednotka: string; mame: number; naDen: number; dni: number | null }
 
-export function rozpisJidla(profil: Profil): { zivin: Zivina[]; nejdriv: Zivina | null } | null {
+export interface RozpisJidla {
+  zivin: Zivina[];
+  nejdriv: Zivina | null;
+  /** Energie jen z toho, co se nemusí vařit (13. 11. 2026). */
+  kcalBezVareni: number;
+  dniBezVareni: number | null;
+  /** Názvy zadaných potravin, které se musí uvařit. */
+  kVareni: string[];
+}
+
+export function rozpisJidla(profil: Profil): RozpisJidla | null {
   const mnozstvi = profil.zasoby.potraviny ?? {};
   const zadano = POTRAVINY.polozky.filter((x) => (mnozstvi[x.klic] ?? 0) > 0);
   if (!zadano.length) return null;
   const osob = Math.max(1, profil.osob);
   const soucet = { kcal: 0, bilkoviny: 0, tuky: 0, sacharidy: 0 };
+  let kcalBezVareni = 0;
   for (const x of zadano) {
     const g = mnozstvi[x.klic] * x.gramu;
     for (const k of Object.keys(soucet) as (keyof typeof soucet)[]) soucet[k] += (g / 100) * x.na100[k];
+    if (!x.varit) kcalBezVareni += (g / 100) * x.na100.kcal;
   }
   const NAZVY: Record<Zivina["klic"], [string, string]> = { kcal: ["Energie", "kcal"], bilkoviny: ["Bílkoviny", "g"], tuky: ["Tuky", "g"], sacharidy: ["Sacharidy", "g"] };
   const zivin: Zivina[] = (["kcal", "bilkoviny", "tuky", "sacharidy"] as const).map((k) => {
@@ -287,10 +308,95 @@ export function rozpisJidla(profil: Profil): { zivin: Zivina[]; nejdriv: Zivina 
     return { klic: k, nazev: NAZVY[k][0], jednotka: NAZVY[k][1], mame: soucet[k], naDen, dni: dny(soucet[k], naDen) };
   });
   const nejdriv = zivin.filter((z) => z.dni !== null).sort((a, b) => (a.dni as number) - (b.dni as number))[0] ?? null;
-  return { zivin, nejdriv };
+  return { zivin, nejdriv, kcalBezVareni, dniBezVareni: dny(kcalBezVareni, osob * POTRAVINY.potreba.kcal), kVareni: zadano.filter((x) => x.varit).map((x) => x.nazev.replace(/\s*\(.*\)$/, "").toLowerCase()) };
 }
 
-export function vydrze(profil: Profil): Vydrz[] {
+/**
+ * Uvaří domácnost bez proudu? true = má cestu k vaření, která nestojí na
+ * elektřině (kartuše, kamna, plyn ze sítě); false = vaření vyplnila a jede
+ * jen na proud, nebo má jen „jídlo bez vaření“; null = vaření nevyplnila.
+ */
+export function vareniBezProudu(profil: Profil): boolean | null {
+  const vybrane = profil.cesty["vareni"] ?? [];
+  if (!vybrane.length) return null;
+  const f = FUNKCE.find((x) => x.klic === "vareni")!;
+  return f.cesty.some((c) => vybrane.includes(c.klic) && c.klic !== "bez-vareni" && !c.zavislosti.includes("elektrina"));
+}
+
+/** Roční období pro odhad soláru podle data: listopad–únor zima, březen–duben a září–říjen přechod, květen–srpen léto. */
+export function sezonaPodleData(ted: number): Sezona {
+  const m = new Date(ted).getMonth() + 1;
+  if (m >= 5 && m <= 8) return "leto";
+  if (m === 3 || m === 4 || m === 9 || m === 10) return "prechod";
+  return "zima";
+}
+
+/* 1 den, 2–4 dny, 5 dní; desetinné číslo „dne“ (2,5 dne). */
+const sklonDni = (d: number) => (!Number.isInteger(d) ? "dne" : d === 1 ? "den" : d > 1 && d < 5 ? "dny" : "dní");
+const cz = (n: number) => n.toLocaleString("cs-CZ", { maximumFractionDigits: 1 });
+
+/*
+  Voda (13. 11. 2026, z komentáře čtenářky: „nereaguje na informaci, že
+  mám užitkovou vodu a filtr“). Pravidla:
+  - S filtrem nebo tabletami (cesta „úprava“ u pitné vody) je užitková voda
+    i rezerva na pití, nejvýš do kapacity filtru, je-li zadaná.
+  - Pitná voda pak ukazuje, jak dlouho vydrží pití, když hygiena ustoupí
+    (pití má přednost). Hygiena ukazuje, kdy dojde užitková voda, když se
+    z ní po vypití pitné zásoby zároveň pije. Obě čísla platí současně:
+    v horizontu h jde pít, když h ≤ pití, a mýt se i pít, když h ≤ hygiena.
+  - Studna s ruční pumpou: hygiena bez limitu zásoby; pití jen s úpravou
+    vody (pitnost studny bez rozboru neznáme).
+*/
+function vydrzVody(profil: Profil, D: number, H: number): { pitna: Pick<Vydrz, "dni" | "puvod" | "upozorneni">; hygiena: Pick<Vydrz, "dni" | "puvod" | "upozorneni"> } {
+  const cesty = profil.cesty["pitna-voda"] ?? [];
+  const uprava = cesty.includes("uprava");
+  const studna = cesty.includes("studna-rucni");
+  const P = profil.zasoby.pitnaVodaL;
+  const U = profil.zasoby.uzitkovaVodaL;
+  const C = typeof profil.zasoby.upravaL === "number" ? profil.zasoby.upravaL : Infinity;
+
+  if (studna) {
+    const pitna = uprava
+      ? { dni: C === Infinity ? Infinity : dny((P ?? 0) + C, D), puvod: (C === Infinity ? "zdroj" : "vypocet") as Vydrz["puvod"], upozorneni: C === Infinity ? "Studna s ruční pumpou a úprava vody: pití neomezuje zásoba, ale vydatnost studny v suchu a životnost filtru." : `Studna s úpravou vody: omezuje vás kapacita filtru nebo tablet (${cz(C)} l).` }
+      : { dni: dny(P, D), puvod: "vypocet" as const, upozorneni: "Studnu s ruční pumpou do pití nepočítáme: bez rozboru nevíme, jestli je voda pitná. Když ji upravujete filtrem nebo tabletami, zaškrtněte úpravu u pitné vody." };
+    return { pitna, hygiena: { dni: Infinity, puvod: "zdroj", upozorneni: "Studna s ruční pumpou: užitková voda není omezená zásobou." } };
+  }
+
+  if (!uprava || !U) {
+    const nabidka = !uprava && U ? "Máte filtr nebo tablety na úpravu vody? Zaškrtněte je u pitné vody — užitková voda se pak započítá i k pití." : null;
+    return { pitna: { dni: dny(P, D), puvod: "vypocet", upozorneni: nabidka }, hygiena: { dni: dny(U, H), puvod: "vypocet" } };
+  }
+
+  /* S úpravou a užitkovou vodou. */
+  const p = P ?? 0;
+  const prevod = Math.min(U, C);
+  const pitnaDni = dny(p + prevod, D);
+  const zFiltru = D > 0 ? Math.floor((prevod / D) * 10) / 10 : 0;
+  let hygDni: number | null = null;
+  if (H > 0) {
+    const t1 = D > 0 ? p / D : Infinity;
+    if (U / H <= t1) hygDni = U / H;
+    else {
+      const spolecne = (p + U) / (D + H);
+      hygDni = spolecne - t1 <= prevod / D ? spolecne : (U - prevod) / H;
+    }
+    hygDni = Math.floor(hygDni * 10) / 10;
+  }
+  return {
+    pitna: {
+      dni: pitnaDni,
+      puvod: "vypocet",
+      upozorneni: `Z toho ${cz(zFiltru)} ${sklonDni(zFiltru)} z užitkové vody přes filtr${C !== Infinity ? ` (kapacita ${cz(C)} l)` : " — kapacitu filtru jste nezadali, počítáme bez stropu"}. Platí, když hygiena ustoupí pití.`,
+    },
+    hygiena: {
+      dni: hygDni,
+      puvod: "vypocet",
+      upozorneni: hygDni !== null && hygDni < (dny(U, H) ?? 0) ? `Kratší než ${cz(dny(U, H) ?? 0)} ${sklonDni(dny(U, H) ?? 0)}: po vypití pitné zásoby se pije z užitkové.` : null,
+    },
+  };
+}
+
+export function vydrze(profil: Profil, ted = Date.now()): Vydrz[] {
   const voda = FUNKCE.find((f) => f.klic === "pitna-voda")!.zasoba!;
   const hyg = FUNKCE.find((f) => f.klic === "hygiena")!.zasoba!;
   const osob = Math.max(0, profil.osob);
@@ -298,25 +404,73 @@ export function vydrze(profil: Profil): Vydrz[] {
   const vodaDen = osob * (voda.naOsobuDen ?? 0) + zvirat * (voda.naZvireDen ?? 0);
   const hygDen = osob * (hyg.naOsobuDen ?? 0);
   const en = profil.energie;
+  const v = vydrzVody(profil, vodaDen, hygDen);
+  const krmivo = zvirat ? " Krmivo pro zvířata se nepočítá." : "";
   return [
-    { klic: "pitna-voda", nazev: "Pitná voda", dni: dny(profil.zasoby.pitnaVodaL, vodaDen), predpoklad: `${voda.naOsobuDen} l na osobu a den, ${voda.naZvireDen} l na zvíře; ${osob} ${osob === 1 ? "osoba" : osob < 5 ? "osoby" : "osob"}${zvirat ? `, ${zvirat} zvíř.` : ""}. ${voda.poznamka}` },
-    { klic: "hygiena", nazev: "Užitková voda", dni: dny(profil.zasoby.uzitkovaVodaL, hygDen), predpoklad: `${hyg.naOsobuDen} l na osobu a den. ${hyg.poznamka}` },
+    { klic: "pitna-voda", nazev: "Pitná voda", ...v.pitna, predpoklad: `${voda.naOsobuDen} l na osobu a den, ${voda.naZvireDen} l na zvíře; ${osob} ${osob === 1 ? "osoba" : osob < 5 ? "osoby" : "osob"}${zvirat ? `, ${zvirat} zvíř.` : ""}. ${voda.poznamka}` },
+    { klic: "hygiena", nazev: "Užitková voda", ...v.hygiena, predpoklad: `${hyg.naOsobuDen} l na osobu a den. ${hyg.poznamka}` },
     (() => {
-      /* Rozpis podle zásob má přednost před odhadem ve dnech: je z čísel, ne z pocitu. */
+      /*
+        Rozpis podle zásob má přednost před odhadem ve dnech: je z čísel, ne
+        z pocitu. Odhad ve dnech web jen opakuje — proto u něj stojí „váš
+        odhad“ a kontrola, kolik jídla to znamená (13. 11. 2026).
+      */
       const r = rozpisJidla(profil);
-      return r
-        ? { klic: "potraviny", nazev: "Jídlo (energie)", dni: r.zivin.find((z) => z.klic === "kcal")!.dni, predpoklad: `Spočítáno ze zásob: ${Math.round(r.zivin[0].mame)} kcal, potřeba ${r.zivin[0].naDen} kcal za den (${osob} × ${POTRAVINY.potreba.kcal} kcal, referenční hodnota EU). Rozpis bílkovin, tuků a sacharidů je pod tím.` }
-        : { klic: "potraviny", nazev: "Jídlo", dni: profil.zasoby.jidloDni, predpoklad: "Dny podle vašeho odhadu pro celou domácnost bez nákupu. Přesněji: vyplňte zásoby v „Jídlo podrobně“." };
+      const odhad = profil.zasoby.jidloDni;
+      const potrebaDen = Math.max(1, osob) * POTRAVINY.potreba.kcal;
+      if (!r) {
+        if (odhad === null) return { klic: "potraviny" as const, nazev: "Jídlo", dni: null, predpoklad: `Vyplňte zásoby v „Jídlo podrobně“ — spočítáme dny z toho, co máte doma.${krmivo}` };
+        const ryze = POTRAVINY.polozky.find((x) => x.klic === "ryze")!;
+        const kg = (odhad * potrebaDen) / (ryze.na100.kcal * 10);
+        return {
+          klic: "potraviny" as const, nazev: "Jídlo", dni: odhad, puvod: "odhad" as const,
+          predpoklad: `Číslo je váš odhad, web ho jen opakuje. Přesně to spočítá „Jídlo podrobně“ z toho, co máte doma.${krmivo}`,
+          upozorneni: `Kontrola: ${cz(odhad)} ${sklonDni(odhad)} pro ${Math.max(1, osob)} ${Math.max(1, osob) === 1 ? "osobu" : Math.max(1, osob) < 5 ? "osoby" : "osob"} je asi ${Math.round(odhad * potrebaDen).toLocaleString("cs-CZ")} kcal — tolik má zhruba ${cz(Math.round(kg * 10) / 10)} kg rýže nebo těstovin. Máte doma tolik?`,
+        };
+      }
+      const vse = r.zivin.find((z) => z.klic === "kcal")!.dni;
+      const vari = vareniBezProudu(profil);
+      const odhadVeta = odhad !== null ? ` Váš odhad byl ${cz(odhad)} ${sklonDni(odhad)}.` : "";
+      const zaklad = `Spočítáno ze zásob: ${Math.round(r.zivin[0].mame).toLocaleString("cs-CZ")} kcal, potřeba ${r.zivin[0].naDen.toLocaleString("cs-CZ")} kcal za den (${Math.max(1, osob)} × ${POTRAVINY.potreba.kcal} kcal, referenční hodnota EU). Rozpis bílkovin, tuků a sacharidů je pod tím.${krmivo}`;
+      if (r.kVareni.length && vari === false) {
+        return {
+          klic: "potraviny" as const, nazev: "Jídlo (bez vaření)", dni: r.dniBezVareni ?? 0, puvod: "vypocet" as const, predpoklad: zaklad,
+          upozorneni: `Bez proudu nemáte jak vařit, a bez vaření nesníte: ${r.kVareni.join(", ")}. S vařičem, který jede bez proudu, by jídlo vydrželo ${lidskaDoba(vse ?? 0)}; k vaření je potřeba i voda.${odhadVeta}`,
+        };
+      }
+      return {
+        klic: "potraviny" as const, nazev: "Jídlo (energie)", dni: vse, puvod: "vypocet" as const, predpoklad: zaklad,
+        upozorneni: r.kVareni.length && vari === null
+          ? `Z toho jen ${lidskaDoba(r.dniBezVareni ?? 0)} bez vaření. U „Vaření“ vyplňte, jak uvaříte bez proudu.${odhadVeta}`
+          : odhadVeta.trim() || null,
+      };
     })(),
-    { klic: "zdravi", nazev: "Léky a pomůcky", dni: profil.zasoby.lekyDni, predpoklad: "Dny podle toho, co vám řekl lékař. Web dávky nepočítá." },
-    {
-      klic: "energie",
-      nazev: "Vlastní energie v nouzovém režimu",
-      dni: en.kapacitaWh > 0 && potrebaDenWh(en) > 0 ? (en.dobijeni ? Infinity : dny(en.kapacitaWh * 0.85, potrebaDenWh(en))) : null,
-      predpoklad: en.dobijeni
-        ? `Kapacita ${en.kapacitaWh} Wh, potřeba ${potrebaDenWh(en)} Wh/den (kritické a nutné spotřebiče), s dobíjením — doba závisí na slunci nebo palivu, ne na kapacitě.`
-        : `Kapacita ${en.kapacitaWh} Wh, potřeba ${potrebaDenWh(en)} Wh/den (kritické a nutné spotřebiče), bez dobíjení, po odečtení 15 % ztrát. V zimě dál klesá.`,
-    },
+    { klic: "zdravi", nazev: "Léky a pomůcky", dni: profil.zasoby.lekyDni, puvod: "odhad", predpoklad: "Dny podle toho, co vám řekl lékař. Web dávky nepočítá." },
+    (() => {
+      /*
+        Dobíjení už neznamená „bez limitu“ (13. 11. 2026): malý panel
+        v listopadu nevyrobí, co powerstation za den vydá. Se zadaným výkonem
+        panelů se počítá zisk v aktuálním ročním období; generátor a auto
+        závisí na palivu, které neznáme — počítá se jen kapacita.
+      */
+      const potreba = potrebaDenWh(en);
+      const kapacita = en.kapacitaWh * 0.85;
+      const zaklad = `Kapacita ${en.kapacitaWh} Wh, potřeba ${potreba} Wh/den (kritické a nutné spotřebiče), po odečtení 15 % ztrát.`;
+      if (!(en.kapacitaWh > 0 && potreba > 0)) return { klic: "energie" as const, nazev: "Vlastní energie v nouzovém režimu", dni: null, predpoklad: zaklad };
+      const wp = en.solarWp ?? 0;
+      if (en.dobijeni && wp > 0) {
+        const sezona = sezonaPodleData(ted);
+        const zisk = Math.round(wp * SLUNECNE_HODINY[sezona].hodin * UCINNOST_SOLARU_VYCHOZI);
+        const predpoklad = `${zaklad} Panely ${wp} Wp dají v období ${SLUNECNE_HODINY[sezona].nazev} asi ${zisk} Wh za den (${SLUNECNE_HODINY[sezona].hodin} h plného slunce, účinnost ${Math.round(UCINNOST_SOLARU_VYCHOZI * 100)} %). Orientační průměr; zatažené dny jsou horší.`;
+        if (zisk >= potreba) return { klic: "energie" as const, nazev: "Vlastní energie v nouzovém režimu", dni: Infinity, puvod: "zdroj" as const, predpoklad };
+        return { klic: "energie" as const, nazev: "Vlastní energie v nouzovém režimu", dni: dny(kapacita, potreba - zisk), puvod: "vypocet" as const, predpoklad, upozorneni: `Panely pokryjí ${zisk} z ${potreba} Wh denně; zbytek bere baterie.` };
+      }
+      return {
+        klic: "energie" as const, nazev: "Vlastní energie v nouzovém režimu", dni: dny(kapacita, potreba), puvod: "vypocet" as const,
+        predpoklad: `${zaklad} V zimě dál klesá.`,
+        upozorneni: en.dobijeni ? "Bez dobíjení. Generátor nebo auto prodlouží výdrž podle zásoby paliva; u soláru zadejte výkon panelů a spočítáme to." : null,
+      };
+    })(),
   ];
 }
 
@@ -329,8 +483,8 @@ export interface Horizont {
   nehodnoceno: Vydrz[];
 }
 
-export function horizonty(profil: Profil): Horizont[] {
-  const v = vydrze(profil).filter((x) => x.klic !== "energie" || profil.energie.kapacitaWh > 0);
+export function horizonty(profil: Profil, ted = Date.now()): Horizont[] {
+  const v = vydrze(profil, ted).filter((x) => x.klic !== "energie" || profil.energie.kapacitaWh > 0);
   return HORIZONTY_DNI.map((h) => {
     const zname = v.filter((x) => x.dni !== null);
     const nehodnoceno = v.filter((x) => x.dni === null);

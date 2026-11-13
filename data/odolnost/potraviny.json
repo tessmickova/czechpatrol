@@ -1,5 +1,5 @@
 {
-  "_poznamka": "Rozpis jídla v kalkulačce odolnosti (26. 9. 2026). Denní potřeba = referenční hodnota příjmu pro průměrného dospělého podle nařízení (EU) č. 1169/2011, příloha XIII, část B (8 400 kJ / 2 000 kcal, tuky 70 g, sacharidy 260 g, bílkoviny 50 g). Výživové hodnoty na 100 g jsou orientační z USDA FoodData Central (SR Legacy); přesné údaje jsou v tabulce na obalu.",
+  "_poznamka": "Rozpis jídla v kalkulačce odolnosti (26. 9. 2026). Denní potřeba = referenční hodnota příjmu pro průměrného dospělého podle nařízení (EU) č. 1169/2011, příloha XIII, část B (8 400 kJ / 2 000 kcal, tuky 70 g, sacharidy 260 g, bílkoviny 50 g). Výživové hodnoty na 100 g jsou orientační z USDA FoodData Central (SR Legacy); přesné údaje jsou v tabulce na obalu. „varit“ = jí se jen uvařené (suchá rýže, těstoviny, luštěniny): bez vařiče, který jede bez proudu, se do výdrže při výpadku nepočítá (13. 11. 2026). Ovesné vločky jdou namočit za studena.",
   "potreba": {
     "kcal": 2000,
     "bilkoviny": 50,
@@ -9,10 +9,10 @@
   },
   "zdrojHodnot": { "nazev": "USDA FoodData Central", "url": "https://fdc.nal.usda.gov/" },
   "polozky": [
-    { "klic": "ryze", "nazev": "Rýže (suchá)", "jednotka": "kg", "gramu": 1000, "na100": { "kcal": 365, "bilkoviny": 7.1, "tuky": 0.7, "sacharidy": 80 } },
-    { "klic": "testoviny", "nazev": "Těstoviny (suché)", "jednotka": "kg", "gramu": 1000, "na100": { "kcal": 371, "bilkoviny": 13, "tuky": 1.5, "sacharidy": 74.7 } },
+    { "klic": "ryze", "nazev": "Rýže (suchá)", "jednotka": "kg", "gramu": 1000, "na100": { "kcal": 365, "bilkoviny": 7.1, "tuky": 0.7, "sacharidy": 80 }, "varit": true },
+    { "klic": "testoviny", "nazev": "Těstoviny (suché)", "jednotka": "kg", "gramu": 1000, "na100": { "kcal": 371, "bilkoviny": 13, "tuky": 1.5, "sacharidy": 74.7 }, "varit": true },
     { "klic": "vlocky", "nazev": "Ovesné vločky", "jednotka": "kg", "gramu": 1000, "na100": { "kcal": 389, "bilkoviny": 16.9, "tuky": 6.9, "sacharidy": 66.3 } },
-    { "klic": "lusteniny", "nazev": "Luštěniny (suché, např. čočka)", "jednotka": "kg", "gramu": 1000, "na100": { "kcal": 352, "bilkoviny": 24.6, "tuky": 1.1, "sacharidy": 63.4 } },
+    { "klic": "lusteniny", "nazev": "Luštěniny (suché, např. čočka)", "jednotka": "kg", "gramu": 1000, "na100": { "kcal": 352, "bilkoviny": 24.6, "tuky": 1.1, "sacharidy": 63.4 }, "varit": true },
     { "klic": "ryby", "nazev": "Rybí konzervy (tuňák ve vlastní šťávě, po odkapání)", "jednotka": "kg", "gramu": 1000, "na100": { "kcal": 116, "bilkoviny": 25.5, "tuky": 0.8, "sacharidy": 0 } },
     { "klic": "orechy", "nazev": "Ořechy (např. mandle)", "jednotka": "kg", "gramu": 1000, "na100": { "kcal": 579, "bilkoviny": 21.2, "tuky": 49.9, "sacharidy": 21.6 } },
     { "klic": "olej", "nazev": "Olej", "jednotka": "l", "gramu": 910, "na100": { "kcal": 884, "bilkoviny": 0, "tuky": 100, "sacharidy": 0 } },

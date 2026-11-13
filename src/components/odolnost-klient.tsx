@@ -260,15 +260,19 @@ export function OdolnostKlient() {
         <Oddil cislo="03" nadpis="Co máte doma" veta="Prázdné pole je „nevím“, ne nula. Předpoklady spotřeby jsou u výsledku.">
           <div className="grid gap-4 sm:grid-cols-2">
             <Pocet id="od-voda" nazev="Pitná voda uložená (litry)" hodnota={p.zasoby.pitnaVodaL} onChange={(v) => uloz({ ...p, zasoby: { ...p.zasoby, pitnaVodaL: v } })} />
-            <Pocet id="od-uzitkova" nazev="Užitková voda (litry)" hodnota={p.zasoby.uzitkovaVodaL} onChange={(v) => uloz({ ...p, zasoby: { ...p.zasoby, uzitkovaVodaL: v } })} />
-            <Pocet id="od-jidlo" nazev="Jídlo bez nákupu (dny pro všechny)" hodnota={p.zasoby.jidloDni} onChange={(v) => uloz({ ...p, zasoby: { ...p.zasoby, jidloDni: v } })} />
+            <Pocet id="od-uzitkova" nazev="Užitková voda (litry)" hodnota={p.zasoby.uzitkovaVodaL} onChange={(v) => uloz({ ...p, zasoby: { ...p.zasoby, uzitkovaVodaL: v } })}
+              poznamka={(p.cesty["pitna-voda"] ?? []).includes("uprava") ? "S filtrem se počítá i jako rezerva na pití." : "Máte filtr nebo tablety? Zaškrtněte je u Pitné vody (oddíl 02) — užitková se pak započítá i k pití."} />
+            {(p.cesty["pitna-voda"] ?? []).includes("uprava") && (
+              <Pocet id="od-uprava" nazev="Filtr nebo tablety vystačí na (litry)" hodnota={p.zasoby.upravaL ?? null} onChange={(v) => uloz({ ...p, zasoby: { ...p.zasoby, upravaL: v } })} poznamka="Údaj výrobce na obalu. Prázdné = počítáme bez stropu." />
+            )}
+            <Pocet id="od-jidlo" nazev="Jídlo bez nákupu — váš odhad (dny pro všechny)" hodnota={p.zasoby.jidloDni} onChange={(v) => uloz({ ...p, zasoby: { ...p.zasoby, jidloDni: v } })} poznamka="Jen odhad. Přesně to spočítá „Jídlo podrobně“ níž." />
             <Pocet id="od-leky" nazev="Léky a pomůcky (dny, podle lékaře)" hodnota={p.zasoby.lekyDni} onChange={(v) => uloz({ ...p, zasoby: { ...p.zasoby, lekyDni: v } })} />
             <Pocet id="od-kap" nazev="Vlastní zdroj energie (Wh)" hodnota={p.energie.kapacitaWh || null} onChange={(v) => uloz({ ...p, energie: { ...p.energie, kapacitaWh: v ?? 0 } })} poznamka="Powerstation, UPS, powerbanky dohromady. Kapacita je na štítku." />
           </div>
           {/* Jídlo podrobně (26. 9. 2026): z množství zásob se spočítá, kolik dní vydrží energie, bílkoviny, tuky a sacharidy. */}
           <details className="group mt-4 rounded-[16px] border border-linka px-4 py-3" open={Boolean(Object.keys(p.zasoby.potraviny ?? {}).length)}>
             <summary className="flex min-h-[40px] cursor-pointer items-center justify-between gap-3 text-male font-semibold text-inkoust">
-              Jídlo podrobně — kolik vydrží bílkoviny, tuky a sacharidy
+              Jídlo podrobně — spočítat dny z toho, co máte doma
               <Ikona nazev="dolu" velikost={13} tah={2} trida="shrink-0 text-tlum2 transition-transform group-open:rotate-180" />
             </summary>
             <p className="mt-1 text-drobne leading-snug text-tlum2">Zadejte, kolik čeho máte doma. Hodnoty na 100 g jsou orientační ({POTRAVINY.zdrojHodnot.nazev}); přesné najdete v tabulce na obalu. Prázdné pole = nemám.</p>
@@ -281,6 +285,12 @@ export function OdolnostKlient() {
           </details>
           <div className="mt-2">
             <Prepnuti id="od-dobijeni" nazev="Umím zdroj dobíjet bez sítě" popis="solár, generátor, auto" hodnota={p.energie.dobijeni} onChange={(v) => uloz({ ...p, energie: { ...p.energie, dobijeni: v } })} />
+            {/* Výkon panelů: bez něj nejde říct, kolik solár v listopadu dobije (13. 11. 2026). */}
+            {p.energie.dobijeni && (
+              <div className="mt-2 max-w-[20rem] pl-7">
+                <Pocet id="od-solar" nazev="Výkon solárních panelů (Wp)" hodnota={p.energie.solarWp ?? null} onChange={(v) => uloz({ ...p, energie: { ...p.energie, solarWp: v } })} poznamka="Na štítku panelu. Bez soláru nechte prázdné." />
+              </div>
+            )}
           </div>
         </Oddil>
 
@@ -365,9 +375,16 @@ export function OdolnostKlient() {
             ); })()}
             <ul className="mt-1 pt-1">
               {s.vydrze.filter((v) => v.klic !== "energie" || p.energie.kapacitaWh > 0).map((v) => (
-                <li key={v.klic} className="flex items-center justify-between gap-3 py-1.5">
-                  <span className="flex items-center gap-1.5 text-male text-tlum">{v.nazev}<Otaznik popis={<span className="block">{v.predpoklad}</span>} /></span>
-                  <span className="cislice shrink-0 text-male font-semibold text-inkoust">{v.dni === null ? <span className="font-normal text-tlum2">nezadáno</span> : lidskaDoba(v.dni)}</span>
+                <li key={v.klic} className="py-1.5">
+                  <span className="flex items-center justify-between gap-3">
+                    <span className="flex items-center gap-1.5 text-male text-tlum">{v.nazev}<Otaznik popis={<span className="block">{v.predpoklad}</span>} /></span>
+                    <span className="cislice shrink-0 text-male font-semibold text-inkoust">
+                      {/* „váš odhad“: číslo napsal člověk a web ho jen opakuje — nesmí vypadat jako výsledek výpočtu (13. 11. 2026). */}
+                      {v.puvod === "odhad" && v.dni !== null && <span className="mr-1.5 text-mikro font-normal uppercase tracking-[0.06em] text-tlum2">váš odhad</span>}
+                      {v.dni === null ? <span className="font-normal text-tlum2">nezadáno</span> : v.dni === Infinity && v.klic !== "energie" ? "ze zdroje" : lidskaDoba(v.dni)}
+                    </span>
+                  </span>
+                  {v.upozorneni && <span className="mt-0.5 block text-drobne leading-snug text-tlum2">{v.upozorneni}</span>}
                 </li>
               ))}
             </ul>
@@ -386,6 +403,8 @@ export function OdolnostKlient() {
               </div>
             ); })()}
           </div>
+
+          <p className="mt-2 text-drobne leading-snug text-tlum2">Zatím nepočítáme: palivo na topení a vaření (kartuše, dřevo), krmivo pro zvířata a vodu na vaření. Kde je to podstatné, říká to věta u řádku.</p>
 
           {premium ? (
             <>
