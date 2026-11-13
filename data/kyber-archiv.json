@@ -1,5 +1,41 @@
 [
   {
+    "id": "univerzita-karlova-resi-kyberneticky-utok-utocnik-ziskal-oso",
+    "druh": "utok",
+    "titulek": "Univerzita Karlova řeší kybernetický útok, útočník získal osobní údaje",
+    "vydavatel": "ČTK",
+    "odkaz": "https://www.ceskenoviny.cz/zpravy/univerzita-karlova-resi-kyberneticky-utok-utocnik-ziskal-osobni-udaje/2901579?utm_source=rss&utm_medium=feed",
+    "kdy": "2026-11-13T10:44:00.000Z",
+    "uredni": false
+  },
+  {
+    "id": "univerzita-karlova-resi-kyberneticky-utok-do-cizich-rukou-pa",
+    "druh": "utok",
+    "titulek": "Univerzita Karlova řeší kybernetický útok. Do cizích rukou padly i osobní údaje",
+    "vydavatel": "Český rozhlas",
+    "odkaz": "https://www.irozhlas.cz/zpravy-domov/univerzita-karlova-praha-kyberneticky-utok-hackeri_2611131134_ako",
+    "kdy": "2026-11-13T10:34:00.000Z",
+    "uredni": false
+  },
+  {
+    "id": "hacker-napadl-univerzitu-karlovu-ukradl-i-osobni-udaje",
+    "druh": "utok",
+    "titulek": "Hacker napadl Univerzitu Karlovu. Ukradl i osobní údaje",
+    "vydavatel": "Novinky.cz",
+    "odkaz": "https://www.novinky.cz/clanek/internet-a-pc-bezpecnost-hackersky-utok-40608494",
+    "kdy": "2026-11-13T10:23:49.000Z",
+    "uredni": false
+  },
+  {
+    "id": "univerzita-karlova-celi-kybernetickemu-utoku-unikla-osobni-d",
+    "druh": "utok",
+    "titulek": "Univerzita Karlova čelí kybernetickému útoku, unikla osobní data",
+    "vydavatel": "iDNES.cz",
+    "odkaz": "https://www.idnes.cz/zpravy/domaci/univerzita-karlova-kyberneticky-utok-studijni-informacni-system.A261113_110732_domaci_aoc#utm_source=rss&utm_medium=feed&utm_campaign=zpravodaj&utm_content=main",
+    "kdy": "2026-11-13T10:13:00.000Z",
+    "uredni": false
+  },
+  {
     "id": "microsoft-ma-rozsahly-vypadek-cloudu-nefunguji-e-maily-copil",
     "druh": "vypadek",
     "titulek": "Microsoft má rozsáhlý výpadek cloudu. Nefungují e-maily, Copilot ani další služby",
