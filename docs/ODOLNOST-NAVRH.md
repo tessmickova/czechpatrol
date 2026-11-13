@@ -168,12 +168,37 @@ notifikací a s možností odejít jedním tlačítkem.
 |---|---|---|
 | osob, zvirat | jmenovatel pro vodu | zařízení |
 | cesty po funkcích | jediný vstup pro redundanci a body selhání | zařízení |
-| zásoby (voda, užitková, jídlo dny, léky dny) | horizonty; léky jen jako dny, nikdy názvy ani dávky | zařízení |
+| zásoby (voda, užitková, kapacita filtru v l, jídlo dny nebo kg po potravinách, léky dny) | horizonty; léky jen jako dny, nikdy názvy ani dávky | zařízení |
 | energie (Wh kapacita, spotřebiče s W a hodinami, dobíjení, solár Wp) | vydrž energie po režimech, odhad soláru, sejmutí závislosti přenosných zařízení | zařízení |
 | kontext (kraj, bydlení, sídlo, děti, senioři, závislý na péči, rodina v dosahu), vybavení (vysílačky, powerbanky) | zásoba vody podle kraje, cesty závislé na kontextu, váha nálezů | zařízení |
 | celý profil na serveru | jen s Premium, šifrovaně, na kontinuitu mezi zařízeními | D1, mazatelné |
 | nemohu (funkce → důvod) | kompenzace místo varování | zařízení |
 | — adresa, jména, diagnózy, konkrétní vybavení, ceny | nepotřebujeme; neukládají se | — |
+
+### Pravidla výdrže po prepperské revizi (13. 11. 2026)
+
+Podnět: komentář čtenářky — výsledek jen opakoval, co člověk napsal, a
+nereagoval na užitkovou vodu s filtrem. Opraveno v `src/lib/odolnost.ts`,
+testy v `testy/odolnost.test.ts`:
+
+- **Odhad není výsledek.** Číslo, které člověk zadal ve dnech (jídlo,
+  léky), nese štítek „váš odhad“. U jídla k němu kontrola: kolik kcal to
+  je a kolik kg rýže to odpovídá (hodnota z `potraviny.json`).
+- **Filtr převádí užitkovou vodu na pitnou**, nejvýš do kapacity filtru,
+  je-li zadaná. Pití má přednost: pitná voda ukazuje výdrž, když hygiena
+  ustoupí; hygiena ukazuje, kdy dojde užitková voda, když se z ní po
+  vypití pitné zásoby zároveň pije.
+- **Studna s ruční pumpou** = hygiena bez limitu zásoby; pití bez limitu
+  jen s úpravou vody (pitnost bez rozboru neznáme).
+- **Syrová rýže není jídlo.** Rýže, těstoviny a luštěniny (`varit: true`)
+  se do výdrže nepočítají, když domácnost vyplnila vaření a nemá cestu
+  bez elektřiny. Nevyplněné vaření = počítá se vše, s upozorněním.
+- **Dobíjení není „bez limitu“.** Se zadaným výkonem panelů se počítá
+  zisk v aktuálním ročním období (`SLUNECNE_HODINY`, účinnost 70 %);
+  generátor a auto závisí na palivu, které neznáme — počítá se kapacita.
+- Zatím nepočítáme a web to říká: palivo na topení a vaření, krmivo,
+  vodu na vaření, velikost zvířat, nižší spotřebu užitkové vody se suchým
+  WC.
 
 ## 8. Otázky z red teamu a odpovědi
 
