@@ -1,8 +1,26 @@
 {
-  "aktualizovano": "2026-11-13T00:01:07.393Z",
-  "nacteno": "2026-11-13T00:01:07.393Z",
+  "aktualizovano": "2026-11-13T09:00:57.171Z",
+  "nacteno": "2026-11-13T09:00:57.171Z",
   "stav": "klid",
   "zpravy": [
+    {
+      "id": "microsoft-ma-rozsahly-vypadek-cloudu-nefunguji-e-maily-copil",
+      "druh": "vypadek",
+      "titulek": "Microsoft má rozsáhlý výpadek cloudu. Nefungují e-maily, Copilot ani další služby",
+      "vydavatel": "Živě.cz",
+      "odkaz": "https://www.zive.cz/clanky/microsoft-ma-rozsahly-vypadek-cloudu-nefunguji-e-maily-ani-dalsi-sluzby/sc-3-a-244432/default.aspx",
+      "kdy": "2026-11-13T06:15:00.000Z",
+      "uredni": false
+    },
+    {
+      "id": "fbi-varuje-pred-severokorejskymi-hackery-ai-jim-pomohla-k-po",
+      "druh": "utok",
+      "titulek": "FBI varuje před severokorejskými hackery. AI jim pomohla k podvodům za 8,7 miliardy",
+      "vydavatel": "iDNES.cz",
+      "odkaz": "https://www.idnes.cz/zpravy/zahranicni/severni-korea-kldr-hackeri-fbi-kryptomeny-ai-deepfake.A261113_063525_zahranicni_aya#utm_source=rss&utm_medium=feed&utm_campaign=zpravodaj&utm_content=main",
+      "kdy": "2026-11-13T05:46:00.000Z",
+      "uredni": false
+    },
     {
       "id": "vas-firemni-chatbot-muze-pracovat-pro-hackery-svetovy-specia",
       "druh": "utok",
