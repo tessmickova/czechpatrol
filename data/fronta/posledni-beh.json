@@ -1,5 +1,5 @@
 {
-  "kdy": "2026-11-13T03:01:06.010Z",
+  "kdy": "2026-11-13T06:00:55.070Z",
   "zdroje": [
     {
       "klic": "e-sbirka",
@@ -203,9 +203,9 @@
     {
       "klic": "bmi-de",
       "ok": false,
-      "stav": null,
+      "stav": 400,
       "pocetPolozek": 0,
-      "chyba": "fetch failed",
+      "chyba": "HTTP 400",
       "vysledek": "chyba"
     },
     {

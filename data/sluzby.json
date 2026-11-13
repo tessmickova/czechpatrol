@@ -1,16 +1,11 @@
 {
-  "aktualizovano": "2026-11-13T03:03:09.073Z",
+  "aktualizovano": "2026-11-13T06:03:08.176Z",
   "stavy": [
     {
       "klic": "cloudflare",
       "stav": "omezeni",
       "popis": "Partially Degraded Service",
       "incidenty": [
-        {
-          "nazev": "Durable Objects increased error rates in North America",
-          "odkaz": "https://www.cloudflarestatus.com/incidents/9zxr2bkqoct7",
-          "aktualizovano": "2026-11-12T22:40:03.086Z"
-        },
         {
           "nazev": "Changes to Cloudflare Workers are not producing Event Subscription events",
           "odkaz": "https://www.cloudflarestatus.com/incidents/0ocqieaifg7h",
@@ -23,7 +18,7 @@
         "Arica, Chile - (ARI)",
         "Algiers, Algeria - (ALG)"
       ],
-      "zkontrolovano": "2026-11-13T03:03:09.073Z",
+      "zkontrolovano": "2026-11-13T06:03:08.176Z",
       "chyba": null
     },
     {
@@ -34,7 +29,7 @@
         {
           "nazev": "Service Degradation Affecting Microsoft Integrations due to an underlying vendor issue.",
           "odkaz": "https://stspg.io/jth16cll1kcf",
-          "aktualizovano": "2026-11-12T15:54:37.880-08:00"
+          "aktualizovano": "2026-11-12T20:02:54.277-08:00"
         }
       ],
       "postizene": [
@@ -43,7 +38,7 @@
         "Integrations/Calendar/Plug-In/Add-In",
         "Zoom Mail"
       ],
-      "zkontrolovano": "2026-11-13T03:03:09.073Z",
+      "zkontrolovano": "2026-11-13T06:03:08.176Z",
       "chyba": null
     },
     {
@@ -52,7 +47,7 @@
       "popis": "All Systems Operational",
       "incidenty": [],
       "postizene": [],
-      "zkontrolovano": "2026-11-13T03:03:09.073Z",
+      "zkontrolovano": "2026-11-13T06:03:08.176Z",
       "chyba": null
     }
   ]
