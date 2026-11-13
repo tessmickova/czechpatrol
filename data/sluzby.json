@@ -1,5 +1,5 @@
 {
-  "aktualizovano": "2026-11-13T21:03:06.595Z",
+  "aktualizovano": "2026-11-13T23:49:41.663Z",
   "stavy": [
     {
       "klic": "cloudflare",
@@ -14,7 +14,7 @@
         {
           "nazev": "Cloudflare is currently having an issue with the r8.im registry used for Replicate model publishing and builds is currently restricted",
           "odkaz": "https://www.cloudflarestatus.com/incidents/mc91s22odfvf",
-          "aktualizovano": "2026-11-13T14:56:27.695Z"
+          "aktualizovano": "2026-11-13T23:34:56.651Z"
         },
         {
           "nazev": "Changes to Cloudflare Workers are not producing Event Subscription events",
@@ -28,7 +28,7 @@
         "Arica, Chile - (ARI)",
         "Algiers, Algeria - (ALG)"
       ],
-      "zkontrolovano": "2026-11-13T21:03:06.595Z",
+      "zkontrolovano": "2026-11-13T23:49:41.663Z",
       "chyba": null
     },
     {
@@ -43,12 +43,12 @@
         }
       ],
       "postizene": [
+        "Knowledge Base",
         "Zoom Scheduler",
-        "Microsoft OneDrive for Organizations",
-        "Integrations/Calendar/Plug-In/Add-In",
-        "Zoom Mail"
+        "Ticketing",
+        "Microsoft OneDrive for Organizations"
       ],
-      "zkontrolovano": "2026-11-13T21:03:06.595Z",
+      "zkontrolovano": "2026-11-13T23:49:41.663Z",
       "chyba": null
     },
     {
@@ -57,7 +57,7 @@
       "popis": "All Systems Operational",
       "incidenty": [],
       "postizene": [],
-      "zkontrolovano": "2026-11-13T21:03:06.595Z",
+      "zkontrolovano": "2026-11-13T23:49:41.663Z",
       "chyba": null
     }
   ]
