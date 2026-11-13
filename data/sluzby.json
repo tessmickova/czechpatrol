@@ -1,5 +1,5 @@
 {
-  "aktualizovano": "2026-11-12T22:27:14.856Z",
+  "aktualizovano": "2026-11-13T00:03:25.827Z",
   "stavy": [
     {
       "klic": "cloudflare",
@@ -7,9 +7,14 @@
       "popis": "Partially Degraded Service",
       "incidenty": [
         {
+          "nazev": "Durable Objects increased error rates in North America",
+          "odkaz": "https://www.cloudflarestatus.com/incidents/9zxr2bkqoct7",
+          "aktualizovano": "2026-11-12T22:40:03.086Z"
+        },
+        {
           "nazev": "Replicate Model Registry Unavailable",
           "odkaz": "https://www.cloudflarestatus.com/incidents/yu63fhh2peb7",
-          "aktualizovano": "2026-11-11T23:51:40.658Z"
+          "aktualizovano": "2026-11-12T22:55:17.816Z"
         },
         {
           "nazev": "Changes to Cloudflare Workers are not producing Event Subscription events",
@@ -23,7 +28,7 @@
         "Albuquerque, United States - (ABQ)",
         "Arica, Chile - (ARI)"
       ],
-      "zkontrolovano": "2026-11-12T22:27:14.856Z",
+      "zkontrolovano": "2026-11-13T00:03:25.827Z",
       "chyba": null
     },
     {
@@ -34,7 +39,7 @@
         {
           "nazev": "Service Degradation Affecting Microsoft Integrations due to an underlying vendor issue.",
           "odkaz": "https://stspg.io/jth16cll1kcf",
-          "aktualizovano": "2026-11-12T11:24:50.695-08:00"
+          "aktualizovano": "2026-11-12T15:54:37.880-08:00"
         }
       ],
       "postizene": [
@@ -43,7 +48,7 @@
         "Integrations/Calendar/Plug-In/Add-In",
         "Zoom Mail"
       ],
-      "zkontrolovano": "2026-11-12T22:27:14.856Z",
+      "zkontrolovano": "2026-11-13T00:03:25.827Z",
       "chyba": null
     },
     {
@@ -52,7 +57,7 @@
       "popis": "All Systems Operational",
       "incidenty": [],
       "postizene": [],
-      "zkontrolovano": "2026-11-12T22:27:14.856Z",
+      "zkontrolovano": "2026-11-13T00:03:25.827Z",
       "chyba": null
     }
   ]
