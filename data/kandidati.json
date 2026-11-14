@@ -579,6 +579,77 @@
     }
   },
   {
+    "id": "k-1b1e5223895a5693",
+    "zachyceno": "2026-11-14T03:02:43.371Z",
+    "publikovano": "2026-11-14T01:29:00.000Z",
+    "zdroj": {
+      "nazev": "Ukrinform (anglicky)",
+      "url": "https://www.ukrinform.net/rubric-crime/4184253-ssu-foils-russian-plot-to-strike-kyiv-arrests-suspected-agent-spying-on-military-positions.html",
+      "typ": "wire",
+      "primarni": false
+    },
+    "titulek": "SSU foils Russian plot to strike Kyiv, arrests suspected agent spying on military positions",
+    "titulekPuvodni": "SSU foils Russian plot to strike Kyiv, arrests suspected agent spying on military positions",
+    "shrnuti": "The Security Service of Ukraine (SSU) has detained a man in Kyiv suspected of helping guide Russian missile and drone attacks and prepare new strikes against Ukrainian Defense Forces units and civilian facilities in the capital.",
+    "kodZeme": "UA",
+    "zeme": "Ukrajina",
+    "kategorie": [
+      "zpravodajske",
+      "drony",
+      "rusko"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "detained+spy",
+      "dron",
+      "drone",
+      "russia"
+    ],
+    "naliehave": null,
+    "stav": "ceka",
+    "vyrez": {
+      "text": "SSU foils Russian plot to strike Kyiv, arrests suspected agent spying on military positions\n\r\nSubscription\nNewsletters\nPhotobank\nUkrinform - Ukrainian National News Agency\nFounded in 1918\nSaturday, 14 November 2026, 05:02\nWar\nEconomy\nSports\nMore ☰\nContacts\nEng\nУкр\nEng\nEsp\nDeu\nعربي\nFra\n日本語\nPol\n&times;\nAll topics\nWar\nRecovery of Ukraine\nPolitics\nEconomy\nFact checks\nDefense\nSociety and Culture\nSports\nCrime\nAccidents and Emergencies\nAgency\nInformation on Agency\nOur Contacts\nSubscribtion Terms\nOur Services\nPrivacy policy and personal data protection\nAdditional\nPublications\nInterviews\nPhoto\nVideo\nLongreads\nReleases\nServices\nSubscription\nNewsletters\nPhotobank\n\r\n\r\n\r\nThe Security Service of Ukraine (SSU) has detained a man in Kyiv suspected of helping guide Russian missile and drone attacks and prepare new strikes against Ukrainian Defense Forces units and civilian facilities in the capital.\nAccording to Ukrinform, the SSU reported this on its official website.\n\r\n\r\n\"The SSU's counterintelligence operatives have exposed another Russian agent in Kyiv. He turned out to be a resident of the Cherkasy region recruited by the enemy, who was attempting to help direct a Russian attack on the…",
+      "stazeno": "2026-11-14T03:02:43.499Z",
+      "stav": 200
+    }
+  },
+  {
+    "id": "k-2bb38a2940d901ea",
+    "zachyceno": "2026-11-14T03:02:43.416Z",
+    "publikovano": "2026-11-14T00:26:27.000Z",
+    "zdroj": {
+      "nazev": "Meduza (anglicky)",
+      "url": "https://meduza.io/en/news/2026/11/14/russia-detains-federal-youth-agency-official-and-synergy-private-university-vice-rector-over-allegedly-unusable-online-courses",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Russia detains federal youth agency official and Synergy private university vice-rector over allegedly unusable online courses",
+    "titulekPuvodni": "Russia detains federal youth agency official and Synergy private university vice-rector over allegedly unusable online courses",
+    "shrnuti": "Authorities searched Synergy University as part of a theft investigation and detained Vice Rector Mikhail Yerofeyev, REN TV and TASS reported.",
+    "kodZeme": "RU",
+    "zeme": "Rusko",
+    "kategorie": [
+      "zpravodajske",
+      "rusko"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "detained+russia",
+      "russia"
+    ],
+    "naliehave": null,
+    "stav": "ceka",
+    "vyrez": {
+      "text": "Russia detains federal youth agency official and Synergy private university vice-rector over allegedly unusable online courses — Meduza\nSkip to main content\nRussia detains federal youth agency official and Synergy private university vice-rector over allegedly unusable online courses\nNovember 14, 2026, 12:26 am\nSource: Synergy\nUpdate : Denis Ashirov, deputy head of Russia’s youth affairs agency Rosmolodezh, has been detained in a fraud investigation involving contracts with Synergy University, sources told RBC. Authorities searched Synergy University as part of a theft investigation and detained Vice Rector Mikhail Yerofeyev, REN TV and TASS reported.\nKommersant reported that Yerofeyev is suspected of stealing funds while carrying out a government contract and is being held in a temporary detention facility. The investigation concerns a contract worth 31.5 million rubles that Synergy received in 2023, the newspaper reported.\nInvestigators allege that subcontractors did most of the work to create an online professional development course, spending no more than 13.5 million rubles. However, the university received full payment after the work was accepted, and investigators believe…",
+      "stazeno": "2026-11-14T03:02:43.810Z",
+      "stav": 200
+    }
+  },
+  {
     "id": "k-2fc9a341875403e2",
     "zachyceno": "2026-11-14T00:03:00.991Z",
     "publikovano": "2026-11-13T23:53:18.000Z",
@@ -644,6 +715,45 @@
     "vyrez": {
       "text": "After detaining ‘Polish spies’ in Kaliningrad, the FSB released their alleged messages in Polish. Native speakers say they contain errors and unnatural phrasing. — Meduza\nSkip to main content\nAfter detaining ‘Polish spies’ in Kaliningrad, the FSB released their alleged messages in Polish. Native speakers say they contain errors and unnatural phrasing.\nNovember 13, 2026, 11:48 pm\nSource: Agentstvo\nPolish-language messages released by Russia’s Federal Security Service (FSB) alongside its announcement that Polish citizens had been detained in the Kaliningrad region have raised doubts among native speakers, the news outlet Agentstvo reported.\nOn November 11, the FSB said a Polish intelligence “spy network” had been operating in the Kaliningrad region and that two “agents” had been detained on espionage charges.\nRussian authorities allege that the detainees collected and passed on information about Russian military personnel and Defense Ministry facilities. Two statements ( 1 , 2) from the regional court confirm that both detainees are Polish citizens. One was arrested back on July 30, while the other was detained on October 28.\nThe FSB also released a video of the detainees that…",
       "stazeno": "2026-11-14T00:03:01.343Z",
+      "stav": 200
+    }
+  },
+  {
+    "id": "k-155b45a19a4bec0f",
+    "zachyceno": "2026-11-14T03:02:43.374Z",
+    "publikovano": "2026-11-13T23:26:00.000Z",
+    "zdroj": {
+      "nazev": "Ukrinform (anglicky)",
+      "url": "https://www.ukrinform.net/rubric-ato/4184176-remains-of-russian-drone-recovered-from-dnipro-river-in-kyiv.html",
+      "typ": "wire",
+      "primarni": false
+    },
+    "titulek": "Remains of Russian drone recovered from Dnipro River in Kyiv",
+    "titulekPuvodni": "Remains of Russian drone recovered from Dnipro River in Kyiv",
+    "shrnuti": "Rescuers have recovered the remains of an enemy drone from the Dnipro River in Kyiv's Obolonskyi district. The debris fell into the river during a Russian attack on November 11.",
+    "kodZeme": "UA",
+    "zeme": "Ukrajina",
+    "kategorie": [
+      "hybridni",
+      "drony",
+      "rusko"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "attack on",
+      "dron+fell",
+      "debris+dron",
+      "dron",
+      "drone",
+      "russia"
+    ],
+    "naliehave": null,
+    "stav": "ceka",
+    "vyrez": {
+      "text": "Remains of Russian drone recovered from Dnipro River in Kyiv\n\r\nSubscription\nNewsletters\nPhotobank\nUkrinform - Ukrainian National News Agency\nFounded in 1918\nSaturday, 14 November 2026, 05:02\nWar\nEconomy\nSports\nMore ☰\nContacts\nEng\nУкр\nEng\nEsp\nDeu\nعربي\nFra\n日本語\nPol\n&times;\nAll topics\nWar\nRecovery of Ukraine\nPolitics\nEconomy\nFact checks\nDefense\nSociety and Culture\nSports\nCrime\nAccidents and Emergencies\nAgency\nInformation on Agency\nOur Contacts\nSubscribtion Terms\nOur Services\nPrivacy policy and personal data protection\nAdditional\nPublications\nInterviews\nPhoto\nVideo\nLongreads\nReleases\nServices\nSubscription\nNewsletters\nPhotobank\n\r\n\r\n\r\nRescuers have recovered the remains of an enemy drone from the Dnipro River in Kyiv's Obolonskyi district. The debris fell into the river during a Russian attack on November 11.\nThe Kyiv City Department of the State Emergency Service of Ukraine (SES) reported this on Facebook , according to Ukrinform.\n\r\n\r\nSES divers surveyed approximately 2,000 square meters of the riverbed, brought all the debris they found to the surface and transported it to a safe location for subsequent disposal.\n\r\n\r\n\r\n\r\n\r\n\r\nRead also: Putin wants to destroy life in Kyiv and other…",
+      "stazeno": "2026-11-14T03:02:44.095Z",
       "stav": 200
     }
   },
@@ -10235,114 +10345,6 @@
     "vyrez": {
       "text": "What the hack? Europeans face growing psyops and cyberattacks - The Debate - France 24\nSkip to main content\nVideo content\nProgram\nEurope\nWhat the hack? Europeans face growing psyops and cyberattacks\nTo display this content from YouTube, you must enable advertisement tracking and audience measurement.\nAccept\nManage my choices\nOne of your browser extensions seems to be blocking the video player from loading. To watch this content, you may need to disable it on this site.\nTry again\nCover image: A woman walks with her shopping trolley past partially empty shelves at a SuperValu store in Blanchardstown, Dublin, Ireland, November 2, 2026. Ireland's third-largest supermarket chain, SuperValu, said on Monday that refrigeration systems limited to a specific model in 13 of its 223 stores have been affected by a cyber incident, with chilled and frozen products removed from sale © Natalia Campos, REUTERS\n43:10\nIssued on: 10/11/2026 - 21:19 Modified: 10/11/2026 - 21:20\n43:10 min\nShare\nPlay (43:09 min)\nFrom the show\nReading time\n1 min\nSo this time, it's Iran, not Russia? France - reportedly acting on US intelligence - summoning Tehran’s ambassador over last month’s hacking of hundreds of…",
       "stazeno": "2026-11-10T22:02:50.079Z",
-      "stav": 200
-    }
-  },
-  {
-    "id": "k-8c7ba705b6cafc18",
-    "zachyceno": "2026-11-10T22:02:44.299Z",
-    "publikovano": "2026-11-10T20:15:09.000Z",
-    "zdroj": {
-      "nazev": "Seznam Zprávy",
-      "url": "https://www.seznamzpravy.cz/clanek/zahranicni-britska-policie-oznamila-zatceni-prislusnika-americke-armady-tyka-se-to-ruska-320229",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Britská policie oznámila zatčení příslušníka americké armády, týká se to Ruska",
-    "titulekPuvodni": "Britská policie oznámila zatčení příslušníka americké armády, týká se to Ruska",
-    "shrnuti": "Příslušník amerických ozbrojených sil byl zatčen v Británii. Podle tamní policie je podezřelý z trestných činů podle zákona o národní bezpečnosti. Podle šéfa americké FBI se zatčení týká obvinění ze špionáže.",
-    "kodZeme": "GB",
-    "zeme": "Spojené království",
-    "kategorie": [
-      "zpravodajske",
-      "vojsko",
-      "rusko"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "zeSite": null,
-    "shody": [
-      "zatc+spion",
-      "spionaz",
-      "policie",
-      "rusk"
-    ],
-    "naliehave": null,
-    "stav": "ceka",
-    "vyrez": {
-      "text": "Britská policie oznámila zatčení příslušníka americké armády, týká se to Ruska - Seznam Zprávy\nZobrazení snímku 1 z 0\nHlavní obsah\nBritská policie oznámila zatčení příslušníka americké armády, týká se to Ruska\nČTK\n2:34\nChcete-li článek poslouchat, přihlaste se\neBook\nSdílet\nFoto: Shutterstock.com\nIlustrační foto.\n21:15\naktualizováno  • 21:36\nPříslušník amerických ozbrojených sil byl zatčen v Británii. Podle tamní policie je podezřelý z trestných činů podle zákona o národní bezpečnosti. Podle šéfa americké FBI se zatčení týká obvinění ze špionáže.\nČlánek\nBritská policie zatkla příslušníka amerických ozbrojených sil, který je podezřelý z trestných činů podle zákona o národní bezpečnosti. Věc se týká Ruska, uvedla v úterý večer britská policie s tím, že spolupracuje s americkými úřady včetně Federálního úřadu pro vyšetřování (FBI). Ředitel FBI Kash Patel podle britského prohlášení uvedl, že zatčení se týká obvinění ze špionáže.\nBritské bezpečnostní složky zatkly jednačtyřicetiletého muže poblíž města Gloucester. Učinily tak na základě zákona o národní bezpečnosti; prohlášení podle stanice Sky News zmiňuje paragrafy týkající se získávání nebo vyzrazování chráněných informací…",
-      "stazeno": "2026-11-10T22:02:50.171Z",
-      "stav": 200
-    }
-  },
-  {
-    "id": "k-4eefeaa377e174d8",
-    "zachyceno": "2026-11-10T20:02:54.263Z",
-    "publikovano": "2026-11-10T19:54:07.000Z",
-    "zdroj": {
-      "nazev": "The Guardian — World",
-      "url": "https://www.theguardian.com/uk-news/2026/nov/10/uk-counter-terrorism-police-arrest-member-of-us-army-in-gloucestershire",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "UK counter-terrorism police arrest senior US soldier with alleged links to Russia",
-    "titulekPuvodni": "UK counter-terrorism police arrest senior US soldier with alleged links to Russia",
-    "shrnuti": "Man, 41, arrested near Gloucester as part of investigation by British police working with US authorities, US military and FBI A US soldier with alleged links to Russia has been arrested by British counter-terrorism police The man, 41, was arrested as part of an investigation by counter terrorism pol",
-    "kodZeme": "GB",
-    "zeme": "Spojené království",
-    "kategorie": [
-      "zpravodajske",
-      "rusko"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "zeSite": null,
-    "shody": [
-      "arrested+russia",
-      "russia"
-    ],
-    "naliehave": null,
-    "stav": "ceka",
-    "vyrez": {
-      "text": "UK counter-terrorism police arrest senior US soldier with alleged links to Russia | UK news | The Guardian\nSkip to main content Skip to navigation\nA US Army patch Photograph: Kevin Carter/Getty Images\nView image in fullscreen\nA US Army patch Photograph: Kevin Carter/Getty Images\nUK counter-terrorism police arrest senior US soldier with alleged links to Russia\nMan, 41, arrested near Gloucester as part of investigation by British police working with US authorities, US military and FBI\nA US soldier with alleged links to Russia has been arrested by British counter-terrorism police\nThe man, 41, was arrested as part of an investigation by counter terrorism policing, working closely with US authorities, the US military and the FBI, counter terrorism policing London said.\nUS army counterintelligence command said the allegations related to a “senior soldier”.\nThe man was arrested near Gloucester on Tuesday on suspicion of offences under section one and section three of the National Security Act and remains in custody at a London police station.\nAs part of the investigation, officers were carrying out searches at two locations in Gloucestershire, the Metropolitan police said.\nThe FBI…",
-      "stazeno": "2026-11-10T20:02:57.295Z",
-      "stav": 200
-    }
-  },
-  {
-    "id": "k-2e505808af2c84b2",
-    "zachyceno": "2026-11-10T20:02:53.411Z",
-    "publikovano": "2026-11-10T19:53:37.000Z",
-    "zdroj": {
-      "nazev": "ČT24 — hlavní zprávy",
-      "url": "https://ct24.ceskatelevize.cz/clanek/svet/britska-policie-zatkla-prislusnika-americke-armady-zalezitost-souvisi-s-ruskem-379494",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Britská policie zatkla příslušníka americké armády. Záležitost souvisí s Ruskem",
-    "titulekPuvodni": "Britská policie zatkla příslušníka americké armády. Záležitost souvisí s Ruskem",
-    "shrnuti": "Britská policie zatkla příslušníka amerických ozbrojených sil, který je podezřelý z trestných činů podle zákona o národní bezpečnosti. Věc souvisí s Ruskem, uvedla v úterý večer britská policie s tím, že spolupracuje s americkými úřady včetně Federálního úřadu pro vyšetřování (FBI). Ředitel FBI Kash",
-    "kodZeme": "GB",
-    "zeme": "Spojené království",
-    "kategorie": [
-      "zpravodajske",
-      "vojsko",
-      "rusko"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "zeSite": null,
-    "shody": [
-      "zatc+spion",
-      "spionaz",
-      "policie",
-      "rusk"
-    ],
-    "naliehave": null,
-    "stav": "ceka",
-    "vyrez": {
-      "text": "Britská policie zatkla příslušníka americké armády. Záležitost souvisí s Ruskem — ČT24 — Česká televize\nŽivé vysílání\nTV program\nPočasí\nTeletext\nE-shop\nVše o ČT\nTV poplatky\nKontakty\nSpravovat účet\nOblíbené pořady\nRozkoukaná videa\nPřihlásit se do TV\nOdhlásit se\nBritská policie zatkla příslušníka americké armády. Záležitost souvisí s Ruskem\nČTK\n, tom\npřed 9 m minutami | Zdroj: ČTK\nBritská policie, ilustrační foto\nZdroj: Pexels/Watford London Media\nBritská policie zatkla příslušníka amerických ozbrojených sil, který je podezřelý z trestných činů podle zákona o národní bezpečnosti. Věc souvisí s Ruskem, uvedla v úterý večer britská policie s tím, že spolupracuje s americkými úřady včetně Federálního úřadu pro vyšetřování (FBI). Ředitel FBI Kash Patel podle britského prohlášení uvedl, že zatčení se týká obvinění ze špionáže.\nBritské bezpečnostní složky zatkly jednačtyřicetiletého muže v úterý poblíž města Gloucester. Učinily tak na základě zákona o národní bezpečnosti. Podle stanice Sky News prohlášení zmiňuje paragrafy týkající se získávání nebo vyzrazování chráněných informací a napomáhání cizí zpravodajské službě. Podrobnosti k případu zatím nejsou k dispozici.\n„Toto důležité…",
-      "stazeno": "2026-11-10T20:02:57.328Z",
       "stav": 200
     }
   }

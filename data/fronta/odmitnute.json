@@ -1,5 +1,590 @@
 [
   {
+    "id": "k-8fca9e8bb8359c24",
+    "zachyceno": "2026-11-14T03:02:41.598Z",
+    "publikovano": "2026-11-14T02:50:21.000Z",
+    "zdroj": {
+      "nazev": "France 24 (anglicky)",
+      "url": "https://www.france24.com/en/video/20261114-faa-lifts-nationwide-ground-stop-on-all-us-flights",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "FAA lifts nationwide ground stop on all US flights",
+    "shrnuti": "The United States on Friday lifted an hours-long ground stop at the nation's airports, with top officials explaining that the disruption was not due to a cyberattack or a sweeping Microsoft outage.",
+    "duvod": "bez-mista",
+    "kategorie": [
+      "kyber"
+    ],
+    "posouzeni": null
+  },
+  {
+    "id": "k-bc4fc00955f7d88d",
+    "zachyceno": "2026-11-14T03:02:41.584Z",
+    "publikovano": "2026-11-14T02:49:59.000Z",
+    "zdroj": {
+      "nazev": "The Guardian — World",
+      "url": "https://www.theguardian.com/us-news/2026/nov/13/us-airports-flight-stoppage",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "‘It’s frustrating’: chaos at US airports as stoppage grinds travel plans to a halt",
+    "shrnuti": "Travelers and crew feeling ‘pissed’ or ‘lucky’ depending on level of upset amid nationwide ground stop The US Federal Aviation Administration’s decision to ground all flights on Friday threw airports and travel plans into chaos across the country, as passengers on planes and in airport terminals wer",
+    "duvod": "bez-skutku",
+    "kategorie": [],
+    "posouzeni": null
+  },
+  {
+    "id": "k-18dce13f0172f7d5",
+    "zachyceno": "2026-11-14T03:02:41.687Z",
+    "publikovano": "2026-11-14T02:36:59.000Z",
+    "zdroj": {
+      "nazev": "Tagesschau (Německo)",
+      "url": "https://www.tagesschau.de/ausland/amerika/usa-flugstopp-ende-100.html",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "FAA hebt Startverbot an US-Flughäfen wieder auf",
+    "shrnuti": "Nach mehreren Stunden läuft der Flugverkehr in den USA wieder an. Die Luftfahrtbehörde hob das zuvor verhängte Startverbot auf. US-Verkehrsminister Duffy nannte überlastete Kommunikationssysteme als Ursache.",
+    "duvod": "bez-skutku",
+    "kategorie": [],
+    "posouzeni": null
+  },
+  {
+    "id": "k-ee4c7a228fe5cb21",
+    "zachyceno": "2026-11-14T03:02:41.600Z",
+    "publikovano": "2026-11-14T02:35:48.000Z",
+    "zdroj": {
+      "nazev": "France 24 (anglicky)",
+      "url": "https://www.france24.com/en/americas/20261114-us-flights-resume-after-nationwide-ground-stop-lifted-aviation",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "US flights resume after nationwide ground stop lifted",
+    "shrnuti": "The United States on Friday lifted an hours-long ground stop at the nation's airports, with top officials explaining that the disruption was not due to a cyberattack or a sweeping Microsoft outage. Transportation Secretary Sean Duffy said that US airspace was now \"opened up,\" and blamed \"old hardwar",
+    "duvod": "bez-mista",
+    "kategorie": [
+      "kyber",
+      "drony"
+    ],
+    "posouzeni": null
+  },
+  {
+    "id": "k-2ca72ee666dcd926",
+    "zachyceno": "2026-11-14T03:02:42.580Z",
+    "publikovano": "2026-11-14T02:33:15.000Z",
+    "zdroj": {
+      "nazev": "VRT NWS (Belgie)",
+      "url": "https://www.vrt.be/vrtnws/nl/2026/11/14/amerikaans-luchtruim-weer-open.rss.xml",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Amerikaans luchtruim weer open",
+    "shrnuti": "In de VS is het luchtruim weer opengesteld. Vliegtuigen mogen dus weer opstijgen en landen. Gisterenavond kwam het vliegverkeer in de VS tot een totale stilstand, nadat de Federal Aviation Administration (FAA) uit voorzorg alle vliegtuigen aan de grond hield door een probleem met een telecomsysteem.",
+    "duvod": "bez-skutku",
+    "kategorie": [],
+    "posouzeni": null
+  },
+  {
+    "id": "k-db3b554401488329",
+    "zachyceno": "2026-11-14T03:02:42.649Z",
+    "publikovano": "2026-11-14T02:31:51.000Z",
+    "zdroj": {
+      "nazev": "Le Monde (Francie)",
+      "url": "https://www.lemonde.fr/international/article/2026/11/14/suspension-des-vols-aux-etats-unis-l-agence-de-l-aviation-civile-annonce-une-reprise-du-trafic-aerien-apres-une-vaste-panne-des-telecommunications_6809389_3211.html",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Suspension des vols aux Etats-Unis : l’agence de l’aviation civile annonce une reprise du trafic aérien après une vaste « panne des télécommunications »",
+    "shrnuti": "Un dysfonctionnement affectant les centres régionaux de contrôle aérien a conduit les autorités à suspendre les vols dans tout le pays, pendant plusieurs heures, provoquant d’importantes perturbations dans les aéroports américains.",
+    "duvod": "bez-skutku",
+    "kategorie": [],
+    "posouzeni": null
+  },
+  {
+    "id": "k-cd8fc13265ec3dce",
+    "zachyceno": "2026-11-14T03:02:41.969Z",
+    "publikovano": "2026-11-14T02:30:00.000Z",
+    "zdroj": {
+      "nazev": "SME (Slovensko)",
+      "url": "https://www.sme.sk/podcasty/c/klik-cim-dlhsie-sa-divate-na-nvidiu-tym-horsie-to-vyzera?utm_source=rss&utm_medium=feed&utm_campaign=www-rss",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Klik: Čím dlhšie sa dívate na Nvidiu, tým horšie to vyzerá",
+    "shrnuti": "Komentovaný prehľad technologických správ.",
+    "duvod": "bez-skutku",
+    "kategorie": [],
+    "posouzeni": null
+  },
+  {
+    "id": "k-5f6160bd91653bcd",
+    "zachyceno": "2026-11-14T03:02:41.970Z",
+    "publikovano": "2026-11-14T02:30:00.000Z",
+    "zdroj": {
+      "nazev": "SME (Slovensko)",
+      "url": "https://www.sme.sk/podcasty/c/myslite-si-ze-vas-nikto-neoklame-to-ste-este-nevideli-dokument-roka-uvidis-vsetko?utm_source=rss&utm_medium=feed&utm_campaign=www-rss",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Myslíte si, že vás nikto neoklame? To ste ešte nevideli dokument roka Uvidíš všetko",
+    "shrnuti": "Vypočujte si tipy na filmové novinky v podcaste Vertigo.",
+    "duvod": "vylouceno-tematem",
+    "kategorie": [],
+    "posouzeni": null
+  },
+  {
+    "id": "k-02815b08cdf6d305",
+    "zachyceno": "2026-11-14T03:02:41.971Z",
+    "publikovano": "2026-11-14T02:30:00.000Z",
+    "zdroj": {
+      "nazev": "SME (Slovensko)",
+      "url": "https://www.sme.sk/podcasty/c/dobre-rano-sobota-gasparov-tazky-tyzden?utm_source=rss&utm_medium=feed&utm_campaign=www-rss",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Dobré ráno sobota: Gašparov ťažký týždeň",
+    "shrnuti": "Kajúcnici neprešli a voľba poštou prepadla. Koalícia mala zlý týždeň.",
+    "duvod": "bez-skutku",
+    "kategorie": [],
+    "posouzeni": null
+  },
+  {
+    "id": "k-dc03a868a1fd93dc",
+    "zachyceno": "2026-11-14T03:02:41.549Z",
+    "publikovano": "2026-11-14T02:15:04.000Z",
+    "zdroj": {
+      "nazev": "The Guardian — World",
+      "url": "https://www.theguardian.com/australia-news/2026/nov/14/us-bound-flights-out-of-australia-grounded-as-telecommunications-outage-affects-american-travel",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "US-bound flights out of Australia delayed after telecommunications outage grounded American planes",
+    "shrnuti": "Sydney and Melbourne airports say flights were affected by now-lifted ban on departures in US US flight outage – live updates Get our breaking news email , free app or daily news podcast Some US-bound flights from Sydney airport were grounded or delayed on Saturday after American authorities halted ",
+    "duvod": "bez-skutku",
+    "kategorie": [],
+    "posouzeni": null
+  },
+  {
+    "id": "k-240bf0e1c5c28b2f",
+    "zachyceno": "2026-11-14T03:02:42.560Z",
+    "publikovano": "2026-11-14T01:51:50.000Z",
+    "zdroj": {
+      "nazev": "NOS Nieuws (Nizozemsko)",
+      "url": "https://nos.nl/l/2639421",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Voor het eerst drielandengesprek tussen Trump, Poetin en Xi Jinping in China",
+    "shrnuti": "President Trump ontmoet president Poetin en Xi Jinping aankomende donderdag in China. Dat heeft het Witte Huis aan journalisten verteld. Het is de eerste keer dat de leiders van de landen met elkaar spreken in een driepartijenoverleg. De ontmoeting vindt plaats temidden van de Asia-Pacific Economic ",
+    "duvod": "bez-skutku",
+    "kategorie": [],
+    "posouzeni": null
+  },
+  {
+    "id": "k-958c9f3b26485300",
+    "zachyceno": "2026-11-14T03:02:42.658Z",
+    "publikovano": "2026-11-14T01:49:53.000Z",
+    "zdroj": {
+      "nazev": "Le Monde (Francie)",
+      "url": "https://www.lemonde.fr/international/article/2026/11/14/la-maison-blanche-annonce-une-rencontre-trilaterale-entre-donald-trump-vladimir-poutine-et-xi-jinping-jeudi-en-chine_6809488_3210.html",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "La Maison Blanche annonce une rencontre trilatérale entre Donald Trump, Vladimir Poutine et Xi Jinping, jeudi en Chine",
+    "shrnuti": "Washington a précisé que les discussions des trois présidents, en marge du sommet de l’APEC à Shenzhen, porteraient sur le désarmement nucléaire. Selon un responsable américain s’exprimant sous couvert d’anonymat, l’Iran sera aussi au menu de la rencontre, mais pas l’Ukraine.",
+    "duvod": "bez-skutku",
+    "kategorie": [],
+    "posouzeni": null
+  },
+  {
+    "id": "k-0048d196d198caff",
+    "zachyceno": "2026-11-14T03:02:41.127Z",
+    "publikovano": "2026-11-14T01:28:00.000Z",
+    "zdroj": {
+      "nazev": "iDNES.cz — zpravodajství",
+      "url": "https://www.idnes.cz/zpravy/zahranicni/trump-se-ve-ctvrtek-setka-se-si-tin-pchingem-a-putinem-tematem-budou-jaderne-zbrane.A261114_014836_zahranicni_air#utm_source=rss&utm_medium=feed&utm_campaign=zpravodaj&utm_content=main",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Trump se ve čtvrtek setká se Si Ťin-pchingem a Putinem, tématem budou jaderné zbraně",
+    "shrnuti": "Americký prezident Donald Trump se ve čtvrtek na okraj summitu APEC v jihočínském Šen-čenu setká s čínským prezidentem Si Ťin-pchingem a ruským prezidentem Vladimirem Putinem, přičemž trilaterální jednání se má zaměřit mimo jiné na omezení jaderných zbraní a situaci kolem Íránu.",
+    "duvod": "bez-skutku",
+    "kategorie": [
+      "rusko"
+    ],
+    "posouzeni": null
+  },
+  {
+    "id": "k-66a8aab063b92a92",
+    "zachyceno": "2026-11-14T03:02:42.837Z",
+    "publikovano": "2026-11-14T01:16:51.000Z",
+    "zdroj": {
+      "nazev": "El País (Španělsko, anglicky)",
+      "url": "https://english.elpais.com/usa/2026-11-14/all-flights-grounded-across-the-us-over-extraordinary-circumstances-and-security-concerns.html",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "All flights grounded across the US over ‘extraordinary circumstances and security concerns’",
+    "shrnuti": "US Transportation Secretary says the nationwide shutdown was triggered by a “communications issue affecting all air route traffic control centers”",
+    "duvod": "bez-skutku",
+    "kategorie": [],
+    "posouzeni": null
+  },
+  {
+    "id": "k-de3c137903859ae9",
+    "zachyceno": "2026-11-14T03:02:41.551Z",
+    "publikovano": "2026-11-14T01:00:30.000Z",
+    "zdroj": {
+      "nazev": "The Guardian — World",
+      "url": "https://www.theguardian.com/australia-news/2026/nov/14/one-nation-nsw-candidate-stuart-bonds-ntwnfb",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Stuart Bonds made ‘racist’ and ‘divisive’ comments. But One Nation is showing no sign of dumping the NSW candidate",
+    "shrnuti": "The former coalminer’s claim Australians are being ‘demographically replaced’ sparked wide criticism, but his party has shown no signs of dumping him Get our breaking news email , free app or daily news podcast In a Facebook video from a Sydney anti-immigration rally on Sunday, as a man dressed like",
+    "duvod": "bez-skutku",
+    "kategorie": [],
+    "posouzeni": null
+  },
+  {
+    "id": "k-76a4aadc5385d831",
+    "zachyceno": "2026-11-14T03:02:41.073Z",
+    "publikovano": "2026-11-14T00:57:29.000Z",
+    "zdroj": {
+      "nazev": "Novinky.cz",
+      "url": "https://www.novinky.cz/clanek/zahranicni-trump-putin-a-si-se-sejdou-v-cine-40608623",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Trump, Putin a Si se ve čtvrtek sejdou v Číně",
+    "shrnuti": "Americký prezident Donald Trump se ve čtvrtek setká s prezidenty Číny a Ruska Si Ťin-pchingem a Vladimirem Putinem. Podle agentury Reuters to uvedla mluvčí Bílého domu Olivia Walesová.",
+    "duvod": "bez-skutku",
+    "kategorie": [
+      "rusko"
+    ],
+    "posouzeni": null
+  },
+  {
+    "id": "k-44454294e0b6a22b",
+    "zachyceno": "2026-11-14T03:02:41.553Z",
+    "publikovano": "2026-11-14T00:52:48.000Z",
+    "zdroj": {
+      "nazev": "The Guardian — World",
+      "url": "https://www.theguardian.com/australia-news/2026/nov/14/microsoft-deeply-sorry-for-global-disruption-that-could-have-billion-dollar-impact-on-australia",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Microsoft ‘deeply sorry’ for global disruption that could have billion-dollar impact on Australia",
+    "shrnuti": "Experts say outage exposes ‘Australia’s reliance on foreign technology’ as software giant says services being restored Get our breaking news email , free app or daily news podcast The Microsoft outage could be a disaster for the Australian economy that forces some small businesses to close, with cos",
+    "duvod": "bez-mista",
+    "kategorie": [
+      "infrastruktura"
+    ],
+    "posouzeni": null
+  },
+  {
+    "id": "k-09dd662d4d84159c",
+    "zachyceno": "2026-11-14T03:02:42.562Z",
+    "publikovano": "2026-11-14T00:41:59.000Z",
+    "zdroj": {
+      "nazev": "NOS Nieuws (Nizozemsko)",
+      "url": "https://nos.nl/l/2639420",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Luchtmacht VS reageert op droneactiviteit op Britse vliegbasis",
+    "shrnuti": "De Amerikaanse luchtmacht is gisteravond in actie gekomen na meldingen over vermoedelijke ongeoorloofde droneactiviteit op de Britse luchtmachtbasis RAF Lakenheath in het oosten van Engeland. Of er drones zijn waargenomen is onbekend. Volgens de Amerikanen zijn in ieder geval geen militairen, vliegt",
+    "duvod": "bez-skutku",
+    "kategorie": [
+      "drony"
+    ],
+    "posouzeni": null
+  },
+  {
+    "id": "k-b3e56f40a892ac01",
+    "zachyceno": "2026-11-14T03:02:41.716Z",
+    "publikovano": "2026-11-14T00:38:47.000Z",
+    "zdroj": {
+      "nazev": "Tagesschau (Německo)",
+      "url": "https://www.tagesschau.de/tagesschau_in_100_sekunden/video-1683586.html",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "tagesschau in 100 Sekunden",
+    "shrnuti": "tagesschau in 100 Sekunden",
+    "duvod": "bez-skutku",
+    "kategorie": [],
+    "posouzeni": null
+  },
+  {
+    "id": "k-6363e02beff7e702",
+    "zachyceno": "2026-11-14T03:02:42.656Z",
+    "publikovano": "2026-11-14T00:35:34.000Z",
+    "zdroj": {
+      "nazev": "Le Monde (Francie)",
+      "url": "https://www.lemonde.fr/international/article/2026/11/14/un-navire-citerne-percute-un-bateau-de-croisiere-a-la-nouvelle-orleans-aucun-blesse-grave_6809455_3210.html",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Un navire-citerne percute un bateau de croisière à La Nouvelle-Orléans, aucun blessé grave",
+    "shrnuti": "Douze personnes ont été sorties de l’eau et 32 personnes ont été transportées à l’hôpital. La collision a eu lieu alors que le bateau de la compagnie American Cruise Lines était amarré à quai, sur le Mississippi, avec ses passagers à bord.",
+    "duvod": "bez-skutku",
+    "kategorie": [],
+    "posouzeni": null
+  },
+  {
+    "id": "k-52a07086359b0457",
+    "zachyceno": "2026-11-14T03:02:42.018Z",
+    "publikovano": "2026-11-14T00:29:00.000Z",
+    "zdroj": {
+      "nazev": "Rzeczpospolita (Polsko)",
+      "url": "https://turystyka.rp.pl/lotniska/art45487881-wszystkie-starty-samolotow-w-stanach-zjednoczonych-wstrzymane-awaria-systemu-lacznosci",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Wszystkie starty samolotów w Stanach Zjednoczonych wstrzymane. Awaria systemu łączności",
+    "shrnuti": "Federalna Administracja Lotnictwa (FAA) wstrzymała w piątek starty samolotów na lotniskach w całym kraju z powodu problemów technicznych systemów kontroli lotu - poinformował minister transportu Sean Duffy. To trzecia taka decyzja w historii.",
+    "duvod": "bez-skutku",
+    "kategorie": [],
+    "posouzeni": null
+  },
+  {
+    "id": "k-25f73311047d4881",
+    "zachyceno": "2026-11-14T03:02:40.906Z",
+    "publikovano": "2026-11-14T00:28:39.000Z",
+    "zdroj": {
+      "nazev": "Presseportal — zprávy policie (Blaulicht)",
+      "url": "https://www.presseportal.de/blaulicht/pm/110971/6390404",
+      "typ": "wire",
+      "primarni": false
+    },
+    "titulek": "POL-HN: Verkehrsunfall bei Leingarten (B 293). 35-Jähriger schwer verletzt.",
+    "shrnuti": "Landkreis Heilbronn/Leingarten (ots) - Am Freitagabend, gegen 22.30 Uhr bog ein OPEL Astra von der Liebigstraße auf die Bundesstraße Richtung Heilbronn ab und missachtet die Vorfahrt eines aus Richtung Heilbronn kommenden Transporters Peugeot ...",
+    "duvod": "bez-skutku",
+    "kategorie": [],
+    "posouzeni": null
+  },
+  {
+    "id": "k-d1a39fc4d2123db3",
+    "zachyceno": "2026-11-14T03:02:43.417Z",
+    "publikovano": "2026-11-14T00:22:26.000Z",
+    "zdroj": {
+      "nazev": "Meduza (anglicky)",
+      "url": "https://meduza.io/en/news/2026/11/14/russian-mma-fighter-usman-nurmagomedov-gets-six-months-in-a-uae-prison-over-hotel-brawl-with-former-ufc-champion-merab-dvalishvili",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Russian MMA fighter Usman Nurmagomedov gets six months in a UAE prison over hotel brawl with former UFC champion Merab Dvalishvili",
+    "shrnuti": "Russian mixed martial arts fighter Usman Nurmagomedov has been sentenced to six months in jail in the United Arab Emirates over a fight with Georgian fighter Merab Dvalishvili, a source told TASS.",
+    "duvod": "bez-skutku",
+    "kategorie": [
+      "rusko"
+    ],
+    "posouzeni": null
+  },
+  {
+    "id": "k-54c49871884fa934",
+    "zachyceno": "2026-11-14T03:02:43.372Z",
+    "publikovano": "2026-11-14T00:22:00.000Z",
+    "zdroj": {
+      "nazev": "Ukrinform (anglicky)",
+      "url": "https://www.ukrinform.net/rubric-ato/4184233-national-guard-drones-hit-over-316000-enemy-targets-since-russias-fullscale-invasion-pivnenko.html",
+      "typ": "wire",
+      "primarni": false
+    },
+    "titulek": "National Guard drones hit over 316,000 enemy targets since Russia’s full-scale invasion – Pivnenko",
+    "shrnuti": "Since the start of Russia’s full-scale invasion, Ukrainian National Guard unmanned systems crews have hit more than 316,000 enemy targets, nearly 150,000 of which have been destroyed.",
+    "duvod": "bez-skutku",
+    "kategorie": [
+      "drony",
+      "rusko"
+    ],
+    "posouzeni": null
+  },
+  {
+    "id": "k-6cefc102b3f0bcff",
+    "zachyceno": "2026-11-14T03:02:42.655Z",
+    "publikovano": "2026-11-14T00:21:48.000Z",
+    "zdroj": {
+      "nazev": "Le Monde (Francie)",
+      "url": "https://www.lemonde.fr/sport/article/2026/11/14/apres-la-finlande-et-la-norvege-la-suede-veut-a-son-tour-empecher-les-athletes-russes-de-concourir-sur-son-sol_6809422_3242.html",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Après la Finlande et la Norvège, la Suède veut à son tour empêcher les athlètes russes de concourir sur son sol",
+    "shrnuti": "Stockholm souhaite présenter prochainement une « solution consistant à refuser l’entrée de son territoire aux athlètes russes », a annoncé le ministre des affaires sociales et de la santé publique, Jakob Forssmed. La mesure devrait être effective avant les championnats du monde de ski nordique, en f",
+    "duvod": "bez-skutku",
+    "kategorie": [],
+    "posouzeni": null
+  },
+  {
+    "id": "k-dfd4da9e8bb9a940",
+    "zachyceno": "2026-11-14T03:02:40.907Z",
+    "publikovano": "2026-11-14T00:21:00.000Z",
+    "zdroj": {
+      "nazev": "Presseportal — zprávy policie (Blaulicht)",
+      "url": "https://www.presseportal.de/blaulicht/pm/57621/6390403",
+      "typ": "wire",
+      "primarni": false
+    },
+    "titulek": "POL-HI: Schwerer Verkehrsunfall auf der BAB 7 bei Bockenem",
+    "shrnuti": "Hildesheim (ots) - Bockenem / BAB 7 (vol) - Am 13.11.2026, um 20:18 Uhr, befuhren ein 35-Jähriger aus Northeim und sein 67-jähriger Mitfahrer mit einem VW Golf die BAB 7 in Fahrtrichtung Kassel. Nach bisherigem Ermittlungsstand, schien der ...",
+    "duvod": "bez-skutku",
+    "kategorie": [],
+    "posouzeni": null
+  },
+  {
+    "id": "k-ffc22d648c817875",
+    "zachyceno": "2026-11-14T03:02:43.418Z",
+    "publikovano": "2026-11-14T00:14:37.000Z",
+    "zdroj": {
+      "nazev": "Meduza (anglicky)",
+      "url": "https://meduza.io/en/news/2026/11/14/russia-moves-to-monitor-peer-to-peer-bank-transfers-for-undeclared-income",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Russia moves to monitor peer-to-peer bank transfers for undeclared income",
+    "shrnuti": "Russia’s Finance Ministry has proposed requiring the Central Bank to give the Federal Tax Service information about individuals “whose account transactions show signs that they regularly receive income from other individuals.”",
+    "duvod": "bez-skutku",
+    "kategorie": [
+      "rusko"
+    ],
+    "posouzeni": null
+  },
+  {
+    "id": "k-55c0846aa920818e",
+    "zachyceno": "2026-11-14T03:02:42.910Z",
+    "publikovano": "2026-11-14T00:13:11.000Z",
+    "zdroj": {
+      "nazev": "El Mundo (Španělsko)",
+      "url": "https://www.elmundo.es/internacional/2026/11/14/6af4461ce85ece4e6f8b45b4.html",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "El juego de alcobas y las trampas de miel de los espías de Xi Jinping",
+    "shrnuti": "El servicio secreto de Pekín, sospechoso de reclutar a la amante del fundador de Nvidia, ha tejido una red mundial de informantes para robar secretos políticos, militares y tecnológicos Leer",
+    "duvod": "bez-skutku",
+    "kategorie": [],
+    "posouzeni": null
+  },
+  {
+    "id": "k-0a4ee1e00334d060",
+    "zachyceno": "2026-11-14T03:02:43.420Z",
+    "publikovano": "2026-11-14T00:11:36.000Z",
+    "zdroj": {
+      "nazev": "Meduza (anglicky)",
+      "url": "https://meduza.io/en/news/2026/11/14/russia-demands-finland-leave-nato-bild-reports-moscow-denies-it-and-helsinki-is-outraged",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Russia demands Finland leave NATO, Bild reports. Moscow denies it, and Helsinki is outraged.",
+    "shrnuti": "The German tabloid Bild reported on November 13 that Russia had demanded Finland’s withdrawal from NATO as part of peace talks on Ukraine. The outlet said Russian representatives put forward the demand at unspecified informal talks on ending the war.",
+    "duvod": "bez-skutku",
+    "kategorie": [
+      "nato",
+      "rusko"
+    ],
+    "posouzeni": null
+  },
+  {
+    "id": "k-a05d32aa67b8030d",
+    "zachyceno": "2026-11-14T03:02:42.900Z",
+    "publikovano": "2026-11-14T00:11:05.000Z",
+    "zdroj": {
+      "nazev": "El Mundo (Španělsko)",
+      "url": "https://www.elmundo.es/elecciones/elecciones-generales/2026/11/14/6af72340e4d4d8ce338b459d.html",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Vox también se quiere parecer al PP: modera sus metas en aborto, eutanasia, autonomías y LGTBI",
+    "shrnuti": "Arranca la campaña en Colón agitando una \"bandera unitaria\" y con Abascal arropado por una decena de líderes internacionales: Meloni, Le Pen, Orban, Milei, Bolsonaro... Leer",
+    "duvod": "bez-skutku",
+    "kategorie": [],
+    "posouzeni": null
+  },
+  {
+    "id": "k-bab0fb7a0441e079",
+    "zachyceno": "2026-11-14T03:02:42.899Z",
+    "publikovano": "2026-11-14T00:11:03.000Z",
+    "zdroj": {
+      "nazev": "El Mundo (Španělsko)",
+      "url": "https://www.elmundo.es/espana/2026/11/14/6af75bf0fc6c837f278b4595.html",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Últimos fusibles de Sánchez",
+    "shrnuti": "Que España haya dejado de funcionar es el legado del primer presidente que completa una legislatura sin presupuestos Leer",
+    "duvod": "bez-skutku",
+    "kategorie": [],
+    "posouzeni": null
+  },
+  {
+    "id": "k-886e020175991430",
+    "zachyceno": "2026-11-14T03:02:42.908Z",
+    "publikovano": "2026-11-14T00:04:49.000Z",
+    "zdroj": {
+      "nazev": "El Mundo (Španělsko)",
+      "url": "https://www.elmundo.es/economia/2026/11/14/6af756e321efa0c94b8b458f.html",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Cuerpo entierra la herencia de Puente en Renfe y Adif: así son los nuevos responsables de perfil técnico a los que ha encomendado apaciguar el malestar interno",
+    "shrnuti": "Los sindicatos aplauden los avances, pero mantienen las protesas: este sábado se manifiestan en Madrid y hay dos huelgas convocadas para los días 17 y 23 Leer",
+    "duvod": "bez-skutku",
+    "kategorie": [],
+    "posouzeni": null
+  },
+  {
+    "id": "k-5d4c1740be7afa0b",
+    "zachyceno": "2026-11-14T03:02:42.907Z",
+    "publikovano": "2026-11-14T00:04:48.000Z",
+    "zdroj": {
+      "nazev": "El Mundo (Španělsko)",
+      "url": "https://www.elmundo.es/economia/empresas/2026/11/14/6af76498fdddffc5458b4575.html",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "En busca del chivo: tensión en la administración Trump por la crisis de Nvidia y la exportación de chips",
+    "shrnuti": "Jensen Huang criticó este verano a su sustituta por las dudas por la estrategia de financiación circular de la IA: \"es como un ciervo deslumbrado\" Leer",
+    "duvod": "bez-skutku",
+    "kategorie": [],
+    "posouzeni": null
+  },
+  {
+    "id": "k-eb0a4884c4ccb556",
+    "zachyceno": "2026-11-14T03:02:42.906Z",
+    "publikovano": "2026-11-14T00:04:47.000Z",
+    "zdroj": {
+      "nazev": "El Mundo (Španělsko)",
+      "url": "https://www.elmundo.es/elecciones/elecciones-generales/2026/11/14/6af75cd0fc6c830f298b45a9.html",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Emilio Delgado: \"Debemos volver a ser un paraguas para cuando caen chuzos de punta\"",
+    "shrnuti": "El 'número uno' de Frente Amplio por Madrid asegura que el PSOE no va a ser \"suficiente\" por sí solo para revalidar el Gobierno y que la \"única garantía\" contra la derecha es que Ada Colau tengan \"fuerza\" Leer",
+    "duvod": "bez-skutku",
+    "kategorie": [],
+    "posouzeni": null
+  },
+  {
+    "id": "k-f6bfe05c505f18ca",
+    "zachyceno": "2026-11-14T03:02:43.420Z",
+    "publikovano": "2026-11-14T00:03:10.000Z",
+    "zdroj": {
+      "nazev": "Meduza (anglicky)",
+      "url": "https://meduza.io/en/feature/2026/11/14/russia-adopts-state-standard-for-traditional-russian-cuisine-including-little-russian-borscht-chicken-kiev-and-okroshka-made-with-kvass-not-kefir",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Russia adopts state standard for ‘traditional Russian cuisine,’ including ‘Little Russian’ borscht, Chicken Kiev, and okroshka made with kvass, not kefir",
+    "shrnuti": "Rosstandart, Russia’s federal standards agency, has approved a state standard (GOST) titled “Traditional Russian cuisine: Recommendations for preparing dishes” (registered users can view it here). The document includes recipes, preparation methods, and serving suggestions for 132 dishes.",
+    "duvod": "vylouceno-tematem",
+    "kategorie": [
+      "rusko"
+    ],
+    "posouzeni": null
+  },
+  {
     "id": "k-bb9f8736a03fd633",
     "zachyceno": "2026-11-14T00:02:59.153Z",
     "publikovano": "2026-11-14T00:01:00.000Z",
@@ -11,6 +596,154 @@
     },
     "titulek": "Katso podcast | Kumpi teistä kaksosista on romantikko?",
     "shrnuti": "Katso, miten Joonas ja Niklas Nyholm puhuvat Tyypittelemättä-podcastissa roolipeleistä ja filosofiasta.",
+    "duvod": "bez-skutku",
+    "kategorie": [],
+    "posouzeni": null
+  },
+  {
+    "id": "k-3c27c7b80fb7a80d",
+    "zachyceno": "2026-11-14T03:02:42.808Z",
+    "publikovano": "2026-11-14T00:00:00.000Z",
+    "zdroj": {
+      "nazev": "la Repubblica (Itálie)",
+      "url": "https://www.repubblica.it/cronaca/2026/11/14/news/non_c_e_posta_per_te_un_giorno_di_ordinaria_follia_traditi_dalla_chiocciola-425722411/",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "“Non c’è posta per te” un giorno di ordinaria follia traditi dalla chiocciola",
+    "shrnuti": "Dal primo messaggio inviato nel 1971 al corto circuito di ieri. Una lunga storia che ha cambiato lavoro e relazioni",
+    "duvod": "bez-skutku",
+    "kategorie": [],
+    "posouzeni": null
+  },
+  {
+    "id": "k-d1dad4fda3e153ab",
+    "zachyceno": "2026-11-14T03:02:42.809Z",
+    "publikovano": "2026-11-14T00:00:00.000Z",
+    "zdroj": {
+      "nazev": "la Repubblica (Itálie)",
+      "url": "https://www.repubblica.it/cronaca/2026/11/14/news/microsoft_va_in_panne_messaggi_bloccati_per_ore_ma_non_e_stato_un_raid-425722397/",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Microsoft va in panne messaggi bloccati per ore. Ma non è stato un raid",
+    "shrnuti": "Un guasto ha bloccato l’azienda: “Ma non è stato un attacco hacker” Pioggia di meme in Rete, 74 i Paesi coinvolti, il titolo giù in Borsa Pioggia di meme in Rete. E c’è chi, in emergenza, è tornato al fax",
+    "duvod": "bez-skutku",
+    "kategorie": [],
+    "posouzeni": null
+  },
+  {
+    "id": "k-05396b702103a4e2",
+    "zachyceno": "2026-11-14T03:02:42.810Z",
+    "publikovano": "2026-11-14T00:00:00.000Z",
+    "zdroj": {
+      "nazev": "la Repubblica (Itálie)",
+      "url": "https://www.repubblica.it/cronaca/2026/11/14/news/giuseppe_attardi_dai_nostri_server_ai_colossi_usa_cosi_siamo_diventati_dipendenti-425721754/",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Giuseppe Attardi: “Dai nostri server ai colossi Usa, così siamo diventati dipendenti”",
+    "shrnuti": "Ex docente di Informatica alla Università di Pisa, è un grande esperto di IA: “Ci siamo affidati interamente al cloud americano. E adesso abbiamo scoperto quali sono le conseguenze”",
+    "duvod": "bez-skutku",
+    "kategorie": [],
+    "posouzeni": null
+  },
+  {
+    "id": "k-3121477f2d507030",
+    "zachyceno": "2026-11-14T03:02:42.812Z",
+    "publikovano": "2026-11-14T00:00:00.000Z",
+    "zdroj": {
+      "nazev": "la Repubblica (Itálie)",
+      "url": "https://www.repubblica.it/esteri/2026/11/14/news/russia_ucraina_europa_trova_intesa_tavolo_negoziati_allarga_italia_polonia_confermato_format_abu_dhabi-425722277/",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Russia, l’Europa trova l’intesa: il tavolo dei negoziati si allarga a Italia e Polonia",
+    "shrnuti": "Confermato il format usato ad Abu Dhabi con due sedie in più. Salta per ora l’ipotesi del portavoce unico. Ma il Cremlino mantiene l’ambiguità",
+    "duvod": "bez-skutku",
+    "kategorie": [
+      "rusko"
+    ],
+    "posouzeni": null
+  },
+  {
+    "id": "k-e8bcdf45025c38be",
+    "zachyceno": "2026-11-14T03:02:42.813Z",
+    "publikovano": "2026-11-14T00:00:00.000Z",
+    "zdroj": {
+      "nazev": "la Repubblica (Itálie)",
+      "url": "https://www.repubblica.it/esteri/2026/11/14/news/ucraina_allargamento_delegazione_ue_negoziati_palazzo_chigi_canta_vittoria_decisivo_ruolo_usa-425722233/",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Ucraina, sull’allargamento della delegazione Ue Palazzo Chigi canta vittoria. Decisivo il ruolo Usa",
+    "shrnuti": "Dietro c’è il desiderio di Trump di avere al tavolo negoziale un interlocutore affidabile",
+    "duvod": "bez-skutku",
+    "kategorie": [],
+    "posouzeni": null
+  },
+  {
+    "id": "k-efcd413020528a9d",
+    "zachyceno": "2026-11-14T03:02:42.814Z",
+    "publikovano": "2026-11-14T00:00:00.000Z",
+    "zdroj": {
+      "nazev": "la Repubblica (Itálie)",
+      "url": "https://www.repubblica.it/esteri/2026/11/14/news/pace_ucraina_firma_g20_miami_trump-425722223/",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Trump tenta il blitz, vuole la pace in Ucraina già al G20 di Miam",
+    "shrnuti": "Donald spinge l’Unione ad accelerare l’accordo. I media: “Mosca vuole la Finlandia fuori dalla Nato e la Moldavia divisa in tre”",
+    "duvod": "bez-skutku",
+    "kategorie": [
+      "nato"
+    ],
+    "posouzeni": null
+  },
+  {
+    "id": "k-9406c0aed59b874a",
+    "zachyceno": "2026-11-14T03:02:42.815Z",
+    "publikovano": "2026-11-14T00:00:00.000Z",
+    "zdroj": {
+      "nazev": "la Repubblica (Itálie)",
+      "url": "https://www.repubblica.it/economia/2026/11/14/news/intervista_trichet_inflazione_bce-425722103/",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Trichet: “Soltanto la pace con l’Iran può spegnere l’inflazione, la Bce sta reagendo bene”",
+    "shrnuti": "L’ex presidente della Banca centrale europea considera fondamentale la trattativa con Teheran per riportare stabilità. Le dimissioni di Lagarde: “La posta in gioco in Francia è altissima”",
+    "duvod": "bez-skutku",
+    "kategorie": [],
+    "posouzeni": null
+  },
+  {
+    "id": "k-3fe8a8172a0b6a08",
+    "zachyceno": "2026-11-14T03:02:42.816Z",
+    "publikovano": "2026-11-14T00:00:00.000Z",
+    "zdroj": {
+      "nazev": "la Repubblica (Itálie)",
+      "url": "https://www.repubblica.it/esteri/2026/11/14/news/nvidia_accuse_ministro_howard_lutnick-425722273/",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Usa, l’affaire Nvidia si allarga: accuse al ministro Lutnick",
+    "shrnuti": "Il segretario al Commercio sotto attacco per non aver messo nella black list Megaspeed. Anche Bessent lo scarica. Huang travolto dagli scandali: “Sono un pezzo di m...”",
+    "duvod": "bez-skutku",
+    "kategorie": [],
+    "posouzeni": null
+  },
+  {
+    "id": "k-bf80ad379816b03d",
+    "zachyceno": "2026-11-14T03:02:42.818Z",
+    "publikovano": "2026-11-14T00:00:00.000Z",
+    "zdroj": {
+      "nazev": "la Repubblica (Itálie)",
+      "url": "https://www.repubblica.it/cronaca/2026/11/14/news/paolo_mendico_suicidio_bullismo_papa_santi_cosma_e_damiano-425722163/",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "“Morto come il nostro Paolo. Ai genitori dico siate forti, ai prof imparate ad ascoltare”",
+    "shrnuti": "Parla Giuseppe Mendico, il figlio si è tolto la vita nel settembre dell’anno scorso. I bulli lo perseguitavano per il suo taglio di capelli",
     "duvod": "bez-skutku",
     "kategorie": [],
     "posouzeni": null
@@ -500,6 +1233,22 @@
     "posouzeni": null
   },
   {
+    "id": "k-bc690e0ba00e099c",
+    "zachyceno": "2026-11-14T03:02:42.820Z",
+    "publikovano": "2026-11-13T23:07:27.000Z",
+    "zdroj": {
+      "nazev": "la Repubblica (Itálie)",
+      "url": "https://roma.repubblica.it/cronaca/2026/11/14/news/maicol_suicidio_15_anni_cambio_sesso_bullismo_indagine-425722470/",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Maicol suicida a 15 anni, si rafforza la pista dei bulli: presto sentiti i compagni",
+    "shrnuti": "Il ragazzo voleva affrontare un percorso di transizione di genere ed era seguito dall’Asl. L’ultimo post alle amiche. Al vaglio il telefono",
+    "duvod": "bez-skutku",
+    "kategorie": [],
+    "posouzeni": null
+  },
+  {
     "id": "k-d26ee8e56b2a2da9",
     "zachyceno": "2026-11-13T23:49:33.718Z",
     "publikovano": "2026-11-13T23:05:00.000Z",
@@ -559,6 +1308,38 @@
     },
     "titulek": "Nationwide FAA ground stop: nearly 11,000 flights delayed or canceled at airports across the US",
     "shrnuti": "Transportation secretary said stoppage is due to ‘communication issue’ and homeland security says there’s no indication of ‘nefarious attack’ Flights grounded at all US airports due to communications outage – live The Federal Aviation Administration (FAA) has issued a nationwide ground stop for all ",
+    "duvod": "bez-skutku",
+    "kategorie": [],
+    "posouzeni": null
+  },
+  {
+    "id": "k-c1cfc699214c0167",
+    "zachyceno": "2026-11-14T03:02:42.822Z",
+    "publikovano": "2026-11-13T23:01:00.000Z",
+    "zdroj": {
+      "nazev": "la Repubblica (Itálie)",
+      "url": "https://www.repubblica.it/commenti/2026/11/14/news/banche_scuole_ia_cybersicurezza_trascurata_giannini-425722142/",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Un potere da controllare",
+    "shrnuti": "Gli Stati, i governi, i Parlamenti e dunque anche i popoli sono in balia di forze che li trascendono e ne prescindono",
+    "duvod": "bez-skutku",
+    "kategorie": [],
+    "posouzeni": null
+  },
+  {
+    "id": "k-90ce2de7d36379c7",
+    "zachyceno": "2026-11-14T03:02:42.823Z",
+    "publikovano": "2026-11-13T23:01:00.000Z",
+    "zdroj": {
+      "nazev": "la Repubblica (Itálie)",
+      "url": "https://www.repubblica.it/cultura/2026/11/14/news/walter_siti_intervista_malcom_pagani-425722149/",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Walter Siti: “Sono un bugiardo. Omosessuale io? Preferisco dire frocio”",
+    "shrnuti": "Ha insegnato, rischiato e giocato senza mai nascondere le sue ossessioni. Il più inclassificabile degli scrittori italiani si racconta",
     "duvod": "bez-skutku",
     "kategorie": [],
     "posouzeni": null
@@ -1205,6 +1986,22 @@
     "posouzeni": null
   },
   {
+    "id": "k-35b72f20111890ea",
+    "zachyceno": "2026-11-14T03:02:42.659Z",
+    "publikovano": "2026-11-13T21:51:13.000Z",
+    "zdroj": {
+      "nazev": "Le Monde (Francie)",
+      "url": "https://www.lemonde.fr/international/article/2026/11/13/le-burkina-faso-annonce-lancer-des-mandats-d-arret-contre-des-journalistes-et-des-activistes-en-exil-pour-des-faits-de-terrorisme_6809388_3210.html",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Le Burkina Faso annonce lancer des mandats d’arrêt contre des journalistes et des activistes en exil pour des faits de « terrorisme »",
+    "shrnuti": "Les autorités de la junte d’Afrique de l’Ouest ciblent une vingtaine de personnes, et demandent leur extradition. Un chroniqueur burkinabé de RFI et des anciens ministres de l’ex-président Blaise Compaoré sont notamment visés.",
+    "duvod": "bez-skutku",
+    "kategorie": [],
+    "posouzeni": null
+  },
+  {
     "id": "k-aa51663edba56c8b",
     "zachyceno": "2026-11-13T23:49:34.365Z",
     "publikovano": "2026-11-13T21:49:04.000Z",
@@ -1264,6 +2061,72 @@
     },
     "titulek": "Šebestyán odvolal Radu Vinařského fondu. Podle nejvyšších kontrolorů opakovaně porušovala předpisy",
     "shrnuti": "Má podporovat české vinaře a propagovat jejich vína. Jenže Nejvyšší kontrolní úřad (NKÚ) nedávno odhalil ve fungování Vinařského fondu hned několik pochybení. Ministr zemědělství Martin Šebestyán za SPD proto odvolal všech jedenáct členů jeho rady. Mezi nimi i jihomoravského hejtmana a šéfa lidovců ",
+    "duvod": "bez-skutku",
+    "kategorie": [],
+    "posouzeni": null
+  },
+  {
+    "id": "k-b8fac9156db86c69",
+    "zachyceno": "2026-11-14T03:02:42.897Z",
+    "publikovano": "2026-11-13T21:43:55.000Z",
+    "zdroj": {
+      "nazev": "El Mundo (Španělsko)",
+      "url": "https://www.elmundo.es/elecciones/elecciones-generales/2026/11/13/6af7793ffdddffc5748b45ba.html",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Sánchez favoreció la reactivación de la trama corrupta en el PSOE",
+    "shrnuti": "Su cita de 35 minutos en 2023 con el detenido Corvillo apunta al presidente del Gobierno, cada vez más vinculado a los manejos del grupo Leer",
+    "duvod": "bez-skutku",
+    "kategorie": [
+      "zpravodajske"
+    ],
+    "posouzeni": null
+  },
+  {
+    "id": "k-88f0af10a916b46b",
+    "zachyceno": "2026-11-14T03:02:42.901Z",
+    "publikovano": "2026-11-13T21:43:48.000Z",
+    "zdroj": {
+      "nazev": "El Mundo (Španělsko)",
+      "url": "https://www.elmundo.es/elecciones/elecciones-generales/2026/11/13/6af7462ffdddff31748b456e.html",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "El Pedro Sánchez que votará a Feijóo: \"Estos socialistas no son de fiar\"",
+    "shrnuti": "No lleva mal la coincidencia de su nombre con el del líder socialista, aunque ideológicamente está en las antípodas. Si se va de vacaciones deja un cartel en el bar que regenta: \"Cerrado del 17 al 30 para pensar; también me llamo Pedro Sánchez\" Leer",
+    "duvod": "bez-skutku",
+    "kategorie": [],
+    "posouzeni": null
+  },
+  {
+    "id": "k-74a48ecb0de11bf8",
+    "zachyceno": "2026-11-14T03:02:42.902Z",
+    "publikovano": "2026-11-13T21:43:37.000Z",
+    "zdroj": {
+      "nazev": "El Mundo (Španělsko)",
+      "url": "https://www.elmundo.es/elecciones/elecciones-generales/2026/11/13/6af746efe9cf4a53428b459a.html",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "El otro Alberto Feijóo no sabe a quién votar: \"Lo decidiré a última hora\"",
+    "shrnuti": "Lo encontramos buscando su nombre al azar en redes sociales y resulta que, aunque no conoce al líder del PP, sus abuelos eran hermanos y ellos, por tanto, primos segundos Leer",
+    "duvod": "bez-skutku",
+    "kategorie": [],
+    "posouzeni": null
+  },
+  {
+    "id": "k-e0581600a7f5f45b",
+    "zachyceno": "2026-11-14T03:02:42.904Z",
+    "publikovano": "2026-11-13T21:43:03.000Z",
+    "zdroj": {
+      "nazev": "El Mundo (Španělsko)",
+      "url": "https://www.elmundo.es/economia/2026/11/13/6af7302721efa0dc708b4598.html",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "El puesto europeo de mayor poder en la historia de España: la semana clave para que Hernández de Cos sea presidente del BCE",
+    "shrnuti": "El próximo miércoles es el día límite para presentar todas las candidaturas a la cúpula del organismo, y tras eso se desencadenará el proceso de renovación. El sello final se pondrá en la cumbre de finales de mes, pero la decisión se tomará antes Leer",
     "duvod": "bez-skutku",
     "kategorie": [],
     "posouzeni": null
@@ -2572,6 +3435,24 @@
     "shrnuti": "In de haven van New Orleans, in de staat Louisiana, is een tanker op een riviercruiseschip op de Mississippi gevaren. Het cruiseschip van de rederij American Cruise Lines had 129 passagiers aan boord en is gekapseisd, blijkt uit beelden op sociale media. Daarop is ook te zien hoe mensen uit het wate",
     "duvod": "bez-skutku",
     "kategorie": [],
+    "posouzeni": null
+  },
+  {
+    "id": "k-31b8a37aec78e16c",
+    "zachyceno": "2026-11-14T03:02:42.661Z",
+    "publikovano": "2026-11-13T20:47:11.000Z",
+    "zdroj": {
+      "nazev": "Le Monde (Francie)",
+      "url": "https://www.lemonde.fr/politique/article/2026/11/13/prime-de-risque-laurent-nunez-propose-une-revalorisation-jugee-insuffisante-voire-inadmissible-par-les-syndicats_6809385_823448.html",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Prime de risque : Laurent Nuñez propose une revalorisation jugée « insuffisante » voire « inadmissible » par les syndicats",
+    "shrnuti": "Un plan de revalorisation de la prime ISSP, qui n’avait pas évolué depuis 2019, a été présenté par le ministre de l’intérieur aux organisations représentatives, vendredi, « compte tenu des risques inouïs auxquels sont exposés actuellement les policiers et les gendarmes ».",
+    "duvod": "bez-skutku",
+    "kategorie": [
+      "vojsko"
+    ],
     "posouzeni": null
   },
   {
@@ -7277,869 +8158,6 @@
     },
     "titulek": "A magyar divat nagyasszonya, aki túlélte a történelem viharait, majd tragikus fordulattal vetett véget a pályafutásának",
     "shrnuti": "Hogyan építette fel saját divatbirodalmát Rotschild Klára, akinek a szalonjában Kádár Jánosné, Tito felesége és ünnepelt művészek is megfordultak? Miként lett rendszereken át az elit kedvenc divattervezője, és mi magyarázza kivételezett helyzetét, miközben még párttag sem volt? Halálának 50. évfordu",
-    "duvod": "bez-skutku",
-    "kategorie": [],
-    "posouzeni": null
-  },
-  {
-    "id": "k-84dc7ffd1978dab3",
-    "zachyceno": "2026-11-13T18:03:27.347Z",
-    "publikovano": "2026-11-13T17:43:26.000Z",
-    "zdroj": {
-      "nazev": "The Guardian — World",
-      "url": "https://www.theguardian.com/society/2026/nov/13/no-10-considering-expanding-under-25s-benefits-overhaul-to-older-age-groups",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "No 10 considering expanding under-25s benefits overhaul to older age groups",
-    "shrnuti": "Exclusive: Plans to replace key disability benefits for young people with work and training could affect adults Downing Street is considering whether plans to replace key disability benefits for the under-25s with work and training should be expanded to older age groups, the Guardian has learned, in",
-    "duvod": "bez-skutku",
-    "kategorie": [],
-    "posouzeni": null
-  },
-  {
-    "id": "k-784fa24f30b886cf",
-    "zachyceno": "2026-11-13T18:03:29.114Z",
-    "publikovano": "2026-11-13T17:43:03.000Z",
-    "zdroj": {
-      "nazev": "NOS Nieuws (Nizozemsko)",
-      "url": "https://nos.nl/l/2639356",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Nederlandse influencer opgepakt door Amerikaanse immigratiedienst ICE",
-    "shrnuti": "De Nederlandse influencer Vera Dijkmans is opgepakt door de Amerikaanse immigratiedienst ICE, meldt RTL Nieuws . Ze is woensdagavond aangehouden nadat ze was geland op het Newark-vliegveld in New Jersey. Dijkmans was naar de Verenigde Staten afgereisd, omdat ze zou zijn uitgenodigd voor een sporteve",
-    "duvod": "bez-skutku",
-    "kategorie": [],
-    "posouzeni": null
-  },
-  {
-    "id": "k-5c08c60ac8e266d2",
-    "zachyceno": "2026-11-13T18:31:54.846Z",
-    "publikovano": "2026-11-13T17:43:00.000Z",
-    "zdroj": {
-      "nazev": "Ukrainska Pravda (anglicky)",
-      "url": "https://www.pravda.com.ua/eng/news/2026/11/13/8062795/",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "European representatives for Ukraine peace talks revealed",
-    "shrnuti": "EU leaders have agreed that Germany, France, the UK, Italy, Poland and EU institutions will represent Europe in negotiations to end Russia's war in Ukraine.",
-    "duvod": "bez-skutku",
-    "kategorie": [
-      "rusko"
-    ],
-    "posouzeni": null
-  },
-  {
-    "id": "k-686f5f11f69360b5",
-    "zachyceno": "2026-11-13T18:03:29.705Z",
-    "publikovano": "2026-11-13T17:42:53.000Z",
-    "zdroj": {
-      "nazev": "Digi24 (Rumunsko)",
-      "url": "https://www.digi24.ro/stiri/actualitate/politica/bolojan-ataca-psd-dupa-datele-economice-ale-ins-sunt-infirmate-scenariile-apocaliptice-sper-sa-nu-si-bata-joc-de-mostenirea-primita-4035715",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Bolojan atacă PSD după datele economice ale INS: Sunt infirmate scenariile apocaliptice, sper să nu-și bată joc de moștenirea primită",
-    "shrnuti": "Preşedintele PNL, fostul premier Ilie Bolojan a reacționat, vineri, după prezentarea de către Institutul Naţional de Statistică a datelor economice, el precizând că sunt infirmate toate scenariile apocaliptice despre prăbuşirea economiei şi despre ratarea ajustării fiscal-bugetare. El a acuzat PSD c",
-    "duvod": "bez-skutku",
-    "kategorie": [],
-    "posouzeni": null
-  },
-  {
-    "id": "k-3ecf402f47e64af9",
-    "zachyceno": "2026-11-13T18:03:26.391Z",
-    "publikovano": "2026-11-13T17:42:00.000Z",
-    "zdroj": {
-      "nazev": "Český rozhlas — domácí zprávy",
-      "url": "https://www.irozhlas.cz/ekonomika/dan-pro-rafinerie-miri-ke-schvalovani-opozice-navrhla-desitky-zmen-jde-o-lex_2611131842_jor",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Daň pro rafinerie míří ke schvalování, opozice navrhla desítky změn. ‚Jde o lex Orlen,‘ zní z ODS",
-    "shrnuti": "Vládní návrh na zavedení mimořádné daně pro rafinerie míří po pátečním jednání ve Sněmovně k závěrečnému schvalování. Mohlo by se odehrát na nejbližší řádné schůzi, která začne v úterý 24. listopadu. Opozice se přihlásila ke třem desítkám pozměňovacích návrhů, z nichž některé s rafinérskou daní neso",
-    "duvod": "vylouceno-tematem",
-    "kategorie": [],
-    "posouzeni": null
-  },
-  {
-    "id": "k-ae1739eb4cdf3f7c",
-    "zachyceno": "2026-11-13T18:03:26.502Z",
-    "publikovano": "2026-11-13T17:40:35.000Z",
-    "zdroj": {
-      "nazev": "Novinky.cz",
-      "url": "https://www.novinky.cz/clanek/domaci-krajni-levice-protestuje-v-praze-proti-konferenci-krajni-pravice-40608605",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "V pražských Vysočanech to vře. Stovky lidí zablokovali hotel, kde přednášejí ultrapravicoví politici",
-    "shrnuti": "Stovky lidí se v pátek večer sešly před hotelem Step v pražských Vysočanech, kde se koná krajně pravicová konference s názvem „Co bude po EU? Migrace, nebo remigrace?“, kterou organizuje strana Svobodní. Na konferenci mají vystoupit evropští krajně pravicoví politici.",
-    "duvod": "bez-skutku",
-    "kategorie": [],
-    "posouzeni": null
-  },
-  {
-    "id": "k-020caf1c36f630d3",
-    "zachyceno": "2026-11-13T18:03:28.052Z",
-    "publikovano": "2026-11-13T17:40:35.000Z",
-    "zdroj": {
-      "nazev": "Aktuality.sk",
-      "url": "https://www.aktuality.sk/clanok/2esBDS5/europa-si-vybrala-kto-bude-hovorit-za-nu-pri-rokovaniach-o-ukrajine-v-hre-je-pat-krajin/",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Európa si vybrala, kto bude hovoriť za ňu pri rokovaniach o Ukrajine. V hre je päť krajín",
-    "shrnuti": "Na zložení európskeho tímu sa dohodli lídri členských krajín na neformálnom summite v Dubline. Európa chce mať pri rozhodovaní o budúcom usporiadaní na kontinente vlastný hlas.",
-    "duvod": "bez-skutku",
-    "kategorie": [],
-    "posouzeni": null
-  },
-  {
-    "id": "k-215f8079e8054819",
-    "zachyceno": "2026-11-13T18:03:28.541Z",
-    "publikovano": "2026-11-13T17:40:00.000Z",
-    "zdroj": {
-      "nazev": "Helsingin Sanomat (Finsko)",
-      "url": "https://www.hs.fi/urheilu/art-2000012411402.html",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Jalkapallo | Pikkuhuuhkajat johtaa Tampereen lumipyryssä, toisen jakson alku viivästyy",
-    "shrnuti": "HS seuraa Pikkuhuuhkajien EM-jatkokarsintaa hetki hetkeltä.",
-    "duvod": "bez-skutku",
-    "kategorie": [],
-    "posouzeni": null
-  },
-  {
-    "id": "k-29ad556e3401dff6",
-    "zachyceno": "2026-11-13T18:03:29.685Z",
-    "publikovano": "2026-11-13T17:39:32.000Z",
-    "zdroj": {
-      "nazev": "El Mundo (Španělsko)",
-      "url": "https://www.elmundo.es/elecciones/elecciones-generales/2026/11/13/6af726a8e4d4d8e5638b4587.html",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Sánchez y Feijóo ya tienen fecha para su cara a cara: las cinco batallas que librarán ante las cámaras",
-    "shrnuti": "La Academia de Televisión confirma que el cara a cara será el jueves 19 de noviembre, con María Casado como moderadora. La vivienda abrirá el enfrentamiento y la corrupción tendrá su propio bloque. El debate a cuatro sigue pendiente de concretarse Leer",
-    "duvod": "bez-skutku",
-    "kategorie": [],
-    "posouzeni": null
-  },
-  {
-    "id": "k-9a16702a44ffda6e",
-    "zachyceno": "2026-11-13T18:03:28.026Z",
-    "publikovano": "2026-11-13T17:39:24.000Z",
-    "zdroj": {
-      "nazev": "Denník N (Slovensko)",
-      "url": "https://dennikn.sk/5688861/filmovy-festival-inakosti-ktory-nechtiac-podporila-simkovicova-premietne-debut-z-velkeho-krtisa-aj-svetovych-adeptov-na-oscara/",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Festival inakosti, ktorý nechtiac podporila Šimkovičová, premietne debut z Veľkého Krtíša aj adeptov na Oscara",
-    "shrnuti": "Filmový festival inakosti sa počas svojho 20. ročníka nemieni nostalgicky obzerať späť, radšej chce naplno pokračovať. „Preto sme si zvolili tému mladosť, ktorá pre nás znamená energiu, otvorenosť, slobodu a chuť objavovať nové príbehy,“ približuje Roman Samotný z Iniciatívy Inakosť. Festival potrvá",
-    "duvod": "vylouceno-tematem",
-    "kategorie": [],
-    "posouzeni": null
-  },
-  {
-    "id": "k-8f0a14d87e976eba",
-    "zachyceno": "2026-11-13T18:03:29.504Z",
-    "publikovano": "2026-11-13T17:39:08.000Z",
-    "zdroj": {
-      "nazev": "la Repubblica (Itálie)",
-      "url": "https://www.repubblica.it/spettacoli/tv-radio/2026/11/13/news/rai_indagine_interna_su_diaco_bellama-425721752/",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "La Rai avvia indagine interna su Diaco: “Sono emersi ulteriori elementi”",
-    "shrnuti": "Per ora il conduttore di “BellaMa’” resta al suo posto, ma non è detto che non si decida per una sospensione cautelare preventiva",
-    "duvod": "bez-skutku",
-    "kategorie": [],
-    "posouzeni": null
-  },
-  {
-    "id": "k-861d60a9ef8beaec",
-    "zachyceno": "2026-11-13T18:03:30.350Z",
-    "publikovano": "2026-11-13T17:39:03.000Z",
-    "zdroj": {
-      "nazev": "G4Media (Rumunsko)",
-      "url": "https://www.g4media.ro/marea-britanie-germania-franta-italia-polonia-si-comisia-europeana-vor-reprezenta-europa-la-negocierile-privind-ucraina.html",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Marea Britanie, Germania, Franța, Italia, Polonia și Comisia Europeană vor reprezenta Europa la negocierile privind Ucraina",
-    "shrnuti": "Cinci ţări europene, printre care Franţa, Germania şi Regatul Unit, vor reprezenta Europa la viitoarele tratative privind Ucraina, a anunţat vineri un responsabil european, citat de AFP. Polonia, Italia şi reprezentanţi ai Comisiei Europene şi ai Consiliului European vor completa această echipă, a p",
-    "duvod": "bez-skutku",
-    "kategorie": [],
-    "posouzeni": null
-  },
-  {
-    "id": "k-22aa76f89aa95f6d",
-    "zachyceno": "2026-11-13T18:03:28.543Z",
-    "publikovano": "2026-11-13T17:39:00.000Z",
-    "zdroj": {
-      "nazev": "Helsingin Sanomat (Finsko)",
-      "url": "https://www.hs.fi/alueet/art-2000012411609.html",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Suomenlahden drooni-isku | Virolais­eversti: Miehistön jäseniä kuoli iskussa venäläiseen sota-alukseen",
-    "shrnuti": "Viron puolustusvoimien mukaan iskussa vaurioitunut venäläinen korvetti piti lopulta saattaa takaisin Venäjälle.",
-    "duvod": "bez-skutku",
-    "kategorie": [],
-    "posouzeni": null
-  },
-  {
-    "id": "k-98091eb83adfab7f",
-    "zachyceno": "2026-11-13T18:03:28.029Z",
-    "publikovano": "2026-11-13T17:38:41.000Z",
-    "zdroj": {
-      "nazev": "Denník N (Slovensko)",
-      "url": "https://dennikn.sk/5690233/otestuju-ci-mechazilla-zachyti-oba-stupne-starshipu-uspech-misie-oznacil-musk-za-prelom-aby-sme-raz-osidlili-ine-planety/",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Otestujú, či Mechazilla zachytí oba stupne Starshipu. Úspech misie označil Musk za prelom, aby sme raz osídlili iné planéty",
-    "shrnuti": "Jedna veža, dva záchyty – o tom je misia Starship, let 15. Spoločnosť SpaceX plánuje vykonať testovací let, pri ktorom sa obe časti dopravného systému Starship – raketa Super Heavy aj kozmická loď Starship S42 – vrátia na miesto štartu a zachytia ich mechanické ramená veže (Mechazilla). Štartovacie ",
-    "duvod": "bez-skutku",
-    "kategorie": [],
-    "posouzeni": null
-  },
-  {
-    "id": "k-c124646678316edb",
-    "zachyceno": "2026-11-13T18:31:54.218Z",
-    "publikovano": "2026-11-13T17:38:03.000Z",
-    "zdroj": {
-      "nazev": "El Mundo (Španělsko)",
-      "url": "https://www.elmundo.es/internacional/2026/11/13/6af74551fc6c83bc0f8b4593.html",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "\"Es nuestro, es el Papa del pueblo\": entusiasmo con León XIV en Chiclayo, donde fue obispo",
-    "shrnuti": "Más de un millón de fieles asisten a la misa del Pontífice en su tierra adoptiva Leer",
-    "duvod": "bez-skutku",
-    "kategorie": [],
-    "posouzeni": null
-  },
-  {
-    "id": "k-5d763e22b3c3a13f",
-    "zachyceno": "2026-11-13T18:03:27.527Z",
-    "publikovano": "2026-11-13T17:37:54.000Z",
-    "zdroj": {
-      "nazev": "Tagesschau (Německo)",
-      "url": "https://www.tagesschau.de/video/video-1683374.html",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Anja Kohl, HR, zur Auswirkung der Microsoft-Störung auf die Börse",
-    "shrnuti": "Anja Kohl, HR, zur Auswirkung der Microsoft-Störung auf die Börse",
-    "duvod": "bez-skutku",
-    "kategorie": [],
-    "posouzeni": null
-  },
-  {
-    "id": "k-2f9800cf0158e3b7",
-    "zachyceno": "2026-11-13T18:03:27.349Z",
-    "publikovano": "2026-11-13T17:37:44.000Z",
-    "zdroj": {
-      "nazev": "The Guardian — World",
-      "url": "https://www.theguardian.com/technology/2026/nov/13/microsoft-outage-hits-nhs-hospitals-gps-schools-and-police-across-uk",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Microsoft outage hits hospitals, GPs, schools and police across UK",
-    "shrnuti": "NHS suffering ‘serious’ and widespread disruption, while people are told of possible delays in receiving prescriptions Microsoft outage – live updates Vital UK services including hospitals and police have been hit by a global Microsoft outage that left NHS staff resorting to paper records and fuelle",
-    "duvod": "bez-skutku",
-    "kategorie": [],
-    "posouzeni": null
-  },
-  {
-    "id": "k-cf77bdc400243d5b",
-    "zachyceno": "2026-11-13T18:03:27.969Z",
-    "publikovano": "2026-11-13T17:37:25.000Z",
-    "zdroj": {
-      "nazev": "NZZ (Švýcarsko)",
-      "url": "https://www.nzz.ch/international/migrationskrise-in-europa-die-wichtigsten-fakten-und-news-ld.1535949",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "DIE NEUESTEN ENTWICKLUNGEN - Migrationskrise in Europa: Frontex meldet 29 Prozent weniger irreguläre Grenzübertritte",
-    "shrnuti": "Über die griechischen Inseln, die Balkanroute oder den Ärmelkanal versuchen noch immer täglich Migranten, unter Lebensgefahr nach Europa zu gelangen.",
-    "duvod": "bez-skutku",
-    "kategorie": [],
-    "posouzeni": null
-  },
-  {
-    "id": "k-0f801c3c93806ceb",
-    "zachyceno": "2026-11-13T18:03:29.707Z",
-    "publikovano": "2026-11-13T17:36:41.000Z",
-    "zdroj": {
-      "nazev": "Digi24 (Rumunsko)",
-      "url": "https://www.digi24.ro/stiri/momentul-accidentului-de-la-predeal-o-femeie-a-intrat-frontal-cu-masina-intr-un-autobuz-si-a-murit-4035711",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Momentul accidentului de la Predeal: O femeie a intrat frontal cu maşina într-un autobuz şi a murit",
-    "shrnuti": "O femeie de 60 de ani, care se afla la volanul unei maşini, a intrat, vineri, într-un autobuz, pe DN 1, la Predeal. Accidentul a fost surprins în imagini – acestea arată cum maşina părăseşte banda de mers şi intră direct în autobuzul care circula din sens opus.",
-    "duvod": "bez-skutku",
-    "kategorie": [],
-    "posouzeni": null
-  },
-  {
-    "id": "k-eaebb2e28083cf97",
-    "zachyceno": "2026-11-13T18:03:29.117Z",
-    "publikovano": "2026-11-13T17:36:38.000Z",
-    "zdroj": {
-      "nazev": "NOS Nieuws (Nizozemsko)",
-      "url": "https://nos.nl/l/2639355",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Vier minderjarigen in Drunen aangehouden die zich voordeden als agenten",
-    "shrnuti": "De politie heeft vier minderjarigen opgepakt die zich voordeden als agenten. Het viertal was van plan om een 77-jarige man in Drunen op te lichten. De verdachten zijn tussen de 15 en 17 jaar oud en komen uit Amsterdam, schrijft de politie. Het slachtoffer werd gebeld door een nepbankmedewerker, maar",
-    "duvod": "bez-skutku",
-    "kategorie": [],
-    "posouzeni": null
-  },
-  {
-    "id": "k-08be8e53b61dc5de",
-    "zachyceno": "2026-11-13T18:03:27.431Z",
-    "publikovano": "2026-11-13T17:35:57.000Z",
-    "zdroj": {
-      "nazev": "Euronews",
-      "url": "https://www.euronews.com/2026/11/13/france-and-germany-near-deal-on-de-cos-for-ecb-top-job-as-eu-confirms-two-candidates",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "France and Germany near deal on De Cos for ECB top job as EU confirms two candidates",
-    "shrnuti": "Two candidates are vying to succeed Christine Lagarde at the ECB, an EU official stated on Friday as EU leaders met in Dublin, while reports coming out of Spain said France and Germany are close to a deal on the central bank's top jobs with Spain's Pablo Hernández de Cos as favourite for president.",
-    "duvod": "bez-skutku",
-    "kategorie": [],
-    "posouzeni": null
-  },
-  {
-    "id": "k-ca59693c93035a94",
-    "zachyceno": "2026-11-13T18:03:29.293Z",
-    "publikovano": "2026-11-13T17:34:33.000Z",
-    "zdroj": {
-      "nazev": "ANSA (Itálie, anglicky)",
-      "url": "https://www.ansa.it/english/news/2026/11/13/government-considering-increased-funding-for-healthcare-cisl-uil_bcb040d4-216f-4d7a-b0a3-f05dd2078844.html",
-      "typ": "wire",
-      "primarni": false
-    },
-    "titulek": "Government considering increased funding for healthcare - CISL-UIL",
-    "shrnuti": "(ANSA) - ROME, 13 NOV - The government is considering increased funding for healthcare in the 2027 budget bill, the CISL and UIL trade unions said after talks on the package Friday. \"They are continuing to assess what resources are available, and any that can be made accessible will be directed towa",
-    "duvod": "bez-skutku",
-    "kategorie": [],
-    "posouzeni": null
-  },
-  {
-    "id": "k-c7874e7cb7bfaf1f",
-    "zachyceno": "2026-11-13T18:31:51.696Z",
-    "publikovano": "2026-11-13T17:34:00.000Z",
-    "zdroj": {
-      "nazev": "Presseportal — zprávy policie (Blaulicht)",
-      "url": "https://www.presseportal.de/blaulicht/pm/117709/6390371",
-      "typ": "wire",
-      "primarni": false
-    },
-    "titulek": "POL-PDNR: Unbekannter wirft Stein auf fahrenden Omnibus",
-    "shrnuti": "Altenkirchen (ots) - Am Freitag, 13.11.2026, gegen 15:34 Uhr, kam es auf der Fußgängerbrücke zwischen dem Kiefernweg und der Philipp-Reis-Straße in Altenkirchen zu einem Steinwurf auf einen Omnibus. Dieser befuhr die Bundesstraße 256 aus ...",
-    "duvod": "bez-skutku",
-    "kategorie": [],
-    "posouzeni": null
-  },
-  {
-    "id": "k-23c23690f054db11",
-    "zachyceno": "2026-11-13T18:03:27.370Z",
-    "publikovano": "2026-11-13T17:32:11.000Z",
-    "zdroj": {
-      "nazev": "Politico Europe",
-      "url": "https://www.politico.eu/article/microsoft-outage-renews-european-calls-to-detox-from-us-tech/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Microsoft outage renews European calls to detox from US tech",
-    "shrnuti": "Lawmakers across Europe call for action to reduce reliance on a handful of foreign tech companies.",
-    "duvod": "bez-skutku",
-    "kategorie": [],
-    "posouzeni": null
-  },
-  {
-    "id": "k-91c132ce9a34f4ee",
-    "zachyceno": "2026-11-13T18:03:28.162Z",
-    "publikovano": "2026-11-13T17:31:47.000Z",
-    "zdroj": {
-      "nazev": "Telex (Maďarsko)",
-      "url": "https://telex.hu/after/2026/11/13/david-walliams-visszaeles-nyomozas-londoni-rendorseg",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Szexuális bűncselekmények gyanújával nyomoz a rendőrség David Walliams ügyében",
-    "shrnuti": "A londoni rendőrséghez más esetekről érkeztek bejelentések, mint amelyeket a sajtó bemutatott. Az Angolkák sztárja tagadja a vádakat.",
-    "duvod": "bez-skutku",
-    "kategorie": [],
-    "posouzeni": null
-  },
-  {
-    "id": "k-0063cd5a857d7082",
-    "zachyceno": "2026-11-13T18:03:26.392Z",
-    "publikovano": "2026-11-13T17:31:00.000Z",
-    "zdroj": {
-      "nazev": "Český rozhlas — domácí zprávy",
-      "url": "https://www.irozhlas.cz/sport/hokej/kaltounkova-dvakrat-rozjasala-cesky-tym-hokejistky-ale-na-kanadu-nestacily-a_2611131831_mim",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Kaltounková dvakrát rozjásala český tým, hokejistky ale na Kanadu nestačily a turnaj pro ně končí",
-    "shrnuti": "České hokejistky prohrály ve čtvrtfinále mistrovství světa v Dánsku s favorizovanou Kanadou 2:3 a na turnaji skončily. Obě české branky vstřelila v přesilových hrách útočnice Kristýna Kaltounková.",
-    "duvod": "vylouceno-tematem",
-    "kategorie": [],
-    "posouzeni": null
-  },
-  {
-    "id": "k-294364fc7a2e2549",
-    "zachyceno": "2026-11-13T18:03:26.500Z",
-    "publikovano": "2026-11-13T17:30:47.000Z",
-    "zdroj": {
-      "nazev": "Novinky.cz",
-      "url": "https://www.novinky.cz/clanek/zahranicni-evropany-bude-na-mirovych-jednanich-zastupovat-pet-zemi-40608604",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Evropany bude na mírových jednáních zastupovat pět zemí",
-    "shrnuti": "Evropu budou při jednáních o ukončení války na Ukrajině zastupovat Francie, Německo, Itálie, Polsko a Velká Británie společně s představiteli unijních institucí. O složení skupiny informoval v pátek odpoledne předseda Evropské rady António Costa. Evropské státy tak získají společné zastoupení při je",
-    "duvod": "bez-skutku",
-    "kategorie": [],
-    "posouzeni": null
-  },
-  {
-    "id": "k-b82e0b2e53a68e50",
-    "zachyceno": "2026-11-13T18:03:26.548Z",
-    "publikovano": "2026-11-13T17:30:45.000Z",
-    "zdroj": {
-      "nazev": "Seznam Zprávy",
-      "url": "https://www.seznamzpravy.cz/clanek/zahranicni-sef-mossadu-jedna-ve-washingtonu-o-moznostech-obnoveni-uderu-na-iran-pisi-media-320518",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Šéf Mossadu jedná ve Washingtonu o možnostech obnovení úderů na Írán, píší média",
-    "shrnuti": "Benjamin Netanjahu údajně vyvíjí tlak na Donalda Trumpa aby obnovil údery proti Íránu, ředitel Mossadu proto jedná ve Washingtonu vysokými představiteli Trumpovy administrativy. Bílý dům věc odmítl komentovat.",
-    "duvod": "bez-skutku",
-    "kategorie": [],
-    "posouzeni": null
-  },
-  {
-    "id": "k-e28df61676ab074f",
-    "zachyceno": "2026-11-13T21:03:03.318Z",
-    "publikovano": "2026-11-13T17:30:08.000Z",
-    "zdroj": {
-      "nazev": "Le Monde (Francie)",
-      "url": "https://www.lemonde.fr/culture/article/2026/11/13/le-reggae-de-dub-inc-sur-les-scenes-francaises-et-les-pancartes-des-manifestations_6809367_3246.html",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Le reggae de Dub Inc sur les scènes françaises et les pancartes des manifestations",
-    "shrnuti": "Le groupe de Saint-Etienne, actuellement en tournée en France, évoque le terreau local qui a forgé le groupe et façonné ses idées, le poussant à écrire des textes engagés dont certaines phrases sont aujourd’hui reprises dans les mobilisations sociales.",
-    "duvod": "bez-skutku",
-    "kategorie": [],
-    "posouzeni": null
-  },
-  {
-    "id": "k-b2dabc798c0edd51",
-    "zachyceno": "2026-11-13T18:03:29.247Z",
-    "publikovano": "2026-11-13T17:30:06.000Z",
-    "zdroj": {
-      "nazev": "Le Monde (Francie)",
-      "url": "https://www.lemonde.fr/international/article/2026/11/13/sollicitee-par-donald-trump-la-russie-jubile-a-l-idee-de-peser-sur-l-architecture-de-securite-europeenne_6809368_3210.html",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Sollicitée par Donald Trump, la Russie jubile à l’idée de peser sur l’architecture de sécurité européenne",
-    "shrnuti": "Pour reprendre langue avec les Etats européens, le Kremlin leur propose, entre autres, de signer des accords bilatéraux d’assistance mutuelle, à l’image de ceux qu’il a conclus avec la Biélorussie et la Corée du Nord.",
-    "duvod": "bez-skutku",
-    "kategorie": [
-      "rusko"
-    ],
-    "posouzeni": null
-  },
-  {
-    "id": "k-7a24e1703943fa47",
-    "zachyceno": "2026-11-13T18:03:26.550Z",
-    "publikovano": "2026-11-13T17:30:00.000Z",
-    "zdroj": {
-      "nazev": "Seznam Zprávy",
-      "url": "https://www.seznamzpravy.cz/clanek/domaci-zivot-v-cesku-at-vedi-ze-na-to-nejsou-sami-lide-jeli-v-pyzamech-metrem-az-do-motola-320503",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "„Ať vědí, že na to nejsou sami.“ Lidé jeli v pyžamech metrem až do Motola",
-    "shrnuti": "Když se život obrátí naruby kvůli vážné nemoci dítěte, největší oporou je rodina pohromadě. Iniciativa Pyžamový den ukazuje, že pomáhat se dá i s úsměvem a v domácím oblečení. Letos vyrazili lidé metrem z Depa Hostivař do Motola.",
-    "duvod": "bez-skutku",
-    "kategorie": [],
-    "posouzeni": null
-  },
-  {
-    "id": "k-820453e1066719ab",
-    "zachyceno": "2026-11-13T18:03:26.839Z",
-    "publikovano": "2026-11-13T17:30:00.000Z",
-    "zdroj": {
-      "nazev": "Deutsche Welle — Europe",
-      "url": "https://www.dw.com/en/the-dangers-of-revising-europe-s-security-architecture/a-79943049?maca=en-rss-en-eu-2092-rdf",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "The dangers of revising Europe's security architecture",
-    "shrnuti": "Experts warn against revising Europe's security framework because they say it would mean granting Moscow its longstanding wish of renegotiating postwar security on the continent.",
-    "duvod": "bez-skutku",
-    "kategorie": [],
-    "posouzeni": null
-  },
-  {
-    "id": "k-b8095b4a55fb1c4e",
-    "zachyceno": "2026-11-13T18:03:30.408Z",
-    "publikovano": "2026-11-13T17:30:00.000Z",
-    "zdroj": {
-      "nazev": "Ukrinform (anglicky)",
-      "url": "https://www.ukrinform.net/rubric-polytics/4184469-europe-will-be-represented-for-first-time-at-upcoming-peace-talks-merz.html",
-      "typ": "wire",
-      "primarni": false
-    },
-    "titulek": "Europe will be represented for first time at upcoming peace talks – Merz",
-    "shrnuti": "Concrete peace talks on ending Russia's war against Ukraine are expected to take place in the coming weeks, with European representatives, including Germany, taking part directly.",
-    "duvod": "bez-skutku",
-    "kategorie": [
-      "rusko"
-    ],
-    "posouzeni": null
-  },
-  {
-    "id": "k-73b97e2b45cc6b23",
-    "zachyceno": "2026-11-13T18:03:28.079Z",
-    "publikovano": "2026-11-13T17:29:04.000Z",
-    "zdroj": {
-      "nazev": "TVN24 (Polsko)",
-      "url": "https://tvn24.pl/tvnmeteo/swiat/zalamanie-pogody-we-francji-wezbrana-rzeka-porwala-dwoch-mezczyzn-st9338243?source=rss",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Załamanie pogody we Francji. Wezbrana rzeka porwała dwóch mężczyzn",
-    "shrnuti": "Ulewy wywołane przejściem burzy Charles spowodowały w czwartek poważne utrudnienia na Lazurowym Wybrzeżu. Od Cannes po Menton doszło do lokalnych podtopień i osunięć ziemi oraz zamknięto drogi. W Nicei dwóch mężczyzn zostało porwanych przez wezbraną rzekę.",
-    "duvod": "bez-skutku",
-    "kategorie": [],
-    "posouzeni": null
-  },
-  {
-    "id": "k-2f2a7317823eac30",
-    "zachyceno": "2026-11-13T18:03:30.454Z",
-    "publikovano": "2026-11-13T17:29:00.000Z",
-    "zdroj": {
-      "nazev": "Ukrainska Pravda (anglicky)",
-      "url": "https://www.pravda.com.ua/eng/news/2026/11/13/8062792/",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Politico: EU leaders close to agreeing on negotiating team for Ukraine talks",
-    "shrnuti": "EU leaders are close to agreeing on a negotiating team involving Germany, France, the UK, Italy, Poland and EU institutions for talks on Ukraine, Politico reports.",
-    "duvod": "bez-skutku",
-    "kategorie": [],
-    "posouzeni": null
-  },
-  {
-    "id": "k-d418c75912c167b1",
-    "zachyceno": "2026-11-13T18:03:27.390Z",
-    "publikovano": "2026-11-13T17:28:54.000Z",
-    "zdroj": {
-      "nazev": "France 24 (anglicky)",
-      "url": "https://www.france24.com/en/video/20261113-as-eu-grapples-with-fierce-ai-competition-summit-overshadowed-by-elusive-ukraine-russia-peace-deal-1",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "As EU grapples with fierce AI competition, summit overshadowed by elusive Ukraine-Russia peace deal",
-    "shrnuti": "As EU leaders meet for an AI summit in Dublin, largely overshadowed by Russia's war on Ukraine, William Hilderbrandt is pleased to welcome Fabrice Pothier, CEO of Rasmussen Global. On AI, Pothier points to Europe's limited computing capacity, estimating that it barely represents \"5% of what's availa",
-    "duvod": "bez-skutku",
-    "kategorie": [
-      "rusko"
-    ],
-    "posouzeni": null
-  },
-  {
-    "id": "k-d330832f57f394f6",
-    "zachyceno": "2026-11-13T18:03:26.503Z",
-    "publikovano": "2026-11-13T17:27:50.000Z",
-    "zdroj": {
-      "nazev": "Novinky.cz",
-      "url": "https://www.novinky.cz/clanek/koktejl-plati-za-lidi-benzin-v-ulicich-londyna-se-zjevuje-zahadny-muz-v-kostymu-batmana-40605183",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Platí za lidi benzín. V ulicích Londýna se zjevuje záhadný muž v kostýmu Batmana",
-    "shrnuti": "V ulicích Londýna se již nějakou dobu objevuje muž v kostýmu Batmana, jenž místním lidem všemožně pomáhá s různými věcmi. Tvrdí, že chce z britské metropole udělat lepší místo, jeho identita však zůstává neznámá.",
-    "duvod": "vylouceno-tematem",
-    "kategorie": [],
-    "posouzeni": null
-  },
-  {
-    "id": "k-10ce156c89f0815f",
-    "zachyceno": "2026-11-13T18:03:28.133Z",
-    "publikovano": "2026-11-13T17:27:19.000Z",
-    "zdroj": {
-      "nazev": "Rzeczpospolita (Polsko)",
-      "url": "https://www.rp.pl/konflikty-zbrojne/art45487301-rosja-uderzyla-w-blok-mieszkalny-w-zaporozu-50-osob-rannych-w-tym-osmioro-dzieci",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Rosja uderzyła w blok mieszkalny w Zaporożu. 50 osób rannych, w tym ośmioro dzieci",
-    "shrnuti": "Do 50 wzrosła liczba rannych w rosyjskim ataku na Zaporoże. Wśród poszkodowanych jest ośmioro dzieci. Pocisk trafił w czteropiętrowy budynek mieszkalny, uszkodzeniu uległy mieszkania na trzech piętrach.",
-    "duvod": "bez-skutku",
-    "kategorie": [],
-    "posouzeni": null
-  },
-  {
-    "id": "k-5760d542c34521a9",
-    "zachyceno": "2026-11-13T18:03:28.545Z",
-    "publikovano": "2026-11-13T17:27:00.000Z",
-    "zdroj": {
-      "nazev": "Helsingin Sanomat (Finsko)",
-      "url": "https://www.hs.fi/urheilu/art-2000012411689.html",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "NHL Suomessa | Tähtipelaajat jakelivat satojen eurojen mailoja lapsille Helsingissä: ”Paras koulupäivä ikinä”",
-    "shrnuti": "Alun perin treeneihin kaupiteltiin lippuja noin 25 eurolla, mutta NHL olikin kutsunut katsomoihin koululaisia ympäri pääkaupunkiseudun.",
-    "duvod": "bez-skutku",
-    "kategorie": [],
-    "posouzeni": null
-  },
-  {
-    "id": "k-4a49997e3370043a",
-    "zachyceno": "2026-11-13T18:03:29.666Z",
-    "publikovano": "2026-11-13T17:26:54.000Z",
-    "zdroj": {
-      "nazev": "El Mundo (Španělsko)",
-      "url": "https://www.elmundo.es/economia/empresas/2026/11/13/6af6b987fdddfff22c8b4587.html",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Una caída de Microsoft 365 deja sin correo a empresas y gobiernos de 74 países durante más de 20 horas",
-    "shrnuti": "La caída de Exchange ha dejado sin Outlook, Teams ni Copilot a usuarios de 74 países y reabre el debate sobre la dependencia de un único proveedor Leer",
-    "duvod": "bez-skutku",
-    "kategorie": [],
-    "posouzeni": null
-  },
-  {
-    "id": "k-978a538d9d86b786",
-    "zachyceno": "2026-11-13T18:03:26.719Z",
-    "publikovano": "2026-11-13T17:26:30.000Z",
-    "zdroj": {
-      "nazev": "Deník N",
-      "url": "https://denikn.cz/2256688/vyvoj-boju-1723-den-cerna-serie-ruskeho-letectva-pokracuje-u-petrohradu-ztratilo-tri-stroje-i-s-posadkami/",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Vývoj bojů (1723. den): Černá série ruského letectva pokračuje, u Petrohradu ztratilo tři stroje i s posádkami",
-    "shrnuti": "Informace v textu jsou shrnutím událostí za čtvrtek 12. listopadu. V tuto chvíli už situace na některých místech může být jiná. Rusové přišli o MiG-31, Ka-52 a Mi-8; zřítily se při odrážení náletu. Spekuluje se o narušení systému pro rozlišování vlastních a cizích letounů. Vzájemné nálety jsou už ta",
-    "duvod": "bez-skutku",
-    "kategorie": [
-      "rusko"
-    ],
-    "posouzeni": null
-  },
-  {
-    "id": "k-48138c6c68d1fb30",
-    "zachyceno": "2026-11-13T18:03:30.394Z",
-    "publikovano": "2026-11-13T17:26:25.000Z",
-    "zdroj": {
-      "nazev": "NewsMaker (Moldavsko)",
-      "url": "https://newsmaker.md/ru/vyruchka-turagentstv-moldovy-vyrosla-do-47-mlrd-leev-a-chislo-klientov-do-512-tys-kuda-chashe-vsego-ezdili-jiteli-strany",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Выручка турагентств Молдовы выросла до 4,7 млрд леев, а число клиентов — до 512 тыс. Куда чаще всего ездили жители страны",
-    "shrnuti": "За первые девять месяцев 2026 года услугами туристических агентств и туроператоров Молдовы воспользовались 512,2 тыс. туристов и экскурсантов — на 6,6% больше, чем за аналогичный период прошлого года. Общая выручка компаний при этом выросла на 11,7% и достигла 4,73 млрд леев. Такие данные опубликова",
-    "duvod": "bez-skutku",
-    "kategorie": [],
-    "posouzeni": null
-  },
-  {
-    "id": "k-1977373141d21661",
-    "zachyceno": "2026-11-13T18:03:28.261Z",
-    "publikovano": "2026-11-13T17:25:32.000Z",
-    "zdroj": {
-      "nazev": "HVG (Maďarsko)",
-      "url": "https://hvg.hu/vilag/20261113_magyar-ferfi-ausztria-loves-rendorseg-vasut-sin-paprikaspray",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Meglőttek az osztrák rendőrök egy magyar férfit, miután agresszívan viselkedett az igazoltatásánál",
-    "shrnuti": "A 38 éves férfira azért hívtak rendőrt, mert zavartan sétálgatott a vasúti sínek mellett.",
-    "duvod": "bez-skutku",
-    "kategorie": [],
-    "posouzeni": null
-  },
-  {
-    "id": "k-5982282fa8c16312",
-    "zachyceno": "2026-11-13T18:03:29.291Z",
-    "publikovano": "2026-11-13T17:23:10.000Z",
-    "zdroj": {
-      "nazev": "ANSA (Itálie, anglicky)",
-      "url": "https://www.ansa.it/english/news/business/2026/11/13/government-considering-increased-funding-for-healthcare-cisl-uil_d43895df-1721-4e97-ab89-0e36112e4ab9.html",
-      "typ": "wire",
-      "primarni": false
-    },
-    "titulek": "Government considering increased funding for healthcare - CISL-UIL",
-    "shrnuti": "(ANSA) - ROME, 13 NOV - The government is considering increased funding for healthcare in the 2027 budget bill, the CISL and UIL trade unions said after talks on the package Friday. \"They are continuing to assess what resources are available, and any that can be made accessible will be directed towa",
-    "duvod": "bez-skutku",
-    "kategorie": [],
-    "posouzeni": null
-  },
-  {
-    "id": "k-d17f923bbea6db49",
-    "zachyceno": "2026-11-13T18:03:28.081Z",
-    "publikovano": "2026-11-13T17:22:06.000Z",
-    "zdroj": {
-      "nazev": "TVN24 (Polsko)",
-      "url": "https://tvn24.pl/biznes/z-kraju/karol-nawrocki-zawetowal-ustawe-dotyczaca-stosowania-dsa-skomentowali-eksperci-konrad-ciesiolkiewicz-i-marcel-kieltyka-st9338334?source=rss",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Po wecie prezydenta. Ekspert: ta ustawa mogła wzmocnić instytucje państwa demokratycznego",
-    "shrnuti": "Zawetowana przez prezydenta Karola Nawrockiego ustawa wdrażająca unijny Akt o usługach cyfrowych (DSA) była \"naprawdę delikatną regulacją\", zarzuty mówiące o cenzurze są nieadekwatne - ocenił doktor nauk społecznych Konrad Ciesiołkiewicz. Inny ekspert, Marcel Kiełtyka, mówił, że mogła ona pozwolić n",
-    "duvod": "bez-skutku",
-    "kategorie": [],
-    "posouzeni": null
-  },
-  {
-    "id": "k-bd12bfa3a759a479",
-    "zachyceno": "2026-11-13T18:03:30.456Z",
-    "publikovano": "2026-11-13T17:22:00.000Z",
-    "zdroj": {
-      "nazev": "Ukrainska Pravda (anglicky)",
-      "url": "https://www.pravda.com.ua/eng/news/2026/11/13/8062791/",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "\"Literally fighting for their lives\": Human Rights Commissioner's Office shares stories of residents evacuated from Russian-occupied Oleshky",
-    "shrnuti": "Evacuees from Russian-occupied Oleshky describe surviving on courgettes, being hunted by Russian drones and enduring years without appropriate medical care.",
-    "duvod": "bez-skutku",
-    "kategorie": [
-      "drony",
-      "rusko"
-    ],
-    "posouzeni": null
-  },
-  {
-    "id": "k-c4310f15cd2c3dd8",
-    "zachyceno": "2026-11-13T18:03:26.227Z",
-    "publikovano": "2026-11-13T17:21:37.000Z",
-    "zdroj": {
-      "nazev": "Presseportal — zprávy policie (Blaulicht)",
-      "url": "https://www.presseportal.de/blaulicht/pm/115879/6390370",
-      "typ": "wire",
-      "primarni": false
-    },
-    "titulek": "FW-MG: Rauchentwicklung in einer Küche - Feuerwehr löscht Schwelbrand",
-    "shrnuti": "Mönchengladbach-Rheydt, 13.11.2026, 15:05 Uhr, Limitenstraße (ots) - Am Freitagnachmittag wurde die Feuerwehr um 15:05 Uhr zu einer Rauchentwicklung in einer Wohnung alarmiert. Die Wohnungseigentümerin hatte Rauch im Bereich des Backofens ...",
-    "duvod": "bez-skutku",
-    "kategorie": [],
-    "posouzeni": null
-  },
-  {
-    "id": "k-bfb5697ddc0fd287",
-    "zachyceno": "2026-11-13T18:03:27.434Z",
-    "publikovano": "2026-11-13T17:21:21.000Z",
-    "zdroj": {
-      "nazev": "Euronews",
-      "url": "https://www.euronews.com/2026/11/13/iran-mps-debate-possible-shift-in-nuclear-doctrine-and-exit-from-npt",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Iran MPs debate possible shift in nuclear doctrine and exit from NPT",
-    "shrnuti": "Although the US midterm elections result appears to have reduced for now the prospect of a new full-scale US and Israeli attack on Iran, the fundamental US objective of stopping any Iranian nuclear programme is generating an intense debate in the Iranian society and its power circles.",
-    "duvod": "bez-mista",
-    "kategorie": [
-      "hybridni"
-    ],
-    "posouzeni": null
-  },
-  {
-    "id": "k-114a95c6583d5682",
-    "zachyceno": "2026-11-13T18:03:29.159Z",
-    "publikovano": "2026-11-13T17:20:43.000Z",
-    "zdroj": {
-      "nazev": "VRT NWS (Belgie)",
-      "url": "https://www.vrt.be/vrtnws/nl/2026/11/13/politie-opent-onderzoek-naar-david-walliams-seksueel-wangedrag.rss.xml",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Politie Londen start onderzoek naar David Walliams na beschuldigingen van \"ernstige seksuele misdrijven\"",
-    "shrnuti": "De politie van Londen heeft een onderzoek geopend naar acteur, komiek en schrijver David Walliams (55) wegens ernstige seksuele misdrijven. Meldingen hiervan kwamen binnen nadat The Guardian en ITV News eerder deze week hadden bericht over seksueel grensoverschrijdend gedrag door Walliams.",
-    "duvod": "bez-skutku",
-    "kategorie": [],
-    "posouzeni": null
-  },
-  {
-    "id": "k-b07d889338490439",
-    "zachyceno": "2026-11-13T18:03:27.361Z",
-    "publikovano": "2026-11-13T17:20:32.000Z",
-    "zdroj": {
-      "nazev": "The Guardian — World",
-      "url": "https://www.theguardian.com/business/2026/nov/12/home-sales-october-low",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Home sales hit 16-year low in October amid soaring mortgage rates",
-    "shrnuti": "Sales of built units fell to 3.75m in October, down by 8.8% from last year, with mortgage rates at nearly three-year high US existing home sales hit a 16-year low in October as buyers were driven away by high mortgage rates and rising inflation, according to new data released on Wednesday. Sales of ",
-    "duvod": "bez-skutku",
-    "kategorie": [],
-    "posouzeni": null
-  },
-  {
-    "id": "k-37e97d0d262714ad",
-    "zachyceno": "2026-11-13T18:03:27.971Z",
-    "publikovano": "2026-11-13T17:19:54.000Z",
-    "zdroj": {
-      "nazev": "NZZ (Švýcarsko)",
-      "url": "https://www.nzz.ch/schweiz/die-svp-und-der-ticket-poker-aussenseiter-im-bundesratsrennen-hoffen-auf-einen-dreiervorschlag-ld.10063203",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Die SVP und der Ticket-Poker: Aussenseiter im Bundesratsrennen hoffen auf einen Dreiervorschlag",
-    "shrnuti": "Thomas Aeschi gilt bei der SVP-Leitung als Favorit für die Nachfolge von Bundesrat Guy Parmelin. Die Wahlchancen des Zugers hängen auch von der Grösse des Tickets ab.",
-    "duvod": "bez-skutku",
-    "kategorie": [],
-    "posouzeni": null
-  },
-  {
-    "id": "k-abb990f7bc8d5a1c",
-    "zachyceno": "2026-11-13T18:03:26.506Z",
-    "publikovano": "2026-11-13T17:18:54.000Z",
-    "zdroj": {
-      "nazev": "Novinky.cz",
-      "url": "https://www.novinky.cz/clanek/pocasi-dilli-se-stalo-nejznecistenejsim-velkomestem-sveta-40608431",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Dillí se stalo nejznečištěnějším velkoměstem světa",
-    "shrnuti": "Indické Dillí v pátek předstihlo pákistánský Láhaur a stalo se nejznečištěnějším městem světa. Kvalita ovzduší dosáhla nebezpečné úrovně a hustý smog výrazně zhoršil viditelnost ve městě s více než 20 miliony obyvatel.",
-    "duvod": "bez-skutku",
-    "kategorie": [],
-    "posouzeni": null
-  },
-  {
-    "id": "k-d7406d7862a0657a",
-    "zachyceno": "2026-11-13T18:03:27.530Z",
-    "publikovano": "2026-11-13T17:18:37.000Z",
-    "zdroj": {
-      "nazev": "Tagesschau (Německo)",
-      "url": "https://www.tagesschau.de/video/video-1683352.html",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Kathrin Schmid, ARD Brüssel, zzt. Dublin, zu weiteren EU-Ukrainehilfen",
-    "shrnuti": "Kathrin Schmid, ARD Brüssel, zzt. Dublin, zu weiteren EU-Ukrainehilfen",
     "duvod": "bez-skutku",
     "kategorie": [],
     "posouzeni": null

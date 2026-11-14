@@ -1,5 +1,5 @@
 {
-  "kdy": "2026-11-14T00:01:03.019Z",
+  "kdy": "2026-11-14T03:00:52.087Z",
   "zdroje": [
     {
       "klic": "e-sbirka",
@@ -240,7 +240,7 @@
       "klic": "kyber",
       "ok": true,
       "stav": null,
-      "pocetPolozek": 4,
+      "pocetPolozek": 3,
       "vysledek": "ok"
     },
     {
@@ -251,5 +251,5 @@
       "vysledek": "ok"
     }
   ],
-  "novychVeFronte": 3
+  "novychVeFronte": 0
 }
