@@ -579,6 +579,40 @@
     }
   },
   {
+    "id": "k-0ad615a445da7f8c",
+    "zachyceno": "2026-11-14T13:21:10.958Z",
+    "publikovano": "2026-11-14T12:54:00.000Z",
+    "zdroj": {
+      "nazev": "Ukrainska Pravda (anglicky)",
+      "url": "https://www.pravda.com.ua/eng/news/2026/11/14/8062861/",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Fifteen injured, including children, in Russian attack on Zaporizhzhia",
+    "titulekPuvodni": "Fifteen injured, including children, in Russian attack on Zaporizhzhia",
+    "shrnuti": "Fifteen people, including two children, have been injured in a Russian strike on the Voznesenivskyi district in Zaporizhzhia on 14 November.",
+    "kodZeme": "RU",
+    "zeme": "Rusko",
+    "kategorie": [
+      "hybridni",
+      "rusko"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "attack on",
+      "russia"
+    ],
+    "naliehave": null,
+    "stav": "ceka",
+    "vyrez": {
+      "text": "Fifteen injured, including children, in Russian attack on Zaporizhzhia | Ukrainska Pravda\nA firefighter. Photo: Ukraine’s State Emergency Service\nFifteen people, including two children, have been injured in a Russian strike on the Voznesenivskyi district in Zaporizhzhia on 14 November.\nSource: Zaporizhzhia Oblast Military Administration\nDetails: The administration said those injured are two children, eight women and five men. All are receiving the medical treatment they need.\nAdvertisement:\n\r\n\r\n\r\n\r\n\r\nThe strike damaged a residential building and windows at an educational institution.\nEarlier reports said four people had been injured: three women aged 36, 74 and 88, and an 86-year-old man. They sustained shrapnel injuries.\nThe man was taken to hospital, two women were treated at the scene and another woman declined hospitalisation. The number of people injured later rose to 15.\nBackground: On the morning of 14 November, the dam at the Dnipro Hydroelectric Power Plant in Zaporizhzhia was closed to traffic.\nSupport Ukrainska Pravda on Patreon to help us keep reporting!\nZaporizhzhia\nattack\nAdvertisement:\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nZaporizhzhia\nRussian attack on Zaporizhzhia on 13…",
+      "stazeno": "2026-11-14T13:21:11.120Z",
+      "stav": 200
+    }
+  },
+  {
     "id": "k-db93a580ccd1ee07",
     "zachyceno": "2026-11-14T12:03:25.180Z",
     "publikovano": "2026-11-14T11:52:00.000Z",
@@ -10318,38 +10352,6 @@
       "stazeno": "2026-11-11T06:03:24.862Z",
       "stav": 403,
       "chyba": "HTTP 403"
-    }
-  },
-  {
-    "id": "k-33d77cd6fccbdb41",
-    "zachyceno": "2026-11-11T06:03:16.906Z",
-    "publikovano": "2026-11-11T05:20:00.000Z",
-    "zdroj": {
-      "nazev": "Seznam Zprávy",
-      "url": "https://www.seznamzpravy.cz/clanek/domaci-zivot-v-cesku-kartou-ano-hotove-ne-vytraci-se-mista-kde-se-da-platit-bankovkami-320071",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Kartou ano, hotově ne. Vytrácí se místa, kde se dá platit bankovkami",
-    "titulekPuvodni": "Kartou ano, hotově ne. Vytrácí se místa, kde se dá platit bankovkami",
-    "shrnuti": "Hotovostí už v Česku nelze zaplatit některé státní odvody a lidé s bankovkami či mincemi naráží i v dopravě nebo ve službách. Podle odborníků na to zejména část seniorů doplácí.",
-    "kodZeme": "CZ",
-    "zeme": "Česko",
-    "kategorie": [
-      "pravo"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "zeSite": null,
-    "shody": [
-      "odvody"
-    ],
-    "naliehave": null,
-    "stav": "ceka",
-    "vyrez": {
-      "text": "Kartou ano, hotově ne. Vytrácí se místa, kde se dá platit bankovkami - Seznam Zprávy\nZobrazení snímku 1 z 0\nHlavní obsah\nKartou ano, hotově ne. Vytrácí se místa, kde se dá platit bankovkami\nPetr Švihel\n7:36\nChcete-li článek poslouchat, přihlaste se\neBook\nSdílet\nFoto: Shutterstock.com/Jacob Lund\nV Česku se rozšiřují oblasti, kde se lidé hotovostí nedoplatí. (Ilustrační snímek)\n6:20\nHotovostí už v Česku nelze zaplatit některé státní odvody a lidé s bankovkami či mincemi naráží i v dopravě nebo ve službách. Podle odborníků na to zejména část seniorů doplácí.\nČlánek\nDelší otevírací doba a více výjezdů za lidmi. Ovšem výměnou za to, že se nepřijímají platby v hotovosti. S takovým „výměnným obchodem“ se zákazníky od listopadu přišly mobilní informační centra Pražské integrované dopravy - tedy karavany vyjíždějící za lidmi do odlehlejších míst Středočeského kraje. V nich si lze například dobít nebo expresně vytvořit Lítačku.\nPodle Filipa Drápala, mluvčího Regionálního organizátora pražské integrované dopravy (ROPID), agenda spojená s hotovostí ubírala čas pracovníků, který nově mohou věnovat zákazníkům.\n„Zároveň práce s hotovostí omezovala počet lidí, kteří se mohli na provozu podílet –…",
-      "stazeno": "2026-11-11T06:03:24.912Z",
-      "stav": 200
     }
   }
 ]
