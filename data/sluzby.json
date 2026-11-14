@@ -1,11 +1,16 @@
 {
-  "aktualizovano": "2026-11-13T23:49:41.663Z",
+  "aktualizovano": "2026-11-14T00:03:01.584Z",
   "stavy": [
     {
       "klic": "cloudflare",
       "stav": "omezeni",
       "popis": "Partially Degraded Service",
       "incidenty": [
+        {
+          "nazev": "Issues with 1.1.1.1 public resolver in Canada",
+          "odkaz": "https://www.cloudflarestatus.com/incidents/rikplz89rpml",
+          "aktualizovano": "2026-11-13T23:53:36.172Z"
+        },
         {
           "nazev": "Cloudflare is seeing an issue with Workers API availability",
           "odkaz": "https://www.cloudflarestatus.com/incidents/e7ktq32gphhe",
@@ -15,11 +20,6 @@
           "nazev": "Cloudflare is currently having an issue with the r8.im registry used for Replicate model publishing and builds is currently restricted",
           "odkaz": "https://www.cloudflarestatus.com/incidents/mc91s22odfvf",
           "aktualizovano": "2026-11-13T23:34:56.651Z"
-        },
-        {
-          "nazev": "Changes to Cloudflare Workers are not producing Event Subscription events",
-          "odkaz": "https://www.cloudflarestatus.com/incidents/0ocqieaifg7h",
-          "aktualizovano": "2026-11-11T05:05:06.331Z"
         }
       ],
       "postizene": [
@@ -28,7 +28,7 @@
         "Arica, Chile - (ARI)",
         "Algiers, Algeria - (ALG)"
       ],
-      "zkontrolovano": "2026-11-13T23:49:41.663Z",
+      "zkontrolovano": "2026-11-14T00:03:01.584Z",
       "chyba": null
     },
     {
@@ -39,16 +39,16 @@
         {
           "nazev": "Service Degradation Affecting Microsoft Integrations due to an underlying vendor issue.",
           "odkaz": "https://stspg.io/jth16cll1kcf",
-          "aktualizovano": "2026-11-13T10:00:05.293-08:00"
+          "aktualizovano": "2026-11-13T16:00:10.646-08:00"
         }
       ],
       "postizene": [
-        "Knowledge Base",
         "Zoom Scheduler",
-        "Ticketing",
-        "Microsoft OneDrive for Organizations"
+        "Microsoft OneDrive for Organizations",
+        "Integrations/Calendar/Plug-In/Add-In",
+        "Zoom Mail"
       ],
-      "zkontrolovano": "2026-11-13T23:49:41.663Z",
+      "zkontrolovano": "2026-11-14T00:03:01.584Z",
       "chyba": null
     },
     {
@@ -57,7 +57,7 @@
       "popis": "All Systems Operational",
       "incidenty": [],
       "postizene": [],
-      "zkontrolovano": "2026-11-13T23:49:41.663Z",
+      "zkontrolovano": "2026-11-14T00:03:01.584Z",
       "chyba": null
     }
   ]
