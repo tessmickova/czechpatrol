@@ -1,5 +1,5 @@
 {
-  "aktualizovano": "2026-11-14T05:55:10.629Z",
+  "aktualizovano": "2026-11-14T06:03:13.343Z",
   "stavy": [
     {
       "klic": "cloudflare",
@@ -28,7 +28,7 @@
         "Arica, Chile - (ARI)",
         "Algiers, Algeria - (ALG)"
       ],
-      "zkontrolovano": "2026-11-14T05:55:10.629Z",
+      "zkontrolovano": "2026-11-14T06:03:13.343Z",
       "chyba": null
     },
     {
@@ -43,12 +43,12 @@
         }
       ],
       "postizene": [
+        "Knowledge Base",
         "Zoom Scheduler",
-        "Microsoft OneDrive for Organizations",
-        "Integrations/Calendar/Plug-In/Add-In",
-        "Zoom Mail"
+        "Ticketing",
+        "Microsoft OneDrive for Organizations"
       ],
-      "zkontrolovano": "2026-11-14T05:55:10.629Z",
+      "zkontrolovano": "2026-11-14T06:03:13.343Z",
       "chyba": null
     },
     {
@@ -57,7 +57,7 @@
       "popis": "All Systems Operational",
       "incidenty": [],
       "postizene": [],
-      "zkontrolovano": "2026-11-14T05:55:10.629Z",
+      "zkontrolovano": "2026-11-14T06:03:13.343Z",
       "chyba": null
     }
   ]
