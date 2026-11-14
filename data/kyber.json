@@ -1,8 +1,26 @@
 {
-  "aktualizovano": "2026-11-14T09:00:43.574Z",
-  "nacteno": "2026-11-14T09:00:43.574Z",
+  "aktualizovano": "2026-11-14T12:00:51.587Z",
+  "nacteno": "2026-11-14T12:00:51.587Z",
   "stav": "pozor",
   "zpravy": [
+    {
+      "id": "kyberutok-na-univerzitu-karlovu-plosne-neohrozil-ucty-tvrdi-",
+      "druh": "utok",
+      "titulek": "Kyberútok na Univerzitu Karlovu plošně neohrozil účty, tvrdí škola",
+      "vydavatel": "iDNES.cz",
+      "odkaz": "https://www.idnes.cz/zpravy/domaci/kyberutok-na-univerzitu-karlovu-podle-skoly-plosne-neohrozil-ucty.A261114_111048_domaci_ichuc#utm_source=rss&utm_medium=feed&utm_campaign=zpravodaj&utm_content=main",
+      "kdy": "2026-11-14T10:17:00.000Z",
+      "uredni": false
+    },
+    {
+      "id": "uk-pri-kybernetickem-utoku-pachatel-plosne-neohrozil-uzivate",
+      "druh": "utok",
+      "titulek": "UK: Při kybernetickém útoku pachatel plošně neohrozil uživatelské účty",
+      "vydavatel": "ČTK",
+      "odkaz": "https://www.ceskenoviny.cz/zpravy/-uk-pri-kybernetickem-utoku-pachatel-plosne-neohrozil-uzivatelske-ucty/2901579?utm_source=rss&utm_medium=feed",
+      "kdy": "2026-11-14T09:36:00.000Z",
+      "uredni": false
+    },
     {
       "id": "microsoft-obnovil-fungovani-svych-sluzeb-o-kyberneticky-utok",
       "druh": "utok",

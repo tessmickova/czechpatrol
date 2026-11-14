@@ -1,5 +1,5 @@
 {
-  "aktualizovano": "2026-11-14T09:03:13.610Z",
+  "aktualizovano": "2026-11-14T12:03:37.263Z",
   "stavy": [
     {
       "klic": "cloudflare",
@@ -23,22 +23,16 @@
         "Arica, Chile - (ARI)",
         "Algiers, Algeria - (ALG)"
       ],
-      "zkontrolovano": "2026-11-14T09:03:13.610Z",
+      "zkontrolovano": "2026-11-14T12:03:37.263Z",
       "chyba": null
     },
     {
       "klic": "zoom",
       "stav": "provoz",
       "popis": "All Systems Operational",
-      "incidenty": [
-        {
-          "nazev": "Service Degradation Affecting Microsoft Integrations due to an underlying vendor issue.",
-          "odkaz": "https://stspg.io/jth16cll1kcf",
-          "aktualizovano": "2026-11-14T00:56:16.057-08:00"
-        }
-      ],
+      "incidenty": [],
       "postizene": [],
-      "zkontrolovano": "2026-11-14T09:03:13.610Z",
+      "zkontrolovano": "2026-11-14T12:03:37.263Z",
       "chyba": null
     },
     {
@@ -47,7 +41,7 @@
       "popis": "All Systems Operational",
       "incidenty": [],
       "postizene": [],
-      "zkontrolovano": "2026-11-14T09:03:13.610Z",
+      "zkontrolovano": "2026-11-14T12:03:37.263Z",
       "chyba": null
     }
   ]
