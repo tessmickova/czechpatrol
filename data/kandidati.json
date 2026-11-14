@@ -579,6 +579,250 @@
     }
   },
   {
+    "id": "k-8248d078d6dec4fc",
+    "zachyceno": "2026-11-14T09:03:08.240Z",
+    "publikovano": "2026-11-14T08:39:00.000Z",
+    "zdroj": {
+      "nazev": "Český rozhlas — domácí zprávy",
+      "url": "https://www.irozhlas.cz/veda-technologie/technologie/microsoft-obnovil-fungovani-svych-sluzeb-o-kyberneticky-utok-neslo-vypadek_2611140939_aln",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Microsoft obnovil fungování svých služeb, o kybernetický útok nešlo. Výpadek zasáhl i Česko",
+    "titulekPuvodni": "Microsoft obnovil fungování svých služeb, o kybernetický útok nešlo. Výpadek zasáhl i Česko",
+    "shrnuti": "Americká softwarová společnost Microsoft po pátečním celodenním výpadku obnovila funkčnost všech svých služeb. Oznámila to v příspěvku na sociální síti X. Výpadek zasáhl jak domácnosti, tak firmy a státní úřady, a to po celém světě včetně Česka. Microsoft už v pátek uvedl, že nic nenasvědčuje tomu, ",
+    "kodZeme": "CZ",
+    "zeme": "Česko",
+    "kategorie": [
+      "kyber"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "kyberneticky utok",
+      "kybernetick"
+    ],
+    "naliehave": null,
+    "stav": "ceka",
+    "vyrez": {
+      "text": "",
+      "stazeno": "2026-11-14T09:03:10.754Z",
+      "stav": 403,
+      "chyba": "HTTP 403"
+    }
+  },
+  {
+    "id": "k-7bc798f649c85330",
+    "zachyceno": "2026-11-14T09:03:10.652Z",
+    "publikovano": "2026-11-14T08:03:00.000Z",
+    "zdroj": {
+      "nazev": "Ukrainska Pravda (anglicky)",
+      "url": "https://www.pravda.com.ua/eng/news/2026/11/14/8062839/",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Estonia outlines details of Ukrainian attack on Russian missile ship in Baltic Sea",
+    "titulekPuvodni": "Estonia outlines details of Ukrainian attack on Russian missile ship in Baltic Sea",
+    "shrnuti": "Colonel Aron Kalmus, Deputy Commander of the Estonian Division, which brings together Estonian forces and allied units assigned to it, has described how several Ukrainian drones struck the Naro-Fominsk, a Russian Baltic Fleet corvette, during a large-scale attack on the port of Ust-Luga.",
+    "kodZeme": "EE",
+    "zeme": "Estonsko",
+    "kategorie": [
+      "hybridni",
+      "drony",
+      "rusko"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "attack on",
+      "dron",
+      "drone",
+      "russia"
+    ],
+    "naliehave": null,
+    "stav": "ceka",
+    "vyrez": {
+      "text": "Estonia outlines details of Ukrainian attack on Russian missile ship in Baltic Sea | Ukrainska Pravda\nThe Naro-Fominsk. Photo: Ukrainska Pravda\nColonel Aron Kalmus, Deputy Commander of the Estonian Division, which brings together Estonian forces and allied units assigned to it, has described how several Ukrainian drones struck the Naro-Fominsk, a Russian Baltic Fleet corvette, during a large-scale attack on the port of Ust-Luga.\nSource: Estonian Defence Ministry briefing; Estonian public broadcaster ERR ; European Pravda\nDetails: The ship was damaged in the strike and could no longer proceed under its own power.\nAdvertisement:\n\r\n\r\n\r\n\r\n\r\nDuring the attack, Ukrainian drones briefly entered the airspace over southeastern Estonia and Estonian airspace over the Gulf of Finland, Kalmus said.\n\" We are talking about minutes, not hours, that they spent over our territory. We were aware of this and monitored the situation ,\" Kalmus said.\nHe said the drones had been flying too close to the border to be shot down safely. Their debris or the munitions used against them could have crashed in Russia, with all the consequences that could entail.\n\" Both in terms of Estonia's initial defence…",
+      "stazeno": "2026-11-14T09:03:10.854Z",
+      "stav": 200
+    }
+  },
+  {
+    "id": "k-87d4b52413150015",
+    "zachyceno": "2026-11-14T09:03:10.655Z",
+    "publikovano": "2026-11-14T07:45:00.000Z",
+    "zdroj": {
+      "nazev": "Ukrainska Pravda (anglicky)",
+      "url": "https://www.pravda.com.ua/eng/news/2026/11/14/8062838/",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Russians attack Hlukhiv in morning: nine-year-old boy in intensive care, police officer injured",
+    "titulekPuvodni": "Russians attack Hlukhiv in morning: nine-year-old boy in intensive care, police officer injured",
+    "shrnuti": "A nine-year-old boy is in intensive care after a Russian drone struck a house in Hlukhiv on 14 November. His grandmother and a police officer were also injured, while an earlier attack on Shostka left three people wounded.",
+    "kodZeme": "RU",
+    "zeme": "Rusko",
+    "kategorie": [
+      "hybridni",
+      "drony",
+      "rusko"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "attack on",
+      "dron",
+      "drone",
+      "russia"
+    ],
+    "naliehave": null,
+    "stav": "ceka",
+    "vyrez": {
+      "text": "Russian drone strikes on Sumy Oblast injure child, grandmother and police officer | Ukrainska Pravda\nA fire. Photo: Sumy Oblast Military Administration\nA Russian drone has attacked a house in the city of Hlukhiv in Sumy Oblast on the morning of 14 November. A woman and her nine-year-old grandson have been injured, with the boy in a serious condition in intensive care. A police officer has also been injured in a follow-up strike.\nSource: Sumy Oblast Military Administration\nDetails: Sumy Oblast Military Administration reported that a Russian attack drone had struck a house, injuring a woman and her nine-year-old grandson. The boy sustained serious injuries and is in intensive care.\nAdvertisement:\n\r\n\r\n\r\n\r\n\r\nA police officer who had arrived at the scene to help people was injured in a follow-up strike.\nThe Russians also launched a large-scale attack on Shostka on 13 November using attack drones. Three people were injured, and residential buildings, non-residential premises, cars and other civilian infrastructure facilities were damaged.\nAccording to air defence units, five Russian drones were destroyed, while strikes were recorded at nine locations.\nBackground: Russia attacked Ukraine…",
+      "stazeno": "2026-11-14T09:03:11.060Z",
+      "stav": 200
+    }
+  },
+  {
+    "id": "k-938aa9c2d703044a",
+    "zachyceno": "2026-11-14T09:03:10.633Z",
+    "publikovano": "2026-11-14T07:21:00.000Z",
+    "zdroj": {
+      "nazev": "Ukrinform (anglicky)",
+      "url": "https://www.ukrinform.net/rubric-ato/4184589-widespread-emergency-power-outage-reported-in-sumy-region.html",
+      "typ": "wire",
+      "primarni": false
+    },
+    "titulek": "Widespread emergency power outage reported in Sumy region",
+    "titulekPuvodni": "Widespread emergency power outage reported in Sumy region",
+    "shrnuti": "A large-scale emergency power outage has affected part of the Sumy region following systematic Russian attacks on energy infrastructure.",
+    "kodZeme": "RU",
+    "zeme": "Rusko",
+    "kategorie": [
+      "infrastruktura",
+      "rusko"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "power outage",
+      "russia"
+    ],
+    "naliehave": null,
+    "stav": "ceka",
+    "vyrez": {
+      "text": "Widespread emergency power outage reported in Sumy region\n\r\nSubscription\nNewsletters\nPhotobank\nUkrinform - Ukrainian National News Agency\nFounded in 1918\nSaturday, 14 November 2026, 11:03\nWar\nEconomy\nSports\nMore ☰\nContacts\nEng\nУкр\nEng\nEsp\nDeu\nعربي\nFra\n日本語\nPol\n&times;\nAll topics\nWar\nRecovery of Ukraine\nPolitics\nEconomy\nFact checks\nDefense\nSociety and Culture\nSports\nCrime\nAccidents and Emergencies\nAgency\nInformation on Agency\nOur Contacts\nSubscribtion Terms\nOur Services\nPrivacy policy and personal data protection\nAdditional\nPublications\nInterviews\nPhoto\nVideo\nLongreads\nReleases\nServices\nSubscription\nNewsletters\nPhotobank\n\r\n\r\n\r\nA large-scale emergency power outage has affected part of the Sumy region following systematic Russian attacks on energy infrastructure.\n\r\n\r\nJSC Sumyoblenergo reported this on Telegram , according to Ukrinform.\n\r\n\r\n\"We are experiencing a large-scale emergency power outage in part of the Sumy region. We are working to restore electricity distribution,\" the statement said.\n\r\n\r\nThe company added that details of the emergency outage were being withheld for security reasons.\n\r\n\r\nEnergy workers are currently working to restore power to consumers who have been left…",
+      "stazeno": "2026-11-14T09:03:11.093Z",
+      "stav": 200
+    }
+  },
+  {
+    "id": "k-123ef796b9bb4fd2",
+    "zachyceno": "2026-11-14T09:03:08.450Z",
+    "publikovano": "2026-11-14T07:16:23.000Z",
+    "zdroj": {
+      "nazev": "Deník N",
+      "url": "https://denikn.cz/newsletter/2257160/data-ukazuji-jakemu-tlaku-bude-babis-celit-pri-protestech-stovek-tisic-lidi-univerzita-karlova-resi-kyberneticky-utok-evropu-zastoupi-na-jednanich-o-ukrajine-pet-zemi/",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "R5M: Data ukazují, jakému tlaku bude Babiš čelit při protestech stovek tisíc lidí | Univerzita Karlova řeší kybernetický útok | Evropu zastoupí na jednáních o Ukrajině pět zemí",
+    "titulekPuvodni": "R5M: Data ukazují, jakému tlaku bude Babiš čelit při protestech stovek tisíc lidí | Univerzita Karlova řeší kybernetický útok | Evropu zastoupí na jednáních o Ukrajině pět zemí",
+    "shrnuti": "",
+    "kodZeme": "UA",
+    "zeme": "Ukrajina",
+    "kategorie": [
+      "kyber"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "kyberneticky utok",
+      "kybernetick"
+    ],
+    "naliehave": null,
+    "stav": "ceka",
+    "vyrez": {
+      "text": "Data ukazují, jakému tlaku bude Babiš čelit při protestech stovek tisíc lidí | Univerzita Karlova řeší kybernetický útok | Evropu zastoupí na jednáních o Ukrajině pět zemí – Deník N\nVíce o poslechu Deníku N\nDobré ráno, čtete Ranních 5 minut od editorů Minuty N . Tento souhrn zasíláme každé všední ráno v sedm hodin, o víkendu v osm hodin.\nVašich ranních 5 minut\n1.\nCo se stane, když proti Babišovi vyjde demonstrovat čtvrtmilion lidí? Nebo půlmilion? Exkluzivní data ukazují, jakému tlaku bude premiér čelit i od svých vlastních příznivců.\nDemonstrace proti zrušení mediálních poplatků sílí, do ulic vyrážejí desetitisíce lidí , stávkují média , studenti i umělci.\nPodle dat agentury Ipsos je hranicí pro očekávanou reakci vlády zhruba půlmilion demonstrantů v celé zemi.\nVoliči ANO, SPD a Motoristů většinově nechtějí pád vlády ani při masových protestech.\nPříznivci opozičních stran (např. STAN, ODS) výrazně častěji očekávají, že vláda bude na velké protesty reagovat, část z nich i demisí.\n2.\nUniverzita Karlova řeší kybernetický útok, při kterém útočník neoprávněně získal mimo jiné i osobní údaje. Přesný rozsah škola zjišťuje, už však oznámila, že připravuje trestní oznámení.\nÚtočník podle…",
+      "stazeno": "2026-11-14T09:03:12.522Z",
+      "stav": 200
+    }
+  },
+  {
+    "id": "k-7b4d7913fd00b870",
+    "zachyceno": "2026-11-14T09:03:08.750Z",
+    "publikovano": "2026-11-14T07:00:38.000Z",
+    "zdroj": {
+      "nazev": "The Guardian — World",
+      "url": "https://www.theguardian.com/travel/2026/nov/14/eurotunnel-drive-in-fingerprint-trial-folkestone-calais-border",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "UK-EU breakthrough will allow airport-style checks at Eurotunnel to avoid border ‘chaos’",
+    "titulekPuvodni": "UK-EU breakthrough will allow airport-style checks at Eurotunnel to avoid border ‘chaos’",
+    "shrnuti": "Eurotunnel owner Getlink wants to replicate ‘airport experience’ at Folkestone and Calais, without making people get out of cars Airport-style passport and fingerprinting controls are to be introduced at Eurotunnel in an attempt to prevent “short-term and long-term chaos” in Folkestone and Calais. I",
+    "kodZeme": "GB",
+    "zeme": "Spojené království",
+    "kategorie": [
+      "hranice"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "border+checks",
+      "border"
+    ],
+    "naliehave": null,
+    "stav": "ceka",
+    "vyrez": {
+      "text": "UK-EU breakthrough will allow airport-style checks at Eurotunnel to avoid border ‘chaos’ | Channel Tunnel | The Guardian\nSkip to main content Skip to navigation\nThe entry and exit system was supposed to be active across the EU by September, but is not yet fully deployed. Photograph: Graeme Robertson/The Guardian\nView image in fullscreen\nThe entry and exit system was supposed to be active across the EU by September, but is not yet fully deployed. Photograph: Graeme Robertson/The Guardian\nUK-EU breakthrough will allow airport-style checks at Eurotunnel to avoid border ‘chaos’\nEurotunnel owner Getlink wants to replicate ‘airport experience’ at Folkestone and Calais, without making people get out of cars\nAirport-style passport and fingerprinting controls are to be introduced at Eurotunnel in an attempt to prevent “short-term and long-term chaos” in Folkestone and Calais .\nIn a breakthrough for travellers, the European Commission has agreed to a new system in which an “eagle eye” camera system, already used in Rome and Paris airports to supervise fingerprinting and facial imaging, will be used at the border between the UK and France.\nYann Leriche, the chief executive of Getlink, the…",
+      "stazeno": "2026-11-14T09:03:13.502Z",
+      "stav": 200
+    }
+  },
+  {
+    "id": "k-80c27c77d4119e42",
+    "zachyceno": "2026-11-14T09:03:10.661Z",
+    "publikovano": "2026-11-14T05:48:00.000Z",
+    "zdroj": {
+      "nazev": "Ukrainska Pravda (anglicky)",
+      "url": "https://www.pravda.com.ua/eng/news/2026/11/14/8062833/",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Ukrainian air defence downs 81 Russian drones overnight, with strikes recorded at eight locations",
+    "titulekPuvodni": "Ukrainian air defence downs 81 Russian drones overnight, with strikes recorded at eight locations",
+    "shrnuti": "Russia launched 96 drones against Ukraine overnight. Ukrainian air defence destroyed 81 drones, with strikes recorded at eight locations and falling debris at two others.",
+    "kodZeme": "UA",
+    "zeme": "Ukrajina",
+    "kategorie": [
+      "drony",
+      "rusko"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "debris+dron",
+      "dron",
+      "drone",
+      "russia"
+    ],
+    "naliehave": null,
+    "stav": "ceka",
+    "vyrez": {
+      "text": "Ukrainian air defence destroys or jams 81 Russian drones overnight | Ukrainska Pravda\nInfographic: Ukraine's Air Force\nRussia attacked Ukraine with 96 attack drones on the night of 13-14 November. Ukrainian air defence forces have downed 81 UAVs.\nSource: Ukraine's Air Force\nQuote: \"On the night of 14 November (starting from 18:00 on 13 November), the enemy attacked with 96 Shahed (61 jet-powered) and Gerbera attack drones and Parodiya decoy UAVs launched from the Russian cities of Bryansk, Oryol and Primorsko-Akhtarsk as well as from temporarily occupied Donetsk and Hvardiiske in Crimea.\"\nAdvertisement:\n\r\n\r\n\r\n\r\n\r\nDetails: Early reports indicated that as of 07:30, Ukrainian air defence forces had destroyed or jammed 81 Shahed (52 jet-powered), Gerbera and other types of drones.\nHits by drones have been recorded at eight locations and the fall of downed UAVs (debris) at two locations.\nSupport Ukrainska Pravda on Patreon to help us keep reporting!\nUkraine's Air Force\ndrones\nair defence\nRussia-Ukraine war\nAdvertisement:\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nUkraine's Air Force\nUkrainian air defences down 80 Russian drones overnight, strikes recorded at 24 locations\nUkrainian air defences down 124…",
+      "stazeno": "2026-11-14T09:03:13.567Z",
+      "stav": 200
+    }
+  },
+  {
     "id": "k-1b1e5223895a5693",
     "zachyceno": "2026-11-14T03:02:43.371Z",
     "publikovano": "2026-11-14T01:29:00.000Z",
@@ -10099,252 +10343,6 @@
     "vyrez": {
       "text": "Fire breaks out at Russia's Ust-Luga port following large-scale drone attack | Ukrainska Pravda\nA fire. Photo: Supernova+\nRussia's Leningrad Oblast came under a drone attack on the night of 10-11 November that caused a fire at the port of Ust-Luga and the emergency shutdown of a transformer substation.\nSource: Leningrad Oblast Governor Aleksandr Drozdenko ; Kremlin-aligned Russian news agency TASS ; Russian media outlet Astra\nDetails: Drozdenko claimed that 42 UAVs had been shot down over Leningrad Oblast.\nAdvertisement:\n\r\n\r\n\r\n\r\n\r\nRussian media outlets reported earlier that two aircraft bound for St Petersburg had landed in Helsinki due to safety concerns.\nRestrictions on aircraft arrivals and departures have been imposed at Pulkovo Airport.\nMonitoring Telegram channels noted that Russian air defence forces were shooting down drones heading towards St Petersburg and Leningrad Oblast over Tver.\nTelegram channels also reported that port infrastructure in Ust-Luga, Leningrad Oblast, is on fire following the drone attack.\nAt around 02:00, Drozdenko claimed that the number of drones shot down over Leningrad Oblast had risen to 92.\n\r\n\r\n\r\nNASA's Fire Information for Resource Management…",
       "stazeno": "2026-11-11T10:03:12.535Z",
-      "stav": 200
-    }
-  },
-  {
-    "id": "k-d4adcae29cb036f7",
-    "zachyceno": "2026-11-11T08:03:04.909Z",
-    "publikovano": "2026-11-10T22:08:00.000Z",
-    "zdroj": {
-      "nazev": "Ukrainska Pravda (anglicky)",
-      "url": "https://www.pravda.com.ua/eng/news/2026/11/11/8062239/",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Kryvyi Rih partially without electricity following large-scale Russian drone attack",
-    "titulekPuvodni": "Kryvyi Rih partially without electricity following large-scale Russian drone attack",
-    "shrnuti": "A large-scale Russian drone attack on critical infrastructure facilities has left parts of Kryvyi Rih without electricity, with water and sewage systems running on generators and heating supplies facing difficulties.",
-    "kodZeme": "RU",
-    "zeme": "Rusko",
-    "kategorie": [
-      "hybridni",
-      "drony",
-      "infrastruktura",
-      "rusko"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "zeSite": null,
-    "shody": [
-      "attack on",
-      "dron",
-      "drone",
-      "critical infrastructure",
-      "russia"
-    ],
-    "naliehave": null,
-    "stav": "ceka",
-    "vyrez": {
-      "text": "Russian drone attack disrupts electricity supply in Kryvyi Rih and damages residential buildings | Ukrainska Pravda\nSmoke. Stock photo: Suspilne\nParts of the city of Kryvyi Rih have been left without electricity following a Russian drone attack.\nSource: Oleksandr Vilkul, Head of Kryvyi Rih Defence Council, on social media\nQuote: \"The city is partially without electricity.\nAdvertisement:\n\r\n\r\n\r\n\r\n\r\nWe are stabilising the water supply and sewage systems using generators.\nRestoring the heating supply will be more difficult.\"\nDetails: Vilkul also noted that apartment buildings, schools and kindergartens had been damaged in Kryvyi Rih.\nHe added that emergency crews from all the appropriate services are working to deal with the aftermath of the attack.\nVilkul had earlier reported a large-scale Russian drone attack on Kryvyi Rih, with critical infrastructure facilities being targeted.\nSupport Ukrainska Pravda on Patreon to help us keep reporting!\nKryvyi Rih\ndrones\nRussia-Ukraine war\nenergy\nAdvertisement:\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nKryvyi Rih\nTwo killed and seven injured in Russian strike on Kryvyi Rih\nRussians hit hospital in Kryvyi Rih, injuring five, medical worker in serious…",
-      "stazeno": "2026-11-11T10:03:12.556Z",
-      "stav": 200
-    }
-  },
-  {
-    "id": "k-e09bde83ffafc449",
-    "zachyceno": "2026-11-10T22:31:41.764Z",
-    "publikovano": "2026-11-10T21:57:57.000Z",
-    "zdroj": {
-      "nazev": "The Guardian — World",
-      "url": "https://www.theguardian.com/us-news/2026/nov/10/prosecutors-charge-iranian-operative-uk-air-force-attack",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "US prosecutors charge Iranian operative allegedly responsible for UK air force base attack",
-    "titulekPuvodni": "US prosecutors charge Iranian operative allegedly responsible for UK air force base attack",
-    "shrnuti": "New indictment claims Mohammad Dawood al-Saadi, a dual Iranian and Iraqi national, plotted while in US custody US federal prosecutors have said that an Iranian operative jailed in New York was responsible for the foiled attack on a UK air force base where American B-1 bombers were stationed. A new i",
-    "kodZeme": "GB",
-    "zeme": "Spojené království",
-    "kategorie": [
-      "sabotaz",
-      "hybridni"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "zeSite": null,
-    "shody": [
-      "bomb",
-      "attack on"
-    ],
-    "naliehave": null,
-    "stav": "ceka",
-    "vyrez": {
-      "text": "US prosecutors charge Iranian operative allegedly responsible for UK air force base attack | New York | The Guardian\nSkip to main content Skip to navigation\nThe RAF Fairford base in Fairford, England, on 28 September. Photograph: Ben Stansall/AFP/Getty Images\nView image in fullscreen\nThe RAF Fairford base in Fairford, England, on 28 September. Photograph: Ben Stansall/AFP/Getty Images\nUS prosecutors charge Iranian operative allegedly responsible for UK air force base attack\nNew indictment claims Mohammad Dawood al-Saadi, a dual Iranian and Iraqi national, plotted while in US custody\nUS federal prosecutors have said that an Iranian operative jailed in New York was responsible for the foiled attack on a UK air force base where American B-1 bombers were stationed.\nA new indictment alleged that Mohammad Dawood al-Saadi, a dual Iranian and Iraqi national, plotted while in custody and then transmitted plans – using coded messages in calls to his family – to two co-conspirators to buy large quantities of chemicals that could be used as explosives in an attack on the RAF Fairford base in September.\nAl-Saadi, who was accused of being associated with Kata’ib Hezbollah and Iran’s Islamic…",
-      "stazeno": "2026-11-10T22:31:44.172Z",
-      "stav": 200
-    }
-  },
-  {
-    "id": "k-b2ed8d981656a1d1",
-    "zachyceno": "2026-11-10T22:02:46.592Z",
-    "publikovano": "2026-11-10T21:29:56.000Z",
-    "zdroj": {
-      "nazev": "Meduza (anglicky)",
-      "url": "https://meduza.io/en/news/2026/11/11/british-police-arrest-senior-u-s-army-soldier-near-gloucester-on-suspicion-of-spying-for-russia",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "British police arrest senior U.S. Army soldier near Gloucester on suspicion of spying for Russia",
-    "titulekPuvodni": "British police arrest senior U.S. Army soldier near Gloucester on suspicion of spying for Russia",
-    "shrnuti": "British police have arrested a senior U.S. Army soldier on suspicion of working for Russian intelligence. The 41-year-old was detained on Tuesday near Gloucester and taken to London, where he is being held at a police station.",
-    "kodZeme": "GB",
-    "zeme": "Spojené království",
-    "kategorie": [
-      "zpravodajske",
-      "rusko"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "zeSite": null,
-    "shody": [
-      "arrested+spy",
-      "russia"
-    ],
-    "naliehave": null,
-    "stav": "ceka",
-    "vyrez": {
-      "text": "British police arrest senior U.S. Army soldier near Gloucester on suspicion of spying for Russia — Meduza\nSkip to main content\nBritish police arrest senior U.S. Army soldier near Gloucester on suspicion of spying for Russia\nNovember 10, 2026, 9:29 pm\nSource: NBC News\nBritish police have arrested a senior U.S. Army soldier on suspicion of working for Russian intelligence. The 41-year-old was detained on Tuesday near Gloucester and taken to London, where he is being held at a police station.\nFBI Director Kash Patel called the arrest “important” and said it “involves allegations of espionage, which is of the utmost concern to the United States and our allies.”\nNoting the investigation is ongoing, he added that the FBI “has no tolerance for anyone who breaks their oath to the United States and whose actions endanger our national security and that of our partners.”\nThe soldier had access to sensitive information, said General Sean Stinchon, the commanding general of U.S. Army Counterintelligence Command.\nFrom Meduza’s archives\nU.S. uncovers network that plotted assassinations of Russian ‘dissidents’ in Washington and Vilnius. Among the suspects: an ex-colonel with Putin ties, his FSB…",
-      "stazeno": "2026-11-10T22:02:46.677Z",
-      "stav": 200
-    }
-  },
-  {
-    "id": "k-937e2d10d52db459",
-    "zachyceno": "2026-11-10T22:02:44.756Z",
-    "publikovano": "2026-11-10T21:25:45.000Z",
-    "zdroj": {
-      "nazev": "France 24 (anglicky)",
-      "url": "https://www.france24.com/en/asymmetric-cyberwarfare-states-increasingly-use-cyberattacks-in-support-of-their-other-objectives",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Asymmetric cyberwarfare: 'States increasingly use cyberattacks in support of their other objectives'",
-    "titulekPuvodni": "Asymmetric cyberwarfare: 'States increasingly use cyberattacks in support of their other objectives'",
-    "shrnuti": "Erin Ogunkeye is pleased to welcome Rafe Pilling, Director of Threat Intelligence in the Sophos Counter Threat Unit (CTU). How can a minor cyber intrusion disrupt food supplies, expose the weaknesses of industrial infrastructure and become an instrument of geopolitical confrontation? The cyberattack",
-    "kodZeme": "FR",
-    "zeme": "Francie",
-    "kategorie": [
-      "kyber"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "zeSite": null,
-    "shody": [
-      "cyberattack",
-      "cyber"
-    ],
-    "naliehave": null,
-    "stav": "ceka",
-    "vyrez": {
-      "text": "Asymmetric cyberwarfare: 'States increasingly use cyberattacks in support of their other objectives' - France 24\nSkip to main content\nTo display this content from YouTube, you must enable advertisement tracking and audience measurement.\nAccept\nManage my choices\nOne of your browser extensions seems to be blocking the video player from loading. To watch this content, you may need to disable it on this site.\nTry again\nCover image: © France 24\n11:10\nVideo content\nVideo\nAsymmetric cyberwarfare: 'States increasingly use cyberattacks in support of their other objectives'\nIssued on: 10/11/2026 - 22:25\nShare\nErin Ogunkeye is pleased to welcome Rafe Pilling, Director of Threat Intelligence in the Sophos Counter Threat Unit (CTU). How can a minor cyber intrusion disrupt food supplies, expose the weaknesses of industrial infrastructure and become an instrument of geopolitical confrontation? The cyberattacks targeting supermarket refrigeration systems in France offer a revealing illustration of how digital vulnerabilities can translate into tangible economic disruption and potentially broader threats to society. As Pilling explains, “With a small amount of effort from the adversary side, they…",
-      "stazeno": "2026-11-10T22:02:46.733Z",
-      "stav": 200
-    }
-  },
-  {
-    "id": "k-d9fbc28ad6097011",
-    "zachyceno": "2026-11-10T22:02:44.327Z",
-    "publikovano": "2026-11-10T20:44:00.000Z",
-    "zdroj": {
-      "nazev": "iDNES.cz — zpravodajství",
-      "url": "https://www.idnes.cz/zpravy/zahranicni/britska-policie-zatceni-americka-armada-podezreni-trestny-cin-rusko.A261110_202429_zahranicni_fohl#utm_source=rss&utm_medium=feed&utm_campaign=zpravodaj&utm_content=main",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Britská policie zatkla příslušníka americké armády. Mluví se o špionáži pro Rusko",
-    "titulekPuvodni": "Britská policie zatkla příslušníka americké armády. Mluví se o špionáži pro Rusko",
-    "shrnuti": "Britská policie zatkla příslušníka amerických ozbrojených sil, který je podezřelý z trestných činů podle zákona o národní bezpečnosti. Věc se týká Ruska, uvedla v úterý večer britská policie s tím, že spolupracuje s americkými úřady včetně Federálního úřadu pro vyšetřování (FBI). Ředitel FBI Kash Pa",
-    "kodZeme": "GB",
-    "zeme": "Spojené království",
-    "kategorie": [
-      "zpravodajske",
-      "vojsko",
-      "rusko"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "zeSite": null,
-    "shody": [
-      "zatc+spion",
-      "spionaz",
-      "policie",
-      "rusk"
-    ],
-    "naliehave": null,
-    "stav": "ceka",
-    "vyrez": {
-      "text": "Britská policie zatkla příslušníka americké armády. Mluví se o špionáži pro Rusko - iDNES.cz \r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\niDNES.cz\n\r\n\r\n\r\nP�ihl�sit \r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nAbyste mohli pokra�ovat, pot�ebujeme v�d�t, jakou formou v�m m��eme zobrazovat reklamu \r\n\r\n\r\n\r\n\r\n\r\nV�mi zvolen� nastaven� \r\nneobsahuje souhlas se zobrazov�n�m c�len� reklamy . \r\nVyberte pros�m znovu, \r\njakou formou v�m m�me zobrazovat obsah. \r\n\r\n\r\n\r\n\r\n\r\n\r\niDNES Premium\n\r\nBez reklam\n\r\n\r\n199 K� m�s��n�\n\r\nM��ete neomezen� ��st iDNES.cz, Lidovky.cz, Expres.cz a Antiyoutuber.cz. K tomu dostanete tak� noviny a �asopisy v elektronick� podob�. To v�e bez reklam. 1\n\r\n\r\nP�edplatit\n\r\n\r\nU� m�te ��et? P�ihlaste se\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nS c�lenou reklamou\n\r\n\r\n\r\nZdarma \r\n\r\nZachov�me v�m v�e tak, jak jste zvykl� a reklamu p�izp�sob�me va�im z�jm�m. Bez omezen� si m��ete d�l ��st, p�ehr�vat videa, sout�it �i p�isp�vat do v�ech diskus�. 2\n\r\n\r\nSouhlas�m\n\r\nPodrobn� nastaven�\n\r\n\r\n\r\n\r\n\r\n\r\niDNES a reklama\n\r\nPokud vyu�ijete m�sto platby ud�len� souhlasu s reklamou (tj. souhlas s vyu�it�m cookies a dal��ch s�ov�ch identifik�tor� pro ��ely c�len� reklamy), \r\nbudou V�m…",
-      "stazeno": "2026-11-10T22:02:46.820Z",
-      "stav": 200
-    }
-  },
-  {
-    "id": "k-9083470d25a95502",
-    "zachyceno": "2026-11-10T22:02:44.759Z",
-    "publikovano": "2026-11-10T20:23:04.000Z",
-    "zdroj": {
-      "nazev": "France 24 (anglicky)",
-      "url": "https://www.france24.com/en/europe/20261110-us-soldier-arrested-in-britain-on-suspicion-of-assisting-russian-intelligence",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "US soldier arrested in Britain on suspicion of assisting Russian intelligence",
-    "titulekPuvodni": "US soldier arrested in Britain on suspicion of assisting Russian intelligence",
-    "shrnuti": "UK police arrested a senior member of the US Army on Tuesday on suspicion of assisting Russian intelligence, adding that the arrest was not related to other counter-terror investigations. The 41-year-old man was detained near the city of Gloucester, west England, and remains in custody.",
-    "kodZeme": "GB",
-    "zeme": "Spojené království",
-    "kategorie": [
-      "zpravodajske",
-      "rusko"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "zeSite": null,
-    "shody": [
-      "arrested+russia",
-      "russia"
-    ],
-    "naliehave": null,
-    "stav": "ceka",
-    "vyrez": {
-      "text": "US soldier arrested in Britain on suspicion of assisting Russian intelligence - France 24\nSkip to main content\nAdvertising\nUS soldier arrested in Britain on suspicion of assisting Russian intelligence\nUK police arrested a senior member of the US Army on Tuesday on suspicion of assisting Russian intelligence, adding that the arrest was not related to other counter-terror investigations. The 41-year-old man was detained near the city of Gloucester, west England, and remains in custody.\nIssued on: 10/11/2026 - 21:23\n1 min Reading time\nShare\nBy:\nFRANCE 24\nThe US military said the suspect was \"entrusted with sensitive information\". © Christof Stache, AFP\nA senior member of the US Army was arrested Tuesday in England on suspicion of espionage related to Russia , counterterror police said.\nThe 41-year-old, who was not named, was arrested near Gloucester on suspicion of violating two sections of the National Security Act 2023 – for assisting a foreign intelligence service and obtaining or disclosing protected information.\nThe Metropolitan Police said its counter-terror forces worked closely with the FBI and US military .\nFBI Director Kash Patel called it an “important arrest\" dealing with…",
-      "stazeno": "2026-11-10T22:02:49.795Z",
-      "stav": 200
-    }
-  },
-  {
-    "id": "k-2cfcf95d49994d2e",
-    "zachyceno": "2026-11-10T22:02:44.761Z",
-    "publikovano": "2026-11-10T20:19:22.000Z",
-    "zdroj": {
-      "nazev": "France 24 (anglicky)",
-      "url": "https://www.france24.com/en/tv-shows/the-debate/20261110-what-the-hack-europeans-face-growing-psyops-and-cyberattacks",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "What the hack? Europeans face growing psyops and cyberattacks",
-    "titulekPuvodni": "What the hack? Europeans face growing psyops and cyberattacks",
-    "shrnuti": "So this time, it's Iran, not Russia? France - reportedly acting on US intelligence - summoning Tehran’s ambassador over last month’s hacking of hundreds of supermarket refrigerators that overheated, 15 of which even caught fire. Why now at a time when Iran’s trying to break its international isolati",
-    "kodZeme": "FR",
-    "zeme": "Francie",
-    "kategorie": [
-      "kyber",
-      "rusko"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "zeSite": null,
-    "shody": [
-      "cyberattack",
-      "cyber",
-      "russia"
-    ],
-    "naliehave": null,
-    "stav": "ceka",
-    "vyrez": {
-      "text": "What the hack? Europeans face growing psyops and cyberattacks - The Debate - France 24\nSkip to main content\nVideo content\nProgram\nEurope\nWhat the hack? Europeans face growing psyops and cyberattacks\nTo display this content from YouTube, you must enable advertisement tracking and audience measurement.\nAccept\nManage my choices\nOne of your browser extensions seems to be blocking the video player from loading. To watch this content, you may need to disable it on this site.\nTry again\nCover image: A woman walks with her shopping trolley past partially empty shelves at a SuperValu store in Blanchardstown, Dublin, Ireland, November 2, 2026. Ireland's third-largest supermarket chain, SuperValu, said on Monday that refrigeration systems limited to a specific model in 13 of its 223 stores have been affected by a cyber incident, with chilled and frozen products removed from sale © Natalia Campos, REUTERS\n43:10\nIssued on: 10/11/2026 - 21:19 Modified: 10/11/2026 - 21:20\n43:10 min\nShare\nPlay (43:09 min)\nFrom the show\nReading time\n1 min\nSo this time, it's Iran, not Russia? France - reportedly acting on US intelligence - summoning Tehran’s ambassador over last month’s hacking of hundreds of…",
-      "stazeno": "2026-11-10T22:02:50.079Z",
       "stav": 200
     }
   }

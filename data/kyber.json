@@ -1,15 +1,24 @@
 {
-  "aktualizovano": "2026-11-14T06:00:56.958Z",
-  "nacteno": "2026-11-14T06:00:56.958Z",
-  "stav": "klid",
+  "aktualizovano": "2026-11-14T09:00:43.574Z",
+  "nacteno": "2026-11-14T09:00:43.574Z",
+  "stav": "pozor",
   "zpravy": [
     {
-      "id": "microsoft-ma-rozsahly-vypadek-cloudu-uz-18-hodin-nefunguji-e",
-      "druh": "vypadek",
-      "titulek": "Microsoft má rozsáhlý výpadek cloudu. Už 18 hodin nefungují e-maily, Copilot ani další služby",
-      "vydavatel": "Živě.cz",
-      "odkaz": "https://www.zive.cz/clanky/microsoft-ma-rozsahly-vypadek-cloudu-nefunguji-e-maily-ani-dalsi-sluzby/sc-3-a-244432/default.aspx",
-      "kdy": "2026-11-13T06:15:00.000Z",
+      "id": "microsoft-obnovil-fungovani-svych-sluzeb-o-kyberneticky-utok",
+      "druh": "utok",
+      "titulek": "Microsoft obnovil fungování svých služeb, o kybernetický útok nešlo. Výpadek zasáhl i Česko",
+      "vydavatel": "iROZHLAS",
+      "odkaz": "https://www.irozhlas.cz/veda-technologie/technologie/microsoft-obnovil-fungovani-svych-sluzeb-o-kyberneticky-utok-neslo-vypadek_2611140939_aln",
+      "kdy": "2026-11-14T08:39:00.000Z",
+      "uredni": false
+    },
+    {
+      "id": "r5m-data-ukazuji-jakemu-tlaku-bude-babis-celit-pri-protestec",
+      "druh": "utok",
+      "titulek": "R5M: Data ukazují, jakému tlaku bude Babiš čelit při protestech stovek tisíc lidí | Univerzita Karlova řeší kybernetický útok | Evropu zastoupí na jednáních o Ukrajině pět zemí",
+      "vydavatel": "Deník N",
+      "odkaz": "https://denikn.cz/newsletter/2257160/data-ukazuji-jakemu-tlaku-bude-babis-celit-pri-protestech-stovek-tisic-lidi-univerzita-karlova-resi-kyberneticky-utok-evropu-zastoupi-na-jednanich-o-ukrajine-pet-zemi/",
+      "kdy": "2026-11-14T07:16:23.000Z",
       "uredni": false
     },
     {
