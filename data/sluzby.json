@@ -1,5 +1,5 @@
 {
-  "aktualizovano": "2026-11-15T09:02:49.321Z",
+  "aktualizovano": "2026-11-15T09:49:49.092Z",
   "stavy": [
     {
       "klic": "cloudflare",
@@ -18,16 +18,22 @@
         "Arica, Chile - (ARI)",
         "Algiers, Algeria - (ALG)"
       ],
-      "zkontrolovano": "2026-11-15T09:02:49.321Z",
+      "zkontrolovano": "2026-11-15T09:49:49.092Z",
       "chyba": null
     },
     {
       "klic": "zoom",
       "stav": "provoz",
       "popis": "All Systems Operational",
-      "incidenty": [],
+      "incidenty": [
+        {
+          "nazev": "Service Degradation Affecting Zoom Events custom domain",
+          "odkaz": "https://stspg.io/47krtvpb5txr",
+          "aktualizovano": "2026-11-15T01:49:22.146-08:00"
+        }
+      ],
       "postizene": [],
-      "zkontrolovano": "2026-11-15T09:02:49.321Z",
+      "zkontrolovano": "2026-11-15T09:49:49.092Z",
       "chyba": null
     },
     {
@@ -36,7 +42,7 @@
       "popis": "All Systems Operational",
       "incidenty": [],
       "postizene": [],
-      "zkontrolovano": "2026-11-15T09:02:49.321Z",
+      "zkontrolovano": "2026-11-15T09:49:49.092Z",
       "chyba": null
     }
   ]
