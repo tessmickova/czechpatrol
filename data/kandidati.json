@@ -1,5 +1,50 @@
 [
   {
+    "id": "k-1987de2e324dcb2e",
+    "zachyceno": "2026-11-15T18:02:52.257Z",
+    "publikovano": "2026-11-15T17:29:19.000Z",
+    "zdroj": {
+      "nazev": "Seznam Zprávy",
+      "url": "https://www.seznamzpravy.cz/clanek/zahranicni-estonsko-od-prosince-zavre-hranice-s-ruskem-320632",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Estonsko od prosince zavře hranice s Ruskem",
+    "titulekPuvodni": "Estonsko od prosince zavře hranice s Ruskem",
+    "shrnuti": "Kvůli údajným sabotážím proti tamním zbrojovkám ze strany ruské GRU uzavře Estonsko hraniční přechody s Ruskem. Moskva se k věci zatím nevyjádřila. Obvinění z účasti na sabotážních operacích proti Evropě opakovaně popírá.",
+    "kodZeme": "EE",
+    "zeme": "Estonsko",
+    "kategorie": [
+      "sabotaz",
+      "zpravodajske",
+      "hranice",
+      "rusko"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "sabotaz",
+      "obvin+sabot",
+      "hranic+uzavr",
+      "gru",
+      "hranice",
+      "hranicni prechod",
+      "rusk"
+    ],
+    "naliehave": {
+      "druh": "hranice-nato",
+      "stupen": 2,
+      "proc": "operaci+hranic"
+    },
+    "stav": "ceka",
+    "vyrez": {
+      "text": "Estonsko od prosince zavře hranice s Ruskem - Seznam Zprávy\nZobrazení snímku 1 z 0\nHlavní obsah\nEstonsko od prosince zavře hranice s Ruskem\nČTK\n2:48\nChcete-li článek poslouchat, přihlaste se\neBook\nSdílet\nFoto: Shutterstock.com\nIlustrační foto.\n18:29\nKvůli údajným sabotážím proti tamním zbrojovkám ze strany ruské GRU uzavře Estonsko hraniční přechody s Ruskem. Moskva se k věci zatím nevyjádřila. Obvinění z účasti na sabotážních operacích proti Evropě opakovaně popírá.\nČlánek\nEstonsko uzavře od 1. prosince všechny hraniční přechody s Ruskem, oznámil v neděli na sociální síti ministr zahraničí Margus Tsahkna. Důvodem jsou podle něj jasné důkazy, že ruská vojenská rozvědka GRU nařídila sabotážní útok proti estonské zbrojní společnosti. Šéf estonské diplomacie uvedl, že o rozhodnutí Tallinnu informoval své protějšky ve Finsku, Lotyšsku a Litvě. Moskva se k věci zatím nevyjádřila.\n„Rusko si musí uvědomit, že nepřátelské akce namířené proti Estonsku nesou důsledky. Pokusy o zastrašování, destabilizaci či podkopávání naší bezpečnosti nezůstanou bez odezvy,“ uvedl Tsahkna na síti X. „Uzavření hraničních přechodů omezí schopnost Ruska provádět nepřátelské aktivity v Estonsku a posílí naše…",
+      "stazeno": "2026-11-15T18:02:54.447Z",
+      "stav": 200
+    }
+  },
+  {
     "id": "k-1af0b7c5ba93b43b",
     "zachyceno": "2026-11-13T15:04:04.707Z",
     "publikovano": "2026-11-13T14:58:52.000Z",
@@ -575,6 +620,84 @@
     "vyrez": {
       "text": "Romania scrambles four F-16s after two drones violate its airspace | Ukrainska Pravda\nA fighter jet. Stock photo: Getty Images\nRadar surveillance systems operated by Romania's Ministry of National Defence detected two unmanned aerial vehicles that had entered the country's airspace without authorisation on the evening of 31 October.\nSource: Romania's Ministry of National Defence , as reported by European Pravda\nDetails: Romania scrambled four F-16 fighter jets and an IAR-330 SOCAT helicopter to monitor the situation and manage the response after two unmanned aerial vehicles violated the country's airspace.\nAdvertisement:\n\r\n\r\n\r\n\r\n\r\nAlerts were issued in six Romanian counties due to the airspace violation: Iași, Neamț, Vaslui, Botoșani, Bacău and Suceava.\nOne of the two drones left the country's airspace, while the other was last spotted in the area between the counties of Vaslui and Bacău.\nNo drone crashes were reported.\nBackground:\nOn the same day, a drone violated Moldovan airspace during Russian aerial attacks on Ukraine.\nOn 23 October, Moldova's Foreign Ministry condemned the violation of the country's airspace by a drone and blamed Russia for the incident.\nAfter a drone was…",
       "stazeno": "2026-11-01T10:03:31.722Z",
+      "stav": 200
+    }
+  },
+  {
+    "id": "k-c99dd37204258f0a",
+    "zachyceno": "2026-11-15T18:02:52.751Z",
+    "publikovano": "2026-11-15T17:05:14.000Z",
+    "zdroj": {
+      "nazev": "France 24 (anglicky)",
+      "url": "https://www.france24.com/en/europe/20261115-estonia-to-close-russian-border-crossings-after-sabotage-attempt-at-drone-factory",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Estonia to close Russian border crossings after 'sabotage' attempt at drone factory",
+    "titulekPuvodni": "Estonia to close Russian border crossings after 'sabotage' attempt at drone factory",
+    "shrnuti": "Estonia will close all its border crossing points with Russia from December 1, its ​foreign minister ‌said on Sunday, following a suspected ⁠sabotage attack on an Estonian defence company that Tallinn blamed on ‌Moscow.",
+    "kodZeme": "EE",
+    "zeme": "Estonsko",
+    "kategorie": [
+      "sabotaz",
+      "hybridni",
+      "drony",
+      "hranice",
+      "rusko"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "sabotage",
+      "attack on",
+      "dron",
+      "drone",
+      "border",
+      "russia"
+    ],
+    "naliehave": null,
+    "stav": "ceka",
+    "vyrez": {
+      "text": "Estonia to close Russian border crossings after 'sabotage' attempt at drone factory - France 24\nSkip to main content\nAdvertising\nEstonia to close Russian border crossings after 'sabotage' attempt at drone factory\nEstonia will close all its border crossing points with Russia from December 1, its ​foreign minister ‌said on Sunday, following a suspected ⁠sabotage attack on an Estonian defence company that Tallinn blamed on ‌Moscow. \nIssued on: 15/11/2026 - 18:05 Modified: 15/11/2026 - 18:06\n1 min Reading time\nShare\nBy:\nFRANCE 24\nA border fence between Estonia and Russia near Vinski, in southeastern Estonia, in September 2025. © Hendrik Osula, AP file photo\nEstonia said Sunday it would close its border with Russia after stopping what it said was an attempted arson attack by Russia's GRU military intelligence on a drone factory.\n\"Estonia will close all Estonian-Russian border crossing points as of 1 December,\" Foreign Minister Margus Tsahkna posted on X, citing \"clear evidence\" that the GRU had ordered the attack.\nEarlier Sunday, Prime Minister Kristen Michal wrote on X that the GRU had ordered a \"sabotage attempt\" at the Estonian defence company Threod Systems on Saturday…",
+      "stazeno": "2026-11-15T18:02:55.154Z",
+      "stav": 200
+    }
+  },
+  {
+    "id": "k-f982a4e6a24bc059",
+    "zachyceno": "2026-11-15T18:02:53.715Z",
+    "publikovano": "2026-11-15T17:03:11.000Z",
+    "zdroj": {
+      "nazev": "VRT NWS (Belgie)",
+      "url": "https://www.vrt.be/vrtnws/nl/2026/11/15/estland-sluit-alle-grensovergangen-met-rusland-na-nieuwe-poging.rss.xml",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Estland sluit alle grensovergangen met Rusland na nieuwe poging tot brandstichting in dronefabriek",
+    "titulekPuvodni": "Estland sluit alle grensovergangen met Rusland na nieuwe poging tot brandstichting in dronefabriek",
+    "shrnuti": "Estland heeft beslist om alle grensovergangen met buurland Rusland te sluiten na een nieuwe poging tot brandstichting bij een wapenfabrikant die drones levert aan Oekraïne. Volgens de regering in Tallinn zit de Russische inlichtingendienst GRU achter de sabotageactie.",
+    "kodZeme": "EE",
+    "zeme": "Estonsko",
+    "kategorie": [
+      "sabotaz",
+      "drony",
+      "zpravodajske"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "sabotage",
+      "dron",
+      "drone",
+      "gru"
+    ],
+    "naliehave": null,
+    "stav": "ceka",
+    "vyrez": {
+      "text": "Estland sluit alle grensovergangen met Rusland na nieuwe poging tot brandstichting in dronefabriek https://images.vrt.be/w960hx/logos/vrtnws_logo_2022_wbg.png https://vrtnws.be/p.E1dvwQEQB 2026-11-15T17:12:11.597Z VRT NWS\nEstland sluit alle grensovergangen met Rusland na nieuwe poging tot brandstichting in dronefabriek https://vrtnws.be/p.E1dvwQEQB 2026-11-15T17:03:11.000Z\n2026-11-15T17:03:11.000Z <div>\n<p>Estland heeft beslist om alle grensovergangen met buurland Rusland te sluiten na een nieuwe poging tot brandstichting bij een wapenfabrikant die drones levert aan Oekraïne. Volgens de regering in Tallinn zit de Russische inlichtingendienst GRU achter de sabotageactie.</p>\n</div><div>\n<div>\n<div></div>\n<div></div>\n</div>\n</div>\n<div>\n<div>\n<div>\n<p>Gisterenochtend was er een poging tot brandstichting bij de Estse dronesfabrikant Threod Systems, die onder meer aan Oekraïne levert. De materiële schade bleef beperkt doordat het beveiligingspersoneel van het bedrijf snel kon ingrijpen. Intussen zijn 8 verdachten opgepakt.</p>\n</div>\n</div>\n</div>\n<figure>\n<img src=\"https://images.vrt.be/w1280hx/2026/11/15/46a14a86-9153-427a-9e73-bbfb3fced9ce.png\">\n<figcaption>\nHet gebouw van het…",
+      "stazeno": "2026-11-15T18:02:55.370Z",
       "stav": 200
     }
   },
@@ -1203,7 +1326,12 @@
       "russia"
     ],
     "naliehave": null,
-    "stav": "ceka"
+    "stav": "ceka",
+    "vyrez": {
+      "text": "Massive Russian strike hits Odesa Oblast, damaging civilian infrastructure and grain warehouses | Ukrainska Pravda\nThe aftermath of the Russian attack on Odesa. Photo: Odesa Oblast Military Administration\nCivilian infrastructure was damaged and cars caught fire due to a Russian attack on Odesa on 15 November.\nSource: Serhii Lysak , Head of Odesa City Military Administration; Oleh Kiper , Head of Odesa Oblast Military Administration\nQuote from Lysak: \"The enemy has attacked Odesa. Infrastructure has been damaged. Cars are on fire.\"\nAdvertisement:\n\r\n\r\n\r\n\r\n\r\nDetails: Kiper reported that Odesa Oblast came under a massive Russian attack.\nQuote from Kiper: \"Civilian infrastructure has been damaged in various districts in the Oblast, including in Odesa. A car dealership and storage facilities, including grain warehouses, have been destroyed. Fires broke out and cars caught fire as a result of the attack.\"\nDetails: No information regarding casualties has been received so far.\nYour support on Patreon helps us keep the news free and accessible.\nOdesa\nOdesa Oblast\nAdvertisement:\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nOdesa\nRussians strike Odesa with jet-powered drones, killing two and injuring seven –…",
+      "stazeno": "2026-11-15T18:02:55.433Z",
+      "stav": 200
+    }
   },
   {
     "id": "k-696b98915100b2c6",
@@ -1346,7 +1474,12 @@
       "russia"
     ],
     "naliehave": null,
-    "stav": "ceka"
+    "stav": "ceka",
+    "vyrez": {
+      "text": "Estonia to close border crossings with Russia after GRU-linked sabotage attacks | News | ERR\n{{noticeUi.heading[langCode]}}\n{{infoLink[langCode].label}}\n{{noticeUi.allowAllLabel[langCode]}}\n{{rewokeLabels[langCode]}}\nX !\nNews\nERR News\n{{1794751680000 | amCalendar}}\nshare Facebook X (Twitter) e-mail\nPrime Minister Kristen Michal (Reform). Source: Siim Lõvi/ERR\nNews\nPrime Minister Kristen Michal (Reform) has requested that the \"necessary steps\" be taken to close Estonia's eastern border with Russia after an attempted arson attack on Saturday morning, which has been attributed to the Russian intellegence services. Road borders will close in December.\nEight Latvian citizens were detained after an attempt to break into Threod Systems' property in Viimsi, north of Tallinn, on Saturday (November 14) morning. The group was aiming to cause an explosion and set the building on fire. The company produces long-range reconnaissance and attack drones, among other things.\nThe Estonian Internal Security Service (KAPO) said the attack was carried out on the orders of Russia's military intelligence service, the GRU.\nThis is the second attempted arson attack on a defense industry company since…",
+      "stazeno": "2026-11-15T18:02:55.676Z",
+      "stav": 200
+    }
   },
   {
     "id": "k-fafa0d12c1bb418d",
@@ -1414,7 +1547,12 @@
       "gru"
     ],
     "naliehave": null,
-    "stav": "ceka"
+    "stav": "ceka",
+    "vyrez": {
+      "text": "Client Challenge\nA required part of this site couldn’t load. This may be due to a browser\nextension, network issues, or browser settings. Please check your\nconnection, disable any ad blockers, or try using a different browser.",
+      "stazeno": "2026-11-15T18:02:56.272Z",
+      "stav": 200
+    }
   },
   {
     "id": "k-4ebc65ed032edd47",
@@ -1582,7 +1720,13 @@
       "rusk"
     ],
     "naliehave": null,
-    "stav": "ceka"
+    "stav": "ceka",
+    "vyrez": {
+      "text": "",
+      "stazeno": "2026-11-15T18:02:56.521Z",
+      "stav": 403,
+      "chyba": "HTTP 403"
+    }
   },
   {
     "id": "k-a091e353fe195bb9",
@@ -1758,7 +1902,12 @@
       "russia"
     ],
     "naliehave": null,
-    "stav": "ceka"
+    "stav": "ceka",
+    "vyrez": {
+      "text": "8 detained after GRU-linked arson at Estonian drone company Threod Systems | News | ERR\n{{noticeUi.heading[langCode]}}\n{{infoLink[langCode].label}}\n{{noticeUi.allowAllLabel[langCode]}}\n{{rewokeLabels[langCode]}}\nX !\nNews\nERR\n{{1794737160000 | amCalendar}} Updated: {{1794750060000 | amCalendar}}\nshare Facebook X (Twitter) e-mail\nThe Threod Factory in Viimsi.\nNews\nEight Latvian citizens have been detained after an attempted arson at Estonian drone manufacturer Threod Systems, which Estonia's domestic intellegence service has attributed to Russia's military intelligence agency, the GRU. Estonia is planning to close its eastern border in response.\nProsecutor General Astrid Asi said at a press conference on Sunday that there was an attempt to break into Threod Systems' property in Viimsi, north of Tallinn, to start a fire at 3.06 a.m. on Saturday (November 14).\nThe incident was thwarted thanks to the intervention of Threod's security team, Asi added.\nInternal Security Service (KAPO) Director General Margo Palloson said counterintelligence had confirmed that Russia was behind the attempted attack and that it was coordinated by Russia's military intelligence agency, the GRU.\n\"This was…",
+      "stazeno": "2026-11-15T18:02:56.628Z",
+      "stav": 200
+    }
   },
   {
     "id": "k-7ff9f45b6dadc215",
@@ -1789,7 +1938,12 @@
       "russia"
     ],
     "naliehave": null,
-    "stav": "ceka"
+    "stav": "ceka",
+    "vyrez": {
+      "text": "8 detained after GRU-linked arson at Estonian drone company Threod Systems | News | ERR\n{{noticeUi.heading[langCode]}}\n{{infoLink[langCode].label}}\n{{noticeUi.allowAllLabel[langCode]}}\n{{rewokeLabels[langCode]}}\nX !\nNews\nERR\n{{1794737160000 | amCalendar}} Updated: {{1794750060000 | amCalendar}}\nshare Facebook X (Twitter) e-mail\nThe Threod Factory in Viimsi.\nNews\nEight Latvian citizens have been detained after an attempted arson at Estonian drone manufacturer Threod Systems, which Estonia's domestic intellegence service has attributed to Russia's military intelligence agency, the GRU. Estonia is planning to close its eastern border in response.\nProsecutor General Astrid Asi said at a press conference on Sunday that there was an attempt to break into Threod Systems' property in Viimsi, north of Tallinn, to start a fire at 3.06 a.m. on Saturday (November 14).\nThe incident was thwarted thanks to the intervention of Threod's security team, Asi added.\nInternal Security Service (KAPO) Director General Margo Palloson said counterintelligence had confirmed that Russia was behind the attempted attack and that it was coordinated by Russia's military intelligence agency, the GRU.\n\"This was…",
+      "stazeno": "2026-11-15T18:02:56.821Z",
+      "stav": 200
+    }
   },
   {
     "id": "k-b93134b864398756",
@@ -2087,7 +2241,12 @@
       "gru"
     ],
     "naliehave": null,
-    "stav": "ceka"
+    "stav": "ceka",
+    "vyrez": {
+      "text": "Estland schließt nach Sabotageangriff alle Grenzübergänge zu Russland - Ukraine - derStandard.at › International \r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nA bridge over the Narva River at the border crossing point with Russia in Narva, Estonia, June 16, 2026. REUTERS/Ints Kalnins To match Special Report USA-TRUMP/NATO-FUTURE\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nDas Wichtigste in Kürze:\n\r\n\r\n\r\n\r\nWillkommen bei DER STANDARD\n\r\n\r\nSie entscheiden darüber, wie Sie unsere Inhalte nutzen wollen. Ihr Gerät erlaubt uns derzeit leider nicht, die entsprechenden Optionen anzuzeigen. \r\n\r\nBitte deaktivieren Sie sämtliche Hard- und Software-Komponenten, die in der Lage sind Teile unserer Website zu blockieren. Z.B. Browser-AddOns wie Adblocker oder auch netzwerktechnische Filter.\n\r\nSie haben ein PUR-Abo? Hier anmelden.",
+      "stazeno": "2026-11-15T18:02:57.433Z",
+      "stav": 200
+    }
   },
   {
     "id": "k-ba5aa5e7de607df7",
@@ -10294,102 +10453,6 @@
     "vyrez": {
       "text": "Client Challenge\nA required part of this site couldn’t load. This may be due to a browser\nextension, network issues, or browser settings. Please check your\nconnection, disable any ad blockers, or try using a different browser.",
       "stazeno": "2026-11-11T14:03:34.446Z",
-      "stav": 200
-    }
-  },
-  {
-    "id": "k-2c039e414c495487",
-    "zachyceno": "2026-11-11T14:03:25.580Z",
-    "publikovano": "2026-11-11T12:15:54.000Z",
-    "zdroj": {
-      "nazev": "la Repubblica (Itálie)",
-      "url": "https://www.repubblica.it/cronaca/2026/11/11/news/l_ondata_di_allarmi_bomba_colpisce_anche_le_scuole_di_irlanda_del_nord_e_scozia_falsi_allarmi-425715477/",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "L’ondata di allarmi bomba colpisce anche le scuole di Irlanda del Nord e Scozia. “Falsi allarmi”",
-    "titulekPuvodni": "L’ondata di allarmi bomba colpisce anche le scuole di Irlanda del Nord e Scozia. “Falsi allarmi”",
-    "shrnuti": "Decine di scuole evacuate. L’allarme è arrivato per email, come in Italia, e alla stessa ora. Le autorità invitano alla calma, ma a Dublino cresce la tensione in vista dei vertici europei di questa settimana",
-    "kodZeme": "IT",
-    "zeme": "Itálie",
-    "kategorie": [
-      "sabotaz"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "zeSite": null,
-    "shody": [
-      "bomb"
-    ],
-    "naliehave": null,
-    "stav": "ceka",
-    "vyrez": {
-      "text": "L’ondata di allarmi bomba colpisce anche le scuole di Irlanda del Nord e Scozia. “Falsi allarmi” - la Repubblica\n\r\n\r\n\r\nAbbonati\nScarica l'app\nMenu\nRicerca\nNotifiche\nAbbonati\nAbbonati\nEdicola\nRedazione\nScriveteci\nCronaca\n11 Novembre 2026 alle 13:15\n1 minuti di lettura\nAbbonati per leggere anche\nLeggi i commenti",
-      "stazeno": "2026-11-11T16:03:09.422Z",
-      "stav": 200
-    }
-  },
-  {
-    "id": "k-059736ee251aa12f",
-    "zachyceno": "2026-11-11T12:02:57.213Z",
-    "publikovano": null,
-    "zdroj": {
-      "nazev": "RTL Today (Lucembursko)",
-      "url": "https://today.rtl.lu/news/world/schools-evacuated-across-italy-after-bomb-threats-1140931890",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "From unkown source Hundreds of schools evacuated across Italy after bomb threats",
-    "titulekPuvodni": "From unkown source Hundreds of schools evacuated across Italy after bomb threats",
-    "shrnuti": "",
-    "kodZeme": "IT",
-    "zeme": "Itálie",
-    "kategorie": [
-      "sabotaz"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "zeSite": null,
-    "shody": [
-      "bomb"
-    ],
-    "naliehave": null,
-    "stav": "ceka",
-    "vyrez": {
-      "text": "From unkown source: Hundreds of schools evacuated across Italy after bomb threats - RTL Today\nFrom unkown source Hundreds of schools evacuated across Italy after bomb threats\nRTL Today\nAFP\nHundreds of schools across Italy were evacuated on Wednesday after receiving bomb threats by email, prompting police investigations into the source of the messages.\nPublished: 11.11.26 12:55 , Update: 11.11.26 12:57\n© MATTEO DELLA TORRE/NurPhoto via AFP\nSchools were evacuated across Italy on Wednesday following a series of hoax bomb threats, but Italian Prime Minister Giorgia Meloni said there was no \"concrete danger\".\nThe exact number of schools affected remains unclear, as the emails were sent to hundreds of institutions, with individual schools deciding whether to evacuate following advice from local police, according to media sources.\nAuthorities are investigating the origin of the messages, although police have not confirmed the email address from which they were sent.\nThis is a developing story and more information will follow.\nMost read\nSpain and Portugal\nLuxair warns of Wednesday travel disruptions\nFormer 'Europe's Most Wanted Fugitives'\nPhilippe Wasila goes on trial over €5.4m…",
-      "stazeno": "2026-11-11T12:03:00.542Z",
-      "stav": 200
-    }
-  },
-  {
-    "id": "k-69567ce6c433f87e",
-    "zachyceno": "2026-11-11T12:02:57.176Z",
-    "publikovano": null,
-    "zdroj": {
-      "nazev": "DR Nyheder (Dánsko)",
-      "url": "https://www.dr.dk/verificerer/300-italienske-skoler-er-blevet-udsat-bombetrussel",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "300 italienske skoler er blevet udsat for bombetrussel",
-    "titulekPuvodni": "300 italienske skoler er blevet udsat for bombetrussel",
-    "shrnuti": "",
-    "kodZeme": "IT",
-    "zeme": "Itálie",
-    "kategorie": [
-      "sabotaz"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "zeSite": null,
-    "shody": [
-      "bomb"
-    ],
-    "naliehave": null,
-    "stav": "ceka",
-    "vyrez": {
-      "text": "300 italienske skoler er blevet udsat for bombetrussel | DR Verificerer | DR\nGå til indhold\nNavigation\nDR's hovedindgange\nDR.DK DRTV DR LYD\nGå til forsiden\nSektionens indgange\nDR Verificerer\nLog ind\nSektionens indgange\nDR Verificerer\nLÆS OP\nORDBOG TEKST\nAf\nRasmus Christiansen\n51 min. siden Opdateret 2 min. siden\nMindst 300 skoler i Italien er blevet udsat for en enslydende bombetrussel. \nDet siger den italienske undervisningsminister, Giuseppe Valditara, til italiensk TV. \n- På grund af en landsdækkende bombetrussel er eleverne i gang med at blive ført et sikkert sted hen under opsyn af personalet, siger han ifølge nyhedsbureauet Reuters.\nHan tilføjer, at antallet af skoler sandsynligvis kommer til at stige.\nDen italienske avis la Repubblicca skriver, at bombetruslen kom omkring kl. 9.50 dansk tid. Ifølge dem og avisen Corriere Della Sera truer mailen skolerne med følgende: \n- Jeg har plantet en kraftig, fjernstyret, eksplosiv genstand i en plasticpose i jeres bygning.\nDerudover skriver afsenderen ifølge de italienske medier, at der også er plantet en bombe i premierministerens bil. \nSamme navn ved truslerne mod tv-stationer\nBåde Reuters og la Repubblica skriver, at mailen er…",
-      "stazeno": "2026-11-11T12:03:00.721Z",
       "stav": 200
     }
   }
