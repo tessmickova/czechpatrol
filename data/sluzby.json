@@ -1,5 +1,5 @@
 {
-  "aktualizovano": "2026-11-15T06:02:54.758Z",
+  "aktualizovano": "2026-11-15T09:02:49.321Z",
   "stavy": [
     {
       "klic": "cloudflare",
@@ -18,22 +18,16 @@
         "Arica, Chile - (ARI)",
         "Algiers, Algeria - (ALG)"
       ],
-      "zkontrolovano": "2026-11-15T06:02:54.758Z",
+      "zkontrolovano": "2026-11-15T09:02:49.321Z",
       "chyba": null
     },
     {
       "klic": "zoom",
       "stav": "provoz",
       "popis": "All Systems Operational",
-      "incidenty": [
-        {
-          "nazev": "Service Degradation Affecting Zoom Workflow Service",
-          "odkaz": "https://stspg.io/ykwyrzn57ydz",
-          "aktualizovano": "2026-11-14T21:53:28.700-08:00"
-        }
-      ],
+      "incidenty": [],
       "postizene": [],
-      "zkontrolovano": "2026-11-15T06:02:54.758Z",
+      "zkontrolovano": "2026-11-15T09:02:49.321Z",
       "chyba": null
     },
     {
@@ -42,7 +36,7 @@
       "popis": "All Systems Operational",
       "incidenty": [],
       "postizene": [],
-      "zkontrolovano": "2026-11-15T06:02:54.758Z",
+      "zkontrolovano": "2026-11-15T09:02:49.321Z",
       "chyba": null
     }
   ]
