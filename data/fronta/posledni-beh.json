@@ -1,5 +1,5 @@
 {
-  "kdy": "2026-11-16T03:00:21.508Z",
+  "kdy": "2026-11-16T06:00:33.305Z",
   "zdroje": [
     {
       "klic": "e-sbirka",
@@ -131,11 +131,10 @@
     },
     {
       "klic": "dopravni-info",
-      "ok": false,
-      "stav": null,
+      "ok": true,
+      "stav": 200,
       "pocetPolozek": 0,
-      "chyba": "fetch failed",
-      "vysledek": "chyba"
+      "vysledek": "obsah"
     },
     {
       "klic": "policie",
@@ -156,7 +155,7 @@
       "ok": true,
       "stav": 200,
       "pocetPolozek": 0,
-      "vysledek": "obsah"
+      "vysledek": "ok"
     },
     {
       "klic": "letiste-praha",
@@ -203,9 +202,9 @@
     {
       "klic": "bmi-de",
       "ok": false,
-      "stav": null,
+      "stav": 400,
       "pocetPolozek": 0,
-      "chyba": "fetch failed",
+      "chyba": "HTTP 400",
       "vysledek": "chyba"
     },
     {
