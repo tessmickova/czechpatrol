@@ -1,16 +1,11 @@
 {
-  "aktualizovano": "2026-11-16T15:03:35.534Z",
+  "aktualizovano": "2026-11-16T18:03:08.843Z",
   "stavy": [
     {
       "klic": "cloudflare",
       "stav": "omezeni",
       "popis": "Partially Degraded Service",
       "incidenty": [
-        {
-          "nazev": "Errors creating predictions for some models",
-          "odkaz": "https://www.cloudflarestatus.com/incidents/69855o2zz6kl",
-          "aktualizovano": "2026-11-16T14:42:59.297Z"
-        },
         {
           "nazev": "Changes to Cloudflare Workers are not producing Event Subscription events",
           "odkaz": "https://www.cloudflarestatus.com/incidents/0ocqieaifg7h",
@@ -23,16 +18,19 @@
         "Arica, Chile - (ARI)",
         "Algiers, Algeria - (ALG)"
       ],
-      "zkontrolovano": "2026-11-16T15:03:35.534Z",
+      "zkontrolovano": "2026-11-16T18:03:08.843Z",
       "chyba": null
     },
     {
       "klic": "zoom",
-      "stav": "provoz",
-      "popis": "All Systems Operational",
+      "stav": "omezeni",
+      "popis": "Service Under Maintenance",
       "incidenty": [],
-      "postizene": [],
-      "zkontrolovano": "2026-11-16T15:03:35.534Z",
+      "postizene": [
+        "Zoom Phone",
+        "Zoom Phone - EMEA"
+      ],
+      "zkontrolovano": "2026-11-16T18:03:08.843Z",
       "chyba": null
     },
     {
@@ -41,7 +39,7 @@
       "popis": "All Systems Operational",
       "incidenty": [],
       "postizene": [],
-      "zkontrolovano": "2026-11-16T15:03:35.534Z",
+      "zkontrolovano": "2026-11-16T18:03:08.843Z",
       "chyba": null
     }
   ]
