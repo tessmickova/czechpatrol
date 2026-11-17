@@ -1,11 +1,16 @@
 {
-  "aktualizovano": "2026-11-17T02:26:29.673Z",
+  "aktualizovano": "2026-11-17T12:03:32.169Z",
   "stavy": [
     {
       "klic": "cloudflare",
       "stav": "omezeni",
       "popis": "Partially Degraded Service",
       "incidenty": [
+        {
+          "nazev": "Turnstile verification failures",
+          "odkaz": "https://www.cloudflarestatus.com/incidents/5831aw44ia7i",
+          "aktualizovano": "2026-11-17T10:42:45.008Z"
+        },
         {
           "nazev": "Changes to Cloudflare Workers are not producing Event Subscription events",
           "odkaz": "https://www.cloudflarestatus.com/incidents/0ocqieaifg7h",
@@ -16,27 +21,29 @@
         "Cloudflare Sites and Services",
         "Albuquerque, United States - (ABQ)",
         "Arica, Chile - (ARI)",
-        "Algiers, Algeria - (ALG)"
+        "Almaty, Kazakhstan - (ALA)"
       ],
-      "zkontrolovano": "2026-11-17T02:26:29.673Z",
+      "zkontrolovano": "2026-11-17T12:03:32.169Z",
       "chyba": null
     },
     {
       "klic": "zoom",
       "stav": "omezeni",
-      "popis": "Service Under Maintenance",
+      "popis": "Partially Degraded Service",
       "incidenty": [
         {
-          "nazev": "Service Degradation Affecting Outbound SMS due to an underlying carrier issue in the Australia region.",
-          "odkaz": "https://stspg.io/l8xtt0jdrgf0",
-          "aktualizovano": "2026-11-16T18:21:47.027-08:00"
+          "nazev": "Service Degradation Affecting Zoom Phone Inbound Calls for Subset of Jio subscribers in India",
+          "odkaz": "https://stspg.io/3hk2mmfjxlp7",
+          "aktualizovano": "2026-11-17T03:16:39.600-08:00"
         }
       ],
       "postizene": [
         "Zoom Phone",
+        "Calling (Inbound/Outbound)",
+        "Zoom Phone - APAC",
         "Zoom Phone - EMEA"
       ],
-      "zkontrolovano": "2026-11-17T02:26:29.673Z",
+      "zkontrolovano": "2026-11-17T12:03:32.169Z",
       "chyba": null
     },
     {
@@ -45,7 +52,7 @@
       "popis": "All Systems Operational",
       "incidenty": [],
       "postizene": [],
-      "zkontrolovano": "2026-11-17T02:26:29.673Z",
+      "zkontrolovano": "2026-11-17T12:03:32.169Z",
       "chyba": null
     }
   ]
