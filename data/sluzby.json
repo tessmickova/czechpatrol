@@ -1,5 +1,5 @@
 {
-  "aktualizovano": "2026-11-16T18:03:08.843Z",
+  "aktualizovano": "2026-11-17T02:26:29.673Z",
   "stavy": [
     {
       "klic": "cloudflare",
@@ -18,19 +18,25 @@
         "Arica, Chile - (ARI)",
         "Algiers, Algeria - (ALG)"
       ],
-      "zkontrolovano": "2026-11-16T18:03:08.843Z",
+      "zkontrolovano": "2026-11-17T02:26:29.673Z",
       "chyba": null
     },
     {
       "klic": "zoom",
       "stav": "omezeni",
       "popis": "Service Under Maintenance",
-      "incidenty": [],
+      "incidenty": [
+        {
+          "nazev": "Service Degradation Affecting Outbound SMS due to an underlying carrier issue in the Australia region.",
+          "odkaz": "https://stspg.io/l8xtt0jdrgf0",
+          "aktualizovano": "2026-11-16T18:21:47.027-08:00"
+        }
+      ],
       "postizene": [
         "Zoom Phone",
         "Zoom Phone - EMEA"
       ],
-      "zkontrolovano": "2026-11-16T18:03:08.843Z",
+      "zkontrolovano": "2026-11-17T02:26:29.673Z",
       "chyba": null
     },
     {
@@ -39,7 +45,7 @@
       "popis": "All Systems Operational",
       "incidenty": [],
       "postizene": [],
-      "zkontrolovano": "2026-11-16T18:03:08.843Z",
+      "zkontrolovano": "2026-11-17T02:26:29.673Z",
       "chyba": null
     }
   ]
