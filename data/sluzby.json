@@ -1,11 +1,16 @@
 {
-  "aktualizovano": "2026-11-17T12:03:32.169Z",
+  "aktualizovano": "2026-11-17T15:03:22.800Z",
   "stavy": [
     {
       "klic": "cloudflare",
       "stav": "omezeni",
       "popis": "Partially Degraded Service",
       "incidenty": [
+        {
+          "nazev": "Errors and stalled predictions on some models",
+          "odkaz": "https://www.cloudflarestatus.com/incidents/sv9tnfpjiojf",
+          "aktualizovano": "2026-11-17T15:03:04.173Z"
+        },
         {
           "nazev": "Turnstile verification failures",
           "odkaz": "https://www.cloudflarestatus.com/incidents/5831aw44ia7i",
@@ -21,29 +26,21 @@
         "Cloudflare Sites and Services",
         "Albuquerque, United States - (ABQ)",
         "Arica, Chile - (ARI)",
-        "Almaty, Kazakhstan - (ALA)"
+        "Ashburn, United States - (IAD)"
       ],
-      "zkontrolovano": "2026-11-17T12:03:32.169Z",
+      "zkontrolovano": "2026-11-17T15:03:22.800Z",
       "chyba": null
     },
     {
       "klic": "zoom",
       "stav": "omezeni",
-      "popis": "Partially Degraded Service",
-      "incidenty": [
-        {
-          "nazev": "Service Degradation Affecting Zoom Phone Inbound Calls for Subset of Jio subscribers in India",
-          "odkaz": "https://stspg.io/3hk2mmfjxlp7",
-          "aktualizovano": "2026-11-17T03:16:39.600-08:00"
-        }
-      ],
+      "popis": "Service Under Maintenance",
+      "incidenty": [],
       "postizene": [
         "Zoom Phone",
-        "Calling (Inbound/Outbound)",
-        "Zoom Phone - APAC",
         "Zoom Phone - EMEA"
       ],
-      "zkontrolovano": "2026-11-17T12:03:32.169Z",
+      "zkontrolovano": "2026-11-17T15:03:22.800Z",
       "chyba": null
     },
     {
@@ -52,7 +49,7 @@
       "popis": "All Systems Operational",
       "incidenty": [],
       "postizene": [],
-      "zkontrolovano": "2026-11-17T12:03:32.169Z",
+      "zkontrolovano": "2026-11-17T15:03:22.800Z",
       "chyba": null
     }
   ]
