@@ -1,5 +1,5 @@
 {
-  "aktualizovano": "2026-11-17T15:03:22.800Z",
+  "aktualizovano": "2026-11-17T18:03:29.765Z",
   "stavy": [
     {
       "klic": "cloudflare",
@@ -9,12 +9,7 @@
         {
           "nazev": "Errors and stalled predictions on some models",
           "odkaz": "https://www.cloudflarestatus.com/incidents/sv9tnfpjiojf",
-          "aktualizovano": "2026-11-17T15:03:04.173Z"
-        },
-        {
-          "nazev": "Turnstile verification failures",
-          "odkaz": "https://www.cloudflarestatus.com/incidents/5831aw44ia7i",
-          "aktualizovano": "2026-11-17T10:42:45.008Z"
+          "aktualizovano": "2026-11-17T16:32:13.057Z"
         },
         {
           "nazev": "Changes to Cloudflare Workers are not producing Event Subscription events",
@@ -28,7 +23,7 @@
         "Arica, Chile - (ARI)",
         "Ashburn, United States - (IAD)"
       ],
-      "zkontrolovano": "2026-11-17T15:03:22.800Z",
+      "zkontrolovano": "2026-11-17T18:03:29.765Z",
       "chyba": null
     },
     {
@@ -40,7 +35,7 @@
         "Zoom Phone",
         "Zoom Phone - EMEA"
       ],
-      "zkontrolovano": "2026-11-17T15:03:22.800Z",
+      "zkontrolovano": "2026-11-17T18:03:29.765Z",
       "chyba": null
     },
     {
@@ -49,7 +44,7 @@
       "popis": "All Systems Operational",
       "incidenty": [],
       "postizene": [],
-      "zkontrolovano": "2026-11-17T15:03:22.800Z",
+      "zkontrolovano": "2026-11-17T18:03:29.765Z",
       "chyba": null
     }
   ]
