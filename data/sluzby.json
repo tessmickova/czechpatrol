@@ -1,5 +1,5 @@
 {
-  "aktualizovano": "2026-11-17T06:03:32.927Z",
+  "aktualizovano": "2026-11-17T09:03:45.366Z",
   "stavy": [
     {
       "klic": "cloudflare",
@@ -18,19 +18,27 @@
         "Arica, Chile - (ARI)",
         "Algiers, Algeria - (ALG)"
       ],
-      "zkontrolovano": "2026-11-17T06:03:32.927Z",
+      "zkontrolovano": "2026-11-17T09:03:45.366Z",
       "chyba": null
     },
     {
       "klic": "zoom",
       "stav": "omezeni",
-      "popis": "Service Under Maintenance",
-      "incidenty": [],
+      "popis": "Partially Degraded Service",
+      "incidenty": [
+        {
+          "nazev": "Service Degradation Affecting Zoom Phone Inbound Calls for Subset of Jio subscribers in India",
+          "odkaz": "https://stspg.io/3hk2mmfjxlp7",
+          "aktualizovano": "2026-11-16T23:50:06.099-08:00"
+        }
+      ],
       "postizene": [
         "Zoom Phone",
+        "Calling (Inbound/Outbound)",
+        "Zoom Phone - APAC",
         "Zoom Phone - EMEA"
       ],
-      "zkontrolovano": "2026-11-17T06:03:32.927Z",
+      "zkontrolovano": "2026-11-17T09:03:45.366Z",
       "chyba": null
     },
     {
@@ -39,7 +47,7 @@
       "popis": "All Systems Operational",
       "incidenty": [],
       "postizene": [],
-      "zkontrolovano": "2026-11-17T06:03:32.927Z",
+      "zkontrolovano": "2026-11-17T09:03:45.366Z",
       "chyba": null
     }
   ]
