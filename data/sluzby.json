@@ -1,5 +1,5 @@
 {
-  "aktualizovano": "2026-11-18T06:03:35.188Z",
+  "aktualizovano": "2026-11-18T15:03:36.636Z",
   "stavy": [
     {
       "klic": "cloudflare",
@@ -13,31 +13,34 @@
         }
       ],
       "postizene": [
-        "Amsterdam, Netherlands - (AMS)",
         "Cloudflare Sites and Services",
-        "Americana, Brazil - (QWJ)",
-        "Accra, Ghana - (ACC)"
+        "Accra, Ghana - (ACC)",
+        "Ahmedabad, India - (AMD)",
+        "Albuquerque, United States - (ABQ)"
       ],
-      "zkontrolovano": "2026-11-18T06:03:35.188Z",
+      "zkontrolovano": "2026-11-18T15:03:36.636Z",
       "chyba": null
     },
     {
       "klic": "zoom",
-      "stav": "nezjisteno",
-      "popis": null,
+      "stav": "omezeni",
+      "popis": "Service Under Maintenance",
       "incidenty": [],
-      "postizene": [],
-      "zkontrolovano": "2026-11-18T06:03:35.188Z",
-      "chyba": "The operation was aborted due to timeout"
+      "postizene": [
+        "Zoom Phone",
+        "Zoom Phone - EMEA"
+      ],
+      "zkontrolovano": "2026-11-18T15:03:36.636Z",
+      "chyba": null
     },
     {
       "klic": "discord",
-      "stav": "nezjisteno",
-      "popis": null,
+      "stav": "provoz",
+      "popis": "All Systems Operational",
       "incidenty": [],
       "postizene": [],
-      "zkontrolovano": "2026-11-18T06:03:35.188Z",
-      "chyba": "The operation was aborted due to timeout"
+      "zkontrolovano": "2026-11-18T15:03:36.636Z",
+      "chyba": null
     }
   ]
 }

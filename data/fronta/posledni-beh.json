@@ -1,5 +1,5 @@
 {
-  "kdy": "2026-11-18T06:00:59.703Z",
+  "kdy": "2026-11-18T15:00:56.199Z",
   "zdroje": [
     {
       "klic": "e-sbirka",
@@ -153,10 +153,11 @@
     },
     {
       "klic": "sprava-zeleznic",
-      "ok": true,
-      "stav": 200,
+      "ok": false,
+      "stav": null,
       "pocetPolozek": 0,
-      "vysledek": "obsah"
+      "chyba": "fetch failed",
+      "vysledek": "chyba"
     },
     {
       "klic": "letiste-praha",
@@ -240,7 +241,7 @@
       "klic": "kyber",
       "ok": true,
       "stav": null,
-      "pocetPolozek": 0,
+      "pocetPolozek": 2,
       "vysledek": "ok"
     },
     {
