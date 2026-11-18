@@ -1,16 +1,11 @@
 {
-  "aktualizovano": "2026-11-18T03:03:00.336Z",
+  "aktualizovano": "2026-11-18T06:03:35.188Z",
   "stavy": [
     {
       "klic": "cloudflare",
       "stav": "omezeni",
       "popis": "Partially Degraded Service",
       "incidenty": [
-        {
-          "nazev": "Errors and stalled predictions on some models",
-          "odkaz": "https://www.cloudflarestatus.com/incidents/sv9tnfpjiojf",
-          "aktualizovano": "2026-11-18T02:56:06.358Z"
-        },
         {
           "nazev": "Changes to Cloudflare Workers are not producing Event Subscription events",
           "odkaz": "https://www.cloudflarestatus.com/incidents/0ocqieaifg7h",
@@ -20,32 +15,29 @@
       "postizene": [
         "Amsterdam, Netherlands - (AMS)",
         "Cloudflare Sites and Services",
-        "Albuquerque, United States - (ABQ)",
-        "Athens, Greece - (ATH)"
+        "Americana, Brazil - (QWJ)",
+        "Accra, Ghana - (ACC)"
       ],
-      "zkontrolovano": "2026-11-18T03:03:00.336Z",
+      "zkontrolovano": "2026-11-18T06:03:35.188Z",
       "chyba": null
     },
     {
       "klic": "zoom",
-      "stav": "omezeni",
-      "popis": "Service Under Maintenance",
+      "stav": "nezjisteno",
+      "popis": null,
       "incidenty": [],
-      "postizene": [
-        "Zoom Phone",
-        "Zoom Phone - EMEA"
-      ],
-      "zkontrolovano": "2026-11-18T03:03:00.336Z",
-      "chyba": null
+      "postizene": [],
+      "zkontrolovano": "2026-11-18T06:03:35.188Z",
+      "chyba": "The operation was aborted due to timeout"
     },
     {
       "klic": "discord",
-      "stav": "provoz",
-      "popis": "All Systems Operational",
+      "stav": "nezjisteno",
+      "popis": null,
       "incidenty": [],
       "postizene": [],
-      "zkontrolovano": "2026-11-18T03:03:00.336Z",
-      "chyba": null
+      "zkontrolovano": "2026-11-18T06:03:35.188Z",
+      "chyba": "The operation was aborted due to timeout"
     }
   ]
 }
