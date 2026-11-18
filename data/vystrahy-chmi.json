@@ -1,14 +1,14 @@
 {
-  "nacteno": "2026-11-18T09:00:56.599Z",
-  "odeslano": "2026-11-17T10:02:49.000Z",
-  "identifikator": "2.49.0.0.203.0.CZ.261117100249.XOCZ50_OKPR_000411",
+  "nacteno": "2026-11-18T10:35:44.238Z",
+  "odeslano": "2026-11-18T09:09:53.000Z",
+  "identifikator": "2.49.0.0.203.0.CZ.261118090953.XOCZ50_OKPR_000412",
   "vystrahy": [
     {
-      "id": "chmi:Silný vítr:2026-11-18T05:00:00.000Z:nezname",
+      "id": "chmi:Silný vítr:2026-11-18T09:05:21.000Z:nezname",
       "typ": "oficialni-pokyn",
       "uzemi": {
         "druh": "nezname",
-        "popis": "Středočeský kraj (Benešov, Čáslav, Dobříš, Kutná Hora, Sedlčany, Vlašim, Votice), Jihočeský kraj (České Budějovice, Dačice, Jindřichův Hradec, Kaplice, Milevsko, Písek, Soběslav, Tábor, Trhové Sviny, Třeboň, Týn nad Vltavou, Vodňany), Ústecký kraj (Litvínov, Louny, Most, Žatec), Pardubický kraj (Hlinsko, Chrudim, Polička), Kraj Vysočina (Bystřice nad Pernštejnem, Havlíčkův Brod, Humpolec, Chotěboř, Jihlava, Nové Město na Moravě, Pacov, Pelhřimov, Světlá nad Sázavou, Telč, Žďár nad Sázavou)"
+        "popis": "Středočeský kraj (Benešov, Čáslav, Kutná Hora, Sedlčany, Vlašim, Votice, Beroun, Rakovník), Jihočeský kraj (České Budějovice, Dačice, Jindřichův Hradec, Kaplice, Milevsko, Písek, Soběslav, Tábor, Trhové Sviny, Třeboň, Týn nad Vltavou, Vodňany), Ústecký kraj (Litvínov, Louny, Most, Žatec, Chomutov), Pardubický kraj (Hlinsko, Chrudim, Polička), Kraj Vysočina (Bystřice nad Pernštejnem, Havlíčkův Brod, Humpolec, Chotěboř, Jihlava, Nové Město na Moravě, Pacov, Pelhřimov, Světlá nad Sázavou, Telč, Žďár nad Sázavou)"
       },
       "titulek": "Silný vítr",
       "text": "Silný jihozápadní až západní vítr s nárazy 15 až 20 m/s (55 až 70 km/h).\n\nMožná poškození stromů a lesních porostů. Možné menší škody na energetické infrastruktuře, majetku a zejména starších budovách. Riziko úrazu uvolněnými předměty a zlomenými větvemi. Možné komplikace v dopravě.",
@@ -16,8 +16,8 @@
       "pokyn": "Zajistit okna, dveře, odstranit nebo zabezpečit volně uložené předměty, stany, skleníky apod. Dbát zvýšené opatrnosti při pohybu venku a při řízení vozidel. Na horách omezit túry a nevydávat se zejména do hřebenových partií.",
       "vydavatel": "ČHMÚ, Petra Sýkorová",
       "odkaz": "https://vystrahy-cr.chmi.cz/",
-      "vydano": "2026-11-17T10:02:49.000Z",
-      "platiOd": "2026-11-18T05:00:00.000Z",
+      "vydano": "2026-11-18T09:09:53.000Z",
+      "platiOd": "2026-11-18T09:05:21.000Z",
       "platiDo": "2026-11-18T16:00:00.000Z",
       "odvolano": null,
       "opraveno": null,
@@ -27,7 +27,7 @@
       "detail": null
     },
     {
-      "id": "chmi:Silný vítr:2026-11-17T13:00:00.000Z:Plzeňský,Karlovarský",
+      "id": "chmi:Silný vítr:2026-11-18T09:05:21.000Z:Plzeňský,Karlovarský",
       "typ": "oficialni-pokyn",
       "uzemi": {
         "druh": "kraje",
@@ -42,9 +42,9 @@
       "pokyn": "Zajistit okna, dveře, odstranit nebo zabezpečit volně uložené předměty, stany, skleníky apod. Dbát zvýšené opatrnosti při pohybu venku a při řízení vozidel. Na horách omezit túry a nevydávat se zejména do hřebenových partií.",
       "vydavatel": "ČHMÚ, Petra Sýkorová",
       "odkaz": "https://vystrahy-cr.chmi.cz/",
-      "vydano": "2026-11-17T10:02:49.000Z",
-      "platiOd": "2026-11-17T13:00:00.000Z",
-      "platiDo": "2026-11-18T16:00:00.000Z",
+      "vydano": "2026-11-18T09:09:53.000Z",
+      "platiOd": "2026-11-18T09:05:21.000Z",
+      "platiDo": "2026-11-18T21:00:00.000Z",
       "odvolano": null,
       "opraveno": null,
       "coNevime": [],
@@ -53,11 +53,11 @@
       "detail": null
     },
     {
-      "id": "chmi:Silný vítr:2026-11-17T13:00:00.000Z:nezname",
+      "id": "chmi:Silný vítr:2026-11-18T09:05:21.000Z:nezname",
       "typ": "oficialni-pokyn",
       "uzemi": {
         "druh": "nezname",
-        "popis": "Středočeský kraj (Beroun, Hořovice, Příbram, Rakovník), Jihočeský kraj (Blatná, Český Krumlov, Prachatice, Strakonice, Vimperk), Ústecký kraj (Chomutov, Kadaň, Podbořany)"
+        "popis": "Středočeský kraj (Dobříš, Hořovice, Příbram), Jihočeský kraj (Blatná, Český Krumlov, Prachatice, Strakonice, Vimperk), Ústecký kraj (Kadaň, Podbořany)"
       },
       "titulek": "Silný vítr",
       "text": "Silný jihozápadní až západní vítr s nárazy 15 až 20 m/s (55 až 70 km/h).\n\nMožná poškození stromů a lesních porostů. Možné menší škody na energetické infrastruktuře, majetku a zejména starších budovách. Riziko úrazu uvolněnými předměty a zlomenými větvemi. Možné komplikace v dopravě.",
@@ -65,9 +65,9 @@
       "pokyn": "Zajistit okna, dveře, odstranit nebo zabezpečit volně uložené předměty, stany, skleníky apod. Dbát zvýšené opatrnosti při pohybu venku a při řízení vozidel. Na horách omezit túry a nevydávat se zejména do hřebenových partií.",
       "vydavatel": "ČHMÚ, Petra Sýkorová",
       "odkaz": "https://vystrahy-cr.chmi.cz/",
-      "vydano": "2026-11-17T10:02:49.000Z",
-      "platiOd": "2026-11-17T13:00:00.000Z",
-      "platiDo": "2026-11-18T16:00:00.000Z",
+      "vydano": "2026-11-18T09:09:53.000Z",
+      "platiOd": "2026-11-18T09:05:21.000Z",
+      "platiDo": "2026-11-18T21:00:00.000Z",
       "odvolano": null,
       "opraveno": null,
       "coNevime": [],
@@ -76,7 +76,7 @@
       "detail": null
     },
     {
-      "id": "chmi:Silný vítr:2026-11-18T05:00:00.000Z:Moravskoslezský",
+      "id": "chmi:Silný vítr:2026-11-18T09:05:21.000Z:Moravskoslezský",
       "typ": "oficialni-pokyn",
       "uzemi": {
         "druh": "kraje",
@@ -90,8 +90,8 @@
       "pokyn": "Zajistit okna, dveře, odstranit nebo zabezpečit volně uložené předměty, stany, skleníky apod. Dbát zvýšené opatrnosti při pohybu venku a při řízení vozidel. Na horách omezit túry a nevydávat se zejména do hřebenových partií.",
       "vydavatel": "ČHMÚ, Petra Sýkorová",
       "odkaz": "https://vystrahy-cr.chmi.cz/",
-      "vydano": "2026-11-17T10:02:49.000Z",
-      "platiOd": "2026-11-18T05:00:00.000Z",
+      "vydano": "2026-11-18T09:09:53.000Z",
+      "platiOd": "2026-11-18T09:05:21.000Z",
       "platiDo": "2026-11-18T11:00:00.000Z",
       "odvolano": null,
       "opraveno": null,
@@ -101,7 +101,7 @@
       "detail": null
     },
     {
-      "id": "chmi:Silný vítr:2026-11-18T05:00:00.000Z:nezname",
+      "id": "chmi:Silný vítr:2026-11-18T09:05:21.000Z:nezname",
       "typ": "oficialni-pokyn",
       "uzemi": {
         "druh": "nezname",
@@ -113,8 +113,8 @@
       "pokyn": "Zajistit okna, dveře, odstranit nebo zabezpečit volně uložené předměty, stany, skleníky apod. Dbát zvýšené opatrnosti při pohybu venku a při řízení vozidel. Na horách omezit túry a nevydávat se zejména do hřebenových partií.",
       "vydavatel": "ČHMÚ, Petra Sýkorová",
       "odkaz": "https://vystrahy-cr.chmi.cz/",
-      "vydano": "2026-11-17T10:02:49.000Z",
-      "platiOd": "2026-11-18T05:00:00.000Z",
+      "vydano": "2026-11-18T09:09:53.000Z",
+      "platiOd": "2026-11-18T09:05:21.000Z",
       "platiDo": "2026-11-18T11:00:00.000Z",
       "odvolano": null,
       "opraveno": null,
