@@ -1,5 +1,5 @@
 {
-  "aktualizovano": "2026-11-17T21:02:45.782Z",
+  "aktualizovano": "2026-11-18T06:03:35.188Z",
   "stavy": [
     {
       "klic": "cloudflare",
@@ -7,50 +7,37 @@
       "popis": "Partially Degraded Service",
       "incidenty": [
         {
-          "nazev": "R2 elevated errors and timeouts for requests from South America",
-          "odkaz": "https://www.cloudflarestatus.com/incidents/gcn9xop0f7zm",
-          "aktualizovano": "2026-11-17T20:53:20.114Z"
-        },
-        {
-          "nazev": "Errors and stalled predictions on some models",
-          "odkaz": "https://www.cloudflarestatus.com/incidents/sv9tnfpjiojf",
-          "aktualizovano": "2026-11-17T16:32:13.057Z"
-        },
-        {
           "nazev": "Changes to Cloudflare Workers are not producing Event Subscription events",
           "odkaz": "https://www.cloudflarestatus.com/incidents/0ocqieaifg7h",
           "aktualizovano": "2026-11-11T05:05:06.331Z"
         }
       ],
       "postizene": [
+        "Amsterdam, Netherlands - (AMS)",
         "Cloudflare Sites and Services",
-        "Albuquerque, United States - (ABQ)",
-        "Arica, Chile - (ARI)",
-        "Ashburn, United States - (IAD)"
+        "Americana, Brazil - (QWJ)",
+        "Accra, Ghana - (ACC)"
       ],
-      "zkontrolovano": "2026-11-17T21:02:45.782Z",
+      "zkontrolovano": "2026-11-18T06:03:35.188Z",
       "chyba": null
     },
     {
       "klic": "zoom",
-      "stav": "omezeni",
-      "popis": "Service Under Maintenance",
+      "stav": "nezjisteno",
+      "popis": null,
       "incidenty": [],
-      "postizene": [
-        "Zoom Phone",
-        "Zoom Phone - EMEA"
-      ],
-      "zkontrolovano": "2026-11-17T21:02:45.782Z",
-      "chyba": null
+      "postizene": [],
+      "zkontrolovano": "2026-11-18T06:03:35.188Z",
+      "chyba": "The operation was aborted due to timeout"
     },
     {
       "klic": "discord",
-      "stav": "provoz",
-      "popis": "All Systems Operational",
+      "stav": "nezjisteno",
+      "popis": null,
       "incidenty": [],
       "postizene": [],
-      "zkontrolovano": "2026-11-17T21:02:45.782Z",
-      "chyba": null
+      "zkontrolovano": "2026-11-18T06:03:35.188Z",
+      "chyba": "The operation was aborted due to timeout"
     }
   ]
 }
