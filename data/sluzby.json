@@ -1,5 +1,5 @@
 {
-  "aktualizovano": "2026-11-18T02:19:18.325Z",
+  "aktualizovano": "2026-11-18T03:03:00.336Z",
   "stavy": [
     {
       "klic": "cloudflare",
@@ -7,14 +7,9 @@
       "popis": "Partially Degraded Service",
       "incidenty": [
         {
-          "nazev": "Cloudflare Access Issue",
-          "odkaz": "https://www.cloudflarestatus.com/incidents/0jozucwnpzy0",
-          "aktualizovano": "2026-11-18T02:11:17.000Z"
-        },
-        {
           "nazev": "Errors and stalled predictions on some models",
           "odkaz": "https://www.cloudflarestatus.com/incidents/sv9tnfpjiojf",
-          "aktualizovano": "2026-11-17T21:53:51.025Z"
+          "aktualizovano": "2026-11-18T02:56:06.358Z"
         },
         {
           "nazev": "Changes to Cloudflare Workers are not producing Event Subscription events",
@@ -28,7 +23,7 @@
         "Albuquerque, United States - (ABQ)",
         "Athens, Greece - (ATH)"
       ],
-      "zkontrolovano": "2026-11-18T02:19:18.325Z",
+      "zkontrolovano": "2026-11-18T03:03:00.336Z",
       "chyba": null
     },
     {
@@ -40,7 +35,7 @@
         "Zoom Phone",
         "Zoom Phone - EMEA"
       ],
-      "zkontrolovano": "2026-11-18T02:19:18.325Z",
+      "zkontrolovano": "2026-11-18T03:03:00.336Z",
       "chyba": null
     },
     {
@@ -49,7 +44,7 @@
       "popis": "All Systems Operational",
       "incidenty": [],
       "postizene": [],
-      "zkontrolovano": "2026-11-18T02:19:18.325Z",
+      "zkontrolovano": "2026-11-18T03:03:00.336Z",
       "chyba": null
     }
   ]
