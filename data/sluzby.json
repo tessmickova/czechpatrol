@@ -1,11 +1,16 @@
 {
-  "aktualizovano": "2026-11-18T19:03:27.364Z",
+  "aktualizovano": "2026-11-18T21:03:39.749Z",
   "stavy": [
     {
       "klic": "cloudflare",
       "stav": "omezeni",
       "popis": "Partially Degraded Service",
       "incidenty": [
+        {
+          "nazev": "Increased latency on Analytics API (GraphQL) queries",
+          "odkaz": "https://www.cloudflarestatus.com/incidents/9zpa7own49hb",
+          "aktualizovano": "2026-11-18T20:40:40.334Z"
+        },
         {
           "nazev": "Changes to Cloudflare Workers are not producing Event Subscription events",
           "odkaz": "https://www.cloudflarestatus.com/incidents/0ocqieaifg7h",
@@ -18,7 +23,7 @@
         "Ahmedabad, India - (AMD)",
         "Albuquerque, United States - (ABQ)"
       ],
-      "zkontrolovano": "2026-11-18T19:03:27.364Z",
+      "zkontrolovano": "2026-11-18T21:03:39.749Z",
       "chyba": null
     },
     {
@@ -30,7 +35,7 @@
         "Zoom Phone",
         "Zoom Phone - EMEA"
       ],
-      "zkontrolovano": "2026-11-18T19:03:27.364Z",
+      "zkontrolovano": "2026-11-18T21:03:39.749Z",
       "chyba": null
     },
     {
@@ -39,7 +44,7 @@
       "popis": "All Systems Operational",
       "incidenty": [],
       "postizene": [],
-      "zkontrolovano": "2026-11-18T19:03:27.364Z",
+      "zkontrolovano": "2026-11-18T21:03:39.749Z",
       "chyba": null
     }
   ]
