@@ -1,5 +1,5 @@
 {
-  "kdy": "2026-11-18T10:35:44.238Z",
+  "kdy": "2026-11-18T12:01:01.971Z",
   "zdroje": [
     {
       "klic": "e-sbirka",
@@ -153,10 +153,11 @@
     },
     {
       "klic": "sprava-zeleznic",
-      "ok": true,
-      "stav": 200,
+      "ok": false,
+      "stav": null,
       "pocetPolozek": 0,
-      "vysledek": "obsah"
+      "chyba": "fetch failed",
+      "vysledek": "chyba"
     },
     {
       "klic": "letiste-praha",
@@ -203,9 +204,9 @@
     {
       "klic": "bmi-de",
       "ok": false,
-      "stav": 400,
+      "stav": null,
       "pocetPolozek": 0,
-      "chyba": "HTTP 400",
+      "chyba": "fetch failed",
       "vysledek": "chyba"
     },
     {
@@ -240,7 +241,7 @@
       "klic": "kyber",
       "ok": true,
       "stav": null,
-      "pocetPolozek": 1,
+      "pocetPolozek": 2,
       "vysledek": "ok"
     },
     {
