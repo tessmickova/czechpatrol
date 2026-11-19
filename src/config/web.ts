@@ -245,6 +245,13 @@ export const SPUSTENO = {
   komunita: false,
   izs: false,
   zebricek: false,
+  /*
+    Box „Situace teď“ (oblouk, Evropa · dnes, Česko · 90 dní, Běžný život)
+    v postranním panelu úvodu a dalších stránek. Zatím skrytý (19. 11. 2026,
+    provozovatelka): při málo ověřených případech ukazoval jen „Nestanoveno“
+    a nuly. Výpočet i metodika zůstávají; vrátí se přepnutím na true.
+  */
+  situaceTed: false,
 } as const;
 
 export const PLACENE = {
