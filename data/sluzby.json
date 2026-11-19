@@ -1,5 +1,5 @@
 {
-  "aktualizovano": "2026-11-19T12:04:30.600Z",
+  "aktualizovano": "2026-11-19T15:03:44.838Z",
   "stavy": [
     {
       "klic": "cloudflare",
@@ -18,22 +18,16 @@
         "Albuquerque, United States - (ABQ)",
         "Arica, Chile - (ARI)"
       ],
-      "zkontrolovano": "2026-11-19T12:04:30.600Z",
+      "zkontrolovano": "2026-11-19T15:03:44.838Z",
       "chyba": null
     },
     {
       "klic": "zoom",
       "stav": "provoz",
       "popis": "All Systems Operational",
-      "incidenty": [
-        {
-          "nazev": "Service degradation affecting multiple services in the US region.",
-          "odkaz": "https://stspg.io/9kfmcm788fwb",
-          "aktualizovano": "2026-11-19T03:57:19.530-08:00"
-        }
-      ],
+      "incidenty": [],
       "postizene": [],
-      "zkontrolovano": "2026-11-19T12:04:30.600Z",
+      "zkontrolovano": "2026-11-19T15:03:44.838Z",
       "chyba": null
     },
     {
@@ -42,7 +36,7 @@
       "popis": "All Systems Operational",
       "incidenty": [],
       "postizene": [],
-      "zkontrolovano": "2026-11-19T12:04:30.600Z",
+      "zkontrolovano": "2026-11-19T15:03:44.838Z",
       "chyba": null
     }
   ]
