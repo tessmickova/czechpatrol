@@ -1,5 +1,5 @@
 {
-  "aktualizovano": "2026-11-19T00:03:25.202Z",
+  "aktualizovano": "2026-11-19T01:03:59.388Z",
   "stavy": [
     {
       "klic": "cloudflare",
@@ -9,7 +9,7 @@
         {
           "nazev": "Degraded connectivity between Europe and Asia Pacific",
           "odkaz": "https://www.cloudflarestatus.com/incidents/f33c51cw0ojd",
-          "aktualizovano": "2026-11-18T23:48:52.158Z"
+          "aktualizovano": "2026-11-19T00:36:54.191Z"
         },
         {
           "nazev": "Changes to Cloudflare Workers are not producing Event Subscription events",
@@ -23,7 +23,7 @@
         "Ahmedabad, India - (AMD)",
         "Albuquerque, United States - (ABQ)"
       ],
-      "zkontrolovano": "2026-11-19T00:03:25.202Z",
+      "zkontrolovano": "2026-11-19T01:03:59.388Z",
       "chyba": null
     },
     {
@@ -35,7 +35,7 @@
         "Zoom Phone",
         "Zoom Phone - EMEA"
       ],
-      "zkontrolovano": "2026-11-19T00:03:25.202Z",
+      "zkontrolovano": "2026-11-19T01:03:59.388Z",
       "chyba": null
     },
     {
@@ -44,7 +44,7 @@
       "popis": "All Systems Operational",
       "incidenty": [],
       "postizene": [],
-      "zkontrolovano": "2026-11-19T00:03:25.202Z",
+      "zkontrolovano": "2026-11-19T01:03:59.388Z",
       "chyba": null
     }
   ]
