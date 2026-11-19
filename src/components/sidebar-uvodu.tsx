@@ -8,7 +8,7 @@ import { PASMA, UROVNE } from "@/lib/skala";
 import type { CelkovyStav, Kandidat, Uroven } from "@/lib/typy";
 import { casPraha, datumPraha } from "@/lib/cas";
 import { useT } from "@/lib/i18n";
-import { BUY_ME_A_COFFEE_URL, HEROHERO_URL, KANALY } from "@/config/web";
+import { BUY_ME_A_COFFEE_URL, HEROHERO_URL, KANALY, SPUSTENO } from "@/config/web";
 import { Ikona } from "./ikony";
 import { ObloukovyMerak } from "./mericky";
 import { Cara, poDnech, Sloupky } from "./mikrograf";
@@ -128,7 +128,8 @@ export function SidebarUvodu({ stav, cr, crHistoricky, crPocet, crKampane = [], 
         <InternetBox data={internet} />
       </div>
 
-      {/* Situace teď */}
+      {/* Situace teď — zatím skrytá (SPUSTENO.situaceTed, 19. 11. 2026). */}
+      {SPUSTENO.situaceTed && (
       <section className="overflow-hidden rounded-[22px] bg-plocha">
         <HlavickaWidgetu ikona="radar" nazev="Situace teď" meta={<span className="cislice">{soucet(14)} {sklon(soucet(14), "případ", "případy", "případů")} za 14 dní</span>} />
         <div className="p-3">
@@ -193,6 +194,7 @@ export function SidebarUvodu({ stav, cr, crHistoricky, crPocet, crKampane = [], 
           <p className="mt-2 px-1 text-mikro text-tlum2 max-lg:hidden">Případy a operace proti občanům v Evropě. <Link href="/metodika/#situace-ted" className="odkaz">Jak se hodnotí</Link>.</p>
         </div>
       </section>
+      )}
 
       {/* Pizza index (kuriozita) z úvodu pryč 2. 11. 2026: na úvod patří jen to, co se dotýká bezpečí. */}
 
