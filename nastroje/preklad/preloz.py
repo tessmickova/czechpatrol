@@ -189,13 +189,17 @@ def smycka(text: str) -> bool:
     return any(slova[i] == slova[i + 1] == slova[i + 2] == slova[i + 3] for i in range(len(slova) - 3))
 
 
+class ModelChybi(Exception):
+    """Model se nestáhl nebo nenačetl. Není to chyba překladu: zpráva se nezapíše jako nepovedená a zkusí se příští běh."""
+
+
 def preloz_text(text: str, z: str) -> str | None:
     cesta = [("en", "cs")] if z == "en" else [(z, "en"), ("en", "cs")]
     casti = vety(text)
     for krok in cesta:
         m = model(*krok)
         if m is None:
-            return None
+            raise ModelChybi(f"{krok[0]}→{krok[1]}")
         casti = m.preloz(casti)
     vysledek = uprav(" ".join(casti))
     if not vysledek or vysledek.casefold() == text.strip().casefold():
@@ -212,7 +216,7 @@ def main(vstup: str, vystup: str) -> None:
         zaloguj(f"vstup nejde přečíst: {e}")
         zpravy = []
     vysledky: dict[str, dict] = {}
-    statistika = {"prelozeno": 0, "cesky": 0, "selhalo": 0}
+    statistika = {"prelozeno": 0, "cesky": 0, "selhalo": 0, "bez_modelu": 0}
     zacatek = time.time()
     for z in zpravy:
         try:
@@ -230,6 +234,8 @@ def main(vstup: str, vystup: str) -> None:
             s = preloz_text(shrnuti, kod) if shrnuti else None
             vysledky[z["id"]] = {"jazyk": kod, "titulek": t, "shrnuti": s}
             statistika["prelozeno"] += 1
+        except ModelChybi:
+            statistika["bez_modelu"] += 1
         except Exception as e:
             vysledky[z.get("id", "?")] = {"chyba": str(e)[:200]}
             statistika["selhalo"] += 1
