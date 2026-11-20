@@ -1,6 +1,7 @@
 "use client";
 
 import { ZnackaOdchylky, VYZNAM_ODCHYLKY } from "./odchylka";
+import { PoznamkaPrekladu } from "./poznamka-prekladu";
 import { vetaPrekladu } from "@/lib/preklad";
 import { jeCesky } from "@/lib/jazyk";
 import { nazevNaliehave } from "@/lib/naliehave";
@@ -712,6 +713,7 @@ function RadekKandidata({ k }: { k: Kandidat }) {
       detail={
         <div className="space-y-2 pt-1 text-zaklad leading-relaxed">
           {k.shrnuti && <p className="text-tlum">{k.shrnuti}</p>}
+          {!k.preklad && !jeCesky(k.titulek) && <PoznamkaPrekladu />}
           {k.odchylka && (
             <p className="text-drobne text-stari-text">
               {k.odchylka.uroven === "podezrele" ? "Podezřelé" : "Liší se od ostatních zdrojů"}: {k.odchylka.duvody.join("; ")}.{" "}

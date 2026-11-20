@@ -744,6 +744,8 @@ describe("přehled dne — česky, dvakrát denně", () => {
     expect(jeCesky("Tusk hovorí o možnej ruskej provokácii. Rakety a dron dopadli pri miestach")).toBe(false);
     expect(jeCesky("Nemeckí špióni dostali nové právomoci. V zahraničí môžu vykonávať")).toBe(false);
     expect(jeCesky("Prodej zbraní Ukrajině schválila vláda")).toBe(true);
+    expect(jeCesky("Študent plánoval v Nemecku útok na mešitu, zbrane si vyrobil na 3D tlačiarni")).toBe(false);
+    expect(jeCesky("Dron dopadol pred domom vo Vroclave")).toBe(false);
     expect(jeCesky("Ruské útoky vyvolaly poplach v Polsku. Letiště v Řešově přerušilo provoz")).toBe(true);
   });
 

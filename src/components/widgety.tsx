@@ -37,7 +37,7 @@ export function HlavickaWidgetu({ ikona, nazev, id, jako: Jako = "h3", napoveda,
   return (
     <div className="px-4 pb-1 pt-3">
       {/* Štítek se nikdy nezkracuje; údaj vpravo se zalomí, když je místa málo. */}
-      <div className="flex min-h-[28px] items-center justify-between gap-3">
+      <div className="flex min-h-[28px] flex-wrap items-center justify-between gap-x-3 gap-y-1">
         <span className="flex shrink-0 items-center gap-2">
           <span aria-hidden className={`grid h-6 w-6 shrink-0 place-items-center rounded-full ${TON[ton].kruh}`}><Ikona nazev={ikona} velikost={13} tah={2} /></span>
           <Jako id={id} className="nadpis-boxu whitespace-nowrap">{nazev}</Jako>
