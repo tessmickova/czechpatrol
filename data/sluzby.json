@@ -1,5 +1,5 @@
 {
-  "aktualizovano": "2026-11-20T03:03:22.516Z",
+  "aktualizovano": "2026-11-20T06:02:50.489Z",
   "stavy": [
     {
       "klic": "cloudflare",
@@ -7,9 +7,9 @@
       "popis": "Partially Degraded Service",
       "incidenty": [
         {
-          "nazev": " R2 and Durable Objects availability issues",
-          "odkaz": "https://www.cloudflarestatus.com/incidents/pfwuex7qix27",
-          "aktualizovano": "2026-11-20T02:53:32.481Z"
+          "nazev": "Network Performance Issues in Miami",
+          "odkaz": "https://www.cloudflarestatus.com/incidents/4lv21sf5fzhm",
+          "aktualizovano": "2026-11-20T05:10:34.028Z"
         },
         {
           "nazev": "Changes to Cloudflare Workers are not producing Event Subscription events",
@@ -23,7 +23,7 @@
         "Ahmedabad, India - (AMD)",
         "Albuquerque, United States - (ABQ)"
       ],
-      "zkontrolovano": "2026-11-20T03:03:22.516Z",
+      "zkontrolovano": "2026-11-20T06:02:50.489Z",
       "chyba": null
     },
     {
@@ -32,7 +32,7 @@
       "popis": "All Systems Operational",
       "incidenty": [],
       "postizene": [],
-      "zkontrolovano": "2026-11-20T03:03:22.516Z",
+      "zkontrolovano": "2026-11-20T06:02:50.489Z",
       "chyba": null
     },
     {
@@ -41,7 +41,7 @@
       "popis": "All Systems Operational",
       "incidenty": [],
       "postizene": [],
-      "zkontrolovano": "2026-11-20T03:03:22.516Z",
+      "zkontrolovano": "2026-11-20T06:02:50.489Z",
       "chyba": null
     }
   ]

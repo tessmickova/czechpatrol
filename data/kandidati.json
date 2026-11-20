@@ -908,6 +908,151 @@
     }
   },
   {
+    "id": "k-9b60a35bd79075e3",
+    "zachyceno": "2026-11-20T06:02:45.853Z",
+    "publikovano": "2026-11-20T06:00:00.000Z",
+    "zdroj": {
+      "nazev": "Český rozhlas — domácí zprávy",
+      "url": "https://www.irozhlas.cz/zpravy-domov/nedostatek-elektriny-a-zamestnancu-problemy-s-odvody-a-ostrelovanim-trapi_2611200700_jar",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Nedostatek elektřiny a zaměstnanců. Problémy s odvody a ostřelováním trápí podnikatele na Ukrajině",
+    "titulekPuvodni": "Nedostatek elektřiny a zaměstnanců. Problémy s odvody a ostřelováním trápí podnikatele na Ukrajině",
+    "shrnuti": "Ruské útoky jsou stále častější i v klidnějších částech Ukrajiny. Například na Volyni. Tamní podnikatelé, včetně českých, se kvůli válce potýkají nejen s výpadky elektřiny nebo vody, ale i nedostatkem mužského personálu. Muže totiž kvůli mobilizaci odvádějí do armády.",
+    "kodZeme": "CZ",
+    "zeme": "Česko",
+    "kategorie": [
+      "pravo",
+      "hybridni",
+      "vojsko",
+      "rusko"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "odvody",
+      "ostrelovani",
+      "armad+mobiliz",
+      "rusk"
+    ],
+    "naliehave": null,
+    "stav": "ceka",
+    "vyrez": {
+      "text": "",
+      "stazeno": "2026-11-20T06:02:48.828Z",
+      "stav": 403,
+      "chyba": "HTTP 403"
+    }
+  },
+  {
+    "id": "k-db2c614be95ee950",
+    "zachyceno": "2026-11-20T06:02:46.092Z",
+    "publikovano": "2026-11-20T06:00:00.000Z",
+    "zdroj": {
+      "nazev": "Deník N",
+      "url": "https://denikn.cz/2263337/prestavet-shorele-orli-hnizdo-nebo-ponechat-ruiny-nemecko-se-pre-o-hitlerovo-dedictvi/",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Přestavět shořelé Orlí hnízdo, nebo ponechat ruiny? Německo se pře o Hitlerovo dědictví",
+    "titulekPuvodni": "Přestavět shořelé Orlí hnízdo, nebo ponechat ruiny? Německo se pře o Hitlerovo dědictví",
+    "shrnuti": "Žhářský útok na někdejší horské útočiště Adolfa Hitlera Orlí hnízdo otevřel debatu o tom, jak by Německo mělo naložit s místem, které je spojeno s temnou nacistickou minulostí. Názory se různí – někteří chtějí na vrcholku hory ponechat ruiny, jiní mluví o přestavbě.",
+    "kodZeme": "DE",
+    "zeme": "Německo",
+    "kategorie": [
+      "sabotaz",
+      "hybridni"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "zhar",
+      "naloz",
+      "utok na"
+    ],
+    "naliehave": null,
+    "stav": "ceka",
+    "vyrez": {
+      "text": "Přestavět shořelé Orlí hnízdo, nebo ponechat ruiny? Německo se pře o Hitlerovo dědictví &mdash; Deník N\nJedno ze sídel nacistického diktátora Adolfa Hitlera – Orlí hnízdo (Kehlsteinhaus) – vyhořelo. Foto: bavorské ministerstvo vnitra\nŽhářský útok na někdejší horské útočiště Adolfa Hitlera Orlí hnízdo otevřel debatu o tom, jak by Německo mělo naložit s místem, které je spojeno s temnou nacistickou minulostí. Názory se různí – někteří chtějí na vrcholku hory ponechat ruiny, jiní mluví o přestavbě.\nVíce o poslechu Deníku N\nPřidat Deník N mezi oblíbené zdroje\nVíce než osmdesát let po konci druhé světové války Němci a Němky stále hledají odpověď na palčivou otázku, jak by měli naložit se stavbami spojenými s nacismem.\nNovou kapitolu v dlouholeté debatě otevřel žhářský útok na někdejší horské sídlo Adolfa Hitlera Orlí hnízdo, které se nachází poblíž Berchtesgadenu v Bavorsku. V noci z 23. na 24. října zřejmě psychicky narušený muž budovu ve výšce 1834 m n. m. zapálil. Jeho motiv zatím není znám.\nPlameny objekt značně poškodily. Žár byl natolik silný, že z interiéru nezbylo téměř nic. Na fotkách, které jsou k dispozici, jsou vidět ohořelé stěny a částečně zborcená střecha.\nMělo by…",
+      "stazeno": "2026-11-20T06:02:48.881Z",
+      "stav": 200
+    }
+  },
+  {
+    "id": "k-599b25abaf5b865d",
+    "zachyceno": "2026-11-20T06:02:48.686Z",
+    "publikovano": "2026-11-20T06:00:00.000Z",
+    "zdroj": {
+      "nazev": "Ukrinform (anglicky)",
+      "url": "https://www.ukrinform.net/rubric-ato/4186645-three-killed-15-injured-in-russian-attack-on-kyiv.html",
+      "typ": "wire",
+      "primarni": false
+    },
+    "titulek": "Three killed, 15 injured in Russian attack on Kyiv",
+    "titulekPuvodni": "Three killed, 15 injured in Russian attack on Kyiv",
+    "shrnuti": "Three people have been killed and 15 injured in a Russian missile attack on Kyiv.",
+    "kodZeme": "UA",
+    "zeme": "Ukrajina",
+    "kategorie": [
+      "hybridni",
+      "rusko"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "attack on",
+      "russia"
+    ],
+    "naliehave": null,
+    "stav": "ceka",
+    "vyrez": {
+      "text": "Three killed, 15 injured in Russian attack on Kyiv\n\r\nSubscription\nNewsletters\nPhotobank\nUkrinform - Ukrainian National News Agency\nFounded in 1918\nFriday, 20 November 2026, 08:02\nWar\nEconomy\nSports\nMore ☰\nContacts\nEng\nУкр\nEng\nEsp\nDeu\nعربي\nFra\n日本語\nPol\n&times;\nAll topics\nWar\nRecovery of Ukraine\nPolitics\nEconomy\nFact checks\nDefense\nSociety and Culture\nSports\nCrime\nAccidents and Emergencies\nAgency\nInformation on Agency\nOur Contacts\nSubscribtion Terms\nOur Services\nPrivacy policy and personal data protection\nAdditional\nPublications\nInterviews\nPhoto\nVideo\nLongreads\nReleases\nServices\nSubscription\nNewsletters\nPhotobank\n\r\n\r\n\r\nThree people have been killed and 15 injured in a Russian missile attack on Kyiv.\nAccording to Ukrinform, the Kyiv City Military Administration reported this on Telegram .\n\r\n\r\n\"Unfortunately, three people were killed in the enemy attack on the capital,\" the statement said.\n\r\n\r\nRead also: Kyiv&rsquo;s Podilskyi and Darnytskyi bridges damaged in Russian ballistic attack &ndash; mayor \r\n\r\nLater, Kyiv Mayor Vitali Klitschko reported that 15 people had been injured.\n\r\n\r\n\"Three people are currently known to have been killed. According to preliminary information, they were…",
+      "stazeno": "2026-11-20T06:02:49.541Z",
+      "stav": 200
+    }
+  },
+  {
+    "id": "k-c03b99cc500cbaec",
+    "zachyceno": "2026-11-20T06:02:45.860Z",
+    "publikovano": "2026-11-20T05:04:00.000Z",
+    "zdroj": {
+      "nazev": "Český rozhlas — domácí zprávy",
+      "url": "https://www.irozhlas.cz/zpravy-svet/online-ukrajina-mela-zasahnout-chemicky-zavod-ve-smolenske-oblasti-vznikaly-v_2611200604_raf",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "ONLINE: Ukrajina měla zasáhnout chemický závod ve Smolenské oblasti. Vznikaly v něm složky do výbušnin",
+    "titulekPuvodni": "ONLINE: Ukrajina měla zasáhnout chemický závod ve Smolenské oblasti. Vznikaly v něm složky do výbušnin",
+    "shrnuti": "Ukrajinské drony v noci na pátek zaútočily na chemický závod u města Dorogobuž v ruské Smolenské oblasti, který vyrábí mimo jiné složky do výbušnin. Informovala o tom ruská služba stanice BBC s odvoláním na monitorovací kanály. Zprávu nebylo možné ověřit z nezávislých zdrojů, informace o následcích ",
+    "kodZeme": "UA",
+    "zeme": "Ukrajina",
+    "kategorie": [
+      "hybridni",
+      "drony",
+      "rusko"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "utok na",
+      "dron",
+      "rusk"
+    ],
+    "naliehave": null,
+    "stav": "ceka",
+    "vyrez": {
+      "text": "",
+      "stazeno": "2026-11-20T06:02:50.066Z",
+      "stav": 403,
+      "chyba": "HTTP 403"
+    }
+  },
+  {
     "id": "k-cd355f8e77b5655f",
     "zachyceno": "2026-11-20T03:03:18.973Z",
     "publikovano": "2026-11-20T03:00:00.000Z",
@@ -936,6 +1081,45 @@
     "vyrez": {
       "text": "Stockpiling Britain: Does Westminster know something we don’t? – POLITICO\nSkip to main content\nAdvertisement\nWestminster Insider\nPOLITICO’s weekly political series lifting the curtain on how Westminster really works.\nListen on\nSpotify\nApple Music\nCast Box\nPocket Casts\nListen on\nSpotify\nApple Music\nAmazon Music\nA ‘Black Sky event’ — a major blackout that could knock out communications, disrupt food supplies and bring everyday life to a standstill — is among the scenarios emergency planners worry about.\nNow the government’s new ‘Be Ready’ campaign is urging Britons to stockpile food, water and other essentials.\nBut why are politicians suddenly so keen for us to prepare for the worst?\nThis week, host Patrick Baker meets the MPs who think the government isn’t going far enough.\nHe hits the supermarket with Conservative Shadow Minister for Defence, Security and Resilience David Reed to put together a 72-hour emergency kit — and find out what threats have him worried.\nLiberal Democrat MP and Shetland islander Alistair Carmichael, Chair of the Environment, Food and Rural Affairs Committee, explains what the rest of Britain can learn from life on a remote island, where power cuts and…",
       "stazeno": "2026-11-20T03:03:21.979Z",
+      "stav": 200
+    }
+  },
+  {
+    "id": "k-52a455c7ac836130",
+    "zachyceno": "2026-11-20T06:02:46.302Z",
+    "publikovano": "2026-11-20T00:00:00.000Z",
+    "zdroj": {
+      "nazev": "The Kyiv Independent",
+      "url": "https://kyivindependent.com/russia-launches-mass-missile-attack-against-ukraine-after-putin-vows-revenge/",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Large-scale Russian missile, drone attack on Kyiv damages bridges, critical infrastructure, kills 3.",
+    "titulekPuvodni": "Large-scale Russian missile, drone attack on Kyiv damages bridges, critical infrastructure, kills 3.",
+    "shrnuti": "",
+    "kodZeme": "UA",
+    "zeme": "Ukrajina",
+    "kategorie": [
+      "hybridni",
+      "drony",
+      "infrastruktura",
+      "rusko"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "attack on",
+      "dron",
+      "drone",
+      "critical infrastructure",
+      "russia"
+    ],
+    "naliehave": null,
+    "stav": "ceka",
+    "vyrez": {
+      "text": "Large-scale Russian missile, drone attack on Kyiv damages bridges, critical infrastructure, kills 3 0 of 5,000\nHelp us find 5,000 new members. Bring one friend.\nShare your personal link and make us stronger in 2027.\n0 found so far\nGoal 5,000\nCopy link Copy\nLog in to see who joined through your link.\nWar Large-scale Russian missile, drone attack on Kyiv damages bridges, critical infrastructure, kills 3\nNovember 20, 2026 1:41 am  (Updated:  November 20, 2026 7:52 am )\n• 5 min read\nPrefer on Google\nby Abbey Fenbert, Dmytro Basmat\nPeople shelter overnight at a Kyiv metro station following warnings of possible Russian air attacks late on Nov. 19, 2026. (Roman PILIPEY / AFP via Getty Images)\nEditor's Note: This is a developing story and is being updated.\nAfter a day of striking government buildings and cathedrals in central Kyiv, Russia launched a mass missile attack targeting the capital, striking key infrastructure in Kyiv, while targeting various regions of the country.\nVowing retaliatory strikes following the Ukraine's damage to the Crimean Bridge, Russia launched its own strikes on key bridges in Kyiv. Power, heat, and water outages were also reported in the capital following…",
+      "stazeno": "2026-11-20T06:02:50.115Z",
       "stav": 200
     }
   },
@@ -1039,6 +1223,40 @@
     }
   },
   {
+    "id": "k-42fae1ee032b926f",
+    "zachyceno": "2026-11-20T06:02:48.719Z",
+    "publikovano": "2026-11-19T21:42:00.000Z",
+    "zdroj": {
+      "nazev": "Ukrainska Pravda (anglicky)",
+      "url": "https://www.pravda.com.ua/eng/news/2026/11/19/8063714/",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Zelenskyy: I am not sure Ukraine and US have same understanding of Article 5",
+    "titulekPuvodni": "Zelenskyy: I am not sure Ukraine and US have same understanding of Article 5",
+    "shrnuti": "Ukrainian President Volodymyr Zelenskyy has raised concerns about the meaning of proposed security commitments, asking whether American troops could be stationed in Ukraine and how Western partners would respond to another Russian attack.",
+    "kodZeme": "UA",
+    "zeme": "Ukrajina",
+    "kategorie": [
+      "nato",
+      "rusko"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "article 5",
+      "russia"
+    ],
+    "naliehave": null,
+    "stav": "ceka",
+    "vyrez": {
+      "text": "Zelenskyy questions whether US and Ukraine share same interpretation of NATO-style security guarantees | Ukrainska Pravda\nVolodymyr Zelenskyy. Photo: Getty Images\nPresident Volodymyr Zelenskyy has said he is not sure that Ukraine and the US share the same understanding of what is meant by the phrase security guarantees similar to NATO's Article 5.\nSource: Zelenskyy during a conversation with the media on 19 November following a meeting of the Coalition of the Willing, as reported by European Pravda\nDetails: Although Ukraine's American partners have announced an agreement with Russia on security guarantees for Ukraine based on the principle of NATO's Article 5, Zelenskyy does not believe he understands exactly what the US means by the term.\nAdvertisement:\n\r\n\r\n\r\n\r\n\r\n\"But I'm not sure that we have a common acceptance of Article 5, like we understand [it]. Because what I understand, for me, what does Article 5 mean? Article 5 [means] that there are some forces of partners on your land. And my question is, what about American soldiers? Now, I'm not supportive or not supportive. Of course, we will be happy if our American partners trust us, if their bases are in Ukraine, like in the…",
+      "stazeno": "2026-11-20T06:02:50.430Z",
+      "stav": 200
+    }
+  },
+  {
     "id": "k-b11b79f675457d8a",
     "zachyceno": "2026-11-19T23:47:35.465Z",
     "publikovano": "2026-11-19T21:25:27.000Z",
@@ -1069,6 +1287,38 @@
     "vyrez": {
       "text": "Russian strikes on Kyiv kill one, damage Dutch and Austrian embassies - France 24\nSkip to main content\nTo display this content from YouTube, you must enable advertisement tracking and audience measurement.\nAccept\nManage my choices\nOne of your browser extensions seems to be blocking the video player from loading. To watch this content, you may need to disable it on this site.\nTry again\nCover image: © France 24\n01:55\nVideo content\nVideo\nRussian strikes on Kyiv kill one, damage Dutch and Austrian embassies\nIssued on: 19/11/2026 - 22:25 Modified: 19/11/2026 - 22:45\nShare\nA wave of daytime Russian strikes on Kyiv on Thursday killed one person and damaged a historic cathedral as well as the embassies of Austria and the Netherlands. Loud explosions erupted across the Ukraine capital throughout the day as the leaders of Russia, China and the United States held a historic meeting in China that put Russia's President Vladimir Putin in international spotlight. FRANCE 24's Laurent Berstecher reports.\nKeywords for this article\nUkraine\nRussia\nKyiv\nEurope\nAustria\nRead more\nRead less\nKushner says Trump 'open' to extend NATO mutual defense-type clause to Ukraine\n19/11/2026\nVideo…",
       "stazeno": "2026-11-19T23:47:38.572Z",
+      "stav": 200
+    }
+  },
+  {
+    "id": "k-8e9bfa12e0a713fd",
+    "zachyceno": "2026-11-20T06:02:48.721Z",
+    "publikovano": "2026-11-19T21:23:00.000Z",
+    "zdroj": {
+      "nazev": "Ukrainska Pravda (anglicky)",
+      "url": "https://www.pravda.com.ua/eng/news/2026/11/19/8063712/",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Zelenskyy discusses security guarantees with Trump's envoy and European advisers – photos",
+    "titulekPuvodni": "Zelenskyy discusses security guarantees with Trump's envoy and European advisers – photos",
+    "shrnuti": "Ukrainian President Volodymyr Zelenskyy met Steve Witkoff, Jared Kushner and European national security advisers on 19 November to discuss security guarantees and closer coordination between Kyiv, Washington and Europe.",
+    "kodZeme": "UA",
+    "zeme": "Ukrajina",
+    "kategorie": [
+      "diplomacie"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "national security adviser"
+    ],
+    "naliehave": null,
+    "stav": "ceka",
+    "vyrez": {
+      "text": "Zelenskyy holds talks with US and European officials on security arrangements for Ukraine | Ukrainska Pravda\nPhoto: Office of the President of Ukraine\nUkrainian President Volodymyr Zelenskyy held a meeting with Steve Witkoff, Jared Kushner and European national security advisers on 19 November.\nSource: Zelenskyy on social media\nQuote: \"It is important that cooperation between Europe, Ukraine, and America in the negotiation process is becoming closer. From the very beginning, Ukraine has advocated for this approach – maximum coordination among us on everything concerning European and Ukrainian security and our future.\nAdvertisement:\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nPhoto: Office of the President of Ukraine\r\n\r\n\r\n\r\nDuring the meeting, we focused on security guarantees that will serve as a real deterrent to Russia.\"\n\r\n\r\n\r\n\r\n\r\nPhoto: Office of the President of Ukraine\r\n\r\n\r\n\r\nDetails: Zelenskyy hopes that the American side will help organise the first multilateral meeting at the team level as soon as possible, with full European participation.\nBackground: Donald Trump's Special Envoy Jared Kushner said that the United States had succeeded in securing Russia's readiness to consider a concept under…",
+      "stazeno": "2026-11-20T06:02:50.459Z",
       "stav": 200
     }
   },
@@ -10261,242 +10511,6 @@
     "vyrez": {
       "text": "Zelenskyy warns that Russia is preparing new missile attack | Ukrainska Pravda\nVolodymyr Zelenskyy. Photo: Getty Images\nUkrainian President Volodymyr Zelenskyy has warned that Russia may launch a large-scale missile attack on the night of 16-17 November.\nSource: Zelenskyy in his evening address\nQuote: \" Be sure to heed missile alerts this evening, tonight, and throughout tomorrow. We have intel that the Russians have prepared for a strike. Stay safe. And those in Russia must know that every act of evil they commit will be met with a just response from us . Thank you to everyone who stands with Ukraine! \"\nAdvertisement:\n\r\n\r\n\r\n\r\n\r\nDetails: Zelenskyy added that Russia is receiving dozens of missiles from North Korea.\nQuote: \" This is a grave threat , and not only to Ukraine. North Korea is honing its weapons by having its ballistic missiles used in this war. This creates additional challenges for the entire region surrounding Korea.\nAnd it is also a challenge for us in Europe. If Russia has an ally that supplies it with ballistic missiles, then Ukraine also needs clear parity so that we can respond to the Russian threat on equal terms. Europe has missiles capable of carrying out…",
       "stazeno": "2026-11-16T21:03:12.007Z",
-      "stav": 200
-    }
-  },
-  {
-    "id": "k-a6e2e99e81884d07",
-    "zachyceno": "2026-11-16T18:02:52.746Z",
-    "publikovano": null,
-    "zdroj": {
-      "nazev": "The Kyiv Independent",
-      "url": "https://kyivindependent.com/estonia-summons-russian-diplomat-over-sabotage-attempt-on-drone-manufacturer/",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Estonia summons Russian diplomat following accusations of Russian sabotage attempt on drone manufacturer.",
-    "titulekPuvodni": "Estonia summons Russian diplomat following accusations of Russian sabotage attempt on drone manufacturer.",
-    "shrnuti": "",
-    "kodZeme": "EE",
-    "zeme": "Estonsko",
-    "kategorie": [
-      "sabotaz",
-      "drony",
-      "rusko"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "zeSite": null,
-    "shody": [
-      "sabotage",
-      "dron",
-      "drone",
-      "russia"
-    ],
-    "naliehave": null,
-    "stav": "ceka",
-    "vyrez": {
-      "text": "Estonia summons Russian diplomat following accusations of Russian sabotage attempt on drone manufacturer 0 of 5,000\nHelp us find 5,000 new members. Bring one friend.\nShare your personal link and make us stronger in 2027.\n0 found so far\nGoal 5,000\nCopy link Copy\nLog in to see who joined through your link.\nEurope Estonia summons Russian diplomat following accusations of Russian sabotage attempt on drone manufacturer\nNovember 16, 2026 5:59 pm • 2 min read\nPrefer on Google\nby Yevgeniya Doluda\nEstonian flags on the shoreline of the Baltic Sea in Tallinn, Estonia, on Feb. 1, 2024. (Peter Kollanyi/Bloomberg via Getty Images\nRussia's charge d'affaires was summoned after Estonia accused Russian military intelligence of a recent arson attempt on an Estonian defense company, the Estonian Foreign Ministry said on Nov. 16.\nThreod Systems, an Estonian company that manufactures reconnaissance and attack drones, came under attack in the early hours of Nov. 14 when a suspect was spotted attempting to cause an explosion and set fire to the company's premises in Viimsi, near Tallinn.\n“Putin has failed to achieve the objectives of his war of aggression against Ukraine and is now increasingly seeking…",
-      "stazeno": "2026-11-16T18:02:55.408Z",
-      "stav": 200
-    }
-  },
-  {
-    "id": "k-24b33ba423b5818f",
-    "zachyceno": "2026-11-16T18:54:06.913Z",
-    "publikovano": "2026-11-16T18:02:00.000Z",
-    "zdroj": {
-      "nazev": "Ukrinform (anglicky)",
-      "url": "https://www.ukrinform.net/rubric-ato/4185289-dnipro-left-completely-without-power-after-russian-attack.html",
-      "typ": "wire",
-      "primarni": false
-    },
-    "titulek": "Dnipro left completely without power after Russian attack",
-    "titulekPuvodni": "Dnipro left completely without power after Russian attack",
-    "shrnuti": "The city of Dnipro has been completely left without electricity following an attack on energy facilities in the region.",
-    "kodZeme": "RU",
-    "zeme": "Rusko",
-    "kategorie": [
-      "hybridni",
-      "rusko"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "zeSite": null,
-    "shody": [
-      "attack on",
-      "russia"
-    ],
-    "naliehave": null,
-    "stav": "ceka",
-    "vyrez": {
-      "text": "Dnipro left completely without power after Russian attack\n\r\nSubscription\nNewsletters\nPhotobank\nUkrinform - Ukrainian National News Agency\nFounded in 1918\nMonday, 16 November 2026, 20:54\nWar\nEconomy\nSports\nMore ☰\nContacts\nEng\nУкр\nEng\nEsp\nDeu\nعربي\nFra\n日本語\nPol\n&times;\nAll topics\nWar\nRecovery of Ukraine\nPolitics\nEconomy\nFact checks\nDefense\nSociety and Culture\nSports\nCrime\nAccidents and Emergencies\nAgency\nInformation on Agency\nOur Contacts\nSubscribtion Terms\nOur Services\nPrivacy policy and personal data protection\nAdditional\nPublications\nInterviews\nPhoto\nVideo\nLongreads\nReleases\nServices\nSubscription\nNewsletters\nPhotobank\n\r\n\r\n\r\nThe city of Dnipro has been completely left without electricity following an attack on energy facilities in the region.\nAccording to Ukrinform, DTEK Group reported this on Telegram .\n\r\n\r\nSome residents of the Dnipro, Samar and Kamianske districts are also without electricity, the company said.\n\r\n\r\n\"Energy workers are already restoring power. Right now, priority is being given to restoring electricity to water and heating supply systems and social facilities,\" the company said.\n\r\n\r\nDTEK warned that further Russian attacks could slow down the work. However, repair…",
-      "stazeno": "2026-11-16T18:54:07.453Z",
-      "stav": 200
-    }
-  },
-  {
-    "id": "k-a84768717821cf11",
-    "zachyceno": "2026-11-16T18:54:04.793Z",
-    "publikovano": "2026-11-16T18:00:48.000Z",
-    "zdroj": {
-      "nazev": "Deník N",
-      "url": "https://denikn.cz/2259502/vyvoj-boju-1726-den-ukrajina-poskodila-krymsky-most-drony-pravdepodobne-zasahly-mostni-oblouk/",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Vývoj bojů (1726. den): Ukrajina poškodila Krymský most – drony pravděpodobně zasáhly mostní oblouk",
-    "titulekPuvodni": "Vývoj bojů (1726. den): Ukrajina poškodila Krymský most – drony pravděpodobně zasáhly mostní oblouk",
-    "shrnuti": "Informace v textu jsou shrnutím událostí za neděli 15. listopadu. V tuto chvíli už situace na některých místech může být jiná. Co víme o náletu a možném poškození mostu, který leží mezi Ruskem a okupovaným Krymem. „Nepřítel dnes večer zaútočil na Krymský most. Očekává se, že doprava bude omezena do ",
-    "kodZeme": "UA",
-    "zeme": "Ukrajina",
-    "kategorie": [
-      "drony",
-      "rusko"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "zeSite": null,
-    "shody": [
-      "dron+zasahl",
-      "dron",
-      "rusk"
-    ],
-    "naliehave": null,
-    "stav": "ceka",
-    "vyrez": {
-      "text": "Vývoj bojů (1726. den): Ukrajina poškodila Krymský most – drony pravděpodobně zasáhly mostní oblouk &mdash; Deník N\nKrymský most po útoku na záběrech ruské televize. Reprofoto: Izvestija\nVíce o poslechu Deníku N\nPřidat Deník N mezi oblíbené zdroje\nCo víme o náletu a možném poškození mostu, který leží mezi Ruskem a okupovaným Krymem.\nRusové využili mlhu: za špatného počasí se pokusili zaútočit tanky a bojovými vozidly u Dobropillji.\nGraf dne: nejsmrtelnější útoky raketomety HIMARS podle ruských dat.\nDrony znovu útočily na lodě u rumunského a bulharského pobřeží.\nMapy dne: mechanizovaný útok u Dobropillji.\nVidea dne: námořní bitva dronů; Kramatorsk před příchodem fronty; ruský útok u Dobropillji.\nInformace v textu jsou shrnutím událostí za neděli 15. listopadu. V tuto chvíli už situace na některých místech může být jiná.\nCo víme o náletu a možném poškození mostu, který leží mezi Ruskem a okupovaným Krymem. „Nepřítel dnes večer zaútočil na Krymský most. Očekává se, že doprava bude omezena do poledne… Jakmile bude jasné, jak a kdy bude provoz obnoven, obdržíte úplné informace. Spoléhejte se pouze na informace z oficiálních zdrojů,“ napsal na svém telegramovém účtu v pondělí v osm…",
-      "stazeno": "2026-11-16T18:54:08.677Z",
-      "stav": 200
-    }
-  },
-  {
-    "id": "k-fcecd72baf0156f2",
-    "zachyceno": "2026-11-16T18:02:53.354Z",
-    "publikovano": "2026-11-16T17:44:55.000Z",
-    "zdroj": {
-      "nazev": "Der Standard (Rakousko)",
-      "url": "https://www.derstandard.at/story/3000000349547/nach-supermarkt-sabotage-eu-plant-sanktionen-gegen-den-iran?ref=rss",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Nach Supermarkt-Sabotage: EU plant Sanktionen gegen den Iran",
-    "titulekPuvodni": "Nach Supermarkt-Sabotage: EU plant Sanktionen gegen den Iran",
-    "shrnuti": "Frankreich macht den Iran für die Angriffe verantwortlich. Die neuen Sanktionen würden bereits bestehende Sanktionen ergänzen, sagte EU-Chefdiplomatin Kallas",
-    "kodZeme": "EU",
-    "zeme": "EU",
-    "kategorie": [
-      "sabotaz"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "zeSite": null,
-    "shody": [
-      "sabotage"
-    ],
-    "naliehave": null,
-    "stav": "ceka",
-    "vyrez": {
-      "text": "Nach Supermarkt-Sabotage: EU plant Sanktionen gegen den Iran - International - derStandard.at › International \r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nMehrere europäische Länder waren von den Cyberattacken auf Supermärkte betroffen.\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nBrüssel – Die EU plant nach den Hackerattacken auf Kühlsysteme von Supermarktketten neue Sanktionen gegen den Iran. Die jüngsten Cyberangriffe hätten gezeigt, dass europäische Länder nicht außerhalb der Reichweite Teherans liegen, sagte die EU-Chefdiplomatin Kaja Kallas nach einem Außenministertreffen in Brüssel. Man bereite nun weitere Sanktionen vor.\n\r\n\r\n\r\n\r\nWillkommen bei DER STANDARD\n\r\n\r\nSie entscheiden darüber, wie Sie unsere Inhalte nutzen wollen. Ihr Gerät erlaubt uns derzeit leider nicht, die entsprechenden Optionen anzuzeigen. \r\n\r\nBitte deaktivieren Sie sämtliche Hard- und Software-Komponenten, die in der Lage sind Teile unserer Website zu blockieren. Z.B. Browser-AddOns wie Adblocker oder auch netzwerktechnische Filter.\n\r\nSie haben ein PUR-Abo? Hier anmelden.",
-      "stazeno": "2026-11-16T18:02:56.651Z",
-      "stav": 200
-    }
-  },
-  {
-    "id": "k-655bf40b5c66725f",
-    "zachyceno": "2026-11-16T18:02:53.080Z",
-    "publikovano": "2026-11-16T17:41:21.000Z",
-    "zdroj": {
-      "nazev": "Euronews",
-      "url": "https://www.euronews.com/2026/11/16/italian-schools-hit-by-new-wave-of-bomb-and-poison-threats",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Italian schools hit by new wave of bomb and poison threats",
-    "titulekPuvodni": "Italian schools hit by new wave of bomb and poison threats",
-    "shrnuti": "Under new security guidelines, Italian schools are no longer automatically evacuated in response to vague, mass-distributed threats, with the decision left to the discretion of law enforcement and security officials.",
-    "kodZeme": "IT",
-    "zeme": "Itálie",
-    "kategorie": [
-      "sabotaz"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "zeSite": null,
-    "shody": [
-      "bomb"
-    ],
-    "naliehave": null,
-    "stav": "ceka",
-    "vyrez": {
-      "text": "Italian schools hit by new wave of bomb and poison threats | Euronews\nAdvertisement\nBy&nbsp Gabriele Barbati\nPublished on\n16 November 2026 - 18:41 GMT+1\nShare\nComments\nAdd Euronews on Google\nShare\nFacebook\nTwitter\nFlipboard\nSend\nReddit\nLinkedin\nMessenger\nTelegram\nVK\nBluesky\nThreads\nWhatsapp\nUnder new security guidelines, Italian schools are no longer automatically evacuated in response to vague, mass-distributed threats, with the decision left to the discretion of law enforcement and security officials.\nAt least 100 Italian schools received emailed bomb and poison threats on Monday, triggering a new security protocol introduced by the government following similar threats last week.\nADVERTISEMENT\nADVERTISEMENT\nThe email arrived at around 10:50 am, signed with the initials MA, warning of two imminent dangers.\n\"I have just been tasked with placing and activating an explosive device in your building. The explosion will take place in 40 minutes,\" it said, while also claiming that \"an employee in your canteen has mixed a toxic substance including sodium azide and potassium cyanide into the food and supplies.\"\n\"You have ignored our demands,\" it added.\nOn this occasion, the threats…",
-      "stazeno": "2026-11-16T18:02:56.687Z",
-      "stav": 200
-    }
-  },
-  {
-    "id": "k-abe85986ba1a2c4d",
-    "zachyceno": "2026-11-16T18:02:52.411Z",
-    "publikovano": "2026-11-16T17:32:00.000Z",
-    "zdroj": {
-      "nazev": "iDNES.cz — zpravodajství",
-      "url": "https://www.idnes.cz/ceske-budejovice/zpravy/stret-vlaku-hluboka-nad-vltavou-nepovolena-jizda.A261116_180012_budejovice-zpravy_epkbn#utm_source=rss&utm_medium=feed&utm_campaign=zpravodaj&utm_content=main",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "V jižních Čechách se střetly vlaky, provoz na koridoru stojí",
-    "titulekPuvodni": "V jižních Čechách se střetly vlaky, provoz na koridoru stojí",
-    "shrnuti": "Ve stanici Hluboká nad Vltavou na trati mezi Českými Budějovicemi a Plzní o sebe dnes kvůli nepovolené jízdě zavadily vlaky. Nikdo není zraněný, soupravy se nesrazily a hlášeno není ani jejich vykolejení. Provoz na koridorové trati je zastavený.",
-    "kodZeme": "CZ",
-    "zeme": "Česko",
-    "kategorie": [
-      "sabotaz"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "zeSite": null,
-    "shody": [
-      "vykolejeni"
-    ],
-    "naliehave": null,
-    "stav": "ceka",
-    "vyrez": {
-      "text": "V Hluboké nad Vltavou se střetly vlaky, provoz na koridoru stojí - iDNES.cz \r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\niDNES.cz\n\r\n\r\n\r\nP�ihl�sit \r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nAbyste mohli pokra�ovat, pot�ebujeme v�d�t, jakou formou v�m m��eme zobrazovat reklamu \r\n\r\n\r\n\r\n\r\n\r\nV�mi zvolen� nastaven� \r\nneobsahuje souhlas se zobrazov�n�m c�len� reklamy . \r\nVyberte pros�m znovu, \r\njakou formou v�m m�me zobrazovat obsah. \r\n\r\n\r\n\r\n\r\n\r\n\r\niDNES Premium\n\r\nBez reklam\n\r\n\r\n199 K� m�s��n�\n\r\nM��ete neomezen� ��st iDNES.cz, Lidovky.cz, Expres.cz a Antiyoutuber.cz. K tomu dostanete tak� noviny a �asopisy v elektronick� podob�. To v�e bez reklam. 1\n\r\n\r\nP�edplatit\n\r\n\r\nU� m�te ��et? P�ihlaste se\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nS c�lenou reklamou\n\r\n\r\n\r\nZdarma \r\n\r\nZachov�me v�m v�e tak, jak jste zvykl� a reklamu p�izp�sob�me va�im z�jm�m. Bez omezen� si m��ete d�l ��st, p�ehr�vat videa, sout�it �i p�isp�vat do v�ech diskus�. 2\n\r\n\r\nSouhlas�m\n\r\nPodrobn� nastaven�\n\r\n\r\n\r\n\r\n\r\n\r\niDNES a reklama\n\r\nPokud vyu�ijete m�sto platby ud�len� souhlasu s reklamou (tj. souhlas s vyu�it�m cookies a dal��ch s�ov�ch identifik�tor� pro ��ely c�len� reklamy), \r\nbudou V�m zobrazov�ny v r�mci…",
-      "stazeno": "2026-11-16T18:02:56.724Z",
-      "stav": 200
-    }
-  },
-  {
-    "id": "k-f5762a0f68d937f5",
-    "zachyceno": "2026-11-16T18:02:55.239Z",
-    "publikovano": "2026-11-16T17:30:00.000Z",
-    "zdroj": {
-      "nazev": "Ukrinform (anglicky)",
-      "url": "https://www.ukrinform.net/rubric-economy/4185282-power-outages-most-severe-in-dnipro-kharkiv-poltava-and-zaporizhzhia-ukrenergo.html",
-      "typ": "wire",
-      "primarni": false
-    },
-    "titulek": "Power outages most severe in Dnipro, Kharkiv, Poltava and Zaporizhzhia – Ukrenergo",
-    "titulekPuvodni": "Power outages most severe in Dnipro, Kharkiv, Poltava and Zaporizhzhia – Ukrenergo",
-    "shrnuti": "Russia has been systematically attacking Ukraine's energy infrastructure for more than a month, causing large-scale power outages in the east of the country.",
-    "kodZeme": "UA",
-    "zeme": "Ukrajina",
-    "kategorie": [
-      "infrastruktura",
-      "rusko"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "zeSite": null,
-    "shody": [
-      "power outage",
-      "russia"
-    ],
-    "naliehave": null,
-    "stav": "ceka",
-    "vyrez": {
-      "text": "Power outages most severe in Dnipro, Kharkiv, Poltava and Zaporizhzhia – Ukrenergo\n\r\nSubscription\nNewsletters\nPhotobank\nUkrinform - Ukrainian National News Agency\nFounded in 1918\nMonday, 16 November 2026, 20:03\nWar\nEconomy\nSports\nMore ☰\nContacts\nEng\nУкр\nEng\nEsp\nDeu\nعربي\nFra\n日本語\nPol\n&times;\nAll topics\nWar\nRecovery of Ukraine\nPolitics\nEconomy\nFact checks\nDefense\nSociety and Culture\nSports\nCrime\nAccidents and Emergencies\nAgency\nInformation on Agency\nOur Contacts\nSubscribtion Terms\nOur Services\nPrivacy policy and personal data protection\nAdditional\nPublications\nInterviews\nPhoto\nVideo\nLongreads\nReleases\nServices\nSubscription\nNewsletters\nPhotobank\n\r\n\r\n\r\nRussia has been systematically attacking Ukraine's energy infrastructure for more than a month, causing large-scale power outages in the east of the country.\nAccording to Ukrinform, the national power grid operator Ukrenergo reported this on Telegram .\n\r\n\r\n\"Enemy strikes have caused large-scale power outages in eastern Ukraine. The situation is particularly difficult in Dnipro, Kharkiv, Poltava and Zaporizhzhia. Due to significant damage to energy infrastructure, electricity supply to these cities is severely restricted,\" the statement…",
-      "stazeno": "2026-11-16T18:02:59.370Z",
       "stav": 200
     }
   }
