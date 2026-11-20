@@ -53,7 +53,6 @@ import { TipyKPriprave } from "./tipy";
 import { tipy as vsechnyTipy } from "@/lib/data-lehka";
 import { CoSeZmenilo } from "./co-se-zmenilo";
 import { StavSluzeb } from "./stav-sluzeb";
-import { InternetBanner } from "./internet-banner";
 import { snimekSluzeb, SLOVA_STAVU, SLUZBY, type StavSluzby } from "@/lib/sluzby";
 import { useStavSluzeb, type ZivyStav } from "@/lib/sluzby-klient";
 import { casPraha } from "@/lib/cas";
@@ -593,8 +592,11 @@ export function Dashboard({
               „příliš poplašné a velké“). Jsou v boxu Souhrn situace vpravo — počet
               a druh, titulky až po rozkliknutí fronty.
             */}
-            {/* Internet v Česku je od 4. 11. 2026 box v postranním panelu; při probíhající vlně útoků zůstává rámeček i tady. */}
-            <InternetBanner ted={tedMs} jenUtok />
+            {/*
+              Velký rámeček „Internet v Česku: probíhá vlna útoků“ z úvodu pryč
+              (20. 11. 2026, provozovatelka: „tento box není třeba“). Stav
+              internetu zůstává v boxu Internet v Česku v postranním panelu.
+            */}
             {/* Na mobilu je „Upozornění“ hned pod tím v řadě tlačítek — dvakrát totéž nepotřebujeme. */}
             <div className="mt-4 max-lg:hidden"><Tlacitko kam="/odber/" varianta="obrys" velikost="m" ikona="zvonek">Odběr zpráv</Tlacitko></div>
           </div>
