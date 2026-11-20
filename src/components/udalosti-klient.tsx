@@ -1,7 +1,9 @@
 "use client";
 
 import { ZnackaOdchylky, VYZNAM_ODCHYLKY } from "./odchylka";
+import { PoznamkaPrekladu } from "./poznamka-prekladu";
 import { vetaPrekladu } from "@/lib/preklad";
+import { jeCesky } from "@/lib/jazyk";
 import { nazevNaliehave } from "@/lib/naliehave";
 import { RadaKTypu } from "./rada-k-typu";
 
@@ -695,6 +697,7 @@ function RadekKandidata({ k }: { k: Kandidat }) {
               </Odznak>
             : null,
           k.odchylka ? <ZnackaOdchylky key="o" uroven={k.odchylka.uroven} /> : null,
+          !k.preklad && !jeCesky(k.titulek) ? <span key="j" className="text-tlum2">cizí jazyk</span> : null,
           k.klasifikace === "model" ? <span key="m" className="text-tlum2">přeloženo modelem</span> : null,
           // Ručně vytažené proti sítu: čtenář má vědět, že tohle nevybral automat.
           k.klasifikace === "clovek" ? <span key="r" className="text-tlum2">vybráno ručně</span> : null,
@@ -710,6 +713,7 @@ function RadekKandidata({ k }: { k: Kandidat }) {
       detail={
         <div className="space-y-2 pt-1 text-zaklad leading-relaxed">
           {k.shrnuti && <p className="text-tlum">{k.shrnuti}</p>}
+          {!k.preklad && !jeCesky(k.titulek) && <PoznamkaPrekladu />}
           {k.odchylka && (
             <p className="text-drobne text-stari-text">
               {k.odchylka.uroven === "podezrele" ? "Podezřelé" : "Liší se od ostatních zdrojů"}: {k.odchylka.duvody.join("; ")}.{" "}

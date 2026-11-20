@@ -35,4 +35,28 @@ describe("témata: hranice NATO a mezinárodní vody", () => {
   it("válka na Ukrajině v Černém moři u ukrajinských přístavů do boxu nepatří", () => {
     expect(temaZpravy(z("UA", "Russian strike hits cargo ship in Odesa port on the Black Sea", ["drony"]))).toBeNull();
   });
+
+  it("akce vedené z moře proti zemím NATO a Evropy patří k vodám (20. 11. 2026)", () => {
+    expect(temaZpravy(z("IT", "Rusko připravuje dronové útoky z moře na Itálii, Francii a Španělsko", ["drony", "hybridni"]))).toBe("vody");
+    expect(temaZpravy({ ...z("IT", "El Mundo: Rusko chystá útoky na Itálii", ["drony"]), fakta: ["Možný scénář: drony Gerbera vypuštěné z lodí, ukryté v kontejnerech."] })).toBe("vody");
+    expect(temaZpravy(z("DK", "Drones launched from a tanker flew over Aalborg airport", ["drony"]))).toBe("vody");
+    expect(temaZpravy(z("DE", "Ruská válečná loď vypálila světlice proti německému vrtulníku", ["hybridni"]))).toBe("vody");
+    expect(temaZpravy(z("FI", "GPS jamming over the Gulf of Finland disrupts flights", ["kyber"]))).toBe("vody");
+  });
+
+  it("ruská plavidla jen tehdy, když akce míří na NATO nebo Evropu", () => {
+    expect(temaZpravy(z("RU", "Russian warship shadowed off the Dutch coast, escorted by Netherlands navy", ["rusko"]))).toBe("vody");
+    expect(temaZpravy(z("RU", "Russian Navy Day: warships parade at sea in St Petersburg", ["rusko"]))).toBeNull();
+  });
+
+  it("české pády moří a zálivů: v Baltském moři, ve Finském zálivu, u dánského pobřeží", () => {
+    expect(jeNamorni("Poškozený kabel v Baltském moři")).toBe(true);
+    expect(jeNamorni("Tanker kotví ve Finském zálivu")).toBe(true);
+    expect(jeNamorni("Drony u dánského pobřeží")).toBe(true);
+    expect(jeNamorni("Plavidlo ve výlučné ekonomické zóně Norska")).toBe(true);
+  });
+
+  it("námořník obviněný ze špionáže není incident na moři", () => {
+    expect(temaZpravy(z("GB", "Royal Navy sailor charged with spying for Russia", ["zpravodajske"]))).toBeNull();
+  });
 });

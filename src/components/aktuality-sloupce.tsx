@@ -8,6 +8,7 @@ import { kdyZjisteno, type Zaznam } from "@/lib/agregace";
 import { jeCesky } from "@/lib/jazyk";
 import { vetaPrekladu } from "@/lib/preklad";
 import { ZnackaOdchylky, VYZNAM_ODCHYLKY } from "./odchylka";
+import { PoznamkaPrekladu } from "./poznamka-prekladu";
 import type { OdchylkaKandidata } from "@/lib/odchylky";
 import { naliehaveNahoru, naliehavaBezRedakci, naliehavaDo, naliehavostSkupiny, nazevNaliehave, type NaliehavostSkupiny } from "@/lib/naliehave";
 import { jeSignal, pocetZdroju, seskupSignaly } from "@/lib/signaly";
@@ -139,6 +140,7 @@ function Rozbaleni({ r }: { r: Radek }) {
     <div className="mb-2 ml-[37px] rounded-[12px] bg-plocha2/70 px-3 py-2.5 text-drobne">
       <p className="text-male font-semibold leading-snug text-inkoust">{r.prelozeno && <span className="font-normal text-tlum2">přeloženo: </span>}{r.titulek}</p>
       {r.prelozeno && <p className="mt-0.5 text-mikro leading-snug text-tlum2">{vetaPrekladu(r.prelozeno.z)} Původně: <span lang={r.prelozeno.z}>„{r.prelozeno.puvodni}“</span></p>}
+      {r.cizojazycne && !r.prelozeno && <PoznamkaPrekladu trida="mt-1" />}
       <p className="mt-1 flex flex-wrap gap-x-2 gap-y-0.5 text-mikro text-tlum2">
         {r.zeme && <span>{r.zeme}</span>}
         {r.kdy && <span className="cislice">{datumCasPraha(r.kdy)}</span>}
@@ -217,14 +219,18 @@ function PolozkaRadku({ r, ted, otevreno, prepni, slovo = "naléhavé", trida = 
             <span className="flex items-center gap-1.5 text-mikro leading-none text-tlum2">
               <span className="font-semibold uppercase tracking-[0.06em] text-akcent">{slovo}</span>
               <span className="cislice whitespace-nowrap text-inkoust">· {r.kdy ? predKolika(r.kdy, ted) : "—"}</span>
-              {r.pocetZdroju > 1 && <span className="cislice whitespace-nowrap">· {r.pocetZdroju} {sklon(r.pocetZdroju, "zdroj", "zdroje", "zdrojů")}</span>}
+              {/* Nepřeložené cizojazyčné (20. 11. 2026): strojový překlad je vypnutý, titulek je v originále. Glóbus místo slov — při šířce 1024 px zbývá v řádku 181 px; legendu nese červená poznámka nad seznamem. */}
+              {r.cizojazycne && !r.prelozeno && <span title="v cizím jazyce" className="inline-flex shrink-0 items-center gap-1"><span aria-hidden>·</span><Ikona nazev="globus" velikost={11} tah={2} /><span className="sr-only">v cizím jazyce</span></span>}
+              {r.pocetZdroju > 1 && <span className="cislice min-w-0 shrink-[20] truncate whitespace-nowrap">· {r.pocetZdroju} {sklon(r.pocetZdroju, "zdroj", "zdroje", "zdrojů")}</span>}
               {r.odchylka && <ZnackaOdchylky uroven={r.odchylka.uroven} text={r.odchylka.vlastni && r.odchylka.uroven === "podezrele" ? "podezřelé" : "liší se"} trida="min-w-0" />}
             </span>
           ) : (
             <span className="flex items-center gap-1.5 text-mikro leading-none text-tlum2">
               <span className="cislice whitespace-nowrap">{kratkeDatum(r.kdy, ted)}</span>
               {r.stitek && <span className="whitespace-nowrap uppercase tracking-[0.06em]">{r.stitek}</span>}
-              {r.pocetZdroju > 1 && <span className="cislice whitespace-nowrap">· {r.pocetZdroju} {sklon(r.pocetZdroju, "zdroj", "zdroje", "zdrojů")}</span>}
+              {/* Nepřeložené cizojazyčné (20. 11. 2026): strojový překlad je vypnutý, titulek je v originále. Glóbus místo slov — při šířce 1024 px zbývá v řádku 181 px; legendu nese červená poznámka nad seznamem. */}
+              {r.cizojazycne && !r.prelozeno && <span title="v cizím jazyce" className="inline-flex shrink-0 items-center gap-1"><span aria-hidden>·</span><Ikona nazev="globus" velikost={11} tah={2} /><span className="sr-only">v cizím jazyce</span></span>}
+              {r.pocetZdroju > 1 && <span className="cislice min-w-0 shrink-[20] truncate whitespace-nowrap">· {r.pocetZdroju} {sklon(r.pocetZdroju, "zdroj", "zdroje", "zdrojů")}</span>}
               {r.odchylka && <ZnackaOdchylky uroven={r.odchylka.uroven} text={r.odchylka.vlastni && r.odchylka.uroven === "podezrele" ? "podezřelé" : "liší se"} trida="min-w-0" />}
             </span>
           )}
@@ -247,6 +253,7 @@ function Sloupec({ nadpis, ikona, ton, radky, prazdne, paticka, ted, napoveda, t
         <span className="flex items-center gap-2"><IkonaKruh ikona={ikona} ton={ton} velikost="s" /><h3 className="nadpis-boxu">{nadpis}</h3>{napoveda && <Otaznik popis={<span className="block">{napoveda}</span>} />}</span>
         <span className="cislice text-mikro text-tlum2">{radky.length}</span>
       </div>
+      {radky.some((r) => r.cizojazycne && !r.prelozeno) && <PoznamkaPrekladu trida="mb-1" />}
       {videt.length ? (
         /* Osm řádků i na telefonu (4. 11. 2026, provozovatelka); dřív se na mobilu schovávalo od šestého. */
         <ul className="mt-1">
@@ -341,7 +348,8 @@ function radkyTematu(tema: Tema, zaznamy: Zaznam[], nepotvrzene: Zaznam[], zachy
  * useknutý. Po rozbalení řádku se seznam uvnitř boxu posouvá.
  */
 function TemaBox({ id, nadpis, ikona, napoveda, radky, celkem, ted, zalozky = false, prazdne, odkaz, maxMobil, trida = "", oriznout = true }: {
-  id: string; nadpis: string; ikona: "hranice" | "voda"; napoveda: string; radky: Radek[]; celkem?: number; ted: number; zalozky?: boolean; prazdne: string; odkaz?: { kam: string; text: string }; maxMobil: number; trida?: string; oriznout?: boolean;
+  /* Mezi 1024 a 1279 px je sloupec úzký (vedle je postranní panel): box hranic tam má kratší nadpis, jinak by přetekl přes počet. */
+  id: string; nadpis: React.ReactNode; ikona: "hranice" | "voda"; napoveda: string; radky: Radek[]; celkem?: number; ted: number; zalozky?: boolean; prazdne: string; odkaz?: { kam: string; text: string }; maxMobil: number; trida?: string; oriznout?: boolean;
 }) {
   const [zeme, setZeme] = useState("");
   const [otevreny, setOtevreny] = useState<string | null>(null);
@@ -363,6 +371,7 @@ function TemaBox({ id, nadpis, ikona, napoveda, radky, celkem, ted, zalozky = fa
           ))}
         </div>
       )}
+      {videt.some((r) => r.cizojazycne && !r.prelozeno) && <PoznamkaPrekladu trida="shrink-0 px-4 pb-1.5" />}
       {videt.length ? (
         <ul className={`px-3 pb-2 ${oriznout ? `md:min-h-0 md:flex-1 ${otevreny ? "md:overflow-y-auto" : "md:flex md:flex-col md:flex-wrap md:content-start md:overflow-hidden"}` : ""}`}>
           {videt.map((r, i) => (
@@ -390,11 +399,11 @@ function TemataSloupec({ zaznamy, nepotvrzene, zachycene, ted }: { zaznamy: Zazn
   return (
     <div className="relative min-w-0 md:min-h-[520px]">
       <div className="flex flex-col gap-4 md:absolute md:inset-0">
-        <TemaBox id="box-hranice" nadpis="Incidenty na hranicích" ikona="hranice" radky={hranice} ted={ted} zalozky maxMobil={6} trida="md:flex-1"
+        <TemaBox id="box-hranice" nadpis={<><span className="lg:max-xl:hidden">Incidenty na hranicích</span><span className="hidden lg:max-xl:inline">Na hranicích</span></>} ikona="hranice" radky={hranice} ted={ted} zalozky maxMobil={6} trida="md:flex-1"
           napoveda={`Hranice NATO s Ruskem a Běloruskem a drony nad Rumunskem: záznamy za ${OKNO_TEMAT_DNI} dní a zprávy zachycené sběrem. Štítek u řádku říká, co je doložené. Důležité (v rámečku): o zprávě píšou aspoň dvě nezávislé redakce, nebo jde o záznam se závažností Vysoká či Vážná za posledních 7 dní.`}
           prazdne={`Za ${OKNO_TEMAT_DNI} dní nic zachyceno.`} odkaz={{ kam: "/udalosti/?tab=cekajici&tema=hranice", text: "vše" }} />
         <TemaBox id="box-vody" nadpis="Mezinárodní vody" ikona="voda" radky={vody.slice(0, 2)} celkem={vody.length} ted={ted} maxMobil={2} trida="md:shrink-0" oriznout={false}
-          napoveda={`Incidenty na moři: Balt, Černé a Severní moře, podmořské kabely, stínová flotila, plavidla. Stejná pravidla jako u hranic. Vidět jsou dvě nejdůležitější nebo nejnovější.`}
+          napoveda={`Incidenty na moři a nepřátelské akce vedené z mezinárodních vod proti zemím NATO a Evropy: drony vypuštěné z lodí, rušení GPS, válečné lodě u pobřeží, stínová flotila, podmořské kabely — Balt, Černé, Severní a Středozemní moře. Stejná pravidla jako u hranic. Vidět jsou dvě nejdůležitější nebo nejnovější.`}
           prazdne={`Za ${OKNO_TEMAT_DNI} dní nic zachyceno.`} />
       </div>
     </div>

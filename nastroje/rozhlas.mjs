@@ -956,6 +956,12 @@ const NAVRH_NEJVYS_DNI = 7;
 export function jeCesky(text) {
   const t = String(text ?? "");
   if (/[ľôŕĺłąęśźżäöüßőűàèêçùâî]/i.test(t)) return false;
+  /*
+    20. 11. 2026: slovenština bez ľ/ô („Tusk hovorí o možnej ruskej provokácii“)
+    procházela jako čeština. Vyloučí ji typická slova (sa, pri, ako, ktorý…)
+    a koncovky přídavných jmen -nej, -skej, -ckej, -ovej, které čeština nemá.
+  */
+  if (/(^|[^\p{L}])(sa|pri|pre|pred|vo|dve|troch|počas|ako|alebo|nie|ktor\p{L}*|ešte|tiež|bol|bola|boli|bolo|aj|ich|keď|nemec\p{L}*)(?=[^\p{L}]|$)/iu.test(t) || /(nej|skej|ckej|ovej)(?=[^\p{L}]|$)/iu.test(t)) return false;
   if (/[ěřůňťď]/i.test(t)) return true;
   /* Hranice slova přes \p{L}, ne \b: to je jen ASCII a v „Átvizsgálták“ by našlo „k“ za á. */
   return /[áéíýúž]/i.test(t) && /(^|[^\p{L}])(v|ve|na|se|je|z|ze|o|k|do|po|za|pro|při|u)(?=[^\p{L}]|$)/iu.test(t);

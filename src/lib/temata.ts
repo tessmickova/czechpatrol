@@ -15,11 +15,19 @@ export const OKNO_TEMAT_DNI = 60;
 
 export type Tema = "hranice" | "vody";
 
-/* Text se před porovnáním převede na malá písmena; vzory jsou malými. */
-const MORE = /(baltsk\w*\s+moř|\bbaltu\b|baltic sea|in the baltic|černé\w*\s+moř|černém\s+moři|black sea|severní\w*\s+moř|north sea|finsk\w*\s+záliv|gulf of finland|barents|norsk\w*\s+moř|norwegian sea|námořní\w*\s+mil|nautical mile|mezinárodní\w*\s+vod|international waters|výlučn\w*\s+ekonomick\w*\s+zón|exclusive economic zone|teritoriální\w*\s+vod|territorial waters|kanálu la manche|english channel)/;
+/* Text se před porovnáním převede na malá písmena; vzory jsou malými. České pády přes \S*, ne \w* — \w nezná písmena s diakritikou („Baltském“). */
+const MORE = /(baltsk\S*\s+moř|\bbaltu\b|baltic sea|in the baltic|černé\S*\s+moř|černém\s+moři|black sea|severní\S*\s+moř|north sea|finsk\S*\s+záliv|gulf of finland|barents|norsk\S*\s+moř|norwegian sea|námořní\S*\s+mil|nautical mile|mezinárodní\S*\s+vod|international waters|výlučn\S*\s+ekonomick\S*\s+zón|exclusive economic zone|teritoriální\S*\s+vod|territorial waters|kanálu la manche|english channel|středomoř\S*|mediterranean|jadersk\S*\s+moř|adriatic|egejsk\S*\s+moř|aegean|atlantik\S*|atlantic|kattegat|skagerrak|øresund|öresund|dánsk\S*\s+úžin|danish straits|\bz moře\b|\bze moře\b|from the sea|\bna moři\b|\bat sea\b|\bu\s+(\S+\s+)?pobřeží|při\s+(\S+\s+)?pobřeží|off the ([a-z]+ )?coast|offshore|námořní\S*\s+dron\S*|naval drones?|sea drones?)/;
 const DNO = /(podmořsk\w*|undersea|subsea|seabed|mořsk\w*\s+dn)/;
-const PLAVIDLO = /(tanker\w*|stínov\w*\s+flotil\w*|shadow fleet|plavid\w*|\bvessels?\b|\blo[dď]\w*\b|\bships?\b|fregat\w*|\bfrigates?\b|ponork\w*|submarines?|korvet\w*|corvettes?|torpédoborc\w*|destroyers?)/;
-const UDALOST = /(incident|útok|dron|zadrž|zastav|kontrol|poškoz|naruš|sabot|hoř|požár|výbuch|kotv|vlek|attack|drone|seiz|detain|board|damag|fire|explos|anchor|drag|shadow|sledoval|doprovod|escort|intercept)/;
+/* Hranice slova přes \p{L} (příznak u): \b je jen ASCII a za „ď“ v „loď“ by nenašel konec slova. */
+const PLAVIDLO = /(tanker\S*|stínov\S*\s+flotil\S*|shadow fleet|plavid\S*|\bvessels?\b|(?<!\p{L})lo(?:ď|dě|dí|di|dích|dím|dní\p{L}*)(?!\p{L})|fregat\S*|\bfrigates?\b|ponork\S*|submarines?|korvet\S*|corvettes?|torpédoborc\S*|destroyers?|warships?|válečn\S*\s+lo|\bships?\b)/u;
+/*
+  Incident na moři i nepřátelská akce vedená z mezinárodních vod proti zemím
+  NATO a Evropy (20. 11. 2026, provozovatelka): drony vypuštěné z lodí,
+  rušení GPS, průzkum a provokace válečných lodí u pobřeží.
+*/
+const UDALOST = /(incident|útok|dron|zadrž|zastav|kontrol|poškoz|naruš|sabot|hoř|požár|výbuch|kotv|vlek|attack|drone|seiz|detain|board|damag|fire|explos|anchor|drag|shadow|sledoval|doprovod|escort|intercept|vypust|vypouš|launch|vzlét|rušen|jamm|spoof|gps|špion|spy|surveil|průzkum|reconnaiss|mapov|provok|provoc|světlic|flare|hroz|threat)/;
+/* Ruská nebo běloruská plavidla se počítají, jen když akce míří na NATO nebo Evropu. */
+const CIL_NATO_EVROPA = /(nato|evrop|europ|polsk|poland|polish|litv|lithuan|lotyš|latvia|eston|finsk|finland|finnish|nors|norw|švéd|swed|dán|denmark|danish|německ|german|nizozem|dutch|netherland|belgi|franc|french|britsk|británi|british|\buk\b|ital|španěl|spain|spanish|portugal|rumun|romania|bulhar|bulgaria|řeck|greece|greek|turec|turkey|turkish|pobalt|baltic|irsk|ireland|irish|island|iceland)/;
 
 /** Námořní událost: moře nebo mořské dno v textu, nebo plavidlo spolu s incidentem. */
 export function jeNamorni(text: string): boolean {
@@ -27,7 +35,7 @@ export function jeNamorni(text: string): boolean {
   return MORE.test(t) || DNO.test(t) || (PLAVIDLO.test(t) && UDALOST.test(t));
 }
 
-export interface ProTema { kodZeme: string | null; kategorie: readonly string[]; titulek: string; shrnuti?: string | null; kratkyTitulek?: string | null; naliehave?: { druh: string } | null }
+export interface ProTema { kodZeme: string | null; kategorie: readonly string[]; titulek: string; shrnuti?: string | null; kratkyTitulek?: string | null; naliehave?: { druh: string } | null; /** U záznamů: první doložený fakt (třeba „drony vypuštěné z lodí“ bývá až tam). */ fakta?: readonly string[] }
 
 /**
  * Do kterého boxu zpráva patří, nebo null. Ukrajina, Rusko a Bělorusko
@@ -35,8 +43,10 @@ export interface ProTema { kodZeme: string | null; kategorie: readonly string[];
  * a vodách NATO, ne o válečných úderech.
  */
 export function temaZpravy(x: ProTema): Tema | null {
-  if (x.kodZeme === "UA" || x.kodZeme === "RU" || x.kodZeme === "BY") return null;
-  if (jeNamorni(`${x.titulek} ${x.kratkyTitulek ?? ""} ${x.shrnuti ?? ""}`)) return "vody";
+  const text = `${x.titulek} ${x.kratkyTitulek ?? ""} ${x.shrnuti ?? ""} ${x.fakta?.[0] ?? ""}`;
+  if (x.kodZeme === "UA") return null;
+  if (x.kodZeme === "RU" || x.kodZeme === "BY") return jeNamorni(text) && CIL_NATO_EVROPA.test(text.toLowerCase()) ? "vody" : null;
+  if (jeNamorni(text)) return "vody";
   const druh = x.naliehave?.druh;
   const hranicni = (ZEME_HRANIC as readonly string[]).includes(x.kodZeme ?? "");
   if (hranicni && (x.kategorie.includes("hranice") || x.kategorie.includes("drony") || druh === "hranice-nato" || druh === "vzdusny-prostor-nato")) return "hranice";
