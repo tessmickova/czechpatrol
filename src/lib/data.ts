@@ -9,6 +9,7 @@ import type { OficialniNastroj, PravniPolozka, ProvozniPolozka, OpatreniZeme, Op
 import { PORADI_KATEGORII } from "./kategorie";
 import { UROVNE } from "./skala";
 import { sOdchylkami } from "./odchylky";
+import { temaZpravy } from "./temata";
 
 import ostreIncidenty from "../../data/incidenty.json";
 import ostryStav from "../../data/stav.json";
@@ -522,6 +523,15 @@ function kandidatiSVyrezem() {
  * časté ve třech dnech), a značka „2 jiné zdroje o téže události ne“ musí
  * mluvit o týchž zdrojích, které čtenář po rozbalení řádku vidí.
  */
+/**
+ * Zachycené zprávy pro boxy témat na úvodu (hranice NATO, mezinárodní vody):
+ * celá fronta, ne jen 72 hodin — o hranici se píše po dny a box má ukázat
+ * vývoj (20. 11. 2026). Bez výřezů článků, s odchylkami jako všude.
+ */
+export function kandidatiTemat(): Kandidat[] {
+  return kandidati().filter((k) => temaZpravy(k) !== null);
+}
+
 export function kandidatiUvodu(ted = Date.now()): Kandidat[] {
   return sOdchylkami(kandidatiSVyrezem().filter((k) => k.naliehave || ted - new Date(k.publikovano ?? k.zachyceno).getTime() <= 72 * 3_600_000), ted);
 }

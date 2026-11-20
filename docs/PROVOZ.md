@@ -252,6 +252,31 @@ Hodinový sběr (`sber/udalosti.ts`) čte RSS kanály úřadů, redakcí a vyhle
 
 Převzetí kandidáta do záznamů: `node nastroje/prijmi-kandidata.mjs <id>` vypíše kostru; člověk doplní fakta, závažnost a jistotu, nastaví `lidskyOvereno: true` a vloží do `data/incidenty.json`. Sběr pak kandidáta sám odloží (stejná adresa zdroje).
 
+### Boxy Incidenty na hranicích a Mezinárodní vody (od 20. 11. 2026)
+
+Na úvodu stojí místo sloupce „Doloženo zdroji“ dva boxy (doložené záznamy
+jsou dál na stránce Události). Pravidla jsou pevná (`src/lib/temata.ts`,
+testy `testy/temata.test.ts`) a obnovují se s každým během sběru:
+
+- **Hranice**: země NATO na hranici s Ruskem nebo Běloruskem a Rumunsko
+  (PL, LT, LV, EE, FI, NO, RO) a zároveň kategorie hranice nebo drony,
+  nebo druh naléhavosti „posílení hranice NATO“ či „narušení vzdušného
+  prostoru“. Záložky jen u zemí, které mají aspoň jednu událost.
+- **Mezinárodní vody**: moře nebo mořské dno v textu (Balt, Černé
+  a Severní moře, Finský záliv, námořní míle, podmořský kabel), nebo
+  plavidlo spolu s incidentem. Má přednost před hranicí.
+- Ukrajina, Rusko a Bělorusko jsou mimo (rozsah války).
+- Záznamy za 60 dní, zachycené zprávy z celé fronty (tři týdny). Štítek
+  u řádku říká, co je doložené, co jen z médií a co zachycené.
+- **Důležité** (rámeček): skupina zachycených zpráv se stejným pravidlem
+  jako naléhavé ve Signálech (aspoň dvě nezávislé redakce), nebo záznam se
+  závažností Vysoká či Vážná za posledních 7 dní (jen z médií navíc se
+  dvěma zdroji).
+- Signály z médií tyto zprávy neukazují, aby tatáž zpráva nestála vedle
+  sebe dvakrát.
+- Na počítači lícují boxy s horní i dolní hranou Signálů a ukazují jen
+  celé řádky, kolik se vejde; na mobilu nejvýš šest a dva.
+
 ### Zdroj, který tvrdí něco jiného než ostatní (od 9. 11. 2026)
 
 Když o téže události píše víc zdrojů a jeden z nich tvrdí něco zásadně

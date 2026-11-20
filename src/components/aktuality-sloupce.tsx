@@ -14,8 +14,8 @@ import { KATEGORIE } from "@/lib/kategorie";
 import { JISTOTY, PASMA, UROVNE } from "@/lib/skala";
 import type { Kandidat, Kategorie } from "@/lib/typy";
 import { Ikona } from "./ikony";
-import { Tlacitko } from "./ui";
-import { IkonaKruh } from "./widgety";
+import { HlavickaWidgetu, IkonaKruh } from "./widgety";
+import { OKNO_TEMAT_DNI, temaZpravy, ZEME_HRANIC, type Tema } from "@/lib/temata";
 import { RadaKTypu } from "./rada-k-typu";
 import { Otaznik } from "./zaklad";
 import { sklon, Vlajka } from "./zeme";
@@ -52,7 +52,7 @@ interface Radek {
   zeme: string | null;
   kdy: string | null;
   titulek: string;
-  stitek: "nepotvrzeno" | "zachyceno" | "naléhavé" | "jen média" | null;
+  stitek: "nepotvrzeno" | "zachyceno" | "naléhavé" | "jen média" | "doloženo" | null;
   /* Jen u naléhavých zachycených: čeho se týká (stejné slovo jako v Souhrnu situace). */
   naliehave?: string | null;
   /* Naléhavost, jejíž lhůta běží: řádek je nahoře a v rámečku. */
@@ -110,7 +110,7 @@ function kratkeDatum(iso: string | null, ted: number): string {
 }
 
 function zZaznamu(z: Zaznam, klic: string, kam: string, stitek: Radek["stitek"], pruh: string): Radek {
-  const nepotvrzeny = stitek !== null;
+  const nepotvrzeny = stitek !== null && stitek !== "doloženo";
   return {
     klic, kam, ven: false, kodZeme: z.kodZeme, zeme: z.zeme, kdy: kdyZjisteno(z),
     titulek: bezZeme(z.kratkyTitulek || z.titulek, z.zeme), stitek, pruh,
@@ -191,6 +191,48 @@ function Rozbaleni({ r }: { r: Radek }) {
   );
 }
 
+/**
+ * Jeden řádek sloupce nebo boxu. Zvýrazněný řádek (naléhavost) má rámeček;
+ * slovo nad titulkem je ve Signálech „naléhavé“, v boxech témat „důležité“
+ * (20. 11. 2026, provozovatelka).
+ */
+function PolozkaRadku({ r, ted, otevreno, prepni, slovo = "naléhavé", trida = "" }: { r: Radek; ted: number; otevreno: boolean; prepni: () => void; slovo?: string; trida?: string }) {
+  const n = r.naliehavost;
+  return (
+    <li className={`${n ? "py-[2px]" : ""} ${trida}`}>
+      <button
+        type="button"
+        aria-expanded={otevreno}
+        onClick={prepni}
+        className={`group -mx-2 flex w-[calc(100%+16px)] items-center gap-2.5 rounded-[10px] px-2 text-left hover:bg-plocha2/60 ${n ? `h-[60px] bg-akcent/[0.06] ring-inset ${n.stupen === 1 ? "ring-2 ring-akcent" : "ring-1 ring-akcent/60"}` : "h-[64px]"} ${otevreno ? "bg-plocha2/60" : ""}`}
+      >
+        <span aria-hidden className={`h-[28px] w-[3px] shrink-0 rounded-full ${n ? "bg-akcent" : r.pruh}`} />
+        <span className="w-[22px] shrink-0 text-center leading-none">{r.kodZeme ? <Vlajka kod={r.kodZeme} /> : <span className="text-tlum2">·</span>}</span>
+        <span className="min-w-0 flex-1">
+          {n ? (
+            <span className="flex items-center gap-1.5 text-mikro leading-none text-tlum2">
+              <span className="font-semibold uppercase tracking-[0.06em] text-akcent">{slovo}</span>
+              <span className="cislice whitespace-nowrap text-inkoust">· {r.kdy ? predKolika(r.kdy, ted) : "—"}</span>
+              {r.pocetZdroju > 1 && <span className="cislice whitespace-nowrap">· {r.pocetZdroju} {sklon(r.pocetZdroju, "zdroj", "zdroje", "zdrojů")}</span>}
+              {r.odchylka && <ZnackaOdchylky uroven={r.odchylka.uroven} text={r.odchylka.vlastni && r.odchylka.uroven === "podezrele" ? "podezřelé" : "liší se"} trida="min-w-0" />}
+            </span>
+          ) : (
+            <span className="flex items-center gap-1.5 text-mikro leading-none text-tlum2">
+              <span className="cislice whitespace-nowrap">{kratkeDatum(r.kdy, ted)}</span>
+              {r.stitek && <span className="whitespace-nowrap uppercase tracking-[0.06em]">{r.stitek}</span>}
+              {r.pocetZdroju > 1 && <span className="cislice whitespace-nowrap">· {r.pocetZdroju} {sklon(r.pocetZdroju, "zdroj", "zdroje", "zdrojů")}</span>}
+              {r.odchylka && <ZnackaOdchylky uroven={r.odchylka.uroven} text={r.odchylka.vlastni && r.odchylka.uroven === "podezrele" ? "podezřelé" : "liší se"} trida="min-w-0" />}
+            </span>
+          )}
+          <span className={`mt-1 line-clamp-2 text-male leading-[1.3] ${n ? "font-semibold text-inkoust" : r.stitek ? "text-tlum" : "text-inkoust"}`}>{r.titulek}</span>
+        </span>
+        <Ikona nazev="dolu" velikost={12} tah={2} trida={`shrink-0 text-tlum2 transition-transform group-hover:text-akcent ${otevreno ? "rotate-180" : ""}`} />
+      </button>
+      {otevreno && <Rozbaleni r={r} />}
+    </li>
+  );
+}
+
 function Sloupec({ nadpis, ikona, ton, radky, prazdne, paticka, ted, napoveda, trida = "" }: { nadpis: string; ikona: "fajfka" | "otaznik"; ton: "klid" | "pozor"; radky: Radek[]; prazdne: string; paticka?: React.ReactNode; ted: number; napoveda?: string; trida?: string }) {
   const [limit, setLimit] = useState(KROK);
   const [otevreny, setOtevreny] = useState<string | null>(null);
@@ -204,44 +246,7 @@ function Sloupec({ nadpis, ikona, ton, radky, prazdne, paticka, ted, napoveda, t
       {videt.length ? (
         /* Osm řádků i na telefonu (4. 11. 2026, provozovatelka); dřív se na mobilu schovávalo od šestého. */
         <ul className="mt-1">
-          {videt.map((r) => {
-            const otevreno = otevreny === r.klic;
-            const n = r.naliehavost;
-            return (
-              /* Naléhavý řádek: 2 px nahoře a dole + 60 px = stejných 64 px jako ostatní, řádky sloupců lícují. */
-              <li key={r.klic} className={n ? "py-[2px]" : undefined}>
-                <button
-                  type="button"
-                  aria-expanded={otevreno}
-                  onClick={() => setOtevreny(otevreno ? null : r.klic)}
-                  className={`group -mx-2 flex w-[calc(100%+16px)] items-center gap-2.5 rounded-[10px] px-2 text-left hover:bg-plocha2/60 ${n ? `h-[60px] bg-akcent/[0.06] ring-inset ${n.stupen === 1 ? "ring-2 ring-akcent" : "ring-1 ring-akcent/60"}` : "h-[64px]"} ${otevreno ? "bg-plocha2/60" : ""}`}
-                >
-                  <span aria-hidden className={`h-[28px] w-[3px] shrink-0 rounded-full ${n ? "bg-akcent" : r.pruh}`} />
-                  <span className="w-[22px] shrink-0 text-center leading-none">{r.kodZeme ? <Vlajka kod={r.kodZeme} /> : <span className="text-tlum2">·</span>}</span>
-                  <span className="min-w-0 flex-1">
-                    {n ? (
-                      <span className="flex items-center gap-1.5 text-mikro leading-none text-tlum2">
-                        <span className="font-semibold uppercase tracking-[0.06em] text-akcent">naléhavé</span>
-                        <span className="cislice whitespace-nowrap text-inkoust">· {r.kdy ? predKolika(r.kdy, ted) : "—"}</span>
-                        {r.pocetZdroju > 1 && <span className="cislice whitespace-nowrap">· {r.pocetZdroju} {sklon(r.pocetZdroju, "zdroj", "zdroje", "zdrojů")}</span>}
-                        {r.odchylka && <ZnackaOdchylky uroven={r.odchylka.uroven} text={r.odchylka.vlastni && r.odchylka.uroven === "podezrele" ? "podezřelé" : "liší se"} trida="min-w-0" />}
-                      </span>
-                    ) : (
-                      <span className="flex items-center gap-1.5 text-mikro leading-none text-tlum2">
-                        <span className="cislice whitespace-nowrap">{kratkeDatum(r.kdy, ted)}</span>
-                        {r.stitek && <span className="whitespace-nowrap uppercase tracking-[0.06em]">{r.stitek}</span>}
-                        {r.pocetZdroju > 1 && <span className="cislice whitespace-nowrap">· {r.pocetZdroju} {sklon(r.pocetZdroju, "zdroj", "zdroje", "zdrojů")}</span>}
-                        {r.odchylka && <ZnackaOdchylky uroven={r.odchylka.uroven} text={r.odchylka.vlastni && r.odchylka.uroven === "podezrele" ? "podezřelé" : "liší se"} trida="min-w-0" />}
-                      </span>
-                    )}
-                    <span className={`mt-1 line-clamp-2 text-male leading-[1.3] ${n ? "font-semibold text-inkoust" : r.stitek ? "text-tlum" : "text-inkoust"}`}>{r.titulek}</span>
-                  </span>
-                  <Ikona nazev="dolu" velikost={12} tah={2} trida={`shrink-0 text-tlum2 transition-transform group-hover:text-akcent ${otevreno ? "rotate-180" : ""}`} />
-                </button>
-                {otevreno && <Rozbaleni r={r} />}
-              </li>
-            );
-          })}
+          {videt.map((r) => <PolozkaRadku key={r.klic} r={r} ted={ted} otevreno={otevreny === r.klic} prepni={() => setOtevreny(otevreny === r.klic ? null : r.klic)} />)}
         </ul>
       ) : (
         <p className="py-3 text-male text-tlum2">{prazdne}</p>
@@ -258,6 +263,27 @@ function Sloupec({ nadpis, ikona, ton, radky, prazdne, paticka, ted, napoveda, t
   );
 }
 
+/** Kdy naléhavost skupiny skončila (ISO), nebo null. */
+function konecNaliehavosti(polozky: Kandidat[]): string | null {
+  const konce = polozky.map((p) => naliehavaDo(p)).filter((x): x is number => x !== null);
+  return konce.length ? new Date(Math.max(...konce)).toISOString() : null;
+}
+
+/** Skupina zachycených zpráv o téže události → jeden řádek. Stejné pro Signály i boxy témat. */
+function zeSkupiny({ hlavni: k, polozky }: { hlavni: Kandidat; polozky: Kandidat[] }, ted: number): Radek {
+  const naliehavost = naliehavostSkupiny(polozky, ted);
+  const ceka = naliehavost ? null : naliehavaBezRedakci(polozky, ted);
+  const druh = naliehavost?.druh ?? ceka?.druh ?? polozky.find((p) => p.naliehave)?.naliehave?.druh ?? null;
+  return {
+    klic: `k-${k.id}`, kam: k.zdroj.url, ven: true, kodZeme: k.kodZeme, zeme: k.zeme, kdy: k.publikovano ?? k.zachyceno, titulek: k.titulek, stitek: naliehavost ? "naléhavé" : "zachyceno", pruh: "bg-tlum2",
+    naliehave: druh ? nazevNaliehave(druh) : null, naliehavost, naliehaveSkoncilo: druh && !naliehavost && !ceka ? konecNaliehavosti(polozky) : null, naliehaveCeka: ceka ? { ma: ceka.ma, potreba: ceka.potreba } : null, cizojazycne: !jeCesky(k.titulek),
+    zavaznost: null, jistota: null, kategorie: k.kategorie.map((c) => KATEGORIE[c as Kategorie]?.nazev ?? c), klice: k.kategorie, text: k.shrnuti || null, textPopis: "Zachyceno", zdroj: { nazev: k.zdroj.nazev, url: k.zdroj.url },
+    zdroje: polozky.map((p) => ({ klic: p.id, nazev: p.zdroj.nazev, url: p.zdroj.url, kdy: p.publikovano ?? p.zachyceno, titulek: p.id === k.id ? null : p.titulek, odchylka: p.odchylka ?? null })),
+    pocetZdroju: pocetZdroju(polozky),
+    ...odchylkaRadku(k, polozky),
+  };
+}
+
 /** Značka řádku a seznam odlišných zdrojů skupiny (podezřelé první). */
 function odchylkaRadku(k: Kandidat, polozky: readonly Kandidat[]): Pick<Radek, "odchylka" | "odchylkyZdroju"> {
   const odlisne = polozky.filter((p) => p.odchylka).sort((a, b) => (a.odchylka!.uroven === "podezrele" ? 0 : 1) - (b.odchylka!.uroven === "podezrele" ? 0 : 1));
@@ -269,19 +295,121 @@ function odchylkaRadku(k: Kandidat, polozky: readonly Kandidat[]): Pick<Radek, "
   };
 }
 
-export function AktualitySloupce({ zaznamy, nepotvrzene = [], kandidati = [], ted: tedServer = Date.now() }: { zaznamy: Zaznam[]; nepotvrzene?: Zaznam[]; kandidati?: Kandidat[]; ted?: number }) {
+/* ---------- boxy témat: hranice NATO a mezinárodní vody (20. 11. 2026) ---------- */
+
+const DEN = 86_400_000;
+
+/**
+ * Záznam je v boxu „důležitý“, když má závažnost Vysoká nebo Vážná a je
+ * z posledních 7 dní; jen z médií navíc s aspoň dvěma zdroji (stejná
+ * hranice dvou redakcí jako u naléhavých zpráv ze sběru).
+ */
+function dulezitostZaznamu(z: Zaznam, kdy: string | null, ted: number): NaliehavostSkupiny | null {
+  const pasmo = UROVNE[z.zavaznost]?.pasmo;
+  if ((pasmo !== "oranzova" && pasmo !== "cervena") || !kdy) return null;
+  if (z.overeni === "neovereno" && z.zdroje.length < 2) return null;
+  const t = new Date(kdy).getTime();
+  if (ted - t > 7 * DEN) return null;
+  return { druh: "zaznam", stupen: pasmo === "cervena" ? 1 : 2, platiDo: new Date(t + 7 * DEN).toISOString() };
+}
+
+/**
+ * Řádky boxu: záznamy (doložené i jen z médií) za OKNO_TEMAT_DNI, nepotvrzené
+ * záznamy a skupiny zachycených zpráv. Důležité nahoře podle data, pod
+ * nimi ostatní podle data — stejně jako ve Signálech.
+ */
+function radkyTematu(tema: Tema, zaznamy: Zaznam[], nepotvrzene: Zaznam[], zachycene: Kandidat[], ted: number): Radek[] {
+  const vOkne = (z: Zaznam) => ted - new Date(kdyZjisteno(z)).getTime() <= OKNO_TEMAT_DNI * DEN;
+  const zaz = zaznamy.filter((z) => temaZpravy(z) === tema && vOkne(z)).map((z) => {
+    const dolozeno = z.overeni !== "neovereno";
+    const r = zZaznamu(z, `${tema}-${z.slug}`, `/incident/${z.slug}/`, dolozeno ? "doloženo" : "jen média", dolozeno ? PASMA[UROVNE[z.zavaznost].pasmo].tecka : "bg-jantar");
+    return { ...r, naliehavost: dulezitostZaznamu(z, r.kdy, ted) };
+  });
+  const nep = nepotvrzene.filter((z) => temaZpravy(z) === tema && vOkne(z)).map((z) => zZaznamu(z, `${tema}-n-${z.id}`, `/nepotvrzeno/${z.id}/`, "nepotvrzeno", "bg-jantar"));
+  const kand = seskupSignaly(zachycene.filter((k) => temaZpravy(k) === tema)).map((g) => zeSkupiny(g, ted));
+  return naliehaveNahoru<Radek>([...zaz, ...nep, ...kand]);
+}
+
+/**
+ * Box tématu. Na počítači se seznam vejde do výšky, kterou mu dá sloupec
+ * Signálů vedle: flex-wrap ve sloupci posune řádky, které by se nevešly,
+ * do dalšího (skrytého) sloupce — vidět jsou jen celé řádky, nikdy
+ * useknutý. Po rozbalení řádku se seznam uvnitř boxu posouvá.
+ */
+function TemaBox({ id, nadpis, ikona, napoveda, radky, celkem, ted, zalozky = false, prazdne, odkaz, maxMobil, trida = "", oriznout = true }: {
+  id: string; nadpis: string; ikona: "hranice" | "voda"; napoveda: string; radky: Radek[]; celkem?: number; ted: number; zalozky?: boolean; prazdne: string; odkaz?: { kam: string; text: string }; maxMobil: number; trida?: string; oriznout?: boolean;
+}) {
+  const [zeme, setZeme] = useState("");
+  const [otevreny, setOtevreny] = useState<string | null>(null);
+  const zemeSRadky = zalozky ? ZEME_HRANIC.map((k) => ({ k, n: radky.filter((r) => r.kodZeme === k).length })).filter((x) => x.n > 0) : [];
+  const videt = zeme ? radky.filter((r) => r.kodZeme === zeme) : radky;
+  const vyber = (k: string) => { setZeme(k); setOtevreny(null); };
+  return (
+    <section aria-labelledby={id} className={`flex min-h-0 flex-col overflow-hidden rounded-[22px] bg-plocha ${trida}`}>
+      <HlavickaWidgetu id={id} ikona={ikona} nazev={nadpis} napoveda={<span className="block">{napoveda}</span>}
+        meta={<span className="cislice">{zeme ? videt.length : celkem ?? videt.length}</span>}
+        akce={odkaz ? <Link href={odkaz.kam} className="whitespace-nowrap text-mikro font-semibold text-tlum hover:text-inkoust">{odkaz.text} →</Link> : undefined} />
+      {zemeSRadky.length > 0 && (
+        <div role="tablist" aria-label="Země" className="pas-scroll flex shrink-0 gap-1 overflow-x-auto px-3 pb-2 pt-1">
+          {[{ k: "", nazev: "Hranice NATO", n: radky.length }, ...zemeSRadky.map((x) => ({ ...x, nazev: x.k as string }))].map((z) => (
+            <button key={z.k || "vse"} type="button" role="tab" aria-selected={zeme === z.k} onClick={() => vyber(z.k)}
+              className={`flex min-h-[32px] shrink-0 items-center gap-1.5 rounded-full px-3 text-mikro font-semibold transition-colors ${zeme === z.k ? "bg-akcent text-papir" : "bg-plocha2/70 text-tlum hover:text-inkoust"}`}>
+              {z.k && <Vlajka kod={z.k} />}{z.nazev}<span className="cislice opacity-70">{z.n}</span>
+            </button>
+          ))}
+        </div>
+      )}
+      {videt.length ? (
+        <ul className={`px-3 pb-2 ${oriznout ? `md:min-h-0 md:flex-1 ${otevreny ? "md:overflow-y-auto" : "md:flex md:flex-col md:flex-wrap md:content-start md:overflow-hidden"}` : ""}`}>
+          {videt.map((r, i) => (
+            <PolozkaRadku key={r.klic} r={r} ted={ted} slovo="důležité" otevreno={otevreny === r.klic} prepni={() => setOtevreny(otevreny === r.klic ? null : r.klic)}
+              trida={`md:w-full ${i >= maxMobil ? "max-md:hidden" : ""}`} />
+          ))}
+        </ul>
+      ) : (
+        <p className="px-4 pb-4 pt-1 text-male text-tlum2">{prazdne}</p>
+      )}
+    </section>
+  );
+}
+
+/*
+  Levý sloupec úvodu (20. 11. 2026, provozovatelka): místo „Doloženo zdroji“
+  dva boxy — Incidenty na hranicích se záložkami zemí a pod ním Mezinárodní
+  vody. Na počítači lícují s horní i dolní hranou sloupce Signály z médií:
+  sloupec je absolutně v buňce mřížky, takže výšku řádku určují Signály,
+  a box hranic vyplní, co zbude pod boxem vod.
+*/
+function TemataSloupec({ zaznamy, nepotvrzene, zachycene, ted }: { zaznamy: Zaznam[]; nepotvrzene: Zaznam[]; zachycene: Kandidat[]; ted: number }) {
+  const hranice = radkyTematu("hranice", zaznamy, nepotvrzene, zachycene, ted);
+  const vody = radkyTematu("vody", zaznamy, nepotvrzene, zachycene, ted);
+  return (
+    <div className="relative min-w-0 md:min-h-[520px]">
+      <div className="flex flex-col gap-4 md:absolute md:inset-0">
+        <TemaBox id="box-hranice" nadpis="Incidenty na hranicích" ikona="hranice" radky={hranice} ted={ted} zalozky maxMobil={6} trida="md:flex-1"
+          napoveda={`Hranice NATO s Ruskem a Běloruskem a drony nad Rumunskem: záznamy za ${OKNO_TEMAT_DNI} dní a zprávy zachycené sběrem. Štítek u řádku říká, co je doložené. Důležité (v rámečku): o zprávě píšou aspoň dvě nezávislé redakce, nebo jde o záznam se závažností Vysoká či Vážná za posledních 7 dní.`}
+          prazdne={`Za ${OKNO_TEMAT_DNI} dní nic zachyceno.`} odkaz={{ kam: "/udalosti/?tab=cekajici&tema=hranice", text: "vše" }} />
+        <TemaBox id="box-vody" nadpis="Mezinárodní vody" ikona="voda" radky={vody.slice(0, 2)} celkem={vody.length} ted={ted} maxMobil={2} trida="md:shrink-0" oriznout={false}
+          napoveda={`Incidenty na moři: Balt, Černé a Severní moře, podmořské kabely, stínová flotila, plavidla. Stejná pravidla jako u hranic. Vidět jsou dvě nejdůležitější nebo nejnovější.`}
+          prazdne={`Za ${OKNO_TEMAT_DNI} dní nic zachyceno.`} />
+      </div>
+    </div>
+  );
+}
+
+export function AktualitySloupce({ zaznamy, nepotvrzene = [], kandidati = [], temata = [], ted: tedServer = Date.now() }: { zaznamy: Zaznam[]; nepotvrzene?: Zaznam[]; kandidati?: Kandidat[]; /** Zachycené zprávy o hranicích a mořích z celé fronty (src/lib/data.ts, kandidatiTemat). */ temata?: Kandidat[]; ted?: number }) {
   /* Čas ze serveru při sestavení, po připojení skutečný (src/lib/cas-klient.ts): „před 3 dny“ a lhůta naléhavosti se počítají z něj. */
   const ted = useZiveHodiny(tedServer);
-  const serad = (a: { kdy: string | null }, b: { kdy: string | null }) => (b.kdy ?? "").localeCompare(a.kdy ?? "");
-  const skoncilo = (polozky: Kandidat[]) => {
-    const konce = polozky.map((p) => naliehavaDo(p)).filter((x): x is number => x !== null);
-    return konce.length ? new Date(Math.max(...konce)).toISOString() : null;
-  };
-  const skupiny = seskupSignaly(kandidati);
-  const overene: Radek[] = zaznamy.filter((z) => z.overeni !== "neovereno").map((z) => zZaznamu(z, `o-${z.slug}`, `/incident/${z.slug}/`, null, PASMA[UROVNE[z.zavaznost].pasmo].tecka)).sort(serad).slice(0, 40);
+  /*
+    Hranice NATO a moře mají od 20. 11. 2026 vlastní boxy vlevo; ve Signálech
+    by tatáž zpráva stála vedle sebe dvakrát, jednou „důležitá“ a jednou
+    „naléhavá“. Signály proto ukazují ostatní dění.
+  */
+  const vTematu = (z: Zaznam) => temaZpravy(z) !== null && ted - new Date(kdyZjisteno(z)).getTime() <= OKNO_TEMAT_DNI * DEN;
+  const skupiny = seskupSignaly(kandidati.filter((k) => temaZpravy(k) === null));
   const neoverene: Radek[] = naliehaveNahoru<Radek>([
-    ...zaznamy.filter((z) => z.overeni === "neovereno").map((z) => zZaznamu(z, `u-${z.slug}`, `/incident/${z.slug}/`, "jen média", "bg-jantar")),
-    ...nepotvrzene.map((z) => zZaznamu(z, `n-${z.id}`, `/nepotvrzeno/${z.id}/`, "nepotvrzeno", "bg-jantar")),
+    ...zaznamy.filter((z) => z.overeni === "neovereno" && !vTematu(z)).map((z) => zZaznamu(z, `u-${z.slug}`, `/incident/${z.slug}/`, "jen média", "bg-jantar")),
+    ...nepotvrzene.filter((z) => !vTematu(z)).map((z) => zZaznamu(z, `n-${z.id}`, `/nepotvrzeno/${z.id}/`, "nepotvrzeno", "bg-jantar")),
     /*
       Údery uvnitř Ukrajiny a Ruska bez doloženého následku pro sledované
       země jsou mimo rozsah (CLAUDE.md, rozsah války); na úvod jdou jen
@@ -295,31 +423,19 @@ export function AktualitySloupce({ zaznamy, nepotvrzene = [], kandidati = [], te
       česky psaná nebo naléhavá zpráva, ostatní (i cizojazyčné) jsou v něm
       jako zdroje. Vlajka řádku je země události (kodZeme), ne redakce.
     */
-    ...skupiny.filter((g) => g.polozky.some(jeSignal)).map(({ hlavni: k, polozky }): Radek => {
-      const naliehavost = naliehavostSkupiny(polozky, ted);
-      const ceka = naliehavost ? null : naliehavaBezRedakci(polozky, ted);
-      const druh = naliehavost?.druh ?? ceka?.druh ?? polozky.find((p) => p.naliehave)?.naliehave?.druh ?? null;
-      return {
-      klic: `k-${k.id}`, kam: k.zdroj.url, ven: true, kodZeme: k.kodZeme, zeme: k.zeme, kdy: k.publikovano ?? k.zachyceno, titulek: k.titulek, stitek: naliehavost ? "naléhavé" : "zachyceno", pruh: "bg-tlum2",
-      naliehave: druh ? nazevNaliehave(druh) : null, naliehavost, naliehaveSkoncilo: druh && !naliehavost && !ceka ? skoncilo(polozky) : null, naliehaveCeka: ceka ? { ma: ceka.ma, potreba: ceka.potreba } : null, cizojazycne: !jeCesky(k.titulek),
-      zavaznost: null, jistota: null, kategorie: k.kategorie.map((c) => KATEGORIE[c as Kategorie]?.nazev ?? c), klice: k.kategorie, text: k.shrnuti || null, textPopis: "Zachyceno", zdroj: { nazev: k.zdroj.nazev, url: k.zdroj.url },
-      zdroje: polozky.map((p) => ({ klic: p.id, nazev: p.zdroj.nazev, url: p.zdroj.url, kdy: p.publikovano ?? p.zachyceno, titulek: p.id === k.id ? null : p.titulek, odchylka: p.odchylka ?? null })),
-      pocetZdroju: pocetZdroju(polozky),
-      ...odchylkaRadku(k, polozky),
-      };
-    }),
+    ...skupiny.filter((g) => g.polozky.some(jeSignal)).map((g) => zeSkupiny(g, ted)),
   ]).slice(0, 40);
   /* Co se do sloupce nedostalo (cizí jazyk, nic o útoku, projev) — na úvodu jen jako počet s odkazem do fronty. */
   const zobrazene = new Set(skupiny.filter((g) => g.polozky.some(jeSignal)).flatMap((g) => g.polozky.map((p) => p.id)));
-  const dalsich = kandidati.filter((k) => !zobrazene.has(k.id)).length;
+  const dalsich = kandidati.filter((k) => !zobrazene.has(k.id) && temaZpravy(k) === null).length;
   return (
     <section aria-labelledby="aktuality-nadpis">
       <h2 id="aktuality-nadpis" className="sr-only">Aktuality</h2>
       <div className="grid gap-10 md:grid-cols-2 md:gap-x-16">
-        <Sloupec ted={ted} nadpis="Doloženo zdroji" ikona="fajfka" ton="klid" radky={overene} prazdne="Zatím žádný doložený záznam."
-          paticka={<Tlacitko kam="/udalosti/" varianta="tichy" velikost="s" ikonaVpravo="nahoru" trida="[&>svg:last-child]:rotate-90">všechny záznamy od 2014</Tlacitko>} />
-        {/* Mobil: nejdřív čerstvé signály, pak doložené (26. 9. 2026). Na počítači zůstává doložené vlevo. */}
-        <Sloupec trida="max-md:order-first" ted={ted} nadpis="Signály z médií" ikona="otaznik" ton="pozor" radky={neoverene} prazdne="Právě žádný nový signál." napoveda="Neověřené. Do počtů ani hodnocení nevstupují."
+        {/* Místo „Doloženo zdroji“ boxy hranic a vod (20. 11. 2026); doložené záznamy jsou na stránce Události. */}
+        <TemataSloupec zaznamy={zaznamy} nepotvrzene={nepotvrzene} zachycene={temata} ted={ted} />
+        {/* Mobil: nejdřív čerstvé signály, pak boxy témat (26. 9. 2026). Na počítači zůstávají boxy vlevo. */}
+        <Sloupec trida="max-md:order-first" ted={ted} nadpis="Signály z médií" ikona="otaznik" ton="pozor" radky={neoverene} prazdne="Právě žádný nový signál." napoveda="Neověřené. Do počtů ani hodnocení nevstupují. Hranice NATO a moře jsou v boxech vedle."
           paticka={dalsich > 0 ? <Link href="/udalosti/?tab=cekajici" className="text-drobne text-tlum2 hover:text-tlum">+ {dalsich} dalších ve frontě →</Link> : <span className="text-drobne text-tlum2">Do počtů ani hodnocení nevstupují.</span>} />
       </div>
     </section>
