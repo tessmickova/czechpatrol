@@ -1,5 +1,5 @@
 {
-  "aktualizovano": "2026-11-20T09:03:28.105Z",
+  "aktualizovano": "2026-11-20T12:03:27.075Z",
   "stavy": [
     {
       "klic": "cloudflare",
@@ -19,20 +19,25 @@
       ],
       "postizene": [
         "Cloudflare Sites and Services",
-        "Amman, Jordan - (AMM)",
         "Ahmedabad, India - (AMD)",
-        "Albuquerque, United States - (ABQ)"
+        "Albuquerque, United States - (ABQ)",
+        "Arica, Chile - (ARI)"
       ],
-      "zkontrolovano": "2026-11-20T09:03:28.105Z",
+      "zkontrolovano": "2026-11-20T12:03:27.075Z",
       "chyba": null
     },
     {
       "klic": "zoom",
-      "stav": "provoz",
-      "popis": "All Systems Operational",
+      "stav": "omezeni",
+      "popis": "Service Under Maintenance",
       "incidenty": [],
-      "postizene": [],
-      "zkontrolovano": "2026-11-20T09:03:28.105Z",
+      "postizene": [
+        "Zoom Phone",
+        "Zoom Phone",
+        "Zoom Phone - APAC",
+        "Zoom Phone - AUSTRALIA"
+      ],
+      "zkontrolovano": "2026-11-20T12:03:27.075Z",
       "chyba": null
     },
     {
@@ -41,7 +46,7 @@
       "popis": "All Systems Operational",
       "incidenty": [],
       "postizene": [],
-      "zkontrolovano": "2026-11-20T09:03:28.105Z",
+      "zkontrolovano": "2026-11-20T12:03:27.075Z",
       "chyba": null
     }
   ]
