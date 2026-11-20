@@ -1,5 +1,89 @@
 [
   {
+    "id": "k-d05a790c3b9e4354",
+    "zachyceno": "2026-11-20T18:03:18.926Z",
+    "publikovano": "2026-11-20T16:46:00.000Z",
+    "zdroj": {
+      "nazev": "Ukrainska Pravda (anglicky)",
+      "url": "https://www.pravda.com.ua/eng/news/2026/11/20/8063854/",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Ukrainian PM was in Poland when Russian missiles violated Polish airspace",
+    "titulekPuvodni": "Ukrainian PM was in Poland when Russian missiles violated Polish airspace",
+    "shrnuti": "A Polish media outlet has learned that Ukrainian Prime Minister Serhii Koretskyi was at Rzeszów-Jasionka Airport when Russian missiles and a jet-powered drone violated Polish airspace.",
+    "kodZeme": "PL",
+    "zeme": "Polsko",
+    "kategorie": [
+      "drony",
+      "rusko"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "violat+airspace",
+      "dron",
+      "drone",
+      "airspace",
+      "russia"
+    ],
+    "naliehave": {
+      "druh": "vzdusny-prostor-nato",
+      "stupen": 2,
+      "proc": "violated+airspace"
+    },
+    "stav": "ceka",
+    "vyrez": {
+      "text": "Ukrainian PM was in Poland when Russian missiles violated Polish airspace | Ukrainska Pravda\nUkrainian Prime Minister Serhii Koretskyi. Stock Photo: Getty Images\nA Polish media outlet has learned that Ukrainian Prime Minister Serhii Koretskyi was at Rzeszów-Jasionka Airport when Russian missiles and a jet-powered drone violated Polish airspace.\nSource : TVN24 , as reported by European Pravda\nDetails : Poland's air traffic control agency has reportedly confirmed that a Ukrainian aircraft with HEAD status was on the apron when the violation of Polish airspace occurred. This status is assigned to flights carrying senior state officials on official missions.\nAdvertisement:\n\r\n\r\n\r\n\r\n\r\nA reporter from TVN24 said that Ukrainian Prime Minister Serhii Koretskyi was at Rzeszów-Jasionka Airport when two missiles and a drone entered Polish territory. The journalist added that two independent sources have confirmed that Koretskyi had arrived at the airport from Kyiv that night to fly to Berlin in the morning for a meeting with the German chancellor.\nIt remains unclear whether Koretskyi was already on board the aircraft or inside the airport building.\nThe journalist noted that the aircraft was…",
+      "stazeno": "2026-11-20T18:03:19.030Z",
+      "stav": 200
+    }
+  },
+  {
+    "id": "k-d69e391c5ca6957a",
+    "zachyceno": "2026-11-20T18:03:18.929Z",
+    "publikovano": "2026-11-20T16:18:00.000Z",
+    "zdroj": {
+      "nazev": "Ukrainska Pravda (anglicky)",
+      "url": "https://www.pravda.com.ua/eng/news/2026/11/20/8063846/",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Poland asks NATO allies to help strengthen its air defences",
+    "titulekPuvodni": "Poland asks NATO allies to help strengthen its air defences",
+    "shrnuti": "Poland's defence minister has called on NATO allies to provide additional F-35 fighter jets, AWACS aircraft and other resources after Russian missiles and a drone violated Polish airspace.",
+    "kodZeme": "PL",
+    "zeme": "Polsko",
+    "kategorie": [
+      "drony",
+      "nato",
+      "rusko"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "violat+airspace",
+      "dron",
+      "drone",
+      "airspace",
+      "nato",
+      "russia"
+    ],
+    "naliehave": {
+      "druh": "vzdusny-prostor-nato",
+      "stupen": 2,
+      "proc": "violated+airspace"
+    },
+    "stav": "ceka",
+    "vyrez": {
+      "text": "Poland asks NATO for more air defence support after Russian airspace violations | Ukrainska Pravda\nStock photo: Getty Images\nPolish Defence Minister Władysław Kosiniak-Kamysz has called on the country's NATO allies to strengthen Poland's defences after Russian missiles and a jet-powered drone violated its airspace.\nSource : Defence24 , as reported by European Pravda\nDetails : Kosiniak-Kamysz believes Poland needs greater support from other NATO member states to effectively defend its airspace.\nAdvertisement:\n\r\n\r\n\r\n\r\n\r\nHe said he would like to see more active involvement from Poland's partners and stressed the need to strengthen the country's intelligence systems.\nIn particular, he made a direct request for Airborne Warning and Control System (AWACS) aircraft and allied F-35 fighter jets.\nHe emphasised that he will be asking NATO, specifically the NATO secretary general, for additional assets and personnel as part of Operation Eastern Sentry, stressing that Poland needs even greater support.\n\r\n\r\n\r\n\r\n\r\n\r\nIn a world flooded with AI-generated content, journalism you can trust matters more than ever.\n\r\nEvery Ukrainska Pravda story is verified by experienced reporters, and translated…",
+      "stazeno": "2026-11-20T18:03:19.203Z",
+      "stav": 200
+    }
+  },
+  {
     "id": "k-60d3794c34fd22ff",
     "zachyceno": "2026-11-20T16:02:09.876Z",
     "publikovano": "2026-11-20T14:20:52.000Z",
@@ -990,6 +1074,394 @@
       "stazeno": "2026-11-01T10:03:31.722Z",
       "stav": 200
     }
+  },
+  {
+    "id": "k-5c9ac7230e403143",
+    "zachyceno": "2026-11-20T18:03:18.898Z",
+    "publikovano": "2026-11-20T17:52:00.000Z",
+    "zdroj": {
+      "nazev": "Ukrinform (anglicky)",
+      "url": "https://www.ukrinform.net/rubric-ato/4186943-moldova-reports-second-drone-incursion-into-its-airspace-in-one-day.html",
+      "typ": "wire",
+      "primarni": false
+    },
+    "titulek": "Moldova reports second drone incursion into its airspace in one day",
+    "titulekPuvodni": "Moldova reports second drone incursion into its airspace in one day",
+    "shrnuti": "An unauthorized drone flight into Moldova’s airspace was recorded twice on November 20.",
+    "kodZeme": "MD",
+    "zeme": "Moldavsko",
+    "kategorie": [
+      "drony"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "drone incursion",
+      "incursion+airspace",
+      "dron",
+      "drone",
+      "airspace"
+    ],
+    "naliehave": null,
+    "stav": "ceka",
+    "vyrez": {
+      "text": "Moldova reports second drone incursion into its airspace in one day\n\r\nSubscription\nNewsletters\nPhotobank\nUkrinform - Ukrainian National News Agency\nFounded in 1918\nFriday, 20 November 2026, 20:03\nWar\nEconomy\nSports\nMore ☰\nContacts\nEng\nУкр\nEng\nEsp\nDeu\nعربي\nFra\n日本語\nPol\n&times;\nAll topics\nWar\nRecovery of Ukraine\nPolitics\nEconomy\nFact checks\nDefense\nSociety and Culture\nSports\nCrime\nAccidents and Emergencies\nAgency\nInformation on Agency\nOur Contacts\nSubscribtion Terms\nOur Services\nPrivacy policy and personal data protection\nAdditional\nPublications\nInterviews\nPhoto\nVideo\nLongreads\nReleases\nServices\nSubscription\nNewsletters\nPhotobank\n\r\n\r\n\r\nAn unauthorized drone flight into Moldova&rsquo;s airspace was recorded twice on November 20.\nThis was reported by Point.md , according to Ukrinform.\n\r\n\r\nAccording to the Air Operations Center of Moldova&rsquo;s National Army, at 14:48, a drone entered the country&rsquo;s airspace from the direction of the village of Yasky in Ukraine&rsquo;s Odesa region, heading toward the village of Crocmaz in Moldova&rsquo;s Ștefan Vodă district.\n\r\n\r\nA minute later, the aircraft left Moldovan airspace near the village of Tudora and headed toward the Ukrainian…",
+      "stazeno": "2026-11-20T18:03:19.365Z",
+      "stav": 200
+    }
+  },
+  {
+    "id": "k-f1086905e0361dd2",
+    "zachyceno": "2026-11-20T18:03:16.620Z",
+    "publikovano": "2026-11-20T17:40:00.000Z",
+    "zdroj": {
+      "nazev": "Deník N",
+      "url": "https://denikn.cz/2265046/vyvoj-boju-1730-den-v-polsku-dopadly-ruske-strely-s-plochou-drahou-letu-u-bulharska-a-rumunska-ruske-drony-potapeji-lode/",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Vývoj bojů (1730. den): V Polsku dopadly ruské střely s plochou dráhou letu, u Bulharska a Rumunska ruské drony potápějí lodě",
+    "titulekPuvodni": "Vývoj bojů (1730. den): V Polsku dopadly ruské střely s plochou dráhou letu, u Bulharska a Rumunska ruské drony potápějí lodě",
+    "shrnuti": "Informace v textu jsou shrnutím událostí za čtvrtek 19. listopadu. V tuto chvíli už situace na některých místech může být jiná. Ruská agrese opět překročila hranice NATO. Polský premiér Donald Tusk svolal bezpečnostní radu státu poté, co během masivního ruského náletu na západní Ukrajinu vnikly na ú",
+    "kodZeme": "PL",
+    "zeme": "Polsko",
+    "kategorie": [
+      "diplomacie",
+      "drony",
+      "nato",
+      "hranice",
+      "rusko"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "svolal+bezpecnost",
+      "dron+dopadl",
+      "dron",
+      "nato",
+      "hranice",
+      "rusk"
+    ],
+    "naliehave": null,
+    "stav": "ceka",
+    "vyrez": {
+      "text": "Vývoj bojů (1730. den): V Polsku dopadly ruské střely s plochou dráhou letu, u Bulharska a Rumunska ruské drony potápějí lodě &mdash; Deník N\nPolský premiér Donald Tusk během jednání bezpečnostní rady v pátek dopoledne. Foto: Donald Tusk, X\nVíce o poslechu Deníku N\nPřidat Deník N mezi oblíbené zdroje\nRuská agrese znovu překročila hranice NATO.\nRuské rakety poškodily tři kyjevské mosty, v několika oblastech došlo k výpadkům proudu, ve Lvově umírali lidé na vlakovém nádraží, slovenské velvyslankyni EU na Ukrajině explodoval nad hlavou dron.\nNení se kam schovat, Rusové útočí všude, píše ze Lvova slovenská diplomatka .\nRusové potápějí lodě u rumunského a bulharského pobřeží.\nŽelezniční část Krymského mostu byla zasažena v místě, kde se oblouk spojuje s pilířem.\nUkrajinský tlak směrem k Velyké Novosilce pokračuje.\nUkrajinská armáda zastavila budování nových brigád.\nMapy dne: Velyka Novosilka .\nVidea dne: ruské zbraně v Polsku; ruský dron nad centrem Kyjeva; ruské letectvo převzalo další Su-57, ukrajinský pilot naznačuje, že nejde o nový kus; HIMARS v akci; vrtulník Ka-52 při odrážení útoku na Krymský most .\nInformace v textu jsou shrnutím událostí za čtvrtek 19. listopadu. V tuto…",
+      "stazeno": "2026-11-20T18:03:20.131Z",
+      "stav": 200
+    }
+  },
+  {
+    "id": "k-664b0e185c72fa9d",
+    "zachyceno": "2026-11-20T18:03:18.949Z",
+    "publikovano": "2026-11-20T17:39:44.000Z",
+    "zdroj": {
+      "nazev": "Meduza (anglicky)",
+      "url": "https://meduza.io/en/news/2026/11/20/trump-says-putin-launched-a-couple-of-small-missiles-into-poland-by-accident-a-couple-of-little-missiles",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Trump says Putin launched a couple of small missiles into Poland by accident — ‘a couple of little missiles’",
+    "titulekPuvodni": "Trump says Putin launched a couple of small missiles into Poland by accident — ‘a couple of little missiles’",
+    "shrnuti": "U.S. President Donald Trump spoke to Fox News about the breach of Polish airspace by Russian missiles and drones during an overnight attack on Ukraine.",
+    "kodZeme": "PL",
+    "zeme": "Polsko",
+    "kategorie": [
+      "hybridni",
+      "drony",
+      "rusko"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "attack on",
+      "breach+airspace",
+      "dron",
+      "drone",
+      "airspace",
+      "russia"
+    ],
+    "naliehave": null,
+    "stav": "ceka",
+    "vyrez": {
+      "text": "Trump says Putin launched a couple of small missiles into Poland by accident — ‘a couple of little missiles’ — Meduza\nSkip to main content\nTrump says Putin launched a couple of small missiles into Poland by accident — ‘a couple of little missiles’\nNovember 20, 2026, 5:39 pm\nSource: Fox News\nU.S. President Donald Trump spoke to Fox News about the breach of Polish airspace by Russian missiles and drones during an overnight attack on Ukraine.\n“Putin has been landing drones in Poland and a couple of little missiles, by mistake,” Trump said .\nAt about 7 a.m. on November 20, as Russia carried out a large-scale attack on Ukraine, air raid alerts were issued in two Polish border provinces, Lublin and Podkarpackie. Polish Defense Minister Władysław Kosiniak-Kamysz later said two missiles and a jet-powered drone, all Russian, had fallen in Poland. He said “the date was not chosen by chance,” since the “coalition of the willing” was holding exercises that same day.\nPolish Prime Minister Donald Tusk called ministers, military representatives, and security service chiefs to a meeting about the airspace violation.\nTusk said, “This doesn’t look like an accident.” He suggested the incursion was…",
+      "stazeno": "2026-11-20T18:03:21.189Z",
+      "stav": 200
+    }
+  },
+  {
+    "id": "k-8a93bd2ba627d0c5",
+    "zachyceno": "2026-11-20T18:03:16.545Z",
+    "publikovano": "2026-11-20T17:11:00.000Z",
+    "zdroj": {
+      "nazev": "iDNES.cz — zpravodajství",
+      "url": "https://www.idnes.cz/zpravy/domaci/tisice-cigaret-schovanych-v-podvozku-kamionu.A261120_120616_domaci_hega#utm_source=rss&utm_medium=feed&utm_campaign=zpravodaj&utm_content=main",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Celníci našli pod návěsem kamionu tajný úkryt. Řidič tam schoval tisíce cigaret",
+    "titulekPuvodni": "Celníci našli pod návěsem kamionu tajný úkryt. Řidič tam schoval tisíce cigaret",
+    "shrnuti": "Celníci našli při rutinní hraniční kontrole přes 24 tisíc nelegálně převážených cigaret v bulharském kamionu mířícího z Řecka do Velké Británie. Stalo se tak v noci z úterka na středu na dálnici D2 nedaleko Lanžhota.",
+    "kodZeme": "GB",
+    "zeme": "Spojené království",
+    "kategorie": [
+      "hranice",
+      "vojsko"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "hranic+kontrol",
+      "celnici"
+    ],
+    "naliehave": null,
+    "stav": "ceka",
+    "vyrez": {
+      "text": "Celníci našli pod návěsem kamionu tajný úkryt. Řidič tam schoval tisíce cigaret - iDNES.cz \r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\niDNES.cz\n\r\n\r\n\r\nP�ihl�sit \r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nAbyste mohli pokra�ovat, pot�ebujeme v�d�t, jakou formou v�m m��eme zobrazovat reklamu \r\n\r\n\r\n\r\n\r\n\r\nV�mi zvolen� nastaven� \r\nneobsahuje souhlas se zobrazov�n�m c�len� reklamy . \r\nVyberte pros�m znovu, \r\njakou formou v�m m�me zobrazovat obsah. \r\n\r\n\r\n\r\n\r\n\r\n\r\niDNES Premium\n\r\nBez reklam\n\r\n\r\n199 K� m�s��n�\n\r\nM��ete neomezen� ��st iDNES.cz, Lidovky.cz, Expres.cz a Antiyoutuber.cz. K tomu dostanete tak� noviny a �asopisy v elektronick� podob�. To v�e bez reklam. 1\n\r\n\r\nP�edplatit\n\r\n\r\nU� m�te ��et? P�ihlaste se\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nS c�lenou reklamou\n\r\n\r\n\r\nZdarma \r\n\r\nZachov�me v�m v�e tak, jak jste zvykl� a reklamu p�izp�sob�me va�im z�jm�m. Bez omezen� si m��ete d�l ��st, p�ehr�vat videa, sout�it �i p�isp�vat do v�ech diskus�. 2\n\r\n\r\nSouhlas�m\n\r\nPodrobn� nastaven�\n\r\n\r\n\r\n\r\n\r\n\r\niDNES a reklama\n\r\nPokud vyu�ijete m�sto platby ud�len� souhlasu s reklamou (tj. souhlas s vyu�it�m cookies a dal��ch s�ov�ch identifik�tor� pro ��ely c�len� reklamy), \r\nbudou V�m…",
+      "stazeno": "2026-11-20T18:03:21.515Z",
+      "stav": 200
+    }
+  },
+  {
+    "id": "k-fee0c5ab33ab96d2",
+    "zachyceno": "2026-11-20T18:03:18.956Z",
+    "publikovano": "2026-11-20T17:09:14.000Z",
+    "zdroj": {
+      "nazev": "Meduza (anglicky)",
+      "url": "https://meduza.io/en/news/2026/11/20/poland-issues-air-raid-alerts-as-russia-attacks-ukraine-poland-s-defense-minister-says-two-russian-missiles-and-a-drone-fell-on-polish-soil",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Poland issues air raid alerts as Russia attacks Ukraine. Poland’s defense minister says two Russian missiles and a drone fell on Polish soil.",
+    "titulekPuvodni": "Poland issues air raid alerts as Russia attacks Ukraine. Poland’s defense minister says two Russian missiles and a drone fell on Polish soil.",
+    "shrnuti": "Air raid alerts went out in two Polish provinces bordering Ukraine as Russia attacked Ukraine overnight into November 20.",
+    "kodZeme": "PL",
+    "zeme": "Polsko",
+    "kategorie": [
+      "drony",
+      "hranice",
+      "rusko"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "air raid alert",
+      "dron+fell",
+      "dron",
+      "drone",
+      "border",
+      "russia"
+    ],
+    "naliehave": null,
+    "stav": "ceka",
+    "vyrez": {
+      "text": "Poland issues air raid alerts as Russia attacks Ukraine. Poland’s defense minister says two Russian missiles and a drone fell on Polish soil. — Meduza\nSkip to main content\nPoland issues air raid alerts as Russia attacks Ukraine. Poland’s defense minister says two Russian missiles and a drone fell on Polish soil.\nNovember 20, 2026, 5:09 pm\nSource: RMF24\nUpdate: Polish Defense Minister Władysław Kosiniak-Kamysz said three Russian objects fell on Polish territory: two missiles and a jet-powered drone. According to Kosiniak-Kamysz, a Kh-101 missile fell in the village of Nowy Lipowiec, another missile came down in the town of Rudnik nad Sanem, and the drone fell in Mołodycz. Air raid alerts went out in two Polish provinces bordering Ukraine as Russia attacked Ukraine overnight into November 20.\nAt about 6:50 a.m., residents of the Lublin and Subcarpathian provinces were warned of a possible air attack.\nJacek Goryszewski, a spokesman for the Polish Armed Forces Operational Command, said the military was investigating two possible violations of Polish airspace.\nPolice said they were “carrying out operations” in the village of Nowy Lipowiec, about 60 kilometers (37 miles) from the…",
+      "stazeno": "2026-11-20T18:03:24.680Z",
+      "stav": 200
+    }
+  },
+  {
+    "id": "k-f54e291e8561820e",
+    "zachyceno": "2026-11-20T18:03:17.003Z",
+    "publikovano": "2026-11-20T17:08:14.000Z",
+    "zdroj": {
+      "nazev": "The Guardian — World",
+      "url": "https://www.theguardian.com/technology/2026/nov/20/cybersecurity-operation-thwarts-attack-on-uk-supermarket-fridges-and-freezers",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "UK operation wards off risk of cyber-attack on supermarket fridges and freezers",
+    "titulekPuvodni": "UK operation wards off risk of cyber-attack on supermarket fridges and freezers",
+    "shrnuti": "News of vulnerability comes after retailers in at least seven European countries hit by cyber-attacks A secret government cybersecurity operation recently warded off the risk of a cyber-attack on fridges and freezers in UK supermarkets, warehouses, restaurants, petrol stations and stadiums, it has e",
+    "kodZeme": "GB",
+    "zeme": "Spojené království",
+    "kategorie": [
+      "hybridni",
+      "kyber"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "attack on",
+      "cyber"
+    ],
+    "naliehave": null,
+    "stav": "ceka",
+    "vyrez": {
+      "text": "UK operation wards off risk of cyber-attack on supermarket fridges and freezers | Cybercrime | The Guardian\nSkip to main content Skip to navigation\nEmpty fresh food refrigerators at an Intermarché supermarket in Névez, western France, in October, following a cyber-attack affecting the French supermarket chains. Photograph: Fred Tanneau/AFP/Getty Images\nView image in fullscreen\nEmpty fresh food refrigerators at an Intermarché supermarket in Névez, western France, in October, following a cyber-attack affecting the French supermarket chains. Photograph: Fred Tanneau/AFP/Getty Images\nUK operation wards off risk of cyber-attack on supermarket fridges and freezers\nNews of vulnerability comes after retailers in at least seven European countries hit by cyber-attacks\nA secret government cybersecurity operation recently warded off the risk of a cyber-attack on fridges and freezers in UK supermarkets, warehouses, restaurants, petrol stations and stadiums, it has emerged.\nAn attack would have been similar to those that have caused many millions of euros of damage in continental Europe in recent months. But, while many retailers have now been protected, researchers warned that many more could…",
+      "stazeno": "2026-11-20T18:03:24.773Z",
+      "stav": 200
+    }
+  },
+  {
+    "id": "k-e0ada8df46e18b1e",
+    "zachyceno": "2026-11-20T18:03:17.395Z",
+    "publikovano": "2026-11-20T16:58:49.000Z",
+    "zdroj": {
+      "nazev": "NZZ (Švýcarsko)",
+      "url": "https://www.nzz.ch/international/nato-ostflanke-russische-marschflugkoerper-schlagen-in-polen-ein-ld.10070169",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Zwei russische Marschflugkörper schlagen in Polen ein – die Regierung glaubt nicht an ein Versehen",
+    "titulekPuvodni": "Zwei russische Marschflugkörper schlagen in Polen ein – die Regierung glaubt nicht an ein Versehen",
+    "shrnuti": "Erstmals verletzt Russland den polnischen Luftraum in so grossem Ausmass. Der polnische Regierungschef Donald Tusk spricht von einer gezielten Provokation des Kremls.",
+    "kodZeme": "RU",
+    "zeme": "Rusko",
+    "kategorie": [
+      "drony",
+      "rusko"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "verletz+luftraum",
+      "kreml"
+    ],
+    "naliehave": null,
+    "stav": "ceka",
+    "vyrez": {
+      "text": "Nato-Ostflanke: Russische Marschflugkörper schlagen in Polen ein\nZwei russische Marschflugkörper schlagen in Polen ein – die Regierung glaubt nicht an ein Versehen\nErstmals verletzt Russland den polnischen Luftraum in so grossem Ausmass. Der polnische Regierungschef Donald Tusk spricht von einer gezielten Provokation des Kremls.\nPaul Flückiger, Warschau 20.11.2026, 17.58 Uhr 3 Leseminuten\nHören 4 min\nZusammenfassung\nKontext zum Artikel Teilen\nArtikel teilen\nMerken\nIn Sammlung speichern\nPolens Ministerpräsident Donald Tusk (rechts) nahm am Donnerstag in Berlin am Gipfel der «Koalition der Willigen» teil. In der Mitte der Gastgeber, der deutsche Kanzler Friedrich Merz, links Griechenlands Regierungschef Kyriakos Mitsotakis.\nHannibal Hanschke / EPA\nDie Bewohner des Bauerndorfes Nowy Lipowiec im Südosten Polens sind am Freitag früh von einer starken Explosion geweckt worden. Wie die polnischen Behörden später mitteilten, war ein russischer Marschflugkörper des Typs Ch-101 in einen Acker gekracht und dabei explodiert. Beim Eintreffen der Polizei brannte die Absturzstelle noch. In einem rund 400 Meter entfernten Bauernhaus wurden durch die Explosion des 7,5 Meter langen und 3,5 Tonnen…",
+      "stazeno": "2026-11-20T18:03:24.907Z",
+      "stav": 200
+    }
+  },
+  {
+    "id": "k-ac5265550d62d912",
+    "zachyceno": "2026-11-20T18:03:17.467Z",
+    "publikovano": "2026-11-20T16:55:00.000Z",
+    "zdroj": {
+      "nazev": "Rzeczpospolita (Polsko)",
+      "url": "https://www.rp.pl/konflikty-zbrojne/art45519541-od-holenderskiej-ambasady-po-polskie-lotnisko-w-jasionce-kolejne-panstwa-na-celowniku-putina",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Od holenderskiej ambasady po polskie lotnisko w Jasionce. Kolejne państwa na celowniku Putina",
+    "titulekPuvodni": "Od holenderskiej ambasady po polskie lotnisko w Jasionce. Kolejne państwa na celowniku Putina",
+    "shrnuti": "Kreml zareagował na informacje o francuskich żołnierzach w Ukrainie i rakietach z Holandii uderzających w Most Krymski, atakując dronem holenderską ambasadę w Kijowie. Do francuskiej jednak nie strzelał – boi się.",
+    "kodZeme": "PL",
+    "zeme": "Polsko",
+    "kategorie": [
+      "hybridni",
+      "drony",
+      "rusko"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "putin+polsk+uder",
+      "dron",
+      "drone",
+      "kreml"
+    ],
+    "naliehave": null,
+    "stav": "ceka",
+    "vyrez": {
+      "text": "Kreml sprawdza, jak daleko może się posunąć. Polska już odczuwa skutki przekraczania czerwonych granic - rp.pl\n\r\nReklama\nWydarzenia\nŚwiat\nKonflikty zbrojne\nOd holenderskiej ambasady po polskie lotnisko w Jasionce. Kolejne państwa na celowniku Putina\nKreml zareagował na informacje o francuskich żołnierzach w Ukrainie i rakietach z Holandii uderzających w Most Krymski, atakując dronem holenderską ambasadę w Kijowie. Do francuskiej jednak nie strzelał – boi się.\nAktualizacja:\n20.11.2026 19:03\nPublikacja:\n20.11.2026 17:55\nUstaw „Rzeczpospolitą” jako swoje ulubione źródło informacji w Google\nMiejsce uderzenia rosyjskiego drona w budynek w pobliżu ambasady Holandii w centrum Kijowa na Ukrainie\nFoto: EPA/STATE EMERGENCY SERVICE OF UKRAINE HANDOUT\nReklama\nReklama\nReklama\nAndrzej Łomanowski\n„Czy Haga otwarcie dołączyła się do konfliktu?” – pytała\nrosyjska ambasada w internecie po ujawnieniu, że holenderska firma Destinus\ndostarcza Ukrainie rakiet. Moskwa chyba sama odpowiedziała, że tak i dron spadł\n20 metrów przed siedzibą holenderskiego przedstawicielstwa w ukraińskiej\nstolicy.\n– Na szczęście naszym kolegom nic się nie stało, choć budynek\nuległ drobnym uszkodzeniom – poinformował…",
+      "stazeno": "2026-11-20T18:03:25.824Z",
+      "stav": 200
+    }
+  },
+  {
+    "id": "k-a2f1124cefca55e2",
+    "zachyceno": "2026-11-20T18:03:17.469Z",
+    "publikovano": "2026-11-20T16:49:14.000Z",
+    "zdroj": {
+      "nazev": "Rzeczpospolita (Polsko)",
+      "url": "https://radar.rp.pl/wojsko-polskie/art45521321-rosyjskie-rakiety-w-rejonie-manewrow-koalicji-chetnych-czym-jest-cwiczenie-koalicja-26-2",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Rosyjskie rakiety w rejonie manewrów Koalicji Chętnych. Czym jest ćwiczenie KOALICJA 26.2",
+    "titulekPuvodni": "Rosyjskie rakiety w rejonie manewrów Koalicji Chętnych. Czym jest ćwiczenie KOALICJA 26.2",
+    "shrnuti": "Dwie rosyjskie rakiety i najprawdopodobniej dron spadły na Podkarpaciu i Lubelszczyźnie, gdy pod Nową Dębą ćwiczą siły Koalicji Chętnych. Wyjaśniamy, czym jest KOALICJA 26.2 i jaką rolę odgrywa w niej Polska.",
+    "kodZeme": "PL",
+    "zeme": "Polsko",
+    "kategorie": [
+      "drony"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "dron+spadł",
+      "dron"
+    ],
+    "naliehave": null,
+    "stav": "ceka",
+    "vyrez": {
+      "text": "Pod Nową Dębą 11 państw ćwiczy przerzut sił, które po wojnie mają wesprzeć Ukrainę - rp.pl\n\r\nReklama\nPrzemysł Zbrojeniowy\nWojsko Polskie\nRosyjskie rakiety w rejonie manewrów Koalicji Chętnych. Czym jest ćwiczenie KOALICJA 26.2\nDwie rosyjskie rakiety i najprawdopodobniej dron spadły na Podkarpaciu i Lubelszczyźnie, gdy pod Nową Dębą ćwiczą siły Koalicji Chętnych. Wyjaśniamy, czym jest KOALICJA 26.2 i jaką rolę odgrywa w niej Polska.\nAktualizacja:\n20.11.2026 17:50\nPublikacja:\n20.11.2026 17:49\nUstaw „Rzeczpospolitą” jako swoje ulubione źródło informacji w Google\nFoto: PAP/Piotr Polak\nReklama\nReklama\nReklama\nMarek Kutarba\nW piątek nad ranem, w czasie zmasowanego rosyjskiego ataku na Ukrainę, trzy obiekty naruszyły polską przestrzeń powietrzną. Według szefa MON Władysława Kosiniaka-Kamysza były to dwie rakiety i najpewniej dron z napędem odrzutowym. Spadły w Nowym Lipowcu na Lubelszczyźnie oraz w Rudniku nad Sanem i Mołodyczu na Podkarpaciu. Premier Donald Tusk ocenił, że zdarzenie wygląda na celową prowokację, i zwrócił uwagę, że obiekty spadły niedaleko Nowej Dęby, gdzie ćwiczą wojska Koalicji Chętnych. Według dostępnych obecnie informacji nikt nie ucierpiał.\nReklama\nReklama\nNie…",
+      "stazeno": "2026-11-20T18:03:26.947Z",
+      "stav": 200
+    }
+  },
+  {
+    "id": "k-72b41e145df872bd",
+    "zachyceno": "2026-11-20T18:03:18.903Z",
+    "publikovano": "2026-11-20T16:33:00.000Z",
+    "zdroj": {
+      "nazev": "Ukrinform (anglicky)",
+      "url": "https://www.ukrinform.net/rubric-ato/4186904-injury-toll-from-russian-attack-on-zaporizhzhia-rises-to-ten.html",
+      "typ": "wire",
+      "primarni": false
+    },
+    "titulek": "Injury toll from Russian attack on Zaporizhzhia rises to ten",
+    "titulekPuvodni": "Injury toll from Russian attack on Zaporizhzhia rises to ten",
+    "shrnuti": "The number of people injured in Russian attacks in Zaporizhzhia's Kosmichnyi district has risen to ten.",
+    "kodZeme": "RU",
+    "zeme": "Rusko",
+    "kategorie": [
+      "hybridni",
+      "rusko"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "attack on",
+      "russia"
+    ],
+    "naliehave": null,
+    "stav": "ceka",
+    "vyrez": {
+      "text": "Injury toll from Russian attack on Zaporizhzhia rises to ten\n\r\nSubscription\nNewsletters\nPhotobank\nUkrinform - Ukrainian National News Agency\nFounded in 1918\nFriday, 20 November 2026, 20:03\nWar\nEconomy\nSports\nMore ☰\nContacts\nEng\nУкр\nEng\nEsp\nDeu\nعربي\nFra\n日本語\nPol\n&times;\nAll topics\nWar\nRecovery of Ukraine\nPolitics\nEconomy\nFact checks\nDefense\nSociety and Culture\nSports\nCrime\nAccidents and Emergencies\nAgency\nInformation on Agency\nOur Contacts\nSubscribtion Terms\nOur Services\nPrivacy policy and personal data protection\nAdditional\nPublications\nInterviews\nPhoto\nVideo\nLongreads\nReleases\nServices\nSubscription\nNewsletters\nPhotobank\n\r\n\r\n\r\nThe number of people injured in Russian attacks in Zaporizhzhia's Kosmichnyi district has risen to ten.\nMykhailo Semikin, acting head of the Zaporizhzhia Regional Military Administration, said this in a Telegram post , Ukrinform reports.\n\r\n\r\n\r\n\r\n\"The number of people injured in the attacks on Zaporizhzhia has increased to ten,\" he wrote.\n\r\n\r\nApartment buildings, cars and a grocery store were damaged.\n\r\n\r\n\r\n\r\n\r\n\r\nAll relevant emergency and municipal services are working at the scene, the report said.\n\r\n\r\nRead also: Russian forces strike industrial and energy…",
+      "stazeno": "2026-11-20T18:03:28.230Z",
+      "stav": 200
+    }
+  },
+  {
+    "id": "k-8572f206d4ebf1af",
+    "zachyceno": "2026-11-20T18:03:17.476Z",
+    "publikovano": "2026-11-20T16:15:00.000Z",
+    "zdroj": {
+      "nazev": "Rzeczpospolita (Polsko)",
+      "url": "https://www.rp.pl/konflikty-zbrojne/art45521731-to-te-pociski-naruszyly-polska-przestrzen-powietrzna-czym-zaatakowala-rosja",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "To te pociski naruszyły polską przestrzeń powietrzną. Czym zaatakowała Rosja?",
+    "titulekPuvodni": "To te pociski naruszyły polską przestrzeń powietrzną. Czym zaatakowała Rosja?",
+    "shrnuti": "Rosja wykorzystuje w atakach na Ukrainę pociski manewrujące Ch-101 oraz Gerań-5, czyli bezzałogowce przypominające niewielkie pociski manewrujące. Oba typy stanowią poważne wyzwanie dla obrony przeciwlotniczej. To właśnie takie środki uderzeniowe znalazły się wśród obiektów związanych z rosyjskim at",
+    "kodZeme": "PL",
+    "zeme": "Polsko",
+    "kategorie": [
+      "drony"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "narusz+przestrzen powietrzn"
+    ],
+    "naliehave": null,
+    "stav": "ceka"
   },
   {
     "id": "k-6e664be436e6104d",
@@ -9847,458 +10319,6 @@
     "vyrez": {
       "text": "Russia planned mass-casualty attack in Poland to be blamed on Ukraine, newspaper says | Ukrainska Pravda\nPhoto: rmf24.pl\nRussian intelligence services reportedly planned to carry out a sabotage operation on Polish territory near the border with Russia's Kaliningrad Oblast in late October or early November which they intended to be blamed on Ukraine.\nSource: Polish newspaper Rzeczpospolita , as cited by European Pravda\nDetails: The newspaper cited senior sources with ties to Poland's military and security services who are familiar with an operation carried out over the past two weeks to foil the Russian plot.\nAdvertisement:\n\r\n\r\n\r\n\r\n\r\nRzeczpospolita said Warsaw had been warned of the planned operation by partner intelligence services, and Polish intelligence analysts had also identified signs of the threat.\n\"We had information about the specific sites that were to be attacked. The Russian plan envisaged mass casualties,\" one of the newspaper's sources said.\nDrawing parallels with the Gleiwitz incident, a German false-flag operation carried out on 31 August 1939, another source said: \"It was supposed to be something similar to Gleiwitz. Of course, those who crossed the border would…",
       "stazeno": "2026-11-18T10:38:33.945Z",
-      "stav": 200
-    }
-  },
-  {
-    "id": "k-bcb3fa8f97635ce0",
-    "zachyceno": "2026-11-18T09:03:06.136Z",
-    "publikovano": "2026-11-18T08:52:57.000Z",
-    "zdroj": {
-      "nazev": "Novinky.cz",
-      "url": "https://www.novinky.cz/clanek/krimi-ceske-firmy-se-dostaly-pri-nakupu-zbrani-pro-ukrajinu-do-potizi-fau-blokoval-miliardy-40607330",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "České firmy se dostaly při nákupu zbraní pro Ukrajinu do potíží, FAÚ blokoval miliardy",
-    "titulekPuvodni": "České firmy se dostaly při nákupu zbraní pro Ukrajinu do potíží, FAÚ blokoval miliardy",
-    "shrnuti": "České úřady se od začátku ruské invaze v roce 2022 zabývaly hned několika případy českých firem, které byly prověřovány kvůli možnému podvodu nebo zpronevěře peněz určených na nákup zbraní a munice pro ukrajinskou armádu. Finančně analytický úřad (FAÚ) jim kvůli tomu zajistil několik miliard korun. ",
-    "kodZeme": "CZ",
-    "zeme": "Česko",
-    "kategorie": [
-      "sabotaz",
-      "vojsko",
-      "rusko"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "zeSite": null,
-    "shody": [
-      "fire+munic",
-      "policie",
-      "rusk"
-    ],
-    "naliehave": null,
-    "stav": "ceka",
-    "vyrez": {
-      "text": "České firmy se dostaly při nákupu zbraní pro Ukrajinu do potíží, FAÚ blokoval miliardy - Novinky\nZobrazení snímku 1 z 0\nzáhlaví\nHlavní obsah\nČeské firmy se dostaly při nákupu zbraní pro Ukrajinu do potíží, FAÚ blokoval miliardy\nRadka Kovářová\n7:22\nChcete-li článek poslouchat, přihlaste se\neBook\nSdílet\nDnes 18. 11., 9:52\nČeské úřady se od začátku ruské invaze v roce 2022 zabývaly hned několika případy českých firem, které byly prověřovány kvůli možnému podvodu nebo zpronevěře peněz určených na nákup zbraní a munice pro ukrajinskou armádu. Finančně analytický úřad (FAÚ) jim kvůli tomu zajistil několik miliard korun. Téměř všechny kauzy však česká policie nakonec odložila s tím, že nebyl spáchán trestný čin.\nFoto: Novinky\nIlustrační foto\nStručně\nSouhrn je vygenerován pomocí umělé inteligence.\nČeské firmy se při nákupu zbraní pro Ukrajinu dostaly do problémů, FAÚ jim blokoval miliardy kvůli podezřelým transakcím a podal trestní oznámení.\nSpolečnost Pamco Pavla Musely měla dodat Ukrajině vojenskou techniku a munici, ale dodnes se tak nestalo. NCOZ zablokovala firmě 311 milionů korun.\nFirma Archer-LPP čelila vyšetřování kvůli podezření z umělého navyšování cen, ale NCOZ kauzu odložila a…",
-      "stazeno": "2026-11-18T09:03:09.982Z",
-      "stav": 200
-    }
-  },
-  {
-    "id": "k-647f2fc05d1cc133",
-    "zachyceno": "2026-11-18T09:03:09.846Z",
-    "publikovano": "2026-11-18T08:35:24.000Z",
-    "zdroj": {
-      "nazev": "Meduza (anglicky)",
-      "url": "https://meduza.io/en/news/2026/11/18/ukraine-carried-out-crimean-bridge-strike-without-starlink-using-its-own-communications-technology-ukrainian-officer-tells-the-times",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Ukraine carried out Crimean Bridge strike without Starlink, using its own communications technology, Ukrainian officer tells The Times",
-    "titulekPuvodni": "Ukraine carried out Crimean Bridge strike without Starlink, using its own communications technology, Ukrainian officer tells The Times",
-    "shrnuti": "Ukrainian forces carried out the November 17 attack on the Crimean Bridge without using Starlink satellite communications or its military version, Starshield, a Ukrainian officer involved in the operation told the British newspaper The Times.",
-    "kodZeme": "GB",
-    "zeme": "Spojené království",
-    "kategorie": [
-      "hybridni"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "zeSite": null,
-    "shody": [
-      "attack on"
-    ],
-    "naliehave": null,
-    "stav": "ceka",
-    "vyrez": {
-      "text": "Ukraine carried out Crimean Bridge strike without Starlink, using its own communications technology, Ukrainian officer tells The Times — Meduza\nSkip to main content\nUkraine carried out Crimean Bridge strike without Starlink, using its own communications technology, Ukrainian officer tells The Times\nNovember 18, 2026, 8:35 am\nSource: The Times\nUkrainian forces carried out the November 17 attack on the Crimean Bridge without using Starlink satellite communications or its military version, Starshield, a Ukrainian officer involved in the operation told the British newspaper The Times.\n“The Americans tried to paralyze our connectivity to conduct such operations, but this mission proved we can develop our own connections to relay radio signals. For the first time in history, we used all these drones to pass video signals to missiles so they could hit precise points on the bridge. We showed we can conduct such operations without Starlink,” the source told the newspaper.\nThe officer added that the operation was planned as a symbolic gesture ahead of a meeting in China between Vladimir Putin, Donald Trump, and Xi Jinping.\n“We planned this as a symbolic gesture before the meeting of Trump,…",
-      "stazeno": "2026-11-18T09:03:10.544Z",
-      "stav": 200
-    }
-  },
-  {
-    "id": "k-5819ca9baf90fa74",
-    "zachyceno": "2026-11-18T09:03:09.770Z",
-    "publikovano": "2026-11-18T08:19:00.000Z",
-    "zdroj": {
-      "nazev": "Ukrinform (anglicky)",
-      "url": "https://www.ukrinform.net/rubric-ato/4185876-more-than-80-settlements-without-electricity-in-rivne-region-following-russian-attack.html",
-      "typ": "wire",
-      "primarni": false
-    },
-    "titulek": "More than 80 settlements without electricity in Rivne region following Russian attack",
-    "titulekPuvodni": "More than 80 settlements without electricity in Rivne region following Russian attack",
-    "shrnuti": "More than 80 settlements in Ukraine’s Rivne region were left without electricity following a Russian attack on the morning of November 18.",
-    "kodZeme": "UA",
-    "zeme": "Ukrajina",
-    "kategorie": [
-      "hybridni",
-      "rusko"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "zeSite": null,
-    "shody": [
-      "attack on",
-      "russia"
-    ],
-    "naliehave": null,
-    "stav": "ceka",
-    "vyrez": {
-      "text": "More than 80 settlements without electricity in Rivne region following Russian attack\n\r\nSubscription\nNewsletters\nPhotobank\nUkrinform - Ukrainian National News Agency\nFounded in 1918\nWednesday, 18 November 2026, 11:03\nWar\nEconomy\nSports\nMore ☰\nContacts\nEng\nУкр\nEng\nEsp\nDeu\nعربي\nFra\n日本語\nPol\n&times;\nAll topics\nWar\nRecovery of Ukraine\nPolitics\nEconomy\nFact checks\nDefense\nSociety and Culture\nSports\nCrime\nAccidents and Emergencies\nAgency\nInformation on Agency\nOur Contacts\nSubscribtion Terms\nOur Services\nPrivacy policy and personal data protection\nAdditional\nPublications\nInterviews\nPhoto\nVideo\nLongreads\nReleases\nServices\nSubscription\nNewsletters\nPhotobank\n\r\n\r\n\r\nMore than 80 settlements in Ukraine&rsquo;s Rivne region were left without electricity following a Russian attack on the morning of November 18.\nAccording to Ukrinform, Oleksandr Koval, head of the Rivne Regional Military Administration, reported this on Telegram .\n\r\n\r\nAccording to him, the power outages affected the northern part of the Rivne region.\n\r\n\r\nNo injuries have been reported.\n\r\n\r\nEnergy workers have already begun restoration operations.\n\r\n\r\nRead also: Russian attacks kill one, injures eight in Kharkiv region \r\n\r\nAs…",
-      "stazeno": "2026-11-18T09:03:10.760Z",
-      "stav": 200
-    }
-  },
-  {
-    "id": "k-daad894bf9eff039",
-    "zachyceno": "2026-11-18T09:03:07.592Z",
-    "publikovano": "2026-11-18T08:14:57.000Z",
-    "zdroj": {
-      "nazev": "Denník N (Slovensko)",
-      "url": "https://dennikn.sk/5698745/trumpov-svet-667-den-seria-vypadkov-sluzieb-v-usa-pokracuje-pripady-nesuvisia-a-nie-je-to-kyberutok-upokojoval-ludi-rubio/",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Trumpov svet (667. deň): Séria výpadkov služieb v USA pokračuje. Prípady nesúvisia a nie je to kyberútok, upokojoval ľudí Rubio",
-    "titulekPuvodni": "Trumpov svet (667. deň): Séria výpadkov služieb v USA pokračuje. Prípady nesúvisia a nie je to kyberútok, upokojoval ľudí Rubio",
-    "shrnuti": "Informácie v tomto texte sú zhrnutím udalostí za utorok 17. novembra. Najskôr od štvrtka nefungoval Outlook, e-mailová služba spoločnosti Microsoft. Pocítili to ľudia po celom svete vrátane Slovenska. V piatok došlo k výpadku v systémoch Federálneho úradu pre letectvo, čo znamenalo, že tisícky lieta",
-    "kodZeme": "SK",
-    "zeme": "Slovensko",
-    "kategorie": [
-      "kyber"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "zeSite": null,
-    "shody": [
-      "kyberutok"
-    ],
-    "naliehave": null,
-    "stav": "ceka",
-    "vyrez": {
-      "text": "",
-      "stazeno": "2026-11-18T09:03:11.708Z",
-      "stav": 403,
-      "chyba": "HTTP 403"
-    }
-  },
-  {
-    "id": "k-b2f2fb0ed372f2b2",
-    "zachyceno": "2026-11-18T09:03:07.839Z",
-    "publikovano": "2026-11-18T08:08:00.000Z",
-    "zdroj": {
-      "nazev": "LSM (Lotyšsko, anglicky)",
-      "url": "https://eng.lsm.lv/article/society/defence/18.11.2026-estonia-estimates-costs-of-introducing-border-controls-with-latvia.a672427/?utm_source=rss&utm_campaign=rss&utm_medium=links",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Estonia estimates costs of introducing border controls with Latvia",
-    "titulekPuvodni": "Estonia estimates costs of introducing border controls with Latvia",
-    "shrnuti": "Restoring border controls between Estonia and Latvia would cost approximately €65 million, Estonia's Ministry of the Interior Secretary General Tarmo Miilits has said in comments reported by Estonian public media ERR News.",
-    "kodZeme": "EE",
-    "zeme": "Estonsko",
-    "kategorie": [
-      "hranice"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "zeSite": null,
-    "shody": [
-      "border controls",
-      "border"
-    ],
-    "naliehave": null,
-    "stav": "ceka",
-    "vyrez": {
-      "text": "Estonia estimates costs of introducing border controls with Latvia / Article\nEstonia estimates costs of introducing border controls with Latvia\nShare\nFollow: Follow LSM on Google\nPhoto: LETA, Kaspars Krafts\nRobežstabs uz Latvijas - Igaunijas robežas Valkā.\nToday, 10:08\nDefence\nAuthors:\nERR News\nRestoring border controls between Estonia and Latvia would cost approximately €65 million, Estonia's Ministry of the Interior Secretary General Tarmo Miilits has said in comments reported by Estonian public media ERR News .\nA discussion on whether border checks should be reintoroduced has arisen after eight Latvian residents were detained following an attempted arson at a drone maker's factory in Viimsi on Saturday morning. The incident has been attributed to Russia's military intellegence service, the GRU.\nIn response, Estonia is planning to close land crossing points on the eastern border with Russia from December 1. But some have asked about the situation with Latvia.\nSeveral Latvian residents were also arrested in September after an attempted arson, also attributed to the GRU, on another defence company in Tallinn.\nHowever, Miilits said there are no threats on the southern border.\n\"The…",
-      "stazeno": "2026-11-18T09:03:11.739Z",
-      "stav": 200
-    }
-  },
-  {
-    "id": "k-d508a9f22e8a3d7f",
-    "zachyceno": "2026-11-18T09:03:09.809Z",
-    "publikovano": "2026-11-18T08:06:00.000Z",
-    "zdroj": {
-      "nazev": "Ukrainska Pravda (anglicky)",
-      "url": "https://www.pravda.com.ua/eng/news/2026/11/18/8063400/",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Russian FPV drone kills woman and injures man in Zaporizhzhia Oblast",
-    "titulekPuvodni": "Russian FPV drone kills woman and injures man in Zaporizhzhia Oblast",
-    "shrnuti": "A woman has been killed and a man injured in a Russian FPV drone attack on Kushuhum in Zaporizhzhia Oblast on 18 November.",
-    "kodZeme": "RU",
-    "zeme": "Rusko",
-    "kategorie": [
-      "hybridni",
-      "drony",
-      "rusko"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "zeSite": null,
-    "shody": [
-      "attack on",
-      "dron",
-      "drone",
-      "russia"
-    ],
-    "naliehave": null,
-    "stav": "ceka",
-    "vyrez": {
-      "text": "Russian FPV drone kills woman and injures man in Zaporizhzhia Oblast | Ukrainska Pravda\nStock photo: Getty Images\nA woman has been killed and a man injured in a Russian FPV drone attack on Kushuhum in Zaporizhzhia Oblast on 18 November.\nSource: Mykhailo Semikin , acting Head of Zaporizhzhia Oblast Military Administration\nDetails: A Russian drone struck an open area. The blast wave and debris damaged residential buildings.\nAdvertisement:\n\r\n\r\n\r\n\r\n\r\nQuote: \"A woman has been killed and a man injured in an enemy FPV drone attack on Kushuhum.\"\nYour support on Patreon helps us keep the news free and accessible.\nZaporizhzhia Oblast\ncivilian casualties\nAdvertisement:\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nZaporizhzhia Oblast\nRussia drops 40 aerial bombs in 10 days: families with children to be evacuated from Balabyne in Zaporizhzhia Oblast\nKomyshuvakha search operation completed: Russian attack killed 72 people – photos\nMan killed in Russian drone strike on civilian infrastructure facility in Zaporizhzhia Oblast\nLatest news\nAdvertisement:\n\r\n\r\n\r\nAdvertisement:",
-      "stazeno": "2026-11-18T09:03:13.002Z",
-      "stav": 200
-    }
-  },
-  {
-    "id": "k-bc88c043989a1b8e",
-    "zachyceno": "2026-11-18T09:03:09.816Z",
-    "publikovano": "2026-11-18T07:49:00.000Z",
-    "zdroj": {
-      "nazev": "Ukrainska Pravda (anglicky)",
-      "url": "https://www.pravda.com.ua/eng/news/2026/11/18/8063397/",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Russia drops 40 aerial bombs in 10 days: families with children to be evacuated from Balabyne in Zaporizhzhia Oblast",
-    "titulekPuvodni": "Russia drops 40 aerial bombs in 10 days: families with children to be evacuated from Balabyne in Zaporizhzhia Oblast",
-    "shrnuti": "The authorities plan to evacuate 184 residents, including 85 children, from Balabyne following intensified Russian airstrikes. Officials aim to complete the main evacuation measures within a week.",
-    "kodZeme": "RU",
-    "zeme": "Rusko",
-    "kategorie": [
-      "sabotaz",
-      "rusko"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "zeSite": null,
-    "shody": [
-      "bomb",
-      "russia"
-    ],
-    "naliehave": null,
-    "stav": "ceka",
-    "vyrez": {
-      "text": "Mandatory evacuation ordered in Zaporizhzhia Oblast after Russia dropped 40 aerial bombs on Balabyne | Ukrainska Pravda\nBalabyne on the DeepStateMap. Screenshot\nThe local authorities have decided to order the mandatory evacuation of families with children from Balabyne in Zaporizhzhia Oblast due to the deteriorating security situation.\nSource: Mykhailo Semikin, acting Head of Zaporizhzhia Oblast Military Administration, on social media\nDetails: Zaporizhzhia Oblast Military Administration said the evacuation will involve 80 families, including 85 children. A total of 184 people are to be evacuated.\nAdvertisement:\n\r\n\r\n\r\n\r\n\r\nIt was stated during the national joint 24/7 newscast that the Russians had dropped at least 40 aerial bombs on the village of Balabyne over the past 10 days.\nQuote: \"It is important not only to help people leave but also to ensure they have somewhere to live after evacuation and receive the support they need. We are currently working on this together with local\nhromadas\nA hromada is an administrative unit designating a village, several villages, or a town, and their adjacent territories\nand partners.\nWe expect to have all the key measures in place within a…",
-      "stazeno": "2026-11-18T09:03:13.032Z",
-      "stav": 200
-    }
-  },
-  {
-    "id": "k-3ecb9e96fe4e0beb",
-    "zachyceno": "2026-11-18T09:03:06.247Z",
-    "publikovano": "2026-11-18T07:24:00.000Z",
-    "zdroj": {
-      "nazev": "iDNES.cz — zpravodajství",
-      "url": "https://www.idnes.cz/zpravy/zahranicni/ukrajina-rusko-krasnodarsky-kraj-izmajil-dnipro-hanza.A261118_080444_zahranicni_onbu#utm_source=rss&utm_medium=feed&utm_campaign=zpravodaj&utm_content=main",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Ukrajina nepřestává v útocích, zasáhla dvě rafinerie na jihu Ruska",
-    "titulekPuvodni": "Ukrajina nepřestává v útocích, zasáhla dvě rafinerie na jihu Ruska",
-    "shrnuti": "Nejméně šest raněných si vyžádaly ruské útoky na Dnipro na jihovýchodě Ukrajiny, oznámil ve středu náčelník oblastní správy Oleksandr Hanža. Čtyři zraněné hlásí po ukrajinském náletu úřady na jihozápadě Ruska. V tomto regionu ukrajinské drony podle nepotvrzených zpráv zasáhly dvě rafinerie.",
-    "kodZeme": "UA",
-    "zeme": "Ukrajina",
-    "kategorie": [
-      "drony",
-      "rusko"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "zeSite": null,
-    "shody": [
-      "dron+zasahl",
-      "dron",
-      "rusk"
-    ],
-    "naliehave": null,
-    "stav": "ceka",
-    "vyrez": {
-      "text": "Ukrajinci útočili na ruské rafinérie u Černého moře - iDNES.cz \r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\niDNES.cz\n\r\n\r\n\r\nP�ihl�sit \r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nAbyste mohli pokra�ovat, pot�ebujeme v�d�t, jakou formou v�m m��eme zobrazovat reklamu \r\n\r\n\r\n\r\n\r\n\r\nV�mi zvolen� nastaven� \r\nneobsahuje souhlas se zobrazov�n�m c�len� reklamy . \r\nVyberte pros�m znovu, \r\njakou formou v�m m�me zobrazovat obsah. \r\n\r\n\r\n\r\n\r\n\r\n\r\niDNES Premium\n\r\nBez reklam\n\r\n\r\n199 K� m�s��n�\n\r\nM��ete neomezen� ��st iDNES.cz, Lidovky.cz, Expres.cz a Antiyoutuber.cz. K tomu dostanete tak� noviny a �asopisy v elektronick� podob�. To v�e bez reklam. 1\n\r\n\r\nP�edplatit\n\r\n\r\nU� m�te ��et? P�ihlaste se\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nS c�lenou reklamou\n\r\n\r\n\r\nZdarma \r\n\r\nZachov�me v�m v�e tak, jak jste zvykl� a reklamu p�izp�sob�me va�im z�jm�m. Bez omezen� si m��ete d�l ��st, p�ehr�vat videa, sout�it �i p�isp�vat do v�ech diskus�. 2\n\r\n\r\nSouhlas�m\n\r\nPodrobn� nastaven�\n\r\n\r\n\r\n\r\n\r\n\r\niDNES a reklama\n\r\nPokud vyu�ijete m�sto platby ud�len� souhlasu s reklamou (tj. souhlas s vyu�it�m cookies a dal��ch s�ov�ch identifik�tor� pro ��ely c�len� reklamy), \r\nbudou V�m zobrazov�ny v r�mci na�ich web�…",
-      "stazeno": "2026-11-18T09:03:13.052Z",
-      "stav": 200
-    }
-  },
-  {
-    "id": "k-fd521284aafd8935",
-    "zachyceno": "2026-11-18T09:03:09.824Z",
-    "publikovano": "2026-11-18T07:10:00.000Z",
-    "zdroj": {
-      "nazev": "Ukrainska Pravda (anglicky)",
-      "url": "https://www.pravda.com.ua/eng/articles/2026/11/18/8063391/",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Drones in flight, flights on hold: has Ukraine disrupted operations at Russia's airports?",
-    "titulekPuvodni": "Drones in flight, flights on hold: has Ukraine disrupted operations at Russia's airports?",
-    "shrnuti": "On 1 September 2026, Ukrainian President Volodymyr Zelenskyy warned that \"Russian airspace is becoming completely unsafe\".",
-    "kodZeme": "UA",
-    "zeme": "Ukrajina",
-    "kategorie": [
-      "drony",
-      "rusko"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "zeSite": null,
-    "shody": [
-      "dron+airport+disrupt",
-      "dron",
-      "drone",
-      "airspace",
-      "russia"
-    ],
-    "naliehave": null,
-    "stav": "ceka",
-    "vyrez": {
-      "text": "Drones in flight, flights on hold: has Ukraine disrupted operations at Russia's airports? | Ukrainska Pravda\nOn 1 September 2026, Ukrainian President Volodymyr Zelenskyy warned that \" Russian airspace is becoming completely unsafe \".\n\" Ukraine does not threaten civilian aviation as such – not a single civilian aircraft. There will simply be drones in Russia's skies on a scale that has to be taken into account. Although the Russian authorities are not properly informing people about this, Russian airspace will effectively be closing ,\" Zelenskyy said.\nLarge-scale drone attacks have repeatedly disrupted operations at Russian airports. On the worst days, flights were restricted for several hours at as many as 30 airports across Russia.\nAdvertisement:\n\r\n\r\n\r\n\r\n\r\nAnalysts from CyberBoroshno, a Ukrainian open-source intelligence (OSINT) community, have examined every instance of restrictions at Russian airports over the past three months exclusively for Ukrainska Pravda. The figures for this article were obtained through CyberBoroshno's data-as-a-service (DaaS) platform .\nHow we analysed the data\nRussia's Federal Air Transport Agency (Rosaviatsiya) runs a Telegram channel called Govorit…",
-      "stazeno": "2026-11-18T09:03:16.108Z",
-      "stav": 200
-    }
-  },
-  {
-    "id": "k-5611022ec912d789",
-    "zachyceno": "2026-11-18T09:03:08.668Z",
-    "publikovano": "2026-11-18T06:57:46.000Z",
-    "zdroj": {
-      "nazev": "Le Monde (Francie)",
-      "url": "https://www.lemonde.fr/international/article/2026/11/18/bahrein-et-koweit-cibles-par-des-attaques-de-drones-iraniens_6813084_3210.html",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "L’Iran attaque des cibles à Bahreïn et au Koweït après un bombardement américain sur l’île de Qechm",
-    "titulekPuvodni": "L’Iran attaque des cibles à Bahreïn et au Koweït après un bombardement américain sur l’île de Qechm",
-    "shrnuti": "Ces attaques avec des « drones de combat et des drones kamikazes », selon Téhéran, ont eu lieu après les frappes de l’armée américaine, qui ont dit avoir visé un site de missiles sur l’île iranienne de Qechm.",
-    "kodZeme": "EU",
-    "zeme": "EU",
-    "kategorie": [
-      "sabotaz",
-      "drony"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "zeSite": null,
-    "shody": [
-      "bomb",
-      "dron",
-      "drone"
-    ],
-    "naliehave": null,
-    "stav": "ceka",
-    "vyrez": {
-      "text": "Client Challenge\nA required part of this site couldn’t load. This may be due to a browser\nextension, network issues, or browser settings. Please check your\nconnection, disable any ad blockers, or try using a different browser.",
-      "stazeno": "2026-11-18T09:03:16.128Z",
-      "stav": 200
-    }
-  },
-  {
-    "id": "k-c35a627cf748c312",
-    "zachyceno": "2026-11-18T09:03:06.047Z",
-    "publikovano": "2026-11-18T06:27:00.000Z",
-    "zdroj": {
-      "nazev": "Český rozhlas — domácí zprávy",
-      "url": "https://www.irozhlas.cz/zpravy-svet/online-krasnodarsky-kraj-hlasi-utok-ukrajinskych-dronu-mohly-tam-zasahnout-dve_2611180727_jho",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "ONLINE: Krasnodarský kraj hlásí útok ukrajinských dronů. Mohly tam zasáhnout dvě ropné rafinérie",
-    "titulekPuvodni": "ONLINE: Krasnodarský kraj hlásí útok ukrajinských dronů. Mohly tam zasáhnout dvě ropné rafinérie",
-    "shrnuti": "Ukrajinské drony v noci na středu údajně zasáhly dvě ropné rafinérie v ruském Krasnodarském kraji. V zařízeních měly vypuknout požáry. Informovaly o tom weby Ukrajinska pravda a The Kyiv Independent s odkazem na telegramové kanály. Agentura Reuters napsala, že ve dvou krasnodarských podnicích hoří a",
-    "kodZeme": "UA",
-    "zeme": "Ukrajina",
-    "kategorie": [
-      "drony",
-      "rusko"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "zeSite": null,
-    "shody": [
-      "dron+zasahl",
-      "dron",
-      "rusk"
-    ],
-    "naliehave": null,
-    "stav": "ceka",
-    "vyrez": {
-      "text": "",
-      "stazeno": "2026-11-18T09:03:16.244Z",
-      "stav": 403,
-      "chyba": "HTTP 403"
-    }
-  },
-  {
-    "id": "k-5a834ee8efd03d45",
-    "zachyceno": "2026-11-18T09:03:06.526Z",
-    "publikovano": "2026-11-18T06:16:00.000Z",
-    "zdroj": {
-      "nazev": "ERR News (Estonsko)",
-      "url": "https://news.err.ee/1610198978/closing-estonia-s-southern-border-with-latvia-would-cost-65-million",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Closing Estonia's southern border with Latvia would cost €65 million",
-    "titulekPuvodni": "Closing Estonia's southern border with Latvia would cost €65 million",
-    "shrnuti": "Restoring border controls between Estonia and Latvia would cost approximately €65 million, which would be better directed to the Police and Border Guard Board (ISS) and the Internal Security Service (KAPO), Ministry of the Interior Secretary General Tarmo Miilits has said.",
-    "kodZeme": "EE",
-    "zeme": "Estonsko",
-    "kategorie": [
-      "hranice"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "zeSite": null,
-    "shody": [
-      "border controls",
-      "border"
-    ],
-    "naliehave": null,
-    "stav": "ceka",
-    "vyrez": {
-      "text": "Closing Estonia's southern border with Latvia would cost €65 million | News | ERR\n{{noticeUi.heading[langCode]}}\n{{infoLink[langCode].label}}\n{{noticeUi.allowAllLabel[langCode]}}\n{{rewokeLabels[langCode]}}\nX !\nNews\nPriit Kuusk\n{{1794982560000 | amCalendar}}\nshare Facebook X (Twitter) e-mail\nLatvian border (photo is illustrative). Source: Helen Wright/ERR News\nNews\nRestoring border controls between Estonia and Latvia would cost approximately €65 million, which would be better directed to the Police and Border Guard Board (ISS) and the Internal Security Service (KAPO), Ministry of the Interior Secretary General Tarmo Miilits has said.\nThis discussion has arisen after eight Latvian residents were detained following an attempted arson at a drone maker's factory in Viimsi on Saturday morning. The incident has been attributed to Russia's military intellegence service, the GRU.\nIn response, Estonia is planning to close land crossing points on the eastern border with Russia from December 1. But some have asked about the situation with Latvia.\nSeveral Latvian residents were also arrested in September after an attempted arson, also attributed to the GRU, on another defense company in…",
-      "stazeno": "2026-11-18T09:03:16.316Z",
-      "stav": 200
-    }
-  },
-  {
-    "id": "k-7e17f07d565dfdbf",
-    "zachyceno": "2026-11-18T06:03:28.812Z",
-    "publikovano": null,
-    "zdroj": {
-      "nazev": "The Kyiv Independent",
-      "url": "https://kyivindependent.com/2-russian-oil-refineries-reportedly-targeted-in-overnight-drone-attack-on-krasnodar-krai/",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "2 Russian oil refineries reportedly targeted in overnight drone attack on Krasnodar Krai.",
-    "titulekPuvodni": "2 Russian oil refineries reportedly targeted in overnight drone attack on Krasnodar Krai.",
-    "shrnuti": "",
-    "kodZeme": "RU",
-    "zeme": "Rusko",
-    "kategorie": [
-      "hybridni",
-      "drony",
-      "rusko"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "zeSite": null,
-    "shody": [
-      "attack on",
-      "dron",
-      "drone",
-      "russia"
-    ],
-    "naliehave": null,
-    "stav": "ceka",
-    "vyrez": {
-      "text": "2 Russian oil refineries reportedly targeted in overnight drone attack on Krasnodar Krai 0 of 5,000\nHelp us find 5,000 new members. Bring one friend.\nShare your personal link and make us stronger in 2027.\n0 found so far\nGoal 5,000\nCopy link Copy\nLog in to see who joined through your link.\nWar 2 Russian oil refineries reportedly targeted in overnight drone attack on Krasnodar Krai\nNovember 18, 2026 6:56 am • 2 min read\nPrefer on Google\nT\nby Tamara Nowakowsky\nDark smoke rises near an oil refinery in Russia's Krasnodar Krai amid reported overnight drone attacks on Nov. 17–18, 2026. (Supernova+/Telegram)\nEditor's Note: This story is developing and will be updated.\nTwo oil refineries in Russia's southern Krasnodar Krai were reportedly targeted in an overnight drone attack on Nov. 17–18, with Ukrainian monitoring channels reporting strikes on both facilities.\nThe reported attacks are part of Ukraine's greater campaign against Russian oil infrastructure, aimed at disrupting fuel supplies to Moscow's military and reducing revenue supporting its war against Ukraine.\nUkrainian monitoring Telegram channel Exilenova+ posted that the Ilsky and Afipsky oil refineries had both been hit, citing…",
-      "stazeno": "2026-11-18T06:03:32.234Z",
       "stav": 200
     }
   }
