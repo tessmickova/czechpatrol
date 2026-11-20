@@ -161,7 +161,7 @@ export function UrgentniUpozorneni({
                 <span className="cislice shrink-0 text-mikro text-tlum2">{datumPraha(k.publikovano ?? k.zachyceno)}</span>
                 <span className="stitek-tmavy shrink-0 text-akcent">{NAZVY[k.naliehave!.druh]}</span>
                 <a href={k.zdroj.url} target="_blank" rel="nofollow noopener noreferrer" className="min-w-0 text-tlum hover:text-inkoust">
-                  {k.titulek}
+                  {k.preklad && <span className="text-tlum2">přeloženo: </span>}{k.titulek}
                 </a>
                 {/* Titulek bývá v jazyce zdroje. Bez jména zdroje není poznat, odkud věta je. */}
                 <span className="shrink-0 text-mikro text-tlum2">{k.zdroj.nazev}</span>
@@ -222,7 +222,7 @@ export function UrgentniPas({ kandidati, zkontrolovano, ted = Date.now() }: { ka
               {naliehave.map((k) => (
                 <span key={k.id} className="flex flex-wrap items-baseline gap-x-2">
                   <span className="cislice shrink-0 text-mikro text-tlum2">{datumPraha(k.publikovano ?? k.zachyceno)}</span>
-                  <Link href={`/udalosti/?tab=cekajici#${k.id}`} className="min-w-0 text-inkoust underline decoration-linka underline-offset-4 hover:decoration-akcent">{k.titulek}</Link>
+                  <Link href={`/udalosti/?tab=cekajici#${k.id}`} className="min-w-0 text-inkoust underline decoration-linka underline-offset-4 hover:decoration-akcent">{k.preklad && "přeloženo: "}{k.titulek}</Link>
                   <span className="shrink-0 text-mikro text-tlum2">{NAZVY[k.naliehave!.druh]} · <a href={k.zdroj.url} target="_blank" rel="nofollow noopener noreferrer" className="hover:text-inkoust">{k.zdroj.nazev}</a> · neověřeno</span>
                 </span>
               ))}

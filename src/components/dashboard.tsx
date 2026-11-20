@@ -53,7 +53,6 @@ import { TipyKPriprave } from "./tipy";
 import { tipy as vsechnyTipy } from "@/lib/data-lehka";
 import { CoSeZmenilo } from "./co-se-zmenilo";
 import { StavSluzeb } from "./stav-sluzeb";
-import { InternetBanner } from "./internet-banner";
 import { snimekSluzeb, SLOVA_STAVU, SLUZBY, type StavSluzby } from "@/lib/sluzby";
 import { useStavSluzeb, type ZivyStav } from "@/lib/sluzby-klient";
 import { casPraha } from "@/lib/cas";
@@ -419,13 +418,13 @@ function RozbalovaciOblast({ nazev, ikona, souhrn, paleta, poznamka, children }:
 const TECKA_SLUZBY: Record<StavSluzby, string> = { provoz: "bg-klid", omezeni: "bg-pozor", vypadek: "bg-akcent", nezjisteno: "border border-linka" };
 
 export function Dashboard({
-  stav, pravni, natoPolozky, provozPolozky, overeno, vse, neprosle, kandidati, nepotvrzene = [], tydny, watchlist, crHistoricky, hybridni, obcane, ted, snimky = [], nastroje = [],
+  stav, pravni, natoPolozky, provozPolozky, overeno, vse, neprosle, kandidati, kandidatiTemat = [], nepotvrzene = [], tydny, watchlist, crHistoricky, hybridni, obcane, ted, snimky = [], nastroje = [],
   tlakEvropa, tlakCesko, veta, kampane, nazvyZemi, overovaneAktivni = [], overovaneUzavrene = [], internet, priprava, pulz, souhrn, prehled, uspechy = [],
 }: {
   stav: CelkovyStav; pravni: PravniPolozka[]; natoPolozky: NatoPolozka[]; provozPolozky: ProvozniPolozka[];
   /** Čas sestavení. Klient z něj vychází, aby se první vykreslení shodlo. */
   ted: number;
-  overeno: string | null; vse: Zaznam[]; neprosle: Nepotvrzene[]; kandidati: Kandidat[]; nepotvrzene?: Zaznam[]; tydny: TydenniHodnoceni[]; watchlist: Watchlist;
+  overeno: string | null; vse: Zaznam[]; neprosle: Nepotvrzene[]; kandidati: Kandidat[]; /** Zachycené o hranicích a mořích z celé fronty — boxy témat. */ kandidatiTemat?: Kandidat[]; nepotvrzene?: Zaznam[]; tydny: TydenniHodnoceni[]; watchlist: Watchlist;
   crHistoricky: Uroven | null;
   /** Archiv snímků úředního stavu — z něj se čte, co se změnilo. */
   snimky?: Snimek[];
@@ -593,12 +592,15 @@ export function Dashboard({
               „příliš poplašné a velké“). Jsou v boxu Souhrn situace vpravo — počet
               a druh, titulky až po rozkliknutí fronty.
             */}
-            {/* Internet v Česku je od 4. 11. 2026 box v postranním panelu; při probíhající vlně útoků zůstává rámeček i tady. */}
-            <InternetBanner ted={tedMs} jenUtok />
+            {/*
+              Velký rámeček „Internet v Česku: probíhá vlna útoků“ z úvodu pryč
+              (20. 11. 2026, provozovatelka: „tento box není třeba“). Stav
+              internetu zůstává v boxu Internet v Česku v postranním panelu.
+            */}
             {/* Na mobilu je „Upozornění“ hned pod tím v řadě tlačítek — dvakrát totéž nepotřebujeme. */}
             <div className="mt-4 max-lg:hidden"><Tlacitko kam="/odber/" varianta="obrys" velikost="m" ikona="zvonek">Odběr zpráv</Tlacitko></div>
           </div>
-          <div id="podrobny-monitoring" className="order-3 min-w-0 scroll-mt-20 lg:order-none lg:col-start-1 lg:row-start-2"><AktualitySloupce zaznamy={vse} nepotvrzene={nepotvrzene} kandidati={kandidati} ted={tedMs} /></div>
+          <div id="podrobny-monitoring" className="order-3 min-w-0 scroll-mt-20 lg:order-none lg:col-start-1 lg:row-start-2"><AktualitySloupce zaznamy={vse} nepotvrzene={nepotvrzene} kandidati={kandidati} temata={kandidatiTemat} ted={tedMs} /></div>
           <div className="order-2 min-w-0 lg:order-none lg:col-start-2 lg:row-span-2 lg:row-start-1">
           <SidebarUvodu stav={stav} cr={cr} crHistoricky={crHistoricky} crPocet={crPocet} crKampane={crKampane} internet={internet} obcane={obcane} pulz={pulz} priprava={priprava} {...casyProPanel(vse, kampane)} kandidati={kandidati} zkontrolovano={overeno} ted={tedMs}
             tipy={<TipyBox ted={tedMs} />} />

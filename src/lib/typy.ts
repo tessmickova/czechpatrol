@@ -465,6 +465,15 @@ export interface Kandidat {
    */
   odchylka?: { uroven: "podezrele" | "odlisne"; duvody: string[] } | null;
   /**
+   * Strojový překlad do češtiny (20. 11. 2026, nastroje/preklad/): z jakého
+   * jazyka a čím. Původní znění je v titulekPuvodni a shrnutiPuvodni; web
+   * u přeloženého píše „přeloženo:“.
+   */
+  preklad?: { z: string; nastroj: string; kdy: string } | null;
+  shrnutiPuvodni?: string | null;
+  /** Kdy se překlad naposledy nepovedl (ISO); znovu se zkusí po 24 hodinách. */
+  prekladSelhal?: string | null;
+  /**
    * Kde kandidát je.
    *
    * `ceka` — nikdo ho ještě neposoudil.

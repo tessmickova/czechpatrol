@@ -1,5 +1,5 @@
 {
-  "aktualizovano": "2026-11-20T03:03:22.516Z",
+  "aktualizovano": "2026-11-20T12:03:27.075Z",
   "stavy": [
     {
       "klic": "cloudflare",
@@ -7,9 +7,9 @@
       "popis": "Partially Degraded Service",
       "incidenty": [
         {
-          "nazev": " R2 and Durable Objects availability issues",
-          "odkaz": "https://www.cloudflarestatus.com/incidents/pfwuex7qix27",
-          "aktualizovano": "2026-11-20T02:53:32.481Z"
+          "nazev": "Network Performance Issues in Miami",
+          "odkaz": "https://www.cloudflarestatus.com/incidents/4lv21sf5fzhm",
+          "aktualizovano": "2026-11-20T05:10:34.028Z"
         },
         {
           "nazev": "Changes to Cloudflare Workers are not producing Event Subscription events",
@@ -19,20 +19,25 @@
       ],
       "postizene": [
         "Cloudflare Sites and Services",
-        "Amman, Jordan - (AMM)",
         "Ahmedabad, India - (AMD)",
-        "Albuquerque, United States - (ABQ)"
+        "Albuquerque, United States - (ABQ)",
+        "Arica, Chile - (ARI)"
       ],
-      "zkontrolovano": "2026-11-20T03:03:22.516Z",
+      "zkontrolovano": "2026-11-20T12:03:27.075Z",
       "chyba": null
     },
     {
       "klic": "zoom",
-      "stav": "provoz",
-      "popis": "All Systems Operational",
+      "stav": "omezeni",
+      "popis": "Service Under Maintenance",
       "incidenty": [],
-      "postizene": [],
-      "zkontrolovano": "2026-11-20T03:03:22.516Z",
+      "postizene": [
+        "Zoom Phone",
+        "Zoom Phone",
+        "Zoom Phone - APAC",
+        "Zoom Phone - AUSTRALIA"
+      ],
+      "zkontrolovano": "2026-11-20T12:03:27.075Z",
       "chyba": null
     },
     {
@@ -41,7 +46,7 @@
       "popis": "All Systems Operational",
       "incidenty": [],
       "postizene": [],
-      "zkontrolovano": "2026-11-20T03:03:22.516Z",
+      "zkontrolovano": "2026-11-20T12:03:27.075Z",
       "chyba": null
     }
   ]
