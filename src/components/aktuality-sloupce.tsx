@@ -394,7 +394,7 @@ function TemataSloupec({ zaznamy, nepotvrzene, zachycene, ted }: { zaznamy: Zazn
           napoveda={`Hranice NATO s Ruskem a Běloruskem a drony nad Rumunskem: záznamy za ${OKNO_TEMAT_DNI} dní a zprávy zachycené sběrem. Štítek u řádku říká, co je doložené. Důležité (v rámečku): o zprávě píšou aspoň dvě nezávislé redakce, nebo jde o záznam se závažností Vysoká či Vážná za posledních 7 dní.`}
           prazdne={`Za ${OKNO_TEMAT_DNI} dní nic zachyceno.`} odkaz={{ kam: "/udalosti/?tab=cekajici&tema=hranice", text: "vše" }} />
         <TemaBox id="box-vody" nadpis="Mezinárodní vody" ikona="voda" radky={vody.slice(0, 2)} celkem={vody.length} ted={ted} maxMobil={2} trida="md:shrink-0" oriznout={false}
-          napoveda={`Incidenty na moři: Balt, Černé a Severní moře, podmořské kabely, stínová flotila, plavidla. Stejná pravidla jako u hranic. Vidět jsou dvě nejdůležitější nebo nejnovější.`}
+          napoveda={`Incidenty na moři a nepřátelské akce vedené z mezinárodních vod proti zemím NATO a Evropy: drony vypuštěné z lodí, rušení GPS, válečné lodě u pobřeží, stínová flotila, podmořské kabely — Balt, Černé, Severní a Středozemní moře. Stejná pravidla jako u hranic. Vidět jsou dvě nejdůležitější nebo nejnovější.`}
           prazdne={`Za ${OKNO_TEMAT_DNI} dní nic zachyceno.`} />
       </div>
     </div>
