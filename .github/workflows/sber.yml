@@ -72,8 +72,7 @@ jobs:
       #
       # Co tím sběr ztrácí: model vyřazoval nerelevantní zprávy, překládal
       # titulky a dával druhé čtení odmítnutým. Do fronty proto chodí víc
-      # šumu — a to je viditelná cena, ne skrytá porucha. Titulky od 20. 11.
-      # 2026 překládá bezplatný strojový překlad OPUS-MT (krok po sběru).
+      # šumu — a to je viditelná cena, ne skrytá porucha.
       # Práce externího ověřovatele Patrola. Dřív ji přebíral samostatný
       # workflow spouštěný pushem na Patrolovu větev — a GitHub pak bral
       # definici workflow z té větve, takže si ji Patrol mohl přepsat
@@ -89,63 +88,16 @@ jobs:
       - name: Sběr z veřejných zdrojů
         run: npm run sber
 
-      # Strojový překlad do češtiny (20. 11. 2026, provozovatelka zvolila
-      # bezplatný překlad bez klíče). Zachycené zprávy v cizím jazyce dostanou
-      # český titulek a shrnutí; původní znění zůstává a web u nich píše
-      # „přeloženo:“. Otevřené modely OPUS-MT Helsinské univerzity (Hugging
-      # Face) přes CTranslate2, nejvýš 60 zpráv za běh. Model pro nový jazyk
-      # se jednou převede (potřebuje torch, doinstaluje se jen tehdy) a drží
-      # se v mezipaměti. PREKLAD_ZAPISOVAT=0: nanečisto, ukázky jen v logu —
-      # zapne se po kontrole kvality. Krok nesmí shodit sběr.
-      - name: Překladové modely z mezipaměti
-        id: modely
-        uses: actions/cache/restore@v4
-        with:
-          path: |
-            ~/.cache/czechpatrol-preklad
-            ~/.cache/pip
-          key: preklad-v2-
-          restore-keys: preklad-v2-
+      # Strojový překlad zachycených zpráv je vypnutý (20. 11. 2026,
+      # provozovatelka po kontrole ukázek): bezplatné modely OPUS-MT měnily
+      # smysl („incursion“ → „invaze“, Lavrov → „porota“). Cizí zprávy zůstávají
+      # v originále s označením „v cizím jazyce“. Skripty v nastroje/preklad/
+      # zůstávají, kdyby se k překladu vracelo (docs/PROVOZ.md).
 
-      - name: Strojový překlad zachycených zpráv
-        id: preklad
-        continue-on-error: true
-        timeout-minutes: 30
-        env:
-          PREKLAD_NEJVIC: "60"
-          PREKLAD_ZAPISOVAT: "0"
-          PREKLAD_CHYBI: /tmp/preklad-chybi.txt
-          HF_HOME: /tmp/hf
-        run: |
-          python3 -m venv /tmp/preklad-venv
-          /tmp/preklad-venv/bin/pip install -q --disable-pip-version-check ctranslate2 sentencepiece langid
-          npx tsx nastroje/preklad/fronta.ts vyber /tmp/preklad-vstup.json
-          /tmp/preklad-venv/bin/python -I nastroje/preklad/preloz.py /tmp/preklad-vstup.json /tmp/preklad-vystup.json
-          if [ -s "$PREKLAD_CHYBI" ]; then
-            echo "Převod modelů: $(sort -u "$PREKLAD_CHYBI" | tr '\n' ' ')"
-            /tmp/preklad-venv/bin/pip install -q --disable-pip-version-check torch --index-url https://download.pytorch.org/whl/cpu
-            /tmp/preklad-venv/bin/pip install -q --disable-pip-version-check transformers sacremoses
-            rm -f "$PREKLAD_CHYBI"
-            /tmp/preklad-venv/bin/python -I nastroje/preklad/preloz.py /tmp/preklad-vstup.json /tmp/preklad-vystup.json
-          fi
-          if [ "$PREKLAD_ZAPISOVAT" = "1" ]; then
-            npx tsx nastroje/preklad/fronta.ts zapis /tmp/preklad-vystup.json
-          else
-            echo "[preklad] nanečisto: nic se nezapisuje (PREKLAD_ZAPISOVAT=0)"
-          fi
-          echo "klic=preklad-v2-$(ls ~/.cache/czechpatrol-preklad 2>/dev/null | sort | tr '\n' ' ' | sha1sum | cut -c1-12)" >> "$GITHUB_OUTPUT"
-
-      # Modely se ukládají jen při změně jejich seznamu (nový jazyk), ne každý běh.
-      - name: Uložit překladové modely
-        if: steps.preklad.outputs.klic != '' && steps.preklad.outputs.klic != steps.modely.outputs.cache-matched-key
-        continue-on-error: true
-        uses: actions/cache/save@v4
-        with:
-          path: |
-            ~/.cache/czechpatrol-preklad
-            ~/.cache/pip
-          key: ${{ steps.preklad.outputs.klic }}
-
+      # Strážce dat (25. 9. 2026): kontrola PŘED uložením. Když data
+      # neprojdou, vrátí se nejdřív automatické zveřejnění, pak celý běh —
+      # web zůstane na poslední dobré verzi místo toho, aby stál. Správce
+      # dostane zprávu (krok Upozornit správce na konci).
       - name: Strážce dat
         id: strazce
         run: node nastroje/strazce-dat.mjs

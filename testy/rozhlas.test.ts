@@ -740,6 +740,11 @@ describe("přehled dne — česky, dvakrát denně", () => {
     expect(jeCesky("Zomrela legenda odboja. Josef Mašín bol posledný z trojice, ktorá sa prestrieľala na Západ")).toBe(false);
     expect(jeCesky("Na letišti u Varšavy neplánovaně přistál letoun kvůli bombové hrozbě")).toBe(true);
     expect(jeCesky("Čínský občan viněný ze špionáže zproštěn obžaloby")).toBe(true);
+    /* 20. 11. 2026: slovenština bez ľ/ô. */
+    expect(jeCesky("Tusk hovorí o možnej ruskej provokácii. Rakety a dron dopadli pri miestach")).toBe(false);
+    expect(jeCesky("Nemeckí špióni dostali nové právomoci. V zahraničí môžu vykonávať")).toBe(false);
+    expect(jeCesky("Prodej zbraní Ukrajině schválila vláda")).toBe(true);
+    expect(jeCesky("Ruské útoky vyvolaly poplach v Polsku. Letiště v Řešově přerušilo provoz")).toBe(true);
   });
 
   it("ráno je do poledne UTC, večer potom", () => {

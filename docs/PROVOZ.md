@@ -389,7 +389,17 @@ přeskakuje, když se nic nezměnilo**: krok „Je vůbec co nasazovat?“ porov
 `commit` z živého `/stav.json` s `HEAD`. Když se doména neozve, nasazuje se —
 raději nasazení navíc než žádné.
 
-## Strojový překlad zachycených zpráv (od 20. 11. 2026)
+## Strojový překlad zachycených zpráv (připraven 20. 11. 2026, VYPNUTÝ)
+
+**Stav: vypnuto** (provozovatelka 20. 11. 2026 po kontrole ukázek). Krok ve
+`sber.yml` není. Zkušební běh nanečisto přeložil 59 zpráv za 80 s, ale
+zhruba polovina byla špatně a některé chyby měnily smysl: „Russian cruise
+missile incursion into Poland“ → „…invaze do Polska“, „RBK cituje Ławrowa“
+→ „RBK cituje porotu“. Na bezpečnostním webu to nejde. Cizí zprávy proto
+zůstávají v originále a v řádku nesou „v cizím jazyce“. Níž je popsané,
+jak by překlad fungoval, kdyby se zapnul znovu (lepší model, nebo placený
+model přes `sber/model.ts`).
+
 
 Provozovatelka: „K čemukoliv v jiném jazyce napsat ‚přeloženo:‘ a přeložit do
 češtiny.“ Placený model je od září vypnutý (chybí klíč), proto zvolila

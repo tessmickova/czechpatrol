@@ -217,14 +217,18 @@ function PolozkaRadku({ r, ted, otevreno, prepni, slovo = "naléhavé", trida = 
             <span className="flex items-center gap-1.5 text-mikro leading-none text-tlum2">
               <span className="font-semibold uppercase tracking-[0.06em] text-akcent">{slovo}</span>
               <span className="cislice whitespace-nowrap text-inkoust">· {r.kdy ? predKolika(r.kdy, ted) : "—"}</span>
-              {r.pocetZdroju > 1 && <span className="cislice whitespace-nowrap">· {r.pocetZdroju} {sklon(r.pocetZdroju, "zdroj", "zdroje", "zdrojů")}</span>}
+              {/* Nepřeložené cizojazyčné (20. 11. 2026): strojový překlad je vypnutý, titulek je v originále. Značka má přednost před počtem zdrojů. */}
+              {r.cizojazycne && !r.prelozeno && <span className="min-w-0 shrink truncate whitespace-nowrap">· cizí jazyk</span>}
+              {r.pocetZdroju > 1 && <span className="cislice min-w-0 shrink-[20] truncate whitespace-nowrap">· {r.pocetZdroju} {sklon(r.pocetZdroju, "zdroj", "zdroje", "zdrojů")}</span>}
               {r.odchylka && <ZnackaOdchylky uroven={r.odchylka.uroven} text={r.odchylka.vlastni && r.odchylka.uroven === "podezrele" ? "podezřelé" : "liší se"} trida="min-w-0" />}
             </span>
           ) : (
             <span className="flex items-center gap-1.5 text-mikro leading-none text-tlum2">
               <span className="cislice whitespace-nowrap">{kratkeDatum(r.kdy, ted)}</span>
               {r.stitek && <span className="whitespace-nowrap uppercase tracking-[0.06em]">{r.stitek}</span>}
-              {r.pocetZdroju > 1 && <span className="cislice whitespace-nowrap">· {r.pocetZdroju} {sklon(r.pocetZdroju, "zdroj", "zdroje", "zdrojů")}</span>}
+              {/* Nepřeložené cizojazyčné (20. 11. 2026): strojový překlad je vypnutý, titulek je v originále. Značka má přednost před počtem zdrojů. */}
+              {r.cizojazycne && !r.prelozeno && <span className="min-w-0 shrink truncate whitespace-nowrap">· cizí jazyk</span>}
+              {r.pocetZdroju > 1 && <span className="cislice min-w-0 shrink-[20] truncate whitespace-nowrap">· {r.pocetZdroju} {sklon(r.pocetZdroju, "zdroj", "zdroje", "zdrojů")}</span>}
               {r.odchylka && <ZnackaOdchylky uroven={r.odchylka.uroven} text={r.odchylka.vlastni && r.odchylka.uroven === "podezrele" ? "podezřelé" : "liší se"} trida="min-w-0" />}
             </span>
           )}
