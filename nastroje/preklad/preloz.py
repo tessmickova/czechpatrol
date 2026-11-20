@@ -6,12 +6,11 @@ Strojový překlad zachycených zpráv do češtiny.
 a přeložit do češtiny.“ Zvolila bezplatný strojový překlad: bez klíče, bez
 plateb. Placený jazykový model (sber/model.ts) zůstává, kdyby se klíč vrátil.
 
-Jak: otevřené překladové modely z projektu Argos Translate (OPUS-MT převedené
-pro CTranslate2) běží přímo v GitHub Actions. Samotný balík argostranslate se
-neinstaluje — táhne s sebou torch (přes 5 GB). Tenhle skript dělá totéž co
-jeho jádro (SentencePiece → CTranslate2 → SentencePiece, stejné parametry),
-jen bez dělení vět přes stanza. Do češtiny vede model jen z angličtiny;
-ostatní jazyky jdou přes angličtinu. Jazyk zprávy se pozná z textu (langid).
+Jak: otevřené překladové modely OPUS-MT Helsinské univerzity (Hugging Face,
+Helsinki-NLP) převedené pro CTranslate2 běží přímo v GitHub Actions. Do
+češtiny vede model z angličtiny; ostatní jazyky jdou přes angličtinu. Jazyk
+zprávy se pozná z textu (langid). Modely Argos Translate (argos-net.com) se
+nepoužívají: server stahování z GitHubu odmítá (403, 20. 11. 2026).
 
     python3 -I nastroje/preklad/preloz.py vstup.json vystup.json
 
@@ -31,14 +30,11 @@ import pathlib
 import re
 import sys
 import time
-import urllib.request
-import zipfile
 
-INDEX = "https://raw.githubusercontent.com/argosopentech/argospm-index/main/index.json"
 ADRESAR = pathlib.Path(os.environ.get("PREKLAD_MODELY", str(pathlib.Path.home() / ".cache" / "czechpatrol-preklad")))
 JAZYKY = ["cs", "sk", "en", "pl", "de", "et", "lv", "lt", "fi", "ro", "uk", "ru", "sv", "nb", "no", "nn", "da", "bg", "hu", "fr", "nl", "it", "es"]
-# langid zná norštinu jako no/nn/nb, Argos jen jako nb.
-NA_ARGOS = {"no": "nb", "nn": "nb"}
+# langid zná norštinu jako no/nn/nb; modely OPUS-MT jako „no“.
+NA_ARGOS = {"nb": "no", "nn": "no"}
 # Nejvýš tolik zpráv za běh: zbytek fronty se dopřekládá v dalších bězích.
 NEJVIC = int(os.environ.get("PREKLAD_NEJVIC", "60"))
 
@@ -83,73 +79,76 @@ def je_cesky(text: str) -> bool:
 
 
 # ---------- modely ----------
+#
+# Modely OPUS-MT Helsinské univerzity (Helsinki-NLP/opus-mt-X-Y na Hugging
+# Face, licence CC-BY 4.0). Pro CTranslate2 se převedou jednou (int8) a drží
+# se v ADRESAR — v GitHub Actions v mezipaměti. Převod potřebuje transformers
+# a torch; když chybí, skript zapíše do PREKLAD_CHYBI, co chybí, a workflow je
+# doinstaluje a pustí skript znovu. Běžný běh je bez nich.
 
-def index() -> list[dict]:
-    soubor = ADRESAR / "index.json"
-    if not soubor.exists() or time.time() - soubor.stat().st_mtime > 7 * 86400:
-        ADRESAR.mkdir(parents=True, exist_ok=True)
-        with urllib.request.urlopen(INDEX, timeout=60) as r:
-            soubor.write_bytes(r.read())
-    return json.loads(soubor.read_text("utf-8"))
+def repozitare(z: str, do: str) -> list[str]:
+    """Kde model vzít: přímý směr, u překladu do angličtiny záložně vícejazyčný mul→en."""
+    if (z, do) == ("en", "cs"):
+        return ["Helsinki-NLP/opus-mt-en-cs"]
+    if do == "en":
+        return [f"Helsinki-NLP/opus-mt-{z}-en", "Helsinki-NLP/opus-mt-mul-en"]
+    return []
 
 
-def adresar_balicku(z: str, do: str) -> pathlib.Path | None:
-    """Rozbalený balíček z → do; stáhne ho, když chybí. None, když neexistuje nebo se nestáhne."""
-    cil = ADRESAR / f"{z}_{do}"
-    if (cil / "hotovo").exists():
-        return cil
-    balicek = next((b for b in index() if b.get("from_code") == z and b.get("to_code") == do), None)
-    if not balicek:
+def _prevodnik():
+    try:
+        import transformers  # noqa: F401
+        from ctranslate2.converters import TransformersConverter
+        return TransformersConverter
+    except ImportError:
         return None
-    cil.mkdir(parents=True, exist_ok=True)
-    archiv = cil / "balicek.zip"
-    for odkaz in balicek.get("links", []):
+
+
+def adresar_modelu(z: str, do: str) -> pathlib.Path | None:
+    for repo in repozitare(z, do):
+        nazev = repo.split("/")[-1]
+        cil = ADRESAR / nazev
+        if (cil / "hotovo").exists():
+            return cil
+        if (ADRESAR / f"{nazev}.neexistuje").exists():
+            continue
+        prevodnik = _prevodnik()
+        if prevodnik is None:
+            if os.environ.get("PREKLAD_CHYBI"):
+                with open(os.environ["PREKLAD_CHYBI"], "a", encoding="utf-8") as f:
+                    f.write(f"{repo}\n")
+            return None
         try:
-            with urllib.request.urlopen(odkaz, timeout=300) as r:
-                archiv.write_bytes(r.read())
-            break
-        except Exception as e:  # další odkaz, nebo příště
-            zaloguj(f"stažení {z}→{do} z {odkaz} selhalo: {e}")
-    if not archiv.exists():
-        return None
-    with zipfile.ZipFile(archiv) as zf:
-        zf.extractall(cil)
-    archiv.unlink()
-    (cil / "hotovo").write_text(json.dumps({"verze": balicek.get("package_version")}), "utf-8")
-    return cil
+            ADRESAR.mkdir(parents=True, exist_ok=True)
+            prevodnik(repo, copy_files=["source.spm", "target.spm"]).convert(str(cil), quantization="int8", force=True)
+            (cil / "hotovo").write_text(json.dumps({"repo": repo, "prevedeno": time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime())}), "utf-8")
+            zaloguj(f"převeden {repo}")
+            return cil
+        except Exception as e:
+            zprava = str(e)
+            zaloguj(f"{repo} nejde převést: {zprava[:200]}")
+            if "not a valid model identifier" in zprava or "Repository Not Found" in zprava or "404" in zprava:
+                (ADRESAR / f"{nazev}.neexistuje").write_text(zprava[:500], "utf-8")
+    return None
 
 
 class Model:
-    """Jeden směr překladu. Postup a parametry jako argostranslate.translate.apply_packaged_translation."""
+    """Jeden směr překladu: SentencePiece (source.spm) → CTranslate2 → SentencePiece (target.spm), jako MarianTokenizer."""
 
     def __init__(self, adresar: pathlib.Path):
         import ctranslate2
         import sentencepiece as spm
-        koren = next(p.parent for p in adresar.rglob("metadata.json"))
-        meta = json.loads((koren / "metadata.json").read_text("utf-8"))
-        sp = koren / "sentencepiece.model"
-        if not sp.exists():
-            raise RuntimeError("balíček nemá sentencepiece.model (BPE se nepodporuje)")
-        self.sp = spm.SentencePieceProcessor(model_file=str(sp))
-        self.prefix = meta.get("target_prefix", "")
-        self.prekladac = ctranslate2.Translator(str(koren / "model"), device="cpu", compute_type="auto", inter_threads=1, intra_threads=0)
+        self.zdroj = spm.SentencePieceProcessor(model_file=str(adresar / "source.spm"))
+        self.cil = spm.SentencePieceProcessor(model_file=str(adresar / "target.spm"))
+        self.prekladac = ctranslate2.Translator(str(adresar), device="cpu", compute_type="int8", inter_threads=1, intra_threads=0)
 
     def preloz(self, vety: list[str]) -> list[str]:
-        tokeny = [self.sp.encode(v, out_type=str) for v in vety]
-        vysledky = self.prekladac.translate_batch(
-            tokeny,
-            target_prefix=[[self.prefix]] * len(tokeny) if self.prefix else None,
-            replace_unknowns=True,
-            beam_size=4,
-            num_hypotheses=1,
-            length_penalty=0.2,
-        )
+        tokeny = [self.zdroj.encode(v, out_type=str) + ["</s>"] for v in vety]
+        vysledky = self.prekladac.translate_batch(tokeny, beam_size=4, num_hypotheses=1, replace_unknowns=True, max_decoding_length=256)
         vystup = []
         for v in vysledky:
-            text = self.sp.decode_pieces(v.hypotheses[0]).replace("▁", " ").replace("_", " ")
-            if self.prefix and text.startswith(self.prefix):
-                text = text[len(self.prefix):]
-            vystup.append(text.strip())
+            kusy = [t for t in v.hypotheses[0] if t not in ("</s>", "<pad>", "<unk>")]
+            vystup.append(self.cil.decode_pieces(kusy).replace("▁", " ").strip())
         return vystup
 
 
@@ -159,7 +158,7 @@ _modely: dict[tuple[str, str], Model | None] = {}
 def model(z: str, do: str) -> Model | None:
     if (z, do) not in _modely:
         try:
-            a = adresar_balicku(z, do)
+            a = adresar_modelu(z, do)
             _modely[(z, do)] = Model(a) if a else None
         except Exception as e:
             zaloguj(f"model {z}→{do} nejde načíst: {e}")
@@ -240,6 +239,12 @@ def main(vstup: str, vystup: str) -> None:
             vysledky[z.get("id", "?")] = {"chyba": str(e)[:200]}
             statistika["selhalo"] += 1
     pathlib.Path(vystup).write_text(json.dumps(vysledky, ensure_ascii=False, indent=2), "utf-8")
+    # Ukázky do logu: kvalita se dá zkontrolovat bez stahování dat.
+    puvodni = {z["id"]: z for z in zpravy}
+    for i, (id_, v) in enumerate((k, v) for k, v in vysledky.items() if "titulek" in v):
+        if i >= int(os.environ.get("PREKLAD_UKAZEK", "15")):
+            break
+        zaloguj(f"ukázka [{v['jazyk']}] {puvodni.get(id_, {}).get('titulek', '')!r} → {v['titulek']!r}")
     zaloguj(f"{statistika} za {time.time() - zacatek:.0f} s; modely: {sorted(k for k, v in _modely.items() if v)}")
 
 

@@ -17,7 +17,7 @@ import { jeCesky } from "../../src/lib/jazyk";
 const KOREN = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "../..");
 const SOUBOR = path.join(KOREN, "data", "kandidati.json");
 const ZNOVU_PO_H = 24;
-export const NASTROJ = "Argos Translate (OPUS-MT), strojově";
+export const NASTROJ = "OPUS-MT (Helsinská univerzita), strojově";
 
 type K = {
   id: string; titulek: string; titulekPuvodni?: string; shrnuti?: string | null; stav?: string; publikovano?: string | null; zachyceno: string;

@@ -5,7 +5,7 @@
 const Z_JAZYKA: Record<string, string> = {
   en: "angličtiny", sk: "slovenštiny", pl: "polštiny", de: "němčiny", et: "estonštiny", lv: "lotyštiny",
   lt: "litevštiny", fi: "finštiny", ro: "rumunštiny", uk: "ukrajinštiny", ru: "ruštiny", sv: "švédštiny",
-  nb: "norštiny", da: "dánštiny", bg: "bulharštiny", hu: "maďarštiny", fr: "francouzštiny", nl: "nizozemštiny",
+  nb: "norštiny", no: "norštiny", da: "dánštiny", bg: "bulharštiny", hu: "maďarštiny", fr: "francouzštiny", nl: "nizozemštiny",
   it: "italštiny", es: "španělštiny",
 };
 

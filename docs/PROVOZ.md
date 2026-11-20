@@ -396,12 +396,19 @@ Provozovatelka: „K čemukoliv v jiném jazyce napsat ‚přeloženo:‘ a pře
 **bezplatný strojový překlad bez klíče**:
 
 - Krok „Strojový překlad zachycených zpráv“ ve `sber.yml`, hned po sběru.
-  Otevřené modely Argos Translate (OPUS-MT) běží přes CTranslate2 přímo
-  v GitHub Actions (`nastroje/preklad/preloz.py`); balík argostranslate se
-  neinstaluje, protože táhne torch (přes 5 GB). Modely se drží v mezipaměti.
-- Do češtiny vede model jen z angličtiny; ostatní jazyky jdou přes
-  angličtinu (polština, slovenština, rumunština… → angličtina → čeština).
-  Jazyk zprávy se pozná z textu (langid) a pravidlem `jeCesky` webu.
+  Otevřené modely **OPUS-MT Helsinské univerzity** (Hugging Face,
+  Helsinki-NLP, licence CC-BY 4.0) běží přes CTranslate2 přímo v GitHub
+  Actions (`nastroje/preklad/preloz.py`). Model pro nový jazyk se jednou
+  převede (int8; převod potřebuje torch, doinstaluje se jen tehdy) a drží
+  se v mezipaměti. Modely Argos Translate z argos-net.com se nepoužívají:
+  server stahování z GitHubu odmítá (403) a vydávat skript za jejich
+  program jsme odmítli (20. 11. 2026).
+- Do češtiny vede model z angličtiny; ostatní jazyky jdou přes angličtinu
+  (polština, slovenština, rumunština… → angličtina → čeština), záložně
+  vícejazyčný model mul→en. Jazyk zprávy se pozná z textu (langid)
+  a pravidlem `jeCesky` webu.
+- `PREKLAD_ZAPISOVAT`: dokud je 0, krok běží nanečisto a ukázky překladů
+  jsou jen v logu běhu; na 1 se přepne po kontrole kvality.
 - Překládá se titulek a shrnutí, nejvýš 60 zpráv za běh, nejnovější první.
   Původní znění zůstává (`titulekPuvodni`, `shrnutiPuvodni`), zpráva nese
   `preklad: { z, nastroj, kdy }` a web před titulkem píše **„přeloženo:“**;
