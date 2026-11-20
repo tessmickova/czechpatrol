@@ -872,7 +872,8 @@ export function sestavVaznyNavrh(n) {
 export function sestavSignal(k) {
   const co = NAZVY_SIGNALU[k.naliehave?.druh] ?? "sledovaná událost";
   /* Prázdné řádky jsou tu schválně — na telefonu se ta zpráva musí dát přelétnout. */
-  const radky = ["\u26a0\ufe0f <b>Jen pro správce — neověřený signál</b>", "", `<b>${esc(k.titulek)}</b>`];
+  /* Strojově přeložený titulek nese „přeloženo:“ i tady (20. 11. 2026). */
+  const radky = ["\u26a0\ufe0f <b>Jen pro správce — neověřený signál</b>", "", `<b>${k.preklad ? "přeloženo: " : ""}${esc(k.titulek)}</b>`];
   if (k.shrnuti) radky.push(esc(zkrat(k.shrnuti, 220)));
   radky.push(
     "",

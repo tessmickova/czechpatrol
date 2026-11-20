@@ -6,6 +6,7 @@ import { datumCasPraha, datumPraha, predKolika } from "@/lib/cas";
 import { useZiveHodiny } from "@/lib/cas-klient";
 import { kdyZjisteno, type Zaznam } from "@/lib/agregace";
 import { jeCesky } from "@/lib/jazyk";
+import { vetaPrekladu } from "@/lib/preklad";
 import { ZnackaOdchylky, VYZNAM_ODCHYLKY } from "./odchylka";
 import type { OdchylkaKandidata } from "@/lib/odchylky";
 import { naliehaveNahoru, naliehavaBezRedakci, naliehavaDo, naliehavostSkupiny, nazevNaliehave, type NaliehavostSkupiny } from "@/lib/naliehave";
@@ -63,6 +64,8 @@ interface Radek {
   naliehaveCeka?: { ma: number; potreba: 2 | 3 } | null;
   /* Titulek v cizím jazyce — čtenář má vědět, proč je ve sloupci anglicky. */
   cizojazycne?: boolean;
+  /* Strojově přeloženo (20. 11. 2026): kód jazyka originálu a původní titulek. Řádek začíná „přeloženo:“. */
+  prelozeno?: { z: string; puvodni: string } | null;
   pruh: string;
   /* Do rozbalení. */
   zavaznost: { nazev: string; trida: string } | null;
@@ -89,7 +92,7 @@ interface Radek {
   odchylkyZdroju?: { nazev: string; odchylka: OdchylkaKandidata }[];
 }
 
-interface ZdrojRadku { klic: string; nazev: string; url: string; kdy: string | null; titulek: string | null; odchylka?: OdchylkaKandidata | null }
+interface ZdrojRadku { klic: string; nazev: string; url: string; kdy: string | null; titulek: string | null; odchylka?: OdchylkaKandidata | null; prelozeno?: boolean }
 
 const KROK = 8;
 
@@ -134,7 +137,8 @@ function zZaznamu(z: Zaznam, klic: string, kam: string, stitek: Radek["stitek"],
 function Rozbaleni({ r }: { r: Radek }) {
   return (
     <div className="mb-2 ml-[37px] rounded-[12px] bg-plocha2/70 px-3 py-2.5 text-drobne">
-      <p className="text-male font-semibold leading-snug text-inkoust">{r.titulek}</p>
+      <p className="text-male font-semibold leading-snug text-inkoust">{r.prelozeno && <span className="font-normal text-tlum2">přeloženo: </span>}{r.titulek}</p>
+      {r.prelozeno && <p className="mt-0.5 text-mikro leading-snug text-tlum2">{vetaPrekladu(r.prelozeno.z)} Původně: <span lang={r.prelozeno.z}>„{r.prelozeno.puvodni}“</span></p>}
       <p className="mt-1 flex flex-wrap gap-x-2 gap-y-0.5 text-mikro text-tlum2">
         {r.zeme && <span>{r.zeme}</span>}
         {r.kdy && <span className="cislice">{datumCasPraha(r.kdy)}</span>}
@@ -172,7 +176,7 @@ function Rozbaleni({ r }: { r: Radek }) {
               <a href={s.url} target="_blank" rel="nofollow noopener noreferrer" className="min-w-0 flex-1 hover:text-inkoust">
                 <span className="font-semibold text-tlum">{s.nazev}</span>
                 {s.kdy && <span className="cislice"> · {datumCasPraha(s.kdy)}</span>}
-                {s.titulek && <span className="block truncate">{s.titulek}</span>}
+                {s.titulek && <span className="block truncate">{s.prelozeno && "přeloženo: "}{s.titulek}</span>}
               </a>
             </li>
           ))}
@@ -224,7 +228,7 @@ function PolozkaRadku({ r, ted, otevreno, prepni, slovo = "naléhavé", trida = 
               {r.odchylka && <ZnackaOdchylky uroven={r.odchylka.uroven} text={r.odchylka.vlastni && r.odchylka.uroven === "podezrele" ? "podezřelé" : "liší se"} trida="min-w-0" />}
             </span>
           )}
-          <span className={`mt-1 line-clamp-2 text-male leading-[1.3] ${n ? "font-semibold text-inkoust" : r.stitek ? "text-tlum" : "text-inkoust"}`}>{r.titulek}</span>
+          <span className={`mt-1 line-clamp-2 text-male leading-[1.3] ${n ? "font-semibold text-inkoust" : r.stitek ? "text-tlum" : "text-inkoust"}`}>{r.prelozeno && <span className="font-normal text-tlum2">přeloženo: </span>}{r.titulek}</span>
         </span>
         <Ikona nazev="dolu" velikost={12} tah={2} trida={`shrink-0 text-tlum2 transition-transform group-hover:text-akcent ${otevreno ? "rotate-180" : ""}`} />
       </button>
@@ -276,9 +280,9 @@ function zeSkupiny({ hlavni: k, polozky }: { hlavni: Kandidat; polozky: Kandidat
   const druh = naliehavost?.druh ?? ceka?.druh ?? polozky.find((p) => p.naliehave)?.naliehave?.druh ?? null;
   return {
     klic: `k-${k.id}`, kam: k.zdroj.url, ven: true, kodZeme: k.kodZeme, zeme: k.zeme, kdy: k.publikovano ?? k.zachyceno, titulek: k.titulek, stitek: naliehavost ? "naléhavé" : "zachyceno", pruh: "bg-tlum2",
-    naliehave: druh ? nazevNaliehave(druh) : null, naliehavost, naliehaveSkoncilo: druh && !naliehavost && !ceka ? konecNaliehavosti(polozky) : null, naliehaveCeka: ceka ? { ma: ceka.ma, potreba: ceka.potreba } : null, cizojazycne: !jeCesky(k.titulek),
+    naliehave: druh ? nazevNaliehave(druh) : null, naliehavost, naliehaveSkoncilo: druh && !naliehavost && !ceka ? konecNaliehavosti(polozky) : null, naliehaveCeka: ceka ? { ma: ceka.ma, potreba: ceka.potreba } : null, cizojazycne: !jeCesky(k.titulek), prelozeno: k.preklad ? { z: k.preklad.z, puvodni: k.titulekPuvodni } : null,
     zavaznost: null, jistota: null, kategorie: k.kategorie.map((c) => KATEGORIE[c as Kategorie]?.nazev ?? c), klice: k.kategorie, text: k.shrnuti || null, textPopis: "Zachyceno", zdroj: { nazev: k.zdroj.nazev, url: k.zdroj.url },
-    zdroje: polozky.map((p) => ({ klic: p.id, nazev: p.zdroj.nazev, url: p.zdroj.url, kdy: p.publikovano ?? p.zachyceno, titulek: p.id === k.id ? null : p.titulek, odchylka: p.odchylka ?? null })),
+    zdroje: polozky.map((p) => ({ klic: p.id, nazev: p.zdroj.nazev, url: p.zdroj.url, kdy: p.publikovano ?? p.zachyceno, titulek: p.id === k.id ? null : p.titulek, odchylka: p.odchylka ?? null, prelozeno: Boolean(p.preklad) })),
     pocetZdroju: pocetZdroju(polozky),
     ...odchylkaRadku(k, polozky),
   };

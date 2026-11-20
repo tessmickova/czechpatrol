@@ -389,6 +389,34 @@ přeskakuje, když se nic nezměnilo**: krok „Je vůbec co nasazovat?“ porov
 `commit` z živého `/stav.json` s `HEAD`. Když se doména neozve, nasazuje se —
 raději nasazení navíc než žádné.
 
+## Strojový překlad zachycených zpráv (od 20. 11. 2026)
+
+Provozovatelka: „K čemukoliv v jiném jazyce napsat ‚přeloženo:‘ a přeložit do
+češtiny.“ Placený model je od září vypnutý (chybí klíč), proto zvolila
+**bezplatný strojový překlad bez klíče**:
+
+- Krok „Strojový překlad zachycených zpráv“ ve `sber.yml`, hned po sběru.
+  Otevřené modely Argos Translate (OPUS-MT) běží přes CTranslate2 přímo
+  v GitHub Actions (`nastroje/preklad/preloz.py`); balík argostranslate se
+  neinstaluje, protože táhne torch (přes 5 GB). Modely se drží v mezipaměti.
+- Do češtiny vede model jen z angličtiny; ostatní jazyky jdou přes
+  angličtinu (polština, slovenština, rumunština… → angličtina → čeština).
+  Jazyk zprávy se pozná z textu (langid) a pravidlem `jeCesky` webu.
+- Překládá se titulek a shrnutí, nejvýš 60 zpráv za běh, nejnovější první.
+  Původní znění zůstává (`titulekPuvodni`, `shrnutiPuvodni`), zpráva nese
+  `preklad: { z, nastroj, kdy }` a web před titulkem píše **„přeloženo:“**;
+  v detailu „Přeloženo strojově z angličtiny … Původně: …“.
+- Kontroly výstupu: prázdný, nezměněný, smyčka opakovaných slov, výrazně
+  delší než originál nebo ne česky → nezapíše se, zpráva zůstane
+  v původním jazyce a znovu se zkusí za 24 hodin (`prekladSelhal`).
+- Typografie podle zásad webu (české uvozovky, pomlčky, bez mezer před
+  interpunkcí). Obsah se nemění a nic se nepřidává; překlad může být
+  nepřesný a web to u každé zprávy říká.
+- Krok nesmí shodit sběr (`continue-on-error`, strop 12 minut).
+- Kdyby se vrátil klíč k modelu, `sber/model.ts` překládá nové zprávy dál
+  sám (`klasifikace: "model"`); strojový překlad pak dostane jen to, co
+  zůstalo v cizím jazyce.
+
 ## Model: jeden vstup, dva poskytovatelé
 
 Model dělá tři pomocné věci: třídí kandidáty ze sběru, dává druhé čtení

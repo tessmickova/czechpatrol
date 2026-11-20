@@ -1,6 +1,7 @@
 "use client";
 
 import { ZnackaOdchylky, VYZNAM_ODCHYLKY } from "./odchylka";
+import { vetaPrekladu } from "@/lib/preklad";
 import { nazevNaliehave } from "@/lib/naliehave";
 import { RadaKTypu } from "./rada-k-typu";
 
@@ -698,7 +699,7 @@ function RadekKandidata({ k }: { k: Kandidat }) {
           // Ručně vytažené proti sítu: čtenář má vědět, že tohle nevybral automat.
           k.klasifikace === "clovek" ? <span key="r" className="text-tlum2">vybráno ručně</span> : null,
         ].filter(Boolean),
-        titulek: k.titulek,
+        titulek: k.preklad ? <><span className="font-normal text-tlum2">přeloženo: </span>{k.titulek}</> : k.titulek,
         znacky: (
           <span className="text-drobne text-tlum2">
             zdroj: {k.zdroj.nazev}{k.zdroj.primarni ? " (úřední)" : ""}
@@ -716,7 +717,9 @@ function RadekKandidata({ k }: { k: Kandidat }) {
             </p>
           )}
           <p><RadaKTypu kategorie={k.kategorie} /></p>
-          {k.titulek !== k.titulekPuvodni && <p className="text-drobne text-tlum2">Původní titulek: {k.titulekPuvodni}</p>}
+          {k.preklad && <p className="text-drobne text-tlum2">{vetaPrekladu(k.preklad.z)}</p>}
+          {k.titulek !== k.titulekPuvodni && <p className="text-drobne text-tlum2">Původní titulek: <span lang={k.preklad?.z}>{k.titulekPuvodni}</span></p>}
+          {k.shrnutiPuvodni && <p className="text-drobne text-tlum2">Původní shrnutí: <span lang={k.preklad?.z}>{k.shrnutiPuvodni}</span></p>}
           <p><a href={k.zdroj.url} target="_blank" rel="nofollow noopener noreferrer" className="odkaz break-all">{k.zdroj.url}</a></p>
           <p className="text-drobne text-tlum2">Zachyceno {datumPraha(k.zachyceno)} hodinovým sběrem. Není to ověřený záznam: závažnost ani jistota nejsou stanovené a do počtů nevstupuje. Po lidské kontrole se buď stane záznamem, nebo po třech týdnech zmizí.</p>
         </div>
