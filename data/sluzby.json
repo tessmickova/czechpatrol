@@ -1,16 +1,11 @@
 {
-  "aktualizovano": "2026-11-20T18:03:28.882Z",
+  "aktualizovano": "2026-11-20T20:03:20.311Z",
   "stavy": [
     {
       "klic": "cloudflare",
       "stav": "omezeni",
       "popis": "Partially Degraded Service",
       "incidenty": [
-        {
-          "nazev": "Cache Purging Delays in Amsterdam",
-          "odkaz": "https://www.cloudflarestatus.com/incidents/xsgbfncq7of7",
-          "aktualizovano": "2026-11-20T18:01:13.284Z"
-        },
         {
           "nazev": "Changes to Cloudflare Workers are not producing Event Subscription events",
           "odkaz": "https://www.cloudflarestatus.com/incidents/0ocqieaifg7h",
@@ -23,7 +18,7 @@
         "Albuquerque, United States - (ABQ)",
         "Arica, Chile - (ARI)"
       ],
-      "zkontrolovano": "2026-11-20T18:03:28.882Z",
+      "zkontrolovano": "2026-11-20T20:03:20.311Z",
       "chyba": null
     },
     {
@@ -35,7 +30,7 @@
         "Zoom Phone",
         "Zoom Phone - APAC"
       ],
-      "zkontrolovano": "2026-11-20T18:03:28.882Z",
+      "zkontrolovano": "2026-11-20T20:03:20.311Z",
       "chyba": null
     },
     {
@@ -44,7 +39,7 @@
       "popis": "All Systems Operational",
       "incidenty": [],
       "postizene": [],
-      "zkontrolovano": "2026-11-20T18:03:28.882Z",
+      "zkontrolovano": "2026-11-20T20:03:20.311Z",
       "chyba": null
     }
   ]
