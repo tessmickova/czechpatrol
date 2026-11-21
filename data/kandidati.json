@@ -80,88 +80,6 @@
     }
   },
   {
-    "id": "k-d545da4473fa3517",
-    "zachyceno": "2026-11-21T19:00:54.740Z",
-    "publikovano": "2026-11-21T15:37:00.000Z",
-    "zdroj": {
-      "nazev": "Ukrainska Pravda (anglicky)",
-      "url": "https://www.pravda.com.ua/eng/news/2026/11/21/8063980/",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Finland confirms Ukraine attacked ship linked to Russian military",
-    "titulekPuvodni": "Finland confirms Ukraine attacked ship linked to Russian military",
-    "shrnuti": "Finland has confirmed that Ukrainian drones hit the Russian ship Sparta II, which drifted into Finnish waters, and suspects a Russian helicopter violated its airspace.",
-    "kodZeme": "FI",
-    "zeme": "Finsko",
-    "kategorie": [
-      "drony",
-      "rusko"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "zeSite": null,
-    "shody": [
-      "violat+airspace",
-      "dron",
-      "drone",
-      "airspace",
-      "russia"
-    ],
-    "naliehave": {
-      "druh": "vzdusny-prostor-nato",
-      "stupen": 2,
-      "proc": "violated+airspace"
-    },
-    "stav": "ceka",
-    "vyrez": {
-      "text": "Russian ship Sparta II hit by Ukrainian drones, Finland says | Ukrainska Pravda\nThe Sparta II, which was attacked on 21 November. Photo: Finnish Border Guard\nIlja Iljin, Commander of the Finnish Border Guard, has said that Ukrainian drones struck a Russian vessel on 21 November, while Finland's Defence Ministry suspects a Russian helicopter of violating its airspace.\nSource: European Pravda, citing Finnish public service media company Yle and the press service for Finland's Ministry of Defence\nDetails: Iljin said the ship had been hit by Ukrainian drones in Russian territorial waters, lost control and drifted into Finnish territorial waters as a result. Responsibility for maritime rescue operations therefore passed to Finland.\nAdvertisement:\n\r\n\r\n\r\n\r\n\r\nIljin said no further information about the cargo is available, so he is unable to assess the risk of an explosion. He noted that the fire has not yet been brought under control, so explosions could still occur, and the ship could even sink if the fire continues to burn uncontrollably for a prolonged period of time.\nThere is no threat to shipping or people, Iljin said. A restricted zone has been set up around the vessel for safety…",
-      "stazeno": "2026-11-21T19:00:56.145Z",
-      "stav": 200
-    }
-  },
-  {
-    "id": "k-e385654edf33d898",
-    "zachyceno": "2026-11-21T16:03:04.552Z",
-    "publikovano": "2026-11-21T14:52:27.000Z",
-    "zdroj": {
-      "nazev": "ČT24 — hlavní zprávy",
-      "url": "https://ct24.ceskatelevize.cz/clanek/svet/po-utoku-na-lod-ve-finskem-zalivu-hlasi-helsinky-mozne-naruseni-vzdusneho-prostoru-379818",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Po útoku na loď ve Finském zálivu hlásí Helsinky možné narušení vzdušného prostoru",
-    "titulekPuvodni": "Po útoku na loď ve Finském zálivu hlásí Helsinky možné narušení vzdušného prostoru",
-    "shrnuti": "Finsko má podezření, že jeho vzdušný prostor narušil ruský vrtulník. Mohlo to souviset se zásahem po útoku dronů na ruskou nákladní loď v neutrálních vodách ve Finském zálivu. Podle estonských médií jde o ruské plavidlo Sparta II, které se nachází na americkém sankčním seznamu.",
-    "kodZeme": "FI",
-    "zeme": "Finsko",
-    "kategorie": [
-      "drony",
-      "rusko"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "zeSite": null,
-    "shody": [
-      "naruseni vzdusneho prostoru",
-      "narusil+vzdusny prostor",
-      "dron",
-      "vzdusny prostor",
-      "rusk"
-    ],
-    "naliehave": {
-      "druh": "vzdusny-prostor-nato",
-      "stupen": 2,
-      "proc": "narusil+vzdusny prostor"
-    },
-    "stav": "ceka",
-    "vyrez": {
-      "text": "Po útoku na loď ve Finském zálivu hlásí Helsinky možné narušení vzdušného prostoru — ČT24 — Česká televize\nŽivé vysílání\nTV program\nPočasí\nTeletext\nE-shop\nVše o ČT\nTV poplatky\nKontakty\nSpravovat účet\nOblíbené pořady\nRozkoukaná videa\nPřihlásit se do TV\nOdhlásit se\nPo útoku na loď ve Finském zálivu hlásí Helsinky možné narušení vzdušného prostoru\nČTK\n, ket\npřed 1 h hodinou | Zdroj: ČTK\nSnímek poškozené ruské lodi ve Finském zálivu\nZdroj: Finnish Border Guard/Handout via Reuters\nFinsko má podezření, že jeho vzdušný prostor narušil ruský vrtulník. Mohlo to souviset se zásahem po útoku dronů na ruskou nákladní loď v neutrálních vodách ve Finském zálivu. Podle estonských médií jde o ruské plavidlo Sparta II, které se nachází na americkém sankčním seznamu.\nGubernátor ruské Leningradské oblasti Alexandr Drozděnko podle ruské služby BBC uvedl, že probíhá evakuace posádky. Útok se podle Drozděnka stal asi 5,6 kilometru od ruských hranic. Loď plula do Kaliningradu.\nFinská armáda potvrdila, že „v sobotu ráno zaznamenala útok na ruskou nákladní loď ... v mezinárodních vodách ve východní části Finského zálivu“. Pohraniční stráž této členské země NATO oznámila, že poškozené plavidlo proudy…",
-      "stazeno": "2026-11-21T16:03:08.452Z",
-      "stav": 200
-    }
-  },
-  {
     "id": "k-51c5cb57b3e1eef7",
     "zachyceno": "2026-11-21T16:03:04.711Z",
     "publikovano": "2026-11-21T14:02:00.000Z",
@@ -1326,6 +1244,185 @@
     }
   },
   {
+    "id": "k-5e1e334a3ce134a2",
+    "zachyceno": "2026-11-21T20:03:04.609Z",
+    "publikovano": null,
+    "zdroj": {
+      "nazev": "The Kyiv Independent",
+      "url": "https://kyivindependent.com/explosions-reported-near-russian-baltic-fleet-base-in-kaliningrad-oblast-amid-drone-alerts/",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Explosions reported near Russian Baltic Fleet base in Kaliningrad Oblast amid drone alerts.",
+    "titulekPuvodni": "Explosions reported near Russian Baltic Fleet base in Kaliningrad Oblast amid drone alerts.",
+    "shrnuti": "",
+    "kodZeme": "RU",
+    "zeme": "Rusko",
+    "kategorie": [
+      "sabotaz",
+      "drony",
+      "rusko"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "explosion",
+      "dron",
+      "drone",
+      "russia"
+    ],
+    "naliehave": null,
+    "stav": "ceka",
+    "vyrez": {
+      "text": "Explosions reported near Russian Baltic Fleet base in Kaliningrad Oblast amid drone alerts 0 of 5,000\nHelp us find 5,000 new members. Bring one friend.\nShare your personal link and make us stronger in 2027.\n0 found so far\nGoal 5,000\nCopy link Copy\nLog in to see who joined through your link.\nWar Explosions reported near Russian Baltic Fleet base in Kaliningrad Oblast amid drone alerts\nNovember 21, 2026 9:01 pm • 2 min read\nPrefer on Google\nT\nby Tamara Nowakowsky\nA nighttime view of a port facility in footage shared by the Exilenova+ Telegram channel amid reports of explosions and drone activity in Baltiysk, Kaliningrad Oblast, on Nov. 21, 2026. (Exilenova+/Telegram)\nExplosions and suspected drone activity were reported near Russia's Baltic Fleet naval base in Baltiysk, Kaliningrad Oblast, on Nov. 21, as air raid sirens sounded across parts of the Russian exclave.\nThe reports come amid heightened security concerns in the Baltic region, with the Russian exclave bordering NATO members Poland and Lithuania. At the time of publication, it remained unclear whether the naval base had been targeted or whether any military facilities had sustained damage.\nUkrainian monitoring Telegram…",
+      "stazeno": "2026-11-21T20:03:06.874Z",
+      "stav": 200
+    }
+  },
+  {
+    "id": "k-7bb8a856bfbd2d5f",
+    "zachyceno": "2026-11-21T20:03:04.856Z",
+    "publikovano": "2026-11-21T19:56:39.000Z",
+    "zdroj": {
+      "nazev": "France 24 (anglicky)",
+      "url": "https://www.france24.com/en/europe/20261121-russia-attacks-zelensky-s-hometown-ukraine-reaffirms-wish-to-join-nato",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Russia attacks Zelensky's hometown, Ukraine reaffirms wish to join NATO",
+    "titulekPuvodni": "Russia attacks Zelensky's hometown, Ukraine reaffirms wish to join NATO",
+    "shrnuti": "A Russian ballistic missile attack on President Volodymyr Zelensky’s hometown in central Ukraine on Saturday killed two people and wounded dozens. Hours later, Zelensky reiterated his country's determination to join NATO, following proposals to provide Kyiv with security guarantees similar to those ",
+    "kodZeme": "UA",
+    "zeme": "Ukrajina",
+    "kategorie": [
+      "hybridni",
+      "nato",
+      "rusko"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "attack on",
+      "nato",
+      "russia"
+    ],
+    "naliehave": null,
+    "stav": "ceka",
+    "vyrez": {
+      "text": "Russia attacks Zelensky's hometown, Ukraine reaffirms wish to join NATO - France 24\nSkip to main content\nAdvertising\nRussia attacks Zelensky's hometown, Ukraine reaffirms wish to join NATO\nA Russian ballistic missile attack on President Volodymyr Zelensky’s hometown in central Ukraine on Saturday killed two people and wounded dozens. Hours later, Zelensky reiterated his country's determination to join NATO, following proposals to provide Kyiv with security guarantees similar to those of the military alliance.\nIssued on: 21/11/2026 - 20:56 Modified: 21/11/2026 - 20:56\n5 min Reading time\nShare\nBy:\nFRANCE 24\nVideo by:\nGulliver CRAGG\nTo display this content from YouTube, you must enable advertisement tracking and audience measurement.\nAccept\nManage my choices\nOne of your browser extensions seems to be blocking the video player from loading. To watch this content, you may need to disable it on this site.\nTry again\nCover image: A damaged restaurant after a Russian strike on Kryvyi Rih, Ukraine, November 21, 2026. © AP via Dnipropetrovsk regional military\n04:50\nA Russian strike on the center of Ukrainian President Volodymyr Zelensky ’s hometown, Kryvyi Rih, killed two people and wounded…",
+      "stazeno": "2026-11-21T20:03:07.232Z",
+      "stav": 200
+    }
+  },
+  {
+    "id": "k-9ccdbee282485263",
+    "zachyceno": "2026-11-21T20:03:04.858Z",
+    "publikovano": "2026-11-21T19:55:07.000Z",
+    "zdroj": {
+      "nazev": "France 24 (anglicky)",
+      "url": "https://www.france24.com/en/russia-launches-ballistic-missile-attack-on-zelensky-s-hometown-in-central-ukraine",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Russia launches ballistic missile attack on Zelensky's hometown in central Ukraine",
+    "titulekPuvodni": "Russia launches ballistic missile attack on Zelensky's hometown in central Ukraine",
+    "shrnuti": "A Russian ballistic missile attack on President Volodymyr Zelensky’s hometown in central Ukraine on Saturday killed two people and wounded dozens. Hours later, Zelensky reiterated his country's determination to join NATO. FRANCE 24's Gulliver Cragg reports from Kyiv.",
+    "kodZeme": "FR",
+    "zeme": "Francie",
+    "kategorie": [
+      "hybridni",
+      "nato",
+      "rusko"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "attack on",
+      "nato",
+      "russia"
+    ],
+    "naliehave": null,
+    "stav": "ceka",
+    "vyrez": {
+      "text": "Russia launches ballistic missile attack on Zelensky's hometown in central Ukraine - France 24\nSkip to main content\nTo display this content from YouTube, you must enable advertisement tracking and audience measurement.\nAccept\nManage my choices\nOne of your browser extensions seems to be blocking the video player from loading. To watch this content, you may need to disable it on this site.\nTry again\nCover image: © France 24\n04:50\nVideo content\nVideo\nRussia launches ballistic missile attack on Zelensky's hometown in central Ukraine\nIssued on: 21/11/2026 - 20:55\nShare\nA Russian ballistic missile attack on President Volodymyr Zelensky’s hometown in central Ukraine on Saturday killed two people and wounded dozens. Hours later, Zelensky reiterated his country's determination to join NATO. FRANCE 24's Gulliver Cragg reports from Kyiv.\nVideo by:\nGulliver CRAGG\nKeywords for this article\nUkraine\nRussia\nNATO\nRead more\nRead less\nDrone attack sets Russian cargo ship ablaze in Gulf of Finland\n21/11/2026\nVideo content\nVideo\nEurope\nEU, UK reach reset deal after Brexit\n21/11/2026\nVideo content\nVideo\nUK\nUK and EU strike ‘landmark’ deal to rebuild ties after Brexit\n20/11/2026\nVideo…",
+      "stazeno": "2026-11-21T20:03:07.397Z",
+      "stav": 200
+    }
+  },
+  {
+    "id": "k-bcdeef034c16e585",
+    "zachyceno": "2026-11-21T20:03:04.358Z",
+    "publikovano": "2026-11-21T19:26:30.000Z",
+    "zdroj": {
+      "nazev": "Novinky.cz",
+      "url": "https://www.novinky.cz/clanek/valka-na-ukrajine-letecky-poplach-v-kaliningradske-oblasti-mezi-polskem-a-litvou-zasahovala-ruska-protivzdusna-obrana-40609847",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Letecký poplach v Kaliningradské oblasti mezi Polskem a Litvou. Zasahovala ruská protivzdušná obrana",
+    "titulekPuvodni": "Letecký poplach v Kaliningradské oblasti mezi Polskem a Litvou. Zasahovala ruská protivzdušná obrana",
+    "shrnuti": "V ruské enklávě Kaliningradské oblasti mezi Polskem a Litvou úřady v sobotu večer vyhlásily letecký poplach. Monitorovací kanály informovaly o obranných aktivitách a explozích v přístavu Baltijsk ruského baltského námořnictva.",
+    "kodZeme": "PL",
+    "zeme": "Polsko",
+    "kategorie": [
+      "drony",
+      "rusko"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "letecky poplach",
+      "rusk"
+    ],
+    "naliehave": null,
+    "stav": "ceka",
+    "vyrez": {
+      "text": "Letecký poplach v Kaliningradské oblasti mezi Polskem a Litvou. Zasahovala ruská protivzdušná obrana - Novinky\nZobrazení snímku 1 z 0\nzáhlaví\nHlavní obsah\nLetecký poplach v Kaliningradské oblasti mezi Polskem a Litvou. Zasahovala ruská protivzdušná obrana\nJana Kotrášová\n2:22\nChcete-li článek poslouchat, přihlaste se\neBook\nSdílet\nDnes 21. 11., 20:26\nV ruské enklávě Kaliningradské oblasti mezi Polskem a Litvou úřady v sobotu večer vyhlásily letecký poplach. Monitorovací kanály informovaly o obranných aktivitách a explozích v přístavu Baltijsk ruského baltského námořnictva.\nLetecký poplach v přístavu ruského baltského námořnictva v Kaliningradské oblasti Video: Exilenova+/Supernova+/Telegram\nČlánek\n„V přístavním městě Baltijsk v Kaliningradské oblasti byly zaznamenány četné výbuchy a zvuky bezpilotních letounů,“ upozornil monitorovací kanál Exilenova+ na Telegramu.\nRuská média i kanály na sociálních sítích již dříve upozorňovaly na letecký poplach. „Místní úřady uvedly, že se jednalo o cvičný poplach, jehož příčinou byl chybný signál o leteckém cíli ze strany Litvy,“ doplnil kanál.\n„Nicméně za necelou hodinu sirény znovu zazněly. Byla rovněž zaznamenána činnost ruské protivzdušné…",
+      "stazeno": "2026-11-21T20:03:07.558Z",
+      "stav": 200
+    }
+  },
+  {
+    "id": "k-535ac6d3d34d6628",
+    "zachyceno": "2026-11-21T20:03:06.742Z",
+    "publikovano": "2026-11-21T19:10:00.000Z",
+    "zdroj": {
+      "nazev": "Ukrinform (anglicky)",
+      "url": "https://www.ukrinform.net/rubric-ato/4187239-airport-in-russias-kaliningrad-region-temporarily-closed-amid-drone-threat-social-media.html",
+      "typ": "wire",
+      "primarni": false
+    },
+    "titulek": "Airport in Russia’s Kaliningrad region temporarily closed amid drone threat – social media",
+    "titulekPuvodni": "Airport in Russia’s Kaliningrad region temporarily closed amid drone threat – social media",
+    "shrnuti": "Khrabrovo Airport in Russia’s Kaliningrad temporarily suspended arrivals and departures.",
+    "kodZeme": "RU",
+    "zeme": "Rusko",
+    "kategorie": [
+      "drony",
+      "rusko"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "dron+airport+suspend",
+      "dron",
+      "drone",
+      "russia"
+    ],
+    "naliehave": null,
+    "stav": "ceka",
+    "vyrez": {
+      "text": "Airport in Russia’s Kaliningrad region temporarily closed amid drone threat – social media\n\r\nSubscription\nNewsletters\nPhotobank\nUkrinform - Ukrainian National News Agency\nFounded in 1918\nSaturday, 21 November 2026, 22:03\nWar\nEconomy\nSports\nMore ☰\nContacts\nEng\nУкр\nEng\nEsp\nDeu\nعربي\nFra\n日本語\nPol\n&times;\nAll topics\nWar\nRecovery of Ukraine\nPolitics\nEconomy\nFact checks\nDefense\nSociety and Culture\nSports\nCrime\nAccidents and Emergencies\nAgency\nInformation on Agency\nOur Contacts\nSubscribtion Terms\nOur Services\nPrivacy policy and personal data protection\nAdditional\nPublications\nInterviews\nPhoto\nVideo\nLongreads\nReleases\nServices\nSubscription\nNewsletters\nPhotobank\n\r\n\r\n\r\nKhrabrovo Airport in Russia&rsquo;s Kaliningrad temporarily suspended arrivals and departures.\nAccording to Ukrinform, this was reported by the ASTRA Telegram channel.\n\r\n\r\n&ldquo;Air raid sirens have sounded in Kaliningrad. Residents are being asked to move to safe locations,&rdquo; the report said.\n\r\n\r\nMobile phone subscribers also received notifications from telecom operators warning that &ldquo;mobile internet access may be temporarily restricted for security reasons.&rdquo;\n\r\n\r\nIn addition, temporary restrictions were…",
+      "stazeno": "2026-11-21T20:03:08.297Z",
+      "stav": 200
+    }
+  },
+  {
     "id": "k-723e21f3cbd8e9fc",
     "zachyceno": "2026-11-21T19:00:53.010Z",
     "publikovano": "2026-11-21T18:45:19.000Z",
@@ -1361,6 +1458,41 @@
     }
   },
   {
+    "id": "k-00ad2d7176088603",
+    "zachyceno": "2026-11-21T20:03:05.307Z",
+    "publikovano": "2026-11-21T18:36:00.000Z",
+    "zdroj": {
+      "nazev": "Rzeczpospolita (Polsko)",
+      "url": "https://www.rp.pl/polityka/art45523651-mark-rutte-broni-trumpa-i-jego-relacji-z-putinem-to-w-interesie-polski",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Mark Rutte broni Trumpa i jego relacji z Putinem. „To w interesie Polski”",
+    "titulekPuvodni": "Mark Rutte broni Trumpa i jego relacji z Putinem. „To w interesie Polski”",
+    "shrnuti": "Naruszenie polskiej przestrzeni powietrznej przez rosyjskie rakiety i drony było niebezpiecznym incydentem, ale nie oznaczało automatycznego uruchomienia art. 5 NATO – mówił sekretarz generalny Sojuszu Mark Rutte- mówił szef NATO Mark Rutte w wywiadzie dla TVN24.",
+    "kodZeme": "PL",
+    "zeme": "Polsko",
+    "kategorie": [
+      "drony",
+      "nato"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "narusz+przestrzeni powietrzn",
+      "dron",
+      "nato"
+    ],
+    "naliehave": null,
+    "stav": "ceka",
+    "vyrez": {
+      "text": "Rutte o rosyjskich rakietach nad Polską i relacjach Trumpa z Putinem - rp.pl\nReklama\nWydarzenia\nKraj\nPolityka\nMark Rutte broni Trumpa i jego relacji z Putinem. „To w interesie Polski”\nNaruszenie polskiej przestrzeni powietrznej przez rosyjskie rakiety i drony było niebezpiecznym incydentem, ale nie oznaczało automatycznego uruchomienia art. 5 NATO – mówił sekretarz generalny Sojuszu Mark Rutte- mówił szef NATO Mark Rutte w wywiadzie dla TVN24.\nAktualizacja:\n21.11.2026 20:53\nPublikacja:\n21.11.2026 19:36\nUstaw „Rzeczpospolitą” jako swoje ulubione źródło informacji w Google\nSekretrz generalny NATO Mark Rutte\nFoto: Reuters, Natalia Campos\nReklama\nReklama\nReklama\nAgnieszka Kazimierczuk\nRutte powiedział, że po incydencie z rosyjskimi rakietami i dronami bardzo szybko rozmawiał telefonicznie z premierem Donaldem Tuskiem i prezydentem Karolem Nawrockim. Obaj przedstawili mu sytuację jako niebezpieczną. Sekretarz generalny NATO podkreślił, że zdarzenie było związane z niesprowokowaną rosyjską wojną przeciwko Ukrainie i było absolutnie nie do przyjęcia.\nReklama\nReklama\nPytany o możliwość uruchomienia art. 5 Traktatu Północnoatlantyckiego, wyjaśnił, że sam incydent nie oznacza automatycznego…",
+      "stazeno": "2026-11-21T20:03:09.391Z",
+      "stav": 200
+    }
+  },
+  {
     "id": "k-2da06d36819ef700",
     "zachyceno": "2026-11-21T19:00:52.691Z",
     "publikovano": "2026-11-21T18:22:21.000Z",
@@ -1391,43 +1523,6 @@
     "vyrez": {
       "text": "Luftraum verletzt: NATO-Chef Rutte stellt sich hinter Polen - news.ORF.at\nLuftraum verletzt: NATO-Chef Rutte stellt sich hinter Polen\n21.11.2026 19.22\nOnline seit heute, 19.22 Uhr\nNach dem Einschlag russischer Geschoße im Südosten Polens hat NATO-Generalsekretär Mark Rutte bei einem Besuch in Warschau polnischen Medien zufolge zugesagt, dass die Allianz „jeden Zentimeter polnischen Territoriums“ verteidigen werde.\nDer „gefährliche Vorfall“, bei dem niemand verletzt wurde, hänge „zweifellos mit dem schrecklichen Angriffskrieg Russlands gegen die Ukraine zusammen“, sagte Rutte heute.\nDer NATO-Generalsekretär erinnerte daran, dass er seit gestern sowohl mit dem polnischen Ministerpräsidenten Donald Tusk als auch mit dem Präsidenten Karol Nawrocki in Kontakt stehe. Zwischen den beiden Politikern sind die Beziehungen derzeit äußerst angespannt.\nSitzung am Montag\nPolen sei „ein verlässlicher Verbündeter“, betonte Rutte. „Sie verfügen hier über ausgezeichnete Streitkräfte, und wir müssen nun genau feststellen, was geschehen ist“, sagte er vor polnischen Medien, darunter die Nachrichtenagentur PAP.\nDie Verletzung des polnischen Luftraums durch russische Flugobjekte werde am Montag in…",
       "stazeno": "2026-11-21T19:00:57.294Z",
-      "stav": 200
-    }
-  },
-  {
-    "id": "k-a9bb7c6e29da205c",
-    "zachyceno": "2026-11-21T19:00:52.038Z",
-    "publikovano": "2026-11-21T18:22:09.000Z",
-    "zdroj": {
-      "nazev": "BBC News — Europe",
-      "url": "https://www.bbc.co.uk/news/articles/cj752ddve27ko?at_medium=RSS&at_campaign=rss",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Russia-bound ship attacked in Gulf of Finland",
-    "titulekPuvodni": "Russia-bound ship attacked in Gulf of Finland",
-    "shrnuti": "Finnish defence forces say that Ukraine was likely behind the drone attack on the vessel.",
-    "kodZeme": "FI",
-    "zeme": "Finsko",
-    "kategorie": [
-      "hybridni",
-      "drony",
-      "rusko"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "zeSite": null,
-    "shody": [
-      "attack on",
-      "dron",
-      "drone",
-      "russia"
-    ],
-    "naliehave": null,
-    "stav": "ceka",
-    "vyrez": {
-      "text": "Russia-bound ship attacked in Gulf of Finland - BBC News\nImage source, Finnish Border Guard\nImage caption, The Finnish Border Guard is leading the operations involving the Sparta II\nBy Hafsa Khalil\nPublished\n38 minutes ago\nA Russian cargo vessel bound for the country's Baltic Kaliningrad territory has been hit by a drone attack in the eastern Gulf of Finland, Russian and Finnish authorities say.\nThe ship - the Sparta II - caught on fire after the strike on Saturday, and drifted into Finnish waters. Finnish defence forces said Ukraine was likely behind the attack.\n\"War is spilling over into our immediate vicinity,\" Finnish Prime Minister Petteri Orpo said, adding: \"Ukraine has the right to fight back against the aggressor.\"\nKaliningrad Governor Alexei Besprozvannykh said two drones were used, according to preliminary information, and that there is \"no threat\" to their supplies.\nThe Sparta II was sanctioned by the US in 2022 and Ukraine earlier this year, and is run by a Russian company, according to the Ukrainian and American governments.\nThe company says on its website that it was established within the structure of Russia's defence ministry in 2011, and since 2015 has been…",
-      "stazeno": "2026-11-21T19:00:58.972Z",
       "stav": 200
     }
   },
@@ -1468,42 +1563,6 @@
     "vyrez": {
       "text": "Polsko by velký raketový útok nezvládlo, kritizuje expert - iDNES.cz \r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\niDNES.cz\n\r\n\r\n\r\nP�ihl�sit \r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nAbyste mohli pokra�ovat, pot�ebujeme v�d�t, jakou formou v�m m��eme zobrazovat reklamu \r\n\r\n\r\n\r\n\r\n\r\nV�mi zvolen� nastaven� \r\nneobsahuje souhlas se zobrazov�n�m c�len� reklamy . \r\nVyberte pros�m znovu, \r\njakou formou v�m m�me zobrazovat obsah. \r\n\r\n\r\n\r\n\r\n\r\n\r\niDNES Premium\n\r\nBez reklam\n\r\n\r\n199 K� m�s��n�\n\r\nM��ete neomezen� ��st iDNES.cz, Lidovky.cz, Expres.cz a Antiyoutuber.cz. K tomu dostanete tak� noviny a �asopisy v elektronick� podob�. To v�e bez reklam. 1\n\r\n\r\nP�edplatit\n\r\n\r\nU� m�te ��et? P�ihlaste se\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nS c�lenou reklamou\n\r\n\r\n\r\nZdarma \r\n\r\nZachov�me v�m v�e tak, jak jste zvykl� a reklamu p�izp�sob�me va�im z�jm�m. Bez omezen� si m��ete d�l ��st, p�ehr�vat videa, sout�it �i p�isp�vat do v�ech diskus�. 2\n\r\n\r\nSouhlas�m\n\r\nPodrobn� nastaven�\n\r\n\r\n\r\n\r\n\r\n\r\niDNES a reklama\n\r\nPokud vyu�ijete m�sto platby ud�len� souhlasu s reklamou (tj. souhlas s vyu�it�m cookies a dal��ch s�ov�ch identifik�tor� pro ��ely c�len� reklamy), \r\nbudou V�m zobrazov�ny v r�mci na�ich…",
       "stazeno": "2026-11-21T19:00:59.150Z",
-      "stav": 200
-    }
-  },
-  {
-    "id": "k-ebc477d9a346c49f",
-    "zachyceno": "2026-11-21T19:00:51.845Z",
-    "publikovano": "2026-11-21T17:28:04.000Z",
-    "zdroj": {
-      "nazev": "Seznam Zprávy",
-      "url": "https://www.seznamzpravy.cz/clanek/zahranicni-ukrajina-ma-pravo-bojovat-proti-agresorovi-ruskou-lod-zasahly-drony-321215",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "„Ukrajina má právo bojovat proti agresorovi.“ Loď ve finských vodách zasáhly drony",
-    "titulekPuvodni": "„Ukrajina má právo bojovat proti agresorovi.“ Loď ve finských vodách zasáhly drony",
-    "shrnuti": "Ruská nákladní loď plující východním Baltským mořem byla v sobotu 21. listopadu zasažena dronem a vzplanula, uvedly finské úřady.",
-    "kodZeme": "FI",
-    "zeme": "Finsko",
-    "kategorie": [
-      "drony",
-      "rusko"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "zeSite": null,
-    "shody": [
-      "dron+zasahl",
-      "dron",
-      "drone",
-      "rusk"
-    ],
-    "naliehave": null,
-    "stav": "ceka",
-    "vyrez": {
-      "text": "„Ukrajina má právo bojovat proti agresorovi.“ Loď ve finských vodách zasáhly drony - Seznam Zprávy\nZobrazení snímku 1 z 0\nHlavní obsah\n„Ukrajina má právo bojovat proti agresorovi.“ Loď ve finských vodách zasáhly drony\nPavla Chalupová\n2:30\nChcete-li článek poslouchat, přihlaste se\neBook\nSdílet\nFoto: Reuters , Reuters\nFinský premiér Petteri Orpo.\n18:28\nRuská nákladní loď plující východním Baltským mořem byla v sobotu 21. listopadu zasažena dronem a vzplanula, uvedly finské úřady.\nČlánek\nRuská nákladní loď Sparta II plující směrem do ruské baltské exklávy Kaliningradu byla v sobotu v mezinárodních vodách Finského zálivu zasažena drony, uvedly ruské i finské úřady, píše agentura Reuters.\nDronový útok na loď v této části Baltského moře potvrdila finská armáda, podle níž za ním pravděpodobně stála Ukrajina.\nV reakci na událost Finsko v oblasti zavedlo přísnější bezpečnostní opatření. Finské ministerstvo obrany uvedlo, že armáda znovu zavedla dočasná letecká a námořní omezení ve východní části Finského zálivu jako preventivní opatření. Ministerstvo dále sdělilo, že Finsko o incidentu informovalo své spojence.\n„Situace nepředstavuje žádné nebezpečí pro ostatní námořní dopravu. Přípravy na…",
-      "stazeno": "2026-11-21T19:01:01.887Z",
       "stav": 200
     }
   },
@@ -1749,7 +1808,12 @@
       "russia"
     ],
     "naliehave": null,
-    "stav": "ceka"
+    "stav": "ceka",
+    "vyrez": {
+      "text": "Russian strike on Zhytomyr Oblast railway station injures one | Ukrainska Pravda\nStock photo: Getty Images\nOne person was injured in a Russian attack on a railway station in the Ovruch\nhromada\nA hromada is an administrative unit designating a village, several villages, or a town, and their adjacent territories.\nin Zhytomyr Oblast on Saturday 21 November.\nSource: Vitalii Bunechko , Head of Zhytomyr Oblast Military Administration\nQuote: \"The enemy has attacked Zhytomyr Oblast once again. This time a railway station in the Ovruch hromada came under attack.\nAdvertisement:\n\r\n\r\n\r\n\r\n\r\nOne person was injured in the enemy attack. Medics promptly took the injured person to hospital, where they are receiving the necessary care.\"\nDetails: A fire broke out at the site of the strike and has been extinguished.\nZhytomyr Oblast\nrailways\nAdvertisement:\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nZhytomyr Oblast\nRussia damages at least three businesses in Zhytomyr and Kyiv oblasts – photos\nRussian drones strike energy infrastructure in Zhytomyr Oblast\nFour injured in Russian drone attacks on Zhytomyr Oblast\nLatest news\nAdvertisement:\n\r\n\r\n\r\nAdvertisement:",
+      "stazeno": "2026-11-21T20:03:09.981Z",
+      "stav": 200
+    }
   },
   {
     "id": "k-fb5e142fc406a9f9",
@@ -1850,7 +1914,12 @@
       "nato"
     ],
     "naliehave": null,
-    "stav": "ceka"
+    "stav": "ceka",
+    "vyrez": {
+      "text": "Ruch NATO. Rada Północnoatlantycka omówi sprawę naruszenia polskiej przestrzeni powietrznej - TVN24\nSUBSKRYBUJ Przejdź do\nSzukaj\nZnaleziono 0 materiałów zawierających:\nRedakcja poleca:\nZobacz więcej wyników\nMoje konto\nPobrane materiały\nOglądaj dalej\nObserwowane\nNewslettery\nPreferencje treści\nMoje zakupy i karty\nSklep\nZrealizuj voucher\nPomoc\nZgłoś problem\nEdytuj dane\nWyloguj się\nZaloguj się\nMenu\nZamknij\nOglądaj TVN24\nNajnowsze\nFakty\nŚwiat\nPolska\nRegionalne\nWarszawa\nŁódź\nKatowice\nKraków\nPoznań\nTrójmiasto\nWrocław\nKielce\nKujawsko-pomorskie\nLublin\nLubuskie\nOlsztyn\nOpole\nRzeszów\nSzczecin\nBiałystok\nWięcej\nBiznes\nMeteo\nSport\nZdrowie\nTechnologia\nKultura i styl\nKonkret24\nKontakt24\nCiekawostki\nNewslettery\nQuizy\nTematy\nChińska ekspansja\nMęskie zdrowie\nWybory w USA\nCzytaj\nSłuchaj\nOglądaj\nRutte: NATO będzie bronić każdej piędzi polskiego terytorium\nŹródło zdj. gł.: Shutterstock\nPosłuchaj artykułu Czyta lektor AI\nWykup subskrypcję TVN24+, aby posłuchać artykułu. Masz subskrypcję? Zaloguj się.\nDowiedz się więcej\nUdostępnij Facebook Kopiuj link\nDodaj do preferowanych źródeł w Google Dodaj nas do listy preferowanych źródeł w Google, aby nasze materiały częściej pojawiały się w Twoich wynikach…",
+      "stazeno": "2026-11-21T20:03:10.038Z",
+      "stav": 200
+    }
   },
   {
     "id": "k-471466dea4818196",
@@ -2061,7 +2130,12 @@
       "kremlin"
     ],
     "naliehave": null,
-    "stav": "ceka"
+    "stav": "ceka",
+    "vyrez": {
+      "text": "„Putin se află sub presiune”. Șeful spionajului militar britanic avertizează asupra riscului unui conflict între Rusia și NATO | Digi24\nHOME\nȘtiri\nExterne\n„Putin se află sub presiune”. Șeful spionajului militar britanic avertizează asupra riscului unui conflict între Rusia și NATO\n„Putin se află sub presiune”. Șeful spionajului militar britanic avertizează asupra riscului unui conflict între Rusia și NATO\nData actualizării: 21.11.2026 15:45 Data publicării: 21.11.2026 15:43\nVladimir Putin. Foto: Profimedia Urmărește Digi24 în Google Discover Adaugă Digi24 ca sursă preferată în Google\nDin articol\n„Cea mai mare teamă a mea este riscul unei erori de calcul” Atacuri în Londra, Marea Neagră și cazul Salisbury Marea Britanie, avertizată să fie pregătită de război până în 2030\nComportamentul tot mai agresiv al Rusiei față de Occident ar putea provoca o eroare de calcul cu urmări extrem de grave, avertizează șeful serviciilor britanice de informații din domeniul apărării, general-locotenentul Matthew Jones. Acesta susține că Moscova nu urmărește în mod activ declanșarea unui război cu NATO, însă acțiunile tot mai riscante ale Kremlinului ar putea duce la o escaladare neintenționată.…",
+      "stazeno": "2026-11-21T20:03:10.584Z",
+      "stav": 200
+    }
   },
   {
     "id": "k-c4193caa26145aab",
@@ -2090,7 +2164,12 @@
       "nato"
     ],
     "naliehave": null,
-    "stav": "ceka"
+    "stav": "ceka",
+    "vyrez": {
+      "text": "Szef NATO Mark Rutte w Polsce po naruszeniu naszej przestrzeni powietrznej. \"Mogę zagwarantować...\" - TVN24\nSUBSKRYBUJ Przejdź do\nSzukaj\nZnaleziono 0 materiałów zawierających:\nRedakcja poleca:\nZobacz więcej wyników\nMoje konto\nPobrane materiały\nOglądaj dalej\nObserwowane\nNewslettery\nPreferencje treści\nMoje zakupy i karty\nSklep\nZrealizuj voucher\nPomoc\nZgłoś problem\nEdytuj dane\nWyloguj się\nZaloguj się\nMenu\nZamknij\nOglądaj TVN24\nNajnowsze\nFakty\nŚwiat\nPolska\nRegionalne\nWarszawa\nŁódź\nKatowice\nKraków\nPoznań\nTrójmiasto\nWrocław\nKielce\nKujawsko-pomorskie\nLublin\nLubuskie\nOlsztyn\nOpole\nRzeszów\nSzczecin\nBiałystok\nWięcej\nBiznes\nMeteo\nSport\nZdrowie\nTechnologia\nKultura i styl\nKonkret24\nKontakt24\nCiekawostki\nNewslettery\nQuizy\nTematy\nChińska ekspansja\nMęskie zdrowie\nWybory w USA\nCzytaj\nSłuchaj\nOglądaj\nRutte: NATO będzie bronić każdej piędzi polskiego terytorium\nŹródło zdj. gł.: TVN24\nPosłuchaj artykułu Czyta lektor AI\nWykup subskrypcję TVN24+, aby posłuchać artykułu. Masz subskrypcję? Zaloguj się.\nDowiedz się więcej\nUdostępnij Facebook Kopiuj link\nDodaj do preferowanych źródeł w Google Dodaj nas do listy preferowanych źródeł w Google, aby nasze materiały częściej pojawiały się w Twoich wynikach…",
+      "stazeno": "2026-11-21T20:03:11.699Z",
+      "stav": 200
+    }
   },
   {
     "id": "k-34962d781eeb041c",
@@ -2118,7 +2197,12 @@
       "border"
     ],
     "naliehave": null,
-    "stav": "ceka"
+    "stav": "ceka",
+    "vyrez": {
+      "text": "Ethiopia - Eritrea: Troops mobilise along the border - France 24\nSkip to main content\nTo display this content from YouTube, you must enable advertisement tracking and audience measurement.\nAccept\nManage my choices\nOne of your browser extensions seems to be blocking the video player from loading. To watch this content, you may need to disable it on this site.\nTry again\nCover image: © France 24\n01:11\nVideo content\nVideo\nEthiopia - Eritrea: Troops mobilise along the border\nIssued on: 21/11/2026 - 13:19\nShare\nMore than 200 former Tigray People’s Liberation Front (TPLF) fighters surrendered to Ethiopia’s federal military Friday, state-affiliated media reported, amid escalating border tensions with neighboring Eritrea. France 24 correspondent Tom Canetti tells us the latest.\nVideo by:\nTom CANETTI\nKeywords for this article\nAfrica\nEritrea\nEthiopia\nRead more\nRead less\nBirthrate drop in North Africa\n14/08/2026\nVideo content\nVideo\nEYE ON AFRICA\nWorld Bank to fund 645-metre bridge linking Bangui and Zongo\n14/08/2026\nVideo content\nVideo\nEYE ON AFRICA\nLibreville grapples with water shortage\n09/08/2026\nVideo content\nVideo\nEYE ON AFRICA\nAfrican Union mission in Somalia in question after US…",
+      "stazeno": "2026-11-21T20:03:12.663Z",
+      "stav": 200
+    }
   },
   {
     "id": "k-32293563852df117",
@@ -2145,7 +2229,12 @@
       "explosion"
     ],
     "naliehave": null,
-    "stav": "ceka"
+    "stav": "ceka",
+    "vyrez": {
+      "text": "Video. Strait of Hormuz: Athlete swims through war zone to expose war's environmental toll | Euronews\nLoading the video\nNo Comment\nVideo.\nStrait of Hormuz: Athlete swims through war zone to expose war's environmental toll\nCopy/paste the link below:\nCopy\nCopy/paste the article video embed link below:\nCopy\nUpdated: 21 November 2026 - 13:18 GMT+1\nBritish endurance swimmer Lewis Pugh completed a 15-kilometre swim through the Strait of Hormuz over three days in November 2026, braving explosions and burning tankers nearby. His three-day challenge aimed to expose the environmental damage caused by the war with Iran.\n&hellip; More\nWearing nothing but swimming trunks, goggles and a UN-branded cap, 56-year-old ocean campaigner Lewis Pugh entered the waters off Oman’s Musandam Peninsula , where he found himself swimming within sight of burning ships and towering plumes of smoke . Just 20 minutes into his first swim, two explosions rocked the area and an oil tanker caught fire around four kilometres away, forcing him to abandon the attempt temporarily. The following day, he witnessed another vessel engulfed in flames as he continued his swim through the strategic…",
+      "stazeno": "2026-11-21T20:03:12.819Z",
+      "stav": 200
+    }
   },
   {
     "id": "k-72976c9ca75081e5",
@@ -10558,78 +10647,6 @@
       "text": "Drone attack reported on Kaleykino oil pumping station in Russia's Tatarstan\n\r\nSubscription\nNewsletters\nPhotobank\nUkrinform - Ukrainian National News Agency\nFounded in 1918\nThursday, 19 November 2026, 14:04\nWar\nEconomy\nSports\nMore ☰\nContacts\nEng\nУкр\nEng\nEsp\nDeu\nعربي\nFra\n日本語\nPol\n&times;\nAll topics\nWar\nRecovery of Ukraine\nPolitics\nEconomy\nFact checks\nDefense\nSociety and Culture\nSports\nCrime\nAccidents and Emergencies\nAgency\nInformation on Agency\nOur Contacts\nSubscribtion Terms\nOur Services\nPrivacy policy and personal data protection\nAdditional\nPublications\nInterviews\nPhoto\nVideo\nLongreads\nReleases\nServices\nSubscription\nNewsletters\nPhotobank\n\r\n\r\n\r\nResidents of Almetyevsk in Russia's Tatarstan region recorded flashes near the village of Kaleykino, where an oil pumping station of the Russian trunk oil pipeline system of the same name is located. Local authorities confirmed a drone attack on oil storage tanks.\nThat is according to the Telegram channel ASTRA , Ukrinform reports.\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nThe site of the Kaleykino oil pumping station is located approximately 5-8 kilometers from Almetyevsk.\n\r\n\r\nAfter examining the video footage, an Astra OSINT analyst suggested that the station may…",
       "stazeno": "2026-11-19T12:04:30.107Z",
       "stav": 200
-    }
-  },
-  {
-    "id": "k-1511287ea7fb2e51",
-    "zachyceno": "2026-11-19T12:04:19.483Z",
-    "publikovano": "2026-11-19T09:21:12.000Z",
-    "zdroj": {
-      "nazev": "Denník N (Slovensko)",
-      "url": "https://dennikn.sk/5701418/trumpov-svet-668-den-putin-na-druhej-kolaji-a-sou-pre-trumpa-co-ukazal-historicky-samit-troch-prezidentov/",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Trumpov svet (668. deň): Putin na druhej koľaji a šou pre Trumpa. Čo ukázal historický samit troch prezidentov",
-    "titulekPuvodni": "Trumpov svet (668. deň): Putin na druhej koľaji a šou pre Trumpa. Čo ukázal historický samit troch prezidentov",
-    "shrnuti": "Historický okamih – či už dobrý, alebo zlý pre Európu. Ešte predtým, ako sa trojstranné rokovania vôbec začali, bolo jasné, že schôdzka medzi americkým, ruským a čínskym prezidentom bude bezprecedentná a historická. Trump, Putin a Si Ťin-pching sa totiž v takomto zložení vo štvrtok zišli prvý raz. O",
-    "kodZeme": "RU",
-    "zeme": "Rusko",
-    "kategorie": [
-      "hybridni",
-      "rusko"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "zeSite": null,
-    "shody": [
-      "putin+europ+stret",
-      "rusk"
-    ],
-    "naliehave": null,
-    "stav": "ceka",
-    "vyrez": {
-      "text": "",
-      "stazeno": "2026-11-19T21:03:12.915Z",
-      "stav": 403,
-      "chyba": "HTTP 403"
-    }
-  },
-  {
-    "id": "k-29d8570bf5dee34c",
-    "zachyceno": "2026-11-19T12:04:18.242Z",
-    "publikovano": "2026-11-19T09:18:00.000Z",
-    "zdroj": {
-      "nazev": "Český rozhlas — domácí zprávy",
-      "url": "https://www.irozhlas.cz/zpravy-svet/evropska-komise-celila-rozsahlemu-kyberutoku-hackeri-vyuzili-umelou-inteligenci_2611191018_jor",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Evropská komise čelila rozsáhlému kyberútoku. Hackeři využili umělou inteligenci, píše Politico",
-    "titulekPuvodni": "Evropská komise čelila rozsáhlému kyberútoku. Hackeři využili umělou inteligenci, píše Politico",
-    "shrnuti": "Evropskou komisi zasáhl rozsáhlý kybernetický útok, který mohl ohrozit osobní údaje jejích zaměstnanců. Hackeři podle serveru Politico využili nástroj umělé inteligence k odhalování zranitelnosti v počítačových systémech. Útok narušil fungování některých interních služeb komise a jeho plným rozsahem",
-    "kodZeme": "EU",
-    "zeme": "EU",
-    "kategorie": [
-      "kyber",
-      "hybridni"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "zeSite": null,
-    "shody": [
-      "kyberneticky utok",
-      "kyberutok",
-      "utok na",
-      "kybernetick"
-    ],
-    "naliehave": null,
-    "stav": "ceka",
-    "vyrez": {
-      "text": "",
-      "stazeno": "2026-11-19T23:47:38.601Z",
-      "stav": 403,
-      "chyba": "HTTP 403"
     }
   }
 ]
