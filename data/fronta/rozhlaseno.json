@@ -643,6 +643,11 @@
       "kdy": "2026-11-21T06:30:21.805Z",
       "zaznamu": 0,
       "neodeslan": "nic od 7/10"
+    },
+    "2026-11-21-vecer": {
+      "kdy": "2026-11-21T18:30:12.856Z",
+      "zaznamu": 0,
+      "neodeslan": "nic nového"
     }
   },
   "navrhy": {
@@ -1352,6 +1357,18 @@
       "historie": 2,
       "cesta": "hned",
       "messageId": 65
+    },
+    "i-2026-11-21-sparta-ii-finsky-zaliv": {
+      "kdy": "2026-11-21T19:21:55.365Z",
+      "historie": 1,
+      "cesta": "hned",
+      "messageId": 73
+    },
+    "i-2026-11-21-kaliningrad-sireny-litva": {
+      "kdy": "2026-11-21T19:21:55.365Z",
+      "historie": 1,
+      "cesta": "hned",
+      "messageId": 73
     }
   },
   "snimky": {
@@ -1396,10 +1413,16 @@
       "slug": "hur-varovani-ruske-operace-eu-nato-starlink-2026",
       "styl": "kratka",
       "messageId": 65
+    },
+    "i-2026-11-21-sparta-ii-finsky-zaliv": {
+      "kdy": "2026-11-21T19:21:55.365Z",
+      "slug": "finsky-zaliv-drony-lod-sparta-ii-2026",
+      "styl": "kratka",
+      "messageId": 73
     }
   },
   "kyber": {
-    "stav": "pozor",
+    "stav": "klid",
     "posledni": "2026-11-19T09:04:34.389Z",
     "varovani": [
       "ceska-republika-podporila-mezinarodni-ramec-pro-boj-s-ransom"

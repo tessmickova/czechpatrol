@@ -1,5 +1,5 @@
 {
-  "aktualizovano": "2026-11-21T12:03:34.177Z",
+  "aktualizovano": "2026-11-21T20:03:12.886Z",
   "stavy": [
     {
       "klic": "cloudflare",
@@ -18,19 +18,16 @@
         "Albuquerque, United States - (ABQ)",
         "Arica, Chile - (ARI)"
       ],
-      "zkontrolovano": "2026-11-21T12:03:34.177Z",
+      "zkontrolovano": "2026-11-21T20:03:12.886Z",
       "chyba": null
     },
     {
       "klic": "zoom",
-      "stav": "omezeni",
-      "popis": "Service Under Maintenance",
+      "stav": "provoz",
+      "popis": "All Systems Operational",
       "incidenty": [],
-      "postizene": [
-        "Zoom Phone",
-        "Zoom Phone - APAC"
-      ],
-      "zkontrolovano": "2026-11-21T12:03:34.177Z",
+      "postizene": [],
+      "zkontrolovano": "2026-11-21T20:03:12.886Z",
       "chyba": null
     },
     {
@@ -39,7 +36,7 @@
       "popis": "All Systems Operational",
       "incidenty": [],
       "postizene": [],
-      "zkontrolovano": "2026-11-21T12:03:34.177Z",
+      "zkontrolovano": "2026-11-21T20:03:12.886Z",
       "chyba": null
     }
   ]

@@ -393,21 +393,40 @@ function TemaBox({ id, nadpis, ikona, napoveda, radky, celkem, ted, zalozky = fa
   sloupec je absolutně v buňce mřížky, takže výšku řádku určují Signály,
   a box hranic vyplní, co zbude pod boxem vod.
 */
-function TemataSloupec({ zaznamy, nepotvrzene, zachycene, ted }: { zaznamy: Zaznam[]; nepotvrzene: Zaznam[]; zachycene: Kandidat[]; ted: number }) {
-  const hranice = radkyTematu("hranice", zaznamy, nepotvrzene, zachycene, ted);
-  const vody = radkyTematu("vody", zaznamy, nepotvrzene, zachycene, ted);
+function TemataSloupec({ hranice, vody, ted, poradi }: { hranice: Radek[]; vody: Radek[]; ted: number; poradi: { hranice: string; vody: string } }) {
   return (
-    <div className="relative min-w-0 md:min-h-[520px]">
-      <div className="flex flex-col gap-4 md:absolute md:inset-0">
-        <TemaBox id="box-hranice" nadpis={<><span className="lg:max-xl:hidden">Incidenty na hranicích</span><span className="hidden lg:max-xl:inline">Na hranicích</span></>} ikona="hranice" radky={hranice} ted={ted} zalozky maxMobil={6} trida="md:flex-1"
+    /* Na mobilu jsou oba obaly „display: contents“: boxy se stanou přímými položkami mřížky a dají se seřadit se Signály podle aktuálnosti. */
+    <div className="relative min-w-0 max-md:contents md:min-h-[520px]">
+      <div className="flex flex-col gap-4 max-md:contents md:absolute md:inset-0">
+        <TemaBox id="box-hranice" nadpis={<><span className="lg:max-xl:hidden">Incidenty na hranicích</span><span className="hidden lg:max-xl:inline">Na hranicích</span></>} ikona="hranice" radky={hranice} ted={ted} zalozky maxMobil={6} trida={`md:flex-1 ${poradi.hranice}`}
           napoveda={`Hranice NATO s Ruskem a Běloruskem a drony nad Rumunskem: záznamy za ${OKNO_TEMAT_DNI} dní a zprávy zachycené sběrem. Štítek u řádku říká, co je doložené. Důležité (v rámečku): o zprávě píšou aspoň dvě nezávislé redakce, nebo jde o záznam se závažností Vysoká či Vážná za posledních 7 dní.`}
           prazdne={`Za ${OKNO_TEMAT_DNI} dní nic zachyceno.`} odkaz={{ kam: "/udalosti/?tab=cekajici&tema=hranice", text: "vše" }} />
-        <TemaBox id="box-vody" nadpis="Mezinárodní vody" ikona="voda" radky={vody.slice(0, 2)} celkem={vody.length} ted={ted} maxMobil={2} trida="md:shrink-0" oriznout={false}
+        <TemaBox id="box-vody" nadpis="Mezinárodní vody" ikona="voda" radky={vody.slice(0, 2)} celkem={vody.length} ted={ted} maxMobil={2} trida={`md:shrink-0 ${poradi.vody}`} oriznout={false}
           napoveda={`Incidenty na moři a nepřátelské akce vedené z mezinárodních vod proti zemím NATO a Evropy: drony vypuštěné z lodí, rušení GPS, válečné lodě u pobřeží, stínová flotila, podmořské kabely — Balt, Černé, Severní a Středozemní moře. Stejná pravidla jako u hranic. Vidět jsou dvě nejdůležitější nebo nejnovější.`}
           prazdne={`Za ${OKNO_TEMAT_DNI} dní nic zachyceno.`} />
       </div>
     </div>
   );
+}
+
+/*
+  Pořadí sloupců na mobilu (21. 11. 2026, provozovatelka: „na mobilní verzi
+  uveď nejdřív nahoře ty sloupce, kde jsou nejaktuálnější varování“).
+  Nejdřív sloupce s platnou naléhavou nebo důležitou zprávou (podle data té
+  nejnovější), pak ostatní podle nejnovější zprávy. Třídy jsou vypsané celé,
+  aby je Tailwind našel; na počítači (md+) nemají vliv.
+*/
+const TRIDY_PORADI = ["max-md:order-1", "max-md:order-2", "max-md:order-3"] as const;
+
+export function poradiSloupcu<K extends string>(sloupce: Record<K, readonly { kdy: string | null; naliehavost?: unknown }[]>): Record<K, string> {
+  const nejnovejsi = (r: readonly { kdy: string | null }[]) => r.reduce((m, x) => ((x.kdy ?? "") > m ? (x.kdy ?? "") : m), "");
+  const klice = (Object.keys(sloupce) as K[]).map((k, i) => {
+    const radky = sloupce[k];
+    const dulezite = radky.filter((r) => r.naliehavost);
+    return { k, i, dulezite: nejnovejsi(dulezite), vse: nejnovejsi(radky) };
+  });
+  klice.sort((a, b) => (b.dulezite ? 1 : 0) - (a.dulezite ? 1 : 0) || b.dulezite.localeCompare(a.dulezite) || b.vse.localeCompare(a.vse) || a.i - b.i);
+  return Object.fromEntries(klice.map((x, poradi) => [x.k, TRIDY_PORADI[Math.min(poradi, TRIDY_PORADI.length - 1)]])) as Record<K, string>;
 }
 
 export function AktualitySloupce({ zaznamy, nepotvrzene = [], kandidati = [], temata = [], ted: tedServer = Date.now() }: { zaznamy: Zaznam[]; nepotvrzene?: Zaznam[]; kandidati?: Kandidat[]; /** Zachycené zprávy o hranicích a mořích z celé fronty (src/lib/data.ts, kandidatiTemat). */ temata?: Kandidat[]; ted?: number }) {
@@ -441,14 +460,17 @@ export function AktualitySloupce({ zaznamy, nepotvrzene = [], kandidati = [], te
   /* Co se do sloupce nedostalo (cizí jazyk, nic o útoku, projev) — na úvodu jen jako počet s odkazem do fronty. */
   const zobrazene = new Set(skupiny.filter((g) => g.polozky.some(jeSignal)).flatMap((g) => g.polozky.map((p) => p.id)));
   const dalsich = kandidati.filter((k) => !zobrazene.has(k.id) && temaZpravy(k) === null).length;
+  const hranice = radkyTematu("hranice", zaznamy, nepotvrzene, temata, ted);
+  const vody = radkyTematu("vody", zaznamy, nepotvrzene, temata, ted);
+  const poradiNaMobilu = poradiSloupcu({ signaly: neoverene, hranice, vody });
   return (
     <section aria-labelledby="aktuality-nadpis">
       <h2 id="aktuality-nadpis" className="sr-only">Aktuality</h2>
       <div className="grid gap-10 md:grid-cols-2 md:gap-x-16">
         {/* Místo „Doloženo zdroji“ boxy hranic a vod (20. 11. 2026); doložené záznamy jsou na stránce Události. */}
-        <TemataSloupec zaznamy={zaznamy} nepotvrzene={nepotvrzene} zachycene={temata} ted={ted} />
-        {/* Mobil: nejdřív čerstvé signály, pak boxy témat (26. 9. 2026). Na počítači zůstávají boxy vlevo. */}
-        <Sloupec trida="max-md:order-first" ted={ted} nadpis="Signály z médií" ikona="otaznik" ton="pozor" radky={neoverene} prazdne="Právě žádný nový signál." napoveda="Neověřené. Do počtů ani hodnocení nevstupují. Hranice NATO a moře jsou v boxech vedle."
+        <TemataSloupec hranice={hranice} vody={vody} ted={ted} poradi={{ hranice: poradiNaMobilu.hranice, vody: poradiNaMobilu.vody }} />
+        {/* Mobil: sloupce podle aktuálnosti varování (21. 11. 2026). Na počítači zůstávají boxy vlevo a Signály vpravo. */}
+        <Sloupec trida={poradiNaMobilu.signaly} ted={ted} nadpis="Signály z médií" ikona="otaznik" ton="pozor" radky={neoverene} prazdne="Právě žádný nový signál." napoveda="Neověřené. Do počtů ani hodnocení nevstupují. Hranice NATO a moře jsou v boxech vedle."
           paticka={dalsich > 0 ? <Link href="/udalosti/?tab=cekajici" className="text-drobne text-tlum2 hover:text-tlum">+ {dalsich} dalších ve frontě →</Link> : <span className="text-drobne text-tlum2">Do počtů ani hodnocení nevstupují.</span>} />
       </div>
     </section>

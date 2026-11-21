@@ -1,5 +1,173 @@
 [
   {
+    "id": "k-c16d23817e83055e",
+    "zachyceno": "2026-11-21T19:00:54.700Z",
+    "publikovano": "2026-11-21T17:50:00.000Z",
+    "zdroj": {
+      "nazev": "Ukrinform (anglicky)",
+      "url": "https://www.ukrinform.net/rubric-emergencies/4187228-finland-suspects-russian-helicopter-of-violating-its-airspace.html",
+      "typ": "wire",
+      "primarni": false
+    },
+    "titulek": "Finland suspects Russian helicopter of violating its airspace",
+    "titulekPuvodni": "Finland suspects Russian helicopter of violating its airspace",
+    "shrnuti": "Finland suspects that a Russian helicopter violated its airspace on Saturday afternoon.",
+    "kodZeme": "FI",
+    "zeme": "Finsko",
+    "kategorie": [
+      "drony",
+      "rusko"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "violat+airspace",
+      "airspace",
+      "russia"
+    ],
+    "naliehave": {
+      "druh": "vzdusny-prostor-nato",
+      "stupen": 2,
+      "proc": "violated+airspace"
+    },
+    "stav": "ceka",
+    "vyrez": {
+      "text": "Finland suspects Russian helicopter of violating its airspace\n\r\nSubscription\nNewsletters\nPhotobank\nUkrinform - Ukrainian National News Agency\nFounded in 1918\nSaturday, 21 November 2026, 21:00\nWar\nEconomy\nSports\nMore ☰\nContacts\nEng\nУкр\nEng\nEsp\nDeu\nعربي\nFra\n日本語\nPol\n&times;\nAll topics\nWar\nRecovery of Ukraine\nPolitics\nEconomy\nFact checks\nDefense\nSociety and Culture\nSports\nCrime\nAccidents and Emergencies\nAgency\nInformation on Agency\nOur Contacts\nSubscribtion Terms\nOur Services\nPrivacy policy and personal data protection\nAdditional\nPublications\nInterviews\nPhoto\nVideo\nLongreads\nReleases\nServices\nSubscription\nNewsletters\nPhotobank\n\r\n\r\n\r\nFinland suspects that a Russian helicopter violated its airspace on Saturday afternoon.\nThis was reported by Yle , citing the Finnish Ministry of Defence, according to Ukrinform.\n\r\n\r\nAccording to the ministry, the incident occurred at 12:34 on November 21 off the coast of the city of Loviisa. The helicopter reportedly penetrated approximately four kilometers into Finnish airspace.\n\r\n\r\nFinnish Defence Minister Antti H&auml;kk&auml;nen suggested that the incident could be linked to a Russian vessel damaged in the Gulf of Finland.\n\r\n\r\nThe Finnish Defence…",
+      "stazeno": "2026-11-21T19:00:54.861Z",
+      "stav": 200
+    }
+  },
+  {
+    "id": "k-31233159d497c317",
+    "zachyceno": "2026-11-21T16:03:05.459Z",
+    "publikovano": "2026-11-21T15:43:14.000Z",
+    "zdroj": {
+      "nazev": "Euronews",
+      "url": "https://www.euronews.com/2026/11/21/estonia-russia-border-closure-sends-residents-rushing-to-cross-before-deadline",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Estonia-Russia border closure sends residents rushing to cross before deadline",
+    "titulekPuvodni": "Estonia-Russia border closure sends residents rushing to cross before deadline",
+    "shrnuti": "Families and travellers are queuing to cross from Russia into Estonia before all five road border crossings are shut on 1 December. The decision follows an alleged Russian-backed sabotage attempt, but has also raised concerns among people with relatives on both sides of the border.",
+    "kodZeme": "EE",
+    "zeme": "Estonsko",
+    "kategorie": [
+      "sabotaz",
+      "hranice",
+      "rusko"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "sabotage",
+      "border closure",
+      "border",
+      "russia"
+    ],
+    "naliehave": {
+      "druh": "hranice-nato",
+      "stupen": 2,
+      "proc": "sends+border"
+    },
+    "stav": "ceka",
+    "vyrez": {
+      "text": "Estonia-Russia border closure sends residents rushing to cross before deadline | Euronews\nAdvertisement\nBy&nbsp Nela Heidner\nPublished on\n21 November 2026 - 16:43 GMT+1\nShare\nFacebook\nTwitter\nFlipboard\nSend\nReddit\nLinkedin\nMessenger\nTelegram\nVK\nBluesky\nThreads\nWhatsapp\nFamilies and travellers are queuing to cross from Russia into Estonia before all five road border crossings are shut on 1 December. The decision follows an alleged Russian-backed sabotage attempt, but has also raised concerns among people with relatives on both sides of the border.\nPeople carrying suitcases, backpacks and plastic bags have been gathering in the Russian border town of Ivangorod, hoping to cross into Estonia before the Baltic country closes its land border with Russia next month.\nADVERTISEMENT\nADVERTISEMENT\nThe queues reflect the impact of a decision that will affect not only cross-border travel but also families with relatives living on opposite sides of the frontier.\nEstonia, a member of NATO and the European Union, announced on 20 November that it would suspend road crossings at all five road border checkpoints with Russia from 1 December. The restriction is due to remain in place for six months,…",
+      "stazeno": "2026-11-21T16:03:08.310Z",
+      "stav": 200
+    }
+  },
+  {
+    "id": "k-51c5cb57b3e1eef7",
+    "zachyceno": "2026-11-21T16:03:04.711Z",
+    "publikovano": "2026-11-21T14:02:00.000Z",
+    "zdroj": {
+      "nazev": "iDNES.cz — zpravodajství",
+      "url": "https://www.idnes.cz/zpravy/zahranicni/drony-zautocily-na-lod-ve-finskem-zalivu-posadka-se-evakuuje.A261121_131149_zahranicni_sahu#utm_source=rss&utm_medium=feed&utm_campaign=zpravodaj&utm_content=main",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Drony zasáhly ruskou loď ze sankčního seznamu, proud ji zanesl do finských vod",
+    "titulekPuvodni": "Drony zasáhly ruskou loď ze sankčního seznamu, proud ji zanesl do finských vod",
+    "shrnuti": "V neutrálních vodách Finského zálivu v sobotu dva drony zaútočily na nákladní loď, uvedl gubernátor Leningradské oblasti Alexandr Drozděnko podle ruské služby BBC. Probíhá evakuace posádky, dodal. Dronový útok na loď v této části Baltského moře potvrdila finská armáda. Helsinky zároveň upozornily na",
+    "kodZeme": "FI",
+    "zeme": "Finsko",
+    "kategorie": [
+      "hybridni",
+      "drony",
+      "vojsko",
+      "rusko"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "utok na",
+      "narusil+vzdusny prostor",
+      "dron+zasahl",
+      "dron",
+      "vzdusny prostor",
+      "armada",
+      "rusk"
+    ],
+    "naliehave": {
+      "druh": "vzdusny-prostor-nato",
+      "stupen": 2,
+      "proc": "narusil+vzdusny prostor"
+    },
+    "stav": "ceka",
+    "vyrez": {
+      "text": "Drony zaútočily na loď ve Finském zálivu posádka se evakuuje - iDNES.cz \r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\niDNES.cz\n\r\n\r\n\r\nP�ihl�sit \r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nAbyste mohli pokra�ovat, pot�ebujeme v�d�t, jakou formou v�m m��eme zobrazovat reklamu \r\n\r\n\r\n\r\n\r\n\r\nV�mi zvolen� nastaven� \r\nneobsahuje souhlas se zobrazov�n�m c�len� reklamy . \r\nVyberte pros�m znovu, \r\njakou formou v�m m�me zobrazovat obsah. \r\n\r\n\r\n\r\n\r\n\r\n\r\niDNES Premium\n\r\nBez reklam\n\r\n\r\n199 K� m�s��n�\n\r\nM��ete neomezen� ��st iDNES.cz, Lidovky.cz, Expres.cz a Antiyoutuber.cz. K tomu dostanete tak� noviny a �asopisy v elektronick� podob�. To v�e bez reklam. 1\n\r\n\r\nP�edplatit\n\r\n\r\nU� m�te ��et? P�ihlaste se\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nS c�lenou reklamou\n\r\n\r\n\r\nZdarma \r\n\r\nZachov�me v�m v�e tak, jak jste zvykl� a reklamu p�izp�sob�me va�im z�jm�m. Bez omezen� si m��ete d�l ��st, p�ehr�vat videa, sout�it �i p�isp�vat do v�ech diskus�. 2\n\r\n\r\nSouhlas�m\n\r\nPodrobn� nastaven�\n\r\n\r\n\r\n\r\n\r\n\r\niDNES a reklama\n\r\nPokud vyu�ijete m�sto platby ud�len� souhlasu s reklamou (tj. souhlas s vyu�it�m cookies a dal��ch s�ov�ch identifik�tor� pro ��ely c�len� reklamy), \r\nbudou V�m zobrazov�ny v r�mci…",
+      "stazeno": "2026-11-21T16:03:09.404Z",
+      "stav": 200
+    }
+  },
+  {
+    "id": "k-7b2e44e0358c4078",
+    "zachyceno": "2026-11-21T16:03:04.613Z",
+    "publikovano": "2026-11-21T13:58:52.000Z",
+    "zdroj": {
+      "nazev": "Novinky.cz",
+      "url": "https://www.novinky.cz/clanek/zahranicni-evropa-finsko-ma-podezreni-ze-jeho-vzdusny-prostor-narusil-rusky-vrtulnik-40609832",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Ukrajinské drony zasáhly ve Finském zálivu ruskou nákladní loď",
+    "titulekPuvodni": "Ukrajinské drony zasáhly ve Finském zálivu ruskou nákladní loď",
+    "shrnuti": "Drony ukrajinských operátorů v sobotu zaútočily na loď ruské stínové flotily v Baltském moři. Útok potvrdily ruské úřady a také finská armáda a estonská pohraniční stráž. Finská armáda během soboty uvedla, že má podezření, že ruský vrtulník narušil finský vzdušný prostor.",
+    "kodZeme": "FI",
+    "zeme": "Finsko",
+    "kategorie": [
+      "drony",
+      "vojsko",
+      "rusko"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "narusil+vzdusny prostor",
+      "dron+zasahl",
+      "dron",
+      "vzdusny prostor",
+      "armada",
+      "rusk"
+    ],
+    "naliehave": {
+      "druh": "vzdusny-prostor-nato",
+      "stupen": 2,
+      "proc": "narusil+vzdusny prostor"
+    },
+    "stav": "ceka",
+    "vyrez": {
+      "text": "Ukrajinské drony zasáhly ve Finském zálivu ruskou nákladní loď - Novinky\nZobrazení snímku 1 z 0\nzáhlaví\nHlavní obsah\nUkrajinské drony zasáhly ve Finském zálivu ruskou nákladní loď\nJana Kotrášová , ČTK\nvybrat autory ke sledování\n2:39\nChcete-li článek poslouchat, přihlaste se\neBook\nSdílet\nDnes 21. 11., 14:58 Aktualizováno dnes 16:21\nDrony ukrajinských operátorů v sobotu zaútočily na loď ruské stínové flotily v Baltském moři. Útok potvrdily ruské úřady a také finská armáda a estonská pohraniční stráž. Finská armáda během soboty uvedla, že má podezření, že ruský vrtulník narušil finský vzdušný prostor.\nFoto: AstraPress/Telegram\nNákladní loď Sparta II ruské stínové flotily po zásahu dronů v Baltském moři.\nČlánek\n„V neutrálních vodách Finského zálivu, tři námořní míle od hranice Ruské federace, došlo k útoku na nákladní loď směřující do Kaliningradu, při kterém byly použity dva bezpilotní letouny. V tuto chvíli probíhá evakuace posádky,“ oznámil gubernátor Leningradské oblasti Alexandr Drozděnko na Telegramu.\nPozději politik upřesnil, že k lodi připlulo ruské záchranné plavidlo a zjistilo, že situace je pod kontrolou a evakuace není třeba. Posádka chce pokračovat v plavbě po původní…",
+      "stazeno": "2026-11-21T16:03:11.421Z",
+      "stav": 200
+    }
+  },
+  {
     "id": "k-d05a790c3b9e4354",
     "zachyceno": "2026-11-20T18:03:18.926Z",
     "publikovano": "2026-11-20T16:46:00.000Z",
@@ -1072,6 +1240,999 @@
     "vyrez": {
       "text": "Romania scrambles four F-16s after two drones violate its airspace | Ukrainska Pravda\nA fighter jet. Stock photo: Getty Images\nRadar surveillance systems operated by Romania's Ministry of National Defence detected two unmanned aerial vehicles that had entered the country's airspace without authorisation on the evening of 31 October.\nSource: Romania's Ministry of National Defence , as reported by European Pravda\nDetails: Romania scrambled four F-16 fighter jets and an IAR-330 SOCAT helicopter to monitor the situation and manage the response after two unmanned aerial vehicles violated the country's airspace.\nAdvertisement:\n\r\n\r\n\r\n\r\n\r\nAlerts were issued in six Romanian counties due to the airspace violation: Iași, Neamț, Vaslui, Botoșani, Bacău and Suceava.\nOne of the two drones left the country's airspace, while the other was last spotted in the area between the counties of Vaslui and Bacău.\nNo drone crashes were reported.\nBackground:\nOn the same day, a drone violated Moldovan airspace during Russian aerial attacks on Ukraine.\nOn 23 October, Moldova's Foreign Ministry condemned the violation of the country's airspace by a drone and blamed Russia for the incident.\nAfter a drone was…",
       "stazeno": "2026-11-01T10:03:31.722Z",
+      "stav": 200
+    }
+  },
+  {
+    "id": "k-5e1e334a3ce134a2",
+    "zachyceno": "2026-11-21T20:03:04.609Z",
+    "publikovano": null,
+    "zdroj": {
+      "nazev": "The Kyiv Independent",
+      "url": "https://kyivindependent.com/explosions-reported-near-russian-baltic-fleet-base-in-kaliningrad-oblast-amid-drone-alerts/",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Explosions reported near Russian Baltic Fleet base in Kaliningrad Oblast amid drone alerts.",
+    "titulekPuvodni": "Explosions reported near Russian Baltic Fleet base in Kaliningrad Oblast amid drone alerts.",
+    "shrnuti": "",
+    "kodZeme": "RU",
+    "zeme": "Rusko",
+    "kategorie": [
+      "sabotaz",
+      "drony",
+      "rusko"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "explosion",
+      "dron",
+      "drone",
+      "russia"
+    ],
+    "naliehave": null,
+    "stav": "ceka",
+    "vyrez": {
+      "text": "Explosions reported near Russian Baltic Fleet base in Kaliningrad Oblast amid drone alerts 0 of 5,000\nHelp us find 5,000 new members. Bring one friend.\nShare your personal link and make us stronger in 2027.\n0 found so far\nGoal 5,000\nCopy link Copy\nLog in to see who joined through your link.\nWar Explosions reported near Russian Baltic Fleet base in Kaliningrad Oblast amid drone alerts\nNovember 21, 2026 9:01 pm • 2 min read\nPrefer on Google\nT\nby Tamara Nowakowsky\nA nighttime view of a port facility in footage shared by the Exilenova+ Telegram channel amid reports of explosions and drone activity in Baltiysk, Kaliningrad Oblast, on Nov. 21, 2026. (Exilenova+/Telegram)\nExplosions and suspected drone activity were reported near Russia's Baltic Fleet naval base in Baltiysk, Kaliningrad Oblast, on Nov. 21, as air raid sirens sounded across parts of the Russian exclave.\nThe reports come amid heightened security concerns in the Baltic region, with the Russian exclave bordering NATO members Poland and Lithuania. At the time of publication, it remained unclear whether the naval base had been targeted or whether any military facilities had sustained damage.\nUkrainian monitoring Telegram…",
+      "stazeno": "2026-11-21T20:03:06.874Z",
+      "stav": 200
+    }
+  },
+  {
+    "id": "k-7bb8a856bfbd2d5f",
+    "zachyceno": "2026-11-21T20:03:04.856Z",
+    "publikovano": "2026-11-21T19:56:39.000Z",
+    "zdroj": {
+      "nazev": "France 24 (anglicky)",
+      "url": "https://www.france24.com/en/europe/20261121-russia-attacks-zelensky-s-hometown-ukraine-reaffirms-wish-to-join-nato",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Russia attacks Zelensky's hometown, Ukraine reaffirms wish to join NATO",
+    "titulekPuvodni": "Russia attacks Zelensky's hometown, Ukraine reaffirms wish to join NATO",
+    "shrnuti": "A Russian ballistic missile attack on President Volodymyr Zelensky’s hometown in central Ukraine on Saturday killed two people and wounded dozens. Hours later, Zelensky reiterated his country's determination to join NATO, following proposals to provide Kyiv with security guarantees similar to those ",
+    "kodZeme": "UA",
+    "zeme": "Ukrajina",
+    "kategorie": [
+      "hybridni",
+      "nato",
+      "rusko"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "attack on",
+      "nato",
+      "russia"
+    ],
+    "naliehave": null,
+    "stav": "ceka",
+    "vyrez": {
+      "text": "Russia attacks Zelensky's hometown, Ukraine reaffirms wish to join NATO - France 24\nSkip to main content\nAdvertising\nRussia attacks Zelensky's hometown, Ukraine reaffirms wish to join NATO\nA Russian ballistic missile attack on President Volodymyr Zelensky’s hometown in central Ukraine on Saturday killed two people and wounded dozens. Hours later, Zelensky reiterated his country's determination to join NATO, following proposals to provide Kyiv with security guarantees similar to those of the military alliance.\nIssued on: 21/11/2026 - 20:56 Modified: 21/11/2026 - 20:56\n5 min Reading time\nShare\nBy:\nFRANCE 24\nVideo by:\nGulliver CRAGG\nTo display this content from YouTube, you must enable advertisement tracking and audience measurement.\nAccept\nManage my choices\nOne of your browser extensions seems to be blocking the video player from loading. To watch this content, you may need to disable it on this site.\nTry again\nCover image: A damaged restaurant after a Russian strike on Kryvyi Rih, Ukraine, November 21, 2026. © AP via Dnipropetrovsk regional military\n04:50\nA Russian strike on the center of Ukrainian President Volodymyr Zelensky ’s hometown, Kryvyi Rih, killed two people and wounded…",
+      "stazeno": "2026-11-21T20:03:07.232Z",
+      "stav": 200
+    }
+  },
+  {
+    "id": "k-9ccdbee282485263",
+    "zachyceno": "2026-11-21T20:03:04.858Z",
+    "publikovano": "2026-11-21T19:55:07.000Z",
+    "zdroj": {
+      "nazev": "France 24 (anglicky)",
+      "url": "https://www.france24.com/en/russia-launches-ballistic-missile-attack-on-zelensky-s-hometown-in-central-ukraine",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Russia launches ballistic missile attack on Zelensky's hometown in central Ukraine",
+    "titulekPuvodni": "Russia launches ballistic missile attack on Zelensky's hometown in central Ukraine",
+    "shrnuti": "A Russian ballistic missile attack on President Volodymyr Zelensky’s hometown in central Ukraine on Saturday killed two people and wounded dozens. Hours later, Zelensky reiterated his country's determination to join NATO. FRANCE 24's Gulliver Cragg reports from Kyiv.",
+    "kodZeme": "FR",
+    "zeme": "Francie",
+    "kategorie": [
+      "hybridni",
+      "nato",
+      "rusko"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "attack on",
+      "nato",
+      "russia"
+    ],
+    "naliehave": null,
+    "stav": "ceka",
+    "vyrez": {
+      "text": "Russia launches ballistic missile attack on Zelensky's hometown in central Ukraine - France 24\nSkip to main content\nTo display this content from YouTube, you must enable advertisement tracking and audience measurement.\nAccept\nManage my choices\nOne of your browser extensions seems to be blocking the video player from loading. To watch this content, you may need to disable it on this site.\nTry again\nCover image: © France 24\n04:50\nVideo content\nVideo\nRussia launches ballistic missile attack on Zelensky's hometown in central Ukraine\nIssued on: 21/11/2026 - 20:55\nShare\nA Russian ballistic missile attack on President Volodymyr Zelensky’s hometown in central Ukraine on Saturday killed two people and wounded dozens. Hours later, Zelensky reiterated his country's determination to join NATO. FRANCE 24's Gulliver Cragg reports from Kyiv.\nVideo by:\nGulliver CRAGG\nKeywords for this article\nUkraine\nRussia\nNATO\nRead more\nRead less\nDrone attack sets Russian cargo ship ablaze in Gulf of Finland\n21/11/2026\nVideo content\nVideo\nEurope\nEU, UK reach reset deal after Brexit\n21/11/2026\nVideo content\nVideo\nUK\nUK and EU strike ‘landmark’ deal to rebuild ties after Brexit\n20/11/2026\nVideo…",
+      "stazeno": "2026-11-21T20:03:07.397Z",
+      "stav": 200
+    }
+  },
+  {
+    "id": "k-bcdeef034c16e585",
+    "zachyceno": "2026-11-21T20:03:04.358Z",
+    "publikovano": "2026-11-21T19:26:30.000Z",
+    "zdroj": {
+      "nazev": "Novinky.cz",
+      "url": "https://www.novinky.cz/clanek/valka-na-ukrajine-letecky-poplach-v-kaliningradske-oblasti-mezi-polskem-a-litvou-zasahovala-ruska-protivzdusna-obrana-40609847",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Letecký poplach v Kaliningradské oblasti mezi Polskem a Litvou. Zasahovala ruská protivzdušná obrana",
+    "titulekPuvodni": "Letecký poplach v Kaliningradské oblasti mezi Polskem a Litvou. Zasahovala ruská protivzdušná obrana",
+    "shrnuti": "V ruské enklávě Kaliningradské oblasti mezi Polskem a Litvou úřady v sobotu večer vyhlásily letecký poplach. Monitorovací kanály informovaly o obranných aktivitách a explozích v přístavu Baltijsk ruského baltského námořnictva.",
+    "kodZeme": "PL",
+    "zeme": "Polsko",
+    "kategorie": [
+      "drony",
+      "rusko"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "letecky poplach",
+      "rusk"
+    ],
+    "naliehave": null,
+    "stav": "ceka",
+    "vyrez": {
+      "text": "Letecký poplach v Kaliningradské oblasti mezi Polskem a Litvou. Zasahovala ruská protivzdušná obrana - Novinky\nZobrazení snímku 1 z 0\nzáhlaví\nHlavní obsah\nLetecký poplach v Kaliningradské oblasti mezi Polskem a Litvou. Zasahovala ruská protivzdušná obrana\nJana Kotrášová\n2:22\nChcete-li článek poslouchat, přihlaste se\neBook\nSdílet\nDnes 21. 11., 20:26\nV ruské enklávě Kaliningradské oblasti mezi Polskem a Litvou úřady v sobotu večer vyhlásily letecký poplach. Monitorovací kanály informovaly o obranných aktivitách a explozích v přístavu Baltijsk ruského baltského námořnictva.\nLetecký poplach v přístavu ruského baltského námořnictva v Kaliningradské oblasti Video: Exilenova+/Supernova+/Telegram\nČlánek\n„V přístavním městě Baltijsk v Kaliningradské oblasti byly zaznamenány četné výbuchy a zvuky bezpilotních letounů,“ upozornil monitorovací kanál Exilenova+ na Telegramu.\nRuská média i kanály na sociálních sítích již dříve upozorňovaly na letecký poplach. „Místní úřady uvedly, že se jednalo o cvičný poplach, jehož příčinou byl chybný signál o leteckém cíli ze strany Litvy,“ doplnil kanál.\n„Nicméně za necelou hodinu sirény znovu zazněly. Byla rovněž zaznamenána činnost ruské protivzdušné…",
+      "stazeno": "2026-11-21T20:03:07.558Z",
+      "stav": 200
+    }
+  },
+  {
+    "id": "k-535ac6d3d34d6628",
+    "zachyceno": "2026-11-21T20:03:06.742Z",
+    "publikovano": "2026-11-21T19:10:00.000Z",
+    "zdroj": {
+      "nazev": "Ukrinform (anglicky)",
+      "url": "https://www.ukrinform.net/rubric-ato/4187239-airport-in-russias-kaliningrad-region-temporarily-closed-amid-drone-threat-social-media.html",
+      "typ": "wire",
+      "primarni": false
+    },
+    "titulek": "Airport in Russia’s Kaliningrad region temporarily closed amid drone threat – social media",
+    "titulekPuvodni": "Airport in Russia’s Kaliningrad region temporarily closed amid drone threat – social media",
+    "shrnuti": "Khrabrovo Airport in Russia’s Kaliningrad temporarily suspended arrivals and departures.",
+    "kodZeme": "RU",
+    "zeme": "Rusko",
+    "kategorie": [
+      "drony",
+      "rusko"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "dron+airport+suspend",
+      "dron",
+      "drone",
+      "russia"
+    ],
+    "naliehave": null,
+    "stav": "ceka",
+    "vyrez": {
+      "text": "Airport in Russia’s Kaliningrad region temporarily closed amid drone threat – social media\n\r\nSubscription\nNewsletters\nPhotobank\nUkrinform - Ukrainian National News Agency\nFounded in 1918\nSaturday, 21 November 2026, 22:03\nWar\nEconomy\nSports\nMore ☰\nContacts\nEng\nУкр\nEng\nEsp\nDeu\nعربي\nFra\n日本語\nPol\n&times;\nAll topics\nWar\nRecovery of Ukraine\nPolitics\nEconomy\nFact checks\nDefense\nSociety and Culture\nSports\nCrime\nAccidents and Emergencies\nAgency\nInformation on Agency\nOur Contacts\nSubscribtion Terms\nOur Services\nPrivacy policy and personal data protection\nAdditional\nPublications\nInterviews\nPhoto\nVideo\nLongreads\nReleases\nServices\nSubscription\nNewsletters\nPhotobank\n\r\n\r\n\r\nKhrabrovo Airport in Russia&rsquo;s Kaliningrad temporarily suspended arrivals and departures.\nAccording to Ukrinform, this was reported by the ASTRA Telegram channel.\n\r\n\r\n&ldquo;Air raid sirens have sounded in Kaliningrad. Residents are being asked to move to safe locations,&rdquo; the report said.\n\r\n\r\nMobile phone subscribers also received notifications from telecom operators warning that &ldquo;mobile internet access may be temporarily restricted for security reasons.&rdquo;\n\r\n\r\nIn addition, temporary restrictions were…",
+      "stazeno": "2026-11-21T20:03:08.297Z",
+      "stav": 200
+    }
+  },
+  {
+    "id": "k-723e21f3cbd8e9fc",
+    "zachyceno": "2026-11-21T19:00:53.010Z",
+    "publikovano": "2026-11-21T18:45:19.000Z",
+    "zdroj": {
+      "nazev": "TVN24 (Polsko)",
+      "url": "https://tvn24.pl/polska/mark-rutte-sekretarz-generalny-nato-trzy-obiekty-ktore-wlecialy-do-polski-to-niebezpieczny-incydent-ale-nie-terytorium-artykulu-5-st9351189?source=rss",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Mark Rutte o naruszeniu polskiej przestrzeni powietrznej: niebezpieczny incydent, ale nie terytorium artykułu 5",
+    "titulekPuvodni": "Mark Rutte o naruszeniu polskiej przestrzeni powietrznej: niebezpieczny incydent, ale nie terytorium artykułu 5",
+    "shrnuti": "Sekretarz generalny NATO Mark Rutte ocenił w TVN24, że to, co wydarzyło się w Polsce w piątek, jest niebezpiecznym incydentem i czymś nie do przyjęcia, ale nie jest jeszcze \"terytorium artykułu 5\". Wyraził też sceptycyzm wobec idei zestrzeliwania rosyjskich dronów nad zachodnią Ukrainą i bronił słów",
+    "kodZeme": "PL",
+    "zeme": "Polsko",
+    "kategorie": [
+      "drony",
+      "nato"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "narusz+przestrzeni powietrzn",
+      "dron",
+      "nato"
+    ],
+    "naliehave": null,
+    "stav": "ceka",
+    "vyrez": {
+      "text": "Mark Rutte, sekretarz generalny NATO: trzy obiekty, które wleciały do Polski, to niebezpieczny incydent, ale nie terytorium artykułu 5 - TVN24\nSUBSKRYBUJ Przejdź do\nSzukaj\nZnaleziono 0 materiałów zawierających:\nRedakcja poleca:\nZobacz więcej wyników\nMoje konto\nPobrane materiały\nOglądaj dalej\nObserwowane\nNewslettery\nPreferencje treści\nMoje zakupy i karty\nSklep\nZrealizuj voucher\nPomoc\nZgłoś problem\nEdytuj dane\nWyloguj się\nZaloguj się\nMenu\nZamknij\nOglądaj TVN24\nNajnowsze\nFakty\nŚwiat\nPolska\nRegionalne\nWarszawa\nŁódź\nKatowice\nKraków\nPoznań\nTrójmiasto\nWrocław\nKielce\nKujawsko-pomorskie\nLublin\nLubuskie\nOlsztyn\nOpole\nRzeszów\nSzczecin\nBiałystok\nWięcej\nBiznes\nMeteo\nSport\nZdrowie\nTechnologia\nKultura i styl\nKonkret24\nKontakt24\nCiekawostki\nNewslettery\nQuizy\nTematy\nChińska ekspansja\nMęskie zdrowie\nWybory w USA\nCzytaj\nSłuchaj\nOglądaj\nMark Rutte o naruszeniu polskiej przestrzeni powietrznej: niebezpieczny incydent, ale nie terytorium artykułu 5\nŹródło wideo: TVN24\nŹródło zdj. gł.: TVN24\nPosłuchaj artykułu Czyta lektor AI\nWykup subskrypcję TVN24+, aby posłuchać artykułu. Masz subskrypcję? Zaloguj się.\nDowiedz się więcej\nUdostępnij Facebook Kopiuj link\nDodaj do preferowanych źródeł w Google Dodaj nas…",
+      "stazeno": "2026-11-21T19:00:56.205Z",
+      "stav": 200
+    }
+  },
+  {
+    "id": "k-00ad2d7176088603",
+    "zachyceno": "2026-11-21T20:03:05.307Z",
+    "publikovano": "2026-11-21T18:36:00.000Z",
+    "zdroj": {
+      "nazev": "Rzeczpospolita (Polsko)",
+      "url": "https://www.rp.pl/polityka/art45523651-mark-rutte-broni-trumpa-i-jego-relacji-z-putinem-to-w-interesie-polski",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Mark Rutte broni Trumpa i jego relacji z Putinem. „To w interesie Polski”",
+    "titulekPuvodni": "Mark Rutte broni Trumpa i jego relacji z Putinem. „To w interesie Polski”",
+    "shrnuti": "Naruszenie polskiej przestrzeni powietrznej przez rosyjskie rakiety i drony było niebezpiecznym incydentem, ale nie oznaczało automatycznego uruchomienia art. 5 NATO – mówił sekretarz generalny Sojuszu Mark Rutte- mówił szef NATO Mark Rutte w wywiadzie dla TVN24.",
+    "kodZeme": "PL",
+    "zeme": "Polsko",
+    "kategorie": [
+      "drony",
+      "nato"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "narusz+przestrzeni powietrzn",
+      "dron",
+      "nato"
+    ],
+    "naliehave": null,
+    "stav": "ceka",
+    "vyrez": {
+      "text": "Rutte o rosyjskich rakietach nad Polską i relacjach Trumpa z Putinem - rp.pl\nReklama\nWydarzenia\nKraj\nPolityka\nMark Rutte broni Trumpa i jego relacji z Putinem. „To w interesie Polski”\nNaruszenie polskiej przestrzeni powietrznej przez rosyjskie rakiety i drony było niebezpiecznym incydentem, ale nie oznaczało automatycznego uruchomienia art. 5 NATO – mówił sekretarz generalny Sojuszu Mark Rutte- mówił szef NATO Mark Rutte w wywiadzie dla TVN24.\nAktualizacja:\n21.11.2026 20:53\nPublikacja:\n21.11.2026 19:36\nUstaw „Rzeczpospolitą” jako swoje ulubione źródło informacji w Google\nSekretrz generalny NATO Mark Rutte\nFoto: Reuters, Natalia Campos\nReklama\nReklama\nReklama\nAgnieszka Kazimierczuk\nRutte powiedział, że po incydencie z rosyjskimi rakietami i dronami bardzo szybko rozmawiał telefonicznie z premierem Donaldem Tuskiem i prezydentem Karolem Nawrockim. Obaj przedstawili mu sytuację jako niebezpieczną. Sekretarz generalny NATO podkreślił, że zdarzenie było związane z niesprowokowaną rosyjską wojną przeciwko Ukrainie i było absolutnie nie do przyjęcia.\nReklama\nReklama\nPytany o możliwość uruchomienia art. 5 Traktatu Północnoatlantyckiego, wyjaśnił, że sam incydent nie oznacza automatycznego…",
+      "stazeno": "2026-11-21T20:03:09.391Z",
+      "stav": 200
+    }
+  },
+  {
+    "id": "k-2da06d36819ef700",
+    "zachyceno": "2026-11-21T19:00:52.691Z",
+    "publikovano": "2026-11-21T18:22:21.000Z",
+    "zdroj": {
+      "nazev": "ORF News (Rakousko)",
+      "url": "https://orf.at/stories/3448891/",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Luftraum verletzt: NATO-Chef Rutte stellt sich hinter Polen",
+    "titulekPuvodni": "Luftraum verletzt: NATO-Chef Rutte stellt sich hinter Polen",
+    "shrnuti": "",
+    "kodZeme": null,
+    "zeme": null,
+    "kategorie": [
+      "drony",
+      "nato"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "verletz+luftraum",
+      "nato"
+    ],
+    "naliehave": null,
+    "stav": "ceka",
+    "vyrez": {
+      "text": "Luftraum verletzt: NATO-Chef Rutte stellt sich hinter Polen - news.ORF.at\nLuftraum verletzt: NATO-Chef Rutte stellt sich hinter Polen\n21.11.2026 19.22\nOnline seit heute, 19.22 Uhr\nNach dem Einschlag russischer Geschoße im Südosten Polens hat NATO-Generalsekretär Mark Rutte bei einem Besuch in Warschau polnischen Medien zufolge zugesagt, dass die Allianz „jeden Zentimeter polnischen Territoriums“ verteidigen werde.\nDer „gefährliche Vorfall“, bei dem niemand verletzt wurde, hänge „zweifellos mit dem schrecklichen Angriffskrieg Russlands gegen die Ukraine zusammen“, sagte Rutte heute.\nDer NATO-Generalsekretär erinnerte daran, dass er seit gestern sowohl mit dem polnischen Ministerpräsidenten Donald Tusk als auch mit dem Präsidenten Karol Nawrocki in Kontakt stehe. Zwischen den beiden Politikern sind die Beziehungen derzeit äußerst angespannt.\nSitzung am Montag\nPolen sei „ein verlässlicher Verbündeter“, betonte Rutte. „Sie verfügen hier über ausgezeichnete Streitkräfte, und wir müssen nun genau feststellen, was geschehen ist“, sagte er vor polnischen Medien, darunter die Nachrichtenagentur PAP.\nDie Verletzung des polnischen Luftraums durch russische Flugobjekte werde am Montag in…",
+      "stazeno": "2026-11-21T19:00:57.294Z",
+      "stav": 200
+    }
+  },
+  {
+    "id": "k-5bbe65accfbc2a9e",
+    "zachyceno": "2026-11-21T19:00:51.884Z",
+    "publikovano": "2026-11-21T17:52:00.000Z",
+    "zdroj": {
+      "nazev": "iDNES.cz — zpravodajství",
+      "url": "https://www.idnes.cz/zpravy/zahranicni/polsko-by-masivni-raketovy-utok-neodrazilo-varuje-expert-kritizuje-protivzdusnou-obranu.A261121_180634_zahranicni_ichuc#utm_source=rss&utm_medium=feed&utm_campaign=zpravodaj&utm_content=main",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Polsko by velký raketový útok nezvládlo, kritizuje expert váhání nad třemi střelami",
+    "titulekPuvodni": "Polsko by velký raketový útok nezvládlo, kritizuje expert váhání nad třemi střelami",
+    "shrnuti": "Polská protivzdušná obrana by podle ukrajinského leteckého experta Hennadije Chazana nedokázala odrazit rozsáhlý raketový útok, jakému pravidelně čelí Ukrajina. Poukázal na páteční incident, při kterém na polské území dopadly dvě ruské rakety a dron. Přestože armáda i s pomocí NATO nasadila stíhačky",
+    "kodZeme": "PL",
+    "zeme": "Polsko",
+    "kategorie": [
+      "drony",
+      "vojsko",
+      "nato",
+      "rusko"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "dron+dopadl",
+      "armad+nasadi",
+      "dron",
+      "nato",
+      "armada",
+      "rusk"
+    ],
+    "naliehave": null,
+    "stav": "ceka",
+    "vyrez": {
+      "text": "Polsko by velký raketový útok nezvládlo, kritizuje expert - iDNES.cz \r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\niDNES.cz\n\r\n\r\n\r\nP�ihl�sit \r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nAbyste mohli pokra�ovat, pot�ebujeme v�d�t, jakou formou v�m m��eme zobrazovat reklamu \r\n\r\n\r\n\r\n\r\n\r\nV�mi zvolen� nastaven� \r\nneobsahuje souhlas se zobrazov�n�m c�len� reklamy . \r\nVyberte pros�m znovu, \r\njakou formou v�m m�me zobrazovat obsah. \r\n\r\n\r\n\r\n\r\n\r\n\r\niDNES Premium\n\r\nBez reklam\n\r\n\r\n199 K� m�s��n�\n\r\nM��ete neomezen� ��st iDNES.cz, Lidovky.cz, Expres.cz a Antiyoutuber.cz. K tomu dostanete tak� noviny a �asopisy v elektronick� podob�. To v�e bez reklam. 1\n\r\n\r\nP�edplatit\n\r\n\r\nU� m�te ��et? P�ihlaste se\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nS c�lenou reklamou\n\r\n\r\n\r\nZdarma \r\n\r\nZachov�me v�m v�e tak, jak jste zvykl� a reklamu p�izp�sob�me va�im z�jm�m. Bez omezen� si m��ete d�l ��st, p�ehr�vat videa, sout�it �i p�isp�vat do v�ech diskus�. 2\n\r\n\r\nSouhlas�m\n\r\nPodrobn� nastaven�\n\r\n\r\n\r\n\r\n\r\n\r\niDNES a reklama\n\r\nPokud vyu�ijete m�sto platby ud�len� souhlasu s reklamou (tj. souhlas s vyu�it�m cookies a dal��ch s�ov�ch identifik�tor� pro ��ely c�len� reklamy), \r\nbudou V�m zobrazov�ny v r�mci na�ich…",
+      "stazeno": "2026-11-21T19:00:59.150Z",
+      "stav": 200
+    }
+  },
+  {
+    "id": "k-0e998fd7b8f7748c",
+    "zachyceno": "2026-11-21T19:00:52.494Z",
+    "publikovano": "2026-11-21T17:23:18.000Z",
+    "zdroj": {
+      "nazev": "France 24 (anglicky)",
+      "url": "https://www.france24.com/en/fbi-criminal-database-hacked",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "FBI criminal database hacked",
+    "titulekPuvodni": "FBI criminal database hacked",
+    "shrnuti": "The FBI is investigating a reported major cyberattack targeting its national law enforcement database, the National Crime Information Center (NCIC), which holds sensitive criminal justice records, including information on fugitives, missing persons, criminal histories and stolen property. President ",
+    "kodZeme": "FR",
+    "zeme": "Francie",
+    "kategorie": [
+      "kyber"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "cyberattack",
+      "hacked",
+      "cyber"
+    ],
+    "naliehave": null,
+    "stav": "ceka",
+    "vyrez": {
+      "text": "FBI criminal database hacked - France 24\nSkip to main content\nTo display this content from YouTube, you must enable advertisement tracking and audience measurement.\nAccept\nManage my choices\nOne of your browser extensions seems to be blocking the video player from loading. To watch this content, you may need to disable it on this site.\nTry again\nCover image: © France 24\n03:48\nVideo content\nVideo\nFBI criminal database hacked\nIssued on: 21/11/2026 - 18:23\nShare\nThe FBI is investigating a reported major cyberattack targeting its national law enforcement database, the National Crime Information Center (NCIC), which holds sensitive criminal justice records, including information on fugitives, missing persons, criminal histories and stolen property. President Donald Trump said he had just been briefed on the incident, describing it as “not good”. FRANCE 24’s Fraser Jackson reports from Washington DC.\nVideo by:\nFraser JACKSON\nKeywords for this article\nFBI\nAmericas\nUSA\nRead more\nRead less\nMan convicted of starting palisades fire\n21/11/2026\nVideo content\nVideo\nAmericas\n🦛 USA: Fiona, Cincinnati Zoo’s famous hippo, has died\n20/11/2026\nVideo content\nVideo\nAmericas\nEl Salvador: Nayib Bukele,…",
+      "stazeno": "2026-11-21T19:01:02.666Z",
+      "stav": 200
+    }
+  },
+  {
+    "id": "k-fdffc61d9baa5dd4",
+    "zachyceno": "2026-11-21T19:00:54.732Z",
+    "publikovano": "2026-11-21T17:12:00.000Z",
+    "zdroj": {
+      "nazev": "Ukrainska Pravda (anglicky)",
+      "url": "https://www.pravda.com.ua/eng/news/2026/11/21/8063989/",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Ukraine's National Guard destroys US$15m Russian Pantsir air defence system with bomber drone – video",
+    "titulekPuvodni": "Ukraine's National Guard destroys US$15m Russian Pantsir air defence system with bomber drone – video",
+    "shrnuti": "Lasar's Group, part of Ukraine's National Guard, has destroyed a US$15 million Russian Pantsir-S1 air defence system near occupied Donetsk using a heavy bomber drone.",
+    "kodZeme": "UA",
+    "zeme": "Ukrajina",
+    "kategorie": [
+      "sabotaz",
+      "drony",
+      "rusko"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "bomb",
+      "dron",
+      "drone",
+      "russia"
+    ],
+    "naliehave": null,
+    "stav": "ceka",
+    "vyrez": {
+      "text": "Ukrainian drone destroys Russian Pantsir-S1 near Donetsk | Ukrainska Pravda\nFighters from Lasar's Group, a special unit within Ukraine's National Guard, have destroyed a Russian Pantsir-S1 anti-aircraft gun and missile system in the temporarily occupied part of Donetsk Oblast, setting it on fire by dropping munitions from a heavy bomber drone.\nSource: Lasar's Group on social media\nDetails: The Pantsir-S1 air defence system was detected in the Russian rear. The operation to destroy it was conducted solely by the special unit.\nAdvertisement:\n\r\n\r\n\r\n\r\n\r\nA video released by Lasar's Group shows the system being destroyed by munitions dropped from a heavy bomber drone near temporarily occupied Donetsk. After the attack, the Pantsir-S1 burst into flames. According to the National Guard, the destroyed system is worth around US$15 million.\n\r\n\r\n\r\nThe Russian Pantsir-S1 air defence system before it was destroyed\n\r\n\r\n\r\nPhoto: Lasar's Group\r\n\r\n\r\n\r\nQuote: \"In the world of Russian propaganda, the Pantsir-S1 anti-aircraft missile system is a true 'Wunderwaffe' [miracle weapon] that can shoot down almost any target. This is the exact same equipment that is deployed to guard Putin's palace in…",
+      "stazeno": "2026-11-21T19:01:02.760Z",
+      "stav": 200
+    }
+  },
+  {
+    "id": "k-6e9d6043725a4ef9",
+    "zachyceno": "2026-11-21T19:00:52.077Z",
+    "publikovano": "2026-11-21T17:08:00.000Z",
+    "zdroj": {
+      "nazev": "Deutsche Welle — Europe",
+      "url": "https://www.dw.com/en/russian-helicopter-suspected-of-violating-finnish-airspace/a-80010133?maca=en-rss-en-eu-2092-rdf",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Russian helicopter suspected of violating Finnish airspace",
+    "titulekPuvodni": "Russian helicopter suspected of violating Finnish airspace",
+    "shrnuti": "Finland's Defense Ministry thinks the incursion is linked to a drone strike earlier Saturday on a Russian cargo ship, which is on a US sanctions list.",
+    "kodZeme": "FI",
+    "zeme": "Finsko",
+    "kategorie": [
+      "nato",
+      "drony",
+      "rusko"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "incursion+finland+ministr",
+      "violat+airspace",
+      "dron",
+      "drone",
+      "airspace",
+      "russia"
+    ],
+    "naliehave": null,
+    "stav": "ceka",
+    "vyrez": {
+      "text": "Finland says Russian helicopter violated its airspace\nSkip to content\nSkip to main menu\nSkip to more DW sites\nIn focus\nCOP31 AI Ukraine war\nLatest audio Latest videos\nLive TV\nAdvertisement\nhttps://p.dw.com/p/5PiI1\nPrefer DW on Google\nFinnish fighter jets were scrambled after a similar incident in Estonian airspace in September 2025 Image: Forsvarsmakten/AFP Advertisement\nA Russian helicopter is suspected of violating Finnish airspace, the Nordic country's Ministry of Defense said Saturday.\nThe incident happened a few hours after a drone attack left a Russian cargo ship ablaze in the Gulf of Finland, the easternmost part of the Baltic Sea.\nWhat do we know?\nAccording to Finland's Defense Ministry, the incursion happened at 12:34 p.m. local time (10:34 UTC/GMT) off the town of Loviisa, on the southern coast.\n\"This alleged airspace violation may be linked to rescue or surveillance operations carried out by Finland following damage sustained by a cargo ship in the Gulf of Finland,\" public broadcaster YLE cited Defense Minister Antti Hakkanen as saying.\nThe ministry added the helicopter could have penetrated up to 4.1 kilometers (2.5 miles) into Finnish territory.\nThe Finnish Defense…",
+      "stazeno": "2026-11-21T19:01:02.827Z",
+      "stav": 200
+    }
+  },
+  {
+    "id": "k-82272b92261980e4",
+    "zachyceno": "2026-11-21T19:00:51.823Z",
+    "publikovano": "2026-11-21T16:57:44.000Z",
+    "zdroj": {
+      "nazev": "Novinky.cz",
+      "url": "https://www.novinky.cz/clanek/valka-na-ukrajine-ukrajinci-sestrelili-nejnovejsi-ruskou-strelu-filin-40609841",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Ukrajinci sestřelili nejnovější ruskou střelu Filin",
+    "titulekPuvodni": "Ukrajinci sestřelili nejnovější ruskou střelu Filin",
+    "shrnuti": "Příslušníci ukrajinské pohraniční stráže v Černihivské oblasti v pátek sestřelili nejnovější ruskou střelu s plochou dráhou letu Filin. Jednotka to oznámila na sociálních sítích.",
+    "kodZeme": "UA",
+    "zeme": "Ukrajina",
+    "kategorie": [
+      "drony",
+      "rusko"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "sestrel",
+      "rusk"
+    ],
+    "naliehave": null,
+    "stav": "ceka",
+    "vyrez": {
+      "text": "Ukrajinci sestřelili nejnovější ruskou střelu Filin - Novinky\nZobrazení snímku 1 z 0\nzáhlaví\nHlavní obsah\nUkrajinci sestřelili nejnovější ruskou střelu Filin\nJana Kotrášová\n1:12\nChcete-li článek poslouchat, přihlaste se\neBook\nSdílet\nDnes 21. 11., 17:57\nPříslušníci ukrajinské pohraniční stráže v Černihivské oblasti v pátek sestřelili nejnovější ruskou střelu s plochou dráhou letu Filin. Jednotka to oznámila na sociálních sítích.\nFoto: Serhij Beskrestnov/Telegram\nTrosky ruské střely s plochou dráhou letu Filin. Ilustrační snímek\nČlánek\n„Nepřátelská raketa Filin nedoletěla k cíli, v Černihivské oblasti ji zachytila a zničila mobilní palebná skupina 105. pohraničního oddílu. Letecký cíl zasáhli pomocí automatizovaného protivzdušného systému,“ oznámila jednotka na Telegramu .\nPříslušníci poté popsali, jak střelu zneškodnili. „Cíl se pohyboval v nízké výšce velmi vysokou rychlostí naším směrem. Zaměřili jsme jej a systém jej zasáhl. Dokonce jsme viděli kouř z poškozené rakety na monitoru. Ještě chvíli plachtila a pak jsme uslyšeli výbuch po dopadu,“ uvedl pohraničník s volacím znakem Naga.\nStřela s plochou dráhou letu Filin patří do třídy malých raket typu „země–země“ s dlouhým doletem.…",
+      "stazeno": "2026-11-21T19:01:03.724Z",
+      "stav": 200
+    }
+  },
+  {
+    "id": "k-cf19729a92a37353",
+    "zachyceno": "2026-11-21T19:00:54.704Z",
+    "publikovano": "2026-11-21T16:54:00.000Z",
+    "zdroj": {
+      "nazev": "Ukrinform (anglicky)",
+      "url": "https://www.ukrinform.net/rubric-ato/4187223-electricity-supply-situation-remains-difficult-in-odesa-region-ministry-of-energy.html",
+      "typ": "wire",
+      "primarni": false
+    },
+    "titulek": "Electricity supply situation remains difficult in Odesa region – Ministry of Energy",
+    "titulekPuvodni": "Electricity supply situation remains difficult in Odesa region – Ministry of Energy",
+    "shrnuti": "Following Russia's massive overnight attack on November 20, energy workers have managed to partially stabilise electricity supplies in the affected regions, but the situation remains difficult in the Odesa region.",
+    "kodZeme": "UA",
+    "zeme": "Ukrajina",
+    "kategorie": [
+      "hybridni",
+      "rusko"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "attack on",
+      "russia"
+    ],
+    "naliehave": null,
+    "stav": "ceka",
+    "vyrez": {
+      "text": "Electricity supply situation remains difficult in Odesa region – Ministry of Energy\n\r\nSubscription\nNewsletters\nPhotobank\nUkrinform - Ukrainian National News Agency\nFounded in 1918\nSaturday, 21 November 2026, 21:01\nWar\nEconomy\nSports\nMore ☰\nContacts\nEng\nУкр\nEng\nEsp\nDeu\nعربي\nFra\n日本語\nPol\n&times;\nAll topics\nWar\nRecovery of Ukraine\nPolitics\nEconomy\nFact checks\nDefense\nSociety and Culture\nSports\nCrime\nAccidents and Emergencies\nAgency\nInformation on Agency\nOur Contacts\nSubscribtion Terms\nOur Services\nPrivacy policy and personal data protection\nAdditional\nPublications\nInterviews\nPhoto\nVideo\nLongreads\nReleases\nServices\nSubscription\nNewsletters\nPhotobank\n\r\n\r\n\r\nFollowing Russia's massive overnight attack on November 20, energy workers have managed to partially stabilise electricity supplies in the affected regions, but the situation remains difficult in the Odesa region.\nUkraine's Ministry of Energy stated this on Facebook , according to Ukrinform.\n\r\n\r\n&ldquo;Meanwhile, enemy attacks continue unabated. Russia is deliberately striking energy facilities that have already been restored. In addition, constant air raid alerts significantly complicate and slow down repair work. As a result, the…",
+      "stazeno": "2026-11-21T19:01:04.515Z",
+      "stav": 200
+    }
+  },
+  {
+    "id": "k-7afeb55ae5c8184a",
+    "zachyceno": "2026-11-21T16:03:05.224Z",
+    "publikovano": null,
+    "zdroj": {
+      "nazev": "RTL Today (Lucembursko)",
+      "url": "https://today.rtl.lu/news/world/divided-queues-in-russian-town-as-estonia-border-closure-looms-148840513",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Separated families 'Divided': queues in Russian town as Estonia border closure looms",
+    "titulekPuvodni": "Separated families 'Divided': queues in Russian town as Estonia border closure looms",
+    "shrnuti": "",
+    "kodZeme": "EE",
+    "zeme": "Estonsko",
+    "kategorie": [
+      "hranice",
+      "rusko"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "border closure",
+      "border",
+      "russia"
+    ],
+    "naliehave": null,
+    "stav": "ceka",
+    "vyrez": {
+      "text": "Separated families: 'Divided': queues in Russian town as Estonia border closure looms - RTL Today\nSeparated families 'Divided': queues in Russian town as Estonia border closure looms\nAFP\nPublished: 21.11.26 15:24 , Update: 21.11.26 17:00\nMany residents of Narva used the crossing to visit relatives or go shopping\n© AFP\nScores of people with suitcases, backpacks and plastic bags huddled together in the Russian town of Ivangorod as they queued to cross into Estonia before the Baltic country seals its border shut.\nA NATO member on the alliance's eastern flank, Estonia said this month it had foiled an attempted arson attack on a drone factory on its soil -- amid general anxiety over Russia's offensive in Ukraine.\nIt alleged that Russia's GRU military intelligence was behind the alleged plot -- accusations rebuked by the Kremlin as \"unfounded\" -- and ordered its three border crossings shut as of December 1.\nThat included the border bridge between Narva -- a predominantly Russian-speaking Estonian town of over 50,000 people -- and Ivangorod on the other bank.\n\"It's such a blow to people, to relatives who live in Russia... My brother's over there. Now we won't be able to see each other,\"…",
+      "stazeno": "2026-11-21T16:03:12.019Z",
+      "stav": 200
+    }
+  },
+  {
+    "id": "k-8252fd5d86209ca6",
+    "zachyceno": "2026-11-21T19:00:54.738Z",
+    "publikovano": "2026-11-21T15:52:00.000Z",
+    "zdroj": {
+      "nazev": "Ukrainska Pravda (anglicky)",
+      "url": "https://www.pravda.com.ua/eng/news/2026/11/21/8063982/",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "One person injured in Russian attack on railway station in Zhytomyr Oblast",
+    "titulekPuvodni": "One person injured in Russian attack on railway station in Zhytomyr Oblast",
+    "shrnuti": "One person was injured and taken to hospital after Russian forces attacked a railway station in the Ovruch hromada in Zhytomyr Oblast, sparking a fire.",
+    "kodZeme": "RU",
+    "zeme": "Rusko",
+    "kategorie": [
+      "hybridni",
+      "infrastruktura",
+      "rusko"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "attack on",
+      "railway",
+      "russia"
+    ],
+    "naliehave": null,
+    "stav": "ceka",
+    "vyrez": {
+      "text": "Russian strike on Zhytomyr Oblast railway station injures one | Ukrainska Pravda\nStock photo: Getty Images\nOne person was injured in a Russian attack on a railway station in the Ovruch\nhromada\nA hromada is an administrative unit designating a village, several villages, or a town, and their adjacent territories.\nin Zhytomyr Oblast on Saturday 21 November.\nSource: Vitalii Bunechko , Head of Zhytomyr Oblast Military Administration\nQuote: \"The enemy has attacked Zhytomyr Oblast once again. This time a railway station in the Ovruch hromada came under attack.\nAdvertisement:\n\r\n\r\n\r\n\r\n\r\nOne person was injured in the enemy attack. Medics promptly took the injured person to hospital, where they are receiving the necessary care.\"\nDetails: A fire broke out at the site of the strike and has been extinguished.\nZhytomyr Oblast\nrailways\nAdvertisement:\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nZhytomyr Oblast\nRussia damages at least three businesses in Zhytomyr and Kyiv oblasts – photos\nRussian drones strike energy infrastructure in Zhytomyr Oblast\nFour injured in Russian drone attacks on Zhytomyr Oblast\nLatest news\nAdvertisement:\n\r\n\r\n\r\nAdvertisement:",
+      "stazeno": "2026-11-21T20:03:09.981Z",
+      "stav": 200
+    }
+  },
+  {
+    "id": "k-fb5e142fc406a9f9",
+    "zachyceno": "2026-11-21T16:03:06.016Z",
+    "publikovano": "2026-11-21T15:39:04.000Z",
+    "zdroj": {
+      "nazev": "Aktuality.sk",
+      "url": "https://www.aktuality.sk/clanok/qvdTBo2/finske-ministerstvo-obrany-vysetruje-mozny-prienik-ruskeho-vrtulnika-do-svojho-vzdusneho-priestoru/",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Fínske ministerstvo obrany vyšetruje možný prienik ruského vrtuľníka do svojho vzdušného priestoru",
+    "titulekPuvodni": "Fínske ministerstvo obrany vyšetruje možný prienik ruského vrtuľníka do svojho vzdušného priestoru",
+    "shrnuti": "Ruskú nákladnú loď smerujúcu do Kaliningradu zachvátil požiar po útoku dronov v neutrálnych vodách. Krátko nato Fínsko hlási možný vpád ruského vrtuľníka.",
+    "kodZeme": "FI",
+    "zeme": "Finsko",
+    "kategorie": [
+      "nato",
+      "drony",
+      "rusko"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "vpad+finsk+minister",
+      "dron",
+      "nato",
+      "rusk"
+    ],
+    "naliehave": null,
+    "stav": "ceka",
+    "vyrez": {
+      "text": "Fínske ministerstvo obrany vyšetruje možný prienik ruského vrtuľníka do svojho vzdušného priestoru | Aktuality.sk\nAktuality\nŠport\nDiva\nNajmama\nŽivé\nRecepty\nDobrú chuť\nSlovník\n8 °C -\nBratislava\nsobota 21. 11.\n21. 11.\nElvíra\nSvet dnes 21. Nov 2026 o 16:39\n1 min. čítania\nPridať do Google\nFínske ministerstvo obrany vyšetruje možný prienik ruského vrtuľníka do svojho vzdušného priestoru\n1 fotka v galérii\nFínsko-ruská hranica Zdroj: Reuters/Essi Lehto\nTASR\nAktuality.sk\nUložiť článok\nRuskú nákladnú loď smerujúcu do Kaliningradu zachvátil požiar po útoku dronov v neutrálnych vodách. Krátko nato Fínsko hlási možný vpád ruského vrtuľníka.\nFínske ministerstvo obrany v sobotu oznámilo, že vzdušný priestor krajiny pravdepodobne narušil ruský vrtuľník. K incidentu došlo krátko po tom, čo Helsinki aj Moskva potvrdili, že v Baltskom mori sa odohral útok na ruskú nákladnú loď. TASR o tom informuje podľa správy agentúry AFP.\nRuský vrtuľník pravdepodobne narušil fínske územie.\nIncident súvisí s útokom na ruskú nákladnú loď.\nLoď bola napadnutá dronmi vo Fínskom zálive.\nPožiar na lodi neohrozil ostatnú lodnú dopravu.\nPáchateľ útoku na loď zatiaľ nie je známy.\n„Toto údajné narušenie vzdušného priestoru…",
+      "stazeno": "2026-11-21T16:03:12.189Z",
+      "stav": 200
+    }
+  },
+  {
+    "id": "k-69bfc742b6e9a589",
+    "zachyceno": "2026-11-21T16:03:07.533Z",
+    "publikovano": "2026-11-21T15:11:18.000Z",
+    "zdroj": {
+      "nazev": "Digi24 (Rumunsko)",
+      "url": "https://www.digi24.ro/stiri/externe/rutte-nato-va-apara-fiecare-centimetru-din-teritoriul-poloniei-dupa-incalcarea-spatiului-aerian-de-catre-rusia-pot-garanta-4047207",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Rutte: NATO va apăra fiecare centimetru din teritoriul Poloniei, după încălcarea spaţiului aerian de către Rusia. „Pot garanta”",
+    "titulekPuvodni": "Rutte: NATO va apăra fiecare centimetru din teritoriul Poloniei, după încălcarea spaţiului aerian de către Rusia. „Pot garanta”",
+    "shrnuti": "Secretarul general al NATO, Mark Rutte, a declarat că Alianţa Nord-Atlantică va apăra întregul teritoriu al Poloniei, după ce autorităţile de la Varşovia au anunţat că trei obiecte, probabil două rachete şi o dronă ruseşti, au pătruns vineri în spaţiul aerian polonez.",
+    "kodZeme": null,
+    "zeme": null,
+    "kategorie": [
+      "drony",
+      "nato"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "patrun+spatiul aerian",
+      "dron",
+      "nato"
+    ],
+    "naliehave": null,
+    "stav": "ceka",
+    "vyrez": {
+      "text": "Rutte: NATO va apăra fiecare centimetru din teritoriul Poloniei, după încălcarea spaţiului aerian de către Rusia. „Pot garanta” | Digi24\nHOME\nȘtiri\nExterne\nRutte: NATO va apăra fiecare centimetru din teritoriul Poloniei, după încălcarea spaţiului aerian de către Rusia. „Pot garanta”\nRutte: NATO va apăra fiecare centimetru din teritoriul Poloniei, după încălcarea spaţiului aerian de către Rusia. „Pot garanta”\nData publicării: 21.11.2026 17:11\nMark Rutte, secretarul general al NATO. Foto: Profimedia Images Urmărește Digi24 în Google Discover Adaugă Digi24 ca sursă preferată în Google\nSecretarul general al NATO, Mark Rutte, a declarat că Alianţa Nord-Atlantică va apăra întregul teritoriu al Poloniei, după ce autorităţile de la Varşovia au anunţat că trei obiecte, probabil două rachete şi o dronă ruseşti, au pătruns vineri în spaţiul aerian polonez.\n„Pot garanta că NATO va apăra fiecare centimetru din teritoriul Poloniei”, a afirmat Rutte la Varşovia, potrivit agenţiei poloneze de presă PAP, relatează News.ro.\nSecretarul general al NATO a precizat că generalul Alexus Grynkewich, comandantul suprem al forţelor aliate din Europa, va lua toate măsurile necesare pentru identificarea…",
+      "stazeno": "2026-11-21T16:03:13.181Z",
+      "stav": 200
+    }
+  },
+  {
+    "id": "k-a67705b108e22b40",
+    "zachyceno": "2026-11-21T19:00:53.023Z",
+    "publikovano": "2026-11-21T14:46:26.000Z",
+    "zdroj": {
+      "nazev": "TVN24 (Polsko)",
+      "url": "https://tvn24.pl/swiat/ruch-nato-rada-polnocnoatlantycka-omowi-sprawe-naruszenia-polskiej-przestrzeni-powietrznej-st9351085?source=rss",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Rada Północnoatlantycka omówi sprawę naruszenia polskiej przestrzeni powietrznej",
+    "titulekPuvodni": "Rada Północnoatlantycka omówi sprawę naruszenia polskiej przestrzeni powietrznej",
+    "shrnuti": "Przedstawiciele wszystkich państw członkowskich NATO zbiorą się, żeby omówić piątkowy incydent, w którym trzy rosyjskie obiekty spadły w Polsce.",
+    "kodZeme": "PL",
+    "zeme": "Polsko",
+    "kategorie": [
+      "drony",
+      "nato"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "narusz+przestrzeni powietrzn",
+      "nato"
+    ],
+    "naliehave": null,
+    "stav": "ceka",
+    "vyrez": {
+      "text": "Ruch NATO. Rada Północnoatlantycka omówi sprawę naruszenia polskiej przestrzeni powietrznej - TVN24\nSUBSKRYBUJ Przejdź do\nSzukaj\nZnaleziono 0 materiałów zawierających:\nRedakcja poleca:\nZobacz więcej wyników\nMoje konto\nPobrane materiały\nOglądaj dalej\nObserwowane\nNewslettery\nPreferencje treści\nMoje zakupy i karty\nSklep\nZrealizuj voucher\nPomoc\nZgłoś problem\nEdytuj dane\nWyloguj się\nZaloguj się\nMenu\nZamknij\nOglądaj TVN24\nNajnowsze\nFakty\nŚwiat\nPolska\nRegionalne\nWarszawa\nŁódź\nKatowice\nKraków\nPoznań\nTrójmiasto\nWrocław\nKielce\nKujawsko-pomorskie\nLublin\nLubuskie\nOlsztyn\nOpole\nRzeszów\nSzczecin\nBiałystok\nWięcej\nBiznes\nMeteo\nSport\nZdrowie\nTechnologia\nKultura i styl\nKonkret24\nKontakt24\nCiekawostki\nNewslettery\nQuizy\nTematy\nChińska ekspansja\nMęskie zdrowie\nWybory w USA\nCzytaj\nSłuchaj\nOglądaj\nRutte: NATO będzie bronić każdej piędzi polskiego terytorium\nŹródło zdj. gł.: Shutterstock\nPosłuchaj artykułu Czyta lektor AI\nWykup subskrypcję TVN24+, aby posłuchać artykułu. Masz subskrypcję? Zaloguj się.\nDowiedz się więcej\nUdostępnij Facebook Kopiuj link\nDodaj do preferowanych źródeł w Google Dodaj nas do listy preferowanych źródeł w Google, aby nasze materiały częściej pojawiały się w Twoich wynikach…",
+      "stazeno": "2026-11-21T20:03:10.038Z",
+      "stav": 200
+    }
+  },
+  {
+    "id": "k-471466dea4818196",
+    "zachyceno": "2026-11-21T16:03:08.119Z",
+    "publikovano": "2026-11-21T14:32:00.000Z",
+    "zdroj": {
+      "nazev": "Ukrinform (anglicky)",
+      "url": "https://www.ukrinform.net/rubric-ato/4187177-russia-drone-crashes-on-grounds-of-industrial-enterprise-in-poltava-region.html",
+      "typ": "wire",
+      "primarni": false
+    },
+    "titulek": "Russia drone crashes on grounds of industrial enterprise in Poltava region",
+    "titulekPuvodni": "Russia drone crashes on grounds of industrial enterprise in Poltava region",
+    "shrnuti": "An enemy unmanned aerial vehicle (UAV) crashed on the grounds of an industrial enterprise in the Kremenchuk district of Poltava region.",
+    "kodZeme": "RU",
+    "zeme": "Rusko",
+    "kategorie": [
+      "drony",
+      "rusko"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "drone crash",
+      "dron+crashed",
+      "dron",
+      "drone",
+      "uav",
+      "russia"
+    ],
+    "naliehave": null,
+    "stav": "ceka",
+    "vyrez": {
+      "text": "Russia drone crashes on grounds of industrial enterprise in Poltava region\n\r\nSubscription\nNewsletters\nPhotobank\nUkrinform - Ukrainian National News Agency\nFounded in 1918\nSaturday, 21 November 2026, 18:03\nWar\nEconomy\nSports\nMore ☰\nContacts\nEng\nУкр\nEng\nEsp\nDeu\nعربي\nFra\n日本語\nPol\n&times;\nAll topics\nWar\nRecovery of Ukraine\nPolitics\nEconomy\nFact checks\nDefense\nSociety and Culture\nSports\nCrime\nAccidents and Emergencies\nAgency\nInformation on Agency\nOur Contacts\nSubscribtion Terms\nOur Services\nPrivacy policy and personal data protection\nAdditional\nPublications\nInterviews\nPhoto\nVideo\nLongreads\nReleases\nServices\nSubscription\nNewsletters\nPhotobank\n\r\n\r\n\r\nAn enemy unmanned aerial vehicle (UAV) crashed on the grounds of an industrial enterprise in the Kremenchuk district of Poltava region.\nVitalii Diakivnych, Head of the Poltava Regional Military Administration, reported this on Telegram , according to Ukrinform.\n\r\n\r\n&ldquo;An enemy UAV crash was recorded on the grounds of one of the industrial enterprises in the Kremenchuk district. According to preliminary information, no people were injured,&rdquo; the regional administration chief wrote.\n\r\n\r\nRead also: Russian attack in Vinnytsia region…",
+      "stazeno": "2026-11-21T16:03:13.834Z",
+      "stav": 200
+    }
+  },
+  {
+    "id": "k-351147d22d4a9be3",
+    "zachyceno": "2026-11-21T16:03:06.025Z",
+    "publikovano": "2026-11-21T14:05:33.000Z",
+    "zdroj": {
+      "nazev": "Aktuality.sk",
+      "url": "https://www.aktuality.sk/clanok/sukVbr5/incident-vo-vychodnom-baltskom-mori-rusku-nakladnu-lod-napadli-drony-posadku-evakuovali/",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Fínska armáda hlási dronový útok na ruskú loď vo Fínskom zálive, loď zachvátil požiar",
+    "titulekPuvodni": "Fínska armáda hlási dronový útok na ruskú loď vo Fínskom zálive, loď zachvátil požiar",
+    "shrnuti": "Fínske ozbrojené sily zaznamenali útok dronov na ruskú nákladnú loď v medzinárodných vodách Fínskeho zálivu. Loď zachvátil požiar, prípad sleduje NATO.",
+    "kodZeme": "FI",
+    "zeme": "Finsko",
+    "kategorie": [
+      "hybridni",
+      "drony",
+      "nato",
+      "vojsko",
+      "rusko"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "utok na",
+      "dron",
+      "nato",
+      "armada",
+      "rusk"
+    ],
+    "naliehave": null,
+    "stav": "ceka",
+    "vyrez": {
+      "text": "Fínska armáda hlási dronový útok na ruskú loď vo Fínskom zálive, loď zachvátil požiar | Aktuality.sk\nAktuality\nŠport\nDiva\nNajmama\nŽivé\nRecepty\nDobrú chuť\nSlovník\n8 °C -\nBratislava\nsobota 21. 11.\n21. 11.\nElvíra\nSvet dnes 21. Nov 2026 o 15:05\n1 min. čítania\nPridať do Google\nFínska armáda hlási dronový útok na ruskú loď vo Fínskom zálive, loď zachvátil požiar\n1 fotka v galérii\nVlajky NATO a Fínska Zdroj: AP/Sergei Grits\nTASR\nAktuality.sk\nUložiť článok\nFínske ozbrojené sily zaznamenali útok dronov na ruskú nákladnú loď v medzinárodných vodách Fínskeho zálivu. Loď zachvátil požiar, prípad sleduje NATO.\nFínska armáda v sobotu ráno zaznamenala dronový útok na ruskú nákladnú loď vo východnej časti Baltského mora, oznámilo tamojšie ministerstvo obrany. Upozornili na to agentúry AFP a Reuters, informuje TASR.\nFínska armáda zaznamenala dronový útok na ruskú loď.\nK útoku došlo vo východnej časti Baltského mora.\nFínske ministerstvo neuviedlo, kto je za útokom.\nRusko potvrdilo útok a začalo evakuáciu posádky.\nIncident zvyšuje napätie v Baltskom mori po invázii.\n„V sobotu ráno zaznamenali fínske obranné sily dronový útok proti ruskej nákladnej lodi západne od ostrova Suursaari vo východnej časti…",
+      "stazeno": "2026-11-21T16:03:14.410Z",
+      "stav": 200
+    }
+  },
+  {
+    "id": "k-3a235dbc97113e90",
+    "zachyceno": "2026-11-21T16:03:08.161Z",
+    "publikovano": "2026-11-21T14:05:00.000Z",
+    "zdroj": {
+      "nazev": "Ukrainska Pravda (anglicky)",
+      "url": "https://www.pravda.com.ua/eng/news/2026/11/21/8063962/",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Ukraine needs long-term security guarantees, not just during Trump's presidency – Zelenskyy",
+    "titulekPuvodni": "Ukraine needs long-term security guarantees, not just during Trump's presidency – Zelenskyy",
+    "shrnuti": "Volodymyr Zelenskyy said Ukraine needs security guarantees for decades, not just for Trump's term, adding Kyiv has seen no NATO Article 5-style steps on paper.",
+    "kodZeme": "UA",
+    "zeme": "Ukrajina",
+    "kategorie": [
+      "nato"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "article 5",
+      "nato"
+    ],
+    "naliehave": null,
+    "stav": "ceka",
+    "vyrez": {
+      "text": "Zelenskyy: Ukraine security guarantees must outlast Trump | Ukrainska Pravda\nVolodymyr Zelenskyy. Photo: Ukraine's President's Office\nUkrainian President Volodymyr Zelenskyy has said he does not know what exactly partners mean by \" NATO Article 5-style \" security guarantees, but is certain that Ukraine needs guarantees lasting far longer than Donald Trump's time as US president.\nSource: European Pravda, citing Zelenskyy speaking to journalists\nDetails: First and foremost, security guarantees for Ukraine must be based on concrete proposals rather than on good relations between US President Donald Trump and Kremlin leader Vladimir Putin, Zelenskyy said. Ukraine does not need guarantees solely for the two remaining years of Trump's presidency.\nAdvertisement:\n\r\n\r\n\r\n\r\n\r\nQuote: \"We need guarantees not for two years, but for ever – for decades, at least. Even if Putin is friends with Trump, if Putin is afraid to do anything for two years, that won't do for us – that is not a strong peace. That is just a two-year pause. Because if aggression comes later, how do we mobilise the kind of support we have now, and how do we strengthen our military? Going to war again would be very dangerous…",
+      "stazeno": "2026-11-21T16:03:14.755Z",
+      "stav": 200
+    }
+  },
+  {
+    "id": "k-2245d49aa2586b92",
+    "zachyceno": "2026-11-21T16:03:05.472Z",
+    "publikovano": "2026-11-21T13:57:15.000Z",
+    "zdroj": {
+      "nazev": "Euronews",
+      "url": "https://www.euronews.com/2026/11/21/ballistic-missile-attack-on-zelenskyys-hometown-kills-two-people",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Ballistic missile attack on Zelenskyy's hometown kills two people",
+    "titulekPuvodni": "Ballistic missile attack on Zelenskyy's hometown kills two people",
+    "shrnuti": "The strike mainly targeted civilian infrastructure, Zelenskyy wrote on X. The attack comes after Russia vowed a 'painful' response to Ukraine's strike on the Crimean bridge.",
+    "kodZeme": "UA",
+    "zeme": "Ukrajina",
+    "kategorie": [
+      "hybridni",
+      "rusko"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "attack on",
+      "russia"
+    ],
+    "naliehave": null,
+    "stav": "ceka",
+    "vyrez": {
+      "text": "Ballistic missile attack on Zelenskyy's hometown kills two people | Euronews\nAdvertisement\nBy&nbsp Evelyn Ann-Marie Dom\nPublished on\n21 November 2026 - 14:57 GMT+1\nShare\nFacebook\nTwitter\nFlipboard\nSend\nReddit\nLinkedin\nMessenger\nTelegram\nVK\nBluesky\nThreads\nWhatsapp\nCopy/paste the article video embed link below:\nCopied\nThe strike mainly targeted civilian infrastructure, Zelenskyy wrote on X. The attack comes after Russia vowed a 'painful' response to Ukraine's strike on the Crimean bridge.\nAt least two people were killed and dozens injured in a Russian attack on Kryvyi Rih, Ukrainian President Volodymyr Zelenskyy's hometown.\nADVERTISEMENT\nADVERTISEMENT\nA Russian ballistic missile on the city in central Ukraine killed a seven-year-old boy and a 20-year-old woman, local authorities wrote. 60 others were injured, including six children.\n\"A young woman – an emergency medical worker – and a little boy who was just seven years old were killed. His name was Tykhon. He was born in 2019, and, sadly, most of his life was lived during a war like this,\" Zelenskyy wrote Satuday on X.\n\"Ordinary homes, offices, and everyday civilian infrastructure in an ordinary city were damaged,\" he added.\nThe…",
+      "stazeno": "2026-11-21T16:03:14.787Z",
+      "stav": 200
+    }
+  },
+  {
+    "id": "k-8f8c33b9d853142f",
+    "zachyceno": "2026-11-21T16:03:06.051Z",
+    "publikovano": "2026-11-21T13:53:00.000Z",
+    "zdroj": {
+      "nazev": "Rzeczpospolita (Polsko)",
+      "url": "https://www.rp.pl/polityka/art45523411-rada-nato-zbierze-sie-ws-rosyjskich-rakiet-bedziemy-bronic-kazdego-centymetra-polski",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Rada NATO zbierze się ws. rosyjskich rakiet. „Będziemy bronić każdego centymetra Polski”",
+    "titulekPuvodni": "Rada NATO zbierze się ws. rosyjskich rakiet. „Będziemy bronić każdego centymetra Polski”",
+    "shrnuti": "W poniedziałek w Kwaterze Głównej NATO w Brukseli dojdzie do spotkania Rady Północnoatlantyckiej. Rozmowa będzie dotyczyła naruszenia przestrzeni powietrznej Polski przez rosyjskie rakiety - poinformowały w sobotę służby prasowe Stałego Przedstawicielstwa RP przy NATO.",
+    "kodZeme": "PL",
+    "zeme": "Polsko",
+    "kategorie": [
+      "drony",
+      "nato"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "narusz+przestrzeni powietrzn",
+      "nato"
+    ],
+    "naliehave": null,
+    "stav": "ceka",
+    "vyrez": {
+      "text": "NATO omówi naruszenie polskiej przestrzeni powietrznej. Wyznaczono datę spotkania - rp.pl\n\r\nReklama\nWydarzenia\nŚwiat\nPolityka\nRada NATO zbierze się ws. rosyjskich rakiet. „Będziemy bronić każdego centymetra Polski”\nW poniedziałek w Kwaterze Głównej NATO w Brukseli dojdzie do spotkania Rady Północnoatlantyckiej. Rozmowa będzie dotyczyła naruszenia przestrzeni powietrznej Polski przez rosyjskie rakiety - poinformowały w sobotę służby prasowe Stałego Przedstawicielstwa RP przy NATO.\nAktualizacja:\n21.11.2026 15:19\nPublikacja:\n21.11.2026 14:53\nUstaw „Rzeczpospolitą” jako swoje ulubione źródło informacji w Google\nFoto: Adobe Stock\nReklama\nReklama\nReklama\nPAP, oprac.\nadm\nPolskę podczas spotkania będzie reprezentować wiceminister obrony Paweł Zalewski.\nReklama\nReklama\nRada Północnoatlantycka to najważniejszy organ decyzyjny NATO. Tworzą ją przedstawiciele wszystkich państw członkowskich Sojuszu (zazwyczaj ambasadorowie przy NATO, ale w razie potrzeby także ministrowie spraw zagranicznych, obrony albo szefowie państw i rządów).\nCzytaj więcej\nKonflikty zbrojne\nRakiety nad Polską. Eksperci wojskowi ostrzegają i zaznaczają, że „NATO ryzykuje”\nInstytut Studiów nad Wojną (ISW) – amerykański…",
+      "stazeno": "2026-11-21T16:03:14.903Z",
+      "stav": 200
+    }
+  },
+  {
+    "id": "k-eb9c469f3f3e8648",
+    "zachyceno": "2026-11-21T16:03:07.547Z",
+    "publikovano": "2026-11-21T13:45:17.000Z",
+    "zdroj": {
+      "nazev": "Digi24 (Rumunsko)",
+      "url": "https://www.digi24.ro/stiri/externe/putin-se-afla-sub-presiune-seful-spionajului-militar-britanic-avertizeaza-asupra-riscului-unui-conflict-cu-nato-4047171",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "„Putin se află sub presiune”. Șeful spionajului militar britanic avertizează asupra riscului unui conflict între Rusia și NATO",
+    "titulekPuvodni": "„Putin se află sub presiune”. Șeful spionajului militar britanic avertizează asupra riscului unui conflict între Rusia și NATO",
+    "shrnuti": "Comportamentul tot mai agresiv al Rusiei față de Occident ar putea provoca o eroare de calcul cu urmări extrem de grave, avertizează șeful serviciilor britanice de informații din domeniul apărării, general-locotenentul Matthew Jones. Acesta susține că Moscova nu urmărește în mod activ declanșarea un",
+    "kodZeme": "GB",
+    "zeme": "Spojené království",
+    "kategorie": [
+      "hybridni",
+      "nato",
+      "rusko"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "putin+nato+conflict",
+      "nato",
+      "kreml",
+      "kremlin"
+    ],
+    "naliehave": null,
+    "stav": "ceka",
+    "vyrez": {
+      "text": "„Putin se află sub presiune”. Șeful spionajului militar britanic avertizează asupra riscului unui conflict între Rusia și NATO | Digi24\nHOME\nȘtiri\nExterne\n„Putin se află sub presiune”. Șeful spionajului militar britanic avertizează asupra riscului unui conflict între Rusia și NATO\n„Putin se află sub presiune”. Șeful spionajului militar britanic avertizează asupra riscului unui conflict între Rusia și NATO\nData actualizării: 21.11.2026 15:45 Data publicării: 21.11.2026 15:43\nVladimir Putin. Foto: Profimedia Urmărește Digi24 în Google Discover Adaugă Digi24 ca sursă preferată în Google\nDin articol\n„Cea mai mare teamă a mea este riscul unei erori de calcul” Atacuri în Londra, Marea Neagră și cazul Salisbury Marea Britanie, avertizată să fie pregătită de război până în 2030\nComportamentul tot mai agresiv al Rusiei față de Occident ar putea provoca o eroare de calcul cu urmări extrem de grave, avertizează șeful serviciilor britanice de informații din domeniul apărării, general-locotenentul Matthew Jones. Acesta susține că Moscova nu urmărește în mod activ declanșarea unui război cu NATO, însă acțiunile tot mai riscante ale Kremlinului ar putea duce la o escaladare neintenționată.…",
+      "stazeno": "2026-11-21T20:03:10.584Z",
+      "stav": 200
+    }
+  },
+  {
+    "id": "k-c4193caa26145aab",
+    "zachyceno": "2026-11-21T19:00:53.035Z",
+    "publikovano": "2026-11-21T12:55:54.000Z",
+    "zdroj": {
+      "nazev": "TVN24 (Polsko)",
+      "url": "https://tvn24.pl/swiat/szef-nato-mark-rutte-w-polsce-po-naruszeniu-naszej-przestrzeni-powietrznej-moge-zagwarantowac-st9350823?source=rss",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Mark Rutte w Polsce po naruszeniu naszej przestrzeni powietrznej. \"Mogę zagwarantować...\"",
+    "titulekPuvodni": "Mark Rutte w Polsce po naruszeniu naszej przestrzeni powietrznej. \"Mogę zagwarantować...\"",
+    "shrnuti": "NATO będzie bronić każdej piędzi polskiego terytorium - zapewnił w sobotę szef Sojuszu Mark Rutte. Podkreślił, że Rosja w wojnie z Ukrainą ponosi \"ogromne koszty\".",
+    "kodZeme": "PL",
+    "zeme": "Polsko",
+    "kategorie": [
+      "drony",
+      "nato"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "narusz+przestrzeni powietrzn",
+      "nato"
+    ],
+    "naliehave": null,
+    "stav": "ceka",
+    "vyrez": {
+      "text": "Szef NATO Mark Rutte w Polsce po naruszeniu naszej przestrzeni powietrznej. \"Mogę zagwarantować...\" - TVN24\nSUBSKRYBUJ Przejdź do\nSzukaj\nZnaleziono 0 materiałów zawierających:\nRedakcja poleca:\nZobacz więcej wyników\nMoje konto\nPobrane materiały\nOglądaj dalej\nObserwowane\nNewslettery\nPreferencje treści\nMoje zakupy i karty\nSklep\nZrealizuj voucher\nPomoc\nZgłoś problem\nEdytuj dane\nWyloguj się\nZaloguj się\nMenu\nZamknij\nOglądaj TVN24\nNajnowsze\nFakty\nŚwiat\nPolska\nRegionalne\nWarszawa\nŁódź\nKatowice\nKraków\nPoznań\nTrójmiasto\nWrocław\nKielce\nKujawsko-pomorskie\nLublin\nLubuskie\nOlsztyn\nOpole\nRzeszów\nSzczecin\nBiałystok\nWięcej\nBiznes\nMeteo\nSport\nZdrowie\nTechnologia\nKultura i styl\nKonkret24\nKontakt24\nCiekawostki\nNewslettery\nQuizy\nTematy\nChińska ekspansja\nMęskie zdrowie\nWybory w USA\nCzytaj\nSłuchaj\nOglądaj\nRutte: NATO będzie bronić każdej piędzi polskiego terytorium\nŹródło zdj. gł.: TVN24\nPosłuchaj artykułu Czyta lektor AI\nWykup subskrypcję TVN24+, aby posłuchać artykułu. Masz subskrypcję? Zaloguj się.\nDowiedz się więcej\nUdostępnij Facebook Kopiuj link\nDodaj do preferowanych źródeł w Google Dodaj nas do listy preferowanych źródeł w Google, aby nasze materiały częściej pojawiały się w Twoich wynikach…",
+      "stazeno": "2026-11-21T20:03:11.699Z",
+      "stav": 200
+    }
+  },
+  {
+    "id": "k-34962d781eeb041c",
+    "zachyceno": "2026-11-21T16:03:05.431Z",
+    "publikovano": "2026-11-21T12:19:21.000Z",
+    "zdroj": {
+      "nazev": "France 24 (anglicky)",
+      "url": "https://www.france24.com/en/ethiopia-eritrea-troops-mobilise-along-the-border",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Ethiopia - Eritrea: Troops mobilise along the border",
+    "titulekPuvodni": "Ethiopia - Eritrea: Troops mobilise along the border",
+    "shrnuti": "More than 200 former Tigray People’s Liberation Front (TPLF) fighters surrendered to Ethiopia’s federal military Friday, state-affiliated media reported, amid escalating border tensions with neighboring Eritrea. France 24 correspondent Tom Canetti tells us the latest.",
+    "kodZeme": "FR",
+    "zeme": "Francie",
+    "kategorie": [
+      "hranice"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "border+troops",
+      "border"
+    ],
+    "naliehave": null,
+    "stav": "ceka",
+    "vyrez": {
+      "text": "Ethiopia - Eritrea: Troops mobilise along the border - France 24\nSkip to main content\nTo display this content from YouTube, you must enable advertisement tracking and audience measurement.\nAccept\nManage my choices\nOne of your browser extensions seems to be blocking the video player from loading. To watch this content, you may need to disable it on this site.\nTry again\nCover image: © France 24\n01:11\nVideo content\nVideo\nEthiopia - Eritrea: Troops mobilise along the border\nIssued on: 21/11/2026 - 13:19\nShare\nMore than 200 former Tigray People’s Liberation Front (TPLF) fighters surrendered to Ethiopia’s federal military Friday, state-affiliated media reported, amid escalating border tensions with neighboring Eritrea. France 24 correspondent Tom Canetti tells us the latest.\nVideo by:\nTom CANETTI\nKeywords for this article\nAfrica\nEritrea\nEthiopia\nRead more\nRead less\nBirthrate drop in North Africa\n14/08/2026\nVideo content\nVideo\nEYE ON AFRICA\nWorld Bank to fund 645-metre bridge linking Bangui and Zongo\n14/08/2026\nVideo content\nVideo\nEYE ON AFRICA\nLibreville grapples with water shortage\n09/08/2026\nVideo content\nVideo\nEYE ON AFRICA\nAfrican Union mission in Somalia in question after US…",
+      "stazeno": "2026-11-21T20:03:12.663Z",
+      "stav": 200
+    }
+  },
+  {
+    "id": "k-32293563852df117",
+    "zachyceno": "2026-11-21T16:03:05.477Z",
+    "publikovano": "2026-11-21T12:18:40.000Z",
+    "zdroj": {
+      "nazev": "Euronews",
+      "url": "https://www.euronews.com/video/2026/11/21/strait-of-hormuz-athlete-swims-through-war-zone-to-expose-wars-environmental-toll",
+      "typ": "media",
+      "primarni": false
+    },
+    "titulek": "Strait of Hormuz: Athlete swims through war zone to expose war's environmental toll",
+    "titulekPuvodni": "Strait of Hormuz: Athlete swims through war zone to expose war's environmental toll",
+    "shrnuti": "British endurance swimmer Lewis Pugh completed a 15-kilometre swim through the Strait of Hormuz over three days in November 2026, braving explosions and burning tankers nearby. His three-day challenge aimed to expose the environmental damage caused by the war with Iran.",
+    "kodZeme": "GB",
+    "zeme": "Spojené království",
+    "kategorie": [
+      "sabotaz"
+    ],
+    "druhOdhad": "neurceno",
+    "klasifikace": "pravidla",
+    "zeSite": null,
+    "shody": [
+      "explosion"
+    ],
+    "naliehave": null,
+    "stav": "ceka",
+    "vyrez": {
+      "text": "Video. Strait of Hormuz: Athlete swims through war zone to expose war's environmental toll | Euronews\nLoading the video\nNo Comment\nVideo.\nStrait of Hormuz: Athlete swims through war zone to expose war's environmental toll\nCopy/paste the link below:\nCopy\nCopy/paste the article video embed link below:\nCopy\nUpdated: 21 November 2026 - 13:18 GMT+1\nBritish endurance swimmer Lewis Pugh completed a 15-kilometre swim through the Strait of Hormuz over three days in November 2026, braving explosions and burning tankers nearby. His three-day challenge aimed to expose the environmental damage caused by the war with Iran.\n&hellip; More\nWearing nothing but swimming trunks, goggles and a UN-branded cap, 56-year-old ocean campaigner Lewis Pugh entered the waters off Oman’s Musandam Peninsula , where he found himself swimming within sight of burning ships and towering plumes of smoke . Just 20 minutes into his first swim, two explosions rocked the area and an oil tanker caught fire around four kilometres away, forcing him to abandon the attempt temporarily. The following day, he witnessed another vessel engulfed in flames as he continued his swim through the strategic…",
+      "stazeno": "2026-11-21T20:03:12.819Z",
       "stav": 200
     }
   },
@@ -9485,1105 +10646,6 @@
     "vyrez": {
       "text": "Drone attack reported on Kaleykino oil pumping station in Russia's Tatarstan\n\r\nSubscription\nNewsletters\nPhotobank\nUkrinform - Ukrainian National News Agency\nFounded in 1918\nThursday, 19 November 2026, 14:04\nWar\nEconomy\nSports\nMore ☰\nContacts\nEng\nУкр\nEng\nEsp\nDeu\nعربي\nFra\n日本語\nPol\n&times;\nAll topics\nWar\nRecovery of Ukraine\nPolitics\nEconomy\nFact checks\nDefense\nSociety and Culture\nSports\nCrime\nAccidents and Emergencies\nAgency\nInformation on Agency\nOur Contacts\nSubscribtion Terms\nOur Services\nPrivacy policy and personal data protection\nAdditional\nPublications\nInterviews\nPhoto\nVideo\nLongreads\nReleases\nServices\nSubscription\nNewsletters\nPhotobank\n\r\n\r\n\r\nResidents of Almetyevsk in Russia's Tatarstan region recorded flashes near the village of Kaleykino, where an oil pumping station of the Russian trunk oil pipeline system of the same name is located. Local authorities confirmed a drone attack on oil storage tanks.\nThat is according to the Telegram channel ASTRA , Ukrinform reports.\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nThe site of the Kaleykino oil pumping station is located approximately 5-8 kilometers from Almetyevsk.\n\r\n\r\nAfter examining the video footage, an Astra OSINT analyst suggested that the station may…",
       "stazeno": "2026-11-19T12:04:30.107Z",
-      "stav": 200
-    }
-  },
-  {
-    "id": "k-1511287ea7fb2e51",
-    "zachyceno": "2026-11-19T12:04:19.483Z",
-    "publikovano": "2026-11-19T09:21:12.000Z",
-    "zdroj": {
-      "nazev": "Denník N (Slovensko)",
-      "url": "https://dennikn.sk/5701418/trumpov-svet-668-den-putin-na-druhej-kolaji-a-sou-pre-trumpa-co-ukazal-historicky-samit-troch-prezidentov/",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Trumpov svet (668. deň): Putin na druhej koľaji a šou pre Trumpa. Čo ukázal historický samit troch prezidentov",
-    "titulekPuvodni": "Trumpov svet (668. deň): Putin na druhej koľaji a šou pre Trumpa. Čo ukázal historický samit troch prezidentov",
-    "shrnuti": "Historický okamih – či už dobrý, alebo zlý pre Európu. Ešte predtým, ako sa trojstranné rokovania vôbec začali, bolo jasné, že schôdzka medzi americkým, ruským a čínskym prezidentom bude bezprecedentná a historická. Trump, Putin a Si Ťin-pching sa totiž v takomto zložení vo štvrtok zišli prvý raz. O",
-    "kodZeme": "RU",
-    "zeme": "Rusko",
-    "kategorie": [
-      "hybridni",
-      "rusko"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "zeSite": null,
-    "shody": [
-      "putin+europ+stret",
-      "rusk"
-    ],
-    "naliehave": null,
-    "stav": "ceka",
-    "vyrez": {
-      "text": "",
-      "stazeno": "2026-11-19T21:03:12.915Z",
-      "stav": 403,
-      "chyba": "HTTP 403"
-    }
-  },
-  {
-    "id": "k-29d8570bf5dee34c",
-    "zachyceno": "2026-11-19T12:04:18.242Z",
-    "publikovano": "2026-11-19T09:18:00.000Z",
-    "zdroj": {
-      "nazev": "Český rozhlas — domácí zprávy",
-      "url": "https://www.irozhlas.cz/zpravy-svet/evropska-komise-celila-rozsahlemu-kyberutoku-hackeri-vyuzili-umelou-inteligenci_2611191018_jor",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Evropská komise čelila rozsáhlému kyberútoku. Hackeři využili umělou inteligenci, píše Politico",
-    "titulekPuvodni": "Evropská komise čelila rozsáhlému kyberútoku. Hackeři využili umělou inteligenci, píše Politico",
-    "shrnuti": "Evropskou komisi zasáhl rozsáhlý kybernetický útok, který mohl ohrozit osobní údaje jejích zaměstnanců. Hackeři podle serveru Politico využili nástroj umělé inteligence k odhalování zranitelnosti v počítačových systémech. Útok narušil fungování některých interních služeb komise a jeho plným rozsahem",
-    "kodZeme": "EU",
-    "zeme": "EU",
-    "kategorie": [
-      "kyber",
-      "hybridni"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "zeSite": null,
-    "shody": [
-      "kyberneticky utok",
-      "kyberutok",
-      "utok na",
-      "kybernetick"
-    ],
-    "naliehave": null,
-    "stav": "ceka",
-    "vyrez": {
-      "text": "",
-      "stazeno": "2026-11-19T23:47:38.601Z",
-      "stav": 403,
-      "chyba": "HTTP 403"
-    }
-  },
-  {
-    "id": "k-85e3f46db7d9e297",
-    "zachyceno": "2026-11-19T12:04:18.482Z",
-    "publikovano": "2026-11-19T09:17:00.000Z",
-    "zdroj": {
-      "nazev": "ČTK — České noviny",
-      "url": "https://www.ceskenoviny.cz/zpravy/ruske-bombardery-proletely-tchajwanskym-pasmem-protivzdusne-obrany/2903818?utm_source=rss&utm_medium=feed",
-      "typ": "wire",
-      "primarni": false
-    },
-    "titulek": "Ruské bombardéry proletěly tchajwanským pásmem protivzdušné obrany",
-    "titulekPuvodni": "Ruské bombardéry proletěly tchajwanským pásmem protivzdušné obrany",
-    "shrnuti": "Tchaj-pej - Dva ruské bombardéry dnes proletěly identifikačním pásmem protivzdušné obrany (ADIZ) Tchaj-wanu, informovala s odvoláním na tamní ministerstvo obrany agentura CNA. Vojenská letadla do ADIZ...",
-    "kodZeme": "RU",
-    "zeme": "Rusko",
-    "kategorie": [
-      "sabotaz",
-      "rusko"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "zeSite": null,
-    "shody": [
-      "bomb",
-      "rusk"
-    ],
-    "naliehave": null,
-    "stav": "ceka",
-    "vyrez": {
-      "text": "Ruské bombardéry proletěly tchajwanským pásmem protivzdušné obrany | ČeskéNoviny.cz \r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nPřejít k obsahu \r\n| \r\nPřejít k hlavnímu menu \r\n| \r\nPřejít k vyhledávání \r\n\r\n\r\n\r\n\r\n\r\n\r\nČeské noviny \r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nMenu \r\n\r\n\r\n\r\n\r\n\r\n\r\nÚvod \r\n\r\n\r\nČR\n\r\nSvět\n\r\nEkonomika\n\r\nKultura\n\r\nSport\n\r\nMagazín\n\r\nSpeciál\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nVolby 2026:\n\r\n\r\nZpravodajství\n\r\nVýsledky\n\r\nŽivě\n\r\n\r\nDalší:\n\r\n\r\nBlízký Východ\n\r\n\r\n\r\nInvaze na Ukrajinu\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nRuské bombardéry proletěly tchajwanským pásmem protivzdušné obrany\n\r\n\r\n\r\n\r\n\r\n\r\nKomerční prezentace Aktual.: 19.11.2026 10:17 \r\nVydáno: 19.11.2026, 10:17 \r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nIlustrační foto - Ruské bombardéry Tu-95. \r\nČTK/AP/Pavel Golovkin \r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nTchaj-pej - Dva ruské bombardéry dnes proletěly identifikačním pásmem protivzdušné obrany (ADIZ) Tchaj-wanu, informovala s odvoláním na tamní ministerstvo obrany agentura CNA. Vojenská letadla do ADIZ ostrova vstoupila na jihu v blízkosti města Tchaj-tung, obletěla Tchaj-wan podél východního…",
-      "stazeno": "2026-11-19T23:47:38.676Z",
-      "stav": 200
-    }
-  },
-  {
-    "id": "k-0ac7b334deb2e4bb",
-    "zachyceno": "2026-11-19T09:04:04.777Z",
-    "publikovano": "2026-11-19T09:02:03.000Z",
-    "zdroj": {
-      "nazev": "ČT24 — hlavní zprávy",
-      "url": "https://ct24.ceskatelevize.cz/clanek/svet/evropskou-komisi-zasahl-rozsahly-kyberneticky-utok-379750",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Evropskou komisi zasáhl rozsáhlý kybernetický útok",
-    "titulekPuvodni": "Evropskou komisi zasáhl rozsáhlý kybernetický útok",
-    "shrnuti": "Evropskou komisi zasáhl rozsáhlý kybernetický útok, který mohl ohrozit osobní údaje jejích zaměstnanců. Hackeři podle serveru Politico využili nástroj umělé inteligence k odhalování zranitelnosti v počítačových systémech. Útok narušil fungování některých interních služeb Komise a jeho plným rozsahem",
-    "kodZeme": "BE",
-    "zeme": "Belgie",
-    "kategorie": [
-      "kyber",
-      "hybridni",
-      "nato"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "zeSite": null,
-    "shody": [
-      "kyberneticky utok",
-      "utok na",
-      "kybernetick",
-      "nato"
-    ],
-    "naliehave": null,
-    "stav": "ceka",
-    "vyrez": {
-      "text": "Evropskou komisi zasáhl rozsáhlý kybernetický útok — ČT24 — Česká televize\nŽivé vysílání\nTV program\nPočasí\nTeletext\nE-shop\nVše o ČT\nTV poplatky\nKontakty\nSpravovat účet\nOblíbené pořady\nRozkoukaná videa\nPřihlásit se do TV\nOdhlásit se\nEvropskou komisi zasáhl rozsáhlý kybernetický útok\nČTK\n, jch\npřed 2 m minutami | Zdroj: ČTK\nVlajky EU\nZdroj: Reuters/Jana Rodenbusch\nEvropskou komisi zasáhl rozsáhlý kybernetický útok, který mohl ohrozit osobní údaje jejích zaměstnanců. Hackeři podle serveru Politico využili nástroj umělé inteligence k odhalování zranitelnosti v počítačových systémech. Útok narušil fungování některých interních služeb Komise a jeho plným rozsahem se úřady stále zabývají. Útok byl podle bruselského serveru natolik závažný, že se jím ve středu během svého pravidelného jednání zabývali i eurokomisaři.\nKybernetický útok odhalil začátkem listopadu úřad CERT-EU, který dohlíží na kybernetickou bezpečnost unijních institucí. Mezinárodní hackeři podle něj použili veřejně dostupný nástroj ARTEX využívající umělou inteligenci k vyhledávání zranitelností v IT systémech. Komise v reakci na útok několik aplikací preventivně odstavila, přístup k většině z nich již obnovila.\n„Evropská…",
-      "stazeno": "2026-11-19T09:04:07.871Z",
-      "stav": 200
-    }
-  },
-  {
-    "id": "k-c22d8c1ddc9053d7",
-    "zachyceno": "2026-11-19T12:04:21.375Z",
-    "publikovano": "2026-11-19T09:00:00.000Z",
-    "zdroj": {
-      "nazev": "Ukrainska Pravda (anglicky)",
-      "url": "https://www.pravda.com.ua/eng/news/2026/11/19/8063581/",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Boy, 11, injured in Russian attack on Pavlohrad dies after three weeks in critical condition",
-    "titulekPuvodni": "Boy, 11, injured in Russian attack on Pavlohrad dies after three weeks in critical condition",
-    "shrnuti": "Local officials and the Pavlohrad City Lyceum have confirmed the death of sixth-grader Artem Seledtsov, who was severely injured alongside nine other people when Russian forces struck Pavlohrad on 31 October.",
-    "kodZeme": "RU",
-    "zeme": "Rusko",
-    "kategorie": [
-      "hybridni",
-      "rusko"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "zeSite": null,
-    "shody": [
-      "attack on",
-      "russia"
-    ],
-    "naliehave": null,
-    "stav": "ceka",
-    "vyrez": {
-      "text": "Pavlohrad mourns 11-year-old Artem Seledtsov, who was fatally injured in an October Russian strike | Ukrainska Pravda\nArtem Seledtsov. Photo: Pavlohrad City Executive Committee\nArtem Seledtsov, an 11-year-old boy who sustained severe injuries in a Russian attack on Pavlohrad in Dnipropetrovsk Oblast in late October, has died in hospital. Doctors battled to save his life for nearly three weeks.\nSource: Pavlohrad City Executive Committee ; Oleksandr Hanzha, Head of Dnipropetrovsk Oblast Military Administration; Pavlohrad City Lyceum\nQuote from the lyceum: \"An underhanded enemy strike on Pavlohrad took the life of our 6th-grade pupil, Artem Seledtsov. It is hard to find words to heal this pain. This bright, sincere boy, who should have had his whole life, dreams and discoveries ahead of him, will remain forever in our memory and within the walls of his alma mater, the Pavlohrad City Lyceum.\"\nAdvertisement:\n\r\n\r\n\r\n\r\n\r\nDetails: On 31 October, Russian forces struck a residential area in Pavlohrad, damaging several apartment buildings. Ten local residents were injured in the attack, including three children.\nRegional media outlet Suspilne Dnipro reported that one of those injured in the…",
-      "stazeno": "2026-11-19T23:47:39.263Z",
-      "stav": 200
-    }
-  },
-  {
-    "id": "k-064e577b75a15938",
-    "zachyceno": "2026-11-19T09:04:07.714Z",
-    "publikovano": "2026-11-19T08:51:00.000Z",
-    "zdroj": {
-      "nazev": "Ukrinform (anglicky)",
-      "url": "https://www.ukrinform.net/rubric-ato/4186267-russian-forces-strike-industrial-and-energy-infrastructure-in-odesa-region-overnight.html",
-      "typ": "wire",
-      "primarni": false
-    },
-    "titulek": "Russian forces strike industrial and energy infrastructure in Odesa region overnight",
-    "titulekPuvodni": "Russian forces strike industrial and energy infrastructure in Odesa region overnight",
-    "shrnuti": "Russian forces launched a massive combined attack on the south of the Odesa region overnight on November 19, damaging industrial and energy infrastructure facilities.",
-    "kodZeme": "UA",
-    "zeme": "Ukrajina",
-    "kategorie": [
-      "hybridni",
-      "rusko"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "zeSite": null,
-    "shody": [
-      "attack on",
-      "russia"
-    ],
-    "naliehave": null,
-    "stav": "ceka",
-    "vyrez": {
-      "text": "Russian forces strike industrial and energy infrastructure in Odesa region overnight\n\r\nSubscription\nNewsletters\nPhotobank\nUkrinform - Ukrainian National News Agency\nFounded in 1918\nThursday, 19 November 2026, 11:04\nWar\nEconomy\nSports\nMore ☰\nContacts\nEng\nУкр\nEng\nEsp\nDeu\nعربي\nFra\n日本語\nPol\n&times;\nAll topics\nWar\nRecovery of Ukraine\nPolitics\nEconomy\nFact checks\nDefense\nSociety and Culture\nSports\nCrime\nAccidents and Emergencies\nAgency\nInformation on Agency\nOur Contacts\nSubscribtion Terms\nOur Services\nPrivacy policy and personal data protection\nAdditional\nPublications\nInterviews\nPhoto\nVideo\nLongreads\nReleases\nServices\nSubscription\nNewsletters\nPhotobank\n\r\n\r\n\r\nRussian forces launched a massive combined attack on the south of the Odesa region overnight on November 19, damaging industrial and energy infrastructure facilities.\nAccording to Ukrinform, Odesa Region Governor Oleh Kiper announced this on Telegram .\n\r\n\r\nHe said Russia had launched a massive combined attack on the south of the Odesa region overnight. The attack damaged industrial and energy infrastructure facilities but did not affect power supply.\n\r\n\r\nNo people were injured. Efforts to deal with the aftermath are ongoing at the…",
-      "stazeno": "2026-11-19T09:04:08.964Z",
-      "stav": 200
-    }
-  },
-  {
-    "id": "k-408deb84be412cde",
-    "zachyceno": "2026-11-19T09:04:05.432Z",
-    "publikovano": "2026-11-19T08:47:59.000Z",
-    "zdroj": {
-      "nazev": "The Guardian — World",
-      "url": "https://www.theguardian.com/world/live/2026/nov/19/russia-ukraine-war-coalition-of-the-willing-europe-latest-news-updates",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Tusk appears to mock Trump’s Putin comment as Ukraine’s allies meet in Berlin – Europe live",
-    "titulekPuvodni": "Tusk appears to mock Trump’s Putin comment as Ukraine’s allies meet in Berlin – Europe live",
-    "shrnuti": "After US president called Putin a friend, Poland’s PM said: ‘God, protect us from such friends’ On Ukraine, Trump says at the beginning of the trilateral meeting: “ We are going to be discussing the war between Russia and Ukraine, and we already have. President Putin and I have had a long discussion",
-    "kodZeme": "DE",
-    "zeme": "Německo",
-    "kategorie": [
-      "hybridni",
-      "rusko"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "zeSite": null,
-    "shody": [
-      "putin+poland+war",
-      "russia"
-    ],
-    "naliehave": null,
-    "stav": "ceka",
-    "vyrez": {
-      "text": "Tusk appears to mock Trump’s Putin comment as Ukraine’s allies meet in Berlin – Europe live | Europe | The Guardian\nSkip to main content Skip to navigation\nSkip to key events\nEurope live Europe\nTusk appears to mock Trump’s Putin comment as Ukraine’s allies meet in Berlin – Europe live\nAfter US president called Putin a friend, Poland’s PM said: ‘God, protect us from such friends’\nLIVE  Updated  3m ago\nThu 19 Nov 2026 04.00 EST First published on Thu 19 Nov 2026 03.41 EST\nShare\nKey events\n15m ago\n'We are going to be discussing the war between Russia and Ukraine,' Trump says\n17m ago\n'Together we are making history,' Trump declares as trilateral with Putin, Xi gets under way\n20m ago\n'God, protect us from such friends,' Poland's Tusk says after Trump's 'he's my friend' comments to Putin\n21m ago\nMorning opening: Ukraine's allies meet in Berlin, anxious to hear about Trump's meeting with Putin, Xi\nPolice officers provide security ahead of the summit of the so-called ‘coalition of the willing’ group of pro-Ukrainian countries, outside the Chancellery, with the Reichstag Building in the background, in Berlin, Germany. Photograph: Fabrizio Bensch/Reuters\nView image in fullscreen\nPolice…",
-      "stazeno": "2026-11-19T09:04:09.807Z",
-      "stav": 200
-    }
-  },
-  {
-    "id": "k-b209ac5912dc2af2",
-    "zachyceno": "2026-11-19T09:04:04.924Z",
-    "publikovano": "2026-11-19T08:38:00.000Z",
-    "zdroj": {
-      "nazev": "ČTK — České noviny",
-      "url": "https://www.ceskenoviny.cz/zpravy/politico-evropskou-komisi-zasahl-rozsahly-kyberneticky-utok-skody-se-resi/2903797?utm_source=rss&utm_medium=feed",
-      "typ": "wire",
-      "primarni": false
-    },
-    "titulek": "Politico: Evropskou komisi zasáhl rozsáhlý kybernetický útok, škody se řeší",
-    "titulekPuvodni": "Politico: Evropskou komisi zasáhl rozsáhlý kybernetický útok, škody se řeší",
-    "shrnuti": "Brusel - Evropskou komisi zasáhl rozsáhlý kybernetický útok, který mohl ohrozit osobní údaje jejích zaměstnanců. Hackeři podle serveru Politico využili nástroj umělé inteligence k odhalování zranitelnosti...",
-    "kodZeme": "BE",
-    "zeme": "Belgie",
-    "kategorie": [
-      "kyber"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "zeSite": null,
-    "shody": [
-      "kyberneticky utok",
-      "kybernetick"
-    ],
-    "naliehave": null,
-    "stav": "ceka",
-    "vyrez": {
-      "text": "Politico: Evropskou komisi zasáhl rozsáhlý kybernetický útok, škody se řeší | ČeskéNoviny.cz \r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nPřejít k obsahu \r\n| \r\nPřejít k hlavnímu menu \r\n| \r\nPřejít k vyhledávání \r\n\r\n\r\n\r\n\r\n\r\n\r\nČeské noviny \r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nMenu \r\n\r\n\r\n\r\n\r\n\r\n\r\nÚvod \r\n\r\n\r\nČR\n\r\nSvět\n\r\nEkonomika\n\r\nKultura\n\r\nSport\n\r\nMagazín\n\r\nSpeciál\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nVolby 2026:\n\r\n\r\nZpravodajství\n\r\nVýsledky\n\r\nŽivě\n\r\n\r\nDalší:\n\r\n\r\nBlízký Východ\n\r\n\r\n\r\nInvaze na Ukrajinu\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nPolitico: Evropskou komisi zasáhl rozsáhlý kybernetický útok, škody se řeší\n\r\n\r\n\r\n\r\n\r\n\r\nKomerční prezentace Aktual.: 19.11.2026 09:38 \r\nVydáno: 19.11.2026, 09:38 \r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nIlustrační foto - Vlajky Evropské unie před budovou Evropské komise v Bruselu. \r\nČTK IB/ \r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nBrusel - Evropskou komisi zasáhl rozsáhlý kybernetický útok, který mohl ohrozit osobní údaje jejích zaměstnanců. Hackeři podle serveru Politico využili nástroj umělé inteligence k odhalování zranitelnosti v počítačových systémech. Útok narušil fungování…",
-      "stazeno": "2026-11-19T09:04:09.994Z",
-      "stav": 200
-    }
-  },
-  {
-    "id": "k-8f78e2df84a9a6fc",
-    "zachyceno": "2026-11-19T08:36:47.341Z",
-    "publikovano": null,
-    "zdroj": {
-      "nazev": "TASR (Slovensko)",
-      "url": "https://www.tasr.sk/tasr-clanok/TASR:2026111900000039",
-      "typ": "wire",
-      "primarni": false
-    },
-    "titulek": "dnes 8:08 BRIEF: Ukrajina opäť podnikla dronový útok na prečerpávaciu stanicu v Kalejkine",
-    "titulekPuvodni": "dnes 8:08 BRIEF: Ukrajina opäť podnikla dronový útok na prečerpávaciu stanicu v Kalejkine",
-    "shrnuti": "",
-    "kodZeme": "UA",
-    "zeme": "Ukrajina",
-    "kategorie": [
-      "hybridni",
-      "drony"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "zeSite": null,
-    "shody": [
-      "utok na",
-      "dron"
-    ],
-    "naliehave": null,
-    "stav": "ceka",
-    "vyrez": {
-      "text": "Tlačová agentúra Slovenskej republiky - TASR.sk\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nPrešov angažoval na skúšobný kontrakt amerického útočníka Johnsona\nPodozrenie z dotačného podvodu: Polícia zasahuje v Bratislavskom kraji\nMontreal vyhral v New Jersey 3:2, Slafkovský s asistenciou\nMinistri zdravotníctva krajín V4 budú rokovať v Piešťanoch\nUkrajina opäť podnikla útok na prečerpávaciu stanicu v Kalejkine\nVan Goghov obraz sa v New Yorku vydražil za rekordnú sumu\nPutin a Trump viedli v Číne bilaterálne rokovanie\n\r\n\r\n\r\n\r \r\r\r\n\r \r \r \r \r Teraz\n\r TASR TV\n\r Webmagazín\n\r Vtedy.sk\n\r \r FOTOBANKA TASR\n\r Webreport\n\r Školské\n\r \r\r \r\n\r\n\r\n\r \r\r\n\r\n\r\n\r \r \r\n\r Úvod\nO agentúre\nProdukty a služby\nKontakty\nPodporujeme\n\r\n\r \r\n\r \r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nBRIEF: Ukrajina opäť podnikla dronový útok na prečerpávaciu stanicu v Kalejkine\ndnes 8:08\nKyjev 19. novembra (TASR) - Ukrajinské drony v noci na štvrtok v ruskej Tatárskej republike zaútočili na prečerpávaciu stanicu ropy Kalejkino, ktorá je kľúčovým uzlom pre prevádzku ropovodu Družba, uviedla britská stanica BBC. Tlačová služba vedenia Tatárskej republiky dronový útok neďaleko mesta Aľmetievsk potvrdila, píše TASR.\nUPOZORNENIE: Správu aktualizujeme.\n12 pel zsl\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nVšetko o…",
-      "stazeno": "2026-11-19T08:36:50.542Z",
-      "stav": 200
-    }
-  },
-  {
-    "id": "k-98665fb4c16b9df6",
-    "zachyceno": "2026-11-19T08:36:47.330Z",
-    "publikovano": null,
-    "zdroj": {
-      "nazev": "TASR (Slovensko)",
-      "url": "https://www.teraz.sk/zahranicie/ukrajina-opat-podnikla-utok-na-prece/1008795-clanok.html",
-      "typ": "wire",
-      "primarni": false
-    },
-    "titulek": "Ukrajina opäť podnikla útok na prečerpávaciu stanicu v Kalejkine",
-    "titulekPuvodni": "Ukrajina opäť podnikla útok na prečerpávaciu stanicu v Kalejkine",
-    "shrnuti": "",
-    "kodZeme": "UA",
-    "zeme": "Ukrajina",
-    "kategorie": [
-      "hybridni"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "zeSite": null,
-    "shody": [
-      "utok na"
-    ],
-    "naliehave": null,
-    "stav": "ceka",
-    "vyrez": {
-      "text": "Ukrajina opäť podnikla útok na prečerpávaciu stanicu v Kalejkine\nIlustračné foto. Foto: TASR/AP\nMiestne úrady v noci vyhlásili v Tatársku vrátane mesta Aľmetievsk letecký poplach.\r\nAutor TASR\ndnes 8:13 , aktualizované   dnes 8:21\nAk si želáte, aby počítač prečítal text článku, použite prehrávač nižšie.\n00:00 / 00:00\n1.0 x\nKyjev 19. novembra (TASR) - Ukrajinsk&eacute; drony v noci na &scaron;tvrtok v ruskej Tat&aacute;rskej republike za&uacute;točili na prečerp&aacute;vaciu stanicu ropy Kalejkino, ktor&aacute; je kľ&uacute;čov&yacute;m uzlom pre prev&aacute;dzku ropovodu Družba, uviedla britsk&aacute; stanica BBC. Tlačov&aacute; služba vedenia Tat&aacute;rskej republiky dronov&yacute; &uacute;tok neďaleko mesta Aľmetievsk potvrdila, p&iacute;&scaron;e TASR. \r\n\r\nTat&aacute;rske vedenie dodalo, že veľk&eacute;mu požiaru sa podarilo zabr&aacute;niť &bdquo;vďaka automatick&eacute;mu syst&eacute;mu hasenia požiaru a koordinovanej pr&aacute;ci bezpečnostn&yacute;ch zložiek.&ldquo; &bdquo;&Scaron;rapnely&ldquo; v&scaron;ak po&scaron;kodili niekoľko civiln&yacute;ch objektov, uviedla tlačov&aacute; služba bez poskytnutia podrobnost&iacute;. Nikto nebol zranen&yacute;. \r\n\r\nO…",
-      "stazeno": "2026-11-19T08:36:51.248Z",
-      "stav": 200
-    }
-  },
-  {
-    "id": "k-f86da9e16b4df874",
-    "zachyceno": "2026-11-19T08:36:49.675Z",
-    "publikovano": "2026-11-19T08:34:43.000Z",
-    "zdroj": {
-      "nazev": "Digi24 (Rumunsko)",
-      "url": "https://www.digi24.ro/stiri/externe/sua/trump-putin-si-xi-jinping-prima-reuniune-trilaterala-se-negociaza-noua-ordine-mondiala-ucraina-iran-si-armele-nucleare-pe-agenda-4043223",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "A început prima reuniune trilaterală Trump-Putin-Xi Jinping. Ucraina, Iranul și armele nucleare, pe agenda discuțiilor",
-    "titulekPuvodni": "A început prima reuniune trilaterală Trump-Putin-Xi Jinping. Ucraina, Iranul și armele nucleare, pe agenda discuțiilor",
-    "shrnuti": "Donald Trump, Xi Jinping și Vladimir Putin iau parte joi la o reuniune trilaterală fără precedent, la Shenzhen, în China. Discuțiile ar urma să vizeze războiul din Ucraina, conflictul din Iran și un posibil nou acord privind controlul armamentului nuclear. Întâlnirea este comparată cu Conferința de ",
-    "kodZeme": "GB",
-    "zeme": "Spojené království",
-    "kategorie": [
-      "hybridni"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "zeSite": null,
-    "shody": [
-      "putin+europ+nuclear"
-    ],
-    "naliehave": null,
-    "stav": "ceka",
-    "vyrez": {
-      "text": "A început prima reuniune trilaterală Trump-Putin-Xi Jinping. Ucraina, Iranul și armele nucleare, pe agenda discuțiilor | Digi24\nHOME\nȘtiri\nExterne\nSUA\nA început prima reuniune trilaterală Trump-Putin-Xi Jinping. Ucraina, Iranul și armele nucleare, pe agenda discuțiilor\nVideo A început prima reuniune trilaterală Trump-Putin-Xi Jinping. Ucraina, Iranul și armele nucleare, pe agenda discuțiilor\nData actualizării: 19.11.2026 10:34 Data publicării: 19.11.2026 09:10\nPreședintele SUA, Donald Trump, îi strânge mâna președintelui rus Vladimir Putin, sub privirile președintelui Chinei, Xi Jinping, înaintea banchetului de bun venit organizat cu ocazia summitului Cooperării Economice Asia-Pacific (APEC) de la Shenzhen. Foto: Iori Sagisawa / AFP / Profimedia Urmărește Digi24 în Google Discover Adaugă Digi24 ca sursă preferată în Google\nDin articol\nA început întâlnirea trilaterală istorică dintre SUA, China și Rusia Președintele rus a ajuns la locul desfășurării summitului Putin ar fi venit la summitul din China însoțit de „servieta nucleară” a Rusiei Putin se îndreaptă spre Vila Kylin Întârziere în programul summitului Presa chineză publică imagini cu locul unde au loc discuțiile trilaterale…",
-      "stazeno": "2026-11-19T08:36:52.313Z",
-      "stav": 200
-    }
-  },
-  {
-    "id": "k-19f1b483da6017c9",
-    "zachyceno": "2026-11-19T08:36:46.694Z",
-    "publikovano": "2026-11-19T07:55:38.000Z",
-    "zdroj": {
-      "nazev": "Seznam Zprávy",
-      "url": "https://www.seznamzpravy.cz/clanek/zahranicni-v-nemecku-je-ve-vazbe-mladik-ktery-planoval-teroristicky-utok-na-mesitu-320969",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "V Německu je ve vazbě mladík, který plánoval teroristický útok na mešitu",
-    "titulekPuvodni": "V Německu je ve vazbě mladík, který plánoval teroristický útok na mešitu",
-    "shrnuti": "Od srpna je ve vazbě osmnáctiletý muž, kterého německá policie zadržela po domovní prohlídce. Na 3D tiskárně si vyrobil zbraně a plánoval útok na některou z mešit v Německu.",
-    "kodZeme": "DE",
-    "zeme": "Německo",
-    "kategorie": [
-      "hybridni",
-      "zpravodajske",
-      "vojsko"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "zeSite": null,
-    "shody": [
-      "utok na",
-      "zadrz+zbran",
-      "policie"
-    ],
-    "naliehave": null,
-    "stav": "ceka",
-    "vyrez": {
-      "text": "V Německu je ve vazbě mladík, který plánoval teroristický útok na mešitu - Seznam Zprávy\nZobrazení snímku 1 z 0\nHlavní obsah\nV Německu je ve vazbě mladík, který plánoval teroristický útok na mešitu\nČTK\n1:25\nChcete-li článek poslouchat, přihlaste se\neBook\nSdílet\nFoto: Lilia Solonari, Shutterstock.com\nIlustrační foto.\n8:55\nOd srpna je ve vazbě osmnáctiletý muž, kterého německá policie zadržela po domovní prohlídce. Na 3D tiskárně si vyrobil zbraně a plánoval útok na některou z mešit v Německu.\nČlánek\nNěmecká policie zadržela v létě mladíka, který plánoval na přelomu letošního a příštího roku teroristický útok na mešitu. S odvoláním na generální státní zastupitelství v Düsseldorfu o tom ve čtvrtek informovala agentura DPA. Mladík, jehož motivem byl zřejmě krajně pravicový světonázor, si podle médií vyrobil zbraně na 3D tiskárně.\nProkuratura 18letého muže ze západoněmeckého města Eslohe viní z přípravy teroristického útoku. Ve vazbě je od srpna. Při domovní prohlídce u něj policisté našli řadu zbraní a jejich částí a také munici. Vyrobil si je přitom na 3D tiskárně. Podle vyšetřovatelů chtěl mladý muž spáchat na konci letošního roku či začátku příštího teroristický útok na některou…",
-      "stazeno": "2026-11-19T08:36:54.402Z",
-      "stav": 200
-    }
-  },
-  {
-    "id": "k-ecb256426dd1c275",
-    "zachyceno": "2026-11-19T08:36:46.940Z",
-    "publikovano": "2026-11-19T07:32:06.000Z",
-    "zdroj": {
-      "nazev": "BBC News — Europe",
-      "url": "https://www.bbc.co.uk/news/articles/cm879dqn3e1jo?at_medium=RSS&at_campaign=rss",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Crimean Bridge attacked again, Russia says",
-    "titulekPuvodni": "Crimean Bridge attacked again, Russia says",
-    "shrnuti": "The head of Crimea said traffic was suspended after another attack on the link between Russia and the occupied territory.",
-    "kodZeme": "RU",
-    "zeme": "Rusko",
-    "kategorie": [
-      "hybridni",
-      "rusko"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "zeSite": null,
-    "shody": [
-      "attack on",
-      "russia"
-    ],
-    "naliehave": null,
-    "stav": "ceka",
-    "vyrez": {
-      "text": "Putin's Crimean Bridge comes under attack again, Russian official says - BBC News\nFigure caption, Final moments before stretch of Crimean Bridge collapsed after Ukrainian attack earlier this week\nBy Claire Keenan\nPublished\n19 November 2026, 01:05 GMT\nUpdated 1 hour ago\nThe Crimean Bridge has been attacked by Ukraine for the third time this week, Russia has said.\nThe Moscow-installed head of Crimea, Sergei Aksyonov, said that traffic was temporarily suspended following another strike on the bridge connecting Russia to occupied Crimea.\nThe critical bridge had already been hit twice earlier in the week resulting in severe damage and part of the bridge collapsing into the water.\nThe important infrastructure has long been targeted by Ukraine because of its significance as a logistical and symbolic asset to Moscow's war effort.\nImage source, Reuters\nImage caption, A screengrab of the damaged Crimean bridge in the Kerch Strait on 17 November\nIt comes as Russian President Vladimir Putin meets US President Donald Trump and China's President Xi Jinping on Thursday for landmark talks in China .\nAksyonov confirmed the strike on the bridge in the early hours of Thursday via Telegram.\nRussia's…",
-      "stazeno": "2026-11-19T08:36:55.342Z",
-      "stav": 200
-    }
-  },
-  {
-    "id": "k-35b99ef341caf04f",
-    "zachyceno": "2026-11-19T08:36:47.556Z",
-    "publikovano": "2026-11-19T07:03:09.000Z",
-    "zdroj": {
-      "nazev": "Euronews",
-      "url": "https://www.euronews.com/2026/11/19/europe-today-xi-trump-and-putin-together-in-a-historic-trilateral-meeting",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Europe Today: Xi, Trump and Putin together in a historic trilateral meeting",
-    "titulekPuvodni": "Europe Today: Xi, Trump and Putin together in a historic trilateral meeting",
-    "shrnuti": "The heads of state of China, Russia and the US are expected to discuss denuclearization and the Iran war, but not Ukraine. We speak with Kremlin critic Bill Browder. The Coalition of the Willing will meet in Berlin, we talk about it with Ignacy Niemczycki, Poland Deputy Foreign Minister.",
-    "kodZeme": "PL",
-    "zeme": "Polsko",
-    "kategorie": [
-      "hybridni",
-      "rusko"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "zeSite": null,
-    "shody": [
-      "putin+poland+war",
-      "russia",
-      "kreml",
-      "kremlin"
-    ],
-    "naliehave": null,
-    "stav": "ceka",
-    "vyrez": {
-      "text": "Europe Today: Xi, Trump and Putin together in a historic trilateral meeting | Euronews\nAdvertisement\nBy&nbsp Aida Sanchez Alonso &nbsp&&nbsp Arendse Lund\nPublished on\n19 November 2026 - 8:03 GMT+1\nShare\nComments\nAdd Euronews on Google\nShare\nFacebook\nTwitter\nFlipboard\nSend\nReddit\nLinkedin\nMessenger\nTelegram\nVK\nBluesky\nThreads\nWhatsapp\nCopy/paste the article video embed link below:\nCopied\nThe heads of state of China, Russia and the US are expected to discuss denuclearization and the Iran war, but not Ukraine. We speak with Kremlin critic Bill Browder. The Coalition of the Willing will meet in Berlin, we talk about it with Ignacy Niemczycki, Poland Deputy Foreign Minister.\nOn today's show:\nThree powerful world leaders, Xi Jinping, Vladimir Putin and Donald Trump are set to meet for a historic trilateral at the APEC summit in the Chinese city of Shenzhen today. Investor and Kremlin critic Bill Browder and Euronews' Russian edition editor Serguei Doubine help us understand the consequences of their meeting.\nADVERTISEMENT\nADVERTISEMENT\nJust hours after the summit, Trump's envoys Jared Kushner and Steve Witkoff will be in Berlin for a meeting of the “Coalition of the Willing” with senior…",
-      "stazeno": "2026-11-19T08:36:55.461Z",
-      "stav": 200
-    }
-  },
-  {
-    "id": "k-972547c14b3b072e",
-    "zachyceno": "2026-11-19T08:36:50.339Z",
-    "publikovano": "2026-11-19T06:40:00.000Z",
-    "zdroj": {
-      "nazev": "Ukrinform (anglicky)",
-      "url": "https://www.ukrinform.net/rubric-ato/4186225-air-defense-downs-69-drones-launched-by-russia-in-overnight-attack-on-ukraine.html",
-      "typ": "wire",
-      "primarni": false
-    },
-    "titulek": "Air defense downs 69 drones launched by Russia in overnight attack on Ukraine",
-    "titulekPuvodni": "Air defense downs 69 drones launched by Russia in overnight attack on Ukraine",
-    "shrnuti": "Ukraine's air defense forces neutralized 69 of the 98 drones Russia used to attack Ukraine from the evening of November 18.",
-    "kodZeme": "UA",
-    "zeme": "Ukrajina",
-    "kategorie": [
-      "hybridni",
-      "drony",
-      "rusko"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "zeSite": null,
-    "shody": [
-      "attack on",
-      "dron",
-      "drone",
-      "russia"
-    ],
-    "naliehave": null,
-    "stav": "ceka",
-    "vyrez": {
-      "text": "Air defense downs 69 drones launched by Russia in overnight attack on Ukraine\n\r\nSubscription\nNewsletters\nPhotobank\nUkrinform - Ukrainian National News Agency\nFounded in 1918\nThursday, 19 November 2026, 10:36\nWar\nEconomy\nSports\nMore ☰\nContacts\nEng\nУкр\nEng\nEsp\nDeu\nعربي\nFra\n日本語\nPol\n&times;\nAll topics\nWar\nRecovery of Ukraine\nPolitics\nEconomy\nFact checks\nDefense\nSociety and Culture\nSports\nCrime\nAccidents and Emergencies\nAgency\nInformation on Agency\nOur Contacts\nSubscribtion Terms\nOur Services\nPrivacy policy and personal data protection\nAdditional\nPublications\nInterviews\nPhoto\nVideo\nLongreads\nReleases\nServices\nSubscription\nNewsletters\nPhotobank\n\r\n\r\n\r\nUkraine's air defense forces neutralized 69 of the 98 drones Russia used to attack Ukraine from the evening of November 18.\nAccording to Ukrinform, the Ukrainian Air Force Command reported this on Facebook .\n\r\n\r\nOn the night of November 18-19 (from 18:00 on November 18), the enemy attacked Ukraine with Oniks anti-ship missiles launched from the Autonomous Republic of Crimea, as well as 98 Shahed-type attack UAVs (61 of them jet-powered), Gerberas and Parodiya-type decoy drones launched from the following directions: Oryol, Kursk, Shatalovo…",
-      "stazeno": "2026-11-19T08:36:55.654Z",
-      "stav": 200
-    }
-  },
-  {
-    "id": "k-6de70f153b71a9df",
-    "zachyceno": "2026-11-19T08:36:50.379Z",
-    "publikovano": "2026-11-19T06:34:00.000Z",
-    "zdroj": {
-      "nazev": "Ukrainska Pravda (anglicky)",
-      "url": "https://www.pravda.com.ua/eng/news/2026/11/19/8063561/",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Kerch Bridge attacked for third time in a week: trains halted, Ukraine hints at strike",
-    "titulekPuvodni": "Kerch Bridge attacked for third time in a week: trains halted, Ukraine hints at strike",
-    "shrnuti": "Russian authorities halted train services across the Kerch Strait following an overnight drone attack on the bridge's railway section. Ukraine's General Staff indirectly acknowledged the strike.",
-    "kodZeme": "UA",
-    "zeme": "Ukrajina",
-    "kategorie": [
-      "hybridni",
-      "drony",
-      "infrastruktura",
-      "rusko"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "zeSite": null,
-    "shody": [
-      "attack on",
-      "dron",
-      "drone",
-      "railway",
-      "russia"
-    ],
-    "naliehave": null,
-    "stav": "ceka",
-    "vyrez": {
-      "text": "Rail traffic suspended on Crimean Bridge after third attack in a week | Ukrainska Pravda\nThe damaged Crimean Bridge. Photo: Astra\nThe railway section of the Kerch Bridge was attacked on the night of 18-19 November, prompting the Russian-installed authorities to suspend train services. The General Staff of the Armed Forces of Ukraine has indirectly confirmed the strike on the bridge.\nSource: Russian Ministry of Transport ; General Staff of the Armed Forces of Ukraine ; ChTD and Supernova+ Telegram channels\nDetails: ChTD reported that Ukraine struck the railway section of the Crimean Bridge. This is the third attack targeting the bridge in recent days. Local Telegram channels had reported at least two strikes on the railway bridge earlier in the week. One of the road sections was destroyed during those attacks.\nAdvertisement:\n\r\n\r\n\r\n\r\n\r\nRussia's Ministry of Transport announced in the morning that rail traffic across the Kerch Bridge had been temporarily suspended.\n\"As a result of an overnight drone attack, train services on the railway section of the Crimean Bridge have been temporarily suspended,\" the ministry said.\nMeanwhile, local residents of Kerch said that the bridge's second…",
-      "stazeno": "2026-11-19T08:36:56.449Z",
-      "stav": 200
-    }
-  },
-  {
-    "id": "k-6aeb095a19db2a02",
-    "zachyceno": "2026-11-19T06:02:55.930Z",
-    "publikovano": null,
-    "zdroj": {
-      "nazev": "TASR (Slovensko)",
-      "url": "https://www.teraz.sk/zahranicie/ukrajina-podnikla-podla-ruskeho-predst/1008777-clanok.html",
-      "typ": "wire",
-      "primarni": false
-    },
-    "titulek": "Ukrajina podnikla podľa ruského predstaviteľa útok na Krymský most",
-    "titulekPuvodni": "Ukrajina podnikla podľa ruského predstaviteľa útok na Krymský most",
-    "shrnuti": "",
-    "kodZeme": "UA",
-    "zeme": "Ukrajina",
-    "kategorie": [
-      "hybridni",
-      "rusko"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "zeSite": null,
-    "shody": [
-      "utok na",
-      "rusk"
-    ],
-    "naliehave": null,
-    "stav": "ceka",
-    "vyrez": {
-      "text": "Ukrajina podnikla podľa ruského predstaviteľa útok na Krymský most\nNákladný vlak prechádza po koľajniciach železničného spojenia Krymského mosta, ktorý spája ruskú pevninu a Krymský polostrov cez Kerčský prieliv neďaleko mesta Kerč na Kryme. Foto: TASR/AP\nO následkoch útoku zatiaľ nie sú dostupné žiadne oficiálne informácie a ruské úrady ani ukrajinské ozbrojené sily sa k tomu bezprostredne nevyjadrili.\nAutor TASR\ndnes 6:13\nAk si želáte, aby počítač prečítal text článku, použite prehrávač nižšie.\n00:00 / 00:00\n1.0 x\nMoskva/Kyjev 19. novembra (TASR) - Ukrajina podnikla ďal&scaron;&iacute; &uacute;tok na Krymsk&yacute; most, ozn&aacute;mil v stredu neskoro večer Moskvou dosaden&yacute; predstaviteľ Krymu Sergej Aksionov s t&yacute;m, že bola dočasne preru&scaron;en&aacute; doprava a &uacute;rady moment&aacute;lne vyhodnocuj&uacute; &scaron;kody. Agent&uacute;ra RBC-Ukraine s odvolan&iacute;m sa na rusk&eacute; monitorovacie kan&aacute;ly uviedla, že bola zasiahnut&aacute; železničn&aacute; časť mosta. P&iacute;&scaron;e o tom TASR. \r\n\r\nO n&aacute;sledkoch &uacute;toku zatiaľ nie s&uacute; dostupn&eacute; žiadne ofici&aacute;lne inform&aacute;cie a rusk&eacute; &uacute;rady ani…",
-      "stazeno": "2026-11-19T06:02:58.420Z",
-      "stav": 200
-    }
-  },
-  {
-    "id": "k-31136aef4b4104f0",
-    "zachyceno": "2026-11-19T06:02:56.568Z",
-    "publikovano": "2026-11-19T06:02:00.000Z",
-    "zdroj": {
-      "nazev": "Aktuality.sk",
-      "url": "https://www.aktuality.sk/clanok/QTYANZV/ukrajinska-armada-udajne-podnikla-dalsi-utok-na-krymsky-most/",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Ukrajinská armáda údajne podnikla ďalší útok na Krymský most",
-    "titulekPuvodni": "Ukrajinská armáda údajne podnikla ďalší útok na Krymský most",
-    "shrnuti": "Ukrajina opäť zaútočila na Krymský most. Doprava musela byť dočasne prerušená, úrady vyhodnocujú škody.",
-    "kodZeme": "UA",
-    "zeme": "Ukrajina",
-    "kategorie": [
-      "hybridni",
-      "vojsko"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "zeSite": null,
-    "shody": [
-      "utok na",
-      "armada"
-    ],
-    "naliehave": null,
-    "stav": "ceka",
-    "vyrez": {
-      "text": "Ukrajinská armáda údajne podnikla ďalší útok na Krymský most | Aktuality.sk\nAktuality\nŠport\nDiva\nNajmama\nŽivé\nRecepty\nDobrú chuť\nSlovník\n12 °C -\nBratislava\nštvrtok 19. 11.\n19. 11.\nAlžbeta\nSprávy dnes 19. Nov 2026 o 07:02\n1 min. čítania\nPridať do Google\nUkrajinská armáda údajne podnikla ďalší útok na Krymský most\n1 fotka v galérii\nUkrajinský útok na Krymský most, 16.11.2026 Zdroj: sueta\nTASR\nAktuality.sk\nUložiť článok\nUkrajina opäť zaútočila na Krymský most. Doprava musela byť dočasne prerušená, úrady vyhodnocujú škody.\nUkrajina podnikla ďalší útok na Krymský most, oznámil v stredu neskoro večer Moskvou dosadený predstaviteľ Krymu Sergej Aksionov s tým, že bola dočasne prerušená doprava a úrady momentálne vyhodnocujú škody. Agentúra RBC-Ukraine s odvolaním sa na ruské monitorovacie kanály uviedla, že bola zasiahnutá železničná časť mosta. Píše o tom TASR.\nO následkoch útoku zatiaľ nie sú dostupné žiadne oficiálne informácie a ruské úrady ani ukrajinské ozbrojené sily sa k tomu bezprostredne nevyjadrili. RBC-Ukraine napísala, že podľa ruských monitorovacích kanálov svedkovia počuli niekoľko silných výbuchov.\nZastavenie dopravy\n„Po novom útoku na Krymský most bola doprava dočasne…",
-      "stazeno": "2026-11-19T06:02:59.166Z",
-      "stav": 200
-    }
-  },
-  {
-    "id": "k-c71cd215810227df",
-    "zachyceno": "2026-11-19T15:03:36.237Z",
-    "publikovano": "2026-11-19T05:50:11.000Z",
-    "zdroj": {
-      "nazev": "Der Standard (Rakousko)",
-      "url": "https://www.derstandard.at/jetzt/livebericht/3000000349923/trump-und-putin-fuehrten-gespraech-vor-dreiertreffen-mit-xi?ref=rss",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Putin sieht Ukraine weiterhin für Krieg verantwortlich und lädt Europäer nach Moskau ein",
-    "titulekPuvodni": "Putin sieht Ukraine weiterhin für Krieg verantwortlich und lädt Europäer nach Moskau ein",
-    "shrnuti": "Xi–Trump–Putin präsentieren sich nach historischem Dreier-Gipfel in Shenzhen als Garanten für \"Stabilität und Sicherheit\" – Ukraine war im Gespräch angeblich nur nebensächliches Thema",
-    "kodZeme": "UA",
-    "zeme": "Ukrajina",
-    "kategorie": [
-      "hybridni"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "zeSite": null,
-    "shody": [
-      "putin+europ+war"
-    ],
-    "naliehave": null,
-    "stav": "ceka",
-    "vyrez": {
-      "text": "Dreiergipfel von Trump, Xi und Putin für Politikexperten Mangott \"Treffen der Heuchler\" - Ukraine - derStandard.at › International \r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n261119 -- SHENZHEN, Nov. 19, 2026 -- Chinese President Xi Jinping holds a China-Russia-U.S. summit with Russian President Vladimir Putin and U.S. President Donald Trump in Shenzhen, south China s Guangdong Province, Nov. 19, 2026. CHINA-SHENZHEN-XI JINPING-CHINA-RUSSIA-U.S.-SUMMIT CN XiexHuanchi PUBLICATIONxNOTxINxCHN\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nDas Wichtigste in Kürze:\n\r\n\r\n\r\n\r\nWillkommen bei DER STANDARD\n\r\n\r\nSie entscheiden darüber, wie Sie unsere Inhalte nutzen wollen. Ihr Gerät erlaubt uns derzeit leider nicht, die entsprechenden Optionen anzuzeigen. \r\n\r\nBitte deaktivieren Sie sämtliche Hard- und Software-Komponenten, die in der Lage sind Teile unserer Website zu blockieren. Z.B. Browser-AddOns wie Adblocker oder auch netzwerktechnische Filter.\n\r\nSie haben ein PUR-Abo? Hier anmelden.",
-      "stazeno": "2026-11-19T23:47:39.302Z",
-      "stav": 200
-    }
-  },
-  {
-    "id": "k-8832ba34744e1ede",
-    "zachyceno": "2026-11-19T06:02:55.569Z",
-    "publikovano": "2026-11-19T05:34:00.000Z",
-    "zdroj": {
-      "nazev": "Deník N",
-      "url": "https://denikn.cz/2261337/nejvetsi-omyl-diktatora-franca-za-nastupce-si-vybral-krale-juana-carlose-ktery-se-zhledl-v-demokracii/",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Největší omyl diktátora Franca: za nástupce si vybral krále, který se zhlédl v demokracii",
-    "titulekPuvodni": "Největší omyl diktátora Franca: za nástupce si vybral krále, který se zhlédl v demokracii",
-    "shrnuti": "Seriál Vzkazy z minulosti: Ačkoli španělský diktátor Francisco Franco považoval Juana Carlose za pokračovatele své „národněkonzervativní diktatury“, král se po roce 1975 stal jedním z klíčových architektů přechodu k demokracii a v roce 1981 se rozhodně postavil pokusu o armádní puč.",
-    "kodZeme": "ES",
-    "zeme": "Španělsko",
-    "kategorie": [
-      "hranice"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "zeSite": null,
-    "shody": [
-      "prechod+armad"
-    ],
-    "naliehave": null,
-    "stav": "ceka",
-    "vyrez": {
-      "text": "Největší omyl diktátora Franca: za nástupce si vybral krále, který se zhlédl v demokracii &mdash; Deník N\nFrancisco Franco (vpravo) s králem Juanem Carlosem I. Foto: Mondadori Collection/UIG/Rex\nSeriál Vzkazy z minulosti: Ačkoli španělský diktátor Francisco Franco považoval Juana Carlose za pokračovatele své „národněkonzervativní diktatury“, král se po roce 1975 stal jedním z klíčových architektů přechodu k demokracii a v roce 1981 se rozhodně postavil pokusu o armádní puč.\nVíce o poslechu Deníku N\nPřidat Deník N mezi oblíbené zdroje\nV roce 1970 přicestoval do Španělska spolu s americkým prezidentem Richardem Nixonem i  Henry Kissinger , tehdy šéf Rady národní bezpečnosti, později americký ministr zahraničí. Odnesl si dojem, že navštívil zemi zdánlivě „visící ve vzduchoprázdnu, čekající na to, až jeden lidský život skončí, aby se mohla připojit k evropské historii“.\nKissinger měl „jedním lidským životem“ na mysli diktátora Francisca Franca , jehož život vyhasl 20. listopadu 1975, čímž se zároveň otevřela cesta k demokratizaci Španělska. Ovšem zejména zpočátku vůbec ne jednoduchá. Významnou roli v ní sehrál král Juan Carlos, jehož však na trůn instalovala vůle zemřelého…",
-      "stazeno": "2026-11-19T06:03:00.301Z",
-      "stav": 200
-    }
-  },
-  {
-    "id": "k-7bd2fd7f61accb11",
-    "zachyceno": "2026-11-19T06:02:56.053Z",
-    "publikovano": "2026-11-19T05:05:00.000Z",
-    "zdroj": {
-      "nazev": "Politico Europe",
-      "url": "https://www.politico.eu/podcast/brussels-playbook-podcast/the-coalition-of-the-willings-chance-to-deliver/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "The Coalition of the Willing’s chance to deliver",
-    "titulekPuvodni": "The Coalition of the Willing’s chance to deliver",
-    "shrnuti": "European leaders gather in Berlin for a high-stakes meeting on Ukraine, just as Donald Trump, Vladimir Putin and Xi Jinping hold talks in China. With Washington and Moscow sending conflicting signals about Europe’s role in peace negotiations, can the Coalition of the Willing secure a seat at the tab",
-    "kodZeme": "DE",
-    "zeme": "Německo",
-    "kategorie": [
-      "hybridni"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "zeSite": null,
-    "shody": [
-      "putin+europ+conflict"
-    ],
-    "naliehave": null,
-    "stav": "ceka",
-    "vyrez": {
-      "text": "The Coalition of the Willing’s chance to deliver – POLITICO\nSkip to main content\nAdvertisement\nBrussels Playbook Podcast\nStories driving the day in Brussels and beyond.\nListen on\nSpotify\nApple Music\nCast Box\nPocket Casts\nListen on\nSpotify\nApple Music\nAmazon Music\nEuropean leaders gather in Berlin for a high-stakes meeting on Ukraine, just as Donald Trump, Vladimir Putin and Xi Jinping hold talks in China. With Washington and Moscow sending conflicting signals about Europe’s role in peace negotiations, can the Coalition of the Willing secure a seat at the table — and find the money to keep Ukraine fighting?\nAlso on the podcast: Host Zoya Sheftalovich and Kathryn Carlson discuss the upcoming EU–UK summit in Brussels, where British Prime Minister Andy Burnham is promising a fresh start after Brexit.\nAnd mysterious cyber incidents disrupt the European Commission’s internal systems.\nQuestions? Comments? Message us on WhatsApp here or at +32 491 05 06 29.",
-      "stazeno": "2026-11-19T06:03:01.063Z",
-      "stav": 200
-    }
-  },
-  {
-    "id": "k-18aa2991fb65196e",
-    "zachyceno": "2026-11-19T12:04:20.613Z",
-    "publikovano": "2026-11-19T05:00:00.000Z",
-    "zdroj": {
-      "nazev": "la Repubblica (Itálie)",
-      "url": "https://www.repubblica.it/en/europe/news/2026/11/19/news/paolo_borsellino_mafia_bombing_investigation_gianni_de_gennaro-425732134/",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Italy’s anti-Mafia establishment at war with itself",
-    "titulekPuvodni": "Italy’s anti-Mafia establishment at war with itself",
-    "shrnuti": "The latest inquiries into the 1992 bombing that killed deputy prosecutor Paolo Borsellino – 57 days after the assassination of his friend Giovanni Falcone – are implicating senior figures in the very institutions tasked with uncovering the truth, lending weight to allegations long made by the murder",
-    "kodZeme": "IT",
-    "zeme": "Itálie",
-    "kategorie": [
-      "sabotaz"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "zeSite": null,
-    "shody": [
-      "bomb"
-    ],
-    "naliehave": null,
-    "stav": "ceka",
-    "vyrez": {
-      "text": "Paolo Borsellino bombing: new investigation shakes Italy’s anti-Mafia establishment - la Repubblica Europe\n\r\n\r\n\r\nMenu\nEurope\nIT\nEN\nITALIANO\nENGLISH\nEditorial Team\nContact Us\nNews\n19 November 2026 at 06:00\n3 min read\nPALERMO – Lucia Borsellino, the daughter of judge Paolo Borsellino, keeps repeating that “the right to the truth has no statute of limitations”. Together with her brothers, Manfredi and Fiammetta, she continues to demand that truth, which for far too many years was obscured by the false testimony of Mafia informant Vincenzo Scarantino. Yet even today, Via D’Amelio remains Palermo’s deepest abyss, concealing countless secrets surrounding the Mafia bombing of 19 July 1992. It came just 57 days after the Capaci bombing that killed Giovanni Falcone, then director-general of criminal affairs at the Ministry of Justice, his wife and three police officers. The Via D’Amelio attack claimed the lives of deputy prosecutor Paolo Borsellino and five members of his police escort.\nThe investigation that was deliberately derailed\nItalian anti-Mafia magistrates Paolo Borsellino and Giovanni Falcone in the 1980s. Both were killed by the Mafia in 1992.\nThat abyss has also swallowed up a…",
-      "stazeno": "2026-11-19T23:47:39.492Z",
-      "stav": 200
-    }
-  },
-  {
-    "id": "k-1aee44801fd779eb",
-    "zachyceno": "2026-11-19T06:02:57.613Z",
-    "publikovano": "2026-11-19T04:45:24.000Z",
-    "zdroj": {
-      "nazev": "la Repubblica (Itálie)",
-      "url": "https://www.repubblica.it/esteri/2026/11/19/news/trump_apec_shenzhen_iran_cina_russia_xi_putin_obama_dazi-425733711/",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Trump: “Non ci serve l’aiuto di Cina e Russia sull’Iran”. E accusa Obama di aver favorito la loro alleanza",
-    "titulekPuvodni": "Trump: “Non ci serve l’aiuto di Cina e Russia sull’Iran”. E accusa Obama di aver favorito la loro alleanza",
-    "shrnuti": "ll presidente Usa minaccia Teheran: “Se userà una bomba sporca, la annienteremo”. Xi mette in guardia contro i dazi e le guerre commerciali e chiede una cooperazione “aperta e integrata” tra i Paesi dell’Asia-Pacifico",
-    "kodZeme": "RU",
-    "zeme": "Rusko",
-    "kategorie": [
-      "sabotaz",
-      "rusko"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "zeSite": null,
-    "shody": [
-      "bomb",
-      "russia"
-    ],
-    "naliehave": null,
-    "stav": "ceka",
-    "vyrez": {
-      "text": "Trump: “Non ci serve l’aiuto di Cina e Russia sull’Iran”. E accusa Obama di aver favorito la loro alleanza - la Repubblica\n\r\n\r\n\r\nBlack Friday\n2 mesi gratis\nScarica l'app\nMenu\nRicerca\nNotifiche\nBlack Friday\n2 mesi gratis\nBlack Friday\n2 mesi gratis\nEdicola\nRedazione\nScriveteci\nEsteri\n19 Novembre 2026\nAggiornato alle 06:46\n4 minuti di lettura\nAbbonati per leggere anche\nLeggi i commenti",
-      "stazeno": "2026-11-19T06:03:01.186Z",
-      "stav": 200
-    }
-  },
-  {
-    "id": "k-4729390697754523",
-    "zachyceno": "2026-11-19T06:02:56.056Z",
-    "publikovano": "2026-11-19T04:30:00.000Z",
-    "zdroj": {
-      "nazev": "Politico Europe",
-      "url": "https://www.politico.eu/podcast/berlin-playbook-podcast/die-koalition-der-wartenden-europa-blickt-nach-shenzhen/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Die Koalition der Wartenden: Europa blickt nach Shenzhen",
-    "titulekPuvodni": "Die Koalition der Wartenden: Europa blickt nach Shenzhen",
-    "shrnuti": "Donald Trump, Xi Jinping und Wladimir Putin verhandeln in Shenzhen womöglich über die neue Weltordnung – und Europa guckt zu. Eine „Koalition der Willigen“ aus Dutzenden Staats- und Regierungschefs sucht gleichzeitig in Berlin nach einer Antwort auf die drohende Verschiebung und plant ein weiteres f",
-    "kodZeme": "DE",
-    "zeme": "Německo",
-    "kategorie": [
-      "hybridni"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "zeSite": null,
-    "shody": [
-      "putin+europ+war"
-    ],
-    "naliehave": null,
-    "stav": "ceka",
-    "vyrez": {
-      "text": "Die Koalition der Wartenden: Europa blickt nach Shenzhen – POLITICO\nSkip to main content\nAdvertisement\nBerlin Playbook Podcast\nRixa Fürsen, Maximilian Stascheit und das POLITICO-Team nehmen Euch mit durch die Hauptstadt – kurz, präzise, hintergründig. Montags bis samstags ab 5 Uhr.\nListen on\nSpotify\nApple Music\nAmazon Music\nListen on\nSpotify\nApple Music\nAmazon Music\nDonald Trump, Xi Jinping und Wladimir Putin verhandeln in Shenzhen womöglich über die neue Weltordnung – und Europa guckt zu. Eine „Koalition der Willigen“ aus Dutzenden Staats- und Regierungschefs sucht gleichzeitig in Berlin nach einer Antwort auf die drohende Verschiebung und plant ein weiteres finanzielles Signal an Moskau, damit Putin den Ukraine-Krieg beendet. Darüber spricht Rixa Fürsen mit Hans von der Burchard.\nIm 200-Sekunden-Interview warnt der CDU-Außenexperte Roderich Kiesewetter erneut vor den Folgen eines schnellen, von Washington diktierten Friedens. Er fordert, aus den Willigen nun Entschlossene zu machen.\nInnenpolitisch liefert die schwarz-rote Koalition derweil ein seltsames Schauspiel ab. Nach einem achtstündigen Verhandlungsmarathon verkündet der Kanzler zwar eine Stromsteuersenkung, doch die…",
-      "stazeno": "2026-11-19T06:03:01.505Z",
-      "stav": 200
-    }
-  },
-  {
-    "id": "k-c0a01a00fd83a68d",
-    "zachyceno": "2026-11-19T08:36:50.389Z",
-    "publikovano": "2026-11-19T03:56:00.000Z",
-    "zdroj": {
-      "nazev": "Ukrainska Pravda (anglicky)",
-      "url": "https://www.pravda.com.ua/eng/news/2026/11/19/8063543/",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Japanese PM meets with Putin for the first time since the invasion of Ukraine",
-    "titulekPuvodni": "Japanese PM meets with Putin for the first time since the invasion of Ukraine",
-    "shrnuti": "During a 30-minute conversation at the Shenzhen APEC summit, Japanese Prime Minister Sanae Takaichi and Russian leader Vladimir Putin have agreed to maintain communication while discussing detained journalist Yuki Imai and Japan Tobacco.",
-    "kodZeme": "UA",
-    "zeme": "Ukrajina",
-    "kategorie": [
-      "zpravodajske",
-      "rusko"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "zeSite": null,
-    "shody": [
-      "detained+russia",
-      "russia"
-    ],
-    "naliehave": null,
-    "stav": "ceka",
-    "vyrez": {
-      "text": "Japan resumes leader-level dialogue with Russia as Takaichi meets Putin in China | Ukrainska Pravda\nPhoto: Getty Images\nJapanese Prime Minister Sanae Takaichi has met with Kremlin ruler Vladimir Putin during the Asia-Pacific Economic Cooperation (APEC) summit in Shenzhen. This marks their first direct contact since the beginning of Russia's full-scale invasion of Ukraine.\nSource: The Japan News , English-language version of Japanese newspaper Yomiuri Shimbun\nDetails: Takaichi and Putin spoke for approximately 30 minutes during their meeting on 18 November. They agreed to continue maintaining communication at various levels.\nAdvertisement:\n\r\n\r\n\r\n\r\n\r\nTakaichi urged Putin to facilitate the earliest possible release of Japanese journalist Yuki Imai, who was detained on Sakhalin in October on suspicion of espionage.\nThe parties also discussed the situation regarding Japan Tobacco's local subsidiary which the Russian authorities had placed under the temporary management of a Russian company.\nThis conversation was an attempt by Tokyo to resume dialogue with Moscow. On 30 October, the foreign ministers of Japan and Russia held an in-person meeting for the first time in five years.…",
-      "stazeno": "2026-11-19T08:36:56.494Z",
-      "stav": 200
-    }
-  },
-  {
-    "id": "k-a04aca11a7daa922",
-    "zachyceno": "2026-11-19T17:37:42.353Z",
-    "publikovano": "2026-11-19T03:08:28.000Z",
-    "zdroj": {
-      "nazev": "ČT24 — hlavní zprávy",
-      "url": "https://ct24.ceskatelevize.cz/clanek/svet/na-krymskem-moste-byla-po-dalsim-utoku-prerusena-doprava-379743",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Ukrajina znovu cílila na Krymský most, Rusko masivně útočí na Kyjev",
-    "titulekPuvodni": "Ukrajina znovu cílila na Krymský most, Rusko masivně útočí na Kyjev",
-    "shrnuti": "Na Krymském mostě byl po dalším ukrajinském útoku přerušen provoz vlaků. Kyjev úder potvrdil. Zatím není jasné, jak velké jsou škody. Moskva později ve čtvrtek uvedla, že provoz byl na jedné koleji obnoven. Ukrajina na most, který přes Kerčský průliv spojuje ruskou pevninu s okupovaným Krymem, zaúto",
-    "kodZeme": "UA",
-    "zeme": "Ukrajina",
-    "kategorie": [
-      "hybridni",
-      "drony",
-      "infrastruktura",
-      "rusko"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "zeSite": null,
-    "shody": [
-      "utok na",
-      "dron",
-      "zeleznic",
-      "rusk"
-    ],
-    "naliehave": null,
-    "stav": "ceka",
-    "vyrez": {
-      "text": "Ukrajina znovu cílila na Krymský most, Rusko masivně útočí na Kyjev — ČT24 — Česká televize\nŽivé vysílání\nTV program\nPočasí\nTeletext\nE-shop\nVše o ČT\nTV poplatky\nKontakty\nSpravovat účet\nOblíbené pořady\nRozkoukaná videa\nPřihlásit se do TV\nOdhlásit se\nUkrajina znovu cílila na Krymský most, Rusko masivně útočí na Kyjev\nČTK ,\nČT24\n, mlu ,\nhop ,\nsrk\n19. 11. 2026 před 3 h hodinami | Zdroj: ČTK , BBC , ČT24 , Ukrajinska pravda , Kyiv Independent , New Voice of Ukraine\nKrymský most na satelitním snímku z 19. listopadu 2026\nZdroj: Vantor/Handout via Reuters\nNa Krymském mostě byl po dalším ukrajinském útoku přerušen provoz vlaků. Kyjev úder potvrdil. Zatím není jasné, jak velké jsou škody. Moskva později ve čtvrtek uvedla, že provoz byl na jedné koleji obnoven. Ukrajina na most, který přes Kerčský průliv spojuje ruskou pevninu s okupovaným Krymem, zaútočila již v pondělí a v úterý. Tyto údery zničily silniční část hlavního pole mostu a částečně poškodily i železnici. Rusko ve čtvrtek spustilo masivní dronový útok na Kyjev, kde nejméně jednoho člověka zabilo, poškodilo také budovy nizozemské a rakouské ambasády.\nO dalším útoku na most v noci na čtvrtek nejdříve informoval šéf okupační správy…",
-      "stazeno": "2026-11-19T23:47:39.736Z",
-      "stav": 200
-    }
-  },
-  {
-    "id": "k-068894e2ebdeefc2",
-    "zachyceno": "2026-11-19T06:02:58.279Z",
-    "publikovano": "2026-11-19T02:40:00.000Z",
-    "zdroj": {
-      "nazev": "Ukrinform (anglicky)",
-      "url": "https://www.ukrinform.net/rubric-society/4186012-ukrainian-law-enforcers-fbi-expose-hacking-network-that-stole-data-and-demanded-multimilliondollar-ransoms.html",
-      "typ": "wire",
-      "primarni": false
-    },
-    "titulek": "Ukrainian law enforcers, FBI expose hacking network that stole data and demanded multimillion-dollar ransoms",
-    "titulekPuvodni": "Ukrainian law enforcers, FBI expose hacking network that stole data and demanded multimillion-dollar ransoms",
-    "shrnuti": "The Ukrainian Prosecutor General’s Office, in cooperation with the U.S. Federal Bureau of Investigation (FBI), has exposed an international criminal organization whose members carried out large-scale cyberattacks on foreign companies and demanded ransoms totaling more than $40 million.",
-    "kodZeme": "UA",
-    "zeme": "Ukrajina",
-    "kategorie": [
-      "kyber"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "zeSite": null,
-    "shody": [
-      "cyberattack",
-      "cyber"
-    ],
-    "naliehave": null,
-    "stav": "ceka",
-    "vyrez": {
-      "text": "Ukrainian law enforcers, FBI expose hacking network that stole data and demanded multimillion-dollar ransoms\n\r\nSubscription\nNewsletters\nPhotobank\nUkrinform - Ukrainian National News Agency\nFounded in 1918\nThursday, 19 November 2026, 08:03\nWar\nEconomy\nSports\nMore ☰\nContacts\nEng\nУкр\nEng\nEsp\nDeu\nعربي\nFra\n日本語\nPol\n&times;\nAll topics\nWar\nRecovery of Ukraine\nPolitics\nEconomy\nFact checks\nDefense\nSociety and Culture\nSports\nCrime\nAccidents and Emergencies\nAgency\nInformation on Agency\nOur Contacts\nSubscribtion Terms\nOur Services\nPrivacy policy and personal data protection\nAdditional\nPublications\nInterviews\nPhoto\nVideo\nLongreads\nReleases\nServices\nSubscription\nNewsletters\nPhotobank\n\r\n\r\n\r\nThe Ukrainian Prosecutor General&rsquo;s Office, in cooperation with the U.S. Federal Bureau of Investigation (FBI), has exposed an international criminal organization whose members carried out large-scale cyberattacks on foreign companies and demanded ransoms totaling more than $40 million.\nThat is according to the Prosecutor Genera&rsquo;s Office , Ukrinform reports.\n\r\n\r\n\"At least 28 companies have so far been identified as having paid cybercriminals more than $40.5 million. The final amount of damages is…",
-      "stazeno": "2026-11-19T06:03:01.532Z",
-      "stav": 200
-    }
-  },
-  {
-    "id": "k-ce1c63d20175a7f9",
-    "zachyceno": "2026-11-19T00:03:20.355Z",
-    "publikovano": null,
-    "zdroj": {
-      "nazev": "TASR (Slovensko)",
-      "url": "https://www.tasr.sk/tasr-clanok/TASR:2026111900000001",
-      "typ": "wire",
-      "primarni": false
-    },
-    "titulek": "dnes 0:05 BRIEF: Ukrajina podnikla podľa ruského predstaviteľa ďalší útok na Krymský most",
-    "titulekPuvodni": "dnes 0:05 BRIEF: Ukrajina podnikla podľa ruského predstaviteľa ďalší útok na Krymský most",
-    "shrnuti": "",
-    "kodZeme": "UA",
-    "zeme": "Ukrajina",
-    "kategorie": [
-      "hybridni",
-      "rusko"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "zeSite": null,
-    "shody": [
-      "utok na",
-      "rusk"
-    ],
-    "naliehave": null,
-    "stav": "ceka",
-    "vyrez": {
-      "text": "Tlačová agentúra Slovenskej republiky - TASR.sk\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nTrump sa vo štvrtok stretne s Putinom aj bilaterálne\nIzraelská armáda spustila novú operáciu v Pásme Gazy\nČeské senátne voľby v obvode 51 sa zopakujú\nPutin: Zákaz dovozu energií z Ruska spôsobil pokles životnej úrovne EÚ\nPrezident podpísal novelu, ktorá rieši preloženie sudcov z NS na NSS\nČeské úrady a hokejový zväz: Šampionát v ČR by mal byť bez Rusiek\nKRV TUHLA V ŽILÁCH: V lietadle smerujúcom do Turecka nahlásili bombu\n\r\n\r\n\r\n\r \r\r\r\n\r \r \r \r \r Teraz\n\r TASR TV\n\r Webmagazín\n\r Vtedy.sk\n\r \r FOTOBANKA TASR\n\r Webreport\n\r Školské\n\r \r\r \r\n\r\n\r\n\r \r\r\n\r\n\r\n\r \r \r\n\r Úvod\nO agentúre\nProdukty a služby\nKontakty\nPodporujeme\n\r\n\r \r\n\r \r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nBRIEF: Ukrajina podnikla podľa ruského predstaviteľa ďalší útok na Krymský most\ndnes 0:05\nMoskva/Kyjev 19. novembra (TASR) - Ukrajina podnikla ďalší útok na Krymský most, oznámil v stredu neskoro večer Moskvou dosadený predstaviteľ Krymu Sergej Aksionov s tým, že bola dočasne prerušená doprava a úrady momentálne vyhodnocujú škody. Agentúra RBC-Ukraine s odvolaním sa na ruské monitorovacie kanály uviedla, že bola zasiahnutá železničná časť mosta. Píše o tom TASR.\nUPOZORNENIE: Správu…",
-      "stazeno": "2026-11-19T00:03:23.557Z",
-      "stav": 200
-    }
-  },
-  {
-    "id": "k-a15ef4aa610e48b8",
-    "zachyceno": "2026-11-19T00:03:20.149Z",
-    "publikovano": null,
-    "zdroj": {
-      "nazev": "The Kyiv Independent",
-      "url": "https://kyivindependent.com/unacceptable-attempt-at-intimidation-russian-man-charged-with-spying-targeting-silicon-valley/",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "'Unacceptable attempt at intimidation' — Russian man charged with spying, targeting Silicon Valley.",
-    "titulekPuvodni": "'Unacceptable attempt at intimidation' — Russian man charged with spying, targeting Silicon Valley.",
-    "shrnuti": "",
-    "kodZeme": "RU",
-    "zeme": "Rusko",
-    "kategorie": [
-      "zpravodajske",
-      "rusko"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "zeSite": null,
-    "shody": [
-      "charged with+spy",
-      "russia"
-    ],
-    "naliehave": null,
-    "stav": "ceka",
-    "vyrez": {
-      "text": "'Unacceptable attempt at intimidation' — Russian man charged with spying, targeting Silicon Valley 0 of 5,000\nHelp us find 5,000 new members. Bring one friend.\nShare your personal link and make us stronger in 2027.\n0 found so far\nGoal 5,000\nCopy link Copy\nLog in to see who joined through your link.\nWar 'Unacceptable attempt at intimidation' — Russian man charged with spying, targeting Silicon Valley\nNovember 19, 2026 1:08 am • 4 min read\nPrefer on Google\nL\nby Lachlan Hyatt\nPhotos of Igor D'iu's Russian passports found after his residence in Palo Alto, California was raided by the FBI in October 2026. (U.S. Department of Justice)\nIgor D’iu, a Russian national, was charged in the U.S. for spying for Russia and targeting an unnamed technology company in Silicon Valley, the U.S. Department of Justice (DOJ) announced on Nov. 18.\nThe announcement from the U.S. DOJ follows similar revelations of Russian spies across multiple countries in recent months.\n“The allegations in this case describe a state-sponsored operation to target and harass employees of an American technology and defense company because of that company’s assistance to Ukraine in its war with Russia,” U.S. Attorney for the…",
-      "stazeno": "2026-11-19T00:03:23.781Z",
-      "stav": 200
-    }
-  },
-  {
-    "id": "k-b68569d07ef2f0b3",
-    "zachyceno": "2026-11-19T21:03:04.150Z",
-    "publikovano": "2026-11-19T00:00:00.000Z",
-    "zdroj": {
-      "nazev": "The Kyiv Independent",
-      "url": "https://kyivindependent.com/breaking-dutch-embassy-damaged-in-russian-drone-strike-on-kyiv/",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "'For Russia, nothing is sacred' — Massive Russian drone attack on Kyiv kills 1, damages St. Volodymyr's Cathedral, embassies.",
-    "titulekPuvodni": "'For Russia, nothing is sacred' — Massive Russian drone attack on Kyiv kills 1, damages St. Volodymyr's Cathedral, embassies.",
-    "shrnuti": "",
-    "kodZeme": "UA",
-    "zeme": "Ukrajina",
-    "kategorie": [
-      "hybridni",
-      "drony",
-      "rusko"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "zeSite": null,
-    "shody": [
-      "attack on",
-      "dron",
-      "drone",
-      "russia"
-    ],
-    "naliehave": null,
-    "stav": "ceka",
-    "vyrez": {
-      "text": "'For Russia, nothing is sacred' — Massive Russian drone attack on Kyiv kills 1, damages St. Volodymyr's Cathedral, embassies 0 of 5,000\nHelp us find 5,000 new members. Bring one friend.\nShare your personal link and make us stronger in 2027.\n0 found so far\nGoal 5,000\nCopy link Copy\nLog in to see who joined through your link.\nWar 'For Russia, nothing is sacred' — Massive Russian drone attack on Kyiv kills 1, damages St. Volodymyr's Cathedral, embassies\nNovember 19, 2026 3:05 pm  (Updated:  November 19, 2026 9:10 pm )\n• 5 min read\nPrefer on Google\nby Chris York, Christopher Occhicone, Kateryna Hodunova\nA three-story residential building partially destroyed by falling drone debris in Kyiv's Podilskyi district on Nov. 19, 2026. (Chris Occhicone/The Kyiv Independent)\nEditor's note: This is a developing story and is being updated.\nA Russian drone crashed close to the Dutch and Austrian embassies in Kyiv, damaging cars, a security post, and shattering windows in the building, during an hours-long  attack on the capital that killed at least one person, and injured five others.\n\"This afternoon, a projectile struck behind the Dutch embassy in Kyiv,\" Dutch Foreign Affairs Minister Tom…",
-      "stazeno": "2026-11-19T23:47:41.263Z",
-      "stav": 200
-    }
-  },
-  {
-    "id": "k-7db9407baeda4dab",
-    "zachyceno": "2026-11-19T15:03:35.784Z",
-    "publikovano": "2026-11-19T00:00:00.000Z",
-    "zdroj": {
-      "nazev": "BTA (státní agentura Bulharska)",
-      "url": "https://www.bta.bg/en/news/bulgaria/1250417-defence-minister-nobody-has-offered-bulgaria-assistance-in-scrambling-allied-fi",
-      "typ": "wire",
-      "primarni": false
-    },
-    "titulek": "Defence Minister: Nobody Has Offered Bulgaria Assistance in Scrambling Allied Fighter Jets or Destroying Drones",
-    "titulekPuvodni": "Defence Minister: Nobody Has Offered Bulgaria Assistance in Scrambling Allied Fighter Jets or Destroying Drones",
-    "shrnuti": "",
-    "kodZeme": "BG",
-    "zeme": "Bulharsko",
-    "kategorie": [
-      "drony"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "zeSite": null,
-    "shody": [
-      "scrambl",
-      "fighter jet+scrambl",
-      "dron",
-      "drone"
-    ],
-    "naliehave": null,
-    "stav": "ceka",
-    "vyrez": {
-      "text": "BTA :: Defence Minister: Nobody Has Offered Bulgaria Assistance in Scrambling Allied Fighter Jets or Destroying Drones\nnews.images\nnews.images\nWorld\nnews.images\nnews.images\nBalkans\nEconomy\nnews.images\nCulture\nnews.images\nSport\nnews.images\nBG World\nExchange rates\nForeign exchange rate of BNB 19.11.2026\n1 EUR = 1.9558 BGN\n1 USD = 0.9098 EUR\n1 CHF = 1.0797 EUR\n1 GBP = 1.1964 EUR\nBulgarian News Agency\nMy BTA\nLogin\nHave no account?\nsite.bta Defence Minister: Nobody Has Offered Bulgaria Assistance in Scrambling Allied Fighter Jets or Destroying Drones\nDimitrina Solakova , Liliya Yordanova\nDefence Minister Stoyanov in Parliament, November 19, 2026 (BTA Photo/Blagoy Kirilov)\nSofia,\n19.11.2026 16:53\n(BTA)\nTags\n#Ukraine\nNobody has offered us assistance in scrambling allied fighter jets, jamming drones or destroying them, Defence Minister Dimitar Stoyanov said during a hearing before the parliamentary Defence Committee here on Thursday.\nStoyanov was responding to a question from MP Aleksandar Uzunov of Progressive Bulgaria concerning the recent attacks on ships in the Black Sea region and cooperation with Romania.\nThe information that Romania had offered Bulgaria assistance in destroying…",
-      "stazeno": "2026-11-19T23:47:41.641Z",
-      "stav": 200
-    }
-  },
-  {
-    "id": "k-002b223f57757f42",
-    "zachyceno": "2026-11-19T08:36:50.394Z",
-    "publikovano": "2026-11-18T23:54:00.000Z",
-    "zdroj": {
-      "nazev": "Ukrainska Pravda (anglicky)",
-      "url": "https://www.pravda.com.ua/eng/news/2026/11/19/8063538/",
-      "typ": "media",
-      "primarni": false
-    },
-    "titulek": "Number injured in Russian attack on Zaporizhzhia rises",
-    "titulekPuvodni": "Number injured in Russian attack on Zaporizhzhia rises",
-    "shrnuti": "Mykhailo Semikin has reported a man is also receiving medical treatment following the initial report of one woman injured during a Russian strike on Zaporizhzhia on the evening of 18 November.",
-    "kodZeme": "RU",
-    "zeme": "Rusko",
-    "kategorie": [
-      "hybridni",
-      "rusko"
-    ],
-    "druhOdhad": "neurceno",
-    "klasifikace": "pravidla",
-    "zeSite": null,
-    "shody": [
-      "attack on",
-      "russia"
-    ],
-    "naliehave": null,
-    "stav": "ceka",
-    "vyrez": {
-      "text": "Two people now confirmed injured after Russian attack on Zaporizhzhia | Ukrainska Pravda\nPhoto: Zaporizhzhia Oblast Military Administration\nThe number of people injured as a result of a Russian strike on Zaporizhzhia has risen to two.\nSource: Mykhailo Semikin , Head of Zaporizhzhia Oblast Military Administration\nQuote: \"The number of people injured has risen to two. A man has been injured and is being provided with the necessary medical treatment.\"\nAdvertisement:\n\r\n\r\n\r\n\r\n\r\nBackground: On the evening of 18 November, Russian forces launched a strike on Zaporizhzhia, injuring one woman.\nSupport Ukrainska Pravda on Patreon to help us keep reporting!\nZaporizhzhia\nRussia-Ukraine war\nAdvertisement:\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nZaporizhzhia\nTwo killed and 38 injured in Russian attack on industrial facilities in Zaporizhzhia\nRussians strike industrial facility in Zaporizhzhia and blow up car with drone, killing driver\nWoman injured in Russian drone strike on local administration building in Zaporizhzhia\nLatest news\nAdvertisement:\n\r\n\r\n\r\nAdvertisement:",
-      "stazeno": "2026-11-19T08:36:56.516Z",
       "stav": 200
     }
   }
