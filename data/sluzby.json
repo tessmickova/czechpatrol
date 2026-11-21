@@ -1,16 +1,11 @@
 {
-  "aktualizovano": "2026-11-21T04:03:04.290Z",
+  "aktualizovano": "2026-11-21T08:03:10.208Z",
   "stavy": [
     {
       "klic": "cloudflare",
       "stav": "omezeni",
       "popis": "Partially Degraded Service",
       "incidenty": [
-        {
-          "nazev": "Network Performance Issues in Washington, DC datacenter (IAD)",
-          "odkaz": "https://www.cloudflarestatus.com/incidents/oz6to8yacrxe",
-          "aktualizovano": "2026-11-20T20:37:07.915Z"
-        },
         {
           "nazev": "Changes to Cloudflare Workers are not producing Event Subscription events",
           "odkaz": "https://www.cloudflarestatus.com/incidents/0ocqieaifg7h",
@@ -23,7 +18,7 @@
         "Albuquerque, United States - (ABQ)",
         "Arica, Chile - (ARI)"
       ],
-      "zkontrolovano": "2026-11-21T04:03:04.290Z",
+      "zkontrolovano": "2026-11-21T08:03:10.208Z",
       "chyba": null
     },
     {
@@ -33,11 +28,9 @@
       "incidenty": [],
       "postizene": [
         "Zoom Phone",
-        "Knowledge Base",
-        "Ticketing",
         "Zoom Phone - APAC"
       ],
-      "zkontrolovano": "2026-11-21T04:03:04.290Z",
+      "zkontrolovano": "2026-11-21T08:03:10.208Z",
       "chyba": null
     },
     {
@@ -46,7 +39,7 @@
       "popis": "All Systems Operational",
       "incidenty": [],
       "postizene": [],
-      "zkontrolovano": "2026-11-21T04:03:04.290Z",
+      "zkontrolovano": "2026-11-21T08:03:10.208Z",
       "chyba": null
     }
   ]
