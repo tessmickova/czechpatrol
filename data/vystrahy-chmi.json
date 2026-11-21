@@ -1,56 +1,6 @@
 {
-  "nacteno": "2026-11-21T00:00:26.917Z",
-  "odeslano": "2026-11-20T09:05:07.000Z",
-  "identifikator": "2.49.0.0.203.0.CZ.261120090507.XOCZ50_OKPR_000414",
-  "vystrahy": [
-    {
-      "id": "chmi:Kluzké povrchy:2026-11-21T01:00:00.000Z:Karlovarský,Liberecký",
-      "typ": "oficialni-pokyn",
-      "uzemi": {
-        "druh": "kraje",
-        "kraje": [
-          "Karlovarský",
-          "Liberecký"
-        ]
-      },
-      "titulek": "Kluzké povrchy",
-      "text": "Místy kluzké komunikace v důsledku náledí.\n\nPravděpodobné komplikace zejména v silniční dopravě. Hůře sjízdné a schůdné kluzké trasy a komunikace. Nebezpečí úrazu v důsledku uklouznutí. Omezení v řízení vozidla v důsledku namrznutí komunikace. Riziko smyku zejména při náhlém brždění, v zatáčkách a při prudším zrychlování. Předpoklad omezení provozu na některých komunikacích, zpoždění spojů a pravděpodobný výskyt dopravních nehod.",
-      "textJe": "zneni-vydavatele",
-      "pokyn": "Při pohybu venku chodit velmi opatrně, dlažba a nadchody namrzají nejdříve. Starší nebo méně mobilní lidé by měli omezit vycházení ven. Jezdit velmi opatrně, přizpůsobit jízdu stavu komunikace, mosty a estakády namrzají nejdříve. Počítat s prodloužením doby jízdy. Sledovat dopravní zpravodajství. Nutnou výbavou jsou zimní pneumatiky se zákonem stanovenou minimální hloubkou dezénu pro zimní podmínky.",
-      "vydavatel": "ČHMÚ, Martin Tomáš",
-      "odkaz": "https://vystrahy-cr.chmi.cz/",
-      "vydano": "2026-11-20T09:05:07.000Z",
-      "platiOd": "2026-11-21T01:00:00.000Z",
-      "platiDo": "2026-11-21T08:00:00.000Z",
-      "odvolano": null,
-      "opraveno": null,
-      "coNevime": [],
-      "jistota": "Likely",
-      "puvod": "ČHMÚ, výstražná služba (CAP)",
-      "detail": null
-    },
-    {
-      "id": "chmi:Kluzké povrchy:2026-11-21T01:00:00.000Z:nezname",
-      "typ": "oficialni-pokyn",
-      "uzemi": {
-        "druh": "nezname",
-        "popis": "Středočeský kraj (Hořovice, Mělník, Mladá Boleslav, Mnichovo Hradiště, Příbram, Rakovník), Plzeňský kraj (Blovice, Domažlice, Horšovský Týn, Klatovy, Kralovice, Nýřany, Plzeň, Přeštice, Rokycany, Stod, Stříbro, Sušice, Tachov), Ústecký kraj (Bílina, Děčín, Chomutov, Kadaň, Litoměřice, Litvínov, Louny, Lovosice, Most, Podbořany, Rumburk, Teplice, Ústí nad Labem, Varnsdorf, Žatec), Královéhradecký kraj (Broumov, Dobruška, Dvůr Králové nad Labem, Hořice, Jaroměř, Jičín, Náchod, Nová Paka, Nové Město nad Metují, Rychnov nad Kněžnou, Trutnov, Vrchlabí), Pardubický kraj (Česká Třebová, Hlinsko, Chrudim, Králíky, Lanškroun, Litomyšl, Moravská Třebová, Polička, Svitavy, Ústí nad Orlicí, Žamberk), Kraj Vysočina (Bystřice nad Pernštejnem, Havlíčkův Brod, Humpolec, Chotěboř, Jihlava, Nové Město na Moravě, Pelhřimov, Světlá nad Sázavou, Velké Meziříčí, Žďár nad Sázavou), Jihomoravský kraj (Boskovice), Olomoucký kraj (Jeseník, Šumperk, Zábřeh), Moravskoslezský kraj (Bruntál, Krnov, Rýmařov)"
-      },
-      "titulek": "Kluzké povrchy",
-      "text": "Místy kluzké komunikace v důsledku náledí.\n\nPravděpodobné komplikace zejména v silniční dopravě. Hůře sjízdné a schůdné kluzké trasy a komunikace. Nebezpečí úrazu v důsledku uklouznutí. Omezení v řízení vozidla v důsledku namrznutí komunikace. Riziko smyku zejména při náhlém brždění, v zatáčkách a při prudším zrychlování. Předpoklad omezení provozu na některých komunikacích, zpoždění spojů a pravděpodobný výskyt dopravních nehod.",
-      "textJe": "zneni-vydavatele",
-      "pokyn": "Při pohybu venku chodit velmi opatrně, dlažba a nadchody namrzají nejdříve. Starší nebo méně mobilní lidé by měli omezit vycházení ven. Jezdit velmi opatrně, přizpůsobit jízdu stavu komunikace, mosty a estakády namrzají nejdříve. Počítat s prodloužením doby jízdy. Sledovat dopravní zpravodajství. Nutnou výbavou jsou zimní pneumatiky se zákonem stanovenou minimální hloubkou dezénu pro zimní podmínky.",
-      "vydavatel": "ČHMÚ, Martin Tomáš",
-      "odkaz": "https://vystrahy-cr.chmi.cz/",
-      "vydano": "2026-11-20T09:05:07.000Z",
-      "platiOd": "2026-11-21T01:00:00.000Z",
-      "platiDo": "2026-11-21T08:00:00.000Z",
-      "odvolano": null,
-      "opraveno": null,
-      "coNevime": [],
-      "jistota": "Likely",
-      "puvod": "ČHMÚ, výstražná služba (CAP)",
-      "detail": null
-    }
-  ]
+  "nacteno": "2026-11-21T12:00:35.190Z",
+  "odeslano": "2026-11-21T09:24:47.000Z",
+  "identifikator": "2.49.0.0.203.0.CZ.261121092447.XOCZ50_OKPR_000415",
+  "vystrahy": []
 }
