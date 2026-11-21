@@ -1,5 +1,5 @@
 {
-  "kdy": "2026-11-21T08:00:30.572Z",
+  "kdy": "2026-11-21T11:38:25.555Z",
   "zdroje": [
     {
       "klic": "e-sbirka",
@@ -196,11 +196,10 @@
     },
     {
       "klic": "bundespolizei",
-      "ok": false,
-      "stav": null,
+      "ok": true,
+      "stav": 200,
       "pocetPolozek": 0,
-      "chyba": "fetch failed",
-      "vysledek": "chyba"
+      "vysledek": "ok"
     },
     {
       "klic": "bmi-de",
@@ -235,14 +234,14 @@
       "klic": "chmi-cap",
       "ok": true,
       "stav": 200,
-      "pocetPolozek": 2,
+      "pocetPolozek": 0,
       "vysledek": "ok"
     },
     {
       "klic": "kyber",
       "ok": true,
       "stav": null,
-      "pocetPolozek": 3,
+      "pocetPolozek": 5,
       "vysledek": "ok"
     },
     {
