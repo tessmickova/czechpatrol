@@ -16780,5 +16780,180 @@
     "aiZpracovano": true,
     "lidskyOvereno": false,
     "overeni": "neovereno"
+  },
+  {
+    "id": "i-2026-11-21-sparta-ii-finsky-zaliv",
+    "slug": "finsky-zaliv-drony-lod-sparta-ii-2026",
+    "titulek": "Finský záliv: drony zasáhly ruskou nákladní loď Sparta II mířící do Kaliningradu, hořící loď zanesl proud do finských vod; Finsko prověřuje narušení vzdušného prostoru ruským vrtulníkem",
+    "kratkyTitulek": "Drony zasáhly ruskou loď ve Finském zálivu, Finsko hlásí možné narušení vzdušného prostoru",
+    "zeme": "Finsko",
+    "kodZeme": "FI",
+    "kategorie": [
+      "drony",
+      "hybridni",
+      "nato",
+      "rusko"
+    ],
+    "datumUdalosti": "2026-11-21T00:00:00Z",
+    "datumZjisteni": "2026-11-21T00:00:00Z",
+    "aktualizovano": "2026-11-21T19:20:22.471Z",
+    "zavaznost": "Y2",
+    "jistota": "vysoka",
+    "stav": "probiha",
+    "atribuce": "vysetrovana",
+    "puvodce": "neznamy",
+    "druh": "pripad",
+    "fakta": [
+      "V sobotu 21. 11. 2026 zasáhly drony ve východní části Finského zálivu ruskou nákladní loď Sparta II, která plula do Kaliningradu. Loď začala hořet a proud ji zanesl do finských vod. Útok potvrdily ruské i finské úřady.",
+      "Finská armáda uvedla, že za útokem pravděpodobně stojí Ukrajina; velitel finské pohraniční stráže Ilja Iljin mluvil o ukrajinských dronech.",
+      "Finské ministerstvo obrany prověřuje podezření, že ve 12:34 místního času u města Loviisa narušil finský vzdušný prostor ruský vrtulník. Podle ministra obrany Anttiho Häkkänena to mohlo souviset se záchrannou nebo průzkumnou akcí kolem lodi.",
+      "Finsko znovu zavedlo dočasná letecká a námořní omezení ve východní části Finského zálivu.",
+      "Loď Sparta II je od roku 2022 na sankčním seznamu USA."
+    ],
+    "neznameho": [
+      "Kde přesně byla loď zasažena: finská armáda a ruský gubernátor Leningradské oblasti mluví o mezinárodních vodách, velitel finské pohraniční stráže podle Ukrainska Pravda o ruských výsostných vodách.",
+      "Co loď vezla, finská pohraniční stráž neví, a riziko výbuchu proto nešlo posoudit."
+    ],
+    "vyznam": "",
+    "eskalacniSpousteče": [],
+    "deeskalacniSignaly": [],
+    "zdroje": [
+      {
+        "nazev": "BBC News — Russia-bound ship attacked in Gulf of Finland",
+        "url": "https://www.bbc.co.uk/news/articles/cj752ddve27ko",
+        "typ": "media",
+        "publikovano": "2026-11-21T18:22:09Z",
+        "primarni": false,
+        "jazyk": "en"
+      },
+      {
+        "nazev": "ČT24 — Po útoku na loď ve Finském zálivu hlásí Helsinky možné narušení vzdušného prostoru",
+        "url": "https://ct24.ceskatelevize.cz/clanek/svet/po-utoku-na-lod-ve-finskem-zalivu-hlasi-helsinky-mozne-nar",
+        "typ": "media",
+        "publikovano": "2026-11-21T14:52:27Z",
+        "primarni": false,
+        "jazyk": "cs"
+      },
+      {
+        "nazev": "Seznam Zprávy — „Ukrajina má právo bojovat proti agresorovi.“ Loď ve finských vodách zasáhly drony",
+        "url": "https://www.seznamzpravy.cz/clanek/zahranicni-ukrajina-ma-pravo-bojovat-proti-agresorovi-ruskou-lod-",
+        "typ": "media",
+        "publikovano": "2026-11-21T17:28:04Z",
+        "primarni": false,
+        "jazyk": "cs"
+      },
+      {
+        "nazev": "Deutsche Welle — Russian helicopter suspected of violating Finnish airspace",
+        "url": "https://www.dw.com/en/russian-helicopter-suspected-of-violating-finnish-airspace/a-80010133",
+        "typ": "media",
+        "publikovano": "2026-11-21T17:08:00Z",
+        "primarni": false,
+        "jazyk": "en"
+      },
+      {
+        "nazev": "Ukrainska Pravda — Finland confirms Ukraine attacked ship linked to Russian military",
+        "url": "https://www.pravda.com.ua/eng/news/2026/11/21/8063980/",
+        "typ": "media",
+        "publikovano": "2026-11-21T15:37:00Z",
+        "primarni": false,
+        "jazyk": "en"
+      }
+    ],
+    "souvisejici": [],
+    "historie": [
+      {
+        "kdy": "2026-11-21T19:20:22.471Z",
+        "text": "Ověřeno z pěti nezávislých redakcí a zveřejněno na pokyn provozovatelky.",
+        "novySignal": true
+      }
+    ],
+    "novy": true,
+    "aiZpracovano": true,
+    "lidskyOvereno": true
+  },
+  {
+    "id": "i-2026-11-21-kaliningrad-sireny-litva",
+    "slug": "kaliningrad-sireny-objekt-od-litvy-2026",
+    "titulek": "Kaliningradská oblast: v sobotu večer zazněly sirény, gubernátor uvedl jako důvod podezřelý objekt ze směru od Litvy; kontrola podle něj hrozbu nenašla",
+    "kratkyTitulek": "Kaliningrad: sirény kvůli objektu od Litvy, podle gubernátora bez hrozby",
+    "zeme": "Rusko (Kaliningradská oblast)",
+    "kodZeme": "RU",
+    "kategorie": [
+      "drony",
+      "hranice",
+      "rusko"
+    ],
+    "datumUdalosti": "2026-11-21T00:00:00Z",
+    "datumZjisteni": "2026-11-21T00:00:00Z",
+    "aktualizovano": "2026-11-21T19:20:22.471Z",
+    "zavaznost": "Y1",
+    "jistota": "stredni",
+    "stav": "neuvedeno",
+    "atribuce": "neznama",
+    "puvodce": "neznamy",
+    "druh": "pripad",
+    "fakta": [
+      "V sobotu 21. 11. 2026 večer zazněly v Kaliningradské oblasti sirény a byl vyhlášen režim „bezpilotní nebezpečí“.",
+      "Gubernátor Alexej Bezprozvannych uvedl, že systém varování v Němanském okrese reagoval na podezřelý objekt ze směru od Litvy; odborníci podle něj hrozbu nenašli. Oblastní vláda oznámila, že kraji nic nehrozí.",
+      "Letiště Chrabrovo u Kaliningradu dočasně omezilo provoz; omezení byla později zrušena."
+    ],
+    "neznameho": [
+      "O jaký objekt šlo, ruské úřady neupřesnily.",
+      "Zprávy o výbuších u Baltijsku, základny Baltského loďstva, pocházejí jen z ukrajinských kanálů a nikdo je nepotvrdil."
+    ],
+    "vyznam": "",
+    "eskalacniSpousteče": [],
+    "deeskalacniSignaly": [],
+    "zdroje": [
+      {
+        "nazev": "URA.news — В Калининградской области режим БПЛА сработал из-за объекта со стороны Литвы",
+        "url": "https://ura.news/news/1053146241",
+        "typ": "media",
+        "publikovano": "2026-11-21T00:00:00Z",
+        "primarni": false,
+        "jazyk": "ru"
+      },
+      {
+        "nazev": "APA — Kaliningrad issues alert over suspicious object from Lithuania",
+        "url": "https://en.apa.az/cis-countries/kaliningrad-issues-alert-over-suspicious-object-from-lithuania-537703",
+        "typ": "media",
+        "publikovano": "2026-11-21T00:00:00Z",
+        "primarni": false,
+        "jazyk": "en"
+      },
+      {
+        "nazev": "Korrespondent.net — В Калининграде завыли сирены воздушной тревоги",
+        "url": "https://korrespondent.net/world/russia/4930774-v-kalynynhrade-zavyly-syreny-vozdushnoi-trevohy",
+        "typ": "media",
+        "publikovano": "2026-11-21T00:00:00Z",
+        "primarni": false,
+        "jazyk": "ru"
+      },
+      {
+        "nazev": "Рамблер/новости — В Калининградской области сработали сирены воздушной тревоги",
+        "url": "https://news.rambler.ru/community/57459614-v-kaliningradskoy-oblasti-srabotali-sireny-vozdushnoy-trevogi/",
+        "typ": "media",
+        "publikovano": "2026-11-21T00:00:00Z",
+        "primarni": false,
+        "jazyk": "ru"
+      }
+    ],
+    "souvisejici": [
+      {
+        "incidentId": "i-2026-11-21-sparta-ii-finsky-zaliv",
+        "potvrzena": false,
+        "popis": "Téhož dne dopoledne: drony zasáhly ve Finském zálivu loď Sparta II mířící do Kaliningradu."
+      }
+    ],
+    "historie": [
+      {
+        "kdy": "2026-11-21T19:20:22.471Z",
+        "text": "Ověřeno a zveřejněno na pokyn provozovatelky.",
+        "novySignal": true
+      }
+    ],
+    "novy": true,
+    "aiZpracovano": true,
+    "lidskyOvereno": true
   }
 ]
