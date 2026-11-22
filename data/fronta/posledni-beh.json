@@ -1,5 +1,5 @@
 {
-  "kdy": "2026-11-22T08:00:35.192Z",
+  "kdy": "2026-11-22T16:00:35.562Z",
   "zdroje": [
     {
       "klic": "e-sbirka",
@@ -235,14 +235,14 @@
       "klic": "chmi-cap",
       "ok": true,
       "stav": 200,
-      "pocetPolozek": 0,
+      "pocetPolozek": 1,
       "vysledek": "ok"
     },
     {
       "klic": "kyber",
       "ok": true,
       "stav": null,
-      "pocetPolozek": 3,
+      "pocetPolozek": 2,
       "vysledek": "ok"
     },
     {
